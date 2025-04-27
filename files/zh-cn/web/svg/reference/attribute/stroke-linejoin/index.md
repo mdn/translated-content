@@ -16,7 +16,6 @@ slug: Web/SVG/Reference/Attribute/stroke-linejoin
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 示例

@@ -3,8 +3,6 @@ title: 层叠层
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 ---
 
-{{LearnSidebar}}
-
 这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。
@@ -395,7 +393,7 @@ body {
 
 接下来是在层外声明的任何样式。`C.css` 中的样式没有导入到层中，并将覆盖任何来自 `firstLayer` 和 `secondLayer` 的冲突样式。在层外声明的普通样式总是比层内的普通样式具有更高的优先权。
 
-内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
+内联样式是使用 [`style`属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style)声明的。以这种方式声明的普通内联样式将优先于在未分层和分层样式表中找到的普通样式（`firstLayer - A.css`，`secondLayer - B.css` 和 `C.css`）。
 
 动画样式比所有普通样式都具有更高的优先权，包括内联普通样式。
 
@@ -513,7 +511,7 @@ h1 {
 
 ## 技能测试！
 
-你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#任务_2)。
+你已经阅读完本文，但是你还记得最重要的信息吗？在继续学习之前，你可以找到一些进一步的测试来验证你已经掌握了这些信息——请参阅[技能测试：层叠—任务 2](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#任务_2)。
 
 ## 总结
 

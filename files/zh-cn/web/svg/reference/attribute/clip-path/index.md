@@ -7,7 +7,7 @@ slug: Web/SVG/Reference/Attribute/clip-path
 
 **注意：**`clip-path` 是一个表现属性，可以作为 CSS 属性使用。
 
-作为一种表现属性，`clip-path` 可以用于任何元素，不过效果最明显的是下列十九种元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('glyph')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
+作为一种表现属性，`clip-path` 可以用于任何元素，不过效果最明显的是下列十九种元素：{{SVGElement('a')}}, {{SVGElement('circle')}}, {{SVGElement('clipPath')}}, {{SVGElement('ellipse')}}, {{SVGElement('g')}}, {{SVGElement('image')}}, {{SVGElement('line')}}, {{SVGElement('marker')}}, {{SVGElement('mask')}}, {{SVGElement('path')}}, {{SVGElement('pattern')}}, {{SVGElement('polygon')}}, {{SVGElement('polyline')}}, {{SVGElement('rect')}}, {{SVGElement('svg')}}, {{SVGElement('symbol')}}, {{SVGElement('text')}}, {{SVGElement('use')}}
 
 ## 示例
 

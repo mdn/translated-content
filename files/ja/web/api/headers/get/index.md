@@ -10,7 +10,7 @@ l10n:
 
 **`get()`** は {{domxref("Headers")}} インターフェイスのメソッドで、指定された名前の `Headers` オブジェクト内のヘッダーのすべての値のバイト文字列を返します。要求されたヘッダーが `Headers` オブジェクトに存在しない場合、`null` を返します。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 

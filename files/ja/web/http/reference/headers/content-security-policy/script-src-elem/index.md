@@ -1,9 +1,8 @@
 ---
 title: "CSP: script-src-elem"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-elem
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -12,7 +11,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-
 
 このディレクティブは `<script>` 要素（スクリプトリクエストとブロックの両方）の中で有効なソースのみを指定します。
 インラインスクリプトイベントハンドラー (`onclick`) や ["unsafe-eval" チェックでゲートされた](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#安全ではない_eval_式)スクリプト実行メソッド、[XSLT スタイルシート](/ja/docs/Web/XML/XSLT)など、スクリプトの実行のきっかけとなるような他の JavaScript ソースには適用されません。
-（有効なソースは、script-src を使用してすべての JavaScript スクリプトソースに指定することも、script-src-attr を使用してインラインスクリプトハンドラーにのみ指定することも可能です。）
+（有効なソースは、 {{CSP("script-src")}} を使用してすべての JavaScript スクリプトソースに指定することも、 {{CSP("script-src-attr")}} を使用してインラインスクリプトハンドラーにのみ指定することも可能です。）
 
 <table class="properties">
   <tbody>
@@ -36,12 +35,18 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-
 
 ## 構文
 
-`script-src-elem` ポリシーには、 1 つまたは複数のソースが許可されています。
-
 ```http
-Content-Security-Policy: script-src-elem <source>;
-Content-Security-Policy: script-src-elem <source> <source>;
+Content-Security-Policy: script-src-elem 'none';
+Content-Security-Policy: script-src-elem <source-expression-list>;
 ```
+
+このディレクティブは、次のいずれかの値を指定することができます。
+
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のうち、 [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes) 以外のいずれかが適用できます。
 
 `script-src-elem` は {{CSP("script-src")}} との組み合わせで使用することができます。
 
@@ -49,12 +54,6 @@ Content-Security-Policy: script-src-elem <source> <source>;
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-elem <source>;
 ```
-
-### ソース
-
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
-
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 

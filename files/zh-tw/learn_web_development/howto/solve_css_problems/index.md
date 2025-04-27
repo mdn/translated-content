@@ -3,8 +3,6 @@ title: 使用 CSS 解決常見問題
 slug: Learn_web_development/Howto/Solve_CSS_problems
 ---
 
-{{LearnSidebar}}
-
 此頁總結問與答，以及 MDN 網站上其它能幫助你解決常見 CSS 問題的資源。
 
 ## 修飾盒子

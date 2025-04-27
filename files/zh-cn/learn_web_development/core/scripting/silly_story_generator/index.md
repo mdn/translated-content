@@ -3,8 +3,6 @@ title: 挑战：笑话生成器
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 本节是一个小测验，要求你运用所学知识制作一个笑话生成器。祝玩的愉快！

@@ -3,7 +3,6 @@ title: Svelte 入门
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此篇文章我们将简要介绍 [Svelte 框架](https://svelte.dev/)。我们将会学习 Svelte 如何运作，以及它与其它框架和工具的不同之处。接着我们将学习如何设置我们的开发环境并建立一个示例应用程序，了解其项目结构及如何在本地运行，最后可以将其构建于生产环境。
@@ -282,7 +281,7 @@ Svelte 也支持一些标签，像是 `{#if...}`、`{#each...}` 和 `{#await...}
 </style>
 ```
 
-我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 元素应用了一些样式。这对其它组件中的 `<h1>` 元素们将会有什么影响呢？
+我们现在对 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素应用了一些样式。这对其它组件中的 `<h1>` 元素们将会有什么影响呢？
 
 在 Svelte 中，组件 `<style>` 区块中的 CSS 会被局限于该组件范围之内。这是通过对所选的元素加上一个类来实现，而这个类名则会是基于组件样式的散列值。
 

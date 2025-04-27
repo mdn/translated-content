@@ -29,7 +29,7 @@ l10n:
 ### HTML
 
 ```html
-<form action="/ja/docs/Web/HTML/Attributes/placeholder">
+<form action="/ja/docs/Web/HTML/Reference/Attributes/placeholder">
   <label for="name">名前を入力:</label>
   <input type="text" id="name" name="name" placeholder="e.g. Mike Shinoda" />
   <button type="submit">送信</button>

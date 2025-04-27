@@ -1815,12 +1815,6 @@
       "sinai"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Floats_skills": {
-    "modified": "2020-09-01T06:51:07.528Z",
-    "contributors": [
-      "shade0602"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension": {
     "modified": "2020-07-16T22:27:25.007Z",
     "contributors": [
@@ -1848,20 +1842,8 @@
       "Novo"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Multicol_skills": {
-    "modified": "2020-09-07T06:45:08.142Z",
-    "contributors": [
-      "shade0602"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
     "modified": "2020-09-06T07:21:18.080Z",
-    "contributors": [
-      "shade0602"
-    ]
-  },
-  "Learn_web_development/Core/CSS_layout/Position_skills": {
-    "modified": "2020-09-07T06:09:02.193Z",
     "contributors": [
       "shade0602"
     ]
@@ -1880,6 +1862,24 @@
   },
   "Learn_web_development/Core/CSS_layout/Responsive_Design": {
     "modified": "2020-10-31T07:15:02.288Z",
+    "contributors": [
+      "shade0602"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Floats": {
+    "modified": "2020-09-01T06:51:07.528Z",
+    "contributors": [
+      "shade0602"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
+    "modified": "2020-09-07T06:45:08.142Z",
+    "contributors": [
+      "shade0602"
+    ]
+  },
+  "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
+    "modified": "2020-09-07T06:09:02.193Z",
     "contributors": [
       "shade0602"
     ]
@@ -2569,12 +2569,6 @@
       "BADNaMe-RK"
     ]
   },
-  "Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks": {
-    "modified": "2020-10-28T14:57:16.890Z",
-    "contributors": [
-      "at940266"
-    ]
-  },
   "Learn_web_development/Core/Styling_basics/Box_model": {
     "modified": "2020-12-08T19:06:33.479Z",
     "contributors": [
@@ -2588,12 +2582,6 @@
       "k0w4lk",
       "EmperorPeter3",
       "Ivan961"
-    ]
-  },
-  "Learn_web_development/Core/Styling_basics/Cascade_tasks": {
-    "modified": "2020-10-01T14:31:53.395Z",
-    "contributors": [
-      "at940266"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Combinators": {
@@ -2691,6 +2679,18 @@
       "chrisdavidmills",
       "wbamberg",
       "Maxim-Bernashevsky"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade": {
+    "modified": "2020-10-01T14:31:53.395Z",
+    "contributors": [
+      "at940266"
+    ]
+  },
+  "Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors": {
+    "modified": "2020-10-28T14:57:16.890Z",
+    "contributors": [
+      "at940266"
     ]
   },
   "Learn_web_development/Core/Styling_basics/Values_and_units": {

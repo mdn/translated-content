@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5085525b3452de07dbac7fa700aaaf5ff5360a2f
 ---
 
-{{LearnSidebar}}
-
 构建网站需要 HTML、CSS 和 JavaScript。要构建人们想要使用、吸引并留住用户的网站和应用程序，你需要创造良好的用户体验。良好用户体验的一部分是确保内容能够快速加载并响应用户交互。这就是所谓的 **Web 性能**，在本模块中，你将专注于创建高性能网站的基础知识。
 
 我们初学者的学习材料的其他部分尽可能地坚持 Web 最佳实践，如性能和[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)，然而，专门专注于这些主题并确保你熟悉它们也很好。
@@ -56,7 +54,7 @@ l10n:
 
 - [Web 性能资源](/zh-CN/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : 除了 HTML、CSS、JavaScript 和媒体文件的前端组件外，还有可以使应用程序变慢的特性和可以使应用程序在主观和客观上都变快的特性。有许多与 Web 性能相关的 API、开发者工具、最佳实践和不良实践。在这里，我们将介绍这些特性的基本知识，并针对每个主题都提供了更深入地提升性能的链接。
-- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)
+- [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
   - : 在这篇文章中，我们将学习响应式图像的概念——在屏幕尺寸、分辨率和其他特征差异很大的设备上表现良好的图像——并了解 HTML 提供的帮助实现它们的工具。这有助于提高不同设备的性能。响应式图像只是[响应式设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)的一部分，这是你未来要学习的 CSS 主题。
 - [MDN 上主要的 Web 性能部分](/zh-CN/docs/Web/Performance)
   - : 我们主要的 Web 性能部分——在这里，你将找到更多关于 Web 性能的详细信息，包括性能 API 的概述、测试和分析工具，以及性能瓶颈的陷阱。

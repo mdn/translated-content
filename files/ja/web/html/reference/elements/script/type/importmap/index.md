@@ -1,9 +1,8 @@
 ---
 title: <script type="importmap">
 slug: Web/HTML/Reference/Elements/script/type/importmap
-original_slug: Web/HTML/Element/script/type/importmap
 l10n:
-  sourceCommit: 584921f4ba65580c5dce7f9c4181ad7a12f41bd9
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +13,7 @@ l10n:
 JSON オブジェクトは、[JSON のインポートマップ表現](#json_のインポートマップ表現)に適合している必要があります。
 
 インポートマップは、静的インポートや動的インポートのモジュール指定子を解決するために使用されるため、マップ内で宣言された指定子を使用してモジュールをインポートする `<script>` 要素の前に宣言し、処理する必要があります。
-インポートマップは [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)や [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)にあるモジュール指定子のみに適用され、 `<script>` 要素の `src` 属性のパスには適用されないことに注意をしてください。
+インポートマップは、 [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)または文書内の読み込まれたモジュール用の [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)にあるのモジュール指定子にのみ適用されることに注意してください。 `<script>` 要素の `src` 属性で指定されたパスや、ワーカーまたはワークレットに読み込まれたモジュールには適用されません。
 
 詳しい情報は、JavaScript モジュールガイドの[インポートマップを使用したモジュールのインポート](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)の節を参照してください。
 
@@ -28,17 +27,12 @@ JSON オブジェクトは、[JSON のインポートマップ表現](#json_の�
 
 `src`、`async`、`nomodule`、`defer`、`crossorigin`、`integrity`、`referrerpolicy` の各属性は指定することはできません。
 
-文書内のインライン定義された最初のインポートマップのみが処理され、それ以降のインポートマップや外部インポートマップは無視されます。
-
 ### 例外
 
 - `TypeError`
   - : インポートマップの定義が JSON オブジェクトでない、`importmap` のキーは定義されているがその値が JSON オブジェクトでない、`scopes` のキーは定義されているが、その値が JSON オブジェクトでない。
 
 ブラウザーは、インポートマップの JSON が[インポートマップ](#json_のインポートマップ表現)スキーマに適合していない他の場合、コンソール警告を生成します。
-
-処理されない `type="importmap"` を持つスクリプト要素では [`error` イベント](/ja/docs/Web/API/HTMLElement/error_event)が発行されます。
-これは例えば、インポートマップが処理されるときにモジュールの読み込みが既に始まっている場合や、複数のインポートマップがページ内で定義されている場合に発生することがあります。
 
 ## 解説
 
@@ -85,8 +79,8 @@ import { name as circleName } from "circle";
 <script type="importmap">
   {
     "imports": {
-      "shapes/": "./module/shapes/",
-      "othershapes/": "https://example.com/modules/shapes/"
+      "shapes/": "./modules/shapes/",
+      "other-shapes/": "https://example.com/modules/shapes/"
     }
   }
 </script>
@@ -106,9 +100,9 @@ import { name as circleName } from "shapes/circle.js";
 ```json
 {
   "imports": {
-    "modules/shapes/": "./module/src/shapes/",
-    "modules/square": "./module/src/other/shapes/square.js",
-    "https://example.com/modules/square.js": "./module/src/other/shapes/square.js",
+    "modules/shapes/": "./modules/src/shapes/",
+    "modules/square": "./modules/src/other/shapes/square.js",
+    "https://example.com/modules/square.js": "./modules/src/other/shapes/square.js",
     "../modules/shapes/": "/modules/shapes/"
   }
 }
@@ -125,16 +119,16 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 読み込むスクリプトの URL が指定されたパスに一致する場合、そのスコープに関連付けられたマッピングが使用されます。
 これにより、インポートを行うコードによって異なるバージョンのモジュールを使用することができます。
 
-例えば、下記の地図は、ローディングモジュールの URL にパスが記載されている場合にのみ、スコープ付きのマップを使用します。"/modules/customshapes/" というパスが含まれるローディングモジュールの場合のみ、スコープ付きマップが使用されます。
+例えば、下記のマップは、ローディングモジュールの URL にパスが記載されている場合にのみ、スコープ付きのマップを使用します。 "/modules/custom-shapes/" というパスが含まれるローディングモジュールの場合のみ、スコープ付きマップが使用されます。
 
 ```html
 <script type="importmap">
   {
     "imports": {
-      "square": "./module/shapes/square.js"
+      "square": "./modules/shapes/square.js"
     },
     "scopes": {
-      "/modules/customshapes/": {
+      "/modules/custom-shapes/": {
         "square": "https://example.com/modules/shapes/square.js"
       }
     }
@@ -145,11 +139,156 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 複数のスコープがリファラー URL に一致した場合、最も詳細なスコープパスが使用されます（スコープキー名の中で最も長い名前のものが使用されます）。
 ブラウザーは、一致する指定子がない場合は次に最も詳細なスコープパスに代替され、最終的には `imports` キーのモジュール指定子マップに代替されます。
 
+### メタデータマップの整合性
+
+`integrity` キーを使用して、モジュールの[整合性メタデータ](/ja/docs/Web/Security/Subresource_Integrity#サブリソース完全性の使い方)に割り当てられたマップを提供することができます。
+これによって、動的または静的にインポートされたモジュールの整合性を確保することができます。
+また、 `integrity` を使用すると、最上位または事前読み込みされたモジュールに、それらがまだ `integrity` 属性を設定していない場合に備えて、代替手段を提供することができます。
+
+マップのキーはモジュールの URL を表し、絶対パスまたは相対パス（`/`、`./`、`../` のいずれかで始める）のどちらにもすることができます。
+マップ値は整合性メタデータを表し、 [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性値で使用されているものと同じです。
+
+例えば、下記のマップでは、 `square.js` モジュール（直接）とその生の指定子（`imports` キー経由で透過的に指定されたもの）の整合性メタデータを定義しています。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "square": "./modules/shapes/square.js"
+    },
+    "integrity": {
+      "./modules/shapes/square.js": "sha384-oqVuAfXRKap7fdgcCY5uykM6+R9GqQ8K/uxy9rx7HNQlGYl1kPzQho1wx4JwY8wC"
+    }
+  }
+</script>
+```
+
+### 複数のインポートマップの統合
+
+内部的には、ブラウザーは単一のグローバルインポートマップ表現を維持しています。複数のインポートマップが文書内に含まれている場合、それらの内容は登録時にグローバルインポートマップに統合されます。
+
+例えば、次のような 2 つのインポートマップがあったとします。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+これらは次の単一のインポートマップと等価です。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/": "./original-app/",
+      "/app/helper": "./helper/index.mjs"
+    },
+    "scopes": {
+      "/js": {
+        "/app/": "./js-app/"
+      }
+    }
+  }
+</script>
+```
+
+事前に解決済みの登録済みマップ内のモジュール指定子は削除されます。これらの指定子がその後解決された場合、前回解決された結果と同じ結果がになります。
+
+例えば、モジュール指定子 `/app/helper.js` がすでに、次の新しいインポートマップのように解決されているとします。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper.js": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+これは次のものと同等です。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+`/app/helper.js` のルールは無視され、マップには割り当てられませんでした。
+
+同様に、グローバルマップの URL にすでに割り当てられていた登録済みマップのモジュール指定子は削除され、前回割り当てられたマッピングが優先されます。
+
+例えば、次の 2 つのインポートマップがあるとします。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./main/helper/index.mjs"
+    }
+  }
+</script>
+```
+
+次の単一のインポートマップに相当します。
+
+```html
+<script type="importmap">
+  {
+    "imports": {
+      "/app/helper": "./helper/index.mjs",
+      "lodash": "/node_modules/lodash-es/lodash.js"
+    }
+  }
+</script>
+```
+
+`/app/helper/` ルールは 2 つ目のマップから削除されます。
+
+> [!NOTE]
+> 対応していないブラウザー（[互換性データ](#ブラウザーの互換性)を確認してください）では、[ポリフィル](https://github.com/guybedford/es-module-shims)を使用してモジュール解決に関連する課題を避けることができます。
+
 ## JSON のインポートマップ表現
 
 以下は、インポートマップの JSON 表現に関する「公式な」定義です。
 
-インポートマップは有効な JSON オブジェクトでなければならず、最大で 2 つのオプションキーを定義することができます。`import` と `scope` です。それぞれのキーの値はオブジェクトでなければならず、空でも構いません。
+インポートマップは有効な JSON オブジェクトでなければならず、オプションキーである `import`、`scope`、`integrity` のいずれかを定義することができます。です。それぞれのキーの値はオブジェクトでなければならず、空でも構いません。
 
 - `imports` {{optional_inline}}
 
@@ -168,6 +307,13 @@ scopes` キーを使って、モジュールをインポートするスクリプ
         - キーが `/` で終わっている場合、対応する値も `/` で終わらなければなりません。
           末尾に `/` を持つキーは、モジュールのアドレスを割り当てられた（または再割り当てされた）ときの接頭辞として使用することができます。
         - オブジェクトプロパティの順序は関係ありません。複数のキーがモジュール指定子に一致する場合、最も詳細なキーが使用されます（言い換えれば、指定子 "olive/branch/" は "olive/" の前に一致することになります）。
+
+- `integrity` {{optional_inline}}
+
+  - : 有効な JSON オブジェクトを定義し、キーには有効な絶対 URL または相対 URL （`/`、`./`、`../` のいずれかで始めるもの）が含まれている文字列を指定します。
+    対応する値は有効な[整合性メタデータ](/ja/docs/Web/Security/Subresource_Integrity#サブリソース完全性の使い方)です。
+
+    モジュールをインポートまたは事前読み込みするスクリプトの URL が `integrity` オブジェクトのキーと照合される場合、すでに整合性メタデータが添付されていない限り、対応する整合性メタデータがスクリプトのフェッチオプションに適用されます。
 
 - `scopes` {{optional_inline}}
 
@@ -192,6 +338,6 @@ scopes` キーを使って、モジュールをインポートするスクリプ
 ## 関連情報
 
 - [JavaScript モジュール > インポートマップを使用したモジュールのインポート](/ja/docs/Web/JavaScript/Guide/Modules#importing_modules_using_import_maps)
-- [HTML の `<script>` 要素の `type` 属性](/ja/docs/Web/HTML/Reference/Elements/script#type)
+- [HTML の `<script>` 要素の `type` 属性](/ja/docs/Web/HTML/Reference/Elements/script/type)
 - [`import` 文](/ja/docs/Web/JavaScript/Reference/Statements/import)
 - [`import()` 演算子](/ja/docs/Web/JavaScript/Reference/Operators/import)

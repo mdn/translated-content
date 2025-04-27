@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Global_attributes/class
 
 {{HTMLSidebar("Global_attributes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) **`class`** это разделённый пробелом список регистров зависимых классов элемента. Классы позволяют CSS и Javascript выбирать и получать доступ с помощью [селекторов класса](/ru/docs/Web/CSS/Class_selectors) или функций, таких как методы DOM {{domxref("document.getElementsByClassName")}}.
+[Глобальный атрибут](/ru/docs/Web/HTML/Reference/Global_attributes) **`class`** это разделённый пробелом список регистров зависимых классов элемента. Классы позволяют CSS и Javascript выбирать и получать доступ с помощью [селекторов класса](/ru/docs/Web/CSS/Class_selectors) или функций, таких как методы DOM {{domxref("document.getElementsByClassName")}}.
 
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
 
@@ -47,4 +47,4 @@ slug: Web/HTML/Reference/Global_attributes/class
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).

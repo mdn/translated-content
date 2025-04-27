@@ -24,7 +24,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
   <tbody>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/accept">accept</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/accept">accept</a></code>
       </td>
       <td>
         {{ HTMLElement("form") }}, {{ HTMLElement("input") }}
@@ -80,7 +80,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/alt">alt</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/alt">alt</a></code>
       </td>
       <td>
         {{ HTMLElement("area") }},
@@ -117,7 +117,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/autocomplete">autocomplete</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/autocomplete">autocomplete</a></code>
       </td>
       <td>
         {{ HTMLElement("form") }}, {{ HTMLElement("input") }},
@@ -130,7 +130,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/autoplay">autoplay</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/autoplay">autoplay</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -190,7 +190,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/capture">capture</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/capture">capture</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
@@ -217,7 +217,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/cite">cite</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/cite">cite</a></code>
       </td>
       <td>
         {{ HTMLElement("blockquote") }},
@@ -260,7 +260,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/colspan">colspan</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/colspan">colspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -289,7 +289,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/controls">controls</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/controls">controls</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -310,7 +310,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/crossorigin">crossorigin</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/crossorigin">crossorigin</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }}, {{ HTMLElement("img") }},
@@ -347,7 +347,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/datetime">datetime</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/datetime">datetime</a></code>
       </td>
       <td>
         {{ HTMLElement("del") }}, {{ HTMLElement("ins") }},
@@ -393,7 +393,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/dirname">dirname</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/dirname">dirname</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -403,7 +403,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/disabled">disabled</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -418,7 +418,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/download">download</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/download">download</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -457,7 +457,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/for">for</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/for">for</a></code>
       </td>
       <td>
         {{ HTMLElement("label") }},
@@ -467,7 +467,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/form">form</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/form">form</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -485,7 +485,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formaction">formaction</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/formaction">formaction</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -497,7 +497,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formenctype">formenctype</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/formenctype">formenctype</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -509,7 +509,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formmethod">formmethod</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/formmethod">formmethod</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -521,7 +521,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formnovalidate">formnovalidate</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/formnovalidate">formnovalidate</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -533,7 +533,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/formtarget">formtarget</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/formtarget">formtarget</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -545,7 +545,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/headers">headers</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/headers">headers</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -595,7 +595,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/href">href</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/href">href</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -605,7 +605,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/hreflang">hreflang</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/hreflang">hreflang</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("link") }}
@@ -690,7 +690,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/label">label</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/label">label</a></code>
       </td>
       <td>
         {{ HTMLElement("optgroup") }},
@@ -734,7 +734,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/loop">loop</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/loop">loop</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -754,7 +754,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/max">max</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -765,7 +765,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/maxlength">maxlength</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/maxlength">maxlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -775,7 +775,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/minlength">minlength</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/minlength">minlength</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -785,7 +785,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/media">media</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/media">media</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -807,7 +807,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/min">min</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -817,7 +817,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/multiple">multiple</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/multiple">multiple</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -829,7 +829,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/muted">muted</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/muted">muted</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -841,7 +841,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/name">name</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/name">name</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }}, {{ HTMLElement("form") }},
@@ -870,7 +870,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/open">open</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/open">open</a></code>
       </td>
       <td>
         {{ HTMLElement("details") }},
@@ -889,7 +889,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>
@@ -907,7 +907,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/placeholder">placeholder</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/placeholder">placeholder</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -935,7 +935,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/preload">preload</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/preload">preload</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -947,7 +947,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/readonly">readonly</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/readonly">readonly</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -957,7 +957,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/referralpolicy">referrerpolicy</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/referralpolicy">referrerpolicy</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -968,7 +968,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/rel">rel</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/rel">rel</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -980,7 +980,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/required">required</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1014,7 +1014,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/rowspan">rowspan</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/rowspan">rowspan</a></code>
       </td>
       <td>
         {{ HTMLElement("td") }}, {{ HTMLElement("th") }}
@@ -1056,14 +1056,14 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/shape">shape</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/shape">shape</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/size">size</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/size">size</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }},
@@ -1075,7 +1075,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/sizes">sizes</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/sizes">sizes</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}, {{ HTMLElement("img") }},
@@ -1094,7 +1094,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/span">span</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/span">span</a></code>
       </td>
       <td>
         {{ HTMLElement("col") }},
@@ -1113,7 +1113,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/src">src</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/src">src</a></code>
       </td>
       <td>
         {{ HTMLElement("audio") }},
@@ -1143,7 +1143,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/srcset">srcset</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/srcset">srcset</a></code>
       </td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("source") }}
@@ -1159,7 +1159,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/step">step</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td></td>
@@ -1194,7 +1194,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/target">target</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/target">target</a></code>
       </td>
       <td>
         {{ HTMLElement("a") }}, {{ HTMLElement("area") }},
@@ -1226,7 +1226,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/type">type</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/type">type</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }},
@@ -1243,7 +1243,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/usemap">usemap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/usemap">usemap</a></code>
       </td>
       <td>
         {{ HTMLElement("img") }}, {{ HTMLElement("input") }},
@@ -1253,7 +1253,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/value">value</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/value">value</a></code>
       </td>
       <td>
         {{ HTMLElement("button") }}, {{ HTMLElement("data") }},
@@ -1269,7 +1269,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/width">width</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/width">width</a></code>
       </td>
       <td>
         {{ HTMLElement("canvas") }},

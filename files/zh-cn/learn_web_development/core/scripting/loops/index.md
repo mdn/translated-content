@@ -3,7 +3,7 @@ title: 循环吧，代码
 slug: Learn_web_development/Core/Scripting/Loops
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
 
@@ -701,7 +701,7 @@ do {
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops)。
+你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops)。
 
 ## 结论
 

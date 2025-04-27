@@ -24,7 +24,7 @@ l10n:
   </tbody>
 </table>
 
-在选择与屏幕像素密度最匹配的图像源时，此提示非常有用。这类似于 `<img>` [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性中 `x` 描述符的作用，其允许用户代理选择首选图像。
+在选择与屏幕像素密度最匹配的图像源时，此提示非常有用。这类似于 `<img>` [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性中 `x` 描述符的作用，其允许用户代理选择首选图像。
 
 如果服务器使用 `DPR` 提示来选择在响应中发送哪个资源，则响应必须包含 {{HTTPHeader("Content-DPR")}} 标头。如果 `Content-DPR` 的值与请求的 `DPR` 标头中的值不同，客户端必须使用 `Content-DPR` 的值进行布局。
 

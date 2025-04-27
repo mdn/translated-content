@@ -24,7 +24,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 有一小部分[低熵客户端提示标头](#低熵提示)，即便没有请求，也可以由客户端发送。
 
 > [!NOTE]
-> 也可以在 HTML 中使用带有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 属性的 {{HTMLElement("meta")}} 元素指定客户端提示。
+> 也可以在 HTML 中使用带有 [`http-equiv`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#attr-http-equiv) 属性的 {{HTMLElement("meta")}} 元素指定客户端提示。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />

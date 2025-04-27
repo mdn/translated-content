@@ -40,7 +40,7 @@ Content-Disposition: attachment; filename="filename.jpg"
 ```
 
 > [!NOTE]
-> 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
+> 在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)情况下，Chrome 和 Firefox 82 以及更高的版本会优先使用 HTML 的 [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性而不是 `Content-Disposition: inline` 参数来处理下载。而 Firefox 的早期版本则优先使用标头信息并内联显示内容。
 
 ### 作为多部分主体的标头
 
@@ -55,7 +55,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 
 - `name`
 
-  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
+  - : 后面是一个表单字段名的字符串，每一个字段名会对应一个子部分。在同一个字段名对应多个文件的情况下（例如，带有 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性的 {{HTMLElement("input","&lt;input type=file&gt;")}} 元素），则多个子部分共用同一个字段名。
 
     如果 `name` 参数的值为 `'_charset_'`，意味着这个子部分表示的不是一个 HTML 字段，而是在未明确指定字符集信息的情况下各部分使用的默认字符集。
 
@@ -110,7 +110,7 @@ value2
 ## 兼容性说明
 
 - 在 `filename` 和 `filename*` 两个参数同时出现的情况下，Firefox 5 可以更好地处理 `Content-Disposition` HTTP 响应标头。它会遍历所有提供的名称，假如 `filename*` 存在的话，就采用它的值，即使 `filename` 更靠前。之前的版本会采用出现在前面的参数的值，导致有更合适的名称而不被使用。参见 [Firefox bug 588781](https://bugzil.la/588781)。
-- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Element/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
+- Firefox 82（及更高版本）和 Chrome 优先考虑 HTML [\<a> 元素](/zh-CN/docs/Web/HTML/Reference/Elements/a)的 `download` 属性，而不是 `Content-Disposition：inline` 参数（对于[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy)）。早期的 Firefox 版本优先考虑标头，并会内联显示内容。
 
 ## 参见
 

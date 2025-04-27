@@ -48,7 +48,7 @@ There are a couple of key differences between block-level elements and inline el
 - Content model
   - : Generally, block-level elements may contain inline elements and other block-level elements. Inherent in this structural distinction is the idea that block elements create "larger" structures than inline elements.
 
-The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/Web/HTML/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/Web/HTML/Content_categories#flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/Web/HTML/Content_categories#phrasing_content), but there are additional categories.
+The distinction of block-level vs. inline elements is used in HTML specifications up to 4.01. In HTML5, this binary distinction is replaced with a more complex set of [content categories](/zh-TW/docs/Web/HTML/Guides/Content_categories). The "block-level" category roughly corresponds to the category of [flow content](/zh-TW/docs/Web/HTML/Guides/Content_categories#flow_content) in HTML5, while "inline" corresponds to [phrasing content](/zh-TW/docs/Web/HTML/Guides/Content_categories#phrasing_content), but there are additional categories.
 
 ## 相關元素
 

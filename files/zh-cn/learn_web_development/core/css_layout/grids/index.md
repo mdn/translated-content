@@ -3,8 +3,6 @@ title: 网格
 slug: Learn_web_development/Core/CSS_layout/Grids
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout/Responsive_design", "Learn_web_development/Core/CSS_layout")}}
 
 CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以把内容按照行与列的格式进行排版。另外，网格还能非常轻松地实现一些复杂的布局。关于使用网格进行页面排版，这篇文章包含了你需要的一切知识。
@@ -723,7 +721,7 @@ aside {
 
 ## 技能测试！
 
-你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Grid_skills)。
+你已经读完了这篇教程，那你记住那些最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试：网格](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid)。
 
 ## 小结
 
