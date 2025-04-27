@@ -32,7 +32,7 @@ reportError(throwable)
 ### 예외
 
 - {{jsxref("TypeError")}}
-  - : 이 메서드는 에러 인자 없이 호출됩니다.
+  - : 이 메서드는 오류 인자 없이 호출됩니다.
 
 ## 예제
 
