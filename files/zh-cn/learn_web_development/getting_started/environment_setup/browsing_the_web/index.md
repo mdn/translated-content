@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a7444882eb1b18918f3c924d83eb3c78f245643a
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
 当你阅读本模块时，你应该已经在你的计算机或其他可用设备上安装了多个现代 Web 浏览器。本文深入探讨了如何使用浏览器，介绍了 Web 浏览器是如何工作的，那些你通常与之交互的项目之间有何区别，以及怎样搜索信息。

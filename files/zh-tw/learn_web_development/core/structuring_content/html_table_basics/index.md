@@ -3,7 +3,7 @@ title: HTML表格的基礎
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
 這篇文章將帶你從列、格、標頭，以及將各格以數欄、數列的方式合併等基礎開始探索 HTML 表格。
 

@@ -3,7 +3,7 @@ title: "Django 教學 1: 本地圖書館網站"
 slug: Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django/skeleton_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 我們實戰教學系列的第一篇，會解釋你將學到什麼。並提供一個「本地圖書館」 的例子，作為概述。在接下來的教學裡，我們會不斷完善和改進這個網站。
 

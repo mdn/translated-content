@@ -3,8 +3,6 @@ title: 技能测试：变量
 slug: Learn_web_development/Core/Scripting/Test_your_skills/Variables
 ---
 
-{{learnsidebar}}
-
 本测试旨在评估读者对 [存储所需信息 - 变量](/zh-CN/docs/Learn_web_development/Core/Scripting/Variables) 一文的理解程度。
 
 > [!NOTE]

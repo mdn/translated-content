@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在介绍了基本知识后，我们现在来详细了解用于为表单的不同部分提供结构和意义的元素。
 

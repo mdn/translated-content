@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型需要考虑，但是从在网页中嵌入简单图片的 {{htmlelement("img")}} 元素开始更加合理。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
 
