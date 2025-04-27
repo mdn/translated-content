@@ -36,7 +36,7 @@ l10n:
 
 下面的例子展示的是用 `WebAssembly.Global()` 构造函数创建一个新的 global 实例。它被定义为可变的 `i32` 类型，值为 0。
 
-然后改变 global 的值，首先用 `Global.value` 属性设置为 `42`，然后用从 `global.wasm` 导出的函数 `incGlobal()` 设置为 43(它将接收到的参数的值加 1 并返回)。
+然后改变 global 的值，首先用 `Global.value` 属性设置为 `42`，然后用从 `global.wasm` 模块导出的 `incGlobal()` 函数设置为 43(它将接收到的参数的值加 1 并返回)。
 
 ```js
 const output = document.getElementById("output");
