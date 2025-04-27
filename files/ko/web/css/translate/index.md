@@ -195,7 +195,7 @@ translate: unset;
 
 {{EmbedLiveSample("Translating_an_element_on_hover", "100%", 175)}}
 
-## 명세
+## 명세서
 
 {{Specifications}}
 
