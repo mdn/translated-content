@@ -3,8 +3,6 @@ title: 开始使用 Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在让我们介绍 Vue，我们的第三个框架。在本文中，我们将了解一点 Vue 的背景知识，了解如何安装它并创建一个新项目，研究整个项目和单个组件的高级结构，了解如何在本地运行项目，并为开始构建示例做好准备。

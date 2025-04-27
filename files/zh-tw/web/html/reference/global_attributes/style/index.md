@@ -2,7 +2,7 @@
 title: style
 slug: Web/HTML/Reference/Global_attributes/style
 l10n:
-  sourceCommit: 476fb44932d56c0f50628a620348cd77f411b5ab
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -14,8 +14,8 @@ l10n:
 ```html interactive-example
 <div style="background: #ffe7e8; border: 2px solid #e66465">
   <p style="margin: 15px; line-height: 1.5; text-align: center">
-    Well, I am the slime from your video<br />
-    Oozin' along on your livin' room floor.
+    嗯，我就是你影片裡的那坨爛泥<br />
+    慢慢地在你客廳地板上滑行著。
   </p>
 </div>
 ```

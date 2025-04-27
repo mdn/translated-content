@@ -3,7 +3,6 @@ title: CSS 如何运行
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我们已经知道了 CSS 是做什么的以及怎么写简单的样式这样基础的 CSS，接下来我将了解到浏览器如何获取 CSS、HTML 和将他们加载成网页。
@@ -33,10 +32,6 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 4. 浏览器拉取到 CSS 之后会进行解析，根据选择器的不同类型（比如 element、class、id 等等）把他们分到不同的“桶”中。浏览器基于它找到的不同的选择器，将不同的规则（基于选择器的规则，如元素选择器、类选择器、id 选择器等）应用在对应的 DOM 的节点中，并添加节点依赖的样式（这个中间步骤称为渲染树）。
 5. 上述的规则应用于渲染树之后，渲染树会依照应该出现的结构进行布局。
 6. 网页展示在屏幕上（这一步被称为着色）。
-
-结合下面的图示更形象：
-
-![](rendering.svg)
 
 ## 关于 DOM
 

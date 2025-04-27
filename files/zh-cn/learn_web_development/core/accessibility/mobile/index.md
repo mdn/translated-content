@@ -3,8 +3,6 @@ title: 移动端无障碍
 slug: Learn_web_development/Core/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 随着通过手机设备访问 web 愈加常见，iOS 和 Android 等流行的平台都拥有了完善的无障碍工具，在这些平台上考虑 web 的无障碍是一件很重要事情。本文将着重介绍移动端无障碍的注意事项。

@@ -3,7 +3,7 @@ title: 软件包管理基础
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本文中，我们将详细介绍软件包管理器，以了解我们如何在自己的项目中使用它们——安装项目工具依赖项，使其保持最新状态等。
 

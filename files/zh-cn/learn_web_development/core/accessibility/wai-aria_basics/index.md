@@ -3,7 +3,7 @@ title: WAI-ARIA 基础
 slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/CSS_and_JavaScript","Learn_web_development/Core/Accessibility/Multimedia", "Learn_web_development/Core/Accessibility")}}
 
 紧接上文继续，有时候，我们制作涉及非语义 HTML 和动态的 JavaScript 内容更新的复杂 UI 控件可能很困难。**WAI-ARIA** 是一项技术，它可以通过浏览器和一些辅助技术来帮助我们进一步地识别以及实现语义化，这样一来能帮助我们解决问题，也让用户可以了解发生了什么。接下来我们将展示如何运用它来优化无障碍体验：
 
