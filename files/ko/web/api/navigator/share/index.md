@@ -69,7 +69,7 @@ navigator.share(data)
 
 ## 공유가능한 파일 유형
 
-다음은 일반적으로 공유할 수 있는 파일 형식 목록입니다. 단, 공유 가능 여부는 항상 {{domxref("navigator.canShare()")}}로 테스트하길 바랍니다.
+다음은 일반적으로 공유할 수 있는 파일 형식 목록입니다. 항상 {{domxref("navigator.canShare()")}}로 가능 여부를 확인하는 것이 좋습니다.
 
 - 애플리케이션
   - `.pdf` - `application/pdf`
