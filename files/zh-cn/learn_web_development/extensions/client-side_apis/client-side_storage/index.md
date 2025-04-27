@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 现代 Web 浏览器提供了很多在用户电脑上存放数据的方法——只要用户的允许——然后在需要时检索数据。这样能让你存留的数据长时间保存，保存站点和文档在离线情况下使用，保留对站点的个性化配置等等。本篇文章只解释它们工作的一些很基础的部分。

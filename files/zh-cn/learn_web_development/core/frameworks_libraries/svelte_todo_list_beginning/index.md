@@ -5,7 +5,6 @@ l10n:
   sourceCommit: 289d6314f3368aa3e28524e7d090f6e9c704e3b1
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started","Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在我们对 Svelte 运作机制有初步的了解后，就能开始构建我们的示例应用程序：一个待办事项列表。此篇文章中，会先确认应用程序所需的功能，接着会建立 `Todos.svelte` 组件并编写一些静态标记（markup）语言和样式，待一切准备就绪后，就能开始开发待办事项列表应用程序的相关特性，我们将在后续文章实现它们。

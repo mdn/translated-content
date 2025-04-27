@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 
 现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 polyfill 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
 

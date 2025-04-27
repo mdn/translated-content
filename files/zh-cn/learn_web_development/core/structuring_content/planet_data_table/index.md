@@ -3,8 +3,6 @@ title: 挑战：构建行星数据表
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
 在我们的表格评定中，我们为你提供有关太阳系中行星的一些数据，并让你将其结构化成 HTML 表。

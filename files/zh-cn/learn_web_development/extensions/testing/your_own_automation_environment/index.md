@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 在本文中，我们将教你如何搭建自己的自动化测试环境，并使用 Selenium/WebDriver 以及一种测试库（如 selenium-webdriver for Node）来运行测试。我们还将探讨如何将本地测试环境与上一篇文章中提到的商业工具集成。
 

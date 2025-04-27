@@ -3,7 +3,6 @@ title: CSS 如何运行
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我们已经知道了 CSS 是做什么的以及怎么写简单的样式这样基础的 CSS，接下来我将了解到浏览器如何获取 CSS、HTML 和将他们加载成网页。

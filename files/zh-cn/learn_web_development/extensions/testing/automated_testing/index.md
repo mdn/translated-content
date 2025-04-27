@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 每天手动在多个浏览器和设备上多次运行测试可能有点乏味且耗时。为了高效处理，你应该熟悉自动化工具。本文将介绍现有的工具、如何使用任务运行器，以及如何使用 LambdaTest、Sauce Labs、BrowserStack 和 TestingBot 等商业浏览器测试自动化应用程序的基础知识。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 超文本标记语言（英语：**H**yper**T**ext **M**arkup **L**anguage，简称：HTML）是一种用来结构化 Web 网页及其内容的标记语言。网页内容可以是：一组段落、一个重点信息列表、也可以含有图片和数据表格。正如标题所示，本文将对 HTML 及其功能做一个基本介绍。

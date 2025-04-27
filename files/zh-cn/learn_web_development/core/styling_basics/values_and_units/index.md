@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。

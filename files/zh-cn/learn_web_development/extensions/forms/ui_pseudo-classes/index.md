@@ -3,7 +3,7 @@ title: UI 伪类
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 在以前的文章中，我们以一般的方式介绍了各种表单控件的样式。这包括一些伪类的使用，例如，使用 `:checked` 来选择一个选中的复选框。在这篇文章中，我们将详细探讨在现代浏览器中可用的不同 UI 伪类，以便在不同状态下对表单添加样式。
 

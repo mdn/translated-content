@@ -3,8 +3,6 @@ title: 挑战：基本的 CSS 理解
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
 你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。
