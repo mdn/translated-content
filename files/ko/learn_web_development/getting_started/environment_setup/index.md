@@ -37,4 +37,3 @@ l10n:
   - : 이 글에서는 파일 시스템과 관련된 몇 가지 주의해야 할 문제를 다루며, 웹사이트를 위한 실용적인 파일 구조를 설정하는 방법을 다룹니다.
 - [Command line crash course](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : 이 글에서는 터미널에 대한 소개와 필수 명령어, 명령어를 같이 연결하는 방법, 명령줄 인터페이스(CLI) 도구를 추가하는 방법을 제공합니다.
-
