@@ -45,8 +45,7 @@ l10n:
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-> [!NOTE]
-> `align` 속성은 더 이상 사용되지 않는 구식 속성이므로 사용하지 않습니다. 대신, `<div>` 요소를 정렬하거나 배치할 때는 [CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout)나 [CSS Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 같은 CSS 속성이나 기술을 사용하는 것이 좋습니다.
+> [!NOTE] > `align` 속성은 더 이상 사용되지 않는 구식 속성이므로 사용하지 않습니다. 대신, `<div>` 요소를 정렬하거나 배치할 때는 [CSS Grid](/ko/docs/Web/CSS/CSS_grid_layout)나 [CSS Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 같은 CSS 속성이나 기술을 사용하는 것이 좋습니다.
 
 ## 사용 일람
 
