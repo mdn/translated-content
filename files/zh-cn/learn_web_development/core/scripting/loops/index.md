@@ -3,7 +3,7 @@ title: 循环吧，代码
 slug: Learn_web_development/Core/Scripting/Loops
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
 

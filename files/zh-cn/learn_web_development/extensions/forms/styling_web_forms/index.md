@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 在前几篇文章中，我们介绍了如何用 HTML 创建网页表单。现在，我们将介绍如何使用 [CSS](/zh-CN/docs/Web/CSS) 来设置表单样式。
 

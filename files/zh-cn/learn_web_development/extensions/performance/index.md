@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5085525b3452de07dbac7fa700aaaf5ff5360a2f
 ---
 
-{{LearnSidebar}}
-
 构建网站需要 HTML、CSS 和 JavaScript。要构建人们想要使用、吸引并留住用户的网站和应用程序，你需要创造良好的用户体验。良好用户体验的一部分是确保内容能够快速加载并响应用户交互。这就是所谓的 **Web 性能**，在本模块中，你将专注于创建高性能网站的基础知识。
 
 我们初学者的学习材料的其他部分尽可能地坚持 Web 最佳实践，如性能和[无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)，然而，专门专注于这些主题并确保你熟悉它们也很好。

@@ -2,7 +2,7 @@
 title: 屬性
 slug: Glossary/Attribute
 l10n:
-  sourceCommit: 26635ef6b1a40e538501bd81fdcf98725e14e6ea
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{GlossarySidebar}}

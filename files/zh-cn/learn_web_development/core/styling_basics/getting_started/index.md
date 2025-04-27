@@ -3,8 +3,6 @@ title: 让我们开始 CSS 的学习之旅
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
 在这篇文章中，我们将会拿一个简单的 HTML 文档做例子，并且在里面使用 CSS 样式，期待你能在此过程中学会更多有关 CSS 的实战性知识。

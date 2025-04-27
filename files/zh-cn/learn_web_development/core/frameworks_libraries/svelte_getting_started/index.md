@@ -3,7 +3,6 @@ title: Svelte 入门
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此篇文章我们将简要介绍 [Svelte 框架](https://svelte.dev/)。我们将会学习 Svelte 如何运作，以及它与其它框架和工具的不同之处。接着我们将学习如何设置我们的开发环境并建立一个示例应用程序，了解其项目结构及如何在本地运行，最后可以将其构建于生产环境。

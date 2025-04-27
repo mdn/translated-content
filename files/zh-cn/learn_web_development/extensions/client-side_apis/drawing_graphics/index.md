@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs", "Learn_web_development/Extensions/Client-side_APIs/Client-side_storage", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 浏览器包含一些非常强大的图形编程工具，从可缩放矢量图形（Scalable Vector Graphics，简称 [SVG](/zh-CN/docs/Web/SVG)）语言到用于在 HTML {{htmlelement("canvas")}} 元素上绘制图形的 API（参见 [Canvas API](/zh-CN/docs/Web/API/Canvas_API) 和 [WebGL](/zh-CN/docs/Web/API/WebGL_API)）。本文将介绍 canvas，并提供更多的学习资源。

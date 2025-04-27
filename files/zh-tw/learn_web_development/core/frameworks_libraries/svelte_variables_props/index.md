@@ -3,7 +3,6 @@ title: Svelte 中的動態行為：變數及屬性
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_Todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/Svelte_components", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在我們已經準備好了標記語言及樣式，我們可以開始為 Svelte 待辦清單應用程式開發所需的功能。在此篇文章中，我們將使用變數及屬性使我們的應用程式動態化，允許我們新增及刪除待辦事項，標記它們為完成及藉由狀態過濾它們。

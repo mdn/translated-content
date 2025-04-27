@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
 

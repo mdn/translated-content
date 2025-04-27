@@ -3,7 +3,7 @@ title: 客户端服务端交互概述
 slug: Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/First_steps/Introduction", "Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 既然你已经了解了服务器端编程的目的和潜在的好处，接下来我们将非常细致地去说明当服务器接收到了来自浏览器的“动态请求”时到底发生了什么。因为大多数的服务器端代码通过相似的方式来处理请求并做出响应，这将帮助你理解当编写你自己的大量代码时你需要做什么。
 

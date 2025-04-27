@@ -3,7 +3,7 @@ title: 在 CSS 中调整大小
 slug: Learn_web_development/Core/Styling_basics/Sizing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
 

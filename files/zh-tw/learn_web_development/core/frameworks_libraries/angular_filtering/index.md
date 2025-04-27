@@ -3,7 +3,7 @@ title: 篩選我們的待辦事項項目
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在讓我們來增加功能，讓使用者篩選待辦事項，這樣他們就可以選擇查看進行中、已完成，或是全部的事項。
 
