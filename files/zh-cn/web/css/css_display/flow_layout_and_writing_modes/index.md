@@ -21,7 +21,31 @@ CSS 编写模式级别 3 规范定义了文档编写模式更改对流式布局�
 
 虽然某些语言将使用特定的书写模式或文本方向，但我们也可以使用这些属性来产生创造性效果，例如垂直运行标题。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/creative-use.html", '100%', 720)}}
+```html live-sample___creative-use
+<div class="box">
+  <h1>A heading</h1>
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___creative-use
+body {
+  font: 1.2em sans-serif;
+}
+h1 {
+  writing-mode: vertical-lr;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("creative-use", "", "220px")}}
 
 ## `writing-mode` 属性和块流
 
@@ -29,41 +53,269 @@ CSS 编写模式级别 3 规范定义了文档编写模式更改对流式布局�
 
 下面的示例显示了使用 `horizontal-tb` 的块。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/horizontal-tb.html", '100%', 720)}}
+```html live-sample___horizontal-tb
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.
+  </p>
+</div>
+```
+
+```css live-sample___horizontal-tb
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: horizontal-tb;
+}
+```
+
+{{EmbedLiveSample("horizontal-tb", "", "240px")}}
 
 `vertical-rl` 值为你提供了一个从右到左的块向和一个垂直的行向，如下一个示例所示。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-rl.html", '100%', 720)}}
+```html hidden live-sample___vertical-rl
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.
+  </p>
+</div>
+```
+
+```css live-sample___vertical-rl
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: vertical-rl;
+}
+```
+
+{{EmbedLiveSample("vertical-rl", "", "300px")}}
 
 最后一个示例演示了第三个可能的 `writing-mode` 值——`vertical-lr`。这将为你提供一个从左到右的块流方向和一个垂直的行方向。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/vertical-lr.html", '100%', 720)}}
+```html hidden live-sample___vertical-lr
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney. Their names
+    were Stephen and Joseph Montgolfier, they were papermakers by trade, and
+    were noted as possessing thoughtful minds and a deep interest in all
+    scientific knowledge and new discovery.
+  </p>
+  <p>
+    Before that night—a memorable night, as it was to prove—hundreds of millions
+    of people had watched the rising smoke-wreaths of their fires without
+    drawing any special inspiration from the fact.
+  </p>
+</div>
+```
+
+```css live-sample___vertical-lr
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: vertical-lr;
+}
+```
+
+{{EmbedLiveSample("vertical-lr", "", "300px")}}
 
 ## 对父级具有不同写入模式的框
 
 当一个嵌套框被分配给它的父级的不同的写入模式时，一个行级别的框将显示，就好像它有 `display: inline-block` 一样。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-change-mode.html", '100%', 720)}}
+```html live-sample___inline-change-mode
+<div class="box">
+  <p>
+    One <span>November</span> night in the year 1782, so the story runs, two
+    brothers sat over their winter fire in the little French town of Annonay,
+    watching the grey smoke-wreaths from the hearth curl up the wide chimney.
+    Their names were Stephen and Joseph Montgolfier, they were papermakers by
+    trade, and were noted as possessing thoughtful minds and a deep interest in
+    all scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___inline-change-mode
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: vertical-rl;
+}
+.box span {
+  writing-mode: horizontal-tb;
+  padding: 10px;
+  border: 1px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("inline-change-mode", "", "240px")}}
 
 块级别的框将建立一个新的块格式上下文，这意味着如果其内部显示类型为 `flow`，则它将获得 `flow-root` 的计算显示类型。这在下一个示例中显示，其中显示为 `horizontal-tb` 的框包含一个浮动，该浮动是由于其父级建立了一个新的 BFC 而包含的。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/block-change-mode.html", '100%', 720)}}
+```html live-sample___block-change-mode
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney.
+  </p>
+
+  <div>
+    <div class="float"></div>
+    This box should establish a new BFC.
+  </div>
+
+  <p>
+    Their names were Stephen and Joseph Montgolfier, they were papermakers by
+    trade, and were noted as possessing thoughtful minds and a deep interest in
+    all scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___block-change-mode
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: vertical-rl;
+}
+.box > div {
+  writing-mode: horizontal-tb;
+  padding: 10px;
+  border: 1px solid rebeccapurple;
+}
+.float {
+  width: 100px;
+  height: 150px;
+  background-color: rebeccapurple;
+  float: left;
+}
+```
+
+{{EmbedLiveSample("block-change-mode", "", "500px")}}
 
 ## 替换的元素
 
 替换的元素（如图像）不会根据“写入模式”属性更改其方向。但是，替换的元素（如包含文本的表单控件）应与使用中的写入模式匹配。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/replaced.html", '100%', 720)}}
+```html live-sample___replaced
+<div class="box">
+  <p>
+    One November night in the year 1782, so the story runs, two brothers sat
+    over their winter fire in the little French town of Annonay, watching the
+    grey smoke-wreaths from the hearth curl up the wide chimney.
+  </p>
+
+  <img
+    alt="a colorful hot air balloon against a clear sky"
+    src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+
+  <p>
+    Their names were Stephen and Joseph Montgolfier, they were papermakers by
+    trade, and were noted as possessing thoughtful minds and a deep interest in
+    all scientific knowledge and new discovery.
+  </p>
+</div>
+```
+
+```css live-sample___replaced
+body {
+  font: 1.2em sans-serif;
+}
+.box {
+  writing-mode: vertical-rl;
+}
+```
+
+{{EmbedLiveSample("replaced", "", "340px")}}
 
 ## 逻辑属性和值
 
 一旦你在书写模式（而不是 `horizontal-tb`）时，许多映射到屏幕物理维度的属性和值看起来很奇怪。例如，如果为一个框提供 100px 的宽度，以水平 tb 表示，它将控制行方向的大小。在 `vertical-lr` 中，它控制块方向的大小，因为它不随文本旋转。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/width.html", '100%', 720)}}
+```html live-sample___width
+<div class="box">
+  <div class="box1">Box 1</div>
+  <div class="box2">Box 2</div>
+</div>
+```
+
+```css live-sample___width
+body {
+  font: 1.2em sans-serif;
+}
+.box1 {
+  writing-mode: horizontal-tb;
+  border: 5px solid rebeccapurple;
+  width: 100px;
+  margin: 10px;
+}
+.box2 {
+  writing-mode: vertical-lr;
+  border: 5px solid rebeccapurple;
+  width: 100px;
+  margin: 10px;
+}
+```
+
+{{EmbedLiveSample("width")}}
 
 因此，我们有了 {{cssxref("block-size")}} 和 {{cssxref("inline-size")}} 的新属性。如果我们给块一个 100px 的 `inline-size`，不管我们是处于水平还是垂直写入模式，`inline-size` 总是指行方向的大小。
 
-{{EmbedGHLiveSample("css-examples/flow/writing-modes/inline-size.html", '100%', 720)}}
+```html live-sample___inline-size
+<div class="box">
+  <div class="box1">Box 1</div>
+  <div class="box2">Box 2</div>
+</div>
+```
+
+```css live-sample___inline-size
+body {
+  font: 1.2em sans-serif;
+}
+.box1 {
+  writing-mode: horizontal-tb;
+  border: 5px solid rebeccapurple;
+  inline-size: 100px;
+  margin: 10px;
+}
+.box2 {
+  writing-mode: vertical-lr;
+  border: 5px solid rebeccapurple;
+  inline-size: 100px;
+  margin: 10px;
+}
+```
+
+{{EmbedLiveSample("inline-size", "", "200px")}}
 
 [CSS 逻辑属性和值](/zh-CN/docs/Web/CSS/CSS_logical_properties_and_values)规范包括用于控制页边距、填充和边框的属性的逻辑版本，以及用于我们通常使用物理方向指定的内容的其他映射。
 

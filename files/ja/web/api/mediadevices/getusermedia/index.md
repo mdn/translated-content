@@ -53,7 +53,7 @@ getUserMedia(constraints)
 
 - `NotAllowedError` {{domxref("DOMException")}}
 
-  - : 要求されたソース機器の 1 つ以上が現時点で使用できない場合に発生します。これは、閲覧コンテキストが安全でない場合（つまり、ページが HTTPS ではなく HTTP を使って読み込まれた場合）に発生します。また、ユーザーが現在の閲覧インスタンスに機器へのアクセスを許可しないように指定している場合、ユーザーが現在のセッションへのアクセスを拒否している場合、またはユーザーがユーザーメディア機器へのすべてのアクセスをグローバルに拒否している場合にも発生します。[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によるメディア権限の管理に対応しているブラウザーでは、権限ポリシーが入力ソースへのアクセスを許可するように設定されていない場合、このエラーが返されます。
+  - : 要求されたソース機器の 1 つ以上が現時点で使用できない場合に発生します。これは、閲覧コンテキストが安全でない場合（つまり、ページが HTTPS ではなく HTTP を使って読み込まれた場合）に発生します。また、ユーザーが現在の閲覧インスタンスに機器へのアクセスを許可しないように指定している場合、ユーザーが現在のセッションへのアクセスを拒否している場合、またはユーザーがユーザーメディア機器へのすべてのアクセスをグローバルに拒否している場合にも発生します。[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によるメディア権限の管理に対応しているブラウザーでは、権限ポリシーが入力ソースへのアクセスを許可するように設定されていない場合、このエラーが返されます。
 
     > [!NOTE]
     > 古いバージョンの仕様では、この代わりに `SecurityError` を使っていました。 `SecurityError` は新しい意味を持つようになりました。
@@ -80,7 +80,7 @@ getUserMedia(constraints)
 
 `getUserMedia()` は強力な機能ですが、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ使用できます。保護されていないコンテキストでは `navigator.mediaDevices` は `undefined` で、 `getUserMedia()` にアクセスすることができなくなります。保護されたコンテキストとは、簡単に言うと、 HTTPS や `file:///` URL スキームを使って読み込まれたページ、あるいは `localhost` から読み込まれたページのことです。
 
-さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
+さらに、ユーザーの音声と動画の入力にアクセスするためには、常にユーザーの許可が必要です。有効なオリジンにおけるウィンドウの最上位の文書コンテキストのみが、 `getUserMedia()` を用いて権限をリクエストすることができます。ただし、最上位のコンテキストが該当する {{HTMLElement("iframe")}} に[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を用いてその権限を明示的に許可した場合は例外です。そうでなければ、ユーザーは入力機器を使用する許可を求められることすらありません。
 
 これらの要件や規則、コードが実行されているコンテキストにそれらがどのように反映されるか、そしてブラウザーがユーザーのプライバシーとセキュリティ問題をどのように管理するかについての詳細は、続きをお読みください。
 
@@ -98,7 +98,7 @@ getUserMedia(constraints)
 
 #### 権限ポリシー
 
-[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy) ディレクティブのうち `getUserMedia()` に適用される権限は `camera` と `microphone` の 2 つです。
+[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy) ディレクティブのうち `getUserMedia()` に適用される権限は `camera` と `microphone` の 2 つです。
 
 例えば、この HTTP ヘッダーにより、文書と同じオリジンから読み込まれる埋め込み {{HTMLElement("iframe")}} 要素がカメラを使用できるようになります。
 
@@ -129,9 +129,9 @@ Permissions-Policy: microphone=(self "https://developer.mozilla.org")
 
 `getUserMedia()` は、予期せず使用された場合やセキュリティが慎重に管理されていない場合には、明らかにセキュリティ上の問題があるため、保護されたコンテキストでのみ使用することができます。次に `getUserMedia()` を呼び出そうとするような、安全でない方法で文書を読み込む方法はいくつもあります。以下は `getUserMedia()` を呼び出すことが許されない状況の例です。
 
-- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
+- サンドボックス化された {{HTMLElement("iframe")}} 要素に読み込まれた文書は、 `<iframe>` の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性が `allow-same-origin` に設定されていなければ `getUserMedia()` を呼び出すことができません。
 - オリジンを持たない `data://` や `blob://` の URL を使って読み込まれた文書（例えば、これらの URL のいずれかがユーザーによってアドレスバー入力された場合）は、 `getUserMedia()` を呼び出すことができません。 JavaScript のコードから読み込まれたこれらの種類の URL は、スクリプトの権限を継承します。
-- その他、 [`srcdoc`](/ja/docs/Web/HTML/Element/iframe#srcdoc) 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
+- その他、 [`srcdoc`](/ja/docs/Web/HTML/Reference/Elements/iframe#srcdoc) 属性でフレームの内容を指定している場合など、オリジンが存在しない場合。
 
 ## 例
 

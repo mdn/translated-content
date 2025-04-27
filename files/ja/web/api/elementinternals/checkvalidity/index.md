@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`checkValidity()`** は {{domxref("ElementInternals")}} インタフェイスのメソッドで、要素が適用された[制約検証](/ja/docs/Web/HTML/Constraint_validation)のルールを満たしているかどうかをチェックします。
+**`checkValidity()`** は {{domxref("ElementInternals")}} インタフェイスのメソッドで、要素が適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)のルールを満たしているかどうかをチェックします。
 
 もし `checkValidity` が `false` を返したら、キャンセル可能な [invalid イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)が要素で発生します。
 

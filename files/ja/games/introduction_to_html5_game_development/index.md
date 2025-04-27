@@ -78,7 +78,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
   - : ゲームパッドやゲームコントローラーを使用します。
 - [HTML](/ja/docs/Web/HTML) および [CSS](/ja/docs/Web/CSS)
   - : ゲームのユーザーインターフェイスを構築し、装飾し、レイアウトします。
-- [HTML audio](/ja/docs/Web/HTML/Element/audio)
+- [HTML audio](/ja/docs/Web/HTML/Reference/Elements/audio)
   - : 簡単な効果音や音楽を簡単に再生することができます。
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
   - : ユーザーデータを自分のコンピューターや 端末に保存します。

@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 A propriedade **`color`** do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos). Também define o valorer da {{cssxref("currentcolor")}}, no qual pode ser usado um valor indireto de outra propriedade, e tem como padrão as cores de outras propriedades (enquanto não definida), tal como a propriedade {{cssxref("border-color")}}.
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 Para uma visão geral de como usar a propriedade color e semelhantes no HTML, veja [Cor - CSS, como começar](/pt-BR/docs/Web/CSS/Como_começar/Cor).
 

@@ -1,10 +1,9 @@
 ---
 title: JavaScript 中的基础数学 — 数字和操作符
 slug: Learn_web_development/Core/Scripting/Math
-original_slug: Learn/JavaScript/First_steps/Math
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Variables", "Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting")}}
 
 在本次课程中，我们讨论 JavaScript 中的数学 — 我们如何使用 {{Glossary("Operator","运算符")}} 和其他功能来成功地操作数字以完成我们的请求。
 

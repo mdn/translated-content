@@ -1,10 +1,9 @@
 ---
 title: 事件冒泡
 slug: Learn_web_development/Core/Scripting/Event_bubbling
-original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 ## 事件冒泡
 
@@ -348,7 +347,7 @@ container.addEventListener("click", (event) => {
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)页面进行测试。
+你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events)页面进行测试。
 
 ## 结论
 

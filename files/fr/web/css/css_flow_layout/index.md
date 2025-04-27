@@ -31,4 +31,4 @@ La première phrase contient également un élément {{HTMLElement("span")}} ave
 
 ### Termes du glossaire
 
-- [Bloc (CSS)](</fr/docs/Glossary/Block/Block_(CSS)>)
+- [Bloc (CSS)](/fr/docs/Glossary/Block/CSS)

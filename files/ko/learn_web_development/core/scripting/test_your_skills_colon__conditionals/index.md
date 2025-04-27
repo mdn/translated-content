@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/Building_blocks/Test_your_skills:_Conditionals
 
 {{learnsidebar}}
 
-이 실력 평가의 목적은 여러분이 [판단을 만드세요 — 조건문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals) 문서를 잘 이해했는지 평가하기 위함입니다.
+이 실력 평가의 목적은 여러분이 [판단을 만드세요 — 조건문](/ko/docs/Learn_web_development/Core/Scripting/Conditionals) 문서를 잘 이해했는지 평가하기 위함입니다.
 
 .
 

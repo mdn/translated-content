@@ -3,12 +3,33 @@ title: const
 slug: Web/JavaScript/Reference/Statements/const
 ---
 
-{{jsSidebar("Statements")}}Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。{{EmbedInteractiveExample("pages/js/statement-const.html")}}
+{{jsSidebar("Statements")}}
+
+Constants (常數) 有點像使用 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 所宣告的變數，具有區塊可視範圍。常數不能重複指定值，也不能重複宣告。
+
+{{InteractiveExample("JavaScript Demo: const declaration")}}
+
+```js interactive-example
+const number = 42;
+
+try {
+  number = 99;
+} catch (err) {
+  console.log(err);
+  // Expected output: TypeError: invalid assignment to const 'number'
+  // (Note: the exact output may be browser-dependent)
+}
+
+console.log(number);
+// Expected output: 42
+```
 
 ## 語法
 
-```plain
-const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
+```js-nolint
+const name1 = value1;
+const name1 = value1, name2 = value2;
+const name1 = value1, name2 = value2, /* …, */ nameN = valueN;
 ```
 
 - `nameN`
@@ -18,11 +39,11 @@ const name1 = value1 [, name2 = value2 [, ... [, nameN = valueN]]];
 
 ## 描述
 
-上述宣告建立一個常數，它的可視範圍可能是全域的，或是在它所宣告的區域區塊中。 和 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 變數不同的是，全域的常數不會變成 window 物件的屬性。常數必須要初始化；也就是說，你必須在宣告常數的同一個敘述式中指定這個常數的值。(這很合理，因為稍後就不能再變更常數的值了)
+上述宣告建立一個常數，它的可視範圍可能是全域的，或是在它所宣告的區域區塊中。和 [`var`](/zh-TW/docs/Web/JavaScript/Reference/Statements/var) 變數不同的是，全域的常數不會變成 window 物件的屬性。常數必須要初始化；也就是說，你必須在宣告常數的同一個敘述式中指定這個常數的值。(這很合理，因為稍後就不能再變更常數的值了)
 
 宣告 **`const`** 會對於它的值建立一個唯讀的參考。並不是說這個值不可變更，而是這個變數不能再一次指定值。例如，假設常數的內容(值)是個物件，那麼此物件的內容(物件的參數)是可以更改的。
 
-所有關於 "[temporal dead zone](/zh-TW/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" 的狀況，都適用於 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) and `const` 。
+所有關於 "[temporal dead zone](/zh-TW/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" 的狀況，都適用於 [`let`](/zh-TW/docs/Web/JavaScript/Reference/Statements/let) 和 `const` 。
 
 在相同的可視範圍內，常數不能和函數，變數具有相同名稱。
 

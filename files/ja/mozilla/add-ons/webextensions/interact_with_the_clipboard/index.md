@@ -161,7 +161,7 @@ document.querySelector("#paste").addEventListener("click", paste);
 
 ### 特定のブラウザーにおける留意事項
 
-Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)をサポートしていますが、[コンテンツ編集可能モード](/ja/docs/Web/HTML/Global_attributes/contenteditable)の要素への貼り付けのみをサポートしており、コンテンツスクリプトの場合は {{HTMLElement("textarea")}} でのみ機能します。バックグラウンドスクリプトでは、どの要素もコンテンツ編集可能モードに設定できます。
+Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)をサポートしていますが、[コンテンツ編集可能モード](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)の要素への貼り付けのみをサポートしており、コンテンツスクリプトの場合は {{HTMLElement("textarea")}} でのみ機能します。バックグラウンドスクリプトでは、どの要素もコンテンツ編集可能モードに設定できます。
 
 ## ブラウザーの互換性
 
@@ -171,5 +171,5 @@ Firefox はバージョン 54 から `"clipboardRead"` [パーミッション](/
 
 - [Clipboard API](/ja/docs/Web/API/Clipboard_API)
 - [権限 API](/ja/docs/Web/API/Permissions_API)
-- [コンテンツを編集可能にする](/ja/docs/Web/HTML/Global_attributes/contenteditable)
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable)
+- [コンテンツを編集可能にする](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)

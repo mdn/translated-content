@@ -61,8 +61,8 @@ wat2wasm simple.wat -v
 
 ## 関連情報
 
-- [WebAssembly テキスト形式を理解する](/ja/docs/WebAssembly/Understanding_the_text_format) — テキスト形式のシンタックスの詳細説明。
-- [C/C++ から WebAssembly にコンパイルする](/ja/docs/WebAssembly/C_to_Wasm) — Binaryen/Emscripten のようなツールはソースコードを Wasm にコンパイルし、 JavaScript のコンテキストでモジュールを実行するために必要な API コードを作成します。それらの使用方法の詳細はこちらから探してください。
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API) — WebAssembly API コードがどのように機能するかについて詳しく知りたい場合はこちらをお読みください。
+- [WebAssembly テキスト形式を理解する](/ja/docs/WebAssembly/Guides/Understanding_the_text_format) — テキスト形式のシンタックスの詳細説明。
+- [C/C++ から WebAssembly にコンパイルする](/ja/docs/WebAssembly/Guides/C_to_Wasm) — Binaryen/Emscripten のようなツールはソースコードを Wasm にコンパイルし、 JavaScript のコンテキストでモジュールを実行するために必要な API コードを作成します。それらの使用方法の詳細はこちらから探してください。
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API) — WebAssembly API コードがどのように機能するかについて詳しく知りたい場合はこちらをお読みください。
 - [Text format](https://webassembly.github.io/spec/core/text/index.html) — WebAssembly GitHub リポジトリーのテキスト形式の詳細説明。
 - [wast-loader](https://github.com/xtuc/webassemblyjs/tree/master/packages/wast-loader) — これをすべて処理してくれる webpack のローダーです。

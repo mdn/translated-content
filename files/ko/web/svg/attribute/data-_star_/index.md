@@ -31,4 +31,4 @@ l10n:
 
 - {{domxref("SVGElement")}}
 - {{domxref("SVGElement.dataset")}} 속성은 스크립트에서 이러한 특성들로 접근할 때 사용됩니다.
-- [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

@@ -1,17 +1,19 @@
 ---
 title: ビューポートの概念
 slug: Web/CSS/CSSOM_view/Viewport_concepts
+l10n:
+  sourceCommit: d13c1276b80bbfc940a1091b62f333fe9edc78a2
 ---
 
 {{CSSRef}}
 
-この記事では、ビューポートの概念 — ビューポートとは何か、ビューポートとは何か、 CSS, SVG, モバイル端末における影響 — および、視覚ビューポートとレイアウトビューポートの違いをを説明します。
+この記事では、ビューポートの概念 — ビューポートとは何か、ビューポートとは何か、 CSS, SVG, モバイル端末における影響 — および、視覚的ビューポートとレイアウトビューポートの違いをを説明します。
 
 ## ビューポートとは何か
 
 ビューポートはコンピューターグラフィックの中で現在表示されている領域を表します。ウェブブラウザーの用語では、これは一般にブラウザーウィンドウのうち、ユーザーインターフェイス、メニューバーなどを除いた部分です。すなわち、あなたが見ている文書の部分です。
 
-文書は、この記事のように、とても長くなることがあります。今のビューポートは現在見えているものすべてであり、特に「ビューポートとは何か」の節や、おそらくナビゲーションメニューの一部もあるでしょう。ビューポートの大きさは画面の大きさ、ブラウザーが全画面モードであるかどうか、ユーザーがズームしているかどうかに依存します。この文書における*関連情報*の節のように、ビューポートの外にあるコンテンツは、スクロールして表示するまで画面上で表示されていません。
+文書は、この記事のように、とても長くなることがあります。今のビューポートは現在見えているものすべてであり、特に「ビューポートとは何か」の節や、おそらくナビゲーションメニューの一部もあるでしょう。ビューポートの大きさは画面の大きさ、ブラウザーが全画面モードであるかどうか、ユーザーがズームしているかどうかに依存します。この文書における「関連情報」の節のように、ビューポートの外にあるコンテンツは、スクロールして表示するまで画面上で表示されていません。
 
 - アプリケーションを全画面にする必要がないような大きなモニターでは、ビューポートはブラウザーのウィンドウの大きさです。
 - 多くのモバイル端末やブラウザーが全画面モードである場合、ビューポートは画面全体です。
@@ -37,29 +39,29 @@ window.outerHeight; /* 900 */
 
 ビューポートの大きさや、同様の大きさを求めるのに役立つ DOM プロパティがあります。
 
-- 文書の要素の {{DOMxRef("Element.clientWidth")}} は、文書の内部的な幅を [CSS ピクセル](/ja/docs/Mozilla/Mobile/Viewport_meta_tag#A_pixel_is_not_a_pixel)単位で、パディングを含みます (ただし、境界、マージン、ある場合は垂直スクロールバーは含みません)。**これがビューポートの幅です**。
+- 文書の要素の {{DOMxRef("Element.clientWidth")}} は、文書の内部的な幅を [CSS ピクセル](/ja/docs/Web/HTML/Guides/Viewport_meta_element#画面の密度)単位で、パディングを含みます (ただし、境界、マージン、ある場合は垂直スクロールバーは含みません)。**これがビューポートの幅です**。
 - {{DOMxRef("Window.innerWidth")}} は、ブラウザーウィンドウのビューポートの CSS ピクセル単位の幅で、もしあれば垂直スクロールバーの幅を含みます。
-- {{DOMxRef("Window.outerWidth")}} は、ブラウザーウィンドウの外寸の幅で、すべてのウィンドウ{{glossary("chrome", "クローム")}}を含みます。
+- {{DOMxRef("Window.outerWidth")}} は、ブラウザーウィンドウの外寸の幅で、すべてのウィンドウ{{glossary("Chrome", "クローム")}}を含みます。
 
 これらを実験してみると、 `innerWidth` と `outerWidth` は同じに見えましたが、　`innerHeight`　よりも `outerHeight` の方が高さが 100px だけ高くなっていました。これは `outerHeight` にはブラウザーのクロームが含まれているためです。測定はアドレスバーとブックマークバーの合計の高さが 100px のブラウザーで行われましたが、ウィンドウの左右にはクロームが表示されていません。
 
-`innerHeight` と `innerWidth` 内の領域は、一般的に**レイアウトビューポート**と考えられています。ブラウザのクロームはビューポートの一部とはみなされません。
+`innerHeight` と `innerWidth` 内の領域は、一般的に**レイアウトビューポート**と考えられています。ブラウザーのクロームはビューポートの一部とはみなされません。
 
 拡大すると、 Firefox と Chrome の両方で、 `innerWidth` と `clientWidth` の新しい CSS ピクセルサイズが報告されます。 `outerWidth` と `outerHeight` で返される値はブラウザーに依存します。 Firefox では新しい値を CSS ピクセルで報告しますが、 Chrome では長さを既定のピクセルサイズで返します。拡大縮小すると次のようになるかもしれません。
 
 ```js
 document.documentElement.clientWidth; /* 800 */
 window.innerWidth; /* 800 */
-window.outerWidth; /* 800 in Firefox, 1200 in chrome */
+window.outerWidth; /* 800 (Firefox), 1200 (Chrome) */
 ```
 
 ```js
 document.documentElement.clientHeight; /* 533 */
 window.innerHeight; /* 533 */
-window.outerHeight; /* 596 in Firefox, 900 in chrome */
+window.outerHeight; /* 596 (Firefox), 900 (Chrome) */
 ```
 
-The viewport was originally 1200 x 800 pixels. Upon zooming in, the viewport became 800 x 533 pixels. This is the _layout viewport_. Sticky headers or footers, with the following styles, will stick to the top and bottom of the _layout viewport_ respectively.
+ビューポートは元々 1200 x 800 ピクセルでした。拡大すると、ビューポートは 800 x 533 ピクセルになりました。これが「レイアウトビューポート」です。次のスタイル設定に従うことで、ヘッダーまたはフッターを「レイアウトビューポート」の上下にそれぞれ固定することができます。
 
 ```css
 body > header {
@@ -72,27 +74,29 @@ body > footer {
 }
 ```
 
-We got the 800 x 533 measurement when we zoomed in using the keyboard. The header and footer stayed flush against the top and bottom of the window. But what if we had pinched-zoomed on a tablet? What if a dynamic keyboard pops open on a phone?
+キーボードを使用してズームインしたところ、 800 x 533 の測定値になりました。ヘッダーとフッターはウィンドウの上下に揃った状態を維持しました。しかし、タブレット上でピンチズームが指定されていた場合はどうでしょうか？ また、携帯電話で動的キーボードが開くための操作が行われた場合はどうでしょうか？
 
-The web contains two viewports, the **layout viewport** and the **visual viewport**. The visual viewport is the part of the web page that is currently visible in the browser and can change. When the user pinch-zooms the page, pops open a dynamic keyboard, or when a previously hidden address bar becomes visible, the visual viewport shrinks but the layout viewport is unchanged.
+### レイアウトビューポートと視覚的ビューポート
 
-Sticky headers or footers, as discussed above, stick to the top and bottom of the _layout viewport_, and therefore remain in view when we zoom in with the keyboard. If you pinch-zoom, the layout viewport may not be fully visible. If you magnify from the middle of the layout viewport, the content would expand in all four directions. If you had a sticky header or footer, they would still be stuck to the top or bottom of the layout viewport, but they may not be visible at the top and bottom of the device's screen — which is the visual viewport. The visual viewport is the currently visible portion of the layout viewport. If you scroll down, you are changing the contents of the visual viewport and bringing the bottom of the layout viewport into view, displaying the sticky footer, which will then stay stuck at the bottom.
+ウェブには、**レイアウトビューポート**と**視覚的ビューポート**の 2 つのビューポートが含まれています。視覚的ビューポートは、ウェブページのうち現在ブラウザーに表示されている部分であり、変化する可能性があります。ユーザーがページをピンチズームしたり、動的なキーボードが開いたり、前回非表示になっていたアドレスバーが表示されたりすると、視覚的ビューポートは縮小しますが、レイアウトビューポートは変更されません。
 
-The visual viewport is the visual portion of a screen not including on-screen keyboards, areas outside of a pinch-zoom area, or other feature that doesn't scale with the dimensions of a page. The visual viewport is the same size as the layout viewport or smaller.
+前述のとおり、[固定](/ja/docs/Web/CSS/position#固定位置指定)された粘着ヘッダーまたはフッターはレイアウトビューポートの上下に固定されるため、キーボードでズームインしても表示されたままになります。ピンチズームを行うと、レイアウトビューポートが完全に表示されない場合があります。レイアウトビューポートの中央から拡大すると、コンテンツは4つの方向に展開されます。ヘッダーまたはフッターが粘着している場合、レイアウトビューポートの上部または下部に固定されたままになりますが、端末の画面（視覚的ビューポート）の上部および下部では表示されない場合があります。視覚的ビューポートとは、レイアウトビューポートの現在表示されている部分です。 下にスクロールすると、視覚的ビューポートのコンテンツが変更され、レイアウトビューポートの下部が表示され、粘着フッターが表示されます。
 
-For a page containing iframes, objects, or external SVG, both the containing pages and each included file has their own unique window object. Only the top-level window has a visual viewport that may be distinct from the layout viewport. For included documents, the visual viewport and layout viewport are the same.
+視覚的ビューポートとは、画面上のキーボード、ピンチズーム領域の外部などの、ページの寸法に合わせて変倍しない他の機能が含まれない画面の視覚的な部分です。視覚的ビューポートは、レイアウトビューポートと同じサイズか、それより小さいサイズです。
+
+iframe、オブジェクト、外部 SVG などがあるページでは、コンテナーページと、中に含まれる各ファイルの両方が、それぞれ独自のウィンドウオブジェクトを持っています。 最上位のウィンドウのみが、レイアウトビューポートとは異なる視覚ビューポートを持っています。 文書内に含まれる文書の視覚ビューポートとレイアウトビューポートは同じです。
 
 ### CSS
 
-The layout viewport and visual viewport described above are not the only viewports you will encounter. Any sub-viewport that is fully or partially displayed within the layout viewport is considered a visual viewport.
+前述のレイアウトビューポートと視覚的ビューポートは、遭遇するビューポートの唯一の例ではありません。レイアウトビューポート内に完全にまたは部分的に表示されるすべてのサブビューポートは、視覚的ビューポートとみなされます。
 
-We generally think of width and height media queries as being relative to the width and height of the browser window. They are actually relative to the viewport, which is the window in the main document but is the intrinsic size of the element's parent in a nested browsing context like objects, iframes and SVG. In CSS, we also have length units based on the viewport size. A `vh` unit is 1% of the layout viewport's height. Similarly, the `vw` unit is 1% of the layout viewport's width.
+一般的に、 [`width`](/ja/docs/Web/CSS/@media/width) と [`height`](/ja/docs/Web/CSS/@media/height) のメディアクエリーは、ブラウザーウィンドウの幅と高さに関連していると考えられています。実際には、ビューポート（メインの文書のウィンドウ）に相対するものですが、オブジェクト、iframe、SVG などの埋め込まれた閲覧コンテキストにおいては、要素の親の内在サイズでもあります。 CSS では、[ビューポートのサイズに基づいた長さの単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ビューポート単位)もあります。 `vh` の単位は、レイアウトビューポートの高さの 1% です。 同様に、 `vw` の単位は、レイアウトビューポートの幅の 1% です。
 
 #### `<iframe>`
 
-Inside an iframe, the visual viewport is the size of the inner width and height of the iframe, rather than the parent document. You can set any height and width on an iframe, but the whole document may not be visible.
+{{htmlelement("iframe")}} 内では、視覚的ビューポートは親文書ではなく、 iframe の内側の幅と高さのサイズになります。 iframe には任意の幅と高さを設定できますが、文書全体が表示されない場合があります。
 
-If you use viewport length units in your CSS within the iframe document, `1vh` will be 1% of the height of the iframe, and `1vw` will be 1% of the width of the document.
+iframe 文書内の CSS で[ビューポート単位](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#ビューポート単位)を使用している場合、 `1vh` は iframe の高さの 1%、 `1vw` は文書の幅の 1% となります。
 
 ```css
 iframe {
@@ -100,9 +104,9 @@ iframe {
 }
 ```
 
-If the iframe is set to 50vw, it will be 50% of the width of the `1200px` parent document in our example above, or `600px`, with `1vw` being `6px`. When zoomed in, the iframe shrinks to `400px` and `1vw` becomes `4px`.
+iframe を 50vw に設定すると、上記の例では親文書の幅が `1200px` であればその幅の 50%、すなわち `600px` となり、 `1vw` は `6px` となります。拡大すると、 iframe は `400px` に縮小し、 `1vw` は `4px` となります。
 
-A width-based media query within the iframe document is relative to the iframe's viewport.
+iframe 文書内の幅ベースのメディアクエリーは、 iframe のビューポートで計算されます。
 
 ```css
 @media screen and (min-width: 500px) {
@@ -112,46 +116,47 @@ A width-based media query within the iframe document is relative to the iframe's
 }
 ```
 
-If the above CSS is included in the iframe, the paragraphs will become red when the user has zoomed in, but this style does not apply in the non-zoomed-in state.
+上記 CSS が iframe に含まれている場合、ユーザーが拡大表示していると段落が赤くなりますが、拡大表示していない状態では、このスタイル設定は適用されません。
 
 #### SVG
 
-In an SVG document, the viewport is the visible area of the SVG image. You can set any height and width on an SVG, but the whole image might not be visible. The area that is visible is called the viewport. The size of the viewport can be defined using the width and height attributes of the {{SVGElement("svg")}} element.
+[SVG](/ja/docs/Web/SVG) 文書では、ビューポートは SVG 画像の可視領域です。 {{Glossary("SVG")}} の幅と高さは自由に設定できますが、画像全体が表示されない場合があります。 表示される領域はビューポートと呼ばれます。 ビューポートのサイズは、 {{SVGElement("svg")}} 要素の幅と高さの属性を使用して定義することができます。
 
 ```html
 <svg height="300" width="400"></svg>
 ```
 
-In this examples, the viewport has an aspect ratio of 3::4, and is, but default, 400 by 300 units, with a unit generally being a CSS pixel.
+この例では、ビューポートの{{glossary("Aspect ratio", "アスペクト比")}}は 3:4 で、既定では 400×300 単位で存在し、単位は一般的に CSS ピクセルです。
 
-SVG also has an internal coordinate system defined via the [viewbox](/ja/docs/Web/SVG/Attribute/viewBox) attribute, which is not related to this viewport discussion.
+また、 SVG には内部[座標系](/ja/docs/Web/CSS/CSSOM_view/Coordinate_systems)が存在し、 [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) 属性で定義されますが、これはこのビューポートの話題とは関係ありません。
 
-If you include an SVG file in your HTML, the viewport of the SVG is the initial containing block, or the width and height of the SVG container. Using the {{CSSxRef("@media")}} query in your SVG's CSS is relative to that container, not the browser.
+HTML に SVG ファイルを記載すると、 SVG のビューポートは初期包含ブロック、または SVG コンテナーの幅と高さが初期包含ブロックとなります。 SVG の CSS で {{CSSxRef("@media")}} クエリーを使用すると、ブラウザーではなく、そのコンテナーに対する相対値で適用されます。
 
 ```css
 @media screen and (min-width: 400px) and (max-width: 500px) {
-  /* css goes here */
+  /* CSS をここへ置く */
 }
 ```
 
-Generally, when you write the above media query, the styles are applied if the viewport, generally the browser window, is between 400px and 500px, inclusive. The width media query in the SVG is based on the element in which the SVG is contained — the {{htmlelement("img")}} if the source is an SVG file, the SVG itself if the SVG is included directly into the HTML, or the parent if the parent element has a width assigned and — not the viewport's width. With the above media query being in our SVG file, the CSS is applied if the SVG container is between 400 and 500px.
+一般的に、上記のようなメディアクエリーを記述すると、ビューポート（通常はブラウザーウィンドウ）の幅が 400 ピクセルから 500 ピクセル（両端を含む）の場合にスタイルが適用されます。 SVG の幅のメディアクエリーは、 SVG が含まれている要素に基づいており、ソースが SVG ファイルの場合は {{htmlelement("img")}}、 SVG が HTML に直接記載されている場合は SVG そのもの、親要素が幅を割り当てている場合はその親要素となります。ビューポートの幅ではありません。上記メディアクエリーが SVG ファイル内に存在する場合、SVG コンテナーの幅が 400px から 500px の間であれば、CSS が適用されます。
 
 ### JavaScript
 
-The [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API) provides a mechanism for querying and modifying the properties of the visual viewport.
+[視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API) は、視覚的ビューポートのプロパティを照会し、変更するためのメカニズムを提供します。
 
 ## モバイルのビューポート
 
-Mobile devices come in all ~~shapes and~~ sizes, with screens of differing device pixel ratios. The mobile browser's viewport is the area of the window in which web content can be seen, which is not necessarily the same size as the rendered page. Mobile browsers render pages in a virtual window or viewport, generally at 980px, which is usually wider than the screen, and then shrink the rendered result down so it can all be seen at once. Users can then pan and zoom to see different areas of the page. For example, if a mobile screen has a width of 320px, a website might be rendered with a virtual viewport of 980px, and then it will be shrunk down to fit into the 320px space, which, depending on the design, is illegible for many if not everyone. To tell a mobile browser to use the viewport width instead of the default 980px as the width of the screen, developers can include a viewport meta tag, like the following:
+モバイル端末にはさまざまな形状やサイズがあり、画面の{{glossary("Device pixel", "デバイスピクセル")}}比率もさまざまです。モバイルブラウザーのビューポートは、ウェブコンテンツが表示されるウィンドウの領域ですが、レンダリングされたページのサイズと必ずしも同じであるとは限りません。モバイルブラウザーは、通常は画面の幅よりも広い 980px の仮想ウィンドウまたはビューポートにページをレンダリングし、レンダリング結果を縮小して一度にすべてを表示できるようにします。ユーザーはページのさまざまな部分を閲覧するために、パンやズームを行うことができます。例えば、モバイル画面の幅が 320px の場合、ウェブサイトは980ピクセルの仮想ビューポートで描画され、その後、 320px のスペースに収まるように縮小されます。これは、デザインによっては、すべての人ではなくても多くの人にとって読みにくいものとなります。開発者は次の例のようなビューポートのメタタグを含めることで、モバイルブラウザーに、画面の幅として既定の 980px ではなくビューポートの幅を使用するように伝えることができます。
 
 ```html
 <meta name="viewport" content="width=device-width" />
 ```
 
-The `width` property controls the size of the viewport. It should preferably be set to `device-width`, which is the width of the screen in CSS pixels at a scale of 100%. There are other properties, including `maximum-scale`, `minimum-scale`, and `user-scalable`, which control whether users can zoom the page in or out, but the default values are the best for accessibility and user experience, so these can be omitted.
+`width` プロパティはビューポートのサイズを制御します。望ましいのは、 100% のスケールで CSS ピクセルで画面の幅を指定する `device-width` に設定することです。 ユーザーがページを拡大または縮小できるかどうかを制御できるプロパティには、 `maximum-scale`、`minimum-scale`、`user-scalable` などがありますが、アクセシビリティと使い勝手の観点では既定値が最適であるため、これらのプロパティは省略できます。
 
 ## 関連情報
 
-- [Visual Viewport API](/ja/docs/Web/API/Visual_Viewport_API)
-- {{HTMLElement("meta")}}, specifically `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/ja/docs/Mobile/Viewport_meta_tag)
+- [CSSOM ビュー](/ja/docs/Web/CSS/CSSOM_view)モジュール
+- [視覚的ビューポート API](/ja/docs/Web/API/Visual_Viewport_API)
+- {{HTMLElement("meta")}}、特に `<meta name="viewport">`
+- [ビューポートメタタグを使用してモバイルブラウザーのレイアウトを制御](/ja/docs/Web/HTML/Guides/Viewport_meta_element)

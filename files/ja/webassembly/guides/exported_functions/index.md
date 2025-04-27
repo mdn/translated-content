@@ -16,8 +16,8 @@ l10n:
 
 エクスポートされた WebAssembly 関数は次の 2 つの方法で取得できます。
 
-- 既存のテーブルの [`Table.prototype.get()`](/ja/docs/WebAssembly/JavaScript_interface/Table/get) を呼び出す。
-- Wasm モジュールインスタンスの [`Instance.exports`](/ja/docs/WebAssembly/JavaScript_interface/Instance/exports) を通してエクスポートされた関数にアクセスする。
+- 既存のテーブルの [`Table.prototype.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get) を呼び出す。
+- Wasm モジュールインスタンスの [`Instance.exports`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports) を通してエクスポートされた関数にアクセスする。
 
 いずれにしても、同じ種類の内在する関数のラッパーを取得できます。 JavaScript からみると、すべての Wasm 関数は JavaScript の関数のようにみえます。しかし、これは Wasm 関数オブジェクトインスタンスによってカプセル化されており、アクセスする方法は限られています。
 
@@ -39,15 +39,15 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 });
 ```
 
-ここでは、[`WebAssembly.Table`](/ja/docs/WebAssembly/JavaScript_interface/Table) コンストラクターを使用して JavaScript からテーブル (`otherTable`) を作成し、`table.wasm` をページに読み込むために [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) ユーティリティ関数を使用しています。
+ここでは、[`WebAssembly.Table`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table) コンストラクターを使用して JavaScript からテーブル (`otherTable`) を作成し、`table.wasm` をページに読み込むために [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) ユーティリティ関数を使用しています。
 
-そのあと、モジュールからエクスポートされた関数を取得し、関数の参照を [`tbl.get()`](/ja/docs/WebAssembly/JavaScript_interface/Table/get) を通して取り出し、それぞれを実行した結果をコンソールに出力します。次に、 `set()` を使用して、`tbl` テーブルと同じ関数への参照を `otherTable` テーブルに含まれるようにします。
+そのあと、モジュールからエクスポートされた関数を取得し、関数の参照を [`tbl.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get) を通して取り出し、それぞれを実行した結果をコンソールに出力します。次に、 `set()` を使用して、`tbl` テーブルと同じ関数への参照を `otherTable` テーブルに含まれるようにします。
 
 確認するために、`otherTable` から参照を取得し直し、その結果もコンソールに出力します(同じ結果が得られます)。
 
 ## それらは本物の関数です
 
-前の例で、[`Table.prototype.get()`](/ja/docs/WebAssembly/JavaScript_interface/Table/get) のそれぞれの返値はエクスポートされた WebAssembly 関数でした。まさに私たちが話していたことです。
+前の例で、[`Table.prototype.get()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table/get) のそれぞれの返値はエクスポートされた WebAssembly 関数でした。まさに私たちが話していたことです。
 
 これらは WebAssembly 関数のラッパーであるのに加えて本物の JavaScript 関数であることに注意してください。上の例を [WebAssembly に対応しているブラウザー](/ja/docs/WebAssembly#ブラウザーの互換性)で読み込み、以下の行をコンソールで実行してみてください。
 

@@ -1,12 +1,9 @@
 ---
 title: HTML 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
 l10n:
   sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -43,7 +40,7 @@ My cat is very grumpy
 
 ![段落开始标签，以及高亮的 class 属性：class=editor-note](grumpy-cat-attribute-small.png)
 
-属性包含的是不想在真正的内容中出现的和元素有关的额外信息。本例中，`class` 是属性*名*，`editor-note` 是属性*值*。`class` 属性是可以用于定位元素（以及任何其他有相同 `class` 值的元素）的标识名称，以便进一步为元素指定样式或进行其他操作时使用。一些属性没有值，如 [`required`](/zh-CN/docs/Web/HTML/Attributes/required)。
+属性包含的是不想在真正的内容中出现的和元素有关的额外信息。本例中，`class` 是属性*名*，`editor-note` 是属性*值*。`class` 属性是可以用于定位元素（以及任何其他有相同 `class` 值的元素）的标识名称，以便进一步为元素指定样式或进行其他操作时使用。一些属性没有值，如 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)。
 
 有值的属性应该包含：
 
@@ -118,7 +115,7 @@ My cat is very grumpy
 
 正如之前讲的那样，该元素通过在属性 `src` 中包含图像文件路径的地址，可在所在位置嵌入图像。
 
-该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Element/img#使用有实际意义的备用描述)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
+该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/img#使用有实际意义的备用描述)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
 
 1. 用户有视觉障碍。有严重视觉障碍的用户可以使用屏幕阅读器来朗读 alt 属性的内容。
 2. 有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：

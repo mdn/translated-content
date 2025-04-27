@@ -20,7 +20,7 @@ slug: Mozilla/Firefox/Releases/83
 ### HTML/XML
 
 - `<link rel=icon>` で `crossorigin` 属性をサポートしました ([Firefox バグ 1661075](https://bugzil.la/1661075))。
-- `displaystyle` [属性](/ja/docs/Web/MathML/Attribute) をすべての MathML 要素に実装しました ([Firefox バグ 1666075](https://bugzil.la/1666075))。
+- `displaystyle` [属性](/ja/docs/Web/MathML/Reference/Attribute) をすべての MathML 要素に実装しました ([Firefox バグ 1666075](https://bugzil.la/1666075))。
 
 ### CSS
 
@@ -42,7 +42,7 @@ _変更なし。_
 ### WebDriver conformance (Marionette)
 
 - `WebDriver:SwitchToShadowRoot` の予備的なサポートを削除しました。これは WebDriver の仕様書にまだ追加されていません ([Firefox バグ 1662468](https://bugzil.la/1662468))。
-- `WebDriver:Back` および `WebDriver:Forward` で、削除された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) によってナビゲーションが発生したときに Marionette がハングアップする不具合を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
+- `WebDriver:Back` および `WebDriver:Forward` で、削除された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) によってナビゲーションが発生したときに Marionette がハングアップする不具合を修正しました ([Firefox バグ 1672758](https://bugzil.la/1672758))。
 
 ## アドオン開発者向けの変更点
 

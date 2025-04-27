@@ -19,7 +19,7 @@ set(index, value);
 - _index_
   - : 変更する関数参照の位置。
 - _value_
-  - : 変更する参照。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)、 wasm 関数を内在する JavaScript ラッパーである必要があります。
+  - : 変更する参照。これは[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)、 wasm 関数を内在する JavaScript ラッパーである必要があります。
 
 ### 返値
 
@@ -80,5 +80,5 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

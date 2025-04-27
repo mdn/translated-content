@@ -1,12 +1,11 @@
 ---
 title: 样式化表格
 slug: Learn_web_development/Core/Styling_basics/Tables
-original_slug: Learn/CSS/Building_blocks/Styling_tables
 l10n:
   sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics")}}
 
 为 HTML 表格设计样式并不是世界上最光彩的工作，但有时我们不得不这么做。本文将介绍如何让 HTML 表格看起来更美观，并重点介绍一些具体的表格样式设计技巧。
 
@@ -77,7 +76,7 @@ l10n:
 </table>
 ```
 
-由于使用了 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} 等特性，该表格标记得很好，易于风格化和访问。遗憾的是，在屏幕上呈现出来的效果并不好（请在 [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 上查看实时效果）：
+由于使用了 [`scope`](/zh-CN/docs/Web/HTML/Reference/Elements/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} 等特性，该表格标记得很好，易于风格化和访问。遗憾的是，在屏幕上呈现出来的效果并不好（请在 [punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) 上查看实时效果）：
 
 ![一个显示英国著名朋克乐队的表格，没有添加样式](table-unstyled.png)
 
@@ -301,7 +300,7 @@ caption {
 
 ## 技能测试！
 
-我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks)。
+我们在这篇文章里面讲了很多，但是你能记住最重要的信息吗？在继续学习之前，你可以通过一些进一步的测试来验证自己是否掌握了这些信息——参见[技能测试：表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables)。
 
 ## 总结
 

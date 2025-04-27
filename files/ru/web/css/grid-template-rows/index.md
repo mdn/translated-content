@@ -7,7 +7,52 @@ slug: Web/CSS/grid-template-rows
 
 CSS-свойство **`grid-template-rows`** определяет имена линий и размеры полос {{glossary("grid rows", "грид-рядов")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-template-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-template-rows")}}
+
+```css interactive-example-choice
+grid-template-rows: auto;
+```
+
+```css interactive-example-choice
+grid-template-rows: 40px 4em 40px;
+```
+
+```css interactive-example-choice
+grid-template-rows: 1fr 2fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-rows: 3ch auto minmax(10px, 60px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Синтаксис
 

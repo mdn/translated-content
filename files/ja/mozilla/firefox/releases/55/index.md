@@ -18,7 +18,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を `true` に設定した要素で、テキストの別の行を分けるために {{htmlelement("div")}} 要素を使用するようになりました。これは、他の現行ブラウザーに Firefox を合わせるためです ([Firefox バグ 1297414](https://bugzil.la/1297414))。詳しくは[マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#マークアップ生成の違い) をご覧ください。
 - Nightly で、`dom.forms.datetime` をデフォルトで有効にしました ([Firefox バグ 1366188](https://bugzil.la/1366188))。
 
 ### CSS
@@ -28,7 +28,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 - {{cssxref("text-justify")}} プロパティを実装しました ([Firefox バグ 1343512](https://bugzil.la/1343512), [Firefox バグ 276079](https://bugzil.la/276079)).
 - \[css-grid] repeat() 内で {{cssxref("fit-content")}} が、意図せず最大限に制限したサイズで領域を確保してしまう問題を修正しました ([Firefox バグ 1359060](https://bugzil.la/1359060))。
 - {{cssxref("float")}} / {{cssxref("clear")}} の論理値 `inline-start` および `inline-end` は、以前から実装していましたが Release チャンネルでは無効化していました。これを、すべてのチャンネルにおいてデフォルトで有効化しました ([Firefox バグ 1253919](https://bugzil.la/1253919))。
-- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
+- 設定項目 `layout.css.variables.enabled` を完全に削除しました。[CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) の機能は常にデフォルトで有効であり、無効化できません ([Firefox バグ 1312328](https://bugzil.la/1312328))。
 - 独自仕様である `-moz-context-properties` プロパティを実装しました ([Firefox バグ 1058040](https://bugzil.la/1058040))。
 - 角度の単位がつかない 0 度の値が、{{cssxref("gradient/linear-gradient", "linear-gradient()")}} で正しく解釈されない問題を修正しました ([Firefox バグ 1363292](https://bugzil.la/1363292))。
 - {{cssxref("::cue")}} 擬似要素をサポートしました。これは、メディア要素内で提供するテキストキューにマッチします ([Firefox バグ 1318542](https://bugzil.la/1318542))。
@@ -40,7 +40,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} および {{jsxref("Atomics")}} オブジェクトをデフォルトで有効化しました。JavaScript の Shared Memory と Atomics の入門として、[A Taste of JavaScript's New Parallel Primitives](https://hacks.mozilla.org/2016/05/a-taste-of-javascripts-new-parallel-primitives/) をご覧ください。
-- [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
+- [object destructuring](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で rest operator (`...`) をサポートしました。また、spread operator (`...`) が [オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax#オブジェクトリテラルでのスプレッド構文) で動作するようになりました (Stage 3 ECMAScript proposal: [Object Rest/Spread Properties](https://github.com/tc39/proposal-object-rest-spread)。 [Firefox バグ 1339395](https://bugzil.la/1339395))。
 - [非同期ジェネレーターメソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions#非同期ジェネレーターメソッド) をサポートしました ([Firefox バグ 1353693](https://bugzil.la/1353693))。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}} および {{jsxref("String.prototype.toLocaleUpperCase()")}} メソッドで、ロケール固有の大文字・小文字の対応を言語タグで指定するための、省略可能な引数 `locale` をサポートしました ([Firefox バグ 1318403](https://bugzil.la/1318403))。
 - {{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトで `caseFirst` オプションをサポートしました ([Firefox バグ 866473](https://bugzil.la/866473))。
@@ -86,7 +86,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 #### Workers
 
 - ワーカーおよび共有ワーカーを、識別用の `name` プロパティをつけて作成できるようになりました。{{domxref("Worker.Worker", "Worker()")}} および {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクター、{{domxref("DedicatedWorkerGlobalScope")}} および {{domxref("SharedWorkerGlobalScope")}} インターフェイスをご覧ください ([Firefox バグ 1364297](https://bugzil.la/1364297))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
 
 #### Service Workers/Push
 
@@ -137,9 +137,9 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 ### HTML
 
-- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
-- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Element/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
-- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Element/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
+- `xml:base` 属性を、[`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性内に現れるパスのベース URL として使用できなくなりました。 例えば `<div xml:base="https://example.com/" style="background:url(picture.jpg)"></div>` のような使い方です ([Firefox バグ 1350521](https://bugzil.la/1350521))。style 属性向け xml:base が無効化されました。
+- 他のブラウザーがサポートしていないため、Firefox 55 から content ドキュメントでは {{htmlelement("style")}} 要素の [`scoped`](/ja/docs/Web/HTML/Reference/Elements/style#scoped) 属性を設定 (`layout.css.scoped-style.enabled`) で無効化しました。
+- {{htmlelement("meta")}} 要素の [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性で、不明瞭な値である `MSThemeCompatible` のサポートを Gecko から削除しました。他にサポートする現行ブラウザーがなく、また互換性の問題が発生していました ([Firefox バグ 966240](https://bugzil.la/966240))。
 
 ### CSS
 

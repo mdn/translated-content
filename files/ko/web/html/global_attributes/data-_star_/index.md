@@ -82,7 +82,7 @@ li:hover:after {
   onclick="spaceships[this.dataset.shipId].blasted()" />
 ```
 
-HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)를 확인하세요.
+HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)를 확인하세요.
 
 ## 명세
 
@@ -96,4 +96,4 @@ HTML 데이터 특성 사용법에 관한 보다 자세한 자습서는 [데이�
 
 - 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
 - 데이터 특성 값에 접근하고 수정할 수 있는 {{domxref("HTMLElement.dataset")}} 속성.
-- [데이터 특성 사용하기](/ko/docs/Learn/HTML/Howto/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

@@ -139,7 +139,7 @@ try {
 3. 現在のクラスの[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)が初期化されます。
 4. `super()` 呼び出し後の `constructor` 本体（基底クラスの場合は本体全体）が評価されます。
 
-`constructor` 本体の中では、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) で作成されるオブジェクトにアクセスしたり [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるクラスに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new) でアクセスしたりすることができます。メソッド（[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を含む）と[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) は `constructor` が実行される前に `this` で初期化されているので、スーパークラスのコンストラクターからサブクラスのメソッドにアクセスすることもできることに注意してください。しかし、これらのメソッドが `this` を使用している場合、 `this` はまだ完全に初期化されていません。これは、派生クラスのパブリックフィールドを読むと `undefined` になり、プライベートフィールドを読むと `TypeError` になるということです。
+`constructor` 本体の中では、 [`this`](/ja/docs/Web/JavaScript/Reference/Operators/this) で作成されるオブジェクトにアクセスしたり [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) で呼び出されるクラスに [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new) でアクセスしたりすることができます。メソッド（[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を含む）と[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) は `constructor` が実行される前に `this` で初期化されているので、スーパークラスのコンストラクターからサブクラスのメソッドにアクセスすることもできることに注意してください。しかし、これらのメソッドが `this` を使用している場合、 `this` はまだ完全に初期化されていません。これは、派生クラスのパブリックフィールドを読むと `undefined` になり、プライベートフィールドを読むと `TypeError` になるということです。
 
 ```js example-bad
 new (class C extends class B {

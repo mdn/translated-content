@@ -62,9 +62,9 @@ original_slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
 
 ## CSS로 대체 페이지 생성하기
 
-CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
+CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용될 때 브라우저가 수행하는 작업을 설명하는 정보가 포함되어 있습니다. 즉, 부동체 항목이 한편으로는 CSS grid 레이아웃을 사용하는 grid 항목인 경우 발생하는 상황에 대한 정의가 있음을 의미합니다. 이 정보가 브라우저가 이해하지 못하는 CSS를 무시한다는 지식과 결합되어, 이미 다루었던 [레거시 기술](/ko/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)을 사용하여 간단한 레이아웃을 생성할 수 있는 방법이 있습니다. 그런 다음 이를 최신 브라우저에서는 grid 레이아웃으로 덮어씁니다.
 
-아래 예에서는 세 개의 `<div>` 부동체를 행으로 표시했습니다. [CSS grid 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Grids)을 지원하지 않는 브라우저는 상자 행을 <ruby><em>부동 레이아웃</em><rp> (</rp><rt>浮動 組版</rt><rp>) </rp></ruby>으로 간주합니다. grid 항목이 되는 부동 항목은 부동 동작을 상실합니다. 즉, `.wrapper` 클레스를 grid 컨테이너로 전환하면 부동 항목이 grid 항목이 됩니다. 브라우저가 grid 레이아웃을 지원하는 경우 grid 디스플레이를 표시합니다. 지원하지 않으면 `display: grid` 관련 속성은 무시되고 부동 레이아웃이 사용됩니다.
+아래 예에서는 세 개의 `<div>` 부동체를 행으로 표시했습니다. [CSS grid 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout/Grids)을 지원하지 않는 브라우저는 상자 행을 <ruby><em>부동 레이아웃</em><rp> (</rp><rt>浮動 組版</rt><rp>) </rp></ruby>으로 간주합니다. grid 항목이 되는 부동 항목은 부동 동작을 상실합니다. 즉, `.wrapper` 클레스를 grid 컨테이너로 전환하면 부동 항목이 grid 항목이 됩니다. 브라우저가 grid 레이아웃을 지원하는 경우 grid 디스플레이를 표시합니다. 지원하지 않으면 `display: grid` 관련 속성은 무시되고 부동 레이아웃이 사용됩니다.
 
 ```css
 * {
@@ -107,11 +107,11 @@ CSS 규격에는 두 가지 레이아웃 메서드가 동일한 항목에 적용
 - display: inline-block<
   - : 이 방법을 사용하여 열 레이아웃을 생성할 수 있는 경우는 항목이 `display: inline-block`로 설정되었을 경우이지만, flex 또는 grid 항목이 된다면 인라인 블록 동작은 무시됩니다.
 - display: table
-  - : CSS 테이블을 생성하는 메서드는 해당 단원의 [입문서](/ko/docs/Learn/CSS/CSS_layout/Introduction)가 대체품으로 활용될 수 있습니다. CSS 테이블 레이아웃으로 설정된 항목은 그들이 flex 또는 grid 항목이 될 경우 자기 동작을 상실하게 됩니다. 중요하게는 테이블 구조를 수정하기 위해 생성된 익명 상자는 생성되지 않습니다.
+  - : CSS 테이블을 생성하는 메서드는 해당 단원의 [입문서](/ko/docs/Learn_web_development/Core/CSS_layout/Introduction)가 대체품으로 활용될 수 있습니다. CSS 테이블 레이아웃으로 설정된 항목은 그들이 flex 또는 grid 항목이 될 경우 자기 동작을 상실하게 됩니다. 중요하게는 테이블 구조를 수정하기 위해 생성된 익명 상자는 생성되지 않습니다.
 - 다단 레이아웃
-  - : 특정 레이아웃의 경우 당신은 [다단](/ko/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)을 대체품로 사용할 수 있습니다. 여러분의 콘테이너가 `column-*` 속성에 속한 것으로 정의되었다면 grid 컨테이너가 될 것이고, 다단 동작은 발생하지 않습니다.
+  - : 특정 레이아웃의 경우 당신은 [다단](/ko/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)을 대체품로 사용할 수 있습니다. 여러분의 콘테이너가 `column-*` 속성에 속한 것으로 정의되었다면 grid 컨테이너가 될 것이고, 다단 동작은 발생하지 않습니다.
 - grid 대체품 역할인 Flexbox<
-  - : [Flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
+  - : [Flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox)는 인터넷 익스플로러 10과 11이 지원하기 때문에 grid를 지원하는 브라우저가 훨씬 많이 있습니다. 다만 이 단원의 뒷부분에서 설명하고 있는 구형 브라우저에서 flex를 지원하기 위한 처리 방법에 대해서도 확인해보세요. flex 컨테이너를 grid 컨테이너로 만들면 자식에 적용된 모든 `flex` 속성은 무시됩니다.
 
 구형 브라우저에서 레이아웃 조정이 많이 필요한 경우 CSS를 이런 식으로 사용하면 괜찮은 경험을 할 수 있습니다. 오래되고 잘 지원되는 기술을 기반으로 간단한 레이아웃을 추가한 다음 최신 CSS를 사용하여 잠재 고객의 90% 이상이 볼 수있는 레이아웃을 만듭니다. 그러나 대체 코드에 새 브라우저가 해석할 내용이 포함되어야하는 경우가 있습니다. 이에 대한 좋은 예는 부동 항목에 백분율 너비를 추가하여 열을 마치 grid 디스플레이처럼 보이도록 컨테이너를 채울 수 있도록 (너비를) 늘리는 경우입니다.
 
@@ -211,7 +211,7 @@ CSS grid 규격은 인터넷 익스플로러 10에서 처음 나온 원형이었
 
 ## 이전 브라우저 여부 확인
 
-Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 구형 브라우저를 테스트하기가 상당히 어려울 수 있습니다. 한 가지 방법은 [크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing) 단위에 설명 된대로 Sauce *Labs*과 같은 온라인 테스트 도구를 사용하는 것입니다.
+Flexbox 및 그리드를 지원하는 대부분의 브라우저를 사용하면 구형 브라우저를 테스트하기가 상당히 어려울 수 있습니다. 한 가지 방법은 [크로스 브라우저 테스트](/ko/docs/Learn_web_development/Extensions/Testing) 단위에 설명 된대로 Sauce *Labs*과 같은 온라인 테스트 도구를 사용하는 것입니다.
 
 또한 가상 컴퓨터를 다운로드하여 설치한 뒤 제약이 걸린 본인의 컴퓨터 환경에서 이전 버전의 브라우저를 실행할 수 있습니다. 이전 버전의 인터넷 익스플로러에 액세스하는 것이 특히 유용하며 이를 위해 마이크로소프트는 [다양한 가상 컴퓨터를 무료로 다운로드](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/) 할 수 있도록 만들었습니다. 맥, 윈도우즈 및 리눅스 운영 체제에서 가상 컴퓨터를 사용할 수 있으므로 윈도우즈 컴퓨터를 사용하지 않더라도 이전 및 최신 윈도우즈 브라우저에서 테스트할 수있는 좋은 방법입니다.
 

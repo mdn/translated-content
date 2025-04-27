@@ -1,12 +1,9 @@
 ---
 title: 客户端 Web API
 slug: Learn_web_development/Extensions/Client-side_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs
 l10n:
   sourceCommit: 26e2f9883e0e73def04c0e86fec6da3ec42e66b3
 ---
-
-{{LearnSidebar}}
 
 当你给网页或者应用编写客户端的 JavaScript 时，你很快会碰上**应用程序接口**（**API**）。API 是一些用于操控网站所基于的浏览器与操作系统的不同方面，或是操控由其他网站或服务端传来的数据的编程特性。在这个单元里，我们将一同探索什么是 API，以及如何使用一些在你开发中将经常遇见的 API。
 

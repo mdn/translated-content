@@ -1,12 +1,9 @@
 ---
 title: JavaScript 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 l10n:
   sourceCommit: 9e8b77593a626b1e0765494e4928b8f4a5c2d9bd
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -116,7 +113,7 @@ let myVariable = "鲍勃";
 myVariable = "斯蒂夫";
 ```
 
-注意变量可以存储不同[数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)的值：
+注意变量可以存储不同[数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)的值：
 
 <table class="standard-table">
   <thead>

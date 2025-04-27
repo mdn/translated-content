@@ -252,7 +252,7 @@ console.log({} + []); // "[object Object]"
 
 `{}` 또는 `[]`에는 `[@@toPrimitive]()` 메서드가 없습니다. `{}` 및 `[]` 모두 객체 자체를 반환하는 {{jsxref("Object.prototype.valueOf")}}에서 `valueOf()`를 상속합니다. 반환 값은 객체이므로 무시됩니다. 따라서 `toString()`이 대신 호출됩니다. [`{}.toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)은 `"[object Object]"`를 반환하는 반면, [`[].toString()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/toString)는 `""`를 반환하므로, 결과는 연결된 값인 `"[object Object]"`입니다.
 
-`[@@toPrimitive]()` 메서드는 원시 타입으로 변환할 때 항상 우선합니다. 원시 타입 변환은 일반적으로 `valueOf()`가 우선적으로 호출되기 때문에, 숫자 강제 변환과 같이 동작합니다. 그러나 사용자 지정 `[@@toPrimitive]()` 메서드가 있는 객체는 모든 원시 타입을 반환하도록 선택할 수 있습니다. {{jsxref("Date")}} 및 {{jsxref("Symbol")}} 객체는 `[@@toPrimitive]()` 메서드를 재정의하는 유일한 내장 객체입니다. [`Date.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)는 `"default"` 힌트를 `"string"`인 것처럼 취급하는 반면, [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)는 힌트를 무시하고 항상 기호(symbol)을 반환합니다.
+`[@@toPrimitive]()` 메서드는 원시 타입으로 변환할 때 항상 우선합니다. 원시 타입 변환은 일반적으로 `valueOf()`가 우선적으로 호출되기 때문에, 숫자 강제 변환과 같이 동작합니다. 그러나 사용자 지정 `[@@toPrimitive]()` 메서드가 있는 객체는 모든 원시 타입을 반환하도록 선택할 수 있습니다. {{jsxref("Date")}} 및 {{jsxref("Symbol")}} 객체는 `[@@toPrimitive]()` 메서드를 재정의하는 유일한 내장 객체입니다. [`Date.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)는 `"default"` 힌트를 `"string"`인 것처럼 취급하는 반면, [`Symbol.prototype[@@toPrimitive]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)는 힌트를 무시하고 항상 기호(symbol)을 반환합니다.
 
 ### 숫자 강제 변환
 

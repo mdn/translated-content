@@ -1,10 +1,9 @@
 ---
 title: 站点安全
 slug: Learn_web_development/Extensions/Server-side/First_steps/Website_security
-original_slug: Learn/Server-side/First_steps/Website_security
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/First_steps/Web_frameworks", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 站点安全需要在网站设计和使用的各个方面保持警惕。这篇入门文章不会让你成为一个网站安全专家，但是可以帮助你理解威胁的来源以及如何保护你的 Web 应用来远离这些常见的攻击。
 
@@ -136,7 +135,7 @@ Web 框架通常都会包含一些类似的 CSRF 防范技巧。
 你可以采取一些简单的步骤：
 
 - 采取更加强大的密码管理措施。当密码频繁更换时鼓励更加健壮的密码。采取双因素认证，也就是说除了密码，用户还应该输入另一种认证码（通常是只有唯一一个用户拥有的通过一些物理硬件传输的，比如发送给用户手机的验证短信）。
-- 将你的服务器配制成 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 和 [HTTP Strict Transport Security](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。
+- 将你的服务器配制成 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 和 [HTTP Strict Transport Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) (HSTS)。HTTPS 会加密你的用户和服务器之间传输的信息。这使得登录认证、cookise、POST 数据及头信息不易被攻击者获得。
 - 持续追踪那些常见的网络攻击 (the [current OWASP list is here](/zh-CN/docs/Web))，先解决最脆弱的部分。
 - 使用 [vulnerability scanning tools](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) 来对你的网站进行一些安全测试 (然后，你的非常受欢迎的网站还可以靠提供赏金来寻找 bug，就像 Mozilla 这样（[like Mozilla does here](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)）。
 - 只存储和展示你不得不需要的东西。比如，如果你的用户不得不存储一些敏感信息（如信用卡详明），只展示足以让用户识别卡号的几位数字即可，却不足以让黑客复制之后在另一个站点使用。现今最常见的是只展示信用卡卡号后 4 位数字。

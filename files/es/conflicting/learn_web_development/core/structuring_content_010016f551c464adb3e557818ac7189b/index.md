@@ -10,7 +10,7 @@ Hemos visto mucho texto hasta ahora en este curso, pero la web sería realmente 
 
 ## Requisitos previos
 
-Antes de empezar con este módulo, deberías tener un buen conocimiento de las bases de HTML, enseñadas en [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML). Si no has estado trabajando en este módulo (o alguno similar), ¡hazlo y luego vuelve!
+Antes de empezar con este módulo, deberías tener un buen conocimiento de las bases de HTML, enseñadas en [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content). Si no has estado trabajando en este módulo (o alguno similar), ¡hazlo y luego vuelve!
 
 > [!NOTE]
 > Si estas trabajando en un ordenador/tablet/u otro dispositivo donde no puedas crear tus propios archivos, puedes probar (la mayoría de ellos) los ejemplos de código en programas online de codificado como [JSBin](https://jsbin.com/) o [Glitch](https://glitch.com/).
@@ -19,23 +19,23 @@ Antes de empezar con este módulo, deberías tener un buen conocimiento de las b
 
 Este módulo contiene los siguientes artículos que te enseñarán todo lo fundamental sobre introducir multimedia en páginas web.
 
-- [Imágenes en HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Imágenes en HTML](/es/docs/Learn_web_development/Core/Structuring_content/HTML_images)
   - : Hay otros tipos de multimedia a considerar, pero es logico empezar con el humilde elemento {{htmlelement("img")}}, usado para incorporar una imagen simple en una página web. En este artículo veremos cúmo usarlo en profundidad, incluyendo los conceptos básicos, y contenido independiente con título usando {{htmlelement("figure")}}, y cómo relacionarlos con las imágenes de fondo de CSS.
-- [Contenido de Audio y Video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Contenido de Audio y Video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : A continuación, veremos como usar los elementos de HTML5 {{htmlelement("video")}} y {{htmlelement("audio")}}, para insertar video y audio en nuestras páginas, incluyendo conceptos básicos, proporcionando acceso a diferentes formatos de archivo para diferentes navegadores, agregando ilustraciones y subtítulos y cómo resolver inconvenientes en navegadores más antiguos.
-- [De \<object> a \<iframe> - otras tecnologías de inserción](/es/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [De \<object> a \<iframe> - otras tecnologías de inserción](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
   - : En este punto, nos gustaría dar un paso hacia un lado, mirando algunos de los elementos que te permiten insertar una amplia variedad de tipos de contenido en tus páginas web: los elementos [`<iframe>`](/es/docs/Web/HTML/Element/iframe), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<object>`](/es/docs/Web/HTML/Element/object).
     El elemento &lt;iframe&gt; nos permite incluir otras páginas web, y las otras dos permiten insertar archivos de formato PDF, SVG e incluso Flash -una tecnología que está a punto de desaparecer, pero que todavía puede verse de manera semi-regular-.
-- [Añadiendo graficos vectoriales a la Web](/es/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
+- [Añadiendo graficos vectoriales a la Web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Los gráficos vectoriales pueden ser muy útiles en ciertas situaciones. A diferencia de los formatos normales como PNG / JPG, estos no se distorsionan/pixelizan cuando se los amplían -pueden permanecer suaves cuando se escalan-. Este artículo te introduce al concepto de gráficos vectoriales y cómo incluir el popular formato {{glossary ("SVG")}} en páginas web.
-- [Imagenes receptivas](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+- [Imagenes receptivas](/es/docs/Web/HTML/Responsive_images)
   - : En este artìculo, aprenderás acerca del concepto de imágenes receptivas -imágenes que pueden adaptarse en dispositivos con grandes diferencias de tamaños de pantalla, resoluciones y otras características-. Esto te ayudará a mejorar el rendimiento en diferentes dispositivos. Las imágenes receptivas son sólo una parte del diseño receptivo, un tópico que a futuro aprenderás en CSS.
 
 ## Evaluaciones
 
 Las siguientes evaluaciones pondrán a prueba tu comprensión de los conceptos básicos de HTML vistos en las guías anteriores.
 
-- [Página de bienvenida de Mozilla](/es/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)
+- [Página de bienvenida de Mozilla](/es/docs/Learn_web_development/Core/Structuring_content/Mozilla_splash_page)
   - : En esta evaluación, probaremos tu conocimiento de algunas de las técnicas observadas en los artículos de este módulo, ¡lo que te permitirá agregar algunas imágenes y videos a una página original de Mozilla!
 
 ## Ver también

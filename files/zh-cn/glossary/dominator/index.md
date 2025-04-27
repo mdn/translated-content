@@ -15,4 +15,4 @@ l10n:
 
 - 维基百科上的[支配](<https://zh.wikipedia.org/wiki/支配_(圖論)>)
 - [支配](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators/index.html)
-- [垃圾回收](/zh-CN/docs/Web/JavaScript/Memory_management#垃圾回收)
+- [垃圾回收](/zh-CN/docs/Web/JavaScript/Guide/Memory_management#垃圾回收)

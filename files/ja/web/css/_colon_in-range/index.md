@@ -5,7 +5,7 @@ slug: Web/CSS/:in-range
 
 {{CSSRef}}
 
-**`:in-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在の値が [`min`](/ja/docs/Web/HTML/Element/input#min) および [`max`](/ja/docs/Web/HTML/Element/input#max) 属性による制限範囲内にある {{htmlelement("input")}} 要素を表します。
+**`:in-range`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、現在の値が [`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) および [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性による制限範囲内にある {{htmlelement("input")}} 要素を表します。
 
 ```css
 /* 入力範囲が設定されていて、値がその範囲に該当する
@@ -130,4 +130,4 @@ input:out-of-range + label::after {
 ## 関連情報
 
 - {{cssxref(":out-of-range")}}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

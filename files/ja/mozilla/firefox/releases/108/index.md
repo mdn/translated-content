@@ -13,14 +13,14 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Element/source#attr-height) および [`width`](/ja/docs/Web/HTML/Element/source#attr-width) 属性をサポートしました。
+- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#attr-height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#attr-width) 属性をサポートしました。
   この機能は設定項目 `dom.picture_source_dimension_attributes.enabled` で制御しており、既定値を `true` にしました ([Firefox バグ 1795953](https://bugzil.la/1795953))。
 
 ### CSS
 
-- 設定項目 `layout.css.trig.enabled` の既定値を `true` に設定して、[三角関数](/ja/docs/Web/CSS/CSS_Functions#trigonometric_functions) が使用可能になりました。
+- 設定項目 `layout.css.trig.enabled` の既定値を `true` に設定して、[三角関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#trigonometric_functions) が使用可能になりました。
   `sin()`、`cos()`、`tan()`、`asin()`、`acos()`、`atan()`、`atan2()` 関数を使用できます ([Firefox バグ 1774589](https://bugzil.la/1774589)、[Firefox バグ 1787070](https://bugzil.la/1787070))。
-- [数学関数](/ja/docs/Web/CSS/CSS_Functions#math_functions) で `pi` や `e` のようなよく知られた定数を使用できるようにするため、CSS の [`<calc-constant>`](/ja/docs/Web/CSS/calc-keyword) 型を実装しました ([Firefox バグ 1682444](https://bugzil.la/1682444)、[Firefox バグ 1787070](https://bugzil.la/1787070))。
+- [数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#math_functions) で `pi` や `e` のようなよく知られた定数を使用できるようにするため、CSS の [`<calc-constant>`](/ja/docs/Web/CSS/calc-keyword) 型を実装しました ([Firefox バグ 1682444](https://bugzil.la/1682444)、[Firefox バグ 1787070](https://bugzil.la/1787070))。
 - 設定項目 `layout.css.container-queries.enabled` で、コンテナークエリーの長さの単位をサポートしました。
   この設定を `true` にすると、クエリーコンテナーの寸法に比例する長さの単位である`cqw`、`cqh`、`cqi`、`cqb`、`cqmin`、`cqmax` を使用できます。
   これらの単位について、詳しくは [CSS Container Queries](/ja/docs/Web/CSS/CSS_containment/Container_queries#container_query_length_units) の文書をご覧ください ([Firefox バグ 1744231](https://bugzil.la/1744231))。
@@ -32,16 +32,16 @@ l10n:
 
 ### HTTP
 
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`style-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-elem) および [`style-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/style-src-attr) ディレクティブをサポートしました。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP ヘッダーの [`style-src-elem`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem) および [`style-src-attr`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<style>` 要素や `rel="stylesheet"` を持つ `<link>` 要素のスタイルシート、および個々の要素に適用するスタイルの正当な提供元を指定できます ([Firefox バグ 1529338](https://bugzil.la/1529338))。
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) HTTP ヘッダーの [`script-src-elem`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-elem) および [`script-src-attr`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr) ディレクティブをサポートしました。
   サーバーはそれぞれのディレクティブを使用して、`<script>` 要素の JavaScript、および `onclick` などのイベントハンドラーのインラインスクリプトの正当な提供元を指定できます ([Firefox バグ 1529337](https://bugzil.la/1529337))。
-- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
-  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/CSP#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
+- [`Content-Security-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) の違反内容の報告が、`effective-directive` および `status-code` プロパティを含むようになりました。
+  詳しくは [違反内容の報告の構文](/ja/docs/Web/HTTP/Guides/CSP#違反内容の報告の構文) をご覧ください ([Firefox バグ 1192684](https://bugzil.la/1192684))。
 
 ### API
 
-- [Import maps](/ja/docs/Web/HTML/Element/script/type/importmap) をサポートしました。
+- [Import maps](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) をサポートしました。
   Import maps は、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) をインポートするときにブラウザーがモジュール指定子を解決する方法に柔軟性や追加の制御手段を提供するものです ([Firefox バグ 1795647](https://bugzil.la/1795647))。
 
 #### Media、WebRTC、Web Audio

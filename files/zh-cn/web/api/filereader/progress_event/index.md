@@ -2,7 +2,7 @@
 title: FileReader：progress 事件
 slug: Web/API/FileReader/progress_event
 l10n:
-  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
+  sourceCommit: 87d974f5a37297d2b95ded0cd7a4301dacb3d3d8
 ---
 
 {{APIRef("File API")}}{{AvailableInWorkers}}
@@ -34,7 +34,7 @@ _还继承其父级 {{domxref("Event")}} 的属性。_
 - {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
   - : 一个布尔标志，指示底层进程要完成的总工作量以及已完成的工作量是否可计算。换句话说，它表明进展是否可衡量。
 - {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 一个 64 位无符号整数值，指示底层进程已执行的工作量。完成工作的比率可以通过将 `total` 除以该属性的值来计算。使用 HTTP 下载资源时，仅计算 HTTP 消息的正文，不包括标头和其他开销。
+  - : 一个 64 位无符号整数值，指示底层进程已执行的工作量。完成工作的比率可以通过将该属性的值除以 `total` 来计算。使用 HTTP 下载资源时，仅计算 HTTP 消息的正文，不包括标头和其他开销。
 - {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
   - : 一个 64 位无符号整数，表示底层进程正在执行的工作总量。使用 HTTP 下载资源时，这是 `Content-Length`（消息正文的大小），不包括标头和其他开销。
 

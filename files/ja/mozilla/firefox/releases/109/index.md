@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Element/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
+- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Reference/Elements/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
 
 ### CSS
 
@@ -37,7 +37,7 @@ l10n:
 ### HTTP
 
 - {{HTTPHeader("Content-Security-Policy")}} のソースディレクティブ用の値 `'unsafe-hashes'` をサポートしました。
-  詳しくは [CSP unsafe-hashes](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox バグ 1343950](https://bugzil.la/1343950)) をご覧ください。
+  詳しくは [CSP unsafe-hashes](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#unsafe_hashes) ([Firefox バグ 1343950](https://bugzil.la/1343950)) をご覧ください。
 
 ### API
 

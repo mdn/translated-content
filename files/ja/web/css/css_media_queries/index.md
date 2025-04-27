@@ -9,15 +9,15 @@ slug: Web/CSS/CSS_media_queries
 
 これは[レスポンシブデザイン](/ja/docs/Web/Progressive_web_apps)のキーコンポーネントです。例えば、メディアクエリーでは小さい端末でフォントの大きさを縮小したり、ページが縦長モードで表示されたときに段落の間隔を広げたり、タッチ画面でボタンを拡大したりすることができます。
 
-[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
+[CSS](/ja/docs/Web/CSS) では、 {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用して、メディアクエリーの結果に基づいて条件付きでスタイルの一部を適用することができます。 {{cssxref("@import")}} を使用すると、条件付きでスタイルシート全体を適用することもできます。
 
 ### HTML でのメディアクエリー
 
 [HTML](/ja/docs/Web/HTML) でも、メディアクエリーは様々な要素に適用することができます。
 
-- {{HTMLElement("link")}} 要素の [`media`](/ja/docs/Web/HTML/Element/link#media) 属性では、リンクされたリソース (ふつうは CSS) が適用されるメディアを定義します。
-- {{HTMLElement("source")}} 要素の [`media`](/ja/docs/Web/HTML/Element/source#media) 属性では、ソースが適用されるメディアを定義します。 (これは {{HTMLElement("picture")}} 要素内でのみ有効です。)
-- {{HTMLElement("style")}} 要素の [`media`](/ja/docs/Web/HTML/Element/style#media) 属性では、スタイルが適用されるメディアを定義します。
+- {{HTMLElement("link")}} 要素の [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性では、リンクされたリソース (ふつうは CSS) が適用されるメディアを定義します。
+- {{HTMLElement("source")}} 要素の [`media`](/ja/docs/Web/HTML/Reference/Elements/source#media) 属性では、ソースが適用されるメディアを定義します。 (これは {{HTMLElement("picture")}} 要素内でのみ有効です。)
+- {{HTMLElement("style")}} 要素の [`media`](/ja/docs/Web/HTML/Reference/Elements/style#media) 属性では、スタイルが適用されるメディアを定義します。
 
 ### JavaScript でのメディアクエリー
 

@@ -7,7 +7,46 @@ slug: Web/CSS/max-inline-size
 
 La propriété [CSS](/fr/docs/Web/CSS) **`max-inline-size`** définit la taille maximale horizontale ou verticale d'un élément en ligne (_inline_) selon le mode d'écriture utilisé. Elle correspond à la propriété {{cssxref("max-width")}} ou {{cssxref("max-height")}} selon la valeur utilisée pour {{cssxref("writing-mode")}}. Si le mode d'écriture est orienté verticalement, `max-inline-size` fait référence à la hauteur maximale de l'élément, sinon elle fait référence à la largeur maximale de l'élément. La propriété {{cssxref("max-block-size")}} peut être utilisée pour les blocs.
 
-{{EmbedInteractiveExample("pages/css/max-inline-size.html")}}
+{{InteractiveExample("CSS Demo: max-inline-size")}}
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the max-inline-size.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## Syntaxe
 

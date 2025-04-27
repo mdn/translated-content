@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/skewX
 
 **`skewX()`** 函数定义了一个转换，该转换将元素倾斜到二维平面上的水平方向。它的结果是一个{{cssxref("&lt;transform-function&gt;")}}数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-skewX.html")}}
+{{InteractiveExample("CSS Demo: skewX()")}}
+
+```css interactive-example-choice
+transform: skewX(0);
+```
+
+```css interactive-example-choice
+transform: skewX(35deg);
+```
+
+```css interactive-example-choice
+transform: skewX(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewX(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 这种转换是一种剪切映射 (横切)，它在水平和垂直方向上将单元内的每个点扭曲一定的角度。每个点的坐标根据指定的角度以及到原点的距离，进行成比例的值调整；因此，一个点离原点越远，其增加的值就越大。
 

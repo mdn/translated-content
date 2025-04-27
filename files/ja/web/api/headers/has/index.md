@@ -10,7 +10,7 @@ l10n:
 
 **`has()`** は {{domxref("Headers")}} インターフェイスのメソッドで、 `Headers` オブジェクトに指定された特定のヘッダーがあるかどうかを示す論理値を返します。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
@@ -54,5 +54,5 @@ myHeaders.has("Accept-Encoding"); // Returns false
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -5,7 +5,7 @@ slug: Web/CSS/:required
 
 {{CSSRef}}
 
-**`:required`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何设置了 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
+**`:required`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何设置了 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的 {{HTMLElement("input")}}、{{HTMLElement("select")}} 或 {{HTMLElement("textarea")}} 元素。
 
 {{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
 
@@ -110,7 +110,7 @@ input:required:invalid {
 
 如果表单还包含[可选](/zh-CN/docs/Web/CSS/:optional)输入，则不应仅仅依赖于颜色这一种传达意义的方式在视觉上指示必填输入。通常还应使用描述性文本和/或图标。
 
-- [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [MDN 理解 WCAG，指南 3.3 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [了解成功标准 3.3.2 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 规范

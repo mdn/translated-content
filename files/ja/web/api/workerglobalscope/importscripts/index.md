@@ -30,7 +30,7 @@ importScripts(path0, path1, /* …, */ pathN)
 ### 例外
 
 - `NetworkError`
-  - : インポートされたスクリプトが `text/javascript` の MIME タイプでないか、許可された[古い JavaScript の MIME タイプ](/ja/docs/Web/HTTP/MIME_types#legacy_javascript_mime_types)のいずれでもない状態で提供された場合。
+  - : インポートされたスクリプトが `text/javascript` の MIME タイプでないか、許可された[古い JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types#legacy_javascript_mime_types)のいずれでもない状態で提供された場合。
 
 ## 例
 

@@ -90,7 +90,7 @@ original_slug: Web/Media/Formats/Image_types
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
       <td>
-        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェース要素、アイコン、図などに最適です。<br>
+        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェイス要素、アイコン、図などに最適です。<br>
         <strong>対応:</strong> Chrome, Edge, Firefox, IE, Opera, Safari
       </td>
     </tr>
@@ -150,7 +150,7 @@ original_slug: Web/Media/Formats/Image_types
 
 > [!NOTE]
 > Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
-> 他のブラウザは対応していません。
+> 他のブラウザーは対応していません。
 > 詳しくは、 [Chromium のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=791658)、[Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=895131)を参照してください。
 
 ## 画像ファイルの種類の詳細
@@ -282,7 +282,7 @@ AVIF ファイルは同等の JPEG や PNG ファイルよりもはるかに小�
 ファイルサイズが大きい場合は影響が大きくなるため、プログレッシブレンダリングを対応している形式の使用を検討する必要があります。
 
 AVIF は、デスクトップでは Chrome、Opera、Firefox で対応しています（Firefox は静止画に対応していますが、アニメーションには対応していません）。
-対応はまだ包括的ではなく（歴史もあまりありません）、[WebP](#webp_画像), [JPEG](#jpeg_joint_photographic_experts_group_画像), [PNG](#png_portable_network_graphics) 形式などで、 [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture) （またはその他の方法） を使用して代替形式を提供する必要があります。
+対応はまだ包括的ではなく（歴史もあまりありません）、[WebP](#webp_画像), [JPEG](#jpeg_joint_photographic_experts_group_画像), [PNG](#png_portable_network_graphics) 形式などで、 [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture) （またはその他の方法） を使用して代替形式を提供する必要があります。
 
 <table class="standard-table">
   <tbody>
@@ -577,7 +577,7 @@ GIF は単純な画像やアニメーションに適していますが、フル�
 ### ICO (Microsoft Windows icon)
 
 ICO (Microsoft Windows icon) ファイル形式は、 Windows システムのデスクトップアイコン用に Microsoft が設計しました。
-しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
+しかし、 Internet Explorer の初期バージョンでは、ウェブサイトのルートディレクトリーに `favicon.ico` という ICO ファイルを用意して、**[ファビコン](/ja/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#サイトに自分の好きなアイコンを追加)** - お気に入りメニューやサイトのアイコン表現が役立つその他の場所に表示するアイコンを指定することができます。
 
 ICO ファイルには、複数のアイコンを含むことができ、それぞれの詳細が記載されたディレクトリーから始まります。
 ディレクトリーの後に、アイコンのデータが続きます。
@@ -586,7 +586,7 @@ ICO ファイル内で PNG を使用する方法は Windows Vista までは対�
 
 > [!WARNING]
 > ICO ファイルは、ウェブコンテンツに使用すべきではありません。
-> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Element/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
+> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Reference/Elements/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
 
 <table class="standard-table">
   <tbody>
@@ -994,7 +994,7 @@ SVG ファイルはテキストファイルで、解釈されると希望する�
 
 SVG はウェブコンテンツで 2 通りの使い方ができます。
 
-1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Element)を入れて画像を描く。
+1. {{SVGElement("svg")}} 要素を HTML に直接書き、その中に [SVG 要素](/ja/docs/Web/SVG/Reference/Element)を入れて画像を描く。
 2. 他のいずれかの画像種別で使用することができるあらゆる場所で表示する。 {{HTMLElement("img")}} や {{HTMLElement("picture")}} 要素、 CSS の {{cssxref("background-image")}} プロパティなどです。
 
 SVG は、一連の描画コマンドで表現できる画像に最適です。特に、画像が描画されるサイズが不明であったり、変動する可能性がある場合、 SVG は希望するサイズに滑らかに拡大縮小するので、最適な選択と言えます。
@@ -1067,7 +1067,7 @@ SVG は、一連の描画コマンドで表現できる画像に最適です。�
     <tr>
       <th scope="row">圧縮</th>
       <td>
-        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
+        SVG ソースは転送中に <a href="/ja/docs/Web/HTTP/Guides/Compression">HTTP 圧縮</a>技術を使用したり、ディスク上で <code>.svgz</code> ファイルを使用したりすることで圧縮できます。
       </td>
     </tr>
     <tr>
@@ -1233,7 +1233,7 @@ WebP はアニメーションにも対応しています。非可逆圧縮の We
 ループはサポートされています。
 
 WebP は現在、主要なウェブブラウザーの最新バージョンが幅広く対応していますが、歴史的に深く対応してはいません。
-[JPEG](#jpeg_joint_photographic_experts_group_image) または [PNG](#png_portable_network_graphics) 形式の代替画像を、 [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture)などで提供してください。
+[JPEG](#jpeg_joint_photographic_experts_group_image) または [PNG](#png_portable_network_graphics) 形式の代替画像を、 [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture)などで提供してください。
 
 <table class="standard-table">
   <tbody>
@@ -1530,9 +1530,9 @@ JPEG や非可逆 WebP のような非可逆形式を選択する場合は、テ
 
 ## 関連情報
 
-- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Formats)
+- [メディアの種類と形式のガイド](/ja/docs/Web/Media/Guides/Formats)
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Formats/Video_codecs)
+- [ウェブで使用される動画コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)
 - {{Glossary("HTML")}} の {{HTMLElement("img")}} および {{HTMLElement("picture")}} 要素
 - CSS の {{cssxref("background-image")}} プロパティ
 - {{domxref("HTMLImageElement.Image()")}} コンストラクターと {{domxref("HTMLImageElement")}} インターフェイス

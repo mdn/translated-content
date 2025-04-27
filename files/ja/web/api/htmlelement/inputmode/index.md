@@ -8,11 +8,11 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-{{domxref("HTMLElement")}} の **`inputMode`** プロパティは、この要素の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性の値を反映します。
+{{domxref("HTMLElement")}} の **`inputMode`** プロパティは、この要素の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性の値を反映します。
 
 要素やコンテンツの編集中にユーザーが入力する可能性のあるデータの種類を示すヒントを提供するものです。これにより、ブラウザーは適切な仮想キーボードを表示することができます。
 
-これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) モードであれば使用できます。
+これは主に {{HTMLElement("input")}} 要素で使用されますが、どの要素でも [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) モードであれば使用できます。
 
 ## 値
 
@@ -39,7 +39,7 @@ l10n:
   - : URL の入力に最適化されたキーパッドです。
     これは例えば、<kbd>/</kbd> キーがより目立つように持つことができるかもしれません。
 
-この属性の使い方は、このプロパティを反映した HTML の [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) 属性のページを参照してください。
+この属性の使い方は、このプロパティを反映した HTML の [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性のページを参照してください。
 
 ## 例
 
@@ -53,4 +53,4 @@ l10n:
 
 ## 関連情報
 
-- [inputmode](/ja/docs/Web/HTML/Global_attributes#inputmode) 属性
+- [inputmode](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) 属性

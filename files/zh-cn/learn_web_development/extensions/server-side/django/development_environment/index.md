@@ -1,10 +1,9 @@
 ---
 title: 设置 Django 开发环境
 slug: Learn_web_development/Extensions/Server-side/Django/development_environment
-original_slug: Learn/Server-side/Django/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Introduction", "Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django")}}
 
 现在，你知道什么是 Django。
 那么我们将向你展示如何在 Windows，Linux（Ubuntu）和 Mac OSX 上设置和测试 Django 开发环境—无论你常用哪种操作系统，本文能给你开发 Django 应用所需的一切。

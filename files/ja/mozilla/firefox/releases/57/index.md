@@ -26,11 +26,11 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Element/input/date) および [time](/ja/docs/Web/HTML/Element/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
+- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
 
 ### CSS
 
-- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Manifest#display) もご覧ください。
+- [`display-mode`](/ja/docs/Web/CSS/@media/display-mode) メディアクエリーの値 `minimal-ui` および `standalone` をサポートしました ([Firefox バグ 1369815](https://bugzil.la/1369815))。[ウェブアプリマニフェストの `display` フィールド](/ja/docs/Web/Progressive_web_apps/Manifest#display) もご覧ください。
 - `grid-row-gap` および `grid-column-gap` プロパティが、{{CSSxRef("grid")}} ショートハンドプロパティでリセットされないようになりました ([Firefox バグ 1387410](https://bugzil.la/1387410))。
 - 設定項目 `layout.css.clip-path-shapes.enabled` を削除しました ([Firefox バグ 1399767](https://bugzil.la/1399767))。この設定項目で、{{CSSxRef("clip-path")}} の {{cssxref("&lt;basic-shape&gt;")}} のサポートを無効化できました。これは Firefox 54 で導入されたものであり、今後は無効化できません。
 
@@ -115,7 +115,7 @@ _変更なし。_
 
 ### HTML
 
-- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
+- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
 
 ### API
 

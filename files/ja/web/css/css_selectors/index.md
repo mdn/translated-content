@@ -107,7 +107,7 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - [複雑セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#複雑セレクター)
 - [関連セレクター](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#関連セレクター)
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 
 ## ガイド
 
@@ -181,8 +181,8 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - {{CSSXref("@namespace")}} アットルール
 
 - {{cssxref("important", "!important")}}
-- [詳細度](/ja/docs/Web/CSS/Specificity)
-- [カスケード](/ja/docs/Web/CSS/Cascade)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 
 - {{domxref("Document.querySelector")}} メソッド
 - {{domxref("Document.querySelectorAll")}} メソッド

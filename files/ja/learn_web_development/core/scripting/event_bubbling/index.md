@@ -418,7 +418,7 @@ button.addEventListener("click", handleClick);
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: イベント](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events)を参照してください。
 
 ## まとめ
 
@@ -436,4 +436,4 @@ button.addEventListener("click", handleClick);
 - [イベントリファレンス](/ja/docs/Web/Events)
 - [Event order](https://www.quirksmode.org/js/events_order.html) （キャプチャとバブリングの議論） — Peter-Paul Koch による素晴らしい作品です。
 
-{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn/JavaScript/Building_blocks/Image_gallery", "Learn/JavaScript/Building_blocks")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn/JavaScript/Building_blocks")}}

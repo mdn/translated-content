@@ -100,7 +100,7 @@ console.log(new Base() instanceof BoundBase); // true
 - [`name`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : 目标函数的 `name` 前加上 `"bound "` 前缀。
 
-绑定函数还会继承目标函数的[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)。然而，它不会继承目标函数的其他自有属性（例如，如果目标函数是一个类，则不会继承其[静态属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)）。
+绑定函数还会继承目标函数的[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)。然而，它不会继承目标函数的其他自有属性（例如，如果目标函数是一个类，则不会继承其[静态属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)）。
 
 ## 示例
 

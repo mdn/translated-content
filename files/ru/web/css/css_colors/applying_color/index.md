@@ -24,17 +24,17 @@ slug: Web/CSS/CSS_colors/Applying_color
 Эти свойства используются для определения цвета текста, его фона и любого оформления текста.
 
 - {{cssxref("color")}}
-  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
+  - : Свойство color применяется к тексту и любому [оформлению текста](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration), например: подчёркивание, линии на текстом, перечёркивание и т.д.
 - {{cssxref("background-color")}}
   - : Цвет фона текста.
 - {{cssxref("text-shadow")}}
-  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. [Text drop shadows](/ru/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows), чтобы узнать больше.
+  - : Добавляет и устанавливает параметры тени для текста. Один из параметров тени - это основной цвет, который размывается и смешивается с цветом фона на основе других параметров. См. [Text drop shadows](/ru/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows), чтобы узнать больше.
 - {{cssxref("text-decoration-color")}}
   - : По умолчанию, элементы оформление текста (подчёркивание, перечёркивание) используют цвет свойства `color`. Но вы можете присвоить другой цвет с помощью свойства `text-decoration-color`.
 - {{cssxref("text-emphasis-color")}}
   - : Цвет, который используется для выделения диакритических знаков, прилегающих к каждому текстовому символу. Это свойство используется преимущественно для восточноазиатских языков.
 - {{cssxref("caret-color")}}
-  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут [`contenteditable`](/ru/docs/Web/HTML/Global_attributes#contenteditable).
+  - : Цвет, который используется для каретки ({{Glossary("caret")}}) (курсора ввода текста). Применимо только к редактируемым элементам, таким как {{HTMLElement ("input")}} и {{HTMLElement ("textarea")}} или элементам , для которых установлен атрибут [`contenteditable`](/ru/docs/Web/HTML/Reference/Global_attributes#contenteditable).
 
 ### Блоки
 
@@ -51,7 +51,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 
 ### Границы
 
-Вокруг любого элемента можно создать [границу](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn/CSS/Building_blocks/The_box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders), чтобы узнать больше про то, как применять стили к границам.
+Вокруг любого элемента можно создать [границу](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders), т.е. линию вокруг содержимого элемента. См. [Box properties](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#box_properties), чтобы узнать больше про отношения между элементами и их границами, и статью [Оформляем Границы с Помощью CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders), чтобы узнать больше про то, как применять стили к границам.
 
 Существует краткая запись {{cssxref("border")}}, которая позволяет задать сразу все свойства границы, включая даже не связанные с цветом свойства, такие как толщина линии ([width](/ru/docs/Web/CSS/border-width)), стиль линии ([style](/ru/docs/Web/CSS/border-style)): сплошная (solid), штриховая (dashed) и так далее.
 
@@ -313,7 +313,7 @@ CSS мы рассмотрим более детально, чтобы по оч�
 
 ## Предоставляем возможность пользователю выбрать цвет
 
-There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ru/docs/Web/HTML/Element/input#type) attribute.
+There are many situations in which your web site may need to let the user select a color. Perhaps you have a customizable user interface, or you're implementing a drawing app. Maybe you have editable text and need to let the user choose the text color. Or perhaps your app lets the user assign colors to folders or items. Although historically it's been necessary to implement your own color picker, HTML now provides support for browsers to provide one for your use through the {{HTMLElement("input")}} element, by using `"color"` as the value of its [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) attribute.
 
 The `<input>` element represents a color only in the [hexadecimal string notation](#hexadecimal_string_notation) covered above.
 
@@ -358,7 +358,7 @@ The CSS simply establishes a size for the box and some basic styling for appeara
 
 #### JavaScript
 
-The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/ru/docs/Web/HTML/Element/input/color) element.
+The script here handles the task of updating the starting color of the border to match the color picker's value. Then two event handlers are added to deal with input from the [`<input type="color">`](/ru/docs/Web/HTML/Reference/Elements/input/color) element.
 
 ```js
 let colorPicker = document.getElementById("colorPicker");
@@ -479,5 +479,5 @@ Once you have these colors, you will probably still need to select appropriate n
 ## Смотрите также
 
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Graphics on the web](/ru/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Graphics on the web](/ru/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [MDN's color picker tool](https://firefox-source-docs.mozilla.org/devtools-user/devtoolscolors/index.html)

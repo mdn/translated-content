@@ -31,7 +31,7 @@ Such blocks are naturally called **declaration blocks** and declarations inside 
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Global_attributes#style) attribute.
+> The content of a CSS declaration block, that is a list of semi-colon-separated declarations, without the initial and closing braces, can be put inside an HTML [`style`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#style) attribute.
 
 ## CSS rulesets
 
@@ -69,7 +69,7 @@ There is another group of statements - the **nested statements**. These are stat
 
 - CSS 重要概念：
 
-  - [CSS 語法](/zh-TW/docs/Web/CSS/Syntax)
+  - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 規則](/zh-TW/docs/Web/CSS/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/Comments)
   - [優先級](/zh-TW/docs/Web/CSS/Specificity)
@@ -89,4 +89,4 @@ There is another group of statements - the **nested statements**. These are stat
 
   - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - [可置換元素](/zh-TW/docs/Web/CSS/Replaced_element)
+  - {{glossary("replaced elements", "可置換元素")}}

@@ -113,5 +113,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## 같이 보기
 
-- [URL이란 무엇인가?](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [URL이란 무엇인가?](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [IANA URI 체계 목록](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

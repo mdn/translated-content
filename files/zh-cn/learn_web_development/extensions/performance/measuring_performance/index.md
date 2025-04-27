@@ -1,10 +1,9 @@
 ---
 title: 测量性能
 slug: Learn_web_development/Extensions/Performance/Measuring_performance
-original_slug: Learn/Performance/Measuring_performance
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 测量性能提供了一个重要的指标，以帮助你评估应用程序、网站或 web 服务的成功程度。
 

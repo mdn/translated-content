@@ -7,7 +7,7 @@ slug: Web/API/XMLHttpRequest
 
 `XMLHttpRequest` (XHR) 객체는 서버와 상호작용할 때 사용합니다. XHR을 사용하면 페이지의 새로고침 없이도 URL에서 데이터를 가져올 수 있습니다. 이를 활용하면 사용자의 작업을 방해하지 않고 페이지의 일부를 업데이트할 수 있습니다.
 
-`XMLHttpRequest`는 [AJAX](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) 프로그래밍에 많이 사용됩니다.
+`XMLHttpRequest`는 [AJAX](/ko/docs/Learn_web_development/Core/Scripting/Network_requests) 프로그래밍에 많이 사용됩니다.
 
 {{InheritanceDiagram}}
 

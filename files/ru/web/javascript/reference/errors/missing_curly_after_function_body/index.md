@@ -46,7 +46,7 @@ var charge = function () {
 };
 ```
 
-Ещё больше путаницы может внести использование {{Glossary("IIFE")}}, [замыканий](/ru/docs/Web/JavaScript/Closures) и прочих конструкций, где используется большое количество различных скобок:
+Ещё больше путаницы может внести использование {{Glossary("IIFE")}}, [замыканий](/ru/docs/Web/JavaScript/Guide/Closures) и прочих конструкций, где используется большое количество различных скобок:
 
 ```js example-bad
 (function() { if (true) { return false; } );

@@ -11,7 +11,7 @@ slug: Web/Performance/Guides/dns-prefetch
 
 Бывают случаи, когда в вашем приложении используются ссылки на домены, отличные от основного домена приложения. Например, внутри вашего приложения на "a.com" есть ссылка на домен "b.org". Для того, чтобы пройти по этой ссылке, пользовательский клиент должен сначала выяснить, какой адрес в интернете соответствует доменному имени "b.org". Этот процесс называется `DNS resolution.` И хотя механизмы кеширования DNS помогают сократить время запросов, DNS Resolution заметно влияет на время ожидания запроса из-за того, что первый клиентский запрос уходит сначала на DNS сервера и дожидается ответа от них. Для приложений, которые открывают соединения ко многим сторонним доменам, влияние DNS Resolution может сильно уменьшить производительность загрузки.
 
-`dns-prefetch` помогает разработчикам замаскировать ожидание DNS resolution. [HTML `<link>` элемент](/ru/docs/Web/HTML/Element/link) предлагает подобную функциональность с помощью атрибута [`rel`](/ru/docs/Web/HTML/Attributes/rel), значение которого может содержать `dns-prefetch`. В этом случае, предзагрузка DNS произойдёт для домена, указанного в атрибуте [href](/ru/docs/Web/HTML/Attributes):
+`dns-prefetch` помогает разработчикам замаскировать ожидание DNS resolution. [HTML `<link>` элемент](/ru/docs/Web/HTML/Reference/Elements/link) предлагает подобную функциональность с помощью атрибута [`rel`](/ru/docs/Web/HTML/Attributes/rel), значение которого может содержать `dns-prefetch`. В этом случае, предзагрузка DNS произойдёт для домена, указанного в атрибуте [href](/ru/docs/Web/HTML/Reference/Attributes):
 
 ## Синтаксис
 
@@ -33,15 +33,15 @@ slug: Web/Performance/Guides/dns-prefetch
 </html>
 ```
 
-Вы должны помещать `dns-prefetch` подсказки в элемент [`<head>`](/ru/docs/Web/HTML/Element/head) для каждого уникального стороннего домена, с которого могут быть запрошены ресурсы, но нужно держать некоторые детали в голове.
+Вы должны помещать `dns-prefetch` подсказки в элемент [`<head>`](/ru/docs/Web/HTML/Reference/Elements/head) для каждого уникального стороннего домена, с которого могут быть запрошены ресурсы, но нужно держать некоторые детали в голове.
 
 ## Лучшие практики
 
 Необходимо учитывать 3 вещи:
 
-**Во-первых,** `dns-prefetch` эффективен только для выполнения DNS запросов на сторонние [cross-origin](/ru/docs/Web/HTTP/CORS) домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.
+**Во-первых,** `dns-prefetch` эффективен только для выполнения DNS запросов на сторонние [cross-origin](/ru/docs/Web/HTTP/Guides/CORS) домены, поэтому следует избегать этой инструкции при попытке загрузить ресурсы с текущего домена. Связано это с тем, что IP вашего домена уже был определён к тому времени, когда браузер увидел эту инструкцию.
 
-**Во-вторых,** существует возможность добавить `dns-prefetch` (и другие подсказки) как [HTTP заголовок](/ru/docs/Web/HTTP/Headers) с помощью [HTTP Link field](/ru/docs/Web/HTTP/Headers/Link):
+**Во-вторых,** существует возможность добавить `dns-prefetch` (и другие подсказки) как [HTTP заголовок](/ru/docs/Web/HTTP/Reference/Headers) с помощью [HTTP Link field](/ru/docs/Web/HTTP/Headers/Link):
 
 ```
 Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
@@ -59,13 +59,13 @@ Link: <https://fonts.gstatic.com/>; rel=dns-prefetch
 
 В совместном использовании этих двух техник есть логика. Она заключается в том, что dns-prefetch поддерживается большим количеством браузеров, чем preconnect. Клиенты, которые ещё не поддерживают preconnect, все ещё будут получать бонусы от работы dns-prefetch. Так как эти инструкции относятся к HTML, они очень толерантны к ошибкам. Если какой-то устаревший браузер встречает dns-prefetch, ваш сайт не сломается. Вы просто не получите улучшений от этой инструкции.
 
-Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/Attributes/crossorigin) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
+Некоторые ресурсы, например, шрифты, загружаются в анонимном режиме. В подобных случаях вы должны указывать [crossorigin](/ru/docs/Web/HTML/Reference/Attributes/crossorigin) атрибут с инструкцией preconnect. Если вы пропустите её, то браузер выполнит только DNS запрос.
 
 ## Смотрите также
 
-- [\<link>](/ru/docs/Web/HTML/Element/link)
+- [\<link>](/ru/docs/Web/HTML/Reference/Elements/link)
 - [HTML атрибут: rel](/ru/docs/Web/HTML/Attributes/rel)
-- [crossorigin](/ru/docs/Web/HTML/Attributes/crossorigin)
-- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/CORS)
-- [HTTP заголовки](/ru/docs/Web/HTTP/Headers)
+- [crossorigin](/ru/docs/Web/HTML/Reference/Attributes/crossorigin)
+- [Cross-Origin Resource Sharing (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
+- [HTTP заголовки](/ru/docs/Web/HTTP/Reference/Headers)
 - [HTTP заголовок Link](/ru/docs/Web/HTTP/Headers/Link)

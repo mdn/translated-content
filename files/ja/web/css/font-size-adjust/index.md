@@ -146,7 +146,7 @@ font-size-adjust: unset;
 
 ### フォントのアスペクト値の決定
 
-指定されたフォントについて、横に並んだ 2 つの [`<span>`](/ja/docs/Web/HTML/Element/span) 要素の同じコンテンツを使用して、フォントのアスペクト値を決定することができます。両方の span のコンテンツに同じフォントサイズを使用している場合、一方の span の `font-size-adjust` が指定されたフォントに対して正確なとき、 span は一致します。
+指定されたフォントについて、横に並んだ 2 つの [`<span>`](/ja/docs/Web/HTML/Reference/Elements/span) 要素の同じコンテンツを使用して、フォントのアスペクト値を決定することができます。両方の span のコンテンツに同じフォントサイズを使用している場合、一方の span の `font-size-adjust` が指定されたフォントに対して正確なとき、 span は一致します。
 
 下記の例では、 3 組の `<span>` 要素が横に並んでいて、それぞれが "b" という文字を含んでいます。目標は、 2 つの文字の境界線が配置されるまで、それぞれのペアの正しい `<span>` の `font-size-adjust` プロパティを調整することです。結果として得られる `font-size-adjust` の値は、フォントのアスペクト値と考えることができます。
 
@@ -229,4 +229,4 @@ span {
 - {{cssxref("font-size")}}
 - {{cssxref("font-weight")}}
 - {{cssxref("@font-face/size-adjust", "size-adjust")}} `@font-face` 記述子
-- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [学習: 基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

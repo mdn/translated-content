@@ -1,7 +1,6 @@
 ---
 title: 什么是域名？
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_domain_name
 l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---

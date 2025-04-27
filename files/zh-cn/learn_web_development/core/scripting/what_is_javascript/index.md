@@ -1,10 +1,9 @@
 ---
 title: 什么是 JavaScript？
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
-original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
+{{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
 欢迎来到 MDN 的 JavaScript 初学者课程！本节将在一定高度俯瞰 JavaScript，回答一些诸如“它是什么？”和“它能做什么？”的问题。并使你熟悉 JavaScript 的用途。
 

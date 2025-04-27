@@ -7,7 +7,29 @@ slug: Web/CSS/filter-function/blur
 
 La fonction CSS **`blur()`** permet d'appliquer [un flou gaussien](https://en.wikipedia.org/wiki/Gaussian_blur) sur l'image d'entrée. Le résultat de cette fonction est une valeur [`<filter-function>`](/fr/docs/Web/CSS/filter-function).
 
-{{EmbedInteractiveExample("pages/css/function-blur.html")}}
+{{InteractiveExample("CSS Demo: blur()")}}
+
+```css interactive-example-choice
+filter: blur(0);
+```
+
+```css interactive-example-choice
+filter: blur(4px);
+```
+
+```css interactive-example-choice
+filter: blur(1.5rem);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## Syntaxe
 
@@ -41,12 +63,12 @@ blur(1.17rem);  /* Un flou avec un rayon de 1.17rem */
 ## Voir aussi
 
 - [`<filter-function>`](/fr/docs/Web/CSS/filter-function) et les autres fonctions associées
-  - [`brightness()`](</fr/docs/Web/CSS/filter-function/brightness()>)
-  - [`contrast()`](</fr/docs/Web/CSS/filter-function/contrast()>)
-  - [`drop-shadow()`](</fr/docs/Web/CSS/filter-function/drop-shadow()>)
-  - [`grayscale()`](</fr/docs/Web/CSS/filter-function/grayscale()>)
-  - [`hue-rotate()`](</fr/docs/Web/CSS/filter-function/hue-rotate()>)
-  - [`invert()`](</fr/docs/Web/CSS/filter-function/invert()>)
-  - [`opacity()`](</fr/docs/Web/CSS/filter-function/opacity()>)
-  - [`saturate()`](</fr/docs/Web/CSS/filter-function/saturate()>)
-  - [`sepia()`](</fr/docs/Web/CSS/filter-function/sepia()>)
+  - [`brightness()`](/fr/docs/Web/CSS/filter-function/brightness)
+  - [`contrast()`](/fr/docs/Web/CSS/filter-function/contrast)
+  - [`drop-shadow()`](/fr/docs/Web/CSS/filter-function/drop-shadow)
+  - [`grayscale()`](/fr/docs/Web/CSS/filter-function/grayscale)
+  - [`hue-rotate()`](/fr/docs/Web/CSS/filter-function/hue-rotate)
+  - [`invert()`](/fr/docs/Web/CSS/filter-function/invert)
+  - [`opacity()`](/fr/docs/Web/CSS/filter-function/opacity)
+  - [`saturate()`](/fr/docs/Web/CSS/filter-function/saturate)
+  - [`sepia()`](/fr/docs/Web/CSS/filter-function/sepia)

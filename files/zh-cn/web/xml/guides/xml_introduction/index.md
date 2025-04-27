@@ -1,7 +1,6 @@
 ---
 title: XML 简介
 slug: Web/XML/Guides/XML_introduction
-original_slug: Web/XML/XML_introduction
 ---
 
 {{QuickLinksWithSubpages("/zh-CN/docs/Web/XML")}}

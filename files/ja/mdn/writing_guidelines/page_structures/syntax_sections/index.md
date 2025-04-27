@@ -293,7 +293,7 @@ If-None-Match: *
 
 ### HTTP リクエストメソッド
 
-リクエストメソッドの構文は実に単純で、構文ブロックを設置し、 "Syntax Box" スタイルを用いてスタイル付けし、どのようにメソッドの構文を構成するかを示すだけです。 [GET メソッド](/ja/docs/Web/HTTP/Methods/GET)の構文は次のようになります。
+リクエストメソッドの構文は実に単純で、構文ブロックを設置し、 "Syntax Box" スタイルを用いてスタイル付けし、どのようにメソッドの構文を構成するかを示すだけです。 [GET メソッド](/ja/docs/Web/HTTP/Reference/Methods/GET)の構文は次のようになります。
 
 ```http
 GET /index.html

@@ -1,12 +1,13 @@
 ---
 title: 一括指定プロパティ
 slug: Web/CSS/CSS_cascade/Shorthand_properties
-original_slug: Web/CSS/Shorthand_properties
+l10n:
+  sourceCommit: 95edea913e7f0726243aff3f47b85cfd6f02d995
 ---
 
 {{CSSRef}}
 
-**一括指定プロパティ** (shorthand property) は、他の幾つかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。
+**一括指定プロパティ** (shorthand property) は、他のいくつかの CSS プロパティを一度に設定できる CSS プロパティです。一括指定プロパティを用いると、もっと簡単に (そして普通はもっと読みやすく) スタイルシートが書け、時間や労力を節約することができます。
 
 CSS 仕様書では、同じ主題に作用する共通のプロパティの定義をグループ化するために、一括指定プロパティを定義しています。例えば、 {{cssxref("background")}} プロパティは {{cssxref("background-color")}}、 {{cssxref("background-image")}}、 {{cssxref("background-repeat")}}、{{cssxref("background-position")}} の値を定義することができる一括指定プロパティです。同様に、フォントに関連したプロパティは一括指定の {{cssxref("font")}} を使用して定義することができ、ボックスの周囲のマージンは一括指定の {{cssxref("margin")}} を使用して定義することができます。
 
@@ -80,7 +81,7 @@ background-position: left top;
 background: #000 url(images/bg.gif) no-repeat left top;
 ```
 
-(一括指定の形式は、実際は上記の個別指定に加えて、 `background-attachment: scroll` や、 CSS3 ではいくつかの追加プロパティと等価になります。)
+（一括指定の形式は、実際は上記の個別指定に加えて、 `background-attachment: scroll` や、 CSS3 ではいくつかの追加プロパティと等価になります。）
 
 CSS3 のプロパティを含む詳しい情報は、 {{cssxref("background")}} をご覧ください。
 
@@ -96,7 +97,7 @@ line-height: 1.2;
 font-family: Arial, sans-serif;
 ```
 
-この 5 つの発言は、以下のように短くまとめることができます。
+この 5 つの文は、以下のように短くまとめることができます。
 
 ```css
 font:
@@ -104,7 +105,7 @@ font:
   sans-serif;
 ```
 
-この一括指定宣言は、実際には上記の個別指定宣言に加えて、 `font-variant: normal` と `font-size-adjust: none` (CSS2.0 / CSS3), `font-stretch: normal` (CSS3) と等価になります。
+この一括指定宣言は、実際には上記の個別指定宣言に加えて、 `font-variant: normal`、`font-size-adjust: none`、`font-stretch: normal` と等価になります。
 
 ## border プロパティ
 
@@ -124,7 +125,7 @@ border: 1px solid #000;
 
 ## margin プロパティと padding プロパティ
 
-`margin` と `padding` の一括指定も同様に動作します。 `margin` プロパティでは、1 つ、2 つ、3 つ、または 4 つの値を使用して短縮値を指定することができます。以下の CSS 宣言はを考えてみてください。
+`margin` と `padding` の一括指定も同様に動作します。 `margin` プロパティでは、1 つ、2 つ、3 つ、または 4 つの値を使用して一括で値を指定することができます。以下の CSS 宣言はを考えてみてください。
 
 ```css
 margin-top: 10px;
@@ -146,29 +147,113 @@ margin: 10px 5px 10px 5px;
 - 値が **3 つ**指定された場合、 1 つ目のマージンは**上**、 2 つ目は**左右**、 3 つ目は**下**の辺に適用される。
 - 値が **4 つ**指定された場合、マージンはそれぞれ**上**、**右**、**下**、**左**の順 (時計回り) に適用される。
 
+## 位置のプロパティ
+
+位置においては、上、右、下、左の一括指定を 1 つの宣言に簡略化することができます。例えば、以下の CSS を考えてみましょう。
+
+```css
+top: 0;
+right: 20px;
+bottom: 0;
+left: 20px;
+```
+
+これは、次のように簡略化できます。
+
+```css
+inset: 0 20px 0 20px;
+```
+
+マージンやパディングと同様、 `inset` の値は時計回りに上、右、下、左 (TRBL) の順に並べられます。
+
 ## 全体一括指定プロパティ
 
 CSS は全体の一括指定プロパティとして {{cssxref("all")}} を提供しており、値を文書中のすべてのプロパティに適用させます。これは、プロパティの継承モデルを変更するためのものです。
 
-CSS の継承がどのように動作するかについての詳細については、[カスケードと継承](/ja/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)または [CSS カスケード入門](/ja/docs/Web/CSS/Cascade)をご覧ください。
+CSS の継承がどのように動作するかについての詳細については、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)または [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)をご覧ください。
+
+## 一括指定プロパティ
+
+- {{cssxref("all")}}
+- {{cssxref("animation")}}
+- {{cssxref("animation-range")}}
+- {{cssxref("background")}}
+- {{cssxref("border")}}
+- {{cssxref("border-block")}}
+- {{cssxref("border-block-end")}}
+- {{cssxref("border-block-start")}}
+- {{cssxref("border-bottom")}}
+- {{cssxref("border-color")}}
+- {{cssxref("border-image")}}
+- {{cssxref("border-inline")}}
+- {{cssxref("border-inline-end")}}
+- {{cssxref("border-inline-start")}}
+- {{cssxref("border-left")}}
+- {{cssxref("border-radius")}}
+- {{cssxref("border-right")}}
+- {{cssxref("border-style")}}
+- {{cssxref("border-top")}}
+- {{cssxref("border-width")}}
+- {{cssxref("column-rule")}}
+- {{cssxref("columns")}}
+- {{cssxref("contain-intrinsic-size")}}
+- {{cssxref("container")}}
+- {{cssxref("flex")}}
+- {{cssxref("flex-flow")}}
+- {{cssxref("font")}}
+- {{cssxref("font-synthesis")}}
+- {{cssxref("font-variant")}}
+- {{cssxref("gap")}}
+- {{cssxref("grid")}}
+- {{cssxref("grid-area")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-template")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("list-style")}}
+- {{cssxref("margin")}}
+- {{cssxref("margin-block")}}
+- {{cssxref("margin-inline")}}
+- {{cssxref("mask")}}
+- {{cssxref("mask-border")}}
+- {{cssxref("offset")}}
+- {{cssxref("outline")}}
+- {{cssxref("overflow")}}
+- {{cssxref("overscroll-behavior")}}
+- {{cssxref("padding")}}
+- {{cssxref("padding-block")}}
+- {{cssxref("padding-inline")}}
+- {{cssxref("place-content")}}
+- {{cssxref("place-items")}}
+- {{cssxref("place-self")}}
+- {{cssxref("position-try")}}
+- {{cssxref("scroll-margin")}}
+- {{cssxref("scroll-margin-block")}}
+- {{cssxref("scroll-margin-inline")}}
+- {{cssxref("scroll-padding")}}
+- {{cssxref("scroll-padding-block")}}
+- {{cssxref("scroll-padding-inline")}}
+- {{cssxref("scroll-timeline")}}
+- {{cssxref("text-decoration")}}
+- {{cssxref("text-emphasis")}}
+- {{cssxref("text-wrap")}}
+- {{cssxref("transition")}}
+- {{cssxref("view-timeline")}}
+- {{cssxref("-webkit-text-stroke")}}
+- {{cssxref("-webkit-border-before")}}
+- {{cssxref("-webkit-mask-box-image")}}
 
 ## 関連情報
 
-- CSS の主要概念:
-  - [CSS の構文](/ja/docs/Web/CSS/Syntax)
-  - [アットルール](/ja/docs/Web/CSS/At-rule)
-  - [コメント](/ja/docs/Web/CSS/Comments)
-  - [詳細度](/ja/docs/Web/CSS/Specificity)
-  - [継承](/ja/docs/Web/CSS/Inheritance)
-  - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [レイアウトモード](/ja/docs/Web/CSS/Layout_mode)
-  - [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
-  - [マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-  - 値
-    - [初期値](/ja/docs/Web/CSS/initial_value)
-    - [計算値](/ja/docs/Web/CSS/computed_value)
-    - [使用値](/ja/docs/Web/CSS/used_value)
-    - [実効値](/ja/docs/Web/CSS/actual_value)
-  - [値の定義構文](/ja/docs/Web/CSS/Value_definition_syntax)
-  - [置換要素](/ja/docs/Web/CSS/Replaced_element)
-- 一括指定プロパティ: {{cssxref("all")}}, {{cssxref("animation")}}, {{cssxref("background")}}, {{cssxref("border")}}, {{cssxref("border-block-end")}}, {{cssxref("border-block-start")}}, {{cssxref("border-bottom")}}, {{cssxref("border-color")}}, {{cssxref("border-image")}}, {{cssxref("border-inline-end")}}, {{cssxref("border-inline-start")}}, {{cssxref("border-left")}}, {{cssxref("border-radius")}}, {{cssxref("border-right")}}, {{cssxref("border-style")}}, {{cssxref("border-top")}}, {{cssxref("border-width")}}, {{cssxref("column-rule")}}, {{cssxref("columns")}}, {{cssxref("flex")}}, {{cssxref("flex-flow")}}, {{cssxref("font")}}, {{cssxref("gap")}}, {{cssxref("grid")}}, {{cssxref("grid-area")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row")}}, {{cssxref("grid-template")}}, {{cssxref("list-style")}}, {{cssxref("margin")}}, {{cssxref("mask")}}, {{cssxref("offset")}}, {{cssxref("outline")}}, {{cssxref("overflow")}}, {{cssxref("padding")}}, {{cssxref("place-content")}}, {{cssxref("place-items")}}, {{cssxref("place-self")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}, {{cssxref("text-decoration")}}, {{cssxref("text-emphasis")}}, {{cssxref("transition")}}
+- [CSS の構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
+- [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
+- [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+- [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
+- [初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値), [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値), [使用値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#使用値), [実効値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値)
+- [値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
+**`@container`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)にスタイルを適用する条件付きグループルールです。
 スタイル宣言は条件によってフィルタリングされ、条件が真の場合にコンテナーに適用されます。
 この条件は、コンテナーのサイズまたは [`<style-feature>`](#container_style_queries) の値が変更されたときに評価されます。
 
@@ -258,7 +258,7 @@ span {
 }
 ```
 
-それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/Syntax#css_declarations)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
+それぞれの `style()` の引数は、単一の `<style-feature>` です。 **`<style-feature>`** は、有効な CSS [宣言](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_declarations)、CSS プロパティ、[`<custom-property-name>`](/ja/docs/Web/CSS/var#values) のいずれかです。
 
 ```css
 @container style(--themeBackground),
@@ -271,7 +271,7 @@ span {
 
 値のないスタイル特性は、指定されたプロパティの初期値と計算された値が異なる場合、真と評価されます。
 
-`style()` 関数の引数として渡した `<style-feature>` が宣言である場合、スタイルクエリーは、宣言の値がクエリー対象のコンテナのそのプロパティの計算値と同じであれば真と評価されます。 そうでない場合は、偽と評価されます。
+`style()` 関数の引数として渡した `<style-feature>` が宣言である場合、スタイルクエリーは、宣言の値がクエリー対象のコンテナーのそのプロパティの計算値と同じであれば真と評価されます。 そうでない場合は、偽と評価されます。
 
 以下のコンテナークエリーは、コンテナー要素の `--accent-color` の{{cssxref("computed_value", "計算値")}}が `blue` かどうかを調べます。
 
@@ -284,7 +284,7 @@ span {
 > [!NOTE]
 > カスタムプロパティが `blue` という値を持つ場合、そのプロパティが {{cssxref("@property")}} で色として定義されていない限り、同等の 16 進コード `#0000ff` は一致しません。
 
-個別指定プロパティを照会するスタイルの特性クエリは、計算された値が各プロパティで一致する場合は真となり、一致しない場合は偽となります。例えば、`@container style(border: 2px solid red)` は、その短縮形を構成する 12 個の個別指定プロパティ（`border-bottom-style` など）がすべて真であれば真になります。
+個別指定プロパティを照会するスタイルの特性クエリーは、計算された値が各プロパティで一致する場合は真となり、一致しない場合は偽となります。例えば、`@container style(border: 2px solid red)` は、その短縮形を構成する 12 個の個別指定プロパティ（`border-bottom-style` など）がすべて真であれば真になります。
 
 グローバルな `revert` と `revert-layer` は `<style-feature>` の値としては不正なため、コンテナースタイルクエリーは偽になります。
 
@@ -304,4 +304,4 @@ span {
 - {{Cssxref("container-type")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("content-visibility")}}
-- [CSS 拘束モジュール](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナーモジュール](/ja/docs/Web/CSS/CSS_containment)

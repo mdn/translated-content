@@ -63,5 +63,5 @@ function getData(pageId) {
 ## See also
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

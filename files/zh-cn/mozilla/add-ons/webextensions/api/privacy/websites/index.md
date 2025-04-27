@@ -43,7 +43,7 @@ l10n:
 - `protectedContentEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为 `true`，则浏览器将为插件提供一个唯一的 ID 以运行受保护的内容。
 - `referrersEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头。
 - `resistFingerprinting`
 
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
@@ -103,7 +103,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。本文衍生自 Chromium 代码中的 [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json)。
+> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。该文档衍生自 Chromium 代码中的 [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

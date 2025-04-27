@@ -1,10 +1,9 @@
 ---
 title: 什么是 web 性能？
 slug: Learn_web_development/Extensions/Performance/What_is_web_performance
-original_slug: Learn/Performance/What_is_web_performance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance")}}
 
 Web 性能就是让网站变得更快，以及让缓慢过程*看起来*更快。网站加载速度是否很快，是否允许用户快速开始与之交互，是否在某些东西需要时间加载时提供可靠的反馈（例如，一个“加载中”的旋转指示器）？网页的滚动和动画是否流畅？本文简要介绍了客观、可衡量的网络性能\*，涵盖了网络优化所涉及的技术、方法和工具。
 
@@ -37,7 +36,7 @@ _\*对比下一篇文章中介绍的主观[感知性能](/zh-CN/docs/Learn_web_d
 
 Web 性能是对网站或应用程序的客观度量和用户的体验。这包括以下主要方面：
 
-- **减少总体负载时间**：需要多长时间才能将渲染网站所需的文件下载到用户的计算机上？这往往受到[延迟](/zh-CN/docs/Web/Performance/Understanding_latency)、文件大小、文件数量以及其他因素的影响。一般策略是使文件尽可能小，尽可能减少 HTTP 请求的次数，并采用巧妙的加载技术（例如 [preload](/zh-CN/docs/Web/HTML/Attributes/rel/preload)）使文件更快可用。
+- **减少总体负载时间**：需要多长时间才能将渲染网站所需的文件下载到用户的计算机上？这往往受到[延迟](/zh-CN/docs/Web/Performance/Understanding_latency)、文件大小、文件数量以及其他因素的影响。一般策略是使文件尽可能小，尽可能减少 HTTP 请求的次数，并采用巧妙的加载技术（例如 [preload](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)）使文件更快可用。
 - **尽快使网站可用**：简单来说就是以合理的顺序加载你的网站资源，以便用户能够更快地开始使用。在用户继续执行主要任务的同时，任何其他资源都可以在后台继续加载。有时我们也会在实际需要时才加载资源（这被称为[懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)）。网站从开始加载，到达到可用状态为止所需的时间被称为[交互等待时间](/zh-CN/docs/Glossary/Time_to_interactive)。
 - **流畅性和交互性**：应用程序是否可靠，使用起来是否愉快？滚动是否流畅？按钮是否可点击？弹出窗口是否能够快速打开，并且在打开时动画是否流畅？在制作流畅的应用程序时，有很多优秀实践可以参考。例如使用 CSS 动画而不是 JavaScript 来制作动画，并尽量减少由于 DOM 变化而引起重绘 UI 的次数。
 - **[感知性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)**：用户所体验到的，是网站看起来有多快，而不是网站实际有多快。用户感受到的性能与任何客观统计数据一样重要，甚至可能更重要。但这种主观的感受不容易测量。感知性能是用户的感受，而不是度量标准。即使操作将花费很长时间（因为延迟或其他原因），也可以通过显示“加载中”的旋转指示器或一系列有用的提示和技巧（或笑话，以及其他你认为合适的内容）来保持用户在等待期间的参与度。这种方法比什么都不显示要好得多。因为什么都不显示会让用户觉得等待了更长的时间，可能会让你的用户认为网站坏了，然后放弃使用。

@@ -58,7 +58,7 @@ El número de puerto es guardado de forma separada por el navegador. Cualquier l
 
 La política de mismo origen controla las interacciones entre dos orígenes diferentes, como cuando se usa {{domxref("XMLHttpRequest")}} o un elemento {{htmlelement("img")}}. Estas interacciones habitualmente se ubican en tres categorías:
 
-- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/Web/HTTP/CORS#preflighted_requests).
+- Las escrituras Cross-origin normalmente se permiten. Como ejemplo tenemos los enlaces, redirecciones y envíos de formulario. Algunas peticiones HTTP raramente usadas requieren [preflight](/es/docs/Web/HTTP/Guides/CORS#preflighted_requests).
 - La integración Cross-origin (_embedding)_ normalmente se permite. Los ejemplos se listan debajo.
 - Las lecturas Cross-origin habitualmente no se permiten, pero el acceso de lectura es a menudo filtrado mediante integración. Por ejemplo, puedes leer el ancho y el alto de una imagen integrada, las acciones de un script integrado, o la [disponibilidad de un recurso integrado](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
@@ -70,11 +70,11 @@ Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
 - Plug-ins con [`<object>`](/es/docs/Web/HTML/Element/object), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
 - Fuentes con [`@font-face`](/es/docs/Web/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Element/frame) and [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
+- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Element/frame) and [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado
 
-Usa [CORS](/es/docs/Web/HTTP/CORS) para permitir el acceso de origen cruzado.
+Usa [CORS](/es/docs/Web/HTTP/Guides/CORS) para permitir el acceso de origen cruzado.
 
 ### Cómo bloquear el acceso de origen cruzado
 

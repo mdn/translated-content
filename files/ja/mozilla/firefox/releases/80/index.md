@@ -32,7 +32,7 @@ _変更なし。_
 
 ### HTTP
 
-- 以前は [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) に (`allow` 属性で) [fullscreen](/ja/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen) ディレクティブが適用されていたとき、`allowfullscreen` 属性も与えていなければ動作しませんでした。この問題を修正しました ([Firefox バグ 1608358](https://bugzil.la/1608358))。
+- 以前は [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) に (`allow` 属性で) [fullscreen](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen) ディレクティブが適用されていたとき、`allowfullscreen` 属性も与えていなければ動作しませんでした。この問題を修正しました ([Firefox バグ 1608358](https://bugzil.la/1608358))。
 
 ### API
 

@@ -122,7 +122,7 @@ function playSweep(time) {
 
 これは素晴らしいことですが、振幅エンベロープがあればいいと思いませんか？単純なものを作成して、ウェブオーディオ API でエンベロープを作成するのに必要なメソッドを使用してみましょう。
 
-エンベロープにアタックとリリースがあるとします。インターフェイスの[範囲入力](/ja/docs/Web/HTML/Element/input/range)を使ってユーザーがこれらを制御できるようにします。
+エンベロープにアタックとリリースがあるとします。インターフェイスの[範囲入力](/ja/docs/Web/HTML/Reference/Elements/input/range)を使ってユーザーがこれらを制御できるようにします。
 
 ```html
 <label for="attack">Attack</label>

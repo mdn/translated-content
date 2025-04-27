@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<url>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、リソースを指します。リソースには画像、動画、CSS ファイル、フォントファイル、SVG 機能などがあります。
+**`<url>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、リソースを指します。リソースには画像、動画、CSS ファイル、フォントファイル、SVG 機能などがあります。
 
 ## 構文
 

@@ -1,12 +1,9 @@
 ---
 title: 处理常见的 HTML 和 CSS 问题
 slug: Learn_web_development/Extensions/Testing/HTML_and_CSS
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
 l10n:
   sourceCommit: 56fc816a9fb8e96a6b69cd19be03f62b582c06ae
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Testing/Testing_strategies","Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing")}}
 
@@ -108,7 +105,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 浏览器会将无法识别的 HTML 元素视为匿名行级元素（实际上是没有语义值的行级元素，类似于 {{htmlelement("span")}} 元素）。你仍然可以通过它们的名称引用它们，并使用 CSS 对其进行样式设置，例如——你只需要确保它们按照你希望的方式运行即可。你可以像处理其他元素一样对其进行样式设置，包括根据需要将 `display` 属性设置为非 `inline` 的值。
 
-像 HTML 的 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Element/audio)、[`<picture>`](/zh-CN/docs/Web/HTML/Element/picture)、[`<object>`](/zh-CN/docs/Web/HTML/Element/object) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas)（以及其他特性）这样的更复杂的元素具有自然的回退机制，以防链接的资源不受支持。你可以在开标签和闭标签之间添加回退内容，不支持的浏览器将有效地忽略外部元素并执行嵌套内容。
+像 HTML 的 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)、[`<audio>`](/zh-CN/docs/Web/HTML/Reference/Elements/audio)、[`<picture>`](/zh-CN/docs/Web/HTML/Reference/Elements/picture)、[`<object>`](/zh-CN/docs/Web/HTML/Reference/Elements/object) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas)（以及其他特性）这样的更复杂的元素具有自然的回退机制，以防链接的资源不受支持。你可以在开标签和闭标签之间添加回退内容，不支持的浏览器将有效地忽略外部元素并执行嵌套内容。
 
 例如：
 
@@ -129,7 +126,7 @@ HTML 和 CSS 的问题在于，它们相当简单，简单到开发人员通常�
 
 这个例子包含一个简单的链接，允许你在 HTML 视频播放器无法工作时下载视频，这样用户至少仍然可以访问视频。
 
-另一个例子是表单元素。当引入了新的用于在表单中输入特定信息的 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 类型时（例如时间、日期、颜色、数字等），如果浏览器不支持新特性，浏览器会使用默认的 `type="text"`。集成多样化的输入类型可以很好地方便用户（尤其是在移动平台上），它为用户提供了一种无痛苦地输入数据的方式，这对用户体验至关重要。平台根据输入类型的不同，会呈现出不同的用户界面元素，例如用于输入日期的日历小部件。即使浏览器不支持某种输入类型，用户仍然可以输入他们需要的数据。
+另一个例子是表单元素。当引入了新的用于在表单中输入特定信息的 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 类型时（例如时间、日期、颜色、数字等），如果浏览器不支持新特性，浏览器会使用默认的 `type="text"`。集成多样化的输入类型可以很好地方便用户（尤其是在移动平台上），它为用户提供了一种无痛苦地输入数据的方式，这对用户体验至关重要。平台根据输入类型的不同，会呈现出不同的用户界面元素，例如用于输入日期的日历小部件。即使浏览器不支持某种输入类型，用户仍然可以输入他们需要的数据。
 
 以下是显示日期和时间输入的示例：
 
@@ -261,9 +258,9 @@ form > #date
 
 ### 响应式设计问题
 
-响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
+响应式设计是创建可根据不同设备尺寸（例如不同的屏幕宽度、方向（纵向或横向）或分辨率）而变化的网页布局的做法。例如，桌面布局在移动设备上会看起来很糟糕，所以你需要使用[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)提供合适的移动布局，并确保正确应用[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)。你可以在[我们关于响应式设计的指南](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)中找到这些实践的详细描述。
 
-分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Web/HTML/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Element/img#sizes)属性。
+分辨率也是个大问题——例如，移动设备不太可能需要大的图像，但更有可能有较慢的互联网连接，甚至可能有昂贵的数据流量计划，这会使浪费带宽成为一个问题。此外，不同的设备可能有各种不同的分辨率，这意味着较小的图像可能会出现像素化。有一些技术可以解决这些问题，从[媒体查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#媒体查询)到更复杂的[响应式图像技术](/zh-CN/docs/Web/HTML/Guides/Responsive_images#分辨率切换：不同的尺寸)，包括 {{HTMLElement('picture')}} 元素和 {{HTMLElement('img')}} 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 和 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/img#sizes)属性。
 
 ## 寻找帮助
 
@@ -273,7 +270,7 @@ HTML 和 CSS 还有很多其他的问题。最重要的是如何在网上找到�
 
 为使用 Mozilla 开发者网络（MDN），大多数人会搜索他们正在尝试查找的信息的技术术语加上“mdn”，例如“mdn HTML5 video”。MDN 包含几种有用的内容类型：
 
-- 带有客户端 web 技术浏览器支持信息的参考资料，例如 [\<video> 参考页面](/zh-CN/docs/Web/HTML/Element/video)。
+- 带有客户端 web 技术浏览器支持信息的参考资料，例如 [\<video> 参考页面](/zh-CN/docs/Web/HTML/Reference/Elements/video)。
 - 其他的支持性参考资料，例如 [web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)。
 - 解决特定问题的有用教程，例如[创建跨浏览器的视频播放器](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 

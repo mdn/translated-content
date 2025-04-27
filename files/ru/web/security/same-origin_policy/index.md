@@ -61,7 +61,7 @@ document.domain = "company.com";
 
 The same-origin policy controls interactions between two different origins, such as when you use {{domxref("XMLHttpRequest")}} or an {{htmlelement("img")}} element. These interactions are typically placed into three categories:
 
-- Cross-origin _writes_ are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require [preflight](/ru/docs/Web/HTTP/CORS#preflighted_requests).
+- Cross-origin _writes_ are typically allowed. Examples are links, redirects and form submissions. Certain rarely used HTTP requests require [preflight](/ru/docs/Web/HTTP/Guides/CORS#preflighted_requests).
 - Cross-origin _embedding_ is typically allowed. Examples are listed below.
 - Cross-origin _reads_ are typically not allowed, but read access is often leaked by embedding. For example, you can read the width and height of an embedded image, the actions of an embedded script, or the [availability of an embedded resource](https://bugzilla.mozilla.org/show_bug.cgi?id=629094).
 
@@ -71,13 +71,13 @@ Here are some examples of resources which may be embedded cross-origin:
 - CSS with `<link rel="stylesheet" href="...">`. Due to the [relaxed syntax rules](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) of CSS, cross-origin CSS requires a correct `Content-Type` header. Restrictions vary by browser: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) (scroll down to CVE-2010-0051) and [Opera](https://www.opera.com/support/kb/view/943/).
 - Images with {{htmlelement("img")}}. Supported image formats include PNG, JPEG, GIF, BMP, SVG, ...
 - Media files with {{htmlelement("video")}} and {{htmlelement("audio")}}.
-- Plug-ins with [`<object>`](/ru/docs/Web/HTML/Element/object), [`<embed>`](/ru/docs/Web/HTML/Element/embed) and [`<applet>`](/ru/docs/HTML/Element/applet).
+- Plug-ins with [`<object>`](/ru/docs/Web/HTML/Element/object), [`<embed>`](/ru/docs/Web/HTML/Reference/Elements/embed) and [`<applet>`](/ru/docs/HTML/Element/applet).
 - Fonts with [`@font-face`](/ru/docs/Web/CSS/@font-face). Some browsers allow cross-origin fonts, others require same-origin fonts.
 - Anything with [`<frame>`](/ru/docs/Web/HTML/Element/frame) and [`<iframe>`](/ru/docs/Web/HTML/Element/iframe). A site can use the [`X-Frame-Options`](/ru/docs/Web/HTTP/Headers/X-Frame-Options) header to prevent this form of cross-origin interaction.
 
 ### How to allow cross-origin access
 
-Use [CORS](/ru/docs/Web/HTTP/CORS) to allow cross-origin access.
+Use [CORS](/ru/docs/Web/HTTP/Guides/CORS) to allow cross-origin access.
 
 ### How to block cross-origin access
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`sqrt()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions) は指数関数で、数値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返します。
+**`sqrt()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は指数関数で、数値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返します。
 
 `sqrt(x)` は `pow(x, 0.5)` と同等です。
 
@@ -58,7 +58,7 @@ width: calc(100px * sqrt(100)); /* 1000px */
 
 #### CSS
 
-ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
+ここではサイズを定義するために、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を利用しています。はじめに最初のサイズ (`--size-0`) を宣言し、これを使用して他のサイズを計算します。
 
 - `--size-1` は、`--size-0` の値 (50px) に 4 の平方根 (2) を掛けて、100px になります。
 - `--size-2` は、`--size-0` の値 (50px) に 9 の平方根 (3) を掛けて、150px になります。

@@ -198,7 +198,7 @@ section {
 
 ### JavaScript
 
-JavaScriptでは、まず `<main>` 要素への参照を取得し、生成する `<section>` 要素の数（この場合は21）と、カウントを開始する変数を定義します。次に、 [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを使用して `<section>` 要素を生成し、各要素に子要素として [`h2`](/ja/docs/Web/HTML/Element/Heading_Elements) タグを追加し、そのテキストとして `Section` と現在の `n` の値を表示します。
+JavaScriptでは、まず `<main>` 要素への参照を取得し、生成する `<section>` 要素の数（この場合は21）と、カウントを開始する変数を定義します。次に、 [`while`](/ja/docs/Web/JavaScript/Reference/Statements/while) ループを使用して `<section>` 要素を生成し、各要素に子要素として [`h2`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) タグを追加し、そのテキストとして `Section` と現在の `n` の値を表示します。
 
 ```js live-sample___one-dimensional_scroller_example
 const mainElem = document.querySelector("main");

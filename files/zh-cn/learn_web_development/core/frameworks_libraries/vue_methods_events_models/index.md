@@ -1,10 +1,9 @@
 ---
 title: 使用 Vue event、method 和 model 添加一个新的 todo 表单
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists","Learn_web_development/Core/Frameworks_libraries/Vue_styling", "Learn_web_development/Core/Frameworks_libraries")}}
 
 我们现在已经有了样本数据，还有一个循环，它获取每一位数据并将其呈现在我们应用程序的 `ToDoItem` 中。接下来我们真正需要的是允许我们的用户在应用程序中输入他们自己的待办事项的能力，为此我们需要一个“text”类型的 `<input>`，当数据输入时触发的事件提交，一个在提交时触发以添加数据并重新呈现列表的方法，以及一个控制数据的模型。这就是我们将在本文中介绍的内容。
 
@@ -55,7 +54,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
    </script>
    ```
 
-3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Element/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Element/button)。更新后的模版如下：
+3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Reference/Elements/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Reference/Elements/button)。更新后的模版如下：
 
    ```html
    <template>
@@ -83,7 +82,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
 
    ```js
    components: {
-     ToDoItem, ToDoForm;
+     ToDoItem, ToDoForm,
    }
    ```
 
@@ -180,18 +179,17 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
    };
    ```
 
-2. 我们现在需要一些方法将 `new-todo-input` 元素字段的值附加到 `label` 字段。Vue 对此有一个特殊的指令：[`v-model`](https://vuejs.org/v2/api/#v-model)。`v-model` 绑定到你在其上设置的数据属性，并使其与 `<input>` 保持同步。`v-model` 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 `v-model`，你需要向 `<input>` 添加一个结构为 `v-model="variable"` 的属性。
+2. 我们现在需要一些方法将 `new-todo-input` 元素字段的值附加到 `label` 字段。Vue 对此有一个特殊的指令：[`v-model`](https://cn.vuejs.org/api/built-in-directives#v-model)。`v-model` 绑定到你在其上设置的数据属性，并使其与 `<input>` 保持同步。`v-model` 适用于所有不同的输入类型，包括复选框、单选框和选择输入。要使用 `v-model`，你需要向 `<input>` 添加一个结构为 `v-model="variable"` 的属性。
 
    所以在我们的例子中，我们会将它添加到我们的 `new-todo-input` 字段中，如下所示。现在就这样做：
 
-   ```js
+   ```html
    <input
      type="text"
      id="new-todo-input"
      name="new-todo"
      autocomplete="off"
-     v-model="label"
-   />
+     v-model="label" />
    ```
 
    > [!NOTE]
@@ -237,7 +235,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
    this.$emit("todo-added");
    ```
 
-2. 接下来，回到 `App.vue` 并添加一个 `methods` 属性到包含 `addToDo()` 方法的组件对象，如图所示 以下。目前，此方法只需将 `To-do added` 记录到控制台即可。
+2. 接下来，回到 `App.vue` 并添加一个 `methods` 属性到包含 `addToDo()` 方法的组件对象，如以下代码所示。目前，此方法只需将 `To-do added` 记录到控制台即可。
 
    ```js
    export default {
@@ -249,14 +247,18 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
      data() {
        return {
          ToDoItems: [
-           { id: uniqueId("todo-"), label: "Learn Vue", done: false },
+           { id: "todo-" + nanoid(), label: "Learn Vue", done: false },
            {
-             id: uniqueId("todo-"),
+             id: "todo-" + nanoid(),
              label: "Create a Vue project with the CLI",
              done: true,
            },
-           { id: uniqueId("todo-"), label: "Have fun", done: true },
-           { id: uniqueId("todo-"), label: "Create a to-do list", done: false },
+           { id: "todo-" + nanoid(), label: "Have fun", done: true },
+           {
+             id: "todo-" + nanoid(),
+             label: "Create a to-do list",
+             done: false,
+           },
          ],
        };
      },
@@ -306,7 +308,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
 
    ```js
    addToDo(toDoLabel) {
-     this.ToDoItems.push({id:uniqueId('todo-'), label: toDoLabel, done: false});
+     this.ToDoItems.push({id: "todo-" + nanoid(), label: toDoLabel, done: false});
    }
    ```
 
@@ -328,7 +330,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_met
 
 ## 使用 `v-model` 更新输入值
 
-在我们的 `ToDoForm` 组件中还有一件事需要修复——提交后，`<input>` 仍然包含旧值。但这很容易解决——因为我们使用 `v-model` 将数据绑定到 `ToDoForm` 中的 `<input>`，如果 我们将 name 参数设置为空字符串，输入也会更新。
+在我们的 `ToDoForm` 组件中还有一件事需要修复——提交后，`<input>` 仍然包含旧值。但这很容易解决——因为我们使用 `v-model` 将数据绑定到 `ToDoForm` 中的 `<input>`，如果我们将 name 参数设置为空字符串，输入也会更新。
 
 将你的 `ToDoForm` 组件的 `onSubmit()` 方法更新为：
 

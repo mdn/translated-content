@@ -11,7 +11,58 @@ l10n:
 
 いくつかの[関数](#関数)、例えば `blur()` や `contrast()` などが利用でき、あらかじめ定義された効果を実現するのに役立てることができます。
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## 構文
 
@@ -52,7 +103,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
+`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Reference/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -237,4 +288,4 @@ img:nth-of-type(2) {
 - CSS [合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュール（CSS の {{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティを含む）
 - CSS の {{cssxref("mask")}} プロパティ
 - [SVG](/ja/docs/Web/SVG) （SVG の {{SVGElement("filter")}} 要素や {{SVGAttr("filter")}} 属性を含む）
-- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

@@ -5,7 +5,7 @@ slug: Web/CSS
 
 {{CSSRef}}
 
-**层叠样式表**（Cascading Style Sheets，缩写为 **CSS**）是一种[样式表](/zh-CN/docs/Web/API/StyleSheet)语言，用来描述 [HTML](/zh-CN/docs/Web/HTML) 或 [XML](/zh-CN/docs/Web/XML/XML_introduction)（包括如 [SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML) 或 {{Glossary("XHTML")}} 之类的 XML 分支语言）文档的呈现方式。CSS 描述了在屏幕、纸质、音频等其他媒体上的元素应该如何被渲染的问题。
+**层叠样式表**（Cascading Style Sheets，缩写为 **CSS**）是一种[样式表](/zh-CN/docs/Web/API/StyleSheet)语言，用来描述 [HTML](/zh-CN/docs/Web/HTML) 或 [XML](/zh-CN/docs/Web/XML/Guides/XML_introduction)（包括如 [SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML) 或 {{Glossary("XHTML")}} 之类的 XML 分支语言）文档的呈现方式。CSS 描述了在屏幕、纸质、音频等其他媒体上的元素应该如何被渲染的问题。
 
 CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www.w3.org/Style/CSS/#specs)在 Web 浏览器中进行了标准化。以前，CSS 规范的各个部分的开发是同步进行的，这种方式允许对最新推荐的 CSS 版本进行控制。你可能已经听说过 CSS1、CSS2.1 甚至 CSS3。但是以后将不会再有 CSS3 或者 CSS4；相反，现在的一切都是没有版本号的 CSS。
 
@@ -48,8 +48,8 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - [包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)
-  - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
-  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/initial_value)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/used_value)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/actual_value)
+  - [堆叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)和[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)
+  - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)、[应用值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#应用值)和[实际值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#实际值)
   - [CSS 简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)
   - [CSS 弹性盒子布局](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)
   - [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)
@@ -72,5 +72,5 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 ## 参见
 
-- CSS 常常应用的 Web 语言：[HTML](/zh-CN/docs/Web/HTML)、[SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML)、{{Glossary("XHTML")}} 以及 [XML](/zh-CN/docs/Web/XML/XML_introduction)。
+- CSS 常常应用的 Web 语言：[HTML](/zh-CN/docs/Web/HTML)、[SVG](/zh-CN/docs/Web/SVG)、[MathML](/zh-CN/docs/Web/MathML)、{{Glossary("XHTML")}} 以及 [XML](/zh-CN/docs/Web/XML/Guides/XML_introduction)。
 - [StackOverflow 上 CSS 相关的问题](https://stackoverflow.com/questions/tagged/css)

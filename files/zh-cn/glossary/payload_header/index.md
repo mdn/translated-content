@@ -15,7 +15,7 @@ l10n:
 
 ## 参见
 
-- [所有 HTTP 标头的列表](/zh-CN/docs/Web/HTTP/Headers)
+- [所有 HTTP 标头的列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 
   - {{HTTPHeader("Content-Length")}}
   - {{HTTPHeader("Content-Range")}}

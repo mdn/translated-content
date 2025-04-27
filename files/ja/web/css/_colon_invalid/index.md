@@ -5,7 +5,7 @@ slug: Web/CSS/:invalid
 
 {{CSSRef}}
 
-**`:invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素や {{HTMLElement("form")}} 要素のうち内容が[検証](/ja/docs/Web/HTML/Constraint_validation)に失敗したものを表します。
+**`:invalid`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}} 要素や {{HTMLElement("form")}} 要素のうち内容が[検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に失敗したものを表します。
 
 ```css
 /* 無効な <input> を選択 */
@@ -124,7 +124,7 @@ input:required:invalid {
 
 赤は入力が無効であることを示すためによく使われます。色盲の人によっては、それ以外の色によらない識別方法を伴わないと、入力状態が判別できないことがあります。通常、文字列やアイコンを使用して説明します。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 
 ## 注
@@ -149,5 +149,5 @@ input:required:invalid {
 
 - 検証に関する他の擬似クラス: {{ cssxref(":required") }}, {{ cssxref(":optional") }}, {{ cssxref(":valid") }}
 - 関連する Mozilla の擬似クラス: {{cssxref(":user-invalid")}}, {{cssxref(":-moz-submit-invalid")}}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - JavaScript からの [validity state](/ja/docs/Web/API/ValidityState) へのアクセス

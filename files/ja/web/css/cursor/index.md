@@ -12,7 +12,53 @@ l10n:
 カーソル設定により、テキスト選択、ヘルプやコンテキストメニューの有効化、コンテンツのコピー、表のリサイズなど、現在の位置で実行できるマウス操作をユーザーに知らせるべきです。
 キーワードを使用してカーソルの種類を指定するか、使用する固有のアイコンを読み込むことができます（オプションで代替画像、そして最終的なフォールバックとしてキーワードが必須です）。
 
-{{EmbedInteractiveExample("pages/css/cursor.html")}}
+{{InteractiveExample("CSS Demo: cursor")}}
+
+```css interactive-example-choice
+cursor: help;
+```
+
+```css interactive-example-choice
+cursor: wait;
+```
+
+```css interactive-example-choice
+cursor: crosshair;
+```
+
+```css interactive-example-choice
+cursor: not-allowed;
+```
+
+```css interactive-example-choice
+cursor: zoom-in;
+```
+
+```css interactive-example-choice
+cursor: grab;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div id="example-element">
+    Move over this element to see the cursor style.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  background-color: #1766aa;
+  color: white;
+  height: 180px;
+  width: 360px;
+  justify-content: center;
+  align-items: center;
+  font-size: 14pt;
+  padding: 5px;
+}
+```
 
 ## 構文
 

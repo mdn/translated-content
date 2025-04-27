@@ -1,10 +1,7 @@
 ---
 title: 如何构建自定义表单控件
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
-original_slug: Learn/Forms/How_to_build_custom_form_controls
 ---
-
-{{LearnSidebar}}
 
 在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上[设置高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
 
@@ -1644,11 +1641,11 @@ window.addEventListener("load", () => {
 
 ### `role` 属性
 
-[ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 使用的关键属性是角色（[`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques)）属性。[`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个角色定义了它自己的需求和行为。在我们的示例中，我们会使用 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 这一角色。这是一个“复合角色（composite role）”，表示具有该角色的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
+[ARIA](/zh-CN/docs/Web/Accessibility/ARIA) 使用的关键属性是角色（[`role`](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques)）属性。[`role`](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques) 属性接受一个值，该值定义了一个元素的用途。每一个角色定义了它自己的需求和行为。在我们的示例中，我们会使用 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) 这一角色。这是一个“复合角色（composite role）”，表示具有该角色的元素应该有子元素，每个子元素都有特定的角色。（在这个案例中，至少有一个具有`option` 角色的子元素）。
 
 同样值得注意的是，ARIA 定义了默认应用于标准 HTML 标记的角色。例如，{{HTMLElement("table")}} 元素与角色 `grid` 相匹配，而 {{HTMLElement("ul")}} 元素与角色 `list` 相匹配。由于我们使用了一个 {{HTMLElement("ul")}} 元素，我们想要确保我们控件的 `listbox` 角色能替代 {{HTMLElement("ul")}} 元素的 `list` 角色。为此，我们会使用角色 `presentation`。这个角色被设计成让我们来表示一个元素没有特殊的含义，并且仅仅用于提供信息。我们会将其应用到 {{HTMLElement("ul")}} 元素上。
 
-为了支持 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Roles/listbox_role) 角色，我们只需要将我们的 HTML 改成这样：
+为了支持 [`listbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role) 角色，我们只需要将我们的 HTML 改成这样：
 
 ```html
 <!-- 我们把 role="listbox" 属性添加到我们的顶层元素 -->
@@ -1671,7 +1668,7 @@ window.addEventListener("load", () => {
 
 ### `aria-selected` 属性
 
-仅仅使用 [`role`](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 属性是不够的。[ARIA](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Techniques) 还提供了许多状态和属性特征。你能更好更充分的利用它们，你的控件就会能够被辅助技术更好地理解。在我们的示例中，我们会把使用限制在一个属性上：`aria-selected`。
+仅仅使用 [`role`](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques) 属性是不够的。[ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Techniques) 还提供了许多状态和属性特征。你能更好更充分的利用它们，你的控件就会能够被辅助技术更好地理解。在我们的示例中，我们会把使用限制在一个属性上：`aria-selected`。
 
 `aria-selected` 属性被用来标记当前被选中的选项；这可以让辅助技术告知用户当前的选项是什么。我们会通过 JavaScript 动态地使用该属性，每当用户选择一个选项时标记选中的选项。为了达到这一目的，我们需要修正我们的 `updateValue()` 函数：
 

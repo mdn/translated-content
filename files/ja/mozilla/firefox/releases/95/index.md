@@ -14,7 +14,7 @@ Firefox 95 は、2021 年 12 月 7 日にリリースされました。
 
 ### HTML
 
-- [`inputmode`](/ja/docs/Web/HTML/Global_attributes/inputmode) グローバル属性を、Android だけでなくすべてのプラットフォームでサポートしました。
+- [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode) グローバル属性を、Android だけでなくすべてのプラットフォームでサポートしました。
   これは、特定の要素を編集するときにどの種類の仮想キーボードが最適であるかのヒントをブラウザーに与えるものです ([Firefox バグ 1205133](https://bugzil.la/1205133))。
 
 ### CSS

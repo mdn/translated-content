@@ -7,9 +7,41 @@ l10n:
 
 {{CSSRef}}
 
-**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
+**`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
-{{EmbedInteractiveExample("pages/css/type-gradient.html")}}
+{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
+
+```css interactive-example-choice
+background: linear-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: radial-gradient(#f69d3c, #3f87a6);
+```
+
+```css interactive-example-choice
+background: repeating-linear-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#f69d3c, #3f87a6 50px);
+```
+
+```css interactive-example-choice
+background: conic-gradient(#f69d3c, #3f87a6);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 CSS グラデーションは[内在的な寸法を持ちません](/ja/docs/Web/CSS/image#description)。つまり、自然または推奨される寸法や、推奨される縦横比を持ちません。実際の寸法は適用される要素に一致します。
 
@@ -188,6 +220,6 @@ span {
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - グラデーション関数: {{cssxref("gradient/linear-gradient", "linear-gradient()")}}, {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/radial-gradient", "radial-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/conic-gradient", "conic-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}
-- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Types)
+- [CSS の基本データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS の単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)
-- [CSS 入門: 値と単位](/ja/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 入門: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

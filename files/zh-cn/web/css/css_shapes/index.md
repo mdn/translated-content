@@ -17,7 +17,7 @@ l10n:
 
 以下示例显示了一个向左浮动的图像，并应用了值为 `circle(50%)` 的 `shape-outside` 属性。这将创建一个圆形，使得包裹浮动的内容会包裹着这个形状。这将改变包裹文本的行框的长度。
 
-{{EmbedGHLiveSample("css-examples/shapes/overview/circle.html", '100%', 720)}}
+{{EmbedLiveSample("circle", "", "300px")}}
 
 ## 参考
 

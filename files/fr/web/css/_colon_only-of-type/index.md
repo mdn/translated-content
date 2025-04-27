@@ -9,7 +9,37 @@ l10n:
 
 La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:only-of-type`** permet de cibler un élément qui ne possède aucun nœud frère du même type.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+a:only-of-type {
+  color: fuchsia;
+}
+
+dd:only-of-type {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>
+  To find out more about <b>QUIC</b>, check <a href="#">RFC 9000</a> and
+  <a href="#">RFC 9114</a>.
+</p>
+
+<dl>
+  <dt>Published</dt>
+  <dd>2021</dd>
+  <dd>2022</dd>
+</dl>
+
+<p>Details about <b>QPACK</b> can be found in <a href="#">RFC 9204</a>.</p>
+
+<dl>
+  <dt>Published</dt>
+  <dd>2022</dd>
+</dl>
+```
 
 > [!NOTE]
 > Dans la version initiale de la spécification (CSS3), l'élément ciblé devait avoir un parent, ce n'est plus nécessaire depuis (spécification pour les sélecteurs de niveau 4).

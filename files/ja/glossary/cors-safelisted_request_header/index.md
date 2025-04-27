@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CORS セーフリストリクエストヘッダー](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)は、次の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のうちの一つです:
+[CORS セーフリストリクエストヘッダー](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)は、次の [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)のうちの一つです:
 
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Language")}}
@@ -33,5 +33,5 @@ CORS セーフリストリクエストヘッダーとなるためには、次の
 ## 関連情報
 
 - {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}
-- {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+- {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
 - {{Glossary("Request header", "リクエストヘッダー")}}

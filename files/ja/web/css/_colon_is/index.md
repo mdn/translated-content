@@ -157,7 +157,7 @@ dir dir dir {
 
 ### section セレクターの簡略化
 
-`:is()` 擬似クラスは、 HTML の[セクションと見出し](/ja/docs/Web/HTML/Element/Heading_Elements)を扱うときに特に便利です。 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
+`:is()` 擬似クラスは、 HTML の[セクションと見出し](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を扱うときに特に便利です。 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
 
 例えば、 `:is()` を使わずに、異なる深さの {{HTMLElement("Heading_Elements", "h1")}} 要素にスタイルを適用すると、とても複雑になります。
 
@@ -268,6 +268,6 @@ some-element::after {
 
 ## 関連情報
 
-- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Specificity)が 0 です。
+- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が 0 です。
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

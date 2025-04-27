@@ -328,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 前の例では、[プロミス連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)を使用して結果を待ちました。
-ここでは、[`async` と `await`](/ja/docs/Learn/JavaScript/Asynchronous/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
+ここでは、[`async` と `await`](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

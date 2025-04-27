@@ -28,7 +28,7 @@ analyser.smoothingTimeConstant = 1;
 
 ## 例子
 
-下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
+下面的例子展示了 [`AudioContext`](/zh-CN/docs/Web/API/AudioContext) 创建一个 `AnalyserNode`, 然后用 [`requestAnimationFrame`](/zh-CN/docs/Web/API/Window/requestAnimationFrame) 和 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 去反复收集当前音频的频率数据，并绘制为一个柱状风格的输出 (频谱).
 
 更多的例子/信息，查看 [Voice-change-O-matic](https://mdn.github.io/voice-change-o-matic/) 演示 (相关代码在 [app.js 的 128 行\~205 行](https://github.com/mdn/voice-change-o-matic/blob/gh-pages/scripts/app.js#L128-L205)).
 

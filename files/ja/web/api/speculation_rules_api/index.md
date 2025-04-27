@@ -9,14 +9,14 @@ l10n:
 
 **投機ルール API** (Speculation Rules API) は、将来のナビゲーションのパフォーマンスを向上させるように設計されています。これは特定のリソースファイルではなく文書 URL を対象とするので、マルチページアプリケーション (MPA) で意味がありますが、単一のページアプリケーション (SPA) では意味がありません。
 
-投機ルール API は、広く利用できる [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) 機能の代替となるもので、 Chrome のみの非推奨である [`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender) 機能を置き換えるようにも設計されています。先読みされる文書や事前レンダリングされる文書を指定するための、より表現力があり構成しやすい構文とともに、これらの技術に対して多くの改善点を提供します。
+投機ルール API は、広く利用できる [`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) 機能の代替となるもので、 Chrome のみの非推奨である [`<link rel="prerender">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender) 機能を置き換えるようにも設計されています。先読みされる文書や事前レンダリングされる文書を指定するための、より表現力があり構成しやすい構文とともに、これらの技術に対して多くの改善点を提供します。
 
 > [!NOTE]
 > 投機ルール API はサブリソースの先読みを処理しません。そのためには `<link rel="prefetch">` を使用する必要があります。
 
 ## 概念と使用方法
 
-投機ルールは [`<script type="speculationrules"> ... </script>`](/ja/docs/Web/HTML/Element/script/type/speculationrules) の中で指定します。ルールは JSON 構造で指定します。
+投機ルールは [`<script type="speculationrules"> ... </script>`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) の中で指定します。ルールは JSON 構造で指定します。
 
 例を示します。
 
@@ -43,10 +43,10 @@ l10n:
 
 投機的読み込みの種類（`"prerender"` や `"prefetch"` など）ごとに、ルールを格納する配列を指定します。各ルールはオブジェクトに格納されており、例えば取得するリソースのリストと、各ルールに対する明示的な {{httpheader("Referrer-Policy")}} 設定などのオプションを指定します。事前レンダリングされた URL も先読みされることに注意しましょう。
 
-利用可能な構文の全般的な説明は、 [`<script type="speculationrules">`](/ja/docs/Web/HTML/Element/script/type/speculationrules) を参照してください。
+利用可能な構文の全般的な説明は、 [`<script type="speculationrules">`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) を参照してください。
 
 > [!NOTE]
-> 投機ルールは `<script>` 要素を使用するので、サイトが含まれるのであれば {{httpheader("Content-Security-Policy")}} の [`script-src`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src) ディレクティブで明示的に許可する必要があります。これは `'inline-speculation-rules'` のソースを hash- または nonce-source とともに追加することで行われます。
+> 投機ルールは `<script>` 要素を使用するので、サイトが含まれるのであれば {{httpheader("Content-Security-Policy")}} の [`script-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) ディレクティブで明示的に許可する必要があります。これは `'inline-speculation-rules'` のソースを hash- または nonce-source とともに追加することで行われます。
 
 ### 先読みの使用
 
@@ -61,7 +61,7 @@ l10n:
 > [!NOTE]
 > 将来的には {{httpheader("Supports-Loading-Mode")}} ヘッダーでオプトインが提供される予定ですが、執筆時点では実装されていません。
 
-投機ルールの先読みに対応しているブラウザーでは、古い先読み機構、すなわち [`<link rel="prefetch">`](/ja/docs/Web/HTML/Attributes/rel/prefetch) や {{domxref("Window/fetch", "fetch()")}} に `priority: "low"` オプションを設定します。なぜなら、投機ルールの先読みはナビゲーションのためのものであり、一般的なリソースの先読みではないからです。
+投機ルールの先読みに対応しているブラウザーでは、古い先読み機構、すなわち [`<link rel="prefetch">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prefetch) や {{domxref("Window/fetch", "fetch()")}} に `priority: "low"` オプションを設定します。なぜなら、投機ルールの先読みはナビゲーションのためのものであり、一般的なリソースの先読みではないからです。
 
 - サイト間でのナビゲーションに使用することができます。 `<link rel="prefetch">` は使用できません。
 - {{httpheader("Cache-Control")}} ヘッダーでブロックされません。 `<link rel="prefetch">` はブロックされることがよくあります。
@@ -88,7 +88,7 @@ l10n:
 
 事前レンダリングされた文書は、既定では同一オリジンの文書に制限されています。異なるオリジンであっても、同じサイトの事前レンダリングは可能です。そのためには、 {{httpheader("Supports-Loading-Mode")}} ヘッダーに `credentialed-prerender` という値を指定して、ナビゲーションターゲットがオプトインする必要があります。現時点では、異なるサイトの事前レンダリングはできません。
 
-対応しているブラウザーでは、投機ルールの事前レンダリングは古い事前レンダリングの仕組み、いわゆる [`<link rel="prerender">`](/ja/docs/Web/HTML/Attributes/rel/prerender) よりも優先されるべきです。
+対応しているブラウザーでは、投機ルールの事前レンダリングは古い事前レンダリングの仕組み、いわゆる [`<link rel="prerender">`](/ja/docs/Web/HTML/Reference/Attributes/rel/prerender) よりも優先されるべきです。
 
 - `<link rel="prerender">` は Chrome 独自のものであり、標準化されることはなく、 Chrome の開発チームは現在、これを廃止する作業を行っています。 {{experimental_inline}}
 - JavaScript で読み込まれたサブリソースを読み込みますが、 `<link rel="prerender">` は読み込みません。
@@ -395,7 +395,7 @@ if (document.prerendering) {
 
 ## HTML 機能
 
-- [`<script type="speculationrules"> ... </script>`](/ja/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+- [`<script type="speculationrules"> ... </script>`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
   - : 現在の文書に対する一連の先読みや事前レンダリングの投機ルールを定義するために用います。
 
 ## 例
@@ -413,4 +413,4 @@ if (document.prerendering) {
 ## 関連情報
 
 - [Prerender pages in Chrome for instant page navigations](https://developer.chrome.com/docs/web-platform/prerender-pages) (developer.chrome.com, 2023)
-- [投機的読み込み](/ja/docs/Web/Performance/Speculative_loading)で、投機ルールとその他の同様のパフォーマンス改善機能を比較しています。
+- [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、投機ルールとその他の同様のパフォーマンス改善機能を比較しています。

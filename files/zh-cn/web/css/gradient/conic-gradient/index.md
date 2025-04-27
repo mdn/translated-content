@@ -7,7 +7,49 @@ slug: Web/CSS/gradient/conic-gradient
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`conic-gradient()`** 创建一个由渐变组成的图像，渐变的颜色围绕一个中心点旋转（而不是从中心辐射）进行过渡。锥形渐变的例子包括饼图和{{glossary("color wheel", "色轮")}}。`conic-gradient()` 函数的结果是 {{CSSxRef("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{CSSxRef("&lt;image&gt;")}} 数据类型。
 
-{{EmbedInteractiveExample("pages/css/function-conic-gradient.html")}}
+{{InteractiveExample("CSS Demo: conic-gradient()")}}
+
+```css interactive-example-choice
+background: conic-gradient(red, orange, yellow, green, blue);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  from 0.25turn at 50% 30%,
+  #f69d3c,
+  10deg,
+  #3f87a6,
+  350deg,
+  #ebf8e1
+);
+```
+
+```css interactive-example-choice
+background: conic-gradient(from 3.1416rad at 10% 50%, #e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: conic-gradient(
+  red 6deg,
+  orange 6deg 18deg,
+  yellow 18deg 45deg,
+  green 45deg 110deg,
+  blue 110deg 200deg,
+  purple 200deg
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 语法
 
@@ -43,7 +85,7 @@ background: conic-gradient(
 - `<color-hint>`
   - : {{Glossary("interpolation", "插值")}}提示，定义了在相邻色标之间的渐变如何进行。这个长度定义了渐变色应在两个色标之间的哪一点到达颜色过渡的中点。如果省略，颜色过渡的中点是两个色标之间的中点。
 
-> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorial/Gradients)中的色标遵循相同的规则。
+> **备注：** [CSS 渐变中的色标](#gradient_with_multiple_color_stops)的渲染与 [SVG 渐变](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)中的色标遵循相同的规则。
 
 ## 描述
 
@@ -113,7 +155,7 @@ background-size: 25% 25%;
 
 浏览器不向辅助技术提供任何关于背景图像的特殊信息。这主要对屏幕阅读器来说很重要，因为屏幕阅读器不会宣布其存在，因此不会向用户传达任何信息。虽然可以创建饼图、棋盘和其他带有圆锥梯度的效果，但 CSS 图像不提供指定替代文本的原生方式，因此屏幕阅读器用户无法访问由锥形渐变表示的图像。如果图像包含对理解页面的总体用途至关重要的信息，那么最好在文档中对其进行语义描述。
 
-- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
+- [MDN 理解 WCAG，指南 1.1 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_—_providing_text_alternatives_for_non-text_content)
 - [理解成功标准 1.1.1 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## 示例

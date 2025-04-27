@@ -134,4 +134,4 @@ div {
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS 論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

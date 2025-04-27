@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<absolute-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、絶対サイズキーワードを記述します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
+**`<absolute-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、絶対サイズキーワードを記述します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
 
 フォントサイズのキーワードは、 HTML の非推奨の `size` 属性に対応します。下記の [HTML size 属性](#html_の_size_属性)の節を参照してください。
 
@@ -58,7 +58,7 @@ l10n:
 
 CSS1 (1996) では、隣接するキーワード値のインデックス間の拡大率は 1.5 でしたが、これは大きすぎました。 CSS2 (1998) では、隣接するキーワード値インデックス間の拡大率は 1.2 になりましたが、これは小さな値において課題が残りました。隣接する絶対的な大きさのキーワード間を単一の固定比率にすることは問題があることが分かったので、固定比率の推奨はなくなりました。読み取り可能な唯一の推奨は、最小のフォントサイズが `9px` を下回らないことです。
 
-以下の表は、それぞれの `<absolute-size>` キーワード値における拡大係数、[`<h1>` から `<h6>`](/ja/docs/Web/HTML/Element/Heading_Elements) の見出しとの対応、非推奨の [HTML の `size` 属性](#html_の_size_属性)との対応を挙げています。
+以下の表は、それぞれの `<absolute-size>` キーワード値における拡大係数、[`<h1>` から `<h6>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) の見出しとの対応、非推奨の [HTML の `size` 属性](#html_の_size_属性)との対応を挙げています。
 
 | `<absolute-size>`   | xx-small | x-small | small | medium | large | x-large | xx-large | xxx-large |
 | ------------------- | -------- | ------- | ----- | ------ | ----- | ------- | -------- | --------- |

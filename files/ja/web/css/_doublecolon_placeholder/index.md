@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)を表します。
 
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 
@@ -61,14 +61,14 @@ input::placeholder {
 色のコントラスト比は、プレイスホルダー文字列と入力欄の背景色の値とを比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag) によれば、文字列コンテンツで 4.5:1 以上、見出しのような大きめの文字列で 3:1 以上のコントラスト比が求められています。大きめの文字列とは、太字ならば 18.66px 以上、または 24px 以上と定義されています。
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### ユーザビリティ
 
 コントラストが十分に高いプレイスホルダー文字列とは、すでに入力された文字列と誤解される可能性があるものです。またプレイスホルダー文字列とは、人間が {{htmlelement("input")}} 要素の中にコンテンツを入力すると、消滅するものでもあります。いずれにしろ、特に認知機能に障害を持つ人にとっては、フォームの入力を完了させるときに、困難を伴う可能性があります。
 
-プレイスホルダーの情報を提供する他の方法としては、入力欄の外側で視覚的に近いところに表示し、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を使用して {{HTMLElement("input")}} とヒントをプログラム的に関連付ける方法もあります。
+プレイスホルダーの情報を提供する他の方法としては、入力欄の外側で視覚的に近いところに表示し、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して {{HTMLElement("input")}} とヒントをプログラム的に関連付ける方法もあります。
 
 この実装方法では、情報が入力欄に入力されてもヒントを見ることができ、なおかつページが読み込まれたときに既に文字列が入力されているように見えることがありません。多くの読み上げ技術は `aria-describedby` を使用して、入力欄のラベルのテキストを読み上げた後でヒントを読み上げ、読み上げソフトを使用している人は、追加情報が必要なければ読み上げを抑止することができます。
 
@@ -90,7 +90,7 @@ input::placeholder {
 
 ### ラベル
 
-プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes#id) 属性の組み合わせを使用し、入力欄とプログラム的に関連付けが行われていないラベルでは、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
+プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) および [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の組み合わせを使用し、入力欄とプログラム的に関連付けが行われていないラベルでは、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
@@ -159,4 +159,4 @@ Firefox など一部のブラウザーでは、プレースホルダーの既定
 
 - {{cssxref(":placeholder-shown")}} 擬似クラスは、アクティブなプレイスホルダーを*持つ*要素にスタイルを適用できます。
 - 関連する HTML 要素: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML フォーム](/ja/docs/Learn/Forms)
+- [HTML フォーム](/ja/docs/Learn_web_development/Extensions/Forms)

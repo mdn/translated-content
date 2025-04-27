@@ -51,7 +51,7 @@ copyTo(newParent, newName, successCallback, errorCallback)
 
 ## 例
 
-この例は、一時的なログファイルをより永続的な "log" ディレクトリ－に移動させる方法を示しています。
+この例は、一時的なログファイルをより永続的な "log" ディレクトリーに移動させる方法を示しています。
 
 ```js
 workingDirectory.getFile(
@@ -78,4 +78,4 @@ workingDirectory.getFile(
 ## 関連情報
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [ファイルとディレクトリー項目 API の紹介](/ja/docs/Web/API/File_System_API)

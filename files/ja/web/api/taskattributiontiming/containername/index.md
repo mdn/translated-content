@@ -12,7 +12,7 @@ l10n:
 
 ## 値
 
-文字列で、コンテナーの HTML における `name` 属性（[`<iframe name="myIframe"`](/ja/docs/Web/HTML/Element/iframe#name) や [`<object name="myObject"`](/ja/docs/Web/HTML/Element/object#name) など）が入ります。
+文字列で、コンテナーの HTML における `name` 属性（[`<iframe name="myIframe"`](/ja/docs/Web/HTML/Reference/Elements/iframe#name) や [`<object name="myObject"`](/ja/docs/Web/HTML/Reference/Elements/object#name) など）が入ります。
 
 ## 仕様書
 

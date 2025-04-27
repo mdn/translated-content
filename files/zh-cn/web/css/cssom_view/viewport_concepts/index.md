@@ -37,7 +37,7 @@ window.outerHeight; /* 900 */
 
 下面是一些帮助你查询视口大小和其他类似的长度属性的 DOM 属性：
 
-- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Viewport_meta_tag#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
+- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
 - {{DOMxRef("Window.innerWidth")}} 是用 CSS 像素单位表示的浏览器窗口的视口宽度，包括垂直滚动条。
 - {{DOMxRef("Window.outerWidth")}} 是指包括了浏览器外边框的窗口宽度。
 
@@ -126,7 +126,7 @@ iframe {
 
 在这个示例中，这个 SVG 的视口长宽比被设置为了 3:4，默认情况下宽为 400 像素，高为 300 像素。
 
-SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Attribute/viewBox) 属性，内置了一个与视口无关的坐标系。
+SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox) 属性，内置了一个与视口无关的坐标系。
 
 如果你在你的 HTML 文档中使用了 SVG，这个 SVG 的视口默认为包含它的块级容器或者 SVG 容器上所设置的宽度和高度大小。当你使用 {{CSSxRef("@media")}} 来对 SVG 进行媒体查询时，其参照的高度和宽度取决于包裹着 SVG 的容器，而不是整个浏览器视口。
 
@@ -164,4 +164,4 @@ SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Attribute/viewBox) 属性，内置了�
 
 - [Visual viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}，特别是 `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Web/HTML/Viewport_meta_tag)
+- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

@@ -81,13 +81,13 @@ body {
 
 ## アクセシビリティの考慮
 
-スクリーンリーダーなどの支援技術は、空の対話型コンテンツを解釈することができません。すべての対話型コンテンツは、対話型コントロールの親要素 ([アンカー](/ja/docs/Web/HTML/Element/a)や[ボタン](/ja/docs/Web/HTML/Element/button)など) に文字列の値を設定することで作成されるアクセシブル名を持つ必要があります。アクセシブル名は、支援技術に有益な情報を通信する API である [アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) で使用されます。
+スクリーンリーダーなどの支援技術は、空の対話型コンテンツを解釈することができません。すべての対話型コンテンツは、対話型コントロールの親要素 ([アンカー](/ja/docs/Web/HTML/Reference/Elements/a)や[ボタン](/ja/docs/Web/HTML/Reference/Elements/button)など) に文字列の値を設定することで作成されるアクセシブル名を持つ必要があります。アクセシブル名は、支援技術に有益な情報を通信する API である [アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) で使用されます。
 
 対話型コントロールのアクセシブル名を提供する文字列は、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用して非表示にすることができ、画面からは視覚的に削除されますが、支援技術からは解釈できるようにすることができます。これは、アイコンだけで目的を示すボタンでよく使用されます。
 
 - [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN "WCAG を理解する ― ガイドライン 2.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
 ## 仕様書

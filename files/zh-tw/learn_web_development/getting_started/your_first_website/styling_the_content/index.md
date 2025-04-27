@@ -1,10 +1,9 @@
 ---
 title: CSS 基本
 slug: Learn_web_development/Getting_started/Your_first_website/Styling_the_content
-original_slug: Learn/Getting_started_with_the_web/CSS_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Creating_the_content", "Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Your_first_website")}}
 
 **階層樣式表** (Cascading Stylesheets；CSS) 可用以塑造網站的特殊風格。例如這段文字要用一般的黑色，或是改用紅色標明重點？某段重要內容應該置於畫面的何處？想用什麼背景圖片及顏色裝飾你的網站？〈[CSS 基本概念](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)〉帶你入門。
 

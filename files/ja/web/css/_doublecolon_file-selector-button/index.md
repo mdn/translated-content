@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::file-selector-button`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{HTMLElement("input") }} 要素の [`type="file"`](/ja/docs/Web/HTML/Element/input/file) のボタンを表します。
+**`::file-selector-button`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{HTMLElement("input") }} 要素の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) のボタンを表します。
 
 {{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
 
@@ -143,5 +143,5 @@ input[type="file"]::file-selector-button:hover {
 
 - [WebKit の CSS 拡張](/ja/docs/Web/CSS/WebKit_Extensions)
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API)
-- [ファイルとディレクトリー項目 API の Firefox における対応](/ja/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- [ファイルとディレクトリー項目 API の Firefox における対応](/ja/docs/Web/API/File_and_Directory_Entries_API)
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)

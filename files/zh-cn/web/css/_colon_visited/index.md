@@ -51,10 +51,10 @@ a:visited {
 - 允许使用的 SVG 属性有 {{SVGAttr("fill")}} 和 {{SVGAttr("stroke")}}。
 - 允许使用的样式的 alpha 分量（透明度）将被忽略。设置在 `:visited` 中的样式将使用元素的非 `:visited` 访问状态的 alpha 分量。在 Firefox 中，当 alpha 分量为 `0` 时，`:visited` 中设置的样式将被完全忽略。
 - 虽然这些样式可以改变用户最终的颜色外观，但 {{domxref("window.getComputedStyle")}} 方法将存在并且始终返回非访问颜色的值。
-- [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素永远不会被 `:visited` 匹配。
+- [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素永远不会被 `:visited` 匹配。
 
 > [!NOTE]
-> 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)。
+> 有关这些限制及其背后原因的更多信息，请参阅[隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)。
 
 ## 语法
 
@@ -105,5 +105,5 @@ a:visited {
 
 ## 参见
 
-- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/Privacy_and_the_:visited_selector)
+- [隐私和 :visited 选择器](/zh-CN/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)
 - 链接相关伪类：{{cssxref(":link")}}、{{cssxref(":active")}} 和 {{cssxref(":hover")}}

@@ -1,10 +1,9 @@
 ---
 title: HTML5 的输入（input）类型
 slug: Learn_web_development/Extensions/Forms/HTML5_input_types
-original_slug: Learn/Forms/HTML5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在[前一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
 
@@ -29,23 +28,23 @@ original_slug: Learn/Forms/HTML5_input_types
 </table>
 
 > [!NOTE]
-> 本篇文章中讨论的大多数特性都受到了广泛支持，如果有任何例外将会在文章中说明，如果你需要更多浏览器支持的细节，你应该查看我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是深入的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/input) 参考。
+> 本篇文章中讨论的大多数特性都受到了广泛支持，如果有任何例外将会在文章中说明，如果你需要更多浏览器支持的细节，你应该查看我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Reference/Elements#forms)，特别是深入的 [\<input> 类型](/zh-CN/docs/Web/HTML/Reference/Elements/input) 参考。
 
 由于 HTML 表单控件的外观可能与设计者的规格有很大的不同，web 开发者有时会建立自己的自定义表单控件。我们在一个高级教程中介绍了这一点：[如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)。
 
 ## E-mail 地址字段
 
-将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `email` 就可以使用这种控件：
+将 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性设置为 `email` 就可以使用这种控件：
 
 ```html
 <input type="email" id="email" name="email" />
 ```
 
-当使用了这种 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
+当使用了这种 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 类型时，用户需要输入一个合法的电子邮件地址，任何其他输入都会使得浏览器在表单提交时显示错误信息。你可以在下面的截图中看到这个行为：
 
 ![An invalid email input showing the message "Please enter an email address."](email_address_invalid.png)
 
-你也可以搭配使用 [`multiple`](/zh-CN/docs/Web/HTML/Attributes/multiple) 属性，以允许在同一个 `email` 输入框中输入多个电子邮件地址，以英文逗号分隔：
+你也可以搭配使用 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Attributes/multiple) 属性，以允许在同一个 `email` 输入框中输入多个电子邮件地址，以英文逗号分隔：
 
 ```html
 <input type="email" id="email" name="email" multiple />
@@ -66,14 +65,14 @@ original_slug: Learn/Forms/HTML5_input_types
 
 但它*不应该*被认为是一种详尽的安全措施！你的应用程序始终应该在*服务器端*和客户端对任何表单提交的数据进行安全检查，因为客户端验证太容易被关闭了，所以恶意用户仍然可以很容易地将坏数据发送到你的服务器。请参阅[网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)来了解*可能*会发生什么。实现服务端认证超出了本章的范围，但你应该熟稔于心。
 
-注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中进一步说明如何使用这些功能。
+注意，在默认限制条件下，`a@b` 也是一个合法的电子邮件地址，因为 `email` input 类型默认也允许内部网络的电子邮件地址。为了实现不同的验证行为，你可以使用 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern) 属性，而且可以自定义错误信息；我们将在[客户端表单认证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中进一步说明如何使用这些功能。
 
 > [!NOTE]
 > 如果输入的数据不是一个电子邮件地址，会匹配 {{cssxref(':invalid')}} 伪类，且 {{domxref('validityState.typeMismatch')}} 属性总会返回 `true`。
 
 ## 查询字段
 
-查询字段（Search fields）旨在用于在页面和应用程序上创建搜索框。将 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `search` 就可以使用这种控件：
+查询字段（Search fields）旨在用于在页面和应用程序上创建搜索框。将 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性设置为 `search` 就可以使用这种控件：
 
 ```html
 <input type="search" id="search" name="search" />
@@ -89,7 +88,7 @@ original_slug: Learn/Forms/HTML5_input_types
 
 ## 电话号码字段
 
-在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性中使用 `tel` 值，即可创建一个专门用于输入电话号码的文本域：
+在 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性中使用 `tel` 值，即可创建一个专门用于输入电话号码的文本域：
 
 ```html
 <input type="tel" id="tel" name="tel" />
@@ -103,11 +102,11 @@ original_slug: Learn/Forms/HTML5_input_types
 
 由于世界各地的电话号码格式多种多样，这种类型的字段对用户输入的值没有任何限制（这意味着它可能包括字母等非数字值）。
 
-像之前提及的那样，[`pattern`](/zh-CN/docs/Web/HTML/Attributes/pattern) 属性也可以应用在这里来附加一些限制，你会在[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中学到更多内容。
+像之前提及的那样，[`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern) 属性也可以应用在这里来附加一些限制，你会在[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中学到更多内容。
 
 ## URL 字段
 
-在 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
+在 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值中使用 `url`，即可创建一个用于输入网址的文本字段：
 
 ```html
 <input type="url" id="url" name="url" />
@@ -124,15 +123,15 @@ original_slug: Learn/Forms/HTML5_input_types
 
 ## 数字字段
 
-用于输入数字的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `number` 的 {{HTMLElement("input")}} 元素创建。这个控件外观与文本域类似，但只允许浮点数输入，并通常以旋转器（spinner）的形式提供按钮来增加和减少控件的值。在有动态键盘的设备上，一般会显示数字键盘。
+用于输入数字的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 为 `number` 的 {{HTMLElement("input")}} 元素创建。这个控件外观与文本域类似，但只允许浮点数输入，并通常以旋转器（spinner）的形式提供按钮来增加和减少控件的值。在有动态键盘的设备上，一般会显示数字键盘。
 
 看看下面这个例子（取自于 Android 上的 Firefox 浏览器)：
 
 ![Firefox for Android email keyboard, with ampersand displayed by default.](fx-android-number-type-keyboard.jpg)
 
-使用 `number` input 类型，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性控制允许输入的最小值和最大值。
+使用 `number` input 类型，你可以使用 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性控制允许输入的最小值和最大值。
 
-你也可以使用 `step` 属性来设定每次按下 spinner 按钮增加或减少的值。默认情况下，number input 类型只允许整数值输入，为了允许浮点数输入，要指定 [`step="any"`](/zh-CN/docs/Web/HTML/Attributes/step)。如果省略了此值，`step` 会默认为 `1`，意味着只有自然数是有效的输入。
+你也可以使用 `step` 属性来设定每次按下 spinner 按钮增加或减少的值。默认情况下，number input 类型只允许整数值输入，为了允许浮点数输入，要指定 [`step="any"`](/zh-CN/docs/Web/HTML/Reference/Attributes/step)。如果省略了此值，`step` 会默认为 `1`，意味着只有自然数是有效的输入。
 
 我们来看一些例子。第一个例子创建了可从 `1` 到 `10` 之间选择值的数字选择器，且单击一次按钮所增长或减少的值为 `2`。
 
@@ -156,9 +155,9 @@ original_slug: Learn/Forms/HTML5_input_types
 
 从使用上来说，滑块的准确性不如文本字段。因此，它们被用来挑选*精确值*不一定那么重要的数字。
 
-在 {{HTMLElement("input")}} 元素中使用 `range` 作为属性 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值，就可以创建一个滑块，滑块可以通过鼠标、触摸，或用键盘的方向键移动。
+在 {{HTMLElement("input")}} 元素中使用 `range` 作为属性 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 的值，就可以创建一个滑块，滑块可以通过鼠标、触摸，或用键盘的方向键移动。
 
-正确配置滑块组件非常重要。推荐分别配置 [`min`](/zh-CN/docs/Web/HTML/Attributes/min)、[`max`](/zh-CN/docs/Web/HTML/Attributes/max) 和 [`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性来设置滑块的最小值、最大值和增量值。
+正确配置滑块组件非常重要。推荐分别配置 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min)、[`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max) 和 [`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性来设置滑块的最小值、最大值和增量值。
 
 我们来看看示例背后的代码，这样你就可以看到它是如何完成的。首先是基本的 HTML 代码：
 
@@ -203,7 +202,7 @@ price.addEventListener("input", () => {
 
 HTML 日期控件可用于处理这种特定的数据，提供日历控件并使数据统一。
 
-日期和时间控件可由 {{HTMLElement("input")}} 元素和一个合适的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值来创建，该值取决于要收集的类型（日期、时间、还是以上全部）。这里有一个示例，在浏览器不支持的情况下会自动回退为 {{htmlelement("select")}} 元素：
+日期和时间控件可由 {{HTMLElement("input")}} 元素和一个合适的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值来创建，该值取决于要收集的类型（日期、时间、还是以上全部）。这里有一个示例，在浏览器不支持的情况下会自动回退为 {{htmlelement("select")}} 元素：
 
 {{EmbedGHLiveSample("learning-area/html/forms/datetime-local-picker-fallback/index.html", '100%', 200)}}
 
@@ -211,7 +210,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
+[`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 创建了显示和选择一个没有特定时区信息的日期和时间的控件。
 
 ```html
 <input type="datetime-local" name="datetime" id="datetime" />
@@ -219,7 +218,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `month`
 
-[`<input type="month">`](/zh-CN/docs/Web/HTML/Element/input/month) 创建了显示和选择带有年份信息的某个月的控件。
+[`<input type="month">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month) 创建了显示和选择带有年份信息的某个月的控件。
 
 ```html
 <input type="month" name="month" id="month" />
@@ -227,7 +226,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `time`
 
-[`<input type="time">`](/zh-CN/docs/Web/HTML/Element/input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
+[`<input type="time">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time) 创建了显示和选择时间的控件。时间可能会以 *12 小时制*显示，但一定会以 *24 小时制*形式返回。
 
 ```html
 <input type="time" name="time" id="time" />
@@ -235,7 +234,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### `week`
 
-[`<input type="week">`](/zh-CN/docs/Web/HTML/Element/input/week) 创建了显示和选择一年中特定编号周的控件。
+[`<input type="week">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week) 创建了显示和选择一年中特定编号周的控件。
 
 一周以周一开始，一直运行到周日结束。另外，每年的第一周总会包含那一年首个星期四，其中可能不包括当年的第一天，也可能包括前一年的最后几天。
 
@@ -245,7 +244,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 ### 限制日期/时间值
 
-所有的日期和时间控件总可以由 [`min`](/zh-CN/docs/Web/HTML/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Attributes/max) 属性控制，可由 [`step`](/zh-CN/docs/Web/HTML/Attributes/step) 属性进一步做控制，具体值随着 input 类型的不同而产生变化。
+所有的日期和时间控件总可以由 [`min`](/zh-CN/docs/Web/HTML/Reference/Attributes/min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max) 属性控制，可由 [`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性进一步做控制，具体值随着 input 类型的不同而产生变化。
 
 ```html
 <label for="myDate">When are you available this summer?</label>
@@ -262,7 +261,7 @@ HTML 日期控件可用于处理这种特定的数据，提供日历控件并使
 
 颜色总是有点难处理。有许多方法来表达它们，如 RGB 值（十进制或十六进制）、HSL 值、关键词等。
 
-用于输入颜色的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `color` 的 {{HTMLElement("input")}} 元素创建：
+用于输入颜色的控件可以由 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 为 `color` 的 {{HTMLElement("input")}} 元素创建：
 
 ```html
 <input type="color" name="color" id="color" />

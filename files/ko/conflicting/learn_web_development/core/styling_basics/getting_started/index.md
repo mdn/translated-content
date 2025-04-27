@@ -46,7 +46,7 @@ CSS 가 무엇인지, 그리고 CSS 의 기본 사용법에 대해 여러분은 
 
 ### 외부 스타일 시트
 
-[CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started) 에서 외부 스타일 시트를 페이지에 연결했습니다. CSS 를 여러 페이지에 연결할 수 있으므로, CSS 를 문서에 첨부하는 가장 일반적이고 유용한 방법이며, 모두 동일한 스타일 시트로 CSS 스타일을 지정할 수 있습니다. 대부분의 경우 사이트의 다른 페이지는 모두 거의 동일하게 보이기 때문에 기본 모양과 느낌에 동일한 규칙을 사용할 수 있습니다.
+[CSS 시작하기](/ko/docs/Learn_web_development/Core/Styling_basics/Getting_started) 에서 외부 스타일 시트를 페이지에 연결했습니다. CSS 를 여러 페이지에 연결할 수 있으므로, CSS 를 문서에 첨부하는 가장 일반적이고 유용한 방법이며, 모두 동일한 스타일 시트로 CSS 스타일을 지정할 수 있습니다. 대부분의 경우 사이트의 다른 페이지는 모두 거의 동일하게 보이기 때문에 기본 모양과 느낌에 동일한 규칙을 사용할 수 있습니다.
 
 외부 스타일 시트는 CSS 확장자가 `.css` 인 별도의 파일로 작성되고, HTML `<link>` 요소에서 참조하는 경우입니다:
 
@@ -191,7 +191,7 @@ p {
 
 ## 선택자 (Selectors)
 
-선택자를 만나지 않고 CSS 에 대해 이야기할 수 없으며, [CSS 시작하기](/ko/docs/Learn/CSS/First_steps/Getting_started) 자습서에서 이미 여러 가지 유형을 발견했습니다. 선택자는 스타일을 적용하기 위해 HTML 문서에서 무언가를 대상으로 하는 방법입니다. 스타일이 적용되지 않으면 선택자가 일치해야 하는 것과 동일하지 않을 수 있습니다.
+선택자를 만나지 않고 CSS 에 대해 이야기할 수 없으며, [CSS 시작하기](/ko/docs/Learn_web_development/Core/Styling_basics/Getting_started) 자습서에서 이미 여러 가지 유형을 발견했습니다. 선택자는 스타일을 적용하기 위해 HTML 문서에서 무언가를 대상으로 하는 방법입니다. 스타일이 적용되지 않으면 선택자가 일치해야 하는 것과 동일하지 않을 수 있습니다.
 
 각 CSS 규칙은 선택자 또는 선택자 목록으로 시작하여 규칙을 적용해야 하는 요소 또는 요소 규칙을 브라우저에게 알려줍니다. 다음은 모두 유효한 선택자 또는 선택자 목록의 예입니다.
 
@@ -209,7 +209,7 @@ h1, h2, .intro
 **위의 선택자를 사용하는 CSS 규칙과 스타일을 적용할 일부 HTML 을 만들어 보십시오. 위 구문 중 일부가 무엇을 의미하는지 모르는 경우, MDN 에서 검색해 보십시오!**
 
 > [!NOTE]
-> 다음 과목의 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors) 자습서에서, 선택자에 대해 자세히 학습합니다.
+> 다음 과목의 [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) 자습서에서, 선택자에 대해 자세히 학습합니다.
 
 ### 우선 순위 (Specificity)
 
@@ -247,7 +247,7 @@ p {
 
 **위 실험을 직접해 보십시오 — 실험에 HTML 을 추가한 다음, 스타일 시트에 두 개의 `p { ... }` 규칙을 추가하십시오. 그런 다음 첫 번째 `p` 선택자를 `.special` 로 변경하여 스타일이 어떻게 되는지 확인하십시오.**
 
-우선 순위 규칙과 계단식은 처음에는 약간 복잡해 보일 수 있으며 CSS 지식을 더 많이 쌓으면 이해하기 쉽습니다. 다음 과목에서 다룰 [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) 기사에서, 우선 순위를 계산하는 방법을 포함하여 자세히 설명하겠습니다. 현재로서는 이것이 존재하며, 스타일 시트의 다른 요소가 더 높은 우선 순위를 가지기 때문에 CSS 가 예상한 대로 적용되지 않을 수도 있음을 기억하십시오. 하나 이상의 규칙이 요소에 적용될 수 있음을 식별하는 것이 이러한 문제를 해결하는 첫 번째 단계입니다.
+우선 순위 규칙과 계단식은 처음에는 약간 복잡해 보일 수 있으며 CSS 지식을 더 많이 쌓으면 이해하기 쉽습니다. 다음 과목에서 다룰 [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) 기사에서, 우선 순위를 계산하는 방법을 포함하여 자세히 설명하겠습니다. 현재로서는 이것이 존재하며, 스타일 시트의 다른 요소가 더 높은 우선 순위를 가지기 때문에 CSS 가 예상한 대로 적용되지 않을 수도 있음을 기억하십시오. 하나 이상의 규칙이 요소에 적용될 수 있음을 식별하는 것이 이러한 문제를 해결하는 첫 번째 단계입니다.
 
 ## 속성 및 값
 
@@ -570,6 +570,6 @@ padding- left: 10px;
 
 ## 다음은 뭐죠?
 
-브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works) — 에서 해당 작업을 살펴 보겠습니다.
+브라우저가 HTML 과 CSS 를 가져와서 웹 페이지로 전환하는 방법에 대해 약간 이해하는 것이 유용합니다. 따라서 다음 기사 — [CSS 작동 방식](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS) — 에서 해당 작업을 살펴 보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/First_steps/Getting_started", "Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
