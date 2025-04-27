@@ -1,6 +1,6 @@
 ---
 title: "<details>: 세부 정보 공개 요소"
-slug: Web/HTML/Element/details
+slug: Web/HTML/Reference/Elements/details
 l10n:
   sourceCommit: ad59de382f5a523bf5dbada344e669d3fd9d4f49
 ---
