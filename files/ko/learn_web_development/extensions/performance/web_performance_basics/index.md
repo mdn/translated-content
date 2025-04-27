@@ -12,7 +12,7 @@ l10n:
 
 ## 모범 사례
 
-- 브라우저의 [중요 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path)를 학습하는 것부터 시작하세요. 이 지식은 웹 사이트의 성능을 개선하는 방법을 이해하는 데 도움이 될 것입니다.
+- 브라우저의 [중요 렌더링 경로](/ko/docs/Web/Performance/Guides/Critical_rendering_path)를 학습하는 것부터 시작하세요. 이 지식은 웹 사이트의 성능을 개선하는 방법을 이해하는 데 도움이 될 것입니다.
 - [`rel=preconnect`](/ko/docs/Web/HTML/Attributes/rel/preconnect), [`rel=dns-prefetch`](/ko/docs/Web/HTML/Attributes/rel/dns-prefetch), [`rel=prefetch`](/ko/docs/Web/HTML/Attributes/rel/prefetch), [`rel=preload`](/ko/docs/Web/HTML/Attributes/rel/preload)와 같은 리소스 힌트를 사용하세요.
 - JavaScript의 크기를 [최소화](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)하세요. 현재 페이지에 필요한 JavaScript만 사용하세요.
 - [CSS](/ko/docs/Learn/Performance/CSS) 성능 요소 고려.
@@ -26,7 +26,7 @@ l10n:
 
 ### CSS
 
-웹 성능은 사용자 경험과 인지된 성능에 달려 있습니다. [critical rendering path](/ko/docs/Web/Performance/Critical_rendering_path) 문서에서 배웠던 것처럼, 전통적 링크 태그와 rel="stylesheet"로 CSS를 연결하면 동기적으로 실행되어 렌더링을 차단합니다. 렌더링을 차단하는 CSS를 제거하여 페이지 렌더링을 최적화하세요.
+웹 성능은 사용자 경험과 인지된 성능에 달려 있습니다. [critical rendering path](/ko/docs/Web/Performance/Guides/Critical_rendering_path) 문서에서 배웠던 것처럼, 전통적 링크 태그와 rel="stylesheet"로 CSS를 연결하면 동기적으로 실행되어 렌더링을 차단합니다. 렌더링을 차단하는 CSS를 제거하여 페이지 렌더링을 최적화하세요.
 
 CSS를 비동기적으로 로드하려면 media 타입을 print로 설정한 다음 로드가 완료되면 all로 변경할 수 있습니다. 다음 코드 스니펫에는 onload 속성이 포함되어 있어 JavaScript가 필요하므로, 전통적 폴백과 noscript를 포함하는 것이 중요합니다.
 
@@ -68,7 +68,7 @@ EOT와 TTF 형식은 기본적으로 압축되지 않습니다. 이러한 파일
 - [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)로 성능, SEO, 접근성을 포함한 사이트의 다양한 측면에 대해 구체적으로 분석할 수 있습니다.
 - 다양한 실제 기기 유형과 위치를 선택할 수 있는 [WebPageTest.org](https://webpagetest.org/)로 페이지의 속도를 테스트해 보세요.
 - 실제 사용자 지표를 정량화하는 [Chrome User Experience Report](https://developer.chrome.com/docs/crux/)를 활용해 보세요.
-- [performance budget](/ko/docs/Web/Performance/Performance_budgets)를 설정하세요.
+- [performance budget](/ko/docs/Web/Performance/Guides/Performance_budgets)를 설정하세요.
 
 ### API
 

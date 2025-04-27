@@ -93,7 +93,7 @@ l10n:
 
 [PerformanceObserver API](/ko/docs/Web/API/PerformanceObserver)는 성능 측정 이벤트들을 관찰하고 브라우저의 성능 타임라인에 기록되는 새로운 [PerformanceEntry](/ko/docs/Web/API/PerformanceEntry)를 알려주는 데 사용할 수 있는 API입니다.
 
-이 기사는 이러한 API들을 사용하는데 깊이 다루지는 않지만, 해당 API들이 존재하는 것을 아는 것만으로도 유용합니다. [Navigation and timings](/ko/docs/Web/Performance/Navigation_and_resource_timings)를 참고하여 performance Web APIs를 사용하는 추가적인 예시를 확인할 수 있습니다.
+이 기사는 이러한 API들을 사용하는데 깊이 다루지는 않지만, 해당 API들이 존재하는 것을 아는 것만으로도 유용합니다. [Navigation and timings](/ko/docs/Web/Performance/Guides/Navigation_and_resource_timings)를 참고하여 performance Web APIs를 사용하는 추가적인 예시를 확인할 수 있습니다.
 
 ## 결론
 

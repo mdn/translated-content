@@ -1,11 +1,9 @@
 ---
 title: 애니메이션 성능과 프레임 속도
-slug: Web/Performance/Animation_performance_and_frame_rate
+slug: Web/Performance/Guides/Animation_performance_and_frame_rate
 l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 웹에서 애니메이션은 {{htmlelement('canvas')}} 와 {{domxref('WebGL_API', 'WebGL')}}, CSS {{cssxref('animation')}}, {{htmlelement('video')}}, 애니메이션 GIF, 그리고 애니메이션 PNG 및 기타 이미지 유형과 {{domxref('SVGAnimationElement', 'SVG')}}, {{domxref('window.requestAnimationFrame','JavaScript')}}를 통해 구현할 수 있습니다. CSS 속성을 애니메이션화하는 데 드는 성능 비용은 각 속성에 따라 다를 수 있으며, 비용이 높은 CSS 속성을 애니메이션화하면 브라우저가 부드러운 {{glossary("FPS", "프레임 속도")}}를 유지하는 것이 어려워지기 때문에 {{glossary('jank', '버벅거림')}} 현상이 발생할 수 있습니다.
 
