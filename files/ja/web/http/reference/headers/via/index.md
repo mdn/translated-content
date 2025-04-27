@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Via
 
 {{HTTPSidebar}}
 
-一般ヘッダーの **`Via`** は、フォワードプロキシとリバースプロキシの両方のプロキシによって追加され、リクエストヘッダーとレスポンスヘッダーに表示されます。 メッセージ転送の追跡、要求ループの回避、および要求/応答チェーンに沿った送信者のプロトコル機能の識別に使用されます。
+一般ヘッダーの **`Via`** は、フォワードプロキシーとリバースプロキシーの両方のプロキシーによって追加され、リクエストヘッダーとレスポンスヘッダーに表示されます。 メッセージ転送の追跡、要求ループの回避、および要求/応答チェーンに沿った送信者のプロトコル機能の識別に使用されます。
 
 <table class="properties">
   <tbody>
@@ -15,7 +15,7 @@ original_slug: Web/HTTP/Headers/Via
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>yes</td>
     </tr>
   </tbody>
@@ -36,9 +36,9 @@ Via: [ <protocol-name> "/" ] <protocol-version> <pseudonym>
 - \<protocol-version>
   - : "1.1"など、使用されているプロトコルのバージョン。
 - \<host> and \<port>
-  - : パブリックプロキシの URL とポート。
+  - : パブリックプロキシーの URL とポート。
 - \<pseudonym>
-  - : 内部プロキシの名前/エイリアス。
+  - : 内部プロキシーの名前/エイリアス。
 
 ## 例
 

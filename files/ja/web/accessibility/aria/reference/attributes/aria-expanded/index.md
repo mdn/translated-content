@@ -19,7 +19,7 @@ l10n:
 
 ### ボタン
 
-ウィジェットを切り替えるボタンは、切り替えられるウィジェットの [`id`](/ja/docs/Web/HTML/Global_attributes/id) が `aria-controls` に設定され、`aria-expanded` がウィジェットの現在の状態に設定されている必要があります。
+ウィジェットを切り替えるボタンは、切り替えられるウィジェットの [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が `aria-controls` に設定され、`aria-expanded` がウィジェットの現在の状態に設定されている必要があります。
 
 ```html
 <button aria-expanded="false" aria-controls="widget1">Toggle widget</button>
@@ -77,12 +77,12 @@ l10n:
 - `undefined` (既定値)
   - : 要素は、展開可能なグループ化要素を所有または制御しません。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaExpanded")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaExpanded`](/ja/docs/Web/API/Element/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaExpanded`](/ja/docs/Web/API/Element/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaExpanded")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaExpanded`](/ja/docs/Web/API/ElementInternals/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaExpanded`](/ja/docs/Web/API/ElementInternals/ariaExpanded) プロパティは、`aria-expanded` 属性の値を反映します。
 
 ## 関連付けられたロール
 
@@ -118,4 +118,4 @@ l10n:
 - [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
 - [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- HTML [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
+- HTML [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性

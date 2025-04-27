@@ -20,9 +20,9 @@ l10n:
 
 `aria-current` 属性は、`page`、`step`、`location`、`date`、`time`、`true` および `false` を含む、限られた [値](#values) のリストを受け入れます。この列挙値のリストに含まれていない null 以外の文字列値は、既定値である `false` ではなく、 `aria-current="true"` が設定されているものとして扱われます。属性が存在しない場合や空の文字列の場合、値なしで存在する場合、または `aria-current="false"` に設定されている場合、属性はユーザーに公開されません。
 
-[`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role) 内の [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) など、現在のものではなく何かが選択されている場合は、現在表示されているタブパネルを示すために [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) を使用してください。
+[`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) 内の [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) など、現在のものではなく何かが選択されている場合は、現在表示されているタブパネルを示すために [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) を使用してください。
 
-> **メモ:** [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) の代わりとして `aria-current` を使用しないでください。
+> **メモ:** [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) の代わりとして `aria-current` を使用しないでください。
 
 ## 例
 
@@ -69,16 +69,16 @@ l10n:
 - `false` (規定値)
   - : セット内の現在の項目を表すものではありません。
 
-## 関連インターフェース
+## 関連インターフェイス
 
 - {{domxref("Element.ariaCurrent")}}
-  - : {{domxref("Element")}} インターフェースの一部である [`ariaCurrent`](/ja/docs/Web/API/Element/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
+  - : {{domxref("Element")}} インターフェイスの一部である [`ariaCurrent`](/ja/docs/Web/API/Element/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
 - {{domxref("ElementInternals.ariaCurrent")}}
-  - : {{domxref("ElementInternals")}} インターフェースの一部である [`ariaCurrent`](/ja/docs/Web/API/ElementInternals/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
+  - : {{domxref("ElementInternals")}} インターフェイスの一部である [`ariaCurrent`](/ja/docs/Web/API/ElementInternals/ariaCurrent) プロパティは、`aria-current` 属性の値を反映します。
 
 ## 関連付けられたロール
 
-[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) が使われるべきである [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) ロール以外の全ての要素に対して使用可能です
+[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) が使われるべきである [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) ロール以外の全ての要素に対して使用可能です
 
 ## 仕様書
 
@@ -86,6 +86,6 @@ l10n:
 
 ## 関連情報
 
-- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - {{cssxref(':local-link')}}
 - [`aria-current` とパンくずナビゲーション](/ja/docs/Web/CSS/Layout_cookbook/Breadcrumb_Navigation)

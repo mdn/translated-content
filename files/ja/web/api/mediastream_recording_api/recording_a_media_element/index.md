@@ -31,7 +31,7 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 </div>
 ```
 
-2 つの欄で主要なインターフェイスを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性は、カメラからストリームが到着したらすぐに表示するために使用し、[`muted`](/ja/docs/Web/HTML/Element/video#muted) 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。
+2 つの欄で主要なインターフェイスを提示します。 左欄には、Start（開始）ボタンと動画プレビューを表示する {{HTMLElement("video")}} 要素があります。 これは、ユーザーのカメラが見ている動画です。 [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay) 属性は、カメラからストリームが到着したらすぐに表示するために使用し、[`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted) 属性は、ユーザーのマイクからの音声をスピーカーに出力しないように使用していることに注意してください。 出力すると醜いフィードバックループ（ハウリング）を引き起こします。
 
 ```html
 <div class="right">
@@ -42,7 +42,7 @@ MediaStream 収録 API の使用の記事では、 {{domxref("MediaRecorder")}} 
 </div>
 ```
 
-右欄には、Stop（停止）ボタンと収録された動画の再生に使用する `<video>` 要素があります。 再生パネルには `autoplay` を設定せずに（メディアが到着しても再生が開始されない）、[`controls`](/ja/docs/Web/HTML/Element/video#controls) を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。
+右欄には、Stop（停止）ボタンと収録された動画の再生に使用する `<video>` 要素があります。 再生パネルには `autoplay` を設定せずに（メディアが到着しても再生が開始されない）、[`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls) を設定して、再生や一時停止などのユーザーコントロールを表示するように指示しています。
 
 再生要素の下には、収録した動画をダウンロードするためのボタンがあります。
 
@@ -140,7 +140,7 @@ function wait(delayInMS) {
 }
 ```
 
-`wait()` 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラー関数としてプロミスの解決ハンドラーを指定して、{{domxref("setTimeout()")}} を呼び出す[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して動作します。 これにより、タイムアウトを使用するときにプロミス構文を使用できます。 これは、後で説明するように、プロミスを連鎖させるときに非常に便利です。
+`wait()` 関数は、指定したミリ秒数が経過すると解決する新しい {{jsxref("Promise")}} を返します。 タイムアウトハンドラー関数としてプロミスの解決ハンドラーを指定して、{{domxref("Window.setTimeout", "setTimeout()")}} を呼び出す[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を使用して動作します。 これにより、タイムアウトを使用するときにプロミス構文を使用できます。 これは、後で説明するように、プロミスを連鎖させるときに非常に便利です。
 
 ### メディア収録の開始
 
@@ -240,9 +240,9 @@ startButton.addEventListener(
 - {{domxref("MediaDevices.getUserMedia")}} は、動画トラックと音声トラックの両方を持つ新しい {{domxref("MediaStream")}} を要求するために呼び出します。 これが収録するストリームです。
 - `getUserMedia()` から返されたプロミスが解決すると、プレビューの {{HTMLElement("video")}} 要素の {{domxref("HTMLMediaElement.srcObject","srcObject")}} プロパティを入力ストリームに設定し、ユーザーのカメラでキャプチャしている動画をプレビューボックスに表示します。 `<video>` 要素はミュートしているので、音声は再生しません。 "Download"（ダウンロード）ボタンのリンクも、ストリームを参照するように設定します。 次に、`preview.captureStream()` で `preview.mozCaptureStream()` を呼び出すように手配して、コードが Firefox で動作するようにします。 {{domxref("HTMLMediaElement.captureStream()")}} メソッドが接頭辞付きだからです。その後、プレビュー動画の再生開始時に解決する新しい {{jsxref("Promise")}} を作成して返します。
 - プレビュー動画の再生が開始されると、収録するメディアがあることがわかります。 したがって、先ほど作成した [`startRecording()`](#メディア収録の開始) 関数を呼び出し、プレビュー動画ストリーム（収録するソースメディアとして）と、 `recordingTimeMS`（収録するメディアのミリ秒数として）を渡します。 前述のように、`startRecording()` は、収録が完了すると、解決ハンドラーが呼び出される {{jsxref("Promise")}}（収録されたメディアデータのチャンクを含む {{domxref("Blob")}} オブジェクトの配列を入力として受け取る）を返します。
-- 収録プロセスの解決ハンドラーは、ローカルに `recordedChunks` として知られるメディアデータの `Blob` の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob")}} コンストラクターがオブジェクトの配列を 1 つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが `"video/webm"` の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して `Blob` を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の [`src`](/ja/docs/Web/HTML/Element/video#src) 属性の値（`Blob` から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
+- 収録プロセスの解決ハンドラーは、ローカルに `recordedChunks` として知られるメディアデータの `Blob` の配列を入力として受け取ります。 最初にすることは、{{domxref("Blob")}} コンストラクターがオブジェクトの配列を 1 つのオブジェクトに連結するという事実を利用して、チャンクを MIME タイプが `"video/webm"` の単一の {{domxref("Blob")}} にマージすることです。 次に、{{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を使用して `Blob` を参照する URL を作成します。 これは、ダウンロードされた動画再生要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) 属性の値（`Blob` から動画を再生できるようにする）とダウンロードボタンのリンクのターゲットになります。
 
-  その後、ダウンロードボタンの [`download`](/ja/docs/Web/HTML/Element/a#download) 属性が設定されます。 `download` 属性は論理値にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの `download` 属性を `"RecordedVideo.webm"` に設定することで、ボタンをクリックすると内容が収録された動画である `"RecordedVideo.webm"` という名前のファイルをダウンロードするようにブラウザーに指示します。
+  その後、ダウンロードボタンの [`download`](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性が設定されます。 `download` 属性は論理値にすることができますが、ダウンロードするファイルの名前として使用する文字列に設定することもできます。 そのため、ダウンロードリンクの `download` 属性を `"RecordedVideo.webm"` に設定することで、ボタンをクリックすると内容が収録された動画である `"RecordedVideo.webm"` という名前のファイルをダウンロードするようにブラウザーに指示します。
 
 - 記録されたメディアのサイズと種類は、2 つの動画とダウンロードボタンの下のログ領域に出力されます。
 - すべての `Promise` の `catch()` は、`log()` 関数を呼び出すことによってエラーをログ領域に出力します。

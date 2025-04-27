@@ -8,17 +8,17 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colcount` 属性は、[`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) や [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)、[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role) において [DOM](/ja/docs/Glossary/DOM) に全ての列が表示されていない場合に、列の総数を定義します。
+`aria-colcount` 属性は、[`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) や [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)、[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) において [DOM](/ja/docs/Glossary/DOM) に全ての列が表示されていない場合に、列の総数を定義します。
 
 ## 解説
 
 非常に大きい表の場合、すべての列をユーザーに表示できないことがあります。または、表示は可能ですが、そのように幅の広い表ではユーザー体験が悪くなることがあります。`aria-colcount` 属性を使用して、全ての列が表示されている場合に表に何列あるかを支援技術に知らせます。値は、表全体を構成する列の数を表す整数です。表に含まれる列の合計数が分からないが、全ては DOM に含まれないことがわかっている場合は、-1 を使用し、`aria-colcount="-1"` と指定します。この値は、DOM に存在する現在の列数が、表内の実際の列数ではない可能性があることをユーザーエージェントに伝えます。
 
-表内の全ての列が DOM に存在する場合、ブラウザは列の合計数を自動的に計算するため、`aria-colcount` 属性は必要ありません。ただし、特定の時点で列の一部だけが DOM に存在する場合は、この属性が役立ち、必要になります。
+表内の全ての列が DOM に存在する場合、ブラウザーは列の合計数を自動的に計算するため、`aria-colcount` 属性は必要ありません。ただし、特定の時点で列の一部だけが DOM に存在する場合は、この属性が役立ち、必要になります。
 
 `aria-colcount` を列数が分かっている場合に使用するときは、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) を用いてラベルを付けることも忘れないでください。また、列が連続している場合（中断のない元の順序の列のグループである場合）は、各行にラベルを付けるようにしてください。
 
-次の例は、6 列のグリッドを示しています。そのうち 1、2、5、6 列目がユーザーに表示されています。表を構成する列の合計数は、`aria-colcount="6"` として表自体に設定されています。列は連続していないため、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) （この場合は [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role) および [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) の要素）に `aria-colindex` 属性が設定されています。
+次の例は、6 列のグリッドを示しています。そのうち 1、2、5、6 列目がユーザーに表示されています。表を構成する列の合計数は、`aria-colcount="6"` として表自体に設定されています。列は連続していないため、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) （この場合は [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) および [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) の要素）に `aria-colindex` 属性が設定されています。
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -80,7 +80,7 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 継承先のロール:
 
 - [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## 仕様書
 

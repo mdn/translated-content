@@ -83,7 +83,7 @@ Mozilla は人気のアドオン [Firebug](https://getfirebug.com/) に依存す
 
 ### XPCOM
 
-- [`nsISupports` プロキシ](/ja/docs/nsISupports_proxies) が削除されました。代わりに [runnable を使ってください](/ja/docs/XPCOM/Making_cross-thread_calls_using_runnables)。
+- [`nsISupports` プロキシー](/ja/docs/nsISupports_proxies) が削除されました。代わりに [runnable を使ってください](/ja/docs/XPCOM/Making_cross-thread_calls_using_runnables)。
 
 <!---->
 

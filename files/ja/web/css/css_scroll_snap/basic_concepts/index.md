@@ -29,7 +29,7 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 ## scroll-snap-align の使用
 
-{{CSSxRef("scroll-snap-align")}} プロパティには、スクロールコンテナ内でコンテンツがスナップするポイントを示す、`start`、`end`、`center` の値を取ることができます。以下の例では、`scroll-snap-align` の値を変更することで、スクロールの動作がどのように変化するかを確認できます。
+{{CSSxRef("scroll-snap-align")}} プロパティには、スクロールコンテナー内でコンテンツがスナップするポイントを示す、`start`、`end`、`center` の値を取ることができます。以下の例では、`scroll-snap-align` の値を変更することで、スクロールの動作がどのように変化するかを確認できます。
 
 {{EmbedGHLiveSample("css-examples/scroll-snap/align.html", '100%', 700)}}
 

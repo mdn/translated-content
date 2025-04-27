@@ -1,9 +1,8 @@
 ---
 title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -24,7 +23,7 @@ Reason: CORS request not HTTP
 ### ローカルファイルの読み込み
 
 同じディレクトリーおよびサブディレクトリーにあるローカルファイルは、以前は[同一オリジン](/ja/docs/Web/Security/Same-origin_policy)から取得されたものとして扱われていました。
-つまり、テスト中にファイルとそのリソースすべてを、CORS エラーが発生することなく、ローカルディレクトリ－またはサブディレクトリ－から読み込むことができたということです。
+つまり、テスト中にファイルとそのリソースすべてを、CORS エラーが発生することなく、ローカルディレクトリーまたはサブディレクトリーから読み込むことができたということです。
 
 残念ながら、この問題にはセキュリティ上の問題があり、勧告（[CVE-2019-11730](https://www.mozilla.org/en-US/security/advisories/mfsa2019-21/#CVE-2019-11730)）で指摘されています。
 Firefox や Chrome を含む多くのブラウザーは現在、（既定では）すべてのローカルファイルを不透明なオリジンとして扱います。

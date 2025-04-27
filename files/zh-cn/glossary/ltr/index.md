@@ -22,10 +22,10 @@ l10n:
   - {{Glossary("LTR", "LTR（从左到右）")}}
   - {{Glossary("RTL", "RTL（从右到左）")}}
 
-- [HTML 全局属性](/zh-CN/docs/Web/HTML/Global_attributes)
+- [HTML 全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 
-  - [dir](/zh-CN/docs/Web/HTML/Global_attributes#dir)
-  - [lang](/zh-CN/docs/Web/HTML/Global_attributes#lang)
+  - [dir](/zh-CN/docs/Web/HTML/Reference/Global_attributes#dir)
+  - [lang](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang)
 
 - [CSS](/zh-CN/docs/Web/CSS)
 

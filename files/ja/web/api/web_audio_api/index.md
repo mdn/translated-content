@@ -97,7 +97,7 @@ l10n:
 これらを利用すると、音源からの音声にエフェクトをかけられます。
 
 - {{domxref("BiquadFilterNode")}}
-  - : **`BiquadFilterNode`** インターフェースは、単純な低次フィルタを表します。これは {{domxref("AudioNode")}} であり、異なる形のフィルター、トーンコントロール機器、グラフィックイコライザーを表すことができます。 `BiquadFilterNode` には常に 1 つの入力と 1 つの出力があります。
+  - : **`BiquadFilterNode`** インターフェイスは、単純な低次フィルタを表します。これは {{domxref("AudioNode")}} であり、異なる形のフィルター、トーンコントロール機器、グラフィックイコライザーを表すことができます。 `BiquadFilterNode` には常に 1 つの入力と 1 つの出力があります。
 - {{domxref("ConvolverNode")}}
   - : **`ConvolverNode`** インターフェイスは {{domxref("AudioNode")}} であり、指定された {{domxref("AudioBuffer")}} に対してリニアコンボリューションを行うもので、リバーブ効果を得るために使用されることが多いものです。
 - {{domxref("DelayNode")}}

@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) キーワードをサポートしました。
+- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) キーワードをサポートしました。
   これは [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules) やその依存先を早期に (非同期で) 並列で読み込むことができ、それらは文書のモジュールマップに保存されます ([Firefox bug 1425310](https://bugzil.la/1425310))。
 
 ### CSS

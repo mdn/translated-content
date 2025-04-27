@@ -75,7 +75,7 @@ l10n:
 
   保護されたコンテキストでのみ利用できるウェブプラットフォーム機能の一覧は、「[保護されたコンテキストでのみ利用可能な機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)」をご覧ください。
 
-- これらの機能の使用は、ユーザー権限のシステムによって制限されています。ユーザーは、そのような機能へのアクセスを明示的にオプトインする必要があり、自動的に使用できるということではありません。ユーザー権限のリクエストは自動的に行われ、[権限 API](/ja/docs/Web/API/Permissions_API) を使用して API 権限の状態をクエリすることができます。
+- これらの機能の使用は、ユーザー権限のシステムによって制限されています。ユーザーは、そのような機能へのアクセスを明示的にオプトインする必要があり、自動的に使用できるということではありません。ユーザー権限のリクエストは自動的に行われ、[権限 API](/ja/docs/Web/API/Permissions_API) を使用して API 権限の状態をクエリーすることができます。
 
 - 他にも、ボタンをクリックするなどユーザーのアクションに対するレスポンスとしてのみ使用できるブラウザー機能がいくつかあります。つまり、それらの機能は適切なイベントハンドラー内から呼び出す必要があるということです。 これらは**一時的な活性化**と呼ばれます。 詳細については、「[ユーザーによる有効化によって制御される機能](/ja/docs/Web/Security/User_activation)」を参照してください。
 
@@ -159,7 +159,7 @@ CSP を使用すると、例えば、特定の信頼された元から読み込�
 次の機能はクリックジャッキング対策として役立ちます。
 
 - [HTTP X-Frame-Options](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
-  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Element/frame)、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe)、[`<embed>`](/ja/docs/Web/HTML/Element/embed)、[`<object>`](/ja/docs/Web/HTML/Element/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
+  - : **`X-Frame-Options`** [HTTP](/ja/docs/Web/HTTP) レスポンスヘッダーを使用して、ブラウザーがページを [`<frame>`](/ja/docs/Web/HTML/Reference/Elements/frame)、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe)、[`<embed>`](/ja/docs/Web/HTML/Reference/Elements/embed)、[`<object>`](/ja/docs/Web/HTML/Reference/Elements/object) でレンダリングすることを許可するかどうかを指定することができます。 サイトは、このヘッダーを使用して、コンテンツが他のサイトに埋め込まれないように確保することで、クリックジャッキング攻撃を避けることができます。
 - [CSP: frame-ancestors](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** ディレクティブは、 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}} を使用してページを埋め込むことができる有効な親を指定します。
 

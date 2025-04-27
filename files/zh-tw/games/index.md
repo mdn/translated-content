@@ -2,7 +2,7 @@
 title: 遊戲開發
 slug: Games
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{GamesSidebar}}

@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- [`input`](/ja/docs/Web/HTML/Element/input#dirname) および [`textarea`](/ja/docs/Web/HTML/Element/textarea#dirname) 要素で [`dirname`](/ja/docs/Web/HTML/Element/input#dirname) 属性をサポートしました。
+- [`input`](/ja/docs/Web/HTML/Reference/Elements/input#dirname) および [`textarea`](/ja/docs/Web/HTML/Reference/Elements/textarea#dirname) 要素で [`dirname`](/ja/docs/Web/HTML/Reference/Elements/input#dirname) 属性をサポートしました。
   この属性は、フォームをサーバーに送信するときにテキストの書字方向の情報 (`ltr` または `rtl`) を渡すことができます ([Firefox bug 675943](https://bugzil.la/675943))。
 
 ### CSS

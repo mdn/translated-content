@@ -90,7 +90,7 @@ original_slug: Web/Media/Formats/Image_types
       <td><code>image/svg+xml</code></td>
       <td><code>.svg</code></td>
       <td>
-        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェース要素、アイコン、図などに最適です。<br>
+        ベクター画像形式です。異なる大きさで正確に描画する必要があるユーザーインターフェイス要素、アイコン、図などに最適です。<br>
         <strong>対応:</strong> Chrome, Edge, Firefox, IE, Opera, Safari
       </td>
     </tr>
@@ -150,7 +150,7 @@ original_slug: Web/Media/Formats/Image_types
 
 > [!NOTE]
 > Safari 11.1では、アニメーション GIF の代替として、動画形式を使用する機能が追加されました。
-> 他のブラウザは対応していません。
+> 他のブラウザーは対応していません。
 > 詳しくは、 [Chromium のバグ](https://bugs.chromium.org/p/chromium/issues/detail?id=791658)、[Firefox のバグ](https://bugzilla.mozilla.org/show_bug.cgi?id=895131)を参照してください。
 
 ## 画像ファイルの種類の詳細
@@ -282,7 +282,7 @@ AVIF ファイルは同等の JPEG や PNG ファイルよりもはるかに小�
 ファイルサイズが大きい場合は影響が大きくなるため、プログレッシブレンダリングを対応している形式の使用を検討する必要があります。
 
 AVIF は、デスクトップでは Chrome、Opera、Firefox で対応しています（Firefox は静止画に対応していますが、アニメーションには対応していません）。
-対応はまだ包括的ではなく（歴史もあまりありません）、[WebP](#webp_画像), [JPEG](#jpeg_joint_photographic_experts_group_画像), [PNG](#png_portable_network_graphics) 形式などで、 [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture) （またはその他の方法） を使用して代替形式を提供する必要があります。
+対応はまだ包括的ではなく（歴史もあまりありません）、[WebP](#webp_画像), [JPEG](#jpeg_joint_photographic_experts_group_画像), [PNG](#png_portable_network_graphics) 形式などで、 [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture) （またはその他の方法） を使用して代替形式を提供する必要があります。
 
 <table class="standard-table">
   <tbody>
@@ -586,7 +586,7 @@ ICO ファイル内で PNG を使用する方法は Windows Vista までは対�
 
 > [!WARNING]
 > ICO ファイルは、ウェブコンテンツに使用すべきではありません。
-> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Element/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
+> また、ファビコンでの利用は [異なる利用場面のアイコンの提供](/ja/docs/Web/HTML/Reference/Elements/link#%E7%95%B0%E3%81%AA%E3%82%8B%E5%88%A9%E7%94%A8%E5%A0%B4%E9%9D%A2%E3%81%AE%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%81%AE%E6%8F%90%E4%BE%9B) で述べたように、 PNG ファイルと {{HTMLElement("link")}} 要素を使用することで抑制されています。
 
 <table class="standard-table">
   <tbody>
@@ -1233,7 +1233,7 @@ WebP はアニメーションにも対応しています。非可逆圧縮の We
 ループはサポートされています。
 
 WebP は現在、主要なウェブブラウザーの最新バージョンが幅広く対応していますが、歴史的に深く対応してはいません。
-[JPEG](#jpeg_joint_photographic_experts_group_image) または [PNG](#png_portable_network_graphics) 形式の代替画像を、 [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture)などで提供してください。
+[JPEG](#jpeg_joint_photographic_experts_group_image) または [PNG](#png_portable_network_graphics) 形式の代替画像を、 [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture)などで提供してください。
 
 <table class="standard-table">
   <tbody>

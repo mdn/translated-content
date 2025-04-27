@@ -63,7 +63,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 - 它必须是标准 HTML 元素之一或 {{SVGElement("svg")}} 或 {{MathMLElement("math")}}。
 - 它不是 {{HTMLElement("dialog")}} 元素。
-- 它必须位于顶级文档中或已应用 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性的 {{HTMLElement("iframe")}} 元素。
+- 它必须位于顶级文档中或已应用 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性的 {{HTMLElement("iframe")}} 元素。
 
 此外，任何设置的权限策略都必须允许使用此特性。
 
@@ -148,4 +148,4 @@ try {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

@@ -17,7 +17,7 @@ l10n:
 
 ## 示例
 
-### 从锚点链接中获取哈希值
+### 从锚点链接中获取散列值
 
 给定 HTML
 
@@ -27,7 +27,7 @@ l10n:
 </a>
 ```
 
-你可以像这样获取锚点哈希值：
+你可以像这样获取锚点散列值：
 
 ```js
 const anchor = document.getElementById("myAnchor");

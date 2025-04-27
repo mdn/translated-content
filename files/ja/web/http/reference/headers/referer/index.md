@@ -28,7 +28,7 @@ original_slug: Web/HTTP/Headers/Referer
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>
@@ -44,7 +44,7 @@ Referer: <url>
 ## ディレクティブ
 
 - \<url>
-  - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり "#section") およびユーザー情報 ("https\://username:password\@example.com/foo/bar/" の "username:password" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリ文字列が含まれる場合があります。
+  - : 現在リクエスト中のページにつながるリンクがある直前のページの、絶対または相対アドレスです。 URL フラグメント (つまり "#section") およびユーザー情報 ("https\://username:password\@example.com/foo/bar/" の "username:password" の部分) は含まれません。リファラーポリシーによっては、オリジン、パス、クエリー文字列が含まれる場合があります。
 
 ## 例
 

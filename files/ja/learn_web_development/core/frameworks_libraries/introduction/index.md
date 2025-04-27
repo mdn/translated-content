@@ -94,7 +94,7 @@ const state = [
 ];
 ```
 
-それらのタスクの 1 つをユーザーにどのように表示すればよいでしょうか? 各タスクをリスト項目として表現したいとします。つまり、(順序なしリスト要素 [`<ul>`](/ja/docs/Web) 内の) HTML [`<li>`](/ja/docs/Web/HTML/Element/li) 要素です。どうやって作るのでしょうか？それは次のようになります。
+それらのタスクの 1 つをユーザーにどのように表示すればよいでしょうか? 各タスクをリスト項目として表現したいとします。つまり、(順序なしリスト要素 [`<ul>`](/ja/docs/Web) 内の) HTML [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) 要素です。どうやって作るのでしょうか？それは次のようになります。
 
 ```js
 function buildTodoItemEl(id, name) {

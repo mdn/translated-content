@@ -85,7 +85,7 @@ for us to breathe.
 - {{cssxref("scroll-snap-type")}} プロパティ
 - {{CSSxRef("::-webkit-scrollbar")}} 擬似要素
 - {{glossary("scroll container", "スクロールコンテナー")}} 用語集の用語
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA ロール
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
 
 ## 仕様書
 

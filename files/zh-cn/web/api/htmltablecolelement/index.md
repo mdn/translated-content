@@ -22,7 +22,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLTableColElement.chOff")}} {{deprecated_inline}}
   - : 一个表示对齐字符偏移量的字符串。
 - {{domxref("HTMLTableColElement.span")}}
-  - : 一个反映 [`span`](/zh-CN/docs/Web/HTML/Element/col#span) HTML 属性的正数，指示要应用此对象属性的列数。
+  - : 一个反映 [`span`](/zh-CN/docs/Web/HTML/Reference/Elements/col#span) HTML 属性的正数，指示要应用此对象属性的列数。
 - {{domxref("HTMLTableColElement.vAlign")}} {{deprecated_inline}}
   - : 一个表示列中单元格数据垂直对齐的字符串。
 - {{domxref("HTMLTableColElement.width")}} {{deprecated_inline}}

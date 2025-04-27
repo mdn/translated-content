@@ -3,7 +3,7 @@ title: 为列表添加样式
 slug: Learn_web_development/Core/Text_styling/Styling_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
+{{PreviousMenuNext("Learn_web_development/Core/Text_styling/Fundamentals", "Learn_web_development/Core/Text_styling/Styling_links", "Learn_web_development/Core/Text_styling")}}
 
 [列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)大体上和其他文本一样，但是仍有一些你需要知道的特殊 CSS 属性，和一些可供参考的最佳实践，这篇文章将阐述这一切。
 
@@ -258,7 +258,7 @@ ul {
 
 ### start
 
-[`start`](/zh-CN/docs/Web/HTML/Element/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
+[`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性允许你从 1 以外的数字开始计数。以下示例：
 
 ```html
 <ol start="4">
@@ -277,7 +277,7 @@ ul {
 
 ### reversed
 
-[`reversed`](/zh-CN/docs/Web/HTML/Element/ol#reversed) 属性将使列表反向计数。以下示例：
+[`reversed`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#reversed) 属性将使列表反向计数。以下示例：
 
 ```html
 <ol start="4" reversed>
@@ -299,7 +299,7 @@ ul {
 
 ### value
 
-[`value`](/zh-CN/docs/Web/HTML/Element/ol#value) 属性允许设置列表项指定数值，以下示例：
+[`value`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#value) 属性允许设置列表项指定数值，以下示例：
 
 ```html
 <ol>

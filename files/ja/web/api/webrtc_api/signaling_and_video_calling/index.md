@@ -9,19 +9,19 @@ l10n:
 
 [WebRTC](/ja/docs/Web/API/WebRTC_API) は、デバイス間のリアルタイムな P2P(ピア・ツー・ピア) 接続を通した情報交換を可能にします。接続は **シグナリング** と呼ばれる、ピアの発見とピアとの交渉のプロセスを通じて確立されます。このチュートリアルでは、双方向のビデオ通話を実装していきます。
 
-[WebRTC](/ja/docs/Web/API/WebRTC_API) は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバへの接続を含みます。この第三者サーバを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
+[WebRTC](/ja/docs/Web/API/WebRTC_API) は制約のある状況下で、音声、動画、データをリアルタイムでやり取りするための完全なピア・ツー・ピアな技術です。ピア同士の発見と交渉のプロセスは、[他の記事でも議論されているように](/ja/docs/Web/API/WebRTC_API/Session_lifetime#establishing_a_connection)、お互いに異なるネットワーク上にいるデバイス同士で行われることになります。この **シグナリング** と呼ばれるプロセスは、デバイス同士がお互いに合意済みの第三者のサーバーへの接続を含みます。この第三者サーバーを通してデバイスはお互いの位置を確認し、交渉のためのメッセージをやり取りすることが出来ます。
 
 このドキュメントでは、私達の WebSocket のドキュメント(この記事へのリンクは追加予定で、まだ存在しません。)の中で作られた[WebSocket チャット](https://webrtc-from-chat.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch example](https://webrtc-from-chat.glitch.me/) や、[remix the example](https://glitch.com/edit/#!/remix/webrtc-from-chat) を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
 
 > **注意:** Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
 
-## シグナリングサーバ
+## シグナリングサーバー
 
-インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバ** が必要になります。シグナリングサーバの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
+インターネット越しに二つのデバイス間で WebRTC 接続を確立するためには **シグナリングサーバー** が必要になります。シグナリングサーバーの仕事は、出来得る限り最小のプライベートな情報の露出で、ピア同士がお互いを発見し接続するよう仲介者となることです。どうやってこのサーバーを作れるのでしょうか、また、シグナリングのプロセスはどのように行われるのでしょうか？
 
-まずシグナリングサーバ自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
+まずシグナリングサーバー自体が必要です。 WebRTC はシグナリング情報に特定の伝送プロトコルを指定していません。 [WebSocket](/ja/docs/Web/API/WebSockets_API) や {{domxref("XMLHttpRequest")}} から伝書鳩だって構いません。好きなものを使用して二つのピア間でシグナリング情報を交換できます。
 
-サーバはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバにとってまったく関係ありません。
+サーバーはシグナリング情報の中身を理解したり解釈したりする必要はない、と把握しておくことが重要です。 {{Glossary("SDP")}} ですが、これもそれほど大事な情報ではありません。シグナリングサーバーを通過するメッセージの内容は、事実上、ブラックボックスです。重要なのは、 {{Glossary("ICE")}} サブシステムであるピアに対して、もう一方のピアにシグナリング情報を送信するよう指示する場合です。もしピアがシグナリング情報を送信すると、他方のピアはその情報を受信して独自の ICE サブシステムへと渡す方法を知ることが出来ます。 シグナリングサーバーの役割は、こうした情報を仲介することだけです。情報の中身は内容はサーバーにとってまったく関係ありません。
 
 ### Readying the chat server for signaling
 
@@ -542,7 +542,7 @@ function handleRemoveTrackEvent(event) {
 }
 ```
 
-This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/ja/docs/Web/HTML/Element/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
+This code fetches the incoming video {{domxref("MediaStream")}} from the `"received_video"` {{HTMLElement("video")}} element's [`srcObject`](/ja/docs/Web/HTML/Reference/Elements/video#srcobject) attribute, then calls the stream's {{domxref("MediaStream.getTracks", "getTracks()")}} method to get an array of the stream's tracks.
 
 If the array's length is zero, meaning there are no tracks left in the stream, we end the call by calling `closeVideoCall()`. This cleanly restores our app to a state in which it's ready to start or receive another call. See [Ending the call](#ending_the_call) to learn how `closeVideoCall()` works.
 
@@ -615,7 +615,7 @@ After pulling references to the two {{HTMLElement("video")}} elements, we check 
 3. Close the {{domxref("RTCPeerConnection")}} by calling {{domxref("RTCPeerConnection.close", "myPeerConnection.close()")}}.
 4. Set `myPeerConnection` to `null`, ensuring our code learns there's no ongoing call; this is useful when the user clicks a name in the user list.
 
-Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/ja/docs/Web/HTML/Element/video#src) and [`srcObject`](/ja/docs/Web/HTML/Element/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
+Then for both the incoming and outgoing {{HTMLElement("video")}} elements, we remove their [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) and [`srcObject`](/ja/docs/Web/HTML/Reference/Elements/video#srcobject) attributes using their {{domxref("Element.removeAttribute", "removeAttribute()")}} methods. This completes the disassociation of the streams from the video elements.
 
 Finally, we set the {{domxref("HTMLElement.disabled", "disabled")}} property to `true` on the "Hang Up" button, making it unclickable while there is no call underway; then we set `targetUsername` to `null` since we're no longer talking to anyone. This allows the user to call another user, or to receive an incoming call.
 

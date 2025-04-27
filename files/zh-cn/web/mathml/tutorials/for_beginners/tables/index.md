@@ -3,7 +3,7 @@ title: MathML 表格
 slug: Web/MathML/Tutorials/For_beginners/Tables
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}
 
 掌握了所有基本的数学符号后，接下来要考虑的是用于矩阵式表达和其他高级数学布局的表格布局。
 
@@ -309,4 +309,4 @@ MathML 表格元素与 [HTML 表格](/zh-CN/docs/Learn_web_development/Core/Stru
 - [`<mtr>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtr)
 - [`<mtd>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtd)
 
-{{PreviousMenuNext("Web/MathML/Guides/Scripts", "Web/MathML/Guides/Three_famous_mathematical_formulas", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Scripts", "Web/MathML/Tutorials/For_beginners/Three_famous_mathematical_formulas", "Web/MathML/Tutorials/For_beginners")}}

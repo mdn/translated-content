@@ -89,7 +89,7 @@ close(returnValue)
 ```
 
 \[X] ボタンが `type="submit"` であったなら、JavaScript を必要とせずにダイアログが閉じられたはずです。
-フォームを送信すると、[フォームのメソッドが `dialog`](/ja/docs/Web/HTML/Element/form#method) であれば、それが入った `<dialog>` を閉じるので、「閉じる」ボタンは必要ありません。
+フォームを送信すると、[フォームのメソッドが `dialog`](/ja/docs/Web/HTML/Reference/Elements/form#method) であれば、それが入った `<dialog>` を閉じるので、「閉じる」ボタンは必要ありません。
 
 ### 結果
 

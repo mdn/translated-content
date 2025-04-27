@@ -10,7 +10,7 @@ original_slug: Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_
 
 ## フォーマットの選択
 
-アダプティブ・ストリーミング・フォーマットに関しては、選択肢がたくさんあります。私たちは次の 2 つを選ぶことにしました。これらはモダンブラウザがサポートすることができます。
+アダプティブ・ストリーミング・フォーマットに関しては、選択肢がたくさんあります。私たちは次の 2 つを選ぶことにしました。これらはモダンブラウザーがサポートすることができます。
 
 - MPEG-DASH
 - HLS (HTTP Live Streaming)
@@ -93,7 +93,7 @@ MPD ファイルを生成すれば、video タグから参照することがで�
 <video src="my.mpd" type="application/dash+xml"></video>
 ```
 
-MPEG-DASH をサポートしないブラウザのためのフォールバックを与えるとより良いでしょう:
+MPEG-DASH をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
 
 ```html
 <video>
@@ -184,7 +184,7 @@ main segment folder ->      /segments/main/
   </MPD>
 ```
 
-MPD ファイルは、さまざまなメディアが配置されている場所をブラウザに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
+MPD ファイルは、さまざまなメディアが配置されている場所をブラウザーに伝え、 mimeType やコーデックなどのメタデータも含み、そこにはバイト範囲などの詳細も含まれています。一般的にこれらのファイルは自動的に生成されます。
 
 > [!NOTE]
 > 音声と動画のストリームを異なるファイルに分割することも可能です。帯域幅に応じて優先順位を付けて個別に処理することができます。
@@ -195,7 +195,7 @@ MPD ファイルを生成すれば、 {{ htmlelement("video") }} 要素で参照
 <video src="my.mpd" type="application/dash+xml"></video>
 ```
 
-MPEG-DASH をサポートしないブラウザのためのフォールバックを与えるとより良いでしょう:
+MPEG-DASH をサポートしないブラウザーのためのフォールバックを与えるとより良いでしょう:
 
 ```html
 <video>
@@ -207,7 +207,7 @@ MPEG-DASH をサポートしないブラウザのためのフォールバック�
 ```
 
 > [!NOTE]
-> MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザ対応に依存します。最新の [dash.js リファレンスプレイヤー](https://dashif.org/reference/players/javascript/index.html) を参照してください。
+> MPEG-DASH の再生は [dash.js](https://github.com/Dash-Industry-Forum/dash.js/) と [Media Source Extensions](https://dvcs.w3.org/hg/html-media/raw-file/tip/media-source/media-source.html) のブラウザー対応に依存します。最新の [dash.js リファレンスプレイヤー](https://dashif.org/reference/players/javascript/index.html) を参照してください。
 
 ## HLS エンコーディング
 

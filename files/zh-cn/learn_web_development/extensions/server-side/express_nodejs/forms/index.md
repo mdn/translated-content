@@ -3,7 +3,7 @@ title: "Express 教程 6: 使用表单"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data", "Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在此教程中我们会教你如何使用 Express 并且结合 Pug 来实现 HTML 表单，并且如何从数据库中创建，更新和删除文档。
 

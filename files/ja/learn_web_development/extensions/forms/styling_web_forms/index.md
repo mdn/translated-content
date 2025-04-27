@@ -41,7 +41,7 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} および {{HTMLElement("legend")}}
-3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search) 以外
+3. 単一行のテキストの {{HTMLElement("input")}} （例えば text, url, email 型） [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search) 以外
 4. 複数行の {{HTMLElement("textarea")}}
 5. ボタン（{{HTMLElement("input")}} と {{HTMLElement("button")}} の両方）
 6. {{HTMLElement("label")}}
@@ -50,16 +50,16 @@ CSS が利用できるようになっても、ユーザーがそれぞれのブ�
 #### スタイル設定が困難なもの
 
 1. チェックボックスとラジオボタン
-2. [`<input type="search">`](/ja/docs/Web/HTML/Element/input/search)
+2. [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 
 これら特殊なケースをどのように扱うかについては、[フォームへの高度なスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)の記事で見ていきます。
 
 #### 内部が CSS 単独ではスタイル設定できないもの
 
-- [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color)
-- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)のような日時関連コントロール
-- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color)
+- [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)のような日時関連コントロール
+- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file)
 - ドロップダウンウィジェットの作成に含まれる要素、 {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}}, {{HTMLElement("datalist")}} を含む。
 - {{HTMLElement("progress")}} と {{HTMLElement("meter")}}
 

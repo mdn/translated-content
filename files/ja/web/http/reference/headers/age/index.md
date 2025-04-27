@@ -20,7 +20,7 @@ original_slug: Web/HTTP/Headers/Age
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -36,7 +36,7 @@ Age: <delta-seconds>
 ## ディレクティブ
 
 - \<delta-seconds>
-  - : オブジェクトがプロキシキャッシュに入っていた時間 (秒単位) を表す負でない整数。
+  - : オブジェクトがプロキシーキャッシュに入っていた時間 (秒単位) を表す負でない整数。
 
 ## 例
 

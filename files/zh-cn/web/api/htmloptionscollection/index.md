@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`HTMLOptionsCollection`** 接口表示 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) HTML 元素的集合（以文档的顺序），并提供从列表中选择以及可选地更改其项目的方法和属性。此对象仅由 [select](/zh-CN/docs/Web/API/HTMLSelectElement) 的 `options` 属性返回。
+**`HTMLOptionsCollection`** 接口表示 [`<option>`](/zh-CN/docs/Web/HTML/Reference/Elements/option) HTML 元素的集合（以文档的顺序），并提供从列表中选择以及可选地更改其项目的方法和属性。此对象仅由 [select](/zh-CN/docs/Web/API/HTMLSelectElement) 的 `options` 属性返回。
 
 {{InheritanceDiagram}}
 

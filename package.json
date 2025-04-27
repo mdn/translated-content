@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "autocorrect-node": "2.13.3",
-    "fdir": "^6.4.3",
+    "fdir": "^6.4.4",
     "franc-min": "^6.2.0",
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
@@ -41,7 +41,7 @@
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-    "lefthook": "^1.11.5"
+    "lefthook": "^1.11.11"
   },
   "packageManager": "yarn@1.22.22"
 }

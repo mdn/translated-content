@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes/part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
+**`::part`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つ[シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内の任意の要素を表します。
 
 ```css
 custom-element::part(foo) {
@@ -108,6 +108,6 @@ globalThis.customElements.define(
 
 ## 関連情報
 
-- [`part`](/ja/docs/Web/HTML/Global_attributes/part) 属性 - `::part()` セレクターで選択できるパーツを定義するために使用されます
-- [`exportparts`](/ja/docs/Web/HTML/Global_attributes/exportparts) 属性 - 入れ子になったシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
+- [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性 - `::part()` セレクターで選択できるパーツを定義するために使用されます
+- [`exportparts`](/ja/docs/Web/HTML/Reference/Global_attributes/exportparts) 属性 - 入れ子になったシャドウツリーにシャドウパーツを推移的にエクスポートするために使用されます。
 - [CSS シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール

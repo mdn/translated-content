@@ -284,7 +284,7 @@ const listHeadingRef = useRef(null);
 
 ### 見出しの準備
 
-`<h2>` のような見出し要素は通常フォーカスできません。これは問題ではありません。属性 [`tabindex="-1"`](/ja/docs/Web/HTML/Global_attributes/tabindex) を追加することで、任意の要素をプログラムでフォーカス可能にすることができます。これは、JavaScript でのみフォーカス可能であることを意味します。 <kbd>Tab</kbd> キーを押して tabindex が `-1` の要素にフォーカスすることはできません。 [`<button>`](/ja/docs/Web/HTML/Element/button) や [`<a>`](/ja/docs/Web/HTML/Element/a) 要素の場合と同じ方法ではできません（これは `tabindex="0"` を使用することで可能ですが、この場合は適切ではありません）。
+`<h2>` のような見出し要素は通常フォーカスできません。これは問題ではありません。属性 [`tabindex="-1"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) を追加することで、任意の要素をプログラムでフォーカス可能にすることができます。これは、JavaScript でのみフォーカス可能であることを意味します。 <kbd>Tab</kbd> キーを押して tabindex が `-1` の要素にフォーカスすることはできません。 [`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) や [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素の場合と同じ方法ではできません（これは `tabindex="0"` を使用することで可能ですが、この場合は適切ではありません）。
 
 課題のリストの上にある見出しに、　`tabindex` 属性（JSXでは`tabIndex`と表記）を `listHeadingRef` とともに追加しましょう。
 

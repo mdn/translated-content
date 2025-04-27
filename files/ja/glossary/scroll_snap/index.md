@@ -2,7 +2,7 @@
 title: Scroll snap (スクロールスナップ)
 slug: Glossary/Scroll_snap
 l10n:
-  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
+  sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
 
 {{GlossarySidebar}}

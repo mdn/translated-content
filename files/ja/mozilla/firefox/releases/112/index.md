@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- {{domxref("HTMLElement")}} の [**`inert`**](/ja/docs/Web/HTML/Global_attributes/inert) プロパティを全面的に有効にしました。`inert` 属性を持つ HTMLElement の内部にあるコンテンツやインタラクティブ要素を、ブラウザーに無視させることができます。詳しくは [Firefox bug 1764263](https://bugzil.la/1764263) をご覧ください。
+- {{domxref("HTMLElement")}} の [**`inert`**](/ja/docs/Web/HTML/Reference/Global_attributes/inert) プロパティを全面的に有効にしました。`inert` 属性を持つ HTMLElement の内部にあるコンテンツやインタラクティブ要素を、ブラウザーに無視させることができます。詳しくは [Firefox bug 1764263](https://bugzil.la/1764263) をご覧ください。
 
 ### CSS
 

@@ -1,9 +1,8 @@
 ---
 title: "Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSMethodNotFound
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -16,7 +15,7 @@ Reason: Did not find method in CORS header 'Access-Control-Allow-Methods'
 
 ## エラーの原因
 
-{{Glossary("CORS")}} リクエストで使われている HTTP メソッドが、レスポンスの {{HTTPHeader("Access-Control-Allow-Methods")}} ヘッダーで指定されたメソッドの一覧に含まれていません。このヘッダーは、 CORS を使用してリクエストで指定された URL にアクセスする時に使われる HTTP メソッドのコンマ区切りのリストを指定します。リクエストが他のメソッドを使用していると、このエラーが発生します。
+{{Glossary("CORS")}} リクエストで使われている HTTP メソッドが、レスポンスの {{HTTPHeader("Access-Control-Allow-Methods")}} ヘッダーで指定されたメソッドの一覧に含まれていません。このヘッダーは、 CORS を使用してリクエストで指定された URL にアクセスする時に使われる HTTP メソッドのカンマ区切りのリストを指定します。リクエストが他のメソッドを使用していると、このエラーが発生します。
 
 例えば、レスポンスに以下の行が含まれていると、
 

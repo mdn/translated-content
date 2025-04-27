@@ -22,7 +22,7 @@ l10n:
 
 #### 廃止
 
-- [`-moz-user-modify`](/ja/docs/Web/CSS/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
+- [`-moz-user-modify`](/ja/docs/Web/CSS/user-modify) CSS プロパティを削除しました。このプロパティは、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性が支持されたため非推奨になっていました ([Firefox bug 1920118](https://bugzil.la/1920118))。
 
 ### JavaScript
 

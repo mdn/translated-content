@@ -19,7 +19,6 @@ slug: Web/SVG/Reference/Attribute/stroke-dasharray
 - {{SVGElement('rect')}}
 - {{SVGElement('text')}}
 - {{SVGElement('textPath')}}
-- {{SVGElement('tref')}}
 - {{SVGElement('tspan')}}
 
 ## 示例

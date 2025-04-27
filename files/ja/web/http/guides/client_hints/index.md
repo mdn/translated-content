@@ -30,7 +30,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 リクエストされなかった場合、クライアントイベントによって送信される可能性のある、[低エントロピーのクライアントヒントヘッダー](#低エントロピーヒント)も少しあります。
 
 > [!NOTE]
-> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性を使用して指定することも可能です。
+> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#attr-http-equiv) 属性を使用して指定することも可能です。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />
@@ -45,13 +45,13 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 Vary: Accept, Width, ECT
 ```
 
-値が頻繁に変更されるクライアントヒントヘッダについては、 {{HTTPHeader("Vary")}} を指定しないか、 他の方法を使用したほうがよいでしょう。これは、リソースを効果的にキャッシュできなくしてしまうからです。( それぞれの固有の値に対して、新しいキャッシュ項目が作成されます)。
+値が頻繁に変更されるクライアントヒントヘッダーについては、 {{HTTPHeader("Vary")}} を指定しないか、 他の方法を使用したほうがよいでしょう。これは、リソースを効果的にキャッシュできなくしてしまうからです。( それぞれの固有の値に対して、新しいキャッシュ項目が作成されます)。
 これは特に {{HTTPHeader("Downlink")}} や {{HTTPHeader("RTT")}} のようなネットワーククライアントヒントに当てはまります。
 詳細な情報は、[HTTP キャッシュ > レスポンスの変化](/ja/docs/Web/HTTP/Guides/Caching#vary) を参照してください。
 
 ## ヒントの期限
 
-サーバーは、取得したいクライアントヒントヘッダーを `Accept-CH` レスポンスヘッダで指定します。
+サーバーは、取得したいクライアントヒントヘッダーを `Accept-CH` レスポンスヘッダーで指定します。
 ユーザーエージェントはリクエストされたクライアントヒントヘッダー、または少なくともそのサーバーと共有するサブセットを、現在の閲覧セッションにおけるそれ以降のすべてのリクエストに付加します。
 
 言い換えれば、特定のヒント集合に対するリクエストは、ブラウザーが終了するまで期限切れになりません。

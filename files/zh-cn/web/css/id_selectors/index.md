@@ -5,7 +5,7 @@ slug: Web/CSS/ID_selectors
 
 {{CSSRef}}
 
-CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
+CSS **ID 选择器**会根据该元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性中的内容匹配元素。为了使该元素被选中，它的 `id` 属性必须与选择器中给出的值完全匹配。
 
 ```css
 /* id 为 "demo" 的元素会被选中 */

@@ -19,7 +19,7 @@ l10n:
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -48,7 +48,7 @@ ETag: W/"0815"
 
 ### 空中衝突の回避
 
-`ETag` と {{HTTPHeader("If-Match")}} ヘッダの助けを借りて、編集の空中衝突を検出することができます。
+`ETag` と {{HTTPHeader("If-Match")}} ヘッダーの助けを借りて、編集の空中衝突を検出することができます。
 
 たとえば、 MDN を編集する場合、現在の Wiki コンテンツのハッシュが算出され、そのレスポンスで `Etag` に入れられます。
 

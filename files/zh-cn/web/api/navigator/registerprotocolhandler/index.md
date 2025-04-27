@@ -13,7 +13,7 @@ l10n:
 
 要注册协议处理器，网站在调用 `registerProtocolHandler()` 时传入要注册的协议和模板 URL。
 
-在用户激活使用来注册的协议的链接时，浏览器会将激活链接的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 插入到处理器注册时提供的 URL 模板中，并将当前页面导航到生成的 URL。
+在用户激活使用来注册的协议的链接时，浏览器会将激活链接的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 插入到处理器注册时提供的 URL 模板中，并将当前页面导航到生成的 URL。
 
 浏览器可能会要求用户确认是否允许页面处理该协议，无论是在注册协议时还是在用户激活链接时。
 

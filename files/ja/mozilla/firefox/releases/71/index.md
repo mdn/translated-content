@@ -137,7 +137,7 @@ Firefox 71 は、米国時間 2019 年 12 月 3 日 にリリースされまし�
 
 #### 廃止
 
-- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシ使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
+- [`proxy.register()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) および [`proxy.unregister()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy) 関数を削除しました ([Firefox バグ 1443259](https://bugzil.la/1443259))。要求のプロキシー使用を制御するには {{WebExtAPIRef("proxy.onRequest")}} を使用してください。
 
 ## 関連情報
 

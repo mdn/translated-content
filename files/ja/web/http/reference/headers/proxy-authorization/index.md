@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Proxy-Authorization
 
 {{HTTPSidebar}}
 
-HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。
+HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシーサーバーに対してユーザーエージェントを認証するための認証情報を保持し、ふつうはサーバーが {{HTTPStatus("407")}} `Proxy Authentication Required` ステータスと {{HTTPHeader("Proxy-Authenticate")}} ヘッダーを返した後に使われます。
 
 <table class="properties">
   <tbody>
@@ -18,7 +18,7 @@ HTTP **`Proxy-Authorization`** リクエストヘッダーは、プロキシサ�
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name","禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

@@ -20,13 +20,13 @@ l10n:
 
 ツールチップは、より詳細な情報 "i" アイコン ⓘ の適切なロールではありません。ツールチップは自分自身で要素に直接関連します。 ⓘ は `described by` の詳細情報ではありません。ツールやコントロールのものです。
 
-ARIA `tooltip` ロールの使用は、通常のブラウザのツールチップの動作を補足するものです。ネイティブブラウザーにおけるツールチップの例としては、一部のウェブブラウザーが要素にマウスを長く当てると [`title` 属性](/ja/docs/Web/HTML/Global_attributes/title) を表示するものがあります。キーボードのフォーカスやタッチ操作によってこの機能を有効にすることはできません。ツールチップやタイトルとして記載するほど重要な情報であれば、可視テキストに含めることを検討してください。
+ARIA `tooltip` ロールの使用は、通常のブラウザーのツールチップの動作を補足するものです。ネイティブブラウザーにおけるツールチップの例としては、一部のウェブブラウザーが要素にマウスを長く当てると [`title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title) を表示するものがあります。キーボードのフォーカスやタッチ操作によってこの機能を有効にすることはできません。ツールチップやタイトルとして記載するほど重要な情報であれば、可視テキストに含めることを検討してください。
 
 `tooltip` ロールを持つ要素は、ツールチップが表示される前または表示されるときに [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を使用して参照する必要があります。 `aria-describedby` 属性はツールチップではなく、自分自身で要素に指定します。
 
-ツールチップは、自分自身の要素の [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) プロパティではポップアップとはみなされません。
+ツールチップは、自分自身の要素の [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) プロパティではポップアップとはみなされません。
 
-ツールチップは現れたり消えたりしますが、その出現は自動的に行われ、ユーザーが意図的に制御するものではないので、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) ロールは対応していません。
+ツールチップは現れたり消えたりしますが、その出現は自動的に行われ、ユーザーが意図的に制御するものではないので、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) ロールは対応していません。
 
 ツールチップのアクセシブル名は、コンテンツから決まります。理論的には、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) から使用することができますが、ほとんどの場合、アクセシブル名を持つツールチップを提供するために ARIA プロパティを使用することは推奨されません。
 

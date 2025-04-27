@@ -57,7 +57,7 @@ _変更なし。_
 - [`WebAssembly.Global()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Global) コンストラクターを、WebAssembly のグローバル変数とともにサポートしました ([Firefox バグ 1464656](https://bugzil.la/1464656))。
 - {{jsxref("Array.prototype.flat()")}} および {{jsxref("Array.prototype.flatMap()")}} メソッドをデフォルトで有効化しました ([Firefox バグ 1435813](https://bugzil.la/1435813))。
 - コンテキスト固有のメタデータを JavaScript モジュールに公開するための、[`import.meta`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta) プロパティを実装しました ([Firefox バグ 1427610](https://bugzil.la/1427610))。
-- JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#string_literals) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。
+- JavaScript の [文字列リテラル](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#文字列リテラル) で、 U+2028 LINE SEPARATOR や U+2029 PARAGRAPH SEPARATOR の文字を直接含めることが可能になりました。この結果、{{jsxref("JSON")}} 構文が JavaScript リテラル構文のサブセットになりました ([Firefox バグ 1435828](https://bugzil.la/1435828) および TC39 提案 [json-superset](https://github.com/tc39/proposal-json-superset))。
 - [型付き配列](/ja/docs/Web/JavaScript/Guide/Typed_arrays) の境界を超える添字に対して、{{jsxref("Reflect.defineProperty()")}} および {{jsxref("Reflect.set()")}} が `true` ではなく `false` を返すようになりました ([Firefox バグ 1308735](https://bugzil.la/1308735))。
 
 #### 廃止
@@ -99,7 +99,7 @@ _変更なし。_
 
 - `userproximity` および `deviceproximity` イベント (UserProximityEvent`および`DeviceProximityEvent`もご覧ください) を設定項目`device.sensors.proximity.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
 - `devicelight` イベント (`DeviceLightEvent` もご覧ください) を設定項目 `device.sensors.ambientLight.enabled` で、デフォルトで無効化しました ([Firefox バグ 1462308](https://bugzil.la/1462308))。
-- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
+- `DOMSubtreeModified` および `DOMAttrModified` [ミューテーションイベント](/ja/docs/Web/API/MutationEvent) は、CSSOM によって [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性が変更されたときに発生しないようになりました ([Firefox バグ 1460295](https://bugzil.la/1460295)).
 - {{domxref("CSSStyleDeclaration.getPropertyCSSValue()")}} のサポートを廃止しました ([Firefox バグ 1408301](https://bugzil.la/1408301))。
 - {{domxref("CSSValue")}}、{{domxref("CSSPrimitiveValue")}}、{{domxref("CSSValueList")}} のサポートを廃止しました ([Firefox バグ 1459871](https://bugzil.la/1459871))。
 - {{domxref("window.getComputedStyle()")}} が表示するものがない `Window` で呼び出されたときに、`null` を返さないようになりました ([Firefox バグ 1467722](https://bugzil.la/1467722))。

@@ -28,7 +28,7 @@ HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッ
       <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>

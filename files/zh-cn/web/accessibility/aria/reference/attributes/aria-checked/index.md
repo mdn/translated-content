@@ -76,8 +76,8 @@ myHTMLElement.ariaChecked = true;
 
 ## 参见
 
-- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)
-- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)
+- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio)
 - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
 - [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
 - [双态复选框示例](https://www.w3.org/WAI/ARIA/apg/patterns/checkbox/examples/checkbox/)—w3.org

@@ -3,7 +3,7 @@ title: JavaScript 中的类
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming)中，我们介绍了面向对象编程（OOP）的基本概念，并介绍了一个使用 OOP 原则对学校的教授和学生进行建模的示例。
 
