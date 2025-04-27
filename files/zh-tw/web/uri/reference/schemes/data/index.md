@@ -1,8 +1,8 @@
 ---
-title: Data URL
+title: data：URL
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 48fc59029d83dbc53748561d30be41f6a0ae62c1
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 **Data URL**，即以 `data:` 為前綴的 URL，允許內容創作者將小型檔案內嵌於文件中。它們先前被稱為「資料 URI」，但該名稱已被 WHATWG 廢除。
@@ -79,7 +79,7 @@ bash$ echo -n hello | base64
 
 此部分描述創建和使用 `data` URL 時常見的問題。
 
-```html
+```plain
 data:text/html,lots of text…<p><a name%3D"bottom">bottom</a>?arg=val</p>
 ```
 

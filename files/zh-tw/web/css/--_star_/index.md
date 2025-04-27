@@ -2,7 +2,7 @@
 title: 自訂屬性（--*）：CSS 變數
 slug: Web/CSS/--*
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: 8dac6c62fc3cee2de82960d4dd9d9be16a3a1761
 ---
 
 {{CSSRef}}
@@ -83,5 +83,5 @@ l10n:
 
 - {{cssxref("var", "var()")}} 函數
 - {{cssxref("@property")}} @ 規則
-- [使用 CSS 自訂屬性（變數）](/zh-TW/docs/Web/CSS/Using_CSS_custom_properties)指南
+- [使用 CSS 自訂屬性（變數）](/zh-TW/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)指南
 - [CSS 自訂屬性用於層疊變數](/zh-TW/docs/Web/CSS/CSS_cascading_variables)模組

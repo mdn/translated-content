@@ -2,7 +2,7 @@
 title: SVGAnimatedBoolean：baseVal 屬性
 slug: Web/API/SVGAnimatedBoolean/baseVal
 l10n:
-  sourceCommit: 53fd7ea4a4657b1b457ee582d7a28672319bf80a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{APIRef("SVG")}}

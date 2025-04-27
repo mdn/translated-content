@@ -2,7 +2,7 @@
 title: box-sizing
 slug: Web/CSS/box-sizing
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -33,9 +33,9 @@ padding: 5px;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element-parent">
-    <p>Parent container</p>
+    <p>父容器</p>
     <div class="transition-all" id="example-element">
-      <p>Child container</p>
+      <p>子容器</p>
     </div>
   </div>
 </section>
