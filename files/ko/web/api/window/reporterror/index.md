@@ -23,7 +23,7 @@ reportError(throwable)
 ### 매개변수
 
 - `throwable`
-  - : {{jsxref("TypeError")}} 와 같은 에러 객체입니다.
+  - : {{jsxref("TypeError")}} 와 같은 오류 객체입니다.
 
 ### 반환 값
 
