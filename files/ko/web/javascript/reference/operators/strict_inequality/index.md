@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**불일치 연산자 (`!==`)** 는 두 피연산자가 같지 않은지 확인하고, 불리언 결과를 반환합니다. [부등 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality) 와 다르게, 불일치 연산자는 두 피연산자의 타입이 다르다면 항상 다른 것이라고 여깁니다.
+**불일치 연산자 (`!==`)** 는 두 피연산자가 같지 않은지 확인하고, 불리언 결과를 반환합니다. [부등 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Inequality) 와 다르게, 불일치 연산자는 두 피연산자의 타입이 다르다면 항상 다른 것이라고 여깁니다.
 
 {{InteractiveExample("JavaScript Demo: Strict inequality (!==) operator")}}
 
@@ -33,7 +33,7 @@ x !== y
 
 ## 설명
 
-불일치 연산자는 두 피연산자의 같지 않음을 확인합니다. 이것은 [일치 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) 의 반대 개념입니다. 따라서 다음 두 줄은 항상 같은 결과를 반환합니다.
+불일치 연산자는 두 피연산자의 같지 않음을 확인합니다. 이것은 [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) 의 반대 개념입니다. 따라서 다음 두 줄은 항상 같은 결과를 반환합니다.
 
 ```js
 x !== y;
@@ -41,7 +41,7 @@ x !== y;
 !(x === y);
 ```
 
-비교 방식에 대한 자세한 정보는 [일치 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality) 의 페이지에서 확인할 수 있습니다.
+비교 방식에 대한 자세한 정보는 [일치 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality) 의 페이지에서 확인할 수 있습니다.
 
 일치 연산자와 같이, 불일치 연산자는 두 피연산자의 타입이 다르면 항상 다른 것이라고 여깁니다.
 
@@ -99,6 +99,6 @@ console.log(object1 !== object1); // false
 
 ## 같이 보기
 
-- [Equality (`==`)](/en-US/docs/Web/JavaScript/Reference/Operators/Equality)
-- [Inequality (`!=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Inequality)
-- [Strict equality (`===`)](/en-US/docs/Web/JavaScript/Reference/Operators/Strict_equality)
+- [Equality (`==`)](/ko/docs/Web/JavaScript/Reference/Operators/Equality)
+- [Inequality (`!=`)](/ko/docs/Web/JavaScript/Reference/Operators/Inequality)
+- [Strict equality (`===`)](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)
