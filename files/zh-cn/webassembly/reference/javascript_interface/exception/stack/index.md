@@ -7,11 +7,11 @@ l10n:
 
 {{non-standard_header}}
 
-[`WebAssembly.Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 类型的一个对象实例的只读 **`stack`** 属性*可能*包含一个堆栈跟踪。
+[`WebAssembly.Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 类型的一个对象实例的只读 **`stack`** 属性*可能*包含堆栈跟踪。
 
-来自 WebAssembly 代码的异常默认不会包含一个堆栈跟踪。
+来自 WebAssembly 代码的异常默认不会包含堆栈跟踪。
 
-如果 WebAssembly 代码需要提供一个堆栈跟踪，它必须调用一个在创建异常时，在[构造函数](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)中传递 `options.trackStack=true` 参数的 JavaScript 函数。然后虚拟机会将一个堆栈跟踪附着到该构造函数返回的异常对象上。
+如果 WebAssembly 代码需要提供堆栈跟踪，它必须调用 JavaScript 函数来创建异常，并为其[构造函数](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)传递 `options.trackStack=true` 参数。然后虚拟机会将堆栈跟踪附着到该构造函数返回的异常对象上。
 
 > [!NOTE]
 > 通常不会从 WebAssembly 代码发送堆栈跟踪以改善性能。给异常添加堆栈跟踪的能力是为开发者工具提供的，一般不建议更广泛的使用。
@@ -20,7 +20,7 @@ l10n:
 
 一个包含堆栈跟踪的字符串，或者当跟踪没有被赋值时为 {{jsxref("undefined")}}。
 
-堆栈跟踪字符串列出 WebAssembly 格式的栈上的每个操作的位置。它是人类可读的字符串，包含 URL、被调用的函数类型名、函数索引以及它在模块二进制中的偏移。它大约是这个格式（参见规范中的[堆栈跟踪惯例](https://webassembly.github.io/spec/web-api/index.html#conventions)获取更多信息）：
+堆栈跟踪字符串列出 WebAssembly 格式的栈上的每个操作的位置。它是人类可读的字符串，包含 URL、被调用的函数类型名、函数索引以及它在模块二进制中的偏移。它大约是这个格式（参见规范中的[堆栈跟踪约定](https://webassembly.github.io/spec/web-api/index.html#conventions)获取更多信息）：
 
 ```plain
 ${url}:wasm-function[${funcIndex}]:${pcOffset}
@@ -28,9 +28,9 @@ ${url}:wasm-function[${funcIndex}]:${pcOffset}
 
 ## 示例
 
-这个例子展示的是如何从 WebAssembly 抛出一个包含一个堆栈跟踪的异常。
+这个例子展示如何从 WebAssembly 抛出一个包含堆栈跟踪的异常。
 
-思考下面的 WebAssembly 代码，假设其被编译为一个名为 **example.wasm** 的文件。它导入一个标签，内部引用为 `$tagname`，并导入一个引用为 `$throwExnWithStack` 的函数。它导出一个可被外部代码调用的方法 `run`，以调用 `throwExnWithStack`（就是 JavaScript 函数）
+考虑下面的 WebAssembly 代码，假设其被编译为一个名为 **example.wasm** 的文件。它导入一个标签，内部引用为 `$tagname`，并导入一个引用为 `$throwExnWithStack` 的函数。它导出一个可被外部代码调用的方法 `run`，以调用 `throwExnWithStack`（就是 JavaScript 函数）
 
 ```wat
 (module
@@ -88,7 +88,7 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
 new WebAssembly.Exception(tag, [param], { traceStack: true });
 ```
 
-传递 `{traceStack: true}` 是告诉 WebAssembly 虚拟机它应该将一个堆栈跟踪附着到返回的 `WebAssembly.Exception`。如果没有的话，栈将会是 `undefined`。
+传递 `{traceStack: true}` 是告诉 WebAssembly 虚拟机它应该将堆栈跟踪附着到返回的 `WebAssembly.Exception`。如果没有的话，栈将会是 `undefined`。
 
 ## 浏览器兼容性
 
