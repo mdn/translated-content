@@ -2,7 +2,7 @@
 title: WebAssembly.Exception.prototype.stack
 slug: WebAssembly/Reference/JavaScript_interface/Exception/stack
 l10n:
-  sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
 {{non-standard_header}}
