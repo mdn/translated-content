@@ -230,7 +230,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### CSS
 
-CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframe` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
+CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
 
 ```css
 div {
