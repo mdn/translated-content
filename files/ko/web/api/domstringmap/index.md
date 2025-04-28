@@ -20,4 +20,4 @@ l10n:
 ## 같이 보기
 
 - {{domxref("HTMLElement.dataset")}}
-- [Global attributes - `data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
+- [전역 특성 - `data-*`](/ko/docs/Web/HTML/Reference/Global_attributes/data-*)
