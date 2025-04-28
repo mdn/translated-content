@@ -223,7 +223,7 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
 
 サイトのテキストサイズを調整するユーザーに最適に対応するには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)に {{cssxref("&lt;length&gt;")}} が必要な場合は [`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) を使用してください。
 
-[`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) および [`px`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はどちらも有効な単位ですが、 [`em`](/en-US/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はユーザーがブラウザーのテキストの大きさを変更した場合に、よりうまく動作します。
+[`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) および [`px`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はどちらも有効な単位ですが、 [`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はユーザーがブラウザーのテキストの大きさを変更した場合に、よりうまく動作します。
 
 また、ユーザーの使い勝手を向上させるために、メディアクエリーまたは [HTTP ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)を使用することを検討してください。
 例えば、 [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) または同等の HTTP ヘッダーである {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} は、ユーザー設定に基づいて、アニメーションや動きの量を最小化するために使用することができます。
