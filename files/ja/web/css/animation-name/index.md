@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframe` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframe` アットルールにも一致しない場合、プロパティはアニメーションしません。
+**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframes` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframes` アットルールにも一致しない場合、プロパティはアニメーションしません。
 
 {{InteractiveExample("CSS Demo: animation-name")}}
 
