@@ -1,92 +1,92 @@
 ---
 title: WebAssembly.instantiate()
 slug: WebAssembly/Reference/JavaScript_interface/instantiate_static
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.instantiate()`** 允许你编译和实例化 WebAssembly 代码。这个方法有两个重载方式：
+**`WebAssembly.instantiate()`** 函数允许你编译和实例化 WebAssembly 代码。这个函数有两个重载方式：
 
-- 第一种主要重载方式使用 WebAssembly 二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays) 或{{jsxref("ArrayBuffer")}}形，一并进行编译和实例化。返回的 `Promise` 会携带已编译的 {{jsxref("WebAssembly.Module")}} 和它的第一个实例化对象 {{jsxref("WebAssembly.Instance")}}.
-- 第二种重载使用已编译的 {{jsxref("WebAssembly.Module")}} , 返回的 `Promise` 携带一个 `Module`的实例化对象 `Instance`. 如果这个 `Module` 已经被编译了或者是从缓存中获取的 ( [retrieved from cache](/zh-CN/docs/WebAssembly/Caching_modules)), 那么这种重载方式是非常有用的。
+- 主要的重载使用 WebAssembly 二进制代码，形式为[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}}，并在一个步骤中执行编译和实例化。返回的 `Promise` 兑现为一个已编译的 [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) 和该模块的第一个 [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance)。
+- 次要的重载使用已编译的 [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 兑现为该 `Module`的一个 `Instance`. 如果 `Module` 已经被编译了, 那么这种重载方式是非常有用的。
 
 > [!WARNING]
-> 此方法不是获取 (fetch) 和实例化 wasm 模块的最具效率方法。如果可能的话，你应该改用较新的{{jsxref("WebAssembly.instantiateStreaming()")}}方法，该方法直接从原始字节码中直接获取，编译和实例化模块，因此不需要转换为{{jsxref("ArrayBuffer")}}。
+> 此方法不是获取和实例化 Wasm 模块的最高效的方法。如果可能的话，你应该改用较新的 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法，该方法在一步中直接从原始字节码获取、编译和实例化模块，因此不需要转换为 {{jsxref("ArrayBuffer")}}。
 
 ## 语法
 
-### 主重载方式 — 使用 wasm 二进制代码
+```js-nolint
+// Taking Wasm binary code
+WebAssembly.instantiate(bufferSource)
+WebAssembly.instantiate(bufferSource, importObject)
+WebAssembly.instantiate(bufferSource, importObject, compileOptions)
 
-```plain
-Promise<ResultObject> WebAssembly.instantiate(bufferSource, importObject);
+// Taking a module object instance
+WebAssembly.instantiate(module)
+WebAssembly.instantiate(module, importObject)
+WebAssembly.instantiate(module, importObject, compileOptions)
 ```
 
-#### 参数
+### 参数
 
-- _bufferSource_
-  - : 一个包含你想编译的 wasm 模块二进制代码的 [typed array](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)(类型数组) or [ArrayBuffer](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)(数组缓冲区)
-- _importObject_ {{optional_inline}}
-  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出 [WebAssembly.LinkError](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
+- `bufferSource`
+  - : A [typed array](/en-US/docs/Web/JavaScript/Guide/Typed_arrays) or
+    {{jsxref("ArrayBuffer")}} containing the binary code of the Wasm module you want to
+    compile, or a [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module).
+- `module`
+  - : The [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object to be instantiated.
+- `importObject` {{optional_inline}}
+  - : An object containing the values to be imported into the newly-created
+    `Instance`, such as functions or [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) objects.
+    There must be one matching property for each declared import of the compiled module or
+    else a [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError) is thrown.
+- `compileOptions` {{optional_inline}}
+  - : An object containing compilation options. Properties can include:
+    - `builtins` {{optional_inline}}
+      - : An array of strings that enables the usage of [JavaScript builtins](/en-US/docs/WebAssembly/Guides/JavaScript_builtins) in the compiled Wasm module. The strings define the builtins you want to enable. Currently the only available value is `"js-string"`, which enables JavaScript string builtins.
+    - `importedStringConstants` {{optional_inline}}
+      - : A string specifying a namespace for [imported global string constants](/en-US/docs/WebAssembly/Guides/Imported_string_constants). This property needs to be specified if you wish to use imported global string constants in the Wasm module.
 
-#### 返回值
+### 返回值
 
-解析为包含两个字段的 `ResultObject` 的一个 `Promise`:
+If a `bufferSource` is passed, returns a `Promise` that resolves to a `ResultObject` which contains two
+fields:
 
-- `module`: 一个被编译好的 {{jsxref("WebAssembly.Module")}} 对象。这个模块可以被再次实例化，通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 被分享，或者缓存到 [IndexedDB](/zh-CN/docs/WebAssembly/Caching_modules)。
-- `instance`: 一个包含所有 [Exported WebAssembly functions](/zh-CN/docs/WebAssembly/Guides/Exported_functions)的{{jsxref("WebAssembly.Instance")}}对象。
+- `module`: A [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) object representing the compiled WebAssembly module. This `Module` can be instantiated again, shared via {{domxref("Worker.postMessage", "postMessage()")}}, or [cached](/en-US/docs/Web/Progressive_web_apps/Guides/Caching).
+- `instance`: A [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object that contains all the [Exported WebAssembly functions](/en-US/docs/WebAssembly/Guides/Exported_functions).
 
-#### 异常
+If a `module` is passed, returns a `Promise` that resolves to an [`WebAssembly.Instance`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Instance) object.
 
-- 如果参数的类型或结构不正确，将会抛出异常 {{jsxref("TypeError")}} .
-- 如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
+### 异常
 
-### 第二种重载 — 使用模块对象
-
-```plain
-Promise<WebAssembly.Instance> WebAssembly.instantiate(module, importObject);
-```
-
-#### 参数
-
-- _module_
-  - : 将被实例化的 {{jsxref("WebAssembly.Module")}} 对象。
-- _importObject_ {{optional_inline}}
-  - : 一个将被导入到新创建实例中的对象，它包含的值有函数、{{jsxref("WebAssembly.Memory")}} 对象等等。编译的模块中，对于每一个导入的值都要有一个与其匹配的属性与之相对应，否则将会抛出{{jsxref("WebAssembly.LinkError")}} 。
-
-#### 返回值
-
-一个解析为 {{jsxref("WebAssembly.Instance")}} 的`Promise` 对象。
-
-#### 异常
-
-- 如果参数的类型或结构不正确，将抛出异常 {{jsxref("TypeError")}} 。
-- 如果操作失败，promise 将会被 reject 掉，根据失败的原因不同，会抛出 3 种异常，{{jsxref("WebAssembly.CompileError")}}，{{jsxref("WebAssembly.LinkError")}}, 或{{jsxref("WebAssembly.RuntimeError")}}。
+- If either of the parameters are not of the correct type or structure,
+  the promise rejects with a {{jsxref("TypeError")}}.
+- If the operation fails, the promise rejects with a
+  [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError), or
+  [`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError), depending on the cause of the failure.
 
 ## 示例
 
 > [!NOTE]
-> 在大多数情况下，你可能需要使用 {{jsxref("WebAssembly.instantiateStreaming()")}}，因为它比 `instantiate()` 更具效率。
+> 在大多数情况下，你可能想要使用 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static)，因为它比 `instantiate()` 更高效。
 
 ### 第一种重载示例
 
 使用 fetch 获取一些 WebAssembly 二进制代码后，我们使用 {{jsxref("WebAssembly.instantiate()")}} 方法编译并实例化模块，在此过程中，导入了一个 Javascript 方法在 WebAssembly 模块中，接下来我们使用`Instance` 导出的 [Exported WebAssembly](/zh-CN/docs/WebAssembly/Guides/Exported_functions) 方法。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
+const importObject = {
+  my_namespace: {
+    imported_func(arg) {
       console.log(arg);
     },
   },
-  env: {
-    abort: () => {},
-  },
 };
-
-/* 2019-08-03：importObject 必须存在 env 对象以及 env 对象的 abort 方法 */
 
 fetch("simple.wasm")
   .then((response) => response.arrayBuffer())
   .then((bytes) => WebAssembly.instantiate(bytes, importObject))
-  .then((result) => result.instance.exports);
+  .then((result) => result.instance.exports.exported_func());
 ```
 
 > [!NOTE]
@@ -97,33 +97,55 @@ fetch("simple.wasm")
 下面的例子（查看我们 GitHub 的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 例子，可在线演示）使用 `compile()` 方法编译了 simple.wasm 字节码，然后通过 [postMessage()](/zh-CN/docs/Web/API/Worker/postMessage) 发送给一个线程 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ```js
-var worker = new Worker("wasm_worker.js");
+const worker = new Worker("wasm_worker.js");
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.compile(bytes))
-  .then((mod) => worker.postMessage(mod));
+WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
+  worker.postMessage(mod),
+);
 ```
 
 在线程中（查看 [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/wasm_worker.js)）我们定义了一个导入对象供模块使用，然后设置了一个事件处理函数来接收主线程发来的模块。当模块被接收到后，我们使用{{jsxref("WebAssembly.instantiate()")}} 方法创建一个实例并且调用它从内部导出的函数。
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
+const importObject = {
+  my_namespace: {
+    imported_func(arg) {
       console.log(arg);
     },
   },
 };
 
-onmessage = function (e) {
+onmessage = (e) => {
   console.log("module received from main thread");
-  var mod = e.data;
+  const mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
+  WebAssembly.instantiate(mod, importObject).then((instance) => {
     instance.exports.exported_func();
   });
 };
+```
+
+### Enabling JavaScript builtins and global string imports
+
+This example enables JavaScript string builtins and imported global string constants when compiling and instantiating the Wasm module with `instantiate()`, before running the exported `main()` function (which logs `"hello world!"` to the console). [See it running live](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/).
+
+```js
+const importObject = {
+  // Regular import
+  m: {
+    log: console.log,
+  },
+};
+
+const compileOptions = {
+  builtins: ["js-string"], // Enable JavaScript string builtins
+  importedStringConstants: "string_constants", // Enable imported global string constants
+};
+
+fetch("log-concat.wasm")
+  .then((response) => response.arrayBuffer())
+  .then((bytes) => WebAssembly.instantiate(bytes, importObject, compileOptions))
+  .then((result) => result.instance.exports.main());
 ```
 
 ## 规范
@@ -136,6 +158,6 @@ onmessage = function (e) {
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
