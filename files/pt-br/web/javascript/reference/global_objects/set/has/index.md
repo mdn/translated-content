@@ -37,7 +37,7 @@ mySet.has(valor);
 
 Retorna `true` se um elemento com o valor especificado existe no objeto `Set`; `false` caso contrário.
 
-> **Nota:**Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar quando o elemento dado é encontrado.
+> **Nota:**Tecnicamente falando, `has()` usa o algorítimo [`sameValueZero`](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality) para determinar quando o elemento dado é encontrado.
 
 ## Exemplos
 

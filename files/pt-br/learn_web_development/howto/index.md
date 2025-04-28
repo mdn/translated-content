@@ -4,21 +4,21 @@ slug: Learn_web_development/Howto
 original_slug: Learn/Common_questions
 ---
 
-Esta sessão de Área de Aprendizado é voltada para dar respostas à questões comuns que possam surgir, que não necessariamente sejam parte do núcleo dos meios de aprendizado (ex. artigos sobre [HTML](/pt-BR/docs/Learn/HTML) ou [CSS](/pt-BR/docs/Learn/CSS).) Estes artigos foram feitos para funcionar de forma independente.
+Esta sessão de Área de Aprendizado é voltada para dar respostas à questões comuns que possam surgir, que não necessariamente sejam parte do núcleo dos meios de aprendizado (ex. artigos sobre [HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d) ou [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics).) Estes artigos foram feitos para funcionar de forma independente.
 
 ## Questões sobre HTML e CSS
 
-Leia [Use HTML to solve common problems](/pt-BR/docs/Learn/HTML/Howto) (em inglês) e [Use CSS to solve common problems](/pt-BR/docs/Learn/CSS/Howto) (em inglês) para solução de problemas comuns com HTML/CSS.
+Leia [Use HTML to solve common problems](/pt-BR/docs/Learn_web_development/Howto/Solve_HTML_problems) (em inglês) e [Use CSS to solve common problems](/pt-BR/docs/Learn/CSS/Howto) (em inglês) para solução de problemas comuns com HTML/CSS.
 
 ## Como a Web funciona?
 
 Esta seção cobre a mecânica da Web —questões relacionadas a conhecimentos gerais sobre o ecossistema da Web e como ele funciona.
 
-- [Como a Internet funciona?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Como a Internet funciona?](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 
   - : A **Internet** é a espinha dorsal da Web, a infraestrutura técnica que faz a Web possível. Mais basicamente, a Internet é uma gigantesca rede de computadores que se comunicam juntos. Este artigo discute o básico sobre o funcionamento da Internet.
 
-- [Qual a diferença entre webpage, website, web server, and search engine?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
+- [Qual a diferença entre webpage, website, web server, and search engine?](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
 
   - : Nesse artigo nós descrevemos vários conceitos relaciona a Web: webpages, websites, Web servers, and search engines. Esses termos são frequentemente confundidos por iniciantes na web, ou são utizados de maneira incorreta. Vamos entender o que eles realmente significam!
 
@@ -26,15 +26,15 @@ Esta seção cobre a mecânica da Web —questões relacionadas a conhecimentos 
 
   - : Com {{Glossary("Hypertext")}} e {{Glossary("HTTP")}}, URL é um conceito-chave quando se trata da Internet. Ele é um mecanimos utilizado pelos {{Glossary("Navegador","navegadores")}} para recuperar qualquer recurso publicado na Web
 
-- [O que é um domain name?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [O que é um domain name?](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)
 
   - : Domain names eles são uma parte essencial para a infraestrutura da internet. Eles deixam o endereço legivel por humanos para qualquer Web server disponivel na internet.
 
-- [O que é um web server?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
+- [O que é um web server?](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
 
   - : O termo "Web server" pode se referir ao hardware ou ao software que serve sites para clientes na Web — ou ambos deles trabalhando juntos. Nesse artigo nós veremos como Web servers funcionam, e porque eles são importantes.
 
-- [O que são hyperlinks?](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+- [O que são hyperlinks?](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)
 
   - : Nesse artigo, nós veremos do que são hypelinks e porque eles importam.
 
@@ -46,7 +46,7 @@ Questions related to the tools/software you can use to build websites.
 
   - : When you're launching a website, you may spend nothing or your costs may go through the roof. In this article we discuss how much everything costs and what you get for what you pay (or don't pay).
 
-- [What software do I need to build a website?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- [What software do I need to build a website?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
 
   - : In this article we explain which software components you need when you're editing, uploading, or viewing a website.
 
@@ -54,11 +54,11 @@ Questions related to the tools/software you can use to build websites.
 
   - : In this article we highlight some things to think about when choosing and installing a text editor for web development.
 
-- [How do I set up a basic working environment?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+- [How do I set up a basic working environment?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)
 
   - : When working on a web project, you'll want to test it locally before you show it to the world. Some types of code require a server to test, and in this article we'll show you how to set one up. We'll also cover how to put a scalable structure in place so that your files stay organized even when your project gets big.
 
-- [What are browser developer tools?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools)
+- [What are browser developer tools?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)
 
   - : Every browser features a set of devtools for debugging HTML, CSS, and other web code. This article explains how to use the basic functions of your browser's devtools.
 
@@ -66,7 +66,7 @@ Questions related to the tools/software you can use to build websites.
 
   - : So you've published your website online — very good! But are you sure it works properly? This article provides some basic troubleshooting steps.
 
-- [How do you upload files to a web server?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)
+- [How do you upload files to a web server?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)
 
   - : This article shows how to publish your site online with [FTP](/pt-BR/docs/Glossary/FTP) tools — one fo the most common ways to get a website online so others can access it from their computers.
 
@@ -74,7 +74,7 @@ Questions related to the tools/software you can use to build websites.
 
   - : This article provides a basic guide to publishing content using GitHub's gh-pages feature.
 
-- [How do you host your website on Google App Engine?](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
+- [How do you host your website on Google App Engine?](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine)
 
   - : Looking for a place to host your website? Here's a step-by-step guide to hosting your website on Google App Engine.
 
@@ -86,7 +86,7 @@ Questions related to the tools/software you can use to build websites.
 
 This section lists questions related to aesthetics, page structure, accessibility techniques, etc.
 
-- [How do I start to design my website?](/pt-BR/docs/Learn/Common_questions/Design_and_accessibility/Thinking_before_coding)
+- [How do I start to design my website?](/pt-BR/docs/Learn_web_development/Howto/Design_and_accessibility/Thinking_before_coding)
 
   - : This article covers the all-important first step of every project: define what you want to accomplish with it.
 

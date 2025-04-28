@@ -3,7 +3,7 @@ title: HTML5 的输入（input）类型
 slug: Learn_web_development/Extensions/Forms/HTML5_input_types
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms/Other_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在[前一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)中我们学习了 {{htmlelement("input")}} 元素，涵盖了自 HTML 早期以来可用的 `type` 属性的原始值。现在我们来具体看一看较新的表单控件，包含一些新添加至 HTML 5 的 input 类型，以允许收集更多特定类型的数据。
 

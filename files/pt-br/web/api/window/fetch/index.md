@@ -18,7 +18,7 @@ similar). Uma promessa {{domxref("fetch()")}} _não_ rejeita erros HTTP (`404`, 
 `then()` deve checar as propriedades {{domxref("Response.ok")}} e/ou
 {{domxref("Response.status")}}.
 
-O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
+O método `fetch()` é controlado pela diretiva `connect-src` da [Content Security Policy](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) em vez da diretiva dos recursos que está recuperando.
 
 > [!NOTE]
 > Os parâmetros do método `fetch()` são idênticos
@@ -50,7 +50,7 @@ const fetchResponsePromise = fetch(resource [, init])
         (Este comportamento foi corrigido no Firefox 65 — consulte [Erro do Firefox 1508661](https://bugzil.la/1508661)).
     - `headers`
       - : Qualquer cabeçalho que você queira adicionar à sua requisição, contido dentro de um objeto
-        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_header_name).
+        {{domxref("Headers")}} ou um objeto literal com valores {{jsxref("String")}}. Observe que [alguns nomes são proibidos](/pt-BR/docs/Glossary/Forbidden_request_header).
     - `body`
       - : Qualquer corpo que você queira adicionar à sua requisição: podendo ser um
         {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}},
@@ -62,7 +62,7 @@ const fetchResponsePromise = fetch(resource [, init])
         `no-cors`, ou `same-origin`.
     - `credentials`
 
-      - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
+      - : Controla o que os navegadores fazem com as credenciais ([cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies), entradas de [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication), e certificados de cliente TLS). Deve ser uma das seguintes strings:
 
         - `omit`
           - : Diz aos navegadores para excluir credenciais da requisição, e ignorar quaisquer credenciais enviadas de volta na resposta (por exemplo, qualquer cabeçalho {{HTTPHeader("Set-Cookie")}}).
@@ -73,10 +73,10 @@ const fetchResponsePromise = fetch(resource [, init])
           - : Diz aos navegadores para incluir credenciais em ambas requisições `same-origin` e `cross-origin`, e sempre use as credenciais enviadas de volta nas respostas.
 
             > [!NOTE]
-            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/CORS#preflight_requests_and_credentials).
+            > As credenciais podem ser incluídas em requisições cross-origin simples e "finais", mas não devem ser incluídas em [requisições de comprovação de CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials).
 
     - `cache`
-      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
+      - : Uma string indicando como a requisição vai interagir com o [cache HTTP](/pt-BR/docs/Web/HTTP/Guides/Caching) do navegador. Os valores possíveis, `default`, `no-store`, `reload`, `no-cache`, `force-cache`, e `only-if-cached`, estão documentados no artigo para a propriedade {{domxref("Request/cache", "cache")}} do objeto {{domxref("Request")}}.
     - `redirect`
 
       - : Como lidar com uma resposta `redirect`:
@@ -329,5 +329,5 @@ let myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/pt-BR/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)

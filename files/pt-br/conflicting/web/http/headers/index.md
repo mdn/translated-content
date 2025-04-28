@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Accept-Charset
 
 {{HTTPSidebar}}
 
-O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro `charset=`. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir [fingerprinting](/pt-BR/docs/Web/Privacy/Firefox_tracking_protection).
+O cabeçalho de requisição HTTP **`Accept-Charset`** anuncia quais {{glossary("character encoding", "character encodings")}} o cliente entende. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation), o servidor seleciona uma das codificações, a utiliza, e informa o cliente da sua escolha dentro do cabeçalho de resposta {{HTTPHeader("Content-Type")}}, geralmente em um parâmetro `charset=`. Navegadores geralmente não mandam este cabeçalho, por que o valor padrão para cada recurso geralmente está correto e transmiti-lo iria permitir [fingerprinting](/pt-BR/docs/Web/Privacy/Firefox_tracking_protection).
 
 Se o servidor não pode servir nenhum codificação de caracteres vindo deste cabeçalho de requisição, ele pode teoricamente manda de volta um código de erro {{HTTPStatus("406", "406 Not Acceptable")}}. Mas para uma melhor experiência de usuário, isso raramente é feito e o cabeçalho `Accept-Charset` é ignorado.
 
@@ -68,7 +68,7 @@ Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
 
 ## Veja também
 
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) HTTP
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation) HTTP
 - [Nunca mais Accept-Charset](https://hsivonen.fi/accept-charset/)
 - Cabeçalho com a resposta do conteúdo de negociação: {{HTTPHeader("Content-Type")}}
 - Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}

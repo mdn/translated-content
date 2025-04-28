@@ -3,7 +3,7 @@ title: Angular 新手入門
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在該看一下 Google 的 Angular 框架了，這是另一個你經常會遇到的前端框架。在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
 

@@ -3,8 +3,6 @@ title: 层叠层
 slug: Learn_web_development/Core/Styling_basics/Cascade_layers
 ---
 
-{{LearnSidebar}}
-
 这一课的目的是向你介绍[层叠层](/zh-CN/docs/Web/CSS/@layer)，这是一个更高级的特性，它建立在 [CSS 层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)和 [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)的基本概念之上。
 
 如果你是 CSS 的新手，刚开始可能会觉得这部分的内容与本课程的其他部分相比不太相关，而且有些学术化。然而，了解层叠层的基本知识对于你在项目中遇到它们时会非常有帮助。随着你对 CSS 的不断使用，理解层叠层以及如何充分利用它们的功能将能够避免在处理来自不同团队、插件和开发人员的 CSS 代码库时遇到的很多问题。

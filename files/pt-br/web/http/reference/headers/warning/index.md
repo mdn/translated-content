@@ -84,4 +84,4 @@ Warning: 112 - "cache down" "Wed, 21 Oct 2015 07:28:00 GMT"
 ## Veja também
 
 - {{HTTPHeader("Date")}}
-- [Código de resposta de status HTTP](/pt-BR/docs/Web/HTTP/Status)
+- [Código de resposta de status HTTP](/pt-BR/docs/Web/HTTP/Reference/Status)

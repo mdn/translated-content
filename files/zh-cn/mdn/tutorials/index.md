@@ -38,7 +38,7 @@ l10n:
 
 - [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : 表单是 Web 中非常重要的一部分——其提供了网站交互所需的很多功能，例如，注册、登录、发送反馈、购买产品，等等。在这个模块中你会学习如何创建客户端表单。
-- [让 HTML 页面加载快的技巧](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [让 HTML 页面加载快的技巧](/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : 网页优化能为用户提供一个响应更好的站点，能减少 Web 服务器和互联网连接的加载时间。
 
 ## CSS 教程

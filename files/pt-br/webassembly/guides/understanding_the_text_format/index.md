@@ -9,7 +9,7 @@ original_slug: WebAssembly/Understanding_the_text_format
 Para permitir que o WebAssembly seja lido e editado por humanos, existe uma representação textual do formato binário Wasm. Este é um formulário intermediário projetado para ser exposto em editores de texto, ferramentas de desenvolvedor de navegador etc. Este artigo explica como esse formato de texto funciona, em termos de sintaxe bruta, e como ele está relacionado ao bytecode subjacente que ele representa — e os objetos wrapper que representam Wasm em JavaScript.
 
 > [!NOTE]
-> Isso pode ser um exagero se você for um desenvolvedor da Web que deseja apenas carregar um módulo Wasm em uma página e usá-lo em seu código (consulte [Usando a API JavaScript WebAssembly](/pt-BR/docs/WebAssembly/Using_the_JavaScript_API)), mas é mais útil se, por exemplo, você deseja escrever módulos Wasm para otimizar o desempenho de sua biblioteca JavaScript ou criar seu próprio compilador WebAssembly.
+> Isso pode ser um exagero se você for um desenvolvedor da Web que deseja apenas carregar um módulo Wasm em uma página e usá-lo em seu código (consulte [Usando a API JavaScript WebAssembly](/pt-BR/docs/WebAssembly/Guides/Using_the_JavaScript_API)), mas é mais útil se, por exemplo, você deseja escrever módulos Wasm para otimizar o desempenho de sua biblioteca JavaScript ou criar seu próprio compilador WebAssembly.
 
 ## S-expressions
 

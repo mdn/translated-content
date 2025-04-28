@@ -2,7 +2,7 @@
 title: Web 遊戲開發介紹
 slug: Games/Introduction
 l10n:
-  sourceCommit: e72890bafe775a38620def9a74beda8cf9c47411
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{GamesSidebar}}

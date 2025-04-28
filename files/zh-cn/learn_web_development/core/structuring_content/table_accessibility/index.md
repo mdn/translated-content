@@ -3,7 +3,7 @@ title: HTML 表格进阶特性和无障碍
 slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 
 本模块的第二篇文章中，我们来看一下 HTML 表格更进阶的特性，比如表格的标题、摘要，以及将表格中的各行分组成表头、表体和表尾三部分，以及为视力受损的用户提供表格无障碍。
 

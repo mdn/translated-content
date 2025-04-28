@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Vary
 
 {{HTTPSidebar}}
 
-O cabeçalho de resposta HTTP **`Vary`** determina como corresponder futuros cabeçalhos de requisição para decidir se uma resposta cacheada pode ser usada ao invés de solicitar uma nova do servidor de origem. Ele é usado pelo servidor para indicar quais cabeçalhos ele utilizou quando selecionando a representação do recurso em um algoritmo de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
+O cabeçalho de resposta HTTP **`Vary`** determina como corresponder futuros cabeçalhos de requisição para decidir se uma resposta cacheada pode ser usada ao invés de solicitar uma nova do servidor de origem. Ele é usado pelo servidor para indicar quais cabeçalhos ele utilizou quando selecionando a representação do recurso em um algoritmo de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation).
 
 O cabeçalho `Vary` deve ser colocado em uma resposta {{HTTPStatus("304")}} `Not Modified` exatamente como seria colocado em uma resposta {{HTTPStatus("200")}} `OK` equivalente.
 
@@ -65,4 +65,4 @@ Vary: User-Agent
 
 - [Entendendo o cabeçalho Vary (Understanding The Vary Header) - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Melhores práticas quando utilizando o cabeçalho Vary (Best Practices for Using the Vary Header) – fastly.com](https://www.fastly.com/blog/best-practices-for-using-the-vary-header)
-- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation)
+- [Negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation)

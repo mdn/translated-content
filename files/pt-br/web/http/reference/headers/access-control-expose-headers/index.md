@@ -42,9 +42,9 @@ Access-Control-Expose-Headers: *
 ## Diretivas
 
 - \<nome-do-cabeçalho>
-  - : Uma lista dos cabeçalhos expostos contendo zero ou mais [nomes de cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) além dos {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} que o recurso pode usar e expor.
+  - : Uma lista dos cabeçalhos expostos contendo zero ou mais [nomes de cabeçalhos](/pt-BR/docs/Web/HTTP/Reference/Headers) além dos {{Glossary("CORS-safelisted_request_header", "CORS-safelisted request headers")}} que o recurso pode usar e expor.
 - `*` (coringa)
-  - : O valor "`*`" conta somente como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, ele é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica.
+  - : O valor "`*`" conta somente como um valor coringa para requisições sem credenciais (requisições sem [cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies) ou informação de autenticação HTTP). Em requisições com credenciais, ele é tratado como o nome de cabeçalho literal "`*`" sem qualquer semântica.
     Note que o cabeçalho {{HTTPHeader("Authorization")}} não pode ter valor coringa e sempre precisa ser listado explicitamente.
 
 ## Exemplos

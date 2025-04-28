@@ -3,9 +3,9 @@ title: 與各式各樣檔案打交道
 slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
 
-一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容......等。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
+一個網站會包含許多檔案: 文字內容、程式碼、樣式表、影音內容……。每當你建立一個網站時，你需要將這些檔案在你的電腦上合理架構好。以確保它們能夠互相溝通，並讓內容正常顯示。然後你接著才能[將你的網站發佈上線](/zh-TW/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)。本篇文章將探討你應該注意的一些議題，以便讓你能夠為你的網站設定好合理的檔案架構。
 
 ## 你的網站在哪裡?
 
@@ -61,7 +61,7 @@ slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 
 ![A screenshot of our basic website showing just the firefox logo - a flaming fox wrapping the world](website-screenshot.png)
 
-一些有關路徑的規則:
+### 檔案路徑的一般規則
 
 - 要連結一個目標檔案到在同一個目錄下的 HTML 檔案，只需要檔案名稱就可以了。例如 `my-image.jpg`。
 - 為了要參照到在子目錄下的檔案，在路徑前面加上該目錄的名稱，並接著加上一個斜線(/)。例如： `subdirectory/my-image.jpg`.
@@ -72,11 +72,5 @@ slug: Learn_web_development/Getting_started/Environment_setup/Dealing_with_files
 
 > [!NOTE]
 > Windows 的檔案系統會傾向使用反斜線(\\)，而非斜線(/)。例如 `C:\windows`. 這並沒有關係，即使你是在 Windows 上開發網站，你仍然應該在程式碼中使用斜線(/)。
-
-## 還有什麼需要被完成的?
-
-目前先這樣吧。你的資料夾裡面現在應該長得像這樣：
-
-![A file structure in mac os x finder, showing an images folder with an image in, empty scripts and styles folders, and an index.html file](file-structure.png)
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

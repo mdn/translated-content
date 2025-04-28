@@ -531,7 +531,7 @@ A `Promise.all()` rejeita quando qualquer uma das promises de entrada é rejeita
 
 ## Async/await em métodos de classe
 
-Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
+Como nota final, antes de prosseguirmos, você pode até adicionar `async` na frente de métodos de classe / objeto para fazê-los retornar promises, e `await` promises dentro deles. Dê uma olhada no artigo [Código de classe ES que vimos em nosso JavaScript orientado a objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript#ecmascript_2015_classes). em seguida, olhe para nossa versão modificada com um método `async`:
 
 ```js
 class Person {
@@ -578,7 +578,7 @@ E aí está - async/await fornecem uma maneira agradável e simplificada de escr
 ## Neste módulo
 
 - [Conceitos gerais da programação assíncrona](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introdução ao JavaScript Async](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Introdução ao JavaScript Async](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Introducing)
 - [Timeouts e intervalos](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Programação elegante com Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
-- [Escolhendo a abordagem correta](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [Programação elegante com Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
+- [Escolhendo a abordagem correta](/pt-BR/docs/Learn_web_development/Extensions/Async_JS)

@@ -3,7 +3,7 @@ title: 创建超链接
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超链接非常重要——它们使互联网成为一个*互联的网络*。本文介绍了创建链接所需的语法，并且讨论了链接的最佳实践。
 

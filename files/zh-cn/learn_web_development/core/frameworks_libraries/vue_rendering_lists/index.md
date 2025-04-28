@@ -3,7 +3,7 @@ title: 渲染 Vue 组件列表
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_first_component","Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_first_component","Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在我们已经有了一个可以工作的组件。接下来我们将添加更多的 `ToDoItem` 组件到我们的应用中。本文我们会添加一系列待办事项到 `App.vue` 组件并使用 `v-for` 指令遍历它们，将它们的每一项展示在 `ToDoItem` 组件中。
 
