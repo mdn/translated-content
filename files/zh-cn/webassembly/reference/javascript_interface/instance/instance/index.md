@@ -5,10 +5,10 @@ l10n:
   sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.Instance()`** 构造函数创建一个新的 `Instance` 对象，该对象是 [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个有状态、可执行的实例。
+**`WebAssembly.Instance()`** 构造函数创建一个新的 `Instance` 对象，该对象是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个有状态、可执行的实例。
 
 > [!WARNING]
-> 因为实例化大模块是很耗时的，当一定要使用同步的实例化时，开发者才使用 `Instance`；在所有其他情况下使用异步的 [`WebAssembly.instantiateStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法。
+> 因为实例化大模块是很耗时的，当一定要使用同步的实例化时，开发者才应该使用 `Instance`；在所有其他情况下使用异步的 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法。
 
 ## 语法
 
@@ -19,21 +19,21 @@ new WebAssembly.Instance(module, importObject)
 ### 参数
 
 - `module`
-  - : 要实例化的 [`WebAssembly.Module`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
+  - : 要实例化的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
 - `importObject` {{optional_inline}}
-  - : 一个对象，包含被导入到新创建的 `Instance` 的值，例如：函数或 [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象。模块的每一个申明的导入必须有一个匹配的属性，否则会抛出 [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
+  - : 一个对象，包含的是被导入到新创建的 `Instance` 的值，例如：函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象。`module` 中每一个申明的导入必须有一个匹配的属性，否则会抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
 
 ### 异常
 
-- 如果参数的类型或者结构不正确，抛出 {{jsxref("TypeError")}}。
-- 如果操作失败，抛出 [`WebAssembly.CompileError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError)、[`WebAssembly.RuntimeError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 其中的一个，取决于失败的原因。
-- 一些浏览器可能会抛出 {{jsxref("RangeError")}}，因为在 UI 线程上的大缓冲区上执行 Wasm 的编译和初始化。
+- 如果参数的类型或者结构不正确，则抛出 {{jsxref("TypeError")}}。
+- 如果操作失败，则抛出 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)、[`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 其中的一个，具体取决于失败的原因。
+- 一些浏览器可能会抛出 {{jsxref("RangeError")}}，因为它们禁止在 UI 线程上的大缓冲区上进行 Wasm 的编译和初始化。
 
 ## 示例
 
 ### 同步地实例化一个 WebAssembly 模块
 
-可以调用 `WebAssembly.Instance()` 同步地实例化一个指定的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
+可以调用 `WebAssembly.Instance()` 构造函数同步地实例化一个指定的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
 
 ```js
 const importObject = {
