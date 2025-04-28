@@ -49,9 +49,9 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : 当事件发生时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 中包含了 "responseHeaders"，则会包含响应标头。
+      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 参数中指定了“responseHeaders”，则会包含响应标头。
 
-    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了“blocking”，事件监听器将返回一个 `BlockingResponse` 对象，并可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了“blocking”，则事件监听器会返回一个 `BlockingResponse` 对象，你可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
@@ -67,7 +67,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
@@ -130,7 +130,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `statusCode`
   - : `integer`。服务器返回的标准 HTTP 状态码。
 - `statusLine`
-  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串 'HTTP/0.9 200 OK'。
+  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串“HTTP/0.9 200 OK”。
 - `tabId`
   - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
@@ -174,7 +174,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 ```js
 let targetPage =
-  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+  "https://developer.mozilla.org/zh-CN/Firefox/Developer_Edition";
 
 // 将新标头添加到原始数组，并返回所有标头。
 function setCookie(e) {
@@ -198,7 +198,7 @@ browser.webRequest.onHeadersReceived.addListener(
 
 ```js
 const targetPage =
-  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+  "https://developer.mozilla.org/zh-CN/Firefox/Developer_Edition";
 
 // 返回一个设置计时器的 Promise。当计时器触发时，使用修改后的响应标头兑现 Promise。
 function setCookieAsync(e) {
