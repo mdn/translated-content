@@ -74,7 +74,7 @@ true !== 1; // true
 null !== undefined; // true
 ```
 
-### Comparing objects
+### 객체 간의 비교
 
 ```js
 const object1 = {
