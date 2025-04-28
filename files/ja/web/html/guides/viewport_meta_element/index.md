@@ -1,9 +1,9 @@
 ---
-title: ビューポートのメタタグ
+title: ビューポートの meta 要素の使用
+short-title: ビューポートの meta 要素
 slug: Web/HTML/Guides/Viewport_meta_element
-original_slug: Web/HTML/Viewport_meta_tag
 l10n:
-  sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -98,4 +98,4 @@ viewport は機能と値のペアをカンマで区切ったリストです。�
 
 ## 関連情報
 
-- 記事: [Android版Chromeで予定されているビューポートのサイズ変更に関する動作変更に備える](https://developer.chrome.com/blog/viewport-resize-behavior/)（英語）
+- 記事: [Android 版 Chrome で予定されているビューポートのサイズ変更に関する動作変更に備える](https://developer.chrome.com/blog/viewport-resize-behavior/)（英語）

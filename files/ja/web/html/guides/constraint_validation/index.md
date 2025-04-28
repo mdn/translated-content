@@ -1,21 +1,29 @@
 ---
-title: 制約検証
+title: HTML フォーム検証と制約検証 API の使用
+short-title: 制約検証
 slug: Web/HTML/Guides/Constraint_validation
-original_slug: Web/HTML/Constraint_validation
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は[制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation) を使用して検査することができます。
+ウェブフォームの作成は常に複雑な作業でした。フォーム自体をマークアップすること自体は簡単ですが、それぞれの入力欄が妥当で一貫しているかどうかをチェックすることはもっと難しく、問題をユーザーに伝えることは頭痛がするかもしれません。[HTML5](/ja/docs/Glossary/HTML5) では、フォームに新しい仕組みが導入されました。 {{ HTMLElement("input") }} 要素に意味を持つ新しい型と、クライアント側でフォームの内容をチェックする作業を簡単にする*制約検証*が追加されました。基本的な、よくある制約は、JavaScript を必要とせずに、新しい属性を設定することでチェックできます。もっと複雑な制約は制約検証 API を使用して検査することができます。
 
 これらの概念の基本的な入門 (サンプル付き) は、[フォーム検証チュートリアル](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)をご覧ください。
 
 > [!NOTE]
-> HTML5 の制約検証は、*サーバー側*での検証の必要性をなくす訳ではありません。不正なフォームのリクエストは減少すると思われますが、不正なリクエストはまだ互換性のないブラウザー（例えば、HTML5 や JavaScript に対応していないブラウザー）から送られたり、ウェブアプリケーションをだまそうとする悪意のある人から送られたりする可能性があります。従って、HTML4 の時と同様、クライアント側で行われている検証と一貫性のある方法で、サーバー側でも入力の制約を検証する必要があります。
+> HTML の制約検証は、サーバー側での検証の必要性をなくす訳ではありません。不正なフォームのリクエストははるかに少なくなることが予想されますが、不正なリクエストはさまざまな方法で送信される可能性があります。
+>
+> - ブラウザーの開発者ツールを使用して HTML を変更する。
+> - フォームを使用せずに、 HTTP リクエストを手作業で作成する。
+> - プログラムでコンテンツをフォームに書き込むことで（制約検証によっては、ユーザー入力に対してのみ実行され、 JavaScript を使用してフォームフィールドの値を設定した場合は実行されません）。
+>
+> したがって、クライアント側で行われていることと一致するように、サーバー側でフォームのデータを常に検証する必要があります。
 
 ## 組み込みの基本的な制約
 
-HTML5 では、基本的な制約は 2 通りの方法で定義されます。
+HTML では、基本的な制約は 2 通りの方法で定義されます。
 
 - {{ HTMLElement("input") }} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に意味的に最も適切な値を選択する。例えば `email` を選択することで、値が妥当なメールアドレスであるかどうかをチェックする制約が自動的に作成されます。
 - 検証関連属性を設定することで、基本的な制約を簡単な方法で、JavaScript の必要なく記述できます。
@@ -50,19 +58,26 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
   <tbody>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
+        <code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code
+        >
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>
       </td>
       <td>
-        <a href="/ja/docs/Web/JavaScript/Guide/Regular_Expressions">JavaScript 正規表現</a>
-        （<a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm">ECMAScript 5</a> で <code>global</code>, <code>ignoreCase</code>, <code>multiline</code> フラグが<em>無効</em>でコンパイルされたもの）
+        <a href="/ja/docs/Web/JavaScript/Guide/Regular_expressions"
+          >JavaScript 正規表現</a
+        >
+        （{{jsxref("RegExp.global", "global")}}、{{jsxref("RegExp.ignoreCase", "ignoreCase")}}、
+        {{jsxref("RegExp.multiline", "multiline")}} フラグが<em>無効</em>でコンパイルされたもの）
       </td>
       <td>値がパターンに一致する必要がある。</td>
       <td>
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/patternMismatch">patternMismatch</a></code></strong>
+        <a href="/ja/docs/Web/API/ValidityState/patternMismatch"
+          ><strong><code>patternMismatch</code></strong></a
+        >
         制約違反
       </td>
     </tr>
@@ -74,7 +89,13 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
       <td>有効な数値</td>
       <td rowspan="3">値がその値以上であること。</td>
       <td rowspan="3">
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/rangeUnderflow">rangeUnderflow</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/rangeUnderflow"
+              >rangeUnderflow</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
@@ -84,7 +105,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
     <td>有効な日付と時刻</td>
     </tr>
@@ -96,7 +117,13 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
       <td>有効な数値</td>
       <td rowspan="3">値がその値以下であること。</td>
       <td rowspan="3">
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/rangeOverflow">rangeOverflow</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/rangeOverflow"
+              >rangeOverflow</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
@@ -106,18 +133,20 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>有効な日付と時刻</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/required">required</a></code>
+        <code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/required">required</a></code
+        >
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
         <code>tel</code>, <code>email</code>, <code>password</code>,
-        <code>date</code>, <code>datetime</code>, <code>datetime-local</code>,
+        <code>date</code>, <code>datetime-local</code>,
         <code>month</code>, <code>week</code>, <code>time</code>,
         <code>number</code>, <code>checkbox</code>, <code>radio</code>,
         <code>file</code> および {{ HTMLElement("select") }} と {{ HTMLElement("textarea") }} 要素にも
@@ -125,9 +154,15 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
       <td>
         <em>なし</em>。論理属性のため、存在すれば <em>true</em>、存在しなければ <em>false</em> を意味する。
       </td>
-      <td>値は必須 (設定された場合)。</td>
+      <td>値は必須（設定された場合）。</td>
       <td>
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/valueMissing">valueMissing</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/valueMissing"
+              >valueMissing</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
@@ -141,7 +176,13 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
         step がリテラル値 <code>any</code> 以外に設定されていた場合、値は <strong>min</strong> + step の整数倍である必要がある。
       </td>
       <td rowspan="5">
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/stepMismatch">stepMismatch</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/stepMismatch"
+              >stepMismatch</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
@@ -155,7 +196,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code>datetime</code>, <code>datetime-local</code>, <code>time</code>
+        <code>datetime-local</code>, <code>time</code>
       </td>
       <td>秒の整数値</td>
     </tr>
@@ -165,7 +206,11 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/minlength">minlength</a></code>
+        <code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/minlength"
+            >minlength</a
+          ></code
+        >
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
@@ -177,13 +222,23 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
         空でない場合、文字数 (コードポイント数) は属性値より少なくなってはならない。 {{ HTMLElement("textarea") }} では、改行はすべて (CRLF の組ではなく) 1 文字に正規化される。
       </td>
       <td>
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/tooShort">tooShort</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/tooShort"
+              >tooShort</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Reference/Attributes/maxlength"><code>maxlength</code></a>
+        <code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/maxlength"
+            >maxlength</a
+          ></code
+        >
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
@@ -195,7 +250,13 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
         文字数 (コードポイント数) が属性値を超えてはいけない。
       </td>
       <td>
-        <strong><code><a href="/ja/docs/Web/API/ValidityState/tooLong">tooLong</a></code></strong>
+        <strong
+          ><code
+            ><a href="/ja/docs/Web/API/ValidityState/tooLong"
+              >tooLong</a
+            ></code
+          ></strong
+        >
         制約違反
       </td>
     </tr>
@@ -216,6 +277,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
 >
 > - [`novalidate`](/ja/docs/Web/HTML/Reference/Elements/form#novalidate) 属性が {{ HTMLElement("form") }} 要素に設定されている場合、制約の*対話的*な検証は行われません。
 > - `submit()` メソッドを [`HTMLFormElement`](/ja/docs/Web/API/HTMLFormElement) インターフェイスで呼び出しても、制約検証は行われません。言い換えれば、このメソッドは制約を満たさなくてもフォームデータをサーバーに送信します。代わりに送信ボタンの `click()` メソッドを呼び出してください。
+> - `minlength` および `maxlength` 制約は、ユーザーが入力した値についてのみ検証されます。プログラムで値が設定された場合、 `checkValidity()` または `reportValidity()` を明示的に呼び出しても、これらの制約は検証されません。
 
 ## 制約検証 API を使用した複雑な制約
 
@@ -234,10 +296,10 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 
 ```html
 <form>
-  <label for="ZIP">郵便番号 : </label>
-  <input type="text" id="ZIP" />
-  <label for="Country">国 : </label>
-  <select id="Country">
+  <label for="postal-code">郵便番号: </label>
+  <input type="text" id="postal-code" />
+  <label for="country">国: </label>
+  <select id="country">
     <option value="ch">スイス</option>
     <option value="fr">フランス</option>
     <option value="de">ドイツ</option>
@@ -254,7 +316,7 @@ JavaScript と制約 API を使用すると、より複雑な制約を実装す�
 まず、自分自身の制約をチェックする関数を書きます。
 
 ```js
-function checkZIP() {
+function checkPostalCode() {
   // それぞれの国で、郵便番号が従うべきパターンを定義する
   var constraints = {
     ch: [
@@ -276,23 +338,23 @@ function checkZIP() {
   };
 
   // 国 ID を読む
-  var country = document.getElementById("Country").value;
+  const country = document.getElementById("country").value;
 
   // NPA フィールドを取得
-  var ZIPField = document.getElementById("ZIP");
+  const postalCodeField = document.getElementById("postal-code");
 
   // 制約チェッカーを構築
-  var constraint = new RegExp(constraints[country][0], "");
+  const constraint = new RegExp(constraints[country][0], "");
   console.log(constraint);
 
   // チェックする
-  if (constraint.test(ZIPField.value)) {
-    // 郵便番号は制約に従っていることを ConstraintAPI を使って伝える
-    ZIPField.setCustomValidity("");
+  if (constraint.test(postalCodeField.value)) {
+    // 郵便番号は制約に従っていることを制約検証 API を使って伝える
+    postalCodeField.setCustomValidity("");
   } else {
-    // 郵便番号が制約に従っていないことを伝えるために、 ConstraintAPI を使用して
+    // 郵便番号が制約に従っていないことを伝えるために、制約検証 API を使用して
     // この国で必要な書式についてのメッセージを伝える
-    ZIPField.setCustomValidity(constraints[country][1]);
+    postalCodeField.setCustomValidity(constraints[country][1]);
   }
 }
 ```
@@ -300,23 +362,21 @@ function checkZIP() {
 それから、これを {{ HTMLElement("select") }} の **onchange** イベントと {{ HTMLElement("input") }} の **oninput** イベントにリンクします。
 
 ```js
-window.onload = function () {
-  document.getElementById("Country").onchange = checkZIP;
-  document.getElementById("ZIP").oninput = checkZIP;
+window.onload = () => {
+  document.getElementById("country").onchange = checkPostalCode;
+  document.getElementById("postal-code").oninput = checkPostalCode;
 };
 ```
 
-郵便番号の検証の[ライブサンプル](constraint.html)もあります。
-
 ### アップロード前にファイルの大きさを制限
 
-もう一つの一般的な制約は、アップロードされるファイルのサイズを制限することです。ファイルがサーバーに送信される前に、クライアント側でこれをチェックするには、制約検証 API、特に `field.setCustomValidity()` メソッドを、別の JavaScript API、ここでは File API と組み合わせる必要があります。
+もう一つの一般的な制約は、アップロードされるファイルのサイズを制限することです。ファイルがサーバーに送信される前に、クライアント側でこれをチェックするには、制約検証 API、特に `field.setCustomValidity()` メソッドを、別の JavaScript API、ここではファイル API と組み合わせる必要があります。
 
 こちらが HTML 部分です。
 
 ```html
-<label for="FS">75KB よりも小さいファイルを選択してください。 </label>
-<input type="file" id="FS" />
+<label for="fs">75KB よりも小さいファイルを選択してください。</label>
+<input type="file" id="fs" />
 ```
 
 次のように表示されます。
@@ -325,35 +385,32 @@ window.onload = function () {
 
 JavaScript は選択されたファイルを読み込み、 `File.size()` メソッドを使ってそのサイズを取得し、それを（ハードコードされた）制限値と比較し、違反があった場合は Constraint API を呼び出してブラウザーに通知します。
 
-```js
+```js-nolint
 function checkFileSize() {
-  var FS = document.getElementById("FS");
-  var files = FS.files;
+  const fs = document.getElementById("fs");
+  const files = fs.files;
 
-  // If there is (at least) one file selected
+  // 選択されているファイルが（少なくとも） 1 つある場合
   if (files.length > 0) {
-    if (files[0].size > 75 * 1024) {
+    if (files[0].size > 75 * 1000) {
       // 制約をチェック
-      FS.setCustomValidity(
-        "選択されたファイルは 75 kB より大きくてはいけません。",
-      );
+      fs.setCustomValidity("選択されたファイルは 75 kB より大きくてはいけません。");
+      fs.reportValidity();
       return;
     }
   }
-  // No custom constraint violation
-  FS.setCustomValidity("");
+  // カスタム制約違反はない
+  fs.setCustomValidity("");
 }
 ```
 
 最後に、このメソッドを正しいイベントにフックします。
 
 ```js
-window.onload = function () {
-  document.getElementById("FS").onchange = checkFileSize;
+window.onload = () => {
+  document.getElementById("fs").onchange = checkFileSize;
 };
 ```
-
-ファイルサイズの制約検証の[ライブサンプル](fileconstraint.html)を見ることができます。
 
 ## 制約検証の視覚的スタイル
 
@@ -379,7 +436,7 @@ CSS の擬似クラスで、要素の外見を制御することができます�
 
 制約違反のテキストを制御するには、以下の項目が有用です。
 
-- 以下の要素の [element.setCustomValidity(message)](</ja/docs/Learn_web_development/Extensions/Forms/Form_validation#element.setcustomvalidity(message)>) メソッド
+- 以下の要素の `setCustomValidity(message)` メソッド
 
   - {{HTMLElement("fieldset")}} メモ: fieldset 要素にカスタム検証メッセージを設定しても、多くのブラウザーでは送信が抑止できません。
   - {{HTMLElement("input")}}
@@ -388,4 +445,4 @@ CSS の擬似クラスで、要素の外見を制御することができます�
   - 送信ボタン（{{HTMLElement("button")}} 要素の `submit` 型、または `input` 要素の {{HTMLElement("input/submit", "submit")}} 型。それ以外のボタンは制約検証の対象にはなりません。
   - {{HTMLElement("textarea")}}
 
-- [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の [validity](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation#validity) プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。
+- [`ValidityState`](/ja/docs/Web/API/ValidityState) インターフェイスは、上記の要素型の `validity` プロパティによって返されるオブジェクトを説明します。入力された値が無効になる可能性がある様々な方法を表しています。これらを合わせると、要素の値が有効でない場合に、なぜ検証に失敗するのかを説明することができます。
