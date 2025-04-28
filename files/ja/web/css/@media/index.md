@@ -132,7 +132,7 @@ _`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェン�
   - : ビューポートの向き。
 - {{cssxref("@media/overflow-block", "overflow-block")}}
   - : ビューポートをブロック軸方向にあふれたコンテンツを出力機器がどのように扱うか。
-   メディアクエリーレベル 4 で追加。
+    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/overflow-inline", "overflow-inline")}}
   - : ビューポートをインライン軸方向にあふれたコンテンツがスクロールできるか。
    メディアクエリーレベル 4 で追加。
