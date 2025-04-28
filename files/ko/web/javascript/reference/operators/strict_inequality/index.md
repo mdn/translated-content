@@ -2,7 +2,7 @@
 title: 불일치 연산자 (!==)
 slug: Web/JavaScript/Reference/Operators/Strict_inequality
 l10n:
-  sourceCommit: 03f6c6d1023c9a71ade855fd5536444a5035616e
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{jsSidebar("Operators")}}
