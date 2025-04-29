@@ -45,7 +45,7 @@ l10n:
   - : 包含指南、檢查清單、工具等等。
 - [Web 無障礙評估工具列表](https://www.w3.org/WAI/ER/tools/)
   - : 包含 Web 無障礙評估工具列表。
-- [學習無障礙 Web 設計](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN 學習夥伴_](zh-TW/docs/MDN/Writing_guidelines/Learning_content#合作夥伴連結與嵌入)</sup>
+- [學習無障礙 Web 設計](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN 學習夥伴_](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#合作夥伴連結與嵌入)</sup>
   - : [Scrimba](https://scrimba.com/?via=mdn) 的*學習無障礙 Web 設計*課程教你如何透過解決互動式挑戰和修復真實世界的網站來撰寫無障礙 HTML。
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

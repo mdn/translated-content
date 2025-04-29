@@ -79,7 +79,7 @@ l10n:
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾]https://privacysandbox.google.com/private-advertising/protected-audience)或[共享存儲](https://privacysandbox.google.com/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://privacysandbox.google.com/private-advertising/protected-audience)或[共享存儲](https://privacysandbox.google.com/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
 
 以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
 
