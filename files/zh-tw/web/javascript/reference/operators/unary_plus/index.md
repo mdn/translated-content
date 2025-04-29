@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**一元正號（`+`）** 運算子會放在運算元前面，並回傳其運算元，但如果運算元不是數字，則會嘗試[將其轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)。
+**一元正號（`+`）**運算子會放在運算元前面，並回傳其運算元，但如果運算元不是數字，則會嘗試[將其轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)。
 
 {{InteractiveExample("JavaScript Demo: Unary plus (+) operator", "taller")}}
 
@@ -44,7 +44,7 @@ console.log(+"hello");
 
 雖然一元負號（`-`）也可以轉換非數字型別，但一元正號是將某個值轉換為數字最快且最推薦的方式，因為它不會對數字執行其他操作。
 
-一元正號執行的步驟與大多數內建方法預期數字時所使用的[數字轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)完全相同。它可以轉換整數和浮點數的字串表示，以及非字串值 `true`、`false` 和 `null`。支援十進位和十六進位（以 `0x` 為前綴）的整數格式。也支援負數（但十六進位不支援負數）。如果無法解析特定值，則會回傳 {{jsxref("NaN")}}。與其他可同時處理數字與 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 的算術運算子不同，對 BigInt 值使用 `+` 運算子會拋出 {{jsxref("TypeError")}}。
+一元正號執行的步驟與大多數內建方法預期數字時所使用的[數字轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)完全相同。它可以轉換整數和浮點數的字串表示，以及非字串值 `true`、`false` 和 `null`。支援十進位和十六進位（以 `0x` 為前綴）的整數格式。也支援負數（但十六進位不支援負數）。如果無法解析特定值，則會回傳 {{jsxref("NaN")}}。與其他可同時處理數字與 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 的算術運算子不同，對 BigInt 值使用 `+` 運算子會拋出 {{jsxref("TypeError")}}。
 
 ## 範例
 
@@ -68,7 +68,7 @@ console.log(+y);
 +null  // 0
 +[]    // 0
 +function (val) { return val; } // NaN
-+1n    // 拋出 TypeError：無法將 BigInt 值轉換為數字
++1n    // throws TypeError: Cannot convert BigInt value to number
 ```
 
 ## 規範
