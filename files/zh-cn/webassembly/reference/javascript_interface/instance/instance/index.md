@@ -2,7 +2,7 @@
 title: WebAssembly.Instance() 构造函数
 slug: WebAssembly/Reference/JavaScript_interface/Instance/Instance
 l10n:
-  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 **`WebAssembly.Instance()`** 构造函数创建一个新的 `Instance` 对象，该对象是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个有状态、可执行的实例。
