@@ -8,7 +8,7 @@ l10n:
 {{APIRef("HTML DOM")}}
 
 {{DOMxRef("HTMLElement")}} 인터페이스의 **`dataset`** 읽기 전용 속성은
-요소의 [사용자 데이터 특성](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*)
+요소의 [사용자 데이터 특성](/ko/docs/Web/HTML/Reference/Global_attributes/data-*)
 (`data-*`)에 대한 읽기/쓰기 접근을 제공합니다. 이 속성은 각 `data-*` 특성에 대해 문자열 맵
 ({{domxref("DOMStringMap")}})을 노출합니다.
 
@@ -34,7 +34,7 @@ HTML `data-*` 특성과 이에 대응하는 DOM
 HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션에서 더 자세하게 다루고 있습니다.
 
 하단 정보에와 더불어, HTML 데이터 특성을 사용하는 방법에 대한
-[데이터 특성 사용하기](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 안내서를 확인할 수 있습니다.
+[데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 안내서를 확인할 수 있습니다.
 
 ### 이름 변환
 
@@ -72,9 +72,9 @@ HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션�
   설정하거나 접근할 수 있습니다. `element.dataset.keyname`
 - 특성은 대괄호 문법을 사용하여 설정하거나 접근할 수 있습니다.
   `element.dataset['keyname']`
-- [`in` 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/in)를 사용하여 주어진
+- [`in` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/in)를 사용하여 주어진
   특성이 존재하는지 확인할 수 있습니다.
-  `'keyname' in element.dataset` 이는 `dataset`의 [프로토타입 체인](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 탐색함으로, 외부코드가 프로토타입 체인을 오염시키는 경우 위험할 수 있습니다. 대안으로는, {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}} 또는 `element.dataset.keyname !== undefined`와 같은 방법이 있습니다.
+  `'keyname' in element.dataset` 이는 `dataset`의 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 탐색함으로, 외부코드가 프로토타입 체인을 오염시키는 경우 위험할 수 있습니다. 대안으로는, {{jsxref("Object/hasOwn", "Object.hasOwn(element.dataset, 'keyname')")}} 또는 `element.dataset.keyname !== undefined`와 같은 방법이 있습니다.
 
 ### 값 설정하기
 
@@ -82,7 +82,7 @@ HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션�
   예를 들어, `element.dataset.example = null`은
   `data-example="null"`로 변환됩니다.
 
-- 특성을 제거하려면, [`delete` 연산자](/en-US/docs/Web/JavaScript/Reference/Operators/delete)를 사용할 수 있습니다. `delete element.dataset.keyname`.
+- 특성을 제거하려면, [`delete` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/delete)를 사용할 수 있습니다. `delete element.dataset.keyname`.
 
 ## 값
 
@@ -130,7 +130,7 @@ if (el.dataset.someDataAttr === undefined) {
 
 ## 같이 보기
 
-- HTML [`data-*`](/en-US/docs/Web/HTML/Reference/Global_attributes/data-*) 클래스
+- HTML [`data-*`](/ko/docs/Web/HTML/Reference/Global_attributes/data-*) 클래스
   전역 특성
-- [데이터 특성 사용하기](/en-US/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}
