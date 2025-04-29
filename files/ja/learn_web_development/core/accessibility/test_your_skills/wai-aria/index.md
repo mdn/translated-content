@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: WAI-ARIA"
-slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
+slug: Learn_web_development/Core/Accessibility/Test_your_skills/WAI-ARIA
+original_slug: Learn_web_development/Core/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: 高度なスタイル設定"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
