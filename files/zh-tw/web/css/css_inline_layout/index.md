@@ -35,8 +35,8 @@ l10n:
 
 ## 指南
 
-- [行內格式化內容](/zh-TW/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
-- : 說明行內格式化內容。
+- [行內格式化上下文](/zh-TW/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+  - : 說明格式化上下文。
 
 ## 相關概念
 
