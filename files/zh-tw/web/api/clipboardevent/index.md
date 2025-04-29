@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Clipboard API")}}
 
-[Clipboard API](/zh-TW/docs/Web/API/Clipboard_API) 的 **`ClipboardEvent`** 介面表示與剪貼簿修改相關的事件，也就是 {{domxref("Element/cut_event", "剪下")}}、{{domxref("Element/copy_event", "複製")}}和{{domxref("Element/paste_event", "貼上")}}事件。
+[Clipboard API](/zh-TW/docs/Web/API/Clipboard_API) 的 **`ClipboardEvent`** 介面表示與剪貼簿修改相關的事件，也就是{{domxref("Element/cut_event", "剪下")}}、{{domxref("Element/copy_event", "複製")}}和{{domxref("Element/paste_event", "貼上")}}事件。
 
 {{InheritanceDiagram}}
 
