@@ -1,6 +1,7 @@
 ---
 title: 測試你的技能：多媒體和嵌入
-slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+original_slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
 ---
 
 這項技能測試的目的是評估你是否了解我們的[視訊和音訊內容](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)以及[從物件到 iframe 的其他嵌入技術](/zh-TW/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)文章。
