@@ -21,7 +21,7 @@ l10n:
 _也繼承自其父類別 {{domxref("Event")}} 的屬性。_
 
 - {{domxref("ClipboardEvent.clipboardData")}} {{ReadOnlyInline}}
-  - : {{domxref("DataTransfer")}} 物件，包含使用者觸發的 {{domxref("Element/cut_event", "剪下")}}、{{domxref("Element/copy_event", "複製")}}或{{domxref("Element/paste_event", "貼上")}}操作所影響的資料及其 MIME 類型。
+  - : {{domxref("DataTransfer")}} 物件，包含使用者觸發的{{domxref("Element/cut_event", "剪下")}}、{{domxref("Element/copy_event", "複製")}}或{{domxref("Element/paste_event", "貼上")}}操作所影響的資料及其 MIME 類型。
 
 ## 實例方法
 
