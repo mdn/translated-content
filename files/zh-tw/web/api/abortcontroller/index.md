@@ -19,7 +19,7 @@ l10n:
 ## 實例屬性
 
 - {{domxref("AbortController.signal")}} {{ReadOnlyInline}}
-  - : 返回一個 {{domxref("AbortSignal")}} 物件實例，可用於與非同步操作進行通訊或中止操作。
+  - : 回傳一個 {{domxref("AbortSignal")}} 物件實例，可用於與非同步操作進行通訊或中止操作。
 
 ## 實例方法
 
