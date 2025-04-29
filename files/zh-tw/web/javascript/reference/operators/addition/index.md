@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**加法（`+`）** 運算子會產生數值運算元的總和或字串串接的結果。
+**加法（`+`）**運算子會產生數值運算元的總和或字串串接的結果。
 
 {{InteractiveExample("JavaScript Demo: Addition (+) operator")}}
 
@@ -19,7 +19,7 @@ console.log(2 + true);
 // 預期輸出：3
 
 console.log("哈囉 " + "大家");
-// 預期輸出：「哈囉大家」
+// 預期輸出：「哈囉 大家」
 
 console.log(2001 + "：太空漫遊");
 // 預期輸出：「2001：太空漫遊」
@@ -74,9 +74,9 @@ false + false; // 0
 你不能在加法中混用 BigInt 與數字運算元。
 
 ```js example-bad
-1n + 2; // TypeError：不能混用 BigInt 與其他型別，請使用明確轉換
-2 + 1n; // TypeError：不能混用 BigInt 與其他型別，請使用明確轉換
-"1" + 2n; // TypeError：不能混用 BigInt 與其他型別，請使用明確轉換
+1n + 2; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+2 + 1n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
+"1" + 2n; // TypeError: Cannot mix BigInt and other types, use explicit conversions
 ```
 
 若要將 BigInt 與非 BigInt 進行加法，請強制轉換任一運算元：
