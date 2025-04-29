@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: マルチメディアと埋め込み"
-slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+original_slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

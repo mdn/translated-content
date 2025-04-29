@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: スタイル設定の基本"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
