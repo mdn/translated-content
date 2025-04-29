@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: CSS と JavaScript のアクセシビリティ"
-slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
+slug: Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript
+original_slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

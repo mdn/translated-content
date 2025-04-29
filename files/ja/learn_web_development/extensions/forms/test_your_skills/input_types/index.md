@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: HTML5 のコントロール"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

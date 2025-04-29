@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: フォームの構築"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

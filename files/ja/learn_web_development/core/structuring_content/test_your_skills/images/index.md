@@ -1,6 +1,7 @@
 ---
 title: "スキルテスト: HTML 画像"
-slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+original_slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
