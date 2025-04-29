@@ -20,8 +20,7 @@ JavaScript 框架是现代前端开发的重要部分，开发者可以借助这
 
 ## 前提条件
 
-学习客户端框架之前，首先你应扎实掌握核心 web 开发的基础知识——[HTML](/zh-CN/docs/Learn/HTML)，[CSS](/zh-CN/docs/Learn/CSS)，尤其是 [JavaScript](/zh-CN/docs/Learn/JavaScript)。
-
+学习客户端框架之前，首先你应扎实掌握核心 web 开发的基础知识——[HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)，[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics)，尤其是 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting)。
 
 如果你能理解框架底层所采用的基础 web 平台的特性，你的代码将更专业且富有深度，且更容易排除问题。
 
@@ -37,7 +36,7 @@ JavaScript 框架是现代前端开发的重要部分，开发者可以借助这
 > [!NOTE]
 > React 教程最后测试于 2023 年 1 月，基于 React/ReactDOM 18.2.0 和 create-react-app 5.0.1。
 >
-> 如果需要确认你的代码与我们的版本的区别，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react)找到示例 React 应用的完整代码。想要查看实时运行的版本，可访问 <https://mdn.github.io/todo-react-build/>。
+> 如果需要确认你的代码与我们的版本的区别，你可以在我们的 [todo-react 仓库](https://github.com/mdn/todo-react)找到示例 React 应用的完整代码。想要查看实时运行的版本，可访问 <https://mdn.github.io/todo-react/>。
 
 - [1. 开始使用 React](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - : 此章节我们将向 React 打招呼。我们将简要探索其相关背景和使用场景的一些细节，在自己的计算机上设置基本的 React 工具链，并通过创建和运行简单入门的应用，学习 React 在此过程中的工作原理。
