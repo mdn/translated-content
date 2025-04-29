@@ -2,7 +2,7 @@
 title: contain
 slug: Web/CSS/contain
 l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -35,12 +35,11 @@ contain: strict;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="card" id="example-element">
-    <h2>Element with '<code>contain</code>'</h2>
+    <h2>'<code>contain</code>' 付きの要素</h2>
     <p>
-      The Goldfish is a species of domestic fish best known for its bright
-      colors and patterns.
+      金魚は、その鮮やかな色と模様で最もよく知られている観賞魚の一種です。
     </p>
-    <div class="fixed"><p>Fixed right 4px</p></div>
+    <div class="fixed"><p>right 4px に固定</p></div>
   </div>
 </section>
 ```
