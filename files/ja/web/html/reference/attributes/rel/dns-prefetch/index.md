@@ -1,9 +1,8 @@
 ---
-title: rel=dns-prefetch
+title: rel="dns-prefetch"
 slug: Web/HTML/Reference/Attributes/rel/dns-prefetch
-original_slug: Web/HTML/Attributes/rel/dns-prefetch
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
 ---
 
 {{HTMLSidebar}}
