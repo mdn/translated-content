@@ -32,7 +32,7 @@ contain: paint;
 contain: strict;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="card" id="example-element">
     <h2>'<code>contain</code>' 付きの要素</h2>
