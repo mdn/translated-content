@@ -24,7 +24,7 @@ l10n:
 ## 實例方法
 
 - {{domxref("AbortController.abort()")}}
-  - : 在非同步操作完成之前中止該操作。這可以中止[fetch 請求](/zh-TW/docs/Web/API/Window/fetch)、任何回應主體的消耗以及串流。
+  - : 在非同步操作完成之前中止該操作。這可以中止 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)、任何回應主體的消耗以及串流。
 
 ## 範例
 
@@ -35,9 +35,9 @@ l10n:
 
 我們首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 建構子建立一個控制器，然後使用 {{domxref("AbortController.signal")}} 屬性獲取其關聯的 {{domxref("AbortSignal")}} 物件。
 
-當 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)被啟動時，我們將 `AbortSignal` 作為選項的一部分（如下的 `{signal}`）傳遞到請求的選項物件中。這將信號和控制器與 fetch 請求關聯起來，並允許我們通過調用 {{domxref("AbortController.abort()")}} 來中止它，如以下第二個事件監聽器所示。
+當 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)初始化時，我們將 `AbortSignal` 作為選項的一部分（如下的 `{signal}`）傳遞到請求的選項物件中。這將信號和控制器與 fetch 請求關聯起來，並允許我們通過調用 {{domxref("AbortController.abort()")}} 來中止它，如以下第二個事件監聽器所示。
 
-當 `abort()` 被調用時，`fetch()` 的承諾會以名為 `AbortError` 的 `DOMException` 被拒絕。
+當 `abort()` 被調用時，`fetch()` 的 promise 會以名為 `AbortError` 的 `DOMException` 被拒絕。
 
 ```js
 let controller;
@@ -69,7 +69,7 @@ async function fetchVideo() {
 }
 ```
 
-如果在 `fetch()` 呼叫完成後但在回應主體被讀取之前中止請求，那麼嘗試讀取回應主體將會以 `AbortError` 異常被拒絕。
+如果在 `fetch()` 呼叫兌現後但在回應主體被讀取之前中止請求，那麼嘗試讀取回應主體將會以 `AbortError` 例外被拒絕。
 
 ```js
 async function get() {
@@ -99,4 +99,4 @@ async function get() {
 ## 參見
 
 - [Fetch API](/zh-TW/docs/Web/API/Fetch_API)
-- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/) by Jake Archibald
+- [Abortable Fetch](https://developer.chrome.com/blog/abortable-fetch/)，来自 Jake Archibald
