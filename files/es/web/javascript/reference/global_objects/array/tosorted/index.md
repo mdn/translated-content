@@ -19,7 +19,6 @@ toSorted(compareFn)
 
 - `compareFn`
   - : Opcional. Una función que determina el orden de los elementos. Si es omitida, los elementos del array son convetidos en string y ordenados por su valor Unicode. Ver {{jsxref("Array/sort", "sort()")}} para más información.
-  
 ### Valor devuelto
 
 Un nuevo array con sus elementos ordenados de manera ascendente.
