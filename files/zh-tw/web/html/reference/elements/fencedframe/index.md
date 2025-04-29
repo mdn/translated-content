@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -37,7 +37,7 @@ l10n:
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
-- [受保護的受眾 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
+- [受保護的受眾 API](https://privacysandbox.google.com/private-advertising/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -79,7 +79,7 @@ l10n:
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存儲](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾]https://privacysandbox.google.com/private-advertising/protected-audience)或[共享存儲](https://privacysandbox.google.com/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
 
 以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
 
@@ -89,7 +89,7 @@ l10n:
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
+  // … auction configuration
   resolveToConfig: true,
 });
 
@@ -147,9 +147,7 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -170,5 +168,5 @@ frame.config = frameConfig;
 ## 參見
 
 - [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)
+- [在 privacysandbox.google.com 上的圍欄頁框](https://privacysandbox.google.com/private-advertising/fenced-frame)
+- 在 privacysandbox.google.com 上的[隱私沙箱](https://privacysandbox.google.com/)

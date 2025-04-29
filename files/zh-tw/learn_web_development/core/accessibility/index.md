@@ -1,8 +1,8 @@
 ---
-title: 無障礙
+title: Web 上的無障礙
 slug: Learn_web_development/Core/Accessibility
 l10n:
-  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
+  sourceCommit: 427efbee9e0da53517f45420af87a66a2a6b6e19
 ---
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
@@ -45,7 +45,7 @@ l10n:
   - : 包含指南、檢查清單、工具等等。
 - [Web 無障礙評估工具列表](https://www.w3.org/WAI/ER/tools/)
   - : 包含 Web 無障礙評估工具列表。
-- [學習無障礙 Web 設計](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN 學習夥伴_</sup>
-  - : [Scrimba](https://scrimba.com?via=mdn) 的*學習無障礙 Web 設計*課程教你如何透過解決互動式挑戰和修復真實世界的網站來撰寫無障礙 HTML。
+- [學習無障礙 Web 設計](https://scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>[_MDN 學習夥伴_](zh-TW/docs/MDN/Writing_guidelines/Learning_content#合作夥伴連結與嵌入)</sup>
+  - : [Scrimba](https://scrimba.com/?via=mdn) 的*學習無障礙 Web 設計*課程教你如何透過解決互動式挑戰和修復真實世界的網站來撰寫無障礙 HTML。
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
