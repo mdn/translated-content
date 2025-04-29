@@ -19,7 +19,7 @@ break-inside: auto;
 break-inside: avoid;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div>
     <p>

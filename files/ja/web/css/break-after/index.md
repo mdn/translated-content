@@ -19,7 +19,7 @@ break-after: auto;
 break-after: page;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div>
     <p>
