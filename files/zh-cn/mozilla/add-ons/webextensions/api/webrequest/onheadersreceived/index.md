@@ -9,9 +9,9 @@ l10n:
 
 当接收到请求的 HTTP 响应标头时触发。使用此事件可以修改 HTTP 响应标头。
 
-要将响应标头与请求数据的其余部分一起传递到监听器中，请向 `extraInfoSpec` 数组中传入“responseHeaders”。
+要将响应标头与请求数据的其余部分一起传递到监听器中，请向 `extraInfoSpec` 数组中传入 `"responseHeaders"`。
 
-要使用“blocking”，则必须在 manifest.json 中包括[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+要使用 `"blocking"`，则必须在 manifest.json 中包括[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 扩展可能会发出冲突的请求。如果两个扩展监听同一请求的 `onHeadersReceived` 并返回 `responseHeaders` 来设置原始响应中不存在的相同标头（例如 `Set-Cookie`），则只有一个更改会成功。
 
@@ -49,9 +49,9 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : 当事件发生时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 参数中指定了“responseHeaders”，则会包含响应标头。
+      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 参数中指定了 `"responseHeaders"`，则会包含响应标头。
 
-    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了“blocking”，则事件监听器会返回一个 `BlockingResponse` 对象，你可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 `"blocking"`，则事件监听器会返回一个 `BlockingResponse` 对象，你可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
@@ -67,9 +67,9 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
-  - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
+  - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
 
   - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
@@ -107,7 +107,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
       - : `integer`。代理服务器的端口号。
     - `type`
 
-      - : `string`。代理服务器的类型，可能是以下值之一：
+      - : `string`。代理服务器的类型，以下值之一：
 
         - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
         - `"https"`：通过 TLS 连接到代理的 HTTP 代理
@@ -153,8 +153,8 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
     分类标志包括：
 
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
-      - `fingerprinting` 表示域名属于指纹识别和跟踪类别（如广告商构建用户画像）。
-      - `fingerprinting_content` 表示域名仅属指纹识别类别（如支付提供商用于反欺诈）。
+      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
+      - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。
     - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
     - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
     - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
