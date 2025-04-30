@@ -150,11 +150,11 @@ browser.webRequest.onCompleted.hasListener(listener)
 let target = "https://developer.mozilla.org/*";
 
 /*
-e.g.
+例如：
 "https://developer.mozilla.org/zh-CN/"
 200
 
-or:
+或者：
 
 "https://developer.mozilla.org/zh-CN/xfgkdkjdfhs"
 404
