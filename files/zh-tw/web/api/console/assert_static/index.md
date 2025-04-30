@@ -1,8 +1,8 @@
 ---
 title: console：assert() 靜態方法
 slug: Web/API/console/assert_static
-page-type: web-api-static-method
-browser-compat: api.console.assert_static
+l10n:
+  sourceCommit: d0e6d8d712a33b9d3c7a9fb9a8ba85d4dd1b7002
 ---
 
 {{APIRef("Console API")}} {{AvailableInWorkers}}
@@ -28,11 +28,11 @@ console.assert(assertion, msg, subst1, /* …, */ substN)
 - `assertion`
   - : 任何布林運算式。如果斷言為假，主控台會顯示一則通用的斷言失敗訊息。
 - `val1` … `valN`
-  - : 要輸出的 JavaScript 值清單。在顯示通用斷言失敗訊息後，這些值的表示形式會依順序輸出至主控台，訊息與每個值之間會有某種型式的分隔。若 `val1` 是字串，則屬於特殊情況，將在後文說明。
+  - : 要輸出的 JavaScript 值清單。在顯示通用斷言失敗訊息後，這些值的表示形式會依順序輸出至主控台，訊息與每個值之間會有某種型式的分隔。當這些值存在時，輸出的訊息可能會與未提供這些值時有所不同。若 `val1` 是字串，則屬於特殊情況，將在後文說明。
 - `msg`
-  - : 包含零個或多個替代字串的 JavaScript 字串，這些替代字串會依序被 `subst1` 到 `substN` 取代，最多取代至替代字串的數量。系統會將冒號、空格及取代後的字串加到通用斷言訊息後，組成詳細的斷言訊息，並輸出至主控台。關於替代機制的詳細說明，請參見[使用字串替代](/zh-TW/docs/Web/API/console#using_string_substitutions)。
+  - : 包含零個或多個替代字串的 JavaScript 字串，這些替代字串會依序被 `subst1` 到 `substN` 取代，最多取代至替代字串的數量。系統會將冒號、空格及取代後的字串加到通用斷言訊息後，組成詳細的斷言訊息，並輸出至主控台。關於替代機制的詳細說明，請參見[使用字串替代](/zh-TW/docs/Web/API/console#使用字串替代)。
 - `subst1` … `substN`
-  - : 用來取代 `msg` 中替代字串的 JavaScript 值。如果替代值多於替代字串，多出的值會如同沒有格式字串時那樣，直接寫入主控台。
+  - : 用來取代 `msg` 中替代字串的 JavaScript 值。如果替代值多於替代字串，這些多出來的值會在詳細的斷言訊息之後，以與未使用格式字串時相同的方式輸出到主控台。
 
 如需進一步了解，請參見 {{domxref("console")}} 文件中的[輸出文字到主控台](/zh-TW/docs/Web/API/console#outputting_text_to_the_console)。
 
