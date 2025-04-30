@@ -16,7 +16,7 @@ l10n:
 
 如果扩展程序想将公共（例如 HTTPS）URL 重定向到[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，扩展程序的 manifest.json 文件必须包含列出扩展页面的 URL 的 [web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键。
 
-当多个阻塞处理程序修改请求时，只有其中一个修改集会生效。重定向和取消具有相同的优先级。因此，如果你取消了一个请求而有阻塞处理器同时重定向了这一请求，你可能会看到另一个具有相同 `requestId` 的请求再次出现。
+当多个阻塞处理器修改请求时，只有其中一个修改集会生效。重定向和取消具有相同的优先级。因此，如果你取消了一个请求而有阻塞处理器同时重定向了这一请求，你可能会看到另一个具有相同 `requestId` 的请求再次出现。
 
 从 Firefox 52 开始，监听器可以返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 而不是返回 `BlockingResponse`。此 Promise 会兑现为一个 `BlockingResponse`，从而使监听器能够异步处理请求。
 
