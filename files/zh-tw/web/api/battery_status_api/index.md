@@ -10,7 +10,7 @@ l10n:
 **Battery Status API**，更常被稱為 **Battery API**，提供有關系統電池充電狀態的資訊，並允許你透過事件通知來得知電池電量或充電狀態的變化。這可以用來調整應用程式的資源使用，以在電池電量低時減少耗電，或者在電池耗盡前儲存變更以防止資料遺失。
 
 > [!NOTE]
-> 此 API _無法在_ [Web Workers](/zh-TW/docs/Web/API/Web_Workers_API) 中使用（不會透過 {{domxref("WorkerNavigator")}} 暴露）。
+> 此 API _無法在_ [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API) 中使用（不會透過 {{domxref("WorkerNavigator")}} 暴露）。
 
 ## 介面
 
