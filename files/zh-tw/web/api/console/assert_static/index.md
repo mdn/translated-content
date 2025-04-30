@@ -69,6 +69,6 @@ for (let number = 2; number <= 5; number++) {
 
 ## 參見
 
-- [Microsoft Edge 關於 `console.assert()` 的文件](https://learn.microsoft.com/en-us/microsoft-edge/devtools-guide-chromium/console/api#assert)
+- [Microsoft Edge 關於 `console.assert()` 的文件](https://learn.microsoft.com/zh-tw/microsoft-edge/devtools-guide-chromium/console/api#assert)
 - [Node.js 關於 `console.assert()` 的文件](https://nodejs.org/docs/latest/api/console.html#consoleassertvalue-message)
 - [Google Chrome 關於 `console.dir()` 的文件](https://developer.chrome.com/docs/devtools/console/api/#dir)
