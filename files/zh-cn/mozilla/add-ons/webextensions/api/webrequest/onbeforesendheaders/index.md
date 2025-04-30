@@ -73,7 +73,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下任意值：
 
-    - `"blocking"`：使请求同步，以便让你你修改请求标头。
+    - `"blocking"`：使请求同步，以便让你修改请求标头。
     - `"requestHeaders"`：在传递给监听器的 `details` 对象中包含请求标头。
 
 ## 附加对象
