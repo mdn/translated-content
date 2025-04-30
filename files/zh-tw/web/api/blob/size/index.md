@@ -60,4 +60,4 @@ input.addEventListener("change", (event) => {
 ## 參見
 
 - {{domxref("Blob")}}
-- [從網頁應用程式使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
+- [從 Web 應用程式使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
