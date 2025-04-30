@@ -120,6 +120,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
       - : `integer`。故障转移超时时间（秒）。如果代理连接失败，则在此期间内将不再使用代理。
 
 - `requestBody`
+
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 
     - `error` {{optional_inline}}
