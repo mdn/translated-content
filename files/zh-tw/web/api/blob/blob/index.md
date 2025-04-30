@@ -25,7 +25,7 @@ new Blob(blobParts, options)
 - `options` {{optional_inline}}
   - : 一個物件，可以指定以下任一屬性：
     - `type` {{optional_inline}}
-      - : 將儲存到 blob 中的資料的 {{Glossary("MIME 類型")}}。預設值為空字串（`""`）。
+      - : 將儲存到 blob 中的資料的 {{Glossary("MIME type", "MIME 類型")}}。預設值為空字串（`""`）。
     - `endings` {{optional_inline}}
       - : 如果資料是文字，則如何解釋內容中的換行字元（`\n`）。預設值 `transparent` 會將換行字元直接複製到 blob 中而不進行更改。若要將換行字元轉換為主機系統的本地慣例，請指定值 `native`。
 
