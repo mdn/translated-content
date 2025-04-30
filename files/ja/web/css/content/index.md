@@ -2,40 +2,40 @@
 title: content
 slug: Web/CSS/content
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 {{CSSRef}}
 
 **`content`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ある要素を生成された値で置き換えます。これは、要素または擬似要素の内部でレンダリングされるものを定義するために使用することができます。要素の場合、 `content` プロパティは、要素が通常通りレンダリングされるか（`normal` または `none`）、画像（および関連付けられた "alt" テキスト）に置き換えられるかを指定します。擬似要素とマージンボックスの場合、 `content` は、コンテンツを画像、テキスト、その両方、またはなしとして定義し、要素が全体的にレンダリングされるかどうかを決定します。
 
-`content` プロパティを使用して挿入されたオブジェクトは、無名の[**置換要素**](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)になります。
+`content` プロパティを使用して挿入されたオブジェクトは、 **無名の{{ glossary("replaced elements", "置換要素")}}** になります。
 
 {{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
 
 ```css interactive-example
 .topic-games::before {
-  content: "🎮 ";
+  content: "🎮 " / "ゲーム";
 }
 
 .topic-weather::before {
-  content: "⛅ ";
+  content: "⛅ " / "くもり";
 }
 
 .topic-hot::before {
-  content: url("/shared-assets/images/examples/fire.png");
+  content: url("/shared-assets/images/examples/fire.png") / "炎";
   margin-right: 6px;
 }
 ```
 
 ```html interactive-example
-<p class="topic-games">Game News: A new inFamous is not planned</p>
+<p class="topic-games">ゲームニュース: 新しい inFamous は予定されていません。</p>
 
 <p class="topic-weather">
-  Weather for Today: Heat, violent storms and twisters
+  今日の天気: 暑い、激しい嵐、竜巻
 </p>
 
-<p class="topic-hot">Trending Article: Must-watch videos of the week</p>
+<p class="topic-hot">トレンド記事: 今週の必見動画</p>
 ```
 
 ## 構文
@@ -141,7 +141,7 @@ content: unset;
   - : CSS 関数 `attr(x)` は、選択された要素、または擬似要素の元となる要素の属性値を取得します。要素の属性 `x` の値は、属性名を表す解釈前の文字列です。属性 `x` が存在しない場合は、空文字列が返値として返されます。 属性名引数の大文字小文字の区別は、文書内の言語に依存します。
 
 - 代替テキスト: `/ <string> | <counter>`
-  - : 画像や `<content-list>` アイテムには、スラッシュとテキスト文字列またはカウンターを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。ブラウザーが代替テキストに対応していない場合、 `content` 宣言は不正なものと見なされ、無視されますのでご注意ください。 {{cssxref("string", "/ &lt;string>")}} または {{cssxref("counter", "/ &lt;counter>")}} データ型で、この要素の「代替テキスト」を表します。
+  - : 画像や `<content-list>` アイテムには、スラッシュとテキスト文字列またはカウンターを追加することで代替テキストが指定できます。代替テキストは、スクリーンリーダーによる音声出力に意図通りに機能しますが、一部のブラウザーでも表示される場合があります。 {{cssxref("string", "/ &lt;string>")}} または {{cssxref("counter", "/ &lt;counter>")}} データ型で、この要素の「代替テキスト」を表します。
 
 ## 公式定義
 
@@ -160,7 +160,7 @@ CSS で生成されるコンテンツは、 [DOM](/ja/docs/Web/API/Document_Obje
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/) (2015)
 - [WCAG の解説、ガイドライン 1.3 – MDN](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
-- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/2016/NOTE-WCAG20-TECHS-20161007/F87) Techniques for WCAG 2.0
+- [Failure of Success Criterion 1.3.1: inserting non-decorative generated content](https://www.w3.org/TR/WCAG20-TECHS/F87) Techniques for WCAG 2.0
 
 ## 例
 
@@ -265,8 +265,8 @@ q::after {
       <li>オウム</li>
       <li>飛べない鳥</li>
     </ol>
-  <li>有袋類</li>
   </li>
+  <li>有袋類</li>
 </ol>
 ```
 
@@ -323,7 +323,7 @@ a[href^="https://"]::after
 
 ### 代替テキスト付きの画像を追加
 
-この例では、すべてのリンクの前に画像を挿入します。2つの`content`値が提供されています。後の方の`content`値には、スクリーンリーダーが音声として出力できる代替テキスト付きの画像が記載されています。ブラウザーが代替テキストに対応していない場合、この宣言は無効と見なされ、前の`content`値が表示されます。この代替コンテンツのリストには、画像と「- alt テキストに対応していません - 」というメッセージが含まれています。
+この例では、すべてのリンクの前に画像を挿入します。2つの`content`値が提供されています。後の方の`content`値には、スクリーンリーダーが音声として出力できる代替テキスト付きの画像が含まれています。
 
 #### HTML
 
@@ -335,20 +335,11 @@ a[href^="https://"]::after
 
 画像を表示させ、代替テキストを設定するCSSは下記に示します。
 また、コンテンツのフォントと色も設定します。
-これは、代替テキストを「表示」するブラウザーで使われ、代替テキストに対応していないブラウザーでは、代替の `content` 値を表示します。
 
 ```css
 a::before {
-  /* 代替コンテンツ */
-  content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico")
-    " - alt テキストに対応していません - ";
-  /* 代替テキスト付きのコンテンツ */
   content: url("https://mozorg.cdn.mozilla.net/media/img/favicon.ico") /
     " MOZILLA: ";
-  font:
-    x-small Arial,
-    sans-serif;
-  color: gray;
 }
 ```
 
@@ -357,11 +348,9 @@ a::before {
 {{EmbedLiveSample('Adding_an_image_with_alternative_text', '100%', 60)}}
 
 > [!NOTE]
-> 代替テキストの構文に対応している場合、値はブラウザーのアクセシビリティツリーに公開されます。ブラウザーごとのアクセシビリティパネルについては、[関連情報](#関連情報)の節を参照してください。
+> 代替テキストの値は、ブラウザーのアクセシビリティツリーに公開されます。ブラウザーごとのアクセシビリティパネルについては、[関連情報](#関連情報)の節を参照してください。
 
-スクリーンリーダーを使用している場合は、画像に到達したときに "MOZILLA" という単語が読み上げられるはずです。対応している場合場合（「alt テキストに対応していません」と表示されていない場合）、開発者ツールの選択ツールで `::before` 擬似要素を選択し、アクセシビリティパネルで{{glossary("accessible name", "アクセシブル名")}}を表示することができます。
-
-代替テキストの構文に対応していないブラウザーでは、代替テキストを含む宣言全体が無効となります。この場合、前の `content` 値が使用され、画像と「代替テキストに対応していません」というテキストが表示されます。
+スクリーンリーダーを使用している場合は、画像に到達したときに "MOZILLA" という単語が読み上げられるはずです。開発者ツールの選択ツールで `::before` 擬似要素を選択し、アクセシビリティパネルで{{glossary("accessible name", "アクセシブル名")}}を表示することができます。
 
 ### URL による要素の置換
 
@@ -396,7 +385,7 @@ div::after {
 
 ### `<gradient>` による要素の置換
 
-この例では、要素のコンテンツを任意の種類の `<image>` （この場合は CSS グラデーション）に置き換える方法を示しています。 要素のコンテンツは {{cssxref("gradient/linear-gradient", "linear-gradient()")}} に置き換えられています。 {{cssxref("@supports")}} により、代替テキストの対応と、 alt テキストに対応しているブラウザー用の {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} が指定されています。
+この例では、要素のコンテンツを任意の種類の `<image>` （この場合は CSS グラデーション）に置き換える方法を示しています。 要素のコンテンツは {{cssxref("gradient/linear-gradient", "linear-gradient()")}} に置き換えられています。アクセシビリティのため、すべての画像には代替テキストを記述する必要があります。
 
 #### HTML
 
@@ -415,14 +404,8 @@ div {
 }
 
 #replaced {
-  content: linear-gradient(#639f, #c96a);
-}
-
-@supports (content: linear-gradient(#000, #fff) / "代替テキスト") {
-  #replaced {
-    content: repeating-linear-gradient(blue 0, orange 10%) /
-      "グラデーションと代替テキストに対応しています";
-  }
+  content: repeating-linear-gradient(blue 0, orange 10%) /
+    "グラデーションと代替テキストに対応しています";
 }
 ```
 
@@ -430,7 +413,7 @@ div {
 
 {{EmbedLiveSample('Element_replacement_with_gradient', '100%', 200)}}
 
-[ブラウザーの互換性一覧表](#ブラウザーの互換性)を確認してください。 すべてのブラウザーがグラデーションに対応しており、また、すべてのブラウザーが要素を画像で置き換えることができますが、コンテンツ値としてグラデーションに対応しているブラウザーは限られており、また、代替テキストつきで要素を置き換えることに対応しているブラウザーも限られています。グラデーションのないボックスが表示されるブラウザーでは、要素の置き換えは対応していますが、コンテンツの置き換え値としてグラデーションは対応していません。 要素が縞模様のグラデーションで置き換えられている場合、ブラウザーはどちらにも対応しています。
+[ブラウザーの互換性一覧表](#ブラウザーの互換性)を確認してください。 すべてのブラウザーがグラデーションに対応しており、また、すべてのブラウザーが要素を画像で置き換えることができますが、 `content` の値としてグラデーションに対応しているブラウザーは限られています。
 
 ### `image-set()` による要素の置換
 
@@ -439,7 +422,7 @@ div {
 #### HTML
 
 ```html
-<div id="replaced">Mozilla</div>
+<div id="replaced">I disappear!</div>
 ```
 
 #### CSS
@@ -456,7 +439,7 @@ div {
   content: image-set(
     "1x.png" 1x,
     "2x.png" 2x
-  );
+  ) / "DPI";
 }
 ```
 
@@ -477,12 +460,15 @@ div {
 - {{Cssxref("::after")}}
 - {{Cssxref("::before")}}
 - {{Cssxref("::marker")}}
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref(":target-current")}}
 - {{Cssxref("contain")}}
 - {{Cssxref("quotes")}}
 - {{cssxref("gradient", "&lt;gradient&gt;")}}
 - {{cssxref("image/image-set", "image-set()")}}
 - {{cssxref("url_value", "&lt;url&gt;")}}
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{glossary("Replaced elements", "置換要素")}}
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)モジュール
 - [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
 
