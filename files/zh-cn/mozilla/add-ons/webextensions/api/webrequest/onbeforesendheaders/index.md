@@ -81,9 +81,9 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
-  - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
+  - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
   - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
     - `url`
@@ -114,14 +114,14 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
       - : `integer`。代理服务器的端口号。
     - `type`
 
-      - : `string`。代理服务器的类型，可能是以下值之一：
+      - : `string`。代理服务器的类型，以下值之一：
 
-        - "http": HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
-        - "https": 通过 TLS 连接到代理的 HTTP 代理
-        - "socks": SOCKS v5 代理
-        - "socks4": SOCKS v4 代理
-        - "direct": 无代理
-        - "unknown": 未知代理
+        - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
+        - `"https"`：通过 TLS 连接到代理的 HTTP 代理
+        - `"socks"`：SOCKS v5 代理
+        - `"socks4"`：SOCKS v4 代理
+        - `"direct"`：无代理
+        - `"unknown"`：未知代理
 
     - `username`
       - : `string`。代理服务的用户名。
@@ -156,8 +156,8 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
     分类标志包括：
 
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
-      - `fingerprinting` 表示域名属于指纹识别和跟踪类别（如广告商构建用户画像）。
-      - `fingerprinting_content` 表示域名仅属指纹识别类别（如支付提供商用于反欺诈）。
+      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
+      - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。
     - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
     - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
     - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
@@ -213,7 +213,7 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 );
 ```
 
-此代码与前面的示例完全相同，只是监听器是异步的，返回一个会以新的标头兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)：
+此代码与前面的示例完全相同，只是监听器是异步的，会返回一个会以新的标头兑现的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)：
 
 ```js
 "use strict";
