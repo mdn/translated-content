@@ -2,7 +2,7 @@
 title: webRequest.filterResponseData()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 3994f738ebbe4d25e1e68f70cc45be072a22e0c3
 ---
 
 {{AddonSidebar}}
@@ -39,12 +39,12 @@ let filter = browser.webRequest.filterResponseData(
 
 ## 示例
 
-该示例展示了一个最小实现，它通过流数据并在流完成接收数据时关闭过滤器流。代码将从 {{WebExtAPIRef("webRequest")}} 事件监听器中调用，并且事件监听器提供 `details`。
+该示例展示了一个最小实现，它通过流数据并在流完成接收数据时关闭流过滤器。代码将从 {{WebExtAPIRef("webRequest")}} 事件监听器中调用，并且事件监听器提供 `details`。
 
 ```js
 let filter = browser.webRequest.filterResponseData(details.requestId);
 filter.ondata = (event) => {
-  console.log(`filter.ondata received ${event.data.byteLength} bytes`);
+  console.log(`filter.ondata 接收了 ${event.data.byteLength} 字节`);
   filter.write(event.data);
 };
 filter.onstop = (event) => {
