@@ -23,7 +23,7 @@ _也繼承自其父{{domxref("Event", "事件")}}的屬性_。
 - {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
   - : 包含產生動畫的 {{cssxref("animation-name")}} 值的字串。
 - {{domxref("AnimationEvent.elapsedTime")}} {{ReadOnlyInline}}
-  - : 一個 `float`，表示此事件觸發時動畫已執行的時間（以秒為單位），不包括動畫暫停的時間。對於 `animationstart` 事件，`elapsedTime` 為 `0.0`，除非 {{cssxref("animation-delay")}} 有負值，此時事件將以 `elapsedTime` 包含 `(-1 * delay)` 的值觸發。
+  - : 一個 `float`，表示此事件觸發時動畫已執行的時間（以秒為單位），不包括動畫暫停的時間。對於 `animationstart` 事件，`elapsedTime` 為 `0.0`，除非 {{cssxref("animation-delay")}} 有負值，此時事件將以 `(-1 * delay)` 的 `elapsedTime` 值觸發。
 - {{domxref("AnimationEvent.pseudoElement")}} {{ReadOnlyInline}}
   - : 一個以 `'::'` 開頭的字串，包含動畫運行的[偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)名稱。如果動畫不是運行在偽元素上，而是運行在元素上，則為空字串：`''`。
 
