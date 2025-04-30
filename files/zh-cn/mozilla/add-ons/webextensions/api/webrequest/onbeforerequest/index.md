@@ -198,7 +198,7 @@ let pattern = "https://developer.mozilla.org/*";
 
 // cancel 函数返回一个对象，且该对象包含值为 `true` 的 `cancel` 属性
 function cancel(requestDetails) {
-  console.log(`取消: ${requestDetails.url}`);
+  console.log(`取消：${requestDetails.url}`);
   return { cancel: true };
 }
 
@@ -218,7 +218,7 @@ let pattern = "https://developer.mozilla.org/*";
 
 // redirect 函数返回一个包含值为新的 URL 的 `redirectURL` 属性的对象
 function redirect(requestDetails) {
-  console.log(`重定向: ${requestDetails.url}`);
+  console.log(`重定向：${requestDetails.url}`);
   return {
     redirectUrl:
       "https://38.media.tumblr.com/tumblr_ldbj01lZiP1qe0eclo1_500.gif",
@@ -245,7 +245,7 @@ let redirectUrl =
 
 // redirect 函数返回一个 Promise，且该 Promise 在计时器到期时兑现为重定向 URL
 function redirectAsync(requestDetails) {
-  console.log(`异步重定向: ${requestDetails.url}`);
+  console.log(`异步重定向：${requestDetails.url}`);
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve({ redirectUrl });
