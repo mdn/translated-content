@@ -356,7 +356,7 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。
+你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。
 
 ## 总结
 

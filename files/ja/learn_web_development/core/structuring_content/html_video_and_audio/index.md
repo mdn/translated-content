@@ -303,7 +303,7 @@ WEBVTT
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: マルチメディアと埋め込み](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding) を見てください。
 
 ## まとめ
 

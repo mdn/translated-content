@@ -1,14 +1,13 @@
 ---
-title: rel=preconnect
+title: rel="preconnect"
 slug: Web/HTML/Reference/Attributes/rel/preconnect
-original_slug: Web/HTML/Attributes/rel/preconnect
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
 ---
 
 {{HTMLSidebar}}
 
-**`preconnect`** は {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定するキーワードで、ユーザーがターゲットリソースのオリジンからのリソースを必要とする可能性が高いことをブラウザーに示唆します。そのため、ブラウザーはそのオリジンへの接続を事前に開始しておくことで、ユーザーの操作性を改善することができる可能性があります。事前接続は、ハンドシェイク（HTTP のオリジンでは DNS+TCP、 HTTPS のオリジンでは DNS+TCP+TLS）の一部またはすべてを事前に実行しておくことにより、指定されたオリジンからの将来の読み込みを高速化します。
+**`preconnect`** キーワードを [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性に指定すると、 {{HTMLElement("link")}} 要素では、ユーザーがターゲットリソースのオリジンからのリソースを必要とする可能性が高いことをブラウザーに示唆します。そのため、ブラウザーはそのオリジンへの接続を事前に開始しておくことで、ユーザーの操作性を改善することができる可能性があります。事前接続は、ハンドシェイク（HTTP のオリジンでは DNS+TCP、 HTTPS のオリジンでは DNS+TCP+TLS）の一部またはすべてを事前に実行しておくことにより、指定されたオリジンからの将来の読み込みを高速化します。
 
 `<link rel="preconnect">` は、将来のオリジン間の HTTP リクエストにおいて、ナビゲーションまたはサブリソースのどちらでも利益をもたらします。同一オリジンのリクエストに対しては、すでに接続が開かれているため、何のメリットもありません。
 

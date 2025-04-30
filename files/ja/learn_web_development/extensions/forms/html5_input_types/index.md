@@ -359,7 +359,7 @@ input:valid + span:after {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML5 のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML5 のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types)を見てください。
 
 ## まとめ
 

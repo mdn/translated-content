@@ -284,7 +284,7 @@ WEBVTT
 
 ## 技能测试！
 
-你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
+你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
 
 ## 总结
 
