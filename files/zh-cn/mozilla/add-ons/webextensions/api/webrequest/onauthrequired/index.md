@@ -32,25 +32,25 @@ l10n:
   - : 扩展可能需要异步获取凭据。例如，扩展可能需要从存储中获取凭据或询问用户。在这种情况下，监听器可以通过以下方式异步提供凭据：
 
     - 在 addListener 中，在 Chrome 和 Firefox 中传递 `"asyncBlocking"` 或在 Firefox 中传递 `"blocking"` 到 `extraInfoSpec` 参数
-    - 如果提供了 `"blocking"`，扩展可以返回一个 `webRequest.BlockingResponse` 对象或一个解析为 `webRequest.BlockingResponse` 对象的 Promise
+    - 如果提供了 `"blocking"`，扩展可以返回一个 `webRequest.BlockingResponse` 对象或一个兑现为 `webRequest.BlockingResponse` 对象的 Promise
     - 如果提供了 `"asyncBlocking"`，事件监听器函数会接收一个 `asyncCallback` 函数作为其第二个参数。`asyncCallback` 可以异步调用，并接受一个 `webRequest.BlockingResponse` 对象作为其唯一参数
 
       > [!NOTE]
-      > Chrome 不支持 Promise 作为返回值（[Chromium issue 1510405](https://crbug.com/1510405)）。有关替代方案，请参阅 [监听器的返回值](#listener)。
+      > Chrome 不支持 Promise 作为返回值（[Chromium issue 1510405](https://crbug.com/1510405)）。有关替代方案，参见 [监听器的返回值](#listener)。
 
-请参阅 [示例](#examples)。
+参见[示例](#examples)。
 
-如果您的扩展提供了错误的凭据，则会再次调用监听器。因此，请注意避免通过反复提供错误的凭据进入无限循环。
+如果你的扩展提供了错误的凭据，则会再次调用监听器。因此，请注意避免通过反复提供错误的凭据进入无限循环。
 
 ## 权限
 
-在 Firefox 和 Chrome Manifest V2 扩展中，您必须在 `manifest.json` 中添加 [`"webRequest"` 和 `"webRequestBlocking"` API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+在 Firefox 和 Chrome Manifest V2 扩展中，你必须在 `manifest.json` 中取得 [`"webRequest"` 和 `"webRequestBlocking"` API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
-对于 Manifest V3 扩展，Chrome 不再支持 `"webRequestBlocking"` 权限（策略安装的扩展除外）。相反，`"webRequest"` 和 `"webRequestAuthProvider"` 权限使您能够异步提供凭据。Firefox 继续在 Manifest V3 中支持 `"webRequestBlocking"`，并提供 `"webRequestAuthProvider"` 以实现跨浏览器兼容性。
+对于 Manifest V3 扩展，Chrome 不再支持 `"webRequestBlocking"` 权限（策略安装的扩展除外）。相反，`"webRequest"` 和 `"webRequestAuthProvider"` 权限使你能够异步提供凭据。Firefox 继续在 Manifest V3 中支持 `"webRequestBlocking"`，并提供 `"webRequestAuthProvider"` 以实现跨浏览器兼容性。
 
 ## 代理授权
 
-Firefox 通常不会为系统请求（例如浏览器或扩展升级或搜索引擎查询）触发 `webRequest` 事件。为了使代理授权能够顺利工作，从版本 57 开始，Firefox 支持对此的例外。
+Firefox 通常不会为系统请求（例如浏览器或扩展升级或搜索引擎查询）触发 `webRequest` 事件。为了使代理授权能够顺利工作，从 Firefox 57 开始支持对此的例外。
 
 如果扩展具有 `"webRequest"`、`"webRequestBlocking"`、`"proxy"` 和 `"<all_urls>"` 权限，则可以使用 `onAuthRequired` 为代理授权提供凭据（但不能用于正常的 Web 授权）。监听器不能取消系统请求或对任何系统请求进行其他修改。
 
@@ -58,9 +58,9 @@ Firefox 通常不会为系统请求（例如浏览器或扩展升级或搜索引
 
 ```js-nolint
 browser.webRequest.onAuthRequired.addListener(
-  listener,                    // function
-  filter,                      //  object
-  extraInfoSpec                //  optional array of strings
+  listener,                    // 函数
+  filter,                      // 对象
+  extraInfoSpec                // 可选的字符串的数组
 )
 browser.webRequest.onAuthRequired.removeListener(listener)
 browser.webRequest.onAuthRequired.hasListener(listener)
@@ -96,12 +96,12 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `string` 的 `array`。事件的额外选项。您可以传递以下值中的任何一个：
+  - : `string` 的 `array`。事件的额外选项。你可以传递以下值中的任何一个：
 
-    - `"blocking"`：使请求阻塞，以便您可以取消请求或提供身份验证凭据。返回一个 `BlockingResponse` 对象，其 `cancel` 或 `authCredentials` 属性已设置。
+    - `"blocking"`：使请求阻塞，以便你可以取消请求或提供身份验证凭据。返回一个 `BlockingResponse` 对象，其 `cancel` 或 `authCredentials` 属性已设置。
 
       - 在 Chrome 中，事件监听器必须同步响应。
-      - 在 Firefox 中，事件监听器可以同步响应，也可以返回一个解析为 `BlockingResponse` 对象的 Promise 以异步响应。
+      - 在 Firefox 中，事件监听器可以同步响应，也可以返回一个兑现为 `BlockingResponse` 对象的 Promise 以异步响应。
 
     - `"asyncBlocking"`：异步处理请求。事件监听器的返回值将被忽略。要解析事件，请将 `asyncCallback` 参数传递给一个 `BlockingResponse` 对象。
 
@@ -117,23 +117,35 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : `object`。请求身份验证的服务器。这是一个具有以下属性的对象：
 
     - `host`
-      - : `string`。服务器的 [hostname](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames)。
+      - : `string`。服务器的[主机名](https://zh.wikipedia.org/wiki/主機名稱)。
     - `port`
       - : `integer`。服务器的端口号。
 
 - `cookieStoreId`
-  - : `string`。如果请求来自上下文身份的选项卡，则上下文身份的 cookie 存储 ID。有关更多信息，请参阅 [使用上下文身份](https://developer.mozilla.org/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `frameId`
   - : `integer`。如果请求发生在主框架中，则为 `0`；正值是请求发生的子框架的 ID。如果加载了文档（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示该框架的 ID，而不是外部框架的 ID。框架 ID 在选项卡中是唯一的。
+- `incognito`
+  - : `boolean`。请求是否来自隐私浏览窗口。
+- `frameId`
+  - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `incognito`
   - : `boolean`。请求是否来自隐私浏览窗口。
 - `isProxy`
   - : `boolean`。`true` 表示 `Proxy-Authenticate`，`false` 表示 `WWW-Authenticate`。
     > **注意：** `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
+- `ip`
+  - : `string`。请求的目标服务器的 IP 地址，可能是 IPv6 字面量。
 - `method`
-  - : `string`。标准 HTTP 方法（例如，`"GET"` 或 `"POST"`）。
+  - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
+- `originUrl`
+
+  - : `string`。触发请求的资源的 URL。例如，若用户点击了“https\://example.com”页面中的链接，则结果请求的 `originUrl` 为“https\://example.com”。
+
+    `originUrl` 通常与 `documentUrl` 相同，但并不总是如此。例如，如果页面包含 iframe，并且 iframe 包含加载新文档的链接，则结果请求的 `documentUrl` 将是 iframe 的父文档 URL，而 `originUrl` 将是包含链接的 iframe 中的文档的 URL。
+
 - `parentFrameId`
-  - : `integer`。包含发送请求的框架的框架的 ID。如果不存在父框架，则设置为 `-1`。
+  - : `integer`。包含发起请求的框架的父框架 ID。如果不存在父框架则为 -1。
 - `proxyInfo`
 
   - : `object`。仅当请求被代理时，此属性才存在。它包含以下属性：
@@ -144,9 +156,9 @@ browser.webRequest.onAuthRequired.hasListener(listener)
       - : `integer`。代理服务器的端口号。
     - `type`
 
-      - : `string`。代理服务器的类型。以下之一：
+      - : `string`。代理服务器的类型，以下值之一：
 
-        - `"http"`：HTTP 代理（或 HTTPS 的 SSL CONNECT）
+        - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
         - `"https"`：通过 TLS 连接到代理的 HTTP 代理
         - `"socks"`：SOCKS v5 代理
         - `"socks4"`：SOCKS v4 代理
@@ -156,54 +168,54 @@ browser.webRequest.onAuthRequired.hasListener(listener)
     - `username`
       - : `string`。代理服务的用户名。
     - `proxyDNS`
-      - : `boolean`。如果代理根据提供的主机名执行域名解析，则为 true，这意味着客户端不应执行自己的 DNS 查找。
+      - : `boolean`。如果代理将根据提供的主机名执行域名解析，则为真，意味着客户端不应执行自己的 DNS 查找。
     - `failoverTimeout`
-      - : `integer`。故障转移超时（以秒为单位）。如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) 返回的数组中的下一个代理服务器。
+      - : `integer`。故障转移超时时间（秒）如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) 返回的数组中的下一个代理服务器。
 
 - `realm` {{optional_inline}}
   - : `string`。服务器提供的身份验证 [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11)，如果有的话。
 - `requestId`
-  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此您可以关联与同一请求相关的不同事件。
+  - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。与此响应一起接收的 HTTP 响应头。
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应标头。
 - `scheme`
   - : `string`。身份验证方案：`"basic"` 或 `"digest`"。
 - `statusCode`
   - : `integer`。服务器返回的标准 HTTP 状态码。
 - `statusLine`
-  - : `string`。响应的 HTTP 状态行，`'HTTP/0.9 200 OK'` 字符串用于 HTTP/0.9 响应（即缺少状态行的响应），如果没有头，则为空字符串。
+  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串”HTTP/0.9 200 OK”。
 - `tabId`
-  - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则设置为 `-1`。
+  - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
   - : `boolean`。指示请求及其内容窗口层次结构是否为第三方。
 - `timeStamp`
-  - : `number`。此事件触发时的时间，以 [自纪元以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time) 为单位。
+  - : `number`。此事件触发时的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 - `type`
-  - : {{WebExtAPIRef('webRequest.ResourceType')}}。请求的资源类型：例如，`"image"`、`"script"` 或 `"stylesheet"`。
+  - : {{WebExtAPIRef('webRequest.ResourceType')}}。正在请求的资源的类型，例如“image”、“script”、“stylesheet”。
 - `url`
-  - : `string`。请求的目标。
+  - : `string`。请求的目标 URL。
 - `urlClassification`
 
-  - : `object`。与请求相关的跟踪类型（如果请求由 [Firefox Tracking Protection](https://support.mozilla.org/en-US/kb/enhanced-tracking-protection-firefox-desktop) 分类）。这是一个具有以下属性的对象：
+  - : `object`。与请求相关的跟踪类型（如果请求由 [Firefox 跟踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)分类）。包含以下属性的对象：
 
     - `firstParty`
-      - : `array` of `strings`。请求的第一方的分类标志。
+      - : `string` 的数组（`array`）。请求的第一方的分类标志。
     - `thirdParty`
-      - : `array` of `strings`。请求或其窗口层次结构的第三方的分类标志。
+      - : `string` 的数组（`array`）。请求或其窗口层次结构的第三方的分类标志。
 
     分类标志包括：
 
-    - `fingerprinting` 和 `fingerprinting_content`：指示请求涉及指纹识别（“发现指纹的来源”）。
-      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。此类域名的示例包括希望将配置文件与访问用户关联的广告商。
-      - `fingerprinting_content` 表示域名属于指纹识别类别，但不属于跟踪类别。此类域名的示例包括使用指纹识别技术识别访问用户以防止欺诈的支付提供商。
-    - `cryptomining` 和 `cryptomining_content`：类似于指纹识别类别，但用于加密货币挖掘资源。
-    - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：指示请求涉及跟踪。`tracking` 是任何通用跟踪请求。`ad`、`analytics`、`social` 和 `content` 后缀标识跟踪器的类型。
-    - `emailtracking` 和 `emailtracking_content`：指示请求涉及跟踪电子邮件。
-    - `any_basic_tracking`：一个元标志，结合跟踪和指纹识别标志，排除 `tracking_content` 和 `fingerprinting_content`。
-    - `any_strict_tracking`：一个元标志，结合所有跟踪和指纹识别标志。
-    - `any_social_tracking`：一个元标志，结合所有社交跟踪标志。
+    - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
+      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
+      - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。
+    - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
+    - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
+    - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
+    - `any_basic_tracking`：元标志，组合跟踪和指纹识别标志（不含 `tracking_content` 和 `fingerprinting_content`）。
+    - `any_strict_tracking`：元标志，组合所有跟踪和指纹识别标志。
+    - `any_social_tracking`：元标志，组合所有社交跟踪标志。
 
-    您可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能会导致站点中断或元素未显示。
+    更多跟踪器类型详细信息，参见 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站。`content` 后缀表示跟踪器同时提供内容服务，拦截这些跟踪器可以保护用户，但也可能会导致站点中断或元素无法显示。
 
 ## 示例
 
