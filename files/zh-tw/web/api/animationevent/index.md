@@ -18,7 +18,7 @@ l10n:
 
 ## 實例屬性
 
-_也繼承自其父{{domxref("Event", "事件")}}的屬性_。
+_也繼承自其父 {{domxref("Event")}} 的屬性_。
 
 - {{domxref("AnimationEvent.animationName")}} {{ReadOnlyInline}}
   - : 包含產生動畫的 {{cssxref("animation-name")}} 值的字串。
