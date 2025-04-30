@@ -2,7 +2,7 @@
 title: webRequest.onBeforeRequest
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
@@ -27,8 +27,8 @@ l10n:
 ```js-nolint
 browser.webRequest.onBeforeRequest.addListener(
   listener,             // 函数
-  filter,               //  对象
-  extraInfoSpec         //  可选的字符串数组
+  filter,               // 对象
+  extraInfoSpec         // 可选的字符串数组
 )
 browser.webRequest.onBeforeRequest.removeListener(listener)
 browser.webRequest.onBeforeRequest.hasListener(listener)
@@ -62,7 +62,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
   - : `string` 的数组（`array`）。事件的额外选项，你可以传递以下任意值：
 
-    - `"blocking"`：使请求同步，这样你可以取消或重定向请求。
+    - `"blocking"`：使请求同步，一边让你取消或重定向请求。
     - `"requestBody"`：在传递给监听器的 `details` 对象中包含 `requestBody`。
 
 ## 附加对象
@@ -73,6 +73,12 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
   - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
+- `frameAncestors`
+  - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
+    - `url`
+      - : `string`。文档加载来源的 URL。
+    - `frameId`
+      - : `integer`。文档的 `frameId`。`details.frameAncestors[0].frameId` 与 `details.parentFrameId` 相同。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `incognito`
@@ -113,10 +119,22 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
     - `failoverTimeout`
       - : `integer`。故障转移超时时间（秒）。如果代理连接失败，则在此期间内将不再使用代理。
 
+- `requestBody`
+  - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
+
+    - `error` {{optional_inline}}
+      - : `string`。当获取请求主体过程中发生任何错误时，该属性将包括发生的错误。
+    - `formData` {{optional_inline}}
+
+      - : `object`。如果请求方法是 POST，且主体是以 UTF-8 编码的键值对序列（即“multipart/form-data”或“application/x-www-form-urlencoded”）时则会包含该对象。
+
+        它是一个字典，其中每个键都包含该键的所有值的列表，例如 `{'key'： ['value1','value2']}`。如果数据属于其他媒体类型或数据非法，则将不包含该对象。
+
+    - `raw` {{optional_inline}}
+      - : {{WebExtAPIRef('webRequest.UploadData')}} 的数组（`array`）。如果请求方法是 PUT 或 POST，且主体尚未在 `formData` 中兑现，则此数组包含未解析的请求主体内容。
+
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
-- `requestHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求发送时携带的 HTTP 请求标头。
 - `tabId`
   - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
@@ -160,7 +178,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 ## 示例
 
-此代码记录与 [<all_urls>](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模式匹配的每个资源请求的 URL：
+此代码记录与 [\<all_urls>](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns#all_urls) 模式匹配的每个资源请求的 URL：
 
 ```js
 function logURL(requestDetails) {
@@ -172,7 +190,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-此代码取消对 "https://developer.mozilla.org/" 下的 URL 的图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
+此代码取消对“https://developer.mozilla.org/”下的 URL 的图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
 
 ```js
 // 匹配要重定向的 URL 的模式
@@ -192,7 +210,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-此代码通过重定向替换对 "https://developer.mozilla.org/" 下的 URL 的所有网络图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
+此代码通过重定向替换对“https://developer.mozilla.org/”下的 URL 的所有网络图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
 
 ```js
 // 匹配要重定向的 URL 的模式
@@ -215,7 +233,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-此代码与前一个示例完全相同，只是监听器异步处理请求。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，设置一个计时器，并在计时器到期时解析为重定向 URL：
+此代码与前一个示例完全相同，只是监听器异步处理请求。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，设置一个计时器，并在计时器到期时兑现为重定向 URL：
 
 ```js
 // 匹配要重定向的 URL 的模式
