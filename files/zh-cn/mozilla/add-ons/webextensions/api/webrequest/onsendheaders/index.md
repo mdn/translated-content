@@ -47,7 +47,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`。事件的额外选项。你只能在此处传递一个值：
+  - : `string` 的数组（`array`）。事件的额外选项。你只能在此处传递一个值：
 
     - `"requestHeaders"`：在传递给监听器的 `details` 对象中包含请求标头
 
@@ -56,9 +56,9 @@ browser.webRequest.onSendHeaders.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
-  - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
+  - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `incognito`
@@ -83,14 +83,14 @@ browser.webRequest.onSendHeaders.hasListener(listener)
       - : `integer`。代理服务器的端口号。
     - `type`
 
-      - : `string`。代理服务器的类型，可能是以下值之一：
+      - : `string`。代理服务器的类型，以下值之一：
 
-        - "http": HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
-        - "https": 通过 TLS 连接到代理的 HTTP 代理
-        - "socks": SOCKS v5 代理
-        - "socks4": SOCKS v4 代理
-        - "direct": 无代理
-        - "unknown": 未知代理
+        - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
+        - `"https"`：通过 TLS 连接到代理的 HTTP 代理
+        - `"socks"`：SOCKS v5 代理
+        - `"socks4"`：SOCKS v4 代理
+        - `"direct"`：无代理
+        - `"unknown"`：未知代理
 
     - `username`
       - : `string`。代理服务的用户名。
@@ -125,8 +125,8 @@ browser.webRequest.onSendHeaders.hasListener(listener)
     分类标志包括：
 
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
-      - `fingerprinting` 表示域名属于指纹识别和跟踪类别（如广告商构建用户画像）。
-      - `fingerprinting_content` 表示域名仅属指纹识别类别（如支付提供商用于反欺诈）。
+      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
+      - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。
     - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
     - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
     - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
