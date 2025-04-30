@@ -42,4 +42,4 @@ _繼承自其父 {{domxref("Event")}} 的方法_。
 ## 參見
 
 - [使用 CSS 動畫](/zh-TW/docs/Web/CSS/CSS_animations/Using_CSS_animations)
-- 與動畫相關的 CSS 屬性與規則：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timing-function")}}、{{cssxref("@keyframes")}}。
+- 與動畫相關的 CSS 屬性與 At 規則：{{cssxref("animation")}}、{{cssxref("animation-composition")}}、{{cssxref("animation-delay")}}、{{cssxref("animation-direction")}}、{{cssxref("animation-duration")}}、{{cssxref("animation-fill-mode")}}、{{cssxref("animation-iteration-count")}}、{{cssxref("animation-name")}}、{{cssxref("animation-play-state")}}、{{cssxref("animation-timing-function")}}、{{cssxref("@keyframes")}}。
