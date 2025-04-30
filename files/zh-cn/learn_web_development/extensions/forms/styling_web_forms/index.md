@@ -373,7 +373,7 @@ button:focus {
 
 ## 技能测试
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics)。
 
 ## 总结
 

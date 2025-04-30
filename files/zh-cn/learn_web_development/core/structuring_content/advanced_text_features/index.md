@@ -542,7 +542,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 
 ## 技能测试！
 
-你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text)。
+你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text)。
 
 ## 总结
 
