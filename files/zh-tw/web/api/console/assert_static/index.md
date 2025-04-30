@@ -34,7 +34,7 @@ console.assert(assertion, msg, subst1, /* …, */ substN)
 - `subst1` … `substN`
   - : 用來取代 `msg` 中替代字串的 JavaScript 值。如果替代值多於替代字串，這些多出來的值會在詳細的斷言訊息之後，以與未使用格式字串時相同的方式輸出到主控台。
 
-如需進一步了解，請參見 {{domxref("console")}} 文件中的[輸出文字到主控台](/zh-TW/docs/Web/API/console#outputting_text_to_the_console)。
+如需進一步了解，請參見 {{domxref("console")}} 文件中的[輸出文字到主控台](/zh-TW/docs/Web/API/console#輸出文字到主控台)。
 
 ### 回傳值
 
