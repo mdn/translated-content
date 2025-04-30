@@ -301,7 +301,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls)。
 
 ## 总结
 

@@ -87,7 +87,7 @@ CSS 对象模型（CSSOM），是 DOM 的一部分，通过暴露一些接口，
 
 {{ EmbedLiveSample('修改元素样式') }}
 
-`document.defaultView` 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。查看[Example 6: getComputedStyle](/zh-CN/Gecko_DOM_Reference/Examples#Example_6:_getComputedStyle) 示例章节了解更多使用该方法的信息。
+`document.defaultView` 对象的 {{domxref("window.getComputedStyle", "getComputedStyle()")}} 返回某个元素的所有经过计算的样式。
 
 ## DOM 样式对象
 
