@@ -15,7 +15,7 @@ CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/@media/orientation) 媒體功�
 
 ## 根據方向調整版面配置
 
-最常見的方向變更案例之一是當你希望根據裝置的方向調整內容的版面配置。例如，你可能希望按鈕列沿著裝置顯示器的最長維度延伸。透過使用媒體查詢，你可以輕鬆且自動地實現這一點。
+最常見的方向變更案例之一是當你希望根據裝置的方向調整內容的版面配置。例如，你可能希望按鈕列沿著裝置顯示器的最長的方向延伸。透過使用媒體查詢，你可以輕鬆且自動地實現這一點。
 
 以下是一個包含 HTML 程式碼的範例：
 
@@ -34,7 +34,7 @@ CSS 提供了 [`orientation`](/zh-TW/docs/Web/CSS/@media/orientation) 媒體功�
 </p>
 ```
 
-CSS 使用 orientation 媒體查詢來根據螢幕方向處理特定樣式：
+CSS 依賴方向媒體查詢來根據螢幕方向處理特定樣式：
 
 ```css
 /* 首先定義一些通用樣式 */
@@ -135,7 +135,7 @@ li {
 </table>
 
 > [!NOTE]
-> 方向媒體查詢實際上是根據瀏覽器視窗（或 iframe）的方向，而不是裝置的方向來應用。
+> 方向媒體查詢實際上是根據瀏覽器視窗（或內嵌框架）的方向，而不是裝置的方向來應用。
 
 ## 鎖定螢幕方向
 
@@ -145,7 +145,7 @@ li {
 
 ### 監聽方向變更
 
-每當螢幕方向改變時，{{domxref("ScreenOrientation")}} 介面上的 {{domxref("ScreenOrientation.change_event", "change")}} 事件就會被觸發：
+每當螢幕方向改變時，{{domxref("ScreenOrientation")}} 介面的 {{domxref("ScreenOrientation.change_event", "change")}} 事件就會被觸發：
 
 ```js
 screen.orientation.addEventListener("change", () => {
