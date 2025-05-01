@@ -28,7 +28,7 @@ l10n:
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <p class="topic-games">ゲームニュース: 新しい inFamous は予定されていません。</p>
 
 <p class="topic-weather">
