@@ -37,6 +37,6 @@ _無特定方法；繼承自其父類別 {{domxref("Event")}} 的方法。_
 
 ## 參見
 
-- 與複製相關的事件：{{domxref("Element/copy_event", "複製")}}、{{domxref("Element/cut_event", "剪下")}}、{{domxref("Element/paste_event", "貼上")}}
+- 與複製相關的事件：{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/paste_event", "paste")}}
 - [Clipboard API](/zh-TW/docs/Web/API/Clipboard_API)
 - [支援非同步剪貼簿的圖片文章](https://web.dev/articles/async-clipboard)
