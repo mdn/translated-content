@@ -2,17 +2,17 @@
 title: webRequest.onAuthRequired
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
 
-当服务器发送 `401` 或 `407` 状态码以及使用 `Basic` 方案的 `WWW-Authenticate` 头时触发（即服务器要求客户端提供身份验证凭据，例如用户名和密码）。
+当服务器发送 `401` 或 `407` 状态码，以及使用 `Basic` 方案的 `WWW-Authenticate` 标头时触发（即服务器要求客户端提供身份验证凭据，例如用户名和密码）。
 
 监听器可以通过以下四种方式之一响应：
 
 - 不采取任何行动
-  - : 监听器可以什么都不做，仅观察请求。如果发生这种情况，它不会影响请求的处理，并且浏览器会在适当情况下要求用户登录。
+  - : 监听器可以什么都不做，只观察请求。在这种情况下，监听器将不会影响请求的处理，并且浏览器会在适当情况下要求用户登录。
 - 取消请求
 
   - : 监听器可以取消请求。如果这样做，身份验证将失败，并且不会要求用户登录。扩展可以通过以下方式取消请求：
