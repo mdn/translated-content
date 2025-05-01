@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-此事件在发送标头之前触发。如果你的扩展或其他扩展在 `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}` 中修改了标头，你将在此处得到修改后的标头。
+此事件在发送标头之前触发。如果你的扩展或其他扩展在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了标头，你将在此处得到修改后的标头。
 
 此事件仅供参考。
 
@@ -56,7 +56,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameId`
