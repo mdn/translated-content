@@ -1,9 +1,8 @@
 ---
 title: "<br>: 改行要素"
 slug: Web/HTML/Reference/Elements/br
-original_slug: Web/HTML/Element/br
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -40,22 +39,28 @@ p {
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 ### 非推奨の属性
 
-- `clear`
+- `clear` {{Deprecated_Inline}}
   - : 改行後の次の行を開始する場所を示します。
 
 ## CSS でのスタイル付け
 
 `<br>` 要素は、テキストのブロック内で改行するという、単一の明確な目的を持っています。そのため、寸法を持たず、自身が表示されることもなく、スタイル付けすることができるのはわずかです。
 
-`<br>` 要素自体に {{cssxref("margin")}} を設定して、ブロック内のテキストの行間を開けることができますが、これは良いやり方ではありません。 — この用途のために設計された {{cssxref("line-height")}} プロパティを使用してください。
+{{cssxref("margin")}} を `<br>` 要素自体に設定して、ブロック内のテキストの行間を開けることができますが、これは良いやり方ではありません。 — この用途のために設計された {{cssxref("line-height")}} プロパティを使用してください。
+
+## アクセシビリティ
+
+段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。
+
+追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような CSS プロパティを使用して効果を得るようにしてください。
 
 ## 例
 
-### 単純な br
+### 基本的な br
 
 以下の例では `<br>` を使用して、住所のそれぞれの行の間に改行を生成しています。
 
@@ -69,13 +74,7 @@ USA<br />
 
 以下のように出力されます。
 
-{{ EmbedLiveSample('Simple_br', 640, 120) }}
-
-## アクセシビリティの考慮
-
-段落間の間隔を広げるために連続した `<br>` 要素を使用することは、読み上げ技術の支援の下で操作をしている人にとっては問題になります。読み上げソフトは要素が存在することをアナウンスするものの、その中にはコンテンツが何もないという状況になる可能性があります。これは読み上げソフトを使用している人の利用を混乱させ不満をためる可能性があります。
-
-追加の間隔をあける必要がある場合は、 {{cssxref("margin")}} のような CSS プロパティを使用して効果を得るようにしてください。
+{{ EmbedLiveSample('Basic_br', 640, 120) }}
 
 ## 技術的概要
 
@@ -83,12 +82,13 @@ USA<br />
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -107,9 +107,9 @@ USA<br />
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >を受け入れるすべての要素
+        >を受け入れるすべての要素。
       </td>
     </tr>
     <tr>

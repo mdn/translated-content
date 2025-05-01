@@ -2,7 +2,7 @@
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
 l10n:
-  sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
+  sourceCommit: 6954b3f1f3b1182f36b5d3f60fb6461be371ef2d
 ---
 
 {{AddonSidebar}}
@@ -28,7 +28,7 @@ l10n:
   - : `Boolean`。当证书是在浏览器中安装的信任根证书之一时为 `true`，否则为 `false`。
 - `issuer`
 
-  - : `String`。颁发此证书的组织名称，以专有名称形式表示并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
+  - : `String`。颁发此证书的组织的专有名称，格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US”。
 
@@ -38,7 +38,7 @@ l10n:
   - : `String`。证书的[序列号](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`
 
-  - : `String`。颁发此证书的组织名称，以专有名称形式表示并格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
+  - : `String`。被颁发此证书的组织的专有名称，格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US”。
 

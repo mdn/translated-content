@@ -51,9 +51,9 @@ alert("Key Pressed: " + String.fromCharCode(e.charCode) + "\n"
 
 要获取按键代码而不考虑是 `keyCode` 还是`charCode`, 请使用 {{ domxref("event.which", "which") }} 属性。
 
-通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。 Actually with the Chinese IME I'm using, entering the IME results in a keypress event with keyCode = 229 and no other key events fire until the IME exits (which may happen after multiple characters are inputted). I'm not sure if other IME's work this way.
+通过输入法输入的字符，不会被设置到注册到通过 `keyCode` 和 `charCode`。
 
-要查看特定按键的 `charCode` 值的列表，运行这个示例页面 [Gecko DOM Reference:Examples #Example 7: Displaying Event Object Constants](/zh-CN/Gecko_DOM_Reference/Examples#Example_7:_Displaying_Event_Object_Constants) ，然后查看 HTML 表格结果。
+要查看特定按键的 `charCode` 值的列表，运行[示例 7：显示事件对象的属性](/zh-CN/docs/Web/API/Document_Object_Model/Examples#示例_7：显示事件对象的属性)并查看 HTML 表格结果。
 
 ## 规范
 

@@ -1317,12 +1317,6 @@
       "allchangechallenge"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding": {
-    "modified": "2020-09-27T08:06:04.019Z",
-    "contributors": [
-      "CoderAmutu"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/Headings_and_paragraphs": {
     "modified": "2020-07-16T22:23:41.134Z",
     "contributors": [
@@ -1336,6 +1330,12 @@
     "contributors": [
       "CoderAmutu",
       "did1335"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding": {
+    "modified": "2020-09-27T08:06:04.019Z",
+    "contributors": [
+      "CoderAmutu"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
