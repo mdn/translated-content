@@ -1,6 +1,8 @@
 ---
 title: border-block-start-width
 slug: Web/CSS/border-block-start-width
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -32,7 +34,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -60,12 +62,11 @@ border-block-start-width: thick;
 border-block-start-width: inherit;
 border-block-start-width: initial;
 border-block-start-width: revert;
+border-block-start-width: revert-layer;
 border-block-start-width: unset;
 ```
 
 関連するプロパティとしては、 {{cssxref("border-block-end-width")}}, {{cssxref("border-inline-start-width")}}, {{cssxref("border-inline-end-width")}} が要素の他の境界の幅を定義します。
-
-{{cssinfo}}
 
 ### 値
 
@@ -74,7 +75,7 @@ border-block-start-width: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -82,13 +83,13 @@ border-block-start-width: unset;
 
 ## 例
 
-<h3 id="Border_width_with_vertical_text">縦書きテキストの境界の太さ</h3>
+### 縦書きテキストの境界の太さ
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -110,7 +111,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_width_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界の太さ", 140, 140)}}
 
 ## 仕様書
 
@@ -122,5 +123,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, {{cssxref("border-left-width")}} のうちの1つに対応づけられます
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}
