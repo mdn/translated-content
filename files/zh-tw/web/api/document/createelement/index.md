@@ -23,7 +23,7 @@ createElement(localName, options)
 - `options` {{optional_inline}}
   - : 一個物件，包含以下屬性：
     - `is`
-      - : 先前透過 `customElements.define()` 定義的自訂元素的標籤名稱。詳情請參見[網頁元件範例](#網頁元件範例)。
+      - : 先前透過 `customElements.define()` 定義的自訂元素的標籤名稱。詳情請參見 [Web 元件範例](#Web_元件範例)。
 
 ### 回傳值
 
