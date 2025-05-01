@@ -1,5 +1,5 @@
 ---
-title: "Document：createElement() 方法"
+title: Document：createElement() 方法
 slug: Web/API/Document/createElement
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
