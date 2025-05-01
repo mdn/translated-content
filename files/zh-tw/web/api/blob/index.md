@@ -148,4 +148,4 @@ const text = await blob.text();
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
-- [從網頁應用程式中使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
+- [從 Web 應用程式中使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
