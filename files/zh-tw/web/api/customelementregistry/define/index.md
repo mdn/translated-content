@@ -51,10 +51,10 @@ define(name, constructor, options)
 
 你可以建立兩種類型的自訂元素：
 
-- _自主自訂元素_ 是獨立的元素，不繼承內建的 HTML 元素。
+- _獨立自訂元素_ 是獨立的元素，不繼承內建的 HTML 元素。
 - _自訂的內建元素_ 是繼承並擴展內建 HTML 元素的元素。
 
-若要定義自主自訂元素，應省略 `options` 參數。
+若要定義獨立自訂元素，應省略 `options` 參數。
 
 若要定義自訂的內建元素，必須傳遞 `options` 參數，並將其 `extends` 屬性設定為你要擴展的內建元素的名稱，且這必須對應於你的自訂元素類別定義所繼承的介面。例如，要自訂 {{htmlelement("p")}} 元素，必須傳遞 `{extends: "p"}` 給 `define()`，且你的元素類別定義必須繼承自 {{domxref("HTMLParagraphElement")}}。
 
@@ -67,20 +67,20 @@ define(name, constructor, options)
 - 不包含任何 ASCII 大寫字母
 - 不包含某些其他字元，詳見[有效的自訂元素名稱](https://html.spec.whatwg.org/multipage/custom-elements.html#valid-custom-element-name)的 Web Components 規範部分
 - 不得是以下任何名稱：
-  - "annotation-xml"
-  - "color-profile"
-  - "font-face"
-  - "font-face-src"
-  - "font-face-uri"
-  - "font-face-format"
-  - "font-face-name"
-  - "missing-glyph"
+  - 「annotation-xml」
+  - 「color-profile
+  - 「font-face」
+  - 「font-face-src」
+  - 「font-face-uri」
+  - 「font-face-format」
+  - 「font-face-name」
+  - 「missing-glyph」
 
 ## 範例
 
-### 定義自主自訂元素
+### 定義獨立自訂元素
 
-以下類別實作了一個最小的自主自訂元素：
+以下類別實作了一個最小的獨立自訂元素：
 
 ```js
 class MyAutonomousElement extends HTMLElement {
