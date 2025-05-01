@@ -15,7 +15,7 @@ l10n:
 
 要异步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
-如果你使用 `"blocking"`，则必须在 manifest.json 中拥有[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+若要使用 `"blocking"`，则必须在 manifest.json 中取得[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 在此可能会发生扩展冲突。如果两个扩展对同一请求监听 `onBeforeSendHeaders`，则第二个监听器将看到第一个监听器所做的修改，并能够撤销第一个监听器所做的任何更改。例如，如果第一个监听器添加了一个 `Cookie` 标头，而第二个监听器删除了所有 `Cookie` 标头，则第一个监听器的修改将丢失。如果你想查看实际发送的标头而不希望考虑一个扩展可能会对其作出修改，请使用 {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}，尽管你无法在此事件上修改标头。
 
@@ -31,7 +31,7 @@ for (const header of e.requestHeaders) {
 }
 ```
 
-浏览器保留浏览器生成的标头名称的原始大小写。如果扩展的监听器更改了大小写，则此更改将不会被保留。
+浏览器保留浏览器生成的标头名称的原始大小写。如果扩展的监听器更改了大小写，则这样的更改将不会被保留。
 
 ## 语法
 
