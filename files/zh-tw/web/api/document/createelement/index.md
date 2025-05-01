@@ -63,7 +63,7 @@ function addElement() {
   const newDiv = document.createElement("div");
 
   // 並為其添加一些內容
-  const newContent = document.createTextNode("嗨，您好！");
+  const newContent = document.createTextNode("嗨，你好！");
 
   // 將文字節點添加到新建立的 div 中
   newDiv.appendChild(newContent);
