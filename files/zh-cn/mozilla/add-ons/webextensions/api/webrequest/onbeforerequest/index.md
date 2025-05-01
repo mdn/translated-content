@@ -70,7 +70,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
@@ -121,7 +121,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
 - `requestBody`
 
-  - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
+  - : `string`。包含 HTTP 请求主体数据。只在 `extraInfoSpec` 参数包含 `"requestBody"` 时提供该属性。
 
     - `error` {{optional_inline}}
       - : `string`。当获取请求主体过程中发生任何错误时，该属性将包括发生的错误。
@@ -129,7 +129,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
 
       - : `object`。如果请求方法是 POST，且主体是以 UTF-8 编码的键值对序列（即“multipart/form-data”或“application/x-www-form-urlencoded”）时则会包含该对象。
 
-        它是一个字典，其中每个键都包含该键的所有值的列表，例如 `{'key'： ['value1','value2']}`。如果数据属于其他媒体类型或数据非法，则将不包含该对象。
+        它是一个字典，其中每个键都包含该键的所有值的列表，例如 `{'key'： ['value1', 'value2']}`。如果数据属于其他媒体类型或数据非法，则将不包含该对象。
 
     - `raw` {{optional_inline}}
       - : {{WebExtAPIRef('webRequest.UploadData')}} 的数组（`array`）。如果请求方法是 PUT 或 POST，且主体尚未在 `formData` 中兑现，则此数组包含未解析的请求主体内容。
@@ -314,3 +314,36 @@ browser.webRequest.onBeforeRequest.addListener(
 ```
 
 {{WebExtExamples}}
+
+> [!NOTE]
+> 此 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#event-onBeforeRequest) API。该文档衍生自 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json)。
+ 
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
