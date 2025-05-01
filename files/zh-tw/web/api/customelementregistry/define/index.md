@@ -38,12 +38,12 @@ define(name, constructor, options)
 - `NotSupportedError` {{domxref("DOMException")}}
   - : 在以下情況下拋出：
     - {{domxref("CustomElementRegistry")}} 已包含具有相同名稱或相同建構子的條目（或已經定義）。
-    - 指定了 <code>extends</code> 選項且它是一個[有效的自訂元素名稱](#有效的自訂元素名稱)。
-    - 指定了 <code>extends</code> 選項但嘗試擴展的元素是未知元素。
+    - <code>extends</code> 選項已被指定且它是一個[有效的自訂元素名稱](#有效的自訂元素名稱)。
+    - <code>extends</code> 選項已被指定但嘗試擴展的元素是未知元素。
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 如果提供的名稱不是[有效的自訂元素名稱](#有效的自訂元素名稱)，則拋出。
+  - : 如果提供的名稱不是[有效的自訂元素名稱](#有效的自訂元素名稱)，則會拋出錯誤。
 - {{jsxref("TypeError")}}
-  - : 如果引用的建構子不是建構子，則拋出。
+  - : 如果引用的建構子不是建構子，則會拋出錯誤。
 
 ## 描述
 
@@ -90,7 +90,7 @@ class MyAutonomousElement extends HTMLElement {
 }
 ```
 
-此元素不執行任何操作：一個真正的自主元素會在其建構子和標準提供的生命週期回呼中實作其功能。請參見我們的[使用自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)指南中的[實作自訂元素]部分。
+此元素不執行任何操作：一個真正的自主元素會在其建構子和標準提供的生命週期回呼中實作其功能。請參見我們的[使用自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)指南。
 
 然而，上述類別定義滿足 `define()` 方法的要求，因此我們可以使用以下程式碼定義它：
 
