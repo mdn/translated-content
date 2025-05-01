@@ -78,7 +78,7 @@ function addElement() {
 
 {{EmbedLiveSample("基本範例", 500, 80)}}
 
-### 網頁元件範例
+### Web 元件範例
 
 > [!NOTE]
 > 請檢查[瀏覽器相容性](#瀏覽器相容性)部分以了解支援情況，並參考 [`is`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/is) 屬性說明以了解自訂內建元素實作的現實情況。
