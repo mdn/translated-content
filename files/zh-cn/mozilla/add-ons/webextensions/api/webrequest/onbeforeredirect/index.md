@@ -56,7 +56,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
 ### details
 
 - `cookieStoreId`
-  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameId`
@@ -101,7 +101,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
     - `proxyDNS`
       - : `boolean`。如果代理将根据提供的主机名执行域名解析，则为真，意味着客户端不应执行自己的 DNS 查找。
     - `failoverTimeout`
-      - : `integer`。故障转移超时时间（秒）。如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) 返回的数组中的下一个代理服务器。
+      - : `integer`。故障转移超时时间（秒）。如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](</zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_返回值>) 返回的数组中的下一个代理服务器。
 
 - `redirectUrl`
   - : `string`。新的 URL。
