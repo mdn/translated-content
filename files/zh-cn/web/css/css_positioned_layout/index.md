@@ -36,9 +36,9 @@ l10n:
 
 - [理解 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
   - : 阐述了层叠上下文的概念，并通过多个示例说明 z 轴排序的工作原理。
-- [堆叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
+- [层叠时不使用 `z-index` 属性](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
   - : 未使用 `z-index` 时的层叠规则。
-- [浮动元素的层叠规则](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
+- [层叠浮动元素](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
   - : 浮动元素的层叠处理方式。
 - [使用 `z-index`](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
   - : 如何使用 `z-index` 修改默认层叠顺序。
