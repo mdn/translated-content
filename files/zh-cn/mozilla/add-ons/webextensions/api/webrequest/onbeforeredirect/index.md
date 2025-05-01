@@ -2,7 +2,7 @@
 title: webRequest.onBeforeRedirect
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRedirect
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
@@ -101,7 +101,7 @@ browser.webRequest.onBeforeRedirect.hasListener(listener)
     - `proxyDNS`
       - : `boolean`。如果代理将根据提供的主机名执行域名解析，则为真，意味着客户端不应执行自己的 DNS 查找。
     - `failoverTimeout`
-      - : `integer`。故障转移超时时间（秒）。如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 返回的数组中的下一个代理服务器。
+      - : `integer`。故障转移超时时间（秒）。如果代理连接失败，则在此期间内将不再使用代理。
 
 - `redirectUrl`
   - : `string`。新的 URL。
