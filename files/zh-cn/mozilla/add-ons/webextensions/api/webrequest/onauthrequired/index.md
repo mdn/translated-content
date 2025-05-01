@@ -36,7 +36,7 @@ l10n:
     - 如果提供了 `"asyncBlocking"`，事件监听器函数会接收一个 `asyncCallback` 函数作为其第二个参数。`asyncCallback` 可以异步调用，并接受一个 `webRequest.BlockingResponse` 对象作为其唯一参数
 
       > [!NOTE]
-      > Chrome 不支持 Promise 作为返回值（[Chromium issue 1510405](https://crbug.com/1510405)）。有关替代方案，参见 [监听器的返回值](#listener)。
+      > Chrome 不支持 Promise 作为返回值（[Chromium issue 1510405](https://crbug.com/1510405)）。替代方案请参见[监听器的返回值](#listener)。
 
 参见[示例](#examples)。
 
@@ -46,11 +46,11 @@ l10n:
 
 在 Firefox 和 Chrome Manifest V2 扩展中，你必须在 `manifest.json` 中取得 [`"webRequest"` 和 `"webRequestBlocking"` API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
-对于 Manifest V3 扩展，Chrome 不再支持 `"webRequestBlocking"` 权限（策略安装的扩展除外）。相反，`"webRequest"` 和 `"webRequestAuthProvider"` 权限使你能够异步提供凭据。Firefox 继续在 Manifest V3 中支持 `"webRequestBlocking"`，并提供 `"webRequestAuthProvider"` 以实现跨浏览器兼容性。
+对于 Manifest V3 扩展，Chrome 不再支持 `"webRequestBlocking"` 权限（由策略安装的扩展除外）。相反，`"webRequest"` 和 `"webRequestAuthProvider"` 权限使你能够异步提供凭据。Firefox 继续在 Manifest V3 中支持 `"webRequestBlocking"`，并提供 `"webRequestAuthProvider"` 以实现跨浏览器兼容性。
 
 ## 代理授权
 
-Firefox 通常不会为系统请求（例如浏览器或扩展升级或搜索引擎查询）触发 `webRequest` 事件。为了使代理授权能够顺利工作，从 Firefox 57 开始支持对此的例外。
+Firefox 通常不会为系统请求（例如浏览器或扩展升级或搜索引擎查询）触发 `webRequest` 事件。为使代理授权能顺利处理系统请求，从 Firefox 57 开始支持对此的例外。
 
 如果扩展具有 `"webRequest"`、`"webRequestBlocking"`、`"proxy"` 和 `"<all_urls>"` 权限，则可以使用 `onAuthRequired` 为代理授权提供凭据（但不能用于正常的 Web 授权）。监听器不能取消系统请求或对任何系统请求进行其他修改。
 
@@ -87,8 +87,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
       - : `object`。有关请求的详细信息。有关更多信息，请参阅 [details](#details_2) 部分。
     - `asyncCallback` {{optional_inline}}
 
-      - : 一个最多调用一次的函数，用于异步修改请求对象。
-        如果事件监听器使用 `extraInfoSpec` 数组中的 `"asyncBlocking"` 注册，则此参数存在。如果未提供 `extraInfoSpec` 或包含 `"blocking"`，则 `asyncCallback` 为 undefined。
+      - : 一个最多调用一次的函数，用于异步修改请求对象。只有在事件监听器注册时传入的 `extraInfoSpec` 数组中包含 `"asyncBlocking"`，该参数才会被提供。如果未提供 `extraInfoSpec` 或数组中包含 `"blocking"`，则 `asyncCallback` 为 undefined。
 
     返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}} 或 {{jsxref("Promise")}}，具体取决于 `extraInfoSpec` 中的设置。
 
@@ -103,7 +102,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
       - 在 Chrome 中，事件监听器必须同步响应。
       - 在 Firefox 中，事件监听器可以同步响应，也可以返回一个兑现为 `BlockingResponse` 对象的 Promise 以异步响应。
 
-    - `"asyncBlocking"`：异步处理请求。事件监听器的返回值将被忽略。要解析事件，请将 `asyncCallback` 参数传递给一个 `BlockingResponse` 对象。
+    - `"asyncBlocking"`：异步处理请求。事件监听器的返回值将被忽略。要兑现事件，请将 `asyncCallback` 参数传递给一个 `BlockingResponse` 对象。
 
       - 从 Chrome 120 和 Firefox 128 开始支持。
       - Safari 不支持。
@@ -122,11 +121,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
       - : `integer`。服务器的端口号。
 
 - `cookieStoreId`
-  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
-- `frameId`
-  - : `integer`。如果请求发生在主框架中，则为 `0`；正值是请求发生的子框架的 ID。如果加载了文档（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示该框架的 ID，而不是外部框架的 ID。框架 ID 在选项卡中是唯一的。
-- `incognito`
-  - : `boolean`。请求是否来自隐私浏览窗口。
+  - : `string`。若请求来自场景身份中打开的标签页，则为此场景身份的 cookie 存储 ID。详细信息请参见[使用场景身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `incognito`
@@ -134,16 +129,8 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 - `isProxy`
   - : `boolean`。`true` 表示 `Proxy-Authenticate`，`false` 表示 `WWW-Authenticate`。
     > **注意：** `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
-- `ip`
-  - : `string`。请求的目标服务器的 IP 地址，可能是 IPv6 字面量。
 - `method`
   - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
-- `originUrl`
-
-  - : `string`。触发请求的资源的 URL。例如，若用户点击了“https\://example.com”页面中的链接，则结果请求的 `originUrl` 为“https\://example.com”。
-
-    `originUrl` 通常与 `documentUrl` 相同，但并不总是如此。例如，如果页面包含 iframe，并且 iframe 包含加载新文档的链接，则结果请求的 `documentUrl` 将是 iframe 的父文档 URL，而 `originUrl` 将是包含链接的 iframe 中的文档的 URL。
-
 - `parentFrameId`
   - : `integer`。包含发起请求的框架的父框架 ID。如果不存在父框架则为 -1。
 - `proxyInfo`
@@ -170,10 +157,10 @@ browser.webRequest.onAuthRequired.hasListener(listener)
     - `proxyDNS`
       - : `boolean`。如果代理将根据提供的主机名执行域名解析，则为真，意味着客户端不应执行自己的 DNS 查找。
     - `failoverTimeout`
-      - : `integer`。故障转移超时时间（秒）如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](</en-US/docs/Mozilla/Add-ons/WebExtensions/API/proxy#findproxyforurl()_return_value>) 返回的数组中的下一个代理服务器。
+      - : `integer`。故障转移超时时间（秒）如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 返回的数组中的下一个代理服务器。
 
 - `realm` {{optional_inline}}
-  - : `string`。服务器提供的身份验证 [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11)，如果有的话。
+  - : `string`。如果存在，则为服务器提供的身份验证 [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11)。
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
@@ -225,7 +212,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 const target = "https://intranet.company.com/";
 
 function observe(requestDetails) {
-  console.log(`observing: ${requestDetails.requestId}`);
+  console.log(`观察：${requestDetails.requestId}`);
 }
 
 browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
@@ -237,7 +224,7 @@ browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
 const target = "https://intranet.company.com/";
 
 function cancel(requestDetails) {
-  console.log(`canceling: ${requestDetails.requestId}`);
+  console.log(`取消：${requestDetails.requestId}`);
   return { cancel: true };
 }
 
@@ -258,8 +245,7 @@ const myCredentials = {
 
 const pendingRequests = [];
 
-// A request has completed.
-// We can stop worrying about it.
+// 请求已被完成，我们不需要再继续处理它了。
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
   let index = pendingRequests.indexOf(requestDetails.requestId);
@@ -269,14 +255,13 @@ function completed(requestDetails) {
 }
 
 function provideCredentialsSync(requestDetails) {
-  // If we have seen this request before, then
-  // assume our credentials were bad, and give up.
+  // 如果我们已经处理过这一请求，那就假设我们所提供的凭据无效，那么就放弃吧。
   if (pendingRequests.includes(requestDetails.requestId)) {
-    console.log(`bad credentials for: ${requestDetails.requestId}`);
+    console.log(`错误凭据：${requestDetails.requestId}`);
     return { cancel: true };
   }
   pendingRequests.push(requestDetails.requestId);
-  console.log(`providing credentials for: ${requestDetails.requestId}`);
+  console.log(`为请求提供凭据：${requestDetails.requestId}`);
   return { authCredentials: myCredentials };
 }
 
@@ -299,7 +284,7 @@ const target = "https://httpbin.org/basic-auth/*";
 const pendingRequests = [];
 
 /*
- * A request has completed. We can stop worrying about it.
+ * 请求已被完成，我们不需要再继续处理它了。
  */
 function completed(requestDetails) {
   console.log(`completed: ${requestDetails.requestId}`);
@@ -310,17 +295,14 @@ function completed(requestDetails) {
 }
 
 function provideCredentialsAsync(requestDetails) {
-  // If we have seen this request before,
-  // then assume our credentials were bad,
-  // and give up.
+  // 如果我们已经处理过这一请求，那就假设我们所提供的凭据无效，那么就放弃吧。
   if (pendingRequests.includes(requestDetails.requestId)) {
-    console.log(`bad credentials for: ${requestDetails.requestId}`);
+    console.log(`错误凭据：${requestDetails.requestId}`);
     return { cancel: true };
   } else {
     pendingRequests.push(requestDetails.requestId);
-    console.log(`providing credentials for: ${requestDetails.requestId}`);
-    // we can return a promise that will be resolved
-    // with the stored credentials
+    console.log(`为请求提供凭据：${requestDetails.requestId}`);
+    // 我们可以返回一个兑现为存储的凭据的 Promise
     return browser.storage.local.get(null);
   }
 }
