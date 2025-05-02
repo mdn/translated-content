@@ -1,6 +1,8 @@
 ---
 title: border-inline-start-style
 slug: Web/CSS/border-inline-start-style
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -28,7 +30,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -51,18 +53,22 @@ direction: rtl;
 /* <'border-style'> 値 */
 border-inline-start-style: dashed;
 border-inline-start-style: dotted;
-border-inline-start-style: revert;
 border-inline-start-style: groove;
+
+/* グローバル値 */
+border-inline-start-style: inherit;
+border-inline-start-style: initial;
+border-inline-start-style: revert;
+border-inline-start-style: revert-layer;
+border-inline-start-style: unset;
 ```
 
 関連するプロパティとしては、 {{cssxref("border-block-start-style")}}、{{cssxref("border-block-end-style")}}、{{cssxref("border-inline-end-style")}} が要素の他の境界のスタイルを定義します。
 
-{{cssinfo}}
-
 ### 値
 
 - `<'border-style'>`
-  - : 境界の線のスタイルです。 {{cssxref("border-style")}} を参照してください。
+  - : 境界の線のスタイルです。 {{ cssxref("border-style") }} を参照してください。
 
 ## 公式定義
 
@@ -72,13 +78,13 @@ border-inline-start-style: groove;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -110,5 +116,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
