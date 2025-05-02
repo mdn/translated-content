@@ -1,9 +1,8 @@
 ---
 title: Document：defaultView 屬性
-short-title: defaultView
 slug: Web/API/Document/defaultView
-page-type: web-api-instance-property
-browser-compat: api.Document.defaultView
+l10n:
+  sourceCommit: 0a881eea07f0cec6ca4ed85a24af43b367a9f80d
 ---
 
 {{ApiRef}}
