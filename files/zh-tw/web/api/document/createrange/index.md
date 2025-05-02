@@ -1,9 +1,8 @@
 ---
-title: "文件：createRange() 方法"
-short-title: createRange()
+title: Document：createRange() 方法
 slug: Web/API/Document/createRange
-page-type: web-api-instance-method
-browser-compat: api.Document.createRange
+l10n:
+  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
 {{APIRef("DOM")}}
@@ -33,7 +32,7 @@ range.setStart(startNode, startOffset);
 range.setEnd(endNode, endOffset);
 ```
 
-## 注意事項
+## 備註
 
 一旦建立了 `Range`，你需要設定其邊界點，才能使用其大多數的方法。
 
