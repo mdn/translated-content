@@ -10,7 +10,7 @@ l10n:
 在将标签传递给 [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) 获取传递值之前，可以用该方法测试标签的正确性。可以用在 JavaScript 中创建的标签或者在 WebAssembly 中创建并导出到 JavaScript 中的标签。
 
 > [!NOTE]
-> 数据类型顺序相同的标签是不够的——必须和异常创建时用的标签是相同的*身份*（同一个标签）。
+> 数据类型顺序相同的标签是不够的——必须和异常创建时用的标签具有相同的*身份*（同一个标签）。
 
 ## 语法
 
@@ -21,7 +21,7 @@ is(tag)
 ### 参数
 
 - `tag`
-  - : 一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，用来验证异常的类型。
+  - : 用来验证异常的类型的 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)。
 
 ### 返回值
 
@@ -32,7 +32,7 @@ is(tag)
 下面的代码展示如何使用 `is()` 验证一个标签匹配一个 [`Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception)。
 
 ```js
-// 创建标签，并用它创建一个异常
+// 创建标签，并用它创建异常
 const tag1 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
 const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
 
