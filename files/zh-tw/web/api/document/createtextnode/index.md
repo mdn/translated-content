@@ -1,9 +1,8 @@
 ---
-title: "Document：createTextNode() 方法"
-short-title: createTextNode()
+title: Document：createTextNode() 方法
 slug: Web/API/Document/createTextNode
-page-type: web-api-instance-method
-browser-compat: api.Document.createTextNode
+l10n:
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{APIRef("DOM")}}
@@ -19,7 +18,7 @@ createTextNode(data)
 ### 參數
 
 - `data`
-  - ：包含要放入文字節點的資料的字串。
+  - : 包含要放入文字節點的資料的字串。
 
 ### 回傳值
 
@@ -29,7 +28,7 @@ createTextNode(data)
 
 ```html
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
     <title>createTextNode 範例</title>
     <script>
