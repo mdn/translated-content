@@ -24,8 +24,7 @@ view-transition-name: none;
 
 - {{cssxref("custom-ident")}}
   - : 一个独特的标识名称，使选中的元素参与与根视图过渡不同的[视图过渡](/zh-CN/docs/Web/API/View_Transition_API)。标识符必须是唯一的。如果两个渲染元素在同一时间具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将被拒绝，过渡将被跳过。
-    > [!NOTE]
-    > `<custom-ident>` 不能是 `auto`。
+    > **备注：** `<custom-ident>` 不能是 `auto`。
 - `none`
   - : 所选元素将不参与视图过渡。
 
