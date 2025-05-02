@@ -7,9 +7,9 @@ l10n:
 
 {{DefaultAPISidebar("Canvas API")}}
 
-**Canvas API** 提供了一種透過 [JavaScript](/zh-TW/docs/Web/JavaScript) 和 [HTML](/zh-TW/docs/Web/HTML) {{HtmlElement("canvas")}} 元素繪製圖形的方法。它可以用於動畫、遊戲圖形、資料視覺化、照片處理以及即時視訊處理等。
+**Canvas API** 提供了一種透過 [JavaScript](/zh-TW/docs/Web/JavaScript) 和 [HTML](/zh-TW/docs/Web/HTML) {{HtmlElement("canvas")}} 元素繪製圖形的方法。除此之外，它還可用於動畫、遊戲圖形、資料視覺化、照片處理以及即時視訊處理等。
 
-Canvas API 主要專注於 2D 圖形。而 [WebGL API](/zh-TW/docs/Web/API/WebGL_API) 也使用 `<canvas>` 元素，則用於繪製硬體加速的 2D 和 3D 圖形。
+Canvas API 主要專注於 2D 圖形。而 [WebGL API](/zh-TW/docs/Web/API/WebGL_API) 也使用 `<canvas>` 元素，用於繪製硬體加速的 2D 和 3D 圖形。
 
 ## 基本範例
 
@@ -59,7 +59,7 @@ ctx.fillRect(10, 10, 150, 100);
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} 是一個相關的介面。
 
-## 教學與指南
+## 指南與教學
 
 - [Canvas 教學](/zh-TW/docs/Web/API/Canvas_API/Tutorial)
   - : 一個全面的教學，涵蓋 Canvas API 的基本用法及其進階功能。
