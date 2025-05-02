@@ -42,9 +42,9 @@ createTextNode(data)
   </head>
 
   <body>
-    <button onclick="addTextNode('YES! ');">YES!</button>
-    <button onclick="addTextNode('NO! ');">NO!</button>
-    <button onclick="addTextNode('WE CAN! ');">WE CAN!</button>
+    <button onclick="addTextNode('是！ ');">是！</button>
+    <button onclick="addTextNode('否！ ');">否！</button>
+    <button onclick="addTextNode('我們可以！ ');">我們可以！</button>
 
     <hr />
 
