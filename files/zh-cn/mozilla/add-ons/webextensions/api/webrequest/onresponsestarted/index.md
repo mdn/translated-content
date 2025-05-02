@@ -2,7 +2,7 @@
 title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
