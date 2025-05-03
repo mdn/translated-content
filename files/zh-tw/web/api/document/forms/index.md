@@ -1,9 +1,8 @@
 ---
 title: Document：forms 屬性
-short-title: forms
 slug: Web/API/Document/forms
-page-type: web-api-instance-property
-browser-compat: api.Document.forms
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("DOM")}}
