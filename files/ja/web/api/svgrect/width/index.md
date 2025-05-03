@@ -1,22 +1,24 @@
 ---
-title: "SVGRect: x プロパティ"
-short-title: x
-slug: Web/API/SVGRect/x
+title: "SVGRect: width プロパティ"
+short-title: width
+slug: Web/API/SVGRect/width
 l10n:
-  sourceCommit: 0496bb2fcef13172325e1cc25a5fc71410506557
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{APIRef("SVG")}}
 
-[x](https://svgwg.org/svg2-draft/geometry.html#XProperty) プロパティは、要素の位置の水平座標を記述します。
+**`width`** は {{domxref("SVGRect")}} インターフェイスのプロパティで、 {{DOMXref("DOMRect.width")}} プロパティの別名です。要素の水平方向のサイズを記述します。これは SVG 要素の {{SVGattr("width")}}属性と CSS の {{cssxref("width")}} プロパティを反映します。
+
+幅は長さであり、ユーザー座標系における要素の左端から右端までの距離です。構文は、 [`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) と同じです。
 
 ## 使用コンテキスト
 
-<table class="no-markdown">
+<table>
   <thead>
     <tr>
       <th>名前</th>
-      <th>x</th>
+      <th>width</th>
     </tr>
   </thead>
   <tbody>
@@ -52,10 +54,7 @@ l10n:
     <tr>
       <td>パーセント値</td>
       <td>
-        現在のビューポートの大きさを参照（<a
-          href="https://svgwg.org/svg2-draft/coords.html#Units"
-          >単位</a
-        >を参照）
+        SVG ビューポートのサイズからの相対値
       </td>
     </tr>
     <tr>
@@ -73,22 +72,6 @@ l10n:
   </tbody>
 </table>
 
-## シンプルな使用法
-
-\<coordinate> はユーザー座標系での長さで、指定された軸方向（X 座標の場合は X 軸、 Y 座標の場合は Y 軸）のユーザー座標系の原点からの距離です。構文は [\<length>](https://www.w3.org/TR/SVG11/types.html#DataTypeLength) と同じです。
-
-```html
-<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="0" width="40" height="40" fill="blue"></rect>
-</svg>
-
-<svg width="100" height="50" xmlns="http://www.w3.org/2000/svg">
-  <rect x="40" y="0" width="40" height="40" fill="green"></rect>
-</svg>
-```
-
-{{EmbedLiveSample("Simple usage", "100%", "100")}}
-
 ## 仕様書
 
 {{Specifications}}
@@ -96,3 +79,8 @@ l10n:
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{DOMXref("DOMRect.height")}}
+- {{domxref("SVGRect.width")}}
