@@ -136,7 +136,7 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 
 翻譯如下：
 
-> **備註：**只有在作為使用者互動的一部分被呼叫時，`document.execCommand()` 才會回傳 `true`。你不能用它來在呼叫指令之前驗證瀏覽器是否支援該指令。
+> **備註：** 只有在作為使用者互動的一部分被呼叫時，`document.execCommand()` 才會回傳 `true`。你不能用它來在呼叫指令之前驗證瀏覽器是否支援該指令。
 
 ## 範例
 
