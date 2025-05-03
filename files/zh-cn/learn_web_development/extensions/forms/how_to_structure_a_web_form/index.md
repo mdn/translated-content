@@ -392,7 +392,7 @@ l10n:
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure)。
+本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure)。
 
 ## 总结
 

@@ -1,14 +1,13 @@
 ---
 title: "<area>: イメージマップ領域要素"
 slug: Web/HTML/Reference/Elements/area
-original_slug: Web/HTML/Element/area
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-**`<area>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップの中でクリック可能な領域をあらかじめ定義します。*イメージマップ*では、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。
+**`<area>`** は [HTML](/ja/docs/Web/HTML) の要素で、イメージマップの中でクリック可能な領域をあらかじめ定義します。イメージマップでは、画像上の幾何学的な領域を{{Glossary("Hyperlink", "ハイパーテキストリンク")}}と関連付けすることができます。
 
 この要素は {{HTMLElement("map")}} 要素内だけで使用します。
 
@@ -45,7 +44,7 @@ l10n:
 <img
   usemap="#infographic"
   src="/shared-assets/images/examples/mdn-info.png"
-  alt="MDN infographic" />
+  alt="MDN インフォグラフィック" />
 ```
 
 ```css interactive-example
@@ -67,7 +66,7 @@ img {
     この属性は [`href`](#href) 属性が使用されている場合のみ必要です。
 - `coords`
 
-  - : `coords` 属性は、 [`shape`](#attr-shape) 属性の座標を寸法、形状、`<area>` の配置について詳述します。
+  - : `coords` 属性は、 [`shape`](#shape) 属性の座標を寸法、形状、`<area>` の配置について詳述します。
     この属性は `shape` が `default` に設定されていた場合は使用してはいけません。
 
     - `rect`: 値は `x1,y1,x2,y2` です。
@@ -87,13 +86,10 @@ img {
   - : この領域のハイパーリンクの宛先です。
     この値は有効な URL です。
     この属性は省略可能です。その場合、その `<area>` 要素はハイパーリンクを提供しません。
-- `hreflang`
-  - : リンク先のリソースの言語を示します。許容される値は {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}} で定められています。
-    この属性は、 [`href`](href) 属性を指定する場合にのみ使用してください。
 - `ping`
   - : ハイパーリンクに進んだとき、ブラウザーから {{HTTPMethod("POST")}} リクエストが本文を `PING` として（バックグラウンドで）送信する URL を空白で区切ったリストで記述します。
     ふつうはトラッキング用に使用します。
-- `referrerpolicy` {{experimental_inline}}
+- `referrerpolicy`
 
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。
 
@@ -121,25 +117,14 @@ img {
 
     - `_self` （既定値）: 現在の閲覧コンテキストのリソースを表します。
     - `_blank`: 新しい名前の付けられていない閲覧コンテキストのリソースを表します。
-    - `_parent`: 現在のページがフレーム内にある場合は、現在の親の閲覧コンテキストのリソースを表します。親要素がない場合、 `_self` と同じ動作をします。
-    - `_top`: 最上位の閲覧コンテキストのリソースを表します (現在の閲覧コンテキストの祖先にあたり、それ以上親のない要素です)。親要素がない場合、 `_self` と同じ動作をします。
+    - `_parent`: 現在のページがフレーム内にある場合は、現在の親の閲覧コンテキストのリソースを表します。
+      親要素がない場合、 `_self` と同じ動作をします。
+    - `_top`: 最上位の閲覧コンテキストのリソースを表します (現在の閲覧コンテキストの祖先にあたり、それ以上親のない要素です)。
+      親要素がない場合、 `_self` と同じ動作をします。
 
     この属性は [`href`](#href) 属性が存在する場合にのみ使用してください。
 
     > **メモ:** `target="_blank"` を `<area>` 要素に設定すると、暗黙に `rel` に [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) を設定し、`window.opener` が設定されていないのと同じように動作します。対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
-
-### 非推奨の属性
-
-- `name` {{deprecated_inline}}
-  - : 古いブラウザーでスクリプトから使用できるようにするため、クリック可能な領域に名前を定義します。
-- `nohref` {{deprecated_inline}}
-
-  - : 関連づけた領域にハイパーリンクがないことを示します。
-
-    > **メモ:** `nohref` 属性は必要ありません。`href` 属性を省略すれば十分だからです。
-
-- `type` {{deprecated_inline}}
-  - : 参照されているリソースの種類のヒントです。ブラウザーからは無視されます。
 
 ## 例
 
@@ -158,7 +143,7 @@ img {
 </map>
 <img
   usemap="#primary"
-  src="https://via.placeholder.com/350x150"
+  src="https://dummyimage.com/350x150"
   alt="350 x 150 pic" />
 ```
 
@@ -172,21 +157,19 @@ img {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
-      <td>
-        なし。これは{{Glossary("void element", "空要素")}}です。
-      </td>
+      <td>なし。これは{{Glossary("void element", "空要素")}}です。</td>
     </tr>
     <tr>
       <th scope="row">タグの省略</th>
@@ -195,14 +178,15 @@ img {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。 <code>&#x3C;area></code> 要素は祖先が {{HTMLElement("map")}} でなければなりませんが、直接の親要素である必要はありません。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。 <code>&#x3C;area></code> 要素は祖先が {{HTMLElement("map")}} でなければなりませんが、直接の親要素である必要はありません。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/area#href"><code>href</code></a> 属性がある場合は
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role">link</a></code>、そうでなければ<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/area#href"><code>href</code></a> 属性がある場合は
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>、そうでなければ
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>

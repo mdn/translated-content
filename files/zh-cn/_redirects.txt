@@ -1309,9 +1309,9 @@
 /zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
 /zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 /zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-/zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn/MathML	/zh-CN/docs/Web/MathML
 /zh-CN/docs/Learn/MathML/First_steps	/zh-CN/docs/Web/MathML/Guides
@@ -1442,6 +1442,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
+/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages

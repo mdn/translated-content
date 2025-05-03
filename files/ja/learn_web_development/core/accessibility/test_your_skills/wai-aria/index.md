@@ -44,7 +44,7 @@ l10n:
 
 ## WAI-ARIA 3
 
-最後の WAI-ARIA の課題では、前回の [CSS と JavaScript のスキルテスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
+最後の WAI-ARIA の課題では、前回の [CSS と JavaScript のスキルテスト](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript)で見た例を返します。前回と同様に、動物の名前のリストを表示する単純なアプリがあります。動物の名前を 1 つクリックすると、その動物の詳細な説明がリスト以下のボックスに現れます。ここでは、マウスとキーボードでアクセスできるバージョンから始めています。
 
 ここでの問題は、 DOM が新しい説明を表示させるために変更されたとき、スクリーンリーダーは何が変更されたのかわからないということです。説明の変更がスクリーンリーダーによってアナウンスされるように更新することはできますか。
 

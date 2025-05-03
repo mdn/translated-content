@@ -89,7 +89,7 @@ sidebar:
   - /MDN/Changelog
 ```
 
-この URL は MDN の URL 構造における `docs` ディレクトリーに対する相対パスであるため、例えば `/MDN/Changelog` は https://developer.mozilla.org/ja/docs/MDN/Changelog へのリンクを生成します。システムは自動的にリンク先のページの文書タイトルをリンクテキストとして使用します。
+この URL は MDN の URL 構造における `docs` ディレクトリーに対する相対パスであるため、例えば `/MDN/Changelog` は https://developer.mozilla.org/ja/docs/MDN/Writing_guidelines/Changelog へのリンクを生成します。システムは自動的にリンク先のページの文書タイトルをリンクテキストとして使用します。
 
 独自のリンクテキストを使用したい場合は、リストアイテム内に 2 つのキーを記述する必要があります。 1 つは、独自のリンクテキストを持つ `title`、もう 1 つは、相対 URL を持つ `link` です。次の例では、 MDN Web Docs の変更履歴へのリンクを前回と同様に作成しますが、リンクテキストは独自の "Our changelog" になります。
 
