@@ -7,10 +7,10 @@ l10n:
 
 [`Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 对象的 **`getArg()`** 原型方法可以用于获取异常的数据参数中指定项的值。
 
-该方法传递一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，如果抛出的 `Exception` 创建用的标签是同一个的话，才会成功，否则会抛出一个 `TypeError`。这确保该异常仅能在调用代码有标签的访问权限时被读取。即不是导入到 WebAssembly 代码也不是从 WebAssembly 代码导出的标签是内部的，与之关联的 [`WebAssembly.Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 不能使用该方法进行查询！
+该方法传递一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，如果抛出的 `Exception` 创建用的标签是同一个的话，才会成功，否则会抛出 `TypeError`。这确保该异常仅能在调用代码有标签的访问权限时被读取。即不是导入到 WebAssembly 代码也不是从 WebAssembly 代码导出的标签是内部的，与之关联的 [`WebAssembly.Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 不能使用该方法进行查询！
 
 > [!NOTE]
-> 数据类型顺序相同的标签是不够的——必须和异常创建时用的标签是相同的*身份*（同一个标签）。
+> 数据类型顺序相同的标签是不够的——必须和异常创建时用的标签具有相同的*身份*（同一个标签）。
 
 ## 语法
 
@@ -38,11 +38,11 @@ getArg(exceptionTag, index)
 
 ## 示例
 
-为了获得异常的值，调用代码必须“知道”标签；它可能是导入到调用代码也可能是从调用代码导出。
+为了获得异常的值，调用代码必须“知道”标签；它可能是被导入到调用代码也可能是从调用代码导出。
 
 ### 从导入的标签获取异常值
 
-思考下面的 WebAssembly 代码，假设其被编译为“example.wasm”。导入一个标签，内部引用为 `$tagname`，并导出一个可由外部代码调用的方法 `run`，该方法使用导入的标签抛出一个异常。
+考虑下面的 WebAssembly 代码，假设其被编译为“example.wasm”。导入一个标签，内部引用为 `$tagname`，并导出一个可由外部代码调用的方法 `run`，该方法使用导入的标签抛出异常。
 
 ```wat
 (module
@@ -65,7 +65,7 @@ getArg(exceptionTag, index)
 
 下面的代码调用 [`WebAssembly.instantiateStreaming`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 导入“example.wasm”文件，传入的“导入对象”（`importObject`）中包含一个新的、名为 `tagToImport` 的 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)。导入的对象用匹配 WebAssembly 代码中的 `import` 语句的属性定义一个对象。
 
-一旦实例化文件，代码就调用导出的 WebAssembly `run` 方法，该方法会立即抛出一个异常。
+一旦实例化文件，代码就调用导出的 WebAssembly `run` 方法，该方法会立即抛出异常。
 
 ```js
 const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
