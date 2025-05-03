@@ -3,7 +3,7 @@ title: 原生表单部件
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
 
@@ -328,7 +328,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)。
 
 ## 总结
 

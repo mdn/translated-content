@@ -3,7 +3,7 @@ title: 多媒体：视频
 slug: Learn_web_development/Extensions/Performance/video
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance/Javascript", "Learn_web_development/Extensions/Performance")}}
 
 正如我们在前一节中了解到的，媒体（即图片和视频）占了一般网站下载量的 70% 以上。我们已经学过了如何优化图片。本文将研究如何优化视频来提高 web 性能。
 

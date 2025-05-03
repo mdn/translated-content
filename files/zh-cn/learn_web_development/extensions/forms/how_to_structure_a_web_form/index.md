@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在介绍了基本知识后，我们现在来详细了解用于为表单的不同部分提供结构和意义的元素。
 
@@ -392,7 +392,7 @@ l10n:
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Form_structure)。
+本文已经结束，但你还记得最重要的信息吗？在继续阅读之前，可以找到进一步的测试来验证是否记住了这些信息——请参见[技能测试：表格结构](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Form_structure)。
 
 ## 总结
 

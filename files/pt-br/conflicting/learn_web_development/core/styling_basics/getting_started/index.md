@@ -217,7 +217,7 @@ O exemplo ativo abaixo inclui as duas regras acima. Verifique adicionando uma re
 
 {{EmbedGHLiveSample("css-examples/learn/getting-started/started2.html", '100%', 1100)}}
 
-> **Nota:** **Observação**: Como pode ver, CSS nos dá várias maneiras de especificar elementos, e temos somente arranhado a superfície até agora! Analisaremos adequadamente todos esses seletores e muitos outros, nos nossos artigos [Seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) posteriormente neste curso.
+> **Nota:** **Observação**: Como pode ver, CSS nos dá várias maneiras de especificar elementos, e temos somente arranhado a superfície até agora! Analisaremos adequadamente todos esses seletores e muitos outros, nos nossos artigos [Seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) posteriormente neste curso.
 
 ## Estilizando coisas baseadas no estado
 
@@ -247,7 +247,7 @@ No exemplo ativo abaixo, você pode brincar com diferentes valores para os vári
 
 Removemos o sublinhado do nosso link ao passar o mouse. Pode-se remover os sublinhados de todos os estados de um link. Vale lembrar, no entanto, que em um site real, você deseja garantir que os visitantes saibam que um link é um link. Deixar o sublinhado no lugar pode ser uma pista importante para as pessoas perceberem que é possível clicar em algum texto dentro de um parágrafo — esse é o comportamento ao qual estão acostumados. Como tudo em CSS, existe o potencial de tornar o documento menos acessível com suas alterações — procuraremos destacar possíveis armadilhas em locais apropriados.
 
-> **Nota:** **Observação**: Você verá frequentemente menção de [acessibilidade](/pt-BR/docs/Learn/Accessibility) nessas lições e no MDN. Quando falamos sobre acessibilidade, estamos nos referindo aos requerimentos para a nossa página web ser compreensível e utilizável por todos.
+> **Nota:** **Observação**: Você verá frequentemente menção de [acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility) nessas lições e no MDN. Quando falamos sobre acessibilidade, estamos nos referindo aos requerimentos para a nossa página web ser compreensível e utilizável por todos.
 >
 > Seu visitante pode muito bem estar em um computador com um mouse defeituoso, ou um dispositivo móvel com uma tela sensível ao toque. Ou eles podem estar usando um leitor de tela, que lê o conteúdo do documento, ou podem precisar de muito texto grande, ou estar navegando no site apenas usando o teclado.
 >

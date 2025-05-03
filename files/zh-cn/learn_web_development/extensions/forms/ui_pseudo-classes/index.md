@@ -3,7 +3,7 @@ title: UI 伪类
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 在以前的文章中，我们以一般的方式介绍了各种表单控件的样式。这包括一些伪类的使用，例如，使用 `:checked` 来选择一个选中的复选框。在这篇文章中，我们将详细探讨在现代浏览器中可用的不同 UI 伪类，以便在不同状态下对表单添加样式。
 
@@ -615,7 +615,7 @@ input[type="radio"]:indeterminate {
 
 ## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling)。
 
 ## 总结
 

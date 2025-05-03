@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Models
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). Ele explica o que é um modelo, como ele é declarado e mostra algum dos principais tipos de campo. Ele também mostra brevemente algumas das principais formas pelas quais você pode acessar dados do modelo.
+Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). Ele explica o que é um modelo, como ele é declarado e mostra algum dos principais tipos de campo. Ele também mostra brevemente algumas das principais formas pelas quais você pode acessar dados do modelo.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -32,9 +32,9 @@ Este artigo mostra como definir os modelos para o website [LocalLibrary](/pt-BR/
 
 Aplicativos Django acessam e gerenciam dados através de objetos Python chamados de modelos (models). Modelos definem a _estrutura_ dos dados armazenados, incluindo os tipos de campos e possivelmente também o seu tamanho máximo, valores default, opções de listas de seleção, texto de ajuda para documentação, texto de labels para formulários, etc. A definição do modelo é independente do banco de dados - você pode escolher um tipo de banco como parte das configurações do seu projeto. Uma vez que você tenha escolhido qual banco será utilizado você precisa conversar diretamente com ele - você somente escreve a estrutura do seu modelo e outros códigos, e o Django faz todo o trabalho sujo de comunicação com o banco para você.
 
-Este tutorial mostra como definir e acessar os modelos para o website [LocalLibrary website](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Este tutorial mostra como definir e acessar os modelos para o website [LocalLibrary website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
-## Projetando os modelos para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+## Projetando os modelos para o website [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)
 
 Antes de começarmos a criar nossos modelos, vale a pena perder alguns minutos pensando sobre os dados que iremos guardar e as relações entre os diferentes modelos que serão criados.
 

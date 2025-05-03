@@ -3,7 +3,7 @@ title: "Django 教學 2: 創建一個骨架網站"
 slug: Learn_web_development/Extensions/Server-side/Django/skeleton_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django")}}
 
 Django 教學的第二篇文章，會展示怎樣創建一個網站的"框架"，在這個框架的基礎上，你可以繼續填充整站使用的 settings， urls，模型(models)，視圖(views)和模板(templates )。
 

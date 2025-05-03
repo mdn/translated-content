@@ -32,7 +32,7 @@ Allow: <métodos-http>
 ## Diretivas
 
 - \<métodos-http>
-  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) separados por vírgula.
+  - : Uma lista de [métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) separados por vírgula.
 
 ## Exemplos
 

@@ -12,7 +12,7 @@ O cabeçalho de resposta HTTP **`X-XSS-Protection`** é uma funcionalidade do In
 >
 > - Chrome [removeu o XSS Auditor deles](https://www.chromestatus.com/feature/5021976655560704)
 > - Firefox não tem, e [não irá implementar `X-XSS-Protection`](https://bugzilla.mozilla.org/show_bug.cgi?id=528661)
-> - Edge [aposentou o filtro XSS deles](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) sem permitir scripts `unsafe-inline` ao invés disso.
+> - Edge [aposentou o filtro XSS deles](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/)Isso significa que se você não precisa dar suporte para navegadores legado, é recomendado que você use [`Content-Security-Policy`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) sem permitir scripts `unsafe-inline` ao invés disso.
 
 <table class="properties">
   <tbody>

@@ -3,8 +3,6 @@ title: Express 教程 2：创建站点框架
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本节将演示如何创建一个可添加路由、模板/视图、和数据库调用的“骨架”站点。

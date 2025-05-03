@@ -68,4 +68,4 @@ body {
 
 ## Veja também
 
-- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/Using_CSS_custom_properties)
+- [Utilizando variáveis CSS](/pt-BR/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)

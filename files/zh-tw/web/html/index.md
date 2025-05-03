@@ -2,7 +2,7 @@
 title: HTML：超文本標記語言
 slug: Web/HTML
 l10n:
-  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}

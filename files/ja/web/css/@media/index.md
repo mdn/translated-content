@@ -1,6 +1,8 @@
 ---
 title: "@media"
 slug: Web/CSS/@media
+l10n:
+  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---
 
 {{CSSRef}}
@@ -41,7 +43,7 @@ abbr {
 
 ## 構文
 
-`@media` アットルールは、コードの最上位に配置したり、他の[条件付きグループアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の中に入れ子にして配置したりすることができます。
+`@media` アットルールは、コードの最上位に配置したり、他の条件付きグループアットルールの中に入れ子にして配置したりすることができます。
 
 ```css
 /* コードの最上位 */
@@ -65,104 +67,122 @@ abbr {
 
 ## 解説
 
+メディアクエリーの `<media-query-list>` には、[`<media-type>`](#メディア種別)、[`<media-feature>`](#メディア特性)、[論理演算子](#論理演算子)があります。
+
 ### メディア種別
 
-*メディア種別*は機器の全般的な分類を記述します。
+_`<media-type>`_ は機器の全般的な分類を記述します。
 `not` または `only` 論理演算子を使用する場合を除き、メディア種別は省略可能であり、暗黙で `all` と見なされます。
 
 - `all`
   - : すべての機器に適合します。
 - `print`
-  - : ページのある資料や、画面に印刷プレビューモードで表示されている文書向けのものです。（これらの形式に特有の整形上の問題については、[ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)を参照してください。）
+  - : ページのある資料や、画面に印刷プレビューモードで表示されている文書向けのものです。（これらの形式に特有の整形上の問題については、[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)を参照してください。）
 - `screen`
   - : 主に画面向けのものです。
-- `speech`
-  - : 音声合成向けのものです。
 
 > [!NOTE]
-> CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://dev.w3.org/csswg/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
-> `aural` タイプは `speech` に置き換えられましたが、これも同様です。
+> CSS2.1 および [Media Queries 3](https://drafts.csswg.org/mediaqueries-3/#background) では、その他のメディア種別 (`tty`, `tv`, `projection`, `handheld`, `braille`, `embossed`, `aural`) が定義されていましたが、これらは [Media Queries 4](https://drafts.csswg.org/mediaqueries/#media-types) で非推奨となったため、使用すべきではありません。
 
 ### メディア特性
 
-*メディア特性*は、{{glossary("user agent", "ユーザーエージェント")}}、出力装置、環境の特定の特徴を記述します。
-メディア特性式は、その存在や値を調べるもので、完全に任意です。それぞれのメディア特性式は、括弧で囲む必要があります。
+_`<media feature>`_ は、{{glossary("user agent", "ユーザーエージェント")}}、出力装置、環境の特定の特徴を記述します。
+メディア特性式は、その存在や、値、値の範囲を調べるもので、完全に任意です。それぞれのメディア特性式は、括弧で囲む必要があります。
 
 - {{cssxref("@media/any-hover", "any-hover")}}
   - : 入力メカニズムで、ユーザーが要素上でのホバーを使用することができるものがあるか。
-    Media Queries Level 4 で追加。
 - {{cssxref("@media/any-pointer", "any-pointer")}}
   - : 入力メカニズムにポインティングデバイスがあるか、もしそうであればどれだけ正確なものであるか。
-    Media Queries Level 4 で追加。
 - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
-  - : ビューポートの幅対高さのアスペクト比。
+  - : ビューポートの幅対高さの{{glossary("aspect ratio", "アスペクト比")}}。
 - {{cssxref("@media/color", "color")}}
-  - : 出力機器の色コンポーネントあたりの色のビット数、または端末がカラーでなければゼロ。
+  - : 出力機器の色成分あたりの色のビット数、または端末がカラーでなければゼロ。
 - {{cssxref("@media/color-gamut", "color-gamut")}}
   - : ユーザーエージェントおよび出力機器が対応しているおよその色の範囲。
-    Media Queries Level 4 で追加。
 - {{cssxref("@media/color-index", "color-index")}}
   - : 出力機器の色参照表の項目数、または端末がそのような表を使用していないのであればゼロ。
-- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
-  - : 出力機器の幅対高さのアスペクト比。
-    Media Queries Level 4 で非推奨。
-- {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
-  - : 出力機器のレンダリング面の高さ。
-    Media Queries Level 4 で非推奨。
-- {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
-  - : 出力機器のレンダリング面の幅。 Media Queries Level 4 で非推奨。
+- {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}}
+  - : 出力機器の幅対高さのアスペクト比。メディアクエリーレベル 4 で非推奨。
+- {{cssxref("@media/device-height", "device-height")}}
+  - : 出力機器のレンダリング面の高さ。メディアクエリーレベル 4 で非推奨。
+- {{cssxref("@media/device-posture", "device-posture")}}
+  - : 端末の現在の姿勢、つまり、ビューポートが平らな状態か折りたたまれた状態かを検出します。 [Device Posture API](/ja/docs/Web/API/Device_Posture_API) で定義されています。
+- {{cssxref("@media/device-width", "device-width")}}
+  - : 出力機器のレンダリング面の幅。メディアクエリーレベル 4 で非推奨。
 - {{cssxref("@media/display-mode", "display-mode")}}
-  - : ウェブアプリのマニフェストの [`display`](/ja/docs/Web/Progressive_web_apps/Manifest#display) メンバーで指定されているアプリケーションの表示モード。
-    [Web App Manifest 仕様書](https://w3c.github.io/manifest/#the-display-mode-media-feature)で定義。
+  - : アプリケーションが表示されているモード。例えば、[全画面](/ja/docs/Web/CSS/@media/display-mode#fullscreen)モードや[ピクチャインピクチャ](/ja/docs/Web/CSS/@media/display-mode#picture-in-picture)モードなどです。
+    メディアクエリーレベル 5 で追加。
+- {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - : ユーザーエージェントおよび出力端末が対応している輝度、コントラスト比、および色深度の組み合わせ。メディアクエリーレベル 5 で追加されました。
 - {{cssxref("@media/forced-colors", "forced-colors")}}
   - : ユーザーエージェントがカラーパレットを制限しているかどうかを検出。
-    Media Queries Level 5 で追加。
+    メディアクエリーレベル 5 で追加。
 - {{cssxref("@media/grid", "grid")}}
   - : 出力機器はグリッドとビットマップ画面のどちらを使用するか。
 - {{cssxref("@media/height", "height")}}
   - : ビューポートの高さ。
 - {{cssxref("@media/hover", "hover")}}
   - : 主要な入力メカニズムで、ユーザーが要素上でのホバーを使用することができるか。
-    Media Queries Level 4 で追加。
 - {{cssxref("@media/inverted-colors", "inverted-colors")}}
   - : ユーザーエージェントまたはその下の OS が色を反転しているか。
-    Media Queries Level 5 で追加。
+    メディアクエリーレベル 5 で追加。
 - {{cssxref("@media/monochrome", "monochrome")}}
   - : 出力機器のモノクロフレームバッファーにおけるピクセルあたりのビット数、または端末がモノクロでなければゼロ。
 - {{cssxref("@media/orientation", "orientation")}}
   - : ビューポートの向き。
 - {{cssxref("@media/overflow-block", "overflow-block")}}
   - : ビューポートをブロック軸方向にあふれたコンテンツを出力機器がどのように扱うか。
-    Media Queries Level 4 で追加。
+    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/overflow-inline", "overflow-inline")}}
   - : ビューポートをインライン軸方向にあふれたコンテンツがスクロールできるか。
-    Media Queries Level 4 で追加。
+    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/pointer", "pointer")}}
   - : 主要な入力メカニズムがポインティングデバイスであるか、もしそうであればどれだけ正確なものであるか。
-    Media Queries Level 4 で追加。
+    メディアクエリーレベル 4 で追加。
 - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
   - : ユーザーが明るいまたは暗い色遣いを望んでいるかどうかを検出。
-    Media Queries Level 5 で追加。
+    メディアクエリーレベル 5 で追加。
 - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
   - : ユーザーがシステムに隣り合う色のコントラスト量を増加または減少させるよう要求したかどうかを検出。
-    Media Queries Level 5 で追加。
+    メディアクエリーレベル 5 で追加。
+- {{cssxref("@media/prefers-reduced-data", "prefers-reduced-data")}}
+  - : ユーザーが、インターネットのトラフィックの消費を抑えたウェブコンテンツをリクエストしたかどうかを検知します。
 - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
   - : ユーザーがページであまり動きを望まないかどうか。
-    Media Queries Level 5 で追加。
+    メディアクエリーレベル 5 で追加。
+- {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+  - : ユーザーが、端末で使用されている透明または半透明のレイヤー効果を抑制する設定を端末で有効にしているかどうかを検出します。
 - {{cssxref("@media/resolution", "resolution")}}
   - : 出力機器のピクセル密度。
+- {{cssxref("@media/scan", "scan")}}
+  - : ディスプレイの表示出力がプログレッシブかインターレスか。
 - {{cssxref("@media/scripting", "scripting")}}
-  - : 出力機器のスキャン処理方式。
-    Media Queries Level 5. で追加。
-- {{cssxref("@media/update-frequency", "update")}}
+  - : スクリプト（すなわち、 JavaScript）が有効かどうかを検出します。
+    メディアクエリーレベル 5 で追加。
+- {{cssxref("@media/shape", "shape")}}
+  - : 端末の形状を検出して、長方形と丸いディスプレイを判別します。
+- {{cssxref("@media/update", "update")}}
   - : どれだけの頻度で出力機器がコンテンツの表示を変更できるか。
-    Media Queries Level 4 で追加。
+- {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - : ユーザーエージェントの動画プレーンおよび出力端末が対応している、輝度、コントラスト比、および色深度の組み合わせ。メディアクエリーレベル 5 で追加されました。
 - {{cssxref("@media/width", "width")}}
   - : スクロールバーの幅を含むビューポートの幅。
+- {{cssxref("@media/-moz-device-pixel-ratio", "-moz-device-pixel-ratio")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
+- {{cssxref("@media/-webkit-animation", "-webkit-animation")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("animation")}} に対応しているかどうか。代わりに [`@supports (animation)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+- {{cssxref("@media/-webkit-device-pixel-ratio", "-webkit-device-pixel-ratio")}}
+  - : CSS ピクセル当たりのデバイスピクセル数。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性を `dppx` 単位で使用してください。
+- {{cssxref("@media/-webkit-transform-2d", "-webkit-transform-2d")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : ブラウザーが `-webkit` の接頭辞の付いた 2D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+- {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}}
+  - : ブラウザーが `-webkit` の接頭辞の付いた 3D の CSS {{cssxref("transform")}} に対応しているかどうか。代わりに [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+- {{cssxref("@media/-webkit-transition", "-webkit-transition")}} {{deprecated_inline}} {{non-standard_inline}}
+  - : ブラウザーが `-webkit` の接頭辞の付いた CSS {{cssxref("transition")}} に対応しているかどうか。代わりに [`@supports (transition)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
 
 ### 論理演算子
 
-_論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアクエリーを構成することができます。
+_論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディアクエリーを構成することができます。
 また、複数のメディアクエリーをカンマで区切って 1 つのルールにまとめることもできます。
 
 - `and`
@@ -172,7 +192,6 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
 
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
-    `not` 演算子を使用する場合は、メディア種別*も*指定しなければなりません。
 
     > [!NOTE]
     > レベル 3 では、個々のメディア特性式を否定するために `not` キーワードを使用することはできず、メディアクエリー全体のみを否定することしかできません。
@@ -186,25 +205,34 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
   - : カンマは、複数のメディアクエリーを 1 つのルールにまとめるために使用されます。
     カンマで区切られたリストの各クエリーは、他のクエリーとは別に扱われます。
     したがって、リスト内のクエリーのいずれかが `true` であれば、メディア文全体が `true` を返すことになります。
-    言い換えれば、リストは論理的な `or` 演算子のように動作します．
+    言い換えれば、リストは論理的な `or` 演算子のように動作します。
+- `or`
+  - : `,` 演算子と同等です。メディアクエリーレベル 4 で追加されました。
 
-## アクセシビリティの考慮
+### ユーザーエージェントクライアントヒント
 
-サイトの文字の大きさを調整している人に合わせられるようには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)で {{cssxref("&lt;length&gt;")}} が必要な時には [`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) を使用してください。
-
-[`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) および [`px`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) はどちらも有効な単位ですが、 [`em`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#numeric_values) はユーザーがブラウザーのテキストの寸法を変更した場合によりうまく動作します。
-
-また、ユーザーの使い勝手を向上させるために Level 4 のメディアクエリーを使用することを検討してください。例えば、 `prefers-reduced-motion` は[ユーザーがシステムにアニメーションや動きの量を最小化するよう要求していることを検出します](/ja/docs/Web/CSS/@media/prefers-reduced-motion)。
-
-## セキュリティ
-
-メディアクエリーはユーザーが作業する端末の能力—およびその先にある、特性および設計—を調べる関係上、端末を識別する「指紋」を構築するために不正利用されたり、ユーザーにとって望ましくない観点のものに分類されるものに利用されたりする可能性があります。
-
-この可能性のため、ブラウザーは返値がコンピューターを正確に識別するために使用することを防ぐために、何らかの方法で返値を偽造することがあります。ブラウザーは、この分野で他の手段を提供する場合もあります。例えば、 Firefox で「フィンガープリントの採取」をブロックしている場合、多くのメディアクエリーは実際の端末の状態を表す値ではなく既定値を報告します。
+一部のメディアクエリーには、対応する[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)があります。
+これらは、特定のメディア要件に合わせて事前に最適化されたコンテンツをリクエストする HTTP ヘッダーです。
+{{HTTPHeader("Sec-CH-Prefers-Color-Scheme")}} および {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} が記載されています。
 
 ## 形式文法
 
 {{csssyntax}}
+
+## アクセシビリティ
+
+サイトのテキストサイズを調整するユーザーに最適に対応するには、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)に {{cssxref("&lt;length&gt;")}} が必要な場合は [`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) を使用してください。
+
+[`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) および [`px`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はどちらも有効な単位ですが、 [`em`](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types) はユーザーがブラウザーのテキストの大きさを変更した場合に、よりうまく動作します。
+
+また、ユーザーの使い勝手を向上させるために、メディアクエリーまたは [HTTP ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)を使用することを検討してください。
+例えば、 [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) または同等の HTTP ヘッダーである {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} は、ユーザー設定に基づいて、アニメーションや動きの量を最小化するために使用することができます。
+
+## セキュリティ
+
+メディアクエリーはユーザーが作業する端末の能力—およびその先にある、特性および設計—を調べる関係上、端末を識別する「[フィンガープリント](/ja/docs/Glossary/Fingerprinting)」を構築するために不正利用されたり、ユーザーにとって望ましくない観点のものに分類されるものに利用されたりする可能性があります。
+
+この可能性のため、ブラウザーは返値がコンピューターを正確に識別するために使用することを防ぐために、何らかの方法で返値を偽造することがあります。ブラウザーは、この分野で他の手段を提供する場合もあります。例えば、 Firefox で「フィンガープリントの採取」をブロックしている場合、多くのメディアクエリーは実際の端末の状態を表す値ではなく既定値を報告します。
 
 ## 例
 
@@ -236,7 +264,7 @@ _論理演算子_ `not`, `and`, `only` を使うと、複雑なメディアク�
 }
 ```
 
-Media Queries Level 4 では、範囲を受け付ける特性を検査する際に、以下のようなより簡潔にメディアクエリーを記述できる新しい範囲の構文が導入されました。
+範囲構文を使用すると、範囲を受け入れる機能を検査する際に、メディアクエリーを簡潔に記述することができます。その例を下記に示します。
 
 ```css
 @media (height > 600px) {
@@ -264,7 +292,8 @@ Media Queries Level 4 では、範囲を受け付ける特性を検査する際�
 
 ## 関連情報
 
+- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-- JavaScript では `@media` は CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスを通じてアクセスすることができます。
-- [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#media_features)
+- {{domxref("CSSMediaRule")}} インターフェイス
+- [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#メディア特性)
+- [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#メディア特性)

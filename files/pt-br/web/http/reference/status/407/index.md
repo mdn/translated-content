@@ -36,7 +36,7 @@ Proxy-Authenticate: Basic realm="Access to internal site"
 
 ## Veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-Agora estamos prontos para adicionar o código que exibe nossa primeira página completa - uma home page do site [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website). A página inicial mostrará o número de registros que temos para cada tipo de modelo e fornecerá links de navegação na barra lateral para nossas outras páginas. Ao longo do caminho, obteremos experiência prática ao escrever mapas e visualizações básicos de URL, obter registros do banco de dados e usar modelos.
+Agora estamos prontos para adicionar o código que exibe nossa primeira página completa - uma home page do site [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). A página inicial mostrará o número de registros que temos para cada tipo de modelo e fornecerá links de navegação na barra lateral para nossas outras páginas. Ao longo do caminho, obteremos experiência prática ao escrever mapas e visualizações básicos de URL, obter registros do banco de dados e usar modelos.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -48,7 +48,7 @@ Como você verá na próxima seção, temos 5 páginas para exibir, o que é mui
 
 ## Definindo os URLs do recurso
 
-Como esta versão do [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.
+Como esta versão do [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) é essencialmente somente leitura para usuários finais, precisamos fornecer uma página de destino para o site (uma página inicial) e páginas que exibam visualizações de lista e detalhes de livros e autores.
 
 As URLs que iremos precisar na nossa página são:
 
@@ -77,7 +77,7 @@ A primeira página que criaremos é a página index (`catalog/`). A pagina index
 
 ### Mapeamento de URL
 
-Quando criamos o [esqueleto do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website), atualizamos o arquivo **locallibrary/urls.py** para garantir que sempre que um URL que comece com `catalog/` é recebido, o módulo URLConf `catalog.urls` processará a substring restante.
+Quando criamos o [esqueleto do website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), atualizamos o arquivo **locallibrary/urls.py** para garantir que sempre que um URL que comece com `catalog/` é recebido, o módulo URLConf `catalog.urls` processará a substring restante.
 
 O seguinte snippet de código de **locallibrary/urls.py** inclui o modulo `catalog.urls`:
 
@@ -155,7 +155,7 @@ def index(request):
 
 A primeira linha importa as classes de models que usaremos para acessar dados em todas as nossas visualizações.
 
-A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn/Server-side/Django/Models#searching_for_records).
+A primeira parte da função view busca o número de registros usando o atributo `objects.all()` nas classes de modelo. Também recebe uma lista de objetos de `BookInstance` que possuem um valor de 'a' (Disponibilidade) no campo status. Você pode encontrar mais informações sobre como acessar os dados do modelo em nosso tutorial anterior [Django Tutorial Part 3: Using models > Searching for records](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records).
 
 No final da função view chamamos a função `render()` para criar uma página HTML e retornar a página como resposta. essa função de atalho envolve várias outras funções para simplificar um caso de uso muito comum. A função `render()` aceita os seguintes parâmetros:
 
@@ -334,7 +334,7 @@ Você pode adicionar uma imagem à página de maneira semelhante, por exemplo:
 ```
 
 > [!NOTE]
-> Os exemplos acima especificam onde os arquivos estão localizados, mas o Django não os serve por padrão. Configuramos o servidor da web de desenvolvimento para exibir arquivos modificando o mapeador de URL global (**/locallibrary/locallibrary/urls.py**) quando [criamos o esqueleto do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website), mas ainda precisamos ativar a veiculação de arquivos na produção. Veremos isso mais tarde.
+> Os exemplos acima especificam onde os arquivos estão localizados, mas o Django não os serve por padrão. Configuramos o servidor da web de desenvolvimento para exibir arquivos modificando o mapeador de URL global (**/locallibrary/locallibrary/urls.py**) quando [criamos o esqueleto do website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), mas ainda precisamos ativar a veiculação de arquivos na produção. Veremos isso mais tarde.
 
 Para obter mais informações sobre como [Trabalhar com arquivos estaticos](https://docs.djangoproject.com/en/2.1/howto/static-files/), consulte Gerenciando arquivos estáticos na documentação do Django.
 
@@ -408,17 +408,17 @@ No próximo artigo, continuaremos sobre esse conhecimento para criar as quatro p
 
 ## Nesse Módulo
 
-- [Introdução ao Django](/pt-BR/docs/Learn/Server-side/Django/Introduction)
-- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn/Server-side/Django/development_environment)
-- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website)
-- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn/Server-side/Django/skeleton_website)
-- [Tutorial Django Parte 3: Utilizando models](/pt-BR/docs/Learn/Server-side/Django/Models)
-- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn/Server-side/Django/Admin_site)
-- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn/Server-side/Django/Home_page)
-- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn/Server-side/Django/Generic_views)
-- [Tutorial Django Parte 7: Sessões de Framework](/pt-BR/docs/Learn/Server-side/Django/Sessions)
-- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms)
-- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn/Server-side/Django/Testing)
-- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn/Server-side/Django/Deployment)
-- [Segurança de aplicações web Django](/pt-BR/docs/Learn/Server-side/Django/web_application_security)
+- [Introdução ao Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)
+- [Configurando um ambiente de desenvolvimento Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)
+- [Tutorial Django: Website de uma Biblioteca Local](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)
+- [Tutorial Django Parte 2: Criando a base do website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)
+- [Tutorial Django Parte 3: Utilizando models](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Models)
+- [Tutorial Django Parte 4: Django admin site](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site)
+- [Tutorial Django Parte 5: Criando nossa página principal](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)
+- [Tutorial Django Parte 6: Lista genérica e detail views](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views)
+- [Tutorial Django Parte 7: Sessões de Framework](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Sessions)
+- [Tutorial Django Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms)
+- [Tutorial Django Parte 10: Testando uma aplicação web Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Testing)
+- [Tutorial Django Parte 11: Implantando Django em produção](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Deployment)
+- [Segurança de aplicações web Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/web_application_security)
 - [DIY Django mini blog](/pt-BR/docs/Learn/Server-side/Django/django_assessment_blog)

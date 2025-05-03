@@ -3,8 +3,6 @@ title: 挑戰：影像圖庫
 slug: Learn_web_development/Core/Scripting/Image_gallery
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 現在我們已經看過了基本的 JavaScript 組建，我們將讓你做一個測試，從建立一個在很多網站上常見的事物 — JavaScript 基礎的影像圖庫，來測試你對迴圈、函數、條件式及事件的知識。

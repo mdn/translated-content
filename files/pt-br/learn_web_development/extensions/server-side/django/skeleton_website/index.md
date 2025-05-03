@@ -47,7 +47,7 @@ O processo é direto:
 3. Registre os novos aplicativos para inclui-los no projeto.
 4. Conecte o mapeador de url/path para cada aplicativo.
 
-Para o [website Biblioteca Local](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) a pasta do website e a pasta do projeto terão, ambas, o nome _locallibrary_, e nós teremos apenas um aplicativo chamado _catalog_. O nível hierárquico mais alto da estrutura de pastas ficará assim:
+Para o [website Biblioteca Local](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) a pasta do website e a pasta do projeto terão, ambas, o nome _locallibrary_, e nós teremos apenas um aplicativo chamado _catalog_. O nível hierárquico mais alto da estrutura de pastas ficará assim:
 
 ```bash
 locallibrary/         # Pasta do website
@@ -60,7 +60,7 @@ As próximas seções discutem esse processo em detalhes e mostram como você po
 
 ## Criando o projeto
 
-Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn/Server-side/Django/development_environment), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
+Primeiro abra o prompt de comando/terminal t(enha certeza que está em seu [ambiente virtual)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment), navegue até o diretório que deseja colocar seus aplicativos Django (coloque em um lugar fácil de achar, como dentro da pasta _documentos_), e crie uma pasta para seu novo website (nesse caso: _django_projects_). Acesse então a pasta usando o comando cd:
 
 ```bash
 mkdir locallibrary
@@ -163,7 +163,7 @@ INSTALLED_APPS = [
 A nova linha especifica o objeto de configuração do aplicativo (`CatalogConfig`) que foi gerado em **/locallibrary/catalog/apps.py** onde a aplicação foi criada.
 
 > [!NOTE]
-> Você deve ter notado que existem vários outros `INSTALLED_APPS` (e `MIDDLEWARE`, pelo final do arquivo de configuração). Eles permitem suporte para o [site de administração do Django](/pt-BR/docs/Learn/Server-side/Django/Admin_site) e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
+> Você deve ter notado que existem vários outros `INSTALLED_APPS` (e `MIDDLEWARE`, pelo final do arquivo de configuração). Eles permitem suporte para o [site de administração do Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) e, como resultado, várias funcionalidades que ele utiliza (incluindo seções, autenticação etc).
 
 ## Especificando o Banco de Dados
 
@@ -373,7 +373,7 @@ Como você viu acima, um mapeamento de URL para o site Admin já foi adicionado 
 
 Você acabou de criar um "esqueleto" para websties, agora você pode popular o site com URL's, models, views e templates.
 
-Como o escopo para o [website Local Library](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) está completo e executando, é hora de começar a escrever códigos que farão o website realizar sua função.
+Como o escopo para o [website Local Library](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) está completo e executando, é hora de começar a escrever códigos que farão o website realizar sua função.
 
 ## Veja também
 

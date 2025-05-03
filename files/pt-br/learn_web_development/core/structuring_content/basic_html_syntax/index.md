@@ -230,7 +230,7 @@ Veja o seguinte exemplo:
 <p>sexto</p>
 ```
 
-O elemento {{htmlelement("em")}} é inline, então como você pode ver abaixo, os três primeiros elementos ficam na mesma linha uns dos outros sem espaço entre eles. O {{htmlelement("p")}}, por outro lado, é um elemento em bloco, então cada elemento aparece em uma nova linha, com espaço acima e abaixo de cada um (o espaçamento é devido à [estilização CSS](/pt-BR/docs/Learn/CSS/First_steps) padrão que o browser aplica aos parágrafos).
+O elemento {{htmlelement("em")}} é inline, então como você pode ver abaixo, os três primeiros elementos ficam na mesma linha uns dos outros sem espaço entre eles. O {{htmlelement("p")}}, por outro lado, é um elemento em bloco, então cada elemento aparece em uma nova linha, com espaço acima e abaixo de cada um (o espaçamento é devido à [estilização CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics) padrão que o browser aplica aos parágrafos).
 
 {{ EmbedLiveSample('Elementos_em_bloco_versus_elementos_inline', 700, 200, "", "") }}
 
@@ -238,7 +238,7 @@ O elemento {{htmlelement("em")}} é inline, então como você pode ver abaixo, o
 > o HTML5 redefiniu as categorias de elemento em HTML5: veja [Categorias de conteúdo de elementos](https://www.whatwg.org/specs/web-apps/current-work/complete/section-index.html#element-content-categories). Enquanto essas definições são mais precisas e menos ambíguas que as anteriores, elas são muito mais complicadas de entender do que "em bloco" e "inline", então usaremos estas ao longo deste tópico.
 
 > [!NOTE]
-> Os termos "bloco" e "inline", conforme usados neste tópico, não devem ser confundidos com os [tipos de caixas CSS](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes) com os mesmos nomes. Embora eles se correlacionem por padrão, alterar o tipo de exibição CSS não altera a categoria do elemento e não afeta em quais elementos ele pode conter e em quais elementos ele pode estar contido. Um dos motivos pelos quais o HTML5 abandonou esses termos foi evitar essa confusão bastante comum.
+> Os termos "bloco" e "inline", conforme usados neste tópico, não devem ser confundidos com os [tipos de caixas CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Box_model#types_of_css_boxes) com os mesmos nomes. Embora eles se correlacionem por padrão, alterar o tipo de exibição CSS não altera a categoria do elemento e não afeta em quais elementos ele pode conter e em quais elementos ele pode estar contido. Um dos motivos pelos quais o HTML5 abandonou esses termos foi evitar essa confusão bastante comum.
 
 > [!NOTE]
 > Você pode encontrar páginas de referência úteis que incluem uma lista de elementos inline e em bloco — veja [elementos em bloco](/pt-BR/docs/Glossary/Block-level_content) e [elementos inline](/pt-BR/docs/Glossary/Inline-level_content).
@@ -756,7 +756,7 @@ Como você pode ver abaixo, o primeiro parágrafo fica visível na saída ao viv
 Você chegou ao final do artigo — esperamos que tenha gostado do seu tour pelos princípios básicos do HTML! Nesse ponto, você deve entender como é a linguagem, como ela funciona em um nível básico e ser capaz de escrever alguns elementos e atributos. Este é o lugar perfeito para se estar agora, já que os artigos subseqüentes deste módulo abordarão algumas das coisas que você já examinou com mais detalhes e introduzirão alguns novos conceitos da linguagem. Fique ligado!
 
 > [!NOTE]
-> Nesse ponto, à medida que você começa a aprender mais sobre HTML, também pode querer explorar os conceitos básicos de Cascading Style Sheets, ou [CSS](/pt-BR/docs/Learn/CSS). CSS é a linguagem usada para estilizar suas páginas da web (por exemplo, alterando a fonte ou as cores ou alterando o layout da página). HTML e CSS vão muito bem juntos, como você descobrirá em breve.
+> Nesse ponto, à medida que você começa a aprender mais sobre HTML, também pode querer explorar os conceitos básicos de Cascading Style Sheets, ou [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics). CSS é a linguagem usada para estilizar suas páginas da web (por exemplo, alterando a fonte ou as cores ou alterando o layout da página). HTML e CSS vão muito bem juntos, como você descobrirá em breve.
 
 ## Veja também
 

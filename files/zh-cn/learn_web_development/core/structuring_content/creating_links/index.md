@@ -3,7 +3,7 @@ title: 创建超链接
 slug: Learn_web_development/Core/Structuring_content/Creating_links
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超链接非常重要——它们使互联网成为一个*互联的网络*。本文介绍了创建链接所需的语法，并且讨论了链接的最佳实践。
 
@@ -327,7 +327,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ## 技能测试！
 
-你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)。
+你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links)。
 
 ## 小结
 

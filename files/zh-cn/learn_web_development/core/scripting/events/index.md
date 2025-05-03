@@ -3,7 +3,7 @@ title: 事件介绍
 slug: Learn_web_development/Core/Scripting/Events
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Return_values","Learn_web_development/Core/Scripting/Event_bubbling", "Learn_web_development/Core/Scripting")}}
 
 事件是你正在编程的系统中发生的事情，系统会告诉你有关这些事件的信息，以便你的代码能够对它们做出反应。
 

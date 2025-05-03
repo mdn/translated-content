@@ -1,5 +1,5 @@
 ---
-title: 同源政策 (Same-origin policy)
+title: 同源政策（Same-origin policy）
 slug: Web/Security/Same-origin_policy
 ---
 
@@ -9,19 +9,15 @@ slug: Web/Security/Same-origin_policy
 
 ## 同源定義
 
-所謂同源是指兩份網頁具備相同協定、埠號 (如果有指定) 以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
+所謂同源是指兩份網頁具備相同協定、埠號（如果有指定）以及主機位置，下表提供了一些例子展示那些來源和 `http://store.company.com/dir/page.html` 屬於同源:
 
-| URL                                               | Outcome | Reason       |
-| ------------------------------------------------- | ------- | ------------ |
-| `http://store.company.com/dir2/other.html`        | 同源    |              |
-| `http://store.company.com/dir/inner/another.html` | 同源    |              |
-| `https://store.company.com/secure.html`           | 不同源  | 協定不同     |
-| `http://store.company.com:81/dir/etc.html`        | 不同源  | 埠號不同     |
-| `http://news.company.com/dir/other.html`          | 不同源  | 主機位置不同 |
-
-另外請參考 [file 來源定義: URL](/zh-TW/docs/Same-origin_policy_for_file:_URIs)。
-
-Cookie 的來源定義和上述不一樣。
+| URL                                               | 結果   | 原因         |
+| ------------------------------------------------- | ------ | ------------ |
+| `http://store.company.com/dir2/other.html`        | 同源   |              |
+| `http://store.company.com/dir/inner/another.html` | 同源   |              |
+| `https://store.company.com/secure.html`           | 不同源 | 協定不同     |
+| `http://store.company.com:81/dir/etc.html`        | 不同源 | 埠號不同     |
+| `http://news.company.com/dir/other.html`          | 不同源 | 主機位置不同 |
 
 ## 變更來源
 
@@ -70,7 +66,9 @@ document.domain = "company.com";
 
 Javascript API 例如 [`iframe.contentWindow`](/zh-TW/docs/Web/API/HTMLIFrameElement)、{{domxref("window.parent")}}、{{domxref("window.open")}}，以及 {{domxref("window.opener")}}，允許文件之間直接互相參照，當兩份文件的來源不同，參照存取 [Window](https://html.spec.whatwg.org/multipage/browsers.html#security-window) 和 [Location](https://html.spec.whatwg.org/multipage/browsing-the-web.html#security-location) 物件將受到限制；一些瀏覽器比規範[准許存取更多屬性](https://bugzil.la/839867)。文件間的溝通也可以改用 {{domxref("window.postMessage")}} 來進行。
 
-## 延伸閱讀
+## 參見
 
-- [Same-origin policy for file: URIs](/zh-TW/docs/Same-origin_policy_for_file:_URIs)
-- [Same-Origin Policy at W3C](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same Origin Policy（W3C）](https://www.w3.org/Security/wiki/Same_Origin_Policy)
+- [Same-origin policy（web.dev）](https://web.dev/articles/same-origin-policy)
+- {{httpheader("Cross-Origin-Resource-Policy")}}
+- {{httpheader("Cross-Origin-Embedder-Policy")}}

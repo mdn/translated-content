@@ -3,8 +3,6 @@ title: 技能测试：背景与边框
 slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 ---
 
-{{learnsidebar}}
-
 本技能测试的目的是评估你是否完全理解了 [CSS 中的背景和边框](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)教程的内容。
 
 > [!NOTE]

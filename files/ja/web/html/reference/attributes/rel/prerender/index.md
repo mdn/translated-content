@@ -1,9 +1,8 @@
 ---
 title: rel=prerender
 slug: Web/HTML/Reference/Attributes/rel/prerender
-original_slug: Web/HTML/Attributes/rel/prerender
 l10n:
-  sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}

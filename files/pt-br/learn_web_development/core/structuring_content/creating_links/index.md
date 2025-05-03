@@ -95,7 +95,7 @@ Momento da aprendizagem na prática: gostaríamos que você criasse um documento
 
 ### Links de nível de bloco
 
-Como falamos anteriormente, você pode transformar qualquer conteúdo em um link, mesmo [elementos de nível de bloco](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started#elementos_em_bloco_versus_elementos_inline). Se você tiver uma imagem que queira transformar em um link, você pode simplesmente colocar a imagem entre as tags `<a></a>`.
+Como falamos anteriormente, você pode transformar qualquer conteúdo em um link, mesmo [elementos de nível de bloco](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#elementos_em_bloco_versus_elementos_inline). Se você tiver uma imagem que queira transformar em um link, você pode simplesmente colocar a imagem entre as tags `<a></a>`.
 
 ```html
 <a href="https://www.mozilla.org/pt-BR/">
@@ -229,7 +229,7 @@ Outras dicas:
 A partir da descrição acima, você pode pensar que é uma boa idéia usar apenas links absolutos o tempo todo; Afinal, eles não quebram quando uma página é movida como pode ocorrer com _links relativos_. No entanto, você deve usar _links relativos_ sempre que possível ao vincular a outros locais dentro do mesmo site (ao vincular a outro site, você precisará usar um link absoluto):
 
 - Para começar, é muito mais fácil verificar seu código — os URL relativos geralmente são muito mais curtos que os URLs absolutos, o que torna o código de leitura muito mais fácil.
-- Em segundo lugar, é mais eficiente usar URLs relativas sempre que possível. Quando você usa um URL absoluto, o navegador começa procurando a localização real do servidor no Servidor de Nomes de Domínio "DNS"; veja [Como a web funciona](/pt-BR/docs/Learn/Getting_started_with_the_web/How_the_Web_works) para obter mais informações), então ele vai para esse servidor e encontra o arquivo que está sendo solicitado. Por outro lado, com um URL relativo, o navegador apenas procura o arquivo que está sendo solicitado, no mesmo servidor. Então, se você usa URLs absolutos para fazer o que os URLs relativos fariam, você está constantemente fazendo o seu navegador realizar trabalho extra, o que significa que ele irá executar de forma menos eficiente.
+- Em segundo lugar, é mais eficiente usar URLs relativas sempre que possível. Quando você usa um URL absoluto, o navegador começa procurando a localização real do servidor no Servidor de Nomes de Domínio "DNS"; veja [Como a web funciona](/pt-BR/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) para obter mais informações), então ele vai para esse servidor e encontra o arquivo que está sendo solicitado. Por outro lado, com um URL relativo, o navegador apenas procura o arquivo que está sendo solicitado, no mesmo servidor. Então, se você usa URLs absolutos para fazer o que os URLs relativos fariam, você está constantemente fazendo o seu navegador realizar trabalho extra, o que significa que ele irá executar de forma menos eficiente.
 
 ### Vinculando-se a recursos que não sejam HTML — deixe indicadores claros
 
@@ -325,7 +325,7 @@ Aqui está um exemplo que inclui um cc, bcc, assunto e corpo de texto:
 ```
 
 > [!NOTE]
-> Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) para entender para que esta notação de consulta é mais comum.
+> Os valores de cada campo devem ser codificados por URL, ou seja, com caracteres não imprimíveis (caracteres invisíveis, como guias, carriage returns e quebras de página) e espaços com [percent-escaped](http://en.wikipedia.org/wiki/Percent-encoding). Observe também o uso do ponto de interrogação (`?`) Para separar o URL principal dos valores do campo e do _e_ comercial (&) para separar cada campo no `mailto:` URL. Essa é a notação de consulta padrão do URL. Leia [O método GET](/pt-BR/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_get_method) para entender para que esta notação de consulta é mais comum.
 
 Aqui estão alguns outros exemplos de URLs de `mailto:`
 

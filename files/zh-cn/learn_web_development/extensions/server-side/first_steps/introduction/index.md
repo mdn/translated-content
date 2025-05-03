@@ -3,7 +3,7 @@ title: 服务端编程介绍
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 欢迎来到 MDN 为初学者准备的服务器端编程课程！在第一篇文章里面我们将会从一个较高的角度来看待服务器端编程，通过解答下面这些问题来实现这一点，比如：服务器端编程是什么？服务器端编程和客户端编程有何不同？还有，为什么服务器端编程这么有用？当你读完这篇文章后，你会理解通过服务器端编程实现的网站所能提供的额外的功能。
 

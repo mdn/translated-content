@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
 HTML 中有许多可以用于定义文本语义的其他元素，我们没有在[强调和重要性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)中提到它们。本文中所介绍的元素虽然少有人知，但仍然值得去学习（而且本文不是一份完整的列表）。在这里你将学习标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
@@ -544,7 +542,7 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 
 ## 技能测试！
 
-你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text)。
+你已经到达了本篇文章的末尾，但还能记得多少重要的东西呢？在进行下一步前，你可以找一些测试来验证知识留存的多少——请查看[技能测试：高级 HTML 文本](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text)。
 
 ## 总结
 
