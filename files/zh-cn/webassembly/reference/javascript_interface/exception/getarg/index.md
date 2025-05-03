@@ -21,7 +21,7 @@ getArg(exceptionTag, index)
 ### 参数
 
 - `exceptionTag`
-  - : 一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，必须与这个异常关联的标签相匹配。
+  - : 必须与这个异常关联的标签相匹配的 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)。
 - `index`
   - : 数据参数中要返回的值的索引，从 0 开始索引。
 
