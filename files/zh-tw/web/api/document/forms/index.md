@@ -1,25 +1,33 @@
 ---
-title: Document.forms
+title: Document：forms 屬性
+short-title: forms
 slug: Web/API/Document/forms
+page-type: web-api-instance-property
+browser-compat: api.Document.forms
 ---
 
 {{APIRef("DOM")}}
 
-`forms` 屬性會回傳一個包含目前頁面中所有 {{HTMLElement("form")}} 元素的集合物件（型別為 {{domxref("HTMLCollection")}}）。
+{{domxref("Document")}} 介面的 **`forms`** 唯讀屬性回傳一個 {{domxref("HTMLCollection")}}，列出文件中所有的 {{HTMLElement("form")}} 元素。
 
-## 語法
+> [!NOTE]
+> 同樣地，你可以使用 {{domxref("HTMLFormElement.elements")}} 屬性存取表單中所有使用者輸入元件的清單。
 
-```plain
-collection = document.forms;
-```
+## 值
 
-## 範例：取得表單資訊
+一個 {{domxref("HTMLCollection")}} 物件，列出文件中所有的表單。集合中的每個項目都是一個 {{domxref("HTMLFormElement")}}，代表一個 `<form>` 元素。
+
+如果文件中沒有表單，回傳的集合將為空，且長度為零。
+
+## 範例
+
+### 獲取表單資訊
 
 ```html
 <!doctype html>
-<html lang="en">
+<html lang="zh-TW">
   <head>
-    <title>document.forms example</title>
+    <title>document.forms 範例</title>
   </head>
 
   <body>
@@ -27,37 +35,67 @@ collection = document.forms;
       <input
         type="button"
         onclick="alert(document.forms[0].id);"
-        value="robby's form" />
+        value="robby 的表單" />
     </form>
 
     <form id="dave">
       <input
         type="button"
         onclick="alert(document.forms[1].id);"
-        value="dave's form" />
+        value="dave 的表單" />
     </form>
 
     <form id="paul">
       <input
         type="button"
         onclick="alert(document.forms[2].id);"
-        value="paul's form" />
+        value="paul 的表單" />
     </form>
   </body>
 </html>
 ```
 
-## 範例 2：取得表單內的元素
+### 從表單中獲取元素
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+const selectForm = document.forms[index];
+const selectFormElement = document.forms[index].elements[index];
+```
+
+### 名稱存取表單
+
+```html
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <title>document.forms 範例</title>
+  </head>
+
+  <body>
+    <form name="login">
+      <input name="email" type="email" />
+      <input name="password" type="password" />
+      <button type="submit">登入</button>
+    </form>
+
+    <script>
+      const loginForm = document.forms.login; // 或 document.forms['login']
+      loginForm.elements.email.placeholder = "test@example.com";
+      loginForm.elements.password.placeholder = "password";
+    </script>
+  </body>
+</html>
 ```
 
 ## 規範
 
 {{Specifications}}
 
+## 瀏覽器相容性
+
+{{Compat}}
+
 ## 參見
 
-- {{domxref("HTMLFormElement")}}
+- [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
+- {{HTMLElement("form")}} 和 {{domxref("HTMLFormElement")}} 介面
