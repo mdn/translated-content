@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.Global`** 对象表示一个全局变量实例，可以从 JavaScript 访问，也可以从一个或多个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 实例的导入/导出访问。这允许动态链接多个模块。
+**`WebAssembly.Global`** 对象表示一个全局变量实例，可以在 JavaScript 中访问，也可以在 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 实例之间导入/导出。这允许动态链接多个模块。
 
 ## 构造函数
 
@@ -36,7 +36,7 @@ l10n:
 
 下面的例子展示的是用 `WebAssembly.Global()` 构造函数创建一个新的 global 实例。它被定义为可变的 `i32` 类型，值为 0。
 
-然后改变 global 的值，首先用 `Global.value` 属性设置为 `42`，然后用从 `global.wasm` 模块导出的 `incGlobal()` 函数设置为 43(它将接收到的参数的值加 1 并返回)。
+然后改变 global 的值，首先用 `Global.value` 属性设置为 `42`，然后用从 `global.wasm` 模块导出的 `incGlobal()` 函数设置为 43（它将接收到的参数的值加 1 并返回）。
 
 ```js
 const output = document.getElementById("output");
