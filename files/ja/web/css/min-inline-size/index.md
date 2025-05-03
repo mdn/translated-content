@@ -1,6 +1,8 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -31,7 +33,7 @@ writing-mode: vertical-lr;
 
 ```html interactive-example
 <section class="default-example" id="default-example">
-  <div class="transition-all" id="example-element">Change min-inline-size</div>
+  <div class="transition-all" id="example-element">min-inline-size を変更してください</div>
 </section>
 ```
 
@@ -52,6 +54,7 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 min-inline-size: 100px;
 min-inline-size: 5em;
+min-inline-size: anchor-size(width);
 
 /* <percentage> 値 */
 min-inline-size: 10%;
@@ -59,12 +62,14 @@ min-inline-size: 10%;
 /* キーワード値 */
 min-inline-size: max-content;
 min-inline-size: min-content;
+min-inline-size: fit-content;
 min-inline-size: fit-content(20em);
 
 /* グローバル値 */
 min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: revert;
+min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 
@@ -84,12 +89,12 @@ min-inline-size: unset;
 
 ## 例
 
-<h3 id="Setting_minimum_inline_size_for_vertical_text">縦書きでインライン方向の最小寸法を設定</h3>
+### 縦書きでインライン方向の最小寸法を設定
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">テキストの例</p>
 ```
 
 #### CSS
@@ -105,7 +110,7 @@ min-inline-size: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}
+{{EmbedLiveSample("縦書きでインライン方向の最小寸法を設定")}}
 
 ## 仕様書
 
