@@ -2,7 +2,7 @@
 title: padding-block-end
 slug: Web/CSS/padding-block-end
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -82,13 +82,13 @@ padding-block-end: unset;
 
 ## 解説
 
-`padding-block-end` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に依存します。したがって、{{cssxref("padding-bottom")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} の何れかに対応づけられる可能性があります。
+`padding-block-end` プロパティは、 {{cssxref("padding-top")}} などの物理的なパディングプロパティと同じ値を取ります。ただし、 {{cssxref("padding-bottom")}}, `padding-top`, {{cssxref("padding-left")}},{{cssxref("padding-right")}} のいずれかと同等になります。これは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値によって決まります。
 
 関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-start")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} があります。
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
