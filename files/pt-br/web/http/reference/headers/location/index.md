@@ -17,7 +17,7 @@ Todas as respostas com um desses códigos de status enviam um cabeçalho `Locati
 
 Em casos de recursos de criação, ele indica o URL para o novo recurso criado.
 
-`Location` e {{HTTPHeader("Content-Location")}} são diferentes: `Location` indica o alvo de redirecionamento (ou URL do novo recurso criado), enquanto {{HTTPHeader("Content-Location")}} indica o URL direto para ter acesso ao recurso quando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation) acontecer, sem a necessidade de futura negociação de conteúdo. `Location` é um cabeçalho associado com a resposta, enquanto {{HTTPHeader("Content-Location")}} é associado com a entidade retornada.
+`Location` e {{HTTPHeader("Content-Location")}} são diferentes: `Location` indica o alvo de redirecionamento (ou URL do novo recurso criado), enquanto {{HTTPHeader("Content-Location")}} indica o URL direto para ter acesso ao recurso quando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation) acontecer, sem a necessidade de futura negociação de conteúdo. `Location` é um cabeçalho associado com a resposta, enquanto {{HTTPHeader("Content-Location")}} é associado com a entidade retornada.
 
 <table class="properties">
   <tbody>

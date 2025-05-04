@@ -1,9 +1,8 @@
 ---
 title: "Reason: CORS request not HTTP"
 slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

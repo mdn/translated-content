@@ -24,7 +24,7 @@ O recurso **Inspecionar propriedades de acessibilidade** é uma ótima ferrament
 
 ## Prerequisitos
 
-Para ter o máximo proveito deste módulo, recomendamos que esteja familiarizados com pelos os dois primeiros módulos de [HTML](/pt-BR/docs/Learn/HTML), [CSS](/pt-BR/docs/Learn/CSS), e [JavaScript](/pt-BR/docs/Learn/JavaScript), ou melhor ainda, com as partes principais do módulo de acessibilidade de cada capítulo, à medida em que vai estudando.
+Para ter o máximo proveito deste módulo, recomendamos que esteja familiarizados com pelos os dois primeiros módulos de [HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d), [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics), e [JavaScript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308), ou melhor ainda, com as partes principais do módulo de acessibilidade de cada capítulo, à medida em que vai estudando.
 
 > [!NOTE]
 > Se você está estudando em um dispositivo que não pode criar novos arquivos, voce pode testar os exemplos em alguma aplicação de codificação online, como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
@@ -33,7 +33,7 @@ Para ter o máximo proveito deste módulo, recomendamos que esteja familiarizado
 
 - [O que é acessibilidade?](/pt-BR/docs/Learn/Accessibility/What_is_accessibility)
   - : Este artigo fornece uma visão geral do que é a acessibilidade - isso inclui quais grupos de pessoas devemos considerar e o motivo, quais ferramentas de acessibilidade são utilizadas para interagir com a web e como podemos fazer da acessibilidade web parte do nosso fluxo de desenvolvimento.
-- [HTML: A base para a acessibilidade](/pt-BR/docs/Learn/Accessibility/HTML)
+- [HTML: A base para a acessibilidade](/pt-BR/docs/Learn_web_development/Core/Accessibility/HTML)
   - : Boa parte do conteúdo da Web pode ser 'acessível' apenas garantindo que as tags HTML sejam sempre usadas para a finalidade correta. Este artigo analisa detalhadamente como utilizar o HTML garantindo a máxima acessibilidade.
 - [CSS e JavaScript: accessibilidade e boas práticas](/pt-BR/docs/Learn/Accessibility/CSS_and_JavaScript)
   - : CSS e JavaScript, usados corretamente, também podem proporcionar experiências acessíveis na web, mas se mal utilizadas, podem prejudicar a navegação. Este artigo descreve como utilizar o CSS e JS de forma a garantir que mesmo conteúdos complexos sejam acessíveis.
@@ -46,7 +46,7 @@ Para ter o máximo proveito deste módulo, recomendamos que esteja familiarizado
 
 ## Avaliações
 
-- [Solução de problemas](/pt-BR/docs/Learn/Accessibility/Accessibility_troubleshooting)
+- [Solução de problemas](/pt-BR/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
   - : Na avaliação deste módulo, disponibilizaremos um site com vários problemas de acessibilidade que você deve encontrar e corrigir.
 
 ## Veja também

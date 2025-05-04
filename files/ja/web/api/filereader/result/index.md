@@ -58,7 +58,7 @@ l10n:
 
 ## 例
 
-この例は、[ファイル入力欄](/ja/docs/Web/HTML/Element/input/file)からファイルを読み込む関数 `read()` を示しています。これは {{domxref("FileReader")}} オブジェクトを作成し、 {{domxref("FileReader/load_event", "load")}} イベントのリスナーを作成し、ファイルが読み込まれるとその `result` を取得し、提供されたコールバック関数を `read()` に渡すことによって機能します。
+この例は、[ファイル入力欄](/ja/docs/Web/HTML/Reference/Elements/input/file)からファイルを読み込む関数 `read()` を示しています。これは {{domxref("FileReader")}} オブジェクトを作成し、 {{domxref("FileReader/load_event", "load")}} イベントのリスナーを作成し、ファイルが読み込まれるとその `result` を取得し、提供されたコールバック関数を `read()` に渡すことによって機能します。
 
 内容は生のテキストデータとして扱われます。
 

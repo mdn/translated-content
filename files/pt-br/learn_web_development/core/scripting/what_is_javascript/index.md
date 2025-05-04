@@ -28,7 +28,7 @@ Sejam bem-vindos ao curso de JavaScript para iniciantes do MDN! Neste primeiro a
 
 ## Definição de alto nível
 
-JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido. É a terceira camada do bolo das tecnologias padrões da web, duas das quais ([HTML](/pt-BR/docs/Learn/HTML) e [CSS](/pt-BR/docs/Learn/CSS)) nós falamos com muito mais detalhes em outras partes da Área de Aprendizado.
+JavaScript é uma linguagem de programação que permite a você implementar itens complexos em páginas web — toda vez que uma página da web faz mais do que simplesmente mostrar a você informação estática — mostrando conteúdo que se atualiza em um intervalo de tempo, mapas interativos ou gráficos 2D/3D animados, etc. — você pode apostar que o JavaScript provavelmente está envolvido. É a terceira camada do bolo das tecnologias padrões da web, duas das quais ([HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d) e [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics)) nós falamos com muito mais detalhes em outras partes da Área de Aprendizado.
 
 ![](cake.png)
 
@@ -117,7 +117,7 @@ Elas geralmente se dividem em duas categorias.
 - A [API do Google Maps](https://developers.google.com/maps/) permite a você inserir mapas customizados no seu site e outras diversas funcionalidades.
 
 > [!NOTE]
-> Essas APIs são avançadas e nós não vamos falar sobre nenhuma delas nesse módulo. Você pode achar muito mais sobre elas em nosso módulo [APIs web no lado cliente](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs).
+> Essas APIs são avançadas e nós não vamos falar sobre nenhuma delas nesse módulo. Você pode achar muito mais sobre elas em nosso módulo [APIs web no lado cliente](/pt-BR/docs/Learn_web_development/Extensions/Client-side_APIs).
 
 Tem muito mais coisas disponíveis! Contudo, não fique animado ainda. Você não estará pronto para desenvolver o próximo Facebook, Google Maps ou Instagram depois de estudar JavaScript por 24 horas — há um monte de coisas básicas para estudar primeiro. E é por isso que você está aqui — vamos começar!
 
@@ -125,7 +125,7 @@ Tem muito mais coisas disponíveis! Contudo, não fique animado ainda. Você nã
 
 Aqui nós vamos realmente começar a ver algum código, e enquanto fazemos isso vamos explorar o que realmente acontece quando você roda algum código JavaScript na sua página.
 
-Vamos recaptular brevemente a história do que acontece quando você carrega uma página web em um navegador (falamos sobre isso no nosso artigo [Como o CSS funciona](/pt-BR/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work)). Quando você carrega uma página web no seu navegador, você está executando seu código (o HTML, CSS e JavaScript) dentro de um ambiente de execução (a guia do navegador). Isso é como uma fábrica que pega a matéria prima (o código) e transforma em um produto (a página web).
+Vamos recaptular brevemente a história do que acontece quando você carrega uma página web em um navegador (falamos sobre isso no nosso artigo [Como o CSS funciona](/pt-BR/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_does_css_actually_work)). Quando você carrega uma página web no seu navegador, você está executando seu código (o HTML, CSS e JavaScript) dentro de um ambiente de execução (a guia do navegador). Isso é como uma fábrica que pega a matéria prima (o código) e transforma em um produto (a página web).
 
 ![](execution.png)
 
@@ -174,7 +174,7 @@ Há vantagens em ambos os tipos de linguagem, mas nós não iremos discutir no m
 
 Você pode também ouvir os termos **lado do servidor (_server-side_)** e **lado do cliente (_client-side_)**, especialmente no contexto de desenvolvimento web. Códigos do lado do cliente são executados no computador do usuário — quando uma página web é visualizada, o código do lado do cliente é baixado, executado e exibido pelo navegador. Nesse módulo JavaScript nós estamos explicitamente falando sobre **JavaScript do lado do cliente**.
 
-Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. E JavaScript! JavaScript também pode ser usada como uma linguagem _server-side_, por exemplo, no popular ambiente Node.js — você pode encontrar mais sobre JavaScript do lado do servidor no nosso tópico [Websites dinâmicos - Programação do lado do servidor](/pt-BR/docs/Learn/Server-side).
+Códigos do lado do servidor, por outro lado, são executados no servidor e o resultado da execução é baixado e exibido no navegador. Exemplos de linguagens do lado do servidor populares incluem PHP, Python, Ruby, e ASP.NET. E JavaScript! JavaScript também pode ser usada como uma linguagem _server-side_, por exemplo, no popular ambiente Node.js — você pode encontrar mais sobre JavaScript do lado do servidor no nosso tópico [Websites dinâmicos - Programação do lado do servidor](/pt-BR/docs/Learn_web_development/Extensions/Server-side).
 
 ### Código dinâmico x estático
 
@@ -295,7 +295,7 @@ Isso talvez parece ser mais do que o atributo `onclick`, mas isso vai funcionar 
 
 ### Estratégias para o carregamento de scripts
 
-Há um considerável número de problemas envolvendo o carregamento de scripts na ordem correta. Infelizmente, nada é tão simples quanto parece ser! Um problema comum é que todo o HTML de uma página é carregado na ordem em que ele aparece. Se você estiver usando Javascript para manipular alguns elementos da página (sendo mais preciso, manipular o [Document Object Model](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents#the_document_object_model)), seu código não irá funcionar caso o JavaScript for carregado e executado antes mesmo dos elementos HTML estarem disponíveis.
+Há um considerável número de problemas envolvendo o carregamento de scripts na ordem correta. Infelizmente, nada é tão simples quanto parece ser! Um problema comum é que todo o HTML de uma página é carregado na ordem em que ele aparece. Se você estiver usando Javascript para manipular alguns elementos da página (sendo mais preciso, manipular o [Document Object Model](/pt-BR/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)), seu código não irá funcionar caso o JavaScript for carregado e executado antes mesmo dos elementos HTML estarem disponíveis.
 
 Nos exemplos acima, tanto nos scripts internos ou externos, o JavaScript é carregado e acionado dentro do cabeçalho do documento, antes do corpo da página ser completamente carregado. Isso poderá causar algum erro. Assim, temos algumas soluções para isso.
 
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Isso é um _event listener_ (ouvidor de eventos*)*, que ouve e aguarda o disparo do evento "DOMContentLoaded" vindo do _browser_, evento este que significa que o corpo do HTML está completamente carregado e pronto. O código JavaScript que estiver dentro desse bloco não será executado até que o evento seja disparado, portanto, o erro será evitado (você irá [aprender sobre eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events) mais tarde).
+Isso é um _event listener_ (ouvidor de eventos*)*, que ouve e aguarda o disparo do evento "DOMContentLoaded" vindo do _browser_, evento este que significa que o corpo do HTML está completamente carregado e pronto. O código JavaScript que estiver dentro desse bloco não será executado até que o evento seja disparado, portanto, o erro será evitado (você irá [aprender sobre eventos](/pt-BR/docs/Learn_web_development/Core/Scripting/Events) mais tarde).
 
 No exemplo externo, nós usamos um recurso moderno do JavaScript para resolver esse problema: Trata-se do atributo `defer`, que informa ao _browser_ para continuar renderizando o conteúdo HTML uma vez que a tag `<script>` foi atingida.
 
@@ -411,6 +411,6 @@ for (var i = 0; i < botoes.length; i++) {
 
 Então, esse foi o seu primeiro passo no mundo do JavaScript. Nós iniciamos apenas com teoria, então te ensinamos porque usar JavaScript e que tipo de coisa você pode fazer com ele. Pelo caminho você viu alguns códigos de exemplo e aprendeu como JavaScript se encaixa com o resto do código do seu site, entre outras coisas.
 
-O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos [mergulhar direto para a prática](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash), levando você a construir seu próprio código JavaScript.
+O JavaScript talvez pareça um pouco assustador agora, mas não se preocupe — nesse curso você será guiado passo a passo, e tudo vai começar a fazer sentido. No próximo artigo vamos [mergulhar direto para a prática](/pt-BR/docs/Learn_web_development/Core/Scripting/A_first_splash), levando você a construir seu próprio código JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

@@ -54,7 +54,7 @@ Por exemplo, para produzir as páginas finalizadas que você vê em seu navegado
 
 ## Aprendizado ativo
 
-_Ainda não há aprendizado ativo disponível. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Contributing/Getting_started)._
+_Ainda não há aprendizado ativo disponível. [Por favor, considere contribuir](/pt-BR/docs/MDN/Community/Getting_started)._
 
 ## Entrando a fundo
 
@@ -73,7 +73,7 @@ Técnicamente, você pode servir todos esses arquivos em seu próprio computador
 
 Por todas essas razões, encontrar um bom provedor de servidores é a chave para criar seu próprio _website_. Pesquise pelos vários serviços oferecidos e escolha aquele que melhor se alinha às suas necessidades e ao bolso (os serviçoes variam em uma faixa desde zero até milhares de dólares por mês). Você pode encontrar mais detalhes [nesse artigo](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#hosting).
 
-Uma vez que você escolheu uma solução de servidores web, você só precisa [fazer o _upload_ dos seus arquivos para o servidor _web_](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+Uma vez que você escolheu uma solução de servidores web, você só precisa [fazer o _upload_ dos seus arquivos para o servidor _web_](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server).
 
 ### Comunicando através do HTTP
 
@@ -113,5 +113,5 @@ Existem tantos servidores de aplicações que é muito difícil sugerir algum em
 Agora que está familiarizado com os servidores web, você pode:
 
 - ler sobre [quanto custa desenvolver para a web](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost) (em inglês)
-- aprender mais sobre os [vários softwares necessários para criar um site](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need) (em inglês)
-- partir para a prática de [como fazer o upload de arquivos em um servidor web](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server) (em inglês).
+- aprender mais sobre os [vários softwares necessários para criar um site](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need) (em inglês)
+- partir para a prática de [como fazer o upload de arquivos em um servidor web](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server) (em inglês).

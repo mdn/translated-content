@@ -5,7 +5,7 @@ slug: Web/CSS/animation
 
 {{CSSRef}}
 
-A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
+A propriedade [CSS](/pt-BR/docs/Web/CSS) [abreviada](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`animation`**, aplica uma animação entre estilos. É uma abreviação de {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, e {{cssxref("animation-play-state")}}.
 
 {{InteractiveExample("CSS Demo: animation")}}
 

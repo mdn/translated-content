@@ -116,4 +116,4 @@ apresentacao.call(i); // Douglas Crockford é um excelente Desenvolvedor Javascr
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Learn/JavaScript/Objects)
+- [Introdução à JavaScript Orientado à Objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

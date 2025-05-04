@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- 对 `media` 属性的支持被重新引入到 [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素，并扩展到包括 `<audio>` 和 `<video>` 元素。该属性最初是在 Firefox 15 中添加的，但在 Firefox 53 中被删除，当时它的使用仅限于 `<picture>` 的 `<source>` 子元素。随着这个版本的发布，`media` 属性将在 `<audio>`、`<video>` 和 `<picture>` 的 `<source>` 子元素上可用（[Firefox bug 1836128](https://bugzil.la/1836128)）。
+- 对 `media` 属性的支持被重新引入到 [`<source>`](/zh-CN/docs/Web/HTML/Reference/Elements/source) 元素，并扩展到包括 `<audio>` 和 `<video>` 元素。该属性最初是在 Firefox 15 中添加的，但在 Firefox 53 中被删除，当时它的使用仅限于 `<picture>` 的 `<source>` 子元素。随着这个版本的发布，`media` 属性将在 `<audio>`、`<video>` 和 `<picture>` 的 `<source>` 子元素上可用（[Firefox bug 1836128](https://bugzil.la/1836128)）。
 
 ### CSS
 
@@ -54,7 +54,7 @@ l10n:
 
 ### HTTP
 
-- 已启用 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Reference/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码，以便[预连接](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)到特定的源（页面可能需要来自该源的资源）。有关更详细的信息，请参阅 [Firefox bug 1858712](https://bugzil.la/1858712)。
+- 已启用 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Reference/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态码，以便[预连接](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)到特定的源（页面可能需要来自该源的资源）。有关更详细的信息，请参阅 [Firefox bug 1858712](https://bugzil.la/1858712)。
 - Firefox 支持 [Global Privacy Control](https://globalprivacycontrol.org/) {{HTTPHeader("Sec-GPC")}} 请求标头，该请求标头可用于指示用户不同意网站或服务将其个人信息出售或与第三方共享。用户可以通过将首选项 `privacy.globalprivacycontrol.enabled` 设置为 `true`（在 `about:config` 中）以在正常浏览和隐私浏览模式下启用该标头。{{domxref("Navigator.globalPrivacyControl")}} 和 {{domxref("WorkerNavigator.globalPrivacyControl")}} 属性允许 JavaScript 检查用户同意首选项（[Firefox bug 1856029](https://bugzil.la/1856029)）。
 
 ### 安全

@@ -65,14 +65,14 @@ showNumber.addEventListener("click", () => {
 
 ページの他の部分をユーザーが操作できないようにし、 `:modal` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
 
-- [`dialog`](/ja/docs/Web/HTML/Element/dialog) 要素が `showModal()` API で開かれたとき。
+- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素が `showModal()` API で開かれたとき。
 - `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/:fullscreen) 擬似クラスで選択される要素。
 
 ## 例
 
 ### モーダルダイアログのスタイル設定
 
-この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{HTMLElement("dialog")}} 要素の[例](/ja/docs/Web/HTML/Element/dialog#ダイアログからの返値を扱い)を基に構築されています。
+この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{HTMLElement("dialog")}} 要素の[例](/ja/docs/Web/HTML/Reference/Elements/dialog#ダイアログからの返値を扱い)を基に構築されています。
 
 ```html-nolint hidden live-sample___styling_a_modal_dialog
 <!-- フォームを含む基本的なモーダルダイアログ -->
@@ -158,6 +158,6 @@ favDialog.addEventListener("close", () => {
 
 ## 関連情報
 
-- [`dialog`](/ja/docs/Web/HTML/Element/dialog) 要素
+- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
 - 他の要素表示状態擬似クラス: {{CSSxRef(":fullscreen")}} および {{CSSxRef(":picture-in-picture")}}
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の一覧

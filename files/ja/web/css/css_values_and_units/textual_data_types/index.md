@@ -16,10 +16,10 @@ CSS の仕様では、ウェブ開発者が定義できる値には、アニメ�
 ユーザーが定義するテキスト値のうち、引用符があってもなくてもよい箇所では、仕様書には `<custom-ident> | <string>`のように記してあります。これは、例えばアニメーション名のように、引用符が任意だということです。
 
 ```css
-@keyframe validIdent {
+@keyframes validIdent {
   /* ここにキーフレーム */
 }
-@keyframe 'validString' {
+@keyframes 'validString' {
   /* ここにキーフレーム */
 }
 ```

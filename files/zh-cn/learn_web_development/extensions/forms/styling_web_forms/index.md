@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Other_form_controls","Learn_web_development/Extensions/Forms/Advanced_form_styling","Learn_web_development/Extensions/Forms")}}
 
 在前几篇文章中，我们介绍了如何用 HTML 创建网页表单。现在，我们将介绍如何使用 [CSS](/zh-CN/docs/Web/CSS) 来设置表单样式。
 
@@ -40,7 +40,7 @@ l10n:
 
 1. {{HTMLElement("form")}}
 2. {{HTMLElement("fieldset")}} 和 {{HTMLElement("legend")}}
-3. 单行文本 {{HTMLElement("input")}}（如输入文本、url、电子邮件），但 [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search) 除外。
+3. 单行文本 {{HTMLElement("input")}}（如输入文本、url、电子邮件），但 [`<input type="search">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search) 除外。
 4. 多行文本 {{HTMLElement("textarea")}}
 5. 按钮（包括 {{HTMLElement("input")}} 和 {{HTMLElement("button")}}）
 6. {{HTMLElement("label")}}
@@ -49,16 +49,16 @@ l10n:
 #### 难以样式化
 
 - 复选框和单选按钮
-- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search)
 
 [表单样式化进阶](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)一文介绍了如何设置这些样式。
 
 #### 仅靠 CSS 无法对内部结构进行样式设计
 
-- [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color)
-- 与日期相关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color)
+- 与日期相关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)
 - 涉及到创建下拉部件的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
 - {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
@@ -373,7 +373,7 @@ button:focus {
 
 ## 技能测试
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，还可以通过一些测试来验证自己是否记住了这些信息——请参阅[技能测试：样式化基础](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics)。
 
 ## 总结
 

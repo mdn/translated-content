@@ -47,8 +47,6 @@ background:
 }
 ```
 
-Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение..
-
 Свойство является [сокращением,](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties) которое устанавливает следующие свойства в одном объявлении: {{cssxref("background-clip")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-origin")}}, {{cssxref("background-position")}}, {{cssxref("background-repeat")}}, {{cssxref("background-size")}}, и {{cssxref("background-attachment")}}.
 
 Как и во всех сокращённых свойствах, любые пропущенные вложенные значения будут установлены в свои [изначальные значения](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing).

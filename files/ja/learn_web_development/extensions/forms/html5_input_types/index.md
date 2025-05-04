@@ -33,7 +33,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## メールアドレスフィールド
 
-このフィールド型は、 `email` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使用することで設定します。
+このフィールド型は、 `email` の値を [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に使用することで設定します。
 
 ```html hidden live-sample___email
 <label for="email">メールアドレスを入力してください:</label><br />
@@ -45,11 +45,11 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 {{EmbedLiveSample('email','100%','50')}}
 
-この [`type`](/ja/docs/Web/HTML/Element/input#type) が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
+この [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) が使われたとき、ユーザーは有効なメールアドレスをフィールドに入力することが必須です。その他のコンテンツでは、ブラウザーによってフォーム送信時にエラーが表示されます。この動作は下記のスクリーンショットで見ることができます。
 
 !["Please enter an email address." というメッセージを表示している無効なメール入力欄](email_address_invalid.png)
 
-[`multiple`](/ja/docs/Web/HTML/Attributes/multiple) 属性を `email` 入力型に組み合わせると、複数のメールアドレスが同じ入力に（カンマ区切りで）入力させることもできます。
+[`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性を `email` 入力型に組み合わせると、複数のメールアドレスが同じ入力に（カンマ区切りで）入力させることもできます。
 
 ```html
 <input type="email" id="email" name="email" multiple />
@@ -70,14 +70,14 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 しかしこれは完全なセキュリティ対策と*考えるべきではありません*! アプリは送信データのセキュリティ確認をクライアント側と同様に*サーバー側*でも行うべきで、なぜならクライアント側の検証は簡単にオフにできるため悪意のあるユーザーは簡単にサーバーに不正なデータを送信できるためです。起こりうることについては[ウェブサイトセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)を読んで下さい。サーバー側の検証を実装するのはこのモジュールの範囲を超えていますが、記憶しておくべきです。
 
-既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力型はイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアント側の検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)の記事で話します。
+既定の制約では `a@b` は有効なメールアドレスです。これは既定では `email` 入力型はイントラネットのメールアドレスを許可しているためです。異なる検証動作を実装するには、[`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性を用いたり、エラーメッセージをカスタムできます。この機能の使い方は後の [クライアント側の検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)の記事で話します。
 
 > [!NOTE]
 > 入力データがメールアドレスでない場合、{{cssxref(':invalid')}} 擬似クラスがマッチして、{{domxref('validityState.typeMismatch')}} プロパティは `true` を返します。
 
 ## 検索フィールド
 
-検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性のに使用することで設定されます。
+検索フィールドは、ページやアプリの検索ボックス作成に使われるものです。このフィールド型は `search` の値を [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性のに使用することで設定されます。
 
 ```html hidden
 <label for="search">Enter a search term:</label><br />
@@ -95,7 +95,7 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 ## 電話番号フィールド
 
-電話番号を入力するための特殊なフィールドは、 `tel` の値を [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
+電話番号を入力するための特殊なフィールドは、 `tel` の値を [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に使うと作成することができます。
 
 ```html hidden
 <label for="tel">電話番号を入力してください:</label><br />
@@ -113,11 +113,11 @@ HTML フォームコントロールの見た目はデザイナーの仕様によ
 
 世界中にはいろいろな電話番号の書式があるため、このフィールドはユーザーが入力した値に制約を一切つけません（つまり、文字が入っていることもありえます）。
 
-前に触れた通り、 [`pattern`](/ja/docs/Web/HTML/Attributes/pattern) 属性が制約を強化するのに使われます。これは[クライアント側検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)で学びます。
+前に触れた通り、 [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性が制約を強化するのに使われます。これは[クライアント側検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)で学びます。
 
 ## URL フィールド
 
-URL を入力するための特殊な型のフィールドは、 `url` の値を[`type`](/ja/docs/Web/HTML/Element/input#type) 属性に使うと作成することができます。
+URL を入力するための特殊な型のフィールドは、 `url` の値を[`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に使うと作成することができます。
 
 ```html hidden
 <label for="url">URL を入力してください:</label><br />
@@ -136,7 +136,7 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 ## 数値フィールド
 
-数値入力用のコントロールは、 {{HTMLElement("input")}} [`type`](/ja/docs/Web/HTML/Element/input#type) に `number` を指定して作成することができます。このコントロールはテキストフィールドのような見た目ですが、浮動小数値のみを許可し、通常は数値を増減するためのスピナー形式のボタンがあります。動的キーボードつきの端末では、一般的に数値キーボードが表示されます。
+数値入力用のコントロールは、 {{HTMLElement("input")}} [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) に `number` を指定して作成することができます。このコントロールはテキストフィールドのような見た目ですが、浮動小数値のみを許可し、通常は数値を増減するためのスピナー形式のボタンがあります。動的キーボードつきの端末では、一般的に数値キーボードが表示されます。
 
 ```html hidden live-sample___number
 <label for="number">数値を入力してください:</label><br />
@@ -148,9 +148,9 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 {{EmbedLiveSample('number','100%','50')}}
 
-`number` 入力型では、[`min`](/ja/docs/Web/HTML/Element/input#min) と [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を設定することで最小値と最大値の制約をつけることができます。
+`number` 入力型では、[`min`](/ja/docs/Web/HTML/Reference/Elements/input#min) と [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を設定することで最小値と最大値の制約をつけることができます。
 
-また、 `step` 属性を使用して、スピンボタンを押すことによって増減する数値を設定することもできます。既定では、 [`step`](/ja/docs/Web/HTML/Attributes/step) 属性の既定値が `1` であるため、数値入力型は数値が整数であるかどうかだけの検証を行います。浮動小数点数を許可するには、 `step="any"` または特定の値（`step="0.01"` など）を指定して浮動小数点数を制限します。省略すると、 `step` の値は既定で `1` となるため、有効なのは整数のみとなります。
+また、 `step` 属性を使用して、スピンボタンを押すことによって増減する数値を設定することもできます。既定では、 [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性の既定値が `1` であるため、数値入力型は数値が整数であるかどうかだけの検証を行います。浮動小数点数を許可するには、 `step="any"` または特定の値（`step="0.01"` など）を指定して浮動小数点数を制限します。省略すると、 `step` の値は既定で `1` となるため、有効なのは整数のみとなります。
 
 いくつか例を見てみましょう。
 
@@ -188,9 +188,9 @@ URL を入力するための特殊な型のフィールドは、 `url` の値を
 
 使用からすると、スライダーはテキストフィールドより不正確です。このため、*正確な*値が必ずしも重要でない数値の選択に使われます。
 
-スライダーは {{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
+スライダーは {{HTMLElement("input")}} の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性を `range` にセットして作成します。スライダーはマウスやタッチや、キーパッドの矢印で移動できます。
 
-スライダーを適切に設定するのは重要です。そのためには、それぞれ最小、最大、増分値を設定する [`min`](/ja/docs/Web/HTML/Attributes/min), [`max`](/ja/docs/Web/HTML/Attributes/max), [`step`](/ja/docs/Web/HTML/Attributes/step) 属性を設定するのを強くお奨めします。
+スライダーを適切に設定するのは重要です。そのためには、それぞれ最小、最大、増分値を設定する [`min`](/ja/docs/Web/HTML/Reference/Attributes/min), [`max`](/ja/docs/Web/HTML/Reference/Attributes/max), [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性を設定するのを強くお奨めします。
 
 上の例の背後にあるコードを見て、どのように実現されるかを見てみましょう。まずは基本となる HTML です。
 
@@ -242,7 +242,7 @@ output {
 
 HTML の日付コントロールは、カレンダーウィジェットを提供して統一されたデータを作成し、この種類のデータを扱うことができます。
 
-日付と時刻のコントロールは、 {{HTMLElement("input")}} 要素に適切な値を指定した [`type`](/ja/docs/Web/HTML/Element/input#type) 属性を設定したものを使用して作成します。この値は、日付、時刻、またはその両方を収集したいかどうかによって変わります。ライブサンプルを以下に示します。
+日付と時刻のコントロールは、 {{HTMLElement("input")}} 要素に適切な値を指定した [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性を設定したものを使用して作成します。この値は、日付、時刻、またはその両方を収集したいかどうかによって変わります。ライブサンプルを以下に示します。
 
 ```html hidden live-sample___date1
 <label for="party">パーティーの日時を選択してください:</label>
@@ -266,7 +266,7 @@ input:valid + span:after {
 
 ### `datetime-local`
 
-[`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local) は特定のタイムゾーン情報のない日付と時刻を表示して選択するウィジェットを作成します。
+[`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) は特定のタイムゾーン情報のない日付と時刻を表示して選択するウィジェットを作成します。
 
 ```html hidden
 <label for="month">日付と時刻を入力してください:</label><br />
@@ -280,7 +280,7 @@ input:valid + span:after {
 
 ### `month`
 
-[`<input type="month">`](/ja/docs/Web/HTML/Element/input/month) は年と月を表示して選択するウィジェットを作成します。
+[`<input type="month">`](/ja/docs/Web/HTML/Reference/Elements/input/month) は年と月を表示して選択するウィジェットを作成します。
 
 ```html hidden
 <label for="month">月を入力してください:</label><br />
@@ -294,7 +294,7 @@ input:valid + span:after {
 
 ### `time`
 
-[`<input type="time">`](/ja/docs/Web/HTML/Element/input/time) は時刻の値を表示して選択するウィジェットを作成します。時刻は 12 時制で表示されることがありますが、返値は 24 時制です。
+[`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time) は時刻の値を表示して選択するウィジェットを作成します。時刻は 12 時制で表示されることがありますが、返値は 24 時制です。
 
 ```html hidden
 <label for="time">時刻を入力してください:</label><br />
@@ -308,7 +308,7 @@ input:valid + span:after {
 
 ### `week`
 
-[`<input type="week">`](/ja/docs/Web/HTML/Element/input/week) は本年の週の番号を表示して選択するウィジェットを作成します。
+[`<input type="week">`](/ja/docs/Web/HTML/Reference/Elements/input/week) は本年の週の番号を表示して選択するウィジェットを作成します。
 
 週は月曜始まりで日曜日で終わります。それに加えて、その年の最初の週はその年の最初の木曜日を含みます—これはその年の最初の日を含まないことも、前年の最後の数日を含むこともあります。
 
@@ -324,7 +324,7 @@ input:valid + span:after {
 
 ### date/time 値の制限
 
-日付をと時刻のコントロールはすべて、[`min`](/ja/docs/Web/HTML/Attributes/min) と [`max`](/ja/docs/Web/HTML/Attributes/max) 属性で制約をつけることができて、さらに [`step`](/ja/docs/Web/HTML/Attributes/step) 属性 (この値は入力型によって変わります)で追加の制約も可能です。
+日付をと時刻のコントロールはすべて、[`min`](/ja/docs/Web/HTML/Reference/Attributes/min) と [`max`](/ja/docs/Web/HTML/Reference/Attributes/max) 属性で制約をつけることができて、さらに [`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性 (この値は入力型によって変わります)で追加の制約も可能です。
 
 ```html
 <label for="myDate">この夏はいつ空いていますか？</label><br />
@@ -343,7 +343,7 @@ input:valid + span:after {
 
 色も扱いが難しいです。色の表現がたくさんあります。 RGB 値（10 進数や 16 進数）、HSL 値、キーワードなどです。
 
-`color` コントロールは {{HTMLElement("input")}} 要素を、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性に `color`をつけて作成できます。
+`color` コントロールは {{HTMLElement("input")}} 要素を、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性に `color`をつけて作成できます。
 
 ```html hidden
 <label for="color">色を選択してください:</label><br />
@@ -359,7 +359,7 @@ input:valid + span:after {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML5 のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML5 のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types)を見てください。
 
 ## まとめ
 

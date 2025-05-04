@@ -40,7 +40,7 @@ l10n:
 
 `aria-hidden="true"` は次のような場合には追加しないでください。
 
-- HTML の [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性が存在する場合
+- HTML の [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性が存在する場合
 - この要素または要素の祖先が [`display: none`](/ja/docs/Web/CSS/display) により非表示になっている場合
 - この要素または要素の祖先が [`visibility: hidden`](/ja/docs/Web/CSS/visibility) により非表示になっている場合
 
@@ -88,8 +88,8 @@ l10n:
 ## 関連情報
 
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-- HTML [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) 属性
+- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- HTML [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - CSS {{CSSXref('display')}} プロパティ
 - CSS {{CSSXref('visibility')}} プロパティ

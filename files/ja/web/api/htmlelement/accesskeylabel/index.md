@@ -55,4 +55,4 @@ btn.onclick = () => {
 ## 関連情報
 
 - {{domxref("HTMLElement.accessKey")}}
-- [accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey) グローバル属性
+- [accesskey](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) グローバル属性

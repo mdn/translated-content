@@ -8,7 +8,7 @@ slug: Web/API/Document/characterSet
 > [!NOTE]
 > Um "character set"(conjunto de caracteres) e "character encoding"(codificação de caracteres) estão relacionados, mas diferentes. Apesar do nome dessa propriedade, ela retorna a codificação.
 
-Usuários podem sobrepor a codificação especificada pelo desenvolvedor dentro do cabeçalho [Content-Type](/pt-BR/docs/Web/HTTP/Headers/Content-Type) (tipo de conteúdo) ou embutida como \<meta charset = "utf-8">, como no menu <kbd>Exibir → Codificacao de Texto </kbd>. Essa substituição é fornecida para corrigir codificações especificadas pelo desenvolvedor incorretas que resultam em [texto ilegivel](https://en.wikipedia.org/wiki/Mojibake).
+Usuários podem sobrepor a codificação especificada pelo desenvolvedor dentro do cabeçalho [Content-Type](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Type) (tipo de conteúdo) ou embutida como \<meta charset = "utf-8">, como no menu <kbd>Exibir → Codificacao de Texto </kbd>. Essa substituição é fornecida para corrigir codificações especificadas pelo desenvolvedor incorretas que resultam em [texto ilegivel](https://en.wikipedia.org/wiki/Mojibake).
 
 > [!NOTE]
 > As propriedades `document.charset` e `document.inputEncoding` são aliases legados para `document.characterSet`. Não use mais eles.

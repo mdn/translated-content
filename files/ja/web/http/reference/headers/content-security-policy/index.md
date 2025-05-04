@@ -2,9 +2,8 @@
 title: Content-Security-Policy (CSP)
 short-title: Content-Security-Policy
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy
-original_slug: Web/HTTP/Headers/Content-Security-Policy
 l10n:
-  sourceCommit: 232dc9186a6d79d7e12b3000999ad026d63e995e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
@@ -20,7 +19,7 @@ HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェ�
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -116,7 +115,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 
@@ -137,7 +136,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
     トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーでで指定されている場合があります。
 
     > [!WARNING]
-    > このディレクティブは [`report-uri`](#report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
+    > このディレクティブは [`report-uri`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
     > ただし、`report-to` が広く対応されるようになるまでは、次のようにどちらのヘッダーも指定してください（ここで、`endpoint_name` は別個に提供されたエンドポイントの名前です）。
     >
     > ```http
@@ -146,10 +145,10 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ### その他のディレクティブ
 
-- {{CSP("require-trusted-types-for")}} {{experimental_inline}}
+- {{CSP("require-trusted-types-for")}}
   - : DOM XSS インジェクションシンクで [Trusted
     Types](/ja/docs/Web/API/Trusted_Types_API) を強制します。
-- {{CSP("trusted-types")}} {{experimental_inline}}
+- {{CSP("trusted-types")}}
   - : [Trusted Types](/ja/docs/Web/API/Trusted_Types_API) ポリシーのホワイトリストを指定するために使用します (Trusted Types は、アプリケーションが DOM XSS インジェクションシンクをロックダウンして、文字列の代わりにスプーフィング不可能な型付きの値のみを受け入れるようにします)。
 - {{CSP("upgrade-insecure-requests")}}
   - : 安全でない URL (HTTP で提供されているもの) をすべて安全な URL (HTTPS で提供されているもの) に置き換えたかのように扱うようにユーザーエージェントに指示します。
@@ -163,7 +162,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
   - : ユーザーエージェントにコンテンツセキュリティポリシーの違反を報告するよう指示します。
-    これは [`report-to`](#report-to) ディレクティブに置き換えられました。
+    これは [`report-to`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) ディレクティブに置き換えられました。
 
 ## フェッチディレクティブの構文
 
@@ -200,7 +199,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 この値は、ハッシュアルゴリズムを識別する文字列に続いて、 {{glossary("Base64", "base64 エンコード")}}された文字列から成り、ハッシュ値を表します。
 
 - ハッシュアルゴリズム識別子は、`sha256`、`sha384`、`sha512` のいずれかでなければなりません。
-- ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("Cryptographic_hash_function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
+- ハッシュ値は、 `<script>` または `<style>` リソースの base64 エンコードされた{{glossary("hash function", "ハッシュ")}}であり、SHA-256、SHA-384、SHA-512 のいずれかのハッシュ関数を使用して計算されます。
 
 例を示します。
 
@@ -210,7 +209,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 
 ブラウザーが文書を受け取ると、 `<script>` および `<style>` 要素のコンテンツをハッシュ化し、その結果を CSP ディレクティブ内のハッシュと照合し、一致した場合のみリソースを読み込みます。
 
-要素が（例えば [`src`](/ja/docs/Web/HTML/Element/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Element/script#integrity) 属性もなければなりません。
+要素が（例えば [`src`](/ja/docs/Web/HTML/Reference/Elements/script#src) 属性を使用して）外部リソースを読み込んだ場合、その要素には [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性もなければなりません。
 
 ディレクティブにハッシュと `unsafe-inline` がある場合、ブラウザーは `unsafe-inline` を無視します。
 
@@ -260,7 +259,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 安全なアップグレードが許可されています。
 
 - この文書が `http://example.com` から提供され、 CSP が `'self'` であれば、 `https://example.com` からのリソースも許可します。
-- この文書が `ws://example.com` から提供され、 CSP が `'self'` であれば、 `wss://example.com` からのリソースも許可します。
+- この文書が `ws://example.org` から提供され、 CSP が `'self'` であれば、 `ws://example.org` からのリソースも許可します。
 
 ### 'unsafe-eval'
 
@@ -325,7 +324,7 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 ### 'inline-speculation-rules'
 
-既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Element/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Element/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
+既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。 `'inline-speculation-rules'` は、ブラウザーが [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性が [`speculationrules`](/ja/docs/Web/HTML/Reference/Elements/script/type/speculationrules) であるインライン `<script>` 要素を読み込むことを許可します。
 
 詳しくは[投機ルール API](/ja/docs/Web/API/Speculation_Rules_API) を参照してください。
 
@@ -350,13 +349,13 @@ script-src 'unsafe-hashes' 'sha256-cd9827ad...'
 
 [ワーカー](/ja/docs/Web/API/Worker)は、一般的に文書 (もしくは親ワーカー) のコンテンツセキュリティポリシーによって管理され*ません*。ワーカーに対してコンテンツセキュリティポリシーを指定するには、ワーカースクリプト自身が要求したリクエストに対して `Content-Security-Policy` レスポンスヘッダーを設定して下さい。
 
-ワーカースクリプトのオリジンがグローバルで一意の識別子の場合 (例えば、URL がデータやブロブのスキーマの場合) は例外です。この場合、ワーカーは文書もしくは作成元のワーカーのコンテンツセキュリティポリシーを継承します。
+ワーカースクリプトのオリジンがグローバルで一意の識別子の場合（例えば、URL のスキームが data や blob の場合）は例外です。この場合、ワーカーは文書もしくは作成元のワーカーのコンテンツセキュリティポリシーを継承します。
 
 ## 複数のコンテンツセキュリティポリシー
 
-CSP では、`Content-Security-Policy` ヘッダー、{{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーや {{HTMLElement("meta")}} 要素を経由したものを含む、リソースに対して複数のポリシーを指定することができます。
+CSP の機構では、`Content-Security-Policy` ヘッダー、{{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーや {{HTMLElement("meta")}} 要素を経由したものを含む、リソースに対して複数のポリシーを指定することができます。
 
-以下の例のように、 `Content-Security-Policy` ヘッダーを複数回使うことができます。ここでは {{CSP("connect-src")}} ディレクティブに特に注意してください。 2 つ目のポリシーでは接続を許可しているにもかかわらず、 1 つ目のポリシーには `connect-src 'none'` が含まれています。追加のポリシーを追加しても、保護されたリソースの機能が*さらに制限することができる*だけで、接続は許可されず、最も厳密なポリシーとして `connect-src 'none'` が強制されます。
+以下の例のように、 `Content-Security-Policy` ヘッダーを複数回使うことができます。ここでは {{CSP("connect-src")}} ディレクティブに特に注意してください。 2 つ目のポリシーでは接続を許可しているにもかかわらず、 1 つ目のポリシーには `connect-src 'none'` が含まれています。追加のポリシーを追加しても、保護されたリソースの機能がさらに制限することができるだけで、接続は許可されず、最も厳密なポリシーとして `connect-src 'none'` が強制されます。
 
 ```http
 Content-Security-Policy: default-src 'self' http://example.com;

@@ -54,5 +54,5 @@ slug: Learn_web_development/Extensions/Forms
 
 ## Смотрите также
 
-- [Ссылка на элементы HTML-форм](/ru/docs/Web/HTML/Element#forms)
-- [Ссылка на виды HTML-элемента \<input>](/ru/docs/Web/HTML/Element/input)
+- [Ссылка на элементы HTML-форм](/ru/docs/Web/HTML/Reference/Elements#forms)
+- [Ссылка на виды HTML-элемента \<input>](/ru/docs/Web/HTML/Reference/Elements/input)

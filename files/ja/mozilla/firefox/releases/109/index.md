@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Element/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
+- {{HTMLElement("input/range", "range")}} 要素で、[`list`](/ja/docs/Web/HTML/Reference/Elements/input/range#list) 属性をサポートしました。これは、Firefox が範囲の途中に目盛りをつけられるようにするため、id によって {{HTMLElement("datalist")}} に関連づけるものです。
 
 ### CSS
 

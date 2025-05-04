@@ -141,7 +141,7 @@ p {
 
 ### url() と SVG の hue-rotate フィルターで
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
+SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feColorMatrix")}} プリミティブの `hueRotate` 型は、同様の効果を提供します。次のものが指定されたとします。
 
 ```svg
 <filter id="filterID">

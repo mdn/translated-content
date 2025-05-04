@@ -1,24 +1,11 @@
 ---
-title: 為彈跳彩球添增其他功能
+title: 挑戰：為彈跳彩球添增其他功能
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">必備條件：</th>
-      <td>在開始本文所提的實作之前，應先看過先前的相關文章。</td>
-    </tr>
-    <tr>
-      <th scope="row">要點：</th>
-      <td>測試 JavaScript 物件與 OO 架構的完整性。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 開始
 
@@ -155,9 +142,5 @@ To implement the score counter, follow the following steps:
 
 - This assessment is quite challenging. Take each step slowly and carefully.
 - It might be an idea to keep a separate copy of the demo after you get each stage working, so you can refer back to it if you find yourself in trouble later on.
-
-## 交作業
-
-如果你是在某個課堂上操作這份作業，那麼請將成品交給你的老師 / 助教；如果你是自學者，在我們的[專屬討論區](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294)或 [Mozilla IRC](https://wiki.mozilla.org/IRC) 上的 [#mdn](irc://irc.mozilla.org/mdn) 頻道都可以很輕鬆地找到人給予指教。記得先認真做一下習題，要怎麼收獲先那麼栽呀！
 
 {{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}

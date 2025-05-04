@@ -3,7 +3,6 @@ title: JavaScript 解決常見的問題
 slug: Learn_web_development/Howto/Solve_JavaScript_problems
 ---
 
-{{LearnSidebar}}
 以下連結針對你需要修復的常見問題提供解決方案，以便讓你的 JavaScript 正確執行。
 
 ## 初學者常見的錯誤

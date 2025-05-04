@@ -1,24 +1,11 @@
 ---
-title: 基本的 CSS 理解
+title: 挑战：基本的 CSS 理解
 slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}
 
 你已经在这个模块中了解到了很多内容，所以当你达到这个模块的最后一篇文章的时候，感觉一定非常不错吧！在你继续之前的最后一步，就是完成对于这个模块的测验。本次测验涉及到几个相关的练习，你必须按顺序完成，这样你才能设计出最终的成品：一张名片/游戏玩家卡片/社交媒体的简介。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>在尝试这个测验之前，你应该已经完成了这个模块中所有文章的学习。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>来测试对 CSS 理论、语法、功能性的基本理解。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 起点
 
@@ -80,9 +67,5 @@ slug: Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension
 完成的设计应如下图所示：
 
 ![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
-
-## 评估
-
-如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行打分。如果你是自学的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得打分指南。首先尝试练习 - 作弊学不到什么！
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Debugging_CSS", "Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper", "Learn_web_development/Core/Styling_basics")}}

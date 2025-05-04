@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} からプロパティを継承しています。_
 
 - {{domxref("HTMLDetailsElement.open")}}
-  - : HTML の [`open`](/ja/docs/Web/HTML/Element/details#open) 属性を反映する論理値で、要素の内容（{{HTMLElement("summary")}} を除く）がユーザーに表示されているかどうかを示します。
+  - : HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/details#open) 属性を反映する論理値で、要素の内容（{{HTMLElement("summary")}} を除く）がユーザーに表示されているかどうかを示します。
 
 ## インスタンスメソッド
 

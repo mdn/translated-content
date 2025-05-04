@@ -6,10 +6,10 @@ original_slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-Se você já [compilou um módulo de outra linguagem usando ferramentas como Emscripten](/pt-BR/docs/WebAssembly/C_to_Wasm) ou [carregou e executou o código você mesmo](/pt-BR/docs/WebAssembly/Loading_and_running), a próxima etapa é aprender mais sobre como usar os outros recursos da API JavaScript WebAssembly. Este artigo ensina o que você precisa saber.
+Se você já [compilou um módulo de outra linguagem usando ferramentas como Emscripten](/pt-BR/docs/WebAssembly/Guides/C_to_Wasm) ou [carregou e executou o código você mesmo](/pt-BR/docs/WebAssembly/Loading_and_running), a próxima etapa é aprender mais sobre como usar os outros recursos da API JavaScript WebAssembly. Este artigo ensina o que você precisa saber.
 
 > [!NOTE]
-> Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicações, leia [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts) primeiro e depois volte.
+> Se você não estiver familiarizado com os conceitos básicos mencionados neste artigo e precisar de mais explicações, leia [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Guides/Concepts) primeiro e depois volte.
 
 ## Alguns exemplos simples
 
@@ -88,7 +88,7 @@ Além de visualizar o WebAssembly como texto, os desenvolvedores podem depurar (
 
 No modelo de memória de baixo nível do WebAssembly, a memória é representada como um intervalo contíguo de bytes não digitados chamados [Linear Memory](https://webassembly.github.io/spec/core/exec/index.html) que são lidos e escrito por [instruções de carregamento e armazenamento](https://webassembly.github.io/spec/core/exec/instructions.html#memory-instructions) dentro do módulo. Nesse modelo de memória, qualquer load ou store pode acessar qualquer byte em toda a memória linear, o que é necessário para representar fielmente conceitos C/C++ como ponteiros.
 
-Ao contrário de um programa C/C++ nativo, no entanto, onde o intervalo de memória disponível abrange todo o processo, a memória acessível por uma Instância WebAssembly específica é confinada a um intervalo específico — potencialmente muito pequeno — contido por um objeto WebAssembly Memory. Isso permite que um único aplicativo da Web use várias bibliotecas independentes — cada uma delas usando o WebAssembly internamente — para ter memórias separadas totalmente isoladas umas das outras. Além disso, implementações mais recentes também podem criar [memórias compartilhadas](/pt-BR/docs/WebAssembly/Understanding_the_text_format#shared_memories), que podem ser transferidas entre os contextos Window e Worker usando [`postMessage()`](/pt-BR/docs/Web/API/Window/postMessage) e usadas em vários lugares.
+Ao contrário de um programa C/C++ nativo, no entanto, onde o intervalo de memória disponível abrange todo o processo, a memória acessível por uma Instância WebAssembly específica é confinada a um intervalo específico — potencialmente muito pequeno — contido por um objeto WebAssembly Memory. Isso permite que um único aplicativo da Web use várias bibliotecas independentes — cada uma delas usando o WebAssembly internamente — para ter memórias separadas totalmente isoladas umas das outras. Além disso, implementações mais recentes também podem criar [memórias compartilhadas](/pt-BR/docs/WebAssembly/Guides/Understanding_the_text_format#shared_memories), que podem ser transferidas entre os contextos Window e Worker usando [`postMessage()`](/pt-BR/docs/Web/API/Window/postMessage) e usadas em vários lugares.
 
 Em JavaScript, uma instância de Memory pode ser considerada como um [`ArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionável (ou [`SharedArrayBuffer`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer), no caso de memórias compartilhadas) e, assim como com `ArrayBuffers`, um único aplicativo da web pode criar muitos objetos Memory independentes. Você pode criar um usando o construtor [`WebAssembly.Memory()`](/pt-BR/docs/WebAssembly/JavaScript_interface/Memory), que recebe como argumentos um tamanho inicial e (opcionalmente) um tamanho máximo e um `shared` propriedade que informa se é uma memória compartilhada ou não.
 
@@ -281,7 +281,7 @@ Agora que demonstramos o uso dos principais blocos de construção do WebAssembl
 - Uma instância de módulo pode usar instâncias de tabela 0–1 — este é o "espaço de endereço de função" da instância, usado para implementar ponteiros de função C. Versões futuras do WebAssembly podem permitir 0–N instâncias de tabela por instância de módulo.
 - Uma instância de memória ou tabela pode ser usada por instâncias de módulo 0–N — todas essas instâncias compartilham o mesmo espaço de endereço, permitindo [vinculação dinâmica](https://github.com/WebAssembly/tool-conventions/blob/main/DynamicLinking.md).
 
-Você pode ver a multiplicidade em ação em nosso artigo Compreendendo o formato de texto — consulte a [seção Tabelas mutantes e vinculação dinâmica](/pt-BR/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
+Você pode ver a multiplicidade em ação em nosso artigo Compreendendo o formato de texto — consulte a [seção Tabelas mutantes e vinculação dinâmica](/pt-BR/docs/WebAssembly/Guides/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
 
 ## Resumo
 
@@ -290,5 +290,5 @@ Este artigo apresentou os fundamentos do uso da API WebAssembly JavaScript para 
 ## Veja também
 
 - [webassembly.org](https://webassembly.org/)
-- [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Concepts)
+- [Conceitos do WebAssembly](/pt-BR/docs/WebAssembly/Guides/Concepts)
 - [WebAssembly no Mozilla Research](https://research.mozilla.org/)

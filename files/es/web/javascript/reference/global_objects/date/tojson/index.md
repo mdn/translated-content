@@ -21,8 +21,6 @@ console.log(new Date(jsonDate).toUTCString());
 // Expected output: "Tue, 19 Aug 1975 23:15:30 GMT"
 ```
 
-La tabla de compatibilidad de esta página se genera a partir de datos estructurados. Si desea contribuir con los datos, por favor clone <https://github.com/mdn/interactive-examples> y envienos un pull request.
-
 ## Syntaxis
 
 ```

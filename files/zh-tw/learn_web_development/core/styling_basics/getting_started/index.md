@@ -3,7 +3,7 @@ title: 開始使用 CSS
 slug: Learn_web_development/Core/Styling_basics/Getting_started
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/What_is_CSS", "Learn_web_development/Core/Styling_basics/Styling_a_bio_page", "Learn_web_development/Core/Styling_basics")}}
 
 在這個主題中，我們將 CSS 套用到一個簡單的 HTML 文件上，在過程中學習這個語言一些實際的東西。
 
@@ -140,7 +140,7 @@ li {
 
 到目前為止，我們依元素的名稱來設定過樣式。當你希望同類型的元素在你的文件中都以相同的方式呈現，這種作法就行得通。但絕大多數的時候並非如此，所以你將需要一個能選擇某部分的元素、以避免更動到其它部分樣式的方法。最常見的作法，是在你要改變的 HTML 元素上設定 class（分類）並藉由它來定義要修改的範圍。
 
-在你的 HTML 文件中，加上一個 [class 屬性](/zh-TW/docs/Web/HTML/Global_attributes/class)到第二個清單項目上。你的清單會變得如同底下這樣：
+在你的 HTML 文件中，加上一個 [class 屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class)到第二個清單項目上。你的清單會變得如同底下這樣：
 
 ```html
 <ul>
@@ -217,7 +217,7 @@ h1 + p {
 
 ## 依狀態指定樣式
 
-在這篇教學中我們要看的最後一種類型，是依照元素的狀態來設定樣式的能力。最直接的例子就是設定連結的樣式。當我們設定連結的樣式，我們的目標是 [`<a>`](/zh-TW/docs/Web/HTML/Element/a) （錨點 anchor）元素。它具有不同的狀態來表示其連結：還沒被訪問過、訪問過、滑鼠停留其上方、由鍵盤取得焦點或是正被點擊中。你可以使用 CSS 來指定不同的狀態，下面的 CSS 設定連結（錨點元素）在未訪問過時為粉紅色，訪問過為綠色。
+在這篇教學中我們要看的最後一種類型，是依照元素的狀態來設定樣式的能力。最直接的例子就是設定連結的樣式。當我們設定連結的樣式，我們的目標是 [`<a>`](/zh-TW/docs/Web/HTML/Reference/Elements/a) （錨點 anchor）元素。它具有不同的狀態來表示其連結：還沒被訪問過、訪問過、滑鼠停留其上方、由鍵盤取得焦點或是正被點擊中。你可以使用 CSS 來指定不同的狀態，下面的 CSS 設定連結（錨點元素）在未訪問過時為粉紅色，訪問過為綠色。
 
 ```css
 a:link {

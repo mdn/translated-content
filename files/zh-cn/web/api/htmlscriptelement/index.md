@@ -23,7 +23,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         代表了脚本的 MIME 类型。它反映了 <a
-          href="/zh-CN/docs/Web/HTML/Element/script#type"><code>type</code></a
+          href="/zh-CN/docs/Web/HTML/Reference/Elements/script#type"><code>type</code></a
         > 属性。如何解析奇异的编程语言，请阅读这篇文章。
       </td>
     </tr>
@@ -32,7 +32,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         代表了使用外部脚本资源的地址。它反映了 <a
-          href="/zh-CN/docs/Web/HTML/Element/script#src"><code>src</code></a
+          href="/zh-CN/docs/Web/HTML/Reference/Elements/script#src"><code>src</code></a
         > 属性。
       </td>
     </tr>
@@ -59,7 +59,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       <td>{{domxref("DOMString")}}</td>
       <td>
         代表外部脚本资源的字符编码。它反映了 <a
-          href="/zh-CN/docs/Web/HTML/Element/script#charset"><code>charset</code></a
+          href="/zh-CN/docs/Web/HTML/Reference/Elements/script#charset"><code>charset</code></a
         > 属性。
       </td>
     </tr>
@@ -104,7 +104,7 @@ _从其父类中继承的属性，{{domxref("HTMLElement")}}。_
       </td>
       <td>{{domxref("DOMString")}}</td>
       <td>
-        反馈该脚本元素 <a href="/zh-CN/docs/Web/HTML/Attributes/crossorigin">CORS 设置</a>的字符串。对其他<a href="/zh-CN/docs/Glossary/Origin">源</a>的脚本，此属性控制错误信息的暴露情况。
+        反馈该脚本元素 <a href="/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin">CORS 设置</a>的字符串。对其他<a href="/zh-CN/docs/Glossary/Origin">源</a>的脚本，此属性控制错误信息的暴露情况。
       </td>
     </tr>
     <tr>

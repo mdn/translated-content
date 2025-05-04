@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Set-Cookie
 
 O cabeçalho de resposta HTTP **`Set-Cookie`** é usado para enviar cookies de um servidor para o agente usuário.
 
-Para mais informações, veja o guia em [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies).
+Para mais informações, veja o guia em [HTTP cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies).
 
 <table class="properties">
   <tbody>
@@ -149,6 +149,6 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Veja também
 
-- [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}

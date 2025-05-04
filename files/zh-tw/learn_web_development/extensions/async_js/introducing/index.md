@@ -3,7 +3,7 @@ title: 非同步的 JavaScript 介紹
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
 

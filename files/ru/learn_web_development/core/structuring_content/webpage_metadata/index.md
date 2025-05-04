@@ -260,7 +260,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 ## Основной язык HTML страницы
 
-Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
+Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Reference/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
 
 ```
 <html lang="en-US">

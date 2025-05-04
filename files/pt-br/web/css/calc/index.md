@@ -14,7 +14,7 @@ width: calc(100% - 80px);
 
 ## Syntax
 
-A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn/JavaScript/First_steps/Math#operator_precedence):
+A função `calc()` recebe uma simples expressão como parâmetro e o resultado desta expressão é utilizado como valor. Pode ser uma simples expressão, combinando os seguintes operadores, utilizando padrão [operator precedence rules](/pt-BR/docs/Learn_web_development/Core/Scripting/Math#operator_precedence):
 
 - `+`
   - : Adição.

@@ -3,7 +3,7 @@ title: Django Web 应用安全
 slug: Learn_web_development/Extensions/Server-side/Django/web_application_security
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Deployment", "Learn_web_development/Extensions/Server-side/Django/django_assessment_blog", "Learn_web_development/Extensions/Server-side/Django")}}
 
 保护用户数据是任何网站设计的重要部分。我们之前在文章[web 安全](/zh-CN/docs/Web/Security)中解释了一些更常见的安全威胁--本文提供了 Django 的内置保护如何处理这些威胁的实际演示。
 
@@ -162,7 +162,7 @@ Django 还提供了很多其他形式的防护措施 (大部分不是很容易�
 - SQL 注入防护
   - : SQL 注入漏洞可以让攻击者直接对网站数据库执行构造好的 SQL 语句，在无需用户权限的情况下即可实现对数据的访问、修改甚至是删除。绝大多数的情况下，使用 Django 的查询集/模型直接进行数据库访问时，实际使用的 SQL 语句已经被底层的数据库驱动妥善地进行了转义。如果必须要直接执行自定义的 SQL 语句，那么也请一定要注意防范 SQL 注入的问题。
 - 点击劫持防护
-  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/zh-CN/docs/Web/HTML/Element/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
+  - : 点击劫持是指攻击者通过诱导用户，用户本意要访问 A 网站，最终却访问到了 B 网站。举例说明，攻击者可以给用户显示一个合法的银行网站，同时把用户名密码登录框改为不可见的[\<iframe>](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 标签，以此来窃取用户的登录信息。Django 通过 [`X-Frame-Options`](https://docs.djangoproject.com/en/2.0/ref/middleware/#django.middleware.clickjacking.XFrameOptionsMiddleware)中间件来防御点击劫持攻击，在支持的浏览器中，这种方式可以避免网站在 iframe 中显示。
 - 强制 SSL/HTTPS
 
   - : web 服务器可通过启用 SSL/HTTPS 来加密网站和浏览器之间的所有通信流量，包括了身份认证及其他通过纯文本方式来发送的数据流量 (强烈建议启用 HTTPS)。如果 HTTPS 已启用，Django 还提供了一起实用的保护措施：

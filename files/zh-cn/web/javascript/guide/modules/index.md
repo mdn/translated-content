@@ -152,9 +152,9 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
+[导入映射](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如，下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如，下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Reference/Elements/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
@@ -170,7 +170,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在 worker 或 worklet 上下文中应用导入映射。
+导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在 worker 或 worklet 上下文中应用导入映射。
 
 通过这个映射，你现在可以使用上面的属性名称作为模块标识符。如果模块标识符尾部没有斜杠，那么整个模块标识符将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
 
@@ -303,11 +303,11 @@ import fp from "lodash/fp.js";
 
 与模块标识符映射一样，你可以有多个作用域键，并且这些键可能包含重叠的路径。如果多个作用域匹配引用 URL，则首先检查最具体的作用域路径（最长的作用域键）以查找匹配的标识符。如果没有匹配的标识符，浏览器将回退到下一个最具体的匹配作用域路径，依此类推。如果在任何匹配的作用域中都没有匹配的标识符，浏览器会检查 `imports` 键中的模块标识符映射以查找匹配项。
 
-### 通过映射去除哈希文件名以改进缓存
+### 通过映射去除散列文件名以改进缓存
 
-网站使用的脚本文件通常具有哈希文件名以简化缓存。这种方法的缺点是，如果模块发生变化，任何使用其哈希文件名导入它的模块也需要更新/重新生成。这可能导致更新的级联，浪费网络资源。
+网站使用的脚本文件通常具有散列文件名以简化缓存。这种方法的缺点是，如果模块发生变化，任何使用其散列文件名导入它的模块也需要更新/重新生成。这可能导致更新的级联，浪费网络资源。
 
-导入映射提供了一个方便的解决方案。应用程序和脚本依赖于未哈希版本的模块名称（地址），而不是依赖于特定的哈希文件名。如下所示的导入映射提供了到实际脚本文件的映射。
+导入映射提供了一个方便的解决方案。应用程序和脚本依赖于未散列版本的模块名称（地址），而不是依赖于特定的散列文件名。如下所示的导入映射提供了到实际脚本文件的映射。
 
 ```json
 {
@@ -318,7 +318,7 @@ import fp from "lodash/fp.js";
 }
 ```
 
-如果 `dependency_script` 发生变化，那么其文件名中的哈希也会发生变化。在这种情况下，我们只需要更新导入映射以反映模块名称的变化。我们不需要更新任何依赖它的 JavaScript 代码的源代码，因为导入语句中的标识符不会改变。
+如果 `dependency_script` 发生变化，那么其文件名中的散列也会发生变化。在这种情况下，我们只需要更新导入映射以反映模块名称的变化。我们不需要更新任何依赖它的 JavaScript 代码的源代码，因为导入语句中的标识符不会改变。
 
 ## 加载非 JavaScript 资源
 
@@ -342,7 +342,7 @@ document.adoptedStyleSheets = [styles];
 
 现在我们只需要将 `main.js` 模块应用到我们的 HTML 页面。这与将常规脚本应用到页面非常相似，但有一些显著的区别。
 
-首先，你需要在 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素中包含 `type="module"`，以声明此脚本为模块。要导入 `main.js` 脚本，我们使用以下代码：
+首先，你需要在 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素中包含 `type="module"`，以声明此脚本为模块。要导入 `main.js` 脚本，我们使用以下代码：
 
 ```html
 <script type="module" src="main.js"></script>
@@ -370,13 +370,13 @@ document.adoptedStyleSheets = [styles];
 通常，你应该在单独的文件中定义所有模块。内联声明在 HTML 中的模块只能导入其他模块，但它们导出的任何内容将无法被其他模块访问（因为它们没有 URL）。
 
 > [!NOTE]
-> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 来预加载模块及其依赖项。这可以显著减少使用模块时的加载时间。
+> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload) 来预加载模块及其依赖项。这可以显著减少使用模块时的加载时间。
 
 ## 模块与经典脚本的其他不同
 
 - 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
 - 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用{{jsxref("Strict_mode", "严格模式", "", 1)}}。
-- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Element/script#属性)）模块会自动延迟加载。
+- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/script#属性)）模块会自动延迟加载。
 - 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在开发者工具中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
 模块定义的变量是模块范围内的，除非明确附加到全局对象。另一方面，全局定义的变量在模块内是可用的。例如，给定以下代码：
@@ -918,13 +918,13 @@ export const b = 1;
 
 ## 编写“同构”模块
 
-模块的引入鼓励 JavaScript 生态系统以模块化的方式分发和重用代码。然而，这并不一定意味着一段 JavaScript 代码可以在每个环境中运行。假设你发现了一个生成用户密码 SHA 哈希的模块。你可以在浏览器前端使用它吗？你可以在你的 Node.js 服务器上使用它吗？答案是：视情况而定。
+模块的引入鼓励 JavaScript 生态系统以模块化的方式分发和重用代码。然而，这并不一定意味着一段 JavaScript 代码可以在每个环境中运行。假设你发现了一个生成用户密码 SHA 散列的模块。你可以在浏览器前端使用它吗？你可以在你的 Node.js 服务器上使用它吗？答案是：视情况而定。
 
 模块仍然可以访问全局变量，如前所示。如果模块引用了 `window` 等全局变量，它可以在浏览器中运行，但在你的 Node.js 服务器中会抛出错误，因为那里没有 `window`。同样，如果代码需要访问 `process` 才能正常运行，它只能在 Node.js 中使用。
 
 为了最大限度地提高模块的可重用性，通常建议使代码“同构”——即在每个运行时中表现相同。这通常通过三种方式实现：
 
-- 将你的模块分为“核心”和“绑定”。对于“核心”，专注于纯 JavaScript 逻辑，如计算哈希，不涉及任何 DOM、网络、文件系统访问，并暴露实用函数。对于“绑定”部分，你可以从全局上下文中读取和写入。例如，“浏览器绑定”可以选择从输入框中读取值，而“Node 绑定”可以从 `process.env` 中读取，但从任一位置读取的值将传递到相同的核心函数并以相同的方式处理。核心可以在每个环境中导入并以相同的方式使用，而只有绑定，通常是轻量级的，需要特定于平台。
+- 将你的模块分为“核心”和“绑定”。对于“核心”，专注于纯 JavaScript 逻辑，如计算散列，不涉及任何 DOM、网络、文件系统访问，并暴露实用函数。对于“绑定”部分，你可以从全局上下文中读取和写入。例如，“浏览器绑定”可以选择从输入框中读取值，而“Node 绑定”可以从 `process.env` 中读取，但从任一位置读取的值将传递到相同的核心函数并以相同的方式处理。核心可以在每个环境中导入并以相同的方式使用，而只有绑定，通常是轻量级的，需要特定于平台。
 - 在使用之前检测特定的全局变量是否存在。例如，如果你测试 `typeof window === "undefined"`，你知道你可能在 Node.js 环境中，不应该读取 DOM。
 
   ```js

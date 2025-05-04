@@ -3,7 +3,7 @@ title: 溢出的内容
 slug: Learn_web_development/Core/Styling_basics/Overflow
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
 本节课，我们来了解一下 CSS 中另外一个重要的概念——**溢出**。溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。
 
@@ -42,11 +42,41 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 第一个例子是，一个盒子，在块方向上已经受到 `height` 的限制。然后我们已经加了过多的内容，以至于盒子里面没有空间容纳。内容正在从盒子里面溢出，并让自己把盒子下面的段落弄得一团糟。
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/block-overflow.html", '100%', 600)}}
+```html live-sample___block-overflow
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___block-overflow
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("block-overflow", "", "200px")}}
 
 第二个例子是一个单词，位于在内联方向上受到限制的盒子里面。盒子已经被做得小到无法放置那个单词的地步，于是那个单词就突破了盒子的限制。
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/inline-overflow.html", '100%', 500)}}
+```html live-sample___inline-overflow
+<div class="word">Overflow</div>
+```
+
+```css live-sample___inline-overflow
+.word {
+  border: 1px solid #333333;
+  width: 100px;
+  font-size: 250%;
+}
+```
+
+{{EmbedLiveSample("inline-overflow")}}
 
 你也许会好奇，为什么 CSS 默认会采取如此不整洁的方式，让内容这么凌乱地溢出出来呢？为何不把多余的内容隐藏起来，或者让盒子变大呢？
 
@@ -62,21 +92,91 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 如果你想在内容溢出的时候把它裁剪掉，你可以在你的盒子上设置 `overflow: hidden`。这就会像它表面上所显示的那样作用——隐藏掉溢出。这可能会很自然地让东西消失掉，所以你只应该在判断隐藏内容不会引起问题的时候这样做。
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/hidden.html", '100%', 600)}}
+```html live-sample___hidden
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___hidden
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: hidden;
+}
+```
+
+{{EmbedLiveSample("hidden", "", "200px")}}
 
 也许你还会想在有内容溢出的时候加个滚动条？如果你用了 `overflow: scroll`，那么你的浏览器总会显示滚动条，即使没有足够多引起溢出的内容。你可能会需要这样的样式，它避免了滚动条在内容变化的时候出现和消失。
 
 **如果你移除了下面的盒子里的一些内容，你可以看一下，滚动条是否还会在没有能滚动的东西的时候保留。**
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll.html", '100%', 600)}}
+```html live-sample___scroll
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___scroll
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll", "", "200px")}}
 
 在以上的例子里面，我们仅仅需要在 `y` 轴方向上滚动，但是我们在两个方向上都有了滚动条。你可以使用 {{cssxref("overflow-y")}} 属性，设置 `overflow-y: scroll` 来仅在 `y` 轴方向滚动。
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
+```html live-sample___scroll-y
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___scroll-y
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow-y: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll-y", "", "200px")}}
 
 你也可以用 {{cssxref("overflow-x")}}，以在 x 轴方向上滚动，尽管这不是处理长英文词的好办法！如果你真的需要在小盒子里面和长英文词打交道，那么你可能要了解一下 {{cssxref("word-break")}} 或者 {{cssxref("overflow-wrap")}} 属性。除此以外，一些[在 CSS 里面调整大小](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing)这节课里面讨论过的方式可能会帮助你创建可以和有变化容量的内容相协调的盒子。
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
+```html live-sample___scroll-x
+<div class="word">Overflow</div>
+```
+
+```css live-sample___scroll-x
+.word {
+  border: 5px solid #333333;
+  width: 100px;
+  font-size: 250%;
+  overflow-x: scroll;
+}
+```
+
+{{EmbedLiveSample("scroll-x")}}
 
 和 `scroll` 一样，在无论是否有多到需要 用滚动条的内容的时候，页面上都会显示一个滚动条。
 
@@ -87,7 +187,26 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 **在下面的例子里面，移除一些内容，直到能够装在盒子里面，你还会看到滚动条消失了。**
 
-{{EmbedGHLiveSample("css-examples/learn/overflow/auto.html", '100%', 700)}}
+```html live-sample___auto
+<div class="box">
+  This box has a height and a width. This means that if there is too much
+  content to be displayed within the assigned height, there will be an overflow
+  situation. If overflow is set to hidden then any overflow will not be visible.
+</div>
+
+<p>This content is outside of the box.</p>
+```
+
+```css live-sample___auto
+.box {
+  border: 1px solid #333333;
+  width: 250px;
+  height: 100px;
+  overflow: auto;
+}
+```
+
+{{EmbedLiveSample("auto", "", "200px")}}
 
 ## 溢出建立了区块格式化上下文
 
@@ -101,7 +220,7 @@ CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC�
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow)。
 
 ## 小结
 

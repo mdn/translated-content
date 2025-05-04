@@ -380,7 +380,7 @@ btn.addEventListener("click", testPromise);
 
 これをより良く理解するために、領域がどのように問題になるかを詳しく見てみましょう。領域 (**realm**) とは、大まかに言うとグローバルオブジェクトのことです。領域の特徴は、JavaScript のコードを実行するために必要な情報をすべて保持していることです。これには [`Array`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) や [`Error`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error) などのオブジェクトが含まれます。それぞれの設定オブジェクトはこれらの「コピー」を持っており、共有されていません。そのため、プロミスとの関係で予期しない動作をすることがあります。これを回避するために、**現行の設定オブジェクト** (incumbent settings object) と呼ばれるものを追跡します。これは、ある関数呼び出しを担当するユーザーコードのコンテキストに固有の情報を表します。
 
-これをもう少し詳しく説明するために、文書に埋め込まれた [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) がホストとどのように通信するかを見てみましょう。すべての Web API は現行の設定オブジェクトを認識しているため、以下のようにすればすべてのブラウザーで動作します。
+これをもう少し詳しく説明するために、文書に埋め込まれた [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) がホストとどのように通信するかを見てみましょう。すべての Web API は現行の設定オブジェクトを認識しているため、以下のようにすればすべてのブラウザーで動作します。
 
 ```html
 <!doctype html> <iframe></iframe>

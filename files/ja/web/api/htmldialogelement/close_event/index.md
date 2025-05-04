@@ -89,5 +89,5 @@ closeButton.addEventListener("click", () => {
 
 ## 関連情報
 
-- HTML の [`<dialog>`](/ja/docs/Web/HTML/Element/dialog) 要素
+- HTML の [`<dialog>`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
 - [`Event`](/ja/docs/Web/API/Event) インターフェイス

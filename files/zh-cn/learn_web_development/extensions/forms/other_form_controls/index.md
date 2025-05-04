@@ -3,7 +3,7 @@ title: 其他表单控件
 slug: Learn_web_development/Extensions/Forms/Other_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/HTML5_input_types","Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms")}}
 
 现在我们来具体看看非 `<input>` 表单控件的功能，从下拉列表菜单（drop-down list）、多行文本域（multi-line text field）到其他有用的表单功能，如我们在前一篇文章看到的 {{htmlelement('output')}} 元素和进度条（progress bar）元素。
 
@@ -41,9 +41,9 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 `<textarea>` 元素和普通的单行文本域的主要区别是，用户可以在要提交的数据中包含硬换行（如按下回车键产生）。
 
-`<textarea>` 也需要关闭标签，其中要包含的默认文字需要放在开闭标签之间。作为对比，{{HTMLElement("input")}} 是不包含关闭标签的空元素，它的默认值应该在 [`value`](/zh-CN/docs/Web/HTML/Element/input#value) 属性中指定。
+`<textarea>` 也需要关闭标签，其中要包含的默认文字需要放在开闭标签之间。作为对比，{{HTMLElement("input")}} 是不包含关闭标签的空元素，它的默认值应该在 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value) 属性中指定。
 
-注意，即使可以将任何东西放入到 `<textarea>` 元素中，甚至可以包含其他 HTML 元素、CSS 和 JavaScript，由于该元素的特性，这些内容都将以纯文本的形式渲染。在非表单组件上使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 可以为捕捉 HTML 或富文本内容提供 API。
+注意，即使可以将任何东西放入到 `<textarea>` 元素中，甚至可以包含其他 HTML 元素、CSS 和 JavaScript，由于该元素的特性，这些内容都将以纯文本的形式渲染。在非表单组件上使用 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 可以为捕捉 HTML 或富文本内容提供 API。
 
 在视觉上，输入的文字会换行，并且表单空间的大小是可调的。现代浏览器会提供拖动手柄，你可以通过拖拽来放大或缩小文本区的大小。
 
@@ -58,11 +58,11 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 {{htmlelement("textarea")}} 接受三种属性来控制其多行渲染行为：
 
-- [`cols`](/zh-CN/docs/Web/HTML/Element/textarea#cols)
+- [`cols`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#cols)
   - : 指定文本控件的可见宽度（列），单位为字符的宽度。这实际上是起始宽度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用 CSS 重写。如果没有指定，默认值是 20。
-- [`rows`](/zh-CN/docs/Web/HTML/Element/textarea#rows)
+- [`rows`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#rows)
   - : 指定文本控件的可见行数。这实际上是起始高度，因为它可以通过调整 `<textarea>` 的大小来改变，也可以用 CSS 重写。如果没有指定，默认值是 2。
-- [`wrap`](/zh-CN/docs/Web/HTML/Element/textarea#wrap)
+- [`wrap`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#wrap)
   - : 指定如何控制文本换行。取值可能为 `soft`（默认值），意味着提交的文字没有换行，而浏览器中渲染的文字有换行；`hard`（使用此属性必须指定 `cols` 的值），意味着提交的文字和浏览器中渲染的文字都有换行；和 `off`，停止任何换行行为。
 
 ### 控制文本域可缩放性
@@ -100,7 +100,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 {{EmbedLiveSample("基础示例", 120, 120)}}
 
-如果需要的话，选择框的默认值可以由要指定默认值的 {{HTMLElement("option")}} 元素中的 [`selected`](/zh-CN/docs/Web/HTML/Element/option#selected) 属性设置，这样在页面加载后，该选项可以预先选中。
+如果需要的话，选择框的默认值可以由要指定默认值的 {{HTMLElement("option")}} 元素中的 [`selected`](/zh-CN/docs/Web/HTML/Reference/Elements/option#selected) 属性设置，这样在页面加载后，该选项可以预先选中。
 
 #### 使用 optgroup
 
@@ -123,7 +123,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 {{EmbedLiveSample("使用 optgroup", 120, 120)}}
 
-在 {{HTMLElement("optgroup")}} 元素中，[`label`](/zh-CN/docs/Web/HTML/Element/optgroup#attr-label) 属性的值在嵌套选项之前显示。浏览器往往在视觉上将它们与选项分开（如，将其粗体并显示于不同的嵌套级别），以避免它们与实际选项混淆。
+在 {{HTMLElement("optgroup")}} 元素中，[`label`](/zh-CN/docs/Web/HTML/Reference/Elements/optgroup#attr-label) 属性的值在嵌套选项之前显示。浏览器往往在视觉上将它们与选项分开（如，将其粗体并显示于不同的嵌套级别），以避免它们与实际选项混淆。
 
 #### 使用 value 属性
 
@@ -139,11 +139,11 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 </select>
 ```
 
-默认情况下，选择框的高度足以显示单个值。可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性控制在选择框不处于聚焦状态时，可见选项的数量。
+默认情况下，选择框的高度足以显示单个值。可选的 [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size) 属性控制在选择框不处于聚焦状态时，可见选项的数量。
 
 ### 多选选择框
 
-默认情况下，选择框只允许用户选择单个值。通过向 {{HTMLElement("select")}} 元素添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性，你可以允许用户使用操作系统提供的机制选择多个值（如按下 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> 并先后单击多个值）。
+默认情况下，选择框只允许用户选择单个值。通过向 {{HTMLElement("select")}} 元素添加 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/select#multiple) 属性，你可以允许用户使用操作系统提供的机制选择多个值（如按下 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> 并先后单击多个值）。
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -163,16 +163,16 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 {{EmbedLiveSample("多选选择框", 120, 120)}}
 
 > [!NOTE]
-> 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Attributes/size) 属性决定了控件的高度。
+> 在多选选择框的情况下，你会注意到选择框不再以下拉内容的形式显示数值——相反，所有的值都会一次性显示在一个列表中，可选的 [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size) 属性决定了控件的高度。
 
 > [!NOTE]
-> 任何支持 {{HTMLElement("select")}} 元素的浏览器也支持 [`multiple`](/zh-CN/docs/Web/HTML/Element/select#multiple) 属性。
+> 任何支持 {{HTMLElement("select")}} 元素的浏览器也支持 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/select#multiple) 属性。
 
 ### 自动补全框
 
 你可以通过 {{HTMLElement("datalist")}} 元素中的一些显示的 {{HTMLElement("option")}} 子元素为表单项提供推荐的自动补全值。`<datalist>` 元素需要指定一个 `id`。
 
-数据列表会使用 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性绑定至一个 {{htmlelement("input")}} 元素（如 `text` 或 `email` 输入类型），该属性的取值就是要绑定的数据列表的 `id` 值。
+数据列表会使用 [`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list) 属性绑定至一个 {{htmlelement("input")}} 元素（如 `text` 或 `email` 输入类型），该属性的取值就是要绑定的数据列表的 `id` 值。
 
 一旦数据列表与表单控件相关联，它的选项就会被用来自动补全用户输入的文本；通常，它以下拉框的形式呈现给用户，列出他们输入内容的可能匹配。
 
@@ -232,11 +232,11 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 #### 不太明显的 datalist 用法
 
-根据 [HTML 规范](https://html.spec.whatwg.org/multipage/input.html#attr-input-list)，[`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性和 {{HTMLElement("datalist")}} 元素可以与任何需要用户输入的组件配合使用。这可能会导致一些不太显然的用法。
+根据 [HTML 规范](https://html.spec.whatwg.org/multipage/input.html#attr-input-list)，[`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list) 属性和 {{HTMLElement("datalist")}} 元素可以与任何需要用户输入的组件配合使用。这可能会导致一些不太显然的用法。
 
-例如，在支持在 `{{htmlelement("datalist")}}` 上使用 `range` 输入类型的浏览器中，在每个 datalist 的 `{{htmlelement("option")}}` 值上会显示一个小勾。你可以在 [`<input type="range">` 参考页面上看到一种实现](/zh-CN/docs/Web/HTML/Element/input/range#添加井号和标签)。
+例如，在支持在 `{{htmlelement("datalist")}}` 上使用 `range` 输入类型的浏览器中，在每个 datalist 的 `{{htmlelement("option")}}` 值上会显示一个小勾。你可以在 [`<input type="range">` 参考页面上看到一种实现](/zh-CN/docs/Web/HTML/Reference/Elements/input/range#添加井号和标签)。
 
-支持 {{htmlelement('datalist')}} 和 [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color) 的浏览器上应该显示一个自定义颜色调色板作为默认值，同时仍然提供完整的颜色调色板。
+支持 {{htmlelement('datalist')}} 和 [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color) 的浏览器上应该显示一个自定义颜色调色板作为默认值，同时仍然提供完整的颜色调色板。
 
 在这种情况下，不同的浏览器在不同的情况下表现不同，所以要把这种使用视为渐进式增强，并确保它们优雅地降级。
 
@@ -253,7 +253,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 #### 进度条
 
-进度条表示一个随时间变化的数值，最高可以达到 [`max`](/zh-CN/docs/Web/HTML/Element/progress#max) 属性所指定的最大值。这样的条是使用 {{ HTMLElement("progress")}} 元素创建出来的。
+进度条表示一个随时间变化的数值，最高可以达到 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/progress#max) 属性所指定的最大值。这样的条是使用 {{ HTMLElement("progress")}} 元素创建出来的。
 
 ```html
 <progress max="100" value="75">75/100</progress>
@@ -267,19 +267,19 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 #### 计量器
 
-计量器代表了一个由 [`max`](/zh-CN/docs/Web/HTML/Element/meter#max) 和 [`min`](/zh-CN/docs/Web/HTML/Element/meter#min) 限定范围内的固定值。这个值在视觉上呈现为一个条形，为了了解这个条形的样子，我们将这个值与其他一些设定的值进行比较：
+计量器代表了一个由 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#max) 和 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#min) 限定范围内的固定值。这个值在视觉上呈现为一个条形，为了了解这个条形的样子，我们将这个值与其他一些设定的值进行比较：
 
-- [`low`](/zh-CN/docs/Web/HTML/Element/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 将范围分为了三个部分：
+- [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 将范围分为了三个部分：
 
-  - 下半部分范围在 [`min`](/zh-CN/docs/Web/HTML/Element/meter#min) 和 [`low`](/zh-CN/docs/Web/HTML/Element/meter#low) 值之间，包含端点值。
-  - 中间部分范围在 [`low`](/zh-CN/docs/Web/HTML/Element/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 值之间，不包含端点值。
-  - 上半部分范围在 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 和 [`max`](/zh-CN/docs/Web/HTML/Element/meter#max) 值之间，包含端点值。
+  - 下半部分范围在 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#min) 和 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 值之间，包含端点值。
+  - 中间部分范围在 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 值之间，不包含端点值。
+  - 上半部分范围在 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#max) 值之间，包含端点值。
 
-- [`optimum`](/zh-CN/docs/Web/HTML/Element/meter#optimum) 值定义了 {{HTMLElement("meter")}} 元素的最佳值，它与 [`low`](/zh-CN/docs/Web/HTML/Element/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Element/meter#high) 值一同定义了首选的范围部分：
+- [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 值定义了 {{HTMLElement("meter")}} 元素的最佳值，它与 [`low`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#low) 和 [`high`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#high) 值一同定义了首选的范围部分：
 
-  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Element/meter#optimum) 在下半部分范围内，下半部分范围被认为是首选部分，中间部分范围被认为是平均部分，而上半部分范围被认为是最差的部分。
-  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Element/meter#optimum) 在中间部分范围内，下半部分范围被认为是平均部分，中间部分范围被认为是首选部分，而上半部分范围也被认为是平均部分。
-  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Element/meter#optimum) 在上半部分范围内，下半部分范围被认为是最差的部分，中间部分范围被认为是平均部分，而上半部分范围被认为是首选部分。
+  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在下半部分范围内，下半部分范围被认为是首选部分，中间部分范围被认为是平均部分，而上半部分范围被认为是最差的部分。
+  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在中间部分范围内，下半部分范围被认为是平均部分，中间部分范围被认为是首选部分，而上半部分范围也被认为是平均部分。
+  - 如果 [`optimum`](/zh-CN/docs/Web/HTML/Reference/Elements/meter#optimum) 在上半部分范围内，下半部分范围被认为是最差的部分，中间部分范围被认为是平均部分，而上半部分范围被认为是首选部分。
 
 所有实现了 {{HTMLElement("meter")}} 元素的浏览器使用这些值来改变计量器的颜色：
 
@@ -301,7 +301,7 @@ slug: Learn_web_development/Extensions/Forms/Other_form_controls
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：其他控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls)。
 
 ## 总结
 

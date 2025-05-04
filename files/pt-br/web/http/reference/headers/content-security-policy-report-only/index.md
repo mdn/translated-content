@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy-Report-Only
 
 O cabeçalho de resposta HTTP **`Content-Security-Policy-Report-Only`** permite aos desenvolvedores _web_ experimentar políticas monitorando (mas não forçando) seus efeitos. Esses relatórios de violação consistem de documentos {{Glossary("JSON")}} enviados por uma requisição HTTP `POST` para a URI especificada.
 
-Para mais informações, veja também este artigo em [Content Security Policy (CSP)](/pt-BR/docs/Web/HTTP/CSP).
+Para mais informações, veja também este artigo em [Content Security Policy (CSP)](/pt-BR/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>

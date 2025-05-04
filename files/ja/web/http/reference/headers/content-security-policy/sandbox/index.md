@@ -1,14 +1,13 @@
 ---
 title: "CSP: sandbox"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
-original_slug: Web/HTTP/Headers/Content-Security-Policy/sandbox
 l10n:
-  sourceCommit: c49f6dcd20b14f28218aa26030ebbb2f54143521
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`sandbox`** ディレクティブは、 {{HTMLElement("iframe")}} の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性と同様に、要求されたリソースに対してサンドボックスを有効にします。これは、ポップアップの防止、プラグインやスクリプトの実行の防止、同一オリジンポリシーの強制などを含むページ操作の制限を適用します。
 
 <table class="properties">
   <tbody>
@@ -38,9 +37,7 @@ Content-Security-Policy: sandbox <value>;
 `<value>` は省略可能で、以下の値の内の一つです。
 
 - `allow-downloads`
-  - : [download](/ja/docs/Web/HTML/Element/a#attr-download) 属性がついた {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素における、ファイルのダウンロードのための操作を通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
-- `allow-downloads-without-user-activation` {{experimental_inline}}
-  - : ユーザーによる指示のないダウンロードを許可します。
+  - : {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素に [download](/ja/docs/Web/HTML/Reference/Elements/a#attr-download) 属性が付いていた場合に、ファイルのダウンロードのための操作を通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
 - `allow-forms`
   - : ページがフォームを送信することを許可します。このキーワードを使用しない場合、フォームは通常通り表示されますが、フォームを送信しても入力の検証、ウェブサーバーへのデータ送信、ダイアログの終了は行われません。
 - `allow-modals`
@@ -68,6 +65,8 @@ Content-Security-Policy: sandbox <value>;
 - `allow-top-navigation-to-custom-protocols`
   - : ブラウザーに組み込まれている、または[ウェブサイトによって登録された](/ja/docs/Web/API/Navigator/registerProtocolHandler) `http` 以外のプロトコルへのナビゲーションを可能にします。この機能は `allow-popups` または `allow-top-navigation` キーワードでも有効になる。
 
+> **メモ:** `allow-top-navigation` および関連する値は、埋め込み文書（子 iframe など）に対してのみ意味を持ちます。 独立した文書の場合、最上位の閲覧コンテキストは文書自体であるため、これらの値が示す効果はありません。
+
 ## 例
 
 ```http
@@ -85,4 +84,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) 属性
+- {{HTMLElement("iframe")}} 要素の [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性
