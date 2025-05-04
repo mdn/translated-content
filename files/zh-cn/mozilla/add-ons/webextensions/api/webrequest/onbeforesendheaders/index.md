@@ -2,7 +2,7 @@
 title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
@@ -11,9 +11,9 @@ l10n:
 
 要将请求标头与请求数据的其余部分一起传递到监听器中，请在 `extraInfoSpec` 数组中传递 `"requestHeaders"`。
 
-要同步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个包含名为 `requestHeaders` 的属性的值是要发送的请求标头集合的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)。
+要同步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个包含名为 `requestHeaders` 的属性的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)，且该属性的值是要发送的请求标头集合的。
 
-要异步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+要异步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在你的事件监听器中返回一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 若要使用 `"blocking"`，则必须在 manifest.json 中取得[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
