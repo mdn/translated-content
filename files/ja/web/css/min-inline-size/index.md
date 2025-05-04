@@ -31,7 +31,7 @@ min-inline-size: 75%;
 writing-mode: vertical-lr;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">min-inline-size を変更してください</div>
 </section>
