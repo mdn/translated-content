@@ -30,19 +30,16 @@ Firefox 138 は、米国時間 [2025 年 4 月 29 日](https://whattrainisitnow.
 - サイトが HTTP の {{httpheader("Origin-Agent-Cluster")}} レスポンスヘッダーを使用して、関連づけられた文書をオリジンキーつき [エージェントクラスター](/ja/docs/Web/JavaScript/Reference/Execution_model#agent_clusters_and_memory_sharing) に配置するべきであることを助言できるようになりました。
   そのようなクラスターではオペレーティングシステムのプロセスまたは文書が使用するほかの OS リソース、あるいはその両方が、同じ [オリジン](/ja/docs/Glossary/Origin) の文書に限って共有されます。
   これにより、多くのリソースを必要とする文書がほかのオリジンの文書のパフォーマンスを低下させる可能性が低くなります。
-  開発者は {{domxref("window.originAgentCluster")}} プロパティを使用して、ブラウザーが文書をオリジンキーつきエージェントクラスターに配置したかを確認できます 
-  ([Firefox bug 1665474](https://bugzil.la/1665474))。
+  開発者は {{domxref("window.originAgentCluster")}} プロパティを使用して、ブラウザーが文書をオリジンキーつきエージェントクラスターに配置したかを確認できます ([Firefox bug 1665474](https://bugzil.la/1665474))。
 
 ### API
 
 - [Federated Credential Management (FedCM) API](/ja/docs/Web/API/FedCM_API) を使用している状況で [Login Status API](/ja/docs/Web/API/FedCM_API/IDP_integration#update_login_status_using_the_login_status_api) をサポートしました。この API は、ブラウザーのユーザーがアイデンティティプロバイダーにログインしているかを設定および確認するために使用できます。
-  これには {{domxref("NavigatorLogin")}} インターフェイス、{{domxref("navigator.login")}} プロパティ、{{httpheader("Set-Login")}} HTTP レスポンスヘッダーのサポートも含みます 
-  ([Firefox bug 1945576](https://bugzil.la/1945576)、[Firefox bug 1945573](https://bugzil.la/1945573))。
+  これには {{domxref("NavigatorLogin")}} インターフェイス、{{domxref("navigator.login")}} プロパティ、{{httpheader("Set-Login")}} HTTP レスポンスヘッダーのサポートも含みます ([Firefox bug 1945576](https://bugzil.la/1945576)、[Firefox bug 1945573](https://bugzil.la/1945573))。
 - [Web Audio API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioWorklet.port")}} および {{domxref("AudioWorkletGlobalScope.port")}} で双方向メッセージングをサポートしました。
   これにより制御データやグローバル設定の受信のような、メインスレッドのコードとオーディオワークレットのグローバルスコープの間で独自の非同期通信が可能になります ([Firefox bug 1951240](https://bugzil.la/1951240))。
 - {{domxref("RTCCertificate")}} インターフェイスの {{domxref("RTCCertificate.getFingerprints()","getFingerprints()")}} メソッドをサポートしました。
-  アプリケーションはこのメソッドを使用して証明書のフィンガープリントを取得でき、WebRTC セッションをまたがって特定のユーザーやブラウザーを識別するためにアウトオブバンドで共有されることがあります 
-  ([Firefox bug 1525241](https://bugzil.la/1525241))。
+  アプリケーションはこのメソッドを使用して証明書のフィンガープリントを取得でき、WebRTC セッションをまたがって特定のユーザーやブラウザーを識別するためにアウトオブバンドで共有されることがあります ([Firefox bug 1525241](https://bugzil.la/1525241))。
 
 #### DOM
 
@@ -50,8 +47,7 @@ Firefox 138 は、米国時間 [2025 年 4 月 29 日](https://whattrainisitnow.
 
 - ネットワークの品質低下によりフレームレートや解像度のどちらも設定されたレベルを維持できないときに、どちらを優先するかを WebRTC アプリケーションが設定できるようになりました。
   この値は `RTCRtpSender` インターフェイスの [`setParameters()`](/ja/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) メソッドに渡す引数オブジェクトの [`degradationPreference`](/ja/docs/Web/API/RTCRtpSender/setParameters#degradationpreference) プロパティで設定します。
-  また、[`getParameters()`](/ja/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) メソッドが返すオブジェクトでこの値を読み取ることもできます 
-  ([Firefox bug 1329847](https://bugzil.la/1329847))。
+  また、[`getParameters()`](/ja/docs/Web/API/RTCRtpSender/getParameters#degradationpreference) メソッドが返すオブジェクトでこの値を読み取ることもできます ([Firefox bug 1329847](https://bugzil.la/1329847))。
 
 ### WebDriver への適合 (WebDriver BiDi, Marionette)
 
@@ -109,7 +105,7 @@ Firefox 138 は、米国時間 [2025 年 4 月 29 日](https://whattrainisitnow.
   {{cssxref("::details-content")}} や {{cssxref("::file-selector-button")}} などの [要素に裏づけられた擬似要素](/ja/docs/Web/CSS/Pseudo-elements#element-backed_pseudo-elements) に、{{cssxref("::first-letter")}} や {{cssxref("::before")}} などの [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) を追加可能にする作業を始めました ([Firefox bug 1953557](https://bugzil.la/1953557))。
 
   > [!NOTE]
-  > この機能の設定項目は、対象の要素に裏づけられた擬似要素に依存します。例:  [`::details-content`](/ja/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element)。
+  > この機能の設定項目は、対象の要素に裏づけられた擬似要素に依存します。例: [`::details-content`](/ja/docs/Mozilla/Firefox/Experimental_features#details-content_pseudo-element)。
 
 - **削除予定の `MutationEvent`**: `dom.mutation_events.enabled`
 
