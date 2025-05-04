@@ -2,7 +2,7 @@
 title: padding-block-start
 slug: Web/CSS/padding-block-start
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -82,9 +82,9 @@ padding-block-start: unset;
 
 ## 解説
 
-`padding-block-start` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に依存します。したがって、{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} の何れかに対応づけられる可能性があります。
+`padding-block-start` プロパティは、 {{cssxref("padding-top")}} などの物理的なパディングプロパティと同じ値を取ります。ただし、 {{cssxref("padding-right")}}, {{cssxref("padding-left")}}, `padding-top`, {{cssxref("padding-bottom")}} のいずれかと同等になります。これは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値によって決まります。
 
-関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} があります。
+関連プロパティとして、要素の他のパディング値を定義する {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-start")}}, {{cssxref("padding-inline-end")}} があります。
 
 ## 公式定義
 
@@ -100,7 +100,7 @@ padding-block-start: unset;
 
 #### HTML
 
-```html live-sample___setting_block_start_padding_for_vertical_text
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -108,7 +108,7 @@ padding-block-start: unset;
 
 #### CSS
 
-```css live-sample___setting_block_start_padding_for_vertical_text
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -124,7 +124,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_start_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるブロック方向の先頭のパディングの設定", 140, 140)}}
 
 ## 仕様書
 
