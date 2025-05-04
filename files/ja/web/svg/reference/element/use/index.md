@@ -1,12 +1,17 @@
 ---
 title: <use>
 slug: Web/SVG/Reference/Element/use
-original_slug: Web/SVG/Element/use
+l10n:
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
 **`<use>`** 要素は SVG 文書の中からノード取り出して、別の場所に複製します。
+効果は、あたかもそのノードが非公開の DOM に配下を含めて複製され、 `use` 要素がある場所に貼り付けられたかのようになり、 [template 要素](/ja/docs/Web/HTML/Reference/Elements/template)ととても似ています。
+
+## 例
+
+次の例は、`use` 要素を使用して、塗りつぶし色と線の色が異なる円を描画する方法を示しています。
+最後の円では、線は `myCircle` で既に設定されているため、`stroke="red"` は無視されます。
 
 ```css hidden
 html,
@@ -21,74 +26,52 @@ svg {
   <circle id="myCircle" cx="5" cy="5" r="4" stroke="blue" />
   <use href="#myCircle" x="10" fill="blue" />
   <use href="#myCircle" x="20" fill="white" stroke="red" />
-  <!--
-stroke="red" will be ignored here, as stroke was already set on myCircle.
-Most attributes (except for x, y, width, height and (xlink:)href)
-do not override those set in the ancestor.
-That's why the circles have different x positions, but the same stroke value.
-  -->
 </svg>
 ```
 
-{{EmbedLiveSample('Example', 100, 100)}}
+{{EmbedLiveSample('Example', 200, 200)}}
 
-効果は、あたかもそのノードが非公開の DOM に配下を含めて複製され、 HTML5 の [template 要素](/ja/docs/Web/HTML/Reference/Elements/template)のように、 `use` 要素がある場所に貼り付けられたかのように同じになります。
+## 属性
 
-`use` のほとんどの属性は、 `use` から*参照*される要素に既にある属性を上書き**しません**。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。 `use` 要素にある{{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性**のみ**が参照される要素に設定されているものを上書きします。ただし、参照される要素に設定されていない*他のすべての属性*は、 `use` 要素に適用**され得ます**。
+- {{SVGAttr("href")}}
+  - : 複製する必要がある要素やフラグメントへの URL です。
+    _値の型_: [**`<URL>`**](/ja/docs/Web/SVG/Guides/Content_type#url); _既定値_: none; _アニメーション_: **可**
+- {{SVGAttr("xlink:href")}} {{Deprecated_Inline}}
+  - : 複製する必要がある要素やフラグメントの [`<IRI>`](/ja/docs/Web/SVG/Guides/Content_type#iri) 参照です。 {{SVGAttr("href")}} と {{SVGAttr("xlink:href")}} の両方が存在する場合、 {{SVGAttr("href")}} で指定された値が使用されます。<br/>_値の型_: [**`<IRI>`**](/ja/docs/Web/SVG/Guides/Content_type#iri); _既定値_: none; _アニメーション_: **可**
+- {{SVGAttr("x")}}
+  - : この use 要素の X 座標です。<br/>_値の型_: [**`<coordinate>`**](/ja/docs/Web/SVG/Guides/Content_type#coordinate); _既定値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("y")}}
+  - : この use 要素の Y 座標です。<br/>_値の型_: [**`<coordinate>`**](/ja/docs/Web/SVG/Guides/Content_type#coordinate); _既定値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("width")}}
+  - : この use 要素の幅です。<br/>_値の型_: [**`<length>`**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `0`; _アニメーション_: **可**
+- {{SVGAttr("height")}}
+  - : この use 要素の高さです。<br/>_値の型_: [**`<length>`**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `0`; _アニメーション_: **可**
+
+> **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewBox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
+
+> [!NOTE]
+> SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
+
+## 使用上のメモ
+
+`use` のほとんどの属性は、 `use` から*参照*される要素に既にある属性を上書き**しません**。 (これは CSS のスタイル属性がカスケードで「以前」に設定されたものを上書きする方法とは異なります)。
+参照された要素が対応する属性をすでに定義している場合、 `use` 要素の {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}}, {{SVGAttr("href")}} の各属性**のみ**、後述するする効果を持つ、あるいは持つ可能性があります。ただし、参照された要素に設定されていないその他の属性は、 `use` 要素に適用される**可能性があります**。
 
 クローンされたノードは公開されないので、 [CSS](/ja/docs/Web/CSS) を使って `use` 要素とその隠れた子孫要素にスタイル付けをする場合は注意が必要です。[CSS の継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)を使用して明示的に要求しない限り、CSS 属性は隠された複製の DOM によって継承されることが保証されません。
 
 セキュリティ上の理由で、ブラウザーは[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を `use` 要素に適用して、 {{SVGAttr("href")}} 属性にあるオリジンをまたがる URL を読み込むことを拒否することがあります。現在のところ、 `use` 要素の同一オリジンポリシーを設定する方法は定義されていません。
 
 > [!WARNING]
-> SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。ただし、 {{SVGAttr("xlink:href")}} はブラウザー間の互換性のために今でも実装する必要があります (下記の[互換性一覧表](#browser_compatibility)を参照)。
+> セキュリティ上の理由から、 `href` 属性にデータ URI を使用してリソースを読み込むことは非推奨となっています。
+> これは、`<use href="data:...`、および [`set`](/ja/docs/Web/SVG/Reference/Element/set) または [`setAttribute`](/ja/docs/Web/API/Element/setAttribute) メソッドを使用して `href` を設定する場合にも適用されます。
+> さまざまなブラウザーのバージョンでの対応状況については、[ブラウザーの互換性](#ブラウザーの互換性)表の "Load from data: URI" を参照してください。
 
-## 属性
+> [!WARNING]
+> SVG 2 で {{SVGAttr("xlink:href")}} 属性が非推奨になり、 {{SVGAttr("href")}} に置き換えられました。詳しくは {{SVGAttr("xlink:href")}} のページを参照してください。
 
-- {{SVGAttr("href")}}
-  - : 複製する必要がある要素やフラグメントへの URL です。
-    _値の型_: [**\<URL>**](/ja/docs/Web/SVG/Guides/Content_type#url) ; _既定値_: none; _Animatable_: **yes**
-- {{SVGAttr("xlink:href")}}
-  - : {{Deprecated_Header("SVG2")}}複製する必要がある要素やフラグメントの [\<IRI>](/ja/docs/Web/SVG/Guides/Content_type#iri) 参照です。
-    _値の型_: [**\<IRI>**](/ja/docs/Web/SVG/Guides/Content_type#iri) ; _既定値_: none; _Animatable_: **yes**
-- {{SVGAttr("x")}}
-  - : この use 要素の X 座標です。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `0`; _Animatable_: **yes**
-- {{SVGAttr("y")}}
-  - : この use 要素の Y 座標です。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `0`; _Animatable_: **yes**
-- {{SVGAttr("width")}}
-  - : The width of the use element.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `0`; _Animatable_: **yes**
-- {{SVGAttr("height")}}
-  - : The height of the use element.
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `0`; _Animatable_: **yes**
+## 使用コンテキスト
 
-> **メモ:** `width` および `height` は `use` 要素では効果がありません。ただし、参照される要素に [viewbox](/ja/docs/Web/SVG/Reference/Attribute/viewBox) がある場合を除きます。 すなわち、 `use` が `svg` または `symbol` 要素を参照していた時だけ効果があります。
-
-> [!NOTE]
-> SVG2 から、 `x`, `y`, `width`, `height` は*位置プロパティ*となり、すなわちこれらの属性がその要素への CSS プロパティとしても使用することができるようになりました。
-
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-- XLink 属性
-  - : {{SVGAttr("xlink:href")}}, {{SVGAttr("xlink:title")}}
-
-## 使用上の注意
-
-{{svginfo}}
+{{SVGInfo}}
 
 ## 仕様書
 

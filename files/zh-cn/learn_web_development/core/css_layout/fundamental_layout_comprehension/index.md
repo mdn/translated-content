@@ -3,8 +3,6 @@ title: 挑战：基本布局理解
 slug: Learn_web_development/Core/CSS_layout/Fundamental_Layout_Comprehension
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Media_queries", "Learn_web_development/Core/Scripting", "Learn_web_development/Core/CSS_layout")}}
 
 如果你已经完成了本模块的学习，那么你就已经掌握了今天进行 CSS 布局所需要的基本知识，并且也可以使用旧的 CSS。这个任务将通过使用各种技术开发一个简单的网页布局来测试你的一些知识。

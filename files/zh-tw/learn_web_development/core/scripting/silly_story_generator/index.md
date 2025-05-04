@@ -3,8 +3,6 @@ title: 挑戰：傻故事產生器
 slug: Learn_web_development/Core/Scripting/Silly_story_generator
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting/Conditionals", "Learn_web_development/Core/Scripting")}}
 
 在本次評估中，你被賦予的任務內容將與本單元學習到的知識息息相關，並將其應用於創建一個能隨機生成傻故事的有趣應用程式。祝玩的開心！

@@ -186,7 +186,7 @@ f(); // [1, undefined]
 
 ### Parâmetro desestruturado com valores padrões
 
-É possível definir valores padrões com a notação [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment):
+É possível definir valores padrões com a notação [destructuring assignment](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring):
 
 ```js
 function f([x, y] = [1, 2], { z: z } = { z: 3 }) {

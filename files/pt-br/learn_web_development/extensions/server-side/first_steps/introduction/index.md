@@ -37,9 +37,9 @@ No mundo moderno do desenvolvimento web, aprender sobre desenvolvimento do lado 
 
 ## O que é programação de site do lado do servidor ?
 
-Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
+Navegadores comunicam-se com [web servers](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) utilizando o **H**yper**T**ext **T**ransfer **P**rotocol ({{glossary("HTTP")}}). Quando você clica em um link em uma página da web, envia um formulário ou faz uma pesquisa, uma **HTTP request(solicitação HTTP)** é enviada do seu navegador para o servidor de destino.
 
-A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST](/pt-BR/docs/Web/HTTP/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
+A solicitação inclui uma URL que identifica o recurso afetado, um método que define a ação necessária (por exemplo, para obter, excluir ou postar o recurso) e pode incluir informações adicionais codificadas em parâmetros de URL(Os pares field-value(campo-valor) são enviados por meio de uma [query string](https://en.wikipedia.org/wiki/Query_string)), como dados POST (dados enviados pelo método [HTTP POST](/pt-BR/docs/Web/HTTP/Reference/Methods/POST)), ou em associado {{glossary("Cookie", "cookies")}} .
 
 Os servidores da web esperam por mensagens de solicitação do cliente, processam-nas quando chegam e respondem ao navegador da web com uma mensagem **HTTP response** . A resposta contém uma linha de status indicando se a solicitação foi bem-sucedida ou não (e.g. "HTTP/1.1 200 OK" for success).
 
@@ -49,7 +49,7 @@ O corpo de uma resposta bem-sucedida a uma solicitação conteria o recurso soli
 
 O diagrama abaixo mostra uma arquitetura básica de servidor da web para um site estático (um site estático é aquele que retorna o mesmo conteúdo embutido em código do servidor sempre que um determinado recurso é solicitado). Quando um usuário deseja navegar para uma página, o navegador envia uma solicitação HTTP "GET" especificando seu URL.
 
-O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Status#successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Status#client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Status#server_error_responses)).
+O servidor recupera o documento solicitado de seu sistema de arquivos e retorna uma resposta HTTP contendo o documento e um [success status](/pt-BR/docs/Web/HTTP/Reference/Status#successful_responses) (geralmente, 200 OK). Se o arquivo não puder ser recuperado por algum motivo, um status de erro será retornado(Veja [client error responses](/pt-BR/docs/Web/HTTP/Reference/Status#client_error_responses) e [server error responses](/pt-BR/docs/Web/HTTP/Reference/Status#server_error_responses)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
@@ -79,7 +79,7 @@ Vamos agora voltar nossa atenção para o código envolvido na programação do 
 
 O código em execução no navegador é conhecido como **client-side code** e se preocupa principalmente em melhorar a aparência e o comportamento de uma página da web renderizada. Isso inclui selecionar e definir o estilo dos componentes da IU, criação de layouts, navegação, validação de formulário etc. Por outro lado, a programação do site do lado do servidor envolve principalmente a escolha de qual conteúdo é retornado ao navegador em resposta às solicitações. O código do lado do servidor lida com tarefas como validação de dados e solicitações enviadas, usando bancos de dados para armazenar e recuperar dados e enviar os dados corretos para o cliente conforme necessário.
 
-O código do lado do cliente é geralmente escrito em [HTML](/pt-BR/docs/Learn/HTML), [CSS](/pt-BR/docs/Learn/CSS), e [JavaScript](/pt-BR/docs/Learn/JavaScript) — ele é executado dentro de um navegador da web e tem pouco ou nenhum acesso ao sistema operacional subjacente (incluindo acesso limitado ao sistema de arquivos)
+O código do lado do cliente é geralmente escrito em [HTML](/pt-BR/docs/conflicting/Learn_web_development/Core/Structuring_content_0e54a30456ec839b11e09e00670da56cde64ba985c2eb3da9b7805515585e95d), [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics), e [JavaScript](/pt-BR/docs/conflicting/Learn_web_development/Core/Scripting_785964b4c0711553d2bf3130baef052c6d78a03b4ce249eeb9d1ce2be1e3c308) — ele é executado dentro de um navegador da web e tem pouco ou nenhum acesso ao sistema operacional subjacente (incluindo acesso limitado ao sistema de arquivos)
 
 Os desenvolvedores da Web não podem controlar qual navegador cada usuário pode estar usando para visualizar um site - os navegadores fornecem níveis inconsistentes de compatibilidade com recursos de código do lado do cliente, e parte do desafio da programação do lado do cliente é lidar com as diferenças no suporte do navegador de maneira elegante.
 
@@ -200,7 +200,7 @@ Em um artigo futuro, ajudaremos você a escolher o melhor framework web para seu
 
 ## Nesse módulo
 
-- [Introduction to the server side](/pt-BR/docs/Learn/Server-side/First_steps/Introduction)
-- [Client-Server overview](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview)
+- [Introduction to the server side](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Introduction)
+- [Client-Server overview](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview)
 - [Server-side web frameworks](/pt-BR/docs/Learn/Server-side/First_steps/Web_frameworks)
-- [Website security](/pt-BR/docs/Learn/Server-side/First_steps/Website_security)
+- [Website security](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)

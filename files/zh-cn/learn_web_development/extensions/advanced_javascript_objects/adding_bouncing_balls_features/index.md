@@ -3,8 +3,6 @@ title: 挑战：为“弹球”示例添加新功能
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在此次测验中，你需要将上一节中的“弹球”演示程序作为模板，添加一些新的有趣的功能。

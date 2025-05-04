@@ -1,9 +1,8 @@
 ---
 title: rel=preload
 slug: Web/HTML/Reference/Attributes/rel/preload
-original_slug: Web/HTML/Attributes/rel/preload
 l10n:
-  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}

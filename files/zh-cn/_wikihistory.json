@@ -4144,7 +4144,7 @@
       "WavinFlag"
     ]
   },
-  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript": {
+  "Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript": {
     "modified": "2020-08-05T11:02:17.810Z",
     "contributors": [
       "driftingdream"
@@ -5425,41 +5425,6 @@
       "pengtikui",
       "skylakecore",
       "qixi"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:43.732Z",
-    "contributors": [
-      "hebby"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:33.856Z",
-    "contributors": [
-      "Dorence",
-      "Banhave",
-      "boltyu",
-      "TheaAo",
-      "wth",
-      "Samoay",
-      "ziyunfei",
-      "Y001",
-      "Mgjbot",
-      "Carrie zhxj"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:37.588Z",
-    "contributors": [
-      "zhangchen",
-      "hhxxhg",
-      "lavenderming",
-      "xgqfrms-GitHub",
-      "hellotaotao",
-      "Go7hic",
-      "marshalYuan",
-      "monjer",
-      "Deryckxie"
     ]
   },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
@@ -28317,6 +28282,27 @@
       "xuqisheng"
     ]
   },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:43.732Z",
+    "contributors": [
+      "hebby"
+    ]
+  },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:33.856Z",
+    "contributors": [
+      "Dorence",
+      "Banhave",
+      "boltyu",
+      "TheaAo",
+      "wth",
+      "Samoay",
+      "ziyunfei",
+      "Y001",
+      "Mgjbot",
+      "Carrie zhxj"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-05-06T06:27:48.960Z",
     "contributors": [
@@ -28328,6 +28314,20 @@
       "kmc947373",
       "ziyunfei",
       "Breezewish"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:37.588Z",
+    "contributors": [
+      "zhangchen",
+      "hhxxhg",
+      "lavenderming",
+      "xgqfrms-GitHub",
+      "hellotaotao",
+      "Go7hic",
+      "marshalYuan",
+      "monjer",
+      "Deryckxie"
     ]
   },
   "Web/HTML/Reference": {

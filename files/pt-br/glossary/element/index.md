@@ -13,6 +13,6 @@ Elementos e {{glossary("tag", "tags")}} _não_ são a mesma coisa. As tags come�
 
 ## Veja também
 
-- [Começando com HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
+- [Começando com HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
 - [Definindo Custom Elements](/pt-BR/docs/Web/API/Web_components/Using_custom_elements)
 - A interface {{domxref("Element")}} representando um elemento no DOM.

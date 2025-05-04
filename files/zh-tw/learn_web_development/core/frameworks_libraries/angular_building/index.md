@@ -3,8 +3,6 @@ title: 建構 Angular 應用程式與更多資源
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 
 這篇文章內容涵蓋，如何建立一個生產版本（production）的應用程式，以及提供後續的學習資源。

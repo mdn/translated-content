@@ -27,6 +27,12 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : 文字列で、対象リソースの URI を表します。
 - {{domxref("HTMLLinkElement.hreflang")}}
   - : 文字列で、リンク先リソースの言語コードを表します。
+- {{domxref("HTMLLinkElement.imageSizes")}}
+  - : 文字列で、 HTML の [`imagesizes`](/ja/docs/Web/HTML/Reference/Elements/link#imagesizes) 属性を反映します。画像条件とサイズのコンマ区切りリストです。
+- {{domxref("HTMLLinkElement.imageSrcset")}}
+  - : 文字列で、 HTML の [`imagesrcset`](/ja/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性を反映します。画像候補文字列のコンマ区切りリストです。
+- {{domxref("HTMLLinkElement.integrity")}}
+  - : 文字列で、ブラウザが取得されたリソースが予期しない操作なしに配信されたことを確認するために使用できるインラインメタデータを含みます。 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の `integrity` 属性を反映します。
 - {{domxref("HTMLLinkElement.media")}}
   - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
@@ -35,10 +41,10 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
   - : 文字列で、リンク元文書からリンク先リソースに対する関連性を表します。
 - {{domxref("HTMLLinkElement.relList")}} {{ReadOnlyInline}}
   - : {{domxref("DOMTokenList")}} で、 HTML の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性をトークンのリストとして反映します。
-- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を反映します。
 - {{domxref("HTMLLinkElement.sheet")}} {{ReadOnlyInline}}
   - : 指定された要素に関連付けられた {{domxref("StyleSheet")}} オブジェクトを返します。存在しない場合は `null` を返します。
+- {{domxref("HTMLLinkElement.sizes")}} {{ReadOnlyInline}}
+  - : {{domxref("DOMTokenList")}} で、トークンのリストとして HTML の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を反映します。
 - {{domxref("HTMLLinkElement.type")}}
   - : 文字列で、リンク先リソースの MIME タイプを表します。
 

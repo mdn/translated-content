@@ -3,7 +3,7 @@ title: 建立第一個 Vue 元件
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。
 

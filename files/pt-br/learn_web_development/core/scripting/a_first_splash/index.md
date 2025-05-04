@@ -271,7 +271,7 @@ O código é executado digitando o nome da função seguido pelos parênteses.
 
 Tente salvar o seu código agora e atualizá-lo no navegador.
 
-Vá até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), e insira a seguinte linha:
+Vá até o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e insira a seguinte linha:
 
 ```js
 conferirPalpite();
@@ -286,7 +286,7 @@ Você deverá ver um alerta aparecer dizendo "Eu sou um placeholder"; nós defin
 
 Os operadores JavaScript nos permite realizar testes, fazer cálculos matemáticos, unir sequências de texto, e outras coisas do tipo.
 
-Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
+Vamos salvar nosso código e atualizar a página exibida em nosso navegador. Abra o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) se você ainda não o tiver aberto, para que possamos digitar os exemplos mostrados abaixo — digite cada um exatamente como mostrado na coluna "Exemplo", pressionando Return/Enter na sequência, e veja quais resultados são retornados. Se você não tiver fácil acesso às ferramentas de desenvolvimento do navegador você pode sempre utilizar o console embutido simples, como no exemplo abaixo:
 
 ```html hidden
 <!doctype html>
@@ -565,7 +565,7 @@ Tudo o que temos que fazer agora neste artigo é falar sobre alguns outros recur
 
 Uma parte do código acima que precisamos olhar mais detalhadamente é o loop [for](/pt-BR/docs/Web/JavaScript/Reference/Statements/for). Loop é um conceito muito importante em programação, que permite a você continuar executando um pedaço do código repetidamente, até que determinada condição seja satisfeita.
 
-Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
+Para começar, vá novamente até o [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) do seu navegador, e insira o seguinte:
 
 ```js
 for (var i = 1; i < 21; i++) {
@@ -608,7 +608,7 @@ Neste caso particular, nós primeiro criamos a variável `campoPalpite` que arma
 var campoPalpite = document.querySelector(".campoPalpite");
 ```
 
-Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) que seleciona o elemento ao qual você quer referenciar.
+Para pegar essa referência, usamos o método {{domxref("document.querySelector", "querySelector()")}} do objeto {{domxref("document")}}. `querySelector()` pega um pedaço de informação — um [seletor CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que seleciona o elemento ao qual você quer referenciar.
 
 Como agora `campoPalpite` contém referência ao elemento {{htmlelement("input")}}, ele terá agora acesso a um número de propriedades (basicamente variáveis armazenadas dentro de objetos, sendo que alguns não podem ter seus valores alterados) e métodos (basicamente, funções armazenadas dentro de objetos). Um método disponível para elementos de inserção `<input>`, é o `focus()`, então agora podemos usar essa linha para focar o campo de inserção de texto:
 
@@ -623,7 +623,7 @@ Variáveis que não contém referências a elementos de formulário não terão 
 Vamos brincar um pouco com alguns objetos do navegador.
 
 1. Primeiro abra seu programa em um navegador.
-2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
+2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
 3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
 
    1. Agora digite o seguinte:

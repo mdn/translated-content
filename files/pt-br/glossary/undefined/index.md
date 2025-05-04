@@ -15,4 +15,4 @@ Um valor **{{Glossary("primitive")}}** automaticamente atribuido para **variavei
 
 ### Referência Técnica
 
-- [JavaScript data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)

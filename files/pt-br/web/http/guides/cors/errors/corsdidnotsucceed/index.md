@@ -29,4 +29,4 @@ Outras possíveis causas incluem:
 
 - [Erros de CORS](/pt-BR/docs/Web/HTTP/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [Introdução ao CORS](/pt-BR/docs/Web/HTTP/CORS)
+- [Introdução ao CORS](/pt-BR/docs/Web/HTTP/Guides/CORS)

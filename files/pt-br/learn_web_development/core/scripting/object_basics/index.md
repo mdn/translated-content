@@ -37,7 +37,7 @@ Neste artigo, veremos a sintaxe fundamental de objetos JavaScript e revisitaremo
 
 Um objeto é uma coleção de dados e/ou funcionalidades relacionadas (que geralmente consistem em diversas variáveis e funções — que são chamadas de propriedades e métodos quando estão dentro de objetos). Vamos trabalhar com um exemplo para entender como eles são.
 
-Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) aberto e pronto para digitar alguns comandos.
+Para começar, faça uma cópia do nosso arquivo [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Isto contém muito pouco — um elemento {{HTMLElement("script")}} para escrevermos nosso código-fonte. Vamos usar isto como base para explorar a sintaxe básica do objeto. Ao trabalhar com este exemplo, você deve ter seu [console de ferramentas de desenvolvedor JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools#the_javascript_console) aberto e pronto para digitar alguns comandos.
 
 Assim como é comum em JavaScript, a criação de um objeto geralmente começa com a definição e a inicialização de uma variável. Tente digitar o código a seguir no arquivo que você baixou, salve e atualize:
 
@@ -320,10 +320,10 @@ No próximo artigo vamos começar a ver a teoria de programação orientada a ob
 
 ## Nesse módulo
 
-- [Noções Básicas de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
+- [Noções Básicas de Objetos](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics)
 - [Orientação a objetos Javascript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Protótipos de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herança no Javascript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Trabalhando com JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Prática de construção de Objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Protótipos de Objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [Herança no Javascript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Trabalhando com JSON](/pt-BR/docs/Learn_web_development/Core/Scripting/JSON)
+- [Prática de construção de Objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
+- [Adicionando recursos à nossa demonstração de bolas pulantes](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)

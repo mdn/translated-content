@@ -2,14 +2,14 @@
 title: 預設參數
 slug: Web/JavaScript/Reference/Functions/Default_parameters
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{jsSidebar("Functions")}}
 
 **函式預設參數**允許沒有傳入值或是傳入值為 `undefined` 的情況下，參數能以指定的預設值初始化。
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{InteractiveExample("JavaScript Demo: Default parameters")}}
 
 ```js interactive-example
 function multiply(a, b = 1) {
@@ -17,10 +17,10 @@ function multiply(a, b = 1) {
 }
 
 console.log(multiply(5, 2));
-// Expected output: 10
+// 預期輸出：10
 
 console.log(multiply(5));
-// Expected output: 5
+// 預期輸出：5
 ```
 
 ## 語法

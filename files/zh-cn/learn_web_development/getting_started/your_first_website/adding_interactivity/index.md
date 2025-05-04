@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9e8b77593a626b1e0765494e4928b8f4a5c2d9bd
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript 是一门为网站添加交互性的编程语言。交互性体现在游戏、点击按钮或输入表单时的响应行为；动态的样式；动画，等等。本文将帮助你入门 JavaScript，并进一步加深你对 JavaScript 所能实现的功能的理解。

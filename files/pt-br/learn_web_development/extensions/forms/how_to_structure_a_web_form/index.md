@@ -31,7 +31,7 @@ Com o básico fora do caminho, podemos olhar melhor para os elementos utilizados
   </tbody>
 </table>
 
-A flexibilidade dos formulários HTML fazem com que sejam uma das estruturas mais complexas do HTML, você pode construir qualquer tipo básico de formulário usando elementos e atributos exclusivos de formulários. Assim, usar a estrutura correta ao criar um formulário HTML o ajudará a garantir que o formulário seja utilizável e [acessível](/pt-BR/docs/Learn/Accessibility).
+A flexibilidade dos formulários HTML fazem com que sejam uma das estruturas mais complexas do HTML, você pode construir qualquer tipo básico de formulário usando elementos e atributos exclusivos de formulários. Assim, usar a estrutura correta ao criar um formulário HTML o ajudará a garantir que o formulário seja utilizável e [acessível](/pt-BR/docs/Learn_web_development/Core/Accessibility).
 
 ## O elemento \<form>
 

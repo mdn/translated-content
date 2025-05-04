@@ -265,7 +265,7 @@ for (var i = 0; i < cats.length; i++) {
 
 ## Saindo do loop com o break
 
-Se você quiser sair de um loop antes que todas as iterações sejam concluídas, você poderá usar a instrução [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break). Nós já encontramos isso em um artigo anterior, quando observamos as instruções switch - quando um determinado caso é atendido em uma [condição do switch](/pt-BR/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements) e que corresponde à expressão de entrada informada, a instrução break sai imediatamente da instrução switch e passa para o trecho de código seguinte.
+Se você quiser sair de um loop antes que todas as iterações sejam concluídas, você poderá usar a instrução [break](/pt-BR/docs/Web/JavaScript/Reference/Statements/break). Nós já encontramos isso em um artigo anterior, quando observamos as instruções switch - quando um determinado caso é atendido em uma [condição do switch](/pt-BR/docs/Learn_web_development/Core/Scripting/Conditionals#switch_statements) e que corresponde à expressão de entrada informada, a instrução break sai imediatamente da instrução switch e passa para o trecho de código seguinte.
 
 É o mesmo com loops — um comando `break` irá imediatamente sair do loop e fazer o navegador passar para o código seguinte.
 
@@ -685,7 +685,7 @@ Nós já fornecemos a você:
 - `refused.textContent +=` — o início de uma linha que concatenará algo no final de `refused.textContent`.
 - `admitted.textContent +=` — o início de uma linha que concatenará algo no final de `admitted.textContent`.
 
-Questão bônus extra — depois de completar as tarefas acima com sucesso, você terá duas listas de nomes, separados por vírgulas, mas eles estarão desarrumados — haverá uma vírgula no final decada um. Você pode descobrir como escrever linhas que que cortam a última vírgula em cada caso, e adicionar um ponto final? Dê uma olhada no artigo [Métodos úteis de string](/pt-BR/docs/Learn/JavaScript/First_steps/Useful_string_methods) para ajuda.
+Questão bônus extra — depois de completar as tarefas acima com sucesso, você terá duas listas de nomes, separados por vírgulas, mas eles estarão desarrumados — haverá uma vírgula no final decada um. Você pode descobrir como escrever linhas que que cortam a última vírgula em cada caso, e adicionar um ponto final? Dê uma olhada no artigo [Métodos úteis de string](/pt-BR/docs/Learn_web_development/Core/Scripting/Useful_string_methods) para ajuda.
 
 Se você cometer um erro, sempre poderá redefinir o exemplo com o botão "Reset". Se você realmente ficar preso, pressione "Show solution" para ver uma solução.
 
@@ -871,7 +871,7 @@ Nós recomendamos o uso do `for`, pelo menos no começo, já que ele é provavel
 
 This article has revealed to you the basic concepts behind, and different options available when, looping code in JavaScript. You should now be clear on why loops are a good mechanism for dealing with repetitive code, and be raring to use them in your own examples!
 
-If there is anything you didn't understand, feel free to read through the article again, or [contact us](/pt-BR/docs/Learn#contact_us) to ask for help.
+If there is anything you didn't understand, feel free to read through the article again, or [contact us](/pt-BR/docs/Learn_web_development#contact_us) to ask for help.
 
 ## See also
 

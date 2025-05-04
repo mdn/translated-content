@@ -116,7 +116,7 @@ O atributo SameSite pode receber um ou dois valores (case-insensitive):
 - `Strict`
   - : Se o cookie same-site possuir este atributo, o navegador enviará cookies apenas se a requisição for enviada do website que configurou este cookie, Se a requisição tem origem em outra URL, nenhum cookie com o atributo `Strict` será incluído.
 - `Lax`
-  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, e também quando o usuário navegar para o URL de um site externo através de métodos "seguros" (ex.: [GET](/pt-BR/docs/Web/HTTP/Methods/GET) ou [HEAD](/pt-BR/docs/Web/HTTP/Methods/GET)) como cliques em links, mas não serão enviados em requisições "não seguras" como [POST](/pt-BR/docs/Web/HTTP/Methods/POST).
+  - : Se o atributo receber o valor Lax, os cookies same-site ficarão retidos nas sub-requisições entre sites, como chamadas para carregar imagens ou frames, e também quando o usuário navegar para o URL de um site externo através de métodos "seguros" (ex.: [GET](/pt-BR/docs/Web/HTTP/Reference/Methods/GET) ou [HEAD](/pt-BR/docs/Web/HTTP/Reference/Methods/GET)) como cliques em links, mas não serão enviados em requisições "não seguras" como [POST](/pt-BR/docs/Web/HTTP/Reference/Methods/POST).
 
 Se a flag não estiver setada, o atributo recebe o valor `Lax` por padrão.
 

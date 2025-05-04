@@ -34,7 +34,7 @@ l10n:
 
 - [ウェブフォーム](/ja/docs/Learn_web_development/Extensions/Forms)
   - : フォームは、ウェブの重要な部品です。フォームは多くの機能を提供し、ユーザーがウェブサイトとやり取りする際に必要なものとなっています。例えば登録、ログイン、フィードバックの送信、商品の購入、などなど。このモジュールではフォームのクライアント側の部分を作成するところから始めます。
-- [読み込みが速い HTML ページを作成するヒント](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [読み込みが速い HTML ページを作成するヒント](/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : ウェブページを最適化することでサイト表示の待ち時間を短くし、サーバーとインターネット接続経路の負荷を軽減する方法を学ぶことができます。
 
 ## CSS チュートリアル

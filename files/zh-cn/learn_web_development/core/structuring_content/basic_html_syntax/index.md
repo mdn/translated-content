@@ -3,7 +3,7 @@ title: 开始学习 HTML
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
 本文将从 HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在 HTML 文档中所处的位置。本文还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。学习的过程中，我们也会使用 HTML 做一些好玩的事情。
 

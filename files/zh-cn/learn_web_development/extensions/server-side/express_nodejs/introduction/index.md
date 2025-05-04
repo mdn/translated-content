@@ -3,7 +3,7 @@ title: Express/Node 入门
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本节将回答“什么是 Node”以及“什么是 Express”这两个问题，并通过主要特征和构成要件来简要介绍 Express 框架的与众不同之处。（只是目前尚不能用一个开发环境来测试它）
 

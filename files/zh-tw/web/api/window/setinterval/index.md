@@ -2,14 +2,12 @@
 title: Window：setInterval() 方法
 slug: Web/API/Window/setInterval
 l10n:
-  sourceCommit: 00f46adb5616d826821d63b11eac285faf1cf4a5
+  sourceCommit: 29d6bb944a1c1fe42eb9957e2a6e5b4f85a2656e
 ---
 
 {{APIRef("HTML DOM")}}
 
 {{domxref("Window")}} 介面的 **`setInterval()`** 方法用於以固定的時間間隔重複呼叫函式或執行一段程式碼。
-
-此方法會返回一個間隔 ID，用於唯一識別該間隔，這樣可以透過呼叫 {{domxref("Window.clearInterval", "clearInterval()")}} 來移除它。
 
 ## 語法
 
@@ -37,9 +35,11 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 ### 返回值
 
-返回的 `intervalID` 是一個數值型的非零值，用於標識通過 `setInterval()` 創建的定時器；此值可傳遞給 {{domxref("Window.clearInterval", "clearInterval()")}} 以取消該間隔。
+`setInterval()` 方法返回一個正整數（通常在 1 到 2,147,483,647 的範圍內），用於唯一標識由該調用創建的間隔計時器。此標識符通常被稱為「間隔 ID」，可以傳遞給 {{domxref("Window.clearInterval", "clearInterval()")}} 來停止指定函數的重複執行。
 
-需注意的是，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共用相同的 ID 池，並且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技術上可以互換使用。但為了程式碼的清晰性，應儘量匹配使用，以免維護時造成混淆。
+在相同的全域環境（例如特定的窗口或 worker）中，間隔 ID 保證保持唯一，並且只要原始計時器仍然活動，就不會被重新用於任何新的間隔計時器。然而，不同的全域環境會維護各自獨立的間隔 ID 池。
+
+請注意，`setInterval()` 和 {{domxref("Window.setTimeout", "setTimeout()")}} 共用相同的 ID 池，並且 `clearInterval()` 和 {{domxref("Window.clearTimeout", "clearTimeout()")}} 在技術上可以互換使用。但為了程式碼的清晰性，應儘量匹配使用，以免維護時造成混淆。
 
 > [!NOTE] `delay` 參數會被轉換為有號 32 位整數。這實際上將 `delay` 限制在 2147483647 毫秒（大約 24.8 天）以內，因為在 IDL 中它被指定為有號整數。
 

@@ -6,18 +6,18 @@ original_slug: Learn/CSS/Building_blocks
 
 {{LearnSidebar}}
 
-Este módulo continua onde [Primeiros passos em CSS](/pt-BR/docs/Learn/CSS/First_steps) parou — agora que você já ganhou familiaridade com a linguagem e sua sintaxe, e já tem alguma experiência básica usando-a, é hora de mergulhar um pouco mais fundo. Este módulo analisa a conceitos de cascata e herança , todos os tipos de seletores que temos disponíveis, unidades, dimensionamentos, estilos de fundo e bordas, depuração, e muito mais.
+Este módulo continua onde [Primeiros passos em CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics) parou — agora que você já ganhou familiaridade com a linguagem e sua sintaxe, e já tem alguma experiência básica usando-a, é hora de mergulhar um pouco mais fundo. Este módulo analisa a conceitos de cascata e herança , todos os tipos de seletores que temos disponíveis, unidades, dimensionamentos, estilos de fundo e bordas, depuração, e muito mais.
 
-O objetivo aqui é lhe prover com um conjunto de ferramentas para construir um código CSS competente e ajuda-lo a entender toda a teoria essencial, antes de passarmos para tópicos mais específicos como [Estilização de texto](/pt-BR/docs/Learn/CSS/Styling_text) e [Modelo CSS](/pt-BR/docs/Learn/CSS/CSS_layout).
+O objetivo aqui é lhe prover com um conjunto de ferramentas para construir um código CSS competente e ajuda-lo a entender toda a teoria essencial, antes de passarmos para tópicos mais específicos como [Estilização de texto](/pt-BR/docs/Learn_web_development/Core/Text_styling) e [Modelo CSS](/pt-BR/docs/Learn_web_development/Core/CSS_layout).
 
 ## Pré-requisitos
 
 Antes de iniciar este módulo, você deve ter:
 
 1. Familiaridade básica com uso de computadores, e usar a Web passivamente (por exemplo. apenas olhar, consumindo o conteúdo.)
-2. Um ambiente de trabalho básico configurado conforme detalhado em [Instalando software básico](/pt-BR/docs/Learn/Getting_started_with_the_web/Installing_basic_software), e um entendimento de como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn/Getting_started_with_the_web/Dealing_with_files).
-3. Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
-4. Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn/CSS/First_steps).
+2. Um ambiente de trabalho básico configurado conforme detalhado em [Instalando software básico](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), e um entendimento de como criar e gerenciar arquivos, como detalhado em [Lidando com arquivos](/pt-BR/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files).
+3. Familiaridade básica com HTML, como foi discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content).
+4. Um entendimento do básico em CSS, como o mostrado no módulo [Primeiros Passos com CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics).
 
 > [!NOTE]
 > Se você estiver usando um computador/tablet/outro dispositivo onde você não puder criar seus próprios arquivos, você pode tentar rodar (a maioria) os códigos de exemplo em um programa de codificação online como o [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
@@ -26,18 +26,18 @@ Antes de iniciar este módulo, você deve ter:
 
 Este módulo contém os seguintes artigos, que cobrem a maioria das partes essenciais da linguagem CSS. Ao longo do caminho você encontrará vários exercícios para testar seu entendimento.
 
-- [Cascata e Herança](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascata e Herança](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : O objetivo desta lição é desenvolver seu entendimento de alguns dos conceitos mais fundamentais do CSS — a cascata, especificidade e herança — que controlam como o CSS será aplicado ao HTML e como conflitos são resolvidos.
-- [Seletores CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors)
+- [Seletores CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
   - : Há uma ampla variedade de seletores CSS disponíveis, permitindo uma fina precisão ao selecionar elementos para estilizar. Neste artigo e em seus sub-artigos, examinaremos os diferentes tipos em detalhes, vendo como eles funcionam. Os sub-artigos são os seguintes:
 
-    - [Tipo, classe e seletores de ID](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-    - [Seletores de atributo](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+    - [Tipo, classe e seletores de ID](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+    - [Seletores de atributo](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [Pseudo-classes e pseudo-elementos](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
     - [Combinadores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
 
-- [O modelo de caixa](/pt-BR/docs/Learn/CSS/Building_blocks/The_box_model) (Ou Box Model)
+- [O modelo de caixa](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Box_model) (Ou Box Model)
   - : Tudo em CSS está dentro de caixas, e entender essas caixas é a chave para estar apto a criar layouts (modelos) em CSS, ou alinhar itens com outros itens. Nesta lição,trataremos mais propriamente sobre Modelo de Caixa CSS, afim de que você possa passar para tarefas de Layout mais complexas com um entendimento de como isto funciona e a terminologia relacionada a este modelo.
 - [Planos de fundo e bordas](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
   - : Nesta lição, examinaremos algumas das coisas criativas que você pode fazer com os planos de fundo e as bordas do CSS. Desde a criação de gradientes, imagens de plano de fundo e cantos arredondados, planos de fundo e bordas são a resposta para muitas questões de estilo em CSS.

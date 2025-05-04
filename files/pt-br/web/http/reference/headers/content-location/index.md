@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Content-Location
 
 {{HTTPSidebar}}
 
-O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation).
+O cabeçalho **`Content-Location`** indica uma localização alternativa para os dados retornados. O principal uso é para indicar o URL de um recurso transmitido como resultado de uma [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation).
 
 {{HTTPHeader("Location")}} e `Content-Location` são diferentes. `Location` indica o URL de um redirecionamento, enquanto `Content-Location` indica o URL direto usado para acessar o recurso, sem qualquer outra negociação de conteúdo no futuro. `Location` é um cabeçalho associado com a resposta, enquanto `Content-Location` é associado com os dados retornados. Essa distinção parece abstrata sem exemplos. Essa distinção pode parecer abstrata sem [exemplos](#exemplos).
 
@@ -50,7 +50,7 @@ Estas URLs são exemplos — o site pode servir diferentes formatos de arquivos 
 
 Então o cliente pode lembrar que a versão JSON está disponível em uma URL em particular, evitando negociação de conteúdo da próxima vez que ele requerer aquele documento.
 
-O servidor também pode considerar outros cabeçalhos de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), como o {{HTTPHeader("Accept-Language")}}.
+O servidor também pode considerar outros cabeçalhos de [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation), como o {{HTTPHeader("Accept-Language")}}.
 
 ### Apontando para um novo documento (HTTP 201 Created)
 

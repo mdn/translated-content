@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 865acb22b74a49927b98267566369d4677414f53
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}
 
 一个网站包含许多文件：文本内容、代码、样式表、媒体内容，等等。在建立一个网站时，你需要在计算机上将这些文件以合理的结构组织起来，确保文件之间交互畅通，并在最终[将它们上传到服务器](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)之前使所有内容看起来正确。*处理文件*讨论了一些你应该注意的问题，以便你能为你的网站建立一个合理的文件结构。
 
@@ -72,22 +72,14 @@ l10n:
 
 ![一张只显示 firefox 标志的基础网站的截图——一只盘旋在地球上的火狐](website-screenshot.png)
 
-一些通用的文件路径规则：
+### 通用的文件路径规则
 
 - 若引用的目标文件与 HTML 文件同级，只需直接使用文件名，例如：`my-image.jpg`。
 - 要引用子目录中的文件，请在路径前面写上目录名，再加上一个正斜杠。例如：`subdirectory/my-image.jpg`。
 - 若引用的目标文件位于 HTML 文件的**上级**，需要加上两个点。举个例子，如果 `index.html` 在 `test-site` 的一个子文件夹内，而 `my-image.jpg` 在 `test-site` 内，你可以使用 `../my-image.jpg` 从 `index.html` 引用 `my-image.jpg`。
 - 以上方法可以随意组合，比如：`../subdirectory/another-subdirectory/my-image.jpg`。
 
-这是你目前需要知道的全部内容。
-
 > [!NOTE]
 > Windows 的文件系统使用反斜杠而不是正斜杠，例如：`C:\Windows`。这在 HTML 中并不重要——即使你在 Windows 系统上进行开发，你也应该在代码中使用正斜杠。
-
-## 还应该做些什么？
-
-这就是本文目前的全部内容。现在你的文件夹结构应该看起来像这样：
-
-![macOS 访达中的文件结构，包含：有一张图片的 images 文件夹，空的 scripts 和 styles 文件夹和一个 index.html 文件](file-structure.png)
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Environment_setup")}}

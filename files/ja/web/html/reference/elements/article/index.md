@@ -1,9 +1,8 @@
 ---
 title: "<article>: 記事コンテンツ要素"
 slug: Web/HTML/Reference/Elements/article
-original_slug: Web/HTML/Element/article
 l10n:
-  sourceCommit: fa8a44b8bff24a4032181c4fd155c459c0dc9161
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,18 +13,18 @@ l10n:
 
 ```html interactive-example
 <article class="forecast">
-  <h1>Weather forecast for Seattle</h1>
+  <h1>シアトルの天気予報</h1>
   <article class="day-forecast">
-    <h2>03 March 2018</h2>
-    <p>Rain.</p>
+    <h2>2018/03/03</h2>
+    <p>雨。</p>
   </article>
   <article class="day-forecast">
-    <h2>04 March 2018</h2>
-    <p>Periods of rain.</p>
+    <h2>2018/03/04</h2>
+    <p>ずっと雨。</p>
   </article>
   <article class="day-forecast">
-    <h2>05 March 2018</h2>
-    <p>Heavy rain.</p>
+    <h2>2028/03/05</h2>
+    <p>大雨。</p>
   </article>
 </article>
 ```
@@ -58,71 +57,6 @@ l10n:
 
 ある文書に複数の記事を含めることができます。たとえば、読者がスクロールするたびに各記事のテキストを次々と表示するブログでは、各記事は `<article>` 要素に含まれ、おそらくその中に 1 つ以上の `<section>` があります。
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
-      </th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
-          >区分コンテンツ</a
-        >,
-        <a href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
-          >知覚可能コンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている内容</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">タグの省略</th>
-      <td>なし。開始タグと終了タグの両方が必須です。</td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている親要素</th>
-      <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
-          >フローコンテンツ</a
-        >を受け入れるすべての要素。なお、 <code>&#x3C;article></code> 要素を
-        {{HTMLElement("address")}} 要素の子孫にしてはいけません。
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">暗黙の ARIA ロール</th>
-      <td>
-        <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Article_Role"
-            >article</a
-          ></code
-        >
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">許可されている ARIA ロール</th>
-      <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">DOM インターフェイス</th>
-      <td>{{domxref("HTMLElement")}}</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)のみがあります。
@@ -135,8 +69,6 @@ l10n:
 - `<article>` 要素の発行日時は、 {{HTMLElement("time")}} 要素の [`datetime`](/ja/docs/Web/HTML/Reference/Elements/time#datetime) 属性で示すことができます。
 
 ## 例
-
-### HTML
 
 ```html
 <article class="film_review">
@@ -182,7 +114,74 @@ l10n:
 
 ### 結果
 
-{{EmbedLiveSample('Examples')}}
+{{EmbedLiveSample('Examples','','570')}}
+
+## 技術的概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
+      </th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ"
+          >区分コンテンツ</a
+        >,
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
+          >知覚可能コンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている内容</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">タグの省略</th>
+      <td>なし。開始タグと終了タグの両方が必須です。</td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている親要素</th>
+      <td>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
+          >フローコンテンツ</a
+        >を受け入れるすべての要素。なお、 <code>&#x3C;article></code> 要素を
+        {{HTMLElement("address")}} 要素の子孫にしてはいけません。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">暗黙の ARIA ロール</th>
+      <td>
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role"
+            >article</a
+          ></code
+        >
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">許可されている ARIA ロール</th>
+      <td>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">DOM インターフェイス</th>
+      <td>{{domxref("HTMLElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 仕様書
 

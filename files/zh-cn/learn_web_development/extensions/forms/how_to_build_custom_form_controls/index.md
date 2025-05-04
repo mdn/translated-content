@@ -3,8 +3,6 @@ title: 如何构建自定义表单控件
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls
 ---
 
-{{LearnSidebar}}
-
 在许多情况下，可用的原生 HTML 表单控件是不够的。如果要在某些控件（例如 {{HTMLElement("select")}} 元素）上[设置高级样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling)，或者如果要提供自定义行为，你就需要考虑构建自己的控件。
 
 在本文中，我们会看到如何构建自定义控件。为此，我们将使用这样一个示例：重建 {{HTMLElement("select")}} 元素。我们还将讨论如何构建、何时构建自定义控件、构建是否存在意义，以及构建控件的相关注意事项。

@@ -20,7 +20,7 @@ l10n:
 - JavaScript では
   - : カスタムデータ属性のプロパティ名は、同じ HTML 属性の名前から `data-` の接頭辞を除いたものですが、そのプロパティの{{Glossary("camel_case", "キャメルケース")}}の名前であり、単一のダッシュ (`-`) を除いたものです。
 
-以下の情報に加えて、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
+以下の情報に加えて、[データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
 
 ### 名前の変換
 
@@ -105,5 +105,5 @@ if (el.dataset.someDataAttr === undefined) {
 ## 関連情報
 
 - HTML の [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) クラスのグローバル属性
-- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} および {{DOMxRef("Element.setAttribute()")}}

@@ -1,14 +1,11 @@
 ---
 title: <set>
 slug: Web/SVG/Reference/Element/set
-original_slug: Web/SVG/Element/set
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-SVG の **`<set>`** 要素は、指定した時間だけ属性の値を設定するという単純な意味を提供します。
+**`<set>`** は [SVG](/ja/docs/Web/SVG) の要素で、指定した時間だけ属性の値を設定するという単純な意味を提供します。
 
 文字列や論理値など、合理的に補間できないものも含めて、すべての属性型に対応しています。合理的に補間できる属性については、通常は {{SVGElement('animate')}} を推奨します。
 
