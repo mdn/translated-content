@@ -2,7 +2,7 @@
 title: プログラムによるメディアクエリーの評価
 slug: Web/CSS/CSS_media_queries/Testing_media_queries
 l10n:
-  sourceCommit: f7daf15512ea736498837b68bcc36d82d6a323f4
+  sourceCommit: ad896488bf8fac04fc6fa144c441fdbfd880737c
 ---
 
 {{CSSRef}}
@@ -74,6 +74,10 @@ function handleOrientationChange(evt) {
 ```js
 mediaQueryList.removeEventListener("change", handleOrientationChange);
 ```
+
+## 仕様書
+
+{{Specifications}}
 
 ## ブラウザーの互換性
 
