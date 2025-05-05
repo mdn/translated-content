@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-{{domxref("Document")}} 介面的 **`documentElement`** 唯讀屬性會回傳作為{{domxref("document", "文件")}}根元素的{{domxref("Element", "元素")}}（例如，HTML 文件中的 {{HTMLElement("html")}} 元素）。
+{{domxref("Document")}} 介面的 **`documentElement`** 唯讀屬性會回傳作為{{domxref("document", "文件", "", 1)}}根元素的{{domxref("Element", "元素", "", 1)}}（例如，HTML 文件中的 {{HTMLElement("html")}} 元素）。
 
 ## 值
 
