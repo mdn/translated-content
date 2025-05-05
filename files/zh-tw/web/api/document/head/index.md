@@ -24,7 +24,7 @@ l10n:
 <script>
   const theHead = document.head;
 
-  console.log(theHead.id); // "my-document-head";
+  console.log(theHead.id); // 「my-document-head」;
 
   console.log(theHead === document.querySelector("head")); // true
 </script>
