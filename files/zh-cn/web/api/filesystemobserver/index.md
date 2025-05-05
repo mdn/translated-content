@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("File System API")}}{{SeeCompatTable}}{{non-standard_header}}
 
-{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **FileSystemObserver`** 接口提供了一种可以观察用户可观察的文件系统和[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)（OPFS）的变化的机制。这意味着 Web 应用程序无需轮询文件系统来查找文件或文件夹结构的更改，从而避免耗时和浪费资源。
+{{domxref("File System API", "文件系统 API", "", "nocode")}} 的 **`FileSystemObserver`** 接口提供了一种可以观察用户可观察的文件系统和[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)（OPFS）的变化的机制。这意味着 Web 应用程序无需轮询文件系统来查找文件或文件夹结构的更改，从而避免耗时和浪费资源。
 
 ## 构造函数
 
