@@ -2,7 +2,7 @@
 title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 l10n:
-  sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -24,7 +24,7 @@ box-decoration-break: clone;
 ```html interactive-example
 <section id="default-example">
   <div id="example-container">
-    <span id="example-element">This text breaks across multiple lines.</span>
+    <span id="example-element">このテキストは複数の行に分割されます。</span>
   </div>
 </section>
 ```
@@ -82,7 +82,7 @@ box-decoration-break: unset;
 - `slice`
   - : 要素は最初、ボックスが断片化していないかのように描画され、その後でこの仮想ボックスに描画されたものが、それぞれの行/段/ページの部分に分割されます。なお、仮想ボックスはインライン方向に分割された場合には独自の高さを使用し、ブロック方向に分割された場合は独自の幅を使用するため、それぞれの断片ごとに異なる場合があることに注意してください。詳しくは CSS の仕様書を参照してください。
 - `clone`
-  - : それぞれの断片が、それぞれの断片を囲む指定された境界、パディング、マージンを伴って個別に描画されます。 {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, {{ Cssxref("box-shadow") }} はそれぞれの断片に個別に適用されます。背景もそれぞれの断片で個別に描画されます。つまり、 {{ Cssxref("background-repeat") }}`: no-repeat` がついた背景画像であっても、複数回繰り返されます。
+  - : それぞれの断片が、それぞれの断片を囲む指定された境界、パディング、マージンを伴って個別に描画されます。 {{ Cssxref("border-radius") }}, {{ Cssxref("border-image") }}, {{ Cssxref("box-shadow") }} はそれぞれの断片に個別に適用されます。背景もそれぞれの断片で個別に描画されます。つまり、 {{ Cssxref("background-repeat", "background-repeat: no-repeat") }} がついた背景画像であっても、複数回繰り返されます。
 
 ## 公式定義
 
@@ -96,70 +96,110 @@ box-decoration-break: unset;
 
 ### インラインボックスの断片化
 
-改行を含むインライン要素は次のように整形されます。
+ボックス装飾を持つインライン要素は、最初の `slice` により、改行を含むと予期しない外観になる場合があります。次の例は、{{htmlelement("br")}} タグを含む {{htmlelement("span")}} に `box-decoration-break: clone` を追加した場合の効果を示しています。
 
-```html
-<style>
-  .example {
-    background: linear-gradient(to bottom right, yellow, green);
-    box-shadow:
-      8px 8px 10px 0px deeppink,
-      -5px -5px 5px 0px blue,
-      5px 5px 15px 0px yellow;
-    padding: 0em 1em;
-    border-radius: 16px;
-    border-style: solid;
-    margin-left: 10px;
-    font: 24px sans-serif;
-    line-height: 2;
-  }
-</style>
-…
-<span class="example">The<br />quick<br />orange fox</span>
+```css hidden
+body {
+  display: flex;
+  background-color: grey;
+  justify-content: space-around;
+}
+
+span {
+  padding: 0em 1em;
+  border-radius: 1rem;
+  border-style: solid;
+  margin: 1rem;
+  font: 22px sans-serif;
+  line-height: 2;
+}
 ```
-
-これは次のようになります。
-
-![box-decoration-break:slice と例で与えられたスタイルでスタイル付けされたインライン要素のレンダリングの画面ショット](box-decoration-break-inline-slice.png)
-
-上記のスタイルに `box-decoration-break: clone` を追加すると、
 
 ```css
--webkit-box-decoration-break: clone;
-box-decoration-break: clone;
+span {
+  background: linear-gradient(to bottom right, yellow, green);
+  box-shadow:
+    8px 8px 10px 0px deeppink,
+    -5px -5px 5px 0px blue,
+    5px 5px 15px 0px yellow;
+}
+
+#clone {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
 ```
 
-これは次のような結果になります。
+```html
+<p>
+  <span>The<br />quick<br />orange fox</span>
+</p>
+<p>
+  <span id="clone">The<br />quick<br />orange fox</span>
+</p>
+```
 
-![box-decoration-break:clone と例で与えられたスタイルでスタイル付けされたインライン要素のレンダリングの画面ショット](box-decoration-break-inline-clone.png)
-
-ブラウザーで[上記の 2 つのインラインの例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8179/df096e9eb57177d8b7fdcd0c8f64ef18/box-decoration-break-inline.html)ことができます。
-
-これはインライン要素に大きな `border-radius` の値を使用した例です。二番目の `"iM"` には、 `"i"` と `"M"` の間に改行があります。それに対して、最初の `"iM"` には改行がありません。なお、２つの断片の描画結果を水平に並べると、断片化されていない描画結果と同じになります。
-
-![2 つ目のインライン要素の例のレンダリングのスクリーンショット。](box-decoration-break-slice-inline-2.png)
-
-ブラウザーで[上の例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8191/7a067e5731355081e856ea02b978ea2e/box-decoration-break-inline-extreme.html)ことができます。
+{{embedlivesample("inline_box_fragments", "100%", "210")}}
 
 ### ブロックボックスの断片化
 
-上記と同様のスタイルのブロックボックスは、断片化がないと次のような結果になります。
+次の例は、[段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)で、ボックス装飾を持つブロック要素に改行が含まれている場合の表示を示しています。
+`box-decoration-break: slice` の結果は、垂直に積み重ねた場合、最初の {{htmlelement("div")}} と同等になることに注意してください。
 
-![例で使用したブロック要素を断片化せずにレンダリングした画面です。](box-decoration-break-block.png)
+```css hidden
+body {
+  background-color: grey;
+}
+span {
+  padding: 0em 2em;
+  border-radius: 250px;
+  border-style: solid;
+  margin-left: 1em;
+  font: 20px sans-serif;
+  line-height: 1.5;
+}
+```
 
-上記のブロックが 3 つの段に分割されると、次のような結果になります。
+```css
+span {
+  display: block;
+  background: linear-gradient(to bottom right, yellow, green);
+  box-shadow:
+    inset 8px 8px 10px 0px deeppink,
+    inset -5px -5px 5px 0px blue,
+    inset 5px 5px 15px 0px yellow;
+}
+#base {
+  width: 33%;
+}
+.columns {
+  columns: 3;
+}
 
-![box-decoration-break:slice でスタイル付けされた例で使用されている断片ブロックのレンダリングの画面ショットです。](box-decoration-break-block-slice.png)
+.clone {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+```
 
-なお、これらの断片を縦に並べると、断片化されていない描画結果と同じになります。
+```html
+<div id="base">
+  <span>The<br />quick<br />orange fox</span>
+</div>
+<br />
 
-そして、同じ例を `box-decoration-break: clone` で整形すると、次のような結果になります。
+<h2>'box-decoration-break: slice'</h2>
+<div class="columns">
+  <span>The<br />quick<br />orange fox</span>
+</div>
 
-![box-decoration-break:clone でスタイル付けされた例で使用されている断片ブロックのレンダリングの画面ショットです。](box-decoration-break-block-clone.png)
+<h2>'box-decoration-break: clone'</h2>
+<div class="columns">
+  <span class="clone">The<br />quick<br />orange fox</span>
+</div>
+```
 
-それぞれの断片に同じ境界線、ボックスの影、背景が複製されることに注意してください。
-
-ブラウザーで[上の例を試してみる](https://mdn.dev/archives/media/attachments/2014/07/12/8187/6288bde9d276d78e203c9f8b9a26ff65/box-decoration-break-block.html)ことができます。
+{{embedlivesample("block_box_fragments", "", "340")}}
 
 ## 仕様書
 
