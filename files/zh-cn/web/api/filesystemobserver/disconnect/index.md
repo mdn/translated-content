@@ -27,7 +27,7 @@ disconnect()
 
 ### 停止观察文件系统
 
-当你想要停止观察文件系统条目的变化时，可以调用 {{domxref("FileSystemObserver.disconnect()")}}：
+假设 `FileSystemObserver` 实例可用，当你想要停止观察文件系统条目的更改时，可以对其调用 `disconnect()` 方法：
 
 ```js
 observer.disconnect();
