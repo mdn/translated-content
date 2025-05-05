@@ -46,7 +46,7 @@ observe(handle, options)
 
 ### 观察文件或目录
 
-一旦 `FileSystemObserver` 实例可用，你就可以通过调用 {{domxref("FileSystemObserver.observe()")}} 方法开始观察文件系统条目的变化。
+假设 `FileSystemObserver` 实例可用，你可以通过调用 `observe()` 开始观察文件系统条目的变化。
 
 你可以通过向 `observe()` 传入 {{domxref("FileSystemFileHandle")}} 或 {{domxref("FileSystemDirectoryHandle")}} 来观察用户可观察文件系统或[源私有文件系统](/zh-CN/docs/Web/API/File_System_API/Origin_private_file_system)（OPFS）中的文件或目录。例如，当要求用户使用 {{domxref("Window.showSaveFilePicker()")}} 或 {{domxref("Window.showDirectoryPicker()")}} 选择文件或目录时，可以返回这些对象的实例：
 
