@@ -36,9 +36,9 @@ setTimeout(functionRef, delay, param1, param2, /* … ,*/ paramN)
 
 ### 반환 값
 
-반환하는 `timeoutID`는 양의 정수로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
+반환하는 `timeoutID`는 양의 정수(보통 1에서 2,147,483,647 범위)로서 `setTimeout()`이 생성한 타이머를 식별할 때 사용합니다. 이 값을 {{domxref("clearTimeout()")}}에 전달하면 타임아웃을 취소할 수 있습니다.
 
-같은 객체(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 객체끼리는 다른 ID 풀을 사용합니다.
+같은 전역 환경(창이나 워커)에서 반복해 호출하는 `setTimeout()` 또는 {{domxref("setInterval()")}} 메서드는 절대 같은 `timeoutID`를 사용하지 않습니다. 그러나 다른 전역 환경끼리는 다른 ID 풀을 별도로 사용합니다.
 
 ## 설명
 
