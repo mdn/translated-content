@@ -5,10 +5,10 @@ l10n:
   sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
-**`WebAssembly.Instance()`** 构造函数创建一个新的 `Instance` 对象，该对象是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个有状态、可执行的实例。
+**`WebAssembly.Instance()`** 构造函数创建一个新的 `Instance` 对象，该对象是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的有状态、可执行的实例。
 
 > [!WARNING]
-> 因为实例化大模块是很耗时的，当一定要使用同步的实例化时，开发者才应该使用 `Instance`；在所有其他情况下使用异步的 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法。
+> 因为实例化大模块的开销很大，当一定要使用同步实例化时，开发者才应该使用 `Instance`；在所有其他情况下使用异步的 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法。
 
 ## 语法
 
@@ -31,7 +31,7 @@ new WebAssembly.Instance(module, importObject)
 
 ## 示例
 
-### 同步地实例化一个 WebAssembly 模块
+### 同步实例化 WebAssembly 模块
 
 可以调用 `WebAssembly.Instance()` 构造函数同步地实例化一个指定的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
 
