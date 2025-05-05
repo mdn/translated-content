@@ -35,7 +35,7 @@ new FileSystemObserver(callback)
 
 ### 初始化 `FileSystemObserver`
 
-在开始观察文件或目录更改之前，你需要初始化一个 `FileSystemObserver` 来处理这些观察结果。这可以通过 {{domxref("FileSystemObserver.FileSystemObserver", "FileSystemObserver()")}} 构造函数来完成，该构造函数接受一个回调函数作为参数：
+在开始观察文件或目录更改之前，你需要初始化一个 `FileSystemObserver` 来处理这些观察结果。
 
 ```js
 const observer = new FileSystemObserver(callback);
