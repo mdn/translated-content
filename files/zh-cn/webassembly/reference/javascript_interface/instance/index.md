@@ -19,7 +19,7 @@ l10n:
 
 ## 示例
 
-### 同步地实例化一个 WebAssembly 模块
+### 同步实例化 WebAssembly 模块
 
 可以调用 `WebAssembly.Instance()` 同步地实例化一个指定的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
 
