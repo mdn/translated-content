@@ -2,12 +2,12 @@
 title: Document：head 屬性
 slug: Web/API/Document/head
 l10n:
-  sourceCommit: 
+  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
 ---
 
 {{APIRef("DOM")}}
 
-**`head`** 是 {{domxref("Document")}} 介面的唯讀屬性，會回傳當前文件的 {{HTMLElement("head")}} 元素。
+{{domxref("Document")}} 介面的 **`head`** 唯讀屬性回傳當前文件的 {{HTMLElement("head")}} 元素。
 
 ## 值
 
