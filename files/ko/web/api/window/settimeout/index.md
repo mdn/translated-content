@@ -1,5 +1,5 @@
 ---
-title: setTimeout() 전역 함수
+title: Window:setTimeout()
 slug: Web/API/Window/setTimeout
 original_slug: Web/API/setTimeout
 l10n:
@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-전역 **`setTimeout()`** 메서드는 만료된 후 함수나 지정한 코드 조각을 한 번 실행하는 타이머를 설정합니다.
+Window 인터페이스의 **`setTimeout()`** 메서드는 타이머를 설정하고 타이머가 만료되면 함수나 지정된 코드 조각을 한 번 실행합니다.
 
 ## 구문
 
