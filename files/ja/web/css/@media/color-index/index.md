@@ -1,6 +1,8 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{CSSRef}}
