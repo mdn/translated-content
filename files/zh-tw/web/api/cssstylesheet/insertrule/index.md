@@ -25,8 +25,8 @@ insertRule(rule, index)
 
   - : 包含要插入規則的字串。插入規則的內容需視其類型而定：
 
-    - **針對 [rule-sets](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax#css_statements)**，需包含[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)及樣式宣告。
-    - **針對 [at-rules](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)**，需包含 at-識別符與規則內容。
+    - **針對[規則集](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax#css_語句)**，需包含[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)及樣式宣告。
+    - **針對 [at-規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)**，需包含 at-識別符與規則內容。
 
 - `index` {{optional_inline}}
   - : 一個大於等於 0 且小於等於 `stylesheet.cssRules.length` 的正整數，表示新插入規則在 `{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。預設值為 `0`。（在舊版實作中此參數為必要。參見[瀏覽器相容性](#瀏覽器相容性)。）
