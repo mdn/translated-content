@@ -1,8 +1,8 @@
 ---
 title: Document：getElementsByClassName() 方法
 slug: Web/API/Document/getElementsByClassName
-l10n: 
-  sourceCommit: 
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{APIRef("DOM")}}
@@ -27,35 +27,35 @@ getElementsByClassName(names)
 
 ### 回傳值
 
-一個即時的 {{domxref("HTMLCollection")}}，包含找到的元素。
+一個包含所找到元素的即時 {{domxref("HTMLCollection")}}。
 
 ## 範例
 
-取得所有具有 'test' 類別的元素：
+取得所有具有「test」類別的元素：
 
 ```js
 document.getElementsByClassName("test");
 ```
 
-取得所有同時具有 'red' 和 'test' 類別的元素：
+取得所有同時具有「red」和「test」類別的元素：
 
 ```js
 document.getElementsByClassName("red test");
 ```
 
-在 ID 為 'main' 的元素內，取得所有具有 'test' 類別的元素：
+在 ID 為「main」的元素內，取得所有具有「test」類別的元素：
 
 ```js
 document.getElementById("main").getElementsByClassName("test");
 ```
 
-取得第一個具有 'test' 類別的元素，若無匹配的元素則回傳 `undefined`：
+取得第一個具有「test」類別的元素，若無匹配的元素則回傳 `undefined`：
 
 ```js
 document.getElementsByClassName("test")[0];
 ```
 
-我們也可以使用 Array.prototype 的方法，將任何 {{domxref("HTMLCollection")}} 作為方法的 _this_ 值。以下範例會找到所有具有 'test' 類別的 div 元素：
+我們也可以使用 Array.prototype 的方法，將任何 {{domxref("HTMLCollection")}} 作為方法的 _this_ 值。以下範例會找到所有具有「test」類別的 div 元素：
 
 ```js
 const testElements = document.getElementsByClassName("test");
@@ -65,7 +65,7 @@ const testDivs = Array.prototype.filter.call(
 );
 ```
 
-### 取得第一個類別為 'test' 的元素
+### 取得第一個類別為「test」的元素
 
 這是最常用的操作方式。
 
@@ -99,10 +99,10 @@ const testDivs = Array.prototype.filter.call(
 #### HTML
 
 ```html
-<span class="orange fruit">Orange Fruit</span>
-<span class="orange juice">Orange Juice</span>
-<span class="apple juice">Apple Juice</span>
-<span class="foo bar">Something Random</span>
+<span class="orange fruit">柳橙水果</span>
+<span class="orange juice">柳橙汁</span>
+<span class="apple juice">蘋果汁</span>
+<span class="foo bar">隨機的東西</span>
 <textarea id="resultArea" style="width:98%;height:7em"></textarea>
 ```
 
@@ -128,7 +128,7 @@ document.getElementById("resultArea").value = result;
 
 #### 結果
 
-{{EmbedLiveSample('Multiple_Classes_Example', '100%', 200)}}
+{{EmbedLiveSample('多類別範例', '100%', 200)}}
 
 ## 規範
 
