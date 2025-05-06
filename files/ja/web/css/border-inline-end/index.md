@@ -1,6 +1,8 @@
 ---
 title: border-inline-end
 slug: Web/CSS/border-inline-end
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -28,7 +30,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -63,6 +65,7 @@ border-inline-end: medium dashed blue;
 border-inline-end: inherit;
 border-inline-end: initial;
 border-inline-end: revert;
+border-inline-end: revert-layer;
 border-inline-end: unset;
 ```
 
@@ -78,8 +81,8 @@ border-inline-end: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -89,13 +92,13 @@ border-inline-end: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -114,7 +117,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("例", 140, 140)}}
 
 ## 仕様書
 
@@ -126,5 +129,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のうちの 1 つに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}
