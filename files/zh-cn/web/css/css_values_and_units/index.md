@@ -1,258 +1,244 @@
 ---
 title: CSS 值和单位
 slug: Web/CSS/CSS_Values_and_Units
+l10n:
+  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
 {{CSSRef}}
 
-所有的 CSS 声明都包括一个“属性/值”对。由于属性不同，对应的值可能是单个整数或关键字，也可能是一串包含或不包含单位的关键字和值的集合。CSS 属性接受一组共同的数据类型（属性的值和对应的单位）。下面是大多数这些数据类型的概览。想要获知每一种数据类型的更详细信息，请分别查看它们的链接。
-
-## 文本数据类型
-
-- {{cssxref("&lt;custom-ident&gt;")}}
-- 作为 `<ident>` 预定义的关键字
-- {{cssxref("&lt;string&gt;")}}
-- {{cssxref("&lt;url&gt;")}}
-
-文本数据类型要么是 `<string>`，要么是一系列字符的合集，或者是 `<ident>`——一个实质上是不带引号的字符串的"CSS 标识符"。一个 `<string>` 必须被单引号或者双引号所包围。CSS 标识符，在标准中所列出的 `<ident>` 或者 `<custom-ident>` 则必须不带引号。
-
-在 CSS 标准中，属性的值可以由 Web 开发者指定，例如关键帧动画（keyframe animations），字体的名称（font-family names），或者是被列为 {{cssxref("&lt;custom-ident&gt;")}} 和 / 或 {{cssxref("&lt;string&gt;")}} 的栅格区域（grid-areas）。
-
-当允许使用带引号或者不带引号的两种用户定义的文本属性值时，标准列出为 `<custom-ident> | <string>`，也就是说引号是可选的。例如在指定动画的名称时：
-
-```css
-@keyframe validIdent {
-  /* keyframes go here */
-}
-@keyframe 'validString' {
-  /* keyframes go here */
-}
-```
-
-有些文本属性值不允许被引号包围。例如， {{cssxref("grid-area")}} 属性对应的值可以是`<custom-ident>`，所以假设有一个栅格区域名为 `content` ，我们必须不带引号地使用：
-
-```css
-.item {
-  grid-area: content;
-}
-```
-
-相比之下，另一种数据类型是 {{cssxref("&lt;string&gt;")}}，例如 {{cssxref("content")}} 属性的值则必须被引号包围：
-
-```css
-.item::after {
-  content: "This is my content.";
-}
-```
-
-大多数时候你可以随心所欲地创建任何名称作为标识符，甚至包括使用 emoji 表情。然而标识符不能是 `none`，`unset`，`initial`，或者 `inherit`，以两条短横线开头。并且，你也不可以使用任何已经预定义的 CSS 关键字。查看 {{cssxref("&lt;custom-ident&gt;")}} 和 {{cssxref("&lt;string&gt;")}} 页面了解更多信息。
-
-### 预定义的关键值
-
-预定义的关键值是由 CSS 标准为属性定义的文本值。这些关键字也属于 CSS 标识符，因此在使用时无需用引号包围。
-
-当在 CSS 标准或者 MDN 属性页面中查看某个 CSS 属性时，该属性所有允许的取值都会以下面表格的形式列出。下面的值是 {{cssxref("float")}} 属性可以取的预定义值：
-
-```plain
-left | right | none | inline-start | inline-end
-```
-
-这些值在使用时不需要引号：
-
-```css
-.box {
-  float: left;
-}
-```
-
-### CSS 全局范围内的值
-
-预定义的关键值往往是针对某一个属性的。作为补充，所有 CSS 属性都可以接受 CSS 全局范围内的值：{{cssxref("initial")}}，{{cssxref("inherit")}} 和 {{cssxref("unset")}}。这些全局范围的值往往指定了一种默认的行为。
-
-`initial`指定了当前值作为属性的初始值。`inherit`关键字则指定当前元素的属性值基于父元素进行计算，即继承。
-
-`unset`关键字的作用是`inherit`或`initial`中的一者，取决于某个 CSS 属性是否可以自父元素继承。
-
-{{cssxref("revert")}} 在 Cascade Level 4 标准中被引入，但这一属性值还没有较好的浏览器支持现状。
-
-### URLs
-
-{{cssxref("&lt;url&gt;")}} 类型使用一个函数符号，接收一个`<string>`类型的 URL。这个 URL 可以是绝对地址或者相对地址。例如，如果你想要设置一张背景图片，那么你可以采用如下两种做法：
-
-```css
-.box {
-  background-image: url("images/my-background.png");
-}
-
-.box {
-  background-image: url("https://www.exammple.com/images/my-background.png");
-}
-```
-
-`url()`的参数可以也可以不使用引号。如果使用引号包围了 URL，那么它会被解析为一个`<url-token>`，包含对某些字符的额外转义。查看 {{cssxref("&lt;url&gt;")}} 以获取更多信息。
-
-## 数值数据类型
-
-- {{cssxref("&lt;integer&gt;")}}
-- {{cssxref("&lt;number&gt;")}}
-- {{cssxref("&lt;dimension&gt;")}}
-- {{cssxref("&lt;percentage&gt;")}}
-
-### 整数
-
-一个整数包含 `0` 到 `9` 的一个或多个十进制数字，例如 `1024` 或 `-55`。一个整数可能额外包含 `+` 或 `-` 前缀，在正负号和数值之间没有任何空格。
-
-### 数值
-
-{{cssxref("&lt;number&gt;")}} 表示一个真正的数，有可能又或者没有小数点和小数部分。例如 `0.255`，`128` 或 `-1.2`。数值也可能包含前缀 `+` 或 `-` 标识正负。
-
-### 尺寸
-
-{{cssxref("&lt;dimension&gt;")}} 是一个包含单位的 `<number>`，例如 `45deg`、`100ms` 或 `10px`。单位是大小写敏感的，且数值和单位之间不允许有任何的空格或其他字符。例如 `1 cm` 不是一个合法的值。
-
-CSS 使用尺寸来指定：
-
-- {{cssxref("&lt;length&gt;")}} （距离单位）
-- {{cssxref("&lt;angle&gt;")}}
-- {{cssxref("&lt;time&gt;")}}
-- {{cssxref("&lt;frequency&gt;")}}
-- {{cssxref("&lt;resolution&gt;")}}
-
-这些都将在下面的部分里一一介绍。
-
-#### 距离单位
-
-一个距离单位，或这也称为长度（length），允许作为属性的值。它被描述为 {{cssxref("&lt;length&gt;")}} 类型。CSS 中有两种长度：相对和绝对。
-
-相对长度单位基于其他元素的长度。例如 `em` 基于该元素的字号大小，`vh` 则与设备视口的高度有关。
-
-| 单位   | 基于...                                                                                                                               |
-| ------ | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | 元素的字号                                                                                                                            |
-| `ex`   | 字体的 X 字高（x-height）                                                                                                             |
-| `cap`  | 字体中大写字母的大写字高                                                                                                              |
-| `ch`   | Average character advance of a narrow glyph in the element’s font, as represented by the “0” (ZERO, U+0030) glyph.                    |
-| `ic`   | Average character advance of a full width glyph in the element’s font, as represented by the“水” (CJK water ideograph, U+6C34) glyph. |
-| `rem`  | 根元素的字体大小。                                                                                                                    |
-| `lh`   | 元素的行高。                                                                                                                          |
-| `rlh`  | 根元素的行高。                                                                                                                        |
-| `vw`   | 1% of viewport's width.                                                                                                               |
-| `vh`   | 1% of viewport's height.                                                                                                              |
-| `vi`   | 1% of viewport's size in the root element's inline axis.                                                                              |
-| `vb`   | 1% of viewport's size in the root element's block axis.                                                                               |
-| `vmin` | 1% of viewport's smaller dimension.                                                                                                   |
-| `vmax` | 1% of viewport's larger dimension.                                                                                                    |
-
-Absolute length units are fixed to a physical length: either an inch or a centimeter. Many of these units are therefore more useful when the output is a fixed size media, such as print. For example, `mm` is a physical millimeter, 1/10th of a centimeter.
-
-| Unit | Name                | Equivalent to       |
-| ---- | ------------------- | ------------------- |
-| `cm` | Centimeters         | 1cm = 96px/2.54     |
-| `mm` | Millimeters         | 1mm = 1/10th of 1cm |
-| `Q`  | Quarter-millimeters | 1Q = 1/40th of 1cm  |
-| `in` | Inches              | 1in = 2.54cm = 96px |
-| `pc` | Picas               | 1pc = 1/16th of 1in |
-| `pt` | Points              | 1pt = 1/72th of 1in |
-| `px` | Pixels              | 1px = 1/96th of 1in |
-
-When including a length value, if the length is `0`, the unit identifier is not required. Otherwise, the unit identifier is required, is case insensitive, and must come immediately after the numeric part of the value, with no space in-between.
-
-#### Angle units
-
-Angle values are represented by the type {{cssxref("&lt;angle&gt;")}} and accept the following values:
-
-| Unit   | Name     | Description                              |
-| ------ | -------- | ---------------------------------------- |
-| `deg`  | Degrees  | There are 360 degrees in a full circle.  |
-| `grad` | Gradians | There are 400 gradians in a full circle. |
-| `rad`  | Radians  | There are 2π radians in a full circle.   |
-| `turn` | Turns    | There is 1 turn in a full circle.        |
-
-#### Time units
-
-Time values are represented by the type {{cssxref("&lt;time&gt;")}}. When including a time value, the unit identifier — the `s` or `ms` — is required. It accepts the following values.
-
-| Unit | Name         | Description                               |
-| ---- | ------------ | ----------------------------------------- |
-| `s`  | Seconds      |                                           |
-| `ms` | Milliseconds | There are 1,000 milliseconds in a second. |
-
-#### Frequency units
-
-Frequency values are represented by the type {{cssxref("&lt;frequency&gt;")}}. It accepts the following values.
-
-| Unit  | Name      | Description                                      |
-| ----- | --------- | ------------------------------------------------ |
-| `Hz`  | Hertz     | Represents the number of occurrences per second. |
-| `kHz` | KiloHertz | A kiloHertz is 1000 Hertz.                       |
-
-`1Hz`, which can also be written as `1hz` or `1HZ`, is one cycle per second.
-
-#### Resolution unit
-
-Resolution units are represented by the type {{cssxref("&lt;resolution&gt;")}}. They represent the size of a single dot in a graphical representation, such as a screen, by indicating how many of these dots fit in a CSS inch, centimeter, or pixel. It accepts the following values:
-
-| Unit        | Description          |
-| ----------- | -------------------- |
-| `dpi`       | Dots per inch.       |
-| `dpcm`      | Dots per centimetre. |
-| `dppx`, `x` | Dots per px unit.    |
-
-### Percentages
-
-A {{cssxref("&lt;percentage&gt;")}} is a type that represents a fraction of some other value.
-
-Percentage values are always relative to another quantity, for example a length. Each property that allows percentages also defines the quantity to which the percentage refers. This quantity can be a value of another property of the same element, the value of a property of an ancestor element, a measurement of a containing block, or something else.
-
-As an example, if you specify the {{cssxref("width")}} of a box as a percentage, it refers to the percentage of the box's parent's computed width:
-
-```css
-.box {
-  width: 50%;
-}
-```
-
-### Mixing percentages and dimensions
-
-Some properties accept a dimension that could be either one of two types, for example a `<length>` **or** a `<percentage>`. In this case the allowed value is detailed in the specification as a combination unit, e.g. {{cssxref("&lt;length-percentage&gt;")}}. Other possible combinations are as follows:
-
-- {{cssxref("&lt;frequency-percentage&gt;")}}
-- {{cssxref("&lt;angle-percentage&gt;")}}
-- {{cssxref("&lt;time-percentage&gt;")}}
-
-### Special data types (defined in other specs)
-
-- {{cssxref("&lt;color&gt;")}}
-- {{cssxref("&lt;image&gt;")}}
-- {{cssxref("&lt;position&gt;")}}
-
-#### Color
-
-The {{cssxref("&lt;color&gt;")}} value specifies the color of an element feature (e.g. it's background color), and is defined in the [CSS Color Module](https://drafts.csswg.org/css-color-3/).
-
-#### Image
-
-The {{cssxref("&lt;image&gt;")}} value specifies all the different types of image that can be used in CSS, and is defined in the [CSS Image Values and Replaced Content Module](https://www.w3.org/TR/css-images-4/).
-
-#### Position
-
-The {{cssxref("&lt;position&gt;")}} type defines 2D positioning of an object inside a positioning area, for example a background image inside a container. This type is interpreted as a {{cssxref("background-position")}} and therefore specified in the [CSS Backgrounds and Borders specification](https://www.w3.org/TR/css-backgrounds-3/).
-
-### Functional notation
-
-- {{cssxref("calc", "calc()")}}
-- {{cssxref("min", "min()")}}
-- {{cssxref("max", "max()")}}
-- {{cssxref("minmax", "minmax()")}}
-- {{cssxref("clamp", "clamp()")}}
-- {{cssxref("toggle", "toggle()")}}
-- {{cssxref("attr", "attr()")}}
-
-Functional notation is a type of value that can represent more complex types or invoke special processing by CSS. The syntax starts with the name of the function immediately followed by a left parenthesis `(` followed by the argument(s) to the notation followed by a right parenthesis `)`. Functions can take multiple arguments, which are formatted similarly to a CSS property value.
-
-White space is allowed, but optional inside the parentheses. (But see notes regarding whitespace within pages for `min()`, `max()` and `clamp()` functions.)
-
-Some legacy functional notations such as `rgba()` use commas, but generally commas are only used to separate items in a list. If a comma is used to separate arguments, white space is optional before and after the comma.
+每个 CSS 声明都由一个属性或值对组成。属性值的具体形式因属性而异，可能为：单个整数、关键字、函数，或是不同元素的组合；部分值需带单位，而另一些则无需单位。所有 CSS 属性都接受 CSS 全局值。CSS 值与单位模块定义了 CSS 属性所接受的数据类型，包括各类值和单位。该模块还定义了 CSS 值定义语法（即形式化语法），用于规范所有 CSS 属性和函数的有效取值范围。
+
+## 参考
+
+### 属性
+
+- {{cssxref("interpolate-size")}}
+
+### 函数
+
+- {{cssxref("abs()")}}
+- {{cssxref("acos()")}}
+- {{cssxref("asin()")}}
+- {{cssxref("atan()")}}
+- {{cssxref("atan2()")}}
+- {{cssxref("attr()")}}
+- {{cssxref("calc()")}}
+- {{cssxref("calc-size()")}}
+- {{cssxref("clamp()")}}
+- {{cssxref("cos()")}}
+- {{cssxref("exp()")}}
+- {{cssxref("hypot()")}}
+- {{cssxref("ident()")}}
+- {{cssxref("inherit()")}}
+- {{cssxref("log()")}}
+- {{cssxref("max()")}}
+- {{cssxref("min()")}}
+- {{cssxref("mod()")}}
+- {{cssxref("pow()")}}
+- {{cssxref("rem()")}}
+- {{cssxref("round()")}}
+- {{cssxref("sign()")}}
+- {{cssxref("sin()")}}
+- {{cssxref("sqrt()")}}
+- {{cssxref("tan()")}}
+- {{cssxref("url()")}}
+
+规范中定义了包括 `calc-mix()`、`crossorigin()`、`first-valid()`、`if()`、`integrity()`、`progress()`、`random()`、`random-item()`、`referrerpolicy()`、`sibling-count()`、`sibling-index()`、`src()`、`type()` 和 `toggle()` 在内的多项函数，但这些功能目前尚未在浏览器中实现。
+
+### 数据类型
+
+- [`<angle-percentage>`](/zh-CN/docs/Web/CSS/angle-percentage)
+- [`<angle>`](/zh-CN/docs/Web/CSS/angle)
+- [`<animation-timeline>`](/zh-CN/docs/Web/CSS/animation-timeline)
+- [`<attr-name>`](/zh-CN/docs/Web/CSS/attr#attr-name)
+- [`<attr-type>`](/zh-CN/docs/Web/CSS/attr#attr-type)
+- {{CSSxRef("&lt;calc-keyword&gt;")}}（`e`、`pi`、`infinity`、{{glossary("NaN")}}）
+- [`<calc-size-basis>`](/zh-CN/docs/Web/CSS/calc-size#calc-size-basis)
+- [`<calc-sum>`](/zh-CN/docs/Web/CSS/calc-sum)
+- [`<custom-ident>`](/zh-CN/docs/Web/CSS/custom-ident)
+- [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident)
+- [`<dimension>`](/zh-CN/docs/Web/CSS/dimension)
+- [`<easing-function>`](/zh-CN/docs/Web/CSS/easing-function)
+- [`<first-valid()>`](/zh-CN/docs/Web/CSS)
+- [`<frequency>`](/zh-CN/docs/Web/CSS/frequency)
+- [`<frequency-percentage>`](/zh-CN/docs/Web/CSS/frequency-percentage)
+- [`<ident>`](/zh-CN/docs/Web/CSS/ident)
+- [`<integer>`](/zh-CN/docs/Web/CSS/integer)
+- [`<length-percentage>`](/zh-CN/docs/Web/CSS/length-percentage)
+- [`<length>`](/zh-CN/docs/Web/CSS/length)
+- [`<number>`](/zh-CN/docs/Web/CSS/number)
+- [`<percentage>`](/zh-CN/docs/Web/CSS/percentage)
+- [`<position>`](/zh-CN/docs/Web/CSS/position)
+- [`<ratio>`](/zh-CN/docs/Web/CSS/ratio)
+- [`<resolution>`](/zh-CN/docs/Web/CSS/resolution)
+- [`<rounding-strategy>`](/zh-CN/docs/Web/CSS/round#rounding-strategy)（`down`、`up`、`to-zero`）
+- [`<string>`](/zh-CN/docs/Web/CSS/string)
+- [`<syntax>`](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
+- [`<time-percentage>`](/zh-CN/docs/Web/CSS/time-percentage)
+- [`<time>`](/zh-CN/docs/Web/CSS/time)
+- [`<url>`](/zh-CN/docs/Web/CSS/url_value)
+- [`<url-modifier>`](/zh-CN/docs/Web/CSS/url_function#url-modifier)
+- [`<view-timeline-name>`](/zh-CN/docs/Web/CSS/view-timeline-name)
+
+#### 单位
+
+- [`%`（百分比）](/zh-CN/docs/Web/CSS/length#cap)
+- [`cap`](/zh-CN/docs/Web/CSS/length#cap)
+- [`ch`](/zh-CN/docs/Web/CSS/length#ch)
+- [`cm`](/zh-CN/docs/Web/CSS/length#cm)
+- [`deg`](/zh-CN/docs/Web/CSS/angle#deg)
+- [`dpcm`](/zh-CN/docs/Web/CSS/resolution#dpcm)
+- [`dpi`](/zh-CN/docs/Web/CSS/resolution#dpi)
+- [`dppx`](/zh-CN/docs/Web/CSS/resolution#dppx)
+- [`dvb`](/zh-CN/docs/Web/CSS/length#vb)
+- [`dvh`](/zh-CN/docs/Web/CSS/length#vh)
+- [`dvi`](/zh-CN/docs/Web/CSS/length#vi)
+- [`dvmax`](/zh-CN/docs/Web/CSS/length#vmax)
+- [`dvmin`](/zh-CN/docs/Web/CSS/length#vmin)
+- [`dvw`](/zh-CN/docs/Web/CSS/length#vw)
+- [`em`](/zh-CN/docs/Web/CSS/length#em)
+- [`ex`](/zh-CN/docs/Web/CSS/length#ex)
+- [`grad`](/zh-CN/docs/Web/CSS/angle#grad)
+- [`Hz`](/zh-CN/docs/Web/CSS/frequency#hz)
+- [`ic`](/zh-CN/docs/Web/CSS/length#ic)
+- [`in`](/zh-CN/docs/Web/CSS/length#in)
+- [`kHz`](/zh-CN/docs/Web/CSS/frequency#khz)
+- [`lh`](/zh-CN/docs/Web/CSS/length#lh)
+- [`lvb`](/zh-CN/docs/Web/CSS/length#vb)
+- [`lvh`](/zh-CN/docs/Web/CSS/length#vh)
+- [`lvi`](/zh-CN/docs/Web/CSS/length#vi)
+- [`lvmax`](/zh-CN/docs/Web/CSS/length#vmax)
+- [`lvmin`](/zh-CN/docs/Web/CSS/length#vmin)
+- [`lvw`](/zh-CN/docs/Web/CSS/length#vw)
+- [`mm`](/zh-CN/docs/Web/CSS/length#mm)
+- [`ms`](/zh-CN/docs/Web/CSS/time#ms)
+- [`pc`](/zh-CN/docs/Web/CSS/length#pc)
+- [`pt`](/zh-CN/docs/Web/CSS/length#pt)
+- [`px`](/zh-CN/docs/Web/CSS/length#px)
+- [`Q`](/zh-CN/docs/Web/CSS/length#q)
+- [`rad`](/zh-CN/docs/Web/CSS/angle#rad)
+- [`rcap`](/zh-CN/docs/Web/CSS/length#rcap)
+- [`rch`](/zh-CN/docs/Web/CSS/length#rch)
+- [`rem`](/zh-CN/docs/Web/CSS/length#rem)
+- [`rex`](/zh-CN/docs/Web/CSS/length#rex)
+- [`ric`](/zh-CN/docs/Web/CSS/length#ric)
+- [`rlh`](/zh-CN/docs/Web/CSS/length#rlh)
+- [`s`](/zh-CN/docs/Web/CSS/time#s)
+- [`svb`](/zh-CN/docs/Web/CSS/length#vb)
+- [`svh`](/zh-CN/docs/Web/CSS/length#vh)
+- [`svi`](/zh-CN/docs/Web/CSS/length#vi)
+- [`svmax`](/zh-CN/docs/Web/CSS/length#vmax)
+- [`svmin`](/zh-CN/docs/Web/CSS/length#vmin)
+- [`svw`](/zh-CN/docs/Web/CSS/length#vw)
+- [`turn`](/zh-CN/docs/Web/CSS/angle#turn)
+- [`vb`](/zh-CN/docs/Web/CSS/length#vb)
+- [`vh`](/zh-CN/docs/Web/CSS/length#vh)
+- [`vi`](/zh-CN/docs/Web/CSS/length#vi)
+- [`vmax`](/zh-CN/docs/Web/CSS/length#vmax)
+- [`vmin`](/zh-CN/docs/Web/CSS/length#vmin)
+- [`vw`](/zh-CN/docs/Web/CSS/length#vw)
+- [`x`](/zh-CN/docs/Web/CSS/resolution#x)
+
+[弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units)（`fr`）[容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）分别定义于 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 和 [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块。
+
+#### 单位分类
+
+- [Absolute length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`cm`、`in`、`mm`、`pc`、`pt`、`px`、`Q`）
+- [Angle units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#angle_units)（`deg`、`grad`、`rad`、`turn`）
+- [Default viewport units](/zh-CN/docs/Web/CSS/length#default_viewport_units)（`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
+- [Dynamic viewport units](/zh-CN/docs/Web/CSS/length#dynamic_viewport_units)（`dvb`、`dvh`、`dvi`、`dvmax`、`dvmin`、`dvw`）
+- [Frequency units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#frequency_units)（`Hz`、`kHz`）
+- [Large viewport-percentage units](/zh-CN/docs/Web/CSS/length#large_viewport_units)（`lvb`、`lvh`、`lvi`、`lvmax`、`lvmin`、`lvw`）
+- [Local font-relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`）
+- [Physical units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
+- [Relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
+- [Resolution units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#resolution_units)（`dpcm`、`dpi` , `dppx`、`x`）
+- [Root font-relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
+- [Small viewport-percentage unit](/zh-CN/docs/Web/CSS/length#small_viewport_units)（`svb`、`svh`、`svi`、`svmax`、`svmin`、`svw`）
+- [Time units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#time_units)（`ms`、`s`）
+- [Viewport units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
+- [Visual angle unit](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`px`）
+
+### 关键概念
+
+- {{glossary("Advance measure", "步进尺寸")}}
+- [Bracketed range notation](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#bracketed_range_notation_minmax)
+- [Component value combinators](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
+- [CSS-wide keywords](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
+- {{glossary("Device pixel", "设备像素")}}
+- [Functional notation](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- {{glossary("Identifier")}}
+- {{glossary("Interpolation")}}
+- {{glossary("Keyword")}}
+- [Math function](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [Numeric data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- {{glossary("Origin")}}
+- {{glossary("Pixel")}}
+- [Textual data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- {{glossary("URL")}}
+- [Value definition syntax](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+
+## 指南
+
+- [CSS data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+
+  - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
+
+- [Numeric data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+
+  - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
+
+- [Textual data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+
+  - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
+
+- [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+
+  - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
+
+- [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+
+  - : CSS 数学函数允许将属性值写成数学表达式的形式。
+
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+
+  - : 用于定义 CSS 属性和函数的有效值集合的形式语法。
+
+- [学习：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+
+  - : 了解一些最常用的值类型，它们是什么，以及它们是如何工作的。
+
+## Related
+
+- [CSS 层叠与继承](/zh-CN/docs/Web/CSS/CSS_cascade)模块
+
+  - {{cssxref("initial")}}
+  - {{cssxref("inherit")}}
+  - {{cssxref("revert")}}
+  - {{cssxref("revert-layer")}}
+  - {{cssxref("unset")}}
+  - {{cssxref("all")}}
+
+- [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)模块
+
+  - {{cssxref("&lt;flex&gt;")}}
+  - [弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#弹性单位)（`fr`）
+
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
+
+  - [容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）
+
+- [CSS 颜色](/zh-CN/docs/Web/CSS/CSS_colors)模块
+
+  - {{cssxref("&lt;color&gt;")}}
+  - {{cssxref("system-color")}}
+  - [`color-mix()`](/zh-CN/docs/Web/CSS/color_value/color-mix)
+
+- [CSS images](/zh-CN/docs/Web/CSS/CSS_images)模块
+
+  - {{cssxref("&lt;image&gt;")}}
+  - {{cssxref("&lt;gradient&gt;")}}
 
 ## 规范
 
@@ -260,5 +246,5 @@ Some legacy functional notations such as `rgba()` use commas, but generally comm
 
 ## 参见
 
-- [CSS 基本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
-- [CSS 介绍：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+- [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax)模块
+- [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
