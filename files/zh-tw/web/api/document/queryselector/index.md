@@ -7,13 +7,13 @@ l10n:
 
 {{ApiRef("DOM")}}
 
-{{domxref("Document")}} 方法 **`querySelector()`** 回傳文件中第一個符合指定[CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)或一組 CSS 選擇器的 {{domxref("Element")}}。如果沒有找到匹配項，則回傳 `null`。
+{{domxref("Document")}} 的 **`querySelector()`** 方法回傳文件中第一個符合指定[CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)或一組 CSS 選擇器的 {{domxref("Element")}}。如果沒有找到匹配項，則回傳 `null`。
 
 匹配是通過從文件節點的第一個元素開始，使用深度優先的先序遍歷進行的，並按照子節點數量的順序依次迭代。
 
-如果指定的選擇器匹配了一個在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
+如果指定的選擇器匹配了在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
 
-[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements) 永遠不會回傳任何元素，這是根據 [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) 的規範。
+根據 [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) 規範，[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
 
 ## 語法
 
@@ -25,20 +25,20 @@ querySelector(selectors)
 
 - `selectors`
 
-  - : 包含一個或多個選擇器的字串。此字串必須是有效的 CSS 選擇器字串；如果不是，則會拋出 `SyntaxError` 異常。
+  - : 包含一個或多個選擇器的字串。此字串必須是有效的 CSS 選擇器字串；如果不是，則會拋出 `SyntaxError` 例外。
 
-    注意，HTML 規範並不要求屬性值是有效的 CSS 識別符。如果 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性值不是有效的 CSS 識別符，那麼在選擇器中使用它之前，你必須對其進行轉義，可以通過調用 {{domxref("CSS.escape_static", "CSS.escape()")}} 或使用 [轉義字元](/zh-TW/docs/Web/CSS/ident#escaping_characters) 中描述的技術之一進行轉義。參見[轉義屬性值](#escaping_attribute_values)範例。
+    注意 HTML 規範並不要求屬性值是有效的 CSS 識別符。如果 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性值不是有效的 CSS 識別符，那麼在選擇器中使用它之前，你必須對其進行轉義，可以通過呼叫 {{domxref("CSS.escape_static", "CSS.escape()")}} 或使用 [轉義字元](/zh-TW/docs/Web/CSS/ident#轉義字元) 中描述的技術之一進行轉義。參見[轉義屬性值](#轉義屬性值)範例。
 
 ### 回傳值
 
 一個 {{domxref("Element")}} 物件，表示文件中第一個符合指定[CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)的元素；如果沒有匹配項，則回傳 `null`。
 
-如果你需要一個符合指定選擇器的所有元素的清單，應該使用 {{domxref("Document.querySelectorAll", "querySelectorAll()")}}。
+如果你需要符合指定選擇器的所有元素的清單，應該使用 {{domxref("Document.querySelectorAll", "querySelectorAll()")}}。
 
-### 異常
+### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 當指定的 _selectors_ 語法無效時拋出。
+  - : 當指定的*選擇器*語法無效時拋出。
 
 ## 範例
 
@@ -58,9 +58,9 @@ const el = document.querySelector(".myclass");
 const el = document.querySelector("div.user-panel.main input[name='login']");
 ```
 
-### 否定選擇器
+### 反向
 
-由於所有 CSS 選擇器字串都是有效的，你也可以否定選擇器：
+由於所有 CSS 選擇器字串都是有效的，你也可以反向選擇器：
 
 ```js
 const el = document.querySelector(
@@ -72,7 +72,7 @@ const el = document.querySelector(
 
 ### 轉義屬性值
 
-此範例顯示，如果 HTML 文件包含一個 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 不是有效的 [CSS 識別符](/zh-TW/docs/Web/CSS/ident)，那麼在 `querySelector()` 中使用它之前，我們必須對屬性值進行轉義。
+此範例顯示，如果 HTML 文件包含一個不是有效的 [CSS 識別符](/zh-TW/docs/Web/CSS/ident) 的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id)，那麼在 `querySelector()` 中使用它之前，我們必須對屬性值進行轉義。
 
 #### HTML
 
@@ -103,11 +103,11 @@ div {
 
 #### JavaScript
 
-當點擊這三個按鈕時，它們都會嘗試選擇 `<div>`，然後將其背景顏色設置為隨機值。
+當點擊這三個按鈕時，它們都會嘗試選擇 `<div>`，然後將其背景顏色設定為隨機值。
 
 - 第一個按鈕直接使用 `"this?element"` 值。
 - 第二個按鈕使用 {{domxref("CSS.escape_static", "CSS.escape()")}} 對值進行轉義。
-- 第三個按鈕通過反斜線顯式轉義 `"?"` 字元。注意，我們還必須使用另一個反斜線來轉義反斜線本身，例如：`"\\?"`。
+- 第三個按鈕通過反斜線顯式轉義 `"?"` 字元。注意，我們還必須使用另一個反斜線來轉義反斜線本身，像是：`"\\?"`。
 
 ```js
 const log = document.querySelector("#log");
@@ -145,7 +145,7 @@ document.querySelector("#manual-escape").addEventListener("click", () => {
 
 點擊第一個按鈕會產生錯誤，而第二個和第三個按鈕則能正常工作。
 
-{{embedlivesample("escaping_attribute_values", "", 200)}}
+{{embedlivesample("轉義屬性值", "", 200)}}
 
 ## 規範
 
