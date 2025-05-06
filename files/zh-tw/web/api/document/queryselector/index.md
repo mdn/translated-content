@@ -9,8 +9,6 @@ l10n:
 
 {{domxref("Document")}} 的 **`querySelector()`** 方法回傳文件中第一個符合指定 [CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)或一組 CSS 選擇器的 {{domxref("Element")}}。如果沒有找到匹配項，則回傳 `null`。
 
-翻譯如下：
-
 匹配是使用深度優先前序遍歷來進行的，從文件標記中的第一個元素開始，依據子節點的數量順序，依序遍歷文件中的節點。
 
 如果指定的選擇器匹配了在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
