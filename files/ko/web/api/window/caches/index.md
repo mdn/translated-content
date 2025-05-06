@@ -1,6 +1,7 @@
 ---
 title: "Window: caches property"
 short-title: caches
+slug: Web/API/Window/caches
 l10n:
   sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
