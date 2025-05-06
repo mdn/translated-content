@@ -1,17 +1,19 @@
 ---
 title: -moz-device-pixel-ratio
 slug: Web/CSS/@media/-moz-device-pixel-ratio
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}} {{Non-standard_header}} {{Deprecated_header}}
 
-**`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の Gecko のみの[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
+**`-moz-device-pixel-ratio`** は Gecko 独自の [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 CSS ピクセルあたりのデバイスピクセル数に基づいてスタイルを適用することができます。
 
 > [!WARNING]
 > この特性を使用しないでください。代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) 特性と `dppx` の単位を使用してください。
 
 > [!NOTE]
-> このメディア特性は Webkit および [IE 11 for Windows Phone 8.1](<https://msdn.microsoft.com/ja/library/ie/dn760733(v=vs.85).aspx>) でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が Webkit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
+> このメディア特性は Webkit でも `-webkit-device-pixel-ratio` として実装されています。 min および max 接頭辞は、 Gecko では `min--moz-device-pixel-ratio` および `max--moz-device-pixel-ratio` です。しかし、同じ接頭辞が WebKit では `-webkit-min-device-pixel-ratio` および `-webkit-max-device-pixel-ratio` として実装されています。
 
 ## 構文
 
@@ -19,7 +21,7 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
   - : CSS ピクセルあたりのデバイスピクセル数。
 
 **メディア:** {{cssxref("@media")}}
-**min/max 接頭辞の受付:** はい
+**min/max 接頭辞の受付:** あり
 
 ## 例
 
@@ -30,7 +32,7 @@ slug: Web/CSS/@media/-moz-device-pixel-ratio
 例:
 
 ```css
-/* Webkit ベースのブラウザー */
+/* WebKit ベースのブラウザー */
 @media (-webkit-min-device-pixel-ratio: 2),
   (min--moz-device-pixel-ratio: 2) /* 古い Firefox ブラウザー (firefox 16 以前) */,
   (min-resolution: 2dppx) /* 標準の方法 */,
