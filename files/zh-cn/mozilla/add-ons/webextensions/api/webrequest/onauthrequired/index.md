@@ -12,7 +12,7 @@ l10n:
 监听器可以通过以下四种方式之一响应：
 
 - 不采取任何行动
-  - : 监听器可以什么都不做，只观察请求。在这种情况下，监听器将不会影响请求的处理，并且浏览器会在适当情况下要求用户登录。
+  - : 监听器可以什么都不做，只观察请求。如果情况发生，监听器将不会影响请求的处理，并且浏览器会在适当情况下要求用户登录。
 - 取消请求
 
   - : 监听器可以取消请求。如果这样做，身份验证将失败，并且不会要求用户登录。扩展可以通过以下方式取消请求：
@@ -38,7 +38,7 @@ l10n:
       > [!NOTE]
       > Chrome 不支持 Promise 作为返回值（[Chromium issue 1510405](https://crbug.com/1510405)）。替代方案请参见[监听器的返回值](#listener)。
 
-参见[示例](#examples)。
+参见[示例](#示例)。
 
 如果你的扩展提供了错误的凭据，则会再次调用监听器。因此，请注意避免通过反复提供错误的凭据进入无限循环。
 
@@ -128,7 +128,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : `boolean`。请求是否来自隐私浏览窗口。
 - `isProxy`
   - : `boolean`。`true` 表示 `Proxy-Authenticate`，`false` 表示 `WWW-Authenticate`。
-    > **注意：** `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
+    > **备注：** `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
 - `method`
   - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
 - `parentFrameId`
@@ -160,7 +160,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
       - : `integer`。故障转移超时时间（秒）如果在此秒数后连接无法连接到代理服务器，则使用从 [FindProxyForURL()](/zh-CN/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file) 返回的数组中的下一个代理服务器。
 
 - `realm` {{optional_inline}}
-  - : `string`。如果存在，则为服务器提供的身份验证 [realm](https://datatracker.ietf.org/doc/html/rfc1945#section-11)。
+  - : `string`。如果存在，则为服务器提供的身份验证[领域](https://datatracker.ietf.org/doc/html/rfc1945#section-11)。
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
