@@ -73,10 +73,10 @@ const testDivs = Array.prototype.filter.call(
 <html lang="zh-TW">
   <body>
     <div id="parent-id">
-      <p>哈囉世界 1</p>
-      <p class="test">哈囉世界 2</p>
-      <p>哈囉世界 3</p>
-      <p>哈囉世界 4</p>
+      <p>你好世界 1</p>
+      <p class="test">你好世界 2</p>
+      <p>你好世界 3</p>
+      <p>你好世界 4</p>
     </div>
 
     <script>
@@ -86,7 +86,7 @@ const testDivs = Array.prototype.filter.call(
       console.log(test); // HTMLCollection[1]
 
       const testTarget = parentDOM.getElementsByClassName("test")[0]; // 我們想要的第一個元素
-      console.log(testTarget); // <p class="test">哈囉世界 2</p>
+      console.log(testTarget); // <p class="test">你好世界 2</p>
     </script>
   </body>
 </html>
