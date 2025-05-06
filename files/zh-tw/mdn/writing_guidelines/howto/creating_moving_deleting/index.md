@@ -6,7 +6,7 @@ l10n:
   sourceCommit: c6cab7f1aa7dc9f3495486a5b46020db320101cf
 ---
 
-本文描述如何建立、移動、刪除或編輯頁面。在進行這些操作之前，建議先檢查我們的[撰寫內容指引](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)，以確認是否應該進行這些操作，並在 MDN Web Docs 的[溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與團隊討論。
+本文描述如何建立、移動、刪除或編輯頁面。在進行這些操作之前，建議先查閱[我們撰寫的內容](/zh-TW/docs/MDN/Writing_guidelines/What_we_write)，以確認是否應該進行這些操作，並在 MDN Web Docs 的[溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與團隊討論。
 
 ## 建立頁面
 
@@ -17,11 +17,11 @@ MDN Web Docs 上的所有頁面均以 Markdown 格式撰寫。內容存放於名
 
 有許多不同的[頁面類型](/zh-TW/docs/MDN/Writing_guidelines/Page_structures/Page_types)，它們具有特定的結構和支援的頁面範本，你可以複製這些範本來開始撰寫。
 
-文件的 `index.md` 檔案必須以前設資料開頭，定義 `title`、`slug` 和 `page-type`。所有這些前設資料資訊都可以在上述的頁面範本中找到。或者，你可能會發現參考類似文件的 `index.md` 中的前設資料會有所幫助。
+文件的 `index.md` 檔案必須以前置內容開頭，定義 `title`、`slug` 和 `page-type`。所有這些前置內容資訊都可以在上述的頁面範本中找到。此外，你也可以查閱類似文件中的 `index.md`，並參考其前置內容，這可能會對你有所幫助。
 
 建立頁面的基本步驟如下：
 
-1. 開始一個全新的、最新的分支進行工作。
+1. 建立一個全新、最新的分支進行工作。
 
    ```bash
    cd ~/repos/mdn/content
@@ -42,7 +42,7 @@ MDN Web Docs 上的所有頁面均以 Markdown 格式撰寫。內容存放於名
    git push -u origin my-add
    ```
 
-4. 建立你的 Pull Request。
+4. 建立你的拉取請求。
 
 ## 移動頁面
 
@@ -52,13 +52,13 @@ MDN Web Docs 上的所有頁面均以 Markdown 格式撰寫。內容存放於名
 yarn content move <from-slug> <to-slug> [locale]
 ```
 
-你只需指定你想移動的現有文件的 slug（例如 `Web/HTTP/Guides/Authentication`），以及其新位置的 slug（例如 `Web/HTTP/Guides/Auth`），可選地還可以指定現有文件的語系（預設為 `en-US`）。
+你只需指定你想移動的現有文件的 slug（例如 `Web/HTTP/Guides/Authentication`），以及其新位置的 slug（例如 `Web/HTTP/Guides/Auth`），也可以選擇性地加上現有文件的語言（預設為 `en-US`）。
 
 如果你想移動的現有文件有子文件（即它代表一個文件樹），`yarn content move` 指令將移動整個文件樹。
 
 例如，假設你想將整個 `/en-US/Web/HTTP/Guides/Authentication` 文件樹移動到 `/en-US/Web/HTTP/Guides/Auth`，你需要執行以下步驟：
 
-1. 開始一個全新的分支進行工作。
+1. 建立一個全新的分支進行工作。
 
    ```bash
    cd ~/repos/mdn/content
@@ -89,14 +89,13 @@ yarn content move <from-slug> <to-slug> [locale]
    git push -u origin my-move
    ```
 
-5. 建立你的 Pull Request。
+5. 建立你的拉取請求。
 
-> [!NOTE]
-> `yarn content move` 指令會在 `_redirects.txt` 檔案中新增必要的重定向，讓舊位置會重定向到新位置。請勿手動編輯 `_redirects.txt` 檔案！如果需要新增重定向但不移動檔案，請在 [MDN Web Docs 溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與 MDN Web Docs 團隊討論。
+> **備註：** `yarn content move` 指令會在 `_redirects.txt` 檔案中新增必要的重新導向，讓舊位置會重新導向到新位置。請勿手動編輯 `_redirects.txt` 檔案！這樣很容易產生錯誤。如果需要新增重新導向但不移動檔案，請在 [MDN Web Docs 溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與 MDN Web Docs 團隊討論。
 
 ## 刪除頁面
 
-只有在特殊情況下，文件才應從 MDN Web Docs 中移除。如果你正在考慮刪除頁面，請先在 [MDN Web Docs 聊天室](/zh-TW/docs/MDN/Community/Communication_channels#chat_rooms)中與 MDN Web Docs 團隊討論。
+只有在特殊情況下，文件才應從 MDN Web Docs 中移除。如果你正在考慮刪除頁面，請先在 [MDN Web Docs 聊天室](/zh-TW/docs/MDN/Community/Communication_channels#聊天室)中與 MDN Web Docs 團隊討論。
 
 刪除一個或多個文件或整個文件樹非常簡單，就像移動頁面一樣，因為我們已經創建了一個特殊的指令來幫助你處理細節：
 
@@ -107,13 +106,13 @@ yarn content delete <document-slug> [locale]
 > [!NOTE]
 > 你需要使用 `yarn content delete` 指令來刪除 MDN Web Docs 中的頁面。請勿僅從 repo 中刪除其目錄。`yarn content delete` 指令還會處理其他必要的更改，例如更新 `_wikihistory.json` 檔案。
 
-你只需指定你想刪除的現有文件的 slug（例如 `Web/HTTP/Guides/Authentication`），可選地還可以指定現有文件的語系（預設為 `en-US`）。
+你只需指定你想刪除的現有文件的 slug（例如 `Web/HTTP/Guides/Authentication`），也可以選擇性地加上現有文件的語言（預設為 `en-US`）。
 
 如果你想刪除的現有文件有子文件（即它代表一個文件樹），你必須同時指定 `-r, --recursive` 選項，否則指令將失敗。
 
 例如，如果你想刪除整個 `/en-US/Web/HTTP/Guides/Authentication` 文件樹，你需要執行以下步驟：
 
-1. 開始一個全新的分支進行工作。
+1. 建立一個全新的分支進行工作。
 
    ```bash
    cd ~/repos/mdn/content
@@ -130,7 +129,7 @@ yarn content delete <document-slug> [locale]
    yarn content delete Web/HTTP/Guides/Authentication --recursive
    ```
 
-3. 新增重定向。目標頁面可以是外部 URL 或 MDN Web Docs 上的另一個頁面。
+3. 新增重新導向。目標頁面可以是外部 URL 或 MDN Web Docs 上的另一個頁面。
 
    ```bash
    yarn content add-redirect /en-US/path/of/deleted/page /en-US/path/of/target/page
@@ -143,7 +142,7 @@ yarn content delete <document-slug> [locale]
    git push -u origin my-delete
    ```
 
-5. 建立你的 Pull Request。
+5. 建立你的拉取請求。
 
 > [!NOTE]
 > 如果你想刪除的頁面 slug 包含特殊字元，請將其包含在引號中，例如：
@@ -152,16 +151,16 @@ yarn content delete <document-slug> [locale]
 > yarn content delete "Mozilla/Add-ons/WebExtensions/Debugging_(before_Firefox_50)"
 > ```
 
-從 MDN Web Docs 中移除內容不可避免地會導致更新現有內容。由於許多文章會鏈接到其他文章，移除的內容可能會在其他地方被引用。新增重定向將減輕移除內容的影響；然而，最佳做法是編輯內容以反映更改，並將內容編輯與移除的 Pull Request 一起提交。
+從 MDN Web Docs 中移除內容不可避免地會導致更新現有內容。由於許多文章會連結到其他文章，移除的內容可能會在其他地方被引用。新增重新導向將減輕移除內容的影響；然而，最佳做法是編輯內容以反映更改，並將內容編輯與移除的拉取請求一起提交。
 
 ## 編輯現有頁面
 
-要編輯頁面，你需要在我們的[內容](https://github.com/mdn/content)儲存庫中找到頁面原始碼。找到它的最簡單方法是導航到你想編輯的頁面，移動到頁面底部，然後點擊「在 GitHub 上查看原始碼」連結。
+要編輯頁面，你需要在我們的[內容](https://github.com/mdn/content)倉儲中找到頁面原始碼。找到它的最簡單方法是到你想編輯的頁面，移動到頁面底部，然後點擊「View this page on GitHub」連結。
 
 ### 預覽更改
 
-如果你在本地編輯頁面，想查看更改的效果，可以進入內容儲存庫資料夾，執行 CLI 指令 `yarn start`，然後在瀏覽器中打開 `localhost:5042`，導航到頁面並查看它。輸入標題到搜尋框中可以輕鬆找到它。預覽的頁面會隨著你編輯原始碼而在瀏覽器中更新。
+如果你在本地編輯頁面並想查看更改的效果，可以進入內容倉儲資料夾，執行 CLI 指令 `yarn start`，然後在瀏覽器中打開 `localhost:5042`，到頁面並查看它。在搜尋框中輸入標題可以輕鬆找到它。預覽的頁面會隨著你編輯原始碼而在瀏覽器中更新。
 
 ### 附加檔案
 
-若要將檔案附加到文章中，只要將檔案放在與文章的 `index.md` 檔案相同的目錄即可。通常透過 {{htmlelement("a")}} 元素將檔案加入頁面中。
+若要將檔案附加到文章中，只要將檔案放在與文章的 `index.md` 檔案相同的目錄。通常透過 {{htmlelement("a")}} 元素將檔案加入頁面中。
