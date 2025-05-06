@@ -1,14 +1,11 @@
 ---
 title: <mask>
 slug: Web/SVG/Reference/Element/mask
-original_slug: Web/SVG/Element/mask
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-**`<mask>`** 要素は、現在のオブジェクトを背景に合成するためのアルファマスクを定義します。マスクは {{SVGAttr("mask")}} プロパティを使用して使用/参照します。
+**`<mask>`** は [SVG](/ja/docs/Web/SVG) の要素で、現在のオブジェクトを背景に合成するためのアルファマスクを定義します。マスクは {{SVGAttr("mask")}} プロパティを使用して使用/参照します。
 
 ## 例
 
@@ -46,22 +43,22 @@ svg {
 
 - {{SVGAttr("height")}}
   - : この属性はマスク領域の高さを定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `120%`; _アニメーション_: **可**
 - {{SVGAttr("maskContentUnits")}}
   - : この属性は `<mask>` のコンテンツの座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
+    _値の型_: `userSpaceOnUse` | `objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 - {{SVGAttr("maskUnits")}}
   - : この属性は `<mask>` の属性 {{SVGAttr("x")}}, {{SVGAttr("y")}}, {{SVGAttr("width")}}, {{SVGAttr("height")}} の座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `objectBoundingBox`; _アニメーション_: **可**
+    _値の型_: `userSpaceOnUse` | `objectBoundingBox` ; _既定値_: `objectBoundingBox`; _アニメーション_: **可**
 - {{SVGAttr("x")}}
   - : この属性は、マスク領域の左上隅の x 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate); _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : この属性は、マスク領域の左上隅の y 軸座標を定義します。
-    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate) ; _既定値_: `-10%`; _アニメーション_: **可**
+    _値の型_: [**\<coordinate>**](/ja/docs/Web/SVG/Guides/Content_type#coordinate); _既定値_: `-10%`; _アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : この属性はマスク領域の幅を定義します。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) ; _既定値_: `120%`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length); _既定値_: `120%`; _アニメーション_: **可**
 
 ## 使用上のメモ
 

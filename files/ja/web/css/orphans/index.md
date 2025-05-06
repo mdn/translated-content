@@ -1,11 +1,17 @@
 ---
 title: orphans
 slug: Web/CSS/orphans
+l10n:
+  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
 {{CSSRef}}
 
 **`orphans`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*最下部*に表示されるブロックコンテナーの最小行数を設定します。
+
+組版において、オルファン (_orphan_) とは段落の最初の行がページの末尾に単独で現れることです。 (段落は次のページへ続きます。)
+
+## 構文
 
 ```css
 /* <integer> 値 */
@@ -16,12 +22,9 @@ orphans: 3;
 orphans: inherit;
 orphans: initial;
 orphans: revert;
+orphans: revert-layer;
 orphans: unset;
 ```
-
-組版において、オルファン (_orphan_) とは段落の最初の行がページの末尾に単独で現れることです。 (段落は次のページへ続きます。)
-
-## 構文
 
 ### 値
 
@@ -88,4 +91,4 @@ p:first-child {
 ## 関連情報
 
 - {{cssxref("widows")}}
-- [ページ化メディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [ページメディア](/ja/docs/Web/CSS/CSS_paged_media)

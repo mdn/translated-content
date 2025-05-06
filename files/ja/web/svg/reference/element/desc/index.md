@@ -1,14 +1,11 @@
 ---
 title: <desc>
 slug: Web/SVG/Reference/Element/desc
-original_slug: Web/SVG/Element/desc
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`<desc>`** 要素は SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな長文の説明を提供します。
+**`<desc>`** は [SVG](/ja/docs/Web/SVG) の要素で、 SVG の[コンテナー要素](/ja/docs/Web/SVG/Reference/Element#コンテナー要素)または[グラフィック要素](/ja/docs/Web/SVG/Reference/Element#グラフィック要素)のアクセシブルな長文の説明を提供します。
 
 `<desc>` 要素内のテキストはグラフィックの一部としてレンダリングされません。要素が可視テキストで記述できる場合、 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性でそのテキストを参照することが可能です。 `aria-describedby` を使用する場合、 `<desc>` よりも優先されます。
 
