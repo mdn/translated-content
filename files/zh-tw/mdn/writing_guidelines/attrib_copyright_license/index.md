@@ -18,13 +18,13 @@ MDN Web Docs 內容免費提供，並採用各種開源授權條款。
 
 你再使用這裡的內容時，必須以相同的授權條款（CC-BY-SA v2.5 或任何後續版本）發布。當你再使用 MDN Web Docs 的內容時，必須確保[提供著作者標示](https://creativecommons.org/licenses/by/2.5/deed.zh-hant#src-appropriate-credit)，並註明「Mozilla 貢獻者」。良好的標示方式為文件**標題**，並加上超連結（線上）或網址（印刷品）指向所引用內容的特定頁面，並簡要說明你所做的修改。例如，若要對本頁內容提供著作者標示，你可以寫：
 
-> 由 Mozilla 貢獻者撰寫的[「著作者標示與著作權授權」](/zh-TW/docs/MDN/Writing_guidelines/Attrib_copyright_license)，依 [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/deed.zh-hant) 授權。
+> 歸屬於 Mozilla 貢獻者的[「著作者標示與著作權授權」](/zh-TW/docs/MDN/Writing_guidelines/Attrib_copyright_license)在 [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/deed.zh-hant) 許可下提供。
 
 你也可以將「Mozilla 貢獻者」連結到頁腳的 `contributors.txt` 檔案，以便合理地列出作者清單。參見[著作者標示的建議做法](https://wiki.creativecommons.org/wiki/Recommended_practices_for_attribution)得知更多細節。
 
 ### 程式碼範例
 
-2010 年 8 月 20 日（含）之後新增的程式碼範例皆屬於 [CC0 1.0 通用](https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant)。不需特別標示授權，但如有需要，可使用：「任何版權均已捐獻至公有領域：https://creativecommons.org/publicdomain/zero/1.0/」
+2010 年 8 月 20 日（含）之後新增的程式碼範例皆屬於 [CC0 通用](https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant)。不需特別標示授權，但如有需要，可使用：`任何版權均已捐獻至公有領域：https://creativecommons.org/publicdomain/zero/1.0/`
 
 2010 年 8 月 20 日之前新增的程式碼範例則採用 [MIT 授權](https://opensource.org/license/mit)；你應在 MIT 授權範本中填入以下標示資訊：「© \<最後一次 wiki 頁面修訂日期> \<將程式碼加入 wiki 的人名>」。
 
@@ -32,7 +32,7 @@ MDN Web Docs 內容免費提供，並採用各種開源授權條款。
 
 ### 你的貢獻
 
-若你希望貢獻內容至 MDN Web Docs，即表示你同意你的文件內容將以相同方式分享授權條款（或該頁面已指定的其他授權條款）提供，而你的程式碼範例將以 [CC0 1.0 通用](https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant)（公眾領域貢獻）授權。
+若你希望貢獻內容至 MDN Web Docs，即表示你同意你的文件內容將以相同方式分享授權條款（或該頁面已指定的其他授權條款）提供，而你的程式碼範例將以[創用 CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.zh-hant)（公眾領域貢獻）授權。
 
 > [!WARNING]
 > 不得以其他授權條款建立新頁面。
@@ -68,8 +68,8 @@ Mozilla 基金會的標誌、商標、服務標章，以及本網站的整體設
 
 **若內容採開放授權發布：**
 
-- 請說明授權類型，並附上授權連結，以便我們確認其是否與[MDN 授權條款](https://github.com/mdn/content/blob/main/LICENSE.md)相容。
+- 請說明授權類型，並附上授權連結，以便我們確認其是否與 [MDN 授權條款](https://github.com/mdn/content/blob/main/LICENSE.md)相容。
 
 ## 連結至 MDN Web Docs 文章
 
-我們經常收到使用者詢問是否可以連結至 MDN Web Docs，以及如何連結。簡單來說：**你可以連結至 MDN Web Docs！** 超連結是網路的本質，不僅能為你的用戶指向有價值的資源，也展現你對我們社群成果的信任。
+我們經常收到使用者詢問是否可以連結至 MDN Web Docs，以及如何連結。簡單來說：**你可以連結至 MDN Web Docs**！超連結是網路的本質，不僅能為你的用戶指向有價值的資源，也展現你對我們社群成果的信任。
