@@ -102,4 +102,4 @@ observer.disconnect();
 ## 参见
 
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
-- developer.chrome.com（2024）上的[文件系统观察器 API 源试用](https://developer.chrome.google.cn/blog/file-system-observer#stop-observing-the-file-system)
+- developer.chrome.com 上的[文件系统观察器 API 源试用](https://developer.chrome.google.cn/blog/file-system-observer#stop-observing-the-file-system)（2024）
