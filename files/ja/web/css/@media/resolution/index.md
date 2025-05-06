@@ -1,11 +1,13 @@
 ---
 title: resolution
 slug: Web/CSS/@media/resolution
+l10n:
+  sourceCommit: a18eaa8478fb9da1de8052cb2a18b00be00cdca0
 ---
 
 {{CSSRef}}
 
-**`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末のピクセル解像度をテストするために使用することができます。
+**`resolution`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力端末のピクセル解像度を検査するために使用することができます。
 
 ## 構文
 
@@ -15,29 +17,35 @@ slug: Web/CSS/@media/resolution
 
 ### HTML
 
-```html
-<p>This is a test of your device's pixel density.</p>
+```html-nolint
+<p>これは、お使いのデバイスのピクセル密度を検査するものです。</p>
 ```
 
 ### CSS
 
 ```css
-/* 正確な解像度 */
+/* 単位 `dpi` による正確な解像度 */
 @media (resolution: 150dpi) {
   p {
     color: red;
   }
 }
 
-/* 最小解像度 */
-@media (min-resolution: 72dpi) {
+/* 同義語である `dppx` および `x` による最小解像度 */
+@media (min-resolution: 2dppx) {
   p {
     text-decoration: underline;
   }
 }
 
-/* 最大解像度 */
-@media (max-resolution: 300dpi) {
+@media (min-resolution: 2x) {
+  p {
+    text-decoration: underline;
+  }
+}
+
+/* 単位 `dpcm` による最大解像度 */
+@media (max-resolution: 2dpcm) {
   p {
     background: yellow;
   }
