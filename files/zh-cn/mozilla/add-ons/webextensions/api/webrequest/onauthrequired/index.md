@@ -95,7 +95,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `string` 的 `array`。事件的额外选项。你可以传递以下值中的任何一个：
+  - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下值中的任何一个：
 
     - `"blocking"`：使请求阻塞，以便你可以取消请求或提供身份验证凭据。返回一个 `BlockingResponse` 对象，其 `cancel` 或 `authCredentials` 属性已设置。
 
