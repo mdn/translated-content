@@ -1,6 +1,7 @@
 ---
 title: "Window: cookieStore property"
 short-title: cookieStore
+slug: Web/API/Window/cookieStore
 l10n:
   sourceCommit: 01e8b5077df6d79e52f2521dfbe734e0923d1fc4
 ---
