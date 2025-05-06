@@ -89,7 +89,7 @@ l10n:
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // … auction configuration
+  // ……auction 配置
   resolveToConfig: true,
 });
 

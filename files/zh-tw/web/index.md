@@ -14,7 +14,7 @@ l10n:
 ## Web 開發者說明文件
 
 - [Web 開發者指南](/zh-TW/docs/MDN/Guides)
-  - : 提供實用教學，幫助你實際使用 Web 技術來達成你的目標或需求。
+  - : Web 開發者指南提供實用教學，幫助你實際使用 Web 技術來達成你的目標或需求。
 - [Web 開發者入門](/zh-TW/docs/MDN/Tutorials)
   - : 帶你逐步學習 HTML、CSS、JavaScript 和 Web API。
 - [無障礙](/zh-TW/docs/Web/Accessibility)
