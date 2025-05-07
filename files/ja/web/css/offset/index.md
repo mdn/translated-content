@@ -9,7 +9,7 @@ l10n:
 
 **`offset`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素を定義された経路に沿って動かすのに必要なすべてのプロパティを設定します。
 定義されたパスに沿って要素をアニメーションするために必要なすべてのプロパティを設定します。 offset プロパティは、オフセット変換を定義するのに役立ちます。これは、[座標変換](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)であり、
-要素内の点 ([offset-anchor](/en-US/docs/Web/CSS/offset-anchor)) を、パス ([offset-path](/en-US/docs/Web/CSS/offset-path)) 上のさまざまな点 ([offset-distance](/en-US/docs/Web/CSS/offset-distance)) にあるオフセット位置 ([offset-position](/en-US/docs/Web/CSS/offset-position)) に配置し、またオプションで、パスの方向に従うように要素を回転 ([offset-rotate](/en-US/docs/Web/CSS/offset-rotate)) することもできます。
+要素内の点 ([offset-anchor](/ja/docs/Web/CSS/offset-anchor)) を、パス ([offset-path](/ja/docs/Web/CSS/offset-path)) 上のさまざまな点 ([offset-distance](/ja/docs/Web/CSS/offset-distance)) にあるオフセット位置 ([offset-position](/ja/docs/Web/CSS/offset-position)) に配置し、またオプションで、パスの方向に従うように要素を回転 ([offset-rotate](/ja/docs/Web/CSS/offset-rotate)) することもできます。
 
 > [!NOTE]
 > 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
