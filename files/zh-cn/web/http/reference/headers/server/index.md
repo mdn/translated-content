@@ -2,15 +2,19 @@
 title: Server
 slug: Web/HTTP/Reference/Headers/Server
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-**`Server`** 标头描述了处理请求的源服务器（即生成响应的服务器）所使用的软件。
+HTTP **`Server`** {{Glossary("response header", "响应标头")}}用于描述处理请求并生成响应的源服务器所使用的软件信息。
+
+通过该标头公开服务器类型和版本的好处在于，它有助于进行分析，并识别特定兼容性问题的普遍程度。从历史上看，客户端会利用服务器的版本信息来规避已知的限制，例如某些软件版本中对[范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)支持不一致的问题。
 
 > [!WARNING]
-> 避免使用过于详细的 `Server` 值，因为它们可能会透露信息，使攻击者（更容易）利用已知的安全漏洞。
+> 响应中包含该标头，尤其是在其暴露了有关服务器软件的细粒度实现细节时，可能会使已知漏洞更容易被发现。
+
+`Server` 标头中包含过多详细信息并不建议，这不仅可能影响响应延迟，还可能带来前文提到的安全风险。是否隐藏该标头中的信息是否真正带来好处仍存在争议，因为服务器软件的指纹识别仍可通过其他方式实现。总体而言，更稳健的服务器安全策略是确保软件定期更新或修补已知漏洞。
 
 <table class="properties">
   <tbody>
@@ -19,7 +23,7 @@ l10n:
       <td>{{Glossary("Response header", "响应标头")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的标头")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止修改的请求标头")}}</th>
       <td>否</td>
     </tr>
   </tbody>
@@ -33,10 +37,8 @@ Server: <product>
 
 ## 指令
 
-- \<product>
+- `<product>`
   - : 处理请求的软件或产品名称。通常格式类似于 {{HTTPHeader('User-Agent')}}。
-
-包含多少细节是一个需要平衡的问题；暴露操作系统版本可能是个坏主意，正如前面关于过于详细的值的警告所提到的。不过，暴露的 Apache 版本可以帮助浏览器解决版本中的一个错误，即结合使用 {{HTTPHeader('Content-Encoding')}} 和 {{HTTPHeader('Range')}}。
 
 ## 示例
 
@@ -55,3 +57,5 @@ Server: Apache/2.4.1 (Unix)
 ## 参见
 
 - {{HTTPHeader("Allow")}}
+- [HTTP 观测站](/zh-CN/observatory)
+- [通过 HTTP 标头防止信息泄露](https://owasp.org/www-project-secure-headers/index.html#prevent-information-disclosure-via-http-headers)——OWASP 安全标头项目
