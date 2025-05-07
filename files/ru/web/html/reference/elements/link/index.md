@@ -183,18 +183,23 @@ HTML-элемент **`<link>`** определяет отношения меж�
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="favicon144.png" />
+  href="/shared-assets/images/examples/favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="favicon114.png" />
+  href="/shared-assets/images/examples/favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  sizes="72x72"
+  href="/shared-assets/images/examples/favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
+<link
+  rel="apple-touch-icon-precomposed"
+  href="/shared-assets/images/examples/favicon57.png" />
 <!-- basic favicon -->
-<link rel="icon" href="favicon32.png" />
+<link rel="icon" href="/shared-assets/images/examples/favicon32.png" />
 ```
 
 ### Условная загрузка ресурсов с медиавыражениями

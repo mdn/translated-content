@@ -199,25 +199,23 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="/shared-assets/images/examples/favicon144.png" />
 <!-- Для iPhone с Retina-экраном высокого разрешения: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="/shared-assets/images/examples/favicon114.png" />
 <!-- Для iPad первого и второго поколения: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+  href="/shared-assets/images/examples/favicon72.png" />
 <!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
 <link
   rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+  href="/shared-assets/images/examples/favicon57.png" />
 <!-- Для других случаев - обычный favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="/shared-assets/images/examples/favicon32.png" />
 ```
 
 В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
