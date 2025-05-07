@@ -27,11 +27,11 @@ querySelector(selectors)
 
   - : 包含一個或多個選擇器的字串。此字串必須是有效的 CSS 選擇器字串；如果不是，則會拋出 `SyntaxError` 例外。
 
-    注意 HTML 規範並不要求屬性值是有效的 CSS 識別符。如果 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性值不是有效的 CSS 識別符，那麼在選擇器中使用它之前，你必須對其進行轉義，可以通過呼叫 {{domxref("CSS.escape_static", "CSS.escape()")}} 或使用 [轉義字元](/zh-TW/docs/Web/CSS/ident#轉義字元) 中描述的技術之一進行轉義。參見[轉義屬性值](#轉義屬性值)範例。
+    注意 HTML 規範並不要求屬性值是有效的 CSS 識別符。如果 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性值不是有效的 CSS 識別符，那麼在選擇器中使用它之前，你必須對其進行轉義，可以通過呼叫 {{domxref("CSS.escape_static", "CSS.escape()")}} 或使用[轉義字元](/zh-TW/docs/Web/CSS/ident#轉義字元)中描述的技術之一進行轉義。參見[轉義屬性值](#轉義屬性值)範例。
 
 ### 回傳值
 
-一個 {{domxref("Element")}} 物件，表示文件中第一個符合指定[CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)的元素；如果沒有匹配項，則回傳 `null`。
+一個 {{domxref("Element")}} 物件，表示文件中第一個符合指定 [CSS 選擇器](/zh-TW/docs/Web/CSS/CSS_selectors)的元素；如果沒有匹配項，則回傳 `null`。
 
 如果你需要符合指定選擇器的所有元素的清單，應該使用 {{domxref("Document.querySelectorAll", "querySelectorAll()")}}。
 
@@ -52,7 +52,7 @@ const el = document.querySelector(".myclass");
 
 ### 複雜選擇器
 
-選擇器也可以非常強大，如以下範例所示。這裡，回傳文件中位於類別為 `user-panel main` 的 {{HTMLElement("div")}}（`<div class="user-panel main">`）內，名稱為 `login` 的第一個 {{HTMLElement("input")}} 元素（`<input name="login"/>`）：
+選擇器也可以非常強大，如以下範例所示。這裡回傳文件中位於類別為 `user-panel main` 的 {{HTMLElement("div")}}（`<div class="user-panel main">`）內，名稱為 `login` 的第一個 {{HTMLElement("input")}} 元素（`<input name="login"/>`）：
 
 ```js
 const el = document.querySelector("div.user-panel.main input[name='login']");
@@ -72,7 +72,7 @@ const el = document.querySelector(
 
 ### 轉義屬性值
 
-此範例顯示，如果 HTML 文件包含一個不是有效的 [CSS 識別符](/zh-TW/docs/Web/CSS/ident) 的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id)，那麼在 `querySelector()` 中使用它之前，我們必須對屬性值進行轉義。
+此範例顯示，如果 HTML 文件包含一個不是有效的 [CSS 識別符](/zh-TW/docs/Web/CSS/ident)的 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id)，那麼在 `querySelector()` 中使用它之前，我們必須對屬性值進行轉義。
 
 #### HTML
 
