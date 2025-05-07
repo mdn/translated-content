@@ -24,7 +24,7 @@ const gettingUserScripts = await browser.userScripts.getScripts(
 
 ### 返回值
 
-如果找到匹配的用户脚本，返回一个包含 {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 对象的数组的 {{JSxRef("Promise")}}。如果没有找到匹配的用户脚本，数组为空。如果请求失败，Promise 将被拒绝并返回错误信息。
+一个 {{WebExtAPIRef("userScripts.RegisteredUserScript")}}，其会以 {{JSxRef("Promise")}} 对象的数组兑现。如果没有找到匹配的用户脚本，则兑现的数组为空。如果请求失败，则该 promise 将以错误消息拒绝。
 
 {{WebExtExamples("h2")}}
 
