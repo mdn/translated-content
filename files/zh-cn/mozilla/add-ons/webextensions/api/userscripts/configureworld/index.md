@@ -9,9 +9,9 @@ l10n:
 
 为扩展配置 `USER_SCRIPT` 执行环境。
 
-对世界配置的更改仅适用于新实例：在重新加载文档之前，配置不会应用于通过执行文档中的用户脚本而初始化的世界。然而，当更新配置时，浏览器可能会撤销某些权限。例如，如果扩展将 `messaging` 设置为 `false`，来自 `USER_SCRIPT` 世界的消息调用可能会失败。
+对环境配置的更改仅适用于新实例：在重新加载文档之前，配置不会应用于通过执行文档中的用户脚本而初始化的环境。然而，当更新配置时，浏览器可能会撤销某些权限。例如，如果扩展将 `messaging` 设置为 `false`，来自 `USER_SCRIPT` 环境的消息调用可能会失败。
 
-世界的配置会一直保留，直至扩展被更新或通过调用 {{WebExtAPIRef("userScripts.resetWorldConfiguration()")}} 重置了这一配置。
+环境的配置会一直保留，直至扩展被更新或通过调用 {{WebExtAPIRef("userScripts.resetWorldConfiguration()")}} 重置了这一配置。
 
 ## 语法
 
@@ -25,11 +25,11 @@ let configuredWorld = browser.userScripts.configureWorld(
 
 - `properties`
 
-  - : {{WebExtAPIRef("userScripts.WorldProperties")}}。`USER_SCRIPT` 世界的配置详情。
+  - : {{WebExtAPIRef("userScripts.WorldProperties")}}。`USER_SCRIPT` 环境的配置详情。
 
-    当 `worldId` 被省略或为空字符串时，更新将应用于默认世界和所有没有显式配置的世界。当指定了 `worldId` 时，仅将只配置这一世界。
+    当 `worldId` 被省略或为空字符串时，更新将应用于默认环境和所有没有显式配置的环境。当指定了 `worldId` 时，仅将只配置这一环境。
 
-    当更新默认世界和没有显式配置的世界时，如果省略了属性，则使用 {{WebExtAPIRef("userScripts.WorldProperties")}} 的默认值。
+    当更新默认环境和没有显式配置的环境时，如果省略了属性，则使用 {{WebExtAPIRef("userScripts.WorldProperties")}} 的默认值。
 
 ### 返回值
 
