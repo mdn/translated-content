@@ -90,7 +90,7 @@ class MyAutonomousElement extends HTMLElement {
 }
 ```
 
-此元素不執行任何操作：一個真正的自主元素會在其建構子和標準提供的生命週期回呼中實作其功能。請參見我們的[使用自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)指南。
+此元素不執行任何操作：一個真正的獨立元素會在其建構子和標準提供的生命週期回呼中實作其功能。請參見我們的自訂元素使用指南中的[實作自訂元素](/zh-TW/docs/Web/API/Web_components/Using_custom_elements)。
 
 然而，上述類別定義滿足 `define()` 方法的要求，因此我們可以使用以下程式碼定義它：
 
