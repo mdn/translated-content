@@ -24,7 +24,7 @@ let unregisteringUserScripts = browser.userScripts.unregister(
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，如果用户脚本被注销，则该 Promise 会被 fulfilled 且无参数。如果请求失败，Promise 会被 rejected 并带有错误消息。
+一个 {{JSxRef("Promise")}}，如果用户脚本被注销，则该 promise 将不带参数地兑现。如果请求失败，则该 promise 将以错误消息拒绝。
 
 {{WebExtExamples("h2")}}
 
