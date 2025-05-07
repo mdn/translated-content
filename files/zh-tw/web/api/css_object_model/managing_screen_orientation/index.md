@@ -174,5 +174,5 @@ screen.orientation.lock();
 
 - {{domxref("Screen.orientation", "screen.orientation")}}
 - {{domxref("ScreenOrientation")}}
-- {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件的 {{domxref("ScreenOrientation")}}
+- {{domxref("ScreenOrientation")}} 的 {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件
 - [方向媒體查詢](/zh-TW/docs/Web/CSS/@media/orientation)
