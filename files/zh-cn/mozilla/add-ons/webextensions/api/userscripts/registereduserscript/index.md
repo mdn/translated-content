@@ -24,9 +24,9 @@ l10n:
 - `excludeMatches` {{optional_inline}}
   - : `string` 的数组（`array`）。用于匹配不应让脚本执行的页面的[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)。
 - `includeGlobs` {{optional_inline}}
-  - : `string`。用于匹配执行脚本的页面的 [Glob 模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs)。在 {{WebExtAPIRef("userScripts.register()")}} 调用中必须指定 `matches` 或 `includeGlobs` 其中之一。
+  - : `string`。用于匹配执行脚本的页面的 [Glob 模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#glob)。在 {{WebExtAPIRef("userScripts.register()")}} 调用中必须指定 `matches` 或 `includeGlobs` 其中之一。
 - `excludeGlobs` {{optional_inline}}
-  - : `string`。用于匹配不应让脚本执行的页面的 [Glob 模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#globs)。
+  - : `string`。用于匹配不应让脚本执行的页面的 [Glob 模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts#glob)。
 - `runAt` {{optional_inline}}
   - : {{WebExtAPIRef("extensionTypes.RunAt")}}。脚本注入到标签页的最早时间。默认为 `"document_idle"`。
 - `world` {{optional_inline}}
