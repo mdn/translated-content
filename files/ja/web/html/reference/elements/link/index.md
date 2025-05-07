@@ -318,26 +318,15 @@ l10n:
 
 ```html
 <!-- 高解像度ディスプレイの第 3 世代 iPad -->
-<link
-  rel="apple-touch-icon"
-  sizes="144x144"
-  href="/shared-assets/images/examples/favicon144.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="favicon144.png" />
 <!-- 高解像度ディスプレイの iPhone -->
-<link
-  rel="apple-touch-icon"
-  sizes="114x114"
-  href="/shared-assets/images/examples/favicon114.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="favicon114.png" />
 <!-- 第 1、第 2 世代の iPad: -->
-<link
-  rel="apple-touch-icon"
-  sizes="72x72"
-  href="/shared-assets/images/examples/favicon72.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="favicon72.png" />
 <!-- 高解像度でない iPhone, iPod Touch, Android 2.1 以降の端末 -->
-<link
-  rel="apple-touch-icon"
-  href="/shared-assets/images/examples/favicon57.png" />
+<link rel="apple-touch-icon" href="favicon57.png" />
 <!-- 基本的なファビコン -->
-<link rel="icon" href="/shared-assets/images/examples/favicon32.png" />
+<link rel="icon" href="favicon32.png" />
 ```
 
 ### メディアクエリーのついた条件付きのリソース読み込み
