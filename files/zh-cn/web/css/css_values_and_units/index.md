@@ -144,58 +144,58 @@ l10n:
 
 #### 单位分类
 
-- [Absolute length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`cm`、`in`、`mm`、`pc`、`pt`、`px`、`Q`）
-- [Angle units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#angle_units)（`deg`、`grad`、`rad`、`turn`）
-- [Default viewport units](/zh-CN/docs/Web/CSS/length#default_viewport_units)（`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
-- [Dynamic viewport units](/zh-CN/docs/Web/CSS/length#dynamic_viewport_units)（`dvb`、`dvh`、`dvi`、`dvmax`、`dvmin`、`dvw`）
-- [Frequency units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#frequency_units)（`Hz`、`kHz`）
-- [Large viewport-percentage units](/zh-CN/docs/Web/CSS/length#large_viewport_units)（`lvb`、`lvh`、`lvi`、`lvmax`、`lvmin`、`lvw`）
-- [Local font-relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#local_font-relative_lengths)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`）
-- [Physical units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
-- [Relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
-- [Resolution units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#resolution_units)（`dpcm`、`dpi` , `dppx`、`x`）
-- [Root font-relative length units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#root_font-relative_lengths)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
-- [Small viewport-percentage unit](/zh-CN/docs/Web/CSS/length#small_viewport_units)（`svb`、`svh`、`svi`、`svmax`、`svmin`、`svw`）
-- [Time units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#time_units)（`ms`、`s`）
-- [Viewport units](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#viewport_units)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
-- [Visual angle unit](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#absolute_length_units)（`px`）
+- [绝对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`px`、`Q`）
+- [角度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#角度单位)（`deg`、`grad`、`rad`、`turn`）
+- [默认视口单位](/zh-CN/docs/Web/CSS/length#默认视口单位)（`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
+- [动态视口单位](/zh-CN/docs/Web/CSS/length#动态视口单位)（`dvb`、`dvh`、`dvi`、`dvmax`、`dvmin`、`dvw`）
+- [频率单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#频率单位)（`Hz`、`kHz`）
+- [大视口百分比单位](/zh-CN/docs/Web/CSS/length#大视口单位)（`lvb`、`lvh`、`lvi`、`lvmax`、`lvmin`、`lvw`）
+- [本地字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#本地字体相对长度单位)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`）
+- [物理单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
+- [相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
+- [分辨率单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#分辨率单位)（`dpcm`、`dpi` , `dppx`、`x`）
+- [根字号相关长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#根字号相关长度单位)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
+- [小视口百分比单位](/zh-CN/docs/Web/CSS/length#小视口单位)（`svb`、`svh`、`svi`、`svmax`、`svmin`、`svw`）
+- [时间单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#时间单位)（`ms`、`s`）
+- [视口单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#视口单位)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
+- [视觉角度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`px`）
 
 ### 关键概念
 
 - {{glossary("Advance measure", "步进尺寸")}}
-- [Bracketed range notation](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#bracketed_range_notation_minmax)
-- [Component value combinators](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#component_value_combinators)
-- [CSS-wide keywords](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css-wide_keywords)
+- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法_最小值最大值)
+- [组件值组合符](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#组件值组合符)
+- [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css_全局关键字)
 - {{glossary("Device pixel", "设备像素")}}
-- [Functional notation](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
-- {{glossary("Identifier")}}
-- {{glossary("Interpolation")}}
-- {{glossary("Keyword")}}
-- [Math function](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
-- [Numeric data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
-- {{glossary("Origin")}}
-- {{glossary("Pixel")}}
-- [Textual data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [函数表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- {{glossary("Identifier", "标识符")}}
+- {{glossary("Interpolation", "插值")}}
+- {{glossary("Keyword", "关键词")}}
+- [数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
+- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- {{glossary("Origin", "源")}}
+- {{glossary("Pixel", "像素")}}
+- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 - {{glossary("URL")}}
-- [Value definition syntax](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+- [值定义语法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 
 ## 指南
 
-- [CSS data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
+- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 
-  - : Introduction to CSS data types that define typical values accepted by CSS properties and functions.
+  - : CSS 数据类型的简介，这些数据类型定义了 CSS 属性和函数接受的典型值。
 
-- [Numeric data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
+- [数值数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)
 
-  - : Overview of the numeric data types, including integers, numbers, percentages, and dimensions, along with relative and absolute dimensions, angles, and time units.
+  - : 数值数据类型的概述，包括整数、数字、百分比和尺寸，以及相对与绝对长度、角度和时间单位。
 
-- [Textual data types](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
+- [文本数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)
 
-  - : Overview of the textual data types, including pre-defined keyword values, global CSS keyword values, and URLs.
+  - : 文本数据类型的概述，包括预定义关键字值、全局 CSS 关键字值以及 URL。
 
 - [CSS 值函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
 
-  - : Overview of the CSS statements that invoke special data processing or calculations to return a CSS value for a CSS property.
+  - : 概述那些通过特殊数据处理或计算来返回 CSS 属性值的 CSS 语句。
 
 - [使用 CSS 数学函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Using_CSS_math_functions)
 
@@ -209,7 +209,7 @@ l10n:
 
   - : 了解一些最常用的值类型，它们是什么，以及它们是如何工作的。
 
-## Related
+## 相关
 
 - [CSS 层叠与继承](/zh-CN/docs/Web/CSS/CSS_cascade)模块
 
@@ -235,7 +235,7 @@ l10n:
   - {{cssxref("system-color")}}
   - [`color-mix()`](/zh-CN/docs/Web/CSS/color_value/color-mix)
 
-- [CSS images](/zh-CN/docs/Web/CSS/CSS_images)模块
+- [CSS 图像](/zh-CN/docs/Web/CSS/CSS_images)模块
 
   - {{cssxref("&lt;image&gt;")}}
   - {{cssxref("&lt;gradient&gt;")}}
