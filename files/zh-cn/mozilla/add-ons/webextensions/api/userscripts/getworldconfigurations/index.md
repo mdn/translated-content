@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-返回扩展通过 {{WebExtAPIRef("userScripts.configureWorld()")}} 注册的所有 `USER_SCRIPT` 世界配置。
+返回扩展通过 {{WebExtAPIRef("userScripts.configureWorld()")}} 注册的所有 `USER_SCRIPT` 世界的配置。
 
 ## 语法
 
@@ -21,7 +21,7 @@ const gettingWorldConfigurations = await browser.userScripts.getWorldConfigurati
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，其解析值为 {{WebExtAPIRef("userScripts.WorldProperties")}} 对象的数组。如果请求失败，Promise 将以错误消息被拒绝。
+一个 {{JSxRef("Promise")}}，其会以 {{WebExtAPIRef("userScripts.WorldProperties")}} 对象的数组兑现。如果请求失败，则该 promise 将以错误消息拒绝。
 
 {{WebExtExamples("h2")}}
 
