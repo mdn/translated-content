@@ -2,7 +2,7 @@
 title: userScripts.getWorldConfigurations()
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts/getWorldConfigurations
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
 {{AddonSidebar}}
