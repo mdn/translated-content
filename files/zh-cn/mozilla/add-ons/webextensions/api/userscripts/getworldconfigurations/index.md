@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-返回扩展通过 {{WebExtAPIRef("userScripts.configureWorld()")}} 注册的所有 `USER_SCRIPT` 世界的配置。
+返回扩展通过 {{WebExtAPIRef("userScripts.configureWorld()")}} 注册的所有 `USER_SCRIPT` 环境的配置。
 
 ## 语法
 
