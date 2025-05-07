@@ -1,6 +1,8 @@
 ---
 title: 伪类
 slug: Web/CSS/Pseudo-classes
+l10n:
+  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
 ---
 
 {{CSSRef}}
@@ -117,93 +119,93 @@ button:hover {
 这些伪类应用于能够处于被描述为“正在播放”状态的媒体，例如视频。
 
 - {{CSSxRef(":playing")}}
-  - : Represents a playable element that is playing.
+  - : 代表正在播放的可播放元素。
 - {{CSSxRef(":paused")}}
-  - : Represents a playable element that is paused.
+  - : 代表已暂停的可播放元素。
 - {{CSSxRef(":seeking")}}
-  - : Represents a playable element that is currently seeking a playback position in the media resource.
+  - : 代表当前正在媒体资源中寻找播放位置的可播放元素。
 - {{CSSxRef(":buffering")}}
-  - : Represents a playable element that is playing but is temporarily stalled because it is downloading the media resource.
+  - : 代表正在播放但由于正在下载媒体资源而暂时停滞的可播放元素。
 - {{CSSxRef(":stalled")}}
-  - : Represents a playable element that is playing but is stalled because it cannot download the media resource.
+  - : 代表正在播放但因无法下载媒体资源而停滞的可播放元素。
 - {{CSSxRef(":muted")}}
-  - : Represents a sound-producing element that is muted.
+  - : 代表已静音的可发声元素。
 - {{CSSxRef(":volume-locked")}}
-  - : Represents a sound-producing element that has its volume level locked by the browser.
+  - : 代表其音量级别被浏览器锁定的可发声元素。
 
 ## 时间维度伪类
 
 这些伪类适用于查看有计时功能的东西，如 [WebVTT](/zh-CN/docs/Web/API/WebVTT_API) 字幕轨。
 
 - {{CSSxRef(":current")}}
-  - : Represents the element or ancestor of the element that is being displayed.
+  - : 代表正在显示的元素或元素的祖先。
 - {{CSSxRef(":past")}}
-  - : Represents an element that occurs entirely before the {{CSSxRef(":current")}} element.
+  - : 代表完全出现在 {{CSSxRef(":current")}} 元素之前的元素。
 - {{CSSxRef(":future")}}
-  - : Represents an element that occurs entirely after the {{CSSxRef(":current")}} element.
+  - : 代表完全出现在 {{CSSxRef(":current")}} 元素之后的元素。
 
 ## 树结构伪类
 
 这些伪类与文档树中的元素位置有关。
 
 - {{CSSxRef(":root")}}
-  - : Represents an element that is the root of the document. In HTML this is usually the `<html>` element.
+  - : 代表文档的根元素。在 HTML 中，它通常是 `<html>` 元素。
 - {{CSSxRef(":empty")}}
-  - : Represents an element with no children other than white-space characters.
+  - : 代表除空格字符外没有其他子元素的元素。
 - {{CSSxRef(":nth-child", ":nth-child()")}}
-  - : Uses `An+B` notation to select elements from a list of sibling elements.
+  - : 使用 `An+B` 表记从同级元素列表中选择元素。
 - {{CSSxRef(":nth-last-child", ":nth-last-child()")}}
-  - : Uses `An+B` notation to select elements from a list of sibling elements, counting backwards from the end of the list.
+  - : 使用 `An+B` 表记从同级元素列表中选择元素，从列表末尾开始计数。
 - {{CSSxRef(":first-child")}}
-  - : Matches an element that is the first of its siblings.
+  - : 匹配同级元素中的第一个元素。
 - {{CSSxRef(":last-child")}}
-  - : Matches an element that is the last of its siblings.
+  - : 匹配同级元素中的最后一个元素。
 - {{CSSxRef(":only-child")}}
-  - : Matches an element that has no siblings. For example, a list item with no other list items in that list.
+  - : 匹配没有同级元素的元素。例如，该列表中没有其他列表项的列表项。
 - {{CSSxRef(":nth-of-type", ":nth-of-type()")}}
-  - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements.
+  - : 使用 `An+B` 表记从同级元素列表中选择符合特定类型的元素。
 - {{CSSxRef(":nth-last-of-type", ":nth-last-of-type()")}}
-  - : Uses `An+B` notation to select elements from a list of sibling elements that match a certain type from a list of sibling elements counting backwards from the end of the list.
+  - : 使用 `An+B` 表记从同级元素列表中选择符合特定类型的元素，从列表末尾开始计数。
 - {{CSSxRef(":first-of-type")}}
-  - : Matches an element that is the first of its siblings, and also matches a certain type selector.
+  - : 匹配同级元素中的第一个元素，同时匹配特定的类型选择器。
 - {{CSSxRef(":last-of-type")}}
-  - : Matches an element that is the last of its siblings, and also matches a certain type selector.
+  - : 匹配同级元素中的最后一个元素，同时匹配特定的类型选择器。
 - {{CSSxRef(":only-of-type")}}
-  - : Matches an element that has no siblings of the chosen type selector.
+  - : 匹配没有所选类型选择器同级元素的元素。
 
 ## 影子结构伪类
 
 这些伪类与影子 DOM 有关。
 
 - {{CSSxRef(":host")}}
-  - : Matches the shadow tree's shadow host.
+  - : 匹配影子树的影子根。
 - {{CSSxRef(":host_function", ":host()")}}
-  - : Matches an element that matches {{CSSxRef(":host")}} and matches any of the selectors in the list provided.
+  - : 匹配与 {{CSSxRef(":host")}} 匹配并与所提供列表中任意选择器匹配的元素。
 - {{CSSxRef(":host-context", ":host-context()")}}
-  - : Selects elements outside of the shadow tree in the context of the shadow host.
+  - : 在影子宿主的上下文中选择影子树以外的元素。
 - {{CSSxRef(":has-slotted")}}
-  - : Matches slot elements that have been assigned content.
+  - : 匹配已分配内容的插槽元素。
 
 ## 用户行为伪类
 
 这些伪类需要用户进行一些交互才能够应用，例如将鼠标指针悬停在元素上。
 
 - {{CSSxRef(":hover")}}
-  - : Matches when a user designates an item with a pointing device, such as holding the mouse pointer over the item.
+  - : 当用户使用指向设备（如将鼠标指针放在项目上）指定项目时匹配。
 - {{CSSxRef(":active")}}
-  - : Matches when an item is being activated by the user. For example, when the item is clicked on.
+  - : 当用户激活项目时匹配。如点击项目时。
 - {{CSSxRef(":focus")}}
-  - : Matches when an element has focus.
+  - : 当元素具有焦点时匹配。
 - {{CSSxRef(":focus-visible")}}
-  - : Matches when an element has focus and the user agent identifies that the element should be visibly focused.
+  - : 当元素具有焦点且用户代理确定该元素应被明显聚焦时匹配。
 - {{CSSxRef(":focus-within")}}
-  - : Matches an element to which {{CSSxRef(":focus")}} applies, plus any element that has a descendant to which {{CSSxRef(":focus")}} applies.
+  - : 匹配 {{CSSxRef(":focus")}} 适用的元素，以及 {{CSSxRef(":focus")}} 适用的后代元素。
 - {{CSSxRef(":target-current")}}
-  - : Matches the {{cssxref("::scroll-marker")}} pseudo-element of a {{cssxref("scroll-marker-group")}} that is currently scrolled to, in other words, the **active** scroll marker.
+  - : 匹配当前滚动到的 {{cssxref("::scroll-marker")}} 的 {{cssxref("scroll-marker-group")}} 伪元素，换句话说，就是**活动的**滚动标记。
 
 ## 函数式伪类
 
-这些伪类接受[选择器列表](/en-US/docs/Web/CSS/Selector_list)或[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)作为参数。
+这些伪类接受[选择器列表](/zh-CN/docs/Web/CSS/Selector_list)或[可容错选择器列表](/zh-CN/docs/Web/CSS/Selector_list#可容错选择器列表)作为参数。
 
 - [`:is()`](/zh-CN/docs/Web/CSS/:is)
   - : 匹配与提供的列表中的任何选择器匹配的任何元素。
@@ -219,20 +221,20 @@ button:hover {
 这些伪类应用于自定义元素。
 
 - {{CSSxRef(":state", ":state()")}}
-  - : Matches custom elements that have the specified custom state.
+  - : 匹配具有指定自定义状态的自定义元素。
 
 ## 页面伪类
 
 这些伪类与打印文档中的页面有关，与 At 规则 {{CSSxRef("@page")}} 一起使用。
 
 - {{CSSxRef(":left")}}
-  - : Represents all left-hand pages of a printed document.
+  - : 代表打印文档的所有左侧页面。
 - {{CSSxRef(":right")}}
-  - : Represents all right-hand pages of a printed document.
+  - : 代表打印文档的所有右侧页面。
 - {{CSSxRef(":first")}}
-  - : Represents the first page of a printed document.
+  - : 代表打印文档的第一页。
 - `:blank`
-  - : Represents a blank page in a printed document.
+  - : 代表打印文档的空页。
 
 ## 语法
 
