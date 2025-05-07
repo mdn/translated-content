@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-用户脚本的代码或源文件，描述了 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 中 "js" 属性的对象值。
+用户脚本的代码或源文件，描述了 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 中“js”属性的对象值。
 
 ## 类型
 
