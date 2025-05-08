@@ -16,7 +16,7 @@ l10n:
 - `loading`
   - : {{domxref("document")}} 仍在載入中。
 - `interactive`
-  - : 文件已完成載入並且文件已被解析，但子資源（例如腳本、圖片、樣式表和框架）仍在載入中。此狀態表示 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件即將觸發。
+  - : 文件已完成載入並且已被解析，但子資源（例如腳本、圖片、樣式表和框架）仍在載入中。此狀態表示 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件即將觸發。
 - `complete`
   - : 文件和所有子資源已完成載入。此狀態表示 {{domxref("Window/load_event", "load")}} 事件即將觸發。
 
