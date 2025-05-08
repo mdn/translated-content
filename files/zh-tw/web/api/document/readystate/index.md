@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Document.readyState`** 屬性描述 {{domxref("document")}} 的載入狀態。當此屬性的值改變時，{{domxref("Document/readystatechange_event", "readystatechange")}} 事件會在 {{domxref("document")}} 物件上觸發。
+**`Document.readyState`** 屬性描述{{domxref("document", "文件", "", 1)}}的載入狀態。當此屬性的值改變時，{{domxref("Document/readystatechange_event", "readystatechange")}} 事件會在 {{domxref("document")}} 物件上觸發。
 
 ## 值
 
