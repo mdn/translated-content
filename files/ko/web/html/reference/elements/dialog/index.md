@@ -526,7 +526,7 @@ closeBtn.addEventListener("click", () => {
 
 코드는 다음과 같이 렌더링됩니다.
 
-{{ EmbedLiveSample("Transitioning dialog elements", "100%", 200) }}
+{{ EmbedLiveSample("대화_상자_요소_전환하기", "100%", "200") }}
 
 > [!NOTE] > `<dialog>`는 표시될 때마다 `display: none`에서 `display: block`으로 변경되므로, 대화 상자는 전환이 시작될 때마다 `@starting-style` 스타일에서 `dialog:open` 스타일로 전환됩니다. `<dialog>`가 닫히면 `dialog:open` 상태에서 기본 `dialog` 상태로 전환됩니다.
 >
@@ -641,7 +641,7 @@ closeBtn.addEventListener("click", () => {
 
 코드는 다음과 같이 렌더링됩니다.
 
-{{ EmbedLiveSample("dialog keyframe animations", "100%", "200") }}
+{{ EmbedLiveSample("대화_상자_키프레임_애니메이션", "100%", "200") }}
 
 ## 기술 요약
 
