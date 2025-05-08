@@ -80,7 +80,7 @@ const callback = (records, observer) => {
 
 目前不属于任何规范。相关规范 PR 请参阅 [https://github.com/whatwg/fs/pull/165](https://github.com/whatwg/fs/pull/165)。
 
-## See also
+## 参见
 
 - {{domxref("FileSystemObserver.FileSystemObserver", "FileSystemObserver()")}} 构造函数
 - [文件系统 API](/zh-CN/docs/Web/API/File_System_API)
