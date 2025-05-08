@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Websockets API")}}{{AvailableInWorkers}}
 
-當連線關閉時，{{Glossary("WebSockets")}} 會傳送一個 `CloseEvent` 給用戶端。這個事件會傳遞給 `WebSocket` 物件的 `onclose` 屬性所指定的監聽器。
+當連線關閉時，{{Glossary("WebSockets", "WebSocket")}} 會傳送一個 `CloseEvent` 給用戶端。這個事件會傳遞給 `WebSocket` 物件的 `onclose` 屬性所指定的監聽器。
 
 {{InheritanceDiagram}}
 
