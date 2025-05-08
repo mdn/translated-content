@@ -14,7 +14,7 @@ l10n:
 文件的 `readyState` 可以是以下之一：
 
 - `loading`
-  - : {{domxref("document")}} 仍在載入中。
+  - : {{domxref("document", "文件", "", 1)}}仍在載入中。
 - `interactive`
   - : 文件已完成載入並且已被解析，但子資源（例如腳本、圖片、樣式表和框架）仍在載入中。此狀態表示 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件即將觸發。
 - `complete`
