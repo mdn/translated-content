@@ -21,7 +21,7 @@ onscroll = (event) => { }
 
 ## 事件類型
 
-一個通用的 {{domxref("Event")}}。
+通用的 {{domxref("Event")}}。
 
 ## 範例
 
