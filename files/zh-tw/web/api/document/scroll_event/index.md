@@ -36,7 +36,7 @@ let lastKnownScrollPosition = 0;
 let ticking = false;
 
 function doSomething(scrollPos) {
-  // 使用捲動位置進行某些操作
+  // 依據捲動位置進行某些操作
 }
 
 document.addEventListener("scroll", (event) => {
