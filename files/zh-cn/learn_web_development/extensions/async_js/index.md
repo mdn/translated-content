@@ -1,10 +1,7 @@
 ---
 title: 异步 JavaScript
 slug: Learn_web_development/Extensions/Async_JS
-original_slug: Learn/JavaScript/Asynchronous
 ---
-
-{{LearnSidebar}}
 
 在这个模块，我们将查看{{Glossary("asynchronous", "异步")}} {{Glossary("JavaScript")}}，异步为什么很重要，以及怎样使用异步来有效处理潜在的阻塞操作，比如从服务器上获取资源。
 

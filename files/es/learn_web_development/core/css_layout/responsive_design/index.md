@@ -105,7 +105,7 @@ Los sitios responsivos no solo cambian su diseño entre puntos de interrupción,
 
 Al usar una cuadrícula flexible, solo necesitas añadir un punto de interrupción y cambiar el diseño en el punto en que el contenido comienza a verse mal. Por ejemplo, si las longitudes de las líneas se vuelven interminablemente largas a medida que el tamaño de la pantalla aumenta, o una caja se encoje hasta un ancho de dos palabras en cada línea a medida que el tamaño de la pantalla se reduce.
 
-En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn/CSS/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
+En los primeros días del diseño responsivo, nuestra única opción para el diseño de páginas web era usar [elementos flotantes](/es/docs/Learn_web_development/Core/CSS_layout/Floats). Los diseños de pantalla con elementos flotantes flexibles se lograban dando a cada elemento un ancho porcentual asegurándose de que para toda la página no alcanzara más del 100%. En su trabajo original sobre cuadrículas fluidas, Marcotte detalló una fórmula para tomar un diseño de página web diseñado usando píxeles y convertirlo en porcentajes.
 
 ```
 target / context = result
@@ -134,7 +134,7 @@ En pantallas más anchas se pasa a dos columnas:
 
 ## Tecnologías modernas de diseño de páginas web
 
-Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) y [Grid](/es/docs/Learn/CSS/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
+Los métodos modernos de diseño de páginas web, como el [diseño en columnas](/es/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) y [Grid](/es/docs/Learn_web_development/Core/CSS_layout/Grids) son responsivos por defecto. Todos estos métodos asumen que tratas de crear una cuadrícula flexible y te proporcionan los modos más fáciles de hacerlo.
 
 ### Multicol
 
@@ -158,7 +158,7 @@ Si en lugar de ello estableces el atributo `column-width`, especificas un ancho 
 
 En el método Flexbox, los elementos flexibles se encogen y distribuyen el espacio entre los elementos según el espacio que hay en su contenedor, según su comportamiento inicial. Al cambiar los valores de `flex-grow` y `flex-shrink`, puedes indicar cómo deseas que se comporten los elementos cuando a su alrededor hay más o menos espacio.
 
-En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantidad de espacio en el contenedor flexible, al utilizar la abreviatura `flex: 1` como se describe en el artículo [Flexbox: Dimensionamiento flexible de los elementos flex](/es/docs/Learn/CSS/CSS_layout/Grids#Cuadr%C3%ADculas_flexibles_con_la_unidad_fr).
+En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantidad de espacio en el contenedor flexible, al utilizar la abreviatura `flex: 1` como se describe en el artículo [Flexbox: Dimensionamiento flexible de los elementos flex](/es/docs/Learn_web_development/Core/CSS_layout/Grids#Cuadr%C3%ADculas_flexibles_con_la_unidad_fr).
 
 ```css
 .container {
@@ -175,7 +175,7 @@ En el ejemplo siguiente, los elementos flexibles ocupan cada uno la misma cantid
 
 ### Cuadrículas CSS
 
-En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn/CSS/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
+En el diseño de cuadrículas con CSS, la unidad `fr` permite la distribución del espacio disponible en las trazas de la cuadrícula. El ejemplo siguiente crea un contenedor de cuadrícula con tres trazas dimensionadas a `1fr`. Esto crea tres columnas, cada una de las cuales ocupa una parte del espacio que hay disponible en el contenedor. Puedes obtener más información sobre este enfoque para crear una cuadrícula en el módulo Aprender a diseñar cuadrículas en [Cuadrículas flexibles con la unidad fr](/es/docs/Learn_web_development/Core/CSS_layout/Grids#flexible_grids_with_the_fr_unit).
 
 ```css
 .container {
@@ -203,7 +203,7 @@ Las imágenes responsivas, que utilizan el elemento {{htmlelement ("picture")}} 
 
 También puedes usar imágenes _de director artístico_, que proporcionan un recorte o una imagen completamente diferente para diferentes tamaños de pantalla.
 
-Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) en MDN.
+Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Responsive_images) en MDN.
 
 ## Tipografía responsiva
 

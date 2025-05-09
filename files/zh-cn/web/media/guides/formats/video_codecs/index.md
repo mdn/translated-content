@@ -818,11 +818,11 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
   <tbody>
     <tr>
       <th scope="row">支持的比特率</th>
-      <td>Up to 800,000 Kbps</td>
+      <td>最高 800,000 Kbps</td>
     </tr>
     <tr>
       <th scope="row">支持的帧率</th>
-      <td>Varies by level; up to 300 FPS is possible</td>
+      <td>因级别而异；最高可达 300 FPS</td>
     </tr>
     <tr>
       <th scope="row">压缩</th>
@@ -865,32 +865,32 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
             <tr>
               <td>Main 4:2:2 10</td>
               <td>8 to 10</td>
-              <td>4:0:0, 4:2:0, 和 4:2:2</td>
+              <td>4:0:0、4:2:0 和 4:2:2</td>
             </tr>
             <tr>
               <td>Main 4:2:2 12</td>
               <td>8 to 12</td>
-              <td>4:0:0, 4:2:0, 和 4:2:2</td>
+              <td>4:0:0、4:2:0 和 4:2:2</td>
             </tr>
             <tr>
               <td>Main 4:4:4</td>
               <td>8</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 10</td>
               <td>8 to 10</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 12</td>
               <td>8 to 12</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
             <tr>
               <td>Main 4:4:4 16 Intra</td>
               <td>8 to 16</td>
-              <td>4:0:0, 4:2:0, 4:2:2, 和 4:4:4</td>
+              <td>4:0:0、4:2:0、4:2:2 和 4:4:4</td>
             </tr>
           </tbody>
         </table>
@@ -914,16 +914,14 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
               <th scope="col">Chrome</th>
               <th scope="col">Edge</th>
               <th scope="col">Firefox</th>
-              <th scope="col">Internet Explorer</th>
               <th scope="col">Opera</th>
               <th scope="col">Safari</th>
             </tr>
             <tr>
-              <th scope="row">HEVC / H.265 support</th>
+              <th scope="row">HEVC / H.265 支持</th>
               <td>107</td>
               <td>18</td>
-              <td>不支持</td>
-              <td>11</td>
+              <td>120</td>
               <td>94</td>
               <td>11</td>
             </tr>
@@ -932,8 +930,14 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
         <p>Chrome 在具有硬件解码器的 Windows 8+、Linux、ChromeOS 设备上支持 HEVC，在所有 macOS Big Sur+ 和 Android 5.0+ 的设备上支持 HEVC。</p>
         <p>Edge（Chromium）在具有硬件解码器的 Windows 10 1709+ 设备上支持 HEVC（需要安装 <a href="https://apps.microsoft.com/store/detail/hevc-video-extension/9NMZLZ57R3T7">HEVC 视频扩展</a>插件），在其他操作系统上的支持情况和 Chrome 一致。Edge（旧版）仅支持 HEVC 硬解码。
         </p>
-        <p>由于 HEVC 受到专利保护，Mozilla 不会支持 HEVC。</p>
-        <p>Internet Explorer 在具有硬件解码器的设备上支持 HEVC。</p>
+        <p>FireFox 在以下平台支持 HEVC：
+          <ul>
+            <li>Windows 从 134 版本开始同时支持硬件（在支持的设备上，支持范围与 Edge 一致）或软件解码（用户必须付费安装插件）。</li>
+            <li>macOS 从 136 版本开始同时支持软件和硬件解码。</li>
+            <li>Linux 从 137 版本开始同时支持软件和硬件解码（通过系统 ffmpeg）。</li>
+            <li>Android 从 137 版本开始仅支持硬件解码。</li>
+          </ul>
+        </p>
         <p>Opera 和其他基于 Chromium 内核的浏览器，支持情况和 Chrome 一致。</p>
         <p>Safari 在所有 macOS High Sierra+ 设备上支持 HEVC。</p>
       </td>
@@ -971,7 +975,7 @@ HEVC 是一种专有格式，受多项专利保护。许可[由 MPEG LA 管理](
     <tr>
       <th scope="row">许可</th>
       <td>
-        专利限制;确认你遵守<a href="https://www.mpegla.com/programs/hevc/">许可要求</a>。请注意，可能适用多个专利池。
+        专利限制；确认你遵守<a href="https://www.mpegla.com/programs/hevc/">许可要求</a>。请注意，可能适用多个专利池。
       </td>
     </tr>
   </tbody>
@@ -1828,5 +1832,5 @@ let recorder = new MediaRecorder(sourceStream, options);
 - {{RFC(4381)}}：3GPP2 多媒体文件的 MIME 类型注册
 - {{RFC(4337)}}：MPEG-4 多媒体文件的 MIME 类型注册
 - [Opera 浏览器中的视频编解码器](https://blogs.opera.com/news/#codecs--the-fly-in-the-ointment)
-- IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement)和[音频（audio）](/zh-CN/docs/Web/HTML/Element/audio)编解码器
+- IE 浏览器中的[视频（video）](/zh-CN/docs/Web/API/HTMLVideoElement)和[音频（audio）](/zh-CN/docs/Web/HTML/Reference/Elements/audio)编解码器
 - [Chrome 浏览器中的视频和音频解码器](https://www.chromium.org/audio-video/)

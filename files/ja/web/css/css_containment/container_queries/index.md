@@ -1,28 +1,37 @@
 ---
 title: CSS コンテナークエリー
 slug: Web/CSS/CSS_containment/Container_queries
+l10n:
+  sourceCommit: 8905094f4366d2e4d5876a3d75b88880d0aba60b
 ---
 
 {{CSSRef}}
 
-コンテナークエリーによって、要素のコンテナーのサイズに基づいて要素にスタイル設定を適用することができます。例えば、コンテナーが周囲の文脈で利用できる空間が少ない場合、特定の要素を非表示にしたり、小さなフォントを使用したりすることができます。
+コンテナークエリーを使用すると、特定の要素について、そのコンテナーの次のような属性に基づいてスタイルを設定することができます。
+
+- コンテナーのサイズ
+- コンテナーに適用されているスタイル
+- コンテナーのスクロール状態、またはそのスクロール祖先のスクロール状態
+
 コンテナークエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)の代替となるもので、ビューポートサイズや他の端末の特性に基づいて要素にスタイルを適用します。
 
-![ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
+この記事では、コンテナークエリーを用いて、特にサイズコンテナークエリーに焦点を当てた使い方の紹介をしています。他にも、[スタイル](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#コンテナースタイルクエリー)や[スクロール状態コンテナー](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)クエリーについて詳しく解説しているガイドもあります。
+
+![2 つの異なる種類のクエリー。ブラウザーの全幅であるビューポートの幅に基づくメディアクエリーと、コンテナー要素の幅であるコンテナーコンテキストの幅に基づくコンテナークエリー。](container-query.svg)
 
 ## コンテナークエリーの使用
 
 コンテナークエリーを使用するには、要素で**コンテナーコンテキスト**を宣言し、後でこのコンテナーの寸法をクエリーしたいとブラウザーが認識できるようにする必要があります。
-これを行うには、 {{Cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
+これを行うには、 {{cssxref("container-type")}} プロパティに `size`、`inline-size`、`normal` の値を指定して使用します。
 
 これらの値は以下のような効果があります。
 
 - `size`
   - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    コンテナーにレイアウト、スタイル設定、サイズ格納を適用します。
+    レイアウト、スタイル設定、[サイズ抑制](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
 - `inline-size`
   - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    その要素にレイアウト、スタイル設定、インラインサイズ格納を適用します。
+    その要素にレイアウト、スタイル設定、インラインサイズ抑制を適用します。
 - `normal`
   - : 要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、コンテナースタイルクエリーのクエリーコンテナーであることに変わりはありません。
 
@@ -111,6 +120,8 @@ slug: Web/CSS/CSS_containment/Container_queries
 この単位は、クエリーするコンテナーの寸法に相対する長さを指定します。
 コンテナーに対する相対的な長さの単位を使用する成分は、具体的な長さの値を再計算する必要がなく、様々なコンテナーでより柔軟に使用することができます。
 
+クエリに該当するコンテナーが利用できない場合、コンテナーのクエリー長の単位は、既定でその軸の［小さなビューポート単位］（/ja/docs/Web/CSS/length#small_viewport_units） (`sv*`) に設定されます。
+
 コンテナークエリーの長さの単位は以下の通りです。
 
 - `cqw`: クエリーコンテナーの幅の 1%
@@ -162,6 +173,8 @@ slug: Web/CSS/CSS_containment/Container_queries
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-name")}} プロパティ
 - CSS {{cssxref("content-visibility")}} プロパティ
+- [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - [Say Hello to CSS Container Queries](https://ishadeed.com/article/say-hello-to-css-container-queries/) (Ahmad Shadeed)
 - [Container Queries: a Quick Start Guide](https://www.oddbird.net/2021/04/05/containerqueries/)
 - [Collection of Container Queries articles](https://github.com/sturobson/Awesome-Container-Queries)

@@ -103,7 +103,7 @@ HTML 오른쪽의 [Rules view](https://firefox-source-docs.mozilla.org/devtools-
 
 ## 박스 모델 이해
 
-이전 강의에서 [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)과 변경되는 대체 박스 모델이 있다는 사실에 대해 논의했습니다. 요소의 크기가 요소에 제공한 크기와 패딩 및 테두리를 기반으로 계산되는 방식입니다. 개발자 도구는 요소의 크기가 어떻게 계산되는지 이해하는 데 실제로 도움이 될 수 있습니다.
+이전 강의에서 [박스 모델](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model)과 변경되는 대체 박스 모델이 있다는 사실에 대해 논의했습니다. 요소의 크기가 요소에 제공한 크기와 패딩 및 테두리를 기반으로 계산되는 방식입니다. 개발자 도구는 요소의 크기가 어떻게 계산되는지 이해하는 데 실제로 도움이 될 수 있습니다.
 
 [레이아웃 보기](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout_view)는 선택한 요소의 박스 모델 다이어그램과 함께 요소가 배치되는 방식을 변경하는 속성 및 값에 대한 설명이 표시됩니다. 여기에는 요소에 명시적으로 사용하지 않았지만, 초기 값이 설정된 속성에 대한 설명이 포함됩니다.
 
@@ -138,7 +138,7 @@ em {
 }
 ```
 
-특이성에 대해 논의한 [캐스케이드 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) 강의에서 기억하시겠지만, 클래스 선택자는 요소 선택자보다 더 구체적입니다. 따라서 클래스 선택자가 적용됩니다. 개발자 도구는 특히 정보가 거대한 스타일시트의 어딘가에 묻혀 있는 경우 이러한 문제를 찾는 데 도움이 될 수 있습니다.
+특이성에 대해 논의한 [캐스케이드 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) 강의에서 기억하시겠지만, 클래스 선택자는 요소 선택자보다 더 구체적입니다. 따라서 클래스 선택자가 적용됩니다. 개발자 도구는 특히 정보가 거대한 스타일시트의 어딘가에 묻혀 있는 경우 이러한 문제를 찾는 데 도움이 될 수 있습니다.
 
 **`.special` 클래스로 `<em>`을 검사하면 개발자 도구에서 주황색이 적용되는 색상임을 보여주고 또한 em에 적용된 `color` 속성은 그어진 선으로 표시됩니다. 이제 클래스가 요소 선택자를 재정의하는 것을 볼 수 있습니다.**
 
@@ -200,6 +200,6 @@ CSS에 대한 경험이 많을수록 문제를 더 빨리 파악하게 될 것�
 
 이렇게 CSS 디버깅에 대한 소개를 마쳤습니다. 이를 통해 나중에 당신의 경력에서 CSS 및 다른 유형의 코드를 디버깅할 때 유용한 기술을 얻을 수 있습니다.
 
-이 과정의 마지막 글에서는 [CSS를 구성하는 방법](/ko/docs/Learn/CSS/Building_blocks/Organizing)을 살펴보겠습니다.
+이 과정의 마지막 글에서는 [CSS를 구성하는 방법](/ko/docs/Learn_web_development/Core/Styling_basics/Organizing)을 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}

@@ -1,10 +1,9 @@
 ---
 title: 初次接觸Javascript
 slug: Learn_web_development/Core/Scripting/A_first_splash
-original_slug: Learn/JavaScript/First_steps/A_first_splash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
 目前你已經學會了一些 JavaScript 的理論，以及你能用它做些什麼。我們現在要透過一個完整的實際範例給你一個 JavaScript 基本功能的速成班。你將能一步一步地做出一個簡單的"猜數字"遊戲
 

@@ -7,7 +7,40 @@ slug: Web/CSS/mix-blend-mode
 
 **`mix-blend-mode`** [CSS](/ko/docs/Web/API/CSS) 속성은 어느 요소의 콘텐츠가 자신의 배경 및 부모와 어떻게 혼합되어야 하는지 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/mix-blend-mode.html")}}
+{{InteractiveExample("CSS Demo: mix-blend-mode")}}
+
+```css interactive-example-choice
+mix-blend-mode: normal;
+```
+
+```css interactive-example-choice
+mix-blend-mode: multiply;
+```
+
+```css interactive-example-choice
+mix-blend-mode: hard-light;
+```
+
+```css interactive-example-choice
+mix-blend-mode: difference;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: sandybrown;
+}
+```
 
 ## Syntax
 

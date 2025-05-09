@@ -1,10 +1,9 @@
 ---
 title: "Django Tutorial Part 4: Django admin site"
 slug: Learn_web_development/Extensions/Server-side/Django/Admin_site
-original_slug: Learn/Server-side/Django/Admin_site
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Models", "Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django")}}
 
 現在，我們已經為本地圖書館網站 [LocalLibrary](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 創建了模型，我們接下來使用 Django 管理網站，去添加 一些 「真實的」 書本數據。首先，我們展示如何用管理網站註冊模型，然後展示如何登錄和創建一些數據。本文最後，我們介紹可以進一步改進管理網站的建議。
 

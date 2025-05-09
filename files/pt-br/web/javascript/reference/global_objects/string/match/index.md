@@ -94,7 +94,7 @@ console.log(matches_array);
 ```
 
 > [!NOTE]
-> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions#Pesquisa_avan%C3%A7ada_com_Flags).
+> Veja também {{jsxref("String.prototype.matchAll()")}} e [Pesquisa avançada com sinalizadores](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions#Pesquisa_avan%C3%A7ada_com_Flags).
 
 ### Usando grupos de captura nomeados
 

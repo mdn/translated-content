@@ -100,7 +100,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
         > não use este pragma, ele esta obsoleto. use o atributo global `lang` no {{HTMLElement("html")}} ao invés deste.
 
     - `"Content-Security-Policy"`
-      - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
+      - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
     - `"content-type"`
 
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)

@@ -7,7 +7,48 @@ slug: Web/CSS/minmax
 
 La [fonction CSS](/fr/docs/Web/CSS/CSS_Functions) **`minmax()`** définit un intervalle de taille supérieure ou égale à _min_ et inférieure ou égale à _max_. Elle est utilisée avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
 
-{{EmbedInteractiveExample("pages/css/function-minmax.html")}}
+{{InteractiveExample("CSS Demo: minmax()")}}
+
+```css interactive-example-choice
+grid-template-columns: minmax(20px, auto) 1fr 1fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+```
+
+```css interactive-example-choice
+grid-template-columns: minmax(2ch, 10ch) 1fr 1fr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One. This column has more text in it.</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-gap: 10px;
+  width: 250px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  text-align: left;
+}
+```
 
 ## Syntaxe
 
@@ -118,6 +159,6 @@ Si _max_ est inférieur à _min_, alors _max_ sera ignoré et `minmax(min,max)` 
 
 ## Voir aussi
 
-- Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#track_sizing_and_minmax()>)_
+- Guide sur les grilles CSS : _[Concepts de bases pour le dimensionnement des pistes avec minmax()](</fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#track_sizing_and_minmax()>)_
 - [Valeurs logiques, modes d'écriture et grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - Tutoriel vidéo (en anglais) : [Introduction à minmax()](https://gridbyexample.com/video/series-minmax/)

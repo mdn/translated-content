@@ -1,15 +1,13 @@
 ---
 title: "javascript: URL"
+short-title: "javascript:"
 slug: Web/URI/Reference/Schemes/javascript
-original_slug: Web/URI/Schemes/javascript
 l10n:
-  sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
-
 > [!WARNING]
-> ウェブ上で `javascript:` URL を使用することは推奨されていません。これは、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)を使用することによる影響と同様に、任意のコードが実行される可能性があるためです。また、通常のリンク動作とは異なるため、{{glossary("accessibility", "アクセシビリティ")}}が縮小する可能性があります。
+> ウェブ上で `javascript:` URL を使用することは推奨されていません。これは、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)を使用することによる影響と同様に、任意のコードが実行される可能性があるためです。また、通常のリンク動作とは異なるため、{{glossary("Accessibility", "アクセシビリティ")}}が縮小する可能性があります。
 
 **JavaScript URL**、つまり `javascript:` スキームを接頭辞とする URL は、ブラウザーがナビゲートしようとした際に JavaScript を実行する擬似的なナビゲーション対象として使用されます。 URL が文字列として評価された場合、HTML として扱われ、ブラウザーによってレンダリングされます。
 
@@ -25,18 +23,18 @@ javascript:<script>
 
 `javascript:` URL は、URL がナビゲーション対象とする場所であればどこでも使用することができます。これには以下を含めることができますが、これに制限されるものではありません。
 
-- `<a>` または `<area>` 要素の [`href`](/ja/docs/Web/HTML/Element/a#href) 属性。
-- `<form>` 要素の [`action`](/ja/docs/Web/HTML/Element/form#action) 属性。
-- `<iframe>`要素の [`src`](/ja/docs/Web/HTML/Element/iframe#src) 属性。
+- `<a>` または `<area>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性。
+- `<form>` 要素の [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性。
+- `<iframe>`要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性。
 - JavaScript の [`window.location`](/ja/docs/Web/API/Window/location) プロパティ。
 - ブラウザーのアドレスバー自体。
 
 > [!NOTE]
-> 他にも、`<link>` 要素の [`href`](/ja/docs/Web/HTML/Element/link#href) 属性のように、URL を使用するコンテキストもありますが、これらはリソースの場所であり、ナビゲーションの対象ではないため、`javascript:` URL は許可されていません。このような用途で JavaScript をインラインで書きたい場合は、[`data:`](/ja/docs/Web/URI/Schemes/data) URL と `text/javascript` MIME タイプを使用してください。
+> 他にも、`<link>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/link#href) 属性のように、URL を使用するコンテキストもありますが、これらはリソースの場所であり、ナビゲーションの対象ではないため、`javascript:` URL は許可されていません。このような用途で JavaScript をインラインで書きたい場合は、[`data:`](/ja/docs/Web/URI/Reference/Schemes/data) URL と `text/javascript` MIME タイプを使用してください。
 
 ブラウザーがそのような場所に移動しようとすると、スクリプト本体を解釈し実行します。スクリプトは、[`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) で実行された場合と同じ値である、_補完値_（返値ではありません）を持つことができます。最後の文が[式](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)の場合は、補完値はその式の値となります。この補完値が文字列の場合は、その文字列は HTML 文書として扱われ、ブラウザーは現在のページと同じ URL を使用して、そのコンテンツを含む新しい文書に移動します。履歴項目は作成されません。補完値が文字列でない場合、ブラウザーはコードを実行するだけで、移動はしません。そのため、スクリプトが `javascript:foo()` のように関数を呼び出すことで終わっている場合、関数が文字列を返す可能性がある場合に誤って移動しないように、{{jsxref("Operators/void", "void")}} を接頭辞として付けることが推奨されることがよくあります。
 
-JavaScript でのナビゲーションは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP) の設定、具体的には {{CSP("script-src")}} によってブロックされる場合があります。
+JavaScript でのナビゲーションは、[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) の設定、具体的には {{CSP("script-src")}} によってブロックされる場合があります。
 
 ## 例
 
@@ -139,5 +137,5 @@ document.body.textContent = "Hello, world!";
 ## 関連情報
 
 - [URI](/ja/docs/Web/URI)
-- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/CSP)
+- [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP)
 - [IANA list of URI schemes](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

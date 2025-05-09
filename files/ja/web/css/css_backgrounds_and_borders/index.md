@@ -140,13 +140,13 @@ div:first-of-type {
 
 ## ガイド
 
-- [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
   - : CSS の背景画像を使用して装飾画像を実装する方法を説明します。
 - [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : 要素に 1 つ以上の背景を設定する方法を説明します。
 - [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : 背景画像のサイズや繰り返しの動作を変更する方法を説明します。
-- [CSS の学習: ボックスモデル](/ja/docs/Learn/CSS/Building_blocks/The_box_model)
+- [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
   - : 境界が、他のボックスモデルのプロパティとともに、 CSS ボックスモデルにどのような影響を与えるかを説明します。
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : CSS でグラデーションの背景画像を作成する方法を説明します。

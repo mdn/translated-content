@@ -7,7 +7,37 @@ slug: Web/CSS/filter-function/opacity
 
 The **`opacity()`** [CSS](/zh-CN/docs/Web/CSS) 函数在输入的图片实例上应用透明度属性，它的结果是一个 {{cssxref("&lt;filter-function&gt;")}}.
 
-{{EmbedInteractiveExample("pages/css/function-opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity()")}}
+
+```css interactive-example-choice
+filter: opacity(1);
+```
+
+```css interactive-example-choice
+filter: opacity(80%);
+```
+
+```css interactive-example-choice
+filter: opacity(50%);
+```
+
+```css interactive-example-choice
+filter: opacity(0.2);
+```
+
+```css interactive-example-choice
+filter: opacity(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 > [!NOTE]
 > 这个函数与其他既有的{{Cssxref("opacity")}}属性类似，区别在于有了 filters，有些浏览器会提供硬件加速以获取更好的性能表现。

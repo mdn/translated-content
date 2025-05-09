@@ -7,9 +7,58 @@ l10n:
 
 {{CSSRef}}
 
-**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
+**`<basic-shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、{{cssxref("clip-path")}}、{{cssxref("shape-outside")}}、{{cssxref("offset-path")}} の各プロパティで使用されるシェイプを表します。
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 
@@ -23,7 +72,7 @@ l10n:
 
 ### シェイプ関数
 
-以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/Value_definition_syntax)で定義されます。
+以下のシェイプに対応しています。`<basic-shape>` 値はすべて関数表記であり、[値定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)で定義されます。
 
 - `{{cssxref("basic-shape/inset","inset()")}}`
 
@@ -99,7 +148,7 @@ l10n:
 
 - `{{cssxref("path","path()")}}`
 
-  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Attribute/d)を使用してシェイプを定義します。
+  - : SVG の {{SVGAttr("fill-rule")}} と SVG の[パス定義](/ja/docs/Web/SVG/Reference/Attribute/d)を使用してシェイプを定義します。
 
     ```css
     path( [ <fill-rule>, ]? <string> )
@@ -107,7 +156,7 @@ l10n:
 
     省略可能な `<fill-rule>` は多角形の内部を決めるために使用される塗りつぶし規則 ({{SVGAttr("fill-rule")}}) を表します。指定可能な値は `nonzero` と `evenodd` です。省略時の既定値は `nonzero` です。
 
-    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Attribute/d)です。
+    必須の \<string> は、引用符で囲まれた [SVG パス](/ja/docs/Web/SVG/Reference/Attribute/d)です。
 
 上記で定義されていない引数は、以下のように定義されています。
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<hex-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、[sRGB](/ja/docs/Glossary/RGB) 色の原色成分（赤、緑、青）を 16 進数で記述し、その透明度も記述する記法です。
+**`<hex-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、[sRGB](/ja/docs/Glossary/RGB) 色の原色成分（赤、緑、青）を 16 進数で記述し、その透明度も記述する記法です。
 
 `<hex-color>` 値は、 [`<color>`](/ja/docs/Web/CSS/color_value) が使用できるところならどこでも使用することができます。
 

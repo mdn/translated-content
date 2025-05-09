@@ -13,7 +13,7 @@ Esta página enlista todo el contenido, con una descripción corta. Estan agrupa
 
 ## Turorial CSS Nivel Principiante
 
-- [Empezando](/es/docs/Learn/CSS/First_steps)
+- [Empezando](/es/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : Esta guía va dirigida para **completos principiantes**: Nunca has escrito una línea de CSS? — esta guía es para ti. Se explican los conceptos fundamentales del lenguaje.
 - [Using multiple backgrounds](/es/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
   - : Backgrounds are fundamental for nice styling: CSS allows you to set several of them on each box. This tutorial explains how they interact and how to achieve nice effects.

@@ -3,12 +3,108 @@ title: position
 slug: Web/CSS/position
 ---
 
-{{CSSRef}}A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.{{EmbedInteractiveExample("pages/css/position.html")}}
+{{CSSRef}}
+
+A propriedade **`position`**, encontrada no [CSS](/pt-BR/docs/Web/CSS), define como um elemento pode ser posicionado (renderizado) no documento (página). Essa propriedade (**`position`**) pode ser acompanhada de outras, tais como, {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}}, que determinam como ficará a localização final do objeto, permitindo seu deslocamento, como será apresentado adiante.
+
+{{InteractiveExample("CSS Demo: position")}}
+
+```css interactive-example-choice
+position: static;
+```
+
+```css interactive-example-choice
+position: relative;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: absolute;
+top: 40px;
+left: 40px;
+```
+
+```css interactive-example-choice
+position: sticky;
+top: 20px;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element-container">
+    <p>
+      In this demo you can control the <code>position</code> property for the
+      yellow box.
+    </p>
+    <div class="box"></div>
+    <div class="box" id="example-element"></div>
+    <div class="box"></div>
+    <p class="clear">
+      To see the effect of <code>sticky</code> positioning, select the
+      <code>position: sticky</code> option and scroll this container.
+    </p>
+    <p>
+      The element will scroll along with its container, until it is at the top
+      of the container (or reaches the offset specified in <code>top</code>),
+      and will then stop scrolling, so it stays visible.
+    </p>
+    <p>
+      The rest of this text is only supplied to make sure the container
+      overflows, so as to enable you to scroll it and see the effect.
+    </p>
+    <hr />
+    <p>
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+      Orbiting this at a distance of roughly ninety-two million miles is an
+      utterly insignificant little blue green planet whose ape-descended life
+      forms are so amazingly primitive that they still think digital watches are
+      a pretty neat idea.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  align-items: flex-start;
+  overflow: auto;
+}
+
+.box {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  float: left;
+  width: 65px;
+  height: 65px;
+}
+
+.box + .box {
+  margin-left: 10px;
+}
+
+.clear {
+  clear: both;
+  padding-top: 1em;
+}
+
+#example-element-container {
+  position: relative;
+  text-align: left;
+}
+
+#example-element {
+  background-color: yellow;
+  border: 3px solid red;
+  z-index: 1;
+}
+```
 
 ### Tipos de posicionamentos
 
-- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/Web/CSS/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
-- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/Web/CSS/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
+- Um **elemento posicionado** é um elemento cujo valor de sua posição pode ser [computado (calculado)](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value) como `relative`, `absolute`, `fixed`, or `sticky`. ( Em outras palavras, são todos esses, com exceção do `static`, sendo estático o valor como padrão do elemento.)
+- Um elemento denominado com **posicionamento relativo**, ou **relatively positioned element**, é um elemento cuja função é [calculada](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value) ao ser definida a `position` como valor `relative`. Com isso, a propriedade {{Cssxref("top")}} e {{Cssxref("bottom")}} determinam o deslocamento ou projeção vertical a posição padrão do elemento que estava definida por `static`; Não sendo outro, o {{Cssxref("left")}} e o {{Cssxref("right")}}, por sua vez, determinam o deslocamento horizontal.
 - Um elemento denominado com **posicionamento absoluto**, ou **absolutely positioned element**, é um elemento determinado e calculado ao atribuir ao `position` o valor `absolute` ou `fixed`. Com {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, and {{Cssxref("left")}} é possível especificar o deslocamento das laterais (bordas) dos blocos que contêm ([containing block](/pt-BR/docs/Web/CSS/Containing_Block)) os elementos. (O containing block, ou blocos que envolvem um elemento é definido como um antecessor relativo ao qual o elemento está posicionado, acomplado ou englobado. Se por ventura o elemento tiver definido margens (margin), ele são adicionados ao deslocamento (offset). O elemento estabelecerá um novo [contexto de formatação do bloco](/pt-BR/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) para seus conteúdos.
 - Um elemento denominado com **posicionamento adesivo** ( ! ), ou **stickily positioned element**, é um elemento determinado e calculado ao atribuir ao `position` como valor `sticky`. Sendo tratado como um posicionamento relativo até que ultrapasse (atinja) os limites do [bloco no qual está contido](/pt-BR/docs/docs/Web/CSS/Containing_Block). (Se assemelha a configurar a propriedade {{Cssxref("top")}} com um valor diferente de automático (auto)) Dentro do seu fluxo principal (fluxo raiz, ou o contêiner no qual ele desloca-se), No momento que há o deslocamento da página o elemento é tratado como "preso" ou "stuck" até encontrar-se com as paredes opostas do [bloco no qual esteja contido](/pt-BR/docs/docs/Web/CSS/Containing_Block).
 

@@ -5,7 +5,44 @@ slug: Web/CSS/quotes
 
 {{CSSRef}}
 
-**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式。{{EmbedInteractiveExample("pages/css/quotes.html")}}
+**`quotes`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置引号的样式
+
+{{InteractiveExample("CSS Demo: quotes")}}
+
+```css interactive-example-choice
+quotes: none;
+```
+
+```css interactive-example-choice
+quotes: initial;
+```
+
+```css interactive-example-choice
+quotes: "'" "'";
+```
+
+```css interactive-example-choice
+quotes: "„" "“" "‚" "‘";
+```
+
+```css interactive-example-choice
+quotes: "«" "»" "‹" "›";
+```
+
+```html interactive-example
+<section id="default-example">
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
+</section>
+```
+
+```css interactive-example
+q {
+  font-size: 1.2rem;
+}
+```
 
 ## 语法
 
@@ -28,7 +65,7 @@ quotes: unset;
 - `none`
   - : {{cssxref("content")}} 属性的值 `open-quote` 和 `close-quote` 将不会展示引号。
 - `auto`
-  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性）。
+  - : 用适当的引号，基于在所选元素上设置的任何语言值（例如，通过 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性）。
 - `[<string> <string>]+`
   - : 一组或者多组 {{cssxref("&lt;string&gt;")}} 的值对应 `open-quote` and `close-quote`. 第一对表示引号的外层，第二对表示第一个嵌套层，下一对表示第三层，依此类推。
 

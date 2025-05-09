@@ -9,7 +9,46 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) **`:nth-child()`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)根据元素在父元素的子元素列表中的索引来选择元素。换言之，`:nth-child()` 选择器根据父元素内的所有兄弟元素的位置来选择子元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-nth-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :nth-child", "tabbed-shorter")}}
+
+```css interactive-example
+p {
+  font-weight: bold;
+}
+
+li:nth-child(-n + 3) {
+  border: 2px solid orange;
+  margin-bottom: 1px;
+}
+
+li:nth-child(even) {
+  background-color: lightyellow;
+}
+```
+
+```html interactive-example
+<p>Track &amp; field champions:</p>
+<ul>
+  <li>Adhemar da Silva</li>
+  <li>Wang Junxia</li>
+  <li>Wilma Rudolph</li>
+  <li>Babe Didrikson-Zaharias</li>
+  <li>Betty Cuthbert</li>
+  <li>Fanny Blankers-Koen</li>
+  <li>Florence Griffith-Joyner</li>
+  <li>Irena Szewinska</li>
+  <li>Jackie Joyner-Kersee</li>
+  <li>Shirley Strickland</li>
+  <li>Carl Lewis</li>
+  <li>Emil Zatopek</li>
+  <li>Haile Gebrselassie</li>
+  <li>Jesse Owens</li>
+  <li>Jim Thorpe</li>
+  <li>Paavo Nurmi</li>
+  <li>Sergei Bubka</li>
+  <li>Usain Bolt</li>
+</ul>
+```
 
 > [!NOTE]
 > 在 `element:nth-child()` 的语法中，子元素的计数包括任何元素类型的兄弟子元素；但是只有当*该子元素位置上的*元素与选择器的其他组件匹配时，才被视为匹配。

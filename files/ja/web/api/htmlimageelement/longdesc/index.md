@@ -8,13 +8,13 @@ l10n:
 
 {{APIRef("HTML DOM")}}{{deprecated_header}}
 
-**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Global_attributes/title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
+**`longDesc`** は {{domxref("HTMLImageElement")}} インターフェイスの*非推奨の*プロパティで、この画像の長い説明のテキストまたは HTML ファイルの URL を指定します。これは、[`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性で提供される短い説明の他に、オプションで追加された詳細を提供するために使用することができます。
 
 ## 値
 
 空文字列（長い説明文がないことを示す）または、画像の内容の長い形式の説明文を含むファイルの URL のいずれかを指定します。
 
-例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Formats/Image_types#png_portable_network_graphics) であった場合、
+例えば、画像がフローチャートの [PNG](/ja/docs/Web/Media/Guides/Formats/Image_types#png_portable_network_graphics) であった場合、
 `longDesc` プロパティは、チャートで表現された制御の流れについて、テキストのみの説明を提供するために使用することができます。これは、読者が使用する説明としてだけでなく、視覚障碍者のための代替表現として使用することもできます。
 
 ## 使用上の注意
@@ -52,4 +52,4 @@ l10n:
 
 ## 関連情報
 
-- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

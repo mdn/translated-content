@@ -14,4 +14,4 @@ Em {{Glossary("JavaScript")}}, uma String é um dos {{Glossary("Primitive", "val
 ### Conhecimento Geral
 
 - [String (computer science)](https://pt.wikipedia.org/wiki/Cadeia_de_caracteres) (em inglês) na Wikipedia
-- [Estruturas e tipos de dados em JavaScript](/pt-BR/docs/Web/JavaScript/Data_structures#string_type)
+- [Estruturas e tipos de dados em JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#string_type)

@@ -7,9 +7,40 @@ l10n:
 
 {{CSSRef}}
 
-**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
+**`linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二つ以上の色の連続的な直線に沿った変化から構成される画像を生成します。結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 構文
 
@@ -64,7 +95,7 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 - `<color-hint>`
   - : 隣り合う色経由点の間でどのようにグラデーションが進むかを定義する{{glossary("interpolation","補間")}}のヒントです。長さによって、どの位置で二つの色経由点のグラデーション色が色の移行の中間点に達するかを定義します。省略された場合、色の移行の中間点は二つの色経由点の中点になります。
 
-> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorial/Gradients)と同じルールに従います。
+> **メモ:** [CSS グラデーションにおける色経由点](#gradient_with_multiple_color_stops)の描画は、 [SVG グラデーション](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Gradients)と同じルールに従います。
 
 ## 解説
 

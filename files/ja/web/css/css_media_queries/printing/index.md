@@ -22,7 +22,7 @@ slug: Web/CSS/CSS_media_queries/Printing
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
 ```
 
-## レイアウトを改善するためのメディアクエリの使用
+## レイアウトを改善するためのメディアクエリーの使用
 
 ## 印刷リクエストの検出
 

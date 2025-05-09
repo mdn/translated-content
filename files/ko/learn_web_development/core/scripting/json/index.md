@@ -92,7 +92,7 @@ JSON은 문자열 형태로 존재합니다 — 네트워크를 통해 전송할
 }
 ```
 
-이 객체를 Javascript 프로그램에서 로드하고, 예를 들어 `superHeroes`라는 이름의 변수에 파싱하면 [JavaScript object basics](/ko/docs/Learn/JavaScript/Objects/Basics) 문서에서 보았던 것처럼 점/브라켓 표현법을 통해 객체 내 데이터에 접근할 수 있게 됩니다. 아래와 같이요:
+이 객체를 Javascript 프로그램에서 로드하고, 예를 들어 `superHeroes`라는 이름의 변수에 파싱하면 [JavaScript object basics](/ko/docs/Learn_web_development/Core/Scripting/Object_basics) 문서에서 보았던 것처럼 점/브라켓 표현법을 통해 객체 내 데이터에 접근할 수 있게 됩니다. 아래와 같이요:
 
 ```js
 superHeroes.homeTown;
@@ -285,7 +285,7 @@ function showHeroes(jsonObj) {
 
 우선, 새로운 변수 내의 JavaScript 객체에 `members` 프로퍼티를 저장해 주세요. 이 배열은 각 히어로에 대한 정보를 가진 여러 개의 객체를 포함합니다.
 
-다음으로, 우리는 [for loop](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop)를 사용하여 배열 내의 각 객체에 반복 실행을 걸겁니다.
+다음으로, 우리는 [for loop](/ko/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop)를 사용하여 배열 내의 각 객체에 반복 실행을 걸겁니다.
 
 1. 몇 개의 새로운 요소를 생성해 주세요: `<article>`, `<h2>`, 3개의 `<p>`, 그리고 `<ul>`.
 2. \<h2>가 히어로의 `name`을 가지도록 설정해 주세요.
@@ -298,7 +298,7 @@ function showHeroes(jsonObj) {
 > 만약 실습에 문제를 겪고 있다면, [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) 코드를 참조하세요. ([running live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) 또한 보세요.)
 
 > [!NOTE]
-> 만약 우리가 주로 사용하는 JavaScript 객체에 접근하기 위한 점/괄호 표기법을 따르는데 문제를 겪고 있다면, 다른 탭이나 당신의 선호하는 텍스트 에디터에 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 파일을 여는 것이 도움이 될 것이다. 또한 당신은 점/괄호 표기법에 대한 다른 정보를 위해 [JavaScript object basics](/ko/docs/Learn/JavaScript/Objects/Basics) 글을 다시 확인하는 것을 권합니다.
+> 만약 우리가 주로 사용하는 JavaScript 객체에 접근하기 위한 점/괄호 표기법을 따르는데 문제를 겪고 있다면, 다른 탭이나 당신의 선호하는 텍스트 에디터에 [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) 파일을 여는 것이 도움이 될 것이다. 또한 당신은 점/괄호 표기법에 대한 다른 정보를 위해 [JavaScript object basics](/ko/docs/Learn_web_development/Core/Scripting/Object_basics) 글을 다시 확인하는 것을 권합니다.
 
 ## 객체와 문자 사이의 변환
 
@@ -341,7 +341,7 @@ myString;
 
 ## 실력을 시험해보자!
 
-당신은 이 글의 끝에 도달했지만 가장 중요한 정보들을 기억하고 있습니까? 다음 단계를 가기 전 당신이 얼마나 이 정보를 습득하고 있는지 확인할 수 있는 테스트를 할 수 있습니다. — [Test your skills: JSON](/ko/docs/Learn/JavaScript/Objects/Test_your_skills:_JSON)
+당신은 이 글의 끝에 도달했지만 가장 중요한 정보들을 기억하고 있습니까? 다음 단계를 가기 전 당신이 얼마나 이 정보를 습득하고 있는지 확인할 수 있는 테스트를 할 수 있습니다. — [Test your skills: JSON](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)
 
 ## 요약
 

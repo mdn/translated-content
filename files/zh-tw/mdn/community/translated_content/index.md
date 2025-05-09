@@ -1,7 +1,6 @@
 ---
 title: MDN 線上文件的在地化
 slug: MDN/Community/Translated_content
-original_slug: MDN/Community/Contributing/Translated_content
 l10n:
   sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
 ---

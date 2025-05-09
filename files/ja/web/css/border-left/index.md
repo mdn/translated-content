@@ -7,9 +7,47 @@ l10n:
 
 {{CSSRef}}
 
-**`border-left`** は[一括指定](/ja/docs/Web/CSS/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
+**`border-left`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。
 
-{{EmbedInteractiveExample("pages/css/border-left.html")}}
+{{InteractiveExample("CSS Demo: border-left")}}
+
+```css interactive-example-choice
+border-left: solid;
+```
+
+```css interactive-example-choice
+border-left: dashed red;
+```
+
+```css interactive-example-choice
+border-left: 1rem solid;
+```
+
+```css interactive-example-choice
+border-left: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 他の一括指定プロパティと同様に、 `border-left` は、一部の値が指定されていなくても、設定可能なプロパティをすべて設定します。指定されていないプロパティは既定値が設定されます。次のコードを考えてください。
 
@@ -110,4 +148,4 @@ div {
 - {{cssxref("border-block")}}
 - {{cssxref("outline")}}
 - [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

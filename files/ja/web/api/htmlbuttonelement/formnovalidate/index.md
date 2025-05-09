@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formNoValidate`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、{{htmlelement("form")}} がこの {{htmlelement("button")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Constraint_validation)を回避するかどうかを示す論理値です。この `<button>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Element/button#formnovalidate) 属性を反映します。
+**`formNoValidate`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、{{htmlelement("form")}} がこの {{htmlelement("button")}} から送信されたとき、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を回避するかどうかを示す論理値です。この `<button>` 要素の [`formnovalidate`](/ja/docs/Web/HTML/Reference/Elements/button#formnovalidate) 属性を反映します。
 
 この値は、このボタンからフォームを送信する場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.noValidate", "noValidate")}} プロパティを上書きします。このプロパティは値を受け取ったり設定したりすることができます。
 
@@ -42,5 +42,5 @@ console.log(buttonElement.formNoValidate);
 - {{HTMLElement("form")}}
 - {{domxref("HTMLFormElement.noValidate")}}
 - {{domxref("HTMLInputElement.formNoValidate")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

@@ -242,7 +242,7 @@ Ela foi criada em resposta à problemas ocorridos com `setInterval()`, que por e
 ([Leia mais sobre isso em CreativeJS](http://creativejs.com/resources/requestanimationframe/index.html).)
 
 > [!NOTE]
-> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice).
+> Você pode encontrar exemplos do uso de `requestAnimationFrame()` em outros lugares do curso — por exemplo em [Drawing graphics](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics), e [Object building practice](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice).
 
 O método toma como argumentos uma callback a ser invocada antes da renovação. Esse é o padrão geral que você verá usado em:
 
@@ -624,8 +624,8 @@ So that's it — all the essentials of async loops and intervals covered in one 
 ## In this module
 
 - [General asynchronous programming concepts](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Introducing)
-- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn/JavaScript/Asynchronous/Introducing)
+- [Introducing asynchronous JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Introducing)
 - [Cooperative asynchronous JavaScript: Timeouts and intervals](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous_ae5a561b0ec11fc53c167201aa8af5df)
-- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Graceful asynchronous programming with Promises](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - [Making asynchronous programming easier with async and await](/pt-BR/docs/conflicting/Learn/JavaScript/Asynchronous/Promises)
-- [Choosing the right approach](/pt-BR/docs/Learn/JavaScript/Asynchronous)
+- [Choosing the right approach](/pt-BR/docs/Learn_web_development/Extensions/Async_JS)

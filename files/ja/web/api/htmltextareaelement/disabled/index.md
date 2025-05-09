@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`disabled`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、この複数行テキストコントロールが無効で操作できないかどうかを示します。これは {{htmlelement("textarea")}} 要素の [`disabled`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を反映します。 `false` の場合でも、それを格納する要素（例えば {{htmlelement("fieldset")}}）が無効になっている場合に、このテキストエリアが、無効になる場合があります。
+**`disabled`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、この複数行テキストコントロールが無効で操作できないかどうかを示します。これは {{htmlelement("textarea")}} 要素の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性を反映します。 `false` の場合でも、それを格納する要素（例えば {{htmlelement("fieldset")}}）が無効になっている場合に、このテキストエリアが、無効になる場合があります。
 
 ## 値
 

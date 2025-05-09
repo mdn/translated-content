@@ -152,4 +152,4 @@ To test it out, open [useragentstring.com](http://useragentstring.com/) and chec
 
 ## Learn more
 
-To learn about all the things you can do with the `webRequest` API, see its [reference documentation](/ru/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
+To learn about all the things you can do with the `webRequest` API, see its [reference documentation](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).

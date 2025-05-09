@@ -15,4 +15,4 @@ slug: Glossary/DNS
 
 ### Общие знания
 
-- [Что такое доменные адреса](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Что такое доменные адреса](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

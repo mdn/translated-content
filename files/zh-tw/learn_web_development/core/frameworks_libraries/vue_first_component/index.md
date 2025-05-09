@@ -1,10 +1,9 @@
 ---
 title: 建立第一個 Vue 元件
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_first_component
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_getting_started","Learn_web_development/Core/Frameworks_libraries/Vue_rendering_lists", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在是時候來更深入了解 Vue ，以及建立我們自訂的元件——我們將從建立一個元件開始，這個元件代表待辦清單裡的每一個項目。在過程中，我們會學到一些重要的概念，例如在元件裡面調用其他元件，使用 props 傳遞資料，以及儲存它的狀態（ state ）。
 
@@ -62,7 +61,7 @@ original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_fir
 </script>
 ```
 
-我們現在開始為 `ToDoItem` 添加實際內容。目前 Vue 模板只允許存在一個根元素——用一個元素來包裝在 template 區塊裡面的所有內容（這個情況在 Vue 3 發布後會改變）。我們將使用一個 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 來做為根元素。
+我們現在開始為 `ToDoItem` 添加實際內容。目前 Vue 模板只允許存在一個根元素——用一個元素來包裝在 template 區塊裡面的所有內容（這個情況在 Vue 3 發布後會改變）。我們將使用一個 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 來做為根元素。
 
 1. 現在在元件 template 裡面新增一個空的 `<div>` 。
 2. 在這個 `<div>` 裡面，新增一個 checkbox 和一個相對應的 label。在 checkbox 加上一個 `id` 屬性，並在 label 加上 `for` 屬性，使 checkbox 對應到 label 。如下所示。
@@ -106,7 +105,7 @@ export default {
 
 要在應用程式裡實際渲染 `ToDoItem` 元件，你需要在 `<template>` 元素裡面呼叫它——加上 `<to-do-item></to-do-item>` 元素。請注意，元件檔案名稱和它在 JavaScript 的表示法通常是用大駝峰式命名法（ PascalCase ，例如： `ToDoList` ），而相對應的自訂元素是用 kebab-case（例如： `<to-do-list>` ）。
 
-1. 在 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 底下建立一個無序清單（ [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) ）包含單一個清單項目（ [`<li>`](/zh-TW/docs/Web/HTML/Element/li) ）。
+1. 在 [`<h1>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 底下建立一個無序清單（ [`<ul>`](/zh-TW/docs/Web/HTML/Reference/Elements/ul) ）包含單一個清單項目（ [`<li>`](/zh-TW/docs/Web/HTML/Reference/Elements/li) ）。
 2. 在清單項目（ \<li> ）裡面加上 `<to-do-item></to-do-item>` 。
 
 現在你的 `App.vue` 的 `<template>` 內容應該會像這樣：
@@ -217,7 +216,7 @@ found in
 
 If you change the value of the `label` prop passed into the `<to-do-item></to-do-item>` call in your App component, you should see it update. This is great. We have a checkbox, with an updatable label. However, we're currently not doing anything with the "done" prop — we can check the checkboxes in the UI, but nowhere in the app are we recording whether a todo item is actually done.
 
-To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/zh-TW/docs/Web/HTML/Element/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
+To achieve this, we want to bind the component's `done` prop to the `checked` attribute on the [`<input>`](/zh-TW/docs/Web/HTML/Reference/Elements/input) element, so that it can serve as a record of whether the checkbox is checked or not. However, it's important that props serve as one-way data binding — a component should never alter the value of its own props. There are a lot of reasons for this. In part, components editing props can make debugging a challenge. If a value is passed to multiple children, it could be hard to track where the changes to that value were coming from. In addition, changing props can cause components to re-render. So mutating props in a component would trigger the component to rerender, which may in-turn trigger the mutation again.
 
 To work around this, we can manage the `done` state using Vue's `data` property. The `data` property is where you can manage local state in a component, it lives inside the component object alongside the `props` property and has the following structure:
 

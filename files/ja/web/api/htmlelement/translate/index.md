@@ -10,7 +10,7 @@ l10n:
 
 **`translate`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ページがローカライズされるとき、要素の属性値や {{domxref("Text")}} ノードの子の値を対応させるか、そのままにするかを示します。
 
-これは HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) グローバル属性の値を反映します。
+これは HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性の値を反映します。
 
 ## 値
 
@@ -60,4 +60,4 @@ controller.addEventListener("change", (e) => {
 
 ## 関連情報
 
-- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes#translate) グローバル属性
+- HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性

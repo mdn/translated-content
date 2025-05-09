@@ -59,7 +59,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 ### ドラッグ可能なものを特定
 
-要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
+要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
 
 ```html
 <script>
@@ -81,7 +81,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 詳しくは、以下の記事を参照してください。
 
-- [draggable 属性リファレンス](/ja/docs/Web/HTML/Global_attributes/draggable)
+- [draggable 属性リファレンス](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
 - [ドラッグ操作ガイド](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### ドラッグするデータの定義

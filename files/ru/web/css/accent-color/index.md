@@ -9,14 +9,56 @@ l10n:
 
 [CSS](/ru/docs/Web/CSS)-свойство **`accent-color`** устанавливает {{Glossary("accent", "акцентный цвет")}} для некоторых элементов управления пользовательским интерфейсом.
 
-{{EmbedInteractiveExample("pages/css/accent-color.html")}}
+{{InteractiveExample("CSS Demo: accent-color")}}
+
+```css interactive-example-choice
+accent-color: red;
+```
+
+```css interactive-example-choice
+accent-color: #74992e;
+```
+
+```css interactive-example-choice
+accent-color: rgb(255, 255, 128);
+```
+
+```css interactive-example-choice
+accent-color: hsl(250, 100%, 34%);
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <div>
+    <input checked="" id="example-element" type="checkbox" />
+    <label for="example-element" id="example-label">Example Label</label>
+  </div>
+</section>
+```
+
+```css interactive-example
+.container > div {
+  display: flex;
+  align-items: center;
+}
+
+#example-element {
+  width: 40px;
+  height: 40px;
+}
+
+#example-label {
+  margin-left: 10px;
+  font-size: x-large;
+}
+```
 
 Браузеры, которые поддерживают `accent-color`, в настоящее время применяют его к следующим HTML-элементам:
 
 - [`<input type="checkbox">`](/ru/docs/Web/HTML/Element/input/checkbox)
-- [`<input type="radio">`](/ru/docs/Web/HTML/Element/input/radio)
-- [`<input type="range">`](/ru/docs/Web/HTML/Element/input/range)
-- [`<progress>`](/ru/docs/Web/HTML/Element/progress)
+- [`<input type="radio">`](/ru/docs/Web/HTML/Reference/Elements/input/radio)
+- [`<input type="range">`](/ru/docs/Web/HTML/Reference/Elements/input/range)
+- [`<progress>`](/ru/docs/Web/HTML/Reference/Elements/progress)
 
 Во всех пользовательских агентах есть акцентный цвет для обеспечения читаемости и контрастности. Этот цвет используется не в каждом элементе управления пользовательского интерфейса и не в каждом состоянии элемента. `accent-color` применяется только к тем элементам управления и только в тех состояниях, где он применим.
 

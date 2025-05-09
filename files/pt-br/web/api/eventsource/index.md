@@ -9,7 +9,7 @@ A interface `EventSource` é usada para receber eventos enviados pelo servidor (
 
 Assim que a conexão estiver aberta, mensagens recebidas do servidor são entregues para o seu código na forma de eventos [`message`](/pt-BR/docs/Web/API/BroadcastChannel/message_event).
 
-Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage) como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
+Ao contrário dos [WebSockets](/pt-BR/docs/Web/API/WebSockets_API), server-sent events são unidirecionais; ou seja, mensagens são entregues em uma direção, do servidor para o cliente (por exemplo, um navegador web). Isso torna-os uma excelente escolha quando não há necessidade de enviar mensagens do cliente para o servidor. Por exemplo, `EventSource` é uma abordagem útil para lidar com atualizações de status de mídias sociais, feeds de notícias, or entregar dados para um mecanismo de [armazenamento do lado cliente](/pt-BR/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage) como o [IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API) ou o [web storage](/pt-BR/docs/Web/API/Web_Storage_API).
 
 ## Construtor
 
@@ -25,7 +25,7 @@ _Essa interface também herda propriedades do seu pai, {{domxref("EventTarget")}
 - {{domxref("EventSource.url")}} {{readonlyinline}}
   - : Uma {{domxref("DOMString")}} representando a URL da origem.
 - {{domxref("EventSource.withCredentials")}} {{readonlyinline}}
-  - : Um {{domxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/CORS)) definidas (`true`) ou não (`false`, o padrão).
+  - : Um {{domxref("Boolean")}} indicando se a `EventSource` foi instanciada com credenciais cross-origin ([CORS](/pt-BR/docs/Web/HTTP/Guides/CORS)) definidas (`true`) ou não (`false`, o padrão).
 
 ### Eventos
 

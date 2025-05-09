@@ -1,7 +1,6 @@
 ---
 title: ブラウザーの開発者ツールとは
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 l10n:
   sourceCommit: 6635942cfb4f8949f7b707a24cf428c57750a96d
 ---
@@ -11,7 +10,7 @@ l10n:
 最近のブラウザーにはパワフルな開発者ツールが入っています。開発者ツールでは、現在の HTML や CSS、JavaScript の状態を検証したり、ページがどういった資産にアクセスし、どれだけ時間がかかったかといった多様なことができます。この記事ではブラウザーの開発者ツールの使い方について説明します。
 
 > [!NOTE]
-> 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn/Getting_started_with_the_web)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
+> 下のサンプルを実行していく前に、[ウェブ入門](/ja/docs/Learn_web_development/Getting_started/Your_first_website)の記事の中で作りあげる、[初心者向けウェブサイトの例](https://mdn.github.io/beginner-html-site-scripted/)を開いてください。後ほどこれを使って説明します。
 
 ## ブラウザーの開発者ツールの開き方
 
@@ -214,5 +213,5 @@ document.querySelector("h1").appendChild(loginImage);
 
 ## 関連情報
 
-- [HTML のデバッグ](/ja/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [CSS のデバッグ](/ja/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [HTML のデバッグ](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+- [CSS のデバッグ](/ja/docs/Learn_web_development/Core/Styling_basics/Building_blocks/Debugging_CSS)

@@ -1,10 +1,9 @@
 ---
 title: 创建超链接
 slug: Learn_web_development/Core/Structuring_content/Creating_links
-original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content/Marking_up_a_letter", "Learn_web_development/Core/Structuring_content")}}
 
 超链接非常重要——它们使互联网成为一个*互联的网络*。本文介绍了创建链接所需的语法，并且讨论了链接的最佳实践。
 
@@ -34,7 +33,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Creating_hyperlinks
 
 ## 链接的解析
 
-通过将文本或其他内容包裹在 {{htmlelement("a")}} 元素内，并给它一个包含网址的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性（也称为**超文本引用**或**目标**，它将包含一个网址）来创建一个基本链接。
+通过将文本或其他内容包裹在 {{htmlelement("a")}} 元素内，并给它一个包含网址的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性（也称为**超文本引用**或**目标**，它将包含一个网址）来创建一个基本链接。
 
 ```html
 <p>
@@ -156,7 +155,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ### 文档片段
 
-超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为**文档片段**）。要做到这一点，你必须首先给要链接到的元素分配一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性。通常情况下，链接到一个特定的标题是有意义的，这看起来就像下面这样：
+超链接除了可以链接到文档外，也可以链接到 HTML 文档的特定部分（被称为**文档片段**）。要做到这一点，你必须首先给要链接到的元素分配一个 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性。通常情况下，链接到一个特定的标题是有意义的，这看起来就像下面这样：
 
 ```html
 <h2 id="Mailing_address">邮寄地址</h2>
@@ -300,7 +299,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 这会创建一个链接，看起来像这样：[向 nowhere 发邮件](mailto:nowhere@mozilla.org)。
 
-实际上，电子邮件地址是可选的。如果你省略了它（也就是说，你的 [`href`](/zh-CN/docs/Web/HTML/Element/a#href) 属性仅仅只是简单的“mailto:”），发送新的电子邮件的窗口也会被用户的邮件客户端打开，只是没有收件人的地址信息，这通常在“分享”链接是很有用的，用户可以给他们选择的地址发送邮件。
+实际上，电子邮件地址是可选的。如果你省略了它（也就是说，你的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性仅仅只是简单的“mailto:”），发送新的电子邮件的窗口也会被用户的邮件客户端打开，只是没有收件人的地址信息，这通常在“分享”链接是很有用的，用户可以给他们选择的地址发送邮件。
 
 ### 指定详细信息
 
@@ -328,7 +327,7 @@ URL 使用路径查找文件。路径指定文件系统中你感兴趣的文件�
 
 ## 技能测试！
 
-你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links)。
+你已经到了这篇文章的结尾，但还能记住最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——见[技能测试：链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links)。
 
 ## 小结
 

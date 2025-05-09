@@ -67,7 +67,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
 ウェルノウンシンボルが導入される前、JavaScript では特定の組み込み操作を実装するために通常のプロパティを使用していました。例えば、[`JSON.stringify`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) 関数は各オブジェクトの `toJSON()` メソッドを呼び出そうとし、[`String`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/String) 関数はオブジェクトの `toString()` メソッドと `valueOf()` メソッドを呼び出します。しかし、言語により多くの操作が追加されるにつれて、各操作を「マジックプロパティ」に指定することは、後方互換性を壊し、言語の動作を推論しにくくする可能性があることが分かってきました。ウェルノウンシンボルを使用することで、通常文字列プロパティしか読み取らない通常のコードから、カスタマイズを「見えない」ようにすることができます。
 
 > [!NOTE]
-> 仕様書では、ウェルノウンシンボルを表すために `@@<シンボル名>` という表記を使っていました。例えば、{{jsxref("Symbol.hasInstance")}} は `@@hasInstance` と表記され、`Array.prototype[Symbol.iterator]()` メソッドは `Array.prototype[@@iterator]()` と呼ばれていました。この表記法は仕様書では使われなくなりましたが、古い文書や議論ではまだ見かけることがあります。
+> 仕様書では、ウェルノウンシンボルを表すために `@@<シンボル名>` という表記を使っていました。例えば、{{jsxref("Symbol.hasInstance")}} は `@@hasInstance` と表記され、`Array.prototype[Symbol.iterator]()` メソッドは `Array.prototype[Symbol.iterator]()` と呼ばれていました。この表記法は仕様書では使われなくなりましたが、古い文書や議論ではまだ見かけることがあります。
 
 ウェルノウンシンボルはガベージコレクションの対象にはなりません。固定セットで提供され、`Array.prototype` のような組み込みオブジェクトと同様に、プログラムの寿命を通じて一意であるためです。ですから、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}}、{{jsxref("WeakRef")}}、{{jsxref("FinalizationRegistry")}} の各オブジェクト内で使用することができます。
 
@@ -212,5 +212,5 @@ obj[Object(sym)]; // still 1
 
 - [`Symbol` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [JavaScript データ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript データ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) (hacks.mozilla.org, 2015)

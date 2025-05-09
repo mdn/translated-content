@@ -1,11 +1,59 @@
 ---
 title: border-start-end-radius
 slug: Web/CSS/border-start-end-radius
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-start-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
+
+{{InteractiveExample("CSS Demo: border-start-end-radius")}}
+
+```css interactive-example-choice
+border-start-end-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-start-end-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-start-end-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-start-end-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    このボックスは、右上の角が丸くなっています。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
+
+このプロパティは、要素の block-start と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-right-radius")}} プロパティに対応します。
+
+## 構文
 
 ```css
 /* <length> 値 */
@@ -20,14 +68,9 @@ border-start-end-radius: 1em 2em;
 border-start-end-radius: inherit;
 border-start-end-radius: initial;
 border-start-end-radius: revert;
+border-start-end-radius: revert-layer;
 border-start-end-radius: unset;
 ```
-
-{{EmbedInteractiveExample("pages/css/border-start-end-radius.html")}}
-
-このプロパティは、要素の block-start と inline-end の間の角に影響します。すなわち、書字方向が `horizontal-tb` で `ltr` の方向であれば、 {{CSSxRef("border-top-right-radius")}} プロパティに対応します。
-
-## 構文
 
 ### 値
 
@@ -44,13 +87,13 @@ border-start-end-radius: unset;
 
 ## 例
 
-<h3 id="Border_radius_with_vertical_text">縦書きの時の境界の丸め</h3>
+### 縦書きの時の境界の丸め
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example</p>
+  <p class="exampleText">角丸の例</p>
 </div>
 ```
 
@@ -74,7 +117,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きの時の境界の丸め", 140, 140)}}
 
 ## 仕様書
 
@@ -86,5 +129,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{CSSxRef("border-bottom-left-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

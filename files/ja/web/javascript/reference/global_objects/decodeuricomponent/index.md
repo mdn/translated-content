@@ -66,9 +66,9 @@ try {
 // URIError: malformed URI sequence
 ```
 
-### URL からのクエリパラメータのデコード
+### URL からのクエリーパラメータのデコード
 
-decodeURIComponent は、URL からのクエリパラメータを解析するために直接使用することはできません。少し準備が必要です。
+decodeURIComponent は、URL からのクエリーパラメータを解析するために直接使用することはできません。少し準備が必要です。
 
 ```js
 function decodeQueryParam(p) {
@@ -79,7 +79,7 @@ decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

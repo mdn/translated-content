@@ -24,7 +24,7 @@ l10n:
     <tr>
       <th scope="row">目的:</th>
       <td>
-        ウェブフレームワークがどのようにサーバサイドコードの開発/保守を簡素化するかを理解し、読者が自分自身でフレームワークを選択することを考えられるようになること。
+        ウェブフレームワークがどのようにサーバーサイドコードの開発/保守を簡素化するかを理解し、読者が自分自身でフレームワークを選択することを考えられるようになること。
       </td>
     </tr>
   </tbody>
@@ -249,7 +249,7 @@ Uber、Accenture、IBM などを含む多くの有名企業が Express を使用
 
 [Deno](https://deno.land/)は、シンプルで現代的での安全な [JavaScript](/ja/docs/Web/JavaScript)/TypeScript ランタイムであり、 Chrome V8 と [Rust](https://www.rust-lang.org/) の上に構築されたフレームワークです。
 
-Deno は、 Rust ベースの非同期ランタイムである [Tokio](https://tokio.rs/) を搭載しており、ウェブページをより高速に提供することができます。また、クライアントサイドで使用するバイナリーコードのコンパイラーが利用できる WebAssembly にも内部的に対応しています。 Deno は、より優れたセキュリティを自然に維持するメカニズムを提供することで、 [Node.js](/ja/docs/Learn/Server-side/Node_server_without_framework) のループホールの一部を埋めることを目指しています。
+Deno は、 Rust ベースの非同期ランタイムである [Tokio](https://tokio.rs/) を搭載しており、ウェブページをより高速に提供することができます。また、クライアントサイドで使用するバイナリーコードのコンパイラーが利用できる WebAssembly にも内部的に対応しています。 Deno は、より優れたセキュリティを自然に維持するメカニズムを提供することで、 [Node.js](/ja/docs/Learn_web_development/Extensions/Server-side/Node_server_without_framework) のループホールの一部を埋めることを目指しています。
 
 Deno は次のような機能を含んでいます。
 

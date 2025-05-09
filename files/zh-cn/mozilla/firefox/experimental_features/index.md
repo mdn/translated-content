@@ -58,7 +58,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### 切换密码显示
 
-HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Element/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
+HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
 
 <table>
   <thead>
@@ -1609,8 +1609,8 @@ CSS 更新包括：
 
 以下 HTML 全局属性得到了支持：
 
-- [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget)
-- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
+- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
 参见 [Firefox bug 1823757](https://bugzil.la/1823757) 以获取更多细节。
 
@@ -2243,7 +2243,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 ### 权限策略 / 特性策略
 
-[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy) 允许网络开发人员有选择地启用、禁用和修改浏览器中某些特性和 API 的行为。它与 CSP 类似，但控制的是特性而不是安全行为。请注意，在 Firefox 中实现的是**特性策略**，这是该规范早期版本中使用的名称。
+[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy) 允许网络开发人员有选择地启用、禁用和修改浏览器中某些特性和 API 的行为。它与 CSP 类似，但控制的是特性而不是安全行为。请注意，在 Firefox 中实现的是**特性策略**，这是该规范早期版本中使用的名称。
 
 <table>
   <thead>
@@ -2285,7 +2285,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 ### Clear-Site-Data“cache”指令
 
-[`Clear-Site-Data`](/zh-CN/docs/Web/HTTP/Headers/Clear-Site-Data) HTTP 响应标头 `cache` 指令会清除请求网站的浏览器缓存。
+[`Clear-Site-Data`](/zh-CN/docs/Web/HTTP/Reference/Headers/Clear-Site-Data) HTTP 响应标头 `cache` 指令会清除请求网站的浏览器缓存。
 
 > [!NOTE]
 > 这原本在默认情况下是启用的，但在版本 94（[Firefox bug 1729291](https://bugzil.la/1729291)）中被置于首选项之后。
@@ -2332,7 +2332,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 ### 默认 SameSite=Lax
 
-[`SameSite` cookie](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的默认值为 `Lax`。在此设置下，只有当用户导航到原始站点时才会发送 cookie，而不会发送跨站点子请求以将图像或框架加载到第三方站点等。详见 [Firefox bug 1617609](https://bugzil.la/1617609)。
+[`SameSite` cookie](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的默认值为 `Lax`。在此设置下，只有当用户导航到原始站点时才会发送 cookie，而不会发送跨站点子请求以将图像或框架加载到第三方站点等。详见 [Firefox bug 1617609](https://bugzil.la/1617609)。
 
 <table>
   <thead>
@@ -2372,7 +2372,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 ### HTTP 状态码 103
 
-服务器可能会发送 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Status#信息响应)状态代码，以允许用户代理在服务器仍在准备完整响应时开始预加载资源。详见 [Firefox bug 1813035](https://bugzil.la/1813035)。
+服务器可能会发送 [`103 Early Hints`](/zh-CN/docs/Web/HTTP/Reference/Status/103) HTTP [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)状态代码，以允许用户代理在服务器仍在准备完整响应时开始预加载资源。详见 [Firefox bug 1813035](https://bugzil.la/1813035)。
 
 <table>
   <thead>
@@ -2412,7 +2412,7 @@ Firefox Nightly（仅）从 Firefox 101 开始启用此特性。其他版本没�
 
 ### Access-Control-Allow-Headers 通配符不包含 Authorization 标头
 
-[`Access-Control-Allow-Headers`](/zh-CN/docs/Web/HTTP/Headers/Access-Control-Allow-Headers) 是 [CORS 预检请求](/zh-CN/docs/Glossary/Preflight_request)的响应标头，表示哪些请求标头可以包含在最终请求中。响应指令可包含通配符（`*`），表示最终请求可包含除 `Authorization` 标头以外的所有标头。
+[`Access-Control-Allow-Headers`](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Headers) 是 [CORS 预检请求](/zh-CN/docs/Glossary/Preflight_request)的响应标头，表示哪些请求标头可以包含在最终请求中。响应指令可包含通配符（`*`），表示最终请求可包含除 `Authorization` 标头以外的所有标头。
 
 默认情况下，Firefox 在收到带有 `Access-Control-Allow-Headers: *` 的响应时会包含 `Authorization` 标头。将首选项设置为 `false` 可确保 Firefox 不包含 `Authorization` 标头。详见 [Firefox bug 1687364](https://bugzil.la/1687364)。
 

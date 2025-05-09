@@ -73,8 +73,8 @@ the words "emphasized text" will not have a border (since the initial value of {
     - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
     - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
 
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/Value_definition_syntax)
-  - [特性簡寫](/zh-TW/docs/Web/CSS/Shorthand_properties)
-  - [可置換元素](/zh-TW/docs/Web/CSS/Replaced_element)
+  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - {{glossary("replaced elements", "可置換元素")}}
 
 - {{ Cssxref("inherit") }}

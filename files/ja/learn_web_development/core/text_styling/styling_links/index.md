@@ -354,7 +354,7 @@ a[href^="http"]::after {
 
 ここでは[相対的な単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#相対長の単位)である `em` を使用しています。アイコンのサイズはアンカーのテキストサイズに比例します。アンカーのテキストサイズが変更された場合、アイコンのサイズもそれに応じて調整されます。
 
-最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Element/a#href) 属性が "http" で始まるものに限り選択します。
+最後んび。どうやって外部リンクだけを選択したのでしょうか？ [HTML のリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)を適切に記述しているのなら、絶対 URL を使用しているのは外部リンクだけであるはずです。自分のサイトの他の部分にリンクするには（最初のリンクのように）相対リンクを使用したほうが効率的です。"http" というテキストは（2 番目と 3 番目のリンクのように）外部リンクにのみ現れるので、これを[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#属性セレクター)で選択できます。`a[href^="http"]` は {{htmlelement("a")}} 要素のうち、[`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が "http" で始まるものに限り選択します。
 
 以上です。上のアクティブラーニングの節を再検討して、この新しいテクニックを試してみてください！
 

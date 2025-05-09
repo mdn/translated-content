@@ -22,7 +22,7 @@ HTML ファイルは、devtools ページと呼ばれる特別なページを拡
 
 devtools ページはブラウザーの devtools を開くとロードされ、閉じるとアンロードされます。devtools ウィンドウは単一のタブに関連付けられているため、複数の devtools ウィンドウ、つまり複数の devtools ページが同時に存在する可能性が非常に高いことに注意してください。
 
-devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Element/script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
+devtools ページには目に見える DOM はありませんが、[`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) タグを使用して JavaScript ソースを含めることができます。ソースは拡張機能自体にバンドルする必要があります。ソースは以下にアクセスできます:
 
 - グローバル [`window`](/ja/docs/Web/API/Window) オブジェクトを介してアクセス可能な通常の DOM API
 - コンテンツスクリプトと[同じ WebExtension API](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)

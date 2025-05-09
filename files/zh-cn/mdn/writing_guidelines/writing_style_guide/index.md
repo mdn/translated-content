@@ -143,9 +143,9 @@ MDN 拥有广泛而多样化的受众。我们强烈建议尽可能保持文本�
   - **审查页面结构**：审查页面以确保它的结构对于[页面类型](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types)来说是正确的。要确保它应该有的每一节都存在，并有适当的内容。
   - **确保完整性**：审查各节以确保没有遗漏任何信息。确保所有的参数都被列出并解释。确保涵盖任何例外情况——这是一个特别常见的内容缺失的地方。
   - **确保所有的概念都得到充实**：对某件事进行快速解释很容易，但要确保涵盖所有的细微差别。是否有特殊情况？是否有读者可能需要了解的任何已知限制？
-  - **增加例子**：应该有涵盖所有参数或至少是初级到中级用户可能使用的参数（或属性）的例子，以及任何需要额外解释的高级参数。每个例子前面都应该有一个概述，说明这个例子将做什么，理解它可能需要哪些额外的知识，等等。在例子之后（或穿插在例子的各个部分）应该有解释代码如何工作的文字。不要吝啬例子中的细节和对错误的处理。请记住，用户会复制和粘贴你的例子在他们自己的项目中使用，而你的代码也会在生产网站上使用！请参阅我们的[代码范例指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)以获得更多有用的信息。
+  - **增加例子**：应该有涵盖所有参数或至少是初级到中级用户可能使用的参数（或属性）的例子，以及任何需要额外解释的高级参数。每个例子前面都应该有一个概述，说明这个例子将做什么，理解它可能需要哪些额外的知识，等等。在例子之后（或穿插在例子的各个部分）应该有解释代码如何工作的文字。不要吝啬例子中的细节和对错误的处理。请记住，用户会复制和粘贴你的例子在他们自己的项目中使用，而你的代码也会在生产网站上使用！请参阅我们的[代码范例指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)以获得更多有用的信息。
   - **解释用例**：如果所描述的功能有特别常见的用例，那就谈一谈吧！而不是假设用户会在使用过程中出现问题！与其假设用户会发现被记录的方法可以用来解决一个常见的开发问题，不如实际添加一个关于该用例的部分，并提供一个例子和解释该例子如何工作的文字。
-  - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
+  - **添加图片信息**：在所有的图像和图表上包括适当的 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本。这个文本，以及表格和其他数字的标题，都是重要的，因为网络蜘蛛不能抓取图像，所以 `alt` 文本告诉搜索引擎爬虫嵌入式媒体包含哪些内容。
     > [!NOTE]
     > 不建议包含过多的关键词或与功能无关的关键词，以试图操纵搜索引擎的排名；这种类型的行为很容易被发现，而且往往会受到惩罚。同样，**不要**在实际页面内添加重复的、无益的材料或大量的关键词，以试图提高页面的大小和搜索排名。这对内容的可读性和我们的搜索结果来说都是弊大于利。
   - **专注于主题内容**：随着谷歌在 2013 年的 Hummingbird 更新，人们越来越关注使用自然语言来传达信息。这意味着，围绕页面的主题来写内容要比围绕特定的关键词好得多。对于一个给定的主题，你极有可能包括许多关键词；事实上，许多 SEO 编制了一个 5-100 个不同关键词的清单（在短、中、长尾关键词之间变化），以包括在他们的文章中，这取决于长度。这样做会使你的措辞多样化，从而减少重复。
@@ -407,7 +407,7 @@ MDN Web 文档上的一个页面可以包含一个以上的代码示例。以下
 - 如果你正在处理一大段示例代码，把它分解成较小的逻辑部分，以便对它们进行单独描述，这可能是有意义的。
 - 在添加[实时演示](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)时，注意到包含样本的区域中的所有 {{HTMLElement("pre")}} 块在运行样本前都被串联起来，这让你可以将任何或所有的 HTML、CSS 和 JavaScript 分成多个片段，每个片段可以选择有自己的描述、标题等。这使得撰写代码文档的功能非常强大和灵活。
 
-要了解如何为 MDN Web 文档的代码示例设置样式或格式，请参见[代码示例样式指南](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+要了解如何为 MDN Web 文档的代码示例设置样式或格式，请参见[代码示例样式指南](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 ### 外部链接
 
@@ -457,7 +457,7 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 当一个新的段落开始一个新的章节时，应该添加一个标题。
 
-在不跳级的情况下，按照递减的顺序使用这些 markdown 标记级别：`##`，然后是 `###`，然后是 `####`；这些分别翻译成 [HTML 标题标签](/zh-CN/docs/Web/HTML/Element/Heading_Elements)的 `<h2>`、`<h3>` 和 `<h4>` 标签。
+在不跳级的情况下，按照递减的顺序使用这些 markdown 标记级别：`##`，然后是 `###`，然后是 `####`；这些分别翻译成 [HTML 标题标签](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)的 `<h2>`、`<h3>` 和 `<h4>` 标签。
 
 `##` 是允许的最高级别，因为 `#` 是保留给页面标题的。我们建议不要添加超过三层的标题。如果你觉得有必要添加第四层标题，可以考虑将文章分成几个小的文章，并设置一个着陆页。或者，看看你是否可以用无序列表的方式来呈现信息，以避免添加第四级标题。
 
@@ -519,16 +519,16 @@ URL 缩短器（如 TinyURL 或 Bitly）可以很好地将长链接缩短为小�
 
 MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章的结尾处包含一个*参见*部分。这是一个参考部分，包含了 MDN 内相关主题的交叉引用，有时还包含了相关外部文章的链接。例如，这是 `@layer` 页面的[“参见”部分](/zh-CN/docs/Web/CSS/@layer#参见)。
 
-一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
+一般来说，在“参见”部分的链接以[项目符号列表](#列表)格式呈现，列表中的每一项都是一个短语。然而，在 MDN 的[学习网页开发](/zh-CN/docs/Learn_web_development)区域，“参见”部分遵循[定义列表](/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN#定义列表)格式。
 
 为了保持整个 MDN Web 文档的一致性，在添加或更新“参见”部分时，请记住以下准则。
 
 #### 链接文字
 
-- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Attributes) 页面的链接文本将是：
-  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Attributes)
-- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)页面的链接文本将是：
-  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Roles)
+- 链接文本应与被链接的页面或章节的标题相同。例如，这个 [ARIA](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes) 页面的链接文本将是：
+  - **正确**：[ARIA 状态和属性](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes)
+- 在链接文本中使用句子大小写，即使它与链接的页面标题或章节标题不同。这可能是页面或章节标题中使用的大小写不正确。例如，[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)页面的链接文本将是：
+  - **正确**：[WAI-ARIA 角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles)
 - 对于外部链接也要使用句子的大小写，即使目标文章页面上的大小写不同。这是为了确保整个 MDN Web 文档的一致性。例外情况包括书籍的名称。
 - 使用适当的宏来链接到[参考文档页面](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros#链接到_mdn_的参考文档页面)。使用宏将为链接文本中的关键词添加代码格式，如前面的例子所示。
 - 链接列表项的开头不需要冠词（"A"、"An"、"The"）。链接文本后不需要标点符号，因为它必然是一个术语或一个短语。
@@ -559,7 +559,7 @@ MDN Web 文档上的大多数指南、参考页、甚至词汇表页都在文章
 - [JavaScript/指南](/zh-CN/docs/Web/JavaScript/Guide)——主目录页
 - [JavaScript/指南/JavaScript 概述](/zh-CN/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/对象模型的细节](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 尽量避免把文章内容放置在层次结构的顶层，这会降低网站的访问速度，同时搜索和导航的效率也会下降。
 

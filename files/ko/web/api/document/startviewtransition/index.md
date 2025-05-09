@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("View Transitions API", "View Transitions API", "", "nocode")}}의 **`startViewTransition()`** 메서드는 새로운 뷰 전환을 시작하고 이를 나타내는 {{domxref("ViewTransition")}} 객체를 반환합니다.
 
-`startViewTransition()`이 호출되면 [뷰 전환 과정](/ko/docs/Web/API/View_Transitions_API#뷰_전환_프로세스)에 설명된 대로 일련의 단계를 따릅니다.
+`startViewTransition()`이 호출되면 [뷰 전환 과정](/ko/docs/Web/API/View_Transition_API#뷰_전환_프로세스)에 설명된 대로 일련의 단계를 따릅니다.
 
 ## 구문
 

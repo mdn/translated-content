@@ -77,7 +77,7 @@ HTML이 소스 코드에 나타나는 순서 그대로 표시되는지, 첫 번�
 
 CSS에서 요소가 배치되는 방식을 변경시키는 메서드는 다음과 같습니다.
 
-- **{{cssxref("display")}} 속성** — `block`, `inline` 또는 `inline-block`과 같은 기준 속성값은 일반 흐름(normal flow) 속에서 요소가 동작하는 방식을 변경할 수 있습니다. 예를 들면 블록 요소를 인라인 요소로 동작하게 할 수도 있습니다. (더 자세한 정보는 [CSS 박스 유형](/ko/docs/Learn/CSS/Building_blocks/The_box_model#types_of_css_boxes)을 참조하세요). 또한 `display` 속성값 지정을 통해 활성화될 수 있는 전체 레이아웃 메서드도 존재합니다. 그 예로는 [CSS 그리드](/ko/docs/Learn/CSS/CSS_layout/Grids)와 [플렉스박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox)가 있으며, 부모 요소 내부에 자식 요소가 배치되는 방식을 변경할 수 있습니다.
+- **{{cssxref("display")}} 속성** — `block`, `inline` 또는 `inline-block`과 같은 기준 속성값은 일반 흐름(normal flow) 속에서 요소가 동작하는 방식을 변경할 수 있습니다. 예를 들면 블록 요소를 인라인 요소로 동작하게 할 수도 있습니다. (더 자세한 정보는 [CSS 박스 유형](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model#types_of_css_boxes)을 참조하세요). 또한 `display` 속성값 지정을 통해 활성화될 수 있는 전체 레이아웃 메서드도 존재합니다. 그 예로는 [CSS 그리드](/ko/docs/Learn_web_development/Core/CSS_layout/Grids)와 [플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox)가 있으며, 부모 요소 내부에 자식 요소가 배치되는 방식을 변경할 수 있습니다.
 - **플로트(Floats)** — {{cssxref("float")}} 속성의 값을 예로 `left`로 적용하면 흔히 매거진 레이아웃에 속한 이미지가 텍스트를 자신의 주변에 떠 있게 하는 방식과 같이 블록 수준 요소가 어떤 요소의 한쪽 측면으로 밀려나도록 할 수 있다.
 - **{{cssxref("position")}} 속성** — 다른 박스 내부에 있는 박스의 배치를 정밀하게 제어할 수 있습니다. 일반 흐름에서는 `정적(static)` 포지셔닝이 기본값이지만, 브라우저 뷰포트에 고정하는 등 다른 값을 사용하여 요소를 다르게 배치할 수 있습니다.
 - **테이블 레이아웃** — HTML 테이블의 일부 스타일을 지정하기 위해 고안된 기능으로, `display: table` 관련 속성을 사용하여 테이블 관련 속성을 비테이블 요소에서도 사용할 수 있습니다.
@@ -168,7 +168,7 @@ CSS 상에서 페이지 레이아웃을 구현하는 주요 방법은 `display` 
 {{ EmbedLiveSample('Flex_2', '300', '200') }}
 
 > [!NOTE]
-> 지금까지 플렉스박스에서 가능한 기능에 대해 간략히 소개했습니다. 더 자세한 내용은 [flexbox](/ko/docs/Learn/CSS/CSS_layout/Flexbox) 편을 참조하세요.
+> 지금까지 플렉스박스에서 가능한 기능에 대해 간략히 소개했습니다. 더 자세한 내용은 [flexbox](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 편을 참조하세요.
 
 ## 그리드 레이아웃
 
@@ -263,7 +263,7 @@ CSS 상에서 페이지 레이아웃을 구현하는 주요 방법은 `display` 
 {{ EmbedLiveSample('Grid_2', '300', '330') }}
 
 > [!NOTE]
-> 이 두 예제는 그리드 레이아웃의 강력한 기능을 보여주는 작은 샘플에 불과합니다. 자세한 내용은 [그리드 레이아웃](/ko/docs/Learn/CSS/CSS_layout/Grids) 문서를 참조하세요.
+> 이 두 예제는 그리드 레이아웃의 강력한 기능을 보여주는 작은 샘플에 불과합니다. 자세한 내용은 [그리드 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout/Grids) 문서를 참조하세요.
 
 이 가이드의 나머지 부분에서는 페이지의 기본 레이아웃 구조로 보기엔 덜 중요하지만, 특정 작업을 수행하는 데 여전히 도움이 될 수 있는 다른 레이아웃 방법을 다룹니다. 각 레이아웃 작업의 특성을 이해함으로써 디자인의 특정 구성 요소를 볼 때, 해당 구성 요소에 가장 적합한 레이아웃 유형이 명확하게 드러나는 경우가 많습니다.
 
@@ -330,7 +330,7 @@ p {
 {{ EmbedLiveSample('Float_1', '100%', 600) }}
 
 > [!NOTE]
-> 플로트에 대한 설명은 [플로트 및 해제](/ko/docs/Learn/CSS/CSS_layout/Floats) 속성 편에서 충분히 다룹니다. 플렉스박스 및 그리드 레이아웃과 같은 기술이 나오기 이전에 플로트는 열 레이아웃을 만드는 방법으로 사용되었습니다. 웹에서 여전히 이러한 방법을 접할 수 있으며, [레거시 레이아웃 방법](/ko/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)에서 그 내용을 다룰 것입니다.
+> 플로트에 대한 설명은 [플로트 및 해제](/ko/docs/Learn_web_development/Core/CSS_layout/Floats) 속성 편에서 충분히 다룹니다. 플렉스박스 및 그리드 레이아웃과 같은 기술이 나오기 이전에 플로트는 열 레이아웃을 만드는 방법으로 사용되었습니다. 웹에서 여전히 이러한 방법을 접할 수 있으며, [레거시 레이아웃 방법](/ko/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)에서 그 내용을 다룰 것입니다.
 
 ## 포지셔닝 기술
 
@@ -481,7 +481,7 @@ p {
 
 {{ EmbedLiveSample('Absolute_1', '100%', 300) }}
 
-아주 많이 달라졌습니다! 이제 배치된 요소가 페이지 레이아웃의 나머지 부분과 완전히 분리되어 그 위에 배치됩니다. 다른 두 단락은 이제 위치가 지정된 형제 단락이 존재하지 않는 것처럼 함께 배치됩니다. {{cssxref("top")}} 및 {{cssxref("left")}} 속성은 상대 포지셔닝 요소에 대해 미치는 것과는 다르게 절대 포지셔닝 요소에 대해 영향을 줍니다. 이 경우 오프셋은 페이지의 상단과 왼쪽에서 계산되었습니다. 이 컨테이너가 되는 부모 요소를 변경할 수 있으며, [포지셔닝](/ko/docs/Learn/CSS/CSS_layout/Positioning)에 관한 과정에서 이에 대해 살펴보겠습니다.
+아주 많이 달라졌습니다! 이제 배치된 요소가 페이지 레이아웃의 나머지 부분과 완전히 분리되어 그 위에 배치됩니다. 다른 두 단락은 이제 위치가 지정된 형제 단락이 존재하지 않는 것처럼 함께 배치됩니다. {{cssxref("top")}} 및 {{cssxref("left")}} 속성은 상대 포지셔닝 요소에 대해 미치는 것과는 다르게 절대 포지셔닝 요소에 대해 영향을 줍니다. 이 경우 오프셋은 페이지의 상단과 왼쪽에서 계산되었습니다. 이 컨테이너가 되는 부모 요소를 변경할 수 있으며, [포지셔닝](/ko/docs/Learn_web_development/Core/CSS_layout/Positioning)에 관한 과정에서 이에 대해 살펴보겠습니다.
 
 ### 고정(fixed) 포지셔닝
 
@@ -634,7 +634,7 @@ body {
 {{ EmbedLiveSample('Sticky_1', '100%', 200) }}
 
 > [!NOTE]
-> 포지셔닝에 대해 더 알아보고 싶다면, [포지셔닝](/ko/docs/Learn/CSS/CSS_layout/Positioning) 문서를 참조하세요.
+> 포지셔닝에 대해 더 알아보고 싶다면, [포지셔닝](/ko/docs/Learn_web_development/Core/CSS_layout/Positioning) 문서를 참조하세요.
 
 ## 테이블 레이아웃
 

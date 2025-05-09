@@ -5,7 +5,7 @@ slug: Web/CSS/number
 
 {{CSSRef}}
 
-O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
+O [tipo de dado CSS](/pt-BR/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<number>`** representa um número, sendo esse ou um inteiro ou um componente fracional.
 
 ## Sintaxe
 

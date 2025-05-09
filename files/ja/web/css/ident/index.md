@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。
+**`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。
 
 ## 構文
 

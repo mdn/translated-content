@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Challenges
 original_slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
 
-このページは、 [CSS Getting Started](/ja/docs/Learn/CSS) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
+このページは、 [CSS Getting Started](/ja/docs/Learn_web_development/Core/Styling_basics) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
 ## CSS をなぜ用いるか
 
@@ -216,7 +216,7 @@ The rules for the other colors all have more specific selectors, so they overrid
 ### デフォルトの画像位置
 
 - チャレンジ
-  - : サンプル文書 `doc2.html` を編集し、次のタグを文書の末尾近く、`</BODY>` のすぐ前に追加します: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザを更新して、正しかったかどうかを確認してください。
+  - : サンプル文書 `doc2.html` を編集し、次のタグを文書の末尾近く、`</BODY>` のすぐ前に追加します: `<IMG id="fixed-pin" src="Yellow-pin.png" alt="Yellow map pin">` 画像がどこに現れるか、推測してみてください。それからブラウザーを更新して、正しかったかどうかを確認してください。
 - 解答
   - : 画像は 2 番めのリストの右側に現れます。
     ![pin_placement.png](pin_placement.png)

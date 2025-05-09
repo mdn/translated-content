@@ -1,10 +1,9 @@
 ---
 title: 在代碼中做出決定 - 條件
 slug: Learn_web_development/Core/Scripting/Conditionals
-original_slug: Learn/JavaScript/Building_blocks/conditionals
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Silly_story_generator", "Learn_web_development/Core/Scripting/Loops", "Learn_web_development/Core/Scripting")}}
 
 在任何編程語言中，代碼都需要根據不同的輸入做出決策並相應地執行操作。 例如，在遊戲中，如果玩家的生命數量為 0，則遊戲結束。 在天氣應用程序中，如果在早上查看，則顯示日出圖形; 如果是夜晚，則顯示星星和月亮。 在本文中，我們將探討條件結構如何在 JavaScript 中工作。
 

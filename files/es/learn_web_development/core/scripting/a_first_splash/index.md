@@ -211,7 +211,7 @@ let guessCount = 1;
 let resetButton;
 ```
 
-Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave `let` (o `var`) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el [siguiente artículo](/es/docs/Learn/JavaScript/First_steps/Variables#the_difference_between_var_and_let)). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave `const`. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecen iguales.
+Esta sección del código establece las variables y constantes que necesitamos para almacenar los datos que nuestro programa utilizará. Las variables básicamente son contenedores de valores (como números o cadenas de texto). Creas una variable con la palabra clave `let` (o `var`) seguida de un nombre para tu variable (leerás más sobre la diferencia entre las palabras clave en el [siguiente artículo](/es/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)). Las constantes se utilizan para almacenar valores que no deseas modificar y se crean con la palabra clave `const`. En este caso, estamos usando constantes para almacenar referencias a partes de nuestra interfaz de usuario; el texto dentro de algunas de ellas puede cambiar, pero los elementos HTML a los que se hace referencia permanecen iguales.
 
 Puedes asignar un valor a tu variable o constante con un signo igual (`=`) seguido del valor que deseas darle.
 
@@ -255,7 +255,7 @@ Las funciones son bloques de código reutilizable que puedes escribir una vez y 
 
 Cuando queramos ejecutar el código, escribimos el nombre de la función seguido de los paréntesis.
 
-Probémoslo ahora. Guarda tu código y actualiza la página en tu navegador. Luego, ingresa a la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) e ingresa la siguiente línea:
+Probémoslo ahora. Guarda tu código y actualiza la página en tu navegador. Luego, ingresa a la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) e ingresa la siguiente línea:
 
 ```js
 checkGuess();
@@ -270,7 +270,7 @@ Después de presionar<kbd>Retorno</kbd>/<kbd>Intro</kbd>, debería aparecer una 
 
 Los operadores de JavaScript nos permiten realizar pruebas, hacer cálculos matemáticos, unir cadenas y otras cosas similares.
 
-Si aún no lo has hecho, guarda tu código, actualiza la página en tu navegador y abre la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Luego, podemos intentar escribir los ejemplos que se muestran a continuación — escribe cada una de las columnas de "Ejemplo" exactamente como se muestra, presionando <kbd>Retorno</kbd>/<kbd>Intro</kbd> después de cada una, y ve los resultados que devuelven.
+Si aún no lo has hecho, guarda tu código, actualiza la página en tu navegador y abre la [consola JavaScript de las herramientas para desarrolladores](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Luego, podemos intentar escribir los ejemplos que se muestran a continuación — escribe cada una de las columnas de "Ejemplo" exactamente como se muestra, presionando <kbd>Retorno</kbd>/<kbd>Intro</kbd> después de cada una, y ve los resultados que devuelven.
 
 Primero veamos los operadores aritméticos, por ejemplo:
 
@@ -445,7 +445,7 @@ Todo lo que resta por hacer en este artículo es hablar sobre algunas otras impo
 
 Una parte del código anterior que debemos examinar detalladamente es el bucle [for](/es/docs/Web/JavaScript/Reference/Statements/for). Los bucles son un muy importante concepto en programación, estos te permiten seguir ejecutando un fragmento de código una y otra vez, hasta que se cumpla una determinada condición.
 
-Para empezar, de nuevo ve a tu [consola JavaScript de las herramientas para desarrolladores del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) e introduce lo siguiente:
+Para empezar, de nuevo ve a tu [consola JavaScript de las herramientas para desarrolladores del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) e introduce lo siguiente:
 
 ```js
 for (let i = 1; i < 21; i++) {
@@ -488,7 +488,7 @@ En este caso particular, primero creamos una constante `guessField` que almacena
 const guessField = document.querySelector(".guessField");
 ```
 
-Para obtener esta referencia, usamos el método {{domxref("document.querySelector", "querySelector()")}} del objeto {{domxref("document")}}. `querySelector()` toma un parámetro — un [selector CSS](/es/docs/Learn/CSS/Building_blocks/Selectors) que selecciona el elemento del que deseas una referencia.
+Para obtener esta referencia, usamos el método {{domxref("document.querySelector", "querySelector()")}} del objeto {{domxref("document")}}. `querySelector()` toma un parámetro — un [selector CSS](/es/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que selecciona el elemento del que deseas una referencia.
 
 Debido a que `guessField` ahora contiene una referencia a un elemento {{htmlelement("input")}}, ahora tiene acceso a varias propiedades (básicamente variables almacenadas dentro de los objetos, algunas de las cuales no les puedes cambiar sus valores) y métodos (básicamente funciones almacenadas dentro de objetos). Un método disponible para elementos `input` es `focus()`, por lo que ahora podemos usar esta línea para enfocar el campo de texto:
 
@@ -503,7 +503,7 @@ Las variables que no contienen referencias a elementos de formulario no dispondr
 Juguemos un poco con algunos objetos del navegador.
 
 1. En primer lugar, abre tu programa en un navegador.
-2. A continuación, abre las [herramientas de desarrollo del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) y asegúrate de que la pestaña de la consola JavaScript esté abierta.
+2. A continuación, abre las [herramientas de desarrollo del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) y asegúrate de que la pestaña de la consola JavaScript esté abierta.
 3. Escribe `guessField` y la consola te mostrará que la variable contiene un elemento {{htmlelement("input")}}. También notarás que la consola te ayuda completando automáticamente los nombres de los objetos que existen dentro del entorno de ejecución, ¡incluidas tus variables!
 4. Ahora escribe lo siguiente:
 

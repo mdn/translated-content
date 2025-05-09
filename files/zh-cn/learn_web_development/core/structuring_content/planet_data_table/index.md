@@ -1,25 +1,11 @@
 ---
-title: 作业：构建行星数据
+title: 挑战：构建行星数据表
 slug: Learn_web_development/Core/Structuring_content/Planet_data_table
-original_slug: Learn/HTML/Tables/Structuring_planet_data
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}
 
 在我们的表格评定中，我们为你提供有关太阳系中行星的一些数据，并让你将其结构化成 HTML 表。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>在尝试这个评定之前，你应该已经把这个模块的所有文章都学习完成了。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>检测对 HTML 表格及相关功能的理解。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 起点
 
@@ -55,9 +41,5 @@ original_slug: Learn/HTML/Tables/Structuring_planet_data
 - 标题行的第一个单元格需要是空白的，然后宽度为 2 个单元格。
 - 行的主标题 (e.g. _Jovian planets_) 以及放置在行星名称行左侧的标题 (e.g. _Saturn_) 整理出来有点麻烦， — 你需要确保每个单元格都有正确的高度和宽度。(即横跨正确的行数和列数)
 - 将标题与其行/列相关联的一种方法比其他方法容易得多。
-
-## 评定
-
-如果你将此评估作为有组织的课程的一部分，你应该能够将你的工作交给你的老师/导师进行评改。如果你是自学习的，那么你可以通过询问 [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), 或在 [#mdn](irc://irc.mozilla.org/mdn)的 IRC 频道 [Mozilla IRC](https://wiki.mozilla.org/IRC) 中轻松获得标记指南。首先尝试练习 - 作弊对你没有益处！
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content/HTML_forms", "Learn_web_development/Core/Structuring_content")}}

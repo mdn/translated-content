@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaValueMax`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最大許容値を定義する [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性の値を反映します。
+**`ariaValueMax`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの最大許容値を定義する [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性の値を反映します。
 
 ## 値
 
@@ -16,7 +16,7 @@ l10n:
 
 ## 例
 
-この例では、ID が `slider` の要素の [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性は "7" に設定されています。`ariaValueMax` を使用して値を "6" に更新します。
+この例では、ID が `slider` の要素の [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性は "7" に設定されています。`ariaValueMax` を使用して値を "6" に更新します。
 
 ```html
 <div

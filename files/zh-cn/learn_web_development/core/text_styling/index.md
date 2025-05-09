@@ -1,10 +1,7 @@
 ---
 title: 为文本添加样式（样式化文本）
 slug: Learn_web_development/Core/Text_styling
-original_slug: Learn/CSS/Styling_text
 ---
-
-{{LearnSidebar}}
 
 掌握了 CSS 语言的基础之后，对于你来说，下一个需要关心的 CSS 主题就是为文本添加样式——一个你将会最经常使用 CSS 做的事情。在这里，我们专注于为文本样式的基础，包括设置字体、粗细、斜体、行还有字符间距、阴影以及文本的其他特征。我们将会通过在你的网页中应用自定义字体、样式化列表以及链接来圆满地结束本模块。
 

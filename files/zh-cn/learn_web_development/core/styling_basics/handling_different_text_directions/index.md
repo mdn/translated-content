@@ -1,12 +1,9 @@
 ---
 title: 处理不同方向的文本
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 l10n:
   sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
 ---
-
-{{LearnSidebar}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在盒子的上侧、右侧、下侧、左侧设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
 
@@ -344,7 +341,7 @@ img {
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes)。
 
 ## 总结
 

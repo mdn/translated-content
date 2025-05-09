@@ -16,7 +16,7 @@ instance.exports;
 
 ### exports の使用
 
-fetch を使用して WebAssembly バイトコードを読み取った後、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使用してモジュールをコンパイルし、インスタンス化し、 JavaScript 関数をそのプロセスの WebAssembly モジュールにインポートします。その後、 `Instance` からエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)を呼び出します。
+fetch を使用して WebAssembly バイトコードを読み取った後、 {{jsxref("WebAssembly.instantiateStreaming()")}} 関数を使用してモジュールをコンパイルし、インスタンス化し、 JavaScript 関数をそのプロセスの WebAssembly モジュールにインポートします。その後、 `Instance` からエクスポートされた[エクスポート済み WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)を呼び出します。
 
 ```js
 var importObject = {
@@ -48,5 +48,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

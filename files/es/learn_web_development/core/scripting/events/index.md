@@ -529,9 +529,7 @@ El HTML se ve así:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -625,9 +623,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -776,7 +772,7 @@ El resultado es de la siguiente forma (intenta hacer clic alreador):
 Los eventos no son exclusivos de JavaScript, la mayoría de lenguajes de programación poseen algún tipo de modelo de eventos. El funcionamiento de estos modelos puede ser diferente de lo que tenemos en JavaScript.
 De hecho, el modelo de eventos en JavaScript para páginas web es diferente del modelo de eventos de JavaScript cuando se usa en otros entornos.
 
-Por ejemplo, [Node.js](/es/docs/Learn/Server-side/Express_Nodejs) es un entorno de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
+Por ejemplo, [Node.js](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) es un entorno de ejecución (_runtime, en inglés_) bastante popular que le permite a los desarrolladores usar JavaScript para crear aplicaciones de redes y del lado del servidor.
 El [modelo de eventos de Node.js](https://nodejs.org/api/events.html) se basa en detectores para detectar eventos y emisores para emitir eventos periodicamente, esto no suena muy alejado de lo que conocemos pero, el código sí es bastante diferente. En este modelo, se usan funciones como `on()` para registrar un detector de eventos, y `once()` para registrar un detector de eventos que elimina su registro después de haber sido ejecutado una vez.
 
 La [documentación del evento HTTP connect](https://nodejs.org/api/http.html#event-connect) proporciona un buen ejemplo.

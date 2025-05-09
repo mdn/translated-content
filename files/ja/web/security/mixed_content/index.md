@@ -107,7 +107,7 @@ URLのホストがドメイン名ではなくIPアドレスの場合、アップ
 混在ダウンロードとは、保護されたコンテキストから保護されていない接続を介してリソースをダウンロードすることです。
 これらは、混在コンテンツと同じ理由で問題となります。コンテンツは攻撃者によって介入されたり、変更されたりする可能性があり、ユーザーには保護されたサイトでこのようなことが現れる可能性があることが分かりにくくなります。
 
-例えば、次のコードは、保護されていないオリジン `http://example.com/` にあるページをダウンロードするために使用できる [`<a>`](/ja/docs/Web/HTML/Element/a#download) 要素を定義しています。
+例えば、次のコードは、保護されていないオリジン `http://example.com/` にあるページをダウンロードするために使用できる [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#download) 要素を定義しています。
 このコードが HTTPS で配信されるページにある場合、リンクを保存すると、混在ダウンロードが発生します。
 
 ```html
@@ -162,4 +162,4 @@ URLのホストがドメイン名ではなくIPアドレスの場合、アップ
 
 ## 関連情報
 
-- [CSP: `upgrade-insecure-requests`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests) ブロック可能な混在コンテンツを含め、すべてのリクエストを HTTPS へアップグレードする
+- [CSP: `upgrade-insecure-requests`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests) ブロック可能な混在コンテンツを含め、すべてのリクエストを HTTPS へアップグレードする

@@ -114,7 +114,7 @@ while (true) {
 
 ## エラー処理
 
-問題が発生した場合（ネットワークのタイムアウトや[アクセス制御](/ja/docs/Web/HTTP/CORS)に関する問題など）は、エラーイベントが生成されます。これをプログラムで処理するには、 `onerror` コールバックを `EventSource` に実装してください。
+問題が発生した場合（ネットワークのタイムアウトや[アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)に関する問題など）は、エラーイベントが生成されます。これをプログラムで処理するには、 `onerror` コールバックを `EventSource` に実装してください。
 
 ```js
 evtSource.onerror = (err) => {

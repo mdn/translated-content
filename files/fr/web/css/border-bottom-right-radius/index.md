@@ -7,7 +7,46 @@ slug: Web/CSS/border-bottom-right-radius
 
 La propriété **`border-bottom-right-radius`** définit le rayon de courbure de la bordure pour le coin en bas à droite de la boîte. L'arrondi peut être un fragment de cercle ou d'ellipse. Si une des valeurs vaut `0`, aucun arrondi n'a lieu et le coin est un angle droit.
 
-{{EmbedInteractiveExample("pages/css/border-bottom-right-radius.html")}}
+{{InteractiveExample("CSS Demo: border-bottom-right-radius")}}
+
+```css interactive-example-choice
+border-bottom-right-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-bottom-right-radius: 250px 100px;
+```
+
+```css interactive-example-choice
+border-bottom-right-radius: 50%;
+```
+
+```css interactive-example-choice
+border-bottom-right-radius: 50%;
+border: black 10px double;
+background-clip: content-box;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a bottom right rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 Un arrière-plan (que ce soit une couleur ou une image) sera rogné selon la bordure même si celle-ci est arrondie. L'endroit du rognage est défini selon la valeur de {{cssxref("background-clip")}}.
 

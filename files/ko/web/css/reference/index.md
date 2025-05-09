@@ -107,7 +107,7 @@ CSS 선택자 구문을 설명하는 입문자 단계의 소개 부분은 [이 �
 - [@-규칙](/ko/docs/Web/CSS/At-rule)
 - [종속](/ko/docs/Web/CSS/Cascade)
 - [주석](/ko/docs/Web/CSS/Comments)
-- [서술자](</ko/docs/Glossary/Descriptor_(CSS)>)
+- [서술자](/ko/docs/Glossary/CSS_Descriptor)
 - [상속](/ko/docs/Web/CSS/Inheritance)
 - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
 - [명시도](/ko/docs/Web/CSS/Specificity)

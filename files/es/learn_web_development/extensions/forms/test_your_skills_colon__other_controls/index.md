@@ -6,12 +6,12 @@ original_slug: Learn/Forms/Test_your_skills:_Other_controls
 
 {{learnsidebar}}
 
-El objetivo de esta pueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
+El objetivo de esta prueba de habilidad es evaluar si has comprendido nuestro artículo [Otros controles de formulario](/es/docs/Learn/Forms/Other_form_controls).
 
 > [!NOTE]
 > Puedes intentar resolver esta prueba en los editores interactivos más abajo, sin embargo, puede ser útil descargar el código y usar una herramienta en línea como [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), o [Glitch](https://glitch.com/) para trabajar en las tareas.
 >
-> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn/HTML/Introduccion_a_HTML/Prueba_tus_habilidades:_Enlaces#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
+> Si te atascas, pide ayuda — mira la sección [Evaluación o ayuda adicional](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links#Evaluaci%C3%B3n_o_ayuda_adicional) al final de esta página.
 
 ## Otros controles 1
 

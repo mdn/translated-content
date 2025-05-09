@@ -2,14 +2,67 @@
 title: inset-inline-start
 slug: Web/CSS/inset-inline-start
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`inset-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行頭からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なインライン方向の先頭からの内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
 
-{{EmbedInteractiveExample("pages/css/inset-inline-start.html")}}
+この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
+
+{{InteractiveExample("CSS Demo: inset-inline-start")}}
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-lr;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <div class="example-container" id="example-element">
+    <div id="abspos">
+      これは inset-inline-start: 50px で絶対位置指定されています。
+    </div>
+    <p>
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 0.75em solid;
+  padding: 0.75em;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  unicode-bidi: bidi-override;
+}
+
+#abspos {
+  background-color: yellow;
+  color: black;
+  border: 3px solid red;
+  position: absolute;
+  inset-inline-start: 50px;
+  inline-size: 140px;
+  min-block-size: 80px;
+}
+```
 
 ## 構文
 
@@ -17,6 +70,8 @@ l10n:
 /* <length> 値 */
 inset-inline-start: 3px;
 inset-inline-start: 2.4em;
+inset-inline-start: calc(anchor(--myAnchor 50%) + 10px);
+inset-inline-start: anchor-size(width);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-inline-start: 10%;

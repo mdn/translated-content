@@ -223,6 +223,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ## 関連情報
 
 - [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (こちらも '`...`')
-- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
 - [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

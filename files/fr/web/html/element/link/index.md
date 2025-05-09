@@ -7,7 +7,16 @@ slug: Web/HTML/Element/link
 
 L'élément HTML **`<link>`** définit la relation entre le document courant et une ressource externe. Cet élément peut être utilisé pour définir un lien vers [une feuille de style](/fr/docs/Glossary/CSS), vers les icônes utilisées en barre de titre ou comme icône d'application sur les appareils mobiles.
 
-{{EmbedInteractiveExample("pages/tabbed/link.html")}}
+{{InteractiveExample("HTML Demo: &lt;link&gt;")}}
+
+```html interactive-example
+<link href="/shared-assets/misc/link-element-example.css" rel="stylesheet" />
+
+<p>This text will be red as defined in the external stylesheet.</p>
+<p style="color: blue">
+  The <code>style</code> attribute can override it, though.
+</p>
+```
 
 Pour lier une feuille de style externe, on inclut un élément `<link>` de la forme suivante à l'intérieur de l'élément {{htmlelement("head")}} :
 
@@ -29,7 +38,7 @@ Il existe différents types de relations pour préciser les icônes et qui perme
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="apple-icon-114.png"
+  href="favicon114.png"
   type="image/png" />
 ```
 

@@ -59,9 +59,9 @@ _変更なし。_
 
 ### HTTP
 
-- 一部の企業向け認証サービスは、TLS クライアント証明書を [CORS のプリフライトリクエストで送信する](/ja/docs/Web/HTTP/CORS#preflight_requests_and_credentials) ことを要求します。これらのサービスのユーザーは設定項目 `network.cors_preflight.allow_client_cert` で、この（仕様書に準拠しない）動作を有効化できます ([Firefox バグ 1511151](https://bugzil.la/1511151))。
-- クロスオリジンリクエストでリファラー情報が漏洩するリスクを低減するため、デフォルトの [`Referrer-Policy`](/ja/docs/Web/HTTP/Headers/Referrer-Policy) を (`no-referrer-when-downgrade` から) [`strict-origin-when-cross-origin`](/ja/docs/Web/HTTP/Headers/Referrer-Policy#strict-origin-when-cross-origin) に変更しました ([Firefox バグ 1589074](https://bugzil.la/1589074))。
-- [`Content-Length`](/ja/docs/Web/HTTP/Headers/Content-Length) を、[CORS セーフリストレスポンスヘッダー](/ja/docs/Glossary/CORS-safelisted_response_header) のリストに追加しました ([Firefox バグ 1460299](https://bugzil.la/1460299))。
+- 一部の企業向け認証サービスは、TLS クライアント証明書を [CORS のプリフライトリクエストで送信する](/ja/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials) ことを要求します。これらのサービスのユーザーは設定項目 `network.cors_preflight.allow_client_cert` で、この（仕様書に準拠しない）動作を有効化できます ([Firefox バグ 1511151](https://bugzil.la/1511151))。
+- クロスオリジンリクエストでリファラー情報が漏洩するリスクを低減するため、デフォルトの [`Referrer-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy) を (`no-referrer-when-downgrade` から) [`strict-origin-when-cross-origin`](/ja/docs/Web/HTTP/Reference/Headers/Referrer-Policy#strict-origin-when-cross-origin) に変更しました ([Firefox バグ 1589074](https://bugzil.la/1589074))。
+- [`Content-Length`](/ja/docs/Web/HTTP/Reference/Headers/Content-Length) を、[CORS セーフリストレスポンスヘッダー](/ja/docs/Glossary/CORS-safelisted_response_header) のリストに追加しました ([Firefox バグ 1460299](https://bugzil.la/1460299))。
 
 ### セキュリティ
 
@@ -71,7 +71,7 @@ _変更なし。_
 
 #### DOM
 
-- {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} イベントおよび {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} メソッドをデフォルトで有効化しました。これらはテキスト編集の動作を、ブラウザーが DOM ツリーを変更する前にウェブアプリがオーバーライドして、パフォーマンスを向上するために入力イベントをより細かく制御できます。グローバルの `beforeinput` イベントは {{HTMLElement("input")}} 要素 (または [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性を `true` に設定した任意の要素) へ、要素の値が変わる直前に送信されます。{{domxref("InputEvent")}} インターフェイスの `getTargetRanges()` メソッドは、入力居便がキャンセルされなかった場合に、DOM 変更の影響を受ける静的な範囲の配列を返します。
+- {{domxref("HTMLElement.beforeinput_event", "beforeinput")}} イベントおよび {{domxref('InputEvent.getTargetRanges()', 'getTargetRanges()')}} メソッドをデフォルトで有効化しました。これらはテキスト編集の動作を、ブラウザーが DOM ツリーを変更する前にウェブアプリがオーバーライドして、パフォーマンスを向上するために入力イベントをより細かく制御できます。グローバルの `beforeinput` イベントは {{HTMLElement("input")}} 要素 (または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を `true` に設定した任意の要素) へ、要素の値が変わる直前に送信されます。{{domxref("InputEvent")}} インターフェイスの `getTargetRanges()` メソッドは、入力居便がキャンセルされなかった場合に、DOM 変更の影響を受ける静的な範囲の配列を返します。
 
 ### WebDriver conformance (Marionette)
 

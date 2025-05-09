@@ -2,14 +2,66 @@
 title: inset-block
 slug: Web/CSS/inset-block
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
 
-{{EmbedInteractiveExample("pages/css/inset-block.html")}}
+この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
+
+{{InteractiveExample("CSS Demo: inset-block")}}
+
+```css interactive-example-choice
+inset-block: 10px 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-block: 20px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inset-block: 5% 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inset-block: 1rem auto;
+writing-mode: vertical-lr;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">これは絶対位置指定されています。</div>
+    <p>
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -25,6 +77,8 @@ l10n:
 inset-block: 3px 10px;
 inset-block: 2.4em 3em;
 inset-block: 10px; /* 値が先頭と末尾の両方に適用される */
+inset-block: auto anchor(start);
+inset-block: 10em anchor-size(--myAnchor height, 10%);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-block: 10% 5%;

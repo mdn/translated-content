@@ -79,7 +79,7 @@ Si `indiceDépart` est strictement négatif, l'indice de départ effectif est la
 ```js
 // Le tableau a une taille de 3
 // indiceDépart vaut -2
-// L'indice de départ effectif vaut is 3 + (-2) = 1
+// L'indice de départ effectif vaut 3 + (-2) = 1
 
 var arr = ["a", "b", "c"];
 
