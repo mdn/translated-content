@@ -302,7 +302,7 @@ Voir aussi [le paragraphe sur les grands entiers/BigInt sur les structures de do
 
 #### Séparateurs numériques
 
-Pour améliorer la lisibilité des littéraux numériques, des underscores (`_`, `U+005F`) peuvent être utilisés comme séparateurs:
+Pour améliorer la lisibilité des littéraux numériques, des underscores (`_`, `U+005F`) peuvent être utilisés comme séparateurs&nbsp;:
 
 ```js-nolint
 1_000_000_000_000
@@ -313,13 +313,13 @@ Pour améliorer la lisibilité des littéraux numériques, des underscores (`_`,
 1_000_000_000_000_000_000_000n
 ```
 
-Ils ont quelques limitations:
+Ils ont quelques limitations&nbsp;:
 
 ```js-nolint example-bad
 // Il ne peut pas y avoir plus d'un underscore consécutif
 100__000; // SyntaxError
 
-// Ils ne sont pas autorisés à la fin d'un litéral numérique
+// Ils ne sont pas autorisés à la fin d'un littéral numérique
 100_; // SyntaxError
 
 // Ils ne sont pas autorisés après un zéro qui débute un littéral
