@@ -140,8 +140,8 @@ Une ou plusieurs valeurs `<repeat-style>`, séparées par des virgules.
   -webkit-mask-clip: content;
   mask-clip: content;
 
-  -webkit-mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
-  mask-image: url("https://developer.mozilla.org/static/img/favicon32.png");
+  -webkit-mask-image: url("/shared-assets/images/examples/favicon32.png");
+  mask-image: url("/shared-assets/images/examples/favicon32.png");
 
   -webkit-mask-repeat: repeat-x;
   mask-repeat: repeat-x;

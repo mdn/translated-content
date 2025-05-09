@@ -47,10 +47,10 @@ browser.clipboard.setImageData(imageData, imageType)
 
 ```js
 // 需要：
-// * "https://cdn.mdn.mozilla.net/*" 的主机权限
+// * "https://mdn.github.io/*" 的主机权限
 // * API 权限 "clipboardWrite"
 
-fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
+fetch("https://mdn.github.io/shared-assets/images/examples/favicon144.png")
   .then((response) => response.arrayBuffer())
   .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
 ```
