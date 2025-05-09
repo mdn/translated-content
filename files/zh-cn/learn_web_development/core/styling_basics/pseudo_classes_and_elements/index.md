@@ -1,10 +1,9 @@
 ---
 title: 伪类和伪元素
 slug: Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements
-original_slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Attribute_selectors", "Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics")}}
 
 下一组我们将了解的选择器被称为**伪类**和**伪元素**。这一类选择器的数量众多，通常用于很明确的目的。一旦你了解了如何使用它们，你便可以通过查阅列表来寻找合适的那一项以完成你想要的选择。与之前一样，每个选择器相关的 MDN 页面都将帮助你了解各浏览器的支持情况。
 
@@ -170,7 +169,7 @@ article p:first-child::first-line {
 
 ## 生成带有::before 和::after 的内容
 
-有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中中。
+有一组特别的伪元素，它们和[`content`](/zh-CN/docs/Web/CSS/content)属性一同使用，使用 CSS 将内容插入到你的文档中。
 
 你能用这些插入一个文本字符串，和在下面的实时示例里那样。试着改变{{cssxref("content")}}属性的文本值，看看输出是怎么改变的。你也能改变`::before`伪元素为`::after`，看到这段文本插入到了元素的末尾而不是开头。
 

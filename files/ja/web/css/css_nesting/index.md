@@ -40,6 +40,6 @@ CSS 入れ子は、 CSS スタイルシートの可読性、モジュール性�
 
 ## 関連情報
 
-- [詳細度](/ja/docs/Web/CSS/Specificity)
+- [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS カスケードと継承モジュール](/ja/docs/Web/CSS/CSS_cascade)
 - [CSS セレクターモジュール](/ja/docs/Web/CSS/CSS_selectors)

@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/new
 
 **`new` 演算子**を使用すると、開発者はユーザー定義のオブジェクト型やコンストラクター関数を持つ組み込みオブジェクト型のインスタンスを作成することができます。
 
-{{EmbedInteractiveExample("pages/js/expressions-newoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new operator")}}
+
+```js interactive-example
+function Car(make, model, year) {
+  this.make = make;
+  this.model = model;
+  this.year = year;
+}
+
+const car1 = new Car("Eagle", "Talon TSi", 1993);
+
+console.log(car1.make);
+// Expected output: "Eagle"
+```
 
 ## 構文
 
@@ -67,7 +80,7 @@ new constructor[([arguments])];
 
 しかし、これは他のオブジェクトには影響を与えません。同じ型のすべてのオブジェクトに新たなプロパティを追加するには、 `Car` オブジェクト型の定義に対してプロパティを追加しなければなりません。
 
-[`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを使用して、以前定義したオブジェクトに対して共有のプロパティを追加できます。これはオブジェクト型のあるインスタンスのプロパティではなく、関数を使用して生成したすべてのオブジェクトで共有するプロパティを定義します。以下のコードでは `Car` 型のオブジェクトすべてに対して color プロパティを値 `"original color"` で定義しています。また、インスタンスオブジェクト `car1` の color プロパティに文字列の値 "`black`" を上書きしています。詳しくは[プロトタイプ](/ja/docs/Learn/JavaScript/Objects/Object_prototypes)をご覧ください。
+[`Function.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティを使用して、以前定義したオブジェクトに対して共有のプロパティを追加できます。これはオブジェクト型のあるインスタンスのプロパティではなく、関数を使用して生成したすべてのオブジェクトで共有するプロパティを定義します。以下のコードでは `Car` 型のオブジェクトすべてに対して color プロパティを値 `"original color"` で定義しています。また、インスタンスオブジェクト `car1` の color プロパティに文字列の値 "`black`" を上書きしています。詳しくは[プロトタイプ](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)をご覧ください。
 
 ```js
 function Car() {}

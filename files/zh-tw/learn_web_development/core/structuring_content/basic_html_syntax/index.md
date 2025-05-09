@@ -1,10 +1,9 @@
 ---
 title: HTML 入門
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
-original_slug: Learn/HTML/Introduction_to_HTML/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
+{{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
 本文將探討 HTML 最基本的部分。首先，我們將會定義元素（element）、屬性（attribute）以及其它你可能聽過的重要名詞，然後講解該如何使用它們。我們也會告訴你典型的 HTML 頁面以及其中的元素是如何構成的，以及解釋其他重要的基礎語言特性。在此過程中，我們會撰寫一些 HTML 來引發你的興趣！
 
@@ -349,7 +348,7 @@ window.addEventListener("load", drawOutput);
 
 ### 布林屬性（Boolean attributes）
 
-你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 [`disabled`](/zh-TW/docs/Web/HTML/Element/input#disabled) 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
+你有時會看到一些沒有值的屬性，這完全是可行的。它們叫做布林屬性，他們只能附帶一個值，而這個值一般來說會和屬性的名字一樣。以 [`disabled`](/zh-TW/docs/Web/HTML/Reference/Elements/input#disabled) 屬性來說，你可以把它指派為 input 元素的屬性，使得輸入文字的框框變得不能輸入文字。
 
 ```html
 <input type="text" disabled="disabled" />

@@ -13,4 +13,4 @@ l10n:
 
 ## 関連情報
 
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)

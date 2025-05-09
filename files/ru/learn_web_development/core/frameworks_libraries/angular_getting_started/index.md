@@ -9,9 +9,9 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 
 Пришло время взглянуть на фреймворк от Google — Angular, еще один популярный вариант, с которым вы часто будете сталкиваться. В этой статье мы рассмотрим, что Angular может предложить, установим необходимые компоненты, запустим пример приложения, и разберём базовую архитектуру Angular.
 
-| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Настроить локальную среду разработки Angular, создать стартовое приложение, и понять основные принципы работы.                                                                                                                         |
+| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Настроить локальную среду разработки Angular, создать стартовое приложение, и понять основные принципы работы.                                                                                                                                                             |
 
 ## Что такое Angular?
 
@@ -254,7 +254,7 @@ export class AppComponent {
 - [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Начало работы с React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Компоненты React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
@@ -296,9 +296,9 @@ export class AppComponent {
 
 - Angular
 
-  - [Начало работы с Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Стилизация Angular приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Создание компонента элемента (item component)](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Фильтрация списка дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
+  - [Стилизация Angular приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
+  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
+  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
+  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)

@@ -35,7 +35,7 @@ before(param1, param2, /* … ,*/ paramN)
 
 ### 条件付きコメントの追加
 
-コメントノードは doctype 宣言の前でも有効ですが、 IE で互換モードになることを考えるとお勧めできません。[条件付きコメント](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#ie_conditional_comments)は IE で有効です。
+コメントノードは doctype 宣言の前でも有効ですが、 IE で互換モードになることを考えるとお勧めできません。[条件付きコメント](/ja/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS#ie_conditional_comments)は IE で有効です。
 
 ```js
 let docType = document.implementation.createDocumentType("html", "", "");

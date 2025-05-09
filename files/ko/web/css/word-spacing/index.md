@@ -7,7 +7,46 @@ slug: Web/CSS/word-spacing
 
 [CSS](/ko/docs/Web/CSS) **`word-spacing`** 속성은 단어와 단어 사이, 태그와 태그 사이의 거리를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/word-spacing.html")}}
+{{InteractiveExample("CSS Demo: word-spacing")}}
+
+```css interactive-example-choice
+word-spacing: normal;
+```
+
+```css interactive-example-choice
+word-spacing: 1rem;
+```
+
+```css interactive-example-choice
+word-spacing: 4px;
+```
+
+```css interactive-example-choice
+word-spacing: -0.4ch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    As much mud in the streets as if the waters had but newly retired from the
+    face of the earth, and it would not be wonderful to meet a Megalosaurus,
+    forty feet long or so, waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 ## 구문
 

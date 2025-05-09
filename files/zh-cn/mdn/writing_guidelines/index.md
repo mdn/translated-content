@@ -3,19 +3,17 @@ title: 撰写指南
 slug: MDN/Writing_guidelines
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档是一个开源项目。下面的概述部分描述了有关我们在 MDN Web 文档上撰写*什么*文档以及*如何*撰写文档的指南。学习*如何做出贡献*，请参见我们的[贡献指南](/zh-CN/docs/MDN/Community)。
 
 - [撰写的文档内容](/zh-CN/docs/MDN/Writing_guidelines/What_we_write)
 
   - : 本节涵盖了我们在 MDN Web 文档中包含的内容和我们不希望包含的内容，以及其他的政策，如：我们何时为新技术撰写文档、内容建议流程和我们是否接受外链。如果你正在考虑为我们撰写或更新内容，这是一个很好的入门内容。本节还包括：
-    - [包含的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [包含的标准](/zh-CN/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
       - : 本文提供了要将内容添加到 MDN Web 文档的深入标准、在 MDN Web 文档添加新文档的申请流程，以及申请的期望和指南。
 
 - [文档写作规范](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : 文档写作规范涵盖了我们在 MDN Web 文档上使用的语言和格式。它也包含了如何[格式化代码示例](/zh-CN/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+  - : 文档写作规范涵盖了我们在 MDN Web 文档上使用的语言和格式。它也包含了如何[格式化代码示例](/zh-CN/docs/MDN/Writing_guidelines/Code_style_guide)。
 
 - [如何撰写 MDN Web 文档](/zh-CN/docs/MDN/Writing_guidelines/Howto)
 

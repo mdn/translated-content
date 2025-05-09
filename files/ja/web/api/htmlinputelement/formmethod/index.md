@@ -8,9 +8,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formMethod`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、フォームを送信する {{HTMLElement("input")}} 要素が {{HtmlElement("form")}} を送信するコントロールである場合、送信に使用される {{Glossary("HTTP")}} メソッドです。これは、`<input>` の [`formmethod`](/ja/docs/Web/HTML/Element/input#formmethod) 属性の値を反映します。
+**`formMethod`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、フォームを送信する {{HTMLElement("input")}} 要素が {{HtmlElement("form")}} を送信するコントロールである場合、送信に使用される {{Glossary("HTTP")}} メソッドです。これは、`<input>` の [`formmethod`](/ja/docs/Web/HTML/Reference/Elements/input#formmethod) 属性の値を反映します。
 
-このプロパティは、 [`submit`](/ja/docs/Web/HTML/Element/input/submit) または [`image`](/ja/docs/Web/HTML/Element/input/image) 型の `<input>` 要素でのみ有効です。
+このプロパティは、 [`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit) または [`image`](/ja/docs/Web/HTML/Reference/Elements/input/image) 型の `<input>` 要素でのみ有効です。
 
 この値は、フォームが入力経由で送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.method", "method")}} プロパティを上書きします。このプロパティは取得することも設定することもできます。空の値または不正な値を設定すると、不正な既定値として `"get"` が使用されます。設定されていない場合、値は空文字列 (`""`) となります。
 
@@ -39,6 +39,6 @@ inputElement.formMethod = "post";
 - {{domxref("HTMLInputElement.formNoValidate")}}
 - {{domxref("HTMLInputElement.formTarget")}}
 - {{domxref("HTMLFormElement.method")}}
-- [`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit)
-- [`<input type="image">`](/ja/docs/Web/HTML/Element/input/image)
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit)
+- [`<input type="image">`](/ja/docs/Web/HTML/Reference/Elements/input/image)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

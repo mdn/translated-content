@@ -9,7 +9,15 @@ l10n:
 
 **ビット論理積 (`&`)** 演算子は、両方のオペランドの対応するビットのいずれもが `1` である位置のビットで `1` を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND", "shorter")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 構文
 
@@ -19,7 +27,7 @@ x & y
 
 ## 解説
 
-演算子 `&` は数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。まず、[両方のオペランドを数値に変換](/ja/docs/Web/JavaScript/Data_structures#数値変換) して、それらの型をテストします。両方のオペランドが長整数になった場合、長整数の AND を実行します。そうでない場合は、両方のオペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、ビット単位の AND を行います。一方のオペランドが長整数になり、もう一方が数値になると {{jsxref("TypeError")}} が発生します。
+演算子 `&` は数値と[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)の 2 種類のオペランドに対してオーバーロードされています。数値の場合、演算子は 32 ビット整数を返します。長整数の場合、演算子は長整数を返します。まず、[両方のオペランドを数値に変換](/ja/docs/Web/JavaScript/Guide/Data_structures#数値変換) して、それらの型をテストします。両方のオペランドが長整数になった場合、長整数の AND を実行します。そうでない場合は、両方のオペランドを [32 ビット整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#固定長数値への変換)に変換し、ビット単位の AND を行います。一方のオペランドが長整数になり、もう一方が数値になると {{jsxref("TypeError")}} が発生します。
 
 この演算子は、オペランドのビット表現を [2 の補数](https://ja.wikipedia.org/wiki/2の補数)で演算します。最初のオペランドの各ビットは、2 番目のオペランドの対応するビットとペアになります。第 1 ビットと第 1 ビット、第 2 ビットと第 2 ビットといった具合です。演算子は各ビットのペアに適用され、結果はビットごとに構成されます。
 

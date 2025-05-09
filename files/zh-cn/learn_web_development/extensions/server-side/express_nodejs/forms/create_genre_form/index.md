@@ -1,12 +1,9 @@
 ---
 title: 创建类型表单
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_genre_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Create_genre_form
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
-
-{{LearnSidebar}}
 
 本章节演示如何定义页面来创建 `Genre` 对象（这是一个很好的起点，因为 `Genre` 只有一个字段，即它的名称 `name`，并且没有依赖项）。与任何其他页面一样，我们需要设置路由、控制器和视图。
 

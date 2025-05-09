@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 **残余引数**構文により、関数が不定数の引数を配列として受け入れることができ、[可変長引数関数](https://ja.wikipedia.org/wiki/可変長引数)を JavaScript で表すことができます。
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
+
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## 構文
 
@@ -207,6 +223,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ## 関連情報
 
 - [スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (こちらも '`...`')
-- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
 - [`arguments` オブジェクト](/ja/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

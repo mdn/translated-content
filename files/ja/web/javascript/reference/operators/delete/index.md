@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/delete
 
 JavaScript の **`delete` 演算子**は、オブジェクトからプロパティを削除します。同じプロパティへの参照がそれ以上保持されていない場合は、自動的に解放されます。
 
-{{EmbedInteractiveExample("pages/js/expressions-deleteoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - delete operator")}}
+
+```js interactive-example
+const Employee = {
+  firstname: "Maria",
+  lastname: "Sanchez",
+};
+
+console.log(Employee.firstname);
+// Expected output: "Maria"
+
+delete Employee.firstname;
+
+console.log(Employee.firstname);
+// Expected output: undefined
+```
 
 ## 構文
 
@@ -31,8 +46,7 @@ delete object["property"];
 
 ### 返値
 
-プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete",
- "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
+プロパティが{{jsxref("Object.hasOwnProperty", "自分自身の", "", 1)}}{{jsxref("Errors/Cant_delete", "構成不可", "", 1)}}のプロパティであった場合、 strict モードでなければ `false` を返します。それ以外の場合は `true` を返します。
 
 ### 例外
 
@@ -40,7 +54,7 @@ delete object["property"];
 
 ## 解説
 
-一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Memory_management)を参照してください。
+一般的に信じられていることとは異なり (おそらく [C++ における delete](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=vs-2019) のような他のプログラミング言語の影響ですが)、`delete` 演算子は、直接的にメモリーを解放することは**ありません**。メモリーの管理は参照が切れることで間接的に行われます。詳細は[メモリー管理](/ja/docs/Web/JavaScript/Guide/Memory_management)を参照してください。
 
 **`delete`** 演算子は指定したプロパティをオブジェクトから取り除きます。削除に成功すると `true` を返し、そうでなければ `false` を返します。
 

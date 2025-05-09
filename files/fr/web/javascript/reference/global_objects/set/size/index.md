@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Set/size
 
 L'accesseur **`size`** est une propriété qui renvoie le nombre d'éléments contenus dans un objet {{jsxref("Set")}}. Un objet `Set` correspondant à un ensemble, chaque élément qu'il contient y est unique.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+
+```js interactive-example
+const set1 = new Set();
+const object1 = {};
+
+set1.add(42);
+set1.add("forty two");
+set1.add("forty two");
+set1.add(object1);
+
+console.log(set1.size);
+// Expected output: 3
+```
 
 ## Description
 

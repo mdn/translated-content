@@ -3,8 +3,6 @@ title: 如何记录 web 错误
 slug: MDN/Writing_guidelines/Howto/Document_web_errors
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档中的 [JavaScript 错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)是一个帮助 web 开发人员处理[开发者工具](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中出现的错误的项目。对于该项目，我们需要在 MDN Web 文档中编写更多的错误文档，以便我们可以在抛出消息的工具中添加更多的链接。本文介绍了如何记录 web 错误。
 
 JavaScript 错误会包含一个“了解更多”的链接，该链接会将你带到 JavaScript 错误参考，其中包含了修复问题的额外建议。为了能够记录 web 错误，你需要知道或能够深入了解 [JavaScript](/zh-CN/docs/Web/JavaScript)。

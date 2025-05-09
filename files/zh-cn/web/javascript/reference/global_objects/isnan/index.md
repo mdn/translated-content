@@ -9,7 +9,22 @@ l10n:
 
 **`isNaN()`** 函数用来确定一个值是否为 {{jsxref("NaN")}}，若有必要，则首先将值转换为数字。由于 `isNaN()` 函数内部的强制类型转换可能[令人迷惑](#描述)，因此你可能更想要使用 {{jsxref("Number.isNaN()")}}。
 
-{{EmbedInteractiveExample("pages/js/globalprops-isnan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - isNaN()")}}
+
+```js interactive-example
+function milliseconds(x) {
+  if (isNaN(x)) {
+    return "Not a Number!";
+  }
+  return x * 1000;
+}
+
+console.log(milliseconds("100F"));
+// Expected output: "Not a Number!"
+
+console.log(milliseconds("0.0314E+2"));
+// Expected output: 3140
+```
 
 ## 语法
 
@@ -30,7 +45,7 @@ isNaN(value)
 
 `isNaN()` 是全局对象的一个函数属性。
 
-对于数字值，`isNaN()` 检测该值是否为 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值。当 `isNaN()` 函数的参数不是[数字](/zh-CN/docs/Web/JavaScript/Data_structures#number_类型)类型时，其会首先被转换为数字，然后将其结果值与 {{jsxref("NaN")}} 进行比较。
+对于数字值，`isNaN()` 检测该值是否为 [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN) 值。当 `isNaN()` 函数的参数不是[数字](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#number_类型)类型时，其会首先被转换为数字，然后将其结果值与 {{jsxref("NaN")}} 进行比较。
 
 `isNaN()` 对于非数字参数的行为可能会令人困惑！例如，空字符串被强制转换为 0，布尔值被强制转换为 0 或 1；直观上，两者均“不是数字”，仅因它们的运算结果不是 `NaN`，而使得 `isNaN()` 返回 `false`。因此，`isNaN()` 既不回答“输入是否为浮点数值 {{jsxref("NaN")}}”，也不回答“输入是否为数字”这两个问题。
 

@@ -8,7 +8,21 @@ slug: Web/JavaScript/Reference/Operators/Assignment
 **할당(`=`)** 연산자는 변수에 값을 대입하는 데 사용됩니다. 할당 연산은 할당된 값으로 평가됩니다. 할당 연산자를
 연결하여 사용하면 단일 값을 여러 변수에 할당할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Assignment")}}
+
+```js interactive-example
+let x = 2;
+const y = 3;
+
+console.log(x);
+// Expected output: 2
+
+console.log((x = y + 1)); // 3 + 1
+// Expected output: 4
+
+console.log((x = x * y)); // 4 * 3
+// Expected output: 12
+```
 
 ## 구문
 

@@ -13,7 +13,7 @@ A diferencia del evento obsoleto {{domxref("Element/keypress_event", "keypress")
 
 Los eventos `keydown` y [`keyup`](/es/docs/Web/API/Element/keyup_event) proporcionan un código que indica qué tecla se presiona, mientras que `keypress` indica qué carácter se ingresó. Por ejemplo, una "a" minúscula será reportada como 65 por `keydown` y `keyup`, pero como 97 por `keypress`. Todos los eventos notifican una "A" mayúscula como 65.
 
-Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`. Si no se detectan, [burbujean](/es/docs/Learn/JavaScript/Building_blocks/Events#event_bubbling) por el [árbol DOM](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree) hasta llegar a {{domxref("Document")}}.
+Los eventos de teclado solo son generados por `<input>`, `<textarea>`, `<summary>` y cualquier cosa con el atributo `contentEditable` o `tabindex`. Si no se detectan, [burbujean](/es/docs/Learn_web_development/Core/Scripting/Events#event_bubbling) por el [árbol DOM](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree) hasta llegar a {{domxref("Document")}}.
 
 Desde Firefox 65, los eventos `keydown` y [`keyup`](/es/docs/Web/API/Element/keyup_event) ahora se activan durante la composición del [IME](/es/docs/Glossary/Input_method_editor), para mejorar la compatibilidad entre navegadores para los usuarios de CJKT ([error 354358 en Firefox](https://bugzil.la/354358)). Para ignorar todos los eventos `keydown` que forman parte de la composición, haga algo como esto (229 es un valor especial establecido para un `keyCode` relacionado con un evento que ha sido procesado por un IME):
 

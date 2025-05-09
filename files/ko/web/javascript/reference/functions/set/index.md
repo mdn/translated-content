@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Functions/set
 
 **`set`** 구문은 객체의 속성에 할당을 시도할 때 호출할 함수를 바인딩합니다.
 
-{{EmbedInteractiveExample("pages/js/functions-setter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+
+```js interactive-example
+const language = {
+  set current(name) {
+    this.log.push(name);
+  },
+  log: [],
+};
+
+language.current = "EN";
+language.current = "FA";
+
+console.log(language.log);
+// Expected output: Array ["EN", "FA"]
+```
 
 ## 구문
 

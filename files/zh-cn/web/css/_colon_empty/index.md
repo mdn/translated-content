@@ -1,5 +1,5 @@
 ---
-title: ":empty"
+title: :empty
 slug: Web/CSS/:empty
 ---
 
@@ -7,7 +7,25 @@ slug: Web/CSS/:empty
 
 **`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于选择不包含任何子元素的元素。子元素可以是元素节点或文本（包括空格）。但是注释、处理指令和 CSS {{cssxref("content")}} 不会影响元素是否被认定为空。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-empty.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}
+
+```css interactive-example
+div:empty {
+  outline: 2px solid deeppink;
+  height: 1em;
+}
+```
+
+```html interactive-example
+<p>Element with no content:</p>
+<div></div>
+
+<p>Element with comment:</p>
+<div><!-- Simple Comment --></div>
+
+<p>Element with nested empty element:</p>
+<div><p></p></div>
+```
 
 > [!NOTE]
 > 在[选择器 Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) 中，`:empty` 伪类被更改为与 {{CSSxRef(":-moz-only-whitespace")}} 类似一样的行为，但目前还没有浏览器支持它。
@@ -64,13 +82,13 @@ body {
 
 ## 无障碍考虑
 
-辅助技术（如屏幕阅读器）无法解析交互内容为空的情况。所有交互内容必须具有无障碍名称，这是通过为交互控件的父元素（如[锚点](/zh-CN/docs/Web/HTML/Element/a)、[按钮](/zh-CN/docs/Web/HTML/Element/button)等）提供文本值来创建的。无障碍名称将交互控件暴露给[无障碍树](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)，这是一个传达对辅助技术有用的信息的 API。
+辅助技术（如屏幕阅读器）无法解析交互内容为空的情况。所有交互内容必须具有无障碍名称，这是通过为交互控件的父元素（如[锚点](/zh-CN/docs/Web/HTML/Reference/Elements/a)、[按钮](/zh-CN/docs/Web/HTML/Reference/Elements/button)等）提供文本值来创建的。无障碍名称将交互控件暴露给[无障碍树](/zh-CN/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#无障碍_api)，这是一个传达对辅助技术有用的信息的 API。
 
 提供交互控件的无障碍名称的文本可以使用[一些属性的组合](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)进行隐藏，这些属性可以将其在视觉上从屏幕上移除，但可以被辅助技术解析。这通常用于仅依靠图标来传达目的的按钮。
 
 - [什么是无障碍名称？ | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
 - [隐藏内容以获得更好的辅助功能 | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN 理解 WCAG，指南 2.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [理解成功标准 2.4.4 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-refs.html)
 
 ## 规范

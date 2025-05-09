@@ -1,13 +1,52 @@
 ---
 title: min-inline-size
 slug: Web/CSS/min-inline-size
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`min-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
 
-{{EmbedInteractiveExample("pages/css/min-inline-size.html")}}
+{{InteractiveExample("CSS Demo: min-inline-size")}}
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 200px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+min-inline-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+min-inline-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html-nolint interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">min-inline-size を変更してください</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 
@@ -15,6 +54,7 @@ slug: Web/CSS/min-inline-size
 /* <length> 値 */
 min-inline-size: 100px;
 min-inline-size: 5em;
+min-inline-size: anchor-size(width);
 
 /* <percentage> 値 */
 min-inline-size: 10%;
@@ -22,12 +62,14 @@ min-inline-size: 10%;
 /* キーワード値 */
 min-inline-size: max-content;
 min-inline-size: min-content;
+min-inline-size: fit-content;
 min-inline-size: fit-content(20em);
 
 /* グローバル値 */
 min-inline-size: inherit;
 min-inline-size: initial;
 min-inline-size: revert;
+min-inline-size: revert-layer;
 min-inline-size: unset;
 ```
 
@@ -47,12 +89,12 @@ min-inline-size: unset;
 
 ## 例
 
-<h3 id="Setting_minimum_inline_size_for_vertical_text">縦書きでインライン方向の最小寸法を設定</h3>
+### 縦書きでインライン方向の最小寸法を設定
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">テキストの例</p>
 ```
 
 #### CSS
@@ -68,7 +110,7 @@ min-inline-size: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_minimum_inline_size_for_vertical_text")}}
+{{EmbedLiveSample("縦書きでインライン方向の最小寸法を設定")}}
 
 ## 仕様書
 

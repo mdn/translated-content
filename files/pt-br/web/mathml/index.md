@@ -7,11 +7,11 @@ slug: Web/MathML
 
 ## Referências de MathML
 
-- [Referência de elementos de MathML](/pt-BR/docs/Web/MathML/Element)
+- [Referência de elementos de MathML](/pt-BR/docs/Web/MathML/Reference/Element)
   - : Detalhes sobre cada elemento de MathML e informações sobre compatibilidade para navegadores desktop e móveis.
 - [Referência de atributos de MathML](/pt-BR/docs/Web/MathML/Attribute)
   - : Informações sobre atributos de MathML que modificam a aparência e o comportamento dos elementos.
-- [Exemplos de MathML](/pt-BR/docs/Web/MathML/Examples)
+- [Exemplos de MathML](/pt-BR/docs/Web/MathML/Guides)
   - : Amostras e exemplos de MathML para ajudá-lo a compreender como a linguagem funciona.
 - [Escrevendo em MathML](/pt-BR/docs/Web/MathML/Authoring)
   - : Dicas e sugestões para escrever em MathML, incluindo sugestões de editores MathML e como capturar suas saídas para integrar em conteúdos Web.

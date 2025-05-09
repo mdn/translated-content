@@ -11,7 +11,22 @@ l10n:
 
 Оператор `in` не может быть использован для поиска значений в других видах коллекций. Чтобы проверить, существует ли определённое значение в массиве, можно использовать {{jsxref("Array.prototype.includes()")}}. А у наборов есть метод {{jsxref("Set.prototype.has()")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-inoperator.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+
+```js interactive-example
+const car = { make: "Honda", model: "Accord", year: 1998 };
+
+console.log("make" in car);
+// Expected output: true
+
+delete car.make;
+if ("make" in car === false) {
+  car.make = "Suzuki";
+}
+
+console.log(car.make);
+// Expected output: "Suzuki"
+```
 
 ## Синтаксис
 
@@ -285,4 +300,4 @@ if (p1 instanceof Person && p2 instanceof Person) {
 - [`delete`](/ru/docs/Web/JavaScript/Reference/Operators/delete)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Reflect.has()")}}
-- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Перечисляемость и владение свойствами](/ru/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

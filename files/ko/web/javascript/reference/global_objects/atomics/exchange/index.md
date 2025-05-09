@@ -10,7 +10,21 @@ l10n:
 **`Atomics.exchange()`** 정적 메서드는 배열의 지정된 위치에 지정된 값을 저장하고 해당 위치의 이전 값을 반환합니다.
 이 아토믹 연산은 이전 값의 읽기와 새 값의 쓰기 사이에 다른 쓰기가 발생하지 않는 것을 보장합니다.
 
-{{EmbedInteractiveExample("pages/js/atomics-exchange.html")}}
+{{InteractiveExample("JavaScript Demo: Atomics.exchange()")}}
+
+```js interactive-example
+// Create a SharedArrayBuffer with a size in bytes
+const buffer = new SharedArrayBuffer(16);
+const uint8 = new Uint8Array(buffer);
+uint8[0] = 5;
+
+console.log(Atomics.load(uint8, 0));
+// Expected output: 5
+
+Atomics.exchange(uint8, 0, 2); // Returns 5
+console.log(Atomics.load(uint8, 0));
+// Expected output: 2
+```
 
 ## 구문
 

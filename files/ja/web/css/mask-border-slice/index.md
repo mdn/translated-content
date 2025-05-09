@@ -109,4 +109,4 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [値 1 ～ 4 つの構文の説明](/ja/docs/Web/CSS/Shorthand_properties#tricky_edge_cases)
+- [値 1 ～ 4 つの構文の説明](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)

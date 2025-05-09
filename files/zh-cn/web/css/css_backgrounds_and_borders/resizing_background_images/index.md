@@ -136,4 +136,4 @@ background-size: 300px 150px;
 
 - {{ cssxref("background-size") }}
 - {{ cssxref("background") }}
-- [缩放 SVG 背景](/zh-CN/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [缩放 SVG 背景](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)

@@ -1,5 +1,5 @@
 ---
-title: ":volume-locked"
+title: :volume-locked
 slug: Web/CSS/:volume-locked
 l10n:
   sourceCommit: b85bf9fcc2c0062a765d104799d7d45d9e9b13bb

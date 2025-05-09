@@ -1,12 +1,10 @@
 ---
 title: 将我们的 Svelte 应用组件化
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_components
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_components
 l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_variables_props","Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们开始开发我们的待办事项列表应用。本文的主要目标是讲解如何将我们的应用拆分为可管理的组件，并在它们之间共享信息。我们将对应用进行组件化，并添加更多功能，以允许用户更新现有组件。

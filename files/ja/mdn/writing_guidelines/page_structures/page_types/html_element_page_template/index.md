@@ -30,11 +30,11 @@ l10n:
 > - **title**
 >   - : タイトルの見出しで、ページの最上部に表示されます。
 >     書式は `'<NameOfTheElement>: 要素の目的'` です。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _title_ は **'\<video>: 埋め込み動画要素'** となります。
 > - **slug**
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/HTML/Element/NameOfTheElement` のような形式になります。
->     例えば、 [`<video>`](/ja/docs/Web/HTML/Element/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
+>     例えば、 [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素の _slug_ は `Web/HTML/Element/video` となります。
 > - **sourceCommit**
 >   - : （翻訳記事のみ）この記事の翻訳元となる英語版記事を GitHub にコミットした際のコミット ID を記述します。 GitHub 上で英語版記事のコミット ID を確認してください。
 >
@@ -52,9 +52,9 @@ l10n:
 >
 > 下記のアドバイスに従って、以下のマクロを更新または削除してください。
 >
-> - `\{{SecureContext_Header}}` — これは **安全なコンテキスト** バナーを生成し、この技術が[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
+> - `\{{SecureContext_Header}}` — これは **保護されたコンテキスト** バナーを生成し、この技術が[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)でのみ利用できることを示します。
 >   そうではない場合は、マクロ呼び出すを削除することができます。
->   そうである場合は、[安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
+>   そうである場合は、[保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)ページ内の項目も記入してください。
 > - `\{{HTMLSidebar}}` — これは、要素のための左側のリファレンスサイドバーを生成します。
 >   サイドバーのコンテンツはページメタデータのタグに依存します。
 > - このページをコピーする際には、 `\{{MDNSidebar}}` マクロを外すのを忘れないでください。
@@ -75,7 +75,7 @@ l10n:
 
 ## 属性
 
-この要素には[グローバル属性](/ja/docs/Web/HTML/Global_attributes)があります。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attribute1` {{Deprecated_inline}} {{experimental_inline}}
   - : この属性がどのような働きをするか、ここに記述してください。属性ごとに 1 つずつ用語と定義を記述してください。属性が実験的/非推奨でない場合は、関連するマクロ呼び出しを除去してください。
@@ -172,7 +172,7 @@ l10n:
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         この要素に設定可能な ARIA ロールの一覧を記入します。例えば
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>。
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>。
       </td>
     </tr>
     <tr>

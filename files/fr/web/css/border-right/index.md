@@ -13,7 +13,45 @@ Elle définit les valeurs des propriétés suivantes :
 - {{cssxref("border-right-style")}},
 - {{cssxref("border-right-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-right.html")}}
+{{InteractiveExample("CSS Demo: border-right")}}
+
+```css interactive-example-choice
+border-right: solid;
+```
+
+```css interactive-example-choice
+border-right: dashed red;
+```
+
+```css interactive-example-choice
+border-right: 1rem solid;
+```
+
+```css interactive-example-choice
+border-right: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-right: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Ces propriétés permettent de décrire la bordure du côté droit d'un élément.
 

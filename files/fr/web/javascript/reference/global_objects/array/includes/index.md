@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 La méthode **`includes()`** permet de déterminer si un tableau contient une valeur et renvoie `true` si c'est le cas, `false` sinon.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ['cat', 'dog', 'bat'];
+
+console.log(pets.includes('cat'));
+// Expected output: true
+
+console.log(pets.includes('at'));
+// Expected output: false
+```
 
 > [!NOTE]
 > Cette méthode utilise l'algorithme de comparaison _[SameValueZero](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness#un_modèle_pour_mieux_comprendre)_ qui fonctionne comme l'égalité stricte, à la différence que `NaN` est ici égal à lui même.
@@ -64,7 +79,7 @@ Si `indiceDépart` est strictement négatif, l'indice de départ effectif est la
 ```js
 // Le tableau a une taille de 3
 // indiceDépart vaut -2
-// L'indice de départ effectif vaut is 3 + (-2) = 1
+// L'indice de départ effectif vaut 3 + (-2) = 1
 
 var arr = ["a", "b", "c"];
 

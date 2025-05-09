@@ -1,12 +1,9 @@
 ---
 title: Web 入门
 slug: Learn_web_development/Getting_started/Your_first_website
-original_slug: Learn/Getting_started_with_the_web
 l10n:
   sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
-
-{{LearnSidebar}}
 
 *Web 入门*是一套简明的，介绍 Web 开发实践的系列文章。你会安装构建简单网页和发布简单代码所需的工具。
 

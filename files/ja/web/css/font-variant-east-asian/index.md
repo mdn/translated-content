@@ -9,7 +9,42 @@ l10n:
 
 **`font-variant-east-asian`** は [CSS](/ja/docs/Web/CSS) のプロパティで、日本語と中国語のような東アジアの字形の違いを制御するために使用します。
 
-{{EmbedInteractiveExample("pages/css/font-variant-east-asian.html")}}
+{{InteractiveExample("CSS Demo: font-variant-east-asian")}}
+
+```css interactive-example-choice
+font-variant-east-asian: normal;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: ruby;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: jis78;
+```
+
+```css interactive-example-choice
+font-variant-east-asian: proportional-width;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      JIS78とJIS83以降では、檜と桧、籠と篭など、一部の文字の入れ替えが行われている。また、「唖然」や「躯体」などの書体が変更されている。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-family:
+    "YuGothic Medium", YuGothic, "Yu Gothic Medium", "Yu Gothic", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## 構文
 

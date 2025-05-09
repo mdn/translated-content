@@ -2,10 +2,8 @@
 title: アクセシビリティとは
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
@@ -82,13 +80,13 @@ l10n:
 
 この種の障碍は、特定のトラウマや状態ではなく、老年期の結果であることもあります。それに、ハードウェアの制限から生じることもあります — 一部のユーザーはマウスを持っていないかもしれません。
 
-これが通常ウェブ開発作業に影響するのは、コントロールがキーボードからアクセス可能であることという要件です — このモジュールの後の記事でキーボード・アクセシビリティを扱いますが、どのようにやるかを見るためにキーボードだけを使っていくつかのウェブサイトを試してみることは良い考えです。例えば、<kbd>Tab</kbd> キーを使ってウェブフォームのさまざまなコントロール間を移動できますか？ キーボードコントロールの詳細については、 [UI コントロール](/ja/docs/Learn_web_development/Core/Accessibility/HTML#ui_controls)の節を参照してください。
+これが通常ウェブ開発作業に影響するのは、コントロールがキーボードからアクセス可能であることという要件です — このモジュールの後の記事でキーボード・アクセシビリティを扱いますが、どのようにやるかを見るためにキーボードだけを使っていくつかのウェブサイトを試してみることは良い考えです。例えば、<kbd>Tab</kbd> キーを使ってウェブフォームのさまざまなコントロール間を移動できますか？ キーボードコントロールの詳細については、[可能であれば意味的な UI コントロールを使う](/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う)の節を参照してください。
 
 統計では、有意な数の人が運動障碍を持っています。米国疾病管理予防センターの[障碍と機能（施設に入らない 18 歳以上の大人）](https://www.cdc.gov/nchs/fastats/disability.htm)（英語）の報告によると、米国では "肉体的な機能障碍のある大人の割合は、16.1%" です。
 
 ### 認知障碍者
 
-認知障碍者とは最も広い範囲の障碍をいい、最も限定された能力をもつ知的障碍者からわれわれがみな加齢とともに考えたり記憶したりが困難になることまでがあります。この範囲には [鬱病](https://www.nimh.nih.gov/health/topics/depression)（英語）や [統合失調症](https://www.nimh.nih.gov/health/topics/schizophrenia)（英語）といった精神疾患のほか、[ディスクレシア](https://www.ninds.nih.gov/health-information/disorders/learning-disabilities)（英語）や[ADHD（注意欠陥多動性障碍）](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd)（英語）のような学習障碍も含みます。重要なこととして、認知障碍の臨床的な定義が広がっていても、そうした障碍をもつ人には共通の機能不全があります。それにはコンテンツを理解し難いこと、タスクを完了する方法を記憶すること、一貫性のないウェブページレイアウトによって混乱することがあります。
+認知障碍者とは最も広い範囲の障碍をいい、最も限定された能力をもつ知的障碍者からわれわれがみな加齢とともに考えたり記憶したりが困難になることまでがあります。この範囲には [鬱病](https://www.nimh.nih.gov/health/topics/depression)（英語）や [統合失調症](https://www.nimh.nih.gov/health/topics/schizophrenia)（英語）といった精神疾患のほか、[ディスクレシア](https://www.nichd.nih.gov/health/topics/learningdisabilities)（英語）や[ADHD（注意欠陥多動性障碍）](https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd)（英語）のような学習障碍も含みます。重要なこととして、認知障碍の臨床的な定義が広がっていても、そうした障碍をもつ人には共通の機能不全があります。それにはコンテンツを理解し難いこと、タスクを完了する方法を記憶すること、一貫性のないウェブページレイアウトによって混乱することがあります。
 
 認知障碍者へのアクセシビリティの良い基本事項は、次のものです。
 
@@ -104,8 +102,8 @@ l10n:
 
 ### 注記
 
-- [認知的なアクセシビリティ](/ja/docs/Web/Accessibility/Cognitive_accessibility)をもってデザインするのは良い習慣になります。どんな人にも利益になるでしょう。
-- 知的障碍者の多くは身体的な障碍も持っています。ウェブサイトは W3C の[ウェブコンテンツアクセシビリティガイドライン](https://www.w3.org/WAI/standards-guidelines/wcag/)と、その中の[認知的アクセシビリティガイドライン](/ja/docs/Web/Accessibility/Cognitive_accessibility#wcag_guidelines)に従う必要があります。
+- [認知的なアクセシビリティ](/ja/docs/Web/Accessibility/Guides/Cognitive_accessibility)をもってデザインするのは良い習慣になります。どんな人にも利益になるでしょう。
+- 知的障碍者の多くは身体的な障碍も持っています。ウェブサイトは W3C の[ウェブコンテンツアクセシビリティガイドライン](https://www.w3.org/WAI/standards-guidelines/wcag/)と、その中の[認知的アクセシビリティガイドライン](/ja/docs/Web/Accessibility/Guides/Cognitive_accessibility#wcag_guidelines)に従う必要があります。
 - W3C の [認知と学習障碍者のアクセシビリティタスクフォース](https://www.w3.org/WAI/GL/task-forces/coga/)では認知障碍者のためのウェブアクセシビリティガイドラインを制作しています。
 - WebAIM の[認知のページ](https://webaim.org/articles/cognitive/)には関連する情報やリソースがあります
 - アメリカ疾病予防管理センターの見積もりでは、2018 年以降、4 人に 1 人の米国市民には障碍があり、その中で、[若い人には認知障碍が最もよく見られます](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html)。
@@ -121,7 +119,7 @@ l10n:
 
 ただし、プロジェクトの開始時からアクセシビリティを検討している場合は、ほとんどのコンテンツをアクセス可能にするためのコストはごくわずかなはずです。
 
-プロジェクトを計画するときは、他の重要な対象観客セグメント（対象とするデスクトップやモバイルのブラウザーなど）のテストと同様に、アクセシビリティのテストをテスト体制に組み入れます。早期に頻繁にテストし、理想的にはプログラムで検出可能な欠けている機能（画像の[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#text_alternatives)の欠落、リンクテキストの不良のような — [要素の関係とコンテキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#element_relationships_and_context)を参照）を検出するための自動テストの実行し、より複雑なサイト機能が障碍のあるユーザーのグループに対してどの程度うまく機能するかを確認するために、それらのグループでいくつかのテストを行います。例えば、
+プロジェクトを計画するときは、他の重要な対象観客セグメント（対象とするデスクトップやモバイルのブラウザーなど）のテストと同様に、アクセシビリティのテストをテスト体制に組み入れます。早期に頻繁にテストし、理想的にはプログラムで検出可能な欠けている機能（画像の[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)の欠落、リンクテキストの不良のような — [意味のあるテキストラベルを使う](/ja/docs/Learn_web_development/Core/Accessibility/HTML#意味の通るテキストラベルを使う)を参照）を検出するための自動テストの実行し、より複雑なサイト機能が障碍のあるユーザーのグループに対してどの程度うまく機能するかを確認するために、それらのグループでいくつかのテストを行います。例えば、
 
 - 私の日付選択ウィジェットをスクリーンリーダーを使う人が使用できますか？
 - コンテンツが動的に更新される場合、視覚障碍者はそれについて知っていますか？
@@ -146,7 +144,7 @@ l10n:
 アクセシビリティテストの基礎となる多数のチェックリストと一連のガイドラインがあります。これは、一見すると圧倒的に思われるかもしれません。アドバイスとしては、あなたが注意を払う必要がある基本的な分野に精通すること、そしてあなたにとって最も関連性のあるガイドラインの高いレベルの構造を理解することです。
 
 - はじめに、W3C は、アクセシビリティ適合のための非常に正確な、技術に依存しない基準を含む、大きくて非常に詳細なドキュメントを公開しました。これらは[ウェブコンテンツアクセシビリティガイドライン](https://www.w3.org/WAI/standards-guidelines/wcag/) (WCAG) と呼ばれていますが、簡単に読めるものではありません。基準は 4 つの主なカテゴリーに分けられます。これらは、実装を認識可能、操作可能、理解可能、そして堅牢にする方法を指定します。簡単に紹介して学習を開始するのに最適な場所は、[WCAG の概要](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)（英語）です。WCAG の全てを学ぶ必要はありません — 主な関心分野に注意し、WCAG の基準に適合していない分野をハイライトするために、さまざまなテクニックやツールを使用します（詳細は下記を参照）。
-- あなたの国はまた、彼らの人口に役立つウェブサイトがアクセス可能であることを規定する特定の法律を持つかもしれません — 例えば、EU の [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf)（PDF、英語）、米国の[リハビリテーション法のセクション 508](https://www.section508.gov/training/)（英語）、ドイツの[バリアフリー情報技術に関する連邦条例](https://www.aktion-mensch.de/inklusion/barrierefreiheit/barrierefreie-website)（英語）、英国の[アクセシビリティ規則 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made)（英語）、イタリアの[アクセシビリティ](https://www.agid.gov.it/it/design-servizi/accessibilita)（イタリア語）、オーストラリアの[障碍者差別禁止法](https://humanrights.gov.au/our-work/disability-rights/world-wide-web-access-disability-discrimination-act-advisory-notes-ver)（英語）など。W3C は、国ごとの[ウェブアクセシビリティの法および政策](https://www.w3.org/WAI/policies/)（英語）のリストを保持しています。
+- あなたの国はまた、彼らの人口に役立つウェブサイトがアクセス可能であることを規定する特定の法律を持つかもしれません — 例えば、EU の [EN 301 549](https://www.etsi.org/deliver/etsi_en/301500_301599/301549/02.01.02_60/en_301549v020102p.pdf)（PDF、英語）、米国の[リハビリテーション法のセクション 508](https://www.section508.gov/training/)（英語）、ドイツの[バリアフリー情報技術に関する連邦条例](https://www.aktion-mensch.de/inklusion/barrierefreiheit/barrierefreie-website)（英語）、英国の[アクセシビリティ規則 2018](https://www.legislation.gov.uk/uksi/2018/952/introduction/made)（英語）、イタリアの[アクセシビリティ](https://www.agid.gov.it/it/ambiti-intervento/accessibilita)（イタリア語）、オーストラリアの[障碍者差別禁止法](https://humanrights.gov.au/our-work/disability-rights/publications/guidelines-equal-access-digital-goods-and-services)（英語）など。W3C は、国ごとの[ウェブアクセシビリティの法および政策](https://www.w3.org/WAI/policies/)（英語）のリストを保持しています。
 
 そのため、WCAG は一連のガイドラインですが、あなたの国ではおそらくウェブアクセシビリティ、または少なくとも公的に利用可能なサービスのアクセシビリティ（ウェブサイト、テレビ、物理的な空間などを含む）を規制する法律があるでしょう。あなたの法律が何であるかを調べることは良い考えです。あなたのコンテンツがアクセス可能であることを確認しようと努力せずに、障碍を持つ人々が訴えた場合、法律な責任を負うこともあります。
 
@@ -172,12 +170,12 @@ l10n:
 
 ## 関連情報
 
-- [WCAG](/ja/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  - [知覚可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
-  - [操作可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable)
-  - [理解可能](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable)
-  - [堅牢](/ja/docs/Web/Accessibility/Understanding_WCAG/Robust)
+  - [知覚可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
+  - [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
+  - [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
+  - [堅牢](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust)
 
 - [Google Chrome released an auto-captioning extension](https://blog.google/products/chrome/live-caption-chrome/)
 

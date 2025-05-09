@@ -35,7 +35,7 @@ Los siguientes elementos son "en línea":
 
 - [b](/es/docs/Web/HTML/Element/b), [big](/es/docs/Web/HTML/Element/big), [i](/es/docs/Web/HTML/Element/i), [small](/es/docs/Web/HTML/Element/small), [tt](/es/docs/Web/HTML/Element/tt)
 - [abbr](/es/docs/Web/HTML/Element/abbr), [acronym](/es/docs/Web/HTML/Element/acronym), [cite](/es/docs/Web/HTML/Element/cite), [code](/es/docs/Web/HTML/Element/code), [dfn](/es/docs/Web/HTML/Element/dfn), [em](/es/docs/Web/HTML/Element/em), [kbd](/es/docs/Web/HTML/Element/kbd), [strong](/es/docs/Web/HTML/Element/strong), [samp](/es/docs/Web/HTML/Element/samp), [time](/es/docs/Web/HTML/Element/time), [var](/es/docs/Web/HTML/Element/var)
-- [a](/es/docs/Web/HTML/Element/a), [bdo](/es/docs/Web/HTML/Element/bdo), [br](/es/docs/Web/HTML/Element/br), [img](/es/docs/Web/HTML/Element/img), [map](/es/docs/Web/HTML/Element/map), [object](/es/docs/Web/HTML/Element/object), [q](/es/docs/Web/HTML/Element/q), [script](/es/docs/Web/SVG/Element/script), [span](/es/docs/Web/HTML/Element/span), [sub](/es/docs/Web/HTML/Element/sub), [sup](/es/docs/Web/HTML/Element/sup)
+- [a](/es/docs/Web/HTML/Element/a), [bdo](/es/docs/Web/HTML/Element/bdo), [br](/es/docs/Web/HTML/Element/br), [img](/es/docs/Web/HTML/Element/img), [map](/es/docs/Web/HTML/Element/map), [object](/es/docs/Web/HTML/Element/object), [q](/es/docs/Web/HTML/Element/q), [script](/es/docs/Web/SVG/Reference/Element/script), [span](/es/docs/Web/HTML/Element/span), [sub](/es/docs/Web/HTML/Element/sub), [sup](/es/docs/Web/HTML/Element/sup)
 - [button](/es/docs/Web/HTML/Element/button), [input](/es/docs/Web/HTML/Element/input), [label](/es/docs/Web/HTML/Element/label), [select](/es/docs/Web/HTML/Element/select), [textarea](/es/docs/Web/HTML/Element/textarea)
 
 ### Ver también

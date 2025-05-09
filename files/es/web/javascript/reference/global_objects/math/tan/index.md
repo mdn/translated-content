@@ -7,9 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/tan
 
 La función **`Math.tan()`** retorna la tangente de un número.
 
-{{EmbedInteractiveExample("pages/js/math-tan.html")}}
+{{InteractiveExample("JavaScript Demo: Math.tan()")}}
 
-La fuente para este ejemplo interactivo se encuentra almacenada en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interactivos, por favor, clona el repositorio en este link: <https://github.com/mdn/interactive-examples> y envíanos un _Pull Request_.
+```js interactive-example
+function getTanFromDegrees(degrees) {
+  return Math.tan((degrees * Math.PI) / 180);
+}
+
+console.log(getTanFromDegrees(0));
+// Expected output: 0
+
+console.log(getTanFromDegrees(45));
+// Expected output: 0.9999999999999999
+
+console.log(getTanFromDegrees(90));
+// Expected output: 16331239353195370
+```
 
 ## Sintaxis
 

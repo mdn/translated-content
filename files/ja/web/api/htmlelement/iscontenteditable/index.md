@@ -54,4 +54,4 @@ infoText2.textContent += " " + secondParagraph.isContentEditable;
 ## 関連情報
 
 - {{domxref("HTMLElement/contentEditable")}}
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性

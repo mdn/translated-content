@@ -7,9 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Addition
 
 El operador de adición (`+`) produce la suma de operandos numéricos o la concatenación de (cadenas) string.
 
-{{EmbedInteractiveExample("pages/js/expressions-addition.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Addition operator")}}
 
-La fuente para este ejemplo interactivo está almacenado en un repositorio Github. Si te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envianos una pull-request.
+```js interactive-example
+console.log(2 + 2);
+// Expected output: 4
+
+console.log(2 + true);
+// Expected output: 3
+
+console.log("hello " + "everyone");
+// Expected output: "hello everyone"
+
+console.log(2001 + ": A Space Odyssey");
+// Expected output: "2001: A Space Odyssey"
+```
 
 ## Sintaxis
 

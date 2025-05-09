@@ -1,13 +1,51 @@
 ---
 title: border-inline-end-color
 slug: Web/CSS/border-inline-end-color
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-inline-end-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界色を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界色に対応づけられます。これは {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/border-inline-end-color.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end-color")}}
+
+```css interactive-example-choice
+border-inline-end-color: red;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end-color: #32a1ce;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end-color: rgb(170, 50, 220, 0.6);
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これは周囲に境界線があるボックスです。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 
@@ -19,17 +57,16 @@ border-inline-end-color: #663399;
 border-inline-end-color: inherit;
 border-inline-end-color: initial;
 border-inline-end-color: revert;
+border-inline-end-color: revert-layer;
 border-inline-end-color: unset;
 ```
 
 関連するプロパティとしては、 {{cssxref("border-block-start-color")}}、{{cssxref("border-block-end-color")}}、{{cssxref("border-inline-start-color")}} が要素の他の境界色を定義します。
 
-{{cssinfo}}
-
 ### 値
 
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -39,13 +76,13 @@ border-inline-end-color: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -65,7 +102,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("例", 140, 140)}}
 
 ## 仕様書
 
@@ -77,5 +114,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

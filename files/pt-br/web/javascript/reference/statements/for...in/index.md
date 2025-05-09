@@ -110,7 +110,7 @@ Este não é o comportamento padrão e atualmente é ignorado a partir da versã
 - {{jsxref("Statements/for_each...in", "for each in")}} - (deprecated).
 - {{jsxref("Statements/for", "for")}}
 - [Generator expressions](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators) (uses the `for...in` syntax)
-- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
 - {{jsxref("Array.prototype.forEach()")}}

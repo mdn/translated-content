@@ -34,7 +34,7 @@ Un compteur n'est pas visible en tant que tel. Les fonctions `counters()` et [`c
 - {{cssxref("&lt;custom-ident&gt;")}}
   - : Un nom identifiant les compteurs à utiliser. C'est le même nom qui pourra être utilisé avec les propriétés {{cssxref("counter-reset")}} et {{cssxref("counter-increment")}}. Le nom ne peut pas commencer par deux tirets et ne peut pas être `none`, `unset`, `initial` ou `inherit`.
 - `<counter-style>`
-  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/list-style-type#valeurs)) ou une fonction [`symbols()`](</fr/docs/Web/CSS/symbols()>). En absence de valeur, le style utilisé sera `decimal`.
+  - : Un style de compteur (cf. [les valeurs décrites pour `list-style-type`](/fr/docs/Web/CSS/list-style-type#valeurs)) ou une fonction [`symbols()`](/fr/docs/Web/CSS/symbols). En absence de valeur, le style utilisé sera `decimal`.
 - {{cssxref("&lt;string&gt;")}}
   - : Une suite de caractères. Les caractères qui ne sont pas latins doivent être encodés avec leur séquence d'échappement Unicode. `\000A9` représentera par exemple le symbole copyright (©).
 - `none`

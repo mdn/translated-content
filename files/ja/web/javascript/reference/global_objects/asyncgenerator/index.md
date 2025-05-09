@@ -13,7 +13,27 @@ l10n:
 
 `AsyncGenerator` は隠しクラスの {{jsxref("AsyncIterator")}} のサブクラスです。
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 ## コンストラクター
 
@@ -43,7 +63,7 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 
     > **メモ:** `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。
 
-- `AsyncGenerator.prototype[@@toStringTag]`
+- `AsyncGenerator.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncGenerator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 ## インスタンスメソッド

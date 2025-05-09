@@ -2,14 +2,64 @@
 title: margin-inline-start
 slug: Web/CSS/margin-inline-start
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`margin-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
+**`margin-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/margin-inline-start.html")}}
+{{InteractiveExample("CSS Demo: margin-inline-start")}}
+
+```css interactive-example-choice
+margin-inline-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-inline-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-inline-start: 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col">One</div>
+    <div class="col transition-all" id="example-element">Two</div>
+    <div class="col">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: white;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 
@@ -18,6 +68,8 @@ l10n:
 margin-inline-start: 10px; /* 絶対的な長さ */
 margin-inline-start: 1em; /* テキストの大きさに対する相対値 */
 margin-inline-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-inline-start: anchor-size(block);
+margin-inline-start: calc(anchor-size(--myAnchor width, 30px) / 4);
 
 /* キーワード値 */
 margin-inline-start: auto;

@@ -288,7 +288,7 @@ ball.draw();
 
 {{EmbedLiveSample("Third_demo", "610", "310")}}
 
-## Добавление управления мышью
+## Управление мышью
 
 Чтобы получить некоторый контроль над мячом, мы можем заставить его следовать за нашей мышью, например, с помощью события [`mousemove`](/ru/docs/Web/API/Element/mousemove_event). Событие [`click`](/ru/docs/Web/API/Element/click_event) отпускает мяч и позволяет ему снова прыгать.
 
@@ -367,13 +367,12 @@ ball.draw();
 
 {{EmbedLiveSample("Добавление_управления_мышью", "610", "310")}}
 
-## Breakout(арканоид)
+## Breakout
 
-В этой короткой главе описаны некоторые приёмы создания продвинутой анимации. Как насчёт того, что бы добавить доску, кирпичи и превратить это демо в игру Breakout(в Росси более известный клон этой игры - арканоид)? Посетите [Game development](/ru/docs/Games) чтобы узнать больше об играх.
+В этой короткой главе описаны некоторые приёмы создания продвинутой анимации. Но их гораздо больше! Как насчёт того, что бы добавить доску, кирпичи и превратить это демо в игру [Breakout](<https://ru.wikipedia.org/wiki/Breakout_(игра)>)? В разделе [Разработка игр](/ru/docs/Games) собраны материалы об играх.
 
 ## Смотрите также
 
 - {{domxref("window.requestAnimationFrame()")}}
-- [Efficient animation for web games](/ru/docs/Games/Techniques)
 
 {{PreviousNext("Web/API/Canvas_API/Tutorial/Basic_animations", "Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas")}}

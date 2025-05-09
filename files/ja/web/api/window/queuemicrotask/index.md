@@ -90,7 +90,7 @@ if (typeof self.queueMicrotask !== "function") {
 
 - [Polyfill of `queueMicrotask` in `core-js`](https://github.com/zloirock/core-js#queuemicrotask)
 - [JavaScript で queueMicrotask() によるマイクロタスクの使用](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)
-- [非同期 JavaScript](/ja/docs/Learn/JavaScript/Asynchronous)
+- [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
 - [queueMicrotask
   explainer](https://github.com/fergald/docs/blob/master/explainers/queueMicrotask.md)
 - [Tasks,

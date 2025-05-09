@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-**`id`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) を返します。
+**`id`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用プロパティで、関連付けられた要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を返します。
 
 ## 値
 
@@ -18,7 +18,7 @@ l10n:
 
 ### `id` の使用
 
-この例では{{HTMLElement("img")}}要素に[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming)属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグが使用されます。これはコンソールに `myImage` とログ出力します。これは画像要素の [`id`](/ja/docs/Web/HTML/Global_attributes#id) です。
+この例では{{HTMLElement("img")}}要素に[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming)属性を追加して監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグが使用されます。これはコンソールに `myImage` とログ出力します。これは画像要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) です。
 
 ```html
 <img

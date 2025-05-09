@@ -55,9 +55,9 @@ _このインターフェイスは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope.btoa()")}}
   - : バイナリーデータ文字列から base-64 エンコードされた {{Glossary("ASCII")}} 文字列を生成します。
 - {{domxref("clearInterval()", "WorkerGlobalScope.clearInterval()")}}
-  - : {{domxref("setInterval()")}} を使用して設定された繰り返し処理をキャンセルします。
+  - : {{domxref("Window.setInterval", "setInterval()")}} を使用して設定された繰り返し処理をキャンセルします。
 - {{domxref("clearTimeout()", "WorkerGlobalScope.clearTimeout()")}}
-  - : {{domxref("setTimeout()")}} を使用して設定された繰り返し処理をキャンセルします。
+  - : {{domxref("Window.setTimeout", "setTimeout()")}} を使用して設定された繰り返し処理をキャンセルします。
 - {{domxref("createImageBitmap()", "WorkerGlobalScope.createImageBitmap()")}}
   - : さまざまな画像ソースを受け入れ、プロミス ({{jsxref("Promise")}}) を返します。これは {{domxref("ImageBitmap")}} に解決されます。オプションとして、ソースを _(sx, sy)_ を原点とする幅 sw, 高さ sh のピクセル矩形に切り詰めます。
 - {{domxref("WorkerGlobalScope.dump()")}} {{deprecated_inline}} {{non-standard_inline}}
@@ -90,7 +90,7 @@ _このインターフェイスは、{{domxref("EventTarget")}} インターフ�
 - {{domxref("WorkerGlobalScope/rejectionhandled_event", "rejectionhandled")}}
   - : {{jsxref("Promise")}} の拒否イベントが処理された際に発行されます。
 - {{domxref("WorkerGlobalScope/securitypolicyviolation_event", "securitypolicyviolation")}}
-  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/CSP)に違反したときに発生します。
+  - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)に違反したときに発生します。
 - {{domxref("WorkerGlobalScope/unhandledrejection_event", "unhandledrejection")}}
   - : {{jsxref("Promise")}} の拒否イベントが処理されなかったときに発行されます。
 

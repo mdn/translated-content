@@ -12,7 +12,20 @@ l10n:
 
 이 속성의 초기 값은 {{jsxref("Array.prototype.values")}} 속성의 초기 값과 동일한 함수 객체입니다.
 
-{{EmbedInteractiveExample("pages/js/array-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator1 = array1[Symbol.iterator]();
+
+for (const value of iterator1) {
+  console.log(value);
+}
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 구문
 
@@ -118,7 +131,7 @@ logIterable(123);
 - {{jsxref("Array.prototype.keys()")}}
 - {{jsxref("Array.prototype.entries()")}}
 - {{jsxref("Array.prototype.values()")}}
-- [`TypedArray.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
-- [`String.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
+- [`String.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
 - {{jsxref("Symbol.iterator")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

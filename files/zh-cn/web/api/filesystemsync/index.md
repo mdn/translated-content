@@ -3,9 +3,12 @@ title: FileSystemSync
 slug: Web/API/FileSystemSync
 ---
 
-{{APIRef("File System API")}} {{non-standard_header}}
+{{APIRef("File and Directory Entries API")}}{{Non-standard_Header}}{{Deprecated_Header}}
 
-在 [文件系统 API](/zh-CN/docs/DOM/File_API/File_System_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
+在[文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 中， `FileSystemSync` 对象表示文件系统。它有两个属性。
+
+> [!WARNING]
+> 该接口已被弃用且不再被标准化轨道追踪。_请不要再继续使用_。请使用[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 代替。
 
 ## 关于这个文档
 
@@ -30,8 +33,4 @@ slug: Web/API/FileSystemSync
 
 ## 参见
 
-规范：[File API: Directories and System Specification](https://dev.w3.org/2009/dap/file-system/pub/FileSystem/)
-
-参考： [文件系统 API](/zh-CN/docs/DOM/File_API/File_System_API)
-
-简介：[文件系统 API 的基本概念](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)

@@ -74,7 +74,7 @@ CSS で何かをレイアウトするとその要素を通常フローから遠�
 
 CSS で要素をどのように配置するかを変更できる方法は次のとおりです。
 
-- **{{cssxref("display")}} プロパティ** — `block`、`inline`、`inline-block` などの標準値は、要素が通常フローでどのようにふるまうかを変更することができます（詳細については、[CSS ボックスの種類](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ブロックボックスとインラインボックス)を参照してください）。それから、[CSS グリッド](/ja/docs/Learn/CSS/CSS_layout/Grids)や[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)のように、特定の `display` の値によって有効になる全体的なレイアウト方法があります。
+- **{{cssxref("display")}} プロパティ** — `block`、`inline`、`inline-block` などの標準値は、要素が通常フローでどのようにふるまうかを変更することができます（詳細については、[CSS ボックスの種類](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ブロックボックスとインラインボックス)を参照してください）。それから、[CSS グリッド](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)や[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)のように、特定の `display` の値によって有効になる全体的なレイアウト方法があります。
 - **浮動要素** — {{cssxref("float")}} に `left` などの値を適用すると、雑誌のレイアウトで画像の周囲をテキストが取り囲むことがあるように、要素の片側に沿ってブロックレベル要素が折り返されることがあります。
 - **{{cssxref("position")}} プロパティ** — 他のボックス内のボックスの配置を正確に制御できます。 通常フローでは `static` 位置指定が既定ですが、他の値を使用して要素を異なる方法でレイアウトすることもできます。 例えば、ブラウザーのビューポートの左上に固定するなどです。
 - **表レイアウト** — HTML 表の一部をスタイルするために設計された機能は、 `display: table` とそれに関連するプロパティを使用して、表以外の要素にも使用できます。
@@ -163,7 +163,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 {{ EmbedLiveSample('Setting_the_flex_property', '300', '200') }}
 
 > [!NOTE]
-> これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)の記事を参照してください。
+> これはフレックスボックスで可能なことの非常に短い紹介です。 詳細については、[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)の記事を参照してください。
 
 ## グリッドレイアウト
 
@@ -258,7 +258,7 @@ CSS でページレイアウトを実現するための主な方法は、すべ�
 {{ EmbedLiveSample('Placing_items_on_the_grid', '300', '330') }}
 
 > [!NOTE]
-> これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/Learn/CSS/CSS_layout/Grids)の記事を参照してください。
+> これら 2 つの例は、グリッドレイアウトの機能のほんの一部です。詳細については、[グリッドレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Grids)の記事を参照してください。
 
 このガイドの残りの部分では、他のレイアウト方法について説明します。 これは、ページの主なレイアウト構造にとってはそれほど重要ではありませんが、それでも特定のタスクを達成するのに役立ちます。 各レイアウトタスクの性質を理解することで、デザインの特定の構成要素を見たときに、それに最も適したレイアウトの種類が明らかになることがすぐにわかります。
 
@@ -325,7 +325,7 @@ p {
 {{ EmbedLiveSample('Floats', '100%', 600) }}
 
 > [!NOTE]
-> 浮動要素については、[float と clear](/ja/docs/Learn/CSS/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
+> 浮動要素については、[float と clear](/ja/docs/Learn_web_development/Core/CSS_layout/Floats) のプロパティに関するレッスンで詳しく説明しています。 フレックスボックスやグリッドレイアウトなどの技術が登場する前は、浮動要素は段組みレイアウトの作成方法として使用されていました。 あなたはまだウェブ上でこれらの方法に出くわすかもしれません。これらについては、[過去のレイアウト手法](/ja/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods)に関するレッスンで説明します。
 
 ## 位置指定のテクニック
 
@@ -471,7 +471,7 @@ p {
 
 {{ EmbedLiveSample('Absolute_positioning', '100%', 300) }}
 
-これはとても違います。位置指定要素は、ページレイアウトの残りの部分から完全に分離され、その上に配置されています。 他の 2 つの段落は、配置された兄弟が存在しないかのように一緒にいます。 {{cssxref("top")}} プロパティと {{cssxref("left")}} プロパティは、絶対位置指定要素に対しては、相対位置指定要素とは異なる効果があります。 この場合、オフセットはページの上側と左側から計算されています。 このコンテナーになる親要素を変更することは可能で、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)のレッスンでそれを見ます。
+これはとても違います。位置指定要素は、ページレイアウトの残りの部分から完全に分離され、その上に配置されています。 他の 2 つの段落は、配置された兄弟が存在しないかのように一緒にいます。 {{cssxref("top")}} プロパティと {{cssxref("left")}} プロパティは、絶対位置指定要素に対しては、相対位置指定要素とは異なる効果があります。 この場合、オフセットはページの上側と左側から計算されています。 このコンテナーになる親要素を変更することは可能で、[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)のレッスンでそれを見ます。
 
 ### 固定位置指定
 
@@ -600,7 +600,7 @@ body {
 {{ EmbedLiveSample('Sticky_positioning', '100%', 200) }}
 
 > [!NOTE]
-> 位置指定の詳細については、[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)の記事をご覧ください。
+> 位置指定の詳細については、[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)の記事をご覧ください。
 
 ## 表レイアウト
 

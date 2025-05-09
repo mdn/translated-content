@@ -11,7 +11,18 @@ l10n:
 {{jsxref("Operators/instanceof", "instanceof")}} 연산자는 생성자 객체가 객체를 인스턴스로 인식하는지 여부를 확인하기 위해
 사용하는 메서드의 오른쪽 피연산자에서 이 심볼을 찾습니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-hasinstance.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.hasInstance")}}
+
+```js interactive-example
+class Array1 {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+
+console.log([] instanceof Array1);
+// Expected output: true
+```
 
 ## 값
 
@@ -27,10 +38,10 @@ l10n:
    `constructor`가 객체가 아니거나 `constructor[@@hasInstance]`가 `null`, `undefined`, 함수 중 하나가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
 
 2. 그렇지 않으면, `constructor`에 `@@hasInstance` 메서드가 없는 경우(`constructor[@@hasInstance]`가 `null` 또는 `undefined`),
-   [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)와 동일한 알고리즘을 사용하여 결과를 결정합니다.
+   [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)와 동일한 알고리즘을 사용하여 결과를 결정합니다.
    `constructor`가 함수가 아닌 경우 {{jsxref("TypeError")}}가 발생합니다.
 
-모든 함수는 기본적으로 `Function.prototype`을 상속하기 때문에, 대부분의 경우 [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance) 메서드는 오른쪽이 함수인 경우 `instanceof`의 동작을 지정합니다.
+모든 함수는 기본적으로 `Function.prototype`을 상속하기 때문에, 대부분의 경우 [`Function.prototype[@@hasInstance]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance) 메서드는 오른쪽이 함수인 경우 `instanceof`의 동작을 지정합니다.
 
 ## 예제
 
@@ -83,4 +94,4 @@ console.log(Animal[Symbol.hasInstance](cat)); // true
 ## 같이 보기
 
 - {{jsxref("Operators/instanceof", "instanceof")}}
-- [`Function.prototype[@@hasInstance]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/@@hasInstance)
+- [`Function.prototype[@@hasInstance]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function/Symbol.hasInstance)

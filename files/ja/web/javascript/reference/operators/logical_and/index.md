@@ -11,7 +11,15 @@ l10n:
 
 一般的には、この演算子は左から右に向けて評価した際に最初の{{Glossary("falsy", "偽値")}}のオペランドに遭遇したときにはその値を、またはすべてが{{Glossary("truthy", "真値")}}であった場合は最後のオペランドの値を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 構文
 
@@ -42,7 +50,7 @@ result = 2 && 0; // result には 0 が代入される
 result = "foo" && 4; // result には 4 が代入される
 ```
 
-`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Data_structures#boolean_type)に変換することが可能であるため、論理演算子と見なすことができます。
+`&&` 演算子では論理値以外のオペランドを使用することができますが、返値が常に[論理型プリミティブ](/ja/docs/Web/JavaScript/Guide/Data_structures#boolean_type)に変換することが可能であるため、論理演算子と見なすことができます。
 返値（または一般的な式）を対応する論理値に明示的に変換するには、二重の[否定演算子](/ja/docs/Web/JavaScript/Reference/Operators/Logical_NOT)または {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} コンストラクターを使用してください。
 
 ### 短絡評価

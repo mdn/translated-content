@@ -1,11 +1,11 @@
 ---
-title: ":root"
+title: :root
 slug: Web/CSS/:root
 ---
 
 {{CSSRef}}
 
-**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/Specificity)が高いことを除けば `html` セレクターと同等です。
+**`:root`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書を表すツリーのルート要素を選択します。 HTML では `:root` は {{HTMLElement("html")}} 要素を表し、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が高いことを除けば `html` セレクターと同等です。
 
 ```css
 /* 文書のルート要素（HTML の場合は <html>）を選択 */
@@ -24,7 +24,7 @@ slug: Web/CSS/:root
 
 ### グローバルの CSS 変数
 
-`:root` はグローバルの [CSS 変数](/ja/docs/Web/CSS/Using_CSS_custom_properties)を宣言するのに便利です。
+`:root` はグローバルの [CSS 変数](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を宣言するのに便利です。
 
 ```css
 :root {

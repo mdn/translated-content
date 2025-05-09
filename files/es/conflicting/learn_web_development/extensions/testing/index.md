@@ -19,7 +19,7 @@ Determinar qué herramientas debería usar puede ser un proceso difícil, por lo
 
 ## Camino de aprendizaje
 
-Debería aprender los conceptos básicos de los lenguajes [HTML](/es/docs/Learn/HTML), [CSS](/es/docs/Learn/CSS), y [JavaScript](/es/docs/Learn/JavaScript) antes de intentar usar las herramientas que se detallan aquí. Por ejemplo, deberá conocer los fundamentos de estos idiomas antes de comenzar a depurar problemas en códigos web complejos, o hacer un uso efectivo de las bibliotecas de JavaScript, o escribir pruebas y ejecutarlas en su código utilizando corredores de prueba, etc.
+Debería aprender los conceptos básicos de los lenguajes [HTML](/es/docs/Learn_web_development/Core/Structuring_content), [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), y [JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) antes de intentar usar las herramientas que se detallan aquí. Por ejemplo, deberá conocer los fundamentos de estos idiomas antes de comenzar a depurar problemas en códigos web complejos, o hacer un uso efectivo de las bibliotecas de JavaScript, o escribir pruebas y ejecutarlas en su código utilizando corredores de prueba, etc.
 
 Primero necesitas una base sólida.
 
@@ -27,5 +27,5 @@ Primero necesitas una base sólida.
 
 - Herramientas de desarrollo web en el mundo real (TBD)
   - : En este módulo, exploramos los diferentes tipos de herramientas de desarrollo web disponibles. Esto incluye la revisión de los tipos de tareas más comunes a las que se le puede pedir que resuelva, cómo pueden encajar en un flujo de trabajo y las mejores herramientas disponibles actualmente para llevar a cabo esas tareas.
-- [Pruebas de navegadores cruzados](/es/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [Pruebas de navegadores cruzados](/es/docs/Learn_web_development/Extensions/Testing)
   - : Este módulo analiza específicamente el área de prueba de proyectos web en diferentes navegadores. Aquí vemos cómo identificar a su público objetivo (por ejemplo, qué usuarios, navegadores y dispositivos necesita preocuparse más), cómo realizar las pruebas, los principales problemas que enfrentará con los diferentes tipos de código y cómo solucionar o mitigue esos problemas, qué herramientas son más útiles para ayudarlo a probar y solucionar problemas, y cómo utilizar la automatización para acelerar las pruebas.

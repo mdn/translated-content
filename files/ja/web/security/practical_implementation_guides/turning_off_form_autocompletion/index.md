@@ -10,11 +10,11 @@ original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 これらの機能は通常は既定で有効ですが、ユーザーのプライバシーにかかわる可能性があるため、ブラウザーは無効にすることができます。しかしながら、フォームで送信される情報の中には将来利用する価値のないもの (ワンタイムパスワードなど) や、機密情報 (公的な識別番号やクレジットカード番号など) が含まれることがあります。ブラウザーの自動補完機能が有効であっても、ウェブサイトの作者としては、そのような入力欄の値をブラウザーに記憶させないほうが適切かもしれません。
 
-なお、自動補完を無効にすると、 [WCAG 2.1 の 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) の規則を**破る**ことになることを知っておくことが重要です。 WCAG に従うウェブサイトを制作するのであれば、自動的に記入する自動補完を使用するべきです。これは、フォーム自体の自動補完がオフになっている場合でも、（個々のフォームフィールドに関連する [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性を追加することで）基準に合格することができることを意味しています。
+なお、自動補完を無効にすると、 [WCAG 2.1 の 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) の規則を**破る**ことになることを知っておくことが重要です。 WCAG に従うウェブサイトを制作するのであれば、自動的に記入する自動補完を使用するべきです。これは、フォーム自体の自動補完がオフになっている場合でも、（個々のフォームフィールドに関連する [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性を追加することで）基準に合格することができることを意味しています。
 
 ## 自動補完の無効化
 
-フォームにおける自動補完を無効にするには、 [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) 属性に "off" を指定することで実現できます。
+フォームにおける自動補完を無効にするには、 [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性に "off" を指定することで実現できます。
 
 ```html
 autocomplete="off"
@@ -62,6 +62,6 @@ autocomplete を off に設定してもブラウザーがサジェスト値を�
 
 他人のパスワードを指定するようなユーザー管理ページを定義していて、パスワード欄の自動入力を抑止したい場合は、 `autocomplete="new-password"` を使用することができます。
 
-これはヒントであり、ブラウザーは守る必要はありません。しかし、最近のブラウザーは `<input>` 要素に `autocomplete="new-password"` を設定すると自動入力を停止します。例えば、 Firefox バージョン 67 ([Firefox バグ 1119063](https://bugzil.la/1119063) を参照) はこの場合に自動入力を停止していましたが、 Firefox 70 ([Firefox バグ 1565407](https://bugzil.la/1565407) を参照) は安全に生成されたパスワードを提案することができるものの、保存されたパスワードを自動入力しません。詳しくは [`autocomplete` の互換性テーブル](/ja/docs/Web/HTML/Attributes/autocomplete#browser_compatibility)を参照してください。
+これはヒントであり、ブラウザーは守る必要はありません。しかし、最近のブラウザーは `<input>` 要素に `autocomplete="new-password"` を設定すると自動入力を停止します。例えば、 Firefox バージョン 67 ([Firefox バグ 1119063](https://bugzil.la/1119063) を参照) はこの場合に自動入力を停止していましたが、 Firefox 70 ([Firefox バグ 1565407](https://bugzil.la/1565407) を参照) は安全に生成されたパスワードを提案することができるものの、保存されたパスワードを自動入力しません。詳しくは [`autocomplete` の互換性テーブル](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#browser_compatibility)を参照してください。
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

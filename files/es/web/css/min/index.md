@@ -7,7 +7,30 @@ slug: Web/CSS/min
 
 La [función](/es/docs/Web/CSS/CSS_Functions) [CSS](/es/docs/Web/CSS) **`min()`** permite establecer el valor mas pequeño (mas negativo) de una lista de expresiones separadas por coma como el valor de una propiedad CSS. La función `min()` puede ser usada donde quiera que {{CSSxRef("&lt;length&gt;")}}, {{CSSxRef("&lt;frequency&gt;")}}, {{CSSxRef("&lt;angle&gt;")}}, {{CSSxRef("&lt;time&gt;")}}, {{CSSxRef("&lt;percentage&gt;")}}, {{CSSxRef("&lt;number&gt;")}}, o {{CSSxRef("&lt;integer&gt;")}} esté permitido.
 
-{{EmbedInteractiveExample("pages/css/function-min.html")}}
+{{InteractiveExample("CSS Demo: min()")}}
+
+```css interactive-example-choice
+width: min(50vw, 200px);
+```
+
+```css interactive-example-choice
+width: min(100vw, 4000px);
+```
+
+```css interactive-example-choice
+width: min(150vw, 100px);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <img
+      alt="Firefox logo"
+      class="logo"
+      src="/shared-assets/images/examples/firefox-logo.svg" />
+  </div>
+</section>
+```
 
 En el primer ejemplo anterior, el ancho será al menos 200px, pero será menor si el viewport es menor de 400px de ancho (en tal caso 1vw sería 4px, así 50vw sería 200px). En otras palabras, el ancho máximo es 200px. Piensa en el valor de `min()` como el máximo valor que una propiedad puede tener.
 

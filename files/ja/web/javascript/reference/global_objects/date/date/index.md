@@ -9,7 +9,21 @@ l10n:
 
 **`Date()`** コンストラクターは {{jsxref("Date")}} のインスタンスを生成し、または現在時刻を表す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## 構文
 
@@ -59,7 +73,7 @@ Date()
 - `dateObject`
   - : 既存の `Date` オブジェクトです。これは、既存の `Date` オブジェクトのコピーを、同じ日付と時刻で効率的に作成します。これは `new Date(dateObject.valueOf())` と同じですが、 `valueOf()` メソッドが呼び出されない点が異なります。
 
-`Date()` コンストラクターに 1 つの引数が渡された場合、 `Date` インスタンスは特別に扱われます。他のすべての値はプリミティブに変換されます（`[@@toPrimitive]("default")`, `valueOf()`, `toString()` の順で呼び出されます）。もし結果が文字列であれば、それは日付の文字列として解釈されます。そうでない場合は、結果のプリミティブはさらに数値に強制され、タイムスタンプとして扱われます。
+`Date()` コンストラクターに 1 つの引数が渡された場合、 `Date` インスタンスは特別に扱われます。他のすべての値はプリミティブに変換されます（`[Symbol.toPrimitive]("default")`, `valueOf()`, `toString()` の順で呼び出されます）。もし結果が文字列であれば、それは日付の文字列として解釈されます。そうでない場合は、結果のプリミティブはさらに数値に強制され、タイムスタンプとして扱われます。
 
 #### 独立した日付と時刻の成分の値
 

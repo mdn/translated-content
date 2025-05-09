@@ -8,15 +8,15 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-この [Express チュートリアル](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)の 2 回目の記事では、どのようにして "スケルトン"ウェブサイトプロジェクトを作成し、サイト固有のルート、テンプレート/ビュー、およびデータベース呼び出しを追加するかを説明します。
+この [Express チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)の 2 回目の記事では、どのようにして "スケルトン"ウェブサイトプロジェクトを作成し、サイト固有のルート、テンプレート/ビュー、およびデータベース呼び出しを追加するかを説明します。
 
-| 前提条件: | [Node 開発環境を設定します](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)。Express チュートリアルを確認してください。 |
-| --------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| 目標:     | Express Application Generator を使用して独自の新しいウェブサイトプロジェクトを開始できるようにする。                                       |
+| 前提条件: | [Node 開発環境を設定します](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)。Express チュートリアルを確認してください。 |
+| --------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 目標:     | Express Application Generator を使用して独自の新しいウェブサイトプロジェクトを開始できるようにする。                                                                  |
 
 ## 概要
 
-この記事では [Express Application Generator](https://expressjs.com/ja/starter/generator.html) ツールを使用して "スケルトン" ウェブサイトを作成する方法を説明します。このツールには、サイト固有のルート、ビュー/テンプレート、およびデータベース呼び出しを追加できます。この場合は、このツールを使用して[地域図書館ウェブサイト](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)用のフレームワークを作成し、後でそのサイトに必要な他のすべてのコードを追加します。プロセスは非常に単純で、必要に応じてサイトのテンプレートエンジンと CSS ジェネレーターを指定して、新しいプロジェクト名を指定してコマンドラインでジェネレーターを呼び出すだけです。
+この記事では [Express Application Generator](https://expressjs.com/ja/starter/generator.html) ツールを使用して "スケルトン" ウェブサイトを作成する方法を説明します。このツールには、サイト固有のルート、ビュー/テンプレート、およびデータベース呼び出しを追加できます。この場合は、このツールを使用して[地域図書館ウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)用のフレームワークを作成し、後でそのサイトに必要な他のすべてのコードを追加します。プロセスは非常に単純で、必要に応じてサイトのテンプレートエンジンと CSS ジェネレーターを指定して、新しいプロジェクト名を指定してコマンドラインでジェネレーターを呼び出すだけです。
 
 次のセクションでは、アプリケーションジェネレーターを呼び出す方法を示し、さまざまな ビュー/CSS オプションについて簡単に説明します。また、スケルトンウェブサイトの構造についても説明します。最後に、ウェブサイトを実行してそれが機能することを確認する方法を紹介します。
 
@@ -25,7 +25,7 @@ original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 
 ## アプリケーションジェネレーターを使用する
 
-[Node 開発環境の設定](/ja/docs/Learn/Server-side/Express_Nodejs/development_environment)の一部として、ジェネレーターをすでにインストールしているはずです。念のため、NPM パッケージマネージャを使用して、サイト全体にジェネレーターツールをインストールします。
+[Node 開発環境の設定](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)の一部として、ジェネレーターをすでにインストールしているはずです。念のため、NPM パッケージマネージャを使用して、サイト全体にジェネレーターツールをインストールします。
 
 ```bash
 npm install express-generator -g
@@ -479,7 +479,7 @@ block content
 
 ## まとめ
 
-これで、[ローカルライブラリー](/ja/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)用のスケルトンウェブサイトプロジェクトを作成し、それが Node を使用して実行されることを確認しました。最も重要なのは、プロジェクトの構造も理解しているので、ローカルライブラリーのルートとビューを追加するために変更を加える必要がある場所をよく理解していることです。
+これで、[ローカルライブラリー](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)用のスケルトンウェブサイトプロジェクトを作成し、それが Node を使用して実行されることを確認しました。最も重要なのは、プロジェクトの構造も理解しているので、ローカルライブラリーのルートとビューを追加するために変更を加える必要がある場所をよく理解していることです。
 
 次に、図書館のウェブサイトとして機能するようにスケルトンを変更します。
 

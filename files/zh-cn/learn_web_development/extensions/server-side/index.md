@@ -1,12 +1,9 @@
 ---
 title: 服务器端网站编程
 slug: Learn_web_development/Extensions/Server-side
-original_slug: Learn/Server-side
 l10n:
   sourceCommit: 8184fa218341dbb193ce6adaa1240c89fae045ec
 ---
-
-{{LearnSidebar}}
 
 **_动态网站_**——**服务器端编程**主题的一系列模块展示了如何创建动态网站；这些网站能够根据 HTTP 请求提供定制化的信息。这些模块提供了服务器端编程的总体介绍，以及如何使用 Django（Python）和 Express（Node.js/JavaScript）Web 框架创建基本应用程序的特定入门指南。
 

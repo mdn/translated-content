@@ -1,13 +1,51 @@
 ---
 title: border-block-width
 slug: Web/CSS/border-block-width
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-block-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の境界の幅を定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界の幅に対応づけられます。これは {{cssxref("border-top-width")}} と {{cssxref("border-bottom-width")}}、または {{cssxref("border-left-width")}} と {{cssxref("border-right-width")}} のどちらかに対応し、どちらに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/border-block-width.html")}}
+{{InteractiveExample("CSS Demo: border-block-width")}}
+
+```css interactive-example-choice
+border-block-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-width: 4px;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これは周囲に境界線があるボックスです。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 他の方向の境界の幅は {{cssxref("border-inline-width")}} で設定でき、これは {{cssxref("border-inline-start-width")}} および {{cssxref("border-inline-end-width")}} を設定します。
 
@@ -22,6 +60,7 @@ border-block-width: thick;
 border-block-width: inherit;
 border-block-width: initial;
 border-block-width: revert;
+border-block-width: revert-layer;
 border-block-width: unset;
 ```
 
@@ -32,7 +71,7 @@ border-block-width: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -40,13 +79,13 @@ border-block-width: unset;
 
 ## 例
 
-<h3 id="Border_width_with_vertical_text">縦書きテキストの境界の幅</h3>
+### 縦書きテキストの境界の幅
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -68,7 +107,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_width_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界の幅", 140, 140)}}
 
 ## 仕様書
 
@@ -80,5 +119,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}}, {{cssxref("border-left-width")}} のうちの 1 つに対応します
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

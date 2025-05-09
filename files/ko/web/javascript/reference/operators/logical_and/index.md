@@ -11,7 +11,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND
 보다 일반적으로 왼쪽에서 오른쪽으로 평가할 때 연산자는 처음으로 만나는 {{Glossary("falsy", "거짓 같은")}} 피연산자의
 값을 반환합니다. 혹은 모두 {{Glossary("truthy", "참 같은 값")}}이라면 마지막 피연산자의 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## 구문
 
@@ -155,8 +163,8 @@ bCondition1 || (bCondition2 && bCondition3);
 
 언제나 다음과 같습니다.
 
-```js
-bCondition1 || (bCondition2 && bCondition3);
+```js-nolint
+bCondition1 || bCondition2 && bCondition3;
 ```
 
 ## 명세서

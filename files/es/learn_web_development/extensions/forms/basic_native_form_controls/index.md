@@ -6,7 +6,7 @@ original_slug: Learn/Forms/Basic_native_form_controls
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Forms/How_to_structure_an_HTML_form", "Learn/Forms/HTML5_input_types", "Learn/Forms")}}
 
-En el [artículo anterior](/es/docs/Learn/Forms/How_to_structure_a_web_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
+En el [artículo anterior](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form), marcamos un ejemplo de formulario web funcional, presentamos algunos controles de formulario y elementos estructurales comunes, y nos centramos en las mejores prácticas de accesibilidad. A continuación, veremos con detalle las funciones de los diferentes controles de formulario, o _widgets_, y estudiaremos todas las diferentes opciones de que se dispone para la recopilación de diferentes tipos de datos. En este artículo en particular, veremos el conjunto original de controles de formulario, disponible en todos los navegadores desde los primeros días de la web.
 
 <table>
   <tbody>
@@ -73,7 +73,7 @@ _La captura de pantalla siguiente muestra los tipos de entrada de texto predeter
 ![Captura de pantalla del atributo deshabilitado y predeterminado: estilo para una entrada de texto activa (con el foco) en Firefox, Safari, Chrome y Edge.](disabled.png)
 
 > [!NOTE]
-> HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn/Forms/HTML5_input_types).
+> HTML5 ha mejorado el campo de texto básico original de una sola línea al añadir valores especiales para el atributo [`type`](/es/docs/Web/HTML/Element/input#type) que imponen restricciones de validación específicas y otras características, por ejemplo, específicas para introducir direcciones URL o números. Los expondremos en el artículo siguiente: [Los tipos de entrada en HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
 
 #### Campo de contraseña
 
@@ -237,11 +237,11 @@ Por ejemplo, cuando haces clic en las coordenadas (123, 456) de la imagen y se h
 http://foo.com?pos.x=123&pos.y=456
 ```
 
-Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data).
+Esta es una forma muy cómoda de construir un «mapa dinámico». La forma en que se envían y recuperan estos valores se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data).
 
 ## Selector de archivos
 
-Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
+Hay un último tipo de `<input>` que nos llegó a principios del HTML: el tipo entrada de archivo. Los formularios pueden enviar archivos a un servidor (esta acción específica también se detalla en el artículo [Enviar los datos del formulario](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)). El control de selección de archivos se puede usar para elegir uno o más archivos para enviar.
 
 Para crear un [control de selección de archivos](/es/docs/Web/HTML/Element/input/file), utilizas el elemento {{HTMLElement ("input")}} con su atributo [`type`](/es/docs/Web/HTML/Element/input#type) establecido en `file`. Es posible restringir los tipos de archivos que se aceptan utilizando el atributo [`accept`](/es/docs/Web/HTML/Element/input#accept). Además, puedes permitir que el usuario elija más de un archivo añadiendo el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple).
 
@@ -282,7 +282,7 @@ Este artículo ha expuesto los tipos de entrada más antiguos: el conjunto origi
 ### Temas avanzados
 
 - [Enviar formularios con JavaScript](/es/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [Cómo crear widgets de formularios personalizados](/es/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Cómo crear widgets de formularios personalizados](/es/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [Formularios HTML en navegadores antiguos](/es/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Cuestiones avanzadas de aplicación de estilo para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling)
 - [Tabla de compatibilidad de los controles de formulario](/es/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

@@ -3,8 +3,6 @@ title: 寫作風格指南
 slug: MDN/Writing_guidelines/Writing_style_guide
 ---
 
-{{MDNSidebar}}
-
 為了讓文件更加組織化、標準化而易於閱讀，MDN 風格指南描述了文件的組織方式、拼寫、格式等問題。這些規則只是指導方針而非強制規定。與格式相比，我們對內容更感興趣，因此不用覺得在開始貢獻之前有被迫要學習這些指南的壓力。若之後有其他支援者修改了你的內容以便讓它符合這些指南，你也不需要因此而感到沮喪或驚訝。
 
 在語言方面，本指南主要適用於英語文件，其它語言可擁有（且歡迎建立）自己的風格指南。它們會以當地語系團隊頁面的子頁面發佈。
@@ -41,7 +39,7 @@ slug: MDN/Writing_guidelines/Writing_style_guide
 - [JavaScript/指南](/zh-TW/docs/Web/JavaScript/Guide) ——主內容表頁面
 - [JavaScript/指南/JavaScript 概述](/zh-TW/docs/Web/JavaScript/Guide/Introduction)
 - [JavaScript/指南/函數](/zh-TW/docs/Web/JavaScript/Guide/Functions)
-- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [JavaScript/指南/物件模型細節](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 
 請儘量避免將你的文章放在頂層，不然會拖慢網站的下載速度，降低網站導覽和搜索的效率。
 

@@ -8,7 +8,22 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Intl/Segmenter/segment/Se
 
 La méthode **`Intl.Segments.@@iterator`** fait partie de l'implémentation [du protocole itérable](/fr/docs/Web/JavaScript/Reference/Iteration_protocols#le_protocole_«_itérable_») pour `Intl.Segments` et renvoie un nouvel objet itérateur qui permet de parcourir les éléments d'un objet `Intl.Segmenter`. Chaque élément est renvoyé sous la forme d'un objet.
 
-{{EmbedInteractiveExample("pages/js/segments-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Segments.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });
+const string1 = "Que ma joie demeure";
+
+const iterator1 = segmenterFr.segment(string1)[Symbol.iterator]();
+
+for (const segment of iterator1) {
+  if (segment.segment.length > 4) {
+    console.log(segment.segment);
+  }
+}
+
+// Expected output: "demeure"
+```
 
 ## Syntaxe
 
@@ -63,4 +78,4 @@ while (!result.done) {
 ## Voir aussi
 
 - [Les protocoles d'itération](/fr/docs/Web/JavaScript/Reference/Iteration_protocols)
-- [`Array.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)

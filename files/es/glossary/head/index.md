@@ -12,4 +12,4 @@ La cabecera (en inglés _Head_) es la parte de un documento [HTML](/es/docs/Glos
 ### Elemento head de HTML
 
 - Rreferencia al elemento [\<head>](/es/docs/Web/HTML/Element/head) en MDN
-- [El elemento \<head> de HTML](/es/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML) en la zona de aprendizaje de MDN
+- [El elemento \<head> de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata) en la zona de aprendizaje de MDN

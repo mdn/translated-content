@@ -1,11 +1,11 @@
 ---
-title: "::placeholder"
+title: ::placeholder
 slug: Web/CSS/::placeholder
 ---
 
 {{CSSRef}}
 
-El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Learn/Forms#the_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
+El [pseudo-elemento CSS](/es/docs/Web/CSS/Pseudo-elements) **`::placeholder`** representa el [texto provisional](/es/docs/Learn_web_development/Extensions/Forms#the_placeholder_attribute) en un elemento {{HTMLElement("input")}} o un elemento {{HTMLElement("textarea")}}.
 
 ```css
 ::placeholder {
@@ -80,7 +80,7 @@ Es importante asegurarse que el radio de contraste entre el color del texto prov
 El radio del color de contraste es determinado al comparar la luminosidad entre dos colores. Para cumplir las actuales [Pautas de Accesibilidad para el Contenido Web (WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/es), un radio de 4.5:1 es requerido para el contenido de un texto y 3:1 para textos más grandes como encabezados. Un texto grando es definido como 18.66px o mayor en negritas; o 24px o mayor.
 
 - [WebAIM: Comprobador de contraste de color](https://webaim.org/resources/contrastchecker/)
-- [MDN Entendiendo WCAG, Explicaciones del lineamiento 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Entendiendo WCAG, Explicaciones del lineamiento 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Entendiendo críterios exitósos 1.4.3 | W3C Entendiendo WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 #### Usabilidad
@@ -128,4 +128,4 @@ El texto provisional no es un reemplazo para el elemento {{htmlelement("label")}
 
 - La pseudo-clase {{cssxref(":placeholder-shown")}} provee estilos a un elemento que _tiene_ un texto provisional activo.
 - Elementos HTML relacionados: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [Formularios HTML](/es/docs/Learn/Forms)
+- [Formularios HTML](/es/docs/Learn_web_development/Extensions/Forms)

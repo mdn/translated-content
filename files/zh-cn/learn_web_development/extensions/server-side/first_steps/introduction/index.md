@@ -1,10 +1,9 @@
 ---
 title: 服务端编程介绍
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
-original_slug: Learn/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 欢迎来到 MDN 为初学者准备的服务器端编程课程！在第一篇文章里面我们将会从一个较高的角度来看待服务器端编程，通过解答下面这些问题来实现这一点，比如：服务器端编程是什么？服务器端编程和客户端编程有何不同？还有，为什么服务器端编程这么有用？当你读完这篇文章后，你会理解通过服务器端编程实现的网站所能提供的额外的功能。
 
@@ -33,7 +32,7 @@ original_slug: Learn/Server-side/First_steps/Introduction
 
 Web 浏览器通过**超文本传输协议**（{{glossary("HTTP")}}）来和 [Web 服务器](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)进行通信。当你在网页上点击一个链接，或提交一个表单，再或进行一次搜索时，一个 **HTTP 请求**就从你的浏览器发送到了目标服务器。
 
-这个请求包括一个标识所请求资源的 URL，一个定义所需操作的方法 (比如获取，删除或者发布资源)，还可以包括编码在 URL 参数中的附加信息。附加信息以键值对（参数和它的值）的形式，通过一个[查询字符串](https://en.wikipedia.org/wiki/Query_string)，作为 POST 数据（由[HTTP POST 方法](/zh-CN/docs/Web/HTTP/Methods/POST)发送）或存放在与之相关联的{{glossary("Cookie")}}中。
+这个请求包括一个标识所请求资源的 URL，一个定义所需操作的方法 (比如获取，删除或者发布资源)，还可以包括编码在 URL 参数中的附加信息。附加信息以键值对（参数和它的值）的形式，通过一个[查询字符串](https://en.wikipedia.org/wiki/Query_string)，作为 POST 数据（由[HTTP POST 方法](/zh-CN/docs/Web/HTTP/Reference/Methods/POST)发送）或存放在与之相关联的{{glossary("Cookie")}}中。
 
 Web 服务器等待客户端的请求信息，在它们到达的时候处理它们，并且回复 Web 浏览器一个 **HTTP 响应**信息。这个响应包含一个表明该请求是否成功的状态行（比如“HTTP/1.1 200 OK”代表请求成功）。
 
@@ -41,7 +40,7 @@ Web 服务器等待客户端的请求信息，在它们到达的时候处理它�
 
 ### 静态网站
 
-下面这张图展示了一个*静态网站*的基本架构。（静态网站是指无论何时当一个特定资源被请求的时候都返回相同的被硬编码的内容）当用户想要导航到某个页面时，浏览器会发送一个指定到这个页面的 URL 的 HTTP“GET”请求。服务器从它的文件系统中检索被请求的文件，然后返回一个 HTTP 回应，该回应包括被请求的文件和一个[状态码](/zh-CN/docs/Web/HTTP/Status#successful_responses)（通常 200 代表操作成功）。如果出于某些原因被请求的文件无法检索到，就会返回错误码。（具体可以参照[客户端错误回应](/zh-CN/docs/Web/HTTP/Status#client_error_responses)和[服务器错误回应](/zh-CN/docs/Web/HTTP/Status#server_error_responses)）
+下面这张图展示了一个*静态网站*的基本架构。（静态网站是指无论何时当一个特定资源被请求的时候都返回相同的被硬编码的内容）当用户想要导航到某个页面时，浏览器会发送一个指定到这个页面的 URL 的 HTTP“GET”请求。服务器从它的文件系统中检索被请求的文件，然后返回一个 HTTP 回应，该回应包括被请求的文件和一个[状态码](/zh-CN/docs/Web/HTTP/Reference/Status#successful_responses)（通常 200 代表操作成功）。如果出于某些原因被请求的文件无法检索到，就会返回错误码。（具体可以参照[客户端错误回应](/zh-CN/docs/Web/HTTP/Reference/Status#client_error_responses)和[服务器错误回应](/zh-CN/docs/Web/HTTP/Reference/Status#server_error_responses)）
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 

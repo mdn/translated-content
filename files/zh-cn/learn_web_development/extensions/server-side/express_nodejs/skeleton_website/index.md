@@ -1,10 +1,7 @@
 ---
 title: Express 教程 2：创建站点框架
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
-original_slug: Learn/Server-side/Express_Nodejs/skeleton_website
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 

@@ -44,7 +44,7 @@ doc.nodeName # propriedade do objeto de documento DOM
 p_list = doc.getElementsByTagName("para")
 ```
 
-Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte [JavaScript technologies overview](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte [JavaScript technologies overview](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Acessando o DOM
 
@@ -303,7 +303,7 @@ Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessávei
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Learn/JavaScript/Building_blocks/Events)
+- [Events and the DOM](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

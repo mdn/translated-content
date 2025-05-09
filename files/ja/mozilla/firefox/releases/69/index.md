@@ -22,14 +22,14 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### コンソール
 
-- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Firefox_tracking_protection)、[CSP のエラー](/ja/docs/Web/HTTP/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
+- リソースやストレージへのアクセスが何度もブロックされることによるノイズを減らすため、[トラッキング防止のエラー](/ja/docs/Web/Privacy/Firefox_tracking_protection)、[CSP のエラー](/ja/docs/Web/HTTP/Guides/CSP)、[CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors) による [ブラウザーコンソール](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html) のメッセージを自動的にグループ化するようになりました ([Firefox バグ 1522396](https://bugzil.la/1522396))。
 - コンソールに表示されているログを、コンテキストメニューの新しい項目である \[表示メッセージをエクスポート] でファイルに保存、またはクリップボードにコピーして共有できるようになりました ([Firefox バグ 1517728](https://bugzil.la/1517728))。
 - コンソールのツールバーが、縦方向の領域を節約するためレスポンシブに高さを 1 行に減らすようになりました ([Firefox バグ 972530](https://bugzil.la/972530))。
 - Firefox UI が発したログに集中するため、コンソールでコンテンツが発したメッセージを隠せるようになりました ([Firefox バグ 1523842](https://bugzil.la/1523842))。
 
 #### ネットワーク
 
-- [CSP](/ja/docs/Web/HTTP/CSP) または [混在コンテンツ](/ja/docs/Web/Security/Mixed_content) のためにブロックされたリソースを、詳しい理由とともにネットワークパネルに表示するようになりました ([Firefox バグ 1556451](https://bugzil.la/1556451))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) または [混在コンテンツ](/ja/docs/Web/Security/Mixed_content) のためにブロックされたリソースを、詳しい理由とともにネットワークパネルに表示するようになりました ([Firefox バグ 1556451](https://bugzil.la/1556451))。
 - ネットワークパネルで、リソースの完全な URL を表示する _URL_ 列が新たに使用可能になりました ([Firefox バグ 1341155](https://bugzil.la/1341155))。
 
 #### インスペクター
@@ -101,7 +101,7 @@ Firefox 69 は、米国時間 2019 年 9 月 3 日 にリリースされまし�
 
 #### メディア、Web Audio、WebRTC
 
-- ユーザーのセキュリティを向上させるため、および最新版の[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)仕様書に合わせるために、安全でないコンテキストでは {{domxref("navigator.mediaDevices")}} プロパティを提供しないようになりました。{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}、{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}、{{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} などを使用するには、{{Glossary("HTTPS")}} を使用してコンテンツを読み込むようにしてください ([Firefox バグ 1528031](https://bugzil.la/1528031))。
+- ユーザーのセキュリティを向上させるため、および最新版の[メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)仕様書に合わせるために、保護されていないコンテキストでは {{domxref("navigator.mediaDevices")}} プロパティを提供しないようになりました。{{domxref("MediaDevices.getUserMedia", "getUserMedia()")}}、{{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}}、{{domxref("MediaDevices.enumerateDevices", "enumerateDevices()")}} などを使用するには、{{Glossary("HTTPS")}} を使用してコンテンツを読み込むようにしてください ([Firefox バグ 1528031](https://bugzil.la/1528031))。
 - Web Audio API の {{domxref("AudioParam.value")}} プロパティが、現時点のプロパティの実際の値を、その値に適用されるすべての予定済みまたは段階的な変更を考慮したうえで返すようになりました。以前の Firefox は、(`value` セッターを使用して) 直近に明示的に設定された値だけを返していました([Firefox バグ 893020](https://bugzil.la/893020)).
 - 新たにトラックを辞書式順序で使用するように {{domxref("MediaStreamAudioSourceNode")}} を更新しました。以前はトラックの順序が個々のブラウザー次第であり、任意に変更することもできました。加えて、音声トラックがないストリームを使用して `MediaStreamAudioSourceNode` を作成しようとすると `InvalidStateError` 例外が発生するようになりました ([Firefox バグ 1553215](https://bugzil.la/1553215))。
 - {{domxref("MediaTrackSettings.facingMode", "facingMode")}}、{{domxref("MediaTrackSettings.deviceId", "deviceId")}}、{{domxref("MediaTrackSettings.groupId", "groupId")}} 設定が、{{domxref("MediaStreamTrack.getSettings()")}} を呼び出すと返される {{domxref("MediaTrackSettings")}} オブジェクトのメンバーに含まれるようになりました ([Firefox バグ 1537986](https://bugzil.la/1537986))。

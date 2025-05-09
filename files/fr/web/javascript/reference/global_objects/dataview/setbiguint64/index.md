@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 
 La méthode **`setBigUint64()`** permet d'enregister un entier non-signé sur 64 bits (type _unsigned long long_ par analogie avec C) à l'octet indiqué par rapport au début de la {{jsxref("DataView")}}.
 
-{{EmbedInteractiveExample("pages/js/dataview-setbiguint64.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setBigUint64()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+// Highest possible BigInt value that fits in an unsigned 64-bit integer
+const max = 2n ** 64n - 1n;
+
+const view = new DataView(buffer);
+view.setBigUint64(1, max);
+
+console.log(view.getBigUint64(1));
+// Expected output: 18446744073709551615n
+```
 
 ## Syntaxe
 

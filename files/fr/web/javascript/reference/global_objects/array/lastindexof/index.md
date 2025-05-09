@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 La méthode **`lastIndexOf()`** permet de renvoyer le dernier indice pour lequel une valeur donnée est présente dans un tableau. Si la valeur recherchée n'est pas présente, le résultat sera -1. Lors de la recherche, le tableau est parcouru dans le sens des index décroissants, à partir de l'index `indexDébut`.
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## Syntaxe
 
@@ -29,7 +39,7 @@ Le dernier index auquel on trouve la valeur dans le tableau, -1 si elle n'est pa
 
 ## Description
 
-`lastIndexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (l'égalité utilisée par l'opérateur ===).
+`lastIndexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (l'égalité utilisée par l'opérateur ===).
 
 ## Exemples
 

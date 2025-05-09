@@ -9,7 +9,23 @@ l10n:
 
 **オプショナルチェーン (`?.`)** (optional chaining) 演算子は、オブジェクトのプロパティにアクセスしたり、関数を呼び出したりします。この演算子を使用してアクセスするオブジェクトまたは呼び出される関数が {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、エラーが発生することなく、式が途中で終了し、{{jsxref("undefined")}} と評価されます。
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## 構文
 
@@ -180,7 +196,7 @@ const nameBar = myMap.get("bar")?.name;
 
 ### オプションのコールバックやイベントハンドラーの扱い
 
-コールバックやオブジェクトからフェッチメソッドを[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#オブジェクトの分割代入)で使用する場合、存在しない値を持つことができるため、その存在をテストしない限り、その値を関数として呼び出すことはできません。`?.` を使用すると、この余分なテストを避けることができます。
+コールバックやオブジェクトからフェッチメソッドを[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの分割代入)で使用する場合、存在しない値を持つことができるため、その存在をテストしない限り、その値を関数として呼び出すことはできません。`?.` を使用すると、この余分なテストを避けることができます。
 
 ```js
 // オプショナルチェーンなしで書かれたコード

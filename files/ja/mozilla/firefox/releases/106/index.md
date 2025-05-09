@@ -13,14 +13,14 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("source")}} 要素が、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Element/source#attr-height) および [`width`](/ja/docs/Web/HTML/Element/source#attr-width) 属性をサポートするようになりました。
+- {{HTMLElement("source")}} 要素が、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#attr-height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#attr-width) 属性をサポートするようになりました。
   これは、`dom.picture_source_dimension_attributes.enabled` の [設定](/ja/docs/Mozilla/Firefox/Experimental_features#height_width_attributes_for_source) を使用して有効にする実験的機能です ([Firefox バグ 1694741](https://bugzil.la/1694741))。
 
 #### 廃止
 
 ### MathML
 
-- MathML の [`<semantics>`](/ja/docs/Web/MathML/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([Firefox バグ 1588733](https://bugzil.la/1588733))。
+- MathML の [`<semantics>`](/ja/docs/Web/MathML/Reference/Element/semantics) および [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素が、デフォルトで最初の子要素のみ表示するようになりました ([Firefox バグ 1588733](https://bugzil.la/1588733))。
 
 ### CSS
 

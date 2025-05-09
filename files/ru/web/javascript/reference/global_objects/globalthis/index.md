@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 Глобальное свойство **`globalThis`** содержит значение глобального `this`, который является глобальным объектом.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## Синтаксис
 
@@ -33,7 +42,7 @@ globalThis
 
 ## Примеры
 
-До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
+До `globalThis` единственным кросс-платформенным путём получения глобального объекта в любой среде было `Function('return this')()`. Однако, это нарушает [CSP](/ru/docs/Web/HTTP/Guides/CSP) в некоторых случаях. Например, [es6-shim](https://github.com/paulmillr/es6-shim) делает такую проверку:
 
 ```js
 var getGlobal = function () {

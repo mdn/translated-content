@@ -7,9 +7,47 @@ slug: Web/CSS/border-left
 
 ## Resumo
 
-A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
+A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
 
-{{EmbedInteractiveExample("pages/css/border-left.html")}}
+{{InteractiveExample("CSS Demo: border-left")}}
+
+```css interactive-example-choice
+border-left: solid;
+```
+
+```css interactive-example-choice
+border-left: dashed red;
+```
+
+```css interactive-example-choice
+border-left: 1rem solid;
+```
+
+```css interactive-example-choice
+border-left: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Tal como acontece com todas as propriedades abreviadas, `border-left` sempre define os valores de todas as propriedades que possam ser definidas, ainda que estas não tenham sido especificadas. Ela define aquelas que não forem especificadas para os valores padrão. Considere o código a seguir:
 

@@ -37,7 +37,7 @@ fetch(id, requests, options)
         - `src`
           - : アイコンファイルの URL を表す文字列。
         - `sizes`
-          - : 画像の大きさを表す文字列で、 [`<link>`](/ja/docs/Web/HTML/Element/link) 要素の [`sizes`](/ja/docs/Web/HTML/Element/link#sizes) 属性と同じ構文を使用して表します。 {{optional_inline}}
+          - : 画像の大きさを表す文字列で、 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性と同じ構文を使用して表します。 {{optional_inline}}
         - `type`
           - : アイコンの {{Glossary("MIME")}} タイプを表す文字列です。 {{optional_inline}}
         - `label`

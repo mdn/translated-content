@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("Date")}} 인스턴스의 **`toDateString()`** 메서드는 주어진 날짜를 현지 시간대로 해석하고 그 중 날짜 부분만 표시하는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-todatestring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toDateString()")}}
+
+```js interactive-example
+const event = new Date(1993, 6, 28, 14, 39, 7);
+
+console.log(event.toString());
+// Expected output: "Wed Jul 28 1993 14:39:07 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+console.log(event.toDateString());
+// Expected output: "Wed Jul 28 1993"
+```
 
 ## 구문
 

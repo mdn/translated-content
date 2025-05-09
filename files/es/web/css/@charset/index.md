@@ -7,7 +7,7 @@ slug: Web/CSS/@charset
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule) **`@charset`** de [CSS](/es/docs/Web/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/es/docs/Web/CSS/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/es/docs/Web/CSS/At-rule#conditional_group_rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
+La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) **`@charset`** de [CSS](/es/docs/Web/CSS) especifica la codificación de caracteres usada en la hoja de estilos. Éste debe ser el primer elemento en la hoja de estilos, y no debe ser precedidad por ningun otro caracter; al no ser una [declaración anidada](/es/docs/Web/CSS/CSS_syntax/Syntax#nested_statements), no puede ser usada dentro de [grupos de reglas-at condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules). Si se definen varias reglas-at `@charset`, solamente se usará la primera. La regla-at `@charset` no puede ser usada dentro de un atributo `style` style en un elemento HTML o dentro del elemento {{ HTMLElement("style") }} , ya que en estos casos se tomará en cuenta la codificación de la página HTML contenedora.
 
 Esta regla-at es útil cuando se usan caracteres fuera de la codificación ASCII en alguna propiedad CSS, como {{ cssxref("content") }}.
 

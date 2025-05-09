@@ -1,10 +1,7 @@
 ---
 title: 定位
 slug: Learn_web_development/Core/CSS_layout/Positioning
-original_slug: Learn/CSS/CSS_layout/Positioning
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/CSS_layout/Floats", "Learn_web_development/Core/CSS_layout/Flexbox", "Learn_web_development/Core/CSS_layout")}}
 
@@ -295,7 +292,7 @@ span {
 
 ### 定位上下文
 
-哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的 position 属性。(参见 [Identifying the containing block](/zh-CN/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
+哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的 `position` 属性。
 
 如果所有的父元素都没有显式地定义 position 属性，那么所有的父元素默认情况下 position 属性都是 static。结果，绝对定位元素会被包含在**初始块容器**中。这个初始块容器有着和浏览器视口一样的尺寸，并且\<html>元素也被包含在这个容器里面。简单来说，绝对定位元素会被放在\<html>元素的外面，并且根据浏览器视口来定位。
 
@@ -740,7 +737,7 @@ body {
 
 ## 技能测试！
 
-这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Position_skills)。
+这篇文章到此为止了，但你们能记住最重要的信息吗？在继续之前，你可以找到一些进一步的测试来验证是否完全掌握了这个知识：[技能测试：定位](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position)。
 
 ## 总结
 

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-transition"
+title: -webkit-transition
 slug: Web/CSS/@media/-webkit-transition
 ---
 
@@ -24,7 +24,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 
 ## 代わりに @supports を使用してください
 
-`-webkit-transition` メディア特性を使用しないでください。代わりに、次のように CSS の {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/At-rule)を用いてトランジションの対応を検査してください。
+`-webkit-transition` メディア特性を使用しないでください。代わりに、次のように CSS の {{cssxref("@supports")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を用いてトランジションの対応を検査してください。
 
 ```css
 @supports (transition: initial) {

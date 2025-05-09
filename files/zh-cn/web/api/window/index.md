@@ -29,8 +29,6 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
   - : {{domxref("Window.navigator")}} 对象的别名。
 - {{domxref("Window.closed")}} {{ReadOnlyInline}}
   - : 此属性表示当前窗口是否关闭。
-- {{domxref("Window.console")}} {{ReadOnlyInline}}
-  - : 返回对 console 对象的引用，该对象提供对浏览器调试控制台的访问。
 - {{domxref("Window.credentialless")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{Non-standard_Inline}}
   - : 返回一个布尔值，表示当前文档是否在无凭据（credentialless）的 {{htmlelement("iframe")}} 中加载。参见 [IFrame credentialless](/zh-CN/docs/Web/Security/IFrame_credentialless) 以了解更多细节。
 - {{domxref("Window.crypto")}} {{ReadOnlyInline}}
@@ -58,7 +56,7 @@ _本接口从 {{domxref("EventTarget")}} 接口继承属性。_
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
   - : 返回一个布尔值，表示当前上下文安全（`true`）或不安全（`false`）。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Manifest/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
+  - : 当一个[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）以 `focus-existing`、`navigate-new` 或 `navigate-existing` 的 [`launch_handler`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/launch_handler) `client_mode` 值启动时，`launchQueue` 提供对 {{domxref("LaunchQueue")}} 类的访问，这允许为 PWA 实现自定义的启动导航处理。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : 返回窗口中的框架（frame）数。参见 {{domxref("window.frames")}}。
 - {{domxref("Window.location")}}
@@ -240,14 +238,10 @@ _本接口从 {{domxref("EventTarget")}} 接口继承方法。_
 
 ### 已弃用的方法
 
-- {{domxref("Window.back()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 在窗口历史中后退一步。该方法已被废弃，应该使用 {{domxref("History.back", "history.back()")}} 代替。
 - {{domxref("Window.captureEvents()")}} {{Deprecated_Inline}}
   - : 注册窗口以捕获所有指定类型的事件。
 - {{domxref("Window.clearImmediate()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : 取消使用 `setImmediate()` 设置的重复执行任务。
-- {{domxref("Window.forward()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
-  - : 在窗口历史中前进一步。该方法已被废弃，应该使用 {{domxref("History.forward", "history.forward()")}} 代替。
 - {{domxref("Window.releaseEvents()")}} {{Deprecated_Inline}}
   - : 解除窗口对特定类型事件的捕获。
 - {{domxref("Window.requestFileSystem()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}

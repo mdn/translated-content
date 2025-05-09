@@ -2,7 +2,7 @@
 title: 瀏覽器擴充套件
 slug: Mozilla/Add-ons/WebExtensions
 l10n:
-  sourceCommit: 668b38a4f6cd96609b9a969fe4653b46aec4e712
+  sourceCommit: 4f197acb904fe25772ddcd928ca1e397fd7680b4
 ---
 
 {{AddonSidebar}}
@@ -56,4 +56,4 @@ Firefox 的擴充套件技術在很大程度上與由 Chromium 為基礎的瀏�
 
 ### Manifest 鍵
 
-獲取關於 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資訊，包括其所有屬性和設定。也可以瞭解每個鍵在主要瀏覽器中的[相容性](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)的詳細資料。
+獲取關於 [manifest 鍵](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json)的完整詳細資訊，包括其所有屬性和設定。

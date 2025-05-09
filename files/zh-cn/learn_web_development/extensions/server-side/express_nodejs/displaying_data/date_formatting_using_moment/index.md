@@ -1,12 +1,9 @@
 ---
 title: 使用 luxon 做日期格式化
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Date_formatting_using_moment
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
-
-{{LearnSidebar}}
 
 我们模型的默认日期呈现很难看：_Fri Apr 10 2020 12:49:58 GMT+0800 (中国标准时间)_。在本节中，我们将展示如何更新上一节中的*书本实例列表*页面，以更友好的格式显示 `due_date` 字段：2023 年 4 月 10 日。
 

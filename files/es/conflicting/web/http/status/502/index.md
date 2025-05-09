@@ -12,4 +12,4 @@ Normalmente el servidor no está caído (por ejemplo no proporciona respuesta al
 
 ## Aprender más
 
-- [list of HTTP response codes](/es/docs/Web/HTTP/Status)
+- [list of HTTP response codes](/es/docs/Web/HTTP/Reference/Status)

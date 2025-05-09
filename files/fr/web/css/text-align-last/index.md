@@ -7,7 +7,40 @@ slug: Web/CSS/text-align-last
 
 La propriété **`text-align-last`** définit la façon dont la dernière ligne d'un bloc, ou une ligne avant un retour à la ligne forcé, doit être alignée.
 
-{{EmbedInteractiveExample("pages/css/text-align-last.html")}}
+{{InteractiveExample("CSS Demo: text-align-last")}}
+
+```css interactive-example-choice
+text-align-last: right;
+```
+
+```css interactive-example-choice
+text-align-last: center;
+```
+
+```css interactive-example-choice
+text-align-last: left;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div>
+    <p id="example-element" style="text-align: justify">
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      aliquip ex ea commodo consequat.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.5em;
+}
+
+#default-example > div {
+  width: 250px;
+}
+```
 
 ## Syntaxe
 

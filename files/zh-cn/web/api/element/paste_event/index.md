@@ -8,7 +8,7 @@ slug: Web/API/Element/paste_event
 
 当用户通过浏览器的用户界面发起“粘贴”动作时，将触发 **`paste`** 事件。
 
-如果光标处于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes/contenteditable) 属性设置为 `true` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
+如果光标处于可编辑的上下文中（例如，在 {{HTMLElement("textarea")}} 或 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性设置为 `true` 的元素中），那么默认动作是将剪贴板的内容插入光标位置的文档中。
 
 事件处理器可以通过调用事件 `clipboardData` 属性的 {{domxref("DataTransfer/getData", "getData()")}} 方法来访问剪贴板内容。
 

@@ -3,10 +3,10 @@ title: "Request: url プロパティ"
 short-title: url
 slug: Web/API/Request/url
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`url`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リクエストの URL を保持します。
 
@@ -34,5 +34,5 @@ const myURL = myRequest.url; // "https://github.com/mdn/dom-examples/tree/main/f
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -1,11 +1,11 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Element/input#placeholder).
+[CSS псевдокласс](/ru/docs/Web/CSS) **`:placeholder-shown`** представляет любой {{htmlElement("input")}} или {{htmlElement("textarea")}} элемент, который отображает в данный момент [текст заполнитель (плейсхолдер)](/ru/docs/Web/HTML/Reference/Elements/input#placeholder).
 
 ```css
 /* Выбирает любой элемент с активным плейсхолдером */
@@ -195,4 +195,4 @@ input.studentid:placeholder-shown {
 
 - Псевдоэлемент {{cssxref("::placeholder")}}, применяющий стили к _самому себе_.
 - Связанные HTML-элементы: {{HTMLElement("input")}}, {{HTMLElement("textarea")}}
-- [HTML формы](/ru/docs/Learn/Forms)
+- [HTML формы](/ru/docs/Learn_web_development/Extensions/Forms)

@@ -1,5 +1,5 @@
 ---
-title: "::after (:after)"
+title: ::after
 slug: Web/CSS/::after
 ---
 
@@ -15,7 +15,7 @@ a::after {
 ```
 
 > [!NOTE]
-> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/Replaced_element)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
+> Псведоэлементы, созданные с помощью `::before` и `::after` [содержатся в блоке форматирования элемента](https://www.w3.org/TR/CSS2/generate.html#before-after-content), и поэтому не применяются к _[замещаемым элементам](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)_, таким как {{htmlelement("img")}} или {{htmlelement("br")}}.
 
 ## Синтаксис
 
@@ -90,7 +90,7 @@ a::after {
 
 ### Подсказки
 
-Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
+Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Reference/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
 
 #### HTML
 

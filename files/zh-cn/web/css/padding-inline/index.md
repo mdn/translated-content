@@ -5,9 +5,49 @@ slug: Web/CSS/padding-inline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`padding-inline`** 定义了元素的逻辑行首和行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`padding-inline`** 定义了元素的逻辑行首和行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
-{{EmbedInteractiveExample("pages/css/padding-inline.html")}}
+{{InteractiveExample("CSS Demo: padding-inline")}}
+
+```css interactive-example-choice
+padding-inline: 5% 10%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline: 15px 40px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline: 5% 20%;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 属性构成
 
@@ -42,7 +82,7 @@ padding-inline: unset;
 - {{CSSXref("&lt;length&gt;")}}
   - : 以固定值指定的内边距尺寸。必须非负。
 - {{CSSXref("&lt;percentage&gt;")}}
-  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
+  - : 以百分比指定的内边距尺寸，参照[包含区块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行向尺寸（即横向语言中的*宽度*，由 {{CSSXref("writing-mode")}} 所定义）。必须非负。
 
 ## 描述
 

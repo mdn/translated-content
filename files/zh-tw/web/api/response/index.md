@@ -95,5 +95,5 @@ const response = new Response();
 ## 參考
 
 - [ServiceWorker API](/zh-TW/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-TW/docs/Web/HTTP)

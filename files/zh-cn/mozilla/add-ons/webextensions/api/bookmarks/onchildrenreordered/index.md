@@ -17,14 +17,14 @@ browser.bookmarks.onChildrenReordered.removeListener(listener)
 browser.bookmarks.onChildrenReordered.hasListener(listener)
 ```
 
-事件包含以下三个函数：
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : 添加一个监听器到该事件。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : 停止监听该事件。`listener` 参数是要移除的监听器。
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册到该事件。如果正在监听，返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 

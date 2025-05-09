@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Introduction", "Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs")}}
 
-[Express](/ja/docs/Learn/Server-side/Express_Nodejs/Introduction#express_の紹介) の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
+[Express](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction#express_の紹介) の目的が理解できたので、Windows、Linux (Ubuntu)、および macOS 上で Node/Express 開発環境をセットアップしてテストする方法を説明します。どのような一般的な OS を使用していても、この記事では Express アプリケーションの開発を開始するために必要なものを提供します。
 
 <table>
   <tbody>
@@ -40,7 +40,7 @@ _npm_ は [MVC パターン](/ja/docs/Glossary/MVC)に従ったスケルトン�
 > [!NOTE]
 > 他のウェブフレームワークとは異なり、開発環境には独立した開発用のウェブサーバーは含まれていません。_Node_/_Express_ では、ウェブアプリケーションが独自のウェブサーバーを作成して実行します。
 
-[テキストエディター](/ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)やコード編集用の IDE、コードの異なるバージョンを安全に管理するための [Git](https://git-scm.com/) などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディター) が既にインストールされていると仮定しています。
+[テキストエディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)やコード編集用の IDE、コードの異なるバージョンを安全に管理するための [Git](https://git-scm.com/) などのソース管理マネジメントツールなど、一般的な開発環境の一部である他の周辺ツールもあります。これらの種類のツール (特にテキストエディター) が既にインストールされていると仮定しています。
 
 ### どのオペレーティングシステムがサポートされていますか？
 

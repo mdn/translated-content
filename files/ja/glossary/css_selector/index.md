@@ -35,7 +35,7 @@ div.warning {
 }
 ```
 
-ここでのセレクターは `"p"` （すべての {{HTMLElement("p")}} 要素内の文字列に緑色を適用）、 `"div.warning"` （{{HTMLElement("div")}} 要素で[クラス](/ja/docs/Web/HTML/Global_attributes/class)が `"warning"` であるものがすべて警告ボックスのように見えるようにする）、 `"#customized"` （`"customized"` の ID を持つ要素の基本フォントを 16 ピクセルの高さの Lucida Grande またはいくつかの代替フォントに設定）です。
+ここでのセレクターは `"p"` （すべての {{HTMLElement("p")}} 要素内の文字列に緑色を適用）、 `"div.warning"` （{{HTMLElement("div")}} 要素で[クラス](/ja/docs/Web/HTML/Reference/Global_attributes/class)が `"warning"` であるものがすべて警告ボックスのように見えるようにする）、 `"#customized"` （`"customized"` の ID を持つ要素の基本フォントを 16 ピクセルの高さの Lucida Grande またはいくつかの代替フォントに設定）です。
 
 この CSS を次のような HTML に適用します。
 
@@ -61,7 +61,7 @@ div.warning {
 
 ## 関連情報
 
-- CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn/CSS/Building_blocks/Selectors)
+- CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基本的なセレクター
 
   - [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`

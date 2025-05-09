@@ -9,7 +9,22 @@ l10n:
 
 **`Object.defineProperty()`** は静的メソッドで、あるオブジェクトに新しいプロパティを直接定義したり、オブジェクトの既存のプロパティを変更したりして、そのオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 構文
 
@@ -204,7 +219,7 @@ console.log(o.a); // 37 がログ出力されます。代入文は動作しま�
 
 #### enumerable 属性
 
-`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で認識されるかどうかを定義します。 {{jsxref("Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。詳細情報については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+`enumerable` プロパティ属性は、そのプロパティが {{jsxref("Object.assign()")}} や [スプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)演算子で認識されるかどうかを定義します。 {{jsxref("Symbol")}} 以外のプロパティでは、 {{jsxref("Statements/for...in", "for...in")}} ループや {{jsxref("Object.keys()")}} に現れるかどうかも定義します。詳細情報については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
 
 ```js
 const o = {};
@@ -502,7 +517,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## 関連情報
 
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

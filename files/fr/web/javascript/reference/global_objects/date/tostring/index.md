@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/toString
 
 La méthode **`toString()`** renvoie une chaîne de caractères représentant l'objet {{jsxref("Date")}}.
 
-{{EmbedInteractiveExample("pages/js/date-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Date.toString()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.toString());
+// Expected output: "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+```
 
 ## Syntaxe
 

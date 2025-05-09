@@ -11,9 +11,9 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
 
 ## Documentação para desenvolvedores Web
 
-- [Guia para Desenvolvedores Web](/pt-BR/docs/Web/Guide)
+- [Guia para Desenvolvedores Web](/pt-BR/docs/MDN/Guides)
   - : O Guia para Desenvolvedores Web provê um conteúdo útil de informações, para realmente ajudá-lo a usar as tecnologias Web para fazer o que deseja ou precisa.
-- [Tutoriais para Desenvolvedores Web](/pt-BR/docs/Web/Tutorials)
+- [Tutoriais para Desenvolvedores Web](/pt-BR/docs/MDN/Tutorials)
   - : Uma lista de tutoriais para orientá-lo passo a passo no aprendizado de APIs, tecnologias ou áreas abrangentes dos tópicos.
 - [Acessibilidade](/pt-BR/docs/Web/Accessibility)
   - : Permitir que o maior número possível de pessoas use sites, mesmo quando as habilidades dessas pessoas são limitadas de alguma forma.
@@ -50,7 +50,7 @@ A Web aberta apresenta oportunidades incríveis para os desenvolvedores. Para ti
   - : WebDriver é um mecanismo de automação de navegador para controlar remotamente um navegador emulando as ações de uma pessoa real usando o navegador. É amplamente usado para testes entre navegadores de aplicativos da Web.
 - [Extensões da Web](/pt-BR/docs/Mozilla/Add-ons/WebExtensions)
   - : Extensões da Web são uma maneira de você fornecer aos usuários recursos aprimorados em seus navegadores — para fazer coisas como bloquear anúncios e outros conteúdos, personalizar a aparência das páginas e muito mais.
-- [Manifestos de aplicativos da Web](/pt-BR/docs/Web/Manifest)
+- [Manifestos de aplicativos da Web](/pt-BR/docs/Web/Progressive_web_apps/Manifest)
   - : Manifestos de aplicativos da Web permitem que os usuários instalem aplicativos da Web nas telas iniciais de seus dispositivos, com aspectos como orientação de tela retrato/paisagem e modo de exibição (por exemplo, tela cheia) predefinidos.
 - [Progressive Web Apps (PWAs)](/pt-BR/docs/Web/Progressive_web_apps)
   - : Progressive Web Apps fornecem uma experiência de usuário semelhante a aplicativos móveis nativos.

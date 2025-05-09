@@ -9,7 +9,20 @@ l10n:
 
 **`Intl.DisplayNames()`** コンストラクターは、 {{jsxref("Intl.DisplayNames")}} オブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(["zh-Hant"], {
+  type: "region",
+});
+
+console.log(regionNamesInEnglish.of("US"));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of("US"));
+// Expected output: "美國"
+```
 
 ## 構文
 

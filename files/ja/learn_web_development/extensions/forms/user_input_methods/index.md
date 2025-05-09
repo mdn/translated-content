@@ -1,35 +1,39 @@
 ---
-title: ユーザー入力とコントロール
+title: ユーザー入力方法とコントロール
 slug: Learn_web_development/Extensions/Forms/User_input_methods
-original_slug: Learn/Forms/User_input_methods
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-現代のウェブのユーザー入力は、単純なマウスやキーボードだけではありません。この記事では、ユーザー入力を管理し、オープンなウェブアプリに制御を実装するための推奨事項を、FAQ、実例、および基礎となる技術について、より詳細な情報を必要とする人のための詳細な情報へのリンクとともに提供します。関連する API とイベントには、[タッチイベント](/ja/docs/Web/API/Touch_events)、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API)、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)、[Fullscreen API](/ja/docs/Web/API/Fullscreen_API)、[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) などがあります。
+{{LearnSidebar}}
 
-## ユーザー入力とコントロールのワークフロー
+ウェブフォームでは、ユーザーの入力が要求されます。ウェブフォームを設計する際、あるいは実にあらゆるウェブコンテンツを設計する際には、ユーザーが端末やブラウザーをどのように操作するかを考慮することが重要です。ウェブユーザーの入力は、単純なマウスやキーボード操作にとどまりません。例えばパネルを考えてみてください。
 
-次の図式は、ユーザー入力の仕組みを実装するための典型的なワークフローを説明しています。
+この記事では、ユーザーがフォームや他のウェブコンテンツを操作する方法について、さまざまな方法を見ていきます。また、ユーザー入力の管理方法、現実世界の例、さらに詳しい情報へのリンクを指定します。
 
-![](user-input-and-controls.png)
+より複雑で操作性の高いフォームや他の UI 機能の開発を進める場合、調査が必要となる HTML 要素や JavaScript API は数多くあります。例えば、コンテンツの編集を可能にするためにセマンティック要素以外の要素を必要とするカスタムフォームコントロールを作成したい場合もあるでしょう。 タッチイベントに対応したり、画面の向きを決定または制御したり、フォームを全画面表示にしたり、ドラッグ＆ドロップ機能を有効にしたりしたい場合もあるでしょう。 このガイドでは、これらの機能すべてを紹介し、各トピックの詳細情報へのリンクも提供しています。
 
-最初に、マウス、キーボード、指でのタッチなどから、アプリケーションで対象としたい入力の仕組みをどれにするかを決める必要があります。入力の仕組みを決めたのであれば、ウェブプラットフォームや JavaScript ライブラリーによって提供されているツールを使い、制御することができます。
+より多くのユーザーに良い使い勝手を得てもらうためには、マウス、キーボード、指でのタッチなど、複数の入力方法に対応する必要があります。利用できる入力メカニズムは、アプリケーションを実行する端末の能力に依存します。
 
-## 推奨事項
+常にキーボードのアクセシビリティを念頭に置くべきです。多くのウェブユーザーは、ウェブサイトやアプリを操作する際にキーボードのみを使用しています。彼らを機能から締め出すのは、良い考えではありません。
 
-利用できる入力の仕組みはアプリを動かしているデバイスの性能に依存します。
+## 扱うトピック
 
-- デバイスの中にはタッチスクリーンディスプレイを提供するものがあります。そのウェブプラットフォームは、タッチを基にしたユーザーインターフェイスで指の動きを解釈するための[タッチイベント](/ja/docs/Web/API/Touch_events)を提供します。
-- ポインターを操作する方法としてマウスやタッチパッドを提供しているデバイスの場合、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) が一人称視点の 3D ゲームの実装や、他のアプリがポイントを合わせているデバイスの全ての制御を要求するのに役立ちます。そして [Fullscreen API](/ja/docs/Web/API/Fullscreen_API) は、あなたのアプリを全画面モードで表示するのに役立ちます。
-- [コンテンツが編集可能な要素（contentEditable など）](/ja/docs/Web/HTML/Global_attributes/contenteditable)のような機能を使うことで、速いリッチテキストエディターを実装することができ、そして[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)はユーザーがあなたのアプリ内に要素を移動することを可能にします。画面の向きがあなたのアプリで問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して、画面の向きの状態を参照でき、またその他のアクションを実行できます。
-- キーボードのアクセシビリティが適切か常に気に掛ける必要があります。多くのユーザーはキーボードのみを使いウェブサイトやアプリを操作します。ですので、あなたのシステムの機能性からそれを除外することは良くない考えです。
+- タッチパネルのディスプレイに対応するるため、[タッチイベント](/ja/docs/Web/API/Touch_events)は、モバイル端末から冷蔵庫のパネル、博物館のキオスクディスプレイに至るまで、タッチベースのユーザーインターフェイス上での指の動きを解釈します。
+- [全画面 API](/ja/docs/Web/API/Fullscreen_API) を使用すると、コンテンツを全画面モードで表示することができます。これは、冷蔵庫や博物館のキオスクでフォームを表示する場合に必要となります。
+- リッチテキストエディターのようなカスタムフォームコントロールを作成する必要がある場合、 [`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を使用すると、通常は編集できない HTML 要素から編集可能なコントロールを作成することができます。0
+- [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) により、ユーザーはページ上の要素をドラッグして、異なる場所にドロップすることができます。 これによって、アップロードするファイルの選択や、ページ内のコンテンツモジュールの並べ替えなどを行う際の使い勝手が改善されます。
+- レイアウトで画面方向が重要である場合、 [CSS メディアクエリー](/ja/docs/Web/CSS/@media/orientation)を使用してブラウザーの方向に基づいてフォームのスタイル設定を行うことができます。また、 [画面方向 API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を使用して画面方向の状態を読み取り、他のアクションを行うことができます。
 
-以下は推奨事項一式であり、オープンなウェブアプリでそのようなツールを利用するためのベストプラクティスです。
+次の節では、可能な限り幅広いユーザーが貴社のウェブサイトやアプリケーションを使用できるようにするための推奨事項と最善の手法を設定して提供しています。
 
-### 使用する入力の仕組みを決める
+## 使用する入力の仕組みを決める
 
-#### キーボード
+### キーボード
 
-キーボード入力はあなたのアプリによって制御できます。例えば、何らかのキーが押された時に制御を追加したい場合、ウィンドウオブジェクトにイベントリスナーを追加する必要があります。
+ほとんどのユーザーは、フォームコントロールにデータを入力する際にキーボードを使用します。また、一部のユーザーは、フォームコントロールに移動する際にもキーボードを使用します。アクセシビリティを確保し、より使い勝手の良いものにするには、[すべてのフォームコントロールに適切なラベルを付ける](/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form#label、input、textarea_要素)ことが重要です。各フォームコントロールに正しく関連付けられた {{htmlelement("label")}} ラベルが設定されていれば、フォームはすべての人にとって完全にアクセス可能になります。特に、キーボードやスクリーンリーダーを操作してフォームにアクセスする人、あるいはまったく画面を使用しない人にとっては、その利便性が高まります。
+
+特定のキーが押されたときに、あるフォームコントロールを検証するなど、キーボード操作を追加したい場合は、イベントリスナーを使用してキーボードイベントを捕捉し、対応する動作をすることができます。例えば、任意のキーが押されたときにコントロールを追加したい場合は、 window オブジェクトにイベントリスナーを追加する必要があります。
 
 ```js
 window.addEventListener("keydown", handleKeyDown, true);
@@ -41,17 +45,17 @@ window.addEventListener("keyup", handleKeyUp, true);
 > [!NOTE]
 > キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
-#### マウス
+### マウス
 
-ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントは、[`click イベント`](/ja/docs/Web/API/Element/click_event)、[`dblclick イベント`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup イベント`](/ja/docs/Web/API/Element/mouseup_event)、そして [`mousedown イベント`](/ja/docs/Web/API/Element/mousedown_event)を含みます。マウスイベントインターフェイスが使用している全てのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Events)に記載されています。
+マウスや他のポインターイベントも捕捉できます。ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントには、[`click`](/ja/docs/Web/API/Element/click_event)、[`dblclick`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup`](/ja/docs/Web/API/Element/mouseup_event)、[`mousedown`](/ja/docs/Web/API/Element/mousedown_event) などのイベントがあります。マウスイベントインターフェイスが使用しているすべてのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Events)にあります。
 
-入力デバイスがマウスの場合、ユーザー入力を Pointer Lock API やドラッグ＆ドロップ API の実装でも制御できます (下記を参照してください)。
+入力機器がマウスの場合、ユーザー入力をポインターロック API や、ドラッグ＆ドロップ API を実装することでも制御できます（下記を参照してください）。 [CSS を使用して、ポインティングデバイスの対応を調べる](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries#ポインティングデバイスの使用)こともできます。
 
-#### 指でのタッチ
+### 指でのタッチ
 
-タッチスクリーンデバイスにインストールされることを目的としている ウェブアプリを開発している時、ディスプレイ解像度とユーザー入力に関して異なる性能を考慮することは良いプラクティスです。[タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチスクリーンデバイス上のインタラクションな要素と一般的なインタラクションジェスチャーを実装するのに役立ちます。
+タッチパネル端末に追加対応するためには、画面の解像度やユーザー入力の面で異なる機能性を考慮することが望ましいでしょう。[タッチイベント](/ja/docs/Web/API/Touch_events)は、タッチパネル端末に対話要素や一般的な対話ジェスチャーを実装するのに役立ちます。
 
-タッチイベントを使いたいのであれば、イベントリスナーを追加して、イベントが発火された時に呼び出されるハンドラー関数を指定する必要があります。
+タッチイベントを使用したい場合は、イベントリスナーを追加し、イベントが発生したときに呼び出されるハンドラー関数を指定する必要があります。
 
 ```js
 element.addEventListener("touchstart", handleStart, false);
@@ -65,115 +69,112 @@ element.addEventListener("touchmove", handleMove, false);
 > [!NOTE]
 > タッチイベントでできることについての更なる情報は、[タッチイベントガイド](/ja/docs/Web/API/Touch_events)を読んでください。
 
-#### ポインターイベント
+### ポインターイベント
 
-マウス、指でのタッチ、ペン入力など複数の入力形式が内蔵されているデバイスを扱う時、これら全ての異なる制御の仕組みを機能させるソリューションを開発することは難しいかもしれません。[Pointer Events](https://www.w3.org/TR/pointerevents/) は、デバイス毎の扱いを標準化することにより、開発者がデバイスを横断してイベントを管理することをより簡単にするのに役立ちます。マウスカーソル、ペン、タッチ（マルチタッチを含む）、またはその他のポインティング入力デバイスによって、ポインターはスクリーン上のあらゆる接点となることができます。汎用的なポインター入力を扱うためのイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などのマウス用のイベントとよく似ています。
+マウスだけがポインティングデバイスではありません。ユーザーの端末には、マウス、指先でのタッチ、ペン入力など、複数の入力方法が組み込まれている場合があります。これらのポインターはそれぞれサイズが異なります。各端末のイベント処理を標準化して、端末間のイベント管理を行う必要がある場合は、[ポインターイベント API](/ja/docs/Web/API/Pointer_events) が便利です。ポインターとは、マウスカーソル、ペン、タッチ（マルチタッチを含む）、または他のポインティング入力デバイスによって画面上で接触される任意の点のことです。
+
+一般的なポインター入力を処理するイベントは、`pointerdown`、`pointermove`、`pointerup`、`pointerover`、`pointerout` などように、マウス用のイベントとよく似ています。 [`PointerEvent` インターフェイス](/ja/docs/Web/API/PointerEvent)では、サイズ、圧力、角度など、ポインティングデバイスについて把握したいすべての詳細が指定されています。
+
+## コントロールの実装
+
+### 画面の方向
+
+ユーザーが縦向きまたは横向きのどちらのモードで使用しているかによって、若干異なるレイアウトが必要な場合は、 [CSS メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries#メディア特性のルール)を使用して、[ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)をする際に、画面のサイズや方向に基づいて異なるレイアウトやフォームコントロールの幅を定義することができます。
+
+画面方向がフォームにとって影響がある場合、[画面方向 API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して画面方向の状態を読み取ったり、この状態が変更された際に通知を受け取ったり、画面方向を特定の状態（通常は縦長または横長）に固定したりすることができます。
+
+- 方向のデータは、 {{domxref("ScreenOrientation.type")}} を通じて、または CSS で [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通じて取得できます。
+- 画面の方向が変更されると、 {{domxref("ScreenOrientation.change_event", "change")}} イベントが画面オブジェクトに発行されます。
+- 画面の方向を固定することは、 {{domxref("ScreenOrientation.lock()")}} メソッドを呼び出すことで可能です。
+- {{domxref("ScreenOrientation.unlock()")}} メソッドは、過去に設定されていた画面ロックがすべて除去されます。
 
 > [!NOTE]
-> Pointer Events はまだ広くサポートされていませんが、[pointer.js polyfill](https://github.com/mozilla/pointer.js) は Mozilla Github で利用可能です。
+> 画面方向 API についてのより多くの情報は、[画面の向きの制御](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
 
-### コントロールの実装
+### 全画面
 
-#### ポインターロック
-
-典型的なゲーム開発では、ブラウザーやスクリーンの境界を超えた時でさえもマウスイベントにアクセスすることが必要なケースがあるかもしれません。[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) はポインティングデバイスの全ての制御を可能にします。
-
-以下は `element` にポインターロックをリクエストしているコードです。
+フォームを全画面モードで表示する必要がある場合、例えば、博物館のキオスク、料金所、あるいは実にあらゆる公に表示されるユーザーインターフェイスでフォームを表示する場合など、その要素で {{domxref("Element.requestFullscreen()")}} を呼び出すことで実現可能です。
 
 ```js
-element.requestPointerLock();
-```
-
-> [!NOTE]
-> 全てのチュートリアルとリファレンスは、[Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API) のページを読んでください。
-
-#### 画面の向き
-
-画面の向きがあなたのアプリケーションの問題である時、[Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を通して画面の向きの状態を参照し、状態が変化した時に通知し、そして画面の向きを特定の状態（大抵はポートレートもしくはランドスケープ）に固定することができます。
-
-画面の向きのデータは {{domxref("screen.orientation")}} 属性、または [`orientation`](/ja/docs/Web/CSS/@media/orientation) メディア特性を通して取得することができます。`screen.orientation` が変化した時、{{domxref("screen.orientationchange")}} イベントがスクリーンオブジェクトで発火されます。{{domxref("screen.lockOrientation")}} メソッドを呼ぶことで画面の向きを固定することができます。また、{{domxref("screen.unlockOrientation")}} メソッドはそれまで設定されていた画面のロックを全て解除します。
-
-> [!NOTE]
-> Screen Orientation API についてのより多くの情報は[画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)で確認することができます。
-
-#### 全画面
-
-あなたのアプリケーションの要素を全画面モードで表示する必要があるかもしれません(例えば {{ htmlelement("video") }} のような)。その要素で {{domxref("Element.requestFullscreen()")}} を呼び出すことによって全画面モードを実現することができます。多くのブラウザーが、これをまだベンダー接頭辞とともに実装していることを覚えておいてください。ですので、あなたのコードを以下のようにフォークする必要があるかもしれません:
-
-```js
-var elem = document.getElementById("myvideo");
+const elem = document.getElementById("myForm");
 if (elem.requestFullscreen) {
   elem.requestFullscreen();
-} else if (elem.msRequestFullscreen) {
-  elem.msRequestFullscreen();
-} else if (elem.mozRequestFullScreen) {
-  elem.mozRequestFullScreen();
-} else if (elem.webkitRequestFullscreen) {
-  elem.webkitRequestFullscreen();
 }
 ```
 
 > [!NOTE]
-> 全画面の機能性をあなたのアプリケーションに追加することについてもっと知るには、私たちの[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
+> 全画面表示機能をアプリケーションに追加する方法としては、[全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)についてのドキュメントを読んでください。
 
-#### ドラッグ＆ドロップ
+### ドラッグ＆ドロップ
 
-[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) によりあなたのアプリケーションのユーザーは、クリックして要素を超えてマウスボタンを押し続け、他の場所にドラッグし、そしてその要素を移動先にドロップするためにマウスボタンを離すことができます。
+一般的なユーザー操作としては、画面上の別の場所にドロップする要素を物理的にドラッグすることが挙げられます。 ドラッグ＆ドロップは、アップロードするファイルの選択や、ページ内のコンテンツモジュールの並べ替えなどを行う際に、ユーザーの使い勝手を改善する手助けとなります。 そのための API があります。
 
-以下は、コンテンツのセクションにドラッグできるようにする例です。
+[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) により、ユーザーは要素の上でマウスボタンをクリックしたまま、別の場所にドラッグし、マウスボタンを離して要素をドロップすることができます。
+
+こちらは、コンテンツの一部分をドラッグできる例です。
 
 ```html
 <div
   draggable="true"
-  ondragstart="event.dataTransfer.setData('text/plain', 'This text may be dragged')">
-  This text <strong>may</strong> be dragged.
+  ondragstart="event.dataTransfer.setData('text/plain', 'このテキストはドラッグできます。')">
+  このテキストはドラッグ<strong>できます</strong>。
 </div>
 ```
 
 私たちが実装する点は以下です:
 
-- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を true にセットします。
+- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
-#### コンテンツを編集可能にする
+### contentEditable
 
-[`contenteditable`](/ja/docs/Web/HTML/Global_attributes#attr-contenteditable) 属性を使うことで、開いているウェブアプリのあらゆる DOM 要素を直接編集することができます。
+一般に、ユーザーからデータを収集するには、 {{HTMLElement("form")}} 内の {{HTMLElement("textarea")}} または適切な {{HTMLElement("input")}} 型を、 {{HTMLElement("form")}} 内で説明用の {{HTMLElement("label")}} とともに使用すべきです。しかし、これらの要素がニーズを満たさない場合もあります。例えば、リッチテキストエディターは、イタリック体、太字、通常文字を収集できますが、リッチテキストを収集できるフォームコントロールは存在しません。このようなケースでは、スタイル設定や編集が可能なカスタムコントロールを作成する必要があります。そのための属性があります。
 
-```html
-<div contenteditable="true">このテキストは閲覧者が編集することができます。</div>
+どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を使うことで、直接編集することができるようになります。
+
+```css hidden
+div {
+  width: 300px;
+  height: 130px;
+  border: 1px solid gray;
+}
 ```
 
+```html-nolint
+<div contenteditable="true">このテキストはユーザーが編集することができます。</div>
+```
+
+`contenteditable` 属性を指定すると、自動的に要素が文書の既定のタブ順序に追加されます。つまり、 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を追加する必要はありません。しかし、[独自のフォームコントロールを作成](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)する際に、データ入力用に意味を持たない要素を使用する場合は、 JavaScript と [ARIA](/ja/docs/Web/Accessibility/ARIA) を追加して、フォームコントロールの機能を持たせる必要があります。
+
+使い勝手を良くするためには、作成するカスタムフォームコントロールは、アクセシビリティがあり、ネイティブのフォームコントロールと同じ機能を持つ必要があります。
+
+- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を ARIA で追加する必要があります。
+- すべてのユーザー入力方法、たとえば[キーボード](#キーボード)、[マウス](#マウス)、[タッチ](#指でのタッチ)、[ポインター](#ポインターイベント)の各イベントに対応する必要があります。
+- ユーザーが更新したコンテンツの[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)、[送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)、[保存](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)などの機能を処理するには、 JavaScript が必要です。
+
+{{EmbedLiveSample("contentEditable")}}
+
 > [!NOTE]
-> 互換性や例、その他リソースに関する情報は [コンテンツを編集可能にするガイド](/ja/docs/Web/HTML/Global_attributes/contenteditable)で確認することができます。
-
-## 例
-
-- **[複数のタッチポイントを同時に追跡する](/ja/docs/Web/API/Touch_events#example)**
-  - : この例は一度に複数のタッチ箇所を追跡しており、ユーザーは `{{htmlelement("canvas")}}` の中で一本以上の指で同時に描くことができます。タッチイベントをサポートしているブラウザーでのみ動きます。
-- **[シンプルなポインターロックデモ](/ja/docs/Web/API/Pointer_Lock_API#example)**
-  - : シンプルなコントロールシステムをセットアップするためのポインターロックの使い方を紹介するために、シンプルなポインターロックデモを記載しています。このデモでは `{{htmlelement("canvas")}}` 要素の中にボールを描くために JavaScript を使っています。canvas をクリックすると、ポインターロックはその後、マウスポインターの除去と直接マウスを使ってボールを移動させるために利用されます。
-- **[コンテンツを編集可能にするデモ](https://html5demos.com/contenteditable)**
-  - : このデモは、編集可能なドキュメントセクションを作成することに利用できる contenteditable がどのように動くか表示しており、その状態はその後 [ローカルストレージ](/ja/docs/Web/API/Web_Storage_API)を使い保存されます。
+> 例やその他リソースに関する情報は[コンテンツを編集可能にするガイド](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)で確認することができます。
 
 ## チュートリアル
 
 - [タッチイベントガイド](/ja/docs/Web/API/Touch_events)
 - [画面の向きの管理](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
 - [全画面モードの使用](/ja/docs/Web/API/Fullscreen_API)
-- [複数のアイテムのドラッグ＆ドロップ](/ja/docs/orphaned/Web/API/HTML_Drag_and_Drop_API/Multiple_items)
 - [ドラッグ操作ガイド](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations)
+- [フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [JavaScript によるフォームの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
 
 ## 関連情報
 
-- {{domxref("MouseEvent")}}
-- {{domxref("KeyboardEvent")}}
-- [タッチイベント](/ja/docs/Web/API/Touch_events)
-- [Pointer Lock API](/ja/docs/Web/API/Pointer_Lock_API)
-- [Screen Orientation API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
-- [Fullscreen API](/ja/docs/Web/API/Fullscreen_API)
-- [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
-- [コンテンツを編集可能にする](/ja/docs/Web/HTML/Global_attributes/contenteditable)
-- [Keyboard events in Firefox OS TV](/ja/Firefox_OS/Platform/Keyboard_events_in_Firefox_OS_TV)
-- [Implementing TV remote control navigation](/ja/docs/Mozilla/Firefox_OS/TVs_connected_devices/TV_remote_control_navigation)
+- {{domxref("MouseEvent")}} インターフェイス
+- {{domxref("KeyboardEvent")}} インターフェイス
+- [タッチイベント](/ja/docs/Web/API/Touch_events) API
+- [Pointer Lock](/ja/docs/Web/API/Pointer_Lock_API) API
+- [Screen Orientation](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) API
+- [全画面](/ja/docs/Web/API/Fullscreen_API) API
+- [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API) API
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性

@@ -1,10 +1,7 @@
 ---
 title: 建構 Angular 應用程式與更多資源
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_building
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Angular_filtering", "Learn_web_development/Core/Frameworks_libraries")}}
 

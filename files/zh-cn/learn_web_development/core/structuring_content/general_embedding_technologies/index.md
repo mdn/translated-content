@@ -1,12 +1,9 @@
 ---
 title: 从 object 到 iframe——其他嵌入技术
 slug: Learn_web_development/Core/Structuring_content/General_embedding_technologies
-original_slug: Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies
 l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
-
-{{LearnSidebar}}
 
 现在，你应该已经掌握了将图像、视频和音频嵌入到网页上的诀窍了。此刻，让我们继续深入学习，来看一些能让你在网页中嵌入各种类型内容的元素：{{htmlelement("iframe")}}、{{htmlelement("embed")}} 和 {{htmlelement("object")}} 元素。`<iframe>` 用于嵌入其他网页，另外两个元素则用于嵌入外部资源，例如 PDF 文件。
 
@@ -233,13 +230,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/zh-CN/docs/Web/CSS/border)
   - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。
-- [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src)
+- [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#src)
   - : 该属性与 {{htmlelement("video")}}/{{htmlelement("img")}} 中的同名属性一样，包含指向要嵌入的文档的 URL。
-- [`width`](/zh-CN/docs/Web/HTML/Element/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#height)
+- [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#height)
   - : 这些属性指定 iframe 的宽度和高度。
-- [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)
+- [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : 该属性比起支持其他 `<iframe>` 特性，需要更新的浏览器才能工作（例如 IE 10 及更高版本），该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
 
 > [!NOTE]
@@ -280,14 +277,14 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 未沙盒化的内容可以执行 JavaScript、提交表单、弹出窗口等。默认情况下，你应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。
 
-如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
+如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
 
 > [!NOTE]
 > 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
 
 #### 配置 CSP 指令
 
-{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
+{{Glossary("CSP")}} 全称是[**内容安全策略**](/zh-CN/docs/Web/HTTP/Guides/CSP)，它提供了[一组 HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)（访问 web 服务器时与网页一起发送的元数据），旨在提高 HTML 文档的安全性。在 `<iframe>` 的安全性方面，你可以[_配置服务器发送适当的 `X-Frame-Options` 标头_](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Frame-Options)。这样可以防止其他网站在其网页中嵌入你的内容（这将导致[点击劫持](/zh-CN/docs/Web/Security/Attacks/Clickjacking)和一系列其他攻击），正如我们之前看到的那样，MDN 的开发人员已经做了这些工作。
 
 > [!NOTE]
 > 你可以阅读 Frederik Braun 的帖子[论 X-Frame-Options 安全性标头](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)来获取有关此主题的更多背景信息。显然，其已经超出了本文所解释内容的范围。
@@ -313,25 +310,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>嵌入内容的 {{glossary("URL")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         嵌入内容的<em>准确</em>{{glossary("MIME type", '媒体类型')}}
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         由插件控制的盒子高度和宽度（以 CSS 像素为单位）
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>
@@ -359,7 +356,7 @@ PDF 是纸质文件与数字文件之间重要的转换桥梁，但它[在无障
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。
+你已经到达了本文的末尾，但你能记住最重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否记住了这些信息。请查看[测试你的技能：多媒体和嵌入](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。
 
 ## 总结
 

@@ -11,14 +11,14 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 ### HTML
 
-- プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素がサポートされました。
-- メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Element/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
-- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) についても、適切に角が丸められるようになりました。
-- [`<form>`](/ja/docs/Web/HTML/Element/form) 要素の [`<input>`](/ja/docs/Web/HTML/Element/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Element/input#attr-size) 属性を利用します。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2d 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
-- [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
-- HTML [カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes#attr-data-*) (data-\*) がサポートされました。DOM プロパティ [`element.dataset`](/ja/docs/Web/API/Element/dataset) からデータにアクセスできます。
-- [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザーの挙動と一致します。
+- プログレスバーを表す HTML5 の [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素がサポートされました。
+- メディア要素にテキストトラックを追加する HTML5 の [`<track>`](/ja/docs/Web/HTML/Reference/Elements/track) 要素について、そのパース処理部分が実装されました。要素そのものは実装されていませんが、DOM に現れるようにはなります。
+- [`border-radius`](/ja/docs/Web/CSS/border-radius) プロパティによって角が丸められたコンテナー内の [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) についても、適切に角が丸められるようになりました。
+- [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素の [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) テキストフィールドが XUL の `maxwidth` プロパティをサポートしなくなりました。これは意図的なものではなく、また HTML 仕様違反でもあります。要素の最大幅を設定するには、[`size`](/ja/docs/Web/HTML/Reference/Elements/input#attr-size) 属性を利用します。
+- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) の [`CanvasRenderingContext2d`](/ja/docs/Web/API/CanvasRenderingContext2D 'このインターフェイスのオブジェクトを取得するには、以下のようにのgetContext()の引数に"2d"を指定して呼び出します。') プロパティ `fillStyle` と `strokeStyle` はこれまで、妥当な色の指定の後に続く余計なものを無視する処理をしていましたが、適切にエラーとして処理されるように修正されました。たとえば、"red blue" を指定したとき、これまでは "red" と扱われていましたが、これからは指定そのものが無視されます。
+- [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素の width と height を適切に 0px と指定できるようになりました。これまではそう指定しても 300px にされていました。
+- HTML [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) (data-\*) がサポートされました。DOM プロパティ [`element.dataset`](/ja/docs/Web/API/Element/dataset) からデータにアクセスできます。
+- [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素がフォーカスされたとき、テキスト挿入箇所が最後ではなく先頭になりました。これにより、他のブラウザーの挙動と一致します。
 
 ### CSS
 
@@ -31,16 +31,16 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - [`-moz-hyphens`](/ja/docs/Web/CSS/hyphens)
   - : このプロパティは行送りが発生する際、単語のハイフネーションを制御するプロパティです。
 - [`-moz-orient`](/ja/docs/Web/CSS/-moz-orient)
-  - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素など) の縦横の向きを制御します。
+  - : 現在は Mozilla 固有のプロパティで、いくつかの要素 ([`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素など) の縦横の向きを制御します。
 - [`::-moz-progress-bar`](/ja/docs/Web/CSS/::-moz-progress-bar)
-  - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素において、完了した部分のスタイルづけを行うためのものです。
+  - : Mozilla 固有の擬似要素で、[`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素において、完了した部分のスタイルづけを行うためのものです。
 
 #### その他の変更
 
 - [`@-moz-document`](/ja/docs/Web/CSS/@document) に新しく `regexp()` 関数記法が追加されました。これにより、スタイルシートを適用する文書の URL を [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)でマッチさせられます。
 - `aural` 媒体グループのために持っていたコードを削除したため、[`azimuth`](/ja/docs/Web/CSS/azimuth) CSS プロパティのサポートが廃止されました。このプロパティはちゃんと実装されていなかったため、パッチを当て続けるのではなく未完成の実装を省くほうが理にかなっていると考えました。
 - これまで、[`:hover`](/ja/docs/Web/CSS/:hover) 擬似クラスは Quirks モードにおいてクラスセレクターに適用されませんでした。このため `.someclass:hover` といったコードは動きませんでしたが、この例外が取り払われました。
-- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
+- [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスは [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素にも適用できます。これは非標準ですが、便利ですので他のブラウザーにも取り入れられて欲しいと考えています。
 
 ### DOM
 
@@ -69,7 +69,7 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 - これまでドキュメントのなかった DOM views が削除されました。これらには実装の詳細が多く、また不必要に様々なものを複雑にしていたため削除されました。もしこの変化に気づいた場合は、何か誤ったことをしている可能性があります。
 - `EventTarget` の関数 [`addEventListener()`](/ja/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) に指定する引数 `useCapture` が optional となりました。これは WebKit の動作とも共通し、また新しい仕様でもそう定義されています。
 - [`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) オブジェクトの `mozResponseArrayBuffer` プロパティが `responseType`, `response` プロパティに置き換えられました。
-- [`HTMLElement`](/ja/docs/Web/API/HTMLElement) インターフェイスに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/Web/HTML/Global_attributes#attr-data-*) にアクセスできます。
+- [`HTMLElement`](/ja/docs/Web/API/HTMLElement) インターフェイスに [`element.dataset`](/ja/docs/Web/API/Element/dataset) プロパティが追加されました。このプロパティにより [要素の `data-*` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) にアクセスできます。
 - [`CustomEvent`](/ja/docs/Web/API/CustomEvent) インターフェイスが実装されました ([バグ 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
 - セキュリティの観点から、ユーザーがロケーションバーに `data:` URI と `javascript:` URI を入力した時、現在のページのセキュリティコンテキストを受け継がなくなりました。代わりに、新しい空のセキュリティコンテキストが生成されます。これにより、ロケーションバーに入力した `javascript:` URI から読み込まれたスクリプトは、DOM メソッドなどへのアクセスを持たなくなります。しかし、これらの URI がスクリプトから使用された場合は、これまでと同じように動作します。
 
@@ -80,12 +80,12 @@ Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日�
 
 ### SVG
 
-- [`pathLength`](/ja/docs/Web/SVG/Attribute/pathLength) 属性がサポートされました。
-- [`data:` URL](/ja/docs/Web/URI/Schemes/data) から読み込まれたパターン、グラデーション、フィルターが適切に動作するようになりました。
+- [`pathLength`](/ja/docs/Web/SVG/Reference/Attribute/pathLength) 属性がサポートされました。
+- [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) から読み込まれたパターン、グラデーション、フィルターが適切に動作するようになりました。
 
 ### MathML
 
-- [`<mstyle>`](/ja/docs/Web/MathML/Element/mstyle) の実装が修正されました。
+- [`<mstyle>`](/ja/docs/Web/MathML/Reference/Element/mstyle) の実装が修正されました。
 
 ### アクセシビリティ (ARIA)
 

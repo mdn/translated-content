@@ -1023,10 +1023,10 @@ Esta es la regla de oro: el uso de `<b>`, `<i>` o `<u>` resulta adecuado cuando 
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_HTML_text_basics).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
 
 ## Resumen
 
-¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), posiblemente el más importante elemento en la web.
+¡Eso es todo por ahora! Este artículo debería haberte dado una buena idea de cómo comenzar a marcar texto en HTML y te ha presentado algunos de los elementos más importantes en este ámbito. Hay muchos más elementos semánticos para desarrollar en esta área, y veremos muchos más en nuestro artículo [Formateo de texto avanzado](/es/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features), más adelante en el curso. En el siguiente artículo, veremos en detalle cómo [crear hipervínculos](/es/docs/Learn_web_development/Core/Structuring_content/Creating_links), posiblemente el más importante elemento en la web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

@@ -1,6 +1,8 @@
 ---
 title: max-block-size
 slug: Web/CSS/max-block-size
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{CSSRef}}
@@ -11,9 +13,48 @@ slug: Web/CSS/max-block-size
 
 `max-width` は常に水平方向の寸法に使われ、 `max-height` は常に垂直方向の寸法に使われるため、このプロパティはテキストコンテンツの寸法に基づいて寸法を設定する必要がある場合、書字方向を意識して指定する必要がある場合に便利です。
 
-ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す {{cssxref("writing-mode")}} の [例](/ja/docs/Web/CSS/writing-mode#例)をご覧ください。
+ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/writing-mode#例)を参照してください。
 
-{{EmbedInteractiveExample("pages/css/max-block-size.html")}}
+{{InteractiveExample("CSS Demo: max-block-size")}}
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+max-block-size: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+max-block-size: 75%;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    このボックスは、ブロック軸の最大サイズを変更することができます。<br />
+    これにより、ブロック方向のサイズが制限され、オーバーフローが発生する可能性があります。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 
@@ -21,6 +62,8 @@ slug: Web/CSS/max-block-size
 /* <length> 値 */
 max-block-size: 300px;
 max-block-size: 25em;
+max-block-size: anchor-size(--myAnchor self-inline, 250px);
+max-block-size: calc(anchor-size(width) / 2);
 
 /* <percentage> 値 */
 max-block-size: 75%;
@@ -29,6 +72,7 @@ max-block-size: 75%;
 max-block-size: none;
 max-block-size: max-content;
 max-block-size: min-content;
+max-block-size: fit-content;
 max-block-size: fit-content(20em);
 
 /* グローバル値 */
@@ -50,9 +94,11 @@ max-block-size: unset;
 - `none`
   - : ボックスの寸法を制限しません。
 - `max-content`
-  - : 内容物が推奨する `max-block-size` です。
+  - : コンテンツが推奨する `max-block-size` です。
 - `min-content`
-  - : 内容物の最小の `max-block-size` です。
+  - : コンテンツの最小の `max-block-size` です。
+- `fit-content`
+  - : 利用可能な空間を使用しますが、 [max-content](/ja/docs/Web/CSS/max-content) よりも大きくはなりません。つまり、 `min(max-content, max(min-content, stretch))` です。
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 
@@ -60,10 +106,10 @@ max-block-size: unset;
 
 `writing-mode` の値は次のように `max-block-size` から `max-width` または `max-height` への対応付けに影響します。
 
-| `writing-mode` の値                                                                                                                                                   | `max-block-size` が等価になるもの |
-| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |
-| `horizontal-tb`, `lr` {{deprecated_inline}}, `lr-tb` {{deprecated_inline}}, `rl` {{deprecated_inline}}, `rb` {{deprecated_inline}}, `rb-rl` {{deprecated_inline}}     | {{cssxref("max-height")}}         |
-| `vertical-rl`, `vertical-lr`, `sideways-rl` {{experimental_inline}}, `sideways-lr` {{experimental_inline}}, `tb` {{deprecated_inline}}, `tb-rl` {{deprecated_inline}} | {{cssxref("max-width")}}          |
+| `writing-mode` の値                                                       | `max-block-size` が等価になるもの |
+| ------------------------------------------------------------------------- | --------------------------------- |
+| `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
+| `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
 > **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
 
@@ -72,7 +118,7 @@ max-block-size: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 

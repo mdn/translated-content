@@ -3,29 +3,38 @@ title: "Element: innerHTML プロパティ"
 short-title: innerHTML
 slug: Web/API/Element/innerHTML
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: c749deb4ccb647d792deee4807d4852104bedd9d
 ---
 
 {{APIRef("DOM")}}
 
 {{domxref("Element")}} オブジェクトの **`innerHTML`** プロパティは、要素内の HTML または XML のマークアップを取得したり設定したりします。
 
+より正確に言えば、`innerHTML` は要素内の入れ子になった子 DOM 要素をシリアライズしたものを取得するか、要素内の DOM ツリーを置き換えるために解釈される HTML または XML を設定します。
+
 要素の内容を置き換えるというより、文書に HTML を挿入するという場合には、{{domxref("Element.insertAdjacentHTML", "insertAdjacentHTML()")}} メソッドを使用してください。
+
+DOM　ツリーをプロパティから読み込んでシリアライズした場合、{{glossary("shadow tree", "シャドウルート")}}は含まれません。シャドウルートを含む HTML 文字列を取得したい場合は、 {{domxref("Element.getHTML()")}} または {{domxref("ShadowRoot.getHTML()")}} メソッドを使用する必要があります。
+同様に、 `innerHTML` を使用して要素のコンテンツを設定する場合、 HTML 文字列はシャドウルートを含まない DOM 要素に解釈されます。
+
+ですから、例えば [`<template>`](/ja/docs/Web/HTML/Reference/Elements/template) は、 [`shadowrootmode`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootmode) 属性が指定されているかどうかにかかわらず、 {{domxref("HTMLTemplateElement")}} に解釈されます。
+宣言的なシャドウルートが含まれた HTML 文字列から要素のコンテンツを設定するには、 {{domxref("Element.setHTMLUnsafe()")}} または {{domxref("ShadowRoot.setHTMLUnsafe()")}} を使用する必要があります。
 
 ## 値
 
-要素の子孫を HTML にシリアライズしたものを含んだ文字列です。`innerHTML` に値を設定すると、要素のすべての子孫を削除して、_htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
+要素の子孫を HTML にシリアライズしたものを含んだ文字列です。
+`innerHTML` に値を設定すると、要素のすべての子孫を削除して、_htmlString_ の文字列で与えられた HTML を解釈して構築されたノードに置き換えます。
+
+`null` 値に設定すると、その `null` 値は空文字列 (`""`) に変換されるため、 `elt.innerHTML = null` は `elt.innerHTML = ""` と同等です。
 
 ### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-  - : 正しくない形の HTML の文字列を使用して `innerHTML` の値を設定しようとした場合に発生します。
+  - : `innerHTML` の値を、正しくない形の HTML の文字列を使用して設定しようとした場合に発生します。
 - `NoModificationAllowedError` {{domxref("DOMException")}}
   - : 親が {{domxref("Document")}} であるノードに HTML を挿入しようとした場合に発生します。
 
 ## 使用上のメモ
-
-`innerHTML` プロパティは、ページの現在の HTML ソースを、ページが最初に読み込まれてから行われたあらゆる変更を含めて、見るために利用することができます。
 
 ### 要素の HTML コンテンツの読み取り
 
@@ -44,17 +53,18 @@ let contents = myElement.innerHTML;
 
 `innerHTML` の値を設定することで、既存の要素の内容を新しい内容に置き換えることが簡単にできます。
 
-> [!NOTE]
+> [!WARNING]
 > 挿入される文字列に悪意のある内容が含まれる可能性がある場合、[セキュリティ上のリスク](#セキュリティの考慮事項)になります。
-> ユーザーが提供したデータを挿入する場合は、 {{domxref("Element.setHTML()")}} を使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
+> ユーザーが提供したデータを挿入する場合は、無害化するライブラリーを使用するよう常に検討してください。こちらは挿入する前に無害化を行います。
 
 例えば、文書の {{domxref("Document.body", "body")}} 属性の内容を消去することで、文書の内容全体を消去することができます。
 
 ```js
-document.body.innerHTML = "";
+document.body.textContent = "";
 ```
 
-この例は文書の現在の HTML マークアップを走査し、 `"<"` の文字を HTML エンティティの `"&lt;"` に置き換え、それによって本質的に HTML を生テキストに変換します。そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 `innerHTML` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
+この例は文書の現在の HTML マークアップを走査し、 `"<"` の文字を{{glossary("character reference","文字参照")}}の `"&lt;"` に置き換え、それによって本質的に HTML を生テキストに変換します。
+そしてこれを {{HTMLElement("pre")}} で囲みます。そして、 `innerHTML` の値をこの新しい文字列に変更します。結果として、文書の内容がページ全体のソースコードの表示に置き換わります。
 
 ```js
 document.documentElement.innerHTML = `<pre>${document.documentElement.innerHTML.replace(
@@ -124,7 +134,6 @@ el.innerHTML = name; // アラートが表示される
 
 このため、 `innerHTML` を使用する代わりに次のようにしてください。
 
-- {{domxref("Element.setHTML()")}} で DOM に挿入する前にテキストを無害化する。
 - プレーンテキストを挿入する際には、代わりに {{domxref("Node.textContent")}} を使用する。これは渡されたコンテンツを HTML として解釈するのではなく、生のテキストとして挿入します。
 
 > [!WARNING]
@@ -227,6 +236,9 @@ boxElem.addEventListener("mouseleave", logEvent);
 - {{domxref("Node.textContent")}} および {{domxref("HTMLElement.innerText")}}
 - {{domxref("Element.insertAdjacentHTML()")}}
 - {{domxref("Element.outerHTML")}}
-- {{domxref("Element.setHTML")}}
 - HTML または XML を解釈して DOM ツリーへ: {{domxref("DOMParser")}}
 - DOM ツリーを XML 文字列へシリアライズ: {{domxref("XMLSerializer")}}
+- {{domxref("Element.getHTML()")}}
+- {{domxref("ShadowRoot.getHTML()")}}
+- {{domxref("Element.setHTMLUnsafe()")}}
+- {{domxref("ShadowRoot.setHTMLUnsafe()")}}

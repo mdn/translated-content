@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`. En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## Description
 
@@ -67,7 +82,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
   - : Renvoie un nombre indiquant la taille, exprimée en octets, de chaque élément du tableau typé.
 - [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : Renvoie la chaîne de caractères correspondant au nom du constructeur (par exemple, `"Int8Array"`).
-- [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species)
+- [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
 - `TypedArray`
   - : Le prototype pour les objes `TypedArray`.
@@ -145,7 +160,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir aussi [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`TypedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
   - : Renvoie une chaîne de caractères représentant le tableau et ses éléments. Voir aussi [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`TypedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Renvoie un nouvel objet _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
 
 ## Exemples

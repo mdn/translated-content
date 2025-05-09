@@ -9,7 +9,39 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-style`** 设置强调标记的样式。这个值也可以使用简写属性 {{cssxref("text-emphasis")}} 来设置。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-style.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-style")}}
+
+```css interactive-example-choice
+text-emphasis-style: none;
+```
+
+```css interactive-example-choice
+text-emphasis-style: triangle;
+```
+
+```css interactive-example-choice
+text-emphasis-style: "x";
+```
+
+```css interactive-example-choice
+text-emphasis-style: filled double-circle;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 ## 语法
 

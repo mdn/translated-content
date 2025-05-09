@@ -25,7 +25,7 @@ l10n:
       </td>
       <td>
         ダミー関数。何もしません。
-        <a href="/ja/docs/Web/OpenSearch#autodiscovery_of_search_plugins"
+        <a href="/ja/docs/Web/XML/Guides/OpenSearch#autodiscovery_of_search_plugins"
           >検索プラグインの自動発見</a
         >を参照してください。
       </td>

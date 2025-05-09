@@ -24,7 +24,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### HTML
 
-- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Attributes/rel) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
+- `rel="noopener"` [リンク種別](/ja/docs/Web/HTML/Reference/Attributes/rel) を実装しました ([Firefox バグ 1222516](https://bugzil.la/1222516))。
 
 ### CSS
 
@@ -82,13 +82,13 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 #### 変更および削除
 
-- [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
-- [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
+- [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
+- [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
 - {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API の引数 "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。
 - 非標準の {{jsxref("ArrayBuffer.slice()")}} メソッド ({{jsxref("ArrayBuffer.prototype.slice()")}} ではありません) が非推奨になり、使用すると警告が発生します ([Firefox バグ 1316913](https://bugzil.la/1316913))。
-- [Unicode コードポイントエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_code_point_escapes) が、識別子として使用可能になりました (例: "`let \u{61} = 123`"。[Firefox バグ 1314037](https://bugzil.la/1314037) をご覧ください)。
+- [Unicode コードポイントエスケープ](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) が、識別子として使用可能になりました (例: "`let \u{61} = 123`"。[Firefox バグ 1314037](https://bugzil.la/1314037) をご覧ください)。
 - ES2015 に従って、`\u2e2f` および `ⸯ` を識別子として使用したときに例外が発生するようになりました。詳しくは [Firefox バグ 917436](https://bugzil.la/917436) および [Firefox バグ 1197230](https://bugzil.la/1197230) をご覧ください。
 
 ### WebAssembly
@@ -103,11 +103,11 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 - [Touch event](/ja/docs/Web/API/Touch_events) を、Windows デスクトップ環境で再び有効化しました ([Firefox バグ 1244402](https://bugzil.la/1244402))。これはいくつかの主要サイトで問題が発生したため、Firefox 24 で無効化していました ([Firefox バグ 888304](https://bugzil.la/888304))。
 - {{domxref("Element/focusin_event", "focusin")}} および {{domxref("Element/focusout_event", "focusout")}} イベントを実装しました ([Firefox バグ 687787](https://bugzil.la/687787))。
 - {{domxref("isSecureContext")}} プロパティを実装しました ([Firefox バグ 1269052](https://bugzil.la/1269052))。
-- [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) のインストールイベントを appinstalled に改名しました ({{domxref("Window/appinstalled_event")}} をご覧ください)。サービスワーカーのインストールイベント ({{domxref("ServiceWorkerGlobalScope.install_event", "oninstall")}} をご覧ください) との混同を避けるためです。詳しくは [Firefox バグ 1309099](https://bugzil.la/1309099) をご覧ください。
 - [Drag and drop API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) の {{domxref("DataTransfer.types")}} プロパティが、{{domxref("DOMStringList")}} ではなく文字列の凍結された配列を返すようになりました ([Firefox バグ 1298243](https://bugzil.la/1298243))。
 - `loadstart` および `loadend` イベントが {{htmlelement("img")}} 要素で発生するようになりました ([Firefox バグ 1264769](https://bugzil.la/1264769)。
 - [通知 API](/ja/docs/Web/API/Notifications_API) の {{domxref("Notification.requireInteraction")}} を実装しました ([Firefox バグ 862395](https://bugzil.la/862395))。
-- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Attributes/rel) の機能を反映します。
+- {{domxref("Window.open()")}} メソッドで、`noopener` [ウィンドウ機能特性](/ja/docs/Web/API/Window/open#window_functionality_features) が使用可能になりました ([Firefox バグ 1267339](https://bugzil.la/1267339))。これは、`rel="noopener"` [リンクタイプ](/ja/docs/Web/HTML/Reference/Attributes/rel) の機能を反映します。
 - [Web Components API](/ja/docs/Web/API/Web_components) の {{domxref("CustomElementRegistry.get()")}} メソッドを実装しました ([Firefox バグ 1275838](https://bugzil.la/1275838))。
 - [Pointer Event](/ja/docs/Web/API/Pointer_events) の {{domxref("PointerEvent.width","width")}} および {{domxref("PointerEvent.height","height")}} プロパティのデフォルト値が 1 になりました ([Firefox バグ 1304315](https://bugzil.la/1304315))。
 - [最新の仕様書](https://wicg.github.io/entries-api/) における変更点を含むように、[File and Directory Entries API](/ja/docs/Web/API/File_and_Directory_Entries_API) を更新しました (詳しくは [Firefox バグ 1284987](https://bugzil.la/1284987) をご覧ください)。
@@ -155,8 +155,8 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 ### HTTP
 
 - {{HTTPHeader("Referrer-Policy")}} ヘッダーで `same-origin`、`strict-origin`、`strict-origin-when-cross-origin` ディレクティブをサポートしました ([Firefox バグ 1276836](https://bugzil.la/1276836))。
-- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
-- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
+- {{CSP("script-src")}} のように、[`'strict-dynamic'` source expression](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#strict-dynamic) を {{HTTPHeader("Content-Security-Policy")}} のディレクティブでサポートしました ([Firefox バグ 1299483](https://bugzil.la/1299483))。
+- [Strict Secure Cookies specification](https://tools.ietf.org/html/draft-ietf-httpbis-cookie-alone-01) に従って、安全ではないサイト (`http:`) が "secure" ディレクティブで [Cookie を設定する](/ja/docs/Web/HTTP/Guides/Cookies) ことができなくなりました ([Firefox バグ 976073](https://bugzil.la/976073))。
 - HTTP/2 ヘッダー圧縮方式 [HPACK](https://tools.ietf.org/html/rfc7541) の最大テーブルサイズを 4 KB から 64 KB に拡張しました ([Firefox バグ 1296280](https://bugzil.la/1296280))。
 - {{HTTPHeader("Large-Allocation")}} ヘッダーを追加しました ([Firefox バグ 1304140](https://bugzil.la/1304140))。
 
@@ -166,7 +166,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 ### セキュリティ
 
-- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Element/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords) をご覧ください。
+- ログインページ (すなわち [`<input type="password">`](/ja/docs/Web/HTML/Reference/Elements/input/password) フィールドを含むページ) でログイン情報が安全でない方法で送信されると思われる場合に、Firefox はユーザーに警告するため、ページ内のパスワードフィールドの下に警告メッセージを表示します ([Firefox バグ 1319119](https://bugzil.la/1319119))。また、安全でないログインフォームではオートフィルが無効になります ([Firefox バグ 1217152](https://bugzil.la/1217152))。詳しくは [安全でないパスワード](/ja/docs/Web/Security/Insecure_passwords) をご覧ください。
 - SHA-1 SSL 証明書のサポートを廃止しました。SHA-1 証明書を使用する安全なページに移動すると、[Untrusted Connection](https://support.mozilla.org/t5/Documents-Archive/quot-This-Connection-is-Untrusted-quot-error-message-appears/ta-p/589) エラーが発生します ([Firefox バグ 1330043](https://bugzil.la/1330043))。
 
 ## プラグイン

@@ -162,7 +162,7 @@ HTML 文件就像这样：
 </html>
 ```
 
-我们有一个 ID 为 `"popup-content"` 的[\<div>](/zh-CN/docs/Web/HTML/Element/div)元素包含了每个动物选择。我们还有另外一个`<div>` 元素，它的 ID 为 `"error-content"` ，class 为`"hidden"`。我们将会使用它以防初始化弹窗的时候出问题。
+我们有一个 ID 为 `"popup-content"` 的[\<div>](/zh-CN/docs/Web/HTML/Reference/Elements/div)元素包含了每个动物选择。我们还有另外一个`<div>` 元素，它的 ID 为 `"error-content"` ，class 为`"hidden"`。我们将会使用它以防初始化弹窗的时候出问题。
 
 注意我们引入了 CSS 和 JS 文件，就像网页一样。
 
@@ -389,7 +389,7 @@ content script 做的第一件事是检查全局变量 `window.hasRun`：如果�
 
 然后，从第 40 行开始，content script 监听来自弹出窗的信息，使用[`browser.runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage) API。在上面我们看到弹出窗脚本能够发送两种不同的信息："beastify" and "reset"。
 
-- 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
+- 如果信息是 "beastify"，我们期待它包含一个指向动物图片的 URL。我们移除先前调用添加的动物图片，然后构造并添加一个 src 属性被设置动物图片 URL 的[`<img>`](/zh-CN/docs/Web/HTML/Reference/Elements/img) 元素。
 - 如果信息是 "reset"，我们只需要移除所有被添加的动物片。
 
 ### 动物们

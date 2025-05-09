@@ -9,7 +9,55 @@ l10n:
 
 La propriété [CSS](/fr/docs/Web/CSS) **`margin-left`** d'un élément définit l'espace horizontal à gauche qui formera [la zone de marge](/fr/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model#zone_de_marge) à gauche de l'élément. On peut avoir une marge gauche négative qui rapproche l'élément de ses voisins ou une marge positive qui l'en écarte.
 
-{{EmbedInteractiveExample("pages/css/margin-left.html")}}
+{{InteractiveExample("CSS Demo: margin-left")}}
+
+```css interactive-example-choice
+margin-left: 1em;
+```
+
+```css interactive-example-choice
+margin-left: 10%;
+```
+
+```css interactive-example-choice
+margin-left: 10px;
+```
+
+```css interactive-example-choice
+margin-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
 
 Les marges verticales de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 

@@ -1,10 +1,9 @@
 ---
 title: 循環代碼
 slug: Learn_web_development/Core/Scripting/Loops
-original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 編程語言對於快速完成重複性任務非常有用，從多個基本計算到幾乎任何其他需要完成大量類似工作的情況。 在這裡，我們將看看 JavaScript 中可用於處理此類需求的循環結構。
 

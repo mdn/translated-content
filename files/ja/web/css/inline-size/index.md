@@ -1,15 +1,54 @@
 ---
 title: inline-size
 slug: Web/CSS/inline-size
+l10n:
+  sourceCommit: 883491d47f6b764563aa825d9d56f83fb80c6fb9
 ---
 
 {{CSSRef}}
 
-**`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。
+**`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロックにおける[インライン軸](/ja/docs/Glossary/Grid_Axis)方向の寸法を定義します。書字方向 ({{cssxref("writing-mode")}}) が横書きである場合、これは {{cssxref("width")}} に対応します。書字方向が縦書きである場合、 {{cssxref("height")}} プロパティに対応します。関連するプロパティは {{cssxref("block-size")}} であり、これは要素のもう一方の軸を定義します。
 
-書字方向が垂直方向であった場合、 `inline-size` の値は要素の高さに対応し、水平方向であった場合は要素の幅に対応します。関連プロパティの {{cssxref("block-size")}} が要素のもう一方の寸法を定義します。
+{{InteractiveExample("CSS Demo: inline-size")}}
 
-{{EmbedInteractiveExample("pages/css/inline-size.html")}}
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: 150px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+inline-size: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    このボックスは、インライン方向のサイズを変更できます。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 ## 構文
 
@@ -17,6 +56,8 @@ slug: Web/CSS/inline-size
 /* <length> 値 */
 inline-size: 300px;
 inline-size: 25em;
+inline-size: anchor-size(width);
+inline-size: anchor-size(--myAnchor inline);
 
 /* <percentage> 値 */
 inline-size: 75%;
@@ -24,6 +65,7 @@ inline-size: 75%;
 /* キーワード値 */
 inline-size: max-content;
 inline-size: min-content;
+inline-size: fit-content;
 inline-size: fit-content(20em);
 inline-size: auto;
 
@@ -31,6 +73,7 @@ inline-size: auto;
 inline-size: inherit;
 inline-size: initial;
 inline-size: revert;
+inline-size: revert-layer;
 inline-size: unset;
 ```
 
@@ -48,12 +91,12 @@ inline-size: unset;
 
 ## 例
 
-<h3 id="Setting_inline_size_in_pixels">インライン方向の寸法をピクセル単位で設定</h3>
+### インライン方向の寸法をピクセル単位で設定
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">テキストの例</p>
 ```
 
 #### CSS

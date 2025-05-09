@@ -32,7 +32,7 @@ let myResponse = new Response(body, init);
 
     - `status`: response 的状态码，例如：`200`.
     - `statusText`: 和状态码关联的状态消息，例如：`OK`.
-    - `headers`: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 [HTTP headers](/zh-CN/docs/Web/HTTP/Headers)).
+    - `headers`: 你想加到 response 上的任何 headers，包含了一个 {{domxref("Headers")}} 对象或满足对象语法的 {{domxref("ByteString")}} key/value 对 (详见 [HTTP headers](/zh-CN/docs/Web/HTTP/Reference/Headers)).
 
 ## 例子
 
@@ -55,5 +55,5 @@ var myResponse = new Response(myBlob, init);
 ## See also
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

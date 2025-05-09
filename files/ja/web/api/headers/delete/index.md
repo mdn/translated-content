@@ -1,20 +1,16 @@
 ---
-title: Headers.delete()
+title: "Headers: delete() メソッド"
+short-title: delete()
 slug: Web/API/Headers/delete
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 7b21121cd93f9f967248d53c6fd24db2af42b314
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`delete()`** は {{domxref("Headers")}} インターフェイスのメソッドで、現在の `Headers` オブジェクトからヘッダーを削除します。
 
-このメソッドでは、次の場合に {{jsxref("TypeError")}} が発生します。
-
-- name 引数の値が HTTP ヘッダーの名前ではない場合。
-- {{Glossary("Guard", "ガード")}}の値が `immutable` である場合。
-
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名", 1)}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名", 1)}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 
@@ -50,7 +46,7 @@ myHeaders.get("Content-Type"); // Returns 'image/jpeg'
 
 ```js
 myHeaders.delete("Content-Type");
-myHeaders.get("Content-Type"); // Returns null, as it has been deleted
+myHeaders.get("Content-Type"); // 削除されているため null を返す
 ```
 
 ## 仕様書
@@ -64,5 +60,5 @@ myHeaders.get("Content-Type"); // Returns null, as it has been deleted
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

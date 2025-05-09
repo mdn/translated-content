@@ -1,12 +1,11 @@
 ---
 title: 视频和音频内容
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
 现在我们已经可以轻松地为网页添加简单的图像，下一步我们开始为 HTML 文档添加音频和视频播放器。在这篇文章中，我们会使用 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素来完成这件事；然后我们还会了解如何为视频添加标题/字幕。
 
@@ -62,9 +61,9 @@ l10n:
 
 值得注意的特性有：
 
-- [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
+- [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/video#src)
   - : 同 {{htmlelement("img")}} 元素的使用方式相同，`src`（来源）属性指向你想要嵌入到网页中的视频资源，它们的运作方式完全相同。
-- [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)
+- [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls)
   - : 用户应当能够控制视频和音频的播放（这对于患有[癫痫](https://zh.wikipedia.org/wiki/癫痫#病因)的人来说尤为重要）。你必须使用 `controls` 属性来让视频或音频包含浏览器自带的控制界面，或者使用适当的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 构建自己的界面。至少，界面必须包括启动和停止媒体以及调整音量的方法。
 - `<video>` 元素内的段落
   - : 这个叫做**后备内容**，当浏览器不支持 `<video>` 元素的时候，就会显示这段内容，借此我们能够对旧的浏览器提供回退。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
@@ -81,13 +80,13 @@ l10n:
 
 #### 媒体文件的内容
 
-我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Formats/Containers)。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
+我们先来快速的了解一下相关术语。像 MP3、MP4 还有 WebM 这些格式叫做[**容器格式**](/zh-CN/docs/Web/Media/Guides/Formats/Containers)。他们定义了构成媒体文件的音频轨道和视频轨道的储存结构，其中还包含描述这个媒体文件的元数据，以及使用什么编解码器对其通道进行编码等等。
 
 一个包含电影的 WebM 文件，其主要包括一个主视频轨道和一个备用视角轨道，以及相应的英语和西班牙语音轨，还有英语解说音轨，如下图所示。文件还包括用于电影的闭路字幕文本轨道、西班牙语字幕以及解说的英文字幕。
 
 ![从轨道级别看待媒体文件内容的图表](containersandtracks.png)
 
-容器中的音频和视频轨道存储着按照相应编解码器格式编码的数据。音频轨道使用不同于视频轨道的格式进行编码。每条音频轨道都采用[音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs)编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs)编码。我们之前提到过，不同浏览器支持不同的视频和音频格式，以及不同的容器格式，如 MP3、MP4 和 WebM，这些容器可以包含不同类型的视频和音频。
+容器中的音频和视频轨道存储着按照相应编解码器格式编码的数据。音频轨道使用不同于视频轨道的格式进行编码。每条音频轨道都采用[音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)编码，而视频轨道则使用（你可能已经猜到了）[视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)编码。我们之前提到过，不同浏览器支持不同的视频和音频格式，以及不同的容器格式，如 MP3、MP4 和 WebM，这些容器可以包含不同类型的视频和音频。
 
 例如：
 
@@ -112,7 +111,7 @@ l10n:
 
 由于每种浏览器支持的容器文件格式和编解码器都有所不同，情况变得更加复杂。为了尽可能确保你的网站或应用能在用户的浏览器上正常工作，你可能需要提供多种格式的媒体文件。如果你的网站没有提供任何用户的浏览器支持的格式，那么你的媒体内容将无法播放。
 
-由于确保你的应用程序中的媒体内容能在你想要覆盖的每一种浏览器、平台和设备上都正常显示有些复杂，因此选择最合适的编解码器和容器组合可能会是一项挑战。为了选择最适合你需求的容器文件格式，请参考[选择正确的容器](/zh-CN/docs/Web/Media/Formats/Containers#选择正确的容器)；要为你的内容和目标受众选择合适的媒体编解码器，请参考[选择视频编解码器](/zh-CN/docs/Web/Media/Formats/Video_codecs#选择视频编解码器)以及[选择音频编解码器](/zh-CN/docs/Web/Media/Formats/Audio_codecs#选择音频编解码器)。
+由于确保你的应用程序中的媒体内容能在你想要覆盖的每一种浏览器、平台和设备上都正常显示有些复杂，因此选择最合适的编解码器和容器组合可能会是一项挑战。为了选择最适合你需求的容器文件格式，请参考[选择正确的容器](/zh-CN/docs/Web/Media/Guides/Formats/Containers#选择正确的容器)；要为你的内容和目标受众选择合适的媒体编解码器，请参考[选择视频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#选择视频编解码器)以及[选择音频编解码器](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs#选择音频编解码器)。
 
 当然，这里有一点需要注意：移动浏览器和桌面浏览器对格式的支持可能不一样。此外，桌面和移动浏览器都*可能*外包媒体播放处理（可能是全部媒体也可能是仅仅是那些它无法内部处理的特定类型）。因此，媒体支持在一定程度上依赖于用户安装了哪些软件。
 
@@ -128,9 +127,9 @@ l10n:
 
 在这里我们将 `src` 属性从 `<video>` 元素中移除，转而将它放在几个单独的 {{htmlelement("source")}} 元素当中，这些元素分别指向各自的资源。在本例当中，浏览器会检查 {{HTMLElement("source")}} 元素，并且播放第一个与其自身 codec 相匹配的媒体。WebM 和 MP4 这两种格式在目前已经足够，只要视频支持这两种格式，那么其在大多数平台和浏览器上都能正确播放。
 
-每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
+每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
 
-请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
+请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
 
 ### 其他 \<video> 特性
 
@@ -158,17 +157,17 @@ l10n:
 
 特性包括：
 
-- [`width`](/zh-CN/docs/Web/HTML/Element/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/video#height)
+- [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/video#height)
   - : 你可以用属性控制视频的尺寸，也可以用 {{Glossary("CSS")}} 来控制视频尺寸。无论使用哪种方式，视频都会保持它原始的长宽比——也叫做**纵横比**。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
-- [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)
+- [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay)
   - : 这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要在你的网站上自动播放视频（或音频），因为用户可能会反感。
-- [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop)
+- [`loop`](/zh-CN/docs/Web/HTML/Reference/Elements/video#loop)
   - : 这个属性可以让视频（或者音频）文件在结束时再次开始播放。这个也可能很恼人，同样不建议使用，除非有必要。
-- [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
+- [`muted`](/zh-CN/docs/Web/HTML/Reference/Elements/video#muted)
   - : 这个属性会导致媒体播放时，默认关闭声音。
-- [`poster`](/zh-CN/docs/Web/HTML/Element/video#poster)
+- [`poster`](/zh-CN/docs/Web/HTML/Reference/Elements/video#poster)
   - : 这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
-- [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload)
+- [`preload`](/zh-CN/docs/Web/HTML/Reference/Elements/video#preload)
 
   - : 这个属性被用来缓冲较大的文件，有三个值可选：
 
@@ -246,7 +245,7 @@ WEBVTT
 要让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 将其保存为 `.vtt` 文件，放在服务器可以提供服务的地方（见下文），例如和 HTML 文件放在同一文件夹。
-2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Element/track#label)，以帮助读者在查找时识别语言。
+2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Reference/Elements/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Reference/Elements/track#label)，以帮助读者在查找时识别语言。
 
 如下是例子：
 
@@ -262,7 +261,7 @@ WEBVTT
 
 ![视频播放器带有标准的控制功能，如播放、停止、音量和字幕开关。播放的视频显示了一名男子手持长矛状武器的场景，标题为“Esta hoja tiene pasado oscuro”。](video-player-with-captions.png)
 
-更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
+更多细节，包括如何添加标签，请阅读[为 HTML 视频添加标题和字幕](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)。在 Github 上可以找到[与本文相关的样例](https://iandevlin.github.io/mdn/video-player-with-captions/)，它们由 Ian Devlin 编写（或者[查看源代码](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)）。这个样例使用了 JavaScript 代码，用户借此可以选择不同的字幕。注意，若想要显示字幕，你需要点击“CC”按钮，并且选择某个选项（English、Deutsch 或 Español）。
 
 > [!NOTE]
 > 文本轨道还可以帮助你进行 {{glossary("SEO")}}，因为搜索引擎对文字特别感兴趣。搜索引擎甚至可以借助文本轨道直接链接到视频中的某个位置。
@@ -278,14 +277,14 @@ WEBVTT
 1. 将你的音频和视频文件保存在你电脑上的一个新目录中。
 2. 在相同的路径下，创建一个新的 HTML 文件，命名为 `index.html`。
 3. 在页面上添加 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素；让它们显示浏览器默认的控件。
-4. 在当中添加 {{HTMLElement("source")}} 标签，并添加 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，以便于浏览器能够找到其能够支持的格式并加载它。
+4. 在当中添加 {{HTMLElement("source")}} 标签，并添加 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，以便于浏览器能够找到其能够支持的格式并加载它。
 5. 在 `<video>` 元素中添加 `poster` 属性，这会在视频播放之前显示。尽情创作属于自己的海报图形吧。
 
 另外，你可以尝试研究一下文本音轨，试着为你的视频添加一些字幕。
 
 ## 技能测试！
 
-你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
+你已经完成了这篇教程的学习，但你是否还记得教程里最重要的内容呢？在继续之前，你可以通过一些测试来验证你是否已经掌握了这些内容，请参见[技能测试：内嵌多媒体](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding)。需要注意，这个测试中的第三个问题可能会需要一些之后讲到的技术，所以我们建议你尝试之前阅读一下[下一篇教程](/zh-CN/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)。
 
 ## 总结
 
@@ -294,11 +293,11 @@ WEBVTT
 ## 参见
 
 - HTML 媒体元素：{{htmlelement("audio")}}、{{htmlelement("video")}}、{{htmlelement("source")}} 和 {{htmlelement("track")}}
-- [向视频添加字幕和标题](/zh-CN/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [音频和视频传送](/zh-CN/docs/Web/Media/Audio_and_video_delivery)：使用 HTML 和 JavaScript 在网页上放置音频和视频的详细信息。
-- [音频和视频操作](/zh-CN/docs/Web/Media/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
+- [向视频添加字幕和标题](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
+- [音频和视频传送](/zh-CN/docs/Web/Media/Guides/Audio_and_video_delivery)：使用 HTML 和 JavaScript 在网页上放置音频和视频的详细信息。
+- [音频和视频操作](/zh-CN/docs/Web/Media/Guides/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
-- [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Formats)
+- [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
 - [事件参考 > 媒体](/zh-CN/docs/Web/Events#media)
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}

@@ -7,7 +7,29 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-prototype-format.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format", "taller")}}
+
+```js interactive-example
+const options1 = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+const date1 = new Date(2012, 5);
+
+const dateTimeFormat1 = new Intl.DateTimeFormat("sr-RS", options1);
+console.log(dateTimeFormat1.format(date1));
+// Expected output: "петак, 1. јун 2012."
+
+const dateTimeFormat2 = new Intl.DateTimeFormat("en-GB", options1);
+console.log(dateTimeFormat2.format(date1));
+// Expected output: "Friday, 1 June 2012"
+
+const dateTimeFormat3 = new Intl.DateTimeFormat("en-US", options1);
+console.log(dateTimeFormat3.format(date1));
+// Expected output: "Friday, June 1, 2012"
+```
 
 ## 構文
 
@@ -57,7 +79,7 @@ console.log(formatted.join("; "));
 
 ### 書式化された日付値を固定値と比較することは避ける
 
-ほとんどの場合、 `format()` が返す書式は一貫しています。しかし、これは将来的に変更される可能性があり、すべての言語で保証されているわけではありません — 出力のバリエーションは設計上のものであり、仕様上は許容されています。最も注目すべきは、 IE や Edge ブラウザは日付の周りに双方向の制御文字を挿入するため、他のテキストと連結したときに出力テキストが適切に流れることです。
+ほとんどの場合、 `format()` が返す書式は一貫しています。しかし、これは将来的に変更される可能性があり、すべての言語で保証されているわけではありません — 出力のバリエーションは設計上のものであり、仕様上は許容されています。最も注目すべきは、 IE や Edge ブラウザーは日付の周りに双方向の制御文字を挿入するため、他のテキストと連結したときに出力テキストが適切に流れることです。
 
 このことから、 `format()` の結果と固定値を比較することができると期待してはいけません。
 

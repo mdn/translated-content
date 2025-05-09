@@ -5,9 +5,44 @@ slug: Web/CSS/border-inline
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline`** 为[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行向边框的各属性值。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑行向边框的各属性值。
 
-{{EmbedInteractiveExample("pages/css/border-inline.html")}}
+{{InteractiveExample("CSS Demo: border-inline")}}
+
+```css interactive-example-choice
+border-inline: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 `border-inline` 所对应的实体边框取决于元素的书写模式、行内方向和文本朝向。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top")}} 和 {{CSSXref("border-bottom")}}，或者 {{CSSXref("border-right")}} 和 {{CSSXref("border-left")}} 属性。
 

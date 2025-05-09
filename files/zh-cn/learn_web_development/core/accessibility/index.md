@@ -1,12 +1,9 @@
 ---
 title: 无障碍
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
 l10n:
   sourceCommit: 33d92d501901ca505f1d33f914531753ca289f2e
 ---
-
-{{LearnSidebar}}
 
 如果你想成为一名 Web 开发者，学习一些 HTML、CSS、JavaScript 是有用的。除了机械地使用之外，重要的是学习如何**负责任**地使用这些技术，让所有用户能在 Web 使用你的作品。为了帮你实现这个目标，本模块涉及常见的最佳实践（在 [HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting) 主题中有所体现），以及大量和严格执行无障碍有关的技巧。接下来会详细介绍无障碍。
 
