@@ -1,7 +1,6 @@
 ---
 title: Использование data-* атрибутов
 slug: Web/HTML/How_to/Use_data_attributes
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 ---
 
 {{QuickLinksWithSubpages("/ru/docs/Learn/HTML/Howto")}}
