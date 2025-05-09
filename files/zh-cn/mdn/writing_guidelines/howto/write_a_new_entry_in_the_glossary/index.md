@@ -3,8 +3,6 @@ title: 如何撰写和引用一个术语表中的条目
 slug: MDN/Writing_guidelines/Howto/Write_a_new_entry_in_the_glossary
 ---
 
-{{MDNSidebar}}
-
 本文介绍了如何撰写或引用 [MDN Web 文档术语表](/zh-CN/docs/Glossary)中的条目，还提供了有关术语条目的布局和内容的指南。术语表提供了你在阅读有关 Web 和 Web 开发的 MDN 内容时会遇到的所有术语、行话和缩写的定义。
 
 术语表并不一定完整，因为 Web 总是在发生变化。你可以通过贡献新的条目或修复问题，帮助我们更新术语表和填补缺失的内容。

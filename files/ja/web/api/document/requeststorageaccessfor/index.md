@@ -36,13 +36,13 @@ requestStorageAccessFor(requestedOrigin)
   - : 現在の {{domxref("Document")}} がまだアクティブ化されたいない場合に発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
   - : Thrown if:
-    - 文書のウィンドウが[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
+    - 文書のウィンドウが[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)ではない場合。
     - この文書が最上位の文書でない場合。
     - この文書のオリジンが `null` であった場合。
     - 指定された `requestedOrigin` が[不透明](https://html.spec.whatwg.org/multipage/browsers.html#concept-origin-opaque)であった場合。
     - 最上位のサイトと埋め込まれたサイトが同じ[関連する一連のウェブサイト](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)でない場合。
     - 埋め込まれた {{htmlelement("iframe")}} がサンドボックス化されており、`allow-storage-access-by-user-activation` トークンが設定されていない場合。
-    - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって、使用がブロックされた場合。
+    - {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって、使用がブロックされた場合。
     - ユーザーエージェントの権限リクエストにより、この API の使用が拒否された場合。
 - `TypeError`
   - : Thrown if `requestedOrigin` is not a valid URL.
@@ -65,7 +65,7 @@ navigator.permissions.query({
 ```
 
 > [!NOTE]
-> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Glossary/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
+> この機能の使用は、サーバーに設定する {{httpheader("Permissions-Policy/storage-access", "storage-access")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)（ストレージアクセス API の残りの部分をコントロールするものと同じ）によってブロックされる可能性があります。さらに、許可リスト、ブロックリスト、端末上の分類、ユーザー設定、アンチ[クリックジャッキング](/ja/docs/Web/Security/Attacks/Clickjacking)の経験則など、 ブラウザー独自のチェックも通過しなければなりません。
 
 ## 例
 
@@ -85,7 +85,7 @@ function rSAFor() {
 }
 ```
 
-`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
+`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
 
 例えば、次のようにします。
 

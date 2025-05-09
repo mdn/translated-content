@@ -7,9 +7,19 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 **Parámetros predeterminados de función** permiten que los parámetros con nombre se inicien con valores predeterminados si no se pasa ningún valor o `undefined`.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## Sintaxis
 

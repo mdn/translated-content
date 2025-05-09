@@ -15,11 +15,11 @@ l10n:
 
 #### 移除
 
-- {{HTMLElement('input')}} 元素不再支持非标准的 `mozactionhint` 属性。请使用 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes/enterkeyhint)。（详见 [Firefox bug 1735980](https://bugzil.la/1735980)）。
+- {{HTMLElement('input')}} 元素不再支持非标准的 `mozactionhint` 属性。请使用 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/enterkeyhint)。（详见 [Firefox bug 1735980](https://bugzil.la/1735980)）。
 
 ### CSS
 
-- CSS 函数 {{cssxref("attr")}} 现在支持回退值。这样，如果缺少[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)，就可以设置回退值（[Firefox bug 1448248](https://bugzil.la/1448248)）。
+- CSS 函数 {{cssxref("attr")}} 现在支持回退值。这样，如果缺少[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，就可以设置回退值（[Firefox bug 1448248](https://bugzil.la/1448248)）。
 
 ### JavaScript
 
@@ -28,11 +28,11 @@ l10n:
 
 ### SVG
 
-- 接受 [`<length>`](/zh-CN/docs/Web/SVG/Content_type#length) 值的 [SVG 属性](/zh-CN/docs/Web/SVG/Attribute)现在支持所有 SVG 元素的[第 3 版](https://www.w3.org/TR/css-values-3/#lengths) [length](/zh-CN/docs/Web/CSS/length) [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)值。这样就可以根据字体大小（`cap`、`rem` 等）、视口（`vh`、`vw`、`vmin` 等）或绝对长度（`px`、`cm` 等）确定 SVG 元素的大小，例如：`<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`。（详见 [Firefox bug 1287054](https://bugzil.la/1287054)）。
+- 接受 [`<length>`](/zh-CN/docs/Web/SVG/Guides/Content_type#length) 值的 [SVG 属性](/zh-CN/docs/Web/SVG/Reference/Attribute)现在支持所有 SVG 元素的[第 3 版](https://www.w3.org/TR/css-values-3/#lengths) [length](/zh-CN/docs/Web/CSS/length) [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)值。这样就可以根据字体大小（`cap`、`rem` 等）、视口（`vh`、`vw`、`vmin` 等）或绝对长度（`px`、`cm` 等）确定 SVG 元素的大小，例如：`<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>`。（详见 [Firefox bug 1287054](https://bugzil.la/1287054)）。
 
 ### HTTP
 
-- HTTP 响应标头 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} 的 [`credentialless`](/zh-CN/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) 指令现已在桌面平台（以及除安卓以外的移动平台）上得到支持，其允许在未明确选择的跨源服务器上进行 `no-cors` 资源请求，尽管没有 cookie 或其他凭据（[Firefox bug 1851467](https://bugzil.la/1851467)）。
+- HTTP 响应标头 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} 的 [`credentialless`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#credentialless) 指令现已在桌面平台（以及除安卓以外的移动平台）上得到支持，其允许在未明确选择的跨源服务器上进行 `no-cors` 资源请求，尽管没有 cookie 或其他凭据（[Firefox bug 1851467](https://bugzil.la/1851467)）。
 
 ### API
 

@@ -8,9 +8,22 @@ original_slug: Web/JavaScript/Reference/Global_Objects/Set/@@iterator
 
 El valor inicial de la propiedad **`@@iterator`**, es la misma función objeto que el valor inicial de la propiedad {{jsxref("Set.prototype.values()", "values")}}.
 
-{{EmbedInteractiveExample("pages/js/set-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
 
-El código fuente de este ejemplo interactivo lo puedes encontrar en el repositorio de Github. Si quieres contribuir con más ejemplos interactivos, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
+```js interactive-example
+const set1 = new Set();
+
+set1.add(42);
+set1.add("forty two");
+
+const iterator1 = set1[Symbol.iterator]();
+
+console.log(iterator1.next().value);
+// Expected output: 42
+
+console.log(iterator1.next().value);
+// Expected output: "forty two"
+```
 
 ## Sintaxis
 

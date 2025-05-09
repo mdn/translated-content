@@ -9,7 +9,7 @@ Este artículo describe varios tipos de ataques de seguridad y técnicas para mi
 
 ## Click-jacking
 
-[Clickjacking](/es/docs/Glossary/Clickjacking) es la práctica de engañar a un usuario en hacer clic en un enlace, botón, etc. que no es lo que el usuario cree que es. Esto puede ser usado, por ejemplo, para robar credenciales de inicio de sesión o para obtener el permiso indeseado para instalar una pieza de malware. (Clickjacking se llama a veces "redes de la interfaz de usuario", aunque este es un uso equivocado del término "redress").
+[Clickjacking](/es/docs/Web/Security/Attacks/Clickjacking) es la práctica de engañar a un usuario en hacer clic en un enlace, botón, etc. que no es lo que el usuario cree que es. Esto puede ser usado, por ejemplo, para robar credenciales de inicio de sesión o para obtener el permiso indeseado para instalar una pieza de malware. (Clickjacking se llama a veces "redes de la interfaz de usuario", aunque este es un uso equivocado del término "redress").
 
 ## Cross-site scripting (XSS)
 

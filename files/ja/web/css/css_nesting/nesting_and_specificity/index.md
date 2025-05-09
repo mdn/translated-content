@@ -43,7 +43,7 @@ l10n:
 }
 ```
 
-この例では、 id セレクター (`#a`) の詳細度は [`1-0-0`](/ja/docs/Web/CSS/Specificity#selector_weight_categories) になり、要素型セレクター (`b`) の詳細度は `0-0-1` になります。[ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) と `:is()` 擬似クラスはどちらも、 `#a` という id セレクターを使わなくても詳細度は `1-0-0` になります。
+この例では、 id セレクター (`#a`) の詳細度は [`1-0-0`](/ja/docs/Web/CSS/CSS_cascade/Specificity#selector_weight_categories) になり、要素型セレクター (`b`) の詳細度は `0-0-1` になります。[ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) と `:is()` 擬似クラスはどちらも、 `#a` という id セレクターを使わなくても詳細度は `1-0-0` になります。
 
 `.foo` クラスセレクターの特異度は `0-1-0` です。これにより、 `& c` の特異性の合計は `1-0-1` となり、 `.foo c` の特異性は `0-1-1` となるので、 `color: blue;` が勝ちます。
 

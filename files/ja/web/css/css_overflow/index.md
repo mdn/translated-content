@@ -47,7 +47,7 @@ l10n:
 
 ## ガイド
 
-- [コンテンツのオーバーフロー](/ja/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
   - : CSS の構成要素です。オーバーフローとは何か、どのように管理するかを学びます。
 - [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
@@ -65,7 +65,7 @@ l10n:
 - {{cssxref("scroll-snap-type")}} プロパティ
 - {{cssxref("text-overflow")}} プロパティ
 - {{CSSxRef("::-webkit-scrollbar")}} 擬似要素
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA ロール
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
 - Element の {{domxref("Element.scroll", "scroll()")}} メソッド
 - Element の {{domxref("Element.scrollBy", "scrollBy()")}} メソッド
 - Element の {{domxref("Element.scrollIntoView", "scrollIntoView()")}} メソッド

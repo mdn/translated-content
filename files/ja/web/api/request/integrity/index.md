@@ -3,10 +3,10 @@ title: "Request: integrity プロパティ"
 short-title: integrity
 slug: Web/API/Request/integrity
 l10n:
-  sourceCommit: 1259740828bbbe9f19f9697df5847c957abb64e3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`integrity`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
@@ -45,5 +45,5 @@ console.log(myRequest.integrity); // "sha256-abc123"
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

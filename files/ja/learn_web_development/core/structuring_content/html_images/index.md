@@ -84,7 +84,7 @@ l10n:
 
 ![恐竜の基本的な画像が、ブラウザーに埋め込まれ、その上に "Images in HTML" と書かれています](basic-image.png)
 
-> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/Replaced_element)を参照してください。
+> **メモ:** {{htmlelement("img")}} や {{htmlelement("video")}} のような要素は、**置換要素**と呼ばれることがあります。これは、要素の内容とサイズが、要素自体の内容ではなく、外部リソース（画像ファイルや動画ファイルなど）によって定義されているためです。詳しくは[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)を参照してください。
 
 > [!NOTE]
 > この節で仕上げた例は、 [Github で実行する](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html)ことができます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)も参照してください）。
@@ -126,7 +126,7 @@ l10n:
 
 ### 幅と高さ
 
-[`width`](/ja/docs/Web/HTML/Element/img#width) 属性と [`height`](/ja/docs/Web/HTML/Element/img#height) 属性を使用して、画像の幅と高さを指定することができます。これらは単位なしの整数で指定され、画像の幅と高さをピクセル単位で表します。
+[`width`](/ja/docs/Web/HTML/Reference/Elements/img#width) 属性と [`height`](/ja/docs/Web/HTML/Reference/Elements/img#height) 属性を使用して、画像の幅と高さを指定することができます。これらは単位なしの整数で指定され、画像の幅と高さをピクセル単位で表します。
 
 画像の幅と高さは、いくつかの方法で探すことができます。例えば Mac では、 <kbd>Cmd</kbd> + <kbd>I</kbd> を使用して画像ファイルの表示情報を取得することができます。この例に戻ると、次のようになります。
 
@@ -455,7 +455,7 @@ textarea.onkeyup = function () {
 {{htmlelement("figcaption")}} 要素は、キャプションが {{htmlelement("figure")}} 要素の他のコンテンツを説明していることをブラウザーと支援技術に伝えます。
 
 > [!NOTE]
-> アクセシビリティの観点から、キャプションと [`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、[`alt`](/ja/docs/Web/HTML/Element/img#alt) テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと `alt` テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
+> アクセシビリティの観点から、キャプションと [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストには明確な役割があります。キャプションは画像を見ることができる人にも利益をもたらしますが、[`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) テキストは欠けている画像と同じ機能を提供します。したがって、キャプションと `alt` テキストは、画像がなくなったときに両方が表示されるため、同じことを言うべきではありません。ブラウザーで画像をオフにして見た目を確認してみてください。
 
 図表は画像である必要はありません。それは次のようにコンテンツの独立した単位です。
 
@@ -620,7 +620,7 @@ p {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images) を見てください。
 
 ## まとめ
 

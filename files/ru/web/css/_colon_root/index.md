@@ -1,5 +1,5 @@
 ---
-title: ":root"
+title: :root
 slug: Web/CSS/:root
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/:root
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:root` находит корневой элемент дерева документа. Применимо к HTML, `:root` находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу `html`, но его [специфичность](/ru/docs/Web/CSS/Specificity) выше.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:root` находит корневой элемент дерева документа. Применимо к HTML, `:root` находит элемент {{HTMLElement("html")}} и идентичен селектору по тегу `html`, но его [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity) выше.
 
 ## Пример
 

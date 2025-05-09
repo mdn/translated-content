@@ -1,5 +1,5 @@
 ---
-title: "-webkit-transform-2d"
+title: -webkit-transform-2d
 slug: Web/CSS/@media/-webkit-transform-2d
 ---
 
@@ -32,7 +32,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 }
 ```
 
-このメディア機能は WebKit でのみ対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリを使用してください。
+このメディア機能は WebKit でのみ対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ```css
 @supports (-webkit-transform: translate(100px, 100px)) {

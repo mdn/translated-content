@@ -1,12 +1,9 @@
 ---
 title: 作者详情页面
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
-original_slug: Learn/Server-side/Express_Nodejs/Displaying_data/Author_detail_page
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
-
-{{LearnSidebar}}
 
 作者详情页面需要呈现指定作者（`Author`）的信息，使用（自动生成的）`_id` 字段值进行标识，接着是这个作者的所有书本（`Book`）对象的列表。
 

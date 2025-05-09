@@ -420,7 +420,7 @@ This article offers a list of events that can be sent; some are standard events 
       <td>
         <p>
           Events related to installation of
-          <a href="/zh-TW/docs/Web/Manifest">progressive web app manifests</a>.
+          <a href="/zh-TW/docs/Web/Progressive_web_apps/Manifest">progressive web app manifests</a>.
         </p>
       </td>
       <td>
@@ -481,8 +481,8 @@ This article offers a list of events that can be sent; some are standard events 
         <a href="/zh-TW/docs/Web/API/TextTrackList#events"
           ><code>TextTrackList</code></a
         >,
-        <a href="/zh-TW/docs/Web/HTML/Element/audio#events">Element/audio</a>,
-        <a href="/zh-TW/docs/Web/HTML/Element/video#events">Element/video</a>.
+        <a href="/zh-TW/docs/Web/HTML/Reference/Elements/audio#events">Element/audio</a>,
+        <a href="/zh-TW/docs/Web/HTML/Reference/Elements/video#events">Element/video</a>.
       </td>
     </tr>
     <tr>

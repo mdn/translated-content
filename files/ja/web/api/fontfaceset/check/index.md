@@ -37,15 +37,11 @@ check(font, text)
 次の例では、新しい `FontFace` を作成し、それを `FontFaceSet` に追加します。
 
 ```js
-const font = new FontFace(
-  "molot",
-  "url(https://interactive-examples.mdn.mozilla.net/media/fonts/molot.woff2)",
-  {
-    style: "normal",
-    weight: "400",
-    stretch: "condensed",
-  },
-);
+const font = new FontFace("molot", "url(/shared-assets/fonts/molot.woff2)", {
+  style: "normal",
+  weight: "400",
+  stretch: "condensed",
+});
 
 document.fonts.add(font);
 ```

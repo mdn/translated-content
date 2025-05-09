@@ -3,8 +3,6 @@ title: 页面类型
 slug: MDN/Writing_guidelines/Page_structures/Page_types
 ---
 
-{{MDNSidebar}}
-
 MDN 有许多复用的页面类型。本文描述了这些页面类型和它们的作用，并给出了每个页面类型的示例和创建新页面时使用的模板。
 
 MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别。
@@ -96,7 +94,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 ### 示例
 
-- [`<video>` 元素](/zh-CN/docs/Web/HTML/Element/video)
+- [`<video>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/video)
 
 ### 模板
 
@@ -108,7 +106,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 ### 示例
 
-- [\<g> 元素](/zh-CN/docs/Web/SVG/Element/g)
+- [\<g> 元素](/zh-CN/docs/Web/SVG/Reference/Element/g)
 
 ### 模板
 
@@ -154,7 +152,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 ### 示例
 
-- [Cache-Control 标头](/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+- [Cache-Control 标头](/zh-CN/docs/Web/HTTP/Reference/Headers/Cache-Control)
 
 ### 模板
 
@@ -196,5 +194,5 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 - [CSS](/zh-CN/docs/Web/CSS)
 - [Web API](/zh-CN/docs/Web/API)
 - [JavaScript](/zh-CN/docs/Web/JavaScript)
-- [学习区](/zh-CN/docs/Learn)
+- [学习区](/zh-CN/docs/Learn_web_development)
 - [为 MDN 做贡献](/zh-CN/docs/MDN/Community/Contributing)

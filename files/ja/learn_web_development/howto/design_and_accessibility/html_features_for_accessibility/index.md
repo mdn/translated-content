@@ -12,7 +12,7 @@ l10n:
 
 ## リンクテキスト
 
-自己説明的でないリンクがある場合、またはリンク先をより詳しく説明することで恩恵を受けることができる場合、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 属性を使用してリンクに情報を追加することができます。
+自己説明的でないリンクがある場合、またはリンク先をより詳しく説明することで恩恵を受けることができる場合、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) 属性を使用してリンクに情報を追加することができます。
 
 ```html-nolint
 <p>
@@ -58,7 +58,7 @@ l10n:
 
 ## 画像の alt 属性
 
-すべての画像には [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性を設定すべきです。画像が純粋に装飾であり、文書のコンテンツやコンテキストに何の意味も与えない場合、 `alt` 属性は空ですが存在する必要があります。オプションとして、 [`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) を追加することもできます。それ以外の画像にはすべて `alt` 属性を設定し、他のコンテンツは読めても画像が見えないユーザーに役立つ方法で[画像を説明する代替テキスト](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)を提供すべきです。画像を読み込むことができない人に、画像をどのように説明するかを考えてみてください。それが `alt` 属性の値として記載すべき情報です。
+すべての画像には [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性を設定すべきです。画像が純粋に装飾であり、文書のコンテンツやコンテキストに何の意味も与えない場合、 `alt` 属性は空ですが存在する必要があります。オプションとして、 [`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) を追加することもできます。それ以外の画像にはすべて `alt` 属性を設定し、他のコンテンツは読めても画像が見えないユーザーに役立つ方法で[画像を説明する代替テキスト](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)を提供すべきです。画像を読み込むことができない人に、画像をどのように説明するかを考えてみてください。それが `alt` 属性の値として記載すべき情報です。
 
 ```html
 <!-- 装飾的な画像 -->
@@ -69,7 +69,7 @@ l10n:
   role="img" />
 ```
 
-同じコンテンツに対する `alt` 属性であっても、文脈によって異なるかもしれません。次の例では、 HTML の [`<progress>`](/ja/docs/Web/HTML/Element/progress) 要素の使い方を開発者に教える文書のページ読み込みの進捗を表示するために、進捗バーの代わりにアニメーション gif が使われています。
+同じコンテンツに対する `alt` 属性であっても、文脈によって異なるかもしれません。次の例では、 HTML の [`<progress>`](/ja/docs/Web/HTML/Reference/Elements/progress) 要素の使い方を開発者に教える文書のページ読み込みの進捗を表示するために、進捗バーの代わりにアニメーション gif が使われています。
 
 ```html
 <img alt="20% complete" src="load-progress.gif" />
@@ -80,7 +80,7 @@ l10n:
 
 ## ARIA ロール属性
 
-既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
+既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />

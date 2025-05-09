@@ -1,9 +1,8 @@
 ---
 title: CSS 生成コンテンツの使用
 slug: Learn_web_development/Howto/Solve_CSS_problems/Generated_content
-original_slug: Learn/CSS/Howto/Generated_content
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}
@@ -23,7 +22,7 @@ CSS の重要な利点の一つが、文書のスタイルをそのコンテン�
 
 ### テキストコンテンツ
 
-CSS では、要素の前後にテキストコンテンツを挿入したり、{{cssxref("display", "display: list-item;") }} で {{HTMLElement('li')}} などの要素の前にリスト項目のマーカー（丸印や数字など）の内容を変更することができます。これを指定するには、ルールを作り、セレクターに {{ cssxref("::before") }}、{{ cssxref("::after") }}、{{cssxref("::marker")}} のいずれかを追加します。宣言では、{{ cssxref("content") }} プロパティを指定し、その値としてテキストコンテンツを指定します。
+CSS では、要素の前後にテキストコンテンツを挿入したり、 {{HTMLElement('li')}} やその他の要素に {{cssxref("display", "display: list-item;") }} をつけて、リスト項目のマーカー（丸印や数字など）の内容を変更することができます。これを指定するには、ルールを作り、セレクターに {{ cssxref("::before") }}、{{ cssxref("::after") }}、{{cssxref("::marker")}} のいずれかを追加します。宣言では、{{ cssxref("content") }} プロパティを指定し、その値としてテキストコンテンツを指定します。
 
 #### HTML
 
@@ -57,18 +56,16 @@ A text where I need to <span class="ref">something</span>
 
 #### HTML
 
-```html
+```html live-sample___image_content
 <a href="developer.mozilla.org" class="glossary">developer.mozilla.org</a>
 ```
 
 #### CSS
 
-```css
+```css live-sample___image_content
 a.glossary::after {
   content: " " url("glossary-icon.gif");
 }
 ```
-
-#### 出力結果
 
 {{ EmbedLiveSample('Image_content', 600, 40) }}

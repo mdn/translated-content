@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/supportedLocal
 
 **`Intl.DateTimeFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく日時の書式で対応されているものを含む配列を返します。
 
-{{EmbedInteractiveExample("pages/js/intl-datetimeformat-supportedlocalesof.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.supportedLocalesOf", "shorter")}}
+
+```js interactive-example
+const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];
+const options1 = { localeMatcher: "lookup" };
+
+console.log(Intl.DateTimeFormat.supportedLocalesOf(locales1, options1));
+// Expected output: Array ["id-u-co-pinyin", "de-ID"]
+// (Note: the exact output may be browser-dependent)
+```
 
 ## 構文
 

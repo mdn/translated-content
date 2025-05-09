@@ -44,7 +44,7 @@ Gecko 24 を搭載した Firefox 24 は米国時間 2013 年 9 月 17 日にリ�
 ### MathML
 
 - 例えば {{MathMLElement("math")}} 要素や {{MathMLElement("mrow")}} 要素で、式の書字方向を制御する `dir` 属性が、{{cssxref("direction")}} CSS プロパティを使用することと同等になりました。
-- 等号 ("=") を[引き延ばすことが可能](/ja/docs/Web/MathML/Element/mo#attr-stretchy)になりました。
+- 等号 ("=") を[引き延ばすことが可能](/ja/docs/Web/MathML/Reference/Element/mo#attr-stretchy)になりました。
 - {{MathMLElement("menclose")}} 要素で、`notation` 属性に値 "`updiagonalarrow`" を追加しました。
 
 ## 関連情報

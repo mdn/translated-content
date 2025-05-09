@@ -7,9 +7,23 @@ slug: Web/JavaScript/Reference/Functions/rest_parameters
 
 La sintaxis de los **parámetros rest** nos permiten representar un número indefinido de argumentos como un array.
 
-{{EmbedInteractiveExample("pages/js/functions-restparameters.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}
 
-La fuente interactiva de este ejemplo es almacenado en un repositorio de GitHub. Si a ti te gustaría contribuir al proyecto de ejemplos interactivos, por favor clona este repositorio <https://github.com/mdn/interactive-examples> y envíanos un pull-request.
+```js interactive-example
+function sum(...theArgs) {
+  let total = 0;
+  for (const arg of theArgs) {
+    total += arg;
+  }
+  return total;
+}
+
+console.log(sum(1, 2, 3));
+// Expected output: 6
+
+console.log(sum(1, 2, 3, 4));
+// Expected output: 10
+```
 
 ## Sintaxis
 

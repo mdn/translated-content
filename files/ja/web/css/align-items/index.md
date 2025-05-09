@@ -2,14 +2,58 @@
 title: align-items
 slug: Web/CSS/align-items
 l10n:
-  sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
+  sourceCommit: a731cff4afe1132e84c29c3044c9ac4a58888f46
 ---
 
 {{CSSRef}}
 
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("cross axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("grid areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 このデモは、グリッドレイアウトを使用して `align-items` のいくつかの値の動作を示しています。
 
@@ -52,7 +96,7 @@ align-items: unset;
 
   - : このキーワードの効果は現在のレイアウトモードに依存します。
 
-    - 絶対位置指定レイアウトでは、このキーワードは*置換*絶対位置指定ボックスにおける `start` のように動作し、*他のすべての*絶対位置指定ボックスでは `stretch` として動作します。
+    - 絶対位置指定レイアウトでは、このキーワードは置換絶対位置指定ボックスにおける `start` のように動作し、他のすべての絶対位置指定ボックスでは `stretch` として動作します。
     - 絶対位置指定レイアウトの静的位置では、キーワードは `stretch` として動作します。
     - フレックスアイテムについては、このキーワードは `stretch` として動作します。
     - グリッドアイテムについては、このキーワードは `stretch` の一つと似た動作をしますが、ボックスに{{glossary("aspect ratio","アスペクト比")}}や内在的な寸法がある場合は、 `start` のように動作します。
@@ -98,7 +142,7 @@ align-items: unset;
 
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
-また、フレックスボックスのために定義された 2 つの値があります。これらは[フレックスモデルの軸](/ja/docs/Learn/CSS/CSS_layout/Flexbox#フレックスモデル)の概念に基づいており、グリッドレイアウトでも同様に動作します。
+また、フレックスボックスのために定義された 2 つの値があります。これらは[フレックスモデルの軸](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)の概念に基づいており、グリッドレイアウトでも同様に動作します。
 
 - `flex-start`
 

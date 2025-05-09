@@ -1,10 +1,9 @@
 ---
 title: 介绍完整的工具链
 slug: Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Package_management","Learn_web_development/Extensions/Client-side_tools/Deployment", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本系列的最后几篇文章中，我们将通过演示如何构建一个示例案例工具链来巩固你的工具知识。我们将从设置合理的开发环境和设置转换工具开始，一直到在 Netlify 上实际部署应用程序。在本文中，我们将介绍研究案例、设置开发环境和设置代码构建转换工具。
 

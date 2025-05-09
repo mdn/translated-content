@@ -56,7 +56,7 @@ sayings.size; // 0
 
 ### WeakMap オブジェクト
 
-{{jsxref("WeakMap")}} キーと値のペアの集合であり、キーはオブジェクトまたは[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でなければならず、値は任意の [JavaScript 型](/ja/docs/Web/JavaScript/Data_structures)で、キーへの強い参照を作成しません。つまり、オブジェクトが `WeakMap` のキーとして存在しても、そのオブジェクトがガベージコレクションの対象となることを妨げることはありません。キーとして使用されていたオブジェクトが回収された場合、そのオブジェクトに対応する `WeakMap` 内の値も、他の場所で強く参照されていない限り、ガベージコレクションの対象となります。 `WeakMap` のキーとして使用できる唯一のプリミティブ型はシンボル（より特定の[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)）です。非登録シンボルは一意であることが保証されており、再作成できないためです。
+{{jsxref("WeakMap")}} キーと値のペアの集合であり、キーはオブジェクトまたは[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)でなければならず、値は任意の [JavaScript 型](/ja/docs/Web/JavaScript/Guide/Data_structures)で、キーへの強い参照を作成しません。つまり、オブジェクトが `WeakMap` のキーとして存在しても、そのオブジェクトがガベージコレクションの対象となることを妨げることはありません。キーとして使用されていたオブジェクトが回収された場合、そのオブジェクトに対応する `WeakMap` 内の値も、他の場所で強く参照されていない限り、ガベージコレクションの対象となります。 `WeakMap` のキーとして使用できる唯一のプリミティブ型はシンボル（より特定の[非登録シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#グローバルシンボルレジストリー内の共有シンボル)）です。非登録シンボルは一意であることが保証されており、再作成できないためです。
 
 `WeakMap` API は本質的には `Map` API と同じです。
 しかし、 `WeakMap` ではキーの生存状況を監視できないため、列挙もできません。そのため、 `WeakMap` 内のキーの一覧を取得する方法はありません。もしそのようなメソッドがあったとしても、一覧はガベージコレクションの状態に依存し、不確定性が生まれてしまいます。
@@ -144,7 +144,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ## Map と Set におけるキーと値の等値性
 
-`Map` オブジェクトのキーの等値性と `Set` オブジェクトの値の等値性は両方とも、「[SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value-zero_equality)」に基づいています。
+`Map` オブジェクトのキーの等値性と `Set` オブジェクトの値の等値性は両方とも、「[SameValueZero アルゴリズム](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value-zero_equality)」に基づいています。
 
 - 等値性は原則として同値比較演算子 `===` のように判定します。
 - `-0` と `+0` は等しいと見なします。

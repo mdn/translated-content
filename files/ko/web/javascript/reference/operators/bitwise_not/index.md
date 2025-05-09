@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_NOT
 
 비트 NOT 연산자(`~`)는 피연산자의 비트를 반전시킵니다. 다른 비트 연산자와 마찬가지로 피연산자를 32비트 정수로 변환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-not.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise NOT")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = -3; // 11111111111111111111111111111101
+
+console.log(~a); // 11111111111111111111111111111010
+// Expected output: -6
+
+console.log(~b); // 00000000000000000000000000000010
+// Expected output: 2
+```
 
 ## 구문
 
@@ -65,4 +76,4 @@ After:              10100000000000000110000000000001
 
 ## 같이 보기
 
-- [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%ED%95%A0%EB%8B%B9_%EC%97%B0%EC%82%B0%EC%9E%90)
+- [비트 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators#%ED%95%A0%EB%8B%B9_%EC%97%B0%EC%82%B0%EC%9E%90)

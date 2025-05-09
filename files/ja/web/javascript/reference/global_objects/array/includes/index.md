@@ -9,7 +9,22 @@ l10n:
 
 **`includes()`** は {{jsxref("Array")}} インスタンスのメソッドで、特定の要素が配列に含まれているかどうかを `true` または `false` で返します。
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## 構文
 
@@ -34,7 +49,7 @@ includes(searchElement, fromIndex)
 
 ## 解説
 
-`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
+`includes()` は `searchElement` を [SameValueZero](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#同値ゼロ等価性) アルゴリズムを使用して比較します。ゼロの値は符号に関わらず、すべて等しい（すなわち、`-0` は `0` と等しい）とみなされますが、`false` は `0` と同じとはみなされ*ません*。 [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/NaN) は正しく検索することができます。
 
 [疎配列](/ja/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays)で使用する場合、 `includes()` メソッドは空のスロットを `undefined` という値があるかのように反復処理します。
 

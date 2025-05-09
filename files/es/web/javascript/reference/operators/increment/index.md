@@ -9,7 +9,21 @@ l10n:
 
 El operador de **incremento (`++`)** incrementa (agrega uno a) su operando y retorna el valor antes o despues del incremento, dependiendo de dónde está posicionado el operador.
 
-{{EmbedInteractiveExample("pages/js/expressions-increment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+
+```js interactive-example
+let x = 3;
+const y = x++;
+
+console.log(`x:${x}, y:${y}`);
+// Expected output: "x:4, y:3"
+
+let a = 3;
+const b = ++a;
+
+console.log(`a:${a}, b:${b}`);
+// Expected output: "a:4, b:4"
+```
 
 ## Sintaxis
 

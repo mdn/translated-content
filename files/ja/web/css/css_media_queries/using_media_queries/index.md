@@ -9,7 +9,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 メディアクエリーは以下の用途で使用されます。
 
-- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)により、条件付きでスタイルを適用する。
+- [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)により、条件付きでスタイルを適用する。
 - {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
 - [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
 
@@ -34,7 +34,7 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
   また、複数のメディアクエリーをカンマで区切って 1 つのルールにまとめることもできます。
 
 メディア種別（指定されている場合）が文書を表示する端末と照合され、かつ、すべてのメディア機能式が `true` と計算されると、メディアクエリーは true と計算されます。
-未知のメディア種別を含むクエリは常に false となります。
+未知のメディア種別を含むクエリーは常に false となります。
 
 > **メモ:** {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
 > ただし、その内容は、クエリーの結果が `true` にならない限り適用されません。

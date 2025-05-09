@@ -14,13 +14,13 @@ original_slug: Learn/Performance/Web_Performance_Basics
 - Start with learning the [critical rendering path](/ja/docs/Web/Performance/Critical_rendering_path) of the browser. Knowing this will help you understand how to improve the performance of the site.
 - Using [resource hints](/ja/docs/Web/Performance/Controlling_resource_delivery_with_resource_hints) such as `rel=preconnect, rel=dns-prefetch, rel=prefetch, and rel=preload`
 - Keep the size of Javascript to a [minimum](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4). Only use as much Javascript as needed for the current page.
-- [CSS](/ja/docs/Learn/Performance/CSS) performance factors
+- [CSS](/ja/docs/Learn_web_development/Extensions/Performance/CSS) performance factors
 - Use [HTTP/2](/ja/docs/Learn/Performance/HTTP2) on your server (or CDN).
 - Use a CDN for resources which can reduce load times significantly.
 - Compress your resources using [gzip](https://www.gnu.org/software/gzip/), [Brotli](https://github.com/google/brotli), and [Zopfli](https://github.com/google/zopfli).
 - Image optimization (use CSS animation, or SVG if possible).
-- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the [`loading`](/ja/docs/Web/HTML/Element/img#loading) attribute on the {{HTMLElement("img")}} element
-- It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn/Performance/Perceived_performance).
+- Lazy loading parts of your application outside the viewport. If you do, have a backup plan for SEO (e.g render full page for bot traffic); for example, by using the [`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) attribute on the {{HTMLElement("img")}} element
+- It is also crucial to realize what is really important to your users. It might not be absolute timing, but [user perception](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance).
 
 ## Quick Wins
 
@@ -49,7 +49,7 @@ The downside with this approach is the flash of unstyled text (FOUT.) The simpli
 
 ### Javascript
 
-Avoid Javascript blocking by using the [async](/ja/docs/Web/HTML/Element/script) or [defer](/ja/docs/Web/HTML/Element/script) attributes, or link javascript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
+Avoid Javascript blocking by using the [async](/ja/docs/Web/HTML/Reference/Elements/script) or [defer](/ja/docs/Web/HTML/Reference/Elements/script) attributes, or link javascript assets after the page's DOM elements. Javascript only block rendering for elements that appear after the script tag in the DOM tree.
 
 ### Web Fonts
 

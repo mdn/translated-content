@@ -14,7 +14,7 @@ original_slug: Learn/JavaScript/First_steps/What_is_JavaScript
 
 ## Una definición de alto nivel
 
-JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales ([HTML](/es/docs/Learn/HTML) y [CSS](/es/docs/Learn/CSS)) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
+JavaScript es un lenguaje de programación o de secuencias de comandos que te permite implementar funciones complejas en páginas web, cada vez que una página web hace algo más que sentarse allí y mostrar información estática para que la veas, muestra oportunas actualizaciones de contenido, mapas interactivos, animación de Gráficos 2D/3D, desplazamiento de máquinas reproductoras de vídeo, etc., puedes apostar que probablemente JavaScript está involucrado. Es la tercera capa del pastel de las tecnologías web estándar, dos de las cuales ([HTML](/es/docs/Learn_web_development/Core/Structuring_content) y [CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)) hemos cubierto con mucho más detalle en otras partes del Área de aprendizaje.
 
 ![](cake.png)
 
@@ -95,7 +95,7 @@ Las **APIs del navegador** están integradas en tu navegador web y pueden expone
 - [APIs de audio y video](/es/docs/Web/Aplicaciones/Fundamentals/Audio_and_video_delivery) como {{domxref("HTMLMediaElement")}} y {{domxref("WebRTC API", "WebRTC")}} te permiten hacer cosas realmente interesantes con multimedia, como reproducir audio y video directamente en una página web, o tomar video de tu cámara web y mostrarlo en la computadora de otra persona (prueba nuestra sencilla [demostración instantánea](https://chrisdavidmills.github.io/snapshot/) para hacerte una idea).
 
 > [!NOTE]
-> Muchas de las demostraciones anteriores no funcionarán en un navegador antiguo — al experimentar, es una buena idea utilizar un navegador moderno como Firefox, Chrome, Edge u Opera para ejecutar tu código. Deberás considerar las [pruebas en varios navegadores](/es/docs/Learn/Tools_and_testing/Cross_browser_testing) con más detalle cuando estés más cerca de entregar el código de producción (es decir, código real que usarán los clientes reales).
+> Muchas de las demostraciones anteriores no funcionarán en un navegador antiguo — al experimentar, es una buena idea utilizar un navegador moderno como Firefox, Chrome, Edge u Opera para ejecutar tu código. Deberás considerar las [pruebas en varios navegadores](/es/docs/Learn_web_development/Extensions/Testing) con más detalle cuando estés más cerca de entregar el código de producción (es decir, código real que usarán los clientes reales).
 
 Las **APIs de terceros** no están integradas en el navegador de forma predeterminada y, por lo general, debes obtener su código e información de algún lugar de la Web. Por ejemplo:
 
@@ -103,7 +103,7 @@ Las **APIs de terceros** no están integradas en el navegador de forma predeterm
 - La [API de Google Maps](https://developers.google.com/maps/) y la [API de OpenStreetMap](https://wiki.openstreetmap.org/wiki/API) te permiten insertar mapas personalizados en tu sitio web y otras funciones similares.
 
 > [!NOTE]
-> Estas APIs son avanzadas y no cubriremos ninguna de ellas en este módulo. Puedes obtener más información sobre estas en nuestro [módulo de APIs web de lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs).
+> Estas APIs son avanzadas y no cubriremos ninguna de ellas en este módulo. Puedes obtener más información sobre estas en nuestro [módulo de APIs web de lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs).
 
 ¡También hay mucho más disponible! Sin embargo, no te emociones demasiado todavía. No podrás crear el próximo Facebook, Google Maps o Instagram después de estudiar JavaScript durante 24 horas — hay muchos conceptos básicos que cubrir primero. Y es por eso que estás aquí — ¡sigamos adelante!
 
@@ -111,7 +111,7 @@ Las **APIs de terceros** no están integradas en el navegador de forma predeterm
 
 Aquí, de hecho, comenzaremos a ver algo de código y, mientras lo hacemos, exploraremos lo que realmente sucede cuando ejecutas JavaScript en tu página.
 
-Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/docs/Learn/CSS/First_steps/How_CSS_works#how_does_css_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
+Recapitulemos brevemente sobre la historia de lo que sucede cuando cargas una página web en un navegador (de lo que hablamos por primera vez en nuestro artículo [Cómo funciona CSS](/es/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_does_css_actually_work)). Cuando cargas una página web en tu navegador, estás ejecutando tu código (HTML, CSS y JavaScript) dentro de un entorno de ejecución (la pestaña del navegador). Esto es como una fábrica que toma materias primas (el código) y genera un producto (la página web).
 
 ![](execution.png)
 
@@ -141,7 +141,7 @@ function updateName() {
 
 Aquí seleccionamos un párrafo de texto (línea 1), luego adjuntamos un detector de eventos (línea 3) de modo que cuando se hace clic en el párrafo, el bloque de código `updateName()` (líneas 5-8) se ejecuta. El bloque de código `updateName()` (estos tipos de bloques de código reutilizables se denominan "funciones") pide al usuario un nuevo nombre y luego inserta ese nombre en el párrafo para actualizar la pantalla.
 
-Si cambiaras el orden de las dos primeras líneas de código, ya no funcionaría — en su lugar, obtendrías un error en la [consola del desarrollador del navegador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`. Esto significa que el objeto `para` aún no existe, por lo que no podemos agregarle un detector de eventos.
+Si cambiaras el orden de las dos primeras líneas de código, ya no funcionaría — en su lugar, obtendrías un error en la [consola del desarrollador del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) — `TypeError: para is undefined`. Esto significa que el objeto `para` aún no existe, por lo que no podemos agregarle un detector de eventos.
 
 > [!NOTE]
 > Este es un error muy común; debes tener cuidado de que los objetos a los que se hace referencia en tu código existan antes de intentar hacer algo con ellos.
@@ -160,7 +160,7 @@ Ambos tipos de lenguaje tienen ventajas, pero no las abordaremos ahora.
 
 También puedes escuchar los términos código **de lado del servidor** y **de lado del cliente**, especialmente en el contexto del desarrollo web. El código de lado del cliente es un código que se ejecuta en la computadora del usuario — cuando se ve una página web, el código de lado del cliente de la página se descarga, luego se ejecuta y se muestra en el navegador. En este módulo estamos hablando explícitamente de **JavaScript de lado del cliente**.
 
-El código de lado del servidor, por otro lado, se ejecuta en el servidor, luego sus resultados se descargan y se muestran en el navegador. Ejemplos de lenguajes web populares de lado del servidor incluyen a ¡PHP, Python, Ruby, ASP.NET y... JavaScript! JavaScript también se puede utilizar como lenguaje de lado del servidor, por ejemplo, en el popular entorno Node.js — puedes obtener más información sobre JavaScript de lado del servidor en nuestro tema [Sitios web dinámicos — Programación de lado del servidor](/es/docs/Learn/Server-side).
+El código de lado del servidor, por otro lado, se ejecuta en el servidor, luego sus resultados se descargan y se muestran en el navegador. Ejemplos de lenguajes web populares de lado del servidor incluyen a ¡PHP, Python, Ruby, ASP.NET y... JavaScript! JavaScript también se puede utilizar como lenguaje de lado del servidor, por ejemplo, en el popular entorno Node.js — puedes obtener más información sobre JavaScript de lado del servidor en nuestro tema [Sitios web dinámicos — Programación de lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side).
 
 ### Código dinámico versus estático
 
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Este es un detector de eventos, que escucha el evento "DOMContentLoaded" del navegador, lo cual significa que el cuerpo HTML está completamente cargado y analizado. El JavaScript dentro de este bloque no se ejecutará hasta que se active ese evento, por lo que se evita el error ([aprenderás sobre los eventos](/es/docs/Learn/JavaScript/Building_blocks/Events) más adelante en el curso).
+Este es un detector de eventos, que escucha el evento "DOMContentLoaded" del navegador, lo cual significa que el cuerpo HTML está completamente cargado y analizado. El JavaScript dentro de este bloque no se ejecutará hasta que se active ese evento, por lo que se evita el error ([aprenderás sobre los eventos](/es/docs/Learn_web_development/Core/Scripting/Events) más adelante en el curso).
 
 En el ejemplo externo, usamos una función de JavaScript más moderno para resolver el problema, el atributo `defer`, que le dice al navegador que continúe descargando el contenido HTML una vez que se ha alcanzado la etiqueta del elemento `<script>`.
 
@@ -401,6 +401,6 @@ for (let i = 0; i < buttons.length; i++) {
 
 Así que ahí tienes, tu primer paso en el mundo de JavaScript. Comenzamos solo con teoría, para comenzar a acostumbrarte a por qué usarías JavaScript y qué tipo de cosas puedes hacer con él. En el camino, viste algunos ejemplos de código y aprendiste cómo encaja JavaScript con el resto del código en tu sitio web, entre otras cosas.
 
-JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn/JavaScript/First_steps/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
+JavaScript puede parecer un poco abrumador en este momento, pero no te preocupes — en este curso, te guiaremos en pasos simples que tendrán sentido en el futuro. En el próximo artículo, [nos sumergiremos directamente en lo práctico](/es/docs/Learn_web_development/Core/Scripting/A_first_splash), lo que te permitirá comenzar directamente y crear tus propios ejemplos de JavaScript.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

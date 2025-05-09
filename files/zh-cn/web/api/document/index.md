@@ -7,7 +7,7 @@ slug: Web/API/Document
 
 **`Document`** 接口表示任何在浏览器中载入的网页，并作为网页内容的入口，也就是 [DOM 树](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)。
 
-DOM 树包含了像 {{HTMLElement("body")}}、{{HTMLElement("table")}} 这样的元素，以及[大量其他元素](/zh-CN/docs/Web/HTML/Element)。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL，如何在文档中创建一个新的元素这样的问题。
+DOM 树包含了像 {{HTMLElement("body")}}、{{HTMLElement("table")}} 这样的元素，以及[大量其他元素](/zh-CN/docs/Web/HTML/Reference/Elements)。它向网页文档本身提供了全局操作功能，能解决如何获取页面的 URL，如何在文档中创建一个新的元素这样的问题。
 
 {{inheritanceDiagram}}
 

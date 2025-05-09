@@ -31,7 +31,7 @@ El elemento {{Glossary("Head", "head")}} de un documento HTML es la parte que no
 
 ## ¿Qué hay en la cabecera HTML?
 
-Vamos a revisar el [documento HTML que se revisó en el artículo anterior](/es/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
+Vamos a revisar el [documento HTML que se revisó en el artículo anterior](/es/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#anatomy_of_an_html_document):
 
 ```html
 <!doctype html>
@@ -55,7 +55,7 @@ La cabecera HTML es el contenido del elemento {{htmlelement("head")}} — a dife
 </head>
 ```
 
-En páginas más grandes, sin embargo, la cabecera puede llegar a contener bastantes elementos. Prueba a ir a algunos de tus sitios web favoritos y comprueba el contenido de la cabecera usando las [herramientas para el desarrollador](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Nuestro objetivo aquí no es mostrarte cómo usar todo lo que puedes incluir en la cabecera, sino enseñarte cómo usar los elementos principales que vas a incluir en la cabecera y que te familiarices con ellos. Empecemos.
+En páginas más grandes, sin embargo, la cabecera puede llegar a contener bastantes elementos. Prueba a ir a algunos de tus sitios web favoritos y comprueba el contenido de la cabecera usando las [herramientas para el desarrollador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Nuestro objetivo aquí no es mostrarte cómo usar todo lo que puedes incluir en la cabecera, sino enseñarte cómo usar los elementos principales que vas a incluir en la cabecera y que te familiarices con ellos. Empecemos.
 
 ## Añadir un título
 
@@ -221,25 +221,18 @@ Hoy día hay un montón de otros tipos de iconos a tener presentes. Por ejemplo,
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone con pantalla de alta resolución: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- iPad de primera y segunda generación: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Dispositivos iPhone sin pantalla Retina, iPod Touch y Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- favicon básico -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 Los comentarios explican para qué se usa cada icono (estos elementos abarcan situaciones como aportar un buen icono de alta resolución para usarlo cuando la página web se guarda en la página de inicio de un iPad).
@@ -259,7 +252,7 @@ Prácticamente todos los sitios web usan {{Glossary("CSS")}} para darles un buen
   <link rel="stylesheet" href="my-css-file.css" />
   ```
 
-- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn/JavaScript/First_steps/What_is_JavaScript#script_loading_strategies)).
+- El elemento `<script>` también debería ir en el `head`, y debería incluir un atributo `src` con la ruta al JavaScript que quieres cargar, y `defer`, que básicamente le dice al navegador que cargue el JavaScript al mismo tiempo que el HTML de la página. Esto es útil porque hace que todo el HTML se cargue antes de ejecutar el JavaScript, para que no haya errores porque el JavaScript ha intentado acceder a un elemento HTML que todavía no existe. De hecho hay múltiples formas de gestionar la carga del JavaScript en una página, pero esta es «a prueba de bombas» para los navegadores modernos (para el resto de las formas, lee el artículo [Estrategias de carga de scripts](/es/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#script_loading_strategies)).
 
   ```html
   <script src="my-js-file.js"></script>

@@ -78,7 +78,7 @@ slug: Mozilla/Firefox/Releases/68
 
 #### Удалённые
 
-- [`<meta http-equiv="set-cookie">`](/ru/docs/Web/HTML/Element/meta) больше не поддерживается ([Firefox bug 1457503](https://bugzil.la/1457503)).
+- [`<meta http-equiv="set-cookie">`](/ru/docs/Web/HTML/Reference/Elements/meta) больше не поддерживается ([Firefox bug 1457503](https://bugzil.la/1457503)).
 
 ### CSS
 

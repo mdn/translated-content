@@ -15,5 +15,5 @@ l10n:
 - MDN 上的[超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)教程
 - [HTML 文档中的链接——W3C](https://www.w3.org/TR/1999/REC-html401-19991224/struct/links.html)
 - [HTML a——超链接——W3C](https://w3c.github.io/html-reference/a.html)
-- [MDN 上的 `<a>`](/zh-CN/docs/Web/HTML/Element/a)
-- [MDN 上的 `<link>`](/zh-CN/docs/Web/HTML/Element/link)
+- [MDN 上的 `<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a)
+- [MDN 上的 `<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link)

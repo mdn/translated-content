@@ -1,5 +1,5 @@
 ---
-title: "-moz-force-broken-image-icon"
+title: -moz-force-broken-image-icon
 slug: Web/CSS/-moz-force-broken-image-icon
 l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
@@ -14,7 +14,7 @@ l10n:
 ### 値
 
 - {{cssxref("&lt;integer&gt;")}}
-  - : プロパティの値に `1` を指定した場合、その画像に [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
+  - : プロパティの値に `1` を指定した場合、その画像に [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性があったとしても、壊れた画像アイコンが表示されます。`0` を指定した場合、通常通り `alt` 属性のみが表示されます。
 
 > [!NOTE]
 > プロパティの値に `1` を指定した場合もなお、 `alt` 属性は壊れた画像アイコンの隣に同時に表示されます。

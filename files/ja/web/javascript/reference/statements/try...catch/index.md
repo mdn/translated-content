@@ -9,7 +9,17 @@ l10n:
 
 **`try...catch`** 文は `try` ブロックと、`catch` ブロックか `finally` ブロックか、その両方から構成されます。まず `try` ブロック内のコードが実行され、そこで例外が発生すると、`catch` ブロック内のコードが実行されます。`finally` ブロック内のコードは、制御する流れが構造全体を抜ける前に、常に実行されます。
 
-{{EmbedInteractiveExample("pages/js/statement-trycatch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Try...Catch")}}
+
+```js interactive-example
+try {
+  nonExistentFunction();
+} catch (error) {
+  console.error(error);
+  // Expected output: ReferenceError: nonExistentFunction is not defined
+  // (Note: the exact output may be browser-dependent)
+}
+```
 
 ## 構文
 

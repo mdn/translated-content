@@ -238,7 +238,7 @@ body {
 
 {{EmbedLiveSample('Visualizing_the_float', '100%', 500)}}
 
-続く要素の[行ボックス](/ja/docs/Web/CSS/Visual_formatting_model#line_boxes)が短くなっているので、テキストは浮動ボックスを回り込みますが、浮動ボックスは通常フローから除かれるため、段落の周りのボックスは全幅のままになります。
+続く要素の[行ボックス](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#line_boxes)が短くなっているので、テキストは浮動ボックスを回り込みますが、浮動ボックスは通常フローから除かれるため、段落の周りのボックスは全幅のままになります。
 
 ## 浮動ボックスの解除
 
@@ -485,7 +485,7 @@ body {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Floats_skills)を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: 浮動ボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Floats)を見てください。
 
 ## まとめ
 

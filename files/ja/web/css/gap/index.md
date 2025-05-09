@@ -2,14 +2,62 @@
 title: gap
 slug: Web/CSS/gap
 l10n:
-  sourceCommit: b53905243e8de08c6295e72b6f93441fe6670e83
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
+**`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
 
-{{EmbedInteractiveExample("pages/css/gap.html")}}
+{{InteractiveExample("CSS Demo: gap")}}
+
+```css interactive-example-choice
+gap: 0;
+```
+
+```css interactive-example-choice
+gap: 10%;
+```
+
+```css interactive-example-choice
+gap: 1em;
+```
+
+```css interactive-example-choice
+gap: 10px 20px;
+```
+
+```css interactive-example-choice
+gap: calc(20px + 10%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -74,7 +122,7 @@ gap: unset;
 
 段組みコンテナーでは、最初の値で段間のすき間を定義します。 {{cssxref("column-rule-style")}} プロパティまたは {{cssxref("column-rule")}} 一括指定を用いることで、そうでなければ「空の空間」に区切り線を追加することができます。
 
-パーセント値のすき間は、常にコンテナー要素の[コンテンツボックス](/ja/docs/Learn/CSS/Building_blocks/The_box_model#ボックスの構成)のサイズに対して計算されます。コンテナーサイズを定義している場合、この挙動はレイアウトモードによらず、明確に定義され一貫しています。これら 3 つのレイアウトモード（段組み、フレックス、グリッド）は、周期的パーセント値の扱いが異なるので、 `gap` もそうなります。グリッドレイアウトでは、周期的パーセント値は、{{glossary("intrinsic size","内在サイズ")}}の寄与を決定するためにゼロに対して解決しますが、コンテンツをレイアウトするときには要素のコンテンツボックスに対して解決します。下記 2 つの例では、[明示的コンテナーサイズ](#パーセント値の_gap_値と明示的なコンテナーサイズ)と[暗黙的コンテナーサイズ](#パーセント値の_gap_値と暗黙的なコンテナーサイズ)によるパーセント値によるすき間をを例の節で示します。
+パーセント値のすき間は、常にコンテナー要素の[コンテンツボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)のサイズに対して計算されます。コンテナーサイズを定義している場合、この挙動はレイアウトモードによらず、明確に定義され一貫しています。これら 3 つのレイアウトモード（段組み、フレックス、グリッド）は、周期的パーセント値の扱いが異なるので、 `gap` もそうなります。グリッドレイアウトでは、周期的パーセント値は、{{glossary("intrinsic size","内在サイズ")}}の寄与を決定するためにゼロに対して解決しますが、コンテンツをレイアウトするときには要素のコンテンツボックスに対して解決します。下記 2 つの例では、[明示的コンテナーサイズ](#パーセント値の_gap_値と明示的なコンテナーサイズ)と[暗黙的コンテナーサイズ](#パーセント値の_gap_値と暗黙的なコンテナーサイズ)によるパーセント値によるすき間をを例の節で示します。
 
 仕様書の初期バージョンでは、このプロパティは `grid--gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid--gap` を `gap` の別名として受け入れます。
 
@@ -190,7 +238,7 @@ gap: unset;
 
 ### パーセント値の gap 値と明示的なコンテナーサイズ
 
-コンテナーに固定されたサイズが設定されている場合、すき間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、すき間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いてすき間を設定します。
+コンテナーに固定されたサイズが設定されている場合、すき間のパーセント値の計算はコンテナーのサイズに基づいて行われます。したがって、すき間の動作はすべてのレイアウトで一貫しています。次の例では、2 種類のコンテナーがあり、1 つはグリッドレイアウト、もう 1 つはフレックスレイアウトです。コンテナーには 20x20px の赤色の子が 5 つあります。どちらのコンテナーも明示的に `height: 200px` を用いて高さを 200px に設定し、 `gap: 12.5% 0` を用いてすき間を設定します。
 
 ```html live-sample___explicit_container_size
 <span>Grid</span>

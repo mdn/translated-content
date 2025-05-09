@@ -9,12 +9,12 @@ slug: Web/CSS/cursor
 
 La propiedad [CSS:cursor](/es/docs/Web/CSS/cursor) especifica el tipo de cursor que se mostrara cuando este se encuentre sobre un elemento.
 
-- [CSS:Valor_inicial](/es/docs/Web/CSS/initial_value): `CSS:auto`
+- [CSS:Valor_inicial](/es/docs/Web/CSS/CSS_cascade/Value_processing): `CSS:auto`
 - Se aplica a: todos los elementos
-- [CSS:inheritance](/es/docs/Web/CSS/Inheritance): Si
+- [CSS:inheritance](/es/docs/Web/CSS/CSS_cascade/Inheritance): Si
 - Porcentaje: N/A
 - Media: [CSS:Media:Visual](/es/docs/Web/CSS/@media), [CSS:Media:Interactivo](/es/docs/CSS/Media/Interactivo)
-- [CSS:Valor_calculado](/es/docs/Web/CSS/computed_value):como sea especificado con URLs relativos convertidos a URLs absolutos.
+- [CSS:Valor_calculado](/es/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d):como sea especificado con URLs relativos convertidos a URLs absolutos.
 
 ### Sintaxis
 

@@ -5,9 +5,34 @@ slug: Web/CSS/@layer
 
 {{CSSRef}}
 
-A [regra at (at-rule)](/pt-BR/docs/Web/CSS/At-rule) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
+A [regra at (at-rule)](/pt-BR/docs/Web/CSS/CSS_syntax/At-rule) **`@layer`** é utilizada para definir uma _camada de cascata_, também definindo a ordem de prioridade quando temos mais de uma camada.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## Sintaxe
 
@@ -195,7 +220,7 @@ No exemplo seguinte, duas camadas são criadas sem regras definidas, e depois s�
 ## Veja também
 
 - [`@import`](/pt-BR/docs/Web/CSS/@import)
-- [Cascata, especificidade e herança](/pt-BR/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
+- [Cascata, especificidade e herança](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 - [`CSSLayerBlockRule`](/pt-BR/docs/Web/API/CSSLayerBlockRule)
 - [`CSSLayerStatementRule`](/pt-BR/docs/Web/API/CSSLayerStatementRule)
 - [`!important`](/pt-BR/docs/Web/CSS/important)

@@ -41,7 +41,7 @@ API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/A
 
 例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 ガイド: [Using files from web applications](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-API リファレンス: [HTML input element](/ja/docs/Web/HTML/Element/input/file) | [DOM File API](/ja/docs/Web/API/File)
+API リファレンス: [HTML input element](/ja/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/ja/docs/Web/API/File)
 
 > [!NOTE]
 > 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。
@@ -132,7 +132,7 @@ Example: [Store Collected Images](https://github.com/mdn/webextensions-examples/
 API References: [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > [!NOTE]
-> You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/Storage).
+> You can also use the full Web [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) to store data from your extension. This can be useful where you need to store data that isn't handled well by the simple key/value pairs offered by the DOM [Storage API](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
 ## ローカルアプリでファイルを処理する
 

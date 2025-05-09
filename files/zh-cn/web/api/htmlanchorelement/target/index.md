@@ -9,14 +9,14 @@ l10n:
 
 {{domxref("HTMLAnchorElement")}} 接口的 **`target`** 属性是一个字符串，用于指示在何处显示链接的资源。
 
-它反映 {{HTMLElement("a")}} 元素的 [`target`](/zh-CN/docs/Web/HTML/Element/a#target) 属性。
+它反映 {{HTMLElement("a")}} 元素的 [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/a#target) 属性。
 
 ## 值
 
 表示目标的字符串，它的值可以是：
 
 - {{HTMLElement("frame")}} 的名字。
-- [特定值的关键字](/zh-CN/docs/Web/HTML/Element/a#target)之一：`_blank`、`_self`、`_parent` 或 `_top`。
+- [特定值的关键字](/zh-CN/docs/Web/HTML/Reference/Elements/a#target)之一：`_blank`、`_self`、`_parent` 或 `_top`。
 
 ## 示例
 

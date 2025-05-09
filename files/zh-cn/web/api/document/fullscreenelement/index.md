@@ -2,7 +2,7 @@
 title: Document：FullScreenElement 属性
 slug: Web/API/Document/fullscreenElement
 l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+  sourceCommit: c17bd570e356cdf3e1abb4c2dfe1e57a2cfb5bc7
 ---
 
 {{ApiRef("Fullscreen API")}}
@@ -13,7 +13,7 @@ l10n:
 
 ## 值
 
-返回当前处于全屏模式的 {{domxref("Element")}} 对象；如果当前页面未使用全屏模式，则返回 `null`。
+返回当前处于全屏模式的 {{domxref("Element")}} 对象；如果当前页面未使用全屏模式，则返回 `null`。如果有多个元素处于全屏模式下，则返回最顶层（最近请求）的元素。
 
 ## 示例
 
@@ -44,4 +44,4 @@ function isVideoInFullscreen() {
 - {{domxref("Document.exitFullscreen()")}}
 - {{domxref("Document.fullscreenEnabled")}}
 - {{cssxref(":fullscreen")}} 和 {{cssxref("::backdrop")}}
-- {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性
+- {{HTMLElement("iframe")}} [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性

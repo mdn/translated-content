@@ -193,7 +193,7 @@ Hay algunas buenas prácticas que debemos respetar cuando escribimos enlaces. Ve
 Es fácil rellenar de enlaces una página, sin más. Pero esto no basta. Hay que lograr que nuestros enlaces sean _accesibles_ para todo tipo de lectores, sin importar el contexto o las herramientas que prefieran. Por ejemplo:
 
 - Los usuarios de lectores de pantalla suelen saltar de enlace a enlace en la página y los leen todos sin contexto.
-- Los motores de búsqueda utilizan el texto de los enlaces para indizar los archivos buscados, por lo que es una buena idea incluir palabras clave al definir el texto de los enlaces para describir de forma efectiva el sitio al que apuntan.
+- Los motores de búsqueda utilizan el texto de los enlaces para indexar los archivos buscados, por lo que es una buena idea incluir palabras clave al definir el texto de los enlaces para describir de forma efectiva el sitio al que apuntan.
 - Los usuarios visuales suelen echar un vistazo rápido a la página y leen solo lo que les interesa, en lugar de leer todo el texto palabra por palabra, y sus miradas van directamente a las características destacadas de la página, como son los enlaces. Este tipo de usuarios encuentra útiles los textos descriptivos que estos contienen.
 
 Veamos un ejemplo concreto:
@@ -222,7 +222,7 @@ Otras indicaciones:
 A partir de las indicaciones anteriores podemos llegar a pensar que es mejor utilizar referencias absolutas en todos los casos; después de todo, estas no se rompen cuando la página se traslada como ocurre con las referencias relativas. Sin embargo, debes utilizar enlaces relativos siempre que sea posible cuando enlaces a otras ubicaciones dentro del _mismo sitio web_. Cuando vinculas a otro sitio web, deberás utilizar un vínculo absoluto.
 
 - Primero, porque el código es mucho más fácil de leer — las URLs relativas suelen ser mucho más cortas que las absolutas, lo que hace que el código sea mucho más fácil de leer.
-- Segundo, resulta más eficiente utilizar URLs relativas cuando sea posible. Cuando usas una URL absoluta, el navegador comienza buscando la ubicación real del servidor en el Sistema de nombres de dominio ({{Glossary("DNS")}}), consulta [Cómo funciona la web](/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works) para obtener más información). Entonces va a ese servidor y busca el archivo solicitado. En cambio, con una URL relativa, el navegador simplemente busca el archivo solicitado en el mismo servidor. Si usas URLs absolutas donde las URLs relativas lo harían, constantemente estás haciendo que tu navegador haga un trabajo adicional, lo cual significa que funcionará de manera menos eficiente.
+- Segundo, resulta más eficiente utilizar URLs relativas cuando sea posible. Cuando usas una URL absoluta, el navegador comienza buscando la ubicación real del servidor en el Sistema de nombres de dominio ({{Glossary("DNS")}}), consulta [Cómo funciona la web](/es/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works) para obtener más información). Entonces va a ese servidor y busca el archivo solicitado. En cambio, con una URL relativa, el navegador simplemente busca el archivo solicitado en el mismo servidor. Si usas URLs absolutas donde las URLs relativas lo harían, constantemente estás haciendo que tu navegador haga un trabajo adicional, lo cual significa que funcionará de manera menos eficiente.
 
 ### Indica claramente los recursos no HTML
 
@@ -323,7 +323,7 @@ Veamos un ejemplo que incluye estos campos:
 ```
 
 > [!NOTE]
-> Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn/Forms/Sending_and_retrieving_form_data#the_get_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
+> Los valores de cada campo deben tener la URL codificada, es decir, sin caracteres no imprimibles (caracteres invisibles, tabulaciones, retornos de carro y saltos de página) y espacios con codificación porcentual (%20) [Código porciento](https://es.wikipedia.org/wiki/Código_porciento). También hay que tener en cuenta el uso del signo de interrogación (?) para separar la URL principal de los valores de los campos, y el símbolo ampersand (&) para separar cada campo dentro del enlace `mailto:`. Esta es la notación de consulta URL estándar. Lee [el método GET](/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data#the_get_method) para comprender mejor qué notación de consulta URL se usa comúnmente.
 
 A continuación otros ejemplos de utilización de enlaces `mailto`:
 
@@ -335,7 +335,7 @@ A continuación otros ejemplos de utilización de enlaces `mailto`:
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encuentra más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante; consulta [Pon a prueba tus habilidades: Enlaces](/es/docs/Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encuentra más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante; consulta [Pon a prueba tus habilidades: Enlaces](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links).
 
 ## Resumen
 

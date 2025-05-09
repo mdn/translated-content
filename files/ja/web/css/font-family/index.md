@@ -2,14 +2,56 @@
 title: font-family
 slug: Web/CSS/font-family
 l10n:
-  sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
 **`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
 
-{{EmbedInteractiveExample("pages/css/font-family.html")}}
+{{InteractiveExample("CSS Demo: font-family")}}
+
+```css interactive-example-choice
+font-family: Georgia, serif;
+```
+
+```css interactive-example-choice
+font-family: "Gill Sans", sans-serif;
+```
+
+```css interactive-example-choice
+font-family: sans-serif;
+```
+
+```css interactive-example-choice
+font-family: serif;
+```
+
+```css interactive-example-choice
+font-family: cursive;
+```
+
+```css interactive-example-choice
+font-family: system-ui;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.2em;
+}
+```
 
 複数の値をカンマで区切って、代替フォントを示します。ブラウザーはリストの中で最初のインストール済み、または {{CSSxRef("@font-face")}} アットルールを使用してダウンロード可能なフォントを選択します。
 
@@ -224,4 +266,4 @@ font-family:
 
 - {{cssxref("font-style")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントのスタイル設定](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

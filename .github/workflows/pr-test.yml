@@ -30,6 +30,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Get changed files
+        id: check
         run: |
           # Use the GitHub API to get the list of changed files
           # documentation: https://docs.github.com/rest/commits/commits#compare-two-commits
@@ -38,23 +39,23 @@ jobs:
 
           # filter out files that are not markdown files
           GIT_DIFF_CONTENT=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(md)$" | xargs)
-          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> $GITHUB_ENV
+          echo "GIT_DIFF_CONTENT=${GIT_DIFF_CONTENT}" >> "$GITHUB_OUTPUT"
 
           # filter out files that are not attachments
           # note that we should get the absolute path of the changed attachments
           GIT_DIFF_FILES=$(echo "${DIFF_DOCUMENTS}" | egrep -i "^files/.*\.(png|jpeg|jpg|gif|svg|webp)$" | xargs readlink -e | xargs)
-          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> $GITHUB_ENV
+          echo "GIT_DIFF_FILES=${GIT_DIFF_FILES}" >> "$GITHUB_OUTPUT"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: actions/checkout@v4
-        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         with:
           repository: mdn/content
           path: mdn/content
 
       - name: Setup Node.js environment
-        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
@@ -62,7 +63,7 @@ jobs:
           cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages
-        if: env.GIT_DIFF_CONTENT || env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         working-directory: ${{ github.workspace }}/mdn/content
         run: yarn --frozen-lockfile
         env:
@@ -71,8 +72,10 @@ jobs:
 
       - name: Build changed content
         id: build-content
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         env:
+          GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
+
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
 
@@ -112,7 +115,6 @@ jobs:
           # you don't need that script as a writer. It's only used in CI
           # and it can't use the default CONTENT_ROOT that gets set in
           # package.json.
-          echo Y|yarn rari update
           ARGS=$(echo $GIT_DIFF_CONTENT | sed -E -e "s#(^| )files#\1-f $CONTENT_TRANSLATED_ROOT#g")
           yarn rari build --no-basic --json-issues --data-issues $ARGS
           yarn yari-render-html
@@ -130,7 +132,7 @@ jobs:
           wget https://github.com/${{ github.repository }}/compare/${BASE_SHA}...${HEAD_SHA}.diff -O ${BUILD_OUT_ROOT}/DIFF
 
       - name: Merge static assets with built documents
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         run: |
           # Exclude the .map files, as they're used for debugging JS and CSS.
           rsync -a --exclude "*.map" ${{ github.workspace }}/mdn/content/node_modules/@mdn/yari/client/build/ $BUILD_OUT_ROOT
@@ -138,16 +140,17 @@ jobs:
           du -sh $BUILD_OUT_ROOT
 
       - uses: actions/upload-artifact@v4
-        if: env.GIT_DIFF_CONTENT
+        if: steps.check.outputs.GIT_DIFF_CONTENT
         with:
           name: build
           path: ${{ env.BUILD_OUT_ROOT }}
 
       - name: Check changed files
-        if: env.GIT_DIFF_FILES
+        if: steps.check.outputs.GIT_DIFF_FILES
         env:
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
+          GIT_DIFF_FILES: steps.check.outputs.GIT_DIFF_FILES
         working-directory: ${{ github.workspace }}/mdn/content
         run: |
           echo $GIT_DIFF_FILES

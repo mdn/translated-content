@@ -13,7 +13,22 @@ slug: Web/JavaScript/Reference/Functions/arguments
 > [!NOTE]
 > "`Array` 형태"란 `arguments`가 {{jsxref("Array.length", "length")}} 속성과 더불어 0부터 인덱스 된 다른 속성을 가지고 있지만, {{jsxref("Array")}}의 {{jsxref("Array.prototype.forEach()", "forEach")}}, {{jsxref("Array.prototype.map()", "map")}}과 같은 내장 메서드를 가지고 있지 않다는 뜻입니다.
 
-{{EmbedInteractiveExample("pages/js/functions-arguments.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  console.log(arguments[0]);
+  // Expected output: 1
+
+  console.log(arguments[1]);
+  // Expected output: 2
+
+  console.log(arguments[2]);
+  // Expected output: 3
+}
+
+func1(1, 2, 3);
+```
 
 ## 구문
 
@@ -63,7 +78,7 @@ var args = [...arguments];
   - : 현재 실행 중인 함수를 호출한 함수를 가리킵니다.
 - [`arguments.length`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/length)
   - : 함수에 전달된 인수의 수를 가리킵니다.
-- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/@@iterator)
+- [`arguments[@@iterator]`](/ko/docs/Web/JavaScript/Reference/Functions/arguments/Symbol.iterator)
   - : arguments의 각 인덱스 값을 포함하는 새로운 Array Iterator 객체를 반환합니다.
 
 ## 예제

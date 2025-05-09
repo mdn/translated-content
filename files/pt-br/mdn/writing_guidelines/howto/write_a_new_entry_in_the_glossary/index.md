@@ -37,7 +37,7 @@ Certifique-se de que qualquer pessoa que leia a descrição possa entender imedi
 
 Adicione alguns parágrafos extras, se necessário, mas é fácil acabar escrevendo um artigo inteiro.
 Escrever um artigo é bom, mas, por favor, não o crie no/para o glossário.
-Se você não tem certeza de onde colocar seu artigo, sinta-se à vontade para [entrar em contato para discuti-lo](/pt-BR/docs/MDN/Community/Contributing/Getting_started#step_4_ask_for_help).
+Se você não tem certeza de onde colocar seu artigo, sinta-se à vontade para [entrar em contato para discuti-lo](/pt-BR/docs/MDN/Community/Getting_started#step_4_ask_for_help).
 
 Existem algumas diretrizes simples a serem consideradas para escrever uma entrada de glossário melhor:
 

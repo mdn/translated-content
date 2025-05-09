@@ -11,7 +11,23 @@ O operador **`?.`** funciona de maneira similar ao operador `.` de encadeamento,
 
 Isso resulta em expressões mais curtas e simples ao acessar propriedades encadeadas quando a possibilidade de uma referência ser inexistente. Isso também pode auxiliar ao explorar o conteúdo de um objeto quando não existe garantia da existência de determinadas propriedades obrigatórias.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Sintaxe
 
@@ -64,7 +80,7 @@ let result = someInterface.customMethod?.();
 
 #### Lidando com callbacks opcionais ou manipuladores de eventos
 
-Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
+Se você usa callbacks ou consulta métodos de objetos com [atribuição via desestruturação](/pt-BR/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring), você pode ter valores não-existentes que você não conseguirá chamar como funções, a menos que você tenha testado sua existência. Usando `?.`, você pode evitar esse teste extra:
 
 ```js
 // Escrito como ES2019

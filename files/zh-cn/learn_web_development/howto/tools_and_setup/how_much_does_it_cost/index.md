@@ -1,7 +1,6 @@
 ---
 title: 在互联网上做一件事要花费多少？
 slug: Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost
-original_slug: Learn/Common_questions/Tools_and_setup/How_much_does_it_cost
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}

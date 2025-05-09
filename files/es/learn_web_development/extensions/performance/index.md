@@ -22,7 +22,7 @@ Varios de los módulos introductorios a continuación no requieren conocimientos
 
 Los módulos avanzados profundizan en los temas que se resumen en los módulos introductorios y proporcionan una visión general de las API de rendimiento, las herramientas de análisis y prueba y los problemas de cuellos de botella en el rendimiento.
 
-Se recomienda que trabajes a través de [Empezando con la web](/es/docs/Learn/Getting_started_with_the_web) antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
+Se recomienda que trabajes a través de [Empezando con la web](/es/docs/Learn_web_development/Getting_started/Your_first_website) antes de proceder con este tema. Sin embargo, hacerlo no es absolutamente necesario.
 
 ## Modulos de introducción
 
@@ -81,6 +81,6 @@ Este tema contiene los siguientes módulos, en un orden sugerido para trabajar a
 ## Véase también
 
 - [Lista de verificación de rendimiento móvil](/es/docs/Web/Performance/Mobile_performance_checklist)
-- [Optimización del rendimiento de inicio](/es/docs/Web/Performance/Optimizing_startup_performance)
+- [Optimización del rendimiento de inicio](/es/docs/Web/Performance/Guides/Optimizing_startup_performance)
 
 {{LandingPageListSubpages}}

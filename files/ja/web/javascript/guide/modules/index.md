@@ -19,7 +19,7 @@ JavaScript のプログラムはとても小さいものから始まりました
 
 ## 例の紹介
 
-モジュールの使い方を紹介するために、GitHub 上に[一連の例](https://github.com/mdn/js-examples/tree/main/module-examples)を作りました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) 要素を追加し、そのキャンバス上にいくつかの異なる図形（と、それに関するレポート）を描画するモジュールの例です。
+モジュールの使い方を紹介するために、GitHub 上に[一連の例](https://github.com/mdn/js-examples/tree/main/module-examples)を作りました。これらは、ウェブページに [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) 要素を追加し、そのキャンバス上にいくつかの異なる図形（と、それに関するレポート）を描画するモジュールの例です。
 
 このような機能はあまり役に立ちませんが、モジュールの説明が明確になるように意図的に単純にしています。
 
@@ -45,7 +45,7 @@ modules ディレクトリーには、次の 2 つのモジュールがありま
 
 - `canvas.js` — キャンバスの設定に関する次の関数を持ちます。
 
-  - `create()` — 指定された `width` と `height` を持つキャンバスを、指定された ID を持つラッパー [`<div>`](/ja/docs/Web/HTML/Element/div) の中に作成し、そのラッパー div 自体を指定された親要素の中に追加します。返値は、キャンバスの 2D コンテキストとラッパーの ID を持つオブジェクトです。
+  - `create()` — 指定された `width` と `height` を持つキャンバスを、指定された ID を持つラッパー [`<div>`](/ja/docs/Web/HTML/Reference/Elements/div) の中に作成し、そのラッパー div 自体を指定された親要素の中に追加します。返値は、キャンバスの 2D コンテキストとラッパーの ID を持つオブジェクトです。
   - `createReportList()` — 順序なしリストを指定されたラッパー要素の中に作成し、これをレポートデータを出力するために使うことができます。返値は、リストの ID です。
 
 - `square.js` — 次のものを持ちます。
@@ -64,7 +64,7 @@ modules ディレクトリーには、次の 2 つのモジュールがありま
 
 しかし、少なくとも今のところは `.js` を使い続けることにしました。ブラウザーでモジュールを正しく動作させるためには、サーバーが `Content-Type` ヘッダーで JavaScript の MIME タイプ、例えば `text/javascript` などを含めて提供していることを確認する必要があります。そうしないと、"The server responded with a non-JavaScript MIME type" のような厳格な MIME タイプチェックエラーが表示され、ブラウザーは JavaScript を実行しません。ほとんどのサーバーでは、`.js` ファイルにはすでに正しい MIME タイプが設定されていますが、`.mjs` ファイルにはまだ設定されていません。すでに `.mjs` ファイルを正しく提供しているサーバーには、[GitHub Pages](https://pages.github.com/) や Node.js の [`http-server`](https://github.com/http-party/http-server#readme) などがあります。
 
-これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません（つまり、`.mjs` ファイルに正しい [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) を設定するようにサーバーを設定することができます）。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。
+これは、すでにそのような環境を使用している場合や、今はまだ使用していないが、何をしているか知っていてアクセスできる場合には問題ありません（つまり、`.mjs` ファイルに正しい [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) を設定するようにサーバーを設定することができます）。しかし、あなたがファイルを提供しているサーバーを制御できない場合には、混乱を引き起こす可能性があります。
 
 この記事では学習と移植性を考慮して、`.js` を使用することにしました。
 
@@ -155,11 +155,11 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[インポートマップ](/ja/docs/Web/HTML/Element/script/type/importmap)により、モジュールをインポートするときに、モジュール指定子でほぼ全ての好きなテキストを代わりに指定することができます。このマップは、モジュールの URL が解決されたときにテキストを置き換える対応する値を提供します。
+[インポートマップ](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap)により、モジュールをインポートするときに、モジュール指定子でほぼ全ての好きなテキストを代わりに指定することができます。このマップは、モジュールの URL が解決されたときにテキストを置き換える対応する値を提供します。
 
 例えば、下記のインポートマップの `imports` キーは、「モジュール指定マップ」JSON オブジェクトを定義し、プロパティ名をモジュール指定子として使用でき、ブラウザーがモジュール URL を解決する際に対応する値が代入されます。
 値は、絶対 URL または相対 URL でなければなりません。
-相対 URL は、インポートマップを含む文書の[ベース URL](/ja/docs/Web/HTML/Element/base) を使用して絶対 URL アドレスに解決されます。
+相対 URL は、インポートマップを含む文書の[ベース URL](/ja/docs/Web/HTML/Reference/Elements/base) を使用して絶対 URL アドレスに解決されます。
 
 ```html
 <script type="importmap">
@@ -175,7 +175,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-インポートマップは `<script>` 要素の中の [JSON オブジェクト](/ja/docs/Web/HTML/Element/script/type/importmap#json_のインポートマップ表現) で、 `type` 属性を [`importmap`](/ja/docs/Web/HTML/Element/script/type/importmap) に設定して定義することができます。
+インポートマップは `<script>` 要素の中の [JSON オブジェクト](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap#json_のインポートマップ表現) で、 `type` 属性を [`importmap`](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) に設定して定義することができます。
 文書内に置けるインポートマップは 1 つだけで、静的インポートと動的インポートの両方でどのモジュールが読み込まれるかを解決するために使用できるので、モジュールをインポートする `<script>` 要素の前に宣言する必要があります。
 インポートマップは文書内の特定の要素にのみ適用されることに注意してください。仕様では、ワーカーやワークレットのコンテキストでインポートマップを適用する方法についてはカバーされていません。 <!-- https://github.com/WICG/import-maps/issues/2 -->
 
@@ -378,7 +378,7 @@ document.adoptedStyleSheets = [styles];
 
 次に `main.js` モジュールを HTML ページに適用する必要があります。これは少し重要な点に違いがありますが、通常のスクリプトをページに適用する方法ととてもよく似ています。
 
-最初に `type="module"` を [`<script>`](/ja/docs/Web/HTML/Element/script) 要素に含めることで、そのスクリプトがモジュールであることを宣言します。`main.js` をインポートするには、次のようにします。
+最初に `type="module"` を [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素に含めることで、そのスクリプトがモジュールであることを宣言します。`main.js` をインポートするには、次のようにします。
 
 ```html
 <script type="module" src="main.js"></script>
@@ -406,14 +406,14 @@ document.adoptedStyleSheets = [styles];
 通常、すべてのモジュールを個別のファイルで定義する必要があります。 HTML にインラインで宣言されたモジュールは、他のモジュールをインポートすることはできますが、それらがエクスポートする何らかの情報は、他のモジュールからアクセスすることはできません（URL を保有していないため）。
 
 > [!NOTE]
-> モジュールとその依存関係は [`<link>`](/ja/docs/Web/HTML/Element/link) 要素で [`rel="modulepreload"`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) を指定することで、事前読み込みすることができます。
+> モジュールとその依存関係は [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素で [`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) を指定することで、事前読み込みすることができます。
 > これにより、モジュールを使用する時点での読み込み時間を大幅に縮小することができます。
 
 ## モジュールとクラシックスクリプトとのその他の違い
 
 - ローカルでテストしようとするときは注意してください。ローカルから（つまり `file://` URL を使って）HTML ファイルを読み込もうとすると、JavaScript モジュールのセキュリティ要件のために、CORS エラーが発生します。テストはサーバー経由で行う必要があります。
 - また、モジュール内部で定義されたスクリプトの動作は、クラシックスクリプト内部のものと異なるかもしれません。これは、モジュール内部では自動的に{{jsxref("Strict_mode", "厳格モード", "", 1)}}が使われるからです。
-- モジュールのスクリプトを読み込むときに `defer` 属性（[`<script>` の属性](/ja/docs/Web/HTML/Element/script#属性) を参照）を使う必要はありません。モジュールは自動的に遅延実行されます。
+- モジュールのスクリプトを読み込むときに `defer` 属性（[`<script>` の属性](/ja/docs/Web/HTML/Reference/Elements/script#属性) を参照）を使う必要はありません。モジュールは自動的に遅延実行されます。
 - モジュールは、複数の `<script>` タグで参照されていても一度しか実行されません。
 - 最後ですが重要なこととして明らかにしておきますが、モジュールの機能は単独のスクリプトのスコープにインポートされます。つまり、インポートされた機能はグローバルスコープから利用することはできません。それゆえ、インポートされた機能はインポートしたスクリプトの内部からしかアクセスできず、例えば JavaScript コンソールからはアクセスできません。文法エラーは開発者ツール上に表示されますが、使えることを期待するデバッグ技術の中には使えないものがあるでしょう。
 

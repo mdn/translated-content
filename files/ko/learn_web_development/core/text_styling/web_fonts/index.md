@@ -36,7 +36,7 @@ l10n:
 
 ## Font families 요약하기
 
-[CSS 텍스트 및 폰트 기본 사항](/ko/docs/Learn/CSS/Styling_text/Fundamentals)에서 살펴본 것처럼, {{cssxref("font-family")}} 속성을 사용하여 HTML에 적용되는 폰트를 제어할 수 있습니다. 여기에는 하나 이상의 폰트 패밀리 이름이 필요합니다. 웹페이지를 표시할 때 브라우저는 실행 중인 시스템에서 사용 가능한 폰트를 찾을 때까지 폰트 패밀리 값 목록을 아래로 살펴봅니다.
+[CSS 텍스트 및 폰트 기본 사항](/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals)에서 살펴본 것처럼, {{cssxref("font-family")}} 속성을 사용하여 HTML에 적용되는 폰트를 제어할 수 있습니다. 여기에는 하나 이상의 폰트 패밀리 이름이 필요합니다. 웹페이지를 표시할 때 브라우저는 실행 중인 시스템에서 사용 가능한 폰트를 찾을 때까지 폰트 패밀리 값 목록을 아래로 살펴봅니다.
 
 ```css
 p {
@@ -44,7 +44,7 @@ p {
 }
 ```
 
-이 시스템은 잘 작동하지만, 기존에는 웹 개발자가 선택할 수 있는 폰트가 제한적이었습니다. 모든 일반적인 시스템에서 사용 가능하다고 보장할 수 있는 폰트는 [웹 안전 폰트](/ko/docs/Learn/CSS/Styling_text/Fundamentals#web_safe_fonts) 라고 불리는 소수의 폰트뿐입니다. 폰트 스택을 사용하여 선호하는 폰트, 웹 안전 대체 폰트, 기본 시스템 폰트 순서로 지정할 수 있습니다. 그러나 이렇게 하면 당신의 디자인이 각 폰트에서 작동하는지 확인하는 데 필요한 테스트가 필요하므로 작업량이 증가합니다.
+이 시스템은 잘 작동하지만, 기존에는 웹 개발자가 선택할 수 있는 폰트가 제한적이었습니다. 모든 일반적인 시스템에서 사용 가능하다고 보장할 수 있는 폰트는 [웹 안전 폰트](/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals#web_safe_fonts) 라고 불리는 소수의 폰트뿐입니다. 폰트 스택을 사용하여 선호하는 폰트, 웹 안전 대체 폰트, 기본 시스템 폰트 순서로 지정할 수 있습니다. 그러나 이렇게 하면 당신의 디자인이 각 폰트에서 작동하는지 확인하는 데 필요한 테스트가 필요하므로 작업량이 증가합니다.
 
 ## 웹 폰트
 
@@ -206,6 +206,6 @@ Fontsquirrel에서 생성한 `@font-face` 구문을 살펴봅시다. 다음은 �
 
 ## 요약
 
-텍스트 스타일링의 기본에 대한 글을 살펴봤으니, 이제 과정에 대한 평가를 통해 이해도를 테스트할 시간입니다. [커뮤니티 학교 홈페이지 조판](/ko/docs/Learn/CSS/Styling_text/Typesetting_a_homepage).
+텍스트 스타일링의 기본에 대한 글을 살펴봤으니, 이제 과정에 대한 평가를 통해 이해도를 테스트할 시간입니다. [커뮤니티 학교 홈페이지 조판](/ko/docs/Learn_web_development/Core/Text_styling/Typesetting_a_homepage).
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_links", "Learn/CSS/Styling_text/Typesetting_a_homepage", "Learn/CSS/Styling_text")}}

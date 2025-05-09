@@ -12,7 +12,7 @@ Ahora que nuestro programa de prueba tiene un cubo, asignemos una textura en lug
 La primera cosa que debemos hacer es añadir el codigo para cargar nuestra textura. en nuestro caso, estaremos usando una unica textura, asignada en las seis caras de nuestro cubo rotador, pero la misma tecnica puede ser utilizada para cualquier cantidad de texturas.
 
 > [!NOTE]
-> Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
+> Es importante señalar que la carga de texturas sigue [reglas de dominio-cruzado](/es/docs/Web/HTTP/Guides/CORS); Es decir, sólo puede cargar texturas de sitios para los que su contenido tiene aprobación de CORS. Vea las texturas entre dominios a continuación para más detalles.
 
 El codigo que carga la textura se ve como esto:
 
@@ -185,7 +185,7 @@ En este punto, el cubo giratorio debe estar listo.
 
 ## Texturas entre dominios
 
-La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/CORS) para mas detalles sobre CORS.
+La carga de texturas WebGL esta sujeta a controles de acceso entre dominios. Para que su contenido cargue una textura de otro dominio, La aprobacion CORS debe ser obtenida. Ver [control de acceso HTTP](/es/docs/Web/HTTP/Guides/CORS) para mas detalles sobre CORS.
 
 Ver este articulo [hacks.mozilla.org](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/) para una explicacion de como usar imágenes CORS-approved como texturas WebGL , con un [ejemplo auto-contenido](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html).
 

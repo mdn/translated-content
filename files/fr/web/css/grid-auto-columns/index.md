@@ -7,7 +7,60 @@ slug: Web/CSS/grid-auto-columns
 
 La propriété **`grid-auto-columns`** définit la taille d'une colonne de grille créée de façon implicite.
 
-{{EmbedInteractiveExample("pages/css/grid-auto-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-columns")}}
+
+```css interactive-example-choice
+grid-auto-columns: auto;
+```
+
+```css interactive-example-choice
+grid-auto-columns: 1fr;
+```
+
+```css interactive-example-choice
+grid-auto-columns: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-columns: minmax(10px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div></div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element > div:nth-child(1) {
+  grid-column: 1 / 3;
+}
+
+#example-element > div:nth-child(2) {
+  grid-column: 2;
+}
+```
 
 Si un élément de la grille est positionné sur une colonne dont la taille n'est pas explicitement définie avec {{cssxref("grid-template-columns")}}, une piste implicite est créée pour contenir l'élément. Cela peut se produire lorsqu'on positionne un élément sur une ligne inexistante ou lorsque l'algorithme de placement automatique ajoute des colonnes supplémentaires.
 

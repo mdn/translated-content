@@ -17,5 +17,5 @@ CSS には、閲覧者の端末のメディアの**種類**（画面や印刷な
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
-- {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/At-rule): メディアクエリーの結果に基づいて、 CSS のスタイルシートの一部を条件付きで適用します。
+- {{cssxref("@media")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule): メディアクエリーの結果に基づいて、 CSS のスタイルシートの一部を条件付きで適用します。
 - {{domxref("Window.matchMedia()")}}: 出力装置に対するメディアクエリーをテストします。

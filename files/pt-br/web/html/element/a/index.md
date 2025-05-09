@@ -7,7 +7,23 @@ slug: Web/HTML/Element/a
 
 O **elemento** **`<a>`** em **HTML** (ou elemento âncora), com o atributo [`href`](#href) cria-se um hiperligação nas páginas web, arquivos, endereços de emails, ligações na mesma página ou endereços na URL. O conteúdo dentro de cada `<a>` **precisará** indicar o destino do link.
 
-{{EmbedInteractiveExample("pages/tabbed/a.html")}}
+{{InteractiveExample("HTML Demo: &lt;a&gt;")}}
+
+```html interactive-example
+<p>You can reach Michael at:</p>
+
+<ul>
+  <li><a href="https://example.com">Website</a></li>
+  <li><a href="mailto:m.bluth@example.com">Email</a></li>
+  <li><a href="tel:+123456789">Phone</a></li>
+</ul>
+```
+
+```css interactive-example
+li {
+  margin-bottom: 0.5rem;
+}
+```
 
 ## Atributos
 
@@ -44,7 +60,7 @@ Os atributos do elemento incluem os [atributos globais](/pt-BR/docs/Web/HTML/Glo
 - `ping`
   - : Uma lista de URLs separadas por espaços. Quando o link é seguido, o brrowser enviará requisições {{HTTPMethod("POST")}} com o corpo `PING` para as URLs. Typically for tracking.
 - `referrerpolicy`{{Experimental_Inline}}
-  - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
+  - : Quanto do [referrer](/pt-BR/docs/Web/HTTP/Reference/Headers/Referer) para ser enviado quando acessar o link. Acesse [`Referrer-Policy`](/pt-BR/docs/Web/HTTP/Reference/Headers/Referrer-Policy) para possíveis valores e seus efeitos.
 - `rel`
   - : The relationship of the linked URL as space-separated [link types](/pt-BR/docs/Web/HTML/Attributes/rel).
 - `target`
@@ -241,7 +257,7 @@ To create links that open in the user's email program to let them send a new mes
 <a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
 ```
 
-For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#email_links) or {{RFC(6068)}}.
+For details about `mailto:` URLs, such as including a subject or body, see [Email links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links#email_links) or {{RFC(6068)}}.
 
 ### Linking to telephone numbers
 

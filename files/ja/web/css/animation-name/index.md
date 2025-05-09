@@ -2,25 +2,88 @@
 title: animation-name
 slug: Web/CSS/animation-name
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: dfd18cb9ee7c6195d07cd937d206b53246f7507e
 ---
 
 {{CSSRef}}
 
-**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframe` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframe` アットルールにも一致しない場合、プロパティはアニメーションしません。
+**`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframes` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframes` アットルールにも一致しない場合、プロパティはアニメーションしません。
 
-{{EmbedInteractiveExample("pages/css/animation-name.html")}}
+{{InteractiveExample("CSS Demo: animation-name")}}
+
+```css interactive-example-choice
+animation-name: none;
+```
+
+```css interactive-example-choice
+animation-name: slide;
+```
+
+```css interactive-example-choice
+animation-name: bounce;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+
+@keyframes bounce {
+  from {
+    background-color: orange;
+    color: black;
+    margin-top: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-top: 40%;
+  }
+}
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
 ## 構文
 
 ```css
-/* 単一のアニメーション */
+/* アニメーションなし */
 animation-name: none;
+
+/* 単一のアニメーション */
 animation-name: test_05;
 animation-name: -specific;
-animation-name: sliding-vertically;
+animation-name: "sliding-vertically";
 
 /* 複数のアニメーション */
 animation-name: test1, animation4;
@@ -42,9 +105,11 @@ animation-name: unset;
 - `none`
   - : キーフレームがないことを示す特別なキーワード。他の識別子の順序を変更せずにアニメーションを非アクティブにする、またはカスケードからのアニメーションを非アクティブにするために使用できます。
 - {{cssxref("&lt;custom-ident&gt;")}}
-  - : アニメーションを識別する名前です。識別子は大文字小文字の区別がない英文字 `a` から `z`、 数字 `0` から `9`、 アンダースコア (`_`)、 ダッシュ (`-`) から成ります。最初のダッシュ以外の文字は英文字でなければなりません。また、二重ダッシュは識別子の先頭では禁止されています。さらに、識別子は `none`, `unset`, `initial`, `inherit` であってはなりません。
+  - : アニメーションを識別する、引用符で囲まれていない名前です。識別子は大文字小文字の区別がない英文字 `a` から `z`、 数字 `0` から `9`、 アンダースコア (`_`)、 ダッシュ (`-`) から成ります。最初のダッシュ以外の文字は英文字でなければなりません。また、二重ダッシュは識別子の先頭では禁止されています。さらに、識別子は `none`, `unset`, `initial`, `inherit` であってはなりません。
+- {{cssxref("&lt;string&gt;")}}
+  - : 上記で記述されているカスタム識別子と同じ規則に従う一連の文字で、二重引用符 (") または単一引用符 (') で囲まれている点が異なります。 `animation-name` と対応する {{cssxref("@keyframes")}} アットルールの名前の両方に引用符で囲まれた文字列を使用する場合、`none`、グローバルキーワード、アンダースコアまたは二重ダッシュで始まる名前は有効ですが、使用は推奨されません。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 `animation-name` に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
 ## 公式定義
 

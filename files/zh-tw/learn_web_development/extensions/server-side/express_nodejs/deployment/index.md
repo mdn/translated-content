@@ -1,10 +1,9 @@
 ---
 title: "Express 教學 7: 佈署到生產環境"
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/deployment
-original_slug: Learn/Server-side/Express_Nodejs/deployment
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenu("Learn_web_development/Extensions/Server-side/Express_Nodejs/forms", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 現在你已經創建（並測試）了一個不錯的 本地圖書館 網站了，你打算把它發佈到一個公共網絡服務器，這樣圖書館管理員和網路上的其他成員就可以訪問它了。這篇文章總結了你可以怎樣找到一台主機部署你的網站，以及你需要為網站準備好佈署到生產環境該做什麼。
 

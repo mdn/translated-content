@@ -9,7 +9,20 @@ l10n:
 
 **`keys()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各インデックスのキーを含む、新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/array-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Array.keys()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+const iterator = array1.keys();
+
+for (const key of iterator) {
+  console.log(key);
+}
+
+// Expected output: 0
+// Expected output: 1
+// Expected output: 2
+```
 
 ## 構文
 

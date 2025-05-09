@@ -61,7 +61,7 @@ Vamos a comparar la biblioteca con un servidor web:
 
 ## Aprendizaje activo
 
-_Todavía no hay ningún aprendizaje activo disponible. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_Todavía no hay ningún aprendizaje activo disponible. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundizando
 
@@ -112,5 +112,5 @@ Aquí hay una instancia de Firefox que muestra un cuadro de búsqueda de Google 
 
 ## Próximos pasos
 
-- Profundizar más: [Qué es un servidor Web](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- Vea cómo las páginas web están enlazadas en un sitio web: [Entendiendo los enlaces en la web](/es/docs/Learn/Common_questions/Web_mechanics/What_are_hyperlinks)
+- Profundizar más: [Qué es un servidor Web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)
+- Vea cómo las páginas web están enlazadas en un sitio web: [Entendiendo los enlaces en la web](/es/docs/Learn_web_development/Howto/Web_mechanics/What_are_hyperlinks)

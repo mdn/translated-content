@@ -198,23 +198,21 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
     <link
       rel="apple-touch-icon-precomposed"
       sizes="144x144"
-      href="/static/img/favicon144.e7e21ca263ca.png" />
+      href="favicon144.png" />
     <!-- iPhone avec écran Retina haute résolution : -->
     <link
       rel="apple-touch-icon-precomposed"
       sizes="114x114"
-      href="/static/img/favicon114.d526f38b09c5.png" />
+      href="favicon114.png" />
     <!-- première et deuxième génération d'iPad: -->
     <link
       rel="apple-touch-icon-precomposed"
       sizes="72x72"
-      href="/static/img/favicon72.cc65d1d762a0.png" />
+      href="favicon72.png" />
     <!-- Appareils iPhone non Retina, iPod Touch et Android 2.1+ : -->
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="/static/img/favicon57.de33179910ae.png" />
+    <link rel="apple-touch-icon-precomposed" href="favicon57.png" />
     <!-- favicône de base -->
-    <link rel="shortcut icon" href="/static/img/favicon32.7f3da72dcea1.png" />
+    <link rel="shortcut icon" href="favicon32.png" />
     ```
 
 ## Spécifications

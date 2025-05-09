@@ -66,9 +66,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.innerWidth")}} {{ReadOnlyInline}}
   - : ブラウザーウィンドウのコンテンツ領域の幅を取得し、もしあれば、垂直スクロールバーを含みます。
 - {{domxref("Window.isSecureContext")}} {{ReadOnlyInline}}
-  - : コンテキストが、安全なコンテキストを必要とする機能を使用することができるかどうかを表します。
+  - : コンテキストが、保護されたコンテキストを必要とする機能を使用することができるかどうかを表します。
 - {{domxref("Window.launchQueue")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-  - : [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) が、[`launch_handler`](/ja/docs/Web/Manifest/launch_handler) の `client_mode` が `focus-existing`、`navigate-new`、`navigate-existing` のいずれかで起動された場合、`launchQueue`　は {{domxref("LaunchQueue")}} クラスへのアクセスを提供し、PWA にカスタム起動ナビゲーション処理を実装することができます。
+  - : [プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps) (PWA) が、[`launch_handler`](/ja/docs/Web/Progressive_web_apps/Manifest/launch_handler) の `client_mode` が `focus-existing`、`navigate-new`、`navigate-existing` のいずれかで起動された場合、`launchQueue`　は {{domxref("LaunchQueue")}} クラスへのアクセスを提供し、PWA にカスタム起動ナビゲーション処理を実装することができます。
 - {{domxref("Window.length")}} {{ReadOnlyInline}}
   - : ウィンドウ内のフレームの数を返します。 {{domxref("window.frames")}} も参照してください。
 - {{domxref("Window.localStorage")}} {{ReadOnlyInline}}
@@ -180,9 +180,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.cancelIdleCallback()")}}
   - : {{domxref("Window.requestIdleCallback")}} によって過去にスケジューリングされたコールバックをキャンセルできます。
 - {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : {{domxref("setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
+  - : {{domxref("Window.setInterval", "setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : {{domxref("setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
+  - : {{domxref("Window.setTimeout", "setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
 - {{domxref("Window.close()")}}
   - : 現在のウィンドウを閉じます。
 - {{domxref("Window.confirm()")}}

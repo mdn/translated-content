@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/slice
 
 `El método slice()` devuelve una copia de una parte del array dentro de un nuevo array empezando por _inicio_ hasta _fin_ (_fin_ no incluido). El array original no se modificará.
 
-El código fuente de esta demostración interactiva está alojado en un repositorio Github. Si desea contribuir con ella, por favor clone <https://github.com/mdn/interactive-examples> y envíenos un _"pull request"_.
-
 ## Sintaxis
 
 ```

@@ -1,12 +1,9 @@
 ---
 title: 处理不同方向的文本
 slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directions
-original_slug: Learn/CSS/Building_blocks/Handling_different_text_directions
 l10n:
   sourceCommit: 68772e87a84d6d6fc6a8e377dea4998afbeb511c
 ---
-
-{{LearnSidebar}}
 
 目前为止我们在 CSS 学习中遇到的许多属性和属性值与显示器的物理尺度紧密相关。例如，我们会在盒子的上侧、右侧、下侧、左侧设置边框。这些物理尺寸与水平排布的文本相得益彰，并且，默认浏览器对方向从左到右的文本（如英文或法文）的支持，要优于从右到左的文本（如阿拉伯语）的支持。
 
@@ -73,7 +70,7 @@ h1 {
 
 ## 书写模式、块级布局和行级布局
 
-我们已经讨论了[块级布局和行级布局](/zh-CN/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)，以及有些东西显示为块级元素，有些显示为行级元素。如上文所述，区块元素和行内元素与文档的书写模式有关，而与物理屏幕无关。只有在使用横向显示文本的书写模式（如英语）时，才会从页面顶部到底部显示块元素。
+我们已经讨论了[块级布局和行级布局](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)，以及有些东西显示为块级元素，有些显示为行级元素。如上文所述，区块元素和行内元素与文档的书写模式有关，而与物理屏幕无关。只有在使用横向显示文本的书写模式（如英语）时，才会从页面顶部到底部显示块元素。
 
 用一个例子可以更清楚地说明这一点。下一个例子中有两个盒子，分别包含一个标题和一个段落。第一个盒子应用的是 `writing-mode: horizontal-tb`，这是一个从上到下的横向的书写模式。第二个盒子应用的是 `writing-mode: vertical-rl`，这是一个从右到左的纵向的书写模式。
 
@@ -344,7 +341,7 @@ img {
 
 ## 技能测试！
 
-本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks)。
+本文已经结束，但你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试，以验证是否保留了这些信息——请参阅[技能测试：书写模式和逻辑属性](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes)。
 
 ## 总结
 

@@ -2,12 +2,12 @@
 title: CookieStore：getAll() 方法
 slug: Web/API/CookieStore/getAll
 l10n:
-  sourceCommit: 01e7af5aeee7833c129ddfa41eb719b123a8cdcc
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}} {{AvailableInWorkers}}
 
-{{domxref("CookieStore")}} 接口的 **`getAll()`** 方法返回与传递给它的 `name` 或 `options` 匹配的所有 cookie 列表。
+{{domxref("CookieStore")}} 接口的 **`getAll()`** 方法返回与传递给它的 `name` 或 `options` 匹配的所有 cookie 列表。不传递任何参数将返回当前上下文的所有 cookie。
 
 ## 语法
 
@@ -54,7 +54,7 @@ getAll(options)
 
 - `partitioned`
 
-  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅 [具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)。
+  - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 
 - `path`
 
@@ -62,14 +62,14 @@ getAll(options)
 
 - `sameSite`
 
-  - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
+  - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
 
     - `"strict"`
       - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。
     - `"lax"`
       - : Cookie 不会在正常的跨站点子请求（例如将图像或框架加载到第三方站点）中发送，而是在用户在原始站点内导航时（即点击链接时）发送。
     - `"none"`
-      - : Cookie 将被发送至所有上下文。
+      - : Cookie 将会在所有上下文中发送。
 
 - `secure`
 

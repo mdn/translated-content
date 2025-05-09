@@ -1,5 +1,5 @@
 ---
-title: ":in-range"
+title: :in-range
 slug: Web/CSS/:in-range
 ---
 
@@ -64,4 +64,4 @@ input:out-of-range + label::after {
 ## Смотрите также
 
 - {{cssxref(":out-of-range")}}
-- [Руководство валидации данных в формах](/ru/docs/Learn/Forms/Form_validation)
+- [Руководство валидации данных в формах](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)

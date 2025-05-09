@@ -1,13 +1,44 @@
 ---
-title: ":placeholder-shown"
+title: :placeholder-shown
 slug: Web/CSS/:placeholder-shown
 ---
 
 {{CSSRef}}
 
-**`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示当前显示[占位符文本](/zh-CN/docs/Web/HTML/Element/input#placeholder)的任何 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素。
+**`:placeholder-shown`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示当前显示[占位符文本](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder)的任何 {{htmlElement("input")}} 或 {{htmlElement("textarea")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-placeholder-shown.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:placeholder-shown {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Full Name:</label>
+  <input id="name" name="name" type="text" />
+
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" placeholder="name@example.com" />
+
+  <label for="age">Your age:</label>
+  <input
+    id="age"
+    name="age"
+    type="number"
+    value="18"
+    placeholder="You must be 18+" />
+</form>
+```
 
 ## 语法
 

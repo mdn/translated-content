@@ -1,5 +1,5 @@
 ---
-title: ":only-of-type"
+title: :only-of-type
 slug: Web/CSS/:only-of-type
 l10n:
   sourceCommit: 71d9840f3da24005b015d3d103b358d4f9f46819
@@ -9,7 +9,39 @@ l10n:
 
 CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) **`:only-of-type`** выбирает элемент, который является единственным потомком своего типа.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-of-type.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+a:only-of-type {
+  color: fuchsia;
+}
+
+dd:only-of-type {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>
+  Чтобы узнать больше о <b>QUIC</b>, ознакомьтесь с <a href="#">RFC 9000</a> и
+  <a href="#">RFC 9114</a>.
+</p>
+
+<dl>
+  <dt>Опубликовано</dt>
+  <dd>2021</dd>
+  <dd>2022</dd>
+</dl>
+
+<p>
+  Подробную информацию о <b>QPACK</b> можно найти в <a href="#">RFC 9204</a>.
+</p>
+
+<dl>
+  <dt>Опубликовано</dt>
+  <dd>2022</dd>
+</dl>
+```
 
 ## Синтаксис
 

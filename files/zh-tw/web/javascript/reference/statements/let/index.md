@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/let
 
 **`let`**用於宣告一個「只作用在當前區塊的變數」，初始值可選擇性的設定。
 
-{{EmbedInteractiveExample("pages/js/statement-let.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Let")}}
+
+```js interactive-example
+let x = 1;
+
+if (x === 1) {
+  let x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 1
+```
 
 ## 語法
 
@@ -61,7 +75,7 @@ console.log(this.y); // undefined
 
 ### Emulating private members
 
-In dealing with [constructors](/zh-TW/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/zh-TW/docs/Web/JavaScript/Closures):
+In dealing with [constructors](/zh-TW/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/zh-TW/docs/Web/JavaScript/Guide/Closures):
 
 ```js
 var Thing;

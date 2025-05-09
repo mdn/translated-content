@@ -50,7 +50,7 @@ Promises 在 Edge 中不被支持，使用 callbacks 代替。
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 这个 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/docs/extensions/reference/api/storage) API。这篇文档也来源于 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)。
+> 此 API 基于 Chromium 的 [`chrome.storage`](https://developer.chrome.google.cn/docs/extensions/reference/api/storage) API。该文档衍生自 Chromium 代码中的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

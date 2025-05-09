@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/min
 
 La fonction **`Math.min()`** renvoie le plus petit nombre d'une série de 0 ou plusieurs nombres ou bien {{jsxref("NaN")}} si au moins un des arguments fourni n'est pas un nombre ou ne peut pas être converti en nombre.
 
-{{EmbedInteractiveExample("pages/js/math-min.html")}}
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
+
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
+```
 
 ## Syntaxe
 

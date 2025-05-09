@@ -21,7 +21,31 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 比如，若你想检测一个浏览器是否支持 `row-gap` 属性，你应当写下如下的特性查询。大部分情况下这个查询结果与你所使用的值无关——也就是如果你想仅仅检测浏览器是否支持这个 CSS 属性，那么任何有效的属性值都可以。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
+```html live-sample___simple
+<div class="box">
+  If your browser supports the row-gap property, the border will be dashed and
+  text will be red.
+</div>
+```
+
+```css live-sample___simple
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: red;
+  }
+}
+```
+
+{{EmbedLiveSample("simple")}}
 
 若你测试的是某个属性的新值，那么属性 - 值对中值的那一部分就更加关键。`display` 属性就是一个很好的例子。所有的浏览器都支持 `display` 属性，这可以追溯到 CSS1 中的 `display: block` 。然而 `display: flex` 和 `display: grid` 这些值是新出现的。CSS 属性经常会有额外的新值加入，所以你必须检测属性与值的事实意味着你可以检测那些值的浏览器支持性。（原文：There are often additional values added to properties in CSS, and so the fact that you have to test for property and value means that you can detect support for these values.）
 
@@ -36,7 +60,31 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 下述特性查询中的 CSS 规则仅会在浏览器不支持 `row-gap` 属性的情况下生效。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/not.html", '100%', 600)}}
+```html live-sample___not
+<div class="box">
+  If your browser does not support row-gap, the content will be darkgreen with a
+  dashed border.
+</div>
+```
+
+```css live-sample___not
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports not (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("not")}}
 
 ## 测试多个特性
 
@@ -50,7 +98,32 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 比如，若你想要应用的 CSS 需要浏览器支持 CSS Shape 与 CSS Grid，你可以创建可以同时检测这两个特性的规则。下述规则只有在浏览器同时支持 `shape-outside: circle()` 和`display: grid` 的时候才会返回 true。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
+```html live-sample___and
+<div class="box">
+  If your browser supports <code>display: grid</code> and
+  <code>shape-outside: circle()</code>, the content will be darkgreen with a
+  dashed border.
+</div>
+```
+
+```css live-sample___and
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (display: grid) and (shape-outside: circle()) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("and")}}
 
 你也可以使用 `or`，如果所有规则中有一个规则可以匹配那么你想应用的 CSS 样式就会被启用。
 
@@ -62,7 +135,30 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 你可以在测试时为任何标准属性加上浏览器引擎前缀，然后测试特定引擎的 CSS 支持性，这非常有用。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/or.html", '100%', 600)}}
+```html live-sample___or
+<div class="box">
+  The text and border will be green if your browser supports font smoothing.
+</div>
+```
+
+```css live-sample___or
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (font-smooth: always) or (-webkit-font-smoothing: antialiased) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("or")}}
 
 ## 特性查询的局限性
 
@@ -102,11 +198,11 @@ CSS 特性查询是 [CSS Conditional Rules module](https://drafts.csswg.org/css-
 
 ## 总结
 
-功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险（原文：you do not run the risk of styles used for the fallback display leaking through），就像上面的 Grid 示例那样。
+功能查询可以帮助你开始使用更新的功能，它可以增强旧浏览器使用的简单的站点的显示。由于可以针对其支持的浏览器而打包 CSS，因此不会有后退显示使用的样式漏出的风险，就像上面的 Grid 示例那样。
 
-### 参见
+## 参见
 
-- [@supports](/zh-CN/docs/Web/CSS/@supports) 规则
-- 学习布局：[Supporting Older Browsers](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
-- [CSS Grid Layout and Progressive Enhancement](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Using Feature Queries in CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+- [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块
+- [使用 CSS 媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [支持旧浏览器：特性查询](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#特性查询)
+- [浏览器特性检测：CSS `@supports`](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

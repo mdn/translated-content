@@ -11,7 +11,21 @@ l10n:
 
 더 큰 정수는 {{jsxref("BigInt")}}를 고려해보시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/number-maxsafeinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MAX_SAFE_INTEGER + 1;
+const y = Number.MAX_SAFE_INTEGER + 2;
+
+console.log(Number.MAX_SAFE_INTEGER);
+// Expected output: 9007199254740991
+
+console.log(x);
+// Expected output: 9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## 값
 
@@ -26,10 +40,6 @@ l10n:
 여기서의 안전함이란 정수를 정확하고 올바르게 비교할 수 있음을 의미합니다. 예를 들어 `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2`는 참으로 평가되며 이는 수학적으로 올바르지 않습니다. 더 자세한 내용은 {{jsxref("Number.isSafeInteger()")}}를 참고하세요.
 
 `MAX_SAFE_INTEGER`는 {{jsxref("Number")}}의 정적 속성이기 때문에, 직접 생성한 {{jsxref("Number")}} 객체의 속성이 아니라 `Number.MAX_SAFE_INTEGER` 형식으로 사용해야 합니다.
-
-[배정밀도 부동 소수점 형식](https://en.wikipedia.org/wiki/Double_precision_floating-point_format)은 [가수부](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#number_encoding)를 표현하기 위해 오직 52비트만 사용할 수 있습니다. 그래서 -(2<sup>53</sup> – 1) 부터 2<sup>53</sup> – 1 까지의 정수만 안전하게 표현할 수 있습니다. 이 문맥에서 "안전"이라는 말은 정수를 정확하게 표현하고 이 정수들을 올바르게 비교할 수 있음을 의미합니다. 예를 들어 `Number.MAX_SAFE_INTEGER + 1 === Number.MAX_SAFE_INTEGER + 2`는 true로 평가되겠지만 수학적으로는 틀렸습니다. 보다 자세한 정보는 {{jsxref("Number.isSafeInteger()")}}를 참고하시기 바랍니다.
-
-{{jsxref("Number")}}는 `MAX_SAFE_INTEGER`는 정적 속성이기 때문에 숫자 값의 속성보다는 언제나 `Number.MAX_SAFE_INTEGER` 형태로 사용하세요.
 
 ## 예제
 

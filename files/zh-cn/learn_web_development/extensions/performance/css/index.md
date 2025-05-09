@@ -1,10 +1,9 @@
 ---
 title: CSS 性能优化
 slug: Learn_web_development/Extensions/Performance/CSS
-original_slug: Learn/Performance/CSS
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/html", "Learn_web_development/Extensions/Performance/business_case_for_performance", "Learn_web_development/Extensions/Performance")}}
 
 当开发网站时，你需要考虑浏览器如何处理你网站上的 CSS。为了减轻 CSS 可能引起的性能问题，你应该对其进行优化。例如，你应该优化 CSS 以减少[阻塞渲染](/zh-CN/docs/Glossary/Render_blocking)并最小化所需的回流次数。本文将为你介绍关键的 CSS 性能优化技术。
 
@@ -97,7 +96,7 @@ original_slug: Learn/Performance/CSS
 
 - **使用 CSS 精灵图减少图像相关的 HTTP 请求**：[CSS 精灵图](https://css-tricks.com/css-sprites/) 是一种技术，它将你希望在站点上使用的多个小图像（例如图标）放入单个图像文件中，然后使用不同的 {{cssxref("background-position")}} 值在不同的位置显示图像的一部分。这可以大大减少获取图像所需的 HTTP 请求数量。
 
-- **预加载重要资源**：你可以使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 将 {{htmlelement("link")}} 元素转换为预加载器，用于关键资源，包括 CSS 文件、字体和图片：
+- **预加载重要资源**：你可以使用 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 将 {{htmlelement("link")}} 元素转换为预加载器，用于关键资源，包括 CSS 文件、字体和图片：
 
   ```html
   <link rel="preload" href="style.css" as="style" />
@@ -152,7 +151,7 @@ original_slug: Learn/Performance/CSS
 - 3D 变换动画，例如 [`transform: translateZ()`](/zh-CN/docs/Web/CSS/transform) 和 [`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)。
 - 具有某些其他属性动画的元素，例如 [`position: fixed`](/zh-CN/docs/Web/CSS/position)。
 - 应用了 [`will-change`](/zh-CN/docs/Web/CSS/will-change) 的元素（请参阅下面的小节）。
-- 特定的在其自己层中渲染的元素，包括 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)。
+- 特定的在其自己层中渲染的元素，包括 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 和 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)。
 
 在 GPU 上进行动画处理可以提高性能，尤其是在移动设备上。然而，将动画处理移到 GPU 并不总是那么简单。请阅读 [CSS GPU 动画：正确使用](https://www.smashingmagazine.com/2016/12/gpu-animation-doing-it-right/)（smashingmagazine.com，2016）以获取非常有用和详细的分析。
 
@@ -170,7 +169,7 @@ original_slug: Learn/Performance/CSS
 
 ## 优化渲染阻塞
 
-CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对于响应式网页设计非常重要，并且可以帮助我们优化关键渲染流程。浏览器会阻塞渲染直到解析完所有的样式，但不会阻塞不会使用的样式，例如打印样式表。通过根据媒体查询将 CSS 拆分为多个文件，可以防止在下载未使用的 CSS 时阻塞渲染。要创建一个非阻塞的 CSS 链接，将不立即使用的样式（例如打印样式）移动到单独的文件中，在 HTML 标记中添加一个 [`<link>`](/zh-CN/docs/Web/HTML/Element/link)，并添加一个媒体查询，在本例中是打印样式表。
+CSS 可以使用媒体查询将样式限定在特定条件下。媒体查询对于响应式网页设计非常重要，并且可以帮助我们优化关键渲染流程。浏览器会阻塞渲染直到解析完所有的样式，但不会阻塞不会使用的样式，例如打印样式表。通过根据媒体查询将 CSS 拆分为多个文件，可以防止在下载未使用的 CSS 时阻塞渲染。要创建一个非阻塞的 CSS 链接，将不立即使用的样式（例如打印样式）移动到单独的文件中，在 HTML 标记中添加一个 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link)，并添加一个媒体查询，在本例中是打印样式表。
 
 ```html
 <!-- 加载和解析 styles.css 会阻塞渲染 -->
@@ -228,7 +227,7 @@ h3 {
 
 你还可以考虑以下几点：
 
-- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect) 与字体提供方建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.developers.google.cn/articles/font-best-practices#preconnect_to_critical_third-party_origins)。
+- 使用 [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect) 与字体提供方建立早期连接。有关详细信息，请参阅[预连接到关键的第三方源](https://web.developers.google.cn/articles/font-best-practices#preconnect_to_critical_third-party_origins)。
 - 使用 [CSS 字体加载 API](/zh-CN/docs/Web/API/CSS_Font_Loading_API) 通过 JavaScript 自定义字体加载行为。
 
 ### 只加载所需的字形
@@ -284,7 +283,7 @@ article {
 
 ## 参见
 
-- [CSS 动画性能](/zh-CN/docs/Web/Performance/CSS_JavaScript_animation_performance)
+- [CSS 动画性能](/zh-CN/docs/Web/Performance/Guides/CSS_JavaScript_animation_performance)
 - [字体最佳实践](https://web.developers.google.cn/articles/font-best-practices)（来自 web.developers.google.cn，2022）
 - [content-visibility：提升渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（来自 web.developers.google.cn，2022）
 

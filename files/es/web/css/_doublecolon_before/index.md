@@ -1,5 +1,5 @@
 ---
-title: "::before (:before)"
+title: ::before (:before)
 slug: Web/CSS/::before
 ---
 
@@ -15,7 +15,7 @@ a::before {
 ```
 
 > [!NOTE]
-> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
+> Los pseudoelementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto, no aplica a _[elementos de reemplazo](/es/docs/Web/CSS/CSS_images/Replaced_element_properties)_ como los elementos {{htmlelement("img")}}, o {{htmlelement("br")}}.
 
 ## Sintaxis
 

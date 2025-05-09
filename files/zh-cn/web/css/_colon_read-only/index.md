@@ -1,5 +1,5 @@
 ---
-title: ":read-only"
+title: :read-only
 slug: Web/CSS/:read-only
 ---
 
@@ -21,7 +21,7 @@ input:read-only {
 ```
 
 > [!NOTE]
-> 这个选择器不只是选择具有 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
+> 这个选择器不只是选择具有 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly) 属性的{{htmlElement("input")}} 元素，它也会选择所有的不能被用户编辑的元素。
 
 ## 语法
 
@@ -77,4 +77,4 @@ p[contenteditable="true"] {
 ## 参见
 
 - {{cssxref(":read-write")}}
-- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute
+- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) attribute

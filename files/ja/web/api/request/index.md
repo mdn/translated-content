@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 802b6063046dffb7634d2138aadcd92cb22ed40c
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`Request`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、リソースのリクエストを表します。
 
@@ -32,6 +32,10 @@ l10n:
   - : リクエストに関連付けられた {{domxref("Headers")}} オブジェクトが入ります。
 - {{domxref("Request.integrity")}} {{ReadOnlyInline}}
   - : リクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します（`sha256-BpfBw7ivV8q2jLiT13fxDYAe2tJllusRSZ273h2nFSE=` など）。
+- {{domxref("Request.isHistoryNavigation")}} {{ReadOnlyInline}}
+  - : 論理値で、このリクエストが履歴のナビゲーションであるかどうかを示します。
+- {{domxref("Request.keepalive")}} {{ReadOnlyInline}}
+  - : リクエストの `keepalive` 設定（`true` または `false`）が入ります。これは、リクエストが完全に完了する前に開始ページが読み込まれなかった場合に、ブラウザーが関連付けられたリクエストを維持するかどうかを示します。
 - {{domxref("Request.method")}} {{ReadOnlyInline}}
   - : リクエストメソッド (`GET`, `POST` など) を保持します。
 - {{domxref("Request.mode")}} {{ReadOnlyInline}}
@@ -114,7 +118,7 @@ fetch(request)
     if (response.status === 200) {
       return response.json();
     } else {
-      throw new Error("Something went wrong on API server!");
+      throw new Error("API サーバーで問題が発生しました。");
     }
   })
   .then((response) => {
@@ -137,5 +141,5 @@ fetch(request)
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

@@ -17,7 +17,7 @@ slug: Web/JavaScript/Guide/Numbers_and_strings
 
 JavaScript 最近添加了 {{jsxref("BigInt")}} 的支持，能够用于表示极大的数字。使用 BigInt 的时候有一些注意事项，例如，你不能让 BigInt 和 {{jsxref("Number")}} 直接进行运算，你也不能用 {{jsxref("Math")}} 对象去操作 BigInt 数字。
 
-请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)，了解其他更多的基本类型。
+请参见 Javascript 指南中的 [JavaScript 数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)，了解其他更多的基本类型。
 
 你可以使用四种数字进制：十进制、二进制、八进制和十六进制。
 

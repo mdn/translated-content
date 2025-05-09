@@ -9,7 +9,27 @@ l10n:
 
 Une déclaration **`async function*`** définit _une fonction génératrice asynchrone_, qui renvoie un objet [`AsyncGenerator`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGenerator).
 
-{{EmbedInteractiveExample("pages/js/expressions-async-function-asterisk.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+
+```js interactive-example
+async function* foo() {
+  yield await Promise.resolve("a");
+  yield await Promise.resolve("b");
+  yield await Promise.resolve("c");
+}
+
+let str = "";
+
+async function generate() {
+  for await (const val of foo()) {
+    str = str + val;
+  }
+  console.log(str);
+}
+
+generate();
+// Expected output: "abc"
+```
 
 Il est aussi possible de définir des fonctions génératrices asynchrones à l'aide du constructeur [`AsyncGeneratorFunction()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) ou [d'une expression `async function*`](/fr/docs/Web/JavaScript/Reference/Operators/async_function*).
 

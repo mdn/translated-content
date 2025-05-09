@@ -2,7 +2,7 @@
 title: 权限 API
 slug: Web/API/Permissions_API
 l10n:
-  sourceCommit: 3fde60e07c74ad4954a0c77fdd80958c7d07f088
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("Permissions API")}}{{AvailableInWorkers}}
@@ -13,7 +13,7 @@ l10n:
 
 历史上不同的 API 对自己的权限的处理方式不一致——例如，[Notifications API](/zh-CN/docs/Web/API/Notifications_API) 提供了自己的方法来请求权限和检查权限状态，而 [Geolocation API](/zh-CN/docs/Web/API/Geolocation) 没有。权限 API 提供的工具允许开发者在使用权限时实现一致的用户体验。
 
-此 API 的权限有效地汇总了上下文的所有安全限制，包括在安全上下文中使用 API 的任何要求、应用于文档的 [Permissions-Policy](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy) 限制、用户交互要求和用户提示。因此，例如，如果 API 受到权限策略的限制，则返回的权限将会为 `denied`，并且不会提示用户访问。
+此 API 的权限有效地汇总了上下文的所有安全限制，包括在安全上下文中使用 API 的任何要求、应用于文档的 [Permissions-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy) 限制、用户交互要求和用户提示。因此，例如，如果 API 受到权限策略的限制，则返回的权限将会为 `denied`，并且不会提示用户访问。
 
 `permissions` 属性已在 {{domxref("Navigator")}} 对象上可用，在标准浏览上下文和 worker 上下文中均可用（{{domxref("WorkerNavigator")}}——因此可在 worker 内进行权限检查），并返回 {{domxref("Permissions")}} 对象，该对象提供对权限 API 功能的访问。
 
@@ -71,7 +71,7 @@ l10n:
 
 ## 示例
 
-我们创建了一个名为 Location Finder 的简单示例。你可以[实时运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)、[在 GitHub 上查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)，或者在我们的文章[使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)中阅读有关其工作原理的更多信息。
+我们创建了一个名为 Location Finder 的示例。你可以[实时运行示例](https://chrisdavidmills.github.io/location-finder-permissions-api/)、[在 GitHub 上查看源代码](https://github.com/chrisdavidmills/location-finder-permissions-api/tree/gh-pages)，或者在我们的文章[使用权限 API](/zh-CN/docs/Web/API/Permissions_API/Using_the_Permissions_API)中阅读有关其工作原理的更多信息。
 
 [`Permissions.query()` 示例](/zh-CN/docs/Web/API/Permissions/query#测试对不同权限的支持)也展示了在当前浏览器上测试大多数权限并记录结果的代码。
 

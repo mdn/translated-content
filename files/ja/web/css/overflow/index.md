@@ -7,9 +7,49 @@ l10n:
 
 {{CSSRef}}
 
-**`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
+**`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
 
-{{EmbedInteractiveExample("pages/css/overflow.html")}}
+{{InteractiveExample("CSS Demo: overflow")}}
+
+```css interactive-example-choice
+overflow: visible;
+```
+
+```css interactive-example-choice
+overflow: hidden;
+```
+
+```css interactive-example-choice
+overflow: clip;
+```
+
+```css interactive-example-choice
+overflow: scroll;
+```
+
+```css interactive-example-choice
+overflow: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -61,7 +101,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 `overflow` の各キーワードを使用する際には、以下の点に留意してください。
 
-- `overflow` に `visible`（既定値）または `clip` 以外の値を指定すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が作成されます。これは技術的な理由から必要です。浮動要素がスクロール要素と交差する場合、スクロールのステップごとにコンテンツが強制的に再配置されるため、スクロールの使い勝手が悪くなります。
+- `overflow` に `visible`（既定値）または `clip` 以外の値を指定すると、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が作成されます。これは技術的な理由から必要です。浮動ボックスがスクロール要素と交差する場合、スクロールのステップごとにコンテンツが強制的に再配置されるため、スクロールの使い勝手が悪くなります。
 - `overflow` の設定で期待通りの効果を出すには、溢れる方向が垂直方向の場合は高さ（{{cssxref("height")}} または {{cssxref("max-height")}}）、溢れる方向が水平方向の場合は幅（{{cssxref("width")}} または {{cssxref("max-width")}}）、溢れる方向がブロック方向の場合はブロックサイズ（{{cssxref("block-size")}} または {{cssxref("max-block-size")}}）、溢れる方向がインライン方向の場合はインラインサイズ（{{cssxref("inline-size")}} または {{cssxref("max-inline-size")}}）に加えて {{cssxref("white-space")}} に `nowrap` を、いずれかをブロックレベル要素に設定する必要があります。
 - いずれかの方向で overflow を `visible`（すなわち、`overflow-x` または `overflow-y`）に設定する場合、もう一方の方向を `visible` または `clip` に設定する必要があり、そうしないと、`visible` の値は `auto` として動作します。
 - いずれかの方向で overflow を `clip` に設定する場合、もう一方の方向を `visible` または `clip` に設定する必要があり、そうしないと、`clip` の値は `hidden` として動作します。
@@ -79,7 +119,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 スクロールするコンテンツ領域は、キーボードのみを使用するユーザーにはスクロールできません。ただし、Firefox を使用しているユーザーは例外です（Firefox では、コンテナーが既定ではキーボード操作可能に設定されています）。
 
-開発者として、Firefox 以外のキーボードのみ操作のユーザーにコンテナーのスクロールを許可するには、[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を使用して `tabindex="0"` と指定する必要があります。残念ながら、スクリーンリーダーがこのタブストップに遭遇すると、それが何であるかのコンテキストを保有していないため、スクリーンリーダーはそのコンテンツ全体をアナウンスする可能性が高いです。適切な WAI-ARIA ロール（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) によって）を指定することで、この問題を軽減できます。
+開発者として、Firefox 以外のキーボードのみ操作のユーザーにコンテナーのスクロールを許可するには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を使用して `tabindex="0"` と指定する必要があります。残念ながら、スクリーンリーダーがこのタブストップに遭遇すると、それが何であるかのコンテキストを保有していないため、スクリーンリーダーはそのコンテンツ全体をアナウンスする可能性が高いです。適切な WAI-ARIA ロール（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定することで、この問題を軽減できます。
 
 ## 例
 
@@ -87,7 +127,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 #### HTML
 
-```html
+```html live-sample___demonstrating_results_of_various_overflow_keywords
 <div>
   <code>visible</code>
   <p class="visible">
@@ -145,7 +185,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 #### CSS
 
-```css hidden
+```css hidden live-sample___demonstrating_results_of_various_overflow_keywords
 body {
   display: flex;
   flex-wrap: wrap;
@@ -170,7 +210,7 @@ div:nth-of-type(6) {
 }
 ```
 
-```css
+```css live-sample___demonstrating_results_of_various_overflow_keywords
 p.visible {
   overflow: visible;
 }
@@ -199,7 +239,7 @@ p.overlay {
 
 #### 結果
 
-{{EmbedLiveSample("様々な_overflow_キーワードの結果のデモ", "500", "620")}}
+{{EmbedLiveSample("Demonstrating results of various overflow keywords", "500", "620")}}
 
 ## 仕様書
 

@@ -2,10 +2,8 @@
 title: 撰寫指南
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
+  sourceCommit: 0e7eafea05cd771c86e77947639f3396e7a59b2b
 ---
-
-{{MDNSidebar}}
 
 MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web Docs 上紀錄*什麼*以及*如何*紀錄的指南。若要了解*如何貢獻*，請參閱我們的[貢獻指南](/zh-TW/docs/MDN/Community)。
 
@@ -13,13 +11,17 @@ MDN Web Docs 是一個開源專案。以下各章節說明了我們在 MDN Web D
 
   - : 本章節涵蓋我們在 MDN Web Docs 上包含哪些內容、不包含哪些內容，以及其他多項政策，例如何時撰寫新技術、內容建議流程，以及我們是否接受外部連結。如果你正在考慮為我們撰寫或更新內容，這是一個很好的起點。本章節還包括：
 
-    - [納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [納入標準](/zh-TW/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
       - : 詳細說明了 MDN Web Docs 中納入內容的標準、新文件加入申請流程，以及申請方的期望和指南。
 
 - [我們的寫作風格指南](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : 寫作風格指南涵蓋了我們在 MDN Web Docs 上使用的語言和風格，還包括如何[格式化程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)。
+  - : 寫作風格指南涵蓋了我們在 MDN Web Docs 上使用的語言和風格，還包括如何[格式化程式碼範例](/zh-TW/docs/MDN/Writing_guidelines/Code_style_guide)。
+
+- [學習 Web 開發章節的撰寫指南](/zh-TW/docs/MDN/Writing_guidelines/Learning_content)
+
+  - : MDN 的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節專門針對學習 Web 開發基本原理的人，因此需要採用與 MDN 其他內容不同的方法。本文提供了撰寫學習內容的指南。
 
 - [如何為 MDN Web Docs 撰寫內容](/zh-TW/docs/MDN/Writing_guidelines/Howto)
 

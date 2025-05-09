@@ -15,13 +15,13 @@ l10n:
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 {{glossary("URL")}} 路径段或查询参数中可能引起问题的字符的问题。如果不将数据放在路径段或查询参数中，你就不需要用到这一变体。例如，[data URL](/zh-CN/docs/Web/URI/Schemes/data) 既没有路径段也没有查询参数，因此可以使用标准的 Base64 编码。
+一种常见的变体是“URL 安全的 Base64”，它省略了填充，并将 `+/` 替换为 `-_`，以避免在 {{glossary("URL")}} 路径段或查询参数中可能引起问题的字符的问题。如果不将数据放在路径段或查询参数中，你就不需要用到这一变体。例如，[data URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 既没有路径段也没有查询参数，因此可以使用标准的 Base64 编码。
 
 Base64 编码方案通常用于对二进制数据进行编码，以便在只能处理 ASCII 文本（或某些 ASCII 的超集，仍不接受任意二进制数据）的媒体上进行存储或传输。这确保了数据在传输过程中保持不变。Base64 的常见应用包括：
 
 - 通过[多用途互联网邮件扩展](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展)发送电子邮件
 - 在 [XML](/zh-CN/docs/Web/XML) 中存储复杂数据
-- 编码二进制数据以便包含在 [`data:` URL](/zh-CN/docs/Web/URI/Schemes/data) 中
+- 编码二进制数据以便包含在 [`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 中
 
 ## 编码后大小增加
 
@@ -97,6 +97,6 @@ await dataUrlToBytes("data:application/octet-stream;base64,AAEC"); // Uint8Array
 - JavaScript API:
   - {{domxref("Window.btoa()")}}（也在 {{domxref("WorkerGlobalScope.btoa()", "worker 中可用", "", 1)}}）
   - {{domxref("Window.atob()")}}（也在 {{domxref("WorkerGlobalScope.atob()", "worker 中可用", "", 1)}}）
-- [Data URL](/zh-CN/docs/Web/URI/Schemes/data)
+- [Data URL](/zh-CN/docs/Web/URI/Reference/Schemes/data)
 - 维基百科上的 [Base64](https://zh.wikipedia.org/wiki/Base64)
 - [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 中对 Base64 算法的描述

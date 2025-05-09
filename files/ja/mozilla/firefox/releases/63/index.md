@@ -134,7 +134,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- サイトで [Content Security Policy](/ja/docs/Web/HTTP/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
+- サイトで [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) が設定されている場合に、favicon も CSP に従うようになりました ([Firefox バグ 1297156](https://bugzil.la/1297156))。
 - CSP の違反レポートを生成するとき、`script-src` ディレクティブの `'report-sample'` 式を認識するようになりました。このディレクディブは、違反が発生した場所の短いサンプルをレポートに含めるべきであることを示します。以前は、Firefox は常にサンプルを含めていました ([Firefox バグ 1473218](https://bugzil.la/1473218))。
 - Firefox が NSS 3.39 を使用するようになりました ([Firefox バグ 1470914](https://bugzil.la/1470914))。
 
@@ -169,7 +169,7 @@ _変更なし。_
 ### その他
 
 - {{domxref("PerformanceObserver.observe()")}} の動作を、指定したエントリータイプの配列に有効な値が見つからない場合や、配列が空または存在しない場合に、単に何もしないように修正しました。以前は、Firefox は誤って `TypeError` を発生させていました ([Firefox バグ 1403027](https://bugzil.la/1403027))。
-- [OpenSearch](/ja/docs/Web/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
+- [OpenSearch](/ja/docs/Web/XML/Guides/OpenSearch) で、検索 URL の型として `application/json` を、`application/x-suggestions+json` の別名として受け入れるようになりました ([Firefox バグ 1425827](https://bugzil.la/1425827))。
 
 ## アドオン開発者向けの変更点
 

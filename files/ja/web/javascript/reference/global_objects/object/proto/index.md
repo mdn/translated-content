@@ -33,7 +33,7 @@ obj.__proto__
 
 ## 解説
 
-`__proto__` ゲッター関数はオブジェクトの内部の `[[Prototype]]` の値を外部に公開します。オブジェクトリテラルを使用して生成されたオブジェクトでは（[プロトタイプセッター](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#プロトタイプセッター)構文を使用しない限り）、この値は `Object.prototype` です。配列リテラルを使用して作成したオブジェクトの場合、この値は [`Array.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) です。関数の場合、この値は {{jsxref("Function", "Function.prototype")}} です。プロトタイプチェーンについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)で詳しく説明しています。
+`__proto__` ゲッター関数はオブジェクトの内部の `[[Prototype]]` の値を外部に公開します。オブジェクトリテラルを使用して生成されたオブジェクトでは（[プロトタイプセッター](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer#プロトタイプセッター)構文を使用しない限り）、この値は `Object.prototype` です。配列リテラルを使用して作成したオブジェクトの場合、この値は [`Array.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) です。関数の場合、この値は {{jsxref("Function", "Function.prototype")}} です。プロトタイプチェーンについては、[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)で詳しく説明しています。
 
 `__proto__` のセッターでオブジェクトの `[[Prototype]]` を変更することができます。与えられた値はオブジェクト、または {{jsxref("Operators/null", "null")}} である必要があります。他の値が与えられた場合は何もしません。
 

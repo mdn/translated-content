@@ -9,7 +9,18 @@ l10n:
 
 El método **`get()`** de las instancias de {{jsxref("Map")}} regresa un elemento específico de este _map_. Si el valor que esta asociado a la llave pasada como parámetro es un objeto, entonces obtendras una referencia a dicho objeto y cualquier cambio hecho a ese objeto, lo modificará también dentro del objeto `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-get.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.get("bar"));
+// Expected output: "foo"
+
+console.log(map1.get("baz"));
+// Expected output: undefined
+```
 
 ## Sintaxis
 

@@ -7,7 +7,69 @@ slug: Web/CSS/scroll-snap-type
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`scroll-snap-type`** 设置了在有滚动容器的情形下吸附至吸附点的严格程度。
 
-{{EmbedInteractiveExample("pages/css/scroll-snap-type.html")}}
+{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+
+```css interactive-example-choice
+scroll-snap-type: none;
+```
+
+```css interactive-example-choice
+scroll-snap-type: x mandatory;
+```
+
+```css interactive-example-choice
+scroll-snap-type: x proximity;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+#example-element {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+#example-element > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+#example-element > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 此属性不为吸附至吸附点指定任何确切的动画或运动规律，留待用户代理处理。
 

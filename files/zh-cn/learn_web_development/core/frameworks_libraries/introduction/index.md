@@ -1,10 +1,9 @@
 ---
 title: 客户端框架介绍
 slug: Learn_web_development/Core/Frameworks_libraries/Introduction
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Main_features", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在本章节我们开始大致了解框架，简要回顾 JavaScript 和框架的历史，为什么框架会存在以及它们提供了什么，如何开始考虑选择一个框架并学习，以及对于客户端框架还有什么替代方案。
 
@@ -90,7 +89,7 @@ const state = [
 ];
 ```
 
-如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)）中的一个 HTML [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素。我们该如何实现？可以像下面这样：
+如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（[`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul)）中的一个 HTML [`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li) 元素。我们该如何实现？可以像下面这样：
 
 ```js
 function buildTodoItemEl(id, name) {
@@ -228,7 +227,7 @@ _可以使用_ JavaScript 和浏览器的原生功能来实现路由功能，但
 
 ## 框架驱动页面的无障碍
 
-让我们在上一节中所说的基础上继续，并更多地谈谈无障碍。使用户界面无障碍总是需要一些思考和努力，而框架可能会使这个过程复杂化。你通常必须使用高级框架 API 来访问本地浏览器的功能，如 ARIA [live regions](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) 或专注于对它们的管理。
+让我们在上一节中所说的基础上继续，并更多地谈谈无障碍。使用户界面无障碍总是需要一些思考和努力，而框架可能会使这个过程复杂化。你通常必须使用高级框架 API 来访问本地浏览器的功能，如 ARIA [live regions](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions) 或专注于对它们的管理。
 
 在某些情况下，框架应用程序会造成传统网站不存在的无障碍问题。这方面的典型例子是前面提到的客户端路由。
 

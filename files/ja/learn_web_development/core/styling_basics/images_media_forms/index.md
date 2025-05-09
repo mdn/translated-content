@@ -41,7 +41,7 @@ l10n:
 
 ## 置換要素
 
-画像と動画は、 **[置換要素](/ja/docs/Web/CSS/Replaced_element)** と呼ばれています。これは、 CSS がこれらの要素の内部レイアウトに影響を与えることはできず、他の要素の中でのページ上の位置のみに影響を与えることを意味します。ただし、これから見ていくように、CSSで画像に対してできることはいろいろあります。
+画像と動画は、 **[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)** と呼ばれています。これは、 CSS がこれらの要素の内部レイアウトに影響を与えることはできず、他の要素の中でのページ上の位置のみに影響を与えることを意味します。ただし、これから見ていくように、CSSで画像に対してできることはいろいろあります。
 
 画像や動画などの特定の置換要素は、 **{{glossary("aspect ratio","アスペクト比")}}** を持つものとしても記述されています。これは、水平方向 (x) と垂直方向 (y) の両方の寸法を持ち、既定ではファイルの内在サイズを使って表示されることを意味します。
 
@@ -92,7 +92,7 @@ img {
 
 では、オーバーフローの問題について何ができるでしょうか？
 
-[CSS におけるアイテムへのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)で学んだように、一般的な手法は、画像の {{cssxref("max-width")}} を 100% にすることです。これにより、画像のサイズはボックスよりも小さくなりますが、大きくはなりません。この手法は、[`<video>`](/ja/docs/Web/HTML/Element/video)や [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) などの他の置換要素でも機能します。
+[CSS におけるアイテムへのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)で学んだように、一般的な手法は、画像の {{cssxref("max-width")}} を 100% にすることです。これにより、画像のサイズはボックスよりも小さくなりますが、大きくはなりません。この手法は、[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)や [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) などの他の置換要素でも機能します。
 
 上記の例 `max-width: 100%` の `<img>` 要素に追加してみてください。小さい画像は変更されないままですが、大きい画像はボックスに収まるように小さくなります。
 
@@ -192,7 +192,7 @@ img {
 
 CSS でのスタイル設定に関しては、フォーム要素はトリッキーな問題であり、[HTML フォームモジュール](/ja/docs/Learn_web_development/Extensions/Forms)には、フォーム要素のスタイル設定に関する詳細なガイドが含まれていますが、ここでは完全には再現しません。記事のこの節では、強調すべきいくつかの重要な点があります。
 
-多くのフォームコントロールは [`<input>`](/ja/docs/Web/HTML/Element/input) 要素によってページに追加されます。これは、テキスト入力などの単純なフォームフィールドから、色や日付の選択などのより複雑なフィールドまでを定義します。 [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) などの追加要素や、 [`<fieldset>`](/ja/docs/Web/HTML/Element/fieldset) や [`<legend>`](/ja/docs/Web/HTML/Element/legend) などのフォームの一部を格納したりラベルを貼ったりするために使われる要素もあります。
+多くのフォームコントロールは [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素によってページに追加されます。これは、テキスト入力などの単純なフォームフィールドから、色や日付の選択などのより複雑なフィールドまでを定義します。 [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) などの追加要素や、 [`<fieldset>`](/ja/docs/Web/HTML/Reference/Elements/fieldset) や [`<legend>`](/ja/docs/Web/HTML/Reference/Elements/legend) などのフォームの一部を格納したりラベルを貼ったりするために使われる要素もあります。
 
 HTML には、ウェブ開発者が必須フィールド、さらには入力する必要があるコンテンツの種類を指定できるようにする属性も含まれています。ユーザーが予期しない何かを入力したり、必須フィールドを空白のままにしたりすると、ブラウザーにエラーメッセージが表示されることがあります。 ブラウザーによって、このようなアイテムのスタイル設定やカスタマイズがどの程度可能なのかについては一貫性がありません。
 
@@ -330,7 +330,7 @@ textarea {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 画像とフォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 画像とフォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)を見てください。
 
 ## まとめ
 

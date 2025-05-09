@@ -7,7 +7,7 @@ slug: Web/CSS/attr
 
 > **メモ:** `attr()` 関数はどの CSS プロパティでも使用することができますが、 {{CSSxRef("content")}} 以外のプロパティでの対応は実験的であり、型や単位の引数の対応はまちまちです。
 
-**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、選択された要素の属性の値を受け取り、スタイルシートの中で使うために使用されます。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
+**`attr()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、選択された要素の属性の値を受け取り、スタイルシートの中で使うために使用されます。[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で使用することもでき、その場合は擬似要素を作る元になった要素の属性値が返されます。
 
 ```css
 /* 単純な使用法 */
@@ -26,7 +26,29 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/function-attr.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+
+```css interactive-example
+blockquote {
+  margin: 1em 0;
+}
+
+blockquote::after {
+  display: block;
+  content: " (source: " attr(cite) ") ";
+  color: hotpink;
+}
+```
+
+```html interactive-example
+<blockquote cite="https://mozilla.org/en-US/about/">
+  Mozilla makes browsers, apps, code and tools that put people before profit.
+</blockquote>
+
+<blockquote cite="https://web.dev/about/">
+  Google believes in an open, accessible, private, and secure web.
+</blockquote>
+```
 
 ## 構文
 
@@ -212,5 +234,5 @@ attr(data-something, "default");
 ## 関連情報
 
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` 属性](/ja/docs/Web/HTML/Global_attributes/data-*)
-- [SVG `data-*` 属性](/ja/docs/Web/SVG/Attribute/data-*)
+- [HTML `data-*` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)
+- [SVG `data-*` 属性](/ja/docs/Web/SVG/Reference/Attribute/data-*)

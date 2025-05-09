@@ -3,10 +3,10 @@ title: "Request: redirect プロパティ"
 short-title: redirect
 slug: Web/API/Request/redirect
 l10n:
-  sourceCommit: 954612667bafd71241a93e8554e8f11afc474ff3
+  sourceCommit: 121546ed0718e92b3f99ae99b1a45869ea68ebe7
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`redirect`** は {{domxref("Request")}} インターフェイスの読み取り専用プロパティで、リダイレクトを処理する方法のモードを保持します。
 
@@ -40,5 +40,5 @@ const myCred = myRequest.redirect;
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

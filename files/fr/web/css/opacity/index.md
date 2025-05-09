@@ -7,7 +7,39 @@ slug: Web/CSS/opacity
 
 La propriété **`opacity`** définit la transparence d'un élément. Autrement dit, elle permet de définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
 
-{{EmbedInteractiveExample("pages/css/opacity.html")}}
+{{InteractiveExample("CSS Demo: opacity")}}
+
+```css interactive-example-choice
+opacity: 0;
+```
+
+```css interactive-example-choice
+opacity: 0.33;
+```
+
+```css interactive-example-choice
+opacity: 1;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #963770;
+  color: white;
+  padding: 1em;
+}
+```
 
 La valeur s'applique à l'ensemble de l'élément et à ce qu'il contient même si la valeur n'est pas héritée par les éléments fils. Ainsi, un élément et les fils qu'il contient auront tous la même opacité relative à l'arrière-plan, même si l'élément et ses descendants ont des opacités différentes. Si on souhaite utiliser différentes opacités pour les différents éléments enfants, plutôt que d'utiliser `opacity`, on pourra utiliser la propriété {{cssxref("background")}} avec une composante alpha différente de 1 (par exemple : `background: rgba(0, 0, 0, 0.4);`).
 

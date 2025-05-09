@@ -1,11 +1,12 @@
 ---
-title: Headers()
+title: "Headers: Headers() コンストラクター"
+short-title: Headers()
 slug: Web/API/Headers/Headers
 l10n:
-  sourceCommit: 8573240024adc1eef906b4b2df35567144fd733e
+  sourceCommit: 2c641e08878722bf29fb784d58c61873ce4a133a
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
 **`Headers()`** コンストラクターは、新しい {{domxref("Headers")}} オブジェクトを生成します。
 
@@ -19,7 +20,7 @@ new Headers(init)
 ### 引数
 
 - `init` {{optional_inline}}
-  - : `Headers` オブジェクトに事前に入力したい、任意の [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)を含むオブジェクトです。これは文字列の値を持つ単純なオブジェクトリテラル、名前と値の組の配列（各組は 2 つの要素を持つ文字列の配列）、あるいは既存の `Headers` オブジェクトになります。最後の場合は、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからそのデータをコピーします。
+  - : `Headers` オブジェクトに事前に入力したい、任意の [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)を含むオブジェクトです。これは文字列の値を持つ単純なオブジェクトリテラル、名前と値の組の配列（各組は 2 つの要素を持つ文字列の配列）、あるいは既存の `Headers` オブジェクトになります。最後の場合は、新しい `Headers` オブジェクトは既存の `Headers` オブジェクトからそのデータをコピーします。
 
 ## 例
 
@@ -33,7 +34,7 @@ const myHeaders = new Headers(); // Currently empty
 
 ```js
 myHeaders.append("Content-Type", "image/jpeg");
-myHeaders.get("Content-Type"); // Returns 'image/jpeg'
+myHeaders.get("Content-Type"); // 'image/jpeg' が返される
 ```
 
 または、`Headers` オブジェクトの生成時に必要なヘッダーを追加することもできます。次のスニペットでは、新しい {{domxref("Headers")}} を作成し、コンストラクターに初期化オブジェクトを引数として渡してヘッダーを追加しています。
@@ -50,10 +51,10 @@ const myHeaders = new Headers(httpHeaders);
 
 ```js
 const secondHeadersObj = new Headers(myHeaders);
-secondHeadersObj.get("Content-Type"); // Would return 'image/jpeg' — it inherits it from the first headers object
+secondHeadersObj.get("Content-Type"); // 'image/jpeg' が返される。最初のヘッダーオブジェクトから継承している
 ```
 
-また、`Headers` オブジェクトを作成する際に、二次元の配列を使用して、同じ値を持つ複数のヘッダーを追加することができます。以下のスニペットでは、コンストラクターの引数に初期化配列を渡して、複数の `Set-Cookie` ヘッダーを持つ新しい {{domxref("Headers")}} オブジェクトを作成しています。
+また、`Headers` オブジェクトを作成する際に、二次元配列を使用して、同じ値を持つ複数のヘッダーを追加することができます。以下のスニペットでは、コンストラクターの引数に初期化配列を渡して、複数の `Set-Cookie` ヘッダーを持つ新しい {{domxref("Headers")}} オブジェクトを作成しています。
 
 ```js
 const headers = [
@@ -74,5 +75,5 @@ const myHeaders = new Headers(headers);
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

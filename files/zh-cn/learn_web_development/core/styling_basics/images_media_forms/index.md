@@ -1,10 +1,9 @@
 ---
 title: 图像、媒体和表单元素
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
-original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 在这节课里，我们来看一下，CSS 是如何处理某些特殊元素的。图像、其他媒体和表格元素的表现和普通的盒子有些不同，这取决于你使用 CSS 格式化它们的能力。理解什么可能做到，什么不可能做到能够省些力气，本节课将会聚焦于一些你需要知道的主要的事情上。
 
@@ -32,9 +31,9 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
   </tbody>
 </table>
 
-## 替换元素
+## 可替换元素
 
-图像和视频被描述为**[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)**。这意味着 CSS 不能影响它们的内部布局——而仅影响它们在页面上相对于其他元素的位置。但是，正如我们将看到的，CSS 可以对图像执行多种操作。
+图像和视频被描述为**{{glossary("Replaced elements", "可替换元素")}}**。这意味着 CSS 不能影响它们的内部布局——而仅影响它们在页面上相对于其他元素的位置。但是，正如我们将看到的，CSS 可以对图像执行多种操作。
 
 某些替换元素（例如图像和视频）也具有**宽高比**。这意味着它在水平（x）和垂直（y）方向上均具有大小，并且默认情况下将使用文件的固有尺寸进行显示。
 
@@ -47,11 +46,45 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 - 一个包含了一张小于 200 像素的图像，它比盒子小，并且不会自动拉伸来充满盒子。
 - 另一张图像大于 200 像素，溢出了盒子。
 
-{{EmbedGHLiveSample("css-examples/learn/images/size.html", '100%', 1000)}}
+```html live-sample___size
+<div class="wrapper">
+  <div class="box">
+    <img
+      alt="star"
+      src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+  </div>
+  <div class="box">
+    <img
+      alt="balloons"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+</div>
+```
+
+```css live-sample___size
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper > * {
+  margin: 20px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+}
+
+img {
+}
+```
+
+{{EmbedLiveSample("size", "", "250px")}}
 
 那么该如何处理溢出问题呢？
 
-正如我们在[之前的课程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 起作用。
+正如我们在[之前的课程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 起作用。
 
 **尝试向上面的示例中的 `<img>` 元素加入 `max-width: 100%`，你会看到，左边那张小的图像没有变化，而大的图像变小了，恰好装在了盒子里。**
 
@@ -61,7 +94,54 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 下面的示例中我们使用了值 `cover` 来缩小图像，同时维持了图像的原始比例。这样图像就可以充满盒子。但由于比例保持不变，图像多余的一部分将会被盒子裁切掉。
 
-{{EmbedGHLiveSample("css-examples/learn/images/object-fit.html", '100%', 1000)}}
+```html live-sample___object-fit
+<div class="wrapper">
+  <div class="box">
+    <img
+      alt="balloons"
+      class="cover"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+  <div class="box">
+    <img
+      alt="balloons"
+      class="contain"
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+  </div>
+</div>
+```
+
+```css live-sample___object-fit
+.wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wrapper > * {
+  margin: 20px;
+}
+
+.box {
+  border: 5px solid darkblue;
+  width: 200px;
+  height: 200px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  object-fit: cover;
+}
+
+.contain {
+  object-fit: contain;
+}
+```
+
+{{EmbedLiveSample("object-fit", "", "250px")}}
 
 如果我们使用值 `contain`，图像就会被缩放到足以完整地放到盒子里面的大小。如果它和盒子的比例不同，将会出现“开天窗”的结果。
 
@@ -73,7 +153,32 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 你可以在下面的示例中看到这一现象。该示例有一个两列两行的网格容器，里面有四个物件。所有的 `<div>` 元素有自己的背景色，被拉伸到充满了行和列。但是，图像并没有被拉伸。
 
-{{EmbedGHLiveSample("css-examples/learn/images/layout.html", '100%', 1000)}}
+```html live-sample___layout
+<div class="wrapper">
+  <img
+    alt="star"
+    src="https://mdn.github.io/shared-assets/images/examples/big-star.png" />
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
+```css live-sample___layout
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  gap: 20px;
+}
+
+.wrapper > div {
+  background-color: rebeccapurple;
+  border-radius: 0.5em;
+}
+```
+
+{{EmbedLiveSample("layout", "", "220px")}}
 
 如果你是按序阅读这些课程的，那么你可能还没有看到布局的部分。不过没关系，只要记住替换元素在成为网格或者弹性布局的一部分时，有不同的默认行为就好了。这一默认行为很有必要，因为它避免了替换元素被布局拉伸成奇怪的样子。
 
@@ -92,7 +197,7 @@ img {
 
 用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
 
-很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Element/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Element/legend) 。
+很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Reference/Elements/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Reference/Elements/legend) 。
 
 HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能检验填入内容的类型。如果用户输入了一些不符合要求的内容，或者未填写必填区域，浏览器会显示错误提示。不同的浏览器在给此类元素样式化和自定义方面不尽相同。
 
@@ -102,7 +207,57 @@ HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能
 
 在下面的示例中，我们已经将一些文本输入元素用 CSS 样式化了。可以看到，边框、内外边距之类的东西都如期生效了。现在，我们使用属性选择器来指向不同的输入类型，尝试通过改变边框、添加输入区域背景色、改变字体和内边距的方式来改变表单的外观。
 
-{{EmbedGHLiveSample("css-examples/learn/images/form.html", '100%', 1000)}}
+```html live-sample___form
+<form>
+  <div><label for="name">Name</label> <input id="name" type="text" /></div>
+  <div><label for="email">Email</label> <input id="email" type="email" /></div>
+
+  <div class="buttons"><input type="submit" value="Submit" /></div>
+</form>
+```
+
+```css hidden live-sample___form
+body {
+  font-family: sans-serif;
+}
+form > div {
+  display: flex;
+}
+
+label {
+  width: 10em;
+}
+
+.buttons {
+  justify-content: center;
+}
+```
+
+```css live-sample___form
+input[type="text"],
+input[type="email"] {
+  border: 2px solid #000;
+  margin: 0 0 1em 0;
+  padding: 10px;
+  width: 80%;
+}
+
+input[type="submit"] {
+  border: 3px solid #333;
+  background-color: #999;
+  border-radius: 5px;
+  padding: 10px 2em;
+  font-weight: bold;
+  color: #fff;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #333;
+}
+```
+
+{{EmbedLiveSample("form")}}
 
 > [!WARNING]
 > 你应该谨慎改变表单样式，确保用户仍然能轻松辨认表单元素。原则上，你可以创建一个没有边框和背景的，几乎无法与周围的内容区分开来的输入表单，但这会使辨认和填写变得非常困难。
@@ -181,7 +336,7 @@ textarea {
 
 ## 技能测试
 
-我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)
 
 ## 小结
 

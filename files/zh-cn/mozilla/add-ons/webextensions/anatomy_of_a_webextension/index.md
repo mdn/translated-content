@@ -139,6 +139,6 @@ background-page.html 的内容如下：
 ## 网络可访问资源
 
 网络可访问资源指的是像图片、HTML、CSS 和 JavaScript 一类在扩展中包含的资源文件，并且你可以在内容脚本和页面脚本中访问。这些网络可访问资源可以在页面脚本和内容脚本中通过使用特定的 URI 方案来引用。
-举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 `src` 属性的 [img](/zh-CN/docs/Web/HTML/Element/img) 标签了。
+举个例子来说，如果一个内容脚本想要把一些图片插入网页，你可以在扩展中引入它们并且使他们成为网络可访问资源。接下来，内容脚本就可以创建并追加包含 `src` 属性的 [img](/zh-CN/docs/Web/HTML/Reference/Elements/img) 标签了。
 
 若想了解更多，请参考 manifest.json 中相关条目的文档：[web_accessible_resources](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources)。

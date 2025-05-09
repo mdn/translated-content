@@ -235,7 +235,67 @@ document.addEventListener(
 }
 ```
 
-{{EmbedGHLiveSample("css-examples/transitions/js-transitions.html", '100%', 500)}}
+```html live-sample___js-transitions
+<p>Click anywhere to move the ball</p>
+<div id="foo" class="ball"></div>
+
+<script>
+  // Make the ball move to a certain position:
+  const f = document.getElementById("foo");
+  document.addEventListener(
+    "click",
+    (ev) => {
+      f.style.transform = `translateY(${ev.clientY - 25}px)`;
+      f.style.transform += `translateX(${ev.clientX - 25}px)`;
+    },
+    false,
+  );
+</script>
+```
+
+```css hidden live-sample___js-transitions
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1.2em / 1.5 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  margin-top: 3em;
+}
+
+main {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 660px;
+  height: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+```
+
+```css live-sample___js-transitions
+.ball {
+  border-radius: 25px;
+  width: 50px;
+  height: 50px;
+  background: #c00;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s;
+}
+```
+
+{{EmbedLiveSample("js-transitions", "", "400px")}}
 
 ### 检测渐变的开始和完成
 

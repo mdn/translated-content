@@ -220,7 +220,7 @@ let refreshIntervalID = 0;
 - `adObserver`
   - : 広告と `<main>` 要素の境界との交差を追跡するために使用される {{domxref("IntersectionObserver")}} が格納されます。
 - `refreshIntervalID`
-  - : {{domxref("setInterval()")}} によって返されるインターバル ID を格納するために使用されます。このインターバルは、広告の内容を定期的に更新する際に発生させるために使用されます。
+  - : {{domxref("Window.setInterval", "setInterval()")}} によって返されるインターバル ID を格納するために使用されます。このインターバルは、広告の内容を定期的に更新する際に発生させるために使用されます。
 
 #### セットアップ
 
@@ -321,7 +321,7 @@ function intersectionCallback(entries) {
 
 #### 定期的なアクションの処理
 
-インターバルハンドラーである `handleRefreshInterval()` は、 `startup()` 関数（[上記](#セットアップ)）の中で {{domxref("setInterval()")}} を呼び出すことにより、 1 秒に 1 回程度呼び出されるようになります。この関数の主な仕事は、 1 秒ごとにタイマーを更新し、各広告内で描画するタイマーを更新するために再描画をスケジュールすることです。
+インターバルハンドラーである `handleRefreshInterval()` は、 `startup()` 関数（[上記](#セットアップ)）の中で {{domxref("Window.setInterval", "setInterval()")}} を呼び出すことにより、 1 秒に 1 回程度呼び出されるようになります。この関数の主な仕事は、 1 秒ごとにタイマーを更新し、各広告内で描画するタイマーを更新するために再描画をスケジュールすることです。
 
 ```js
 function handleRefreshInterval() {
@@ -372,7 +372,7 @@ function updateAdTimer(adBox) {
 }
 ```
 
-要素の表示時間を追跡するために、すべての広告で 2 つのカスタムデータ属性（[`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) を参照）を使用しています。
+要素の表示時間を追跡するために、すべての広告で 2 つのカスタムデータ属性（[`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) を参照）を使用しています。
 
 - `lastViewStarted`
   - : 文書が作成された時刻を基準にして、広告の表示回数が最後に更新された、または広告が最後に表示されるようになった時刻をミリ秒単位で指定します。広告を最後に調べた時刻に広告が表示されていなかった場合は 0 です。

@@ -76,14 +76,14 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><a href="/ja/docs/Web/HTTP/CSP">コンテンツセキュリティポリシー</a></td>
+      <td><a href="/ja/docs/Web/HTTP/Guides/CSP">コンテンツセキュリティポリシー</a></td>
       <td>
         文書内のコンテンツがウェブ上で他の機器からアクセスできる範囲を定義する機能を提供した。特にサーバーへの攻撃を防止または軽減するために使用できる。
       </td>
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTTP/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
+        <a href="/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security">HTTP Strict Transport Security</a> (HSTS)
       </td>
       <td>
         HSTS は、サイトがクライアントに対してサーバーとの通信に HTTPS のみを使用することを指示することによって、プロトコルのダウングレードやクッキーハイジャック攻撃から自身を保護するためにサーバーから使用されます。
@@ -102,7 +102,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <td><a href="/ja/docs/Web/HTTP/Permissions_Policy">権限ポリシー</a></td>
+      <td><a href="/ja/docs/Web/HTTP/Guides/Permissions_Policy">権限ポリシー</a></td>
       <td>
         ウェブサーバーが {{HTMLElement("iframe")}} で読み込んだ文書とサブ文書の両方で、{{HTTPHeader("Permissions-Policy")}} を介して機能や API を選択的に有効または無効にできるようにします。
         <a href="/ja/docs/Web/HTML/Element/iframe#allow"><code>allow</code></a> 属性は、個々の {{HTMLElement("iframe")}} に権限ポリシーを設定するために使用できます。
@@ -136,7 +136,7 @@ l10n:
 
 <!-- allow attribute, feature policy, and permissions api stuff -->
 
-リソースへのアクセスを許可して読み込んだ文書が、{{HTMLElement("iframe")}} の中に [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を含んでいて、その許可をフレームのコンテンツに委任している場合、使い勝手の問題が生じることがあります。この場合、ユーザーは同じリソースを繰り返しリクエストされることになり、最初はメインページ、次にフレーム内の文書でリクエストされる可能性があります。
+リソースへのアクセスを許可して読み込んだ文書が、{{HTMLElement("iframe")}} の中に [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性を含んでいて、その許可をフレームのコンテンツに委任している場合、使い勝手の問題が生じることがあります。この場合、ユーザーは同じリソースを繰り返しリクエストされることになり、最初はメインページ、次にフレーム内の文書でリクエストされる可能性があります。
 
 ブラウザーは、これを回避する方法を提供することができます。例えば、Firefox 73 では、ユーザー権限リクエストが修正され、`<iframe>` が `allow` キーワードを使用して埋め込み文書に権限を委譲する場合、ブラウザーは親文書にリソースを使用する権限を与えるようユーザーに要求し、その権限はリソースをリクエストした埋め込みコンテンツと共有され、始めに使用します。
 
@@ -146,5 +146,5 @@ l10n:
 
 - [ウェブセキュリティ](/ja/docs/Web/Security)
 - [権限 API](/ja/docs/Web/API/Permissions_API)
-- [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
 - [The Privacy Sandbox](https://developer.google.com/privacy-sandbox)

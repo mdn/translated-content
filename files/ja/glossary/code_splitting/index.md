@@ -15,6 +15,6 @@ l10n:
 
 ## 関連情報
 
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading)
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading)
 - [HTTP/2](/ja/docs/Glossary/HTTP_2)
 - [ツリーシェイキング](/ja/docs/Glossary/Tree_shaking)

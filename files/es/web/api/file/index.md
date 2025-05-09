@@ -37,7 +37,7 @@ Ver [Utilizando archivos desde aplicaciones web (Using files from web applicatio
 - {{DOMxRef("File.size")}}{{ReadOnlyInline}}
   - : Retorna el tamaño del archivo en bytes.
 - {{DOMxRef("File.type")}}{{ReadOnlyInline}}
-  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/MIME_types)del archivo.
+  - : Retorna el tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types)del archivo.
 
 ## Métodos
 

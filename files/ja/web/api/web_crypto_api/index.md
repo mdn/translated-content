@@ -20,7 +20,7 @@ slug: Web/API/Web_Crypto_API
 
 一部のブラウザーでは、{{domxref("Crypto")}} というインターフェイスが明確に定義されておらず、暗号化されていなくても実装されていました。混乱を避けるために、このインターフェイスのメソッドとプロパティは Web Crypto API を実装しているブラウザーから削除され、 Web Crypto API のすべてのメソッドは新しいインターフェイス、つまり {{domxref("SubtleCrypto")}} で利用可能になりました。{{domxref("Crypto.subtle")}} プロパティはそれを実装しているオブジェクトへのアクセスを提供します。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

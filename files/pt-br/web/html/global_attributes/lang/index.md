@@ -7,7 +7,29 @@ slug: Web/HTML/Global_attributes/lang
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **`lang`** ajuda a definir o idioma de um elemento: a língua em que elementos não-editáveis são escritos, ou a língua em que elementos editáveis devem ser escritos pelo usuário. O atributo contém uma uma única "tag de idioma" em um formato definido em [_Tags para identificar linguagens(BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-lang.html","tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+
+```html interactive-example
+<p>This paragraph is English, but the language is not specifically defined.</p>
+
+<p lang="en-GB">This paragraph is defined as British English.</p>
+
+<p lang="fr">Ce paragraphe est défini en français.</p>
+```
+
+```css interactive-example
+p::before {
+  padding-right: 5px;
+}
+
+[lang="en-GB"]::before {
+  content: "(In British English) ";
+}
+
+[lang="fr"]::before {
+  content: "(In French) ";
+}
+```
 
 Se o valor do atributo é uma _string vazia_ (`lang=""`), o idioma é definido como _unknown (desconhecido)_; se a tag de idioma não é válida conforme o BCP47, ela é definida como _invalid (invalida)_.
 

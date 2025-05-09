@@ -1,15 +1,15 @@
 ---
-title: Transport Layer Security
+title: トランスポート層セキュリティ
 slug: Web/Security/Transport_Layer_Security
 l10n:
-  sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
+  sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
-Transport Layer Security (TLS) を使用した接続のセキュリティは、選択されている暗号スイートとセキュリティ引数に強く依存します。この記事の目的は、クライアントとサーバーの間の機密性と完全性の通信を確実にするために、選択の参考になることです。 Mozilla Operations Security (OpSec) チームは、サーバーの設定項目のリファレンスが付いた[ウィキ記事を管理しています](https://wiki.mozilla.org/Security/Server_Side_TLS)。
+トランスポート層セキュリティ (TLS, Transport Layer Security) を使用した接続のセキュリティは、選択されている暗号スイートとセキュリティ引数に強く依存します。この記事の目的は、クライアントとサーバーの間の機密性と完全性の通信を確実にするために、選択の参考になることです。 Mozilla Operations Security (OpSec) チームは、サーバーの設定項目のリファレンスが付いた[ウィキ記事を管理しています](https://wiki.mozilla.org/Security/Server_Side_TLS)。
 
-Transport Layer Security (TLS) プロトコルは、ネットワークで結ばれた 2 つのアプリケーションや端末が、私的にかつ強固に情報交換するための標準です。 TLS を使用するアプリケーションは、セキュリティ引数を選択することができ、これは、データのセキュリティと信頼性に大きな影響を与える可能性があります。この記事では、 TLS の概要と、コンテンツを保護するために必要な決定の種類について説明します。
+トランスポート層セキュリティ (TLS) プロトコルは、ネットワークで結ばれた 2 つのアプリケーションや端末が、私的にかつ強固に情報交換するための標準です。 TLS を使用するアプリケーションは、セキュリティ引数を選択することができ、これは、データのセキュリティと信頼性に大きな影響を与える可能性があります。この記事では、 TLS の概要と、コンテンツを保護するために必要な決定の種類について説明します。
 
 ## 歴史
 
@@ -44,7 +44,7 @@ TLS 1.3 の暗号化スイートは主にデータの暗号化を管理し、鍵
 
 ### サーバーの構築
 
-サーバーを正しく設定することは非常に重要です。一般的には、サイトに接続できるようにしたいブラウザと互換性のある、可能な限り最新の暗号をサポートするようにしてください。[Mozilla OpSec ガイドの TLS 設定](https://wiki.mozilla.org/Security/Server_Side_TLS)では、推奨される設定についての詳細な情報を提供しています。
+サーバーを正しく設定することは非常に重要です。一般的には、サイトに接続できるようにしたいブラウザーと互換性のある、可能な限り最新の暗号をサポートするようにしてください。[Mozilla OpSec ガイドの TLS 設定](https://wiki.mozilla.org/Security/Server_Side_TLS)では、推奨される設定についての詳細な情報を提供しています。
 
 サイトの設定を支援するために、Mozilla は以下のウェブサーバー用の設定ファイルを生成する便利な [TLS 設定ジェネレーター](https://ssl-config.mozilla.org/)を提供しています。
 
@@ -76,7 +76,7 @@ TLS 1.3 の主な変更点は以下の通りです。
 - TLS 1.3 のハンドシェイクは、共有シークレットを確立するために必要なメッセージを除き、暗号化されています。特に、これはサーバー証明書とクライアント証明書が暗号化されていることを意味します。ただし、クライアントがサーバーに送信するサーバー ID (サーバー名または SNI 拡張子) は暗号化されないことに注意してください
 - 数多くのメカニズムが無効化されています: リネゴシエーション、一般的なデータ圧縮、[デジタル署名アルゴリズム](https://ja.wikipedia.org/wiki/Digital_Signature_Algorithm)。(DSA) 証明書、静的 RSA 鍵交換、カスタム Diffie-Hellman (DH) グループとの鍵交換
 
-TLS 1.3 のドラフト版の実装が公開されています。TLS 1.3 は 0-RTT モードを含むいくつかのブラウザで有効になっています。TLS 1.3 を有効にしているウェブサーバーでは、TLS 1.3 が正常に動作するように設定を調整する必要があるかもしれません。
+TLS 1.3 のドラフト版の実装が公開されています。TLS 1.3 は 0-RTT モードを含むいくつかのブラウザーで有効になっています。TLS 1.3 を有効にしているウェブサーバーでは、TLS 1.3 が正常に動作するように設定を調整する必要があるかもしれません。
 
 TLS 1.3 では、重要な新しいユースケースが 1 つだけ追加されました。0-RTT ハンドシェイクは、ウェブのようなレイテンシに敏感なアプリケーションに大きなパフォーマンスの向上をもたらします。0-RTT を有効にするには、導入を確実に成功させ、リプレイ攻撃のリスクを管理するための追加のステップが必要です。
 
@@ -90,14 +90,14 @@ Firefox はバージョン 74 以降、古い TLS バージョンを使用して
 
 ## TLS ハンドシェイクタイムアウト値
 
-何らかの理由で TLS ハンドシェイクが遅くなったり、反応しなくなったりすると、ユーザーの体験に大きな影響を与える可能性があります。この問題を軽減するために、最近のブラウザはハンドシェイクのタイムアウトを実装しています。
+何らかの理由で TLS ハンドシェイクが遅くなったり、反応しなくなったりすると、ユーザーの体験に大きな影響を与える可能性があります。この問題を軽減するために、最近のブラウザーはハンドシェイクのタイムアウトを実装しています。
 
 - バージョン 58 以降、Firefox は TLS ハンドシェイクのタイムアウトを既定値の 30 秒で実装しています。タイムアウトの値は、about:config の `network.http.tls-handshake-timeout` 設定値を編集することで変更できます
 
 ## 関連情報
 
-- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org) および [Cipherlist.eu](https://cipherlist.eu/) は、サーバーがサイトの安全を確保するための構成ファイルを生成するのに役立つかもしれません。
-- Mozilla Operations Security (OpSec) チームは、 [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) の wiki ページを保守しています。
-- [Mozilla Observatory](https://observatory.mozilla.org/), [SSL Labs](https://www.ssllabs.com/ssltest/), [Cipherscan](https://github.com/mozilla/cipherscan) はサイトの TLS 構成がどれだけ安全かを確認するテストに役立ちます。
-- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-- [Strict-Transport-Security](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP ヘッダー
+- [Mozilla SSL Configuration Generator](https://ssl-config.mozilla.org/) および [Cipherlist.eu](https://cipherlist.eu/) は、サーバーがサイトの安全を確保するための構成ファイルを生成するのに役立つかもしれません。
+- Mozilla Operations Security (OpSec) チームは、 [reference TLS configurations](https://wiki.mozilla.org/Security/Server_Side_TLS) のウィキページを保守しています。
+- [HTTP Observatory](/en-US/observatory/), [SSL Labs](https://www.ssllabs.com/ssltest/) はサイトの HTTP/TLS 構成がどれだけ安全かを確認するテストに役立ちます。
+- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
+- [Strict-Transport-Security](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP ヘッダー

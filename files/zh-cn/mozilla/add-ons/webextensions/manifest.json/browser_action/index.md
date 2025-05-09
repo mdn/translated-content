@@ -143,11 +143,11 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
         <p>
           该 HTML 文件可能会使用
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Element/link">&#x3C;link></a></code
+            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/link">&#x3C;link></a></code
           >
           and
           <code
-            ><a href="/zh-CN/docs/Web/HTML/Element/script"
+            ><a href="/zh-CN/docs/Web/HTML/Reference/Elements/script"
               >&#x3C;script></a
             ></code
           >

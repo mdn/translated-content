@@ -2,7 +2,7 @@
 title: WebSocket クライアントアプリケーションを書く
 slug: Web/API/WebSockets_API/Writing_WebSocket_client_applications
 l10n:
-  sourceCommit: 4bd2e8957a40a8f31484f9aea3725bdfe78a921a
+  sourceCommit: 9a4005caa5cc13f5174e3b8981eeec5631ed83d1
 ---
 
 {{DefaultAPISidebar("WebSockets API")}} {{AvailableInWorkers}}
@@ -67,7 +67,7 @@ const exampleSocket = new WebSocket("wss://www.example.com/socketserver", [
 
 接続が確立されると（つまり `readyState` が `OPEN`）、 {{domxref("WebSocket.protocol", "exampleSocket.protocol")}} は、サーバーが選択したプロトコルを通知します。
 
-WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
+WebSocket を確立するには、 [HTTP アップグレードメカニズム](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)が必要です。したがって、 HTTP サーバーを `ws://www.example.com` または `wss://www.example.com` としてアドレス指定すると、プロトコルのアップグレードのためのリクエストが暗黙的に行われます。
 
 ## サーバーへのデータの送信
 
@@ -135,7 +135,7 @@ exampleSocket.onmessage = (event) => {
 
 ```js
 exampleSocket.onmessage = (event) => {
-  const f = document.getElementById("chatbox").contentDocument;
+  const f = document.getElementById("chat-box").contentDocument;
   let text = "";
   const msg = JSON.parse(event.data);
   const time = new Date(msg.date);
@@ -152,17 +152,17 @@ exampleSocket.onmessage = (event) => {
     case "message":
       text = `(${timeStr}) ${msg.name} : ${msg.text} <br>`;
       break;
-    case "rejectusername":
+    case "reject-username":
       text = `Your username has been set to <em>${msg.name}</em> because the name you chose is in use.<br>`;
       break;
-    case "userlist":
-      document.getElementById("userlistbox").innerText = msg.users.join("\n");
+    case "user-list":
+      document.getElementById("user-list-box").innerText = msg.users.join("\n");
       break;
   }
 
   if (text.length) {
     f.write(text);
-    document.getElementById("chatbox").contentWindow.scrollByPages(1);
+    document.getElementById("chat-box").contentWindow.scrollByPages(1);
   }
 };
 ```
@@ -186,5 +186,5 @@ exampleSocket.close();
 
 ## セキュリティの考慮事項
 
-混合コンテンツ環境では WebSocket を使用しないでください。つまり、 HTTPS を使用もしくはそうでない方法でもロードされたページから、セキュアでない WebSocket 接続を開くべきではありません。
+混在コンテンツ環境では WebSocket を使用しないでください。つまり、 HTTPS を使用もしくはそうでない方法でもロードされたページから、セキュアでない WebSocket 接続を開くべきではありません。
 最近のブラウザーは安全な WebSocket 接続のみを許可し、また安全ではないコンテキストでの使用には対応しなくなってきています。

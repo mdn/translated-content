@@ -7,7 +7,42 @@ slug: Web/CSS/background-size
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-size`** définit la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 > [!NOTE]
 > L'espace qui n'est pas rempli par l'image d'arrière-plan aura la couleur définie par la propriété [`background-color`](/fr/docs/Web/CSS/background-color). De plus, la couleur d'arrière-plan sera visible si l'image d'arrière-plan est transparente.
@@ -75,10 +110,10 @@ Le calcul des valeurs dépend des dimensions intrinsèques de l'image (sa largeu
 - Une image matricielle (telle qu'une image JPG) possède toujours des dimensions intrinsèques et des proportions intrinsèques.
 - Une image vectorielle (telle qu'une image SVG) ne possède pas nécessairement de dimensions intrinsèques. Si elle possède à la fois une dimension verticale et une dimension horizontale intrinsèques, elle possèdera alors des proportions intrinsèques. Si elle ne possède qu'une ou aucune dimension intrinsèque, elle peut avoir ou ne pas avoir de proportions.
 - Un dégradé CSS (cf. [`<gradient>`](/fr/docs/Web/CSS/gradient)) ne possède ni dimension ni proportion intrinsèque.
-- Les images d'arrière-plan créées avec la fonction [`element()`](</fr/docs/Web/CSS/element()>) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
+- Les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) utiliseront les dimensions et proportions intrinsèques de l'élément générateur.
 
 > [!NOTE]
-> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](</fr/docs/Web/CSS/element()>) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
+> Pour Gecko, les images d'arrière-plan créées avec la fonction [`element()`](/fr/docs/Web/CSS/element) sont actuellement traitées comme des images ayant les dimensions de l'élément ou, si la zone de positionnement est un élément SVG, avec les proportions intrinsèques. Ce comportement n'est pas standard.
 
 Selon le caractère intrinsèque ou non des dimensions et des proportions, la taille d'affichage de l'image d'arrière-plan est calculée de la façon suivante&nbsp;:
 

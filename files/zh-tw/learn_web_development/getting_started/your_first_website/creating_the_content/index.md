@@ -1,10 +1,9 @@
 ---
 title: HTML 基礎
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
 HTML（**H**ypertext **M**arkup **L**anguage），中文全名為「超文字標記語言」，是一種用來組織架構並呈現網頁內容的標記語言。網頁內容的組成，可能包含了段落、清單、圖片或表格...等。透過這篇文章，希望能幫助大家對 HTML 及其功能有基本的認識。
 

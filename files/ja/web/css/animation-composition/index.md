@@ -2,7 +2,7 @@
 title: animation-composition
 slug: Web/CSS/animation-composition
 l10n:
-  sourceCommit: d35542bdca7fef10c5f82678d5669f633afe7b32
+  sourceCommit: 0c8ed7f82f3aee5ee177f8c8e33879460b82ad6b
 ---
 
 {{CSSRef}}
@@ -164,8 +164,8 @@ animation-composition: unset;
 {{EmbedLiveSample("Reversing the animation direction","100%","250")}}
 
 - `replace` を使用すると、 `transform` プロパティの `0%, 20%` のキーフレームでの最終的な効果値は `translateX(100px)` になります（基盤の値である `translateX(30px) rotate(45deg)` を完全に置き換えます）。この場合、要素は 45deg から 0deg まで回転し、要素自体に設定された既定値から 0% マークで設定された回転しない値までアニメーションします。これが既定の動作です。
-- `add` を使用すると、 `transform` プロパティの `0%, 20%` のキーフレームでの最終的な効果値は、`translateX(30px) rotate(45deg)` に `translateX(100px)` が続きます。つまり、要素は右に `30px` 移動し、`45deg` 回転し、さらに X 軸方向に `100px` 移動します。
-- `accumulate` を称すると、 `0%, 20%` キーフレームでの最終的な効果値は `translateX(130px) rotate(45deg)` になります。つまり、 2 つの X 軸の移動値 `30px` と `100px` が結合または「累積」されます。
+- `add` を使用すると、 `transform` プロパティの `20%, 40%` のキーフレームでの最終的な効果値は、`translateX(30px) rotate(45deg) translateX(100px)` が続きます。つまり、要素は右に 100px 移動し、原点を中心として 45 度回転し、さらに X 軸方向に 30px 移動します。
+- `accumulate` を称すると、 `20%, 40%` キーフレームでの最終的な効果値は `translateX(130px) rotate(45deg)` になります。つまり、 2 つの X 軸の移動値 `30px` と `100px` が結合または「累積」されます。
 
 ## 仕様書
 

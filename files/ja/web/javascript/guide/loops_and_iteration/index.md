@@ -56,7 +56,7 @@ for (初期化式; 条件式; 加算式)
 
 ### 例
 
-例えば下記の例には `for` 文があり、スクロールリスト（複数選択が可能な [`<select>`](/ja/docs/Web/HTML/Element/select) 要素）で選択されたオプションの数値をカウントしています。
+例えば下記の例には `for` 文があり、スクロールリスト（複数選択が可能な [`<select>`](/ja/docs/Web/HTML/Reference/Elements/select) 要素）で選択されたオプションの数値をカウントしています。
 
 #### HTML
 
@@ -361,7 +361,7 @@ for (const i of arr) {
 // Logs: 3 5 7
 ```
 
-`for...of` および `for...in` 文は、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
+`for...of` および `for...in` 文は、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)でも使用することができます。例えば、 {{jsxref("Object.entries()")}} を使用して、オブジェクトのキーと値を同時に反復処理することができます。
 
 ```js
 const obj = { foo: 1, bar: 2 };

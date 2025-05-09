@@ -21,7 +21,7 @@ l10n:
 
 - 在维基百科上的[用户代理](https://zh.wikipedia.org/wiki/用户代理)
 - {{domxref("navigator.userAgent")}}
-- [使用用户代理进行浏览器检测](/zh-CN/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [使用用户代理进行浏览器检测](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}：`User-Agent` 标头
 - 相关术语：
   - {{Glossary("Browser", "浏览器")}}

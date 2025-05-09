@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSFontFaceRule`** インターフェイスは {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表します。
+**`CSSFontFaceRule`** インターフェイスは {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表します。
 
 {{InheritanceDiagram}}
 
@@ -29,7 +29,8 @@ _祖先である {{domxref("CSSRule")}} からメソッドを継承していま�
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }
