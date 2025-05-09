@@ -1,6 +1,7 @@
 ---
 title: "Проверьте свои знания: Изображения в HTML"
-slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+original_slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 ---
 
 {{learnsidebar}}
