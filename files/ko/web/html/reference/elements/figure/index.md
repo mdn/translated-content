@@ -118,15 +118,15 @@ figcaption {
 <!-- Just an image -->
 <figure>
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
-    alt="A robotic monster over the letters MDN." />
+    src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
+    alt="The beautiful MDN logo." />
 </figure>
 
 <!-- Image with a caption -->
 <figure>
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
-    alt="A robotic monster over the letters MDN." />
+    src="https://developer.mozilla.org/favicon-48x48.bc390275e955dacb2e65.png"
+    alt="The beautiful MDN logo." />
   <figcaption>MDN Logo</figcaption>
 </figure>
 ```
