@@ -2,7 +2,7 @@
 title: Firefox 136 for developers
 slug: Mozilla/Firefox/Releases/136
 l10n:
-  sourceCommit: 48d5355da68a986ba2434d275b7d1ddcc0d5d207
+  sourceCommit: edf3344dc1edb0e2c07a20bd7e85211b4809fa8d
 ---
 
 {{FirefoxSidebar}}
@@ -35,15 +35,13 @@ l10n:
 ### API
 
 - Chromium ブラウザーの制限に合わせて、[Data URL](/ja/docs/Web/URI/Reference/Schemes/data) のサイズの上限を 32MB から 512MB に拡張しました ([Firefox bug 1911300](https://bugzil.la/1911300))。
-- [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) は新しい {{glossary("asynchronous, "非同期")}} な {{jsxref("Promise")}} ベースの Cookie 管理方法で、メインスレッドと [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) の両方で使用できます。
-  Cookie Store API のサブセットを実装しました ([Firefox bug 1937477](https://bugzil.la/1937477))。以下のプロパティが含まれます:
 
-  - Cookie を取得、設定、削除するための [`CookieStore`](/ja/docs/Web/API/CookieStore) インターフェイス。
-  - `CookieStore` インターフェイスを取得するための [`Window.cookieStore`](/ja/docs/Web/API/Window/cookieStore) および [`ServiceWorkerGlobalScope.cookieStore`](/ja/docs/Web/API/ServiceWorkerGlobalScope/cookieStore) プロパティ。
-  - [`change` イベント](/ja/docs/Web/API/CookieStore/change_event) (およびそのインターフェイスである [`CookieChangeEvent`](/ja/docs/Web/API/CookieChangeEvent))。これは Cookie が設定または削除されたときに、メインスレッドおよびサービスワーカーコンテキストで発生します。
+- 要素のプロパティが [要素参照を含む Aria 属性](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) に反映されるようになりました ([Firefox bug 1919102](https://bugzil.la/1919102))。
 
-  任意のサポート済み Cookie プロパティを [設定](/ja/docs/Web/API/CookieStore/set) できますが、[`get()`](/ja/docs/Web/API/CookieStore/get) および [`getAll()`](/ja/docs/Web/API/CookieStore/getAll) メソッドと `change` イベントで返される Cookie オブジェクトでは `name` および `value` 以外のプロパティが除かれる ({{domxref("document.cookie")}} で返される情報に一致する) ことに注意してください。
-  以下のインターフェイスおよびプロパティは未実装です: [`ServiceWorkerRegistration.cookies`](/ja/docs/Web/API/ServiceWorkerRegistration/cookies)、[`CookieStoreManager`](/ja/docs/Web/API/CookieStoreManager)、[`ExtendableCookieChangeEvent`](/ja/docs/Web/API/ExtendableCookieChangeEvent)。
+  以下のプロパティが含まれます:
+
+  - {{domxref("Element")}} インターフェイスの {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("Element/ariaControlsElements","ariaControlsElements")}}、{{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("Element/ariaOwnsElements","ariaOwnsElements")}}。
+  - {{domxref("ElementInternals")}} インターフェイスの {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}、{{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}}。
 
 #### Media、WebRTC、Web Audio
 
@@ -58,19 +56,19 @@ l10n:
 
 #### 一般
 
-- Firefox が、リモートエージェント用の WebSocket ポートの競合をより効率的に処理するようになりました。`--remote-debugging-port` コマンドライン引数で指定したポートを 5 秒以内に取得できなかった場合 (別の Firefox プロセスがすでにポートを使用しているときなど) は、Firefox はハングアップせずにシャットダウンします ([Firefox bug 1927721](https://bugzilla.mozilla.org/show_bug.cgi?id=1927721))。
+- Firefox が、リモートエージェント用の WebSocket ポートの競合をより効率的に処理するようになりました。`--remote-debugging-port` コマンドライン引数で指定したポートを 5 秒以内に取得できなかった場合 (別の Firefox プロセスがすでにポートを使用しているときなど) は、Firefox はハングアップせずにシャットダウンします ([Firefox bug 1927721](https://bugzil.la/1927721))。
 
-- Marionette の `WebDriver:Navigate` コマンドや WebDriver BiDi の `browsingContext.navigate` で実行した HTTP スキーマを使用するナビゲーションを、自動的に HTTPS へアップグレードしないようになりました。これらのリクエストは、意図したとおりに HTTP を維持します ([Firefox bug 1943551](https://bugzilla.mozilla.org/show_bug.cgi?id=1943551))。
+- Marionette の `WebDriver:Navigate` コマンドや WebDriver BiDi の `browsingContext.navigate` で実行した HTTP スキーマを使用するナビゲーションを、自動的に HTTPS へアップグレードしないようになりました。これらのリクエストは、意図したとおりに HTTP を維持します ([Firefox bug 1943551](https://bugzil.la/1943551))。
 
 #### WebDriver BiDi
 
-- `session.subscribe` がサブスクリプション ID を返すようになりました。これは以前サブスクライブしたイベントやコンテキストで元のサブスクリプションと同じものを正確に示すために `session.unsubscribe` で使用できます。これは特定のタブに限定したサブスクリプションなど、複数のサブスクリプションが存在するときの意図しない副作用を防ぎます ([Firefox bug 1938576](https://bugzilla.mozilla.org/show_bug.cgi?id=1938576))。
+- `session.subscribe` がサブスクリプション ID を返すようになりました。これは以前サブスクライブしたイベントやコンテキストで元のサブスクリプションと同じものを正確に示すために `session.unsubscribe` で使用できます。これは特定のタブに限定したサブスクリプションなど、複数のサブスクリプションが存在するときの意図しない副作用を防ぎます ([Firefox bug 1938576](https://bugzil.la/1938576))。
 
   注記: 名前とコンテキストでイベントを削除する以前の方法は非推奨になり、将来のリリースで削除する予定です。
 
-- `script.addPreloadScript` コマンドで `userContexts` フィールドをサポートしました。このフィールドは、スクリプトが常に自動で読み込まれるコンテキスト (コンテナー) をクライアントが指定することを可能にします。これは、指定したユーザーコンテキストで開いた新しいブラウジングコンテキストも含まれます ([Firefox bug 1940927](https://bugzilla.mozilla.org/show_bug.cgi?id=1940927))。
+- `script.addPreloadScript` コマンドで `userContexts` フィールドをサポートしました。このフィールドは、スクリプトが常に自動で読み込まれるコンテキスト (コンテナー) をクライアントが指定することを可能にします。これは、指定したユーザーコンテキストで開いた新しいブラウジングコンテキストも含まれます ([Firefox bug 1940927](https://bugzil.la/1940927))。
 
-- コンテキストが閉じられたときに、`browsingContext.contextDestroyed` イベントがすべての子コンテキストを含めて完全にシリアライズしたブラウジングコンテキストのツリーを返すようになりました ([Firefox bug 1860955](https://bugzilla.mozilla.org/show_bug.cgi?id=1860955))。
+- コンテキストが閉じられたときに、`browsingContext.contextDestroyed` イベントがすべての子コンテキストを含めて完全にシリアライズしたブラウジングコンテキストのツリーを返すようになりました ([Firefox bug 1860955](https://bugzil.la/1860955))。
 
 ## アドオン開発者向けの変更点一覧
 

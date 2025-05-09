@@ -33,13 +33,6 @@
       "ikkou"
     ]
   },
-  "Games/Introduction_to_HTML5_Game_Development": {
-    "modified": "2019-01-17T03:02:35.545Z",
-    "contributors": [
-      "wbamberg",
-      "Uemmra3"
-    ]
-  },
   "Games/Techniques": {
     "modified": "2019-01-16T21:57:37.988Z",
     "contributors": [
@@ -43710,6 +43703,13 @@
     "modified": "2020-10-15T21:53:09.850Z",
     "contributors": [
       "ukyo"
+    ]
+  },
+  "conflicting/Games/Tools": {
+    "modified": "2019-01-17T03:02:35.545Z",
+    "contributors": [
+      "wbamberg",
+      "Uemmra3"
     ]
   },
   "conflicting/Glossary/Denial_of_Service": {

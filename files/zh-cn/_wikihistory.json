@@ -54,13 +54,6 @@
       "fierayan"
     ]
   },
-  "Games/Introduction_to_HTML5_Game_Development": {
-    "modified": "2019-01-17T01:15:39.320Z",
-    "contributors": [
-      "wbamberg",
-      "xgqfrms-GitHub"
-    ]
-  },
   "Games/Publishing_games": {
     "modified": "2019-01-17T00:50:49.182Z",
     "contributors": [
@@ -177,6 +170,13 @@
     "contributors": [
       "wbamberg",
       "zsxeee"
+    ]
+  },
+  "Games/Tools": {
+    "modified": "2019-01-17T01:15:39.320Z",
+    "contributors": [
+      "wbamberg",
+      "xgqfrms-GitHub"
     ]
   },
   "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {

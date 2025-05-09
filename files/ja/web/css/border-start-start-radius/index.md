@@ -1,27 +1,13 @@
 ---
 title: border-start-start-radius
 slug: Web/CSS/border-start-start-radius
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-start-start-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
-
-```css
-/* <length> 値 */
-/* 値 1 つの場合は角を円にする */
-border-start-start-radius: 10px;
-border-start-start-radius: 1em;
-
-/* 値 2 つの場合は角を楕円にする */
-border-start-start-radius: 1em 2em;
-
-/* グローバル値 */
-border-start-start-radius: inherit;
-border-start-start-radius: initial;
-border-start-start-radius: revert;
-border-start-start-radius: unset;
-```
 
 {{InteractiveExample("CSS Demo: border-start-start-radius")}}
 
@@ -47,7 +33,7 @@ writing-mode: vertical-rl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a top left rounded corner.
+    このボックスは、左上の角が丸くなっています。
   </div>
 </section>
 ```
@@ -69,6 +55,23 @@ writing-mode: vertical-rl;
 
 ## 構文
 
+```css
+/* <length> 値 */
+/* 値 1 つの場合は角を円にする */
+border-start-start-radius: 10px;
+border-start-start-radius: 1em;
+
+/* 値 2 つの場合は角を楕円にする */
+border-start-start-radius: 1em 2em;
+
+/* グローバル値 */
+border-start-start-radius: inherit;
+border-start-start-radius: initial;
+border-start-start-radius: revert;
+border-start-start-radius: revert-layer;
+border-start-start-radius: unset;
+```
+
 ### 値
 
 - `<length-percentage>`
@@ -84,13 +87,13 @@ writing-mode: vertical-rl;
 
 ## 例
 
-<h3 id="Border_radius_with_vertical_text">縦書きの時の境界の丸め</h3>
+### 縦書きの時の境界の丸め
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example</p>
+  <p class="exampleText">角丸の例</p>
 </div>
 ```
 
@@ -114,7 +117,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きの時の境界の丸め", 140, 140)}}
 
 ## 仕様書
 
@@ -126,5 +129,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{CSSxRef("border-top-left-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}
