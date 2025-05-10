@@ -1,6 +1,9 @@
 ---
-title: Screen.lockOrientation()
+title: "Screen: lockOrientation() メソッド"
+short-title: lockOrientation()
 slug: Web/API/Screen/lockOrientation
+l10n:
+  sourceCommit: 4f35a8237ee0842beb9cfef3354e05464ad7ce1a
 ---
 
 {{APIRef("Screen Orientation API")}}{{Deprecated_Header}}
@@ -15,8 +18,8 @@ slug: Web/API/Screen/lockOrientation
 
 ## 構文
 
-```js
-lockOrientation(orientation);
+```js-nolint
+lockOrientation(orientation)
 ```
 
 ### 引数
