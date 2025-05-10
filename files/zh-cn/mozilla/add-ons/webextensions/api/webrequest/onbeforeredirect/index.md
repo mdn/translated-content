@@ -9,7 +9,7 @@ l10n:
 
 当服务器发起的重定向即将发生时触发。
 
-请注意，你不能向此事件传递 `"blocking"`，因此你无法通过此事件修改或取消请求：它仅供参考。
+请注意，你不能向此事件传递 `"blocking"`，因此你无法通过此事件修改或取消请求：它用于提供信息。
 
 ## 语法
 
@@ -158,7 +158,7 @@ let target = "https://developer.mozilla.org/*";
 /*
 例如：
 "https://developer.mozilla.org/"
-"https://developer.mozilla.org/en-US/"
+"https://developer.mozilla.org/zh-CN/"
 */
 function logResponse(responseDetails) {
   console.log(responseDetails.url);
