@@ -2521,12 +2521,13 @@
 /ja/docs/MDN/Community/Contributing	/ja/docs/MDN/Community
 /ja/docs/MDN/Community/Contributing/Getting_started	/ja/docs/MDN/Community/Getting_started
 /ja/docs/MDN/Community/Contributing/Our_repositories	/ja/docs/MDN/Community/Our_repositories
-/ja/docs/MDN/Community/Contributing/Security_vulnerability_response	/ja/docs/MDN/Community/Security_vulnerability_response
+/ja/docs/MDN/Community/Contributing/Security_vulnerability_response	/ja/docs/orphaned/MDN/Community/Security_vulnerability_response
 /ja/docs/MDN/Community/Contributing/Translated_content	/ja/docs/MDN/Community/Translated_content
 /ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Community/MDN_content	/ja/docs/MDN/Community
 /ja/docs/MDN/Community/MDN_content/Issues	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Community/MDN_content/Pull_requests	/ja/docs/MDN/Community/Pull_requests
+/ja/docs/MDN/Community/Security_vulnerability_response	/ja/docs/orphaned/MDN/Community/Security_vulnerability_response
 /ja/docs/MDN/Contribute	/ja/docs/MDN/Community
 /ja/docs/MDN/Contribute/Changelog	/ja/docs/MDN/Writing_guidelines/Changelog
 /ja/docs/MDN/Contribute/Content	/ja/docs/MDN/Writing_guidelines
