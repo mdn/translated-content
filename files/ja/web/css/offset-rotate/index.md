@@ -1,11 +1,13 @@
 ---
 title: offset-rotate
 slug: Web/CSS/offset-rotate
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`offset-rotate`** は CSS のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
+**`offset-rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
 
 {{InteractiveExample("CSS Demo: offset-rotate")}}
 
@@ -28,7 +30,7 @@ offset-rotate: reverse;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element"></div>
-  <button id="playback" type="button">Play</button>
+  <button id="playback" type="button">再生</button>
 </section>
 ```
 
@@ -63,7 +65,7 @@ offset-rotate: reverse;
   }
 }
 
-/* Provides a reference image of what path the element is following */
+/* 要素が従うパスを参照する画像を提供する */
 #default-example {
   position: relative;
   background-position: calc(50% - 12px) calc(50% + 14px);
@@ -80,10 +82,10 @@ window.addEventListener("load", () => {
   button.addEventListener("click", () => {
     if (example.classList.contains("running")) {
       example.classList.remove("running");
-      button.textContent = "Play";
+      button.textContent = "再生";
     } else {
       example.classList.add("running");
-      button.textContent = "Pause";
+      button.textContent = "停止";
     }
   });
 });
@@ -110,12 +112,13 @@ offset-rotate: 0.5turn;
 offset-rotate: inherit;
 offset-rotate: initial;
 offset-rotate: revert;
+offset-rotate: revert-layer;
 offset-rotate: unset;
 ```
 
 - `auto`
   - : 要素は正方向の X 軸から見た {{cssxref("offset-path")}} 方向の角度で回転します。これが既定値です。
-- `{{cssxref("&lt;angle&gt;")}}`
+- {{cssxref("&lt;angle&gt;")}}
   - : 要素は指定された回転角によって、時計方向に固定値で回転変換されます。
 - `auto <angle>`
   - : `auto` に {{cssxref("&lt;angle&gt;")}} が続いた場合、その角度が `auto` の計算値に加算されます。
@@ -174,7 +177,7 @@ div:nth-child(3) {
 
 #### 結果
 
-{{EmbedLiveSample('Setting_element_orientation_along_its_offset_path', '100%', '200')}}
+{{EmbedLiveSample('オフセットパスに沿って要素の方向を設定', '100%', '200')}}
 
 ## 仕様書
 
