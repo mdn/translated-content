@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-**CSS 影子部件**模块定义了可在[影子宿主](/zh-CN/docs/Glossary/Shadow_tree)上设置的{{CSSXref("::part", "::part()")}} 伪元素。使用这个伪元素，可以让影子宿主将影子树中的特定元素暴露给外部页面，以便进行样式设置。
+**CSS 影子部件**模块定义了可在[影子宿主](/zh-CN/docs/Glossary/Shadow_tree)上设置的 {{CSSXref("::part", "::part()")}} 伪元素。使用这个伪元素，可以让影子宿主将影子树中的特定元素暴露给外部页面，以便进行样式设置。
 
-默认情况下，影子树中的元素只能在其所属的影子根内部进行样式设置。CSS 影子部件模块允许在构成自定义元素的 {{HTMLElement("template")}} 后代元素上设置 [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/part) 属性，从而通过 `::part()` 伪元素将影子树节点暴露给外部样式。
+默认情况下，影子树中的元素只能在其所属的影子根内部进行样式设置。CSS 影子部件模块允许在构成自定义元素的 {{HTMLElement("template")}} 后代元素上包含 [`part`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/part) 属性，从而通过 `::part()` 伪元素将影子树节点暴露到外部进行样式设置。
 
 ## 参考
 
@@ -44,7 +44,7 @@ l10n:
 - {{domxref("Element.shadowRoot")}} 属性
 - {{domxref("Element.attachShadow()")}} 方法
 - {{domxref("ShadowRoot")}} 接口
-- [CSS 作用域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
+- [CSS 域](/zh-CN/docs/Web/CSS/CSS_scoping)模块
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
@@ -59,4 +59,4 @@ l10n:
 - [CSS 伪元素](/zh-CN/docs/Web/CSS/CSS_pseudo-elements)模块
 - [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)模块
 - [使用影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM)
-- web.dev（2023）上的[模板：当前作用域外的样式设置](https://web.developers.google.cn/learn/html/template/#styling_outside_of_the_current_scope)
+- web.dev 上的[模板：当前作用域外的样式设置](https://web.developers.google.cn/learn/html/template/#styling_outside_of_the_current_scope)（2023）
