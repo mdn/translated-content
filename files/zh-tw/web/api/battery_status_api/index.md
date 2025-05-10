@@ -20,7 +20,7 @@ l10n:
 ### 擴展至其他介面
 
 - {{domxref("Navigator.getBattery()")}}
-  - : 返回一個 {{JSxRef("Promise")}}，該 Promise 會解析為一個 {{DOMxRef("BatteryManager")}} 物件。
+  - : 返回一個 {{JSxRef("Promise")}}，其會兌現為一個 {{DOMxRef("BatteryManager")}} 物件。
 
 ## 範例
 
