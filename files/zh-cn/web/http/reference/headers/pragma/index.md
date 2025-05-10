@@ -1,34 +1,51 @@
 ---
 title: Pragma
 slug: Web/HTTP/Reference/Headers/Pragma
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
+{{HTTPSidebar}}{{Deprecated_Header}}
 
-**`Pragma`** 是一个在 HTTP/1.0 中规定的通用首部，这个首部的效果依赖于不同的实现，所以在“请求 - 响应”链中可能会有不同的效果。它用来向后兼容只支持 HTTP/1.0 协议的缓存服务器，那时候 HTTP/1.1 协议中的 Cache-Control 还没有出来。
+HTTP **`Pragma`** 标头是一个与实现相关的标头，在请求——响应链中可能会产生各种不同的影响。此标头用于向后兼容不支持 HTTP/1.1 中 {{HTTPHeader("Cache-Control")}} 标头的 HTTP/1.0 缓存。
 
-> [!NOTE]
-> 由于 Pragma 在 HTTP 响应中的行为没有确切规范，所以不能可靠替代 HTTP/1.1 中通用首部 Cache-Control，尽管在请求中，假如 Cache-Control 不存在的话，它的行为与 Cache-Control: no-cache 一致。建议只在需要兼容 HTTP/1.0 客户端的场合下应用 Pragma 首部。
+> [!NOTE] `Pragma` 标头并未在 HTTP 响应中定义，因此不能可靠地替代 HTTP/1.1 中的 `Cache-Control` 标头，虽然在请求中省略 `Cache-Control` 标头时，`Pragma` 的行为与 `Cache-Control: no-cache` 相同，但请仅将其用于向后兼容 HTTP/1.0 客户端。
 
-| Header type                                                               | {{Glossary("General header")}}, but response behavior is not specified and thus implementation-specific. |
-| ------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| {{Glossary("Forbidden header name")}}                                     | no                                                                                                       |
-| {{Glossary("Simple response header", "CORS-safelisted response-header")}} | yes                                                                                                      |
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">标头类型</th>
+      <td>
+        {{Glossary("Request header", "请求标头")}}、{{Glossary("Response header", "响应标头")}}（响应行为未作明确规定，且依赖于具体实现）。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止修改的请求标头")}}</th>
+      <td>否</td>
+    </tr>
+    <tr>
+      <th scope="row">
+        {{Glossary("CORS-safelisted response header", "列入 CORS 白名单的响应标头")}}
+      </th>
+      <td>是</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 语法
 
-```plain
+```http
 Pragma: no-cache
 ```
 
 ## 指令
 
-- no-cache
-  - : 与 Cache-Control: no-cache 效果一致。强制要求缓存服务器在返回缓存的版本之前将请求提交到源头服务器进行验证。
+- `no-cache`
+  - : 与 `Cache-Control: no-cache` 相同。该设置会强制缓存将请求提交给源服务器进行验证，之后才会释放已缓存的副本。
 
 ## 示例
 
-```plain
+```http
 Pragma: no-cache
 ```
 
