@@ -52,7 +52,7 @@ const el = document.querySelector(".myclass");
 
 ### 複雜選擇器
 
-選擇器也可以非常強大，如以下範例所示。這裡回傳文件中位於類別為 `user-panel main` 的 {{HTMLElement("div")}}（`<div class="user-panel main">`）內，名稱為 `login` 的第一個 {{HTMLElement("input")}} 元素（`<input name="login"/>`）：
+選擇器也可以非常強大，如以下範例所示。這裡回傳文件中位於類別為「user-panel main」的 {{HTMLElement("div")}}（`<div class="user-panel main">`）內，名稱為「login」的第一個 {{HTMLElement("input")}} 元素（`<input name="login"/>`）：
 
 ```js
 const el = document.querySelector("div.user-panel.main input[name='login']");
@@ -68,7 +68,7 @@ const el = document.querySelector(
 );
 ```
 
-這將選擇一個父元素為具有 `user-panel` 類別但沒有 `main` 類別的 `div` 的輸入元素。
+這將選擇一個父元素為具有 `user-panel` 類別但沒有 `main` 類別的 div 的輸入元素。
 
 ### 轉義屬性值
 
