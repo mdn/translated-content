@@ -45,5 +45,5 @@ fetch(myRequest).then((response) => {
 ## 같이 보기
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

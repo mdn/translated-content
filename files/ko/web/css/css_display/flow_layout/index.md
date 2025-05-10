@@ -20,11 +20,11 @@ _일반적인 흐름 Normal Flow_, 또는 흐름 레이아웃 Flow Layout 은 �
 
 ## Guides
 
-- [Block and Inline Layout in Normal Flow](/ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [In Flow and Out of Flow](/ko/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
-- [Formatting Contexts Explained](/ko/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [Flow Layout and Writing Modes](/ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [Flow Layout and Overflow](/ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
+- [Block and Inline Layout in Normal Flow](/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [In Flow and Out of Flow](/ko/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
+- [Formatting Contexts Explained](/ko/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [Flow Layout and Writing Modes](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [Flow Layout and Overflow](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
 
 ## Reference
 

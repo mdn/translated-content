@@ -111,7 +111,7 @@ console.log(Object.keys(100)); // []
 ## 같이 보기
 
 - `Object.keys` 의 폴리필 코드는 아래에서 확인할 수 있습니다. [`core-js`](https://github.com/zloirock/core-js#ecmascript-object)
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

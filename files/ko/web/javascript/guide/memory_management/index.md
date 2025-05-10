@@ -94,7 +94,7 @@ JavaScript와 같은 고수준 언어들은 "[가비지 콜렉션](<https://en.w
 
 ### 참조
 
-가비지 콜렉션 알고리즘의 핵심 개념은 *참조*입니다. 메모리 관리 맥락에서, A라는 메모리를 통해 (명시적이든 암시적이든) B라는 메모리에 접근할 수 있다면 "B는 A에 참조된다" 라고 합니다. 예를 들어, 모든 JavaScript 오브젝트는 [prototype](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) (implicit reference) (암시적 참조) 및 그 객체의 속성에 대한 참조 (명시적 참조)가 있습니다.
+가비지 콜렉션 알고리즘의 핵심 개념은 *참조*입니다. 메모리 관리 맥락에서, A라는 메모리를 통해 (명시적이든 암시적이든) B라는 메모리에 접근할 수 있다면 "B는 A에 참조된다" 라고 합니다. 예를 들어, 모든 JavaScript 오브젝트는 [prototype](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) (implicit reference) (암시적 참조) 및 그 객체의 속성에 대한 참조 (명시적 참조)가 있습니다.
 
 이 맥락에서 "객체"의 개념은 일반 JavaScript 객체와 함수 범위(또는 전역 어휘 범위)를 포함하여 더 넓게 확장됩니다.
 

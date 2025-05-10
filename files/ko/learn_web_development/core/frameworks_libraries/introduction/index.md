@@ -98,7 +98,7 @@ const state = [
 ];
 ```
 
-이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Element/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Element/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
+이러한 작업 중 하나를 사용자에게 어떻게 표시합니까? 각 작업을 목록 항목으로 나타내려고 합니다. 순서가 지정되지 않은 목록 요소(a [`<ul>`](/ko/docs/Web/HTML/Reference/Elements/ul)) 안에 HTML[`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소를 어떻게 만들까요? 다음과 같이 보일 수 있습니다.
 
 ```js
 function buildTodoItemEl(id, name) {

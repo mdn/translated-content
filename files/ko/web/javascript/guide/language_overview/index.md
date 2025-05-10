@@ -8,7 +8,7 @@ l10n:
 
 {{jsSidebar}}
 
-JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함하는 다중 패러다임 동적 언어입니다. 문법은 Java 및 C 언어를 기반으로 합니다. 해당 언어들의 많은 구조가 JavaScript에도 적용됩니다. JavaScript는 [객체 프로토타입](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 및 클래스를 사용하여 객체 지향 프로그래밍을 지원합니다. 또한 함수는 표현식을 통해 쉽게 생성되고 다른 객체처럼 전달될 수 있는 [first-class](/ko/docs/Glossary/First-class_Function)이므로 함수형 프로그래밍을 지원합니다.
+JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함하는 다중 패러다임 동적 언어입니다. 문법은 Java 및 C 언어를 기반으로 합니다. 해당 언어들의 많은 구조가 JavaScript에도 적용됩니다. JavaScript는 [객체 프로토타입](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 및 클래스를 사용하여 객체 지향 프로그래밍을 지원합니다. 또한 함수는 표현식을 통해 쉽게 생성되고 다른 객체처럼 전달될 수 있는 [first-class](/ko/docs/Glossary/First-class_Function)이므로 함수형 프로그래밍을 지원합니다.
 
 이 페이지는 C 또는 Java와 같은 다른 언어에 대한 배경 지식이 있는 독자를 위해 작성된, 다양한 JavaScript 언어 기능에 대한 간략한 개요를 제공합니다.
 
@@ -16,15 +16,15 @@ JavaScript는 타입 및 연산자, 표준 내장 객체 및 메소드를 포함
 
 모든 언어의 구성 요소인 타입을 살펴보는 것으로 시작하겠습니다. JavaScript 프로그램은 값을 조작하며, 이러한 값은 모두 타입에 속합니다. JavaScript는 7가지 기본 유형을 제공합니다.
 
-- [Number](/ko/docs/Web/JavaScript/Data_structures#number_type): 매우 큰 정수를 제외한 모든 숫자값(정수 및 부동 소수점)에 사용됩니다.
-- [BigInt](/ko/docs/Web/JavaScript/Data_structures#bigint_type): 임의의 큰 정수에 사용됩니다.
-- [String](/ko/docs/Web/JavaScript/Data_structures#string_type): 텍스트를 저장하는 데 사용됩니다.
-- [Boolean](/ko/docs/Web/JavaScript/Data_structures#boolean_type): `true` 및 `false`, 일반적으로 조건 논리에 사용됩니다.
-- [Symbol](/ko/docs/Web/JavaScript/Data_structures#symbol_type): 충돌하지 않는 고유 식별자를 만드는 데 사용됩니다.
-- [Undefined](/ko/docs/Web/JavaScript/Data_structures#undefined_type): 변수에 값이 할당되지 않았음을 나타냅니다.
-- [Null](/ko/docs/Web/JavaScript/Data_structures#null_type): 의도적으로 값이 없음을 나타냅니다.
+- [Number](/ko/docs/Web/JavaScript/Guide/Data_structures#number_type): 매우 큰 정수를 제외한 모든 숫자값(정수 및 부동 소수점)에 사용됩니다.
+- [BigInt](/ko/docs/Web/JavaScript/Guide/Data_structures#bigint_type): 임의의 큰 정수에 사용됩니다.
+- [String](/ko/docs/Web/JavaScript/Guide/Data_structures#string_type): 텍스트를 저장하는 데 사용됩니다.
+- [Boolean](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_type): `true` 및 `false`, 일반적으로 조건 논리에 사용됩니다.
+- [Symbol](/ko/docs/Web/JavaScript/Guide/Data_structures#symbol_type): 충돌하지 않는 고유 식별자를 만드는 데 사용됩니다.
+- [Undefined](/ko/docs/Web/JavaScript/Guide/Data_structures#undefined_type): 변수에 값이 할당되지 않았음을 나타냅니다.
+- [Null](/ko/docs/Web/JavaScript/Guide/Data_structures#null_type): 의도적으로 값이 없음을 나타냅니다.
 
-다른 모든 것은 [객체](/ko/docs/Web/JavaScript/Data_structures#objects)라고 합니다. 일반적인 객체 타입은 다음과 같습니다.
+다른 모든 것은 [객체](/ko/docs/Web/JavaScript/Guide/Data_structures#objects)라고 합니다. 일반적인 객체 타입은 다음과 같습니다.
 
 - {{jsxref("Function")}}
 - {{jsxref("Array")}}
@@ -317,7 +317,7 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
-JavaScript에는 두개의 중요한 for 반복문 또한 포함됩니다. [iterables](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)(특히 배열)를 반복하는 [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of), 객체의 모든 [enumerable](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) 속성을 방문하는 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in)입니다.
+JavaScript에는 두개의 중요한 for 반복문 또한 포함됩니다. [iterables](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)(특히 배열)를 반복하는 [`for...of`](/ko/docs/Web/JavaScript/Reference/Statements/for...of), 객체의 모든 [enumerable](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) 속성을 방문하는 [`for...in`](/ko/docs/Web/JavaScript/Reference/Statements/for...in)입니다.
 
 ```js
 for (const value of array) {
@@ -460,7 +460,7 @@ console.log(stillMe.x); // 1
 
 객체 및 프로토타입에 대한 자세한 내용은, [`객체` 참조 페이지](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)를 참조하세요. 객체 초기화 구문에 대한 자세한 내용은 [참조 페이지](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)를 참고하세요.
 
-일반적으로 (난해하다고 들었을 수 있는) 기본 메커니즘을 건드리지 않고 [클래스](#클래스)를 사용하여 상속을 달성할 수 있기 때문에, 이 페이지에서는 객체 프로토타입 및 상속에 대한 모든 세부 정보를 생략했습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 참조하세요.
+일반적으로 (난해하다고 들었을 수 있는) 기본 메커니즘을 건드리지 않고 [클래스](#클래스)를 사용하여 상속을 달성할 수 있기 때문에, 이 페이지에서는 객체 프로토타입 및 상속에 대한 모든 세부 정보를 생략했습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 참조하세요.
 
 ## 배열 (Arrays)
 
@@ -565,7 +565,7 @@ avg(2, 3, 4, 5); // 3.5
 
 함수가 인수 목록을 허용하고 이미 배열을 보유하고 있는 경우, 함수 호출에서 [전개 연산자 문법(spread syntax)](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)을 사용하여 배열을 요소 목록으로 _spread_ 할 수 있습니다. 예를 들어, `avg(...numbers)`
 
-JavaScript에는 명명된 매개 변수가 없다고 언급했습니다. 하지만 객체를 편리하게 하나로 합치고, 분해할 수 있는 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용하여 구현할 수 있습니다.
+JavaScript에는 명명된 매개 변수가 없다고 언급했습니다. 하지만 객체를 편리하게 하나로 합치고, 분해할 수 있는 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용하여 구현할 수 있습니다.
 
 ```js
 // 중괄호({ })에 유의하세요. 객체를 분해합니다.
@@ -630,7 +630,7 @@ const sum = (a, b, c) => a + b + c;
 })();
 ```
 
-IIFE의 사용 사례에 대해서는 [클로저를 이용해서 프라이빗 메서드 흉내내기](/ko/docs/Web/JavaScript/Closures#클로저를_이용해서_프라이빗_메소드_private_method_흉내내기)을 참조하세요.
+IIFE의 사용 사례에 대해서는 [클로저를 이용해서 프라이빗 메서드 흉내내기](/ko/docs/Web/JavaScript/Guide/Closures#클로저를_이용해서_프라이빗_메소드_private_method_흉내내기)을 참조하세요.
 
 ### 재귀 함수
 
@@ -672,7 +672,7 @@ const charsInBody = (function counter(elm) {
 
 ### 함수는 일급 객체(first-class objects)입니다
 
-JavaScript 함수는 일급 객체(first-class objects)입니다. 즉, 변수에 할당하고 다른 함수에 인수로 전달하고 다른 함수에서 반환할 수 있습니다. 또한, JavaScript는 명시적인 캡처 없이 즉시 사용 가능한 [클로저(closures)](/ko/docs/Web/JavaScript/Closures)를 지원하므로 함수형 프로그래밍 스타일을 편리하게 적용할 수 있습니다.
+JavaScript 함수는 일급 객체(first-class objects)입니다. 즉, 변수에 할당하고 다른 함수에 인수로 전달하고 다른 함수에서 반환할 수 있습니다. 또한, JavaScript는 명시적인 캡처 없이 즉시 사용 가능한 [클로저(closures)](/ko/docs/Web/JavaScript/Guide/Closures)를 지원하므로 함수형 프로그래밍 스타일을 편리하게 적용할 수 있습니다.
 
 ```js
 // 함수를 반환하는 함수
@@ -742,7 +742,7 @@ class Admin extends withAuthentication(Person) {
 
 ## 비동기 프로그래밍
 
-JavaScript는 본질적으로 단일 스레드입니다. [병렬화](https://en.wikipedia.org/wiki/Parallel_computing)가 없고, [동시성](https://en.wikipedia.org/wiki/Concurrent_computing)만 가능합니다. 비동기 프로그래밍은 [이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)에 의해 구동되며, 이를 통해 일련의 작업을 대기하고 완료를 위해 폴링(polling)할 수 있습니다.
+JavaScript는 본질적으로 단일 스레드입니다. [병렬화](https://en.wikipedia.org/wiki/Parallel_computing)가 없고, [동시성](https://en.wikipedia.org/wiki/Concurrent_computing)만 가능합니다. 비동기 프로그래밍은 [이벤트 루프](/ko/docs/Web/JavaScript/Reference/Execution_model)에 의해 구동되며, 이를 통해 일련의 작업을 대기하고 완료를 위해 폴링(polling)할 수 있습니다.
 
 JavaScript에서 비동기 코드를 작성하는 세 가지의 관용적인 방법이 있습니다.
 
@@ -814,7 +814,7 @@ Haskell, Python, Java 등과 달리 JavaScript 모듈 해석은 전적으로 호
 
 이 페이지 전체에 걸쳐, 특정 기능은 "언어 수준"이고 다른 기능은 "런타임 수준"이라고 지속적으로 언급이 되었습니다.
 
-JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log_static)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
+JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#javascript_the_core_language_ecmascript)은 순수한 계산 논리에 중점을 두고 있습니다. 입출력을 처리하지 않습니다. 사실, 추가 런타임 수준의 API(특히 [`console.log()`](/ko/docs/Web/API/console/log_static)) 없이, JavaScript 프로그램의 동작은 완전히 관찰할 수 없습니다.
 
 런타임 또는 호스트는 JavaScript 엔진(인터프리터)에 데이터를 공급하고 추가 전역 속성을 제공하며, 엔진이 외부 세계와 상호 작용할 수 있도록 훅을 제공합니다. 모듈 확인, 데이터 읽기, 메시지 인쇄, 네트워크 요청 보내기 등은 모두 런타임 수준 작업입니다. JavaScript는 처음부터 브라우저([DOM](/ko/docs/Web/API/Document_Object_Model)과 같은 API를 제공합니다), Node.js([파일 시스템 접근](https://nodejs.org/api/fs.html)과 같은 API를 제공합니다)와 같은 다양한 환경에서 채택되었습니다. JavaScript는 (가장 주요 목적인) 웹, 모바일 앱, 데스크탑 앱, 서버 측 앱, 서버리스, 임베디드 시스템 등에 성공적으로 통합되었습니다. JavaScript 핵심 기능에 대해 배우는 동안, 지식을 사용하기 위해 호스트에서 제공하는 기능을 이해하는 것도 중요합니다. 예를 들어, 브라우저 및 경우에 따라 비브라우저에 의해 구현되는 모든 [웹 플랫폼 API](/ko/docs/Web/API)에 대해 읽어볼 수 있습니다.
 
@@ -824,7 +824,7 @@ JavaScript는 범용 스크립팅 언어입니다. [핵심 언어 명세](/ko/do
 
 작성 공간과 복잡성으로 인해 생략된 언어의 일부 필수 부분이 있지만, 직접 찾아볼 수 있습니다.
 
-- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
-- [클로저(Closures)](/ko/docs/Web/JavaScript/Closures)
+- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [클로저(Closures)](/ko/docs/Web/JavaScript/Guide/Closures)
 - [정규표현식](/ko/docs/Web/JavaScript/Guide/Regular_expressions)
 - [반복(Iteration)](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators)

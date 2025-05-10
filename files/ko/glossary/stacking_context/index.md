@@ -11,4 +11,4 @@ l10n:
 
 ## 같이 보기
 
-- [stacking context에 대한 설명과 예제](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)
+- [stacking context에 대한 설명과 예제](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)

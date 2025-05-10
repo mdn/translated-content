@@ -106,7 +106,7 @@ console.log(val); // 0 출력.
 
 #### 구조 분해
 
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 구문은 JavaScript 표현식 중 하나로, 객체나 배열을 생성할 때와 비슷한 구문으로 사용해서 어떤 객체나 배열에서 데이터를 추출할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring) 구문은 JavaScript 표현식 중 하나로, 객체나 배열을 생성할 때와 비슷한 구문으로 사용해서 어떤 객체나 배열에서 데이터를 추출할 수 있습니다.
 
 ```js
 var foo = ["one", "two", "three"];

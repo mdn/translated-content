@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/tabindex
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`tabindex`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소가 포커스 가능함을 나타내며, 이름에서도 알 수 있듯, 주로 <kbd>Tab</kbd> 키를 사용하는 연속적인 키보드 탐색에서 어느 순서에 위치할지 지정합니다.
+**`tabindex`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소가 포커스 가능함을 나타내며, 이름에서도 알 수 있듯, 주로 <kbd>Tab</kbd> 키를 사용하는 연속적인 키보드 탐색에서 어느 순서에 위치할지 지정합니다.
 
 {{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
 
@@ -57,7 +57,7 @@ div:focus {
 
 ## 접근성 고려사항
 
-키보드 입력을 통해 포커스 가능한 상호작용 항목을 만들기 위해 비 [대화형 콘텐츠](/ko/docs/Web/HTML/Content_categories#대화형_콘텐츠)에 `tabindex`를 추가하는 것을 피하세요. 이를테면 버튼을 나타내기 위해 {{htmlelement("button")}} 대신 {{htmlelement("div")}}를 사용하는 것을 말합니다.
+키보드 입력을 통해 포커스 가능한 상호작용 항목을 만들기 위해 비 [대화형 콘텐츠](/ko/docs/Web/HTML/Guides/Content_categories#대화형_콘텐츠)에 `tabindex`를 추가하는 것을 피하세요. 이를테면 버튼을 나타내기 위해 {{htmlelement("button")}} 대신 {{htmlelement("div")}}를 사용하는 것을 말합니다.
 
 비 대화형 요소를 사용해 만든 대화형 컴포넌트는 접근성 트리에 나타나지 않으므로, 보조 기술이 해당 컴포넌트로 탐색하거나 조작하는 것을 방지합니다. 상호작용 가능한 항목은 대화형 요소({{htmlelement("a")}}, {{htmlelement("button")}}, {{htmlelement("details")}}, {{htmlelement("input")}}, {{htmlelement("select")}}, {{htmlelement("textarea")}} 등)를 사용해 적절한 의미와 함께 나타내야 합니다. 대화형 콘텐츠 요소는 보통 [ARIA](/ko/docs/Web/Accessibility/ARIA)가 관리하는, 접근성 기술에 알려줄 수 있는 자신의 역할과 상태를 내장하고 있습니다.
 
@@ -73,5 +73,5 @@ div:focus {
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes)
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)
 - 이 속성을 나타내는 {{domxref("HTMLElement.tabIndex")}}
