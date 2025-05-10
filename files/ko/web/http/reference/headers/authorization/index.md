@@ -31,7 +31,7 @@ Authorization: <type> <credentials>
 
 - \<type>
 
-  - : [인증 타입](/ko/docs/Web/HTTP/Authentication#%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4). 보통 타입은 ["Basic"](/ko/docs/Web/HTTP/Authentication#Basic_%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4)이며. 다른 타입으로:
+  - : [인증 타입](/ko/docs/Web/HTTP/Guides/Authentication#%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4). 보통 타입은 ["Basic"](/ko/docs/Web/HTTP/Guides/Authentication#Basic_%EC%9D%B8%EC%A6%9D_%EC%8A%A4%ED%82%B4)이며. 다른 타입으로:
 
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Authentification for AWS servers (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
@@ -52,7 +52,7 @@ Authorization: <type> <credentials>
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는 [HTTP authentication](/ko/docs/Web/HTTP/Authentication) 를 보시기 바랍니다.
+HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또는 nginx 서버를 어떻게 설정해야 하는지 예제를 보기 위해서는 [HTTP authentication](/ko/docs/Web/HTTP/Guides/Authentication) 를 보시기 바랍니다.
 
 ## 기술 사양
 
@@ -63,7 +63,7 @@ HTTP basic 인증을 사용하여 비밀번호를 보호하기 위해 Apache 또
 
 ## 함께 더 보기
 
-- [HTTP authentication](/ko/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/ko/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

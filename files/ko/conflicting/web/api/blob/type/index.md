@@ -6,7 +6,7 @@ original_slug: Web/API/File/type
 
 {{APIRef("File API")}}
 
-**`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/MIME_types))을 반환합니다.
+**`type`** 속성은 {{domxref("File")}} 객체가 나타내는 파일의 미디어 유형([MIME](/ko/docs/Web/HTTP/Guides/MIME_types))을 반환합니다.
 
 ## 값
 

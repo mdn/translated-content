@@ -75,7 +75,7 @@ visibility: unset;
   - : 요소가 보임.
 - `hidden`
 
-  - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
+  - : 요소가 숨겨짐(그려지지 않음). 레이아웃에는 숨겨지지 않았을 때와 동일한 영향을 줍니다. `visibility`를 `visible`로 설정한 자손은 화면에 보입니다. 숨겨진 요소는 포커스([탭 인덱스](/ko/docs/Web/HTML/Reference/Global_attributes/tabindex)로 탐색 등)를 받을 수 없습니다.
 
 - `collapse`
 

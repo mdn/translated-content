@@ -37,7 +37,7 @@ l10n:
 
 ## 능동 학습
 
-_아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/MDN/Community/Contributing/Getting_started)._
+_아직 가능한 능동 학습이 없다. [기여를 고민해보라](/ko/docs/MDN/Community/Getting_started)._
 
 ## 깊게 들어가기
 

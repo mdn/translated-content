@@ -5,11 +5,11 @@ slug: Web/API/Document
 
 {{APIRef("DOM")}}
 
-**`Document`** 인터페이스는 브라우저가 불러온 웹 페이지를 나타내며, 페이지 콘텐츠([DOM 트리](/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model))의 진입점 역할을 수행합니다. DOM 트리는 {{HTMLElement("body")}}와 {{HTMLElement("table")}} 및 [여러 다른](/ko/docs/Web/HTML/Element) 요소를 포함합니다. `Document`는 페이지의 URL을 얻거나 문서에 새로운 요소를 생성하는 등의 기능을 전역적으로 제공합니다.
+**`Document`** 인터페이스는 브라우저가 불러온 웹 페이지를 나타내며, 페이지 콘텐츠([DOM 트리](/ko/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model))의 진입점 역할을 수행합니다. DOM 트리는 {{HTMLElement("body")}}와 {{HTMLElement("table")}} 및 [여러 다른](/ko/docs/Web/HTML/Reference/Elements) 요소를 포함합니다. `Document`는 페이지의 URL을 얻거나 문서에 새로운 요소를 생성하는 등의 기능을 전역적으로 제공합니다.
 
 {{inheritanceDiagram}}
 
-`Document` 인터페이스는 모든 종류의 문서에 대한 공통의 속성과 메서드를 묘사합니다. 문서의 유형([HTML](/ko/docs/Web/HTML), [XML](/ko/docs/Web/XML/XML_introduction), SVG 등)에 따라서 더 다양한 API가 존재합니다. 예컨대 `"text/html"` 콘텐츠 유형으로 제공되는 HTML 문서는 {{domxref("HTMLDocument")}} 인터페이스도 구현하는 반면, XML과 SVG 문서는 {{domxref("XMLDocument")}} 인터페이스를 구현합니다.
+`Document` 인터페이스는 모든 종류의 문서에 대한 공통의 속성과 메서드를 묘사합니다. 문서의 유형([HTML](/ko/docs/Web/HTML), [XML](/ko/docs/Web/XML/Guides/XML_introduction), SVG 등)에 따라서 더 다양한 API가 존재합니다. 예컨대 `"text/html"` 콘텐츠 유형으로 제공되는 HTML 문서는 {{domxref("HTMLDocument")}} 인터페이스도 구현하는 반면, XML과 SVG 문서는 {{domxref("XMLDocument")}} 인터페이스를 구현합니다.
 
 ## 생성자
 

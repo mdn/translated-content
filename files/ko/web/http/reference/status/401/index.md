@@ -41,7 +41,7 @@ WWW-Authenticate: Basic realm="Access to staging site"
 
 ## 같이 보기
 
-- [HTTP 인증](/ko/docs/Web/HTTP/Authentication)
+- [HTTP 인증](/ko/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
