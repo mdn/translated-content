@@ -46,7 +46,7 @@ switch (expression) {
 - `expression`
   - : 각 `case` 절과 대조할 표현식입니다.
 - `caseExpressionN` {{optional_inline}}
-  - : `expression`과 비교되는 `case` 절의 값입니다. `expression`의 값이 어떤 `caseExpressionN`과 일치하면, 해당 `case` 절 이후의 첫 번째 **문(statement)**부터 `switch` 문 끝 또는 `break` 문을 만날 때까지 실행이 시작됩니다.
+  - : `expression`과 비교되는 `case` 절의 값입니다. `expression`의 값이 어떤 `caseExpressionN`과 일치하면, 해당 `case` 절 이후의 첫 번째 **문(statement)** 부터 `switch` 문 끝 또는 `break` 문을 만날 때까지 실행이 시작됩니다.
 - `default` {{optional_inline}}
   - : 기본 절입니다. `expression`이 어떤 `case`와도 일치하지 않으면 이 절이 실행됩니다. `switch` 문에는 하나의 `default` 절만 존재할 수 있습니다.
 
@@ -64,8 +64,8 @@ switch (undefined) {
 // 1만 로그에 출력
 ```
 
-일치하는 `case` 절이 없으면, 프로그램은 선택적으로 정의된 `default` 절로 제어를 이동하여 이후 **문(statement)**을 실행합니다.
-`default` 절이 없으면 `switch` 문을 빠져나와 다음 **문(statement)**부터 실행을 계속합니다.
+일치하는 `case` 절이 없으면, 프로그램은 선택적으로 정의된 `default` 절로 제어를 이동하여 이후 **문(statement)** 을 실행합니다.
+`default` 절이 없으면 `switch` 문을 빠져나와 다음 **문(statement)** 부터 실행을 계속합니다.
 `default` 절은 보통 마지막에 위치하지만 반드시 그럴 필요는 없으며, 하나만 사용할 수 있습니다.
 둘 이상의 `default` 절이 있으면 {{jsxref("SyntaxError")}}가 발생합니다.
 
@@ -147,7 +147,7 @@ switch (action) {
 
 ### switch 사용하기
 
-다음 예제에서, `expr`이 `Bananas`로 평가되면 프로그램은 값을 `case 'Bananas'`와 일치시키고 관련 **문(statement)**을 실행합니다. `break`를 만나면 프로그램은 `switch`에서 벗어나 `switch` 다음의 **문(statement)**을 실행합니다. `break`가 생략되었다면 `case 'Cherries'`의 **문(statement)**도 실행됩니다.
+다음 예제에서, `expr`이 `Bananas`로 평가되면 프로그램은 값을 `case 'Bananas'`와 일치시키고 관련 **문(statement)** 을 실행합니다. `break`를 만나면 프로그램은 `switch`에서 벗어나 `switch` 다음의 **문(statement)** 을 실행합니다. `break`가 생략되었다면 `case 'Cherries'`의 **문(statement)** 도 실행됩니다.
 
 ```js
 switch (expr) {
@@ -176,7 +176,7 @@ console.log("Is there anything else you'd like?");
 
 ### 두 case 절 사이에 default 절 두기
 
-일치하는 항목이 없으면, `default` 절부터 실행이 시작되고 그 이후의 모든 **문(statement)**이 실행됩니다.
+일치하는 항목이 없으면, `default` 절부터 실행이 시작되고 그 이후의 모든 **문(statement)** 이 실행됩니다.
 
 ```js
 const foo = 5;
