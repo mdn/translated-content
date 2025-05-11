@@ -15,7 +15,7 @@ l10n:
 
 문서나 다이얼로그 내에서 autofocus 특성을 가진 요소는 단 하나만 존재해야 합니다. 여러 요소에 특성이 적용된 경우, 첫 번째 요소만 포커스를 받습니다.
 
-> [!NOTE] 
+> [!NOTE]
 > 이 `autofocus` 특성은 양식 컨트롤 요소 뿐만 아니라 모든 요소에 적용 가능합니다. 예를 들어, [contenteditable](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 영역에 적용될 수 있습니다.
 
 ## 접근성 고려사항
