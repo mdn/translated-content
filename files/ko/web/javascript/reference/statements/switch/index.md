@@ -52,7 +52,7 @@ switch (expression) {
 
 ## 설명
 
-`switch` 문은 먼저 주어진 표현식을 평가합니다. 그 결과와 동일한 값을 가지는 `case` 절을 [엄격한 동등 비교](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)를 통해 찾은 뒤, 해당 절로 제어 흐름을 이동시켜 그 절 이후의 **문(statement)**들을 실행합니다.
+`switch` 문은 먼저 주어진 표현식을 평가합니다. 그 결과와 동일한 값을 가지는 `case` 절을 [엄격한 동등 비교](/ko/docs/Web/JavaScript/Reference/Operators/Strict_equality)를 통해 찾은 뒤, 해당 절로 제어 흐름을 이동시켜 그 절 이후의 **문(statement)** 들을 실행합니다.
 
 각 `case` 절의 표현식은 필요할 때만 평가됩니다. 일치하는 절이 이미 발견되면, 이후의 `case` 절 표현식은 [폴스루](#breaking_and_fall-through)로 도달하더라도 평가되지 않습니다.
 
