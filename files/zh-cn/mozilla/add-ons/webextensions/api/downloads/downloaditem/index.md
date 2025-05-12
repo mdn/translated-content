@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 
 {{WebExtAPIRef("downloads")}} API 的 `DownloadItem` 类代表了一个被下载的文件。
 
-## Type
+## 类型
 
 这个类型的值是对象，包含了以下属性：
 
@@ -52,16 +52,14 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
 - `url`
   - : A `string` representing the absolute URL from which the file was downloaded.
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API.
->
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> 此 API 基于 Chromium 的 [`chrome.downloads`](https://developer.chrome.google.cn/docs/extensions/reference/api/downloads#type-DownloadItem) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
