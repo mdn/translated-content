@@ -45,18 +45,18 @@ console.assert(assertion, msg, subst1, /* …, */ substN)
 以下程式碼範例展示如何在斷言後輸出 JavaScript 物件：
 
 ```js
-const errorMsg = "the # is not even";
+const errorMsg = "該數字不是偶數";
 for (let number = 2; number <= 5; number++) {
-  console.log(`the # is ${number}`);
+  console.log(`該數字是 ${number}`);
   console.assert(number % 2 === 0, "%o", { number, errorMsg });
 }
 // 輸出：
-// the # is 2
-// the # is 3
-// Assertion failed: {number: 3, errorMsg: "the # is not even"}
-// the # is 4
-// the # is 5
-// Assertion failed: {number: 5, errorMsg: "the # is not even"}
+// 該數字是 2
+// 該數字是 3
+// Assertion failed: {number: 3, errorMsg: "該數字不是偶數"}
+// 該數字是 4
+// 該數字是 5
+// Assertion failed: {number: 5, errorMsg: "該數字不是偶數"}
 ```
 
 ## 規範
