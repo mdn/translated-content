@@ -8,7 +8,7 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 {{WebExtAllCompatTables}}
 
 > [!NOTE]
-> Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> 
 
 ## 関連情報
 
