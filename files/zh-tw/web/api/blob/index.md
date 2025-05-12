@@ -32,15 +32,15 @@ Blob 可以表示不一定是 JavaScript 原生格式的資料。{{DOMxRef("File
 ## 實例方法
 
 - {{DOMxRef("Blob.arrayBuffer()")}}
-  - : 回傳一個 promise，該 promise 解析為包含 `Blob` 全部內容的 {{jsxref("ArrayBuffer")}}，以二進位資料形式表示。
+  - : 回傳一個 promise，其兌現為包含 `Blob` 全部內容的 {{jsxref("ArrayBuffer")}}（以二進位資料形式表示）。
 - {{DOMxRef("Blob.bytes()")}}
-  - : 回傳一個 promise，該 promise 解析為包含 `Blob` 內容的 {{jsxref("Uint8Array")}}。
+  - : 回傳一個 promise，其兌現為包含 `Blob` 內容的 {{jsxref("Uint8Array")}}。
 - {{DOMxRef("Blob.slice()")}}
   - : 回傳一個新的 `Blob` 物件，其中包含在呼叫的 blob 中指定範圍的位元組資料。
 - {{DOMxRef("Blob.stream()")}}
   - : 回傳一個 {{DOMxRef("ReadableStream")}}，可用於讀取 `Blob` 的內容。
 - {{DOMxRef("Blob.text()")}}
-  - : 回傳一個 promise，該 promise 解析為包含 `Blob` 全部內容的字串，並以 UTF-8 文字解釋。
+  - : 回傳一個 promise，其兌現為包含 `Blob` 全部內容的字串（以 UTF-8 文字表示）。
 
 ## 範例
 
