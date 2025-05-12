@@ -32,7 +32,7 @@
     "front-matter": "^4.0.2",
     "html-to-text": "^9.0.5",
     "markdown-it": "^14.1.0",
-    "markdownlint-cli2": "0.17.2",
+    "markdownlint-cli2": "0.18.0",
     "markdownlint-rule-search-replace": "1.2.0",
     "mdast-util-from-markdown": "^2.0.2",
     "ora": "^8.2.0",
