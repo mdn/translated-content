@@ -13,7 +13,7 @@ l10n:
 
 可以使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 建構子來建立一個訊息通道。一旦建立後，通道的兩個埠可以透過 {{domxref("MessageChannel.port1")}} 和 {{domxref("MessageChannel.port2")}} 屬性存取（這兩者都會回傳 {{domxref("MessagePort")}} 物件）。建立通道的應用程式使用 `port1`，而另一端的應用程式使用 `port2`——你可以向 `port2` 發送訊息，並使用 {{domxref("window.postMessage")}} 傳遞兩個參數（要發送的訊息以及要轉移所有權的物件，在此情況下為埠本身）將埠轉移到另一個瀏覽上下文。
 
-當這些可轉移物件被轉移後，它們在先前所屬的上下文中將無法再使用。埠在被傳送後，原始上下文將無法再使用該埠。
+當這些可轉移物件被轉移後，它們在先前所屬的上下文中將無法再使用。例如一個埠，一旦被傳送，在原本的上下文中將無法再使用。
 
 另一個瀏覽上下文可以使用 {{domxref("MessagePort.message_event", "onmessage")}} 監聽訊息，並透過事件的 `data` 屬性抓取訊息的內容。然後，你可以使用 {{domxref("MessagePort.postMessage")}} 回應，將訊息傳回原始文件。
 
