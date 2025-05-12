@@ -22,7 +22,7 @@ l10n:
 - [討論頻道](/zh-TW/docs/MDN/Community/Communication_channels)
   - : 這個頁面條列了所有 MDN 團隊和社群使用的討論頻道，並提示哪些頻道可能最適合你。
 - [貢獻](/zh-TW/docs/MDN/Community)
-  - : 這個章節解釋你可以如何貢獻到 MDN Web 文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Getting_started)、[儲存庫](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Translated_content)與[安全漏洞應對步驟](/zh-TW/docs/MDN/Community/Security_vulnerability_response)
+  - : 這個章節解釋你可以如何貢獻到 MDN Web 文件和貢獻的規範。此章節包含[開始入門 MDN](/zh-TW/docs/MDN/Community/Getting_started)、[儲存庫](/zh-TW/docs/MDN/Community/Contributing/Our_repositories)、[翻譯內容](/zh-TW/docs/MDN/Community/Translated_content)
 - [開源禮節](/zh-TW/docs/MDN/Community/Open_source_etiquette)。
   - : 此文章說明在為我們的開源專案做出貢獻時的行為準則，包含貢獻規則、禮節和衝突處理方式。
 - [問題（issue）](/zh-TW/docs/MDN/Community/Issues)
