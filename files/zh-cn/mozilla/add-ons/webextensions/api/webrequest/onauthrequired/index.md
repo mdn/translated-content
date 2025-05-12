@@ -84,7 +84,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : 此事件发生时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关请求的详细信息。有关更多信息，请参阅 [details](#details_2) 部分。
+      - : `object`。有关请求的详细信息。参见 [details](#details) 一节以获取更多信息。
     - `asyncCallback` {{optional_inline}}
 
       - : 一个最多调用一次的函数，用于异步修改请求对象。只有在事件监听器注册时传入的 `extraInfoSpec` 数组中包含 `"asyncBlocking"`，该参数才会被提供。如果未提供 `extraInfoSpec` 或数组中包含 `"blocking"`，则 `asyncCallback` 为 undefined。
