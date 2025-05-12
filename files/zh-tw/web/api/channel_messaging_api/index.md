@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Channel Messaging API")}} {{AvailableInWorkers}}
 
-**Channel Messaging API** 允許兩個分別運行於不同瀏覽上下文且附加至同一文件的腳本（例如，兩個 IFrame，或主文件與一個 IFrame，兩個文件透過 {{domxref("SharedWorker")}}，或兩個 worker）直接進行通訊，透過雙向通道（或管道）在兩端的埠之間傳遞訊息。
+**Channel Messaging API** 允許兩個分別運行於不同瀏覽上下文且附加至同一文件的腳本（例如，兩個 IFrame，或主文件與一個 IFrame，兩個透過 {{domxref("SharedWorker")}} 的文件，或兩個 worker）直接進行通訊，透過雙向通道（或管道）在兩端的埠之間傳遞訊息。
 
 ## 概念與使用方式
 
