@@ -36,4 +36,4 @@ Para usar estas API você precisa ter a "alarms" [permission](/pt-BR/docs/Mozill
 
 {{Compat}} {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms) .Dados de compatibilidade do Microsoft Edge fornecidos pela Microsoft Corporation aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **Nota:** **Agradecimentos**Esta API é baseada na API Chromium's [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
