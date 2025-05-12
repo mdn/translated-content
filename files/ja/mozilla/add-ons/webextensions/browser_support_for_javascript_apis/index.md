@@ -7,9 +7,6 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
 {{WebExtAllCompatTables}}
 
-> [!NOTE]
-> 
-
 ## 関連情報
 
 - [Browser compatibility for manifest.json](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)

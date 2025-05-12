@@ -26,8 +26,6 @@ l10n:
 
 > [!NOTE]
 > この API は Chromium の [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/) API に基づいています。
->
-> 
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

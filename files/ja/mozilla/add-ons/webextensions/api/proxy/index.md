@@ -140,6 +140,3 @@ browser.runtime.onMessage.addListener(handleMessage);
 {{Compat}}
 
 {{WebExtExamples("h2")}}
-
-> [!NOTE]
-> 
