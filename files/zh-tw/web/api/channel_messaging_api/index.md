@@ -44,5 +44,5 @@ l10n:
 ## 參見
 
 - [使用通道訊息](/zh-TW/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
-- [Web Workers API](/zh-TW/docs/Web/API/Web_Workers_API)
+- [Web Worker API](/zh-TW/docs/Web/API/Web_Workers_API)
 - [Broadcast Channel API](/zh-TW/docs/Web/API/Broadcast_Channel_API)
