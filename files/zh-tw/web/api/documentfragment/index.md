@@ -25,7 +25,7 @@ _此介面沒有特定的屬性，但會繼承其父項 {{domxref("Node")}} 的�
 - {{ domxref("DocumentFragment.childElementCount") }} {{ReadOnlyInline}}
   - : 回傳 `DocumentFragment` 中子 {{domxref("Element")}} 的數量。
 - {{ domxref("DocumentFragment.children") }} {{ReadOnlyInline}}
-  - : 回傳一個即時的 {{domxref("HTMLCollection")}}，包含 `DocumentFragment` 物件中的所有 {{domxref("Element")}類型子節點。
+  - : 回傳一個即時的 {{domxref("HTMLCollection")}}，包含 `DocumentFragment` 物件中的所有 {{domxref("Element")}} 類型子節點。
 - {{ domxref("DocumentFragment.firstElementChild") }} {{ReadOnlyInline}}
   - : 回傳作為 `DocumentFragment` 第一個子 {{domxref("Element")}}，若無則回傳 `null`。
 - {{ domxref("DocumentFragment.lastElementChild") }} {{ReadOnlyInline}}
