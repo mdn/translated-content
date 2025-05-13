@@ -20,7 +20,7 @@ l10n:
 
 ## 實例屬性
 
-_此介面沒有特定的屬性，但會繼承其父項 {{domxref("Node")}} 的屬性。_
+_此介面沒有特定的屬性，但會繼承其父介面 {{domxref("Node")}} 的屬性。_
 
 - {{ domxref("DocumentFragment.childElementCount") }} {{ReadOnlyInline}}
   - : 回傳 `DocumentFragment` 中子 {{domxref("Element")}} 的數量。
@@ -33,7 +33,7 @@ _此介面沒有特定的屬性，但會繼承其父項 {{domxref("Node")}} 的�
 
 ## 實例方法
 
-_此介面繼承自其父 {{domxref("Node")}} 的方法。_
+_此介面繼承自其父介面 {{domxref("Node")}} 的方法。_
 
 - {{DOMxRef("DocumentFragment.append()")}}
   - : 將一組 {{domxref("Node")}} 或字串插入至文件片段的最後一個子節點之後。
