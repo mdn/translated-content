@@ -14,9 +14,9 @@ l10n:
 ## 實例屬性
 
 - {{domxref("DOMTokenList.length")}} {{ReadOnlyInline}}
-  - ：一個 `integer`，代表此物件中儲存的項目數量。
+  - : 一個 `integer`，代表此物件中儲存的項目數量。
 - {{domxref("DOMTokenList.value")}}
-  - ：一個 {{Glossary("stringifier")}} 屬性，會以字串形式回傳整個清單的值。
+  - : 一個 {{Glossary("stringifier")}} 屬性，會以字串形式回傳整個清單的值。
 
 ## 實例方法
 
