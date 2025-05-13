@@ -61,7 +61,7 @@ l10n:
 let para = document.querySelector("p");
 let classes = para.classList;
 para.classList.add("d");
-para.textContent = `paragraph classList is "${classes}"`;
+para.textContent = `段落類別清單是 "${classes}"`;
 ```
 
 輸出結果如下所示：
@@ -80,7 +80,7 @@ para.textContent = `paragraph classList is "${classes}"`;
 let span = document.querySelector("span");
 let classes = span.classList;
 span.classList.add("x");
-span.textContent = `span classList is "${classes}"`;
+span.textContent = `行內容器類別清單是 "${classes}"`;
 ```
 
 輸出結果如下所示：
