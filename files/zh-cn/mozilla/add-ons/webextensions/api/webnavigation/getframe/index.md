@@ -2,12 +2,12 @@
 title: webNavigation.getFrame()
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getFrame
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
 ---
 
 {{AddonSidebar}}
 
-Retrieves information about a particular frame. A frame may be the top-level frame in a tab or a nested [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe), and is uniquely identified by a tab ID and a frame ID.
+获取有关特定框架的信息。一个框架可以是标签页中的顶层框架，也可以是嵌套的 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，其唯一标识由标签页 ID 和框架 ID 一起确定。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
@@ -15,7 +15,7 @@ Retrieves information about a particular frame. A frame may be the top-level fra
 
 ```js-nolint
 let gettingFrame = browser.webNavigation.getFrame(
-  details                // object
+  details                // 对象
 )
 ```
 
@@ -23,27 +23,27 @@ let gettingFrame = browser.webNavigation.getFrame(
 
 - `details`
 
-  - : `object`. Information about the frame to retrieve information about.
+  - : `object`。要获取信息的框架的信息。
 
     - `tabId`
-      - : `integer`. The ID of the tab in which the frame is.
+      - : `integer`。该框架所属的标签页 ID。
     - `processId` {{optional_inline}} {{deprecated_inline}}
-      - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
+      - : `integer`。在现代浏览器中未设置该值。当设置时，它表示运行此标签页渲染器的进程 ID。
     - `frameId`
-      - : `integer`. The ID of the frame in the given tab.
+      - : `integer`。给定标签页中该框架的 ID。
 
 ### 返回值
 
-A [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with an object containing the following properties:
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，且该 promise 会以包含以下属性的对象兑现：
 
 - `errorOccurred`
-  - : `boolean`. True if the last navigation in this frame was interrupted by an error, i.e. the {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} event fired.
+  - : `boolean`。如果该框架中的最后一次导航因错误中断（即触发了 {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} 事件），则为真。
 - `url`
-  - : `string`. The URL currently associated with this frame, if the frame identified by `frameId` existed at one point in the tab identified by `tabId`. The fact that a URL is associated with a given `frameId` does not imply that the corresponding frame still exists.
+  - : `string`。当前与该框架关联的 URL（如果由 `frameId` 标识的框架曾经存在于由 `tabId` 标识的标签页中）。某个 URL 与特定 `frameId` 关联并不意味着该框架当前仍然存在。
 - `parentFrameId`
-  - : `integer`. ID of this frame's parent. This is -1 if there is no parent frame: that is, if this frame is the top-level browsing context in the tab.
+  - : `integer`。该框架的副框架的 ID。如果没有父框架（即该框架为标签页中的顶层浏览上下文），则为 -1。
 
-If the tab is discarded, the promise will instead resolve with a `null` value. If the specified tab or frame ID could not be found, or some other error occurs, the promise will be rejected with an error message.
+如果标签页被丢弃，则该 promise 将兑现为 `null`。如果找不到指定的标签页或框架 ID，或发生其他错误，则 promise 将以错误信息拒绝。
 
 ## 浏览器兼容性
 
@@ -65,7 +65,7 @@ let gettingFrame = browser.webNavigation.getFrame({
   frameId: 1537,
 });
 
-// Edge specific - processId is required not optional, must be integer not null
+// Edge 专属：processId 并非可选项而是必选项，必须为一个整型而非 null
 //let gettingFrame = browser.webNavigation.getFrame({ tabId: 19, processId: 0, frameId: 1537 });
 
 gettingFrame.then(onGot, onError);
