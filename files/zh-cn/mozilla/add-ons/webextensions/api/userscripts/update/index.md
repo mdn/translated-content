@@ -23,7 +23,7 @@ let updatingUserScript = browser.userScripts.update(
 
   - : {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 的数组（`array`）。要更新的用户脚本的详细信息。
 
-    属性为 `null` 或省略时将不更改这些属性。向 `matches`、`excludeMatches`、`globs` 和 `excludeGlobs` 传递空数组会清除这些属性。
+    属性为 `null` 或省略时将不更改这些属性。向 `matches`、`excludeMatches`、`globs` 和 `excludeGlobs` 属性传入空数组会清除这些属性。
 
 ### 返回值
 
@@ -43,7 +43,7 @@ await browser.userScripts.register([
   },
 ]);
 
-// 无效！将导致脚本没有 matches 或 includeGlobs 其中之一！
+// 无效：这样更新会导致脚本没有 matches 或 includeGlobs 其中之一！
 await browser.userScripts.update([{ matches: [] }]);
 
 // 有效：用 includeGlobs 替换 matches。
