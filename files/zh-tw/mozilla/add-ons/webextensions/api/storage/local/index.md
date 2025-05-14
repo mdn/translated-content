@@ -40,7 +40,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/storage/local
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基於 Chromium 的 [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) API 而來，文件改作自 Chromium 程式碼裡的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/storage.json)。
+> 此 API 基於 Chromium 的 [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-local) API 而來，文件改作自 Chromium 程式碼裡的 [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/storage.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
