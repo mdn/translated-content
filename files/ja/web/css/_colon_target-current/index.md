@@ -9,8 +9,7 @@ l10n:
 
 **`:target-current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) で、**アクティブ**なスクロールマーカー、つまり、現在スクロールされている {{cssxref("::scroll-marker")}} 擬似要素の {{cssxref("scroll-marker-group")}} を選択します。この[セレクター](/ja/docs/Web/CSS/CSS_selectors)は、[スクロールマーカーグループ](/ja/docs/Web/CSS/::scroll-marker-group#description)内のアクティブなナビゲーションの位置のスタイル設定に使用できます。
 
-> [!NOTE]
-> `:target-current` 擬似クラスは、 `::scroll-marker` 擬似要素でのみ有効です。
+> **メモ:** `:target-current` 擬似クラスは、 `::scroll-marker` 擬似要素でのみ有効です。
 
 ## 構文
 
