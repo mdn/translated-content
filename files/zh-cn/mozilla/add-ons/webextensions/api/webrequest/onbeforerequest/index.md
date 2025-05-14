@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-此事件在请求即将发出且尚未提供标头时触发。如果你想取消或重定向请求，这是一个很好的监听位置。
+此事件在请求即将发出且标头尚不可用时触发。如果你想取消或重定向请求，这是一个很好的监听位置。
 
 要取消或重定向请求，首先在传递给 `addListener()` 的 `extraInfoSpec` 数组参数中包含 `"blocking"`。然后，在监听器函数中返回一个 {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}} 对象，并设置适当的属性：
 
@@ -18,7 +18,7 @@ l10n:
 
 当多个阻塞处理器修改请求时，只有其中一个修改集会生效。重定向和取消具有相同的优先级。因此，如果你取消了一个请求而有阻塞处理器同时重定向了这一请求，你可能会看到另一个具有相同 `requestId` 的请求再次出现。
 
-从 Firefox 52 开始，监听器可以返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 而不是返回 `BlockingResponse`。此 Promise 会兑现为一个 `BlockingResponse`，从而使监听器能够异步处理请求。
+从 Firefox 52 开始，监听器可以返回一个会兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 而不是返回 `BlockingResponse`。从而使监听器能够异步处理请求。
 
 要使用 `"blocking"`，则必须在 manifest.json 中取得[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
@@ -54,7 +54,7 @@ browser.webRequest.onBeforeRequest.hasListener(listener)
     - `details`
       - : `object`。有关请求的详细信息。参见 [details](#details) 部分。
 
-    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 `"blocking"`，事件监听器应返回一个 `BlockingResponse` 对象，并可以设置其 `cancel` 或 `redirectUrl` 属性。从 Firefox 52 开始，监听器可以返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 会兑现为一个 `BlockingResponse`，从而使监听器能够异步处理请求。
+    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 `"blocking"`，事件监听器应返回一个 `BlockingResponse` 对象，并可以设置其 `cancel` 或 `redirectUrl` 属性。从 Firefox 52 开始，监听器可以返回一个会兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。从而使监听器能够异步处理请求。
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件的过滤器。
@@ -191,7 +191,7 @@ browser.webRequest.onBeforeRequest.addListener(logURL, {
 });
 ```
 
-此代码取消对“https://developer.mozilla.org/”下的 URL 的图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
+此代码取消对“`https://developer.mozilla.org/`”下的 URL 的图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
 
 ```js
 // 匹配要重定向的 URL 的模式
@@ -211,7 +211,7 @@ browser.webRequest.onBeforeRequest.addListener(
 );
 ```
 
-此代码通过重定向替换对“https://developer.mozilla.org/”下的 URL 的所有网络图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
+此代码通过重定向替换对“`https://developer.mozilla.org/`”下的 URL 的所有网络图像请求（要查看效果，请访问包含图像的 MDN 页面，例如 [webRequest](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)）：
 
 ```js
 // 匹配要重定向的 URL 的模式
@@ -254,7 +254,7 @@ function redirectAsync(requestDetails) {
   });
 }
 
-// 添加监听器，传递过滤器参数和‘blocking“
+// 添加监听器，传递过滤器参数和“blocking”
 browser.webRequest.onBeforeRequest.addListener(
   redirectAsync,
   { urls: [pattern], types: ["image"] },
