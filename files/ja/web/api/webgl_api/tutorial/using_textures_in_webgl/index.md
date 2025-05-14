@@ -114,7 +114,7 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 
 しかし、ブラウザーは読み込まれたイメージのピクセルを上から下、つまり左上の角から順にコピーするのに対し、 WebGL はピクセルを下から上、つまり左下の角から順にコピーするという点に注意してください。（詳細については、 [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/) を参照してください。）
 
-そのため、レンダリング時に画像テクスチャが間違った方向になるのを防ぐために、 [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して呼び出す必要があります。
+したがって、レンダリング時に結果の画像テクスチャの方向が間違って表示されないようにするには、 `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を呼び出す必要があります。これにより、ピクセルが WebGL が期待する下から上への順序に反転されます。
 
 > [!NOTE]
 > 以下のコードを `main()` 関数の `initBuffers()` を呼び出した直後に追加してください。
@@ -328,7 +328,7 @@ WebGL は最低 8 つのテクスチャユニットを提供します。その�
 
 `drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
   // …
 }
