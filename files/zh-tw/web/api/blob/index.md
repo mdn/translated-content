@@ -55,9 +55,9 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 });
 ```
 
-### 創建一個表示型別化陣列內容的 URL
+### 創建一個表示型別陣列內容的 URL
 
-以下範例創建了一個 JavaScript [型別化陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)，並創建了一個包含型別化陣列資料的新 `Blob`。然後呼叫 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 將 blob 轉換為 {{glossary("URL")}}。
+以下範例創建了一個 JavaScript [型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)，並創建了一個包含型別化陣列資料的新 `Blob`。然後呼叫 {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}} 將 blob 轉換為 {{glossary("URL")}}。
 
 ```html live-sample___url-from-array
 <p>
@@ -111,12 +111,12 @@ if (!showViewLiveResultButton()) {
 
 ### 從 blob 中提取資料
 
-讀取 `Blob` 內容的一種方法是使用 {{DOMxRef("FileReader")}}。以下程式碼將 `Blob` 的內容讀取為型別化陣列：
+讀取 `Blob` 內容的一種方法是使用 {{DOMxRef("FileReader")}}。以下程式碼將 `Blob` 的內容讀取為型別陣列：
 
 ```js
 const reader = new FileReader();
 reader.addEventListener("loadend", () => {
-  // reader.result 包含 blob 的內容，作為型別化陣列
+  // reader.result 包含 blob 的內容，作為型別陣列
 });
 reader.readAsArrayBuffer(blob);
 ```
@@ -148,4 +148,4 @@ const text = await blob.text();
 - {{DOMxRef("FileReader")}}
 - {{DOMxRef("File")}}
 - {{DOMxRef("URL/createObjectURL_static", "URL.createObjectURL()")}}
-- [從 Web 應用程式中使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
+- [在 Web 應用程式中使用檔案](/zh-TW/docs/Web/API/File_API/Using_files_from_web_applications)
