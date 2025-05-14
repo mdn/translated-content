@@ -51,7 +51,7 @@ JavaScript 核心语言特性（大部分是纯 [ECMAScript](/zh-CN/docs/Web/Jav
 ### 中级
 
 - [理解客户端 Javascript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
-  - : JavaScript 框架是现代前端 Web 开发中不可或缺的一部分，它为开发者提供了构建可扩展、交互式 Web 应用的成熟工具。本模块首先将介绍这些客户端框架的工作原理，及其在开发工具中的集成方式，然后通过一系列教程讲解当前最流行的框架。
+  - : JavaScript 框架是现代前端 Web 开发中不可或缺的一部分，它为开发者提供了构建可扩展、交互式 Web 应用的成熟工具。如今，许多企业已将框架作为标准开发工具链的一部分，因此越来越多的前端开发岗位都要求具备框架使用经验。本系列文章将提供一个轻松的入门指南，帮助你开始学习这些框架。
 - [JavaScript 语言概述](/zh-CN/docs/Web/JavaScript/Guide/Language_overview)
   - : JavaScript 基础语法和语义概述：帮助来自其他编程语言的读者加速学习。
 - [JavaScript 数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
