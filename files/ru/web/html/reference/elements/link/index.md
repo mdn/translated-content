@@ -38,7 +38,7 @@ HTML-элемент **`<link>`** определяет отношения меж�
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="apple-icon-114.png"
+  href="favicon114.png"
   type="image/png" />
 ```
 

@@ -1,9 +1,8 @@
 ---
 title: "<button>: ボタン要素"
 slug: Web/HTML/Reference/Elements/button
-original_slug: Web/HTML/Element/button
 l10n:
-  sourceCommit: cc032eaae8b14c1253216ded69c076242c4f757c
+  sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
 {{HTMLSidebar}}
@@ -15,7 +14,7 @@ l10n:
 {{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<button class="favorite styled" type="button">Add to favorites</button>
+<button class="favorite styled" type="button">お気に入りに追加</button>
 ```
 
 ```css interactive-example
@@ -53,14 +52,35 @@ l10n:
 
 ## 属性
 
-この要素は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)を持ちます。
+この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autofocus`
-  - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLElement/focus)を持つべきであることを指定します。**文書中の要素一つだけにこの属性を設定することができます。**
-- `disabled`
 
-  - : 論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
+  - : 論理属性で、ページ読み込み時にこのボタンが入力[フォーカス](/ja/docs/Web/API/HTMLElement/focus)を持つべきであることを指定します。**この属性を設定することができるのは、文書中の要素一つだけです。**
 
+- `command`
+
+  - : 制御ボタンの `<button>` によって制御される、 `commandfor` 属性で指定した要素に対して実行するアクションを指定します。実現可能な値は次のとおりです。
+
+    - `"show-modal"`
+      - : このボタンは、 {{htmlelement("dialog")}} をモーダルとして表示させます。ダイアログがすでにモーダルである場合は、何もしません。これは、ダイアログ要素で [`.showModal()`](/ja/docs/Web/API/HTMLDialogElement/showModal) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - `"close"`
+      - : このボタンは、 {{htmlelement("dialog")}} 要素を閉じます。ダイアログがすでに閉じられている場合、何もしません。これは、ダイアログ要素の [`.close()`](/ja/docs/Web/API/HTMLDialogElement/close) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - `"request-close"`
+      - : このボタンは、 {{htmlelement("dialog")}} 要素を閉じるよう要求します。ダイアログがすでに閉じられている場合、何もしません。これは、ダイアログ要素の [`.requestClose()`](/ja/docs/Web/API/HTMLDialogElement/requestClose) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - `"show-popover"`
+      - : このボタンは、非表示のポップオーバーを表示します。すでに表示されているポップオーバーを表示しようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"show"` を指定して [`popovertargetaction`](#popovertargetaction) を呼び出すことと同じです。これは、ポップオーバー要素の [`.showPopover()`](/ja/docs/Web/API/HTMLElement/showPopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - `"hide-popover"`
+      - : このボタンは、表示されているポップオーバーを非表示にします。すでに非表示になっているポップオーバーを非表示にしようとすると、何もしません。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"hide"` を指定して [`popovertargetaction`](#popovertargetaction) を呼び出すことと同じです。これは、ポップオーバー要素で [`.hidePopover()`](/ja/docs/Web/API/HTMLElement/hidePopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - `"toggle-popover"`
+      - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合は表示され、ポップオーバーが表示されている場合は非表示になります。詳細については、{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} を参照してください。これは、値 `"toggle"` を指定した [`popovertargetaction`](#popovertargetaction) と同じです。これは、ポップオーバー要素の [`.togglePopover()`](/ja/docs/Web/API/HTMLElement/togglePopover) メソッドを呼び出すことと同じ意味の宣言的な方法です。
+    - カスタム値
+      - : この属性は、 2 つのハイフン文字 (`--`) を接頭辞として付加したカスタム値を表します。カスタム値を持つボタンは、制御される要素で {{domxref("CommandEvent")}} を配信します。
+
+- `commandfor`
+  - : `<button>` 要素をコマンドボタンに変え、指定された対話要素を制御します。制御する要素の ID をその値として取ります。これは [`popovertarget`](#popovertarget) のより一般的なバージョンです。
+- [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
+  - : これは論理属性で、ユーザーがボタンを操作することを抑止します。押したりフォーカスを受けたりすることができなくなります。
 - `form`
 
   - : ボタンに関連付けられた {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同一文書内の `<form>` 要素の `id` 属性と同一でなければなりません。（この属性を設定しなかった場合、 `<button>` は祖先に `<form>` 要素が存在すれば、その要素に関連付けられます。）
@@ -110,7 +130,10 @@ l10n:
 
 - `popovertarget`
 
-  - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。詳しくは{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。
+  - : `<button>` 要素をポップオーバーの制御ボタンに変換します。制御するポップオーバー要素の ID を値として受け取ります。 `popovertarget` 属性を使用してポップオーバーとその呼び出し元ボタンとの関連付けを設定すると、2 つの有益な効果が追加されます。
+
+    - ブラウザーは、ポップオーバーと呼び出し元との間に暗黙の [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を作成し、ポップオーバーが表示されたときに、キーボードフォーカスナビゲーションの順序で論理的な位置にポップオーバーを配置します。これにより、キーボードおよび支援技術 (AT) のユーザーもポップオーバーにアクセスしやすくなります （「[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)」も参照してください）。
+    - ブラウザーは、2 つの間に暗黙のアンカー参照を作成するため、[CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、コントロールを基準にしてポップオーバーを相対的に位置指定することがとても便利です。詳細については、「[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)」を参照してください。
 
 - `popovertargetaction`
 
@@ -138,25 +161,19 @@ l10n:
 
 送信ボタンに `formaction` 属性が設定されていても、関連付けられたフォームがない場合は何もしません。ボタンを `<form>` で囲むか、 `form` でフォームの id を設定するかしてフォームオーナーを設定する必要があります。
 
-`<button>` 要素は {{HTMLElement("input")}} 要素よりもずっと簡単にスタイル付けできます。内部に HTML コンテンツを（`<em>`、 `<strong>` や `<img>` さえも）追加できますし、複雑な描画のために {{Cssxref("::after")}} や {{Cssxref("::before")}} 擬似要素を使用することもできます。
+`<button>` 要素は {{HTMLElement("input")}} 要素よりもずっと簡単にスタイル付けできます。内部に HTML コンテンツを（`<i>`、 `<br>` や `<img>` さえも）追加できますし、複雑な描画のために {{Cssxref("::after")}} や {{Cssxref("::before")}} 擬似要素を使用することもできます。
 
 ボタンがサーバーにデータを送信するためのものでない場合は、 `type` 属性を `button` に設定することを忘れないでください。さもないと、フォームデータを送信して（存在しない）レスポンスを読み込み、文書の現在の状態を破棄してしまうおそれがあります。
 
 `<button type="button">` には既定の動作がありませんが、イベントハンドラーを記述して動作を起動することができます。起動されたボタンは [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) を用いてプログラム可能なアクションを実行することができます。例えばアイテムをリストから削除するなどです。
 
-## 例
+既定では、ユーザーエージェントはボタンを `display: flow-root` としてスタイル設定します。これにより、新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)が確立され、ボタンがオーバーフローしない限り、ボタンの中の子要素が水平方向と垂直方向の両方で中央に配置されます。ボタンがフレックスまたはグリッドコンテナーとして定義されている場合、子要素はフレックスまたはグリッドアイテムとして動作します。 `display: inline` に設定されたボタンは、値が `display: inline-block` に設定されているかのようにスタイル設定されます。
 
-```html
-<button name="button">クリックしてね</button>
-```
-
-{{ EmbedLiveSample('Example', 200, 64) }}
-
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ### アイコンボタン
 
-アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
+アイコンのみを使って機能を表現するボタンは、*アクセシブル名*を持ちません。アクセシブル名はスクリーンリーダーのような支援技術で文書を解析し、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#アクセシビリティの_api_群)を生成するときに、アクセスするためのプログラム的なフックを提供します。そのため、支援技術や移動やページコンテンツの操作にアクセシビリティツリーを使用します。
 
 アイコンボタンにアクセシブル名を与えるには、 `<button>` 要素でボタンの機能を簡潔に説明するテキスト文字列を提供してください。
 
@@ -164,8 +181,11 @@ l10n:
 
 ```html
 <button name="favorite">
-  <svg aria-hidden="true" viewBox="0 0 10 10">
-    <path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" />
+  <svg fill="#000000" viewBox="0 0 42 42">
+    <path
+      d="M21,1c1.081,0,5.141,12.315,6.201,13.126s13.461,1.053,13.791,2.137 c0.34,1.087-9.561,8.938-9.961,10.252c-0.409,1.307,
+      3.202,13.769,2.331,14.442c-0.879,0.673-11.05-6.79-12.361-6.79 c-1.311,0-11.481,7.463-12.36,6.79c-0.871-0.674,2.739-13.136,
+      2.329-14.442c-0.399-1.313-10.3-9.165-9.96-10.252 c0.33-1.084,12.731-1.326,13.791-2.137S19.91,1,21,1z"></path>
   </svg>
   お気に入りに追加
 </button>
@@ -175,19 +195,19 @@ l10n:
 
 {{EmbedLiveSample('Icon buttons')}}
 
-ボタンのテキストを、アクセス可能な方法で視覚的に隠したい場合は、[CSS プロパティの組み合わせ](https://gomakethings.com/hien-content-for-better-a11y/#hiding-the-link)を使用して画面から削除し、支援技術からは解析可能のままにします。
+ボタンのテキストを、アクセス可能な方法で視覚的に隠したい場合は、[CSS プロパティの組み合わせ](https://www.a11yproject.com/posts/how-to-hide-content/)を使用して画面から削除し、支援技術からは解析可能のままにします。
 
 しかし、ボタンのテキストを視覚的に見えるようにしておけば、アイコンの意味に慣れていない人がボタンの目的を理解できるようになります。これは特に、技術的に慣れていない人や、アイコンボタンが使用するアイコンの文化的解釈が異なる人に適しています。
 
 - [What is an accessible name? | The Paciello Group](https://www.tpgi.com/what-is-an-accessible-name/)
-- [MDN「WCAG を理解する ― ガイドライン 4.1 の解説」](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#guideline_4.1_—_compatible_maximize_compatibility_with_current_and_future_user_agents_including_assistive_technologies)
+- [MDN WCAG を理解する ― ガイドライン 4.1 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Robust#ガイドライン_4.1_—_互換性_支援技術を含む現在および将来のユーザーエージェントとの互換性を最大化する)
 - [Understanding Success Criterion 4.1.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/ensure-compat-rsv.html)
 
 ### 大きさと近接性
 
 #### 大きさ
 
-ボタンなどの操作可能な要素は、容易にアクティブ化させることができるだけの大きさで提供するようにしてください。これは、動きが不自由な人、スタイラスや指のような正確性の低い形の入力を使用している人など、様々な人に役立ちます。44×44 [CSS ピクセル](https://www.w3.org/TR/WCAG21/#dfn-css-pixels)以上の操作のための大きさが推奨されています。
+ボタンなどの操作可能な要素は、容易にアクティブ化させることができるだけの大きさで提供するようにしてください。これは、動きが不自由な人、スタイラスや指のような正確性の低い形の入力を使用している人など、様々な人に役立ちます。44×44 [CSS ピクセル](/ja/docs/Glossary/CSS_pixel)以上の操作のための大きさが推奨されています。
 
 - [Understanding Success Criterion 2.5.5: Target Size | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 - [Target Size and 2.5.5 | Adrian Roselli](https://adrianroselli.com/2019/06/target-size-and-2-5-5.html)
@@ -205,21 +225,29 @@ l10n:
 
 ボタンの状態を記述するために使用する正しい ARIA 属性は [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) であり、[`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) や [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) ではありません。詳しくは、 [ARIA button ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)についての情報をご覧ください。
 
-### Firefox
+### ボタンのスタイル
 
-Firefox はフォーカスされたボタンに小さな点線の境界線を表示します。この境界線はブラウザーのスタイルシートの CSS で宣言されていますが、 [`button::-moz-focus-inner { }`](/ja/docs/Web/CSS/::-moz-focus-inner) を使用して独自のフォーカスのスタイルを追加すると上書きすることができます。
+フォーカスを持つ要素の既定のフォーカスリングは上書きしないことが望ましいです。ボタンスタイルが上書きされる場合、視覚障碍のあるユーザーが認識でき、認知能力に違いのあるユーザーも理解できるように、**フォーカス状態のコントラストが十分であることを保証**することが重要です。
 
-上書きした場合は、弱視の人が知覚するのの十分なほど、**フォーカスがボタンに移動したときの状態の変化が十分に大きいことを確認すること**が重要です。
+{{cssxref(":focus-visible")}} 擬似クラスを使用すると、ユーザーエージェントのヒューリスティックがフォーカスを強調表示すべきであると判断した場合（たとえば、`<button>` がキーボードのフォーカスを受け取った場合など）にのみ、 {{cssxref(":focus")}} を保有する要素にスタイルを適用することができます。詳細については、[:focus と :focus-visible](/ja/docs/Web/CSS/:focus-visible#focus_vs_focus-visible) を参照してください。
 
-色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/intro/wcag) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
+色のコントラスト比は、テキスト及び背景色の明度の値を比較することで決定されます。現在の[ウェブコンテンツアクセシビリティガイドライン (Web Content Accessibility Guidelines, WCAG)](https://www.w3.org/WAI/standards-guidelines/wcag/) によれば、文字列コンテンツで 4.5:1 以上、大きめの文字列で 3:1 以上のコントラスト比が求められています。 (大きめの文字列とは、 {{cssxref("font-weight", "bold")}} の 18.66px 以上、または 24px 以上と定義されています。)
 
 - [WebAIM: Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG を理解する ― ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.3 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ### クリックとフォーカス
 
-{{HTMLElement("button")}} や {{HTMLElement("input")}} のボタン型をクリックしたときに（既定で）フォーカスを得るかは、ブラウザーおよび OS により異なります。多くのブラウザーはクリックされているボタンにフォーカスを与えますが、[Safari は設計上そうなりません](https://webkit.org/b/22261)。
+`<button>` や {{HTMLElement("input")}} のボタン型をクリックしたときに（既定で）フォーカスを得るかは、ブラウザーおよび OS により異なります。多くのブラウザーはクリックされているボタンにフォーカスを与えますが、[Safari は設計上そうなりません](https://webkit.org/b/22261#c68)。
+
+## 例
+
+```html
+<button name="button">クリックしてね</button>
+```
+
+{{ EmbedLiveSample('Example', 200, 64) }}
 
 ## 技術的概要
 
@@ -227,27 +255,32 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#リスト化"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#リスト化"
           >リスト化</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#ラベル付け可能"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能"
           >ラベル付け可能</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#送信可能"
+        >、
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#送信可能"
           >送信可能</a
         >
         な
         <a
-          href="/ja/docs/Web/HTML/Content_categories#フォーム関連コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#フォーム関連コンテンツ"
           >フォーム関連要素</a
         >、知覚可能コンテンツ
       </td>
@@ -255,12 +288,13 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、但し<a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
-        >があってはならない
+        >があってはならない。
+        <code>&lt;button&gt;</code> が<a href="/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select">カスタマイズ可能な選択要素</a>の最初の子である場合、0 個または 1 個の {{htmlelement("selectedcontent")}} 要素も含まれている場合があります。
       </td>
     </tr>
     <tr>
@@ -270,7 +304,7 @@ Firefox はフォーカスされたボタンに小さな点線の境界線を表
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素。
       </td>

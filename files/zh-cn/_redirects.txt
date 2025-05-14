@@ -502,7 +502,8 @@
 /zh-CN/docs/Firefox_21_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/21
 /zh-CN/docs/Firefox_22_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/22
 /zh-CN/docs/Firefox_3_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/3
-/zh-CN/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/zh-CN/docs/Games/Introduction_to_HTML5_Game_Development
+/zh-CN/docs/Games/Introduction_to_HTML5_Game_Development	/zh-CN/docs/Games/Tools
+/zh-CN/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/zh-CN/docs/Games/Tools
 /zh-CN/docs/Games/Publishing_games/游戏货币化	/zh-CN/docs/Games/Publishing_games/Game_monetization
 /zh-CN/docs/Games/Techniques/Control_mechanisms/移动端触摸控制	/zh-CN/docs/Games/Techniques/Control_mechanisms/Mobile_touch
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/创建、绘制画布	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
@@ -1309,9 +1310,9 @@
 /zh-CN/docs/Learn/JavaScript/Objects/Object-oriented_programming	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming
 /zh-CN/docs/Learn/JavaScript/Objects/Object_building_practice	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 /zh-CN/docs/Learn/JavaScript/Objects/Object_prototypes	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
-/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn/JavaScript/Objects/向“弹跳球”演示程序添加新功能	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
-/zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript
+/zh-CN/docs/Learn/JavaScript/Objects/测试你的技能:面向对象的Javascript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn/MathML	/zh-CN/docs/Web/MathML
 /zh-CN/docs/Learn/MathML/First_steps	/zh-CN/docs/Web/MathML/Guides
@@ -1442,6 +1443,7 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
+/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
@@ -1450,8 +1452,9 @@
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 /zh-CN/docs/MDN/Community/Contributing/Getting_started	/zh-CN/docs/MDN/Community/Getting_started
-/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response	/zh-CN/docs/MDN/Community/Security_vulnerability_response
+/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /zh-CN/docs/MDN/Community/Contributing/Translated_content	/zh-CN/docs/MDN/Community/Translated_content
+/zh-CN/docs/MDN/Community/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN

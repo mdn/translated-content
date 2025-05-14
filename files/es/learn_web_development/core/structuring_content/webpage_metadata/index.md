@@ -221,25 +221,18 @@ Hoy día hay un montón de otros tipos de iconos a tener presentes. Por ejemplo,
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone con pantalla de alta resolución: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- iPad de primera y segunda generación: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Dispositivos iPhone sin pantalla Retina, iPod Touch y Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- favicon básico -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 Los comentarios explican para qué se usa cada icono (estos elementos abarcan situaciones como aportar un buen icono de alta resolución para usarlo cuando la página web se guarda en la página de inicio de un iPad).

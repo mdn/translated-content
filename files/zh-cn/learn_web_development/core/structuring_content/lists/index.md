@@ -804,7 +804,7 @@ textarea.onkeyup = () => {
 
 ## 技能测试！
 
-关于 HTML 基本语义元素的三篇文章已经读完，但你还记得最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[技能测试：HTML 文本基础知识](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics)。
+关于 HTML 基本语义元素的三篇文章已经读完，但你还记得最重要的信息吗？你可以找到一些进一步的测试，以验证你在继续前进之前已经保留了这些信息——参见[技能测试：HTML 文本基础知识](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics)。
 
 ## 总结
 

@@ -1,14 +1,13 @@
 ---
 title: <feGaussianBlur>
 slug: Web/SVG/Reference/Element/feGaussianBlur
-original_slug: Web/SVG/Element/feGaussianBlur
 l10n:
-  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
 **`<feGaussianBlur>`** は [SVG](/ja/docs/Web/SVG) のフィルタープリミティブで、ベルカーブを定義する {{SVGAttr("stdDeviation")}} で指定された量だけ入力画像をぼかします。
+
+他のフィルタープリミティブと同様に、既定では色成分を `linearRGB` {{glossary("color space", "色空間")}}で処理します。 {{svgattr("color-interpolation-filters")}} を使用すると、代わりに `sRGB` を使用することができます。
 
 ## 使用コンテキスト
 
@@ -48,7 +47,7 @@ l10n:
 
 #### 結果
 
-{{EmbedLiveSample("Simple_example",232,124,"/files/4227/feGaussianBlur.png")}}
+{{EmbedLiveSample("Basic_example", "", "130")}}
 
 ### ドロップシャドウの例
 
@@ -75,7 +74,7 @@ l10n:
 
 #### 結果
 
-{{EmbedLiveSample("Drop_shadow_example",125,124,"/files/4229/feGaussianBlur-dropshadow.png")}}
+{{EmbedLiveSample("Drop_shadow_example", "", "130")}}
 
 ## 仕様書
 
@@ -87,7 +86,7 @@ l10n:
 
 ## 関連情報
 
-- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#filters_attributes)
+- [SVG フィルタープリミティブ属性](/ja/docs/Web/SVG/Reference/Attribute#フィルター属性)
 - {{SVGElement("filter")}}
 - {{SVGElement("feBlend")}}
 - {{SVGElement("feColorMatrix")}}

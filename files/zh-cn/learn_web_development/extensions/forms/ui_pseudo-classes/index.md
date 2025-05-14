@@ -615,7 +615,7 @@ input[type="radio"]:indeterminate {
 
 ## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling)。
 
 ## 总结
 

@@ -2,7 +2,7 @@
 title: 學習 Web 開發
 slug: Learn_web_development
 l10n:
-  sourceCommit: 6a5c619dfad295ca9a9d317a4088908cfd33e686
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
 ## 成為前端開發者必備技能

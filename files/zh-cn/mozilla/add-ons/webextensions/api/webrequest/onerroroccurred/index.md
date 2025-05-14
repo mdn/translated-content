@@ -13,7 +13,7 @@ l10n:
 
 请注意，此事件不会因 HTTP 错误（4XX 或 5XX 响应）而触发：这类错误会正常经过请求处理流程，触发其他事件监听器，并通过设置 `details.statusCode` 来报告错误。
 
-此事件仅供参考。
+此事件仅用于提供信息。
 
 ## 语法
 
@@ -87,14 +87,14 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
       - : `integer`。代理服务器的端口号。
     - `type`
 
-      - : `string`。代理服务器的类型，可能是以下值之一：
+      - : `string`。代理服务器的类型，以下值之一：
 
-        - "http": HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
-        - "https": 通过 TLS 连接到代理的 HTTP 代理
-        - "socks": SOCKS v5 代理
-        - "socks4": SOCKS v4 代理
-        - "direct": 无代理
-        - "unknown": 未知代理
+        - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
+        - `"https"`：通过 TLS 连接到代理的 HTTP 代理
+        - `"socks"`：SOCKS v5 代理
+        - `"socks4"`：SOCKS v4 代理
+        - `"direct"`：无代理
+        - `"unknown"`：未知代理
 
     - `username`
       - : `string`。代理服务的用户名。
@@ -106,7 +106,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `tabId`
-  - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则为 -1。
+  - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
   - : `boolean`。指示请求及其内容窗口层次结构是否为第三方。
 - `timeStamp`
@@ -127,8 +127,8 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
     分类标志包括：
 
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
-      - `fingerprinting` 表示域名属于指纹识别和跟踪类别（如广告商构建用户画像）。
-      - `fingerprinting_content` 表示域名仅属指纹识别类别（如支付提供商用于反欺诈）。
+      - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
+      - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。
     - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
     - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
     - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
@@ -138,7 +138,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
 
     更多跟踪器类型详细信息，参见 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站。`content` 后缀表示跟踪器同时提供内容服务，拦截这些跟踪器可以保护用户，但也可能会导致站点中断或元素无法显示。
 
-    **注意** 如果 Firefox 跟踪保护阻止请求，则返回一个空对象且 `error` 包含以下状态码之一：
+    **备注：** 如果 Firefox 跟踪保护阻止请求，则返回一个空对象且 `error` 包含以下状态码之一：
 
     - `NS_ERROR_MALWARE_URI` 表示恶意软件 URI。
     - `NS_ERROR_PHISHING_URI` 表示网络钓鱼 URI。

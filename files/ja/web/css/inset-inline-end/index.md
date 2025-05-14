@@ -2,12 +2,14 @@
 title: inset-inline-end
 slug: Web/CSS/inset-inline-end
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`inset-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における行末からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なインライン方向の末尾からの内部位置を定義し、要素の書字方向やテキストの向きに従って物理的なオフセットに対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
 {{InteractiveExample("CSS Demo: inset-inline-end")}}
 
@@ -28,17 +30,14 @@ direction: rtl;
 writing-mode: vertical-lr;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container" id="example-element">
     <div id="abspos">
-      I am absolutely positioned with inset-inline-end: 50px
+      これは inset-inline-end: 50px で絶対位置指定されています。
     </div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>
@@ -71,6 +70,8 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 inset-inline-end: 3px;
 inset-inline-end: 2.4em;
+inset-inline-end: calc(anchor(self-start) + 5px);
+inset-inline-end: anchor-size(height);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-inline-end: 10%;

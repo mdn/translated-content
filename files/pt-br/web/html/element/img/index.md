@@ -114,9 +114,7 @@ Depending of its type, an _image_ may have an intrinsic dimension, but this is n
 O exemplo a seguir insere uma imagem na página e inclui o texto alternativo para acessibilidade, de forma que ele possa ser lido por programas leitores de tela ou exibido caso a imagem não carregue.
 
 ```html
-<img
-  src="https://developer.mozilla.org/static/img/favicon144.png"
-  alt="MDN logo" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -128,7 +126,7 @@ Esse exemplo mostra como transformar uma imagem em um link. Para isso, insira a 
 ```html
 <a href="https://developer.mozilla.org">
   <img
-    src="https://developer.mozilla.org/static/img/favicon144.png"
+    src="/shared-assets/images/examples/favicon144.png"
     alt="Visit the MDN site" />
 </a>
 ```

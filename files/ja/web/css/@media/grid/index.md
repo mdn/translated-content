@@ -1,6 +1,8 @@
 ---
 title: grid
 slug: Web/CSS/@media/grid
+l10n:
+  sourceCommit: 8d03307af2cee96a307c22b5d52b93f155f11524
 ---
 
 {{CSSRef}}
@@ -11,7 +13,7 @@ slug: Web/CSS/@media/grid
 
 ## 構文
 
-`grid` 特性は {{cssxref("&lt;mq-boolean&gt;")}} 値 (`0` または `1`) として指定し、出力機器がグリッドベースであるかどうかを表します。
+`grid` 特性は {{cssxref("CSS_media_queries/Using_media_queries", "&lt;mq-boolean&gt;")}} 値 (`0` または `1`) として指定し、出力機器がグリッドベースであるかどうかを表します。
 
 ## 例
 

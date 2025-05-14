@@ -136,7 +136,7 @@ HTML はこのようになります。
 <div class="hidden">
   <video>
     <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      src="/shared-assets/videos/flower.webm"
       type="video/webm" />
     <p>
       このブラウザーは HTML の動画に対応していません。
@@ -231,7 +231,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 <div class="hidden">
   <video>
     <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
+      src="/shared-assets/videos/flower.webm"
       type="video/webm" />
     <p>
       このブラウザーは HTML の動画に対応していません。

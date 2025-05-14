@@ -250,7 +250,7 @@ Web 最常用的图像格式是：
 下面的示例将图像嵌入到页面中，且包含用于改善无障碍的备用文本。
 
 ```html
-<img src="favicon144.png" alt="MDN logo" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('备用文字', '100%', '160') }}
@@ -261,7 +261,9 @@ Web 最常用的图像格式是：
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="Visit the MDN site" />
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="Visit the MDN site" />
 </a>
 ```
 
@@ -272,7 +274,10 @@ Web 最常用的图像格式是：
 在这个例子中，我们包含了一个 `srcset` 属性，它引用了 MDN 标志高清版本；在高分辨率设备上，它将被优先加载，取代 `src` 属性中的图像。在支持 `srcset` 的{{glossary("User agent", "用户代理")}}中，`src` 属性中的图片被作为 `1x` 候选项。
 
 ```html
-<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="MDN logo"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("使用 srcset 属性", "100%", "160")}}
