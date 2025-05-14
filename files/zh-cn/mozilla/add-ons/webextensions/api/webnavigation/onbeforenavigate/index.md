@@ -41,7 +41,7 @@ browser.webNavigation.onBeforeNavigate.hasListener(listener)
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 
 - `filter` {{optional_inline}}
-  - : `object`。包含单个 `url` 属性的对象，该属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。如果省略此参数，则事件会为所有导航触发。
+  - : `object`。包含单个 `url` 属性的对象，且这一属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。如果省略此参数，则事件会为所有导航触发。
 
 ## 附加对象
 
@@ -82,7 +82,7 @@ browser.webNavigation.onBeforeNavigate.addListener(logOnBefore, filter);
 
 {{WebExtExamples}}
 
-> [! 注意]
+> [!NOTE]
 > 此 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。该文档衍生自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
 <!--
