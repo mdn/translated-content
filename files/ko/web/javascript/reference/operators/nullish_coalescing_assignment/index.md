@@ -4,7 +4,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 page-type: javascript-operator
 browser-compat: javascript.operators.nullish_coalescing_assignment
 l10n:
-  sourceCommit: 3e2369d97e2d6fbfe33a3c496a8edd90e0b539e2
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{jsSidebar("Operators")}}
