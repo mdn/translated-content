@@ -20,7 +20,7 @@ let unregisteringUserScripts = browser.userScripts.unregister(
 ### 参数
 
 - `filter` {{optional_inline}}
-  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}。要注销的用户脚本 ID 列表。如果未指定，则注销所有用户脚本。
+  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}。要注销的用户脚本的 ID 列表。如果未指定，则注销所有用户脚本。
 
 ### 返回值
 
