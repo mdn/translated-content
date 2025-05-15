@@ -20,11 +20,11 @@ const gettingUserScripts = await browser.userScripts.getScripts(
 ### 参数
 
 - `filter` {{optional_inline}}
-  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}。要返回的用户脚本 ID 列表。
+  - : {{WebExtAPIRef("userScripts.UserScriptFilter")}}。要返回的用户脚本的 ID 列表。
 
 ### 返回值
 
-一个 {{WebExtAPIRef("userScripts.RegisteredUserScript")}}，其会以 {{JSxRef("Promise")}} 对象的数组兑现。如果没有找到匹配的用户脚本，则兑现的数组为空。如果请求失败，则该 promise 将以错误消息拒绝。
+一个会兑现为 {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 数组的 {{JSxRef("Promise")}} 对象。如果没有找到匹配的用户脚本，则兑现的数组为空。如果请求失败，则该 promise 将以错误消息拒绝。
 
 {{WebExtExamples("h2")}}
 
