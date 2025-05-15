@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM WHATWG")}}
 
-建立一個新的空的 {{domxref("DocumentFragment")}}，可以將 DOM 節點新增到其中以建立離線 DOM 樹。
+建立一個新的空的 {{domxref("DocumentFragment")}}，可以將 DOM 節點新增到其中以建立畫面外 DOM 樹。
 
 ## 語法
 
