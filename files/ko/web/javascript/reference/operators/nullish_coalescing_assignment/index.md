@@ -1,8 +1,6 @@
 ---
 title: Nullish coalescing assignment (??=)
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
-page-type: javascript-operator
-browser-compat: javascript.operators.nullish_coalescing_assignment
 l10n:
   sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
