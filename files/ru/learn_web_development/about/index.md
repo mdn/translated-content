@@ -129,4 +129,4 @@ slug: Learn_web_development/About
 
 #### Выдаётся ли сертификат по окончании курса Scrimba «»?
 
-Да, после прохождения всех тем курса Frontend Developer Career Path вы можете получить сертификат о прохождении курса, чтобы поделиться им с потенциальными работодателями или включить в своё портфолио. Дополнительную информацию вы можете  получить в разделе [Where can I find my completion certificate?](https://forum.scrimba.com/t/where-can-i-find-my-completion-certificate/43?via=mdn).
+Да, после прохождения всех тем курса Frontend Developer Career Path вы можете получить сертификат о прохождении курса, чтобы поделиться им с потенциальными работодателями или включить в своё портфолио. Дополнительную информацию вы можете получить в разделе [Where can I find my completion certificate?](https://forum.scrimba.com/t/where-can-i-find-my-completion-certificate/43?via=mdn).
