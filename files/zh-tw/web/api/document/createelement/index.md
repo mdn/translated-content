@@ -19,7 +19,7 @@ createElement(localName, options)
 ### 參數
 
 - `localName`
-  - : 一個字串，指定要建立的元素類型。不要使用帶有限定名稱（例如 "html:a"）的名稱來呼叫此方法。在 HTML 文件中呼叫時，`createElement()` 會將 `localName` 轉換為小寫後再建立元素。在 Firefox、Opera 和 Chrome 中，`createElement(null)` 的行為與 `createElement("null")` 相同。
+  - : 一個字串，指定要建立的元素類型。不要使用限定名稱（例如「html:a」）來呼叫此方法。在 HTML 文件中呼叫時，`createElement()` 會將 `localName` 轉換為小寫後再建立元素。在 Firefox、Opera 和 Chrome 中，`createElement(null)` 的行為與 `createElement("null")` 相同。
 - `options` {{optional_inline}}
   - : 一個物件，包含以下屬性：
     - `is`
