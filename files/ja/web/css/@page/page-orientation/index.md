@@ -111,7 +111,7 @@ CSS コードの 2 つ目の部分は、 `<section class="left">…</section>` �
 }
 ```
 
-```html hidden live-sample___rotating-pages
+```html-nolint hidden live-sample___rotating-pages
 <fieldset id="printStyle">
   <legend>
     ［印刷］ をクリックしてください。ページは、定義した方向でレイアウトされます。
