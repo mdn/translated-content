@@ -1,9 +1,8 @@
 ---
 title: "<abbr>: 略語要素"
 slug: Web/HTML/Reference/Elements/abbr
-original_slug: Web/HTML/Element/abbr
 l10n:
-  sourceCommit: a4f2bbc328279ca53e558cb29117ad85e933cb3d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -16,12 +15,9 @@ l10n:
 
 {{InteractiveExample("HTML Demo: &lt;abbr&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
-  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
-  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
-  layer separate. This is called "separation of concerns."
+  <abbr>CSS</abbr> (Cascading Style Sheets) を使うと、 <abbr>HTML</abbr> (HyperText Markup Language) にスタイルを設定できます。スタイルシートを使用すると、 <abbr>CSS</abbr> のプレゼンテーション層と <abbr>HTML</abbr> のコンテンツ層を分離することができます。これは「関心事の分離」と呼ばれています。
 </p>
 ```
 
@@ -45,9 +41,9 @@ abbr {
 必ずしもすべての略語を `<abbr>` でマークアップする必要はありません。しかし、有用な場合がいくつかあります。
 
 - 略語が使用され、文書コンテンツの流れの外で完全形や定義を提供したい場合は、 `<abbr>` を適切な [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) と共に使用してください。
-- 読み手にとってなじみのない略語を定義する場合、用語を `<abbr>` を使用して表現し、`title` 属性や行内文字列で定義を説明してください。
-- テキスト内に略語が存在し、意味の注釈が必要な場合、`<abbr>` 要素は有用です。これはスタイル付けやスクリプトの目的で使用することができます。
-- `<abbr>` は {{HTMLElement("dfn")}} との組み合わせで、略語や頭字語の用語の定義を行なうことができます。以下の[略語の定義](#defining_an_abbreviation)の例をご覧ください。
+- 読者になじみのない略語を定義するには、`<abbr>` を使用して用語を提示し、その定義をインラインテキストで記載してください。インライン展開や定義を利用できない場合にのみ、 `title` 属性を記載してください。
+- テキスト内に略語が存在し、意味の注釈が必要な場合、`<abbr>` 要素は有用です。これはスタイル設定やスクリプトの目的で使用することができます。
+- `<abbr>` は {{HTMLElement("dfn")}} との組み合わせで、略語や頭字語の用語の定義を行なうことができます。以下の[略語の定義](#略語の定義)の例をご覧ください。
 
 ### 文法的な考慮事項
 
@@ -55,9 +51,25 @@ abbr {
 
 ## 既定のスタイル
 
-この要素の目的は単に作者の利便性のためであり、すべてのブラウザーが既定でこの要素を行内 ({{cssxref('display')}}`: inline`) で表示します。ただし、既定のスタイルはブラウザーによりさまざまです。
+この要素の目的は単に作者の利便性のためであり、すべてのブラウザーが既定でこの要素を行内 ({{cssxref("display", "display: inline")}}) で表示します。ただし、既定のスタイルはブラウザーによりさまざまです。
 
 一部のブラウザーでは、この要素の内容に点線の下線を引きます。他にも点線の下線を引くだけでなく、小さな大文字で表示するものもあります。それ以外のものは {{HTMLElement("span")}} 要素以上のスタイルを適用しません。このスタイルを制御するには {{cssxref('text-decoration')}} および {{cssxref('font-variant')}} を使用してください。
+
+### アクセシビリティ
+
+頭字語や略語を、ページ内で最初に使われたときに完全な形で綴ることは、特に中身が技術用語や業界用語であった場合に、人々が理解するのに役立ちます。
+
+本文中で略語や頭字語を展開することが使用不可能な場合のみ、`title` を記載してください。特に読み手にとって慣れない専門用語の場合、発表された単語やフレーズと画面に表示される内容に差異があると、耳障りになることがあります。
+
+```html
+<p>
+  JavaScript Object Notation (<abbr>JSON</abbr>) は軽量のデータ交換形式です。
+</p>
+```
+
+{{EmbedLiveSample("Accessibility")}}
+
+これは特に、コンテンツで説明している用語や概念になじみがない人、その言語の初心者、認知症の人などに有益です。
 
 ## 例
 
@@ -117,16 +129,13 @@ abbr {
 
 #### HTML
 
-```html
+```html-nolint
 <p>
-  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr></dfn>
-  は、ウェブページの意味と構造を構築するために使用するマークアップ言語です。
+  <dfn id="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn>  は、ウェブページの意味と構造を構築するために使用するマークアップ言語です。
 </p>
 
 <p>
-  仕様 (<dfn id="spec">Specification</dfn>, <abbr>spec</abbr>) は、ある技術や
-  API
-  がどのように機能することを意図し、どのようにアクセスするのかを詳細に説明した文書です。
+  仕様書 (<dfn id="spec">Specification</dfn>, <abbr>spec</abbr>) は、ある技術や API がどのように機能することを意図し、どのようにアクセスするのかを詳細に説明した文書です。
 </p>
 ```
 
@@ -134,41 +143,21 @@ abbr {
 
 {{EmbedLiveSample("Defining_an_abbreviation", 600, 120)}}
 
-### アクセシビリティの考慮
-
-頭字語や略語を、ページ内で最初に使われたときに完全な形で綴ることは、特に中身が技術用語や業界用語であった場合に、人々が理解するのに役立ちます。
-
-本文中で略語や頭字語を展開することが使用不可能な場合のみ、`title` を記載してください。特に読み手にとって慣れない専門用語の場合、発表された単語やフレーズと画面に表示される内容に差異があると、耳障りになることがあります。
-
-#### 例
-
-```html
-<p>
-  JavaScript Object Notation (<abbr>JSON</abbr>) は軽量のデータ交換形式です。
-</p>
-```
-
-#### 結果
-
-{{EmbedLiveSample("Accessibility_concerns")}}
-
-これは特に、コンテンツで説明している用語や概念になじみがない人、その言語の初心者、認知症の人などに有益です。
-
 ## 技術的概要
 
 <table class="properties">
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリ－</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、知覚可能コンテンツ
       </td>
@@ -176,7 +165,7 @@ abbr {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -188,7 +177,7 @@ abbr {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>

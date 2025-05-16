@@ -1,34 +1,34 @@
 ---
-title: Document.documentElement
+title: Document：documentElement 屬性
 slug: Web/API/Document/documentElement
+l10n:
+  sourceCommit: 376da6eeed886361367923824132ccfc5ac1177d
 ---
 
-{{ ApiRef("DOM") }}
+{{ApiRef("DOM")}}
 
-**`Document.documentElement`** 會回傳目前文件（{{domxref("document")}}）中的根元素（{{domxref("Element")}}），如：HTML 文件中的 `<html>` 元素。
+{{domxref("Document")}} 介面的 **`documentElement`** 唯讀屬性會回傳作為{{domxref("document", "文件", "", 1)}}根元素的{{domxref("Element", "元素", "", 1)}}（例如，HTML 文件中的 {{HTMLElement("html")}} 元素）。
 
-## 語法
+## 值
 
-```plain
-var element = document.documentElement;
-```
+一個 {{domxref("Element")}} 物件。
 
 ## 範例
 
 ```js
-var rootElement = document.documentElement;
-var firstTier = rootElement.childNodes;
+const rootElement = document.documentElement;
+const firstTier = rootElement.childNodes;
+// firstTier 是根元素的直接子節點的 NodeList
+// 像是 <head> 和 <body>
 
-// firstTier is the NodeList of the direct children of the root element
-for (var i = 0; i < firstTier.length; i++) {
-  // do something with each direct kid of the root element
-  // as firstTier[i]
+for (const child of firstTier) {
+  // 對根元素的每個直接子節點執行某些操作
 }
 ```
 
 ## 備註
 
-對於所有非空的 HTML 文件， `document.documentElement` 將會是一個 {{HTMLElement("html")}} 元素 ; 對於所有非空的 XML 文件，`document.documentElement` 則會是文件的根元素。
+對於任何非空的 HTML 文件，`documentElement` 總是 {{HTMLElement("html")}} 元素。對於任何非空的 XML 文件，`documentElement` 一定會是該文件的根元素（無論是哪一個元素）。
 
 ## 規範
 

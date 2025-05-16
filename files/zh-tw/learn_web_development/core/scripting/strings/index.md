@@ -385,11 +385,6 @@ I gave it a score of ${(score / highestScore) * 100}%.`;
 
 來我們的[Template literals](/zh-TW/docs/Web/JavaScript/Reference/Template_literals) 相關頁面看看更多的範例與進階的特色細節。
 
-## 測試你的技能！
-
-你已到達文章的結尾了，但你能記得最重要的資訊嗎?
-在繼續學習之前，你可以找些難一點的測驗，來檢測你有記得這些知識 — [Test your skills: Strings](/zh-TW/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). 記住，接下來的文章也需要這些知識，所以你可能想先看看。
-
 ## 結語
 
 以上是 JavaScript 中基礎的字串觀念。下個文章中，我們會依循這些概念並試試一些適用於字串的內建方法，進而運用這些方法讓字串能照我們想要的方式呈現。

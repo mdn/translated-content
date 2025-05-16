@@ -1,14 +1,14 @@
 ---
-title: HTML 早見表
+title: 構文とよくあるタスクの HTML 早見表
+short-title: HTML 早見表
 slug: Web/HTML/Guides/Cheatsheet
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
 l10n:
-  sourceCommit: 62555a957b0436cc2af31310f120970e2d4af01d
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{LearnSidebar}}
+{{HTMLSidebar}}
 
-{{Glossary("HTML")}} を使用しているとき、HTML タグを正しく使用する方法や適用方法を簡単に覚える方法があるととても便利です。MDN は広範にわたる [HTML ドキュメント](/ja/docs/Web/HTML/Reference/Elements) と深い解説の [HTML ハウツー](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems)を提供しています。しかし、多くの場合、手っ取り早くヒントを得たいものです。そのため、早見表では、よく使用するコードの断片をすばやく正確に使用することができるようにしています。
+{{Glossary("HTML")}} を使用しているとき、HTML タグを正しく使用する方法や適用方法を簡単に覚える方法があるととても便利です。MDN は広範にわたる [HTML ドキュメント](/ja/docs/Web/HTML/Reference/Elements) と深い解説である[一連の　HTML ガイド](/ja/docs/Learn_web_development/Core/Structuring_content)を提供しています。しかし、多くの場合、手っ取り早くヒントを得たいものです。そのため、早見表では、よく使用するコードの断片をすばやく正確に使用することができるようにしています。
 
 > [!NOTE]
 > HTML タグは、見た目ではなく、意味づけのために使用しなければなりません。 常に {{Glossary("CSS")}} を使って指定されたタグの見た目をガラリと変えることが可能なので、HTML を使用する際は、見た目よりも意味を重視するようにしましょう。
@@ -178,7 +178,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="wbr-example">
         <pre class="brush: html">
 &#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
+  Llanfair&#x3C;wbr>pwllgwyngyll&#x3C;wbr>gogerychwyrndrobwllllantysiliogogogoch.
 &#x3C;/div></pre
         >
         {{EmbedLiveSample("wbr-example", 100, 80)}}
@@ -190,7 +190,7 @@ see &#x3C;cite>The Monster Book of Monsters&#x3C;/cite>.</pre
       <td id="time-example">
         <pre class="brush: html">
 Used to format the date. For example:
-&#x3C;time datetime="2020-05-24" pubdate>
+&#x3C;time datetime="2020-05-24">
 published on 23-05-2020&#x3C;/time>.</pre
         >
         {{EmbedLiveSample("time-example", 100, 60)}}
@@ -214,7 +214,7 @@ format&#x3C;/code>.</pre
       <td id="audio-example">
         <pre class="brush: html">
 &#x3C;audio controls>
-  &#x3C;source src="https://interactive-examples.mdn.mozilla.net/media/cc0-audio/t-rex-roar.mp3" type="audio/mpeg">
+  &#x3C;source src="/shared-assets/audio/t-rex-roar.mp3" type="audio/mpeg">
 &#x3C;/audio>
         </pre>
         {{EmbedLiveSample("audio-example", 100, 80)}}
@@ -281,7 +281,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td id="details-example">
         <pre class="brush: html">
 &#x3C;details>
-  &#x3C;summary>Html Cheat Sheet&#x3C;/summary>
+  &#x3C;summary>HTML Cheat Sheet&#x3C;/summary>
   &#x3C;p>Inline elements&#x3C;/p>
   &#x3C;p>Block elements&#x3C;/p>
 &#x3C;/details></pre
@@ -293,9 +293,9 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>順序なしリスト</td>
       <td>{{HTMLElement("ul")}}</td>
       <td id="ul-example">
-        <pre class="brush: html">&#x3C;ul><br>
-  &#x3C;li>I'm an item&#x3C;/li><br>
-  &#x3C;li>I'm another item&#x3C;/li><br>
+        <pre class="brush: html">&#x3C;ul>
+  &#x3C;li>I'm an item&#x3C;/li>
+  &#x3C;li>I'm another item&#x3C;/li>
 &#x3C;/ul></pre>
         {{EmbedLiveSample("ul-example", 100, 100)}}
       </td>
@@ -304,9 +304,9 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>順序付きリスト</td>
       <td>{{HTMLElement("ol")}}</td>
       <td id="ol-example">
-        <pre class="brush: html">&#x3C;ol><br>
-  &#x3C;li>I'm the first item&#x3C;/li><br>
-  &#x3C;li>I'm the second item&#x3C;/li><br>
+        <pre class="brush: html">&#x3C;ol>
+  &#x3C;li>I'm the first item&#x3C;/li>
+  &#x3C;li>I'm the second item&#x3C;/li>
 &#x3C;/ol></pre>
         {{EmbedLiveSample("ol-example", 100, 100)}}
       </td>
@@ -316,7 +316,7 @@ an extended quotation.&#x3C;/blockquote></pre
       <td>{{HTMLElement("dl")}}</td>
       <td id="dl-example">
         <pre class="brush: html">&#x3C;dl>
-  &#x3C;dt>A Term&#x3C;/dt><br>
+  &#x3C;dt>A Term&#x3C;/dt>
   &#x3C;dd>Definition of a term&#x3C;/dd>
   &#x3C;dt>Another Term&#x3C;/dt>
   &#x3C;dd>Definition of another term&#x3C;/dd>

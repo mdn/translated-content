@@ -61,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> この API は Chromium の [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management) API に基づいています。この文書は Chromium code の [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) から派生しています。
 
 <pre class="hidden">// Copyright 2012 The Chromium Authors. All rights reserved.
 //

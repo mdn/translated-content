@@ -1,11 +1,13 @@
 ---
 title: CSS モーションパス
 slug: Web/CSS/CSS_motion_path
+l10n:
+  sourceCommit: 3dce7daa89de9290c5ca04b6289756cd3c39d247
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**モーションパス** (Motion Path) は CSS のモジュールの一つで、任意のグラフィックオブジェクトを独自の経路に沿って動作させるためのものです。
+**CSS モーションパス** (CSS motion path) モジュールは、任意のグラフィックオブジェクトを独自の経路に沿って動作させるためのものです。
 
 この概念は、ある経路に従って動作する要素をアニメーションさせたい場合、以前は裁量権がアニメーションの推移や位置などしかなかったのですが、これは理想的はなく、単純な動作しかできませんでした。 {{cssxref("offset-path")}} によって、任意の形状の特定の経路を定義することができます。そして、 {{cssxref("offset-distance")}} により経路に沿って動かすことができ、 {{cssxref("offset-rotate")}} を用いて任意の位置での向きを選択することができます。
 
@@ -47,12 +49,10 @@ slug: Web/CSS/CSS_motion_path
 - {{cssxref("offset-position")}}
 - {{cssxref("offset-rotate")}}
 
+### 関数
+
+- {{cssxref("ray")}}
+
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-## offset プロパティ
-
-{{Compat}}

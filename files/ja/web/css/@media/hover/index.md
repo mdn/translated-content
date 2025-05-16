@@ -1,11 +1,13 @@
 ---
 title: hover
 slug: Web/CSS/@media/hover
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`hover`** [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、*第一の*入力機構が要素の上でホバー (停止) することができるかどうかを検査するために使用することができます。
+**`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、*第一の*入力機構で要素の上でホバーする（かざす）ことができるかどうかを検査するために使用することができます。
 
 ## 構文
 
@@ -27,9 +29,17 @@ slug: Web/CSS/@media/hover
 ### CSS
 
 ```css
+/* 既定のホバー効果 */
+a:hover {
+  color: black;
+  background: yellow;
+}
+
 @media (hover: hover) {
+  /* ホバーに対応している場合 */
   a:hover {
-    background: yellow;
+    color: white;
+    background: black;
   }
 }
 ```

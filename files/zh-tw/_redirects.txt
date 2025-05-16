@@ -307,7 +307,7 @@
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/HTML中的圖片	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images
-/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding
+/zh-TW/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
 /zh-TW/docs/Learn/HTML/Tables	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /zh-TW/docs/Learn/HTML/Tables/Basics	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /zh-TW/docs/Learn/HTML/Tables/基礎	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -410,6 +410,7 @@
 /zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing	/zh-TW/docs/Learn_web_development/Extensions/Testing/Automated_testing
 /zh-TW/docs/Learn/Tools_and_testing/Cross_browser_testing/JavaScript	/zh-TW/docs/Learn_web_development/Core/Scripting/Debugging_JavaScript
 /zh-TW/docs/Learn/Tools_and_testing/GitHub	/zh-TW/docs/Learn_web_development/Core/Version_control
+/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/zh-TW/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
 /zh-TW/docs/MDN/About	/zh-TW/docs/MDN/Writing_guidelines
 /zh-TW/docs/MDN/Community/Contributing/Getting_started	/zh-TW/docs/MDN/Community/Getting_started
 /zh-TW/docs/MDN/Community/Contributing/Translated_content	/zh-TW/docs/MDN/Community/Translated_content

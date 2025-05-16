@@ -1,9 +1,8 @@
 ---
 title: "<aside>: 余談要素"
 slug: Web/HTML/Reference/Elements/aside
-original_slug: Web/HTML/Element/aside
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,19 +13,15 @@ l10n:
 
 ```html interactive-example
 <p>
-  Salamanders are a group of amphibians with a lizard-like appearance, including
-  short legs and a tail in both larval and adult forms.
+  イモリは、幼体も成体も短い足と尾を持つ、トカゲのような外観を持つ両生類のグループです。
 </p>
 
 <aside>
-  <p>The Rough-skinned Newt defends itself with a deadly neurotoxin.</p>
+  <p>サメハダイモリは、致命的な神経毒で身を守ります。</p>
 </aside>
 
 <p>
-  Several species of salamander inhabit the temperate rainforest of the Pacific
-  Northwest, including the Ensatina, the Northwestern Salamander and the
-  Rough-skinned Newt. Most salamanders are nocturnal, and hunt for insects,
-  worms and other small creatures.
+  太平洋岸北西部の温帯雨林には、エンサティナ、ノースウェスタンサラマンダー、サメハダイモリなど、数種類のイモリが生息しています。ほとんどのイモリは夜行性で、昆虫やミミズ、その他の小動物を餌としています。
 </p>
 ```
 
@@ -60,16 +55,15 @@ aside > p {
 
 この例は `<aside>` を使用して記事の中のある段落をマークアップします。この段落は記事の主要な内容と間接的な関係しかありません。
 
-```html
+```html-nolint
 <article>
   <p>
-    The Disney movie <cite>The Little Mermaid</cite> was first released to
-    theatres in 1989.
+    ディズニー映画「<cite>リトル・マーメイド</cite>」は、 1989 年に最初に劇場公開されました。
   </p>
   <aside>
-    <p>The movie earned $87 million during its initial release.</p>
+    <p>この映画は、公開当初の興行収入は 8,700 万ドルに達しました。</p>
   </aside>
-  <p>More info about the movie…</p>
+  <p>この映画の詳細情報…</p>
 </article>
 ```
 
@@ -83,17 +77,17 @@ aside > p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >、<a href="/ja/docs/Web/HTML/Content_categories#区分コンテンツ"
+        >、<a href="/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ"
           >区分コンテンツ</a
         >、<a
-          href="/ja/docs/Web/HTML/Content_categories#知覚可能コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#知覚可能コンテンツ"
           >知覚可能コンテンツ</a
         >
       </td>
@@ -101,7 +95,7 @@ aside > p {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -113,18 +107,16 @@ aside > p {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >を受け入れるすべての要素。<code>&#x3C;aside></code> 要素は
-        {{HTMLElement("address")}}
-        要素の子孫要素として配置してはならない。
+        >を受け入れるすべての要素。 <code>&#x3C;aside></code> 要素は {{HTMLElement("address")}} 要素の子孫要素として配置してはならない。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Complementary_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"
             >complementary</a
           ></code
         >

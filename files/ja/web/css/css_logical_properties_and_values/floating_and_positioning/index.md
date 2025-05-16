@@ -1,15 +1,17 @@
 ---
-title: 浮動と位置指定の論理的プロパティ
+title: 浮動ボックスと位置指定の論理的プロパティ
 slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
+l10n:
+  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
 ---
 
 {{CSSRef}}
 
-[論理的プロパティと値仕様書](https://drafts.csswg.org/css-logical/) (Logical Properties and Values specification) には、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)で使用する位置指定プロパティを含んでいます。このガイドはこれらの使い方を見てみます。
+[CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュールには、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)で使用する位置指定プロパティがあります。このガイドはこれらの使い方を見てみます。
 
-## マッピングされるプロパティと値
+## 対応付けされるプロパティと値
 
-以下の表はこのガイドで物理的なマッピングに沿って議論されるプロパティや値を説明しています。水平方向の {{cssxref("writing-mode")}} は、左書きを想定しています。
+以下の表は、このガイドで説明した{{glossary("logical properties", "論理的プロパティ")}}と値、およびそれに対応する{{glossary("physical properties", "物理的プロパティ")}}と値の対応付けについて詳しく示しています。これらは、水平方向で左書きの {{cssxref("writing-mode")}} を想定しています。
 
 | 論理的プロパティまたは値           | 物理的プロパティまたは値         |
 | ---------------------------------- | -------------------------------- |
@@ -24,48 +26,183 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 | {{cssxref("text-align")}}: start   | {{cssxref("text-align")}}: left  |
 | {{cssxref("text-align")}}: end     | {{cssxref("text-align")}}: right |
 
-これらの対応付けられたプロパティに加えて、ブロック方向やインライン方向を示すことができる一括指定プロパティがいくつかあります。これらは {{cssxref("inset")}} プロパティを除いて物理的なプロパティに対応付けられていません。
+これらの対応付けられたプロパティに加えて、ブロック次元やインライン次元を示すことができる一括指定プロパティがいくつかあります。これらは {{cssxref("inset")}} プロパティを除いて、物理的なプロパティに対応付けられません。
 
 | 論理的プロパティ            | 目的                                                            |
 | --------------------------- | --------------------------------------------------------------- |
-| {{cssxref("inset-inline")}} | インライン方向に上記の両方のインセット値を同時に設定する。      |
-| {{cssxref("inset-block")}}  | ブロック方向に上記の両方のインセット値を同時に設定する。        |
+| {{cssxref("inset-inline")}} | インライン次元に上記の両方のインセット値を同時に設定する。      |
+| {{cssxref("inset-block")}}  | ブロック次元に上記の両方のインセット値を同時に設定する。        |
 | {{cssxref("inset")}}        | 多値の物理的マッピングで 4 つのインセット値を同時に設定します。 |
 
-## 浮動と解除の例
+## 浮動ブロックと解除の例
 
-{{cssxref("float")}} および {{cssxref("clear")}} プロパティで用いられる物理的な値 `left`, `right`, `both` です。論理的プロパティの仕様では、 `inline-start` および `inline-end` の値を `left` および `right` に対応付けて定義しています。
+{{cssxref("float")}} および {{cssxref("clear")}} プロパティで用いられる物理的な値 `left`, `right`, `both` です。論理的プロパティの仕様では、 `inline-start` および `inline-end` の値を `left` や `right` に対応付けて定義しています。
 
-下記の例では、2 つのボックスがあります。 — 1 つ目は `float: left` で、2 つ目は `float: inline-start` で浮動させています。 `writing-mode` を `vertical-rl` に変更したり、 `direction` を `rtl` に変更したりすると、 left で浮動させたボックスは常に左にくっつきますが、 `inline-start` で浮動させたアイテムは `direction` や `writing-mode` に従います。
+下記の例では、 1 つ目のボックスは `float: left` で、2 つ目は `float: inline-start` で浮動ブロックになっています。
+`direction: rtl` を `.inner` セレクターに適用すると、左の浮動ボックスは常に左側に留まり、 `inline-start` で浮動ボックス化されたアイテムはテキストの `direction` に従います。
+これを `writing-mode: vertical-rl` と組み合わせることで、 `direction` の値と組み合わせたブロックレイアウトの違いを確認することができます。
 
-{{EmbedGHLiveSample("css-examples/logical/float.html", '100%', 700)}}
+```html-nolint live-sample___float
+<div class="container">
+  <div class="inner">
+    <div class="physical box"></div>
+    カブ菜、ヨモギ、インゲンマメ、ルタバガ、エンダイブ、カリフラワー、海藻、コールラビ、アマランサス、水菜、アボカド、大根、白菜、アスパラガス、冬パセリ、ケール。
+  </div>
+  <div class="inner">
+    <div class="logical box"></div>
+    カブ菜、ヨモギ、インゲンマメ、ルタバガ、エンダイブ、カリフラワー、海藻、コールラビ、アマランサス、水菜、アボカド、大根、白菜、アスパラガス、冬パセリ、ケール。
+  </div>
+</div>
+```
+
+```css hidden live-sample___float
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```css live-sample___float
+.inner {
+  /* direction: rtl; */
+  /* writing-mode: vertical-rl; */
+}
+
+.physical {
+  float: left;
+}
+
+.logical {
+  float: inline-start;
+}
+```
+
+{{EmbedLiveSample("float", "", "220px")}}
 
 ## 例: 位置指定レイアウトにおける inset プロパティ
 
-一般的に位置指定では、要素を含むブロックに対して相対的に要素を配置することができます。基本的に、通常のフローに基づいてアイテムが配置された場所に対して相対的にアイテムを挿入します。これを行うために、歴史的には {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} の物理的なプロパティを使用してきました。
+一般的に位置指定では、要素を含むブロックに対して相対的に要素を配置することができます。基本的に、通常のフローに基づいてアイテムが配置された場所に対して相対的にアイテムを挿入します。これを行うために、歴史的には {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} の物理的なプロパティを使用してきました。位置指定を書字方向のテキストのフローに関連させたい場合は、代わりに {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} を使用してください。
 
-これらのプロパティは、長さまたはパーセント値を値として取り、ユーザーの画面の寸法の相対になります。
-
-論理的プロパティの仕様書では、指定した書字方向におけるテキストの流れに関連した位置合わせを行いたい場合のために、新しいプロパティが作成されました。これらは {{cssxref("inset-block-start")}}, {{cssxref("inset-block-end")}}, {{cssxref("inset-inline-start")}}, {{cssxref("inset-inline-end")}} になります。
+これらのプロパティは、長さまたはパーセント値を値として取り、ユーザーの画面の次元に関連します。
 
 以下の例では、 `inset-block-start` と `inset-inline-end` プロパティを使用して、青枠を灰色の点線で囲まれた領域 (`position: relative`) の内側に絶対位置を使用して配置しています 。 `writing-mode` プロパティを `vertical-rl` に変更するか、 `direction: rtl` を追加して、フロー相対ボックスがテキストの方向に従う様子を見てみましょう。
 
-{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", '100%', 700)}}
+```html live-sample___positioning-inset
+<div class="container">
+  <div class="inner">
+    <div class="physical box"></div>
+  </div>
+  <div class="inner">
+    <div class="logical box"></div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___positioning-inset
+.container {
+  display: flex;
+}
+
+.inner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 2px dotted grey;
+}
+
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```css live-sample___positioning-inset
+.inner {
+  writing-mode: horizontal-tb;
+}
+
+.physical {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.logical {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 0;
+}
+```
+
+{{EmbedLiveSample("positioning-inset", "", "250px")}}
 
 ## 新しい 2 つまたは 4 つの値の一括指定
 
 仕様書の他のプロパティと同様に、いくつかの新しい一括指定プロパティがあり、一度に 2 つまたは 4 つの値を設定することができます。
 
 - {{cssxref("inset")}} — 物理的な対応付けを使用して四辺をすべて設定します。
-- {{cssxref("inset-inline")}} — 論理的なインライン方向の内側の距離を両方設定します。
-- {{cssxref("inset-block")}} — 論理的なブロック方向の内側の距離を両方設定します。
+- {{cssxref("inset-inline")}} — 論理的なインライン次元の内側の距離を両方設定します。
+- {{cssxref("inset-block")}} — 論理的なブロック次元の内側の距離を両方設定します。
 
 ## 例: text-align の論理的な値
 
-{{cssxref("text-align")}} プロパティは、テキストの方向に関連する論理値を持っています。 `left` と `right` に代わり、 `start` と `end` を使用することができます。以下の例では、最初のブロックで `text-align: right`、2番目のブロックで `text-align: end` を設定しています。
+{{cssxref("text-align")}} プロパティは、テキストの方向に関連する論理値を持っています。 `left` と `right` に代わり、 `start` と `end` を使用することができます。以下の例では、最初のブロックで `text-align: right`、 2 番目のブロックで `text-align: end` を設定しています。
 
-`direction` の値を `rtl` に変更すると、最初のブロックでは配置が右に留まりますが、2 番目のブロックでは論理的な末尾が左になることがわかります。
+`direction` の値を `rtl` に変更すると、最初のブロックでは配置が右に留まりますが、 2 番目のブロックでは論理的な末尾が左になることがわかります。
 
-{{EmbedGHLiveSample("css-examples/logical/text-align.html", '100%', 700)}}
+```html live-sample___text-align
+<div class="container">
+  <div class="inner physical">配置テキスト</div>
+  <div class="inner logical">配置テキスト</div>
+</div>
+```
+
+```css hidden live-sample___text-align
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.inner {
+  width: 200px;
+  border: 2px dotted grey;
+  padding: 10px;
+}
+```
+
+```css live-sample___text-align
+.inner {
+  direction: ltr;
+}
+
+.physical {
+  text-align: right;
+}
+
+.logical {
+  text-align: end;
+}
+```
+
+{{EmbedLiveSample("text-align")}}
 
 これは、物理的な方向ではなく、先頭と末尾を使用したボックス配置を使用した場合に、より一貫性のある方法で動作します。

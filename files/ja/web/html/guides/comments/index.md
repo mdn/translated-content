@@ -1,12 +1,12 @@
 ---
-title: コメント
+title: HTML コメント <!-- … --> の使用
+short-title: コメント
 slug: Web/HTML/Guides/Comments
-original_slug: Web/HTML/Comments
 l10n:
-  sourceCommit: e4ec417e0f84b2fbd23fb37b236047fbdd215b68
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
+{{HTMLSidebar}}
 
 HTML の**コメント**は、マークアップに説明メモを追加したり、文書内の特定の箇所をブラウザーに解釈させないようにしたりするために使用します。
 
@@ -18,7 +18,7 @@ HTML の**コメント**は、マークアップに説明メモを追加した�
 
 コメントは単一の行で使用することも、複数行にわたって使用することもできます。コメントは以下の場所で使用することができます。
 
-- {{Glossary("doctype")}} の前後
+- {{Glossary("Doctype")}} の前後
 - {{HTMLElement("html")}} 要素の前後
 - ほとんどの要素コンテンツ。ただし、{{HTMLElement("script")}}, {{HTMLElement("style")}}, {{HTMLElement("title")}}, {{HTMLElement("textarea")}} は、コンテンツを生のテキストとして解釈するため不可。
 
@@ -66,4 +66,4 @@ HTML コメントはコンテンツとしてのみ許可されています。タ
 
 - [JavaScript のコメント](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#コメント)
 - [CSS のコメント](/ja/docs/Web/CSS/CSS_syntax/Comments)
-- {{domxref("Comment")}} API（`Comment` は {{domxref("Node")}} を継承）
+- {{domxref("Comment", "コメント")}} API（`Comment` は {{domxref("Node")}} を継承）

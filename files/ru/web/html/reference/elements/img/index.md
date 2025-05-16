@@ -170,7 +170,7 @@ slug: Web/HTML/Reference/Elements/img
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="Логотип MDN - изображение динозавра с текстом MDN web docs" />
 ```
 
@@ -183,7 +183,7 @@ slug: Web/HTML/Reference/Elements/img
 ```html
 <a href="https://developer.mozilla.org">
   <img
-    src="https://developer.mozilla.org/static/img/web-docs-sprite.22a6a085cf14.svg"
+    src="/shared-assets/images/examples/web-docs-sprite.svg"
     alt="Посетить сайт MDN" />
 </a>
 ```

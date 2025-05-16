@@ -1,9 +1,8 @@
 ---
 title: "<blockquote>: ブロック引用要素"
 slug: Web/HTML/Reference/Elements/blockquote
-original_slug: Web/HTML/Element/blockquote
 l10n:
-  sourceCommit: 610522d12e27fc70bcfd67d183c7ab1f38956a62
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -54,6 +53,8 @@ blockquote + p {
 
 ## 使用上の注意
 
+仕様書によると、引用文の出典がある場合は、 `<blockquote>` 要素の外側に配置しなければなりません。
+
 引用された文字列に適用される字下げを変更するには、 {{Glossary("CSS")}} の {{cssxref("margin-left")}} や {{cssxref("margin-right")}} プロパティ、または一括指定の {{cssxref("margin")}} プロパティを使用してください。
 
 独立したブロックというより行内の短い引用を行うには、 {{HTMLElement("q")}} (Quotation) 要素を使用してください。
@@ -86,12 +87,12 @@ blockquote + p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >, 区分化ルート, 知覚可能コンテンツ
       </td>
@@ -99,7 +100,7 @@ blockquote + p {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -111,7 +112,7 @@ blockquote + p {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -119,8 +120,10 @@ blockquote + p {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code>
+          <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents"
+            >blockquote</a
+          ></code
         >
       </td>
     </tr>
@@ -147,3 +150,4 @@ blockquote + p {
 
 - {{HTMLElement("q")}}: インラインの引用のための要素
 - {{HTMLElement("cite")}}: 情報源の引用のための要素
+- [The blockquote element](https://heydonworks.com/article/the-blockquote-element/) (heydonworks.com, 2024)
