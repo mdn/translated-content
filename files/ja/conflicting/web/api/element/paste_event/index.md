@@ -1,7 +1,8 @@
 ---
 title: "Document: paste イベント"
 short-title: paste
-slug: Web/API/Document/paste_event
+slug: conflicting/Web/API/Element/paste_event
+original_slug: Web/API/Document/paste_event
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---

@@ -1,7 +1,8 @@
 ---
 title: "Document: copy イベント"
 short-title: copy
-slug: Web/API/Document/copy_event
+slug: conflicting/Web/API/Element/copy_event_8f169b964ed6100fd74860a263316bb2f862d8bb386816f90640f696d2e845af
+original_slug: Web/API/Document/copy_event
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---

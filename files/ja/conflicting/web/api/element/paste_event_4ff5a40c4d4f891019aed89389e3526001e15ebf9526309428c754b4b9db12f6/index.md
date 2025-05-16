@@ -1,7 +1,8 @@
 ---
 title: "HTMLElement: paste イベント"
 short-title: paste
-slug: Web/API/HTMLElement/paste_event
+slug: conflicting/Web/API/Element/paste_event_4ff5a40c4d4f891019aed89389e3526001e15ebf9526309428c754b4b9db12f6
+original_slug: Web/API/HTMLElement/paste_event
 l10n:
   sourceCommit: 73b2b6ee411ac094b9fc57dafac6f9c232fc20d9
 ---

@@ -1,7 +1,8 @@
 ---
 title: "Document: cut イベント"
 short-title: cut
-slug: Web/API/Document/cut_event
+slug: conflicting/Web/API/Element/cut_event_7d33812242c8023f9e15329180681271f56658c72268b8f378d6d1ef0cb3fb3d
+original_slug: Web/API/Document/cut_event
 l10n:
   sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---

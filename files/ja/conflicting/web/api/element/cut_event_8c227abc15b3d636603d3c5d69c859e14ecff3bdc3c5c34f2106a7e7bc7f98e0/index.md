@@ -1,6 +1,7 @@
 ---
 title: "HTMLElement: cut イベント"
-slug: Web/API/HTMLElement/cut_event
+slug: conflicting/Web/API/Element/cut_event_8c227abc15b3d636603d3c5d69c859e14ecff3bdc3c5c34f2106a7e7bc7f98e0
+original_slug: Web/API/HTMLElement/cut_event
 l10n:
   sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---

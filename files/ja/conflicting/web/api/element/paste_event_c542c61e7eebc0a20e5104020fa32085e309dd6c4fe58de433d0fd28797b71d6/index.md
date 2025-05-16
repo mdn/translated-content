@@ -1,6 +1,7 @@
 ---
 title: "Window: paste イベント"
-slug: Web/API/Window/paste_event
+slug: conflicting/Web/API/Element/paste_event_c542c61e7eebc0a20e5104020fa32085e309dd6c4fe58de433d0fd28797b71d6
+original_slug: Web/API/Window/paste_event
 ---
 
 {{APIRef}}

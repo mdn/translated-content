@@ -1,6 +1,7 @@
 ---
 title: "Window: cut イベント"
-slug: Web/API/Window/cut_event
+slug: conflicting/Web/API/Element/cut_event
+original_slug: Web/API/Window/cut_event
 ---
 
 {{APIRef}}

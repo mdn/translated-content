@@ -1,7 +1,8 @@
 ---
 title: "HTMLElement: copy イベント"
 short-title: copy
-slug: Web/API/HTMLElement/copy_event
+slug: conflicting/Web/API/Element/copy_event
+original_slug: Web/API/HTMLElement/copy_event
 l10n:
   sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
