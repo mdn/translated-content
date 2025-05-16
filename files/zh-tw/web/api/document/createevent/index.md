@@ -21,7 +21,7 @@ createEvent(type)
 ### 參數
 
 - `type`
-  - ：一個字串，表示要建立的事件類型。可能的事件類型包括 `"UIEvents"`、`"MouseEvents"`、`"MutationEvents"` 和 `"HTMLEvents"`。詳情請參見[備註](#備註)部分。
+  - : 一個字串，表示要建立的事件類型。可能的事件類型包括 `"UIEvents"`、`"MouseEvents"`、`"MutationEvents"` 和 `"HTMLEvents"`。詳情請參見[備註](#備註)部分。
 
 ### 回傳值
 
