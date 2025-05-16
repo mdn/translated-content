@@ -1306,7 +1306,8 @@
 /ja/docs/Full_page_zoom	/ja/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /ja/docs/Games/Examples	/ja/docs/orphaned/Games/Examples
 /ja/docs/Games/Index	/ja/docs/Games
-/ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/Games/Introduction_to_HTML5_Game_Development
+/ja/docs/Games/Introduction_to_HTML5_Game_Development	/ja/docs/conflicting/Games/Tools
+/ja/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/ja/docs/conflicting/Games/Tools
 /ja/docs/Games/Techniques/3D_on_the_web/WebVR	/ja/docs/Games/Techniques/3D_on_the_web/WebXR
 /ja/docs/Games/Workflows	/ja/docs/Games/Tutorials
 /ja/docs/Games/Workflows/2D_Breakout_game_pure_JavaScript	/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript
@@ -2520,7 +2521,6 @@
 /ja/docs/MDN/Community/Contributing	/ja/docs/MDN/Community
 /ja/docs/MDN/Community/Contributing/Getting_started	/ja/docs/MDN/Community/Getting_started
 /ja/docs/MDN/Community/Contributing/Our_repositories	/ja/docs/MDN/Community/Our_repositories
-/ja/docs/MDN/Community/Contributing/Security_vulnerability_response	/ja/docs/MDN/Community/Security_vulnerability_response
 /ja/docs/MDN/Community/Contributing/Translated_content	/ja/docs/MDN/Community/Translated_content
 /ja/docs/MDN/Community/Issues/Issue_triage	/ja/docs/MDN/Community/Issues
 /ja/docs/MDN/Community/MDN_content	/ja/docs/MDN/Community

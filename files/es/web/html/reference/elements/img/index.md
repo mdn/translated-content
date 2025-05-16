@@ -178,7 +178,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 <img src="mdn-logo-sm.png" alt="MDN" />
 ```
 
-![MDN](/static/img/favicon144.png)
+![MDN](/shared-assets/images/examples/favicon144.png)
 
 ## Ejemplo 2: Enlace con imagen
 
@@ -188,7 +188,7 @@ Dependiendo de su tipo, una imagen puede tener ancho y alto intrínseco, pero no
 /></a>
 ```
 
-[![MDN](/static/img/favicon144.png)](/)
+[![MDN](/shared-assets/images/examples/favicon144.png)](/)
 
 ## Ejemplo 3: Uso del atributo `srcset`
 

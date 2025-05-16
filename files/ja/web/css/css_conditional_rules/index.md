@@ -80,7 +80,7 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 
 - [古いブラウザーの対応: 機能クエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#機能クエリー)
 
-  - : ブラウザーのウェブ機能の対応レベルに応じて、 CSS を対象とする特性クエリーを使用する方法です。
+  - : ブラウザーのウェブ機能の対応レベルに応じて、 CSS を対象とする機能クエリーを使用する方法です。
 
 - [ブラウザーの機能検出: CSS `@supports`](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)
 

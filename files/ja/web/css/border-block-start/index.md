@@ -1,6 +1,8 @@
 ---
 title: border-block-start
 slug: Web/CSS/border-block-start
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -32,7 +34,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -67,6 +69,7 @@ border-block-start: medium dashed blue;
 border-block-start: inherit;
 border-block-start: initial;
 border-block-start: revert;
+border-block-start: revert-layer;
 border-block-start: unset;
 ```
 
@@ -82,12 +85,12 @@ border-block-start: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -95,13 +98,13 @@ border-block-start: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">縦書きテキストの境界線</h3>
+### 縦書きテキストの境界線
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -120,7 +123,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線", 140, 140)}}
 
 ## 仕様書
 
@@ -132,5 +135,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のうちの一つに対応づけられます。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

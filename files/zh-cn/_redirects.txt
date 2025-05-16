@@ -502,7 +502,8 @@
 /zh-CN/docs/Firefox_21_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/21
 /zh-CN/docs/Firefox_22_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/22
 /zh-CN/docs/Firefox_3_for_developers	/zh-CN/docs/Mozilla/Firefox/Releases/3
-/zh-CN/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/zh-CN/docs/Games/Introduction_to_HTML5_Game_Development
+/zh-CN/docs/Games/Introduction_to_HTML5_Game_Development	/zh-CN/docs/Games/Tools
+/zh-CN/docs/Games/Introduction_to_HTML5_Game_Gevelopment_(summary)	/zh-CN/docs/Games/Tools
 /zh-CN/docs/Games/Publishing_games/游戏货币化	/zh-CN/docs/Games/Publishing_games/Game_monetization
 /zh-CN/docs/Games/Techniques/Control_mechanisms/移动端触摸控制	/zh-CN/docs/Games/Techniques/Control_mechanisms/Mobile_touch
 /zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/创建、绘制画布	/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it
@@ -1451,8 +1452,9 @@
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
 /zh-CN/docs/MDN/Community/Contributing/Getting_started	/zh-CN/docs/MDN/Community/Getting_started
-/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response	/zh-CN/docs/MDN/Community/Security_vulnerability_response
+/zh-CN/docs/MDN/Community/Contributing/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /zh-CN/docs/MDN/Community/Contributing/Translated_content	/zh-CN/docs/MDN/Community/Translated_content
+/zh-CN/docs/MDN/Community/Security_vulnerability_response	https://github.com/mdn/mdn/issues/45
 /zh-CN/docs/MDN/Community/Users_teams	/zh-CN/docs/MDN/Community/Roles_teams
 /zh-CN/docs/MDN/Contribute/Content	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/Contribute/Content/CSS_style_guide	/zh-CN/docs/MDN/Writing_guidelines/Howto/Markdown_in_MDN

@@ -1,15 +1,17 @@
 ---
 title: monochrome
 slug: Web/CSS/@media/monochrome
+l10n:
+  sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
 ---
 
 {{CSSRef}}
 
-**`light-level`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のモノクロフレームバッファのピクセルあたりのビット数を調べるために使用することができます。
+**`monochrome`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のモノクロフレームバッファのピクセルあたりのビット数を調べるために使用することができます。
 
 ## 構文
 
-`monochrome` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、モノクロフレームバッファのピクセルあたりのビット数を表します。機器がモノクロ機器でなければ、ゼロを返します。これは範囲の特性であり、つまり接頭辞の付いた **`min-monochrome`** および **`max-monochrome`** の変化形を使用して、それぞれ最小値と最大値をクエリーすることができます。
+`monochrome` 特性は {{cssxref("&lt;integer&gt;")}} 値で指定し、モノクロフレームバッファのピクセルあたりのビット数を表します。機器がモノクロ機器でなければ、ゼロを返します。これは範囲特性であり、接頭辞の付いた **`min-monochrome`** および **`max-monochrome`** の変化形を使用して、それぞれ最小値と最大値で問い合わせることができます。
 
 ## 例
 
