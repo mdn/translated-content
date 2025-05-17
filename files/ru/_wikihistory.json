@@ -2377,12 +2377,6 @@
       "tav1313"
     ]
   },
-  "Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images": {
-    "modified": "2020-12-10T07:17:32.470Z",
-    "contributors": [
-      "valandis"
-    ]
-  },
   "Learn_web_development/Core/Structuring_content/HTML_table_basics": {
     "modified": "2020-11-20T13:19:06.723Z",
     "contributors": [
@@ -2505,6 +2499,12 @@
       "Khaidarov-Dinar",
       "Why-are-you-crying",
       "Maxim-Bernashevsky"
+    ]
+  },
+  "Learn_web_development/Core/Structuring_content/Test_your_skills/Images": {
+    "modified": "2020-12-10T07:17:32.470Z",
+    "contributors": [
+      "valandis"
     ]
   },
   "Learn_web_development/Core/Structuring_content/Webpage_metadata": {
@@ -3706,27 +3706,6 @@
       "PaRaD0XCORP",
       "Rendjey",
       "AKonia"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:33.594Z",
-    "contributors": [
-      "SoMuchEffort",
-      "optimistic"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:37.165Z",
-    "contributors": [
-      "AliaksandrZahorski",
-      "dima74",
-      "bad4iz",
-      "ultrinnan",
-      "SphinxKnight",
-      "lerniri",
-      "ArtiFisher",
-      "xoyk",
-      "BaNru"
     ]
   },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
@@ -13492,10 +13471,31 @@
       "KuznetsEnvy"
     ]
   },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:33.594Z",
+    "contributors": [
+      "SoMuchEffort",
+      "optimistic"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-05-24T11:41:53.618Z",
     "contributors": [
       "sve-kai-itmo"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:37.165Z",
+    "contributors": [
+      "AliaksandrZahorski",
+      "dima74",
+      "bad4iz",
+      "ultrinnan",
+      "SphinxKnight",
+      "lerniri",
+      "ArtiFisher",
+      "xoyk",
+      "BaNru"
     ]
   },
   "Web/HTML/Reference": {

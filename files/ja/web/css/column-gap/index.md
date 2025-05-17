@@ -2,7 +2,7 @@
 title: column-gap
 slug: Web/CSS/column-gap
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -191,10 +191,9 @@ div:nth-of-type(3n) {
 
 #### HTML
 
-```html live-sample___multi-column_layout
+```html-nolint live-sample___multi-column_layout
 <p class="content-box">
-  This is some multi-column text with a 40px column gap created with the CSS
-  `column-gap` property. Don't you think that's fun and exciting? I sure do!
+  これは、CSS の `column-gap` プロパティを使用して、列のギャップを 40px に設定して作成した、段組みテキストです。面白くて期待が膨らみますね。私はそう思います！
 </p>
 ```
 

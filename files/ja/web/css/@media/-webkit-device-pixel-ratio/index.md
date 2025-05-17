@@ -1,18 +1,20 @@
 ---
 title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{ CSSRef }} {{ Non-standard_header }}
+{{CSSRef}}
 
-**`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、標準の[`resolution`](/ja/docs/Web/CSS/@media/resolution)メディア特性の代替です。
+**`-webkit-device-pixel-ratio`** は [CSS](/ja/docs/Web/CSS) の標準外の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、標準の [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性の代替です。
 
 > [!NOTE]
-> このメディア特性は WebKit の機能です。可能であれば、代わりに [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性クエリーを使用してください。
+> 可能であれば、代わりに標準のメディア特性である [`resolution`](/ja/docs/Web/CSS/@media/resolution) メディア特性クエリーを使用してください。子の接頭辞付きのメディアクエリーは WebKit の特性であり、他のブラウザーエンジンは対応していない可能性があります。下記の[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 構文
 
-`-webkit-device-pixel-ratio` 特性は {{cssxref("&lt;number&gt;")}} 値で指定されます。これは範囲特性であり、つまり接頭辞が付いた **`-webkit-min-device-pixel-ratio`** および **`-webkit-max-device-pixel-ratio`** の変化形を使用して、それぞれ最低値と最高値をクエリーすることもできます。
+`-webkit-device-pixel-ratio` 特性は {{cssxref("&lt;number&gt;")}} 値で指定されます。これは範囲特性であり、接頭辞が付いた **`-webkit-min-device-pixel-ratio`** および **`-webkit-max-device-pixel-ratio`** の変化形を使用して、それぞれ最低値と最高値で問い合わせることもできます。
 
 ### 値
 
@@ -23,14 +25,22 @@ slug: Web/CSS/@media/-webkit-device-pixel-ratio
 
 ```css
 /* "dppx" の単位が含まれています。 */
-@media (-webkit-min-device-pixel-ratio: 2) { ... }
-/* ... は以下のものと同じです。 */
-@media (min-resolution: 2dppx) { ... }
+@media (-webkit-min-device-pixel-ratio: 2) {
+  /* … */
+}
+/* 次のものと同じです。 */
+@media (min-resolution: 2dppx) {
+  /* … */
+}
 
 /* 同様に */
-@media (-webkit-max-device-pixel-ratio: 2) { ... }
-/* ... は以下のものと同じです。 */
-@media (max-resolution: 2dppx) { ... }
+@media (-webkit-max-device-pixel-ratio: 2) {
+  /* … */
+}
+/* 次のものと同じです。 */
+@media (max-resolution: 2dppx) {
+  /* … */
+}
 ```
 
 ## 例

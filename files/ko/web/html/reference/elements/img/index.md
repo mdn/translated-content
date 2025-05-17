@@ -211,7 +211,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 페이지에 이미지를 삽입하고, 접근성을 높이기 위해 대체 텍스트를 제공하는 간단한 예제입니다.
 
 ```html
-<img src="favicon144.png" alt="MDN logo" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN logo" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -222,7 +222,9 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="Visit the MDN site" />
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="Visit the MDN site" />
 </a>
 ```
 
@@ -233,7 +235,10 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 이번 예제에서는 [`srcset`](#srcset) 특성에 고해상도 버전 로고를 추가했습니다. 그러면 고해상도 장치에서는 일반 `src` 이미지 대신 고해상도 이미지를 사용합니다. `srcset` 특성을 지원하는 {{glossary("user agent", "사용자 에이전트")}}는 `src` 특성을 `srcset` `1x` 로 간주합니다.
 
 ```html
-<img src="favicon72.png" alt="MDN logo" srcset="favicon144.png 2x" />
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="MDN logo"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}
