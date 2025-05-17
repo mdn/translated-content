@@ -1,6 +1,7 @@
 ---
-title: "Document: copy 이벤트"
-slug: Web/API/Document/copy_event
+title: "Window: copy 이벤트"
+slug: conflicting/Web/API/Element/copy_event_f828b378dd11a825fcc030debf952357e20d277fdc3803f951368dd38512ccce
+original_slug: Web/API/Window/copy_event
 ---
 
 {{APIRef}}
@@ -28,12 +29,12 @@ slug: Web/API/Document/copy_event
   </tbody>
 </table>
 
-`copy` 이벤트의 원 대상은 복사 동작의 대상인 {{domxref("Element")}}입니다. {{domxref("Document")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. 이벤트에 대한 자세한 정보는 [Element: copy 이벤트](/ko/docs/Web/API/Element/copy_event)에서 확인하세요.
+`copy` 이벤트의 원 대상은 복사 동작의 대상인 {{domxref("Element")}}입니다. {{domxref("Window")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. 이벤트에 대한 자세한 정보는 [Element: copy 이벤트](/ko/docs/Web/API/Element/copy_event)에서 확인하세요.
 
 ## 예제
 
 ```js
-document.addEventListener("copy", (event) => {
+window.addEventListener("copy", (event) => {
   console.log("복사 동작 실행");
 });
 ```
@@ -48,6 +49,6 @@ document.addEventListener("copy", (event) => {
 
 ## 같이 보기
 
-- 관련 이벤트: {{domxref("Document/cut_event", "cut")}}, {{domxref("Document/paste_event", "paste")}}
+- 관련 이벤트: {{domxref("Window/cut_event", "cut")}}, {{domxref("Window/paste_event", "paste")}}
 - {{domxref("Element")}}를 대상으로 한 같은 이벤트: {{domxref("Element/copy_event", "copy")}}
-- {{domxref("Window")}}를 대상으로 한 같은 이벤트: {{domxref("Window/copy_event", "copy")}}
+- {{domxref("Document")}}를 대상으로 한 같은 이벤트: {{domxref("Document/copy_event", "copy")}}
