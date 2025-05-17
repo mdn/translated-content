@@ -1,11 +1,13 @@
 ---
 title: :first
 slug: Web/CSS/:first
+l10n:
+  sourceCommit: 2b3eb646cec5c9bc74e263b7880a52ad52e37913
 ---
 
 {{CSSRef}}
 
-**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使用され、印刷文書の最初のページを表します。 (一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。)
+**`:first`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使用され、印刷文書の最初のページを表します。（一般的なノードの最初の要素については {{cssxref(":first-child")}} を参照してください。）
 
 ```css
 /* 印刷時に最初のページを選択 */
@@ -16,50 +18,48 @@ slug: Web/CSS/:first
 ```
 
 > [!NOTE]
-> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#absolute_length_units)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
+> この擬似クラスを使用してすべての CSS プロパティを変更できるわけではありません。変更できるのは文書のマージン、 {{cssxref("orphans")}}、{{cssxref("widows")}}、ページ区切りのみです。さらに、マージンを定義するときには[絶対的な長さ](/ja/docs/Web/CSS/length#絶対的な長さの単位)の単位のみしか使用できません。他のすべてのプロパティは無視されます。
 
 ## 構文
 
+```css
+:first {
+  /* ... */
+}
 ```
-:first
-```
 
-<h2 id="Examples">例</h2>
+## 例
 
-### HTML
+### ページ印刷スタイルに `:first` を使用
 
-```html
+［印刷］ボタンを押すと、例を印刷します。最初のページの言葉は中央付近に印刷されますが、他のページのコンテンツは既定の位置に印刷されます。
+
+```html live-sample___colon-first
 <p>最初のページです。</p>
 <p>2 枚目のページです。</p>
 <button>印刷</button>
 ```
 
-### CSS
-
-```css
+```css live-sample___colon-first
 @page :first {
-  margin-left: 50%;
-  margin-top: 50%;
+  size: 8.5in 11in;
+  margin-left: 3in;
+  margin-top: 5in;
 }
 
 p {
   page-break-after: always;
+  font: 1.2em sans-serif;
 }
 ```
 
-### JavaScript
-
-```js
+```js live-sample___colon-first
 document.querySelector("button").addEventListener("click", () => {
   window.print();
 });
 ```
 
-### 結果
-
-［印刷］ボタンを押すと、例を印刷します。最初のページの言葉は中央付近に印刷されますが、他のページのコンテンツは既定の位置に印刷されます。
-
-{{ EmbedLiveSample('Examples', '80%', '150px') }}
+{{EmbedLiveSample('colon-first', '100%', , , , , , "allow-modals")}}
 
 ## 仕様書
 
