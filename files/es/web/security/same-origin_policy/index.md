@@ -68,9 +68,9 @@ Aquí hay algunos ejemplos de recursos que pueden ser orígen cruzado incrustado
 - CSS con `<link rel="stylesheet" href="...">`. Debido a las [reglas de sintaxis relajadas](http://scarybeastsecurity.blogspot.dk/2009/12/generic-cross-browser-cross-domain.html) de CSS, un CSS de origen cruzado requiere de una cabecera `Content-Type` correcta. Las restricciones varían según el navegador: [IE](http://msdn.microsoft.com/en-us/library/ie/gg622939%28v=vs.85%29.aspx), [Firefox](https://www.mozilla.org/security/announce/2010/mfsa2010-46.html), [Chrome](https://code.google.com/p/chromium/issues/detail?id=9877), [Safari](https://support.apple.com/kb/HT4070) (bajar hasta CVE-2010-0051) y [Opera](https://www.opera.com/support/kb/view/943/).
 - Imágeness con {{htmlelement("img")}}. Los formatos de imagen soportados incluyen PNG, JPEG, GIF, BMP, SVG, ...
 - Archivos multimedia con {{htmlelement("video")}} y {{htmlelement("audio")}}.
-- Plug-ins con [`<object>`](/es/docs/Web/HTML/Element/object), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
+- Plug-ins con [`<object>`](/es/docs/Web/HTML/Reference/Elements/object), [`<embed>`](/es/docs/Web/HTML/Reference/Elements/embed) y [`<applet>`](/es/docs/HTML/Element/applet).
 - Fuentes con [`@font-face`](/es/docs/Web/CSS/@font-face). Algunos buscadores permiten fuentes de orígen cruzado, otros requieren fuentes de mismo orígen.
-- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Element/frame) and [`<iframe>`](/es/docs/Web/HTML/Element/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
+- Cualquiera con [`<frame>`](/es/docs/Web/HTML/Reference/Elements/frame) and [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe). Un sitio puede usar la cabecera [`X-Frame-Options`](/es/docs/Web/HTTP/Reference/Headers/X-Frame-Options) para prevenir este tipo de interacción de orígen cruzado.
 
 ### Cómo permitir el acceso de origen cruzado
 

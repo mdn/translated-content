@@ -71,7 +71,7 @@ Justo dentro del elemento {{htmlelement("article")}} (debajo de la etiqueta de a
 
 ### Agregar imágenes receptivas a los enlaces de información adicional
 
-Dentro de {{htmlelement("div")}} con clase `further-info` encontrarás cuatro elementos {{htmlelement("a")}} -cada uno de los cuales vincula a una página interesante relacionada con Mozilla-. Para completar esta sección, debes insertar un elemento {{htmlelement("img")}} dentro de cada uno que contenga los atributos [`src`](/es/docs/Web/HTML/Element/img#src), [`alt`](/es/docs/Web/HTML/Element/img#alt), [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes).
+Dentro de {{htmlelement("div")}} con clase `further-info` encontrarás cuatro elementos {{htmlelement("a")}} -cada uno de los cuales vincula a una página interesante relacionada con Mozilla-. Para completar esta sección, debes insertar un elemento {{htmlelement("img")}} dentro de cada uno que contenga los atributos [`src`](/es/docs/Web/HTML/Reference/Elements/img#src), [`alt`](/es/docs/Web/HTML/Reference/Elements/img#alt), [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) y [`sizes`](/es/docs/Web/HTML/Reference/Elements/img#sizes).
 
 En cada caso, (excepto uno que es inherentemente receptivo) queremos que el navegador sirva la versión 120px cuando el ancho de la ventana de visualización sea de 500px o menos, o la versión de 400px en otro caso.
 

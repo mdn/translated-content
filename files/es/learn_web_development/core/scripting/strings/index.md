@@ -294,7 +294,7 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
 
 ## Prueba tus habilidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
+Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [Prueba tus habilidades: Strings](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings). Ten en cuenta que esto requiere conocimiento del próximo artículo, por lo que podrías leerlo antes.
 
 ## Conclusión
 

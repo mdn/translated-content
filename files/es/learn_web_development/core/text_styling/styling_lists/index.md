@@ -266,7 +266,7 @@ A veces puedes querer numerar las listas de manera diferente, por ejemplo, que e
 
 ### start
 
-El atributo [`start`](/es/docs/Web/HTML/Element/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
+El atributo [`start`](/es/docs/Web/HTML/Reference/Elements/ol#start) te permite empezar la numeración de la lista en un número diferente de 1. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4">
@@ -285,7 +285,7 @@ Este código da el resultado siguiente:
 
 ### reversed
 
-El atributo [`reversed`](/es/docs/Web/HTML/Element/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
+El atributo [`reversed`](/es/docs/Web/HTML/Reference/Elements/ol#reversed) empieza la lista contando hacia atrás, en lugar de hacia adelante. Observa el ejemplo siguiente:
 
 ```html
 <ol start="4" reversed>
@@ -307,7 +307,7 @@ Da el resultado siguiente:
 
 ### value
 
-El atributo [`value`](/es/docs/Web/HTML/Element/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/ol#value) te permite establecer para tus elementos de lista unos valores numéricos específicos. Observa el ejemplo siguiente:
 
 ```html
 <ol>

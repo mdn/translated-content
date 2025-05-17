@@ -279,7 +279,7 @@ Si lo has hecho correctamente, al guardar tu HTML y actualizar tu navegador, deb
 
 ## Establecer el idioma principal del documento
 
-Por último, merece la pena mencionar que puedes (y realmente deberías) especificar el idioma de tu página. Esto se puede hacer añadiendo el atributo [lang](/es/docs/Web/HTML/Global_attributes/lang) a la etiqueta de apertura del HTML (como se ve en el [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) y se muestra abajo).
+Por último, merece la pena mencionar que puedes (y realmente deberías) especificar el idioma de tu página. Esto se puede hacer añadiendo el atributo [lang](/es/docs/Web/HTML/Reference/Global_attributes/lang) a la etiqueta de apertura del HTML (como se ve en el [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html) y se muestra abajo).
 
 ```html
 <html lang="es-MX"></html>

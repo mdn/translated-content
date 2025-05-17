@@ -142,7 +142,7 @@ Al mirar esa página, descubrirás que, además de eliminar las viñetas de la l
 
 Hasta ahora, hemos utilizado elementos cuyo nombre se basa en el nombre de elemento que reciben en HTML. Esto funciona siempre que se desee que todos los elementos de ese tipo tengan el mismo aspecto en el documento. La mayoría de las veces no es el caso, por lo que deberás encontrar una manera de seleccionar un subconjunto de los elementos sin que cambien los demás. La forma más común de hacer esto es añadir una clase al elemento HTML y determinarla.
 
-En tu documento HTML, añade al segundo elemento de la lista un [atributo de clase](/es/docs/Web/HTML/Global_attributes/class). Debería verse así:
+En tu documento HTML, añade al segundo elemento de la lista un [atributo de clase](/es/docs/Web/HTML/Reference/Global_attributes/class). Debería verse así:
 
 ```html
 <ul>
@@ -219,7 +219,7 @@ El ejemplo que encontrarás a continuación incluye las dos reglas anteriores. I
 
 ## Dar formato según el estado
 
-El último tipo de estilo que veremos en este tutorial es la capacidad de dar formato a los elementos en función de su estado. Un ejemplo sencillo es el estilo de los enlaces. Cuando damos formato a un enlace, necesitamos seleccionar el elemento [`<a>`](/es/docs/Web/HTML/Element/a) (anclaje). Tiene diferentes estados dependiendo de si se ha visitado o no, se pasa por encima, o se presiona con el teclado o se hace clic (se activa). Puedes usar CSS para dar formato a estos diferentes estados. El CSS que encontrarás a continuación presenta en color rosa los enlaces que no se han visitado y en verde los que sí.
+El último tipo de estilo que veremos en este tutorial es la capacidad de dar formato a los elementos en función de su estado. Un ejemplo sencillo es el estilo de los enlaces. Cuando damos formato a un enlace, necesitamos seleccionar el elemento [`<a>`](/es/docs/Web/HTML/Reference/Elements/a) (anclaje). Tiene diferentes estados dependiendo de si se ha visitado o no, se pasa por encima, o se presiona con el teclado o se hace clic (se activa). Puedes usar CSS para dar formato a estos diferentes estados. El CSS que encontrarás a continuación presenta en color rosa los enlaces que no se han visitado y en verde los que sí.
 
 ```css
 a:link {

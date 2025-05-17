@@ -386,7 +386,7 @@ Lo primero que hace el script de contenido es revisar la variable global `window
 
 Luego, en la linea 40, donde el script de contenido atiende mensajes provenientes de la ventana emergente (usando la API [`browser.runtime.onMessage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)), vemos que ésta puede enviar dos mensajes diferentes: "beastify" y "reset".
 
-- si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y añadimos un elemento [`<img>`](/es/docs/Web/HTML/Element/img) cuyo atributo `src` contiene la URL de la imagen.
+- si el mensaje es "beastify", esperamos que contenga la URL de la imagen. Removemos el contenido que ha sido agregado por el anterior llamado a "beastify", y luego construimos y añadimos un elemento [`<img>`](/es/docs/Web/HTML/Reference/Elements/img) cuyo atributo `src` contiene la URL de la imagen.
 - si el mensaje es "reset", simplemente removemos cualquier imagen que haya sido agregada antes.
 
 ### Las bestias
