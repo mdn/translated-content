@@ -281,7 +281,7 @@ Si tienes experiencia trabajando con CSS, el siguiente código te debería ser f
 </style>
 ```
 
-Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
+Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
 
 En Svelte, el CSS dentro del bloque `<style>` de un componente solo afecta al componente en cuestión. Para que esto funcione, se agrega una clase a los elementos seleccionados, la cual se basa en el _hash_ de los estilos del componente.
 

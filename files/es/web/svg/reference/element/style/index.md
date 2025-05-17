@@ -42,7 +42,7 @@ Live result:
 
 ### Atributos globales
 
-- [Core attributes](/es/docs/Web/SVG/Attribute#core) »
+- [Core attributes](/es/docs/Web/SVG/Reference/Attribute#core) »
 
 ### Atributos específicos
 
@@ -64,4 +64,4 @@ Este elemento implementa la interfaz [`SVGStyleElement`](/es/docs/Web/API/SVGSty
 
 ## See also
 
-- [\<style> element in HTML](/es/docs/Web/HTML/Element/style)
+- [\<style> element in HTML](/es/docs/Web/HTML/Reference/Elements/style)

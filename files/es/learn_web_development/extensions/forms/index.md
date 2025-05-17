@@ -66,7 +66,7 @@ Los siguientes artículos, no son escenciales para el aprendizaje, pero pueden r
 
 ## Véase también
 
-- [Referencia de elementos de formularios HTML](/es/docs/Web/HTML/Element#formularios)
-- [Referencia de tipos \<input>](/es/docs/Web/HTML/Element/input)
-- [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
+- [Referencia de elementos de formularios HTML](/es/docs/Web/HTML/Reference/Elements#formularios)
+- [Referencia de tipos \<input>](/es/docs/Web/HTML/Reference/Elements/input)
+- [Referencia de atributos HTML](/es/docs/Web/HTML/Reference/Attributes)
 - [Controles y métodos de entradas de usuario](/es/docs/Learn/Forms/User_input_methods)

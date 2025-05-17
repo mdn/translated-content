@@ -21,7 +21,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
-- [Referencia de Elementos HTML](/es/docs/Web/HTML/Element)
+- [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
 - [Crear una página web sencilla con HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : Una guía HTML para principiantes que incluye explicaciones de etiquetas comunes, incluidas las etiquetas HTML. También incluye una guía paso a paso para crear una página web básica con ejemplos de código.

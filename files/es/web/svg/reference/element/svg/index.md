@@ -50,11 +50,11 @@ Esta puede ser incluida en un documento HTML5 de la siguiente manera:
 
 ### Atributos Globales
 
-- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Attribute#conditionalproccessing) »
-- [Atributo Central](/es/docs/Web/SVG/Attribute#core_attributes) »
-- [Atributos de evento del Documento](/es/docs/Web/SVG/Attribute#documentevent) »
-- [Atributo de Eventos Gráficos](/es/docs/Web/SVG/Attribute#graphicalevent) »
-- [Atributos de presentación](/es/docs/Web/SVG/Attribute#presentation) »
+- [Atributos de procesamiento condicional](/es/docs/Web/SVG/Reference/Attribute#conditionalproccessing) »
+- [Atributo Central](/es/docs/Web/SVG/Reference/Attribute#core_attributes) »
+- [Atributos de evento del Documento](/es/docs/Web/SVG/Reference/Attribute#documentevent) »
+- [Atributo de Eventos Gráficos](/es/docs/Web/SVG/Reference/Attribute#graphicalevent) »
+- [Atributos de presentación](/es/docs/Web/SVG/Reference/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}
