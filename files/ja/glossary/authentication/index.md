@@ -1,5 +1,5 @@
 ---
-title: Authentication
+title: 認証
 slug: Glossary/Authentication
 l10n:
   sourceCommit: 66afe9b59c609043c91e51487cfcecaecbbadb3d
@@ -7,18 +7,20 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Authentication** is in general the process of proving that some fact is genuine. More specifically, in web security, it is the process of verifying the claimed identity of some entity, such as a user. This then makes it possible to decide whether to grant the user the access that they are requesting, such as being signed into a particular account.
+**認証** とは、一般的には何らかの事実が本物であることを証明するプロセスです。より具体的には、ウェブセキュリティにおいては、ユーザーなどのエンティティが主張する身元を検証するプロセスを指します。これにより、特定のアカウントへのサインインなど、ユーザーが要求しているアクセスを許可するかどうかを判断できるようになります。
 
-Authentication is typically performed by having a user present a user identifier along with a {{glossary("credential")}}, such as a password, a one-time SMS code, or an assertion signed with a private key. The system then checks the binding between the user identifier and the credential, so it can decide whether or not to authenticate the user.
+認証は通常、ユーザーがユーザー識別子とともに{{glossary("credential", "資格情報")}}を提示することで行われます。資格情報には、パスワード、ワンタイム SMS コード、秘密鍵で署名されたアサーションなどがあります。システムはユーザー識別子と資格情報の結びつきを確認し、ユーザーを認証するかどうかを判断します。
 
-Types of authentication information, also called _authentication factors_, are commonly presented in three categories:
+認証情報の種類、つまり _認証要素_ は、一般的に次の3つのカテゴリに分類されます。
+認証情報の種類（_認証要素とも呼ばれます_）は、一般的に次の3つのカテゴリに分類されます。
 
-- Something the user knows, such as a password.
-- Something the user has, such as a phone.
-- Something the user is, such as a thumbprint.
+- パスワードなど、ユーザーが知っているもの。
+- 電話など、ユーザーが所有するもの。
+- ユーザーの指紋など。
 
-Multi-factor authentication (MFA) systems require the user to provide more than one factor: for example, a password combined with a one-time code sent to the user's phone.
 
-## See also
+多要素認証（ MFA ）システムでは、ユーザーに複数の要素の提示を求めます。たとえば、パスワードとユーザーの携帯電話に送信されたワンタイムコードの組み合わせなどです。
+
+## 関連項目
 
 - {{rfc("4949", "Internet Security Glossary")}}
