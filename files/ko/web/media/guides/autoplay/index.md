@@ -85,7 +85,7 @@ audioElement.play();
 <video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
 ```
 
-{{HTMLElement("video")}} 엘리먼트에 [`autoplay`](/ko/docs/Web/HTML/Element/video#autoplay) 속성이 설정되어 있으며, {{domxref("HTMLMediaElement.onplay", "onplay")}} 이벤트 핸들러도 지정되어 있습니다; 이벤트는 `handleFirstPlay()` 함수로 전달되며 `play` 이벤트를 인자로 받습니다.
+{{HTMLElement("video")}} 엘리먼트에 [`autoplay`](/ko/docs/Web/HTML/Reference/Elements/video#autoplay) 속성이 설정되어 있으며, {{domxref("HTMLMediaElement.onplay", "onplay")}} 이벤트 핸들러도 지정되어 있습니다; 이벤트는 `handleFirstPlay()` 함수로 전달되며 `play` 이벤트를 인자로 받습니다.
 
 `handleFirstPlay()` 는 아래와 같습니다:
 
@@ -244,7 +244,7 @@ Feature-Policy: autoplay 'none'
 <video src="/videos/awesomevid.webm" controls autoplay muted></video>
 ```
 
-이 비디오 엘리먼트는 user control 어트리뷰트가 설정되어 있습니다 (보통 재생/일시정지, 비디오 타임라인 탐색, 볼륨 컨트롤, 음소거 등); 또한 [`muted`](/ko/docs/Web/HTML/Element/video#muted) 어트리뷰트가 포함되어 있어 자동 재생 되지만 음소거 상태입니다. 하지만 사용자는 볼륨 버튼을 클릭하여 음소거를 해제할 수 있죠.
+이 비디오 엘리먼트는 user control 어트리뷰트가 설정되어 있습니다 (보통 재생/일시정지, 비디오 타임라인 탐색, 볼륨 컨트롤, 음소거 등); 또한 [`muted`](/ko/docs/Web/HTML/Reference/Elements/video#muted) 어트리뷰트가 포함되어 있어 자동 재생 되지만 음소거 상태입니다. 하지만 사용자는 볼륨 버튼을 클릭하여 음소거를 해제할 수 있죠.
 
 ## 브라우저 설정 옵션
 

@@ -15,4 +15,4 @@ l10n:
 
 ## 같이 보기
 
-[Script-supporting elements](/ko/docs/Web/HTML/Content_categories#script-supporting_elements)
+[Script-supporting elements](/ko/docs/Web/HTML/Guides/Content_categories#script-supporting_elements)

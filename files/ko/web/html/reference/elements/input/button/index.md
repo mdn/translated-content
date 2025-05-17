@@ -99,7 +99,7 @@ original_slug: Web/HTML/Element/input/button
 
 ## 버튼 사용하기
 
-`<input type="button">` 요소는 아무런 기본 기능도 가지지 않습니다. (유사한 요소인 [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit)과 [`<input type="reset">`](/ko/docs/Web/HTML/Element/input/reset)은 각각 양식을 제출하고 초기화할 수 있습니다.) 버튼이 뭐라도 하게 만들려면 JavaScript 코드를 작성해야 합니다.
+`<input type="button">` 요소는 아무런 기본 기능도 가지지 않습니다. (유사한 요소인 [`<input type="submit">`](/ko/docs/Web/HTML/Element/input/submit)과 [`<input type="reset">`](/ko/docs/Web/HTML/Reference/Elements/input/reset)은 각각 양식을 제출하고 초기화할 수 있습니다.) 버튼이 뭐라도 하게 만들려면 JavaScript 코드를 작성해야 합니다.
 
 ### 간단한 버튼
 
@@ -135,9 +135,9 @@ function updateBtn() {
 
 ### 버튼에 키보드 단축키 추가하기
 
-접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, [`accesskey`](/ko/docs/Web/HTML/Global_attributes#accesskey) 전역 특성을 추가하는 것입니다.
+접근 키라고도 불리는 키보드 단축키는 사용자가 키보드의 키 혹은 키 조합을 통해 버튼을 누를 수 있는 방법을 제공합니다. 단축키를 추가하는 법은, 다른 {{htmlelement("input")}}과 마찬가지로, [`accesskey`](/ko/docs/Web/HTML/Reference/Global_attributes#accesskey) 전역 특성을 추가하는 것입니다.
 
-이번 예제에서는 이전 예제에 더해 <kbd>s</kbd> 키를 접근 키로 지정합니다. (브라우저/운영체제에 따라 특정 조합키를 같이 눌러야 할 수도 있습니다. [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey) 문서를 방문해 조합키 목록을 확인하세요.)
+이번 예제에서는 이전 예제에 더해 <kbd>s</kbd> 키를 접근 키로 지정합니다. (브라우저/운영체제에 따라 특정 조합키를 같이 눌러야 할 수도 있습니다. [`accesskey`](/ko/docs/Web/HTML/Reference/Global_attributes/accesskey) 문서를 방문해 조합키 목록을 확인하세요.)
 
 ```html
 <form>
@@ -170,7 +170,7 @@ function updateBtn() {
 
 ### 버튼 활성화와 비활성화
 
-버튼을 비활성화하려면 간단히 [`disabled`](/ko/docs/Web/HTML/Global_attributes#disabled) 전역 특성을 지정하는 것으로 충분합니다.
+버튼을 비활성화하려면 간단히 [`disabled`](/ko/docs/Web/HTML/Reference/Global_attributes#disabled) 전역 특성을 지정하는 것으로 충분합니다.
 
 ```html
 <input type="button" value="Disable me" disabled />

@@ -22,10 +22,10 @@ LTR의 반대인, {{Glossary("RTL")}} (오른쪽에서 왼쪽으로 읽는 특�
   - {{Glossary("LTR")}}
   - {{Glossary("RTL")}}
 
-- [HTML 전역 속성](/ko/docs/Web/HTML/Global_attributes)
+- [HTML 전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes)
 
-  - [dir](/ko/docs/Web/HTML/Global_attributes#dir)
-  - [lang](/ko/docs/Web/HTML/Global_attributes#lang)
+  - [dir](/ko/docs/Web/HTML/Reference/Global_attributes#dir)
+  - [lang](/ko/docs/Web/HTML/Reference/Global_attributes#lang)
 
 - [CSS](/ko/docs/Web/CSS)
 

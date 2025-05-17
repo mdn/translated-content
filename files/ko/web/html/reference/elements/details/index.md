@@ -55,7 +55,7 @@ CSS를 사용해 공개 위젯의 스타일을 지정할 수 있으며, [`open`]
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `open`
 

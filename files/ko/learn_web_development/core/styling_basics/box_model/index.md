@@ -72,7 +72,7 @@ CSS에는 크게 두 가지 박스(**블록 박스**와 **인라인 박스**) �
 그러나 여러분은 `flex`과 같은 `display` 값을 사용하여 내부 디스플레이 유형을 변경할 수 있습니다. 어떤 요소에 우리가 `display: flex;`를 설정하면 외부 디스플레이 유형은 블록이지만 내부 디스플레이 유형은 `flex`으로 변경됩니다. 이 박스의 직계 자식은 플렉스 항목이 되고, 나중에 익히게 될 [플렉스박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox) 규격에 명시된 규칙에 따라 배치됩니다.
 
 > [!NOTE]
-> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
+> 디스플레이 속성 값 및 박스가 블록 및 인라인 레이아웃에서 작동하는 방법에 대해 자세히 보려면 [블록 및 인라인 레이아웃](/ko/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)에 대한 Mozilla 개발자 네트워크 가이드를 참조하십시오.
 
 CSS 레이아웃에 대해 자세한 내용을 배우려면 다음번에는 예로 `flex`나 [`grid`](/ko/docs/Learn_web_development/Core/CSS_layout/Grids)같은 박스가 취할 수 있는 그 밖의 다양한 내부 속성 값을 마주치게 될 겁니다.
 

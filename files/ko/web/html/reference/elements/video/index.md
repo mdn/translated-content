@@ -30,7 +30,7 @@ original_slug: Web/HTML/Element/video
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `autoplay`
   - : 부울 속성(boolean); 해당 속성이 지정된 경우 비디오가 데이터 로드를 완료하기 위해 중지하지 않고 재생할 수 있는 가장 빠른 시점에 재생되기 시작합니다.
@@ -41,14 +41,14 @@ original_slug: Web/HTML/Element/video
   - : 이 속성이 존재하면, 소리 조절(volume), 동영상 탐색(seek), 일시 정지(pause)/재시작(resume)을 할 수 있는 컨트롤러를 제공합니다.
 - `crossorigin`
 
-  - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/Web/HTML/CORS_enabled_image) 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
+  - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/Web/HTML/How_to/CORS_enabled_image) 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
 
     - anonymous
       - : CORS(`Origin:` HTTP 헤더 사용)를 수행 합니다. 하지만 credential가 전송되지 않습니다. (즉, cookie, X.509 certificate, HTTP 기본 인증이 전송되지 않습니다). 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, `Access-Control-Allow-Origin:` HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.
     - use-credentials
       - : credential을 포함한 CORS를 (`Origin:` HTTP 헤더 사용) 수행 합니다. (즉, cookie, certificate, HTTP 기본 인증이 수행됩니다.) 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, `Access-Control-Allow-Origin:` HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.
 
-    crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, `Origin:` HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 **anonymous**가 사용 됩니다. 추가 정보는 [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin) 를 참조하십시오.
+    crossorigin이 존재하지 않는 경우, CORS 요청 없이 (즉, `Origin:` HTTP 헤더를 사용 보내지 않고), 리소스를 가져와 {{HTMLElement('canvas')}} 요소에 오염되는 것을 방지합니다. 값을 설정하지 않을 경우 **anonymous**가 사용 됩니다. 추가 정보는 [CORS settings attributes](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 를 참조하십시오.
 
 - `height`
   - : 비디오의 출력 영역 높이이며, CSS 픽셀 단위 입니다.

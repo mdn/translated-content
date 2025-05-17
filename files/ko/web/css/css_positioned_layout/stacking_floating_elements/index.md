@@ -122,12 +122,12 @@ strong {
 
 ### See also
 
-- [Stacking without z-index](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index) : Default stacking rules
-- [Adding z-index](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index) : Using z-index to change default stacking
-- [The stacking context](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) : Notes on the stacking context
-- [Stacking context example 1](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
-- [Stacking context example 2](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
-- [Stacking context example 3](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
+- [Stacking without z-index](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index) : Default stacking rules
+- [Adding z-index](/ko/docs/Web/CSS/CSS_positioned_layout/Using_z-index) : Using z-index to change default stacking
+- [The stacking context](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context) : Notes on the stacking context
+- [Stacking context example 1](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1) : 2-level HTML hierarchy, z-index on the last level
+- [Stacking context example 2](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2) : 2-level HTML hierarchy, z-index on all levels
+- [Stacking context example 3](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3) : 3-level HTML hierarchy, z-index on the second level
 
 ### Original Document Information
 

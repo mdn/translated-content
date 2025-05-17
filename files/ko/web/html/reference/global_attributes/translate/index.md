@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/translate
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`translate`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 페이지를 지역화할 때 요소의 {{domxref("Text")}} 노드 자식 및 번역 가능한 특성의 값을 번역해야 되는지, 아니면 그대로 유지해야 하는지 나타내는 열거형 속성입니다. 가능한 값은 다음과 같습니다.
+**`translate`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 페이지를 지역화할 때 요소의 {{domxref("Text")}} 노드 자식 및 번역 가능한 특성의 값을 번역해야 되는지, 아니면 그대로 유지해야 하는지 나타내는 열거형 속성입니다. 가능한 값은 다음과 같습니다.
 
 - 빈 문자열 또는 `"yes"`는 페이지 지역화 과정에서 요소를 번역해야 함을 나타냅니다.
 - `"no"`는 요소의 내용을 그대로 유지해야 함을 나타냅니다.
@@ -33,6 +33,6 @@ original_slug: Web/HTML/Global_attributes/translate
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).
 - 이 특성을 반영하는 {{domxref("HTMLElement.translate")}} 속성.
 - [HTML의 translate 특성 사용하기](https://www.w3.org/International/questions/qa-translate-flag)

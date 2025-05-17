@@ -63,9 +63,9 @@ original_slug: Web/SVG/Tutorial/Getting_Started
   - 이론적으로, img 요소로 사용될 수 있습니다만 4.0 이전의 Firefox에서는 작동하지 않습니다.
   - 마지막으로 SVG는 JavaScript로 동적으로 생성되어 HTML DOM에 삽입 될 수 있습니다. 이는 SVG를 처리 할 수없는 브라우저에서 대체하여 구현할 수 있다는 장점이 있습니다.
 
-  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)를 참조하십시오.
+  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Guides/SVG_in_HTML)를 참조하십시오.
 
-- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
+- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)에서 설명 할 것입니다.
 
 ### SVG 파일 형식
 

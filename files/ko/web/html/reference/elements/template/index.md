@@ -60,7 +60,7 @@ original_slug: Web/HTML/Element/template
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 다만, {{domxref("HTMLTemplateElement")}}는 읽기 전용 {{domxref("HTMLTemplateElement.content", "content")}} 속성을 가집니다. `content`는 템플릿이 담고 있는 DOM 하위 트리를 나타내는 {{domxref("DocumentFragment")}}입니다.
 
