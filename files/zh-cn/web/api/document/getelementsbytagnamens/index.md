@@ -26,7 +26,7 @@ getElementsByTagNameNS(namespace, name)
 
 ### 返回值
 
-一个实时 {{DOMxRef("HTMLCollection")}}，其中包含找到的元素（按照元素在树中出现的顺序排列）。
+一个动态的 {{DOMxRef("HTMLCollection")}}，其中包含找到的元素（按照元素在树中出现的顺序排列）。
 
 ## 示例
 
