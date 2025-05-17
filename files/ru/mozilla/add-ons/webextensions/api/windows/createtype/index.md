@@ -24,8 +24,6 @@ slug: Mozilla/Add-ons/WebExtensions/API/windows/CreateType
 
 > [!NOTE]
 > Этот API основан на Chromium API [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows#type-CreateType). Эта документация основана на [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) из кода Chromium.
->
-> Информация о совместимости Microsoft Edge предоставлена корпорацией Microsoft и включена здесь под лицензией Creative Commons Attribution 3.0 United States License.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
