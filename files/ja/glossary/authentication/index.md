@@ -1,5 +1,5 @@
 ---
-title: 認証
+title: Authentication （認証）
 slug: Glossary/Authentication
 l10n:
   sourceCommit: 66afe9b59c609043c91e51487cfcecaecbbadb3d
