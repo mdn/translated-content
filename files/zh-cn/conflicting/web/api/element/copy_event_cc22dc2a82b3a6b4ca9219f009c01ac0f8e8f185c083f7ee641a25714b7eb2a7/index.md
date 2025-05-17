@@ -1,6 +1,7 @@
 ---
 title: HTMLElement：copy 事件
-slug: Web/API/HTMLElement/copy_event
+slug: conflicting/Web/API/Element/copy_event_cc22dc2a82b3a6b4ca9219f009c01ac0f8e8f185c083f7ee641a25714b7eb2a7
+original_slug: Web/API/HTMLElement/copy_event
 l10n:
   sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---

@@ -1,7 +1,8 @@
 ---
 title: Window：paste 事件
 short-title: paste
-slug: Web/API/Window/paste_event
+slug: conflicting/Web/API/Element/paste_event
+original_slug: Web/API/Window/paste_event
 ---
 
 {{APIRef}}

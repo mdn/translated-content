@@ -1,6 +1,7 @@
 ---
 title: HTMLElement：paste 事件
-slug: Web/API/HTMLElement/paste_event
+slug: conflicting/Web/API/Element/paste_event_4ff5a40c4d4f891019aed89389e3526001e15ebf9526309428c754b4b9db12f6
+original_slug: Web/API/HTMLElement/paste_event
 l10n:
   sourceCommit: dea44952741f722ccf62f8e868d1bc988e953aa0
 ---
