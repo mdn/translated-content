@@ -67,7 +67,7 @@ Com a API `browserAction você pode`:
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) do Chromium. Este documento é derivado do [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) no código do Chromium.Os dados de compatibilidade do Microsoft Edge são fornecidos Microsoft Corporation e estão aqui inclusos sob a Creative Commons Attribution 3.0 United States License.
+> **Nota:** **Agradecimentos**Esta API é baseada na API [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction) do Chromium. Este documento é derivado do [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) no código do Chromium.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
