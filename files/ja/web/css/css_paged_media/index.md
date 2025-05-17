@@ -1,23 +1,30 @@
 ---
 title: CSS ページメディア
 slug: Web/CSS/CSS_paged_media
+l10n:
+  sourceCommit: 76885324c55eda81ef536254ffe532ca68a2f502
 ---
 
 {{CSSRef}}
 
-**CSS ページメディア**は CSS のモジュールの一つで、ページ切り替えをどのように扱うかを定義します。
+**CSS ページメディア**モジュールは、印刷や、コンテンツを離散的なページに分割するその他のメディアでのコンテンツの表示を制御するプロパティを定義します。これにより、改ページの設定、印刷可能領域の制御、左右のページの外観の別々の設定、要素内の改行の制御を行うことができます。
 
 ## リファレンス
 
 ### CSS プロパティ
 
-- {{cssxref("page-break-after")}}
-- {{cssxref("page-break-before")}}
-- {{cssxref("page-break-inside")}}
+- {{cssxref('page')}}
 
 ### アットルール
 
 - {{cssxref('@page')}}
+  - {{cssxref('@page/page-orientation', 'page-orientation')}} 記述子
+  - {{cssxref('@page/size', 'size')}} 記述子
+  - [マージン記述子](/ja/docs/Web/CSS/margin)
+- [マージンのアットルール](/ja/docs/Web/CSS/@page#マージンのアットルール)
+
+> [!NOTE]
+> CSS ページメディアモジュールには、まだ実装されていない `@page` の 2 つの記述子 `bleeds` および `marks`を導入しています。
 
 ### 擬似クラス
 
@@ -26,6 +33,21 @@ slug: Web/CSS/CSS_paged_media
 - {{cssxref(':left')}}
 - {{cssxref(':right')}}
 
+## 関連概念
+
+- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
+  - {{cssxref("break-after")}} プロパティ
+  - {{cssxref("break-before")}} プロパティ
+  - {{cssxref("break-inside")}} プロパティ
+  - {{cssxref("orphans")}} プロパティ
+  - {{cssxref("widows")}} プロパティ
+
 ## 仕様書
 
 {{Specifications}}
+
+## 関連情報
+
+- [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)ガイド
+- [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュール
+- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
