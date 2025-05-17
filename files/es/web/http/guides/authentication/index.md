@@ -48,7 +48,7 @@ Proxy-Authorization: <type> <credentials>
 
 El marco general de autenticación HTTP es usado por varios esquemas de autenticación. Los esquemas pueden diferenciarse por la dureza en la seguridad y en su disponibilidad en software de clientes o servidores.
 
-El esquema de autenticaón mas común es "Basic", que es introducido con mas detalle abajo. IANA mantiene una [lista de esquemas de autenticación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), pero existen otros esquemas ofrecidos por proveedores de servicios, como Amazon AWS. Los esquemas de autenticación incluídas:
+El esquema de autenticación mas común es "Basic", que es introducido con mas detalle abajo. IANA mantiene una [lista de esquemas de autenticación](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml), pero existen otros esquemas ofrecidos por proveedores de servicios, como Amazon AWS. Los esquemas de autenticación incluídas:
 
 - **Basic** (ver {{rfc(7617)}}, credenciales codificadas en base64 . Ver mas abajo para mas información.),
 - **Bearer** (ver {{rfc(6750)}}, bearer tokens de acceso en recursos protegidos mediante OAuth 2.0),
