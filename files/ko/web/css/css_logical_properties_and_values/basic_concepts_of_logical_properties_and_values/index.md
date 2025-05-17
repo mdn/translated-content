@@ -51,5 +51,5 @@ CSS 2.1과 이전 버전에서는 화면의 물리적 크기를 따라 요소의
 
 - [그리드 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [플렉스 레이아웃에서의 박스 정렬](/ko/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-- [대열 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [대열 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
 - Smashing Magazine (2018)의 [논리적 속성과 값 이해하기](https://www.smashingmagazine.com/2018/03/understanding-logical-properties-values/)

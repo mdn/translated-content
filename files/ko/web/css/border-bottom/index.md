@@ -5,7 +5,7 @@ slug: Web/CSS/border-bottom
 
 {{CSSRef}}
 
-**`border-bottom`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 아래쪽 테두리를 설정합니다. {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-bottom-color")}}의 값을 지정합니다.
+**`border-bottom`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 아래쪽 테두리를 설정합니다. {{cssxref("border-bottom-width")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-bottom-color")}}의 값을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-bottom")}}
 

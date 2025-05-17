@@ -160,7 +160,7 @@ HTML파일의 내용은 다음과 같습니다.
 </html>
 ```
 
-각각의 동물들을 보여주는 항목을 가지는 [`<div>`](/ko/docs/Web/HTML/Element/div) 요소의 ID에 `"popup-content"` 를 정의했습니다. 또 다른 `"error-content"` ID를 가지는 `<div>`는 `"hidden"` 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것입니다.
+각각의 동물들을 보여주는 항목을 가지는 [`<div>`](/ko/docs/Web/HTML/Reference/Elements/div) 요소의 ID에 `"popup-content"` 를 정의했습니다. 또 다른 `"error-content"` ID를 가지는 `<div>`는 `"hidden"` 이라는 class를 정의하였고 팝업을 초기화 할때 문제가 생기는 경우 사용할 것입니다.
 
 이 HTML파일은 일반 웹페이지처럼 CSS파일과 JS파일을 포함합니다.
 

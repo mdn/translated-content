@@ -27,7 +27,7 @@ l10n:
 <link href="main.css" rel="stylesheet" />
 ```
 
-위의 간단한 예제는 `href` 특성에 스타일 시트의 경로를, [`rel`](/ko/docs/Web/HTML/Attributes/rel) 특성에 `stylesheet`을 사용합니다. `rel` 은 관계(**rel**ationship)를 뜻하며, 현재 문서와 연결한 아이템의 관계가 어떻게 되는지 설명합니다. 따라서 `<link>` 요소의 제일 중요한 기능 중 하나라고 볼 수 있습니다.
+위의 간단한 예제는 `href` 특성에 스타일 시트의 경로를, [`rel`](/ko/docs/Web/HTML/Reference/Attributes/rel) 특성에 `stylesheet`을 사용합니다. `rel` 은 관계(**rel**ationship)를 뜻하며, 현재 문서와 연결한 아이템의 관계가 어떻게 되는지 설명합니다. 따라서 `<link>` 요소의 제일 중요한 기능 중 하나라고 볼 수 있습니다.
 
 그중에서도 몇 가지 자주 쓰이는 유형이 있습니다. 사이트의 파비콘을 연결하려면 다음과 같이 사용합니다.
 
@@ -68,23 +68,23 @@ l10n:
   crossorigin="anonymous" />
 ```
 
-`rel`의 `preload` 값은 브라우저가 이 리소스를 미리 불러와야 한다는 것을 나타내고(자세한 정보는 [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload)를 참고하세요), `as` 특성은 가져오는 리소스가 어떤 리소스인지 나타냅니다. `crossorigin` 특성은 리소스를 {{glossary("CORS")}} 요청으로 불러와야 하는지에 대한 값입니다.
+`rel`의 `preload` 값은 브라우저가 이 리소스를 미리 불러와야 한다는 것을 나타내고(자세한 정보는 [`rel="preload"`](/ko/docs/Web/HTML/Reference/Attributes/rel/preload)를 참고하세요), `as` 특성은 가져오는 리소스가 어떤 리소스인지 나타냅니다. `crossorigin` 특성은 리소스를 {{glossary("CORS")}} 요청으로 불러와야 하는지에 대한 값입니다.
 
 기타 사용 일람:
 
 - `<link>` 요소의 [링크 유형](https://html.spec.whatwg.org/multipage/links.html#body-ok)이 **body-ok** 인 경우, {{HTMLElement("head")}} 또는 {{HTMLElement("body")}} 요소에 포함될 수 있습니다. 예를 들어 `stylesheet` 링크 유형은 body-ok 이므로, `<link rel="stylesheet">`는 body 안에 포함될 수 있습니다. 그러나 이는 좋은 방법은 아닙니다. `<link>` 요소는 body 콘텐츠에서 분리해, `<head>` 안에 포함하는 것이 더 좋습니다.
-- `<link>`를 사용하여 사이트의 파비콘을 설정하고, 사이트가 보안을 강화하기 위해 콘텐츠 보안 정책(CSP)을 사용하는 경우 해당 정책은 파비콘에도 적용됩니다. 파비콘이 로드되지 않는 문제가 발생한다면 {{HTTPHeader("Content-Security-Policy")}} 헤더의 [`img-src` 지시어](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)가 접근을 막고 있는지 확인하십시오.
+- `<link>`를 사용하여 사이트의 파비콘을 설정하고, 사이트가 보안을 강화하기 위해 콘텐츠 보안 정책(CSP)을 사용하는 경우 해당 정책은 파비콘에도 적용됩니다. 파비콘이 로드되지 않는 문제가 발생한다면 {{HTTPHeader("Content-Security-Policy")}} 헤더의 [`img-src` 지시어](/ko/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)가 접근을 막고 있는지 확인하십시오.
 - HTML 및 XHTML 명세서에는 `<link>` 요소에 대한 이벤트 처리기가 정의되어 있으나, 어떻게 사용되는지는 불분명합니다.
 - XHTML 1.0 이하에서, `<link>` 와 같은 {{glossary("void element", "빈 요소")}}는 반드시 `<link />` 처럼 슬래시가 따라와야 합니다.
 - WebTV는 `rel` 특성에서 `next` 값을 지원합니다. 이는 문서 시리즈의 다음 페이지를 미리 불러오기 위해 사용됩니다.
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다
 
 - `as`
 
-  - : `<link>` 요소에 [`rel="preload"`](/ko/docs/Web/HTML/Attributes/rel/preload) 또는 [`rel="modulepreload"`](/ko/docs/Web/HTML/Attributes/rel/modulepreload) 특성을 지정했을 때만 사용합니다. `as` 특성은 `<link>` 요소가 불러오는 콘텐츠의 유형을 지정합니다. 요청 매칭, 올바른 [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)의 적용, 올바른 {{HTTPHeader("Accept")}} 요청 헤더 적용에 필요합니다.
+  - : `<link>` 요소에 [`rel="preload"`](/ko/docs/Web/HTML/Reference/Attributes/rel/preload) 또는 [`rel="modulepreload"`](/ko/docs/Web/HTML/Attributes/rel/modulepreload) 특성을 지정했을 때만 사용합니다. `as` 특성은 `<link>` 요소가 불러오는 콘텐츠의 유형을 지정합니다. 요청 매칭, 올바른 [콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP)의 적용, 올바른 {{HTTPHeader("Accept")}} 요청 헤더 적용에 필요합니다.
     이에 더해, `rel="preload"`는 `as` 특성을 사용해 요청 우선순위를 매깁니다. 다음 표는 특성의 유효한 값과, 해당 값이 적용되는 요소 또는 리소스를 나열합니다.
 
      <table class="standard-table">
@@ -168,13 +168,13 @@ l10n:
 
 - `crossorigin`
 
-  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
+  - : 리소스를 가져올 때 {{glossary("CORS")}}를 사용해야 하는지 나타내는 [열거형](/ko/docs/Glossary/Enumerated) 특성입니다. [CORS 활성화 이미지](/ko/docs/Web/HTML/How_to/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소를 "오염"(taint)시키지 않고 재사용할 수 있습니다. 가능한 값은 다음과 같습니다.
   - `anonymous`
     - : 교차 출처 요청({{HTTPHeader("Origin")}} HTTP 헤더를 가진 요청)을 수행하지만 인증 정보, 즉 쿠키, X.509 인증서, HTTP Basic 인증 중 어떠한 것도 전송하지 않습니다. 서버에서 {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP 헤더를 설정하지 않아서 출처 사이트에 인증 정보를 전달하지 않으면 리소스가 오염되어 사용처가 제한됩니다.
   - `use-credentials`
     - : 교차 출처 요청({{HTTPHeader("Origin")}} HTTP 헤더를 가진 요청)을 수행하면서 인증 정보, 즉 쿠키, X.509 인증서, HTTP Basic 인증 중 한 가지 이상을 수행합니다. 서버에서 {{HTTPHeader("Access-Control-Allow-Origin")}} HTTP 헤더를 설정하지 않아서 출처 사이트에 인증 정보를 전달하지 않으면 리소스가 오염되어 사용처가 제한됩니다.
 
-  `crossorigin` 특성이 존재하지 않으면 리소스를 {{Glossary("CORS")}} 요청 없이 가져오므로 리소스의 오염 없이는 사용이 불가능합니다. 유효하지 않은 값은 **anonymous**를 지정한 것으로 간주합니다. [CORS 설정 특성](/ko/docs/Web/HTML/Attributes/crossorigin) 문서에서 더 자세한 정보를 알아보세요.
+  `crossorigin` 특성이 존재하지 않으면 리소스를 {{Glossary("CORS")}} 요청 없이 가져오므로 리소스의 오염 없이는 사용이 불가능합니다. 유효하지 않은 값은 **anonymous**를 지정한 것으로 간주합니다. [CORS 설정 특성](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 문서에서 더 자세한 정보를 알아보세요.
 
 - `disabled` {{Non-standard_Inline}}
 
@@ -223,7 +223,7 @@ l10n:
     - `unsafe-url` 은 레퍼러에 출처와 경로 (fragment, password, username은 제외)가 포함됨을 의미합니다. 이 경우 TLS로 보호된 리소스의 출처와 경로가 안전하지 않은 출처로 유출될 수 있으므로 안전하지 않습니다.
 
 - `rel`
-  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Attributes/rel)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
+  - : 연결할 리소스와 현재 문서의 관계. [링크 유형](/ko/docs/Web/HTML/Reference/Attributes/rel)의 값을 공백으로 구분한 리스트를 지정해야 합니다.
 - `sizes` {{Experimental_Inline}}
 
   - : 리소스에 포함된 시각 매체의 아이콘 크기를 정의합니다.
@@ -239,7 +239,7 @@ l10n:
 
 - `title`
   - : `title` 특성은 `<link>` 요소에서 특수한 의미를 가집니다.
-    `<link rel="stylesheet">`에 사용되었을 경우, `title`은 [기본 혹은 대체 스타일시트](/ko/docs/Web/CSS/Alternative_style_sheets)를 정의합니다.
+    `<link rel="stylesheet">`에 사용되었을 경우, `title`은 [기본 혹은 대체 스타일시트](/ko/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)를 정의합니다.
 - `type`
   - : 이 특성은 링크된 콘텐츠의 타입을 정의하는데 사용됩니다. 특성의 값은 **text/html**, **text/css**와 같은 MIME 타입이여야 합니다. 이 특성은 **text/css**와 같이 링크된 스타일시트의 타입을 지정하는데 쓰이는것이 보통입니다. 다만 웹에서 사용되는 스타일시트 언어는 CSS가 유일하기에 유형 속성을 생략할 수 있을 뿐 아니라, 권장되고 있습니다. `type` 특성은 브라우저가 지원하는 유형의 파일만 내려받게 하기 위해 `rel="preload"` 링크 유형에서도 사용됩니다.
 
@@ -268,9 +268,9 @@ l10n:
 
   - : 이 특성의 값은 [`href`](#href) 특성에 정의된 대로 현재 문서와 링크된 문서의 관계를 나타냅니다.
     따라서 이 특성은 `rel` 특성의 값과 비교했을 때 반대되는 관계를 정의합니다.
-    `rev` 특성의 [연결 유형 값](/ko/docs/Web/HTML/Attributes/rel)은 [`rel`](#rel)에서 사용 가능한 값들과 유사합니다.
+    `rev` 특성의 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)은 [`rel`](#rel)에서 사용 가능한 값들과 유사합니다.
 
-    > **참고:** `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
+    > **참고:** `rev`를 사용하는 대신, 반대되는 [연결 유형 값](/ko/docs/Web/HTML/Reference/Attributes/rel)을 가지는 [`rel`](#rel) 특성을 사용하십시오.
     > 예를 들어, `made`의 역방향 링크를 설정하려면 `author`를 명시해야 합니다. 또한 이 특성은 "리비전(revision)"의 축약어가 아니며, 버전 번호와 함께 사용되어서는 안됩니다. 많은 사이트에서 이런 식으로 오용하고 있습니다.
 
 ## 예제
@@ -285,7 +285,7 @@ l10n:
 
 ### 대체 스타일시트 제공하기
 
-[대체 스타일시트](/ko/docs/Web/CSS/Alternative_style_sheets)를 제공할 수도 있습니다.
+[대체 스타일시트](/ko/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)를 제공할 수도 있습니다.
 
 유저는 View>Page Style 메뉴에서 사용할 스타일시트를 고를수 있습니다. 이것은 유저가 페이지를 여러 버전으로 볼수 있는 방법을 제공합니다.
 
@@ -361,7 +361,7 @@ l10n:
 
 ### Preload 예제
 
-[`rel="preload"`를 이용해 콘텐츠 프리로딩하기](/ko/docs/Web/HTML/Attributes/rel/preload)에서 더 많은 `<link rel="preload">` 예제들을 찾아볼 수 있습니다.
+[`rel="preload"`를 이용해 콘텐츠 프리로딩하기](/ko/docs/Web/HTML/Reference/Attributes/rel/preload)에서 더 많은 `<link rel="preload">` 예제들을 찾아볼 수 있습니다.
 
 ### 리소스를 가져올 때까지 렌더링 차단하기
 

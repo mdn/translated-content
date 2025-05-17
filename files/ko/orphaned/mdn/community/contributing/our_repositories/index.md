@@ -49,7 +49,7 @@ l10n:
 
 - **핵심 콘텐츠**: <https://github.com/mdn/content>. MDN 웹 문서 콘텐츠에서 가장 중요한 저장소입니다. 이곳에 사이트의 모든 핵심 영어 콘텐츠를 저장하고, 페이지의 내용에 대한 모든 표준 변경 사항을 적용합니다.
 - **MDN 웹 문서 플랫폼**: <https://github.com/mdn/yari>. 이곳은 MDN 웹 문서 플랫폼을 저장하는 위치로, 상위 페이지 구조나 렌더링 기계를 변경하고자 할 때 방문하는 곳입니다.
-- **브라우저 호환성 데이터**: <https://github.com/mdn/browser-compat-data>. 이곳에는 저희가 참조하는 페이지의 브라우저 호환성 정보 표를 위한 데이터가 저장되어 있습니다 ([예시](/ko/docs/Web/HTML/Element/progress#browser_compatibility)). 웹 기능의 브라우저 호환성에 관한 정보를 가지고 있거나, 연구 및 실험을 하고자 하신다면 MDN의 [브라우저 호환성 데이터](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)를 업데이트하는 데 도움을 줄 수 있습니다.
+- **브라우저 호환성 데이터**: <https://github.com/mdn/browser-compat-data>. 이곳에는 저희가 참조하는 페이지의 브라우저 호환성 정보 표를 위한 데이터가 저장되어 있습니다 ([예시](/ko/docs/Web/HTML/Reference/Elements/progress#browser_compatibility)). 웹 기능의 브라우저 호환성에 관한 정보를 가지고 있거나, 연구 및 실험을 하고자 하신다면 MDN의 [브라우저 호환성 데이터](https://github.com/mdn/browser-compat-data/blob/main/docs/contributing.md)를 업데이트하는 데 도움을 줄 수 있습니다.
 - **인터랙티브 예제**: <https://github.com/mdn/interactive-examples>. 이곳에는 많은 참조 페이지 상단에 있는 예제 코드 블록이 저장되어 있습니다 ([예시](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)). 여기에서 해당 예제를 수정해 보세요.
 - **Bob** 일명 Builder of Bits: <https://github.com/mdn/bob>
   이곳에는 많은 참조 페이지 상단의 편집 및 복사할 수 있는 예제를 생성하는 렌더링 코드가 저장되어 있습니다 ([예시](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)).

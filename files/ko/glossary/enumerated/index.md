@@ -11,11 +11,11 @@ l10n:
 
 ## HTML 열거 속성
 
-HTML에서 [열거 속성](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)은 제한된 사전 정의된 텍스트 값 모음이 있는 속성입니다. 예를 들어, 전역 HTML [`dir`](/ko/docs/Web/HTML/Global_attributes/dir) 속성은 세 가지 유효한 값(`ltr`, `rtl` 및 `auto`)이 있습니다.
+HTML에서 [열거 속성](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)은 제한된 사전 정의된 텍스트 값 모음이 있는 속성입니다. 예를 들어, 전역 HTML [`dir`](/ko/docs/Web/HTML/Reference/Global_attributes/dir) 속성은 세 가지 유효한 값(`ltr`, `rtl` 및 `auto`)이 있습니다.
 
 열거된 각 속성에는 속성이 값 없이 존재할 경우(값이 누락되는 경우)에 대한 기본값 및 속성에 유효하지 않은 값이 할당될 경우에 대한 기본값이 있습니다. [불리언](/ko/docs/Glossary/Boolean) HTML 속성과 달리, 이 속성에는 값이 존재하는지, 생략되었는지, 유효하지 않은지에 관계없이 속성이 존재할 때 항상 true입니다. 열거된 HTML 속성을 사용하면, 생략된 값의 기본값이 유효하지 않은 값의 기본값과 다를 수 있습니다.
 
-예를 들어, 전역 HTML [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 속성은 두 개의 유효한 키워드( `true` 및 `false`)를 가집니다. 속성이 있지만 값이 설정되지 않은 경우, 값은 `true`입니다. 값이 설정되었지만, 유효하지 않은 경우(`contenteditable="contenteditable"`와 같이), 값은 세 번째 상태인 `inherit`으로 매핑됩니다.
+예를 들어, 전역 HTML [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 속성은 두 개의 유효한 키워드( `true` 및 `false`)를 가집니다. 속성이 있지만 값이 설정되지 않은 경우, 값은 `true`입니다. 값이 설정되었지만, 유효하지 않은 경우(`contenteditable="contenteditable"`와 같이), 값은 세 번째 상태인 `inherit`으로 매핑됩니다.
 
 ## ARIA 열거 속성
 
@@ -30,5 +30,5 @@ JavaScript에서, 열거 가능 속성은 내부 열거 가능 플래그가 true
 ## 같이 보기
 
 - [불리언](/ko/docs/Glossary/Boolean)
-- [JavaScript 데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript 데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - HTML 표준의 [열거 속성](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#enumerated-attribute)

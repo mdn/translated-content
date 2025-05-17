@@ -32,7 +32,7 @@ Allow: <http-methods>
 ## 지시어
 
 - \<http-methods>
-  - : 쉼표로 구분한 허용된 [HTTP request methods](/ko/docs/Web/HTTP/Methods) 목록.
+  - : 쉼표로 구분한 허용된 [HTTP request methods](/ko/docs/Web/HTTP/Reference/Methods) 목록.
 
 ## 예제
 

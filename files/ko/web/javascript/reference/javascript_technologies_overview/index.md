@@ -16,7 +16,7 @@ l10n:
 
 ## 핵심 언어, JavaScript(ECMAScript)
 
-JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/JavaScript_technologies_overview)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
+JavaScript의 핵심 언어는 ECMA TC39 위원회가 [ECMAScript](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)라는 언어로 표준화했습니다. "ECMAScript"는 언어 표준을 나타내는 용어이지만, "ECMAScript"와 "JavaScript"는 같은 의미로 사용할 수 있습니다.
 
 핵심 언어는 [Node.js](https://nodejs.org) 등 비브라우저 환경에서도 사용됩니다.
 
@@ -81,7 +81,7 @@ ECMAScript의 관점에서, DOM 명세에 정의된 객체는 "호스트 객체"
 
 웹 마크업 언어인 [HTML](https://html.spec.whatwg.org/multipage/)은 DOM 코어에 정의된 추상화 개념에 엘리먼트의 의미를 더한 레이어라고 할 수 있습니다. HTML DOM은 HTML 요소의 `className` 같은 속성과 [`document.body`](/ko/docs/Web/API/Document/body) 같은 API도 포함합니다.
 
-HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없는 리스트를 나타내는 [`<ul>`](/ko/docs/Web/HTML/Element/ul) 요소의 모든 자식들은 리스트 요소를 나타내는 [`<li>`](/ko/docs/Web/HTML/Element/li) 요소여야 합니다. 또한 표준에 정의되지 않은 요소와 속성을 사용하는 것도 금지됩니다.
+HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없는 리스트를 나타내는 [`<ul>`](/ko/docs/Web/HTML/Reference/Elements/ul) 요소의 모든 자식들은 리스트 요소를 나타내는 [`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소여야 합니다. 또한 표준에 정의되지 않은 요소와 속성을 사용하는 것도 금지됩니다.
 
 [`Document`](/ko/docs/Web/API/Document) 객체, [`Window`](/ko/docs/Web/API/Window) 객체나 다른 DOM 요소들을 찾아보았나요? [DOM 문서](/ko/docs/Web/API/Document_Object_Model)을 읽어보세요
 
@@ -93,7 +93,7 @@ HTML 명세는 문서의 제약도 정의합니다. 예를 들어, 순서가 없
 - [CSS Object Model](https://drafts.csswg.org/cssom/)는 CSS 규칙을 객체처럼 다룰 수 있도록 추상화합니다.
 - [WebWorkers](https://html.spec.whatwg.org/multipage/workers.html)는 병렬 처리를 가능하게 하는 API입니다.
 - [WebSockets](https://html.spec.whatwg.org/multipage/#network)는 양방향 저수준 통신을 가능하게 하는 API입니다.
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext)는 [`<canvas>`](/ko/docs/Web/HTML/Element/canvas) 요소에 그릴 수 있게 해주는 API입니다.
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext)는 [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas) 요소에 그릴 수 있게 해주는 API입니다.
 - [WebAssembly 인터페이스](https://webassembly.github.io/spec/js-api)는 JavaScript 코드와 [WebAssembly](/ko/docs/WebAssembly) 모듈 간의 통신을 위한 기능을 제공합니다.
 
 비 브라우저 환경(예: Node.js)에는 DOM API가 없는 경우가 많은데, 문서와 상호 작용하지 않기 때문입니다. [`fetch()`](/ko/docs/Web/API/Window/fetch) 및 [`setTimeout()`](/ko/docs/Web/API/Window/setTimeout)과 같은 많은 웹 API를 구현합니다.
