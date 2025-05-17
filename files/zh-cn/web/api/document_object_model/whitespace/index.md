@@ -189,7 +189,7 @@ slug: Web/API/Document_Object_Model/Whitespace
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```
