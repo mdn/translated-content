@@ -41,19 +41,6 @@ _继承自父接口 {{domxref("Element")}} 和 {{domxref("GlobalEventHandlers")}
 | {{domxref("HTMLElement.title")}}                                                | {{domxref("DOMString")}}                | 获取/设置元素的 title 属性                                                 |
 | {{domxref("HTMLElement.translate")}}                                            | {{domxref("Boolean")}}                  | 获取/设置元素是否可以被翻译                                                |
 
-## 事件
-
-Listen to these events using `addEventListener()` or by assigning an event listener to the `oneventname` property of this interface.
-
-- {{DOMxRef("HTMLElement.copy_event", "copy")}}
-  - : Fired when the user initiates a copy action through the browser's user interface.
-- {{DOMxRef("HTMLElement.cut_event", "cut")}}
-  - : Fired when the user initiates a cut action through the browser's user interface.
-- {{DOMxRef("HTMLElement.paste_event", "paste")}}
-  - : Fired when the user initiates a paste action through the browser's user interface.
-- {{domxref("HTMLInputElement/invalid_event", "invalid")}}
-  - : Fired when an element does not satisfy its constraints during constraint validation.
-
 ## 方法
 
 _从父元素继承的方法，{{domxref("Element")}}._

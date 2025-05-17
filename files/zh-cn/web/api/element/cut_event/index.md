@@ -1,6 +1,5 @@
 ---
 title: Element：cut 事件
-short-title: cut
 slug: Web/API/Element/cut_event
 ---
 
@@ -85,6 +84,5 @@ source.addEventListener("cut", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/copy_event", "copy")}}、{{domxref("Element/paste_event", "paste")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/cut_event", "cut")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/cut_event", "cut")}}
+- {{domxref("Element/copy_event", "copy")}} 事件
+- {{domxref("Element/paste_event", "paste")}} 事件
