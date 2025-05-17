@@ -1,12 +1,13 @@
 ---
 title: :blank
 slug: Web/CSS/:blank
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-> [!NOTE]
-> セレクターは、CSSWG が変更を続けているため、使用するリスクを考慮する必要があります。
+> **メモ:** `:blank` セレクターは、CSSWG が変更を続けているため、リスクがあるとみなされています。
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
 
@@ -14,13 +15,15 @@ slug: Web/CSS/:blank
 
 ## 構文
 
-```
-:blank
+```css
+:blank {
+  /* ... */
+}
 ```
 
 ## 例
 
-<h3 id="Simple_blank_example">単純な :blank の例</h3>
+### 基本的な :blank の例
 
 最終的に対応しているブラウザーでは、 `:blank` 擬似クラスを使用することで、開発者は、必須ではないが、まだ何も記入されていない入力コントロールを、何らかの方法で強調表示することができるようになります。
 
@@ -40,7 +43,7 @@ textarea:blank {
 
 #### 結果
 
-{{EmbedLiveSample('Simple_blank_example', '100%', 150)}}
+{{EmbedLiveSample('Basic_blank_example', '100%', 150)}}
 
 ## 仕様書
 
@@ -48,7 +51,7 @@ textarea:blank {
 
 ## ブラウザーの互換性
 
-{{Compat}}
+現在、この機能を実装しているブラウザーはありません。
 
 ## 関連情報
 
