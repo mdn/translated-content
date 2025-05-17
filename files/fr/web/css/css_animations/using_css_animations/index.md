@@ -373,9 +373,67 @@ Afin d'être tout à fait complet, voici le code HTML qui peut être utilisé et
 
 {{EmbedLiveSample('Utiliser_les_événements_liés_aux_animations', '600', '300')}}
 
+### Utiliser les animations CSS avec Flexbox
+
+L'utilisation conjointe de Flexbox et des animations CSS permet de créer des mises en page dynamiques et interactives, notamment pour réorganiser des éléments, animer leur position ou modifier leur apparence en fonction de leur disposition flexible.
+
+#### Exemple : Animation de réorganisation d'éléments flexibles
+
+Voici un exemple où nous utilisons Flexbox et @keyframes pour animer le déplacement des éléments d'une liste :
+
+```css
+.container {
+  display: flex;
+  gap: 10px;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  animation: moveItems 2s infinite alternate ease-in-out;
+}
+
+@keyframes moveItems {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+```
+
+Puis, concernant notre HTML :
+
+```html
+<section class="container">
+  <div class="item">1</div>
+  <div class="item">2</div>
+  <div class="item">3</div>
+</section>
+```
+
+Dans cet exemple :
+
+- Flexbox est utilisé pour aligner les éléments horizontalement.
+- L'animation déplace chaque élément sur l'axe X pour créer un effet de mouvement fluide.
+- On pourrait également animer des changements de `order`, `align-items` ou `justify-content` pour des effets encore plus dynamiques.
+
+#### Astuces pour une intégration fluide
+
+- Utiliser `flex-grow` et `flex-shrink` : On peut animer ces propriétés pour agrandir ou réduire la taille des éléments de manière fluide.
+- Modifier l'ordre des éléments (`order`) : Une animation sur `order` peut donner un effet de réorganisation automatique.
+- Jouer avec `align-items` et `justify-content` : En animant ces propriétés, on peut déplacer des groupes d'éléments sans changer leur structure HTML.
+
 ## Voir aussi
 
 - {{domxref("AnimationEvent")}}
 - [Détecter la prise en charge des animations CSS](/fr/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
 - [Manipuler les transitions CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
 - [CSS](https://www.cssdebutant.com)
+- [FlexBox](https://believemy.com/r/le-guide-complet-sur-flexbox-css)
