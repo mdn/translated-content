@@ -1,11 +1,13 @@
 ---
 title: size
 slug: Web/CSS/@page/size
+l10n:
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-[CSS](/ja/docs/Web/CSS) の **`size`** [アット規則](/ja/docs/Web/CSS/CSS_syntax/At-rule)記述子は、 {{cssxref("@page")}} アット規則で使用し、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
+**`size`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)記述子で、 {{cssxref("@page")}} アットルールで使用され、ページを表現するために使用するボックスの寸法と向きを定義します。多くの場合、この寸法は印刷ページの適用可能な対象の寸法に対応します。
 
 寸法は「拡縮可能な」キーワード (この場合、ページの有効な大きさ全体を使用します) 又は絶対的な長さのどちらかで定義します。
 
@@ -43,15 +45,15 @@ size: A4 portrait;
 - `portrait`
   - : ページのコンテンツは縦向きモード (ボックスの長辺が垂直) で表示されます。これが既定の向きです。
 - `<length>`
-  - : 何らかの長さの値 ({{cssxref("&lt;length&gt;")}} を参照)。最初の値はページボックスの幅に対応し、二番目の値は高さに対応します。一つしか値が提供されない場合は、幅と高さの両方に使用されます。
+  - : 何らかの長さの値（{{cssxref("&lt;length&gt;")}} を参照）。最初の値はページボックスの幅に対応し、二番目の値は高さに対応します。一つしか値が提供されない場合は、幅と高さの両方に使用されます。
 - `<page-size>`
 
-  - : &#x20;
+  - : キーワード値で、次のいずれかです。
 
     - A5
       - : これは標準の ISO の寸法 148mm x 210mm に一致します。
     - A4
-      - : これは標準の ISO の寸法 210mm x 297mm に一致します。 (個人の印刷では最もよく使われる寸法です。)
+      - : これは標準の ISO の寸法 210mm x 297mm に一致します。（個人の印刷では最もよく使われる寸法です。）
     - A3
       - : これは標準の ISO の寸法 297mm x 420mm に一致します。
     - B5
@@ -83,11 +85,19 @@ size: A4 portrait;
 
 ```css
 @page {
-  size: 4in 6in landscape;
+  size: A4 landscape;
 }
 ```
 
-### @media 規則内部の入れ子
+### 独自サイズの指定
+
+```css
+@page {
+  size: 4in 6in;
+}
+```
+
+### @media ルール内部の入れ子
 
 ```css
 @media print {
@@ -104,8 +114,3 @@ size: A4 portrait;
 ## ブラウザーの互換性
 
 {{Compat}}
-
-## 関連情報
-
-- {{cssxref("@page/bleed", "bleed")}}
-- {{cssxref("@page/marks", "marks")}}
