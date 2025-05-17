@@ -1,29 +1,15 @@
 ---
 title: ruby-position
 slug: Web/CSS/ruby-position
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`ruby-position`** は CSS のプロパティで、ベース要素に対するルビ要素の位置を定義します。要素の上方 (`over`)、下方 (`under`)、文字の間の右側 (`inter-character`) に配置できます。
 
-## 構文
-
-```css
-/* キーワード値 */
-ruby-position: over;
-ruby-position: under;
-ruby-position: inter-character;
-ruby-position: alternate;
-
-/* グローバル値 */
-ruby-position: inherit;
-ruby-position: initial;
-ruby-position: revert;
-ruby-position: unset;
-```
-
-{{InteractiveExample("CSS Demo: ruby-position")}}
+{{InteractiveExample("CSS デモ: ruby-position")}}
 
 ```css interactive-example-choice
 ruby-position: over;
@@ -45,16 +31,37 @@ ruby-position: under;
 }
 ```
 
+## 構文
+
+```css
+/* キーワード値 */
+ruby-position: over;
+ruby-position: under;
+ruby-position: alternate;
+ruby-position: alternate over;
+ruby-position: alternate under;
+ruby-position: inter-character;
+
+/* グローバル値 */
+ruby-position: inherit;
+ruby-position: initial;
+ruby-position: revert;
+ruby-position: revert-layer;
+ruby-position: unset;
+```
+
 ### 値
 
 - `over`
-  - : ![over の例](screen_shot_2015-03-04_at_13.02.20.png)ルビを主テキストの上 (横書きの場合) または右 (縦書きの場合) に配置することを示すキーワードです。
+  - : ![over の例](screen_shot_2015-03-04_at_13.02.20.png)
+    ルビを主テキストの上（横書きの場合）または右（縦書きの場合）に配置することを示すキーワードです。
 - `under`
-  - : ![under の例](screen_shot_2015-03-04_at_13.02.07.png)ルビを主テキストの下 (横書きの場合) または左 (縦書きの場合) に配置することを示すキーワードです。
-- `inter-character`
-  - : ルビをそれぞれの文字の間に配置することを示すキーワードです。
+  - : ![under の例](screen_shot_2015-03-04_at_13.02.07.png)
+    ルビを主テキストの下（横書きの場合）または左（縦書きの場合）に配置することを示すキーワードです。
 - `alternate`
   - : 複数のレベルの注釈があった場合に、ルビが上と下の間で交互に表示されることを示すキーワードです。
+- `inter-character`
+  - : 指定された場合、縦書きモードでは `over` として動作します。それ以外の場合、ルビを異なる文字の間に配置するため、横書きテキストの場合はベーステキストの右側に現れ、ルビ表記コンテナーの子は強制的に書字方向が `vertical-rl` になります。
 
 ## 公式定義
 
@@ -147,4 +154,4 @@ ruby {
 ## 関連情報
 
 - HTML のルビ関連要素: {{HTMLElement("ruby")}}, {{HTMLElement("rt")}}, {{HTMLElement("rp")}}, {{HTMLElement("rtc")}}
-- CSS のルビ関連プロパティ: {{cssxref("ruby-align")}}, {{cssxref("ruby-merge")}}
+- {{cssxref("ruby-align")}}
