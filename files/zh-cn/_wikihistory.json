@@ -42829,35 +42829,5 @@
     "contributors": [
       "Cyandev"
     ]
-  },
-  "conflicting/Web/API/Element/copy_event": {
-    "modified": "2020-10-15T22:30:15.212Z",
-    "contributors": [
-      "Jee"
-    ]
-  },
-  "conflicting/Web/API/Element/copy_event_cc22dc2a82b3a6b4ca9219f009c01ac0f8e8f185c083f7ee641a25714b7eb2a7": {
-    "modified": "2019-03-24T00:18:09.591Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "conflicting/Web/API/Element/cut_event_8c227abc15b3d636603d3c5d69c859e14ecff3bdc3c5c34f2106a7e7bc7f98e0": {
-    "modified": "2019-03-24T00:18:03.706Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "conflicting/Web/API/Element/paste_event_4ff5a40c4d4f891019aed89389e3526001e15ebf9526309428c754b4b9db12f6": {
-    "modified": "2019-03-24T00:18:09.700Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
   }
 }
