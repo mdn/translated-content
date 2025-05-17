@@ -1,7 +1,8 @@
 ---
 title: Authentication
 slug: Glossary/Authentication
-page-type: glossary-definition
+l10n:
+  sourceCommit: 66afe9b59c609043c91e51487cfcecaecbbadb3d
 ---
 
 {{GlossarySidebar}}
