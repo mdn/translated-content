@@ -1,5 +1,5 @@
 ---
-title: API Background Synchronization
+title: API de Background Synchronization
 slug: Web/API/Background_Synchronization_API
 l10n:
   sourceCommit: dd84b3b089d199be3771d6afe01e068b19889e71
@@ -7,11 +7,11 @@ l10n:
 
 {{DefaultAPISidebar("Background Sync")}}{{Securecontext_Header}}{{AvailableInWorkers}}
 
-La **API Background Synchronization** habilita a una aplicación web pospongan tareas para que se puedan ejecutar en un [service worker](/es/docs/Web/API/Service_Worker_API) una vez el usuario tenga conexión de red estable.
+La **API de Background Synchronization** habilita a una aplicación web pospongan tareas para que se puedan ejecutar en un [service worker](/es/docs/Web/API/Service_Worker_API) una vez el usuario tenga conexión de red estable.
 
 ## Conceptos y uso
 
-La API Background Synchronization permite que las aplicaciones web pospongan la sincronización con el servidor a su service worker para que la gestione más tarde, si el dispositivo está sin conexión. Entre sus usos se incluye el envío de solicitudes en segundo plano si no se pudieron enviar mientras se usaba la aplicación.
+La API de Background Synchronization permite que las aplicaciones web pospongan la sincronización con el servidor a su service worker para que la gestione más tarde, si el dispositivo está sin conexión. Entre sus usos se incluye el envío de solicitudes en segundo plano si no se pudieron enviar mientras se usaba la aplicación.
 
 Por ejemplo, una aplicación de cliente de correo puede dejar que sus usuarios envíen correos cuando quieran, incluso si el dispositivo no tiene conexión de red. El frontend de la aplicación se limita a registrar una solicitud de sincronización y el service worker recibe una alerta cuando la red vuelve a estar presente y se encarga de la sincronización.
 
@@ -28,7 +28,7 @@ Como esta API depende de service workers, la funcionalidad proporcionada por est
 
 ### Extensiones a otras interfaces
 
-Las siguientes adiciones a la [API Service Worker](/es/docs/Web/API/Service_Worker_API) proporciona un punto de entrada para configurar la sincronización en segundo plano.
+Las siguientes adiciones a la [API de Service Worker](/es/docs/Web/API/Service_Worker_API) proporciona un punto de entrada para configurar la sincronización en segundo plano.
 
 - {{domxref("ServiceWorkerRegistration.sync")}} {{ReadOnlyInline}}
   - : Devuelve una referencia a la interfaz {{domxref("SyncManager")}} para registrar tareas que se ejecutarán una vez que el dispositivo tenga conectividad de red.
