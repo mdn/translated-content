@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`for`**은 {{htmlelement("label")}}과 {{htmlelement("output")}}에 적용 가능한 특성입니다. `<label>` 요소에 적용하는 경우 라벨이 설명하고 있는 양식 요소를 나타냅니다. `<output>` 요소에 적용하는 경우 출력에 사용되는 값을 표시하는 요소 간의 명시적인 관계를 표현합니다.
+**`for`** 특성은 {{htmlelement("label")}}과 {{htmlelement("output")}}에 적용 가능한 특성입니다. `<label>` 요소에 적용하는 경우 라벨이 설명하고 있는 양식 요소를 나타냅니다. `<output>` 요소에 적용하는 경우 출력에 사용되는 값을 표시하는 요소 간의 명시적인 관계를 표현합니다.
 
 {{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}
 
