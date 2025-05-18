@@ -2,7 +2,7 @@
 title: <image>
 slug: Web/CSS/image
 l10n:
-  sourceCommit: 2a23f650d86d4f5d948614a607224a2bd52cca33
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
 {{CSSRef}}
@@ -13,19 +13,20 @@ l10n:
 
 `<image>` データ型は以下のいずれかによって表すことができます。
 
-- {{CSSxRef("url", "url()")}} データ型で記述された画像
-- {{CSSxRef("&lt;gradient&gt;")}} データ型
-- {{CSSxRef("element","element()")}} 関数で定義されたウェブページの一部
-- {{CSSxRef("image/image","image()")}} 関数で定義された画像、画像フラグメント、単色の色
-- {{CSSxRef("cross-fade","cross-fade()")}} 関数で定義された 2 つ以上の画像の合成
-- {{CSSxRef("image/image-set","image-set()")}} 関数で定義された、解像度に基づいて定義された画像の選択
+- {{cssxref("url_value", "&lt;url&gt;")}} データ型で記述された画像。
+- {{CSSxRef("&lt;gradient&gt;")}} データ型。
+- {{CSSxRef("element","element()")}} 関数で定義されたウェブページの一部。
+- {{CSSxRef("image/image","image()")}} 関数で定義された画像、画像フラグメント、単色の色。
+- {{CSSxRef("cross-fade","cross-fade()")}} 関数で定義された 2 つ以上の画像の合成。
+- {{CSSxRef("image/image-set","image-set()")}} 関数で定義された、解像度に基づいて定義された画像の選択。
+- [描画ワークレット](/ja/docs/Web/API/CSS_Painting_API)で生成した画像を表す {{CSSxRef("image/paint","paint()")}} 関数。
 
 ## 解説
 
 CSS はさまざま種類の画像を扱うことができます。
 
 - JPEG、PNG、その他の[ラスター形式](https://ja.wikipedia.org/wiki/ビットマップ画像)の画像のように、_内在的な寸法_ (自然の寸法) を持つ画像。
-- 単一のファイルの中に複数のバージョンが存在する、*複数の内在的な寸法*を持つ画像。（この場合、内在的な寸法は領域に収まる最も大きな画像であり、かつ縦横比が包含ボックスに最も近いものになります。）
+- 単一のファイルの中に複数のバージョンが存在する、複数の内在的な寸法を持つ画像。一部の .ico 形式など。（この場合、内在的な寸法は領域に収まる最も大きな画像であり、かつ{{glossary("aspect ratio", "アスペクト比")}}が包含ボックスに最も近いものになります。）
 - SVG またはその他の[ベクター形式](https://ja.wikipedia.org/wiki/ベクター画像)の画像のように、内在的な寸法を持たないが、幅と高さの間に自身の縦横比のある画像。
 - CSS グラデーションなど、*内在的な寸法がなく、固有の縦横比もない*画像。
 
@@ -52,12 +53,12 @@ CSS はオブジェクトの*実際の*寸法を、 (1) _内在的な寸法_、 
 > [!NOTE]
 > すべてのブラウザーがすべてのプロパティですべての種類の画像に対応しているわけではありません。詳細は[ブラウザーの互換性の節](#ブラウザーの互換性)を参照してください。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ブラウザーは、背景画像に関する特別な情報を支援技術に提供しません。これは主に読み上げアプリにとって重要であり、読み上げアプリはその存在を告知しないため、ユーザーには何も伝えません。ページの全体的な目的を理解する上で重要な情報が画像に含まれている場合は、文書の中でその意味を記述した方が良いでしょう。
 
 - [MDN WCAG を理解する, ガイドライン 1.1 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.1_—_非テキストコンテンツのための代替テキストの提供)
-- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
+- [Understanding Success Criterion 1.1.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/text-equiv-all.html)
 
 ## 形式文法
 
@@ -70,8 +71,8 @@ CSS はオブジェクトの*実際の*寸法を、 (1) _内在的な寸法_、 
 ```css example-good
 url(test.jpg)               /* <url>、但し test.jpg は実在する画像 */
 linear-gradient(blue, red)  /* <gradient> */
-element(#realid)            /* element() 関数で参照されるウェブページの一部、
-                               ページ上に "realid" が実在する ID である場合 */
+element(#real-id)            /* element() 関数で参照されるウェブページの一部、
+                               ページ上に "real-id" が実在する ID である場合 */
 image(ltr 'arrow.png#xywh=0,0,16,16', red)
                             /* arrow.png が対応している画像であれば、 <url> の元画像の
                                左上から 16x16 を選択し、そうでなければ赤一色の見本になります。
@@ -86,7 +87,7 @@ image-set('test.jpg' 1x, 'test-2x.jpg' 2x)
 ### 無効な画像
 
 ```css example-bad
-nourl.jpg            /* 画像ファイルは url() 関数により示す必要がある */
+no-url.jpg           /* 画像ファイルは url() 関数により示す必要がある */
 url(report.pdf)      /* url() 関数で指すファイルは画像でなければならない */
 element(#fakeid)     /* 要素 ID はページ上に実在する ID でなければならない */
 image(z.jpg#xy=0,0)  /* 空間フラグメントは xywh=#,#,#,# の書式で書かなければならない */
@@ -104,7 +105,7 @@ image-set('cat.jpg' 1x, 'dog.jpg' 1x) /* 画像セット内の画像はすべて
 ## 関連情報
 
 - {{CSSxRef("&lt;gradient&gt;")}}
-- {{CSSxRef("element","element()")}} {{Experimental_Inline}}
+- {{CSSxRef("element","element()")}}
 - {{CSSxRef("image/image", "image()")}}
 - {{CSSxRef("image/image-set","image-set()")}}
 - {{CSSxRef("cross-fade","cross-fade()")}}

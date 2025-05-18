@@ -2,12 +2,12 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
+**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
 {{InteractiveExample("CSS Demo: margin-block-start")}}
 
@@ -73,6 +73,8 @@ writing-mode: vertical-lr;
 margin-block-start: 10px; /* 絶対的な長さ */
 margin-block-start: 1em; /* テキストの大きさに対する相対値 */
 margin-block-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-start: anchor-size(width);
+margin-block-start: calc(anchor-size(--myAnchor block, 20px) / 3);
 
 /* キーワード値 */
 margin-block-start: auto;

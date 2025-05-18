@@ -2,7 +2,7 @@
 title: overflow
 slug: Web/CSS/overflow
 l10n:
-  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
@@ -254,5 +254,6 @@ p.overlay {
 - {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- SVG の {{SVGAttr("overflow")}} 属性
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)
-- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
+- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) (adrianroselli.com, 2022)

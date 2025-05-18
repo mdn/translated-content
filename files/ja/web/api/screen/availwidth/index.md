@@ -1,11 +1,14 @@
 ---
-title: Screen.availWidth
+title: "Screen: availWidth プロパティ"
+short-title: availWidth
 slug: Web/API/Screen/availWidth
+l10n:
+  sourceCommit: a4c1cd245065418c721b27632867159da57c5ad5
 ---
 
 {{APIRef("CSSOM View")}}
 
-**`Screen.availWidth`** プロパティは、ウィンドウで利用可能な水平方向の空間をピクセル数で返します。
+**`Screen.availWidth`** プロパティは、ウィンドウで利用可能な水平方向の空間の大きさを CSS ピクセル数で返します。
 
 ## 値
 
@@ -14,7 +17,7 @@ slug: Web/API/Screen/availWidth
 ## 例
 
 ```js
-var screenAvailWidth = window.screen.availWidth;
+const screenAvailWidth = window.screen.availWidth;
 
 console.log(screenAvailWidth);
 ```

@@ -27,15 +27,11 @@ pre-commit:
             stage_fixed: true
 
 post-merge:
+  only:
+    - ref: main
   commands:
-    yarn-install-post-merge-main:
-      run: |
-        BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-        if [ "$BRANCH" != "main" ]; then
-          exit 0
-        else
-          yarn install
-        fi
+    yarn-install:
+      run: yarn install
 
 # For condensed output
 output:

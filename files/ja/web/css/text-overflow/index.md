@@ -2,7 +2,7 @@
 title: text-overflow
 slug: Web/CSS/text-overflow
 l10n:
-  sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -72,6 +72,7 @@ text-overflow: ellipsis " [..]";
 text-overflow: inherit;
 text-overflow: initial;
 text-overflow: revert;
+text-overflow: revert-layer;
 text-overflow: unset;
 ```
 

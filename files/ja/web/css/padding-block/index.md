@@ -2,7 +2,7 @@
 title: padding-block
 slug: Web/CSS/padding-block
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -89,7 +89,7 @@ padding-block: unset;
 
 ## 解説
 
-これらの値は、 {{cssxref("padding-top")}} と {{cssxref("padding-bottom")}}、または {{cssxref("padding-right")}} と {{cssxref("padding-left")}} プロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+`padding-block` で指定されたパディング値は、 {{cssxref("padding-top")}} と {{cssxref("padding-bottom")}}、または {{cssxref("padding-right")}} と {{cssxref("padding-left")}} プロパティと同等になる可能性があります。これは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値によって決まります。
 
 ## 公式定義
 
@@ -105,7 +105,7 @@ padding-block: unset;
 
 #### HTML
 
-```html live-sample___setting_block_padding_for_vertical_text
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -113,7 +113,7 @@ padding-block: unset;
 
 #### CSS
 
-```css live-sample___setting_block_padding_for_vertical_text
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -129,7 +129,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_block_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるブロック方向のパディングの設定", 140, 140)}}
 
 ## 仕様書
 
