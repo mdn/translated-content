@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-right
 slug: Web/CSS/scroll-padding-right
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-right` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-right")}}
+{{InteractiveExample("CSS デモ: scroll-padding-right")}}
 
 ```css interactive-example-choice
 scroll-padding-right: 0;
@@ -28,7 +30,7 @@ scroll-padding-right: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -87,6 +89,7 @@ scroll-padding-right: 10%;
 scroll-padding-right: inherit;
 scroll-padding-right: initial;
 scroll-padding-right: revert;
+scroll-padding-right: revert-layer;
 scroll-padding-right: unset;
 ```
 
@@ -116,4 +119,4 @@ scroll-padding-right: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
