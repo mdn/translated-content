@@ -27,11 +27,11 @@ let registeredUserScript = browser.userScripts.register(
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，如果所有请求的用户脚本都已注册，则该 promise 将不带参数地兑现。如果任何用户脚本注册失败或请求因其他原因失败，则不会注册任何脚本，且 promise 将以错误消息拒绝。
+一个 {{JSxRef("Promise")}}，如果所有请求的用户脚本都已注册，则将不带参数地兑现。如果任何用户脚本注册失败或请求因其他原因失败，则不会注册任何脚本，且 promise 将以错误消息拒绝。
 
 ## 示例
 
-此代码片段将“你好世界”代码注册到 `"myScriptId"` 执行世界中以在所有匹配 `"*://example.com/*"` 的网站上执行。
+此代码片段将“你好世界”代码注册到 `"myScriptId"` 执行环境中以在所有匹配 `"*://example.com/*"` 的网站上执行。
 
 ```js
 await browser.userScripts.register([
