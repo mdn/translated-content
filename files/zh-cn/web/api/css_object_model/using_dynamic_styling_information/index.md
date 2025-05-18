@@ -125,7 +125,7 @@ style 的 media 和 type 给不给出都可以。
 
 ### 使用 `setAttribute` 方法
 
-注意，你也可以通过获得元素的引用，然后使用它的 [`setAttribute`](/zh-CN/docs/DOM/element.setAttribute) 方法，指定 CSS 属性和值，来改变该元素的样式。
+注意，你也可以通过获得元素的引用，然后使用它的 [`setAttribute`](/zh-CN/docs/Web/API/Element/setAttribute) 方法，指定 CSS 属性和值，来改变该元素的样式。
 
 ```js
 var el = document.getElementById("some-element");

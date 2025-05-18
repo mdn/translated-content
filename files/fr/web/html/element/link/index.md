@@ -38,7 +38,7 @@ Il existe différents types de relations pour préciser les icônes et qui perme
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="apple-icon-114.png"
+  href="favicon114.png"
   type="image/png" />
 ```
 

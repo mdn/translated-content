@@ -1,11 +1,15 @@
 ---
 title: overflow-inline
 slug: Web/CSS/@media/overflow-inline
+l10n:
+  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
 {{CSSRef}}
 
 **`overflow-inline`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、初期[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)をインライン軸方向にあふれたコンテンツを端末がどのように扱うかを調べるために使用します。
+
+> **メモ:** `overflow-inline` プロパティは、オーバーフローが発生するかどうかを判別するものではありません。これは、端末がオーバーフローをどのように処理するかを明らかにするものです。通常、ほとんどのブラウザーの画面では、動作は "scroll" になります。コンテンツが利用可能な横方向の空間を超えると、オーバーフローしたコンテンツにアクセスするためにスクロールできるようになります。
 
 ## 構文
 
