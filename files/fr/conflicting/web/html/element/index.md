@@ -52,7 +52,7 @@ Cet élément inclut également [les attributs universels](/fr/docs/Web/HTML/Glo
   <menuitem
     type="command"
     label="Cette commande ne fait rien"
-    icon="https://developer.mozilla.org/static/img/favicon144.png">
+    icon="/shared-assets/images/examples/favicon144.png">
     Les commandes n'affichent pas leurs contenus.
   </menuitem>
   <menuitem

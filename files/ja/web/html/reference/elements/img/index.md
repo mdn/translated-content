@@ -350,7 +350,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 以下の簡単な例では、ページに画像を埋め込み、アクセシビリティを向上させるために代替テキストを含めています。
 
 ```html
-<img src="favicon144.png" alt="MDN" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="MDN" />
 ```
 
 {{ EmbedLiveSample('Alternative_text', '100%', '160') }}
@@ -361,7 +361,9 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="MDN サイトにおいでください" />
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="MDN サイトにおいでください" />
 </a>
 ```
 
@@ -372,7 +374,10 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 この例では、 `srcset` 属性によって高解像度版のロゴの参照を指定しています。これで、高解像度の端末では `src` 画像の代わりにこちらが読み込まれます。 `src` で参照される画像は、 `srcset` に対応している{{glossary("User agent", "ユーザーエージェント")}}では、 `1x` の候補としてカウントされます。
 
 ```html
-<img src="favicon72.png" alt="MDN ロゴ" srcset="favicon144.png 2x" />
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="MDN ロゴ"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("Using_the_srcset_attribute", "100%", "160")}}

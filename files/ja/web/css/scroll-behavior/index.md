@@ -2,7 +2,7 @@
 title: scroll-behavior
 slug: Web/CSS/scroll-behavior
 l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+  sourceCommit: 215e1b1590b1210152e3570627933c0303171e11
 ---
 
 {{CSSRef}}
@@ -23,7 +23,7 @@ scroll-behavior: smooth;
 <section id="default-example">
   <div class="container">
     <p class="nav">
-      Scroll to:
+      スクロール先:
       <a href="#pageA">A</a>
       <a href="#pageB">B</a>
       <a href="#pageC">C</a>
@@ -38,7 +38,6 @@ scroll-behavior: smooth;
 ```
 
 ```css interactive-example
-/* stylelint-disable selector-type-no-unknown */
 .container {
   flex-direction: column;
 }

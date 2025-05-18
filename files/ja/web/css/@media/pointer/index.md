@@ -1,13 +1,15 @@
 ---
 title: pointer
 slug: Web/CSS/@media/pointer
+l10n:
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
 {{CSSRef}}
 
 **`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。
 
-> **メモ:** *すべての*ポインティングデバイスの正確性を調べたい場合は、代わりに `[any-pointer](/ja/docs/Web/CSS/@media/any-pointer)` を使用してください。
+> **メモ:** すべてのポインティングデバイスの正確性を調べたい場合は、代わりに [`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) を使用してください。
 
 ## 構文
 
@@ -16,9 +18,9 @@ slug: Web/CSS/@media/pointer
 - `none`
   - : 主要な入力メカニズムに、ポインティングデバイスがありません。
 - `coarse`
-  - : 主要な入力メカニズムにポインティングデバイスがありますが、その正確性が限定されています。
+  - : 主要な入力メカニズムにポインティングデバイスがありますが、指やタッチパネルのように、正確性が限定されています。
 - `fine`
-  - : 主要な入力メカニズムにポインティングデバイスがあり、正確性も高いです。
+  - : 主要な入力メカニズムにポインティングデバイスがあり、マウスのように、正確性も高いです。
 
 ## 例
 
@@ -27,15 +29,13 @@ slug: Web/CSS/@media/pointer
 ### HTML
 
 ```html
-<input id="test" type="checkbox" /> <label for="test">Look at me!</label>
+<input id="test" type="checkbox" /> <label for="test">これを見て！</label>
 ```
 
 ### CSS
 
 ```css
 input[type="checkbox"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
   appearance: none;
   border: solid;
   margin: 0;
