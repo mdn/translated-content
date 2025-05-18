@@ -41,7 +41,7 @@ let gettingFrame = browser.webNavigation.getFrame(
 - `url`
   - : `string`。当前与该框架关联的 URL（如果由 `frameId` 标识的框架曾经存在于由 `tabId` 标识的标签页中）。某个 URL 与特定 `frameId` 关联并不意味着该框架当前仍然存在。
 - `parentFrameId`
-  - : `integer`。该框架的副框架的 ID。如果没有父框架（即该框架为标签页中的顶层浏览上下文），则为 -1。
+  - : `integer`。该框架的父框架的 ID。如果没有父框架（即该框架为标签页中的顶层浏览上下文），则为 -1。
 
 如果标签页被丢弃，则该 promise 将兑现为 `null`。如果找不到指定的标签页或框架 ID，或发生其他错误，则 promise 将以错误信息拒绝。
 
