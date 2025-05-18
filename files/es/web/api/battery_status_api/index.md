@@ -1,5 +1,5 @@
 ---
-title: API Battery Status
+title: API de Battery Status
 slug: Web/API/Battery_Status_API
 l10n:
   sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
 
-La **API Battery Status**, más comúnmente referida como la **API de la batería**, proporciona información sobre el estado de carga de la batería del sistema y te permite ser notificado por eventos que se envían cuando el nivel de la batería o su estado de carga cambia. Esto se puede usar para ajustar el uso de recursos de tu aplicación para reducir el drenaje de batería cuando es baja, o para guardar los cambios antes de que se acabe la batería para prevenir pérdida de datos.
+La **API de Battery Status**, más comúnmente referida como la **API de la batería**, proporciona información sobre el estado de carga de la batería del sistema y te permite ser notificado por eventos que se envían cuando el nivel de la batería o su estado de carga cambia. Esto se puede usar para ajustar el uso de recursos de tu aplicación para reducir el drenaje de batería cuando es baja, o para guardar los cambios antes de que se acabe la batería para prevenir pérdida de datos.
 
 > [!NOTE]
 > Esta API _no está disponible_ en los [Web Workers](/es/docs/Web/API/Web_Workers_API) (no se expone a través de {{domxref("WorkerNavigator")}}).
