@@ -38,7 +38,7 @@ l10n:
 
 `@property` ルールには {{cssxref("@property/syntax","syntax")}} および {{cssxref("@property/inherits","inherits")}} 記述子を含める必要があります。どちらかがない場合は、 `@property` ルール全体が無効となり、無視されます。
 {{cssxref("@property/initial-value","initial-value")}} 記述子は構文が [`*` 全称構文定義](https://drafts.css-houdini.org/css-properties-values-api/#universal-syntax-definition)（例えば `syntax: "*"`）である場合のみ省略可能で、それ以外の場合は必須です。
-`initial-vaue` 記述子が必須である場合にこれが省略されると、ルール全体が無効となって無視されます。
+`initial-value` 記述子が必須である場合にこれが省略されると、ルール全体が無効となって無視されます。
 
 未知の記述子は無効で無視されますが、 `@property` ルールは無効になりません。
 

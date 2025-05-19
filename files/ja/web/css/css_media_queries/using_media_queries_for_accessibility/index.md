@@ -1,26 +1,28 @@
 ---
 title: アクセシビリティのためのメディアクエリーの使用
 slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
+l10n:
+  sourceCommit: f731452fabde211bee55aedd39fc83d60c4e4918
 ---
 
-**メディアクエリー**は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
+{{CSSRef}}
 
-## 動きの縮減
+[**CSS メディアクエリー**](/ja/docs/Web/CSS/CSS_media_queries)は、障碍を持ったユーザーがウェブサイトをより理解することを支援するためにも利用することができます。
 
-点滅やフラッシュのアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持った人々にとって問題になる可能性があります。加えて、特定の種類の動きが前庭障害、てんかん、片頭痛、スコピック感受性などを引き起こす可能性があります。
+## 動きの削減
 
-また、この方法でユーザー設定によってアニメーションの停止を切り替えると、バッテリーが少ない、または性能が低い携帯電話やコンピューターを使用しているユーザーにも便益があります。
+点滅やフラッシュのアニメーションは、注意欠陥障害 (ADHD) のような認知障害を持った人々にとって問題になる可能性があります。加えて、特定の種類の動きが前庭障害、てんかん、片頭痛、スコピック感受性などを引き起こす可能性があります。ユーザーの環境設定に応じてアニメーションを削減したり、アニメーションを完全にオフにしたりすることも、バッテリー残量が少ないユーザーや低スペックの端末を使用しているユーザーにとって好ましいことです。
 
-### 構文
+[`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) メディアクエリーを使用すると、オペレーティングシステムのアクセシビリティ設定で動きを少なくするように設定しているユーザーに対して、アニメーションやトランジションの少ない、使い勝手の良い体験を提供することができます。これには 2 つの値があります。
 
 - `no-preference`
   - : システムが把握している設定をユーザーが行っていないことを示します。
 - `reduce`
-  - : ユーザーがシステムに、動作やアニメーションを最小量にして、必要以外の動作を削除したほうが好ましいと通知したことを示します。
+  - : ユーザーが、動きやアニメーションを最小限に抑えたインターフェイスを推奨することをシステムに通知したことを示します。できれば、必要のない動きがすべて除去される程度までです。
 
 ### 例
 
-この例は、アクセシビリティ設定で動きを抑制するよう設定しないと煩いアニメーションが表示されます。
+この例は、[アクセシビリティ設定](/ja/docs/Web/Accessibility/Guides/Browsing_safely)で動きを抑制するよう設定しないと煩いアニメーションが表示されます。
 
 #### HTML
 
@@ -32,7 +34,6 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 
 ```css
 .animation {
-  -webkit-animation: vibrate 0.3s linear infinite both;
   animation: vibrate 0.3s linear infinite both;
 }
 
@@ -43,43 +44,12 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility
 }
 ```
 
-## 高コントラストモード
+`prefers-reduced-motion` の値は `reduce` であり、 "none" ではありません。この設定は、すべてのアニメーションを削除しなければならないことを意味するものではありません。アニメーションを削除するには、 `* {animation: none !important;}` を使用してください。むしろ、ユーザーは、操作によって起動されるアニメーションを含め、機能や伝達される情報にとって不可欠なアニメーションを除き、モーションアニメーションが無効になっていることを期待しています（[WCAG: Animation from Interactions](https://www.w3.org/WAI/WCAG21/Understanding/animation-from-interactions.html) を参照）。
 
-{{CSSRef}}{{Non-standard_header}}
+## 関連情報
 
-**-ms-high-contrast** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)、 [Microsoft 拡張](/ja/docs/Web/CSS/Microsoft_extensions)であり、アプリケーションが高コントラストモードで表示されているかどうか、どの配色で表示されているかを記述します。
-
-これは弱視やコントラストに敏感な問題を抱えるユーザーだけでなく、直射日光下のコンピューターや携帯電話で作業をしているユーザーにも役立ちます。
-
-## 構文
-
-**`-ms-high-contrast`** メディア特性は、以下の値のうちの一つで指定します。
-
-### 値
-
-- `active`
-  - : 配下の整形規則は、システムが任意の配色の高コントラストモードの時に適用されることを示します。
-- `black-on-white`
-  - : 配下の整形規則は、システムが白地に黒の高コントラストモードの時に適用されることを示します。
-- `white-on-black`
-  - : 配下の整形規則は、システムが黒地に白の高コントラストモードの時に適用されることを示します。
-
-## 例
-
-以下の宣言は、それぞれ任意の配色、白地に黒、黒地に白の高コントラストモードで表示されているアプリケーションに一致します。
-
-```css
-@media screen and (-ms-high-contrast: active) {
-  /* すべての高コントラストの整形規則 */
-}
-@media screen and (-ms-high-contrast: black-on-white) {
-  div {
-    background-image: url("image-bw.png");
-  }
-}
-@media screen and (-ms-high-contrast: white-on-black) {
-  div {
-    background-image: url("image-wb.png");
-  }
-}
-```
+- [`prefers-contrast`](/ja/docs/Web/CSS/@media/prefers-contrast): ユーザーのコントラストの環境設定に基づいてページスタイルを調整
+- [`prefers-reduced-transparency`](/ja/docs/Web/CSS/@media/prefers-reduced-transparency)
+- [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme)
+- [`inverted-colors`](/ja/docs/Web/CSS/@media/inverted-colors)
+- [Designing With Reduced Motion For Motion Sensitivities](https://www.smashingmagazine.com/2020/09/design-reduced-motion-sensitivities/)

@@ -209,7 +209,8 @@ div {
 
 /* Plusieurs images */
 .sept {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

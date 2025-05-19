@@ -54,13 +54,6 @@
       "fierayan"
     ]
   },
-  "Games/Introduction_to_HTML5_Game_Development": {
-    "modified": "2019-01-17T01:15:39.320Z",
-    "contributors": [
-      "wbamberg",
-      "xgqfrms-GitHub"
-    ]
-  },
   "Games/Publishing_games": {
     "modified": "2019-01-17T00:50:49.182Z",
     "contributors": [
@@ -177,6 +170,13 @@
     "contributors": [
       "wbamberg",
       "zsxeee"
+    ]
+  },
+  "Games/Tools": {
+    "modified": "2019-01-17T01:15:39.320Z",
+    "contributors": [
+      "wbamberg",
+      "xgqfrms-GitHub"
     ]
   },
   "Games/Tutorials/2D_Breakout_game_pure_JavaScript": {
@@ -13185,22 +13185,6 @@
       "ziyunfei"
     ]
   },
-  "Web/API/HTMLElement/copy_event": {
-    "modified": "2019-03-24T00:18:09.591Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
-  "Web/API/HTMLElement/cut_event": {
-    "modified": "2019-03-24T00:18:03.706Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
-    ]
-  },
   "Web/API/HTMLElement/dir": {
     "modified": "2019-03-24T00:16:19.875Z",
     "contributors": [
@@ -13386,14 +13370,6 @@
       "ScaredKitty",
       "weiqinl",
       "xgqfrms-GitHub"
-    ]
-  },
-  "Web/API/HTMLElement/paste_event": {
-    "modified": "2019-03-24T00:18:09.700Z",
-    "contributors": [
-      "ziyunfei",
-      "teoli",
-      "khalid32"
     ]
   },
   "Web/API/HTMLElement/title": {
@@ -20805,12 +20781,6 @@
     "contributors": [
       "xgqfrms-GitHub",
       "maicss"
-    ]
-  },
-  "Web/API/Window/copy_event": {
-    "modified": "2020-10-15T22:30:15.212Z",
-    "contributors": [
-      "Jee"
     ]
   },
   "Web/API/Window/createImageBitmap": {

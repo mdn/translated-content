@@ -1,6 +1,8 @@
 ---
 title: prefers-reduced-data
 slug: Web/CSS/@media/prefers-reduced-data
+l10n:
+  sourceCommit: b64538dc77e9a6181b882bd54bdbb307c1430ba8
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -8,7 +10,7 @@ slug: Web/CSS/@media/prefers-reduced-data
 > [!NOTE]
 > この特性は、どのユーザーエージェントも対応しておらず、その仕様が変更される可能性があります。
 
-**`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
+**`prefers-reduced-data`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツのインターネット通信を削減するようリクエストしていることを検出するために使用します。
 
 ## 構文
 
@@ -79,10 +81,6 @@ body {
     "Segoe UI Symbol";
 }
 ```
-
-### 結果
-
-{{EmbedLiveSample("Examples")}}
 
 ## 仕様書
 
