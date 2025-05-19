@@ -9,7 +9,7 @@ l10n:
 
 **`DocumentFragment`** 介面代表一個沒有父節點的最小文件物件。
 
-它被用作 {{domxref("Document")}} 的輕量版本，用來儲存由節點組成的文件結構片段，就像標準文件一樣。關鍵的差別在於 `DocumentFragment` 並不是活動文件樹結構的一部分，對其所做的變更不會影響到文件本身。
+它被用作 {{domxref("Document")}} 的輕量版本，用來儲存由節點組成的文件結構片段，就像標準文件一樣。關鍵的差別在於文件片段並不是活動文件樹結構的一部分，對其所做的變更不會影響到文件本身。
 
 {{InheritanceDiagram}}
 
@@ -33,7 +33,7 @@ _此介面沒有特定的屬性，但會繼承其父介面 {{domxref("Node")}} �
 
 ## 實例方法
 
-_此介面繼承自其父介面 {{domxref("Node")}} 的方法。_
+_此介面繼承其父介面 {{domxref("Node")}} 的方法。_
 
 - {{DOMxRef("DocumentFragment.append()")}}
   - : 將一組 {{domxref("Node")}} 或字串插入至文件片段的最後一個子節點之後。
@@ -54,7 +54,7 @@ _此介面繼承自其父介面 {{domxref("Node")}} 的方法。_
 
 `DocumentFragment` 的常見用途是先建立一個片段，在其中組裝一棵 DOM 子樹，再透過 {{domxref("Node")}} 介面的方法（如 {{domxref("Node.appendChild", "appendChild()")}}、{{domxref("Element.append", "append()")}} 或 {{domxref("Node.insertBefore", "insertBefore()")}}）將其附加或插入至 DOM。這樣的操作會將片段中的節點移動到 DOM 中，留下空的 `DocumentFragment`。
 
-此介面在 Web 元件中特別有用：{{HTMLElement("template")}} 元素的 {{domxref("HTMLTemplateElement.content")}} 屬性就包含了一個 `DocumentFragment`。
+此介面在 Web 組件中特別有用：{{HTMLElement("template")}} 元素的 {{domxref("HTMLTemplateElement.content")}} 屬性就包含了一個 `DocumentFragment`。
 
 可以使用 {{domxref("document.createDocumentFragment()")}} 方法或建構子來建立一個空的 `DocumentFragment`。
 
