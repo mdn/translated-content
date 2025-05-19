@@ -32,7 +32,7 @@ l10n:
 - `world` {{optional_inline}}
   - : {{WebExtAPIRef("userScripts.ExecutionWorld")}}。运行脚本的执行环境。默认为 `"USER_SCRIPT"`。
 - `worldId` {{optional_inline}}
-  - : `string`。脚本执行的用户脚本环境的 ID。仅当 `world` 为 `USER_SCRIPT` 或省略时有效。如果省略 `worldId`，脚本将在默认的 `USER_SCRIPT` 环境（`""`）中执行。以下划线 (`_`) 开头的值是保留的。最大长度为 256 个字符。一个环境可以被多个脚本用作其执行环境。要配置环境的行为，请在第一个脚本在该环境中执行之前，将其 `worldId` 传入 {{WebExtAPIRef("userScripts.configureWorld")}}。
+  - : `string`。脚本执行的用户脚本环境的 ID。仅当 `world` 为 `USER_SCRIPT` 或省略时有效。如果省略 `worldId`，脚本将在默认的 `USER_SCRIPT` 环境（`""`）中执行。以下划线（`_`）开头的值是保留的。最大长度为 256 个字符。一个环境可以被多个脚本用作其执行环境。要配置环境的行为，请在第一个脚本在该环境中执行之前，将其 `worldId` 传入 {{WebExtAPIRef("userScripts.configureWorld")}}。
 
 ## 浏览器兼容性
 
