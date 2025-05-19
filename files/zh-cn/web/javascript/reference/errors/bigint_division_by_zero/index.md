@@ -21,7 +21,7 @@ RangeError: 0 is an invalid divisor value (Safari)
 
 ## 哪里出错了？
 
-当使用[除法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)或者[取余](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)运算符时，如果除数为 `0n` 则会触发该错误。在 {{jsxref("Number")}} 运算中，除以 `0n` 会得到 [`Infinity`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity)，但在 BigInt 中不存在“Infinity”这一值，因此会抛出错误。在使用除法前，请先检查除数是否为 `0n`。
+当使用[除法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)或者[取余](/zh-CN/docs/Web/JavaScript/Reference/Operators/Remainder)运算符时，如果除数为 `0n` 则会触发该错误。在 {{jsxref("Number")}} 运算中，除以 `0n` 会得到 [`Infinity`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Infinity)，但在 BigInt 中不存在“Infinity”这一值，因此会抛出错误。在使用除法前，请先检查除数是否为 `0n`。
 
 ## 示例
 
