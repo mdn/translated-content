@@ -32,20 +32,20 @@ lookupPrefix(namespace)
 ## 示例
 
 ```html
-<code>http://www.w3.org/2000/svg</code> 在 &lt;output&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
+<code>http://www.w3.org/2000/svg</code> 在 &lt;output&gt;
+元素上的前缀：<output>未经测试</output>。<br />
 <code>http://www.w3.org/XML/1998/namespace</code> 在 &lt;output&gt;
-元素上的前缀： <output>未经测试</output>。<br />
-<code>http://www.w3.org/TR/html4/</code> 在 &lt;output&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
-<code>https://www.w3.org/1999/xlink</code> 在 &lt;output&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
-<code>http://www.w3.org/2000/svg</code> 在 &lt;svg&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
-<code>https://www.w3.org/1999/xlink</code> 在 &lt;svg&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
-<code>http://www.w3.org/XML/1998/namespace</code> 在 &lt;svg&gt; 元素上的前缀：
-<output>未经测试</output>。<br />
+元素上的前缀：<output>未经测试</output>。<br />
+<code>http://www.w3.org/TR/html4/</code> 在 &lt;output&gt;
+元素上的前缀：<output>未经测试</output>。<br />
+<code>https://www.w3.org/1999/xlink</code> 在 &lt;output&gt;
+元素上的前缀：<output>未经测试</output>。<br />
+<code>http://www.w3.org/2000/svg</code> 在 &lt;svg&gt;
+元素上的前缀：<output>未经测试</output>。<br />
+<code>https://www.w3.org/1999/xlink</code> 在 &lt;svg&gt;
+元素上的前缀：<output>未经测试</output>。<br />
+<code>http://www.w3.org/XML/1998/namespace</code> 在 &lt;svg&gt;
+元素上的前缀：<output>未经测试</output>。<br />
 <svg xmlns:t="http://www.w3.org/2000/svg" height="1"></svg>
 <button>点击这里查看结果</button>
 ```
