@@ -7,15 +7,15 @@ l10n:
 
 {{AddonSidebar}}
 
-为导航的各个阶段添加事件监听器。导航由浏览器中的一个框架从一个 URL 过渡到另一个 URL，通常是（但不总是）响应用户操作（例如用户点击链接或在地址栏中输入 URL）的行为。
+为导航的各个阶段添加事件监听器。一次导航是指浏览器中的某个帧从一个 URL 跳转到另一个 URL，通常（但不总是）是由于用户操作（如点击链接或在地址栏输入 URL）引起的。
 
-与 {{WebExtAPIRef("webRequest")}} API 相比：导航通常会导致浏览器发出网络请求，但 webRequest API 关注的是 HTTP 层的低级角度，而 webNavigation API 更关注浏览器 UI 本身的角度。
+与 {{WebExtAPIRef("webRequest")}} API 相比：导航通常会导致浏览器发起 Web 请求，但 webRequest API 关注的是 HTTP 层的底层视角，而 webNavigation API 更侧重于浏览器 UI 本身的视角。
 
-每个事件对应导航中的特定阶段。事件的顺序如下：
+每个事件对应导航中的其中一个特定阶段。事件顺序如下：
 
 ![主要流程和以下描述的附加流程的可视化。](we-flow.png)
 
-- 主要流程是：
+- 主流程为：
 
   - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
   - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
@@ -24,16 +24,16 @@ l10n:
 
 - 此外：
 
-  - 如果浏览器需要为导航创建一个新标签页或窗口（例如，因为用户在新标签页中打开了一个链接），则会在 `onBeforeNavigate` 之前触发 {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}。
-  - 如果页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新浏览器地址栏中显示的 URL，则会触发 {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}}。
-  - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生更改，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。
-  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} 可以在任何时候触发。
+  - 如果浏览器需要为导航创建新标签页或新窗口（例如，用户在新标签页中打开链接），则 {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} 会在 `onBeforeNavigate` 之前触发。
+  - 如果页面使用 [history API](/en-US/docs/Web/API/History_API) 更新了浏览器地址栏中的 URL，则会触发 {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}}。
+  - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生变化，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。
+  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} 可以在任何阶段触发。
 
 每次导航都是特定浏览器框架中的 URL 过渡。浏览器框架由标签页 ID 和框架 ID 标识。框架可以是标签页中的顶级浏览上下文，也可以是作为 [iframe](/zh-CN/docs/Web/HTML/Element/iframe) 实现的嵌套浏览上下文。
 
 每个事件的 `addListener()` 调用接受一个可选的过滤器参数。过滤器将指定一个或多个 URL 模式，然后仅当目标 URL 匹配其中一个模式时才会触发事件。
 
-`onCommitted` 事件监听器会传递两个附加属性：一个指示导航的原因（例如，因为用户点击了链接，或者因为用户选择了书签）的 {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}}，以及一个提供有关导航的更多信息的 {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}}。
+`onCommitted` 事件监听器额外接受两个属性：指示导航的原因（例如，因为用户点击了链接，或者因为用户选择了书签）的 {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}}，以及提供有关导航的更多信息的 {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}}。
 
 要使用此 API，你需要取得“webNavigation”[权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)。
 
@@ -56,9 +56,9 @@ l10n:
 - {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
   - : 当浏览器即将开始导航事件时触发。
 - {{WebExtAPIRef("webNavigation.onCommitted")}}
-  - : 当导航被提交时触发。至少部分新文档已从服务器接收，浏览器已决定切换到新文档。
+  - : 当导航被提交时触发。此时至少已经从服务器接收了部分的新文档，浏览器已决定切换到新文档。
 - {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : 当页面中触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。
+  - : 当页面触发 [DOMContentLoaded](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event) 事件时触发。
 - {{WebExtAPIRef("webNavigation.onCompleted")}}
   - : 当文档及其引用的资源完全加载并初始化时触发。这相当于 DOM 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件。
 - {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
