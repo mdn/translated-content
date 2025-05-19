@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-每个 CSS 声明都由一个属性或值对组成。属性值的具体形式因属性而异，可能为：单个整数、关键字、函数，或是不同元素的组合；部分值需带单位，而另一些则无需单位。所有 CSS 属性都接受 CSS 全局值。CSS 值与单位模块定义了 CSS 属性所接受的数据类型，包括各类值和单位。该模块还定义了 CSS 值定义语法（即形式化语法），用于规范所有 CSS 属性和函数的有效取值范围。
+每个 CSS 声明都由一个属性/值对组成。值的具体形式因属性而异，例如：单个整数、关键字、函数，或是不同元素的组合；部分值具有单位，而另一些则没有单位。所有属性都接受 CSS 全局值（CSS-wide value）。CSS 值和单位模块定义了 CSS 属性所接受的数据类型，包括各类值和单位。该模块还定义了 CSS 值定义语法（即形式语法），用于规范所有 CSS 属性和函数的有效取值范围。
 
 ## 参考
 
@@ -44,7 +44,7 @@ l10n:
 - {{cssxref("tan()")}}
 - {{cssxref("url()")}}
 
-规范中定义了包括 `calc-mix()`、`crossorigin()`、`first-valid()`、`if()`、`integrity()`、`progress()`、`random()`、`random-item()`、`referrerpolicy()`、`sibling-count()`、`sibling-index()`、`src()`、`type()` 和 `toggle()` 在内的多项函数，但这些功能目前尚未在浏览器中实现。
+规范中定义了包括 `calc-mix()`、`crossorigin()`、`first-valid()`、`if()`、`integrity()`、`progress()`、`random()`、`random-item()`、`referrerpolicy()`、`sibling-count()`、`sibling-index()`、`src()`、`type()` 和 `toggle()` 在内的额外函数，但这些函数目前尚未在浏览器中实现。
 
 ### 数据类型
 
@@ -140,7 +140,7 @@ l10n:
 - [`vw`](/zh-CN/docs/Web/CSS/length#vw)
 - [`x`](/zh-CN/docs/Web/CSS/resolution#x)
 
-[弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#flex_units)（`fr`）[容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#container_units)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）分别定义于 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 和 [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块。
+[弹性单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#弹性单位)（`fr`）和[容器单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#容器单位)（`cqb`、`cqh`、`cqi`、`cqmax`、`cqmin`、`cqw`）分别定义于 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout) 和 [CSS 条件规则](/zh-CN/docs/Web/CSS/CSS_conditional_rules)模块。
 
 #### 单位分类
 
@@ -154,7 +154,7 @@ l10n:
 - [物理单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#绝对长度单位)（`cm`、`in`、`mm`、`pc`、`pt`、`Q`）
 - [相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)（`cap`、`ch`、`em`、`ex`、`ic`、`lh`、`rem`、`rlh`、`vb`、`vh`、`vi`、`vmax`、`vmin`、`vw`）
 - [分辨率单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#分辨率单位)（`dpcm`、`dpi` , `dppx`、`x`）
-- [根字号相关长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#根字号相关长度单位)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
+- [根字体相对长度单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#根字号相关长度单位)（`rcap`、`rch`、`rem`、`rex`、`ric`、`rlh`）
 - [小视口百分比单位](/zh-CN/docs/Web/CSS/length#小视口单位)（`svb`、`svh`、`svi`、`svmax`、`svmin`、`svw`）
 - [时间单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#时间单位)（`ms`、`s`）
 - [视口单位](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types#视口单位)（`dvh`、`dvw`、`lvh`、`lvw`、`svh`、`svw`、`vb` , `vh`、`vi` , `vmax`、`vmin`、`vw`）
@@ -163,7 +163,7 @@ l10n:
 ### 关键概念
 
 - {{glossary("Advance measure", "步进尺寸")}}
-- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法_最小值最大值)
+- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法_minmax)
 - [组件值组合符](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#组件值组合符)
 - [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css_全局关键字)
 - {{glossary("Device pixel", "设备像素")}}
