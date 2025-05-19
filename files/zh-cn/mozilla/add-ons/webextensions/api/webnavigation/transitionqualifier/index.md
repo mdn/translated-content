@@ -2,24 +2,24 @@
 title: webNavigation.TransitionQualifier
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionQualifier
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{AddonSidebar}}
 
-有关过渡的额外信息。请注意，这里的许多值目前在 Firefox 中不受支持：详情请参阅[浏览器兼容性表](#browser_compatibility)。
+有关过渡的额外信息。请注意，这里的许多值目前在 Firefox 中不受支持，详情请参见[浏览器兼容性表](#浏览器兼容性)。
 
 ## 类型
 
 此类型的值是字符串。可能的值包括：
 
-- "client_redirect"
-  - : 由页面中运行的 JavaScript 或页面 [meta](/zh-CN/docs/Web/HTML/Element/meta) 标签中的 "refresh" 指令引起的重定向。
-- "server_redirect"
-  - : 由服务器发送的 [3XX HTTP 状态码](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection) 引起的重定向。
-- "forward_back"
+- `"client_redirect"`
+  - : 由页面中运行的 JavaScript 或页面 [meta](/zh-CN/docs/Web/HTML/Element/meta) 标签中的“refresh”指令引起的重定向。
+- `"server_redirect"`
+  - : 由服务器发送的 [HTTP 3XX 状态码](https://zh.wikipedia.org/wiki/HTTP状态码#3xx重定向)引起的重定向。
+- `"forward_back"`
   - : 用户使用前进或后退按钮触发的导航。
-- "from_address_bar"
+- `"from_address_bar"`
   - : 用户从地址栏触发的导航。
 
 ## 浏览器兼容性
