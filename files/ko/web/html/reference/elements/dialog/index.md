@@ -17,7 +17,8 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
 
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-> [!WARNING] > `tabindex` 특성은 `<dialog>` 요소에 사용하면 안 됩니다. [사용 일람](#사용_일람)을 참고하세요.
+> [!WARNING]
+> `tabindex` 특성은 `<dialog>` 요소에 사용하면 안 됩니다. [사용 일람](#사용_일람)을 참고하세요.
 
 - `closedby`
 
@@ -46,7 +47,8 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
   - : 대화 상자가 활성화되어 상호 작용할 수 있음을 나타냅니다. `open` 특성이 설정되지 않으면 대화 상자가 사용자에게 표시되지 않습니다.
     대화 상자를 렌더링하려면 `open` 특성 대신 `.show()` 또는 `.showModal()` 메서드를 사용하는 것이 좋습니다. `open` 특성을 사용하여 `<dialog>`를 열면 비모달 상태가 됩니다.
 
-  > [!NOTE] > `open` 특성의 존재 여부를 토글하여 비모달 대화 상자의 열림 및 닫힘 상태를 전환할 수 있지만, 이 접근 방식은 권장되지 않습니다. 자세한 내용은 {{domxref("HTMLDialogElement.open", "open")}}을 참조하세요.
+  > [!NOTE]
+  > `open` 특성의 존재 여부를 토글하여 비모달 대화 상자의 열림 및 닫힘 상태를 전환할 수 있지만, 이 접근 방식은 권장되지 않습니다. 자세한 내용은 {{domxref("HTMLDialogElement.open", "open")}}을 참조하세요.
 
 ## 사용 일람
 
@@ -411,7 +413,8 @@ closeBtns.forEach((btn) => {
 - `display`를 `none`에서 `block` (또는 다른 보이는 `display` 값)으로 애니메이션을 적용할 때, 애니메이션 시작 시점인 `0%`에서 값이 `block`으로 전환되어 애니메이션 전체 기간 동안 요소가 보이게 됩니다.
 - `display`를 `block`(또는 다른 보이는 `display` 값)에서 `none`으로 애니메이션을 적용할 때, 애니메이션 종료 시점인 `100%`에서 값이 `none`으로 전환되어 애니메이션 전체 기간 동안 요소가 보이게 됩니다.
 
-> [!NOTE] > [CSS 전환](/ko/docs/Web/CSS/CSS_transitions)을 사용하여 애니메이션을 적용할 때는 위의 동작을 활성화하기 위해 [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 를 설정해야 합니다. 이 동작은 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations)으로 애니메이션을 적용할 때 기본적으로 사용할 수 있으므로 별도의 추가 작업이 필요하지 않습니다.
+> [!NOTE]
+> [CSS 전환](/ko/docs/Web/CSS/CSS_transitions)을 사용하여 애니메이션을 적용할 때는 위의 동작을 활성화하기 위해 [`transition-behavior: allow-discrete`](/ko/docs/Web/CSS/transition-behavior) 를 설정해야 합니다. 이 동작은 [CSS 애니메이션](/ko/docs/Web/CSS/CSS_animations)으로 애니메이션을 적용할 때 기본적으로 사용할 수 있으므로 별도의 추가 작업이 필요하지 않습니다.
 
 #### 대화 상자 요소 전환하기
 
@@ -502,7 +505,8 @@ dialog:open::backdrop {
 }
 ```
 
-> [!NOTE] > {{cssxref(":open")}} 의사 클래스를 지원하지 않는 브라우저에서는 `dialog[open]` 특성 선택자를 사용하여 열린 상태의 `<dialog>` 요소를 스타일링할 수 있습니다.
+> [!NOTE]
+> {{cssxref(":open")}} 의사 클래스를 지원하지 않는 브라우저에서는 `dialog[open]` 특성 선택자를 사용하여 열린 상태의 `<dialog>` 요소를 스타일링할 수 있습니다.
 
 ##### JavaScript
 
@@ -528,7 +532,8 @@ closeBtn.addEventListener("click", () => {
 
 {{ EmbedLiveSample("대화_상자_요소_전환하기", "100%", "200") }}
 
-> [!NOTE] > `<dialog>`는 표시될 때마다 `display: none`에서 `display: block`으로 변경되므로, 대화 상자는 전환이 시작될 때마다 `@starting-style` 스타일에서 `dialog:open` 스타일로 전환됩니다. `<dialog>`가 닫히면 `dialog:open` 상태에서 기본 `dialog` 상태로 전환됩니다.
+> [!NOTE]
+> `<dialog>`는 표시될 때마다 `display: none`에서 `display: block`으로 변경되므로, 대화 상자는 전환이 시작될 때마다 `@starting-style` 스타일에서 `dialog:open` 스타일로 전환됩니다. `<dialog>`가 닫히면 `dialog:open` 상태에서 기본 `dialog` 상태로 전환됩니다.
 >
 > 이러한 경우에는 진입 및 퇴장 시 스타일 전환이 다를 수 있습니다. [시작 스타일 적용 시점 시연](/ko/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used) 예제를 참조하세요.
 
