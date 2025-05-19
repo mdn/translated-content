@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef}}
 
-在瀏覽器中，**`document.defaultView`** 回傳與{{Glossary("Browsing_context", "文件")}}相關聯的 {{domxref("Window", "window")}} 物件，若無可用的物件則回傳 `null`。
+在瀏覽器中，**`document.defaultView`** 回傳與{{Glossary("Browsing_context", "文件")}}相關聯的 {{domxref("Window", "window")}} 物件，若無則為 `null`。
 
 此屬性為唯讀。
 
