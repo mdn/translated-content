@@ -299,7 +299,7 @@ option:checked {
 
 ピッカーを開いて選択すると、現在選択されている `<option>` の行頭にチェックマークが表示されます。このチェックマークは {{cssxref("::checkmark")}} 疑似要素でターゲットにできます。例えば、このチェックマークを（`display: none` などを用いて）非表示にしたいことがあるでしょう　。
 
-また、より面白いこともできます。前述のように `<option>` 要素はフレックスボックスで横並びにされており、ファイルアイテムは行頭に揃っています。以下のルールでは、チェックマークの {{cssxref("order")}} を `0` より大きい値に設定し、`auto` の {{cssxref("margin-left")}} で行末に移動します（[alignment と auto のマージン](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_および_auto_のマージン) 参照）。
+また、より面白いこともできます。前述のように `<option>` 要素はフレックスボックスで横並びにされており、フレックスアイテムは行頭に揃っています。以下のルールでは、チェックマークの {{cssxref("order")}} を `0` より大きい値に設定し、`auto` の {{cssxref("margin-left")}} で行末に移動します（[alignment と auto のマージン](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox#alignment_および_auto_のマージン) 参照）。
 
 最後に、{{cssxref("content")}} プロパティの値を別の絵文字に設定し、表示するアイコンを変更します。
 
