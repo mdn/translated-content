@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-获取有关特定框架的信息。一个框架可以是标签页中的顶层框架，也可以是嵌套的 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，其唯一标识由标签页 ID 和框架 ID 一起确定。
+获取有关特定框架的信息。一个框架可以是标签页中的顶层框架，也可以是嵌套的 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)，其唯一标识由标签页 ID 和框架 ID 一起确定。
 
 这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
