@@ -111,8 +111,8 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{Compat}}
 
-## 参考
+## 参见
 
-- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/CSS/@media/")}}
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
+- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) on CSS-Tricks (2019)
+- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) on WebKit Blog (2017)
