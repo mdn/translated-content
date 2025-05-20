@@ -324,7 +324,7 @@ jsCloseBtn.addEventListener("click", (e) => {
 <dialog closedby="closerequest">
   <h2><code>closedby="closerequest"</code></h2>
   <p>"닫기" 버튼 또는 Esc 키를 사용하여 닫을 수 있습니다.</p>
-  <button class="close">Close</button>
+  <button class="close">닫기</button>
 </dialog>
 
 <dialog closedby="any">
