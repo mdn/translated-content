@@ -85,7 +85,7 @@ fetch("simple.wasm")
 
 ### 第二种重载示例
 
-下面的例子（在 GitHub 上查看我们的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 示例，也[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)）使用 [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) 方法编译已加载的 simple.wasm 字节码，然后使用 {{domxref("Worker.postMessage", "postMessage()")}} 将其发送到 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
+下面的例子（在 GitHub 上查看我们的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)）使用 [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) 方法编译已加载的 simple.wasm 字节码，然后使用 {{domxref("Worker.postMessage", "postMessage()")}} 将其发送到 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ```js
 const worker = new Worker("wasm_worker.js");
