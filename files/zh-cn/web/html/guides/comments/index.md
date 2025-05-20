@@ -1,6 +1,6 @@
 ---
 title: 使用 HTML 注释 <!-- … -->
-short-title: Comments
+short-title: 注释
 slug: Web/HTML/Guides/Comments
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
