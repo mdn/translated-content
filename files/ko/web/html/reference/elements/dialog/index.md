@@ -24,9 +24,9 @@ HTML `<dialog>` 요소는 모달 및 비모달 대화 상자를 만드는 데 �
 
   - : `<dialog>` 요소를 닫는 데 사용할 수 있는 사용자 작업 유형을 지정합니다. 이 특성은 대화 상자를 닫을 수 있는 세 가지 방법을 구분합니다.
 
-    - _간편 닫기 사용자 작업_. 사용자가 대화 상자 외부를 클릭하거나 탭할 때 `<dialog>`가 닫힙니다. 이는 ["자동" 상태 팝오버의 "간편 닫기" 동작](/ko/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss)과 동일합니다.
-    - _플랫폼별 사용자 작업_. 데스크톱 플랫폼에서 <kbd>Esc</kbd> 키를 누르거나 모바일 플랫폼에서 "뒤로 가기" 또는 "닫기" 제스처와 같은 동작입니다.
-    - _개발자가 지정한 메커니즘_. {{domxref("HTMLDialogElement.close()")}}를 호출하는 [`click`](/ko/docs/Web/API/Element/click_event) 핸들러가 있는 {{htmlelement("button")}} 또는 {{htmlelement("form")}} 제출과 같은 메커니즘입니다.
+    - 간편 닫기 사용자 작업. 사용자가 대화 상자 외부를 클릭하거나 탭할 때 `<dialog>`가 닫힙니다. 이는 ["자동" 상태 팝오버의 "간편 닫기" 동작](/ko/docs/Web/API/Popover_API/Using#auto_state_and_light_dismiss)과 동일합니다.
+    - 플랫폼별 사용자 작업. 데스크톱 플랫폼에서 <kbd>Esc</kbd> 키를 누르거나 모바일 플랫폼에서 "뒤로 가기" 또는 "닫기" 제스처와 같은 동작입니다.
+    - 개발자가 지정한 메커니즘. {{domxref("HTMLDialogElement.close()")}}를 호출하는 [`click`](/ko/docs/Web/API/Element/click_event) 핸들러가 있는 {{htmlelement("button")}} 또는 {{htmlelement("form")}} 제출과 같은 메커니즘입니다.
 
     가능한 값은 다음과 같습니다.
 
@@ -292,7 +292,7 @@ jsCloseBtn.addEventListener("click", (e) => {
 
 {{EmbedLiveSample("Closing a dialog with a required form input", "100%", 300)}}
 
-결과에서 볼 수 있듯이 _일반 닫기_ 버튼으로는 대화 상자를 닫을 수 없습니다. 그러나 _취소_ 버튼에 `formnovalidate` 특성을 사용하여 폼 유효성 검사를 우회하면 대화 상자를 닫을 수 있습니다. 프로그래밍 방식으로 `dialog.close()`를 사용해도 이러한 대화 상자를 닫을 수 있습니다.
+결과에서 볼 수 있듯이 일반 닫기 버튼으로는 대화 상자를 닫을 수 없습니다. 그러나 취소 버튼에 `formnovalidate` 특성을 사용하여 폼 유효성 검사를 우회하면 대화 상자를 닫을 수 있습니다. 프로그래밍 방식으로 `dialog.close()`를 사용해도 이러한 대화 상자를 닫을 수 있습니다.
 
 ### 다양한 closedby 동작 비교
 
