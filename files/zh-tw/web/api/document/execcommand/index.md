@@ -13,7 +13,7 @@ l10n:
 
 大多數命令會影響文件的[選取範圍](/zh-TW/docs/Web/API/Selection)。例如，一些命令（粗體、斜體等）會格式化當前選取的文字，而其他命令則刪除選取範圍、插入新元素（取代選取範圍）或影響整行（縮排）。只有當前處於活動狀態的可編輯元素可以被修改，但某些命令（例如 `copy`）可以在沒有可編輯元素的情況下運作。
 
-> **備註：** `execCommand()` 所執行的修改可能會或可能不會觸發 {{domxref("Element/beforeinput_event", "beforeinput")}} 和 {{domxref("Element/input_event", "input")}} 事件，這取決於瀏覽器和配置。如果觸發，這些事件的處理器會在 `execCommand()` 回傳之前執行。作者需要注意這類遞迴呼叫，特別是在回應這些事件時呼叫 `execCommand()` 的情況下。。從 Firefox 82 開始，巢狀的 `execCommand()` 呼叫將始終失敗，詳見 [bug 1634262](https://bugzil.la/1634262)。
+> **備註：** `execCommand()` 所執行的修改可能會或可能不會觸發 {{domxref("Element/beforeinput_event", "beforeinput")}} 和 {{domxref("Element/input_event", "input")}} 事件，這取決於瀏覽器和配置。如果觸發，這些事件的處理器會在 `execCommand()` 回傳之前執行。作者需要注意這類遞迴呼叫，特別是在回應這些事件時呼叫 `execCommand()` 的情況下。從 Firefox 82 開始，巢狀的 `execCommand()` 呼叫將始終失敗，詳見 [bug 1634262](https://bugzil.la/1634262)。
 
 ## 語法
 
