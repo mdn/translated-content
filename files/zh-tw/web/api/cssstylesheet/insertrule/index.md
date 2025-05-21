@@ -40,7 +40,7 @@ insertRule(rule, index)
 - `IndexSizeError` {{domxref("DOMException")}}
   - : 若 `index` 大於 `{{domxref("CSSRuleList", "", "", "1")}}.length`，則會拋出此錯誤。
 - `HierarchyRequestError` {{domxref("DOMException")}}
-  - : 若因某些 CSS 限制而無法在索引 0 插入 `rule`，則會拋出此錯誤。
+  - : 若因某些 CSS 限制而無法在索引 `0` 插入 `rule`，則會拋出此錯誤。
 - `SyntaxError` {{domxref("DOMException")}}
   - : 若 `rule` 參數中包含超過一個規則，則會拋出此錯誤。
 - `HierarchyRequestError` {{domxref("DOMException")}}
