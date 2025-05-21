@@ -118,7 +118,7 @@ onmessage = (e) => {
 
 ### 启用 JavaScript 内置和全局字符串导入
 
-这个例子在用 `instantiate()` 编译和实例化 Wasm 模块时，启用 JavaScript 字符串内置和导入的全局字符串常量，然后运行导出的 `main()` 函数（输出 `"hello world!"`）。[查看在线示例](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/)。
+这个示例在用 `instantiate()` 编译和实例化 Wasm 模块时，启用 JavaScript 字符串内置和导入的全局字符串常量，然后运行导出的 `main()` 函数（输出 `"hello world!"` 到控制台）。[查看在线示例](https://mdn.github.io/webassembly-examples/js-builtin-examples/instantiate/)。
 
 ```js
 const importObject = {
