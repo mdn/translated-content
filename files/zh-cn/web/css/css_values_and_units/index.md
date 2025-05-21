@@ -163,7 +163,7 @@ l10n:
 ### 关键概念
 
 - {{glossary("Advance measure", "步进尺寸")}}
-- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法_minmax)
+- [方括号表示法](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#方括号表示法（minmax）)
 - [组件值组合符](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax#组件值组合符)
 - [CSS 全局关键字](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types#css_全局关键字)
 - {{glossary("Device pixel", "设备像素")}}
