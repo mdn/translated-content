@@ -8,7 +8,7 @@ l10n:
 **`WebAssembly.instantiate()`** 函数允许你编译和实例化 WebAssembly 代码。它有两个重载方式：
 
 - 主要的重载方式使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}} 格式的 WebAssembly 二进制代码，并在一个步骤中执行编译和实例化。返回的 `Promise` 兑现的是一个已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 和该模块的第一个 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance)。
-- 次要的重载方式使用已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 兑现的是该 `Module` 的 `Instance`。如果 `Module` 已经被编译了, 那么这种重载方式是有用的。
+- 次要的重载方式使用已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 兑现的是该 `Module` 的 `Instance`。如果 `Module` 已经被编译了，那么这种重载方式是有用的。
 
 > [!WARNING]
 > 此方法不是获取和实例化 Wasm 模块的最高效的方法。如果可能的话，你应该改用较新的 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法，该方法在一个步骤中直接从原始字节码获取、编译和实例化模块，因此不需要转换为 {{jsxref("ArrayBuffer")}}。
@@ -85,7 +85,7 @@ fetch("simple.wasm")
 
 ### 第二种重载示例
 
-下面的例子（在 GitHub 上查看我们的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)）使用 [`WebAssembly.compileStreaming()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) 方法编译已加载的 simple.wasm 字节码，然后使用 {{domxref("Worker.postMessage", "postMessage()")}} 将其发送到 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
+下面的例子（在 GitHub 上查看我们的 [index-compile.html](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/index-compile.html) 示例，也可[在线查看](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)）使用 [`WebAssembly.compileStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/compileStreaming_static) 方法编译已加载的 simple.wasm 字节码，然后使用 {{domxref("Worker.postMessage", "postMessage()")}} 将其发送到 [worker](/zh-CN/docs/Web/API/Web_Workers_API)。
 
 ```js
 const worker = new Worker("wasm_worker.js");
