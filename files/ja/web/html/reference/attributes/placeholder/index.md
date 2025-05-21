@@ -1,16 +1,16 @@
 ---
 title: "HTML 属性: placeholder"
+short-title: placeholder
 slug: Web/HTML/Reference/Attributes/placeholder
-original_slug: Web/HTML/Attributes/placeholder
 l10n:
-  sourceCommit: aee2bd82de11cb7331134e48e8bd548bbedafcc5
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 **`placeholder`** 属性は、フォームコントロールに値が無いときにコントロールに表示するテキストを定義します。プレースホルダーテキストは、ユーザーにコントロールに入力するべきデータの種類に関する短いヒントを提供するべきです。
 
-効果的なプレースホルダーテキストは、説明や質問ではなく、期待するデータの種類のヒントとなる単語や短いフレーズです。プレースホルダーを {{HTMLElement("label")}} のかわりに用いてはいけません。プレースホルダーはフォームコントロールの値が空でないときは見えないので、`<label>` のかわりに `placeholder` に質問を書くと使いやすさとアクセシビリティを損ねます。
+効果的なプレースホルダーテキストは、説明や質問ではなく、期待するデータの種類のヒントとなる単語や短いフレーズです。プレースホルダーを {{HTMLElement("label")}} のかわりに用いてはいけません。プレースホルダーはフォームコントロールの値が空でないときは見えないので、`<label>` の代わりに `placeholder` に質問を書くと、使いやすさとアクセシビリティを損ねます。
 
 `placeholder` 属性は、入力の種類 `{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}` で用いることができます。`{{HTMLElement("textarea")}}` 要素でも用いることができます。以下の[例](#例)では、入力フィールドで期待する形式を示すために `placeholder` 属性を用いています。
 

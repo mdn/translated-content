@@ -2,9 +2,8 @@
 title: "HTML 属性: minlength"
 short-title: minlength
 slug: Web/HTML/Reference/Attributes/minlength
-original_slug: Web/HTML/Attributes/minlength
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -20,17 +19,17 @@ l10n:
 {{InteractiveExample("HTML Demo: minlength", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="name">Product name:</label>
+<label for="name">製品名:</label>
 <input
   id="name"
   name="name"
   type="text"
-  value="Shampoo"
+  value="シャンプー"
   minlength="3"
   maxlength="20"
   required />
 
-<label for="description">Product description:</label>
+<label for="description">製品の説明:</label>
 <textarea
   id="description"
   name="description"
@@ -56,11 +55,11 @@ textarea:valid {
 `minlength="5"` を追加すると、値は空か 5 文字以上でないと有効にはならなくなります。
 
 ```html
-<label for="fruit">Enter a fruit name that is at least 5 letters long</label>
+<label for="fruit">5 文字以上の果物の名前を入力してください</label>
 <input type="text" minlength="5" id="fruit" />
 ```
 
-擬似クラスを使用すると、要素を値が有効かどうかによってスタイル付けすることができます。この値は null （空欄）または 5 文字以上であれば有効になります。*ライム色*は無効であり、_レモン色は有効です_。
+擬似クラスを使用すると、要素を値が有効かどうかによってスタイル付けすることができます。この値は null （空欄）または 5 文字以上であれば有効になります。「ライム」は無効であり、「さくらんぼ」は有効です。
 
 ```css
 input {
