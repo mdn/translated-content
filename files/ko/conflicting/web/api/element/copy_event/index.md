@@ -1,6 +1,7 @@
 ---
 title: "Window: copy 이벤트"
-slug: Web/API/Window/copy_event
+slug: conflicting/Web/API/Element/copy_event
+original_slug: Web/API/Window/copy_event
 ---
 
 {{APIRef}}
