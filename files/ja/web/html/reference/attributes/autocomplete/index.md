@@ -2,27 +2,26 @@
 title: "HTML 属性: autocomplete"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
-original_slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: 0a406fde67d297e7d2771e4ba239f545eee46d07
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
+HTML の `autocomplete` 属性により、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
 
 入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。
 
-{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: autocomplete", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="firstName">First Name:</label>
-<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
-
-<label for="lastName">Last Name:</label>
+<label for="lastName">苗字:</label>
 <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
 
-<label for="email">Email:</label>
+<label for="firstName">名前:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="email">メールアドレス:</label>
 <input name="email" id="email" type="email" autocomplete="off" />
 ```
 
@@ -44,7 +43,7 @@ label {
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、要素の [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された `id` に一致する `<form>` （存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、 {{HTMLElement("form")}} 要素のうち `id` が [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された値に等しい要素（存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
 
 > [!NOTE]
 > 自動入力を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
@@ -75,7 +74,7 @@ label {
   - : ブラウザーはこのフィールドの値を自動的に入力または選択することが許可されていません。文書やアプリケーションが独自の自動入力機能を提供していたり、セキュリティ上の理由でフィールドの値を自動的に入力しないよう要求していたりする可能性はあります。
 
     > [!NOTE]
-    > ほとんどの現行ブラウザーでは `autocomplete` 属性を `"off"` に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。[ログインフィールドの自動入力の管理](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#autocomplete_属性とログイン欄)をご覧ください。
+    > ほとんどの現行ブラウザーでは `autocomplete` 属性を `"off"` に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。[ログインフィールドでの自動入力の管理](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#ログインフィールドでの自動入力の管理)をご覧ください。
 
 - `on`
 
@@ -253,14 +252,14 @@ label {
 
 {{htmlelement("input")}} と {{htmlelement("textarea")}} では、 `webauthn` トークンを最後に含めることで、ユーザーがコントロールとやりとりする際に、ユーザーエージェントが公開鍵認証情報を表示する必要があることを示すことができます。
 
-- `webauthn` {{experimental_inline}}
+- `webauthn`
   - : [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) によって、条件付きの {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出し（すなわち、 `mediation: 'conditional'` を含む呼び出し）によってリクエストされた、生成されたパスキー。詳しくは [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) を参照してください。
 
 ## 例
 
 ```html
 <div>
-  <label for="cc-number">Enter your credit card number</label>
+  <label for="cc-number">クレジットカード番号を入力してください</label>
   <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```

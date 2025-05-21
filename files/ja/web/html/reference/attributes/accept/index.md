@@ -1,23 +1,23 @@
 ---
 title: "HTML 属性: accept"
+short-title: accept
 slug: Web/HTML/Reference/Attributes/accept
-original_slug: Web/HTML/Attributes/accept
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 **`accept`** 属性は、値としてカンマ区切りでファイル種別または[固有ファイル種別指定子](#unique_file_type_specifiers)を取り、どのファイル種別を受け入れるかを記述します。
 
-{{InteractiveExample("HTML Demo: accept", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: accept", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="movie">Choose a movie to upload:</label>
+<label for="movie">アップロードする映像を選択してください:</label>
 
 <input type="file" id="movie" name="movie" accept="video/*" />
 
-<label for="poster">Choose a poster:</label>
+<label for="poster">ポスターを選択してください:</label>
 
 <input type="file" id="poster" name="poster" accept="image/png, image/jpeg" />
 ```
@@ -56,7 +56,7 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
 <input type="file" id="imageFile" accept="image/*" />
 ```
 
-`accept` 属性は、選択されたファイルの種別を検証するものではありません。これはブラウザーがユーザーに対して正しいファイル種別を選択できるようにするためのガイドをするためのヒントを提供するだけです。ユーザーがファイルセレクターのオプションを切り替え、これを上書きして任意のファイルを選択し、不正なファイル種別を選択することは (ほとんどの場合) 可能です。
+`accept` 属性は、選択されたファイルの種別を検証するものではありません。これはブラウザーがユーザーに対して正しいファイル種別を選択できるようにするためのガイドをするためのヒントを提供するだけです。ユーザーがファイルセレクターのオプションを切り替え、これを上書きして任意のファイルを選択し、不正なファイル種別を選択することは（ほとんどの場合）可能です。
 
 このため、期待される要件をサーバー側で検証するようにしてください。
 
@@ -66,15 +66,15 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
 
 ```html
 <p>
-  <label for="soundFile">Select an audio file:</label>
+  <label for="soundFile">音声ファイルを選んでください:</label>
   <input type="file" id="soundFile" accept="audio/*" />
 </p>
 <p>
-  <label for="videoFile">Select a video file:</label>
+  <label for="videoFile">動画ファイルを選んでください:</label>
   <input type="file" id="videoFile" accept="video/*" />
 </p>
 <p>
-  <label for="imageFile">Select some images:</label>
+  <label for="imageFile">画像をいくつか選んでください:</label>
   <input type="file" id="imageFile" accept="image/*" multiple />
 </p>
 ```
@@ -106,11 +106,11 @@ accept プロパティは {{HTMLElement("input/file", "file")}} 型の {{htmlele
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="file">Choose file to upload</label>
+    <label for="file">アップロードするファイルを選択してください</label>
     <input type="file" id="file" name="file" multiple />
   </div>
   <div>
-    <button>Submit</button>
+    <button>送信</button>
   </div>
 </form>
 ```
@@ -130,7 +130,7 @@ div {
 
 ユーザーの端末やオペレーティングシステムが何であろうと、ファイル入力には、ユーザーがファイルを選択するためのファイルピッカーダイアログを開くボタンが用意されす。
 
-上記のように [`multiple`](multiple) 属性を含めることで、複数のファイルを一度に選択できるようになります。ユーザーは、選択したプラットフォームが許す任意の方法でファイルピッカーから複数のファイルを選択することができます (例えば、<kbd>Shift</kbd> キーまたは <kbd>Control</kbd> キーを押しながらクリックするなど)。 `<input>` ごとに 1 つのファイルのみを選択させたい場合は、 `multiple` 属性を省略してください。
+上記のように [`multiple`](/ja/docs/Web/HTML/Reference/Elements/input#multiple) 属性を含めることで、複数のファイルを一度に選択できるようになります。ユーザーは、選択したプラットフォームが許す任意の方法でファイルピッカーから複数のファイルを選択することができます（例えば、 <kbd>Shift</kbd> キーまたは <kbd>Control</kbd> キーを押しながらクリックするなど）。 `<input>` ごとに 1 つのファイルのみを選択させたい場合は、 `multiple` 属性を省略してください。
 
 ### 受け付けるファイル種別の制限
 
@@ -148,7 +148,7 @@ div {
 ```html
 <form method="post" enctype="multipart/form-data">
   <div>
-    <label for="profile_pic">Choose file to upload</label>
+    <label for="profile_pic">アップロードするファイルを選んでください</label>
     <input
       type="file"
       id="profile_pic"
@@ -156,7 +156,7 @@ div {
       accept=".jpg, .jpeg, .png" />
   </div>
   <div>
-    <button>Submit</button>
+    <button>送信</button>
   </div>
 </form>
 ```

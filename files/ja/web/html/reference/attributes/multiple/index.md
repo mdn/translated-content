@@ -2,9 +2,8 @@
 title: "HTML 属性: multiple"
 short-title: multiple
 slug: Web/HTML/Reference/Attributes/multiple
-original_slug: Web/HTML/Attributes/multiple
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,20 +13,20 @@ l10n:
 {{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="recipients">Where should we send the receipt?</label>
+<label for="recipients">領収書の送り先は？</label>
 <input id="recipients" name="recipients" type="email" multiple />
 
-<label for="shakes">Which shakes would you like to order?</label>
+<label for="shakes">どのシェイクをご注文されますか？</label>
 <select id="shakes" name="shakes" multiple>
-  <option>Vanilla Shake</option>
-  <option>Strawberry Shake</option>
-  <option>Chocolate Shake</option>
+  <option>バニラシェイク</option>
+  <option>ストロベリーシェイク</option>
+  <option>チョコレートシェイク</option>
 </select>
 
-<label for="payment">How would you like to pay?</label>
+<label for="payment">支払方法は？</label>
 <select id="payment" name="payment">
-  <option>Credit card</option>
-  <option>Bank Transfer</option>
+  <option>クレジットカード</option>
+  <option>銀行振り込み</option>
 </select>
 ```
 
@@ -83,7 +82,7 @@ input:invalid {
 
 `multiple` を指定すると、ほとんどのブラウザーでは 1 行のドロップダウンではなく、スクロールするリストボックスが表示されます。
 
-## アクセシビリティ
+## アクセシビリティの考慮
 
 ユーザーがフォームに記入する方法を理解し、個々のフォームコントロールを使用するための指示を提供してください。入力が必須であるか任意であるか、データの書式、その他の関連する情報です。 `multiple` 属性を使用する場合は、ユーザーに複数の値が許可されていることを知らせ、「複数のメールアドレスをカンマ区切りで入力してください」などのように、複数の値を入力する方法を指示してください。
 
@@ -131,7 +130,7 @@ input:invalid {
 
 `multiple` が {{HTMLElement("input/file", "file")}} 入力型に設定されている場合、1 つ以上のファイルを選択することができます。
 
-```html
+```html-nolint
 <form method="post" enctype="multipart/form-data">
   <p>
     <label for="uploads">アップロードする画像を選択してください: </label>
@@ -143,9 +142,7 @@ input:invalid {
       multiple />
   </p>
   <p>
-    <label for="text"
-      >アップロードするテキストファイルを選択してください:
-    </label>
+    <label for="text">アップロードするテキストファイルを選択してください: </label>
     <input type="file" id="text" name="text" accept=".txt" />
   </p>
   <p>
@@ -198,10 +195,10 @@ input:invalid {
 
 {{EmbedLiveSample("select", 600, 120) }}
 
-2 つのフォームコントロール間の外観の違いに注意してください。
+2 つのフォームコントロールの外観の違いに注意してください。
 
 ```css
-/* この CSS のコメントを解除して、マルチプルがシングルと同じ高さになるようにします。 */
+/* この CSS のコメントを解除すると、複数選択が単一選択と同じ高さになるようにします。 */
 
 /*
 select[multiple] {

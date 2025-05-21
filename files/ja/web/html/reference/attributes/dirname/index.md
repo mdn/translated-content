@@ -1,9 +1,9 @@
 ---
 title: "HTML 属性: dirname"
+short-title: dirname
 slug: Web/HTML/Reference/Attributes/dirname
-original_slug: Web/HTML/Attributes/dirname
 l10n:
-  sourceCommit: 62b2885cf645395c39081f8ffa8f6023d7d1bc0b
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,11 +14,10 @@ l10n:
 
 ## 使用法のメモ
 
-`dirname` 属性はすべての {{htmlelement("textarea")}} 要素、および種類が {{htmlelement("input/text", "text")}}、{{htmlelement("input/search", "search")}}、{{htmlelement("input/tel", "tel")}}、{{htmlelement("input/url", "url")}}、{{htmlelement("input/email", "email")}} のいずれかであるすべての {{htmlelement("input")}} 要素で用いることができます。
+`dirname` 属性はすべての {{htmlelement("textarea")}} 要素、およびすべての {{htmlelement("input")}} 要素のうち、種類が {{htmlelement("input/hidden", "hidden")}}, {{htmlelement("input/text", "text")}}, {{htmlelement("input/search", "search")}}, {{htmlelement("input/tel", "tel")}}, {{htmlelement("input/url", "url")}}, {{htmlelement("input/email", "email")}}, {{htmlelement("input/password", "password")}}, {{htmlelement("input/submit", "submit")}}, {{htmlelement("input/reset", "reset")}}, {{htmlelement("input/button", "button")}} のいずれかの型であるもので用いることができます。
 
 送信されるデータの形式は `{dirname_value}={direction}` です。`{dirname_value}` は `dirname` 属性の値に、`{direction}` はテキストの方向になります。
-たとえば、ユーザーが属性 `name="comment"` および `dirname="comment-direction"` を持つ要素に「Hello」を入力した場合、`GET` リクエストでフォームを送信する際の URL エンコードされたデータは `comment=Hello&comment-direction=ltr` となるでしょう。
-
+たとえば、ユーザーが属性 `name="comment"` および `dirname="comment-direction"` を持つ要素に "Hello" を入力した場合、`GET` リクエストでフォームを送信する際の URL エンコードされたデータは `comment=Hello&comment-direction=ltr` となるでしょう。
 方向は、以下のいずれかです。
 
 - `rtl`
@@ -26,7 +25,7 @@ l10n:
 - `ltr`
   - : ユーザーが入力したテキストを書く方向は左から右です。
 
-テキストの方向が指定されていない場合は、ユーザーエージェントはフォームが入っている親要素のテキストの方向を用います。それも指定されていない場合は、ユーザーエージェントのデフォルトのテキストの方向を用います。
+テキストの方向が指定されていない場合は、ユーザーエージェントはフォームが入っている親要素のテキストの方向を用います。それも指定されていない場合は、ユーザーエージェントの既定のテキストの方向を用います。
 
 ## 例
 
