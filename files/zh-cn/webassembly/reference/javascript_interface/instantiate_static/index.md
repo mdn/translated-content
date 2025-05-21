@@ -2,7 +2,7 @@
 title: WebAssembly.instantiate()
 slug: WebAssembly/Reference/JavaScript_interface/instantiate_static
 l10n:
-  sourceCommit: c51a62ab42cd27f23c2bde769d716c37873e1b24
+  sourceCommit: 1c0262ad5b8f30779c90fc8527785bd45748c331
 ---
 
 **`WebAssembly.instantiate()`** 函数允许你编译和实例化 WebAssembly 代码。它有两个重载方式：
