@@ -17,6 +17,6 @@ l10n:
 
 对基于 MD5 的签名的支持在 2012 年初被移除。
 
-## 相关资料
+## 参见
 
 - [Mozilla Security Blog 关于弃用 SHA-1 的文章](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/)
