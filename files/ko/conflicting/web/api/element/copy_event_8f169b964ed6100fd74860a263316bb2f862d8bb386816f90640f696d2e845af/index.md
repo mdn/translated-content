@@ -1,6 +1,7 @@
 ---
 title: "Document: copy 이벤트"
-slug: Web/API/Document/copy_event
+slug: conflicting/Web/API/Element/copy_event_8f169b964ed6100fd74860a263316bb2f862d8bb386816f90640f696d2e845af
+original_slug: Web/API/Document/copy_event
 ---
 
 {{APIRef}}

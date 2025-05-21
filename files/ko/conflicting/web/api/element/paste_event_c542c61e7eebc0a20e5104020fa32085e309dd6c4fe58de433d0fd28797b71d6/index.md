@@ -1,6 +1,7 @@
 ---
-title: "Document: paste 이벤트"
-slug: Web/API/Document/paste_event
+title: "Window: paste 이벤트"
+slug: conflicting/Web/API/Element/paste_event_c542c61e7eebc0a20e5104020fa32085e309dd6c4fe58de433d0fd28797b71d6
+original_slug: Web/API/Window/paste_event
 ---
 
 {{APIRef}}
@@ -28,12 +29,12 @@ slug: Web/API/Document/paste_event
   </tbody>
 </table>
 
-`paste` 이벤트의 원 대상은 붙여넣기 동작의 대상인 {{domxref("Element")}}입니다. {{domxref("Document")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. 이벤트에 대한 자세한 정보는 [Element: paste 이벤트](/ko/docs/Web/API/Element/paste_event)에서 확인하세요.
+`paste` 이벤트의 원 대상은 붙여넣기 동작의 대상인 {{domxref("Element")}}입니다. {{domxref("Window")}}에서 수신할 경우 캡처 또는 버블링 단계의 이벤트를 받게 됩니다. 이벤트에 대한 자세한 정보는 [Element: paste 이벤트](/ko/docs/Web/API/Element/paste_event)에서 확인하세요.
 
 ## 예제
 
 ```js
-document.addEventListener("paste", (event) => {
+window.addEventListener("paste", (event) => {
   console.log("붙여넣기 동작 실행");
 });
 ```
@@ -48,6 +49,6 @@ document.addEventListener("paste", (event) => {
 
 ## 같이 보기
 
-- 관련 이벤트: {{domxref("Document/copy_event", "copy")}}, {{domxref("Document/cut_event", "cut")}}
+- 관련 이벤트: {{domxref("Window/copy_event", "copy")}}, {{domxref("Window/cut_event", "cut")}}
 - {{domxref("Element")}}를 대상으로 한 같은 이벤트: {{domxref("Element/paste_event", "paste")}}
-- {{domxref("Window")}}를 대상으로 한 같은 이벤트: {{domxref("Window/paste_event", "paste")}}
+- {{domxref("Document")}}를 대상으로 한 같은 이벤트: {{domxref("Document/paste_event", "paste")}}
