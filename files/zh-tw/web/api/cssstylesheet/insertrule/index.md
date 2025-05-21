@@ -35,7 +35,7 @@ insertRule(rule, index)
 
 新插入規則在樣式表規則清單中的索引值。
 
-### 例外狀況
+### 例外
 
 - `IndexSizeError` {{domxref("DOMException")}}
   - : 若 `index` 大於 `{{domxref("CSSRuleList", "", "", "1")}}.length`，則會拋出此錯誤。
