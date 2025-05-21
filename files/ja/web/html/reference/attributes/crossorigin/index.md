@@ -1,9 +1,9 @@
 ---
 title: "HTML 属性: crossorigin"
+short-title: crossorigin
 slug: Web/HTML/Reference/Attributes/crossorigin
-original_slug: Web/HTML/Attributes/crossorigin
 l10n:
-  sourceCommit: 83f30ecaaeb6227dc0d4551f71eb8be1cacb8e94
+  sourceCommit: c6cab7f1aa7dc9f3495486a5b46020db320101cf
 ---
 
 {{HTMLSidebar}}
@@ -34,7 +34,7 @@ l10n:
     <tr>
       <td><code>img</code>, <code>audio</code>, <code>video</code></td>
       <td>
-        そのリソースが {{HTMLElement("canvas")}} 内に配置された場合、要素は<a href="/ja/docs/Web/HTML/CORS_enabled_image#security_and_tainted_canvases"><em>汚染</em></a>されているとマークされます。
+        そのリソースが {{HTMLElement("canvas")}} 内に配置された場合、要素は<a href="/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス"><em>汚染</em></a>されているとマークされます。
       </td>
     </tr>
     <tr>
@@ -84,5 +84,3 @@ l10n:
 
 - [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTML 属性: `rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/HTML/")}}
