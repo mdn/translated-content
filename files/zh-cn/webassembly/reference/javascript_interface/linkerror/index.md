@@ -4,6 +4,7 @@ slug: WebAssembly/Reference/JavaScript_interface/LinkError
 l10n:
   sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
+
 **`WebAssembly.LinkError`** 对象表示模块实例化期间的错误（除启动函数中的[陷阱](https://webassembly.github.io/simd/core/intro/overview.html#trap)）。
 
 ## 构造函数
@@ -32,7 +33,6 @@ l10n:
 
 - {{jsxref("Error.prototype.toString", "WebAssembly.LinkError.prototype.toString()")}}
   - : 返回一个表示指定的 `Error` 对象的字符串。继承自 {{jsxref("Error")}}。
-
 
 ## 示例
 
