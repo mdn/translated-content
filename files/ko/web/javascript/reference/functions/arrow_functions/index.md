@@ -46,7 +46,7 @@ param => {
 }
 ```
 
-매개변수 내 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)가 지원되며 항상 괄호 안에 넣어야 합니다.
+매개변수 내 [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), [기본값 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters), [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)이 지원되며 항상 괄호 안에 넣어야 합니다.
 
 ```js-nolint
 (a, b, ...r) => expression
