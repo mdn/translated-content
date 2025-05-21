@@ -21,15 +21,15 @@ WebAssembly.instantiateStreaming(source, importObject, compileOptions)
 ### 参数
 
 - `source`
-  - : [`Response`](/en-US/docs/Web/API/Response) 对象或兑现为 Response 对象的 promise，表示的是你想要流式、编译和实例化的 Wasm 模块的底层源。
+  - : [`Response`](/zh-CN/docs/Web/API/Response) 对象或兑现为 Response 对象的 promise，表示的是你想要流式、编译和实例化的 Wasm 模块的底层源。
 - `importObject` {{optional_inline}}
-  - : 包含要导入到新创建的 `Instance` 的值（例如，函数或 [`WebAssembly.Memory`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象）的对象。已编译模块的每个声明的导入一定有一个匹配的属性，否则抛出 [`WebAssembly.LinkError`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
+  - : 包含要导入到新创建的 `Instance` 的值（例如，函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象）的对象。已编译模块的每个声明的导入一定有一个匹配的属性，否则抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
 - `compileOptions` {{optional_inline}}
   - : 包含编译选项的对象。属性包含：
     - `builtins` {{optional_inline}}
-      - : 由在已编译的 Wasm 模块中启用 [JavaScript 内置](/en-US/docs/WebAssembly/Guides/JavaScript_builtins)用法的字符串组成的数组。字符串定义的你想要启用的内置。当前唯一可用的值是 `"js-string"`，启用的是 JavaScript 字符串内置。
+      - : 由在已编译的 Wasm 模块中启用 [JavaScript 内置](/zh-CN/docs/WebAssembly/Guides/JavaScript_builtins)用法的字符串组成的数组。字符串定义的你想要启用的内置。当前唯一可用的值是 `"js-string"`，启用的是 JavaScript 字符串内置。
     - `importedStringConstants` {{optional_inline}}
-      - : 为[导入的全局字符串常量](/en-US/docs/WebAssembly/Guides/Imported_string_constants)指定命名空间的字符串。如果你想在 Wasm 模块中使用导入的全局字符串常量的话，则需要指定该属性。
+      - : 为[导入的全局字符串常量](/zh-CN/docs/WebAssembly/Guides/Imported_string_constants)指定命名空间的字符串。如果你想在 Wasm 模块中使用导入的全局字符串常量的话，则需要指定该属性。
 
 ### 返回值
 
