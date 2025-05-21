@@ -2,7 +2,7 @@
 title: WebAssembly.instantiateStreaming()
 slug: WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static
 l10n:
-  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
+  sourceCommit: 05becee987475e724aaee34fe93eafe15514b37a
 ---
 
 **`WebAssembly.instantiateStreaming()`** 静态方法直接从流式底层源编译并实例化 WebAssembly 模块。这是加载 Wasm 代码最有效、最优化的方式。
