@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b3d5659a6f16dc6cb8be5c48d19820a67434ecb9
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference")}}
-
 [Web 应用清单](https://w3c.github.io/manifest/)规范中定义的 **web 应用清单**是一个提供 web 应用信息的 {{Glossary("JSON")}} 文本文件。
 
 Web 应用清单最常见的用途是提供浏览器在设备上安装[渐进式 web 应用](/zh-CN/docs/Web/Progressive_web_apps)（PWA）所需的信息，如应用程序的名称和图标。
