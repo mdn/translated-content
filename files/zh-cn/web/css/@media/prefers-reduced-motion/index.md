@@ -113,6 +113,6 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 ## 参见
 
-- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP Header [User Agent Client Hint](/en-US/docs/Web/HTTP/Guides/Client_hints#user_agent_client_hints)
-- [An introduction to the reduced motion media query](https://css-tricks.com/introduction-reduced-motion-media-query/) on CSS-Tricks (2019)
-- [Responsive design for motion](https://webkit.org/blog/7551/responsive-design-for-motion/) on WebKit Blog (2017)
+- {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}} HTTP 标头[用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)
+- [动画减弱媒体查询简介](https://css-tricks.com/introduction-reduced-motion-media-query/)（CSS-Tricks，2019）
+- [响应式动画设计](https://webkit.org/blog/7551/responsive-design-for-motion/)（WebKit 博客，2017）
