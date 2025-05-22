@@ -13,7 +13,7 @@ l10n:
 
 ```js-nolint
 let updatingUserScript = browser.userScripts.update(
-  scripts       // 对象的数组
+  scripts       // 对象数组
 );
 ```
 
@@ -27,7 +27,7 @@ let updatingUserScript = browser.userScripts.update(
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，如果所有请求的用户脚本都更新，则该 promise 将不带参数地兑现。如果任何用户脚本更新失败或请求因其他原因失败，则不会更新任何脚本，且 promise 会以错误消息拒绝。
+一个 {{JSxRef("Promise")}}，如果所有请求的用户脚本都更新，则其将不带参数地兑现。如果任何用户脚本更新失败或请求因其他原因失败，则不会更新任何脚本，且 promise 会以错误消息拒绝。
 
 ## 示例
 
