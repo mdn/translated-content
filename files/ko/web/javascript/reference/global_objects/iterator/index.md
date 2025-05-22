@@ -77,7 +77,7 @@ const firstThreeDigitTerm = seq.find((n) => n >= 100);
 
 배열 메서드와 유사한 많은 반복자 메서드들을 찾을 수 있습니다.
 
-| 반복자 메서드                                 | 배열 메서드                                |
+| 반복자 메서드                              | 배열 메서드                             |
 | ------------------------------------------ | --------------------------------------- |
 | {{jsxref("Iterator.prototype.every()")}}   | {{jsxref("Array.prototype.every()")}}   |
 | {{jsxref("Iterator.prototype.filter()")}}  | {{jsxref("Array.prototype.filter()")}}  |
