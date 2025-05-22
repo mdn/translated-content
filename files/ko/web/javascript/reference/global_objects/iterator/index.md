@@ -173,7 +173,7 @@ const myIterator = Iterator.from({
 - {{jsxref("Iterator.prototype.some()")}}
   - : 반복자의 요소 중 적어도 하나가 제공된 함수의 테스트를 통과하는지 검사합니다. 불리언 값을 반환합니다.
 - {{jsxref("Iterator.prototype.take()")}}
-  - :  이 반복자에서 지정된 개수만큼의 요소를 생성한 후 종료하는 새로운 반복자 도우미 객체를 반환합니다.
+  - : 이 반복자에서 지정된 개수만큼의 요소를 생성한 후 종료하는 새로운 반복자 도우미 객체를 반환합니다.
 - {{jsxref("Iterator.prototype.toArray()")}}
   - : 반복자가 생성한 요소들로 채워진 새로운 {{jsxref("Array")}} 인스턴스를 생성합니다.
 - [`Iterator.prototype[Symbol.iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator/Symbol.iterator)
