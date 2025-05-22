@@ -10,7 +10,7 @@ l10n:
 
 **`readonly`** は論理属性で、存在する場合、要素が変更可能ではなくなり、ユーザーがそのコントロールを編集できなくなります。
 
-{{InteractiveExample("HTML Demo: readonly", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: readonly", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="firstName">名前:</label>

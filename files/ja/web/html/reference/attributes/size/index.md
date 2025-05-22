@@ -14,7 +14,7 @@ slug: Web/HTML/Reference/Attributes/size
 
 `size` 属性は制約検証には影響しません。
 
-{{InteractiveExample("HTML Demo: size", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: size", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="firstName">名前:</label>

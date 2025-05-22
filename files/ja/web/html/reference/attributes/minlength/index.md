@@ -16,7 +16,7 @@ l10n:
 
 `minlength` は [`required`](/ja/docs/Web/HTML/Reference/Attributes/required) の意味を含みません。入力欄が `minlength` 制約に違反するのは、ユーザーが値を入力した場合のみです。入力欄に `required` が設定されていない場合、 `minlength` を設定していても、空文字列を送信することができます。
 
-{{InteractiveExample("HTML Demo: minlength", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: minlength", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="name">製品名:</label>
