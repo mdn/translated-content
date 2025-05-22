@@ -22,7 +22,7 @@ NDEFRecord.data
 
 ## 例
 
-次の例は {{domxref("NDEFReadingEvent.message")}} から取得した {{domxref("NDEFMessage")}} オブジェクト内のレコードを反復処理します。 
+次の例は {{domxref("NDEFReadingEvent.message")}} から取得した {{domxref("NDEFMessage")}} オブジェクト内のレコードを反復処理します。
 {{domxref("NDEFRecord.mediaType", "mediaType")}} に基づいてレコードを選択すると、次に `data` プロパティに格納されているものをデコードします。
 
 ```js
