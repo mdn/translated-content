@@ -1,9 +1,9 @@
 ---
 title: "<textarea>: 텍스트 영역 요소"
 slug: Web/HTML/Reference/Elements/textarea
-page-type: html-element
-browser-compat: html.elements.textarea
---------------------------------------
+---
+
+---
 
 {{HTMLSidebar}}
 
