@@ -100,7 +100,7 @@ lfo.start();
 
 #### AudioParam 사용 일람
 
-`AudioNode` 출력을 하나 이상의 
+`AudioNode` 출력을 하나 이상의
 {{ domxref("AudioParam") }}에 연결하는 것은 가능하고, 하나 이상의 AudioNode 출력을 하나의
 {{ domxref("AudioParam") }}에 다수의 `connect()` 호출과 함께 연결하는 것은 가능합니다. 그러므로 [팬 인과 팬 아웃](/ko/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#fan-in_and_fan-out)이 지원됩니다.
 
