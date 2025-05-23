@@ -43,10 +43,10 @@ label {
 
 위의 예시는 `<textarea>`의 여러 기능을 보여줍니다:
 
-* 접근성을 위해 `<textarea>`를 {{htmlelement("label")}} 요소와 연결할 수 있도록 하는 `id` 속성
-* 폼이 제출될 때 서버로 전송되는 관련 데이터 항목의 이름을 설정하는 `name` 속성
-* `<textarea>`가 차지할 정확한 크기를 지정할 수 있는 `rows` 및 `cols` 속성. 브라우저 기본값이 다를 수 있으므로 이를 설정하는 것이 일관성 유지에 좋습니다.
-* `<textarea>` 요소는 HTML과 JavaScript 컨텍스트에서 내용을 다르게 지정합니다:
+- 접근성을 위해 `<textarea>`를 {{htmlelement("label")}} 요소와 연결할 수 있도록 하는 `id` 속성
+- 폼이 제출될 때 서버로 전송되는 관련 데이터 항목의 이름을 설정하는 `name` 속성
+- `<textarea>`가 차지할 정확한 크기를 지정할 수 있는 `rows` 및 `cols` 속성. 브라우저 기본값이 다를 수 있으므로 이를 설정하는 것이 일관성 유지에 좋습니다.
+- `<textarea>` 요소는 HTML과 JavaScript 컨텍스트에서 내용을 다르게 지정합니다:
 
   * HTML에서는 `<textarea>`의 초기 콘텐츠를 `value` 속성이 아닌 여는 태그와 닫는 태그 사이에 작성합니다.
   * JavaScript에서는 `<textarea>` 요소에 [`value`](/en-US/docs/Web/API/HTMLTextAreaElement/value) 속성을 사용하여 현재 콘텐츠를 가져오거나 설정하고, [`defaultValue`](/en-US/docs/Web/API/HTMLTextAreaElement/defaultValue)로 초기 값을 가져오거나 설정합니다 (HTML 요소의 텍스트 콘텐츠에 해당).
