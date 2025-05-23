@@ -282,14 +282,14 @@ textarea {
         <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 분류</a>
       </th>
       <td>
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">플로우 콘텐츠</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#phrasing_content">구문 콘텐츠</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#interactive_content">인터랙티브 콘텐츠</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#listed">리스트 가능</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#labelable">라벨 가능</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#resettable">리셋 가능</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#submittable">제출 가능</a>,
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories#form-associated_content">폼 연관 요소</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#flow_content">플로우 콘텐츠</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#phrasing_content">구문 콘텐츠</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#interactive_content">인터랙티브 콘텐츠</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#listed">리스트 가능</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#labelable">라벨 가능</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#resettable">리셋 가능</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#submittable">제출 가능</a>,
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories#form-associated_content">폼 연관 요소</a>
       </td>
     </tr>
     <tr>
