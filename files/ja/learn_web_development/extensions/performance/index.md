@@ -1,32 +1,27 @@
 ---
 title: ウェブパフォーマンス
 slug: Learn_web_development/Extensions/Performance
-original_slug: Learn/Performance
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}
+{{NextMenu("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions")}}
 
 ウェブサイトを構築するには、HTML、CSS、JavaScript が必要です。人々が使いたいと思うウェブサイトやアプリケーションを構築し、ユーザーを惹きつけ、維持するためには、優れた使い勝手を実現する必要があります。優れた使い勝手の一部は、コンテンツの読み込みが速く、ユーザーの操作に反応することです。これは**ウェブパフォーマンス**と呼ばれています。このモジュールでは、パフォーマンスの高いウェブサイトを作成するための基礎知識を学びます。
 
 初心者向けの教材では、パフォーマンスや[アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility)などのウェブのベストプラクティスをできるだけ忠実に再現するようにしていましたが、このようなテーマにも特に焦点を当てて、よく理解しておくとよいでしょう。
 
-## 学習経路
+## 前提知識
 
-多くのウェブパフォーマンスの改善提案を実施するためには、HTML、CSS、JavaScript の知識が必要ですが、ウェブパフォーマンスを理解し測定するためには、アプリケーションの構築方法を知っていることは必須条件ではありません。ただし、このモジュールに取り組む前に、少なくとも[ウェブ入門](/ja/docs/Learn_web_development/Getting_started/Your_first_website)モジュールを使ってウェブ開発の基本的な知識を身につけておくことをお勧めします。
+多くのウェブパフォーマンスの改善提案を実施するためには、HTML、CSS、JavaScript の知識が必要ですが、ウェブパフォーマンスを理解し測定するためには、アプリケーションの構築方法を知っていることは必須条件ではありません。ただし、このモジュールに取り組む前に、少なくとも[初めてのウェブサイト](/ja/docs/Learn_web_development/Getting_started/Your_first_website)モジュールを使ってウェブ開発の基本的な知識を身につけておくことをお勧めします。
 
 また、以下のようなモジュールを使って、これらのトピックをもう少し深く掘り下げてみるのもよいでしょう。
 
-- [HTML 入門](/ja/docs/Learn_web_development/Core/Structuring_content)
-- [CSS の第一歩](/ja/docs/Learn_web_development/Core/Styling_basics)
-- [JavaScript の第一歩](/ja/docs/Learn_web_development/Core/Scripting)
-
-このモジュールに取り組んだ後は、ウェブパフォーマンスについてもっと深く知りたくなるでしょう。パフォーマンス API の概要、テストと分析ツール、パフォーマンスのボトルネックの問題など、[MDN のウェブパフォーマンスの章](/ja/docs/Web/Performance)で多くの詳しい説明を見つけることができます。
+- [HTML によるコンテンツの構造化](/ja/docs/Learn_web_development/Core/Structuring_content)
+- [CSS によるスタイル設定の基本](/ja/docs/Learn_web_development/Core/Styling_basics)
+- [JavaScript による動的スクリプティング](/ja/docs/Learn_web_development/Core/Scripting)
 
 ## ガイド
-
-このトピックには、次のモジュールが含まれています。必ず最初のものから始めてください。
 
 - [ウェブパフォーマンスの「なぜ」](/ja/docs/Learn_web_development/Extensions/Performance/why_web_performance)
   - : この記事では、ウェブパフォーマンスがなぜアクセシビリティ、ユーザーエクスペリエンス、ビジネスの目的に重要であるかを解説します。
@@ -42,14 +37,10 @@ l10n:
   - : ウェブパフォーマンスの中で最も身近な位置にあるのは、メディアの最適化です。この記事では、動画コンテンツがパフォーマンスに与える影響について説明し、バックグラウンドの動画からオーディオトラックの削除など、パフォーマンスを向上させるためのヒントを紹介します。
 - [JavaScript パフォーマンスのベストプラクティス](/ja/docs/Learn_web_development/Extensions/Performance/JavaScript)
   - : JavaScript は、適切に使用すれば、インタラクティブで没入感のあるウェブ体験を実現できますが、ダウンロード時間、レンダリング時間、アプリ内のパフォーマンス、バッテリー寿命、ユーザー体験を大きく損なう可能性があります。この記事では、複雑なコンテンツであっても可能な限りパフォーマンスを向上させるために考慮すべき、 JavaScript のベストプラクティスを紹介します。
-- [HTML のパフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/HTML)
+- [HTML のパフォーマンスの最適化](/ja/docs/Learn_web_development/Extensions/Performance/HTML)
   - : マークアップの属性やソースの順序によっては、ウェブサイトのパフォーマンスに影響を与えることがあります。 DOM ノードの数を最小限に抑え、スタイル、スクリプト、メディア、サードパーティのスクリプトなどのコンテンツを最適な順序と属性を使用して含めることで、ユーザーエクスペリエンスを劇的に向上させることができます。この記事では、最大限のパフォーマンスを確保するために HTML をどのように使用すればよいかを詳しく見ていきます。
-- [CSS パフォーマンス特性](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
+- [CSS のパフォーマンスの最適化](/ja/docs/Learn_web_development/Extensions/Performance/CSS)
   - : CSS は、パフォーマンス向上のための最適化の焦点としてはあまり重要ではないかもしれませんが、パフォーマンスに影響を与える CSS の特性がいくつかあります。この記事では、パフォーマンスに影響を与えるいくつかの CSS プロパティと、パフォーマンスに悪影響を与えないためのスタイルの処理方法を提案します。
-- [フォントとパフォーマンス](/ja/docs/Learn/Performance/Fonts)
-  - : 外部フォントを含める必要があるかどうか、含める場合には、サイトのパフォーマンスへの影響を最小限に抑えながら、デザインに必要なフォントを含める方法について説明します。
-- [モバイルパフォーマンス](/ja/docs/Learn/Performance/Mobile)
-  - : モバイル端末でのウェブアクセスはとても人気があり、すべてのモバイルプラットフォームには本格的なウェブブラウザーが搭載されていますが、帯域幅、CPU、バッテリーの寿命が限られている可能性があるため、これらのプラットフォームでのウェブコンテンツのパフォーマンスを考慮することが重要です。この記事では、モバイルに特化したパフォーマンスの考慮点について説明します。
 - [ウェブパフォーマンスのためのビジネスケース](/ja/docs/Learn_web_development/Extensions/Performance/business_case_for_performance)
   - : パフォーマンスを向上させるために開発者ができることは数多くありますが、どれくらいの速度があれば十分なのでしょうか。このような努力の重要性を権限を持った人に納得させるにはどうすればよいでしょうか。最適化した後、肥大化したパフォーマンスが戻らないようにするにはどうすればよいでしょうか。この記事では、経営陣の説得、パフォーマンス文化とパフォーマンス予算の策定、コードベースにリグレッションが潜り込まないようにする方法を紹介します。
 
@@ -61,3 +52,5 @@ l10n:
   - : この記事では、画面サイズや解像度などが大きく異なる端末でも動作する画像、すなわちレスポンシブ画像の概念を学び、それを実現するために HTML が提供するツールを紹介します。これにより、異なる端末間でのパフォーマンスを向上させることができます。レスポンシブ画像は、[レスポンシブデザイン](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)の一部であり、今後の CSS のテーマとなります。
 - [MDN のウェブパフォーマンスの章](/ja/docs/Web/Performance)
   - : ウェブパフォーマンスの章 — ここでは、パフォーマンス API の概要、テストと分析ツール、パフォーマンスのボトルネックの問題など、ウェブパフォーマンスに関するより詳細な情報をご覧いただけます。
+
+{{NextMenu("Learn_web_development/Extensions/Performance/why_web_performance", "Learn_web_development/Extensions")}}
