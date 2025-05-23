@@ -1,6 +1,7 @@
 ---
 title: "Permissions-Policy: document-domain"
-slug: Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+slug: conflicting/Web/HTTP/Reference/Headers/Permissions-Policy
+original_slug: Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
