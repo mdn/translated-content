@@ -337,18 +337,18 @@ textarea {
 
 ## 참고
 
-* 다른 폼 관련 요소:
+- 다른 폼 관련 요소:
 
-  * {{ HTMLElement("form") }}
-  * {{ HTMLElement("button") }}
-  * {{ HTMLElement("datalist") }}
-  * {{ HTMLElement("legend") }}
-  * {{ HTMLElement("label") }}
-  * {{ HTMLElement("select") }}
-  * {{ HTMLElement("optgroup") }}
-  * {{ HTMLElement("option") }}
-  * {{ HTMLElement("input") }}
-  * {{ HTMLElement("fieldset") }}
-  * {{ HTMLElement("output") }}
-  * {{ HTMLElement("progress") }}
-  * {{ HTMLElement("meter") }}
+  - {{ HTMLElement("form") }}
+  - {{ HTMLElement("button") }}
+  - {{ HTMLElement("datalist") }}
+  - {{ HTMLElement("legend") }}
+  - {{ HTMLElement("label") }}
+  - {{ HTMLElement("select") }}
+  - {{ HTMLElement("optgroup") }}
+  - {{ HTMLElement("option") }}
+  - {{ HTMLElement("input") }}
+  - {{ HTMLElement("fieldset") }}
+  - {{ HTMLElement("output") }}
+  - {{ HTMLElement("progress") }}
+  - {{ HTMLElement("meter") }}
