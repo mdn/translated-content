@@ -279,7 +279,7 @@ textarea {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/en-US/docs/Web/HTML/Guides/Content_categories">콘텐츠 분류</a>
+        <a href="/ko/docs/Web/HTML/Guides/Content_categories">콘텐츠 분류</a>
       </th>
       <td>
         <a href="/en-US/docs/Web/HTML/Guides/Content_categories#flow_content">플로우 콘텐츠</a>,
