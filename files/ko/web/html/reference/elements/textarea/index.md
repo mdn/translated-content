@@ -57,21 +57,21 @@ label {
 
 이 요소는 [전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
-- [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
+- [`autocapitalize`](/ko/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
 
   - : 입력된 텍스트가 자동으로 대문자로 변환될지 여부와 방식을 제어합니다.
 
-- [`autocomplete`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete)
+- [`autocomplete`](/ko/docs/Web/HTML/Reference/Attributes/autocomplete)
 
   - : 입력된 텍스트를 브라우저가 자동으로 완성할 수 있을지를 제어합니다. 가능한 값:
 
     - `off`: 사용자가 매번 직접 값을 입력해야 하며, 브라우저는 자동 완성을 수행하지 않습니다.
     - `on`: 브라우저가 이전 사용 기록을 기반으로 값을 자동 완성할 수 있습니다.
-    - [`<token-list>`](/en-US/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens): 공백으로 구분된 자동 완성 세부 정보 토큰들의 정렬된 집합으로, 섹션 토큰, 청구/배송 그룹 토큰, 수신자 유형 토큰 등이 앞에 올 수 있습니다.
+    - [`<token-list>`](/ko/docs/Web/HTML/Reference/Attributes/autocomplete#token_list_tokens): 공백으로 구분된 자동 완성 세부 정보 토큰들의 정렬된 집합으로, 섹션 토큰, 청구/배송 그룹 토큰, 수신자 유형 토큰 등이 앞에 올 수 있습니다.
 
-    `autocomplete` 속성이 지정되지 않은 `<textarea>`는 해당 요소의 폼 소유자가 설정한 `autocomplete` 값(`on` 또는 `off`)을 상속받습니다. 폼 소유자는 해당 `<textarea>` 요소가 속한 {{HTMLElement("form")}} 요소이거나, `form` 속성으로 지정된 `id`를 가진 요소입니다. 자세한 내용은 {{HTMLElement("form")}}의 [`autocomplete`](/en-US/docs/Web/HTML/Reference/Elements/form#autocomplete) 속성을 참조하세요.
+    `autocomplete` 속성이 지정되지 않은 `<textarea>`는 해당 요소의 폼 소유자가 설정한 `autocomplete` 값(`on` 또는 `off`)을 상속받습니다. 폼 소유자는 해당 `<textarea>` 요소가 속한 {{HTMLElement("form")}} 요소이거나, `form` 속성으로 지정된 `id`를 가진 요소입니다. 자세한 내용은 {{HTMLElement("form")}}의 [`autocomplete`](/ko/docs/Web/HTML/Reference/Elements/form#autocomplete) 속성을 참조하세요.
 
-- [`autocorrect`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocorrect)
+- [`autocorrect`](/ko/docs/Web/HTML/Reference/Global_attributes/autocorrect)
 
   - : 사용자가 텍스트를 편집할 때 자동 맞춤법 검사 및 텍스트 처리를 활성화할지 여부를 제어합니다.
     허용되는 값:
@@ -79,7 +79,7 @@ label {
     - `on`: 자동 맞춤법 검사 및 텍스트 교정을 활성화합니다.
     - `off`: 자동 맞춤법 검사 및 텍스트 교정을 비활성화합니다.
 
-- [`autofocus`](/en-US/docs/Web/HTML/Reference/Global_attributes/autofocus)
+- [`autofocus`](/ko/docs/Web/HTML/Reference/Global_attributes/autofocus)
 
   - : 페이지가 로드될 때 해당 폼 컨트롤이 자동으로 포커스를 가지도록 지정하는 불리언 속성입니다. 문서 내 하나의 요소만 이 속성을 가질 수 있습니다.
 
@@ -87,11 +87,11 @@ label {
 
   - : 텍스트 컨트롤의 가시 너비를 평균 문자 너비 기준으로 지정합니다. 양의 정수여야 하며, 지정하지 않으면 기본값은 `20`입니다.
 
-- [`dirname`](/en-US/docs/Web/HTML/Reference/Attributes/dirname)
+- [`dirname`](/ko/docs/Web/HTML/Reference/Attributes/dirname)
 
-  - : 요소 콘텐츠의 텍스트 방향성을 나타냅니다. 자세한 내용은 [`dirname` 속성](/en-US/docs/Web/HTML/Reference/Attributes/dirname)을 참조하세요.
+  - : 요소 콘텐츠의 텍스트 방향성을 나타냅니다. 자세한 내용은 [`dirname` 속성](/ko/docs/Web/HTML/Reference/Attributes/dirname)을 참조하세요.
 
-- [`disabled`](/en-US/docs/Web/HTML/Reference/Attributes/disabled)
+- [`disabled`](/ko/docs/Web/HTML/Reference/Attributes/disabled)
 
   - : 사용자가 이 컨트롤과 상호작용할 수 없도록 하는 불리언 속성입니다. 지정되지 않으면, 예를 들어 {{HTMLElement("fieldset")}} 같은 상위 요소의 설정을 상속받습니다. 포함하는 요소가 없으면 기본적으로 활성화 상태입니다.
 
@@ -99,11 +99,11 @@ label {
 
   - : `<textarea>` 요소가 연결된 폼 요소(`form owner`)를 지정합니다. 값은 동일 문서 내의 폼 요소 `id`여야 합니다. 이 속성이 없으면 `<textarea>`는 폼 요소의 자식이어야 합니다. 이 속성을 통해 문서 내 어디든 `<textarea>`를 배치할 수 있습니다.
 
-- [`maxlength`](/en-US/docs/Web/HTML/Reference/Attributes/maxlength)
+- [`maxlength`](/ko/docs/Web/HTML/Reference/Attributes/maxlength)
 
   - : 사용자가 입력할 수 있는 최대 문자열 길이(UTF-16 코드 단위)입니다. 지정하지 않으면 문자 수 제한이 없습니다.
 
-- [`minlength`](/en-US/docs/Web/HTML/Reference/Attributes/minlength)
+- [`minlength`](/ko/docs/Web/HTML/Reference/Attributes/minlength)
 
   - : 사용자가 입력해야 하는 최소 문자열 길이(UTF-16 코드 단위)입니다.
 
@@ -111,18 +111,18 @@ label {
 
   - : 컨트롤의 이름을 지정합니다.
 
-- [`placeholder`](/en-US/docs/Web/HTML/Reference/Attributes/placeholder)
+- [`placeholder`](/ko/docs/Web/HTML/Reference/Attributes/placeholder)
 
   - : 사용자가 컨트롤에 입력할 수 있는 데이터 유형에 대한 힌트를 제공합니다. 줄바꿈 문자는 힌트 렌더링 시 줄바꿈으로 처리되어야 합니다.
 
   > \[!NOTE]
-  > 플레이스홀더는 입력 예시를 제공하는 용도로만 사용해야 하며, 해당 입력에 연결된 {{HTMLElement("label")}} 요소를 대체해서는 안 됩니다. 자세한 내용은 [`<input>` 라벨](/en-US/docs/Web/HTML/Reference/Elements/input#labels)을 참조하세요.
+  > 플레이스홀더는 입력 예시를 제공하는 용도로만 사용해야 하며, 해당 입력에 연결된 {{HTMLElement("label")}} 요소를 대체해서는 안 됩니다. 자세한 내용은 [`<input>` 라벨](/ko/docs/Web/HTML/Reference/Elements/input#labels)을 참조하세요.
 
-- [`readonly`](/en-US/docs/Web/HTML/Reference/Attributes/readonly)
+- [`readonly`](/ko/docs/Web/HTML/Reference/Attributes/readonly)
 
   - : 사용자가 컨트롤의 값을 수정할 수 없도록 지정합니다. 단, 클릭하거나 선택은 가능하며, 값은 폼 제출 시 포함됩니다.
 
-- [`required`](/en-US/docs/Web/HTML/Reference/Attributes/required)
+- [`required`](/ko/docs/Web/HTML/Reference/Attributes/required)
 
   - : 폼을 제출하기 전에 반드시 값을 입력해야 함을 지정합니다.
 
@@ -130,7 +130,7 @@ label {
 
   - : 컨트롤에 보이는 텍스트 줄 수를 지정합니다. 양의 정수여야 하며, 지정하지 않으면 기본값은 2입니다.
 
-- [`spellcheck`](/en-US/docs/Web/HTML/Reference/Global_attributes/spellcheck)
+- [`spellcheck`](/ko/docs/Web/HTML/Reference/Global_attributes/spellcheck)
 
   - : `<textarea>`가 브라우저나 운영체제의 맞춤법 검사 대상인지 지정합니다. 값은 다음 중 하나일 수 있습니다:
 
@@ -152,7 +152,7 @@ label {
 
 `<textarea>`는 {{ glossary("replaced elements", "치환 요소") }}입니다 — 즉, 이미지처럼 고유한 크기를 가지는 요소입니다. 기본적으로 이 요소의 {{cssxref("display")}} 값은 `inline-block`입니다. 다른 폼 요소들에 비해 상대적으로 스타일링이 쉽고, 박스 모델, 폰트, 색 구성 등을 일반적인 CSS로 쉽게 조정할 수 있습니다.
 
-[HTML 폼 스타일링](/en-US/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)에서는 `<textarea>`를 스타일링하는 유용한 팁들을 제공합니다.
+[HTML 폼 스타일링](/ko/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)에서는 `<textarea>`를 스타일링하는 유용한 팁들을 제공합니다.
 
 ### 기준선 불일치
 
@@ -231,7 +231,11 @@ textarea {
 다음은 플레이스홀더 텍스트가 설정된 예제입니다. 입력을 시작하면 해당 텍스트는 사라집니다.
 
 ```html
-<textarea name="textarea" rows="5" cols="30" placeholder="댓글을 입력하세요"></textarea>
+<textarea
+  name="textarea"
+  rows="5"
+  cols="30"
+  placeholder="댓글을 입력하세요"></textarea>
 ```
 
 ```css
