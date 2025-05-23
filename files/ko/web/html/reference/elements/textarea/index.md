@@ -55,7 +55,7 @@ label {
 
 ## 속성
 
-이 요소는 [전역 속성](/en-US/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
+이 요소는 [전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - [`autocapitalize`](/en-US/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
 
