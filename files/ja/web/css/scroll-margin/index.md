@@ -1,13 +1,15 @@
 ---
 title: scroll-margin
 slug: Web/CSS/scroll-margin
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど `margin` プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
+**`scroll-margin`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のスクロールマージンを一度にすべて、ちょうど [`margin`](/ja/docs/Web/CSS/margin) プロパティが個別指定の `margin-*` に値を割り当てるように、値を割り当てます。
 
-{{InteractiveExample("CSS Demo: scroll-margin")}}
+{{InteractiveExample("CSS デモ: scroll-margin")}}
 
 ```css interactive-example-choice
 scroll-margin: 0;
@@ -28,7 +30,7 @@ scroll-margin: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -89,6 +91,7 @@ scroll-margin: 1em 0.5em 1em 1em;
 scroll-margin: inherit;
 scroll-margin: initial;
 scroll-margin: revert;
+scroll-margin: revert-layer;
 scroll-margin: unset;
 ```
 
@@ -99,7 +102,7 @@ scroll-margin: unset;
 
 ## 解説
 
-`scroll-margin` の効果は、例のコンテンツの 2 つの「ページ」の間の一部の位置にスクロールすることで見ることができます。`scroll-margin` に指定された値は、主にスナップポートの外側にあるページのうち、どれだけの部分を表示したままにするかを決定します。
+`scroll-margin` の効果は、例のコンテンツの 2 つの「ページ」の間の一部の位置にスクロールすることで見ることができます。`scroll-margin` に指定された値は、主に[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)の外側にあるページのうち、どれだけの部分を表示したままにするかを決定します。
 
 `scroll-margin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
 
@@ -113,15 +116,15 @@ scroll-margin: unset;
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 基本的なデモ
 
-この例では、上記のインタラクティブ例と非常によく似たものを実装していますが、ここではその実装方法を説明します。
+この例では、上記のインタラクティブサンプルととてもよく似たものを実装していますが、ここではその実装方法を説明します。
 
-ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。2 つ目と 3 つ目のブロックは、それぞれのブロックの左端に近いところでスナップします。
+ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。 2 つ目と 3 つ目のブロックは、それぞれのブロックの左端に近いところでスナップします。
 
 #### HTML
 
-ブロックを表す HTML はとても簡単です。
+HTML には、4 つの子要素を持つスクローラーがあります。
 
 ```html
 <div class="scroller">
@@ -134,7 +137,7 @@ scroll-margin: unset;
 
 #### CSS
 
-外側のコンテナーのスタイルは以下のようになっています。
+CSS を一通り見てみましょう。外側のコンテナーは次のようにスタイル設定されています。
 
 ```css
 .scroller {
@@ -195,7 +198,7 @@ scroll-margin: unset;
 
 自分でやってみましょう。
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## 仕様書
 
@@ -208,4 +211,4 @@ scroll-margin: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

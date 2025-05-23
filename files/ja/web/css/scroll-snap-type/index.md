@@ -1,13 +1,15 @@
 ---
 title: scroll-snap-type
 slug: Web/CSS/scroll-snap-type
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`scroll-snap-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スナップ点が存在する場合にスクロールコンテナーにどれだけ厳密にスナップ点を強制するかを設定します。
+**`scroll-snap-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("scroll container", "スクロールコンテナー")}}に設定され、[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)内のスナップポイントの強制の方向と厳格さを設定することで、スクロールスナップを有効にします。
 
-{{InteractiveExample("CSS Demo: scroll-snap-type")}}
+{{InteractiveExample("CSS デモ: scroll-snap-type")}}
 
 ```css interactive-example-choice
 scroll-snap-type: none;
@@ -28,7 +30,7 @@ scroll-snap-type: x proximity;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -71,31 +73,38 @@ scroll-snap-type: x proximity;
 }
 ```
 
+スクロールポートのコンテンツが変更された場合 （例えば、コンテンツが追加、移動、削除、サイズ変更などがされた場合）、そのコンテンツがまだ存在していれば、スクロールコンテナーは前回スナップしたコンテンツに再スナップします。
+
+`scroll-snap-type` や {{cssxref("scroll-margin")}} などのスクロールスナップ関連の値が変更された場合、スクロールコンテナーは `scroll-snap-type` の現在の値に基づいて再スナップされます。
+
 スナップ点へ強制するために使用する詳細なアニメーションや力学の指定はこのプロパティでは扱わず、ユーザーエージェントに委ねられます。
 
+## 構文
+
 ```css
-/* キーワード値 */
+/* スナップなし */
 scroll-snap-type: none;
+
+/* スナップ軸のキーワード値 */
 scroll-snap-type: x;
 scroll-snap-type: y;
 scroll-snap-type: block;
 scroll-snap-type: inline;
 scroll-snap-type: both;
 
+/* スナップの厳格さに関するオプションのキーワード値 */
 /* 任意の mandatory | proximity*/
 scroll-snap-type: x mandatory;
 scroll-snap-type: y proximity;
 scroll-snap-type: both mandatory;
 
-/* など */
-
 /* グローバル値 */
 scroll-snap-type: inherit;
 scroll-snap-type: initial;
+scroll-snap-type: revert;
+scroll-snap-type: revert-layer;
 scroll-snap-type: unset;
 ```
-
-## 構文
 
 ### 値
 
@@ -112,9 +121,9 @@ scroll-snap-type: unset;
 - `both`
   - : スクロールコンテナーは両方の軸で、個別にスナップ位置に合わせられます (それぞれの軸で異なる要素に位置が合わせられる可能性があります)。
 - `mandatory`
-  - : このスクロールコンテナーの視覚ビューポートは、現在スクロール中でなければスナップ点に合わせられます。これはスクロールアクションが終了した際に、可能であればその点にはまるということを意味しています。内容が追加、移動、削除、リサイズされた場合、スクロール量のオフセットは、そのスナップ点に載り続けるよう調整されます。
+  - : このスクロールコンテナーの視覚的ビューポートは、現在スクロール中でない場合、スナップ位置にスナップしなければなりません。
 - `proximity`
-  - : このスクロールコンテナーの視覚ビューポートは、現在スクロール中でなければ、ユーザーエージェントのスクロール引数を考慮しつつスナップ点に載るよう動作する可能性があります。コンテンツが追加、移動、削除、リサイズされた場合、スクロール量のオフセットは、そのスナップ点に載り続けるよう調整されることがあります。
+  - : このスクロールコンテナーの視覚的なビューポートは、現在スクロールされていない場合、スナップ位置にスナップする場合があります。スナップするかどうかは、スクロールパラメータ－に基づいてユーザーエージェントが決定します。これは、スナップ軸が指定されている場合の既定のスナップの厳格さです。
 
 ## 公式定義
 
@@ -126,167 +135,156 @@ scroll-snap-type: unset;
 
 ## 例
 
-<h3 id="Snapping_in_different_axes">様々な軸にスナップ</h3>
+### 様々な軸にスナップ
 
 #### HTML
 
 ```html
-<div class="holster">
-  <div class="container x mandatory-scroll-snapping" dir="ltr">
-    <div>X Mand. LTR</div>
+<main>
+  <section class="x mandatory-scroll-snapping" dir="ltr">
+    <div>X Mand. 左書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container x proximity-scroll-snapping" dir="ltr">
-    <div>X Prox. LTR</div>
+  </section>
+  <section class="x proximity-scroll-snapping" dir="ltr">
+    <div>X Prox. 左書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container y mandatory-scroll-snapping" dir="ltr">
-    <div>Y Mand. LTR</div>
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="ltr">
+    <div>Y Mand. 左書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container y proximity-scroll-snapping" dir="ltr">
-    <div>Y Prox. LTR</div>
+  </section>
+  <section class="y proximity-scroll-snapping" dir="ltr">
+    <div>Y Prox. 左書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container x mandatory-scroll-snapping" dir="rtl">
-    <div>X Mand. RTL</div>
+  </section>
+  <section class="x mandatory-scroll-snapping" dir="rtl">
+    <div>X Mand. 右書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container x proximity-scroll-snapping" dir="rtl">
-    <div>X Prox. RTL</div>
+  </section>
+  <section class="x proximity-scroll-snapping" dir="rtl">
+    <div>X Prox. 右書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container y mandatory-scroll-snapping" dir="rtl">
-    <div>Y Mand. RTL</div>
+  </section>
+  <section class="y mandatory-scroll-snapping" dir="rtl">
+    <div>Y Mand. 右書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-
-  <div class="container y proximity-scroll-snapping" dir="rtl">
-    <div>Y Prox. RTL</div>
+  </section>
+  <section class="y proximity-scroll-snapping" dir="rtl">
+    <div>Y Prox. 右書き</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
     <div>5</div>
-  </div>
-</div>
+  </section>
+</main>
 ```
 
 #### CSS
 
-```css
-/* setup */
-html,
-body,
-.holster {
-  height: 100%;
-}
-.holster {
+```css hidden
+main {
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-flow: column nowrap;
   font-family: monospace;
 }
-
-.container {
+section {
   display: flex;
-  overflow: auto;
+  margin: 1em auto;
   outline: 1px dashed lightgray;
   flex: none;
+  overflow: auto;
 }
-
-.container.x {
+.x {
   width: 100%;
   height: 128px;
   flex-flow: row nowrap;
+  overflow-y: hidden;
 }
-
-.container.y {
+.y {
   width: 256px;
   height: 256px;
   flex-flow: column nowrap;
+  overflow-x: hidden;
 }
+```
+
+```css
 /* scroll-snap */
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
-
-.y.mandatory-scroll-snapping {
-  scroll-snap-type: y mandatory;
-}
-
 .x.proximity-scroll-snapping {
   scroll-snap-type: x proximity;
 }
-
+.y.mandatory-scroll-snapping {
+  scroll-snap-type: y mandatory;
+}
 .y.proximity-scroll-snapping {
   scroll-snap-type: y proximity;
 }
 
-.container > div {
+div {
   text-align: center;
   scroll-snap-align: center;
   flex: none;
 }
+```
 
-.x.container > div {
+```css hidden
+.x div {
   line-height: 128px;
   font-size: 64px;
   width: 100%;
   height: 128px;
 }
-
-.y.container > div {
+.y div {
   line-height: 256px;
   font-size: 128px;
   width: 256px;
   height: 100%;
 }
+
 /* appearance fixes */
-.y.container > div:first-child {
+.y div:first-child {
   line-height: 1.3;
   font-size: 64px;
 }
+
 /* coloration */
-.container > div:nth-child(even) {
+div:nth-child(even) {
   background-color: #87ea87;
 }
-
-.container > div:nth-child(odd) {
+div:nth-child(odd) {
   background-color: #87ccea;
 }
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1630")}}
+{{EmbedLiveSample("様々な軸にスナップ", "100%", 1800)}}
 
 ## 仕様書
 
@@ -298,5 +296,9 @@ body,
 
 ## 関連情報
 
-- [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- その他のスクロールポートのプロパティ: {{cssxref("scroll-margin")}}, {{cssxref("scroll-padding")}}
+- スクロールの子のプロパティ: {{cssxref("scroll-snap-align")}}, {{cssxref("scroll-margin")}}, {{cssxref("scroll-snap-stop")}}
+- [スクロールスナップの基本概念](/ja/docs/Web/CSS/CSS_scroll_snap/Basic_concepts)
+- [スクロールスナップの使用](/ja/docs/Web/CSS/CSS_scroll_snap/Using_scroll_snap_events)
+- [CSS scroll snap](/ja/docs/Web/CSS/CSS_scroll_snap)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)
