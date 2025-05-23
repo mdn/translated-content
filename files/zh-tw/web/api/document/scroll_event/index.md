@@ -11,7 +11,7 @@ l10n:
 
 ## 語法
 
-在方法中使用事件名稱，例如 {{domxref("EventTarget.addEventListener", "addEventListener()")}}，或設定事件處理屬性。
+在例如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名稱，或設定事件處理屬性。
 
 ```js-nolint
 addEventListener("scroll", (event) => { })
