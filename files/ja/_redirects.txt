@@ -5087,7 +5087,7 @@
 /ja/docs/Web/HTTP/Headers/Feature-Policy/battery	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/camera	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera
 /ja/docs/Web/HTTP/Headers/Feature-Policy/display-capture	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/ja/docs/Web/HTTP/Headers/Feature-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Feature-Policy/encrypted-media	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /ja/docs/Web/HTTP/Headers/Feature-Policy/fullscreen	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /ja/docs/Web/HTTP/Headers/Feature-Policy/geolocation	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation
@@ -5121,7 +5121,7 @@
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/battery	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/camera	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/display-capture	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/display-capture
-/ja/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain
+/ja/docs/Web/HTTP/Headers/Permissions-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/encrypted-media	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/encrypted-media
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/fullscreen	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/fullscreen
 /ja/docs/Web/HTTP/Headers/Permissions-Policy/geolocation	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation
@@ -5191,6 +5191,7 @@
 /ja/docs/Web/HTTP/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/HTTP/Range_requests	/ja/docs/Web/HTTP/Guides/Range_requests
 /ja/docs/Web/HTTP/Redirections	/ja/docs/Web/HTTP/Guides/Redirections
+/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/document-domain	/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy
 /ja/docs/Web/HTTP/Resources_and_URIs	/ja/docs/Web/HTTP/Guides/MIME_types
 /ja/docs/Web/HTTP/Resources_and_specifications	/ja/docs/Web/HTTP/Reference/Resources_and_specifications
 /ja/docs/Web/HTTP/Response_codes	/ja/docs/Web/HTTP/Reference/Status
