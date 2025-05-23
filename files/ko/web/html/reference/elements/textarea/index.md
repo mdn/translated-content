@@ -7,7 +7,7 @@ slug: Web/HTML/Reference/Elements/textarea
 
 {{HTMLSidebar}}
 
-**`<textarea>`** [HTML](/en-US/docs/Web/HTML) 요소는 여러 줄의 일반 텍스트를 입력할 수 있는 편집 컨트롤을 나타냅니다. 예를 들어 리뷰의 댓글이나 피드백 폼과 같이 사용자가 많은 양의 자유 형식 텍스트를 입력할 수 있도록 할 때 유용합니다.
+**`<textarea>`** [HTML](/ko/docs/Web/HTML) 요소는 여러 줄의 일반 텍스트를 입력할 수 있는 편집 컨트롤을 나타냅니다. 예를 들어 리뷰의 댓글이나 피드백 폼과 같이 사용자가 많은 양의 자유 형식 텍스트를 입력할 수 있도록 할 때 유용합니다.
 
 {{InteractiveExample("HTML Demo: \<textarea>", "tabbed-standard")}}
 
