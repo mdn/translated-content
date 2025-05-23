@@ -94,4 +94,4 @@ HTML DOM API 提供了對各種瀏覽器功能的存取，例如分頁與視窗�
 ## 參見
 
 - [DOM 範例](/zh-TW/docs/Web/API/Document_Object_Model/Examples)
-- [CSS 物件模型 (CSSOM)](/zh-TW/docs/Web/API/CSS_Object_Model)
+- [CSS 物件模型（CSSOM）](/zh-TW/docs/Web/API/CSS_Object_Model)
