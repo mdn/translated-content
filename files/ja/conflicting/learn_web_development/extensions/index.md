@@ -1,6 +1,7 @@
 ---
 title: CSS の座標変換とアニメーション
-slug: Learn_web_development/Extensions/Transform_animate
+slug: conflicting/Learn_web_development/Extensions
+original_slug: Learn_web_development/Extensions/Transform_animate
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
