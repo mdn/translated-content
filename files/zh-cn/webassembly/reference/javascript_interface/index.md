@@ -1,6 +1,8 @@
 ---
 title: WebAssembly
 slug: WebAssembly/Reference/JavaScript_interface
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly`** JavaScript 对象是所有 [WebAssembly](/zh-CN/docs/WebAssembly) 相关功能的命名空间。
@@ -71,6 +73,6 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

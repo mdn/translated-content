@@ -2,7 +2,7 @@
 title: WebAssembly.Table
 slug: WebAssembly/Reference/JavaScript_interface/Table
 l10n:
-  sourceCommit: a8d2b658b3c9e7a98038712f421b3c7ae2320467
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.Table`** 是代表 WebAssembly Table 的 JavaScript 包装对象，具有类数组结构，存储了多个函数引用。在 JavaScript 或者 WebAssemble 中创建的 Table 对象可以同时被 JavaScript 或 WebAssembly 访问和更改。
@@ -76,6 +76,6 @@ WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

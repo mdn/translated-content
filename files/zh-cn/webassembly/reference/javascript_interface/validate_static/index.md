@@ -1,6 +1,8 @@
 ---
 title: WebAssembly.validate()
 slug: WebAssembly/Reference/JavaScript_interface/validate_static
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.validate()`** 方法用于验证包含 WebAssembly 二进制码的一个[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)是否合法，返回 `true` 如果这些字节能构成一个合法的 wasm 模块，否则返回 `false`。
@@ -50,6 +52,6 @@ fetch("simple.wasm")
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
