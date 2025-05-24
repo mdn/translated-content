@@ -40,6 +40,6 @@ CSS 중첩은 스타일시트를 더 읽기 쉽게, 모듈화하며, 그리고 �
 
 ## 같이 보기
 
-- [명시도](/ko/docs/Web/CSS/Specificity)
+- [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
 - [CSS 캐스케이드와 모듈 상속](/ko/docs/Web/CSS/CSS_cascade)
 - [CSS 선택자 모듈](/ko/docs/Web/CSS/CSS_selectors)

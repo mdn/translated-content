@@ -39,27 +39,27 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 
 ## 같이 보기
 
-- [컨테이닝 블록의 모든 것](/ko/docs/Web/CSS/Containing_block)
+- [컨테이닝 블록의 모든 것](/ko/docs/Web/CSS/CSS_display/Containing_block)
 - [종속](/ko/docs/Web/CSS/Cascade)
 - [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 - CSS 주요 개념:
 
-  - [CSS 문법](/ko/docs/Web/CSS/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/At-rule)
-  - [주석](/ko/docs/Web/CSS/Comments)
-  - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/Inheritance)
-  - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
+  - [CSS 문법](/ko/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)
+  - [주석](/ko/docs/Web/CSS/CSS_syntax/Comments)
+  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
+  - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [레이아웃 모드](/ko/docs/Glossary/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
-    - [초기 값](/ko/docs/Web/CSS/initial_value)
-    - [계산 값](/ko/docs/Web/CSS/computed_value)
-    - [사용 값](/ko/docs/Web/CSS/used_value)
+    - [초기 값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [계산 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
+    - [사용 값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제 값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/Replaced_element)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

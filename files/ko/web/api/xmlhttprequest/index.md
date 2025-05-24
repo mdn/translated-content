@@ -39,7 +39,7 @@ slug: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.responseXML")}} {{readonlyinline}}
   - : 요청에 대한 응답을 포함한 {{domxref("Document")}}를 반환합니다. 요청이 실패했거나, 아직 전송하지 않았거나, 응답을 XML/HTML로 파싱할 수 없는 경우 `null`을 반환합니다. [Web Worker](/ko/docs/Web/API/Web_Workers_API)에서 사용할 수 없습니다.
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
-  - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)를 반환합니다.
+  - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Reference/Status)를 반환합니다.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
 
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다

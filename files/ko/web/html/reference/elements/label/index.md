@@ -54,11 +54,11 @@ original_slug: Web/HTML/Element/label
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `for`
 
-  - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/HTML/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
+  - : 같은 문서 내의 `<label>` 요소로서, [레이블 가능](/ko/docs/Web/HTML/Guides/Content_categories#레이블_가능)한 form-related 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id). 레이블 가능한 요소일 때, `for` 속성값과 일치하는 `id`를 가진 문서의 첫 번째 요소는 그 label 요소의 *라벨 제어(labeled control)*라고 합니다. label을 지정할 수 없으면 `for` 속성은 영향을 미치지 않습니다. 문서의 뒷부분에 `id` 값과 일치하는 다른 요소들은 무시합니다.
 
     > **참고:** `<label>` 요소는 `for` 속성과 제어control 요소를 동시에 가질 수 있습니다. 이 때 `for` 속성은 포함되어있는 제어control 요소를 가리키고 있어야 합니다.
 
@@ -118,9 +118,9 @@ Don't place interactive elements such as {{HTMLElement("a", "anchors")}} or {{HT
 
 ### 제목
 
-제목은 일반적으로 [탐색 목적](/ko/docs/Web/HTML/Element/Heading_Elements#navigation)의 보조 도구로 사용되므로 `<label>` 내에 [제목 요소](/ko/docs/Web/HTML/Element/Heading_Elements)를 배치하면 많은 종류의 보조 기술을 방해합니다. label의 텍스트를 시각적으로 조정해야하는 경우, `<label>` 요소에 적용된 CSS 클래스를 사용하십시오.
+제목은 일반적으로 [탐색 목적](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements#navigation)의 보조 도구로 사용되므로 `<label>` 내에 [제목 요소](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements)를 배치하면 많은 종류의 보조 기술을 방해합니다. label의 텍스트를 시각적으로 조정해야하는 경우, `<label>` 요소에 적용된 CSS 클래스를 사용하십시오.
 
-[양식(form)](/ko/docs/Web/HTML/Element/form) 또는 양식의 섹션에 제목이 필요한 경우 {{HTMLElement ( "fieldset")}} 내에 배치 된 {{HTMLElement ( "legend")}} 요소를 사용하십시오.
+[양식(form)](/ko/docs/Web/HTML/Reference/Elements/form) 또는 양식의 섹션에 제목이 필요한 경우 {{HTMLElement ( "fieldset")}} 내에 배치 된 {{HTMLElement ( "legend")}} 요소를 사용하십시오.
 
 #### 하지 마세요
 

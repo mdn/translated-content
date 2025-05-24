@@ -38,7 +38,7 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 
 - `arg1`, …, `argN` {{optional_inline}}
 
-  - : 함수가 공식적인 인수 이름으로 사용할 이름. 각 이름은 유효한 JavaScript 매개변수를 나타내는 문자열이어야 합니다(일반 [식별자](/ko/docs/Glossary/Identifier), [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), 또는 [구조 분해된](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) 매개변수 중 하나이며, 선택적으로 [기본값](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters)을 가질 수 있음). 또는 이런 문자열들이 쉼표로 구분된 목록이어야 합니다.
+  - : 함수가 공식적인 인수 이름으로 사용할 이름. 각 이름은 유효한 JavaScript 매개변수를 나타내는 문자열이어야 합니다(일반 [식별자](/ko/docs/Glossary/Identifier), [나머지 매개변수](/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters), 또는 [구조 분해된](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring) 매개변수 중 하나이며, 선택적으로 [기본값](/ko/docs/Web/JavaScript/Reference/Functions/Default_parameters)을 가질 수 있음). 또는 이런 문자열들이 쉼표로 구분된 목록이어야 합니다.
 
     매개변수는 함수 표현식과 동일한 방식으로 구문 분석되기 때문에 공백과 주석이 허용됩니다. 예: `"x", "theValue = 42", "[a, b] /* numbers */"` 또는 `"x, theValue = 42, [a, b] /* numbers */"`. (`"x, theValue = 42", "[a, b]"`도 맞지만 읽기가 매우 혼란스러울 수 있습니다.)
 

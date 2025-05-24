@@ -54,7 +54,7 @@ URL 매개변수들: `GET` requests는 이름/값 쌍을 끝에 추가하여 서
 - `POST` 데이터. POST 요청은 요청 본문 내에 인코딩 된 데이터를 새 리소스에 추가합니다.
 - 클라이언트 측 쿠키. 쿠키는 서버가 로그인 상태 및 권한 / 자원에 대한 액세스를 결정하는 데 사용할 수있는 키를 포함하여 클라이언트에 대한 세션 데이터를 포함합니다.
 
-웹 서버는 클라이언트의 요청 메시지를 기다리고, 메시지가 오면 그것들을 처리하고, 웹 브라우저에 HTTP Response메시지를 응답합니다. 응답에는 요청 성공여부를 나타내는 [HTTP Response status code](/ko/docs/Web/HTTP/Status)를 포함합니다.(예 "`200 OK`" 응답 성공, "`404 Not Found`" 해당 리소스를 찾을 수 없음, "`403 Forbidden`" 사용자가 해당 리소스를 볼 자격을 증명하지 않음, 기타 등등). 성공적인 응답이라면 GET request에서 요청한 리소스를 포함한 본문 일 것 입니다.
+웹 서버는 클라이언트의 요청 메시지를 기다리고, 메시지가 오면 그것들을 처리하고, 웹 브라우저에 HTTP Response메시지를 응답합니다. 응답에는 요청 성공여부를 나타내는 [HTTP Response status code](/ko/docs/Web/HTTP/Reference/Status)를 포함합니다.(예 "`200 OK`" 응답 성공, "`404 Not Found`" 해당 리소스를 찾을 수 없음, "`403 Forbidden`" 사용자가 해당 리소스를 볼 자격을 증명하지 않음, 기타 등등). 성공적인 응답이라면 GET request에서 요청한 리소스를 포함한 본문 일 것 입니다.
 
 HTML 페이지가 반환 되면 웹 브라우저에 의해 렌더링 될 것입니다. 그 과정에서 브라우저는 다른 리소스와 링크된 것들을 찾을수도 있습니다.(예 HTML page 종종 JavaScript나 CSS pages를 참조합니다), 그리고 별도의 HTTP Requests로 그 파일들을 다운로드 합니다.
 
@@ -206,7 +206,7 @@ Content-Length: 0
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
-유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[HTTP Response status code](/ko/docs/Web/HTTP/Status) "`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
+유저가 페이지를 탐색하기를 원할 때, 브라우저는 지정된 HTML 페이지의 URL에 HTTP `GET` request를 보냅니다. 서버는 요청한 문서를 파일 시스템에서 탐색하고 문서와[HTTP Response status code](/ko/docs/Web/HTTP/Reference/Status) "`200 OK`" (성공을 알려주는)를 포함하는 HTTP응답을 반환합니다. 만약 서버가 다른 상태 코드를 반환한다면, 예를들면 "`404 Not Found`"는 파일이 서버에 없는 경우이고 "`301 Moved Permanently`"는 파일은 존재하지만 다른 위치로 리다이렉트된 경우입니다 .
 
 이 정적 사이트는 오직 GET requests만 필요합니다, 왜냐하면 이 서버는 변경 할 수 있는 데이터는 저장하지 않기 때문입니다. 또한 HTTP Request 데이터에 기반한 응답을 바꿀 필요가 없습니다(예. URL 인자들 또는 쿠키).
 

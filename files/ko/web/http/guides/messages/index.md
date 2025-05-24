@@ -35,7 +35,7 @@ HTTP 메시지의 시작 줄과 HTTP 헤더를 묶어서 '요청 헤드(head)' �
 
 HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라이언트에서 전송하는 메시지입니다. 시작 줄은 다음과 같이 세 가지 요소로 이루어져 있습니다.
 
-1. '[HTTP 메서드](/ko/docs/Web/HTTP/Methods)'로, 영어 동사({{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}},{{HTTPMethod("POST")}}) 혹은 명사({{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}})를 사용해 서버가 수행해야 할 동작을 나타냅니다. 예를 들어, `GET`은 리소스를 클라이언트로 가져다 달라는 것을 뜻하며, `POST`는 데이터가 서버로 들어가야 함을 의미(리소스를 새로 만들거나 수정하기 위해, 또는 클라이언트로 돌려 보낼 임시 문서를 생성하기 위해)합니다.
+1. '[HTTP 메서드](/ko/docs/Web/HTTP/Reference/Methods)'로, 영어 동사({{HTTPMethod("GET")}}, {{HTTPMethod("PUT")}},{{HTTPMethod("POST")}}) 혹은 명사({{HTTPMethod("HEAD")}}, {{HTTPMethod("OPTIONS")}})를 사용해 서버가 수행해야 할 동작을 나타냅니다. 예를 들어, `GET`은 리소스를 클라이언트로 가져다 달라는 것을 뜻하며, `POST`는 데이터가 서버로 들어가야 함을 의미(리소스를 새로 만들거나 수정하기 위해, 또는 클라이언트로 돌려 보낼 임시 문서를 생성하기 위해)합니다.
 2. '요청 타겟'은 주로 {{glossary("URL")}}, 또는 프로토콜, 포트, 도메인의 절대 경로로 나타낼 수도 있으며 이들은 요청 컨텍스트에 의해 특정지어 집니다. 요청 타겟 포맷은 HTTP 메소드에 따라 달라집니다. 포맷에는 다음과 같은 것들이 있습니다.
 
    - 가장 일반적인 형식이고 'origin 형식'으로 알려진 절대 경로입니다. 이 형식은 끝에 `'?'`와 쿼리 문자열이 따라옵니다. `GET`, `POST`, `HEAD`, `OPTIONS` 메서드와 함께 사용합니다.
@@ -54,7 +54,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 
 ### 헤더
 
-요청에 들어가는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)는 HTTP 헤더의 기본 구조를 따릅니다. 대소문자 구분없는 문자열 다음에 콜론(`':'`)이 붙으며, 그 뒤에 오는 값은 헤더에 따라 달라집니다. 헤더는 값까지 포함해 한 줄로 구성되지만, 꽤 길어질 수 있습니다.
+요청에 들어가는 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)는 HTTP 헤더의 기본 구조를 따릅니다. 대소문자 구분없는 문자열 다음에 콜론(`':'`)이 붙으며, 그 뒤에 오는 값은 헤더에 따라 달라집니다. 헤더는 값까지 포함해 한 줄로 구성되지만, 꽤 길어질 수 있습니다.
 
 다양한 종류의 요청 헤더가 있는데, 이들은 다음과 같이 몇몇 그룹으로 나눌 수 있습니다.
 
@@ -71,7 +71,7 @@ HTTP 요청은 서버가 특정 동작을 취하게끔 만들기 위해 클라�
 넓게 보면 본문은 두가지 종류로 나뉩니다.
 
 - 헤더 두 개({{HTTPHeader("Content-Type")}}와 {{HTTPHeader("Content-Length")}})로 정의된 단일 파일로 구성되는 단일-리소스 본문(single-resource bodies)입니다.
-- 각각 서로 다른 정보를 담고 있는 멀티파트 본문으로 구성되는 [다중 리소스 본문](/ko/docs/Web/HTTP/MIME_types#multipartform-data)입니다. 보통 [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)과 관련이 있습니다.
+- 각각 서로 다른 정보를 담고 있는 멀티파트 본문으로 구성되는 [다중 리소스 본문](/ko/docs/Web/HTTP/Guides/MIME_types#multipartform-data)입니다. 보통 [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)과 관련이 있습니다.
 
 ## HTTP 응답
 
@@ -87,7 +87,7 @@ HTTP 응답의 시작 줄은 '상태 줄(status line)'' 이라고 불리며, 다
 
 ### 헤더
 
-응답에 들어가는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)는 다른 헤더와 동일한 구조를 따릅니다. 대소문자를 구분하지 않는 문자열 다음에 콜론(`':'`)이 오며, 그 뒤에 오는 값은 구조가 헤더에 따라 달라집니다. 헤더는 값을 포함해 전체를 한 줄로 표시합니다.
+응답에 들어가는 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)는 다른 헤더와 동일한 구조를 따릅니다. 대소문자를 구분하지 않는 문자열 다음에 콜론(`':'`)이 오며, 그 뒤에 오는 값은 구조가 헤더에 따라 달라집니다. 헤더는 값을 포함해 전체를 한 줄로 표시합니다.
 
 다양한 종류의 응답 헤더가 있는데, 이들은 다음과 같이 몇몇 그룹으로 나눌 수 있습니다.
 
@@ -105,7 +105,7 @@ HTTP 응답의 시작 줄은 '상태 줄(status line)'' 이라고 불리며, 다
 
 - {{HTTPHeader("Content-Type")}}와 {{HTTPHeader("Content-Length")}}라는 두 개의 헤더로 정의하는 길이가 알려진 하나의 파일로 구성된 단일-리소스 본문(Single-resource bodies).
 - {{HTTPHeader("Transfer-Encoding")}}가 `chunked`로 설정된 청크로 나뉘어 인코딩되는 길이를 모르는 하나의 파일로 구성된 단일-리소스 본문:.
-- 서로 다른 정보를 담고 있는 멀티파트 본문으로 이루어진 [다중 리소스 본문](/ko/docs/Web/HTTP/MIME_types#multipartform-data): 이 경우는 상대적으로 위의 두 경우에 비해 보기 힘듭니다.
+- 서로 다른 정보를 담고 있는 멀티파트 본문으로 이루어진 [다중 리소스 본문](/ko/docs/Web/HTTP/Guides/MIME_types#multipartform-data): 이 경우는 상대적으로 위의 두 경우에 비해 보기 힘듭니다.
 
 ## HTTP/2 프레임
 

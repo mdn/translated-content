@@ -24,6 +24,6 @@ Reason: CORS request external redirect not allowed
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
