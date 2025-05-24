@@ -2506,8 +2506,8 @@
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Styling_basics	/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Styling_basics
-/ja/docs/Learn_web_development/Extensions/Security_privacy	/ja/docs/conflicting/Web/Security
-/ja/docs/Learn_web_development/Extensions/Transform_animate	/ja/docs/conflicting/Learn_web_development/Extensions
+/ja/docs/Learn_web_development/Extensions/Security_privacy	/ja/docs/Web/Security
+/ja/docs/Learn_web_development/Extensions/Transform_animate	/ja/docs/Learn_web_development/Extensions
 /ja/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/ja/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
 /ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/ja/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 /ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
