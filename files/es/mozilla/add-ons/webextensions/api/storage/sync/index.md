@@ -37,8 +37,6 @@ El objeto de sincronización implementa los métodos definidos en el {{WebExtAPI
 > **Nota:** **Agradecimientos**
 >
 > Esta API está basada en la API de Chromium's [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync) API. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
->
-> Los datos de compatibilidad de Microsoft Edge son proporcionados por Microsoft Corporation y se incluyen aquí bajo la Licencia de Estados Unidos Creative Commons Attribution 3.0.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
