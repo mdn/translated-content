@@ -109,7 +109,7 @@ XML 출력 스타일을 지정하는 한 가지 방법은 `xml-stylesheet` 처�
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-XML을 HTML과 같은 다른 언어로 변환하는 데 사용할 수 있는 **확장 가능한 스타일 시트 언어 변환**([XSLT](/ko/docs/Web/XSLT))이라는 더 강력한 XML 표시 방법도 있습니다. 따라서 XML은 매우 다양하게 활용될 수 있습니다.
+XML을 HTML과 같은 다른 언어로 변환하는 데 사용할 수 있는 **확장 가능한 스타일 시트 언어 변환**([XSLT](/ko/docs/Web/XML/XSLT))이라는 더 강력한 XML 표시 방법도 있습니다. 따라서 XML은 매우 다양하게 활용될 수 있습니다.
 
 ```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>

@@ -78,4 +78,4 @@ slug: Web/CSS/CSS_selectors
 
 ## 같이 보기
 
-- [CSS 명시도](/ko/docs/Web/CSS/Specificity)
+- [CSS 명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)

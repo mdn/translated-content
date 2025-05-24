@@ -9,7 +9,7 @@ original_slug: WebAssembly/Understanding_the_text_format
 사람이 WebAssembly를 읽고 편집 할 수 있게하려면 wasm 이진 형식의 텍스트 표현이 있어야합니다. 이것은 텍스트 편집기, 브라우저 개발자 도구 등에서 노출되도록 고안된 중간 양식입니다.이 장에서는 원시 구문과 텍스트 형식이 나타내는 기본 바이트 코드와 관련하여 Text format이 작동하는 방식과 JavaScript에서 wasm을 나타내는 객체 래퍼에 대해 설명합니다.
 
 > [!NOTE]
-> 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
+> 여기서 다루는 내용은 여러분이 웹어셈블리를 JavaScript에 바로 불러오는 이전의 방법보다 훨씬 어렵습니다.([웹어셈블리를 JavaScript API에 사용하기](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API) 참고), 하지만 여기서 배우는 내용을 통해 웹어셈블리 모듈을 작성해보면, JavaScript 라이브러리의 성능을 향상시킬수 있는 방법을 찾거나, 직접 웹어셈블리 컴파일러를 작성하는데 도움이 될 것입니다.
 
 ## S-expressions
 
@@ -33,7 +33,7 @@ WebAssembly에서 바이너리와 텍스트 사이에 기본적인 코드 교환
 
 이 모듈은 전체적으로 비어 있지만 올바르게 작동하는 모듈입니다.
 
-만약 이 모듈을 바이너리로 전환하면,([웹어셈블리 텍스트 형식을 wasm으로 변환](/ko/docs/WebAssembly/Text_format_to_Wasm) 참조), 우리는 8바이트짜리 모듈 헤더를 [이진 형식](http://webassembly.org/docs/binary-encoding/#high-level-structure)으로 보게 될 것입니다.
+만약 이 모듈을 바이너리로 전환하면,([웹어셈블리 텍스트 형식을 wasm으로 변환](/ko/docs/WebAssembly/Guides/Text_format_to_Wasm) 참조), 우리는 8바이트짜리 모듈 헤더를 [이진 형식](http://webassembly.org/docs/binary-encoding/#high-level-structure)으로 보게 될 것입니다.
 
 ```rust
     0000000: 0061 736d              ; WASM_BINARY_MAGIC
@@ -170,9 +170,9 @@ locals와 마찬가지로 함수는 기본적으로 인덱스로 식별되지만
     )
 ```
 
-예제를 따라하려면 위의 모듈을 `add.wat`라는 파일에 저장 한 다음 wabt를 사용하여 `add.wasm`이라는 이진 파일로 변환하십시오 (자세한 내용은 [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Text_format_to_Wasm) 참조).
+예제를 따라하려면 위의 모듈을 `add.wat`라는 파일에 저장 한 다음 wabt를 사용하여 `add.wasm`이라는 이진 파일로 변환하십시오 (자세한 내용은 [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Guides/Text_format_to_Wasm) 참조).
 
-다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Loading_and_running)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports) 속성에서 찾을 수 있습니다)
+다음으로 바이너리를 `addCode` ([Fetching WebAssembly Bytecode](/ko/docs/WebAssembly/Guides/Loading_and_running)에서 설명한대로)라는 형식화 된 배열에로드하고, 컴파일 및 인스턴스화 한 다음 자바 스크립트에서 `add` 함수를 실행합니다. (이제 `add()`는 인스턴스의 [`exports`](/ko/docs/WebAssembly/JavaScript_interface/Instance/exports) 속성에서 찾을 수 있습니다)
 
 ```js
 WebAssembly.instantiateStreaming(fetch("add.wasm")).then((obj) => {
@@ -316,7 +316,7 @@ function consoleLogString(offset, length) {
 }
 ```
 
-이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/ko/docs/WebAssembly/JavaScript_interface/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
+이제 남은 부분은 `consoleLogString`이 WebAssembly `memory`에 액세스하는 부분입니다. WebAssembly는 JavaScript로 [`Memory`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory) 객체를 만들고 WebAssembly 모듈에서 메모리를 가져 오거나 WebAssembly 모듈에서 메모리를 만들어 JavaScript로 내보낼 수 있는 유연성을 제공합니다.
 
 간단히하기 위해 JavaScript로 작성한 다음 WebAssembly로 가져와 봅시다. 우리의 `import`statement는 다음과 같이 작성됩니다 :
 
@@ -480,7 +480,7 @@ WebAssembly.instantiateStreaming(fetch("wasm-table.wasm")).then((obj) => {
 > **참고:** [wasm-table.html](https://github.com/mdn/webassembly-examples/blob/master/understanding-text-format/wasm-table.html)에서 이 예제를 확인할 수 있습니다. ([see it live also](https://mdn.github.io/webassembly-examples/understanding-text-format/wasm-table.html)).
 
 > [!NOTE]
-> Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/WebAssembly/JavaScript_interface/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
+> Memory와 마찬가지로 테이블은 자바 스크립트 ([`WebAssembly.Table()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Table) 참고)와 다른 wasm 모듈로 가져 오거나 다른 wasm 모듈에서 가져올 수도있다.
 
 ### Mutating tables and dynamic linking
 
@@ -488,7 +488,7 @@ JavaScript는 함수 참조에 대한 모든 액세스 권한을 갖기 때문�
 
 테이블은 변경 가능하기 때문에 정교한 로드 시간 및 런타임 [dynamic linking schemes](http://webassembly.org/docs/dynamic-linking)를 구현하는 데 사용할 수 있습니다. 프로그램이 동적으로 링크되면 여러 인스턴스가 동일한 메모리 및 테이블을 공유합니다. 이것은 여러 컴파일 된 `.dll`이 단일 프로세스의 주소 공간을 공유하는 기본 응용 프로그램과 대칭입니다.
 
-이 작업을 보려면 Memory 객체와 Table 객체가 포함 된 단일 가져 오기 객체를 만들고 동일한 가져 오기 객체를 여러 [`instantiate()`](/ko/docs/WebAssembly/JavaScript_interface/instantiate_static) 호출에 전달합니다.
+이 작업을 보려면 Memory 객체와 Table 객체가 포함 된 단일 가져 오기 객체를 만들고 동일한 가져 오기 객체를 여러 [`instantiate()`](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 호출에 전달합니다.
 
 `.wat` 예제는 다음과 같습니다.
 

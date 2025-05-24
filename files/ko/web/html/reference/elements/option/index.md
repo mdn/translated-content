@@ -80,7 +80,7 @@ select {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `disabled`
   - : 지정한 경우 이 옵션을 선택할 수 없습니다. 브라우저에서, 비활성화 옵션은 주로 회색으로 보이며, 클릭과 포커스 등 모든 이벤트를 받지 않습니다. `<option>`에 `disabled` 특성을 추가하지 않더라도, {{HTMLElement("optgroup")}} 등 조상 요소로 인해 비활성화될 수 있습니다.

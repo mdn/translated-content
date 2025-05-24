@@ -40,7 +40,7 @@ console.log(!(a > 0 || b > 0));
 - 빈 문자열 (`""` or `''` or ` `` `);
 - `undefined`.
 
-`!` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환값이 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로 변환될 수 있기 때문에 여전히 불리언 연산자로 간주할 수 있습니다. 명시적으로 반환값을 (또는 일반적으로 어떤 표현식을) 대응하는 불리언 값으로 변환하기 위해서는 이중 NOT 연산자 (`!!`) 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.
+`!` 연산자는 불리언 값이 아닌 피연산자와 함께 사용할 수 있지만, 반환값이 항상 [원시형 불리언](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_타입)으로 변환될 수 있기 때문에 여전히 불리언 연산자로 간주할 수 있습니다. 명시적으로 반환값을 (또는 일반적으로 어떤 표현식을) 대응하는 불리언 값으로 변환하기 위해서는 이중 NOT 연산자 (`!!`) 또는 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 생성자를 사용하시기 바랍니다.
 
 ## 예제
 
@@ -57,7 +57,7 @@ console.log(!(a > 0 || b > 0));
 
 ### 이중 NOT (`!!`)
 
-NOT 연산자를 연속으로 2개 사용해서 명시적으로 어떤 값을 그에 대응하는 [원시형 불리언](/ko/docs/Web/JavaScript/Data_structures#boolean_타입)으로 변환하도록 강제할 수 있습니다.
+NOT 연산자를 연속으로 2개 사용해서 명시적으로 어떤 값을 그에 대응하는 [원시형 불리언](/ko/docs/Web/JavaScript/Guide/Data_structures#boolean_타입)으로 변환하도록 강제할 수 있습니다.
 변환은 값의 "참 같음" 또는 "거짓 같음"에 기반합니다({{Glossary("truthy", "참 같은 값")}}과 {{Glossary("falsy", "거짓 같은 값")}}을 참고하세요).
 
 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 함수를 통해서도 똑같은 변환을 수행할 수 있습니다.

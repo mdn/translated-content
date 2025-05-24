@@ -5,7 +5,7 @@ slug: Web/CSS/max-height
 
 {{CSSRef}}
 
-**`max-height`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최대 높이를 설정합니다. `max-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/Web/CSS/used_value)이 자신의 값보다 커지는걸 방지합니다.
+**`max-height`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 최대 높이를 설정합니다. `max-height`는 {{cssxref("height")}} 속성의 [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)이 자신의 값보다 커지는걸 방지합니다.
 
 {{InteractiveExample("CSS Demo: max-height")}}
 
@@ -73,7 +73,7 @@ max-height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 고정 길이로 나타낸 최대 높이.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이에 대한 백분율로 나타낸 최대 높이.
 
 #### 키워드 값
 

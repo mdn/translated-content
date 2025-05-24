@@ -30,23 +30,23 @@ JSON을 뛰어넘는 structured clone알고리즘의 여러가지 핵심 이득�
 
 ## Supported types
 
-| Object type                                                                     | Notes                                                                                                                     |
-| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
-| [All primitive types](/ko/docs/Web/JavaScript/Data_structures#primitive_values) | 하지만 심볼들은 포함하지 않습니다.                                                                                        |
-| [Boolean](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean) object      |                                                                                                                           |
-| String object                                                                   |                                                                                                                           |
-| [Date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)                   |                                                                                                                           |
-| [RegExp](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)               | lastIndex필드는 보존되지 않습니다.                                                                                        |
-| {{ domxref("Blob") }}                                                           |                                                                                                                           |
-| {{ domxref("File") }}                                                           |                                                                                                                           |
-| {{ domxref("FileList") }}                                                       |                                                                                                                           |
-| [ArrayBuffer](/ko/docs/Web/API/ArrayBuffer)                                     |                                                                                                                           |
-| [ArrayBufferView](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)  | 이것은 기본적으로 int32Array나 기타같은 [typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)의 모든것을 의미합니다. |
-| {{ domxref("ImageData") }}                                                      |                                                                                                                           |
-| [Array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)                 |                                                                                                                           |
-| [Object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)               | 이것은 그냥 plain객체들을 포함합니다.(e.g. 객체 리터럴)                                                                   |
-| [Map](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)                     |                                                                                                                           |
-| [Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)                     |                                                                                                                           |
+| Object type                                                                           | Notes                                                                                                                     |
+| ------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| [All primitive types](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_values) | 하지만 심볼들은 포함하지 않습니다.                                                                                        |
+| [Boolean](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean) object            |                                                                                                                           |
+| String object                                                                         |                                                                                                                           |
+| [Date](/ko/docs/Web/JavaScript/Reference/Global_Objects/Date)                         |                                                                                                                           |
+| [RegExp](/ko/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                     | lastIndex필드는 보존되지 않습니다.                                                                                        |
+| {{ domxref("Blob") }}                                                                 |                                                                                                                           |
+| {{ domxref("File") }}                                                                 |                                                                                                                           |
+| {{ domxref("FileList") }}                                                             |                                                                                                                           |
+| [ArrayBuffer](/ko/docs/Web/API/ArrayBuffer)                                           |                                                                                                                           |
+| [ArrayBufferView](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)        | 이것은 기본적으로 int32Array나 기타같은 [typed arrays](/ko/docs/Web/JavaScript/Guide/Typed_arrays)의 모든것을 의미합니다. |
+| {{ domxref("ImageData") }}                                                            |                                                                                                                           |
+| [Array](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)                       |                                                                                                                           |
+| [Object](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)                     | 이것은 그냥 plain객체들을 포함합니다.(e.g. 객체 리터럴)                                                                   |
+| [Map](/ko/docs/Web/JavaScript/Reference/Global_Objects/Map)                           |                                                                                                                           |
+| [Set](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set)                           |                                                                                                                           |
 
 ## 또 다른 방법 : 깊은 복사(deep copy‎)
 

@@ -13,7 +13,7 @@ l10n:
 
 모두의 기여를 환영합니다! MDN Web Docs는 오픈 소스 프로젝트로, 다양한 기여를 받습니다. 단순한 작업(교정 및 오타 수정)부터 복잡한 작업(API 문서 작성)에 이르기까지 도움을 줄 수 있는 다양한 작업이 있습니다.
 
-기여 방법을 알아보려면 [시작하기](/ko/docs/MDN/Community/Contributing/Getting_started) 페이지를 방문하세요. 질문이 있거나 대화에 참여하고 싶다면 [MDN Web Docs 채팅방](/ko/docs/MDN/Community/Communication_channels#채팅)에서 소통하세요.
+기여 방법을 알아보려면 [시작하기](/ko/docs/MDN/Community/Getting_started) 페이지를 방문하세요. 질문이 있거나 대화에 참여하고 싶다면 [MDN Web Docs 채팅방](/ko/docs/MDN/Community/Communication_channels#채팅)에서 소통하세요.
 
 - [커뮤니티 안내서](/ko/docs/MDN/Community)
 

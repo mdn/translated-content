@@ -5,7 +5,7 @@ slug: Web/CSS/:first
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`:first`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 {{cssxref("@page")}} [@-규칙](/ko/docs/Web/CSS/At-rule)과 함께 사용되며, 출력 시의 첫 페이지를 나타냅니다.
+[CSS](/ko/docs/Web/CSS) **`:first`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 {{cssxref("@page")}} [@-규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)과 함께 사용되며, 출력 시의 첫 페이지를 나타냅니다.
 
 ```css
 /* Selects the first page when printing */

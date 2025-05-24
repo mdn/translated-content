@@ -48,7 +48,7 @@ Fetch API가 제공하는 기능의 자세한 정보는 [Fetch 사용하기](/ko
 
 - [Fetch 사용하기](/ko/docs/Web/API/Fetch_API/Using_Fetch)
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)
 - [Fetch 폴리필](https://github.com/github/fetch)
 - [Fetch 기본 개념](/ko/docs/conflicting/Web/API/Fetch_API/Using_Fetch_c0ca150deec7d78cb1d4462e8542019b)

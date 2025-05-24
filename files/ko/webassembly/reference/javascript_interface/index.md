@@ -75,5 +75,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## 바깥 고리
 
 - [웹어셈블리](/ko/docs/WebAssembly) 개요 페이지
-- [웹어셈블리의 컨셉](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [웹어셈블리의 컨셉](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

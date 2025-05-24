@@ -8,7 +8,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`412 Precondition Failed`** [클라이언트 오류](/ko/docs/Web/HTTP/Status#client_error_responses) 상태 코드는 대상 리소스에 대한 액세스가 거부되었음을 나타냅니다. 이는 {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 이외의 메서드에 대한 [조건부 요청](/ko/docs/Web/HTTP/Conditional_requests)에서 {{HTTPHeader("If-Unmodified-Since")}} 또는 {{HTTPHeader("If-Match")}} 헤더에 정의된 조건이 충족되지 않을 때 발생합니다. 이 경우 요청(일반적으로 리소스 업로드 또는 수정)을 수행할 수 없으며 이 오류 응답이 다시 전송됩니다.
+HTTP **`412 Precondition Failed`** [클라이언트 오류](/ko/docs/Web/HTTP/Reference/Status#client_error_responses) 상태 코드는 대상 리소스에 대한 액세스가 거부되었음을 나타냅니다. 이는 {{HTTPMethod("GET")}} 또는 {{HTTPMethod("HEAD")}} 이외의 메서드에 대한 [조건부 요청](/ko/docs/Web/HTTP/Guides/Conditional_requests)에서 {{HTTPHeader("If-Unmodified-Since")}} 또는 {{HTTPHeader("If-Match")}} 헤더에 정의된 조건이 충족되지 않을 때 발생합니다. 이 경우 요청(일반적으로 리소스 업로드 또는 수정)을 수행할 수 없으며 이 오류 응답이 다시 전송됩니다.
 
 ## 상태
 
@@ -47,8 +47,8 @@ If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 
 ## 같이 보기
 
-- [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)
-- [HTTP 조건부 요청](/ko/docs/Web/HTTP/Conditional_requests)
+- [HTTP 상태 코드](/ko/docs/Web/HTTP/Reference/Status)
+- [HTTP 조건부 요청](/ko/docs/Web/HTTP/Guides/Conditional_requests)
 - {{HTTPStatus("304")}}
 - {{HTTPHeader("If-Unmodified-Since")}}, {{HTTPHeader("If-Match")}}
 - {{HTTPStatus("428")}}

@@ -79,7 +79,7 @@ video::cue {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `default`
   - : 사용자 설정이 다른 자막을 가리키지 않는다면 활성화할 기본 트랙을 나타냅니다. 하나의 미디어 요소 당 하나의 `<track>` 요소에만 사용할 수 있습니다.
@@ -114,7 +114,7 @@ video::cue {
 - `label`
   - : 사용자가 읽을 수 있는 형태의 텍스트 트랙 제목. 브라우저에서 사용 가능한 트랙의 이름 목록을 생성할 때 사용합니다.
 - `src`
-  - : 자막의 주소(`.vtt` 파일). 유효한 {{glossary("URL")}}이어야 합니다. 필수 특성이며, `<track>`의 부모 {{htmlelement("audio")}}/{{htmlelement("video")}} 요소에 [`crossorigin`](/ko/docs/Web/HTML/Attributes/crossorigin) 특성이 없다면 문서와 같은 {{glossary("origin", "출처")}}여야 합니다.
+  - : 자막의 주소(`.vtt` 파일). 유효한 {{glossary("URL")}}이어야 합니다. 필수 특성이며, `<track>`의 부모 {{htmlelement("audio")}}/{{htmlelement("video")}} 요소에 [`crossorigin`](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 특성이 없다면 문서와 같은 {{glossary("origin", "출처")}}여야 합니다.
 - `srclang`
   - : 텍스트 트랙의 언어. 유효한 [IETF 언어 태그](https://ko.wikipedia.org/wiki/IETF_%EC%96%B8%EC%96%B4_%ED%83%9C%EA%B7%B8)여야 합니다. `kind` 특성이 `subtitle`인 경우, `srclang`은 반드시 정의되어야 합니다.
 

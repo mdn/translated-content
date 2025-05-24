@@ -57,4 +57,4 @@ if (window.isSecureContext) {
 - [보안 컨텍스트로 제한된 플랫폼 기능](/ko/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts) — 보안 컨텍스트에서만 사용할 수 있는 기능 목록
 - {{domxref("isSecureContext")}}
 - <https://permission.site> — HTTP 및 HTTPS를 통해 브라우저가 사용하는 API 권한 검사를 확인할 수 있는 사이트
-- [Strict-Transport-Security](/ko/docs/Web/HTTP/Headers/Strict-Transport-Security) HTTP 헤더
+- [Strict-Transport-Security](/ko/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) HTTP 헤더
