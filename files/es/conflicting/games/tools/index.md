@@ -1,6 +1,7 @@
 ---
 title: Introducción al desarrollo de juegos HTML5 (resumen)
-slug: Games/Introduction_to_HTML5_Game_Development
+slug: conflicting/Games/Tools
+original_slug: Games/Introduction_to_HTML5_Game_Development
 ---
 
 {{GamesSidebar}}
