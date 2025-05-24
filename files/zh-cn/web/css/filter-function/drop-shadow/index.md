@@ -5,7 +5,7 @@ slug: Web/CSS/filter-function/drop-shadow
 
 {{CSSRef}}
 
-The **`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) function applies a drop shadow effect to the input image. Its result is a {{cssxref("&lt;filter-function&gt;")}}.
+**`drop-shadow()`** [CSS](/zh-CN/docs/Web/CSS) [函数](docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)对输入图像应用投影效果。其结果是 {{cssxref("&lt;filter-function&gt;")}}。
 
 {{InteractiveExample("CSS Demo: drop-shadow()")}}
 
@@ -58,41 +58,90 @@ drop-shadow(5px 5px 15px red)
 /* 可以改变颜色和长度值的顺序 */
 /* drop-shadow( <color> <length> <length> <length> ) */
 drop-shadow(#e23 0.5rem 0.5rem 1rem)
+
+/* 向滤镜传入多个 drop-shadow 以叠加 */
+drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ```
 
-The `drop-shadow()` function accepts a parameter of type `<shadow>` (defined in the {{cssxref("box-shadow")}} property), with the exception that the `inset` keyword is not allowed.
+`drop-shadow()` 函数接收一个 `<shadow>` 类型（在 {{cssxref("box-shadow")}} 属性中定义）的参数，但不允许使用 `inset` 关键字和 `spread` 参数。
 
-### Parameters
+### 参数
 
-- `offset-x` `offset-y` (required)
-  - : `offset-x`指定水平距离，其中负值将阴影放置到元素的左侧。`offset-y`指定垂直距离，其中负值将阴影置于元素之上。如果两个值都为 `0`，则阴影直接放置在元素后面。
-- `blur-radius` (optional)
-  - : 阴影的模糊半径，指定为 {{cssxref("&lt;length&gt;")}}。值越大，阴影就越大，也越模糊。如果未指定，则默认为 `0`，从而产生清晰、不模糊的边缘。不允许有负值。
-- `spread-radius` (optional)
+- `color` {{optional_inline}}
+  - : 阴影的颜色。如果未指定，则使用父元素中 {{cssxref("color")}} 属性的值。
 
-  - : 阴影的扩展半径，指定为 {{cssxref("&lt;length&gt;")}}. 正的值会导致阴影扩大和变大，而负的值会导致阴影缩小。如果未指定，则默认为 0，阴影的大小将与输入图像相同。
+- `length`
+  - : 阴影的偏移长度。此参数接受 2 或 3 个值。如指定 2 个值，则被解释为 `<offset-x>`（水平偏移）和 `<offset-y>`（竖直偏移）值。负的 `<offset-x>` 值将阴影置于元素左侧，负的 `<offset-y>` 值将阴影置于元素上方。如未指定，则使用 `0` 值填充缺失的长度。如指定第 3 个值，则被解释为 `<standard-deviation>`，表示[高斯模糊](https://zh.wikipedia.org/wiki/高斯模糊)函数的标准差。更大的 `<standard-deviation>` 值会产生更大、更模糊的阴影。不允许 `<standard-deviation>` 为负值。
 
-    > [!WARNING]
-    > 大多数浏览器不支持这个参数;如果使用，效果将不会呈现。截止 2020 年 10,14 日，Chrome v.85.0.4183.121（正式版本）,Microsoft Edge Beta v85.0.564.63(64 位), Firefox v.85.0.564.63 暂未支持
+## 正式语法
 
-- `color` (optional)
-  - : 阴影的颜色，指定为 {{cssxref("&lt;color&gt;")}}。如果未指定，则使用 {{cssxref("color")}} 属性的值。
+{{CSSSyntax}}
 
-## Examples
+## 示例
+
+### 设置投影
+
+```html
+<div>drop-shadow(16px 16px)</div>
+<div>drop-shadow(16px 16px red)</div>
+<div>drop-shadow(red 1rem 1rem 10px)</div>
+<div>drop-shadow(-16px -16px red)</div>
+<div>
+  drop-shadow(1px 1px red) drop-shadow(1px -1px red) drop-shadow(-1px 1px red)
+  drop-shadow(-1px -1px red)
+</div>
+```
 
 ```css
-/* Black shadow with 10px blur */
-drop-shadow(16px 16px 10px black)
+div {
+  display: inline-block;
+  margin: 0 0.5rem 2rem 1rem;
+  padding: 0.5rem;
+  height: 100px;
+  width: 190px;
+  vertical-align: top;
+  background-color: #222;
 
-/* Reddish shadow with 1rem blur and .3rem spread */
-/* WARNING: not generally supported by browsers */
-drop-shadow(.5rem .5rem 1rem .3rem #e23)
+  color: lime;
+}
+
+div:nth-child(1) {
+  filter: drop-shadow(16px 16px);
+}
+
+div:nth-child(2) {
+  filter: drop-shadow(16px 16px red);
+}
+
+div:nth-child(3) {
+  filter: drop-shadow(red 1rem 1rem 10px);
+}
+
+div:nth-child(4) {
+  filter: drop-shadow(-16px -16px red);
+}
+
+div:nth-child(5) {
+  filter: drop-shadow(1px 1px red) drop-shadow(1px -1px red)
+    drop-shadow(-1px 1px red) drop-shadow(-1px -1px red);
+}
 ```
 
-## See also
+{{EmbedLiveSample("Setting a drop shadow", "100%", "300px")}}
 
-- {{cssxref("&lt;filter-function&gt;")}}
-- CSS {{cssxref("box-shadow")}} property
+第一个框中，未指定 `drop-shadow()` 函数的 `<color>` 值，阴影会采用元素自身的 `color` 属性值（`lime`）。第二个和第三个阴影示例表明，长度值和颜色值可以按任意顺序指定。第三个阴影展示了当指定第三个 `<length>` 值时产生的模糊效果。第四个阴影使用负偏移值，使阴影向左上方偏移。第五个示例演示了如何在单个元素上使用多个投影。
+
+## 规范
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+其他可用于 {{cssxref("filter")}} 和 {{cssxref("backdrop-filter")}} 属性值的 {{cssxref("<filter-function>")}} 函数包括：
+
 - {{cssxref("filter-function/blur", "blur()")}}
 - {{cssxref("filter-function/brightness", "brightness()")}}
 - {{cssxref("filter-function/contrast", "contrast()")}}
@@ -102,3 +151,5 @@ drop-shadow(.5rem .5rem 1rem .3rem #e23)
 - {{cssxref("filter-function/opacity", "opacity()")}}
 - {{cssxref("filter-function/saturate", "saturate()")}}
 - {{cssxref("filter-function/sepia", "sepia()")}}
+- {{cssxref("box-shadow")}} 属性
+- {{cssxref("text-shadow")}} 属性
