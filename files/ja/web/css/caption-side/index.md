@@ -1,13 +1,15 @@
 ---
 title: caption-side
 slug: Web/CSS/caption-side
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`caption-side`** は [CSS](/ja/docs/Web/CSS) のプロパティで、表 ({{htmlelement("table")}}) の {{HTMLElement("caption")}} の中身を指定された側に配置します。この値は表の {{cssxref('writing-mode')}} に対する相対値です。
 
-{{InteractiveExample("CSS Demo: caption-side")}}
+{{InteractiveExample("CSS デモ: caption-side")}}
 
 ```css interactive-example-choice
 caption-side: top;
@@ -21,27 +23,27 @@ caption-side: bottom;
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
     <caption>
-      Famous animals
+      有名な動物
     </caption>
     <tr>
-      <th>Name</th>
-      <th>Location</th>
+      <th>名前</th>
+      <th>場所</th>
     </tr>
     <tr>
-      <td>Giraffe</td>
-      <td>Africa</td>
+      <td>キリン</td>
+      <td>アフリカ</td>
     </tr>
     <tr>
-      <td>Penguin</td>
-      <td>Antarctica</td>
+      <td>ペンギン</td>
+      <td>南極</td>
     </tr>
     <tr>
-      <td>Sloth</td>
-      <td>South America</td>
+      <td>ナマケモノ</td>
+      <td>南アメリカ</td>
     </tr>
     <tr>
-      <td>Tiger</td>
-      <td>Asia</td>
+      <td>トラ</td>
+      <td>アジア</td>
     </tr>
   </table>
 </section>
@@ -80,14 +82,11 @@ tr:nth-child(even) {
 caption-side: top;
 caption-side: bottom;
 
-/* 倫理値 */
-caption-side: inline-start;
-caption-side: inline-end;
-
 /* グローバル値 */
 caption-side: inherit;
 caption-side: initial;
 caption-side: revert;
+caption-side: revert-layer;
 caption-side: unset;
 ```
 
@@ -99,10 +98,8 @@ caption-side: unset;
   - : キャプションボックスを表のブロック方向の先頭に配置します。
 - `bottom`
   - : キャプションボックスを表のブロック方向の末尾に配置します。
-- `inline-start`
-  - : キャプションボックスを表のインライン方向の先頭に配置します。
-- `inline-end`
-  - : キャプションボックスを表のインライン方向の末尾に配置します。
+
+> **メモ:** [CSS の論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュールでは、キャプションボックスをテーブルのインライン先頭側の端およびインライン末尾側の端にそれぞれ配置するための 2 つの論理値、 `inline-start` および `inline-end` を定義しています。これらの値は、どのブラウザーでも対応していません。
 
 ## 公式定義
 
@@ -121,11 +118,11 @@ caption-side: unset;
 ```html
 <table class="top">
   <caption>
-    Caption ABOVE the table
+    この表の上側のキャプション
   </caption>
   <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
+    <td>いくつかのデータ</td>
+    <td>もっと多くのデータ</td>
   </tr>
 </table>
 
@@ -133,11 +130,11 @@ caption-side: unset;
 
 <table class="bottom">
   <caption>
-    Caption BELOW the table
+    この表の下側のキャプション
   </caption>
   <tr>
-    <td>Some data</td>
-    <td>Some more data</td>
+    <td>いくつかのデータ</td>
+    <td>もっと多くのデータ</td>
   </tr>
 </table>
 ```
@@ -173,3 +170,9 @@ td {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- {{HTMLelement("caption")}}
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール

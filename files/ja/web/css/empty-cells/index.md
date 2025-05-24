@@ -1,13 +1,15 @@
 ---
 title: empty-cells
 slug: Web/CSS/empty-cells
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`empty-cells`** は CSS のプロパティで、{{htmlelement("table", "表")}}のセルが目に見える内容を持たない場合に、周囲の境界と背景を{{glossary("user agent", "ユーザーエージェント")}}がどのように描画するかを指定します。
+**`empty-cells`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table", "表")}}のセルが目に見えるコンテンツを持たない場合に、周囲の境界と背景を描画するかどうかを指定します。
 
-{{InteractiveExample("CSS Demo: empty-cells")}}
+{{InteractiveExample("CSS デモ: empty-cells")}}
 
 ```css interactive-example-choice
 empty-cells: show;
@@ -21,8 +23,8 @@ empty-cells: hide;
 <section class="default-example" id="default-example">
   <table class="transition-all" id="example-element">
     <tr>
-      <th>Client Name</th>
-      <th>Age</th>
+      <th>顧客名</th>
+      <th>年齢</th>
     </tr>
     <tr>
       <td></td>
@@ -64,6 +66,8 @@ empty-cells: hide;
 /* グローバル値 */
 empty-cells: inherit;
 empty-cells: initial;
+empty-cells: revert;
+empty-cells: revert-layer;
 empty-cells: unset;
 ```
 
@@ -86,7 +90,7 @@ empty-cells: unset;
 
 ## 例
 
-<h3 id="Showing_and_hiding_empty_table_cells">表の空のセルの表示・非表示</h3>
+### 表の空のセルの表示・非表示
 
 #### HTML
 
@@ -134,7 +138,7 @@ th {
 
 #### 結果
 
-{{ EmbedLiveSample('Showing_and_hiding_empty_table_cells', '100%', '200') }}
+{{ EmbedLiveSample('表の空のセルの表示・非表示', '100%', '200') }}
 
 ## 仕様書
 
@@ -147,4 +151,5 @@ th {
 ## 関連情報
 
 - {{cssxref("border-collapse")}}
-- [表のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
+- [学習: 表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
+- [CSS 表](/ja/docs/Web/CSS/CSS_table)モジュール
