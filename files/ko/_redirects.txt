@@ -512,6 +512,7 @@
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops
 /ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
+/ko/docs/Learn_web_development/Extensions/Security_privacy	/ko/docs/conflicting/Web/Security
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ko/docs/Web/HTML/How_to/Use_data_attributes
 /ko/docs/Localization	/ko/docs/Glossary/Localization
