@@ -111,7 +111,7 @@ Las técnicas a continuación describen cada rol compuesto, así como sus roles 
 
 ### Roles de región en vivo
 
-- [`alert`](/es/docs/Web/Accessibility/ARIA/Roles/alert_role)
+- [`alert`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)
 - [`log`](/es/docs/Web/Accessibility/ARIA/Roles/log_role)
 - [`marquee`](/es/docs/Web/Accessibility/ARIA/Roles/marquee_role)
 - [`status`](/es/docs/Web/Accessibility/ARIA/Roles/status_role)
@@ -119,7 +119,7 @@ Las técnicas a continuación describen cada rol compuesto, así como sus roles 
 
 ### Roles de ventana
 
-- [`alertdialog`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
+- [`alertdialog`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 - [`dialog`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
 
 ## Estados y propiedades
@@ -135,7 +135,7 @@ Las técnicas a continuación describen cada rol compuesto, así como sus roles 
 - [`aria-haspopup`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
 - [`aria-hidden`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [`aria-invalid`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-level`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-level)
 - [`aria-modal`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
 - [`aria-multiline`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
@@ -144,7 +144,7 @@ Las técnicas a continuación describen cada rol compuesto, así como sus roles 
 - [`aria-placeholder`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
 - [`aria-pressed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
 - [`aria-readonly`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-- [`aria-required`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-required`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
 - [`aria-selected`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
 - [`aria-sort`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
 - [`aria-valuemax`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
