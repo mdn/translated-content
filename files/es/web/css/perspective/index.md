@@ -13,7 +13,7 @@ Parte de los elementos 3D que se encuentran destrás del usuario, es decir que s
 
 La posición de origen que se usará para la transformación es por defecto colocado en el centro del elemento, pero su posición puede ser cambiada usando la propiedad {{ cssxref("perspective-origin") }}.
 
-Usando esta propiedad con un valor diferente a 0 y none se crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+Usando esta propiedad con un valor diferente a 0 y none se crea un nuevo [contexto de apilamiento](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 
 {{cssinfo}}
 
