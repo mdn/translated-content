@@ -68,6 +68,7 @@ drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 ### 参数
 
 - `color` {{optional_inline}}
+
   - : 阴影的颜色。如果未指定，则使用父元素中 {{cssxref("color")}} 属性的值。
 
 - `length`
