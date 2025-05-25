@@ -37,7 +37,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### サ
 
 - [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
-- [サービスワーカー API](Web/API/Service_Worker_API)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
 - [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
