@@ -36,6 +36,12 @@ The MDN Web Docs project welcomes contributions from everyone who shares our goa
 To find out how to get started, see the [CONTRIBUTING.md](CONTRIBUTING.md) document in this repository.
 By participating in and contributing to our projects and discussions, you acknowledge that you have read and agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
+Active contributors in the past three months:
+
+<a href="https://openomy.app/github/mdn/translated-content" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://www.openomy.app/svg?repo=mdn/translated-content&chart=bubble&latestMonth=3" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
+</a>
+
 ## Get in touch
 
 You can communicate with the MDN Web Docs team and community using the [communication channels][main communication].
