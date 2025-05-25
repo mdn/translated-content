@@ -23,7 +23,7 @@ HTML **注释**主要用于为标记添加解释性说明，或防止浏览器�
 - 在除了这些元素的内容之外：{{HTMLElement("script")}}、{{HTMLElement("style")}}、{{HTMLElement("title")}}、{{HTMLElement("textarea")}}，因为这些元素将其内容解释为原始文本
 
 > [!NOTE]
-> 虽然 `<script>` 元素不应使用 HTML 注释，而应使用 [JavaScript 注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)，但有一种传统做法是将整个脚本内容包含在 HTML 注释中，这样不支持 JavaScript 的古老浏览器就不会将其渲染为文本。现在，这种做法已成为 [JavaScript 自身的传统功能](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_注释)，不应再依赖它。
+> 虽然 `<script>` 元素不应使用 HTML 注释，而应使用 [JavaScript 注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)，但有一种传统做法是将整个脚本内容包含在 HTML 注释中，这样不支持 JavaScript 的古老浏览器就不会将其渲染为文本。现在，这种做法已成为 [JavaScript 自身的遗留特性](/zh-CN/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features#html_注释)，不应再依赖它。
 
 ## 语法
 
@@ -67,4 +67,4 @@ HTML 注释只能作为内容使用。不能在标签中使用，例如在 HTML 
 
 - [JavaScript 中的注释](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#注释)
 - [CSS 中的注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
-- {{domxref("Comment")}} API（`Comment` 继承于 {{domxref("Node")}}）
+- {{domxref("Comment")}} API（`Comment` 继承自 {{domxref("Node")}}）
