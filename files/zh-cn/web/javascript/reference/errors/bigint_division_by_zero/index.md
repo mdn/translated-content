@@ -42,7 +42,7 @@ const b = 0n;
 const quotient = b === 0n ? undefined : a / b;
 ```
 
-## 相关内容
+## 参见
 
 - [`BigInt`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - [除法（`/`）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Division)
