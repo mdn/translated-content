@@ -1,6 +1,8 @@
 ---
 title: drop-shadow()
 slug: Web/CSS/filter-function/drop-shadow
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -34,7 +36,7 @@ filter: drop-shadow(0 0 0.75rem crimson);
 投影实际上是输入图像的 alpha 蒙版的一个模糊的、偏移的版本，用特定的颜色绘制并合成在图像下面。
 
 > [!NOTE]
-> 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个框后面创建一个矩形阴影，而 `drop-shadow()` 过滤器则是创建一个符合图像本身形状 (alpha 通道) 的阴影。
+> 这个函数有点类似于 {{Cssxref("box-shadow")}} 属性。`box-shadow` 属性在元素的整个盒子后面创建一个矩形阴影，而 `drop-shadow()` 滤镜函数则是创建一个符合图像*本身*形状（alpha 通道）的阴影。
 
 ## 语法
 
