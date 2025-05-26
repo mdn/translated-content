@@ -41,7 +41,7 @@ WebAssembly.instantiateStreaming(source, importObject, compileOptions)
 ### 异常
 
 - 如果参数的类型或结构存在错误，则抛出 {{jsxref("TypeError")}}。
-- 如果操作失败，promise 用 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 或
+- 如果操作失败，promise 将以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 或
   [`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 之一拒绝，具体取决于失败原因。
 
 ## 示例
