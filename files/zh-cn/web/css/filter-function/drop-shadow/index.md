@@ -74,7 +74,7 @@ drop-shadow(10px 10px red) drop-shadow(-5px -5px yellow)
 - `length`
   - : 阴影的偏移长度。此参数接受 2 或 3 个值。如指定 2 个值，则被解释为 `<offset-x>`（水平偏移）和 `<offset-y>`（竖直偏移）值。负的 `<offset-x>` 值将阴影置于元素左侧，负的 `<offset-y>` 值将阴影置于元素上方。如未指定，则使用 `0` 值填充缺失的长度。如指定第 3 个值，则被解释为 `<standard-deviation>`，表示[高斯模糊](https://zh.wikipedia.org/wiki/高斯模糊)函数的标准差。更大的 `<standard-deviation>` 值会产生更大、更模糊的阴影。不允许 `<standard-deviation>` 为负值。
 
-## 正式语法
+## 形式语法
 
 {{CSSSyntax}}
 
