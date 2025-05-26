@@ -130,7 +130,7 @@ div:nth-child(5) {
 
 {{EmbedLiveSample("设置投影", "100%", "300px")}}
 
-第一个框中，未指定 `drop-shadow()` 函数的 `<color>` 值，阴影会采用元素自身的 `color` 属性值（`lime`）。第二个和第三个阴影示例表明，长度值和颜色值可以按任意顺序指定。第三个阴影展示了当指定第三个 `<length>` 值时产生的模糊效果。第四个阴影使用负偏移值，使阴影向左上方偏移。第五个示例演示了如何在单个元素上使用多个投影。
+第一个盒子中，未指定 `drop-shadow()` 函数的 `<color>` 值，阴影会采用元素自身的 `color` 属性值（`lime`）。第二个和第三个阴影示例表明，长度值和颜色值可以按任意顺序指定。第三个阴影展示了当指定第三个 `<length>` 值时产生的模糊效果。第四个阴影使用负偏移值，使阴影向左上方偏移。第五个示例演示了如何在单个元素上使用多个投影。
 
 ## 规范
 
@@ -141,8 +141,6 @@ div:nth-child(5) {
 {{Compat}}
 
 ## 参见
-
-<!-- markdownlint-disable-next-line MD033 -->
 
 其他可用于 {{cssxref("filter")}} 和 {{cssxref("backdrop-filter")}} 属性值的 {{cssxref("&lt;filter-function&gt;")}} 函数包括：
 
