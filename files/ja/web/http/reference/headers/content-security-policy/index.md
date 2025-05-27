@@ -133,7 +133,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("report-to")}}
 
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
-    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーでで指定されている場合があります。
+    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
     > [!WARNING]
     > このディレクティブは [`report-uri`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
@@ -283,7 +283,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。これには以下が含まれます。
 
 - インラインの `<script>` タグ
-- インタ印のイベントハンドラー属性
+- インラインのイベントハンドラー属性
 - `javascript:` URL
 
 同様に、 CSP で `default-src` または `style-src` ディレクティブを記載している場合、インライン CSS は読み込まれません。
