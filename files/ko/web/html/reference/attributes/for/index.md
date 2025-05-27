@@ -1,5 +1,5 @@
 ---
-title: "HTML 属性: for"
+title: "HTML attribute: for"
 short-title: for
 slug: Web/HTML/Reference/Attributes/for
 l10n:
@@ -8,21 +8,21 @@ l10n:
 
 {{HTMLSidebar}}
 
-**`for`** 属性は {{htmlelement("label")}} と {{htmlelement("output")}} で利用できる属性です。 `<label>` 要素上で使用された場合、このラベルが説明するフォーム要素を示します。 `<output>` 要素上で使用された場合、その出力欄で使用される値を表す要素間の関係を明示的に示すことができます。
+**`for`** 특성은 {{htmlelement("label")}}과 {{htmlelement("output")}}에 적용 가능한 특성입니다. `<label>` 요소에 적용하는 경우 라벨이 설명하고 있는 양식 요소를 나타냅니다. `<output>` 요소에 적용하는 경우 출력에 사용되는 값을 표시하는 요소 간의 명시적인 관계를 표현합니다.
 
-{{InteractiveExample("HTML デモ: for", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: for", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>
-  <label>First Name （"for" 属性なし）:</label>
+  <label>First Name (no "for" attribute):</label>
   <input id="first" type="text" value="Jane" />
 </p>
 <p>
-  <label for="last">Last Name （"for" 属性付き）:</label>
+  <label for="last">Last Name (w/ "for" attribute):</label>
   <input id="last" type="text" value="Doe" />
 </p>
 <p id="result">
-  <strong id="result-label">フルネーム:</strong>
+  <strong id="result-label">Full Name:</strong>
   <output for="first last" aria-labelledby="result-label" id="output"></output>
 </p>
 ```
@@ -61,15 +61,15 @@ firstNameEl.addEventListener("input", updateOutput);
 lastNameEl.addEventListener("input", updateOutput);
 ```
 
-## 使用方法
+## 사용
 
-`<label>` の属性として使用された場合、 `for` 属性はそのラベルが関連するフォーム要素の `id` 値を保持します。
+`<label>`에서 사용하는 경우, `for` 특성의 값은 연결된 양식 요소의 `id` 값입니다.
 
 ```html
 <label for="username">Your name</label> <input type="text" id="username" />
 ```
 
-`<output>` の属性として使用された場合、 `for` 属性はその出力を作成するために使用される要素の `id` 値を、空白で区切ったリストである値を保持します。
+`<output>`에서 사용하는 경우, `for` 특성의 값은 출력 값을 생성하기 위한 요소의 `id` 값을 공백으로 구분하여 나열한 목록입니다.
 
 ```html
 <input type="range" id="b" name="b" value="50" /> +
@@ -77,14 +77,14 @@ lastNameEl.addEventListener("input", updateOutput);
 <output name="result" for="a b">60</output>
 ```
 
-## 例
+## 예제
 
-{{htmlelement("label")}} および {{htmlelement("output")}} の要素ページの使用例を参照してください。
+사용 예제는 {{htmlelement("label")}}과 {{htmlelement("output")}} 요소의 페이지에서 확인해주세요.
 
-## 仕様書
+## 명세서
 
 {{Specifications}}
 
-## ブラウザーの互換性
+## 브라우저 호환성
 
 {{Compat}}
