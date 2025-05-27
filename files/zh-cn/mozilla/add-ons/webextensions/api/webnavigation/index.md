@@ -29,7 +29,7 @@ l10n:
   - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生变化，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。
   - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} 可以在任何阶段触发。
 
-每次导航都是特定浏览器框架中的 URL 过渡。浏览器框架由标签页 ID 和框架 ID 标识。框架可以是标签页中的顶级浏览上下文，也可以是作为 [iframe](/zh-CN/docs/Web/HTML/Element/iframe) 实现的嵌套浏览上下文。
+每次导航都是特定浏览器框架中的 URL 过渡。浏览器框架由标签页 ID 和框架 ID 标识。框架可以是标签页中的顶级浏览上下文，也可以是作为 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 实现的嵌套浏览上下文。
 
 每个事件的 `addListener()` 调用接受一个可选的过滤器参数。过滤器将指定一个或多个 URL 模式，然后仅当目标 URL 匹配其中一个模式时才会触发事件。
 
@@ -47,7 +47,7 @@ l10n:
 ## 函数
 
 - {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : 检索有关特定框架的信息。框架可以是标签页中的顶级框架，也可以是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Element/iframe)，并由标签页 ID 和框架 ID 唯一标识。
+  - : 检索有关特定框架的信息。框架可以是标签页中的顶级框架，也可以是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)，并由标签页 ID 和框架 ID 唯一标识。
 - {{WebExtAPIRef("webNavigation.getAllFrames()")}}
   - : 给定一个标签页 ID，检索其包含的所有框架的信息。
 
