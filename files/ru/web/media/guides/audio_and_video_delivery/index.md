@@ -1,8 +1,6 @@
 ---
 title: Воспроизведение аудио и видео в вебе
 slug: Web/Media/Guides/Audio_and_video_delivery
-page-type: guide
-sidebar: mediasidebar
 l10n:
   sourceCommit: 15a768b7d90550b0d90811a52d031674a3b84011
 ---
