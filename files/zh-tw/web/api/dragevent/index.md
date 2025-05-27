@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML Drag and Drop API")}}
 
-**`DragEvent`** 介面是 [DOM 事件](/zh-TW/docs/Web/API/Event)，用來表示拖曳與放置的互動行為。使用者透過在觸控表面上放置指標裝置（例如滑鼠），然後將指標拖曳至新位置（例如另一個 DOM 元素）來啟動拖曳動作。應用程式可以依照其特定需求自由詮釋拖曳與放置的互動。
+**`DragEvent`** 介面是用來表示拖曳與放置的互動行為的 [DOM 事件](/zh-TW/docs/Web/API/Event)。使用者透過在觸控表面上放置指標裝置（例如滑鼠），然後將指標拖曳至新位置（例如另一個 DOM 元素）來啟動拖曳動作。應用程式可以依照其特定需求自由詮釋拖曳與放置的互動。
 
-此介面繼承自 {{domxref("MouseEvent")}} 和 {{domxref("Event")}}。
+此介面從 {{domxref("MouseEvent")}} 和 {{domxref("Event")}} 繼承屬性。
 
 {{InheritanceDiagram}}
 
@@ -20,7 +20,7 @@ l10n:
 
 ## 建構子
 
-雖然此介面有建構子，但無法透過程式建立有用的 DataTransfer 物件，因為 {{domxref("DataTransfer")}} 物件具有在拖曳與放置操作期間由瀏覽器協調的處理和安全模型。
+雖然此介面有建構子，但無法透過腳本建立有用的 DataTransfer 物件，因為 {{domxref("DataTransfer")}} 物件具有在拖曳與放置操作期間由瀏覽器協調的處理和安全模型。
 
 - {{domxref("DragEvent.DragEvent", "DragEvent()")}}
   - : 建立一個合成的、不可信任的 DragEvent。
@@ -36,7 +36,7 @@ l10n:
 - {{domxref("HTMLElement/dragleave_event", "dragleave")}}
   - : 當被拖曳的元素或文字選取離開有效的放置目標時觸發此事件。
 - {{domxref("HTMLElement/dragover_event", "dragover")}}
-  - : 當某個元素或文字選取正在被拖曳，且滑鼠指標位於有效的放置目標上時，每 50 毫秒觸發一次此事件（若滑鼠未移動）；若滑鼠正在移動，觸發速度更快，約為每 5 毫秒（慢速移動）到 1 毫秒（快速移動）之間。這種觸發模式與 {{domxref("Element/mouseover_event", "mouseover")}} 不同。
+  - : 當某個元素或文字選取正在被拖曳，且滑鼠指標位於有效的放置目標上時觸發（每 50 毫秒觸發一次此事件（若滑鼠未移動）；若滑鼠正在移動，觸發速度更快，約為每 5 毫秒（慢速移動）到 1 毫秒（快速移動）之間。這種觸發模式與 {{domxref("Element/mouseover_event", "mouseover")}} 不同）。
 - {{domxref("HTMLElement/dragstart_event", "dragstart")}}
   - : 當使用者開始拖曳某個元素或文字選取時觸發此事件。
 - {{domxref("HTMLElement/drop_event", "drop")}}
