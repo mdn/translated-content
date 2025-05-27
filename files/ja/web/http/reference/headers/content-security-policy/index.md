@@ -85,7 +85,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
 
 - {{CSP("style-src-elem")}}
-  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたものののための有効なソースを指定します。
+  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたもののための有効なソースを指定します。
 - {{CSP("style-src-attr")}}
   - : 個々の DOM 要素に適用されるインラインスタイルの有効なソースを指定します。
 - {{CSP("worker-src")}}
