@@ -1,7 +1,6 @@
 ---
 title: JavaScript engine (JavaScript エンジン)
 slug: Glossary/Engine/JavaScript
-page-type: glossary-definition
 l10n:
   sourceCommit: 3dbbefa32758e2a1ca9a37c2788370c06aae2738
 ---
