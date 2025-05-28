@@ -70,7 +70,7 @@ l10n:
 - {{WebExtAPIRef("webNavigation.onTabReplaced")}}
   - : 当标签页的内容被另一个（通常是之前预渲染的）标签页替换时触发。
 - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : 当页面使用 [history API (2011)](/zh-CN/docs/Web/API/History_API) 更新浏览器地址栏中显示的 URL 时触发。
+  - : 当页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新浏览器地址栏中显示的 URL 时触发。
 
 ## 浏览器兼容性
 
