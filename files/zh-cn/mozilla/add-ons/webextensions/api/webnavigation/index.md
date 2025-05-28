@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-为导航的各个阶段添加事件监听器。一次导航是指浏览器中的某个框架从一个 URL 跳转到另一个 URL，通常是（但不总是）用户操作（如点击链接或在地址栏输入 URL）引起的。
+为导航的各个阶段添加事件监听器。导航是指浏览器中的某个框架从一个 URL 跳转到另一个 URL，通常是（但不总是）用户操作（如点击链接或在地址栏输入 URL）引起的。
 
 与 {{WebExtAPIRef("webRequest")}} API 相比：导航通常会导致浏览器发起 Web 请求，但 webRequest API 关注的是 HTTP 层的底层视角，而 webNavigation API 更侧重于浏览器 UI 本身的视角。
 
