@@ -612,6 +612,8 @@
 /ko/docs/Web/API/Canvas_API/캔버스_튜토리얼	/ko/docs/Web/API/Canvas_API/Tutorial
 /ko/docs/Web/API/DOMRect/fromRect	/ko/docs/Web/API/DOMRect/fromRect_static
 /ko/docs/Web/API/DOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
+/ko/docs/Web/API/Document/copy_event	/ko/docs/conflicting/Web/API/Element/copy_event_8f169b964ed6100fd74860a263316bb2f862d8bb386816f90640f696d2e845af
+/ko/docs/Web/API/Document/cut_event	/ko/docs/conflicting/Web/API/Element/cut_event_7d33812242c8023f9e15329180681271f56658c72268b8f378d6d1ef0cb3fb3d
 /ko/docs/Web/API/Document/defaultView/popstate_event	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/Document/defaultView/resize_event	/ko/docs/Web/API/Window/resize_event
 /ko/docs/Web/API/Document/drag_event	/ko/docs/Web/API/HTMLElement/drag_event
@@ -619,6 +621,7 @@
 /ko/docs/Web/API/Document/dragend_event	/ko/docs/Web/API/HTMLElement/dragend_event
 /ko/docs/Web/API/Document/dragstart_event	/ko/docs/Web/API/HTMLElement/dragstart_event
 /ko/docs/Web/API/Document/keyup_event	/ko/docs/Web/API/Element/keyup_event
+/ko/docs/Web/API/Document/paste_event	/ko/docs/conflicting/Web/API/Element/paste_event
 /ko/docs/Web/API/DocumentOrShadowRoot/activeElement	/ko/docs/Web/API/Document/activeElement
 /ko/docs/Web/API/DocumentOrShadowRoot/getSelection	/ko/docs/Web/API/Document/getSelection
 /ko/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ko/docs/Web/API/Document/styleSheets
@@ -690,6 +693,9 @@
 /ko/docs/Web/API/Web_Audio_API/Tools	/ko/docs/conflicting/Web/API/Web_Audio_API_5736136f9abf17a4d0f3d96dc690824f
 /ko/docs/Web/API/Window/DOMContentLoaded_event	/ko/docs/Web/API/Document/DOMContentLoaded_event
 /ko/docs/Web/API/Window/console	/ko/docs/conflicting/Web/API/console
+/ko/docs/Web/API/Window/copy_event	/ko/docs/conflicting/Web/API/Element/copy_event
+/ko/docs/Web/API/Window/cut_event	/ko/docs/conflicting/Web/API/Element/cut_event
+/ko/docs/Web/API/Window/paste_event	/ko/docs/conflicting/Web/API/Element/paste_event_c542c61e7eebc0a20e5104020fa32085e309dd6c4fe58de433d0fd28797b71d6
 /ko/docs/Web/API/WindowEventHandlers/onpopstate	/ko/docs/Web/API/Window/popstate_event
 /ko/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout	/ko/docs/Web/API/Window/setTimeout
 /ko/docs/Web/API/WindowTimers/setTimeout	/ko/docs/Web/API/Window/setTimeout
