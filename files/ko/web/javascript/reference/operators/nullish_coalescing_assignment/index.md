@@ -23,7 +23,7 @@ console.log(a.duration);
 // Expected output: 50
 ```
 
-## 문법
+## 구문
 
 ```js-nolint
 x ??= y
@@ -42,7 +42,7 @@ const x = 1;
 x ??= 2;
 ```
 
-아래 코드에서도 setter 함수는 호출되지 않습니다:
+아래 코드에서도 setter 함수는 호출되지 않습니다.
 
 ```js
 const x = {
@@ -70,7 +70,7 @@ x ??= console.log("y evaluated");
 ### 널 병합 할당 사용하기
 
 널 병합 할당 연산자(`??=`)를 사용하여 객체 속성에 기본 값을 적용할 수 있습니다.
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)과 [default values](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value)을 사용하는 방식과는 다르게, 속성 값이 [nullish](/ko/docs/Glossary/Nullish) ([null](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined))인 경우에도 기본값을 지정할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Destructuring_assignment)과 [기본 값](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#default_value)을 사용하는 방식과는 다르게, 속성 값이 [nullish](/ko/docs/Glossary/Nullish) ([null](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 [undefined](/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined))인 경우에도 기본 값을 지정할 수 있습니다.
 
 ```js
 function config(options) {
