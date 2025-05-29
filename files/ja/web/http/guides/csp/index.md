@@ -302,8 +302,7 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 Content-Security-Policy: default-src 'self' 'unsafe-inline'
 ```
 
-> **警告:**
-> `'unsafe-inline'` は、CSP を保有する目的の大半を無効にしてしまうため、開発者は使用を避けましょう。インライン JavaScript は最も一般的な XSS ベクトルの 1 つであり、CSP の最も基本的な目標の 1 つは、その無制限な使用を防ぐことです。
+> **警告:** `'unsafe-inline'` は、CSP を保有する目的の大半を無効にしてしまうため、開発者は使用を避けましょう。インライン JavaScript は最も一般的な XSS ベクトルの 1 つであり、CSP の最も基本的な目標の 1 つは、その無制限な使用を防ぐことです。
 
 インライン `<script>` 要素は、上記で記述されているように、ノンスまたはハッシュによって保護されている場合に使用できます。
 
@@ -492,7 +491,7 @@ Content-Security-Policy: upgrade-insecure-requests
 
 この文書に、次のような部分も含まれているとします。
 
-```html
+```html-nolint
 <a href="http://example.org/more-cats">もっとネコを見ましょう！</a>
 <a href="http://not-example.org/even-more-cats">他のサイトでもっとネコを見ましょう！</a>
 ```
