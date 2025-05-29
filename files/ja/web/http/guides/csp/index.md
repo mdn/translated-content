@@ -286,7 +286,7 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 
 - インラインイベントハンドラー属性での JavaScript
 
-  ```html
+  ```html-nolint
   <img src="x" onerror="console.log('インラインイベントハンドラーからこんにちは')" />
   ```
 
@@ -302,7 +302,7 @@ CSP に `default-src` または `script-src` ディレクティブが含まれ�
 Content-Security-Policy: default-src 'self' 'unsafe-inline'
 ```
 
-> [!WARNING]
+> **警告:**
 > `'unsafe-inline'` は、CSP を保有する目的の大半を無効にしてしまうため、開発者は使用を避けましょう。インライン JavaScript は最も一般的な XSS ベクトルの 1 つであり、CSP の最も基本的な目標の 1 つは、その無制限な使用を防ぐことです。
 
 インライン `<script>` 要素は、上記で記述されているように、ノンスまたはハッシュによって保護されている場合に使用できます。
@@ -423,7 +423,7 @@ Content-Security-Policy:
 
 上記で、CSP ではインライン JavaScript が既定で禁止されていることを説明しました。ノンスまたはハッシュを使用すると、開発者はインライン `<script>` タグを使用することができますが、インラインイベントハンドラー、`javascript:` URL、`eval()` の使用など、その他の禁止されているパターンを除去するためにコードをリファクタリングする必要があります。例えば、インラインイベントハンドラーは普通、 {{domxref("EventTarget.addEventListener()", "addEventListener()")}} の呼び出しに置き換えるべきです。
 
-```html example-bad
+```html-nolint example-bad
 <p onclick="console.log('インラインイベントハンドラーからこんにちは')">クリックしてね</p>
 ```
 
