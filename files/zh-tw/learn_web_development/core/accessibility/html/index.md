@@ -13,7 +13,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
   <tbody>
     <tr>
       <th scope="row">前提：</th>
-      <td>需熟悉<a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a>及<a href="/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基礎無障礙相關概念</a>。</td>
+      <td>需熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 及<a href="/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基礎無障礙相關概念</a>。</td>
     </tr>
     <tr>
       <th scope="row">目標：</th>
@@ -58,9 +58,9 @@ HTML 的 `<button>` 標籤提供預設的樣式（也許你會想要覆蓋這些
 
 ## 良好的語義
 
-我們已經討論過正確語義的重要性，以及為什麼應該使用正確的 HTML 標籤。使用不當，是無障礙性嚴重受損的主要原因之一。
-在網路世界中，事實上，人們常用 HTML 標籤做一些非常奇怪的事情。對 HTML 的濫用無非是因還未完全遺忘舊有的做法，有些則純粹是無知。無論如何，你應該避免撰寫這樣的不良程式碼。
-有時你無法擺脫糟糕的標籤——頁面可能由某種無法完全控制的伺服器端框架生成，或者可能有無法控制的第三方內容（如廣告橫幅）。
+我們已經討論過正確語義的重要性，以及為什麼應該使用正確的 HTML 標籤。這一點不容忽視，因為使用不當，是無障礙性嚴重受損的主要原因之一。
+在網路世界中，人們事實上對 HTML 標記做一些非常奇怪的事情。對 HTML 的濫用無非是因還未完全遺忘舊有的做法，有些則純粹是無知。無論如何，你應該更換這樣的不良程式碼。
+有時你無法擺脫糟糕的標記——頁面可能由某種無法完全控制的伺服器端框架生成，或者可能有無法控制的第三方內容（如廣告橫幅）。
 目標不是「全有或全無」；我們能做的就是開始改進，這都將有助於無障礙性。
 
 ### 文字內容
@@ -95,7 +95,7 @@ HTML 的 `<button>` 標籤提供預設的樣式（也許你會想要覆蓋這些
 </p>
 ```
 
-我們準備了一個較長文本的版本，供你使用螢幕閱讀器試用（請見 good-semantics.html）。如果你嘗試瀏覽這個頁面，你會發現它相當容易導航：
+我們準備了一個較長文本的版本，供你使用螢幕閱讀器試用（請見 [good-semantics.html](https://mdn.github.io/learning-area/accessibility/html/good-semantics.html)）。如果你嘗試瀏覽這個頁面，你會發現它相當容易導航：
 
 1. 當瀏覽內容時，螢幕閱讀器會讀出每個標題，告知你什麼是標題，什麼是段落等。
 2. 它會在每個元素後停止，以舒適的步調前進。
@@ -128,6 +128,7 @@ the last one.
 ```
 
 如果使用螢幕閱讀器試用這個較長版本（請見 [bad-semantics.html](https://mdn.github.io/learning-area/accessibility/html/bad-semantics.html)），將不會有很好的體驗——螢幕閱讀器沒有任何可用作標記的內容，所以無法獲取有用的目錄，整個頁面被視為一個巨大的區塊，因此會一次性全部讀出。
+
 除了無障礙性之外還有其他問題——例如，使用 CSS 設計內容樣式或用 JavaScript 操作內容會更困難，因為沒有可用作選擇器的元素。
 
 #### 使用易懂清楚的語言
@@ -141,7 +142,8 @@ the last one.
 ### 頁面佈局
 
 過去，人們曾經使用 HTML 表格來建立頁面佈局——使用不同的表格儲存格來包含頁首、頁尾、側邊欄、主要內容欄等。這不是一個好主意，因為螢幕閱讀器會讀出令人困惑的內容，特別是當佈局複雜且有許多嵌套表格時。
-試試以下的範例 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)：
+
+試試以下的範例 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起來像這樣：
 
 ```html
 <table width="1200">
@@ -210,7 +212,8 @@ the last one.
 ```
 
 如果你嘗試使用螢幕閱讀器來導航，它可能會告訴你有一個表格需要查看（儘管有些螢幕閱讀器可以猜測表格佈局和資料表格之間的差異）。你可能也需要（取決於你使用的螢幕閱讀器）進入表格作為一個物件，單獨查看其特性，然後再從表格中退出才能繼續導航內容。
-表格佈局是過去的遺物——在瀏覽器的 CSS 支援不普及時是有意義的，但現在它們會對螢幕閱讀器使用者帶來困擾。此外，因為需要更多標籤，將會變得不靈活且更難維護。你可以透過比較先前的體驗與更現代的網站結構範例來驗證這些說法，它看起來可能像這樣：
+
+表格佈局是過去的遺物——在瀏覽器的 CSS 支援不普及時是有意義的，但現在它們會對螢幕閱讀器使用者帶來困擾。此外，因為需要更多標籤，將會變得不靈活且更難維護。你可以透過比較先前的體驗與[更現代的網站結構範例](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)來驗證這些說法，它看起來可能像這樣：
 
 ```html
 <header>
@@ -260,11 +263,11 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 ![三個按鈕，分別顯示文字「Click me!」、「Click me too!」和「And me!」。第三個按鈕周圍有藍色輪廓，表示目前的 Tab 鍵焦點在此按鈕上。](button-focused-unfocused.png)
 
 > [!NOTE]
-> 你可以在開發者工具中啟用一個顯示頁面 Tab 鍵順序的覆蓋層。更多資訊請參見： [無障礙檢測器 > 顯示網頁 Tab 鍵順序](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
+> 你可以在開發者工具中啟用一個顯示頁面 Tab 鍵順序的覆蓋層。更多資訊請參見：[無障礙檢測器 > 顯示網頁 Tab 鍵順序](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#show-web-page-tabbing-order).
 
 然後你可以按 Enter/Return 鍵來跟隨已聚焦的連結或按下按鈕（我們已經加入一些 JavaScript 讓按鈕顯示提示訊息），或開始輸入來在文字輸入框中輸入文字。其他表單元素有不同的控制方式；例如，可以使用上下箭頭鍵來顯示 {{htmlelement("select")}} 元素的選項並在它們之間循環選擇。
 
-基本上你可以透過使用這些合適的標籤來免費獲得這些功能，例如：
+只要使用適當的元素，基本上就可以免費獲得此行為，例如：
 
 ```html example-good
 <h1>Links</h1>
@@ -308,7 +311,8 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 ```
 
 這意味著適當地使用連結、按鈕、表單元素和標籤（包括為表單控制使用 {{htmlelement("label")}} 元素）。
-然而，人們有時會對 HTML 做一些奇怪的事情。像是有時會看到使用 {{htmlelement("div")}} 元素來標記按鈕，例如：
+
+然而，人們有時會對 HTML 做一些奇怪的事情。例如，有時會看到使用 {{htmlelement("div")}} 元素標記的按鈕，例如：
 
 ```html example-bad
 <div data-message="This is from the first button">Click me!</div>
@@ -316,7 +320,7 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 <div data-message="This is from the third button">And me!</div>
 ```
 
-但不建議使用這樣的程式碼——這樣會立即失去使用 {{htmlelement("button")}} 元素的原生鍵盤無障礙功能，也不會獲得按鈕的任何默認 CSS 樣式。在極少數到幾乎不存在的情況下，若你需要使用非按鈕元素作為按鈕時，請使用 [`button role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role) 並實現所有默認按鈕行為，包括鍵盤和滑鼠按鈕支援。
+但不建議使用這樣的程式碼——這樣會立即失去使用 {{htmlelement("button")}} 元素的原生鍵盤無障礙功能，也不會獲得按鈕的任何默認 CSS 樣式。在極少數到幾乎不存在的情況下，若你需要使用非按鈕元素作為按鈕時，請使用 [`button` role](/zh-TW/docs/Web/Accessibility/ARIA/Roles/button_role) 並實現所有默認按鈕行為，包括鍵盤和滑鼠按鈕支援。
 
 #### 重建鍵盤無障礙性
 
@@ -381,7 +385,7 @@ UI 控制文字標籤對所有使用者都非常有用，但對身心障礙使�
 ```
 
 > [!NOTE]
-> 你可以在這篇[建立連結](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links)的文章中找到更多關於連結實作和最佳實踐的資訊。也可以在[good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)和[bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)查看好的和不好的範例。
+> 你可以在這篇[建立連結](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Creating_links)的文章中找到更多關於連結實作和最佳實踐的資訊。也可以在 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) 和 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html) 查看好的和不好的範例。
 
 表單標籤對於提示需要在每個表單輸入什麼內容也很重要。以下看起來是一個相當合理的例子：
 
@@ -407,9 +411,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 額外的好處是，大多數瀏覽器中，將標籤與表單輸入框關聯意味著可以點擊標籤來選擇或啟動表單元素。這為輸入框提供了更大的點擊區域，使其更容易選擇。
 
 > [!NOTE]
-> 你可以在[good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html)和[bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html)中查看一些良好的和不良的表單範例。
+> 你可以在 [good-form.html](https://mdn.github.io/learning-area/accessibility/html/good-form.html) 和 [bad-form.html](https://mdn.github.io/learning-area/accessibility/html/bad-form.html) 中查看一些良好的和不良的表單範例。
 
-你可以在以下影片中找到關於適當文字標籤重要性的詳細解釋，以及如何使用[Firefox無障礙檢查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)調查文字標籤問題：
+你可以在以下影片中找到關於適當文字標籤重要性的詳細解釋，以及如何使用 [Firefox 無障礙檢查器](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)調查文字標籤問題：
 
 {{EmbedYouTube("YhlAVlfH0rQ")}}
 
@@ -450,13 +454,13 @@ Fill in your name: <input type="text" id="name" name="name" />
 - {{htmlelement("caption")}} 元素和 `<table>` 元素的 `summary` 屬性功能相似 — 它們充當表格的替代文字，為螢幕閱讀器使用者提供表格內容的快速摘要。一般而言，較推薦使用 `<caption>` 元素，因為它的內容對於有視力的使用者也同樣有幫助。兩者通常不需要同時使用。
 
 > [!NOTE]
-> 查看我們的 [HTML 表格無障礙](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 文章來了解更多關於無障礙資料表格的相關細節。
+> 查看我們的 [HTML 表格無障礙](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)文章來了解更多關於無障礙資料表格的相關細節。
 
 ## 替代文字
 
 相較於文字內容本身就具有無障礙性，多媒體內容卻不盡然 — 影像和影片內容對於視障人士來說是看不見的，音訊內容對於聽障人士來說是聽不到的。我們在[無障礙多媒體](/zh-TW/docs/Learn_web_development/Core/Accessibility/Multimedia)單元中會詳細討論影片和音訊內容，但在本文中，我們將聚焦於簡單的 {{htmlelement("img")}} 元素的無障礙性。
 
-我們已經準備了一個簡單的範例，[accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html)，內含四份相同的影像：
+我們已經準備了一個簡單的範例 [accessible-image.html](https://mdn.github.io/learning-area/accessibility/html/accessible-image.html)，內含四份相同的影像：
 
 ```html
 <img src="dinosaur.png" />
@@ -485,22 +489,22 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字（alt attribute）— 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
 
-這突顯了兩個重要性：不僅要使用有意義的檔案名稱（以防無法使用替代文字），還要確保在可能的情況下，在 alt 屬性中提供**替代文字**。
+這突顯了兩個重要性：不僅要使用有意義的檔案名稱（以防無法使用替代文字），還要確保在可能的情況下，在 `alt` 屬性中提供**替代文字**。
 
 `alt` 屬性的內容應該直接呈現影像及其視覺傳達的內容。替代文字應該簡潔扼要，包含影像中未在周圍文字重複的所有資訊。
 
-對於單一影像的 `alt` 屬性內容，其撰寫方式會因脈絡而異。舉例來說： 如果一張 Fluffy 影像是一篇難吃的狗食評論旁邊的頭像，那麼替代文字為 `alt="Fluffy"` 是適當的。如果照片是在動物救援協會的 Fluffy 認養頁面，則應該包含對於可能的養狗人士來說重要且周圍文字未提及的資訊。例如 `alt="Fluffy，一隻三色短毛犬，嘴裡咬著網球" 就很合適`。 周圍文字可能已經提到 Fluffy 的體型和品種，所以不需要再重覆。然而，由於狗狗的生平介紹可能未提及毛髮長度、顏色或玩具喜好，這些對潛在領養人很重要，因此值得包含在`alt`內。影像是否在戶外，或 Fluffy 是否戴紅色項圈搭配藍色牽繩？這些對於認養寵物來說並不重要，所以不需要納入。關鍵是傳達影像中對有視力的使用者可見且與脈絡相關的所有資訊 — 既不多也不少。保持簡短、精確且有用。
+對於單一影像的 `alt` 屬性內容，其撰寫方式會因脈絡而異。舉例來說： 如果一張 Fluffy 影像是一篇難吃的狗食評論旁邊的頭像，那麼替代文字為 `alt="Fluffy"` 是適當的。如果照片是在動物救援協會的 Fluffy 認養頁面，則應該包含對於可能的養狗人士來說重要且周圍文字未提及的資訊。例如 `alt="Fluffy，一隻三色短毛犬，嘴裡咬著網球"` 就很合適。 周圍文字可能已經提到 Fluffy 的體型和品種，所以不需要再重覆。然而，由於狗狗的生平介紹可能未提及毛髮長度、顏色或玩具喜好，這些對潛在領養人很重要，因此值得包含在 `alt` 內。影像是否在戶外，或 Fluffy 是否戴紅色項圈搭配藍色牽繩？這些對於認養寵物來說並不重要，所以不需要納入。關鍵是傳達影像中對有視力的使用者可見且與脈絡相關的所有資訊 — 既不多也不少。保持簡短、精確且有用。
 
 不應該加入任何個人知識或額外描述，因為這對於未曾見過影像的人無法提供有用的資訊。如果網球是 Fluffy 最喜歡的玩具，但這一點無法從影像中直接判斷，就不應該將其納入描述中。
-替代文字的目的是準確且客觀地描述影像的視覺內容，僅包含有視力的使用者能夠直接從影像中觀察到的資訊。任何無法從影像本身推斷的額外資訊都不應被納入。這確保了替代文字對所有使用者都具有一致且實用的資訊價值。
 
-需要考慮你的影像是否在內容中具有意義，還是純粹作為視覺裝飾，因此沒有實質意涵。如果是裝飾性影像，較好的做法是將 `alt` 屬性的值設為空字串（參見[空 alt 屬性](#empty_alt_attributes)）或僅將其包含在頁面中作為 CSS 背景影像。
+需要考慮你的影像是否在內容中具有意義，還是純粹作為視覺裝飾，因此沒有實質意涵。如果是裝飾性影像，較好的做法是將 `alt` 屬性的值設為空字串（參見[空的 alt 屬性](#空的_alt_屬性)）或僅將其包含在頁面中作為 CSS 背景影像。
 
 > [!NOTE]
 > 閱讀 [HTML 影像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images) 獲取更多關於影像的最佳實踐。
 > 你也可以查看 [替代文字決策樹](https://www.w3.org/WAI/tutorials/images/decision-tree/) 來學習如何在不同的情境下為影像撰寫替代文字。
 
 如果你確實想提供額外的上下文，應該將它放在圖片周圍的文字中，或者放在 `title` 屬性中，如上所示。在這種情況下，大多數螢幕閱讀器會讀出替代文字、`title` 屬性和檔案名稱。此外，當滑鼠懸停時，瀏覽器會將 `title` 文字顯示為工具提示。
+
 ![紅色暴龍的截圖，當滑鼠懸停時顯示「The mozilla red dinosaur」文字作為工具提示。](title-attribute.png)
 
 讓我們快速看一下第四種方法：
@@ -513,9 +517,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
 
-> **Note:** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分， 它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
+> **備註：** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分， 它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
 
-### Figures 和 figure captions
+### Figure 和 figure caption
 
 HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcaption")}}——它們可將圖形（可以是任何東西，不一定是圖片）與說明文字關聯起來：
 
@@ -544,6 +548,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 ```
 
 有時候，圖片被包含在頁面設計中，其主要目的是視覺裝飾。你會注意到在上面的程式碼範例中，圖片的 `alt` 屬性是空的——這是為了讓螢幕閱讀器識別圖片，但不嘗試描述圖片（相反，它們只會說「圖片」或類似的內容）。
+
 使用空的 `alt` 而不是完全不包含它的原因是，如果沒有提供 `alt`，許多螢幕閱讀器會朗讀整個圖片 URL。在上面的例子中，圖片作為與其關聯的標題的視覺裝飾。在這種圖片僅作為裝飾且沒有內容價值的情況下，應該在 `img` 元素中包含一個空的 `alt`。另一種替代方法是使用 aria [`role`](/zh-TW/docs/Web/Accessibility/ARIA/Roles) 屬性 [`role="presentation`](/zh-TW/docs/Web/Accessibility/ARIA/Roles/presentation_role)，這也能阻止螢幕閱讀器讀出替代文字。
 
 > [!NOTE]
@@ -551,21 +556,24 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ## 更多關於連結的資訊
 
-連結（具有 `href` 屬性的 [`<a> `](/zh-TW/docs/Web/HTML/Element/a) 元素），根據使用方式的不同，可以幫助或損害無障礙性。默認情況下，連結在外觀上是無障礙的。可透過幫助使用者快速導航到文件的不同部分來改善無障礙性。如果移除了連結的無障礙樣式或 JavaScript 導致它們以意外方式運作，可能損害無障礙性。
+連結（具有 `href` 屬性的 [`<a>`](/zh-TW/docs/Web/HTML/Element/a) 元素）根據使用方式的不同，可以幫助或損害無障礙性。默認情況下，連結在外觀上是無障礙的。可透過幫助使用者快速導航到文件的不同部分來改善無障礙性。如果移除了連結的無障礙樣式或 JavaScript 導致它們以意外方式運作，可能損害無障礙性。
 
 ### 連結的樣式
 
 默認情況下，連結在顏色和文字裝飾方面與其他文字在視覺上有所不同，默認情況下連結是藍色且帶有底線，訪問過的連結是紫色且帶有底線，當它們獲得鍵盤焦點時會有[焦點環](/zh-TW/docs/Web/CSS/:focus)。
-顏色不應作為區分連結和非連結內容的唯一方法。連結文字顏色，如同所有文字，須與背景顏色有顯著差異（[a 4.5:1的對比度](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。此外，連結在視覺上應與非連結文字有所不同，連結文字與周圍文字之間以及默認、已訪問和焦點/啟用狀態之間的最低對比度要求為3:1，所有這些狀態顏色與背景顏色之間的對比度為4.5:1。
+
+顏色不應作為區分連結和非連結內容的唯一方法。連結文字的顏色，如同所有文字，須與背景顏色有顯著差異（[4.5:1 的對比度](/zh-TW/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。此外，連結在視覺上應與非連結文字有所不同，連結文字與周圍文字之間以及默認、已訪問和焦點/啟用狀態之間的最低對比度要求為 3:1，所有這些狀態顏色與背景顏色之間的對比度為 4.5:1。
 
 ### `onclick` 事件
 
-錨點標籤常被濫用，透過設置 **href** 為 `#` 或 `javascript:void(0)` 並使用 `onclick` 事件來建立偽按鈕，以防止頁面重新整理。
+錨點標籤常被濫用，透過設置 **href** 為 `#` 或 `javascript:void(0)` 並使用 `onclick` 事件來建立偽按鈕，以防止頁面刷新。
+
 這些值會導致複製或拖曳連結、在新分頁或視窗中開啟連結、加入書籤時出現意外行為，以及當 JavaScript 仍在下載、出錯或被禁用時出現問題。這也會向輔助技術（如螢幕閱讀器）傳達了錯誤的語義。在這些情況下，建議使用 {{HTMLElement("button")}} 代替。一般來說，你應該只使用錨點標籤透過適當的 URL 進行導航。
 
 ### 外部連結和連結到非 HTML 資源
 
 透過 `target="_blank` 聲明在新分頁或視窗中開啟的連結，以及 `href` 值指向檔案資源的連結，應包含一個指示器，說明啟用連結時會發生的行為。
+
 視力較差的人、使用螢幕閱讀技術導航的人或有認知問題的人可能會因意外開啟新分頁、視窗或應用程式而感到困惑。較舊版本的螢幕閱讀軟體甚至可能不會宣告這種行為。
 
 #### 打開新分頁或視窗的連結
@@ -604,7 +612,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ### 鄰近性
 
-大量視覺上彼此靠近的互動內容——包括錨點——應該插入間距來分隔它們。這種間距有助於患有小肌肉(精細)運動控制問題的使用者，因為他們在導航時可能會意外啟用錯誤的互動內容。
+大量視覺上彼此靠近的互動內容——包括錨點——應該插入間距來分隔它們。這種間距有助於患有精細運動控制問題的使用者，因為他們在導航時可能會意外啟用錯誤的互動內容。
 
 間距可以使用 CSS 屬性如 {{CSSxRef("margin")}} 來建立。
 
@@ -612,7 +620,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ## 測試你的技能
 
-你已經到達本文的結尾，但能記住最重要的資訊嗎？查看[測試的技能：HTML無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility)來驗證你是否已經記住了這些資訊。
+你已經到達本文的結尾，但能記住最重要的資訊嗎？查看[技能測試：HTML 無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility)來驗證你是否已經記住了這些資訊。
 
 ## 結論
 
