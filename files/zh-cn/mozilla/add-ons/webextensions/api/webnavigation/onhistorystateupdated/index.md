@@ -76,9 +76,9 @@ const filter = {
 };
 
 function logOnHistoryStateUpdated(details) {
-  console.log(`onHistoryStateUpdated: ${details.url}`);
-  console.log(`Transition type: ${details.transitionType}`);
-  console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
+  console.log(`onHistoryStateUpdated：${details.url}`);
+  console.log(`导航类型：${details.transitionType}`);
+  console.log(`导航额外信息：${details.transitionQualifiers}`);
 }
 
 browser.webNavigation.onHistoryStateUpdated.addListener(
