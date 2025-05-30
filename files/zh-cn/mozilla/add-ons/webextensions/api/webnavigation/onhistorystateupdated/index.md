@@ -52,7 +52,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
 - `url`
   - : `string`。指定的框架将要导航到的 URL。
 - `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`。现代浏览器中不设置此值。它曾用于表示运行此标签页的渲染器的进程 ID。
+  - : `integer`。在现代浏览器中未设置该值。当设置时，它表示运行此标签页的渲染器的进程 ID。
 - `frameId`
   - : `integer`。即将发生导航的框架。`0` 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 {{HTMLElement("iframe")}} 中。正值表示导航发生在嵌套的 iframe 中。框架 ID 对于给定的标签页和进程是唯一的。
 - `timeStamp`
