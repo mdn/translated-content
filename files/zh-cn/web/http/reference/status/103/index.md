@@ -1,21 +1,22 @@
 ---
 title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`103 Early Hints`** [信息状态响应码](/zh-CN/docs/Web/HTTP/Reference/Status#information_responses)可能会在服务器仍在准备响应数据的时候发送，提供有关服务器预期的最终响应将连接到的站点和资源的提示。这允许浏览器在服务器准备并发送最终响应之前进行[预连接](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)到站点或开始[预加载](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)资源。一旦接收到早期提示，客户端就会立即获取这些提示所指的预加载资源。
+HTTP **`103 Early Hints`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)可能会在服务器仍在准备响应数据的时候发送，提供有关服务器预期的最终响应将连接到的站点和资源的提示。这允许浏览器在服务器准备并发送最终响应之前[预连接](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)到站点或开始[预加载](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)资源。一旦接收到早期提示，客户端就会立即获取这些提示所指的预加载资源。
 
-早期提示响应主要用于 {{HTTPHeader("Link")}} 头部，指示该头部要加载的资源。它还可以包含一个 `Content-Security-Policy` 头部，在处理早期提示时强制执行。
+早期提示响应主要用于 {{HTTPHeader("Link")}} 标头，指示要加载的资源。它还可以包含在处理早期提示时强制执行的 `Content-Security-Policy` 标头。
 
 服务器可能会发送多个 `103` 响应，例如在重定向后，浏览器只会处理第一个早期提示响应，如果请求导致跨源重定向，则会丢弃此响应。
 
 > [!NOTE]
 > 出于兼容性和安全性原因，建议[只在 HTTP/2 或更高版本上发送 HTTP `103 Early Hints` 响应](https://www.rfc-editor.org/rfc/rfc8297#section-3)，除非已知用户正确处理信息响应。
 >
-> 由于这个原因，大多数浏览器都限制在 HTTP/2 或更高版本中提供支持。请参阅下面的[浏览器兼容性](#浏览器兼容性)。
-> 尽管如此，以下示例仍按照惯例使用了 HTTP/1.1 风格的表示法。
+> 由于这个原因，大多数浏览器都限制在 HTTP/2 或更高版本中提供支持。请参阅下面的[浏览器兼容性](#浏览器兼容性)。尽管如此，以下示例仍按照惯例使用了 HTTP/1.1 风格的表示法。
 
 ## 语法
 
@@ -78,7 +79,7 @@ Content-Type: text/html
 
 ### 包含 CSP 的早期提示响应
 
-以下示例展示了相同的早期提示响应，但包含 `Content-Security-Policy` 头部。
+以下示例展示了相同的早期提示响应，但包含 `Content-Security-Policy` 标头。
 
 ```http
 103 Early Hint
@@ -112,9 +113,9 @@ Content-Type: text/html
 ## 参见
 
 - {{HTTPHeader("Link")}}
-- [跨源资源共享 (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Guides/CSP)
-- [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect) ({{htmlelement("link")}} attribute)
-- [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) ({{htmlelement("link")}} attribute)
-- [`fetchpriority`](/zh-CN/docs/Web/HTML/Reference/Elements/link#fetchpriority) ({{htmlelement("link")}} attribute)
+- [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
+- [内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)
+- [`rel="preconnect"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)（{{htmlelement("link")}} 属性）
+- [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)（{{htmlelement("link")}} 属性）
+- [`fetchpriority`](/zh-CN/docs/Web/HTML/Reference/Elements/link#fetchpriority)（{{htmlelement("link")}} 属性）
 - [早期提示更新：Cloudflare、Google 和 Shopify 如何共同努力为每个人构建更快的互联网](https://blog.cloudflare.com/early-hints-performance/) 来自 Cloudflare 博客
