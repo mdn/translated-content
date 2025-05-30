@@ -19,6 +19,7 @@ browser.webNavigation.onCompleted.addListener(
 browser.webNavigation.onCompleted.removeListener(listener)
 browser.webNavigation.onCompleted.hasListener(listener)
 ```
+
 事件包含三个函数：
 
 - `addListener(listener)`
@@ -28,7 +29,7 @@ browser.webNavigation.onCompleted.hasListener(listener)
 - `hasListener(listener)`
   - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
-## addListener syntax
+## addListener 语法
 
 ### 参数
 
@@ -42,12 +43,12 @@ browser.webNavigation.onCompleted.hasListener(listener)
 - `filter` {{optional_inline}}
   - : `object`。包含单个 `url` 属性的对象，且这一属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。如果省略此参数，则事件会为所有导航触发。
 
-## Additional objects
+## 附加对象
 
 ### details
 
 - `tabId`
-  - : `integer`。即将发生导航的标签页的 ID。
+  - : `integer`。已经发生导航的标签页的 ID。
 - `url`
   - : `string`。指定的框架将要导航到的 URL。
 - `processId` {{optional_inline}} {{deprecated_inline}}
