@@ -2,12 +2,12 @@
 title: webNavigation.onCompleted
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCompleted
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
 {{AddonSidebar}}
 
-当文档（包括它所指向的资源）已经加载完与初始化时触发。该事件与 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件等价。
+当文档（包括它所指向的资源）已经加载完并且已初始化时触发。该事件与 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件等价。
 
 ## 语法
 
@@ -52,7 +52,7 @@ browser.webNavigation.onCompleted.hasListener(listener)
 - `url`
   - : `string`。指定的框架将要导航到的 URL。
 - `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`。现代浏览器中不设置此值。它曾用于表示运行此标签页的渲染器的进程 ID。
+  - : `integer`。在现代浏览器中未设置该值。当设置时，它表示运行此标签页的渲染器的进程 ID。
 - `frameId`
   - : `integer`。即将发生导航的框架。`0` 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 {{HTMLElement("iframe")}} 中。正值表示导航发生在嵌套的 iframe 中。框架 ID 对于给定的标签页和进程是唯一的。
 - `timeStamp`
