@@ -2,7 +2,7 @@
 title: webNavigation.onTabReplaced
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onTabReplaced
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
 {{AddonSidebar}}
@@ -20,14 +20,14 @@ browser.webNavigation.onTabReplaced.removeListener(listener)
 browser.webNavigation.onTabReplaced.hasListener(listener)
 ```
 
-事件有三个函数：
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : 为此事件添加一个监听器。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册为此事件的监听器。如果正在监听，则返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
@@ -38,7 +38,7 @@ browser.webNavigation.onTabReplaced.hasListener(listener)
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关导航事件的详细信息。请参阅 [details](#details_2) 部分了解更多信息。
+      - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 
 ## 附加对象
 
@@ -49,7 +49,7 @@ browser.webNavigation.onTabReplaced.hasListener(listener)
 - `tabId`
   - : `integer`。替换旧标签页的新标签页的 ID。
 - `timeStamp`
-  - : `number`。替换发生的时间，以 [自纪元以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time) 表示。
+  - : `number`。替换发生的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 
 ## 浏览器兼容性
 
