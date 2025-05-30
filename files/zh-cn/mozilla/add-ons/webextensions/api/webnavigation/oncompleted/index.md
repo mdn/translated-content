@@ -7,27 +7,26 @@ l10n:
 
 {{AddonSidebar}}
 
-Fired when a document, including the resources it refers to, is completely loaded and initialized. This is equivalent to the window [`load`](/zh-CN/docs/Web/API/Window/load_event) event.
+当文档（包括它所指向的资源）已经加载完与初始化时触发。该事件与 window 的 [`load`](/zh-CN/docs/Web/API/Window/load_event) 事件等价。
 
 ## 语法
 
 ```js-nolint
 browser.webNavigation.onCompleted.addListener(
-  listener,                   // function
+  listener,                   // 函数
   filter                      // 可选对象
 )
 browser.webNavigation.onCompleted.removeListener(listener)
 browser.webNavigation.onCompleted.hasListener(listener)
 ```
-
-Events have three functions:
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : Adds a listener to this event.
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
-  - : Stop listening to this event. The `listener` argument is the listener to remove.
+  - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : Check whether `listener` is registered for this event. Returns `true` if it is listening, `false` otherwise.
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener syntax
 
@@ -38,25 +37,25 @@ Events have three functions:
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`. Details about the navigation event. See the [details](#details_2) section for more information.
+      - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 
 - `filter` {{optional_inline}}
-  - : `object`. An object containing a single property `url`, which is an `Array` of {{WebExtAPIRef("events.UrlFilter")}} objects. If you include this parameter, then the event fires only for transitions to URLs which match at least one `UrlFilter` in the array. If you omit this parameter, the event fires for all transitions.
+  - : `object`。包含单个 `url` 属性的对象，且这一属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。如果省略此参数，则事件会为所有导航触发。
 
 ## Additional objects
 
 ### details
 
 - `tabId`
-  - : `integer`. The ID of the tab in which the navigation has occurred.
+  - : `integer`。即将发生导航的标签页的 ID。
 - `url`
-  - : `string`. The URL to which the given frame has navigated.
+  - : `string`。指定的框架将要导航到的 URL。
 - `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`. This value is not set in modern browsers. When it was set, it represented the ID of the process running the renderer for this tab.
+  - : `integer`。现代浏览器中不设置此值。它曾用于表示运行此标签页的渲染器的进程 ID。
 - `frameId`
-  - : `integer`. Frame in which the navigation has occurred. `0` indicates that navigation happened in the tab's top-level browsing context, not in a nested {{HTMLElement("iframe")}}. A positive value indicates that navigation happened in a nested iframe. Frame IDs are unique for a given tab and process.
+  - : `integer`。即将发生导航的框架。`0` 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 {{HTMLElement("iframe")}} 中。正值表示导航发生在嵌套的 iframe 中。框架 ID 对于给定的标签页和进程是唯一的。
 - `timeStamp`
-  - : `number`. The time at which the page finished loading, in [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time).
+  - : `number`。页面加载完成的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 
 ## 浏览器兼容性
 
@@ -64,7 +63,7 @@ Events have three functions:
 
 ## 示例
 
-Logs the target URLs for `onCompleted`, if the target URL's hostname contains "example.com" or starts with "developer".
+当目标 URL 的主机名包含“example.com”或以“developer”开头时，记录 `onComplete` 的目标 URL。
 
 ```js
 const filter = {
@@ -72,7 +71,7 @@ const filter = {
 };
 
 function logOnCompleted(details) {
-  console.log(`onCompleted: ${details.url}`);
+  console.log(`onCompleted：${details.url}`);
 }
 
 browser.webNavigation.onCompleted.addListener(logOnCompleted, filter);
