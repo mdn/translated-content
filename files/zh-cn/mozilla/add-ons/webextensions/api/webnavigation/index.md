@@ -2,7 +2,7 @@
 title: webNavigation
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: e92bec809ea0bef618f7e604d7a7457f50aa0127
 ---
 
 {{AddonSidebar}}
