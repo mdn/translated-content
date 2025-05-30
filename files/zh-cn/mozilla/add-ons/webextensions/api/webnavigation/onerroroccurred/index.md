@@ -28,7 +28,6 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
   - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
-事件有三个函数：
 
 ## addListener 语法
 
