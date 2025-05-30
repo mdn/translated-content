@@ -58,7 +58,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
 - `timeStamp`
   - : `number`。History API 更改 URL 的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 - `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`。导航的原因，例如，如果用户点击了链接，则为“link”。
+  - : {{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}。导航的原因，例如，如果用户点击了链接，则为“link”。
 - `transitionQualifiers`
   - : {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}} 的数组（`Array`）。有关导航的额外信息，例如是否存在服务器或客户端重定向。
 
