@@ -58,7 +58,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
 - `timeStamp`
   - : `number`。页面的片段标识符更改的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 - `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`。导航的原因，例如，如果用户点击了链接，则为 "link"。
+  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`。导航的原因，例如，如果用户点击了链接，则为“link”。
 - `transitionQualifiers`
   - : {{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}} 的数组（`Array`）。有关导航的额外信息，例如是否存在服务器或客户端重定向。
 
@@ -68,7 +68,7 @@ browser.webNavigation.onReferenceFragmentUpdated.hasListener(listener)
 
 ## 示例
 
-当目标 URL 的主机名包含 "example.com" 或以 "developer" 开头时，记录 `onReferenceFragmentUpdated` 的目标 URL 和额外的过渡信息。
+当目标 URL 的主机名包含“example.com”或以“developer”开头时，记录 `onReferenceFragmentUpdated` 的目标 URL 和额外的过渡信息。
 
 ```js
 const filter = {
@@ -76,9 +76,9 @@ const filter = {
 };
 
 function logOnReferenceFragmentUpdated(details) {
-  console.log(`onReferenceFragmentUpdated: ${details.url}`);
-  console.log(`Transition type: ${details.transitionType}`);
-  console.log(`Transition qualifiers: ${details.transitionQualifiers}`);
+  console.log(`onReferenceFragmentUpdated：${details.url}`);
+  console.log(`导航类型：${details.transitionType}`);
+  console.log(`导航额外信息：${details.transitionQualifiers}`);
 }
 
 browser.webNavigation.onReferenceFragmentUpdated.addListener(
