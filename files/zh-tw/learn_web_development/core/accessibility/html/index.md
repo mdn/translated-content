@@ -1,5 +1,6 @@
 ---
 title: HTML：無障礙的良好基礎
+short-title: 無障礙的 HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 ---
 
@@ -16,7 +17,7 @@ slug: Learn_web_development/Core/Accessibility/HTML
       <td>需熟悉 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 及<a href="/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基礎無障礙相關概念</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目標：</th>
+      <th scope="row">學習成果：</th>
       <td>
         <ul>
           <li>使用語義化 HTML，即「正確的元素做正確的工作」，因為瀏覽器提供了許多內建的無障礙 hook。</li>
@@ -37,13 +38,13 @@ slug: Learn_web_development/Core/Accessibility/HTML
 你可能會想，為什麼語義化很重要。畢竟，你可以使用 CSS 和 JavaScript 的組合幾乎可以讓 HTML 元素以任何你想要的方式運作。例如，網站上播放影片的控制按鈕可以像這樣標記：
 
 ```html
-<div>Play video</div>
+<div>播放視訊</div>
 ```
 
 你將會看到更好的寫法，這裡使用了正確的 HTML 標籤，整體看上去更合理了：
 
 ```html
-<button>Play video</button>
+<button>播放視訊</button>
 ```
 
 HTML 的 `<button>` 標籤提供預設的樣式（也許你會想要覆蓋這些樣式），這些預設的標籤具備內建的鍵盤無障礙功能——使用者可以使用 <kbd>Tab</kbd> 鍵在按鈕之間導航，並使用 <kbd>Space</kbd>、<kbd>Return</kbd> 或 <kbd>Enter</kbd> 鍵來選擇。
@@ -59,11 +60,14 @@ HTML 的 `<button>` 標籤提供預設的樣式（也許你會想要覆蓋這些
 ## 良好的語義
 
 我們已經討論過正確語義的重要性，以及為什麼應該使用正確的 HTML 標籤。這一點不容忽視，因為使用不當，是無障礙性嚴重受損的主要原因之一。
+
 在網路世界中，人們事實上對 HTML 標記做一些非常奇怪的事情。對 HTML 的濫用無非是因還未完全遺忘舊有的做法，有些則純粹是無知。無論如何，你應該更換這樣的不良程式碼。
+
 有時你無法擺脫糟糕的標記——頁面可能由某種無法完全控制的伺服器端框架生成，或者可能有無法控制的第三方內容（如廣告橫幅）。
+
 目標不是「全有或全無」；我們能做的就是開始改進，這都將有助於無障礙性。
 
-### 文字內容
+### 使用結構良好的文字內容
 
 對於螢幕閱讀器使用者來說，最好的無障礙輔助之一是有優良內容結構的網頁，包含標題、段落、清單等。一個優秀的語義化範例可能如下：
 
@@ -136,84 +140,14 @@ the last one.
 頁面使用的語言也會影響無障礙性。一般來說，應該使用清晰、不過於複雜且不使用不必要專業術語或俚語的語言。這不僅有利於認知或其他障礙的人士；它也有利於非母語閱讀者、年輕人...，實際上是所有人！除此之外，也應該避免使用不能被螢幕閱讀器清楚讀出的語言和字符。例如：
 
 1. 如果可以避免，請不要使用破折號。請寫「5 至 7」而非「5–7」。
-2. 展開縮寫——寫「一月」而非「1月」。
+2. 展開縮寫——寫「January」而非「Jan」。
 3. 展開首字母縮略詞，至少一到兩次，然後使用 [`<abbr>`](/zh-TW/docs/Web/HTML/Element/abbr) 標籤來描述它們。
 
-### 頁面佈局
+### 有邏輯地架構頁面區段
 
-過去，人們曾經使用 HTML 表格來建立頁面佈局——使用不同的表格儲存格來包含頁首、頁尾、側邊欄、主要內容欄等。這不是一個好主意，因為螢幕閱讀器會讀出令人困惑的內容，特別是當佈局複雜且有許多嵌套表格時。
+應該使用適當的 [sectioning 元素](/zh-TW/docs/Web/HTML/Reference/Elements#content_sectioning) 來架構網頁，例如導覽（{{htmlelement("nav")}}）、頁尾（{{htmlelement("footer")}}）以及重複內容單位（{{htmlelement("article")}}）。這些都為螢幕閱讀器（和其他工具）提供了額外的語義，讓使用者對他們正在瀏覽的內容有額外的提示。
 
-試試以下的範例 [table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html)，它看起來像這樣：
-
-```html
-<table width="1200">
-  <!-- 主標題列 -->
-  <tr id="heading">
-    <td colspan="6">
-      <h1 align="center">Header</h1>
-    </td>
-  </tr>
-  <!-- 主導航列 -->
-  <tr id="nav" bgcolor="#ffffff">
-    <td width="200">
-      <a href="#" align="center">Home</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Our team</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Projects</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Contact</a>
-    </td>
-    <td width="300">
-      <form width="300">
-        <label
-          >Search
-          <input
-            type="search"
-            name="q"
-            placeholder="Search query"
-            width="300" />
-        </label>
-      </form>
-    </td>
-    <td width="100">
-      <button width="100">Go!</button>
-    </td>
-  </tr>
-  <!-- 空格列 -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- 主要內容和側邊欄列 -->
-  <tr id="main">
-    <td id="content" colspan="4">
-      <!-- 主要內容在這裡 -->
-    </td>
-    <td id="aside" colspan="2" valign="top">
-      <h2>Related</h2>
-
-      <!-- 側邊欄內容在這裡 -->
-    </td>
-  </tr>
-  <!-- 空格列 -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- 頁尾列 -->
-  <tr id="footer">
-    <td colspan="6">
-      <p>©Copyright 1996 by nobody. All rights reversed.</p>
-    </td>
-  </tr>
-</table>
-```
-
-如果你嘗試使用螢幕閱讀器來導航，它可能會告訴你有一個表格需要查看（儘管有些螢幕閱讀器可以猜測表格佈局和資料表格之間的差異）。你可能也需要（取決於你使用的螢幕閱讀器）進入表格作為一個物件，單獨查看其特性，然後再從表格中退出才能繼續導航內容。
-
-表格佈局是過去的遺物——在瀏覽器的 CSS 支援不普及時是有意義的，但現在它們會對螢幕閱讀器使用者帶來困擾。此外，因為需要更多標籤，將會變得不靈活且更難維護。你可以透過比較先前的體驗與[更現代的網站結構範例](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)來驗證這些說法，它看起來可能像這樣：
+舉例來說，現代的內容結構可以是這樣的：
 
 ```html
 <header>
@@ -221,42 +155,39 @@ the last one.
 </header>
 
 <nav>
-  <!-- 主導航包在這裡面 -->
+  <!-- main navigation in here -->
 </nav>
 
-<!-- 這裡是頁面的主要內容 -->
+<!-- Here is our page's main content -->
 <main>
-  <!-- 這裡包含一篇文章 -->
+  <!-- It contains an article -->
   <article>
     <h2>Article heading</h2>
 
-    <!-- 文章內容包在裡面 -->
+    <!-- article content in here -->
   </article>
 
   <aside>
     <h2>Related</h2>
 
-    <!-- 側邊內容在這裡 -->
+    <!-- aside content in here -->
   </aside>
 </main>
 
-<!-- 這裡是主要用在所有頁面的頁尾 -->
+<!-- And here is our main footer that is used across all the pages of our website -->
 
 <footer>
-  <!-- 頁尾內容在這裡 -->
+  <!-- footer content in here -->
 </footer>
 ```
 
-如果你使用螢幕閱讀器嘗試更現代結構範例，你會注意到佈局標籤不再干擾或造成內容讀出的混亂。就程式碼大小而言，也更精簡小巧，這意味著程式碼更容易維護，使用者需要下載的頻寬更少，也有益於網路連線較慢的使用者。
+可以在此找到[完整範例](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)。
 
-在建立佈局時，另一個考量是使用如上例所示的 HTML 語義元素 (請見 [此內容](/zh-TW/docs/Web/HTML/Element#content_sectioning)) — 你僅能使用嵌套的 {{htmlelement("div")}} 元素來建立佈局，但更好的是使用正確的區塊元素來包裹主要的導航 ({{htmlelement("nav")}})、`footer` ({{htmlelement("footer")}})、重複的內容單元 ({{htmlelement("article")}}) 等。這些為螢幕閱讀器（和其他工具）提供額外的語義，給使用者有關當下瀏覽的內容的額外線索（請見[螢幕閱讀器對新 HTML5 區段元素](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)的支援，了解螢幕閱讀器支援的情況）。
+除了要有良好的語意和吸引人的版面之外，內容在原始順序上也要合乎邏輯——你可以在稍後使用 CSS 將內容放置在想要的位置，但應該在一開始就把原始順序弄好，這樣螢幕閱讀器使用者讀到的內容才會合乎邏輯。
 
-> [!NOTE]
-> 除了擁有良好的語義和吸引人的佈局外，內容在原始碼順序中應該具有邏輯性——你之後可以用 CSS 擺在想要的位置，但前提是要先確保原始碼順序正確，這樣螢幕閱讀器使用者聽到的內容才有意義。
+### 盡可能使用語意 UI 控件
 
-### UI 控制
-
-所謂的 UI 控制，我們指的是使用者與其互動的網頁文件主要部分——最常見的是按鈕、連結和表單控件。在本節中，我們將探討建立這類控制項時需要注意的基本無障礙性問題。後續關於 WAI-ARIA 和多媒體的文章將探討 UI 無障礙性的其他方面。
+所謂的 UI 控件，我們指的是使用者與其互動的網頁文件主要部分——最常見的是按鈕、連結和表單控件。在本節中，我們將探討建立這類控制項時需要注意的基本無障礙性問題。後續關於 WAI-ARIA 和多媒體的文章將探討 UI 無障礙性的其他方面。
 
 UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允許使用鍵盤操作它們。你可以使用我們的 [native-keyboard-accessibility.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html) 範例來嘗試（查看[原始碼](ttps://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/native-keyboard-accessibility.html)）。在新分頁中打開它，並嘗試按 Tab 鍵；按幾下後，你應該會看到 Tab 焦點開始在不同的可聚焦元素間移動。每個瀏覽器中，被聚焦的元素都會有一個默認的強調樣式（在不同瀏覽器之間略有不同），這樣就能知道哪個元素被聚焦了。
 
@@ -324,7 +255,7 @@ UI 控制無障礙性的一個關鍵方面是，默認情況下，瀏覽器允�
 
 #### 重建鍵盤無障礙性
 
-重新加入這些默認優勢需要一些額外的工作（你可以 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 查看範例——也可以查看[原始碼](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在這裡，我們為假的 `<div>` 按鈕提供了可以被聚焦的能力（包括透過 tab 鍵），方法是給每個按鈕新增屬性 `tabindex="0"`。我們還包含了 `role="button"`，這樣螢幕閱讀器使用者就知道他們可以聚焦並與該元素互動：
+重新加入這些默認優勢需要一些額外的工作（你可以在 [fake-div-buttons.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) 查看範例——也可以查看[原始碼](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html)）。在這裡，我們為假的 `<div>` 按鈕提供了可以被聚焦的能力（包括透過 tab 鍵），方法是給每個按鈕新增屬性 `tabindex="0"`。我們還包含了 `role="button"`，這樣螢幕閱讀器使用者就知道他們可以聚焦並與該元素互動：
 
 ```html
 <div data-message="This is from the first button" tabindex="0" role="button">
@@ -360,7 +291,7 @@ document.onkeydown = (e) => {
 
 #### 有意義的文字標籤
 
-UI 控制文字標籤對所有使用者都非常有用，但對身心障礙使用者來說，正確設置這些標籤極為重要。
+UI 控件文字標籤對所有使用者都非常有用，但對身心障礙使用者來說，正確設置這些標籤極為重要。
 
 你應確保你的按鈕和連結文字標籤易於理解且具有獨特性。不要只使用「點擊這裡」作為標籤，因為螢幕閱讀器使用者有時會調出按鈕和表單控件的列表。下面的截圖顯示了我們的控制項在 Mac 上被 VoiceOver 列出的情況。
 
@@ -404,7 +335,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 </div>
 ```
 
-使用這樣的程式碼，標籤將與輸入框明確關聯；描述會更像是「填寫你的姓名：編輯文字。」
+使用這樣的程式碼，標籤將與輸入框明確關聯；描述會更像是「Fill in your name: edit text」
 
 ![一個寫著「填寫你的姓名」的良好表單標籤被賦予給一個文字輸入表單控件。](voiceover-good-form-label.png)
 
@@ -487,7 +418,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 > [!NOTE]
 > 絕對不要在影像中包含文字內容 — 螢幕閱讀器無法存取它。另外還有其他缺點 — 你無法選取及複製貼上文字。千萬不要這麼做！
 
-當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字（alt attribute）— 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
+當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字— 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
 
 這突顯了兩個重要性：不僅要使用有意義的檔案名稱（以防無法使用替代文字），還要確保在可能的情況下，在 `alt` 屬性中提供**替代文字**。
 
@@ -500,8 +431,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 需要考慮你的影像是否在內容中具有意義，還是純粹作為視覺裝飾，因此沒有實質意涵。如果是裝飾性影像，較好的做法是將 `alt` 屬性的值設為空字串（參見[空的 alt 屬性](#空的_alt_屬性)）或僅將其包含在頁面中作為 CSS 背景影像。
 
 > [!NOTE]
-> 閱讀 [HTML 影像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images) and [Responsive images](/zh-TW/docs/Web/HTML/Responsive_images) 獲取更多關於影像的最佳實踐。
-> 你也可以查看 [替代文字決策樹](https://www.w3.org/WAI/tutorials/images/decision-tree/) 來學習如何在不同的情境下為影像撰寫替代文字。
+> 閱讀 [HTML 影像](/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images)和[反應式影像](/zh-TW/docs/Web/HTML/Responsive_images)以獲取更多關於影像的最佳實踐。你也可以查看[替代文字決策樹](https://www.w3.org/WAI/tutorials/images/decision-tree/)來學習如何在不同的情境下為影像撰寫替代文字。
 
 如果你確實想提供額外的上下文，應該將它放在圖片周圍的文字中，或者放在 `title` 屬性中，如上所示。在這種情況下，大多數螢幕閱讀器會讀出替代文字、`title` 屬性和檔案名稱。此外，當滑鼠懸停時，瀏覽器會將 `title` 文字顯示為工具提示。
 
@@ -517,7 +447,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
 
-> **備註：** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分， 它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
+> **備註：** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分，它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
 
 ### Figure 和 figure caption
 
