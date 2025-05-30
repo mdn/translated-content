@@ -2,7 +2,7 @@
 title: webNavigation.onCreatedNavigationTarget
 slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCreatedNavigationTarget
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 5c5ee35d66ac24bc6513c14f120750c74d779d20
 ---
 
 {{AddonSidebar}}
@@ -27,14 +27,14 @@ browser.webNavigation.onCreatedNavigationTarget.removeListener(listener)
 browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 ```
 
-事件有三个函数：
+事件包含三个函数：
 
 - `addListener(listener)`
-  - : 为此事件添加一个监听器。
+  - : 为此事件添加监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
 - `hasListener(listener)`
-  - : 检查 `listener` 是否已注册为此事件的监听器。如果正在监听，则返回 `true`，否则返回 `false`。
+  - : 检查是否已为此事件注册了 `listener`。如果正在监听，则返回 `true`，否则返回 `false`。
 
 ## addListener 语法
 
@@ -45,10 +45,10 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关导航事件的详细信息。请参阅 [details](#details_2) 部分了解更多信息。
+      - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 
 - `filter` {{optional_inline}}
-  - : `object`。包含单个属性 `url` 的对象，该属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的 `Array`。如果包含此参数，则事件仅在过渡到与数组中至少一个 `UrlFilter` 匹配的 URL 时触发。如果省略此参数，则事件会为所有过渡触发。请注意，Firefox 不支持 `filter`。
+  - : `object`。包含单个 `url` 属性的对象，且这一属性是 {{WebExtAPIRef("events.UrlFilter")}} 对象的数组（`Array`）。如果包含此参数，则仅当目标 URL 匹配数组中至少一个 `UrlFilter` 时，事件才会触发。如果省略此参数，则事件会为所有导航触发。请注意，Firefox 不支持 `filter`。
 
 ## 附加对象
 
@@ -57,13 +57,13 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 - `sourceFrameId`
   - : `integer`。发起导航的框架的 ID。`0` 表示框架是标签页的顶级浏览上下文，而不是嵌套的 {{HTMLElement("iframe")}}。正值表示导航是从嵌套的 iframe 发起的。框架 ID 对于给定的标签页和进程是唯一的。
 - `processId` {{optional_inline}} {{deprecated_inline}}
-  - : `integer`。现代浏览器中不设置此值。当设置时，它表示发起导航的进程的 ID。
+  - : `integer`。在现代浏览器中未设置该值。当设置时，它表示发起导航的进程的 ID。
 - `sourceTabId`
   - : `integer`。发起导航的标签页的 ID。例如，如果用户在新标签页中打开链接，这将是包含该链接的标签页的 ID。
 - `tabId`
   - : `integer`。新创建的标签页的 ID。
 - `timeStamp`
-  - : `number`。浏览器创建导航目标的时间，以 [自纪元以来的毫秒数](https://en.wikipedia.org/wiki/Unix_time) 表示。
+  - : `number`。浏览器创建导航目标的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
 - `url`
   - : `string`。将在新标签页中加载的 URL。
 - `windowId`
@@ -75,7 +75,7 @@ browser.webNavigation.onCreatedNavigationTarget.hasListener(listener)
 
 ## 示例
 
-记录 `onCreatedNavigationTarget` 的目标 URL、源标签页 ID 和源框架 ID，如果目标的主机名包含 "example.com" 或以 "developer" 开头。
+当目标的主机名包含“example.com”或以“developer”开头时，记录 `onCreatedNavigationTarget` 的目标 URL、源标签页 ID 和源框架 ID。
 
 ```js
 const filter = {
@@ -83,7 +83,7 @@ const filter = {
 };
 
 function logOnCreatedNavigationTarget(details) {
-  console.log(`onCreatedNavigationTarget: ${details.url}`);
+  console.log(`onCreatedNavigationTarget：${details.url}`);
   console.log(details.sourceTabId);
   console.log(details.sourceFrameId);
 }
