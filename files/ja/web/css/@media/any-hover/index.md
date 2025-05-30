@@ -1,6 +1,8 @@
 ---
 title: any-hover
 slug: Web/CSS/@media/any-hover
+l10n:
+  sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
 ---
 
 {{CSSRef}}

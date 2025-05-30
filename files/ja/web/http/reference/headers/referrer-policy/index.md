@@ -15,7 +15,7 @@ original_slug: Web/HTTP/Headers/Referrer-Policy
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -68,7 +68,7 @@ Referrer-Policy: unsafe-url
 
 ## HTML との統合
 
-HTML 内でリファラーポリシーを設定することもできます。例えば、 {{HTMLElement("meta")}} 要素で [name](/ja/docs/Web/HTML/Element/meta#attr-name) に `referrer` を設定することで、文書全体のリファラーポリシーを設定することができます。
+HTML 内でリファラーポリシーを設定することもできます。例えば、 {{HTMLElement("meta")}} 要素で [name](/ja/docs/Web/HTML/Reference/Elements/meta#attr-name) に `referrer` を設定することで、文書全体のリファラーポリシーを設定することができます。
 
 ```html
 <meta name="referrer" content="origin" />
@@ -80,7 +80,7 @@ HTML 内でリファラーポリシーを設定することもできます。例
 <a href="http://example.com" referrerpolicy="origin"></a>
 ```
 
-他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
+他に、 `noreferrer` [link 関係](/ja/docs/Web/HTML/Reference/Attributes/rel)を `a`, `area`, `link` の各要素に設定することもできます。
 
 ```html
 <a href="http://example.com" rel="noreferrer"></a>

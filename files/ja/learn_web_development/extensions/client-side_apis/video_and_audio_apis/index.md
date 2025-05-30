@@ -50,7 +50,7 @@ HTML にはリッチメディアを文書内に埋め込むための要素、 {{
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-すべての HTML 機能が何を行うかは、上記のリンク先の記事で確認できます。この記事の目的にとって、最も興味深い属性は [`controls`](/ja/docs/Web/HTML/Element/video#controls) で、既定の再生コントロールセットを有効にするものです。これを指定しない場合、再生コントロールは利用できません。
+すべての HTML 機能が何を行うかは、上記のリンク先の記事で確認できます。この記事の目的にとって、最も興味深い属性は [`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls) で、既定の再生コントロールセットを有効にするものです。これを指定しない場合、再生コントロールは利用できません。
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -164,7 +164,7 @@ button:before {
 次に、生成コンテンツを使用して、各ボタンにアイコンを表示します。
 
 - {{cssxref("::before")}} セレクターを、それぞれの {{htmlelement("button")}} 要素の前にコンテンツを表示するために、使用しています。
-- それぞれの場合に表示するコンテンツは、 {{cssxref("content")}} プロパティを使って、[`data-icon`](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 属性のコンテンツと等しくなるよう設定しています。再生ボタンの場合、 `data-icon` は大文字の "P" を含んでいます。
+- それぞれの場合に表示するコンテンツは、 {{cssxref("content")}} プロパティを使って、[`data-icon`](/ja/docs/Web/HTML/How_to/Use_data_attributes) 属性のコンテンツと等しくなるよう設定しています。再生ボタンの場合、 `data-icon` は大文字の "P" を含んでいます。
 - ボタンには {{cssxref("font-family")}} を使用して、カスタムウェブフォントを適用しています。このフォントでは、 "P" は実際には「再生」アイコンであるため、再生ボタンには「再生」アイコンが保有されています。
 
 アイコンフォントは多くの理由でとてもクールです。アイコンを画像ファイルとしてダウンロードする必要がないため HTTP リクエストを削減でき、拡張性が高く、また {{cssxref("color")}} や {{cssxref("text-shadow")}} のようにテキストのプロパティを使用してスタイルを設定することも可能だからです。

@@ -1,13 +1,13 @@
 ---
 title: block-size
 slug: Web/CSS/block-size
+l10n:
+  sourceCommit: 883491d47f6b764563aa825d9d56f83fb80c6fb9
 ---
 
 {{CSSRef}}
 
-**`block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。
-
-書字方向が垂直方向であった場合、 `block-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxref("inline-size")}} が要素のもう一方の寸法を定義します。
+**`block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。書字方向が垂直方向であった場合、 `block-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxref("inline-size")}} が要素のもう一方の寸法を定義します。
 
 {{InteractiveExample("CSS Demo: block-size")}}
 
@@ -31,10 +31,10 @@ block-size: auto;
 writing-mode: vertical-lr;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the block-size.
+    これは、ブロックサイズを変更できるボックスです。
   </div>
 </section>
 ```
@@ -55,6 +55,8 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 block-size: 300px;
 block-size: 25em;
+block-size: anchor-size(height);
+block-size: calc(anchor-size(--myAnchor block) * 0.75);
 
 /* <percentage> 値 */
 block-size: 75%;
@@ -62,6 +64,7 @@ block-size: 75%;
 /* キーワード値 */
 block-size: max-content;
 block-size: min-content;
+block-size: fit-content;
 block-size: fit-content(20em);
 block-size: auto;
 
@@ -69,6 +72,7 @@ block-size: auto;
 block-size: inherit;
 block-size: initial;
 block-size: revert;
+block-size: revert-layer;
 block-size: unset;
 ```
 
@@ -78,7 +82,7 @@ block-size: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -86,12 +90,12 @@ block-size: unset;
 
 ## 例
 
-<h3 id="Block_size_with_vertical_text">縦書き時のブロック方向の寸法</h3>
+### 縦書き時のブロック方向の寸法
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">テキストの例</p>
 ```
 
 #### CSS
@@ -106,7 +110,7 @@ block-size: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Block_size_with_vertical_text")}}
+{{EmbedLiveSample("縦書き時のブロック方向の寸法")}}
 
 ## 仕様書
 

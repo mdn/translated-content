@@ -1028,7 +1028,7 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 
 为了优化兼容性，值得考虑提供多个版本的媒体文件，使用 {{HTMLElement("source")}} 元素在 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 元素中指定每个来源。例如，可以将 Ogg 或 WebM 视频作为首选，并以 MP4 格式作为后备。甚至可以选择提供类似 QuickTime 或 AVI 的复古后备格式。
 
-为此，你需要创建一个没有 [`src`](/zh-CN/docs/Web/HTML/Element/video#src) 属性的 `<video>`（或 `<audio>`）元素。然后在 `<video>` 元素中添加子元素 {{HTMLElement("source")}}，每提供一个版本的视频就添加一个。这可用于提供不同版本的视频，根据带宽可用性进行选择，但在我们的案例中，我们将用它来提供格式选项。
+为此，你需要创建一个没有 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/video#src) 属性的 `<video>`（或 `<audio>`）元素。然后在 `<video>` 元素中添加子元素 {{HTMLElement("source")}}，每提供一个版本的视频就添加一个。这可用于提供不同版本的视频，根据带宽可用性进行选择，但在我们的案例中，我们将用它来提供格式选项。
 
 在这里显示的示例中，我们向浏览器提供了两种格式的视频：WebM 和 MP4。
 
@@ -1046,7 +1046,7 @@ WebM 于 2010 年首次推出，现已得到广泛支持。符合要求的 WebM 
 </video>
 ```
 
-视频首先以 WebM 格式提供（[`type`](/zh-CN/docs/Web/HTML/Element/video#type) 属性设置为 `video/webm`）。如果{{Glossary("user agent","用户代理")}}无法播放，就会转到下一个选项，其 `type` 属性被指定为 `video/mp4`。如果两个选项都无法播放，则会显示 `This browser does not support the HTML video element` 的文本。
+视频首先以 WebM 格式提供（[`type`](/zh-CN/docs/Web/HTML/Reference/Elements/video#type) 属性设置为 `video/webm`）。如果{{Glossary("user agent","用户代理")}}无法播放，就会转到下一个选项，其 `type` 属性被指定为 `video/mp4`。如果两个选项都无法播放，则会显示 `This browser does not support the HTML video element` 的文本。
 
 ## 规范
 

@@ -2,12 +2,9 @@
 title: SVG 要素リファレンス
 short-title: 要素
 slug: Web/SVG/Reference/Element
-original_slug: Web/SVG/Element
 l10n:
-  sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
-
-{{SVGRef}}
 
 SVG の描画と画像は、構築、描画、ベクター画像や図のレイアウトのための広範にわたる要素を使用して作成されます。ここではそれぞれの SVG 要素のリファレンス文書が見つかります。
 
@@ -29,6 +26,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("defs")}}
 - {{SVGElement("desc")}}
+- {{SVGElement("discard")}}
 
 ### E
 
@@ -121,7 +119,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 - {{SVGElement("view")}}
 
-> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリング用途では未知の要素を {{SVGElement("g")}} として扱われることが要求されています。
 
 ## SVG 要素一覧 (カテゴリー別)
 
@@ -135,7 +133,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### コンテナー要素
 
-{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("missing-glyph")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
+{{SVGElement("a")}}, {{SVGElement("defs")}}, {{SVGElement("g")}}, {{SVGElement("marker")}}, {{SVGElement("mask")}}, {{SVGElement("pattern")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}
 
 ### 説明的要素
 
@@ -144,10 +142,6 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 ### フィルター構成要素
 
 {{SVGElement("feBlend")}}, {{SVGElement("feColorMatrix")}}, {{SVGElement("feComponentTransfer")}}, {{SVGElement("feComposite")}}, {{SVGElement("feConvolveMatrix")}}, {{SVGElement("feDiffuseLighting")}}, {{SVGElement("feDisplacementMap")}}, {{SVGElement("feDropShadow")}}, {{SVGElement("feFlood")}}, {{SVGElement("feFuncA")}}, {{SVGElement("feFuncB")}}, {{SVGElement("feFuncG")}}, {{SVGElement("feFuncR")}}, {{SVGElement("feGaussianBlur")}}, {{SVGElement("feImage")}}, {{SVGElement("feMerge")}}, {{SVGElement("feMergeNode")}}, {{SVGElement("feMorphology")}}, {{SVGElement("feOffset")}}, {{SVGElement("feSpecularLighting")}}, {{SVGElement("feTile")}}, {{SVGElement("feTurbulence")}}
-
-### フォント要素
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}, {{SVGElement("hkern")}}, {{SVGElement("vkern")}}
 
 ### グラデーション要素
 
@@ -177,7 +171,7 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 {{SVGElement("a")}}, {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("foreignObject")}}, {{SVGElement("g")}}, {{SVGElement("image")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}}, {{SVGElement("svg")}}, {{SVGElement("switch")}}, {{SVGElement("symbol")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tspan")}}, {{SVGElement("use")}}
 
-> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリングのために未知の要素は {{SVGElement("g")}} として扱われることが要求されています。
+> **メモ:** [SVG 2 仕様では](https://www.w3.org/TR/SVG2/struct.html#UnknownElement)、レンダリング用途では未知の要素を {{SVGElement("g")}} として扱われることが要求されています。
 
 ### 図形要素
 
@@ -189,53 +183,18 @@ SVG の描画と画像は、構築、描画、ベクター画像や図のレイ�
 
 ### テキストコンテンツ要素
 
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}, {{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("text")}}, {{SVGElement("tspan")}}
 
 ### テキストコンテンツの子要素
 
-{{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}}
+{{SVGElement("textPath")}}, {{SVGElement("tspan")}}
 
 ### 未分類の要素
 
-{{SVGElement("clipPath")}}, {{SVGElement("cursor")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
-
-## 廃止および非推奨の要素
-
-> [!WARNING]
-> 以下のものは非推奨の古い SVG 要素であり、使用するべきではありません。**新しいプロジェクトでは決して使用せず、古いプロジェクトでもできるだけ早く置き換えてください。**ここに掲載しているのは情報提供だけの目的です。
-
-### C
-
-{{SVGElement("cursor")}}
-
-### F
-
-{{SVGElement("font")}}, {{SVGElement("font-face")}}, {{SVGElement("font-face-format")}}, {{SVGElement("font-face-name")}}, {{SVGElement("font-face-src")}}, {{SVGElement("font-face-uri")}}
-
-### G
-
-{{SVGElement("glyph")}}, {{SVGElement("glyphRef")}}
-
-### H
-
-{{SVGElement("hkern")}}
-
-### M
-
-{{SVGElement("missing-glyph")}}
-
-### T
-
-{{SVGElement("tref")}}
-
-### V
-
-{{SVGElement("vkern")}}
+{{SVGElement("clipPath")}}, {{SVGElement("filter")}}, {{SVGElement("foreignObject")}}, {{SVGElement("script")}}, {{SVGElement("style")}}, {{SVGElement("view")}}
 
 ## 関連情報
 
 - [SVG 属性リファレンス](/ja/docs/Web/SVG/Reference/Attribute)
 - [SVG チュートリアル](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch)
 - [SVG インターフェイスリファレンス](/ja/docs/Web/API/Document_Object_Model#svg_dom)
-
-{{SVGRef}}

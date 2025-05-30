@@ -2,7 +2,7 @@
 title: Web 應用程式清單
 slug: Web/Progressive_web_apps/Manifest
 l10n:
-  sourceCommit: ab4090ce439d9ea25229a8583a138b2f8fa8a74e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{QuickLinksWithSubpages("/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference")}}
@@ -19,7 +19,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 規範中所有成員都是可選的，但某些應用程式需要某些成員存在。例如，[PWA 必須提供某些清單成員](/zh-TW/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#必須的清單成員)。
 
-{{ListSubpages("/zh-TW/docs/Web/Manifest/Reference")}}
+{{ListSubpages("/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 > **備註：** `dir`、`lang` 和 `iarc_rating_id` 成員尚未實作。
 
@@ -58,7 +58,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 `.webmanifest` 副檔名在規範的[媒體類型註冊](https://w3c.github.io/manifest/#media-type-registration)部分中指定（清單檔案的回應應返回 `Content-Type: application/manifest+json`）。瀏覽器通常支援具有其他適當副檔名的清單，如 `.json`（`Content-Type: application/json`）。
 
-如果清單需要憑證來獲取，則必須將 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性設置為 `use-credentials`，即使清單檔案與當前頁面在同一來源中也是如此。
+如果清單需要憑證來獲取，則必須將 [`crossorigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) 屬性設置為 `use-credentials`，即使清單檔案與當前頁面在同一來源中也是如此。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

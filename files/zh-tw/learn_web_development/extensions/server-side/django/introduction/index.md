@@ -3,7 +3,7 @@ title: Django 介紹
 slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在這第一篇 Django 文章中，我們將回答「什麼是 Django」這個問題，並概述這個網絡框架有什麼特性。我們將描述主要功能，包括一些高級功能，但我們並不會在本單元中詳細介紹。我們還會展示一些 Django 應用程序的主要構建模塊（儘管此時你還沒有要測試的開發環境）。
 

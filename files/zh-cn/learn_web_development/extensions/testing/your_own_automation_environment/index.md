@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenu("Learn_web_development/Extensions/Testing/Automated_testing", "Learn_web_development/Extensions/Testing")}}
 
 在本文中，我们将教你如何搭建自己的自动化测试环境，并使用 Selenium/WebDriver 以及一种测试库（如 selenium-webdriver for Node）来运行测试。我们还将探讨如何将本地测试环境与上一篇文章中提到的商业工具集成。
 
@@ -511,97 +511,6 @@ driver.quit();
 ## 运行远程测试
 
 在远端服务器上运行测试并不比在本地执行测试要困难多少，只需要在创建驱动实例的时候多配置几个特征参数，如要测试的浏览器的功能、服务器地址以及访问服务器所需的用户凭据（如果有的话）。
-
-### LambdaTest
-
-让 Selenium 测试在 LambdaTest 上远程运行非常简单。你需要的代码应该遵循下面的模式。
-
-我们来写个示例：
-
-1. 在你的项目目录中，创建一个新文件 `lambdatest_google_test.js`。
-2. 将下列内容复制到文件中：
-
-   ```js
-   const { By, Builder } = require("selenium-webdriver");
-
-   // 用户名：用户名可以在自动化仪表板上找到
-   const USERNAME = "{username}";
-
-   // 访问密钥：访问密钥可以从自动化仪表板或个人资料部分生成
-   const KEY = "{accessKey}";
-
-   // 网格 URL：网格 URL 可以在自动化仪表板上找到
-   const GRID_HOST = "hub.lambdatest.com/wd/hub";
-
-   function searchTextOnGoogle() {
-     // 配置功能
-     const capabilities = {
-       platform: "windows 10",
-       browserName: "chrome",
-       version: "67.0",
-       resolution: "1280x800",
-       network: true,
-       visual: true,
-       console: true,
-       video: true,
-       name: "Test 1", // 测试名称
-       build: "NodeJS build", // 构建名称
-     };
-
-     // URL: https://{username}:{accessToken}@hub.lambdatest.com/wd/hub
-     const gridUrl = `https://${USERNAME}:${KEY}@${GRID_HOST}`;
-
-     // 设置并构建 Selenium 驱动对象
-     const driver = new Builder()
-       .usingServer(gridUrl)
-       .withCapabilities(capabilities)
-       .build();
-
-     // 导航到 URL，搜索文本并获取页面标题
-     driver.get("https://www.google.com/ncr").then(function () {
-       driver
-         .findElement(By.name("q"))
-         .sendKeys("LambdaTest\n")
-         .then(function () {
-           driver.getTitle().then((title) => {
-             setTimeout(() => {
-               if (title === "LambdaTest - Google Search") {
-                 driver.executeScript("lambda-status=passed");
-               } else {
-                 driver.executeScript("lambda-status=failed");
-               }
-               driver.quit();
-             }, 5000);
-           });
-         });
-     });
-   }
-
-   searchTextOnGoogle();
-   ```
-
-3. 访问你的 [LambdaTest 自动测试仪表板](https://www.lambdatest.com/selenium-automation)，通过点击右上方的 **key** 图标来获取你的 LambdaTest 的用户名和访问密钥（见 _Username and Access Keys_）。将代码中的 `{username}` 和 `{accessKey}` 占位符替换为你的实际用户名和访问密钥值（并确保它们不泄露）。
-
-4. 在终端中运行以下命令，以执行测试：
-
-   ```bash
-   node lambdatest_google_test
-   ```
-
-   测试将发送到 LambdaTest，其输出将反馈在 LambdaTest 控制台中。
-   如果你希望从 LambdaTest 平台提取这些结果用于报告，那么你可以通过使用 [LambdaTest restful API](https://www.lambdatest.com/blog/lambdatest-launches-api-for-selenium-automation/) 来实现。
-
-5. 现在，如果访问你的 [LambdaTest 自动测试仪表板](https://accounts.lambdatest.com/dashboard)，你会看到你的测试被列出；从这里你可以看到视频、屏幕截图和其他此类数据。你还会看到 **passed** 或 **failed** 的状态，而不是 **completed**，因为有 `if` 或 `else` 代码块。
-
-   [![LambdaTest 自动测试仪表板](automation-logs-1.jpg)](https://www.lambdatest.com/blog/wp-content/uploads/2019/02/Automation-logs-1.jpg)
-
-   你可以检索网络、命令、异常和 Selenium 日志，用于你测试构建中的每个测试。你还会发现你的 Selenium 脚本执行的视频记录。
-
-> [!NOTE]
-> LambdaTest 自动测试仪表板上的 _HELP_ 按钮将为你提供大量的信息，帮助你开始使用 LambdaTest 自动化。你也可以关注我们关于[在 Node JS 中运行第一个 Selenium 脚本](https://www.lambdatest.com/support/docs/quick-guide-to-run-node-js-tests-on-lambdatest-selenium-grid/)的文档。
-
-> [!NOTE]
-> 如果你不想手写测试的 capability 对象，你可以用 [Selenium Desired Capabilities Generator](https://www.lambdatest.com/capabilities-generator/) 来生成它们。
 
 ### BrowserStack
 

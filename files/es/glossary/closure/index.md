@@ -15,4 +15,4 @@ Una clausura o _closure_ es una función que guarda referencias del estado adyac
 
 ### Referencia técnica
 
-- [Clausuras](/es/docs/Web/JavaScript/Closures) en MDN
+- [Clausuras](/es/docs/Web/JavaScript/Guide/Closures) en MDN

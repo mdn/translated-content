@@ -63,7 +63,7 @@ Anteriormente, usamos o termo "pacotes" para descrever o formato no qual os dado
 
 ## Veja também
 
-- [Como a Internet funciona](/pt-BR/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [Como a Internet funciona](/pt-BR/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — uma Aplicação a Nível de Protocolo](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Vamos Começar!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: Códigos de resposta](https://dev.opera.com/articles/http-response-codes/)

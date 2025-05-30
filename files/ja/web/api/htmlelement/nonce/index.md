@@ -42,6 +42,6 @@ script[nonce~="whatever"] {
 
 ## 関連情報
 
-- [`nonce` グローバル属性](/ja/docs/Web/HTML/Global_attributes/nonce)
+- [`nonce` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/nonce)
 - [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

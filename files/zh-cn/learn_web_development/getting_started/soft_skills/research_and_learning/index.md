@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6dacb9087010826a5a7d5b2d7c428e89d8135cf
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Getting_started/Soft_skills/Collaboration_and_teamwork", "Learn_web_development/Getting_started/Soft_skills")}}
 
 Web 开发者需要掌握很多的知识，同时还需要不断学习。但应该如何才能最有效地找到自己需要的知识呢？本文将为你提供研究和学习方面的实用技巧。

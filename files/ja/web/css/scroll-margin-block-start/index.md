@@ -1,13 +1,15 @@
 ---
 title: scroll-margin-block-start
 slug: Web/CSS/scroll-margin-block-start
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-margin-block-start` プロパティは、スクロールスナップ領域のインライン方向における先頭側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
+`scroll-margin-block-start` プロパティは、スクロールスナップ領域のインライン方向における先頭側のマージンを定義し、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
 
-{{InteractiveExample("CSS Demo: scroll-margin-block-start")}}
+{{InteractiveExample("CSS デモ: scroll-margin-block-start")}}
 
 ```css interactive-example-choice
 scroll-margin-block-start: 0;
@@ -28,7 +30,7 @@ scroll-margin-block-start: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -80,12 +82,13 @@ scroll-margin-block-start: 1em;
 scroll-margin-block-start: inherit;
 scroll-margin-block-start: initial;
 scroll-margin-block-start: revert;
+scroll-margin-block-start: revert-layer;
 scroll-margin-block-start: unset;
 ```
 
 ### 値
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : スクロールコンテナーのブロック方向における先頭側の辺からみた外部の距離です。
 
 ## 公式定義
@@ -107,4 +110,4 @@ scroll-margin-block-start: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

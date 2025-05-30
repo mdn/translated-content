@@ -5,7 +5,6 @@ l10n:
   sourceCommit: 7ff3d643b325985bf4b4b756a15f2fef347e7e8c
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_stores","Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们学习了 Svelte store 的知识，并且实现了自己的自定义 store 来将应用程序的信息持久化到 Web 存储中。我们还学习了如何使用 transition 指令在 Svelte 中为 DOM 元素实现动画效果。

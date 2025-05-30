@@ -55,7 +55,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/yari/tree/main/kumascript/macros/HTMLElement.ejs">HTMLElement</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element">HTML 元素参考</a>（/Web/HTML/Element）</td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements">HTML 元素参考</a>（/Web/HTML/Element）</td>
       <td><code>\{{HTMLElement("select")}}</code> 会生成 {{HTMLElement("select")}}。</td>
     </tr>
     <tr>

@@ -1,17 +1,21 @@
 ---
 title: writing-mode
 slug: Web/SVG/Reference/Attribute/writing-mode
-original_slug: Web/SVG/Attribute/writing-mode
+l10n:
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`writing-mode`** 属性は、 {{SVGElement("text")}} 要素の最初のインライン進行方向が左から右、右から左、上から下のいずれであるかを指定します。 `writing-mode` 属性は {{ SVGElement("text") }} 要素にのみ適用されます。 {{ SVGElement("tspan") }}, {{ SVGElement("tref") }}, {{ SVGElement("altGlyph") }}, {{ SVGElement("textPath") }} サブ要素には無視されます。 (なお、インライン進行方向は、 Unicode 双方向アルゴリズムとプロパティ {{ SVGAttr("direction") }} および {{ SVGAttr("unicode-bidi") }} により、 {{ SVGElement("text") }} 要素内で変更される可能性があることに注意してください)。
+**`writing-mode`** 属性は、 {{SVGElement("text")}} 要素の最初のインライン進行方向が左から右、右から左、上から下のいずれであるかを指定します。 `writing-mode` 属性は {{ SVGElement("text") }} 要素にのみ適用されます。 {{ SVGElement("tspan") }}、{{ SVGElement("tref") }}、{{ SVGElement("textPath") }} サブ要素には無視されます。（なお、インライン進行方向は、 Unicode 双方向アルゴリズムとプロパティ {{ SVGAttr("direction") }} および {{ SVGAttr("unicode-bidi") }} により、 {{ SVGElement("text") }} 要素内で変更される可能性があることに注意してください。）
 
 > [!NOTE]
-> プレゼンテーション属性なので、 `writing-mode` は CSS プロパティとして使用することができます。詳しくは CSS の {{cssxref("writing-mode")}} プロパティを参照してください。
+> プレゼンテーション属性であるため、 `writing-mode` には対応する CSS プロパティ {{cssxref("writing-mode")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
-プレゼンテーション属性として、どの要素にも適用できますが、 {{SVGElement("altGlyph")}}, {{SVGElement("text")}}, {{SVGElement("textPath")}}, {{SVGElement("tref")}}, {{SVGElement("tspan")}} の 5 つの要素にのみ効果があります。
+この属性は次の SVG 要素に使用することができます。
+
+- {{SVGElement("text")}}
+- {{SVGElement("textPath")}}
+- {{SVGElement("tref")}}
+- {{SVGElement("tspan")}}
 
 ## 使用上の注意
 
@@ -29,8 +33,8 @@ original_slug: Web/SVG/Attribute/writing-mode
       </td>
     </tr>
     <tr>
-      <th scope="row">アニメーション可能</th>
-      <td>はい</td>
+      <th scope="row">アニメーション</th>
+      <td>可</td>
     </tr>
   </tbody>
 </table>
@@ -52,4 +56,4 @@ original_slug: Web/SVG/Attribute/writing-mode
 
 ## 関連情報
 
-- {{cssxref("writing-mode", "CSS writing-mode")}}
+- CSS の {{cssxref("writing-mode")}} プロパティ

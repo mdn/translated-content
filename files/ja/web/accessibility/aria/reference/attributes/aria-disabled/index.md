@@ -12,7 +12,7 @@ l10n:
 
 `aria-disabled` 属性は、 `true` に設定されると、その属性が設定されている要素や、フォーカス可能なすべての子孫要素が無効状態であることを意味していることを示します。この宣言は、スクリーンリーダーのような支援技術を使用する人々に、そのような要素は編集やその他の操作ができないことを意味していることを知らせます。
 
-HTML の [`disabled`](/ja/docs/Web/HTML/Element/input#disabled) 論理属性が、フォームコントロールが意味的に無効であることを伝え、その状態を反映するようにスタイルを変更し、要素の値がフォーム送信に参加することを禁止すると同時にすべての機能を抑制するのとは異なり、 `aria-disabled="true"` は、意味的にこれらの要素が無効であることを公開する<strong>だけ</strong>です。ウェブ開発者は、このような要素が無効状態に公開されたとき、確実にその機能を保持しなければなりません。
+HTML の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/input#disabled) 論理属性が、フォームコントロールが意味的に無効であることを伝え、その状態を反映するようにスタイルを変更し、要素の値がフォーム送信に参加することを禁止すると同時にすべての機能を抑制するのとは異なり、 `aria-disabled="true"` は、意味的にこれらの要素が無効であることを公開する<strong>だけ</strong>です。ウェブ開発者は、このような要素が無効状態に公開されたとき、確実にその機能を保持しなければなりません。
 
 ネイティブな HTML フォームコントロールを無効にする必要がある場合、開発者は `disabled` 属性を指定する必要がありますが、これは既定ではコントロールを無効にするために一般的に期待される機能をすべて提供するからです。しかし、要素を無効として公開する必要があるにもかかわらず、 <kbd>Tab</kbd> キーでナビゲートするときにユーザーが見つけられるようにする場合があります。そうすることで、 `aria-disabled` はそのような要素のフォーカス順を変更しないため、ウェブページのフォーカス順から除去されることがなく、また既定ではブラウザースタイル設定によって要素が薄暗くなることもないため、発見しやすくなります。この方法が有益な例をいくつか挙げます：
 
@@ -107,43 +107,43 @@ CSS だけで属性セレクターを使用して無効状態をスタイル設�
 
 - [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 - [`button`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)
-- [`composite`](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [`composite`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role)
 - [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
 - [`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
-- [`input`](/ja/docs/Web/Accessibility/ARIA/Roles/input_role)
+- [`input`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/input_role)
 - [`link`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role)
-- [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-- [`separator`](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role)
+- [`menuitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+- [`separator`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role)
 - [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)
 
 継承先のロール:
 
 - [`checkbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role)
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
 - [`listbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role)
-- [`menu`](/ja/docs/Web/Accessibility/ARIA/Roles/menu_role)
-- [`menubar`](/ja/docs/Web/Accessibility/ARIA/Roles/menubar_role)
-- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role)
-- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [`menu`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role)
+- [`menubar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menubar_role)
+- [`menuitemcheckbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role)
+- [`menuitemradio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 - [`radio`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role)
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
 - [`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
-- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role)
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
-- [`select`](/ja/docs/Web/Accessibility/ARIA/Roles/select_role)
+- [`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
+- [`select`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/select_role)
 - [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role)
 - [`switch`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role)
-- [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role)
+- [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 - [`toolbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/toolbar_role)
-- [`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
-- [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role)
+- [`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
+- [`treeitem`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role)
 
 ## 仕様書
 
@@ -153,11 +153,11 @@ CSS だけで属性セレクターを使用して無効状態をスタイル設�
 
 - [Making disabled buttons more inclusive](https://css-tricks.com/making-disabled-buttons-more-inclusive/) by Sandrina Pereira
 - [Styling for Windows high contrast with new standards for forced colors](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)
-- [disabled](/ja/docs/Web/HTML/Attributes/disabled)
+- [disabled](/ja/docs/Web/HTML/Reference/Attributes/disabled)
 - {{domxref("Element.ariaDisabled")}}
 - {{domxref("ElementInternals.ariaDisabled")}}
 - [`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-- [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+- [`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
 
 <section id="Quick_links">
 <strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>

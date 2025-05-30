@@ -39,7 +39,7 @@ toDataURL(type, encoderOptions)
 
 要求された[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) の入った文字列です。
 
-キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Element/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
+キャンバスの高さまたは幅が `0` または[キャンバスの最大サイズ](/ja/docs/Web/HTML/Reference/Elements/canvas#キャンバスの最大寸法)より大きい場合、 `"data:,"` という文字列が返されます。
 
 ### 例外
 

@@ -52,7 +52,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 - [`minlength`](/ru/docs/Web/HTML/Attributes/minlength) и [`maxlength`](/ru/docs/Web/HTML/Attributes/maxlength): Задаёт минимальную и максимальную длину текстовых данных (строк)
 - [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max): Задаёт минимальное и максимальное значение для поля, расчитанного на числовой тип данных
 - `type`: Определяет тип данных, на который рассчитано поле: число, email-адрес или какой-то другой предустановленный тип
-- [`pattern`](/ru/docs/Web/HTML/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions), определяет шаблон, которому должны соответствовать вводимые данные.
+- [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern): С помощью [регулярного выражения](/ru/docs/Web/JavaScript/Guide/Regular_expressions), определяет шаблон, которому должны соответствовать вводимые данные.
 
 Если данные, введённые в поле формы, соответствуют правилам перечисленных выше атрибутов, они считаются валидными, если нет — не валидными
 
@@ -145,7 +145,7 @@ input:valid {
 
 ### Валидация с помощью регулярного выражения
 
-Ещё одной полезной функцией валидации является атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern), который в виде значения принимает [Регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions). Регулярное выражение (regex) — это шаблон, который может быть использован для сопоставления набора символов в текстовой строке, поэтому они идеально подходят для валидации формы и используются для множества других целей в JavaScript.
+Ещё одной полезной функцией валидации является атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern), который в виде значения принимает [Регулярное выражение](/ru/docs/Web/JavaScript/Guide/Regular_expressions). Регулярное выражение (regex) — это шаблон, который может быть использован для сопоставления набора символов в текстовой строке, поэтому они идеально подходят для валидации формы и используются для множества других целей в JavaScript.
 
 Регулярные выражения достаточно сложны, и мы не будем подробно рассматривать эту тему в данной статье. Ниже приведены несколько примеров, чтобы дать вам представление о том, как они работают.
 
@@ -158,7 +158,7 @@ input:valid {
 
 Есть еще много возможностей, которые мы не упомянули. Полный список со множеством примеров можно найти в документации по [Регулярным выражениям](/ru/docs/Web/JavaScript/Guide/Regular_expressions)
 
-Давайте рассмотрим пример. Добавьте в атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) следующий шаблон:
+Давайте рассмотрим пример. Добавьте в атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern) следующий шаблон:
 
 ```html
 <form>
@@ -187,15 +187,15 @@ input:valid {
 
 В этом примере элемент {{HTMLElement("input")}} принимает одно из четырёх возможных значений: строку "banana", "Banana", "cherry", или "Cherry". Регулярные выражения чувствительны к регистру, но с помощью шаблона "Aa", вложенного в квадратные скобки, мы сделали поддержку написания слова как с большой, так и с маленькой буквы.
 
-Подставьте в атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern) приведённые выше примеры регулярных выражений, и посмотрите, как это повлияет на валидацию введённого в поле значения. Попробуйте написать свои шаблоны проверки и посмотрите, что получится. По возможности, делайте их связанными с фруктами, чтобы примеры имели смысл.
+Подставьте в атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern) приведённые выше примеры регулярных выражений, и посмотрите, как это повлияет на валидацию введённого в поле значения. Попробуйте написать свои шаблоны проверки и посмотрите, что получится. По возможности, делайте их связанными с фруктами, чтобы примеры имели смысл.
 
 Если не пустое значение элемента {{HTMLElement("input")}} не соответствует шаблону регулярного выражения, `input` будет соответствовать псевдоклассу {{cssxref(':invalid')}}.
 
 > [!NOTE]
-> Некоторым типам элементов {{HTMLElement("input")}} для валидации с помощью регулярного выражения не требуется атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern). Например, поле с типом `email` валидирует значение по шаблону одного email-адреса или, если присутствует атрибут [`multiple`](/ru/docs/Web/HTML/Attributes/multiple), шаблону списка email-адресов, разделённых запятыми.
+> Некоторым типам элементов {{HTMLElement("input")}} для валидации с помощью регулярного выражения не требуется атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern). Например, поле с типом `email` валидирует значение по шаблону одного email-адреса или, если присутствует атрибут [`multiple`](/ru/docs/Web/HTML/Attributes/multiple), шаблону списка email-адресов, разделённых запятыми.
 
 > [!NOTE]
-> Элемент {{HTMLElement("textarea")}} не поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Attributes/pattern).
+> Элемент {{HTMLElement("textarea")}} не поддерживает атрибут [`pattern`](/ru/docs/Web/HTML/Reference/Attributes/pattern).
 
 ### Ограничение длины вводимых значений
 
@@ -205,7 +205,7 @@ input:valid {
 
 ### Ограничение допустимых значений
 
-В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Element/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
+В полях, предназначенных для ввода чисел (например, [`<input type="number">`](/ru/docs/Web/HTML/Reference/Elements/input/number)), диапазон допустимых значений можно определить с помощью атрибутов [`min`](/ru/docs/Web/HTML/Attributes/min) и [`max`](/ru/docs/Web/HTML/Attributes/max). Если поле содержит значение за пределами данного диапазона, оно будет не валидным.
 
 Давайте рассмотрим другой пример. Создайте новую копию файла [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -347,7 +347,7 @@ input:focus:invalid {
 
 {{EmbedLiveSample("Full_example", "100%", 420)}}
 
-В статье [Атрибуты валидации](/ru/docs/Web/HTML/Constraint_validation#validation-related_attributes) можно найти полный список атрибутов, которые можно использовать для ограничения допустимых значений ввода и типов полей `input`, которые их поддерживают.
+В статье [Атрибуты валидации](/ru/docs/Web/HTML/Guides/Constraint_validation#validation-related_attributes) можно найти полный список атрибутов, которые можно использовать для ограничения допустимых значений ввода и типов полей `input`, которые их поддерживают.
 
 > [!NOTE]
 > Рабочий пример можно найти на GitHub по адресу [full-example.html](https://mdn.github.io/learning-area/html/forms/form-validation/full-example.html) ([исходный код](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/full-example.html).)
@@ -360,11 +360,11 @@ input:focus:invalid {
 
 Большинство браузеров поддерживают [Constraint Validation API](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation), который состоит из набора свойств и методов, доступных на DOM-интерфейсах следующих элементов форм:
 
-- [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement) (представляет элемент [`<button>`](/ru/docs/Web/HTML/Element/button))
-- [`HTMLFieldSetElement`](/ru/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Element/fieldset))
-- [`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement) (представляет элемент [`<input>`](/ru/docs/Web/HTML/Element/input))
-- [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Element/output))
-- [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) (представляет элемент [`<select>`](/ru/docs/Web/HTML/Element/select))
+- [`HTMLButtonElement`](/ru/docs/Web/API/HTMLButtonElement) (представляет элемент [`<button>`](/ru/docs/Web/HTML/Reference/Elements/button))
+- [`HTMLFieldSetElement`](/ru/docs/Web/API/HTMLFieldSetElement) (представляет элемент [`<fieldset>`](/ru/docs/Web/HTML/Reference/Elements/fieldset))
+- [`HTMLInputElement`](/ru/docs/Web/API/HTMLInputElement) (представляет элемент [`<input>`](/ru/docs/Web/HTML/Reference/Elements/input))
+- [`HTMLOutputElement`](/ru/docs/Web/API/HTMLOutputElement) (представляет элемент [`<output>`](/ru/docs/Web/HTML/Reference/Elements/output))
+- [`HTMLSelectElement`](/ru/docs/Web/API/HTMLSelectElement) (представляет элемент [`<select>`](/ru/docs/Web/HTML/Reference/Elements/select))
 - [`HTMLTextAreaElement`](/ru/docs/Web/API/HTMLTextAreaElement) (представляет элемент [`<textarea>`](/ru/docs/Web/HTML/Element/textarea))
 
 Для перечисленных выше элементов Constraint Validation API делает доступными следующие свойства.
@@ -372,14 +372,14 @@ input:focus:invalid {
 - `validationMessage`: Возвращает локализованное сообщение, описывающее ограничения валидации (если таковые имеются), которым не удовлетворяет определённый элемент. Если элемент не участвует в валидации (`willValidate` установлено в `false`) или значение элемента удовлетворяет установленным ограничениям (является валидным), будет возвращена пустая строка.
 - `validity`: Возвращает объект `ValidityState`, который содержит несколько свойств, описывающих состояние валидности элемента. Подробное описание всех свойств доступности можно найти на странице справочника {{domxref("ValidityState")}}; ниже приведён список наиболее используемых:
 
-  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Возвращает `true`, если значение не соответствует шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Element/input#pattern), и `false` если соответствует. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
-  - {{domxref("ValidityState.tooLong", "tooLong")}}: Возвращает `true`, если значение длиннее максимальной длины, указанной в атрибуте [`maxlength`](/ru/docs/Web/HTML/Element/input#maxlength), и `false` если оно короче или равно ей. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
-  - {{domxref("ValidityState.tooShort", "tooShort")}}: Возвращает `true`, если значение короче минимальной длины, указанной в атрибуте [`minlength`](/ru/docs/Web/HTML/Element/input#minlength), и `false` если оно длинее или равно ей. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
-  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Возвращает `true`, если значение больше указанного в атрибуте [`max`](/ru/docs/Web/HTML/Element/input#max) максимума, и `false` если меньше или равно ему. Если true, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}
-  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Возвращает `true`, если значение меньше указанного в атрибуте [`min`](/ru/docs/Web/HTML/Element/input#min), и `false` если больше или равно ему. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.
-  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Возвращает `true`, если значение не соответствует требуемому синтаксису (когда для [`type`](/ru/docs/Web/HTML/Element/input#type) задано значение `email` или `url`), и `false` если синтаксис корректный. Если `true`, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
+  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Возвращает `true`, если значение не соответствует шаблону, указанному в атрибуте [`pattern`](/ru/docs/Web/HTML/Reference/Elements/input#pattern), и `false` если соответствует. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
+  - {{domxref("ValidityState.tooLong", "tooLong")}}: Возвращает `true`, если значение длиннее максимальной длины, указанной в атрибуте [`maxlength`](/ru/docs/Web/HTML/Reference/Elements/input#maxlength), и `false` если оно короче или равно ей. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
+  - {{domxref("ValidityState.tooShort", "tooShort")}}: Возвращает `true`, если значение короче минимальной длины, указанной в атрибуте [`minlength`](/ru/docs/Web/HTML/Reference/Elements/input#minlength), и `false` если оно длинее или равно ей. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
+  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Возвращает `true`, если значение больше указанного в атрибуте [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max) максимума, и `false` если меньше или равно ему. Если true, элемент соответствует CSS-псевдоклассам {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}
+  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Возвращает `true`, если значение меньше указанного в атрибуте [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min), и `false` если больше или равно ему. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}} и {{cssxref(":out-of-range")}}.
+  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Возвращает `true`, если значение не соответствует требуемому синтаксису (когда для [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) задано значение `email` или `url`), и `false` если синтаксис корректный. Если `true`, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
   - `valid`: Возвращает `true`, если элемент соответствует всем ограничениям валидации — следовательно, считается валидным, и `false` если не соответствует какому-то ограничению. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":valid")}}; иначе {{cssxref(":invalid")}}.
-  - `valueMissing`: Возвращает `true`, если у элемента есть атрибут [`required`](/ru/docs/Web/HTML/Element/input#required), но не введено значенение, иначе возвращает `false`. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
+  - `valueMissing`: Возвращает `true`, если у элемента есть атрибут [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required), но не введено значенение, иначе возвращает `false`. Если true, элемент соответствует CSS-псевдоклассу {{cssxref(":invalid")}}.
 
 - `willValidate`: Возвращает `true`, если элемент будет участвовать в валидации при отправке формы; иначе возвращает `false`.
 
@@ -595,7 +595,7 @@ function showError() {
 Constraint Validation API явяется мощным инструментом валидации форм, позволяющим получить контроль над пользовательским интерфейсом, существенно превосходящий возможности HTML и CSS.
 
 > [!NOTE]
-> Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/HTML/Constraint_validation) и [Constraint Validation API](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation).
+> Для получения дополнительной информации смотрите руководства [Constraint validation guide](/ru/docs/Web/HTML/Guides/Constraint_validation) и [Constraint Validation API](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 ### Проверка форм без встроенного API
 

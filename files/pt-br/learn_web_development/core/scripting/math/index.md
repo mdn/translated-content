@@ -50,7 +50,7 @@ A segunda boa notícia é que, diferentemente de outras linguagens de programaç
 
 ### Tudo é número para mim
 
-Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+Vamos brincar rapidamente com alguns números para nos familiarizarmos com a sintaxe básica que precisamos. Insira os comandos listados abaixo em seu [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 **[Abra em uma nova janela](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/)**
 
@@ -88,7 +88,7 @@ São os operadores que utilizamos para fazer as operações aritiméticas básic
 > [!NOTE]
 > Você verá algumas vezes números envolvidos em aritimética chamados de {{Glossary("Operando", "operandos")}}.
 
-Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
+Nós provavelmente não precisamos ensinar a você como fazer matemática básica, mas gostaríamos de testar seu entendimento da sintaxe envolvida. Tente inserir os exemplos abaixo no seu [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), ou use o console incorporado visto anteriormente, se preferir, para familiarizar-se com a sintaxe.
 
 1. Primeiro tente inserir alguns exemplos simples por sua conta, como
 
@@ -144,7 +144,7 @@ Tente fazer e veja como fica.
 
 ## Operadores de incremento e decremento
 
-Às vezes você desejará adicionar ou subtrair, repetidamente, um valor de uma variável numérica. Convenientemente isto pode ser feito usando os operadores incremento `++` e decremento `--`. Usamos `++` em nosso jogo "Adivinhe o número" no primeiro artigo [Um primeiro mergulho no JavaScript](/pt-BR/docs/Learn/JavaScript/First_steps/A_first_splash), quando adicionamos 1 ao nosso `contagemPalpites` para saber quantas adivinhações o usuário deixou após cada turno.
+Às vezes você desejará adicionar ou subtrair, repetidamente, um valor de uma variável numérica. Convenientemente isto pode ser feito usando os operadores incremento `++` e decremento `--`. Usamos `++` em nosso jogo "Adivinhe o número" no primeiro artigo [Um primeiro mergulho no JavaScript](/pt-BR/docs/Learn_web_development/Core/Scripting/A_first_splash), quando adicionamos 1 ao nosso `contagemPalpites` para saber quantas adivinhações o usuário deixou após cada turno.
 
 ```js
 contagemPalpites++;
@@ -297,6 +297,6 @@ Neste artigo, cobrimos as informações fundamentais que você precisa saber sob
 No próximo artigo, vamos explorar o texto e como o JavaScript nos permite manipulá-lo.
 
 > [!NOTE]
-> Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_dates) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) .
+> Se você gosta de matemática e quer saber mais sobre como ela é implementada em JavaScriot, você pode encontrar muito mais detalhes na seção principal de JavaScript do MDN. Ótimos lugares para começar são os artigos [Números e datas](/pt-BR/docs/Web/JavaScript/Guide/Numbers_and_strings) e [Expressões e operadores](/pt-BR/docs/Web/JavaScript/Guide/Expressions_and_operators) .
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

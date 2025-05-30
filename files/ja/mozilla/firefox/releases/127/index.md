@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 

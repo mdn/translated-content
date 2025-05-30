@@ -49,7 +49,7 @@ l10n:
 
 ## HTML への追加
 
-- [`<link rel="expect">`](/ja/docs/Web/HTML/Attributes/rel#expect)
+- [`<link rel="expect">`](/ja/docs/Web/HTML/Reference/Attributes/rel#expect)
   - : ユーザーがページを最初に表示した際に、関連文書内の最も重要なコンテンツを識別します。 重要なコンテンツが解釈されるまで文書のレンダリングがブロックされ、すべての対応ブラウザーで一貫したファーストペイント（最初の描画）が保証され、その結果、ビューの遷移が保証されます。
 
 ## CSS の追加

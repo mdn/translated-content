@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`checkValidity()`** は {{domxref("HTMLTextAreaElement")}} インターフェイスのメソッドで、その要素が適用された[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。false の場合は、メソッドは要素上で {{domxref("HTMLElement/invalid_event", "invalid")}} イベントも発行します。`checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
+**`checkValidity()`** は {{domxref("HTMLTextAreaElement")}} インターフェイスのメソッドで、その要素が適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールを満たしているかどうかを示す論理値を返します。false の場合は、メソッドは要素上で {{domxref("HTMLElement/invalid_event", "invalid")}} イベントも発行します。`checkValidity()` には既定でブラウザーの動作が設定されていないため、この `invalid` イベントをキャンセルしても効果はありません。
 
 > [!NOTE]
 > HTML の {{htmlelement("textarea")}} 要素で、{{domxref("HTMLTextAreaElement.validationMessage", "validationMessage")}} が null 以外の値を持つものは不正なものと見なされ、CSS の {{cssxref(":invalid")}} 擬似クラスに一致し、`checkValidity()` が false を返すようになります。 {{domxref("HTMLTextAreaElement.setCustomValidity()")}} メソッドを使用して、{{domxref("HTMLTextAreaElement.validationMessage")}} を空文字列に設定すると、{{domxref("HTMLTextAreaElement.validity", "validity")}} 状態が妥当となります。
@@ -50,5 +50,5 @@ console.log(element.checkValidity());
 - {{HTMLElement("textarea")}}
 - {{HTMLElement("form")}}
 - [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS の {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

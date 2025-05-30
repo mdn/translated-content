@@ -1,12 +1,9 @@
 ---
 title: baseline-shift
 slug: Web/SVG/Reference/Attribute/baseline-shift
-original_slug: Web/SVG/Attribute/baseline-shift
 l10n:
-  sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`baseline-shift`** 属性は、親テキストコンテンツ要素の主要ベースラインから相対的に主要ベースラインを再配置することができます。 移動先は、下付きまたは上付き文字である可能性があります。
 

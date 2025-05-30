@@ -7,7 +7,7 @@ slug: Web/CSS/border-left
 
 ## Resumo
 
-A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
+A **`border-left`** é uma [propriedade shorthand](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) em [CSS](/pt-BR/docs/Web/CSS) que define todas as propriedades da {{cssxref("border")}} esquerda de um elemento.
 
 {{InteractiveExample("CSS Demo: border-left")}}
 

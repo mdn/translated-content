@@ -1,12 +1,9 @@
 ---
 title: pathLength
 slug: Web/SVG/Reference/Attribute/pathLength
-original_slug: Web/SVG/Attribute/pathLength
 l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`pathLength`** 属性により、ユーザー単位でパスの全長を指定することができます。 この値は、距離の計算すべてを `pathLength` / (パスの長さの計算値) の比率で変倍することで、ブラウザーの距離計算と作成者の距離計算を調整するために使用されています。
 
@@ -78,7 +75,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -103,7 +100,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -128,7 +125,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -153,7 +150,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -178,7 +175,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -203,7 +200,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -228,7 +225,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

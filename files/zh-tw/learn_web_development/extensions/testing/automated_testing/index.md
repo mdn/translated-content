@@ -3,7 +3,7 @@ title: 自動化測試介紹
 slug: Learn_web_development/Extensions/Testing/Automated_testing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 每天在好幾個瀏覽器與設備上，運行手動測試數次，既乏味又浪費時間。要有效率的處理這種事，就要開始熟悉自動化工具。我們會在這篇文章看看有哪些可用的工具、如何使用它們、以及如何使用如 Sauce Labs 與 Browser Stack 的商業化瀏覽器測試程式之基本講述。
 

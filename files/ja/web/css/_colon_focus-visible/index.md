@@ -69,7 +69,7 @@ select:focus-visible {
 
 ### :focus と :focus-visible の比較
 
-この例では 3 組のコントロールを表示しています。それぞれのペアは [`text`](/ja/docs/Web/HTML/Element/input/text) 入力とボタンで構成されています。
+この例では 3 組のコントロールを表示しています。それぞれのペアは [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力とボタンで構成されています。
 
 - 最初のペアは、フォーカス状態のカスタムスタイルを追加せず、 既定の場合を示しています。
 - 2 つ目のペアは `:focus` 擬似クラスを使用してスタイルを追加します。

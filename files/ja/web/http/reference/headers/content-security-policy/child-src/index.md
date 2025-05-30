@@ -1,14 +1,13 @@
 ---
 title: "CSP: child-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/child-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/child-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`child-src`** ディレクティブは、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} などの要素を使用して読み込んだネストした閲覧コンテキストに対して有効なソースを定義しています。ワーカーでは、準拠しないリクエストは、ユーザーエージェントによって致命的なネットワークエラーとして扱われます。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`child-src`** ディレクティブは、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} などの要素を使用して読み込んだ、埋め込まれた閲覧コンテキストに対して有効なソースを定義しています。ワーカーでは、準拠しないリクエストは、ユーザーエージェントによって致命的なネットワークエラーとして扱われます。
 
 <table class="properties">
   <tbody>
@@ -31,18 +30,22 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`child-s
 
 ## 構文
 
-`child-src` ポリシーでは、1 つまたは複数のソースを許可することができます。
-
 ```http
-Content-Security-Policy: child-src <source>;
-Content-Security-Policy: child-src <source> <source>;
+Content-Security-Policy: child-src 'none';
+Content-Security-Policy: child-src <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 

@@ -3,8 +3,6 @@ title: Properly Configuring Server MIME Types
 slug: Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 ---
 
-{{LearnSidebar}}
-
 ## Background
 
 默认情况下，许多 web 服务器会为那些未知内容类型的文件配置一个默认 MIME 类型`text/plain` 或者`application/octet-stream` 。当一种新的内容类型被创造或者被添加到 web 服务器上，web 管理者在添加它到 web 服务器配置中可能会失败。主要原因是用户使用 Gecko-based 的浏览器，而这种浏览器只相信由 web 服务器和 web 应用所发布的 MIME 类型

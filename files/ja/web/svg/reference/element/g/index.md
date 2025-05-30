@@ -1,12 +1,9 @@
 ---
 title: <g>
 slug: Web/SVG/Reference/Element/g
-original_slug: Web/SVG/Element/g
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`<g>`** は [SVG](/ja/docs/Web/SVG) の要素で、他の SVG 要素をグループ化するために用いられるコンテナーです。
 

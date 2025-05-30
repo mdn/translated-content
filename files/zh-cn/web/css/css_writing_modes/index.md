@@ -1,24 +1,33 @@
 ---
-title: CSS Writing Modes CSS 写入模式
+title: CSS 书写模式
 slug: Web/CSS/CSS_writing_modes
+l10n:
+  sourceCommit: d68cfd06575158736a37dcacc970cf909d009469
 ---
 
 {{CSSRef}}
 
-**CSS Writing Modes** is a CSS module that defines various international writing modes, such as left-to-right (e.g. used by Latin and Indic scripts), right-to-left (e.g. used by Hebrew or Arabic scripts), bidirectional (used when mixing left-to-right and right-to-left scripts) and vertical (e.g. used by some Asian scripts).
-CSS 书写模式是一个 CSS 模块，它定义了各种国际书写模式，例如从左到右（例如拉丁和印度语脚本使用）、从右到左（例如希伯来语或阿拉伯语脚本使用）、双向（当混合从左到右和从右到左的脚本时使用）和垂直（例如使用 B 你的一些亚洲剧本）。
+**CSS 书写模式**（Writing Modes）模块定义了多种国际化书写模式，包括：从左到右（如拉丁字母和印度文字）、从右到左（如希伯来语或阿拉伯语）、双向混合（用于混合左右书写方向的文字）以及垂直方向（例如部分亚洲文字）的排版方式。
 
-## Reference 参考
+## 参考
 
-### Properties
+### 属性
 
 - {{cssxref("direction")}}
-- {{cssxref("glyph-orientation-horizontal")}}
 - {{cssxref("text-combine-upright")}}
 - {{cssxref("text-orientation")}}
 - {{cssxref("unicode-bidi")}}
 - {{cssxref("writing-mode")}}
 
+## 指南
+
+- [创建垂直排列的表单控件](/zh-CN/docs/Web/CSS/CSS_writing_modes/Vertical_controls)
+  - : 本文阐述如何运用 CSS 的 {{cssxref("writing-mode")}} 和 {{cssxref("direction")}} 属性来创建并配置垂直排列的表单控件。
+
 ## 规范
 
 {{Specifications}}
+
+## 参见
+
+- [处理不同方向的文本](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

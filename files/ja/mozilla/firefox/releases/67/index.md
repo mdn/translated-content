@@ -71,7 +71,7 @@ _変更なし。_
 
 - {{jsxref("String.prototype.matchAll")}} を実装して、デフォルトで有効にしました ([Firefox バグ 1435829](https://bugzil.la/1435829)、[Firefox バグ 1531830](https://bugzil.la/1531830))。
 - 動的なモジュールの {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} の提案のサポートを、デフォルトで有効にしました ([Firefox バグ 1517546](https://bugzil.la/1517546))。
-- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
+- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ハッシュバンコメント) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
 
 ### API
 

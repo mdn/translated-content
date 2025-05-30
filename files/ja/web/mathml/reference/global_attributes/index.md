@@ -19,9 +19,9 @@ l10n:
 
 ## グローバル属性の一覧
 
-- [`class`](/ja/docs/Web/HTML/Global_attributes/class)
+- [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class)
   - : 要素のクラスの空白区切りのリスト。クラスによって、CSS や JavaScript は[クラスセレクター](/ja/docs/Web/CSS/Class_selectors)や、 {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を通して、特定の要素を選択してアクセスすることができます。
-- [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*)
+- [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : [MathML](/ja/docs/Web/MathML) と {{glossary("DOM")}} 表現との間でスクリプトが使用する独自の情報を交換することができるようにする、カスタムデータ属性と呼ばれる属性のクラスを形成します。このようなカスタムデータはすべて、属性が設定されている要素の {{DOMxRef("MathMLElement")}} インターフェイスを通して利用できます。 {{DOMxRef("HTMLElement.dataset")}}プロパティは、それらにアクセスします。
 - [`dir`](/ja/docs/Web/MathML/Global_attributes/dir)
 
@@ -36,7 +36,7 @@ l10n:
     - `true`: `normal` を意味します。
     - `false`: `compact` を意味します。
 
-- [`id`](/ja/docs/Web/HTML/Global_attributes/id)
+- [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id)
 
   - : 文書内で固有の識別子 (ID) を定義します。その目的は、（フラグメント識別子を使用して）リンクしたり、スクリプトを実行したり、（CSS を使用して）スタイル設定したりするときに要素を識別することです。
 
@@ -52,7 +52,7 @@ l10n:
 
   - : 要素の [font-size](/ja/docs/Web/CSS/font-size) として使用される [`<length-percentage>`](/ja/docs/Web/CSS/length-percentage) です。
 
-- [`nonce`](/ja/docs/Web/HTML/Global_attributes/nonce)
+- [`nonce`](/ja/docs/Web/HTML/Reference/Global_attributes/nonce)
 
   - : [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)が指定されたフェッチを許可するかどうかを決定するために使用できる暗号化ノンス（「一度だけ使用する番号」）です。
 
@@ -60,9 +60,9 @@ l10n:
 
   - : 要素の [math-depth](/ja/docs/Web/CSS/math-depth) を指定します。受け入れられる値と地図は [scriptlevel ページ](/ja/docs/Web/MathML/Global_attributes/scriptlevel#values)を参照してください。
 
-- [`style`](/ja/docs/Web/HTML/Global_attributes/style)
+- [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)
   - : 要素に適用する[CSS](/ja/docs/Web/CSS)スタイル設定を格納します。スタイルは別個のファイルで定義することを推奨します。この属性と {{MathMLElement("style")}} 要素の主な目的は、例えばテストのため、すばやくスタイル設定ができるようにすることです。
-- [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex)
+- [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)
 
   - : 要素が入力フォーカスを受け取ることができるかどうか（_focusable_ であるかどうか）、順次キーボードナビゲーションに参加するかどうか、参加する場合はどの位置かを示す整数属性です。いくつかの値を取ることができます。
 

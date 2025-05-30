@@ -133,7 +133,7 @@ myConcat(". ", "sage", "basil", "oregano", "pepper", "parsley");
 
 ### HTML のリストを作る関数の定義
 
-この例では、リストのための HTML を含む文字列を作る関数を定義します。この関数の唯一の公式な引数は文字列で、 "`u`" を指定すると[順序なし（中黒付き）](/ja/docs/Web/HTML/Element/ul)リスト、 "`o`" を指定すると[順序付き（番号付き）](/ja/docs/Web/HTML/Element/ol)リストになります。関数は次のように定義します。
+この例では、リストのための HTML を含む文字列を作る関数を定義します。この関数の唯一の公式な引数は文字列で、 "`u`" を指定すると[順序なし（中黒付き）](/ja/docs/Web/HTML/Reference/Elements/ul)リスト、 "`o`" を指定すると[順序付き（番号付き）](/ja/docs/Web/HTML/Reference/Elements/ol)リストになります。関数は次のように定義します。
 
 ```js
 function list(type) {

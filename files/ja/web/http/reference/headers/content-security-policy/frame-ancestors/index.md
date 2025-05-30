@@ -1,14 +1,13 @@
 ---
 title: "CSP: frame-ancestors"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors
-original_slug: Web/HTTP/Headers/Content-Security-Policy/frame-ancestors
 l10n:
-  sourceCommit: 4e1857843b85afa11ce4889fc8029f73e54546ad
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 、{{HTMLElement("embed")}}、{{HTMLElement("applet")}} などを使ってページを埋め込むことのできる親を指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ancestors`** ディレクティブは {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 、{{HTMLElement("embed")}} などを使ってページを埋め込むことのできる親を指定します。
 
 このディレクティブを `'none'` にすることは、 {{HTTPHeader("X-Frame-Options")}}`: deny`（これは古いブラウザーも同様に対応しています）を設定するのに似ています。
 
@@ -39,44 +38,24 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) である **`frame-ance
 
 ## 構文
 
-`frame-ancestors` ポリシーをこのように一つ以上セットできます。
-
 ```http
-Content-Security-Policy: frame-ancestors <source>;
-Content-Security-Policy: frame-ancestors <space separated list of sources>;
+Content-Security-Policy: frame-ancestors 'none';
+Content-Security-Policy: frame-ancestors <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-\<source> は以下のうちのいずれかです。
-
-> **メモ:** `frame-ancestors` ディレクティブの構文は他のソースリスト ({{CSP("default-src")}} など) のものと同様ですが、 `'unsafe-eval'` や `'unsafe-inline'` などは許可されていません。また、これは `default-src` の設定にフォールバックすることもありません。下記に示されたソースのみが許可されます。
-
-- \<host-source>
-
-  - : ホスト名または IP アドレスによるインターネットホストで、任意で {{Glossary("URL")}} スキームやポート番号を付けることができ、空白で区切ります。サイトのアドレスはワイルドカード (アスタリスク文字、`'*'`) で始めることができ、更にポート番号にワイルドカード (`'*'`) を使ってすべての有効なポート番号をソースとして示すことができます。
-    例:
-
-    - `http://*.example.com`: `http:` のスキームを使用した、 example.com のすべてのサブドメインからのすべての読み込みの試行に一致します。
-    - `mail.example.com:443`: mail.example.com の 443 番ポートへのアクセスの試行に一致します。
-    - `https://store.example.com`: `https:` を使用した store.example.com へのアクセスの試行に一致します。
-
-    > **警告:** `host-source` にURLスキームが指定されておらず、 iframe が `https` URLから読み込まれている場合、 iframe を読み込んでいるページの URL も `https` でなければなりません。 CSP 仕様書の [オリジンでの URL 表現とリダイレクトカウントが一致するか？](https://w3c.github.io/webappsec-csp/#match-url-to-source-expression) によるものです。
-
-- \<scheme-source>
-
-  - : `http:` または `https:` のようなスキームです。コロンは必要です。単一引用符は使用しないでください。 data スキームも指定することができます (非推奨)。
-
-    - `data:` コンテンツのソースとして [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) が使えるようにします。
-      _これは安全ではありません。攻撃者は任意の data: URI を挿入することもできます。使用は控え、スクリプトには絶対に使用しないでください。_
-    - `mediastream:` コンテンツのソースとして [`mediastream:` URI](/ja/docs/Web/API/Media_Capture_and_Streams_API) が使えるようにします。
-    - `blob:` コンテンツのソースとして [`blob:` URI](/ja/docs/Web/API/Blob) が使えるようにします。
-    - `filesystem:` コンテンツのソースとして [`filesystem:` URI](/ja/docs/Web/API/FileSystem) が使えるようにします。
-
-- `'self'`
-  - : 保護された文書が提供されたオリジンを、同じ URL スキームおよびポート番号で参照します。単一引用符が必要です。ブラウザーによっては source ディレクティブから `blob` および `filesystem` を独自に除外していることがあります。これらのコンテンツ種別を許可する必要があるサイトは、Data 属性を使用して指定することができます。
 - `'none'`
-  - : 空のセットを参照します。つまり、一致する URL はありません。単一引用符が必要です。
+  - : この種類のリソースは埋め込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、埋め込み元が指定されたソース表現のいずれかと一致した場合に埋め込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
+
+> **メモ:** `frame-ancestors` ディレクティブの構文は他のソースリスト（{{CSP("child-src")}} など）の構文と似ていますが、 `default-src` の設定に代替されることはありません。ポリシーで `default-src 'none'` と宣言しても、それでも誰でもリソースを埋め込むことができます。
 
 ## 例
 

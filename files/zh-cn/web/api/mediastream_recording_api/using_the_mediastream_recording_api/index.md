@@ -52,7 +52,7 @@ header {
 
 ### 用于显示/隐藏的复选框
 
-虽然目前已经做的不错了，但是我们认为我们会提到一个复选框 hack 做法，它滥用了一个事实，你可以点击复选框的[label 标签](/zh-CN/docs/Web/HTML/Element/label)来切换选中/未选中。在 web 录音机中，通过点击屏幕右上角的问号图标来显示/隐藏信息屏幕。首先，在得到[\<label>标签](/zh-CN/docs/Web/HTML/Element/label)之前我们得先设计它的样式，通过设置足够的 Z-index 堆叠次序来确保它总是坐落于其他元素之上，所以它应该是可点击的：
+虽然目前已经做的不错了，但是我们认为我们会提到一个复选框 hack 做法，它滥用了一个事实，你可以点击复选框的[label 标签](/zh-CN/docs/Web/HTML/Reference/Elements/label)来切换选中/未选中。在 web 录音机中，通过点击屏幕右上角的问号图标来显示/隐藏信息屏幕。首先，在得到[\<label>标签](/zh-CN/docs/Web/HTML/Reference/Elements/label)之前我们得先设计它的样式，通过设置足够的 Z-index 堆叠次序来确保它总是坐落于其他元素之上，所以它应该是可点击的：
 
 ```css
 label {
@@ -75,7 +75,7 @@ input[type="checkbox"] {
 }
 ```
 
-接下来，我们将设计信息显示区域（包括在[\<aside>元素](/zh-CN/docs/Web/HTML/Element/aside)中），给它固定的位置，使它不出现在布局流程中去影响主要的 UI 三个户，将它转换为默认的位置，并使它平滑显示/隐藏：
+接下来，我们将设计信息显示区域（包括在[\<aside>元素](/zh-CN/docs/Web/HTML/Reference/Elements/aside)中），给它固定的位置，使它不出现在布局流程中去影响主要的 UI 三个户，将它转换为默认的位置，并使它平滑显示/隐藏：
 
 ```css
 aside {
@@ -106,9 +106,9 @@ input[type="checkbox"]:checked ~ aside {
 
 ## 应用基础设置
 
-我们使用 getUserMedia() 来捕获我们想要的媒体流。我们使用 MediaRecorder API 来记录信息流，并将每个记录的片段输出到生成的[\<audio>元素](/zh-CN/docs/Web/HTML/Element/audio)的源中，以便可以回放。
+我们使用 getUserMedia() 来捕获我们想要的媒体流。我们使用 MediaRecorder API 来记录信息流，并将每个记录的片段输出到生成的[\<audio>元素](/zh-CN/docs/Web/HTML/Reference/Elements/audio)的源中，以便可以回放。
 
-我们将声明记录和停止按钮变量，[\<article>元素](/zh-CN/docs/Web/HTML/Element/article)将包含生成的音频播放器：
+我们将声明记录和停止按钮变量，[\<article>元素](/zh-CN/docs/Web/HTML/Reference/Elements/article)将包含生成的音频播放器：
 
 ```js
 var record = document.querySelector(".record");
@@ -249,7 +249,7 @@ mediaRecorder.onstop = function (e) {
 </article>
 ```
 
-之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的[`src`](/zh-CN/docs/Web/HTML/Element/audio#src)属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
+之后，我们从录制的音频块中创建组合{{domxref("Blob")}}，并使用 window\.URL.createObjectURL(blob) 创建指向它的对象 URL。然后我们将 {{HTMLElement("audio")}}元素的[`src`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#src)属性的值设置为对象 URL，以便在音频播放器上按下播放按钮时，它会播放音频。
 
 最后，我们监听删除按钮的 onclick 事件，以便能够删除整个剪辑 HTML 结构。
 

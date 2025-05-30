@@ -47,8 +47,6 @@ background-repeat: space repeat;
 }
 ```
 
-Исходный код этого интерактивного примера хранится в репозитории GitHub. Если вы хотите внести свой вклад в проект интерактивных примеров, пожалуйста, клонируйте <https://github.com/mdn/interactive-examples> и отправьте нам запрос на извлечение.
-
 По умолчанию, изображения обрезаются по размеру элемента, но их можно масштабировать (используя `round`) или равномерно растянуть от конца к концу (используя `space`).
 
 ## Синтаксис
@@ -154,7 +152,8 @@ div {
 
 /* Несколько изображений */
 .five {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

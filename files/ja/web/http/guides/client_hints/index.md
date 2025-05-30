@@ -30,7 +30,7 @@ Accept-CH: Width, Downlink, Sec-CH-UA
 リクエストされなかった場合、クライアントイベントによって送信される可能性のある、[低エントロピーのクライアントヒントヘッダー](#低エントロピーヒント)も少しあります。
 
 > [!NOTE]
-> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Element/meta#attr-http-equiv) 属性を使用して指定することも可能です。
+> クライアントヒントは、 HTML で {{HTMLElement("meta")}} 要素に [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta#attr-http-equiv) 属性を使用して指定することも可能です。
 >
 > ```html
 > <meta http-equiv="Accept-CH" content="Width, Downlink, Sec-CH-UA" />

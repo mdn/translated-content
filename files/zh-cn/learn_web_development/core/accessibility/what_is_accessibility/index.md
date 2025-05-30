@@ -3,7 +3,7 @@ title: 什么是无障碍？
 slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
+{{NextMenu("Learn_web_development/Core/Accessibility/Tooling", "Learn_web_development/Core/Accessibility")}}
 
 本文作为本模块的开篇阐述了究竟什么是“无障碍” — 主要包括哪些用户群体是我们所需要和为什么需要考虑的，不同用户使用哪些工具与网页交互，以及我们在网站开发流程中如何构建无障碍。
 

@@ -16,7 +16,7 @@ slug: Web/CSS/CSS_selectors
 - [標籤選擇器](/zh-TW/docs/Web/CSS/Type_selectors)（[Type selector](/zh-TW/docs/Web/CSS/Type_selectors)）
   - : 用以選擇所有符合指定標籤的元素。
     **語法:** `elementname`
-    **範例:** `input` 可選出任一 [\<input>](/zh-TW/docs/Web/HTML/Element/input) 元素。
+    **範例:** `input` 可選出任一 [\<input>](/zh-TW/docs/Web/HTML/Reference/Elements/input) 元素。
 - [類別選擇器](/zh-TW/docs/Web/CSS/Class_selectors)（[Class selector](/zh-TW/docs/Web/CSS/Class_selectors)）
   - : 用以選擇所有符合指定 `class` 屬性值的元素。
     **語法:** `.classname`
@@ -35,18 +35,18 @@ slug: Web/CSS/CSS_selectors
 - 選擇器列表（[Selector list](/zh-TW/docs/Web/CSS/Selector_list)）
   - : `,` 用以將不同的選擇器組合起來的一種方法。
     **語法:** `A, B`
-    **範例:** `div, span` 將同時選擇 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 和 [`<span>`](/zh-TW/docs/Web/HTML/Element/span) 元素。
+    **範例:** `div, span` 將同時選擇 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 和 [`<span>`](/zh-TW/docs/Web/HTML/Reference/Elements/span) 元素。
 
 ## 組合選擇器
 
 - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator)（[Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_combinator)）
 
-  - : " " (空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:** `div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元素內部的所有 [`<span>`](/zh-TW/docs/Web/HTML/Element/span) 元素。
+  - : " " (空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:** `div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元素內部的所有 [`<span>`](/zh-TW/docs/Web/HTML/Reference/Elements/span) 元素。
 
 - [子代選擇器](/zh-TW/docs/Web/CSS/Child_combinator)（[Child combinator](/zh-TW/docs/Web/CSS/Child_combinator)）
   - : `>` 用以選擇某個元素後代的元素。
     **語法:** `A > B`（B 元素不可在 A 元素的其他元素裡）
-    **範例:** `ul > li` 套用所有 [`<li>`](/zh-TW/docs/Web/HTML/Element/li) 元素內部的 [`<ul>`](/zh-TW/docs/Web/HTML/Element/ul) 子元素。
+    **範例:** `ul > li` 套用所有 [`<li>`](/zh-TW/docs/Web/HTML/Reference/Elements/li) 元素內部的 [`<ul>`](/zh-TW/docs/Web/HTML/Reference/Elements/ul) 子元素。
 - [一般兄弟選擇器](/zh-TW/docs/Web/CSS/Subsequent-sibling_combinator)（[General sibling combinator](/zh-TW/docs/Web/CSS/Subsequent-sibling_combinator)）
   - : `~` combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.
     **語法:** `A ~ B`
@@ -54,7 +54,7 @@ slug: Web/CSS/CSS_selectors
 - [相鄰兄弟選擇器](/zh-TW/docs/Web/CSS/Next-sibling_combinator)（[Adjacent sibling combinator](/zh-TW/docs/Web/CSS/Next-sibling_combinator)）
   - : `+` 選擇緊接在後的元素，並共享父元素。
     **語法:** `A + B`
-    **範例:** `h2 + p` 套用所有 緊接在 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素後的 [\<p>](/zh-TW/docs/Web/HTML/Element/p) 元素，並擁有 [`<h2>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 的父元素。
+    **範例:** `h2 + p` 套用所有 緊接在 [`<h2>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素後的 [\<p>](/zh-TW/docs/Web/HTML/Reference/Elements/p) 元素，並擁有 [`<h2>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 的父元素。
 - [Column combinator](/zh-TW/docs/Web/CSS/Column_combinator) {{Experimental_Inline}}
   - : The `||` combinator selects nodes which belong to a column.
     **語法:** `A || B`

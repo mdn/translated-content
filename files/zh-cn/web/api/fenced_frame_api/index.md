@@ -70,7 +70,7 @@ frame.config = frameConfig;
 
 ### 权限策略
 
-只有通过设置在 `<fencedframe>` 上的权限策略，才能启用专门设计为在其中使用的特定功能；在此上下文中，其他受策略控制的特性不可用。参见[围栏框架可用的权限策略](/zh-CN/docs/Web/HTML/Element/fencedframe#围栏框架可用的权限策略)查看更多信息。
+只有通过设置在 `<fencedframe>` 上的权限策略，才能启用专门设计为在其中使用的特定功能；在此上下文中，其他受策略控制的特性不可用。参见[围栏框架可用的权限策略](/zh-CN/docs/Web/HTML/Reference/Elements/fencedframe#围栏框架可用的权限策略)查看更多信息。
 
 ### HTTP 标头
 
@@ -89,7 +89,7 @@ Supports-Loading-Mode: fenced-frame
 围栏框架对 HTTP 标头字段的其他影响如下：
 
 - [用户代理客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#用户代理客户端提示)在围栏框架中不可用，因为它们依赖于[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)委托，这可能会被用来泄露数据。
-- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
+- 对从封闭框架内部打开的新浏览上下文强制执行严格的 [`Cross-Origin-Opener-Policy`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy) 设置，否则它们可能会被用来向其他源泄露信息。从围栏框架内部打开的任何新窗口都将设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener) 和`Cross-Origin-Opener-Policy: same-origin`，以确保 {{domxref("Window.opener")}} 返回 `null` 并将其置于自己的浏览上下文组中。
 - 添加 [`Content-Security-Policy: fenced-frame-src`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/fenced-frame-src) 来指定加载到 `<fencedframe>` 元素中的嵌套浏览上下文的有效来源。
 - 为了缓解隐私问题，[`Content-Security-Policy: sandbox`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) 自定义设置不能被围栏框架继承。要加载围栏框架，需要指定无 `sandbox` CSP（这意味着以下值），或者指定以下沙箱值：
   - `allow-same-origin`

@@ -183,7 +183,7 @@ body {
 }
 ```
 
-次に、 [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) プロパティが `true` に設定されているタブを強調表示するルールを適用します。これは、タブがクリックされた際に JavaScript で設定します。以下の CSS を、他のスタイルのすぐ下に配置します。
+次に、 [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) プロパティが `true` に設定されているタブを強調表示するルールを適用します。これは、タブがクリックされた際に JavaScript で設定します。以下の CSS を、他のスタイルのすぐ下に配置します。
 
 ```css
 .info-box [role="tab"][aria-selected="true"] {
@@ -230,7 +230,7 @@ body {
 
 ### JavaScript
 
-この機能を動作させるための最後のステップは、JavaScript を追加することです。 `tabs-manual.js` ファイルを、 [`<script>`](/ja/docs/Web/HTML/Element/script) タグを使用して含めます。
+この機能を動作させるための最後のステップは、JavaScript を追加することです。 `tabs-manual.js` ファイルを、 [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) タグを使用して含めます。
 
 ```html
 <script src="tabs-manual.js"></script>
@@ -362,7 +362,7 @@ body {
 </aside>
 ```
 
-まず、ここではボタンテキストとして特別な疑問符文字を持つ {{htmlelement("button")}} 要素があります。 ボタンが押されると、 [`aside`](/ja/docs/Web/HTML/Element/aside) 情報パネルが表示または非表示になります。 下記では、これがどのように動作するのかを説明します。
+まず、ここではボタンテキストとして特別な疑問符文字を持つ {{htmlelement("button")}} 要素があります。 ボタンが押されると、 [`aside`](/ja/docs/Web/HTML/Reference/Elements/aside) 情報パネルが表示または非表示になります。 下記では、これがどのように動作するのかを説明します。
 
 ### ボタンのスタイル設定
 
@@ -444,7 +444,7 @@ button.addEventListener("click", () => {
 ```
 
 このコードは、ボタンにクリックイベントハンドラーを追加します。クリックハンドラーは、 `open` クラスを情報ボックスパネル上で切り替えます。これにより、パネルがビューにスライドインまたはスライドアウトします。
-イベントハンドラーは、アクセシビリティを向上させるために、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) プロパティをボタンに設定します。
+イベントハンドラーは、アクセシビリティを向上させるために、 [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) プロパティをボタンに設定します。
 
 以上です。トグル式の情報パネル効果を作成する最も簡単な方法です。
 

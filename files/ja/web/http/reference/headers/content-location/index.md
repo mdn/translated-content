@@ -23,7 +23,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -87,7 +87,7 @@ I made this through `example.com`'s API. I hope it worked.
 
 ### トランザクションの結果の URL を示す
 
-サイトの別のユーザーに送金するための [`<form>`](/ja/docs/Web/HTML/Element/form) があるとします。
+サイトの別のユーザーに送金するための [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) があるとします。
 
 ```html
 <form action="/send-payment" method="post">

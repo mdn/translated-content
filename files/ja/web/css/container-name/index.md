@@ -2,20 +2,22 @@
 title: container-name
 slug: Web/CSS/container-name
 l10n:
-  sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
+  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
 {{CSSRef}}
 
-**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)において [@container](/ja/docs/Web/CSS/@container) アットルールで使用されるクエリーコンテナー名のリストを指定します。
-コンテナークエリーでは、格納コンテキストを持つ最も近い祖先のサイズに基づいて要素にスタイルが適用されます。
-コンテナーのコンテキストの名前が指定されたとき、コンテナーのコンテキストのある最も近い祖先の代わりに {{Cssxref("@container")}} アットルールを用いて固有のターゲット仕様にすることができます。
+**container-name** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [@container](/ja/docs/Web/CSS/@container) アットルールによる[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用されるクエリーコンテナー名のリストを指定します。
+コンテナークエリーは、コンテナーコンテキストを持つ最も近い祖先の[サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries)または[スクロール状態](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)に基づいて、要素にスタイルを適用します。
+コンテナーコンテキストの名前が指定されたとき、コンテナーコンテキストのある最も近い祖先の代わりに、 {{Cssxref("@container")}} アットルールを用いて固有のターゲットを指定することができます。
 
-> **メモ:** {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、 {{cssxref("contain")}} プロパティの `style` 値と `layout` 値が自動的に適用されます。
+> **メモ:** {{cssxref("container-type")}} プロパティと `container-name` プロパティを使用すると、自動的に `style` 値と `layout` 値が {{cssxref("contain")}} プロパティに適用されます。
 
 ## 構文
 
 ```css
+container-name: none;
+
 /* 単一の名前 */
 container-name: myLayout;
 
@@ -32,15 +34,18 @@ container-name: unset;
 
 ### 値
 
-- `<container-name>`
+- `none`
+
+  - : 既定値。クエリコンテナーには名前がありません。
+
+- {{cssxref("custom-ident")}}
 
   - : コンテナーを識別するために使用する、大文字と小文字を区別する文字列です。
-
     以下の条件が適用されます。
 
     - 名前は有効な {{cssxref("custom-ident")}} であれば何でもかまいませんが、`default` と等しくあってはいけません。
     - 名前の値は引用符で囲んではいけません。
-    - 作者が定義する識別子（例：--container-name`）を意図するダッシュ記号は許可されています。
+    - 制作者が定義する識別子（例: `--container-name`）を意図するダッシュ記号は許可されています。
     - スペースで区切られた複数の名前のリストが許可されます。
 
 ## 公式定義
@@ -109,7 +114,7 @@ container-name: unset;
 
 ### 複数のコンテナー名の使用
 
-コンテナーコンテキストには、スペースで区切った複数の名前を指定することもできます。
+コンテナーコンテキストには、空白で区切った複数の名前を指定することもできます。
 
 ```css
 .post-meta {
@@ -147,6 +152,7 @@ container-name: unset;
 
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [コンテナーのスクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
 - {{Cssxref("@container")}} アットルール
 - CSS {{Cssxref("container")}} 一括指定プロパティ
 - CSS {{Cssxref("container-type")}} プロパティ

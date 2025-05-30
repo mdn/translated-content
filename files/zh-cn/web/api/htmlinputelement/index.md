@@ -28,19 +28,19 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.labels", "labels")}} {{ReadOnlyInline}}
   - : 返回一个 {{ HTMLElement("label") }} 元素的列表，这些元素是当前元素的标签。
 - {{domxref("HTMLInputElement.list", "list")}} {{ReadOnlyInline}}
-  - : 返回由 [`list`](/zh-CN/docs/Web/HTML/Element/input#list) 属性指向的元素。如果在同一树中找不到 HTML 元素，则该属性可能为 `null`。
+  - : 返回由 [`list`](/zh-CN/docs/Web/HTML/Reference/Elements/input#list) 属性指向的元素。如果在同一树中找不到 HTML 元素，则该属性可能为 `null`。
 - {{domxref("HTMLInputElement.multiple", "multiple")}}
-  - : 一个表示元素的 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性的布尔值，表示是否可能有多个值（例如，多个文件）。
+  - : 一个表示元素的 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性的布尔值，表示是否可能有多个值（例如，多个文件）。
 - {{domxref("HTMLInputElement.name", "name")}}
-  - : 一个表示元素的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的字符串，包含在提交表单时标识元素的名称。
+  - : 一个表示元素的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性的字符串，包含在提交表单时标识元素的名称。
 - {{domxref("HTMLInputElement.popoverTargetAction", "popoverTargetAction")}}
-  - : 获取或设置要在由 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素上执行的操作（`"hide"`、`"show"` 或 `"toggle"`）。它反映了 [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/input#popovertargetaction) HTML 属性的值。
+  - : 获取或设置要在由 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素上执行的操作（`"hide"`、`"show"` 或 `"toggle"`）。它反映了 [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/input#popovertargetaction) HTML 属性的值。
 - {{domxref("HTMLInputElement.popoverTargetElement", "popoverTargetElement")}}
-  - : 获取或设置要通过 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素。它反映了 [`popovertarget`](/zh-CN/docs/Web/HTML/Element/input#popovertarget) HTML 属性的值。
+  - : 获取或设置要通过 `type="button"` 的 {{htmlelement("input")}} 元素控制的弹出窗口元素。它反映了 [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/input#popovertarget) HTML 属性的值。
 - {{domxref("HTMLInputElement.step", "step")}}
-  - : 一个表示元素的 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性的字符串，它与 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 一起使用，以限制可以设置数字或日期时间值的增量。它可以是字符串 `any` 或正浮点数。如果不设置为 `any`，则控件仅接受大于最小值的步长值的倍数。
+  - : 一个表示元素的 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性的字符串，它与 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 一起使用，以限制可以设置数字或日期时间值的增量。它可以是字符串 `any` 或正浮点数。如果不设置为 `any`，则控件仅接受大于最小值的步长值的倍数。
 - {{domxref("HTMLInputElement.type", "type")}}
-  - : 一个表示元素的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的字符串，表示要显示的控件类型。请参阅 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的文档，以了解其可能的值。
+  - : 一个表示元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的字符串，表示要显示的控件类型。请参阅 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的文档，以了解其可能的值。
 - {{domxref("HTMLInputElement.useMap", "useMap")}} {{Deprecated_Inline}}
   - : 一个表示客户端图像映射的字符串。
 - {{domxref("HTMLInputElement.value", "value")}}
@@ -55,22 +55,22 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.form", "form")}} {{ReadOnlyInline}}
   - : 返回一个父表单（{{HtmlElement("form")}}）元素的引用。
 - {{domxref("HTMLInputElement.formAction", "formAction")}}
-  - : 一个表示元素的 [`formaction`](/zh-CN/docs/Web/HTML/Element/input#formaction) 属性的字符串，包含处理元素提交信息程序的 URI。这会覆盖父表单的 [`action`](/zh-CN/docs/Web/HTML/Element/form#action) 属性。
+  - : 一个表示元素的 [`formaction`](/zh-CN/docs/Web/HTML/Reference/Elements/input#formaction) 属性的字符串，包含处理元素提交信息程序的 URI。这会覆盖父表单的 [`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action) 属性。
 - {{domxref("HTMLInputElement.formEnctype", "formEnctype")}}
-  - : 一个表示元素的 [`formenctype`](/zh-CN/docs/Web/HTML/Element/input#formenctype) 属性的字符串，包含将表单提交到服务器的内容类型。这会覆盖父表单的 [`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype) 属性。
+  - : 一个表示元素的 [`formenctype`](/zh-CN/docs/Web/HTML/Reference/Elements/input#formenctype) 属性的字符串，包含将表单提交到服务器的内容类型。这会覆盖父表单的 [`enctype`](/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype) 属性。
 - {{domxref("HTMLInputElement.formMethod", "formMethod")}}
-  - : 一个表示元素的 [`formmethod`](/zh-CN/docs/Web/HTML/Element/input#formmethod) 属性的字符串，包含浏览器用于提交表单的 HTTP 方法。这会覆盖父表单的 [`method`](/zh-CN/docs/Web/HTML/Element/form#method) 属性。
+  - : 一个表示元素的 [`formmethod`](/zh-CN/docs/Web/HTML/Reference/Elements/input#formmethod) 属性的字符串，包含浏览器用于提交表单的 HTTP 方法。这会覆盖父表单的 [`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method) 属性。
 - {{domxref("HTMLInputElement.formNoValidate", "formNoValidate")}}
-  - : 一个表示元素的 [`formnovalidate`](/zh-CN/docs/Web/HTML/Element/input#formnovalidate) 属性的布尔值，表示在提交表单时不对其进行验证。这会覆盖父表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性。
+  - : 一个表示元素的 [`formnovalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/input#formnovalidate) 属性的布尔值，表示在提交表单时不对其进行验证。这会覆盖父表单的 [`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate) 属性。
 - {{domxref("HTMLInputElement.formTarget", "formTarget")}}
-  - : 一个表示元素的 [`formtarget`](/zh-CN/docs/Web/HTML/Element/input#formtarget) 属性的字符串，包含一个名称或关键字，表示在提交表单后接收响应的显示位置。这会覆盖父表单的 [`target`](/zh-CN/docs/Web/HTML/Element/form#target) 属性。
+  - : 一个表示元素的 [`formtarget`](/zh-CN/docs/Web/HTML/Reference/Elements/input#formtarget) 属性的字符串，包含一个名称或关键字，表示在提交表单后接收响应的显示位置。这会覆盖父表单的 [`target`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) 属性。
 
 ### 适用于任何类型的非隐藏输入元素的实例属性
 
 - {{domxref("HTMLInputElement.disabled", "disabled")}}
-  - : 一个表示元素的 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled) 属性的布尔值，表示该控件不可用于交互。输入值将不会与表单一起提交。参见 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)。
+  - : 一个表示元素的 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/input#disabled) 属性的布尔值，表示该控件不可用于交互。输入值将不会与表单一起提交。参见 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly)。
 - {{domxref("HTMLInputElement.required", "required")}}
-  - : 一个表示元素的 [`required`](/zh-CN/docs/Web/HTML/Element/input#required) 属性的布尔值，表示用户必须在提交表单之前填写值。
+  - : 一个表示元素的 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required) 属性的布尔值，表示用户必须在提交表单之前填写值。
 - {{domxref("HTMLInputElement.validationMessage", "validationMessage")}} {{ReadOnlyInline}}
   - : 返回一条描述控件不满足时的验证约束的本地化消息。如果控件不是约束验证的候选项（[`willValidate`](/zh-CN/docs/Web/API/HTMLObjectElement/willValidate) 为 `false`），或者它满足其约束，则为空字符串。此值可以通过 {{domxref("HTMLInputElement.setCustomValidity()", "setCustomValidity()")}} 方法设置。
 - {{domxref("HTMLInputElement.validity", "validity")}} {{ReadOnlyInline}}
@@ -90,45 +90,45 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 ### 仅适用于图像类型的元素的实例属性
 
 - {{domxref("HTMLInputElement.alt", "alt")}}
-  - : 一个表示元素的 [`alt`](/zh-CN/docs/Web/HTML/Element/input#alt) 属性的字符串，包含要使用的替代文本。
+  - : 一个表示元素的 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/input#alt) 属性的字符串，包含要使用的替代文本。
 - {{domxref("HTMLInputElement.height", "height")}}
-  - : 一个表示元素的 [`height`](/zh-CN/docs/Web/HTML/Element/input#height) 属性的字符串，包含要显示为按钮的图像的高度。
+  - : 一个表示元素的 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/input#height) 属性的字符串，包含要显示为按钮的图像的高度。
 - {{domxref("HTMLInputElement.src", "src")}}
-  - : 一个表示元素的 [`src`](/zh-CN/docs/Web/HTML/Element/input#src) 属性的字符串，包含要显示为图形提交按钮上的图像的位置的 URI。
+  - : 一个表示元素的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/input#src) 属性的字符串，包含要显示为图形提交按钮上的图像的位置的 URI。
 - {{domxref("HTMLInputElement.width", "width")}}
-  - : 一个表示元素的 [`width`](/zh-CN/docs/Web/HTML/Element/input#width) 属性的字符串，包含要显示为按钮的图像的宽度。
+  - : 一个表示元素的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/input#width) 属性的字符串，包含要显示为按钮的图像的宽度。
 
 ### 仅适用于文件类型的元素的实例属性
 
 - {{domxref("HTMLInputElement.accept", "accept")}}
-  - : 一个表示元素的 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性的字符串，包含可以选择的文件类型的以逗号分隔的列表。
+  - : 一个表示元素的 [`accept`](/zh-CN/docs/Web/HTML/Reference/Elements/input#accept) 属性的字符串，包含可以选择的文件类型的以逗号分隔的列表。
 - {{domxref("HTMLInputElement.files", "files")}}
   - : 一个 {{domxref("FileList")}}，表示选择的要上传的文件。
 - {{domxref("HTMLInputElement.webkitdirectory", "webkitdirectory")}}
-  - : 一个表示 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Element/input#webkitdirectory) 属性的布尔值。如果为 `true`，则文件系统选择器接口仅接受目录而不是文件。
+  - : 一个表示 [`webkitdirectory`](/zh-CN/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性的布尔值。如果为 `true`，则文件系统选择器接口仅接受目录而不是文件。
 - {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} {{ReadOnlyInline}}
   - : 描述当前选择的文件或目录。
 
 ### 仅适用于包含文本或数字的可见元素的实例属性
 
 - {{domxref("HTMLInputElement.autocomplete", "autocomplete")}}
-  - : 一个表示元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Element/input#autocomplete) 属性的字符串，表示控件的值是否可以由浏览器自动填充。
+  - : 一个表示元素的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性的字符串，表示控件的值是否可以由浏览器自动填充。
 - {{domxref("HTMLInputElement.capture", "capture")}}
-  - : 一个表示元素的 [`capture`](/zh-CN/docs/Web/HTML/Element/input#capture) 属性的字符串，指示文件上传控件中的媒体捕获输入方法。
+  - : 一个表示元素的 [`capture`](/zh-CN/docs/Web/HTML/Reference/Elements/input#capture) 属性的字符串，指示文件上传控件中的媒体捕获输入方法。
 - {{domxref("HTMLInputElement.max", "max")}}
-  - : 一个表示元素的 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的字符串，包含此项的最大（数字或日期时间）值，该值不能小于其最小（[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性）值。
+  - : 一个表示元素的 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性的字符串，包含此项的最大（数字或日期时间）值，该值不能小于其最小（[`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 属性）值。
 - {{domxref("HTMLInputElement.maxLength", "maxLength")}}
-  - : 一个表示元素的 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性的数字，包含值可以具有的最大字符数（以 Unicode 码点表示）。
+  - : 一个表示元素的 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#maxlength) 属性的数字，包含值可以具有的最大字符数（以 Unicode 码点表示）。
 - {{domxref("HTMLInputElement.min", "min")}}
-  - : 一个表示元素的 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的字符串，包含此项的最小（数字或日期时间）值，该值不能大于其最大（[`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性）值。
+  - : 一个表示元素的 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 属性的字符串，包含此项的最小（数字或日期时间）值，该值不能大于其最大（[`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性）值。
 - {{domxref("HTMLInputElement.minLength", "minLength")}}
-  - : 一个表示元素的 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 属性的数字，包含值可以具有的最小字符数（以 Unicode 码点表示）。
+  - : 一个表示元素的 [`minlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#minlength) 属性的数字，包含值可以具有的最小字符数（以 Unicode 码点表示）。
 - {{domxref("HTMLInputElement.pattern", "pattern")}}
-  - : 一个表示元素的 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性的字符串，包含要检查控件值的正则表达式。使用 [`title`](/zh-CN/docs/Web/HTML/Element/input#title) 属性来描述模式以帮助用户。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
+  - : 一个表示元素的 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性的字符串，包含要检查控件值的正则表达式。使用 [`title`](/zh-CN/docs/Web/HTML/Reference/Elements/input#title) 属性来描述模式以帮助用户。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
 - {{domxref("HTMLInputElement.placeholder", "placeholder")}}
-  - : 一个表示元素的 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性的字符串，包含一个提示，告诉用户可以在控件中输入什么。占位符文本不能包含回车或换行符。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
+  - : 一个表示元素的 [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder) 属性的字符串，包含一个提示，告诉用户可以在控件中输入什么。占位符文本不能包含回车或换行符。此属性仅适用于 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的值为 `text`、`search`、`tel`、`url` 或 `email` 的情况。
 - {{domxref("HTMLInputElement.readOnly", "readOnly")}}
-  - : 一个表示元素的 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly) 属性的布尔值，指示用户无法修改控件的值。如果 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 为 `hidden`、`range`、`color`、`checkbox`、`radio`、`file` 或按钮类型，则忽略此属性。
+  - : 一个表示元素的 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly) 属性的布尔值，指示用户无法修改控件的值。如果 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 为 `hidden`、`range`、`color`、`checkbox`、`radio`、`file` 或按钮类型，则忽略此属性。
 - {{domxref("HTMLInputElement.selectionDirection", "selectionDirection")}}
   - : 一个表示选择发生的方向的字符串。可能的值为：`forward`（选择是从当前区域设置的起始到结束方向上执行的）、`backward`（相反的方向）或 `none`（方向未知）。
 - {{domxref("HTMLInputElement.selectionEnd", "selectionEnd")}}
@@ -136,7 +136,7 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLInputElement.selectionStart", "selectionStart")}}
   - : 一个表示选择文本的开始索引的数字。当没有选择时，它返回当前文本输入光标位置的偏移量。
 - {{domxref("HTMLInputElement.size", "size")}}
-  - : 一个表示元素的 [`size`](/zh-CN/docs/Web/HTML/Element/input#size) 属性的数字，包含控件的可视大小。此值以像素为单位，除非 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 的值为 `text` 或 `password`，在这种情况下，它是一个整数字符数。仅当 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 设置为 `text`、`search`、`tel`、`url`、`email` 或 `password` 时才适用。
+  - : 一个表示元素的 [`size`](/zh-CN/docs/Web/HTML/Reference/Elements/input#size) 属性的数字，包含控件的可视大小。此值以像素为单位，除非 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 的值为 `text` 或 `password`，在这种情况下，它是一个整数字符数。仅当 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 设置为 `text`、`search`、`tel`、`url`、`email` 或 `password` 时才适用。
 
 ## 实例方法
 
@@ -157,9 +157,9 @@ _也从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 - {{domxref("HTMLInputElement.showPicker()", "showPicker()")}}
   - : 显示浏览器的日期、时间、颜色和文件选择器。
 - {{domxref("HTMLInputElement.stepDown()", "stepDown()")}}
-  - : 按 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) \* n 递减 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)，其中 n 默认为 1（如果未指定）。
+  - : 按 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) \* n 递减 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value)，其中 n 默认为 1（如果未指定）。
 - {{domxref("HTMLInputElement.stepUp()", "stepUp()")}}
-  - : 按 [`step`](/zh-CN/docs/Web/HTML/Element/input#step) \* n 递增 [`value`](/zh-CN/docs/Web/HTML/Element/input#value)，其中 n 默认为 1（如果未指定）。
+  - : 按 [`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) \* n 递增 [`value`](/zh-CN/docs/Web/HTML/Reference/Elements/input#value)，其中 n 默认为 1（如果未指定）。
 
 ## 事件
 

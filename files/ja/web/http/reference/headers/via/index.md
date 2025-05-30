@@ -15,7 +15,7 @@ original_slug: Web/HTTP/Headers/Via
       <td>{{Glossary("General header")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

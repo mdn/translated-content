@@ -1,9 +1,8 @@
 ---
 title: "Reason: CORS request external redirect not allowed"
 slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +17,7 @@ Reason: CORS request external redirect not allowed
 
 {{Glossary("CORS")}} リクエストに対して、サーバーが元のリクエストとは異なるオリジンの URL へのリダイレクトを返答しましたが、これは CORS リクエストでは許可されていません。
 
-例えば、 `https://service.tld/fetchdata` のページがリクエストされ、 HTTP レスポンスが "301 Moved Permanently" 又は "307 Temporary Redirect" 又は "308 Permanent Redirect" で、 `Location` が `https://anotherservice.net/getdata` であった場合、この理由で CORS リクエストが失敗します。
+例えば、 `https://service.tld/fetchdata` のページがリクエストされ、 HTTP レスポンスが "301 Moved Permanently" または "307 Temporary Redirect" または "308 Permanent Redirect" で、 `Location` が `https://anotherservice.net/getdata` であった場合、この理由で CORS リクエストが失敗します。
 
 問題を修正するには、リダイレクトによって報告された新しい URL を使用するようにコードを更新し、リダイレクトを回避します。
 

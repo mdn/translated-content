@@ -3,7 +3,7 @@ title: Vue 入門
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
+{{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 現在來介紹我們的第三個框架 Vue 。在這篇文章中，我們會介紹 Vue 的背景，如何安裝 Vue 及建立一個新專案，學習整個 Vue 專案的高階架構及一個獨立的元件，學習如何在本地端運行專案，以及開始建構我們的範例。
 
@@ -50,7 +50,7 @@ Vue 是一個新穎的 Javascript 框架，它提供了很多有用的功能來�
 
 ## 安裝
 
-如果要在既有的專案中使用 Vue ，你可以把以下任一個 [`<script>`](/zh-TW/docs/Web/HTML/Element/script) 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。
+如果要在既有的專案中使用 Vue ，你可以把以下任一個 [`<script>`](/zh-TW/docs/Web/HTML/Reference/Elements/script) 標籤加到你的頁面中，這樣你就可以開始在專案中使用 Vue ，這也是為什麼 Vue 宣稱自己是一個漸進式的框架。它提供了一個很好的機會，你可以把一些使用函式庫（像是 JQuery ）的專案轉變成使用 Vue ，如此一來，你就可以使用很多 Vue 的核心功能，像是屬性、客製化元件以及資料管理。
 
 - 開發環境版本（非優化版本，包含了有幫助的命令列警告。適合開發階段）
 
@@ -206,7 +206,7 @@ INFO  Starting development server...
 
 ## 做一些改變
 
-現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Element/img) 元素：
+現在讓我們來對應用程式做一些改變——刪除 Vue logo 。打開 `App.vue` 檔案，從 template 區塊刪除 [`<img>`](/zh-TW/docs/Web/HTML/Reference/Elements/img) 元素：
 
 ```html
 <img alt="Vue logo" src="./assets/logo.png" />

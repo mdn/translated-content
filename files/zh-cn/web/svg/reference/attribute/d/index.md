@@ -61,61 +61,6 @@ svg {
   </tbody>
 </table>
 
-## glyph
-
-> [!WARNING]
-> 自 SVG2 起，{{SVGElement('glyph')}} 已被弃用，不应该继续使用。
-
-对于 {{SVGElement('glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td>
-        <strong><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#String">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
-      <td><em>无</em></td>
-    </tr>
-    <tr>
-      <th scope="row">动画</th>
-      <td>是</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> 原点（坐标 `0`,`0`）通常是上下文的*左上角*。但 {{SVGElement("glyph")}} 元素的原点是其字形框的*左下角*。
-
-## missing-glyph
-
-> [!WARNING]
-> 自 SVG2 起，{{SVGElement('missing-glyph')}} 已被弃用，不应该继续使用。
-
-对于 {{SVGElement('missing-glyph')}}，`d` 是一个包含一组路径命令的字符串，用于定义字形（glyph）的轮廓形状。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">值</th>
-      <td>
-        <strong><a href="/zh-CN/docs/Web/SVG/Guides/Content_type#String">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">默认值</th>
-      <td><em>无</em></td>
-    </tr>
-    <tr>
-      <th scope="row">动画</th>
-      <td>是</td>
-    </tr>
-  </tbody>
-</table>
-
 ## 将 d 作为 CSS 属性
 
 `d` 是一个表现属性，因此也可以使用 CSS 进行修改。该属性采用 [path()](/zh-CN/docs/Web/CSS/basic-shape/path) 或 `none`。

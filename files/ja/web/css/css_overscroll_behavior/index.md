@@ -39,7 +39,7 @@ l10n:
 
 ## 関連概念
 
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA ロール
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)の概念
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール:
   - {{cssxref("overflow")}} 一括指定プロパティ

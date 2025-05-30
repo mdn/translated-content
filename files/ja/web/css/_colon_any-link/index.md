@@ -94,7 +94,7 @@ a:-webkit-any-link {
 ## 関連情報
 
 - [ハイパーリンクの作成](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)
-- 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) に [`href`](/ja/docs/Web/HTML/Element/a#href) 属性が付いたもの
+- 一致する HTML 要素: [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) に [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性が付いたもの
 - 関連する CSS セレクター:
 
   - [`:visited`](/ja/docs/Web/CSS/:visited)

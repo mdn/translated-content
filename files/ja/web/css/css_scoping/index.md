@@ -52,7 +52,7 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 
 - HTML {{HTMLElement("template")}} 要素
 - HTML {{HTMLElement("slot")}} 要素
-- HTML [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性
+- HTML [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性
 
 - {{Glossary("Shadow tree", "シャドウツリー")}} （用語集の用語）
 - {{Glossary("DOM")}} （用語集の用語）

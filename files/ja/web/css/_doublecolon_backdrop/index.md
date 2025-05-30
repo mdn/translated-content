@@ -151,5 +151,5 @@ closeButton.addEventListener("click", () => {
 - {{cssxref(":fullscreen")}} 疑似クラス
 - {{HTMLElement("dialog")}} HTML 要素
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) HTML グローバル属性
+- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) HTML グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

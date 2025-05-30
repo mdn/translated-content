@@ -29,7 +29,7 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 - {{HTTPStatus(102, "102 Processing")}}（{{Glossary("WebDAV")}}）
   - : 這個代碼表示伺服器已收到並正在處理請求，但還沒有可用的回應。
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : 這個狀態碼主要用於與 {{HTTPHeader("Link")}} 標頭一起使用，讓用戶代理在伺服器準備回應或者頁面需要從中獲取資源的原始來源時，開始[預加載](/zh-TW/docs/Web/HTML/Attributes/rel/preload)資源或者[預連接](/zh-TW/docs/Web/HTML/Attributes/rel/preconnect)。
+  - : 這個狀態碼主要用於與 {{HTTPHeader("Link")}} 標頭一起使用，讓用戶代理在伺服器準備回應或者頁面需要從中獲取資源的原始來源時，開始[預加載](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preload)資源或者[預連接](/zh-TW/docs/Web/HTML/Reference/Attributes/rel/preconnect)。
 
 ## 成功回應
 

@@ -19,8 +19,8 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 ### HTML
 
-- {{HTMLElement("img")}} 要素の [`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
-- [`<style>`](/ja/docs/Web/HTML/Element/style) 要素の `type` 属性の値を、仕様書に従って `text/css` のみに限定しました ([Firefox バグ 1614329](https://bugzil.la/1614329))。
+- {{HTMLElement("img")}} 要素の [`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を実装しました。この文字列値は `lazy` を設定することで、画像を [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading) するべきであると示します ([Firefox バグ 1542784](https://bugzil.la/1542784))。
+- [`<style>`](/ja/docs/Web/HTML/Reference/Elements/style) 要素の `type` 属性の値を、仕様書に従って `text/css` のみに限定しました ([Firefox バグ 1614329](https://bugzil.la/1614329))。
 
 ### CSS
 
@@ -32,8 +32,8 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 [ARIA annotations](/ja/docs/Web/Accessibility/ARIA) に関する新しいロールやオブジェクトを、Windows および Linux の Firefox で公開しました (これらはスクリーンリーダーがサポートするまで使用できないことを覚えておいてください):
 
 - `aria-description` ([Firefox バグ 1608961](https://bugzil.la/1608961))
-- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Roles/Mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Roles/Suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
-- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
+- [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
+- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
 - `aria-details` で複数の ID ([Firefox バグ 1608883](https://bugzil.la/1608883))
 
 > [!NOTE]

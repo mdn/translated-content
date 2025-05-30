@@ -7,7 +7,7 @@ slug: Web/CSS/gradient
 
 **`<gradient>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 {{cssxref("&lt;image&gt;")}}의 특별한 종류로 여러 색의 점진적인 변화를 나타냅니다.
 
-{{InteractiveExample("CSS Demo: &amp;lt;gradient&amp;gt;")}}
+{{InteractiveExample("CSS Demo: &lt;gradient&gt;")}}
 
 ```css interactive-example-choice
 background: linear-gradient(#f69d3c, #3f87a6);

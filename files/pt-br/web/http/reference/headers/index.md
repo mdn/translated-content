@@ -119,7 +119,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 ## Cookies
 
 - {{HTTPHeader("Cookie")}}
-  - : Contém [cookies](/pt-BR/docs/Web/HTTP/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
+  - : Contém [cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) HTTP armazenados previamente enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 - {{HTTPHeader("Set-Cookie")}}
   - : Envia cookies do servidor para o agente de usuário.
 - {{HTTPHeader("Cookie2")}}
@@ -144,7 +144,7 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : Utilizado ao emitr uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor quais cabeçalhos HTTP serão usados quando a solicitação real for realizada.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual [método HTTP](/pt-BR/docs/Web/HTTP/Methods) será usado quando a solicitação real for realizada.
+  - : Utilizado ao emitir uma solicitação de comprovação ({{Glossary("Preflight_request", "preflight request")}}) para informar ao servidor qual [método HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) será usado quando a solicitação real for realizada.
 - {{HTTPHeader("Origin")}}
   - : Inddica de onde uma busca se origina.
 - {{HTTPHeader("Timing-Allow-Origin")}}

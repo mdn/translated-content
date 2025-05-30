@@ -2,7 +2,7 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 l10n:
-  sourceCommit: 762f2305c59bd38ddd10a55b4909de7e07180f84
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -26,7 +26,7 @@ animation-duration: 0s;
 ```html interactive-example
 <section class="flex-column" id="default-example">
   <div class="animating" id="example-element"></div>
-  <button id="play-pause">Play</button>
+  <button id="play-pause">再生</button>
 </section>
 ```
 
@@ -79,10 +79,10 @@ window.addEventListener("load", () => {
   button.addEventListener("click", () => {
     if (el.classList.contains("running")) {
       el.classList.remove("running");
-      button.textContent = "Play";
+      button.textContent = "再生";
     } else {
       el.classList.add("running");
-      button.textContent = "Pause";
+      button.textContent = "一時停止";
     }
   });
 });
@@ -112,11 +112,11 @@ animation-duration: unset;
 
 ### 値
 
-- `auto` {{Experimental_Inline}}
+- `auto`
 
   - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 

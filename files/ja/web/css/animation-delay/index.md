@@ -2,7 +2,7 @@
 title: animation-delay
 slug: Web/CSS/animation-delay
 l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -25,8 +25,8 @@ animation-delay: -2s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>Animation <span id="playstatus"></span></div>
-  <div id="example-element">Select a delay to start!</div>
+  <div>アニメーション<span id="playstatus"></span></div>
+  <div id="example-element">delay を選択すると始まります！</div>
 </section>
 ```
 
@@ -80,7 +80,7 @@ window.addEventListener("load", () => {
   const status = document.getElementById("playstatus");
 
   function update() {
-    status.textContent = "delaying";
+    status.textContent = "待機中";
     el.className = "";
     window.requestAnimationFrame(() => {
       window.requestAnimationFrame(() => {
@@ -90,11 +90,11 @@ window.addEventListener("load", () => {
   }
 
   el.addEventListener("animationstart", () => {
-    status.textContent = "playing";
+    status.textContent = "動作中";
   });
 
   el.addEventListener("animationend", () => {
-    status.textContent = "finished";
+    status.textContent = "完了";
   });
 
   const observer = new MutationObserver(() => {
@@ -133,15 +133,15 @@ animation-delay: unset;
 
 ### 値
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : アニメーションが要素に適用され、アニメーションが始まる瞬間からのオフセット時間。これは秒 (`s`) またはミリ秒 (`ms`) のどちらかで指定できます。単位は必須です。
 
     正の値を指定すると、指定した時刻が経過した後にアニメーションを始めることを示します。既定値である `0s` は、アニメーションが適用されるとすぐに始めることを示します。
 
-    負の数が指定された場合は、アニメーションは直ちに始まりますが、アニメーション周期の途中からになります。例えば、 `-1s` を遅延時間に指定すると、アニメーションは直ちに始まりますが、アニメーションが始まって1秒の時点から始まります。アニメーションの遅延時間に負の値を指定しても、暗黙的に開始値が指定されている場合、開始値はアニメーションが要素に適用された瞬間から取得されます。
+    負の数が指定された場合は、アニメーションは直ちに始まりますが、アニメーション周期の途中からになります。例えば、 `-1s` を待機時間に指定すると、アニメーションは直ちに始まりますが、アニメーションが始まって 1 秒の時点から始まります。アニメーションの待機時間に負の値を指定しても、暗黙的に開始値が指定されている場合、開始値はアニメーションが要素に適用された瞬間から取得されます。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定)を参照してください。
 
 > **メモ:** `animation-delay` は [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では効果がありません。
 
@@ -155,9 +155,9 @@ animation-delay: unset;
 
 ## 例
 
-### アニメーションの遅延を設定
+### アニメーションの待機時間を設定
 
-このアニメーションは遅延がが 2 秒です。
+このアニメーションの待機時間は 2 秒です。
 
 #### HTML
 

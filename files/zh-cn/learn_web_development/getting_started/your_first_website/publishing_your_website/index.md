@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Adding_interactivity", "Learn_web_development/Getting_started/Web_standards", "Learn_web_development/Getting_started/Your_first_website")}}
 
 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。本文描述如何以最简便的方式将你的简单示例上线至网络。
 

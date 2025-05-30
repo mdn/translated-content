@@ -2,7 +2,7 @@
 title: animation-play-state
 slug: Web/CSS/animation-play-state
 l10n:
-  sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}

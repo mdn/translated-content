@@ -12,7 +12,7 @@ l10n:
 
 ### 描画ブロックの最適化
 
-CSS では、メディアクエリーによって、具体的な条件に合わせてスタイル設定を行うことができます。メディアクエリーはレスポンシブウェブデザインにとって重要であり、重要なレンダリングパスを最適化することを支援します。ブラウザーはこれらのスタイルをすべて解釈するまでレンダリングをブロックしますが、印刷スタイルシートのように使用しないことがわかっているスタイルについてはレンダリングをブロックしません。メディアクエリーに基づいて CSS を複数のファイルに分割することで、使用しない CSS をダウンロードする際の描画ブロックを防ぐことができます。ブロックされない CSS リンクを作成するには、印刷スタイルのようなすぐに使用しないスタイルを別個のファイルに移動し、HTML マークアップに [`<link>`](/ja/docs/Web/HTML/Element/link) を追加し、この場合、印刷スタイルであることを示すメディアクエリーを追加してください。
+CSS では、メディアクエリーによって、具体的な条件に合わせてスタイル設定を行うことができます。メディアクエリーはレスポンシブウェブデザインにとって重要であり、重要なレンダリングパスを最適化することを支援します。ブラウザーはこれらのスタイルをすべて解釈するまでレンダリングをブロックしますが、印刷スタイルシートのように使用しないことがわかっているスタイルについてはレンダリングをブロックしません。メディアクエリーに基づいて CSS を複数のファイルに分割することで、使用しない CSS をダウンロードする際の描画ブロックを防ぐことができます。ブロックされない CSS リンクを作成するには、印刷スタイルのようなすぐに使用しないスタイルを別個のファイルに移動し、HTML マークアップに [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) を追加し、この場合、印刷スタイルであることを示すメディアクエリーを追加してください。
 
 ```html
 <!-- styles.css の読み込みと解釈は描画ブロック -->
@@ -32,7 +32,7 @@ CSS では、メディアクエリーによって、具体的な条件に合わ�
 
 ### GPU でのアニメーション
 
-ブラウザーは CSS アニメーションを処理するように最適化されており、再フロー（つまり再描画）を発生させないプロパティのアニメーションはとてもうまく処理します。パフォーマンスを向上させるために、アニメーションさせるノードをメインスレッドから GPU に移すことができます。合成をもたらすプロパティには、3D 座標変換（[`transform: translateZ()`](/ja/docs/Web/CSS/transform) や [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d) など）、アニメーション座標変換、[`opacity`](/ja/docs/Web/CSS/opacity)、[`position: fixed`](/ja/docs/Web/CSS/position)、[`will-change`](/ja/docs/Web/CSS/will-change)、[`filter`](/ja/docs/Web/CSS/filter) などがあります。また、[`<video>`](/ja/docs/Web/HTML/Element/video)、[`<canvas>`](/ja/docs/Web/HTML/Element/canvas)、 [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) など、いくつかの要素がレイヤーになることもあります。要素をレイヤーとして昇格させることは、合成とも呼ばれますが、座標変換プロパティのアニメーションを GPU で行うことで、特にモバイルでのパフォーマンスが向上します。
+ブラウザーは CSS アニメーションを処理するように最適化されており、再フロー（つまり再描画）を発生させないプロパティのアニメーションはとてもうまく処理します。パフォーマンスを向上させるために、アニメーションさせるノードをメインスレッドから GPU に移すことができます。合成をもたらすプロパティには、3D 座標変換（[`transform: translateZ()`](/ja/docs/Web/CSS/transform) や [`rotate3d()`](/ja/docs/Web/CSS/transform-function/rotate3d) など）、アニメーション座標変換、[`opacity`](/ja/docs/Web/CSS/opacity)、[`position: fixed`](/ja/docs/Web/CSS/position)、[`will-change`](/ja/docs/Web/CSS/will-change)、[`filter`](/ja/docs/Web/CSS/filter) などがあります。また、[`<video>`](/ja/docs/Web/HTML/Reference/Elements/video)、[`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas)、 [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) など、いくつかの要素がレイヤーになることもあります。要素をレイヤーとして昇格させることは、合成とも呼ばれますが、座標変換プロパティのアニメーションを GPU で行うことで、特にモバイルでのパフォーマンスが向上します。
 
 ### `will-change` プロパティ
 

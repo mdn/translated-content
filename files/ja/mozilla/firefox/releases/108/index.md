@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Element/source#attr-height) および [`width`](/ja/docs/Web/HTML/Element/source#attr-width) 属性をサポートしました。
+- {{HTMLElement("source")}} 要素で、{{HTMLElement("picture")}} 要素の子要素であるときに [`height`](/ja/docs/Web/HTML/Reference/Elements/source#attr-height) および [`width`](/ja/docs/Web/HTML/Reference/Elements/source#attr-width) 属性をサポートしました。
   この機能は設定項目 `dom.picture_source_dimension_attributes.enabled` で制御しており、既定値を `true` にしました ([Firefox バグ 1795953](https://bugzil.la/1795953))。
 
 ### CSS
@@ -41,7 +41,7 @@ l10n:
 
 ### API
 
-- [Import maps](/ja/docs/Web/HTML/Element/script/type/importmap) をサポートしました。
+- [Import maps](/ja/docs/Web/HTML/Reference/Elements/script/type/importmap) をサポートしました。
   Import maps は、[JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules) をインポートするときにブラウザーがモジュール指定子を解決する方法に柔軟性や追加の制御手段を提供するものです ([Firefox バグ 1795647](https://bugzil.la/1795647))。
 
 #### Media、WebRTC、Web Audio

@@ -76,7 +76,7 @@ function handleSubmit(event) {
 }
 ```
 
-この関数を使用するには、 [`<form>`](/ja/docs/Web/HTML/Element/form) 要素に `onSubmit` 属性を追加し、その値を `handleSubmit` 関数に設定してください。
+この関数を使用するには、 [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素に `onSubmit` 属性を追加し、その値を `handleSubmit` 関数に設定してください。
 
 ```jsx
 <form onSubmit={handleSubmit}>

@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`placeholder`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("textarea")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Element/textarea#placeholder) 属性を反映します。
+**`placeholder`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("textarea")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/textarea#placeholder) 属性を反映します。
 
 ## 値
 

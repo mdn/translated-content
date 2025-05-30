@@ -57,7 +57,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 既定値を上書きしてウェブのフォントリソースを事前読み込みするために、`<link rel="preload">` や [CSS font-display プロパティ](/ja/docs/Web/CSS/@font-face/font-display)、[フォント読み込み API](/ja/docs/Web/API/CSS_Font_Loading_API) を使用することが可能です。
 
-[link 要素](/ja/docs/Web/HTML/Element/link) も参照してください。
+[link 要素](/ja/docs/Web/HTML/Reference/Elements/link) も参照してください。
 
 ### 画像と iframe
 
@@ -65,7 +65,7 @@ JavaScript、CSS、HTML は小さな塊に分割して送信することがで�
 
 #### loading 属性
 
-[`loading`](/ja/docs/Web/HTML/Element/img#loading) 属性を {{HTMLElement("img")}} 要素に（または [`loading`](/ja/docs/Web/HTML/Element/iframe#loading) 属性を {{HTMLElement("iframe")}} 要素に）設定することで、ユーザーが近くにスクロールするまで、画面に表示されている画像や iframe の読み込みを延期するように、ブラウザーに指示することができます。
+[`loading`](/ja/docs/Web/HTML/Reference/Elements/img#loading) 属性を {{HTMLElement("img")}} 要素に（または [`loading`](/ja/docs/Web/HTML/Reference/Elements/iframe#loading) 属性を {{HTMLElement("iframe")}} 要素に）設定することで、ユーザーが近くにスクロールするまで、画面に表示されている画像や iframe の読み込みを延期するように、ブラウザーに指示することができます。
 これにより、クリティカルでないリソースは必要な場合のみ読み込まれるようになり、ページの初期読み込みが高速化され、ネットワーク使用量が縮小する可能性があります。
 
 ```html

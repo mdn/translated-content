@@ -93,8 +93,8 @@ l10n:
 
 - {{HTMLElement("style")}} 要素
 - {{HTMLElement("link")}} 要素
-- [`class`](/ja/docs/Web/HTML/Global_attributes/class) 属性
-- [`rel`](/ja/docs/Web/HTML/Attributes/rel#stylesheet) 属性
+- [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性
+- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet) 属性
 
 ## 仕様書
 

@@ -3,8 +3,6 @@ title: 移动端无障碍
 slug: Learn_web_development/Core/Accessibility/Mobile
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Multimedia","Learn_web_development/Core/Accessibility/Accessibility_troubleshooting", "Learn_web_development/Core/Accessibility")}}
 
 随着通过手机设备访问 web 愈加常见，iOS 和 Android 等流行的平台都拥有了完善的无障碍工具，在这些平台上考虑 web 的无障碍是一件很重要事情。本文将着重介绍移动端无障碍的注意事项。
@@ -225,8 +223,8 @@ panel.ontouchend = stopMove;
 
 特别是，移动端设备需要解决的最常见的问题是：
 
-- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)、[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来解决。
-- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Web/HTML/Responsive_images)处理此问题。
+- 移动端设备布局的适用性。例如，在窄屏上多列布局不能很好的工作，需要增加文字大小以提高可读性。这些问题可以通过[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)、[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)、[弹性盒子](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Flexbox)来解决。
+- 节省下载的图片大小。一般来说，小屏幕设备不需要与桌面设备一样大的图像，而且它们将更可能在慢速网络连接上。因此，适当地缩小屏幕设备以缩小图像是明智的。你可以使用[响应式图像技术](/zh-CN/docs/Web/HTML/Guides/Responsive_images)处理此问题。
 - 考虑高分辨率。许多移动设备具有高分辨率屏幕，因此需要更高分辨率的图像，使得显示器可以继续看起来清晰和锐利。再次，你可以使用响应式图像技术来适当地提供图像。此外，使用 SVG 矢量图像格式可以满足许多图像要求，这些格式在目前的浏览器中得到了很好的支持。SVG 文件较小，且不论以何种大小显示，它都会保持清晰（请参阅[向网页中添加矢量图形](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)以了解更多的细节）。
 
 > [!NOTE]
@@ -238,7 +236,7 @@ panel.ontouchend = stopMove;
 
 #### 不禁用缩放
 
-使用[视口](/zh-CN/docs/Web/HTML/Viewport_meta_tag)可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
+使用[视口](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)可能会禁用缩放。要始终启用缩放，请在 {{htmlelement("head")}} 中将宽度设置为设备宽度：
 
 ```html
 <meta name="viewport" content="width=device-width; user-scalable=yes" />

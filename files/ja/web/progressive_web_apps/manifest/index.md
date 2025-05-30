@@ -59,7 +59,7 @@ l10n:
 
 `.webmanifest` の拡張子が仕様書の [Media type registration](https://w3c.github.io/manifest/#media-type-registration) の節で指定されています（マニフェストファイルのレスポンスは `Content-Type: application/manifest+json` を返してください）。ブラウザーは一般に `.json` (`Content-Type: application/json`) のような他の適切な拡張子でもマニフェストに対応します。
 
-マニフェストへのアクセスに資格情報が必要な場合は、マニフェストファイルが現在のページと同じオリジンにあったとしても、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を `use-credentials` に設定する必要があります。
+マニフェストへのアクセスに資格情報が必要な場合は、マニフェストファイルが現在のページと同じオリジンにあったとしても、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を `use-credentials` に設定する必要があります。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

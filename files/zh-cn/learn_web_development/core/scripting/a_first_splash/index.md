@@ -3,7 +3,7 @@ title: JavaScript 初体验
 slug: Learn_web_development/Core/Scripting/A_first_splash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
 现在，你已经学到了一些 JavaScript 的理论知识，以及用 JavaScript 能够做些什么。下面我们会提供一个创建简单的 Javascript 程序的实践的教程——循序渐进地构建一个简易版“猜数字”游戏。
 

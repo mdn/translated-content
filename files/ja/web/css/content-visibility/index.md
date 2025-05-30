@@ -2,12 +2,12 @@
 title: content-visibility
 slug: Web/CSS/content-visibility
 l10n:
-  sourceCommit: bed59f268d5e299beb538e435f08c4f4ce685980
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-**`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がその内容物をレンダリングするかどうかを制御するとともに、強力な拘束のセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
+**`content-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がそのコンテンツをレンダリングするかどうかを制御するとともに、強力な抑制のセットを強制することで、必要になるまでユーザーエージェントが大量のレイアウトとレンダリングの作業を省略できるようにします。基本的に、ユーザーエージェントは、レイアウトやペイントなどの要素のレンダリング作業を必要になるまでスキップできるため、最初のページの読み込みがはるかに高速になります。
 
 > **メモ:** {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、 `content-visibility: auto` が設定されている要素で、そのレンダリング作業が始まるか、またはスキップされなくなったときに発行されます。これは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} に描画する）を不要なときに開始または停止する便利な方法を提供し、処理能力を節約します。
 
@@ -25,7 +25,7 @@ content-visibility: hidden;
 <section class="default-example" id="default-example">
   <div class="container" id="example-element">
     <div class="child">
-      <span>This is an inner div</span>
+      <span>これは内側の div です</span>
     </div>
   </div>
 </section>
@@ -73,11 +73,11 @@ content-visibility: unset;
 ### 値
 
 - `visible`
-  - : 効果なし。要素の内容物は通常通りにレイアウトおよび描画されます。
+  - : 効果なし。要素のコンテンツは通常通りにレイアウトおよび描画されます。
 - `hidden`
-  - : 要素は[その内容物を読み飛ばします](/ja/docs/Web/CSS/CSS_containment#skips_its_contents)。読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能でアクセス可能になることはなく、また選択可能やフォーカス可能にもなりません。これは、内容物に `display: none` を設定することに似ています。
+  - : 要素は[そのコンテンツを読み飛ばします](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#コンテンツのスキップ)。読み飛ばされたコンテンツは、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能でアクセス可能になることはなく、また選択可能やフォーカス可能にもなりません。これは、コンテンツに `display: none` を設定することに似ています。
 - `auto`
-  - : この要素の、レイアウト拘束、スタイル拘束、描画拘束をオンにします。要素が[ユーザーに関連](/ja/docs/Web/CSS/CSS_containment#relevant_to_the_user)していない場合、その内容の読み飛ばしも行われます。 hidden の場合とは異なり、読み飛ばされた内容物は、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能で通常通り利用可能となり、通常通りフォーカスや選択が可能になります。
+  - : この要素の、レイアウト抑制、スタイル抑制、描画抑制をオンにします。要素が[ユーザーに関連](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#ユーザーとの関連)していない場合、その内容の読み飛ばしも行われます。 hidden の場合とは異なり、読み飛ばされたコンテンツは、ページ内検索やタブ順序ナビゲーションなどのユーザーエージェント機能で通常通り利用可能となり、通常通りフォーカスや選択が可能になります。
 
 ## 解説
 
@@ -105,7 +105,7 @@ content-visibility: unset;
 
 {{CSSSyntax}}
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 `content-visibility: auto` プロパティ内にあるオフスクリーンコンテンツは、ドキュメントオブジェクトモデルとアクセシビリティツリー内に残ります。これにより、アクセシビリティに悪影響を与えることなく、 `content-visibility: auto` でページのパフォーマンスを改善することができます。
 
@@ -230,7 +230,7 @@ document.querySelectorAll("button.toggle").forEach((button) => {
 
 #### CSS
 
-CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframe` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
+CSS では、最初に `<div>` に `content-visibility: hidden;` を設定し、そのコンテンツを隠します。次に `@keyframes` アニメーションを設定し、 `<div>` を表示させたり非表示にしたりするためのクラスに取り付けて、 `content-visibility` と [`color`](/ja/docs/Web/CSS/color) をアニメーション化することで、コンテンツが表示/非表示になる滑らかなアニメーション効果が得られます。
 
 ```css
 div {
@@ -292,7 +292,7 @@ htmlElem.addEventListener("click", showHide);
 document.addEventListener("keydown", showHide);
 
 function showHide() {
-  if (divElem.classList[0] === "show") {
+  if (divElem.classList.contains("show")) {
     divElem.classList.remove("show");
     divElem.classList.add("hide");
   } else {

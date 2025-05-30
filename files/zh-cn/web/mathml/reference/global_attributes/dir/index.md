@@ -58,4 +58,4 @@ l10n:
 
 - 所有[全局属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)
 - {{cssxref("direction")}}
-- HTML [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#dir) 全局属性
+- HTML [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#dir) 全局属性

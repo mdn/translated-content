@@ -189,7 +189,7 @@ renderPlanetInfoButton.addEventListener("click", (event) => {
 ライブリージョンはとてもよくサポートされています。The Paciello Group は、2014年に、[ライブリージョンのサポート状況についての情報](https://www.tpgi.com/screen-reader-support-aria-live-regions/) (2014) を投稿しました。Paul Jadam は特に [`aira-atomic` と `aria-relevant` のサポート](https://pauljadam.com/demos/aria-atomic-relevant.html)についてのリサーチをしました。
 
 1. **`aria-atomic`**: `aria-atomic=BOOLEAN` は領域の一部だけが変更された場合でも、スクリーンリーダーが常にライブリージョン全体を読み上げるかどうかを設定します。可能な設定は `false` または `true` で、既定は `false` です。
-2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+2. [**`aria-relevant`**](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 
    : `aria-relevant=[LIST_OF_CHANGES]` はどういった類の変更がライブリージョンに関連するかを設定します。可能な設定は `additions`、`removals`、`text`、`all` から一つ以上で、 `additions text` が既定です。
 

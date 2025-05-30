@@ -103,7 +103,7 @@ PWA 的安装后和离线体验的外观由清单文件定义。外观清单成�
 
 PWA 图标帮助用户识别你的应用程序，使其更具视觉吸引力，并提高可发现性。PWA 应用图标出现在主屏幕、应用启动器或应用商店搜索结果中。渲染的图标大小和文件要求因显示位置和显示方而异。清单文件是定义图像的地方。
 
-在清单 JSON 对象中，`icons` 成员指定用于不同上下文的一个或多个图标对象数组，每个对象都有一个 `src` 和 `sizes` 成员，还有可选的 `type` 和 `purpose` 成员。每个图标对象的 `src` 列出单个图像文件的源。`sizes` 成员提供空格分隔的尺寸列表，指明应该对该特定图像使用哪些尺寸，或者使用关键字 `any`；该值与 {{HTMLElement("link")}} 元素的 [`sizes`](/zh-CN/docs/Web/HTML/Element/link#sizes) 属性相同。`type` 成员列出图像的 MIME 类型。
+在清单 JSON 对象中，`icons` 成员指定用于不同上下文的一个或多个图标对象数组，每个对象都有一个 `src` 和 `sizes` 成员，还有可选的 `type` 和 `purpose` 成员。每个图标对象的 `src` 列出单个图像文件的源。`sizes` 成员提供空格分隔的尺寸列表，指明应该对该特定图像使用哪些尺寸，或者使用关键字 `any`；该值与 {{HTMLElement("link")}} 元素的 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/link#sizes) 属性相同。`type` 成员列出图像的 MIME 类型。
 
 ```js
 {
@@ -205,7 +205,7 @@ PWA 需要从应用的 HTML 文档中链接到清单文件。我们已经有一�
 <link rel="manifest" href="cycletracker.json" />
 ```
 
-`<link>` 元素最常用于链接样式表，在 PWA 中，它用于链接必须的清单文件，但也用于[建立站点图标](/zh-CN/docs/Web/HTML/Attributes/rel#图标)（包括“favicon”风格的图标和移动设备主屏幕和应用程序上的图标）等其他用途。
+`<link>` 元素最常用于链接样式表，在 PWA 中，它用于链接必须的清单文件，但也用于[建立站点图标](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#图标)（包括“favicon”风格的图标和移动设备主屏幕和应用程序上的图标）等其他用途。
 
 ```html
 <link rel="icon" href="icons/circle.svg" />

@@ -51,6 +51,6 @@ l10n:
 
 ## 関連情報
 
-- [HTML `title` 属性](/ja/docs/Web/HTML/Global_attributes/title)
+- [HTML `title` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/title)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)

@@ -8,7 +8,7 @@ l10n:
 
 {{ ApiRef("DOM") }}
 
-**`Document.compatMode`** プロパティは、文書が[後方互換モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)（Quirks モード）と標準準拠モードのどちらで表示されているかを示します。
+**`Document.compatMode`** プロパティは、文書が[後方互換モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)（Quirks モード）と標準準拠モードのどちらで表示されているかを示します。
 
 ### 値
 

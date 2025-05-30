@@ -3,7 +3,7 @@ title: 物件建構實作
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript", "Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 我們解說完必要的 JavaScript 物件理論以及語法細節，想先幫你把根紮好。接著就透過實作範例，讓你實際建立自己有趣又多彩的 JavaScript 物件。
 

@@ -96,7 +96,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 マークアップに要素が含まれるときにスロットの内容が定義されていない場合、またはブラウザーがスロットに対応していない場合、 `<my-paragraph>` はに単に代替内容である「既定のテキスト」が入ります。
 
-スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
+スロットの内容を定義するために、`<my-paragraph>` 要素の中に HTML 構造を入れ、 [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性の値が埋めたいスロットの名前と同じになるようにします。前と同じように、これは好きなものを指定できます。
 
 ```html
 <my-paragraph>
@@ -119,7 +119,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 > スロットに挿入することができるノードは「スロット可能 (Slottable)」ノードと呼ばれます。ノードがスロットに挿入されたとき、「スロットされている」と言います。
 
 > [!NOTE]
-> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
+> 無名の {{HTMLElement("slot")}} には、カスタム要素のトップレベルの子ノードのうち [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性を持たないすべてのノードが入ります。これにはテキストノードも含まれます。
 
 簡単な例での説明は以上です。
 もっと実行してみたい場合は、 [GitHub 上にあります](https://github.com/mdn/web-components-examples/tree/main/simple-template)（[ライブ実行版](https://mdn.github.io/web-components-examples/simple-template/)もあります）。
@@ -130,8 +130,8 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 以下の一連のコードは、 {{HTMLElement("slot")}} を {{HTMLElement("template")}} と若干の JavaScript と組み合わせて使用する方法を示すコードスニペットです。
 
-- **`<element-details>`** 要素を[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)付きで[シャドウルート](/ja/docs/Web/API/ShadowRoot)の中に作成する
-- **`<element-details>`** 要素を、文書内で使用されたとき、要素の内容とその[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容を組み合わせてレンダリングされるように設計します。つまり、要素の内容の断片は、その[シャドウルート](/ja/docs/Web/HTML/Element/slot#name)の中で[名前付きスロット](/ja/docs/Web/API/ShadowRoot)を埋めるために使用されます。
+- **`<element-details>`** 要素を[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)付きで[シャドウルート](/ja/docs/Web/API/ShadowRoot)の中に作成する
+- **`<element-details>`** 要素を、文書内で使用されたとき、要素の内容とその[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容を組み合わせてレンダリングされるように設計します。つまり、要素の内容の断片は、その[シャドウルート](/ja/docs/Web/HTML/Reference/Elements/slot#name)の中で[名前付きスロット](/ja/docs/Web/API/ShadowRoot)を埋めるために使用されます。
 
 なお、 {{HTMLElement("slot")}} 要素は技術的には、 {{HTMLElement("template")}} 要素なしで、例えば、通常の {{HTMLElement("div")}} 要素内で使うことも可能であり、それでもシャドウ DOM 内容に対して {{HTMLElement("slot")}} のプレースホルダー機能を活用することができますし、そうすれば、最初にテンプレート要素の `content` プロパティにアクセス（してそれを複製）する必要があるという小さなトラブルも実際に避けることができます。
 しかし、一般的には {{HTMLElement("template")}} 要素内にスロットを追加する方がより実用的です。なぜなら、既にレンダリングされた要素に基づいてパターンを定義する必要があることはほとんどないからです。
@@ -143,7 +143,7 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 ### template をスロットと共に作成
 
-まず最初に {{HTMLElement("slot")}} 要素を {{HTMLElement("template")}} 要素の中に作成し、[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を含んだ新しい "element-details-template" という[文書フラグメント](/ja/docs/Web/API/DocumentFragment)を作成します。
+まず最初に {{HTMLElement("slot")}} 要素を {{HTMLElement("template")}} 要素の中に作成し、[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を含んだ新しい "element-details-template" という[文書フラグメント](/ja/docs/Web/API/DocumentFragment)を作成します。
 
 ```html
 <template id="element-details-template">
@@ -202,13 +202,13 @@ HTML 文書に次のように追加するだけで利用できるようになり
 この {{HTMLElement("template")}} 要素にはいくつかの特徴があります。
 
 - {{HTMLElement("template")}} には {{HTMLElement("style")}} 要素があり、 {{HTMLElement("template")}} が生成する文書の断片だけを対象とした CSS スタイルの集合を持ちます。
-- {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその [`name`](/ja/docs/Web/HTML/Element/slot#name) 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) を生成しています。
+- {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその [`name`](/ja/docs/Web/HTML/Reference/Elements/slot#name) 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name) を生成しています。
 
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`
 
-- {{HTMLElement("template")}} には[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を {{HTMLElement("details")}} 要素の中に持ちます。
+- {{HTMLElement("template")}} には[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を {{HTMLElement("details")}} 要素の中に持ちます。
 
 ### 新しい \<element-details> 要素を \<template> から生成
 
@@ -260,9 +260,9 @@ customElements.define(
 
 このコードについて以下の点に注意してください。
 
-- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)の `"element-name"` と `"description"` を参照しています。
-- これら 2 つの **`<element-details>`** 要素のうち最初のものだけが `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) を参照しています。 2 番目の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) への参照を欠いています。
-- 最初の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name) を {{HTMLElement("dl")}} およびその子要素である {{HTMLElement("dt")}} と {{HTMLElement("dd")}} を使って参照しています。
+- このスニペットには **`<element-details>`** 要素が 2 つあり、どちらも [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) 属性を使って `<element-details>` の[シャドウルート](/ja/docs/Web/API/ShadowRoot)に置いた[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)の `"element-name"` と `"description"` を参照しています。
+- これら 2 つの **`<element-details>`** 要素のうち最初のものだけが `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name) を参照しています。 2 番目の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name) への参照を欠いています。
+- 最初の `<element-details>` 要素は `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name) を {{HTMLElement("dl")}} およびその子要素である {{HTMLElement("dt")}} と {{HTMLElement("dd")}} を使って参照しています。
 
 ### 最後に多少のスタイルを追加
 
@@ -298,7 +298,7 @@ body {
 このレンダリング結果について、以下の点に注意してください。
 
 - 文書内で **`<element-details>`** 要素のインスタンスは {{HTMLElement("details")}} 要素を直接使用しませんが、 {{HTMLElement("details")}} を[シャドウルート](/ja/docs/Web/API/ShadowRoot)が表示させることでレンダリングされます。
-- レンダリングされた {{HTMLElement("details")}} の出力結果で、**`<element-details>`** 要素の内容は[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を[シャドウルート](/ja/docs/Web/API/ShadowRoot)から埋め込みます。言い換えれば、 **`<element-details>`** 要素の DOM ツリーは[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容と共に構成されます。
-- 両方の **`<element-details>`** 要素おいて、 **Attributes** の見出しは[シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)の位置の前に、自動的に追加されます。
-- 最初の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} の内容は [シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を置き換えています。
-- 2 つ目の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)を明示的に参照していないため、[名前付きスロット](/ja/docs/Web/HTML/Element/slot#name)の内容は[シャドウルート](/ja/docs/Web/API/ShadowRoot)の既定の内容が埋め込まれます。
+- レンダリングされた {{HTMLElement("details")}} の出力結果で、**`<element-details>`** 要素の内容は[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を[シャドウルート](/ja/docs/Web/API/ShadowRoot)から埋め込みます。言い換えれば、 **`<element-details>`** 要素の DOM ツリーは[シャドウルート](/ja/docs/Web/API/ShadowRoot)の内容と共に構成されます。
+- 両方の **`<element-details>`** 要素おいて、 **Attributes** の見出しは[シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)の位置の前に、自動的に追加されます。
+- 最初の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を明示的に参照している {{HTMLElement("dl")}} 要素を持つため、{{HTMLElement("dl")}} の内容は [シャドウルート](/ja/docs/Web/API/ShadowRoot)から `"attributes"` [名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を置き換えています。
+- 2 つ目の **`<element-details>`** は[シャドウルート](/ja/docs/Web/API/ShadowRoot)から[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)を明示的に参照していないため、[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name)の内容は[シャドウルート](/ja/docs/Web/API/ShadowRoot)の既定の内容が埋め込まれます。

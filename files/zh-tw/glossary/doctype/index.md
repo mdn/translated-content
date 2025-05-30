@@ -12,7 +12,7 @@ slug: Glossary/Doctype
 ### 基本知識
 
 - 英文維基百科的 [Document type declaration](https://en.wikipedia.org/wiki/Document_type_declaration)
-- [怪異模式與標準模式](/zh-TW/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [怪異模式與標準模式](/zh-TW/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
 
 ### 技術參考
 

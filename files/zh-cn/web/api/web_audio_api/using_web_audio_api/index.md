@@ -171,7 +171,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 默认增益为 1；这使当前音量保持不变。增益可以设置的最小值约`-3.4028235E38`，最大约`3.4028235E38`。这里我们将允许音箱增益可以设置到 2（2 倍的原音量）和降低到 0（这可以有效的静音）。
 
-让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Element/input/range) ：
+让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Reference/Elements/input/range) ：
 
 ```js
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">

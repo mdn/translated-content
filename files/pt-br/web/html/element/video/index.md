@@ -300,7 +300,7 @@ Os navegadores não dão suporte a todos os mesmos formatos de vídeo; você pod
 </video>
 ```
 
-Nós oferecemos um guia abrangente e detalhado sobre [tipos de arquivos de mídia](/pt-BR/docs/Web/Media/Formats) e o [guia sobre os codecs compatíveis com vídeo](/pt-BR/docs/Web/Media/Formats/Video_codecs). Também está disponível um [guia sobre os codecs de áudio](/pt-BR/docs/Web/Media/Formats/Audio_codecs) que podem ser usados com eles.
+Nós oferecemos um guia abrangente e detalhado sobre [tipos de arquivos de mídia](/pt-BR/docs/Web/Media/Guides/Formats) e o [guia sobre os codecs compatíveis com vídeo](/pt-BR/docs/Web/Media/Formats/Video_codecs). Também está disponível um [guia sobre os codecs de áudio](/pt-BR/docs/Web/Media/Formats/Audio_codecs) que podem ser usados com eles.
 
 Outras notas de uso:
 
@@ -311,7 +311,7 @@ Outras notas de uso:
 - Você pode reproduzir arquivos de áudio usando um elemento `<video>`. Isso pode ser útil, por exemplo, se você precisar executar áudio com uma transcrição [WebVTT](/pt-BR/docs/Web/API/WebVTT_API), já que o elemento {{HTMLElement("audio")}} não permite legendas usando WebVTT.
 - Para testar o conteúdo de alternativa (_fallback_) em navegadores que suportam o elemento, você pode substituir `<video>` por um elemento que não exista, como `<notavideo>`.
 
-Uma boa fonte geral de informações sobre o uso de HTML `<video>` é o tutorial para iniciantes em [Conteúdo de vídeo e áudio](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content).
+Uma boa fonte geral de informações sobre o uso de HTML `<video>` é o tutorial para iniciantes em [Conteúdo de vídeo e áudio](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio).
 
 ### Estilização com CSS
 
@@ -549,7 +549,7 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 
 ## Veja também
 
-- [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Formats)
+- [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Guides/Formats)
 
   - [Formatos de contêiner de mídia (tipos de arquivo)](/pt-BR/docs/Web/Media/Formats/Containers)
   - [Guia de codecs de vídeo na Web](/pt-BR/docs/Web/Media/Formats/Video_codecs)
@@ -557,6 +557,6 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 
 - Posicionamento e dimensionamento da imagem em seu quadro: {{cssxref("object-position")}} and {{cssxref("object-fit")}}
 - {{htmlelement("audio")}}
-- [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Usando áudio e vídeo em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [Manipulando vídeo usando canvas](/pt-BR/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
 - [Configurando servidores para mídia Ogg](/pt-BR/docs/Web/Media/Formats/Configuring_servers_for_Ogg_media)

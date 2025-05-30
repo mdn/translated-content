@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Viewport_meta_tag) で [`interactive-widgets`](/ja/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element) で [`interactive-widgets`](/ja/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 
@@ -76,7 +76,7 @@ l10n:
 
 - **contenteditable の値 plaintext-only:** `dom.element.contenteditable.plaintext-only.enabled`。
 
-  [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
+  [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
 
 - **:has-slotted CSS 擬似クラス:** `layout.css.has-slotted-selector.enabled`。
 

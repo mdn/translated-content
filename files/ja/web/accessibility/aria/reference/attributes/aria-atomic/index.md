@@ -6,11 +6,11 @@ l10n:
   sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
-ARIA ライブリージョンにおいて、グローバルな `aria-atomic` 属性は、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、スクリーンリーダーなどの支援技術が変更された領域をすべて表示するのか、一部だけを表示するのかを示します。
+ARIA ライブリージョンにおいて、グローバルな `aria-atomic` 属性は、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、スクリーンリーダーなどの支援技術が変更された領域をすべて表示するのか、一部だけを表示するのかを示します。
 
 ## 解説
 
-ライブリージョンとは、ユーザーの操作の有無にかかわらず、ユーザーのフォーカスが他の場所にあるときに更新されるウェブページの部分のことです。ユーザーのフォーカスの外側で更新されるため、スクリーンリーダーなどの支援技術は、ユーザーに更新を報告するために更新を「見る」ことができません。 WAI-ARIA には、開発者がこれらのライブ領域を識別し、支援技術に処理方法を指示するためのプロパティとして、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)、`aria-atomic` の 4 つがあります。
+ライブリージョンとは、ユーザーの操作の有無にかかわらず、ユーザーのフォーカスが他の場所にあるときに更新されるウェブページの部分のことです。ユーザーのフォーカスの外側で更新されるため、スクリーンリーダーなどの支援技術は、ユーザーに更新を報告するために更新を「見る」ことができません。 WAI-ARIA には、開発者がこれらのライブ領域を識別し、支援技術に処理方法を指示するためのプロパティとして、 [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)、`aria-atomic` の 4 つがあります。
 
 ライブリージョンのコンテンツが変更されると、 DOM は変更された要素からその祖先を走査し、 `aria-atomic` が設定された最初の要素を探します。これがユーザーに表示するコンテンツを決定します。
 

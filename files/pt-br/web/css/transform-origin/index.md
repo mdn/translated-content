@@ -204,7 +204,7 @@ transform-origin: revert-layer;
 transform-origin: unset;
 ```
 
-A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/initial_value).
+A propriedade `transform-origin` pode ser especificada usando um, dois ou três valores, onde cada valor representa um deslocamento. Deslocamentos que não são definidos explicitamente são redefinidos para seus respectivos [valores iniciais](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value).
 
 Se um único valor {{cssxref("&lt;length&gt;")}} ou {{cssxref("&lt;percentage&gt;")}} for definido, ele representa o deslocamento horizontal.
 

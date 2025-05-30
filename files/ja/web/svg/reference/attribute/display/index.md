@@ -1,12 +1,9 @@
 ---
 title: display
 slug: Web/SVG/Reference/Attribute/display
-original_slug: Web/SVG/Attribute/display
 l10n:
-  sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`display`** 属性は、グラフィック要素またはコンテナー要素のレンダリングを制御します。
 

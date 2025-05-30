@@ -44,7 +44,7 @@ l10n:
 `theme_color` に対応しているブラウザーでは、マニフェストファイルで指定された値が、マニフェストが適用されるすべてのページにわたって、ウェブアプリの既定のテーマ色として使用されます。
 この既定値は、次の方法で上書きすることができます。
 
-- [`theme-color`](/ja/docs/Web/HTML/Element/meta/name/theme-color) の値を HTML の `<meta>` 要素の `name` 属性に使用すると、ウェブページのテーマ色を、アプリに対して指定したマニフェストの `theme_color` とは異なる色に指定することができます。 これによって、アプリ内の個々のページに異なるテーマ色を設定することができます。
+- [`theme-color`](/ja/docs/Web/HTML/Reference/Elements/meta/name/theme-color) の値を HTML の `<meta>` 要素の `name` 属性に使用すると、ウェブページのテーマ色を、アプリに対して指定したマニフェストの `theme_color` とは異なる色に指定することができます。 これによって、アプリ内の個々のページに異なるテーマ色を設定することができます。
 
   ```html
   <meta name="theme-color" content="#9370DB" />

@@ -54,6 +54,6 @@ additional information here).
 - 术语：{{Glossary("CORS")}}
 - [CORS 介绍](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [服务端 CORS 设置](/zh-CN/docs/Web/HTTP/Guides/CORS)
-- [允许图片跨源请求](/zh-CN/docs/Web/HTML/CORS_enabled_image)
-- [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
+- [允许图片跨源请求](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)
+- [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org>——用于测试 CORS 请求的页面

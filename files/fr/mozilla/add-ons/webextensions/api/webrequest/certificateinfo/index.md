@@ -1,6 +1,8 @@
 ---
 title: webRequest.CertificateInfo
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
+l10n:
+  sourceCommit: 6954b3f1f3b1182f36b5d3f60fb6461be371ef2d
 ---
 
 {{AddonSidebar}}
@@ -26,7 +28,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `Boolean`. `true` si le certificat est l'une des racines de confiance installées dans le navigateur, sinon `false`.
 - `issuer`
 
-  - : `String`. Nom de l'organisation qui a délivré ce certificat, représenté par un nom distinctif et formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
+  - : `String`. Le nom distinctif de l'organisation qui a délivré ce certificat, formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
 
     Par exemple: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
 
@@ -36,7 +38,7 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
   - : `String`. Le [numéro de série](https://tools.ietf.org/html/rfc5280#section-4.1.2.2) du certificat.
 - `subject`
 
-  - : `String`. Nom de l'organisation qui a délivré ce certificat, représenté par un nom distinctif et formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
+  - : `String`. Le nom distinctif de l'entité à laquelle le certificat a été délivré, formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
 
     Par exemple: "CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".
 

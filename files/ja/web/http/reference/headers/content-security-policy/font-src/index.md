@@ -1,14 +1,13 @@
 ---
 title: "CSP: font-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`font-src`** ディレクティブは、 {{cssxref("@font-face")}} によってロードされるフォントの有効なソースを指定します。
+HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`font-src`** ディレクティブは、 {{cssxref("@font-face")}} によって読み込まれるフォントの有効なソースを指定します。
 
 <table class="properties">
   <tbody>
@@ -18,7 +17,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`font-sr
     </tr>
     <tr>
       <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Fetch directive")}}</td>
+      <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
@@ -32,24 +31,28 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`font-sr
 
 ## 構文
 
-`font-src` ポリシーには、1 つ以上のソースが許可されています。
-
 ```http
 Content-Security-Policy: font-src <source>;
 Content-Security-Policy: font-src <source> <source>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
 ### 違反している場合
 
-この CSP ヘッダーがある場合、
+この CSP ヘッダーがあったとします。
 
 ```http
 Content-Security-Policy: font-src https://example.com/

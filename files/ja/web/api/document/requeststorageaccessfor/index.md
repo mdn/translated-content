@@ -85,7 +85,7 @@ function rSAFor() {
 }
 ```
 
-`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
+`requestStorageAccessFor()` の呼び出しが成功した後、[CORS](/ja/docs/Web/HTTP/Guides/CORS) / [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を含む場合、クロスサイトリクエストはクッキーを入れることができます。このようなリクエストは [`credentials: "include"`](/ja/docs/Web/API/RequestInit#credentials) オプションを用い、リソースは `crossorigin="use-credentials"` 属性を記載しなければなりません。
 
 例えば、次のようにします。
 

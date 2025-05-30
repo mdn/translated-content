@@ -26,7 +26,7 @@ Há várias coisas que você pode fazer para ajudar na segurança do seu site. E
   - : O padrão _Cross-Origin Resource Sharing_ fornece uma forma de especificar qual conteúdo pode ser carregado de outros domínios. Você pode usar isso para prevenir seu site de ser usado impropriamente; além disso, você pode usá-lo para estabelecer recursos que outros sites são expressamente permitidos de usar.
 - [Política de Segurança de Conteúdo](/pt-BR/docs/Security/CSP)
   - : Uma camada de segurança adicionada que ajuda a detectar e evitar certos tipos de ataques, incluindo _Cross Site Scripting_ (XSS) e ataques de injeção de dados. Esses ataques são usado para tudo, desde roubo de dados até desfiguração de página ou distribuição de malware.
-- [O cabeçalho de resposta X-FRAME-OPTIONS](/pt-BR/docs/Web/HTTP/Headers/X-Frame-Options)
+- [O cabeçalho de resposta X-FRAME-OPTIONS](/pt-BR/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
   - : O cabeçalho de resposta [HTTP](/pt-BR/HTTP) `X-Frame-Options:` pode ser usado para indicar se um navegador deve ser autorizado a renderizar uma página ou não em um elemento {{ HTMLElement("frame") }}. Sites podem usar isso para evitar ataques do tipo _clickjacking_, garantindo que seus conteúdos não estão embutidos em outros sites.
 - [Deixando seu site seguro usando o Htaccess](https://wparena.com/how-to-secure-and-protect-wordpress-website-through-htaccess-file/)
   - : Aprenda a melhor maneira e quase todos os truques para deixar seu site seguro usando o arquivo .htaccess. Você pode colocar endereços IPs em _blacklists_, restringir o acesso a certas áreas do website, proteger diferentes arquivos, proteger contra _hotlink_ de imagens e muito mais.

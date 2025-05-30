@@ -529,9 +529,7 @@ El HTML se ve así:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -625,9 +623,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.

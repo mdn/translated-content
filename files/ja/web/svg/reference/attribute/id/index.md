@@ -1,16 +1,13 @@
 ---
 title: id
 slug: Web/SVG/Reference/Attribute/id
-original_slug: Web/SVG/Attribute/id
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`id`** 属性は要素に固有の名前を割り当てます。
 
-すべての要素がこの属性を使用します。
+すべての要素でこの属性を使用することができます。
 
 ## 例
 
@@ -45,11 +42,11 @@ l10n:
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>None</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
-      <td>いいえ</td>
+      <td>不可</td>
     </tr>
   </tbody>
 </table>
@@ -73,5 +70,5 @@ l10n:
 
 ## 関連情報
 
-- [HTML `id`](/ja/docs/Web/HTML/Global_attributes/id)
+- [HTML の `id`](/ja/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

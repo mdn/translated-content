@@ -30,7 +30,7 @@ HTTP のレスポンスステータスコードは、特定の [HTTP](/ja/docs/W
 - {{HTTPStatus(102, "102 Processing")}} ({{Glossary("WebDAV")}})
   - : このコードは、サーバーはリクエストを受け取って処理しているが、まだレスポンスを提供できないことを示します。
 - {{HTTPStatus(103, "103 Early Hints")}}
-  - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect)させたりします。
+  - : このステータスコードは、主に {{HTTPHeader("Link")}} ヘッダーと共に使用することを意図しており、サーバーがレスポンスを準備している間、ユーザーエージェントにリソースの[事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)を開始させたり、ページがリソースを必要とする元のサーバーに[事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect)させたりします。
 
 ## 成功レスポンス
 

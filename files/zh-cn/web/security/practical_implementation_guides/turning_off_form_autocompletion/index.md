@@ -9,11 +9,11 @@ slug: Web/Security/Practical_implementation_guides/Turning_off_form_autocompleti
 
 这些功能通常是默认启用的，但可能涉及用户的隐私，因此浏览器允许用户禁用这些功能。然而，一些数据可能会在将来失效（例如一次性密码）或包含敏感信息（例如唯一的政府身份识别码或信用卡安全码）。作为网站作者，你可能更希望浏览器不去记住这些字段的值，即使浏览器的自动填充功能已开启。
 
-注意，规则 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) 并不需要自动补全真的能够工作——仅仅只是那些与用户个人信息相关的表单字段能够通过编程的方式分辨出来。意味着即使表单本身的自动补全功能关闭，你也可以通过在相关字段上添加 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 属性来符合这个规则。
+注意，规则 [WCAG 2.1 Success Criterion 1.3.5: Identify Input Purpose](https://www.w3.org/WAI/WCAG21/Understanding/identify-input-purpose.html) 并不需要自动补全真的能够工作——仅仅只是那些与用户个人信息相关的表单字段能够通过编程的方式分辨出来。意味着即使表单本身的自动补全功能关闭，你也可以通过在相关字段上添加 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性来符合这个规则。
 
 ## 禁用自动补全
 
-要禁用表单自动补全，你可以将 [`autocomplete`](/zh-CN/docs/Web/HTML/Attributes/autocomplete) 的属性设置为 "off"：
+要禁用表单自动补全，你可以将 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 的属性设置为 "off"：
 
 ```plain
 autocomplete="off"
@@ -61,6 +61,4 @@ autocomplete="off"
 
 如果你定义了一个用户管理页面，其中用户可以为其他人指定新的密码，因此你想阻止密码字段的自动填充，你可以使用 `autocomplete="new-password"`。
 
-这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 [Firefox bug 1119063](https://bugzil.la/1119063)）在这种情况下会停止自动填充；而 Firefox 70 版（见 [Firefox bug 1565407](https://bugzil.la/1565407)）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Attributes/autocomplete#浏览器兼容性)。
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
+这只是一个提示，浏览器不一定要遵守。但现代浏览器都已停止在设置了 `autocomplete="new-password"` 的 `<input>` 元素上使用自动填充。例如，Firefox 67 版（见 [Firefox bug 1119063](https://bugzil.la/1119063)）在这种情况下会停止自动填充；而 Firefox 70 版（见 [Firefox bug 1565407](https://bugzil.la/1565407)）则可以建议一个安全生成的密码，而不自动填充已保存的密码。更多细节参见 [`autocomplete` 兼容性表格](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete#浏览器兼容性)。

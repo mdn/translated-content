@@ -42,7 +42,7 @@ Clear-Site-Data: "*"
 > Todas as diretivas devem estar de acordo com a [gramática de cadeia de caracteres com as aspas](https://tools.ietf.org/html/rfc7230#section-3.2.6). A diretiva que não inclui aspas duplas é inválida.
 
 - `"cache"`
-  - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
+  - : Indica que o servidor quer remover localmente os dados cacheados (i.e. o cache do navegador, veja [HTTP caching](/pt-BR/docs/Web/HTTP/Guides/Caching)) para a URL de origem da resposta. Dependendo do navegador, essa diretiva pode acabar apagando outras coisas como páginas pré-renderizadas, _scripts_ armazenados, shaders WebGL ou sugestões na barra de endereço.
 - `"cookies"`
   - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, `https://example.com` também como `https://stage.example.com`, terão seus _cookies_ limpos.
 - `"storage"`

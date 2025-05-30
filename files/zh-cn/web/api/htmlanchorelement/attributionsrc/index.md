@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-{{domxref("HTMLAnchorElement")}} 接口的 **`attributionSrc`** 属性用于以编程方式获取和设置 {{htmlelement("a")}} 元素上的 [`attributionsrc`](/zh-CN/docs/Web/HTML/Element/a#attributionsrc) 属性，反映该属性的值。`attributionsrc` 指定你希望浏览器发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。在服务器端，这用于触发在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 标头，以注册一个[基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)。
+{{domxref("HTMLAnchorElement")}} 接口的 **`attributionSrc`** 属性用于以编程方式获取和设置 {{htmlelement("a")}} 元素上的 [`attributionsrc`](/zh-CN/docs/Web/HTML/Reference/Elements/a#attributionsrc) 属性，反映该属性的值。`attributionsrc` 指定你希望浏览器发送 {{httpheader("Attribution-Reporting-Eligible")}} 标头。在服务器端，这用于触发在响应中发送 {{httpheader("Attribution-Reporting-Register-Source")}} 标头，以注册一个[基于导航的归因来源](/zh-CN/docs/Web/API/Attribution_Reporting_API/Registering_sources#基于导航的归因来源)。
 
 当浏览器接收到导航响应时，它会存储与基于导航的归因来源相关联的源数据（如 {{httpheader("Attribution-Reporting-Register-Source")}} 响应标头中所提供的数据）。
 

@@ -151,12 +151,12 @@ The MDN [Web Performance Learning Area](/ru/docs/Learn_web_development/Extension
 
 HTML
 
-- [The `<picture>` Element](/ru/docs/Web/HTML/Element/picture)
-- [The `<video>` Element](/ru/docs/Web/HTML/Element/video)
-- [The `<source>` Element](/ru/docs/Web/HTML/Element/source)
-- [The `<img> srcset` attribute](/ru/docs/Web/HTML/Element/img#attributes)
+- [The `<picture>` Element](/ru/docs/Web/HTML/Reference/Elements/picture)
+- [The `<video>` Element](/ru/docs/Web/HTML/Reference/Elements/video)
+- [The `<source>` Element](/ru/docs/Web/HTML/Reference/Elements/source)
+- [The `<img> srcset` attribute](/ru/docs/Web/HTML/Reference/Elements/img#attributes)
 
-  - [Responsive images](/ru/docs/Web/HTML/Responsive_images)
+  - [Responsive images](/ru/docs/Web/HTML/Guides/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/ru/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 

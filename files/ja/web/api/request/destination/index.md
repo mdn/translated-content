@@ -30,8 +30,8 @@ l10n:
 - `""`
 
   - : 空文字列は既定値であり、独自の値を持たない出力先に対して使用されます。これは、以下の API（その他多数）を使用してリクエストが行われた場合の値です。
-    - [`<a ping>`](/ja/docs/Web/HTML/Element/a#ping)
-    - [`<area ping>`](/ja/docs/Web/HTML/Element/area#ping)
+    - [`<a ping>`](/ja/docs/Web/HTML/Reference/Elements/a#ping)
+    - [`<area ping>`](/ja/docs/Web/HTML/Reference/Elements/area#ping)
     - {{domxref("Cache")}}
     - {{domxref("EventSource")}}
     - {{domxref("Window/fetch", "fetch()")}}

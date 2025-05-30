@@ -1,9 +1,8 @@
 ---
 title: "CSP: style-src-attr"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -37,12 +36,22 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-s
 
 ## 構文
 
-`style-src-attr` ポリシーでは、 1 つ以上のソースを許可することができます。
-
 ```http
-Content-Security-Policy: style-src-attr <source>;
-Content-Security-Policy: style-src-attr <source> <source>;
+Content-Security-Policy: style-src-attr 'none';
+Content-Security-Policy: style-src-attr <source-expression-list>;
 ```
+
+このディレクティブは、次のいずれかの値を指定することができます。
+
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'unsafe-inline'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'report-sample'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
 
 `style-src-attr` は {{CSP("style-src")}} との組み合わせで使用することができます。
 
@@ -50,12 +59,6 @@ Content-Security-Policy: style-src-attr <source> <source>;
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src-attr <source>;
 ```
-
-### ソース
-
-`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース) に掲載されている値のいずれかが使用できます。
-
-この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#relevant_directives)）で使用できるということに注意してください。
 
 ## 例
 

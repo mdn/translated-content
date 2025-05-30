@@ -3,7 +3,7 @@ title: 设置 Node 开发环境
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction", "Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 你已经了解了 Express 的用途，接下来将在 Windows、Linux（Ubuntu）和 Mac OS X 下搭建 Node/Express 开发环境。本节将介绍主流操作系统下开发 Express 程序的必备知识。
 

@@ -1,12 +1,11 @@
 ---
 title: xlink:href
 slug: Web/SVG/Reference/Attribute/xlink:href
-original_slug: Web/SVG/Attribute/xlink:href
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`xlink:href`** 属性は、リソースを参照する [IRI](/ja/docs/Web/SVG/Guides/Content_type#iri) として参照先を定義します。そのリンクが正確に意味している内容は、そのリンクを使用している各要素のコンテキストによって異なります。
 

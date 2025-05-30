@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f7856d2fbfadb97180aa651ba6a03820643ea6ec
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
+{{NextMenu("Learn_web_development/Extensions/Testing/Testing_strategies", "Learn_web_development/Extensions/Testing")}}
 
 本文是对跨浏览器测试的概述，帮助了解什么是跨浏览器测试、常见的问题都有哪些以及应该怎么调试和修复问题。
 

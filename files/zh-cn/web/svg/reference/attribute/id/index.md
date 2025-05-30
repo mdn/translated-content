@@ -70,5 +70,5 @@ l10n:
 
 ## 参见
 
-- [HTML `id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

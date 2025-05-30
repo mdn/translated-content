@@ -67,7 +67,7 @@ l10n:
 <form action="/my-handling-form-page" method="post">…</form>
 ```
 
-これは、フォームを正式に定義します。これは {{HTMLelement("section")}} や {{HTMLelement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性にも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Element/form#action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#method) 属性は常に設定するのがふつうです。
+これは、フォームを正式に定義します。これは {{HTMLelement("section")}} や {{HTMLelement("footer")}} 要素と同様にコンテナー要素ですが、フォームを含めるのに特化しています。フォームの動作方法を設定するための特有の属性にも対応しています。すべての属性は省略可能ですが、少なくとも [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性と [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性は常に設定するのがふつうです。
 
 - `action` 属性は、フォームで収集したデータを送信すべき場所 (URL) を定義します。
 - `method` 属性は、データを送信するために使用する HTTP メソッド（`get` または `post`）を定義します。
@@ -108,7 +108,7 @@ l10n:
 
 {{HTMLelement("p")}} 要素はコードを扱いやすく構造化するとともに、スタイル設定を容易にするため (後述) に置いています。
 ユーザビリティとアクセシビリティのため、それぞれのフォームコントロールに明示的にラベルをつけます。
-[`for`](/ja/docs/Web/HTML/Attributes/for) 属性をすべての {{HTMLelement("label")}} 要素に使用し、その値として関連付けるフォームコントロールの [`id`](/ja/docs/Web/HTML/Global_attributes/id) を取ります。これで、フォームコントロールをラベルと関連付けることができます。
+[`for`](/ja/docs/Web/HTML/Reference/Attributes/for) 属性をすべての {{HTMLelement("label")}} 要素に使用し、その値として関連付けるフォームコントロールの [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を取ります。これで、フォームコントロールをラベルと関連付けることができます。
 
 これには利点があります。フォームコントロールにラベルを関連付けて、ユーザーがマウス、トラックパッド、タッチ端末でラベルをクリックすると、対応するウィジェットがアクティブになり、スクリーンリーダーのユーザーに読み上げられるアクセシブルな名前が提供されます。
 この属性の利点をさらに知りたいのであれば、[ウェブフォームの構築方法](/ja/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form) の記事ですべてを詳しく説明しています。
@@ -128,7 +128,7 @@ l10n:
 これは HTML の奇妙な点の 1 つです。
 `<input>` タグは{{glossary("void element", "空要素")}}です。つまり、終了タグは不要です。
 一方 {{HTMLelement("textarea")}} は空要素ではないので、適切な終了タグで閉じる必要があります。これは HTML フォームの特定の機能、つまり既定値の定義方法に影響があります。
-{{HTMLelement("input")}} 要素の既定値を定義するには、次のように [`value`](/ja/docs/Web/HTML/Element/input#値) 属性を使う必要があります。
+{{HTMLelement("input")}} 要素の既定値を定義するには、次のように [`value`](/ja/docs/Web/HTML/Reference/Elements/input#値) 属性を使う必要があります。
 
 ```html
 <input type="text" value="既定でこの要素にはこの文章が挿入されます" />
@@ -252,7 +252,7 @@ button {
 ## ウェブサーバーへのデータの送信
 
 最後の、またもっともややこしいであろう部分が、サーバー側でのフォームデータの扱いです。
-{{HTMLelement("form")}} 要素は [`action`](/ja/docs/Web/HTML/Element/form#action) 属性と [`method`](/ja/docs/Web/HTML/Element/form#method) 属性により、どこへどのようにデータを送信するかを定義できます。
+{{HTMLelement("form")}} 要素は [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性と [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) 属性により、どこへどのようにデータを送信するかを定義できます。
 
 フォームコントロールには `name` をつけます。これらの名前はクライアント側とサーバー側の両側で重要です。ブラウザー側ではそれぞれのデータにどのような名前をつけるかを示すものであり、サーバー側では名前によってそれぞれのデータを扱うことができます。フォームデータは名前/値のペアとしてサーバーに送信されます。
 

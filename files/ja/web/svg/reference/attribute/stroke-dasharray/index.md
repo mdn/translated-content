@@ -1,17 +1,14 @@
 ---
 title: stroke-dasharray
 slug: Web/SVG/Reference/Attribute/stroke-dasharray
-original_slug: Web/SVG/Attribute/stroke-dasharray
 l10n:
-  sourceCommit: c96ce9d5fe799c403ebb4d0544f4befa2b3f6bd7
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`stroke-dasharray`** 属性は、図形の輪郭線を描くのに用いるダッシュとすき間のパターンを定義するプレゼンテーション属性です。
+**`stroke-dasharray`** 属性は、図形の描線を描くのに用いるダッシュとすき間のパターンを定義するプレゼンテーション属性です。
 
 > [!NOTE]
-> プレゼンテーション属性である `stroke-dasharray` は、CSS プロパティとして使用することができます。
+> プレゼンテーション属性であるため、 `stroke-dasharray` には対応する CSS プロパティ {{cssxref("stroke-dasharray")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は以下の SVG 要素で使用することができます。
 
@@ -98,3 +95,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("stroke-dasharray")}} プロパティ

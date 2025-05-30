@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Feature_detection", "Learn_web_development/Extensions/Testing/Your_own_automation_environment", "Learn_web_development/Extensions/Testing")}}
 
 每天手动在多个浏览器和设备上多次运行测试可能有点乏味且耗时。为了高效处理，你应该熟悉自动化工具。本文将介绍现有的工具、如何使用任务运行器，以及如何使用 LambdaTest、Sauce Labs、BrowserStack 和 TestingBot 等商业浏览器测试自动化应用程序的基础知识。
 
@@ -361,13 +361,10 @@ export function watch() {
 登录到 LambdaTest 后，你将被导航到 LambdaTest 仪表板。仪表板将向你提供详细信息，包括你已消耗了多少分钟，有多少并发会话正在运行，你迄今为止的总测试数量等。
 
 1. 要开始手动测试，你需要从左侧导航菜单中选择“**Real Time Testing**”标签。
-   ![LambdaTest 仪表板](lambdatest-dashboard.png)
 2. 点击 **Real Time Testing** 后，你将被引导到一个屏幕，在该屏幕上，你可以选择用来测试你的网站的浏览器配置、浏览器版本、操作系统和屏幕分辨率。
-   ![实时测试](mark-as-bug-1.png)
 3. 点击 Start 按钮后，将出现一个加载屏幕，根据你的配置提供一个基于虚拟机的 VM（虚拟机）。加载完成后，你可以在网站上进行实时，可交互的跨浏览器测试。
-   [![标记为 bug](mark-as-bug-2.png)](https://web.archive.org/web/20210608014707if_/https://www.lambdatest.com/support/docs/wp-content/uploads/2019/03/mark-as-bug-2.png)
    如果你注意到 UI 的问题，则可以通过使用屏幕截图按钮捕获你的 VM 的屏幕截图与同事共享。你还可以通过在测试会话中点击记录器按钮来录制测试会话的视频。
-4. 使用内置的图像编辑器，在将截图推送给同事之前标注你的截图。![标注错误](mark-as-bug-3.png)
+4. 使用内置的图像编辑器，在将截图推送给同事之前标注你的截图。
 5. 使用“标记为 bug”按钮，你可以将 bug 推送到诸多第三方工具，如 Jira、Asana、Trello 等。这样，你可以直接从 LambdaTest 的测试会话将错误记录到你的项目管理实例中。查看所有[第三方 LambdaTest 集成](https://www.lambdatest.com/integrations)。
 
 > [!NOTE]

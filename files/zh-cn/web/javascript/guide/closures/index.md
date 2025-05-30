@@ -486,7 +486,7 @@ setupHelp();
 
 这个示例使用 `const` 而不是 `var`，因此每个闭包绑定的是块作用域变量，这意味着不再需要额外的闭包。
 
-另一个可选方案是使用 `forEach()` 遍历 `helpText` 数组并给每一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 添加一个监听器，如下所示：
+另一个可选方案是使用 `forEach()` 遍历 `helpText` 数组并给每一个 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 添加一个监听器，如下所示：
 
 ```js
 function showHelp(help) {

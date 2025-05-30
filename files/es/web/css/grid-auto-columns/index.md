@@ -62,8 +62,6 @@ grid-auto-columns: minmax(10px, auto);
 }
 ```
 
-La version original interactiva de este artículo se guarda en un repositorio GitHub . If you'd like to contribute to the interactive examples project, please clone <https://github.com/mdn/interactive-examples> and send us a pull request.
-
 Si un item grid se posiciona dentro de una columna que no tenga un tamaño explícito para {{cssxref("grid-template-columns")}}, implícito{{glossary("grid", "grid")}}las pistan se crean para sostenerlo. Esto puede suceder posicionándose explícitamente en una columna que está fuera de rango, o mediante el algoritmo de auto colocación creando columnas adicionales.
 
 ## Sintaxis

@@ -35,7 +35,7 @@ Para contribuir, você precisará de uma conta GitHub. Se você ainda não tem u
 ### Material adicional de leitura e aprendizado
 
 - [Etiqueta básica para projetos de código aberto](/pt-BR/docs/MDN/Community/Open_source_etiquette): Se você nunca contribuiu para um projeto de código aberto antes, recomendamos a leitura deste documento.
-- [Aprenda desenvolvimento web](/pt-BR/docs/Learn): Se você é novo em HTML, CSS, JavaScript, temos um ótimo conteúdo para ajudá-lo a começar.
+- [Aprenda desenvolvimento web](/pt-BR/docs/Learn_web_development): Se você é novo em HTML, CSS, JavaScript, temos um ótimo conteúdo para ajudá-lo a começar.
 - [Aprofundar-se na colaboração com pull requests](https://docs.github.com/pt/pull-requests/collaborating-with-pull-requests)
 
 Algumas oportunidades de contribuição específicas de redação exigirão um entendimento razoável do idioma inglês. Dito isso, não deixe que o perfeito seja inimigo do "suficientemente bom". Mesmo que sua gramática não seja boa, não se preocupe! Temos uma equipa de pessoas que visam garantir que os conteúdos do MDN são os melhores possíveis. Além disso, alguém estará junto para garantir que seu trabalho esteja organizado e bem escrito.

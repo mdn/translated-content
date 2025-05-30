@@ -217,25 +217,18 @@ favicon은 다음과 같이 너의 사이트에 추가할 수 있다:
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- iPhone with high-resolution Retina display: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- first- and second-generation iPad: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- basic favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 주석은 각 아이콘의 용도를 설명한다. 웹사이트가 iPad의 홈 화면에 저장 될 때 사용할 고해상도 아이콘을 제공하는 것 등을 포함한다.

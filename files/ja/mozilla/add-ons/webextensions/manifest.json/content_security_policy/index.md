@@ -26,7 +26,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
   </tbody>
 </table>
 
-拡張機能には、既定でコンテンツセキュリティポリシー (CSP) が適用されます。既定のポリシーでは、 [\<script>](/ja/docs/Web/HTML/Element/script) や [\<object>](/ja/docs/Web/HTML/Element/object) リソースを読み込むソースを制限し、 [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のような潜在的に安全でない可能性がある行為を禁止しています。この実装のより詳細は[既定のコンテンツセキュリティポリシー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy)を見てください。
+拡張機能には、既定でコンテンツセキュリティポリシー (CSP) が適用されます。既定のポリシーでは、 [\<script>](/ja/docs/Web/HTML/Reference/Elements/script) や [\<object>](/ja/docs/Web/HTML/Reference/Elements/object) リソースを読み込むソースを制限し、 [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のような潜在的に安全でない可能性がある行為を禁止しています。この実装のより詳細は[既定のコンテンツセキュリティポリシー](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy)を見てください。
 
 `"content_security_policy"` manifest キーを使用して、アドオンのセキュリティを緩くしたり逆にもっと制限することができます。 このキーは、 HTTP の Content-Security-Policy ヘッダーと同じ方法で指定されます。 CSP の構文の一般的な説明は [CSP の使用](/ja/docs/Web/HTTP/Guides/CSP)を見てください。
 

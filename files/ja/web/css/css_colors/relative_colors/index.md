@@ -319,9 +319,9 @@ rgb(from red r g b / alpha)
 
 参考として、以下に HTML の全文を掲載します。最も興味深い部分は次の通りです。
 
-- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Global_attributes/style)) として設定されています。JavaScript で簡単に値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
-- ベース色のピッカーは、 [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color) コントロールを使用して作成されます。このコントロールに新しい値が設定されると、 JavaScript で `--base-color` カスタムプロパティにこの値が設定され、新しい色パレットが生成されます。表示される色はすべて、 `--base-color` をベースにした相対色です。
-- 一連の [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) コントロールにより、生成する色パレットの種類を選択することができます。ここで新しい値が選択されると、JavaScript を使用して、選択されたパレットを表す新しいクラスを `container` の `<div>` に設定します。 CSS では、子の `<div>` （`.comp :nth-child(1)` など）を対象とするために子孫セレクターを使用します。これにより、正しい色を適用し、使用されていない `<div>` ノードを非表示にすることができます。
+- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)) として設定されています。JavaScript で簡単に値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
+- ベース色のピッカーは、 [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) コントロールを使用して作成されます。このコントロールに新しい値が設定されると、 JavaScript で `--base-color` カスタムプロパティにこの値が設定され、新しい色パレットが生成されます。表示される色はすべて、 `--base-color` をベースにした相対色です。
+- 一連の [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio) コントロールにより、生成する色パレットの種類を選択することができます。ここで新しい値が選択されると、JavaScript を使用して、選択されたパレットを表す新しいクラスを `container` の `<div>` に設定します。 CSS では、子の `<div>` （`.comp :nth-child(1)` など）を対象とするために子孫セレクターを使用します。これにより、正しい色を適用し、使用されていない `<div>` ノードを非表示にすることができます。
 - `container` の `<div>` は、生成されたパレットの色を表示する子の `<div>` を含んでいます。初期クラスとして `comp` が設定されていることに注意してください。これにより、ページが最初に読み込まれた際に補色の配色が表示されるようになります。
 
 ```html
@@ -605,7 +605,7 @@ function setBaseColor(e) {
 
 ### ライブの UI 配色更新ツール
 
-この例は、見出しとテキストを含むカードに、ちょっとした工夫を加えたものがあります。カードの下記にはスライダー ([`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)) コントロールがあります。値が変更されると、JavaScript を使用して、 `--hue` カスタムプロパティ値を新しいスライダー値に設定します。
+この例は、見出しとテキストを含むカードに、ちょっとした工夫を加えたものがあります。カードの下記にはスライダー ([`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)) コントロールがあります。値が変更されると、JavaScript を使用して、 `--hue` カスタムプロパティ値を新しいスライダー値に設定します。
 
 これにより、 UI 全体の配色が調整されます。
 
@@ -617,8 +617,8 @@ function setBaseColor(e) {
 例えば、下記に HTML を示します。
 
 - {{htmlelement("main")}} 要素は、残りのコンテンツを格納する外側のラッパーとして機能し、カードとフォームを 1 つの単位として、 `<main>` 要素の中に垂直方向と水平方向の中央揃えで配置することを可能にします。
-- この {{htmlelement("section")}} 要素には、カードのコンテンツを定義する [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と {{htmlelement("p")}} 要素が設定されています。
-- {{htmlelement("form")}} 要素には範囲 ([`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)) コントロールとそのラベル ({{htmlelement("label")}}) があります。
+- この {{htmlelement("section")}} 要素には、カードのコンテンツを定義する [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と {{htmlelement("p")}} 要素が設定されています。
+- {{htmlelement("form")}} 要素には範囲 ([`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)) コントロールとそのラベル ({{htmlelement("label")}}) があります。
 
 ```html
 <main>

@@ -3,7 +3,7 @@ title: 原生表单部件
 slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/How_to_structure_a_web_form", "Learn_web_development/Extensions/Forms/HTML5_input_types", "Learn_web_development/Extensions/Forms")}}
 
 在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)中，我们标记了一个功能性的 web 表单示例，介绍了一些表单部件和常见的结构元素，并重点介绍了无障碍的最佳实践。现在，我们将详细研究不同表单部件的功能，查看了哪些选项可用于收集不同类型的数据。这个指南有些详尽，涵盖了所有可用的原生表单小部件。
 
@@ -29,7 +29,7 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 - 所有表单部件共有的一些属性。
 
 > [!NOTE]
-> 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Element#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Element/input)参考。
+> 本文中讨论的大多数特性都在浏览器中得到了广泛的支持，但并非所有表单部件都受浏览器支持。我们在接下来的两篇文章中提到了 HTML5 带来的新的表单部件。如果你想要更准确的细节，你应该参考我们的 [HTML 表单元素参考](/zh-CN/docs/Web/HTML/Reference/Elements#forms)，特别是我们的种类繁多的 [\<input> 类型](/zh-CN/docs/Web/HTML/Reference/Elements/input)参考。
 
 ## 文本输入框
 
@@ -40,16 +40,16 @@ slug: Learn_web_development/Extensions/Forms/Basic_native_form_controls
 
 所有文本框都有一些通用规范：
 
-- 它们可以被标记为 [`readonly`](/zh-CN/docs/Web/HTML/Element/input#readonly)（用户不能修改输入值）甚至是 [`disabled`](/zh-CN/docs/Web/HTML/Element/input#disabled)（输入值永远不会与表单数据的其余部分一起发送）。
-- 它们可以有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder)；这是文本输入框中出现的文本，用来简略描述输入框的目的。
-- 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Attributes/maxlength)（可以输入的最大字符数）进行限制。
-- 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Global_attributes/spellcheck) 属性）中获益。
+- 它们可以被标记为 [`readonly`](/zh-CN/docs/Web/HTML/Reference/Elements/input#readonly)（用户不能修改输入值）甚至是 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/input#disabled)（输入值永远不会与表单数据的其余部分一起发送）。
+- 它们可以有一个 [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder)；这是文本输入框中出现的文本，用来简略描述输入框的目的。
+- 它们可以使用 [`size`](/zh-CN/docs/Web/HTML/Reference/Attributes/size)（框的物理尺寸）和 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)（可以输入的最大字符数）进行限制。
+- 如果浏览器支持的话，它们可以从拼写检查（使用 [`spellcheck`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck) 属性）中获益。
 
-> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
+> **备注：** {{htmlelement("input")}} 元素是如此特别因为它可以通过简单设置 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，来接收多种类型的数据。它被用于创建大多数类型的表单小部件，包括单行文本字段、没有文本输入的控件、时间和日期控件和按钮。
 
 ### 单行文本框
 
-使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性，该属性将被默认设置为 `text`）。在你指定的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
+使用 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值被设置为 `text` 的 {{HTMLElement("input")}} 元素创建一个单行文本框（同样的，如果你不提供 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性，该属性将被默认设置为 `text`）。在你指定的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性的值在浏览器中是未知的情况下（比如你指定 `type="date"`，但是浏览器不支持原生日期选择器），属性值也将会回落到 `text`。
 
 > [!NOTE]
 > 你可以在 Github 上的 [single-line-text-fields.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/single-line-text-fields.html) 找到所有单行文本框类型（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/single-line-text-fields.html)）。
@@ -67,7 +67,7 @@ _以下截图现实了 macOS 上的 Firefox 71 和 Safari 以及 Windows 10 上�
 ![Screenshot of the disabled attribute and default :focus styles on a text input in Firefox, Safari, Chrome and Edge.](disabled.png)
 
 > [!NOTE]
-> HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)。
+> HTML5 通过为 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性增加特殊值增强了基本单行文本框。这些值仍然将 {{HTMLElement("input")}} 元素转换为单行文本框，但它们为字段添加了一些额外的约束和特性。例如，URL 和 数值类型的约束，我们将会在下一篇文章中介绍：[HTML5 input 类型](/zh-CN/docs/Learn_web_development/Extensions/Forms/HTML5_input_types)。
 
 #### 密码框
 
@@ -97,9 +97,9 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 ## 可选中项：复选框和单选按钮
 
-可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性，以指示该部件的默认状态：“选中”或“未选中”。
+可选中项是可以通过单击它们来更改状态的小部件。有两种可选中项：复选框和单选按钮。两者都使用 [`checked`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#attr-checked) 属性，以指示该部件的默认状态：“选中”或“未选中”。
 
-值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
+值得注意的是，这些小部件与其他表单小部件不一样。对于大多数表单部件，一旦表单提交，所有具有 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性的小部件都会被发送，即使没有任何值被填。对于可选中项，只有在勾选时才发送它们的值。如果他们没有被勾选，就不会发送任何东西，甚至连他们的名字也没有。而在它们被勾选且没有提供值（value）时，将会发送名字和缺省值 `on`。
 
 > [!NOTE]
 > 你可以在 Github 上看到 [checkable-items.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/checkable-items.html)（你也可以直接看[预览版](https://mdn.github.io/learning-area/html/forms/native-form-widgets/checkable-items.html)）。
@@ -108,13 +108,13 @@ HTML5 中添加了其他的文本输入类型，如：{{HTMLElement("input/searc
 
 ### 复选框
 
-使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `checkbox` 的 {{HTMLElement("input")}} 元素来创建一个{{HTMLElement("input/checkbox", "复选框")}}。
+使用 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值为 `checkbox` 的 {{HTMLElement("input")}} 元素来创建一个{{HTMLElement("input/checkbox", "复选框")}}。
 
 ```html
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
-相关的复选框元素应该使用具有相同值的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性。包含 `checked` 属性使复选框在页面加载时自动被选中。点击复选框或其相关联的标签也将自动翻转复选框的状态（选中、取消选中）
+相关的复选框元素应该使用具有相同值的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性。包含 `checked` 属性使复选框在页面加载时自动被选中。点击复选框或其相关联的标签也将自动翻转复选框的状态（选中、取消选中）
 
 ```html
 <fieldset>
@@ -146,19 +146,19 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 ![Default, focused and disabled Checkboxes in Firefox 71 and Safari 13 on Mac and Chrome 79 and Edge 18 on Windows 10](checkboxes.png)
 
 > [!NOTE]
-> 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Element/input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
+> 任何带有 [`checked`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#attr-checked) 属性的复选框和单选按钮在加载时都会匹配 {{cssxref(':default')}} 伪类，即使它们后面不再被选中。任何当前被选中的元素，都会匹配 {{cssxref(':checked')}} 伪类。
 
 由于复选框的开关特性，其被认为是一种切换按钮，许多开发者和设计人员覆盖了默认的复选框样式，以使其看起来像是一个切换开关的按钮。你可以在[这里看到一个示例](https://mdn.github.io/learning-area/html/forms/toggle-switch-example/)（参见[源码](https://github.com/mdn/learning-area/blob/main/html/forms/toggle-switch-example/index.html)）。
 
 ### 单选按钮
 
-使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值为 `radio` 的 {{HTMLElement("input")}} 元素来创建一个单选按钮。
+使用 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值为 `radio` 的 {{HTMLElement("input")}} 元素来创建一个单选按钮。
 
 ```html
 <input type="radio" id="soup" name="meal" checked />
 ```
 
-几个单选按钮可以连接在一起。如果它们的 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性共享相同的值，那么它们将被认为属于同一组的按钮。同一组中只有一个按钮可以同时被选；这意味着当其中一个被选中时，所有其他的都将自动未选中。如果没有选中任何一个，那么整个单选按钮池就被认为处于未知状态，并且没有以表单的形式发送任何值。
+几个单选按钮可以连接在一起。如果它们的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性共享相同的值，那么它们将被认为属于同一组的按钮。同一组中只有一个按钮可以同时被选；这意味着当其中一个被选中时，所有其他的都将自动未选中。如果没有选中任何一个，那么整个单选按钮池就被认为处于未知状态，并且没有以表单的形式发送任何值。
 
 ```html
 <fieldset>
@@ -240,7 +240,7 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 
 **图像按钮**（image button）控件渲染的方式与 {{HTMLElement("img")}} 几乎完全相同。只是在用户点击它时，图像按钮的行为与提交（submit）按钮相同。
 
-图像按钮是使用 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性值设置为 `image` 的 {{HTMLElement("input")}} 元素创建的。这个元素支持与 {{HTMLElement("img")}} 元素相同的属性，和其他表单按钮支持的所有属性。
+图像按钮是使用 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性值设置为 `image` 的 {{HTMLElement("input")}} 元素创建的。这个元素支持与 {{HTMLElement("img")}} 元素相同的属性，和其他表单按钮支持的所有属性。
 
 ```html
 <input type="image" alt="Click me!" src="my-img.png" width="80" height="30" />
@@ -248,8 +248,8 @@ _以下截图显示了 macOS 上的 Firefox 71 和 Safari 13 以及 Windows 10 �
 
 如果使用图像按钮来提交表单，这个小部件不会提交它的值；而是提交在图像上单击处的 X 和 Y 坐标（坐标是相对于图像的，这意味着图像的左上角表示坐标 (0, 0)），坐标被发送为两个键/值对：
 
-- X 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.x”。
-- Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Element/input#name) 属性的值，后面是字符串“.y”。
+- X 值键是 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性的值，后面是字符串“.x”。
+- Y 值键是 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/input#name) 属性的值，后面是字符串“.y”。
 
 例如，当你点击这个小部件图像坐标为 (123,456) 的位置时，它将会通过 `get` 方法提交。你可以看到类似的 URL：
 
@@ -263,7 +263,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)的文章中详细描述了这个特定的操作。文件选择器小部件是用户如何选择一个或多个文件来发送的。
 
-要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Element/input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Element/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Element/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性来实现。
+要创建一个[文件选择器小部件](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)，你可以使用 {{HTMLElement("input")}} 元素，将它的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性设置为 `file`。被接受的文件类型可以使用 [`accept`](/zh-CN/docs/Web/HTML/Reference/Elements/input#accept) 属性来约束。此外，如果你想让用户选择多个文件，那么可以通过添加 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性来实现。
 
 #### 示例
 
@@ -295,19 +295,19 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
  </thead>
  <tbody>
   <tr>
-   <td><code><a href="/zh-CN/docs/Web/HTML/Global_attributes/autofocus">autofocus</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/HTML/Reference/Global_attributes/autofocus">autofocus</a></code></td>
    <td>false</td>
    <td>这个布尔属性允许你指定当页面加载时元素应该自动具有输入焦点，除非用户覆盖它，例如通过键入不同的控件。文档中只有一个与表单相关的元素可以指定这个属性。</td>
   </tr>
   <tr>
-   <td><code><a href="/zh-CN/docs/Web/HTML/Attributes/disabled">disabled</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code></td>
    <td>false</td>
    <td>
     这个布尔属性表示用户不能与元素交互。如果没有指定这个属性，元素将从包含它的元素继承设置，例如 {{HTMLElement("fieldset")}}；如果没有包含在设定了 <code>disabled</code> 属性的元素里，那么这个元素就是可用的。
    </td>
   </tr>
   <tr>
-   <td><code><a href="/zh-CN/docs/Web/HTML/Element/form">form</a></code></td>
+   <td><code><a href="/zh-CN/docs/Web/HTML/Reference/Elements/form">form</a></code></td>
    <td></td>
    <td>
     小部件与之相关联的表单元素。属性值必需是同个文档中的 {{HTMLElement("form")}} 元素的 <code>id</code> 属性。理论上，它允许你在 {{HTMLElement("form")}} 元素之外设置一个表单小部件。
@@ -328,7 +328,7 @@ HTML 表单能够将文件发送到服务器；在[发送和检索表单数据](
 
 ## 技能测试！
 
-你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls)。
+你已经看完了这篇文章的主要内容，但你还记得所有重要的信息吗？在继续学习其他内容之前，你可以在这里找到进一步的测试来确定你是否掌握了这些知识点——请参见[技能测试：基础控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)。
 
 ## 总结
 

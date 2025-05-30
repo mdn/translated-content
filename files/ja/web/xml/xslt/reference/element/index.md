@@ -1,14 +1,12 @@
 ---
 title: XSLT 要素リファレンス
+short-title: 要素
 slug: Web/XML/XSLT/Reference/Element
-original_slug: Web/XSLT/Reference/Element
 l10n:
-  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-ここでは、最上位要素と命令の 2 種類の要素について説明します。最上位の要素は `<xsl:stylesheet>` または `<xsl:transform>` の子として表示する必要があります。一方、命令はテンプレートに関連付けられています。スタイルシートにはいくつかのテンプレートが含まれています。ここでは説明しない第 3 の種類の要素はリテラル結果要素 (LRE) です。 LRE もテンプレートに現れます。これは、HTML 変換スタイルシートの `<hr>` 要素など、結果文書にそのままコピーする必要のある非命令要素から構成されます。
+ここでは、最上位の要素と命令の 2 種類の要素について説明します。最上位の要素は `<xsl:stylesheet>` または `<xsl:transform>` の子として置く必要があります。一方、命令はテンプレートに関連付けられています。スタイルシートには複数のテンプレートが含まれていることがあります。ここでは説明しない第 3 の種類の要素はリテラル結果要素 (LRE) です。 LRE もテンプレートに現れます。これは、HTML 変換スタイルシートの `<hr>` 要素など、結果文書にそのままコピーする必要のある非命令要素から構成されます。
 
 関連メモとして、LRE の任意の属性と、限られた数の XSLT 要素の一部の属性は、属性値テンプレートとして知られているものを含めることができます。属性値テンプレートは、属性の値を指定するために使用する XPath 式を記述した文字列です。実行時にこの式が評価され、その結果が XPath 式に置き換えられます。例えば、変数 "`image-dir`" が次のように定義されていると想定します。
 
@@ -41,14 +39,14 @@ l10n:
 - [`<xsl:copy-of>`](/ja/docs/Web/XML/XSLT/Reference/Element/copy-of)
 - [`<xsl:decimal-format>`](/ja/docs/Web/XML/XSLT/Reference/Element/decimal-format)
 - [`<xsl:element>`](/ja/docs/Web/XML/XSLT/Reference/Element/element)
-- [`<xsl:fallback>`](/ja/docs/Web/XML/XSLT/Reference/Element/fallback) _(対応外)_
+- [`<xsl:fallback>`](/ja/docs/Web/XML/XSLT/Reference/Element/fallback) _(未対応)_
 - [`<xsl:for-each>`](/ja/docs/Web/XML/XSLT/Reference/Element/for-each)
 - [`<xsl:if>`](/ja/docs/Web/XML/XSLT/Reference/Element/if)
 - [`<xsl:import>`](/ja/docs/Web/XML/XSLT/Reference/Element/import) _(ほぼ対応)_
 - [`<xsl:include>`](/ja/docs/Web/XML/XSLT/Reference/Element/include)
 - [`<xsl:key>`](/ja/docs/Web/XML/XSLT/Reference/Element/key)
 - [`<xsl:message>`](/ja/docs/Web/XML/XSLT/Reference/Element/message)
-- [`<xsl:namespace-alias>`](/ja/docs/Web/XML/XSLT/Reference/Element/namespace-alias) _(対応外)_
+- [`<xsl:namespace-alias>`](/ja/docs/Web/XML/XSLT/Reference/Element/namespace-alias) _(未対応)_
 - [`<xsl:number>`](/ja/docs/Web/XML/XSLT/Reference/Element/number) _(一部対応)_
 - [`<xsl:otherwise>`](/ja/docs/Web/XML/XSLT/Reference/Element/otherwise)
 - [`<xsl:output>`](/ja/docs/Web/XML/XSLT/Reference/Element/output) _(一部対応)_

@@ -1,6 +1,8 @@
 ---
 title: border-inline-start-color
 slug: Web/CSS/border-inline-start-color
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -28,7 +30,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -55,6 +57,7 @@ border-inline-start-color: #ee4141;
 border-inline-start-color: inherit;
 border-inline-start-color: initial;
 border-inline-start-color: revert;
+border-inline-start-color: revert-layer;
 border-inline-start-color: unset;
 ```
 
@@ -62,8 +65,8 @@ border-inline-start-color: unset;
 
 ### 値
 
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -73,13 +76,13 @@ border-inline-start-color: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -111,5 +114,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-color")}}、{{cssxref("border-right-color")}}、{{cssxref("border-bottom-color")}}、{{cssxref("border-left-color")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

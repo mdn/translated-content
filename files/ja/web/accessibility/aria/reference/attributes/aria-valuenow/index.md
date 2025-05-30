@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-`aria-valuenow` 属性は、範囲ウィジェットの現在の値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Element/input/range)、[`number`](/ja/docs/Web/HTML/Element/input/number) と全ての日付型の {{HTMLElement('input')}} の `value` 属性に似ています。
+`aria-valuenow` 属性は、範囲ウィジェットの現在の値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Reference/Elements/input/range)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/number) と全ての日付型の {{HTMLElement('input')}} の `value` 属性に似ています。
 
 非セマンティック要素で [`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)、[`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)、[`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)、および [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) を含む範囲型ロールを作成する場合、`aria-valuenow` を使用して最小値と最大値の間である現在の数値を定義できます。最小値と最大値は [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) と [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) で定義します。
 
@@ -114,7 +114,7 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 ## 関連情報
 
 - [`range` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range>` 要素の `value` 属性](/ja/docs/Web/HTML/Element/input/range#value)
+- [`<input type="range>` 要素の `value` 属性](/ja/docs/Web/HTML/Reference/Elements/input/range#value)
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 - [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 - [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin).

@@ -1,6 +1,8 @@
 ---
 title: 印刷
 slug: Web/CSS/CSS_media_queries/Printing
+l10n:
+  sourceCommit: a29769d6d10261f771321eb60f3990029c160924
 ---
 
 {{CSSRef}}
@@ -18,118 +20,81 @@ slug: Web/CSS/CSS_media_queries/Printing
 
 {{HTMLElement("head")}} タグの中に次のように追加してください。
 
-```
+```html
 <link href="/path/to/print.css" media="print" rel="stylesheet" />
 ```
 
 ## レイアウトを改善するためのメディアクエリーの使用
 
+CSS の {{cssxref("@media")}} アットルールを使用すると、ウェブページを紙や PDF で印刷する場合と、画面に表示する場合とで、異なるスタイルを設定することができます。`print` [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)は、印刷メディアのスタイルを設定します。これらのスタイルは、印刷されるコンテンツにのみ使用されます。
+
+これをスタイルシートの最後に追加してください。[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と優先度のルールは引き続き適用されることにご注意ください。
+
+```css
+@media print {
+  /* 印刷用スタイルはすべてこちらへ */
+  #header,
+  #footer,
+  #nav {
+    display: none !important;
+  }
+}
+```
+
+{{cssxref("@page")}} アットルールを使用して、ページの寸法、向き、マージンなど、印刷ページのさまざまな側面を変更することもできます。 `@page` アットルールは、印刷物のすべてのページ、または特定のサブセットのページをターゲットとして使用することができます。
+
 ## 印刷リクエストの検出
 
-ブラウザーによっては (Firefox 6 以降や Internet Explorer など) コンテンツが印刷を開始することを判断できるように、 `beforeprint` および `afterprint` イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます (例えば、印刷処理中にユーザーインターフェイス要素を表示したり隠したりするなど)。
-
-> **メモ:** [`window.onbeforeprint`](/ja/docs/Web/API/Window/beforeprint_event) および [`window.onafterprint`](/ja/docs/Web/API/Window/afterprint_event) を使用してこれらのイベントにハンドラーを割り当てることもできますが、 {{domxref("EventTarget.addEventListener()")}} を使用することをお勧めします。
+ブラウザーは、印刷がいつ発生したかを判断するために、 {{domxref("Window/beforeprint_event", "beforeprint")}} および {{domxref("Window/afterprint_event", "afterprint")}} イベントを送信します。これを使用して、印刷中に表示されるユーザーインターフェイスを調整することができます （例えば、印刷処理中にユーザーインターフェイスの要素を表示または非表示にするなど）。
 
 ## 例
 
 よくある例をいくつか紹介します。
 
-#### ポップアップウィンドウを開き、終了したら閉じる
+### 終了時に自動的にウィンドウを閉じる
 
-ユーザーがコンテンツを印刷した後に [popup window](/ja/docs/Web/API/Window/open) (例えば文書の印刷用など) を自動的に閉じたい場合は、次のようなコードで実現できます。
+次の例は、ユーザーがコンテンツを出力した後、ウィンドウを閉じます。
 
-```html
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>JavaScript Window Close Example</title>
-    <script type="text/javascript">
-      function popuponclick() {
-        my_window = window.open(
-          "",
-          "mywindow",
-          "status=1,width=350,height=150",
-        );
-        my_window.document.write("<html><head><title>Print Me</title></head>");
-        my_window.document.write('<body onafterprint="self.close()">');
-        my_window.document.write(
-          "<p>When you print this window, it will close afterward.</p>",
-        );
-        my_window.document.write("</body></html>");
-      }
-    </script>
-  </head>
-  <body>
-    <p>
-      To try out the <code>afterprint</code> event, click the link below to open
-      the window to print. You can also try changing the code to use
-      <code>beforeprint</code> to see the difference.
-    </p>
-    <p><a href="javascript: popuponclick()">Open Popup Window</a></p>
-  </body>
-</html>
+```js
+window.addEventListener("afterprint", () => self.close);
 ```
-
-[ライブ例を表示](https://mdn.dev/archives/media/samples/domref/printevents.html)
 
 ### 外部ページを開かずに印刷する
 
-外部ページを開かずに印刷できるようにしたい場合は、非表示の {{HTMLElement("iframe")}} ([HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) を参照) を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `externalPage.html` という名前のファイルを印刷することができる例です。
+外部ページを開かずに印刷できるようにしたい場合は、非表示の {{HTMLElement("iframe")}} （[HTMLIFrameElement](/ja/docs/Web/API/HTMLIFrameElement) を参照）を利用し、ユーザーがコンテンツを印刷した後で自動的にそれを削除するようにすることで実現できます。以下の例は、 `externalPage.html` という名前のファイルを印刷することができる例です。
+
+#### HTML
 
 ```html
-<!doctype html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title>MDN Example</title>
-    <script type="text/javascript">
-      function closePrint() {
-        document.body.removeChild(this.__container__);
-      }
-
-      function setPrint() {
-        this.contentWindow.__container__ = this;
-        this.contentWindow.onbeforeunload = closePrint;
-        this.contentWindow.onafterprint = closePrint;
-        this.contentWindow.focus(); // Required for IE
-        this.contentWindow.print();
-      }
-
-      function printPage(sURL) {
-        var oHiddFrame = document.createElement("iframe");
-        oHiddFrame.onload = setPrint;
-        oHiddFrame.style.position = "fixed";
-        oHiddFrame.style.right = "0";
-        oHiddFrame.style.bottom = "0";
-        oHiddFrame.style.width = "0";
-        oHiddFrame.style.height = "0";
-        oHiddFrame.style.border = "0";
-        oHiddFrame.src = sURL;
-        document.body.appendChild(oHiddFrame);
-      }
-    </script>
-  </head>
-
-  <body>
-    <p>
-      <span
-        onclick="printPage('externalPage.html');"
-        style="cursor:pointer;text-decoration:underline;color:#0000ff;"
-        >Print external page!</span
-      >
-    </p>
-  </body>
-</html>
+<button id="print_external">Print external page!</button>
 ```
 
-> [!NOTE]
-> 古いバージョン Internet Explorer は、非表示の {{HTMLElement("iframe")}} の印刷することができません。
+#### JavaScript
+
+```js
+function setPrint() {
+  const closePrint = () => {
+    document.body.removeChild(this);
+  };
+  this.contentWindow.onbeforeunload = closePrint;
+  this.contentWindow.onafterprint = closePrint;
+  this.contentWindow.print();
+}
+
+document.getElementById("print_external").addEventListener("click", () => {
+  const hideFrame = document.createElement("iframe");
+  hideFrame.onload = setPrint;
+  hideFrame.style.display = "none"; // hide iframe
+  hideFrame.src = "external-page.html";
+  document.body.appendChild(hideFrame);
+});
+```
 
 ## 関連情報
 
 - [`window.print`](/ja/docs/Web/API/Window/print)
-- [`window.onbeforeprint`](/ja/docs/Web/API/Window/beforeprint_event)
-- [`window.onafterprint`](/ja/docs/Web/API/Window/afterprint_event)
-- [Media queries](/ja/docs/Web/CSS/CSS_media_queries)
+- {{ domxref("window.beforeprint_event", "beforeprint") }} イベント
+- {{ domxref("window.afterprint_event", "afterprint") }} イベント
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - {{cssxref("@media")}}
+- [CSS ページメディア](/ja/docs/Web/CSS/CSS_paged_media)モジュール

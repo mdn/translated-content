@@ -26,7 +26,7 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Element/input/date) および [time](/ja/docs/Web/HTML/Element/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
+- {{htmlelement("input")}} の [date](/ja/docs/Web/HTML/Reference/Elements/input/date) および [time](/ja/docs/Web/HTML/Reference/Elements/input/time) 型が、すべてのビルドで有効になりました ([Firefox バグ 1399036](https://bugzil.la/1399036))。
 
 ### CSS
 
@@ -115,7 +115,7 @@ _変更なし。_
 
 ### HTML
 
-- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
+- さまざまなウェブ互換性の問題があるため、Firefox 57 で `<link rel="preload">` ([Preloading content with rel="preload"](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) をご覧ください) を無効化しました ([Firefox バグ 1405761](https://bugzil.la/1405761))。キャッシュ不可のリソース向けに改良したバージョンを Firefox 58 に搭載する予定です。
 
 ### API
 

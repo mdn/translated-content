@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::placeholder`** 表示 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中的[占位文本](/zh-CN/docs/Web/HTML/Element/input#placeholder)。
+[CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) **`::placeholder`** 表示 {{HTMLElement("input")}} 或 {{HTMLElement("textarea")}} 元素中的[占位文本](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder)。
 
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 
@@ -90,7 +90,7 @@ input::placeholder {
 
 ### 标签
 
-占位符不能替代 {{htmlelement("label")}} 元素。如果没有使用 [`for`](/zh-CN/docs/Web/HTML/Element/label#for) 和 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 属性的组合将输入与标签以编程的方式进行关联，辅助技术（如屏幕阅读器）将无法解析 {{htmlelement("input")}} 元素。
+占位符不能替代 {{htmlelement("label")}} 元素。如果没有使用 [`for`](/zh-CN/docs/Web/HTML/Reference/Elements/label#for) 和 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性的组合将输入与标签以编程的方式进行关联，辅助技术（如屏幕阅读器）将无法解析 {{htmlelement("input")}} 元素。
 
 - [表单字段中的占位符是有害的——尼尔森诺曼集团](https://www.nngroup.com/articles/form-design-placeholders/)
 

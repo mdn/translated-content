@@ -7,7 +7,34 @@ slug: Web/HTML/Element/input
 
 **HTML `<input>` 요소**는 웹 기반 양식에서 사용자의 데이터를 받을 수 있는 대화형 컨트롤을 생성합니다. {{glossary("user agent", "사용자 에이전트")}}에 따라서 다양한 종류의 입력 데이터 유형과 컨트롤 위젯이 존재합니다. 입력 유형과 특성의 다양한 조합 가능성으로 인해, `<input>` 요소는 HTML에서 제일 강력하고 복잡한 요소 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/tabbed/input-text.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<label for="name">Name (4 to 8 characters):</label>
+
+<input
+  type="text"
+  id="name"
+  name="name"
+  required
+  minlength="4"
+  maxlength="8"
+  size="10" />
+```
+
+```css interactive-example
+label {
+  display: block;
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input,
+label {
+  margin: 0.4rem 0;
+}
+```
 
 ## `<input>` 유형
 

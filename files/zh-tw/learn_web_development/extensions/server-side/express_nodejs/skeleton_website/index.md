@@ -3,8 +3,6 @@ title: Express 教學 2：創建一個骨架網站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在 [Express 教程](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)的第二篇文章，演示如何創建一個 "骨架" 網站項目，你可以接著在裡面加入網站特定的路由、模板/視圖、和數据庫調用。

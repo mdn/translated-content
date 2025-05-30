@@ -23,7 +23,7 @@ l10n:
   - : Firefox 3 でサポートされた標準化されていない API を利用して、キャンバス内にテキストを描画できるようになりました。
 - [キャンバスの座標変換の対応](/ja/docs/Web/API/Canvas_API/Tutorial/Transformations#transforms)
   - : Firefox がキャンバスの `transform()` と `setTransform()` メソッドをサポートするようになりました。
-- [マイクロフォーマットの使用](/ja/docs/Web/HTML/microformats)
+- [マイクロフォーマットの使用](/ja/docs/Web/HTML/Guides/Microformats)
   - : Firefox にマイクロフォーマットを扱うための API が実装されました。
 - [ドラッグ & ドロップイベント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 は、ドラッグが開始されるときと終了したときにドラッグ操作に対するソースノードへ送られる新しいイベントをサポートします。

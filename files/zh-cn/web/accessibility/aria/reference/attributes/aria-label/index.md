@@ -34,7 +34,7 @@ l10n:
 
 大多数内容都有一个从其直接包装元素的文本内容生成的无障碍名称。无障碍名称也可以通过某些属性或相关元素创建。
 
-默认情况下，按钮的无障碍名称是在 {{HTMLElement('button')}} 标签之间的内容，图像的无障碍名称是其 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 属性的内容，表单输入的无障碍名称是相关的 {{HTMLElement('label')}} 元素的内容。
+默认情况下，按钮的无障碍名称是在 {{HTMLElement('button')}} 标签之间的内容，图像的无障碍名称是其 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 属性的内容，表单输入的无障碍名称是相关的 {{HTMLElement('label')}} 元素的内容。
 
 如果这些选项都不可用，或者如果默认的无障碍名称不合适，则使用 `aria-label` 属性定义元素的无障碍名称。
 

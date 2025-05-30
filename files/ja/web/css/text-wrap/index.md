@@ -112,7 +112,7 @@ text-wrap: unset;
 
 テキストの長い節には `text-wrap: pretty` を使用することができます。 `pretty` はパフォーマンスに悪影響を与えるので、長いテキストブロックの場合は、速度よりもレイアウトを重視する場合にのみ使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
+`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
 
 ## 公式定義
 

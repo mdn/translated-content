@@ -70,5 +70,5 @@ slug: Web/SVG/Reference/Attribute/id
 
 ## Смотрите также
 
-- [HTML `id`](/ru/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/ru/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

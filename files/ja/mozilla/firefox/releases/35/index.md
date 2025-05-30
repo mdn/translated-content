@@ -31,7 +31,7 @@ Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日に�
 
 ### HTML
 
-- [`<body>`](/ja/docs/Web/HTML/Element/body)要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530))。
+- [`<body>`](/ja/docs/Web/HTML/Reference/Elements/body)要素において廃止済みであり仕様に適合しない `bottommargin`、`leftmargin`、`rightmargin`、`topmargin` の各属性を Quirks モード以外でも有効にしました ([バグ 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530))。
 
 ### JavaScript
 

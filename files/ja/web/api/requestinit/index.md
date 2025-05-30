@@ -108,7 +108,7 @@ l10n:
 
   - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクト、またはキーがヘッダー名で値がヘッダー値であるオブジェクトリテラルが入ります。
 
-    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{glossary("Forbidden header name", "禁止ヘッダー名")}}と呼ばれています。
+    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
 
     `mode` オプションが `no-cors` に設定されている場合、{{glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}のみを設定することができます。
 
@@ -118,7 +118,7 @@ l10n:
 
   - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
-    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Element/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
+    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
 
     このオプションは `<hash-algo>-<hash-source>` という書式です。
 

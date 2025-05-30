@@ -142,7 +142,7 @@ importScripts(
 ); /* 他のオリジンのスクリプトをインポートすることができる */
 ```
 
-ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は `NETWORK_ERROR` を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード（{{domxref("setTimeout()")}} で繰り延べされているコードを含みます）は動作します。`importScripts()` メソッドより**後方**にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。
+ブラウザーはそれぞれのスクリプトを読み込み、実行します。ワーカーは各スクリプトのグローバルオブジェクトを使用できます。スクリプトを読み込むことができない場合は `NETWORK_ERROR` を発生させて、それ以降のコードを実行しません。それでも、すでに実行されたコード（{{domxref("Window.setTimeout", "setTimeout()")}} で繰り延べされているコードを含みます）は動作します。`importScripts()` メソッドより**後方**にある関数の宣言は、常にコードの残りの部分より先に評価されることから、同様に保持されます。
 
 > [!NOTE]
 > スクリプトは順不同にダウンロードされることがありますが、実行は `importScripts()` に渡したファイル名の順に行います。これは同期的に行われます。すべてのスクリプトの読み込みと実行が行われるまで `importScripts()` から戻りません。
@@ -818,7 +818,7 @@ function fibonacci(num) {
 - {{domxref("Navigator")}}
 - {{domxref("Window/fetch", "fetch()")}}
 - {{jsxref("Global_Objects/Array", "Array")}}、{{jsxref("Global_Objects/Date", "Date")}}、{{jsxref("Global_Objects/Math", "Math")}}、{{jsxref("Global_Objects/String", "String")}}
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}}
 
 ワーカーでできないことは、主に親ページに直接影響を与えることです。例えば、DOM を操作したり、そのページのオブジェクトを使用したりすることなどです。このような操作は、{{domxref("DedicatedWorkerGlobalScope.postMessage")}} を介してメインスクリプトにメッセージを送信し、イベントハンドラーで変更を行うといった間接的な方法で行う必要があります。
 

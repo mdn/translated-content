@@ -53,7 +53,7 @@ A função `alert` é limitada: você pode alterar a mensagem, mas não pode var
 Para começar, vamos montar uma função básica.
 
 > [!NOTE]
-> Para convenções de nomenclatura de função, você deve seguir as mesmas regras das [convenções de nomenclatura de variáveis](/pt-BR/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules). Algo bom é como você pode diferenciá-los — os nomes das funções aparecem com parênteses depois deles e as variáveis não.
+> Para convenções de nomenclatura de função, você deve seguir as mesmas regras das [convenções de nomenclatura de variáveis](/pt-BR/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules). Algo bom é como você pode diferenciá-los — os nomes das funções aparecem com parênteses depois deles e as variáveis não.
 
 1. Comece acessando o arquivo [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) e fazendo uma cópia local. Você verá que o HTML é simples — o corpo contém apenas um único botão. Também fornecemos algumas CSS básicas para estilizar a caixa de mensagem personalizada e um elemento {{htmlelement("script")}} vazio para colocar nosso JavaScript.
 2. Em seguida, adicione o seguinte dentro do elemento `<script>` :

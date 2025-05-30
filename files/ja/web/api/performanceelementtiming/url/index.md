@@ -18,7 +18,7 @@ l10n:
 
 ### `url` をログ出力
 
-この例では、 [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.url` を呼び出すと `https://example.com/image.jpg` が返されます。
+この例では、 [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.url` を呼び出すと `https://example.com/image.jpg` が返されます。
 
 ```html
 <img

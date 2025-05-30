@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-ラジオボタンはチェック可能な入力で、他のラジオボタンと関連付けられ、一度にチェックできるのは 1 つだけです。ラジオボタンは [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) にまとめられなければならず、これでどのラジオボタンが同じ値に影響するかを示します。
+ラジオボタンはチェック可能な入力で、他のラジオボタンと関連付けられ、一度にチェックできるのは 1 つだけです。ラジオボタンは [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) にまとめられなければならず、これでどのラジオボタンが同じ値に影響するかを示します。
 
 ```html
 <div role="radiogroup" aria-labelledby="legend25" id="radiogroup25">
@@ -47,10 +47,10 @@ l10n:
 </div>
 ```
 
-`role` 属性は意味づけを追加するだけです。 [HTML radio](/ja/docs/Web/HTML/Element/input/radio) にネイティブに備わっている機能はすべて JavaScript と HTML の [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性で追加する必要があります。
+`role` 属性は意味づけを追加するだけです。 [HTML radio](/ja/docs/Web/HTML/Reference/Elements/input/radio) にネイティブに備わっている機能はすべて JavaScript と HTML の [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性で追加する必要があります。
 
 > [!NOTE]
-> ARIA の最初のルールは、ネイティブの HTML 要素や属性が要求される意味づけや動作を持っている場合、要素を再利用して ARIA を追加する代わりにそれを使用することです。代わりに、ネイティブの [HTML `<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) （{{HTMLElement('label')}} が関連付けられたもの）を使用してください。
+> ARIA の最初のルールは、ネイティブの HTML 要素や属性が要求される意味づけや動作を持っている場合、要素を再利用して ARIA を追加する代わりにそれを使用することです。代わりに、ネイティブの [HTML `<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio) （{{HTMLElement('label')}} が関連付けられたもの）を使用してください。
 
 ```html
 <fieldset>
@@ -70,17 +70,17 @@ l10n:
 </fieldset>
 ```
 
-ネイティブ HTML のラジオフォームコントロール ([`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio)) は 2 つの状態（"checked" と "not checked"）を持ちます。同様に、 `role="radio"` の要素は、 [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性で 2 つの状態を公開することができます。 `true` はチェックされた状態を表し、 `false` はチェックされていない状態を表します。 `aria-checked` の値である `mixed` は、ラジオボタンには使用しません。
+ネイティブ HTML のラジオフォームコントロール ([`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio)) は 2 つの状態（"checked" と "not checked"）を持ちます。同様に、 `role="radio"` の要素は、 [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked) 属性で 2 つの状態を公開することができます。 `true` はチェックされた状態を表し、 `false` はチェックされていない状態を表します。 `aria-checked` の値である `mixed` は、ラジオボタンには使用しません。
 
 ラジオボタンがチェックされる場合、 radio 要素は `aria-checked` を設定するには `true` を保有します。チェックされていない場合、 `aria-checked` は `false` に設定されます。
 
-各ラジオボタン要素は `radio` というロールを保有します。 radio ロールは常に `radiogroup` 内で他にも関連する radio と一緒に入っている必要があります。ラジオボタンをラジオグループ内に入れることができない場合、グループ化されていないラジオボタンの `id` をスペース区切りのリスト値として `radiogroup` 要素の [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性の値として使用し、 `radiogroup` とそのラジオメンバーとの関係を示します。
+各ラジオボタン要素は `radio` というロールを保有します。 radio ロールは常に `radiogroup` 内で他にも関連する radio と一緒に入っている必要があります。ラジオボタンをラジオグループ内に入れることができない場合、グループ化されていないラジオボタンの `id` をスペース区切りのリスト値として `radiogroup` 要素の [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) 属性の値として使用し、 `radiogroup` とそのラジオメンバーとの関係を示します。
 
 各 radio 要素はそのコンテンツによってラベル付けされるか、 `aria-labelledby` によって参照される可視ラベルを持つか、または `aria-label` で指定するラベルを持ちます。格納する `radiogroup` 要素は `aria-labelledby` で参照する可視ラベルを持つか、`aria-label` で指定するラベルを持つ必要があります。ラジオグループまたは各ラジオボタンに関する追加の情報を提供する要素が存在する場合、それらの要素は [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) プロパティを持つ `radiogroup` 要素または radio 要素によって参照されなければなりません。
 
-`radio` は操作可能なコントロールなので、フォーカス可能でキーボードアクセス可能でなければなりません。もしこのロールがフォーカス可能でない要素に適用されている場合は、 [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を使用して変更してください。ラジオを有効にするキーボードショートカットは <kbd>Space</kbd> キーです。 JavaScript を使用して、ラジオがチェックされたときに `aria-checked` 属性を `true` に切り替え、同時にグループ内の他のすべてのラジオの役割が `aria-checked="false"` に設定されるようにしてください。
+`radio` は操作可能なコントロールなので、フォーカス可能でキーボードアクセス可能でなければなりません。もしこのロールがフォーカス可能でない要素に適用されている場合は、 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を使用して変更してください。ラジオを有効にするキーボードショートカットは <kbd>Space</kbd> キーです。 JavaScript を使用して、ラジオがチェックされたときに `aria-checked` 属性を `true` に切り替え、同時にグループ内の他のすべてのラジオの役割が `aria-checked="false"` に設定されるようにしてください。
 
-プログラムでラジオボタンがラジオグループから選ばれなければならないことを示すには、 `radiogroup` 要素に `true` の値を持つ [`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性を指定しなければなりません。個々の ARIA ラジオボタンに `aria-required` 属性を使用することは想定されていません。
+プログラムでラジオボタンがラジオグループから選ばれなければならないことを示すには、 `radiogroup` 要素に `true` の値を持つ [`aria-required`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 属性を指定しなければなりません。個々の ARIA ラジオボタンに `aria-required` 属性を使用することは想定されていません。
 
 ### 子孫はすべて表示用
 
@@ -106,7 +106,7 @@ l10n:
 
 ## 関連する WAI-ARIA ロール、状態、プロパティ
 
-- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role) ロール
+- [`radiogroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role) ロール
 
   - : ラジオボタンは `radiogroup` というロールを持つ要素に格納されているか、自分自身で所有しています。マークアップ内で `radiogroup` 内に入れ子にすることができない場合、 `radiogroup` の `aria-owns` 属性はグループ内の入れ子になっていないラジオボタンの `id` 値を格納します。
 
@@ -119,7 +119,7 @@ l10n:
     - `false`
       - : ラジオボタンがチェックされていません。
 
-> **メモ:** `role="radio"` をキーボードフォーカスを受け付けない要素に使用する場合は、 [`tabindex` 属性](/ja/docs/Web/HTML/Global_attributes/tabindex)を使用してください。例えば、 `<div>` や `<span>` などです。
+> **メモ:** `role="radio"` をキーボードフォーカスを受け付けない要素に使用する場合は、 [`tabindex` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)を使用してください。例えば、 `<div>` や `<span>` などです。
 
 ## キーボード操作
 
@@ -140,7 +140,7 @@ l10n:
 
 ### ツールバー内のラジオボタン
 
-矢印キーはツールバーの要素間を移動するために使用し、 <kbd>Tab</kbd> キーはツールバーにフォーカスを移したり戻したりするので、ラジオグループがツールバーの中に入れ子になっている場合、ラジオグループのキーボード操作はツールバーの中にないラジオグループとは少し異なります。詳細は [`radiogroup` のキーボード操作](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role#keyboard_interactions)を参照してください。
+矢印キーはツールバーの要素間を移動するために使用し、 <kbd>Tab</kbd> キーはツールバーにフォーカスを移したり戻したりするので、ラジオグループがツールバーの中に入れ子になっている場合、ラジオグループのキーボード操作はツールバーの中にないラジオグループとは少し異なります。詳細は [`radiogroup` のキーボード操作](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role#keyboard_interactions)を参照してください。
 
 ## 必要な JavaScript
 
@@ -292,15 +292,15 @@ setChecked = function () {
 
 ## ベストプラクティス
 
-ARIA の最初のルールは、ネイティブの HTML 要素や属性に要求される意味づけや動作がある場合、要素を再利用して ARIA ロール、状態、プロパティを追加してアクセシビリティを持たせるのではなく、それを使用することです。このように、 JavaScript と ARIA でラジオの機能を再作成する代わりに、ネイティブの [HTML ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)フォームコントロールを使用することを推奨します。
+ARIA の最初のルールは、ネイティブの HTML 要素や属性に要求される意味づけや動作がある場合、要素を再利用して ARIA ロール、状態、プロパティを追加してアクセシビリティを持たせるのではなく、それを使用することです。このように、 JavaScript と ARIA でラジオの機能を再作成する代わりに、ネイティブの [HTML ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)フォームコントロールを使用することを推奨します。
 
 ## 関連情報
 
-- [HTML `<input type="radio">` ラジオボタン](/ja/docs/Web/HTML/Element/input/radio)
-- [HTML `tabindex` 属性](/ja/docs/Web/HTML/Global_attributes/tabindex)
-- [ARIA: `radiogroup` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/radiogroup_role)
+- [HTML `<input type="radio">` ラジオボタン](/ja/docs/Web/HTML/Reference/Elements/input/radio)
+- [HTML `tabindex` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)
+- [ARIA: `radiogroup` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radiogroup_role)
 - [ARIA: `checkbox` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [ARIA: `menuitem` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role)
-- [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
-- [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role)
+- [ARIA: `menuitem` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role)
+- [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
+- [ARIA: `menuitemradio` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role)
 - [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)

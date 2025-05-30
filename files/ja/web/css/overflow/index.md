@@ -2,7 +2,7 @@
 title: overflow
 slug: Web/CSS/overflow
 l10n:
-  sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
@@ -119,7 +119,7 @@ overflow のオプションには、溢れたコンテンツを非表示にす�
 
 スクロールするコンテンツ領域は、キーボードのみを使用するユーザーにはスクロールできません。ただし、Firefox を使用しているユーザーは例外です（Firefox では、コンテナーが既定ではキーボード操作可能に設定されています）。
 
-開発者として、Firefox 以外のキーボードのみ操作のユーザーにコンテナーのスクロールを許可するには、[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を使用して `tabindex="0"` と指定する必要があります。残念ながら、スクリーンリーダーがこのタブストップに遭遇すると、それが何であるかのコンテキストを保有していないため、スクリーンリーダーはそのコンテンツ全体をアナウンスする可能性が高いです。適切な WAI-ARIA ロール（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定することで、この問題を軽減できます。
+開発者として、Firefox 以外のキーボードのみ操作のユーザーにコンテナーのスクロールを許可するには、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を使用して `tabindex="0"` と指定する必要があります。残念ながら、スクリーンリーダーがこのタブストップに遭遇すると、それが何であるかのコンテキストを保有していないため、スクリーンリーダーはそのコンテンツ全体をアナウンスする可能性が高いです。適切な WAI-ARIA ロール（例えば `role="region"`）とアクセシブル名（[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) または [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) によって）を指定することで、この問題を軽減できます。
 
 ## 例
 
@@ -254,5 +254,6 @@ p.overlay {
 - {{Cssxref("overflow-x")}}, {{Cssxref("overflow-y")}}
 - {{Cssxref("overflow-block")}}, {{Cssxref("overflow-clip-margin")}}, {{Cssxref("overflow-inline")}}
 - {{Cssxref("clip")}}, {{Cssxref("display")}}, {{cssxref("text-overflow")}}, {{cssxref("white-space")}}
+- SVG の {{SVGAttr("overflow")}} 属性
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)
-- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) on adrianroselli.com (2022)
+- [Keyboard-only scrolling areas](https://adrianroselli.com/2022/06/keyboard-only-scrolling-areas.html) (adrianroselli.com, 2022)

@@ -7,7 +7,7 @@ slug: Web/CSS/CSS_media_queries
 
 **Медиавыражения (media queries)** являются ключевым компонентом [отзывчивого дизайна](/ru/docs/Learn_web_development/Core/CSS_layout/Responsive_Design), который делает возможным для CSS адаптироваться в зависимости от различных параметров или характеристик устройства. Например, медиавыражение может применить различные стили, если экран меньше определённого размера, или в зависимости от того находится устройство в портретном или альбомном режиме. {{cssxref("@media")}} @-правило используется чтобы задать условия применения стилей к документу.
 
-Кроме того, синтаксис медиавыражений используется в других контекстах, таких как атрибут [`media`](/ru/docs/Web/HTML/Element/source#media) элемента {{HTMLElement("source")}}, для определения, нужно или нет использовать этот источник, когда выбирается определённое изображение для использования в элементе {{HTMLElement("picture")}}.
+Кроме того, синтаксис медиавыражений используется в других контекстах, таких как атрибут [`media`](/ru/docs/Web/HTML/Reference/Elements/source#media) элемента {{HTMLElement("source")}}, для определения, нужно или нет использовать этот источник, когда выбирается определённое изображение для использования в элементе {{HTMLElement("picture")}}.
 
 In addition, the {{domxref("Window.matchMedia()")}} method can be used to test the window against a media query. You can also use {{domxref("MediaQueryList.addListener()")}} to be notified whenever the state of the queries changes. With this functionality, your site or app can respond to changes in the device configuration, orientation, or state.
 

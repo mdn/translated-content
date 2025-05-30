@@ -76,7 +76,7 @@ aria-keyshortcuts="V+Control+Shift"
 
 #### 代わりに HTML を使用しないでください
 
-`aria-keyshortcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`aria-keyshortcuts` では、修飾子キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
+`aria-keyshortcuts` 属性は、現在の要素のキーボードショートカットを生成する [問題のある](https://webaim.org/techniques/keyboard/accesskey#spec) HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性と非常によく似ています。`accesskey` が要素に対して定義されている場合、ブラウザーは修飾キーを定義し、スクリプトを必要とせずにショートカットの処理を全て行います。全てのブラウザーとオペレーティングシステムの組み合わせには、`accesskey` 属性で設定された非修飾キー用の独自の修飾キーがあります。オペレーティングシステム、支援技術、ブラウザーの 1 つの組み合わせで機能するものが、他の組み合わせでは機能しない可能性があります。`aria-keyshortcuts` では、修飾子キーがキーの組み合わせの属性値リストに含まれており、その機能はスクリプト化する必要があります。
 
 ```html
 <p>
@@ -129,5 +129,5 @@ aria-keyshortcuts="V+Control+Shift"
 ## 関連情報
 
 - ARIA Authoring Practices の [Keyboard Shortcuts](https://www.w3.org/WAI/ARIA/apg/practices/keyboard-interface/#keyboardshortcuts) セクション
-- HTML [`accesskey`](/ja/docs/Web/HTML/Global_attributes/accesskey) 属性
+- HTML [`accesskey`](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey) 属性
 - [Issues with `accesskey`](https://webaim.org/techniques/keyboard/accesskey#spec)

@@ -13,8 +13,8 @@ l10n:
 
 ### HTML
 
-- `<details>` 要素の [`name`](/ja/docs/Web/HTML/Element/details#name) 属性で、`<details>` 要素のグループ化が可能になりました。グループの中で同時にひとつの要素だけを開くことができます。これにより、JavaScript を使用せずに排他的なアコーディオンを作成できます ([Firefox bug 1856460](https://bugzil.la/1856460)、[Firefox bug 1909613](https://bugzil.la/1909613))。
-- [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#属性の継承) における動作など、[`dir`](/ja/docs/Web/HTML/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) [グローバル属性](/ja/docs/Web/HTML/Global_attributes) の継承を改良しました ([Firefox bug 1876163](https://bugzil.la/1876163))。
+- `<details>` 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/details#name) 属性で、`<details>` 要素のグループ化が可能になりました。グループの中で同時にひとつの要素だけを開くことができます。これにより、JavaScript を使用せずに排他的なアコーディオンを作成できます ([Firefox bug 1856460](https://bugzil.la/1856460)、[Firefox bug 1909613](https://bugzil.la/1909613))。
+- [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#属性の継承) における動作など、[`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) の継承を改良しました ([Firefox bug 1876163](https://bugzil.la/1876163))。
 
 ### CSS
 

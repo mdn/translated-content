@@ -28,7 +28,7 @@ HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](
 
 ### GET を使用してフォームを送信
 
-次の例では、HTML の [`<form>` の method](/ja/docs/Web/HTML/Element/form#method) が誤って `post` ではなく `get` を使用しています。
+次の例では、HTML の [`<form>` の method](/ja/docs/Web/HTML/Reference/Elements/form#method) が誤って `post` ではなく `get` を使用しています。
 大量のフォームデータがフォームの `action` 属性で指定された URL に追加され、 GET リクエストとして送信されます。
 
 ```http

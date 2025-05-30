@@ -1,12 +1,9 @@
 ---
 title: viewBox
 slug: Web/SVG/Reference/Attribute/viewBox
-original_slug: Web/SVG/Attribute/viewBox
 l10n:
-  sourceCommit: bea339d321513fc6d66d95c8f0305b9387fa57bb
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`viewBox`** 属性は、 SVG ビューポートのユーザー空間の位置と大きさを定義します。
 
@@ -50,7 +47,7 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -92,7 +89,7 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -134,7 +131,7 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -176,7 +173,7 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -218,7 +215,7 @@ SVG に `viewBox` 属性（[`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/At
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -241,7 +238,7 @@ svg:not(:root) {
 }
 ```
 
-下記のコードスニペットには、 3 つの {{SVGElement("svg")}} がありますが、それぞれ `viewBox` 属性の値が異なっており、子要素である {{SVGElement("rect")}} と {{SVGElement("circle")}} は同一ですが、まったく異なる結果を生成します。 `<rect>` のサイズは相対単位を使用して定義されているため、 `viewBox` の値に関わらず、生成される四角形の見た目のサイズは変わりません。 `<circle>` の半径の長さである {{SVGAttr("r")}} 属性は、いずれの場合も同じですが、このユーザー単位の値は、 `viewBox` で定義されたサイズに対して解決されるため、それぞれ異なる結果が生成されます。
+下記のコードには、 3 つの {{SVGElement("svg")}} がありますが、それぞれ `viewBox` 属性の値が異なっており、子要素である {{SVGElement("rect")}} と {{SVGElement("circle")}} は同一ですが、まったく異なる結果を生成します。 `<rect>` のサイズは相対単位を使用して定義されているため、 `viewBox` の値に関わらず、生成される四角形の見た目のサイズは変わりません。 `<circle>` の半径の長さである {{SVGAttr("r")}} 属性は、いずれの場合も同じですが、このユーザー単位の値は、 `viewBox` で定義されたサイズに対して解決されるため、それぞれ異なる結果が生成されます。
 
 ```html
 <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">

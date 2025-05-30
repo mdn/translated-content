@@ -6,16 +6,16 @@ original_slug: Web/HTTP/Headers/Want-Content-Digest
 
 {{HTTPSidebar}}
 
-O cabeçalho HTTP **`Want-Digest`** é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta [`Digest`](/pt-BR/docs/Web/HTTP/Headers/Digest).
+O cabeçalho HTTP **`Want-Digest`** é primordialmente usado em uma requisição HTTP, para pedir ao respondedor para prover uma digestão ({{Glossary("digest")}}) do recurso requisitado usando o cabeçalho de resposta [`Digest`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Digest).
 
 O cabeçalho contém identificadores para um ou mais algoritmos de digestão que o remetente deseja que o respondedor use para criar a digestão. O remetente pode usar [valores de qualidade](/pt-BR/docs/Glossary/Quality_values) para indicar sua preferência ordenando dentre as escolhas que ele oferece.
 
 Se `Want-Digest` não inclui nenhum algoritmo de digestão que aquele servidor suporta, o servidor pode responder com:
 
 - uma digestão calculada usando outro algoritmo de digestão, ou
-- um erro [`400 Bad Request`](/pt-BR/docs/Web/HTTP/Status/400), e inclui outro cabeçalho `Want-Digest` com a resposta, listando os algoritmos que ele suporta.
+- um erro [`400 Bad Request`](/pt-BR/docs/Web/HTTP/Reference/Status/400), e inclui outro cabeçalho `Want-Digest` com a resposta, listando os algoritmos que ele suporta.
 
-Veja a página do cabeçalho [`Digest`](/pt-BR/docs/Web/HTTP/Headers/Digest) para mais informações.
+Veja a página do cabeçalho [`Digest`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Digest) para mais informações.
 
 <table class="properties">
   <tbody>

@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-{{domxref("HTMLTextAreaElement")}} インターフェイスの **`name`** プロパティは、{{HTMLElement("textarea")}} 要素の名前を表します。要素の [`name`](/ja/docs/Web/HTML/Element/textarea#name) 属性を反映します。
+{{domxref("HTMLTextAreaElement")}} インターフェイスの **`name`** プロパティは、{{HTMLElement("textarea")}} 要素の名前を表します。要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/textarea#name) 属性を反映します。
 
 ## 値
 

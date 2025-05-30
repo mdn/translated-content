@@ -155,7 +155,7 @@ dir dir dir {
 
 ### 简化段落选择器
 
-`:is()` 伪类在处理[段落和标题](/zh-CN/docs/Web/HTML/Element/Heading_Elements)时特别有用。由于 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}} 和 {{HTMLElement("nav")}} 通常嵌套在一起，如果没有 `:is()`，将它们设置为相互匹配很棘手。
+`:is()` 伪类在处理[段落和标题](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)时特别有用。由于 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}} 和 {{HTMLElement("nav")}} 通常嵌套在一起，如果没有 `:is()`，将它们设置为相互匹配很棘手。
 
 例如，没有 `:is()`，在不同的深度对所有 {{HTMLElement("Heading_Elements", "h1")}} 元素进行样式化可能是非常复杂的：
 

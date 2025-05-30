@@ -317,7 +317,7 @@ navigator.credentials
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 以下のような原因で発生します。
     - {{HTTPHeader("Permissions-Policy/publickey-credentials-create","publickey-credentials-create")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)により、使用がブロックされました。
-    - この関数がオリジン間で呼び出されましたが、iframe の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性に適切な {{HTTPHeader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} ポリシーが設定されていません。
+    - この関数がオリジン間で呼び出されましたが、iframe の [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性に適切な {{HTTPHeader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} ポリシーが設定されていません。
     - この関数がオリジン間で呼び出されましたが、`<iframe>` は{{glossary("transient activation", "一時的な有効化")}}が行われていません。
 
 ## 例

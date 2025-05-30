@@ -65,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Element/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
+このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
 
 要素が置換要素でない場合は、指定された `ratio` が使用されます。
 

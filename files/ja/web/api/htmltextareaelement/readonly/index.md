@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`readOnly`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このコントロールの値をユーザーが変更できないことを示します。{{domxref("HTMLTextAreaElement.disabled", "disabled")}} 属性とは異なり、`readonly` 属性ではクリックやコントロール内の選択ができなくはなりません。これは、この {{htmlelement("textarea")}} 要素の [`readonly`](/ja/docs/Web/HTML/Element/textarea#readonly) 属性を反映します。
+**`readOnly`** は {{DOMxRef("HTMLTextAreaElement")}} インターフェイスのプロパティで、このコントロールの値をユーザーが変更できないことを示します。{{domxref("HTMLTextAreaElement.disabled", "disabled")}} 属性とは異なり、`readonly` 属性ではクリックやコントロール内の選択ができなくはなりません。これは、この {{htmlelement("textarea")}} 要素の [`readonly`](/ja/docs/Web/HTML/Reference/Elements/textarea#readonly) 属性を反映します。
 
 ## 値
 

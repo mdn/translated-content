@@ -123,9 +123,9 @@ a::after {
 
 ### 工具提示
 
-本例使用 `::after`，结合 [`attr()`](/zh-CN/docs/Web/CSS/attr) CSS 表达式和 `data-descr` [自定义数据属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)，创建工具提示。无需 JavaScript！
+本例使用 `::after`，结合 [`attr()`](/zh-CN/docs/Web/CSS/attr) CSS 表达式和 `data-descr` [自定义数据属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)，创建工具提示。无需 JavaScript！
 
-我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可通过键盘操作聚焦，并使用 CSS `:focus` 选择器。这说明了 `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Element/details) 元素）可能更合适。
+我们还可以使用此技术为键盘用户提供支持，方法是添加一个值为 `0` 的 `tabindex` 使每个 `span` 都可通过键盘操作聚焦，并使用 CSS `:focus` 选择器。这说明了 `::before` 和 `::after` 可以多么灵活，不过要获得最方便的体验，以其他方式创建的语义披露部件（如使用 [detail 和 summary](/zh-CN/docs/Web/HTML/Reference/Elements/details) 元素）可能更合适。
 
 #### HTML
 

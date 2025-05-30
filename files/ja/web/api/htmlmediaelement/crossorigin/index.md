@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.crossOrigin`** プロパティは、画像等の要素のための CORS 設定です。 詳しくは、 [CORS 設定属性](/ja/docs/Web/HTML/Attributes/crossorigin)を参照してください。
+**`HTMLMediaElement.crossOrigin`** プロパティは、画像等の要素のための CORS 設定です。 詳しくは、 [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 ## 値
 

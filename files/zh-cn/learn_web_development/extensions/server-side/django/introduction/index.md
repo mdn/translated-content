@@ -3,7 +3,7 @@ title: Django 介绍
 slug: Learn_web_development/Extensions/Server-side/Django/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/Django/development_environment", "Learn_web_development/Extensions/Server-side/Django")}}
 
 在这第一 Django 文章中，我们将回答“什么是 Django”这个问题，并概述这个网络框架有什么特性。我们将描述主要功能，包括一些高级功能，但我们并不会在本单元中详细介绍。我们还会展示一些 Django 应用程序的主要构建模块（尽管此时你还没有要测试的开发环境）。
 
@@ -48,9 +48,9 @@ Django 可以使你的应用具有以下优点：
 
 - 安全性
 
-  - : Django 帮助开发人员通过提供一个被设计为“做正确的事情”来自动保护网站的框架来避免许多常见的安全错误。例如，Django 提供了一种安全的方式来管理用户账户和密码，避免了常见的错误，比如将 session 放在 cookie 中这种易受攻击的做法（取而代之的是 cookies 只包含一个密钥，实际数据存储在数据库中）或直接存储密码而不是密码哈希。
+  - : Django 帮助开发人员通过提供一个被设计为“做正确的事情”来自动保护网站的框架来避免许多常见的安全错误。例如，Django 提供了一种安全的方式来管理用户账户和密码，避免了常见的错误，比如将 session 放在 cookie 中这种易受攻击的做法（取而代之的是 cookies 只包含一个密钥，实际数据存储在数据库中）或直接存储密码而不是密码散列。
 
-    _密码哈希是通过[密码散列函数](https://zh.wikipedia.org/wiki/密碼雜湊函數)发送密码而创建的固定长度值。Django 能通过运行哈希函数并将输出的哈希值与存储的哈希值进行比较来检查输入的密码是否正确。然而由于功能的“单向”性质，即使存储的哈希值被泄漏，攻击者也难以破解原始密码。_
+    _密码散列是通过[密码散列函数](https://zh.wikipedia.org/wiki/密碼雜湊函數)发送密码而创建的固定长度值。Django 能通过运行散列函数并将输出的散列值与存储的散列值进行比较来检查输入的密码是否正确。然而由于功能的“单向”性质，即使存储的散列值被泄漏，攻击者也难以破解原始密码。_
 
     默认情况下，Django 可以防范许多漏洞，包括 SQL 注入，跨站点脚本，跨站点请求伪造和点击劫持 (请参阅 [网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) 相关信息，如有兴趣).
 

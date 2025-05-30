@@ -3,7 +3,7 @@ title: 物件原型
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
+{{NextMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object-oriented_programming", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 JavaScript 的物件即透過原型 (Prototype) 機制相互繼承功能，且與典型的物件導向 (OO) 程式語言相較，其運作方式有所差異。我們將透過本文說明相異之處、解釋原型鍊 (Prototype chain) 運作的方式，並了解原型屬性是如何將函式新增至現有的建構子 (Constructor) 之中。
 

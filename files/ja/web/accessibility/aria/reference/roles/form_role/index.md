@@ -83,7 +83,7 @@ original_slug: Web/Accessibility/ARIA/Roles/form_role
 
 ### 入力はフォームではない
 
-[フォーム要素](/ja/docs/Web/HTML/Element#forms)（入力、テキスト領域、選択など）それぞれで `role="form"` を宣言する必要はありません。 それは、フォーム要素を包む HTML 要素で宣言するべきです。 理想的には、包む要素として {{htmlelement("form")}} 要素を使用し、`role="form"` を宣言しないでください。
+[フォーム要素](/ja/docs/Web/HTML/Reference/Elements#forms)（入力、テキスト領域、選択など）それぞれで `role="form"` を宣言する必要はありません。 それは、フォーム要素を包む HTML 要素で宣言するべきです。 理想的には、包む要素として {{htmlelement("form")}} 要素を使用し、`role="form"` を宣言しないでください。
 
 ### 検索
 
@@ -132,7 +132,7 @@ TBD
 - {{htmlelement("form")}}: フォーム要素
 - {{htmlelement("legend")}}: 凡例要素
 - [form (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#form)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)

@@ -76,7 +76,7 @@ Firefox 68 は、米国時間 2019 年 7 月 9 日 にリリースされまし�
 
 #### 廃止
 
-- [`<meta http-equiv="set-cookie">`](/ja/docs/Web/HTML/Element/meta) のサポートを廃止しました ([Firefox バグ 1457503](https://bugzil.la/1457503))。
+- [`<meta http-equiv="set-cookie">`](/ja/docs/Web/HTML/Reference/Elements/meta) のサポートを廃止しました ([Firefox バグ 1457503](https://bugzil.la/1457503))。
 
 ### CSS
 

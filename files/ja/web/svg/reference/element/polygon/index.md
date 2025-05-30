@@ -1,12 +1,11 @@
 ---
 title: <polygon>
 slug: Web/SVG/Reference/Element/polygon
-original_slug: Web/SVG/Element/polygon
+l10n:
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-**`<polygon>`** 要素は、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
+**`<polygon>`** は [SVG](/ja/docs/Web/SVG) の要素で、接続された一連の直線の区間で構成される閉じた図形を定義します。最後の点は最初の点と結ばれます。
 
 開いた図形については {{SVGElement("polyline")}} 要素をご覧ください。
 
@@ -30,7 +29,7 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('例', 100, 100)}}
+{{EmbedLiveSample('Example', 100, 100)}}
 
 ## 属性
 
@@ -41,22 +40,7 @@ svg {
   - : This attribute lets specify the total length for the path, in user units.
     _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
 
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [スタイル属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [グラフィックイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グラフィックイベント属性)
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
-- ARIA 属性
-  - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
-
-## 使い方メモ
+## 使用コンテキスト
 
 {{svginfo}}
 
@@ -69,6 +53,8 @@ svg {
 {{Compat}}
 
 ## 関連情報
+
+- [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)、例えば {{SVGAttr("fill")}} や {{SVGAttr("stroke")}}
 
 - **他の SVG 基本図形:**
 

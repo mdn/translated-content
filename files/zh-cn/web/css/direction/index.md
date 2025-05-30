@@ -45,7 +45,7 @@ direction: rtl;
 }
 ```
 
-请注意，文本方向通常在文档中定义（例如，使用 [HTML 的 `dir` 属性](/zh-CN/docs/Web/HTML/Global_attributes/dir) 属性），而不是通过直接使用 `direction` 属性来定义。
+请注意，文本方向通常在文档中定义（例如，使用 [HTML 的 `dir` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir) 属性），而不是通过直接使用 `direction` 属性来定义。
 
 该属性设置可以设置块级元素文本的基本方向，也可以设置由通过 {{Cssxref("unicode-bidi")}} 属性创建的嵌入元素的方向。与此同时，它还可以设置文本、块级元素的默认对齐方式，以及表行中的单元格的流动方向。
 
@@ -122,4 +122,4 @@ blockquote {
 
 - {{Cssxref("unicode-bidi")}}
 - {{Cssxref("writing-mode")}}
-- HTML 的 [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#dir) 全局属性
+- HTML 的 [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#dir) 全局属性

@@ -1,6 +1,8 @@
 ---
 title: "@keyframes"
 slug: Web/CSS/@keyframes
+l10n:
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{CSSRef}}
@@ -10,7 +12,7 @@ slug: Web/CSS/@keyframes
 ## 構文
 
 ```css
-@keyframes slidein {
+@keyframes slide-in {
   from {
     transform: translateX(0%);
   }
@@ -31,14 +33,16 @@ slug: Web/CSS/@keyframes
   - : アニメーションの終わりである `100%` を示します。
 - {{cssxref("&lt;percentage&gt;")}}
   - : 指定したキーフレームがアニメーションの中で作動する時間を示すパーセント値です。
+- `<timeline-range-name>` {{cssxref("&lt;percentage&gt;")}}
+  - : 指定したアニメーション範囲の、指定したキーフレームが発生する時点までの割合。名前付きタイムライン範囲を使用するアニメーションの種類については、[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を参照してください。
 
 ## 解説
-
-JavaScript は、 CSS オブジェクトモデルのインターフェイス {{domxref("CSSKeyframesRule")}} によって `@keyframes` アットルールにアクセスできます。
 
 キーフレームを使うには、アニメーションとそのキーフレームを一致させるために、 {{ cssxref("animation-name") }} プロパティで指定したものと同じ名前がついた `@keyframes` ルールを作成します。それぞれの `@keyframes` ルールは、キーフレームセレクターのスタイルリストを含んでいます。それは、そのキーフレームが作動する時のアニメーションのパーセント値と、そのキーフレームでのスタイルを指定するブロックとで構成されています。
 
 キーフレームは任意の順番で並べることができます。それらは、作動する時を示すパーセント値の順番に従って制御されます。
+
+JavaScript は、 `@keyframes` アットルールに CSS オブジェクトモデルの {{domxref("CSSKeyframesRule")}} インターフェイスによってアクセスできます。
 
 ### 有効なキーフレームのリスト
 
@@ -54,7 +58,7 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ### 一部のキーフレームでプロパティが指定されていない場合
 
-一部のキーフレームでしか指定されていないプロパティは、補完されます（ただし、補完することができないプロパティは除きます。このようなプロパティは、アニメーションされません）。
+一部のキーフレームでしか指定されていないプロパティは、補完されます（ただし、補完することができないプロパティは除きます。このようなプロパティは、アニメーションしません）。
 
 ```css
 @keyframes identifier {
@@ -114,8 +118,8 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
     margin-top: 50px;
   }
   50% {
-    margin-top: 150px !important;
-  } /* 無視される */
+    margin-top: 150px !important; /* 無視される */
+  }
   to {
     margin-top: 100px;
   }
@@ -141,7 +145,7 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ### CSS アニメーションの例
 
-[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+[CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)および [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations) を参照してください。
 
 ## 仕様書
 
@@ -153,5 +157,8 @@ JavaScript は、 CSS オブジェクトモデルのインターフェイス {{d
 
 ## 関連情報
 
+- {{cssxref("animation-range")}}
 - [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)
+- [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
+- [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
 - {{domxref("AnimationEvent")}}

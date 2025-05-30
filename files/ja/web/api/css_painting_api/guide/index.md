@@ -60,7 +60,7 @@ registerPaint(
 
 CSS の [`background-size`](/ja/docs/Web/CSS/background-size) と [`background-position`](/ja/docs/Web/CSS/background-position) プロパティを使用して、この背景画像のサイズを変更したり、再配置したりすることができますが、これは描画ワークレットで作成した黄色のボックスの既定のサイズと配置です。
 
-この例はシンプルなものにしてみました。より多くのオプションについては、[キャンバスのドキュメント](/ja/docs/Web/HTML/Element/canvas)を参照してください。また、このチュートリアルの後半では、少し複雑さを追加しています。
+この例はシンプルなものにしてみました。より多くのオプションについては、[キャンバスのドキュメント](/ja/docs/Web/HTML/Reference/Elements/canvas)を参照してください。また、このチュートリアルの後半では、少し複雑さを追加しています。
 
 ## ワークレットの登録
 

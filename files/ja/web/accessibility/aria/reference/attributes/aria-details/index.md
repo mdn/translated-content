@@ -15,7 +15,7 @@ l10n:
 
 この属性は、サポート不足と誤用により非推奨となった、HTML で完全にサポートされたことのない `longdesc` 属性（置き換えられた要素のコンテンツへの長い説明の URL）と同様の目的を果たします。
 
-`aria-details` 属性は、より詳細な情報を取得するための要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id)、またはスペースで区切られた `id` のリストを値として受け取ります。`aria-details` が要素に含まれている場合、支援技術は追加の情報が利用可能であることをユーザーに通知し、ユーザーが参照先のコンテンツに移動できるようにします。
+`aria-details` 属性は、より詳細な情報を取得するための要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id)、またはスペースで区切られた `id` のリストを値として受け取ります。`aria-details` が要素に含まれている場合、支援技術は追加の情報が利用可能であることをユーザーに通知し、ユーザーが参照先のコンテンツに移動できるようにします。
 
 `aria-details` によって参照される要素には、通常 [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を介して提供される情報よりも多くの情報が含まれることが意図されています。
 
@@ -66,9 +66,9 @@ definition ロールと term ロールについて、`aria-details` は [`defini
 
 ## 関連情報
 
-- HTML [id](/ja/docs/Web/HTML/Global_attributes/id) 属性
+- HTML [id](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
 - [画像の `alt` 属性](/ja/docs/Web/API/HTMLImageElement/alt)
-- HTML [title](/ja/docs/Web/HTML/Global_attributes/title) 属性
+- HTML [title](/ja/docs/Web/HTML/Reference/Global_attributes/title) 属性

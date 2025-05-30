@@ -115,7 +115,7 @@ Os códigos de status listados abaixo são definidos por [RFC 9110](https://http
   - : O método de solicitação é conhecido pelo servidor, mas não é suportado pelo recurso de destino.
     Por exemplo, uma API pode não permitir chamar `DELETE` para remover um recurso.
 - {{HTTPStatus(406, "406 Not Acceptable")}}
-  - : Esta resposta é enviada quando o servidor web, após realizar [negociação de conteúdo orientada pelo servidor](/pt-BR/docs/Web/HTTP/Content_negotiation#negociação_baseada_no_servidor), não encontra nenhum conteúdo que esteja em conformidade com os critérios fornecidos por o agente do usuário.
+  - : Esta resposta é enviada quando o servidor web, após realizar [negociação de conteúdo orientada pelo servidor](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation#negociação_baseada_no_servidor), não encontra nenhum conteúdo que esteja em conformidade com os critérios fornecidos por o agente do usuário.
 - {{HTTPStatus(407, "407 Proxy Authentication Required")}}
   - : É semelhante a `401 Unauthorized`, mas a autenticação precisa ser feita por um proxy.
 - {{HTTPStatus(408, "408 Request Timeout")}}

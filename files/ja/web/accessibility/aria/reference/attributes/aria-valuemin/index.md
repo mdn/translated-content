@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-`aria-valuemin` 属性は、範囲ウィジェットで許可される最小値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Element/input/range)、[`number`](/ja/docs/Web/HTML/Element/input/number) と全ての日付型の {{HTMLElement('input')}} の `min` 属性に似ています。
+`aria-valuemin` 属性は、範囲ウィジェットで許可される最小値を定義します。これは、{{HTMLElement('progress')}}、{{HTMLElement('meter')}}、および [`range`](/ja/docs/Web/HTML/Reference/Elements/input/range)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/number) と全ての日付型の {{HTMLElement('input')}} の `min` 属性に似ています。
 
 非セマンティック要素で [`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)、[`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)、[`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)、および [`spinbutton`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role) を含む範囲型ロールを作成する場合、`aria-valuemin` を使用して最大値より小さい最小値を定義できます。これは `slider`、`scrollbar` および `spinbutton` の必須属性です。
 
@@ -56,6 +56,6 @@ l10n:
 ## 関連情報
 
 - [`range` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role)
-- [`<input type="range">` 要素の `min` 属性](/ja/docs/Web/HTML/Element/input/range#min)
+- [`<input type="range">` 要素の `min` 属性](/ja/docs/Web/HTML/Reference/Elements/input/range#min)
 - [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 - [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)

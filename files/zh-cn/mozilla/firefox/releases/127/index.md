@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- 现在禁止在 `<base>` 元素的 [`href`](/zh-CN/docs/Web/HTML/Element/base#href) 属性中使用 `data:` 和 `javascript:` URL。（[Firefox bug 1850967](https://bugzil.la/1850967)）。
+- 现在禁止在 `<base>` 元素的 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/base#href) 属性中使用 `data:` 和 `javascript:` URL。（[Firefox bug 1850967](https://bugzil.la/1850967)）。
 
 ### CSS
 

@@ -3,7 +3,7 @@ title: <math>
 slug: Web/MathML/Reference/Element/math
 ---
 
-**`<math>`** [MathML](/zh-CN/docs/Web/MathML) 元素是顶级的 MathML 元素，用于编写单个数学公式。可以将其放在允许[流式内容](/zh-CN/docs/Web/HTML/Content_categories#流式内容)的 HTML 内容中。
+**`<math>`** [MathML](/zh-CN/docs/Web/MathML) 元素是顶级的 MathML 元素，用于编写单个数学公式。可以将其放在允许[流式内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容)的 HTML 内容中。
 
 > [!NOTE]
 > 参阅[编写 MathML 页面](/zh-CN/docs/Web/MathML/Guides/Authoring#使用_mathml)以了解如何正确地在网页中集成 MathML 公式，有关更多的演示，请参阅[示例](/zh-CN/docs/Web/MathML/Guides)页面。

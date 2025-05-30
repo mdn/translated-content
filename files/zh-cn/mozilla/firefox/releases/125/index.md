@@ -42,8 +42,8 @@ l10n:
 
   已支持以下 HTML 全局属性：
 
-  - [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget)
-  - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/button#popovertargetaction)
+  - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
   （[Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993)）。
 
@@ -56,7 +56,7 @@ l10n:
   - 在触发 `contentlost` 后，浏览器将会默认尝试恢复和重启丢失的上下文，但代码可以通过取消这一事件来阻止这一行为。
   - 可以通过相同方式监视离屏画布，但应该使用 [`OffScreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 的 [`contextlost`](/zh-CN/docs/Web/API/OffscreenCanvas/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/OffscreenCanvas/contextrestored_event) 事件，以及 [`OffscreenCanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D#上下文)。
 
-- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Element/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性用于设置以声明方式使用 [`<template>`](/zh-CN/docs/Web/HTML/Element/template) 元素创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
+- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性用于设置以声明方式使用 [`<template>`](/zh-CN/docs/Web/HTML/Reference/Elements/template) 元素创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
 - 现已支持 [`Clipboard`](/zh-CN/docs/Web/API/Clipboard) 接口的 [`readText()`](/zh-CN/docs/Web/API/Clipboard/readText) 方法，其用于从系统剪贴板异步读取文本。在读取不是由同源页面提供的剪贴板数据时，将会出现粘贴上下文菜单，以供用户确认。（[Firefox bug 1877400](https://bugzil.la/1877400)）。
 
 #### Media、WebRTC 和 Web Audio
@@ -100,7 +100,7 @@ l10n:
 
 - **嵌套在分段元素中的 `<h1>` 的用户代理样式**：`layout.css.h1-in-section-ua-styles.enabled`。
 
-  现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
+  现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
 
   > [!NOTE]
   > 此特性的首选项是反向工作的：在 Nightly 版本中，它被设置为 `false`，从而移除嵌套在分段元素中的标题的用户代理样式。在所有其他更新通道中，它被设置为 `true`，从而保留了嵌套标题的现有用户代理样式。

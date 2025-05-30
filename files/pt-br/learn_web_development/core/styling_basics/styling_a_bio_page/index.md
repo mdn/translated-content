@@ -33,7 +33,7 @@ Com o que você aprendeu nas últimas lições, você deve perceber que pode for
 Você pode trabalhar com editor ao vivo abaixo, ou pode fazer o [download do ponto de partida](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) para trabalhar em seu próprio editor de texto. Esta é uma única página de HTML, além do ponto de partida no head do documento. Se preferir, você pode transferir este CSS para um arquivo separado quando criar o exemplo no seu computador. Ou ainda, você pode utilizar uma ferramenta online como por exemplo, o [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) para realizar estas tarefas..
 
 > [!NOTE]
-> Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn/CSS/First_steps/Styling_a_biography_page#assessment_or_further_help) no final da página.
+> Se ficar emperrado, nos procure por ajuda — veja a seção [Assessment or further help](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Styling_a_bio_page#assessment_or_further_help) no final da página.
 
 ## Trabalhando com CSS
 
@@ -80,6 +80,6 @@ Se gostaria de ter seu trabalho avaliado, ou se ficou emperrado e gostaria de aj
 
 ## O que vem a seguir?
 
-Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/Learn/CSS/Building_blocks), iremos dar uma olhada com mais profundidade em várias áreas chave.
+Parabéns por terminar seu primeiro módulo. Agora você deve ter uma boa compreensão geral de CSS, e ser capaz de entender boa parte do que acontece numa folha de estilos. No próximo módulo, [CSS building blocks](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333), iremos dar uma olhada com mais profundidade em várias áreas chave.
 
 {{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}

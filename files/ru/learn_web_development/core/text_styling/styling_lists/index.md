@@ -243,7 +243,7 @@ ul {
 
 ### start
 
-Атрибут [`start`](/ru/docs/Web/HTML/Element/ol#start) позволит вам начать счёт списка с цифры отличной от 1. Например:
+Атрибут [`start`](/ru/docs/Web/HTML/Reference/Elements/ol#start) позволит вам начать счёт списка с цифры отличной от 1. Например:
 
 ```html
 <ol start="4">
@@ -262,7 +262,7 @@ ul {
 
 ### reversed
 
-Атрибут [`reversed`](/ru/docs/Web/HTML/Element/ol#reversed) начнёт отсчёт по убыванию вместо возрастания. Например:
+Атрибут [`reversed`](/ru/docs/Web/HTML/Reference/Elements/ol#reversed) начнёт отсчёт по убыванию вместо возрастания. Например:
 
 ```html
 <ol start="4" reversed>
@@ -284,7 +284,7 @@ ul {
 
 ### value
 
-Атрибут [`value`](/ru/docs/Web/HTML/Element/ol#value) позволит вам установить специфичные цифровые значения к пунктам списка. Например:
+Атрибут [`value`](/ru/docs/Web/HTML/Reference/Elements/ol#value) позволит вам установить специфичные цифровые значения к пунктам списка. Например:
 
 ```html
 <ol>

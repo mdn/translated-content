@@ -58,7 +58,7 @@ slug: Mozilla/Firefox/Experimental_features
 
 ### 切换密码显示
 
-HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Element/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
+HTML 密码输入元素（[`<input type="password">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)）包含一个“眼睛”图标，可通过切换来显示或遮盖密码文本（[Firefox bug 502258](https://bugzil.la/502258)）。
 
 <table>
   <thead>
@@ -1609,8 +1609,8 @@ CSS 更新包括：
 
 以下 HTML 全局属性得到了支持：
 
-- [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget)
-- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
+- [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
 参见 [Firefox bug 1823757](https://bugzil.la/1823757) 以获取更多细节。
 

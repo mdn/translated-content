@@ -30,7 +30,7 @@ Access-Control-Request-Headers: <header-name>, <header-name>, ...
 ## Diretivas
 
 - \<header-name>
-  - : Uma lista delimitada por vírgula [HTTP headers](/pt-BR/docs/Web/HTTP/Headers) incluídos na solicitação.
+  - : Uma lista delimitada por vírgula [HTTP headers](/pt-BR/docs/Web/HTTP/Reference/Headers) incluídos na solicitação.
 
 ## Exemplos
 

@@ -25,7 +25,7 @@ Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました
 
 ### HTML
 
-- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
+- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
 
 ### CSS
 
@@ -40,7 +40,7 @@ _変更なし。_
 
 - ECMAScript 2015 モジュールを、デフォルトで有効にしました ([Firefox バグ 1438139](https://bugzil.la/1438139))。詳しくは [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) および [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) をご覧ください。または、MDN のリファレンス文書を確認してください。
 
-  - [`<script src="main.js" type="module">`](/ja/docs/Web/HTML/Element/script#attr-type) および [`<script nomodule src="fallback.js">`](/ja/docs/Web/HTML/Element/script#attr-nomodule)
+  - [`<script src="main.js" type="module">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-type) および [`<script nomodule src="fallback.js">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-nomodule)
   - [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文。
 
 - {{jsxref("Array.prototype.values()")}} メソッドを再び追加しました ([Firefox バグ 1420101](https://bugzil.la/1420101))。互換性の問題のために無効化されました。このメソッドを独自に実装していないことを確認してください。

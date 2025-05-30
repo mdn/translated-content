@@ -40,5 +40,5 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS セーフリストリクエストヘッダー")}}
-  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+  - {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
   - {{Glossary("Request header", "リクエストヘッダー")}}

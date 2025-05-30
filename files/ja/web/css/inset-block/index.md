@@ -2,12 +2,14 @@
 title: inset-block
 slug: Web/CSS/inset-block
 l10n:
-  sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素におけるブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-block`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における論理的なブロック方向の先頭および末尾からの論理的な内部位置を定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}} と {{cssxref("bottom")}}、または {{cssxref("right")}} と {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
 {{InteractiveExample("CSS Demo: inset-block")}}
 
@@ -31,15 +33,12 @@ inset-block: 1rem auto;
 writing-mode: vertical-lr;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container">
-    <div id="example-element">I am absolutely positioned.</div>
+    <div id="example-element">これは絶対位置指定されています。</div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>
@@ -78,6 +77,8 @@ writing-mode: vertical-lr;
 inset-block: 3px 10px;
 inset-block: 2.4em 3em;
 inset-block: 10px; /* 値が先頭と末尾の両方に適用される */
+inset-block: auto anchor(start);
+inset-block: 10em anchor-size(--myAnchor height, 10%);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-block: 10% 5%;

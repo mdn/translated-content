@@ -3,7 +3,7 @@ title: "Django 教程 6: 通用列表和详细信息视图"
 slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 本教程扩充了 [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。
 

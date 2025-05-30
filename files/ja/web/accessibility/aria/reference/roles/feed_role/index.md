@@ -93,7 +93,7 @@ Coming soon
 ## 関連情報
 
 - HTML {{htmlelement("article")}} 要素
-- [HTML のリスト](/ja/docs/Web/HTML/Element/ul)
+- [HTML のリスト](/ja/docs/Web/HTML/Reference/Elements/ul)
 - [ARIA: article ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/article_role)
 - [ARIA: list ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.1/#feed) — フィードデザインパターンの実装に関する詳細。 (英語)

@@ -12,7 +12,7 @@ No entanto, o termo genérico "JavaScript" tal como é entendido no contexto do 
 
 ## JavaScript, a linguagem principal (ECMAScript)
 
-O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview). A última versão da especificação é [ECMAScript 5.1](https://ecma-international.org/ecma-262/5.1/).
+O núcleo da linguagem JavaScript é padronizado pelo comitê ECMA TC39 como uma linguagem chamada [ECMAScript](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview). A última versão da especificação é [ECMAScript 5.1](https://ecma-international.org/ecma-262/5.1/).
 
 Este núcleo da linguagem é também usado em ambientes fora do navegador, por exemplo em [node.js](https://nodejs.org/).
 

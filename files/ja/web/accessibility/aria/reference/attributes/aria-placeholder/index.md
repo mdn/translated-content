@@ -9,7 +9,7 @@ l10n:
 
 ## 解説
 
-プレースホルダーは、値が設定されていない場合にフォームコントロールに表示されるテキストです。 HTMLの [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性を使用すると、いくつかの HTML の {{HTMLElement('input')}} タイプおよび {{HTMLElement('textarea')}} に対してサンプル値や期待する形式の簡単な説明を提供できます。
+プレースホルダーは、値が設定されていない場合にフォームコントロールに表示されるテキストです。 HTMLの [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を使用すると、いくつかの HTML の {{HTMLElement('input')}} タイプおよび {{HTMLElement('textarea')}} に対してサンプル値や期待する形式の簡単な説明を提供できます。
 
 他の要素を使用して `textbox` を作成している場合、`placeholder` はサポートされません。ここで `aria-placeholder` が役立ちます。`aria-placeholder` 属性を使用すると、非セマンティックフォームコントロールに値がない場合に、どのようなタイプのデータが期待されるかをユーザーが理解できるように、短いヒントを定義できます。
 
@@ -65,6 +65,6 @@ l10n:
 
 ## 関連情報
 
-- [HTML `placeholder` 属性](/ja/docs/Web/HTML/Element/input#placeholder)
+- [HTML `placeholder` 属性](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
 - [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)

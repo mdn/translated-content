@@ -32,7 +32,7 @@ WWW-Authenticate: <type> realm=<realm>
 ## Diretivas
 
 - \<type>
-  - : [Tipo de autenticação.](/pt-BR/docs/Web/HTTP/Authentication#authentication_schemes) Um tipo comum de autenticação é ["Basic"](/pt-BR/docs/Web/HTTP/Authentication#basic_authentication_scheme). IANA mantém uma [lista de esquema de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
+  - : [Tipo de autenticação.](/pt-BR/docs/Web/HTTP/Guides/Authentication#authentication_schemes) Um tipo comum de autenticação é ["Basic"](/pt-BR/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). IANA mantém uma [lista de esquema de autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml).
 - realm=\<realm>
   - : Uma descrição da área protegida. Se nenhuma área for informada, os clientes frequentemente exibirão um hostname formatado.
 - charset=\<charset>
@@ -48,7 +48,7 @@ WWW-Authenticate: Basic
 WWW-Authenticate: Basic realm="Access to the staging site", charset="UTF-8"
 ```
 
-Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exemplos em como configurar servidores Apache ou nginx para proteger seu site com senha usando autenticação básica HTTP.
+Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication) para exemplos em como configurar servidores Apache ou nginx para proteger seu site com senha usando autenticação básica HTTP.
 
 ## Especificações
 
@@ -63,7 +63,7 @@ Veja também [autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication) para exe
 
 ## Veja também
 
-- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Authentication)
+- [Autenticação HTTP](/pt-BR/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}
 - {{HTTPHeader("Proxy-Authenticate")}}

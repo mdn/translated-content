@@ -153,5 +153,5 @@ if (crossOriginIsolated) {
 
 ## 関連情報
 
-- {{domxref("setTimeout()")}}
+- {{domxref("Window.setTimeout", "setTimeout()")}}
 - [Monitor your web page's total memory usage with measureUserAgentSpecificMemory() - web.dev](https://web.dev/articles/monitor-total-page-memory-usage)
