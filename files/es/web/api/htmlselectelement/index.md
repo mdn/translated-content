@@ -16,9 +16,9 @@ La interfaz **`HTMLSelectElement`** representa un elemento HTML {{HTMLElement("s
 _Esta interfaz hereda las propiedades de {{domxref("HTMLElement")}}, {{domxref("Element")}} y {{domxref("Node")}}._
 
 - {{domxref("HTMLSelectElement.autofocus")}}
-  - : Un valor booleano que refleja el atributo HTML [`autofocus`](/es/docs/Web/HTML/Element/select#autofocus), que indica si el control debe tener el foco de entrada cuando se carga la página, a menos que el usuario lo anule, por ejemplo escribiendo en un control diferente. Solo un elemento asociado a un formulario en un documento puede tener este atributo especificado.
+  - : Un valor booleano que refleja el atributo HTML [`autofocus`](/es/docs/Web/HTML/Reference/Elements/select#autofocus), que indica si el control debe tener el foco de entrada cuando se carga la página, a menos que el usuario lo anule, por ejemplo escribiendo en un control diferente. Solo un elemento asociado a un formulario en un documento puede tener este atributo especificado.
 - {{domxref("HTMLSelectElement.disabled")}}
-  - : Un valor booleano que refleja el atributo HTML [`disabled`](/es/docs/Web/HTML/Element/select#disabled), que indica si el control está deshabilitado. Si está deshabilitado, no acepta clics.
+  - : Un valor booleano que refleja el atributo HTML [`disabled`](/es/docs/Web/HTML/Reference/Elements/select#disabled), que indica si el control está deshabilitado. Si está deshabilitado, no acepta clics.
 - {{domxref("HTMLSelectElement.form")}} {{ReadOnlyInline}}
   - : Un {{domxref("HTMLFormElement")}} que hace referencia al formulario al que está asociado este elemento. Si el elemento no está asociado con un elemento {{HTMLElement("form")}}, entonces devuelve `null`.
 - {{domxref("HTMLSelectElement.labels")}} {{ReadOnlyInline}}
@@ -26,19 +26,19 @@ _Esta interfaz hereda las propiedades de {{domxref("HTMLElement")}}, {{domxref("
 - {{domxref("HTMLSelectElement.length")}}
   - : Un `unsigned long` con el número de elementos {{HTMLElement("option")}} en este elemento `select`.
 - {{domxref("HTMLSelectElement.multiple")}}
-  - : Un valor booleano que refleja el atributo HTML [`multiple`](/es/docs/Web/HTML/Element/select#multiple), que indica si se pueden seleccionar varios elementos.
+  - : Un valor booleano que refleja el atributo HTML [`multiple`](/es/docs/Web/HTML/Reference/Elements/select#multiple), que indica si se pueden seleccionar varios elementos.
 - {{domxref("HTMLSelectElement.name")}}
-  - : Una cadena que refleja el atributo HTML [`name`](/es/docs/Web/HTML/Element/select#name), que contiene el nombre de este control utilizado por los servidores y las funciones de búsqueda DOM.
+  - : Una cadena que refleja el atributo HTML [`name`](/es/docs/Web/HTML/Reference/Elements/select#name), que contiene el nombre de este control utilizado por los servidores y las funciones de búsqueda DOM.
 - {{domxref("HTMLSelectElement.options")}} {{ReadOnlyInline}}
   - : Un {{domxref("HTMLOptionsCollection")}} que representa el conjunto de elementos {{HTMLElement("option")}} ({{domxref("HTMLOptionElement")}}) contenidos en este elemento.
 - {{domxref("HTMLSelectElement.required")}}
-  - : Un valor booleano que refleja el atributo HTML [`required`](/es/docs/Web/HTML/Element/select#required), que indica si el usuario debe seleccionar un valor antes de enviar el formulario.
+  - : Un valor booleano que refleja el atributo HTML [`required`](/es/docs/Web/HTML/Reference/Elements/select#required), que indica si el usuario debe seleccionar un valor antes de enviar el formulario.
 - {{domxref("HTMLSelectElement.selectedIndex")}}
   - : Un `long` que refleja el índice del primer elemento {{HTMLElement("option")}} seleccionado. El valor `-1` indica que no se ha seleccionado ningún elemento.
 - {{domxref("HTMLSelectElement.selectedOptions")}} {{ReadOnlyInline}}
   - : Un {{domxref("HTMLCollection")}} que representa el conjunto de elementos {{HTMLElement("option")}} seleccionados.
 - {{domxref("HTMLSelectElement.size")}}
-  - : Un `long` que refleja el atributo HTML [`size`](/es/docs/Web/HTML/Element/select#size), que contiene el número de elementos visibles en el control. El valor predeterminado es 1, a menos que `multiple` sea `true`, en cuyo caso es 4.
+  - : Un `long` que refleja el atributo HTML [`size`](/es/docs/Web/HTML/Reference/Elements/select#size), que contiene el número de elementos visibles en el control. El valor predeterminado es 1, a menos que `multiple` sea `true`, en cuyo caso es 4.
 - {{domxref("HTMLSelectElement.type")}} {{ReadOnlyInline}}
   - : Una cadena que representa el tipo del control de formulario. Cuando `multiple` es `true`, devuelve `"select-multiple"`; de lo contrario, devuelve `"select-one"`.
 - {{domxref("HTMLSelectElement.validationMessage")}} {{ReadOnlyInline}}
