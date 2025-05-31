@@ -89,6 +89,6 @@ l10n:
 
 - {{HTMLElement('form')}} 要素
 - {{HTMLElement('input')}} 要素
-- {{HTML/ReferenceElements('search')}} 要素
+- {{HTMLElement('search')}} 要素
 - [`<input type="search">`](/ja/docs/Web/HTML/Reference/Elements/input/search)
 - [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)

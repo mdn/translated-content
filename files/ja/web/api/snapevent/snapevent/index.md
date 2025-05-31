@@ -3,7 +3,7 @@ title: "SnapEvent: SnapEvent() コンストラクター"
 short-title: SnapEvent()
 slug: Web/API/SnapEvent/SnapEvent
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
@@ -35,7 +35,7 @@ new SnapEvent(type, init)
 
 ```js
 mainElem.addEventListener("scrollsnapchange", (event) => {
-  // ...
+  // …
 
   // コンソールに SnapEvent オブジェクトのインスタンスを出力
   console.log(event);

@@ -370,13 +370,13 @@ def renew_book_librarian(request, pk):
 {% extends "base_generic.html" %}
 
 {% block content %}
-  <h1>Renew: {{ book_instance.book.title }}</h1>
-  <p>Borrower: {{ book_instance.borrower }}</p>
-  <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: {{book_instance.due_back}}</p>
+  <h1>Renew: \{{ book_instance.book.title }}</h1>
+  <p>Borrower: \{{ book_instance.borrower }}</p>
+  <p> if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{book_instance.due_back}}</p>
 
   <form action="" method="post">
     {% csrf_token %}
-    {{ form.as_table }}
+    \{{ form.as_table }}
     <input type="submit" value="Submit">
   </form>
 {% endblock %}
