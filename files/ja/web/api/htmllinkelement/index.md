@@ -32,7 +32,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLLinkElement.imageSrcset")}}
   - : 文字列で、 HTML の [`imagesrcset`](/ja/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性を反映します。画像候補文字列のコンマ区切りリストです。
 - {{domxref("HTMLLinkElement.integrity")}}
-  - : 文字列で、ブラウザが取得されたリソースが予期しない操作なしに配信されたことを確認するために使用できるインラインメタデータを含みます。 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の `integrity` 属性を反映します。
+  - : 文字列で、ブラウザーが取得されたリソースが予期しない操作なしに配信されたことを確認するために使用できるインラインメタデータを含みます。 [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素の `integrity` 属性を反映します。
 - {{domxref("HTMLLinkElement.media")}}
   - : 文字列で、リソースに適用される 1 つ以上のメディア形式のリストを表します。
 - {{domxref("HTMLLinkElement.referrerPolicy")}}
