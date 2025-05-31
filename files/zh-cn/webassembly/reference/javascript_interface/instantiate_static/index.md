@@ -7,8 +7,8 @@ l10n:
 
 **`WebAssembly.instantiate()`** 函数允许你编译和实例化 WebAssembly 代码。它有两个重载方式：
 
-- 主要的重载方式使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}} 格式的 WebAssembly 二进制代码，并在一个步骤中执行编译和实例化。返回的 `Promise` 兑现的是一个已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 和该模块的第一个 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance)。
-- 次要的重载方式使用已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 兑现的是该 `Module` 的 `Instance`。如果 `Module` 已经被编译了，那么这种重载方式是有用的。
+- 主重载方式使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}} 格式的 WebAssembly 二进制代码，并在一个步骤中执行编译和实例化。返回的 `Promise` 将兑现为已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 和该模块的第一个 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance)。
+- 次重载方式使用已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 将兑现为该 `Module` 的 `Instance`。当 `Module` 已经被编译时这种方式较为有用。
 
 > [!WARNING]
 > 此方法不是获取和实例化 Wasm 模块的最高效的方法。如果可能的话，你应该改用较新的 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 方法，该方法在一个步骤中直接从原始字节码获取、编译和实例化模块，因此不需要转换为 {{jsxref("ArrayBuffer")}}。
@@ -34,27 +34,27 @@ WebAssembly.instantiate(module, importObject, compileOptions)
 - `module`
   - : 要实例化的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
 - `importObject` {{optional_inline}}
-  - : 包含要导入到新创建的 `Instance` 的值（例如，函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象）的对象。已编译的模块中每个声明的导入一定有一个匹配的属性，否则抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
+  - : 包含要导入到新创建的 `Instance` 的值（例如，函数或 [`WebAssembly.Memory`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Memory) 对象）的对象。已编译的模块中每个声明的导入应有一个匹配的属性，否则将抛出 [`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError)。
 - `compileOptions` {{optional_inline}}
   - : 包含编译选项的对象。属性包含：
     - `builtins` {{optional_inline}}
-      - : 由用于在已编译的 Wasm 模块中启用 [JavaScript 内置](/zh-CN/docs/WebAssembly/Guides/JavaScript_builtins)用法的字符串组成的数组。字符串定义的是你想启用的内置。当前唯一可用的值是 `"js-string"`，启用的是 JavaScript 字符串内置。
+      - : 由用于在已编译的 Wasm 模块中启用 [JavaScript 内置](/zh-CN/docs/WebAssembly/Guides/JavaScript_builtins)用法的字符串组成的数组。字符串定义的是你所希望启用的内置。当前唯一可用的值是 `"js-string"`，其将启用 JavaScript 字符串内置。
     - `importedStringConstants` {{optional_inline}}
-      - : 指定[导入的全局字符串常量](/zh-CN/docs/WebAssembly/Guides/Imported_string_constants)命名空间的字符串。如果你想要在 Wasm 模块中使用导入的全局字符串的话，需要指定该属性。
+      - : 指定[导入的全局字符串常量](/zh-CN/docs/WebAssembly/Guides/Imported_string_constants)命名空间的字符串。当你希望在 Wasm 模块中使用导入的全局字符串时需要指定该属性。
 
 ### 返回值
 
-如果传递的是 `bufferSource`，返回的 `Promise` 兑现的是包含两个字段的 `ResultObject`：
+如果传递的是 `bufferSource`，返回的 `Promise` 将兑现为包含两个字段的 `ResultObject`：
 
 - `module`: 表示已编译的 WebAssembly 模块的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。该模块可以再次被实例化、通过 {{domxref("Worker.postMessage", "postMessage()")}} 共享或[缓存](/zh-CN/docs/Web/Progressive_web_apps/Guides/Caching)。
 - `instance`: 包含所有[导出的 WebAssembly 函数](/zh-CN/docs/WebAssembly/Guides/Exported_functions)的 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance) 对象。
 
-如果传递的是 `module`，返回的 `Promise` 兑现的是 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance) 对象。
+如果传递的是 `module`，返回的 `Promise` 将兑现为 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance) 对象。
 
 ### 异常
 
-- 如果参数的类型或结构不正确，则 promise 用 {{jsxref("TypeError")}} 拒绝。
-- 如果操作失败，则 promise 用 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 或 [`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 之一拒绝，具体取决于失败原因。
+- 如果参数的类型或结构不正确，则 promise 将以 {{jsxref("TypeError")}} 拒绝。
+- 如果操作失败，则 promise 将以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError)、[`WebAssembly.LinkError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/LinkError) 或 [`WebAssembly.RuntimeError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError) 之一拒绝，具体取决于失败原因。
 
 ## 示例
 
