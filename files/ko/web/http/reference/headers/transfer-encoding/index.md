@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Transfer-Encoding
 
 **`Transfer-Encoding`** 헤더는 사용자에게 {{Glossary("Entity header","entity")}}를 안전하게 전송하기 위해 사용하는 인코딩 형식을 지정합니다.
 
-`Transfer-Encoding`은 [hop-by-hop 헤더](/ko/docs/Web/HTTP/Headers#hbh)로, 리소스 자체가 아닌 두 노드 사이에 메시지를 적용하는 것입니다. 다중-노드 연결의 각각의 세그먼트는 `Transfer-Encoding` 의 값을 다르게 사용할 수 있습니다. 만약 전체 연결에 있어 데이터를 압축하고자 한다면, end-to-end 헤더인 {{HTTPHeader("Content-Encoding")}} 헤더를 대신 사용하시기 바랍니다.
+`Transfer-Encoding`은 [hop-by-hop 헤더](/ko/docs/Web/HTTP/Reference/Headers#hbh)로, 리소스 자체가 아닌 두 노드 사이에 메시지를 적용하는 것입니다. 다중-노드 연결의 각각의 세그먼트는 `Transfer-Encoding` 의 값을 다르게 사용할 수 있습니다. 만약 전체 연결에 있어 데이터를 압축하고자 한다면, end-to-end 헤더인 {{HTTPHeader("Content-Encoding")}} 헤더를 대신 사용하시기 바랍니다.
 
 본문이 없는 {{HTTPMethod("HEAD")}} 요청에 대한 응답은 그에 대한 {{HTTPMethod("GET")}} 메시지에 적용될 값을 나타냅니다.
 

@@ -34,7 +34,7 @@ header {
 }
 ```
 
-[`hidden`](/ko/docs/Web/HTML/Global_attributes#hidden) 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
+[`hidden`](/ko/docs/Web/HTML/Reference/Global_attributes#hidden) 속성 없이는 문서에 하나보다 많은 `<main>` 요소가 존재해선 안됩니다.
 
 <table class="properties">
   <tbody>
@@ -92,7 +92,7 @@ header {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -139,7 +139,7 @@ header {
 
 건너뛰기 링크, 스킵 내비게이션(skipnav)은 접근성 보조기술이 주요 탐색 구획, 정보 배너 등 반복되는 큰 구획을 빠르게 넘어갈 수 있도록 지원하는 기법으로, 사용자가 페이지의 주요 내용으로 신속하게 접근할 수 있도록 도와줍니다.
 
-`<main>` 요소에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 요소를 추가해 건너뛰기 링크의 대상으로 지정하세요.
+`<main>` 요소에 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 요소를 추가해 건너뛰기 링크의 대상으로 지정하세요.
 
 ```html
 <body>
@@ -157,7 +157,7 @@ header {
 
 ### 읽기 모드
 
-브라우저 읽기 모드는 문서 콘텐츠를 변환할 때 `<main>` 요소와 더불어 [제목](/ko/docs/Web/HTML/Element/Heading_Elements)과 [콘텐츠 구획](/ko/docs/Web/HTML/Element#콘텐츠_구획) 요소를 사용합니다.
+브라우저 읽기 모드는 문서 콘텐츠를 변환할 때 `<main>` 요소와 더불어 [제목](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements)과 [콘텐츠 구획](/ko/docs/Web/HTML/Reference/Elements#콘텐츠_구획) 요소를 사용합니다.
 
 - [Building websites for Safari Reader Mode and other reading apps.](https://medium.com/@mandy.michael/building-websites-for-safari-reader-mode-and-other-reading-apps-1562913c86c9)
 

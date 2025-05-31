@@ -144,7 +144,7 @@ the last one.
 
 - 가능하다면 대시를 사용하지 마세요. 5-7로 쓰는 대신에 5에서 7로 작성하세요.
 - 약어는 실제 표현으로 대체하세요. Jan 대신 January를 사용하세요.
-- 두문자어는 적어도 한 번에서 두 번은 본 표현으로 사용하고, 설명을 위해 [`<abbr>`](/ko/docs/Web/HTML/Element/abbr) 태그를 사용하세요.
+- 두문자어는 적어도 한 번에서 두 번은 본 표현으로 사용하고, 설명을 위해 [`<abbr>`](/ko/docs/Web/HTML/Reference/Elements/abbr) 태그를 사용하세요.
 
 ### 페이지 레이아웃
 
@@ -256,7 +256,7 @@ HTML 테이블을 사용해 페이지 레이아웃을 만들던 시절이 있습
 
 스크린 리더로 현대적인 예시를 시도해본다면, 더 이상 콘텐츠 읽기에 레이아웃 마크업이 끼어들어 혼란을 만들지 않는다는 것을 알 수 있을 것입니다. 코드 사이즈 면에서도 훨씬 간결하고 작습니다. 유지보수가 더 쉽고, 사용자가 다운로드 할 때 더 적은 대역폭이 필요하다는 것을 의미합니다 (특히 네트워크가 느린 사용자에게 유용합니다).
 
-레이아웃을 생성할 때 고려할 다른 사항은 위의 예시처럼 HTML 시맨틱 요소들([콘텐츠 섹션](/ko/docs/Web/HTML/Element#콘텐츠_섹션)을 확인하세요)을 사용하는 것입니다. {{htmlelement("div")}} 요소들을 중첩해서 레이아웃을 만들 수도 있지만, 네비게이션 메뉴는 {{htmlelement("nav")}}, 푸터는 {{htmlelement("footer")}}, 반복되는 콘텐츠 단위는 {{htmlelement("article")}}로 감싸는 등 적절한 섹션 요소들을 사용하는 것이 더 좋습니다. 이것은 스크린 리더 또는 다른 도구들에 추가적인 의미를 제공함으로써 유저에게 탐색 중인 콘텐츠에 대한 단서를 추가적으로 제공합니다 (스크린 리더 지원에 대해 더 알아보고 싶다면 [스크린 리더의 HTML5 섹션 요소 지원](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)을 참고하세요).
+레이아웃을 생성할 때 고려할 다른 사항은 위의 예시처럼 HTML 시맨틱 요소들([콘텐츠 섹션](/ko/docs/Web/HTML/Reference/Elements#콘텐츠_섹션)을 확인하세요)을 사용하는 것입니다. {{htmlelement("div")}} 요소들을 중첩해서 레이아웃을 만들 수도 있지만, 네비게이션 메뉴는 {{htmlelement("nav")}}, 푸터는 {{htmlelement("footer")}}, 반복되는 콘텐츠 단위는 {{htmlelement("article")}}로 감싸는 등 적절한 섹션 요소들을 사용하는 것이 더 좋습니다. 이것은 스크린 리더 또는 다른 도구들에 추가적인 의미를 제공함으로써 유저에게 탐색 중인 콘텐츠에 대한 단서를 추가적으로 제공합니다 (스크린 리더 지원에 대해 더 알아보고 싶다면 [스크린 리더의 HTML5 섹션 요소 지원](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)을 참고하세요).
 
 > [!NOTE]
 > 좋은 시맨틱과 매력적인 레이아웃을 제공하는 것에 더불어 당신의 콘텐츠는 논리적인 순서에 따라 배치되어야 합니다. 물론 추후 CSS를 사용해 원하는 위치에 놓을 수 있지만, 스크린 리더 사용자들이 말도 안 되는 내용을 듣게 되지 않도록 처음부터 제대로 된 순서를 지켜야 합니다.
@@ -348,7 +348,7 @@ UI 컨트롤 접근성에 대한 핵심적인 측면 중 하나는 브라우저�
 </div>
 ```
 
-기본적으로 [`tabindex`](/ko/docs/Web/HTML/Global_attributes#tabindex) 속성의 주된 의도는 탭 키로 접근 가능한 요소들의 탭 선택 순서를 양수로 표현해 정해진 소스 순서 외로 커스텀 하는 것 입니다. 사실 대부분의 경우에 큰 혼란을 만들 수 있기 때문에 나쁜 생각입니다. 정말로 필요할 때만 이것을 사용하세요. 예를 들어, 소스 코드의 순서와 아주 다른 시각적 순서로 요소들을 보여주는 레이아웃에서 더 논리적인 동작을 원하는 경우가 있겠습니다. `tabindex`의 다른 옵션이 두 가지 더 있습니다.
+기본적으로 [`tabindex`](/ko/docs/Web/HTML/Reference/Global_attributes#tabindex) 속성의 주된 의도는 탭 키로 접근 가능한 요소들의 탭 선택 순서를 양수로 표현해 정해진 소스 순서 외로 커스텀 하는 것 입니다. 사실 대부분의 경우에 큰 혼란을 만들 수 있기 때문에 나쁜 생각입니다. 정말로 필요할 때만 이것을 사용하세요. 예를 들어, 소스 코드의 순서와 아주 다른 시각적 순서로 요소들을 보여주는 레이아웃에서 더 논리적인 동작을 원하는 경우가 있겠습니다. `tabindex`의 다른 옵션이 두 가지 더 있습니다.
 
 - `tabindex="0”` — 위에서 말했듯 이 값은 기본적으로 탭 키로 접근이 불가능한 요소들을 접근이 가능하게 만듭니다. 아마 `tabindex`의 가장 유용한 값일 것입니다.
 - `tabindex="-1”` — 기본적으로 탭 키로 접근이 불가능한 요소에 프로그래밍적으로 포커스가 잡히도록 할 수 있습니다. 예를 들어, JavaScript를 통해서나 링크의 타겟으로 말이죠.
@@ -508,7 +508,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 한 가지 고려할 부분은 이미지 내용에 의미가 포함되어 있는지, 아니면 순전히 시각적인 장식을 위한 것인지 입니다. 그저 장식 요소라면 `alt` 속성에는 빈 문자열([빈 alt 속성](#빈_alt_속성))을 확인하세요)을 작성하거나 CSS background로 페이지에 포함시키는 편이 좋습니다.
 
 > [!NOTE]
-> 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images)과 [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)를 읽어보세요.
+> 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images)과 [반응형 이미지](/ko/docs/Web/HTML/Guides/Responsive_images)를 읽어보세요.
 
 추가로 맥락 정보를 제공하고 싶다면, 이미지 주변 텍스트나 위에서 살펴본 것처럼 `title` 속성 내부에 입력하세요. 이 경우 스크린 리더는 대체 텍스트, title 속성, 그리고 파일명을 읽어줍니다. 또한 브라우저가 마우스 오버에 title 텍스트를 툴팁으로 제공할 것입니다.
 
@@ -543,7 +543,7 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 </figure>
 ```
 
-모든 스크린 리더가 이것을 지원하는 것은 아니지만, 아닌 경우에도 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)나 [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)를 사용해 연동을 지원할 수 있습니다. 이런 요소 구조를 사용하는 것은 CSS 스타일링에 유용할 뿐 아니라 이미지에 대한 설명을 소스 옆에 위치시키는 방법을 제공합니다.
+모든 스크린 리더가 이것을 지원하는 것은 아니지만, 아닌 경우에도 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)나 [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)를 사용해 연동을 지원할 수 있습니다. 이런 요소 구조를 사용하는 것은 CSS 스타일링에 유용할 뿐 아니라 이미지에 대한 설명을 소스 옆에 위치시키는 방법을 제공합니다.
 
 ### 빈 alt 속성
 
@@ -563,7 +563,7 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 
 ## 링크 더 알아보기
 
-`href` 속성을 가지는 [`<a>`](/ko/docs/Web/HTML/Element/a) 요소, 즉 링크는 어떻게 사용되는지에 따라 접근성을 개선하기도 저해하기도 합니다. 기본적으로 링크는 접근성을 제공하는 것처럼 보입니다. 사용자가 문서의 다른 섹션으로 빠르게 이동할 수 있도록 도와 접근성을 향상시킵니다. 그러나 접근성 있는 스타일이 제거되거나 JavaScript로 인해 예상치 못한 동작을 제공한다면 접근성에 해가 되기도 합니다.
+`href` 속성을 가지는 [`<a>`](/ko/docs/Web/HTML/Reference/Elements/a) 요소, 즉 링크는 어떻게 사용되는지에 따라 접근성을 개선하기도 저해하기도 합니다. 기본적으로 링크는 접근성을 제공하는 것처럼 보입니다. 사용자가 문서의 다른 섹션으로 빠르게 이동할 수 있도록 도와 접근성을 향상시킵니다. 그러나 접근성 있는 스타일이 제거되거나 JavaScript로 인해 예상치 못한 동작을 제공한다면 접근성에 해가 되기도 합니다.
 
 ### 링크 스타일링
 
@@ -599,7 +599,7 @@ HTML에는 {{htmlelement("figure")}}와 어떤 종류(이미지 외에 어떤 �
 >
 ```
 
-만약 이런 링크 동작을 나타내기 위해 텍스트 대신 아이콘이 사용된다면 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 포함하도록 하세요.
+만약 이런 링크 동작을 나타내기 위해 텍스트 대신 아이콘이 사용된다면 [대체 텍스트](/ko/docs/Web/HTML/Reference/Elements/img#alt)를 꼭 포함하도록 하세요.
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
 - [MDN Understanding WCAG, Guideline 3.2 explanations](/ko/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
