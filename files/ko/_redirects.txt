@@ -193,6 +193,7 @@
 /ko/docs/Glossary/I18N	/ko/docs/Glossary/Internationalization
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Internationalization_and_localization	/ko/docs/conflicting/Glossary/Internationalization
+/ko/docs/Glossary/Proxy_servers_and_tunneling	/ko/docs/orphaned/Glossary/Proxy_servers_and_tunneling
 /ko/docs/Glossary/Rendering_engine	/ko/docs/Glossary/Engine/Rendering
 /ko/docs/Glossary/Routers	/ko/docs/Glossary/Router
 /ko/docs/Glossary/Second-level_Domain	/ko/docs/conflicting/Glossary/SLD
