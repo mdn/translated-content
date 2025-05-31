@@ -1,6 +1,6 @@
 ---
 title: Web 标准
-slug: 学习 Web 开发/入门模块/Web 标准
+slug: Learn/Getting started modules/Web Standards
 page-type: landing-page
 sidebar: learnsidebar
 ---
@@ -15,11 +15,9 @@ sidebar: learnsidebar
 - [Resilient Web Design](https://resilientwebdesign.com/), Jeremy Keith
 
 ## 先决条件
-
 本模块主要讲解理论知识，无需具备任何具体的 Web 技术实践知识。但是，如果您了解主要 Web 技术的基本用途，您将能够更好地理解本模块，并从中获益匪浅。如果你尚未完成[你的第一个网站]([/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website) 模块，我们建议你先完成它。
 
 ## 教程
-
 - [万维网是如何工作的
 ](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
   - : 本文提供了使用 Web 浏览器导航到网页时发生的情况的高级描述，解释了幕后发生的神奇过程，将相关代码传送到你的计算机，以便浏览器组装成你可以查看的内容。
