@@ -67,7 +67,7 @@ original_slug: Web/HTML/Element/script
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `async`
 
@@ -82,7 +82,7 @@ original_slug: Web/HTML/Element/script
     [브라우저 호환성](#브라우저_호환성)을 참고하세요.
 
 - `crossorigin`
-  - : 일반 `script` 요소는 표준 {{glossary("CORS")}}를 통과하지 못했을 때 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}에 최소한의 정보만 넘깁니다. `crossorigin` 속성은 정적 미디어에 대해 별도의 도메인을 사용하는 사이트의 오류 기록을 허용하기 위해 사용할 수 있습니다. 유효한 인수에 대한 보다 자세한 설명은 [CORS 설정 속](/ko/docs/Web/HTML/Attributes/crossorigin)성 문서를 참고하세요.
+  - : 일반 `script` 요소는 표준 {{glossary("CORS")}}를 통과하지 못했을 때 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}에 최소한의 정보만 넘깁니다. `crossorigin` 속성은 정적 미디어에 대해 별도의 도메인을 사용하는 사이트의 오류 기록을 허용하기 위해 사용할 수 있습니다. 유효한 인수에 대한 보다 자세한 설명은 [CORS 설정 속](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)성 문서를 참고하세요.
 - `defer`
 
   - : 브라우저가 스크립트를 문서 분석 이후에, 그러나 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 발생 이전에 실행해야 함을 나타내는 불리언 속성입니다.
@@ -104,7 +104,7 @@ original_slug: Web/HTML/Element/script
   - : [ES2015 모듈](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)을 지원하는 브라우저에서는 실행하지 않을 스크립트임을 나타내는 불리언 특성입니다. 모듈화 JavaScript를 지원하지 않는 오래된 브라우저가 사용할 대체 스크립트에 사용할 수 있습니다.
 
 - `nonce`
-  - : [`script-src` `Content-Security-Policy`](/ko/docs/Web/HTTP/Headers/Content-Security-Policy/script-src)의 화이트리스트에 스크립트를 등록하기 위한, 암호화된 일회용 숫자(논스, nonce)입니다. 서버는 고유한 일회용 숫자값을 정책을 전송할 때마다 생성해야 합니다. 자원의 정책을 우회할 수 없도록, 추측할 수 없는 임시값을 제공하는 것이 중요합니다.
+  - : [`script-src` `Content-Security-Policy`](/ko/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)의 화이트리스트에 스크립트를 등록하기 위한, 암호화된 일회용 숫자(논스, nonce)입니다. 서버는 고유한 일회용 숫자값을 정책을 전송할 때마다 생성해야 합니다. 자원의 정책을 우회할 수 없도록, 추측할 수 없는 임시값을 제공하는 것이 중요합니다.
 - `referrerpolicy`
 
   - : 스크립트를 가져올 때, 또는 스크립트가 다른 리소스를 가져올 때 전송할 [리퍼러](/ko/docs/Web/API/Document/referrer)를 나타냅니다.
@@ -127,7 +127,7 @@ original_slug: Web/HTML/Element/script
 
   - : 스크립트의 유형을 나타냅니다. 다음 다섯개의 범주 중 하나에 속할 수 있습니다.
 
-    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/MIME_types#javascript_types)되어 있습니다.
+    - **생략 또는 JavaScript MIME 유형:** 스크립트가 JavaScript임을 나타냅니다. 이 경우, HTML5 명세는 웹 작성자가 불필요한 `type`을 포함하지 않고 완전히 제외할 것을 촉구합니다. 보다 오래된 브라우저에서는 `type` 특성의 값으로 삽입 혹은 (`src` 특성으로) 불러온 스크립트의 언어를 표시하곤 했습니다. JavaScript MIME 유형은 [명세에 나열](/ko/docs/Web/HTTP/Guides/MIME_types#javascript_types)되어 있습니다.
     - **`module`:** 스크립트를 JavaScript 모듈로 간주합니다. 스크립트 콘텐츠 처리가 `charset`과 `defer` 특성의 영향을 받지 않습니다. `module`의 더 자세한 사용법은 MDN의 [JavaScript 모듈 안내서](/ko/docs/Web/JavaScript/Guide/Modules)를 참고하세요. 기존 스크립트와 달리, 모듈 스크립트는 교차 출처 가져오기 시 CORS 프로토콜을 사용해야 합니다.
     - **다른 모든 값:** 내장 콘텐츠를 브라우저가 처리하지 않을 데이터 블록으로 간주합니다. 개발자는 반드시 유효하면서 JavaScript가 아닌 MIME 유형을 지정해야 합니다. `src` 특성을 무시합니다.
 

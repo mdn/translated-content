@@ -34,7 +34,7 @@ CSS 선언 블록을 시각화하면 다음과 같습니다.
 ![css syntax - declarations block.png](declaration-block.png)
 
 > [!NOTE]
-> CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
+> CSS 선언 블록의 콘텐츠, 즉 여닫는 중괄호 없이 세미콜론으로 분리한 선언 목록은 HTML [`style`](/ko/docs/Web/HTML/Reference/Global_attributes#style) 특성의 값으로 사용할 수 있습니다.
 
 ## CSS 규칙집합
 
@@ -62,7 +62,7 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 다음과 같은 다른 종류의 문이 있습니다:
 
 - 본 것처럼, CSS 선언의 컬렉션과 선택자에 의해 기술된 조건을 연결짓는 **규칙집합** (또는 _규칙_).
-- at 기호, '`@`' (`U+0040 COMMERCIAL AT`)로 시작하고 그런 다음 문의 끝, 즉 블록 밖 다음 세미콜론(;) 또는 다음 블록의 끝까지 계속 식별자가 뒤따르는 **At-규칙**. 식별자에 의해 정의된 각 유형의 [at-규칙](/ko/docs/Web/CSS/At-rule)은, 물론 자체 내부 구문 및 의미(semantics)가 있을 수 있습니다. 그들은 메타 데이터 정보({{ cssxref("@charset") }} 또는 {{ cssxref("@import") }} 같은), 조건부 정보({{ cssxref("@media") }} 또는 {{ cssxref("@document") }} 같은) 또는 설명 정보({{ cssxref("@font-face") }} 같은)를 전달하는 데 사용됩니다.
+- at 기호, '`@`' (`U+0040 COMMERCIAL AT`)로 시작하고 그런 다음 문의 끝, 즉 블록 밖 다음 세미콜론(;) 또는 다음 블록의 끝까지 계속 식별자가 뒤따르는 **At-규칙**. 식별자에 의해 정의된 각 유형의 [at-규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은, 물론 자체 내부 구문 및 의미(semantics)가 있을 수 있습니다. 그들은 메타 데이터 정보({{ cssxref("@charset") }} 또는 {{ cssxref("@import") }} 같은), 조건부 정보({{ cssxref("@media") }} 또는 {{ cssxref("@document") }} 같은) 또는 설명 정보({{ cssxref("@font-face") }} 같은)를 전달하는 데 사용됩니다.
 
 규칙집합 또는 at-규칙이 아닌 모든 문은 유효하지 않고 무시됩니다.
 
@@ -72,24 +72,24 @@ CSS에서는 선언 블록에 조건을 붙여 해결할 수 있습니다. 각 (
 
 - CSS 주요 개념
 
-  - [CSS 문법](/ko/docs/Web/CSS/Syntax)
-  - [@규칙](/ko/docs/Web/CSS/At-rule)
-  - [주석](/ko/docs/Web/CSS/Comments)
-  - [명시도](/ko/docs/Web/CSS/Specificity)
-  - [상속](/ko/docs/Web/CSS/Inheritance)
+  - [CSS 문법](/ko/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)
+  - [주석](/ko/docs/Web/CSS/CSS_syntax/Comments)
+  - [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)
+  - [상속](/ko/docs/Web/CSS/CSS_cascade/Inheritance)
   - [박스 모델](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [레이아웃 모드](/ko/docs/Web/CSS/Layout_mode)
+  - [레이아웃 모드](/ko/docs/Glossary/Layout_mode)
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
 
-    - [초깃값](/ko/docs/Web/CSS/initial_value)
-    - [계산값](/ko/docs/Web/CSS/computed_value)
-    - [결정값](/ko/docs/Web/CSS/resolved_value)
-    - [지정값](/ko/docs/Web/CSS/specified_value)
-    - [사용값](/ko/docs/Web/CSS/used_value)
+    - [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)
+    - [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)
+    - [결정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_a47f4c6da6bce4fc52f8ed2ce27dc58e53fa5bd72bfef0bb04a61adbc5249cc4)
+    - [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [사용값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_ec5028512f59a0673c4ed5cfd5bcbbe4dcec85980166da23f909867f8a36e8b2)
     - [실제값](/ko/docs/Web/CSS/actual_value)
 
-  - [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)
-  - [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)
-  - [대체 요소](/ko/docs/Web/CSS/Replaced_element)
+  - [값 정의 구문](/ko/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+  - [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

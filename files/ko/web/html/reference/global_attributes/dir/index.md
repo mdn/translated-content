@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/dir
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`dir`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
+**`dir`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소의 쓰기 방향을 나타내는 열거형 특성입니다.
 
 {{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
 
@@ -47,5 +47,5 @@ original_slug: Web/HTML/Global_attributes/dir
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).
 - 이 특성을 나타내는 {{domxref("HTMLElement.dir")}}.

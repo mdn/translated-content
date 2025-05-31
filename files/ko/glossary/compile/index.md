@@ -23,6 +23,6 @@ JIT 컴파일러는 일반적으로 직접 호출되지 않지만, 성능 향상
 
 ## 같이 보기
 
-- [C/C++을 WebAssembly로 컴파일하기](/ko/docs/WebAssembly/C_to_Wasm)
-- [Rust를 WebAssembly로 컴파일하기](/ko/docs/WebAssembly/Rust_to_Wasm)
+- [C/C++을 WebAssembly로 컴파일하기](/ko/docs/WebAssembly/Guides/C_to_Wasm)
+- [Rust를 WebAssembly로 컴파일하기](/ko/docs/WebAssembly/Guides/Rust_to_Wasm)
 - 위키피디아: [컴파일러](https://en.wikipedia.org/wiki/Compiler)

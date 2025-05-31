@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`animation`** [단축](/ko/docs/Web/CSS/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
+**`animation`** [단축](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 스타일 사이에 에니메이션을 적용합니다. {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, 그리고 {{cssxref("animation-play-state")}}의 단축형입니다.
 
 {{InteractiveExample("CSS Demo: animation")}}
 
