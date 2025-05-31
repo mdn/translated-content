@@ -1,12 +1,10 @@
 ---
 title: SVG 効果の HTML コンテンツへの適用
+short-title: HTML での SVG 効果
 slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
-original_slug: Web/SVG/Applying_SVG_effects_to_HTML_content
 l10n:
-  sourceCommit: 1952d89acf75a2a9448cab9d323aa320281cd746
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
-
-{{SVGRef}}
 
 最近のブラウザーは、 [SVG](/ja/docs/Web/SVG) を [CSS](/ja/docs/Web/CSS) スタイルの中で使用して、 HTML コンテンツに対してグラフィカルな効果を適用することに対応しています。
 
@@ -29,7 +27,7 @@ SVG 効果を CSS スタイルで適用するには、まず最初に 適用す�
 
 上の例では、すべての段落が、 [ID](/ja/docs/Web/SVG/Reference/Element/mask) に `my-mask` を持つ [SVG の `<mask>`](/ja/docs/Web/HTML/Reference/Global_attributes/id) によってマスクされます。
 
-### 例: マスキング
+### 例: マスク
 
 たとえば、次に示すような SVG のコードを HTML 文章に埋め込むと、HTML コンテンツに対してグラデーションマスクを提供する CSS スタイルを宣言することができます。
 
@@ -98,7 +96,7 @@ p {
   Ut enim ad minim veniam.
 </p>
 
-<button onclick="toggleRadius()">Toggle radius</button>
+<button onclick="toggleRadius()">曲率を切り替え</button>
 
 <svg height="0">
   <clipPath id="clipping-path-1" clipPathUnits="objectBoundingBox">
@@ -235,7 +233,7 @@ pre.target:hover {
 
 ### 例: ぼかし文字
 
-文字にぼかしを入れるには、[`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
+文字にぼかしを入れるには、 [`blur()`](/ja/docs/Web/CSS/filter-function/blur) という CSS フィルターがあります。 SVG のフィルターを用いても同じ効果が実現できます。
 
 ```html
 <p class="blur">Time to clean my glasses</p>
@@ -276,7 +274,7 @@ SVG 要素と HTML の組み合わせでテキストを作成することで、�
 
 ## 外部参照の使用
 
-クリッピング、マスキング、フィルタリングに使用できる SVG は、そのソースが適用される HTML の文書と同じオリジンである限り、外部ソースから読み込むことができます。
+クリッピング、マスク、フィルタリングに使用できる SVG は、そのソースが適用される HTML の文書と同じオリジンである限り、外部ソースから読み込むことができます。
 
 例えば、CSS が `default.css` という名前のファイルであれば、次のようになります。
 
