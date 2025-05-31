@@ -155,29 +155,29 @@ the last one.
 </header>
 
 <nav>
-  <!-- main navigation in here -->
+  <!-- 主導航在這裡 -->
 </nav>
 
-<!-- Here is our page's main content -->
+<!-- 這裡是頁面的主要內容 -->
 <main>
-  <!-- It contains an article -->
+  <!-- 這裡包含一篇文章 -->
   <article>
     <h2>Article heading</h2>
 
-    <!-- article content in here -->
+    <!-- 文章內容在這裡 -->
   </article>
 
   <aside>
     <h2>Related</h2>
 
-    <!-- aside content in here -->
+    <!-- 側邊內容在這裡 -->
   </aside>
 </main>
 
-<!-- And here is our main footer that is used across all the pages of our website -->
+<!-- 這裡是主要用在所有頁面的頁尾 -->
 
 <footer>
-  <!-- footer content in here -->
+  <!-- 頁尾內容在這裡 -->
 </footer>
 ```
 
@@ -289,7 +289,7 @@ document.onkeydown = (e) => {
 
 重建這些功能會帶來許多額外的麻煩。而且肯定還有其他問題。**因此從一開始就使用正確的元素做正確的工作是最佳解**。
 
-#### 有意義的文字標籤
+#### 使用有意義的文字標籤
 
 UI 控件文字標籤對所有使用者都非常有用，但對身心障礙使用者來說，正確設置這些標籤極為重要。
 
@@ -337,7 +337,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 使用這樣的程式碼，標籤將與輸入框明確關聯；描述會更像是「Fill in your name: edit text」
 
-![一個寫著「填寫你的姓名」的良好表單標籤被賦予給一個文字輸入表單控件。](voiceover-good-form-label.png)
+![一個寫著「Fill in your name」的良好表單標籤被賦予給一個文字輸入表單控件。](voiceover-good-form-label.png)
 
 額外的好處是，大多數瀏覽器中，將標籤與表單輸入框關聯意味著可以點擊標籤來選擇或啟動表單元素。這為輸入框提供了更大的點擊區域，使其更容易選擇。
 
@@ -355,9 +355,9 @@ Fill in your name: <input type="text" id="name" name="name" />
 ```html
 <table>
   <tr>
-    <td>Name</td>
-    <td>Age</td>
-    <td>Pronouns</td>
+    <td>姓名</td>
+    <td>年齡</td>
+    <td>稱謂</td>
   </tr>
   <tr>
     <td>Gabriel</td>
@@ -402,14 +402,13 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 <img
   src="dinosaur.png"
-  alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth."
-  title="The Mozilla red dinosaur" />
+  alt="一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭"
+  title="Mozilla 紅色暴龍" />
 
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
 <p id="dino-label">
-  The Mozilla red Tyrannosaurus Rex: A two legged dinosaur standing upright like
-  a human, with small arms, and a large head with lots of sharp teeth.
+  一隻 Mozilla 紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
 </p>
 ```
 
@@ -418,7 +417,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 > [!NOTE]
 > 絕對不要在影像中包含文字內容 — 螢幕閱讀器無法存取它。另外還有其他缺點 — 你無法選取及複製貼上文字。千萬不要這麼做！
 
-當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字— 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
+當螢幕閱讀器遇到第二張影像時，會唸出完整的替代文字 — 「一隻紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭」。
 
 這突顯了兩個重要性：不僅要使用有意義的檔案名稱（以防無法使用替代文字），還要確保在可能的情況下，在 `alt` 屬性中提供**替代文字**。
 
@@ -442,7 +441,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 ```html
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
-<p id="dino-label">The Mozilla red Tyrannosaurus…</p>
+<p id="dino-label">Mozilla 紅色暴龍…</p>
 ```
 
 在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
@@ -457,11 +456,10 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 <figure>
   <img
     src="dinosaur.png"
-    alt="The Mozilla Tyrannosaurus"
+    alt="Mozilla 紅色暴龍"
     aria-describedby="dinodescr" />
   <figcaption id="dinodescr">
-    A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a
-    human, with small arms, and a large head with lots of sharp teeth.
+    一隻 Mozilla 紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
   </figcaption>
 </figure>
 ```
@@ -473,7 +471,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 ```html
 <h3>
   <img src="article-icon.png" alt="" />
-  Tyrannosaurus Rex: the king of the dinosaurs
+  暴龍：恐龍之王
 </h3>
 ```
 
@@ -510,7 +508,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ```html
 <a target="_blank" href="https://www.wikipedia.org/"
-  >Wikipedia (opens in a new window)</a
+  >維基百科（在新視窗中開啟）</a
 >
 ```
 
@@ -518,7 +516,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ```html
 <a target="_blank" href="2017-annual-report.ppt"
-  >2017 Annual Report (PowerPoint)</a
+  >2017 年度報告 (PowerPoint)</a
 >
 ```
 
