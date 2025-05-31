@@ -1,7 +1,7 @@
 ---
 title: "Pon a prueba tus habilidades: imágenes HTML"
-slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML/Test_your_skills:_HTML_images
+slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Images
+original_slug: Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images
 l10n:
   sourceCommit: 8e2641ebe076ab89299c77a51ece882de4ba5efb
 ---
