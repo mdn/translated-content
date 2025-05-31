@@ -14,7 +14,7 @@ l10n:
 此类型的值是字符串。可能的值包括：
 
 - `"client_redirect"`
-  - : 由页面中运行的 JavaScript 或页面 [meta](/zh-CN/docs/Web/HTML/Element/meta) 标签中的“refresh”指令引起的重定向。
+  - : 由页面中运行的 JavaScript 或页面 [meta](/zh-CN/docs/Web/HTML/Reference/Elements/meta) 标签中的“refresh”指令引起的重定向。
 - `"server_redirect"`
   - : 由服务器发送的 [HTTP 3XX 状态码](https://zh.wikipedia.org/wiki/HTTP状态码#3xx重定向)引起的重定向。
 - `"forward_back"`
