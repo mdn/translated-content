@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: minLength プロパティ"
 short-title: minLength
 slug: Web/API/HTMLTextAreaElement/minLength
 l10n:
-  sourceCommit: 8cf200c4039f6399b6696fc710bee1c4b395d401
+  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
 {{ApiRef("HTML DOM")}}
@@ -24,7 +24,7 @@ l10n:
 ```html
 <p>
   <label for="comment">Comment</label>
-  <textarea id="comment" minlength="10" maxlength="200" /></textarea>
+  <textarea id="comment" minlength="10" maxlength="200"></textarea>
 </p>
 ```
 
