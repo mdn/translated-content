@@ -15,7 +15,7 @@ sidebar: learnsidebar
 - [Resilient Web Design](https://resilientwebdesign.com/), Jeremy Keith
 
 ## 先决条件
-本模块主要讲解理论知识，无需具备任何具体的 Web 技术实践知识。但是，如果你了解主要 Web 技术的基本用途，您将能够更好地理解本模块，并从中获益匪浅。如果你尚未完成[你的第一个网站]([/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website) 模块，我们建议你先完成它。
+本模块主要讲解理论知识，无需具备任何具体的 Web 技术实践知识。但是，如果你了解主要 Web 技术的基本用途，你将能够更好地理解本模块，并从中获益匪浅。如果你尚未完成[你的第一个网站]([/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website) 模块，我们建议你先完成它。
 
 ## 教程
 - [万维网是如何工作的
