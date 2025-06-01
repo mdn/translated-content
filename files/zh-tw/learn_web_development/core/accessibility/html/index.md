@@ -141,7 +141,7 @@ the last one.
 
 1. 如果可以避免，請不要使用破折號。請寫「5 至 7」而非「5–7」。
 2. 展開縮寫——寫「January」而非「Jan」。
-3. 展開首字母縮略詞，至少一到兩次，然後使用 [`<abbr>`](/zh-TW/docs/Web/HTML/Element/abbr) 標籤來描述它們。
+3. 展開首字母縮略詞，至少一到兩次，然後使用 [`<abbr>`](/zh-TW/docs/Web/HTML/Reference/Elements/abbr) 標籤來描述它們。
 
 ### 有邏輯地架構頁面區段
 
@@ -408,7 +408,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 <img src="dinosaur.png" aria-labelledby="dino-label" />
 
 <p id="dino-label">
-  一隻 Mozilla 紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
+  一隻 Mozilla
+  紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
 </p>
 ```
 
@@ -454,12 +455,10 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ```html
 <figure>
-  <img
-    src="dinosaur.png"
-    alt="Mozilla 紅色暴龍"
-    aria-describedby="dinodescr" />
+  <img src="dinosaur.png" alt="Mozilla 紅色暴龍" aria-describedby="dinodescr" />
   <figcaption id="dinodescr">
-    一隻 Mozilla 紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
+    一隻 Mozilla
+    紅色暴龍：一隻像人一樣直立站立的雙腳恐龍，有小小的手臂，以及一個佈滿尖銳牙齒的大頭。
   </figcaption>
 </figure>
 ```
@@ -484,7 +483,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 
 ## 更多關於連結的資訊
 
-連結（具有 `href` 屬性的 [`<a>`](/zh-TW/docs/Web/HTML/Element/a) 元素）根據使用方式的不同，可以幫助或損害無障礙性。默認情況下，連結在外觀上是無障礙的。可透過幫助使用者快速導航到文件的不同部分來改善無障礙性。如果移除了連結的無障礙樣式或 JavaScript 導致它們以意外方式運作，可能損害無障礙性。
+連結（具有 `href` 屬性的 [`<a>`](/zh-TW/docs/Web/HTML/Reference/Elements/a) 元素）根據使用方式的不同，可以幫助或損害無障礙性。默認情況下，連結在外觀上是無障礙的。可透過幫助使用者快速導航到文件的不同部分來改善無障礙性。如果移除了連結的無障礙樣式或 JavaScript 導致它們以意外方式運作，可能損害無障礙性。
 
 ### 連結的樣式
 
@@ -515,9 +514,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 #### 連結到非 HTML 資源
 
 ```html
-<a target="_blank" href="2017-annual-report.ppt"
-  >2017 年度報告 (PowerPoint)</a
->
+<a target="_blank" href="2017-annual-report.ppt">2017 年度報告（PowerPoint）</a>
 ```
 
 如果使用圖示代替文字來表示這類連結行為，請確保它包含[替代描述](/zh-TW/docs/Web/HTML/Element/img#alt)。
