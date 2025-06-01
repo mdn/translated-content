@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-{{domxref("Clipboard")}} 接口的 **`readText()`** 方法，返回一个兑现为系统剪贴板中的文本内容的 {{jsxref("Promise")}}。
+{{domxref("Clipboard")}} 接口的 **`readText()`** 方法返回一个兑现为系统剪贴板中的文本内容的 {{jsxref("Promise")}}。
 
 > [!NOTE]
 > 如需读取非文本内容，请使用 {{domxref("Clipboard.read", "read()")}} 方法。如需写入文本到剪贴板，请使用 {{domxref("Clipboard.writeText", "writeText()")}} 方法。
@@ -26,7 +26,7 @@ readText()
 
 一个兑现为包含剪贴板文本内容的字符串 {{jsxref("Promise")}}。
 
-如果剪贴板为空、不包含文本，或没有可用的文本表示，则 promise 将以空字符串兑现。
+如果剪贴板为空、不包含文本，或在表示剪贴板内容的对象之中不存在的文本表示，则 promise 将以空字符串兑现。
 
 ### 异常
 
