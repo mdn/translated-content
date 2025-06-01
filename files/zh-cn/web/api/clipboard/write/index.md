@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-{{domxref("Clipboard")}} 接口的 **`write()`** 方法用于将任意 {{domxref("ClipboardItem")}} 数据（如图片和文本）写入剪贴板，返回一个在操作完成时兑现的 {{jsxref("Promise")}}。
+{{domxref("Clipboard")}} 接口的 **`write()`** 方法用于将任意 {{domxref("ClipboardItem")}} 数据（如图片和文本）写入剪贴板，返回一个在操作完成时兑现的 {{jsxref("Promise")}}。该方法可用于实现剪切功能。
 
 该方法理论上可以写入任意数据（与只能写入文本的 {{domxref("Clipboard.writeText", "writeText()")}} 不同）。浏览器通常支持写入文本、HTML 和 PNG 图像数据。
 
@@ -20,13 +20,11 @@ write(data)
 ### 参数
 
 - `data`
-  - : 包含要写入剪贴板数据的 {{domxref("ClipboardItem")}} 对象数组。
+  - : 包含要写入剪贴板的数据的 {{domxref("ClipboardItem")}} 对象数组。
 
 ### 返回值
 
-一个在数据写入剪贴板后兑现的 {{jsxref("Promise")}}。
-
-注意：如果底层操作系统不支持系统剪贴板上的多个原生剪贴板项，则只会写入数组中的第一个 {{domxref("ClipboardItem")}}。
+一个在数据写入剪贴板后兑现的 {{jsxref("Promise")}}。注意：如果底层操作系统不支持系统剪贴板上的多个原生剪贴板项，则只会写入数组中的第一个 {{domxref("ClipboardItem")}}。
 
 如果无法写入剪贴板，则 promise 将会被拒绝。
 
@@ -45,7 +43,7 @@ write(data)
 
 ### 写入文本到剪贴板
 
-本示例函数在按钮被点击时，将指定字符串写入剪贴板，替换当前内容。
+本示例函数在按钮被点击时，将指定字符串写入剪贴板，替换当前内容。对于这一情况，你也可以直接使用 `Clipboard.writeText()` 方法。
 
 ```js
 button.addEventListener("click", () => writeClipboardText("示例文本"));
@@ -62,6 +60,10 @@ async function writeClipboardText(text) {
   }
 }
 ```
+
+`setClipboard()` 函数在 `type` 常量中指定了 MIME 类型为 `"text/plain"`，然后指定包含单一属性的 `clipboardItemData` 对象——键为 MIME 类型，而值为我们想要写入剪贴板的文本内容。我们随后构造了一个新的 {{domxref("ClipboardItem")}} 对象并传入 `clipboardItemData` 对象。
+
+最后，我们使用 `await` 调用 `write()` 方法以写将数据写入剪贴板。
 
 ### 将 canvas 内容写入剪贴板
 
