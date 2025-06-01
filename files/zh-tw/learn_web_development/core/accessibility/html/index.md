@@ -514,7 +514,7 @@ HTML 包含兩個元素——{{htmlelement("figure")}} 和 {{htmlelement("figcap
 #### 連結到非 HTML 資源
 
 ```html
-<a target="_blank" href="2017-annual-report.ppt">2017 年度報告 (PowerPoint)</a>
+<a target="_blank" href="2017-annual-report.ppt">2017 年度報告（PowerPoint）</a>
 ```
 
 如果使用圖示代替文字來表示這類連結行為，請確保它包含[替代描述](/zh-TW/docs/Web/HTML/Element/img#alt)。
