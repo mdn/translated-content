@@ -350,8 +350,8 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 ## 参见
 
 - [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)
-- web.dev 上的 [Unblocking clipboard access](https://web.developers.google.cn/articles/async-clipboard)
-- developer.google.cn 上的 [Unsanitized HTML in the Async Clipboard API](https://developer.chrome.google.cn/docs/web-platform/unsanitized-html-async-clipboard)
+- web.dev 上的[解锁剪贴板权限](https://web.developers.google.cn/articles/async-clipboard)
+- developer.google.cn 上的[异步 Clipboard API 中的未清理的 HTML](https://developer.chrome.google.cn/docs/web-platform/unsanitized-html-async-clipboard)
 - {{domxref("Clipboard.readText()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}
