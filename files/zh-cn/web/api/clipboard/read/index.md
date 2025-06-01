@@ -257,8 +257,8 @@ async function pasteData() {
   <script>alert('你好，世界！');</script>
 </textarea>
 <button id="copy">复制 HTML</button>
-<button id="paste_normal">黏贴 HTML</button>
-<button id="paste_unsanitized">黏贴未清理的 HTML</button>
+<button id="paste_normal">粘贴 HTML</button>
+<button id="paste_unsanitized">粘贴未清理的 HTML</button>
 <textarea id="destination" rows="5"></textarea>
 ```
 
