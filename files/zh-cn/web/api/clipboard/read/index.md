@@ -2,7 +2,7 @@
 title: Clipboard：read() 方法
 slug: Web/API/Clipboard/read
 l10n:
-  sourceCommit: 77d90a23ee0a3b5486a7963f68ad4e56efb06a7b
+  sourceCommit: 15a768b7d90550b0d90811a52d031674a3b84011
 ---
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
@@ -26,9 +26,9 @@ read(formats)
 
     - `unsanitized` {{optional_inline}}
 
-      - : 包含字符串的 {{jsxref("Array")}}，这些字符串为在从剪贴板读取时不应被清理的数据格式的 MIME 类型。
+      - : 包含字符串的数组（{{jsxref("Array")}}），这些字符串为在从剪贴板读取时不应被清理的数据格式的 MIME 类型。
 
-        某些浏览器在读取剪贴板数据时可能会对其进行清理，以防止恶意内容被粘贴到文档中。例如，Chrome（及其他基于 Chromium 的浏览器）会通过去除 `<script>` 标签和其他潜在危险内容来净化 HTML 数据。使用 `unsanitized` 数组可以指定不应被净化的 MIME 类型列表。
+        某些浏览器在读取剪贴板数据时可能会对其进行清理，以防止恶意内容被粘贴到文档中。例如，Chrome（及其他基于 Chromium 的浏览器）会通过去除 `<script>` 标签和其他潜在危险内容来清理 HTML 数据。使用 `unsanitized` 数组可以指定不应被清理的 MIME 类型列表。
 
 ### 返回值
 
@@ -122,7 +122,7 @@ async function pasteImage() {
 
 通过右键单击左侧的显示蝴蝶的图像并从上下文菜单中选择“复制图像”来复制该图像。然后单击右侧的空框。示例将从剪贴板获取图像数据并在空框中显示图像。
 
-{{EmbedLiveSample("Reading image data from clipboard", "100%", "250", "", "", "", "clipboard-read")}}
+{{EmbedLiveSample("从剪贴板中读取图片", "100%", "250", "", "", "", "clipboard-read")}}
 
 > [!NOTE]
 > 如果出现提示，请授予权限以粘贴图像。
@@ -235,7 +235,7 @@ async function pasteData() {
 
 复制一些文本或下面的蝴蝶（JPG）图像（要复制图像，请右键单击它们，然后从上下文菜单中选择“复制图像”）。选择下面的指示框以将剪贴板中的信息粘贴到框中。
 
-{{EmbedLiveSample("Reading data from the clipboard", "100%", "500", "", "", "", "clipboard-read")}}
+{{EmbedLiveSample("从剪贴板读取数据", "100%", "500", "", "", "", "clipboard-read")}}
 
 注意：
 
@@ -337,7 +337,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 
 首先单击“复制 HTML”按钮，将第一个文本区域中的 HTML 代码写入剪贴板。然后单击“粘贴 HTML”按钮或“粘贴未净化的 HTML”按钮，将清理或未清理的 HTML 代码粘贴到第二个文本区域中。
 
-{{EmbedLiveSample("Reading unsanitized HTML from the clipboard", "100%", "250", "", "", "", "clipboard-read; clipboard-write")}}
+{{EmbedLiveSample("从剪贴板读取未净化的 HTML", "100%", "250", "", "", "", "clipboard-read; clipboard-write")}}
 
 ## 规范
 
