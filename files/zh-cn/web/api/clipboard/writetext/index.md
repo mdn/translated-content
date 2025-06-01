@@ -7,8 +7,7 @@ l10n:
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-{{domxref("Clipboard")}} 接口的 **`writeText()`** 方法用于将指定文本写入系统剪贴板，并返回一个在剪贴板内容更新后兑现的
-{{jsxref("Promise")}}。
+{{domxref("Clipboard")}} 接口的 **`writeText()`** 方法用于将指定文本写入系统剪贴板，并返回一个在剪贴板内容更新后兑现的 {{jsxref("Promise")}}。
 
 ## 语法
 
