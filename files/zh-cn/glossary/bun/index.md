@@ -1,5 +1,5 @@
 ---
-title: "Bun"
+title: Bun
 slug: Glossary/Bun
 l10n:
   sourceCommit: edb606222736c292c412a4373b88df91c18c50ac
