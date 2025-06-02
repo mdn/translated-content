@@ -1,5 +1,5 @@
 ---
-title: "PlayCanvas 基础演示搭建"
+title: PlayCanvas 基础演示搭建
 slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
 l10n:
   sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
@@ -7,7 +7,7 @@ l10n:
 
 {{GamesSidebar}}
 
-**PlayCanvas** 是一个流行的 3D WebGL 游戏引擎，最初由 Will Eastcott 和 Dave Evans 创建。它已[在 GitHub 上开源](https://github.com/playcanvas/engine)，并提供了[在线编辑器](https://developer.playcanvas.com/user-manual/editor/)和完善的[文档](https://developer.playcanvas.com)。在线编辑器为公开项目免费开放并支持最多两名开发者，如果你想运行商业私有项目并且有更多开发者同时参与开发，也可以选择相应的[付费方案](https://playcanvas.com/plans)。
+**PlayCanvas** 是一个流行的 3D WebGL 游戏引擎，最初由 Will Eastcott 和 Dave Evans 创建。它已[在 GitHub 上开源](https://github.com/playcanvas/engine)，并提供了[在线编辑器](https://developer.playcanvas.com/user-manual/editor/)和完善的[文档](https://developer.playcanvas.com)。在线编辑器为公开项目免费开放并支持最多两名开发者，如果你想开发一个多名开发者同时参与的商用私有项目，也可以选择相应的[付费方案](https://playcanvas.com/plans)。
 
 ![PlayCanvas 网站。](playcanvas-cover.png)
 
@@ -30,11 +30,11 @@ PlayCanvas 引擎本身可以作为标准库直接通过 JavaScript 文件引入
 
 ## PlayCanvas 引擎
 
-PlayCanvas 针对现代浏览器打造，是一个功能齐全的 3D 游戏引擎，具备资源加载、实体与组件系统、高级图形处理、碰撞与物理引擎（基于 [ammo.js](https://github.com/kripken/ammo.js/)）、音频以及对多种设备（包括手柄）的输入控制支持。功能非常丰富——想了解实际效果，参见[使用 PlayCanvas 引擎搭建基础演示](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine)。
+PlayCanvas 针对现代浏览器打造，是一个功能齐全的 3D 游戏引擎，具备资源加载、实体与组件系统、高级图形处理、碰撞与物理引擎（基于 [ammo.js](https://github.com/kripken/ammo.js/)）、音频以及对多种设备（包括手柄）的输入控制支持。功能非常丰富——想了解实际效果，请参见[使用 PlayCanvas 引擎搭建基础演示](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine)。
 
 ## PlayCanvas 编辑器
 
-你也可以选择不从零开始编码，而是使用在线编辑器。如果你不喜欢编程，这会是一个更愉快的工作环境。详情参见[使用 PlayCanvas 编辑器搭建基础演示](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor)。
+你也可以选择不从零开始编程，而是使用在线编辑器。如果你不喜欢编程，这会是一个更愉快的工作环境。详情请参见[使用 PlayCanvas 编辑器搭建基础演示](/zh-CN/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor)。
 
 ## 总结
 
