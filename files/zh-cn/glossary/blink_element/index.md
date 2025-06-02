@@ -1,5 +1,5 @@
 ---
-title: "blink 元素（<blink> 标签）"
+title: blink 元素（<blink> 标签）
 slug: Glossary/blink_element
 l10n:
   sourceCommit: c5c84b62f3f1fbd46f77c940fa0cbfff649c46a1
@@ -15,7 +15,7 @@ l10n:
 <blink>在古老的浏览器中，我可能会闪烁</blink>
 ```
 
-## 简要历史
+## 简史
 
 在网络早期（90 年代初至中期），用于网页样式的功能非常有限。[CSS](/zh-CN/docs/Web/CSS) 规范（第 1 版）于 1996 年首次发布，但在很长一段时间后才得到浏览器的普遍支持。在 CSS 出现之前，浏览器尝试了多种方法让特定文本突出显示以吸引用户注意力。`<blink>` 元素就是其中之一，最早出现在 [Netscape Navigator](/zh-CN/docs/Glossary/Netscape_Navigator) 的早期版本中；[Internet Explorer](/zh-CN/docs/Glossary/Microsoft_Internet_Explorer) 的 {{htmlelement("marquee")}} 元素也是类似的尝试。
 
@@ -27,8 +27,8 @@ l10n:
 
 ## 替代方案
 
-- CSS 的 {{cssxref("text-decoration-line")}} 属性有一个 `blink` 值，理论上有同样效果，但现代浏览器基本都忽略了它。
-- JavaScript 的 {{jsxref("String.blink()")}} 方法会将字符串包裹在 `<blink></blink>` 标签中，但如前所述，这个标签已无处支持。
+- CSS 的 {{cssxref("text-decoration-line")}} 属性有一个 `blink` 值，理论上能产生一样的效果，但现代浏览器基本都忽略了它。
+- JavaScript 的 {{jsxref("String.blink()")}} 方法会将字符串包裹在 `<blink></blink>` 标签中，但如前文所述，这个标签已无处支持。
 - 你仍可用 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations) 实现闪烁文本。但出于上述原因，不建议在网页中使用闪烁文本。
 
 ## 参见
