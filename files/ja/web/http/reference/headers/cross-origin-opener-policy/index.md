@@ -105,11 +105,11 @@ Cross-Origin-Opener-Policy: noopener-allow-popups
 <!-- https://html.spec.whatwg.org/multipage/browsers.html#matching-coop -->
 
 | 開く側 (↓) / 開かれる側 (→) | `unsafe-none` | `same-origin-allow-popups` | `same-origin`            | `noopener-allow-popups`  |
-| ----------------------------- | ------------- | -------------------------- | ------------------------ | ------------------------ |
-| `unsafe-none`                 | 同じ          | 新規                       | 新規                     | 新規                     |
-| `same-origin-allow-popups`    | 新規          | 同一オリジンであれば同じ   | 新規                     | 新規                     |
-| `same-origin`                 | 新規          | 新規                       | 同一オリジンであれば同じ | 新規                     |
-| `noopener-allow-popups`       | 新規          | 新規                       | 新規                     | 同一オリジンであれば同じ |
+| --------------------------- | ------------- | -------------------------- | ------------------------ | ------------------------ |
+| `unsafe-none`               | 同じ          | 新規                       | 新規                     | 新規                     |
+| `same-origin-allow-popups`  | 新規          | 同一オリジンであれば同じ   | 新規                     | 新規                     |
+| `same-origin`               | 新規          | 新規                       | 同一オリジンであれば同じ | 新規                     |
+| `noopener-allow-popups`     | 新規          | 新規                       | 新規                     | 同一オリジンであれば同じ |
 
 ### Window.open() で開く場合
 
