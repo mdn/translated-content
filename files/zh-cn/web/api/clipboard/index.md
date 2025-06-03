@@ -15,7 +15,7 @@ l10n:
 
 所有 Clipboard API 方法都是异步的；它们返回一个 {{jsxref("Promise")}} 对象，在剪贴板访问完成后被兑现。如果剪贴板访问被拒绝，promise 也会被拒绝。
 
-所有的方法也都需要一个[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。使用 API 的其他要求在 API 概述主题的[安全考虑](/zh-CN/docs/Web/API/Clipboard_API#security_considerations)部分进行了讨论。
+所有的方法也都需要[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。使用 API 的其他要求在 API 概述主题的[安全考虑](/zh-CN/docs/Web/API/Clipboard_API#安全考虑)部分进行了讨论。
 
 ## 方法
 
@@ -24,7 +24,7 @@ _`Clipboard` 继承自 {{domxref("EventTarget")}} 接口，因此拥有它的方
 - {{domxref("Clipboard.read()","read()")}}
   - : 从剪贴板读取数据（比如图片），返回一个 {{jsxref("Promise")}}。在检索到数据后，其将兑现为包含剪贴板数据的 {{domxref("ClipboardItem")}} 对象数组。
 - {{domxref("Clipboard.readText()","readText()")}}
-  - : 从操作系统读取文本；返回一个 {{jsxref("Promise")}}。在从剪切板中检索到文本后，其将兑现为包含剪切板文本数据的 {{domxref("DOMString")}}。
+  - : 从操作系统剪切板读取文本，返回一个 {{jsxref("Promise")}}，一旦数据可用，其将兑现为包含剪切板文本的字符串。
 - {{domxref("Clipboard.write()","write()")}}
   - : 写入任意数据至操作系统剪贴板，返回一个在操作完成时被兑现的 {{jsxref("Promise")}}。
 - {{domxref("Clipboard.writeText()","writeText()")}}
