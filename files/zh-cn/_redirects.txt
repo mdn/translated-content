@@ -3952,6 +3952,7 @@
 /zh-CN/docs/Web/Security/Securing_your_site	/zh-CN/docs/Web/Security/Practical_implementation_guides
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/zh-CN/docs/Web/Security/Types_of_attacks	/zh-CN/docs/Web/Security/Attacks
 /zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Transport_Layer_Security
 /zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Subresource_Integrity
 /zh-CN/docs/Web/Text_fragments	/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments
