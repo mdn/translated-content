@@ -51,7 +51,7 @@ l10n:
 
 ## ガイド
 
-- [ボックス配置の概要](/en-US/docs/Web/CSS/CSS_box_alignment/Box_alignment)
+- [ボックス配置の概要](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment)
 
   - : CSS ボックス配置モジュールで使える一般概念の概要です。
 
