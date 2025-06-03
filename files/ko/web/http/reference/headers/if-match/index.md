@@ -2,7 +2,6 @@
 title: If-Match header
 short-title: If-Match
 slug: Web/HTTP/Reference/Headers/If-Match
-page-type: http-header
 l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
