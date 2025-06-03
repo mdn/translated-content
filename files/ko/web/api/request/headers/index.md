@@ -16,9 +16,6 @@ l10n:
 
 ## 예제
 
-In the following snippet, we create a new request using the
-{{domxref("Request.Request", "Request()")}} constructor (for an image file in the same directory as
-the script), then save the request headers in a variable:
 아래 스니펫에서는 {{domxref("Request.Request", "Request()")}} 생성자를 활용하여 새 요청 (스크립트와 동일한 디렉토리에 위치한 이미지 파일) 을 생성하고, 요청 헤더를 변수에 저장합니다.
 
 ```js
