@@ -42598,12 +42598,6 @@
       "hashedhyphen"
     ]
   },
-  "Web/Security/Types_of_attacks": {
-    "modified": "2020-10-24T06:26:51.108Z",
-    "contributors": [
-      "silverskyvicto"
-    ]
-  },
   "Web/Security/Weak_Signature_Algorithm": {
     "modified": "2020-10-23T09:55:17.907Z",
     "contributors": [
@@ -44325,6 +44319,12 @@
     "modified": "2020-10-15T22:28:50.166Z",
     "contributors": [
       "n-oshiro"
+    ]
+  },
+  "conflicting/Web/Security/Attacks": {
+    "modified": "2020-10-24T06:26:51.108Z",
+    "contributors": [
+      "silverskyvicto"
     ]
   },
   "conflicting/Web/Security/Certificate_Transparency": {

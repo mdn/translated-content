@@ -5928,6 +5928,7 @@
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/Security/Securing_your_site	/ja/docs/Web/Security/Practical_implementation_guides
 /ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ja/docs/Web/Security/Types_of_attacks	/ja/docs/Web/Security/Attacks
 /ja/docs/Web/Text_fragments	/ja/docs/Web/URI/Reference/Fragment/Text_fragments
 /ja/docs/Web/Tutorials	/ja/docs/MDN/Tutorials
 /ja/docs/Web/URI/Authority	/ja/docs/Web/URI/Reference/Authority
