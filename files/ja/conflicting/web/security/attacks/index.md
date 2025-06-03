@@ -1,6 +1,7 @@
 ---
 title: 攻撃の種類
-slug: Web/Security/Types_of_attacks
+slug: conflicting/Web/Security/Attacks
+original_slug: Web/Security/Types_of_attacks
 l10n:
   sourceCommit: be3f184d89979d413204b8f9cbecfc8dd0e5ecf9
 ---
