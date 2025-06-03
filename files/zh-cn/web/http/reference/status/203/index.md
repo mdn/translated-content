@@ -50,7 +50,7 @@ Content-Length: 123
 ## 相关内容
 
 - {{HTTPStatus("200")}}
-- {{Glossary("代理服务器")}}
+- {{Glossary("Proxy server", "代理服务器")}}
 - {{HTTPHeader("Warning")}}
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)

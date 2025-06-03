@@ -84,4 +84,4 @@ Content-Type: application/json
 
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
-- 术语表：{{Glossary("幂等")}}
+- 术语表：{{Glossary("Idempotent", "幂等")}}
