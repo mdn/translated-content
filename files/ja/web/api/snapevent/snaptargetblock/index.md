@@ -3,7 +3,7 @@ title: "SnapEvent: snapTargetBlock プロパティ"
 short-title: snapTargetBlock
 slug: Web/API/SnapEvent/snapTargetBlock
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{APIRef("Snap Events")}}{{SeeCompatTable}}
