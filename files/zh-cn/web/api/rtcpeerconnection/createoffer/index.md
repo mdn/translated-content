@@ -7,7 +7,9 @@ l10n:
 
 {{APIRef("WebRTC")}}
 
-{{domxref("RTCPeerConnection")}} 接口的 **`createOffer()`** 方法启动创建一个{{Glossary("SDP")}} 提议（offer），目的是启动一个新的 WebRTC 去连接远程端点。SDP 提议包含有关已附加到 WebRTC 会话，浏览器支持的编解码器和选项的所有 {{domxref("MediaStreamTrack")}} 信息，以及{{Glossary("ICE")}} 代理，目的是通过信令信道发送给潜在远程端点，以请求连接或更新现有连接的配置。返回值是一个{{domxref("Promise")}}，创建提议后，将使用包含新创建的要约的{{domxref("RTCSessionDescription")}}对象来解析该返回值。
+{{domxref("RTCPeerConnection")}} 接口的 **`createOffer()`** 方法启动创建一个 {{Glossary("SDP")}} 提议（offer），目的是启动一个新的 WebRTC 去连接远程对等方。
+
+SDP 提议包含有关已附加到 WebRTC 会话的所有 {{domxref("MediaStreamTrack")}} 对象、浏览器支持的编解码器和选项，以及 {{Glossary("ICE")}} 代理已经收集的所有候选者的需不需，目的是通过信令信道发送给潜在远程对等方，以请求连接或更新现有连接的配置。
 
 ## 语法
 
@@ -23,10 +25,10 @@ createOffer(successCallback, failureCallback, options) // 已弃用
 
 - `options` {{optional_inline}}
 
-  - : 提供以下请求选项的对象：
+  - : 为提议提供以下请求选项的对象：
 
     - `iceRestart` {{optional_inline}}
-      - : 要在活动连接上重新启动 ICE，请将其设置为`true`。这将导致返回的提议与已经存在的凭据不同。如果你应用返回的提议，则 ICE 将重新启动。指定 `false` 以保留相同的凭据，因此不重新启动 ICE。**默认值为 `false`**。请考虑调用 {{domxref("RTCPeerConnection.restartIce()")}}（会在下一次调用 `createOffer()` 时自动设置标志）来代替这个选项的使用。
+      - : 要在活动连接上重新启动 ICE，请将其设置为`true`。这将导致返回的提议与已经存在提议的凭据不同。如果你应用返回的提议，则 ICE 将重新启动。指定 `false` 以保留相同的凭据，因此不重新启动 ICE。**默认值为 `false`**。请考虑调用 {{domxref("RTCPeerConnection.restartIce()")}}（会在下一次调用 `createOffer()` 时自动设置标志）来代替这个选项的使用。
     - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}
       - : 提供对音频方向的额外控制。例如，它可以用于确保无论音频是否已发送，都可以接收音频。
     - `offerToReceiveVideo` {{optional_inline}} {{deprecated_inline}}
