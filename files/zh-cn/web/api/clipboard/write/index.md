@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Clipboard API")}} {{securecontext_header}}
 
-{{domxref("Clipboard")}} 接口的 **`write()`** 方法用于将任意 {{domxref("ClipboardItem")}} 数据（如图片和文本）写入剪贴板，返回一个在操作完成时兑现的 {{jsxref("Promise")}}。该方法可用于实现剪切功能。
+{{domxref("Clipboard")}} 接口的 **`write()`** 方法用于将任意 {{domxref("ClipboardItem")}} 数据（如图像和文本）写入剪贴板，返回一个在操作完成时兑现的 {{jsxref("Promise")}}。该方法可用于实现剪切和复制功能。
 
 该方法理论上可以写入任意数据（与只能写入文本的 {{domxref("Clipboard.writeText", "writeText()")}} 不同）。浏览器通常支持写入文本、HTML 和 PNG 图像数据。
 
@@ -102,7 +102,7 @@ function log(text) {
 
 #### JavaScript
 
-首先定义一个 `async` 函数将 canvas 转为 blob。该函数将旧的回调式 {{domxref("HTMLCanvasElement.toBlob()")}} 方法封装为基于 Promise 的形式。
+首先定义一个 `async` 函数将 canvas 转为 blob。该函数将旧的回调式 {{domxref("HTMLCanvasElement.toBlob()")}} 方法封装为更直观的基于 Promise 的函数。
 
 ```js
 // 用 async/await 替代 toBlob() 回调
