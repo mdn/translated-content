@@ -48,16 +48,13 @@ write(data)
 ```js
 button.addEventListener("click", () => writeClipboardText("示例文本"));
 
-async function writeClipboardText(text) {
-  try {
-    await navigator.clipboard.write([
-      new ClipboardItem({
-        "text/plain": new Blob([text], { type: "text/plain" }),
-      }),
-    ]);
-  } catch (error) {
-    console.error(error.message);
-  }
+async function setClipboard(text) {
+  const type = "text/plain";
+  const clipboardItemData = {
+    [type]: text,
+  };
+  const clipboardItem = new ClipboardItem(clipboardItemData);
+  await navigator.clipboard.write([clipboardItem]);
 }
 ```
 
