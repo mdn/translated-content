@@ -37,10 +37,10 @@ writeText(newClipText)
 
 ## 示例
 
-本示例将剪贴板内容设置为字符串“\<空字符串>”。
+本示例将剪贴板内容设置为字符串“\<空剪切板>”。
 
 ```js
-button.addEventListener("click", () => writeClipboardText("<空字符串>"));
+button.addEventListener("click", () => writeClipboardText("<空剪切板>"));
 
 async function writeClipboardText(text) {
   try {
