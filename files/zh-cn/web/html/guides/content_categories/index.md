@@ -2,37 +2,44 @@
 title: 内容分类
 slug: Web/HTML/Guides/Content_categories
 l10n:
-  sourceCommit: 3593033ad04260f717f220d25f7d379e427cf82b
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-大多数 [HTML](/zh-CN/docs/Web/HTML) 元素都属于一个或多个**内容类别**——这些类别对具有共同特征的元素进行分组。这是一个松散的分组（它实际上并没有在这些类别的元素之间建立关系），但它们有助于定义和描述这些类别的共同行为及其相关规则，特别是在你遇到它们的复杂细节时。元素也有可能不属于其中的*任何*类别。
+Most [HTML](/zh-CN/docs/Web/HTML) elements are a member of one or more **content categories** — these categories group elements that share common characteristics. This is a loose grouping (it doesn't actually create a relationship among elements of these categories), but they help define and describe the categories' shared behavior and their associated rules. It's possible for elements (such as {{HTMLElement("track")}}) to not be a member of _any_ of these categories.
 
-以下是三种类型的内容分类：
+The content categories are used to define the _content model_ of elements, in other words what each element can take as descendants. For example, a `<p>` element can only contain _phrasing content_, while a `<div>` element can contain _flow content_.
 
-- 主内容类，描述了很多元素共享的规则；
-- 表单相关的内容类，描述了表单相关元素共有的规则；
-- 特殊内容类，描述了仅仅在少数元素（有时仅在特定的上下文中）共享的规则。
+There are seven main content categories, which can be summarized with the Venn diagram below:
+
+![A Venn diagram showing how the various content categories interrelate. The following sections explain these relationships in text.](content_categories_venn.png)
 
 > [!NOTE]
-> 对这些内容类别及其功能的更详细的讨论超出了本文的范围；如果你想了解这些内容，请阅读 [HTML 规范的相关部分](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content)。
+> A more detailed discussion of these content categories and their comparative functionalities is beyond the scope of this article; for that, you may wish to read the [relevant portions of the HTML specification](https://html.spec.whatwg.org/multipage/dom.html#kinds-of-content).
 
-![显示各种内容类别相互之间是如何关联的维恩图。后面的部分以文本形式解释这些关系。](content_categories_venn.png)
+## 元数据内容
 
-## 主内容分类
+Elements belonging to the _metadata content_ category modify the presentation or the behavior of the rest of the document, set up links to other documents, or convey other _out-of-band_ information. Everything in the {{htmlelement("head")}}, including the `<title>`, `<link>`, `<script>`, `<style>`, and the lesser used `<base>`, is metadata content. There is a `<meta>` element for metadata that cannot be represented by these other elements.
 
-### 元数据内容
+The metadata elements are:
 
-属于*元数据内容*（Metadata content）的元素可以修改文档其余部分的呈现或行为、建立与其他文档的链接，或者传达其他*带外*信息。
+- {{HTMLElement("base")}}
+- {{HTMLElement("link")}}
+- {{HTMLElement("meta")}}
+- {{HTMLElement("noscript")}}
+- {{HTMLElement("script")}}
+- {{HTMLElement("style")}}
+- {{HTMLElement("template")}}
+- {{HTMLElement("title")}}
 
-属于这一类的元素有：{{HTMLElement("base")}}、{{HTMLElement("link")}}、{{HTMLElement("meta")}}、{{HTMLElement("noscript")}}、{{HTMLElement("script")}}、{{HTMLElement("style")}} 和 {{HTMLElement("title")}}。
+Some of these elements belong to more than one content category. For example, `<script>` is a member of the metadata, flow, and phrasing content categories, and is a script-supporting element; `<script>` can be used where metadata content, phrasing content, or script-supporting elements are expected.
 
-### 流式内容
+## 流式内容
 
-流式内容（Flow content）是一个广泛的类别，包括大多数可以包含在 {{HTMLElement("body")}} 元素之内的元素，包括标题元素、分段元素、短语元素、嵌入元素、交互元素和表单相关元素。它还包括文本节点（但不包括那些只由空白字符组成的节点）。
+Flow content is a broad category that encompasses most elements that can go inside the {{HTMLElement("body")}} element, including heading elements, sectioning elements, phrasing elements, embedding elements, interactive elements, and form-related elements. It also includes text nodes (but not those that only consist of white space characters).
 
-流式元素有：
+The flow elements are:
 
 - {{HTMLElement("a")}}
 - {{HTMLElement("abbr")}}
@@ -41,8 +48,8 @@ l10n:
 - {{HTMLElement("aside")}}
 - {{HTMLElement("audio")}}
 - {{HTMLElement("b")}}
-- {{HTMLElement("bdo")}}
 - {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
 - {{HTMLElement("blockquote")}}
 - {{HTMLElement("br")}}
 - {{HTMLElement("button")}}
@@ -93,8 +100,8 @@ l10n:
 - {{HTMLElement("ruby")}}
 - {{HTMLElement("s")}}
 - {{HTMLElement("samp")}}
-- {{HTMLElement("search")}}
 - {{HTMLElement("script")}}
+- {{HTMLElement("search")}}
 - {{HTMLElement("section")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("slot")}}
@@ -113,38 +120,43 @@ l10n:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- 纯文本
+- [Autonomous custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
+- Plain text
 
-属于此类的少数其他元素，但仅限于以下特殊情况：
+A few other elements belong to this category, but only if a specific condition is fulfilled:
 
-- {{HTMLElement("area")}}，当它为 {{HTMLElement("map")}} 元素的子元素时
-- {{HTMLElement("link")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性
-- {{HTMLElement("meta")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性
-- {{HTMLElement("style")}}，若存在 `scoped` {{deprecated_inline}} 属性
+- {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
+- {{HTMLElement("link")}}, if the [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("meta")}}, if the [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
 
-### 分段内容
+## 分段内容
 
-分段内容（Sectioning content）是流式内容的一个子集，可以在[当前大纲中创建一个分段](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)，它定义了 {{HTMLElement("header")}} 元素、{{HTMLElement("footer")}} 元素和[标题内容](#标题内容)的范围。
+Sectioning content, a subset of flow content, creates a [section in the current outline](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) defining the scope of {{HTMLElement("header")}} and {{HTMLElement("footer")}} elements.
 
-属于此类的元素有：{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} 和 {{HTMLElement("section")}}。
+The sectioning elements are:
 
-### 标题内容
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("nav")}}
+- {{HTMLElement("section")}}
 
-标题内容（Heading content）是流式内容的一个子集，定义了分段的标题，而这个分段可能由一个明确的[分段内容](#分段内容)元素直接标记，也可能由标题本身隐式地定义。
+## 标题内容
 
-属于此分类的元素有：{{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}} 和 {{HTMLElement("hgroup")}}。
+Heading content, a subset of flow content, defines the title of a section. This definition applies both to sections marked by an explicit [sectioning content](#sectioning_content) elements and to those implicitly defined by the heading content itself.
+
+The heading elements are:
+
+- {{HTMLElement("Heading_Elements", "<code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code>")}}
+- {{HTMLElement("hgroup")}}
 
 > [!NOTE]
-> 尽管 {{HTMLElement("header")}} 可能包含一些标题内容，但其并不是标题内容本身。
+> Though likely to contain heading content, the {{HTMLElement("header")}} is not heading content itself.
 
-> [!NOTE]
-> 已不再推荐使用 {{HTMLElement("hgroup")}} 元素，因为它不能与辅助技术一起正常工作。在 HTML 5 最终定稿之前，它已从 W3C 的 HTML 规范中删除，但其仍属于 WHATWG 规范，并且仍被大多数浏览器部分支持。
+## 短语内容
 
-### 短语内容
+Phrasing content, a subset of flow content, refers to the text and the markup within a document. Sequences of phrasing content make up paragraphs.
 
-短语内容（Phrasing content）是流式内容的一个子集，定义了文档中的文本和标记。短语内容的序列构成段落。
-
-属于此类的元素有：
+The phrasing elements are:
 
 - {{HTMLElement("abbr")}}
 - {{HTMLElement("audio")}}
@@ -195,21 +207,24 @@ l10n:
 - {{HTMLElement("var")}}
 - {{HTMLElement("video")}}
 - {{HTMLElement("wbr")}}
-- 纯文本（仅当所包含的内容不完全为空白字符）
+- [Autonomous custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
+- Plain text
 
-一些其他的元素也属于这个分类，但仅限于以下特殊情况：
+A few other elements belong to this category, but only if a specific condition is fulfilled:
 
-- {{HTMLElement("a")}}，当它仅包含短语内容时
-- {{HTMLElement("area")}}，当它为 {{HTMLElement("map")}} 元素的子元素时
-- {{HTMLElement("del")}}，当它仅包含短语内容时
-- {{HTMLElement("ins")}}，当它仅包含短语内容时
-- {{HTMLElement("link")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性
-- {{HTMLElement("map")}}，当它仅包含短语内容时
-- {{HTMLElement("meta")}}，若存在 [itemprop](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性
+- {{HTMLElement("a")}}, if it contains only phrasing content
+- {{HTMLElement("area")}}, if it is a descendant of a {{HTMLElement("map")}} element
+- {{HTMLElement("del")}}, if it contains only phrasing content
+- {{HTMLElement("ins")}}, if it contains only phrasing content
+- {{HTMLElement("link")}}, if the [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
+- {{HTMLElement("map")}}, if it contains only phrasing content
+- {{HTMLElement("meta")}}, if the [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemprop) attribute is present
 
-### 嵌入内容
+## 嵌入内容
 
-嵌入内容（Embedded content）是流式内容的一个子集，它导入另一种资源，或者将来自另一种标记语言或命名空间的内容插入到文档中。属于此类的元素有：
+Embedded content, a subset of flow content, imports another resource or inserts content from another markup language or namespace into the document.
+
+The embedded content elements are:
 
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
@@ -222,9 +237,11 @@ l10n:
 - {{SVGElement("svg")}}
 - {{HTMLElement("video")}}
 
-### 交互内容
+## 交互内容
 
-交互内容（Interactive content）是流式内容的一个子集，包含为用户交互而特别设计的元素。属于此类的元素有：
+Interactive content, a subset of flow content, includes elements that are specifically designed for user interaction.
+
+The interactive content elements are:
 
 - {{HTMLElement("button")}}
 - {{HTMLElement("details")}}
@@ -234,73 +251,152 @@ l10n:
 - {{HTMLElement("select")}}
 - {{HTMLElement("textarea")}}
 
-一些其他的元素也属于这个分类，但仅限于以下特殊情况：
+Some elements belong to this category only under specific conditions:
 
-- {{HTMLElement("a")}}，若存在 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性
-- {{HTMLElement("audio")}}，若存在 [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#controls) 属性
-- {{HTMLElement("img")}}，若存在 [`usemap`](/zh-CN/docs/Web/HTML/Reference/Elements/img#usemap) 属性
-- {{HTMLElement("input")}}，若 [type](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) 属性不处于隐藏（hidden）状态
-- {{HTMLElement("object")}}，若存在 [`usemap`](/zh-CN/docs/Web/HTML/Reference/Elements/object#usemap) 属性
-- {{HTMLElement("video")}}，若存在 [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls) 属性
+- {{HTMLElement("a")}}, if the [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) attribute is present
+- {{HTMLElement("audio")}}, if the [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#controls) attribute is present
+- {{HTMLElement("img")}}, if the [`usemap`](/zh-CN/docs/Web/HTML/Reference/Elements/img#usemap) attribute is present
+- {{HTMLElement("input")}}, if the [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) attribute is not in the hidden state
+- {{HTMLElement("object")}}, if the [`usemap`](/zh-CN/docs/Web/HTML/Reference/Elements/object#usemap) attribute is present
+- {{HTMLElement("video")}}, if the [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls) attribute is present
 
-### 可感知内容
+## 可感知内容
 
-当内容既不是空的也不是隐藏的时候，它就是可感知（palpable）的；它是被渲染的内容，是实质性的。以流式内容为模型的元素应该至少有一个节点是可感知的。
+**可感知内容**（Palpable content）是指既非空也非隐藏的内容，即会被渲染且具有实际意义的内容。它并不用于定义内容模型，而是用于描述一条通用规则：若某个元素的内容模型允许包含任意流式内容或短语内容，则其子内容中应至少包含一个可感知内容节点，且该节点未设置 `hidden` 属性。
 
-### 表单相关内容
+可感知的元素有：
 
-表单相关内容（Form-associated content）是流式内容的一个子集，包括有表单所有者（通过 **form** 属性暴露）的元素，可以在预期有流式内容的地方使用。表单所有者要么是容纳这些元素的 {{HTMLElement("form")}} 元素，要么是在 **form** 属性中指定其 id 的元素。
-
+- {{HTMLElement("a")}}
+- {{HTMLElement("abbr")}}
+- {{HTMLElement("address")}}
+- {{HTMLElement("article")}}
+- {{HTMLElement("aside")}}
+- {{HTMLElement("b")}}
+- {{HTMLElement("bdi")}}
+- {{HTMLElement("bdo")}}
+- {{HTMLElement("blockquote")}}
 - {{HTMLElement("button")}}
+- {{HTMLElement("canvas")}}
+- {{HTMLElement("cite")}}
+- {{HTMLElement("code")}}
+- {{HTMLElement("data")}}
+- {{HTMLElement("del")}}
+- {{HTMLElement("details")}}
+- {{HTMLElement("dfn")}}
+- {{HTMLElement("div")}}
+- {{HTMLElement("em")}}
+- {{HTMLElement("embed")}}
 - {{HTMLElement("fieldset")}}
-- {{HTMLElement("input")}}
-- {{HTMLElement("label")}}
-- {{HTMLElement("meter")}}
-- {{HTMLElement("object")}}
-- {{HTMLElement("output")}}
-- {{HTMLElement("progress")}}
-- {{HTMLElement("select")}}
-- {{HTMLElement("textarea")}}
+- {{HTMLElement("footer")}}
+- {{HTMLElement("figure")}}
+- {{HTMLElement("form")}}
+- {{HtmlElement("iframe")}}
+- {{HtmlElement("img")}}
+- {{HtmlElement("ins")}}
+- {{HtmlElement("kbd")}}
+- {{HtmlElement("label")}}
+- {{HtmlElement("main")}}
+- {{HtmlElement("map")}}
+- {{HtmlElement("mark")}}
+- {{MathMLElement("math")}}
+- {{HtmlElement("meter")}}
+- {{HtmlElement("nav")}}
+- {{HtmlElement("object")}}
+- {{HtmlElement("p")}}
+- {{HtmlElement("picture")}}
+- {{HtmlElement("pre")}}
+- {{HtmlElement("progress")}}
+- {{HtmlElement("q")}}
+- {{HtmlElement("ruby")}}
+- {{HtmlElement("s")}}
+- {{HtmlElement("samp")}}
+- {{HtmlElement("search")}}
+- {{HtmlElement("section")}}
+- {{HtmlElement("select")}}
+- {{HtmlElement("small")}}
+- {{HtmlElement("span")}}
+- {{HtmlElement("strong")}}
+- {{HtmlElement("sub")}}
+- {{HtmlElement("sup")}}
+- {{SVGElement("svg")}}
+- {{HtmlElement("table")}}
+- {{HtmlElement("textarea")}}
+- {{HtmlElement("time")}}
+- {{HtmlElement("u")}}
+- {{HtmlElement("var")}}
+- {{HtmlElement("video")}}
+- [Autonomous custom elements](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)
+- Plain text that is not inter-element [whitespace](/zh-CN/docs/Glossary/Whitespace)
 
-此类包含了几个子类：
+Some elements belong to this category only under specific conditions:
 
-- 可列举的元素（listed）
-  - : 在 {{domxref("HTMLFormElement.elements", "form.elements")}} 和 `fieldset.elements` 集合中列举出的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("fieldset")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
-- 可标记的元素（labelable）
-  - : 可以与 {{HTMLElement("label")}} 相关联的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("meter")}}、{{HTMLElement("output")}}、{{HTMLElement("progress")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
-- 可提交的元素（submittable）
-  - : 包括当表单提交时可以用来组成表单数据的元素。包括 {{HTMLElement("button")}}、{{HTMLElement("input")}}、{{HTMLElement("object")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
-- 可重置的元素（resettable）
-  - : 当表单重置时会被重置的元素。包括 {{HTMLElement("input")}}、{{HTMLElement("output")}}、{{HTMLElement("select")}} 和 {{HTMLElement("textarea")}}。
+- {{HTMLElement("audio")}}, if the [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/audio#controls) attribute is present
+- {{HTMLElement("dl")}}, if the element's children include at least one name-value group
+- {{HTMLElement("input")}}, if the [type](/zh-CN/docs/Web/HTML/Reference/Elements/input#type) attribute is not in the hidden state
+- {{HTMLElement("ol")}}, if it's children include at least one {{HTMLElement("li")}} element
+- {{HTMLElement("ul")}}, if it's children include at least one {{HTMLElement("li")}} element
 
-## 二级分类
+## 支持脚本元素
 
-这里还有一些你需要注意的二级分类元素。
+**Script-supporting elements** are elements that don't directly contribute to a document's rendered output. Instead, they serve to support scripts, either by containing or specifying script code directly or by specifying data that will be used by scripts. Nearly all elements, including those that only take specific elements (such as {{HTMLElement("ul")}}, which takes {{HTMLElement("li")}} elements), can contain script-supporting elements.
 
-### 支持脚本元素
-
-**支持脚本元素**（Script-supporting element）是不直接影响文档渲染输出的元素。相反，它们的作用是支持脚本，或者直接包含或指定脚本代码，或者指定将被脚本使用的数据。
-
-支持脚本元素有：
+与支持脚本的元素有：
 
 - {{HTMLElement("script")}}
 - {{HTMLElement("template")}}
 
+## 表单相关内容
+
+Form-associated content is a subset of flow content comprising elements that have a form owner and can be used everywhere flow content is expected. A form owner is either the containing {{HTMLElement("form")}} element or the `<form>` whose `id` is specified in the element's `form` attribute.
+
+与表单相关的元素有：
+
+- {{HTMLElement("button")}}
+- {{HTMLElement("fieldset")}}
+- {{HTMLElement("input")}}
+- {{HTMLElement("object")}}
+- {{HTMLElement("output")}}
+- {{HTMLElement("select")}}
+- {{HTMLElement("textarea")}}
+- {{HTMLElement("img")}}
+
+该类别包含多个子类别：
+
+- listed
+  - : Elements that are listed in the {{domxref("HTMLFormElement.elements")}} and {{domxref("HTMLFieldSetElement.elements")}} collections. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- submittable
+  - : Elements that can be used for constructing the form data set when the form is submitted. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- resettable
+  - : Elements that can be affected when a form is reset. Includes {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- autocapitalize-and-autocorrect-inheriting
+  - : Elements that inherit the [`autocapitalize`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize) and [`autocorrect`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocorrect) attributes from their form owner. Includes {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+- labelable
+  - : Elements that can be associated with {{HTMLElement("label")}} elements. Includes {{HTMLElement("button")}}, {{HTMLElement("input")}} (all types other than `hidden`), {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}}, and {{HTMLElement("textarea")}}.
+
 ## 透明内容模型
 
-如果一个元素拥有透明内容（Transparent content）模型，即使将透明内容移除并使用子元素取代，其内容也必须构成有效的 HTML5。
+如果一个元素具有透明内容（Transparent content）模型，那么其内部内容的结构必须保证：即使将该元素移除，仅保留其子元素，整个结构依然是合法的 HTML。
 
-例如，{{HTMLElement("del")}} 和 {{HTMLELement("ins")}} 是透明的：
+例如，{{HTMLElement("del")}} 和 {{HTMLElement("ins")}} 元素是透明的：
 
 ```html
-<p>
-  我们认为以下真理是<del><em>神圣而不可否认</em></del
-  ><ins>不言而喻</ins>的。
-</p>
+<p><del>购物</del> <ins>退货</ins> 清单</p>
+<ul>
+  <del>
+    <li>橙子</li>
+    <li>卫生纸</li>
+  </del>
+  <li>牙膏</li>
+</ul>
 ```
 
-即使这两个元素被移除，这个代码段依然是有效的（至少从代码语法上）。
+即使这些元素被移除，该片段仍然是合法的 HTML（尽管可能不是正确的英语）。
 
 ```html
-<p>我们认为以下真理是<em>神圣而不可否认</em>不言而喻的。</p>
+<p>购物退货清单</p>
+<ul>
+  <li>橙子</li>
+  <li>卫生纸</li>
+  <li>牙膏</li>
+</ul>
 ```
