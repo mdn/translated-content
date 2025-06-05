@@ -11,8 +11,7 @@ l10n:
 
 {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} の標準プロパティは、この擬似要素および関連する `::-webkit-scrollbar-*` 擬似要素に対応していないブラウザーの代替として使用できます（[ブラウザーの互換性](#ブラウザーの互換性)を参照してください）。
 
-> [!NOTE]
-> {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} に対応しており、 `auto` 以外の値が設定されている場合、これらは `::-webkit-scrollbar-*` スタイル設定を上書きします。
+> **メモ:** {{cssxref("scrollbar-color")}} および {{cssxref("scrollbar-width")}} に対応しており、 `auto` 以外の値が設定されている場合、これらは `::-webkit-scrollbar-*` スタイル設定を上書きします。
 > 詳細については、「[スクロールバースタイルの代替設定を追加](#スクロールバースタイルに代替設定を追加)」をご覧ください。
 
 ## CSS スクロールバーのセレクター
