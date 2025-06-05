@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-The **`<aside>`** [HTML](/zh-CN/docs/Web/HTML) element represents a portion of a document whose content is only indirectly related to the document's main content. Asides are frequently presented as sidebars or call-out boxes.
+**`<aside>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于表示文档中内容仅与主内容间接相关的部分。通常以侧边栏或提示框的形式呈现。
 
 {{InteractiveExample("HTML Demo: &lt;aside&gt;", "tabbed-standard")}}
 
