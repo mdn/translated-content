@@ -133,7 +133,7 @@ HTML には、3 つの主要なアイテムが含まれます。
 
 簡潔にするため、正確な HTML コードは省略しています。
 
-```html hidden
+```html-nolint hidden
 <!DOCTYPE html>
 <html lang="en">
   <head>
