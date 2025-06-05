@@ -21,4 +21,4 @@ l10n:
 
 ## 参见
 
-- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)，了解 `<link rel="prerender">` 与其他类似性能优化特性的对比。
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)，以比较 `<link rel="prerender">` 和其他类似的性能改进特性。
