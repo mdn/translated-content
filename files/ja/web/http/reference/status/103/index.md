@@ -2,7 +2,7 @@
 title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
 l10n:
-  sourceCommit: 67a409e7944352612272e095a26bf325ecfae822
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
