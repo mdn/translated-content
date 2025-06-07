@@ -108,8 +108,8 @@ _无变化。_
 #### Fetch 和 Service worker
 
 - 如果第一个参数指定了无效的 URL，{{domxref("Response.redirect_static", "Response.redirect()")}} 方法现在会正确地抛出 `TypeError`（[Firefox bug 1503276](https://bugzil.la/1503276)）。
-- 当 service worker 使用 {{domxref("ServiceWorkerContainer.register()")}} 和 {{domxref("WorkerGlobalScope.importScripts()")}} 方法现将接受任何具有有效 [JavaScript MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)的文件（[Firefox bug 1354577](https://bugzil.la/1354577)）。
-- 现支持{{domxref("FetchEvent.replacesClientId")}} 和 {{domxref("FetchEvent.resultingClientId")}} 属性（[Firefox bug 1264177](https://bugzil.la/1264177)）。
+- Service worker 使用的 {{domxref("ServiceWorkerContainer.register()")}} 和 {{domxref("WorkerGlobalScope.importScripts()")}} 方法现将接受任何具有有效 [JavaScript MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)的文件（[Firefox bug 1354577](https://bugzil.la/1354577)）。
+- 现支持 {{domxref("FetchEvent.replacesClientId")}} 和 {{domxref("FetchEvent.resultingClientId")}} 属性（[Firefox bug 1264177](https://bugzil.la/1264177)）。
 - 现已实现 {{domxref("ServiceWorkerGlobalScope.messageerror_event", "ServiceWorkerGlobalScope.onmessageerror")}} 和 {{domxref("ServiceWorkerContainer.messageerror_event", "ServiceWorkerContainer.onmessageerror")}} 事件处理器属性（[Firefox bug 1399446](https://bugzil.la/1399446)）。
 - 方法为 {{HTTPMethod("HEAD")}} 或 {{HTTPMethod("GET")}} 的 Fetch 请求不再设置 {{httpheader("Origin")}} 标头（[Firefox bug 1508661](https://bugzil.la/1508661)）。
 
@@ -128,7 +128,7 @@ _无变化。_
 - 已移除 {{domxref("MediaStream")}} 非标准的 `currentTime` 属性（[Firefox bug 1502927](https://bugzil.la/1502927)）。
 - 已移除 `dom.webcomponents.shadowdom.enabled` 和 `dom.webcomponents.customelements.enabled` 首选项——将不再能够通过 `about:config` 禁用影子 DOM 和自定义元素（[Firefox bug 1503019](https://bugzil.la/1503019)）。
 - 已移除非标准 DOM `text` 事件，该事件用于通知浏览器编辑器用户界面 IME 合成字符串数据和选择范围（[Firefox bug 1288640](https://bugzil.la/1288640)）。
-- {{domxref("Element/keypress_event", "keypress")}} 事件不再为除了 `Enter` 键、`Shift` + `Enter` 和 `Ctrl` + `Enter` 键组合以外的[不可打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）) 触发（[Firefox bug 968056](https://bugzil.la/968056)（保留它们的原因是为了实现跨浏览器兼容）。
+- {{domxref("Element/keypress_event", "keypress")}} 事件不再为除了 `Enter` 键、`Shift` + `Enter` 和 `Ctrl` + `Enter` 键组合以外的[不可打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）) 触发（[Firefox bug 968056](https://bugzil.la/968056)）（保留它们的原因是为了实现跨浏览器兼容）。
 
 ### 安全
 
