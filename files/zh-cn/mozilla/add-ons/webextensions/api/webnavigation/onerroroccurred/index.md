@@ -7,7 +7,7 @@ l10n:
 
 {{AddonSidebar}}
 
-当发生错误并且导航被中止时触发此事件。这可能是由于网络错误或用户中止导航导致的。
+当发生错误并且导航被中止时触发此事件。这可能是网络错误或用户中止导航导致的。
 
 ## 语法
 
@@ -22,7 +22,7 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
 
 事件包含三个函数：
 
-- `addListener(listener)`, `addListener(listener, filter)`
+- `addListener(listener)`、`addListener(listener, filter)`
   - : 为此事件添加监听器。
 - `removeListener(listener)`
   - : 停止监听此事件。`listener` 参数是要移除的监听器。
@@ -60,7 +60,7 @@ browser.webNavigation.onErrorOccurred.hasListener(listener)
         - `timeStamp`
           - : `number`。错误发生的时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)表示。
         - `error`
-          - : `string`。错误代码。这是一个内部错误代码，不保证在不同浏览器之间保持一致或不变。
+          - : `string`。错误代码。这是一个内部错误代码，不保证在不同浏览器之间保持一致。
 
 - `filter` {{optional_inline}}
 
