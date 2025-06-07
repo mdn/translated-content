@@ -1,6 +1,7 @@
 ---
 title: 공격 유형
-slug: Web/Security/Types_of_attacks
+slug: Web/Security/Attacks
+original_slug: Web/Security/Types_of_attacks
 l10n:
   sourceCommit: 9412721a88491da2c0303cce07f9b5a46c3d91ed
 ---
