@@ -1,16 +1,15 @@
 ---
 title: 506 Variant Also Negotiates
 slug: Web/HTTP/Reference/Status/506
-original_slug: Web/HTTP/Status/506
 l10n:
-  sourceCommit: dae4a066bdf3900056bb4e8e6af85f50e4d1fd71
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、コンテンツの選択プロセスに再帰ループがある場合、コンテンツネゴシエーション中に返されます。
+HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、コンテンツの選択プロセスに再帰ループがある場合、コンテンツネゴシエーション中に返されます。
 
-[エージェント主導のコンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)により、サーバーが複数の版を保有している場合に、クライアントとサーバーが協調して指定されたリソースの最適な版を決定することができます。サーバーがレスポンスを作成する際にサーバーの誤設定により、自分自身への循環参照が発生した場合、サーバーは `506` ステータスコードを送信します。
+[エージェント駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#エージェント駆動型ネゴシエーション)により、サーバーが複数の版を保有している場合に、クライアントとサーバーが協調して指定されたリソースの最適な版を決定することができます。サーバーがレスポンスを作成する際にサーバーの誤設定により、自分自身への循環参照が発生した場合、サーバーは `506` ステータスコードを送信します。
 
 クライアントがレスポンスから自動的に選べる方法の標準化が欠如しており、クライアントとサーバーの操作が遅くなる追加の往復があるため、このメカニズムはほとんど使用されていないということ意味しています。
 [サーバー駆動型コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)の方がはるかに一般的であり、サーバーはリクエストヘッダー（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} など）に基づいて、クライアントに最も適したリソースを直接選べます。
@@ -32,7 +31,7 @@ HTTP の **`506 Variant Also Negotiates`** は[サーバーエラーレスポン
 curl  -H "Negotiate: trans" -H "Accept-Language: fr;" http://example.com/index
 ```
 
-This produces the following request:
+これにより、次のリクエストが生成されます。
 
 ```http
 GET /index HTTP/1.1
@@ -44,7 +43,7 @@ Accept-Language: fr
 ```
 
 サーバーの誤設定により、 `fr` に対する様々なレスポンスが、それ自体が「透過的ネゴシエーション」を発生させる[タイプマップ](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)を指しています。
-サーバーは、送信される前の選択レスポンスに TCN ヘッダーが存在することで、この状態を検出できるかもしれません。
+サーバーは、送信される前の選択レスポンスに `TCN` ヘッダーが存在することで、この状態を検出できるかもしれません。
 
 ```http
 HTTP/1.1 506 Variant Also Negotiates
