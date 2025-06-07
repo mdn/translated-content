@@ -80,27 +80,26 @@ L'élément `<linearGradient>` peut également prendre différents attributs pou
 <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1"></linearGradient>
 ```
 
-### xlink:href
-
-Vous pouvez également utiliser l'attribut `xlink:href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
-
-```html
-<linearGradient id="Gradient1">
-  <stop id="stop1" offset="0%" />
-  <stop id="stop2" offset="50%" />
-  <stop id="stop3" offset="100%" />
-</linearGradient>
-<linearGradient
-  id="Gradient2"
-  x1="0"
-  x2="0"
-  y1="0"
-  y2="1"
-  xmlns:xlink="http://www.w3.org/1999/xlink"
-  xlink:href="#Gradient1" />
-```
-
-Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
+> [!NOTE]
+> Vous pouvez également utiliser l'attribut `href` sur les dégradés. Quand il est utilisé, les attributs et stops d'un dégradé peuvent être réutilisé sur un autre. Ainsi, dans l'exemple précédent, on aurait pu ne pas redéfinir tous les stops dans Gradient2, comme ceci:
+>
+> ```html
+> <linearGradient id="Gradient1">
+>   <stop id="stop1" offset="0%" />
+>   <stop id="stop2" offset="50%" />
+>   <stop id="stop3" offset="100%" />
+> </linearGradient>
+> <linearGradient
+>   id="Gradient2"
+>   x1="0"
+>   x2="0"
+>   y1="0"
+>   y2="1"
+>   xmlns:xlink="http://www.w3.org/1999/xlink"
+>   href="#Gradient1" />
+> ```
+>
+> Ici, le namespace xlink est inclut directement sur le noeud, bien qu'il soit généralement définit en haut du document, comme dans l'[exemple avec les images](/fr/docs/Web/SVG/Tutorial/Other_content_in_SVG)
 
 ## Dégradé Radial
 
@@ -144,7 +143,7 @@ Les dégradés radiaux (_radial gradient_ en anglais) sont similaires aux dégra
 
 ### Définir le dégradé
 
-Les stops utilisés ici sont les mêmes que précédemment, la différence étant que désormais l'objet sera rouge en son centre, et que la couleur changera progressivement vers le bleu en approchant des contours. Comme pour les dégradés linéaires, le noeud `<radialGradient>` peut prendre différents attributs pour décrire sa position et son orientation. Cependant, la définition est un peu plus complexe. Le dégradé linéaire est défini par deux points, qui déterminent où sont situé le centre et les bords:
+Les stops utilisés ici sont les mêmes que précédemment, la différence étant que désormais l'objet sera rouge en son centre, et que la couleur changera progressivement vers le bleu en approchant des contours. Comme pour les dégradés linéaires, le noeud `<radialGradient>` peut prendre différents attributs pour décrire sa position et son orientation. Cependant, la définition est un peu plus complexe. Le dégradé radial est défini par deux points, qui déterminent où sont situé le centre et les bords:
 
 - Le premier point définit le cercle où le dégradé se termine. Il requiert un point central, spécifié par les attributs `cx` et `cy`, et un rayon, `r`. Définir ces trois attributs vous permettra de déplacer le dégradé et de changer sa taille, comme illusté dans le deuxième `rect` de notre exemple.
 - Le second point est appelé le point focal et il est définit par les attributs `fx` et `fy`. Tandis que le premier point décrit où sont les bords du dégradé, le point focal décrit où est son centre. C'est plus facile à voir avec un exemple (voir la section qui suit).
@@ -206,41 +205,79 @@ Cet attribut contrôle ce qu'il arrive quand le dégradé arrive à sa fin, mais
 - "`repeat`" poursuit également le dégradé, mais au lieu de revenir en arrière, il revient au début et est exécuté de nouveau.
 
 ```html
+<?xml version="1.0" standalone="no"?>
+
 <svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
   <defs>
-      <!-- pad -->
-      <radialGradient id="GradientPad"
-            cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75"
-            spreadMethod="pad">
-        <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
-
-      <!-- repeat -->
-      <radialGradient id="Gradient
-            cx="0.5" cy=
-            spreadMethod
-        <stop offset="0%
-      <stop offset="10
-      </radialGradient
-
-      <!-- reflect -->
-      <radialGradient id="GradientR
-           cx="0.5" cy="0.5" r="0.4" fx="0.
-                    spreadMethod="reflect">
-                                                    <stop offset="0%" stop-color="red"/>
-        <stop offset="100%" stop-color="blue"/>
-      </radialGradient>
+    <radialGradient
+      id="GradientPad"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="pad">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient
+      id="GradientRepeat"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="repeat">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
+    <radialGradient
+      id="GradientReflect"
+      cx="0.5"
+      cy="0.5"
+      r="0.4"
+      fx="0.75"
+      fy="0.75"
+      spreadMethod="reflect">
+      <stop offset="0%" stop-color="red" />
+      <stop offset="100%" stop-color="blue" />
+    </radialGradient>
   </defs>
 
-  <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#GradientPad)"/>
-  <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientRepeat)"/>
-  <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#GradientReflect)"/>
+  <rect
+    x="10"
+    y="10"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientPad)" />
+  <rect
+    x="10"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientRepeat)" />
+  <rect
+    x="120"
+    y="120"
+    rx="15"
+    ry="15"
+    width="100"
+    height="100"
+    fill="url(#GradientReflect)" />
 
-  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
-  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
-  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
-
+  <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">
+    Pad
+  </text>
+  <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">
+    Repeat
+  </text>
+  <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">
+    Reflect
+  </text>
 </svg>
 ```
 
