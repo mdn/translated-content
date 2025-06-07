@@ -38,7 +38,7 @@
     "ora": "^8.2.0",
     "prettier": "3.5.3",
     "unist-util-visit": "^5.0.0",
-    "yargs": "^17.7.2"
+    "yargs": "^18.0.0"
   },
   "devDependencies": {
     "lefthook": "^1.11.13"
