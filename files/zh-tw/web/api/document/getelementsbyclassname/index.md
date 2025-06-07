@@ -104,8 +104,8 @@ console.log(testTarget); // <p class="test">你好世界 2</p>
 
 ```css hidden
 #resultArea {
-width: 98%;
-height: 7em;
+  width: 98%;
+  height: 7em;
 }
 ```
 
