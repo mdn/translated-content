@@ -128,7 +128,7 @@ _无变化。_
 - 已移除 {{domxref("MediaStream")}} 非标准的 `currentTime` 属性（[Firefox bug 1502927](https://bugzil.la/1502927)）。
 - 已移除 `dom.webcomponents.shadowdom.enabled` 和 `dom.webcomponents.customelements.enabled` 首选项——将不再能够通过 `about:config` 禁用影子 DOM 和自定义元素（[Firefox bug 1503019](https://bugzil.la/1503019)）。
 - 已移除非标准 DOM `text` 事件，该事件用于通知浏览器编辑器用户界面 IME 合成字符串数据和选择范围（[Firefox bug 1288640](https://bugzil.la/1288640)）。
-- {{domxref("Element/keypress_event", "keypress")}} 事件不再为除了 `Enter` 键、`Shift` + `Enter` 和 `Ctrl` + `Enter` 键组合以外的[不可打印按键](</zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）>) 触发（[Firefox bug 968056](https://bugzil.la/968056)（保留它们的原因是为了实现跨浏览器兼容）。
+- {{domxref("Element/keypress_event", "keypress")}} 事件不再为除了 `Enter` 键、`Shift` + `Enter` 和 `Ctrl` + `Enter` 键组合以外的[不可打印按键](/zh-CN/docs/Web/API/KeyboardEvent/keyCode#不可打印键（功能键）) 触发（[Firefox bug 968056](https://bugzil.la/968056)（保留它们的原因是为了实现跨浏览器兼容）。
 
 ### 安全
 
