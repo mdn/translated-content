@@ -64,7 +64,7 @@ original_slug: Learn/Forms/Your_first_form
 <form action="/my-handling-form-page" method="post">…</form>
 ```
 
-이 요소는 폼을 공식적으로 정의합니다. {{HTMLelement("form")}} 요소는 {{HTMLelement("section")}} 요소나 {{HTMLelement("footer")}} 요소처럼 컨테이너 요소이지만, 특히 폼을 포함하기 위한 요소입니다. 또한 폼의 동작 방식을 구성하는 몇 가지 특정 속성을 지원합니다. 속성들은 모두 선택 사항이지만, 적어도 [`action`](/ko/docs/Web/HTML/Element/form#action) 속성과 [`method`](/ko/docs/Web/HTML/Element/form#method) 속성은 항상 설정하는 것이 관행입니다.
+이 요소는 폼을 공식적으로 정의합니다. {{HTMLelement("form")}} 요소는 {{HTMLelement("section")}} 요소나 {{HTMLelement("footer")}} 요소처럼 컨테이너 요소이지만, 특히 폼을 포함하기 위한 요소입니다. 또한 폼의 동작 방식을 구성하는 몇 가지 특정 속성을 지원합니다. 속성들은 모두 선택 사항이지만, 적어도 [`action`](/ko/docs/Web/HTML/Reference/Elements/form#action) 속성과 [`method`](/ko/docs/Web/HTML/Reference/Elements/form#method) 속성은 항상 설정하는 것이 관행입니다.
 
 - `action` 속성은 폼이 제출될 때 수집된 데이터를 전송할 위치(URL)를 정의합니다.
 - `method` 속성은 데이터를 전송할 HTTP 메서드(일반적으로 `get`이나 `post`)를 정의합니다.
@@ -105,7 +105,7 @@ original_slug: Learn/Forms/Your_first_form
 
 폼 코드를 위와 같이 업데이트하세요.
 
-{{HTMLelement("li")}} 요소는 코드를 편리하게 구성하고 스타일을 더 쉽게 지정하기 위한 것입니다 (이 글의 뒷 부분을 참조하세요). 사용성과 접근성을 위해서 각 폼 컨트롤에 명시적인 label을 포함했습니다. 모든 {{HTMLelement("label")}} 요소에 [`for`](/ko/docs/Web/HTML/Attributes/for) 속성을 사용하는 것에 주목하세요. 이 속성은 연결된 폼 컨트롤의 [`id`](/ko/docs/Web/HTML/Global_attributes/id)를 값으로 사용하기 때문에 폼 컨트롤을 label과 연결할 수 있습니다.
+{{HTMLelement("li")}} 요소는 코드를 편리하게 구성하고 스타일을 더 쉽게 지정하기 위한 것입니다 (이 글의 뒷 부분을 참조하세요). 사용성과 접근성을 위해서 각 폼 컨트롤에 명시적인 label을 포함했습니다. 모든 {{HTMLelement("label")}} 요소에 [`for`](/ko/docs/Web/HTML/Attributes/for) 속성을 사용하는 것에 주목하세요. 이 속성은 연결된 폼 컨트롤의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id)를 값으로 사용하기 때문에 폼 컨트롤을 label과 연결할 수 있습니다.
 
 이렇게 label을 폼 컨트롤과 연결하면 큰 이점이 있습니다. 마우스, 트랙패드, 터치 장치 사용자가 label을 클릭하면 일치하는 컨트롤을 활성화할 수 있습니다. 그리고 스크린 리더의 사용자가 읽을 수 있는 접근 가능한 이름을 스크린 리더에게 제공할 수 있는 큰 이점도 있습니다. 폼 label에 대한 자세한 내용은 [웹 폼 구조화 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)에서 확인할 수 있습니다.
 
@@ -241,7 +241,7 @@ button {
 
 ## 웹 서버에 폼 데이터 보내기
 
-마지막 부분이자 가장 까다로운 부분은 서버 측에서 폼 데이터를 처리하는 것입니다. {{HTMLelement("form")}} 요소는 [`action`](/ko/docs/Web/HTML/Element/form#action) 및 [`method`](/ko/docs/Web/HTML/Element/form#method) 속성을 통해서 데이터를 전송할 위치와 방법을 정의합니다.
+마지막 부분이자 가장 까다로운 부분은 서버 측에서 폼 데이터를 처리하는 것입니다. {{HTMLelement("form")}} 요소는 [`action`](/ko/docs/Web/HTML/Reference/Elements/form#action) 및 [`method`](/ko/docs/Web/HTML/Reference/Elements/form#method) 속성을 통해서 데이터를 전송할 위치와 방법을 정의합니다.
 
 각각의 폼 컨트롤에 `name` 속성을 부여합니다. 이름은 클라이언트 측과 서버 측 모두에서 중요합니다. 브라우저에게는 각 데이터에 어떤 이름을 부여할지 알려주고, 서버에서는 서버가 각 데이터를 이름별로 처리할 수 있도록 해줍니다. 폼 데이터는 name/value 쌍으로 서버에 전송됩니다.
 
@@ -268,7 +268,7 @@ button {
 </form>
 ```
 
-이 예제에서 폼은 "`user_name`", "`user_email`", "`user_message`"라고 이름이 지정되어 있는 데이터 3개를 전송합니다. 이 데이터는 [HTTP `POST`](/ko/docs/Web/HTTP/Methods/POST) 메서드를 사용하여 "`/my-handling-form-page`" URL로 전송됩니다.
+이 예제에서 폼은 "`user_name`", "`user_email`", "`user_message`"라고 이름이 지정되어 있는 데이터 3개를 전송합니다. 이 데이터는 [HTTP `POST`](/ko/docs/Web/HTTP/Reference/Methods/POST) 메서드를 사용하여 "`/my-handling-form-page`" URL로 전송됩니다.
 
 서버 측에서, "`/my-handling-form-page`" URL의 스크립트는 데이터를 HTTP 요청에 포함된 3개의 key/value 항목의 목록 형태로 받습니다. 이 스크립트가 해당 데이터를 처리하는 방식은 당신에게 달려 있습니다. 각각의 서버 측 언어(PHP, Python, Ruby, Java, C# 등)에는 폼 데이터를 처리하는 고유한 메커니즘이 있습니다. 이 가이드의 범위를 넘어서는 주제이지만 더 자세히 알고 싶다면 나중에 [폼 데이터 보내기](/ko/docs/Learn/Forms/Sending_and_retrieving_form_data) 문서에서 몇 가지 예제를 제공할 것입니다.
 

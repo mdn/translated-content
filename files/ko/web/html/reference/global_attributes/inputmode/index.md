@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/inputmode
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`inputmode`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
+**`inputmode`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 사용자가 요소나 요소의 콘텐츠를 편집할 때 입력할 수 있는 데이터 유형의 힌트를 제공하는 열거형 특성입니다. 가능한 값은 다음과 같습니다.
 
 - `none`
   - : 가상 키보드를 사용하지 않습니다. 페이지가 자체 키보드나 입력 컨트롤을 구현할 때 사용합니다.
@@ -70,4 +70,4 @@ original_slug: Web/HTML/Global_attributes/inputmode
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

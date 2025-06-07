@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/spellcheck
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`spellcheck`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소의 맞춤법 검사 여부를 지정하는 열거형 특성입니다.
+**`spellcheck`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소의 맞춤법 검사 여부를 지정하는 열거형 특성입니다.
 
 {{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
 
@@ -41,4 +41,4 @@ This exampull will nut be checkd fur spellung when you try to edit it.</textarea
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

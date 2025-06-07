@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다.
+**`Object.is()`** 정적 메서드는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)인지 결정합니다.
 
 {{InteractiveExample("JavaScript Demo: Object.is()")}}
 
@@ -45,7 +45,7 @@ Object.is(value1, value2);
 
 ## 설명
 
-`Object.is()`는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness)인지 결정합니다. 다음 중 하나를 만족하면 두 값은 같습니다.
+`Object.is()`는 두 값이 [같은 값](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)인지 결정합니다. 다음 중 하나를 만족하면 두 값은 같습니다.
 
 - 둘 다 {{jsxref("undefined")}}
 - 둘 다 {{jsxref("null")}}
@@ -104,4 +104,4 @@ Object.is(NaN, Number.NaN); // true
 ## 같이 보기
 
 - [`core-js`의 `Object.is` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
-- [동치 비교 및 동일성](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness) — 동일성 내장 기능 3가지 모두 비교
+- [동치 비교 및 동일성](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — 동일성 내장 기능 3가지 모두 비교

@@ -66,4 +66,4 @@ Server: Apache
 ## 함께 참고할 내용
 
 - {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/ko/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Connection management in HTTP/1.x](/ko/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

@@ -221,6 +221,6 @@ console.log(sortArguments(5, 3, 7, 1)); // 1, 3, 5, 7
 ## 함께 보기
 
 - [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (같은 '`...`' 사용)
-- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)
 - [`arguments` 객체](/ko/docs/Web/JavaScript/Reference/Functions/arguments)
 - {{jsxref("Array")}}

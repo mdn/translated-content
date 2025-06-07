@@ -181,7 +181,7 @@ customElements.define(
 - {{cssxref(":host_function", ":host()")}}
 - {{cssxref(":host-context", ":host-context()")}}
 - [CSS scoping](/ko/docs/Web/CSS/CSS_scoping) 모듈
-- HTML [`slot`](/ko/docs/Web/HTML/Global_attributes/slot) 특성
+- HTML [`slot`](/ko/docs/Web/HTML/Reference/Global_attributes/slot) 특성
 - HTML {{HTMLElement("slot")}} 요소
 - HTML {{HTMLElement("template")}} 요소
 - [Web 컴포넌트](/ko/docs/Web/API/Web_components)

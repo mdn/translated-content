@@ -5,7 +5,7 @@ slug: Web/CSS/all
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/Using_CSS_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`all`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소의 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}}, [CSS 사용자 지정 속성](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)을 제외한 모든 속성을 초기화합니다. 초깃값, 상속값, 아니면 다른 스타일시트 출처의 값으로 설정할 수 있습니다.
 
 {{InteractiveExample("CSS Demo: all")}}
 
@@ -79,9 +79,9 @@ all: revert;
 ### 값
 
 - {{cssxref("initial")}}
-  - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/initial_value)으로 변경합니다.
+  - : 요소의 모든 속성을 [초깃값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 변경합니다.
 - {{cssxref("inherit")}}
-  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/Inheritance)으로 변경합니다.
+  - : 요소의 모든 속성을 [상속값](/ko/docs/Web/CSS/CSS_cascade/Inheritance)으로 변경합니다.
 - {{cssxref("unset")}}
   - : 요소의 모든 속성을, 속성이 값을 상속하는 경우 상속값으로, 아니면 초깃값으로 변경합니다.
 - {{cssxref("revert")}}
@@ -91,9 +91,9 @@ all: revert;
     - [사용자 에이전트 출처](/ko/docs/Web/CSS/Cascade#User-agent_stylesheets)
       - : `unset`과 동일합니다.
     - [사용자 출처](/ko/docs/Web/CSS/Cascade#User_stylesheets)
-      - [: 종속](/ko/docs/Web/CSS/Cascade)을 사용자 에이전트 단계까지 되돌려서, [지정값](/ko/docs/Web/CSS/specified_value)이 마치 저작자와 사용자 단계의 규칙이 없었던 것처럼 계산되도록 합니다.
+      - [: 종속](/ko/docs/Web/CSS/Cascade)을 사용자 에이전트 단계까지 되돌려서, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 마치 저작자와 사용자 단계의 규칙이 없었던 것처럼 계산되도록 합니다.
     - [저작자 출처](/ko/docs/Web/CSS/Cascade#Author_stylesheets)
-      - [: 종속](/ko/docs/Web/CSS/Cascade)을 사용자 에이전트 단계까지 되돌려서, [지정값](/ko/docs/Web/CSS/specified_value)이 마치 저작자 단계의 규칙이 없었던 것처럼 계산되도록 합니다. `revert`만 고려했을 때, 저작자 출처는 재정의(Override) 및 애니메이션(Animation) 출처를 포함합니다.
+      - [: 종속](/ko/docs/Web/CSS/Cascade)을 사용자 에이전트 단계까지 되돌려서, [지정값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)이 마치 저작자 단계의 규칙이 없었던 것처럼 계산되도록 합니다. `revert`만 고려했을 때, 저작자 출처는 재정의(Override) 및 애니메이션(Animation) 출처를 포함합니다.
 
 ## 형식 정의
 

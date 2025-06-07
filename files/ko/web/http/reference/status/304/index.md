@@ -28,7 +28,7 @@ original_slug: Web/HTTP/Status/304
 
 ## 호환성 노트
 
-- 이 응답에 영구 연결의 본문이 잘못 포함되어 있으면 브라우저 동작이 다릅니다. 자세한 내용은 [204 No Content](/ko/docs/Web/HTTP/Status/204)을(를) 참조하십시오.
+- 이 응답에 영구 연결의 본문이 잘못 포함되어 있으면 브라우저 동작이 다릅니다. 자세한 내용은 [204 No Content](/ko/docs/Web/HTTP/Reference/Status/204)을(를) 참조하십시오.
 
 ## 같이 보기
 

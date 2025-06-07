@@ -182,6 +182,6 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 
 ## 같이 보기
 
-- [플로우 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
+- [플로우 레이아웃과 쓰기 모드](/ko/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
 - [CSS 유연한 박스 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout) 모듈
 - [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout) 모듈

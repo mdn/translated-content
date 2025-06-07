@@ -39,7 +39,7 @@ typeof (operand);
 
 ## 설명
 
-`typeof`가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 자료형과 원시값에 대한 자세한 정보는 [JavaScript 자료형과 자료구조](/ko/docs/Web/JavaScript/Data_structures) 페이지를 참고하세요.
+`typeof`가 반환할 수 있는 값을 아래 표에서 볼 수 있습니다. 자료형과 원시값에 대한 자세한 정보는 [JavaScript 자료형과 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures) 페이지를 참고하세요.
 
 | Type                                                                         | Result                          |
 | ---------------------------------------------------------------------------- | ------------------------------- |

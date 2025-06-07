@@ -42,7 +42,7 @@ doc.nodeName # DOM property of document object;
 p_list = doc.getElementsByTagName("para");
 ```
 
-웹에서 JavaScript 사용하기와 관련된 기술에 대한 추가정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/JavaScript_technologies_overview) 문서를 참조하라.
+웹에서 JavaScript 사용하기와 관련된 기술에 대한 추가정보는 [JavaScript 기술 개요](/ko/docs/Web/JavaScript/Reference/JavaScript_technologies_overview) 문서를 참조하라.
 
 ## DOM 에 어떻게 접근할 수 있는가?
 
