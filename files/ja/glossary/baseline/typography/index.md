@@ -1,8 +1,8 @@
 ---
-title: Baseline (ベースライン、タイポグラフィ)
+title: Baseline (ベースライン、組版)
 slug: Glossary/Baseline/Typography
 l10n:
-  sourceCommit: 58dd075cc106f92659ed0a940361969b117d47b1
+  sourceCommit: 243e5eabfe95971f2850fcfdf2a7b2f210c85532
 ---
 
 {{GlossarySidebar}}
@@ -15,6 +15,6 @@ l10n:
 
 ## 関連情報
 
-- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment#types_of_alignment)
+- [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment#配置の種類)
 - [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout) モジュール
 - [ベースライン](https://ja.wikipedia.org/wiki/書体#欧文書体における並び線の種類)（ウィキペディア）
