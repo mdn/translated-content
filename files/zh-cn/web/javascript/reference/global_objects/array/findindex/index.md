@@ -69,7 +69,7 @@ findIndex(callbackFn, thisArg)
 
 ```js
 function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+  if (element < 2) {
     return false;
   }
   for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
@@ -79,7 +79,7 @@ function isPrime(element) {
   }
   return true;
 }
-
+console.log([2, 4, 6, 8, 9, 12].findIndex(isPrime)); // 0 (array[0] 是 2)
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1，没有找到
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2（array[2] 是 7）
 ```
