@@ -287,7 +287,7 @@ fish.displayType(); // Muestra: Fishes
 
 ## Herencia
 
-Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Todos los objetos en JavaScript heredan de al menos otro objeto. El objeto del que se hereda se conoce como el prototipo, y las propiedades heredadas se pueden encontrar en el objeto `prototype` del constructor. Para más información consulta [Herencia y cadena prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ## Propiedades del objeto indexado
 
