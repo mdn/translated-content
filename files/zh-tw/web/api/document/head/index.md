@@ -2,7 +2,7 @@
 title: Document：head 屬性
 slug: Web/API/Document/head
 l10n:
-  sourceCommit: bc7e82aa6db60568d7146ee285918550bbe4b8ce
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
@@ -20,14 +20,13 @@ l10n:
 <head id="my-document-head">
   <title>範例：使用 document.head</title>
 </head>
+```
 
-<script>
-  const theHead = document.head;
+```js
+const theHead = document.head;
 
-  console.log(theHead.id); // 「my-document-head」;
-
-  console.log(theHead === document.querySelector("head")); // true
-</script>
+console.log(theHead.id); // 「my-document-head」;
+console.log(theHead === document.querySelector("head")); // true
 ```
 
 ## 備註

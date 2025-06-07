@@ -2,7 +2,7 @@
 title: Window：setInterval() 方法
 slug: Web/API/Window/setInterval
 l10n:
-  sourceCommit: 29d6bb944a1c1fe42eb9957e2a6e5b4f85a2656e
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("HTML DOM")}}
@@ -93,9 +93,7 @@ let intervalId;
 
 function changeColor() {
   // 檢查 interval 是否已經設置
-  if (!intervalId) {
-    intervalId = setInterval(flashText, 1000);
-  }
+  intervalId ??= setInterval(flashText, 1000);
 }
 
 function flashText() {

@@ -2,7 +2,7 @@
 title: Document：querySelector() 方法
 slug: Web/API/Document/querySelector
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{ApiRef("DOM")}}
@@ -13,7 +13,7 @@ l10n:
 
 如果指定的選擇器匹配了在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
 
-根據 [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) 規範，[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
+[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
 
 ## 語法
 
