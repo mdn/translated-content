@@ -15,10 +15,47 @@ slug: Web/HTTP/Reference/Status/201
 201 Created
 ```
 
+## 示例
+
+### 接收一个创建用户的响应
+
+假设有一个用于管理用户的 RESET API，其端点位于 `http://example.com/users` 。在这个示例中，我们发送一个带有以下主体的 `POST` 请求来创建一个用户。
+
+```http
+POST /users HTTP/1.1
+Host: example.com
+Content-Type: application/json
+
+{
+  "firstName": "Brian",
+  "lastName": "Smith",
+  "email": "brian.smith@example.com"
+}
+```
+
+用户创建成功后，`201 Created` 响应如下所示：
+
+```http
+HTTP/1.1 201 Created
+Content-Type: application/json
+Location: http://example.com/users/123
+
+{
+  "message": "新用户已创建",
+  "user": {
+    "id": 123,
+    "firstName": "Brian",
+    "lastName": "Smith",
+    "email": "brian.smith@example.com"
+  }
+}
+```
+
 ## 规范
 
 {{Specifications}}
 
 ## 参见
 
-- [HTTP request methods](/zh-CN/docs/Web/HTTP/Reference/Methods)
+- [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
+- [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
