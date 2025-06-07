@@ -15,7 +15,7 @@ l10n:
 次のような場合に `navigator.webdriver` プロパティが true になります。
 
 - Chrome
-  - : `--enable-automation` または `--headless` フラグまたは `--remote-debugging-port` が使用されているとき。
+  - : `--enable-automation` または `--headless` フラグが使用されているか、ポート 0 を指定する `--remote-debugging-port` フラグが使用されているとき。
 - Firefox
   - : 設定の `marionette.enabled` または `--marionette` フラグが渡されたとき。
 
