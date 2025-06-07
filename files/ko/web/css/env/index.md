@@ -212,7 +212,7 @@ main {
 - {{CSSxRef("var", "var(…)")}}
 - [CSS custom properties for cascading variables](/ko/docs/Web/CSS/CSS_cascading_variables) module
 - [Custom properties (`--*`): CSS variables](/ko/docs/Web/CSS/--*)
-- [Using CSS custom properties (variables)](/ko/docs/Web/CSS/Using_CSS_custom_properties)
+- [Using CSS custom properties (variables)](/ko/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - [Customize the window controls overlay of your PWA's title bar](https://web.dev/articles/window-controls-overlay)
 - [Display content in the title bar](https://docs.microsoft.com/microsoft-edge/progressive-web-apps-chromium/how-to/window-controls-overlay)
 - [Breaking Out of the Box](https://alistapart.com/article/breaking-out-of-the-box/)

@@ -6,10 +6,10 @@ original_slug: WebAssembly/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/C_to_Wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
+[Emscripten과 같은 도구를 사용하여 다른 언어의 모듈을 컴파일](/ko/docs/WebAssembly/Guides/C_to_Wasm)했거나 [코드를 직접로드하여 실행](/ko/docs/WebAssembly/Guides/Loading_and_running) 해봤다면 다음 단계에서는 WebAssembly JavaScript API의 다른 기능을 사용하는 방법에 대해 자세히 알아 봅니다.
 
 > [!NOTE]
-> 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)를 먼저 읽어보세요.
+> 여기에서 언급한 기본 개념에 익숙하지 않거나 더 많은 설명이 필요한 경우 [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)를 먼저 읽어보세요.
 
 ## 몇가지 간단한 예제
 
@@ -22,7 +22,7 @@ WebAssembly JavaScript API를 사용하는 방법과 웹 페이지에서 wasm �
 
 1. 먼저 wasm 모듈이 필요합니다! [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) 파일을 로컬 컴퓨터의 새 디렉토리에 저장하세요.
 2. 다음으로, wasm 파일과 동일한 디렉토리에 index.html이라는 간단한 HTML 파일을 작성해보세요 ([simple template](https://github.com/mdn/webassembly-examples/blob/master/template/template.html)을 참고하면 쉽습니다.)
-3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
+3. 이제 여기서 무슨 일이 벌어지는지 이해하기 쉽도록 하기위해 wasm 모듈 ([Converting WebAssembly format to wasm](/ko/docs/WebAssembly/Guides/Text_format_to_Wasm#a_first_look_at_the_text_format)을 참고)의 텍스트 표현을 살펴 보겠습니다.
 
    ```rust
    (module
@@ -283,7 +283,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - 하나의 모듈 인스턴스는 0-1 테이블 인스턴스를 사용할 수 있습니다. 이것은 C 함수 포인터를 구현하는 데 사용되는 인스턴스의 "함수 주소 공간"입니다. WebAssembly의 향후 버전에서는 향후 모듈 인스턴스 당 0-N 테이블 인스턴스를 허용 할 수 있습니다.
 - 하나의 메모리 또는 테이블 인스턴스는 0-N 모듈 인스턴스에서 사용할 수 있습니다.이 인스턴스는 모두 동일한 주소 공간을 공유하므로 [dynamic linking](http://webassembly.org/docs/dynamic-linking)이 가능합니다.
 
-Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking)을 참조하십시오.
+Understanding text format에서 multiplicity in action를 확인 할 수있습니다. - [Mutating tables and dynamic linking section](/ko/docs/WebAssembly/Guides/Understanding_the_text_format#mutating_tables_and_dynamic_linking)을 참조하십시오.
 
 ## 요약
 
@@ -292,5 +292,5 @@ Understanding text format에서 multiplicity in action를 확인 할 수있습�
 ## 바깥 고리
 
 - [webassembly.org](http://webassembly.org/)
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
 - [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
