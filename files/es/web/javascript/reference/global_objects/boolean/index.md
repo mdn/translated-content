@@ -99,5 +99,5 @@ var bObjProto = new Boolean({});
 ## Ve también
 
 - [Boolean](/es/docs/Glossary/Boolean)
-- [Boolean primitivo](/es/docs/Web/JavaScript/Data_structures#boolean_type)
+- [Boolean primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#boolean_type)
 - [Tipo de dato `Boolean` (Wikipedia)](https://es.wikipedia.org/wiki/Tipo_de_dato_lógico)

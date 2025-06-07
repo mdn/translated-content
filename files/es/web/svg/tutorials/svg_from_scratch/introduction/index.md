@@ -6,7 +6,7 @@ original_slug: Web/SVG/Tutorial/Introduction
 
 {{SVGRef}}{{ PreviousNext("Web/SVG/Tutorial", "Web/SVG/Tutorial/Getting_Started") }}
 
-![Ejemplo de imagenes vectoriales, una cría de leon, una curva con flechas direccionales a intervalos regulares y un texto que sigue una trayectoria ondulada](svg_overview.png)[SVG](/es/docs/Web/SVG) es un lenguaje [XML](/es/docs/Web/XML/XML_introduction), parecido a [XHTML](/es/docs/Glossary/XHTML), el cual puede ser usado para dibujar gráficos vectoriales, como los mostrados a la derecha. Puede ser usado para crear una imagen ya sea especificando todas las líneas y formas necesarias, modificando las imágenes matriciales (raster images) o una combinación de ambas. La imagen y sus componentes pueden ser transformados, compuestos o filtrados para cambiar completamente su apariencia.
+![Ejemplo de imagenes vectoriales, una cría de leon, una curva con flechas direccionales a intervalos regulares y un texto que sigue una trayectoria ondulada](svg_overview.png)[SVG](/es/docs/Web/SVG) es un lenguaje [XML](/es/docs/Web/XML/Guides/XML_introduction), parecido a [XHTML](/es/docs/Glossary/XHTML), el cual puede ser usado para dibujar gráficos vectoriales, como los mostrados a la derecha. Puede ser usado para crear una imagen ya sea especificando todas las líneas y formas necesarias, modificando las imágenes matriciales (raster images) o una combinación de ambas. La imagen y sus componentes pueden ser transformados, compuestos o filtrados para cambiar completamente su apariencia.
 
 SVG surgió en 1999 después de que varios formatos compitieran y fueran propuestos a la [W3C](https://www.w3.org) los cuales fallaron para ser completamente ratificados. SVG es soportado por los principales [navegadores](https://caniuse.com/#search=svg). Un inconveniente es que cargar un SVG puede ser lento. SVG ofrecen beneficios, algunos de los cuales incluyen tener una [interfaz](/es/docs/Web/API) [DOM](/es/docs/Web/API) disponible para éste, y no requerir extensiones de terceros. Usarlo o no a menudo dependerá de tu caso específico de uso.
 
@@ -27,7 +27,7 @@ Antes de empezar deberías tener conceptos básicos de XML u otro lenguaje de ma
 - Los elementos SVG y sus atributos deben ser escritos en la misma capitalización mostrada ya que XML es sensible a mayúsculas (en contraposición a HTML).
 - Los valores de atributos en SVG deben ir entre comillas, incluso si son números.
 
-SVG es una especificación muy extensa. Este instructivo intenta cubrir lo básico. Una vez que te hayas familiarizado deberías ser capaz de usar la [Referencia de elementos](/es/docs/Web/SVG/Element) y la [Referencia de interface](/es/docs/Web/API/Document_Object_Model#svg_interfaces) para encontrar cualquier otra cosa que necesites saber.
+SVG es una especificación muy extensa. Este instructivo intenta cubrir lo básico. Una vez que te hayas familiarizado deberías ser capaz de usar la [Referencia de elementos](/es/docs/Web/SVG/Reference/Element) y la [Referencia de interface](/es/docs/Web/API/Document_Object_Model#svg_interfaces) para encontrar cualquier otra cosa que necesites saber.
 
 ### SVG y sus sabores
 

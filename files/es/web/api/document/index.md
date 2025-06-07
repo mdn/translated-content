@@ -7,7 +7,7 @@ slug: Web/API/Document
 
 La interfaz **`Document`** representa cualquier página web cargada en el navegador y sirve como punto de entrada al contenido de la página web, que es el [árbol DOM (Document Object Model)](/es/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model).
 
-El árbol DOM incluye elementos como {{HTMLElement("body")}} y {{HTMLElement("table")}}, entre [muchos otros](/es/docs/Web/HTML/Element). Proporciona funcionalidad globalmente al documento, como obtener la URL de la página y crear nuevos elementos en el documento.
+El árbol DOM incluye elementos como {{HTMLElement("body")}} y {{HTMLElement("table")}}, entre [muchos otros](/es/docs/Web/HTML/Reference/Elements). Proporciona funcionalidad globalmente al documento, como obtener la URL de la página y crear nuevos elementos en el documento.
 
 {{InheritanceDiagram}}
 
@@ -33,7 +33,7 @@ _Esta interfaz también hereda de las interfaces {{DOMxRef("Node")}} y {{DOMxRef
 - {{domxref("Document.children")}} {{readonlyInline}}
   - : Devuelve los elementos hijos del documento actual.
 - {{DOMxRef("Document.compatMode")}} {{Experimental_Inline}}{{ReadOnlyInline}}
-  - : Indica si el documento se representa en modo [_quirks_](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode) o _strict_.
+  - : Indica si el documento se representa en modo [_quirks_](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode) o _strict_.
 - {{DOMxRef("Document.contentType")}} {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Devuelve el tipo de contenido del encabezado MIME del documento actual.
 - {{DOMxRef("Document.currentScript")}}{{ReadOnlyInline}}
