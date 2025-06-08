@@ -33,17 +33,17 @@ HTTP 定義了一組**請求方法**，用於指示請求的目的，以及當�
 
 以下表格列出 HTTP 請求方法，並依安全、可快取與冪等進行分類。
 
-| 方法                    | 安全 | 冪等 | 可快取     |
-| ------------------------- | ---- | ---------- | ------------- |
-| {{HTTPMethod("GET")}}     | 是  | 是        | 是           |
-| {{HTTPMethod("HEAD")}}    | 是  | 是        | 是           |
-| {{HTTPMethod("OPTIONS")}} | 是  | 是        | 否            |
-| {{HTTPMethod("TRACE")}}   | 是  | 是        | 否            |
-| {{HTTPMethod("PUT")}}     | 否   | 是        | 否            |
-| {{HTTPMethod("DELETE")}}  | 否   | 是        | 否            |
-| {{HTTPMethod("POST")}}    | 否   | 否         | 條件的\* |
-| {{HTTPMethod("PATCH")}}   | 否   | 否         | 條件的\* |
-| {{HTTPMethod("CONNECT")}} | 否   | 否         | 否            |
+| 方法                      | 安全 | 冪等 | 可快取   |
+| ------------------------- | ---- | ---- | -------- |
+| {{HTTPMethod("GET")}}     | 是   | 是   | 是       |
+| {{HTTPMethod("HEAD")}}    | 是   | 是   | 是       |
+| {{HTTPMethod("OPTIONS")}} | 是   | 是   | 否       |
+| {{HTTPMethod("TRACE")}}   | 是   | 是   | 否       |
+| {{HTTPMethod("PUT")}}     | 否   | 是   | 否       |
+| {{HTTPMethod("DELETE")}}  | 否   | 是   | 否       |
+| {{HTTPMethod("POST")}}    | 否   | 否   | 條件的\* |
+| {{HTTPMethod("PATCH")}}   | 否   | 否   | 條件的\* |
+| {{HTTPMethod("CONNECT")}} | 否   | 否   | 否       |
 
 \* 當回應明確包含[新鮮度](/zh-TW/docs/Web/HTTP/Guides/Caching)資訊且帶有相符的 {{HTTPHeader("Content-Location")}} 標頭時，`POST` 和 `PATCH` 請求是可快取的。
 
