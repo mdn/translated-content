@@ -55,6 +55,8 @@ DELETE <request-target>["?"<query>] HTTP/1.1
 
 ## 範例
 
+### 成功刪除資源
+
 以下請求要求伺服器刪除資源 `file.html`：
 
 ```http
