@@ -2,7 +2,7 @@
 title: DELETE 請求方法
 slug: Web/HTTP/Reference/Methods/DELETE
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{HTTPSidebar}}
