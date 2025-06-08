@@ -30,7 +30,7 @@ HTTP **`DELETE`** 方法要求伺服器刪除指定的資源。
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可快取")}}</th>
       <td>否</td>
     </tr>
     <tr>
