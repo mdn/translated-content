@@ -76,14 +76,14 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - async functions をサポートしました。{{jsxref("Statements/async_function", "async function")}}、{{jsxref("Operators/async_function", "async function expression")}}、{{jsxref("Operators/await", "await")}} キーワードを追加しました ([Firefox バグ 1185106](https://bugzil.la/1185106))。
 - 関数に対して、ES2017 の [trailing commas](/ja/docs/Web/JavaScript/Reference/Trailing_commas) を実装しました ([Firefox バグ 1303788](https://bugzil.la/1303788))。
-- {{jsxref("Functions/rest_parameters", "rest parameter の分割代入", "#Destructuring_rest_parameters", 1)}} を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
+- {{jsxref("Functions/rest_parameters", "rest parameter の構造分解", "#Destructuring_rest_parameters", 1)}} を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
 - {{jsxref("Operators", "べき乗演算子 (**)", "#Exponentiation_(**)", 1)}} をデフォルトで有効にしました ([Firefox バグ 1291212](https://bugzil.la/1291212))。
 - {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} や {{jsxref("Date.toLocaleString()")}} といった日付関連の API の `timeZone` オプションで、[IANA タイムゾーン名称](https://www.iana.org/time-zones) が使用可能になりました ([Firefox バグ 837961](https://bugzil.la/837961))。
 
 #### 変更および削除
 
-- [配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
-- [オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
+- [配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#assigning_the_rest_of_an_array_to_a_variable) で、trailing comma を持つ rest parameters を使用した場合に {{jsxref("SyntaxError")}} が発生するようになりました ([Firefox バグ 1041341](https://bugzil.la/1041341))。
+- [オブジェクトの構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring) で、`__proto__` プロパティの重複が可能になりました ([Firefox バグ 1204024](https://bugzil.la/1204024))。
 - {{jsxref("Array.prototype.toLocaleString()")}} を、Intl API の引数 "`locales`" および "`options`" をサポートするように再実装しました ([Firefox バグ 1130636](https://bugzil.la/1130636))。
 - {{jsxref("TypedArray")}} コンストラクターで、新しい typed array を生成するため [iterable](/ja/docs/Web/JavaScript/Reference/Iteration_protocols) を受け入れるようになりました ([Firefox バグ 1232266](https://bugzil.la/1232266))。
 - {{jsxref("TypedArray.from()")}}、{{jsxref("TypedArray.of()")}}、{{jsxref("TypedArray.prototype.filter()")}}、{{jsxref("TypedArray.prototype.map()")}}、{{jsxref("TypedArray.prototype.slice()")}}、{{jsxref("TypedArray.prototype.subarray()")}} が、値 `this` が有効な Typed Array のコンストラクターであることを要求するようになりました ([Firefox バグ 1122396](https://bugzil.la/1122396))。
