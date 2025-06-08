@@ -25,9 +25,9 @@ HTML 規範定義了以下標準後設資料名稱：
 <meta name="application-name" content="Mago del Clima" lang="es" />
 ```
 
-  > [!NOTE]
-  > - 瀏覽器可能使用此名稱來識別應用程式。它與 {{HTMLElement("title")}} 元素不同，後者通常包含應用程式名稱，但也可能包含文件名稱或狀態等訊息。
-  > - 個人網頁不應該定義 `application-name`。
+> [!NOTE]
+> - 瀏覽器可能使用此名稱來識別應用程式。它與 {{HTMLElement("title")}} 元素不同，後者通常包含應用程式名稱，但也可能包含文件名稱或狀態等訊息。
+> - 個人網頁不應該定義 `application-name`。
 
 - `author`：文件作者的名稱。
 - `description`：頁面內容的簡短且準確的摘要。搜尋引擎如 [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) 可能使用此欄位來控制網頁在搜尋結果中的顯示。
