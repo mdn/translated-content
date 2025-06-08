@@ -96,7 +96,7 @@ Content-Length: 1234
 
 <html>
   <body>
-    <h1>已接受刪除 "file.html" 的請求。</h1>
+    <h1>已接受刪除「file.html」的請求。</h1>
     <p>詳情請參見<a href="http://example.com/tasks/123/status">狀態監控</a>。</p>
   </body>
 </html>
