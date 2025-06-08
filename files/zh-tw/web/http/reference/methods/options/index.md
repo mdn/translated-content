@@ -94,7 +94,7 @@ Server: EOS (lax004/2813)
 OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.example
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: en-us,en;q=0.5
+Accept-Language: zh-TW,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
@@ -126,8 +126,7 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-> [!NOTE]
-> {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
+> **備註：** {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
 
 ## 規範
 
@@ -139,8 +138,8 @@ Connection: Keep-Alive
 
 ## 參見
 
-- [HTTP 請求方法](/en-US/docs/Web/HTTP/Reference/Methods)
-- [HTTP 回應狀態碼](/en-US/docs/Web/HTTP/Reference/Status)
-- [HTTP 標頭](/en-US/docs/Web/HTTP/Reference/Headers)
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Allow")}} 標頭
 - [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS)
