@@ -19,7 +19,7 @@ l10n:
 
 ![显示使用主题色效果的图片](theme-color.png)
 
-_图片来源：[Icons & Browser Colors](https://web.developers.google.cn/articles/icons-and-browser-colors)，由 Google 创建并共享，依据 [Creative Commons 4.0 署名许可证](https://creativecommons.org/licenses/by/4.0/)使用。_
+_图片来源：[图标与浏览器颜色](https://web.developers.google.cn/articles/icons-and-browser-colors)，由 Google 创建并共享，依据 [Creative Commons 4.0 署名许可证](https://creativecommons.org/licenses/by/4.0/deed.zh-hans)使用。_
 
 你可以在 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#media) 属性中提供媒体类型或媒体查询；只有当该媒体条件为真时，相关的颜色设置才会生效。例如：
 
