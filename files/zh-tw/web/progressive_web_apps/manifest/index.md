@@ -14,7 +14,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 ## 成員
 
-本節列出了記錄在 MDN 上[清單成員的參考頁面](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference)
+本節列出了記錄在 MDN 上的[清單成員的參考頁面](/zh-TW/docs/Web/Progressive_web_apps/Manifest/Reference)
 
 規範中所有成員都是可選的，但某些應用程式需要某些成員存在。例如，[PWA 必須提供某些清單成員](/zh-TW/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#必須的清單成員)。
 
