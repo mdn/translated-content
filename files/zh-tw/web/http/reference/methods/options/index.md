@@ -94,7 +94,7 @@ Server: EOS (lax004/2813)
 OPTIONS /resources/post-here/ HTTP/1.1
 Host: bar.example
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-Accept-Language: zh-TW,en;q=0.5
+Accept-Language: en-us,en;q=0.5
 Accept-Encoding: gzip,deflate
 Connection: keep-alive
 Origin: https://foo.example
