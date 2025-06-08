@@ -1,8 +1,8 @@
 ---
-title: Accept-Encoding
+title: Accept-Encoding 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Encoding
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{HTTPSidebar}}
@@ -40,6 +40,8 @@ Accept-Encoding: compress
 Accept-Encoding: deflate
 Accept-Encoding: br
 Accept-Encoding: zstd
+Accept-Encoding: dcb
+Accept-Encoding: dcz
 Accept-Encoding: identity
 Accept-Encoding: *
 
@@ -59,6 +61,10 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : 使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
 - `zstd`
   - : 使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstandard) 演算法的壓縮格式。
+-  `dcb` {{experimental\_inline}}
+  - : 使用 [Dictionary-Compressed Brotli](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
+-  `dcz` {{experimental\_inline}}
+  - : 使用 [Dictionary-Compressed Zstandard](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
 - `identity`
   - : 表示恆等函數（即無修改或壓縮）。即使省略，此值始終被視為可接受的。
 - `*`（萬用字元）
@@ -103,3 +109,4 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 - {{Glossary("Brotli compression", "Brotli 壓縮")}}
 - {{Glossary("GZip compression", "GZip 壓縮")}}
 - {{Glossary("Zstandard compression", "Zstandard 壓縮")}}
+- [壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)

@@ -2,7 +2,7 @@
 title: 標準後設資料名稱
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 40196f459e8b57ec474255652e8174d99cd9714b
 ---
 
 {{HTMLSidebar}}
@@ -14,6 +14,16 @@ l10n:
 HTML 規範定義了以下標準後設資料名稱：
 
 - `application-name`：正在網頁中運行的應用程式名稱。
+
+為了提供多語言翻譯，使用多個帶有對應每一種語言的 `lang` 屬性的 `<meta>` 標籤。
+
+```html
+<!-- 英文名稱 -->
+<meta name="application-name" content="Weather Wizard" lang="en" />
+
+<!-- 西班牙文名稱 -->
+<meta name="application-name" content="Mago del Clima" lang="es" />
+```
 
   > [!NOTE]
   >
