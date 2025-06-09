@@ -44,7 +44,7 @@ l10n:
 <img
   usemap="#infographic"
   src="/shared-assets/images/examples/mdn-info.png"
-  alt="MDN infographic" />
+  alt="MDN 信息图表" />
 ```
 
 ```css interactive-example
