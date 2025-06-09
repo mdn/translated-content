@@ -1,7 +1,6 @@
 ---
 title: URL パターン API
 slug: Web/API/URL_Pattern_API
-page-type: web-api-overview
 l10n:
   sourceCommit: f9a203c4bfacf129dffa946b5c9e1345dfd5e628
 ---
