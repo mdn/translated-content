@@ -52,8 +52,7 @@ if (window.Worker) {
 const myWorker = new Worker("worker.js");
 ```
 
-> [!NOTE]
-> [webpack](https://webpack.js.org/guides/web-workers/)、[Vite](https://vite.dev/guide/features.html#web-workers)、[Parcel](https://parceljs.org/languages/javascript/#web-workers) などのバンドラーでは、 [`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta#url) に対して相対的に解決される URL を `Worker()` コンストラクターに渡すことを推奨しています。例えば、次のようにします。
+> **メモ:** [webpack](https://webpack.js.org/guides/web-workers/)、[Vite](https://vite.dev/guide/features.html#web-workers)、[Parcel](https://parceljs.org/languages/javascript/#web-workers) などのバンドラーでは、 [`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta#url) に対して相対的に解決される URL を `Worker()` コンストラクターに渡すことを推奨しています。例えば、次のようにします。
 >
 > ```js
 > const myWorker = new Worker(new URL("worker.js", import.meta.url));
