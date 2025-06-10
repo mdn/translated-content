@@ -3,7 +3,7 @@ title: "Navigator: webdriver プロパティ"
 short-title: webdriver
 slug: Web/API/Navigator/webdriver
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: bb0f798e4116c14840f1a3dad3ee7e176ca70a6a
 ---
 
 {{APIRef("WebDriver")}}
