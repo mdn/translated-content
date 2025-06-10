@@ -63,7 +63,7 @@ WebAssembly は、ウェブプラットフォームに大きな影響を与え�
   - : `WebAssembly.Memory` オブジェクトはリサイズ可能な {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}} で、 `Instance` からアクセスされる生のバイト列を保持します。
 - [`WebAssembly.Table()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Table)
   - : `WebAssembly.Table` オブジェクトは `Instance` からアクセスされる関数参照などの不透明値のリサイズ可能な型付き配列です。
- [`WebAssembly.Tag()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Tag)
+- [`WebAssembly.Tag()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Tag)
   - : `WebAssembly.Tag` オブジェクトは、WebAssembly コードに対して、または WebAssembly コードから発生する WebAssembly 例外の型を定義します。
 - [`WebAssembly.Exception()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Exception)
   - : `WebAssembly.Exception` オブジェクトは、WebAssembly から JavaScript へ、または JavaScript から WebAssembly 例外ハンドラーへ発生する実行時例外を表します。
