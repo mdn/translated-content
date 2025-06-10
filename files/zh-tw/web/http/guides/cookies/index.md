@@ -159,7 +159,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly; Domain=mozilla.org
   ```
 
-  如果 `Set-Cookie` 標頭未指定 `Domain` 屬性，則 Cookie 在設定它的伺服器上可用，_但不在其子網域上_。因此，指定 `Domain` 比省略它限制更少。請注意，伺服器只能將 `Domain` 屬性設定為其自己的網域或父網域，而不能設定為子網域或其他網域。因此，例如，網域為 `foo.example.com` 的伺服器可以將屬性設定為 `example.com` 或 `foo.example.com`，但不能設定為 `bar.foo.example.com` 或 `elsewhere.com`（不過 Cookie 仍然會被*傳送*到像 `bar.foo.example.com` 這樣的子網域）。有關更多詳細訊息，請參見[無效的網域](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#invalid_domains)。
+  如果 `Set-Cookie` 標頭未指定 `Domain` 屬性，則 Cookie 在設定它的伺服器上可用，_但不在其子網域上_。因此，指定 `Domain` 比省略它限制更少。請注意，伺服器只能將 `Domain` 屬性設定為其自己的網域或父網域，而不能設定為子網域或其他網域。因此，例如，網域為 `foo.example.com` 的伺服器可以將屬性設定為 `example.com` 或 `foo.example.com`，但不能設定為 `bar.foo.example.com` 或 `elsewhere.com`（不過 Cookie 仍然會被*傳送*到像 `bar.foo.example.com` 這樣的子網域）。有關更多詳細訊息，請參見[無效網域](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#無效網域)。
 
 - `Path` 屬性指示請求的 URL 中必須存在的 URL 路徑，以便傳送 `Cookie` 標頭。例如：
 
