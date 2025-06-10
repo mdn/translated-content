@@ -15,16 +15,16 @@ l10n:
 
 ## 实例属性
 
-_该接口没有特定的属性，但继承自其父接口 {{domxref("CharacterData")}} 的属性，并间接继承自 {{domxref("Node")}} 的属性。_
+_该接口没有特定的属性，但是从其父接口 {{domxref("CharacterData")}} 继承属性，并间接从 {{domxref("Node")}} 接口继承属性。_
 
 ## 构造函数
 
 - {{ domxref("Comment.Comment()", "Comment()") }}
-  - : 返回一个新的 `Comment` 对象，其文本内容为传入的参数。如果未提供参数，则默认值为一个空字符串 `''`。
+  - : 返回一个新的 `Comment` 对象，以其参数作为文本内容。如果未提供参数，则默认值为一个空字符串 `''`。
 
 ## 实例方法
 
-_该接口没有特定的方法，但继承自其父接口 {{domxref("CharacterData")}} 的方法，并间接继承自 {{domxref("Node")}} 的方法。_
+_该接口没有特定的方法，但从其父接口 {{domxref("CharacterData")}} 继承方法，并间接从 {{domxref("Node")}} 继承基础方法。_
 
 ## 规范
 
