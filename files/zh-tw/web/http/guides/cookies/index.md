@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#http_is_stateless_but_not_sessionless)。
+**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#HTTP_是無狀態的但不是無會話的)。
 
 在本文中，我們將探討 Cookie 的主要用途、解釋使用 Cookie 的最佳實踐，並檢視其隱私和安全方面的影響。
 
@@ -15,10 +15,10 @@ l10n:
 
 通常，伺服器會使用 HTTP Cookie 的內容來判斷不同的請求是否來自同一個瀏覽器／使用者，然後視情況發出個人化或通用的回應。以下描述一個基本的使用者登入系統：
 
-1.  使用者將登入憑證傳送給伺服器，例如透過表單提交。
-2.  如果憑證正確，伺服器會更新 UI 以表示使用者已登入，並回應一個包含 session ID 的 Cookie，該 Cookie 會在瀏覽器上記錄其登入狀態。
-3.  稍後，使用者移動到同一個網站上的不同頁面。瀏覽器會將包含 session ID 的 Cookie 連同對應的請求一起傳送，以表示它仍然認為使用者已登入。
-4.  伺服器會檢查 session ID，如果仍然有效，則會傳送個人化版本的新頁面給使用者。如果無效，則會刪除 session ID，並向使用者顯示通用版本的頁面（或可能顯示「存取被拒」的訊息並要求再次登入）。
+1. 使用者將登入憑證傳送給伺服器，例如透過表單提交。
+2. 如果憑證正確，伺服器會更新 UI 以表示使用者已登入，並回應一個包含 session ID 的 Cookie，該 Cookie 會在瀏覽器上記錄其登入狀態。
+3. 稍後，使用者移動到同一個網站上的不同頁面。瀏覽器會將包含 session ID 的 Cookie 連同對應的請求一起傳送，以表示它仍然認為使用者已登入。
+4. 伺服器會檢查 session ID，如果仍然有效，則會傳送個人化版本的新頁面給使用者。如果無效，則會刪除 session ID，並向使用者顯示通用版本的頁面（或可能顯示「存取被拒」的訊息並要求再次登入）。
 
 ![上述登入系統描述的視覺化表示](cookie-basic-example.png)
 
@@ -88,7 +88,7 @@ Cookie: yummy_cookie=chocolate; tasty_cookie=strawberry
 
   > **備註：** `Expires` 的可用時間比 `Max-Age` 長，但 `Max-Age` 較不易出錯，並且在兩者都設定時具有優先權。這背後的理由是，當你設定 `Expires` 的日期和時間時，它們是相對於設定 Cookie 的用戶端。如果伺服器的時間設定不同，可能會導致錯誤。
 
-- *會話性* Cookie——沒有 `Max-Age` 或 `Expires` 屬性的 Cookie——會在目前會話結束時被刪除。瀏覽器定義了「目前會話」何時結束，有些瀏覽器在重新啟動時會使用*會話還原*。這可能導致會話性 Cookie 無限期地持續存在。
+- _會話性_ Cookie——沒有 `Max-Age` 或 `Expires` 屬性的 Cookie——會在目前會話結束時被刪除。瀏覽器定義了「目前會話」何時結束，有些瀏覽器在重新啟動時會使用*會話還原*。這可能導致會話性 Cookie 無限期地持續存在。
 
   > [!NOTE]
   > 如果你的網站對使用者進行身份驗證，它應該在使用者每次驗證時重新生成並重新傳送會話性 Cookie，即使是已經存在的 Cookie。這種方法有助於防止[會話固定](https://owasp.org/www-community/attacks/Session_fixation)攻擊，在這種攻擊中，第三方可以重複使用使用者的會話。
@@ -159,7 +159,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly; Domain=mozilla.org
   ```
 
-  如果 `Set-Cookie` 標頭未指定 `Domain` 屬性，則 Cookie 在設定它的伺服器上可用，*但不在其子網域上*。因此，指定 `Domain` 比省略它限制更少。請注意，伺服器只能將 `Domain` 屬性設定為其自己的網域或父網域，而不能設定為子網域或其他網域。因此，例如，網域為 `foo.example.com` 的伺服器可以將屬性設定為 `example.com` 或 `foo.example.com`，但不能設定為 `bar.foo.example.com` 或 `elsewhere.com`（不過 Cookie 仍然會被*傳送*到像 `bar.foo.example.com` 這樣的子網域）。有關更多詳細訊息，請參見[無效的網域](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#invalid_domains)。
+  如果 `Set-Cookie` 標頭未指定 `Domain` 屬性，則 Cookie 在設定它的伺服器上可用，_但不在其子網域上_。因此，指定 `Domain` 比省略它限制更少。請注意，伺服器只能將 `Domain` 屬性設定為其自己的網域或父網域，而不能設定為子網域或其他網域。因此，例如，網域為 `foo.example.com` 的伺服器可以將屬性設定為 `example.com` 或 `foo.example.com`，但不能設定為 `bar.foo.example.com` 或 `elsewhere.com`（不過 Cookie 仍然會被*傳送*到像 `bar.foo.example.com` 這樣的子網域）。有關更多詳細訊息，請參見[無效的網域](/zh-TW/docs/Web/HTTP/Reference/Headers/Set-Cookie#invalid_domains)。
 
 - `Path` 屬性指示請求的 URL 中必須存在的 URL 路徑，以便傳送 `Cookie` 標頭。例如：
 
@@ -180,8 +180,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   - `/docsets`
   - `/fr/docs`
 
-  > [!NOTE]
-  > `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#security)從不同路徑未經授權地讀取 Cookie。
+  > **備註：** `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#security)從不同路徑未經授權地讀取 Cookie。
 
 ### 使用 `SameSite` 控制第三方 Cookie
 
