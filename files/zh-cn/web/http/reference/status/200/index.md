@@ -18,7 +18,7 @@ HTTP **`200 OK`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成功响
 
 ## 状态码
 
-```plain
+```http
 200 OK
 ```
 

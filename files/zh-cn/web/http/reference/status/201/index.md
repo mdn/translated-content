@@ -11,7 +11,7 @@ slug: Web/HTTP/Reference/Status/201
 
 ## 状态
 
-```plain
+```http
 201 Created
 ```
 
