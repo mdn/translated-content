@@ -1,8 +1,8 @@
 ---
-title: Accept-Ranges
+title: Accept-Ranges 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Ranges
 l10n:
-  sourceCommit: 442db82028668b17b888ee439468ae2ac9d589a5
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{HTTPSidebar}}
