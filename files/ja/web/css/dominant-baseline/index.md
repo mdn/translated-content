@@ -2,7 +2,7 @@
 title: dominant-baseline
 slug: Web/CSS/dominant-baseline
 l10n:
-  sourceCommit: e295790b3a62baceeb832650e2c0cc9256a23156
+  sourceCommit: 3c83d88f02f33f4066224e9f624a17dd2a0b0d19
 ---
 
 {{CSSRef}}
@@ -19,7 +19,7 @@ l10n:
 
 `dominant-baseline` の値によっては、 3 つの値すべてを再決定します。他のものは、ベースライン表のフォントサイズのみを再設定します。初期値の `auto` が望ましくない結果をもたらす場合、このプロパティを使用して、望ましい変倍ベースライン表を明示的に設定することができます。
 
-> **メモ:** `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tref")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
+> **メモ:** `dominant-baseline` プロパティは、 SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}} の各要素のみに効果があります。
 
 ## 構文
 
@@ -53,7 +53,7 @@ dominant-baseline: unset;
 
     {{SVGAttr("writing-mode")}} が横書きの場合、 `dominant-baseline` 成分の値は `alphabetic` です。 そうではなく、 {{SVGAttr("writing-mode")}} が縦書きの場合、 `dominant-baseline` 成分の値は `central` です。
 
-    このプロパティが {{SVGElement("tspan")}}、{{SVGElement("tref")}}、{{SVGElement("textPath")}} のいずれかの要素に適用された場合、 dominant-baseline と baseline-table 成分は親テキストコンテンツ要素のものと同一のままとなります。
+    このプロパティが {{SVGElement("tspan")}}、{{SVGElement("textPath")}} のいずれかの要素に適用された場合、 dominant-baseline と baseline-table 成分は親テキストコンテンツ要素のものと同一のままとなります。
 
     {{SVGAttr("baseline-shift")}} の計算値が実際にベースラインを移動させた場合、ベースライン表のフォントサイズ成分は `dominant-baseline` 属性が存在する要素の {{SVGAttr("font-size")}} 属性の値に設定されます。それ以外の場合はベースライン表のフォントサイズは要素のものと同じままです。
 
