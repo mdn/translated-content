@@ -26,9 +26,9 @@ read(formats)
 
     - `unsanitized` {{optional_inline}}
 
-      - : 包含字符串的数组（{{jsxref("Array")}}），这些字符串为在从剪贴板读取时不应被清理的数据格式的 MIME 类型。
+      - : 包含字符串的数组（{{jsxref("Array")}}），这些字符串为在从剪贴板读取时不应被净化的数据格式的 MIME 类型。
 
-        某些浏览器在读取剪贴板数据时可能会对其进行清理，以防止恶意内容被粘贴到文档中。例如，Chrome（及其他基于 Chromium 的浏览器）会通过去除 `<script>` 标签和其他潜在危险内容来清理 HTML 数据。使用 `unsanitized` 数组可以指定不应被清理的 MIME 类型列表。
+        某些浏览器在读取剪贴板数据时可能会对其进行净化，以防止恶意内容被粘贴到文档中。例如，Chrome（及其他基于 Chromium 的浏览器）会通过去除 `<script>` 标签和其他潜在危险内容来净化 HTML 数据。使用 `unsanitized` 数组可以指定不应被净化的 MIME 类型列表。
 
 ### 返回值
 
@@ -245,7 +245,7 @@ async function pasteData() {
 
 ### 从剪贴板读取未净化的 HTML
 
-此示例使用 `formats` 参数从剪贴板读取 HTML 数据，并不让浏览器进行清理以原始形式获取代码。
+此示例使用 `formats` 参数从剪贴板读取 HTML 数据，并不让浏览器进行净化以原始形式获取代码。
 
 #### HTML
 
@@ -258,7 +258,7 @@ async function pasteData() {
 </textarea>
 <button id="copy">复制 HTML</button>
 <button id="paste_normal">粘贴 HTML</button>
-<button id="paste_unsanitized">粘贴未清理的 HTML</button>
+<button id="paste_unsanitized">粘贴未净化的 HTML</button>
 <textarea id="destination" rows="5"></textarea>
 ```
 
@@ -335,7 +335,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 
 #### 结果
 
-首先单击“复制 HTML”按钮，将第一个文本区域中的 HTML 代码写入剪贴板。然后单击“粘贴 HTML”按钮或“粘贴未净化的 HTML”按钮，将清理或未清理的 HTML 代码粘贴到第二个文本区域中。
+首先单击“复制 HTML”按钮，将第一个文本区域中的 HTML 代码写入剪贴板。然后单击“粘贴 HTML”按钮或“粘贴未净化的 HTML”按钮，将净化或未净化的 HTML 代码粘贴到第二个文本区域中。
 
 {{EmbedLiveSample("从剪贴板读取未净化的 HTML", "100%", "250", "", "", "", "clipboard-read; clipboard-write")}}
 
@@ -351,7 +351,7 @@ pasteUnsanitizedButton.addEventListener("click", async () => {
 
 - [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)
 - web.dev 上的[解锁剪贴板权限](https://web.developers.google.cn/articles/async-clipboard)
-- developer.google.cn 上的[异步 Clipboard API 中的未清理的 HTML](https://developer.chrome.google.cn/docs/web-platform/unsanitized-html-async-clipboard)
+- developer.google.cn 上的[异步 Clipboard API 中的未净化的 HTML](https://developer.chrome.google.cn/docs/web-platform/unsanitized-html-async-clipboard)
 - {{domxref("Clipboard.readText()")}}
 - {{domxref("Clipboard.writeText()")}}
 - {{domxref("Clipboard.write()")}}
