@@ -1,6 +1,8 @@
 ---
 title: 논리 OR 할당 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
+l10n:
+  sourceCommit: 055a00d0f2b2d53cc1a5d78a3b0053d72dcb2cd4
 ---
 
 {{jsSidebar("Operators")}}
@@ -29,9 +31,9 @@ x ||= y
 
 ## 설명
 
-논리 OR 할당은 [_단축 평가_](/en-US/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting)를 수행합니다. 즉, `x ||= y`는 `x || (x = y)`와 동일하지만, 표현식 `x`는 한 번만 평가된다는 차이가 있습니다.
+논리 OR 할당은 [_단축 평가_](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting)를 수행합니다. 즉, `x ||= y`는 `x || (x = y)`와 동일하지만, 표현식 `x`는 한 번만 평가된다는 차이가 있습니다.
 
-[논리 OR](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR) 연산자의 단축 평가로 인해 왼쪽 피연산자가 falsy가 아닌 경우에는 할당이 수행되지 않습니다. 예를 들어, `x`가 `const`임에도 불구하고 다음 코드는 오류를 발생시키지 않습니다:
+[논리 OR](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR) 연산자의 단축 평가로 인해 왼쪽 피연산자가 falsy가 아닌 경우에는 할당이 수행되지 않습니다. 예를 들어, `x`가 `const`임에도 불구하고 다음 코드는 오류를 발생시키지 않습니다:
 
 ```js
 const x = 1;
@@ -73,7 +75,7 @@ document.getElementById("lyrics").textContent ||= "가사가 없습니다.";
 
 여기서 단축 평가는 특히 유용한데, 요소가 불필요하게 업데이트되지 않아 추가적인 구문 분석이나 렌더링 작업, 포커스 손실 등의 원치 않는 부작용을 방지할 수 있기 때문입니다.
 
-참고: 확인하려는 API가 반환하는 값에 주의를 기울이세요. 빈 문자열({{Glossary("falsy")}} 값)이 반환되는 경우 `||=`를 사용해야 하며, 이 경우 빈 공간 대신 "가사가 없습니다."가 표시됩니다. 하지만 API가 빈 내용일 때 [`null`](/en-US/docs/Web/JavaScript/Reference/Operators/null) 또는 {{jsxref("undefined")}}를 반환하는 경우에는 [`??=`](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)를 대신 사용해야 합니다.
+참고: 확인하려는 API가 반환하는 값에 주의를 기울이세요. 빈 문자열({{Glossary("falsy")}} 값)이 반환되는 경우 `||=`를 사용해야 하며, 이 경우 빈 공간 대신 "가사가 없습니다."가 표시됩니다. 하지만 API가 빈 내용일 때 [`null`](/ko/docs/Web/JavaScript/Reference/Operators/null) 또는 {{jsxref("undefined")}}를 반환하는 경우에는 [`??=`](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)를 대신 사용해야 합니다.
 
 ## 명세
 
@@ -85,8 +87,8 @@ document.getElementById("lyrics").textContent ||= "가사가 없습니다.";
 
 ## 같이 보기
 
-- [논리 OR (`||`)](/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [널 병합 연산자 (`??`)](/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
-- [비트 OR 할당 (`|=`)](/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
+- [논리 OR (`||`)](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [널 병합 연산자 (`??`)](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
+- [비트 OR 할당 (`|=`)](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy")}}
 - {{Glossary("Falsy")}}
