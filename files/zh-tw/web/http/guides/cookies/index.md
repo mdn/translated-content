@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#HTTP_是無狀態的但不是無會話的)。
+**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#HTTP_無狀態，但並非無對話)。
 
 在本文中，我們將探討 Cookie 的主要用途、解釋使用 Cookie 的最佳實踐，並檢視其隱私和安全方面的影響。
 
@@ -180,7 +180,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   - `/docsets`
   - `/fr/docs`
 
-  > **備註：** `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#security)從不同路徑未經授權地讀取 Cookie。
+  > **備註：** `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#安全性)從不同路徑未經授權地讀取 Cookie。
 
 ### 使用 `SameSite` 控制第三方 Cookie
 
