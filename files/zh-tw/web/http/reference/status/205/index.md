@@ -26,7 +26,7 @@ HTTP **`205 Reset Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Statu
 
 ### 在收到 `205 Reset Content` 後重置表單
 
-在此範例中，用戶端發送一個 `POST` 請求，以提交帶有註解 `Hello!` 的表單：
+在此範例中，用戶端發送一個 `POST` 請求，以提交帶有註解 `你好！` 的表單：
 
 ```http
 POST /submit HTTP/1.1
