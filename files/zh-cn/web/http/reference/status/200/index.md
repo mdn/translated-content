@@ -5,16 +5,16 @@ slug: Web/HTTP/Reference/Status/200
 
 {{HTTPSidebar}}
 
-状态码 **`200 OK`** 表明请求已经成功。默认情况下状态码为 200 的响应可以被缓存。
+HTTP **`200 OK`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成功响应)状态码表明请求已经成功。默认情况下 `200 OK` 的响应可以被缓存。
 
-不同请求方式对于请求成功的意义如下：
+根据 HTTP 请求方法的不同，`200 OK` 响应的含义和格式也有所不同。以下是不同请求方法的具体区别：
 
-- {{HTTPMethod("GET")}}: 已经取得资源，并将资源添加到响应的消息体中。
-- {{HTTPMethod("HEAD")}}: 响应的消息体为头部信息。
-- {{HTTPMethod("POST")}}: 响应的消息体中包含此次请求的结果。
-- {{HTTPMethod("TRACE")}}: 响应的消息体中包含服务器接收到的请求信息。
+- {{HTTPMethod("GET")}}：已经取得资源，并将资源添加到响应主体中。
+- {{HTTPMethod("POST")}}：操作成功，响应描述结果的消息主体。
+- {{HTTPMethod("HEAD")}}：与 `GET` 相同，但没有消息主体。
+- {{HTTPMethod("TRACE")}}：响应的消息体中包含服务器接收到的请求信息。
 
-{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 的请求成功通常并不是响应`200` `OK`的状态码而是 {{HTTPStatus("204")}} `No Content` 表示无内容（或者 {{HTTPStatus("201")}} `Created`表示一个资源首次被创建成功）。
+{{HTTPMethod("PUT")}} 和 {{HTTPMethod("DELETE")}} 的请求成功通常并不是响应 `200 OK` 的状态码而是 {{HTTPStatus("204", "204 No Content")}} 表示无内容（或者 {{HTTPStatus("201", "201 Created")}} 表示一个资源首次被创建成功）。
 
 ## 状态码
 
@@ -24,9 +24,9 @@ slug: Web/HTTP/Reference/Status/200
 
 ## 示例
 
-### 接收一个 `GET` 请求的 `200 OK` 响应
+### 接收 `GET` 请求的 `200 OK` 响应
 
-在这个示例中，对 `https://example.com` 的 `GET` 请求成功返回 `200 OK` 响应。该响应包含了表示标头和带有 HTML 内容的消息体。
+在这个示例中，对 `https://example.com` 的 `GET` 请求成功返回 `200 OK` 响应。该响应包含了表示标头和带有 HTML 内容的消息主体。
 
 ```http
 HTTP/1.1 200 OK
@@ -43,10 +43,10 @@ X-Cache: HIT
 Content-Length: 1256
 
 <!doctype html>
-<!-- HTML content follows here -->
+<!-- 下面跟随 HTML 的内容 -->
 ```
 
-### 接收一个通过表单提交 `POST` 请求的 `200 OK` 响应
+### 接收通过表单提交 `POST` 请求的 `200 OK` 响应
 
 假设存在一个表单，用于向 `http://example.com/subscribe` 端点发送订阅数据，订阅用户的 `POST` 请求可能如下所示：
 
@@ -84,4 +84,4 @@ Content-Type: application/json
 
 - [HTTP 请求方法](/zh-CN/docs/Web/HTTP/Reference/Methods)
 - [HTTP 响应状态码](/zh-CN/docs/Web/HTTP/Reference/Status)
-- 术语表：{{Glossary("Idempotent", "幂等")}}
+- 术语：{{Glossary("Idempotent", "幂等")}}
