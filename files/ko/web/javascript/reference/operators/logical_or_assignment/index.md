@@ -1,5 +1,5 @@
 ---
-title: 논리 OR 할당 (||=)
+title: 논리적 OR 할당 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 l10n:
   sourceCommit: 055a00d0f2b2d53cc1a5d78a3b0053d72dcb2cd4
@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Operators")}}
 
-**논리 OR 할당(`||=`)** 연산자는 왼쪽 피연산자가 {{Glossary("falsy")}}인 경우에만 오른쪽 피연산자를 평가하고 할당합니다.
+**논리적 OR 할당(`||=`)** 연산자는 왼쪽 피연산자가 {{Glossary("falsy")}}인 경우에만 오른쪽 피연산자를 평가하고 할당합니다.
 
 {{InteractiveExample("JavaScript Demo: Logical OR assignment (||=) operator")}}
 
@@ -31,9 +31,9 @@ x ||= y
 
 ## 설명
 
-논리 OR 할당은 [_단축 평가_](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting)를 수행합니다. 즉, `x ||= y`는 `x || (x = y)`와 동일하지만, 표현식 `x`는 한 번만 평가된다는 차이가 있습니다.
+논리적 OR 할당은 [_단축 평가_](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#short-circuiting)를 수행합니다. 즉, `x ||= y`는 `x || (x = y)`와 동일하지만, 표현식 `x`는 한 번만 평가된다는 차이가 있습니다.
 
-[논리 OR](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR) 연산자의 단축 평가로 인해 왼쪽 피연산자가 falsy가 아닌 경우에는 할당이 수행되지 않습니다. 예를 들어, `x`가 `const`임에도 불구하고 다음 코드는 오류를 발생시키지 않습니다:
+[논리적 OR](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR) 연산자의 단축 평가로 인해 왼쪽 피연산자가 falsy가 아닌 경우에는 할당이 수행되지 않습니다. 예를 들어, `x`가 `const`임에도 불구하고 다음 코드는 오류를 발생시키지 않습니다:
 
 ```js
 const x = 1;
@@ -87,7 +87,7 @@ document.getElementById("lyrics").textContent ||= "가사가 없습니다.";
 
 ## 같이 보기
 
-- [논리 OR (`||`)](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR)
+- [논리적 OR (`||`)](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR)
 - [널 병합 연산자 (`??`)](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [비트 OR 할당 (`|=`)](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy")}}
