@@ -2,7 +2,7 @@
 title: 논리적 OR 할당 (||=)
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 l10n:
-  sourceCommit: 055a00d0f2b2d53cc1a5d78a3b0053d72dcb2cd4
+  sourceCommit: db5bf98e2d53a1b8c7be9487c1e920202a1fcbbb
 ---
 
 {{jsSidebar("Operators")}}
