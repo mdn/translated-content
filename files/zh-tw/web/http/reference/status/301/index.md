@@ -56,4 +56,3 @@ Moved Permanently。重新導向至 /en-US/docs/Learn_web_development/Core/Scrip
 - [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("308", "308 Permanent Redirect")}} 與 `301` 等效，但請求方法不會被修改
 - {{HTTPStatus("302", "302 Found")}} 臨時重新導向
-
