@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`200 OK`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功。默認情況下，`200 ok` 回應是可快取的。
+HTTP **`200 OK`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功。默認情況下，`200 OK` 回應是可快取的。
 
 `200 OK` 回應的含義與格式取決於 HTTP 請求方法。以下是不同方法的差異：
 
