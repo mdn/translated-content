@@ -36,7 +36,7 @@ URI: index.html.fr
 Content-Language: fr
 ```
 
-`Negotiate: trans` 請求標頭表示用戶端希望使用 TCN 來選擇資源。由於瀏覽器對此機制的支援不佳，必須改用像 curl 這樣的用戶代理：
+`Negotiate: trans` 請求標頭表示用戶端希望使用透明內容協商來選擇資源。由於瀏覽器對此機制的支援不佳，必須改用像 curl 這樣的用戶代理：
 
 ```bash
  curl -v -H "Negotiate: trans" http://localhost/index
@@ -89,4 +89,4 @@ Content-Type: text/html; charset=iso-8859-1
 - {{HTTPStatus("308", "308 Permanent Redirect")}}
 - {{HTTPStatus("506", "506 Variant Also Negotiates")}}
 - [Apache 伺服器協商演算法](https://httpd.apache.org/docs/current/en/content-negotiation.html#algorithm)
-- {{RFC("2295", "Transparent Content Negotiation in HTTP")}}
+- {{RFC("2295", "HTTP 中的透明內容協商")}}
