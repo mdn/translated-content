@@ -2,7 +2,7 @@
 title: Summarizer API
 slug: Web/API/Summarizer_API
 l10n:
-  sourceCommit: a3081ac9ffa907cacb5451c6d42c850d2c7b95b2
+  sourceCommit: d22bafc7d0ddf3414e2afb07f33761f819539e36
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Summarizer API")}}
@@ -32,14 +32,14 @@ Summarizer API 提供了一个 (基于 {{jsxref("Promise")}}) 的异步机制，
 
 ## 接口
 
-{{domxref("Summarizer")}} {{Experimental_Inline}}
-  : 包含 Summarizer API 的所有功能，包括检查 AI 模型可用性、创建新的 `Summarizer` 实例、生成摘要等。
+{{domxref("Summarizer")}} {{Experimental_Inline}}: 
+包含 Summarizer API 的所有功能，包括检查 AI 模型可用性、创建新的 `Summarizer` 实例、生成摘要等。
   
 
 ## HTTP 头
 
-{{httpheader("Permissions-Policy")}}； {{httpheader('Permissions-Policy/summarizer','summarizer')}} 指令
-  : 控制对 Summarizer API 的访问。如果策略明确禁止使用该 API，任何调用其方法的尝试都会因 `NotAllowedError` {{domxref("DOMException")}} 而失败。
+{{httpheader("Permissions-Policy")}}； {{httpheader('Permissions-Policy/summarizer','summarizer')}} 指令: 
+控制对 Summarizer API 的访问。如果策略明确禁止使用该 API，任何调用其方法的尝试都会因 `NotAllowedError` {{domxref("DOMException")}} 而失败。
 
 ## 安全注意事项
 
@@ -61,5 +61,5 @@ Summarizer API 提供了一个 (基于 {{jsxref("Promise")}}) 的异步机制，
 
 ## 参见
 
-- [Summarize with built-in AI](https://developer.chrome.com/docs/ai/summarizer-api) on developer.chrome.com (2025)
+- [Summarize with built-in AI](https://developer.chrome.google.cn/docs/ai/summarizer-api) on developer.chrome.com (2025)
 - [Web AI demos](https://chrome.dev/web-ai-demos/) on chrome.dev
