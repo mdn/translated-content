@@ -5,7 +5,7 @@ slug: Web/CSS/transform-function/perspective
 
 {{CSSRef}}
 
-**`perspective()`** 是一个 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)，用于定义一个变换，设置用户与 z=0 平面之间的距离，即观察者在观察一个二维界面被视为三维时的视角。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
+**`perspective()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于定义一个变换，设置用户与 z=0 平面之间的距离，即二维界面变为三维时用户的观看视角。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: perspective()")}}
 
@@ -103,13 +103,7 @@ transform: perspective(6.5cm);
 
 ## 语法
 
-`perspective()` 使用的视距由一个 {{cssxref("&lt;length&gt;")}} 值指定，表示用户与 z=0 平面之间的距离，或者使用 `none`。
-z=0 平面是所有内容在二维视图中显示的平面，即屏幕。
-在参数中传入负值会导致语法错误。
-小于 `1px` 的值（包括零）将被限制为 `1px`。
-除 `none` 外的值会导致 z 值为正的元素看起来更大，z 值为负的元素看起来更小。
-z 值等于或大于视距值的元素将消失，就好像它们在用户身后一样。
-较大的视距值表示较小的变换；较小的 `perspective()` 值表示较大的变换；`perspective(none)` 表示从无限远的视角观察，没有变换。
+`perspective()` 使用的视距由一个 {{cssxref("&lt;length&gt;")}} 值指定，表示用户与 z=0 平面之间的距离，或者使用 `none`。z=0 平面是所有内容在二维视图中显示的平面，即屏幕。负值会导致语法错误。小于 `1px` 的值（包括零）将被钳制为 `1px`。除 `none` 外的值会导致 z 值为正的元素看起来更大，z 值为负的元素看起来更小。z 值等于或大于视距值的元素将消失，就好像它们在用户身后一样。较大的视距值表示较小的变换；较小的 `perspective()` 值表示较大的变换；`perspective(none)` 表示从无限远的视角观察，没有变换。
 
 ```css
 perspective(d)
@@ -123,35 +117,24 @@ perspective(d)
 <table class="standard-table">
   <thead>
     <tr>
-      <th scope="col">Cartesian coordinates on ℝ<sup>2</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>2</sup></th>
-      <th scope="col">Cartesian coordinates on ℝ<sup>3</sup></th>
-      <th scope="col">Homogeneous coordinates on ℝℙ<sup>3</sup></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^2</a> <a href="/zh-CN/docs/Web/CSS/transform-function#笛卡尔坐标">笛卡尔坐标</a></th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影平面">ℝℙ^2</a> <a href="https://zh.wikipedia.org/wiki/齐次坐标">齐次坐标</a></th>
+      <th scope="col"><a href="https://en.wikipedia.org/wiki/Real_coordinate_space">ℝ^3</a> 笛卡尔坐标</th>
+      <th scope="col"><a href="https://zh.wikipedia.org/wiki/实射影空间">ℝℙ^3</a> 齐次坐标</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td colspan="2" rowspan="2">
-        <p>这个属性变化提供了一个 3D 空间，并且不会变成平面类型</p>
+        <p>此变换适用于 3D 空间，无法在平面上表示。</p>
       </td>
       <td colspan="1" rowspan="2">
-        A perspective is not a linear transform in ℝ<sup>3</sup> and cannot be
-        represented using a matrix in the Cartesian coordinates system.
+        此变换不是 ℝ^3 中的线性变换，且不能使用笛卡尔坐标矩阵表示。
       </td>
       <td colspan="1" rowspan="2">
-        <math
-          ><mfenced
-            ><mtable
-              ><mtr>1<mtd>0</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr>0<mtd>1</mtd><mtd>0</mtd><mtd>0</mtd></mtr
-              ><mtr><mtd>0</mtd><mtd>0</mtd><mtd>1</mtd><mtd>0</mtd></mtr
-              ><mtr
-                ><mtd>0</mtd><mtd>0</mtd><mtd><mo>−</mo>1<mo>/</mo>d</mtd
-                ><mtd>1</mtd></mtr
-              ></mtable
-            ></mfenced
-          ></math
-        >
+        <math display="block">
+          <semantics><mrow><mo>(</mo><mtable><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mo>−</mo><mn>1</mn><mo>/</mo><mi>d</mi></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\left( \begin{array}{cccc} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ 0 & 0 & -\frac{1}{d} & 1 \\ \end{array} \right)</annotation></semantics>
+        </math>
       </td>
     </tr>
   </tbody>
@@ -166,21 +149,21 @@ perspective(d)
 ### HTML
 
 ```html
-<p>Without perspective:</p>
+<p>没有 perspective：</p>
 <div class="no-perspective-box">
   <div class="face front">A</div>
   <div class="face top">B</div>
   <div class="face left">C</div>
 </div>
 
-<p>With perspective (9cm):</p>
+<p>具有 perspective (9cm)：</p>
 <div class="perspective-box-far">
   <div class="face front">A</div>
   <div class="face top">B</div>
   <div class="face left">C</div>
 </div>
 
-<p>With perspective (4cm):</p>
+<p>具有 perspective (4cm)：</p>
 <div class="perspective-box-closer">
   <div class="face front">A</div>
   <div class="face top">B</div>
@@ -236,7 +219,7 @@ p + div {
 
 ### 结果
 
-{{ EmbedLiveSample('Examples', '250', '350') }}
+{{ EmbedLiveSample('示例', '250', '350') }}
 
 ## 规范
 
