@@ -1,7 +1,7 @@
 ---
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
-l10n: 
+l10n:
   sourceCommit: 5e270e3cdab4f3c8ad3f5752976c72c6e8312eb9
 ---
 
