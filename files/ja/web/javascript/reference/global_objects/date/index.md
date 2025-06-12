@@ -9,8 +9,7 @@ l10n:
 
 JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプラットフォームに依存しない形式で表します。`Date` オブジェクトは、1970 年 1 月 1 日午前 0 時 (UTC)（元期）からのミリ秒を表す整数値をカプセル化しています。
 
-> [!NOTE]
-> {{jsxref("Temporal")}} API の導入に伴い、Date オブジェクトは古い機能と見なされます。新しいコードには `Temporal` を使用することを検討し、可能であれば既存のコードも移行してください（[ブラウザーの互換性](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)を確認してください。使用ガイドは近日中に作成予定です！）。
+> **メモ:** {{jsxref("Temporal")}} API の導入に伴い、Date オブジェクトは古い機能と見なされます。新しいコードには `Temporal` を使用することを検討し、可能であれば既存のコードも移行してください（[ブラウザーの互換性](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)を確認してください。使用ガイドは近日中に作成予定です！）。
 
 ## 解説
 
