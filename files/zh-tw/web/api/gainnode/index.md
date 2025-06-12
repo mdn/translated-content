@@ -27,7 +27,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">聲道計數模式</th>
-      <td><code>"max"</code></td>
+      <td><code>「max」</code></td>
     </tr>
     <tr>
       <th scope="row">聲道計數</th>
@@ -35,7 +35,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">聲道詮釋</th>
-      <td><code>"speakers"</code></td>
+      <td><code>「speakers」</code></td>
     </tr>
   </tbody>
 </table>
