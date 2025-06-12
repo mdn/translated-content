@@ -15,7 +15,7 @@ l10n:
 
 ## 示例
 
-给定一个 ID 为 "myVideo" 的 video 元素：
+给定一个 ID 为“myVideo”的 video 元素：
 
 ```js
 const v = document.getElementById("myVideo");
