@@ -2,7 +2,7 @@
 title: XMLHttpRequest：withCredentials 屬性
 slug: Web/API/XMLHttpRequest/withCredentials
 l10n:
-    sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
+  sourceCommit: 775df1c62a1cbe555c4374ff9122d4ef15bd6f60
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
