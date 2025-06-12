@@ -166,7 +166,7 @@ req.open();
 req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  console.log("傳輸已結束（雖然我們不知道它是否成功）。",);
+  console.log("傳輸已結束（雖然我們不知道它是否成功）。");
 }
 ```
 
