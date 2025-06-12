@@ -13,9 +13,9 @@ l10n:
 
 要發送一個 HTTP 請求：
 
-1.  建立一個 `XMLHttpRequest` 物件
-2.  開啟一個 URL
-3.  發送請求。
+1. 建立一個 `XMLHttpRequest` 物件
+2. 開啟一個 URL
+3. 發送請求。
 
 在交易完成後，`XMLHttpRequest` 物件將包含有用的訊息，例如回應主體和結果的 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Status)。
 
@@ -32,10 +32,9 @@ req.send();
 
 ## 請求的類型
 
-透過 `XMLHttpRequest` 發出的請求可以透過兩種方式之一來取得資料：非同步或同步。請求的類型由 {{domxref("XMLHttpRequest.open()")}} 方法上設定的選用 `async` 引數（第三個引數）決定。如果此引數為 `true` 或未指定，則 `XMLHttpRequest` 會以非同步方式處理，否則會以同步方式處理。關於這兩種請求類型的詳細討論和示範，可以在[同步與非同步請求](/zh-TW/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)頁面中找到。你不能在 web worker 之外使用同步請求，因為它會凍結主介面。
+透過 `XMLHttpRequest` 發出的請求可以透過兩種方式之一來取得資料：非同步或同步。請求的類型由 {{domxref("XMLHttpRequest.open()")}} 方法上設定的選用 `async` 引數（第三個引數）決定。如果此引數為 `true` 或未指定，則 `XMLHttpRequest` 會以非同步方式處理，否則會以同步方式處理。關於這兩種請求類型的詳細討論和示範，可以在[同步與非同步請求](/zh-TW/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)頁面中找到。你不能在 Web Worker 之外使用同步請求，因為它會凍結主介面。
 
-> [!NOTE]
-> `XMLHttpRequest` 建構子不僅限於 XML 文件。它以**「XML」**開頭，是因為在它被建立時，最初用於非同步資料交換的主要格式是 XML。
+> **備註：** `XMLHttpRequest` 建構子不僅限於 XML 文件。它以**「XML」**開頭，是因為在它被建立時，最初用於非同步資料交換的主要格式是 XML。
 
 ## 處理回應
 
@@ -45,20 +44,20 @@ req.send();
 
 如果你使用 `XMLHttpRequest` 來取得遠端 XML 文件的內容，{{domxref("XMLHttpRequest.responseXML", "responseXML")}} 屬性將會是一個包含已解析 XML 文件的 DOM 物件。這可能會難以操作和分析。分析此 XML 文件主要有四種方法：
 
-1.  使用 [XPath](/zh-TW/docs/Web/XML/XPath) 來定位（或指向）它的部分內容。
-2.  手動[解析和序列化 XML](/zh-TW/docs/Web/XML/Guides/Parsing_and_serializing_XML) 為字串或物件。
-3.  使用 {{domxref("XMLSerializer")}} 將 **DOM 樹序列化為字串或檔案**。
-4.  如果你總是事先知道 XML 文件的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 XML 程式碼稍有變動，這個方法很可能會失敗。
+1. 使用 [XPath](/zh-TW/docs/Web/XML/XPath) 來定位（或指向）它的部分內容。
+2. 手動[解析和序列化 XML](/zh-TW/docs/Web/XML/Guides/Parsing_and_serializing_XML) 為字串或物件。
+3. 使用 {{domxref("XMLSerializer")}} 將 **DOM 樹序列化為字串或檔案**。
+4. 如果你總是事先知道 XML 文件的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 XML 程式碼稍有變動，這個方法很可能會失敗。
 
-> **備註：** `XMLHttpRequest` 現在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 屬性為你解析 HTML。閱讀關於 [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 的文章來了解如何做到這一點。
+> **備註：** `XMLHttpRequest` 現在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 屬性為你解析 HTML。參見 [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)文章來了解如何做到這一點。
 
 ### 處理包含 HTML 文件的 responseText 屬性
 
 如果你使用 `XMLHttpRequest` 來取得遠端 HTML 網頁的內容，{{domxref("XMLHttpRequest.responseText", "responseText")}} 屬性是一個包含原始 HTML 的字串。這可能會難以操作和分析。分析和解析這個原始 HTML 字串主要有三種方法：
 
-1.  使用 `XMLHttpRequest.responseXML` 屬性，如[XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 文章中所述。
-2.  透過 `fragment.body.innerHTML` 將內容注入到[文件片段](/zh-TW/docs/Web/API/DocumentFragment)的主體中，並遍歷該片段的 DOM。
-3.  如果你總是事先知道 HTML `responseText` 的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 HTML 程式碼稍有變動，這個方法很可能會失敗。
+1. 使用 `XMLHttpRequest.responseXML` 屬性，如[XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 文章中所述。
+2. 透過 `fragment.body.innerHTML` 將內容注入到[文件片段](/zh-TW/docs/Web/API/DocumentFragment)的主體中，並遍歷該片段的 DOM。
+3. 如果你總是事先知道 HTML `responseText` 的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 HTML 程式碼稍有變動，這個方法很可能會失敗。
 
 ## 處理二進位資料
 
@@ -167,9 +166,7 @@ req.open();
 req.addEventListener("loadend", loadEnd);
 
 function loadEnd(e) {
-  console.log(
-    "傳輸已結束（雖然我們不知道它是否成功）。",
-  );
+  console.log("傳輸已結束（雖然我們不知道它是否成功）。",);
 }
 ```
 
@@ -263,7 +260,7 @@ req.send(null);
 
 ### XMLHttpRequest 被停止
 
-如果你遇到 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的情況，這表示請求不被允許執行。它處於 [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent) 狀態。一個可能的原因是，當 `XMLHttpRequest` 隨後 `open()` 時，`XMLHttpRequest` 的來源（在建立 XMLHttpRequest 時）發生了變化。舉例來說，這種情況可能發生在：一個 `XMLHttpRequest` 在視窗的 `onunload` 事件中觸發，它在要關閉的視窗還存在時被建立，但卻在該視窗失去焦點、另一個視窗取得焦點後才發送請求（也就是呼叫 `open()`）。避免這個問題最有效的方法是，在新視窗的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件上設定一個監聽器，該事件在被終止的視窗觸發其 {{domxref("Window/unload_event", "unload")}} 事件後就會被設定。
+如果你遇到 XMLHttpRequest 收到 `status=0` 和 `statusText=null` 的情況，這表示請求不被允許執行。它處於 [`UNSENT`](https://xhr.spec.whatwg.org/#dom-xmlhttprequest-unsent) 狀態。一個可能的原因是當 `XMLHttpRequest` 隨後 `open()` 時，`XMLHttpRequest` 的來源（在建立 XMLHttpRequest 時）發生了變化。舉例來說，這種情況可能發生在：一個 `XMLHttpRequest` 在視窗的 `onunload` 事件中觸發，它在要關閉的視窗還存在時被建立，但卻在該視窗失去焦點、另一個視窗取得焦點後才發送請求（也就是呼叫 `open()`）。避免這個問題最有效的方法是，在新視窗的 {{domxref("Element/DOMActivate_event", "DOMActivate")}} 事件上設定一個監聽器，該事件在被終止的視窗觸發其 {{domxref("Window/unload_event", "unload")}} 事件後就會被設定。
 
 ## 規範
 
@@ -278,5 +275,5 @@ req.send(null);
 - [使用 Fetch API](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
 - [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
 - [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
-- [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
-- [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)
+- [XMLHttpRequest——REST 與豐富使用者體驗](https://www.peej.co.uk/articles/rich-user-experience.html)
+- [`XMLHttpRequest` 物件：WHATWG 規範](https://xhr.spec.whatwg.org/)
