@@ -37,6 +37,7 @@ Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 ### 引数
 
 - `year`
+
   - : 整数値で、年を表します。 `0` から `99` までの値は `1900` から `1999` までに対応付けられます。それ以外の値はすべて、実際の年を表します。[例](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#2_桁の年の補完)を参照してください。
 
 - `monthIndex` {{optional_inline}}
