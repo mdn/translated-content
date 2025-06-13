@@ -23,9 +23,9 @@ l10n:
 
 {{glossary("Network throttling", "네트워크 스로틀링")}}은 네트워크 연결 속도를 느리게 시뮬레이션 하여 일정한 양의 데이터만 전송하도록 제한하는 것을 뜻합니다. 타이머를 스로틀링한다는 것은 예를 들어 {{jsxref("Date.now()")}}처럼 연속적으로 값을 읽더라도, 타이머의 정밀도를 낮추어 타이머 값이 일정한 최대 속도로만 변하도록 만드는 것을 뜻합니다. 두 가지 모두 스로틀링이라는 일반적인 개념을 구체적으로 적용한 사례입니다.
 
-## See also
+## 같이 보기
 
-- Glossary terms:
+- 용어 사전:
   - {{Glossary("Debounce", "디바운스")}}
-  - {{Glossary("Rate limit")}}
+  - {{Glossary("Rate limit", "속도 제한")}}
 - [Debouncing and Throttling Explained Through Examples](https://css-tricks.com/debouncing-throttling-explained-examples/) on CSS-Tricks (April 6, 2016)
