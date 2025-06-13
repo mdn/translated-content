@@ -219,7 +219,7 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
   - : 論理 Null 合体代入です。
 - [`[a, b] = arr`, `{ a, b } = obj`](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)
-  - : 分割代入は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
+  - : 構造分解は、配列やオブジェクトのプロパティを、配列やオブジェクトリテラルに似た構文を使用して変数に代入します。
 
 ### yield 演算子
 

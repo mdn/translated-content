@@ -76,7 +76,7 @@ Firefox 52 は、米国時間 2017 年 3 月 7 日にリリースされました
 
 - 非同期関数の対応を追加しました。{{jsxref("Statements/async_function", "async function")}} 宣言、{{jsxref("Operators/async_function", "async function")}} 式、{{jsxref("Operators/await", "await")}} キーワードを追加しました ([Firefox バグ 1185106](https://bugzil.la/1185106))。
 - 関数に対して、ES2017 の [trailing commas](/ja/docs/Web/JavaScript/Reference/Trailing_commas) を実装しました ([Firefox バグ 1303788](https://bugzil.la/1303788))。
-- {{jsxref("Functions/rest_parameters", "rest parameter の分割代入", "#Destructuring_rest_parameters", 1)}} を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
+- {{jsxref("Functions/rest_parameters", "rest parameter の構造分解", "#Destructuring_rest_parameters", 1)}} を実装しました ([Firefox バグ 1243717](https://bugzil.la/1243717))。
 - {{jsxref("Operators", "べき乗演算子 (**)", "#Exponentiation_(**)", 1)}} をデフォルトで有効にしました ([Firefox バグ 1291212](https://bugzil.la/1291212))。
 - {{jsxref("Intl/DateTimeFormat", "DateTimeFormat")}} や {{jsxref("Date.toLocaleString()")}} といった日付関連の API の `timeZone` オプションで、[IANA タイムゾーン名称](https://www.iana.org/time-zones) が使用可能になりました ([Firefox バグ 837961](https://bugzil.la/837961))。
 

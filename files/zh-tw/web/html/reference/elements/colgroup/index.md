@@ -97,7 +97,7 @@ td {
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
+  - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 
 - `char` {{deprecated_inline}}
 
