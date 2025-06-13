@@ -1,6 +1,6 @@
 ---
 title: Geolocation：watchPosition() 方法
-slug: Web/API/Geolocation/
+slug: Web/API/Geolocation/watchPosition
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
