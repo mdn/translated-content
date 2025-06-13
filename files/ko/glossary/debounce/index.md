@@ -19,9 +19,9 @@ l10n:
 
 보통 `search`는 트레일링 에지에서 한 번만 실행되지만, 경우에 따라 리딩 에지나 양쪽 모두에서 실행되기도 합니다. 만약 양쪽 모두에서 실행된다면 디바운싱의 구현은 보통 이전 트레일링 에지 이후 최소 10 밀리초 이내에 다음 리딩 에지 호출이 발생하지 않도록 보장합니다.
 
-## See also
+## 같이 보기
 
-- Glossary terms:
+- 용어 사전:
   - {{Glossary("Throttle", "스로틀")}}
   - {{Glossary("Rate limit", "속도 제한")}}
 - [Debouncing and Throttling Explained Through Examples](https://css-tricks.com/debouncing-throttling-explained-examples/) on CSS-Tricks (April 6, 2016)
