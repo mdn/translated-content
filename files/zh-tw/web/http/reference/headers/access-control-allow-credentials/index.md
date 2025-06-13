@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header", "回應標頭")}}告訴瀏覽器伺服器是否允許在跨來源 HTTP 請求中包含憑證。
 
-憑證包括 Cookie、{{glossary("TLS", "傳輸層安全性協定 (TLS)")}} 用戶端憑證，或包含使用者名稱和密碼的驗證標頭。預設情況下，這些憑證不會在跨來源請求中傳送，這麼做可能會使網站容易受到{{Glossary("CSRF", "跨站請求偽造 (CSRF)")}} 攻擊。
+憑證包括 Cookie、{{glossary("TLS", "傳輸層安全性協定（TLS）")}}用戶端憑證，或包含使用者名稱和密碼的驗證標頭。預設情況下，這些憑證不會在跨來源請求中傳送，這麼做可能會使網站容易受到{{Glossary("CSRF", "跨站請求偽造（CSRF）")}}攻擊。
 
 用戶端可以透過以下幾種方式要求在跨站點請求中包含憑證：
 
