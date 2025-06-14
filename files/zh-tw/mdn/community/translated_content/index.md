@@ -1,8 +1,9 @@
 ---
 title: MDN 線上文件的在地化
+short-title: 在地化
 slug: MDN/Community/Translated_content
 l10n:
-  sourceCommit: c7f070e3ea133365dc9bba78c88dde17aab4f066
+  sourceCommit: 840104044bac2ae1c3b21cfbcd4c240278d8e429
 ---
 
 自從 2020 年 12 月 14 日起，MDN 便改成在基於 GitHub 的新平臺 [Yari](https://github.com/mdn/yari) 上運作。這個操作雖然帶給了 MDN 很多好處，但我們也需要改革我們處理在地化的方法：因為在英語以外的語言中，有許多沒有維護與過時的內容，而我們希望在未來更妥善地管理這件事。
@@ -51,6 +52,22 @@ l10n:
 
 - 討論群組：[Telegram（`MDN l10n ES`）](https://t.me/+Dr6qKQCAepw4MjFj)、[Discord（`#spanish`）](/discord)
 - 目前的維護者：[JuanVqz](https://github.com/JuanVqz)、[Graywolf9](https://github.com/Graywolf9)
+
+## 機器翻譯在地化
+
+以下實驗性語言是從英文語言機器翻譯而來。
+
+### German (`de`)
+
+- 倉儲：[mdn/translated-content-de](https://github.com/mdn/translated-content-de)
+- 討論群組：[Discord (`#german`)](/discord)
+- 目前的維護者：[caugner](https://github.com/caugner)
+
+### Italian (`it`)
+
+- 倉儲：[mdn/translated-content-it](https://github.com/mdn/translated-content-it)
+- 討論群組：[Discord (`#italian`)](/discord)
+- 目前的維護者：[caugner](https://github.com/caugner)
 
 ## 參見
 
