@@ -55,7 +55,7 @@ Date.UTC(year, monthIndex, day, hours, minutes, seconds, milliseconds)
 
 ### 返値
 
-指定された日時の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を表す数値を返します。日付が[不正](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
+指定された日時の[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を表す数値を返します。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 解説
 
