@@ -12,7 +12,7 @@ La propiedad CSS **`border-top-left-radius`** establece el redondeo de la esquin
 Un fondo, siendo una imagen o color, está limitado a los bordes, incluso a los redondeados; la posición exacta del corte será definida por el valor de la propiedad {{cssxref("background-clip")}}.
 
 > [!NOTE]
-> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-top-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/Shorthand_properties).
+> Si el valor de esta propiedad no se establece en una propiedad reducida {{cssxref("border-radius")}} que es aplicada al elemento después de la propiedad `border-top-left-radius`, el valor de esta propiedad es restaurado a su valor inicial por la [propiedad de forma reducida](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties).
 
 {{cssinfo}}
 
