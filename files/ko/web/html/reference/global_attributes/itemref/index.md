@@ -6,9 +6,9 @@ original_slug: Web/HTML/Global_attributes/itemref
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemref`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 사용하면 [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope) 특성을 가진 요소 바깥의 속성도 아이템과 연결할 수 있습니다.
+**`itemref`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 사용하면 [`itemscope`](/ko/docs/Web/HTML/Reference/Global_attributes#itemscope) 특성을 가진 요소 바깥의 속성도 아이템과 연결할 수 있습니다.
 
-`itemref` 특성에는 문서 내 다른 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 목록([`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid) 아님)을 제공해야 합니다.
+`itemref` 특성에는 문서 내 다른 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 목록([`itemid`](/ko/docs/Web/HTML/Reference/Global_attributes#itemid) 아님)을 제공해야 합니다.
 
 `itemref` 특성은 `itemscope` 특성을 지정한 요소에만 추가할 수 있습니다.
 
@@ -58,10 +58,10 @@ original_slug: Web/HTML/Global_attributes/itemref
 
 ## 같이 보기
 
-- 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 다른 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).
 - 마이크로데이터 관련 다른 전역 특성
 
-  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/ko/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/ko/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemscope`](/ko/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/ko/docs/Web/HTML/Reference/Global_attributes#itemtype)

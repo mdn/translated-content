@@ -85,7 +85,7 @@ console.log(inventory.findLast(isNotEnough));
 
 #### 화살표 함수와 구조 분해 사용
 
-이전 예제는 화살표 함수와 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring)을 사용하여 작성할 수 있습니다.
+이전 예제는 화살표 함수와 [구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#object_destructuring)을 사용하여 작성할 수 있습니다.
 
 ```js
 const inventory = [

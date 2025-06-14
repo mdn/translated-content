@@ -13,7 +13,7 @@ l10n:
 활성화 로케일을 제외한 모든 로케일은 아카이브되어 GitHub에서 읽기 전용 상태이며, MDN에서 볼 수 없습니다. 활성화된 로케일은 전담 팀이 유지 관리 책임을 맡고 있습니다.
 
 > [!NOTE]
-> 한국 이외의 활성화 로케일 목록은 [영어 문서](/ko/docs/MDN/Community/Contributing/Translated_content)를 참고하세요.
+> 한국 이외의 활성화 로케일 목록은 [영어 문서](/ko/docs/MDN/Community/Translated_content)를 참고하세요.
 
 ## 기여 방법
 

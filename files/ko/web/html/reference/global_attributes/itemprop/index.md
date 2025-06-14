@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemprop
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemprop`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 아이템에 속성을 추가할 때 사용합니다. 모든 요소는 `itemprop` 특성을 가질 수 있으며, 하나의 `itemprop`은 키-값 쌍으로 구성됩니다. 각각의 키-값 쌍은 **속성**이라고 부르고, 하나 이상의 속성으로 구성한 그룹을 **아이템**이라고 부릅니다. 속성의 값으로는 문자열이나 {{glossary("URL")}}을 사용할 수 있고, {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, {{HTMLElement("video")}} 등 다양한 요소와 연관지을 수 있습니다.
+**`itemprop`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 아이템에 속성을 추가할 때 사용합니다. 모든 요소는 `itemprop` 특성을 가질 수 있으며, 하나의 `itemprop`은 키-값 쌍으로 구성됩니다. 각각의 키-값 쌍은 **속성**이라고 부르고, 하나 이상의 속성으로 구성한 그룹을 **아이템**이라고 부릅니다. 속성의 값으로는 문자열이나 {{glossary("URL")}}을 사용할 수 있고, {{HTMLElement("audio")}}, {{HTMLElement("embed")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("link")}}, {{HTMLElement("object")}}, {{HTMLElement("source")}} , {{HTMLElement("track")}}, {{HTMLElement("video")}} 등 다양한 요소와 연관지을 수 있습니다.
 
 ## 예제
 
@@ -66,7 +66,7 @@ original_slug: Web/HTML/Global_attributes/itemprop
 
 ## 속성
 
-속성은 문자열이나 {{glossary("URL")}}을 값으로 가질 수 있습니다. 문자열 값으로 URL을 지정할 경우 {{htmlelement("a")}}와 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성, {{htmlelement("img")}} 요소와 {{htmlelement("src", "img")}} 특성, 또는 그 외의 외부 리소스를 연결하는 기타 요소를 사용해 표현합니다.
+속성은 문자열이나 {{glossary("URL")}}을 값으로 가질 수 있습니다. 문자열 값으로 URL을 지정할 경우 {{htmlelement("a")}}와 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 특성, {{htmlelement("img")}} 요소와 {{htmlelement("src", "img")}} 특성, 또는 그 외의 외부 리소스를 연결하는 기타 요소를 사용해 표현합니다.
 
 ### 문자열을 값으로 갖는 세 개의 속성
 
@@ -86,7 +86,7 @@ original_slug: Web/HTML/Global_attributes/itemprop
 </div>
 ```
 
-숫자와 문자로 구성된 긴 문자열처럼 사람이 쉽게 읽고 이해할 수 없는 문자열이 값일 경우, {{htmlelement("data")}} 요소의 [`value`](/ko/docs/Web/HTML/Element/data#value) 특성 값을 사용해 나타내고, 사람이 보다 쉽게 읽을 수 있도록 표현한 문자열을 `<data>`의 콘텐츠로 지정할 수 있습니다. (`<data>` 콘텐츠는 구조화된 데이터의 일부가 아닙니다. 아래 예제를 참고하세요.)
+숫자와 문자로 구성된 긴 문자열처럼 사람이 쉽게 읽고 이해할 수 없는 문자열이 값일 경우, {{htmlelement("data")}} 요소의 [`value`](/ko/docs/Web/HTML/Reference/Elements/data#value) 특성 값을 사용해 나타내고, 사람이 보다 쉽게 읽을 수 있도록 표현한 문자열을 `<data>`의 콘텐츠로 지정할 수 있습니다. (`<data>` 콘텐츠는 구조화된 데이터의 일부가 아닙니다. 아래 예제를 참고하세요.)
 
 ### 값이 상품 ID인 속성을 가진 아이템
 
@@ -98,7 +98,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 </h1>
 ```
 
-숫자 값으로는 {{htmlelement("meter")}} 요소와 그 [`value`](/ko/docs/Web/HTML/Element/meter#value) 특성을 대신 사용할 수 있습니다.
+숫자 값으로는 {{htmlelement("meter")}} 요소와 그 [`value`](/ko/docs/Web/HTML/Reference/Elements/meter#value) 특성을 대신 사용할 수 있습니다.
 
 ### `<meter>` 요소
 
@@ -119,7 +119,7 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 </div>
 ```
 
-비슷하게, 날짜와 시간 관련 데이터는 {{htmlelement("time")}}과 그 [`datetime`](/ko/docs/Web/HTML/Element/time#datetime) 특성을 사용할 수 있습니다.
+비슷하게, 날짜와 시간 관련 데이터는 {{htmlelement("time")}}과 그 [`datetime`](/ko/docs/Web/HTML/Reference/Elements/time#datetime) 특성을 사용할 수 있습니다.
 
 ### 날짜 값인 생년월일 속성을 가지는 아이템
 
@@ -428,10 +428,10 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 ## 같이 보기
 
-- [다른 전역 특성](/ko/docs/Web/HTML/Global_attributes)
+- [다른 전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)
 - 다른 마이크로데이터와 관련된 전역 속성:
 
-  - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope)
-  - [`itemtype`](/ko/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/ko/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemref`](/ko/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemscope`](/ko/docs/Web/HTML/Reference/Global_attributes#itemscope)
+  - [`itemtype`](/ko/docs/Web/HTML/Reference/Global_attributes#itemtype)

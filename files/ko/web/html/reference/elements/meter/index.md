@@ -76,7 +76,7 @@ label {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `value`
 
@@ -95,7 +95,7 @@ label {
 - `optimum`
   - : 이상적인 값. `min`과 `max` 특성으로 정의한 범위 내에 위치해야 합니다. `low`와 `high` 특성을 함께 사용한 경우, `optimum`은 어느 범위가 이상적인지 나타냅니다. 예를 들어, 값이 `min`과 `low` 사이에 위치한 경우, 측정 범위 중 낮은 범위가 이상적인 범위입니다.
 - `form`
-  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
+  - : `<meter>`와 연결할 {{htmlelement("form")}} 요소("양식 소유자"). 같은 문서에 존재하는 `<form>` 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성 값을 사용해야 합니다. `form` 특성을 지정하지 않았으나 조상 중 `<form>` 요소가 존재하면 해당 `<form>`과 연결됩니다. [`<input type="number">`](/ko/docs/Web/HTML/Element/input/number)의 값 범위를 보여주는 등 `<meter>`를 양식 관련 콘텐츠로서 사용할 때만 지정하세요.
 
 ## 예제
 

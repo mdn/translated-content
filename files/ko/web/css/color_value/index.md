@@ -5,7 +5,7 @@ slug: Web/CSS/color_value
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<color>`** [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 색을 나타냅니다. `<color>`는 이 색이 배경과 [어떻게 합성되어야 하는지](https://www.w3.org/TR/2003/REC-SVG11-20030114/masking.html#SimpleAlphaBlending) 나타내는 [알파 채널](https://ko.wikipedia.org/wiki/%EC%95%8C%ED%8C%8C_%EC%B1%84%EB%84%90) 투명도 값도 가질 수 있습니다.
 
 `<color>`는 다음 방법으로 정의할 수 있습니다.
 

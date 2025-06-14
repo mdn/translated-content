@@ -5,7 +5,7 @@ slug: Web/CSS/length
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
+[CSS](/ko/docs/Web/CSS) **`<length>`** [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 거리 값을 나타냅니다. {{Cssxref("width")}}, {{Cssxref("height")}}, {{Cssxref("margin")}}, {{Cssxref("padding")}}, {{Cssxref("border-width")}}, {{Cssxref("font-size")}}, {{Cssxref("text-shadow")}} 등 다양한 속성에 사용할 수 있습니다.
 
 > **참고:** {{cssxref("&lt;percentage&gt;")}} 값을 일부 속성의 `<length>` 값으로 사용할 수는 있지만 `<percentage>`와 `<length>` 는 다릅니다. {{cssxref("&lt;length-percentage&gt;")}}를 참고하세요.
 
@@ -52,9 +52,9 @@ slug: Web/CSS/length
 뷰포트 백분율 길이는 `<length>` 값을 {{glossary("viewport", "뷰포트")}}, 즉 문서에서 볼 수 있는 부분의 크기를 기준으로 설정합니다. 뷰포트 길이는 {{cssxref("@page")}} 선언 블록에서는 유효하지 않습니다.
 
 - `vh`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이 1%와 같습니다.
 - `vw`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비 1%와 같습니다.
 - `vi` {{experimental_inline}}
   - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vb` {{experimental_inline}}
@@ -92,7 +92,7 @@ slug: Web/CSS/length
 
 ## 보간
 
-애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/Web/CSS/computed_value)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
+애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 예제
 

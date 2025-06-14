@@ -27,7 +27,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
    - [`aria-haspopup`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
    - [`aria-hidden`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
    - [`aria-invalid`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+   - [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
    - [`aria-level`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-level)
    - [`aria-modal`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
    - [`aria-multiline`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
@@ -63,7 +63,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
    - [`aria-colindex`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
    - [`aria-colspan`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
    - [`aria-controls`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-   - [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+   - [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
    - [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-description)
    - [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)
    - [`aria-errormessage`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
@@ -86,7 +86,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
 - [`aria-busy`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
 - [`aria-controls`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
 - [`aria-current`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-current)
-- [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
 - [`aria-description`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-description)
 - [`aria-details`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-details)
 - [`aria-disabled`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
@@ -98,7 +98,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
 - [`aria-hidden`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
 - [`aria-invalid`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
 - [`aria-keyshortcuts`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts)
-- [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-label`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
 - [`aria-live`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-live)
 - [`aria-owns`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
@@ -119,7 +119,7 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
 
 <section id="Quick_links">
 
-1. [**<abbr>WAI-ARIA</abbr> attributes**](/ko/docs/Web/Accessibility/ARIA/Attributes)
+1. [**<abbr>WAI-ARIA</abbr> attributes**](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes)
 
    {{ListSubpagesForSidebar("/en-US/docs/Web/Accessibility/ARIA/Attributes")}}
 

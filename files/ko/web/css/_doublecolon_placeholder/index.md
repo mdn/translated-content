@@ -68,7 +68,7 @@ input::placeholder {
 
 충분한 색상 대비를 가진 플레이스홀더 텍스트는 입력된 인풋으로 해석될 수 있습니다. 플레이스홀더 텍스트는 사용자가 {{htmlelement("input")}} 요소에 콘텐츠를 입력했을 때 사라져야 합니다. 이러한 상황은 성공적인 폼 완성을 방해할 수도 있는데, 특시 인지 능력이 낮은 사용자들에게 특히 자주 발생합니다.
 
-플레이스홀더 정보를 제공하는 대안 접근은 이를 인풋 외부의 가까운 거리에 위치시키고, [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)를 사용하여 프로그래밍적으로 {{HTMLElement("input")}}과 힌트를 연관짓는 것입니다.
+플레이스홀더 정보를 제공하는 대안 접근은 이를 인풋 외부의 가까운 거리에 위치시키고, [`aria-describedby`](/ko/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)를 사용하여 프로그래밍적으로 {{HTMLElement("input")}}과 힌트를 연관짓는 것입니다.
 
 이러한 구현을 통해 힌트 콘텐츠는 인풋에 정보가 입력되어도 유효하며, 페이지가 로드될 때 인풋에 미리 입력된 내용이 없이 나타나게 됩니다. 대부분의 화면을 읽는 기술은 `aria-describedby` 를 사용하여 인풋의 라벨 텍스트를 읽은 후 힌트를 읽어주고, 스크린 리더 사용자는 이 정보가 불필요하다고 생각되면 음소거를 할 수도 있습니다.
 
@@ -90,7 +90,7 @@ input::placeholder {
 
 ### 라벨
 
-플레이스홀더는 {{htmlelement("label")}} 요소의 대체 요소가 아닙니다. [`for`](/ko/docs/Web/HTML/Element/label#for) 와 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성을 조합하여 프로그래밍 방식으로 입력 필드와 연결된 라벨이 없으면, 스크린 리더와 같은 보조 기술이 {{htmlelement("input")}} 요소를 해석할 수 없습니다.
+플레이스홀더는 {{htmlelement("label")}} 요소의 대체 요소가 아닙니다. [`for`](/ko/docs/Web/HTML/Reference/Elements/label#for) 와 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 속성을 조합하여 프로그래밍 방식으로 입력 필드와 연결된 라벨이 없으면, 스크린 리더와 같은 보조 기술이 {{htmlelement("input")}} 요소를 해석할 수 없습니다.
 
 - [폼 안의 플레이스홀더는 해롭다 — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 
