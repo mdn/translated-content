@@ -59,6 +59,6 @@ GET /index.html
 
 ## 같이 보기
 
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Range")}}
 - {{httpmethod("POST")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@layer`** [CSS](/ko/docs/Web/CSS) [at-rule](/ko/docs/Web/CSS/At-rule)은 캐스케이드 레이어를 선언하는 데 사용되며, 여러 캐스케이드 레이어가 있을 경우 우선순위를 정의하는 데도 사용할 수 있습니다.
+**`@layer`** [CSS](/ko/docs/Web/CSS) [at-rule](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 캐스케이드 레이어를 선언하는 데 사용되며, 여러 캐스케이드 레이어가 있을 경우 우선순위를 정의하는 데도 사용할 수 있습니다.
 
 {{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
 

@@ -199,7 +199,7 @@ div {
 - `size`
   - : 파일의 크기를 바이트 단위로 나타낸 값.
 - `type`
-  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/MIME_types).
+  - : 파일의 [MIME 유형](/ko/docs/Web/HTTP/Guides/MIME_types).
 - `webkitRelativePath` {{non-standard_inline}}
   - : [`webkitdirectory`](#webkitdirectory) 특성을 사용한 경우, 기준 디렉토리에 대한 파일의 상대적인 경로. 비표준 특성이므로 사용에 주의가 필요합니다.
 
@@ -386,7 +386,7 @@ input.addEventListener("change", updateImageDisplay);
 - 올바른 파일이라면,
 
   - `<div>` 안의 목록에 해당 파일의 이름과 크기를 항목으로 추가합니다. 이름은 `file.name`과 `file.size`로 가져옵니다. 또 다른 함수인 `returnFileSize()`는 파일 크기를 보기 좋게 바이트/KB/MB로 서식해 출력합니다. (브라우저는 바이트 크기로만 알려줍니다)
-  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Element/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
+  - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Reference/Elements/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
 
 - 파일 유형이 유효하지 않은 경우 사용자에게 다른 파일을 선택해야 한다고 알려주는 메시지를 표시합니다.
 

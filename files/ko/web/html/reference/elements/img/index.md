@@ -32,7 +32,7 @@ original_slug: Web/HTML/Element/img
 
 - [Referrer](/ko/docs/Web/HTTP/Headers/Referrer-Policy) {{glossary("CORS")}} control for security and privacy: see [`crossorigin`](#crossorigin) and [`referrerpolicy`](#referrerpolicy).
 - Setting an {{glossary("intrinsic size")}} using [`width`](#width), [`height`](#height), and [`intrinsicsize`](#intrinsicsize): this sets the space taken up by an image to ensure the page layout is stable before it loads.
-- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Web/HTML/Responsive_images) tutorial).
+- Responsive image hints with [`sizes`](#sizes) and [`srcset`](#srcset) (see also the {{htmlelement("picture")}} element and our [Responsive images](/ko/docs/Web/HTML/Guides/Responsive_images) tutorial).
 
 ## 지원하는 이미지 형식
 
@@ -40,7 +40,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 이미지를 가져올 수 없을 때
 
-이미지를 불러오거나 그릴 때 오류가 발생했고, [`onerror`](/ko/docs/Web/HTML/Global_attributes#onerror) 속성에 오류 처리기를 등록했다면 {{domxref("HTMLElement/error_event", "error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
+이미지를 불러오거나 그릴 때 오류가 발생했고, [`onerror`](/ko/docs/Web/HTML/Reference/Global_attributes#onerror) 속성에 오류 처리기를 등록했다면 {{domxref("HTMLElement/error_event", "error")}} 이벤트와 함께 처리기를 호출합니다. 오류는 다양한 상황에서 발생할 수 있는데, 그 중 일부 원인은 다음과 같습니다.
 
 - [`src`](#src) 속성이 비었거나 {{jsxref("null")}}임.
 - `src`의 URL이 현재 사용자가 보는 페이지의 URL과 같음.
@@ -50,7 +50,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `alt`
 
@@ -70,9 +70,9 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
     이미지를 텍스트로서 복사-붙여넣기할 때와, 이미지 링크를 북마크 할 때도 `alt`의 값을 사용합니다.
 
 - `crossorigin`
-  - : CORS를 사용해 지정한 이미지 파일을 가져와야 하는지의 여부. [교차 출처 활성화 리소스](/ko/docs/Web/HTML/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소에 사용해도 캔버스를 "오염"시키지 않습니다. 가능한 값은 다음과 같습니다.
+  - : CORS를 사용해 지정한 이미지 파일을 가져와야 하는지의 여부. [교차 출처 활성화 리소스](/ko/docs/Web/HTML/How_to/CORS_enabled_image)는 {{HTMLElement("canvas")}} 요소에 사용해도 캔버스를 "오염"시키지 않습니다. 가능한 값은 다음과 같습니다.
 - `anonymous`
-  - : 자격 증명 없이 교차 출처 요청을 전송합니다. 즉, {{httpheader("Origin")}} {{glossary("HTTP")}} 헤더를 쿠키, [X.509 인증서](https://tools.ietf.org/html/rfc5280), [HTTP Basic 인증](/ko/docs/Web/HTTP/Authentication#basic_인증_스킴) 없이 전송합니다. 서버에서 {{httpheader("Access-Control-Allow-Origin")}} HTTP 헤더를 지정하지 않음으로써 요청 출처 사이트에 자격 증명을 보내지 않는다면 이미지는 "오염"되고, 사용처가 제한됩니다.
+  - : 자격 증명 없이 교차 출처 요청을 전송합니다. 즉, {{httpheader("Origin")}} {{glossary("HTTP")}} 헤더를 쿠키, [X.509 인증서](https://tools.ietf.org/html/rfc5280), [HTTP Basic 인증](/ko/docs/Web/HTTP/Guides/Authentication#basic_인증_스킴) 없이 전송합니다. 서버에서 {{httpheader("Access-Control-Allow-Origin")}} HTTP 헤더를 지정하지 않음으로써 요청 출처 사이트에 자격 증명을 보내지 않는다면 이미지는 "오염"되고, 사용처가 제한됩니다.
 - `use-credentials`
 
   - : 자격 증명과 함께 교차 출처 요청을 전송합니다. 즉, `Origin` HTTP 헤더를 쿠키, X 509 인증서, 또는 HTTP Basic 이증과 함께 전송합니다. 서버에서 `Access-Control-Allow-Credentials` HTTP 헤더를 통한 자격 증명을 요청 출처 사이트에 보내지 않는다면 이미지는 "오염"되고, 사용처가 제한됩니다.
@@ -106,7 +106,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   - : 이미지가 [서버 사이드 맵](https://ko.wikipedia.org/wiki/%EC%9D%B4%EB%AF%B8%EC%A7%80_%EB%A7%B5)의 일부인지 나타냄. 서버 사이드 맵에 속하는 경우, 사용자가 이미지에서 클릭한 위치를 서버로 전송합니다.
 
     > [!NOTE]
-    > 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
+    > 포인팅 장치가 없는 사용자도 갈 수 있는 대체 목적지를 제공하기 위해, `ismap`은 `&#x3C;img>` 요소가 유효한 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 특성을 가진 {{htmlelement("a")}} 요소의 자손인 경우에만 사용 가능합니다.
 
 - `loading`
 
@@ -151,13 +151,13 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
     같은 `srcset` 특성에 너비와 픽셀 밀도 서술자를 함께 사용하거나, 동일한 서술자를 두 개 이상 사용하는건 유효하지 않습니다.
 
-    사용자 에이전트 스스로 가능한 소스 중 하나를 선택합니다. 따라서 사용자 에이전트는 사용자의 개인 설정 또는 대역폭 상황에 따라 선택을 조절할 수 있는 상당한 여지를 가집니다. [반응형 이미지 자습서](/ko/docs/Web/HTML/Responsive_images)를 방문해 예제를 살펴보세요.
+    사용자 에이전트 스스로 가능한 소스 중 하나를 선택합니다. 따라서 사용자 에이전트는 사용자의 개인 설정 또는 대역폭 상황에 따라 선택을 조절할 수 있는 상당한 여지를 가집니다. [반응형 이미지 자습서](/ko/docs/Web/HTML/Guides/Responsive_images)를 방문해 예제를 살펴보세요.
 
 - `width`
   - : 이미지의 픽셀 기준 고유 너비. 단위 없는 정수여야 합니다.
 - `usemap`
 
-  - : 요소와 연결할 [이미지 맵](/ko/docs/Web/HTML/Element/map)의 프래그먼트.
+  - : 요소와 연결할 [이미지 맵](/ko/docs/Web/HTML/Reference/Elements/map)의 프래그먼트.
 
     > **참고:** `<img>` 요소가 {{htmlelement("a")}} 또는 {{HTMLElement("button")}} 요소의 자손이면 사용할 수 없습니다.
 
@@ -184,19 +184,19 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
   - : The number of pixels of white space on the left and right of the image. Use the {{cssxref('margin')}} CSS property instead.
 - `longdesc` {{deprecated_inline}}
 
-  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/ko/docs/Web/HTML/Global_attributes#id).
+  - : A link to a more detailed description of the image. Possible values are a {{glossary("URL")}} or an element [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id).
 
     > [!NOTE]
     > This attribute is mentioned in the latest {{glossary("W3C")}} version, [HTML 5.2](https://html.spec.whatwg.org/multipage/obsolete.html#element-attrdef-img-longdesc), but has been removed from the {{glossary("WHATWG")}}'s [HTML Living Standard](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). It has an uncertain future; authors should use a {{glossary("WAI")}}-{{glossary("ARIA")}} alternative such as [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) or [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
-  - : A name for the element. Use the [`id`](/ko/docs/Web/HTML/Global_attributes#id) attribute instead.
+  - : A name for the element. Use the [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) attribute instead.
 - `vspace` {{deprecated_inline}}
   - : The number of pixels of white space above and below the image. Use the {{cssxref('margin')}} CSS property instead.
 
 ## CSS 스타일링
 
-`<img>`는 [대체 요소](/ko/docs/Web/CSS/Replaced_element)입니다. 기본적으로 {{cssxref("display")}}는 `inline`이나, 기본 크기는 내장한 이미지의 고유 크기로 정해지므로 마치 `inline-block`처럼 보입니다. {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}} 등의 속성을 이미지에 지정할 수 있습니다.
+`<img>`는 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)입니다. 기본적으로 {{cssxref("display")}}는 `inline`이나, 기본 크기는 내장한 이미지의 고유 크기로 정해지므로 마치 `inline-block`처럼 보입니다. {{cssxref("border")}}/{{cssxref("border-radius")}}, {{cssxref("padding")}}/{{cssxref("margin")}}, {{cssxref("width")}}, {{cssxref("height")}} 등의 속성을 이미지에 지정할 수 있습니다.
 
 `<img>`는 기준선을 갖지 않으므로, {{cssxref("vertical-align")}}`: baseline`을 지정한 인라인 서식 맥락에서는 이미지의 아래쪽 모서리가 텍스트 기준선으로 가게 됩니다.
 
@@ -292,7 +292,7 @@ HTML 표준은 지원해야 하는 이미지 형식을 명시하고 있지 않�
 
 ### `title` 특성
 
-[`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성은 [`alt`](#alt) 특성을 적합하게 대체할 수 없습니다. 또한, `alt`의 값을 `title`에도 반복하는 것을 피해야 합니다. 같은 값을 지정할 경우 일부 스크린 리더가 설명을 두 번씩 읽게 되므로 사용자가 혼란스러울 수 있습니다.
+[`title`](/ko/docs/Web/HTML/Reference/Global_attributes#title) 특성은 [`alt`](#alt) 특성을 적합하게 대체할 수 없습니다. 또한, `alt`의 값을 `title`에도 반복하는 것을 피해야 합니다. 같은 값을 지정할 경우 일부 스크린 리더가 설명을 두 번씩 읽게 되므로 사용자가 혼란스러울 수 있습니다.
 
 `title` 요소를 사용해 `alt` 설명에 대한 부연 설명을 제공해서도 안됩니다. 이미지가 설명을 필요로 하는 경우 {{htmlelement("figure")}}와 {{htmlelement("figcaption")}} 요소를 사용하세요.
 

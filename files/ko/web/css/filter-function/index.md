@@ -5,7 +5,7 @@ slug: Web/CSS/filter-function
 
 {{cssref}}
 
-[CSS](/ko/docs/Web/CSS) **`<filter-function>`** [자료형](/ko/docs/Web/CSS/CSS_Types)은 입력 이미지의 모습을 변형할 수 있는 그래픽 효과를 나타냅니다. {{cssxref("filter")}}와 {{cssxref("backdrop-filter")}} 속성에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<filter-function>`** [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 입력 이미지의 모습을 변형할 수 있는 그래픽 효과를 나타냅니다. {{cssxref("filter")}}와 {{cssxref("backdrop-filter")}} 속성에서 사용합니다.
 
 ## 구문
 

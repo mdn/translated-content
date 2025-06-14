@@ -73,9 +73,9 @@ l10n:
 위의 코드는 640x480 픽셀 크기의 비디오 플레이어를 생성하여 비디오가 재생될 때까지 포스터 이미지를 표시합니다. 동영상이 자동 재생되지만, 기본적으로 음소거 되도록 지시합니다.
 
 > [!NOTE]
-> 일부 모바일 브라우저에서는 `autoplay` 특성이 무시될 수 있습니다. 또한 자동 재생 기능은 오용될 경우 논란이 될 수 있습니다. 자동 재생을 현명하게 사용하는 방법을 배우려면 [미디어 및 Web Audio API 자동 재생 가이드](/ko/docs/Web/Media/Autoplay_guide)를 읽어보시기 바랍니다.
+> 일부 모바일 브라우저에서는 `autoplay` 특성이 무시될 수 있습니다. 또한 자동 재생 기능은 오용될 경우 논란이 될 수 있습니다. 자동 재생을 현명하게 사용하는 방법을 배우려면 [미디어 및 Web Audio API 자동 재생 가이드](/ko/docs/Web/Media/Guides/Autoplay)를 읽어보시기 바랍니다.
 
-자세한 내용은 [\<video> 요소](/ko/docs/Web/HTML/Element/video) 및 [크로스 브라우저 비디오 플레이어 만들기](/ko/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) 문서를 참고하세요.
+자세한 내용은 [\<video> 요소](/ko/docs/Web/HTML/Reference/Elements/video) 및 [크로스 브라우저 비디오 플레이어 만들기](/ko/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player) 문서를 참고하세요.
 
 ### JavaScript 오디오
 
@@ -472,7 +472,7 @@ lastsource.addEventListener(
 
 ## 오디오/비디오 JavaScript 라이브러리
 
-수많은 오디오 및 비디오 JavaScript 라이브러리가 존재합니다. 가장 널리 사용되는 라이브러리를 사용하면 모든 브라우저에서 일관된 플레이어 디자인을 선택할 수 있으며 오디오 및 비디오를 기본적으로 지원하지 않는 브라우저에 대한 폴백 기능을 제공할 수 있습니다. 폴백은 과거에는 Adobe Flash 또는 Microsoft Silverlight 플러그인과 같이 지금은 사용되지 않는 플러그인을 사용하여 비지원 브라우저에서 미디어 플레이어를 제공했지만, 최신 컴퓨터에서는 더 이상 지원되지 않습니다. 자막을 위한 [`<track>`](/ko/docs/Web/HTML/Element/track) 요소와 같은 다른 기능도 미디어 라이브러리를 통해 제공할 수 있습니다.
+수많은 오디오 및 비디오 JavaScript 라이브러리가 존재합니다. 가장 널리 사용되는 라이브러리를 사용하면 모든 브라우저에서 일관된 플레이어 디자인을 선택할 수 있으며 오디오 및 비디오를 기본적으로 지원하지 않는 브라우저에 대한 폴백 기능을 제공할 수 있습니다. 폴백은 과거에는 Adobe Flash 또는 Microsoft Silverlight 플러그인과 같이 지금은 사용되지 않는 플러그인을 사용하여 비지원 브라우저에서 미디어 플레이어를 제공했지만, 최신 컴퓨터에서는 더 이상 지원되지 않습니다. 자막을 위한 [`<track>`](/ko/docs/Web/HTML/Reference/Elements/track) 요소와 같은 다른 기능도 미디어 라이브러리를 통해 제공할 수 있습니다.
 
 ### 오디오 전용
 
@@ -533,7 +533,7 @@ lastsource.addEventListener(
 
 ## 참고서
 
-- [비디오 요소](/ko/docs/Web/HTML/Element/video)
+- [비디오 요소](/ko/docs/Web/HTML/Reference/Elements/video)
 - [HTMLVideoElement API](/ko/docs/Web/API/HTMLVideoElement)
 - [MediaSource API](/ko/docs/Web/API/MediaSource)
 - [Web Audio API](/ko/docs/Web/API/Web_Audio_API)

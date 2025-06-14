@@ -578,4 +578,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-앞의 두 가지 예제에서, 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메서드 정의는 객체 생성시마다 발생할 필요가 없습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 참고하세요.
+앞의 두 가지 예제에서, 상속된 프로토타입은 모든 객체에서 공유될 수 있으며 메서드 정의는 객체 생성시마다 발생할 필요가 없습니다. 자세한 내용은 [상속 및 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 참고하세요.

@@ -13,7 +13,7 @@ l10n:
 
 > **경고:** `Set-Cookie`는 프론트엔드 코드에 노출된 모든 응답으로부터 [필터링해야 하는](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) [금지된 응답 헤더 이름](https://fetch.spec.whatwg.org/#forbidden-response-header-name)에 정의된 Fetch 명세의 요구에 따라, 브라우저는 `Set-Cookie` 헤더에 접근하는 프론트엔드 JavaScript 코드를 차단합니다.
 
-더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies) 안내서를 참고하세요.
+더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies) 안내서를 참고하세요.
 
 <table class="properties">
   <tbody>
@@ -248,7 +248,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 같이 보기
 
-- [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)
+- [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [Samesite cookies 설명](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

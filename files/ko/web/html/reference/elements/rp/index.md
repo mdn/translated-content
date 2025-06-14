@@ -63,7 +63,7 @@ ruby {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만을 포함합니다.
 
 ## 사용 일람
 

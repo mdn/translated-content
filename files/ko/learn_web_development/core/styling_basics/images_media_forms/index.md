@@ -47,7 +47,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 ## 대체 (Replaced) 요소
 
-이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/Replaced_element)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
+이미지와 비디오는 **[대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)** 로 설명됩니다. 즉, CSS 는 이러한 요소의 내부 레이아웃에 영향을 줄 수 없으며 — 다른 요소중에서 페이지의 위치에만 영향을 줍니다. 그러나 우리가 볼 수 있듯이 CSS 는 이미지로 할 수 있는 다양한 일들이 있습니다.
 
 이미지 및 비디오와 같은 특정 대체 요소도 **종횡비 (aspect ratio)** 를 갖는 것으로 설명됩니다. 이는 가로 (x) 및 세로 (y) 크기를 가지며, 기본적으로 파일의 고유 크기를 사용하여 표시됨을 의미합니다.
 
@@ -64,7 +64,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 overflow 문제에 대해 우리는 무엇을 할 수 있습니까?
 
-[이전 수업](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/ko/docs/Web/HTML/Element/video) 또는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
+[이전 수업](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video) 또는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
 
 **위 예에서 `<img>` 요소에 `max-width: 100%` 를 추가하십시오. 작은 이미지는 변경되지 않지만, 큰 이미지는 박스에 맞게 작아집니다.**
 
@@ -105,7 +105,7 @@ img {
 
 CSS 로 스타일링 할 때, 양식 요소는 까다로운 문제가 될 수 있으며 [웹 양식 모듈](/ko/docs/Learn_web_development/Extensions/Forms) 에는 약식 요소의 까다로운 측면에 대한 자세한 안내서가 포함되어 있습니다. 이 기사에서 강조할 가치가 있는 몇 가지 기본 사항이 있습니다.
 
-[`<input>`](/ko/docs/Web/HTML/Element/input) 요소를 통해 많은 양식 컨트롤이 페이지에 추가됩니다 — 텍스트 입력과 같은 간단한 양식 필드를 정의하고 색상 및 날짜 선택자와 같은 HTML5 에 추가된 보다 복잡한 필드를 통해 정의합니다. 여러줄로 된 텍스트 입력을 위한 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea) 와 같은 일부 추가 요소와 [`<fieldset>`](/ko/docs/Web/HTML/Element/fieldset) 및 [`<legend>`](/ko/docs/Web/HTML/Element/legend) 와 같은 양식의 일부를 포함하고 레이블을 지정하는 데 사용되는 요소가 있습니다.
+[`<input>`](/ko/docs/Web/HTML/Element/input) 요소를 통해 많은 양식 컨트롤이 페이지에 추가됩니다 — 텍스트 입력과 같은 간단한 양식 필드를 정의하고 색상 및 날짜 선택자와 같은 HTML5 에 추가된 보다 복잡한 필드를 통해 정의합니다. 여러줄로 된 텍스트 입력을 위한 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea) 와 같은 일부 추가 요소와 [`<fieldset>`](/ko/docs/Web/HTML/Reference/Elements/fieldset) 및 [`<legend>`](/ko/docs/Web/HTML/Reference/Elements/legend) 와 같은 양식의 일부를 포함하고 레이블을 지정하는 데 사용되는 요소가 있습니다.
 
 HTML5 에는 또한 웹 개발자가 어떤 필드가 필요한지, 심지어 입력해야하는 콘텐츠 유형을 표시할 수 있는 속성이 포함되어 있습니다. 사용자가 예기치 않은 것을 입력하거나 필수 필드를 비워두면, 브라우저에 오류 메시지가 표시될 수 있습니다. 다른 브라우저는 이러한 항목에 대해 얼마나 많은 스타일과 사용자 정의가 허용되는지에 일관성이 없습니다.
 

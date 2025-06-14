@@ -59,7 +59,7 @@ fetch("module.wasm")
 > 일반적으로 인스턴스자체만 신경 쓰지만, 모듈을 캐시하거나, [`postMessage()`](/ko/docs/Web/API/MessagePort/postMessage)를 통해 다른 worker나 윈도우와 공유하거나, 단순히 인스턴스를 더 생성하고자 할 때도 유용합니다.
 
 > [!NOTE]
-> 두 번째 오버로드 형식은 {{jsxref ( "WebAssembly.Module")}} 객체를 인수로 사용하여 인스턴스 객체를 직접 포함하는 promise를 결과로 반환합니다. [Second overload](/ko/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example) 예제를 참조하십시오.
+> 두 번째 오버로드 형식은 {{jsxref ( "WebAssembly.Module")}} 객체를 인수로 사용하여 인스턴스 객체를 직접 포함하는 promise를 결과로 반환합니다. [Second overload](/ko/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static#second_overload_example) 예제를 참조하십시오.
 
 ### Running your WebAssembly code
 
@@ -82,7 +82,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
 ```
 
 > [!NOTE]
-> WebAssembly 모듈에서 내보내는 방법에 대한 자세한 내용은 [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API) 및 [Understanding WebAssembly text format](/ko/docs/WebAssembly/Understanding_the_text_format)를 참조하십시오.
+> WebAssembly 모듈에서 내보내는 방법에 대한 자세한 내용은 [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API) 및 [Understanding WebAssembly text format](/ko/docs/WebAssembly/Guides/Understanding_the_text_format)를 참조하십시오.
 
 ## Using XMLHttpRequest
 

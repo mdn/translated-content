@@ -72,7 +72,7 @@ delete console.log(1);
 // 로그 1, true 반환, 아무것도 삭제되지 않습니다.
 ```
 
-`delete` 연산자는 객체에서 주어진 속성을 삭제합니다. 성공적으로 삭제하면 `true`를 반환하고, 실패하면 `false`를 반환합니다. 일반적인 믿음(아마도 [C++의 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170))와 같은 다른 프로그래밍 언어들 때문에)과 달리, `delete` 연산자는 메모리를 직접 해제하는 것과 전혀 관련이 없습니다. 메모리 관리는 참조를 끊는 방식으로 간접적으로 이루어집니다. 자세한 내용은 [메모리 관리](/ko/docs/Web/JavaScript/Memory_management) 페이지를 참조하세요.
+`delete` 연산자는 객체에서 주어진 속성을 삭제합니다. 성공적으로 삭제하면 `true`를 반환하고, 실패하면 `false`를 반환합니다. 일반적인 믿음(아마도 [C++의 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170))와 같은 다른 프로그래밍 언어들 때문에)과 달리, `delete` 연산자는 메모리를 직접 해제하는 것과 전혀 관련이 없습니다. 메모리 관리는 참조를 끊는 방식으로 간접적으로 이루어집니다. 자세한 내용은 [메모리 관리](/ko/docs/Web/JavaScript/Guide/Memory_management) 페이지를 참조하세요.
 
 아래 시나리오를 고려하는 것이 중요합니다.
 

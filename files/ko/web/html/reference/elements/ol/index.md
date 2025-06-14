@@ -83,7 +83,7 @@ li {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `reversed`
   - : 목록의 순서 역전 여부. 즉, 내부에 지정한 항목이 역순으로 배열된 것인지 나타냅니다.
@@ -99,7 +99,7 @@ li {
     - `'I'`는 대문자 로마 숫자,
     - `'1'` 는 숫자(기본값)을 나타냅니다.
 
-    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, [`type`](/ko/docs/Web/HTML/Element/li#type) 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
+    `type`은 아래의 모든 {{htmlelement("li")}}에 적용되지만, [`type`](/ko/docs/Web/HTML/Reference/Elements/li#type) 특성을 가진 `<li>`는 그 값을 대신 사용합니다.
 
     > [!NOTE]
     > 항목을 각각의 숫자/문자로 참조하는 기술적 또는 법률적 문서가 아니라면 CSS {{cssxref("list-style-type")}} 속성을 대신 사용하세요.
