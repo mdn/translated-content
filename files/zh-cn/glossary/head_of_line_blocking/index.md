@@ -14,7 +14,7 @@ l10n:
 ## 参见
 
 - 相关术语：
-  - {{glossary("HTTP")}}，{{glossary("HTTP 2", "HTTP/2")}}
+  - {{glossary("HTTP")}}、{{glossary("HTTP 2", "HTTP/2")}}
   - {{glossary("TCP")}}
 - [页面渲染流程：浏览器如何工作](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)
 - 维基百科上的[队头阻塞](https://zh.wikipedia.org/wiki/队头阻塞)
