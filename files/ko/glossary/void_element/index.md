@@ -49,4 +49,4 @@ SVG 및 MathML에서는 자식 노드를 가질 수 없는 요소는 스스로 �
 
 ## 같이 보기
 
-- [교체된 요소](/ko/docs/Web/CSS/Replaced_element)
+- [교체된 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)

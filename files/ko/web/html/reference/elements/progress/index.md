@@ -75,7 +75,7 @@ label {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `max`
   - : `<progress>` 요소가 나타내는 작업에 필요한 작업량. 지정하는 경우, 반드시 0보다 크고 유효한 부동소수점 숫자여야 합니다. 기본값은 1입니다.

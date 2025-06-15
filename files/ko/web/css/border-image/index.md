@@ -55,7 +55,7 @@ border-image: repeating-linear-gradient(30deg, #4d9f0c, #9198e5, #4d9f0c 20px)
 }
 ```
 
-`border-image`는 {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, {{cssxref("border-image-repeat")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 다른 단축 속성과 마찬가지로, 생략한 속성은 [초기값](/ko/docs/Web/CSS/initial_value)으로 설정됩니다.
+`border-image`는 {{cssxref("border-image-source")}}, {{cssxref("border-image-slice")}}, {{cssxref("border-image-width")}}, {{cssxref("border-image-outset")}}, {{cssxref("border-image-repeat")}}의 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)입니다. 다른 단축 속성과 마찬가지로, 생략한 속성은 [초기값](/ko/docs/Web/CSS/CSS_cascade/Value_processing)으로 설정됩니다.
 
 > [!NOTE]
 > 테두리 이미지를 불러오는데 실패할 경우에 대비해 {{cssxref("border-style")}} 속성을 설정해야 합니다. 사실 명세에 따르면 필수로 지정해야 하지만 모든 브라우저가 그렇게 구현하지는 않았습니다.
@@ -79,7 +79,7 @@ border-image: url("/images/border.png") 27 23 / 50px 30px / 1rem round space;
 `border-image` 속성은 아래 나열한 값 중 한 개에서 다섯 개 사이를 사용해 지정할 수 있습니다.
 
 > [!NOTE]
-> 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/Web/CSS/computed_value)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
+> 만약 {{cssxref("border-image-source")}}의 [계산값](/ko/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_4129c9bf28ee4c2570fe2528f20c4b2cd9a30d9cf2ec4e75fb56fe903059e63e)이 `none`이거나 이미지를 그릴 수 없다면 {{cssxref("border-style")}}이 대신 보여집니다.
 
 ### 값
 

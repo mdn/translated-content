@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cookie
 
 {{HTTPSidebar}}
 
-**`Cookie`** HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 [HTTP cookies](/ko/docs/Web/HTTP/Cookies)를 포함합니다.
+**`Cookie`** HTTP 요청 헤더는 {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버에 의해 이전에 전송되어 저장된 [HTTP cookies](/ko/docs/Web/HTTP/Guides/Cookies)를 포함합니다.
 
 `Cookie` 헤더는 선택적(optional)이고, 만약 브라우저의 사생활 보호 설정(privacy settings)이 쿠키를 block할 경우 생략될 수도 있습니다.
 

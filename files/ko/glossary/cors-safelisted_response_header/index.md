@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-'CORS 허용 목록에 있는 응답 헤더 (CORS-safelisted response header)'는 클라이언트 스크립트에 노출되어도 '안전'하다고 생각되는 [CORS](/ko/docs/Web/HTTP/CORS) 응답의 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)입니다. 허용된 응답 헤더만 웹페이지에서 사용할 수 있습니다.
+'CORS 허용 목록에 있는 응답 헤더 (CORS-safelisted response header)'는 클라이언트 스크립트에 노출되어도 '안전'하다고 생각되는 [CORS](/ko/docs/Web/HTTP/Guides/CORS) 응답의 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)입니다. 허용된 응답 헤더만 웹페이지에서 사용할 수 있습니다.
 
 기본적으로, 허용 목록에는 다음과 같은 응답 헤더가 포함됩니다.
 
@@ -36,7 +36,7 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 ## 같이 보기
 
 - [HTTP](/ko/docs/Web/HTTP)
-- [HTTP headers](/ko/docs/Web/HTTP/Headers)
+- [HTTP headers](/ko/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - [용어사전](/ko/docs/Glossary)
 

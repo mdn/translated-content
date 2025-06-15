@@ -33,7 +33,7 @@ HTML `data-*` 특성과 이에 대응하는 DOM
 HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션에서 더 자세하게 다루고 있습니다.
 
 하단 정보에와 더불어, HTML 데이터 특성을 사용하는 방법에 대한
-[데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 안내서를 확인할 수 있습니다.
+[데이터 특성 사용하기](/ko/docs/Web/HTML/How_to/Use_data_attributes) 안내서를 확인할 수 있습니다.
 
 ### 이름 변환
 
@@ -131,5 +131,5 @@ if (el.dataset.someDataAttr === undefined) {
 
 - HTML [`data-*`](/ko/docs/Web/HTML/Reference/Global_attributes/data-*) 클래스
   전역 특성
-- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

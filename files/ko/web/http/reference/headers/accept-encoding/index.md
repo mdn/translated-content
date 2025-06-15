@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Accept-Encoding
 
 {{HTTPSidebar}}
 
-**`Accept-Encoding`** 요청 HTTP 헤더는, 보통 압축 알고리즘인, 클라이언트가 이해 가능한 컨텐츠 인코딩이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)을 사용하여, 서버는 제안된 내용 중 하나를 선택하고 사용하며 {{HTTPHeader("Content-Encoding")}} 응답 헤더를 이용해 선택된 것을 클라이언트에게 알려줍니다.
+**`Accept-Encoding`** 요청 HTTP 헤더는, 보통 압축 알고리즘인, 클라이언트가 이해 가능한 컨텐츠 인코딩이 무엇인지를 알려줍니다. [컨텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)을 사용하여, 서버는 제안된 내용 중 하나를 선택하고 사용하며 {{HTTPHeader("Content-Encoding")}} 응답 헤더를 이용해 선택된 것을 클라이언트에게 알려줍니다.
 
 클라이언트와 서버 모두 동일한 압축 알고리즘을 지원한다고 해도, 식별 값 또한 수용 가능하다면, 서버는 응답의 본문을 압축하지 않으려고 할 수 있습니다. 두 가지 일반적인 경우가 이런 일을 초래합니다:
 
@@ -83,6 +83,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## 함께 참고할 내용
 
-- HTTP [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
+- HTTP [컨텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)
 - 컨텐츠 협상의 결과를 이용한 헤더: {{HTTPHeader("Content-Encoding")}}
 - 다른 유사한 헤더들: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}
