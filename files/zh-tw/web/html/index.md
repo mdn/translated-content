@@ -2,7 +2,7 @@
 title: HTML：超文本標記語言
 slug: Web/HTML
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: f08eb478696946da474cf5c5ecdead4f5955f1b4
 ---
 
 {{HTMLSidebar}}
@@ -25,6 +25,8 @@ HTML 元素通過「標籤」與文件中的其他文本區分開來，標籤由
   - : 我們的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節的 HTML 模塊從頭開始教授所有 HTML 基礎知識。
 
 ## 指南
+
+[HTML 指南](/zh-TW/docs/Web/HTML/Guides)幫助你在 Web 上使用 HTML 建構，涵蓋的主題包括表單、CORS、內容預先載入以及響應式圖片等。
 
 - [HTML 表單](/zh-TW/docs/Learn_web_development/Extensions/Forms)
   - : 表單是 Web 非常重要的一章節——它們提供了與網站互動所需的大章節功能，例如註冊和登錄、發送反饋、購買產品等。此模塊將幫助你開始創建表單的用戶端/前端部分。
