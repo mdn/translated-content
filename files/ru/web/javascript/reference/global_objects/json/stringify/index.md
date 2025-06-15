@@ -12,7 +12,9 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 ## Синтаксис
 
 ```
-JSON.stringify(value[, replacer[, space]])
+JSON.stringify(value)
+JSON.stringify(value, replacer)
+JSON.stringify(value, replacer, space)
 ```
 
 ### Параметры
