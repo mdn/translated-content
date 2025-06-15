@@ -2,7 +2,7 @@
 title: 压缩字典传输
 slug: Glossary/Compression_dictionary_transport
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 4c0588c10b4266b8a87a1f80d93e8f99eabc1a4e
 ---
 
 {{GlossarySidebar}}
@@ -19,7 +19,7 @@ l10n:
 - 相关术语：
   - {{Glossary("Brotli compression", "Brotli 压缩")}}
   - {{Glossary("Zstandard compression", "ZStandard 压缩")}}
-- [&lt;link rel=&quot;compression-dictionary&quot;&gt;](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
+- [`<link rel="compression-dictionary">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/compression-dictionary)
 - {{HTTPHeader("Accept-encoding")}}
 - {{HTTPHeader("Content-encoding")}}
 - {{HTTPHeader("Available-Dictionary")}}
