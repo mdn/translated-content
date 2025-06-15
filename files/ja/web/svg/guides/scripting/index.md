@@ -1,12 +1,14 @@
 ---
-title: スクリプティング
+title: スクリプト処理
 slug: Web/SVG/Guides/Scripting
-original_slug: Web/SVG/Scripting
+l10n:
+  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
-{{SVGRef}}
+JavaScript を使用して SVG を作成および操作するには、いくつかの方法があります。
+この記事では、イベント処理、対話機能、および埋め込み SVG コンテンツの操作について記述しています。
 
-ブラウザーの既定の動作を `evt.preventDefault( )` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
+ブラウザーの既定の動作を `evt.preventDefault()` メソッドで上書きしたり、イベントリスナーを `element.addEventListener(event, function, useCapture)` という構文でオブジェクトに追加したり、要素のプロパティを `svgElement.style.setProperty("fill-opacity", "0.0", "")` などで設定することが可能です。 3 つの引数がすべてプロパティを設定していることに注意してください。
 
 ### イベントコードの既定の挙動を防ぐ
 
@@ -14,7 +16,7 @@ original_slug: Web/SVG/Scripting
 
 ### オブジェクトに `eventListener` を使う
 
-`addEventListener()` や `removeEventListener()` は、対話的な SVG を書くときとても勇湯王です。これらのメソッドの第二引数として、 `handleEvent` インターフェイスを実装するオブジェクトを渡すことができます。
+`addEventListener()` や `removeEventListener()` は、対話的な SVG を書くときとても有効です。これらのメソッドの第 2 引数として、 `handleEvent` インターフェイスを実装するオブジェクトを渡すことができます。
 
 ```js
 function myRect(x, y, w, h, message) {
@@ -29,7 +31,7 @@ function myRect(x, y, w, h, message) {
 
   this.rect.addEventListener("click", this, false);
 
-  this.handleEvent = function (evt) {
+  this.handleEvent = (evt) => {
     switch (evt.type) {
       case "click":
         alert(this.message);
@@ -39,12 +41,12 @@ function myRect(x, y, w, h, message) {
 }
 ```
 
-## 文書間のスクリプティング - 埋め込み SVG の参照
+## 文書間のスクリプト処理 - 埋め込み SVG の参照
 
 HTML 内で SVG を使用する場合、Adobe の SVG Viewer 3.0 は自動的に `svgDocument` という SVG 文書を指すウィンドウのプロパティを含みます。これは、Mozilla のネイティブ SVG 実装には当てはまりません。したがって、 `window.svgDocument` を使用しても Mozilla ではうまくいきません。その代わりに、
 
 ```js
-var svgDoc = document.embeds["name_of_svg"].getSVGDocument();
+const svgDoc = document.embeds["name_of_svg"].getSVGDocument();
 ```
 
 を使用して埋め込まれた SVG 文書の参照を取得することができます。
@@ -52,7 +54,7 @@ var svgDoc = document.embeds["name_of_svg"].getSVGDocument();
 SVG 文書を表す {{domxref("Document")}} にアクセスするには、以下のように {{domxref("HTMLIFrameElement.contentDocument")}} （文書が {{HTMLElement("iframe")}} で表現されている場合）または {{domxref("HTMLObjectElement.contentDocument")}} （文書が {{HTMLElement("object")}} 要素で表現されている場合）に注目するとよいでしょう。
 
 ```js
-var svgDoc = document.getElementById("iframe_element").contentDocument;
+const svgDoc = document.getElementById("iframe_element").contentDocument;
 ```
 
 さらに、{{HTMLElement("iframe")}}, {{HTMLElement("embed")}}, {{HTMLElement("object")}} の各要素は `getSVGDocument()` というメソッドを提供しており、要素の埋め込み SVG を表す {{domxref("XMLDocument")}} または要素が SVG 文書を表さない場合には `null` を返します。
@@ -61,9 +63,9 @@ var svgDoc = document.getElementById("iframe_element").contentDocument;
 
 > **メモ:** `SVGDocument` インターフェイスに言及しているドキュメントを見かけることがあります。 SVG 2 より前は、 SVG 文書はこのインターフェイスを使って表現されていました。しかし、現在では SVG 文書は代わりに {{domxref("XMLDocument")}} インターフェイスを用いて表現されています。
 
-### 文書をまたがるスクリプティング - JavaScript 関数の呼び出し
+### 文書をまたがるスクリプト処理 - JavaScript 関数の呼び出し
 
-HTML 文書に埋め込まれた SVG ファイルから HTML ファイルの中にある JavaScript 関数を呼び出すとき、その関数を参照するには `parent.functionname()` を使うべきです。Adobe SVG Viewer プラグインは `functionname()` の利用を許可していますが、このようなことを行うには適していません。
+HTML 文書に埋め込まれた SVG ファイルから HTML ファイルの中にある JavaScript 関数を呼び出すとき、その関数を参照するには `parent.functionName()` を使うべきです。Adobe SVG viewer プラグインは `functionName()` の利用を許可していますが、このようなことを行うには適していません。
 
 > **メモ:** [SVG wiki](https://web.archive.org/web/20100223210744/http://wiki.svg.org/Inter-Document_Communication) によると、 JavaScript の変数 `"parent"` は Adobe の SVG バージョン 6 プレビュープラグインでは壊れているとのことです。回避策として、`"parent"`の代わりに`"top"`を使用することが提案されています。このプラグインはベータ版なので、おそらく無視しても大丈夫でしょう。
 

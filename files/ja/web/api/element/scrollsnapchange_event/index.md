@@ -3,7 +3,7 @@ title: "Element: scrollsnapchange イベント"
 short-title: scrollsnapchange
 slug: Web/API/Element/scrollsnapchange_event
 l10n:
-  sourceCommit: 3b3394b9b1e966bb1d397bd6e50e2fb5bde7b3c5
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef}}{{SeeCompatTable}}
@@ -16,10 +16,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("scrollsnapchange", (event) => {});
+```js-nolint
+addEventListener("scrollsnapchange", (event) => { })
 
-onscrollsnapchange = (event) => {};
+onscrollsnapchange = (event) => { }
 ```
 
 ## イベント型

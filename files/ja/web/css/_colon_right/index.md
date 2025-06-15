@@ -1,9 +1,11 @@
 ---
 title: :right
 slug: Web/CSS/:right
+l10n:
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-{{ CSSRef() }}
+{{CSSRef}}
 
 **`:right`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使われ、印刷文書の右側のページすべてを表します。
 
@@ -17,12 +19,14 @@ slug: Web/CSS/:right
 そのページが左側か右側かは、文書の主要な書字方向によって決まります。例えば、最初のページの主な書字方向が左から右であれば `:right` ページになります。書字方向が右から左であれば {{Cssxref(":left")}} ページになります。
 
 > [!NOTE]
-> この擬似クラスは、*ページボックス*の {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, {{ Cssxref("background") }} の各プロパティのみを変更するために使用することができます。他のすべてのプロパティは無視され、ページ内の文書コンテンツではなく、ページボックスにのみ影響します。
+> この擬似クラスは、ページボックスの {{ Cssxref("margin") }}, {{ Cssxref("padding") }}, {{ Cssxref("border") }}, {{ Cssxref("background") }} の各プロパティのみを変更するために使用することができます。他のすべてのプロパティは無視され、ページ内の文書コンテンツではなく、ページボックスにのみ影響します。
 
 ## 構文
 
-```
-:right
+```css
+:right {
+  /* ... */
+}
 ```
 
 ## 例
