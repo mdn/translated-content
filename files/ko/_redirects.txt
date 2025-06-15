@@ -193,6 +193,7 @@
 /ko/docs/Glossary/I18N	/ko/docs/Glossary/Internationalization
 /ko/docs/Glossary/Index	/ko/docs/Glossary
 /ko/docs/Glossary/Internationalization_and_localization	/ko/docs/conflicting/Glossary/Internationalization
+/ko/docs/Glossary/Proxy_servers_and_tunneling	/ko/docs/orphaned/Glossary/Proxy_servers_and_tunneling
 /ko/docs/Glossary/Rendering_engine	/ko/docs/Glossary/Engine/Rendering
 /ko/docs/Glossary/Routers	/ko/docs/Glossary/Router
 /ko/docs/Glossary/Second-level_Domain	/ko/docs/conflicting/Glossary/SLD
@@ -1420,6 +1421,7 @@
 /ko/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content	/ko/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
 /ko/docs/Web/Security/Securing_your_site	/ko/docs/Web/Security/Practical_implementation_guides
 /ko/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ko/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ko/docs/Web/Security/Types_of_attacks	/ko/docs/Web/Security/Attacks
 /ko/docs/Web/Tutorials	/ko/docs/MDN/Tutorials
 /ko/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs	/ko/docs/Web/URI/Guides/Choosing_between_www_and_non-www_URLs
 /ko/docs/Web/URI/Schemes/data	/ko/docs/Web/URI/Reference/Schemes/data
