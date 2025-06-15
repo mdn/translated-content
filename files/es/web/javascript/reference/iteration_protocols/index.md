@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 El protocolo **iterable** le permite a los objetos en JavaScript definir o personalizar su comportamiento de iteración, como por ejemplo qué valores son iterados dentro de una sentencia {{jsxref("Statements/for...of", "for..of")}}. Algunos objetos nativos, como {{jsxref("Array")}} o {{jsxref("Map")}}, tienen un comportamiento de iteración por defecto, mientras otros objetos (como por ejemplo {{jsxref("Object")}}) no.
 
-Para ser iterable, un objeto debe implementar el método **@@iterator**, lo cual significa que el objeto (o uno de los objetos dentro de su [cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)) debe tener una propiedad con un identificador {{jsxref("Symbol")}}`.iterator`:
+Para ser iterable, un objeto debe implementar el método **@@iterator**, lo cual significa que el objeto (o uno de los objetos dentro de su [cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)) debe tener una propiedad con un identificador {{jsxref("Symbol")}}`.iterator`:
 
 - Propiedad
   - : `[Symbol.iterator]`
@@ -161,7 +161,7 @@ De igual manera {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Pr
 
 ### Sintaxis que espera un iterable
 
-Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
+Algunas declaraciones y expresiones esperan iterables, por ejemplo el bucle [`for-of`](/es/docs/Web/JavaScript/Reference/Statements/for...of), el[operador de propagación _spread operator_](/es/docs/Web/JavaScript/Reference/Operators/Spread_syntax), la expresión [`Yield*`](/es/docs/Web/JavaScript/Reference/Operators/yield*), y la [asignación desestructurada _destructuring assignment_](/es/docs/Web/JavaScript/Reference/Operators/Destructuring).
 
 ```js
 for (let value of ["a", "b", "c"]) {

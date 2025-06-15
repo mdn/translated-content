@@ -16,15 +16,15 @@ La lista de [supported media formats](/es/docs/Web/Media/Formats) (formatos de m
 _Hereda las propiedades de los interfaces anteriores, {{domxref("HTMLMediaElement")}}, y_ _{{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLVideoElement.height")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`height`](/es/docs/Web/HTML/Element/video#height), el cual especifica la altura del area mostrada, en pixeles CSS.
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`height`](/es/docs/Web/HTML/Reference/Elements/video#height), el cual especifica la altura del area mostrada, en pixeles CSS.
 - {{domxref("HTMLVideoElement.poster")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`poster`](/es/docs/Web/HTML/Element/video#poster), el cual especifica que imagen sera mostrada en la ausencia de data de video.
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`poster`](/es/docs/Web/HTML/Reference/Elements/video#poster), el cual especifica que imagen sera mostrada en la ausencia de data de video.
 - {{domxref("HTMLVideoElement.videoHeight")}} {{readonlyInline}}
   - : Devuelve un `unsigned long` que contiene la altura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
 - {{domxref("HTMLVideoElement.videoWidth")}} {{readonlyInline}}
   - : Devuelve un `unsigned long` que contiene la anchura intrinsica del recurso en pixeles CSS, tomando en consideracion las dimensiones, aspecto proporcional, apertura limpia, resolucion, etc., ya definidas por el formato usado por el recurso. Si el estado disponible del elemento es `HAVE_NOTHING`, su valor es `0`.
 - {{domxref("HTMLVideoElement.width")}}
-  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`width`](/es/docs/Web/HTML/Element/video#width), el cual especifica la anchura del area mostrada, en pixeles CSS.
+  - : Es un {{domxref("DOMString")}} que refleja el atributo HTML [`width`](/es/docs/Web/HTML/Reference/Elements/video#width), el cual especifica la anchura del area mostrada, en pixeles CSS.
 
 ### Propiedades especificas para Gecko
 

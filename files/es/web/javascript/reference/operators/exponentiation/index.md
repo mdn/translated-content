@@ -33,7 +33,7 @@ x ** y
 
 ## Descripción
 
-El operador `**` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar los operandos a un valor numérico](/es/docs/Web/JavaScript/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una exponenciación BigInt si el operando se convirtió en un BigInt; de lo contrario, realiza la negación de número. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
+El operador `**` acepta dos tipos de operandos: número y [BigInt](/es/docs/Web/JavaScript/Reference/Global_Objects/BigInt). Primero [intenta transformar los operandos a un valor numérico](/es/docs/Web/JavaScript/Guide/Data_structures#numeric_coercion) y prueba sus tipos. Realiza una exponenciación BigInt si el operando se convirtió en un BigInt; de lo contrario, realiza la negación de número. Se genera un {{jsxref("TypeError")}} si un operando es convertido a BigInt pero el otro se convierte en un número.
 
 Tanto para números como para BigInts, `0` elevado a una potencia positiva devuelve `0` y `0` elevado a una potencia de `0` devuelve `1`. Para números, `0` elevado a un número negativo devuelve `Infinity`, mientras que `-0` elevado a un número negativo devuelve `-Infinity`.
 
