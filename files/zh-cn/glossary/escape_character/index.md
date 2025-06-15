@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**转义字符**是指一种{{glossary("character", "字符")}}，它会导致其后的一个或多个字符被以不同的方式解释。这形成了**转义序列**，通常用于表示在字面上打印时具有特殊含义的字符，例如字符串字面量中的引号字符。转义序列还有其他用途，尤其是在[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#转义序列)中。
+属于**转义字符**一类的{{glossary("character", "字符")}}会导致紧随其后的一个或多个字符被以不同的方式解释，形成**转义序列**。这通常用于表示在字面上打印时具有特殊含义的字符，例如字符串字面量中的引号字符。转义序列还有其他用途，尤其是在[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions#转义序列)中。
 
 - 在 JavaScript 的[正则表达式](/zh-CN/docs/Web/JavaScript/Reference/Regular_expressions/Character_escape)、[字符串字面量](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#字面量)和[标识符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#标识符)中，可以使用反斜杠（`\`）来转义字符，如 `\'`、`\"`、`\u0026` 等。
 - 在 CSS 标识符中，可以使用反斜杠（`\`）转义字符，如 `\\`、`\n`、`\26` 等。详见[转义字符](/zh-CN/docs/Web/CSS/ident#转义字符)。
@@ -20,5 +20,5 @@ l10n:
   - {{glossary("Character", "字符")}}
   - {{glossary("Character reference", "字符引用")}}
   - {{glossary("Code point", "码点")}}
-- 维基百科山的[转义字符](https://zh.wikipedia.org/wiki/转义字符)
-- 维基百科山的[转义序列](https://zh.wikipedia.org/wiki/转义序列)
+- 维基百科上的[转义字符](https://zh.wikipedia.org/wiki/转义字符)
+- 维基百科上的[转义序列](https://zh.wikipedia.org/wiki/转义序列)
