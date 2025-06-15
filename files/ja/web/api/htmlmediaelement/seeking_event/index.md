@@ -3,7 +3,7 @@ title: "HTMLMediaElement: seeking イベント"
 short-title: seeking
 slug: Web/API/HTMLMediaElement/seeking_event
 l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
 {{APIRef("HTMLMediaElement")}}
@@ -16,10 +16,10 @@ l10n:
 
 このイベントを {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("seeking", (event) => {});
+```js-nolint
+addEventListener("seeking", (event) => { })
 
-onseeking = (event) => {};
+onseeking = (event) => { }
 ```
 
 ## イベント型
