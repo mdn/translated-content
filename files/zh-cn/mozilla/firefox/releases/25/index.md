@@ -33,7 +33,7 @@ slug: Mozilla/Firefox/Releases/25
 
 - 在 Windows 上新增了 `KeyboardEvent.key` 属性对几个与 IME 有关的键盘按键的支持 ([Firefox bug 865565](https://bugzil.la/865565)), 查看 [各按键对应的 key 属性列表](/zh-CN/docs/Web/API/KeyboardEvent#keyname_table_win) 了解详情。
 - Metrofox 的键盘事件和桌面版实现统一 ([Firefox bug 843236](https://bugzil.la/843236)).
-- 如果使用 preventDefault() 阻止了 keydown 事件的默认行为，则后续的 [keypress 事件就不会触发](</zh-CN/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) ([Firefox bug 501496](https://bugzil.la/501496))
+- 如果使用 preventDefault() 阻止了 keydown 事件的默认行为，则后续的 [keypress 事件就不会触发](</zh-CN/docs/Web/API/Element/keydown_event#preventDefault()_of_keydown_event>) ([Firefox bug 501496](https://bugzil.la/501496))
 - 实现了 {{domxref("HTMLIFrameElement")}} 接口的 `srcDoc` 属性，可以用 HTML 代码来定义 {{HTMLElement("iframe")}} 元素的文档内容 ([Firefox bug 802895](https://bugzil.la/802895)).
 - 实现了 {{domxref("HTMLTableElement")}} 接口的 `createTBody()` 方法，可以用来获取 (创建) 表格的 {{HTMLElement("tbody")}} 子元素 ([Firefox bug 813034](https://bugzil.la/813034)).
 - {{domxref("Range.collapse")}} 方法的 `toStart` 参数变为可选，且默认值为 `false` ([Firefox bug 891340](https://bugzil.la/891340)).
