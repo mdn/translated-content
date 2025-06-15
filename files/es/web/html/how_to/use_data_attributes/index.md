@@ -1,7 +1,7 @@
 ---
 title: Uso de atributos de datos
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
-original_slug: Learn/HTML/Howto/Use_data_attributes
+slug: Web/HTML/How_to/Use_data_attributes
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 ---
 
 {{LearnSidebar}}
