@@ -161,7 +161,7 @@ for (const value of myIterable) {
 
 ### 反復可能オブジェクトが必要な構文
 
-{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring_assignment", "分割代入", "", 1)}}などの文や式は、反復可能オブジェクトを必要とします。
+{{jsxref("Statements/for...of", "for...of")}} ループ、{{jsxref("Operators/Spread_syntax", "スプレッド構文", "", 1)}}、{{jsxref("Operators/yield*", "yield*")}}、{{jsxref("Operators/Destructuring_assignment", "構造分解", "", 1)}}などの文や式は、反復可能オブジェクトを必要とします。
 
 ```js
 for (const value of ["a", "b", "c"]) {

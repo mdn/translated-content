@@ -318,15 +318,6 @@ HTML 文档的 `Document` 接口继承自 {{DOMxRef("HTMLDocument")}} 接口，�
 - {{DOMxRef("Document/animationstart_event", "animationstart")}}
   - : 在动画开始时触发。
 
-### 剪切板事件
-
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : 在用户通过浏览器的用户界面使用复制操作时触发。
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : 在用户通过浏览器的用户界面使用剪切操作时触发。
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : 在用户通过浏览器的用户界面使用粘贴操作时触发。
-
 ### 拖放事件
 
 - {{DOMxRef("Document/drag_event", "drag")}}

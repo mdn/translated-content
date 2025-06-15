@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9de3d03957f1d66f02f45400a6981372aa368c1f
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 <table>
   <tbody>
     <tr>

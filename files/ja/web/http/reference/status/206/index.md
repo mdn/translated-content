@@ -1,9 +1,8 @@
 ---
 title: 206 Partial Content
 slug: Web/HTTP/Reference/Status/206
-original_slug: Web/HTTP/Status/206
 l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

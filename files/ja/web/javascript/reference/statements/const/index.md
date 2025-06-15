@@ -137,7 +137,7 @@ MY_ARRAY = ["B"];
 MY_ARRAY.push("A"); // ["A"]
 ```
 
-### 分割代入による宣言
+### 構造分解による宣言
 
 それぞれの `=` の左辺はバインドパターンにもなります。これにより、一度に複数の変数を作成することができます。
 
@@ -147,7 +147,7 @@ const [, a, b, c] = result;
 console.log(a, b, c); // "aaa" "b" "cc"
 ```
 
-詳しくは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を参照してください。
+詳しくは、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を参照してください。
 
 ## 仕様書
 

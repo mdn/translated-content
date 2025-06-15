@@ -2,14 +2,14 @@
 title: list-style
 slug: Web/CSS/list-style
 l10n:
-  sourceCommit: f30dffedcab86e62919265f08238ed712434a817
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`list-style`** は CSS の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、リストのすべてのスタイルプロパティを設定します。
 
-{{InteractiveExample("CSS Demo: list-style")}}
+{{InteractiveExample("CSS デモ: list-style")}}
 
 ```css interactive-example-choice
 list-style: square;

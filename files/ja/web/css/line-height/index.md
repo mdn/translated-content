@@ -2,12 +2,12 @@
 title: line-height
 slug: Web/CSS/line-height
 l10n:
-  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
+  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---
 
 {{CSSRef}}
 
-**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
+**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Glossary/Replaced_elements)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
 
 {{InteractiveExample("CSS Demo: line-height")}}
 
@@ -239,3 +239,4 @@ h1 {
 ## 関連情報
 
 - {{Cssxref("font")}}, {{Cssxref("font-size")}}
+- {{glossary("Leading", "行送り")}}

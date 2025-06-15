@@ -16,7 +16,7 @@ Firefox 14 shipped on July 17, 2012. This article lists key changes that are use
 
 ### DOM
 
-- [input](/zh-CN/docs/DOM/DOM_event_reference/input) events are fired also on editing host element of [contenteditable](/zh-CN/docs/Web/API/HTMLElement/contentEditable) editor and root element of [designMode](/zh-CN/docs/Web/API/Document/designMode) editor.
+- [input](/zh-CN/docs/Web/API/Element/input_event) events are fired also on editing host element of [contenteditable](/zh-CN/docs/Web/API/HTMLElement/contentEditable) editor and root element of [designMode](/zh-CN/docs/Web/API/Document/designMode) editor.
 - {{ domxref("DOMException", "DOMException.code") }}已被废弃，根据最新的 DOM Level 4 规范。
 - {{ domxref("Range.insertNode()") }} method now works correctly when used on collapsed ranges.
 - The {{ domxref("BlobBuilder", "MozBlobBuilder") }} interface has been deprecated in favor of the constructor on {{ domxref("Blob") }}. If you use `MozBlobBuilder` you'll see a warning message in the Web Console.

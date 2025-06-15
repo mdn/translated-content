@@ -2,7 +2,7 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: 9c402dca732167ee04196c5e1785eaacbf4bb5f6
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
 {{jsSidebar("Intermediate")}}

@@ -100,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### Object の反復処理
 
-[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#配列の分割代入)を使って、オブジェクトを簡単に反復処理することができます。
+[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#配列の構造分解)を使って、オブジェクトを簡単に反復処理することができます。
 
 ```js
 // for...of ループの使用

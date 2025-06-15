@@ -1,11 +1,9 @@
 ---
-title: 互联网是如何工作的
+title: 互联网是如何工作的？
 slug: Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work
 l10n:
   sourceCommit: 8dfa0ecf5bda526ccd6244ca5c7720767e3f013f
 ---
-
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 这篇文章讨论什么是互联网以及它是如何工作的。
 

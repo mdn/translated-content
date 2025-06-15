@@ -1,16 +1,15 @@
 ---
 title: 既存の C モジュールから WebAssembly へのコンパイル
 slug: WebAssembly/Guides/Existing_C_to_Wasm
-original_slug: WebAssembly/existing_C_to_Wasm
+l10n:
+  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
 ---
-
-{{WebAssemblySidebar}}
 
 WebAssembly の主な用途は、既存の C ライブラリーのエコシステムを取得し、開発者がウェブ上でそれらを利用できるようにすることです。
 
 これらのライブラリーは、C の標準ライブラリー、オペレーティングシステム、ファイルシステムやその他のものにしばしば依存します。 Emscripten は、いくつかの[制限](https://emscripten.org/docs/porting/guidelines/api_limitations.html)はあるものの、これらの機能のほとんどを提供しています。
 
-例として、 WebP のエンコーダーを wasm にコンパイルしてみましょう。WebP コーデックのソースは C 言語で書かれており、 [GitHub にあり](https://github.com/webmproject/libwebp)、拡張 [API](https://developers.google.com/speed/webp/docs/api) のドキュメントも同様に利用できます。これはとても良いスタート地点です。
+例として、 WebP のエンコーダーを Wasm にコンパイルしてみましょう。WebP コーデックのソースは C 言語で書かれており、 [GitHub にあり](https://github.com/webmproject/libwebp)、拡張 [API](https://developers.google.com/speed/webp/docs/api) のドキュメントも同様に利用できます。これはとても良いスタート地点です。
 
 ```bash
 git clone https://github.com/webmproject/libwebp
@@ -18,13 +17,13 @@ git clone https://github.com/webmproject/libwebp
 
 簡単な例から始めましょう。 `WebPGetEncoderVersion()` を `encode.h` から JavaScript に公開するために、 `webp.c` という C のファイルを書きます。
 
-```cpp
+```c
 #include "emscripten.h"
 #include "src/webp/encode.h"
 
 EMSCRIPTEN_KEEPALIVE
 int version() {
-  return WebPGetEncoderVersion();
+    return WebPGetEncoderVersion();
 }
 ```
 
@@ -33,10 +32,11 @@ int version() {
 このプログラムをコンパイルするには、コンパイラーに `-I` フラグを使って libwebp のヘッダーファイルがどこにあるか指示し、さらに libwebp の必要な C ファイルをすべて渡す必要があります。コンパイラーに**すべての** C ファイルを渡し、コンパイラーが不要なものをすべて取り除いてくれるようにすると便利です。これはこのライブラリーではうまくいくようです。
 
 ```bash
-$ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
+emcc -O3 -s WASM=1 -s EXPORTED_RUNTIME_METHODS='["cwrap"]' \
     -I libwebp \
     webp.c \
-    libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c
+    libwebp/src/{dec,dsp,demux,enc,mux,utils}/*.c \
+    libwebp/sharpyuv/*.c
 ```
 
 > [!NOTE]
@@ -67,7 +67,7 @@ $ emcc -O3 -s WASM=1 -s EXTRA_EXPORTED_RUNTIME_METHODS='["cwrap"]' \
 
 エンコーダーのバージョン番号を取得するのは素晴らしいことですが、画像をエンコードした方が印象的です。どうすればいいのでしょうか？
 
-最初に答えなければならない質問は、どうやって画像を wasm に入れるのかということです。libwebp の [Encoding API](https://developers.google.com/speed/webp/docs/api#simple_encoding_api) を見ると、RGB、RGBA、BGR、BGRA のバイト列を期待していることがわかります。幸いにも Canvas API には {{domxref("CanvasRenderingContext2D.getImageData")}} があり、RGBA の画像データを含む {{jsxref("Uint8ClampedArray")}}が得られます。
+最初に答えなければならない質問は、どうやって画像を Wasm に入れるのかということです。libwebp の [Encoding API](https://developers.google.com/speed/webp/docs/api#simple_encoding_api) を見ると、RGB、RGBA、BGR、BGRA のバイト列を期待していることがわかります。幸いにも Canvas API には {{domxref("CanvasRenderingContext2D.getImageData")}} があり、RGBA の画像データを含む {{jsxref("Uint8ClampedArray")}}が得られます。
 
 ```js
 async function loadImage(src) {
@@ -85,19 +85,19 @@ async function loadImage(src) {
 }
 ```
 
-これで、残った「唯一の」問題は、 JavaScript から wasm にデータをコピーすることだけです。そのためには、追加で 2 つの関数を公開する必要があります。 1 つは、 wasm 内で画像のためのメモリーを確保する関数、もう 1 つは、それを再び解放する関数です。
+これで、残った「唯一の」問題は、 JavaScript から Wasm にデータをコピーすることだけです。そのためには、追加で 2 つの関数を公開する必要があります。 1 つは、 Wasm 内で画像のためのメモリーを確保する関数、もう 1 つは、それを再び解放する関数です。
 
-```cpp
+```c
 #include <stdlib.h> // required for malloc definition
 
 EMSCRIPTEN_KEEPALIVE
 uint8_t* create_buffer(int width, int height) {
-  return malloc(width * height * 4 * sizeof(uint8_t));
+    return malloc(width * height * 4 * sizeof(uint8_t));
 }
 
 EMSCRIPTEN_KEEPALIVE
 void destroy_buffer(uint8_t* p) {
-  free(p);
+    free(p);
 }
 ```
 
@@ -117,27 +117,27 @@ const api = {
 const image = await loadImage("./image.jpg");
 const p = api.create_buffer(image.width, image.height);
 Module.HEAP8.set(image.data, p);
-// ... call encoder ...
+// … call encoder …
 api.destroy_buffer(p);
 ```
 
 ### 画像をエンコードする
 
-wasm で画像を使えるようになりました。いよいよ WebP エンコーダーを呼び出して動かす時が来ました。[WebP のドキュメント](https://developers.google.com/speed/webp/docs/api#simple_encoding_api)を見ると、`WebPEncodeRGBA`がふさわしいようです。この関数は、入力画像へのポインターと画像の寸法、そして 0 から 100 の間の品質オプションを受け取ります。また、出力バッファーを確保するので、 WebP 画像の処理が終わったら `WebPFree()` を使って解放する必要があります。
+Wasm で画像を使えるようになりました。いよいよ WebP エンコーダーを呼び出して動かす時が来ました。[WebP のドキュメント](https://developers.google.com/speed/webp/docs/api#simple_encoding_api)を見ると、`WebPEncodeRGBA`がふさわしいようです。この関数は、入力画像へのポインターと画像の寸法、そして 0 から 100 の間の品質オプションを受け取ります。また、出力バッファーを確保するので、 WebP 画像の処理が終わったら `WebPFree()` を使って解放する必要があります。
 
-エンコード処理の結果は、出力バッファーとその長さになります。C 言語の関数は（メモリーを動的に確保しない限り）返値の型として配列を使うことができないため、この例では静的なグローバル配列を使用しています。これはクリーンな C 言語とは言えないかもしれません。実際、これは wasm ポインターが 32 ビット幅であることに依存しています。しかし、これは話を単純にするための公正な手段です。
+エンコード処理の結果は、出力バッファーとその長さになります。C 言語の関数は（メモリーを動的に確保しない限り）返値の型として配列を使うことができないため、この例では静的なグローバル配列を使用しています。これはクリーンな C 言語とは言えないかもしれません。実際、これは Wasm ポインターが 32 ビット幅であることに依存しています。しかし、これは話を単純にするための公正な手段です。
 
-```cpp
+```c
 int result[2];
 EMSCRIPTEN_KEEPALIVE
 void encode(uint8_t* img_in, int width, int height, float quality) {
-  uint8_t* img_out;
-  size_t size;
+    uint8_t* img_out;
+    size_t size;
 
-  size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &img_out);
+    size = WebPEncodeRGBA(img_in, width, height, width * 4, quality, &img_out);
 
-  result[0] = (int)img_out;
-  result[1] = size;
+    result[0] = (int)img_out;
+    result[1] = size;
 }
 
 EMSCRIPTEN_KEEPALIVE
@@ -156,7 +156,7 @@ int get_result_size() {
 }
 ```
 
-これで、エンコーディング関数を呼び出し、ポインターと画像サイズを取得し、それをあなたの JavaScript バッファーに格納し、プロセス中で確保されたすべての wasm バッファーを解放することができるようになりました。
+これで、エンコーディング関数を呼び出し、ポインターと画像サイズを取得し、それをあなたの JavaScript バッファーに格納し、プロセス中で確保されたすべての Wasm バッファーを解放することができるようになりました。
 
 ```js
 api.encode(p, image.width, image.height, 100);
@@ -173,9 +173,9 @@ api.free_result(resultPointer);
 
 > **メモ:** `new Uint8Array(someBuffer)` は同じメモリーチャンク上に新しいビューを作成し、 `new Uint8Array(someTypedArray)` はデータをコピーします。
 
-画像のサイズによっては、 wasm が入力画像と出力画像を格納するためのメモリーを十分に大きくすることができないというエラーが発生する可能性があります。
+画像のサイズによっては、 Wasm が入力画像と出力画像を格納するためのメモリーを十分に大きくすることができないというエラーが発生する可能性があります。
 
-![Screenshot of the DevTools console showing an error.](error.png)
+![エラーを示す開発者ツールのコンソールの画面ショットです。](error.png)
 
 幸いにも、この問題の解決策はエラーメッセージの中にあります。コンパイルコマンドに `-s ALLOW_MEMORY_GROWTH=1` を追加するだけです。
 
@@ -186,6 +186,7 @@ const blob = new Blob([result], { type: "image/webp" });
 const blobURL = URL.createObjectURL(blob);
 const img = document.createElement("img");
 img.src = blobURL;
+img.alt = "a useful description";
 document.body.appendChild(img);
 ```
 

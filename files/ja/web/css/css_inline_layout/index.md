@@ -2,7 +2,7 @@
 title: CSS インラインレイアウト
 slug: Web/CSS/CSS_inline_layout
 l10n:
-  sourceCommit: 58dd075cc106f92659ed0a940361969b117d47b1
+  sourceCommit: 113279ab09692d869866519106e25cba8a20abb8
 ---
 
 {{CSSRef}}
@@ -13,16 +13,30 @@ l10n:
 
 ### プロパティ
 
+- {{cssxref("alignment-baseline")}}
 - {{cssxref("dominant-baseline")}}
 - {{cssxref("initial-letter")}}
 - {{cssxref("line-height")}}
+- {{cssxref("text-box-edge")}}
+- {{cssxref("text-box-trim")}}
+- {{cssxref("text-box")}} 一括指定
 - {{cssxref("vertical-align")}}
 
-この仕様では、`alignment-baseline`、`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge`、`text-box`、`text-box-edge`、`text-box-trim` プロパティも定義していますが、これらは現時点ではどのブラウザーも対応していません。
+この仕様では、`baseline-shift`、`baseline-source`、`initial-letter-align`、`initial-letter-wrap`、`inline-sizing`、`line-fit-edge` の各プロパティも定義していますが、これらは現時点ではどのブラウザーも対応していません。
+
+### データ型
+
+- {{cssxref("&lt;text-edge&gt;")}}
 
 ### 用語集の用語
 
 - {{glossary("baseline/typography", "ベースライン")}}
+- {{glossary("leading", "行送り")}}
+
+## ガイド
+
+- [インライン整形コンテキスト](/ja/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+  - : インライン整形コンテキストを説明します。
 
 ## 関連概念
 

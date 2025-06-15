@@ -1,14 +1,13 @@
 ---
 title: 304 Not Modified
 slug: Web/HTTP/Reference/Status/304
-original_slug: Web/HTTP/Status/304
 l10n:
-  sourceCommit: ae86913908651e6008079242691e06b5e01d1c78
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`304 Not Modified`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースを再送する必要がないことを示します。
+HTTP の **`304 Not Modified`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースを再送する必要がないことを示します。
 
 このレスポンスコードは、リクエストが[条件付き](/ja/docs/Web/HTTP/Guides/Conditional_requests)の {{HTTPMethod("GET")}} や {{HTTPMethod("HEAD")}} リクエストに {{HTTPHeader("If-None-Match")}} もしくは {{HTTPHeader("If-Modified-Since")}} ヘッダーが付いており、条件が 'false' と評価された時に送信されます。
 これは、クライアントがキャッシュしたリソースがまだ有効であり、条件が 'true' と評価された場合、サーバーはリソースとともに {{HTTPStatus("200", "200 OK")}} レスポンスを送信したであろうことを確認します。
@@ -24,7 +23,7 @@ HTTP **`304 Not Modified`** [リダイレクトレスポンス](/ja/docs/Web/HTT
 - {{HTTPHeader("Vary")}}
 
 > [!NOTE]
-> 多くのブラウザーの[開発ツールのネットワークパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)は `304` レスポンスにつながる追加のリクエストを作成するため、開発者はローカルキャッシュへのアクセスを見ることができます。
+> ブラウザーの[開発者ツールのネットワークパネル](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)の多くは、 `304` レスポンスにつながる追加のリクエストを作成するため、ローカルキャッシュへのアクセスが開発者から見えます。
 
 ## ステータス
 

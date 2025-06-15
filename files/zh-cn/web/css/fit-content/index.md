@@ -49,7 +49,7 @@ block-size: fit-content;
 }
 
 .item {
-  width: -moz-fit-content;
+  width: fit-content;
   background-color: #8ca0ff;
   padding: 5px;
   margin-bottom: 1em;

@@ -1,6 +1,5 @@
 ---
 title: Element：paste 事件
-short-title: paste
 slug: Web/API/Element/paste_event
 ---
 
@@ -86,6 +85,5 @@ target.addEventListener("paste", (event) => {
 
 ## 参见
 
-- 相关联事件：{{domxref("Element/cut_event", "cut")}}、{{domxref("Element/copy_event", "copy")}}
-- {{domxref("Document")}} 目标上的这个事件：{{domxref("Document/paste_event", "paste")}}
-- {{domxref("Window")}} 目标上的这个事件：{{domxref("Window/paste_event", "paste")}}
+- {{domxref("Element/cut_event", "cut")}} 事件
+- {{domxref("Element/copy_event", "copy")}} 事件

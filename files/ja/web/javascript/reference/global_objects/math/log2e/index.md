@@ -2,14 +2,14 @@
 title: Math.LOG2E
 slug: Web/JavaScript/Reference/Global_Objects/Math/LOG2E
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
 **`Math.LOG2E`** プロパティは 2 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 1.442 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.log2e()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.LOG2E", "shorter")}}
 
 ```js interactive-example
 function getLog2e() {
@@ -17,14 +17,14 @@ function getLog2e() {
 }
 
 console.log(getLog2e());
-// Expected output: 1.4426950408889634
+// 期待される出力: 1.4426950408889634
 ```
 
-## Value
+## 値
 
 <!-- prettier-ignore-start -->
 <math display="block">
-  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙾𝙶𝟸𝙴</mi><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.442</mn></mrow><annotation encoding="TeX">\mathtt{Math.LOG2E} = \log_2(\mathrm{e}) \approx 1.442</annotation></semantics>
+  <semantics><mrow><mi>𝙼𝚊𝚝𝚑.𝙻𝙾𝙶𝟸𝙴</mi><mo>=</mo><msub><mo lspace="0em" rspace="0em">log</mo><mn>2</mn></msub><mo stretchy="false">(</mo><mi mathvariant="normal">e</mi><mo stretchy="false">)</mo><mo>≈</mo><mn>1.443</mn></mrow><annotation encoding="TeX">\mathtt{Math.LOG2E} = \log_2(\mathrm{e}) \approx 1.443</annotation></semantics>
 </math>
 <!-- prettier-ignore-end -->
 
@@ -32,7 +32,7 @@ console.log(getLog2e());
 
 ## 解説
 
-`LOG2E` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.LOG2E` として使用するようにしてください (`Math` はコンストラクターではありません)。
+`LOG2E` は `Math` オブジェクトの静的プロパティなので、 `Math` オブジェクトを生成してプロパティとして使用するのではなく、常に `Math.LOG2E` として使用するようにしてください（`Math` はコンストラクターではありません）。
 
 ## 例
 

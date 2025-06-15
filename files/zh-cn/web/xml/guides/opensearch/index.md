@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
 ---
 
-{{AddonSidebar}}
-
 [**OpenSearch 描述格式**](https://github.com/dewitt/opensearch)可用于描述搜索引擎的 Web 接口。这允许网站描述一个它自己的搜索引擎，浏览器或者其他客户端应用可以使用这个搜索引擎。OpenSearch 至少受到 Firefox、Safari 和 Chrome 的支持。（参见[参考资料](#参考资料)以获取其他浏览器文档的链接。）
 
 Firefox 还支持 OpenSearch 标准内尚未包含的额外特性（如搜索建议和 `<SearchForm>` 元素）。这篇文章会聚焦在如何创建支持 Firefox 的额外特性且和 OpenSearch 格式兼容的搜索插件。

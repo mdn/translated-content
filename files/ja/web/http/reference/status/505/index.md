@@ -1,14 +1,13 @@
 ---
 title: 505 HTTP Version Not Supported
 slug: Web/HTTP/Reference/Status/505
-original_slug: Web/HTTP/Status/505
 l10n:
-  sourceCommit: 6bef243050a1f49bf5b7f37e9c4552f7aa30e24d
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
-HTTP の **`505 HTTP Version Not Supported`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、リクエストで使用されている HTTP バージョンにサーバーが対応していないことを示します。
+HTTP の **`505 HTTP Version Not Supported`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、リクエストで使用されている HTTP バージョンにサーバーが対応していないことを示します。
 
 リクエスト行が `GET /path to resource HTTP/1.1` のように正しく形成されていない場合や、リクエスト行の終端が `\r\n` ではなく `\n` になっている場合などに、このエラーが発生することがよくあります。
 例えば、下記に示した例のように、ロードバランサーなどの仲介装置は転送されたリクエストの行を処理しない場合があります。

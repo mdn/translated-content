@@ -82,5 +82,3 @@ slug: Web/HTML/Reference/Attributes/crossorigin
 
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTML 属性：`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/HTML/")}}

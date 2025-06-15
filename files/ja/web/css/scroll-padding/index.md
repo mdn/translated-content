@@ -1,13 +1,15 @@
 ---
 title: scroll-padding
 slug: Web/CSS/scroll-padding
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`scroll-padding`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のすべての辺に一度にスクロールパディングを設定します。 {{cssxref("padding")}} プロパティで要素のパディングを設定するのとよく似ています。
 
-{{InteractiveExample("CSS Demo: scroll-padding")}}
+{{InteractiveExample("CSS デモ: scroll-padding")}}
 
 ```css interactive-example-choice
 scroll-padding: 0;
@@ -28,7 +30,7 @@ scroll-padding: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -95,6 +97,7 @@ scroll-padding: 10%;
 scroll-padding: inherit;
 scroll-padding: initial;
 scroll-padding: revert;
+scroll-padding: revert-layer;
 scroll-padding: unset;
 ```
 
@@ -124,4 +127,4 @@ scroll-padding: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

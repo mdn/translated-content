@@ -58,7 +58,7 @@ _変更なし。_
 - {{jsxref("Symbol.match")}} を追加しました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
 - {{jsxref("Symbol.match")}} プロパティが {{Glossary("truthy")}} な値であるオブジェクトを {{jsxref("String.prototype.startsWith")}}、{{jsxref("String.prototype.endsWith")}}、`String.prototype.contains` に渡すと、{{jsxref("TypeError")}} が発生するようになりました ([Firefox バグ 1054755](https://bugzil.la/1054755))。
 - {{jsxref("Symbol.match")}} プロパティが{{Glossary("truthy", "真値")}}であるパターンオブジェクトを使用して {{jsxref("Operators/new", "new")}} を伴わずに {{jsxref("RegExp")}} 関数を呼び出すと、パターンそのものが返るようになりました。また、パターンオブジェクトの `constructor` プロパティは {{jsxref("RegExp")}} 関数に等しくなります ([Firefox バグ 1147817](https://bugzil.la/1147817))。
-- JS1.7 の、for-in を使用する非標準の分割代入を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
+- JS1.7 の、for-in を使用する非標準の構造分解を廃止しました ([Firefox バグ 1083498](https://bugzil.la/1083498))。
 - [for...in](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで、[非標準の初期化式](/ja/docs/Web/JavaScript/Reference/Statements/for...in#firefox-specific_notes)を無視してコンソールに警告を表示するようになりました ([Firefox バグ 748550](https://bugzil.la/748550) および [Firefox バグ 1164741](https://bugzil.la/1164741))。
 - Unicode コードポイントのエスケープ書式 [`\u{xxxxxx}`](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#unicode_コードポイントエスケープ) をサポートしました ([Firefox バグ 320500](https://bugzil.la/320500))。
 - {{jsxref("String.prototype.includes", "String.prototype.contains", "#String.prototype.contains")}} は、{{jsxref("String.prototype.includes")}} に置き換えられました。`String.prototype.contains` はエイリアスとして維持します ([Firefox バグ 1102219](https://bugzil.la/1102219))。

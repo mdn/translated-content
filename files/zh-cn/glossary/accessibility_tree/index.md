@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**无障碍树**（Accessibility tree）包含大多数 HTML 元素的与{{Glossary("accessibility", "无障碍")}}相关的信息。
+**无障碍树**（Accessibility tree）包含大多数 HTML 元素中与{{Glossary("accessibility", "无障碍")}}相关的信息。
 
 浏览器将标记转换成一种内部表示形式，称为 [_DOM 树_](/zh-CN/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model)。DOM 树包含代表所有标记元素、属性和文本节点的对象。浏览器会根据 DOM 树创建无障碍树，而特定平台的无障碍 API 会使用该树提供辅助技术（如屏幕阅读器）可以理解的表示形式。
 

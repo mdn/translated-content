@@ -1,13 +1,15 @@
 ---
 title: scroll-margin-block
 slug: Web/CSS/scroll-margin-block
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 `scroll-margin-block` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、ブロック方向のスクロールマージンを設定します。
 
-{{InteractiveExample("CSS Demo: scroll-margin-block")}}
+{{InteractiveExample("CSS デモ: scroll-margin-block")}}
 
 ```css interactive-example-choice
 scroll-margin-block: 0;
@@ -28,7 +30,7 @@ scroll-margin-block: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -87,17 +89,18 @@ scroll-margin-block: 1em 0.5em;
 scroll-margin-block: inherit;
 scroll-margin-block: initial;
 scroll-margin-block: revert;
+scroll-margin-block: revert-layer;
 scroll-margin-block: unset;
 ```
 
 ### 値
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : スクロールコンテナーの対応する辺からの距離です。
 
 ## 解説
 
-`scroll-margin` の値はこのボックスをスナップポートに割り当てるために使用されるスクロールスナップ領域の定義の張り出し部分を表します。スクロールスナップ領域は、変換された境界ボックスを取り、その矩形の境界ボックス (スクロールコンテナーの座標空間内で軸方向に配置) を割り当てて、指定された張り出し部分を追加することによって決定されます。
+scroll-margin 系のプロパティは、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
 
 ## 公式定義
 
@@ -118,4 +121,4 @@ scroll-margin-block: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

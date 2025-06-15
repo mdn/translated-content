@@ -76,7 +76,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 > [!NOTE]
 > 当 Cookie 的过期时间（ `Expires`）被设定时，设定的日期和时间只与客户端相关，而不是服务端。
 
-如果你的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止[会话固定攻击（session fixation attacks）](/zh-CN/docs/Web/Security/Types_of_attacks#session_fixation)，在该攻击中第三方可以重用用户的会话。
+如果你的站点对用户进行身份验证，则每当用户进行身份验证时，它都应重新生成并重新发送会话 Cookie，甚至是已经存在的会话 Cookie。此技术有助于防止[会话固定攻击（session fixation attacks）](/zh-CN/docs/Web/Security/Attacks#session_fixation)，在该攻击中第三方可以重用用户的会话。
 
 ### 限制访问 Cookie
 
@@ -84,7 +84,7 @@ Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
 
 标记为 `Secure` 的 Cookie 只应通过被 HTTPS 协议加密过的请求发送给服务端。它永远不会使用不安全的 HTTP 发送（本地主机除外），这意味着{{Glossary("MitM", "中间人")}}攻击者无法轻松访问它。不安全的站点（在 URL 中带有 `http:`）无法使用 `Secure` 属性设置 cookie。但是，`Secure` 不会阻止对 cookie 中敏感信息的访问。例如，有权访问客户端硬盘（或，如果未设置 `HttpOnly` 属性，则为 JavaScript）的人可以读取和修改它。
 
-JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](/zh-CN/docs/Web/Security/Types_of_attacks#cross-site_scripting_xss)攻击。
+JavaScript {{domxref("Document.cookie")}} API 无法访问带有 `HttpOnly` 属性的 cookie；此类 Cookie 仅作用于服务器。例如，持久化服务器端会话的 Cookie 不需要对 JavaScript 可用，而应具有 `HttpOnly` 属性。此预防措施有助于缓解[跨站点脚本（XSS）](/zh-CN/docs/Web/Security/Attacks#cross-site_scripting_xss)攻击。
 
 示例：
 
@@ -142,7 +142,7 @@ Set-Cookie: mykey=myvalue; SameSite=Strict
 
 cookie 的机制使得服务器无法确认 cookie 是在安全来源上设置的，甚至无法确定 cookie 最初是在哪里设置的。
 
-子域上的易受攻击的应用程序可以使用 `Domain` 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。*会话劫持*攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（session fixation）](/zh-CN/docs/Web/Security/Types_of_attacks#session_fixation)。
+子域上的易受攻击的应用程序可以使用 `Domain` 属性设置 cookie，从而可以访问所有其他子域上的该 cookie。*会话劫持*攻击中可能会滥用此机制。有关主要缓解方法，请参阅[会话劫持（session fixation）](/zh-CN/docs/Web/Security/Attacks#session_fixation)。
 
 但是，作为[深度防御措施](<https://en.wikipedia.org/wiki/Defense_in_depth_(computing)>)，可以使用 *cookie 前缀*来断言有关 cookie 的特定事实。有两个前缀可用：
 

@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: autocomplete プロパティ"
 short-title: autocomplete
 slug: Web/API/HTMLTextAreaElement/autocomplete
 l10n:
-  sourceCommit: 050bcdba594e759c0a4dde172de5d334f5a3b20f
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}

@@ -92,7 +92,7 @@ td {
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
 - `bgcolor` {{deprecated_inline}}
-  - : 定義每個欄單元格的背景顏色。該值是一個 HTML 顏色，可以是一個以『`#`』為前綴的 [6 位十六進制 RGB 代碼](/zh-TW/docs/Web/CSS/hex-color)，或者是一個 [顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
+  - : 定義每個欄單元格的背景顏色。該值是一個 HTML 顏色，可以是一個以『`#`』為前綴的 [6 位十六進制 RGB 代碼](/zh-TW/docs/Web/CSS/hex-color)，或者是一個 [顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 - `char` {{deprecated_inline}}
   - : 指定每個欄單元格的內容對齊到一個字符的方式。當將 [`align`](#align) 未設置為 `char` 時，此屬性將被忽略，但仍將覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`char`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#char)。
 - `charoff` {{deprecated_inline}}

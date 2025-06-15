@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-inline
 slug: Web/CSS/scroll-padding-inline
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-inline` プロパティは、インライン方向の scroll-padding の個別指定を設定する一括指定プロパティです。
+`scroll-padding-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、インライン方向のスクロールパディングを設定します。
 
-{{InteractiveExample("CSS Demo: scroll-padding-inline")}}
+{{InteractiveExample("CSS デモ: scroll-padding-inline")}}
 
 ```css interactive-example-choice
 scroll-padding-inline: 0;
@@ -28,7 +30,7 @@ scroll-padding-inline: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -72,7 +74,7 @@ scroll-padding-inline: 2em;
 }
 ```
 
-scroll-padding 系のプロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+scroll-padding 系のプロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
 ## 構成要素のプロパティ
 
@@ -96,6 +98,7 @@ scroll-padding-inline: 10%;
 scroll-padding-inline: inherit;
 scroll-padding-inline: initial;
 scroll-padding-inline: revert;
+scroll-padding-inline: revert-layer;
 scroll-padding-inline: unset;
 ```
 
@@ -125,4 +128,4 @@ scroll-padding-inline: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

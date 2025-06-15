@@ -1,9 +1,8 @@
 ---
 title: 302 Found
 slug: Web/HTTP/Reference/Status/302
-original_slug: Web/HTTP/Status/302
 l10n:
-  sourceCommit: 6d81ba6606ce5473cadd085c37eaf4960e99a238
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -11,7 +10,7 @@ l10n:
 HTTP の **`302 Found`** [リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードは、リクエストされたリソースが一時的に {{HTTPHeader("Location")}} で示された URL へ移動したことを示します。
 
 このステータスを受信したブラウザーは、自動的に `Location` ヘッダーの中の URL にあるリソースをリクエストし、ユーザーを新しいページへリダイレクトさせます。
-このレスポンスを受け取った検索エンジンは、新しいリソースに元のURLへのリンクの属性を付与しないため、新しい URL に {{Glossary("SEO")}} の値が引き継がれません。
+このレスポンスを受け取った検索エンジンは、新しいリソースに元の URL へのリンクの属性を付与しないため、新しい URL に {{Glossary("SEO")}} の値が引き継がれません。
 
 > **メモ:** [Fetch Standard](https://fetch.spec.whatwg.org/#http-redirect-fetch) では、ユーザーエージェントが `302` を {{HTTPMethod("POST")}} リクエストの返信として受け取った場合、以降のリダイレクトリクエストは {{HTTPMethod("GET")}} メソッドを使用します。これは HTTP [仕様書](#仕様書)で許されている通りです。
 > ユーザーエージェントがリクエストを変更しないようにするには、代わりに {{HTTPStatus("307", "307 Temporary Redirect")}} を使用してください。これは `307` レスポンスの後でメソッドを変更することを禁止しています。

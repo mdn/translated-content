@@ -1,13 +1,15 @@
 ---
 title: scroll-margin-inline-end
 slug: Web/CSS/scroll-margin-inline-end
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-margin-inline-end` プロパティは、スクロールスナップ領域のインライン方向における末尾側のマージンを定義し、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
+`scroll-margin-inline-end` プロパティは、スクロールスナップ領域のインライン方向における末尾側のマージンを定義し、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
 
-{{InteractiveExample("CSS Demo: scroll-margin-inline-end")}}
+{{InteractiveExample("CSS デモ: scroll-margin-inline-end")}}
 
 ```css interactive-example-choice
 scroll-margin-inline-end: 0;
@@ -28,7 +30,7 @@ scroll-margin-inline-end: 2em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -83,12 +85,13 @@ scroll-margin-inline-end: 1em;
 scroll-margin-inline-end: inherit;
 scroll-margin-inline-end: initial;
 scroll-margin-inline-end: revert;
+scroll-margin-inline-end: revert-layer;
 scroll-margin-inline-end: unset;
 ```
 
 ### 値
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : スクロールコンテナーのインライン方向における末尾側の辺からみた外部の距離です。
 
 ## 公式定義
@@ -101,15 +104,15 @@ scroll-margin-inline-end: unset;
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 基本的なデモ
 
-この例では、上記のインタラクティブ例と非常によく似たものを実装していますが、ここではその実装方法を説明します。
+この例では、上記のインタラクティブサンプルととてもよく似たものを実装していますが、ここではその実装方法を説明します。
 
 ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。2 つ目と 3 つ目のブロックは、それぞれのブロックの右端に近いところでスナップします。
 
 #### HTML
 
-ブロックを表す HTML はとても簡単です。
+HTML には、4 つの子要素を持つスクローラーがあります。
 
 ```html
 <div class="scroller">
@@ -122,7 +125,7 @@ scroll-margin-inline-end: unset;
 
 #### CSS
 
-外側のコンテナーのスタイルは以下のようになっています。
+CSS を一通り見てみましょう。外側のコンテナーは次のようにスタイル設定されています。
 
 ```css
 .scroller {
@@ -180,7 +183,7 @@ scroll-margin-inline-end: unset;
 
 自分でやってみましょう。
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## 仕様書
 
@@ -193,4 +196,4 @@ scroll-margin-inline-end: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

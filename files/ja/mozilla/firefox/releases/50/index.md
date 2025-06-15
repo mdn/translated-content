@@ -2,12 +2,12 @@
 title: Firefox 50 for developers
 slug: Mozilla/Firefox/Releases/50
 l10n:
-  sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+  sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
 ---
 
 {{FirefoxSidebar}}
 
-[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
+[Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/ja/firefox/developer/)Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
 
@@ -19,11 +19,11 @@ l10n:
 
 ### CSS
 
-- dashed および dotted スタイルのボーダーに border-radius を設定したとき、角の部分を solid スタイルではなく指定したスタイルで描画するようになりました ([Firefox バグ 382721](https://bugzil.la/382721))。
-- 非標準の {{cssxref(":-moz-full-screen-ancestor")}} 擬似クラスセレクターを削除しました ([Firefox バグ 1199529](https://bugzil.la/1199529))。
-- 仕様書から削除されたため、および実装していた主要ブラウザーが Firefox だけであったため、{{cssxref("box-sizing")}}`: padding-box` を削除しました ([Firefox バグ 1166728](https://bugzil.la/1166728))。
+- border-radius のある角が dashed および dotted スタイルであった場合、角の部分を solid スタイルではなく指定したスタイルで描画するようになりました ([Firefox バグ 382721](https://bugzil.la/382721))。
+- 非標準の `:-moz-full-screen-ancestor` 擬似クラスセレクターを削除しました ([Firefox バグ 1199529](https://bugzil.la/1199529))。
+- {{cssxref("box-sizing", "box-sizing: padding-box")}} は削除されました。仕様書から削除されたため、および実装していた主要ブラウザーが Firefox だけであったためです ([Firefox バグ 1166728](https://bugzil.la/1166728))。
 - {{cssxref("unicode-bidi")}} プロパティの値 `isolate`、`isolate-override`、`plaintext` の接頭辞を削除しました ([Firefox バグ 1141895](https://bugzil.la/1141895))。
-- Quirk モードでリストのビュレットが、標準準拠モードと同様にリストのサイズを継承するようになりました ([Firefox バグ 648331](https://bugzil.la/648331))。
+- 後方互換モードでリストのビュレットが、標準準拠モードと同様にリストのサイズを継承するようになりました ([Firefox バグ 648331](https://bugzil.la/648331))。
 - {{cssxref(":in-range")}} および {{cssxref(":out-of-range")}} 擬似クラスが、無効状態または読み取り専用の input に一致しないように動作を変更しました ([Firefox バグ 1264157](https://bugzil.la/1264157))。
 - {{cssxref(":any-link")}} 擬似クラスの接頭辞を削除しました ([Firefox バグ 843579](https://bugzil.la/843579))。
 - {{cssxref("border-image-repeat")}} で、値 `space` を実装しました ([Firefox バグ 720531](https://bugzil.la/720531))。
@@ -53,10 +53,10 @@ l10n:
 
 ### セキュリティ
 
-- {{htmlelement("a")}} 要素の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) 属性が、[`connect-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
-- [`sandbox`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#sandbox) [CSP](/ja/docs/Web/HTTP/Guides/CSP) ディレクティブをサポートしました ([Firefox バグ 671389](https://bugzil.la/671389))。
-- [workers に content security policy を設定する](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy) ことが可能になりました ([Firefox バグ 959388](https://bugzil.la/959388))。
-- [Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) の制限によりビーコンデータを送信できなかったとき、{{domxref("Navigator.sendBeacon()")}} メソッドで例外が発生しないようになりました。代わりに、想定どおり `false` を返します ([Firefox バグ 1234813](https://bugzil.la/1234813))。
+- {{htmlelement("a")}} 要素の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) 属性が、[`connect-src`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src) [CSP 1.1 ポリシーディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)に従うようになりました ([Firefox バグ 1100181](https://bugzil.la/1100181))。
+- [`sandbox`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox) [CSP](/ja/docs/Web/HTTP/Guides/CSP) ディレクティブをサポートしました ([Firefox バグ 671389](https://bugzil.la/671389))。
+- [ワーカーにコンテンツセキュリティポリシーを設定する](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#コンテンツセキュリティポリシー) ことが可能になりました ([Firefox バグ 959388](https://bugzil.la/959388))。
+- [コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP) の制限によりビーコンデータを送信できなかったとき、{{domxref("Navigator.sendBeacon()")}} メソッドで例外が発生しないようになりました。代わりに、想定どおり `false` を返します ([Firefox バグ 1234813](https://bugzil.la/1234813))。
 - RC4 暗号のサポートは Firefox 36 から非推奨にしており、Firefox 44 では既定で無効にしました。1 年間の猶予期間が終了しましたので、Firefox 50 で RC4 のサポートを全面的に廃止しました (Google Chrome は 2016 年 8 月に RC4 のサポートを廃止しました)。今後、Firefox は RC4 暗号に出くわすと常に `SSL_ERROR_NO_CYPHER_OVERLAP` エラーが発生します。
 
 ### ネットワーク
@@ -80,8 +80,8 @@ l10n:
 
 ### ドラッグ & ドロップ API
 
-- HTML Drag and Drop API を使用してドラッグアンドドロップしている複数のアイテムにアクセスできる、{{domxref("DataTransfer.items")}} プロパティを実装しました。これを可能にするため、{{domxref("DataTransferItem")}} および {{domxref("DataTransferItemList")}} インターフェイスもサポートしました([Firefox バグ 906420](https://bugzil.la/906420))。これはデフォルトで有効です。
-- 古く廃止済みである、Firefox 固有のドラッグ & ドロップ API イベント `dragdrop` および `draggesture` のサポートを廃止しました。これらを使用し続けているコードは、 [HTML ドラッグ & ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) を使用するように更新してください ([Firefox バグ 1162050](https://bugzil.la/1162050)。
+- HTML ドラッグ & ドロップ API を使用してドラッグアンドドロップしている複数のアイテムにアクセスできる、{{domxref("DataTransfer.items")}} プロパティを実装しました。これを可能にするため、{{domxref("DataTransferItem")}} および {{domxref("DataTransferItemList")}} インターフェイスもサポートしました([Firefox バグ 906420](https://bugzil.la/906420))。これはデフォルトで有効です。
+- 古く廃止済みである、Firefox 固有のドラッグ & ドロップ API イベント `dragdrop` および `draggesture` のサポートを廃止しました。これらを使用し続けているコードは、 [HTML ドラッグ & ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) を使用するように更新してください（[Firefox バグ 1162050](https://bugzil.la/1162050)）。
 
 ### ポインターロック API
 
@@ -107,13 +107,13 @@ l10n:
 - {{domxref("MediaStreamTrack")}} インターフェイスが、 {{domxref("MediaStreamTrack.ended_event", "ended")}} イベントおよびそのイベントハンドラーをサポートしました。
 - Firefox で {{domxref("MediaStreamTrack.readyState")}} プロパティをサポートしました。これは、トラックが生存中であるか永久に終了した状態であるかを示します。
 - {{domxref("MediaStreamTrack")}} の {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}} および {{domxref("MediaStreamTrack.getSettings", "getSettings()")}} メソッドを実装しました。それぞれ、カスタマイズしたプロパティ制約で直近に適用された値のセットを取得する、およびトラックで制限可能なすべてのプロパティの実際の値を取得するメソッドです。付随するデータ型もドキュメントに記載しています。
-- {{domxref("RTCDataChannel.stream")}} プロパティを削除しました。これは [Firefox 24](/ja/docs/Mozilla/Firefox/Releases/24) で {{domxref("RTCDataChannel.id")}} に置き換えられましたが、後方互換性のためにサポートしていました。まだ `id` プロパティを使用するようにコードを更新していない場合は、必ず更新してください。
+- `RTCDataChannel.stream` プロパティを削除しました。これは [Firefox 24](/ja/docs/Mozilla/Firefox/Releases/24) で {{domxref("RTCDataChannel.id")}} に置き換えられましたが、後方互換性のためにサポートしていました。まだ `id` プロパティを使用するようにコードを更新していない場合は、必ず更新してください。
 
 ### ウェブオーディオ API
 
 - {{domxref("PannerNode")}} インターフェイスで、オーディオソースの位置 ({{domxref("PannerNode.positionX")}}、{{domxref("PannerNode.positionY")}}、{{domxref("PannerNode.positionZ")}}) や方向性 ({{domxref("PannerNode.orientationX")}}、{{domxref("PannerNode.orientationY")}}、{{domxref("PannerNode.orientationZ")}}) に関する 3D 直交座標系のプロパティをサポートしました。
 - 一般的な [無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答) (IIR) フィルターを生成する、{{domxref("IIRFilterNode")}} インターフェイスを実装しました。
-- {{domxref("Window.setInterval", "setInterval()")}} および {{domxref("Window.setTimeout", "setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。これは、タイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) をバックグラウンドで行う際の問題を避ける助けになります ([Firefox バグ 1181073](https://bugzil.la/1181073))。
+- {{domxref("Window.setInterval()")}}、{{domxref("WorkerGlobalScope.setInterval()")}}、{{domxref("Window.setTimeout()")}}、{{domxref("WorkerGlobalScope.setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。これは、タイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) をバックグラウンドで行う際の問題を避ける助けになります ([Firefox バグ 1181073](https://bugzil.la/1181073))。
 
 ### Audio/Video
 
@@ -123,7 +123,7 @@ l10n:
 
 ### バッテリー API
 
-- Firefox 43 から非推奨にしていた {{domxref("navigator.battery")}} プロパティを廃止および削除しました。代わりに、バッテリーの {{jsxref("Promise")}} を取得する {{domxref("navigator.getBattery()")}} メソッドを使用してください。これは {{domxref("BatteryManager")}} が使用可能になったときに完了します。{{domxref("BatteryManager")}} は、promise が成功した場合のハンドラーに渡されます ([Firefox バグ 12593355](https://bugzil.la/12593355))。
+- Firefox 43 から非推奨にしていた `Navigator.battery` プロパティを廃止および削除しました。代わりに、バッテリーの {{jsxref("Promise")}} を取得する {{domxref("navigator.getBattery()")}} メソッドを使用してください。これは {{domxref("BatteryManager")}} が使用可能になったときに完了します。{{domxref("BatteryManager")}} は、promise が成功した場合のハンドラーに渡されます ([Firefox バグ 12593355](https://bugzil.la/12593355))。
 
 ### ファイルとディレクトリー
 
@@ -140,8 +140,7 @@ l10n:
 
   - {{HTMLElement("input")}} 要素の [`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性および {{domxref("HTMLInputElement.webkitdirectory")}} を実装しました。ファイルではなくディレクトリーを受け入れるように、file 型の input を設定できます ([Firefox バグ 1258489](https://bugzil.la/1258489))。
   - {{domxref("HTMLInputElement.webkitEntries")}} を実装しました。これは、選択されたアイテムを表す {{domxref("FileSystemEntry")}} ベースのオブジェクトの配列を返します。
-  - {{domxref("File.webkitRelativePath")}} を実装しました。これは、{{domxref("HTMLInputElement.webkitGetEntries()")}} が返すリスト内のアイテムのひとつである {{domxref("FileSystemDirectoryEntry")}} に含まれているルートに対して相対的な、ファイルのパスを持ちます。
-  - この API で何をサポートしているかについて、詳しくは [Firefox におけるファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) をご覧ください。
+  - {{domxref("File.webkitRelativePath")}} を実装しました。これは、{{domxref("HTMLInputElement.webkitEntries")}} が返すリスト内のアイテムのひとつである {{domxref("FileSystemDirectoryEntry")}} に含まれているルートに対して相対的な、ファイルのパスを持ちます。
   - これらの API はデフォルトで有効です。一部の API は以前から使用できましたが、設定で無効化されていました ([Firefox バグ 1288683](https://bugzil.la/1288683))。
 
 - [ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) の一部として、{{domxref("DataTransferItem.webkitGetAsEntry()")}} を実装しました。これは、ドロップされたファイルを表す {{domxref("FileSystemEntry")}} を取得できます ([Firefox バグ 1289255](https://bugzil.la/1289255))。これはデフォルトで有効です。
@@ -149,4 +148,4 @@ l10n:
 
 ## 過去のバージョン
 
-{{Firefox_for_developers(49)}}
+{{Firefox_for_developers}}

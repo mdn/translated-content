@@ -3,7 +3,7 @@ title: "URL: URL() コンストラクター"
 short-title: URL()
 slug: Web/API/URL/URL
 l10n:
-  sourceCommit: 5a7fae1cc8df27d50c9365511a714f3c2fa4bfc1
+  sourceCommit: 870c21b730828c20ce7059dbd358eec8bed1a4c5
 ---
 
 {{APIRef("URL API")}} {{AvailableInWorkers}}

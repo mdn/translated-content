@@ -3,8 +3,6 @@ title: 常见 web 布局都包含什么？
 slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 当你设计自己站点时，最好已经对常见的 web 页面布局所包含的内容有过构思。
 
 <table class="standard-table">

@@ -85,7 +85,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
 
 - {{CSP("style-src-elem")}}
-  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたものののための有効なソースを指定します。
+  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたもののための有効なソースを指定します。
 - {{CSP("style-src-attr")}}
   - : 個々の DOM 要素に適用されるインラインスタイルの有効なソースを指定します。
 - {{CSP("worker-src")}}
@@ -115,7 +115,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされたリソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 
@@ -133,7 +133,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("report-to")}}
 
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
-    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーでで指定されている場合があります。
+    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
     > [!WARNING]
     > このディレクティブは [`report-uri`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
@@ -283,7 +283,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。これには以下が含まれます。
 
 - インラインの `<script>` タグ
-- インタ印のイベントハンドラー属性
+- インラインのイベントハンドラー属性
 - `javascript:` URL
 
 同様に、 CSP で `default-src` または `style-src` ディレクティブを記載している場合、インライン CSS は読み込まれません。

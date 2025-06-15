@@ -3,7 +3,7 @@ title: "Window: open() メソッド"
 short-title: open()
 slug: Web/API/Window/open
 l10n:
-  sourceCommit: 1c44eb06768fc5454366b7565cc734d9a26d16b4
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef}}
@@ -27,25 +27,37 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)である `_self`、`_blank`、`_parent`、`_top` も利用することができます。
+  - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)である `_self`、`_blank`（既定値）、`_parent`、`_top`、`_unfencedTop` も利用することができます。 `_unfencedTop` は[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)でのみ関連します。
 
     この名前は [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) や [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) 要素の `target` 属性として使うことができます。
 
 - `windowFeatures` {{optional_inline}}
 
-  - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。これらの特性には、ウィンドウの既定値や位置、最小限のポップアップウィンドウを開くかどうか、などのオプションが記載されます。以下のようなオプションに対応しています。
+  - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。論理値は、`name`、`name=yes`、`name=true`、`name=n` （`n` は 0 以外の整数） のいずれかを使用して true に設定できます。これらの機能には、ウィンドウの既定のサイズと位置、最小ポップアップウィンドウを開くかどうかなどのオプションが含まれます。次のオプションに対応しています。
+
+    - `attributionsrc` {{experimental_inline}}
+
+      - : ブラウザーに、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを `open()` 呼び出しとともに送信するように指示します。この呼び出しは、ユーザーの操作から 5 秒以内に、[一時的な有効化](/ja/docs/Glossary/Transient_activation)（つまり、 `click` などのユーザー操作イベントハンドラー内）で行わなければなりません。サーバー側では、このヘッダーは、帰属ソースの登録を完了するために、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を起動するために使用されます。
+
+        さらに、 `open()` メソッドが完了すると、関連付けられたソースデータ （{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの） を格納するために、ブラウザーも開始されます。
+
+        詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
+
+        > **メモ:** `open()` の呼び出しは、帰属トリガーの登録のために使用することはできません。
 
     - `popup`
 
-      - : この特性を有効にすると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。
+      - : 既定では、`window.open` は新しいタブでページを開きます。 `popup` を true に設定すると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。 `popup` が存在し、false に設定されている場合でも、新しいタブは開かれます。
 
-        もし `popup` が有効でなく、ウィンドウ機能が宣言されていない場合、新しい閲覧コンテキストはタブになります。
+        開いたウィンドウの UI 機能を制御するために使用されていた、いくつかの古い機能があります。現行のブラウザーでは、これらの機能はポップアップを要求する効果しかありません。`popup` が指定されておらず、`windowFeatures` に `noopener`、`noreferrer`、`attributionsrc` 以外の機能（認識されない機能も含む）のいずれかが含まれてる場合、次の条件のいずれかが当てはまる場合、ウィンドウはポップアップとして開かれます。
 
-        > **メモ:** `windowFeatures` 引数で `noopener` や `noreferrer` 以外の機能を指定すると、ポップアップを要求する効果もあります。
+        - `location` と `toolbar` がともに false であるか存在しない
+        - `menubar` が false であるか存在しない
+        - `resizable` が false である
+        - `scrollbars` が false であるか存在しない
+        - `status` が false であるか存在しない
 
-        この機能を有効にするには、 `popup` を指定して値を指定しないか、 `yes`、`1`、`true` のいずれかに設定します。
-
-        例: `popup=yes`, `popup=1`, `popup=true`, `popup` は同じ結果になります。
+        それ以外の場合は、ウィンドウはタブとして開かれます。
 
     - `width` または `innerWidth`
 
@@ -72,12 +84,16 @@ open(url, target, windowFeatures)
     - `noreferrer`
       - : この特性が設定されると、ブラウザーは [`Referer`](/ja/docs/Web/HTTP/Reference/Headers/Referer) ヘッダーを省略し、 `noopener` を true に設定します。詳しくは [`rel="noreferrer"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noreferrer) を参照してください。
 
+    [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の値は、空文字列 (`""`) と同様に扱われます。
+
 > [!NOTE]
 > 要求する位置 (`top`, `left`)、要求する寸法 (`width`, `height`) の値が `windowFeatures` で指定された場合、ブラウザーのポップアップ全体がユーザーのオペレーティングシステムのアプリケーションの作業領域内に表示できないと、**修正されます**。言い換えれば、新しいポップアップのどの部分も、最初は画面外に配置することはできません。
 
 ### 返値
 
 ブラウザーが新しい閲覧コンテキストを開くことができた場合は、 [`WindowProxy`](/ja/docs/Glossary/WindowProxy) オブジェクトを返します。返される参照は、[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)のセキュリティ要件に準拠する限り、新しいコンテキストのプロパティとメソッドにアクセスするために使用することができます。
+
+HTTP の {{httpheader("Cross-Origin-Opener-Policy")}} ヘッダーが使用されており、文書ポリシーによって文書が新しい{{glossary("Browsing context","閲覧コンテキストグループ")}}で開かれる場合、開かれたウィンドウへの参照は切断され、返されるオブジェクトは開かれたウィンドウが閉じられていることを示します（{{domxref("Window.closed","closed")}} は `true` です）。
 
 ブラウザーが新しい閲覧コンテキストを開くために失敗した場合、例えばブラウザーのポップアップブロッカーによってブロックされた場合などには `null` が返されます。
 

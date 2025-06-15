@@ -1,9 +1,8 @@
 ---
 title: 201 Created
 slug: Web/HTTP/Reference/Status/201
-original_slug: Web/HTTP/Status/201
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

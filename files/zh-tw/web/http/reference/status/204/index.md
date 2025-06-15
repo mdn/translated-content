@@ -2,16 +2,21 @@
 title: 204 No Content
 slug: Web/HTTP/Reference/Status/204
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
 ---
 
 {{HTTPSidebar}}
 
-HTTP **`204 No Content`** 成功回應碼表示請求已成功，但用戶端不需要離開當前頁面。
+HTTP **`204 No Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功，但用戶端不需要離開當前頁面。`204` 回應預設是可快取的，在這種情況下會包含 {{HTTPHeader("ETag")}} 標頭。
 
-例如，在為維基站實現「保存並繼續編輯」功能時可能會使用這個狀態碼。在這種情況下，會使用 {{HTTPMethod("PUT")}} 請求保存頁面，並發送 `204 No Content` 回應以指示編輯器不應該被其他頁面替換。
+對這些請求方法的回應 `204 No Content` 具有以下意義和結果：
 
-默認情況下，204 回應是可緩存的（這樣的回應中包含了 {{HTTPHeader("ETag")}} 標頭）。
+- {{HTTPMethod("DELETE")}}：操作已成功，且無需提供進一步的訊息。
+- {{HTTPMethod("PUT")}}：操作已成功，且 {{HTTPHeader("ETag")}} 的值包含目標資源新表示的實體標籤。
+
+在為維基站等應用程式實作「儲存並繼續編輯」功能時，可以使用 `204` 回應。在這種情況下，可以使用 {{HTTPMethod("PUT")}} 請求來儲存頁面內容，而 `204 No Content` 回應則向瀏覽器指示編輯器不應被其他內容取代。
+
+請注意，回應不得包含任何內容或 {{HTTPHeader("Content-Length")}} 標頭（瀏覽器可能會拒絕包含內容的回應）。
 
 ## 狀態
 
@@ -19,18 +24,31 @@ HTTP **`204 No Content`** 成功回應碼表示請求已成功，但用戶端不
 204 No Content
 ```
 
+## 範例
+
+### 刪除圖片後收到回應
+
+在此範例中，用戶端使用 `DELETE` 方法發送刪除圖片的請求。該請求包含一個帶有權杖的 {{HTTPHeader("Authorization")}} 標頭以驗證請求：
+
+```http
+DELETE /image/123 HTTP/1.1
+Host: example.com
+Authorization: Bearer 1234abcd
+```
+
+成功刪除圖片後，伺服器會以無主體的 `204` 回應，表示無需再向用戶端發送任何訊息。
+
+```http
+HTTP/1.1 204 No Content
+Date: Wed, 26 Jun 2024 12:00:00 GMT
+Server: Apache/2.4.1 (Unix)
+```
+
 ## 規範
 
 {{Specifications}}
 
-## 瀏覽器相容性
-
-{{Compat}}
-
-### 相容性注意事項
-
-- 雖然這個狀態碼旨在描述沒有主體的回應，但伺服器可能錯誤地在標頭後包含資料。協議允許用戶端代理程式在處理這類回應時有所不同（[有關此規範文本的討論可在此找到](https://github.com/httpwg/http-core/issues/26)）。這在持久連接中是可觀察到的，無效的主體可能包含對後續請求的不同回應。Apple Safari 拒絕任何這樣的資料。Google Chrome 和 Microsoft Edge 會丟棄一個有效回應之前的最多四個無效位元組。Firefox 在有效回應之前允許超過一千位元組的無效資料。
-
 ## 參見
 
 - [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)

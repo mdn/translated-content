@@ -46,7 +46,7 @@ console.log(materials.map((material) => material.length));
 }
 ```
 
-引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
+引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
 
 ```js-nolint
 (a, b, ...r) => 式
@@ -91,7 +91,7 @@ a => a + 100;
 
 上の例では、引数を囲む括弧と関数本体を囲む中括弧の両方を省略することができます。ただし、省略できるのは特定の場合のみです。
 
-括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、分割代入、残余引数がある場合は、引数リストを括弧で囲む必要があります。
+括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、構造分解、残余引数がある場合は、引数リストを括弧で囲む必要があります。
 
 ```js
 // 従来の無名関数

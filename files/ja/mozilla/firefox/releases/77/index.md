@@ -62,7 +62,7 @@ slug: Mozilla/Firefox/Releases/77
 
 ### マニフェストの変更点
 
-- 以下のパーミッションが要求可能になりました。これらは [`optional_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) マニフェストキーで指定可能であり、{{WebExtAPIRef("permissions")}} API の `browsingData` ([Firefox バグ 1630417](https://bugzil.la/1630417))、`pkcs11` ([Firefox バグ 1630418](https://bugzil.la/1630418))、`proxy` ([Firefox バグ 1548011](https://bugzil.la/1548011))、`sessions` ([Firefox バグ 1630414](https://bugzil.la/1630414)) を使用して要求できます、。
+- 以下のパーミッションが要求可能になりました。これらは [`optional_permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) マニフェストキーで指定可能であり、{{WebExtAPIRef("permissions")}} API の `browsingData` ([Firefox バグ 1630417](https://bugzil.la/1630417))、`pkcs11` ([Firefox バグ 1630418](https://bugzil.la/1630418))、`proxy` ([Firefox バグ 1548011](https://bugzil.la/1548011))、`sessions` ([Firefox バグ 1630414](https://bugzil.la/1630414)) を使用して要求できます。
 
 ### その他
 

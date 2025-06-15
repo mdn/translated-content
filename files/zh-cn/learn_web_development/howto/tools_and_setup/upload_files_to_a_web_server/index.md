@@ -3,8 +3,6 @@ title: 如何将文件上传到 web 服务器
 slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 这篇文章将会告诉你如何利用文件传输工具来发布你的网站。
 
 <table>

@@ -1,9 +1,8 @@
 ---
 title: "<summary>: 概要明示要素"
 slug: Web/HTML/Reference/Elements/summary
-original_slug: Web/HTML/Element/summary
 l10n:
-  sourceCommit: f3fc83168e55e161650b73755db53ecadfe816b7
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -12,13 +11,12 @@ l10n:
 
 {{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <details>
   <summary>
-    I have keys but no doors. I have space but no room. You can enter but can’t
-    leave. What am I?
+    キーはありますが、ドアはありません。スペースはありますが、部屋はありません。入れることはできますが、出すことはできません。これは何でしょう？
   </summary>
-  A keyboard.
+  キーボードです。
 </details>
 ```
 
@@ -53,7 +51,7 @@ details[open] summary {
 
 `<summary>` 要素の中身には、見出しコンテンツ、プレーンテキスト、段落内で使用できる HTML が入れられます。
 
-`<summary>` 要素は、 `<details>` 要素の最初の子として*のみ*使用できます。ユーザーがこの概要をクリックすると、親の `<details>` 要素が開閉し、 {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが `<details>` 要素に送信され、状態が変化したことを知ることができます。
+`<summary>` 要素は、 `<details>` 要素の最初の子として*のみ*使用できます。ユーザーがこの概要をクリックすると、親の `<details>` 要素が開閉し、 {{domxref("HTMLElement/toggle_event", "toggle")}} イベントが `<details>` 要素に送信され、状態が変化したことを知ることができます。
 
 `<details>` の内容は、`<summary>` の{{glossary("accessible description", "アクセシブル説明")}}となります。
 
@@ -81,11 +79,11 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 ```html
 <details open>
-  <summary>Overview</summary>
+  <summary>概要</summary>
   <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
+    <li>現金: $500.00</li>
+    <li>現在の請求書: $75.30</li>
+    <li>期限: 2019/05/06</li>
   </ol>
 </details>
 ```
@@ -100,18 +98,18 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 ```html
 <details open>
-  <summary><h4>Overview</h4></summary>
+  <summary><h4>概要</h4></summary>
   <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
+    <li>現金: $500.00</li>
+    <li>現在の請求書: $75.30</li>
+    <li>期限: 2019/05/06</li>
   </ol>
 </details>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Summaries_as_headings", 650, 120)}}
+{{EmbedLiveSample("Summaries_as_headings", 650, 200)}}
 
 これは現在のところ、間隔の問題をいくつか抱えており、 CSS を使用して修正することができます。
 
@@ -123,18 +121,93 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
 
 ```html
 <details open>
-  <summary><strong>Overview</strong></summary>
+  <summary><strong>概要</strong></summary>
   <ol>
-    <li>Cash on hand: $500.00</li>
-    <li>Current invoice: $75.30</li>
-    <li>Due date: 5/6/19</li>
+    <li>現金: $500.00</li>
+    <li>現在の請求書: $75.30</li>
+    <li>期限: 2019/05/06</li>
   </ol>
 </details>
 ```
 
 #### 結果
 
-{{EmbedLiveSample("HTML_in_summaries", 650, 120)}}
+{{EmbedLiveSample("HTML_in_summaries", 650, 150)}}
+
+### 概要のアイコンの変更
+
+`<summary>` 要素のマーカーである展開の三角形は、 CSS でカスタマイズできます。マーカーは {{cssxref("::marker")}} 擬似要素を使用して指定することができます。この擬似要素は、 {{cssxref("list-style")}} 一括指定プロパティや、 {{cssxref("list-style-type")}} などの個別指定の成分プロパティを受け付けます。これにより、三角形を画像（通常は {{cssxref("list-style-image")}} を使用）または文字列（絵文字を含む）に変更することができます。この例では、生成コンテンツを介してカスタム開示アイコンを追加する前に、`list-style: none` を設定して、1 つの開示ウィジェットのコンテンツを置き換え、別のウィジェットからアイコンを削除しています。
+
+#### CSS
+
+最初の開示ウィジェットでは、 `::marker` のスタイルを設定し、 {{cssxref("content")}} を `<details>`要素の `[open]` 属性に基づいて変更します。2 番目のウィジェットでは、 `list-style` プロパティを使用してマーカーを除去し、 {{cssxref("::after")}} 擬似要素を使用してスタイルを設定した生成コンテンツを追加しています。また、Safari をターゲットとする `::-webkit-details-marker` のスタイルも記載しています。ブラウザー固有の擬似要素のセレクターは、セレクターリストを不正にしないよう、 {{cssxref(":is()")}} 擬似クラスに含めています。
+
+```css
+details {
+  font-size: 1rem;
+  font-family: "Open Sans", Calibri, sans-serif;
+  border: solid;
+  padding: 2px 6px;
+  margin-bottom: 1em;
+}
+
+details:first-of-type summary::marker,
+:is(::-webkit-details-marker) {
+  content: "+ ";
+  font-family: monospace;
+  color: red;
+  font-weight: bold;
+}
+
+details[open]:first-of-type summary::marker {
+  content: "− ";
+}
+
+details:last-of-type summary {
+  list-style: none;
+  &::after {
+    content: "+";
+    color: white;
+    background-color: darkgreen;
+    border-radius: 1em;
+    font-weight: bold;
+    padding: 0 5px;
+    margin-inline-start: 5px;
+  }
+  [open] &::after {
+    content: "−";
+  }
+}
+details:last-of-type summary::-webkit-details-marker {
+  display: none;
+}
+```
+
+CSS には、 `[open]` [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)が含まれており、 `open` 属性が存在する（`<details>` が開いている）場合にのみ一致します。 {{cssxref(":first-of-type")}} および {{cssxref(":last-of-type")}} 擬似クラスは、同じ型の最初の要素および兄弟要素をターゲットにします。`-webkit-` 接頭辞付き擬似要素を {{cssxref(":is()")}} 擬似クラスの中に含めて[寛容なセレクターリスト](/ja/docs/Web/CSS/Selector_list#寛容なセレクターリスト)にし、接頭辞付き擬似要素がブラウザーにとって不正な場合でも、セレクターブロック全体が不正になることを防ぎます。また、CSS の[入れ子](/ja/docs/Web/CSS/Nesting_selector)も使用しています。[CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)モジュールを参照してください。
+
+#### HTML
+
+```html-nolint
+<h1>ヘレン・ケラーの名言</h1>
+
+<details>
+  <summary>女性の権利について</summary>
+  <p>
+    <q>私たちは、騎士道精神から、男性が女性に平等な権利を与え、国家の事務に女性をパートナーとして迎えることを期待して、投票を祈願し、説得し、懇願してきました。私たちは、彼らの常識が偏見や愚かさを打ち負かすことを期待していました。彼らの自慢の正義感が、人間の精神をしばしば束縛する誤りを克服するだろうと考えていました。しかし、私たちは常に手ぶらで立ち去らざるを得ませんでした。私たちはもう懇願しません。</q>
+  </p>
+</details>
+
+<details>
+  <summary>楽観主義について</summary>
+  <p>
+    <q>楽観主義とは、達成につながる信念です。期待がなければ、何もできません。</q>
+  </p>
+</details>
+```
+
+#### 結果
+
+{{EmbedLiveSample("Changing the summary's icon", 650, 400)}}
 
 ## 技術的概要
 
@@ -142,7 +215,7 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
@@ -153,9 +226,9 @@ Safari などの Webkit ベースのブラウザーでは、標準外の CSS 擬
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
-        >、任意で<a href="/ja/docs/Web/HTML/Content_categories#見出しコンテンツ"
+        >、任意で<a href="/ja/docs/Web/HTML/Guides/Content_categories#見出しコンテンツ"
           >見出しコンテンツ</a
         >を交ぜることができる
       </td>

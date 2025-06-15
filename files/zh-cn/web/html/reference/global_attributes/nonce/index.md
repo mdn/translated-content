@@ -14,7 +14,7 @@ l10n:
 `nonce` 属性可用于允许对特定资源的获取，如内联脚本或样式元素。它可以帮助你避免使用 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) `unsafe-inline` 指令，该指令会允许你获取*所有*的内联脚本或样式资源。
 
 > [!NOTE]
-> 只有在无法使用不安全的内联脚本或样式内容时，才使用 `nonce`。如果不需要 `nonce`，就不要使用。如果脚本是静态的，也可以使用 CSP 散列值来代替。（请参阅[不安全内联脚本](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#不安全内联脚本)中的使用说明）。始终尽量充分利用 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 保护，并尽可能避免使用 nonce 或不安全的内联脚本。
+> 只有在无法避免使用不安全的内联脚本或样式内容时，才使用 `nonce`。如果不需要 `nonce`，就不要使用。如果脚本是静态的，也可以使用 CSP 散列值来代替。（请参阅[不安全内联脚本](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src#不安全内联脚本)中的使用说明）。始终尽量充分利用 [CSP](/zh-CN/docs/Web/HTTP/Guides/CSP) 保护，并尽可能避免使用 nonce 或不安全的内联脚本。
 
 ### 使用 nonce 以允许一个 \<script> 元素
 

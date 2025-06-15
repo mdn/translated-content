@@ -173,7 +173,7 @@ new WeakSet(
 
 ### 反復可能オブジェクトを期待する構文
 
-一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)などです。
+一部の文や式は反復可能オブジェクトを期待します。例えば、 {{jsxref("Statements/for...of", "for...of")}} ループ、[配列と引数のスプレッド](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)、{{jsxref("Operators/yield*", "yield*")}}、[配列の構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)などです。
 
 ```js
 for (const value of ["a", "b", "c"]) {
@@ -195,7 +195,7 @@ console.log(gen().next()); // { value: "a", done: false }
 console.log(a); // "a"
 ```
 
-組み込み API がイテレーターを反復処理していて、最後の結果の `done` が `false` （イテレーターがさらに値を生成できる状態）だが、それ以上の値は必要ない場合、`return` メソッドが存在すれば、それが呼び出されますこれは例えば、`for...of` ループの中で `break` や `return` に遭遇した場合や、配列の分割代入ですべての識別子が既に結合されている場合などに発生します。
+組み込み API がイテレーターを反復処理していて、最後の結果の `done` が `false` （イテレーターがさらに値を生成できる状態）だが、それ以上の値は必要ない場合、`return` メソッドが存在すれば、それが呼び出されますこれは例えば、`for...of` ループの中で `break` や `return` に遭遇した場合や、配列の構造分解ですべての識別子が既に結合されている場合などに発生します。
 
 ```js
 const obj = {

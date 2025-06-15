@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-inline-start
 slug: Web/CSS/scroll-padding-inline-start
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-inline-start` プロパティは、スクロールポートの*最適表示領域*のインライン方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-inline-start` プロパティは、スクロールポートの*最適表示領域*のインライン方向における先頭側のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-inline-start")}}
+{{InteractiveExample("CSS デモ: scroll-padding-inline-start")}}
 
 ```css interactive-example-choice
 scroll-padding-inline-start: 0;
@@ -28,7 +30,7 @@ scroll-padding-inline-start: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -87,6 +89,7 @@ scroll-padding-inline-start: 10%;
 scroll-padding-inline-start: inherit;
 scroll-padding-inline-start: initial;
 scroll-padding-inline-start: revert;
+scroll-padding-inline-start: revert-layer;
 scroll-padding-inline-start: unset;
 ```
 
@@ -116,4 +119,4 @@ scroll-padding-inline-start: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

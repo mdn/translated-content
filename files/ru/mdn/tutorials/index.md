@@ -20,7 +20,7 @@ slug: MDN/Tutorials
 
 ### Продвинутый уровень
 
-- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Tips for Authoring Fast-Loading HTML Pages](/ru/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Оптимизация веб-страниц, для большей адаптивности сайта и снижения нагрузки на веб-сервера и подключение к Интернету
 - [HTML5 Tutorials](https://www.html5rocks.com/tutorials/) (HTML5 Rocks)
   - : Совершите экскурсию в код, который использует возможности HTML5.

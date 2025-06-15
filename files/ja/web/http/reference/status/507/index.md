@@ -1,16 +1,15 @@
 ---
 title: 507 Insufficient Storage
 slug: Web/HTTP/Reference/Status/507
-original_slug: Web/HTTP/Status/507
 l10n:
-  sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
 HTTP の **`507 Insufficient Storage`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、サーバーがリクエストを完全に完了するために十分な利用できるストレージ容量がないため、アクションが実行できなかったことを示します。
 
-このステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) のコンテキストで最初に使用されましたが、他にもサーバーリソースが枯渇している状況を説明する用途で使用されている例があります。
+このステータスコードは、 {{Glossary("WebDAV")}} (Web Distributed Authoring and Versioning) のコンテキストで最初に使用されましたが、他にもサーバーリソースが枯渇している状況を説明する用途で使用されている例があります。
 このエラーの一般的な原因としては、サーバーディレクトリーで利用できる容量が不足している、操作に必要な RAM が十分でない、内部制限に達している（例えば、アプリケーション固有のメモリー制限など）などが考えられます。
 このエラーの原因となるリクエストには、必ずしもコンテンツを含める必要はありません。成功すればサーバー上にリソースを作成するリクエストである可能性があるからです。
 

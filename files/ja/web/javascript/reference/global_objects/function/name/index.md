@@ -133,7 +133,7 @@ f.name; // "f"
 
 ### 初期化子と既定値
 
-[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
+[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#既定値)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)などの初期化子（既定値）の関数は、バインド済みの識別子の名前を `name` として継承します。
 
 ```js
 const [f = () => {}] = [];

@@ -1,9 +1,8 @@
 ---
 title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
-original_slug: Web/HTTP/Status/205
 l10n:
-  sourceCommit: 3f68a9604259dfa862dd741dc88ebc8fb5fa10fe
+  sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
 ---
 
 {{HTTPSidebar}}
@@ -17,7 +16,8 @@ HTTP の **`205 Reset Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Re
 > ステータスコード `205` を使用するウェブアプリケーションでは、クライアントが `205` レスポンスの後にコンテンツのリセットを処理することを想定しています。
 > これは通常、 JavaScript で行われます。 `205` レスポンス後にフォームなどのコンテンツをリセットすることは、ブラウザーがネイティブで処理しないためです。
 
-レスポンス本体にはコンテンツが含まれていてはならず、これは {{HTTPHeader("Content-Length", "Content-Length: 0")}} ヘッダーまたは {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} ヘッダーと空のチャンクを使用して示すことができます。
+なお、レスポンスには、コンテンツや {{HTTPHeader("Content-Length")}} ヘッダーを含めてはいけません（コンテンツを伴うレスポンスは、ブラウザーによって拒否される場合があります）。
+空のレスポンスは、空のチャンクを含む {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} ヘッダーを使用して示すこともできます。
 
 ## ステータス
 
@@ -52,11 +52,6 @@ Date: Wed, 26 Jun 2024 12:00:00 GMT
 ## 仕様書
 
 {{Specifications}}
-
-## 互換性のメモ
-
-このレスポンスが永続的な接続上で誤って本文を含んだ場合、ブラウザーの動作はさまざまです。
-詳しくは [`204 No Content` の互換性のメモ](/ja/docs/Web/HTTP/Reference/Status/204#互換性のメモ)を参照してください。
 
 ## 関連情報
 

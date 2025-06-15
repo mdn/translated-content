@@ -2,24 +2,213 @@
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_overflow
 l10n:
-  sourceCommit: d18e8247ac5c593e6e95f4ad84173c4099609fac
+  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
 ---
 
 {{CSSRef}}
 
 **CSS オーバーフロー**モジュールのプロパティを使用すると、視覚メディアでスクロール可能なオーバーフローを処理することができます。
 
-オーバーフローは、要素ボックス内のコンテンツがボックスの 1 つまたは複数の端を越えるときに起こります。**スクロール可能なオーバーフロー**とは、要素ボックスの外側に現れるコンテンツのことで、スクロール機構を追加したい場合があります。CSS オーバーフローのプロパティを使用すると、コンテンツが要素ボックスからあふれたときに何が起こるかを制御することができます。
+オーバーフローは、要素ボックス内のコンテンツがボックスの 1 つまたは複数の端を越えるときに起こります。**スクロール可能なオーバーフロー**とは、要素ボックスの外側に現れるコンテンツのことで、スクロール機構を追加したい場合があります。CSS オーバーフローのプロパティを使用すると、コンテンツが要素ボックスからあふれたときに何が起こるかを制御することができ、 JavaScript なしでカルーセルを作成することもできます。
 
 コンテンツがはみ出すものの、 CSS のボックスモデルに関与しない描画効果は、レイアウトには影響しません。この種のオーバーフローは{{Glossary("ink overflow", "インクオーバーフロー")}}とも呼ばれます。インクオーバーフローの例としては、ボックスシャドウ、境界画像、テキスト装飾、はみ出したグリフ、輪郭線などが挙げられます。インクオーバーフローはスクロール可能なオーバーフロー領域を拡張しません。
 
 ## オーバーフローの実際
 
-次の操作可能な例を使用して、隣接する固定サイズボックスのコンテンツのオーバーフローとスクロールバーに対する様々なオーバーフロープロパティ値の効果を確認してみましょう。
+次の例で、隣接する固定サイズのボックス内のコンテンツのオーバーフローおよびスクロールバーに対する、さまざまな `overflow` プロパティの値の効果を確認してください。
 
 この例では、`overflow-clip-margin` プロパティと `width` プロパティの値を変更するオプションも含まれています。また、overflow プロパティが{{Glossary("scroll container", "スクロールコンテナー")}}を生成する場合、コンテンツをプログラムでスクロールすることもできます。 `overflow: clip` を選択し、 `overflow-clip-margin` の値を変えた場合の効果を確認します。 `overflow: hidden` または `overflow: scroll` を選択し、様々な `ScrollLeft` と `ScrollTop` スライダーの設定を調べます。
 
-{{EmbedGHLiveSample("css-examples/modules/overflow.html", '100%', 320)}}
+```html hidden live-sample___overflow
+<article>
+  <fieldset>
+    <legend>オプションを選択してください:</legend>
+    <label
+      ><code>overflow</code>:
+      <select id="overflowValue">
+        <option>hidden</option>
+        <option>clip</option>
+        <option>scroll</option>
+        <option>auto</option>
+        <option selected>visible</option>
+        <option>overlay</option>
+      </select>
+    </label>
+    <label>
+      <code>overflow-clip-margin</code>:
+      <input type="number" id="ocm" value="1" min="0" max="10" size="2" />
+      <code>em</code>
+    </label>
+    <label
+      ><input type="checkbox" id="wide" /> <code>width</code>:
+      <code>20em</code> または <code>40em</code></label
+    >
+    <fieldset>
+      <legend>プログラムによるスクロール:</legend>
+      <label
+        >ScrollLeft:
+        <input type="range" min="0" max="100" value="0" id="scrollL"
+      /></label>
+      <label
+        >ScrollTop:
+        <input type="range" min="0" max="100" value="0" id="scrollT"
+      /></label>
+    </fieldset>
+  </fieldset>
+  <pre class="visible">&nbsp;
+    Oh, Rubber Duckie, you're the one
+    You make bath time lots of fun
+    Rubber Duckie, I'm awfully fond of you
+
+    Rubber Duckie, joy of joys
+    When I squeeze you, you make noise
+    Rubber Duckie, you're my very best friend, it's true
+
+    Oh, every day when I make my way to the tubby
+    I find a little fella who's cute and yellow and chubby
+    Rub-a-dub-dubby
+
+    <a href="#">Rubber Duckie</a>, you're so fine
+    And I'm lucky that you're mine
+    Rubber Duckie, I'm awfully fond of you
+      </pre>
+</article>
+
+<script>
+  const pre = document.querySelector("pre");
+  const val = document.getElementById("overflowValue");
+  const check = document.getElementById("wide");
+  const ocm = document.getElementById("ocm");
+  const scrollL = document.getElementById("scrollL");
+  const scrollT = document.getElementById("scrollT");
+
+  val.addEventListener("change", () => {
+    if (pre.classList.contains("wide")) {
+      pre.className = `wide ${val.value}`;
+    } else {
+      pre.className = `${val.value}`;
+    }
+    scrollExample();
+    clipMargin();
+  });
+
+  wide.addEventListener("change", () => {
+    pre.classList.toggle("wide");
+    scrollExample();
+  });
+
+  ocm.addEventListener("change", () => {
+    clipMargin();
+  });
+
+  scrollL.addEventListener("change", () => {
+    scrollExample();
+  });
+  scrollT.addEventListener("change", () => {
+    scrollExample();
+  });
+
+  function scrollExample() {
+    pre.scrollTo({
+      top: scrollT.value,
+      left: scrollL.value * 2,
+      behavior: "smooth",
+    });
+  }
+
+  function clipMargin() {
+    pre.style.overflowClipMargin = `${ocm.value}em`;
+  }
+</script>
+```
+
+```css hidden live-sample___overflow
+article {
+  display: flex;
+  gap: 1em;
+}
+
+label {
+  display: block;
+  white-space: nowrap;
+}
+
+pre {
+  border: 2px dashed crimson;
+  height: 150px;
+  width: 20em;
+  margin-bottom: 3em;
+  overflow-clip-margin: 1em;
+  text-align: center;
+}
+
+.wide {
+  width: 40em;
+}
+
+::before {
+  font-weight: bold;
+  color: white;
+  background: crimson;
+  display: inline-block;
+  min-width: 50%;
+  padding: 3px 5px;
+  box-sizing: border-box;
+}
+
+.hidden {
+  overflow: hidden hidden;
+}
+.hidden::before {
+  content: "hidden: ";
+}
+
+.clip {
+  overflow: clip clip;
+}
+.clip::before {
+  content: "clip: ";
+}
+
+.scroll {
+  overflow: scroll scroll;
+}
+.scroll::before {
+  content: "scroll: ";
+}
+
+.auto {
+  overflow: auto auto;
+}
+.auto::before {
+  content: "auto: ";
+}
+
+.overlay {
+  overflow: clip clip;
+  overflow: overlay overlay;
+}
+.overlay::before {
+  content: "overlay (or clip if not supported): ";
+}
+
+.visible {
+  overflow: visible visible;
+}
+.visible::before {
+  content: "visible: ";
+}
+
+article:not(:has(pre.clip)) > fieldset > label:nth-of-type(2),
+article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
+  fieldset
+  fieldset {
+  opacity: 20%;
+  pointer-events: none;
+}
+```
+
+{{EmbedLiveSample("overflow", "", "400px")}}
 
 上のコンテンツボックスにはリンクが記載されていますが、これはキーボードフォーカスがオーバーフローやスクロール動作に与える効果を示すためのものです。リンクに移動したり、コンテンツをプログラムでスクロールしてみてください: 列挙値である `<overflow>` がスクロールコンテナーを生成した場合のみ、コンテンツはスクロールします。
 
@@ -27,6 +216,7 @@ l10n:
 
 ### CSS プロパティ
 
+- {{CSSxRef("line-clamp")}}
 - {{CSSxRef("overflow")}} 一括指定
 - {{CSSxRef("overflow-block")}}
 - {{CSSxRef("overflow-clip-margin")}}
@@ -34,12 +224,19 @@ l10n:
 - {{CSSxRef("overflow-x")}}
 - {{CSSxRef("overflow-y")}}
 - {{CSSxRef("scroll-behavior")}}
+- {{cssxref("scroll-marker-group")}}
 - {{CSSxRef("scrollbar-gutter")}}
 - {{CSSxRef("text-overflow")}}
-- {{CSSxRef("-webkit-line-clamp")}}
 
 > [!NOTE]
-> CSS オーバーフローモジュールレベル 4 では、`block-ellipsis`、`continue`、`line-clamp`、`max-lines` プロパティが導入されました。これらはまだ実装されていません。
+> CSS オーバーフローモジュールレベル 4 では、 `block-ellipsis`, `continue`, `max-lines`, `overflow-clip-margin-block`, `overflow-clip-margin-block-end`, `overflow-clip-margin-block-start`, `overflow-clip-margin-bottom`, `overflow-clip-margin-inline`, `overflow-clip-margin-inline-end`, `overflow-clip-margin-inline-start`, `overflow-clip-margin-left`, `overflow-clip-margin-right`, and `overflow-clip-margin-top` の各プロパティが導入されました。これらはまだ実装されていません。
+
+### セレクターと擬似要素
+
+- {{cssxref("::scroll-button()")}}
+- {{cssxref("::scroll-marker")}}
+- {{cssxref("::scroll-marker-group")}}
+- {{cssxref(":target-current")}}
 
 ### データ型
 
@@ -47,13 +244,16 @@ l10n:
 
 ## ガイド
 
-- [コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
-  - : CSS の構成要素です。オーバーフローとは何か、どのように管理するかを学びます。
+- [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+  - : オーバーフローとは何か、どのように管理するかを学びます。
+- [CSS によるカルーセルの作成](/ja/docs/Web/CSS/CSS_overflow/CSS_carousels)
+  - : スクロールボタン、スクロールマーカー、および生成された段をを使用して、純粋な CSS によるカルーセル UI 機能を作成します。
 - [名前付きスクロール進行タイムラインアニメーションの作成](/ja/docs/Web/CSS/scroll-timeline-name#名前付きスクロール進行タイムラインのアニメーションの作成)
   - : CSS スクロールタイムライン {{cssxref('scroll-timeline-name')}} および {{cssxref('scroll-timeline-axis')}} プロパティと {{cssxref('scroll-timeline')}} の一括指定は、スクロールコンテナーのスクロールオフセットに関連付けられたアニメーションを作成します。
 
 ## 関連概念
 
+- {{cssxref("::column")}}
 - {{CSSxRef("scrollbar-width")}} プロパティ
 - {{CSSxRef("scrollbar-color")}} プロパティ
 - {{CSSxRef("scrollbar-gutter")}} プロパティ

@@ -2,12 +2,12 @@
 title: CSS 背景と境界
 slug: Web/CSS/CSS_backgrounds_and_borders
 l10n:
-  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
+  sourceCommit: f6497ec3b1a28d7b0a99f5d13e81027204293fa3
 ---
 
 {{CSSRef}}
 
-**CSS 背景と境界**モジュールでは、境界、角の丸み、ボックスシャドウを要素に追加します。
+**CSS 背景と境界**モジュールでは、背景、境界、角の丸め、ボックスシャドウを要素に追加します。
 
 さまざまな種類の境界スタイルを追加することができます。ラスター画像から CSS グラデーションまで、どのような種類の画像でも境界を記載することができます。境界は角形または丸めることができ、それぞれの角には異なる半径を設定することができます。要素は、境界があってもなくても丸めることができます。
 
@@ -93,8 +93,6 @@ div:first-of-type {
 - {{cssxref("background")}} 一括指定
 - {{cssxref("background-position-x")}}
 - {{cssxref("background-position-y")}}
-- {{cssxref("background-position-inline")}}
-- {{cssxref("background-position-block")}}
 
 - {{cssxref("border-bottom-color")}}
 - {{cssxref("border-bottom-style")}}
@@ -117,8 +115,6 @@ div:first-of-type {
 - {{cssxref("border-width")}} 一括指定
 - {{cssxref("border")}} 一括指定
 
-- {{cssxref("border-collapse")}}
-
 - {{cssxref("border-bottom-left-radius")}}
 - {{cssxref("border-bottom-right-radius")}}
 - {{cssxref("border-top-left-radius")}}
@@ -134,22 +130,27 @@ div:first-of-type {
 
 - {{cssxref("box-shadow")}}
 
+> [!NOTE]
+> CSS backgrounds モジュールレベル 4 では、 `background-position-block`, `background-position-inline`, `background-repeat-block`, `background-repeat-inline`, `background-repeat-x`, `background-repeat-y`, `background-tbd` の各プロパティを導入しています。これらはまだ実装されていません。
+
 ### データ型
 
 - {{cssxref("line-style")}} 列挙型
 
 ## ガイド
 
-- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
-  - : CSS の背景画像を使用して装飾画像を実装する方法を説明します。
 - [複数の背景の使用](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : 要素に 1 つ以上の背景を設定する方法を説明します。
+  - : 要素に 1 つ以上の背景を設定します。
 - [背景画像の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
   - : 背景画像のサイズや繰り返しの動作を変更する方法を説明します。
-- [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
-  - : 境界が、他のボックスモデルのプロパティとともに、 CSS ボックスモデルにどのような影響を与えるかを説明します。
+- [SVG の背景の拡大縮小](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+  - : SVG のアスペクト比、SVG の寸法値、 CSS の `background-size` プロパティが、 SVG 背景画像の拡大縮小に与える影響について説明します。
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
   - : CSS でグラデーションの背景画像を作成する方法を説明します。
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+  - : CSS の背景画像を使用して装飾的な画像を実装する方法を学びます。
+- [CSS の学習: ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)
+  - : 境界線やその他のボックスモデルプロパティが CSS ボックスモデルに与える影響について学びます。
 
 ## 関連概念
 
@@ -180,7 +181,7 @@ div:first-of-type {
 - [`<image>`](/ja/docs/Web/CSS/image) データ型
 - [`<position>`](/ja/docs/Web/CSS/position) データ型
 
-- [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_keyword) キーワード
+- [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) キーワード
 
 ## 仕様書
 
@@ -188,9 +189,9 @@ div:first-of-type {
 
 ## 関連情報
 
-- 境界画像、角丸、ボックスシャドウを視覚的に作成する対話ツールです。
+- {{cssxref("filter")}}
+- {{cssxref("backdrop-filter")}}
+- [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) フィルター関数
+- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - [境界画像作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-image_generator)
-  - [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)
-  - [ボックスの影作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator)
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)で、境界を含みます。
-- [`drop-shadow()`](/ja/docs/Web/CSS/filter-function/drop-shadow) は入力画像にドロップシャドウ効果を適用するフィルター関数です。この関数は {{cssxref("filter")}} と {{cssxref("backdrop-filter")}} プロパティで使用します。
+- [境界角丸作成ツール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Border-radius_generator)

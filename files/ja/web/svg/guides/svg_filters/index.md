@@ -1,14 +1,9 @@
 ---
 title: SVG フィルターのチュートリアル
 slug: Web/SVG/Guides/SVG_filters
-original_slug: Web/SVG/Tutorial/SVG_Filters_Tutorial
 l10n:
-  sourceCommit: b4f998244660723175f8e06b5d77f68cfb1d1f1a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
-
-## フィルター
 
 SVG では、ビットマップ記述言語と同様のツールを使用することができます。例えば、シャドウや ぼかし効果 を使用したり、さまざまなフィルターの結果を合成したりすることができます。フィルター要素 `<filter>` を使えば、これらの効果を追加し、後でオブジェクトに付加することが可能です。
 

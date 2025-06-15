@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2af4eb16dd4c399ed81f67efd49777fa6ae9030
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 在这篇文章中我们会重温什么是 web 服务器，它们如何工作，以及为什么它们很重要。
 
 <table>

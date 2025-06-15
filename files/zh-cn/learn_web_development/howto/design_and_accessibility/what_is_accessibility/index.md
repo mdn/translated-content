@@ -3,8 +3,6 @@ title: 何为无障碍？
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 本文介绍了 Web 无障碍背后的一些基本概念。
 
 <table class="standard-table">

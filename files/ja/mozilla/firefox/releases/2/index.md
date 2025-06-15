@@ -24,7 +24,7 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [検索プラグインでの検索サジェスト機能のサポート](/ja/docs/Supporting_search_suggestions_in_search_plugins)
   - : 検索バーで入力中にドロップダウンリストが現れる検索サジェスト機能 (search suggestions)をサポートした MozSearch プラグインの作り方。
 - [New in JavaScript 1.7](/ja/docs/New_in_JavaScript_1.7)
-  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、分割代入 (destructuring assignment)、ジェネレーター (generator)とイテレーター (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
+  - : Firefox 2 は JavaScript 1.7 をサポートします。JavaScript 1.7 には `let` や、構造分解 (destructuring assignment)、ジェネレーター (generator)とイテレーター (iterators)、配列内包 (array comprehensions)などの新機能が含まれます。
 - [WHATWG のクライアントサイドのセッション及び永続ストレージ (DOM ストレージ)](/ja/docs/Web/API/Web_Storage_API)
   - : クライアントサイドのセッション及び永続ストレージにより、ウェブアプリケーションは構造化されたデータをクライアントサイドに保存できるようになります。
 - [SVG in Firefox](/ja/docs/SVG_in_Firefox)

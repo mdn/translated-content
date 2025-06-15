@@ -1,9 +1,8 @@
 ---
 title: 421 Misdirected Request
 slug: Web/HTTP/Reference/Status/421
-original_slug: Web/HTTP/Status/421
 l10n:
-  sourceCommit: 0a9c10fc67901972221dc7b3d006334fbfa73dce
+  sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
 {{HTTPSidebar}}
@@ -49,4 +48,3 @@ Server: Apache/2.4.1 (Unix)
 - [TLS 1.3](/ja/docs/Web/Security/Transport_Layer_Security#tls_1.3)
 - [Server Name Indication (SNI)](https://ja.wikipedia.org/wiki/Server_Name_Indication)
 - [Transport Layer Security (TLS) 構成](/ja/docs/Web/Security/Practical_implementation_guides/TLS)
-- Apache [error code `AH02032`](https://svn.apache.org/viewvc?view=revision&revision=1705672) implementation

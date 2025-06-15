@@ -2,9 +2,8 @@
 title: "HTML 属性: max"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
-original_slug: Web/HTML/Attributes/max
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{HTMLSidebar}}
