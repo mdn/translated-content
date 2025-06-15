@@ -35,4 +35,4 @@ HTTP **`200 OK`** 는 요청이 성공했음을 나타내는 성공 응답 상�
 
 ## 같이 보기
 
-- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)
+- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Reference/Methods)

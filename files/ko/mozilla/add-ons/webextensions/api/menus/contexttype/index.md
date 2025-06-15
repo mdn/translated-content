@@ -50,7 +50,7 @@ l10n:
 - tools_menu
   - : 항목이 브라우저의 도구 메뉴에 추가됩니다. 이 기능은 `menus` 네임스페이스를 통해 `ContextType`에 접근하는 경우에만 사용할 수 있다는 것을 참고하십시오. `contextMenus` 네임스페이스를 통해 접근하는 경우에는 사용할 수 없습니다.
 - video
-  - : [video](/ko/docs/Web/HTML/Element/video) 요소에 컨텍스트 클릭을 할 때 적용됩니다.
+  - : [video](/ko/docs/Web/HTML/Reference/Elements/video) 요소에 컨텍스트 클릭을 할 때 적용됩니다.
 
 참고: "launcher"는 지원되지 않습니다.
 

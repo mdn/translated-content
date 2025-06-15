@@ -114,7 +114,7 @@ text-wrap: unset;
 
 텍스트의 구획에는 더 이상 `text-wrap: pretty` 를 사용할 수 없습니다. `pretty` 는 성능에 좋지 않은 영향을 끼칠 수 있음을 인지해야 하고, 레이아웃이 속도보다 중요한 경우에만 긴 텍스트 블록에 사용해야 합니다.
 
-`stable` 값은 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 가 적용된 콘텐츠에서 사용자 경험을 향상시킵니다. 이 값은 사용자가 텍스트를 수정할 때 수정 중인 영역 이전의 줄들을 안정적으로 유지합니다.
+`stable` 값은 [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 가 적용된 콘텐츠에서 사용자 경험을 향상시킵니다. 이 값은 사용자가 텍스트를 수정할 때 수정 중인 영역 이전의 줄들을 안정적으로 유지합니다.
 
 ## 형식 정의
 

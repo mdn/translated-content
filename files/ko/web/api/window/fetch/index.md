@@ -46,9 +46,9 @@ fetch(resource, options)
 
     - `headers`
 
-      - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_header_name)된다는 점을 주의하세요.
+      - : 요청에 추가하고자 하는 헤더들입니다. {{domxref("Headers")}} 객체에 넣어 제공할 수도 있고, {{jsxref("String")}} 값들을 가진 객체 리터럴로 제공해도 됩니다. [어떤 이름들은 금지](/ko/docs/Glossary/Forbidden_request_header)된다는 점을 주의하세요.
 
-        > **참고:** [`Authorization`](/ko/docs/Web/HTTP/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
+        > **참고:** [`Authorization`](/ko/docs/Web/HTTP/Reference/Headers/Authorization) HTTP 헤더는 요청에 추가할 수 있지만, 요청이 다른 출처로 리다이렉트되면 제거됩니다.
 
     - `body`
       - : 요청에 추가하고자 하는 본문입니다. {{domxref("Blob")}}, {{jsxref("ArrayBuffer")}}, {{jsxref("TypedArray")}}, {{jsxref("DataView")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, 문자열 객체 또는 리터럴, {{domxref("ReadableStream")}} 객체를 사용할 수 있습니다. 제일 마지막은 아직 실험적 기능이므로 [호환성 정보](/ko/docs/Web/API/Request#browser_compatibility)를 먼저 확인해서 사용할 수 있을지 검증하세요. `GET`과 `HEAD` 메서드는 본문을 가질 수 없습니다.
@@ -56,7 +56,7 @@ fetch(resource, options)
       - : 이 요청에 사용할 모드, 즉 `cors`, `no-cors`, 또는 `same-origin`입니다.
     - `credentials`
 
-      - : 브라우저가 자격증명([쿠키](/ko/docs/Web/HTTP/Cookies), [HTTP 인증](/ko/docs/Web/HTTP/Authentication) 항목, TLS 클라이언트 인증서)을 어떻게 취급할지 제어합니다. 다음 중 한 문자열이어야 합니다.
+      - : 브라우저가 자격증명([쿠키](/ko/docs/Web/HTTP/Guides/Cookies), [HTTP 인증](/ko/docs/Web/HTTP/Guides/Authentication) 항목, TLS 클라이언트 인증서)을 어떻게 취급할지 제어합니다. 다음 중 한 문자열이어야 합니다.
 
         - `omit`
           - : 브라우저가 요청에서 자격증명을 제외하도록 하고, {{HTTPHeader("Set-Cookie")}} 헤더처럼 응답에 포함된 자격증명도 무시하도록 지시합니다.
@@ -67,10 +67,10 @@ fetch(resource, options)
           - : 브라우저 동일과 교차 출처 요청 모두에 자격증명을 보내고, 응답 자격증명도 모두 사용하도록 지시합니다.
 
             > [!NOTE]
-            > 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
+            > 자격증명은 교차 출처에 대한 단순 요청과 "최종" 요청에는 포함될 수 있지만, [CORS 사전 요청](/ko/docs/Web/HTTP/Guides/CORS#preflight_requests_and_credentials)에는 포함되어선 안됩니다.
 
     - `cache`
-      - : 요청이 브라우저 [HTTP 캐시](/ko/docs/Web/HTTP/Caching)와 어떻게 상호작용할지 제어합니다. 가능한 값은 `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` 중 하나고, 각각에 대한 설명은 {{domxref("Request")}} 객체 문서의 {{domxref("Request/cache", "cache")}} 속성에서 확인할 수 있습니다.
+      - : 요청이 브라우저 [HTTP 캐시](/ko/docs/Web/HTTP/Guides/Caching)와 어떻게 상호작용할지 제어합니다. 가능한 값은 `default`, `no-store`, `reload`, `no-cache`, `force-cache`, `only-if-cached` 중 하나고, 각각에 대한 설명은 {{domxref("Request")}} 객체 문서의 {{domxref("Request/cache", "cache")}} 속성에서 확인할 수 있습니다.
     - `redirect`
 
       - : 리다이렉트 응답 처리법입니다.
@@ -309,5 +309,5 @@ const myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP 접근 제어 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

@@ -28,7 +28,7 @@ li {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `download`
 
@@ -38,7 +38,7 @@ li {
 
       - {{HTTPHeader("Content-Disposition")}} HTTP 헤더
       - [URL 경로](/ko/docs/Web/API/URL/pathname)의 마지막 조각
-      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/URI/Schemes/data)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL_static)의 {{domxref("Blob.type")}}에서 알아냄)
+      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/URI/Reference/Schemes/data)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL_static)의 {{domxref("Blob.type")}}에서 알아냄)
 
     - 값을 지정하면 저장할 때의 파일 이름으로서 제안합니다. `/`와 `\` 문자는`_`로 변환합니다. 파일시스템에서 다른 문자도 제한할 수 있으므로, 필요한 경우 브라우저가 추가로 이름을 조정할 수 있습니다.
 
@@ -57,13 +57,13 @@ li {
     - 웹 브라우저는 다른 URL 스킴을 지원하지 않지만, 웹사이트는 {{domxref("Navigator.registerProtocolHandler()")}}를 통해 지원할 수 있습니다.
 
 - `hreflang`
-  - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Global_attributes/lang)과 동일합니다.
+  - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Reference/Global_attributes/lang)과 동일합니다.
 - `ping`
   - : 하나의 스페이스로 구분하는 URL 목록. 링크를 클릭해 따라갈 경우, 브라우저가 URL 각각에 {{HTTPMethod("POST")}} 요청을 전송합니다. 대개 추적 용도로 사용합니다.
 - `referrerpolicy` {{experimental_inline}}
   - : URL을 가져올 때 사용할 리퍼러. {{httpheader("Referrer-Policy")}} 문서에서 가능한 값과 효과를 확인하세요.
 - `rel`
-  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Attributes/rel) 목록.
+  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Reference/Attributes/rel) 목록.
 - `target`
 
   - : 링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, `<iframe>`의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
@@ -375,7 +375,7 @@ document
 <a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Reference/Elements/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">

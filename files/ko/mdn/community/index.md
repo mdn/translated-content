@@ -20,7 +20,7 @@ MDN Web Docs에 기여할 수 있는 방법 목록은 다음과 같습니다.
 - [풀 리퀘스트 리뷰하기](/ko/docs/MDN/Community/Pull_requests)
 - [MDN Web Docs로 학습하려는 입문자 돕기](/ko/docs/MDN/Community/Learn_forum)
 - [MDN Web Docs 대화형 예제에 기여하기](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md)
-- [MDN Web Docs 번역 돕기](/ko/docs/MDN/Community/Contributing/Translated_content)
+- [MDN Web Docs 번역 돕기](/ko/docs/MDN/Community/Translated_content)
 - [알려진 플랫폼 문제 해결하기](https://github.com/mdn/yari/issues)
 - [브라우저 호환성 데이터를 최신 상태로 유지하기](https://github.com/mdn/browser-compat-data)
 
@@ -30,10 +30,10 @@ MDN Web Docs에 기여할 수 있는 방법 목록은 다음과 같습니다.
 
   - : 이 페이지에는 MDN 팀과 커뮤니티가 사용하는 소통 채널이 나열되어 있으며, 어떤 채널이 적합할지에 대한 힌트를 제공합니다.
 
-- [기여하기](/ko/docs/MDN/Community/Contributing)
+- [기여하기](/ko/docs/conflicting/MDN/Community)
 
   - : 여기서는 기여를 시작하는 법과, 저희가 받을 수 있는 기여 유형을 설명합니다. 다음과 같은 주제를 다룹니다.
-    [시작하기](/ko/docs/MDN/Community/Contributing/Getting_started), [우리의 저장소](/ko/docs/MDN/Community/Contributing/Our_repositories), [Translated content](/ko/docs/MDN/Community/Contributing/Translated_content) 그리고 [보안 취약점 대응](/ko/docs/MDN/Community/Contributing/Security_vulnerability_response) 항목을 다룹니다.
+    [시작하기](/ko/docs/MDN/Community/Getting_started), [우리의 저장소](/ko/docs/orphaned/MDN/Community/Contributing/Our_repositories), [Translated content](/ko/docs/MDN/Community/Translated_content) 그리고 [보안 취약점 대응](/ko/docs/MDN/Community/Contributing/Security_vulnerability_response) 항목을 다룹니다.
 
 - [오픈 소스 예의](/ko/docs/MDN/Community/Open_source_etiquette)
 

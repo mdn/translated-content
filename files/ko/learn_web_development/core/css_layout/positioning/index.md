@@ -228,7 +228,7 @@ span {
 
 ### 위치잡기 상황
 
-어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/Containing_block#identifying_the_containing_block)).
+어떤 요소가 절대 위치잡기의 기준이 되는 "콘테이너 요소"입니까? 이것은 위치잡기 요소의 조상에 지정된 위치 속성의 여하에 따라 많이 달라집니다. (See [콘테이너 블록 식별하기](/ko/docs/Web/CSS/CSS_display/Containing_block#identifying_the_containing_block)).
 
 조상 요소가 명시적으로 정의된 위치 속성을 가지고 있지 않으면 초깃값으로 모든 조상 요소에 정적 위치가 부여됩니다. 그에 따른 결과, 절대적 위치잡기한 요소는 **initial containing block**에 포함되게 됩니다. 초기 콘테이너 블록은 브라우저 뷰포트 크기의 용적을 가지며, 자신도 {{htmlelement("html")}} 요소를 포함하는 블록입니다. 간단히 말해서, 절대적 위치잡기한 요소는 {{htmlelement("html")}} 요소의 외부에 포함되어 초기 뷰포트 기준과 비례한 곳에 위치하게 됩니다.
 

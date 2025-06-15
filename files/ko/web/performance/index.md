@@ -117,13 +117,13 @@ MDN의 [웹 성능 학습 안내서](/ko/docs/Learn_web_development/Extensions/P
 HTML
 
 - [`<picture>` 요소](/ko/docs/Web/HTML/Element/picture)
-- [`<video>` 요소](/ko/docs/Web/HTML/Element/video)
+- [`<video>` 요소](/ko/docs/Web/HTML/Reference/Elements/video)
 - [`<source>` 요소](/ko/docs/Web/HTML/Element/source)
-- [`<img> srcset` 요소](/ko/docs/Web/HTML/Element/img#attributes)
+- [`<img> srcset` 요소](/ko/docs/Web/HTML/Reference/Elements/img#attributes)
 
-  - [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)
+  - [반응형 이미지](/ko/docs/Web/HTML/Guides/Responsive_images)
 
-- [`rel="preload"`를 사용해 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Attributes/rel/preload) - <https://w3c.github.io/preload/>
+- [`rel="preload"`를 사용해 콘텐츠 미리 불러오기](/ko/docs/Web/HTML/Reference/Attributes/rel/preload) - <https://w3c.github.io/preload/>
 
 CSS
 
@@ -164,7 +164,7 @@ API
 
 헤더
 
-- [Content-encoding](/ko/docs/Web/HTTP/Headers/Content-Encoding)
+- [Content-encoding](/ko/docs/Web/HTTP/Reference/Headers/Content-Encoding)
 - HTTP/2
 - [gZip](/ko/docs/Glossary/gzip_compression)
 - Client Hints
@@ -185,5 +185,5 @@ API
   - [Web Workers API](/ko/docs/Web/API/Web_Workers_API)
 
 - [PWA](/ko/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)
-- [Caching](/ko/docs/Web/HTTP/Caching)
+- [Caching](/ko/docs/Web/HTTP/Guides/Caching)
 - Content Delivery Networks (CDN)

@@ -201,7 +201,7 @@ JSON을 가져오기 위해서는, {{domxref("XMLHttpRequest")}} (때론 **XHR**
 
    이것은 최소 두 개의 매개변수를 가집니다. 다른 선택적 매개변수도 가능해요. 이건 단순 예제니깐 두 가지 필수 매개변수만 취할게요.
 
-   - HTTP 메서드는 네트워크 요청을 만들 때 사용됩니다. 이 경우 [`GET`](/ko/docs/Web/HTTP/Methods/GET) 을 사용하는게 좋겠어요. 우린 그저 데이터를 가져오면 되니깐요.
+   - HTTP 메서드는 네트워크 요청을 만들 때 사용됩니다. 이 경우 [`GET`](/ko/docs/Web/HTTP/Reference/Methods/GET) 을 사용하는게 좋겠어요. 우린 그저 데이터를 가져오면 되니깐요.
    - URL은 요청을 보낼 곳을 지정합니다. 우리가 저장해 둔 JSON 파일의 URL로 지정할게요.
 
 4. 다음으로, 아래의 두 줄을 추가해 주세요. [`responseType`](/ko/docs/Web/API/XMLHttpRequest/responseType) 을 JSON으로 설정했어요. XHR로 하여금 서버가 JSON 데이터를 반환할 것이며, JavaScript 객체로서 변환될 것이라는 걸 알게 하기 위해서죠. 이제 [`send()`](/ko/docs/Web/API/XMLHttpRequest/send) 메서드를 이용해 요청을 보냅시다.
@@ -341,7 +341,7 @@ myString;
 
 ## 실력을 시험해보자!
 
-당신은 이 글의 끝에 도달했지만 가장 중요한 정보들을 기억하고 있습니까? 다음 단계를 가기 전 당신이 얼마나 이 정보를 습득하고 있는지 확인할 수 있는 테스트를 할 수 있습니다. — [Test your skills: JSON](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)
+당신은 이 글의 끝에 도달했지만 가장 중요한 정보들을 기억하고 있습니까? 다음 단계를 가기 전 당신이 얼마나 이 정보를 습득하고 있는지 확인할 수 있는 테스트를 할 수 있습니다. — [Test your skills: JSON](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)
 
 ## 요약
 
@@ -352,7 +352,7 @@ myString;
 - [JSON object reference page](/ko/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest object reference page](/ko/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP request methods](/ko/docs/Web/HTTP/Methods)
+- [HTTP request methods](/ko/docs/Web/HTTP/Reference/Methods)
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
