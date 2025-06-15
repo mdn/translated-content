@@ -5,7 +5,7 @@ slug: Web/API/Event
 
 {{APIRef("DOM")}}
 
-L'interface **`Event`** interface représente un évènement qui se produit dans le DOM.
+L'interface **`Event`** représente un évènement qui se produit dans le DOM.
 
 Un évènement peut être déclenché par une action humaine (clic avec la souris, appui sur une touche du clavier) ou généré par des API pour représenter la progression d'une tâche asynchrone. Il est également possible de déclencher un évènement à partir d'un programme, en appelant par exemple la méthode [`HTMLElement.click()`](/fr/docs/Web/API/HTMLElement/click) sur un élément ou en définissant l'évènement avant de l'envoyer sur une cible avec la méthode [`EventTarget.dispatchEvent()`](/fr/docs/Web/API/EventTarget/dispatchEvent).
 
