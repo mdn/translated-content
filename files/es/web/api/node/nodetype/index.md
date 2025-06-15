@@ -23,7 +23,7 @@ la variable type será un entero positivo con alguno de los siguientes valores:
 | `ENTITY_NODE` {{deprecated_inline()}}                                   | `6`   |
 | [`PROCESSING_INSTRUCTION_NODE`](/es/docs/Web/API/ProcessingInstruction) | `7`   |
 | [`COMMENT_NODE`](/es/docs/Web/API/Document/createComment)               | `8`   |
-| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Element/html)                       | `9`   |
+| [`DOCUMENT_NODE`](/es/docs/Web/HTML/Reference/Elements/html)            | `9`   |
 | [`DOCUMENT_TYPE_NODE`](/es/docs/Web/API/Document/doctype)               | `10`  |
 | [`DOCUMENT_FRAGMENT_NODE`](/es/docs/Web/API/DocumentFragment)           | `11`  |
 | `NOTATION_NODE` {{deprecated_inline()}}                                 | `12`  |
