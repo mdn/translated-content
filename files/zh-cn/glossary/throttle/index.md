@@ -13,9 +13,9 @@ l10n:
 
 节流的典型用例是与另一个持续更新的状态同步。例如，函数 `onScrolled` 监听 [`scroll`](/zh-CN/docs/Web/API/Document/scroll_event) 事件。`scroll` 事件可能每滚动一个像素就触发一次，因此该函数会在极短的间隔内被频繁调用。如果 `onScrolled` 计算量大，前续调用可能会阻塞后续调用或阻塞其他操作，导致明显的{{glossary("jank", "卡顿")}}。此时可以对 `onScrolled` 进行节流，使其最多每 10 毫秒只能执行一次：
 
-1. 第一次调用 `onScrolled` 被称为_前沿_（leading edge）。
+1. 第一次调用 `onScrolled` 被称为*前沿*（leading edge）。
 2. 之后每次调用 `onScrolled`，如果距离第一次调用不足 10 毫秒，则属于同一“批次”。
-3. 距离第一次调用满 10 毫秒后，称为_后沿_（trailing edge）。
+3. 距离第一次调用满 10 毫秒后，称为*后沿*（trailing edge）。
 
 通常而言 `onScrolled` 只会在前沿执行一次，但有时也可能在后沿或前后沿都执行，具体取决于实际需求。如果前后沿都执行，节流通常还会确保下一个前沿调用距离上一个后沿调用至少间隔 10 毫秒。
 
