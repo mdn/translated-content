@@ -2,7 +2,7 @@
 title: "修飾子: (?ims-ims:...)"
 slug: Web/JavaScript/Reference/Regular_expressions/Modifier
 l10n:
-  sourceCommit: f3d3298130d8e22fb89ba123a0648ad3cb7b3655
+  sourceCommit: b7b0b7c096525c24c22d80f79448823c747491e7
 ---
 
 {{jsSidebar}}
