@@ -106,10 +106,10 @@ Intl.supportedValuesOf(key)
 | `phonetic` | 音声順（発音に基づく並び順、リンガラ語用）                                                                                                                 |
 | `pinyin`   | ラテン文字および CJK 文字（中国語で使用）のピンイン順                                                                                                      |
 | `searchjl` | 韓国語の頭子音検索用の特別な照合型です。**警告:** この照合は、 {{jsxref("Intl.Collator")}} の `usage: "sort"` でのみ使用できますが、整列用ではありません。 |
-| `stroke`   | ラテン文字のピンイン順、CJK 文字の筆順（中国語で使用）                                                                                                                     |
-| `trad`     | 伝統的なスタイル順（スペイン語など）。`traditional` としても認識されます。                                                                                                               |
-| `unihan`   | ラテン文字のピンイン順、CJK 文字のユニハン部首順（中国語で使用されています）                                                                                                   |
-| `zhuyin`   | ラテン文字のピンイン順、ボポモフォおよび CJK 文字の注音符号順（中国語で使用）                                                                                                        |
+| `stroke`   | ラテン文字のピンイン順、CJK 文字の筆順（中国語で使用）                                                                                                     |
+| `trad`     | 伝統的なスタイル順（スペイン語など）。`traditional` としても認識されます。                                                                                 |
+| `unihan`   | ラテン文字のピンイン順、CJK 文字のユニハン部首順（中国語で使用されています）                                                                               |
+| `zhuyin`   | ラテン文字のピンイン順、ボポモフォおよび CJK 文字の注音符号順（中国語で使用）                                                                              |
 
 下記の型は CLDR データで指定されていますが、非推奨であり、明示的な使用は控えるべきであり、また、さまざまな理由により、ブラウザーが対応していることを示さない場合があります。これらの使用は避けてください。
 
@@ -142,104 +142,104 @@ Intl.supportedValuesOf(key)
 
 次のものは、 `numberingSystem` キーに対してブラウザーが一般的に対応しているすべての値です。これらの値は、 `numberingSystem` オプションまたは `nu` [Unicode 拡張キー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)として {{jsxref("Intl.NumberFormat")}} などのオブジェクトを作成する際に使用することができます。「数字の文字」の行の場合、ランタイムは追加の操作を行わずに数字を 1 つずつ対応させます。それ以外で「アルゴリズム」とマークされているものは、数字を対応させるために追加のアルゴリズムが必要です。 Unicode コードポイントが高いほど、数値体系は新しく、すべてのブラウザーで対応していない可能性が高くなります。
 
-| 値         | 説明                                                                       | 数字の文字                                                                                        |
-| ---------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
-| `adlm`     | Adlam digits                                                               | `𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙` (U+1E950 to U+1E959)                                                                       |
-| `ahom`     | Ahom digits                                                                | `𑜰𑜱𑜲𑜳𑜴𑜵𑜶𑜷𑜸𑜹` (U+11730 to U+11739)                                                                       |
-| `arab`     | Arabic-Indic digits                                                        | `٠١٢٣٤٥٦٧٨٩` (U+0660 to U+0669)                                                                         |
-| `arabext`  | Extended Arabic-Indic digits                                               | `۰۰۱۲۳۴۵۶۷۸۹` (U+06F0 to U+06F9)                                                                        |
-| `armn`     | Armenian upper case numerals                                               | アルゴリズム                                                                                             |
-| `armnlow`  | Armenian lower case numerals                                               | アルゴリズム                                                                                             |
-| `bali`     | Balinese digits                                                            | `᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙` (U+1B50 to U+1B59)                                                                         |
-| `beng`     | Bengali digits                                                             | `০১২৩৪৫৬৭৮৯` (U+09E6 to U+09EF)                                                                         |
-| `bhks`     | Bhaiksuki digits                                                           | `𑱐𑱑𑱒𑱓𑱔𑱕𑱖𑱗𑱘𑱙` (U+11C50 to U+11C59)                                                                       |
-| `brah`     | Brahmi digits                                                              | `𑁦𑁧𑁨𑁩𑁪𑁫𑁬𑁭𑁮𑁯` (U+11066 to U+1106F)                                                                       |
-| `cakm`     | Chakma digits                                                              | `𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿` (U+11136 to U+1113F)                                                                       |
-| `cham`     | Cham digits                                                                | `꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙` (U+AA50 to U+AA59)                                                                         |
-| `cyrl`     | Cyrillic numerals                                                          | アルゴリズム                                                                                             |
-| `deva`     | Devanagari digits                                                          | `०१२३४५६७८९` (U+0966 to U+096F)                                                                         |
-| `diak`     | Dives Akuru digits                                                         | `𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙` (U+11950 to U+11959)                                                                       |
-| `ethi`     | Ethiopic numerals                                                          | アルゴリズム                                                                                             |
-| `fullwide` | 全角数字                                                          | `０１２３４５６７８９` (U+FF10 ～ U+FF19)                                                               |
-| `gara`     | Garay digits                                                               | `𐵀𐵁𐵂𐵃𐵄𐵅𐵆𐵇𐵈𐵉` (U+10D40 to U+10D49)                                                                       |
-| `geor`     | Georgian numerals                                                          | アルゴリズム                                                                                             |
-| `gong`     | Gunjala Gondi digits                                                       | `𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩` (U+11DA0 to U+11DA9)                                                                       |
-| `gonm`     | Masaram Gondi digits                                                       | `𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙` (U+11D50 to U+11D59)                                                                       |
-| `grek`     | Greek upper case numerals                                                  | アルゴリズム                                                                                             |
-| `greklow`  | Greek lower case numerals                                                  | アルゴリズム                                                                                             |
-| `gujr`     | Gujarati digits                                                            | `૦૧૨૩૪૫૬૭૮૯` (U+0AE6 to U+0AEF)                                                                         |
-| `gukh`     | Gurung Khema digits                                                        | `𖄰𖄱𖄲𖄳𖄴𖄵𖄶𖄷𖄸𖄹` (U+16130 to U+16139)                                                                       |
-| `guru`     | Gurmukhi digits                                                            | `੦੧੨੩੪੫੬੭੮੯` (U+0A66 to U+0A6F)                                                                         |
+| 値         | 説明                                                | 数字の文字                                                                                              |
+| ---------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `adlm`     | Adlam digits                                        | `𞥐𞥑𞥒𞥓𞥔𞥕𞥖𞥗𞥘𞥙` (U+1E950 to U+1E959)                                                                       |
+| `ahom`     | Ahom digits                                         | `𑜰𑜱𑜲𑜳𑜴𑜵𑜶𑜷𑜸𑜹` (U+11730 to U+11739)                                                                       |
+| `arab`     | Arabic-Indic digits                                 | `٠١٢٣٤٥٦٧٨٩` (U+0660 to U+0669)                                                                         |
+| `arabext`  | Extended Arabic-Indic digits                        | `۰۰۱۲۳۴۵۶۷۸۹` (U+06F0 to U+06F9)                                                                        |
+| `armn`     | Armenian upper case numerals                        | アルゴリズム                                                                                            |
+| `armnlow`  | Armenian lower case numerals                        | アルゴリズム                                                                                            |
+| `bali`     | Balinese digits                                     | `᭐᭑᭒᭓᭔᭕᭖᭗᭘᭙` (U+1B50 to U+1B59)                                                                         |
+| `beng`     | Bengali digits                                      | `০১২৩৪৫৬৭৮৯` (U+09E6 to U+09EF)                                                                         |
+| `bhks`     | Bhaiksuki digits                                    | `𑱐𑱑𑱒𑱓𑱔𑱕𑱖𑱗𑱘𑱙` (U+11C50 to U+11C59)                                                                       |
+| `brah`     | Brahmi digits                                       | `𑁦𑁧𑁨𑁩𑁪𑁫𑁬𑁭𑁮𑁯` (U+11066 to U+1106F)                                                                       |
+| `cakm`     | Chakma digits                                       | `𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿` (U+11136 to U+1113F)                                                                       |
+| `cham`     | Cham digits                                         | `꩐꩑꩒꩓꩔꩕꩖꩗꩘꩙` (U+AA50 to U+AA59)                                                                         |
+| `cyrl`     | Cyrillic numerals                                   | アルゴリズム                                                                                            |
+| `deva`     | Devanagari digits                                   | `०१२३४५६७८९` (U+0966 to U+096F)                                                                         |
+| `diak`     | Dives Akuru digits                                  | `𑥐𑥑𑥒𑥓𑥔𑥕𑥖𑥗𑥘𑥙` (U+11950 to U+11959)                                                                       |
+| `ethi`     | Ethiopic numerals                                   | アルゴリズム                                                                                            |
+| `fullwide` | 全角数字                                            | `０１２３４５６７８９` (U+FF10 ～ U+FF19)                                                               |
+| `gara`     | Garay digits                                        | `𐵀𐵁𐵂𐵃𐵄𐵅𐵆𐵇𐵈𐵉` (U+10D40 to U+10D49)                                                                       |
+| `geor`     | Georgian numerals                                   | アルゴリズム                                                                                            |
+| `gong`     | Gunjala Gondi digits                                | `𑶠𑶡𑶢𑶣𑶤𑶥𑶦𑶧𑶨𑶩` (U+11DA0 to U+11DA9)                                                                       |
+| `gonm`     | Masaram Gondi digits                                | `𑵐𑵑𑵒𑵓𑵔𑵕𑵖𑵗𑵘𑵙` (U+11D50 to U+11D59)                                                                       |
+| `grek`     | Greek upper case numerals                           | アルゴリズム                                                                                            |
+| `greklow`  | Greek lower case numerals                           | アルゴリズム                                                                                            |
+| `gujr`     | Gujarati digits                                     | `૦૧૨૩૪૫૬૭૮૯` (U+0AE6 to U+0AEF)                                                                         |
+| `gukh`     | Gurung Khema digits                                 | `𖄰𖄱𖄲𖄳𖄴𖄵𖄶𖄷𖄸𖄹` (U+16130 to U+16139)                                                                       |
+| `guru`     | Gurmukhi digits                                     | `੦੧੨੩੪੫੬੭੮੯` (U+0A66 to U+0A6F)                                                                         |
 | `hanidays` | 旧暦/その他の伝統的な暦の漢数字による日付の番号付け |                                                                                                         |
-| `hanidec`  | 数字として漢字を使用する桁取り十進法        | `〇一二三四五六七八九` (U+3007, U+4E00, U+4E8C, U+4E09, U+56DB, U+4E94, U+516D, U+4E03, U+516B, U+4E5D) |
-| `hans`     | 簡体字中国語の数字                                                | アルゴリズム                                                                                             |
-| `hansfin`  | 簡体字中国語の金融数字                                      | アルゴリズム                                                                                             |
-| `hant`     | 繁体字中国語の数字                                               | アルゴリズム                                                                                             |
-| `hantfin`  | 繁体字中国語の金融数字                                     | アルゴリズム                                                                                             |
-| `hebr`     | ヘブライ数字                                                            | アルゴリズム                                                                                             |
-| `hmng`     | Pahawh Hmong digits                                                        | `𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙` (U+16B50 to U+16B59)                                                                       |
-| `hmnp`     | Nyiakeng Puachue Hmong digits                                              | `𞅀𞅁𞅂𞅃𞅄𞅅𞅆𞅇𞅈𞅉` (U+1E140 to U+1E149)                                                                       |
-| `java`     | Javanese digits                                                            | `꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙` (U+A9D0 to U+A9D9)                                                                         |
-| `jpan`     | 日本語の数字                                                          | アルゴリズム                                                                                             |
-| `jpanfin`  | 日本語の金融数字                                                | アルゴリズム                                                                                             |
-| `jpanyear` | 日本の暦における最初の年を元年とした数字                 | アルゴリズム                                                                                             |
-| `kali`     | Kayah Li digits                                                            | `꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉` (U+A900 to U+A909)                                                                         |
-| `kawi`     | Kawi digits                                                                | `𑽐𑽑𑽒𑽓𑽔𑽕𑽖𑽗𑽘𑽙` (U+11F50 to U+11F59)                                                                       |
-| `khmr`     | Khmer digits                                                               | `០១២៣៤៥៦៧៨៩` (U+17E0 to U+17E9)                                                                         |
-| `knda`     | Kannada digits                                                             | `೦೧೨೩೪೫೬೭೮೯` (U+0CE6 to U+0CEF)                                                                         |
-| `krai`     | Kirat Rai digits                                                           | `𖵰𖵱𖵲𖵳𖵴𖵵𖵶𖵷𖵸𖵹` (U+16D70 to U+16D79)                                                                       |
-| `lana`     | Tai Tham Hora (secular) digits                                             | `᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉` (U+1A80 to U+1A89)                                                                         |
-| `lanatham` | Tai Tham (ecclesiastical) digits                                           | `᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙` (U+1A90 to U+1A99)                                                                         |
-| `laoo`     | Lao digits                                                                 | `໐໑໒໓໔໕໖໗໘໙` (U+0ED0 to U+0ED9)                                                                         |
-| `latn`     | ラテン数字                                                               | `0123456789` (U+0030 ～ U+0039)                                                                         |
-| `lepc`     | Lepcha digits                                                              | `᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉` (U+1C40 to U+1C49)                                                                         |
-| `limb`     | Limbu digits                                                               | `᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏` (U+1946 to U+194F)                                                                         |
-| `mathbold` | 数式用の太字数字                                                   | `𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗` (U+1D7CE ～ U+1D7D7)                                                                       |
-| `mathdbl`  | 数式用の二重打刻数字                                          | `𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` (U+1D7D8 ～ U+1D7E1)                                                                       |
-| `mathmono` | 数式用等幅数字 digits                                              | `𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿` (U+1D7F6 ～ U+1D7FF)                                                                       |
-| `mathsanb` | 数式用サンセリフ太字数字                                        | `𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵` (U+1D7EC ～ U+1D7F5)                                                                       |
-| `mathsans` | 数式用サンセリフ数字                                             | `𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫` (U+1D7E2 ～ U+1D7EB)                                                                       |
-| `mlym`     | Malayalam digits                                                           | `൦൧൨൩൪൫൬൭൮൯` (U+0D66 to U+0D6F)                                                                         |
-| `modi`     | Modi digits                                                                | `𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙` (U+11650 to U+11659)                                                                       |
-| `mong`     | Mongolian digits                                                           | `᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙` (U+1810 to U+1819)                                                                         |
-| `mroo`     | Mro digits                                                                 | `𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩` (U+16A60 to U+16A69)                                                                       |
-| `mtei`     | Meetei Mayek digits                                                        | `꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹` (U+ABF0 to U+ABF9)                                                                         |
-| `mymr`     | Myanmar digits                                                             | `၀၁၂၃၄၅၆၇၈၉` (U+1040 to U+1049)                                                                         |
-| `mymrepka` | Myanmar Eastern Pwo Karen digits                                           | `𑛚𑛛𑛜𑛝𑛞𑛟𑛠𑛡𑛢𑛣` (U+116DA to U+116E3)                                                                       |
-| `mymrpao`  | Myanmar Pao digits                                                         | `𑛐𑛑𑛒𑛓𑛔𑛕𑛖𑛗𑛘𑛙` (U+116D0 to U+116D9)                                                                       |
-| `mymrshan` | Myanmar Shan digits                                                        | `႐႑႒႓႔႕႖႗႘႙` (U+1090 to U+1099)                                                                         |
-| `mymrtlng` | Myanmar Tai Laing digits                                                   | `꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹` (U+A9F0 to U+A9F9)                                                                         |
-| `nagm`     | Nag Mundari digits                                                         | `𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹` (U+1E4F0 to U+1E4F9)                                                                       |
-| `newa`     | Newa digits                                                                | `𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙` (U+11450 to U+11459)                                                                       |
-| `nkoo`     | N'Ko digits                                                                | `߀߁߂߃߄߅߆߇߈߉` (U+07C0 to U+07C9)                                                                         |
-| `olck`     | Ol Chiki digits                                                            | `᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙` (U+1C50 to U+1C59)                                                                         |
-| `onao`     | Ol Onal digits                                                             | `𞗱𞗲𞗳𞗴𞗵𞗶𞗷𞗸𞗹𞗺` (U+1E5F1 to U+1E5FA)                                                                       |
-| `orya`     | Oriya digits                                                               | `୦୧୨୩୪୫୬୭୮୯` (U+0B66 to U+0B6F)                                                                         |
-| `osma`     | Osmanya digits                                                             | `𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩` (U+104A0 to U+104A9)                                                                       |
-| `outlined` | 古いコンピューターの縁取り数字                                           | `𜳰𜳱𜳲𜳳𜳴𜳵𜳶𜳷𜳸𜳹` (U+1CCF0 ～ U+1CCF9)                                                                       |
-| `rohg`     | Hanifi Rohingya digits                                                     | `𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹` (U+10D30 to U+10D39)                                                                       |
-| `roman`    | 大文字のローマ数字                                                  | アルゴリズム                                                                                             |
-| `romanlow` | 小文字のローマ数字                                                   | アルゴリズム                                                                                             |
-| `saur`     | Saurashtra digits                                                          | `꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙` (U+A8D0 to U+A8D9)                                                                         |
-| `segment`  | 古いコンピューターのデジタル数字                                          | `🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹` (U+1FBF0 ～ U+1FBF9)                                                                       |
-| `shrd`     | Sharada digits                                                             | `𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙` (U+111D0 to U+111D9)                                                                       |
-| `sind`     | Khudawadi digits                                                           | `𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹` (U+112F0 to U+112F9)                                                                       |
-| `sinh`     | Sinhala Lith digits                                                        | `෦෧෨෩෪෫෬෭෮෯` (U+0DE6 to U+0DEF)                                                                         |
-| `sora`     | Sora_Sompeng digits                                                        | `𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹` (U+110F0 to U+110F9)                                                                       |
-| `sund`     | Sundanese digits                                                           | `᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹` (U+1BB0 to U+1BB9)                                                                         |
-| `sunu`     | Sunuwar digits                                                             | `𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹` (U+11BF0 to U+11BF9)                                                                       |
-| `takr`     | Takri digits                                                               | `𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉` (U+116C0 to U+116C9)                                                                       |
-| `talu`     | New Tai Lue digits                                                         | `᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙` (U+19D0 to U+19D9)                                                                         |
-| `taml`     | Tamil numerals                                                             | アルゴリズム                                                                                             |
-| `tamldec`  | Modern Tamil decimal digits                                                | `௦௧௨௩௪௫௬௭௮௯` (U+0BE6 to U+0BEF)                                                                         |
-| `telu`     | Telugu digits                                                              | `౦౧౨౩౪౫౬౭౮౯` (U+0C66 to U+0C6F)                                                                         |
-| `thai`     | Thai digits                                                                | `๐๑๒๓๔๕๖๗๘๙` (U+0E50 to U+0E59)                                                                         |
-| `tibt`     | Tibetan digits                                                             | `༠༡༢༣༤༥༦༧༨༩` (U+0F20 to U+0F29)                                                                         |
-| `tirh`     | Tirhuta digits                                                             | `𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙` (U+114D0 to U+114D9)                                                                       |
-| `tnsa`     | Tangsa digits                                                              | `𖫀𖫁𖫂𖫃𖫄𖫅𖫆𖫇𖫈𖫉` (U+16AC0 to U+16AC9)                                                                       |
-| `vaii`     | Vai digits                                                                 | `꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩` (U+A620 to U+A629)                                                                         |
-| `wara`     | Warang Citi digits                                                         | `𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩` (U+118E0 to U+118E9)                                                                       |
-| `wcho`     | Wancho digits                                                              | `𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹` (U+1E2F0 to U+1E2F9)                                                                       |
+| `hanidec`  | 数字として漢字を使用する桁取り十進法                | `〇一二三四五六七八九` (U+3007, U+4E00, U+4E8C, U+4E09, U+56DB, U+4E94, U+516D, U+4E03, U+516B, U+4E5D) |
+| `hans`     | 簡体字中国語の数字                                  | アルゴリズム                                                                                            |
+| `hansfin`  | 簡体字中国語の金融数字                              | アルゴリズム                                                                                            |
+| `hant`     | 繁体字中国語の数字                                  | アルゴリズム                                                                                            |
+| `hantfin`  | 繁体字中国語の金融数字                              | アルゴリズム                                                                                            |
+| `hebr`     | ヘブライ数字                                        | アルゴリズム                                                                                            |
+| `hmng`     | Pahawh Hmong digits                                 | `𖭐𖭑𖭒𖭓𖭔𖭕𖭖𖭗𖭘𖭙` (U+16B50 to U+16B59)                                                                       |
+| `hmnp`     | Nyiakeng Puachue Hmong digits                       | `𞅀𞅁𞅂𞅃𞅄𞅅𞅆𞅇𞅈𞅉` (U+1E140 to U+1E149)                                                                       |
+| `java`     | Javanese digits                                     | `꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙` (U+A9D0 to U+A9D9)                                                                         |
+| `jpan`     | 日本語の数字                                        | アルゴリズム                                                                                            |
+| `jpanfin`  | 日本語の金融数字                                    | アルゴリズム                                                                                            |
+| `jpanyear` | 日本の暦における最初の年を元年とした数字            | アルゴリズム                                                                                            |
+| `kali`     | Kayah Li digits                                     | `꤀꤁꤂꤃꤄꤅꤆꤇꤈꤉` (U+A900 to U+A909)                                                                         |
+| `kawi`     | Kawi digits                                         | `𑽐𑽑𑽒𑽓𑽔𑽕𑽖𑽗𑽘𑽙` (U+11F50 to U+11F59)                                                                       |
+| `khmr`     | Khmer digits                                        | `០១២៣៤៥៦៧៨៩` (U+17E0 to U+17E9)                                                                         |
+| `knda`     | Kannada digits                                      | `೦೧೨೩೪೫೬೭೮೯` (U+0CE6 to U+0CEF)                                                                         |
+| `krai`     | Kirat Rai digits                                    | `𖵰𖵱𖵲𖵳𖵴𖵵𖵶𖵷𖵸𖵹` (U+16D70 to U+16D79)                                                                       |
+| `lana`     | Tai Tham Hora (secular) digits                      | `᪀᪁᪂᪃᪄᪅᪆᪇᪈᪉` (U+1A80 to U+1A89)                                                                         |
+| `lanatham` | Tai Tham (ecclesiastical) digits                    | `᪐᪑᪒᪓᪔᪕᪖᪗᪘᪙` (U+1A90 to U+1A99)                                                                         |
+| `laoo`     | Lao digits                                          | `໐໑໒໓໔໕໖໗໘໙` (U+0ED0 to U+0ED9)                                                                         |
+| `latn`     | ラテン数字                                          | `0123456789` (U+0030 ～ U+0039)                                                                         |
+| `lepc`     | Lepcha digits                                       | `᱀᱁᱂᱃᱄᱅᱆᱇᱈᱉` (U+1C40 to U+1C49)                                                                         |
+| `limb`     | Limbu digits                                        | `᥆᥇᥈᥉᥊᥋᥌᥍᥎᥏` (U+1946 to U+194F)                                                                         |
+| `mathbold` | 数式用の太字数字                                    | `𝟎𝟏𝟐𝟑𝟒𝟓𝟔𝟕𝟖𝟗` (U+1D7CE ～ U+1D7D7)                                                                       |
+| `mathdbl`  | 数式用の二重打刻数字                                | `𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡` (U+1D7D8 ～ U+1D7E1)                                                                       |
+| `mathmono` | 数式用等幅数字 digits                               | `𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿` (U+1D7F6 ～ U+1D7FF)                                                                       |
+| `mathsanb` | 数式用サンセリフ太字数字                            | `𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵` (U+1D7EC ～ U+1D7F5)                                                                       |
+| `mathsans` | 数式用サンセリフ数字                                | `𝟢𝟣𝟤𝟥𝟦𝟧𝟨𝟩𝟪𝟫` (U+1D7E2 ～ U+1D7EB)                                                                       |
+| `mlym`     | Malayalam digits                                    | `൦൧൨൩൪൫൬൭൮൯` (U+0D66 to U+0D6F)                                                                         |
+| `modi`     | Modi digits                                         | `𑙐𑙑𑙒𑙓𑙔𑙕𑙖𑙗𑙘𑙙` (U+11650 to U+11659)                                                                       |
+| `mong`     | Mongolian digits                                    | `᠐᠑᠒᠓᠔᠕᠖᠗᠘᠙` (U+1810 to U+1819)                                                                         |
+| `mroo`     | Mro digits                                          | `𖩠𖩡𖩢𖩣𖩤𖩥𖩦𖩧𖩨𖩩` (U+16A60 to U+16A69)                                                                       |
+| `mtei`     | Meetei Mayek digits                                 | `꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹` (U+ABF0 to U+ABF9)                                                                         |
+| `mymr`     | Myanmar digits                                      | `၀၁၂၃၄၅၆၇၈၉` (U+1040 to U+1049)                                                                         |
+| `mymrepka` | Myanmar Eastern Pwo Karen digits                    | `𑛚𑛛𑛜𑛝𑛞𑛟𑛠𑛡𑛢𑛣` (U+116DA to U+116E3)                                                                       |
+| `mymrpao`  | Myanmar Pao digits                                  | `𑛐𑛑𑛒𑛓𑛔𑛕𑛖𑛗𑛘𑛙` (U+116D0 to U+116D9)                                                                       |
+| `mymrshan` | Myanmar Shan digits                                 | `႐႑႒႓႔႕႖႗႘႙` (U+1090 to U+1099)                                                                         |
+| `mymrtlng` | Myanmar Tai Laing digits                            | `꧰꧱꧲꧳꧴꧵꧶꧷꧸꧹` (U+A9F0 to U+A9F9)                                                                         |
+| `nagm`     | Nag Mundari digits                                  | `𞓰𞓱𞓲𞓳𞓴𞓵𞓶𞓷𞓸𞓹` (U+1E4F0 to U+1E4F9)                                                                       |
+| `newa`     | Newa digits                                         | `𑑐𑑑𑑒𑑓𑑔𑑕𑑖𑑗𑑘𑑙` (U+11450 to U+11459)                                                                       |
+| `nkoo`     | N'Ko digits                                         | `߀߁߂߃߄߅߆߇߈߉` (U+07C0 to U+07C9)                                                                         |
+| `olck`     | Ol Chiki digits                                     | `᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙` (U+1C50 to U+1C59)                                                                         |
+| `onao`     | Ol Onal digits                                      | `𞗱𞗲𞗳𞗴𞗵𞗶𞗷𞗸𞗹𞗺` (U+1E5F1 to U+1E5FA)                                                                       |
+| `orya`     | Oriya digits                                        | `୦୧୨୩୪୫୬୭୮୯` (U+0B66 to U+0B6F)                                                                         |
+| `osma`     | Osmanya digits                                      | `𐒠𐒡𐒢𐒣𐒤𐒥𐒦𐒧𐒨𐒩` (U+104A0 to U+104A9)                                                                       |
+| `outlined` | 古いコンピューターの縁取り数字                      | `𜳰𜳱𜳲𜳳𜳴𜳵𜳶𜳷𜳸𜳹` (U+1CCF0 ～ U+1CCF9)                                                                       |
+| `rohg`     | Hanifi Rohingya digits                              | `𐴰𐴱𐴲𐴳𐴴𐴵𐴶𐴷𐴸𐴹` (U+10D30 to U+10D39)                                                                       |
+| `roman`    | 大文字のローマ数字                                  | アルゴリズム                                                                                            |
+| `romanlow` | 小文字のローマ数字                                  | アルゴリズム                                                                                            |
+| `saur`     | Saurashtra digits                                   | `꣐꣑꣒꣓꣔꣕꣖꣗꣘꣙` (U+A8D0 to U+A8D9)                                                                         |
+| `segment`  | 古いコンピューターのデジタル数字                    | `🯰🯱🯲🯳🯴🯵🯶🯷🯸🯹` (U+1FBF0 ～ U+1FBF9)                                                                       |
+| `shrd`     | Sharada digits                                      | `𑇐𑇑𑇒𑇓𑇔𑇕𑇖𑇗𑇘𑇙` (U+111D0 to U+111D9)                                                                       |
+| `sind`     | Khudawadi digits                                    | `𑋰𑋱𑋲𑋳𑋴𑋵𑋶𑋷𑋸𑋹` (U+112F0 to U+112F9)                                                                       |
+| `sinh`     | Sinhala Lith digits                                 | `෦෧෨෩෪෫෬෭෮෯` (U+0DE6 to U+0DEF)                                                                         |
+| `sora`     | Sora_Sompeng digits                                 | `𑃰𑃱𑃲𑃳𑃴𑃵𑃶𑃷𑃸𑃹` (U+110F0 to U+110F9)                                                                       |
+| `sund`     | Sundanese digits                                    | `᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹` (U+1BB0 to U+1BB9)                                                                         |
+| `sunu`     | Sunuwar digits                                      | `𑯰𑯱𑯲𑯳𑯴𑯵𑯶𑯷𑯸𑯹` (U+11BF0 to U+11BF9)                                                                       |
+| `takr`     | Takri digits                                        | `𑛀𑛁𑛂𑛃𑛄𑛅𑛆𑛇𑛈𑛉` (U+116C0 to U+116C9)                                                                       |
+| `talu`     | New Tai Lue digits                                  | `᧐᧑᧒᧓᧔᧕᧖᧗᧘᧙` (U+19D0 to U+19D9)                                                                         |
+| `taml`     | Tamil numerals                                      | アルゴリズム                                                                                            |
+| `tamldec`  | Modern Tamil decimal digits                         | `௦௧௨௩௪௫௬௭௮௯` (U+0BE6 to U+0BEF)                                                                         |
+| `telu`     | Telugu digits                                       | `౦౧౨౩౪౫౬౭౮౯` (U+0C66 to U+0C6F)                                                                         |
+| `thai`     | Thai digits                                         | `๐๑๒๓๔๕๖๗๘๙` (U+0E50 to U+0E59)                                                                         |
+| `tibt`     | Tibetan digits                                      | `༠༡༢༣༤༥༦༧༨༩` (U+0F20 to U+0F29)                                                                         |
+| `tirh`     | Tirhuta digits                                      | `𑓐𑓑𑓒𑓓𑓔𑓕𑓖𑓗𑓘𑓙` (U+114D0 to U+114D9)                                                                       |
+| `tnsa`     | Tangsa digits                                       | `𖫀𖫁𖫂𖫃𖫄𖫅𖫆𖫇𖫈𖫉` (U+16AC0 to U+16AC9)                                                                       |
+| `vaii`     | Vai digits                                          | `꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩` (U+A620 to U+A629)                                                                         |
+| `wara`     | Warang Citi digits                                  | `𑣠𑣡𑣢𑣣𑣤𑣥𑣦𑣧𑣨𑣩` (U+118E0 to U+118E9)                                                                       |
+| `wcho`     | Wancho digits                                       | `𞋰𞋱𞋲𞋳𞋴𞋵𞋶𞋷𞋸𞋹` (U+1E2F0 to U+1E2F9)                                                                       |
 
 3 つの特別な値、`native`、`traditio`、`finance` があります。これらは、その意味はロケールに依存し、ロケールに応じて適切なシステムに解決されます。したがって、`resolvedOptions()` メソッドはこれらの値を返すことはありませんが、`Intl.Locale.prototype.numberingSystem` は（入力として指定された場合）これらの値を返します。
 
