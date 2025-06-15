@@ -1,14 +1,14 @@
 ---
-title: "Window: queueMicrotask() メソッド"
+title: "WorkerGlobalScope: queueMicrotask() メソッド"
 short-title: queueMicrotask()
-slug: Web/API/Window/queueMicrotask
+slug: Web/API/WorkerGlobalScope/queueMicrotask
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{APIRef("HTML DOM")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("worker")}}
 
-**`queueMicrotask()`** は {{domxref("Window")}} インターフェイスのメソッドで、ブラウザーのイベントループへ制御が戻る前の安全なタイミングで実行されるマイクロタスクをキューに入れます。
+**`queueMicrotask()`** は {{domxref("WorkerGlobalScope")}} インターフェイスのメソッドで、ブラウザーのイベントループへ制御が戻る前の安全なタイミングで実行されるマイクロタスクをキューに入れます。
 
 マイクロタスク (microtask) とは、現在のタスクが完了し実行コンテキストの制御がブラウザーのイベントループへ戻る前、他に保留中のコードがなくなった時点で走る短い関数です。
 
@@ -72,7 +72,7 @@ MyElement.prototype.loadData = function (url) {
 
 ## 関連情報
 
-- {{domxref("WorkerGlobalScope.queueMicrotask()")}}
+- {{domxref("Window.queueMicrotask()")}}
 - [`queueMicrotask` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#queuemicrotask)
 - [JavaScript で queueMicrotask() によるマイクロタスクの使用](/ja/docs/Web/API/HTML_DOM_API/Microtask_guide)
 - [非同期 JavaScript](/ja/docs/Learn_web_development/Extensions/Async_JS)
