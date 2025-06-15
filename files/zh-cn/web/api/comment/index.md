@@ -15,7 +15,7 @@ l10n:
 
 ## 实例属性
 
-_该接口没有特定的属性，但是从其父接口 {{domxref("CharacterData")}} 继承属性，并间接从 {{domxref("Node")}} 接口继承属性。_
+_该接口没有特定的属性，但从其父接口 {{domxref("CharacterData")}} 继承属性，并间接从 {{domxref("Node")}} 接口继承属性。_
 
 ## 构造函数
 
