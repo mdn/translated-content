@@ -33,8 +33,7 @@ onorientationchange = (event) => { }
 
 ```js
 window.addEventListener("orientationchange", (event) => {
-  console.log(`裝置現在的方向是 ${event.target.screen.orientation.angle}`
-  );
+  console.log(`裝置現在的方向是 ${event.target.screen.orientation.angle}`);
 });
 ```
 
