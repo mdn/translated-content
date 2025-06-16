@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
 
-**`prerender`** 是 {{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性中的一个关键字，用于提示浏览器用户可能在下一次导航中需要该目标资源，从而可以提前获取并处理该资源，例如预取其子资源或在后台进行离屏渲染，以提升用户体验。
+**`prerender`** 关键字（{{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性的一个关键字）用于提示浏览器用户可能在下一次导航中需要该目标资源，从而可以提前获取并处理该资源，例如预取其子资源或在后台进行离屏渲染，以提升用户体验。
 
 该特性已被[推测规则 API](/zh-CN/docs/Web/API/Speculation_Rules_API) 取代。
 
