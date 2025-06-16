@@ -63,7 +63,7 @@ l10n:
 
 ## 使用说明
 
-- 每个 `<article>` 应该具有明确的标识，通常做法是在 `<article>` 元素内部包含一个标题元素（[`<h1>`——`<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素）来实现。
+- 每个 `<article>` 应该具有明确的标识，通常做法是在 `<article>` 元素内部包含一个标题元素（[`<h1>`—`<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素）来实现。
 - 当 `<article>` 元素被嵌套使用时，内部元素代表与外部元素相关的文章。例如，博客文章的评论可以是嵌套在代表博客文章的 `<article>` 中的 `<article>` 元素。
 - `<article>` 元素的作者信息可以通过 {{HTMLElement("address")}} 元素提供，但该方式不适用于嵌套的 `<article>` 元素。
 - `<article>` 元素的发布时间可以使用 {{HTMLElement("time")}} 元素的 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) 属性来描述。
