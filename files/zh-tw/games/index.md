@@ -2,7 +2,7 @@
 title: 遊戲開發
 slug: Games
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: d9e11f88996e97a259d2ec47f47a660062c12c4f
 ---
 
 {{GamesSidebar}}
@@ -18,15 +18,9 @@ l10n:
 > [!NOTE]
 > 在 Web 上創建遊戲需要使用多種核心 Web 技術，例如 HTML、CSS 和 JavaScript。初學者可以先參考[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節，了解基礎知識。
 
-## 將原生遊戲移植到 Web
+## 指南
 
-如果你是一位原生遊戲開發者（例如使用 C++ 編寫遊戲），並且有興趣將你的遊戲移植到 Web 上，可以了解更多關於我們的 [Emscripten](https://emscripten.org/index.html) 工具。這是一個 LLVM 到 JavaScript 的編譯器，可以將 LLVM 位元碼（例如由 Clang 從 C／C++ 或其他語言生成）編譯為 [asm.js](/zh-TW/docs/Games/Tools/asm.js)，並在 Web 上運行。
-
-入門指南如下：
-
-- [關於 Emscripten](https://emscripten.org/docs/introducing_emscripten/about_emscripten.html)：介紹及高階細節。
-- [下載與安裝](https://emscripten.org/docs/getting_started/downloads.html)：工具鏈安裝指南。
-- [Emscripten 教學](https://emscripten.org/docs/getting_started/Tutorial.html)：教學指南，幫助你快速入門。
+{{SubpagesWithSummaries}}
 
 ## 範例
 

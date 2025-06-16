@@ -57,7 +57,7 @@ Firefox 139 は、米国時間 [2025 年 5 月 27 日](https://whattrainisitnow.
 #### DOM
 
 - {{domxref("HTMLDialogElement")}} インターフェイスの {{domxref("HTMLDialogElement/requestClose", "requestClose()")}} メソッドをサポートしました。
-  これにより開発者は、[`cancel`](/ja/docs/Web/API/HTMLDialogElement/cancel_event) イベントハンドラーを与えることでダイアログが閉じるのを条件つきで抑止できます ([Firefox bug 1960556](https://bugzil.la/1960556))。
+  これにより開発者は、[`cancel`](/ja/docs/Web/API/HTMLDialogElement) イベントハンドラーを与えることでダイアログが閉じるのを条件つきで抑止できます ([Firefox bug 1960556](https://bugzil.la/1960556))。
 - Web Authentication の [`largeBlob`](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#largeblob) および [`credProps`](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#credprops) 拡張をサポートしました。また、[`prf`](/ja/docs/Web/API/Web_Authentication_API/WebAuthn_extensions#prf) 拡張をすべてのデスクトップ版でサポートしました。
   これらはそれぞれ、資格情報に関連づけられた大容量の blob ストレージ、資格情報に関する追加情報、資格情報や特定の入力に関連づけられた乱数を生成する機能を提供します ([Firefox bug 1795020](https://bugzil.la/1795020)、[Firefox bug 1844449](https://bugzil.la/1844449)、[Firefox bug 1935280](https://bugzil.la/1935280))。
 

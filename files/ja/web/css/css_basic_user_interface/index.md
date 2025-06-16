@@ -2,7 +2,7 @@
 title: CSS 基本ユーザーインターフェイス
 slug: Web/CSS/CSS_basic_user_interface
 l10n:
-  sourceCommit: 5755d6dfbac15abc29ddcd924cee110c4139b073
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
 {{CSSRef}}
