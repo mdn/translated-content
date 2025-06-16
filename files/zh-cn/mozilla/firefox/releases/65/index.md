@@ -15,17 +15,17 @@ l10n:
 
 - 现已默认启用 [Flexbox 检查器](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html)。
 - 现已添加 [JavaScript 调试器](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html)的 XHR 断点支持（[Firefox bug 821610](https://bugzil.la/821610)）。
-- 从无障碍环境查看器右键单击无障碍树中的项目，可将其[打印为 JSON](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json)到 JSON 查看器。
+- 从无障碍环境查看器右键单击无障碍树中的项目，可将其[以 JSON 格式打印](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#print-accessibility-tree-to-json)到 JSON 查看器。
 - 无障碍选取器的[颜色对比度](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#color-contrast)显示已更新，如果文本背景复杂（如渐变或复杂图像），则会显示一系列颜色对比度值。
 - [网络监控器](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 的“标头”标签页现在会显示所选请求的 referrer 策略（[Firefox bug 1496742](https://bugzil.la/1496742)）。
 - 在显示堆栈跟踪时（例如在控制台日志或 JavaScript 调试器中），对框架方法的调用会被识别出来并默认折叠，这样就能更轻松地锁定代码。
 - 现在，你可以使用与本地终端相同的反向搜索方式查找 JavaScript 控制台历史记录中的条目（Windows/Linux 上使用 `F9` 或 macOS 上使用 `Ctrl` + `R`，然后键入搜索词，接着使用 `Ctrl` + `R`/`Ctrl` + `S` 来切换搜索结果）。
-- JavaScript 控制台的 `$0` 快捷键（引用页面上当前检查的元素）现在可以使用自动完成功能，例如，可以键入 `$0.te` 以获得 `$0.textContent` 等属性的自动完成建议。
+- JavaScript 控制台的 `$0` 快捷键（引用页面上当前检查的元素）现在可以使用自动补全功能，例如，可以键入 `$0.te` 以获得 `$0.textContent` 等属性的自动补全建议。
 - Inspector 中“规则”视图中作出的编辑会在“更改”面板中列出（[Firefox bug 1503920](https://bugzil.la/1503920)）。
 
 ### HTML
 
-- 现在会对禁用 HTML 元素（即设置了“disabled”属性的 {{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("select")}} 和 {{htmlelement("textarea")}} 元素）派发事件（[Firefox bug 329509](https://bugzil.la/329509)）。
+- 现在会对禁用 HTML 元素（即设置了 `disabled` 属性的 {{htmlelement("button")}}、{{htmlelement("fieldset")}}、{{htmlelement("input")}}、{{htmlelement("select")}} 和 {{htmlelement("textarea")}} 元素）派发事件（[Firefox bug 329509](https://bugzil.la/329509)）。
 - 移除 {{htmlelement("iframe")}} 元素的 `src` 属性后，`about:blank` 会被加载到该元素中，从而与 Chrome 和 Safari 保持一致（[Firefox bug 1507842](https://bugzil.la/1507842)）。以前，删除 `src` 对 `iframe` 内容没有任何影响。
 - 已在 {{htmlelement("script")}} 元素上添加了对 [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/script#referrerpolicy) 属性的支持（[Firefox bug 1460920](https://bugzil.la/1460920)）。
 
@@ -40,7 +40,7 @@ l10n:
   - {{cssxref("break-inside")}} 现在是 {{cssxref("page-break-inside")}} 的别名。
 
 - 现已实现 {{cssxref("overflow-wrap")}} 属性的 `anywhere` 值（[Firefox bug 1505786](https://bugzil.la/1505786)）。
-- 现已实现 [`steps()` 时间函数](/zh-CN/docs/Web/CSS/easing-function/steps)中使用的新步骤位置关键字 `jump-start`、`jump-end`、`jump-none` 和 `jump-both`（[Firefox bug 1496619](https://bugzil.la/1496619)）。这也与 `frames()` 定时函数的移除不谋而合，该函数是以前实现此类功能的方法，现已废弃。
+- 现已实现 [`steps()` 时间函数](/zh-CN/docs/Web/CSS/easing-function/steps)中使用的新步骤位置关键字 `jump-start`、`jump-end`、`jump-none` 和 `jump-both`（[Firefox bug 1496619](https://bugzil.la/1496619)）。这也与 `frames()` 定时函数的移除不谋而合，该函数是以前实现此类功能的方法，现已弃用。
 - 为了与其他浏览器兼容，新增了一些新的 {{cssxref("appearance", "-webkit-appearance")}} 值，特别是：
 
   - `meter`，现在用作 UA 样式表中 {{htmlelement("meter")}} 元素的默认值。现有值 `meterbar` 现在是 `meter` 的别名（[Firefox bug 1501483](https://bugzil.la/1501483)）。
