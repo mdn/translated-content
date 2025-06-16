@@ -7,11 +7,11 @@ l10n:
 
 {{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Numbers_and_strings", "Web/JavaScript/Guide/Regular_expressions")}}
 
-> [!NOTE] > `Date` 对象现在被视作为历史遗留，应当避免在新代码中使用。我们不久后会在本页面更新现代的替代方案。
+> **备注：** `Date` 对象现在被视作为历史遗留，应当避免在新代码中使用。我们不久后会在本页面更新现代的替代方案。
 
 ## 日期对象
 
-JavaScript 没有日期数据类型。但是，你可以使用 {{jsxref("Date")}} 对象及其方法以在你的应用程序里处理日期和时间。`Date` 对象有大量方法用以设置、获取和操作日期，同时它没有任何属性。
+JavaScript 没有日期数据类型。但是，你可以使用 {{jsxref("Date")}} 对象及其方法以在你的应用程序里处理日期和时间。`Date` 对象有大量方法用以设置、获取和操作日期。它没有任何属性。
 
 JavaScript 处理日期的方式和 Java 类似。这两种语言有着许多相同的日期方法，并且都将日期存储为自 1970 年 1 月 1 日午夜时分（UTC 时间）以来的毫秒数，而 Unix 时间戳则表示从同一时刻开始至今的秒数。1970 年 1 月 1 日 午夜时分（UTC 时间）的这一时刻被称为“[纪元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)”。
 
@@ -47,7 +47,7 @@ const dateObjectName = new Date([parameters]);
 
 - 秒和分钟：0 到 59
 - 小时：0 到 23
-- 天数（星期几）：0（星期日）到 6（星期六）
+- 星期：0（星期日）到 6（星期六）
 - 日期：1 到 31（月份第几天）
 - 年份：自 1900 年以来的年数
 
