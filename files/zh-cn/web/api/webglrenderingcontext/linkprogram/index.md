@@ -3,28 +3,28 @@ title: WebGLRenderingContext.linkProgram()
 slug: Web/API/WebGLRenderingContext/linkProgram
 ---
 
-{{APIRef("WebGL")}}
-{{domxref("WebGLRenderingContext")}} 接口的**linkProgram()**方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
+{{APIRef("WebGL")}}{{AvailableInWorkers}}
+{{domxref("WebGLRenderingContext")}} 接口的 **`linkProgram()`** 方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
 
 ## 语法
 
-```plain
-void gl.linkProgram(program);
+```js-nolint
+linkProgram(program)
 ```
 
 ### 参数
 
-- program
+- `program`
   - : 一个用于链接的 {{domxref("WebGLProgram")}} 。
 
 ### 返回值
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## 例子
 
 ```js
-var program = gl.createProgram();
+const program = gl.createProgram();
 
 // Attach pre-existing shaders
 gl.attachShader(program, vertexShader);
@@ -33,8 +33,8 @@ gl.attachShader(program, fragmentShader);
 gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-  var info = gl.getProgramInfoLog(program);
-  throw new Error("Could not compile WebGL program. \n\n" + info);
+  const info = gl.getProgramInfoLog(program);
+  throw new Error(`Could not compile WebGL program. \n\n${info}`);
 }
 ```
 
