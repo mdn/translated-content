@@ -46,11 +46,11 @@ ARIA 1.1 で非推奨となった `aria-dropeffect` プロパティは、ドラ�
 
 **すべての**ロールで使用されます。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## 関連項目
+## 関連情報
 
 - [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 - [HTML グローバル `draggable` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)

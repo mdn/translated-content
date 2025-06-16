@@ -16,7 +16,7 @@ directory は、リンク付きまたはリンクなしの静的な目次です�
 非推奨となった `directory` ロールは、グループのメンバーへの参照リスト（静的な目次など）に使用されていました。
 代わりに [`list`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role) ロールを使用してください。あるいは、{{HTMLElement('ul')}} や {{HTMLElement('ol')}} 要素を使う方がより適切です。`directory` を使用しても支援技術のユーザーに追加のメリットはありません。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
