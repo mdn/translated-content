@@ -58,7 +58,7 @@ img {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `alt`
   - : 在不显示图像的浏览器上显示的替代文本字符串。文本内容应当以一种表达方式呈现给用户，使其能获得与图像显示时相同的选择体验。只有在使用了 [`href`](#href) 属性时，此属性才是必需的。
@@ -66,9 +66,9 @@ img {
 
   - : `coords` 属性用于具体描述 `<area>` 元素中 [`shape`](#shape) 属性指定区域的大小、形状和位置。如果 `shape` 属性设置为 `default`，则不得使用此属性。
 
-    - `rect`: 该值为 `x1,y1,x2,y2`，表示矩形的左上角和右下角的坐标。例如，在 `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` 中，坐标分别是 `0,0` 和 `253,27`，对应矩形的左上角和右下角。
-    - `circle`: 该值为 `x,y,radius`，表示圆的中心坐标和半径。例如：`<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
-    - `poly`: 该值为 `x1,y1,x2,y2,..,xn,yn`，表示多边形各边的坐标。如果第一个和最后一个坐标对不相同，浏览器会自动将最后一个坐标对添加进去以闭合多边形。
+    - `rect`：该值为 `x1,y1,x2,y2`，表示矩形的左上角和右下角的坐标。例如，在 `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` 中，坐标分别是 `0,0` 和 `253,27`，对应矩形的左上角和右下角。
+    - `circle`：该值为 `x,y,radius`，表示圆的中心坐标和半径。例如：`<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
+    - `poly`：该值为 `x1,y1,x2,y2,..,xn,yn`，表示多边形各边的坐标。如果第一个和最后一个坐标对不相同，浏览器会自动将最后一个坐标对添加进去以闭合多边形。
 
     这些值是以 CSS 像素为单位的数字。
 
@@ -80,15 +80,15 @@ img {
   - : 包含以空格分隔的 URL 列表，当点击超链接时，浏览器会（在后台）向这些 URL 发送带有 `PING` 内容的 HTTP {{HTTPMethod("POST")}} 请求。通常用于追踪目的。
 - `referrerpolicy`
 
-  - : 表示在获取资源时应使用哪个来源（referrer）的字符串：
-    - `no-referrer`: 不会发送 {{HTTPHeader("Referer")}} 请求标头。
-    - `no-referrer-when-downgrade`: 不会将 {{HTTPHeader("Referer")}} 请求标头发送到不使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin", "源")}}。
-    - `origin`: 发送的引用来源将被限制为引用页面的源：包括其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
-    - `origin-when-cross-origin`: 发送到其他源的引用来源将仅包含协议、主机和端口；而对于同源的导航，请求中仍会包含路径信息。
-    - `same-origin`: 对于{{Glossary("Same-origin policy", "同源")}}请求会发送引用来源，但跨源请求将不包含任何引用来源信息。
-    - `strict-origin`: 仅当协议的安全级别保持一致时（例如 HTTPS → HTTPS），才会将文档的源作为引用来源发送；但不会在从更安全的协议跳转到不太安全的目的地时（例如 HTTPS → HTTP）发送引用来源。
-    - `strict-origin-when-cross-origin`（默认）: 当执行同源请求时应发送完整的 URL；若协议的安全等级保持一致（例如 HTTPS→HTTPS），则仅发送源；若请求目标的协议安全等级较低（例如 HTTPS→HTTP），则不应发送请求标头。
-    - `unsafe-url`: 来源标头会包含源*和*路径（但不会包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**此值是不安全的**，因为它会将受 TLS 保护的资源的源和路径泄露给不安全的目标地址。
+  - : 表示在获取资源时应使用哪个引用来源（referrer）的字符串：
+    - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
+    - `no-referrer-when-downgrade`：不会将 {{HTTPHeader("Referer")}} 标头发送到不使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin", "源")}}。
+    - `origin`：发送的引用来源将被限制为引用页面的源：包括其[方案](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin-when-cross-origin`：发送到其他源的引用来源将仅包含方案、主机和端口；而对于同源的导航，请求中仍会包含路径信息。
+    - `same-origin`：对于{{Glossary("Same-origin policy", "同源")}}请求会发送来源地址，但跨源请求将不包含任何引用来源信息。
+    - `strict-origin`：仅当协议的安全级别保持一致时（例如 HTTPS → HTTPS），才会将文档的源作为引用来源发送；但不会在从更安全的协议跳转到不太安全的目的地时（例如 HTTPS → HTTP）发送引用来源。
+    - `strict-origin-when-cross-origin`（默认）：当执行同源请求时应发送完整的 URL；若协议的安全等级保持一致（例如 HTTPS→HTTPS），则仅发送源；若请求目标的协议安全等级较低（例如 HTTPS→HTTP），则不应发送请求标头。
+    - `unsafe-url`：来源标头会包含源*和*路径（但不会包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**此值是不安全的**，因为它会将受 TLS 保护的资源的源和路径泄露给不安全的目标地址。
 
 - [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
   - : 对于包含 [`href`](#href) 属性的锚点元素，该属性指定目标对象与链接对象之间的关系。其值是以空格分隔的链接类型列表。这些值及其语义将由某个可能对文档作者有意义的权威机构进行注册。如果未指定其他关系类型，则默认关系为空。仅当存在 [`href`](#href) 属性时，才应使用该属性。
@@ -98,10 +98,10 @@ img {
 
   - : 一个关键字或作者自定义的名称，用于指定用于显示所链接资源的{{Glossary("browsing context", "浏览上下文")}}；其中一些关键字具有特殊含义：
 
-    - `_self`（默认）: 在当前浏览上下文中显示资源。
-    - `_blank`: 在新的、未命名的浏览上下文中显示资源。
-    - `_parent`: 如果当前页面位于一个框架内，则在其父级浏览上下文中显示该资源；如果没有父级，则效果等同于 `_self`。
-    - `_top`: 在最顶层的浏览上下文中显示该资源（即当前浏览上下文的最上层父级，上层不再有父级）。如果不存在父级，则与 `_self` 行为相同。
+    - `_self`（默认）：在当前浏览上下文中显示资源。
+    - `_blank`：在新的、未命名的浏览上下文中显示资源。
+    - `_parent`：如果当前页面位于一个框架内，则在其父级浏览上下文中显示该资源；如果没有父级，则效果等同于 `_self`。
+    - `_top`：在最顶层的浏览上下文中显示该资源（即当前浏览上下文的最上层父级，上层不再有父级）。如果不存在父级，则与 `_self` 行为相同。
 
     仅当存在 [`href`](#href) 属性时，才使用此属性。
 
