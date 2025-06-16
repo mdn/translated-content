@@ -2,7 +2,7 @@
 title: Window：localStorage 屬性
 slug: Web/API/Window/localStorage
 l10n:
-  sourceCommit:44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
+  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
 ---
 
 {{APIRef("Web Storage API")}}
@@ -18,7 +18,9 @@ l10n:
 ### 例外
 
 - `SecurityError`
+
   - : 在以下情況之一會拋出：
+
     - 同源不是[一個有效的協定／主機／埠元組](/zh-TW/docs/Web/Security/Same-origin_policy#同源定義)。舉例來說，如果同源使用 `file:` 或 `data:` 協定，就可能發生這種情況。
     - 請求違反了政策決定。例如，使用者已將瀏覽器組態為防止頁面保存資料。
 
