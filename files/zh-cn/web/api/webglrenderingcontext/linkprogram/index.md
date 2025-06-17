@@ -4,6 +4,7 @@ slug: Web/API/WebGLRenderingContext/linkProgram
 ---
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
+
 {{domxref("WebGLRenderingContext")}} 接口的 **`linkProgram()`** 方法链接给定的{{domxref("WebGLProgram")}}，从而完成为程序的片元和顶点着色器准备 GPU 代码的过程。
 
 ## 语法
@@ -15,13 +16,13 @@ linkProgram(program)
 ### 参数
 
 - `program`
-  - : 一个用于链接的 {{domxref("WebGLProgram")}} 。
+  - : 一个用于链接的 {{domxref("WebGLProgram")}}。
 
 ### 返回值
 
-None ({{jsxref("undefined")}}).
+无（{{jsxref("undefined")}}）。
 
-## 例子
+## 示例
 
 ```js
 const program = gl.createProgram();
