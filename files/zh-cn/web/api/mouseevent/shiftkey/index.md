@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("UI Events")}}
 
-**`MouseEvent.shiftKey`** 是一个只读的布尔值，用于指示在某个鼠标事件发生时，<kbd>shift</kbd> 键是否被按下。
+**`MouseEvent.shiftKey`** 只读属性是用于指示在某个鼠标事件发生时，<kbd>shift</kbd> 键是否被按下的布尔值。
 
 ## 值
 
