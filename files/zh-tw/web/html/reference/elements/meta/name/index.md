@@ -45,7 +45,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 - [`referrer`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/referrer)
   - : 控制從文件發送的請求的 HTTP {{httpheader("Referer")}} 標頭。
 - [`theme-color`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/theme-color)
-  - : 指示使用者代理程式應用於自訂頁面顯示或周圍使用者介面的建議顏色。[`content`](/zh-TW/docs/Web/HTML/Reference/Attributes/content) 屬性包含一個有效的 CSS {{cssxref("<color>")}}。可以包含帶有有效媒體查詢列表的 [`media`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#media) 屬性，以設定主題顏色後設資料所適用的媒體。
+  - : 指示使用者代理程式應用於自訂頁面顯示或周圍使用者介面的建議顏色。[`content`](/zh-TW/docs/Web/HTML/Reference/Attributes/content) 屬性包含一個有效的 CSS {{cssxref(""&lt;color&gt;"")}}。可以包含帶有有效媒體查詢列表的 [`media`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#media) 屬性，以設定主題顏色後設資料所適用的媒體。
 
 ### 其他規範中定義的 meta 名稱
 
