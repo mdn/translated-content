@@ -2,7 +2,7 @@
 title: <meta> name 屬性
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: 
+  sourceCommit: d9b6cad3b5e14b42061608fb5283e32c75808a3d
 ---
 
 {{HTMLSidebar}}
@@ -25,10 +25,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 
 - `application-name`
 
-  - : 瀏覽器可以使用它來識別在網頁中執行的應用程式。
-    這與 {{HTMLElement("title")}} 元素不同，後者可能包含應用程式（或網站）名稱，但 `<title>` 可能會加入如文件名稱或狀態等上下文資訊。
-    個別頁面不應定義自己獨特的 `application-name`。
-    若要提供翻譯，請為每種語言使用帶有 `lang` 屬性的多個 `<meta>` 標籤：
+  - : 瀏覽器可以使用它來識別在網頁中執行的應用程式。這與 {{HTMLElement("title")}} 元素不同，後者可能包含應用程式（或網站）名稱，但 `<title>` 可能會加入如文件名稱或狀態等上下文資訊。個別頁面不應定義自己獨特的 `application-name`。若要提供翻譯，請為每種語言使用帶有 `lang` 屬性的多個 `<meta>` 標籤：
 
     ```html
     <meta name="application-name" content="Weather Wizard" lang="en" />
@@ -38,8 +35,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 - `author`
   - : 文件作者的姓名。
 - [`color-scheme`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
-  - : 指定文件相容的一或多個色彩配置。瀏覽器會將此訊息與使用者的瀏覽器或裝置設定結合使用，以決定從背景、前景到表單控制項和捲軸等所有內容要使用的顏色。
-    `<meta name="color-scheme">` 的主要用途是表示對淺色和深色模式的相容性及偏好順序。
+  - : 指定文件相容的一或多個色彩配置。瀏覽器會將此訊息與使用者的瀏覽器或裝置設定結合使用，以決定從背景、前景到表單控制項和捲軸等所有內容要使用的顏色。`<meta name="color-scheme">` 的主要用途是表示對淺色和深色模式的相容性及偏好順序。
 - `description`
   - : 頁面內容的簡短而準確的摘要，通常稱為「meta description」。像 Google 這樣的搜尋引擎會使用這些後設資料來調整[網頁在搜尋結果中的外觀](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions)。
 - `generator`
@@ -56,7 +52,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 CSS 裝置適應性規範定義了以下後設資料名稱：
 
 - [`viewport`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/viewport)
-  - : 提供關於 {{glossary("viewport", "視區")}} 初始大小的提示。
+  - : 提供關於{{glossary("viewport", "視區")}}初始大小的提示。
 
 ### WHATWG MetaExtensions 維基中定義的 meta 名稱
 
