@@ -21,7 +21,7 @@ HTTP **`101 Switching Protocols`** [資訊回應](/zh-TW/docs/Web/HTTP/Reference
 
 ### 切換協定到 WebSocket
 
-以下範例顯示如何與 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 一起使用協定切換。用戶端會發送帶有 {{HTTPHeader("Upgrade")}} 標頭的 {{HTTPMethod("GET")}} HTTP 請求，該標頭也必須列在 {{HTTPHeader("Connection")}} 標頭中。伺服器同意切換協定，回傳 101 回應，表示連線已從 HTTP 切換到 WebSocket。此時，用戶端與伺服器即可開始交換 WebSocket 資料。關於如何為握手協商設置 `Sec-WebSocket-*` 標頭的資訊，請參見 [WebSocket 專用標頭](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#websocket-專用標頭)。
+以下範例顯示如何與 [WebSocket](/zh-TW/docs/Web/API/WebSockets_API) 一起使用協定切換。用戶端會發送帶有 {{HTTPHeader("Upgrade")}} 標頭的 {{HTTPMethod("GET")}} HTTP 請求，該標頭也必須列在 {{HTTPHeader("Connection")}} 標頭中。伺服器同意切換協定，回傳 101 回應，表示連線已從 HTTP 切換到 WebSocket。此時，用戶端與伺服器即可開始交換 WebSocket 資料。關於如何為握手協商設置 `Sec-WebSocket-*` 標頭的資訊，請參見 [WebSocket 專用標頭](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism#websocket_專用標頭)。
 
 ```http
 GET /notifications HTTP/1.1
@@ -43,6 +43,6 @@ Connection: Upgrade
 ## 參見
 
 - [協定升級機制](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
-- [WebSockets](/zh-TW/docs/Web/API/WebSockets_API)
+- [WebSocket](/zh-TW/docs/Web/API/WebSockets_API)
 - {{HTTPHeader("Upgrade")}}
 - {{HTTPStatus("426", "426 Upgrade Required")}}
