@@ -9,7 +9,7 @@ l10n:
 👋 歡迎來到 MDN Web 文件，一個記載了 [HTML](/zh-TW/docs/Web/HTML)、[CSS](/zh-TW/docs/Web/CSS)、[JavaScript](/zh-TW/docs/Web/JavaScript) 和 [Web API](/zh-TW/docs/Web/API) 等 Web 平台技術的開源協作專案。我們也為新手開發者和學生提供大量的[學習資源](/zh-TW/docs/Learn_web_development)。
 
 - [開始入門](/zh-TW/docs/MDN/Community/Getting_started)
-  - : 此章節解釋了你可以如何開始貢獻，以及我們接受的貢獻類型。任何人都可以貢獻，而每位貢獻者都會對數百萬讀者產生影響。學習如何貢獻並在開放網路上推動創新。
+  - : 此章節解釋了如何開始貢獻，以及我們接受的貢獻類型。任何人都可以貢獻，而每位貢獻者都會對數百萬讀者產生影響。學習如何貢獻並在開放網路上推動創新。
 - [溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)
   - : 此頁面列出了 MDN 團隊和我們社群使用的溝通管道，並提示哪些管道可能最適合你。
 - [我們的倉儲](/zh-TW/docs/MDN/Community/Our_repositories)
