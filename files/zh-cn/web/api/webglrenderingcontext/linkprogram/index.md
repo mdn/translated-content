@@ -1,6 +1,8 @@
 ---
-title: WebGLRenderingContext.linkProgram()
+title: WebGLRenderingContext：linkProgram() 方法
 slug: Web/API/WebGLRenderingContext/linkProgram
+l10n:
+  sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
 ---
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
@@ -27,7 +29,7 @@ linkProgram(program)
 ```js
 const program = gl.createProgram();
 
-// Attach pre-existing shaders
+// 附加预先存在的着色器
 gl.attachShader(program, vertexShader);
 gl.attachShader(program, fragmentShader);
 
@@ -35,7 +37,7 @@ gl.linkProgram(program);
 
 if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
   const info = gl.getProgramInfoLog(program);
-  throw new Error(`Could not compile WebGL program. \n\n${info}`);
+  throw new Error(`无法编译 WebGL 程序。\n\n${info}`);
 }
 ```
 
@@ -47,7 +49,7 @@ if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 
 {{Compat}}
 
-## 参考
+## 参见
 
 - {{domxref("WebGLRenderingContext.createProgram()")}}
 - {{domxref("WebGLRenderingContext.deleteProgram()")}}
