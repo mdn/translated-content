@@ -9,7 +9,6 @@ slug: Web/API/Node/ownerDocument
 
 ## 值
 
-
 一个 {{domxref("Document")}}，是所有子节点都在其中创建的顶层对象。
 
 如果在文档节点自身上使用此属性，则结果是 `null`。
