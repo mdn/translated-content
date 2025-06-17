@@ -11,7 +11,7 @@ slug: Web/JavaScript/Reference/Global_Objects/JSON/stringify
 
 ## Синтаксис
 
-```
+```js-nolint
 JSON.stringify(value)
 JSON.stringify(value, replacer)
 JSON.stringify(value, replacer, space)
