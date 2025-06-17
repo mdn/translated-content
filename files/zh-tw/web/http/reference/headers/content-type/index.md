@@ -14,7 +14,7 @@ HTTP **`Content-Type`** {{Glossary("representation header", "表示標頭")}}用
 `Content-Type` 標頭與 {{HTTPHeader("Content-Encoding")}} 的不同之處在於，`Content-Encoding` 可幫助接收者了解如何將資料解碼回其原始形式。
 
 > [!NOTE]
-> 如果瀏覽器對回應執行 [MIME 嗅探](/zh-TW/docs/Web/HTTP/Guides/MIME_types#mime_sniffing)（或內容嗅探），此值可能會被忽略。為防止瀏覽器使用 MIME 嗅探，請將 {{HTTPHeader("X-Content-Type-Options")}} 標頭值設為 `nosniff`。更多詳細資訊請參見 [MIME 類型驗證](/en-US/docs/Web/Security/Practical_implementation_guides/MIME_types)。
+> 如果瀏覽器對回應執行 [MIME 嗅探](/zh-TW/docs/Web/HTTP/Guides/MIME_types#mime_嗅探)（或內容嗅探），此值可能會被忽略。為防止瀏覽器使用 MIME 嗅探，請將 {{HTTPHeader("X-Content-Type-Options")}} 標頭值設為 `nosniff`。更多詳細資訊請參見 [MIME 類型驗證](/zh-TW/docs/Web/Security/Practical_implementation_guides/MIME_types)。
 
 <table class="properties">
   <tbody>
