@@ -1,6 +1,7 @@
 ---
 title: 挑战：表格
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
+slug: conflicting/Learn_web_development/Core/Styling_basics/Tables
+original_slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
 ---
 
 此任务的目的是为了帮助你检测在[样式化表格](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables)课程中学到的技巧的理解。
