@@ -30,7 +30,7 @@ Ver {{jsxref("Array/sort", "sort()")}} para más información del parametro `com
 
 Cuando se usa en [arrays dispersos](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#sparse_arrays), el método `toSorted()` itera las posiciones vacías del array como si tuvieran el valor de `undifined`.
 
-El método `toSorted()` es [genérico](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Solo requiere que el valor de `this` tenga una propiedad `length` y propiedades indexadas por enteros.
+El método `toSorted()` es [genérico](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#generic_array_methods). Solo requiere que el valor de `this` tenga una propiedad `length` y propiedades indexadas por enteros.
 
 ## Ejemplos
 
