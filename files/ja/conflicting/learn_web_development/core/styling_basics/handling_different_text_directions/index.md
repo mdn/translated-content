@@ -1,7 +1,7 @@
 ---
 title: "スキルテスト: 書字方向と論理的プロパティ"
-slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
-original_slug: Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks
+slug: conflicting/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
+original_slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
