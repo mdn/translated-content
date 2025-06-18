@@ -22,7 +22,7 @@ input:is(:-webkit-autofill, :autofill) {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
   <p>テキストボックスをクリックし、ブラウザーが提案するオプションから任意のものを選択してください。</p>
 
