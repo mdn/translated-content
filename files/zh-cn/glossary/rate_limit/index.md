@@ -14,7 +14,7 @@ l10n:
 ## 参见
 
 - 词汇表术语：
-  - {{Glossary("Debounce")}}
-  - {{Glossary("Throttle")}}
-- {{HTTPStatus("429", "429 请求过多")}}
+  - {{Glossary("Debounce", "防抖")}}
+  - {{Glossary("Throttle", "节流")}}
+- {{HTTPStatus("429", "429 Too Many Requests")}}
 - cloudflare.com 上的[什么是速率限制？| 速率限制与机器人](https://www.cloudflare.com/zh-cn/learning/bots/what-is-rate-limiting/)
