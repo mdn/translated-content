@@ -6,7 +6,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/toSorted
 {{JSRef}}
 
 El método **`toSorted()`** devuelve un nuevo array con sus elementos ordenados en orden ascendente sin alterar el array original. Forma parte del objeto {{jsxref("Array")}} y es la versión
-[copying](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) del método {{jsxref("Array/sort", "sort()")}}.
+[copying](/es/docs/Web/JavaScript/Reference/Global_Objects/Array#copying_methods_and_mutating_methods) del método {{jsxref("Array/sort", "sort()")}}.
 
 ## Sintaxis
 
