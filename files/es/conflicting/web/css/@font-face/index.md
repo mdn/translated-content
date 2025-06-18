@@ -1,7 +1,7 @@
 ---
 title: glyph
-slug: Web/SVG/Reference/Element/glyph
-original_slug: Web/SVG/Element/glyph
+slug: conflicting/Web/CSS/@font-face
+original_slug: Web/SVG/Reference/Element/glyph
 ---
 
 {{SVGRef}}

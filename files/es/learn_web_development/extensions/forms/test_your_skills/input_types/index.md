@@ -1,7 +1,7 @@
 ---
 title: "Prueba tus habilidades: controles HTML5"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
-original_slug: Learn/Forms/Test_your_skills:_HTML5_controls
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
 ---
 
 {{learnsidebar}}

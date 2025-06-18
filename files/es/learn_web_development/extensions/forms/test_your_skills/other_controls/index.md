@@ -1,7 +1,7 @@
 ---
 title: "Prueba tus habilidades: Otros controles"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
-original_slug: Learn/Forms/Test_your_skills:_Other_controls
+slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
 ---
 
 {{learnsidebar}}
