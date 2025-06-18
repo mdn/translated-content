@@ -293,7 +293,7 @@ Algunas propiedades solo se aplican a los tipos de elementos de entrada que admi
 
 Detecte estos eventos usando [`addEventListener()`](/es/docs/Web/API/EventTarget/addEventListener) o asignando un detector de eventos a la propiedad `oneventname` de esta interfaz:
 
-- [`input`](/es/docs/Web/API/HTMLElement/input_event)
+- [`input`](/es/docs/Web/API/Element/input_event)
   - : Se activa cuando se modifica `value` de un elemento {{HTMLElement("input")}}, {{HTMLElement("select")}} o {{HTMLElement("textarea")}}. Tenga en cuenta que esto se activa en la interfaz {{domxref("HTMLElement")}} y también se aplica a los elementos [`contenteditable`](/es/docs/Web/HTML/Global_attributes/contenteditable), pero lo hemos enumerado aquí porque se usa más comúnmente con elementos de entrada de formulario.
 - [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event)
   - : Se activa cuando un elemento no satisface sus restricciones durante la validación de restricciones.

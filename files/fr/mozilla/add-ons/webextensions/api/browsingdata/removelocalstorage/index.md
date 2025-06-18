@@ -12,7 +12,7 @@ Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAP
 - Effacer uniquement les objets de stockage locaux créés après un délai donné
 - Controler si vous souhaitez effacer uniquement les objets de stockage locaux créés par des pages Web normales ou supprimer des objets créés par des applications et des extensions hébergées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -29,7 +29,7 @@ var removing = browser.browsingData.removeLocalStorage(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
 
 ## Compatibilité des navigateurs
 

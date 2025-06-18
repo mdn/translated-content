@@ -44,7 +44,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime
 - {{WebExtAPIRef("runtime.getBackgroundPage()")}}
   - : 取得当前扩展的后台页的 [Window](/zh-CN/docs/Web/API/Window) 对象。
 - {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : 打开你的扩展的 [选项页面](/zh-CN/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Options_pages)。
+  - : 打开你的扩展的 [选项页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages)。
 - {{WebExtAPIRef("runtime.getManifest()")}}
   - : 获得完整的 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 声明文件的序列化对象。
 - {{WebExtAPIRef("runtime.getURL()")}}

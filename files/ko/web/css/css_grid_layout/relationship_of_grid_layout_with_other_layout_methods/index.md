@@ -9,7 +9,7 @@ CSS 그리드 레이아웃은 레이아웃 작업을 위한 전체 시스템 중
 
 ## 그리드와 플랙스박스
 
-CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout)의 기본 차이점이라면, 플랙스박스는 한 줄로 된 행 _혹은_ 열 방향의 레이아웃과 같이 일차원의 레이아웃을 염두에 두고 설계되었다는 점입니다. 하지만, 그리드는 행과 열 모두를 염두에 둔 2차원적 레이아웃을 고려해서 설계되었습니다. 그러나 두 기술은 몇 가지 공통된 면모를 공유하고 있어서, 이미 플랙스박스 사용법을 익히셨다면 그리드를 이해하는 데도 도움이 될 만한 둘 사이의 유사점을 목격하실 수도 있습니다.
+CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/docs/Web/CSS/CSS_flexible_box_layout)의 기본 차이점이라면, 플랙스박스는 한 줄로 된 행 _혹은_ 열 방향의 레이아웃과 같이 일차원의 레이아웃을 염두에 두고 설계되었다는 점입니다. 하지만, 그리드는 행과 열 모두를 염두에 둔 2차원적 레이아웃을 고려해서 설계되었습니다. 그러나 두 기술은 몇 가지 공통된 면모를 공유하고 있어서, 이미 플랙스박스 사용법을 익히셨다면 그리드를 이해하는 데도 도움이 될 만한 둘 사이의 유사점을 목격하실 수도 있습니다.
 
 ### 1차원적 대비 2차원적 레이아웃
 
@@ -592,20 +592,20 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 
 1. [**CSS**](/ko/docs/Web/CSS)
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
-3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout)
+3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
 
-   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃의_기본_개념)
-   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_레이아웃과_다른_레이아웃_방법과의_관계)
-   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_그리드의_라인을_기준으로_한_아이템_배치)
-   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_Grid_Layout/그리드_템플릿_영역)
-   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_Grid_Layout/이름이_주어진_그리드_라인을_이용한_레이아웃)
-   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Auto-placement_in_CSS_Grid_Layout)
-   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
-   8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid,_Logical_Values_and_Writing_Modes)
-   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_Layout_and_Accessibility)
-   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement)
-   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_Grid_Layout/Realizing_common_layouts_using_CSS_Grid_Layout)
+   1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+   2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
+   3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+   4. [그리드 템플릿 영역](/ko/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+   5. [이름이 주어진 그리드 라인을 이용한 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_named_grid_lines)
+   6. [Auto-placement in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout)
+   7. [Box alignment in grid layout](/ko/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
+   8. [Grids, logical values, and writing modes](/ko/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
+   9. [CSS Grid Layout and Accessibility](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
+   10. [CSS Grid Layout and Progressive Enhancement](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+   11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
 
@@ -616,12 +616,12 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
    5. [grid-auto-rows](/ko/docs/Web/CSS/grid-auto-rows)
    6. [grid-column](/ko/docs/Web/CSS/grid-column)
    7. [grid-column-end](/ko/docs/Web/CSS/grid-column-end)
-   8. [grid-column-gap](/ko/docs/Web/CSS/grid-column-gap)
+   8. [grid-column-gap](/ko/docs/Web/CSS/column-gap)
    9. [grid-column-start](/ko/docs/Web/CSS/grid-column-start)
-   10. [grid-gap](/ko/docs/Web/CSS/grid-gap)
+   10. [grid-gap](/ko/docs/Web/CSS/gap)
    11. [grid-row](/ko/docs/Web/CSS/grid-row)
    12. [grid-row-end](/ko/docs/Web/CSS/grid-row-end)
-   13. [grid-row-gap](/ko/docs/Web/CSS/grid-row-gap)
+   13. [grid-row-gap](/ko/docs/Web/CSS/row-gap)
    14. [grid-row-start](/ko/docs/Web/CSS/grid-row-start)
    15. [grid-template](/ko/docs/Web/CSS/grid-template)
    16. [grid-template-areas](/ko/docs/Web/CSS/grid-template-areas)
@@ -631,11 +631,11 @@ CSS 그리드 레이아웃과 [CSS 플랙스박스(Flexbox) 레이아웃](/ko/do
 6. **용어집**
 
    1. [Grid](/ko/docs/Glossary/Grid)
-   2. [Grid lines](/ko/docs/Glossary/Grid_lines)
-   3. [Grid tracks](/ko/docs/Glossary/Grid_tracks)
-   4. [Grid cell](/ko/docs/Glossary/Grid_cell)
-   5. [Grid areas](/ko/docs/Glossary/Grid_areas)
+   2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
+   3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)
+   4. [Grid cell](/ko/docs/Glossary/Grid_Cell)
+   5. [Grid areas](/ko/docs/Glossary/Grid_Areas)
    6. [Gutters](/ko/docs/Glossary/Gutters)
    7. [Grid Axis](/ko/docs/Glossary/Grid_Axis)
-   8. [Grid row](/ko/docs/Glossary/Grid_rows)
-   9. [Grid column](/ko/docs/Glossary/Grid_column)
+   8. [Grid row](/ko/docs/Glossary/Grid_Row)
+   9. [Grid column](/ko/docs/Glossary/Grid_Column)

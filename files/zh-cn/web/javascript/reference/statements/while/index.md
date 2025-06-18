@@ -9,7 +9,18 @@ l10n:
 
 **`while`** 语句创建一个循环，只要测试条件求值为真，则循环执行指定语句。在执行语句前会先对条件进行求值。
 
-{{EmbedInteractiveExample("pages/js/statement-while.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - While")}}
+
+```js interactive-example
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+```
 
 ## 语法
 
@@ -84,7 +95,7 @@ while (currentNode = iterator.nextNode()) {
 
 这行代码的问题在于：条件通常使用[比较运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#比较运算符)，比如 `===`，但是这行代码中的 `=` 不是比较运算符，而是一个[赋值运算符](/zh-CN/docs/Web/JavaScript/Guide/Expressions_and_operators#赋值运算符)。所以，这个 `=` *看起来像*是 `===` 的拼写错误，尽管实际上它并*不是*拼写错误。
 
-因此，在这种情况下，一些[代码检查工具](/zh-CN/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#代码检查工具)（如 ESLint 的 `no-cond-assign` 规则）会报告警告，以帮助你捕捉可能的拼写错误，以便你可以进行修正。警告可能会类似于以下内容：
+因此，在这种情况下，一些[代码检查工具](/zh-CN/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#代码检查工具)（如 ESLint 的 `no-cond-assign` 规则）会报告警告，以帮助你捕捉可能的拼写错误，以便你可以进行修正。警告可能会类似于以下内容：
 
 > Expected a conditional expression and instead saw an assignment.
 

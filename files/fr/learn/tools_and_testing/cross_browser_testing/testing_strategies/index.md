@@ -141,7 +141,7 @@ Donc, notre liste de support finale devrait finir par ressemble à ça :
 
 Lorsque vous ajouter une nouveauté à votre code de base qui nécessite d'être testée, avant de commencer vos tests, vous devez rédiger une liste des conditions des tests qui ont besoin de passer pour être admises. Ces conditions peuvent être visuelles ou fonctionnelles — combiner les deux afin de mettre en place une fonctionnalité web utilisable.
 
-Considérez l'exemple suivant (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), et aussi l'[exemple exécuté en direct](http://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)) :
+Considérez l'exemple suivant (voir le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html), et aussi l'[exemple exécuté en direct](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/strategies/hidden-info-panel.html)) :
 
 ![](sliding-box-demo.png)
 
@@ -203,7 +203,7 @@ Nous couvrirons chacune des autres options plus bas.
 
 Les émulateurs sont essentiellement des programmes qui s'exécutent à l'intérieur de votre ordinateur et simulent des appareils ou des conditions particulières d'appareil d'un certain type, ils vous permettent de faire certains tests plus aisément qu'en ayant à trouver une combinaison de matériels/logiciels à tester.
 
-Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le [Mode Design Responsive](/fr/docs/Tools/Responsive_Design_Mode) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
+Un émulateur peut être aussi simple à tester qu'une condition d'appareil. Par exemple, si vous voulez faire quelques tests rapides et sales de la largeur/hauteur de vos media queries pour le responsive design, vous pouvez utiliser le [Mode Design Responsive](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) de Firefox. Safari possède également un mode similaire, qui peut être activé en allant dans _Safari_ > _Préférences_, et en cochant _Show Develop menu_, puis en choisissant _Develop > Enter Responsive Design Mode_. Chrome propose également quelque chose de similaire : Device mode (voir [Simuler un Appareil Mobile avec le Device Mode](https://developers.google.com/web/tools/chrome-devtools/device-mode/)).
 
 Le plus souvent, vous allez devoir installer un émulateur. Les appareils/navigateurs les plus courants que vous allez devoir tester sont les suivants :
 

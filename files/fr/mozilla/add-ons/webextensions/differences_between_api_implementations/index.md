@@ -24,7 +24,7 @@ Deux espaces de noms API sont utilisés :
 
 JavaScript fournit plusieurs façons de gérer les événements asynchrones. La norme API d'extensions proposée est d'utiliser des promises. L'approche des promises offre des avantages significatifs lorsqu'il s'agit d'appels d'événements asynchrones en chaîne
 
-Si vous n'êtes pas familier avec la façon dont JavaScript peut gérer les événements asynchrones ou les promesses, jetez un coup d'oeil sur [Apprendre à connaître Javascript Asynchrone : Callbacks, Promises et Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) ou la page des [promises d'utilisation](/fr/docs/Web/JavaScript/Guide/Utiliser_les_promesses) de MDN.
+Si vous n'êtes pas familier avec la façon dont JavaScript peut gérer les événements asynchrones ou les promesses, jetez un coup d'oeil sur [Apprendre à connaître Javascript Asynchrone : Callbacks, Promises et Async/Await](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) ou la page des [promises d'utilisation](/fr/docs/Web/JavaScript/Guide/Using_promises) de MDN.
 
 Firefox est le seul navigateur majeur à avoir implémenté des promises pour les extensions API. Tous les autres navigateurs utilisent des callbacks.
 
@@ -33,20 +33,20 @@ Firefox est le seul navigateur majeur à avoir implémenté des promises pour le
 Les différences dans l'implémentation des fonctions de l'API d'extension entre les navigateurs se répartissent en trois grandes catégories :
 
 - Manque de soutien pour l'ensemble d'une fonction. Par exemple, au moment d'écrire ces lignes, Edge ne prend pas en charge la fonction de [`vide privée`](/fra/Add-ons/WebExtensions/API/privacy).
-- Variations dans la prise en charge des fonctions au sein d'une fonction. Par exemple, au moment d'écrire ces lignes, Firefox ne supporte pas la fonction de [`notification`](/fr/Add-ons/WebExtensions/API/notifications) [onButtonClicked](/fr/Add-ons/WebExtensions/API/notifications/onButtonClicked) alors que Firefox est le seul navigateur qui supporte [onShown](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
-- Fonctions propriétaires, supportant des fonctions spécifiques au navigateur. Par exemple, au moment d'écrire ces lignes, containers est une fonctionnalité spécifique à Firefox supportée par la fonction [contextualIdentities](/fr/Add-ons/WebExtensions/API/contextualIdentities).
+- Variations dans la prise en charge des fonctions au sein d'une fonction. Par exemple, au moment d'écrire ces lignes, Firefox ne supporte pas la fonction de [`notification`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications) [onButtonClicked](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked) alors que Firefox est le seul navigateur qui supporte [onShown](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown).
+- Fonctions propriétaires, supportant des fonctions spécifiques au navigateur. Par exemple, au moment d'écrire ces lignes, containers est une fonctionnalité spécifique à Firefox supportée par la fonction [contextualIdentities](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities).
 
 ## Touches Manifest
 
-Les différences entre les clés [clés manifest.json](/fr/Add-ons/WebExtensions/manifest.json) prises en charge par les navigateurs se répartissent en deux grandes catégories :
+Les différences entre les clés [clés manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) prises en charge par les navigateurs se répartissent en deux grandes catégories :
 
-- Attributs d'information sur les extensions. Par exemple, au moment d'écrire ces lignes, Firefox et Opera incluent la clé de [développent](/fr/Add-ons/WebExtensions/manifest.json/developer) permettant d'ajouter des détails sur le développeur de l'extension, ainsi que sur l'auteur, à enregistrer.
-- Fonctions d'extension. Par exemple, au moment d'écrire ces lignes, Edge ne prenait pas en charge les clés de [commande](/fr/Add-ons/WebExtensions/manifest.json/commands) qui permettent de définir des raccourcis clavier pour une extension.
+- Attributs d'information sur les extensions. Par exemple, au moment d'écrire ces lignes, Firefox et Opera incluent la clé de [développent](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) permettant d'ajouter des détails sur le développeur de l'extension, ainsi que sur l'auteur, à enregistrer.
+- Fonctions d'extension. Par exemple, au moment d'écrire ces lignes, Edge ne prenait pas en charge les clés de [commande](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) qui permettent de définir des raccourcis clavier pour une extension.
 
 ## Plus d'information
 
 Vous trouverez des informations plus détaillées sur les différences entre les extensions de navigateur prises en charge par les fonctionnalités API dans le domaine :
 
-- [Incompatibilités Chrome](/fr/Add-ons/WebExtensions/Chrome_incompatibilities)
-- [Prise en charge des API Javascript par le navigateur](/fr/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Compatibilité du navigateur pour manifest.json](/fr/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Incompatibilités Chrome](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities)
+- [Prise en charge des API Javascript par le navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)

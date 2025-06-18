@@ -68,7 +68,7 @@ The following properties are listed in the most up-to-date spec, but are not sup
 - {{domxref("Notification.onclick")}}
   - : 一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件的 handler。每次使用者點擊 Notification 都會被觸發。
 - {{domxref("Notification.onerror")}}
-  - : 一個 [`error`](/zh-TW/docs/Web/API/Element/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
+  - : 一個 [`error`](/zh-TW/docs/Web/API/HTMLElement/error_event) 事件的 handler. 每次 Notification 發生 Error 都會被觸發。
 
 #### 停止支援的事件處理器
 

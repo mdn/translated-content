@@ -11,7 +11,7 @@ Cet élément est un fragment de contenu mis de côté pour être utilisé par l
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 ## Exemples
 
@@ -123,7 +123,7 @@ table td {
     </tr>
     <tr>
       <th scope="row">Omission de balises</th>
-      <td>{{no_tag_omission}}</td>
+      <td>Aucune, la balise d'ouverture et la balise de fermeture sont obligatoires.</td>
     </tr>
     <tr>
       <th scope="row">Parents autorisés</th>
@@ -166,5 +166,5 @@ table td {
 ## Voir aussi
 
 - {{HTMLElement("slot")}}
-- [Utiliser les gabarits et les emplacements (_templates and slots_)](/fr/docs/Web/Web_Components/Using_templates_and_slots)
+- [Utiliser les gabarits et les emplacements (_templates and slots_)](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
 - {{HTMLElement("shadow")}} {{deprecated_inline}}

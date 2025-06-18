@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSS Typed OM")}}{{SeeCompatTable}}
 
-**`toString()`** は {{domxref("CSSTransformComponent")}} インターフェイスのメソッドで、{{Glossary("stringifier", "文字列化子")}}であり、 [CSS 座標変換](/ja/docs/Web/CSS/CSS_Transforms)関数を返します。
+**`toString()`** は {{domxref("CSSTransformComponent")}} インターフェイスのメソッドで、{{Glossary("stringifier", "文字列化子")}}であり、 [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)関数を返します。
 
 ## 構文
 

@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase
 
 {{jsxref("String")}} 的 **`toLocaleUpperCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为大写形式并返回。
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## 语法
 

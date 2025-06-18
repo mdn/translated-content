@@ -1,6 +1,8 @@
 ---
 title: color-index
 slug: Web/CSS/@media/color-index
+l10n:
+  sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
 {{CSSRef}}
@@ -67,5 +69,5 @@ p {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)

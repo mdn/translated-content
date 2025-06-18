@@ -1,11 +1,11 @@
 ---
-title: "::grammar-error"
+title: ::grammar-error
 slug: Web/CSS/::grammar-error
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
 
-[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
+[CSS](/ru/docs/Web/CSS) [псевдо-элемент](/en-US/CSS/Pseudo-elements) **`::grammar-error`** представляет сегмент текста, который {{glossary("user agent")}} пометил как грамматически неверный.
 
 ## Доступные свойства
 

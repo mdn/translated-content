@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 **`forEach()`** 方法对数组的每个元素执行一次给定的函数。
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## 语法
 
@@ -252,7 +262,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## 参见
 
 - [`core-js` 中 `Array.prototype.forEach` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [索引集合类](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
+- [索引集合](/zh-CN/docs/Web/JavaScript/Guide/Indexed_collections)
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
 - {{jsxref("Array.prototype.map()")}}

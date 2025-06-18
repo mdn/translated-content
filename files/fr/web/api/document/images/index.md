@@ -26,9 +26,9 @@ for (var i = 0; i < listeimg.length; i++) {
 
 ## Notes
 
-[`document.images`](/fr/DOM/document.images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
+[`document.images`](/fr/docs/Web/API/Document/images) fait partie du DOM HTML, et fonctionne uniquement pour les document HTML.
 
 ## Spécification
 
-- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
+- Spécification DOM Level 2 HTML&nbsp;: [HTMLDocument.images](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-90379117)
 - Traduction en français (non normative)&nbsp;: [HTMLDocument.images](http://www.yoyodesign.org/doc/w3c/dom2/html/html.html#ID-90379117)

@@ -46,7 +46,7 @@ showOpenFilePicker()
         - `description` {{Optional_Inline}}
           - : 사용 가능한 파일 유형에 대한 설명입니다. 기본 값은 빈 문자열입니다.
         - `accept`
-          - : 키는 [MIME 유형](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다
+          - : 키는 [MIME 유형](/ko/docs/Web/HTTP/MIME_types/Common_types)이고 값은 파일 확장자들의 {{jsxref('Array')}}인 {{jsxref('Object')}}입니다
             (아래 예제를 참고하세요).
 
 ### 반환 값

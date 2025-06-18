@@ -5,7 +5,7 @@ slug: Web/API/MediaQueryList
 
 {{APIRef("CSSOM View")}}{{SeeCompatTable}}
 
-Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/Media_Queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
+Un objeto `MediaQueryList` almacena información en un [media query](/es/docs/Web/CSS/CSS_media_queries) aplicada a un documento y se encarga de enviar notificaciones a los oyentes cuando cambia el estado de consulta de medios (es decir, cuando la prueba de consulta de medios comienza o deja de evaluarse a `true`).
 
 Esto hace posible observar un documento para detectar cuando sus consultas de medios cambian, en lugar de sondear los valores periódicamente y le permite programar cambios en un documento basado en el estado de consulta de medios.
 
@@ -22,7 +22,7 @@ La nueva versión de la interfaz de `MediaQueryList` hereda las propiedades de s
 ### Controladores de eventos
 
 - {{domxref("MediaQueryList.onchange")}}
-  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento [`change`](/es/docs/Web/Reference/Events/change), es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
+  - : Una propiedad de controlador de eventos que representa una función que se invoca cuando se desencadena el evento [`change`](/es/docs/Web/API/HTMLElement/change_event), es decir, cuando cambia el estado del soporte de consulta de medios. El objeto de evento es una instancia {{domxref("MediaQueryListEvent")}}, que se reconoce como una instancia de `MediaListQuery` en navegadores antiguos, para propósitos de compatibilidad con versiones anteriores.
 
 ## Métodos
 
@@ -72,8 +72,8 @@ mql.addListener(screenTest);
 
 ## Ver también
 
-- [Media queries](/es/docs/CSS/Media_queries)
-- [Uso de media queries desde el código](/es/docs/CSS/Using_media_queries_from_code)
+- [Media queries](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [Uso de media queries desde el código](/es/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - {{domxref("window.matchMedia()")}}
 - {{domxref("MediaQueryListListener")}}
 - {{domxref("MediaQueryListEvent")}}

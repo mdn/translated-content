@@ -10,7 +10,7 @@ L'évènement **`animationstart`** est déclenché quand une animation CSS a com
 ## Informations générales
 
 - Spécification
-  - : [CSS Animations](http://www.w3.org/TR/css3-animations/#animation-events)
+  - : [CSS Animations](https://www.w3.org/TR/css3-animations/#animation-events)
 - Interface
   - : AnimationEvent
 - Propagation
@@ -41,4 +41,4 @@ L'évènement **`animationstart`** est déclenché quand une animation CSS a com
 
 ## Voir aussi
 
-- [Utilisation des animations CSS](/fr/docs/CSS/Using_CSS_animations)
+- [Utilisation des animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations)

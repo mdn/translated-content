@@ -3,7 +3,7 @@ title: "HTMLSelectElement: reportValidity() メソッド"
 short-title: reportValidity()
 slug: Web/API/HTMLSelectElement/reportValidity
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: 89d17a618d9a09519b1a667ecab74c4c40515e8f
 ---
 
 {{APIRef("HTML DOM")}}
@@ -37,6 +37,6 @@ reportValidity()
 - {{domxref("HTMLSelectElement.checkValidity()")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - CSS {{cssxref(":valid")}} および {{cssxref(":invalid")}} 擬似クラス

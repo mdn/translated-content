@@ -6,15 +6,15 @@ slug: Web/EXSLT
 {{ XsltRef() }}
 EXSLT est un ensemble d'extensions à [XSLT](/fr/XSLT). Un certain nombre de modules existent&nbsp;; ceux qui sont supportés par Firefox sont listés ci-dessous&nbsp;:
 
-- [Common](#Common) (`exsl`)
+- [Common](#common) (`exsl`)
   - : Fournit des éléments et des fonctions basiques d'extension.
-- [Math](#Math) (`math`)
+- [Math](#math) (`math`)
   - : Fournit des routines de comparaison de nœuds.
-- [Expressions rationnelles](#Expressions_rationnelles) (`regexp`)
+- [Expressions rationnelles](#expressions_rationnelles) (`regexp`)
   - : Fournit des facilités pour l'utilisation d'expressions rationnelles dans la syntaxe JavaScript.
-- [Sets](#Sets) (`set`)
+- [Sets](#sets) (`set`)
   - : Fournit des routines pour la manipulation d'ensembles.
-- [Strings](#Strings) (`str`)
+- [Strings](#strings) (`str`)
   - : Fournit des fonctions de manipulation de chaînes.
 
 ### Utilisation de EXSLT

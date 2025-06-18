@@ -155,14 +155,14 @@ DOMComb(parentNode, callbackFunction);
 
 #### Descrição
 
-Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/JavaScript/Reference/Operators/this).
+Percorre todos os nós filhos de `parentNode` recursivamente e o próprio `parentNode` e executa a `callbackFunction` em cada um deles como [`this`](/pt-BR/docs/Web/JavaScript/Reference/Operators/this).
 
 #### Parâmetros
 
 - `parentNode`
-  - : O nó pai ([`Object`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
+  - : O nó pai ([`Object`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Object)`do tipo Node`).
 - `callbackFunction`
-  - : A função de callback ([`Function`](/pt-BR/docs/JavaScript/Reference/Global_Objects/Function)).
+  - : A função de callback ([`Function`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Function)).
 
 #### Exemplo de uso
 

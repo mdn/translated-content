@@ -5,7 +5,7 @@ slug: Web/API/Node/hasChildNodes
 
 {{APIRef("DOM")}}
 
-**`Node.hasChildNodes()`** 메소드는 현재 노드({{domxref("Node")}})에게 자식노드([child nodes](/ko/docs/Web/API/Node.childNodes))가 있는지를 {{jsxref("Boolean")}} 값으로 반환합니다.
+**`Node.hasChildNodes()`** 메소드는 현재 노드({{domxref("Node")}})에게 자식노드([child nodes](/ko/docs/Web/API/Node/childNodes))가 있는지를 {{jsxref("Boolean")}} 값으로 반환합니다.
 
 ## 구문
 

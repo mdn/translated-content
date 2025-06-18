@@ -28,7 +28,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 Блочный контекст форматирования применяется ко всему содержимому того элемента, который его создал.
 
-Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) тоже происходит только между блоками из одного и того же блочного контекста форматирования.
+Блочные контексты форматирования важны для размещения плавающих элементов (см. {{ cssxref("float") }}) и отмены их обтекания (см.{{ cssxref("clear") }}) . Правила размещения плавающих элементов и сброса обтекания применяются только к элементам внутри одного и того же блочного контекста форматирования. Плавающие элементы не влияют на размещение содержимого внутри других блочных контекстов форматирования, и отмена обтекания распространяется только на плавающие элементы из того же самого контекста форматирования. [Схлопывание внешних отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) тоже происходит только между блоками из одного и того же блочного контекста форматирования.
 
 ## Примеры
 
@@ -89,7 +89,7 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 ### Схлопывание границ margin
 
-Создание нового блочного контекста форматирования предотвращает эффект [схлопывания границ](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing) между двумя соседними div:
+Создание нового блочного контекста форматирования предотвращает эффект [схлопывания границ](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) между двумя соседними div:
 
 #### HTML
 
@@ -123,27 +123,27 @@ slug: Web/CSS/CSS_display/Block_formatting_context
 
 ## Спецификации
 
-- [CSS 2.1](http://www.w3.org/TR/CSS21/visuren.html#q15)
+- [CSS 2.1](https://www.w3.org/TR/CSS21/visuren.html#q15)
 - [CSS Display Level 3](https://drafts.csswg.org/css-display/#block-formatting-context)
 
 ## Статьи по теме
 
 - {{ cssxref("float") }}, {{ cssxref("clear") }}
 - Ключевые концепции CSS
-  - [Синтаксис CSS](/ru/docs/Web/CSS/Syntax)
-  - [@-правила](/ru/docs/Web/CSS/At-rule)
-  - [комментарии](/ru/docs/Web/CSS/Comments)
-  - [специфичность](/ru/docs/Web/CSS/Specificity)
-  - [наследование](/ru/docs/Web/CSS/inheritance)
-  - [блочная модель](/ru/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-  - [режимы компоновки](/ru/docs/Web/CSS/Layout_mode)
-  - [модели визуального форматирования](/ru/docs/Web/CSS/Visual_formatting_model)
-  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing)
+  - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
+  - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
+  - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)
+  - [специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)
+  - [наследование](/ru/docs/Web/CSS/CSS_cascade/Inheritance)
+  - [блочная модель](/ru/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
+  - [режимы компоновки](/ru/docs/Glossary/Layout_mode)
+  - [модели визуального форматирования](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model)
+  - [Схлопывание отступов](/ru/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - Значения
-    - [начальные](/ru/docs/Web/CSS/initial_value)
-    - [вычисленные](/ru/docs/Web/CSS/computed_value)
-    - [используемые](/ru/docs/Web/CSS/used_value)
-    - [действительные](/ru/docs/Web/CSS/actual_value)
+    - [начальные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing)
+    - [вычисленные](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_e3410028f0a698ddd9f74225ea8d122c0a582707d683fdd173e681e62003518d)
+    - [используемые](/ru/docs/conflicting/Web/CSS/CSS_cascade/Value_processing_67ecc2d1089286b6003d201c901ee7218b8f627858ae89823dc40509095cd65b)
+    - [действительные](/ru/docs/Web/CSS/CSS_cascade/Value_processing)
   - [Синтаксис определения значений](/ru/docs/Web/CSS/Value_definition_syntax)
-  - [Сокращённые свойства](/ru/docs/Web/CSS/Shorthand_properties)
-  - [Замещаемые элементы](/ru/docs/Web/CSS/Replaced_element)
+  - [Сокращённые свойства](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties)
+  - [Замещаемые элементы](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)

@@ -21,7 +21,7 @@ API доступа к файлам и директориям имитирует 
 
 Есть два способа получить доступ к файловой системе, определённым в текущем проекте спецификации:
 
-- При обработке события {{event("drop")}} вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не `null`, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.
+- При обработке события [`drop`](/ru/docs/Web/API/HTMLElement/drop_event) вы можете вызвать {{domxref("DataTransferItem.webkitGetAsEntry()")}} что бы получить {{domxref("FileSystemEntry")}} для "брошенного" элемента. Если результат не `null`, то это брошенный файл или каталог, и вы можете использовать вызовы файловой системы для работы с ним.
 - Свойство {{domxref("HTMLInputElement.webkitEntries")}} позволяет получить объект {{domxref("FileSystemFileEntry")}} для выбранного файла, но только если они перетаскиваются в [средство выбора](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) файлов ( [баг 1326031](https://bugzilla.mozilla.org/show_bug.cgi?id=1326031) ). Если {{domxref("HTMLInputElement.webkitdirectory")}} является `true`, то {{HTMLElement("input")}} работает для выбора директорий, и вы можете получить объект {{domxref("FileSystemDirectoryEntry")}} для каждой выбранной директории.
 
 ## Асинхронный API
@@ -81,5 +81,5 @@ API доступа к файлам и директориям имитирует 
 
 ## Смотрите также
 
-- [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_and_Directory_Entries_API/Introduction)
+- [Introduction to the File and Directory Entries API](/ru/docs/Web/API/File_System_API)
 - [File and Directory Entries API support in Firefox](/ru/docs/Web/API/File_and_Directory_Entries_API/Firefox_support)

@@ -21,7 +21,7 @@ Par exemple, voici des choses que vous pourrez faire avec Feature Policy :
 - Changer le comportement par défaut de la lecture automatique sur mobile ou pour les vidéos de source externe,
 - Vous interdire d'utiliser les API sensitives comme l'appareil photographique ou le microphone.
 - Permettre aux iframes d'utiliser l'[API plein écran](/fr/docs/Web/API/Fullscreen_API).
-- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
+- Empêcher l'utilisateur d'API obsolètes comme les [XHR synchrones](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest) ou {{domxref("document.write()")}}.
 - Vous assurer que les images sont dimensionnées correctement et ne sont pas trop grosses pour le cadre de la fenêtre.
 
 ## Concepts et utilisation
@@ -84,7 +84,7 @@ La liste de ces fonctionnalités est :
 
 Le web fournit des fonctionnalités et API que peuvent affecter l'anonymat, la vie privée et la sécurité si leur usage est abusif. Dans certains cas, vous pourriez avoir envie de limiter strictement la manière dont de telles fonctionnalités sont utilisées sur un site web. Il y a des moyens de permettre à des fonctionnalités d'être activées ou désactivées pour des origines ou des cadres spécifiques dans un site web. Quand ils sont disponibles, les moyens intègrent avec l'API Permissions ou des mécanismes propres à eux-mêmes la possibilité de vérifier si la fonctionnalité est disponible.
 
-Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Headers/Feature-Policy#directives)) :
+Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/Headers/Permissions-Policy#directives)) :
 
 - Accéléromètre
 - Capteur de luminosité ambiante
@@ -106,7 +106,7 @@ Les fonctionnalités incluent (voir la [liste des Features](/fr/docs/Web/HTTP/He
 ## Exemples
 
 - [Utiliser Feature Policy](/fr/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)
-- Voir [Démonstrations de Feature Policy](http://feature-policy-demos.appspot.com/) pour un exemple d'utilisation de plusieurs règles.
+- Voir [Démonstrations de Feature Policy](https://feature-policy-demos.appspot.com/) pour un exemple d'utilisation de plusieurs règles.
 
 ## Spécifications
 

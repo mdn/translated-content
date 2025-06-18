@@ -6,7 +6,7 @@ original_slug: Web/Security/Securing_your_site/Turning_off_form_autocompletion
 
 Este artículo explica como un sitio web puede inhabilitar el autocompletado para los campos del formulario.
 
-Por defecto, los navegadores recuerdan información que el usuario envía a través de los campos [`input`](/es/docs/Web/HTML/Elemento/input) en los sitios web. Esto habilita al navegador para ofrecer el autocompletado (P. Ej. Sugiere posibles completaciones para los campos que el usuario ha iniciado escribiendo) o el llenado automático (P. Ej. rellenar previamente ciertos campos al cargar).
+Por defecto, los navegadores recuerdan información que el usuario envía a través de los campos [`input`](/es/docs/Web/HTML/Element/input) en los sitios web. Esto habilita al navegador para ofrecer el autocompletado (P. Ej. Sugiere posibles completaciones para los campos que el usuario ha iniciado escribiendo) o el llenado automático (P. Ej. rellenar previamente ciertos campos al cargar).
 
 Estas caracteristicas pueden ser un problema de privacidad para los usuarios, ya que mientras los navegadores pueden permitir a los usuarios a inhabilitarlas, estos están usualmente habilitados por defecto. Como sea, alguna información enviada en los formularios no es tampoco útil en el futuro (P. Ej. a one-time pin) o contiene cierta información susceptible (P. Ej. un identificador único del gobierno o un código de seguridad de la tarjeta de crédito). Un sitio web podría preferir que el navegador no recuerde los valores de tales campos, incluso si la caracteristica del autocompletado del navegador este habilitada.
 

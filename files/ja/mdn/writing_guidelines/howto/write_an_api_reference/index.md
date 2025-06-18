@@ -104,7 +104,7 @@ API の概要ページは、 API の役割、最上位のインターフェイ�
   まれに同じインターフェイスに両方が存在する場合は、ページ内で別々の節に（静的メソッド／インスタンスメソッドとして）記載します。
   通常はインスタンスメソッドしか存在しないので、その場合は「メソッド」というタイトルで記載します。
 - 継承されたプロパティやメソッドは、それぞれの親インターフェイスに掲載されているので文書化しません。しかし、その存在を示唆することはあります。
-- ミックスインで定義されたプロパティやメソッドの記事を作成します。詳しくは[ミックスインの協力ガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Information_contained_in_a_WebIDL_file#mixin)を参照してください。
+- ミックスインで定義されたプロパティやメソッドの記事を作成します。詳しくは[ミックスインの協力ガイド](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Information_contained_in_a_WebIDL_file#mixin)を参照してください。
 - 文字列化 (`toString()`) や JSON 化 (`toJSON()`) のような特殊なメソッドも、存在する場合は掲載します。
 - 名前の付いたコンストラクター（{{domxref("HTMLImageElement")}} における `Image()` など）も、関連があれば掲載します。
 
@@ -344,4 +344,4 @@ API ランディングページは、 API の規模によって長さが大き�
 
 ## サイドバー
 
-API リファレンスページを作成したら、ページを関連付けるために適切なサイドバーを挿入したくなるでしょう。 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_API_reference/Sidebars)のガイドで、その方法を説明します。
+API リファレンスページを作成したら、ページを関連付けるために適切なサイドバーを挿入したくなるでしょう。 [API リファレンスサイドバー](/ja/docs/MDN/Writing_guidelines/Howto/Write_an_api_reference/Sidebars)のガイドで、その方法を説明します。

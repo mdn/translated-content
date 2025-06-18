@@ -11,7 +11,7 @@ l10n:
 
 Zstandard（简称 `zstd`）是一种快速无损压缩算法，针对 zlib 级别的实时压缩场景提供更好的压缩比。它采用了[Huff0 和 FSE 库](https://github.com/Cyan4973/FiniteStateEntropy)提供的高效熵编码阶段。在相同的 CPU 开销下，它通常比 {{glossary("Brotli_compression", "brotli")}} 提供更好的压缩比，或者在相同的压缩比下提供更低的 CPU 开销。
 
-关于浏览器兼容性，请参考 [Content-Encoding：浏览器兼容性](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#浏览器兼容性)。
+关于浏览器兼容性，请参考 [Content-Encoding：浏览器兼容性](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding#浏览器兼容性)。
 
 ## 参见
 

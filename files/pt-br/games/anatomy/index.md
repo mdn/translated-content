@@ -212,7 +212,7 @@ One common technique is to update the simulation at a constant frequency and the
 
   - This uses processor time even when unfocused or minimized, hogs the main thread, and is probably an artifact of traditional game loops (but it is simple.)
 
-- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/pt-BR/docs/Web/Guide/Performance/Using_web_workers).
+- Draw on `requestAnimationFrame` and update on a `setInterval` or `setTimeout` in a [Web Worker](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers).
 
   - This is the same as above, except update does not hog the main thread (nor does the main thread hog it). This is a more complex solution, and might be too much overhead for simple updates.
 

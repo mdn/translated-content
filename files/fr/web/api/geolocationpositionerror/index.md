@@ -38,5 +38,5 @@ _L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
 
 ## Voir aussi
 
-- [Utiliser l'API de géolocalisation](/fr/docs/Web/API/Geolocation_API/Using)
+- [Utiliser l'API de géolocalisation](/fr/docs/Web/API/Geolocation_API/Using_the_Geolocation_API)
 - {{domxref("Geolocation")}}

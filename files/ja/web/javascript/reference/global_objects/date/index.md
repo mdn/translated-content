@@ -2,15 +2,14 @@
 title: Date
 slug: Web/JavaScript/Reference/Global_Objects/Date
 l10n:
-  sourceCommit: 54962bbd1d367115cfd01b4e1ba6b552e8b68eb7
+  sourceCommit: 4a77365ec768047609ef48da746f5954e291430d
 ---
 
 {{JSRef}}
 
 JavaScript の **`Date`** オブジェクトは、単一の瞬間の時刻をプラットフォームに依存しない形式で表します。`Date` オブジェクトは、1970 年 1 月 1 日午前 0 時 (UTC)（元期）からのミリ秒を表す整数値をカプセル化しています。
 
-> [!NOTE]
-> TC39 は [Temporal](https://tc39.es/proposal-temporal/docs/index.html) という、新しい日付/時刻の API を開発しています。これについて詳しくは [Igalia のブログ](https://blogs.igalia.com/compilers/2020/06/23/dates-and-times-in-javascript/)を参照してください。まだ正式利用の準備はできていません。
+> **メモ:** {{jsxref("Temporal")}} API の導入に伴い、Date オブジェクトは古い機能と見なされます。新しいコードには `Temporal` を使用することを検討し、可能であれば既存のコードも移行してください（[ブラウザーの互換性](/ja/docs/Web/JavaScript/Reference/Global_Objects/Temporal#browser_compatibility)を確認してください。使用ガイドは近日中に作成予定です！）。
 
 ## 解説
 
@@ -31,7 +30,7 @@ console.log(new Date(8.64e15 + 1).toString()); // "Invalid Date"
 `Date` に格納されるタイムスタンプを操作するさまざまなメソッドがあります。
 
 - タイムスタンプ値を直接操作するには、{{jsxref("Date/getTime", "getTime()")}} および {{jsxref("Date/setTime", "setTime()")}} メソッドを使用します。
-- {{jsxref("Date/valueOf", "valueOf()")}} および [`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) メソッド（「数値」を渡したとき）は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)において自動的に呼び出されますが、タイムスタンプを返すので、`Date` オブジェクトは数値のコンテキストで使用すると、タイムスタンプのように振る舞います。
+- {{jsxref("Date/valueOf", "valueOf()")}} および [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) メソッド（「数値」を渡したとき）は、[数値変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値変換)において自動的に呼び出されますが、タイムスタンプを返すので、`Date` オブジェクトは数値のコンテキストで使用すると、タイムスタンプのように振る舞います。
 - 静的メソッド（{{jsxref("Date.now()")}}、{{jsxref("Date.parse()")}}、{{jsxref("Date.UTC()")}}）はすべて、`Date` オブジェクトではなくタイムスタンプを返します。
 - {{jsxref("Date/Date", "Date()")}} コンストラクターは、タイムスタンプのみを引数として呼び出すことができます。
 
@@ -156,21 +155,21 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 
 例えば、`"2011-10-10"`（日付のみの形式）、`"2011-10-10T14:48:00"`（日時形式）、`"2011-10-10T14:48:00.000+09:00"`（日時形式にミリ秒とタイムゾーンが付いたもの）はすべて有効な日時文字列です。
 
-タイムゾーンオフセットがない場合、**日付のみの形式は UTC 時刻として解釈され、日時形式はローカル時刻として解釈されます。** これは過去には ISO 8601 に適合しない仕様があったためですが、ウェブの互換性のために変更できませんでした。[Broken Parser - A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/) を参照してください。
+タイムゾーンオフセットがない場合、**日付のみの形式は UTC 時刻として解釈され、日時形式はローカル時刻として解釈されます。** UTC 時刻として解釈するのは、過去には ISO 8601 に適合しない仕様があったためですが、ウェブの互換性のために変更できませんでした。[Broken Parser - A Web Reality Issue](https://maggiepint.com/2017/04/11/fixing-javascript-date-web-compatibility-and-reality/) を参照してください。
 
 {{jsxref("Date.parse()")}} および {{jsxref("Date/Date", "Date()")}} コンストラクターは、どちらも日時文字列形式の文字列を入力として受け入れます。さらに、入力がこの形式に一致しない場合、実装が他の日付形式にも対応することが許されています。
 
 {{jsxref("Date/toISOString", "toISOString()")}} メソッドは、タイムゾーンのオフセットを常に `Z` (UTC) に設定した状態で、日付の文字列表現を日時文字列形式で返します。
 
 > [!NOTE]
-> 他の書式への対応は保証されていませんので、互換性を最大にするために、入力は上記の日時文字列の書式に準拠するようにしてください。しかし、{{rfc(2822)}} 形式のように、主要な実装ですべて対応している書式もあります。常に[ブラウザー横断テスト](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing)を行い、対象とするブラウザーすべてで確実にコードが動作するようにしてください。様々な書式化に対応するには、ライブラリーが役立ちます。
+> 他の書式への対応は保証されていませんので、互換性を最大にするために、入力は上記の日時文字列の書式に準拠するようにしてください。しかし、{{rfc(2822)}} 形式のように、主要な実装ですべて対応している書式もあります。常に[ブラウザー横断テスト](/ja/docs/Learn_web_development/Extensions/Testing)を行い、対象とするブラウザーすべてで確実にコードが動作するようにしてください。様々な書式化に対応するには、ライブラリーが役立ちます。
 
 標準外の文字列は、タイムゾーンを含め、実装が望む方法で構文解析できます。ほとんどの実装では既定でローカルのタイムゾーンを使用します。実装は、境界外の日付部品に対して不正な日付を返すことを要求されませんが、通常はそうします。文字列は(上で定義されていません)境界内の日付要素を持つことができますが、実際には日付を表していません(例えば、"2月30日")。この場合、実装上の不整合が発生します。[`Date.parse()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#例) のページでは、このような非標準の例について詳しく説明しています。
 
 ### 日付を書式化するその他の方法
 
 - {{jsxref("Date/toISOString", "toISOString()")}} は、`1970-01-01T00:00:00.000Z`（上で紹介した日付時刻の文字列形式で、[ISO 8601](https://ja.wikipedia.org/wiki/ISO_8601) を簡略化したもの）の形式の文字列を返します。{{jsxref("Date/toJSON", "toJSON()")}} は `toISOString()` を呼び出し、その結果を返します。
-- {{jsxref("Date/toString", "toString()")}} は `Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)` の形式の文字列を返すのに対し、{{jsxref("Date/toDateString", "toDateString()")}} および {{jsxref("Date/toTimeString", "toTimeString()")}} はそれぞれ日付と時刻の部分の文字列を返します。[`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive) は（`"string"` または `"default"` を渡したとき） `toString()` を呼び出し、その結果を返します。
+- {{jsxref("Date/toString", "toString()")}} は `Thu Jan 01 1970 00:00:00 GMT+0000 (Coordinated Universal Time)` の形式の文字列を返すのに対し、{{jsxref("Date/toDateString", "toDateString()")}} および {{jsxref("Date/toTimeString", "toTimeString()")}} はそれぞれ日付と時刻の部分の文字列を返します。 [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive) は（`"string"` または `"default"` を渡したとき） `toString()` を呼び出し、その結果を返します。
 - {{jsxref("Date/toUTCString", "toUTCString()")}} は `Thu, 01 Jan 1970 00:00:00 GMT` の形（{{rfc(7231)}} で標準化）の文字列を返します。
 - {{jsxref("Date/toLocaleDateString", "toLocaleDateString()")}}、{{jsxref("Date/toLocaleTimeString", "toLocaleTimeString()")}}、{{jsxref("Date/toLocaleString", "toLocaleString()")}} はロケール固有の日付と時刻の書式を使用します。これはふつう [`Intl`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl) API で提供されるものです。
 
@@ -184,11 +183,11 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 ## 静的メソッド
 
 - {{jsxref("Date.now()")}}
-  - : 現在の時刻に対応する数値、すなわち UTC の 1970 年 1 月 1 日 00:00:00 から経過したミリ秒数を表す数値を返します。うるう秒は無視します。
+  - : 現在の時刻に対応する数値、すなわち UTC の 1970 年 1 月 1 日 00:00:00 からのミリ秒数を表す数値を返します。うるう秒は無視します。
 - {{jsxref("Date.parse()")}}
-  - : 日付を表す文字列を解釈して、UTC の 1970 年 1 月 1 日 00:00:00 から経過したミリ秒数を表す数値を返します。うるう秒は無視します。
+  - : 日付を表す文字列を解釈して、UTC の 1970 年 1 月 1 日 00:00:00 からのミリ秒数を表す数値を返します。うるう秒は無視します。
 - {{jsxref("Date.UTC()")}}
-  - : 最も長い形式のコンストラクターと同じ引数（すなわち 2 〜 7）を受け取り、 1970 年 1 月 1 日 00:00:00 （UTC）から経過したミリ秒数を返します。うるう秒は無視します。
+  - : 最も長い形式のコンストラクターと同じ引数（すなわち 2 〜 7）を受け取り、 1970 年 1 月 1 日 00:00:00 （UTC）からのミリ秒数を返します。うるう秒は無視します。
 
 ## インスタンスプロパティ
 
@@ -203,7 +202,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
   - : 地方時に基づき、指定された日時の「日」 (`1` ～ `31`) を返します。
 - {{jsxref("Date.prototype.getDay()")}}
   - : 地方時に基づき、指定された日時の「曜日」 (`0` ～ `6`) を返します。
-- {{jsxref("Date/getFullYear")}}
+- {{jsxref("Date.prototype.getFullYear()")}}
   - : 地方時に基づき、指定された日時の「年」 (4 桁の年であれば 4 桁) を返します。
 - {{jsxref("Date.prototype.getHours()")}}
   - : 地方時に基づき、指定された日時の「時」 (`0` ～ `23`) を返します。
@@ -239,7 +238,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
   - : 地方時に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を返します。代わりに {{jsxref("Date/getFullYear", "getFullYear()")}} を使用してください。
 - {{jsxref("Date.prototype.setDate()")}}
   - : 地方時に基づき、指定された日時の「日」を設定します。
-- {{jsxref("Date/setFullYear")}}
+- {{jsxref("Date.prototype.setFullYear()")}}
   - : 地方時に基づき、指定された日時の「年」を完全な形 (例えば、 4 桁の年であれば 4 桁) で設定します。
 - {{jsxref("Date.prototype.setHours()")}}
   - : 地方時に基づき、指定された日時の「時」を設定します。
@@ -252,7 +251,7 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.setSeconds()")}}
   - : 地方時に基づき、指定された日時の「秒」を設定します。
 - {{jsxref("Date.prototype.setTime()")}}
-  - : {{jsxref("Date")}} オブジェクトを協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 からのミリ秒単位の数で表された時刻に設定します。
+  - : `Date` オブジェクトを協定世界時 (UTC) の 1970 年 1 月 1 日 00:00:00 からのミリ秒単位の数で表された時刻に設定します。
 - {{jsxref("Date.prototype.setUTCDate()")}}
   - : 協定世界時に基づき、指定された日時の「日」を設定します。
 - {{jsxref("Date.prototype.setUTCFullYear()")}}
@@ -270,11 +269,11 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.setYear()")}} {{Deprecated_Inline}}
   - : 協定地方時に基づき、指定された日時の「年」 (ふつうは 2 ～ 3 桁) を設定します。代わりに {{jsxref("Date/setFullYear", "setFullYear()")}} を使用してください。
 - {{jsxref("Date.prototype.toDateString()")}}
-  - : {{jsxref("Date")}} の「日付」部を、 'Thu Apr 12 2018' のように人間が読みやすい形式の文字列にして返します。
+  - : `Date` の「日付」部を、 'Thu Apr 12 2018' のように人間が読みやすい形式の文字列にして返します。
 - {{jsxref("Date.prototype.toISOString()")}}
   - : 日付を ISO 8601 Extended Format に準じた文字列に変換します。
 - {{jsxref("Date.prototype.toJSON()")}}
-  - : {{jsxref("Date")}} を表す文字列を {{jsxref("Date/toISOString", "toISOString()")}} を使用して返します。{{jsxref("JSON.stringify()")}} の代わりに使用するためのものです。
+  - : `Date` を表す文字列を {{jsxref("Date/toISOString", "toISOString()")}} を使用して返します。{{jsxref("JSON.stringify()")}} から暗黙に呼び出されるものです。
 - {{jsxref("Date.prototype.toLocaleDateString()")}}
   - : この日時の日付部分を、システム設定に基づいて地域性を考慮した表現による文字列にして返します。
 - {{jsxref("Date.prototype.toLocaleString()")}}
@@ -282,14 +281,16 @@ YYYY-MM-DDTHH:mm:ss.sssZ
 - {{jsxref("Date.prototype.toLocaleTimeString()")}}
   - : この日時の時刻部分を、システム設定に基づいて地域性を考慮した表現による文字列にして返します。
 - {{jsxref("Date.prototype.toString()")}}
-  - : 指定された {{jsxref("Date")}} オブジェクトを表す文字列を返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
+  - : 指定された `Date` オブジェクトを表す文字列を返します。 {{jsxref("Object.prototype.toString()")}} メソッドを上書きします。
+- {{jsxref("Date.prototype.toTemporalInstant()")}} {{experimental_inline}}
+  - : この日時の[タイムスタンプ](#元期、タイムスタンプ、無効な日時)と同じ {{jsxref("Temporal/Instant/epochMilliseconds", "epochMilliseconds")}} を持つ新しい {{jsxref("Temporal.Instant")}} オブジェクトを返します。
 - {{jsxref("Date.prototype.toTimeString()")}}
-  - : {{jsxref("Date")}} の「時刻」部を人間が読みやすい形式の文字列にして返します。
+  - : `Date` の「時刻」部を人間が読みやすい形式の文字列にして返します。
 - {{jsxref("Date.prototype.toUTCString()")}}
   - : 日時を UTC タイムゾーンを使用する文字列に変換します。
 - {{jsxref("Date.prototype.valueOf()")}}
-  - : {{jsxref("Date")}} オブジェクトのプリミティブ値を返します。{{jsxref("Object.prototype.valueOf()")}} メソッドを上書きします。
-- [`Date.prototype[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/@@toPrimitive)
+  - : `Date` オブジェクトのプリミティブ値を返します。{{jsxref("Object.prototype.valueOf()")}} メソッドを上書きします。
+- [`Date.prototype[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/Symbol.toPrimitive)
   - : `Date` オブジェクトをプリミティブ値に変換します。
 
 ## 例
@@ -414,7 +415,7 @@ function printElapsedTime(testFn) {
 const yourFunctionReturn = printElapsedTime(yourFunction);
 ```
 
-> **メモ:** {{domxref("Window/performance", "ウェブパフォーマンス API", "", "nocode")}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
+> **メモ:** {{domxref("Performance API", "ウェブパフォーマンス API", "", "nocode")}} の高精度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} で、 {{jsxref("Date.now()")}} よりも高信頼かつ高精度な経過時間の測定が可能です。
 
 ### ECMAScript 元期からの経過秒数を取得する
 

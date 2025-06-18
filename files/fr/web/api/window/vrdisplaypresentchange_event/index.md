@@ -49,7 +49,7 @@ window.addEventListener("vrdisplaypresentchange", function () {
 });
 ```
 
-Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/onvrdisplaypresentchange) :
+Ou utilisez la propriété de gestionnaire d'événements [`onvrdisplaypresentchange`](/fr/docs/Web/API/Window/vrdisplaypresentchange_event) :
 
 ```js
 window.onvrdisplaypresentchange = function () {

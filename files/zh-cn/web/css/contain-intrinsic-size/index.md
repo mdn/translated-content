@@ -5,7 +5,7 @@ slug: Web/CSS/contain-intrinsic-size
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) **`contain-intrinsic-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素尺寸。
+[CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`contain-intrinsic-size`** 定义了元素受[尺寸局限](/zh-CN/docs/Web/CSS/CSS_containment#尺寸局限)时浏览器用于布局的元素尺寸。
 
 ## 属性构成
 
@@ -178,6 +178,6 @@ contentVisibilitySelector.addEventListener("change", () => {
 
 ## 参见
 
-- [content-visibility：提高渲染性能的新 CSS 属性](https://web.dev/articles/content-visibility)（web.dev）
+- [content-visibility：提高渲染性能的新 CSS 属性](https://web.developers.google.cn/articles/content-visibility)（web.developers.google.cn）
 - {{CSSXref("contain-intrinsic-block-size")}}
 - {{CSSXref("contain-intrinsic-inline-size")}}

@@ -1,5 +1,5 @@
 ---
-title: "-webkit-device-pixel-ratio"
+title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 
@@ -9,7 +9,7 @@ slug: Web/CSS/@media/-webkit-device-pixel-ratio
 
 **`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。
 
-Its value is the number of device pixels used to represent each [CSS `px`](/zh-CN/docs/Web/CSS/length#Absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/zh-CN/docs/Web/CSS/resolution#dppx).
+Its value is the number of device pixels used to represent each [CSS `px`](/zh-CN/docs/Web/CSS/length#absolute_length_units). Although the value is a {{cssxref("&lt;number&gt;")}} and thus doesn't syntactically allow units, its implicit unit is [`dppx`](/zh-CN/docs/Web/CSS/resolution#dppx).
 
 ### Syntax
 

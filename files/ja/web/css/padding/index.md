@@ -7,9 +7,52 @@ l10n:
 
 {{CSSRef}}
 
-**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
+**`padding`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素の全四辺の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)を一度に設定します。
 
-{{EmbedInteractiveExample("pages/css/padding.html")}}
+{{InteractiveExample("CSS Demo: padding")}}
+
+```css interactive-example-choice
+padding: 1em;
+```
+
+```css interactive-example-choice
+padding: 10% 0;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 20px;
+```
+
+```css interactive-example-choice
+padding: 10px 50px 30px 0;
+```
+
+```css interactive-example-choice
+padding: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 要素のパディング領域とは、コンテンツと境界との間の領域のことです。
 
@@ -60,7 +103,7 @@ padding: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で表したものです。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 公式定義
 
@@ -76,14 +119,14 @@ padding: unset;
 
 #### HTML
 
-```html
-<h4>This element has moderate padding.</h4>
-<h3>The padding is huge in this element!</h3>
+```html-nolint live-sample___setting_padding_with_pixels
+<h4>この要素には適度なパディングがあります。</h4>
+<h3>この要素のパディングが巨大です。</h3>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_padding_with_pixels
 h4 {
   background-color: lime;
   padding: 20px 50px;
@@ -97,7 +140,7 @@ h3 {
 
 #### 結果
 
-{{EmbedLiveSample('パディングをピクセル数で設定', '100%', 300)}}
+{{EmbedLiveSample('Setting_padding_with_pixels', '100%', 300)}}
 
 ### パディングをピクセル数とパーセント値で設定
 

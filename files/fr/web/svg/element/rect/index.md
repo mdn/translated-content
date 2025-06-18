@@ -37,10 +37,10 @@ svg {
 
 ### Attributs Globaux
 
-- [Attributs conditionnels](/fr/SVG/Attribute#ConditionalProccessing) »
-- [Attributs centraux](/fr/SVG/Attribute#Core) »
-- [Attributs d'événements graphiques](/fr/SVG/Attribute#GraphicalEvent) »
-- [Attributs de présentation](/fr/SVG/Attribute#Presentation) »
+- [Attributs conditionnels](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs d'événements graphiques](/fr/docs/Web/SVG/Attribute#graphicalevent) »
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -57,7 +57,7 @@ svg {
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGRectElement`](/fr/DOM/SVGRectElement) .
+Cet élément implémente l'interface [`SVGRectElement`](/fr/docs/DOM/SVGRectElement) .
 
 ## Compatibilité des navigateurs
 

@@ -16,4 +16,4 @@ Em {{Glossary("HTML")}} a tag é usada para criar um {{Glossary("element", "elem
 
 ### Referência técnica
 
-- [Introdução ao HTML (em inglês)](/pt-BR/docs/Learn/HTML/Introduction_to_HTML)
+- [Introdução ao HTML (em inglês)](/pt-BR/docs/Learn_web_development/Core/Structuring_content)

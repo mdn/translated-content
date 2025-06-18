@@ -13,12 +13,12 @@ l10n:
 
 ### HTML
 
-- [`<source>`](/ja/docs/Web/HTML/Element/source) 要素の `media` 属性のサポートを再導入して、`<audio>` および `<video>` 要素を含むように拡張しました。この属性は Firefox 15 で最初に追加しましたが、用途が `<picture>` の内部の`<source>` 要素に限定されたため Firefox 53 で削除しました。このリリースでは `media` 属性が `<audio>`、`<video>`、`<picture>` の内部の `<source>` 要素で使用可能になります ([Firefox bug 1836128](https://bugzil.la/1836128))。
+- [`<source>`](/ja/docs/Web/HTML/Reference/Elements/source) 要素の `media` 属性のサポートを再導入して、`<audio>` および `<video>` 要素を含むように拡張しました。この属性は Firefox 15 で最初に追加しましたが、用途が `<picture>` の内部の`<source>` 要素に限定されたため Firefox 53 で削除しました。このリリースでは `media` 属性が `<audio>`、`<video>`、`<picture>` の内部の `<source>` 要素で使用可能になります ([Firefox bug 1836128](https://bugzil.la/1836128))。
 
 ### CSS
 
 - {{CSSXref("color_value/light-dark", "light-dark()")}} CSS カラー関数をサポートしました。これは、`prefers-color-scheme` メディア特性を必要とせずにライトおよびダークの色を設定できます ([Firefox bug 1856999](https://bugzil.la/1856999))。
-- 行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
+- 行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) をサポートしました。これらは、たとえば複数行のテキストと背景の装飾を正確に揃えるなど、要素の行の高さに対して相対的にプロパティを設定できます ([Firefox bug 1310170](https://bugzil.la/1310170))。
 
 #### 廃止
 
@@ -54,7 +54,7 @@ l10n:
 
 ### HTTP
 
-- [`103 Early Hints`](/ja/docs/Web/HTTP/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Status#information_responses) ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Attributes/rel/preconnect) に対して有効になりました。
+- [`103 Early Hints`](/ja/docs/Web/HTTP/Reference/Status/103) HTTP [情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#information_responses) ステータスコードが、(ページでリソースを読み込むことが必要と思われる) 特定のオリジンへの [事前接続](/ja/docs/Web/HTML/Reference/Attributes/rel/preconnect) に対して有効になりました。
   詳しくは [Firefox bug 1858712](https://bugzil.la/1858712) をご覧ください。
 - Firefox で [Global Privacy Control](https://globalprivacycontrol.org/) の {{HTTPHeader("Sec-GPC")}} リクエストヘッダーをサポートしました。これは、ウェブサイトやサービスが個人情報をサードパーティに販売あるいは共有することに同意しないことを示すために送信できます。
   ユーザーは (`about:config` で) 設定項目 `privacy.globalprivacycontrol.enabled` を `true` に設定することで、このヘッダーを通常のブラウジングとプライベートブラウジングの両方で有効化できます。

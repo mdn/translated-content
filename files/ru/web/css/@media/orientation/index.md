@@ -5,7 +5,7 @@ slug: Web/CSS/@media/orientation
 
 {{cssref}}
 
-[CSS](/ru/docs/CSS) [медиа-функции](/ru/docs/Web/CSS/Media_Queries/Using_media_queries#Media_features) **`orientation`** может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для [медийных страниц](/ru/docs/Web/CSS/Paged_media)).
+[CSS](/ru/docs/Web/CSS) [медиа-функции](/ru/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) **`orientation`** может использоваться для проверки ориентации области {{glossary("просмотра")}} (или поля страницы для [медийных страниц](/ru/docs/Web/CSS/CSS_paged_media)).
 
 > [!NOTE]
 > Эта функция не соответствует ориентации _устройства_. Открытие программной клавиатуры на многих устройствах в книжной ориентации приведёт к тому, что область просмотра станет шире, чем высокая, в результате чего браузер будет использовать альбомные стили вместо портретного.

@@ -7,7 +7,52 @@ slug: Web/CSS/grid-template-columns
 
 CSS-свойство **`grid-template-columns`** определяет имена линий и размеры {{glossary("grid column", "грид-колонок")}}.
 
-{{EmbedInteractiveExample("pages/css/grid-template-columns.html")}}
+{{InteractiveExample("CSS Demo: grid-template-columns")}}
+
+```css interactive-example-choice
+grid-template-columns: 60px 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 60px;
+```
+
+```css interactive-example-choice
+grid-template-columns: 1fr 2fr;
+```
+
+```css interactive-example-choice
+grid-template-columns: 8ch auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 200px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## Синтаксис
 
@@ -85,7 +130,7 @@ grid-template-columns: unset;
   - : Представляет собой повторяющийся фрагмент списка полос, тем самым позволяя компактно определить большое количество колонок согласно повторяющемуся шаблону.
 - [`masonry`](/ru/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout){{Experimental_Inline}}
   - : Значение `masonry` указывает на то, что оси должны выстраиваться согласно алгоритму masonry (плиточной раскладки).
-- [`subgrid`](/ru/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- [`subgrid`](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)
   - : Значение `subgrid` указывает, что грид-раскладка примет размеры родительского грид-контейнера на соответствующих осях. Таким образом размеры колонок и рядов не задаются явно, а берутся из определения родительской грид-раскладки.
 
 > [!WARNING]
@@ -147,6 +192,6 @@ grid-template-columns: unset;
 ## Смотрите также
 
 - Связанные CSS-свойства: {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}}, {{cssxref("grid-template")}}
-- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout#grid_tracks)_
-- Обучающее видео: _[Defining a Grid](http://gridbyexample.com/video/series-define-a-grid/)_
-- [Subgrid](/ru/docs/Web/CSS/CSS_Grid_Layout/Subgrid)
+- Руководство по грид-раскладке: _[Основы грид-раскладки - грид-полосы](/ru/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout#grid_tracks)_
+- Обучающее видео: _[Defining a Grid](https://gridbyexample.com/video/series-define-a-grid/)_
+- [Subgrid](/ru/docs/Web/CSS/CSS_grid_layout/Subgrid)

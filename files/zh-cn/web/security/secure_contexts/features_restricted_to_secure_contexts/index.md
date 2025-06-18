@@ -3,8 +3,6 @@ title: 仅限于安全上下文的特性
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
-
 本参考列出了仅在安全上下文中可用的 web 平台的特性，有关定义和更多详情，请参阅[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)。
 
 ## 当前仅在安全上下文中可用的特性
@@ -13,7 +11,7 @@ slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
 
 - [异步剪贴板 API](/zh-CN/docs/Web/API/Clipboard)
 - [后台同步](https://wicg.github.io/BackgroundSync/spec/)（例如 {{domxref("SyncManager")}}）
-- [`Cache-Control: immutable`](/zh-CN/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control: immutable`](/zh-CN/docs/Web/HTTP/Reference/Headers/Cache-Control)
 - [凭据管理 API](/zh-CN/docs/Web/API/Credential_Management_API)
 - [设备方向 / 设备移动](/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
 - [拾色器 API](/zh-CN/docs/Web/API/EyeDropper)

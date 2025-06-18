@@ -24,7 +24,7 @@ l10n:
 
 - [`controllerchange`](/ja/docs/Web/API/ServiceWorkerContainer/controllerchange_event)
   - : 文書に関連する {{domxref("ServiceWorkerRegistration")}} が新しいアクティブ（{{domxref("ServiceWorkerRegistration.active","active")}}）ワーカーを取得すると発生します。
-- [`error`](/ja/docs/Web/API/ServiceWorkerContainer/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
+- [`error`](/ja/docs/conflicting/Web/API/ServiceWorker/error_event) {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 関連するサービスワーカーでエラーが発生するたびに発生します。
 - [`message`](/ja/docs/Web/API/ServiceWorkerContainer/message_event)
   - : 着信メッセージを {{domxref("ServiceWorkerContainer")}} オブジェクトが受信したときに発生します（例えば、{{domxref("MessagePort.postMessage()")}} 呼び出しを介して）。

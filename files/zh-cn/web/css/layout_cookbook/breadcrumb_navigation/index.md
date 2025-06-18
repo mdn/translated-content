@@ -38,7 +38,7 @@ slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 
 ## 无障碍考虑
 
-我使用了 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 和 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-current) 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。详情请参见相关链接。
+我使用了 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 和 [`aria-current`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性来帮助用户理解这个导航的结构，以及当前页面在结构中的位置。详情请参见相关链接。
 
 注意通过 `content` 添加的箭头 `→` 也会暴露在屏幕阅读器或盲文显示器中。
 

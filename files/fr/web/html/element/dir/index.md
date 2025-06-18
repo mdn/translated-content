@@ -42,6 +42,6 @@ Ne fait pas partie des spécifications actuelles.
 - Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
 
   - La propriété [`list-style`](/fr/docs/Web/CSS/list-style) est utile pour choisir l'apparence des puces.
-  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
-  - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](/fr/docs/Web/HTML/Element/dir#attr-compact).
+  - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
+  - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).
   - La propriété [`margin`](/fr/docs/Web/CSS/margin) est utile pour contrôler l'indentation de la liste.

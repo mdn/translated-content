@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 
@@ -33,7 +33,7 @@ l10n:
 
 ### SVG
 
-- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn/CSS/Building_blocks/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
+- CSS では [Firefox 120](/ja/docs/Mozilla/Firefox/Releases/120#css) で初めにサポートされた行の高さの単位 [`lh` および `rlh`](/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units#line_height_units) を、SVG でもサポートしました。これらは CSS プロパティの値 `stroke-width: 0.5lh` や SVG 属性の値 `stroke-width="0.5lh"` のどちらでも使用できます ([Firefox bug 1892089](https://bugzil.la/1892089))。
 
 ### セキュリティ
 

@@ -32,7 +32,7 @@ Baseline은 W3C WebDX 커뮤니티 그룹의 커뮤니티 활동이며, MDN의 �
 
 ## 같이 보기
 
-- [크로스 브라우저 테스팅](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing)
+- [크로스 브라우저 테스팅](/ko/docs/Learn_web_development/Extensions/Testing)
 - [web-platform-dx/feature-set 레포지토리](https://github.com/web-platform-dx/feature-set)
 - [W3C WebDX 커뮤니티 그룹](https://www.w3.org/community/webdx/)
 - [mdn/browser-compat-data 레포지토리](https://github.com/mdn/browser-compat-data)

@@ -3,7 +3,7 @@ title: Exemple
 slug: Learn/Forms/How_to_structure_a_web_form/Example
 ---
 
-Ceci est un exemple de formulaire de paiement basique extrait de l'article [Comment structurer un formulaire HTML](/fr/docs/HTML/Formulaires/Comment_structurer_un_formulaire_HTML).
+Ceci est un exemple de formulaire de paiement basique extrait de l'article [Comment structurer un formulaire HTML](/fr/docs/Learn/Forms/How_to_structure_a_web_form).
 
 ## Un formulaire de paiement
 

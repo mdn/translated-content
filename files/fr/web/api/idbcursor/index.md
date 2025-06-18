@@ -5,7 +5,7 @@ slug: Web/API/IDBCursor
 
 {{APIRef("IndexedDB")}}
 
-L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/API_IndexedDB) représente un [curseur](/fr/docs/Web/API/API_IndexedDB/Basic_Concepts_Behind_IndexedDB#range) pour traverser ou itérer sur plusieurs enregistrements dans une base de données.
+L'interface **`IDBCursor`** de l' [API IndexedDB](/fr/docs/Web/API/IndexedDB_API) représente un [curseur](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#range) pour traverser ou itérer sur plusieurs enregistrements dans une base de données.
 
 Le curseur possède une source qui indique l'index ou le magasin d'objets sur lequel il itère. Il est décrit par une position dans cet intervalle et par une direction dans laquelle il se déplace : dans l'ordre des clés d'enregistrement suivant le sens donné au curseur (montant ou descendant). Le curseur permet à une application de traiter de façon asynchrone tous les enregistrements de sa plage.
 
@@ -135,7 +135,7 @@ function afficheDonnee() {
 
 ## Voir aussi
 
-- [Manipuler IndexedDB](/fr/docs/Web/API/API_IndexedDB/Using_IndexedDB)
+- [Manipuler IndexedDB](/fr/docs/Web/API/IndexedDB_API/Using_IndexedDB)
 - Démarrer des transactions : {{domxref("IDBDatabase")}}
 - Manipuler des transactions : {{domxref("IDBTransaction")}}
 - Définir un intervalle de clés : {{domxref("IDBKeyRange")}}

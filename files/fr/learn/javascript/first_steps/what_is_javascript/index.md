@@ -92,7 +92,7 @@ Le cœur de JavaScript est constitué de fonctionnalités communes de programmat
 
 - stocker des valeurs utiles dans des variables. Dans l'exemple plus haut, nous demandons un nouveau nom à l'utilisateur puis le stockons dans une variable appelée `name`.
 - faire des opérations sur des morceaux de texte (appelés en programmation «&nbsp;chaînes de caractères&nbsp;» ou «&nbsp;strings&nbsp;» en anglais). Dans l'exemple plus haut, nous prenons la chaîne de caractères "Player 1: " et lui adjoignons la variable `name` pour créer l'étiquette ''Player 1: Chris".
-- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») [`click`](/fr//docs/Web/API/Element/click_event) pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
+- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») [`click`](/fr_docs/Web/API/Element/click_event) pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
 - Et bien plus encore&nbsp;!
 
 Là où ça devient excitant, c'est que de nombreuses fonctionnalités sont basées sur ce cœur de JavaScript. Les «&nbsp;interfaces de programmation applicatives&nbsp;» (API pour «&nbsp;Application Programming Interfaces&nbsp;») donnent accès à des fonctionnalités presqu'illimitées dans votre code JavaScript.
@@ -108,7 +108,7 @@ Elles se divisent généralement en deux catégories&nbsp;:
 - l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
 - l'[API de géolocalisation](/fr/docs/Web/API/Geolocation) récupère des informations géographiques. C'est ainsi que [Google Maps](https://www.google.com/maps) peut trouver votre position et la situer sur une carte.
 - les API [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API) permettent de créer des animations 2D et 3D. On fait des choses incroyables avec ces technologies, voyez [Chrome Experiments](https://www.chromeexperiments.com/webgl) et [webglsamples](https://webglsamples.org/).
-- [les API Audio et Video](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
+- [les API Audio et Video](/fr/docs/Web/Media/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
 
 > [!NOTE]
 > Beaucoup des exemples ci-dessus ne fonctionneront pas dans un ancien navigateur. Il vaut mieux utiliser un navigateur moderne comme Firefox, Chrome, Edge ou Opera pour exécuter votre code et faire vos tests. Si vous êtes amené à écrire du code de production (c'est-à-dire destiné à de véritables utilisateurs), il vous faudra prendre en compte la compatibilité pour différents navigateurs.
@@ -127,7 +127,7 @@ Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez
 
 Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Apprendre/CSS/Introduction_à_CSS/Le_fonctionnement_de_CSS#Comment_fonctionnent_vraiment_les_CSS)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
 
 ![](execution.png)
 
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements) plus tard dans le cours).
+Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Learn/JavaScript/Building_blocks/Events) plus tard dans le cours).
 
 Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
 

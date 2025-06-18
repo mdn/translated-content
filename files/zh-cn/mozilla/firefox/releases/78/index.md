@@ -37,7 +37,7 @@ l10n:
 - 现在，{{CSSxRef(":is", ":is()")}} 和 {{CSSxRef(":where", ":where()")}} 伪类已默认启用（[Firefox bug 1632646](https://bugzil.la/1632646)）。
 - 现支持不带前缀的 {{CSSxRef(":read-only")}} 和 {{CSSxRef(":read-write")}} 伪类（[Firefox bug 312971](https://bugzil.la/312971)）。
 
-  - 此外，`:read-write` 样式不再应用于禁用的 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 和 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea) 元素，之前的行为违反了 [HTML 规范](https://html.spec.whatwg.org/#selector-read-write)（[Firefox bug 888884](https://bugzil.la/888884)）。
+  - 此外，`:read-write` 样式不再应用于禁用的 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 和 [`<textarea>`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea) 元素，之前的行为违反了 [HTML 规范](https://html.spec.whatwg.org/#selector-read-write)（[Firefox bug 888884](https://bugzil.la/888884)）。
 
 ### JavaScript
 

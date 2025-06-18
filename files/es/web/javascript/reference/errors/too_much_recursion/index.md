@@ -53,4 +53,4 @@ loop(0);
 ## See also
 
 - {{Glossary("Recursion")}}
-- [Recursive functions](/es/docs/Web/JavaScript/Guide/Functions#Recursion)
+- [Recursive functions](/es/docs/Web/JavaScript/Guide/Functions#recursion)

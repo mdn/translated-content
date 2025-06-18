@@ -7,7 +7,60 @@ slug: Web/CSS/counter-set
 
 **`counter-set`** [CSS](/zh-CN/docs/Web/CSS) 属性将 [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)设置为给定值。它会操作现有计数器的值，并且只有在元素上没有给定名称的计数器时才会创建新计数器。
 
-{{EmbedInteractiveExample("pages/css/counter-set.html")}}
+{{InteractiveExample("CSS Demo: counter-set")}}
+
+```css interactive-example-choice
+counter-set: none;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count 0;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count 5;
+```
+
+```css interactive-example-choice
+counter-set: chapter-count -5;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="chapters">
+    <h1>Alice's Adventures in Wonderland</h1>
+    <h2>Down the Rabbit-Hole</h2>
+    <h2 id="example-element">The Pool of Tears</h2>
+    <h2>A Caucus-Race and a Long Tale</h2>
+    <h2>The Rabbit Sends in a Little Bill</h2>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  text-align: left;
+  counter-set: chapter-count;
+}
+
+#example-element {
+  background-color: #37077c;
+  color: white;
+}
+
+h2 {
+  counter-increment: chapter-count;
+  font-size: 1em;
+}
+
+h2::before {
+  content: "Chapter " counter(chapter-count) ": ";
+}
+```
 
 > [!NOTE]
 > 计数器的值可以通过 {{cssxref("counter-increment")}} CSS 属性进行递增或递减。

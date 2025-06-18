@@ -11,7 +11,7 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 구현 내용:
 
-- **Firefox 툴바에 추가된 버튼의 [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/Browser_action)을 정의합니다.**
+- **Firefox 툴바에 추가된 버튼의 [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)을 정의합니다.**
   버튼을 위해 필요한것:
 
   - "beasts-32.png" 아이콘
@@ -435,7 +435,7 @@ beastify/
 
 ## Developing from the command line
 
-아래처럼 [web-ext](/ko/docs/Mozilla/Add-ons/WebExtensions/Getting_started_with_web-ext)툴을 이용해 설치할 수도 있습니다.
+아래처럼 [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/)툴을 이용해 설치할 수도 있습니다.
 
 ```bash
 cd beastify
@@ -448,5 +448,5 @@ web-ext run
 
 - [확장 기능의 구조에 대해 읽어보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
 - [확장 기능 예제 살펴보기](/ko/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [확장 기능을 개발하고, 테스트하고, 게시하는 데 필요한 것 찾아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_)
-- [더 공부하기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next_#continue_your_learning_experience)
+- [확장 기능을 개발하고, 테스트하고, 게시하는 데 필요한 것 찾아보기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next)
+- [더 공부하기](/ko/docs/Mozilla/Add-ons/WebExtensions/What_next#continue_your_learning_experience)

@@ -2,14 +2,63 @@
 title: grid-area
 slug: Web/CSS/grid-area
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b692821c494fd3a25dd883b6fe14998fa2621f7b
 ---
 
 {{CSSRef}}
 
-**`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
+**`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-area.html")}}
+{{InteractiveExample("CSS Demo: grid-area")}}
+
+```css interactive-example-choice
+grid-area: a;
+```
+
+```css interactive-example-choice
+grid-area: b;
+```
+
+```css interactive-example-choice
+grid-area: c;
+```
+
+```css interactive-example-choice
+grid-area: 2 / 1 / 2 / 4;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Example</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-template-areas:
+    "a a a"
+    "b c c"
+    "b c c";
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 4 つの `<grid-line>` が指定された場合、 `grid-row-start` が最初の値に設定され、 `grid-column-start` が 2 つ目の値に設定され、 `grid-row-end` が 3 つ目の値に設定され、 `grid-column-end` が 4 つ目の値に設定されます。
 
@@ -19,7 +68,7 @@ l10n:
 
 `grid-column-start` が省略された場合、 `grid-row-start` が `<custom-ident>` であれば、 4 つの個別指定値はその値に設定されます。それ以外の場合は `auto` に設定されます。
 
-grid-area プロパティは領域の名称として機能する {{cssxref("&lt;custom-ident&gt;")}} を設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
+`grid-area` プロパティは領域の名称として機能する {{cssxref("&lt;custom-ident&gt;")}} を設定することができ、これは {{cssxref("grid-template-areas")}} を用いて配置することができます。
 
 ## 構成要素のプロパティ
 
@@ -66,7 +115,7 @@ grid-area: unset;
   - : このプロパティがグリッドアイテムの配置に何も寄与しないことを示すキーワードで、自動配置または既定のスパン `1` を示します。
 - `<custom-ident>`
 
-  - : '`<custom-ident>-start`'/'`<custom-ident>-end`' という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
+  - : `<custom-ident>-start` または `<custom-ident>-end` という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
 
     > [!NOTE]
     > 名前付きグリッド領域、自動的にこの形で暗黙の名前付き線を生成しますので、 `grid-area: foo;` と指定すると名前付きグリッド領域の先頭/末尾側の端を選択します（その前に `foo-start`/`foo-end` という名前の線が明示的に存在しない限り）。
@@ -103,7 +152,7 @@ grid-area: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_areas
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -113,7 +162,7 @@ grid-area: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_areas
 #grid {
   display: grid;
   height: 100px;
@@ -136,7 +185,7 @@ grid-area: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッド領域の設定", "100%", "150px")}}
+{{EmbedLiveSample("Setting_grid_areas", "100%", "150px")}}
 
 ## 仕様書
 
@@ -148,6 +197,12 @@ grid-area: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-row")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-column")}}, {{cssxref("grid-column-start")}}, {{cssxref("grid-column-end")}}, {{cssxref("grid-template-areas")}}
-- グリッドレイアウトガイド: [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
-- 動画チュートリアル: _[Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)_
+- {{cssxref("grid-row")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column-end")}}
+- {{cssxref("grid-template-areas")}}
+- [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
+- 動画: [Grid Template Areas](https://gridbyexample.com/video/grid-template-areas/)

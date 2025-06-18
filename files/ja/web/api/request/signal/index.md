@@ -3,10 +3,10 @@ title: "Request: signal プロパティ"
 short-title: signal
 slug: Web/API/Request/signal
 l10n:
-  sourceCommit: 989453176fd8756828b34b743a677a797d897156
+  sourceCommit: 242b21a3650efeec0d5d2c74cbd171891748c115
 ---
 
-{{APIRef("Fetch API")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
 **`signal`** は {{DOMxRef("Request")}} インターフェイスの読み取り専用プロパティで、このリクエストに関連付けられた {{domxref("AbortSignal")}} を返します。
 
@@ -30,9 +30,9 @@ req.signal.addEventListener("abort", () => {
 
 // 中止された場合は、AbortSignalの理由をログ出力
 fetch(req).catch(() => {
-  if (signal.aborted) {
-    if (signal.reason) {
-      console.log(`リクエストは ${signal.reason} が原因で中止されました。`);
+  if (req.signal.aborted) {
+    if (req.signal.reason) {
+      console.log(`リクエストは ${req.signal.reason} が原因で中止されました。`);
     } else {
       console.log("リクエストは中止されましたが、理由は示されませんでした。");
     }

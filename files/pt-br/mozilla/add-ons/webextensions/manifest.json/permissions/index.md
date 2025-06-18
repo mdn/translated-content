@@ -48,7 +48,7 @@ Os privilégios adicionais incluem:
 - acesso [XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest) e [fetch](/pt-BR/docs/Web/API/Fetch_API) para aquelas origens sem restrições _cross-origin_ (mesmo para requisições feitas a partir de _content scripts_)
 - habilidade de injetar scripts programaticamente (usando [tabs.executeScript](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)) em páginas servidas a partir daquelas origens
 - habilidade de receber eventos a partir da API [webRequest](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) para aqueles servidores
-- habilidade de acessar cookies daquele servidor usando a API [cookies](/pt-BR/Add-ons/WebExtensions/API/cookies), caso a permissão de API "cookies" também esteja incluída.
+- habilidade de acessar cookies daquele servidor usando a API [cookies](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/cookies), caso a permissão de API "cookies" também esteja incluída.
 - desconsiderar a proteção contra rastreamento se o servidor for um domínio completo sem asteriscos. Não funciona com `<all_urls>`.
 
 No Firefox, da versão 56 em diante, extensões recebem automaticamente permissões de servidor para sua própria origem, que é na forma:
@@ -110,8 +110,8 @@ As seguintes palavras-chave estão atualmente disponíveis:
 
 Na maioria dos casos, a permissão apenas concede acesso à API, com as seguintes exceções:
 
-- `tabs` dá acesso a [partes privilagiadas da API `tabs`](/pt-BR/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title` e `Tab.faviconUrl`. No Firefox, você também precisa `tabs` se quiser incluir `url` no parâmetro `queryInfo` para [`tabs.query()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). O resto ad API `tabs` pode ser usado sem solicitar nenhuma permissão.
-- `webRequestBlocking` permite usar o argumento "blocking", assim você pode [modificar e cancelar requisições](/pt-BR/Add-ons/WebExtensions/API/WebRequest).
+- `tabs` dá acesso a [partes privilagiadas da API `tabs`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title` e `Tab.faviconUrl`. No Firefox, você também precisa `tabs` se quiser incluir `url` no parâmetro `queryInfo` para [`tabs.query()`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). O resto ad API `tabs` pode ser usado sem solicitar nenhuma permissão.
+- `webRequestBlocking` permite usar o argumento "blocking", assim você pode [modificar e cancelar requisições](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
 - `downloads.open` permite usar a API {{WebExtAPIRef("downloads.open()")}}.
 - `tabHide` permite usar a API {{WebExtAPIRef("tabs.hide()")}}.
 
@@ -127,7 +127,7 @@ Esta permissão é especificada como `"activeTab"`. Se uma extensão tem a permi
 
 Os privilégios adicionais são:
 
-- habilidade de injetar JavaScript ou CSS na aba programaticamente, usando [`browser.tabs.executeScript`](/pt-BR/Add-ons/WebExtensions/API/tabs/executeScript) e [`browser.tabs.insertCSS`](/pt-BR/Add-ons/WebExtensions/API/tabs/insertCSS)
+- habilidade de injetar JavaScript ou CSS na aba programaticamente, usando [`browser.tabs.executeScript`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) e [`browser.tabs.insertCSS`](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
 - acesso a essas partes privilegiadas da API _tabs_ na aba atual: `Tab.url`, `Tab.title` e `Tab.faviconUrl`.
 
 A intenção desta permissão é permitir que extensões executem um caso de uso comum, sem ter que lhes dar permissões poderosas demais. Muitas extensões querem "fazer alguma coisa com a página atual quando o usuário pede". Por exemplo, considere uma extensão que queira executar um script na página atual quando o usuário clicar em uma ação do navegador. Se a permissão `activeTab` não existisse, a extensão precisaria pedir a permissão de servidor `<all_urls>`. Mas isso daria à extensão mais poder que o necessário: ela poderia executar scripts em qualquer aba e quando quisesse, em vez de apenas na aba atual e somente em resposta a uma ação do usuário.
@@ -150,7 +150,7 @@ Consulte [Interação com a área de transferência](/pt-BR/docs/Mozilla/Add-ons
 A permissão `unlimitedStorage`:
 
 - permite que extensões exceder qualquer quota imposta pela API {{WebExtAPIRef("storage.local")}}
-- no Firefox, permite que extensões criem um [banco de dados IndexedDB "persistente"](/pt-BR/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria#Firefox_specifics), sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.
+- no Firefox, permite que extensões criem um [banco de dados IndexedDB "persistente"](/pt-BR/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#firefox_specifics), sem que o navegador peça ao usuário permissão no momento em que o banco de dados é criado.
 
 ## Exemplos
 

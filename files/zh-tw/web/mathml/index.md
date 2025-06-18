@@ -3,19 +3,17 @@ title: MathML
 slug: Web/MathML
 ---
 
-{{MathMLRef}}
-
-**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
+**Mathematical Markup Language (MathML)** 是一種基於 [XML](/zh-TW/docs/Web/XML) 的延伸，可以用來描述數學符號以及保留數學式結構和內容。在這裡你可以找到參考文件, 範例以及工具。你可以從 [slides for the innovation fairs at Mozilla Summit 2013](http://fred-wang.github.io/MozSummitMathML/index.html) 做個快速的大致瀏覽。
 
 ## MathML references
 
-- [MathML element reference](/zh-TW/docs/Web/MathML/Element)
+- [MathML element reference](/zh-TW/docs/Web/MathML/Reference/Element)
   - : 關於每一個 MathML element 的細節及其在桌面環境和瀏覽器的支援情形。
-- [MathML attribute reference](/zh-TW/docs/Web/MathML/Attribute)
+- [MathML attribute reference](/zh-TW/docs/Web/MathML/Reference/Attribute)
   - : 關於可改變 MathML element 外觀及行為的 MathML attributes。
-- [MathML examples](/zh-TW/docs/Web/MathML/Examples)
+- [MathML examples](/zh-TW/docs/Web/MathML/Guides)
   - : MathML 的範例。透過這些範例你能更明白 MathML 是如何運作的。
-- [Authoring MathML](/zh-TW/docs/Web/MathML/Authoring)
+- [Authoring MathML](/zh-TW/docs/Web/MathML/Guides/Authoring)
   - : 這裡提供一些關於 MathML 的建議以及小提示，包括適當的編輯器以及如何將他們和你的網頁內容整合。
 
 ## Getting help from the community

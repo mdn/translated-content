@@ -5,10 +5,6 @@ slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 
 {{CSSRef}}
 
-原文 : [https://developer.mozilla.org/en/CSS/CSS_transitions](/zh-TW/CSS/CSS_transitions)
-
-{{ SeeCompatTable() }}
-
 CSS transitions 是 CSS3 specification 草案的一部分，他可以用來調整 CSS animation 變動的速度。舉例來說，倘若你設計了一個 element 會由白轉紅，你可以透過 CSS transitions 來控制轉變的時間及變化曲線。
 
 > [!NOTE]
@@ -52,7 +48,7 @@ CSS transitions 和 CSS animations 中可以用來修改的屬性在 [CSS animat
 
 我們在這直接用範例來說明。
 
-在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後[看看這個](/samples/cssref/transitions/sample3) (而[這裡](/samples/cssref/transitions/sample3/transitions.css)有這個範例的相關 CSS 程式碼)。
+在看程式碼之前，或許你會想先看看實際的執行效果。請挑個有支援 transitions 的瀏覽器，然後[看看這個](https://mdn.dev/archives/media/samples/cssref/transitions/sample3) (而[這裡](https://mdn.dev/archives/media/samples/cssref/transitions/sample3/transitions.css)有這個範例的相關 CSS 程式碼)。
 
 首先，先以 HTML 創建這個範例的主要外殼：
 
@@ -172,7 +168,7 @@ div {
 
 一個使用 CSS 的好時機是用來強調目前使用者滑鼠經過的選單位置。使用 transitions 可以使效果變得更吸引人。
 
-在看實際的程式碼之前，你可以先看[實際的範例](/samples/cssref/transitions/sample2) (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在[這裡](/samples/cssref/transitions/sample2/transitions.css)。
+在看實際的程式碼之前，你可以先看[實際的範例](https://mdn.dev/archives/media/samples/cssref/transitions/sample2) (當然你的瀏覽器要能支援 transitions)。相關的 CSS 程式在[這裡](https://mdn.dev/archives/media/samples/cssref/transitions/sample2/transitions.css)。
 
 我們先用 HTML 構建外殼：
 
@@ -280,7 +276,7 @@ p {
 
 這裡讓我們看個例子，一個內含文字的方塊左右來回移動，並且會在兩種顏色之間做轉變：
 
-在我們仔細研究程式碼之前可以先看[範例](/samples/cssref/transitions/sample1)。同樣地，可以到[這](/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
+在我們仔細研究程式碼之前可以先看[範例](https://mdn.dev/archives/media/samples/cssref/transitions/sample1)。同樣地，可以到[這](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css)看其 CSS 的寫法。
 
 ### HTML 程式碼
 
@@ -304,7 +300,7 @@ p {
 
 ### CSS 程式碼
 
-我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 [`transitions.css`](/samples/cssref/transitions/sample1/transitions.css) )。這裡列出部分：
+我們使用 slideRight 和 slideLeft 這兩個 CSS class 來建構動畫 (請參閱 [`transitions.css`](https://mdn.dev/archives/media/samples/cssref/transitions/sample1/transitions.css) )。這裡列出部分：
 
 ```css
 .slideRight {
@@ -354,7 +350,7 @@ p {
 在定義了左右兩端點的狀態後，現在我們可以準備來描述 animation 了。這可以簡單的透過 JavaScript 達成。
 
 > [!NOTE]
-> 在這裡，倘若 [CSS animations](/zh_tw/CSS_動畫) 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。
+> 在這裡，倘若 [CSS animations](/zh-TW/CSS_動畫) 被使用者的瀏覽器支援，那就未必要使用 JavaScript 了。
 
 首先定義 `runDemo()` function，他將在文件被讀取後立刻執行：
 

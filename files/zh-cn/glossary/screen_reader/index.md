@@ -36,7 +36,7 @@ Chromebook 也有自带的屏幕阅读器 ChromeVox，让视觉受损人士能�
 ## 参见
 
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - [ARIA](/zh-CN/docs/Web/Accessibility/ARIA)
 - [术语](/zh-CN/docs/Glossary)
   - {{Glossary("Accessibility", "无障碍")}}

@@ -8,7 +8,21 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation
 거듭제곱 연산자(`**`)는 왼쪽 피연산자를 밑, 오른쪽 피연산자를 지수로 한 값을 구합니다.
 {{jsxref("BigInt")}}도 피연산자로 받을 수 있다는 점을 제외하면 {{jsxref("Math.pow()")}}와 같습니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-exponentiation.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+
+```js interactive-example
+console.log(3 ** 4);
+// Expected output: 81
+
+console.log(10 ** -2);
+// Expected output: 0.01
+
+console.log(2 ** (3 ** 2));
+// Expected output: 512
+
+console.log((2 ** 3) ** 2);
+// Expected output: 64
+```
 
 ## 구문
 

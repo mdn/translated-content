@@ -74,11 +74,11 @@ Et voilà comment on obtient un cercle :
 
 ## Les arrière-plans
 
-Lorsqu'on parle de boîtes plutôt jolies, les propriétés primordiales sont [les propriétés `background-*`](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders). Quand on manipule ces propriétés, on peut alors voir la boîte CSS comme une toile blanche qu'on pourrait peindre.
+Lorsqu'on parle de boîtes plutôt jolies, les propriétés primordiales sont [les propriétés `background-*`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders). Quand on manipule ces propriétés, on peut alors voir la boîte CSS comme une toile blanche qu'on pourrait peindre.
 
 Avant d'aborder des exemples pratiques, revenons sur deux choses à savoir sur les arrière-plans :
 
-- On peut définir [plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_Background_and_Borders/Using_CSS_multiple_backgrounds) pour une boîte. Ceux-ci s'empileront les uns sur les autres comme des couches.
+- On peut définir [plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) pour une boîte. Ceux-ci s'empileront les uns sur les autres comme des couches.
 - Les arrière-plans peuvent être des couleurs unies ou des images. Les couleurs remplissent toute la surface mais les images peuvent être mises à l'échelle et positionnées sur la boîte.
 
 ```html hidden
@@ -104,7 +104,8 @@ Passons à la manipulation :
      Comme vous pouvez le voir, les gradients
      sont considérés et manipulés comme des
      images */
-  background-image: linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
+  background-image:
+    linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
     linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
     linear-gradient(175deg, rgba(0, 0, 0, 0) 90%, #b4b07f 90%),
     linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
@@ -122,7 +123,7 @@ Passons à la manipulation :
 {{EmbedLiveSample('Les_arrière-plans', '100%', '200')}}
 
 > [!NOTE]
-> Les gradients peuvent être utilisés pour créer une myriade d'effets. Vous pouvez par exemple consulter [les excellents motifs CSS de Lea Verou](https://lea.verou.me/css3patterns/). Attention cependant, en termes de performance, les gradients peuvent avoir un impact non négligeable. Si vous souhaitez explorer les gradients, n'hésitez pas à lire [notre article dédié](/fr/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+> Les gradients peuvent être utilisés pour créer une myriade d'effets. Vous pouvez par exemple consulter [les excellents motifs CSS de Lea Verou](https://lea.verou.me/css3patterns/). Attention cependant, en termes de performance, les gradients peuvent avoir un impact non négligeable. Si vous souhaitez explorer les gradients, n'hésitez pas à lire [notre article dédié](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients).
 
 ## Les pseudo-éléments
 

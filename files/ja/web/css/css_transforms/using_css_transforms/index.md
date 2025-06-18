@@ -12,7 +12,7 @@ l10n:
 CSS 座標変換は、アフィン線形変換を HTML 要素に対して適用する一連の CSS プロパティによって実現されます。座標変換には、回転 (rotation)、歪め (skewing)、変倍 (scaling)、平行移動 (translation) などがあり、平面と 3D 空間の両方で行われます。
 
 > [!WARNING]
-> 座標変換可能な要素だけが `transform` することができます。つまり、レイアウトが CSS [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)によって管理されるすべての要素です。ただし、[置換ではないインラインボックス](/ja/docs/Web/CSS/Visual_formatting_model#inline-level_elements_and_inline_boxes)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)は除きます。
+> 座標変換可能な要素だけが `transform` することができます。つまり、レイアウトが CSS [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model)によって管理されるすべての要素です。ただし、[置換ではないインラインボックス](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_elements_and_inline_boxes)、[表の列ボックス](/ja/docs/Web/HTML/Reference/Elements/col)、[表の列グループボックス](/ja/docs/Web/HTML/Reference/Elements/colgroup)は除きます。
 
 ## CSS 座標変換のプロパティ
 

@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `reorderInfo`
-      - : [`object`](#reorderInfo). Objet contenant des objets supplémentaires.
+      - : [`object`](#reorderinfo). Objet contenant des objets supplémentaires.
 
 ## Objets supplémentaires
 

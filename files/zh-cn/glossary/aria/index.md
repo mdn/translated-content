@@ -18,7 +18,7 @@ l10n:
 - [无障碍富互联网应用（WAI-ARIA）](https://w3c.github.io/aria/)
 - [ARIA 创作实践指南（APG）](https://www.w3.org/WAI/ARIA/apg/)
 - [无障碍](/zh-CN/docs/Web/Accessibility)
-- [学习无障碍](/zh-CN/docs/Learn/Accessibility)
+- [学习无障碍](/zh-CN/docs/Learn_web_development/Core/Accessibility)
 - 相关术语：
   - {{Glossary("Accessibility", "无障碍")}}
   - {{Glossary("WAI")}}

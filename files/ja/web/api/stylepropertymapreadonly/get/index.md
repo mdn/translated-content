@@ -87,5 +87,5 @@ for (let i = 0; i < ofInterest.length; i++) {
 
 ## 関連情報
 
-- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/Houdini/CSS_Typed_OM)
-- [Houdini の学習: CSS 型付きオブジェクトモデル](/ja/docs/Web/Houdini/learn/CSS_Typed_OM)
+- [CSS 型付きオブジェクトモデル API](/ja/docs/Web/API/CSS_Typed_OM_API)
+- [Houdini の学習: CSS 型付きオブジェクトモデル](/ja/docs/Web/API/CSS_Typed_OM_API/Guide)

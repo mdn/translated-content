@@ -34,7 +34,7 @@ slug: Mozilla/Firefox/Releases/101
 
 - [`DOMException`](/ja/docs/Web/API/DOMException) が {{Glossary("シリアライズ可能なオブジェクト")}} になりました。{{domxref("structuredClone()")}} でクローンを作ることや、{{domxref("Worker.postMessage()", "postMessage()")}} を使用して [workers](/ja/docs/Web/API/Worker) との間でコピーすることができます ([Firefox バグ 1561357](https://bugzil.la/1561357))。
 
-- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpEncodingParameters/maxFramerate) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
+- [`RTCRtpEncodingParameters.maxFramerate`](/ja/docs/Web/API/RTCRtpSender/setParameters) で、({{domxref("RTCPeerConnection.addTransceiver()")}} および {{domxref("RTCRtpSender.setParameters()" )}} で送信時のエンコードで使用する最大フレームレートを設定できるようになりました。
   0 は有効なフレームレートの値ですが、Firefox は "フレームレート制限なし" と解釈しますので注意してください。
   詳しくは [Firefox バグ 1611957](https://bugzil.la/1611957) をご覧ください。
 
@@ -45,7 +45,7 @@ slug: Mozilla/Firefox/Releases/101
 #### Media、WebRTC、Web Audio
 
 - [AV1 コーデックのパラメーター](/ja/docs/Web/Media/Formats/codecs_parameter#av1) が、メディアサポートクエリーで適切に解析されるようになりました。
-  これは [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo)、[`HTMLMediaElement.canPlayType()`](/ja/docs/Web/API/HTMLMediaElement/canPlayType)、[`MediaSource.isTypeSupported()`](/ja/docs/Web/API/MediaSource/isTypeSupported) が、与えられたコーデックパラメーターに基づいた AV1 ソースの再生を正確に報告することを意味します。
+  これは [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo)、[`HTMLMediaElement.canPlayType()`](/ja/docs/Web/API/HTMLMediaElement/canPlayType)、[`MediaSource.isTypeSupported()`](/ja/docs/Web/API/MediaSource/isTypeSupported_static) が、与えられたコーデックパラメーターに基づいた AV1 ソースの再生を正確に報告することを意味します。
   [`MediaCapabilities.decodingInfo()`](/ja/docs/Web/API/MediaCapabilities/decodingInfo) も、AV1 動画の "効率的なデコード" を正確に報告するためにこの情報を使用します。
   詳しくは [Firefox バグ 1757861](https://bugzil.la/1757861) をご覧ください。
 
@@ -70,7 +70,7 @@ slug: Mozilla/Firefox/Releases/101
 - [`"background"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background) マニフェストキーの `"persistent"` を、設定項目による制御で `false` に設定できます。Manifest V2 の設定項目は <code>extensions.eventPages.enabled</code>、Manifest V3 の設定項目は <code>extensions.manifestV3.enabled</code> です。
 - [`"host_permissions"`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/host_permissions) マニフェストキーを追加しました。これは Manifest V3 拡張機能で使用できます。
 - Manifest V3 拡張機能向けのコンテンツスクリプト実行環境を変更しました:
-  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[CORS](/ja/docs/Web/HTTP/CORS) で実行可能です。
+  - コンテンツスクリプトのオリジン間リクエストが、ホストの許可に依存できなくなりました。コンテンツスクリプトのオリジン間リクエストは、[CORS](/ja/docs/Web/HTTP/Guides/CORS) で実行可能です。
   - `content` オブジェクト (`content.fetch`、`content.XMLHttpRequest`、`content.WebSocket` で提供される) が、コンテンツスクリプトの実行環境から削除されました。
 
 ## 過去のバージョン

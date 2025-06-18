@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{SeeCompatTable}}
 
-**`ariaRowIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性の値を反映し、aria-rowindex の人間が読むための代替テキストを定義します。
+**`ariaRowIndexText`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) 属性の値を反映し、aria-rowindex の人間が読むための代替テキストを定義します。
 
 ## 値
 
@@ -84,4 +84,4 @@ console.log(el.ariaRowIndexText); // "Updated heading row"
 
 ## 関連情報
 
-- [ARIA: table role](/ja/docs/Web/Accessibility/ARIA/Roles/table_role)
+- [ARIA: table role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)

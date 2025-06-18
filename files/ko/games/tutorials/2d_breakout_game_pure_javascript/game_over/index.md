@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field")}}
 
-이것은 [Gamedev Canvas tutorial](/ko/docs/Games/Workflows/Breakout_game_from_scratch) 의 다섯 번째 학습입니다. 이 학습을 통해 완성된 코드는 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 에서 확인할 수 있습니다.
+이것은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 의 다섯 번째 학습입니다. 이 학습을 통해 완성된 코드는 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 에서 확인할 수 있습니다.
 
 공이 벽에서 튕겨져 나오는 것과 패들을 움직이는 것을 보는건 재밌지만, 더 진전이 필요합니다. 게임에서 질 수 있다면 좋겠습니다. 벽돌 깨기 게임에서 패배하는 구조는 꽤 단순합니다. 만약 패들이 공을 놓친다면, 공은 캔버스의 아래 면에 닿을 것이고, 그대로 게임은 끝납니다.
 
@@ -65,6 +65,6 @@ if (y + dy < ballRadius) {
 
 ## 다음 단계
 
-지금까지 아주 잘 하고 있습니다. 게임은 플레이 할 가치가 생겼고 이젠 게임이 끝날 수도 있습니다. 하지만 뭔가가 빠졌습니다. 여섯 번째 학습 — [벽돌 영역을 만들어보기](/ko/docs/Games/Workflows/Breakout_game_from_scratch/Build_the_brick_field) — 로 이동해서 몇 개의 벽돌을 만들어 봅시다.
+지금까지 아주 잘 하고 있습니다. 게임은 플레이 할 가치가 생겼고 이젠 게임이 끝날 수도 있습니다. 하지만 뭔가가 빠졌습니다. 여섯 번째 학습 — [벽돌 영역을 만들어보기](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field) — 로 이동해서 몇 개의 벽돌을 만들어 봅시다.
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field")}}

@@ -19,7 +19,7 @@ Les éléments {{HTMLElement("input")}} de type **`"hidden"`** permettent aux d�
 {{EmbedLiveSample('Exemple_simple', 600, 40)}}
 
 > [!NOTE]
-> Attention, les évènements DOM [`input`](/fr/docs/Web/API/HTMLElement/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event) ne s'appliquent pas à ce type de contrôle. Les champs masqués ne peuvent pas recevoir le focus, y compris en JavaScript avec `hiddenInput.focus()`).
+> Attention, les évènements DOM [`input`](/fr/docs/Web/API/Element/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event) ne s'appliquent pas à ce type de contrôle. Les champs masqués ne peuvent pas recevoir le focus, y compris en JavaScript avec `hiddenInput.focus()`).
 
 ## Valeur
 
@@ -192,6 +192,6 @@ Bien que le champ masqué soit invisible sur la page, il fait toujours partie de
 
 ## Voir aussi
 
-- [Guide sur les formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
 - {{HTMLElement("input")}}
 - L'interface DOM {{domxref("HTMLInputElement")}}

@@ -95,7 +95,7 @@ slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/flex-wrap.html", '100%', 400)}}
 
-Более подробно эту тема разбирается в статье [Разбираемся с обёртыванием Flex элементов](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Mastering_Wrapping_of_Flex_Items).
+Более подробно эту тема разбирается в статье [Разбираемся с обёртыванием Flex элементов](/ru/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items).
 
 ## Краткая запись направления и многострочности: flex-flow
 
@@ -208,7 +208,7 @@ Try the following values of `justify-content` in the live example:
 
 {{EmbedGHLiveSample("css-examples/flexbox/basics/justify-content.html", '100%', 380)}}
 
-In the article [Aligning Items in a Flex Container](/ru/docs/Web/CSS/CSS_Flexible_Box_Layout/Aligning_Items_in_a_Flex_Container) we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.
+In the article [Aligning Items in a Flex Container](/ru/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container) we will explore these properties in more depth, in order to have a better understanding of how they work. These simple examples however will be useful in the majority of use cases.
 
 ## Next steps
 

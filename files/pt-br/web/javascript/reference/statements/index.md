@@ -61,7 +61,7 @@ Para visualizar em ordem alfabética use a barra de rolagem à esquerda.
 - {{jsxref("Statements/for...in", "for...in")}}
   - : Itera através de enumeráveis propriedades de um objeto, em ordem arbitrária. Para cada propriedade distinta, instruções podem ser executadas.
 - {{experimental_inline}} {{jsxref("Statements/for...of", "for...of")}}
-  - : Itera através de objetos iteráveis (incluindo [arrays](/pt-BR/docs/Core_JavaScript_1.5_Reference/Global_Objects/Array), array-like objects, [iterators and generators](/pt-BR/docs/JavaScript/Guide/Iterators_and_Generators)), invocando uma iteração personalizada com instruções para serem executadas pelo valor de cada propriedade.
+  - : Itera através de objetos iteráveis (incluindo [arrays](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array), array-like objects, [iterators and generators](/pt-BR/docs/Web/JavaScript/Guide/Iterators_and_generators)), invocando uma iteração personalizada com instruções para serem executadas pelo valor de cada propriedade.
 - {{jsxref("Statements/while", "while")}}
   - : Cria um loop que executa uma especifica instrução enquanto o teste da condição for positivo. A condição é retornada antes de executar a instrução.
 

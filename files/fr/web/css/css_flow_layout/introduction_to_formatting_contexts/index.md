@@ -15,7 +15,7 @@ L'élément `html` définit le contexte de formatage de bloc initial pour la pag
 
 ### Créer un nouveau contexte de formatage de bloc
 
-L'élément {{HTMLElement("html")}} n'est pas le seul élément capable de créer un nouveau contexte de formatage de bloc. Des propriétés CSS peuvent également être utilisées afin de créer un contexte de formatage de bloc. Cela peut s'avérer utile car un nouveau contexte se comportera comme notre document : on aura une mini-disposition contenu dans la disposition principale. Un contexte de formatage de bloc contient tout ses éléments fils et ses descendants. Le flottement ({{cssxref("float")}}) ou le dégagement ({{cssxref("clear")}}) ne s'appliqueront qu'aux éléments d'un même contexte de formatage. Les marges ne [fusionneront](/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Fusion_des_marges) que pour des éléments d'un même contexte formatage.
+L'élément {{HTMLElement("html")}} n'est pas le seul élément capable de créer un nouveau contexte de formatage de bloc. Des propriétés CSS peuvent également être utilisées afin de créer un contexte de formatage de bloc. Cela peut s'avérer utile car un nouveau contexte se comportera comme notre document : on aura une mini-disposition contenu dans la disposition principale. Un contexte de formatage de bloc contient tout ses éléments fils et ses descendants. Le flottement ({{cssxref("float")}}) ou le dégagement ({{cssxref("clear")}}) ne s'appliqueront qu'aux éléments d'un même contexte de formatage. Les marges ne [fusionneront](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) que pour des éléments d'un même contexte formatage.
 
 Au delà de l'élément racine du document (ici l'élément `html`), un nouveau contexte de formatage de bloc est créé dans les situations suivantes :
 
@@ -27,14 +27,14 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 - Les éléments de blocs pour lesquels `overflow` a une valeur différente de `visible`
 - `display: flow-root`
 - Les éléments avec {{cssxref("contain", "contain: layout", "#layout")}}, `content` ou `strict`
-- [Les élément flexibles](/fr/docs/Web/CSS/CSS_Flexible_Box_Layout/Concepts_de_base_flexbox)
-- [Les éléments de grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Les_concepts_de_base)
-- [Les conteneurs multi-colonnes](/fr/docs/Web/CSS/CSS_Columns/Concepts_base_multi-colonnes)
+- [Les élément flexibles](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+- [Les éléments de grille](/fr/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
+- [Les conteneurs multi-colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Basic_concepts)
 - Les éléments avec {{cssxref("column-span")}}: `all`
 
 Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.
 
-Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_Flow_Layout/In_Flow_and_Out_of_Flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
+Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -70,12 +70,12 @@ Ce guide porte sur la disposition de flux et n'aborde pas tous les contextes de 
 
 ## Résumé
 
-Dans ce guide, nous avons approfondi les notions relatives aux contextes de formatage en ligne et de bloc. Dans le prochain guide, nous verrons [les interactions entre le flux normal et les différents modes d'écriture](/fr/docs/Web/CSS/CSS_Flow_Layout/Disposition_flux_et_modes_écriture).
+Dans ce guide, nous avons approfondi les notions relatives aux contextes de formatage en ligne et de bloc. Dans le prochain guide, nous verrons [les interactions entre le flux normal et les différents modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes).
 
 ## Voir aussi
 
-- [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/Block_formatting_context)
-- [Modèle de formatage visuel](/fr/docs/Web/CSS/Modèle_de_mise_en_forme_visuelle)
-- [Modèle de boîte CSS](/fr/docs/Web/CSS/Modèle_de_boîte_CSS)
+- [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
+- [Modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+- [Modèle de boîte CSS](/fr/docs/Web/CSS/CSS_box_model)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}

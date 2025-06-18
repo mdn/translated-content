@@ -5,7 +5,7 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/Media_Queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
+La [règle @](/fr/docs/Web/CSS/At-rule) **`@media`** permet d'appliquer une partie d'une feuille de styles en fonction du résultat d'une ou plusieurs [requêtes média (<i lang="en">media queries</i>)](/fr/docs/Web/CSS/CSS_media_queries). Grâce à cette règle, on peut indiquer une requête média et un ensemble de règles CSS qui s'appliquent uniquement si la requête média est vérifiée pour l'appareil, le contexte avec lequel le contenu est consulté.
 
 > [!NOTE]
 > Il est possible de manipuler la règle @ `@media` via le CSSOM (et JavaScript) grâce à l'interface [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule).
@@ -32,7 +32,7 @@ Une requête média (type `<media-query>`) est composée d'un type de média (op
 }
 ```
 
-Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries).
+Pour plus d'informations sur la syntaxe des requêtes média, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Description
 
@@ -43,7 +43,7 @@ _Les types de média_ décrivent la catégorie générale d'un appareil. Sauf qu
 - `all`
   - : Applicable à tous les appareils.
 - `print`
-  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/Paged_Media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
+  - : Destiné pour le contenu paginé et les documents visualisés sur un écran en aperçu d'impression. Voir [la page sur les médias paginés](/fr/docs/Web/CSS/CSS_paged_media) pour plus d'informations sur les aspects de formatage spécifiques à ces formats.
 - `screen`
   - : Destiné principalement aux écrans.
 
@@ -107,7 +107,7 @@ Les expressions de caractéristique de média testent la présence ou la valeur 
   - : La densité de pixel de l'appareil de sortie.
 - [`scripting`](/fr/docs/Web/CSS/@media/scripting)
   - : Indique la disponibilité d'un moteur de script (par exemple JavaScript). Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
-- [`update`](/fr/docs/Web/CSS/@media/update-frequency)
+- [`update`](/fr/docs/Web/CSS/@media/update)
   - : Indique la fréquence à laquelle l'appareil de sortie peut modifier l'apparence du contenu. Ajoutée dans le module de spécification sur les requêtes média de niveau 4.
 - [`video-dynamic-range`](/fr/docs/Web/CSS/@media/video-dynamic-range)
   - : Une combinaison de la luminosité, du taux de contraste et de la profondeur de couleur pris en charge par l'agent utilisateur et l'appareil de sortie. Ajoutée dans le module de spécification sur les requêtes média de niveau 5.
@@ -135,7 +135,7 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 
 ## Accessibilité
 
-Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
+Pour une meilleure interaction, notamment avec les personnes qui zooment sur une page pour accroître la taille du texte ou qui définissent une taille de police par défaut pour l'ensemble du navigateur, on utilisera l'unité [`em`](/fr/docs/Web/CSS/length#em) comme valeur pour [les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) lorsqu'il faut utiliser une longueur (valeur de type [`<length>`](/fr/docs/Web/CSS/length)).
 
 Les unités [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) et [`px`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) sont toutes les deux valides mais [`em`](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#longueur_et_taille) s'adapte mieux quand la taille de la police du navigateur a été ajustée.
 
@@ -193,7 +193,7 @@ Avec la mise à jour de la spécification pour les requêtes média, une nouvell
 }
 ```
 
-Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries).
+Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries).
 
 ## Spécifications
 
@@ -205,5 +205,5 @@ Pour plus d'exemples, voir [Utiliser les requêtes média](/fr/docs/Web/CSS/Medi
 
 ## Voir aussi
 
-- [Utiliser les requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [Utiliser les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - L'interface CSSOM [`CSSMediaRule`](/fr/docs/Web/API/CSSMediaRule) qui est associée avec cette règle @.

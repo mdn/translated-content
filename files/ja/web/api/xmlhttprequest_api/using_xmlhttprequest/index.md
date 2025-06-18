@@ -17,7 +17,7 @@ HTTP リクエストを送るには、
 2. URL を開き、
 3. リクエストを送信します。
 
-トランザクションが完了すると、オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Status)やレスポンスの本文などの有益な情報が格納されます。
+トランザクションが完了すると、オブジェクトには結果の [HTTP ステータスコード](/ja/docs/Web/HTTP/Reference/Status)やレスポンスの本文などの有益な情報が格納されます。
 
 ```js
 function reqListener() {
@@ -45,8 +45,8 @@ req.send();
 
 リモートの XML 文書のコンテンツを得るために `XMLHttpRequest` を使う場合、 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティが解釈済みの XML 文書を含む DOM オブジェクトとなります。これによって、操作や解析が難しくなる可能性があります。この XML 文書を解析するには主な 4 つの方法があります。
 
-1. 部分を指すために [XPath](/ja/docs/Web/XPath) を使う。
-2. 手動で [XML を解釈およびシリアライズして](/ja/docs/Web/XML/Parsing_and_serializing_XML)文字列やオブジェクトにする。
+1. 部分を指すために [XPath](/ja/docs/Web/XML/XPath) を使う。
+2. 手動で [XML を解釈およびシリアライズして](/ja/docs/Web/XML/Guides/Parsing_and_serializing_XML)文字列やオブジェクトにする。
 3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
 4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML コードが少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
@@ -235,7 +235,7 @@ ifHasChanged("yourpage.html", function (modified, visit) {
 
 ## サイトをまたがる XMLHttpRequest
 
-現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
+現在のブラウザーは、[オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing, CORS) を実装することでサイト間リクエストに対応しています。サーバーがウェブアプリケーションのオリジンからのリクエストを許可するように構成されている場合のみ、 `XMLHttpRequest` は動作します。それ以外の場合は、 `INVALID_ACCESS_ERR` 例外が投げられます。
 
 ## キャッシュをバイパスする
 
@@ -275,8 +275,8 @@ XMLHttpRequest が `status=0` および `statusText=null` を受信して終了�
 
 ## 関連情報
 
-- [MDN の AJAX 入門](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [MDN の AJAX 入門](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [The `XMLHttpRequest` object: WHATWG specification](https://xhr.spec.whatwg.org/)

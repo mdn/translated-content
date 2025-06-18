@@ -69,6 +69,6 @@ d1.insertAdjacentHTML("afterend", '<div id="two">two</div>');
 
 ## 参见
 
-- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](http://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
+- 包括 Henri Sivonen 在内的某些 [hacks.mozilla.org 客座文章](https://hacks.mozilla.org/2011/11/insertadjacenthtml-enables-faster-html-snippet-injection/) 显示，`insertAdjacentHTML` 在某些情况下可以更快。
 - {{domxref("Element.insertAdjacentElement()")}}
 - {{domxref("Element.insertAdjacentText()")}}

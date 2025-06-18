@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 
 Оператор присваивания логического ИЛИ (`x ||= y`) присваивает значение переменной `x` только в случае, если её текущее значение {{Glossary("falsy", "ложноподобно")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-or-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}
+
+```js interactive-example
+const a = { duration: 50, title: "" };
+
+a.duration ||= 10;
+console.log(a.duration);
+// Expected output: 50
+
+a.title ||= "title is empty.";
+console.log(a.title);
+// Expected output: "title is empty."
+```
 
 ## Синтаксис
 
@@ -68,7 +80,7 @@ document.getElementById("lyrics").textContent ||= "Нет слов.";
 ## Смотрите также
 
 - [Логическое ИЛИ(||)](/ru/docs/Web/JavaScript/Reference/Operators/Logical_OR)
-- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Оператор нулевого слияния (`??`)](/ru/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - [Оператор присваивания побитового ИЛИ (`|=`)](/ru/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)
 - {{Glossary("Truthy", "Истиноподобное значение")}}
 - {{Glossary("Falsy", "Ложноподобное значение")}}

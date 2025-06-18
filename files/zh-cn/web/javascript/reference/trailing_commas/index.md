@@ -104,7 +104,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 解构中的尾后逗号
 
-在使用[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)时，尾后逗号也可以用于左侧：
+[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)模式中也允许使用尾后逗号：
 
 ```js-nolint
 // 带有尾后逗号的数组解构
@@ -118,7 +118,7 @@ const o = {
 const { p, q, } = o;
 ```
 
-同样地，在使用剩余参数时，会抛出 {{jsxref("SyntaxError")}}：
+但是，剩余元素后不允许使用尾后逗号（如果存在）
 
 ```js-nolint example-bad
 const [a, ...b,] = [1, 2, 3];

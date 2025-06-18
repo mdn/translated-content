@@ -7,7 +7,7 @@ slug: Web/API/Node/textContent
 
 {{domxref ("Node")}} 接口的 **`textContent`** 属性表示一个节点及其后代的文本内容。
 
-> **备注：** `textContent` 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在[重要方面有不同之处](/zh-CN/docs/Web/API/Node/textContent#与_innerText_的区别) 。
+> **备注：** `textContent` 和 {{domxref("HTMLElement.innerText")}} 容易混淆，但这两个属性在[重要方面有不同之处](#与_innerText_的区别) 。
 
 ## 值
 

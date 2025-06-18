@@ -9,7 +9,14 @@ l10n:
 
 {{jsxref("String")}} 값의 **`codePointAt()`** 메서드는 주어진 인덱스에서 시작하는 문자의 유니코드 코드 포인트 값인 음수가 아닌 정수를 반환합니다. 인덱스는 여전히 유니코드 코드 포인트가 아닌 UTF-16 코드 단위를 기반으로 한다는 점에 유의하시기 바랍니다.
 
-{{EmbedInteractiveExample("pages/js/string-codepointat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+
+```js interactive-example
+const icons = "☃★♲";
+
+console.log(icons.codePointAt(1));
+// Expected output: "9733"
+```
 
 ## 구문
 
@@ -68,7 +75,7 @@ for (let i = 0; i < str.length; i++) {
 // '1f40e', 'dc0e', '1f471', 'dc71', '2764'
 ```
 
-대신 코드 포인트별로 반복하는 문자열의 [`@@iterator`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)를 호출하는 [`for...of`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 문이나 [문자열 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용합니다. 그런 다음 `codePointAt(0)`을 사용하여 각 요소의 코드 포인트를 가져옵니다.
+대신 코드 포인트별로 반복하는 문자열의 [`@@iterator`](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)를 호출하는 [`for...of`](/ko/docs/Web/JavaScript/Guide/Loops_and_iteration#for...of_statement) 문이나 [문자열 전개](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax)를 사용합니다. 그런 다음 `codePointAt(0)`을 사용하여 각 요소의 코드 포인트를 가져옵니다.
 
 ```js
 for (const codePoint of str) {

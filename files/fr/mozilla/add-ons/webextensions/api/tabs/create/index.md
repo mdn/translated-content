@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
 
 Crée un nouvel onglet
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -26,13 +26,13 @@ var creating = browser.tabs.create(
     - `active`{{optional_inline}}
       - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à `true`.
     - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
+      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
     - `index`{{optional_inline}}
       - : `integer`. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.
     - `openerTabId`{{optional_inline}}
       - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.
     - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à `false`.
+      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à `false`.
     - `pinned`{{optional_inline}}
       - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
     - `selected`{{optional_inline}}
@@ -64,7 +64,7 @@ var creating = browser.tabs.create(
 
 ### Valeur retournée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+A [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
 
 ## Exemples
 

@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**应用程序上下文**是应用了 [Web 应用程序清单](/zh-CN/docs/Web/Manifest) 的顶层[浏览上下文](/zh-CN/docs/Glossary/Browsing_context)。
+**应用程序上下文**是应用了 [Web 应用程序清单](/zh-CN/docs/Web/Progressive_web_apps/Manifest) 的顶层[浏览上下文](/zh-CN/docs/Glossary/Browsing_context)。
 
 如果应用程序上下文是由于用户代理被要求导航到一个深度链接而创建的，那么用户代理必须立即以替换启用的方式导航到深度链接。否则，当应用程序上下文被创建时，用户代理必须立即以替换启用的方式导航到起始 URL。
 
@@ -16,4 +16,4 @@ l10n:
 ## 参见
 
 - [渐进式 Web 应用](/zh-CN/docs/Web/Progressive_web_apps)
-- [`scope`](/zh-CN/docs/Web/Manifest/scope)
+- [`scope`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/scope)

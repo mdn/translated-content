@@ -7,9 +7,25 @@ l10n:
 
 {{JSRef}}
 
-**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
+**`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
+
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## 構文
 
@@ -92,7 +108,7 @@ o2.propertyIsEnumerable("nonEnumerableOwn"); // false
 
 ### シンボルプロパティの検査
 
-`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+`propertyIsEnumerable()` は{{jsxref("Symbol", "シンボル")}}プロパティにも対応しています。なお、多くの列挙メソッドは、文字列プロパティのみを扱います。シンボルプロパティの列挙可能性は、{{jsxref("Object.assign()")}} や[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使用している場合にのみ有益です。詳細については、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
 
 ```js
 const sym = Symbol("enumerable");
@@ -145,7 +161,7 @@ Object.getOwnPropertyDescriptor(o, "nonExistent")?.enumerable; // undefined
 
 ## 関連情報
 
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.defineProperty()")}}

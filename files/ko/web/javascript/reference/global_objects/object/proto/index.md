@@ -21,7 +21,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/proto
 
 `__proto__` setter를 사용하면 객체의 `[[Prototype]]`이 변경될 수 있습니다. 객체는 {{JSxRef("Object.isExtensible()")}}에 따라 확장 가능해야 합니다. 그렇지 않으면 {{JSxRef("Global_Objects/TypeError", "TypeError")}}가 발생합니다. 제공된 값은 객체 또는 {{JSxRef("Global_Objects/null", "null")}}여야 합니다. 다른 값을 제공하면 아무 효과가 없습니다.
 
-프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)를 참조하세요.
+프로토타입이 상속에 사용되는 방식을 이해하려면 가이드 문서 [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)를 참조하세요.
 
 `__proto__` 속성은 getter 및 setter 함수로 구성된 {{JSxRef("Object.prototype")}}의 간단한 접근자 속성입니다. {{JSxRef("Object.prototype")}}를 참조하는 경우 `__proto__`에 접근하면 {{JSxRef("Object.prototype")}}를 찾지만, {{JSxRef("Object.prototype")}}를 참조하지 않는 경우에는 찾을 수 없습니다. {{JSxRef("Object.prototype")}}보다 먼저 다른 `__proto__` 속성이 발견되는 경우 이 속성에 의해 {{JSxRef("Object.prototype")}}는 숨겨집니다.
 

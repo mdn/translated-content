@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 ## Протоколы перебора
 
-Протоколы перебора включают [the "iterable" protocol](#The_.22iterable.22_protocol) и [the "iterator" protocol](#The_.22iterator.22_protocol).
+Протоколы перебора включают [the "iterable" protocol](#the_.22iterable.22_protocol) и [the "iterator" protocol](#the_.22iterator.22_protocol).
 
 ### Протокол "Итерируемый"
 
@@ -19,7 +19,7 @@ slug: Web/JavaScript/Reference/Iteration_protocols
 
 | Свойство            | Значение                                                                                                        |
 | ------------------- | --------------------------------------------------------------------------------------------------------------- |
-| `[Symbol.iterator]` | Функция без аргументов, возвращающая объект, соответствующий [iterator protocol](#The_.22iterator.22_protocol). |
+| `[Symbol.iterator]` | Функция без аргументов, возвращающая объект, соответствующий [iterator protocol](#the_.22iterator.22_protocol). |
 
 Всякий раз, когда объект подлежит перебору (например, когда в коде встречается цикл `for..of`), вызывается его метод `@@iterator` без аргументов, и возвращаемый **iterator** используется для получения перебираемых значений.
 
@@ -102,7 +102,7 @@ iterator.next(); // { value: "i", done: false }
 iterator.next(); // { value: undefined, done: true }
 ```
 
-Некоторые встроенные конструкции языка, например, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), используют в своей внутренней реализации тот же протокол итерации:
+Некоторые встроенные конструкции языка, например, [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), используют в своей внутренней реализации тот же протокол итерации:
 
 ```js
 [...someString]; // ["h", "i"]
@@ -185,7 +185,7 @@ and {{jsxref("Promise.all", "Promise.all(iterable)")}}, {{jsxref("Promise.race",
 
 ## Синтаксис предполагающий итерируемость
 
-[for-of](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator), yield\*, destructing - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:
+[for-of](/ru/docs/Web/JavaScript/Reference/Statements/for...of), [spread](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax), yield\*, destructing - использование данного синтаксиса возможно только если типы данных, к которым он применяется, итерируемы:
 
 ```js
 for (let value of ["a", "b", "c"]) {

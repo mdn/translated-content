@@ -164,5 +164,5 @@ This will log a message containing 'hello world!'.
 
 ## Veja também
 
-- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
+- O capítulo de [Expressões Regulares](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) no [Guia de Javascript](/pt-BR/docs/Web/JavaScript/Guide).
 - {{jsxref("RegExp")}}

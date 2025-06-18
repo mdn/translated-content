@@ -22,4 +22,4 @@ MVC のソフトウェア設計パターンの 3 つの部分は、次のよう�
 
 ### MVC アーキテクチャ
 
-- [MVC アーキテクチャ](/ja/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)
+- [MVC アーキテクチャ](/ja/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)

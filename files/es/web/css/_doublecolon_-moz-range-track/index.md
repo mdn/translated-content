@@ -1,5 +1,5 @@
 ---
-title: "::-moz-range-track"
+title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
 ---
 
@@ -61,4 +61,4 @@ No es parte de ninguna especificación.
   - {{cssxref("::-ms-track")}}, pseudo-elemento soportado por Internet Explorer y Edge.
 
 - [CSS-Tricks: Dando estilo con CSS a elementos Input con type="range" para que se muestren correctamente en todos los navegadores.](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)
-- [QuirksMode: Dando estilos y scripting a elementos deslizantes](http://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)
+- [QuirksMode: Dando estilos y scripting a elementos deslizantes](https://www.quirksmode.org/blog/archives/2015/11/styling_and_scr.html)

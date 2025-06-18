@@ -22,6 +22,6 @@ myForm.target = document.frames[1].name;
 
 ## Spécification
 
-[HTML 5, Section 4.10.19.6, Form submission](http://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
+[HTML 5, Section 4.10.19.6, Form submission](https://www.w3.org/TR/html5/association-of-controls-and-forms.html#dom-fs-method)
 
-[DOM Level 2 HTML: target](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)
+[DOM Level 2 HTML: target](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-6512890)

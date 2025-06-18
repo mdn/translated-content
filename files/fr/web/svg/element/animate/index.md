@@ -59,21 +59,21 @@ svg {
   - [`attributeName`](/fr/docs/Web/SVG/Attribute/attributeName)
   - [`additive`](/fr/docs/Web/SVG/Attribute/additive)
   - [`accumulate`](/fr/docs/Web/SVG/Attribute/accumulate)
-- [Attributs pour les évènements relatifs aux animations](/fr/docs/Web/SVG/Attribute/Events#événements_danimation)
+- [Attributs pour les évènements relatifs aux animations](/fr/docs/Web/SVG/Attribute#événements_danimation)
   - [`onbegin`](/fr/docs/Web/SVG/Attribute/onbegin)
   - [`onend`](/fr/docs/Web/SVG/Attribute/onend)
   - [`onrepeat`](/fr/docs/Web/SVG/Attribute/onrepeat)
 
 ### Attributs universels
 
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute/Core)
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute)
   - [`id`](/fr/docs/Web/SVG/Attribute/id)
-- [Attributs de mise en forme](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attributs de mise en forme](/fr/docs/Web/SVG/Attribute)
   - [`class`](/fr/docs/Web/SVG/Attribute/class)
   - [`style`](/fr/docs/Web/SVG/Attribute/style)
 - [Attributs relatifs aux évènements](/fr/docs/Web/SVG/Attribute#attributs_dévénement)
-  - [Attributs pour les évènements universels](/fr/docs/Web/SVG/Attribute/Events#attributs_dévénement_globaux)
-  - [Attributs pour les évènements des éléments du document](/fr/docs/Web/SVG/Attribute/Events#attributs_dévénement_des_éléments_du_document)
+  - [Attributs pour les évènements universels](/fr/docs/Web/SVG/Attribute#attributs_dévénement_globaux)
+  - [Attributs pour les évènements des éléments du document](/fr/docs/Web/SVG/Attribute#attributs_dévénement_des_éléments_du_document)
 
 ## Notes d'utilisation
 

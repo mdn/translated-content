@@ -5,7 +5,7 @@ slug: Web/CSS/@media/prefers-reduced-motion
 
 {{CSSRef}}
 
-La [requêtes média](/fr/docs/Web/CSS/Media_Queries/Using_media_queries#media_features) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.
+La [requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features) [CSS](/fr/docs/Web/CSS) **`prefers-reduced-motion`** détecte si l'utilisateur a demandé au système de minimiser la quantité d'animation ou de mouvement.
 
 > [!WARNING]
 > Un exemple intégré au bas de cette page comporte un mouvement d'échelle qui peut poser problème à certains lecteurs. Les lecteurs souffrant de troubles du mouvement vestibulaire peuvent souhaiter activer la fonction de réduction du mouvement sur leur appareil avant de visionner l'animation.

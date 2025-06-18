@@ -5,7 +5,7 @@ slug: Web/API/Element/transitionend_event
 
 {{APIRef}}
 
-Событие `transitionend` срабатывает, когда [CSS transition](/ru/docs/CSS/Using_CSS_transitions) закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если [transition-property \[en-US\]](/ru/docs/Web/CSS/transition-property) удаляется), то событие не срабатывает.
+Событие `transitionend` срабатывает, когда [CSS transition](/ru/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) закончил своё выполнение. В случае, когда анимация удаляется до её завершения(например, если [transition-property \[en-US\]](/ru/docs/Web/CSS/transition-property) удаляется), то событие не срабатывает.
 
 ## Общая информация
 
@@ -57,4 +57,4 @@ element.addEventListener("transitionend", showMessage, false);
 
 ## Также
 
-- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Mozilla_event_reference/transitionend) event.
+- The {{ domxref("TransitionEvent") }} interface and the [`transitionend`](/ru/docs/Web/API/Element/transitionend_event) event.

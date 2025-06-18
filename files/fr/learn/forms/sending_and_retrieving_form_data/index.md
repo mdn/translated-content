@@ -49,7 +49,7 @@ Côté client, un formulaire HTML n'est rien d'autre qu'un moyen commode et conv
 
 ## Côté client : définition de la méthode d'envoi des données
 
-L'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) et [`method`](/fr/docs/Web/HTML/Element/Form#attr-method).
+L'élément [`<form>`](/fr/docs/Web/HTML/Element/form) définit la méthode d'envoi des données. Tous ses attributs sont conçus pour vous permettre de configurer la requête à envoyer quand un utilisateur presse le bouton d'envoi. Les deux attributs les plus importants sont [`action`](/fr/docs/Web/HTML/Element/form#attr-action) et [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
 
 ### L'attribut action
 
@@ -67,20 +67,20 @@ Ici, nous utilisons une URL relative — les données sont envoyées à une URL 
 <form action="/somewhere_else"></form>
 ```
 
-Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/Form) sont envoyées à la même page que celle du formulaire :
+Sans attribut, comme ci-dessous, les données de [`<form>`](/fr/docs/Web/HTML/Element/form) sont envoyées à la même page que celle du formulaire :
 
 ```html
 <form></form>
 ```
 
-De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action) était requis. Il n'y en a donc plus besoin.
+De nombreuses pages anciennes utilisent la notation suivante pour indiquer que les données doivent être envoyées à la page qui contient le formulaire. C'était nécessaire car jusqu'à HTML5, l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) était requis. Il n'y en a donc plus besoin.
 
 ```html
 <form action="#"></form>
 ```
 
 > [!NOTE]
-> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/Form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
+> Il est possible de spécifier une URL qui utilise le protocole HTTPS (HTTP sécurisé). Quand vous faites ceci, les données sont chiffrées avec le reste de la requête, même si le formulaire lui-même est hébergé dans une page non sécurisée à laquelle on accède via HTTP. D'autre part, si le formulaire est hébergé sur une page sécurisée mais qu'on spécifie une URL non sécurisée avec l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action), tous les navigateurs affichent une alerte de sécurité pour l'utilisateur chaque fois qu'il envoie des données car celles-ci ne sont pas chiffrées.
 
 ### L'attribut method
 
@@ -133,7 +133,7 @@ Host: foo.com
 
 La méthode `POST` est un peu différente.C'est la méthode que le navigateur utilise pour demander au serveur une réponse prenant en compte les données contenues dans le corps de la requête HTTP : «&nbsp;Hé serveur&nbsp;! vois ces données et renvoie-moi le résultat approprié&nbsp;». Si un formulaire est envoyé avec cette méthode, les données sont ajoutées au corps de la requête HTTP.
 
-Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#attr-method).
+Voyons un exemple — c'est le même formulaire que celui que nous avons vu pour GET ci‑dessus, mais avec `post` comme valeur de l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method).
 
 ```html
 <form action="http://www.foo.com" method="POST">
@@ -169,7 +169,7 @@ L'en-tête `Content-Length` indique la taille du corps, et l'en-tête `Content-T
 
 ### Voir les requêtes HTTP
 
-Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](/fr/docs/Tools/Web_Console) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
+Les requêtes HTTP ne sont jamais montrées à l'utilisateur (si vous voulez les voir, vous devez utiliser des outils comme la [Console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) de Firefox ou les [Chrome Developer Tools](https://developers.google.com/chrome-developer-tools/)). À titre d'exemple, les données de formulaire sont visibles comme suit dans l'onglet Chrome Network. Après avoir soumis le formulaire&nbsp;:
 
 1. Pressez F12
 2. Selectionnez «&nbsp;Réseau&nbsp;»
@@ -267,9 +267,9 @@ Cet attribut vous permet de préciser la valeur de l'en-tête HTTP `Content-Type
 
 Mais si vous voulez envoyer des fichiers, il faut faire deux choses en plus :
 
-- régler l'attribut [`method`](/fr/docs/Web/HTML/Element/Form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
-- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Element/Form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
-- incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Element/Input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
+- régler l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) à `POST`, car un contenu de fichier ne peut pas être mis dans des paramètres d'URL.
+- régler la valeur de [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) `à multipart/form-data`, car les données seront coupées en plusieurs parties, une pour chaque fichier plus une pour les données dans le corps du formulaire (si du texte a aussi été entré dans le formulaire).
+- incorporer un ou plusieurs widgets de [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) pour permettre aux utilisateurs de choisir les fichiers à téléverser.
 
 Par exemple :
 

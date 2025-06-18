@@ -41,7 +41,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 
 ### 使用來自其他網域的影像
 
-Using the [`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/HTML/CORS_settings_attributes)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/HTML/CORS_Enabled_Image#What_is_a_.22tainted.22_canvas.3F))。
+Using the [`crossOrigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f))。
 
 ### 使用其他畫布元素
 
@@ -78,7 +78,7 @@ img.src = "myImage.png"; // Set source path
 
 ### 以 data:URL 嵌入影像
 
-另一個載入影像的方法是利用[data: url](/zh-TW/docs/data_URIs)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
+另一個載入影像的方法是利用 [data: url](/zh-TW/docs/Web/URI/Reference/Schemes/data)，透過 data URL 可以直接將影像定義成 Base64 編碼的字串，然後嵌入程式碼之中.
 
 ```js
 var img_src =
@@ -105,7 +105,7 @@ function getMyVideo() {
 ```
 
 上面的方法會回傳一個{{domxref("HTMLVideoElement")}}的影像物件，如前所述，這個物件可以被視為 CanvasImageSource 類別的物件來使用。
-關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](http://html5doctor.com/video-canvas-magic/)」一文.
+關於如何利用\<video>元素於畫布上的進階說明，可以參考 html5Doctor 的「[video + canvas = magic](https://html5doctor.com/video-canvas-magic/)」一文.
 
 ## 影像繪圖
 

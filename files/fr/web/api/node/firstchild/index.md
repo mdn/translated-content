@@ -28,7 +28,7 @@ Cet exemple montre l'utilisation de `firstChild` et la manière dont les nœuds 
 </script>
 ```
 
-Dans le code ci-dessus, la [console](/fr/docs/Web/API/Console) affichera «&nbsp;#text&nbsp;» car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Gestion_des_espaces_dans_le_DOM) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
+Dans le code ci-dessus, la [console](/fr/docs/Web/API/console) affichera «&nbsp;#text&nbsp;» car un nœud texte a été inséré pour préserver les blancs entre la fin des balises ouvrantes \<p> et \<span>. **Tout** [espace](/fr/docs/Web/API/Document_Object_Model/Whitespace) provoquera l'insertion d'un nœud `#text` , qu'il s'agisse d'un simple espace ou de plusieurs, de retours à la ligne, tabulations, etc.
 
 Un autre nœud `#text` est inséré entre les balises de fermeture \</span> et \</p>.
 

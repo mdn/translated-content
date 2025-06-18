@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 {{AddonSidebar}}
 
-WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。
+WebExtension APIs で開発される拡張機能には、既定で適用される CSP(Content Security Policy の略) があります。これは [\<script>](/ja/docs/Web/HTML/Reference/Elements/script) と [\<object>](/ja/docs/Web/HTML/Reference/Elements/object) リソースから読み込まれるソースを制限し、危険な行動、例えば [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) の使用を非許可にします。
 
 この記事では CSP とは何かと、デフォルトポリシーとは何で拡張機能にはどんな意味があるのかと、拡張機能が既定の CSP を変更する方法を簡単に説明します。
 
-[Content Security Policy](/ja/docs/Web/HTTP/CSP) (CSP) はウェブサイトが悪意のあるコンテンツを実行するのを防ぐのに役立つメカニズムです。ウェブサイトは サーバーから送られてくる HTTP ヘッダーを使って CSP を指定します。CSP は主に、スクリプトや組み込みプラグインといったさまざまな種類のコンテンツの合法なソースを特定することに関心を持っています。例えば、ウェブサイトは、ウェブサイト自身からの JavaScript だけを実行し、他のソースは受け付けないように指定できます。CSP はブラウザーに [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)のような、潜在的に危険な行動を禁止するよう指示することもできます。
+[Content Security Policy](/ja/docs/Web/HTTP/Guides/CSP) (CSP) はウェブサイトが悪意のあるコンテンツを実行するのを防ぐのに役立つメカニズムです。ウェブサイトは サーバーから送られてくる HTTP ヘッダーを使って CSP を指定します。CSP は主に、スクリプトや組み込みプラグインといったさまざまな種類のコンテンツの合法なソースを特定することに関心を持っています。例えば、ウェブサイトは、ウェブサイト自身からの JavaScript だけを実行し、他のソースは受け付けないように指定できます。CSP はブラウザーに [`eval()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval)のような、潜在的に危険な行動を禁止するよう指示することもできます。
 
 ウェブサイトと同様に、拡張機能はさまざまなソースからコンテンツを読み込めます。例えば、ブラウザーアクションのポップアップは HTML 文書として指定できて、通常のウェブページのようにさまざまなソースからの JavaScript と CSS を入れることができます:
 
@@ -41,7 +41,7 @@ WebExtension APIs で開発される拡張機能には、既定で適用され�
 
 ウェブサイトと比較して、拡張機能は追加の特権付き API にアクセスできるので、悪意のあるコードに感染した場合、リスクは大きくなります。このため:
 
-- かなり厳密な CSP がデフォルトで適用されます。[既定の content security policy](/ja/Add-ons/WebExtensions/Content_Security_Policy#Default_content_security_policy) を見てください
+- かなり厳密な CSP がデフォルトで適用されます。[既定の content security policy](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#default_content_security_policy) を見てください
 - 拡張機能のオーナーは `content_security_policy` manifest.json キーを使ってデフォルトのポリシーを変更できますが、許可できるポリシーには制限があります。[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) を見てください。
 
 ## 既定の content security policy
@@ -54,13 +54,13 @@ WebExtension APIs で開発される拡張機能には、既定で適用され�
 
 これは、[`content_security_policy`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) の manifest.json key を使って明示的に CSP をセットしないあらゆる拡張機能にあてはまります。下記の結論になります:
 
-- [\<script> と \<object> リソースは拡張機能のローカルからのみ読み込みできる](/ja/Add-ons/WebExtensions/Content_Security_Policy#Location_of_script_and_object_resources)
+- [\<script> と \<object> リソースは拡張機能のローカルからのみ読み込みできる](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#location_of_script_and_object_resources)
 - [拡張機能は JavaScript で文字列を評価 (eval) できない](</ja/Add-ons/WebExtensions/Content_Security_Policy#eval()_and_friends>)
-- [インライン JavaScript は実行されない](/ja/Add-ons/WebExtensions/Content_Security_Policy#Inline_JavaScript)
+- [インライン JavaScript は実行されない](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#inline_javascript)
 
 ### スクリプトとオブジェクトリソースの場所
 
-既定の CSP の下では、拡張機能のローカルにある [\<script>](/ja/docs/Web/HTML/Element/script) と [\<object>](/ja/docs/Web/HTML/Element/object) リソースだけを読み込みできます。例えば、拡張機能の文書内にこんな行があるとします:
+既定の CSP の下では、拡張機能のローカルにある [\<script>](/ja/docs/Web/HTML/Reference/Elements/script) と [\<object>](/ja/docs/Web/HTML/Reference/Elements/object) リソースだけを読み込みできます。例えば、拡張機能の文書内にこんな行があるとします:
 
 ```html
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
@@ -101,4 +101,4 @@ var f = new Function("console.log('foo');");
 <div onclick="console.log('click')">Click me!</div>
 ```
 
-ページが読み込まれた時にスクリプトを実行するのに `<body onload="main()">` のようなコードを使っている場合、代わりに [DOMContentLoaded](/ja/docs/Web/Events/DOMContentLoaded) か [load](/ja/docs/Web/Events/load) をリッスンします。
+ページが読み込まれた時にスクリプトを実行するのに `<body onload="main()">` のようなコードを使っている場合、代わりに [DOMContentLoaded](/ja/docs/Web/API/Document/DOMContentLoaded_event) か [load](/ja/docs/Web/API/Window/load_event) をリッスンします。

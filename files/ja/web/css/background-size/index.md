@@ -10,7 +10,42 @@ l10n:
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。
 画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 背景画像に覆われていない領域は {{cssxref("background-color")}} プロパティで埋められ、背景画像の後ろに見える背景色は透過性があります。
 
@@ -101,7 +136,7 @@ background-size: unset;
   - 画像に一方だけ内在的な寸法があり、内在的な比率がない場合は、指定された寸法と、もう一方は背景配置領域の寸法を使用して描画されます。
 
   > [!NOTE]
-  > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
+  > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
 - **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
 
@@ -161,5 +196,5 @@ background-size: unset;
 ## 関連情報
 
 - [背景画像の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-- [背景 SVG の変倍](/ja/docs/Web/CSS/Scaling_of_SVG_backgrounds)
+- [背景 SVG の変倍](/ja/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
 - {{cssxref("object-fit")}}

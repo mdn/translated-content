@@ -108,7 +108,7 @@ Si vous incluez du contenu non textuel tel qu'une vidéo ou une animation, vous 
 
 Pour vérifier votre contraste lorsque vous effectuez un choix de couleurs, vous pouvez utiliser le [Vérificateur de Contraste des Couleurs](https://webaim.org/resources/contrastchecker/) de WebAIM.
 
-Vous pouvez également vérifier le contraste des couleurs directement via les outils de développement de Firefox — consultez notre guide de l'[Inspecteur de l'accessibilité](/fr/docs/Tools/Accessibility_inspector), et en particulier la section [Vérifier les problèmes d'accessibilité](/fr/docs/Outils/Inspecteur_accessibilite#Sélecteur_d'accessibilité). Essayez de les utiliser sur les exemples dans la section de description.
+Vous pouvez également vérifier le contraste des couleurs directement via les outils de développement de Firefox — consultez notre guide de l'[Inspecteur de l'accessibilité](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html), et en particulier la section [Vérifier les problèmes d'accessibilité](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#sélecteur_d'accessibilité). Essayez de les utiliser sur les exemples dans la section de description.
 
 ## Critères de réussite associés aux WCAG
 
@@ -132,5 +132,5 @@ Vous pouvez également vérifier le contraste des couleurs directement via les o
 ## Voir aussi
 
 - [Couleur et contraste de couleur](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#couleur_et_contraste_de_couleur)
-- [Étiquettes multiples](/fr/docs/Web/Guide/HTML/Formulaires/Comment_structurer_un_formulaire_HTML#Étiquettes_multiples)
+- [Étiquettes multiples](/fr/docs/Learn/Forms/How_to_structure_a_web_form#étiquettes_multiples)
 - [Comprendre le contraste non textuel](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

@@ -48,7 +48,7 @@ _또한 부모 인터페이스인 {{domxref("BaseAudioContext")}}로부터 메�
 
 - [`complete`](/ko/docs/Web/API/OfflineAudioContext/complete_event)
   - : 오프라인 오디오 컨텍스트의 렌더링이 완료되었을 때 발생됩니다.
-    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/oncomplete) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
+    또한 [`oncomplete`](/ko/docs/Web/API/OfflineAudioContext/complete_event) 이벤트 처리기 속성을 사용하여 이용 가능합니다.
 
 ## 예제
 

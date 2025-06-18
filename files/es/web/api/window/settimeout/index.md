@@ -387,7 +387,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('Configuración_y_borrado_de_tiempos_de_espera')}}
 
-Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/clearTimeout#example).
+Ver también el [ejemplo `clearTimeout()`](/es/docs/Web/API/Window/clearTimeout#example).
 
 ## Especificaciones
 

@@ -41,14 +41,14 @@ L'élément **`<animateTransform>`** permet d'animer un élement en appliquant u
 
 ### Attributs globaux
 
-- [Attributs de traitement conditionnel](/fr/docs/SVG/Attribute#ConditionalProccessing) »
-- [Attributs de base](/fr/docs/SVG/Attribute#Core) »
-- [Attributs de l'évènement d'animation](/fr/docs/SVG/Attribute#AnimationEvent) »
-- [Attributs Xlink](/fr/docs/SVG/Attribute#XLink) »
-- [Attributs de ciblage d'animation](/fr/docs/SVG/Attribute#AnimationAttributeTarget) »
-- [Attributs de chronométrage d'animation](/fr/docs/SVG/Attribute#AnimationTiming) »
-- [Attributs de valeur d'animation](/fr/docs/SVG/Attribute#AnimationValue) »
-- [Attributs d'ajout d'animations](/fr/docs/SVG/Attribute#AnimationAddition)&nbsp;»
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs de l'évènement d'animation](/fr/docs/Web/SVG/Attribute#animationevent) »
+- [Attributs Xlink](/fr/docs/Web/SVG/Attribute#xlink) »
+- [Attributs de ciblage d'animation](/fr/docs/Web/SVG/Attribute#animationattributetarget) »
+- [Attributs de chronométrage d'animation](/fr/docs/Web/SVG/Attribute#animationtiming) »
+- [Attributs de valeur d'animation](/fr/docs/Web/SVG/Attribute#animationvalue) »
+- [Attributs d'ajout d'animations](/fr/docs/Web/SVG/Attribute#animationaddition)&nbsp;»
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Attributs spécifiques
@@ -60,7 +60,7 @@ L'élément **`<animateTransform>`** permet d'animer un élement en appliquant u
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/DOM/SVGAnimateTransformElement).
+Cet élément implémente l'interface [`SVGAnimateTransformElement`](/fr/docs/Web/API/SVGAnimateTransformElement).
 
 ## Spécifications
 

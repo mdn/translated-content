@@ -543,7 +543,7 @@ Nos exemples interactifs (et autres) sont généralement rédigés de manière �
 
 En ce qui concerne les exemples d'API, nous aimerions mettre en avant quelques exemples qui nous semblent bons :
 
-- [Exemples de `fetch()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch#examples)
+- [Exemples de `fetch()`](/fr/docs/Web/API/Window/fetch#examples)
 - [Exemples de `fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect#examples) (les exemples de Canvas 2D sont généralement bons, bien qu'ils utilisent toujours l'ancienne déclaration `var`).
 - [Payment Request API `show()`](/fr/docs/Web/API/PaymentRequest/show) (Les exemples de [`PaymentRequest`](/fr/docs/Web/API/PaymentRequest) sont généralement assez bons).
 - [Utilisations de l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API) (les bonnes pratiques générales en matière de HTML, CSS et JavaScript, ainsi qu'une bonne démonstration de l'utilisation des extraits et des liens vers des exemples complets ailleurs).

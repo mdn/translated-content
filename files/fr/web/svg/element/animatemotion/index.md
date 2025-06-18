@@ -15,13 +15,13 @@ L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chem
 
 ### Attributs globaux
 
-- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#Core) »
-- [Attributs d'événements d'animation](/fr/docs/SVG/Attribute#AnimationEvent) »
-- [Attributs XLink](/fr/docs/Web/SVG/Attribute#XLink) »
-- [Attributs d'animation de timing](/fr/docs/SVG/Attribute#AnimationTiming) »
-- [Attributs d'animation de valeurs](/fr/docs/SVG/Attribute#AnimationValue) »
-- [Attributs d'animation d'ajout](/fr/docs/SVG/Attribute#AnimationAddition) »
+- [Attributs à traitement conditionnel](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Attributs fondamentaux](/fr/docs/Web/SVG/Attribute#core) »
+- [Attributs d'événements d'animation](/fr/docs/Web/SVG/Attribute#animationevent) »
+- [Attributs XLink](/fr/docs/Web/SVG/Attribute#xlink) »
+- [Attributs d'animation de timing](/fr/docs/Web/SVG/Attribute#animationtiming) »
+- [Attributs d'animation de valeurs](/fr/docs/Web/SVG/Attribute#animationvalue) »
+- [Attributs d'animation d'ajout](/fr/docs/Web/SVG/Attribute#animationaddition) »
 - {{ SVGAttr("externalResourcesRequired") }}
 
 ### Attributs spécifiques
@@ -34,7 +34,7 @@ L'élément **`<animateMotion>`** permet d'animer un élément le long d'un chem
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGAnimateMotionElement`](/fr/docs/DOM/SVGAnimateMotionElement).
+Cet élément implémente l'interface [`SVGAnimateMotionElement`](/fr/docs/Web/API/SVGAnimateMotionElement).
 
 ## Exemple
 

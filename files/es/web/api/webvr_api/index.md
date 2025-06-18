@@ -33,7 +33,7 @@ In addition, WebVR 1.1 adds a number of events on the {{domxref("Window")}} obje
 
 ### Using controllers: Combining WebVR with the Gamepad API
 
-Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/es/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/es/docs/Web/API/Gamepad_API#Experimental_Gamepad_extensions) that adds API features for accessing [controller pose](/es/docs/Web/API/GamepadPose), [haptic actuators](/es/docs/Web/API/GamepadHapticActuator), and more.
+Many WebVR hardware setups feature controllers that go along with the headset. These can be used in WebVR apps via the [Gamepad API](/es/docs/Web/API/Gamepad_API), and specifically the [Gamepad Extensions API](/es/docs/Web/API/Gamepad_API#experimental_gamepad_extensions) that adds API features for accessing [controller pose](/es/docs/Web/API/GamepadPose), [haptic actuators](/es/docs/Web/API/GamepadHapticActuator), and more.
 
 > [!NOTE]
 > Our [Using VR controllers with WebVR](/es/docs/Web/API/WebVR_API/Using_VR_controllers_with_WebVR) article explains the basics of how to use VR controllers with WebVR apps.

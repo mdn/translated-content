@@ -16,7 +16,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
 - `expirationDate`{{optional_inline}}
   - : cookie の有効期限を UNIX 時刻からの秒数で持つ `number` 型です。セッション cookie はこのプロパティを持っていません。
 - `firstPartyDomain`
-  - : cookie に関連付けられたファーストパーティドメインを表す文字列を格納している `string` 型です。 cookie の First-party isolation が無効の間は空文字列になります。詳細は [First-party isolation](/ja/Add-ons/WebExtensions/API/cookies#First-party_isolation) をご覧ください。
+  - : cookie に関連付けられたファーストパーティドメインを表す文字列を格納している `string` 型です。 cookie の First-party isolation が無効の間は空文字列になります。詳細は [First-party isolation](/ja/docs/Mozilla/Add-ons/WebExtensions/API/cookies#first-party_isolation) をご覧ください。
 - `hostOnly`
   - : `boolean` 型です。cookie がホストオンリークッキー (リクエストのホストが cookie の指定ドメインと完全一致している場合のみ送信) である場合に `true` 、でなければ `false` になります。
 - `httpOnly`
@@ -61,7 +61,7 @@ gettingAll.then(logCookies);
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies#type-Cookie) API に基づいています。 また、このドキュメントは [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

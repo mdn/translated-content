@@ -2,7 +2,7 @@
 title: アロー関数式
 slug: Web/JavaScript/Reference/Functions/Arrow_functions
 l10n:
-  sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
+  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
 {{jsSidebar("Functions")}}
@@ -13,7 +13,14 @@ l10n:
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけて呼び出すと {{jsxref("TypeError")}} が発生します。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードにアクセスすることもできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することができず、ジェネレーター関数として作成することもできません。
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 構文
 
@@ -39,7 +46,7 @@ l10n:
 }
 ```
 
-引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)には対応していますが、常に括弧が必要になります。
+引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
 
 ```js-nolint
 (a, b, ...r) => 式
@@ -84,7 +91,7 @@ a => a + 100;
 
 上の例では、引数を囲む括弧と関数本体を囲む中括弧の両方を省略することができます。ただし、省略できるのは特定の場合のみです。
 
-括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、分割代入、残余引数がある場合は、引数リストを括弧で囲む必要があります。
+括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、構造分解、残余引数がある場合は、引数リストを括弧で囲む必要があります。
 
 ```js
 // 従来の無名関数
@@ -107,7 +114,7 @@ const b = 2;
 () => a + b + 100;
 ```
 
-中括弧を省略できるのは、関数が直接式を返す場合だけです。本体に追加の処理がある場合は中括弧が必要となり、 `return` キーワードも必要となります。アロー関数はいつ何を返すかを推測することはできません。
+中括弧を省略できるのは、関数が直接式を返す場合だけです。本体に文がある場合は中括弧が必要となり、 `return` キーワードも必要となります。アロー関数はいつ何を返すかを推測することはできません。
 
 ```js
 // 従来の関数
@@ -123,7 +130,7 @@ const b = 2;
 };
 ```
 
-アロー関数は常に無名です。アロー関数自身を呼び出す必要がある場合は、代わりに名前付き関数式を使用 してください。アロー関数を変数に割り当てて、名前を持たせることもできます。
+アロー関数は、本質的に名前に関連付けられていません。アロー関数を自身で呼び出す必要がある場合は、代わりに名前付き関数式を使用してください。また、アロー関数を変数に代入し、その変数を通して参照することもできます。
 
 ```js
 // 従来の関数
@@ -137,21 +144,21 @@ const bob2 = (a) => a + 100;
 
 ### 関数の本体
 
-アロー関数は、簡潔文体 (concise body) か、もしくはより一般的なブロック文体 (block body) のどちらかを使用することができます。
+アロー関数は、式本体 (expression body) か、もしくはより一般的なブロック本体 (block body) のどちらかを使用することができます。
 
-簡潔文体においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック文体においては、明示的に `return` 文を使用する必要があります。
+式本体においては、単一の式しか記述できないので、その式が暗黙的に return される値となります。しかし、ブロック本体においては、明示的に `return` 文を使用する必要があります。
 
 ```js
 const func = (x) => x * x;
-// 簡潔構文の場合、暗黙の "return" があります
+// 式本体の場合、暗黙の "return" があります
 
 const func2 = (x, y) => {
   return x + y;
 };
-// ブロック文体では、明示的な "return" が必要です
+// ブロック本体では、明示的な "return" が必要です
 ```
 
-簡潔文体 `(params) => { object: literal }` を使ってオブジェクトリテラルを返そうとしても、期待通りに動作しないことに注意しましょう。
+式本体 `(params) => { object: literal }` を使ってオブジェクトリテラルを返そうとしても、期待通りに動作しないことに注意しましょう。
 
 ```js-nolint example-bad
 const func = () => { foo: 1 };
@@ -164,7 +171,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-これは、 JavaScript がアロー関数を簡潔文体とみなすのは、アローに続くトークンが左中括弧でない場合のみであるため、中括弧 ({}) 内のコードは一連の文として解釈され、 `foo` はオブジェクトリテラルのキーではなく、[ラベル](/ja/docs/Web/JavaScript/Reference/Statements/label)となります。
+これは、 JavaScript がアロー関数を式本体とみなすのは、アローに続くトークンが左中括弧でない場合のみであるため、中括弧 ({}) 内のコードは一連の文として解釈され、 `foo` はオブジェクトリテラルのキーではなく、[ラベル](/ja/docs/Web/JavaScript/Reference/Statements/label)となります。
 
 これを修正するには、オブジェクトリテラルを括弧で囲んでください。
 
@@ -208,7 +215,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の本体は `this` コンテキストを持っているので、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)のようなアロー関数はクラスの `this` コンテキストを閉じ、アロー関数の本体の中の `this` はインスタンス（または[静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)の場合はクラス自体）を正しく参照します。しかし、これは関数自身のバインディングではなく、[クロージャ](/ja/docs/Web/JavaScript/Closures)であるため、 `this` の値が実行コンテキストによって変わることはありません。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の本体は `this` コンテキストを持っているので、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)のようなアロー関数はクラスの `this` コンテキストを閉じ、アロー関数の本体の中の `this` はインスタンス（または[静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)の場合はクラス自体）を正しく参照します。しかし、これは関数自身のバインディングではなく、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)であるため、 `this` の値が実行コンテキストによって変わることはありません。
 
 ```js
 class C {
@@ -240,7 +247,7 @@ class C {
 ```
 
 > [!NOTE]
-> クラスフィールドはインスタンスで定義され、プロトタイプでは定義されません。そのため、インスタンスを作成するたびに新しい関数参照が作成され、新しいクロージャが割り当てられます。
+> クラスフィールドはインスタンスで定義され、プロパティでは定義されていません。そのため、インスタンスを作成するたびに新しい関数参照が作成され、新しいクロージャが割り当てられます。これにより、通常の非バインドメソッドよりも多くのメモリーが使用される可能性があります。
 
 同様の理由で、[`call()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/call)、[`apply()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)、[`bind()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/bind) の各メソッドは、アロー関数で呼び出されても有益ではありません。アロー関数は、アロー関数が定義されているスコープに基づいて `this` の値を定義しており、関数の呼び出し方によってこの値が変わることはないからです。
 
@@ -350,7 +357,7 @@ simple(10); // 10
 
 const max = (a, b) => (a > b ? a : b);
 
-// 簡単な配列のフィルターリング、マッピング等
+// 簡単な配列のフィルタリング、マッピング等
 const arr = [5, 6, 13, 0, 1, 18, 23];
 
 const sum = arr.reduce((a, b) => a + b);
@@ -423,7 +430,7 @@ const boundAdd = add.bind(obj);
 console.log(boundAdd(1, 2, 3)); // 48
 ```
 
-おそらくアロー関数を使う最大の利点は、 DOM レベルのメソッド（{{domxref("setTimeout()")}} や {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}}）で、通常は何らかのクロージャ、`call()`、`apply()`、`bind()` を使用して、関数が適切なスコープで実行されることを確認する必要があることです。
+おそらくアロー関数を使う最大の利点は、 DOM レベルのメソッド（{{domxref("Window.setTimeout", "setTimeout()")}} や {{domxref("EventTarget/addEventListener()", "EventTarget.prototype.addEventListener()")}}）で、通常は何らかのクロージャ、`call()`、`apply()`、`bind()` を使用して、関数が適切なスコープで実行されることを確認する必要があることです。
 
 従来の関数式では、このようなコードは期待通りに動作しません。
 

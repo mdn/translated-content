@@ -39,7 +39,7 @@ La función getter `__proto__`el valor interno del `[[Prototype]]` de un objeto.
 
 El `__proto__` setter la mutación del objeto `[[Prototype]]` de un objeto. El objeto debe ser extensible según {{jsxref("Object.isExtensible()")}}: si no, un {{jsxref("Global_Objects/TypeError", "TypeError")}} es lanzado. El valor proveído debe ser un objeto o {{jsxref("Global_Objects/null", "null")}}. Provetendo otro tipo de valor no hará nada.
 
-Para entender como los prototipos son usados para herencia, ver el artículo [Inheritance and the prototype chain](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
+Para entender como los prototipos son usados para herencia, ver el artículo [Inheritance and the prototype chain](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
 
 La propiedad `__proto__` es una simple propiedad de acceso a {{jsxref("Object.prototype")}} que consiste en una función getter y setter. Un acceso a la propiedad `__proto__` que eventualmente consulta {{jsxref("Object.prototype")}} encontrará esta propiedad, pero un acceso que no consulta {{jsxref("Object.prototype")}} no lo encontrará. Si alguna otra propiedad `__proto__` es encontrada antes {{jsxref("Object.prototype")}} es consultada, esta propiedad sera ocultada por la encontrada en {{jsxref("Object.prototype")}}.
 

@@ -36,14 +36,14 @@ Plusieurs noeuds peuvent être reliés dans un _graphe de traitement_. Un tel gr
 <!---->
 
 - {{domxref("AudioNode.channelCount")}}
-  - : Représente un entier utilisé pour déterminer le nombre de canaux lors d'une [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante). Son usage et sa définition précise dépendent de la valeur de {{domxref("AudioNode.channelCountMode")}}.
+  - : Représente un entier utilisé pour déterminer le nombre de canaux lors d'une [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#conversion_ascendante_et_descendante). Son usage et sa définition précise dépendent de la valeur de {{domxref("AudioNode.channelCountMode")}}.
 
 <!---->
 
 - {{domxref("AudioNode.channelCountMode")}}
   - : Représente une liste énumérative qui décrit la façon dont les canaux doivent être connectés entre les entrées et les sorties.
 - {{domxref("AudioNode.channelInterpretation")}}
-  - : Représente une liste énumérative qui décrit la signification des canaux. Cette interprétation définit la façon dont la [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#Conversion_ascendante_et_descendante) est réalisée. Les valeurs possibles sont `"speakers"` ou `"discrete"`.
+  - : Représente une liste énumérative qui décrit la signification des canaux. Cette interprétation définit la façon dont la [conversion ascendante ou descendante](/fr/docs/Web/API/Web_Audio_API/Basic_concepts_behind_Web_Audio_API#conversion_ascendante_et_descendante) est réalisée. Les valeurs possibles sont `"speakers"` ou `"discrete"`.
 
 ## Méthodes
 

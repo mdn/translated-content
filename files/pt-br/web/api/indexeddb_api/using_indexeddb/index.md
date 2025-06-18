@@ -7,9 +7,9 @@ IndexedDB é uma forma de armazenar dados no navegador do usuário. Com ele voc�
 
 ## Sobre esse documento
 
-Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+Esse tutorial utiliza a API assíncrona do IndexedDB. Se você não está familiarizado com IndexedDB, você pode ler [Conceitos básicos sobre IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
-Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/IndexedDB), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
+Para a documentação de referência, veja o artigo sobre [API IndexedDB](/pt-BR/docs/Web/API/IndexedDB_API), pois nele contém os tipos de objetos utilizados no IndexedDB, como também métodos da API, tanto síncrona como assíncrona.
 
 ## Padrão básico
 
@@ -70,9 +70,9 @@ var request = window.indexedDB.open("DBteste", 3);
 
 Abrir um banco é como qualquer outra operação — Você tem que "requerer (request)".
 
-A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/IndexedDB/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/IndexedDB/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
+A requisição de abertura não abre o banco ou inicia a transação. A chamada da função `open()` retorna um objeto [`IDBOpenDBRequest`](/pt-BR/docs/Web/API/IDBOpenDBRequest) com o resultado (success) ou um erro que você terá que tratar. Muitas outras funções assíncronas no IndexedDB fazem a mesma coisa - retornam um objeto [`IDBRequest`](/pt-BR/docs/Web/API/IDBRequest) com o resultado ou erro. O resultado para a função open é uma instância de `IDBDatabase.`
 
-O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento `onupgradeneeded` é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded` é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#Updating_the_version_of_the_database).
+O segundo parâmetro para o método open é a versão do banco. A versão do banco determina seu schema — os registros no banco e sua estrutura. Se o banco não existe ainda, ele é criado pela operação `open`, então o evento `onupgradeneeded` é chamado e você cria o schema do banco nesse evento. Se o banco existe mas você está fornecendo um novo número de versão, o evento `onupgradeneeded` é chamado imediatamente, permitindo você tratar a atualização do schema. Para mais informações sobre isso veja [Updating the version of the database](#updating_the_version_of_the_database).
 
 > [!WARNING]
 > O número de versão é um `unsigned long long`, o que significa que ele pode ver um inteiro muito grande. Isso também significa que você não pode usar float, pois ele será convertido em um inteiro pequeno e a transação pode não acontecer, ou o evento `upgradeneeded` pode não ser chamado. Então se você usar 2.4 como versão:
@@ -216,7 +216,7 @@ Armazens de objetos são criados com uma única chamada de `createObjectStore()`
 
 Nós também criamos um índice chamado "nome" ligado à propriedade `nome`. Assim como o `createObjectStore()`, o `createIndex()` tem um parâmetro opcional `options` que cuida do tipo de índice que você quer criar. Adicionando objetos que não tem a propriedade `nome` terá sucesso, porém esses objetos não aparecerão no índice "nome".
 
-Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#Using_an_index).
+Nós podemos obter os objetos de clientes armazenados usando os `ssn` da objectStore diretamente, ou usando os nomes usados no índice. Para aprender como isso é feito, veja a seção [usando um índice](#using_an_index).
 
 ### Usando um key generator
 
@@ -259,7 +259,7 @@ Para ler os registros de um objectStore existente, a transação pode ser tanto 
 Você pode deixar o acesso aos dados mais rápido usando o escopo correto e o modo correto de transação. Aqui vai algumas dicas:
 
 - Quando definir o escopo, especifique apenas os objectStores que você precisa. Desse jeito você pode rodar multiplas transações sem que uma sobreponha a outra.
-- Somente especifique uma transação `readwrite` quando necessário. Você pode rodar várias transações `readonly` com escopos sobreposts, mas você pode ter somente uma transação `readwrite` por objectStore. Para aprender mais sobre _[transactions](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#Database)_ veja [Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB).
+- Somente especifique uma transação `readwrite` quando necessário. Você pode rodar várias transações `readonly` com escopos sobreposts, mas você pode ter somente uma transação `readwrite` por objectStore. Para aprender mais sobre _[transactions](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology#database)_ veja [Basic Concepts](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology).
 
 ### Adicionando dados no banco
 
@@ -349,7 +349,7 @@ Viu como funciona? Desde que exista um objectStore, você pode evitar passar uma
 > Você pode deixar o acesso aos dados mais rápido limitando o escopo e o modo de transação. Veja algumas dicas:
 >
 > - Quando definir o [escopo](#scope), especifique somente os objectStores que vai precisar. Assim você pode rodar multiplas transações sem sopreposições.
-> - Utilize uma transação `readwrite` somente quando necessário. Você pode rodar várias transações `readonly` simultâneas, mas apenas uma transação `readwrite` por objectStore. Para aprender mais sobre isso veja o artigo [_transactions_ in the Basic Concepts](/pt-BR/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB#gloss_transaction).
+> - Utilize uma transação `readwrite` somente quando necessário. Você pode rodar várias transações `readonly` simultâneas, mas apenas uma transação `readwrite` por objectStore. Para aprender mais sobre isso veja o artigo [_transactions_ in the Basic Concepts](/pt-BR/docs/Web/API/IndexedDB_API/Basic_Terminology#gloss_transaction).
 
 ### Atualizando um registro no banco
 
@@ -1310,5 +1310,5 @@ Uma leitura adicional para você encontrar mais informações.
 
 ### Guias e tutoriais
 
-- [Databinding UI Elements with IndexedDB](http://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
+- [Databinding UI Elements with IndexedDB](https://www.html5rocks.com/en/tutorials/indexeddb/uidatabinding/)
 - [IndexedDB — The Store in Your Browser](http://msdn.microsoft.com/en-us/scriptjunkie/gg679063.aspx)

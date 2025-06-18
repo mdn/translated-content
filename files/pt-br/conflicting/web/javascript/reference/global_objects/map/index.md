@@ -7,7 +7,7 @@ slug: conflicting/Web/JavaScript/Reference/Global_Objects/Map
 
 A propriedade **`Map[@@toStringTag]`** tem o valor inicial do `Map`.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-@@tostringtag.html","shorter")}}{{js_property_attributes(0,0,1)}}
+{{js_property_attributes(0,0,1)}}
 
 ## Sintaxe
 

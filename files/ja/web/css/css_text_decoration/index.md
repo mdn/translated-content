@@ -1,11 +1,13 @@
 ---
 title: CSS テキスト装飾
 slug: Web/CSS/CSS_text_decoration
+l10n:
+  sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
 {{CSSRef}}
 
-**CSS テキスト装飾** (CSS Text Decoration) は CSS のモジュールの一つで、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。</p>
+**CSS テキスト装飾** (CSS text decoration) は、下線、テキストの影、圏点など、テキスト装飾に関連する機能を定義します。
 
 ## リファレンス
 
@@ -25,11 +27,7 @@ slug: Web/CSS/CSS_text_decoration
 - {{cssxref("text-underline-offset")}}
 - {{cssxref("text-underline-position")}}
 
-### ガイド
-
-_なし。_
-
-<h2 id="Examples">例</h2>
+## 例
 
 ```css
 .under {
@@ -61,7 +59,7 @@ _なし。_
 }
 ```
 
-```html
+```html-nolint
 <p class="under">このテキストには下付近に 1 本の線があります。</p>
 <p class="over">このテキストの上に線があります。</p>
 <p class="line">このテキストには取り消し線があります。</p>

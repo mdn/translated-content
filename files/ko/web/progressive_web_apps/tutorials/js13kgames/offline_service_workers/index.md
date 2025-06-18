@@ -210,7 +210,7 @@ self.addEventListener("activate", function (e) {
 });
 ```
 
-이는 캐시에 우리가 필요한 파일만 있도록 보장하여, 불필요한 파일을 남기지 않게 됩니다. [브라우저에서 사용가능한 캐시 공간은 제한적](/ko/docs/Web/API/IndexedDB_API/Browser_storage_limits_and_eviction_criteria)이므로 이를 지우는 것은 우리 스스로를 위한 좋은 아이디어입니다.
+이는 캐시에 우리가 필요한 파일만 있도록 보장하여, 불필요한 파일을 남기지 않게 됩니다. [브라우저에서 사용가능한 캐시 공간은 제한적](/ko/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria)이므로 이를 지우는 것은 우리 스스로를 위한 좋은 아이디어입니다.
 
 ## 다른 유즈 케이스
 

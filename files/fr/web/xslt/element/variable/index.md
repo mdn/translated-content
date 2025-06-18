@@ -31,7 +31,7 @@ Premier niveau ou instruction. S'il intervient comme élément de premier niveau
 
 ### Définition
 
-[XSLT 1.0, section 11](http://www.w3.org/TR/xslt#variables).
+[XSLT 1.0, section 11](https://www.w3.org/TR/xslt#variables).
 
 ### Support Gecko
 

@@ -47,10 +47,10 @@ Nessa primeira regra do CSS, eu estou selecionando o elemento da div estilizando
 
 - Combinadores
 
-  - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Adjacent_sibling_selectors) `A + B`
-  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/General_sibling_selectors) `A ~ B`
-  - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_selectors) `A > B`
-  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Descendant_selectors) `A B`
+  - [Seletores de irmão adjacentes](/pt-BR/docs/Web/CSS/Next-sibling_combinator) `A + B`
+  - [Seletores de irmãos gerais](/pt-BR/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
+  - [Seletores filhos](/pt-BR/docs/Web/CSS/Child_combinator) `A > B`
+  - [Seletores descendentes](/pt-BR/docs/Web/CSS/Descendant_combinator) `A B`
 
 - [Pseudo-elementos](/pt-BR/docs/Web/CSS/Pseudo-elements)
 - [Pseudo-classes](/pt-BR/docs/Web/CSS/Pseudo-classes)

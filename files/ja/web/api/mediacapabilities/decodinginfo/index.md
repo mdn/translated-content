@@ -12,7 +12,7 @@ l10n:
 
 解決されたオブジェクトには、記述されているメディアのデコードに対応しているかどうか、また対応している場合は場合はデコードがスムーズかつ電力効率的に行われるかどうかを示す、3 つの論理値プロパティ `supported`, `smooth`, `powerefficient` が格納されています。
 
-このメソッドは、キーシステムでエンコードされたメディアをデコードするためのユーザーエージェントの能力を調べるためにも使用できますが、メインスレッドで安全なコンテキストで呼び出された場合のみです。
+このメソッドは、キーシステムでエンコードされたメディアをデコードするためのユーザーエージェントの能力を調べるためにも使用できますが、メインスレッドで保護されたコンテキストで呼び出された場合のみです。
 `configuration.keySystemConfiguration` プロパティに渡された構成が、データのデコードに対応している場合、解決されたプロミスには {{domxref("MediaKeySystemAccess")}} オブジェクトも含まれることがあります。これは、暗号化された再生を設定するために使用できる {{domxref("MediaKeys")}} オブジェクトを作成するために使用できます。
 
 > [!NOTE]
@@ -328,7 +328,7 @@ const encryptedMediaConfig = {
 ```
 
 前の例では、[プロミス連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#連鎖)を使用して結果を待ちました。
-ここでは、[`async` と `await`](/ja/docs/Learn/JavaScript/Asynchronous/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
+ここでは、[`async` と `await`](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises#async_と_await) を使用して結果を待ち、その後ログ出力するように選べます。
 
 ```js
 getDecodingInfo(encryptedMediaConfig);

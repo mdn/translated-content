@@ -9,7 +9,18 @@ l10n:
 
 **`[Symbol.toPrimitive]()`** は {{jsxref("Date")}} インスタンスのメソッドで、この日付を表すプリミティブ値を返します。返される値は、指定されたヒントに応じて文字列または数値となります。
 
-{{EmbedInteractiveExample("pages/js/date-toprimitive.html")}}
+{{InteractiveExample("JavaScript Demo: Date.prototype[Symbol.toPrimitive]")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const date = new Date("20 December 2019 14:48");
+
+console.log(date[Symbol.toPrimitive]("string"));
+// Expected output: "Fri Dec 20 2019 14:48:00 GMT+0530 (India Standard Time)"
+
+console.log(date[Symbol.toPrimitive]("number"));
+// Expected output: 1576833480000
+```
 
 ## 構文
 
@@ -37,7 +48,7 @@ date[Symbol.toPrimitive](hint)
 
 ## 解説
 
-`[Symbol.toPrimitive]()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Data_structures#型変換)の一部です。JavaScript は、オブジェクトをプリミティブ値に変換する際に、常に `[Symbol.toPrimitive]()` メソッドを優先的に呼び出します。`[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要があることはほとんどありません。JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した際に、自動的にこのメソッドを呼び出します。
+`[Symbol.toPrimitive]()` メソッドは、[型変換プロトコル](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)の一部です。JavaScript は、オブジェクトをプリミティブ値に変換する際に、常に `[Symbol.toPrimitive]()` メソッドを優先的に呼び出します。`[Symbol.toPrimitive]()` メソッドを自分で呼び出す必要があることはほとんどありません。JavaScript は、プリミティブ値が期待されるオブジェクトに遭遇した際に、自動的にこのメソッドを呼び出します。
 
 {{jsxref("Date")}} オブジェクトの `[Symbol.toPrimitive]()` メソッドは、{{jsxref("Date/valueOf", "this.valueOf()")}} を呼び出して数値を返すか、または {{jsxref("Date/toString", "this.toString()")}} を呼び出して文字列を返すことで、プリミティブ値を返します。これは、既定のプリミティブ変換処理を上書きして、数値ではなく文字列を返すために存在します。既定では、プリミティブ変換は {{jsxref("Date/valueOf", "valueOf()")}} を {{jsxref("Date/toString", "toString()")}} の前に呼び出します。独自の `[Symbol.toPrimitive]()` により、`new Date(0) + 1` は `1`（数値）ではなく `"Thu Jan 01 1970 09:00:00 GMT+0900 (日本標準時)1"`（文字列）を返します。
 

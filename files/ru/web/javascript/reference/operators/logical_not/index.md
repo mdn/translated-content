@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 
 Логический оператор НЕ (`!`) (логическое отрицание) меняет логическое значение операнда с истины в ложь и наоборот. Обычно он используется с {{jsxref("Boolean", "булевыми")}} (логическими) значениями. При использовании с любыми другими значениями, если операнд может быть преобразован в `true`, то вернёт `false`; в противном случае он возвращается `true`.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-not.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical NOT", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(!(a > 0 || b > 0));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -29,7 +37,7 @@ slug: Web/JavaScript/Reference/Operators/Logical_NOT
 - пустая строка (`""`, `''`, ` `` `);
 - `undefined`.
 
-Несмотря на то, что оператор `!` может использоваться с операндами, значения которых не относится к типу Boolean, это всё равно булевый оператор, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type). Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной [оператор НЕ](/ru/docs/Web/JavaScript/Reference/Operators/Logical_Operators#Logical_NOT) или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
+Несмотря на то, что оператор `!` может использоваться с операндами, значения которых не относится к типу Boolean, это всё равно булевый оператор, поскольку его возвращаемое значение всегда можно преобразовать в [булевый примитив](/ru/docs/Web/JavaScript/Guide/Data_structures#boolean_type). Чтобы явно преобразовать возвращаемое значение этого оператора (или вообще любое выражение) в соответствующее значение булевого типа, используйте двойной [оператор НЕ](/ru/docs/Web/JavaScript/Reference/Operators#logical_not) или конструктор {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ## Примеры
 
@@ -46,11 +54,10 @@ n4 = !"Cat"; // !t вернёт false
 
 ### Двойное НЕ (`!!`)
 
-Можно один за другим использовать пару операторов НЕ, чтобы явным образом принудительно преобразовать любое значение в соответствующий [булевый примитив](/ru/docs/Web/JavaScript/Data_structures#Boolean_type).
+Можно один за другим использовать пару операторов НЕ, чтобы явным образом принудительно преобразовать любое значение в соответствующий [булевый примитив](/ru/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 Преобразование основано на "истинноподобности" или "ложноподобности" значения (см. {{Glossary("truthy")}} и {{Glossary("falsy")}})).
 
-Точно такое же преобразование может быть выполнено с помощью функции {{jsxref("Global_Objects/Boolean/Boolean",
-  "Boolean")}}.
+Точно такое же преобразование может быть выполнено с помощью функции {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ```js
 n1 = !!true; // !!truthy вернёт true

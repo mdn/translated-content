@@ -7,7 +7,44 @@ slug: Web/CSS/font-variant-caps
 
 La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.
 
-{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
+{{InteractiveExample("CSS Demo: font-variant-caps")}}
+
+```css interactive-example-choice
+font-variant-caps: normal;
+```
+
+```css interactive-example-choice
+font-variant-caps: small-caps;
+```
+
+```css interactive-example-choice
+font-variant-caps: all-small-caps;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 Quand une fonte inclut des glyphes de lettres capitales avec différents corps (taille), cette propriété sélectionne la plus appropriée. Si les très petites capitales ne sont pas toutes présentes pour cette fonte, ce seront les petites capitales qui seront utilisées. Si celles-ci ne sont pas présentes, le moteur les synthétisera à partir des glyphes des capitales.
 
@@ -94,7 +131,7 @@ La valeur de cette propriété peut être l'un des mots-clés définis ci-après
 
 L'utilisation de grandes portions de textes avec `font-style: all-small-caps` ou `font-style: all-petite-caps` peut rendre la lecture difficile pour les personnes dyslexiques ou ayant des troubles cognitifs.
 
-- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [Comprendre les règles WCAG 1.4](/fr/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [_W3C Understanding WCAG 2.1_ (en anglais)](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## Spécifications

@@ -2,14 +2,14 @@
 title: initial
 slug: Web/CSS/initial
 l10n:
-  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
+  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
 {{CSSRef}}
 
-**`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/initial_value)を設定します。どの CSS プロパティにも適用できます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を 含め、すべての CSS プロパティに適用することができます。 `all` を `initial` に設定すると、すべての CSS プロパティをそれぞれの初期値に戻すことができます。
+**`initial`** は CSS のキーワードで、要素にプロパティの[初期値（または既定値）](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)を設定します。どの CSS プロパティにも適用できます。これは、 CSS の一括指定プロパティ {{cssxref("all")}} を 含め、すべての CSS プロパティに適用することができます。 `all` を `initial` に設定すると、すべての CSS プロパティをそれぞれの初期値に戻すことができます。
 
-[継承プロパティ](/ja/docs/Web/CSS/Inheritance#inherited_properties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}} キーワードを使用することを検討してください。
+[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#inherited_properties)では、初期値は予期せぬ値になるかもしれません。代わりに {{cssxref("inherit")}}, {{cssxref("unset")}}, {{cssxref("revert")}}, {{cssxref("revert-layer")}} キーワードを使用することを検討してください。
 
 ## 例
 

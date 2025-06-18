@@ -40,7 +40,30 @@ l10n:
 - `sideways-rl`
 - `sideways-lr`
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/writing-modes.html", '100%', 360)}}
+```html live-sample___writing-modes
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___writing-modes
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  writing-mode: horizontal-tb;
+}
+```
+
+{{EmbedLiveSample("writing-modes")}}
 
 请注意目前只有 Firefox 支持 `sideways-rl` 和 `sideways-lr`。关于 `writing-mode` 和弹性盒子还有一些已知的问题。你可以在 [MDN 有关 writing-mode 的文档](/zh-CN/docs/Web/CSS/writing-mode)中查看有关浏览器支持的更多信息。然而，如果你打算在你的布局中使用书写模式，我们建议仔细测试结果——尤其是因为它很容易使内容变得难以阅读！
 
@@ -56,7 +79,30 @@ l10n:
 
 在下面的实时示例中，子元素应用了浮动，而它们的容器应用了 `display: flex`。如果你移除 `display: flex`，你应该会看到 `.box` 元素会折叠，因为我们没有清除浮动。这证明了浮动的存在。重新应用 `display: flex`，折叠就不会发生。这是因为元素不再浮动——它们已经变成了弹性元素。
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/floats.html", '100%', 430)}}
+```html live-sample___floats
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___floats
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  float: left;
+}
+```
+
+{{EmbedLiveSample("floats")}}
 
 ## 弹性盒子和网格布局
 
@@ -70,11 +116,68 @@ l10n:
 
 这个问题最直接的答案定义在规范中。弹性盒子是一维布局方法，而网格布局是二维布局方法。下面的示例使用了弹性布局。正如在[基本概念](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)文章中描述的那样，弹性元素允许换行，但是一旦这样做，每一行都会变成一个新的弹性容器。当空间被分配时，弹性盒子不会参考其他行中的元素的位置，而只是将元素彼此对齐。
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/flex-layout.html", '100%', 750)}}
+```html live-sample___flex-layout
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css live-sample___flex-layout
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+  flex: 1 1 200px;
+}
+```
+
+{{EmbedLiveSample("flex-layout", "", "300px")}}
 
 如果我们使用网格布局创建一个非常相似的布局，我们可以控制行和列的布局。
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/grid-layout.html", '100%', 700)}}
+```html live-sample___grid-layout
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+</div>
+```
+
+```css live-sample___grid-layout
+.box {
+  border: 2px dotted rgb(96 139 168);
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 1em;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("grid-layout", "", "300px")}}
 
 这些示例指出了两个布局方法之间的另一个关键区别。在网格布局中，你需要在容器上设置大部分尺寸规范，设置轨道然后将元素放入其中。在弹性盒子中，虽然你创建了弹性容器并设置了该级别的方向，但是对元素大小的任何控制都需要在元素本身之上进行。
 
@@ -103,6 +206,37 @@ l10n:
 
 此外，删除了盒子后，你就无法使用它来——例如——为嵌套的子元素添加背景色。如果你在该实时示例中删除 `display: contents`，你会看到我们要删除属性的元素的直接子元素的背景色为橙色。当盒子消失时，这个背景色也会消失。
 
-{{EmbedGHLiveSample("css-examples/flexbox/relationship/display-contents.html", '100%', 650)}}
+```html live-sample___display-contents
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="nested">
+    <div>Sub-item 1</div>
+    <div>Sub-item 2</div>
+  </div>
+</div>
+```
+
+```css live-sample___display-contents
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  padding: 1em;
+  background-color: rgb(96 139 168 / 0.2);
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  padding: 1em;
+  display: flex;
+}
+
+.nested {
+  background-color: orange;
+  display: contents;
+}
+```
+
+{{EmbedLiveSample("display-contents")}}
 
 浏览器对 `display:contents` 的支持是有限的，这个示例需要相应支持才能正常工作。Firefox 已经支持了 `display: contents`，而 Chrome 正在实现该值。一旦有了更好的浏览器支持，这个特性在需要语义标记但又不想显示默认生成的盒子的情况下将非常有用。

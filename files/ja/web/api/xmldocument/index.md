@@ -23,14 +23,14 @@ _また、 {{DOMxRef("Document")}} からメソッドを継承します。_
 - {{DOMxRef("XMLDocument.load()")}} {{Non-standard_Inline}} {{Deprecated_Inline}}
   - : XML ドキュメントをロードします。
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 
-## ブラウザー実装状況
+## ブラウザーの互換性
 
 {{Compat}}
 
 ## 関連項目
 
-- [The DOM interfaces index.](/ja/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/ja/docs/Web/API/Document_Object_Model)

@@ -66,7 +66,7 @@ Votre JavaScript doit:
 - Associer un gestionnaire d'événement `onclick` à chaque `<img>` à l'intérieur de `thumb-bar <div>` pour que, lorsqu'elles sont cliquées, l'image correspondante soit affichée dans l'élément `displayed-img <img>`.
 - Associer un gestionnaire d'événement `onclick` au `<button>` pour que, lorsqu'il est cliqué, un effet assombrissant soit appliqué à l'image grandeur nature. Losrqu'il est cliqué à nouveau, l'effet doit disparaitre.
 
-Pour vous donner une idée, regardez l'[exemple](http://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (Ne regardez pas le code source!).
+Pour vous donner une idée, regardez l'[exemple](https://mdn.github.io/learning-area/javascript/building-blocks/gallery/) (Ne regardez pas le code source!).
 
 ## Les différentes étapes
 

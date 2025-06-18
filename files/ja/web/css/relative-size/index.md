@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<relative-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、相対サイズのキーワードを記述します。 `<relative-size>` キーワードは、親要素の計算サイズからの相対サイズを定義します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
+**`<relative-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、相対サイズのキーワードを記述します。 `<relative-size>` キーワードは、親要素の計算サイズからの相対サイズを定義します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
 
 ## 構文
 
@@ -35,7 +35,7 @@ l10n:
 
 ### キーワード値の比較
 
-```html
+```html live-sample___comparing_the_keyword_values
 <ul>
   <li class="smaller">font-size: smaller;</li>
   <li>font-size が指定されていない</li>
@@ -43,7 +43,7 @@ l10n:
 </ul>
 ```
 
-```css
+```css live-sample___comparing_the_keyword_values
 li {
   margin-bottom: 0.3em;
 }
@@ -57,7 +57,7 @@ li {
 
 #### 結果
 
-{{EmbedLiveSample('キーワード値の比較', '100%', 100)}}
+{{EmbedLiveSample('Comparing the keyword values', '100%', 100)}}
 
 ## 仕様書
 

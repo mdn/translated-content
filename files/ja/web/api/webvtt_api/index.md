@@ -79,9 +79,7 @@ WebVTTの最も重要な機能は、ファイル形式またはウェブ API を
 次の例では、新しい {{domxref("TextTrack")}} を動画に追加し、{{domxref("TextTrack.addCue()")}} メソッドを使用して、作成した `VTTCue` オブジェクトを引数としてキューを追加しています。
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -178,9 +176,7 @@ video {
 ```
 
 ```html
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### CSS
@@ -247,9 +243,7 @@ video {
 ```
 
 ```html hidden
-<video
-  controls
-  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/friday.mp4"></video>
+<video controls src="/shared-assets/videos/friday.mp4"></video>
 ```
 
 #### タグ種別によるスタイル設定

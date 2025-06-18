@@ -263,7 +263,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
+非同期的なハンドラーがプロミスを返さない場合、明示的にプロミスを作ることができます。これは少し不自然な例ですが、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) を使って 1 秒の遅延を発生させた後に応答を返します。
 
 ```js
 // background-script.js

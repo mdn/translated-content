@@ -32,7 +32,7 @@ window.scrollByPages(-1);
 
 ### Notas
 
-Veja também [window.scrollBy](/pt-BR/DOM/window.scrollBy), [window.scrollByLines](/pt-BR/DOM/window.scrollByLines), [window.scroll](/pt-BR/DOM/window.scroll), [window.scrollTo](/pt-BR/DOM/window.scrollTo).
+Veja também [window.scrollBy](/pt-BR/docs/DOM/window.scrollBy), [window.scrollByLines](/pt-BR/docs/DOM/window.scrollByLines), [window.scroll](/pt-BR/docs/DOM/window.scroll), [window.scrollTo](/pt-BR/docs/DOM/window.scrollTo).
 
 ### Specification
 

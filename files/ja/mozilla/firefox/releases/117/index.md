@@ -19,7 +19,7 @@ l10n:
 
 - [CSS Nesting](/ja/docs/Web/CSS/CSS_nesting) モジュールと [`&` ネスティングセレクター](/ja/docs/Web/CSS/Nesting_selector) を Firefox でサポートしました。これは入れ子になった CSS を開発者が書くことを可能にして、CSS スタイルシートの可読性、モジュール性、保守性の向上に役立ちます。また、CSS のファイルサイズの縮小に役立つ可能性もあり、ダウンロードサイズも削減します。([Firefox bug 1835066](https://bugzil.la/1835066)、[Firefox bug 1840781](https://bugzil.la/1840781))
 
-- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#values) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
+- [`math-style`](/ja/docs/Web/CSS/math-style) および [`math-depth`](/ja/docs/Web/CSS/math-depth) プロパティをサポートしました。また、[`font-size`](/ja/docs/Web/CSS/font-size#値) プロパティの値 `math` もサポートしました ([Firefox bug 1845516](https://bugzil.la/1845516))。
 
 - [`contain-intrinsic-size: auto none`](/ja/docs/Web/CSS/contain-intrinsic-size) の構文をサポートしました。これは、可能であれば最後に記憶した要素のサイズを使用しますが、それ以外の場合は `contain-intrinsic-size: none` にフォールバックすることができます。
   これはグリッドや段組みのレイアウトで、要素を高さ 0px の代わりに、内容物がないかのようにレイアウトすることに役立ちます ([Firefox bug 1835813](https://bugzil.la/1835813))。
@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
   `script-src` が提供されていないときに代替として `default-src` ディレクティブの値を使用することで、動作が仕様書に合致するようになりました ([Firefox bug 1313937](https://bugzil.la/1313937))。
 
 - `Range` ヘッダーが、値が 1 バイトの範囲内である (例: `bytes=100-200`) 場合に [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header) になります。
@@ -63,7 +63,7 @@ l10n:
 
 ### Developer tools
 
-- ネットワークモニターでプロキシを経由した要求の情報を表示するようになりました。プロキシのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
+- ネットワークモニターでプロキシーを経由した要求の情報を表示するようになりました。プロキシーのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
 
 - [計測ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で選択した領域をキーボードショートカットでリサイズおよび移動できるようになりました。
   矢印キーを押すと選択した領域の移動、<kbd>Ctrl</kbd> + 矢印キー (Mac では <kbd>Cmd</kbd> + 矢印キー) を押すと選択した領域のリサイズになります。

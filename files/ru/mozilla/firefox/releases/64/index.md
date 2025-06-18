@@ -11,19 +11,19 @@ slug: Mozilla/Firefox/Releases/64
 
 ### Инструменты разработчика
 
-- [Информационная панель в инструменте поддержки доступности](/ru/docs/Tools/Accessibility_inspector#Выделение_элементов_интерфейса) теперь показывает сведения о соотношении контрастности цветов текста или изображений на странице ([Firefox bug 1473037](https://bugzil.la/1473037)).
-- Выбор устройства в [режиме адаптивного дизайна](/ru/docs/Tools/Responsive_Design_Mode) запоминается и сохраняется между сеансами ([Firefox bug 1248619](https://bugzil.la/1248619)).
-- [Сетевой монитор](/ru/docs/Tools/Network_Monitor) теперь выделяет ресурсы, на которые потенциально может повлиять [защита от отслеживания](/ru/docs/Mozilla/Firefox/Privacy/Tracking_Protection) ([Firefox bug 1333994](https://bugzil.la/1333994)).
-- [Веб-консоль](/ru/docs/Tools/Web_Console) получила усовершенствования, связанные с вводом и оценкой кода:
+- [Информационная панель в инструменте поддержки доступности](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html#выделение_элементов_интерфейса) теперь показывает сведения о соотношении контрастности цветов текста или изображений на странице ([Firefox bug 1473037](https://bugzil.la/1473037)).
+- Выбор устройства в [режиме адаптивного дизайна](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) запоминается и сохраняется между сеансами ([Firefox bug 1248619](https://bugzil.la/1248619)).
+- [Сетевой монитор](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) теперь выделяет ресурсы, на которые потенциально может повлиять [защита от отслеживания](/ru/docs/Web/Privacy/Firefox_tracking_protection) ([Firefox bug 1333994](https://bugzil.la/1333994)).
+- [Веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) получила усовершенствования, связанные с вводом и оценкой кода:
 
-  - Регистронезависимое [автодополнение](/ru/docs/Tools/Web_Console/The_command_line_interpreter#Autocomplete) выражений ([Firefox bug 672733](https://bugzil.la/672733)).
-  - Возможность просмотреть [историю выражений консоли](/ru/docs/Tools/Web_Console/The_command_line_interpreter#Command_history) с помощью bash-подобного обратного поиска ([Firefox bug 1024913](https://bugzil.la/1024913)).
-  - Подсветка [оценённого кода](/ru/docs/Tools/Web_Console/The_command_line_interpreter) и при вводе, и при выводе ([Firefox bug 1463669](https://bugzil.la/1463669)).
+  - Регистронезависимое [автодополнение](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) выражений ([Firefox bug 672733](https://bugzil.la/672733)).
+  - Возможность просмотреть [историю выражений консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) с помощью bash-подобного обратного поиска ([Firefox bug 1024913](https://bugzil.la/1024913)).
+  - Подсветка [оценённого кода](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) и при вводе, и при выводе ([Firefox bug 1463669](https://bugzil.la/1463669)).
 
-- Пошаговое выполнение кода в [отладчике JavaScript](/ru/docs/Tools/Debugger) также было улучшено:
+- Пошаговое выполнение кода в [отладчике JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) также было улучшено:
 
-  - Отладчик сохраняет [развёрнутые переменные](/ru/docs/Tools/Debugger/UI_Tour#Scopes) при пошаговом выполнении кода ([Firefox bug 1491471](https://bugzil.la/1491471)).
-  - [Выход из функции](/ru/docs/Tools/Debugger/How_to/Step_through_code) пропускает возвращаемое значение ([Firefox bug 923975](https://bugzil.la/923975)).
+  - Отладчик сохраняет [развёрнутые переменные](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#scopes) при пошаговом выполнении кода ([Firefox bug 1491471](https://bugzil.la/1491471)).
+  - [Выход из функции](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) пропускает возвращаемое значение ([Firefox bug 923975](https://bugzil.la/923975)).
 
 #### Удалено
 
@@ -35,7 +35,7 @@ _Без изменений._
 
 ### CSS
 
-- Включена по умолчанию поддержка [полос прокрутки CSS](/ru/docs/Web/CSS/CSS_Scrollbars) ([Firefox bug 1492012](https://bugzil.la/1492012)).
+- Включена по умолчанию поддержка [полос прокрутки CSS](/ru/docs/Web/CSS/CSS_scrollbars_styling) ([Firefox bug 1492012](https://bugzil.la/1492012)).
 - Реализована поддержка Interaction Media Features, включающая [`pointer:coarse`](/ru/docs/Web/CSS/@media/pointer) ([Firefox bug 1035774](https://bugzil.la/1035774)). Подробности реализации [`any-pointer`](/ru/docs/Web/CSS/@media/any-pointer) и [`any-hover`](/ru/docs/Web/CSS/@media/any-hover) см в [Firefox bug 1483111](https://bugzil.la/1483111).
 - Android-версия обзавелась поддержкой [`prefers-reduced-motion`](/ru/docs/Web/CSS/@media/prefers-reduced-motion) ([Firefox bug 1478505](https://bugzil.la/1478505)).
 - Значения {{cssxref("&lt;gradient&gt;")}} теперь поддерживают мультипозиционный синтаксис остановки цвета, например, `yellow 25%, yellow 50%` можно записать в виде `yellow 25% 50%` ([Firefox bug 1352643](https://bugzil.la/1352643)).
@@ -50,7 +50,7 @@ _Без изменений._
 
 - Нестандартные значения [`-moz-box` и `-moz-inline-box`](/ru/docs/Mozilla/Gecko/Chrome/CSS/display-xul) {{CSSxRef("display")}} скрыты от веб-содержимого ([Firefox bug 1496961](https://bugzil.la/1496961)).
 - Нестандартные [псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) {{CSSxRef("::-moz-tree")}} скрыты от веб-содержимого ([Firefox bug 1496961](https://bugzil.la/1496961)).
-- Удалена настройка `layout.css.filters.enabled`; [CSS-фильтры](/ru/docs/Web/CSS/Filter_Effects) отныне нельзя отключить ([Firefox bug 1408841](https://bugzil.la/1408841)).
+- Удалена настройка `layout.css.filters.enabled`; [CSS-фильтры](/ru/docs/Web/CSS/CSS_filter_effects) отныне нельзя отключить ([Firefox bug 1408841](https://bugzil.la/1408841)).
 - Отменено ([Firefox bug 1492567](https://bugzil.la/1492567)) изменение, сделанное в прошлом выпуске — перемена мест значений {{cssxref("overflow")}} ([Firefox bug 1481866](https://bugzil.la/1481866)). См. [причину](https://bugzilla.mozilla.org/show_bug.cgi?id=1481866#c14).
 
 ### SVG
@@ -149,7 +149,7 @@ _Без изменений._
 
 #### API devtools.panels
 
-- Реализована поддержка метода `Sidebar.setPage()` [`devtools.panels.elements`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/devtools.panels/elements) ([Firefox bug 1398734](https://bugzil.la/1398734)).
+- Реализована поддержка метода `Sidebar.setPage()` [`devtools.panels.elements`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements) ([Firefox bug 1398734](https://bugzil.la/1398734)).
 
 ### Изменения манифеста
 

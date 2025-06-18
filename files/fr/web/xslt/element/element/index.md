@@ -33,7 +33,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 7.1.2](http://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element).
+[XSLT 1.0, section 7.1.2](https://www.w3.org/TR/xslt#section-Creating-Elements-with-xsl:element).
 
 ### Support Gecko
 

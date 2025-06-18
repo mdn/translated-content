@@ -7,7 +7,7 @@ slug: Glossary/Accessibility_tree
 
 El **árbol de accesibilidad** o **modelo de objeto de accesibillidad (AOM)**, contiene información relacionada con {{Glossary("accessibility")}} para la mayoría de los elementos HTML.
 
-Los navegadores convierten el lenguaje markup en una representación interna denominada _[DOM tree](/es/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree)_ (árbol DOM). El árbol DOM contiene objetos para todos los elementos de markup, atributos y nodos de texto. Luego, los navegadores crean un árbol de accesibilidad basado en el árbol de DOM, el cual es usado por Accessibility APIs de plataformas específicas para las tecnologías asistenciales como los lectores de pantalla.
+Los navegadores convierten el lenguaje markup en una representación interna denominada _[DOM tree](/es/docs/conflicting/Web/API/Document_Object_Model/Using_the_Document_Object_Model)_ (árbol DOM). El árbol DOM contiene objetos para todos los elementos de markup, atributos y nodos de texto. Luego, los navegadores crean un árbol de accesibilidad basado en el árbol de DOM, el cual es usado por Accessibility APIs de plataformas específicas para las tecnologías asistenciales como los lectores de pantalla.
 
 Hay cuatro elementos en un árbol de objeto de accesibilidad:
 

@@ -11,7 +11,7 @@ slug: Web/API/EventTarget/dispatchEvent
 
 > **참고:** `dispatchEvent()` 사용 시, {{domxref("Event.target")}} 속성은 현재 `EventTarget`으로 초기화됩니다.
 
-브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/EventLoop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
+브라우저가 발송하는 "네이티브" 이벤트는 [이벤트 루프](/ko/docs/Web/JavaScript/Event_loop)를 통해 비동기적으로 처리기들을 호출하지만, `dispatchEvent()`로 발송된 이벤트는 처리기를 동기적으로 호출합니다. 즉, 모든 적합한 처리기의 호출과 반환이 끝나야 `dispatchEvent()` 역시 반환합니다.
 
 ## 구문
 

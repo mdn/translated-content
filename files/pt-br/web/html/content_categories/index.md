@@ -28,13 +28,13 @@ Elementos pertencentes a categoria de conteúdo de fluxo tipicamente contém tex
 Alguns outros elementos pertencem a essa categoria, mas somente se uma condição específica é realizada:
 
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
-- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
-- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/HTML/Global_attributes#itemprop)** estiver presente
+- {{HTMLElement("link")}}, se o atributo **[itemprop](/pt-BR/docs/Web/HTML/Global_attributes#itemprop)** estiver presente
+- {{HTMLElement("meta")}}, se o atributo **[itemprop](/pt-BR/docs/Web/HTML/Global_attributes#itemprop)** estiver presente
 - {{HTMLElement("style")}}, se o atributo [`scoped`](/pt-BR/docs/Web/HTML/Element/style#scoped) estiver presente
 
 ### Conteúdo de seccionamento
 
-Os elementos pertencentes ao modelo de conteúdo de seccionamento criam uma [seção no esboço atual](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document) que define o escopo dos elementos {{HTMLElement("header")}}, elementos {{HTMLElement("footer")}} e na [conteúdo do cabeçalho](#Heading_content).
+Os elementos pertencentes ao modelo de conteúdo de seccionamento criam uma [seção no esboço atual](/pt-BR/docs/Sections_and_Outlines_of_an_HTML5_document) que define o escopo dos elementos {{HTMLElement("header")}}, elementos {{HTMLElement("footer")}} e na [conteúdo do cabeçalho](#heading_content).
 
 Elementos pertencentes a essa categoria são {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("nav")}} e {{HTMLElement("section")}}.
 
@@ -43,7 +43,7 @@ Elementos pertencentes a essa categoria são {{HTMLElement("article")}}, {{HTMLE
 
 ### Conteúdo do cabeçalho
 
-O conteúdo do cabeçalho define o título de uma seção, se é marcada por um explícito elemento do [conteúdo de seccionamento](#Sectioning_content) ou implicitamente definido pelo próprio conteúdo do cabeçalho.
+O conteúdo do cabeçalho define o título de uma seção, se é marcada por um explícito elemento do [conteúdo de seccionamento](#sectioning_content) ou implicitamente definido pelo próprio conteúdo do cabeçalho.
 
 Os elementos pertencentes a essa categoria são {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}} e {{HTMLElement("hgroup")}}.
 
@@ -62,9 +62,9 @@ Alguns outros elementos pertencem a essa categoria, mas somente se uma condiçã
 - {{HTMLElement("area")}}, se for um descendente de um elemento {{HTMLElement("map")}}
 - {{HTMLElement("del")}}, se contém somente conteúdo fraseado
 - {{HTMLElement("ins")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
+- {{HTMLElement("link")}}, se o atributo [**itemprop**](/pt-BR/docs/Web/HTML/Global_attributes#itemprop) estiver presente
 - {{HTMLElement("map")}}, se contém somente conteúdo fraseado
-- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/HTML/Global_attributes#itemprop) estiver presente
+- {{HTMLElement("meta")}}, se o atributo [**itemprop**](/pt-BR/docs/Web/HTML/Global_attributes#itemprop) estiver presente
 
 ### Conteúdo embutido
 
@@ -99,7 +99,7 @@ O conteúdo associado ao **form** compreende elementos que têm um formulário d
 Essa categoria contém várias sub-categorias:
 
 - listed
-  - : Elementos que estão listados nas coleções IDL [form.elements](/pt-BR/docs/DOM/form.elements) e fieldset.elements. Contém {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
+  - : Elementos que estão listados nas coleções IDL [form.elements](/pt-BR/docs/Web/API/HTMLFormElement/elements) e fieldset.elements. Contém {{HTMLElement("button")}}, {{HTMLElement("fieldset")}}, {{HTMLElement("input")}}, {{HTMLElement("object")}}, {{HTMLElement("output")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
 - labelable
   - : Elementos que podem ser associados com elementos {{HTMLElement("label")}}. Contém {{HTMLElement("button")}}, {{HTMLElement("input")}}, {{HTMLElement("meter")}}, {{HTMLElement("output")}}, {{HTMLElement("progress")}}, {{HTMLElement("select")}} e {{HTMLElement("textarea")}}.
 - submittable

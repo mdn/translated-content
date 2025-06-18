@@ -94,5 +94,5 @@ var selectFormElement = document.forms[index].elements[index];
 
 ## Voir aussi
 
-- [Formulaires HTML](/fr/docs/Web/Guide/HTML/Formulaires)
+- [Formulaires HTML](/fr/docs/Learn/Forms)
 - {{HTMLElement("form")}} et l'interface {{domxref("HTMLFormElement")}}

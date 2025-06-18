@@ -69,7 +69,7 @@ moz-extension://<extension-UUID>/images/my-image.png"
 > [!NOTE]
 > Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
 
-L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
+L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
 
 ```js
 browser.runtime.getURL("images/my-image.png");

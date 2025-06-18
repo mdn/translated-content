@@ -2,14 +2,58 @@
 title: text-wrap-style
 slug: Web/CSS/text-wrap-style
 l10n:
-  sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
+  sourceCommit: 2a3911def06e1850e2b76907b3a42c688ee7a2bc
 ---
 
 {{CSSRef}}
 
-**`text-wrap-style`** は CSS プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
+**`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-{{EmbedInteractiveExample("pages/css/text-wrap-style.html")}}
+{{InteractiveExample("CSS Demo: text-wrap-style")}}
+
+```css interactive-example-choice
+text-wrap-style: auto;
+```
+
+```css interactive-example-choice
+text-wrap-style: balance;
+```
+
+```css interactive-example-choice
+text-wrap-style: pretty;
+```
+
+```css interactive-example-choice
+text-wrap-style: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## 構文
 
@@ -33,13 +77,15 @@ text-wrap-style: unset;
 ### 値
 
 - `auto`
-  - : テキストは行をまたがって折り返されません。改行されるのではなく、格納する要素からはみ出します。
+  - : テキストは、ブラウザーにとって最もパフォーマンスの高い方法で折り返され、文字数を考慮して導かれるわけではありません。
 - `balance`
   - : テキストは、各行の文字数を最適にバランスをとる方法で折り返され、レイアウトの品質と読みやすさが向上します。文字を数えて複数の行にまたがるようにバランスをとるのはコンピューターに負荷がかかるため、この値は限られた行数（Chromium では 6 行以下、Firefox では 10 行以下）のテキストブロックにのみ対応しています。
 - `pretty`
-  - : `wrap`と同じ動作になりますが、ユーザーエージェントは速度よりも優れたレイアウトを優先する遅いアルゴリズムを使用します。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
+  - : テキストは、速度よりも優れたレイアウトを優先する、より遅いアルゴリズムを使用して折り返されます。この例は、パフォーマンスよりも優れた組版が優先される本体コピーを意図しています（例えば、[オルファン](/ja/docs/Web/CSS/orphans)の数を最小に保つ必要がある場合など）。
 - `stable`
-  - : `wrap` と同じ動作になりますが、ユーザーがコンテンツを編集しているときに、テキストブロック全体が折り返されるのではなく、編集中の行よりも前の行が静止します。
+  - : テキストは、ユーザーがコンテンツを編集している際に、編集している行の前の行が固定され、テキスト全体が再配置されるのではなく、そのように折り返されます。
+
+> **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールでは、 `avoid-orphans` 値を `text-wrap-style` プロパティに定義すると、最終行が過度に短くなることを避け、改行の決定を行う際にユーザーエージェントが複数の行を考慮することを期待しています。この値は、現時点ではどのブラウザーでも対応していません。
 
 ## 解説
 
@@ -51,7 +97,7 @@ text-wrap-style: unset;
 
 テキストの長い区間では、`text-wrap-style: pretty` を使用することができます。 `pretty` はパフォーマンスにマイナスの効果があるので、速度よりもレイアウトが重要な場合にのみ、長いテキストブロックに使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
+`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手が改善されます。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前の行が安定したままであることを確実にします。
 
 ## 公式定義
 

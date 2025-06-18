@@ -31,7 +31,7 @@ Depois que você pré-visualizou suas mudanças, você deve querer salvar sua re
 
 ### Tags
 
-Você pode adicionar ou remover tags que descrevam o conteúdo da página. Veja [como adicionar tags às páginas corretamente](/pt-BR/docs/MDN/Contribute/guia/Como-marcar-as-paginas-corretamente) para mais informações em que as tags se aplicam.
+Você pode adicionar ou remover tags que descrevam o conteúdo da página. Veja [como adicionar tags às páginas corretamente](/pt-BR/docs/MDN/Writing_guidelines/Howto) para mais informações em que as tags se aplicam.
 
 ### Precisa de revisão?
 
@@ -106,7 +106,7 @@ Esse método é um pouco híbrido. Você pode criar um link em outra página, e 
 3. "/pt-BR/docs/" é inserido por padrão no começo do campo URL. Insira o nome da página depois de "/pt-BR/docs/". (O nome da página não tem de ser o mesmo texto do link).
 4. Clique em OK para criar e inserir o link.
 
-Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o [guia para nomear páginas](/pt-BR/docs/MDN/Contribute/Content/Style_guide).
+Se a página já não existir, o link é mostrado em vermelho. Se a página já existir, o link é mostrado em azul. Se você quiser criar uma nova página mas o título da página que você quer já estiver sendo usado, verifique primeiro se não faz mais sentido ajudar a editar o conteúdo existente. Senão, pense num título diferente para sua nova página e crie um link para ela. Veja o [guia para nomear páginas](/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide).
 
 Para adicionar conteúdo para sua nova página, clique no link vermelho que você acabou de criar (depois de salvar e fechar o editor). A nova página abre no modo de edição, assim você pode começar a editar o conteúdo. Veja a sessão "[Editando uma página existente](<#Editando uma págia existente>)" nesse artigo para ver como usar o editor.
 
@@ -120,4 +120,4 @@ O suporte do MDN para macros KumaScript e transclusão de conteúdo de uma pági
 ## Veja também
 
 - [Guia do editor do MDN](/pt-BR/docs/MDN/Contribute/Editor)
-- [Guia de estilos do MDN](/pt-BR/docs/MDN/Contribute/Content/Style_guide)
+- [Guia de estilos do MDN](/pt-BR/docs/MDN/Writing_guidelines/Writing_style_guide)

@@ -7,7 +7,7 @@ slug: Web/CSS/font-weight
 
 ## 요약
 
-**`font-weight`** [CSS](/ko/docs/CSS) 속성은 폰트(font)의 가중치(weight)나 굵기(boldness)를 명시한다. 몇몇 폰트들은 `normal` 나 `bold` 일 때만 가능하다.
+**`font-weight`** [CSS](/ko/docs/Web/CSS) 속성은 폰트(font)의 가중치(weight)나 굵기(boldness)를 명시한다. 몇몇 폰트들은 `normal` 나 `bold` 일 때만 가능하다.
 
 {{cssinfo}}
 

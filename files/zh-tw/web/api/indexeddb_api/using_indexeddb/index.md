@@ -9,7 +9,7 @@ IndexedDB 提供了在瀏覽器上儲存保留資料的功能，藉由它，不�
 
 ## 關於本文
 
-本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/zh-TW/docs/IndexedDB/Basic_Concepts_Behind_IndexedDB)。
+本文會帶領各位操作非同步 IndexedDB 的 API，如果不知道甚麼是 IndexedDB，請先看看["IndexedDB 基本礎念"](/zh-TW/docs/Web/API/IndexedDB_API/Basic_Terminology)。
 
 ## 基本操作步驟
 
@@ -70,9 +70,9 @@ var request = window.indexedDB.open("MyTestDatabase", 3);
 
 注意到了嗎，開啟資料庫必須要進行請求。
 
-開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/IndexedDB/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/IndexedDB/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
+開啟請求並不會立刻開啟資料庫或交易，呼叫 open()方法會回傳一個[`IDBOpenDBRequest`](/zh-TW/docs/Web/API/IDBOpenDBRequest)物件，這個物件擁有兩個事件(success 和 error)。大部分 IndexedDB 的非同步功能都會回傳一個[`IDBDatabase`](/zh-TW/docs/Web/API/IDBDatabase)類物件，然後我們可以註冊成功和失敗事件處理器。
 
-Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#Updating_the_version_of_the_database)有更詳細的說明。
+Open 方法第二個參數是資料庫版本，資料庫版本決定了資料庫結構，也就是資料庫物件存檔的結構。如果請求版本不存在(比如因為這是一個新資料庫或是資料庫版本已升級)，onupgradeneeded 事件會被觸發，然後我們可以在 onupgradeneeded 事件處理器中再建立新的版本，下面[升級資料庫版本](#updating_the_version_of_the_database)有更詳細的說明。
 
 #### 產生事件處理器
 
@@ -208,7 +208,7 @@ request.onupgradeneeded = function (event) {
 
 本例還創建一個稱為"name"的索引，"name"索引查找目標為資料的"name"屬性，且不設立其獨特旗標(unique 為 false)，同樣地，我們又呼叫[createIndex](</zh-TW/docs/Web/API/IDBObjectStore?redirectlocale=en-US&redirectslug=IndexedDB%2FIDBObjectStore#createIndex()>)方法創建了一個"email"索引，不過"email"索引具備獨特旗標(unique 為 true)。雖然存在"name"索引，但資料不一定要含有"name"屬性，只是當搜索"name"索引時資料不會出現。
 
-接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料(請參考[使用索引](/zh-TW/docs/IndexedDB/Using_IndexedDB#.E4.BD.BF.E7.94.A8.E7.B4.A2.E5.BC.95))。
+接下來我們可以開始用 ssn 從物件存檔中取出資料，或是用索引找出資料（請參考[使用索引](#使用索引)）。
 
 ### 使用資料鍵產生器
 
@@ -515,7 +515,7 @@ function useDatabase(db) {
 
 ## 安全性
 
-IndexedDB 遵守[同源政策](/zh-TW/docs/Web/JavaScript/Same_origin_policy_for_JavaScript)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
+IndexedDB 遵守[同源政策](/zh-TW/docs/Web/Security/Same-origin_policy)，所以它綁定創建它的來源網站，其他來源網站無法存取。就像對載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁的第三方 cookie 所設下的安全性和隱私權考量限制，IndexedDB 無法在載入 {{ HTMLElement("frame") }} 和 {{ HTMLElement("iframe") }} 網頁上運作，詳情請見 [Firefox bug 595307](https://bugzil.la/595307)。
 
 ## 瀏覽器關閉風險
 
@@ -1224,7 +1224,7 @@ input {
 
 ## 下一步
 
-請參考[IndexedDB 文件](/zh-TW/docs/IndexedDB)，看看有甚麼 IndexedDB API 可供使用，實際試玩一下吧。
+請參考[IndexedDB 文件](/zh-TW/docs/Web/API/IndexedDB_API)，看看有甚麼 IndexedDB API 可供使用，實際試玩一下吧。
 
 ## 延伸閱讀
 

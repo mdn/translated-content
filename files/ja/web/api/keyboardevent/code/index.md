@@ -155,7 +155,7 @@ function updatePosition(offset) {
 }
 ```
 
-`refresh()` 関数は [SVG の transform](/ja/docs/Web/SVG/Attribute/transform) を使用して、向きと位置を適用する処理を行います。
+`refresh()` 関数は [SVG の transform](/ja/docs/Web/SVG/Reference/Attribute/transform) を使用して、向きと位置を適用する処理を行います。
 
 ```js
 function refresh() {

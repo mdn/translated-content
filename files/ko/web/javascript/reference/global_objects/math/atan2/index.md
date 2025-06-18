@@ -9,7 +9,22 @@ l10n:
 
 **`Math.atan2()`** 정적 메서드는 `Math.atan2(y, x)`에 대해 양의 x축과 (0, 0)에서 (x, y)점까지의 광선 사이의 평면 각도(라디안 단위)를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-atan2.html")}}
+{{InteractiveExample("JavaScript Demo: Math.atan2()")}}
+
+```js interactive-example
+function calcAngleDegrees(x, y) {
+  return (Math.atan2(y, x) * 180) / Math.PI;
+}
+
+console.log(calcAngleDegrees(5, 5));
+// Expected output: 45
+
+console.log(calcAngleDegrees(10, 10));
+// Expected output: 45
+
+console.log(calcAngleDegrees(0, 10));
+// Expected output: 90
+```
 
 ## 구문
 

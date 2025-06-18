@@ -112,7 +112,7 @@ while (true) {
 
 ## 에러 핸들링
 
-네트워크 타임아웃 또는 [접근 제어](/ko/docs/HTTP/Access_control_CORS)와 관련된 문제 등 문제가 발생할 때 에러 이벤트가 생성됩니다. `EventSource` 객체에 `onerror` 콜백을 구현하여 프로그래밍적으로 이를 처리할 수 있습니다.
+네트워크 타임아웃 또는 [접근 제어](/ko/docs/Web/HTTP/CORS)와 관련된 문제 등 문제가 발생할 때 에러 이벤트가 생성됩니다. `EventSource` 객체에 `onerror` 콜백을 구현하여 프로그래밍적으로 이를 처리할 수 있습니다.
 
 ```js
 evtSource.onerror = function (e) {

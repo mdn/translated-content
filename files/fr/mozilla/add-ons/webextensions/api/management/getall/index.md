@@ -9,9 +9,9 @@ Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "Exte
 
 Notez que Google Chrome récupère les applications ainsi que les modules complémentaires. Dans Chrome vous pouvez distinguer les applications des extensions en utilisant la propriété `type` de {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.
 
-Cette API requiert la [permission de l'API](/fr/Add-ons/WebExtensions/manifest.json/permissions) de "management"
+Cette API requiert la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -25,7 +25,7 @@ None.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera rempli avec un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installée.
 
 ## Compatibilité des navigateurs
 

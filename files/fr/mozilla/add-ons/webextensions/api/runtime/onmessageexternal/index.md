@@ -58,7 +58,7 @@ Les événements ont trois fonctions:
         To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
 
         - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
-        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
+        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
 
 ## Compatibilité des navigateurs
 

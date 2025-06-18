@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/sort
 
 {{JSRef}}
 
-**`sort()`** 메서드는 _적소에_ 형식화 배열의 요소를 정렬하여 그 형식화 배열을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.sort()")}}_와 같은 알고리즘입니다._ *TypedArray*는 여기 [형식화 배열 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects) 중 하나입니다.
+**`sort()`** 메서드는 _적소에_ 형식화 배열의 요소를 정렬하여 그 형식화 배열을 반환합니다. 이 메서드는 {{jsxref("Array.prototype.sort()")}}_와 같은 알고리즘입니다._ *TypedArray*는 여기 [형식화 배열 유형](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 중 하나입니다.
 
 ## 구문
 

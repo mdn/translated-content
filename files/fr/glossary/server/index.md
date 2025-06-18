@@ -15,5 +15,5 @@ Les serveurs les plus courants sur les réseaux locaux sont les serveurs de fich
 
 ### Culture générale
 
-- [Introduction aux serveurs](/fr/Apprendre/Qu_est-ce_qu_un_serveur_web)
+- [Introduction aux serveurs](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - [Serveur informatique](https://fr.wikipedia.org/wiki/Serveur_informatique) sur Wikipédia

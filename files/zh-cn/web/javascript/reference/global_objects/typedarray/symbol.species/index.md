@@ -15,7 +15,7 @@ TypedArray[Symbol.species]
 
 ## 描述
 
-`species` 访问器属性返回[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#TypedArray_objects)对象的构造函数。子类的构造函数可能会覆盖它来修改构造函数的赋值。
+`species` 访问器属性返回[类型化数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)对象的构造函数。子类的构造函数可能会覆盖它来修改构造函数的赋值。
 
 ## 示例
 

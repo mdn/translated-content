@@ -99,7 +99,7 @@ p {
 ### 结果
 
 > [!NOTE]
-> 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。你可以找到一些免费版本进行测试，例如从 [fontsgeek.com](http://fontsgeek.com/fonts/Leitura-Display-Swashes).
+> 你需要安装 OpenType 字体 _Leitura Display Swashes_ 才能使这个例子正常运行。你可以找到一些免费版本进行测试，例如从 [fontsgeek.com](https://fontsgeek.com/fonts/Leitura-Display-Swashes).
 
 {{ EmbedLiveSample('示例') }}
 

@@ -1,15 +1,17 @@
 ---
-title: 段組みにおける内容物の分割の扱い
+title: 段組みにおけるコンテンツの分割の処理
 slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
+l10n:
+  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
 ---
 
 {{CSSRef}}
 
-段組みレイアウトでは、段ボックス間で、ページ付きメディアのページ間と同様に内容が分割されます。どちらのコンテキストでも、 CSS 断片化仕様書のプロパティを用いて、どのように内容を分割するかを制御します。このガイドでは、段組みで断片化がどのように動作するかを見てみます。
+段組みレイアウトでは、段ボックス間で、ページメディアのページ間と同様に内容が分割されます。どちらのコンテキストでも、 [CSS 断片化](/ja/docs/Web/CSS/CSS_fragmentation)モジュールのプロパティを用いて、どのようにコンテンツを分割するかを制御します。このガイドでは、段組みで断片化がどのように動作するかを見てみます。
 
 ## 断片化の基本
 
-[CSS Fragmentation specification](https://www.w3.org/TR/css-break-3/) は、断片化コンテナー (_fragmentainer_) 間でどのように内容を分割するかを詳述しています。段組みでは、断片化コンテナーは段ボックスです。
+CSS 断片化モジュールは、コンテンツが断片化コンテナー（またはフラグメンテナー）間でどのように分割されるかについて詳しく説明しています。一方、[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュールは、段内および段間で制御を行う {{cssxref("break-after")}}, {{cssxref("break-before")}}, {{cssxref("break-inside")}} プロパティを定義しています。段組みレイアウトでは、段ボックスは断片化コンテナーとなります。
 
 段ボックスは他のマークアップを含むことができ、できれば分割したくない場所がたくさんあります。例えば、ふつうは画像のキャプションは参照する画像と別な段に分割されないほうが望ましく、見出しが段の最後にあるのも変です。断片化プロパティはこれをいくらか制御するための方法を提供します。
 
@@ -31,7 +33,47 @@ slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
 
 以下の例では、 break-inside を figure 要素に適用して、キャプションと画像が分割されることを防ぎます。
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-inside.html", '100%', 800)}}
+```html live-sample___break-inside
+<div class="container">
+  <figure>
+    <img
+      alt="Multiple hot air balloons in a clear sky, a crowd of spectators gather in the foreground."
+      src="https://mdn.github.io/shared-assets/images/examples/balloons.jpg" />
+    <figcaption>Balloons</figcaption>
+  </figure>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+  </p>
+</div>
+```
+
+```css live-sample___break-inside
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+figure {
+  margin: 0;
+  break-inside: avoid;
+}
+figcaption {
+  font-weight: bold;
+  border-bottom: 2px solid #999;
+}
+.container {
+  column-width: 200px;
+}
+```
+
+{{EmbedLiveSample("break-inside", "", "230px")}}
 
 ## ボックスの前後の分割
 
@@ -44,20 +86,74 @@ slug: Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout
 
 次の例では、 `h2` 要素の前で強制的に改段しています。
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/break-before.html", '100%', 800)}}
+```html live-sample___break-before
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon.
+  </p>
+  <h2>My heading</h2>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce.</p>
+</div>
+```
+
+```css live-sample___break-before
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+}
+
+h2 {
+  break-before: column;
+}
+```
+
+{{EmbedLiveSample("break-before", "", "250px")}}
 
 ## 行間での分割
 
-{{cssxref("orphans")}} および {{cssxref("widows")}} プロパティも便利です。 orphans プロパティは、断片の末尾に残る行数を制御します。 widows プロパティは、断片の先頭に残る行数を制御します。
+{{cssxref("orphans")}} および {{cssxref("widows")}} プロパティも便利です。 `orphans` プロパティは、断片の末尾に残る行数を制御します。 `widows` プロパティは、断片の先頭に残る行数を制御します。
 
-`orphans` および `widows` プロパティは整数値を取り、断片のそれぞれ末尾および先頭の行数に残す行数を表します。なお、これらのプロパティは段落などのブロックコンテナー内でのみ動作します。ブロックの行数が値で指定された数より少なかった場合、すべての行が一緒に保持されます。
+`orphans` および `widows` プロパティは{{CSSXref("integer", "整数値")}}を取り、断片のそれぞれ末尾および先頭の行数に残す行数を表します。なお、これらのプロパティは段落などのブロックコンテナー内でのみ動作します。ブロックの行数が値で指定された数より少なかった場合、すべての行が一緒に保持されます。
 
 以下の例では、 `orphans` プロパティを用いて段の末尾に残す行数を制御しています。値を変更すると、内容を分割する効果を確認できます。
 
-{{EmbedGHLiveSample("css-examples/multicol/fragmentation/orphans.html", '100%', 800)}}
+```html live-sample___orphans
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce.</p>
+</div>
+```
+
+```css live-sample___orphans
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-width: 250px;
+  orphans: 3;
+}
+```
+
+{{EmbedLiveSample("orphans", "", "240px")}}
 
 ## 期待通りに動作しない場合
 
-内容の量が少なく、様々な方法で分割を制御しようとしている場合や、複数の要素があり、内容をどこかで分割する必要がある場合、常に意図する結果が得られるとは限りません。断片化の使用はある程度まで、常にブラウザーに対する提案であり、可能であればその方法で分割が制御されます。
-
-上記に加えて、これらのプロパティーに対するブラウザーの対応は若干まばらです。ここ MDN の個別のプロパティページにおける互換性データ表は、どのブラウザーがどの機能に対応しているかを確認するのに便利かもしれません。多くの場合、分割が制御できない代替策により、美しくなく分割されることが次善の策であり、レイアウトが崩れるよりましです。
+コンテンツの量が少なく、複数の要素の改行を制御しようとしている場合、コンテンツは必ずどこかで改行される必要があるので、意図したとおりの結果が常に得られるとは限りません。ある程度、断片化を使用することは、可能であればこの方法で改行を制御するよう、ブラウザーに提案することになります。意図した場所でコンテンツが改行されない場合、結果は乱雑になるかもしれませんが、コンテンツはユーザーに引き続き利用可能になります。

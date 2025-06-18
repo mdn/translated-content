@@ -9,7 +9,23 @@ slug: Web/JavaScript/Reference/Operators/Optional_chaining
 
 Таким образом, мы получаем более короткий и понятный код при обращении к вложенным по цепочке свойствам объекта, когда есть вероятность, что какое-то из них отсутствует.
 
-{{EmbedInteractiveExample("pages/js/expressions-optionalchainingoperator.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+
+```js interactive-example
+const adventurer = {
+  name: "Alice",
+  cat: {
+    name: "Dinah",
+  },
+};
+
+const dogName = adventurer.dog?.name;
+console.log(dogName);
+// Expected output: undefined
+
+console.log(adventurer.someNonExistentMethod?.());
+// Expected output: undefined
+```
 
 ## Синтаксис
 
@@ -62,7 +78,7 @@ let result = someInterface.customMethod?.();
 
 ### Работа с колбэк-функциями и обработчиками событий
 
-Если вы используете колбэк-функции или извлекаете методы объекта [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Разбор_объектов), Вы можете получить несуществующие значения, которые нельзя вызывать как функции до проверки на их существование. Используя оператор `?.`, вы можете избежать лишних проверок:
+Если вы используете колбэк-функции или извлекаете методы объекта [деструктурирующим присваиванием](/ru/docs/Web/JavaScript/Reference/Operators/Destructuring#разбор_объектов), Вы можете получить несуществующие значения, которые нельзя вызывать как функции до проверки на их существование. Используя оператор `?.`, вы можете избежать лишних проверок:
 
 ```js
 // С использованием ES2019
@@ -91,7 +107,7 @@ function doSomething(onContent, onError) {
 
 ### Опциональные последовательности в выражениях
 
-Вы также можете использовать оператор опциональной последовательности, когда обращаетесь к свойству с помощью [скобочной нотации](/ru/docs/Web/JavaScript/Reference/Operators/Property_Accessors#Скобочная_нотация):
+Вы также можете использовать оператор опциональной последовательности, когда обращаетесь к свойству с помощью [скобочной нотации](/ru/docs/Web/JavaScript/Reference/Operators/Property_accessors#%d0%a1%d0%ba%d0%be%d0%b1%d0%be%d1%87%d0%bd%d0%b0%d1%8f_%d0%bd%d0%be%d1%82%d0%b0%d1%86%d0%b8%d1%8f):
 
 ```js
 let nestedProp = obj?.["prop" + "Name"];

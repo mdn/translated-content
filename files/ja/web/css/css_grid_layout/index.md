@@ -2,7 +2,7 @@
 title: CSS グリッドレイアウト
 slug: Web/CSS/CSS_grid_layout
 l10n:
-  sourceCommit: 6e1e7200ae79f8f292a18ba2af2ee190d88cb7e8
+  sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
 {{CSSRef}}
@@ -15,7 +15,7 @@ l10n:
 
 次の例では、最小値 100 ピクセル、最大値 auto で作成された列を含む、3 つの行を表示します。要素は線ベースの配置に従ってグリッド上に配置されます。
 
-```css hidden
+```css hidden live-sample___basic_example
 * {
   box-sizing: border-box;
 }
@@ -27,7 +27,7 @@ l10n:
 .wrapper > div {
   border: 2px solid rgb(233 171 88);
   border-radius: 5px;
-  background-color: rgba(233 171 88 / 0.5);
+  background-color: rgb(233 171 88 / 50%);
   padding: 1em;
   color: #d9480f;
 }
@@ -35,7 +35,7 @@ l10n:
 
 ### HTML
 
-```html
+```html live-sample___basic_example
 <div class="wrapper">
   <div class="one">One</div>
   <div class="two">Two</div>
@@ -48,7 +48,7 @@ l10n:
 
 ### CSS
 
-```css
+```css live-sample___basic_example
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -81,7 +81,7 @@ l10n:
 }
 ```
 
-{{EmbedLiveSample("基本的な例", "100%", "460")}}
+{{EmbedLiveSample("Basic_example", "100%", "460")}}
 
 ## リファレンス
 
@@ -106,9 +106,6 @@ l10n:
 - {{CSSxRef("row-gap")}}
 - {{CSSxRef("column-gap")}}
 - {{CSSxRef("gap")}}
-- {{CSSxRef("masonry-auto-flow")}} {{Experimental_Inline}}
-- {{CSSxRef("align-tracks")}} {{Experimental_Inline}}
-- {{CSSxRef("justify-tracks")}} {{Experimental_Inline}}
 
 ### 関数
 
@@ -133,7 +130,7 @@ l10n:
 - [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
 - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 - [サブグリッド](/ja/docs/Web/CSS/CSS_grid_layout/Subgrid)
-- [メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout) {{Experimental_Inline}}
+- [メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)
 
 ## 仕様書
 
@@ -141,7 +138,7 @@ l10n:
 
 ## 関連情報
 
-- 用語集の用語:
+- 用語集:
   - [グリッド](/ja/docs/Glossary/Grid)
   - [グリッド線](/ja/docs/Glossary/Grid_Lines)
   - [グリッドトラック](/ja/docs/Glossary/Grid_Tracks)
@@ -151,8 +148,10 @@ l10n:
   - [グリッド軸](/ja/docs/Glossary/Grid_Axis)
   - [グリッド行](/ja/docs/Glossary/Grid_Row)
   - [グリッド列](/ja/docs/Glossary/Grid_Column)
-- [Grid by Example](https://gridbyexample.com/) - 使用例と動画チュートリアル集
-- [CSS Grid Reference - Codrops](https://tympanus.net/codrops/css_reference/grid/)
-- [CSS Grid Inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
-- [CSS Grid Playground](https://mozilladevelopers.github.io/playground/css-grid/)
-- [CSS Grid Garden](https://cssgridgarden.com) - CSS グリッドを学ぶためのゲーム
+- [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout)モジュール
+- [CSS 表示](/ja/docs/Web/CSS/CSS_display)モジュール
+- [Grid by example](https://gridbyexample.com/) - 使用例と動画チュートリアル集
+- [CSS grid reference](https://tympanus.net/codrops/css_reference/grid/) via Codrops
+- [CSS grid inspector - Firefox DevTools](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [CSS grid playground](https://mozilladevelopers.github.io/playground/css-grid/)
+- [CSS grid garden](https://cssgridgarden.com/) - CSS グリッドを学ぶためのゲーム

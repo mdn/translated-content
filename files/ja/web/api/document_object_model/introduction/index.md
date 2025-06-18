@@ -50,7 +50,7 @@ doc.nodeName # DOM property of document object
 p_list = doc.getElementsByTagName("para")
 ```
 
-ウェブで JavaScript を書くためにどのような技術が使われるのかについての詳細は、 [JavaScript 技術概要](/ja/docs/Web/JavaScript/JavaScript_technologies_overview)をご覧ください。
+ウェブで JavaScript を書くためにどのような技術が使われるのかについての詳細は、 [JavaScript 技術概要](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)をご覧ください。
 
 ## DOM へのアクセス
 

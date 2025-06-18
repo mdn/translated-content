@@ -38,7 +38,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `removeInfo`
-      - : [`object`](#removeInfo). Plus de détails sur l'élément supprimé.
+      - : [`object`](#removeinfo). Plus de détails sur l'élément supprimé.
 
 ## Objets supplémentaires
 

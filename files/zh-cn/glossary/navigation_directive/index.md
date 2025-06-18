@@ -11,7 +11,7 @@ l10n:
 
 导航指令不将 {{CSP("default-src")}} 指令作为回退机制。
 
-详见[导航指令](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy#导航指令)以获得完整列表。
+详见[导航指令](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#导航指令)以获得完整列表。
 
 ## 参见
 
@@ -21,8 +21,8 @@ l10n:
   - {{Glossary("Fetch directive", "Fetch 指令")}}
   - {{Glossary("Document directive", "文档指令")}}
   - {{Glossary("Reporting directive", "报告指令")}}
-  - [`block-all-mixed-content`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content)
-  - [`upgrade-insecure-requests`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests)
-  - [`trusted-types`](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy/trusted-types)
+  - [`block-all-mixed-content`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content)
+  - [`upgrade-insecure-requests`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests)
+  - [`trusted-types`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/trusted-types)
 
 - {{HTTPHeader("Content-Security-Policy")}}

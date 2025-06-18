@@ -39,7 +39,7 @@ votre variable devient une instance de l'objet `String`, et par conséquent poss
 
 **Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
 
-Entrez quelques exemples dans une console vierge. En voici une ci-dessous (vous pouvez aussi [ouvrir cette console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) dans un onglet ou une fenêtre séparés, ou utiliser la [console de développement du navigateur](/fr/docs/Learn/Common_questions/What_are_browser_developer_tools) si vous préférez).
+Entrez quelques exemples dans une console vierge. En voici une ci-dessous (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
 <!doctype html>

@@ -88,7 +88,7 @@ var isWebKit =
 
 #### Les fontes mathématiques
 
-Afin d'obtenir une bonne mise en page ou pour permettre différents mise en style, il est important d'avoir des fontes mathématiques disponibles. Vous pouvez ainsi fournir à vos visiteurs un lien vers les [Instructions sur les fontes de MDN](/fr/docs/Mozilla/MathML_Project/Fonts), de telle manière qu'ils puissent vérifier s'ils ont les fontes appropriées installées sur leur système ou non. Il est tout aussi bon de prévoir une alternative avec les fontes Web.
+Afin d'obtenir une bonne mise en page ou pour permettre différents mise en style, il est important d'avoir des fontes mathématiques disponibles. Vous pouvez ainsi fournir à vos visiteurs un lien vers les [Instructions sur les fontes de MDN](/fr/docs/Web/MathML/Fonts), de telle manière qu'ils puissent vérifier s'ils ont les fontes appropriées installées sur leur système ou non. Il est tout aussi bon de prévoir une alternative avec les fontes Web.
 
 Avant Gecko 31.0, il était quelque peu fastidieux d'installer des fontes mathématiques, lisez à ce propos les [instructions pour Mozilla 2.0](/fr/docs/Mozilla/MathML_Project/FontsMozilla2.0#mathml_font_selection_with_css). Depuis Gecko 31.0, c'est beaucoup plus simple et compatible avec tout moteur de rendu Web ayant un support de MathML. Par exemple, voyez-ci une feuille de style minimale pour utiliser la fonte Latin Modern pour les textes et Latin Modern Math pour les expressions mathématiques :
 

@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Float64Array
 
 {{JSRef}}
 
-Le constructeur **`Floa64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
+Le constructeur **`Float64Array`** permet de représenter un tableau typé dont les éléments sont des nombres flottants représentés sur 64 bits (ce qui correspond à la représentation du type `double` en C) dans l'ordre des octets utilisé par la plate-forme. Si on souhaite maîtriser le boutisme (_endianness_), on pourra utiliser un objet {{jsxref("DataView")}} à la place. Les éléments du tableau sont initialisés à `0`. Une fois construit, il est possible de faire référence aux éléments du tableau en utilisant les méthodes de l'objet ou la syntaxe usuelle pour l'accès aux éléments du tableau (les crochets).
 
 ## Syntaxe
 
@@ -17,7 +17,7 @@ new Float64Array(objet);
 new Float64Array(buffer [, positionOctet [, longueur]]);
 ```
 
-Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntaxe)_.
+Pour plus d'informations sur la syntaxe du constructeur et ses paramètres, voir _[TypedArray](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntaxe)_.
 
 ## Propriétés
 
@@ -167,6 +167,6 @@ var dv = new Float64Array([1, 2, 3]);
 
 ## Voir aussi
 
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Tableaux_typés)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

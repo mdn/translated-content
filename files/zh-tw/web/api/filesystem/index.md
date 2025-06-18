@@ -2,7 +2,7 @@
 title: FileSystem
 slug: Web/API/FileSystem
 l10n:
-  sourceCommit: 0c3f18aca2c8a93d3982183f64bf7762c2c310b0
+  sourceCommit: cbe4c570701052c120808ea54c24c46ec9734084
 ---
 
 {{APIRef("File and Directory Entries API")}}
@@ -36,5 +36,4 @@ l10n:
 ## 參見
 
 - [檔案與目錄 API](/zh-TW/docs/Web/API/File_and_Directory_Entries_API)
-- [檔案與目錄 API 介紹](/zh-TW/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}、{{domxref("FileSystemFileEntry")}}、{{domxref("FileSystemDirectoryEntry")}}

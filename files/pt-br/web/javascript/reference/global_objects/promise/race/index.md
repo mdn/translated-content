@@ -16,7 +16,7 @@ Promise.race(iterable);
 ### Parâmetros
 
 - iterable
-  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Guide/iterable).
+  - : Um objeto iterável, como um {{jsxref("Array")}}. Veja [iterável](/pt-BR/docs/Web/JavaScript/Reference/Iteration_protocols).
 
 ## Descrição
 

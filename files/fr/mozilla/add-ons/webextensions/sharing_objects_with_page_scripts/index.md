@@ -15,7 +15,7 @@ slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
 >
 > Puisque les techniques décrites dans cette section décompose cet isolement, elles sont intrinsèquement dangereuses et devraient être utilisées avec beaucoup de soin.
 
-Comme les [notes du guide de scripts de contenu](/fr/Add-ons/WebExtensions/Content_scripts#DOM_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
+Comme les [notes du guide de scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
 
 Cependant, Firefox fournit des API qui permettent aux scripts de contenu de :
 
@@ -30,7 +30,7 @@ Le but de cette fonctionnalité est de rendre le script moins privilégié plus 
 
 Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](/fr/docs/Mozilla/Tech/Xray_vision) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
+Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
 
 ## Accès aux objets de script de page à partir de scripts de contenu
 
@@ -88,8 +88,8 @@ voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce
 
 Firefox fournit également des API permettant aux scripts de contenu de rendre les objets disponibles pour les scripts de page. Il y a plusieurs approches ici:
 
-- [`exportFunction()`](#exportFunction): exporte une fonction vers des scripts de page
-- [`cloneInto()`](#cloneInto): exporte un objet vers des scripts de page.
+- [`exportFunction()`](#exportfunction): exporte une fonction vers des scripts de page
+- [`cloneInto()`](#cloneinto): exporte un objet vers des scripts de page.
 - constructeurs du contexte de la page
 
 ### exportFunction
@@ -130,7 +130,7 @@ browser.runtime.onMessage.addListener((message) => {
 Cela fait deux choses :
 
 - exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
+- écouter les messages du script de contenu et afficher une [notification](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
 
 Le script de contenu ressemble à ceci :
 
@@ -193,7 +193,7 @@ Pour l'histoire complète, voir [`Components.utils.cloneInto`](/fr/Tech/XPCOM/La
 
 ### Constructeurs du contexte de la page
 
-Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/Add-ons/WebExtensions/Content_scripts#XHR_and_Fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
+Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
 
 Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.
 

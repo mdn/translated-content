@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/management/onEnabled
 
 L'auditeur de l'événement appelé lorsque l'événement `enabled` est déclenché, indiquant qu'un add-on est maintenant activé.
 
-L'API requière l'[API de permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management"
+L'API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
 
 ## Syntaxe
 
@@ -35,7 +35,7 @@ Les événements ont trois fonctions :
   - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
 
     - `info`
-      - : [`ExtensionInfo`](/fr/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
+      - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 
 ## Compatibilité des navigateurs
 

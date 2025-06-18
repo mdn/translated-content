@@ -24,11 +24,11 @@ Une chaîne représentant le QName d'un nœud.
 
 ### Notes
 
-- Le [QName](http://www.w3.org/TR/REC-xml-names/#NT-QName) est le _nom qualifié_ du nœud, incluant le préfixe de son espace de nommage et son nom local.
+- Le [QName](https://www.w3.org/TR/REC-xml-names/#NT-QName) est le _nom qualifié_ du nœud, incluant le préfixe de son espace de nommage et son nom local.
 
 ### Définition
 
-[XPath 1.0, section 4.1](http://www.w3.org/TR/xpath#function-local-name).
+[XPath 1.0, section 4.1](https://www.w3.org/TR/xpath#function-local-name).
 
 ### Support Gecko
 

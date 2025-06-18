@@ -48,7 +48,7 @@ Nuestra demo también cuenta con:
 Cuando miras a través del código fuente de[nuestro archivo JavaScript principal de demostraciones](https://github.com/mdn/webvr-tests/blob/master/raw-webgl-example/webgl-demo.js) , puede encontrar fácilmente las partes específicas de WebVR buscando la cadena "WebVR" en comentarios anteriores.
 
 > [!NOTE]
-> Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/Learn/JavaScript) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
+> Para obtener más información sobre JavaScript básico y WebGL, consulte nuestro [material de aprendizaje JavaScrip](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) , y nuestro [WebGL Tutorial](/es/docs/Web/API/WebGL_API/Tutorial).
 
 ## ¿Como funciona?
 
@@ -456,7 +456,7 @@ You should note that we've used a conditional expression to detect whether the l
 
 ## WebVR events
 
-The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#Window_events)). For example:
+The WebVR spec features a number of events that are fired, allowing our app code to react to changes in the state of the VR display (see [Window events](/es/docs/Web/API/WebVR_API#window_events)). For example:
 
 - [`vrdisplaypresentchange`](/es/docs/Web/Reference/Events/vrdisplaypresentchange) — Fires when the presenting state of a VR display changes — i.e. goes from presenting to not presenting, or vice versa.
 - [`vrdisplayconnect`](/es/docs/Web/Reference/Events/vrdisplayconnect) — Fires when a compatible VR display has been connected to the computer.

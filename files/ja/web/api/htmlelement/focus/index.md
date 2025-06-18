@@ -156,7 +156,7 @@ document.getElementById("focus_no_scroll").addEventListener("click", () => {
 ## メモ
 
 - `HTMLElement.focus()` をmousedown イベントハンドラーから呼び出した場合、 `HTMLElement` からフォーカスが外れないように `event.preventDefault()` を呼び出す必要があります。
-- [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。
+- [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) や{{Glossary("shadow tree", "シャドウ DOM", 1)}} など、これまで仕様が定まらないままだった様々な HTML 機能に関するフォーカスの挙動が、最近（2019 年 10 月に）更新されました。
   詳しくは [WHATWG blog](https://blog.whatwg.org/focusing-on-focus) をチェックしてみてください。
 
 ## ブラウザーの互換性

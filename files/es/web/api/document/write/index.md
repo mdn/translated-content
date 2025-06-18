@@ -5,10 +5,10 @@ slug: Web/API/Document/write
 
 {{ ApiRef("DOM") }}
 
-Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/document.open).
+Escribe una cadena de texto dentro del hilo de un `document` abierto por [document.open()](/es/docs/Web/API/Document/open).
 
 > [!NOTE]
-> Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/document.open#Notes).
+> Dado que `document.write` escribe directo al hilo **(stream**) de un documento, la llamada a `document.write` en un documento ya cargado automáticamente ejecuta `document.open`, [lo cual limpiará todo el contenido del documento en cuestión](/es/docs/Web/API/Document/open#notes).
 
 ## Sintaxis
 
@@ -45,7 +45,7 @@ document.write(texto);
 
 ## Notas
 
-Escribir a un documento que ya tiene contenido cargado previamente sin llamar a [`document.open()`](/es/docs/Web/API/document.open), automáticamente hará una llamada a document.open(). Después de haber finalizado la escritura del documento, es recomendable llamar a [`document.close()`](/es/docs/Web/API/document.close), para informar al navegador que la carga de la página ya ha terminado. El texto que escribas allí es convertido a la estructura tipificada de HTML dentro del modelo estructural del documento. En el ejemplo de más arriba, el elemento h1 se convierte en un nodo dentro del documento.
+Escribir a un documento que ya tiene contenido cargado previamente sin llamar a [`document.open()`](/es/docs/Web/API/Document/open), automáticamente hará una llamada a document.open(). Después de haber finalizado la escritura del documento, es recomendable llamar a [`document.close()`](/es/docs/Web/API/Document/close), para informar al navegador que la carga de la página ya ha terminado. El texto que escribas allí es convertido a la estructura tipificada de HTML dentro del modelo estructural del documento. En el ejemplo de más arriba, el elemento h1 se convierte en un nodo dentro del documento.
 
 Si la llamada a document.write() se ejecuta dentro de una etiqueta `<script>` incluído en el HTML, entonces la llamada a document.open() nunca ocurrirá. Por ejemplo:
 

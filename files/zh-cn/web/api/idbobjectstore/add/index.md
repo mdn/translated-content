@@ -5,7 +5,7 @@ slug: Web/API/IDBObjectStore/add
 
 {{ APIRef("IndexedDB") }}
 
-{{domxref("IDBObjectStore")}} 接口中的 **`add()`** 方法返回一个 {{domxref("IDBRequest")}} 对象，在单独的线程中创建一个结构（[structured clone](http://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone)）化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录。
+{{domxref("IDBObjectStore")}} 接口中的 **`add()`** 方法返回一个 {{domxref("IDBRequest")}} 对象，在单独的线程中创建一个结构（[structured clone](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-dom-interfaces.html#structured-clone)）化克隆值，并且在对象存储中存储这个克隆值。这个方法用作在一个对象存储中添加一条新的记录。
 
 要确定添加操作是否成功完成，可以监听事务的 `complete` 事件。除了 `IDBObjectStore.add` 请求 `success` 事件之外，因为事务在成功被触发后仍然可能失败。换句话说，成功事件只有在事务成功排队后才会触发。
 

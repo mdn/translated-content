@@ -9,7 +9,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/RegExp
 
 阅读[JavaScript 指南](/zh-CN/docs/Web/JavaScript/Guide)中的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)一节以了解正则表达式。
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## 语法
 
@@ -44,7 +58,7 @@ RegExp(pattern[, flags])
     - `s` （点号匹配所有字符）
       - : 允许`.` 去匹配新的行
     - `u` （unicode）
-      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/DOMString/Binary)).
+      - : Treat `pattern` as a sequence of Unicode code points. (See also [Binary strings](/zh-CN/docs/Web/API/Window/btoa)).
     - `y` （sticky，粘性匹配）
       - : Matches only from the index indicated by the `lastIndex` property of this regular expression in the target string. Does not attempt to match from any later indexes.
 

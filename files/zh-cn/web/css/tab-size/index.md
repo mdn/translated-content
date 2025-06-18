@@ -7,7 +7,35 @@ slug: Web/CSS/tab-size
 
 **`tab-size`** CSS 属性用于自定义制表符（U+0009）的宽度。
 
-{{EmbedInteractiveExample("pages/css/tab-size.html")}}
+{{InteractiveExample("CSS Demo: tab-size")}}
+
+```css interactive-example-choice
+tab-size: 10px;
+```
+
+```css interactive-example-choice
+tab-size: 16px;
+```
+
+```css interactive-example-choice
+tab-size: 24px;
+```
+
+```css interactive-example-choice
+tab-size: 4;
+```
+
+```html interactive-example
+<section id="default-example">
+  <pre id="example-element">  123</pre>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid;
+}
+```
 
 ## 语法
 

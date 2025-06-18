@@ -7,7 +7,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_contr
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over")}}
 
-이 글은 [Gamedev Canvas tutorial](/ko/docs/Games/Workflows/Breakout_game_from_scratch)의 10단계 중 4단계 입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html) 에서 확인할 수 있습니다.
+이 글은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 4단계 입니다. 이 글을 다 읽고 난 뒤 완성된 소스코드는 [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html) 에서 확인할 수 있습니다.
 
 공이 계속해서 벽을 튕기며 이동하는 모습을 볼 수 있지만, 현재로서는 그것을 컨트롤 할 방법이 없습니다. 컨트롤 할 수 없으면 게임이 아니죠! paddle을 컨트롤 할 수 있는 몇가지 상호작용을 추가해 봅시다.
 
@@ -122,6 +122,6 @@ drawPaddle();
 
 ## 다음 단계
 
-게임과 비슷해지긴 했지만 한가지 문제는 게임이 끝나지 않는다는 것입니다. 5단계에서 [Game over](/ko/docs/Games/Workflows/Breakout_game_from_scratch/Game_over)를 추가할 것입니다.
+게임과 비슷해지긴 했지만 한가지 문제는 게임이 끝나지 않는다는 것입니다. 5단계에서 [Game over](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)를 추가할 것입니다.
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Bounce_off_the_walls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Game_over")}}

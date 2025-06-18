@@ -35,7 +35,7 @@ addonBar.appendChild(newItem);
 itemLabel.value = "Hello world!";
 ```
 
-To add the button only once create a bool pref to check if it is the first run. [For example](http://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
+To add the button only once create a bool pref to check if it is the first run. [For example](https://stackoverflow.com/questions/4978188/how-do-i-detect-a-first-run-in-firefox-a-addon/4978512#4978512):
 
 ```js
 var firstrun = Services.prefs.getBoolPref("extensions.YOUREXT.firstrun");
@@ -78,7 +78,7 @@ overlay chrome://browser/content/browser.xul chrome://myaddon/content/myaddon/ov
 
 ### デフォルトでボタンを追加
 
-参照 : [Adding a button by default](/ja/docs/Code_snippets/Toolbar#Adding_button_by_default)
+参照 : [Adding a button by default](/ja/docs/orphaned/Code_snippets/Toolbar#adding_button_by_default)
 
 ## 見た目の違い
 

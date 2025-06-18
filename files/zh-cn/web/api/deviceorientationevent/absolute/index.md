@@ -5,7 +5,7 @@ slug: Web/API/DeviceOrientationEvent/absolute
 
 {{ apiref("Device Orientation Events") }}
 
-表示该设备是否提供绝对定位数据 (这个数据是关于地球的坐标系) 或者使用了由设备决定的专门的坐标系。查看更多关于 [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained) 的细节。
+表示该设备是否提供绝对定位数据 (这个数据是关于地球的坐标系) 或者使用了由设备决定的专门的坐标系。查看更多关于 [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained) 的细节。
 
 ## 语法
 
@@ -27,6 +27,6 @@ var absolute = instanceOfDeviceOrientationEvent.absolute;
 
 - {{ domxref("DeviceOrientationEvent") }}
 - [Detecting device orientation](/zh-CN/Detecting_device_orientation)
-- [Orientation and motion data explained](/zh-CN/DOM/Orientation_and_motion_data_explained)
+- [Orientation and motion data explained](/zh-CN/docs/DOM/Orientation_and_motion_data_explained)
 - {{ domxref("window.ondeviceorientation") }}
 - [`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)

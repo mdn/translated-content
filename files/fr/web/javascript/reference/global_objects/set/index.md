@@ -28,7 +28,7 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 
 ## Propriétés statiques
 
-- [`get Set[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/@@species)
+- [`get Set[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
 
 ## Propriétés des instances
@@ -49,7 +49,7 @@ Chaque valeur d'un `Set` doit être unique, il faut donc tester l'égalité des 
 
 ### Méthodes d'itération
 
-- [`Set.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)
+- [`Set.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.
 - [`Set.prototype.values()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set/values)
   - : Renvoie un nouvel itérateur fournissant les **valeurs** de chaque élément de l'objet `Set`, selon leur ordre d'insertion.

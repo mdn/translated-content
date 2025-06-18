@@ -11,7 +11,43 @@ l10n:
 
 `super.prop`와 `super[expr]` 표현식은 [클래스](/ko/docs/Web/JavaScript/Reference/Classes)와 [객체 리터럴](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)의 [메서드 정의](/ko/docs/Web/JavaScript/Reference/Functions/Method_definitions)에서 모두 사용할 수 있습니다. `super(...args)` 표현식은 클래스 생성자에서 유효합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-super.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - super", "taller")}}
+
+```js interactive-example
+class Foo {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getNameSeparator() {
+    return "-";
+  }
+}
+
+class FooBar extends Foo {
+  constructor(name, index) {
+    super(name);
+    this.index = index;
+  }
+
+  // Does not get called
+  getNameSeparator() {
+    return "/";
+  }
+
+  getFullName() {
+    return this.name + super.getNameSeparator() + this.index;
+  }
+}
+
+const firstFooBar = new FooBar("foo", 1);
+
+console.log(firstFooBar.name);
+// Expected output: "foo"
+
+console.log(firstFooBar.getFullName());
+// Expected output: "foo-1"
+```
 
 ## 구문
 
@@ -273,7 +309,7 @@ class Extended extends Base {
 Extended.getName(); // "Extended" 로그
 ```
 
-이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields#private_static_fields)과 상호 작용할 때 특히 중요합니다.
+이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_static_fields)과 상호 작용할 때 특히 중요합니다.
 
 ### super.prop을 설정하면 this 속성이 대신 설정됩니다
 

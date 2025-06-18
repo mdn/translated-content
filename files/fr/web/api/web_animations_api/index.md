@@ -16,7 +16,7 @@ L'API Web Animations fournit un langage commun aux navigateurs et aux développe
 - {{domxref("Animation")}}
   - : Fournit des commandes de lecture et une chronologie pour un nœud ou une source d'animation. Peut prendre un objet créé avec le constructeur {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}.
 - {{domxref("KeyframeEffect")}}
-  - : Décrit des ensembles de propriétés et de valeurs animables, appelées **images clés** (_keyframes_) et leurs [options de minutage](/fr/docs/Web/API/Web_Animations_API/Animation_timing_options) . Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref("Animation.Animation", "Animation()")}}.
+  - : Décrit des ensembles de propriétés et de valeurs animables, appelées **images clés** (_keyframes_) et leurs [options de minutage](/fr/docs/Web/API/KeyframeEffect/KeyframeEffect) . Ceux-ci peuvent ensuite être lus en utilisant le constructeur {{domxref("Animation.Animation", "Animation()")}}.
 - {{domxref("AnimationTimeline")}}
   - : Représente la chronologie de l'animation. Cette interface existe pour définir les fonctionnalités de la chronologie (héritées par {{domxref("DocumentTimeline")}} et les futurs objets de chronologie) et n'est pas elle-même accessible par les développeurs.
 - {{domxref("AnimationEvent")}}

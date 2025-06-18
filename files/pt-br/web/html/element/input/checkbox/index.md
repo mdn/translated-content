@@ -7,7 +7,36 @@ slug: Web/HTML/Element/input/checkbox
 
 {{htmlelement ("input")}} elementos do tipo **`checkbox`** são renderizados por padrão como caixas quadradas que são marcadas (com uma marca de verificação) quando ativadas, como as que você veria em um formulário do governo. A aparência exata depende de da configuração de sistema operacional sobre o qual o navegador está sendo executado. Caixas de seleção permitem que você selecione valores únicos para envio em um formulário (ou não).
 
-{{EmbedInteractiveExample ("pages/tabbed/input-checkbox.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;checkbox&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<fieldset>
+  <legend>Choose your monster's features:</legend>
+
+  <div>
+    <input type="checkbox" id="scales" name="scales" checked />
+    <label for="scales">Scales</label>
+  </div>
+
+  <div>
+    <input type="checkbox" id="horns" name="horns" />
+    <label for="horns">Horns</label>
+  </div>
+</fieldset>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 > **Note:** **Nota** : [Os botões de opção](/pt-BR/docs/Web/HTML/Element/input/radio) são semelhantes às caixas de seleção, mas com uma distinção importante: os botões de opção são agrupados em um conjunto no qual apenas um botão pode ser selecionado por vez, enquanto as caixas de seleção permitem ativar e desativar valores únicos. Quando existem vários controles, os botões de opção permitem que um seja selecionado de todos, enquanto as caixas de seleção permitem que vários valores sejam selecionados.
 
@@ -24,7 +53,7 @@ slug: Web/HTML/Element/input/checkbox
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event ("change")}} e {{event ("input")}}</td>
+      <td>[`change`](/pt-BR/docs/Web/Events/change) e [`input`](/pt-BR/docs/Web/API/Element/input_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
@@ -101,7 +130,7 @@ Por exemplo, na demonstração a seguir, incluímos várias caixas de seleção 
 
 {{EmbedLiveSample ('Handling_multiple_checkboxes', 600, 100)}}
 
-Neste exemplo, você verá que atribuímos a cada caixa de seleção o mesmo `name`. Se ambas as opções são verificados e, em seguida, o formulário é enviado, você terá uma série de pares nome / valor apresentado assim: `interest=coding&interest=music`. Quando esses dados atingirem o lado do servidor, você poderá capturá-los como uma matriz de valores relacionados e tratá-los adequadamente - consulte [Lidar com várias caixas de seleção com uma única variável de servidor](http://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) , por exemplo.
+Neste exemplo, você verá que atribuímos a cada caixa de seleção o mesmo `name`. Se ambas as opções são verificados e, em seguida, o formulário é enviado, você terá uma série de pares nome / valor apresentado assim: `interest=coding&interest=music`. Quando esses dados atingirem o lado do servidor, você poderá capturá-los como uma matriz de valores relacionados e tratá-los adequadamente - consulte [Lidar com várias caixas de seleção com uma única variável de servidor](https://stackoverflow.com/questions/18745456/handle-multiple-checkboxes-with-a-single-serverside-variable) , por exemplo.
 
 ### Caixas de verificação por padrão
 
@@ -193,7 +222,7 @@ Portanto, neste caso, o `indeterminate`estado é usado para afirmar que a coleta
 
 ## Validação
 
-As caixas de seleção suportam [validação](/pt-BR/docs/Web/Guide/HTML/HTML5/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
+As caixas de seleção suportam [validação](/pt-BR/docs/Web/HTML/Constraint_validation) (oferecidas para todos os [`<input>`](/pt-BR/docs/Web/HTML/Element/input)s). No entanto, a maioria dos {{domxref ("ValidityState")}} s sempre será `false`. Se a caixa de seleção tiver o [`required`](/pt-BR/docs/Web/HTML/Element/input#required) atributo, mas não estiver marcada, ela [`ValidityState.valueMissing`](/pt-BR/docs/Web/API/ValidityState/valueMissing) será `true`.
 
 ## Exemplos
 
@@ -206,33 +235,45 @@ O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que
   <fieldset>
     <legend>Escolha seus interesses</legend>
     <div>
+      <label>
+        <input type="checkbox" id="coding" name="interest" value="coding" />
+        Codificação
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="music" name="interest" value="music" />
+        Música
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="art" name="interest" value="art" />
+        Arte
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="sports" name="interest" value="sports" />
+        Esportes
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="cooking" name="interest" value="cooking" />
+        Culinária
+      </label>
+    </div>
+    <div>
+      <label>
+        <input type="checkbox" id="other" name="interest" value="other" />
+        Outro
+      </label>
       <input
-        type="checkbox"
-        id="codificação"
-        name="interesse"
-        value="codificação" />
-      <label for="coding"> Codificação </label>
-    </div>
-    <div>
-      <input type="checkbox" id="música" name="interesse" value="música" />
-      <label for="music"> Música </label>
-    </div>
-    <div>
-      <input type="checkbox" id="arte" name="interesse" value="arte" />
-      <label for="art"> Art </label>
-    </div>
-    <div>
-      <input type="checkbox" id="sports" name="interesse" value="esportes" />
-      <label for="sports"> Esportes </label>
-    </div>
-    <div>
-      <input type="checkbox" id="cozinhar" name="interesse" value="cozinhar" />
-      <label for="cooking"> Cozinhando </label>
-    </div>
-    <div>
-      <input type="checkbox" id="outro" name="interesse" value="outro" />
-      <label for="other"> Outro </label>
-      <input type="text" id="otherValue" name="outro" />
+        type="text"
+        id="otherValue"
+        name="other"
+        aria-label="Other interest" />
     </div>
     <div>
       <button type="submit">Enviar formulário</button>
@@ -245,48 +286,48 @@ O exemplo a seguir é uma versão estendida do exemplo "multiple checkboxes" que
 
 ```css
 html {
-  font-family: sem serifa;
+  font-family: sans-serif;
 }
 
 form {
-  largura: 600px;
-  margem: 0 auto;
+  width: 600px;
+  margin: 0 auto;
 }
 
 div {
-  margem inferior: 10px;
+  margin-bottom: 10px;
 }
 
 fieldset {
-  fundo: ciano;
-  borda: 5px azul sólido;
+  background: cyan;
+  border: 5px solid blue;
 }
 
 legend {
-  preenchimento: 10px;
-  fundo: azul;
-  cor: ciano;
+  padding: 10px;
+  background: blue;
+  color: cyan;
 }
 ```
 
 ### JavaScript
 
 ```js
-var otherCheckbox = document.querySelector ('entrada [valor = "outro"]');
-var otherText = document.querySelector ('input [id = "otherValue"]');
-otherText.style.visibility = 'oculto';
+const otherCheckbox = document.querySelector("#other");
+const otherText = document.querySelector("#otherValue");
+otherText.style.visibility = "hidden";
 
-otherCheckbox.onchange = function () {
+otherCheckbox.addEventListener("change", () => {
   if (otherCheckbox.checked) {
-    otherText.style.visibility = 'visible';
-    otherText.value = '';
-  } outro {
-    otherText.style.visibility = 'hidden';
+    otherText.style.visibility = "visible";
+    otherText.value = "";
+  } else {
+    otherText.style.visibility = "hidden";
   }
-};
+});
 ```
 
-{{EmbedLiveSample ('Examples', '100%', 300)}}
+{{EmbedLiveSample ('Exemplos', '100%', 300)}}
 
 ## Especificações
 

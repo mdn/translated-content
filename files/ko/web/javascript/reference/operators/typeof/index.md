@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 **`typeof`** 연산자는 피연산자의 평가 전 자료형을 나타내는 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## 구문
 
@@ -43,7 +57,7 @@ typeof (operand);
 > [!NOTE]
 > ECMAScript 2019 and older permitted implementations to have `typeof` return any implementation-defined string value for non-callable non-standard exotic objects.
 >
-> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#IE-specific_notes)).
+> The only known browser to have actually taken advantage of this is old Internet Explorer (see [below](#ie-specific_notes)).
 
 ## 예제
 

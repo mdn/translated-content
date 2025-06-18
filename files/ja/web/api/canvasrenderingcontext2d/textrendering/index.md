@@ -10,7 +10,7 @@ l10n:
 
 **`CanvasRenderingContext2D.textRendering`** は[キャンバス API](/ja/docs/Web/API/Canvas_API) のプロパティで、テキストを描画するときに何を最適化するかについての情報をレンダリングエンジンに提供します。
 
-値は SVG の [`text-rendering`](/ja/docs/Web/SVG/Attribute/text-rendering) 属性（および CSS の [`text-rendering`](/ja/docs/Web/CSS/text-rendering) プロパティ）に相当します。
+値は SVG の [`text-rendering`](/ja/docs/Web/SVG/Reference/Attribute/text-rendering) 属性（および CSS の [`text-rendering`](/ja/docs/Web/CSS/text-rendering) プロパティ）に相当します。
 
 ## 値
 

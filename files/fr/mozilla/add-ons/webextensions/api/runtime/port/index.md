@@ -13,18 +13,18 @@ Une fois que les deux côtés ont des objets `Port,` ils peuvent échanger des m
 
 Vous pouvez utiliser ce modèle pour communiquer entre:
 
-- différentes parties de votre extension (par exemple, entre les [scripts de contenus](/fr/Add-ons/WebExtensions/Content_scripts) et les [scripts d'arrière-plan](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#Background_scripts))
-- entre votre extension et une [application native s'exéutant sur l'ordinateur de l'utilisateur](/fr/Add-ons/WebExtensions/Native_messaging).
+- différentes parties de votre extension (par exemple, entre les [scripts de contenus](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) et les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts))
+- entre votre extension et une [application native s'exéutant sur l'ordinateur de l'utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
 - entre votre extension et une extension différente
 
 Vous devez utiliser différentes API de connexion pour différents types de connexions, comme indiqué dans le tableau ci-dessous.
 
-| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                             |
-| ------------------------------------------ | ------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
-| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                       |
-| Extension à l'application native           | {{WebExtAPIRef("runtime.connectNative()")}} | N'est pas applicable (voir [Native messaging](/fr/Add-ons/WebExtensions/Native_messaging)). |
-| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                               |
+| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                                          |
+| ------------------------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
+| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
+| Extension à l'application native           | {{WebExtAPIRef("runtime.connectNative()")}} | N'est pas applicable (voir [Native messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)). |
+| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                                            |
 
 ## Type
 

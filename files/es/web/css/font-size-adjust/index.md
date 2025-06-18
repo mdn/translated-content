@@ -31,7 +31,7 @@ Para hacer esto de forma que sea compatible con los navegadores que no soportan 
 
 ## Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/font-size-adjust.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/font-size-adjust.html)
 
 ```
 p{
@@ -42,8 +42,8 @@ p{
 
 ## Especificaciones
 
-- [CSS 2](http://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-size-adjust)
-- [css3-fonts](http://www.w3.org/TR/css3-fonts/#font-size-adjust)
+- [CSS 2](https://www.w3.org/TR/1998/REC-CSS2-19980512/fonts.html#propdef-font-size-adjust)
+- [css3-fonts](https://www.w3.org/TR/css3-fonts/#font-size-adjust)
 
 ## Compatibilidades
 

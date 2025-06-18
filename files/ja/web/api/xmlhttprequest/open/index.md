@@ -25,7 +25,7 @@ open(method, url, async, user, password)
 ### 引数
 
 - `method`
-  - : 使用する [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)です。 `"GET"`, `"POST"`, `"PUT"`, `"DELETE"` など。 HTTP(S) 以外の URL では無視されます。
+  - : 使用する [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)です。 `"GET"`, `"POST"`, `"PUT"`, `"DELETE"` など。 HTTP(S) 以外の URL では無視されます。
 - `url`
   - : 文字列または{{Glossary("stringifier", "文字列化")}}のあるその他のオブジェクト、例えば {{domxref("URL")}} オブジェクトで、リクエストの送信先となる URL を表します。
 - `async` {{optional_inline}}

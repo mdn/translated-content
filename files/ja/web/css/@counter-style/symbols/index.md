@@ -23,7 +23,7 @@ slug: Web/CSS/@counter-style/symbols
 
 ## 解説
 
-記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxref("@counter-style")}} [アットルール](/ja/docs/Web/CSS/At-rule)の中で使用されます。
+記号は文字列、画像、識別子の何れかで指定することができます。これは {{cssxref("@counter-style")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)の中で使用されます。
 
 ```css
 symbols: A B C D E;

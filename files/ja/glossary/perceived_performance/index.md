@@ -11,4 +11,4 @@ l10n:
 
 ## 関連情報
 
-- [知覚的パフォーマンス](/ja/docs/Learn/Performance/Perceived_performance)
+- [知覚的パフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance/Perceived_performance)

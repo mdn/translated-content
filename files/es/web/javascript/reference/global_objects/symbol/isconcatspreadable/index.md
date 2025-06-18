@@ -9,7 +9,22 @@ l10n:
 
 El símbolo conocido como **`Symbol.isConcatSpreadable`** se utiliza para configurar si un objeto debe ser aplanado a sus elementos del array cuando se utiliza el método {{jsxref("Array.prototype.concat()")}}.
 
-{{EmbedInteractiveExample("pages/js/symbol-isconcatspreadable.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+
+```js interactive-example
+const alpha = ["a", "b", "c"];
+const numeric = [1, 2, 3];
+let alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", 1, 2, 3]
+
+numeric[Symbol.isConcatSpreadable] = false;
+alphaNumeric = alpha.concat(numeric);
+
+console.log(alphaNumeric);
+// Expected output: Array ["a", "b", "c", Array [1, 2, 3]]
+```
 
 ## Descripción
 

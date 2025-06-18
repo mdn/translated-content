@@ -3,15 +3,15 @@ title: "Event: bubbles プロパティ"
 short-title: bubbles
 slug: Web/API/Event/bubbles
 l10n:
-  sourceCommit: 339595951b78774e951b1a9d215a6db6b856f6b2
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{ ApiRef("DOM") }}
+{{APIRef("DOM")}}{{AvailableInWorkers}}
 
 **`bubbles`** は {{domxref("Event")}} インターフェイスの読み取り専用プロパティで、イベントが DOM ツリーをバブリングするかしないかを示します。
 
 > [!NOTE]
-> バブリングについての詳細は、[イベントのバブリングとキャプチャ](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)を参照してください。
+> バブリングについての詳細は、[イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)を参照してください。
 
 ## 値
 

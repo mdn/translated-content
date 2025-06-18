@@ -109,7 +109,7 @@ Essayez de cliquer rapidement sur le bouton pour augmenter le nombre de clic. Ap
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)

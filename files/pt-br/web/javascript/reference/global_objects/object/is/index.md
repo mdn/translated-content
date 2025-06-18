@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+O método **`Object.is()`** determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Sintaxe
 
@@ -26,7 +26,7 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
 
 ## Descrição
 
-`Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
+`Object.is()` determina se dois valores correspondem [ao mesmo valor](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Dois valores correspondem ao mesmo valor se uma das seguintes condições for verdadeira:
 
 - ambos são {{jsxref("undefined")}}
 - ambos são {{jsxref("null")}}
@@ -94,4 +94,4 @@ if (!Object.is) {
 
 ## Veja também
 
-- [Comparações de igualdade](/pt-BR/docs/Web/JavaScript/Equality_comparisons_and_sameness) — uma comparação dos três recursos implementados para verificação de igualdade.
+- [Comparações de igualdade](/pt-BR/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) — uma comparação dos três recursos implementados para verificação de igualdade.

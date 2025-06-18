@@ -24,7 +24,7 @@ Retourne `true` si et seulement si le nom étendu est un nom d'instruction. Si l
 
 ### Définition
 
-[XSLT 1.0, section 15](http://www.w3.org/TR/xslt#function-element-available).
+[XSLT 1.0, section 15](https://www.w3.org/TR/xslt#function-element-available).
 
 ### Support Gecko
 

@@ -15,11 +15,11 @@ l10n:
 
 #### 廃止
 
-- {{HTMLElement('input')}} 要素で、非標準の `mozactionhint` 属性のサポートを廃止しました。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) を使用してください (詳しくは [Firefox bug 1735980](https://bugzil.la/1735980) をご覧ください)。
+- {{HTMLElement('input')}} 要素で、非標準の `mozactionhint` 属性のサポートを廃止しました。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) を使用してください (詳しくは [Firefox bug 1735980](https://bugzil.la/1735980) をご覧ください)。
 
 ### CSS
 
-- {{cssxref("attr")}} CSS 関数の代替値をサポートしました。これは [グローバル属性](/ja/docs/Web/HTML/Global_attributes) が見つからない場合に、代替値の設定を使用することができます ([Firefox bug 1448248](https://bugzil.la/1448248))。
+- {{cssxref("attr")}} CSS 関数の代替値をサポートしました。これは [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) が見つからない場合に、代替値の設定を使用することができます ([Firefox bug 1448248](https://bugzil.la/1448248))。
 
 ### JavaScript
 
@@ -28,11 +28,11 @@ l10n:
 
 ### SVG
 
-- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Attribute) が [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/ja/docs/Web/CSS/length) [CSS データ型](/ja/docs/Web/CSS/CSS_Types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox bug 1287054](https://bugzil.la/1287054) をご覧ください)
+- すべての SVG 要素で、[`<length>`](/ja/docs/Web/SVG/Guides/Content_type#length) の値を受け入れる [SVG 属性](/ja/docs/Web/SVG/Reference/Attribute) が [level 3](https://www.w3.org/TR/css-values-3/#lengths) [length](/ja/docs/Web/CSS/length) [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) をサポートしました。これはフォントサイズ (`cap`、`rem` など) やビューポート (`vh`、`vw`、`vmin` など) に基づくサイズや、絶対的な長さ (`px`、`cm` など) で SVG 要素のサイズを決めることを可能にします。例: `<line x1="10vw" y1="10vh" x2="50vw" y2="50vh"/>` (詳しくは [Firefox bug 1287054](https://bugzil.la/1287054) をご覧ください)
 
 ### HTTP
 
-- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP レスポンスヘッダーの [`credentialless`](/ja/docs/Web/HTTP/Headers/Cross-Origin-Embedder-Policy#credentialless) をデスクトッププラットフォーム (および Android を除くモバイルプラットフォーム) でサポートしました。Cookie やほかの資格情報がない場合でも、明示的に許可していない外部オリジンのサーバーへリソースの `no-cors` 要求を行えます ([Firefox bug 1851467](https://bugzil.la/1851467))。
+- {{HTTPHeader("Cross-Origin-Embedder-Policy")}} HTTP レスポンスヘッダーの [`credentialless`](/ja/docs/Web/HTTP/Reference/Headers/Cross-Origin-Embedder-Policy#credentialless) をデスクトッププラットフォーム (および Android を除くモバイルプラットフォーム) でサポートしました。Cookie やほかの資格情報がない場合でも、明示的に許可していない外部オリジンのサーバーへリソースの `no-cors` 要求を行えます ([Firefox bug 1851467](https://bugzil.la/1851467))。
 
 ### API
 

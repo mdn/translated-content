@@ -5,7 +5,7 @@ slug: Web/API/IDBTransaction
 
 {{APIRef("IndexedDB")}}
 
-**`IDBTransaction`** は [IndexedDB API](/ja/docs/IndexedDB) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。{{domxref("IDBDatabase")}} を使用してトランザクションを開始し、{{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、{{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。`IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
+**`IDBTransaction`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、イベントハンドラー属性を使用してデータベース上の静的で非同期のトランザクションを提供します。すべてのデータの読み書きはトランザクション内で行われます。{{domxref("IDBDatabase")}} を使用してトランザクションを開始し、{{domxref("IDBTransaction")}} を使用してトランザクションのモードを設定し (例 `readonly` または `readwrite`)、{{domxref("IDBObjectStore")}} にアクセスしてリクエストを作成します。`IDBTransaction` オブジェクトを使用してトランザクションを中止することもできます。
 
 {{AvailableInWorkers}}
 
@@ -69,13 +69,13 @@ Firefox 40 以降、IndexedDB のトランザクションはパフォーマン�
 
 - [`abort`](/ja/docs/Web/API/IDBTransaction/abort_event)
   - : `IndexedDB` のトランザクションがアボートされたとき発火します。
-    [`onabort`](/ja/docs/Web/API/IDBTransaction/onabort) プロパティからも利用可能です。
+    [`onabort`](/ja/docs/Web/API/IDBTransaction/abort_event) プロパティからも利用可能です。
 - [`complete`](/ja/docs/Web/API/IDBTransaction/complete_event)
   - : トランザクションが正常に完了したとき発火します。
-    [`oncomplete`](/ja/docs/Web/API/IDBTransaction/oncomplete) プロパティからも利用可能です。
+    [`oncomplete`](/ja/docs/Web/API/IDBTransaction/complete_event) プロパティからも利用可能です。
 - [`error`](/ja/docs/Web/API/IDBTransaction/error_event)
   - : 要求がエラーを返し、イベントがトランザクションオブジェクトに伝搬したとき発火します。
-    [`onerror`](/ja/docs/Web/API/IDBTransaction/onerror) プロパティからも利用可能です。
+    [`onerror`](/ja/docs/Web/API/IDBTransaction/error_event) プロパティからも利用可能です。
 
 ## モード定数
 
@@ -90,9 +90,9 @@ Firefox 40 以降、IndexedDB のトランザクションはパフォーマン�
 | -------------------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [`READ_ONLY`]()      | `"readonly"`(Chrome では 0)       | データの読み取りができますが、変更はできません。                                                                                                                                                                                                                                                                                                                                                                                |
 | [`READ_WRITE`]()     | `"readwrite"` (Chrome では 1)     | 変更対象のデータストア内のデータの読み書きができます。                                                                                                                                                                                                                                                                                                                                                                          |
-| [`VERSION_CHANGE`]() | `"versionchange"` (Chrome では 2) | オブジェクトストアやインデックスの作成や削除を含む任意の操作を行えます。このモードは、{{domxref("IDBDatabase")}} オブジェクトの [`setVersion()`](/ja/docs/Web/API/IDBDatabase#setVersion) メソッドにより開始されたトランザクションでバージョン番号を更新する用です。このモードのトランザクションは、他のトランザクションと並行で実行することはできません。このモードのトランザクションは、"upgrade transactions" と呼ばれます。 |
+| [`VERSION_CHANGE`]() | `"versionchange"` (Chrome では 2) | オブジェクトストアやインデックスの作成や削除を含む任意の操作を行えます。このモードは、{{domxref("IDBDatabase")}} オブジェクトの [`setVersion()`](/ja/docs/Web/API/IDBDatabase#setversion) メソッドにより開始されたトランザクションでバージョン番号を更新する用です。このモードのトランザクションは、他のトランザクションと並行で実行することはできません。このモードのトランザクションは、"upgrade transactions" と呼ばれます。 |
 
-これらの定数は現在非推奨ですが、後方互換性を維持するために必要に応じてこれらの定数を使用することができます。(Chrome では、[バージョン 21 で変更がありました](http://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)) これらのオブジェクトが利用できなくなっている場合に備え、以下のような保守的なコードを書くべきです。
+これらの定数は現在非推奨ですが、後方互換性を維持するために必要に応じてこれらの定数を使用することができます。(Chrome では、[バージョン 21 で変更がありました](https://peter.sh/2012/05/tab-sizing-string-values-for-indexeddb-and-chrome-21/)) これらのオブジェクトが利用できなくなっている場合に備え、以下のような保守的なコードを書くべきです。
 
 ```js
 var myIDBTransaction = window.IDBTransaction ||

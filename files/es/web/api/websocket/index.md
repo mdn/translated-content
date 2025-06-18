@@ -77,7 +77,7 @@ void close(
 #### Parámetros
 
 - `code` {{optional_inline}}
-  - : Un valor numérico indicando el código de estado que explica porqué la conexión está siendo cerrada. Si no se especifica este parámetro, se asume un valor por defecto de 1000 (que indica un cierre normal por "transacción completa") . Ver [códigos de estado](/es/docs/Web/API/CloseEvent#Status_codes) en la página de [CloseEvent](/es/docs/Web/API/CloseEvent) para la lista de valores permitidos.
+  - : Un valor numérico indicando el código de estado que explica porqué la conexión está siendo cerrada. Si no se especifica este parámetro, se asume un valor por defecto de 1000 (que indica un cierre normal por "transacción completa") . Ver [códigos de estado](/es/docs/Web/API/CloseEvent#status_codes) en la página de [CloseEvent](/es/docs/Web/API/CloseEvent) para la lista de valores permitidos.
 - `reason` {{optional_inline}}
   - : Una cadena legible explicando porqué la conexión está siendo cerrada. Esta cadena no puede ser mayor que 123 bytes de texto UTF-8 (**no** caracteres)
 

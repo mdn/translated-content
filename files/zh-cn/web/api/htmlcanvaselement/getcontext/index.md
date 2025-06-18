@@ -23,12 +23,12 @@ getContext(contextType, contextAttributes)
   - : 是一个指示使用何种上下文的 {{domxref("DOMString")}} 。可能的值是：
 
     - `"2d`", 建立一个 {{domxref("CanvasRenderingContext2D")}} 二维渲染上下文。
-    - `"webgl"` (或`"experimental-webgl"`) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现[WebGL](/zh-CN/docs/Web/WebGL) 版本 1(OpenGL ES 2.0) 的浏览器上可用。
-    - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/WebGL) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
+    - `"webgl"` (或`"experimental-webgl"`) 这将创建一个 {{domxref("WebGLRenderingContext")}} 三维渲染上下文对象。只在实现[WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 1(OpenGL ES 2.0) 的浏览器上可用。
+    - "`webgl2`" (或 "`experimental-webgl2`") 这将创建一个 {{domxref("WebGL2RenderingContext")}} 三维渲染上下文对象。只在实现 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 版本 2 (OpenGL ES 3.0) 的浏览器上可用。{{experimental_inline}}
     - `"bitmaprenderer"` 这将创建一个只提供将 canvas 内容替换为指定{{domxref("ImageBitmap")}}功能的{{domxref("ImageBitmapRenderingContext")}} 。
 
     > [!NOTE]
-    > 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/WebGL)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/WebGL) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
+    > 标识符 "`experimental-webgl`" 或 "`experimental-webgl2`" 用于新 [WebGL](/zh-CN/docs/Web/API/WebGL_API)的实现。这些实现还没有达到测试套件一致性或图形驱动程序平台局势尚不稳定。[Khronos Group](https://www.khronos.org/) 集团认证[WebGL](/zh-CN/docs/Web/API/WebGL_API) 实现在某些[一致性规则](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)。
 
 - `contextAttributes` {{optional_inline}}
 

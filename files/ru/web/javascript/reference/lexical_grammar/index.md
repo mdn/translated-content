@@ -23,20 +23,20 @@ ECMAScript также определяет ключевые слова и лит
 
 Пробельные символы улучшают читабельность исходного текста и разделяет токены друг от друга. Пробельные символы обычно не обязательны для функционирования кода. [Утилиты для уменьшения объёма кода](http://en.wikipedia.org/wiki/Minification_%28programming%29) часто удаляют пробельные символы, чтобы уменьшить объем кода.
 
-| Code point | Name                           | Abbreviation | Description                                                                                                     | Escape sequence |
-| ---------- | ------------------------------ | ------------ | --------------------------------------------------------------------------------------------------------------- | --------------- |
-| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                                        | \t              |
-| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                                          | \v              |
-| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed))               | \f              |
-| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                                  |                 |
-| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                                            |                 |
-| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Юникоде на Википедии](http://en.wikipedia.org/wiki/Space_%28punctuation%29#Spaces_in_Unicode) |                 |
+| Code point | Name                           | Abbreviation | Description                                                                                       | Escape sequence |
+| ---------- | ------------------------------ | ------------ | ------------------------------------------------------------------------------------------------- | --------------- |
+| U+0009     | Character tabulation           | \<HT>        | Горизонтальная табуляция                                                                          | \t              |
+| U+000B     | Line tabulation                | \<VT>        | Вертикальная табуляция                                                                            | \v              |
+| U+000C     | Form feed                      | \<FF>        | Символ контроля разрыва страницы ([Wikipedia](http://en.wikipedia.org/wiki/Page_break#Form_feed)) | \f              |
+| U+0020     | Space                          | \<SP>        | Обычный пробел                                                                                    |                 |
+| U+00A0     | No-break space                 | \<NBSP>      | Обычный пробел без точки, на которой может произойти разрыв страницы                              |                 |
+| Others     | Other Unicode space characters | \<USP>       | [Другие символы в Википедии](https://ru.wikipedia.org/wiki/Пробел)                                |                 |
 
 ## Окончание строк
 
 В дополнение к пробельным символам, символы окончания строк тоже используются для читабельности исходного кода. Однако, в некоторых случаях, символы окончания строк могут влиять на выполнение JavaScript-кода, т.к. есть некоторые места, где они запрещены.
 
-Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#Automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_Expressions) при поиске **\s** класса.
+Окончания строк также затрагивают процесс [автоматического проставления точки с запятой](#automatic_semicolon_insertion). Также окончания строк попадают под условия [регулярных выражений](/ru/docs/Web/JavaScript/Guide/Regular_expressions) при поиске **\s** класса.
 
 В ECMAScript, в качестве окончания строк можно использовать только ниже перечисленные Юникод символы. Другие символы окончания строк будут интерпретированы, как пробельные символы (например, Next Line, NEL, U+0085 будут интерпретироваться, как пробельные символы).
 
@@ -445,8 +445,8 @@ a + b;
 
 ## Смотрите также
 
-- [Jeff Walden: Двоичные и восьмеричные числа](http://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
-- [Mathias Bynens: JavaScript character escape sequences](http://mathiasbynens.be/notes/javascript-escapes)
+- [Jeff Walden: Двоичные и восьмеричные числа](https://whereswalden.com/2013/08/12/micro-feature-from-es6-now-in-firefox-aurora-and-nightly-binary-and-octal-numbers/)
+- [Mathias Bynens: JavaScript character escape sequences](https://mathiasbynens.be/notes/javascript-escapes)
 - {{jsxref("Boolean")}}
 - {{jsxref("Number")}}
 - {{jsxref("RegExp")}}

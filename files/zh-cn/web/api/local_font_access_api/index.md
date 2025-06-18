@@ -2,7 +2,7 @@
 title: Local Font Access API
 slug: Web/API/Local_Font_Access_API
 l10n:
-  sourceCommit: d7143e171b5f18fb37a686a7d4947db417fd74f3
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Local Font Access API")}}
@@ -11,7 +11,7 @@ l10n:
 
 ## 概念和用法
 
-[Web 字体](/zh-CN/docs/Learn/CSS/Styling_text/Web_fonts)允许 Web 设计人员提供在 Web 文档上使用的自定义字体，因而在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at 规则，Web 字体可以通过 `url()` 函数中提供的 URL 加载。
+[Web 字体](/zh-CN/docs/Learn_web_development/Core/Text_styling/Web_fonts)允许 Web 设计人员提供在 Web 文档上使用的自定义字体，因而在实现 Web 排版方面具有革命性意义。通过 {{cssxref("@font-face")}} at 规则，Web 字体可以通过 `url()` 函数中提供的 URL 加载。
 
 `@font-face` 还有其他几个有用的特性。特别是，你还可以在 `local()` 函数中指定字体的完整名称或 Postscript 名称，以告诉浏览器在用户计算机上安装了该字体时使用本地副本。这并非没有问题——`local()` 作为[指纹向量](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts#local_fonts_as_fingerprint_vector)已经变得臭名昭著。
 
@@ -24,8 +24,8 @@ Local Font Access API 的创建就是为了解决这些问题。
 在隐私和安全方面：
 
 - 本地字体访问 API 旨在仅提供对解决上述问题所需的数据的访问。它既不要求浏览器提供可用本地字体的完整列表，也不要求按照磁盘上出现的顺序提供数据。
-- 当调用 {{domxref("Window.queryLocalFonts()")}} 时，系统会请求用户授予访问其本地字体的权限。此权限的状态可以通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API)（`local-fonts` 权限）查询。
-- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)控制对此特性的访问。
+- 当调用 {{domxref("Window.queryLocalFonts()")}} 时，系统会请求用户授予访问其本地字体的权限。此权限的状态可以通过[权限 API](/zh-CN/docs/Web/API/Permissions_API)（`local-fonts` 权限）查询。
+- 你可以使用 {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)控制对此特性的访问。
 
 ## 接口
 
@@ -117,4 +117,4 @@ async function computeOutlineFormat() {
 
 - [使用带有本地字体的高级排版](https://developer.chrome.google.cn/docs/capabilities/web-apis/local-fonts)
 - {{cssxref("@font-face")}}
-- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)指令
+- {{httpheader("Permissions-Policy/local-fonts", "local-fonts")}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)指令

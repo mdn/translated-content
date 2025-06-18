@@ -2,7 +2,7 @@
 title: Notification：Notification() 构造函数
 slug: Web/API/Notification/Notification
 l10n:
-  sourceCommit: 09ad551d5fecae5872328ece2871fdf02b115b6e
+  sourceCommit: 79f5e2c8ed9833f409e9054e69e02798b83422d1
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
@@ -48,7 +48,7 @@ new Notification(title, options)
     - `requireInteraction` {{optional_inline}}
       - : 指示通知应保持活动状态，直到用户单击或关闭它，而不是自动关闭。默认值为 `false`。
     - `silent` {{optional_inline}}
-      - : 一个布尔值，指定通知是否静音（不发出声音或振动），无论设备设置如何。默认值 `null` 表示使用设备默认值。如果被设置为 `true`，那么不能同时存在 `vibrate` 参数。
+      - : 一个布尔值，指定通知是否应为静音，即，无论设备设置如何，都不应发出声音或振动。如果设置为 `true`，则通知为静音；如果设置为 `null`（默认值），则遵循设备的默认设置。
     - `tag` {{optional_inline}}
       - : 一个表示通知的识别标签的字符串，默认值是一个空字符串。
     - `timestamp` {{optional_inline}}

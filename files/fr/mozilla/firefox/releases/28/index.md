@@ -26,7 +26,7 @@ Plus de détails dans [cet article](https://hacks.mozilla.org/2013/12/split-cons
 
 ### CSS
 
-- Le support de la [flexbox](/fr/docs/Web/Guide/CSS/Flexible_boxes) multi-lignes a été ajouté ([bug Firefox 939901](https://bugzil.la/939901)).
+- Le support de la [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) multi-lignes a été ajouté ([bug Firefox 939901](https://bugzil.la/939901)).
 - Les [styles de compteur](/fr/docs/Web/CSS/list-style-type) Longhand East Asian ont été implémentés ([bug Firefox 934072](https://bugzil.la/934072)).
 - La prise en charge expérimentale de la propriété {{cssxref("background-blend-mode")}} a été ajoutée, mais elle est désactivée par défaut ([bug Firefox 841601](https://bugzil.la/841601)).
 - La valeur `none` a été ajoutée à {{cssxref("font-variant-ligatures")}} ([bug Firefox 913264](https://bugzil.la/913264)).

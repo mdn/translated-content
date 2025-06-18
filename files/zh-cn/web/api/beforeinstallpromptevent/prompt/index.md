@@ -45,4 +45,4 @@ prompt()
 ## 参见
 
 - [制作可安装的 PWA](/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable)
-- web.dev（2021）上的[如何为应用提供安装体验](https://web.dev/articles/customize-install)
+- web.developers.google.cn 上的[如何为应用提供安装体验](https://web.developers.google.cn/articles/customize-install)（2021）

@@ -8,7 +8,7 @@ l10n:
 {{GlossarySidebar}}
 
 **XHTML**은 역사적으로 {{Glossary("XML")}} 구문 규칙을 준수하도록 작성된
-[HTML](/ko/docs/HTML)문서를 설명하는 데 사용된 용어입니다.
+[HTML](/ko/docs/Web/HTML)문서를 설명하는 데 사용된 용어입니다.
 
 아래의 예는 HTML 문서와 해당 "XHTML" 문서, 그리고 함께 제공되어야 하는 {{Glossary("HTTP")}} {{HTTPHeader("Content-Type")}} 헤더를 보여줍니다.
 

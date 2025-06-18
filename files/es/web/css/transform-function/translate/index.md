@@ -154,7 +154,7 @@ div {
 
 ## Compatibilidad con navegadores
 
-Ver el tipo de datos [`<transform-function>`](/es/docs/Web/CSS/transform-function#Browser_compatibility) para la información de compatibilidad.
+Ver el tipo de datos [`<transform-function>`](/es/docs/Web/CSS/transform-function#browser_compatibility) para la información de compatibilidad.
 
 ## Véase también
 

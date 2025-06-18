@@ -45,7 +45,7 @@ new Response(body, options)
       - : ステータスコードに関連付けられた、`OK` などのステータスメッセージです。
         既定値は `""` です。
     - `headers`
-      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)をご覧ください）。
+      - : レスポンスに追加したいヘッダーです。{{domxref("Headers")}} オブジェクト、または {{jsxref("String")}} キー/値ペアのオブジェクトリテラルに含まれています（参考として [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)をご覧ください）。
         既定値は空です。
 
 ## 例
@@ -69,5 +69,5 @@ const myResponse = new Response(myBlob, myOptions);
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

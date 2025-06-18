@@ -1,11 +1,11 @@
 ---
-title: ":active"
+title: :active
 slug: Web/CSS/:active
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`:active`** [伪类](/zh-CN/docs/CSS/Pseudo-classes)匹配被用户激活的元素。它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。
+[CSS](/zh-CN/docs/Web/CSS) **`:active`** [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)匹配被用户激活的元素。它让页面能在浏览器监测到激活时给出反馈。当用鼠标交互时，它代表的是用户按下按键和松开按键之间的时间。
 
 ```css
 /* Selects any <a> that is being activated */

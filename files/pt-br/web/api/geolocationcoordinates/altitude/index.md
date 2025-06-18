@@ -23,5 +23,5 @@ alt = coordinates.altitude
 
 ## Veja também
 
-- [Using geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/pt-BR/docs/Web/API/Geolocation_API)
 - The {{domxref("Coordinates")}} interface it belongs to.

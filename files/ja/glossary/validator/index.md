@@ -12,4 +12,4 @@ slug: Glossary/Validator
 ### 一般知識
 
 - Wikipedia の [Validator](https://en.wikipedia.org/wiki/Validator) (英語)
-- [バリデーターの例](/ja/docs/Tools/Validators)
+- [バリデーターの例](https://firefox-source-docs.mozilla.org/devtools-user/validators/index.html)

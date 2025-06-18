@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
+**`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
 
 > **备注：** {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
 >
@@ -77,7 +77,7 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
         如果选择不使用引号编写 URL，请在 URL 中的任何括号、空白字符、单引号（`'`）和双引号（`"`）前使用反斜线（`\`）。
 
     - path
-      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorial/Basic_Shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Element/filter)的 ID。
+      - : 引用 [SVG 形状](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)或 [SVG 滤镜](/zh-CN/docs/Web/SVG/Reference/Element/filter)的 ID。
 
 - `<url-modifier>`
   - : 将来，`url()` 函数可能会支持指定修饰符、标识符或函数标记，从而改变 URL 字符串的含义。本规范不支持此特性，也未对其进行全面定义。

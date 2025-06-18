@@ -45,7 +45,7 @@ l10n:
   <tr>
     <td>12345678</td>
     <td>Johnny Rocket</td>
-    <td><img src="https://interactive-examples.mdn.mozilla.net/media/examples/grapefruit-slice-332-332.jpg"></td>
+    <td><img src="/shared-assets/images/examples/grapefruit-slice.jpg"></td>
   </th>
 </table>
 <pre id="log">

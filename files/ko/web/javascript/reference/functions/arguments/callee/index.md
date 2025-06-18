@@ -12,11 +12,11 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 `callee`는 `arguments` 객체의 속성입니다. 그 함수의 몸통(body) 내에서 현재 실행 중인 함수를 참조하는 데 쓰일 수 있습니다. 이는 함수의 이름을 알 수 없는 경우에 유용합니다, 가령 이름 없는 함수 식(또한 "익명 함수"라 함) 내에서.
 
 > [!WARNING]
-> ECMAScript 제5판(ES5) 은 [엄격 모드](/ko/docs/JavaScript/Reference/Functions_and_function_scope/Strict_mode)에서 `arguments.callee()`의 사용을 금합니다. function 식(expression)에 이름을 주거나 함수 자체를 호출해야 하는 곳에 function 선언을 사용하여 `arguments.callee()` 사용을 피하세요.
+> ECMAScript 제5판(ES5) 은 [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)에서 `arguments.callee()`의 사용을 금합니다. function 식(expression)에 이름을 주거나 함수 자체를 호출해야 하는 곳에 function 선언을 사용하여 `arguments.callee()` 사용을 피하세요.
 
 ### `arguments.callee`는 왜 ES5 엄격 모드에서 제거되었나요?
 
-([olliej의 Stack Overflow 답변](http://stackoverflow.com/a/235760/578288)에서 고쳐씀)
+([olliej의 Stack Overflow 답변](https://stackoverflow.com/a/235760/578288)에서 고쳐씀)
 
 초기 버전 JavaScript는 유명(named) 함수 식을 허용하지 않습니다. 그리고 이 때문에 재귀(recursive) 함수 식을 만들 수 없습니다.
 

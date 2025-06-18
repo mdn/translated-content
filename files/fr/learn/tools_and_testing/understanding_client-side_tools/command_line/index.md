@@ -270,9 +270,9 @@ L'opérateur pipe peut _connecter_ ces entrées et sorties, ce qui nous permet d
 
 ## Un exemple un peu plus complexe
 
-Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons d'abord essayer de récupérer le contenu de la page MDN "fetch" en utilisant la commande `curl` (dont on peut se servir pour faire une requête de contenu à partir d'URLs), sur [https://developer.mozilla.org/fr/docs/Web/API/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons d'abord essayer de récupérer le contenu de la page MDN "fetch" en utilisant la commande `curl` (dont on peut se servir pour faire une requête de contenu à partir d'URLs), sur [https://developer.mozilla.org/fr/docs/Web/API/fetch](/fr/docs/Web/API/Window/fetch).
 
-En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch).
+En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/Window/fetch).
 
 Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
 

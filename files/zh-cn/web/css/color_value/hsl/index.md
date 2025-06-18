@@ -10,7 +10,37 @@ slug: Web/CSS/color_value/hsl
 > [!NOTE]
 > 旧版的 `hsla()` 语法是 `hsl()` 的别称，接收相同的参数，行为也是相同的。
 
-{{EmbedInteractiveExample("pages/css/function-hsl.html")}}
+{{InteractiveExample("CSS Demo: hsl()")}}
+
+```css interactive-example-choice
+background: hsl(50 80% 40%);
+```
+
+```css interactive-example-choice
+background: hsl(150deg 30% 60%);
+```
+
+```css interactive-example-choice
+background: hsl(0.3turn 60% 45% / 0.7);
+```
+
+```css interactive-example-choice
+background: hsl(0 80% 50% / 25%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 使用 `hsl()` 来定义*互补色*可以用一个公式来完成，因为它们位于{{glossary("color wheel","色环")}}中同一直径上。如果一个颜色的色相度是 `θ`，那么其互补色的色相角就是 `180deg - θ`。
 

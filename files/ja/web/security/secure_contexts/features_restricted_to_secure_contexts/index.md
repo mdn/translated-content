@@ -1,55 +1,76 @@
 ---
-title: 安全なコンテキストに制限されている機能
+title: 保護されたコンテキストに制限されている機能
 slug: Web/Security/Secure_Contexts/features_restricted_to_secure_contexts
+l10n:
+  sourceCommit: dea173f1ffb3e6bef851f2e328cf7562f1ef78ce
 ---
 
-このリファレンスは、安全なコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
+{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
 
-## 安全なコンテキストでのみ使用できる現在の機能
+このリファレンスは、保護されたコンテキストでのみ使用できるウェブプラットフォーム機能の一覧です — 定義や詳細については、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)を参照してください。
 
-この節では、安全なコンテキストでのみ利用できる API の一覧を、制限が導入されたブラウザーのバージョンと共に示します。
+## 保護されたコンテキストでのみ使用できる現在の機能
 
-> [!NOTE]
-> 実際に安全なコンテキストに対応しているブラウザーのみ表示しています。安全なコンテキストの対応の詳細は[こちらをご覧ください](/ja/docs/Web/Security/Secure_Contexts#Browser_compatibility)。
+この節では、保護されたコンテキストでのみ利用できる API の一覧示します。
 
-| API                                                                                                                                         | Chrome/Opera | Edge                                                                                                             | Safari                                                                                  | Firefox                                                |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ---------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [Async Clipboard API](/ja/docs/Web/API/Clipboard)                                                                                           | 66           | 対応なし                                                                                                         | 対応なし                                                                                | 63                                                     |
-| [Background Sync](https://wicg.github.io/BackgroundSync/spec/) (例えば {{domxref("SyncManager")}} を参照)                                   | 49           | 対応なし                                                                                                         | 対応なし                                                                                | 対応なし                                               |
-| [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Headers/Cache-Control)                                                                       | 対応なし     | 15                                                                                                               | 11                                                                                      | 49                                                     |
-| [Credential Management API](/ja/docs/Web/API/Credential_Management_API)                                                                     | 51           | 対応なし                                                                                                         | 対応なし                                                                                | 対応なし                                               |
-| [Generic Sensor API](https://w3c.github.io/sensors/)                                                                                        | 67           | 対応なし                                                                                                         | 対応なし                                                                                | 対応なし                                               |
-| [Payment Request API](/ja/docs/Web/API/Payment_Request_API) (および [Basic Card Payment](https://w3c.github.io/payment-method-basic-card/)) | 61           | [15](https://blogs.windows.com/msedgedev/2017/04/11/introducing-edgehtml-15/)                                    | [11.1](https://webkit.org/blog/8182/introducing-the-payment-request-api-for-apple-pay/) | 開発中 (`dom.payments.request.enabled` の設定で隠蔽)。 |
-| [プッシュ API](/ja/docs/Web/API/Push_API)                                                                                                   | 42           | [17](https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/)                          | 対応なし                                                                                | 44                                                     |
-| [Reporting API](/ja/docs/Web/API/Reporting_API)                                                                                             | 対応あり     | 対応なし                                                                                                         | 対応なし                                                                                | Firefox 65 以降はフラグで隠ぺい                        |
-| [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)                                                                                     | 40           | [17](https://blogs.windows.com/msedgedev/2017/12/19/service-workers-going-beyond-page/)                          | [11.1](https://webkit.org/blog/8216/new-webkit-features-in-safari-11-1/)                | 44                                                     |
-| [Storage API](/ja/docs/Web/API/Storage_API)                                                                                                 | 55           | 対応なし                                                                                                         | 対応なし                                                                                | 51                                                     |
-| [Web Authentication API](/ja/docs/Web/API/Web_Authentication_API)                                                                           | 65           | [In preview (17)](https://blogs.windows.com/msedgedev/2018/07/30/introducing-web-authentication-microsoft-edge/) | [開発中](https://bugs.webkit.org/show_bug.cgi?id=181943)                                | 60                                                     |
-| [Web Bluetooth](/ja/docs/Web/API/Web_Bluetooth_API)                                                                                         | 56           | 対応なし                                                                                                         | 対応なし                                                                                | 対応なし                                               |
-| [Web MIDI](https://webaudio.github.io/web-midi-api/) (たとえば、 {{domxref("MIDIAccess")}} を参照)                                          | 43           | 対応なし                                                                                                         | 対応なし                                                                                | 対応なし                                               |
-| [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)                                                                                           | 60           | 79                                                                                                               | 対応なし                                                                                | 75                                                     |
+- [非同期クリップボード API](/ja/docs/Web/API/Clipboard)
+- {{domxref("Audio Output Devices API", "オーディオ出力機器 API", "", "nocode")}}
+- {{domxref("Background Fetch API", "バックグラウンドフェッチ API", "", "nocode")}}
+- {{domxref("Background Synchronization API", "バックグラウンド同期 API", "", "nocode")}}
+- {{domxref("Badging API", "バッジ API", "", "nocode")}}
+- {{domxref("Barcode Detection API", "バーコード検出 API", "", "nocode")}}
+- {{domxref("Battery Status API", "バッテリー状態 API", "", "nocode")}}
+- [`Cache-Control: immutable`](/ja/docs/Web/HTTP/Reference/Headers/Cache-Control)
+- {{domxref("Contact Picker API", "連絡先ピッカー API", "", "nocode")}}
+- {{domxref("Content Index API", "コンテンツインデックス API", "", "nocode")}}
+- {{domxref("Cookie Store API", "クッキーストア API", "", "nocode")}}
+- [資格情報管理 API](/ja/docs/Web/API/Credential_Management_API)
+- {{domxref("Device Memory API", "端末メモリー API", "", "nocode")}}
+- [Device Orientation / Device Motion](/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- {{domxref("Document Picture-in-Picture API", "文書ピクチャインピクチャ API", "", "nocode")}}
+- [EyeDropper API](/ja/docs/Web/API/EyeDropper)
+- [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API)
+- {{domxref("File System API", "ファイルシステム API", "", "nocode")}}
+- [Generic Sensor API](https://w3c.github.io/sensors/)
+- {{domxref("Gamepad API", "ゲームパッド API", "", "nocode")}}
+- {{domxref("Geolocation API", "位置情報 API", "", "nocode")}}
+- {{domxref("Idle Detection API", "アイドル検出 API", "", "nocode")}}
+- {{domxref("Keyboard API", "キーボード API", "", "nocode")}}
+- {{domxref("Local Font Access API", "ローカルファイルアクセス API", "", "nocode")}}
+- [通知 API](/ja/docs/Web/API/Notifications_API)
+- {{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}}
+- [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API)
+- [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
+- [プッシュ API](/ja/docs/Web/API/Push_API)
+- [報告 API](/ja/docs/Web/API/Reporting_API)
+- {{domxref("Screen Capture API", "画面キャプチャ API", "", "nocode")}}
+- {{domxref("Screen Wake Lock API", "", "", "nocode")}}
+- [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)
+- {{domxref("Shared Storage API", "共有ストレージ API", "", "nocode")}}
+- [ストレージ API](/ja/docs/Web/API/Storage_API)
+- {{domxref("VirtualKeyboard API", "仮想キーボード API", "", "nocode")}}
+- [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API)
+- [ウェブブルートゥース](/ja/docs/Web/API/Web_Bluetooth_API)
+- {{domxref("Web Locks API", "ウェブロック API", "", "nocode")}}
+- [ウェブ MIDI](/ja/docs/Web/API/Web_MIDI_API)
+- {{domxref("Web NFC API", "ウェブ NFC API", "", "nocode")}}
+- [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)
+- {{domxref("WebCodecs API", "", "", "nocode")}}
+- [WebGPU API](/ja/docs/Web/API/WebGPU_API)
+- {{domxref("WebHID API", "", "", "nocode")}}
+- {{domxref("WebOTP API", "", "", "nocode")}}
+- {{domxref("WebTransport API", "", "", "nocode")}}
+- {{domxref("WebUSB API", "", "", "nocode")}}
+- {{domxref("WebXR Device API", "", "", "nocode")}}
+- [ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)
+- {{domxref("Window Management API", "ウィンドウ管理", "", "nocode")}}
 
-## ブラウザー独自の安全なコンテキストの制限
+さらに、次のメソッドは、(関連付けられた API がそうでない場合でも) 保護されたコンテキストが要求されます。
 
-ブラウザーによっては、仕様書の要件になくても、特定の API を安全ではないコンテキストでは無効にしたり、その他の制限やセキュリティ要件を課したりしていることがあります。この節では、ブラウザーによって違いがあるものの一覧を示しています。
-
-| API                                                                                | Chrome                                                                                                                                                                                                                                                                            | Edge                                                                                               | Safari                                                                                                                                    | Firefox                                                                                       |
-| ---------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| [Application Cache](/ja/docs/Web/HTML/Using_the_application_cache)                 | [Chrome 70 で安全なコンテキストに限定することを計画中](https://bugs.chromium.org/p/chromium/issues/detail?id=588931#c19)                                                                                                                                                          | [2018 年 2 月に非推奨化の検討が開始](https://twitter.com/patrickkettner/status/961999450016239616) | [非推奨化に対する一般の関心](https://twitter.com/johnwilander/status/959423900470800384) [WebKit bug 182442](https://webkit.org/b/182442) | Firefox 62 で安全なコンテキストに限定                                                         |
-| {{domxref("Geolocation")}}                                                         | [50 で安全なコンテキストに限定](https://developers.google.com/web/updates/2016/04/geolocation-on-secure-contexts-only)                                                                                                                                                            |                                                                                                    | 10 で安全なコンテキストに限定                                                                                                             | 55 で安全なコンテキストに限定                                                                 |
-| [Device Orientaion / Device Motion](/ja/docs/Web/API/Detecting_device_orientation) | 非推奨の警告                                                                                                                                                                                                                                                                      |                                                                                                    |                                                                                                                                           | 60 から非推奨の警告。なお、これは安全なコンテキストでも同様に適用されます。                   |
-| [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API)      | [58 で安全なコンテキストに限定](https://developers.google.com/web/updates/2017/03/chrome-58-deprecations#remove_eme_from_non-secure_contexts)                                                                                                                                     |                                                                                                    |                                                                                                                                           | [計画中](https://bugzilla.mozilla.org/show_bug.cgi?id=1322517)。                              |
-| [getUserMedia()](/ja/docs/Web/API/MediaDevices/getUserMedia)                       | [Chrome 47 以降、安全なコンテキストに限定](https://codereview.chromium.org/1336633002)                                                                                                                                                                                            |                                                                                                    |                                                                                                                                           | 一時的なアクセスのみ可能 (ユーザーは許可ダイアログで "この設定を記憶する" を選べない)。       |
-| [Notifications](/ja/docs/Web/API/Notifications_API)                                | [Chrome 62 で安全なコンテキストに限定](https://developers.google.com/web/updates/2017/09/chrome-62-deprecations#remove_usage_of_notifications_from_insecure_iframes)                                                                                                              |                                                                                                    |                                                                                                                                           | [Firefox 67 で安全なコンテキストに限定](https://bugzilla.mozilla.org/show_bug.cgi?id=1429432) |
-| [\<a ping> 属性](/ja/docs/Web/HTML/Element/a#attr-ping)                            |                                                                                                                                                                                                                                                                                   | 安全でないコンテキストでは無効                                                                     |                                                                                                                                           | Firefox 3 で対応が追加、但し既定では有効化されていない (`browser.send_pings` の設定で隠蔽)。  |
-| [Presentation](/ja/docs/Web/API/Presentation_API)                                  | [61 で非推奨の警告](https://developers.google.com/web/updates/2017/08/chrome-61-deprecations#deprecate_and_remove_presentation_api_on_insecure_contexts)                                                                                                                          |                                                                                                    |                                                                                                                                           |                                                                                               |
-| [Web Crypto API](/ja/docs/Web/API/Web_Crypto_API)                                  | 早期から HTTPS に限定 (API は HTTP で見えたが、操作には失敗した)。 [Chrome 60 で安全なコンテキストに限定](https://developers.google.com/web/updates/2017/06/chrome-60-deprecations#cryptosubtle_now_requires_a_secure_origin) (API は安全ではないコンテキストから見えなくなった). |                                                                                                    |                                                                                                                                           | [計画中](https://bugzilla.mozilla.org/show_bug.cgi?id=1333140)。                              |
-| [registerProtocolHandler()](/ja/docs/Web/API/Navigator/registerProtocolHandler)    |                                                                                                                                                                                                                                                                                   |                                                                                                    |                                                                                                                                           | Firefox 62 で安全なコンテキストに限定。                                                       |
+- [`MediaDevices.getUserMedia()`](/ja/docs/Web/API/MediaDevices/getUserMedia)
+- [`Navigator.registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler)
 
 ## 関連情報
 
-- [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
-- [Privacy & Security section on Firefox Site Compatibility](https://www.fxsitecompat.dev/en-CA/categories/privacy-security/)
+- [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)
 - ["secure context" query on Chrome Platform Status](https://www.chromestatus.com/features#secure%20context)
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Security")}}

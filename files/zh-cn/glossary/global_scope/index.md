@@ -13,5 +13,5 @@ l10n:
 
 ## 参见
 
-- [JavaScript 中变量作用域简介](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量的作用域)
+- [JavaScript 中变量作用域简介](/zh-CN/docs/Web/JavaScript/Guide/Grammar_and_types#变量作用域)
 - 维基百科上的[作用域](https://zh.wikipedia.org/wiki/作用域)

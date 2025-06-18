@@ -30,7 +30,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 7.1.1](http://www.w3.org/TR/xslt#literal-result-element).
+[XSLT 1.0, section 7.1.1](https://www.w3.org/TR/xslt#literal-result-element).
 
 ### Support Gecko
 

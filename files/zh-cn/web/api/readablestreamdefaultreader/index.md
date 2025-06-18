@@ -35,7 +35,7 @@ slug: Web/API/ReadableStreamDefaultReader
 
 在下面的示例中，创建自定义 {{domxref("Response")}}，将从其他资源获取的 HTML 片段流式传输到浏览器。
 
-它展示了一个 {{domxref("ReadableStream")}} 和一个 [`Uint8Array`](/zh-CN/docs/Web/API/Uint8Array) 组合使用的例子。
+它展示了一个 {{domxref("ReadableStream")}} 和一个 [`Uint8Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) 组合使用的例子。
 
 ```js
 fetch("https://www.example.org/").then((response) => {

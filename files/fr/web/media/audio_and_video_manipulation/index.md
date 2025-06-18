@@ -113,7 +113,7 @@ processor.doLoad();
 
 ### Vidéo e WebGL
 
-[WebGL](/fr/docs/Web/WebGL) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
+[WebGL](/fr/docs/Web/API/WebGL_API) est une API puissante qui utilise canvas pour (typiquement) afficher des scènes en trois dimensions. On peut combiner WebGL et l'élément {{htmlelement("video")}} pour créer des textures vidéo, ce qui veut dire que vous pouvez placer une vidéo dans des scènes 3D.
 
 Exemple:
 
@@ -199,7 +199,7 @@ Laissons `playbackRate` de côté. Pour manipuler l'audio, on utilise typiquemen
 
 ### Sélectionner une source audio
 
-On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme [getUserMedia](/fr/docs/NavigatorUserMedia.getUserMedia) de [WebRTC](/fr/docs/Web/API/WebRTC_API))... Découvrez exactement comment les utiliser en lisant les pages suivantes:
+On peut utiliser la piste audio d'un élément {{htmlelement("audio")}} ou {{htmlelement("video")}} comme source pour alimenter l'API Web Audio, ou un simple buffer audio, une onde sinusoïdale/oscillateur, un flux (comme [getUserMedia](/fr/docs/Web/API/Navigator/getUserMedia) de [WebRTC](/fr/docs/Web/API/WebRTC_API))... Découvrez exactement comment les utiliser en lisant les pages suivantes:
 
 - {{domxref("MediaElementAudioSourceNode")}}
 - {{domxref("AudioBufferSourceNode")}}
@@ -294,7 +294,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Code_jouable_2', 700, 425) }}
 
 > [!NOTE]
-> À moins que [CORS](/fr/docs/Web/HTTP/Access_control_CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
+> À moins que [CORS](/fr/docs/Web/HTTP/CORS) ne soit activé, vous devrez pour éviter les problèmes de sécurité placer la vidéo sur le même domaine que votre code.
 
 Les filtres pouvant être appliqués sont:
 
@@ -374,13 +374,13 @@ Des bibliothèques existent actuellement pour les formats suivants:
 
 ## Tutoriels
 
-- [Manipulation vidéo avec la balise Canvas](/fr/docs/HTML/Manipulating_video_using_canvas)
-- [HTML5 playbackRate expliqué](/fr/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
+- [Manipulation vidéo avec la balise Canvas](/fr/docs/Web/API/Canvas_API/Manipulating_video_using_canvas)
+- [HTML5 playbackRate expliqué](/fr/docs/Web/Apps/Build/Manipulating_media/HTML5_playbackRate_explained)
 - [Utiliser l'API Web Audio](/fr/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Les bases de la spatialisation audio Web](/fr/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics)
-- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL#Utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](http://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
-- [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animation_de_textures_en_WebGL)
-- [Developing Game Audio with the Web Audio API (Room effects and filters)](http://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
+- [Utilisation des images vidéo comme texture WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL#utilisation_des_images_vidéo_comme_texture) (Vous pouvez également utiliser la bilbiothèque WebGL [THREE.js](https://threejs.org) (ou autres) pour [obtenir cet effet](http://stemkoski.github.io/Three.js/Video.html))
+- [Animation de Textures en WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Animating_textures_in_WebGL)
+- [Developing Game Audio with the Web Audio API (Room effects and filters)](https://www.html5rocks.com/en/tutorials/webaudio/games/#toc-room)
 
 ## Référence
 
@@ -389,4 +389,4 @@ Des bibliothèques existent actuellement pour les formats suivants:
 - L'élément {{htmlelement("canvas")}}
 - [Web Audio API](/fr/docs/Web/API/Web_Audio_API)
 - [AudioContext](/fr/docs/Web/API/AudioContext)
-- Plus d'infos sur [PannerNode](/fr/docs/Web/API/AudioContext.createPanner)
+- Plus d'infos sur [PannerNode](/fr/docs/Web/API/BaseAudioContext/createPanner)

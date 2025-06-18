@@ -26,7 +26,7 @@ Dans ce guide, nous nous intéresserons surtout au deuxième groupe, dont le com
 
 La méthode `pushState()` permet d'ajouter une nouvelle entrée dans l'historique. La méthode `replaceState()` met à jour l'historique de la session pour la page courante. Ces deux méthodes prennent un paramètre `state` qui peut contenir n'importe quel [objet sérialisable](/fr/docs/Glossary/Serializable_object). Lorsqu'on utilise le navigateur pour accéder à cette entrée d'historique, il déclenchera un évènement [`popstate`](/fr/docs/Web/API/Window/popstate_event) qui contient l'objet d'état associé à cette entrée.
 
-L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
+L'objectif principal de cette API est d'assister les [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA) qui utilisent les API comme [`fetch()`](/fr/docs/Web/API/Window/fetch) pour mettre à jour la page avec du nouveau contenu plutôt que de charger une nouvelle page complète.
 
 ## SPA et historique de session
 
@@ -40,7 +40,7 @@ Si cette approche peut très bien convenir pour de nombreux sites, elle possède
 C'est pour ces raisons que certains sites sont désormais implémentés sous la forme de [SPA (<i lang="en">single-page applications</i>)](/fr/docs/Glossary/SPA), où le site est en réalité une seule page, et où lorsqu'une personne clique sur un lien, la page&nbsp;:
 
 1. Empêche l'action par défaut du navigateur consistant à charger une nouvelle page
-2. Récupère avec [`fetch()`](/fr/docs/Web/API/fetch) le nouveau contenu à afficher
+2. Récupère avec [`fetch()`](/fr/docs/Web/API/Window/fetch) le nouveau contenu à afficher
 3. Met à jour la page avec le nouveau contenu
 
 Par exemple&nbsp;:

@@ -1,11 +1,11 @@
 ---
-title: ":out-of-range"
+title: :out-of-range
 slug: Web/CSS/:out-of-range
 ---
 
 {{CSSRef}}
 
-A [pseudo classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo [`min`](/pt-BR/docs/Web/HTML/Element/entrada#min) e [`max`](/pt-BR/docs/Web/HTML/Element/entrada#max) atributos
+A [pseudo classe](/pt-BR/docs/Web/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:out-of-range`** representa um elemento de {{htmlelement("entrada")}} cujo valor atual esta fora dos limites especificados pelo [`min`](/pt-BR/docs/Web/HTML/Element/entrada#min) e [`max`](/pt-BR/docs/Web/HTML/Element/entrada#max) atributos
 
 ```css
 /* Selecione qualquer <entrada>, mas somente quando estiver dentros dos
@@ -92,4 +92,4 @@ input:out-of-range + label::after {
 ## See also
 
 - {{cssxref(":in-range")}}
-- [Form data validation](/pt-BR/docs/Learn/HTML/Forms/Form_validation)
+- [Form data validation](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

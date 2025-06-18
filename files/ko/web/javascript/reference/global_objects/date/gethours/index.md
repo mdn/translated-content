@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getHours
 
 **`getHours()`** 메서드는 주어진 날짜의 현지 시간 기준 시를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/date-gethours.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getHours()")}}
+
+```js interactive-example
+const birthday = new Date("March 13, 08 04:20");
+
+console.log(birthday.getHours());
+// Expected output: 4
+```
 
 ## 구문
 

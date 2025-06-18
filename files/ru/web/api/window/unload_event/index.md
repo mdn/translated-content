@@ -19,11 +19,11 @@ window.onunload = funcRef;
 
 ## Примечание
 
-Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите [Использование кеширования в Firefox 1.5](/En/Using_Firefox_1.5_caching) для получения более детальной информации.
+Using this event handler in your page prevents Firefox 1.5 from caching the page in the in-memory bfcache. Смотрите [Использование кеширования в Firefox 1.5](/en-US/Using_Firefox_1.5_caching) для получения более детальной информации.
 
 Браузеры, оснащённые блокировщиками всплывающих окон будут игнорировать все вызовы метода `window.open()` внутри функции обработчика события `onunload`.
 
-You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the {{event("unload")}} event. More documentation is available there.
+You _can_ and _should_ handle this event through {{domxref("EventTarget.addEventListener","window.addEventListener()")}} and the [`unload`](/ru/docs/Web/API/Window/unload_event) event. More documentation is available there.
 
 ## Спецификации
 

@@ -147,8 +147,6 @@ _此接口也从父类 {{domxref("UIEvent")}} 和 {{domxref("Event")}} 中继承
 
 ### 过时方法
 
-- {{domxref("KeyboardEvent.initKeyEvent()")}} {{deprecated_inline}}
-  - : 初始化一个 `KeyboardEvent` 对象。只有 Firefox 实现了这一功能，但现在已经不再支持；相反，你应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 - {{domxref("KeyboardEvent.initKeyboardEvent()")}} {{deprecated_inline}}
   - : 初始化一个 `KeyboardEvent` 对象。此方法已弃用，应该使用 {{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}} 构造函数。
 
@@ -254,7 +252,7 @@ document.addEventListener(
 
 {{Specifications}}
 
-`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件第 2 版规范，由于未达成共识而被放弃，然后是 DOM 事件第 3 版规范。这导致了非标准初始化方法的实施，早期的 DOM 事件第 2 版，{{domxref("KeyboardEvent.initKeyEvent()")}} 被 Gecko 浏览器采用，而早期的 DOM 事件第 3 版，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
+`KeyboardEvent` 接口规范经历了多个草案版本，首先是 DOM 事件第 2 版规范，由于未达成共识而被放弃，然后是 DOM 事件第 3 版规范。这导致了非标准初始化方法的实施，早期的 DOM 事件第 2 版，`KeyboardEvent.initKeyEvent()` 被 Gecko 浏览器采用，而早期的 DOM 事件第 3 版，{{domxref("KeyboardEvent.initKeyboardEvent()")}} 则被其他浏览器采用。这两个版本都已被构造函数的现代用法所取代：{{domxref("KeyboardEvent.KeyboardEvent", "KeyboardEvent()")}}。
 
 ## 浏览器兼容性
 

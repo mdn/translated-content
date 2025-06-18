@@ -70,8 +70,8 @@ Si l'appel à `document.write()` est intégré directement dans le code HTML, il
 
 ## Spécification
 
-- [DOM Level 2 HTML: `write()` Method](http://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
-- [Dynamic markup insertion in HTML](http://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
+- [DOM Level 2 HTML: `write()` Method](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-75233634)
+- [Dynamic markup insertion in HTML](https://www.w3.org/TR/2011/WD-html5-author-20110705/apis-in-html-documents.html#dynamic-markup-insertion)
 
 ## Voir aussi
 

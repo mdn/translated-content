@@ -11,7 +11,58 @@ La propriété [CSS](/fr/docs/Web/CSS) **`filter`** permet d'appliquer des filtr
 
 Plusieurs [fonctions](#fonctions) comme `blur()` et `contrast()` sont incluses dans le standard CSS et permettent d'obtenir des effets prédéfinis.
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## Syntaxe
 
@@ -154,7 +205,7 @@ filter: contrast(175%) brightness(103%);
 
 ### Interpolation
 
-Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans [`url()`](/fr/docs/Web/CSS/url) et dans le même ordre, chaque filtre est interpolé selon ses règles particulières.
+Pour les animations, si les filtres du début et de la fin ont une liste de fonctions de la même taille, sans [`url()`](/fr/docs/Web/CSS/url_value) et dans le même ordre, chaque filtre est interpolé selon ses règles particulières.
 
 Si les listes de filtres sont de longueurs différentes, la liste la plus courte est complétée à la fin par les filtres supplémentaires de la liste la plus longue. Les fonctions ajoutées utilisent leur valeur initiale (qui ne modifie pas l'image). Tous les filtres alors présents sont interpolés selon leurs règles particulières. Sinon, c'est une interpolation discrète qui est utilisée.
 

@@ -355,8 +355,8 @@ Abaixo é o {{HTMLElement("canvas")}} em que a imagem é rolada. Note que a larg
 ## Veja também
 
 - [JavaScript timers](/pt-BR/docs/JavaScript/Timers)
-- [`setInterval` – A little framework](/pt-BR/docs/DOM/window.setInterval#A_little_framework)
+- [`setInterval` – A little framework](/pt-BR/docs/Web/API/Window/setInterval#a_little_framework)
 - [JavaScript Daemons Management](/pt-BR/docs/JavaScript/Timers/Daemons)
-- [HTMLCanvasElement](/pt-BR/docs/DOM/HTMLCanvasElement)
+- [HTMLCanvasElement](/pt-BR/docs/Web/API/HTMLCanvasElement)
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Compositing", "Web/Guide/HTML/Canvas_tutorial/Optimizing_canvas")}}

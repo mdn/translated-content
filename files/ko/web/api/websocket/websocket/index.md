@@ -30,7 +30,7 @@ new WebSocket(url, protocols);
   - : 아래의 경우 발생합니다.
     - [`url`](#url)을 파싱할 수 없음
     - [`url`](#url)의 스킴이 `ws`와 `wss` 중 하나가 아님
-    - [`url`](#url)에 [프래그먼트](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#프래그먼트)가 있음
+    - [`url`](#url)에 [프래그먼트](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web#프래그먼트)가 있음
     - [`protocols`](#protocols) 배열의 값들이 고유하지 않거나, WebSocket Protocol 명세가 정의한 [`Sec-WebSocket-Protocol`](/ko/docs/Web/HTTP/Protocol_upgrade_mechanism#sec-websocket-protocol)의 필드 값을 구성하는 요소들의 요구사항에 맞지 않음
 
 ## 명세

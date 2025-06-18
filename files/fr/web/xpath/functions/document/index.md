@@ -37,7 +37,7 @@ Un ensemble de nœuds.
 
 <!---->
 
-- D'autres situations particulières existent avec des comportements bien définis. Pour plus d'informations, consultez la [documentation XSLT 1.0](http://www.w3.org/TR/xslt).
+- D'autres situations particulières existent avec des comportements bien définis. Pour plus d'informations, consultez la [documentation XSLT 1.0](https://www.w3.org/TR/xslt).
 
 <!---->
 
@@ -47,7 +47,7 @@ Cette fonction est un ajout à XPath qui est spécifique à XSLT. Elle ne fait p
 
 ### Définition
 
-[XSLT 1.0, section 12.1](http://www.w3.org/TR/xslt#function-document).
+[XSLT 1.0, section 12.1](https://www.w3.org/TR/xslt#function-document).
 
 ### Support Gecko
 

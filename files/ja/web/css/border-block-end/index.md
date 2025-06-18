@@ -1,13 +1,54 @@
 ---
 title: border-block-end
 slug: Web/CSS/border-block-end
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`border-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
+**`border-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、個々の論理的なブロック方向の末尾側境界のプロパティ値を、スタイルシート内の単一の場所で設定するための[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/border-block-end.html")}}
+{{InteractiveExample("CSS Demo: border-block-end")}}
+
+```css interactive-example-choice
+border-block-end: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end: 1rem solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end: thick double #32a1ce;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これは周囲に境界線があるボックスです。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -28,6 +69,7 @@ border-block-end: medium dashed blue;
 border-block-end: inherit;
 border-block-end: initial;
 border-block-end: revert;
+border-block-end: revert-layer;
 border-block-end: unset;
 ```
 
@@ -43,12 +85,12 @@ border-block-end: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -56,13 +98,13 @@ border-block-end: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">縦書きテキストの境界</h3>
+### 縦書きテキストの境界
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -83,7 +125,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界", 140, 140)}}
 
 ## 仕様書
 
@@ -95,5 +137,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top")}}, {{cssxref("border-right")}}, {{cssxref("border-bottom")}}, {{cssxref("border-left")}} のうちの一つに対応づけられます。
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

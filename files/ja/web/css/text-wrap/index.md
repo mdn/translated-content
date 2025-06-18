@@ -2,7 +2,7 @@
 title: text-wrap
 slug: Web/CSS/text-wrap
 l10n:
-  sourceCommit: 8d4fb1e2934111a13989d2796152dc601468e7b5
+  sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
 {{CSSRef}}
@@ -12,9 +12,55 @@ l10n:
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
 
-> **メモ:** {{CSSxRef("white-space-collapse")}} と `text-wrap` プロパティは {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
+{{InteractiveExample("CSS Demo: text-wrap")}}
 
-{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+```css interactive-example-choice
+text-wrap: wrap;
+```
+
+```css interactive-example-choice
+text-wrap: nowrap;
+```
+
+```css interactive-example-choice
+text-wrap: balance;
+```
+
+```css interactive-example-choice
+text-wrap: pretty;
+```
+
+```css interactive-example-choice
+text-wrap: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## 構成要素のプロパティ
 
@@ -66,7 +112,7 @@ text-wrap: unset;
 
 テキストの長い節には `text-wrap: pretty` を使用することができます。 `pretty` はパフォーマンスに悪影響を与えるので、長いテキストブロックの場合は、速度よりもレイアウトを重視する場合にのみ使用しましょう。
 
-`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
+`stable` の値は、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) であるコンテンツに使用すると、ユーザーの使い勝手を改善します。この値は、ユーザーがテキストを編集しているとき、編集されている領域の前回行が安定したままであることを確実にします。
 
 ## 公式定義
 
@@ -82,7 +128,7 @@ text-wrap: unset;
 
 #### HTML
 
-```html
+```html live-sample___examples
 <h2 class="wrap" contenteditable="true">
   既定の動作。この見出しのテキストは「通常通り」に折り返します。
 </h2>
@@ -98,7 +144,7 @@ text-wrap: unset;
 
 #### CSS
 
-```css
+```css live-sample___examples
 .wrap {
   text-wrap: wrap;
 }
@@ -121,7 +167,7 @@ h2 {
 
 この例のテキストは編集可能です。テキストを変更し、長い単語を追加して、行や単語の長さの違いが折り返しにどのように影響するかを見てみましょう。
 
-{{EmbedLiveSample("基本的なテキスト折り返し値の比較", "100%", 350)}}
+{{EmbedLiveSample("Examples", "100%", 350)}}
 
 ## 仕様書
 

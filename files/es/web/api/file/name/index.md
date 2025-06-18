@@ -47,4 +47,4 @@ Prueba el resultado:
 
 ## Vea también
 
-- [Usando archivos desde aplicaciones web](/es/docs/Using_files_from_web_applications)
+- [Usando archivos desde aplicaciones web](/es/docs/Web/API/File_API/Using_files_from_web_applications)

@@ -79,7 +79,7 @@ const grammar = `#JSGF V1.0; grammar colors; public <color> = ${colors.join(
 )};`;
 ```
 
-使用されている文法形式は [JSpeech Grammar Format](http://www.w3.org/TR/jsgf/) (**JSGF**) です — それについての詳細はリンク先の仕様書を参照してください。しかし、今のところは手っ取り早く実行してみましょう。
+使用されている文法形式は [JSpeech Grammar Format](https://www.w3.org/TR/jsgf/) (**JSGF**) です — それについての詳細はリンク先の仕様書を参照してください。しかし、今のところは手っ取り早く実行してみましょう。
 
 - 行の区切りは JavaScript と同じようにセミコロンで区切られています。
 - 最初の行 — `#JSGF V1.0;` — は、使用されているフォーマットとバージョンを示します。これは常に最初に含める必要があります。

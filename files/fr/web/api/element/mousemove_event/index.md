@@ -127,7 +127,7 @@ function drawLine(context, x1, y1, x2, y2) {
 
 ## Voir aussi
 
-- [Une introduction aux évènements](/fr/docs/Apprendre/JavaScript/Building_blocks/Evènements)
+- [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
 
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)

@@ -11,7 +11,22 @@ l10n:
 
 左から右へ適用する場合は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 ## 構文
 

@@ -13,8 +13,8 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### HTML 5 サポート
 
-- [Firefox での音声と動画の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Element/audio) および [video](/ja/docs/Web/HTML/Element/video) 要素がサポートされます。
+- [Firefox での音声と動画の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Reference/Elements/audio) および [video](/ja/docs/Web/HTML/Reference/Elements/video) 要素がサポートされます。
 - [Firefox でのオフラインリソース](/ja/docs/Web/HTML/Using_the_application_cache)
   - : Firefox 3.5 では HTML 5 のオフラインリソース仕様をすべてサポートしています。
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -24,7 +24,7 @@ slug: Mozilla/Firefox/Releases/3.5
 
 - [ダウンロードフォントのサポート](/ja/docs/Web/CSS/@font-face)
   - : 新しい @規則である {{ cssxref("@font-face") }} を利用してウェブページでダウンロードフォントを提供できます。これにより、ページ作者が期待する通りにサイトが描画されるようになります。
-- [CSS メディアクエリー](/ja/docs/Web/CSS/Media_queries)
+- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
   - : Firefox 3.5 では CSS メディアクエリーをサポートしています。これはメディア依存スタイルシートを拡張するものです。
 - {{ cssxref("::before") }} および {{ cssxref("::after") }} の CSS 2.1 への更新
   - : `::before` および `::after` 擬似要素が CSS 2.1 サポートを満たすように更新されました。`position`、`float`、`list-style-*`、そして、いくつかの `display` プロパティのサポートが追加されています。
@@ -58,7 +58,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : これらの新しい CSS 機能はテーマ作成を手助けするために追加されました。
 - `-moz-appearance` 向けの新しい値
   - : `-moz-win-glass` および `-moz-mac-unified-toolbar` という値が `-moz-appearance` 向けに追加されました。
-- [CSS transforms の使用](/ja/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
+- [CSS transforms の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
   - : Firefox 3.5 では CSS transform がサポートされます。詳細は {{ cssxref("-moz-transform") }} および {{ cssxref("-moz-transform-origin") }} を参照してください。
 - {{ cssxref(":nth-child") }}
 
@@ -84,7 +84,7 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Firefox 3.5 ではウェブアプリケーションでの簡単なマルチスレッドサポートを可能にする Web Workers をサポートします。
 - [位置情報の使用](/ja/docs/Web/API/Geolocation_API)
   - : Firefox 3.5 では Geolocation API をサポートします。これによりウェブアプリケーションはユーザーの現在位置についての情報を提供するプロバイダがインストールされ有効化されていれば、その情報を保持することができます。
-- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [セレクターを使用した DOM 要素の指定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
   - : Selectors API により与えられた選択ルールにマッチする要素を指定するために文書を検索できます。
 - [マウスジェスチャイベント](/ja/docs/Web/Events/Mouse_gesture_events)
   - : Firefox 3.5 はトラックパッドスワイプのようなマウスジェスチャイベントをサポートします。
@@ -108,13 +108,13 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### ネットワーク機能
 
-- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/CORS)
+- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/Guides/CORS)
   - : Firefox 3.5 では、サーバーがサポートする場合に、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) によるものも含む HTTP リクエストでドメインを超える動作が可能になりました。
 - [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Progress イベントが拡張がリクエストの進捗を監視できるようにするために提供されるようになりました。
 - 同期 `XMLHttpRequest`サポートの改善
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) と [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) が同期 `XMLHttpRequest中に抑制されるようになりました。`
-- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)
   - : Firefox 3.5 では DNS プリフェッチが提供され、それにより現在のページに含まれるリンクのドメイン名解決が事前に行われ、リンクが実際にクリックされたときの時間を節約しま す。この記事ではウェブサイト側でプリフェッチを無効にする、もしくは、プリフェッチの動作を調整する方法について説明しています。
 
 #### 新しい Canvas の機能
@@ -123,26 +123,26 @@ slug: Mozilla/Firefox/Releases/3.5
   - : Canvas 要素が HTML5 テキスト API をサポートするようになりました。
 - [`Canvas` での影付き効果](/ja/docs/Canvas_tutorial/Applying_styles_and_colors#Shadows)
   - : Canvas での影付き効果がサポートされるようになりました。
-- [`createImageData()`](/ja/docs/HTML/Canvas/Pixel_manipulation_with_canvas#Creating_an_ImageData_object)
+- [`createImageData()`](/ja/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas#creating_an_imagedata_object)
   - : Canvas の `createImageData()` メソッドがサポートされるようになりました。こ`のメソッドを利用することで、ImageData` オブジェクトを必要なときに自動的に作成させるのではなく、コードで明示的に作成することができます。オブジェクトを作成する必要性を無くすことができるので、このメソッドで他の `ImageData` を扱うメソッドのパフォーマンスを改善することができます。
 - `moz-opaque` 属性
   - : `moz-opaque` DOM 属性が追加されたことにより、Canvas は半透明な要素があるかどうか知ることができます。Canvas が半透明な要素がないことを知った場合、ペインティングパフォーマンスが最適化されます。
 
 #### 新しい SVG の機能
 
-- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG 効果を HTML および XHTML の内容に適用できるようになりました。この記事はその方法について説明しています。
 
 #### その他の新機能
 
-- [Firefox での ICC カラー補正](/ja/docs/ICC_color_correction_in_Firefox)
+- [Firefox での ICC カラー補正](/ja/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 では タグ付けられた画像に対して ICC カラー補正がサポートされています。
-- [script](/ja/docs/Web/HTML/Element/script) 要素で defer 属性がサポート
+- [script](/ja/docs/Web/HTML/Reference/Elements/script) 要素で defer 属性がサポート
   - : この属性はスクリプトが実行し終わるの待たずにブラウザーにパースし描画し続けることを選択させます。
 
 ### その他の改善
 
-- Text ノードの [`wholeText`](/ja/docs/Web/API/Text/wholeText) プロパティ と [`replaceWholeText()`](/ja/docs/Web/API/Text/replaceWholeText) メソッドが実装されました。
+- Text ノードの [`wholeText`](/ja/docs/Web/API/Text/wholeText) プロパティ と [`replaceWholeText()`](/ja/docs/Web/API/Text) メソッドが実装されました。
 - [`element.children`](/ja/docs/Web/API/Element/children) プロパティが追加されました。これは与えられた要素の子要素の*コレクション*を返します。
 - {{ domxref("element.contentEditable") }} プロパティに対応するようになり、編集可能な要素に対応するようになりました。
 - DOM [Element](/ja/docs/Web/API/Element) オブジェクトで Element Traversal API がサポートされました。
@@ -153,7 +153,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - 非 Chrome スコープにおいて、例外でキャッチされるオブジェクトがスローされたオブジェクトを含む [XPConnect](/ja/docs/XPConnect) ラッパーではなく実際にスローされたオブジェクトになりました。
 - SVG ID 参照が動的な変更に対応するようになりました。
 - SVG フィルターが `foreignObject` でも動作するようになりました。
-- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Element/object) および [`iframe`](/ja/docs/Web/HTML/Element/iframe) 要素に追加されました。
+- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Reference/Elements/object) および [`iframe`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素に追加されました。
 - JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は [オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) というブログ投稿を参照してください。
 - `gDownloadLastDir.path` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDir.file` に名称変更されました。
 - `gDownloadLastDirPath` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDirFile` に名称変更されました。

@@ -40,7 +40,7 @@ ondragend = (event) => {};
 
 我们在拖动元素时，使元素变得半透明，并监听 `dragend` 事件以在释放元素时重置其不透明度。
 
-参见 [`drag`](/zh-CN/docs/Web/API/Document/drag_event) 事件，以获取完整的拖放示例。
+参见 [`drag`](/zh-CN/docs/Web/API/HTMLElement/drag_event) 事件，以获取完整的拖放示例。
 
 #### HTML
 

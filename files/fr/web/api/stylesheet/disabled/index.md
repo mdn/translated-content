@@ -24,4 +24,4 @@ if (stylesheet.disabled) {
 
 ## Spécification
 
-[désactivée](http://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)
+[désactivée](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/stylesheets.html#StyleSheets-StyleSheet-disabled)

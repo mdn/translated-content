@@ -22,7 +22,7 @@ _The `Coordinates` interface_ **doesn't inherit any property**.
 - {{domxref("Coordinates.altitudeAccuracy")}} {{readonlyInline}}
   - : Returns a `double` representing the accuracy of the `altitude` expressed in meters. This value can be `null`.
 - {{domxref("Coordinates.heading")}} {{readonlyInline}}
-  - : Returns a `double` representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. `0` degrees represents true true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/zh-CN/docs/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
+  - : Returns a `double` representing the direction in which the device is traveling. This value, specified in degrees, indicates how far off from heading due north the device is. `0` degrees represents true true north, and the direction is determined clockwise (which means that east is `90` degrees and west is `270` degrees). If `speed` is `0`, `heading` is [`NaN`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/NaN). If the device is unable to provide `heading` information, this value is `null`.
 - {{domxref("Coordinates.speed")}} {{readonlyInline}}
   - : Returns a `double` representing the velocity of the device in meters per second. This value can be `null`.
 
@@ -40,5 +40,5 @@ _The `Coordinates` interface_ **doesn't inherit any property**.
 
 ## 请参见
 
-- [Using geolocation](/zh-CN/docs/WebAPI/Using_geolocation)
+- [Using geolocation](/zh-CN/docs/Web/API/Geolocation_API)
 - The {{domxref("Geolocation")}} interface that uses it.

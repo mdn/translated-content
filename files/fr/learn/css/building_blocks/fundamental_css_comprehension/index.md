@@ -34,7 +34,7 @@ Pour demarrer cet exercice, vous devez :
 - Enregistrez le [fichier texte des ressources de la CSS](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — il contient un jeu de sélecteurs et de règles bruts que vous devrez étudier et combiner pour répondre à certaines parties de cet exercice.
 
 > [!NOTE]
-> À défaut, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre exercice. Collez le HTML et complétez la CSS dans un de ces éditeurs en ligne. Utilisez cet [URL](http://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) pour faire pointer l'élément `<img>` sur le fichier correspondant. Si l'éditeur en ligne que vous utilisez ne comporte pas de panneau séparé pour la CSS, mettez‑le dans un élément `<style>` dans l'élément `head` du document.
+> À défaut, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre exercice. Collez le HTML et complétez la CSS dans un de ces éditeurs en ligne. Utilisez cet [URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) pour faire pointer l'élément `<img>` sur le fichier correspondant. Si l'éditeur en ligne que vous utilisez ne comporte pas de panneau séparé pour la CSS, mettez‑le dans un élément `<style>` dans l'élément `head` du document.
 
 ## Énoncé du projet
 

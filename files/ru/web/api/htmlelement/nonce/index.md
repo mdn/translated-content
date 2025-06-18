@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-Свойство **`nonce`** интерфейса {{DOMxRef("HTMLElement")}} возвращает одноразовый криптографический код, используемый [Content Security Policy](/ru/docs/Web/HTTP/CSP) для определения возможности продолжения обработки запроса.
+Свойство **`nonce`** интерфейса {{DOMxRef("HTMLElement")}} возвращает одноразовый криптографический код, используемый [Content Security Policy](/ru/docs/Web/HTTP/Guides/CSP) для определения возможности продолжения обработки запроса.
 
 В современных реализациях элементы предоставляют свой атрибут `nonce` только скриптам (но не CSS-селекторам, например).
 
@@ -42,5 +42,5 @@ script[nonce~="whatever"] {
 ## Смотрите также
 
 - [Глобальный атрибут `nonce`](/ru/docs/Web/HTML/Global_attributes/nonce)
-- [Content Security Policy](/ru/docs/Web/HTTP/CSP)
+- [Content Security Policy](/ru/docs/Web/HTTP/Guides/CSP)
 - CSP: {{CSP("script-src")}}

@@ -66,7 +66,7 @@ getDisplayMedia(options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : `getDisplayMedia()` を呼び出すコードが、イベントハンドラーなど、{{glossary("transient activation", "一時的な活性化")}}により実行されている場合、例外が発生します。 また、ブラウザーのコンテキストが完全にアクティブでない場合やフォーカスされていない場合にも発生します。 また、`controller` オプションが、別の {{domxref("MediaStream")}} を生成する際にすでに使用されている場合にも発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で）許可されていない場合に発生します。
+  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で）許可されていない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
   - : キャプチャ可能な画面映像のソースが存在しない場合に発生します。
 - `NotReadableError` {{domxref("DOMException")}}
@@ -82,7 +82,7 @@ getDisplayMedia(options)
 
 - 指定されたオプションは、ユーザーが利用できるオプションを制限するために使用することはできません。代わりに、ユーザーがソースを選択した後、オプションに一致する出力を生成するために適用する必要があります。
 - `getDisplayMedia()` を使用するための go-ahead 権限は、再利用のために永続化することはできません。ユーザーは毎回、許可を求めるプロンプトを表示しなければなりません。
-- [単発のユーザーにようる有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能を動作させるためには、ユーザーがページや UI 要素を操作する必要があります。
+- [単発のユーザーによる有効化](/ja/docs/Web/Security/User_activation)が必要です。この機能を動作させるためには、ユーザーがページや UI 要素を操作する必要があります。
 - `getDisplayMedia()`の呼び出しは、イベントハンドラーのようなユーザーのアクションに反応して実行されるコードから行われなければなりません。
 - ブラウザーは、ブラウザーを含むディスプレイやウィンドウを共有することについての警告をユーザーに提供し、他のコンテンツがキャプチャされて他のユーザーに表示される可能性があることに注意することが推奨されます。
 

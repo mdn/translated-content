@@ -9,7 +9,15 @@ l10n:
 
 **`Array.from()`** 静的メソッドは、[反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol)や[配列風オブジェクト](/ja/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)からシャローコピーされた、新しい `Array` インスタンスを生成します。
 
-{{EmbedInteractiveExample("pages/js/array-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.from()", "shorter")}}
+
+```js interactive-example
+console.log(Array.from("foo"));
+// Expected output: Array ["f", "o", "o"]
+
+console.log(Array.from([1, 2, 3], (x) => x + x));
+// Expected output: Array [2, 4, 6]
+```
 
 ## 構文
 

@@ -7,7 +7,7 @@ slug: Web/API/HTMLScriptElement
 
 HTML-элементы {{HTMLElement("script")}} предоставляют **`HTMLScriptElement`** интерфейс, который предоставляет специальные свойства и методы для манипулирования поведением и выполнением `<script>` элементов (за пределами унаследованного {{domxref("HTMLElement")}} интерфейса).
 
-JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Basics_of_HTTP/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие {{event("error")}}; в противном случае, он получает событие {{event("success")}}.
+JavaScript файлы должны обслуживаться с `application/javascript` [MIME type](/ru/docs/Web/HTTP/Guides/MIME_types), но браузеры снисходительны и блокируют их только, если скрипты обслуживаются с типом изображение (`image/*`), типом видео (`video/*`), типом аудио (`audio/*`), или `text/csv`. Если скрипт заблокирован, его элемент получает событие [`error`](/ru/docs/Web/API/HTMLElement/error_event); в противном случае, он получает событие [`success`](/ru/docs/Web/API/IDBRequest/success_event).
 
 {{InheritanceDiagram(600, 120)}}
 
@@ -277,5 +277,5 @@ affixScriptToHead("myScript2.js", function () {
 - HTML-элемент {{HTMLElement("script")}}
 - HTML-элемент {{HTMLElement("noscript")}}
 - {{domxref("document.currentScript")}}
-- [Web Workers](/ru/docs/DOM/Using_web_workers) (фрагменты кода, похожие на скрипты, но выполняемые в другом глобальном контексте)
-- [Ryan Grove's \<script> and \<link> node event compatibility chart](http://pieisgood.org/test/script-link-events/)
+- [Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers) (фрагменты кода, похожие на скрипты, но выполняемые в другом глобальном контексте)
+- [Ryan Grove's \<script> and \<link> node event compatibility chart](https://pieisgood.org/test/script-link-events/)

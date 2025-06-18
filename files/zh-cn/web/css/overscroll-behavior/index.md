@@ -43,11 +43,11 @@ overflow: unset;
 - `none`
   - : 临近滚动区域不受到滚动链影响，而且默认的滚动到边界的表现也被阻止。
 
-### Formal syntax
+### 形式语法
 
 {{csssyntax}}
 
-## Examples
+## 示例
 
 在我们 [滚动行为示例](https://mdn.github.io/css-examples/overscroll-behavior/) (也可以看该 [源代码](https://github.com/mdn/css-examples/tree/master/overscroll-behavior)) 我们展现一个虚构的联系人全页列表，和一个包含聊天窗口的对话框。
 
@@ -72,17 +72,17 @@ body {
 }
 ```
 
-## Specifications
+## 规范
 
 在 CSSWG 发布自己的草案之前，该规范只能在它的 [WICG Github Repository](https://wicg.github.io/overscroll-behavior/) 中找到。
 
 {{Specifications}}
 
-## Browser compatibility
+## 浏览器兼容性
 
 {{Compat}}
 
-## See also
+## 参见
 
-- [Take control of your scroll: customizing pull-to-refresh and overflow effects](https://developers.google.com/web/updates/2017/11/overscroll-behavior#demo)
-- {{cssxref("-ms-scroll-chaining")}}
+- [CSS 过度滚动行为](/zh-CN/docs/Web/CSS/CSS_overscroll_behavior)模块
+- developer.chrome.google.cn 上的[掌控滚动操作——自定义下拉刷新和溢出效果](https://developer.chrome.google.cn/blog/overscroll-behavior)（2017）

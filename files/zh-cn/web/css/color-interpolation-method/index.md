@@ -1,17 +1,19 @@
 ---
 title: <color-interpolation-method>
 slug: Web/CSS/color-interpolation-method
+l10n:
+  sourceCommit: 707a895d09555c873e5e7dbd28135381fde6d01e
 ---
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<color-interpolation-method>`** 表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的颜色空间。此数据类型可用于覆盖例如 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数记号所用的默认插值颜色空间。
+**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
 
-在对 `<color>` 值插值时，插值颜色空间默认为 Oklab。
+在对 `<color>` 值插值时，插值色彩空间默认为 `oklab`。
 
 ## 语法
 
-`<color-interpolation-method>` 指定了插值应使用直角坐标颜色空间还是带可选色相插值方法的极坐标颜色空间：
+`<color-interpolation-method>` 指定了插值应使用直角坐标色彩空间还是带可选色相插值方法的极坐标色彩空间：
 
 ```plain
 in <rectangular-color-space>
@@ -19,14 +21,22 @@ in <rectangular-color-space>
 in <polar-color-space>[ <hue-interpolation method>]
 ```
 
-### 取值
+### 值
 
 - `<rectangular-color-space>`
-  - : 关键字 `srgb`、`srgb-linear`、`lab`、`oklab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
+
+  - : 关键字 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
+
 - `<polar-color-space>`
-  - : 关键字 `hsl`、`hwb`、`lch` 或 `oklch`。
+
+  - : 关键字 `hsl`、`hwb`、`lch` 或 `oklch` 之一。
+
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-  - : 用于色相插值的算法。默认为 `shorter hue`。
+
+  - : 用于色调插值的算法。默认为 `shorter hue`。
+
+- `<custom-color-space>`
+  - : 一个指向自定义 [@color profile](/zh-CN/docs/Web/CSS/@color-profile) 的 [`<dashed-ident>`](/zh-CN/docs/Web/CSS/dashed-ident#与_color-profile_一起使用)。
 
 ## 形式语法
 
@@ -34,9 +44,9 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 ## 示例
 
-### 用渐变比较各种插值颜色空间
+### 用渐变比较各种插值色彩空间
 
-下列示例展示了为 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 使用不同的插值颜色空间的效果。
+以下示例展示了 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 使用不同的插值色彩空间的效果。
 
 #### HTML
 
@@ -50,49 +60,6 @@ in <polar-color-space>[ <hue-interpolation method>]
 ```
 
 #### CSS
-
-```css hidden
-/* 后备样式 */
-.srgb {
-  background-image: linear-gradient(
-    to right,
-    rgb(0% 0% 100%),
-    rgb(20% 0% 80%),
-    rgb(40% 0% 60%),
-    rgb(60% 0% 40%),
-    rgb(80% 0% 20%),
-    rgb(100% 0% 0%)
-  );
-}
-.oklab {
-  background-image: linear-gradient(
-    to right,
-    oklab(45.2% -0.032 -0.312),
-    oklab(48.7% 0.019 -0.224),
-    oklab(52.2% 0.07 -0.137),
-    oklab(55.8% 0.122 -0.049),
-    oklab(59.3% 0.173 0.038),
-    oklab(62.8% 0.225 0.126)
-  );
-}
-.oklch-longer {
-  background-image: linear-gradient(
-    to right,
-    oklch(45.2% 0.313 264),
-    oklch(46.8% 0.308 243),
-    oklch(48.4% 0.303 221),
-    oklch(50% 0.298 200),
-    oklch(51.6% 0.293 179),
-    oklch(53.2% 0.288 157),
-    oklch(54.8% 0.283 136),
-    oklch(56.4% 0.278 115),
-    oklch(58% 0.273 93),
-    oklch(59.6% 0.268 72),
-    oklch(61.2% 0.263 51),
-    oklch(62.8% 0.258 29)
-  );
-}
-```
 
 ```css
 .gradient {
@@ -112,7 +79,70 @@ in <polar-color-space>[ <hue-interpolation method>]
 
 #### 结果
 
-{{EmbedLiveSample("用渐变比较各种插值颜色空间", "100%", 250)}}
+{{EmbedLiveSample("用渐变比较各种插值色彩空间", "100%", 250)}}
+
+### 重复渐变中的颜色插值
+
+以下示例展示了在重复渐变中插值颜色时如何指定色彩空间。
+
+三个框展示了使用 [`repeating-conic-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-conic-gradient)、[`repeating-linear-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-linear-gradient) 和 [`repeating-radial-gradient()`](/zh-CN/docs/Web/CSS/gradient/repeating-radial-gradient) 函数创建的不同类型的重复渐变。
+
+第一个框使用 Lab 色彩空间在两个颜色值之间进行插值。第二个和第三个框使用 Oklch 色彩空间，并且额外提供了一个 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 来指定如何在色调值之间进行插值。
+
+#### HTML
+
+```html
+<div class="gradient conic">圆锥渐变</div>
+<div class="gradient linear">线性渐变</div>
+<div class="gradient radial">径向渐变</div>
+```
+
+#### CSS
+
+我们在每个渐变中使用了相同的两种颜色，以展示 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 和{{glossary("color space", "色彩空间")}}在渐变颜色插值中的不同效果。
+
+```css hidden
+.gradient {
+  height: 200px;
+  width: 200px;
+  display: inline-block;
+  font-family: monospace;
+  margin: 10px;
+  font-size: 16px;
+}
+```
+
+```css
+.conic {
+  background-image: repeating-conic-gradient(
+    in lab,
+    burlywood,
+    blueviolet 120deg
+  );
+}
+
+.linear {
+  background-image: repeating-linear-gradient(
+    in oklch,
+    burlywood,
+    blueviolet 75px
+  );
+}
+
+.radial {
+  background-image: repeating-radial-gradient(
+    in oklch longer hue,
+    blueviolet 50px,
+    burlywood 100px
+  );
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample("重复渐变中的颜色插值", "100%", 250)}}
+
+对比第一个和第二个框展示了在不同色彩空间中插值两种颜色时的差异。对比第二个和第三个框则展示 [`<hue-interpolation-method>`](/zh-CN/docs/Web/CSS/hue-interpolation-method) 之间的差异，其中线性渐变使用了较短的方法（默认），而径向渐变使用了较长的方法。
 
 ## 规范
 

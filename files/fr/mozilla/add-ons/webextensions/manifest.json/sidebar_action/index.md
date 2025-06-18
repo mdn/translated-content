@@ -34,7 +34,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
   </tbody>
 </table>
 
-Une [barre latérale](/fr/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner celle à afficher.
+Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner celle à afficher.
 
 La clé `sidebar_action` vous permet de définir les propriétés par défaut de la barre latérale. Vous pouvez modifier ces propriétés lors de l'exécution à l'aide de l'API {{WebExtAPIRef("sidebarAction")}}.
 

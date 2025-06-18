@@ -9,7 +9,18 @@ l10n:
 
 **`Object.keys()`** 静的メソッドは、指定されたオブジェクトが持つプロパティの**名前**の配列を、通常のループで取得するのと同じ順序で返します。
 
-{{EmbedInteractiveExample("pages/js/object-keys.html")}}
+{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+  c: false,
+};
+
+console.log(Object.keys(object1));
+// Expected output: Array ["a", "b", "c"]
+```
 
 ## 構文
 
@@ -92,7 +103,7 @@ console.log(Object.keys(100)); // []
 ## 関連情報
 
 - [`Object.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

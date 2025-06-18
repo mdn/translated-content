@@ -72,7 +72,7 @@ draw();
 图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。一个路径，甚至一个子路径，都是闭合的。使用路径绘制图形需要一些额外的步骤。
 
 1. 首先，你需要创建路径起始点。
-2. 然后你使用[画图命令](/zh-CN/docs/Web/API/CanvasRenderingContext2D#Paths)去画出路径。
+2. 然后你使用[画图命令](/zh-CN/docs/Web/API/CanvasRenderingContext2D#paths)去画出路径。
 3. 之后你把路径封闭。
 4. 一旦路径生成，你就能通过描边或填充路径区域来渲染图形。
 
@@ -552,7 +552,7 @@ function draw() {
 
 新的 Path2D API 有另一个强大的特点，就是使用 SVG path data 来初始化 canvas 上的路径。这将使你获取路径时可以以 SVG 或 canvas 的方式来重用它们。
 
-这条路径将先移动到点 `(M10 10)` 然后再水平移动 80 个单位`(h 80)`，然后下移 80 个单位 `(v 80)`，接着左移 80 个单位 `(h -80)`，再回到起点处 (`z`)。你可以在[Path2D constructor](/zh-CN/docs/Web/API/Path2D.Path2D#Using_SVG_paths) 查看这个例子。
+这条路径将先移动到点 `(M10 10)` 然后再水平移动 80 个单位`(h 80)`，然后下移 80 个单位 `(v 80)`，接着左移 80 个单位 `(h -80)`，再回到起点处 (`z`)。你可以在[Path2D constructor](/zh-CN/docs/Web/API/Path2D/Path2D#using_svg_paths) 查看这个例子。
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

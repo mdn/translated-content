@@ -38,6 +38,6 @@ l10n:
 
 ## Смотрите также
 
-- Определение [процентного кодирования](https://en.wikipedia.org/wiki/Percent-encoding) в Википедии.
+- [Percent-encoding](https://en.wikipedia.org/wiki/Percent-encoding) в Википедии (англ.).
 - {{RFC(3986)}}, раздел 2.1, в котором определено это кодирование.
 - [`encodeURI()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/encodeURI) и [`encodeURIComponent()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent) — функции для процентного кодирования URL-адресов

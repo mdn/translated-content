@@ -52,13 +52,13 @@ slug: Web/CSS/length
 뷰포트 백분율 길이는 `<length>` 값을 {{glossary("viewport", "뷰포트")}}, 즉 문서에서 볼 수 있는 부분의 크기를 기준으로 설정합니다. 뷰포트 길이는 {{cssxref("@page")}} 선언 블록에서는 유효하지 않습니다.
 
 - `vh`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 높이 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.
 - `vw`
-  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/All_About_The_Containing_Block) 너비 1%와 같습니다.
+  - : 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.
 - `vi` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_Logical_Properties#인라인_치수) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%ec%9d%b8%eb%9d%bc%ec%9d%b8_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vb` {{experimental_inline}}
-  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_Logical_Properties#블록_치수) 크기 1%와 같습니다.
+  - : 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.
 - `vmin`
   - : `vw`와 `vh` 중 작은 것과 같습니다.
 - `vmax`
@@ -92,7 +92,7 @@ slug: Web/CSS/length
 
 ## 보간
 
-애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/Web/CSS/computed_value)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/single-transition-timing-function)가 결정합니다.
+애니메이션에서 `<length>` 자료형의 값은 부동소수점 실수로 간주하며 보간은 [계산값](/ko/docs/Web/CSS/computed_value)을 사용합니다. 보간 속도는 애니메이션에 연결된 [타이밍 함수](/ko/docs/Web/CSS/easing-function)가 결정합니다.
 
 ## 예제
 

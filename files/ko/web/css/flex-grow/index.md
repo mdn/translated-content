@@ -9,7 +9,45 @@ slug: Web/CSS/flex-grow
 
 보통 `flex-grow`를 사용할땐, {{ Cssxref("flex-shrink") }}, {{ Cssxref("flex-basis") }} 속성을 함께 사용합니다. 그리고 일반적으로는 모든 값이 설정되었음을 보장하기 위하여 {{ Cssxref("flex") }} 속성을 이용해 **축약형**으로 사용합니다.
 
-{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
+{{InteractiveExample("CSS Demo: flex-grow")}}
+
+```css interactive-example-choice
+flex-grow: 1;
+```
+
+```css interactive-example-choice
+flex-grow: 2;
+```
+
+```css interactive-example-choice
+flex-grow: 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I grow</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+```
 
 ## Syntax
 
@@ -90,6 +128,6 @@ flex-grow: unset;
 
 ## See also
 
-- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)_
-- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Controlling_Ratios_of_Flex_Items_Along_the_Main_Ax)_
+- CSS Flexbox Guide: _[Basic Concepts of Flexbox](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)_
+- CSS Flexbox Guide: _[Controlling Ratios of flex items along the main axis](/ko/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)_
 - [\`flex-grow\` is weird. Or is it?](https://css-tricks.com/flex-grow-is-weird/) article by Manuel Matuzovic on CSS-Tricks, which illustrates how flex-grow works

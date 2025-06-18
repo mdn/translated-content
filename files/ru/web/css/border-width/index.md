@@ -13,7 +13,7 @@ CSS-свойство {{cssxref("border-width")}} определяет ширин
 
 ## Синтаксис
 
-[Общий синтаксис](/ru/docs/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
+[Общий синтаксис](/ru/docs/Web/CSS/Value_definition_syntax): {{csssyntax("border-width")}}
 
 ```css
 border-width: ширина                  /* Одно значение */

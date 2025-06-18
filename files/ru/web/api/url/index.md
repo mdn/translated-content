@@ -113,6 +113,6 @@ const response = await fetch(
 
 - Полифил для `URL` доступен в [core-js](https://github.com/zloirock/core-js#url-and-urlsearchparams)
 - [URL API](/ru/docs/Web/API/URL_API)
-- [Что такое URL-адрес?](/ru/docs/Learn/Common_questions/What_is_a_URL)
+- [Что такое URL-адрес?](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - Свойство для получения объекта `URL`: {{domxref("URL")}}.
 - {{domxref("URLSearchParams")}}.

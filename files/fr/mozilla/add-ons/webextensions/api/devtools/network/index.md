@@ -7,18 +7,18 @@ slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
 
 L'API `devtools.network` permet à une extension devtools d'obtenir des informations sur les demandes de réseau associées à la fenêtre à laquelle les devtools sont attachés (la fenêtre inspectée).
 
-Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
+Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
 
 ## Fonctions
 
-- [devtools.network.getHAR()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools.network/getHAR)
+- [devtools.network.getHAR()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR)
   - : Obtenez le [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours..
 
 ## Evénements
 
-- [`devtools.network.onNavigated`](/fr/Add-ons/WebExtensions/API/devtools.network/onNavigated)
+- [`devtools.network.onNavigated`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated)
   - : Attiré lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page.
-- [`devtools.network.onRequestFinished`](/fr/Add-ons/WebExtensions/API/devtools.network/onRequestFinished)
+- [`devtools.network.onRequestFinished`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished)
   - : Lancé lorsque la demande réseau est terminée et que ses détails sont disponibles pour l'extension.
 
 ## Compatibilité des navigateurs

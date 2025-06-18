@@ -11,7 +11,7 @@ slug: Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 ## 畫矩形
 
-不同於[SVG](/zh-TW/docs/SVG)，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。
+不同於[SVG](/zh-TW/docs/Web/SVG)，{{HTMLElement("canvas")}}只支援一種原始圖形，矩形。所有的圖形都必須由一或多個繪圖路徑構成，而我們正好有一些繪圖路徑函數可以讓我們畫出複雜的圖形。
 
 首先來看看矩形，共有三個矩形繪圖函數:
 
@@ -466,7 +466,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了 fillStyle 屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。
 
-稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色，。
+稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色。
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}
 
@@ -476,7 +476,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 {{domxref("Path2D.Path2D", "Path2D()")}}
 
-Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorial/Paths):
+Path2D 的建構子，可接受的參數有無參數、另一個 Path2D 物件、 字元表式的 [SVG path](/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths)：
 
 ```js
 new Path2D(); // 不傳入參數會回傳一個空的 Path2D 物件
@@ -521,7 +521,7 @@ function draw() {
 
 另一個強而有力的特色是在 SVG 和 Canvas 中我們都可以使用 SVG path。
 
-下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到[`Path2D` 建構子頁面](/zh-TW/docs/Web/API/Path2D.Path2D#Using_SVG_paths)看繪圖範例結果。
+下面的路徑會移到座標點 (10, 10) (M10, 10)，然後水平右移 80 點 (h 80)，垂至下移 80 點 (v 80) 水平左移 80 點 (h -80) 最後回到起始點 (z)，請到[`Path2D` 建構子頁面](/zh-TW/docs/Web/API/Path2D/Path2D#using_svg_paths)看繪圖範例結果。
 
 ```js
 var p = new Path2D("M10 10 h 80 v 80 h -80 Z");

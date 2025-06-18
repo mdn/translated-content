@@ -9,7 +9,7 @@ l10n:
 
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/공_움직이기")}}
 
-이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
+이 강의는 [게임 개발 캔버스 튜토리얼](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)의 10단계 중 첫 번째 과정입니다. [Gamedev-Canvas-workshop/lesson1.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html)에서 이 강의의 완성된 코드를 볼 수 있습니다.
 
 게임의 기능들을 작성하기 전에, 게임 내부에 렌더링 하기 위한 기본 구조들을 HTML과 {{htmlelement("canvas")}} 엘리먼트를 사용하여 만들어야 합니다.
 

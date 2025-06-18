@@ -24,7 +24,7 @@ Une chaîne unique, résultat de la concaténation des chaînes passées en argu
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-concat).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-concat).
 
 ### Support Gecko
 

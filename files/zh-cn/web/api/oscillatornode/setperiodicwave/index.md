@@ -66,5 +66,5 @@ osc.stop(2);
 
 ## See also
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
-- [AudioContext.createPeriodicWave](/zh-CN/docs/Web/API/AudioContext/createPeriodicWave)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [AudioContext.createPeriodicWave](/zh-CN/docs/Web/API/BaseAudioContext/createPeriodicWave)

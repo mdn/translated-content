@@ -33,7 +33,7 @@ Array.isArray(obj)
 
 Si el objeto es un {{jsxref("Array")}}, devuelve `true`; `false`, en cualquier otro caso.
 
-Vea el artículo ["Determining with absolute accuracy whether or not a JavaScript object is an array"](http://web.mit.edu/jwalden/www/isArray.html) para más detalles.
+Vea el artículo ["Determining with absolute accuracy whether or not a JavaScript object is an array"](https://web.mit.edu/jwalden/www/isArray.html) para más detalles.
 
 ## Ejemplos
 

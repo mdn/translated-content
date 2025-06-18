@@ -9,7 +9,22 @@ l10n:
 
 **`Object.entries()`** 靜態方法回傳給定之物件自己的可枚舉字串以字串為鍵的屬性之鍵值對陣列。
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## 語法
 
@@ -85,7 +100,7 @@ console.log(map); // Map(2) {"foo" => "bar", "baz" => 42}
 
 ### 迭代 Object
 
-你可以使用[陣列解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)輕鬆地迭代物件。
+你可以使用[陣列解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring)輕鬆地迭代物件。
 
 ```js
 // 使用 for...of 迴圈
@@ -111,7 +126,7 @@ Object.entries(obj).forEach(([key, value]) => {
 ## 參見
 
 - [`core-js` 中 `Object.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
-- [屬性的可枚舉性和所有權](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [屬性的可枚舉性和所有權](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

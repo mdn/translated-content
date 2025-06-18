@@ -44,7 +44,7 @@ width: min(1vw, 4em, 80px);
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="MDN Web Docs"
   class="logo" />
 ```
@@ -91,7 +91,7 @@ Think of the `min()` function as finding the maximum value allowed for a propert
 
 ## 无障碍问题
 
-当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#Relative_length_units) 这样就可以便于阅读，比如：
+当`min()` 用于控制文本大小时，要保证文本足够大以便于阅读。建议把 min() 方法嵌入到 {{CSSxRef("max", "max()")}} 中， [relative length unit](/zh-CN/docs/Web/CSS/length#relative_length_units) 这样就可以便于阅读，比如：
 
 ```css
 small {
@@ -101,7 +101,7 @@ small {
 
 这用于保证最小值是 1rem，这样在页面缩放时文本也会缩放。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 规范
@@ -117,4 +117,4 @@ small {
 - {{CSSxRef("calc", "calc()")}}
 - {{CSSxRef("clamp", "clamp()")}}
 - {{CSSxRef("max", "max()")}}
-- [CSS Values](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Values_and_units)
+- [CSS Values](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

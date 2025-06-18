@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Right_shift
 
 **右シフト演算子 (`>>`)** は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。最も左のビットをコピーしながらずれて入ります。最も左のビットが以前の最も左のビットと同じになるため、符号ビット (最も左のビット) は変化しません。よって「符号維持」という名前です。
 
-{{EmbedInteractiveExample("pages/js/expressions-right-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Right shift operator")}}
+
+```js interactive-example
+const a = 5; //  00000000000000000000000000000101
+const b = 2; //  00000000000000000000000000000010
+const c = -5; //  11111111111111111111111111111011
+
+console.log(a >> b); //  00000000000000000000000000000001
+// Expected output: 1
+
+console.log(c >> b); //  11111111111111111111111111111110
+// Expected output: -2
+```
 
 ## 構文
 

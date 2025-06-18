@@ -20,7 +20,7 @@ var port = browser.runtime.connectNative(
 ### 参数
 
 - `application`
-  - : 值类型为 `string`。该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/Add-ons/WebExtensions/Native_messaging#App_manifest) 中的"name"特性的值一致。
+  - : 值类型为 `string`。该参数的值为要连接的本地应用程序的名称。必须要跟 [native application's manifest file](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest) 中的"name"特性的值一致。
 
 ### 返回值
 
@@ -59,7 +59,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 是基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-connectNative) API。本文档采自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
+> 此 API 基于 Chromium 的 [`chrome.runtime`](https://developer.chrome.google.cn/docs/extensions/reference/api/runtime#method-connectNative) API。该文档衍生自 Chromium 代码中的 [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

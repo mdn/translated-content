@@ -46,9 +46,9 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 - `index`
   - : `integer`. 0 を底としたウィンドウの中のタブのインデックス。
 - `isArticle`
-  - : `boolean`. True なら[rendered in Reader Mode](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧可能、false ならそれ以外。
+  - : `boolean`. True なら[rendered in Reader Mode](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧可能、false ならそれ以外。
 - `isInReaderMode`
-  - : `boolean`. True なら[rendered in Reader Mode](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧中、false ならそれ以外。
+  - : `boolean`. True なら[rendered in Reader Mode](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で閲覧中、false ならそれ以外。
 - `lastAccessed`
   - : `double`. タブが最後にアクセスされた時刻(単位: [milliseconds since the epoch](https://en.wikipedia.org/wiki/Unix_time))。
 - `mutedInfo` {{optional_inline}}
@@ -84,7 +84,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
 {{WebExtExamples}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-Tab) API. This documentation is derived from [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

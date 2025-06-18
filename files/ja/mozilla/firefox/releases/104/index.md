@@ -21,7 +21,7 @@ slug: Mozilla/Firefox/Releases/104
   これらはそれぞれ、{{jsxref("Array")}} または {{jsxref("TypedArray")}} で、与えたテスト関数にマッチする最後の要素の値または添字を発見するために使用します。
   (詳しくは [Firefox バグ 1775026](https://bugzil.la/1775026) をご覧ください)
 
-- [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
+- [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) および [`structuredClone()`](/ja/docs/Web/API/Window/structuredClone) で [ネイティブなエラーの型](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types) を使用したとき、シリアライズした結果に (`stack` を持つエラーの型で) [`stack`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Error/stack) プロパティも含まれるようになりました。
   [`Worker.postMessage()`](/ja/docs/Web/API/Worker/postMessage) など、ほかの API を使用してエラーを送信する場合は、まだ `stack` をシリアライズしません
   (詳しくは [Firefox バグ 1774866](https://bugzil.la/1774866) をご覧ください)。
 

@@ -36,7 +36,10 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ### サ
 
-- [CSS カウンタースタイル](/ja/docs/Web/API/CSS_Counter_Styles)
+- [サーバー送信イベント](/ja/docs/Web/API/Server-sent_events)
+- [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
+- [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
+- [CSS カスタムハイライト API](/ja/docs/Web/API/CSS_Custom_Highlight_API)
 - [ストレージ API](/ja/docs/Web/API/Storage_API)
 - [ストレージアクセス API](/ja/docs/Web/API/Storage_Access_API)
 - [センサー API 群](/ja/docs/Web/API/Sensor_APIs)
@@ -56,7 +59,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 - [バックグラウンドフェッチ API](/ja/docs/Web/API/Background_Fetch_API)
 - [バッジ API](/ja/docs/Web/API/Badging_API)
 - [パフォーマンス API](/ja/docs/Web/API/Performance_API)
-- [ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API)
+- [ビュー遷移 API](/ja/docs/Web/API/View_Transition_API)
 - [フェッチ API](/ja/docs/Web/API/Fetch_API)
 - [プッシュ通知 API](/ja/docs/Web/API/Push_API)
 - [プレゼンテーション API](/ja/docs/Web/API/Presentation_API)
@@ -64,6 +67,10 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### マ
 
 - [メディアキャプチャとストリーム API](/ja/docs/Web/API/Media_Capture_and_Streams_API)
+
+### ヤ
+
+- [URL API](/ja/docs/Web/API/URL_API)
 
 ## API 仕様書英語索引
 
@@ -77,6 +84,6 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 {{APIListAlpha}}
 
-## 関連情報
+## ブラウザーの互換性
 
 - [Web API イベントリファレンス](/ja/docs/Web/Events)

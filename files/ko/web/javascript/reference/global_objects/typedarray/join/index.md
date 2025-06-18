@@ -11,7 +11,20 @@ l10n:
 {{jsxref("Array.prototype.join()")}}와 같은 알고리즘을 가지고 있습니다. 형식화 배열(TypedArray)는
 [형식화 배열의 타입](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-join.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.join()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+
+console.log(uint8.join());
+// Expected output: "10,20,30,40,50"
+
+console.log(uint8.join(""));
+// Expected output: "1020304050"
+
+console.log(uint8.join("-"));
+// Expected output: "10-20-30-40-50"
+```
 
 ## 구문
 

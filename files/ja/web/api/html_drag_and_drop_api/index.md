@@ -49,7 +49,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 {{domxref("DataTransferItemList")}} オブジェクトは {{domxref("DataTransferItem")}} オブジェクトのリストです。このリストオブジェクトはリストにドラッグ項目を追加したり、リストからドラッグ項目を削除したり、ドラッグ項目のリストをクリアするメソッドを持ちます。
 
-{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。.
+{{domxref("DataTransfer")}} と{{domxref("DataTransferItem")}} インターフェイスの主な違いは、前者が同期の {{domxref("DataTransfer.getData","getData()")}} メソッドを使ってドラッグ項目のデータにアクセスするのに対し、後者は代わりに非同期の{{domxref("DataTransferItem.getAsString","getAsString()")}} メソッドを使うことです。
 
 > **メモ:** {{domxref("DragEvent")}} と {{domxref("DataTransfer")}} はデスクトップブラウザーでは広く対応していますが、 {{domxref("DataTransferItem")}} と {{domxref("DataTransferItemList")}} インターフェイスのブラウザーの対応は限られています。相互運用性について、より詳しくは[相互運用性](#相互運用性)を見てください。
 
@@ -59,7 +59,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 ### ドラッグ可能なものを特定
 
-要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Global_attributes#draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
+要素を*ドラッグ可能*とするには、以下のコードのように [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性と {{domxref("HTMLElement.dragstart_event","ondragstart")}} のイベントハンドラーを追加することが求められます。
 
 ```html
 <script>
@@ -81,7 +81,7 @@ HTML ドラッグ & ドロップのインターフェイスは {{domxref("DragEv
 
 詳しくは、以下の記事を参照してください。
 
-- [draggable 属性リファレンス](/ja/docs/Web/HTML/Global_attributes/draggable)
+- [draggable 属性リファレンス](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
 - [ドラッグ操作ガイド](/ja/docs/Web/API/HTML_Drag_and_Drop_API/Drag_operations#draggableattribute)
 
 ### ドラッグするデータの定義

@@ -21,21 +21,21 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
 
 - [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
   - : 웹 어셈블리가 무엇인지, 왜 그렇게 유용한지, 어떻게 기존의 웹 플랫폼(혹은 그 이상)에 적응시켜 사용할 수 있는지 기본 개념을 알아봅시다.
-- [Compiling a New C/C++ Module to WebAssembly](/ko/docs/WebAssembly/C_to_wasm)
+- [Compiling a New C/C++ Module to WebAssembly](/ko/docs/WebAssembly/C_to_Wasm)
   - : [Emscripten](https://emscripten.org/) 같은 도구를 사용해서 C/C++ 로 작성된 코드를 wasm으로 컴파일할 수 있습니다. 어떻게 컴파일할 수 있는지 알아봅시다.
-- [Compiling an Existing C Module to WebAssembly](/ko/docs/WebAssembly/existing_C_to_wasm)
+- [Compiling an Existing C Module to WebAssembly](/ko/docs/WebAssembly/existing_C_to_Wasm)
   - : WebAssembly의 핵심 기능은 기존의 C 라이브러리 개발 생태계을 활용해 개발자가 웹에서 사용할 수 있도록하는 것입니다.
-- [Compiling from Rust to WebAssembly](/ko/docs/WebAssembly/rust_to_wasm)
+- [Compiling from Rust to WebAssembly](/ko/docs/WebAssembly/Rust_to_Wasm)
   - : Rust 코드를 작성했다면 WebAssembly로 컴파일 할 수 있습니다! 이 튜토리얼은 Rust 프로젝트를 컴파일하여 기존 웹 애플리케이션에서 사용하기 위해 알아야 할 모든 것을 설명합니다.
 - [Loading and running WebAssembly code](/ko/docs/WebAssembly/Loading_and_running)
-  - : Wasm 모듈을 사용한 후에는 [WebAssembly JavaScript](/ko/docs/WebAssembly/JavAscript_interface) API를 [Fetch](/ko/docs/Web/API/Fetch_API) 또는 [XHR](/ko/docs/Web/API/XMLHtpRequest) API와 결합하는 방법에 대해 설명합니다.
+  - : Wasm 모듈을 사용한 후에는 [WebAssembly JavaScript](/ko/docs/WebAssembly/JavaScript_interface) API를 [Fetch](/ko/docs/Web/API/Fetch_API) 또는 [XHR](/ko/docs/Web/API/XMLHtpRequest) API와 결합하는 방법에 대해 설명합니다.
 - [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
   - : wasm 모듈을 브라우저로 불러왔으면, 사용해야겠지요? 본 글에서는 웹어셈블리 JavaScript API를 이용하여 웹어셈블리를 어떻게 사용하는지를 설명합니다.
 - [Exported WebAssembly functions](/ko/docs/WebAssembly/Exported_functions)
   - : 익스포트 된 웹어셈블리 함수는 JavaScript에서의 웹어셈블리 함수의 반영이며, JavaScript에서 웹어셈블리 코드를 호출할 수 있도록 해줍니다. 본 글에서는 익스포트 된 웹어셈블리 함수가 무엇인지에 대해 설명합니다.
 - [Understanding WebAssembly text format](/ko/docs/WebAssembly/Understanding_the_text_format)
   - : 본 글에서는 웹어셈블리의 텍스트 포맷에 대해 설명합니다. 텍스트 포맷은 브라우저에서 개발자 도구를 이용하여 디버깅 할 때 보여지는 wasm 모듈의 저수준(Low-level) 문자형 표현입니다.
-- [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Text_format_to_wasm)
+- [Converting WebAssembly text format to wasm](/ko/docs/WebAssembly/Text_format_to_Wasm)
   - : 본 글에서는 텍스트 포맷으로 작성된 웹어셈블리 모듈을 wasm 바이너리로 변환하는 방법을 제시합니다.
 
 ## API 참조
@@ -50,16 +50,16 @@ WebAssembly는 JavaScript와 함께 보완되고 실행되도록 설계되었습
   - : `WebAssembly.Module` 개체에는 브라우저에서 이미 컴파일한 상태의 stateless WebAssembly 코드가 포함되어 있으며 효율적으로 [Worker와 효율적으로 공유](/ko/docs/Web/API/Worker/postMessage)하고 여러 번 인스턴스화 할 수 있습니다.
 - [`WebAssembly.Instance()`](/ko/docs/WebAssembly/JavaScript_interface/Instance)
   - : `WebAssembly.Instance` 객체는 상태를 가지며, 실행가능한 `Module`의 인스턴스입니다. `Instance` 객체는 웹어셈블리 코드를 JavaScript에서 부를 수 있도록 [익스포트된 모든 웹어셈블리 함수](/ko/docs/WebAssembly/Exported_functions)를 포함하고있습니다.
-- [`WebAssembly.compile()`](/ko/docs/WebAssembly/JavaScript_interface/compile)
+- [`WebAssembly.compile()`](/ko/docs/WebAssembly/JavaScript_interface/compile_static)
   - : `WebAssembly.compile()` 함수는 WebAssembly 이진 코드를 `WebAssembly.Module`개체로 컴파일 합니다.
-- [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/JavaScript_interface/compileStreaming)
+- [`WebAssembly.compileStreaming()`](/ko/docs/WebAssembly/JavaScript_interface/compileStreaming_static)
   - : `WebAssembly.compileStreaming()` 함수는 스트리밍된 기본 소스에서 직접 `WebAssembly.Module`을 컴파일합니다.
-- [`WebAssembly.instantiate()`](/ko/docs/WebAssembly/JavaScript_interface/instantiate)
+- [`WebAssembly.instantiate()`](/ko/docs/WebAssembly/JavaScript_interface/instantiate_static)
   - : The `WebAssembly.instantiate()` function allows you to compile and instantiate WebAssembly code.
   - : `WebAssembly.instantiate()`함수로 WebAssembly 코드를 컴파일하고 인스턴스화할 수 있습니다.
-- [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/JavaScript_interface/instantiateStreaming)
+- [`WebAssembly.instantiateStreaming()`](/ko/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static)
   - : `WebAssembly.instantiateStreaming ()` 함수는 WebAssembly 코드를 컴파일하고 인스턴스화하여 `모듈`과 첫 번째 `인스턴스`를 반환하는 기본 API입니다.
-- [`WebAssembly.validate()`](/ko/docs/WebAssembly/JavaScript_interface/validate)
+- [`WebAssembly.validate()`](/ko/docs/WebAssembly/JavaScript_interface/validate_static)
   - : `WebAssembly.validate()` 함수는 지정된 형식의 WebAssembly 이진 코드 배열의 유효성을 확인합니다.
 - [`WebAssembly.Memory()`](/ko/docs/WebAssembly/JavaScript_interface/Memory)
   - : `WebAssembly.Memory` 객체는 사이즈 조절 가능한 {{jsxref("Global_objects/ArrayBuffer", "ArrayBuffer")}}로, `Instance`가 접근하는 메모리를 로우(raw) 바이트들로 들고있습니다.

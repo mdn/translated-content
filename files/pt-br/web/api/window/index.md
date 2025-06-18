@@ -5,9 +5,9 @@ slug: Web/API/Window
 
 {{APIRef}}
 
-O objeto `window` representa uma janela que contém um elemento DOM; a propriedade `document` aponta para o [documento DOM document](/pt-BR/docs/DOM/document) carregado naquela janela. Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.
+O objeto `window` representa uma janela que contém um elemento DOM; a propriedade `document` aponta para o [documento DOM document](/pt-BR/docs/Web/API/Document) carregado naquela janela. Uma janela para um dado documento pode ser obtido usando a propriedade {{Domxref("document.defaultView")}}.
 
-Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/DOM/DOM_Reference).
+Esta seção provê uma breve referência a todos os métodos, propriedades e eventos disponíveis através do objeto DOM `window`. O objeto `window` implementa a interface `Window`, o qual herda da interface [`AbstractView`](https://www.w3.org/TR/DOM-Level-2-Views/views.html#Views-AbstractView). Algumas funções globais, objeto de namespace, interfaces e construtores, apesar de não tipicamente associados ao objeto em questão, estão disponíveis e estão listados nas referências [JavaScript Reference](/pt-BR/docs/Web/JavaScript/Reference) e [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model).
 
 Em um navegador com suporte a abas, como o Firefox, cada aba contém seu próprio objeto `window` (e, se você estiver escrevendo uma extensão, a janela do navegador é uma janela distinta também - veja [Working with windows in chrome code](/pt-BR/docs/Working_with_windows_in_chrome_code#Content_windows) para mais informação). Isto é, o objeto `window` não é compartilhado entre as abas na mesma janela. Alguns métodos, nomeadamente {{Domxref("window.resizeTo")}} e {{Domxref("window.resizeBy")}} aplicam-se à janela toda e não à aba em questão ao que o objeto `window` pertence. Geralmente, qualquer coisa que não pode racionalmente pertencer a uma aba, pertence a uma janela..
 
@@ -97,7 +97,7 @@ Perceba que propriedades que são objetos (ex.: sobrecarregar o protótipo de el
 - {{domxref("Window.parent")}} {{readOnlyInline}}
   - : Returns a reference to the parent of the current window or subframe.
 - {{domxref("Window.performance")}} {{readOnlyInline}}
-  - : Provides a hosting area for [performance related](/pt-BR/docs/Navigation_timing) attributes.
+  - : Provides a hosting area for [performance related](/pt-BR/docs/Web/API/Performance_API/Navigation_timing) attributes.
 - {{domxref("Window.personalbar")}} {{readOnlyInline}}
   - : Returns the personalbar object, whose visibility can be toggled in the window.
 - {{domxref("Window.pkcs11")}}
@@ -168,13 +168,13 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.confirm()")}}
   - : Displays a dialog with a message that the user needs to respond to.
 - {{domxref("Window.disableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.dispatchEvent()")}}
   - : Used to trigger an event.
 - {{domxref("Window.dump()")}}
   - : Writes a message to the console.
 - {{domxref("Window.enableExternalCapture()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.find()")}}
   - : Searches for a given string in a window.
 - {{domxref("Window.focus()")}}
@@ -184,7 +184,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.getAttention()")}}
   - : Flashes the application icon.
 - {{domxref("Window.getAttentionWithCycleCount()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.getComputedStyle()")}}
   - : Gets computed style for the specified element. Computed style indicates the computed values of all CSS properties of the element.
 - {{domxref("Window.getDefaulComputedStyle()")}}
@@ -196,7 +196,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.matchMedia()")}}
   - : Returns a {{domxref("MediaQueryList")}} object representing the specified media query string.
 - {{domxref("Window.maximize()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.minimize()")}} (top-level XUL windows only)
   - : Minimizes the window.
 - {{domxref("Window.moveBy()")}}
@@ -224,9 +224,9 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("Window.resizeTo()")}}
   - : Dynamically resizes window.
 - {{domxref("Window.restore()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.routeEvent()")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.scroll()")}}
   - : Scrolls the window to a particular place in the document.
 - {{domxref("Window.scrollBy()")}}
@@ -244,7 +244,7 @@ _This interface inherits methods from the {{domxref("EventTarget")}} interface a
 - {{domxref("WindowTimers.setInterval()")}}
   - : Schedules the execution of a function each X milliseconds.
 - {{domxref("Window.setResizable")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("WindowTimers.setTimeout()")}}
   - : Sets a delay for executing a function.
 - {{domxref("Window.showModalDialog()")}}
@@ -263,7 +263,7 @@ These are properties of the window object that can be set to establish event han
 _This interface inherits event handlers from the {{domxref("EventTarget")}} interface and implements event handlers from {{domxref("WindowTimers")}}, {{domxref("WindowBase64")}}, and {{domxref("WindowEventHandlers")}}._
 
 > [!NOTE]
-> Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/DOM/DOM_event_handlers) for details.
+> Starting in Gecko 9.0, you can now use the syntax `if ("onabort" in window)` to determine whether or not a given event handler property exists. This is because event handler interfaces have been updated to be proper web IDL interfaces. See [DOM event handlers](/pt-BR/docs/Web/Events/Event_handlers) for details.
 
 - {{domxref("GlobalEventHandlers.onabort")}}
   - : An event handler property for abort events on the window.
@@ -282,25 +282,25 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 - {{domxref("Window.ondevicelight")}}
   - : An event handler property for any ambient light levels changes
 - {{domxref("Window.ondevicemotion")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.ondeviceorientation")}}
   - : An event handler property for any device orientation changes
 - {{domxref("Window.ondeviceproximity")}}
   - : An event handler property for device proximity event
 - {{domxref("GlobalEventHandlers.onerror")}}
-  - : An event handler property for {{event("error")}} events raised on the window.
+  - : An event handler property for [`error`](/pt-BR/docs/Web/API/HTMLElement/error_event) events raised on the window.
 - {{domxref("GlobalEventHandlers.onfocus")}}
-  - : An event handler property for {{event("focus")}} events on the window.
+  - : An event handler property for [`focus`](/pt-BR/docs/Web/API/Element/focus_event) events on the window.
 - {{domxref("WindowEventHandlers.onhashchange")}}
   - : An event handler property for hash change events on the window; called when the part of the URL after the hash mark ("#") changes.
 - {{domxref("GlobalEventHandlers.onkeydown")}}
-  - : An event handler property for {{event("keydown")}} events on the window.
+  - : An event handler property for [`keydown`](/pt-BR/docs/Web/API/Element/keydown_event) events on the window.
 - {{domxref("GlobalEventHandlers.onkeypress")}}
-  - : An event handler property for {{event("keypress")}} events on the window.
+  - : An event handler property for [`keypress`](/pt-BR/docs/Web/API/Element/keypress_event) events on the window.
 - {{domxref("GlobalEventHandlers.onkeyup")}}
-  - : An event handler property for {{event("keyup")}} events on the window.
+  - : An event handler property for [`keyup`](/pt-BR/docs/Web/API/Element/keyup_event) events on the window.
 - {{domxref("WindowEventHandlers.onlanguagechange")}}
-  - : An event handler property for {{event("languagechange")}} events on the window.
+  - : An event handler property for [`languagechange`](/pt-BR/docs/Web/API/Window/languagechange_event) events on the window.
 - {{domxref("GlobalEventHandlers.onload")}}
   - : An event handler property for window loading.
 - {{domxref("GlobalEventHandlers.onmousedown")}}
@@ -340,30 +340,30 @@ _This interface inherits event handlers from the {{domxref("EventTarget")}} inte
 
 ## Constructors
 
-See also the [DOM Interfaces](/pt-BR/docs/DOM/DOM_Reference).
+See also the [DOM Interfaces](/pt-BR/docs/Web/API/Document_Object_Model).
 
 - {{domxref("Window.DOMParser")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.GeckoActiveXObject")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Image")}}
   - : Used for creating an {{domxref("HTMLImageElement")}}.
 - {{domxref("Option")}}
   - : Used for creating an {{domxref("HTMLOptionElement")}}
 - {{domxref("Window.QueryInterface")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XMLSerializer")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Worker")}}
-  - : Used for creating a [Web worker](/pt-BR/docs/DOM/Using_web_workers)
+  - : Used for creating a [Web worker](/pt-BR/docs/Web/API/Web_Workers_API/Using_web_workers)
 - {{domxref("Window.XPCNativeWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 - {{domxref("Window.XPCSafeJSObjectWrapper")}}
-  - : {{todo("NeedsContents")}}
+  - : <!-- TODO: add content -->
 
 ## Interfaces
 
-See [DOM Reference](/pt-BR/docs/DOM/DOM_Reference)
+See [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 
 ## See also
 

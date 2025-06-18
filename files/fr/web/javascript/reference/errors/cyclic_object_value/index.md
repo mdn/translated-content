@@ -19,7 +19,7 @@ TypeError: Circular reference in value argument not supported (Edge)
 
 ## Quel est le problème ?
 
-Lorsqu'on appelle la méthode {{jsxref("JSON.stringify()")}}, les structures de références cycliques ne peuvent pas être converties en chaîne de caractères car [le format JSON](https://www.json.org/) ne prend pas en charge les références (bien qu'[un brouillon IETF existe](http://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)).
+Lorsqu'on appelle la méthode {{jsxref("JSON.stringify()")}}, les structures de références cycliques ne peuvent pas être converties en chaîne de caractères car [le format JSON](https://www.json.org/) ne prend pas en charge les références (bien qu'[un brouillon IETF existe](https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03)).
 
 ## Exemples
 

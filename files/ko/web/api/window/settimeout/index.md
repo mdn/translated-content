@@ -369,7 +369,7 @@ function clearMessage() {
 
 {{EmbedLiveSample('타임아웃_설정_및_해제')}}
 
-[`clearTimeout()` 예제](/ko/docs/Web/API/clearTimeout#example)도 확인해보세요.
+[`clearTimeout()` 예제](/ko/docs/Web/API/Window/clearTimeout#example)도 확인해보세요.
 
 ## 명세서
 

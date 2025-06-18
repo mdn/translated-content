@@ -47,4 +47,4 @@ transform-style: unset;
 
 ## Смотрите также
 
-- [Using CSS Transforms](/ru/docs/CSS/Using_CSS_transforms)
+- [Using CSS Transforms](/ru/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)

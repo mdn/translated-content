@@ -5,7 +5,7 @@ slug: Web/API/Window/popstate_event
 
 {{APIRef("History API")}}
 
-Событие `popstate` вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом [`history.pushState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_pushState()_method>) или [`history.replaceState()`](<https://developer.mozilla.org/ru/docs/Web/API/History_API#The_replaceState()_method>), то состояние события `popstate` будет содержать `state` копии входящего в историю объекта
+Событие `popstate` вызывается, когда изменяется активная запись истории. Если изменение записи истории было вызвано методом [`history.pushState()`](</ru/docs/Web/API/History_API#The_pushState()_method>) или [`history.replaceState()`](</ru/docs/Web/API/History_API#The_replaceState()_method>), то состояние события `popstate` будет содержать `state` копии входящего в историю объекта
 
 Обратите внимание, `history.pushState()` или `history.replaceState()` не вызывают событие `popstate`. Событие `popstate` будет вызвано при совершении действий в браузере, таких как нажатие кнопок "Вперёд" или "Назад" (или при вызове `history.back()` или `history.forward()` из JavaScript).
 
@@ -14,7 +14,7 @@ slug: Web/API/Window/popstate_event
 ## General info
 
 - Specification
-  - : [HTML5](http://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
+  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-popstate)
 - Interface
   - : PopStateEvent
 - Bubbles
@@ -65,7 +65,7 @@ Note that even though the original history entry (for `http://example.com/exampl
 
 ## Related Events
 
-- [`hashchange`](/ru/docs/Mozilla_event_reference/hashchange)
+- [`hashchange`](/ru/docs/Web/API/Window/hashchange_event)
 
 ## See Also
 

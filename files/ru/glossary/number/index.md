@@ -16,5 +16,5 @@ slug: Glossary/Number
 
 ### Техническая справка
 
-- Числовой тип данных JavaScript: [Number](/ru/docs/Web/JavaScript/Data_structures#.D0.A7.D0.B8.D1.81.D0.BB.D0.B0)
+- Числовой тип данных JavaScript: [Number](/ru/docs/Web/JavaScript/Guide/Data_structures#.d0.a7.d0.b8.d1.81.d0.bb.d0.b0)
 - Глобальный объект JavaScript: {{jsxref("Number")}}

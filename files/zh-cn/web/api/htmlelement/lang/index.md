@@ -7,7 +7,7 @@ slug: Web/API/HTMLElement/lang
 
 **`HTMLElement.lang`** 属性用来获取或设置元素属性值或文本内容的基语言（base language）。
 
-该属性返回的语言代码（language code）被定义在 [RFC 1766](http://tools.ietf.org/html/rfc1766)。通常，"en" 表示英语（English）、"ja" 表示（Japanese）、"zh-cn" 表示简体中文等等。该属性的默认值未知（`unknown`）。尽管该属性可以应用在单独的元素上，但是通常在文档的根元素（html）上指定。
+该属性返回的语言代码（language code）被定义在 [RFC 1766](https://tools.ietf.org/html/rfc1766)。通常，"en" 表示英语（English）、"ja" 表示（Japanese）、"zh-cn" 表示简体中文等等。该属性的默认值未知（`unknown`）。尽管该属性可以应用在单独的元素上，但是通常在文档的根元素（html）上指定。
 
 该属性只对 `lang` 属性（attribute）有效，不适用于 `xml:lang`。
 

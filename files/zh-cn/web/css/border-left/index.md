@@ -44,7 +44,7 @@ border-left: medium dashed green;
   - : 请参阅{{ Cssxref("border-left-width") }}.
 - `<br-style>`
   - : 请参阅{{ Cssxref("border-left-style") }}.
-- `{{cssxref("&lt;color&gt;")}}`
+- {{cssxref("&lt;color&gt;")}}
   - : 请参阅 {{ Cssxref("border-left-color") }}.
 
 ### Formal syntax

@@ -10,7 +10,7 @@ l10n:
 
 **`windowControlsOverlay`** は {{domxref("Navigator")}} インターフェイスの読み取り専用プロパティで、{{domxref("WindowControlsOverlay")}} インターフェイスを返します。このインターフェイスは、[ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API) を使用するデスクトップのプログレッシブウェブアプリのタイトルバーの形状に関する情報を公開します。
 
-デスクトップのオペレーティングシステムにインストールされたプログレッシブウェブアプリは、ウェブアプリマニフェストのメンバーの [`display_override`](/ja/docs/Web/Manifest/display_override) で `window-controls-overlay` 値を使用することで、ウィンドウ制御オーバーレイ機能を有効にすることができます。
+デスクトップのオペレーティングシステムにインストールされたプログレッシブウェブアプリは、ウェブアプリマニフェストのメンバーの [`display_override`](/ja/docs/Web/Progressive_web_apps/Manifest/display_override) で `window-controls-overlay` 値を使用することで、ウィンドウ制御オーバーレイ機能を有効にすることができます。
 
 そうすることで、既定のウィンドウタイトルバーが非表示になり、アプリがアプリウィンドウの全領域にアクセスできるようになります。
 

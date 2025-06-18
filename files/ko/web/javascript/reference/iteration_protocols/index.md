@@ -97,7 +97,7 @@ console.log(aGeneratorObject[Symbol.iterator]() === aGeneratorObject);
 
 모든 내장 반복자는 `this`를 반환하는 `[@@iterator]()` 메서드를 구현하는 {{jsxref("Iterator", "Iterator.prototype")}}에서 상속되었기 때문에 내장 반복자도 순회 가능입니다.
 
-그러나 가능하다면 `iterable[Symbol.iterator]`가 [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/@@iterator)처럼 항상 처음부터 시작하는 별개의 반복자를 반환하는 것이 좋습니다.
+그러나 가능하다면 `iterable[Symbol.iterator]`가 [`Set.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Set/Symbol.iterator)처럼 항상 처음부터 시작하는 별개의 반복자를 반환하는 것이 좋습니다.
 
 ## 비동기 반복자와 비동기 순회 가능 프로토콜
 
@@ -346,7 +346,7 @@ console.log(it.next().value); // 2
 
 ### 클래스로 반복자 정의하기
 
-상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_class_fields)으로도 수행할 수 있습니다.
+상태 캡슐화는 [프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)으로도 수행할 수 있습니다.
 
 ```js
 class SimpleClass {
@@ -392,7 +392,7 @@ const someString = "hi";
 console.log(typeof someString[Symbol.iterator]); // "function"
 ```
 
-`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/@@iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
+`String`의 [기본 반복자](/ko/docs/Web/JavaScript/Reference/Global_Objects/String/Symbol.iterator)는 다음과 같이 문자열의 코드 포인트를 하나씩 반환합니다.
 
 ```js
 const iterator = someString[Symbol.iterator]();

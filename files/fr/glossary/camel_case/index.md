@@ -12,7 +12,7 @@ Le **<i lang="en">camel case</i>** (généralement utilisé en anglais, qu'on po
 Cette notation est généralement utilisée comme convention pour le nommage des variables et est par exemple utilisée en JavaScript. Voici des exemples de noms écrits en <i lang="en">camel case</i>&nbsp;:
 
 - [`console`](/fr/docs/Web/API/console)
-- [`crossOriginIsolated`](/fr/docs/Web/API/crossOriginIsolated)
+- [`crossOriginIsolated`](/fr/docs/Web/API/Window/crossOriginIsolated)
 - [`encodeURIComponent`](/fr/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`HTMLElement`](/fr/docs/Web/API/HTMLElement)

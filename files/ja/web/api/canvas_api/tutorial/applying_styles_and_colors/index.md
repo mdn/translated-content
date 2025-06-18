@@ -10,7 +10,7 @@ l10n:
 [図形の描画](/ja/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes)についての章では、既定の線と塗りつぶしのスタイルのみを使用しました。ここでは、私たちの絵を少しでも魅力的にするために、自由に使えるキャンバスのオプションについて探っていきます。色、線のスタイル、グラデーション、パターン、影を追加する方法を学びます。
 
 > [!NOTE]
-> キャンバスのコンテンツはスクリーンリーダーにはアクセシビリティがありません。キャンバスが純粋に装飾的な場合は、 `role="presentation"` を `<canvas>` の開始タグに記載してください。そうでない場合は、キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性の値として説明テキストを入れるか、開始タグと閉じタグの中に代替コンテンツを入れてください。キャンバスのコンテンツは DOM の一部ではありませんが、中の代替コンテンツは DOM の一部です。
+> キャンバスのコンテンツはスクリーンリーダーにはアクセシビリティがありません。キャンバスが純粋に装飾的な場合は、 `role="presentation"` を `<canvas>` の開始タグに記載してください。そうでない場合は、キャンバス要素自体に直接 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性の値として説明テキストを入れるか、開始タグと閉じタグの中に代替コンテンツを入れてください。キャンバスのコンテンツは DOM の一部ではありませんが、中の代替コンテンツは DOM の一部です。
 
 ## 色
 
@@ -684,13 +684,13 @@ const ptrn = ctx.createPattern(img, "repeat");
 
 この最後の例では、 `fillStyle` プロパティに割り当てるパターンを作成します。唯一の注目すべき点は、画像の `onload` ハンドラーを使用していることです。これは、パターンに割り当てる前に画像が読み込まていれることを保証するためです。
 
-```js
+```js live-sample___a_createpattern_example
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
 
   // 新しい画像オブジェクトを生成して、パターンとして使用する
   const img = new Image();
-  img.src = "canvas_createpattern.png";
+  img.src = "canvas_create_pattern.png";
   img.onload = () => {
     // パターンを作成
     const ptrn = ctx.createPattern(img, "repeat");
@@ -700,11 +700,11 @@ function draw() {
 }
 ```
 
-```html hidden
+```html hidden live-sample___a_createpattern_example
 <canvas id="canvas" width="150" height="150" role="presentation"></canvas>
 ```
 
-```js hidden
+```js hidden live-sample___a_createpattern_example
 draw();
 ```
 

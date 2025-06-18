@@ -5,9 +5,9 @@ slug: Web/CSS/@font-feature-values
 
 {{CSSRef}}
 
-**`@font-feature-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、OpenType で有効化された特性が異なるものに対して {{cssxref("font-variant-alternates")}} プロパティで共通の名前を使用することができます。これは、複数のフォントを使用している場合に CSS を簡素化するのに役立ちます。
+**`@font-feature-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、OpenType で有効化された特性が異なるものに対して {{cssxref("font-variant-alternates")}} プロパティで共通の名前を使用することができます。これは、複数のフォントを使用している場合に CSS を簡素化するのに役立ちます。
 
-`@font-feature-values` アットルールは、CSS の最上位で使用することも、任意の [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/At-rule#条件付きグループルール)の内部で使用することもできます。
+`@font-feature-values` アットルールは、CSS の最上位で使用することも、任意の [CSS の条件付きグループアットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule#条件付きグループルール)の内部で使用することもできます。
 
 ## 構文
 

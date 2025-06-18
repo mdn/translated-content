@@ -1,5 +1,5 @@
 ---
-title: "::marker"
+title: ::marker
 slug: Web/CSS/::marker
 l10n:
   sourceCommit: 679f5893a4734fd136b80140e13262422d76b123
@@ -9,7 +9,27 @@ l10n:
 
 **`::marker`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 일반적으로 불릿 혹은 숫자를 포함하는 목록 요소의 마커 상자를 선택합니다. 이는 {{HTMLElement("li")}}와 {{HTMLElement("summary")}}처럼 [`display: list-item`](/ko/docs/Web/CSS/display)이 설정된 의사 요소나 일반 요소에서 동작합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+
+```css interactive-example
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
+}
+```
+
+```html interactive-example
+<p>Group known as Mercury Seven:</p>
+<ul>
+  <li>Malcolm Scott Carpenter</li>
+  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
+  <li>John Herschel Glenn Jr.</li>
+  <li>Virgil Ivan (Gus) Grissom</li>
+  <li>Walter Marty (Wally) Schirra Jr.</li>
+  <li>Alan Bartlett Shepard Jr.</li>
+  <li>Donald Kent (Deke) Slayton</li>
+</ul>
+```
 
 ## 허용되는 속성
 

@@ -153,7 +153,7 @@ button.addEventListener("click", (event) => {
 
 ## 参见
 
-- [事件介绍](/zh-CN/docs/Learn/JavaScript/Building_blocks/Events)
+- [事件介绍](/zh-CN/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/auxclick_event", "auxclick")}}
 - {{domxref("Element/contextmenu_event", "contextmenu")}}
 - {{domxref("Element/dblclick_event", "dblclick")}}

@@ -32,7 +32,7 @@ slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
 
 ときには、拡張機能に何らかのリソース - たとえば、画像や HTML、CSS、JavaScript - をパッケージして、ウェブページで使用できるようにしたい場合があります。
 
-たとえば、[2 つめの WebExtension](/ja/Add-ons/WebExtensions/Walkthrough) で使われている "beastify" 例題エクステンションでは、[`<img>`](/ja/docs/Web/HTML/Element/img) 要素の `src` 属性を設定することで、ウェブページの画像を動物に置き換えています。画像は拡張機能とともにパッケージ化されており、ウェブページがそれらをロードできるようにするには、ウェブアクセシブルにする必要があります。
+たとえば、[2 つめの WebExtension](/ja/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension) で使われている "beastify" 例題エクステンションでは、[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素の `src` 属性を設定することで、ウェブページの画像を動物に置き換えています。画像は拡張機能とともにパッケージ化されており、ウェブページがそれらをロードできるようにするには、ウェブアクセシブルにする必要があります。
 
 `web_accessible_resources` キーは、この方法でウェブページで利用可能にしたいすべてのパッケージされたリソースをリストします。manifest.json ファイルを基準としたパスを指定します。
 
@@ -52,7 +52,7 @@ my-extension-files/
         my-image.png
 ```
 
-ウェブページに、この画像を指す `src` 属性のある [`<img>`](/ja/docs/Web/HTML/Element/img) 要素を入れるには、 "web_accessible_resources" で次のように指定します:
+ウェブページに、この画像を指す `src` 属性のある [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素を入れるには、 "web_accessible_resources" で次のように指定します:
 
 ```json
 "web_accessible_resources": ["images/my-image.png"]

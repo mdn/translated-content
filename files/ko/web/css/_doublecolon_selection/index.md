@@ -1,5 +1,5 @@
 ---
-title: "::selection"
+title: ::selection
 slug: Web/CSS/::selection
 l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
@@ -9,7 +9,20 @@ l10n:
 
 **`::selection`** CSS [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 (클릭이나 마우스 드래그처럼) 사용자에 의해 하이라이트된 문서의 일부분에 스타일을 적용합니다.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-selection.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}
+
+```css interactive-example
+p::selection {
+  color: red;
+  background-color: yellow;
+}
+```
+
+```html interactive-example
+<p>
+  Select a fragment of this paragraph, to see how its appearance is affected.
+</p>
+```
 
 ## 혀용되는 속성
 

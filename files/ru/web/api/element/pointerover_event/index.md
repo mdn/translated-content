@@ -66,14 +66,14 @@ para.onpointerover = (event) => {
 
 ## Смотрите также
 
-- [`gotpointercapture`](/ru/docs/Web/API/HTMLElement/gotpointercapture_event)
-- [`lostpointercapture`](/ru/docs/Web/API/HTMLElement/lostpointercapture_event)
-- [`pointerenter`](/ru/docs/Web/API/HTMLElement/pointerenter_event)
-- [`pointerdown`](/ru/docs/Web/API/HTMLElement/pointerdown_event)
-- [`pointermove`](/ru/docs/Web/API/HTMLElement/pointermove_event)
-- [`pointerup`](/ru/docs/Web/API/HTMLElement/pointerup_event)
-- [`pointercancel`](/ru/docs/Web/API/HTMLElement/pointercancel_event)
-- [`pointerout`](/ru/docs/Web/API/HTMLElement/pointerout_event)
-- [`pointerleave`](/ru/docs/Web/API/HTMLElement/pointerleave_event)
-- [`onpointerover`](/ru/docs/Web/API/GlobalEventHandlers/onpointerover) свойство-обработчик события
-- Событие на элементах `Document`: событие [`pointerover`](/ru/docs/Web/API/Document/pointerover_event)
+- [`gotpointercapture`](/ru/docs/Web/API/Element/gotpointercapture_event)
+- [`lostpointercapture`](/ru/docs/Web/API/Element/lostpointercapture_event)
+- [`pointerenter`](/ru/docs/Web/API/Element/pointerenter_event)
+- [`pointerdown`](/ru/docs/Web/API/Element/pointerdown_event)
+- [`pointermove`](/ru/docs/Web/API/Element/pointermove_event)
+- [`pointerup`](/ru/docs/Web/API/Element/pointerup_event)
+- [`pointercancel`](/ru/docs/Web/API/Element/pointercancel_event)
+- [`pointerout`](/ru/docs/Web/API/Element/pointerout_event)
+- [`pointerleave`](/ru/docs/Web/API/Element/pointerleave_event)
+- [`onpointerover`](/ru/docs/Web/API/Element/pointerover_event) свойство-обработчик события
+- Событие на элементах `Document`: событие [`pointerover`](/ru/docs/Web/API/Element/pointerover_event)

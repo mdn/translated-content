@@ -242,7 +242,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 ## 权限
 
-在一个可安装的 app（如[Firefox OS app](/zh-CN/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
+在一个可安装的 app（如[Firefox OS app](/zh-CN/docs/Web/Apps/Build/Building_apps_for_Firefox_OS/Firefox_OS_app_beginners_tutorial)）中使用 `getUserMedia()` ，你需要在声明文件中指定以下的权限：
 
 ```js
 "permissions": {
@@ -255,7 +255,7 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 }
 ```
 
-参见 [permission: audio-capture](/zh-CN/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
+参见 [permission: audio-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#audio-capture) 和 [permission: video-capture](/zh-CN/docs/Web/Apps/Developing/App_permissions#video-capture) 来获取更多信息。
 
 ## 规范
 
@@ -269,6 +269,6 @@ var constraints = { video: { facingMode: front ? "user" : "environment" } };
 
 - 旧的 [navigator.getUserMedia](/zh-CN/docs/Web/API/Navigator/getUserMedia) 遗留 API
 - [navigator.enumerateDevices](/zh-CN/docs/Web/API/MediaDevices/enumerateDevices) - 获取用户可用的设备类型和数量
-- [WebRTC](/zh-CN/docs/WebRTC) - WebRTC API 的介绍页面
-- [MediaStream API](/zh-CN/docs/WebRTC/MediaStream_API) - 媒体流对象的 API
-- [Taking webcam photos](/zh-CN/docs/WebRTC/taking_webcam_photos) - 一个关于使用 `getUserMedia()` 拍照而非录视频的教程
+- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API) - WebRTC API 的介绍页面
+- [MediaStream API](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) - 媒体流对象的 API
+- [Taking webcam photos](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos) - 一个关于使用 `getUserMedia()` 拍照而非录视频的教程

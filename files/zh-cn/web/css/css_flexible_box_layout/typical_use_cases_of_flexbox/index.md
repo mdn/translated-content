@@ -27,7 +27,42 @@ l10n:
 
 在下面的示例中，我们通过使用 `justify-content: space-between` 使元素之间拥有相同的空间，让各元素都以其自身的尺寸展示。你可以通过 `space-around`（或 `space-evenly`，如果支持）值来改变分布空间的方式。你也可以使用 `flex-start` 让空间排布在所有元素末尾。使用 `flex-end` 让空间排布在所有元素之前，`center` 可以居中导航元素。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation.html", '100%', 550)}}
+```html live-sample___navigation
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 is longer</a></li>
+    <li><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___navigation
+nav {
+  border: 2px solid #eeeeee;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+```
+
+{{EmbedLiveSample("navigation")}}
 
 ### 让元素自己处理空间分布
 
@@ -37,7 +72,44 @@ l10n:
 
 尝试将以下实时示例中的 `flex: auto` 修改为 `flex: 1`。这是 `flex: 1 1 0` 的简写，会导致所有的元素变得等宽，因为它们都基于 flex-basis 为 0 的情况（允许所有的空间被均匀分配）。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/navigation-flex.html", '100%', 550)}}
+```html live-sample___navigation-flex
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 is longer</a></li>
+    <li><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___navigation-flex
+nav {
+  border: 2px solid #eeeeee;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
+
+nav li {
+  flex: auto;
+}
+```
+
+{{EmbedLiveSample("navigation-flex")}}
 
 ## 拆分导航
 
@@ -45,7 +117,46 @@ l10n:
 
 元素在主轴上按照弹性盒子的初始行为 `flex-start` 进行对齐。使用 [`gap`](/zh-CN/docs/Web/CSS/gap) 属性以在元素之间创建间隔。同时我们为最后需要右对齐的元素添加自动左边距以对齐它们。你可以将那个类转移到其他元素上以改变分割作用的位置。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/split-navigation.html", '100%', 550)}}
+```html live-sample___split-navigation
+<nav>
+  <ul>
+    <li><a href="#">Page 1</a></li>
+    <li><a href="#">Page 2</a></li>
+    <li><a href="#">Page 3 is longer</a></li>
+    <li class="push-right"><a href="#">Page 4</a></li>
+  </ul>
+</nav>
+```
+
+```css live-sample___split-navigation
+nav {
+  border: 2px solid #eeeeee;
+}
+
+nav a {
+  text-decoration: none;
+  color: #000;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.push-right {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("split-navigation")}}
 
 ## 元素居中
 
@@ -53,7 +164,31 @@ l10n:
 
 你可以修改对齐方式，用 `flex-start` 使元素在开头对齐或者用 `flex-end` 使元素在末端对齐。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/center.html", '100%', 700)}}
+```html live-sample___center
+<div class="box">
+  <div></div>
+</div>
+```
+
+```css live-sample___center
+.box {
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 100px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("center", "", "320px")}}
 
 在未来，我们可能不需要仅为了元素的居中而将容器转变为弹性盒容器，因为盒对齐属性最终会在块布局中实现。但是现在，假如你想在一个元素中居中另一个元素，弹性盒布局是一个很好的选择。在上面的例子中，将一个容器放入弹性盒容器之后，要么在父级元素上使用 `align-items`，要么对弹性元素本身使用 `align-self`。
 
@@ -65,7 +200,56 @@ l10n:
 
 弹性盒就能解决这个问题。我们为卡片创建一个弹性容器，并启用 {{cssxref("flex-direction")}}`: column`。然后我们在为内容区域启用 `flex: 1`（`flex: 1 1 0` 的缩略形式），这个元素就可以在 `flex-basis` 为 0 的基础上伸缩。因为这是唯一一个可以伸展的元素，它会占据所有在弹性容器中可以占据的空间，同时将页脚推至底部。如果你移除示例中的 `flex` 属性你就会看见页脚回到了内容的底部。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/cards.html", '100%', 800)}}
+```html live-sample___cards
+<div class="cards">
+  <div class="card">
+    <div class="content">
+      <p>This card doesn't have much content.</p>
+    </div>
+    <footer>Card footer</footer>
+  </div>
+  <div class="card">
+    <div class="content">
+      <p>
+        This card has a lot more content which means that it defines the height
+        of the container the cards are in. I've laid the cards out using grid
+        layout, so the cards themselves will stretch to the same height.
+      </p>
+    </div>
+    <footer>Card footer</footer>
+  </div>
+</div>
+```
+
+```css live-sample___cards
+body {
+  font-family: sans-serif;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
+
+.card {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .content {
+  padding: 10px;
+  flex: 1 1 auto;
+}
+
+.card footer {
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("cards", "", "280px")}}
 
 ## 媒体对象
 
@@ -75,7 +259,39 @@ l10n:
 
 在下面的实时示例中，你可以看到我们的媒体对象。使用对齐属性来将交叉轴上的元素对齐到 `flex-start`，然后为 `.content` 弹性元素设置为 `flex: 1`。与上面的列布局卡片模式一样，启用 `flex: 1` 表示这部分卡片可以延伸。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media.html", '100%', 600)}}
+```html live-sample___media
+<div class="media">
+  <div class="image">
+    <img
+      alt="A colorful balloon against a blue sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="content">
+    This is the content of my media object. Items directly inside the flex
+    container will be aligned to flex-start.
+  </div>
+</div>
+```
+
+```css live-sample___media
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.media {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
+
+.media .content {
+  flex: 1;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("media", "", "320px")}}
 
 在这个实例中，你可能想要尝试的一些事情与你想在设计中约束媒体对象的不同方式有关。
 
@@ -117,7 +333,43 @@ l10n:
 
 要切换媒体对象的显示方式——使图像位于右侧，内容位于左侧，我们可以将 `flex-direction` 属性设置为 `row-reverse`。媒体对象现在以另一种方式显示。我在实时示例中通过在现有的 `.media` 类旁边添加一个 `flipped` 类来实现这一点。这意味着你可以通过从 HTML 中删除该类来查看显示方式的变化。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/media-flipped.html", '100%', 650)}}
+```html live-sample___media-flipped
+<div class="media flipped">
+  <div class="image">
+    <img
+      alt="A colorful balloon against a blue sky"
+      src="https://mdn.github.io/shared-assets/images/examples/balloon.jpg" />
+  </div>
+  <div class="content">
+    This is the content of my media object. Items directly inside the flex
+    container will be aligned to flex-start.
+  </div>
+</div>
+```
+
+```css live-sample___media-flipped
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.media {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  align-items: flex-start;
+}
+
+.flipped {
+  flex-direction: row-reverse;
+}
+
+.media .content {
+  flex: 1;
+  padding: 10px;
+}
+```
+
+{{EmbedLiveSample("media-flipped", "", "320px")}}
 
 ## 表单控件
 
@@ -129,7 +381,45 @@ l10n:
 
 你可以像我们将按钮放在右侧一样轻松地在左侧添加标签或图标。我们添加了一个标签，除了一些背景颜色的样式外，我们不需要改变布局。现在，可伸缩的输入字段有了更少的空间，但它使用了两个项目占据空间后剩下的空间。
 
-{{EmbedGHLiveSample("css-examples/flexbox/use-cases/label-input-button.html", '100%', 550)}}
+```html live-sample___label-input-button
+<form class="example">
+  <div class="wrapper">
+    <label for="text">Label</label>
+    <input id="text" type="text" />
+    <input type="submit" value="Send" />
+  </div>
+</form>
+```
+
+```css live-sample___label-input-button
+* {
+  font: 1.1em sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  border: 1px solid rgb(96 139 168);
+}
+.wrapper > * {
+  padding: 10px;
+  border: none;
+  color: #fff;
+}
+.wrapper > input[type="text"] {
+  background-color: rgb(96 139 168 / 0.5);
+  border-right: 1px solid rgb(96 139 168);
+  flex: 1 1 auto;
+}
+.wrapper input[type="submit"] {
+  background-color: rgb(96 139 168);
+  color: #fff;
+}
+.wrapper label {
+  background-color: #666;
+}
+```
+
+{{EmbedLiveSample("label-input-button")}}
 
 像这样的模式可以让你更容易地为你的设计创建一系列表单元素，这些元素可以轻松地适应额外的元素的添加。你可以将不可增长的元素和可增长的元素混合在一起以充分利用弹性盒的灵活性。
 

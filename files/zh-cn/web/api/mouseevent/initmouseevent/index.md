@@ -11,7 +11,7 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 > **备注：** **不要再用此方法，已过时。**
 >
-> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Guide/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
+> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
 
 ## 语法
 
@@ -77,7 +77,7 @@ initMouseEvent(type, canBubble, cancelable, view,
 - _`button`_
   - : 鼠标按键值 {{domxref("MouseEvent.button", "button")}}。
 - _`relatedTarget`_
-  - : 事件的[相关对象](/zh-CN/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
+  - : 事件的[相关对象](/zh-CN/docs/DOM/event.relatedTarget)。只在某些事件类型有用 (例如 `mouseover` ?和 `mouseout`)。其他的传 null。
 
 ## 示例
 

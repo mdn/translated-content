@@ -46,7 +46,36 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables
 
 对于许多使用场景，将块容器转换为弹性项目将为你提供所需的对齐能力。在下面的示例中，含有单个项目的容器已转换为弹性容器，以便能够使用对齐属性。
 
-{{EmbedGHLiveSample("css-examples/flexbox/alignment/intro.html", '100%', 700)}}
+```html live-sample___intro
+<div class="box">
+  <div></div>
+</div>
+```
+
+```css live-sample___intro
+.box {
+  height: 300px;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box div {
+  width: 100px;
+  height: 100px;
+}
+```
+
+{{EmbedLiveSample("intro", "", "320px")}}
 
 ## 参考
 

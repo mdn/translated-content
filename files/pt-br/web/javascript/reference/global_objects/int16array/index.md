@@ -168,6 +168,6 @@ var dv = new Int16Array([1, 2, 3]);
 
 ## Ver também
 
-- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/pt-BR/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

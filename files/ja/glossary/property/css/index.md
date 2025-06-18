@@ -2,7 +2,7 @@
 title: Property (プロパティ) (CSS)
 slug: Glossary/Property/CSS
 l10n:
-  sourceCommit: ada5fa5ef15eadd44b549ecf906423b4a2092f34
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{GlossarySidebar}}
@@ -27,6 +27,6 @@ div {
 
 ## 関連情報
 
-- [Learn CSS](/ja/docs/Learn/CSS)
+- [CSS の学習](/ja/docs/Learn_web_development/Core/Styling_basics)
 - [MDN 上の CSS リファレンス](/ja/docs/Web/CSS/Reference)
 - [CSS ワーキンググループの現在の成果](https://www.w3.org/Style/CSS/current-work)

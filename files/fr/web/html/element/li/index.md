@@ -7,11 +7,36 @@ slug: Web/HTML/Element/li
 
 L'élément HTML **`<li>`** est utilisé pour représenter un élément dans une liste. Il doit être contenu dans un élément parent : une liste ordonnée ({{HTMLElement("ol")}}), une liste non ordonnée ({{HTMLElement("ul")}}) ou un menu ({{HTMLElement("menu")}}). Dans les menus et les listes non ordonnées, les éléments de liste sont habituellement affichés en utilisant des puces. Dans les listes ordonnées, ils sont habituellement affichés avec compteur croissant à gauche, tel qu'un nombre ou une lettre.
 
-{{EmbedInteractiveExample("pages/tabbed/li.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>Apollo astronauts:</p>
+
+<ul>
+  <li>Neil Armstrong</li>
+  <li>Alan Bean</li>
+  <li>Peter Conrad</li>
+  <li>Edgar Mitchell</li>
+  <li>Alan Shepard</li>
+</ul>
+```
+
+```css interactive-example
+p,
+li {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+p {
+  font-weight: bold;
+}
+```
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `value`
 
@@ -160,5 +185,5 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Attributs_univ
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>` :
 
   - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal,
-  - les [compteurs CSS](/fr/docs/Web/CSS/Compteurs_CSS), pour gérer des listes imbriquées complexes,
+  - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes,
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

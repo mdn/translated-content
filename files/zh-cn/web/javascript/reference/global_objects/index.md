@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects
 
 全局作用域中的其他对象则可[由用户的脚本创建](/zh-CN/docs/Web/JavaScript/Guide/Working_with_objects#创建新对象)，或由宿主程序提供。浏览器环境中所提供的宿主对象的说明可以在这里找到：[API 参考](/zh-CN/docs/Web/API)。
 
-要了解关于 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 和核心 [JavaScript](/zh-CN/docs/Web/JavaScript) 之间区别的更多信息，可参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/JavaScript_technologies_overview)。
+要了解关于 [DOM](/zh-CN/docs/Web/API/Document_Object_Model) 和核心 [JavaScript](/zh-CN/docs/Web/JavaScript) 之间区别的更多信息，可参阅 [JavaScript 技术概述](/zh-CN/docs/Web/JavaScript/Reference/JavaScript_technologies_overview)。
 
 ## 标准内置对象分类
 

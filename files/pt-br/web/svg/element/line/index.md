@@ -27,10 +27,10 @@ adicionar as opções de transformação para mudar a direção da linha:
 
 ### Atributos globais
 
-- [Atributos de processamento condicional](/pt-BR/SVG/Attribute#ConditionalProccessing) »
-- [Atributos principais](/pt-BR/SVG/Attribute#Core) »
-- [Atributos de eventos gráficos](/pt-BR/SVG/Attribute#GraphicalEvent) »
-- [Atributos de apresentação](/pt-BR/SVG/Attribute#Presentation) »
+- [Atributos de processamento condicional](/pt-BR/docs/SVG/Attribute#conditionalproccessing) »
+- [Atributos principais](/pt-BR/docs/SVG/Attribute#core) »
+- [Atributos de eventos gráficos](/pt-BR/docs/SVG/Attribute#graphicalevent) »
+- [Atributos de apresentação](/pt-BR/docs/SVG/Attribute#presentation) »
 - {{ SVGAttr("class") }}
 - {{ SVGAttr("style") }}
 - {{ SVGAttr("externalResourcesRequired") }}
@@ -45,7 +45,7 @@ adicionar as opções de transformação para mudar a direção da linha:
 
 ## Interface DOM
 
-Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/DOM/SVGLineElement).
+Este elemento implementa a interface do [`SVGLineElement`](/pt-BR/docs/DOM/SVGLineElement).
 
 ## Compatibilidade com navegadores
 

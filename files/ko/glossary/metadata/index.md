@@ -11,6 +11,6 @@ l10n:
 
 ## 같이 보기
 
-- [학습: metadata 배우기](/ko/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML#metadata_the_meta_element)
+- [학습: metadata 배우기](/ko/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
 - 위키백과 [메타데이터](https://ko.wikipedia.org/wiki/%EB%A9%94%ED%83%80%EB%8D%B0%EC%9D%B4%ED%84%B0)
 - MDN의 {{htmlelement("meta")}} 요소 문서

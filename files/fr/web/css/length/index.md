@@ -172,4 +172,4 @@ Les valeurs du type `<length>` peuvent être interpolées de manière à rendre 
 
 - [Tutoriel sur les unités et valeurs CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units)
 - [Référence des unités et valeurs en CSS](/fr/docs/Web/CSS/CSS_Values_and_Units)
-- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_Box_Model)
+- [Modèle de boîtes CSS](/fr/docs/Web/CSS/CSS_box_model)

@@ -72,7 +72,7 @@ slug: Web/CSS/CSS_selectors
 
     **例子：**`div span` 匹配所有位于任意 {{HTMLElement("div")}} 元素之内的 {{HTMLElement("span")}} 元素。
 
-- [直接子代组合器](/zh-CN/docs/Web/CSS/Child_selectors)
+- [直接子代组合器](/zh-CN/docs/Web/CSS/Child_combinator)
 
   - : `>` 组合器选择前一个元素的直接子代的节点。
 
@@ -80,7 +80,7 @@ slug: Web/CSS/CSS_selectors
 
     **例子：**`ul > li` 匹配直接嵌套在 {{HTMLElement("ul")}} 元素内的所有 {{HTMLElement("li")}} 元素。
 
-- [一般兄弟组合器](/zh-CN/docs/Web/CSS/General_sibling_selectors)
+- [一般兄弟组合器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator)
 
   - : `~` 组合器选择兄弟元素，也就是说，后一个节点在前一个节点后面的任意位置，并且共享同一个父节点。
 
@@ -88,7 +88,7 @@ slug: Web/CSS/CSS_selectors
 
     **例子：**`p ~ span` 匹配同一父元素下，{{HTMLElement("p")}} 元素后的所有 {{HTMLElement("span")}} 元素。
 
-- [紧邻兄弟组合器](/zh-CN/docs/Web/CSS/Adjacent_sibling_selectors)
+- [紧邻兄弟组合器](/zh-CN/docs/Web/CSS/Next-sibling_combinator)
 
   - : `+` 组合器选择相邻元素，即后一个元素紧跟在前一个之后，并且共享同一个父节点。
 
@@ -122,8 +122,6 @@ slug: Web/CSS/CSS_selectors
 
 {{Specifications}}
 
-[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes#Specifications)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements#Specifications)的规范位于各自的页面中。
-
 ## 参见
 
-- [CSS 优先级](/zh-CN/docs/Web/CSS/Specificity)
+- [CSS 优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)

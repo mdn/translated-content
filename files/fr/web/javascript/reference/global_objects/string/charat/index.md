@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 La méthode **`charAt()`** renvoie une nouvelle chaîne contenant le caractère (ou, plus précisément, le point de code UTF-16) à la position indiquée en argument.
 
-{{EmbedInteractiveExample("pages/js/string-charat.html")}}
+{{InteractiveExample("JavaScript Demo: String.charAt()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
+```
 
 ## Syntaxe
 

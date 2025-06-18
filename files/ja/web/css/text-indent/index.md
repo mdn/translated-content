@@ -1,15 +1,72 @@
 ---
 title: text-indent
 slug: Web/CSS/text-indent
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**`text-indent`** は CSS のプロパティで、ブロック内のテキストの行の前に置く空白 (字下げ) の幅を設定します。
+**`text-indent`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック内のテキストの行の前に置く空白（字下げ）の幅を設定します。
 
-{{EmbedInteractiveExample("pages/css/text-indent.html")}}
+{{InteractiveExample("CSS Demo: text-indent")}}
 
-包含ブロック要素のコンテンツボックスの左端 (右書きの場合は右端) に、水平に空白が挿入されます。
+```css interactive-example-choice
+text-indent: 0;
+```
+
+```css interactive-example-choice
+text-indent: 30%;
+```
+
+```css interactive-example-choice
+text-indent: -3em;
+```
+
+```css interactive-example-choice
+text-indent: 3em each-line;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging;
+```
+
+```css interactive-example-choice
+text-indent: 3em hanging each-line;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      This text is contained within a single paragraph. This paragraph is two
+      sentences long.
+    </p>
+    <p>
+      This is a new paragraph. There is a line break element
+      <code>&lt;br&gt;</code> after this sentence.<br />There it is! Notice how
+      it affects the indentation.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.25em;
+  background-color: #483d8b;
+  align-items: start;
+}
+
+#example-element {
+  text-align: left;
+  margin: 0 0 0 3em;
+  background-color: #6a5acd;
+  color: white;
+}
+```
+
+包含ブロック要素のコンテンツボックスの左端（右書きの場合は右端）に、水平に空白が挿入されます。
 
 ## 構文
 
@@ -31,6 +88,7 @@ text-indent: 5em hanging each-line;
 text-indent: inherit;
 text-indent: initial;
 text-indent: revert;
+text-indent: revert-layer;
 text-indent: unset;
 ```
 
@@ -40,9 +98,9 @@ text-indent: unset;
   - : {{cssxref("&lt;length&gt;")}} を絶対値として字下げが指定されます。負の値も許可されます。利用できる単位は {{cssxref("&lt;length&gt;")}} をご覧ください。
 - {{cssxref("&lt;percentage&gt;")}}
   - : 包含ブロックの幅の {{cssxref("&lt;percentage&gt;")}} 分だけ字下げされます。
-- `each-line` {{experimental_inline}}
+- `each-line`
   - : *強制的な改行*の後の各行も、ブロックコンテナーの先頭行と同様に字下げします。ただし*自動折り返し*の次の行は字下げしません。
-- `hanging` {{experimental_inline}}
+- `hanging`
   - : インデントされる行が逆になります。つまり、先頭行*以外の*すべての行を字下げします。
 
 ## 公式定義
@@ -55,11 +113,11 @@ text-indent: unset;
 
 ## 例
 
-### 単純なインデントの例
+### 基本的なインデント
 
 #### HTML
 
-```html
+```html live-sample___basic_indent
 <p>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
   nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -72,7 +130,7 @@ text-indent: unset;
 
 #### CSS
 
-```css
+```css live-sample___basic_indent
 p {
   text-indent: 5em;
   background: powderblue;
@@ -81,7 +139,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('単純なインデントの例','100%','100%') }}
+{{ EmbedLiveSample('Basic_indent','100%','100%') }}
 
 ### 最初の段落の字下げをスキップ
 
@@ -91,7 +149,7 @@ p {
 
 #### HTML
 
-```html
+```html live-sample___skipping_indentation_on_the_first_paragraph
 <h2>Lorem ipsum</h2>
 
 <p>
@@ -135,7 +193,7 @@ p {
 
 #### CSS
 
-```css
+```css live-sample___skipping_indentation_on_the_first_paragraph
 p {
   text-align: justify;
   margin: 1em 0 0 0;
@@ -148,13 +206,13 @@ p + p {
 
 #### 結果
 
-{{ EmbedLiveSample('最初の段落の字下げをスキップ','','500px') }}
+{{ EmbedLiveSample('Skipping_indentation_on_the_first_paragraph','','500px') }}
 
 ### パーセント値の字下げ
 
 #### HTML
 
-```html
+```html live-sample___percentage_indent
 <p>
   Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
   nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
@@ -167,7 +225,7 @@ p + p {
 
 #### CSS
 
-```css
+```css live-sample___percentage_indent
 p {
   text-indent: 30%;
   background: plum;
@@ -176,7 +234,7 @@ p {
 
 #### 結果
 
-{{ EmbedLiveSample('パーセント値の字下げ','100%','100%') }}
+{{ EmbedLiveSample('Percentage_indent','100%','100%') }}
 
 ## 仕様書
 
@@ -188,7 +246,7 @@ p {
 
 ## 関連情報
 
-- [CSS を使用した HTML のスタイル付け](/ja/docs/Learn/CSS)
+- [CSS を使用した HTML のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics)
 - 関連する CSS プロパティ:
 
   - [`text-justify`](/ja/docs/Web/CSS/text-justify)
@@ -196,6 +254,7 @@ p {
   - [`text-overflow`](/ja/docs/Web/CSS/text-overflow)
   - [`text-rendering`](/ja/docs/Web/CSS/text-rendering)
   - [`text-transform`](/ja/docs/Web/CSS/text-transform)
+  - {{cssxref('hanging-punctuation')}}
 
-- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_Text_Decoration) CSS モジュール
-- [CSS テキスト](/ja/docs/Web/CSS/CSS_Text) モジュール
+- [CSS テキスト装飾](/ja/docs/Web/CSS/CSS_text_decoration) CSS モジュール
+- [CSS テキスト](/ja/docs/Web/CSS/CSS_text) モジュール

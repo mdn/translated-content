@@ -96,7 +96,7 @@ element.id = "testqq";
 var el = document.getElementById("testqq"); // el이 null!
 ```
 
-**HTML이 아닌 문서**. DOM 구현체는 요소의 어떤 속성이 ID인지 알고 있어야 합니다. 문서의 DTD가 정의하고 있지 않으면, 속성명이 "id"라고 해도 ID 유형인건 아닙니다. [XHTML](/ko/docs/XHTML), [XUL](/ko/docs/XUL) 등 자주 쓰이는 문서의 경우 `id` 속성을 ID 유형으로 정의하고 있습니다. ID 유형의 속성이 어떤 것인지 모르는 다른 구현의 경우 `null`을 반환합니다.
+**HTML이 아닌 문서**. DOM 구현체는 요소의 어떤 속성이 ID인지 알고 있어야 합니다. 문서의 DTD가 정의하고 있지 않으면, 속성명이 "id"라고 해도 ID 유형인건 아닙니다. [XHTML](/ko/docs/Glossary/XHTML), [XUL](/ko/docs/XUL) 등 자주 쓰이는 문서의 경우 `id` 속성을 ID 유형으로 정의하고 있습니다. ID 유형의 속성이 어떤 것인지 모르는 다른 구현의 경우 `null`을 반환합니다.
 
 ## 명세
 

@@ -15,4 +15,4 @@ l10n:
 
 ## 参见
 
-[脚本支持元素](/zh-CN/docs/Web/HTML/Content_categories#script-supporting_elements)
+[脚本支持元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#script-supporting_elements)

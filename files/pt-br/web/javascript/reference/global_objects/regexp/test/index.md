@@ -69,5 +69,5 @@ A priori no Grecko 8.0, `test()` foi implementado incorretamente; quando chamado
 
 ## See also
 
-- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_Expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
+- [Regular Expressions](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions) chapter in the [JavaScript Guide](/pt-BR/docs/Web/JavaScript/Guide)
 - {{jsxref("RegExp")}}

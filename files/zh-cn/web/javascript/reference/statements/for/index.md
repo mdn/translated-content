@@ -9,7 +9,18 @@ l10n:
 
 **`for` 语句**用于创建一个循环，它包含了三个可选的表达式，这三个表达式被包围在圆括号之中，使用分号分隔，后跟一个用于在循环中执行的语句（通常是一个[块语句](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)）。
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 语法
 
@@ -125,7 +136,7 @@ while (i <= 3) {
 
 ### 初始化块中的词法声明
 
-在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Closures)时。例如，对于以下代码：
+在初始化块中声明变量与在上层[作用域](/zh-CN/docs/Glossary/Scope)中声明它有着重要的区别，尤其是在循环体中创建[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)时。例如，对于以下代码：
 
 ```js
 for (let i = 0; i < 3; i++) {

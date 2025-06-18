@@ -49,7 +49,7 @@ Although the API surface is the same, websites using the Storage Access API shou
 - In Firefox, when the promise returned from `requestStorageAccess()` is resolved, the embedded page will gain access to its entire first-party storage, not just cookies. This includes access to APIs such as [Web Storage](/ru/docs/Web/API/Web_Storage_API), [IndexedDB](/ru/docs/Web/API/IndexedDB_API), [DOM Cache](/ru/docs/Web/API/Cache), and so on.
 - In Firefox, the storage access grants are phased out after 30 calendar days passing, whereas in Safari the storage access grants are phased out after 30 days of browser usage passed without user interaction. This is currently a limitation of the Firefox implementation, which we may address in a future version. In Safari, successful use of the storage access API resets this counter.
 
-Документация новой политики доступа к хранилищу Firefox по блокировки отслеживающих кук [детально описана](/ru/docs/Mozilla/Firefox/Privacy/Storage_access_policy#Storage_access_grants) в разделе предоставления доступа к хранилищу.
+Документация новой политики доступа к хранилищу Firefox по блокировки отслеживающих кук [детально описана](/ru/docs/Web/Privacy/Storage_Access_Policy#storage_access_grants) в разделе предоставления доступа к хранилищу.
 
 ## Методы Storage Access API
 

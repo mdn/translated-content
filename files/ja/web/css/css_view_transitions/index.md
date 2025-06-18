@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**CSS ビュー遷移**モジュールは、[ビュー遷移 API](/ja/docs/Web/API/View_Transitions_API) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための CSS プロパティと擬似要素も定義します。
+**CSS ビュー遷移**モジュールは、[ビュー遷移 API](/ja/docs/Web/API/View_Transition_API) の動作を定義します。これにより、開発者は文書内の異なる状態間や文書間でアニメーションする遷移を作成することができます。このモジュールは、これらの遷移をスタイル設定するための CSS プロパティと擬似要素も定義します。
 
 ## リファレンス
 
@@ -46,7 +46,7 @@ l10n:
 
 ## ガイド
 
-- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transitions_API/Using)
+- [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
 
   - : ビュー遷移を作成する方法と、ビュー遷移のアニメーションをカスタマイズする方法について説明します。アクティブなビュー遷移の操作方法についても記載しています。
 
@@ -77,4 +77,4 @@ l10n:
 
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
 - [関数擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)
-- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

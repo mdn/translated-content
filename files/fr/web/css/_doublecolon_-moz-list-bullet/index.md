@@ -1,5 +1,5 @@
 ---
-title: "::-moz-list-bullet"
+title: ::-moz-list-bullet
 slug: Web/CSS/::-moz-list-bullet
 ---
 
@@ -46,5 +46,5 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 
 ## Voir aussi
 
-- [`:-moz-list-number`](/fr/docs/Web/CSS/:-moz-list-number)
+- [`:-moz-list-number`](/fr/docs/Web/CSS/::-moz-list-number)
 - [`::marker`](/fr/docs/Web/CSS/::marker)

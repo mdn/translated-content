@@ -5,7 +5,7 @@ slug: Web/API/console
 
 {{APIRef("Console API")}}
 
-**`console`** 객체는 브라우저의 디버깅 콘솔(Firefox [웹 콘솔](/ko/docs/Tools/Web_Console) 등)에 접근할 수 있는 메서드를 제공합니다. 동작 방식은 브라우저마다 다르지만, 사실상 표준으로 여겨지는 기능도 여럿 있습니다.
+**`console`** 객체는 브라우저의 디버깅 콘솔(Firefox [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) 등)에 접근할 수 있는 메서드를 제공합니다. 동작 방식은 브라우저마다 다르지만, 사실상 표준으로 여겨지는 기능도 여럿 있습니다.
 
 `console` 객체는 아무 전역 객체에서나 접근할 수 있습니다. 브라우징 문맥에선 {{domxref("Window")}}, 워커에서는 {{domxref("WorkerGlobalScope")}}이 속성으로 포함하고 있습니다. {{domxref("Window.console")}}의 형태로 노출되어 있으므로 간단하게 `console`로 참조할 수 있습니다.
 
@@ -48,9 +48,9 @@ console.log("링크를 열 수 없습니다");
 - {{domxref("console.log()")}}
   - : 일반 메시지를 출력합니다. 추가 매개변수와 함께 [문자열 치환](#문자열_치환_사용하기)을 사용할 수 있습니다.
 - {{domxref("console.profile()")}}
-  - : 브라우저의 내장 프로파일러([Firefox 성능 측정 도구](/ko/docs/Tools/Performance) 등)를 실행합니다. 선택 사항으로 프로파일에 이름을 붙일 수 있습니다.
+  - : 브라우저의 내장 프로파일러([Firefox 성능 측정 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) 등)를 실행합니다. 선택 사항으로 프로파일에 이름을 붙일 수 있습니다.
 - {{domxref("console.profileEnd()")}}
-  - : 프로파일러를 멈춥니다. 프로파일 결과는 브라우저의 성능 측정 도구([Firefox 성능 측정 도구](/ko/docs/Tools/Performance) 등)에서 확인할 수 있습니다.
+  - : 프로파일러를 멈춥니다. 프로파일 결과는 브라우저의 성능 측정 도구([Firefox 성능 측정 도구](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) 등)에서 확인할 수 있습니다.
 - {{domxref("console.table()")}}
   - : 표 형태의 데이터를 표에 그립니다.
 - {{domxref("console.time()")}}
@@ -58,7 +58,7 @@ console.log("링크를 열 수 없습니다");
 - {{domxref("console.timeEnd()")}}
   - : 지정한 [타이머](#타이머)를 멈추고, 소요시간을 출력합니다.
 - {{domxref("console.timeStamp()")}} {{non-standard_inline}}
-  - : 브라우저의 [타임라인](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)이나 [워터폴](/ko/docs/Tools/Performance/Waterfall)에 마커를 추가합니다.
+  - : 브라우저의 [타임라인](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)이나 [워터폴](https://profiler.firefox.com/docs/)에 마커를 추가합니다.
 - {{domxref("console.trace()")}}
   - : [스택 추적](#스택_추적)을 출력합니다.
 - {{domxref("console.warn()")}}
@@ -267,9 +267,9 @@ foo();
 
 ## 같이 보기
 
-- [Firefox 개발자 도구](/ko/docs/Tools)
-- [웹 콘솔](/ko/docs/Tools/Web_Console): Firefox의 웹 콘솔이 콘솔 API 호출을 처리하는 방법
-- [원격 디버깅](/ko/docs/Tools/Remote_Debugging): 디버깅 대상이 모바일 장치일 때 콘솔 출력을 보는 방법
+- [Firefox 개발자 도구](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
+- [웹 콘솔](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html): Firefox의 웹 콘솔이 콘솔 API 호출을 처리하는 방법
+- [원격 디버깅](https://firefox-source-docs.mozilla.org/devtools-user/remote_debugging/index.html): 디버깅 대상이 모바일 장치일 때 콘솔 출력을 보는 방법
 
 ### 다른 구현체
 

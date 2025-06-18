@@ -36,4 +36,4 @@ conteneur.normalize();
 
 ## Spécification
 
-- [DOM Level 2 Core: Node.normalize (en)](http://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-normalize) (non normative)
+- [DOM Level 2 Core: Node.normalize (en)](https://www.w3.org/TR/DOM-Level-2-Core/core.html#ID-normalize) — [traduction en français](http://www.yoyodesign.org/doc/w3c/dom2-core/core.html#ID-normalize) (non normative)

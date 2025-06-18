@@ -1,14 +1,16 @@
 ---
-title: Response.formData()
+title: Response：formData() 方法
 slug: Web/API/Response/formData
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Fetch")}}
+{{APIRef("Fetch API")}}{{AvailableInWorkers}}
 
-{{domxref("Response")}} 对象中的**`formData()`** 方法将 {{domxref("Response")}} 对象中的所承载的数据流读取并封装成为一个对象，该方法将返回一个 **`Promise`** 对象，该对象将产生一个{{domxref("FormData")}} 对象。
+{{domxref("Response")}} 接口的 **`formData()`** 方法接受一个 {{domxref("Response")}} 流，并完整读取它。它将返回一个会兑现为 {{domxref("FormData")}} 对象的 promise。
 
 > [!NOTE]
-> 该方法主要与 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 有关。如果客户端提交的一个表单请求被 Service Worker 所截取，你可以像下述的样例一样，调用 `formData()` 方法来获取一个 key-value 字典，对该字典可以进行修饰，然后将修饰后的表填提交给远端服务器 (或在本地应用)。
+> 该方法主要与 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 有关。如果用户提交了的表单请求被 service worker 所拦截，你可以像下述的示例一样，调用 `formData()` 方法来获取一个键值映射，修改某些字段，然后将表单发送到服务器（或在本地使用）。
 
 ## 语法
 
@@ -22,7 +24,18 @@ formData()
 
 ### 返回值
 
-生成 {{domxref("FormData")}}对象的{{domxref("Promise")}} 对象。
+兑现为 {{domxref("FormData")}} 对象的 {{domxref("Promise")}}。
+
+### 异常
+
+- {{domxref("DOMException")}} `AbortError`
+  - : 请求被[中止](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#取消请求)。
+- {{jsxref("TypeError")}}
+  - : 因以下原因抛出此异常：
+    - 响应主体[被干扰或锁定](/zh-CN/docs/Web/API/Fetch_API/Using_Fetch#锁定和干扰流)。
+    - 在解码主体内容时存在错误（例如，因为 {{httpheader("Content-Encoding")}} 标头不正确）。
+    - 无法根据响应中包含的 {{httpheader("Content-Type")}} 标头来确定主体的 {{glossary("MIME")}} 类型。
+    - 主体无法被解析为 `FormData` 对象。
 
 ## 示例
 
@@ -38,6 +51,6 @@ formData()
 
 ## 参见
 
-- [ServiceWorker API](/zh-CN/docs/Web/API/ServiceWorker_API)
-- [HTTP access control (CORS)](/zh-CN/docs/Web/HTTP/Access_control_CORS)
+- [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

@@ -1,5 +1,5 @@
 ---
-title: ":first-child"
+title: :first-child
 slug: Web/CSS/:first-child
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/:first-child
 
 ## Sumário
 
-A [pseudo-classe](/pt-BR/CSS/Pseudo-classes) de [CSS](/pt-BR/CSS) **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
+A [pseudo-classe](/pt-BR/docs/CSS/Pseudo-classes) de [CSS](/pt-BR/docs/Web/CSS) **`:first-child`** representa qualquer elemento que seja o primeiro filho de seus pais.
 
 ## Sintaxe
 

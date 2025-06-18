@@ -5,11 +5,11 @@ slug: Web/HTML/Attributes/multiple
 
 {{HTMLSidebar}}
 
-L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Element/Input/email) et [`file`](/fr/docs/Web/HTML/Element/Input/file) et l'élément [`<select>`](/fr/docs/Web/HTML/Element/select), la manière dont l'utilisateur opte pour plusieurs valeurs dépend du contrôle de formulaire.
+L'attribut booléen **`multiple`**, s'il est défini, signifie que le contrôle de formulaire accepte une ou plusieurs valeurs. Valable pour les types de saisie [`email`](/fr/docs/Web/HTML/Element/input/email) et [`file`](/fr/docs/Web/HTML/Element/input/file) et l'élément [`<select>`](/fr/docs/Web/HTML/Element/select), la manière dont l'utilisateur opte pour plusieurs valeurs dépend du contrôle de formulaire.
 
-Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique « Aucun fichier sélectionné » lorsque l'attribut est présent et « Aucun fichier sélectionné » dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle [`<select>`](/fr/docs/Web/HTML/Element/select) avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée [`email`](/fr/docs/Web/HTML/Element/Input/email) s'affiche de la même manière, mais correspondra à la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
+Selon le type, le contrôle de formulaire peut avoir une apparence différente si l'attribut `multiple` est défini. Pour le type de saisie de fichier, la messagerie native fournie par le navigateur diffère. Dans Firefox, l'entrée de fichier indique « Aucun fichier sélectionné » lorsque l'attribut est présent et « Aucun fichier sélectionné » dans le cas contraire, lorsqu'aucun fichier n'est sélectionné. La plupart des navigateurs affichent une zone de liste déroulante pour un contrôle [`<select>`](/fr/docs/Web/HTML/Element/select) avec l'attribut `multiple` défini contre une liste déroulante à une ligne lorsque l'attribut est omis. L'entrée [`email`](/fr/docs/Web/HTML/Element/input/email) s'affiche de la même manière, mais correspondra à la pseudo-classe [`:invalid`](/fr/docs/Web/CSS/:invalid) si plus d'une adresse électronique séparée par des virgules est incluse en l'absence de l'attribut.
 
-Lorsque `multiple` est défini sur le type de saisie [`email`](/fr/docs/Web/HTML/Element/Input/email), l'utilisateur peut inclure zéro (si ce n'est pas également [`required`](/fr/docs/Web/HTML/Attributes/required)), une ou plusieurs adresses électroniques séparées par des virgules.
+Lorsque `multiple` est défini sur le type de saisie [`email`](/fr/docs/Web/HTML/Element/input/email), l'utilisateur peut inclure zéro (si ce n'est pas également [`required`](/fr/docs/Web/HTML/Attributes/required)), une ou plusieurs adresses électroniques séparées par des virgules.
 
 ```html
 <input type="email" multiple name="emails" id="emails" />
@@ -17,7 +17,7 @@ Lorsque `multiple` est défini sur le type de saisie [`email`](/fr/docs/Web/HTML
 
 Si et seulement si l'attribut `multiple` est spécifié, la valeur peut être une liste d'adresses électroniques correctement formées et séparées par des virgules. Tout espace blanc de queue et de tête est supprimé de chaque adresse de la liste.
 
-Lorsque `multiple` est défini sur le type d'entrée [`file`](/fr/docs/Web/HTML/Element/Input/file), l'utilisateur peut sélectionner un ou plusieurs fichiers. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière que la plateforme qu'il a choisie permet (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd> enfoncée, puis en cliquant).
+Lorsque `multiple` est défini sur le type d'entrée [`file`](/fr/docs/Web/HTML/Element/input/file), l'utilisateur peut sélectionner un ou plusieurs fichiers. L'utilisateur peut choisir plusieurs fichiers dans le sélecteur de fichiers de n'importe quelle manière que la plateforme qu'il a choisie permet (par exemple, en maintenant la touche <kbd>Maj</kbd> ou <kbd>Ctrl</kbd> enfoncée, puis en cliquant).
 
 ```html
 <input type="file" multiple name="uploads" id="uploads" />
@@ -25,7 +25,7 @@ Lorsque `multiple` est défini sur le type d'entrée [`file`](/fr/docs/Web/HTML/
 
 Lorsque l'attribut est omis, l'utilisateur ne peut sélectionner qu'un seul fichier par `<input>`.
 
-L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner une seule [`<option>`](/fr/docs/Web/HTML/Element/Option) dans la liste d'options.
+L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner une seule [`<option>`](/fr/docs/Web/HTML/Element/option) dans la liste d'options.
 
 ```html
 <select multiple name="dwarfs" id="dwarfs">
@@ -81,7 +81,7 @@ Certains navigateurs prennent en charge l'apparition de la [liste](/fr/docs/Web/
 
 ### Saisie de fichiers
 
-Lorsque `multiple` est défini sur le type de saisie [`file`](/fr/docs/Web/HTML/Element/Input/file), l'utilisateur peut sélectionner un ou plusieurs fichiers :
+Lorsque `multiple` est défini sur le type de saisie [`file`](/fr/docs/Web/HTML/Element/input/file), l'utilisateur peut sélectionner un ou plusieurs fichiers :
 
 ```html
 <form method="post" enctype="multipart/form-data">
@@ -110,11 +110,11 @@ Lorsque `multiple` est défini sur le type de saisie [`file`](/fr/docs/Web/HTML/
 
 Notez la différence d'aspect entre l'exemple avec `multiple` défini et l'autre entrée `file` sans.
 
-Lorsque le formulaire est soumis, si nous avions utilisé [`method="get"`](/fr/docs/Web/HTML/Element/Form) le nom de chaque fichier sélectionné aurait été ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Cependant, étant donné que nous sommes en train d'additionner les données du formulaire [multipart](/fr/docs/Web/API/XMLHttpRequest/multipart), nous devons utiliser POST. Voir l'élément [`<form>`](/fr/docs/Web/HTML/Element/Form) et [l'envoi de données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) pour plus d'informations.
+Lorsque le formulaire est soumis, si nous avions utilisé [`method="get"`](/fr/docs/Web/HTML/Element/form) le nom de chaque fichier sélectionné aurait été ajouté aux paramètres de l'URL sous la forme `?uploads=img1.jpg&uploads=img2.svg`. Cependant, étant donné que nous sommes en train d'additionner les données du formulaire [multipart](/fr/docs/Web/API/XMLHttpRequest/multipart), nous devons utiliser POST. Voir l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) et [l'envoi de données de formulaire](/fr/docs/Learn/Forms/Sending_and_retrieving_form_data#the_method_attribute) pour plus d'informations.
 
 ### Saisir plusieurs options
 
-L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner une seule [`<option>`](/fr/docs/Web/HTML/Element/Option) dans la liste des options. L'apparence du contrôle varie généralement en fonction de la présence de l'attribut multiple, la plupart des navigateurs affichant une liste déroulante à défilement au lieu d'une liste déroulante à ligne unique lorsque l'attribut est présent.
+L'attribut `multiple` de l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner zéro ou plusieurs options dans la liste d'options. Sinon, l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) représente un contrôle permettant de sélectionner une seule [`<option>`](/fr/docs/Web/HTML/Element/option) dans la liste des options. L'apparence du contrôle varie généralement en fonction de la présence de l'attribut multiple, la plupart des navigateurs affichant une liste déroulante à défilement au lieu d'une liste déroulante à ligne unique lorsque l'attribut est présent.
 
 ```html
 <form method="get" action="#">
@@ -181,6 +181,6 @@ Définir `size="1"` sur une sélection multiple peut la faire apparaître comme 
 
 ## Voir aussi
 
-- L'élément [`<input>`](/fr/docs/Web/HTML/Element/Input)
+- L'élément [`<input>`](/fr/docs/Web/HTML/Element/input)
 - L'élément [`<select>`](/fr/docs/Web/HTML/Element/select)
-- [Autoriser les adresses électroniques multiples](/fr/docs/Web/HTML/Element/Input/email#allowing_multiple_e-mail_addresses)
+- [Autoriser les adresses électroniques multiples](/fr/docs/Web/HTML/Element/input/email#allowing_multiple_e-mail_addresses)

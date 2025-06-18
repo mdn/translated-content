@@ -6,7 +6,7 @@ slug: Web/API/History_API/Working_with_the_History_API
 Esse é um exemplo de um web site em AJAX web site composto por apenas três páginas (_first_page.php_, _second_page.php_ e _third_page.php_). Para ver como funciona, crie os arquivos a seguir (ou _git clone_ [https://github.com/giabao/mdn-ajax-nav-example.git](https://github.com/giabao/mdn-ajax-nav-example) ):
 
 > [!NOTE]
-> Para integrar completamente os elementos {{HTMLElement("form")}} com esse _mecanismo_, porfavor dê uma olhada no parágrafo [Enviando formulários e enviando arquivos](/pt-BR/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest#Submitting_forms_and_uploading_files).
+> Para integrar completamente os elementos {{HTMLElement("form")}} com esse _mecanismo_, porfavor dê uma olhada no parágrafo [Enviando formulários e enviando arquivos](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files).
 
 **first_page.php**:
 
@@ -434,9 +434,9 @@ const ajaxRequest = new (function () {
 ```
 
 > [!NOTE]
-> A atual implementação de [`const`](/pt-BR/JavaScript/Reference/Statements/const) (declaração de constante) **não é parte do ECMAScript 5**. É suportada no Firefox e no Chrome (V8) e parcialmente suportada no Opera 9+ e no Safari. **Ela não é suportada nas versões do Internet Explorer 6 ao 9, ou na versão _preview_ do Internet Explorer 10**. [`const`](/pt-BR/JavaScript/Reference/Statements/const) será definida no ECMAScript 6, mas com semânticas diferentes. Similarmente ao que acontece com variáveis definidas como [`let`](/pt-BR/JavaScript/Reference/Statements/let), constantes declaradas com [`const`](/pt-BR/JavaScript/Reference/Statements/const) serão _block-scoped_, limitando seu escopo no bloco. **Nós só usamos isso com propósito didático. Se você quer total compatibilidade com os navegadores, substitua todas as declarações [`const`](/pt-BR/JavaScript/Reference/Statements/const) por declarações [`var`](/pt-BR/JavaScript/Reference/Statements/var).**
+> A atual implementação de [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) (declaração de constante) **não é parte do ECMAScript 5**. É suportada no Firefox e no Chrome (V8) e parcialmente suportada no Opera 9+ e no Safari. **Ela não é suportada nas versões do Internet Explorer 6 ao 9, ou na versão _preview_ do Internet Explorer 10**. [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) será definida no ECMAScript 6, mas com semânticas diferentes. Similarmente ao que acontece com variáveis definidas como [`let`](/pt-BR/docs/Web/JavaScript/Reference/Statements/let), constantes declaradas com [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) serão _block-scoped_, limitando seu escopo no bloco. **Nós só usamos isso com propósito didático. Se você quer total compatibilidade com os navegadores, substitua todas as declarações [`const`](/pt-BR/docs/JavaScript/Reference/Statements/const) por declarações [`var`](/pt-BR/docs/JavaScript/Reference/Statements/var).**
 
-Para mais informações, veja: [Manipulando o histórico do navegador](/pt-BR/docs/DOM/Manipulating_the_browser_history).
+Para mais informações, veja: [Manipulando o histórico do navegador](/pt-BR/docs/Web/API/History_API).
 
 ## Veja também
 

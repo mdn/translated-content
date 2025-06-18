@@ -10,4 +10,4 @@ slug: Glossary/Opera_Browser
 ## Voir aussi
 
 - [Opera](https://fr.wikipedia.org/wiki/Opera) sur Wikipédia
-- [Site web du navigateur Opera](http://www.opera.com/)
+- [Site web du navigateur Opera](https://www.opera.com/)

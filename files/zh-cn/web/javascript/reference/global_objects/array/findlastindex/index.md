@@ -9,7 +9,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findLastIndex
 
 另请参见 {{jsxref("Array.findLast()", "findLast()")}} 方法，该方法返回最后一个满足测试函数的元素的值（而不是它的索引）。
 
-{{EmbedInteractiveExample("pages/js/array-findlastindex.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+
+```js interactive-example
+const array1 = [5, 12, 50, 130, 44];
+
+const isLargeNumber = (element) => element > 45;
+
+console.log(array1.findLastIndex(isLargeNumber));
+// Expected output: 3
+// Index of element with value: 130
+```
 
 ## 语法
 

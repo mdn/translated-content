@@ -13,7 +13,7 @@ slug: Web/API/Node/ownerDocument
 document = node.ownerDocument
 ```
 
-- `document` 是当前元素的 [`document`](/zh-CN/docs/DOM/document) 对象，其是当前元素的祖先。
+- `document` 是当前元素的 [`document`](/zh-CN/docs/Web/API/Document) 对象，其是当前元素的祖先。
 
 ## 例子
 

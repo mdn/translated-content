@@ -11,7 +11,15 @@ Geralmente, o operador retorna o valor do primeiro operando {{Glossary("falsy")}
 
 ## Exemplo
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND", "shorter")}}
+
+```js interactive-example
+const a = 3;
+const b = -2;
+
+console.log(a > 0 && b > 0);
+// Expected output: false
+```
 
 ## Sintaxe
 
@@ -42,7 +50,7 @@ result = 2 && 0; // result retorna 0
 result = "foo" && 4; // result retorna 4
 ```
 
-Mesmo que o operador `&&` possa ser usado com operandos não booleanos, ele ainda é considerado um operador booleano, pois seu valor de retorno sempre pode ser convertido em um [boolean primitive](/pt-BR/docs/Web/JavaScript/Data_structures#boolean_type).
+Mesmo que o operador `&&` possa ser usado com operandos não booleanos, ele ainda é considerado um operador booleano, pois seu valor de retorno sempre pode ser convertido em um [boolean primitive](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#boolean_type).
 Para converter explicitamente seu valor de retorno (ou qualquer expressão em geral) para o valor booleano correspondente, use um double [`operador NOT`](/pt-BR/docs/Web/JavaScript/Reference/Operators/Logical_NOT) ou o construtor {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}}.
 
 ### Avaliação de curto-circuito
@@ -75,7 +83,7 @@ console.log(A() && B());
 
 ### Operador precedente
 
-O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)).
+O operador AND tem uma precedência maior que o operador OR, o que significa que o operador `&&` é executado antes do operador `||` (consulte [precedência de operadores](/pt-BR/docs/Web/JavaScript/Reference/Operators/Operator_precedence)).
 
 ```js
 true || (false && false); // true

@@ -19,6 +19,8 @@ slug: Web
   - : 가능한 한 많은 사람들이 웹사이트를 사용할 수 있게 합니다. 비록 이러한 사람들의 능력이 어떤 식으로든 제한되어 있는 경우에도 말이죠.
 - [성능](/ko/docs/Web/Performance)
   - : 가능한 한 빠르게 콘텐츠를 사용 가능하게 하고 가능하면 상호작용이 기능하게 만듭니다.
+- [개인정보](/ko/docs/Web/Privacy)
+  - : 사용자의 개인 데이터를 보호합니다.
 - [보안](/ko/docs/Web/Security)
   - : 데이터 유출 및 도난, 부채널 공격(side-channel attacks) 및 크로스 사이트 스크립팅, 콘텐츠 주입 및 클릭 재킹과 같은 공격으로부터 사용자를 보호합니다.
 
@@ -44,7 +46,7 @@ slug: Web
   - : Scalable Vector Graphics(SVG)는 어떠한 크기로 확대해도 부드러운 이미지를 만들수 있습니다.
 - [MathML](/ko/docs/Web/MathML)
   - : MathML은 복잡한 수학 표기법을 웹에 표시할 수 있습니다.
-- [웹 컴포넌트](/ko/docs/Web/Web_Components)
+- [웹 컴포넌트](/ko/docs/Web/API/Web_components)
   - : 웹 컴포넌트는 개발자가 직접 정의하고 재사용할 수 있는 사용자 정의 요소입니다.
 - [WebDriver](/ko/docs/Web/WebDriver)
   - : 웹드라이버(WebDriver)는 브라우저를 사용하는 실제 사람의 행위를 모방하여 원격으로 브라우저를 제어하는 브라우저-자동화 메커니즘입니다. 웹 앱의 브라우저간 테스트를 위해 폭넓게 사용합니다.

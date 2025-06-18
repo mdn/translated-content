@@ -1,11 +1,11 @@
 ---
-title: ":nth-last-child"
+title: :nth-last-child
 slug: Web/CSS/:nth-last-child
 ---
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/CSS/Pseudo-classes) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) **`:nth-last-child`** permet de cibler les éléments qui possèdent `an+b-1` nœud frères qui les suivent pour un même élément parent avec un indice n entier qui est incrémenté à partir de 0. Avec CSS3, il était nécessaire que l'élément ciblé ait un élément parent, cette restriction a été levée en CSS4.
 
 ```css
 /* Cible les éléments qui sont les 4e, 8e, 16e     */
@@ -128,7 +128,7 @@ tr:nth-last-child(n + 1) {
 
 ### Mise en forme selon le nombre d'éléments
 
-Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le nombre d'éléments qu'elle contient. Dans l'exemple qui suit, on met les éléments de la liste en rouge si celle-ci contient au moins trois éléments. Pour cela, on combine la pseudo-classe `nth-last-child` et [le sélecteur de voisins généraux (_general sibling combinator_)](/fr/docs/Web/CSS/Sélecteurs_de_voisins_généraux).
+Il est possible d'utiliser les compteurs pour mettre en forme une liste selon le nombre d'éléments qu'elle contient. Dans l'exemple qui suit, on met les éléments de la liste en rouge si celle-ci contient au moins trois éléments. Pour cela, on combine la pseudo-classe `nth-last-child` et [le sélecteur de voisins généraux (_general sibling combinator_)](/fr/docs/Web/CSS/Subsequent-sibling_combinator).
 
 #### HTML
 

@@ -47,4 +47,4 @@ De forma similar, você pode criar um efeito de hover com:
 
 ## Veja também
 
-- [Demo completa em CSS Tricks](http://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)
+- [Demo completa em CSS Tricks](https://css-tricks.com/snippets/css/perfect-css-sprite-sliding-doors-button/)

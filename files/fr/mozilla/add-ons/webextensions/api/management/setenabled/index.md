@@ -9,9 +9,9 @@ Active ou désactive l'extension ajoutée.
 
 Cette fonction doit généralement être appelée dans le contexte d'une action utilisateur, comme le gestionnaire de clics d'un bouton. Le navigateur peut également demander à l'utilisateur de confirmer le changement.
 
-Cette API requière l'[API permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) "management".
+Cette API requière l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 

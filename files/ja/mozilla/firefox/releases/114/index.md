@@ -13,7 +13,7 @@ l10n:
 
 ### 開発者ツール
 
-- [アクセシビリティ調査ツール](/ja/docs/Tools/Accessibility_inspector) が、要素の ARIA ロールを正しく表示しない不具合を修正しました。これは、[landmark ロール](/ja/docs/Web/Accessibility/ARIA/Roles/landmark_role) の表示に影響します。
+- [アクセシビリティ調査ツール](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) が、要素の ARIA ロールを正しく表示しない不具合を修正しました。これは、[landmark ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role) の表示に影響します。
   ARIA にマッピングできないロールは、Gecko の内部ロール名を使用します ([Firefox bug 1572512](https://bugzil.la/1572512))。
 
 ### HTML
@@ -24,7 +24,7 @@ l10n:
 
 - [`:lang()`](/ja/docs/Web/CSS/:lang) 擬似クラスで、言語コードのマッチングに接頭辞マッチング方式に代わって、文字列マッチング方式 (`*` ワイルドカードを含む) を使用するようになりました。
   また、複数の言語にマッチする、カンマ区切りの言語リストをサポートしました ([Firefox bug 1121792](https://bugzil.la/1121792))。
-- 文字を記号に置き換えることができる、[-webkit-text-security](/ja/Web/CSS/-webkit-text-security) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([Firefox bug 1826629](https://bugzil.la/1826629))。
+- 文字を記号に置き換えることができる、[-webkit-text-security](/ja/docs/Web/CSS/-webkit-text-security) プロパティをサポートしました。このプロパティを使用して、伏せ字の表現を制御できます ([Firefox bug 1826629](https://bugzil.la/1826629))。
 - [`calc()`](/ja/docs/Web/CSS/calc) 関数内で、定数 `infinity` および `NaN` をサポートしました ([Firefox bug 1830759](https://bugzil.la/1830759))。
 
 ### JavaScript
@@ -36,7 +36,7 @@ l10n:
 
 ### SVG
 
-- [`image`](/ja/docs/Web/SVG/Element/image) および [`feImage`](/ja/docs/Web/SVG/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
+- [`image`](/ja/docs/Web/SVG/Reference/Element/image) および [`feImage`](/ja/docs/Web/SVG/Reference/Element/feImage) 要素で [`crossorigin`](/ja/docs/Web/SVG/Reference/Attribute/crossorigin) 属性をサポートしました ([Firefox bug 1240357](https://bugzil.la/1240357))。
 
 ### API
 
@@ -44,7 +44,7 @@ l10n:
 - [WebTransport API](/ja/docs/Web/API/WebTransport_API) をサポートしました。[`WebTransport`](/ja/docs/Web/API/WebTransport)、[`WebTransportBidirectionalStream`](/ja/docs/Web/API/WebTransportBidirectionalStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportReceiveStream`](/ja/docs/Web/API/WebTransportReceiveStream)、[`WebTransportDatagramDuplexStream`](/ja/docs/Web/API/WebTransportDatagramDuplexStream)、[`WebTransportError`](/ja/docs/Web/API/WebTransportError) インターフェイスをサポートしています。
   詳しくは [Firefox bug 1692754](https://bugzil.la/1692754)、[Firefox bug 1818754](https://bugzil.la/1818754)、[Firefox bug 1791835](https://bugzil.la/1791835) をご覧ください。
 
-- {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule) を使用するときに指定した `supports()` 条件を取得する、[`CSSImportRule.supportsText`](/ja/docs/Web/API/CSSImportRule/supportsText) が使用可能になりました ([Firefox bug 1829590](https://bugzil.la/1829590))。
+- {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) を使用するときに指定した `supports()` 条件を取得する、[`CSSImportRule.supportsText`](/ja/docs/Web/API/CSSImportRule/supportsText) が使用可能になりました ([Firefox bug 1829590](https://bugzil.la/1829590))。
 
 #### DOM
 

@@ -2,12 +2,12 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-`initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。
+`initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。这个属性适用于 {{cssxref("::first-letter")}} 伪元素以及区块容器内的首个行内级子元素。
 
 ## 语法
 
@@ -15,10 +15,13 @@ l10n:
 /* 关键字值 */
 initial-letter: normal;
 
-/* 数值 */
-initial-letter: 1.5; /* 首字母占据了 1.5 行 */
-initial-letter: 3; /* 首字母占据了 3 行 */
-initial-letter: 3 2; /* 首字母占据了 3 行并下沉了 2 行 */
+/* 一个值 */
+initial-letter: 3; /* 高度为 3 行，基线位于第 3 行 */
+initial-letter: 1.5; /* 高度为 1.5 行，基线位于第 2 行 */
+
+/* 两个值 */
+initial-letter: 3 2; /* 高度为 3 行，基线在第 2 行（上升了 1 行） */
+initial-letter: 3 1; /* 高度为 3 行，基线未变（上升了 2 行） */
 
 /* 全局值 */
 initial-letter: inherit;
@@ -28,9 +31,9 @@ initial-letter: revert-layer;
 initial-letter: unset;
 ```
 
-关键词值为 `normal`，或者是一个 `<number>`，后面可以跟一个 `<integer>`。
-
 ### 值
+
+关键字值为 `normal`，或者是可以后跟一个 `<integer>` 的 `<number>`。
 
 - `normal`
   - : 没有特殊首字母效果，像正常文本一样显示。
@@ -76,11 +79,60 @@ initial-letter: unset;
   -webkit-initial-letter: 3;
   initial-letter: 3;
 }
+
+p {
+  outline: 1px dashed red;
+}
 ```
 
 #### 结果
 
 {{EmbedLiveSample('设置首字母大小', 250, 180)}}
+
+### 设置下沉值
+
+在这个例子中，所有首字母的大小都相同，但下沉值不同。
+
+#### HTML
+
+```html
+<p class="four">首字母大写：下沉值 = 4</p>
+<p class="same">首字母大写：未声明下沉值（与大小相同）</p>
+<p class="two">首字母大写：下沉值 = 2</p>
+<p class="one">首字母大写：下沉值 = 1</p>
+```
+
+#### CSS
+
+```css
+.four::first-letter {
+  -webkit-initial-letter: 3 4;
+  initial-letter: 3 4;
+}
+
+.same::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+}
+
+.two::first-letter {
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
+}
+
+.one::first-letter {
+  -webkit-initial-letter: 3 1;
+  initial-letter: 3 1;
+}
+
+p {
+  outline: 1px dashed red;
+}
+```
+
+#### 结果
+
+{{EmbedLiveSample('设置下沉值', 250, 240)}}
 
 ## 规范
 
@@ -92,5 +144,6 @@ initial-letter: unset;
 
 ## 参见
 
-- {{cssxref("initial-letter-align")}}
-- [CSS 中的首字母下沉效果](https://www.oddbird.net/2017/01/03/initial-letter/)
+- {{cssxref("::first-letter")}}
+- {{cssxref(":first-child")}}
+- [CSS 中的首字母下沉效果](https://www.oddbird.net/2017/01/03/initial-letter/)，由 Oddbird 提供（2017）

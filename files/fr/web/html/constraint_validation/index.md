@@ -276,7 +276,7 @@ function checkZIP() {
 }
 ```
 
-Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
+Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/Element/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
 
 ```js
 window.onload = () => {

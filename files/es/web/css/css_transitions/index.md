@@ -19,7 +19,7 @@ slug: Web/CSS/CSS_transitions
 
 ## Guías
 
-- [Using CSS transitions](/es/docs/Web/Guide/CSS/Using_CSS_transitions)
+- [Using CSS transitions](/es/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)
   - : Tutorial donde se explica paso a paso cómo crear transiciones suaves usando CSS. El artículo describe cada propiedad CSS relevante y explica como interactúan entre ellas.
 
 ## Especificaciones
@@ -28,4 +28,4 @@ slug: Web/CSS/CSS_transitions
 
 ## Ver además
 
-- Transiciones relacionadas, [CSS Animations](/es/docs/Web/CSS/CSS_Animations) pueden producir animaciones independientemente de los cambios en los valores.
+- Transiciones relacionadas, [CSS Animations](/es/docs/Web/CSS/CSS_animations) pueden producir animaciones independientemente de los cambios en los valores.

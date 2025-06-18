@@ -9,7 +9,47 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-y`** 设置当内容溢出块级元素的上下两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
 
-{{EmbedInteractiveExample("pages/css/overflow-y.html")}}
+{{InteractiveExample("CSS Demo: overflow-y")}}
+
+```css interactive-example-choice
+overflow-y: visible;
+```
+
+```css interactive-example-choice
+overflow-y: hidden;
+```
+
+```css interactive-example-choice
+overflow-y: clip;
+```
+
+```css interactive-example-choice
+overflow-y: scroll;
+```
+
+```css interactive-example-choice
+overflow-y: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p id="example-element">
+    Michaelmas term lately over, and the Lord Chancellor sitting in Lincoln's
+    Inn Hall. Implacable November weather. As much mud in the streets as if the
+    waters had but newly retired from the face of the earth.
+  </p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## 语法
 
@@ -138,4 +178,4 @@ div {
 
 - {{Cssxref("clip")}}、{{Cssxref("display")}}、{{cssxref("text-overflow")}}、{{cssxref("white-space")}}
 - [CSS 溢出](/zh-CN/docs/Web/CSS/CSS_overflow)模块
-- [CSS 构建：溢出的内容](/zh-CN/docs/Learn/CSS/Building_blocks/Overflowing_content)
+- [CSS 构建：溢出的内容](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow)

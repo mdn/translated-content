@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 **`encodeURI()`** 関数は、{{glossary("URI")}} (Uniform Resource Identifier; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{glossary("UTF-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
 
-{{EmbedInteractiveExample("pages/js/globalprops-encodeuri.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+
+```js interactive-example
+const uri = "https://mozilla.org/?x=шеллы";
+const encoded = encodeURI(uri);
+console.log(encoded);
+// Expected output: "https://mozilla.org/?x=%D1%88%D0%B5%D0%BB%D0%BB%D1%8B"
+
+try {
+  console.log(decodeURI(encoded));
+  // Expected output: "https://mozilla.org/?x=шеллы"
+} catch (e) {
+  // Catches a malformed URI
+  console.error(e);
+}
+```
 
 ## 構文
 
@@ -81,7 +96,7 @@ console.log(encodeURI("\uDFFF"));
 
 ### IPv6 のエンコード
 
-また、 URL 記述のために最近の [RFC3986](http://tools.ietf.org/html/rfc3986) 仕様に従おうとする場合、角括弧 `[]` は ({{glossary("IPv6")}} 用の) 予約文字となっているため、角括弧が (ホスト名など) URL の一部を形成している場合はエンコードされていないほうがよいでしょう。そういう場合は以下のコードが役に立ちます。
+また、 URL 記述のために最近の [RFC3986](https://tools.ietf.org/html/rfc3986) 仕様に従おうとする場合、角括弧 `[]` は ({{glossary("IPv6")}} 用の) 予約文字となっているため、角括弧が (ホスト名など) URL の一部を形成している場合はエンコードされていないほうがよいでしょう。そういう場合は以下のコードが役に立ちます。
 
 ```js
 function fixedEncodeURI(str) {

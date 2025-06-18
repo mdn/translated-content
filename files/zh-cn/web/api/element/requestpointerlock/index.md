@@ -40,7 +40,7 @@ requestPointerLock(options)
 
 如果使用 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 调用 `requestPointerLock()`，则必须先调用 `requestPointerLock()`，因为 {{domxref("Element.requestFullscreen()", "requestFullscreen()")}} 将消耗{{Glossary("Transient activation", "瞬态激活")}}的状态。
 
-在 {{htmlelement("iframe")}} 元素中调用 `requestPointerLock()` 时，必须添加 `allow-pointer-lock` [沙盒令牌](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)。此外，其他 {{htmlelement("iframe")}} 元素中的其他元素不得处于指针锁定模式。
+在 {{htmlelement("iframe")}} 元素中调用 `requestPointerLock()` 时，必须添加 `allow-pointer-lock` [沙盒令牌](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox)。此外，其他 {{htmlelement("iframe")}} 元素中的其他元素不得处于指针锁定模式。
 
 ## 示例
 
@@ -70,7 +70,7 @@ canvas.addEventListener("click", async () => {
 
 - [指针锁定演示](https://mdn.github.io/dom-examples/pointer-lock/)（[查看源代码](https://github.com/mdn/dom-examples/tree/main/pointer-lock)）
 - {{domxref("Pointer Lock API", "指针锁定 API", "", "nocode")}}
-- [禁用鼠标加速以提供更好的 FPS 游戏体验](https://web.dev/articles/disable-mouse-acceleration)
+- [禁用鼠标加速以提供更好的 FPS 游戏体验](https://web.developers.google.cn/articles/disable-mouse-acceleration)
 
 ## 规范
 

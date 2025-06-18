@@ -301,7 +301,7 @@ Here are a few examples:
 
 A cue timing indicates when the cue is shown. It has a start and end time which are represented by timestamps. The end time must be greater than the start time, and the start time must be greater than or equal to all previous start times. Cues may have overlapping timings.
 
-If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
+If the WebVTT file is being used for chapters ({{HTMLElement("track")}} [`kind`](/ru/docs/Web/HTML/Reference/Global_attributes#kind) is `chapters`) then the file cannot have overlapping timings.
 
 Each cue timing contains five components:
 
@@ -441,7 +441,7 @@ In addition to the three escape sequences mentioned above, there are fours other
 
 ### Cue payload text tags
 
-There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Global_attributes#kind) is `chapters` then you cannot use tags.
+There are a number of tags, such as `<b>`, that can be used. However, if the WebVTT file is used in a {{HTMLElement("track")}} element where the attribute [`kind`](/ru/docs/Web/HTML/Reference/Global_attributes#kind) is `chapters` then you cannot use tags.
 
 - Timestamp tag
 

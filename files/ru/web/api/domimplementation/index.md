@@ -34,4 +34,4 @@ _Нет унаследованного метода._
 
 ## Смотрите также
 
-- [The DOM interfaces index.](/ru/docs/DOM/DOM_Reference)
+- [The DOM interfaces index.](/ru/docs/Web/API/Document_Object_Model)

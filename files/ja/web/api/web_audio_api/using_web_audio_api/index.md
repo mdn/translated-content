@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) を参照してください。
+> 読み込もうとしている音声ファイルが別なドメインにある場合は、 `crossorigin` 属性を使用する必要があるでしょう。詳しくは[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) を参照してください。
 
 Web Audio API を使用してできるすばらしいことをすべて利用するためには、この要素で入力元をつかみ、作成したコンテキストに*送り込む*ことが必要です。幸いにもちょうどこれを行うメソッド — {{domxref("AudioContext.createMediaElementSource")}} が存在します。
 
@@ -79,7 +79,7 @@ const track = audioContext.createMediaElementSource(audioElement);
 
 JavaScript コードからプログラム的に音声を制御することは、ブラウザーの自動再生の対応方針の影響を受けますので、ユーザー (またはホワイトリスト) の許可がないとブロックされる場合があります。自動再生の方針は通常、明示的な許可かスクリプトが音声を再生できるようになる前のユーザーのページへの反応を必要とします。
 
-これらの特別な要件が基本的に設定されているのは、予想外の音が迷惑で邪魔になり、アクセシビリティの問題を引き起こす可能性があるためです。これについては、記事[メディアと Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Autoplay_guide)をご覧ください。
+これらの特別な要件が基本的に設定されているのは、予想外の音が迷惑で邪魔になり、アクセシビリティの問題を引き起こす可能性があるためです。これについては、記事[メディアと Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)をご覧ください。
 
 このスクリプトはユーザー入力イベント (例えば再生ボタンのクリック) への応答で音声を再生しているため、良い形であり自動再生ブロックの問題はないでしょう。ですから、再生や一時停止機能についての話を始めましょう。再生ボタンはトラックの再生中には一時停止ボタンに変わります。
 
@@ -162,7 +162,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 gain の既定値は 1 です。これは現在の音量を同じに維持します。 gain は最小値がおよそ-3.4 で最大値はおよそ 3.4 です。ここで boombox は gain を最大 2 (元の音量の倍)、最小 0 (結果的に音声をミュートします) の範囲で動かせるようにします。
 
-ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Element/input/range)を使用します。
+ユーザーがこれを制御できるようにしましょう。 — [range 入力](/ja/docs/Web/HTML/Reference/Elements/input/range)を使用します。
 
 ```html
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01" />
@@ -254,7 +254,7 @@ Web Audio API についてもっと学ぶことができる他の例がありま
 
 ![音の波が表示され、音声効果や視覚化を選択することができるユーザーインターフェイス。](voice-change-o-matic.png)
 
-他にも特に Web Audio API を紹介するために開発されたアプリケーションとして [Violent Theremin](http://mdn.github.io/violent-theremin/) があり、これはマウスポインターを動かすことで音高や音量を変更することができるシンプルなウェブアプリケーションです。これはサイケデリックなライトショーも提供します。 ([Violent Theremin のソースコードを見る](https://github.com/mdn/violent-theremin))
+他にも特に Web Audio API を紹介するために開発されたアプリケーションとして [Violent Theremin](https://mdn.github.io/violent-theremin/) があり、これはマウスポインターを動かすことで音高や音量を変更することができるシンプルなウェブアプリケーションです。これはサイケデリックなライトショーも提供します。 ([Violent Theremin のソースコードを見る](https://github.com/mdn/violent-theremin))
 
 ![虹色に埋め尽くされたページで、 Clear screen と mute と書かれた2つのボタンがあります。](violent-theremin.png)
 

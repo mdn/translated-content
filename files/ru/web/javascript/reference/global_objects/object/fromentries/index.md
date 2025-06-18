@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/fromEntries
 
 Метод **`Object.fromEntries()`** преобразует список пар ключ-значение в объект.
 
-{{EmbedInteractiveExample("pages/js/object-fromentries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+
+```js interactive-example
+const entries = new Map([
+  ["foo", "bar"],
+  ["baz", 42],
+]);
+
+const obj = Object.fromEntries(entries);
+
+console.log(obj);
+// Expected output: Object { foo: "bar", baz: 42 }
+```
 
 ## Синтаксис
 
@@ -18,7 +30,7 @@ Object.fromEntries(iterable);
 ### Параметры
 
 - `iterable`
-  - : Итерируемый объект, такой как {{jsxref("Array")}} или {{jsxref("Map")}} или другие объекты, реализующие [iterable протокол](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterable_protocol).
+  - : Итерируемый объект, такой как {{jsxref("Array")}} или {{jsxref("Map")}} или другие объекты, реализующие [iterable протокол](/ru/docs/Web/JavaScript/Reference/Iteration_protocols#the_iterable_protocol).
 
 ### Возвращаемое значение
 
@@ -61,7 +73,7 @@ console.log(obj); // { 0: "a", 1: "b", 2: "c" }
 
 ### Трансформации объектов
 
-С `Object.fromEntries`, обратным ему методом {{jsxref("Object.entries()")}} и [методами манипулирования массивами](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods_2) вы можете преобразовывать объекты следующим образом:
+С `Object.fromEntries`, обратным ему методом {{jsxref("Object.entries()")}} и [методами манипулирования массивами](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array#methods_2) вы можете преобразовывать объекты следующим образом:
 
 ```js
 const object1 = { a: 1, b: 2, c: 3 };

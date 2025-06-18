@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/String/lastIndexOf
 
 {{jsxref("String")}} 的 **`lastIndexOf()`** 方法搜索该字符串并返回指定子字符串最后一次出现的索引。它可以接受一个可选的起始位置参数，并返回指定子字符串在小于或等于指定数字的索引中的最后一次出现的位置。
 
-{{EmbedInteractiveExample("pages/js/string-lastindexof.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.lastIndexOf()", "shorter")}}
+
+```js interactive-example
+const paragraph = "I think Ruth's dog is cuter than your dog!";
+
+const searchTerm = "dog";
+
+console.log(
+  `Index of the last ${searchTerm} is ${paragraph.lastIndexOf(searchTerm)}`,
+);
+// Expected output: "Index of the last "dog" is 38"
+```
 
 ## 语法
 

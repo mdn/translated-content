@@ -17,7 +17,7 @@ El objeto File puede ser obtenido desde un objeto {{domxref("FileList")}} devuel
 FileReader FileReader();
 ```
 
-Mira el artículo _[Using files from web applications](/es/docs/Using_files_from_web_applications)_ para más detalles y ejemplos.
+Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API/Using_files_from_web_applications)_ para más detalles y ejemplos.
 
 ## Propiedades
 
@@ -38,17 +38,17 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 ### Controladores de eventos
 
 - {{domxref("FileReader.onabort")}}
-  - : Un controlador para el evento [`abort`](/es/docs/Web/Reference/Events/abort). Este evento se activa cada vez que se interrumpe la operación de lectura.
+  - : Un controlador para el evento [`abort`](/es/docs/Web/API/HTMLMediaElement/abort_event). Este evento se activa cada vez que se interrumpe la operación de lectura.
 - {{domxref("FileReader.onerror")}}
-  - : Un controlador para el evento [`error`](/es/docs/Web/Reference/Events/error). Este evento se activa cada vez que la operación de lectura encuentra un error.
+  - : Un controlador para el evento [`error`](/es/docs/Web/API/HTMLElement/error_event). Este evento se activa cada vez que la operación de lectura encuentra un error.
 - {{domxref("FileReader.onload")}}
-  - : Un controlador para el evento [`load`](/es/docs/Web/Reference/Events/load). Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.
+  - : Un controlador para el evento [`load`](/es/docs/Web/API/Window/load_event). Este evento se activa cada vez que la operación de lectura se ha completado satisfactoriamente.
 - {{domxref("FileReader.onloadstart")}}
-  - : Un controlador para el evento [`loadstart`](/es/docs/Web/Reference/Events/loadstart). Este evento se activa cada vez que comienza la lectura.
+  - : Un controlador para el evento [`loadstart`](/es/docs/Web/API/XMLHttpRequest/loadstart_event). Este evento se activa cada vez que comienza la lectura.
 - {{domxref("FileReader.onloadend")}}
-  - : Un controlador para el evento [`loadend`](/es/docs/Web/Reference/Events/loadend). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
+  - : Un controlador para el evento [`loadend`](/es/docs/Web/API/XMLHttpRequest/loadend_event). Este evento se activa cada vez que la operación de lecura se ha completado (ya sea con éxito o fallo).
 - {{domxref("FileReader.onprogress")}}
-  - : Un controlador para el evento [`progress`](/es/docs/Web/Reference/Events/progress). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
+  - : Un controlador para el evento [`progress`](/es/docs/Web/API/XMLHttpRequest/progress_event). Este evento se activa mientras se está leyendo el contenido del objeto {{domxref("Blob")}}.
 
 > [!NOTE]
 > Como `FileReader` hereda de {{domxref("EventTarget")}}, todos esos eventos también pueden ser escuchados usando el método {{domxref("EventTarget.addEventListener()","addEventListener")}}.
@@ -76,6 +76,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Using_files_from
 
 ## See also
 
-- [Usando archivos desde aplicaciónes web](/en/Using_files_from_web_applications)
+- [Usando archivos desde aplicaciónes web](/es/docs/Web/API/File_API/Using_files_from_web_applications)
 - {{ domxref("File") }}
 - {{ domxref("Blob") }}

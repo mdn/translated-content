@@ -5,7 +5,7 @@ slug: Web/API/CanvasRenderingContext2D/globalCompositeOperation
 
 {{DefaultAPISidebar("Canvas API")}}
 
-Este programa de ejemplo muestra una cantidad de [operaciones de composición](/es/docs/Web/API/CanvasRenderingContext2D.globalCompositeOperation). La salida se ve así:
+Este programa de ejemplo muestra una cantidad de [operaciones de composición](/es/docs/Web/API/CanvasRenderingContext2D/globalCompositeOperation). La salida se ve así:
 
 {{EmbedLiveSample("Ejemplo_de_composición", "100%", 7250)}}
 

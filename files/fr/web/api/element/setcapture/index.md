@@ -65,7 +65,7 @@ Dans cet exemple, les coordonnées en cours de la souris sont dessinées pendant
 </html>
 ```
 
-[Voir l'exemple sur une page](/samples/domref/mousecapture.html)
+[Voir l'exemple sur une page](https://mdn.dev/archives/media/samples/domref/mousecapture.html)
 
 ## Notes
 

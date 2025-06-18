@@ -45,7 +45,7 @@ l10n:
 - {{DOMxRef("CSSStyleDeclaration.setProperty()")}}
   - : 宣言ブロック内の既存の CSS プロパティを変更するか、新しい CSS プロパティを生成するかします。
 - {{DOMxRef("CSSStyleDeclaration.getPropertyCSSValue()")}} {{deprecated_inline}}
-  - : **Firefox の getComputedStyle のみ対応** プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)では `null` を返します。
+  - : **Firefox の getComputedStyle のみ対応** プロパティの値を {{DOMxRef("CSSPrimitiveValue")}} として、または[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)では `null` を返します。
 
 ## 例
 

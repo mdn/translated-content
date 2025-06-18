@@ -5,11 +5,11 @@ slug: WebAssembly/JavaScript_interface/Exception/Exception
 
 {{WebAssemblySidebar}}
 
-Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebAssembly.Exception`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception).
+Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebAssembly.Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception).
 
-Le constructeur prend comme arguments une balise [`Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception) et un tableau `payload` de champs de données. Les types de données pour chaque élément du tableau `payload` doivent correspondre aux types de données définis par la balise `Tag`.
+Le constructeur prend comme arguments une balise [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Exception) et un tableau `payload` de champs de données. Les types de données pour chaque élément du tableau `payload` doivent correspondre aux types de données définis par la balise `Tag`.
 
-Il est aussi possible de passer comme argument un objet `options`. Pour cet objet, on peut passer la propriété `options.traceStack` à `true` (elle vaut `false` par défaut) afin d'indiquer que le code WebAssembly qui lève l'exception peut renseigner la propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack) de l'exception avec la trace de la pile d'appels.
+Il est aussi possible de passer comme argument un objet `options`. Pour cet objet, on peut passer la propriété `options.traceStack` à `true` (elle vaut `false` par défaut) afin d'indiquer que le code WebAssembly qui lève l'exception peut renseigner la propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack) de l'exception avec la trace de la pile d'appels.
 
 ## Syntaxe
 
@@ -20,7 +20,7 @@ new Exception(tag, payload, options);
 ### Paramètres
 
 - `tag`
-  - : Un objet [`WebAssembly.Tag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Tag) qui définit les types de données attendus pour chaque valeur contenue dans `payload`.
+  - : Un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) qui définit les types de données attendus pour chaque valeur contenue dans `payload`.
 - `payload`
   - : Un tableau contenant un ou plusieurs champs de données qui forment la charge utile de l'exception. Les types des éléments doivent correspondre à ceux décrits par la balise `tag`. Si le nombre de champs ou leurs types ne correspond pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 - `options` {{optional_inline}}
@@ -28,7 +28,7 @@ new Exception(tag, payload, options);
   - : Un objet avec la propriété optionnelle suivante&nbsp;:
 
     - `traceStack` {{optional_inline}}
-      - : `true` si l'objet `Exception` peut avoir sa pile d'appels attachée via sa propriété [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack), `false` sinon (qui correspond au comportement par défaut si `options` ou si `options.traceStack` n'est pas fourni).
+      - : `true` si l'objet `Exception` peut avoir sa pile d'appels attachée via sa propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack), `false` sinon (qui correspond au comportement par défaut si `options` ou si `options.traceStack` n'est pas fourni).
 
 ### Exceptions
 
@@ -45,7 +45,7 @@ const tag = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
 const exception = new WebAssembly.Exception(tag, [42, 42.3]);
 ```
 
-L'exemple contenu dans la page [`stack`](/fr/docs/Web/JavaScript/Reference/Global_Objects/WebAssembly/Exception/stack#exemples) illustre la création d'une exception avec le paramètre `options`.
+L'exemple contenu dans la page [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack#exemples) illustre la création d'une exception avec le paramètre `options`.
 
 ## Spécifications
 

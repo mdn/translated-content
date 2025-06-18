@@ -99,4 +99,4 @@ openRequest.onsuccess = (event) => {
 ## 関連情報
 
 - [IndexedDB の使用](/ja/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- [`onsuccess`](/ja/docs/Web/API/IDBRequest/onsuccess) イベントハンドラープロパティ
+- [`onsuccess`](/ja/docs/Web/API/IDBRequest/success_event) イベントハンドラープロパティ

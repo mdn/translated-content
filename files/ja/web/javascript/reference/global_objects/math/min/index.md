@@ -1,23 +1,41 @@
 ---
 title: Math.min()
 slug: Web/JavaScript/Reference/Global_Objects/Math/min
+l10n:
+  sourceCommit: 88d71e500938fa8ca969fe4fe3c80a5abe23d767
 ---
 
 {{JSRef}}
 
-**`Math.min()`** は静的関数で、引数で渡されたもののうち最小の値を返します。または引数のいずれかが数値以外で、数値に変換できない場合は {{jsxref("NaN")}} を返します。
+**`Math.min()`** は静的メソッドで、引数で渡されたもののうち最小の値を返します。引数がない場合は {{jsxref("Infinity")}} を返します。
 
-{{EmbedInteractiveExample("pages/js/math-min.html")}}
+{{InteractiveExample("JavaScript Demo: Math.min()")}}
+
+```js interactive-example
+console.log(Math.min(2, 3, 1));
+// Expected output: 1
+
+console.log(Math.min(-2, -3, -1));
+// Expected output: -3
+
+const array1 = [2, 3, 1];
+
+console.log(Math.min(...array1));
+// Expected output: 1
+```
 
 ## 構文
 
-```
-Math.min([value1[, value2[, ...]]])
+```js-nolint
+Math.min()
+Math.min(value1)
+Math.min(value1, value2)
+Math.min(value1, value2, /* …, */ valueN)
 ```
 
 ### 引数
 
-- `value1, value2, ...`
+- `value1`, …, `valueN`
   - : 最小値が選択して返される 0 個以上の数値です。
 
 ### 返値
@@ -28,9 +46,7 @@ Math.min([value1[, value2[, ...]]])
 
 `min()` は `Math` の静的メソッドなので、常に `Math.min()` として使用し、自分で `Math` オブジェクトを生成してそのメソッドとして使用しないでください。 (`Math` にはコンストラクターがありません)。
 
-引数が与えられなかった場合の結果は {{jsxref("Infinity")}} です。
-
-1 つでも数値に変換できない引数が渡された場合、結果は {{jsxref("NaN")}} になります。
+[`Math.min.length`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/length) は 2 であり、少なくとも 2 つの引数を処理するように設計されていることを弱く示唆しています。
 
 ## 例
 
@@ -39,9 +55,9 @@ Math.min([value1[, value2[, ...]]])
 変数 `x` と `y` の小さい方を `z` に代入します。
 
 ```js
-var x = 10,
-  y = -20;
-var z = Math.min(x, y);
+const x = 10;
+const y = -20;
+const z = Math.min(x, y); // -20
 ```
 
 ### Math.min() で値をクリップする
@@ -49,7 +65,7 @@ var z = Math.min(x, y);
 `Math.min()` は、次のようにしきい値以下に値をクリップするために用いられることがあります。
 
 ```js
-var x = f(foo);
+let x = f(foo);
 
 if (x > boundary) {
   x = boundary;
@@ -59,7 +75,7 @@ if (x > boundary) {
 これは次のように書くことができます。
 
 ```js
-var x = Math.min(f(foo), boundary);
+const x = Math.min(f(foo), boundary);
 ```
 
 {{jsxref("Math.max()")}} を用いれば、反対に、しきい値以上に値をクリップすることができます。

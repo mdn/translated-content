@@ -5,7 +5,7 @@ slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
 
-[앞 단원의 예제](/ko/docs/Web/WebGL/Adding_2D_content_to_a_WebGL_context)에서 정사각형을 그려봤으니, 이제 정사각형에 색을 칠해 보겠습니다. 셰이더를 조금 수정하면 색을 칠할 수 있습니다.
+[앞 단원의 예제](/ko/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)에서 정사각형을 그려봤으니, 이제 정사각형에 색을 칠해 보겠습니다. 셰이더를 조금 수정하면 색을 칠할 수 있습니다.
 
 ## 정점에 색상 적용
 
@@ -92,7 +92,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, squareVerticesColorBuffer);
 gl.vertexAttribPointer(vertexColorAttribute, 4, gl.FLOAT, false, 0, 0);
 ```
 
-이제 WebGL이 호환되는 브라우저에서 [샘플](/samples/webgl/sample3/index.html)을 보면, 검정색 바탕에 아래와 같은 정사각형이 그려지는 것을 볼 수 있습니다:
+이제 WebGL이 호환되는 브라우저에서 [샘플](http://mdn.github.io/webgl-examples/tutorial/sample3/index.html)을 보면, 검정색 바탕에 아래와 같은 정사각형이 그려지는 것을 볼 수 있습니다:
 
 {{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
 

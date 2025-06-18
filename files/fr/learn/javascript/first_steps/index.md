@@ -11,9 +11,9 @@ Dans notre premier module consacré à JavaScript, nous allons tout d'abord rép
 
 Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
 
-- [Commencer avec le Web](/fr/Apprendre/HTML/Introduction_à_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
-- [Introduction au langage HTML](/fr/docs/Web/Guide/HTML/Introduction).
-- [Introduction au langage CSS](/fr/Apprendre/CSS/Introduction_à_CSS).
+- [Commencer avec le Web](/fr/docs/Learn/HTML/Introduction_to_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
+- [Introduction au langage HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
+- [Introduction au langage CSS](/fr/docs/Learn/CSS/First_steps).
 
 > [!NOTE]
 > Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
@@ -32,9 +32,9 @@ Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable e
   - : À ce stade du cours, nous allons parler de mathématiques en JavaScript, à savoir comment combiner des opérateurs arithmétiques avec d'autres fonctionnalités du langage pour arriver à nos fins.
 - [Gérer du texte — les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
   - : Attaquons-nous maintenant aux chaînes de caractères — le nom savant désignant en programmation des portions de texte. Dans cet article, nous allons voir les bases que vous devez impérativement connaître lors de votre apprentissage de JavaScript, comme la création de chaînes, l'échappement de caractères et la jonction de plusieurs chaînes.
-- [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/methode_chaine_utile)
+- [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
   - : Maintenant que nous avons vu les bases relatives aux chaînes de catactères, passons à la vitesse supérieure et regardons ce que nous pouvons faire de plus poussé avec lesdites chaînes grâce aux méthodes natives, comme par exemple déterminer la longueur d'un texte, joindre et séparer des chaînes, remplacer un caractère par un autre, et bien plus encore.
-- [Les tableaux](/fr/docs/Learn/JavaScript/First_steps/tableaux)
+- [Les tableaux](/fr/docs/Learn/JavaScript/First_steps/Arrays)
   - : Dans le dernier article de ce module, nous allons nous pencher sur les tableaux — un moyen ingénieux de stocker une liste d'éléments dans une unique variable. Ici nous allons voir en quoi cela est pratique, puis nous verrons entre autres comment créer un tableau et comment récupérer, ajouter et supprimer des éléments stockés.
 
 ## Auto-évaluation

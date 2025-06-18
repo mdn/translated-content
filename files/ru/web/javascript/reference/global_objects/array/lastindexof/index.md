@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/lastIndexOf
 
 Метод **`lastIndexOf()`** возвращает последний индекс, по которому данный элемент может быть найден в массиве или -1, если такого индекса нет. Массив просматривается от конца к началу, начиная с индекса `fromIndex`.
 
-{{EmbedInteractiveExample("pages/js/array-lastindexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+
+```js interactive-example
+const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];
+
+console.log(animals.lastIndexOf("Dodo"));
+// Expected output: 3
+
+console.log(animals.lastIndexOf("Tiger"));
+// Expected output: 1
+```
 
 ## Синтаксис
 
@@ -24,7 +34,7 @@ arr.lastIndexOf(searchElement[, fromIndex = arr.length])
 
 ## Описание
 
-Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators/Comparison_Operators#Using_the_Equality_Operators) (тот же метод используется оператором `===`, тройное равно).
+Метод `lastIndexOf()` сравнивает искомый элемент `searchElement` с элементами в массиве, используя [строгое сравнение](/ru/docs/Web/JavaScript/Reference/Operators#using_the_equality_operators) (тот же метод используется оператором `===`, тройное равно).
 
 ## Примеры
 

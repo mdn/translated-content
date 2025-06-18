@@ -9,7 +9,34 @@ Les éléments {{HTMLElement("input")}} de type **`"color"`** permettent de sél
 
 L'apparence du contrôle de sélection des couleurs peut grandement varier d'un navigateur à un autre et d'un système d'exploitation à un autre. Pour certains navigateurs, seul un champ textuel sera affiché afin de saisir le code de la couleur (avec des mécanismes de validation vérifiant le format), pour d'autres, ce sera le sélecteur de couleur du système d'exploitation qui sera utilisé et pour d'autres encore, ce sera un sélecteur de couleur spécifique.
 
-{{EmbedInteractiveExample("pages/tabbed/input-color.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>Choose your monster's colors:</p>
+
+<div>
+  <input type="color" id="head" name="head" value="#e66465" />
+  <label for="head">Head</label>
+</div>
+
+<div>
+  <input type="color" id="body" name="body" value="#f6b73c" />
+  <label for="body">Body</label>
+</div>
+```
+
+```css interactive-example
+p,
+label {
+  font:
+    1rem "Fira Sans",
+    sans-serif;
+}
+
+input {
+  margin: 0.4rem;
+}
+```
 
 ## Valeur
 
@@ -36,7 +63,7 @@ Si aucune valeur n'est indiquée, c'est `"#000000"` qui sera utilisée par défa
 
 ### Détecter le changement de couleur
 
-Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : [`input`](/fr/docs/Web/API/HTMLElement/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event). `input` est déclenché sur l'élément `<input>` à chaque fois que la couleur change. L'évènement `change` est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.
+Comme pour les différents éléments {{HTMLElement("input")}}, deux évènements peuvent être utilisés afin de détecter une modification de la couleur : [`input`](/fr/docs/Web/API/Element/input_event) et [`change`](/fr/docs/Web/API/HTMLElement/change_event). `input` est déclenché sur l'élément `<input>` à chaque fois que la couleur change. L'évènement `change` est déclenché lorsque l'utilisateur ferme le sélecteur de couleur. Dans tous les cas, il est possible de déterminer la nouvelle valeur de l'élément grâce à {{domxref("HTMLInputElement.value", "value")}}.
 
 ```js
 colorPicker.addEventListener("input", updateFirst, false);
@@ -63,7 +90,7 @@ La valeur d'un tel champ est considérée invalide si l'interface utilisateur ne
 
 ## Exemples
 
-Créons un exemple qui utilise un sélecteur de couleur et les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) et [`input`](/fr/docs/Web/API/HTMLElement/input_event) afin de choisir une nouvelle couleur et de l'appliquer sur chaque élément {{HTMLElement("p")}} du document.
+Créons un exemple qui utilise un sélecteur de couleur et les évènements [`change`](/fr/docs/Web/API/HTMLElement/change_event) et [`input`](/fr/docs/Web/API/Element/input_event) afin de choisir une nouvelle couleur et de l'appliquer sur chaque élément {{HTMLElement("p")}} du document.
 
 ### HTML
 
@@ -89,7 +116,7 @@ Le fragment de code HTML utilisé est relativement simple. On utilise quelques p
 
 ### JavaScript
 
-Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr//docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
+Tout d'abord, on établit certains variables : une pour la couleur du sélecteur et une autre couleur pour la couleur par défaut. On ajoute un gestionnaire [`load`](/fr_docs/Web/API/Window/load_event) afin de lancer les actions de démarrage lorsque la page est chargée.
 
 ```js
 var colorWell;
@@ -112,7 +139,7 @@ function startup() {
 }
 ```
 
-Dans cette fonction, on utilise la variable `colorWell` déclarée plus haut et on remplit sa valeur avec la valeur par défaut (la valeur de `defaultColor`). Ensuite, on indique les gestionnaires d'évènements : [`input`](/fr/docs/Web/API/HTMLElement/input_event) appellera `updateFirst()` et [`change`](/fr/docs/Web/API/HTMLElement/change_event) appellera `updateAll()` qui seront détaillés ensuite.
+Dans cette fonction, on utilise la variable `colorWell` déclarée plus haut et on remplit sa valeur avec la valeur par défaut (la valeur de `defaultColor`). Ensuite, on indique les gestionnaires d'évènements : [`input`](/fr/docs/Web/API/Element/input_event) appellera `updateFirst()` et [`change`](/fr/docs/Web/API/HTMLElement/change_event) appellera `updateAll()` qui seront détaillés ensuite.
 
 Enfin, on appelle {{domxref("HTMLInputElement.select", "select()")}} afin de sélectionner le texte du champ si le contrôle est un champ texte.
 

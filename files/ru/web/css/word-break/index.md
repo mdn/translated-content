@@ -7,7 +7,42 @@ slug: Web/CSS/word-break
 
 Свойство [CSS](/ru/docs/Web/CSS) **`word-break`** определяет, где будет установлен перевод на новую строку в случае превышения текстом границ блока.
 
-{{EmbedInteractiveExample("pages/css/word-break.html")}}
+{{InteractiveExample("CSS Demo: word-break")}}
+
+```css interactive-example-choice
+word-break: normal;
+```
+
+```css interactive-example-choice
+word-break: break-all;
+```
+
+```css interactive-example-choice
+word-break: keep-all;
+```
+
+```css interactive-example-choice
+word-break: break-word;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    Honorificabilitudinitatibus califragilisticexpialidocious
+    Taumatawhakatangihangakoauauotamateaturipukakapikimaungahoronukupokaiwhenuakitanatahu
+    グレートブリテンおよび北アイルランド連合王国という言葉は本当に長い言葉
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  padding: 20px;
+  text-align: start;
+  border: solid 1px darkgray;
+}
+```
 
 ## Синтаксис
 

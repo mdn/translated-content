@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-JavaScript(또는 "JS")는 클라이언트 측에서 웹페이지를 동적으로 다룰때 사용되는 프로그래밍 언어이지만, 종종 {{Glossary("Server","서버")}} 측에서 [Node.js](http://nodejs.org/)와 같은 런타임을 이용하여 사용되기도 합니다.
+JavaScript(또는 "JS")는 클라이언트 측에서 웹페이지를 동적으로 다룰때 사용되는 프로그래밍 언어이지만, 종종 {{Glossary("Server","서버")}} 측에서 [Node.js](https://nodejs.org/)와 같은 런타임을 이용하여 사용되기도 합니다.
 
 JavaScript는 [Java 프로그래밍 언어](<https://en.wikipedia.org/wiki/Java_(programming_language)>)와 **혼동해서는 안 됩니다**. "Java" 및 "JavaScript"는 미국 및 기타 국가에서 Oracle의 상표(또는 등록 상표)이지만, 두 프로그래밍 언어는 구문, 의미 및 사용 사례가 크게 다릅니다.
 
@@ -19,14 +19,14 @@ Brendan Eich (당시 Netscape Corporation에 근무)가 서버 측 언어로 생
 
 1996년 11월 Netscape는 JavaScript를 업계 표준으로 만들기 위해 Ecma International과 협력하기 시작했습니다. 이후 표준화된 JavaScript는 ECMAScript라고 불리며 ECMA-262에 지정되어 있으며, ECMA-262의 최신 버전(12번째, ES2021)은 2021년 6월 현재 출시되었습니다.
 
-최근, JavaScript는 성공적인 플랫폼 [Node.js](http://nodejs.org/)과 함께 서버로 돌아왔습니다. Node.js([Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)를 사용해 빌드되었습니다)는 가장 유명한 브라우저 밖에서의 크로스플랫폼 JavaScript 실행 환경입니다. Node.js를 활용하면 JavaScript를 PC에서 쓰이는 자동화 스크립트 언어로 쓸 수도 있고, 완전히 작동하는 {{Glossary("HTTP")}} 및 {{Glossary("Web Sockets")}} 서버를 만들 수 있습니다.
+최근, JavaScript는 성공적인 플랫폼 [Node.js](https://nodejs.org/)과 함께 서버로 돌아왔습니다. Node.js([Chrome's V8 JavaScript Engine](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>)를 사용해 빌드되었습니다)는 가장 유명한 브라우저 밖에서의 크로스플랫폼 JavaScript 실행 환경입니다. Node.js를 활용하면 JavaScript를 PC에서 쓰이는 자동화 스크립트 언어로 쓸 수도 있고, 완전히 작동하는 {{Glossary("HTTP")}} 및 {{Glossary("Web Sockets")}} 서버를 만들 수 있습니다.
 
 ## 같이 보기
 
 - 위키피디아의 [JavaScript](http://en.wikipedia.org/wiki/JavaScript)
 - MDN의 [The JavaScript guide](/ko/docs/Web/JavaScript/Guide)
 - [NodeSchool의 "javascripting" workshop](http://nodeschool.io/#workshoppers)
-- [codecademy.com의 JavaScript 과정](http://www.codecademy.com/tracks/javascript)
-- [최신 ECMAScript 표준](http://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [codecademy.com의 JavaScript 과정](https://www.codecademy.com/tracks/javascript)
+- [최신 ECMAScript 표준](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 - MDN의 [The JavaScript reference](/ko/docs/Web/JavaScript/Reference)
-- [_Eloquent JavaScript_ 책](http://eloquentjavascript.net/)
+- [_Eloquent JavaScript_ 책](https://eloquentjavascript.net/)

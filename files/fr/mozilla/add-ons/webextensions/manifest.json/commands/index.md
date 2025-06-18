@@ -134,9 +134,9 @@ browser.commands.onCommand.addListener(function (command) {
 
 Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
 
-- `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) de l'extension.
-- `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions) de l'extension.
-- `_execute_sidebar_action`: ouvre le [panneau latéral](/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars) de l'extension. Uniquement pris en charge par Firefox et uniquement à partir de Firefox version 54.
+- `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) de l'extension.
+- `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) de l'extension.
+- `_execute_sidebar_action`: ouvre le [panneau latéral](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) de l'extension. Uniquement pris en charge par Firefox et uniquement à partir de Firefox version 54.
 
 Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :
 

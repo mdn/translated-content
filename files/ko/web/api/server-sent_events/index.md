@@ -7,7 +7,7 @@ l10n:
 
 {{DefaultAPISidebar("Server Sent Events")}} {{AvailableInWorkers}}
 
-전통적으로 웹페이지는 새로운 데이터를 받기 위해 서버로 요청을 보내야만 합니다; 서버로 데이터를 요청하는 방식입니다. 하지만 Server-Sent Events 방식으로 웹페이지의 요청 없이도 언제든지 서버가 새로운 데이터를 보내는 것이 가능합니다. 이렇게 보내진 메시지는 웹페이지 안에서 *[Events](/ko/docs/DOM/event) + 데이터*로 다룰 수 있습니다.
+전통적으로 웹페이지는 새로운 데이터를 받기 위해 서버로 요청을 보내야만 합니다; 서버로 데이터를 요청하는 방식입니다. 하지만 Server-Sent Events 방식으로 웹페이지의 요청 없이도 언제든지 서버가 새로운 데이터를 보내는 것이 가능합니다. 이렇게 보내진 메시지는 웹페이지 안에서 *[Events](/ko/docs/Web/API/Event) + 데이터*로 다룰 수 있습니다.
 
 > [!NOTE]
 > 현재 Firefox는 서비스 워커에서 server-sent events 의 사용을 지원하지 않습니다 (전용 및 공유 워커에서는 지원됩니다). [Firefox bug 1681218](https://bugzil.la/1681218)를 참고하세요.
@@ -38,11 +38,11 @@ server-sent events의 사용법을 배우기 위해서는 [server-sent events �
 - Remy Sharp의 [EventSource 폴리필](https://github.com/remy/polyfills/blob/master/EventSource.js)
 - Yaffle의 [EventSource 폴리필](https://github.com/Yaffle/EventSource)
 - Rick Waldron [jquery 플러그인](https://github.com/rwldrn/jquery.eventsource)
-- [선언적인 SSE를 지원하는](http://intercoolerjs.org/docs.html#sse) intercooler.js
+- [선언적인 SSE를 지원하는](https://intercoolerjs.org/docs.html#sse) intercooler.js
 
 ### 관련 주제
 
-- [서버로부터 데이터 페칭하기](/ko/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [서버로부터 데이터 페칭하기](/ko/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/ko/docs/Web/JavaScript)
 - [WebSockets](/ko/docs/Web/API/WebSockets_API)
 

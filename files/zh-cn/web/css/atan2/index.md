@@ -5,7 +5,7 @@ slug: Web/CSS/atan2
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`atan2()`** 为三角函数，返回介于 `-infinity` 和 `infinity` 之间的两值的反正切值。此函数接受两个参数，返回表示介于 `-180deg` 和 `180deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`atan2()`** 为三角函数，返回介于 `-infinity` 和 `infinity` 之间的两值的反正切值。此函数接受两个参数，返回表示介于 `-180deg` 和 `180deg` 之间的 {{CSSXref("&lt;angle&gt;")}} 的弧度数。
 
 ## 语法
 

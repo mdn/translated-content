@@ -25,13 +25,13 @@ __lookupSetter__(prop);
 
 ### 返値
 
-指定したプロパティのセッターとしてバインドされた関数です。そのようなプロパティが得られない場合、またはプロパティが[データプロパティ](/ja/docs/Web/JavaScript/Data_structures#データプロパティ)である場合は `undefined` を返します。
+指定したプロパティのセッターとしてバインドされた関数です。そのようなプロパティが得られない場合、またはプロパティが[データプロパティ](/ja/docs/Web/JavaScript/Guide/Data_structures#データプロパティ)である場合は `undefined` を返します。
 
 ## 解説
 
 `Object.prototype` 継承するすべてのオブジェクト（つまり、 [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null_プロトタイプオブジェクト)を除くすべてのオブジェクト）は `__lookupSetter__()` メソッドを継承しています。オブジェクトのプロパティに[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)が定義されている場合、そのプロパティは設定時に関数を呼び出すだけなので、そのプロパティを通してセッター関数を参照することはできません。 `__lookupSetter__()` を使用することで、そのセッター関数を参照することができます。
 
-`__lookupSetter__()` は、指定したプロパティを探すために[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を走査します。プロトタイプチェーンの中にあるオブジェクトが指定した[自分自身のプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)を持っている場合、そのプロパティの[プロパティ記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)の `set` 属性を返します。そのプロパティがデータプロパティの場合は、`undefined` を返します。プロパティがプロトタイプチェーン全体で得られない場合、 `undefined` を返します。
+`__lookupSetter__()` は、指定したプロパティを探すために[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を走査します。プロトタイプチェーンの中にあるオブジェクトが指定した[自分自身のプロパティ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)を持っている場合、そのプロパティの[プロパティ記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)の `set` 属性を返します。そのプロパティがデータプロパティの場合は、`undefined` を返します。プロパティがプロトタイプチェーン全体で得られない場合、 `undefined` を返します。
 
 `__lookupSetter__()` は仕様書で "normative optional" と定義されており、これは実装することを要求されていないということです。しかし、主要なブラウザーはすべて実装していますし、使い続けられているため、除去される可能性は低いでしょう。ブラウザーが `__lookupSetter__()` を実装する場合、[`__lookupGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupGetter__)、[`__defineGetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__)、[`__defineSetter__()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) の各メソッドも実装する必要があります。
 

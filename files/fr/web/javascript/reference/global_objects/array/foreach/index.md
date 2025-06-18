@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 
 La méthode **`forEach()`** permet d'exécuter une fonction donnée sur chaque élément du tableau.
 
-{{EmbedInteractiveExample("pages/js/array-foreach.html")}}
+{{InteractiveExample("JavaScript Demo: Array.forEach()")}}
+
+```js interactive-example
+const array1 = ["a", "b", "c"];
+
+array1.forEach((element) => console.log(element));
+
+// Expected output: "a"
+// Expected output: "b"
+// Expected output: "c"
+```
 
 ## Syntaxe
 
@@ -46,9 +56,9 @@ arr.forEach(callback, thisArg);
 - l'index de l'élément
 - le tableau utilisé
 
-Si un paramètre `thisArg` est fourni à la méthode `forEach`, il sera utilisé en tant que valeur `this` pour chaque appel de `callback`. Sinon, ce sera la valeur `undefined` qui sera utilisée comme valeur `this`. La valeur `this` finalement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur de `this` utilisée dans une fonction](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this).
+Si un paramètre `thisArg` est fourni à la méthode `forEach`, il sera utilisé en tant que valeur `this` pour chaque appel de `callback`. Sinon, ce sera la valeur `undefined` qui sera utilisée comme valeur `this`. La valeur `this` finalement prise en compte par la fonction `callback` est déterminée selon [les règles usuelles pour déterminer la valeur de `this` utilisée dans une fonction](/fr/docs/Web/JavaScript/Reference/Operators/this).
 
-L'ensemble des éléments traités par `forEach` est défini avant le premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `forEach` ait commencé ne seront pas visités par `callback`. Si des éléments déjà présents dans le tableau sont modifiés, leur valeur telle qu'elle est passée au `callback` sera la valeur au moment du passage du `forEach` ; les éléments supprimés ne sont pas parcourus. Voir [l'exemple ci-après](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Array/forEach#Attention_aux_modifications_en_cours).
+L'ensemble des éléments traités par `forEach` est défini avant le premier appel à `callback`. Les éléments ajoutés au tableau après que l'appel à `forEach` ait commencé ne seront pas visités par `callback`. Si des éléments déjà présents dans le tableau sont modifiés, leur valeur telle qu'elle est passée au `callback` sera la valeur au moment du passage du `forEach` ; les éléments supprimés ne sont pas parcourus. Voir [l'exemple ci-après](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#attention_aux_modifications_en_cours).
 
 `forEach()` exécute la fonction `callback` une fois pour chaque élément. À la différence de {{jsxref("Array.prototype.map()", "map()")}} ou de {{jsxref("Array.prototype.reduce()", "reduce()")}} il renvoie toujours la valeur {{jsxref("undefined")}} et ne peut donc pas être « enchaîné ». Généralement, l'effet voulu est de déclencher des effets de bord en fin de chaîne.
 
@@ -57,8 +67,8 @@ L'ensemble des éléments traités par `forEach` est défini avant le premier ap
 > [!NOTE]
 > Il n'existe aucun moyen d'arrêter une boucle `forEach` en dehors de lever une exception. Si vous avez besoin d'arrêter la boucle, étudiez plutôt :
 >
-> - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Instructions/for) classique
-> - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Instructions/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Instructions/for...of)
+> - Une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) classique
+> - Une boucle [`for...in`](/fr/docs/Web/JavaScript/Reference/Statements/for...in) ou [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of)
 > - {{jsxref("Array.prototype.every()")}}
 > - {{jsxref("Array.prototype.some()")}}
 > - {{jsxref("Array.prototype.find()")}}
@@ -97,7 +107,7 @@ items.forEach(function (item) {
 ### Afficher le contenu d'un tableau
 
 > [!NOTE]
-> Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/Console/table) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
+> Pour afficher le contenu d'un tableau, on pourra utiliser [`console.table()`](/fr/docs/Web/API/console/table_static) qui met en forme les éléments du tableau. L'exemple suivant est laissé à titre d'illustration pour `forEach()`.
 
 Le code suivant affiche une ligne pour chaque élément du tableau :
 
@@ -140,7 +150,7 @@ console.log(obj.somme); // 16
 > Le paramètre pour `this` est passé à la méthode `forEach()`, à chaque appel du callback, celui-ci sera utilisé comme valeur pour `this`.
 
 > [!NOTE]
-> Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) fourni par le contexte lexical.
+> Si la fonction passée en argument est [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions), il n'est pas nécessaire d'ajouter le paramètre `this` car les fonctions fléchées utilisent le [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) fourni par le contexte lexical.
 
 ### Stopper une boucle
 

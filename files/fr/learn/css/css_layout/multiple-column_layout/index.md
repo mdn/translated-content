@@ -336,7 +336,7 @@ body {
 
 ### Utiliser break-inside
 
-Pour contrôler ce comportement, utilisons les propriétés stipulées dans [CSS Fragmentation](/fr/docs/Web/CSS/CSS_Fragmentation) (coupures dans la CSS). Cette fonctionnalité nous offre des propriétés pour contrôler les coupures de contenu dans le _multicol_ et les médias paginés. Par exemple, ajoutons la propriété {{cssxref("break-inside")}} avec la valeur `avoid` aux règles pour `.card`, qui est le conteneur du titre et du texte. Nous indiquons que nous ne souhaitons pas que cette boîte soit coupée.
+Pour contrôler ce comportement, utilisons les propriétés stipulées dans [CSS Fragmentation](/fr/docs/Web/CSS/CSS_fragmentation) (coupures dans la CSS). Cette fonctionnalité nous offre des propriétés pour contrôler les coupures de contenu dans le _multicol_ et les médias paginés. Par exemple, ajoutons la propriété {{cssxref("break-inside")}} avec la valeur `avoid` aux règles pour `.card`, qui est le conteneur du titre et du texte. Nous indiquons que nous ne souhaitons pas que cette boîte soit coupée.
 
 Il est également préférable d'ajouter l'ancienne propriété `page-break-inside: avoid` pour une meilleure prise en charge par les divers navigateurs.
 
@@ -469,7 +469,7 @@ Vous savez maintenant comment utiliser les fonctionnalités élémentaires de la
 
 ## Voir aussi
 
-- [Coupures avec la CSS](/fr/docs/Web/CSS/CSS_Fragmentation)
-- [Utilisation des mises en page sur plusieurs colonnes](/fr/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts)
+- [Coupures avec la CSS](/fr/docs/Web/CSS/CSS_fragmentation)
+- [Utilisation des mises en page sur plusieurs colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Positioning", "Learn/CSS/CSS_layout/Legacy_Layout_Methods", "Learn/CSS/CSS_layout")}}

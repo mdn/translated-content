@@ -5,9 +5,46 @@ slug: Web/HTML/Element/input/button
 
 {{HTMLSidebar}}
 
-Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento {{event("click")}}).
+Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como um simples botão, que podem ser programados para controlar funcionalidades customizadas em qualquer lugar de uma página web quando for atribuído um evento (tipicamente para um evento [`click`](/pt-BR/docs/Web/API/Element/click_event)).
 
-{{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<input class="styled" type="button" value="Add to favorites" />
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgb(220 0 0 / 100%);
+  background-image: linear-gradient(
+    to top left,
+    rgb(0 0 0 / 20%),
+    rgb(0 0 0 / 20%) 30%,
+    rgb(0 0 0 / 0%)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgb(255 255 255 / 60%),
+    inset -2px -2px 3px rgb(0 0 0 / 60%);
+}
+
+.styled:hover {
+  background-color: rgb(255 0 0 / 100%);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgb(255 255 255 / 60%),
+    inset 2px 2px 3px rgb(0 0 0 / 60%);
+}
+```
 
 > [!NOTE]
 > Enquanto elementos `<input>` do tipo `button` ainda são perfeitamente válidos, os novos elementos {{HTMLElement("button")}} são agora os favoráveis meios para criar botões. Uma etiqueta de texto (label) para um {{HTMLElement("button")}} pode ser inserida entre uma tag de abertura e outra de fechamento, podendo ser incluídas até imagens.
@@ -24,7 +61,7 @@ Elementos {{HTMLElement("input")}} do tipo **`button`** são renderizados como u
     </tr>
     <tr>
       <td><strong>Eventos</strong></td>
-      <td>{{event("click")}}</td>
+      <td>[`click`](/pt-BR/docs/Web/API/Element/click_event)</td>
     </tr>
     <tr>
       <td><strong>Atributos comuns suportados</strong></td>
@@ -68,7 +105,7 @@ Elementos `<input type="button">` não possuem comportamento padrão (seu primos
 
 ### Um simples botão
 
-Nós iremos começar criando um simples botão com um evento {{event("click")}} que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
+Nós iremos começar criando um simples botão com um evento [`click`](/pt-BR/docs/Web/API/Element/click_event) que inicia nossa máquina (bem, ele altera o `value` do botão e o contéudo texto do seguinte parágrafo):
 
 ```html
 <form>
@@ -94,7 +131,7 @@ function updateButton() {
 }
 ```
 
-O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento {{event("click")}} for executado no botão.
+O script recebe uma referência para o objeto {{domxref("HTMLInputElement")}} representando o `<input>` no DOM, salvando esta referência na variável `button`. {{domxref("EventTarget.addEventListener", "addEventListener()")}} é então usado para criar uma função que será chamada quando o evento [`click`](/pt-BR/docs/Web/API/Element/click_event) for executado no botão.
 
 {{EmbedLiveSample("A_simple_button", 650, 100)}}
 
@@ -194,7 +231,7 @@ function disableButton() {
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
 > [!NOTE]
-> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](http://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
+> Firefox will, unlike other browsers, by default, [persist the dynamic disabled state](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) of a {{HTMLElement("button")}} across page loads. Use the [`autocomplete`](/pt-BR/docs/Web/HTML/Element/button#autocomplete) attribute to control this feature.
 
 ## Validação
 
@@ -346,4 +383,4 @@ draw();
 
 - {{HTMLElement("input")}} and the {{domxref("HTMLInputElement")}} interface which implements it.
 - The more modern {{HTMLElement("button")}} element.
-- [Compatibility of CSS properties](/pt-BR/docs/Learn/HTML/Forms/Property_compatibility_table_for_form_widgets)
+- [Compatibility of CSS properties](/pt-BR/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

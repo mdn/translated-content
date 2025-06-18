@@ -21,15 +21,15 @@ Firefox 59 は、米国時間 2018 年 3 月 13 日にリリースされまし�
 
 ### HTML
 
-- {{HTMLElement("textarea")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
+- {{HTMLElement("textarea")}} 要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性を実装しました。要素でフォームのオートフィル機能を有効化または無効化できます。
 
 ### CSS
 
 - {{cssxref("overscroll-behavior")}} プロパティと、このプロパティに関係するロングハンドプロパティである {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} を実装しました ([Firefox バグ 951793](https://bugzil.la/951793))。また、すべてのリリースで、デフォルトで有効化しました ([Firefox バグ 1428879](https://bugzil.la/1428879))。
 - "unusual elements" (置換要素のように、CSS のボックスの概念に従って描画されない要素) で {{cssxref("display")}} の値に `contents` を指定したときの動作を、仕様書に従って更新しました ([Firefox バグ 1427292](https://bugzil.la/1427292))。仕様で定められた正確な動作については、[Appendix B: Effects of display: contents on Unusual Elements](https://drafts.csswg.org/css-display/#unbox) をご覧ください。
-- {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn/HTML/Tables) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ([Firefox バグ 975644](https://bugzil.la/975644))。
+- {{cssxref("position")}} の `sticky` を、適切な [HTML テーブル](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) の部品 (例えば {{htmlelement("th")}} 要素) でサポートしました ([Firefox バグ 975644](https://bugzil.la/975644))。
 - {{cssxref("&lt;color&gt;")}} 値 (`rgb()`, `rgba()`, `hsl()`, `hsla()`) で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 984021](https://bugzil.la/984021))。
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries) の値で {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 1396057](https://bugzil.la/1396057))。
 - {{cssxref("@document")}} @-規則の使用を、ユーザースタイルシートと UA スタイルシートに限定しました ([Firefox バグ 1035091](https://bugzil.la/1035091))。
 - {{cssxref("font-optical-sizing")}} プロパティを実装しました ([Firefox バグ 1435692](https://bugzil.la/1435692))。
 
@@ -109,7 +109,7 @@ _変更なし。_
 
 ### HTML
 
-- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script#type) 属性の非標準引数である `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
+- {{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/script#type) 属性の非標準引数である `version` (例えば `type="application/javascript;version=1.8"`) を削除しました ([Firefox バグ 1428745](https://bugzil.la/1428745))。
 
 ### CSS
 

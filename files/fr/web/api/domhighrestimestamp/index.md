@@ -69,5 +69,5 @@ _Ce type n'a pas de méthodes._
 
 ## Voir aussi
 
-- [Navigation Timing API](/fr/docs/Navigation_timing)
+- [Navigation Timing API](/fr/docs/Web/API/Performance_API/Navigation_timing)
 - [performance.now()](/fr/docs/Web/API/Performance/now)

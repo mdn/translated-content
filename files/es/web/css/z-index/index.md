@@ -59,4 +59,4 @@ z-index:  auto | <entero> | inherit
 ## Ver también
 
 - Propiedad CSS {{Cssxref("position")}}
-- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_Positioning/entendiendo_z_index)
+- [Entendiendo la propiedad CSS z-index](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)

@@ -13,7 +13,7 @@ La procédure de provisionnement du stockage géré est différente selon les na
 
 ### manifestes natives
 
-Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/Add-ons/WebExtensions/Native_manifests).
+Pour Firefox, vous devez créer un fichier manifest JSON dans un format spécifique, dans un emplacement spécifique. Pour plus de détails sur la syntaxe et l'emplacement du manifeste, voir [manifests natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
 
 Voici un exemple de manifest :
 

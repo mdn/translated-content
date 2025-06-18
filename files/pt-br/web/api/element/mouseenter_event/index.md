@@ -7,7 +7,7 @@ slug: Web/API/Element/mouseenter_event
 
 O evento `mouseenter` é disparado quando um dispositivo de apontamento (geralmente um mouse) se move sobre um elemento (para dentro do mesmo).
 
-Similar ao {{event('mouseover')}}, ele se diferencia no fato de que não ocorre a fase [bubble](/pt-BR/docs/Web/API/Event/bubbles) e não é disparado quando o cursor / apontador mover-se do espaço físico de um de seus descendentes para o seu próprio espaço físico.
+Similar ao [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event), ele se diferencia no fato de que não ocorre a fase [bubble](/pt-BR/docs/Web/API/Event/bubbles) e não é disparado quando o cursor / apontador mover-se do espaço físico de um de seus descendentes para o seu próprio espaço físico.
 
 ![mouseenter.png](mouseenter.png)Um evento `mouseenter` é enviado para cada elemento da hierarquia ao entrar neles. Aqui 4 eventos são enviados aos quatro elementos da hierarquia quando o cursor / apontador chega no Text.![mouseover.png](mouseover.png)Um único evento `mouseover` é enviado ao elemento de maior profundidade na árvore DOM, a partir do qual ocorre a fase bubble e o mesmo percorre subindo na hierarquia dos elementos até que seja cancelado por um _handler_ ou alcance a raíz da árvore.
 
@@ -58,7 +58,7 @@ Combinado ao comportamento do seu evento simétrico, `mouseleave`, o evento DOM 
 
 ## Examples
 
-The [`mouseover`](/pt-BR/docs/Web/Events/mouseover#Example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
+The [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event#example) documentation has an example illustrating the difference between `mouseover` and `mouseenter`.
 
 The following example illustrates how to use `mouseover` to simulate the principle of event delegation for the mouseenter event.
 
@@ -142,13 +142,13 @@ The following example illustrates how to use `mouseover` to simulate the princip
 
 ## See also
 
-- {{Event("mousedown")}}
-- {{Event("mouseup")}}
-- {{Event("mousemove")}}
-- {{Event("click")}}
-- {{Event("dblclick")}}
-- {{Event("mouseover")}}
-- {{Event("mouseout")}}
-- {{Event("mouseenter")}}
-- {{Event("mouseleave")}}
-- {{Event("contextmenu")}}
+- [`mousedown`](/pt-BR/docs/Web/API/Element/mousedown_event)
+- [`mouseup`](/pt-BR/docs/Web/API/Element/mouseup_event)
+- [`mousemove`](/pt-BR/docs/Web/API/Element/mousemove_event)
+- [`click`](/pt-BR/docs/Web/API/Element/click_event)
+- [`dblclick`](/pt-BR/docs/Web/API/Element/dblclick_event)
+- [`mouseover`](/pt-BR/docs/Web/API/Element/mouseover_event)
+- [`mouseout`](/pt-BR/docs/Web/API/Element/mouseout_event)
+- [`mouseenter`](/pt-BR/docs/Web/API/Element/mouseenter_event)
+- [`mouseleave`](/pt-BR/docs/Web/API/Element/mouseleave_event)
+- [`contextmenu`](/pt-BR/docs/Web/API/Element/contextmenu_event)

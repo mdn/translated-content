@@ -9,7 +9,7 @@ La disposition sur plusieurs colonnes (« _Multiple-column Layout_ » ou « _mul
 
 ## Concepts et terminologie
 
-La disposition multi-colonnes se distinguent des autres dispositions CSS car elle fragmente le contenu, y compris les éléments descendants, en colonnes. Cela se produira de façon analogue en fragmentant sur des pages avec le module de spécification [CSS Paged Media](/fr/docs/Web/CSS/CSS_Pages).
+La disposition multi-colonnes se distinguent des autres dispositions CSS car elle fragmente le contenu, y compris les éléments descendants, en colonnes. Cela se produira de façon analogue en fragmentant sur des pages avec le module de spécification [CSS Paged Media](/fr/docs/Web/CSS/CSS_paged_media).
 
 Les propriétés définies dans cette spécification sont :
 
@@ -38,7 +38,7 @@ Dans l'exemple qui suit, on utilise la propriété `column-count` afin de créer
 
 {{EmbedGHLiveSample("css-examples/multicol/basics/column-count.html", '100%', 550)}}
 
-Dans l'exemple qui précède, le contenu est intégré dans des paragraphes avec une mise en forme par défaut. Aussi, il y a une marge au dessus de chaque paragraphe. On peut voir comment cette marge décale la première ligne de texte vers le bas. Cela se produit car un conteneur multi-colonnes crée un nouveau contexte de formatage de bloc, ce qui signifie que les marges des éléments fils ne [fusionnent](/fr/docs/Web/CSS/Modèle_de_boîte_CSS/Fusion_des_marges) pas avec les marges du conteneur.
+Dans l'exemple qui précède, le contenu est intégré dans des paragraphes avec une mise en forme par défaut. Aussi, il y a une marge au dessus de chaque paragraphe. On peut voir comment cette marge décale la première ligne de texte vers le bas. Cela se produit car un conteneur multi-colonnes crée un nouveau contexte de formatage de bloc, ce qui signifie que les marges des éléments fils ne [fusionnent](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) pas avec les marges du conteneur.
 
 ### La propriété `column-width`
 
@@ -62,7 +62,7 @@ Dans l'exemple suivant, on utilise `column-width` avec une valeur de 200px et `c
 
 ### La propriété raccourcie `columns`
 
-La [propriété raccourcie](/fr/docs/Web/CSS/Propriétés_raccourcies) `columns` peut être utilisée afin de définir à la fois `column-count` et `column-width`. Si on utilise une unité de longueur, la valeur sera utilisée pour `column-width`, si on utilise un entier, la valeur sera utilisée pour `column-count`. Les deux peuvent être définies simultanément en étant séparées d'un espace.
+La [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) `columns` peut être utilisée afin de définir à la fois `column-count` et `column-width`. Si on utilise une unité de longueur, la valeur sera utilisée pour `column-width`, si on utilise un entier, la valeur sera utilisée pour `column-count`. Les deux peuvent être définies simultanément en étant séparées d'un espace.
 
 Ce fragment de code CSS donnera donc le même résultat que pour le premier exemple où `column-count` vaut 3.
 
@@ -90,4 +90,4 @@ Enfin, ce fragment de code CSS donnera le même résultat que le troisième exem
 
 ## Prochaines étapes
 
-Dans ce guide, nous avons vu des cas d'utilisation simples avec une disposition multi-colonnes. Dans le prochain article, nous verrons [comment mettre en forme chacune des colonnes](/fr/docs/Web/CSS/CSS_Columns/Styling_Columns).
+Dans ce guide, nous avons vu des cas d'utilisation simples avec une disposition multi-colonnes. Dans le prochain article, nous verrons [comment mettre en forme chacune des colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Styling_columns).

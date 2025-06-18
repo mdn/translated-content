@@ -15,7 +15,7 @@ CSS препроцессор (**CSS preprocessor**) - это программа,
 
 Несколько самых популярных CSS препоцессоров:
 
-- [SASS](http://sass-lang.com/)
-- [LESS](http://lesscss.org/)
+- [SASS](https://sass-lang.com/)
+- [LESS](https://lesscss.org/)
 - [Stylus](http://stylus-lang.com/)
 - [PostCSS](http://postcss.org/)

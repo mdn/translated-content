@@ -9,4 +9,4 @@ Una '**long task'** (tarea larga) es una tarea que tarda más de 50 ms en comple
 
 Ver también
 
-- [API de tareas largas (Long task)](/es/docs/Web/API/Long_Tasks_API)
+- [API de tareas largas (Long task)](/es/docs/Web/API/PerformanceLongTaskTiming)

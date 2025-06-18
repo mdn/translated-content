@@ -3,12 +3,12 @@ title: "HTMLInputElement: defaultValue プロパティ"
 short-title: defaultValue
 slug: Web/API/HTMLInputElement/defaultValue
 l10n:
-  sourceCommit: e62f2b210f88e2c3e7270dcb4341e2963f9619cf
+  sourceCommit: bc141099823c9ae2e46f560ac674be2bc4118351
 ---
 
 {{ApiRef("HTML DOM")}}
 
-**`defaultValue`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`value`](/ja/docs/Web/HTML/Element/input#value) 属性を反映します。
+**`defaultValue`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、{{HTMLElement("input")}} 要素の元の（または既定の）値を示します。これは、この要素の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) 属性を反映します。
 
 ## 値
 

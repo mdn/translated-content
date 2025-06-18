@@ -7,7 +7,45 @@ slug: Web/CSS/background-repeat
 
 La propriété [CSS](/fr/docs/Web/CSS) **`background-repeat`** définit la façon dont les images utilisées en arrière-plan sont répétées. Une image d'arrière-plan pourra ainsi être répétée sur l'axe horizontal, l'axe vertical ou bien ne pas être répétée.
 
-{{EmbedInteractiveExample("pages/css/background-repeat.html")}}
+{{InteractiveExample("CSS Demo: background-repeat")}}
+
+```css interactive-example-choice
+background-repeat: repeat-x;
+```
+
+```css interactive-example-choice
+background-repeat: repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space;
+```
+
+```css interactive-example-choice
+background-repeat: round;
+```
+
+```css interactive-example-choice
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-repeat: space repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: #ccc url("/shared-assets/images/examples/moon.jpg") center / 120px;
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 Par défaut, les images répétées sont rognées à la taille de l'élément, mais elles peuvent être redimensionnées pour occuper l'espace avec un nombre entier de répétitions (`round`) voire être distribuées avec des espaces entre les motifs pour remplir la zone (`space`).
 
@@ -144,7 +182,7 @@ li {
   margin-bottom: 12px;
 }
 div {
-  background-image: url(starsolid.gif);
+  background-image: url(star-solid.gif);
   width: 160px;
   height: 70px;
 }
@@ -171,7 +209,8 @@ div {
 
 /* Plusieurs images */
 .sept {
-  background-image: url(starsolid.gif), url(favicon.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }
@@ -193,4 +232,4 @@ Dans cet exemple, chaque élément de la liste illustre une valeur différente d
 
 ## Voir aussi
 
-- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_Backgrounds_and_Borders/Using_multiple_backgrounds)
+- [Utiliser plusieurs arrière-plans en CSS](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)

@@ -28,7 +28,7 @@ Com "_chrome privileges_" (privilégios para acesso a funções de baixo nível)
 
 ## Exemplos
 
-{{todo}}
+<!-- TODO: add content -->
 
 ## Especificações
 

@@ -16,7 +16,7 @@ slug: Web/API/Window/sessionStorage
 > 应该注意，存储在 sessionStorage 或 localStorage 中的数据**特定于页面的协议**。也就
 > 是说 `http://example.com` 与 `https://example.com` 的 sessionStorage 相互隔离。
 >
-> 被存储的键值对总是以 UTF-16 [DOMString](/zh-CN/docs/Web/API/DOMString) 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数 key 值会自动转换成字符串形式。
+> 被存储的键值对总是以 UTF-16 [DOMString](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 的格式所存储，其使用两个字节来表示一个字符。对于对象、整数 key 值会自动转换成字符串形式。
 
 ## 语法
 

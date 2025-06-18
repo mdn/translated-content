@@ -5,7 +5,7 @@ slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame
 
 {{GamesSidebar}}
 
-[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebVR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
+[WebVR](/ja/docs/Games/Techniques/3D_on_the_web/WebXR) API と [WebGL](/ja/docs/Web/API/WebGL_API) API によって、ウェブブラウザー内で仮想現実 (VR) 体験を作成し始めることが可能になっていますが、コミュニティはもっと簡単に作れるツールやライブラリーが現れるのを待っています。Mozilla の [A-Frame](https://aframe.io/) フレームワークは、ウェブ開発者が慣れ親しんでいるシステムを用いて 3D VR 空間を構築するマークアップ言語を提供しています。このシステムはゲーム開発のコーディング原則に従っています。これはプロトタイプやデモを、大量の JavaScript や GLSL を書かずに、迅速にうまく構築するのに役立ちます。この記事では A-Frame をどうやって起動するか、そしてそれをつかって簡単なデモを構築する方法を説明します。
 
 ## 高水準の概要
 

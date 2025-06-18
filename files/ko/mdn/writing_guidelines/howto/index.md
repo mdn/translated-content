@@ -2,7 +2,7 @@
 title: 방법 안내서
 slug: MDN/Writing_guidelines/Howto
 l10n:
-  sourceCommit: aa66311219951396e7305df61eb31831360d2c79
+  sourceCommit: ce83b64f1132a29a19471e46bfffced755f775eb
 ---
 
 {{MDNSidebar}}

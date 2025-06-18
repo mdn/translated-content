@@ -68,5 +68,5 @@ _У этого типа нет методов._
 
 ## Смотрите также
 
-- [Navigation Timing API](/ru/docs/Navigation_timing)
+- [Navigation Timing API](/ru/docs/Web/API/Performance_API/Navigation_timing)
 - [performance.now()](/ru/docs/Web/API/Performance/now)

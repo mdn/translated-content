@@ -5,7 +5,7 @@ slug: Web/SVG/Element/svg
 
 {{SVGRef}}
 
-L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/) et système de coordonnée.
+L'élément `svg` peut être utilisé pour intégrer des fragments de code SVG à l'intérieur d'un document (par exemple, un document HTML). Ce fragment de code SVG dispose de ses propres [viewport](/fr/docs/Web) et système de coordonnée.
 
 ## Contexte d'utilisation
 
@@ -49,11 +49,11 @@ Ce fichier peut être inclus dans un document HTML5 de cette façon :
 
 ### Attributs globaux
 
-- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#ConditionalProccessing) »
-- [Core attributes](/fr/docs/Web/SVG/Attribute#Core) »
-- [Document event attributes](/fr/docs/Web/SVG/Attribute#DocumentEvent) »
-- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#GraphicalEvent) »
-- [Presentation attributes](/fr/docs/Web/SVG/Attribute#Presentation) »
+- [Conditional processing attributes](/fr/docs/Web/SVG/Attribute#conditionalproccessing) »
+- [Core attributes](/fr/docs/Web/SVG/Attribute#core) »
+- [Document event attributes](/fr/docs/Web/SVG/Attribute#documentevent) »
+- [Graphical event attributes](/fr/docs/Web/SVG/Attribute#graphicalevent) »
+- [Presentation attributes](/fr/docs/Web/SVG/Attribute#presentation) »
 - {{SVGAttr("class")}}
 - {{SVGAttr("style")}}
 - {{SVGAttr("externalResourcesRequired")}}

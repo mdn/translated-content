@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR_assignment
 
 ビット排他的論理和代入演算子 (`^=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の XOR 演算を実行し、結果を変数に代入します。
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-xor-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR assignment")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a ^= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000110
+// Expected output: 6
+```
 
 ## 構文
 

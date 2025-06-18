@@ -32,7 +32,7 @@ var creating = browser.tabs.create(
     - `openerTabId`{{optional_inline}}
       - : `整数値`。開くタブの ID を指定します。指定した場合、開く側のタブは新しいタブと同じウィンドウにある必要があります。
     - `openInReaderMode`{{optional_inline}}
-      - : `真理値`。もし`true`であれば[リーダーモード](/ja/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で開かれます。 デフォルトは`false`。
+      - : `真理値`。もし`true`であれば[リーダーモード](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode)で開かれます。 デフォルトは`false`。
     - `pinned`{{optional_inline}}
       - : `真理値`。タブをピン留めするかを指定します。デフォルトは`false`。
     - `selected`{{optional_inline}}
@@ -92,7 +92,7 @@ browser.browserAction.onClicked.addListener(function () {
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-create) API に基づいています。 このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。Microsoft Edge での実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従っています。
+> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-create) API に基づいています。 このドキュメントは [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

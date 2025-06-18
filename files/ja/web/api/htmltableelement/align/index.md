@@ -3,7 +3,7 @@ title: "HTMLTableElement: align プロパティ"
 short-title: align
 slug: Web/API/HTMLTableElement/align
 l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+  sourceCommit: b25d8774aa7bcc6a053e26cf804ad454f51e134b
 ---
 
 {{APIRef("HTML DOM")}}{{Deprecated_Header}}
@@ -28,7 +28,7 @@ t.align = "center";
 
 ## 仕様書
 
-- W3C DOM 2 HTML Specification [_HTMLTableElement.align_](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-23180977).
+{{Specifications}}
 
 ## ブラウザーの互換性
 

@@ -7,7 +7,47 @@ slug: Web/CSS/border-block-end-color
 
 La propriété **`border-block-end-color`** définit la couleur de la bordure pour le côté de la fin de l'élément orienté orthogonalement à l'axe de lecture. Elle correspond à une propriété physique selon le mode d'écriture de l'élément, sa directionnalité et l'orientation du texte. Autrement dit, elle correspond à l'une des propriétés {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}} ou {{cssxref("border-left-color")}} selon les valeurs des propriétés {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-block-end-color.html")}}
+{{InteractiveExample("CSS Demo: border-block-end-color")}}
+
+```css interactive-example-choice
+border-block-end-color: red;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-color: #32a1ce;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end-color: rgb(170, 50, 220, 0.6);
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-color: hsl(60, 90%, 50%, 0.8);
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 Cette propriété est à rapprocher des autres propriétés logiques permettant de définir les couleurs de la bordure d'un élément :
 

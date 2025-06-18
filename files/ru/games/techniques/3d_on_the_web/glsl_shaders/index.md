@@ -130,7 +130,7 @@ To actually apply the newly created shaders to the cube, comment out the `basicM
 // var basicMaterial = new THREE.MeshBasicMaterial({color: 0x0095DD});
 ```
 
-Далее, создаём [`shaderMaterial`](http://threejs.org/docs/#Reference/Materials/ShaderMaterial):
+Далее, создаём [`shaderMaterial`](https://threejs.org/docs/#Reference/Materials/ShaderMaterial):
 
 ```js
 var shaderMaterial = new THREE.ShaderMaterial({
@@ -237,4 +237,4 @@ This article has taught the very basics of shaders. Our example doesn't do much 
 ## Смотрите также
 
 - [Изучение WebGL](http://learningwebgl.com/blog/?page_id=1217) — for general WebGL knowledge
-- [WebGL шейдеры и GLSL основы](http://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information
+- [WebGL шейдеры и GLSL основы](https://webglfundamentals.org/webgl/lessons/webgl-shaders-and-glsl.html) — for GLSL specific information

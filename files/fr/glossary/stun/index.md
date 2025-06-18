@@ -12,8 +12,8 @@ slug: Glossary/STUN
 ### Culture générale
 
 - [STUN](https://fr.wikipedia.org/wiki/Simple_Traversal_of_UDP_through_NATs) sur Wikipédia
-- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Architecture/Protocols)
+- [Protocoles WebRTC](/fr/docs/Web/API/WebRTC_API/Protocols)
 
 ### Référence technique
 
-- [Spécification](http://tools.ietf.org/html/rfc5389)
+- [Spécification](https://tools.ietf.org/html/rfc5389)

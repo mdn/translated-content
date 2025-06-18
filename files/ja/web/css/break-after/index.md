@@ -1,11 +1,87 @@
 ---
 title: break-after
 slug: Web/CSS/break-after
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`break-after`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの後で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
+
+{{InteractiveExample("CSS Demo: break-after")}}
+
+```css interactive-example-choice
+break-after: auto;
+```
+
+```css interactive-example-choice
+break-after: page;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <div>
+    <p>
+      このプロパティの効果は、文書が印刷される時、または印刷のプレビューが表示された時に確認できます。
+    </p>
+    <button id="print-btn">印刷プレビューを表示</button>
+    <div class="box-container">
+      <div class="box">プロパティの前のコンテンツ</div>
+      <div class="box" id="example-element">'break-after' の付いたコンテンツ</div>
+      <div class="box">プロパティの後のコンテンツ</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.box {
+  border: solid #5b6dcd 5px;
+  background-color: #5b6dcd;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+#example-element {
+  border: solid 5px #ffc129;
+  background-color: #ffc129;
+  color: black;
+}
+
+.hide-element {
+  display: none;
+}
+```
+
+```js interactive-example
+const btn = document.getElementById("print-btn");
+const editorContainer = document.getElementsByClassName(
+  "css-editor-container",
+)[0];
+const exampleHTMLElement = document.getElementById("default-example");
+
+const printableSection = document.createElement("div");
+printableSection.setAttribute("id", "printable-section");
+printableSection.classList.add("hide-element");
+document.body.appendChild(printableSection);
+
+btn.addEventListener("click", () => {
+  const exampleContent = exampleHTMLElement.innerHTML;
+
+  editorContainer.classList.add("hide-element");
+  printableSection.innerHTML = exampleContent;
+  printableSection.classList.remove("hide-element");
+
+  window.print();
+
+  printableSection.classList.add("hide-element");
+  printableSection.innerHTML = "";
+  editorContainer.classList.remove("hide-element");
+});
+```
+
+## 構文
 
 ```css
 /* 一般の区切り値 */
@@ -34,10 +110,9 @@ break-after: region;
 break-after: inherit;
 break-after: initial;
 break-after: revert;
+break-after: revert-layer;
 break-after: unset;
 ```
-
-{{EmbedInteractiveExample("pages/css/break-after.html")}}
 
 区切り位置になる可能性のある場所 (言い換えれば、要素の境界) は、3 つのプロパティに影響されます。前の要素の `break-after` の値、次の要素の {{cssxref("break-before")}} の値、包含要素の {{cssxref("break-inside")}} の値です。
 
@@ -48,21 +123,17 @@ break-after: unset;
 
 強制的な区切りが適用されると、必要に応じてソフトな区切りが追加される場合がありますが、 `avoid` に関する値に解決される要素の境界には追加されません。
 
-## 構文
-
-`break-after` プロパティは、以下の一覧にあるキーワード値のうちの一つで指定します。
-
 ### 値
 
-### 一般の区切り値
+#### 一般の区切り値
 
 - `auto`
   - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを許可しますが、強制はしません。
 - `avoid`
   - : 該当するボックスの直後に何らかの (ページ、段、領域の) 区切りを挿入することを禁止します。
-- `always` {{experimental_inline}}
+- `always`
   - : 該当するボックスの直後で強制的に改ページを行います。この区切りの種類は断片化のコンテキストを直接含むものです。段組みコンテナーの中であれば強制的な段区切りとなり、ページ付きメディアの (ただし段組みコンテナーの中ではない) 場合はページ区切りになります。
-- `all` {{experimental_inline}}
+- `all`
   - : 該当するボックスの直後で強制的に改ページを行います。すべての分断しうるコンテキストを通して区切ります。よって、段組みコンテナーの中での区切りは、ページコンテナーの中であれば強制的に段組みとページを区切ります。
 
 #### 改ページ値
@@ -72,12 +143,12 @@ break-after: unset;
 - `page`
   - : 該当するボックスの直後で改ページを行います。
 - `left`
-  - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが左ページになるようにします。
+  - : 該当するボックスの直後で 1 つまたは 2 つの改ページを行い、次のページが左ページになるようにします。横書きの本では、本の背の左側に置かれているページ、両面印刷では裏側のページです。
 - `right`
-  - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが右ページになるようにします。
-- `recto` {{experimental_inline}}
+  - : 該当するボックスの直後で 1 つまたは 2 つの改ページを行い、次のページが右ページになるようにします。横書きの本では、本の背の右側に置かれているページ、両面印刷では表側のページです。
+- `recto`
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが奇数ページになるようにします。 (奇数ページは左から右に開く場合は右ページになり、右から左に開く場合は左ページになります。)
-- `verso` {{experimental_inline}}
+- `verso`
   - : 該当するボックスの直後で一つまたは二つの改ページを行い、次のページが偶数ページになるようにします。 (奇数ページは左から右に開く場合は左ページになり、右から左に開く場合は右ページになります。)
 
 #### 段区切り値
@@ -89,9 +160,9 @@ break-after: unset;
 
 #### 領域区切り値
 
-- `avoid-region` {{experimental_inline}}
+- `avoid-region`
   - : 該当するボックスの直後の領域区切りを禁止します。
-- `region` {{experimental_inline}}
+- `region`
   - : 該当するボックスの直後で領域区切りを行います。
 
 ## 改ページの別名
@@ -206,7 +277,7 @@ article {
 
 ## 仕様書
 
-{{Specifications("css.properties.break-after.multicol_context")}}
+{{Specifications}}
 
 ## ブラウザーの互換性
 
@@ -214,5 +285,5 @@ article {
 
 ## 関連情報
 
-- [段組みレイアウト](/ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [学習: 段組みレイアウト](/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
 - [Breaking Boxes With CSS Fragmentation](https://www.smashingmagazine.com/2019/02/css-fragmentation/)

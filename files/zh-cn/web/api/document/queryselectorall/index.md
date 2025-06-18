@@ -21,7 +21,7 @@ querySelectorAll(selectors)
 ### 参数
 
 - `selectors`
-  - : 一个包含一个或多个匹配的选择器的字符串。其必须是一个有效的 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)字符串，如果不是，会抛出 `SyntaxError` 异常。有关使用选择器标识元素的更多信息，请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)，可以通过使用逗号分隔多个选择器来指定它们。
+  - : 一个包含一个或多个匹配的选择器的字符串。其必须是一个有效的 [CSS 选择器](/zh-CN/docs/Web/CSS/CSS_selectors)字符串，如果不是，会抛出 `SyntaxError` 异常。有关使用选择器标识元素的更多信息，请参阅[使用选择器定位 DOM 元素](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)，可以通过使用逗号分隔多个选择器来指定它们。
 
 > [!NOTE]
 > 必须使用反斜杠字符转义不属于标准 CSS 语法的字符。由于 JavaScript 也使用反斜杠转义，因此在使用这些字符编写字符串文字时必须特别小心。有关详细信息，请参阅[转义特殊字符](/zh-CN/docs/Web/API/Document/querySelector#转义特殊字符)
@@ -132,9 +132,9 @@ inner.length; // 0
 
 ## 参见
 
-- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Locating DOM elements using selectors](/zh-CN/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors) in the CSS Guide
-- [Attribute selectors](/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors) in the MDN Learning Area
+- [Attribute selectors](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors) in the MDN Learning Area
 - {{domxref("Element.querySelector()")}} and {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} and {{domxref("DocumentFragment.querySelectorAll()")}}

@@ -195,7 +195,7 @@ function eachNode(rootNode, callback) {
 - `rootNode`
   - : 需要进行后代节点遍历的 `Node` 对象。
 - `callback`
-  - : 一个可选的回调[函数](/zh-CN/docs/JavaScript/Reference/Global_Objects/Function)，接受一个节点作为唯一参数。如果没有设定， `eachNode` 返回一个包含了 `rootNode` 所有后代节点以及 `rootNode` 自身的{{jsxref("Array")}}
+  - : 一个可选的回调[函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function)，接受一个节点作为唯一参数。如果没有设定， `eachNode` 返回一个包含了 `rootNode` 所有后代节点以及 `rootNode` 自身的{{jsxref("Array")}}
 
 #### 使用示例
 

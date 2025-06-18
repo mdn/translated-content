@@ -77,7 +77,7 @@ However, this approach has some limitations. To build more complex apps, you'll 
 2. npm or yarn.
 
 > [!NOTE]
-> If you don't have the above installed, find out [more about installing npm and Node.js](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#Adding_powerups) here.
+> If you don't have the above installed, find out [more about installing npm and Node.js](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line#adding_powerups) here.
 
 To install the CLI, run the following command in your terminal:
 

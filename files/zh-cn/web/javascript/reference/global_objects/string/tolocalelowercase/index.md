@@ -7,7 +7,17 @@ slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 
 {{jsxref("String")}} 的 **`toLocaleLowerCase()`** 方法会根据特定区域设置的大小写映射规则，将字符串转换为小写形式并返回。
 
-{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+
+```js interactive-example
+const dotted = "İstanbul";
+
+console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
+// Expected output: "i̇stanbul"
+
+console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
+// Expected output: "istanbul"
+```
 
 ## 语法
 

@@ -11,7 +11,7 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 
 ### Pour les développeurs Web et les développeurs d'applications
 
-- [Microrésumés](http://wiki.mozilla.org/Microsummaries)
+- [Microrésumés](https://wiki.mozilla.org/Microsummaries)
   - : Les microrésumés sont de courtes compilations, régulièrement mises à jour, des plus importantes informations présentes sur des pages Web. Ils peuvent être fournis tant par les sites eux-mêmes que par des développeurs tiers. Lorsque les utilisateurs marquent des pages présentant des microrésumés, ils peuvent choisir d'afficher ceux-ci en lieu et place de titres statiques.
 
 <!---->
@@ -46,7 +46,7 @@ Firefox 2 propose un grand nombre de nouvelles fonctionnalités et de nouvelles 
 
 <!---->
 
-- [WHATWG Client-side session and persistent storage (ou DOM Storage)](/fr/DOM/Storage)
+- [WHATWG Client-side session and persistent storage (ou DOM Storage)](/fr/docs/Web/API/Web_Storage_API)
   - : Le stockage de session et le stockage persistant côté client permet aux applications Web de conserver des données structurées du côté du client.
 
 <!---->

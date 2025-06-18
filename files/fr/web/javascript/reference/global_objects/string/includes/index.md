@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/String/includes
 
 La méthode **`includes()`** détermine si une chaîne de caractères est contenue dans une autre et renvoie `true` ou `false` selon le cas de figure.
 
-{{EmbedInteractiveExample("pages/js/string-includes.html")}}
+{{InteractiveExample("JavaScript Demo: String.includes()")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const word = "fox";
+
+console.log(
+  `The word "${word}" ${
+    sentence.includes(word) ? "is" : "is not"
+  } in the sentence`,
+);
+// Expected output: "The word "fox" is in the sentence"
+```
 
 ## Syntaxe
 

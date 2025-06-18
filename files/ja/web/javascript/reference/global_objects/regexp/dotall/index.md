@@ -9,7 +9,19 @@ l10n:
 
 **`dotAll`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、正規表現で `s` フラグが使用されているかどうかを示します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-dotall.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.dotAll")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "s");
+
+console.log(regex1.dotAll);
+// Expected output: true
+
+const regex2 = new RegExp("bar");
+
+console.log(regex2.dotAll);
+// Expected output: false
+```
 
 ## 解説
 

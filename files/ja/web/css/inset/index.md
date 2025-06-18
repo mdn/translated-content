@@ -2,16 +2,68 @@
 title: inset
 slug: Web/CSS/inset
 l10n:
-  sourceCommit: 9e521726ed1d605756b73a788eaa55498d540821
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} に対応する一括指定です。これは {{cssxref("margin")}} の一括指定における複数値の場合と同じ構文です。
 
-{{EmbedInteractiveExample("pages/css/inset.html")}}
+この{{glossary("inset properties", "インセットプロパティ")}}は、 `inset` を含め、位置指定されていない要素には効果がありません。
 
-*CSS 論理的プロパティ*の仕様書で定義されているものですが、*論理的*なオフセットを定義するものではありません。これは*物理的*なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
+{{InteractiveExample("CSS Demo: inset")}}
+
+```css interactive-example-choice
+inset: 1em;
+```
+
+```css interactive-example-choice
+inset: 5% 0;
+```
+
+```css interactive-example-choice
+inset: 2em 50px 20px;
+```
+
+```css interactive-example-choice
+inset: 10px 30% 20px 0;
+```
+
+```css interactive-example-choice
+inset: 0;
+```
+
+```html-nolint interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">これは絶対位置指定されています。</div>
+    <p>
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid #ad1457;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #07136c;
+  border: 6px solid #ffa000;
+  color: white;
+  position: absolute;
+  inset: 0;
+}
+```
+
+これは [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)の仕様書で定義されているものですが、論理的なオフセットを定義するものではありません。これは物理的なオフセットであり、要素の書字方向やテキストの向きには関係がありません。
 
 ## 構成要素のプロパティ
 
@@ -30,6 +82,9 @@ inset: 10px; /* すべての辺に適用される値 */
 inset: 4px 8px; /* 上/下 左/右 */
 inset: 5px 15px 10px; /* 上 左/右 下 */
 inset: 2.4em 3em 3em 3em; /* 上 右 下 左 */
+inset: calc(anchor(50%) + 10px) anchor(self-start) auto auto;
+inset: anchor-size(block) calc(anchor(50%) + 10px) auto
+  calc(anchor-size(width) / 4);
 
 /* 包含ブロックの幅 (左/右) または 高さ (上/下) に対する <percentage> */
 inset: 10% 5% 5% 5%;
@@ -101,6 +156,8 @@ div {
 
 ## 関連情報
 
-- 個別指定のボックスのオフセットプロパティ: {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
-- 対応する論理的プロパティの一括指定: {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
-- {{cssxref("margin")}} 一括指定の複数値の構文
+- {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}
+- {{cssxref("inset-block")}} および {{cssxref("inset-inline")}}
+- {{cssxref("position")}}
+- [CSS 位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)モジュール
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)

@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("Map")}} 인스턴스의 **`size`** 접근자 속성은 이 Map 객체의 요소 수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-size.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+
+```js interactive-example
+const map1 = new Map();
+
+map1.set("a", "alpha");
+map1.set("b", "beta");
+map1.set("g", "gamma");
+
+console.log(map1.size);
+// Expected output: 3
+```
 
 ## 설명
 

@@ -71,4 +71,4 @@ La interfaz **`MediaStream`** representa un flujo de contenido de los medios. Un
 
 ## Ver támbien
 
-- [Using the MediaStream API](/es/docs/WebRTC/MediaStream_API)
+- [Using the MediaStream API](/es/docs/Web/API/Media_Capture_and_Streams_API)

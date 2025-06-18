@@ -110,7 +110,7 @@ console.log(result); // "foo"
 
 ## 参见
 
-- [迭代器协议](/zh-CN/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [迭代器协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - [`function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/function*)
 - {{jsxref("Operators/yield", "yield")}}

@@ -28,7 +28,7 @@ if (node.parentNode) {
 
 ## Примечание
 
-`Document` и `DocumentFragment` [nodes](/ru/docs/DOM/Node.nodeType) _могут не иметь родителя_, в этом случае `parentNode` всегда возвращает `null`.
+`Document` и `DocumentFragment` [nodes](/ru/docs/Web/API/Node/nodeType) _могут не иметь родителя_, в этом случае `parentNode` всегда возвращает `null`.
 
 Так же возвращает `null` если элемент только был создан и ещё не добавлен в DOM дерево.
 

@@ -24,6 +24,6 @@ div {
 
 ## 参见
 
-- [CSS 学习](/zh-CN/docs/Learn/CSS)
+- [CSS 学习](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - [MDN 上的 CSS 参考](/zh-CN/docs/Web/CSS/Reference)
 - [CSS 工作组目前的工作](https://www.w3.org/Style/CSS/current-work)

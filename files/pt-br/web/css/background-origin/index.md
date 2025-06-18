@@ -7,7 +7,40 @@ slug: Web/CSS/background-origin
 
 A propriedade [CSS](/pt-BR/docs/Web/CSS) **`background-origin`** define _a área de posicionamento do plano de fundo_, isto é, a ponto de origem de uma imagem específica usando a propriedade {{cssxref("background-image")}}.
 
-{{EmbedInteractiveExample("pages/css/background-origin.html")}}
+{{InteractiveExample("CSS Demo: background-origin")}}
+
+```css interactive-example-choice
+background-origin: border-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: padding-box;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-origin: content-box;
+background-repeat: no-repeat;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 Note que `background-origin` é ignorado quando {{cssxref("background-attachment")}} é `fixed`.
 
@@ -67,7 +100,8 @@ A propriedade `background-origin` é especificada por uma chave de valores lista
 
 ```css
 div {
-  background-image: url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
+  background-image:
+    url("logo.jpg"), url("mainback.png"); /* Applies two images to the background */
   background-position:
     top right,
     0px 0px;

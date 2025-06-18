@@ -9,7 +9,15 @@ l10n:
 
 La méthode **`slice()`** des instances de [`TypedArray`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) renvoie une copie d'un fragment du tableau typé courant dans un nouveau tableau typé. La portion est prise entre les paramètres `début` (inclus) et `fin` (non-inclus) qui correspondent aux indices des éléments du tableau typé courant. Le tableau typé original ne sera pas modifié. Cette méthode utilise le même algorithme que [`Array.prototype.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice)
 
-{{EmbedInteractiveExample("pages/js/typedarray-slice.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.slice()", "shorter")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.slice(1, 3);
+
+console.log(array1);
+// Expected output: Uint8Array [20, 30]
+```
 
 ## Syntaxe
 

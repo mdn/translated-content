@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("VirtualKeyboard")}} 接口的 **`hide()`** 方法用于以编程方式隐藏屏幕上的虚拟键盘。这在需要通过使用{{domxref("VirtualKeyboard_API", "虚拟键盘 API", "", "nocode")}} 实现自己的虚拟键盘逻辑时非常有用。
 
-该方法仅在当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual`，且 [`inputmode`](/zh-CN/docs/Web/HTML/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
+该方法仅在当前焦点元素的 [`virtualKeyboardPolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) 属性设置为 `manual`，且 [`inputmode`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/inputmode) 没有设置为 `none` 时起作用。
 
 `hide()` 方法始终返回 `undefined`，并触发一个 {{domxref("VirtualKeyboard.geometrychange_event", "geometrychange")}} 事件。
 

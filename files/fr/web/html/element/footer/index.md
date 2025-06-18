@@ -5,9 +5,39 @@ slug: Web/HTML/Element/footer
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/Guide/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
+L'élément HTML **`<footer>`** représente le pied de page de la [section](/fr/docs/Web/HTML/Content_categories#sectioning_content) ou de la [racine de sectionnement](/fr/docs/Web/HTML/Element/Heading_Elements#sectioning_root) la plus proche. Un élément `<footer>` contient habituellement des informations sur l'autrice ou l'auteur de la section, les données relatives au droit d'auteur (_copyright_) ou les liens vers d'autres documents en relation.
 
-{{EmbedInteractiveExample("pages/tabbed/footer.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<article>
+  <h1>How to be a wizard</h1>
+  <ol>
+    <li>Grow a long, majestic beard.</li>
+    <li>Wear a tall, pointed hat.</li>
+    <li>Have I mentioned the beard?</li>
+  </ol>
+  <footer>
+    <p>© 2018 Gandalf</p>
+  </footer>
+</article>
+```
+
+```css interactive-example
+article {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  background-color: #45a1ff;
+  color: #fff;
+}
+```
 
 <table class="properties">
   <tbody>
@@ -128,7 +158,7 @@ Comme tous les éléments HTML, cet élément accepte [les attributs universels]
 ## Notes d'utilisation
 
 - Les informations sur l'autrice ou l'auteur doivent être placées dans un élément [`<address>`](/fr/docs/Web/HTML/Element/address) et incluses dans l'élément `<footer>`.
-- L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines).
+- L'élément `<footer>` n'a pas de contenu sectionnant et ne peut donc pas introduire une nouvelle section dans le [plan](/fr/docs/Web/HTML/Element/Heading_Elements).
 
 ## Exemples
 
@@ -178,5 +208,5 @@ Avant la publication de Safari 13, le [rôle de repère](/fr/docs/Learn/Accessib
 ## Voir aussi
 
 - Autres éléments liés à la section : [`<body>`](/fr/docs/Web/HTML/Element/body), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<aside>`](/fr/docs/Web/HTML/Element/aside), [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h3>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h4>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h5>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<h6>`](/fr/docs/Web/HTML/Element/Heading_Elements), [`<hgroup>`](/fr/docs/Web/HTML/Element/hgroup), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<section>`](/fr/docs/Web/HTML/Element/section), [`<address>`](/fr/docs/Web/HTML/Element/address) ;
-- [Utilisation des sections et des plans HTML](/fr/docs/Web/Guide/HTML/Using_HTML_sections_and_outlines)
+- [Utilisation des sections et des plans HTML](/fr/docs/Web/HTML/Element/Heading_Elements)
 - [ARIA : rôle `contentinfo`](/fr/docs/Web/Accessibility/ARIA/Roles/Contentinfo_role)

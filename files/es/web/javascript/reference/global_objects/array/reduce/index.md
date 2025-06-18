@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 
 El método **`reduce()`** ejecuta una función **reductora** sobre cada elemento de un array, devolviendo como resultado un único valor.
 
-{{EmbedInteractiveExample("pages/js/array-reduce.html")}}
+{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+```
 
 La función **reductora** recibe cuatro argumentos:
 

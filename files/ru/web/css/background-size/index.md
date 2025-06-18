@@ -7,7 +7,7 @@ slug: Web/CSS/background-size
 
 ## Описание
 
-Значение **`background-size`** в [CSS](/ru/docs/CSS) позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.
+Значение **`background-size`** в [CSS](/ru/docs/Web/CSS) позволяет задавать размер фонового изображения. Изображение может быть оставлено в исходном размере, растянуто, или подогнано под размеры доступного пространства.
 
 > [!NOTE]
 > Если значение этого свойства не задано в сокращённом свойстве {{cssxref("background")}}, которое применяется к элементу после CSS-свойства `background-size`, то значение этого свойства затем сбрасывается до исходного значения c помощью сокращённого свойства.
@@ -89,11 +89,11 @@ background-size: unset;
 
 ## Примеры
 
-[Эта демонстрация `background-size: cover`](http://whereswalden.com/files/mozilla/background-size/page-cover.html) и [эта демонстрация `background-size: contain`](http://whereswalden.com/files/mozilla/background-size/page-contain.html) предназначены для открытия в новых окнах, чтобы вы могли видеть, как `contain` и `cover` ведут себя, когда размеры области расположения фона изменяются. [Эта серия демонстраций, как работает `background-size` и взаимодействует с другими свойствами `background-*`](http://whereswalden.com/files/mozilla/background-size/more-examples.html), должна в значительной степени охватить оставшуюся основу в том, как использовать `background-size` отдельно и в сочетании с другими свойствами.
+[Эта демонстрация `background-size: cover`](https://whereswalden.com/files/mozilla/background-size/page-cover.html) и [эта демонстрация `background-size: contain`](https://whereswalden.com/files/mozilla/background-size/page-contain.html) предназначены для открытия в новых окнах, чтобы вы могли видеть, как `contain` и `cover` ведут себя, когда размеры области расположения фона изменяются. [Эта серия демонстраций, как работает `background-size` и взаимодействует с другими свойствами `background-*`](https://whereswalden.com/files/mozilla/background-size/more-examples.html), должна в значительной степени охватить оставшуюся основу в том, как использовать `background-size` отдельно и в сочетании с другими свойствами.
 
 ## Замечания
 
-Если вы указываете градиент в качестве фона и указали `background-size`, который будет использоваться вместе с ним, лучше не указывать размер, который использует единственную автоматическую составную часть, или задаётся с использованием только значения ширины (для примера, `background-size: 50%`). Рендеринг градиентов в таких случаях изменился в Firefox 8, и в настоящее время он обычно несовместим во всех браузерах, которые не реализуют рендеринг в соответствии с [CSS3 спецификацией `background-size`](http://www.w3.org/TR/css3-background/#the-background-size) и с [CSS3 спецификацией градиента значений изображения](http://dev.w3.org/csswg/css3-images/#gradients).
+Если вы указываете градиент в качестве фона и указали `background-size`, который будет использоваться вместе с ним, лучше не указывать размер, который использует единственную автоматическую составную часть, или задаётся с использованием только значения ширины (для примера, `background-size: 50%`). Рендеринг градиентов в таких случаях изменился в Firefox 8, и в настоящее время он обычно несовместим во всех браузерах, которые не реализуют рендеринг в соответствии с [CSS3 спецификацией `background-size`](https://www.w3.org/TR/css3-background/#the-background-size) и с [CSS3 спецификацией градиента значений изображения](https://dev.w3.org/csswg/css3-images/#gradients).
 
 ```css
 .bar {
@@ -125,6 +125,6 @@ background-size: unset;
 
 ## Смотрите также
 
-- [Справочник по CSS](/ru/docs/CSS/CSS_Reference)
-- [Несколько фонов](/ru/docs/CSS/Multiple_backgrounds)
-- [Масштабирование фонового изображения](/ru/docs/CSS/Scaling_background_images)
+- [Справочник по CSS](/ru/docs/Web/CSS/Reference)
+- [Несколько фонов](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
+- [Масштабирование фонового изображения](/ru/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)

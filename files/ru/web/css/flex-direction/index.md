@@ -9,9 +9,50 @@ l10n:
 
 [CSS](/ru/docs/Web/CSS)-свойство `flex-direction` указывает, как flex-элементы располагаются во flex-контейнере по главной оси и направлению (обычном или обратном).
 
-{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
+{{InteractiveExample("CSS Demo: flex-direction")}}
 
-Обратите внимание, что значения `row` и `row-reverse` зависят от направления flex-контейнера. Если его атрибут [`dir`](/ru/docs/Web/HTML/Global_attributes#dir) равен `ltr`, то `row` представляет собой горизонтальную ось, направленную слева направо, а `row-reverse` — справа налево; если атрибут `dir` равен `rtl`, то `row` представляет собой горизонтальную ось, ориентированную справа налево, а `row-reverse` — слева направо.
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
+
+Обратите внимание, что значения `row` и `row-reverse` зависят от направления flex-контейнера. Если его атрибут [`dir`](/ru/docs/Web/HTML/Reference/Global_attributes#dir) равен `ltr`, то `row` представляет собой горизонтальную ось, направленную слева направо, а `row-reverse` — справа налево; если атрибут `dir` равен `rtl`, то `row` представляет собой горизонтальную ось, ориентированную справа налево, а `row-reverse` — слева направо.
 
 ## Синтаксис
 
@@ -49,7 +90,7 @@ flex-direction: unset;
 - `column-reverse`
   - : Ведёт себя как `column`, но точки **main-start** и **main-end** переставлены местами.
 
-## Проблемы доступности
+## Доступность
 
 Использование свойства `flex-direction` со значениями `row-reverse` и `column-reverse` создаст различие между визуальным представлением содержимого и его порядком в DOM. Это отрицательно влияет на пользователей с плохим зрением, использующих навигацию с помощью вспомогательных технологий, таких как программы чтения с экрана. Если визуальный порядок важен, пользователи программ чтения с экрана не будут иметь доступа к правильному порядку.
 

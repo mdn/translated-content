@@ -15,5 +15,5 @@ slug: Glossary/BigInt
 
 ### 技術文書
 
-- JavaScript のデータ構造: [`BigInt`](/ja/docs/Web/JavaScript/Data_structures#長整数型)
+- JavaScript のデータ構造: [`BigInt`](/ja/docs/Web/JavaScript/Guide/Data_structures#長整数型)
 - JavaScript のグローバルオブジェクト {{jsxref("BigInt")}}

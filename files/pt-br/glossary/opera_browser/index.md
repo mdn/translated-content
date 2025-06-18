@@ -12,4 +12,4 @@ slug: Glossary/Opera_Browser
 ### Conhecimento geral
 
 - [Opera](https://pt.wikipedia.org/wiki/Opera) na Wikipedia
-- [Opera browser web site](http://www.opera.com/)
+- [Opera browser web site](https://www.opera.com/)

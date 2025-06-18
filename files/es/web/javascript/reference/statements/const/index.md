@@ -7,10 +7,10 @@ slug: Web/JavaScript/Reference/Statements/const
 
 ## Resumen
 
-Las variables constantes presentan un **ámbito de bloque** ([block](/es/docs/Web/JavaScript/Referencia/Sentencias/block) scope) tal y como lo hacen las variables definidas usando la instrucción [let](/es/docs/Web/JavaScript/Referencia/Sentencias/let), con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes **no se pueden redeclarar**.
+Las variables constantes presentan un **ámbito de bloque** ([block](/es/docs/Web/JavaScript/Reference/Statements/block) scope) tal y como lo hacen las variables definidas usando la instrucción [let](/es/docs/Web/JavaScript/Reference/Statements/let), con la particularidad de que el valor de una constante no puede cambiarse a través de la reasignación. Las constantes **no se pueden redeclarar**.
 
 > [!WARNING]
-> La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Referencia/Objetos_globales/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
+> La **redeclaración** de la misma variable bajo un mismo [ámbito léxico](https://www.ecma-international.org/ecma-262/6.0/#sec-lexical-environments) terminaría en un error de tipo [`SyntaxError`](/es/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError). Esto también es **extensible** si usamos `var` dentro del ámbito léxico. Esto nos salvaguarda de redeclarar una variable accidentalmente y que no era posible solo con `var.`
 
 ## Sintaxis
 
@@ -33,7 +33,7 @@ La declaración de una constante crea una referencia de sólo lectura. No signif
 
 Una constante **no puede compartir su nombre** con una función o variable en el mismo ámbito.
 
-Todas las consideraciones acerca de la " [zona muerta temporal](/es/docs/Web/JavaScript/Referencia/Sentencias/let#muerta) " se aplican tanto a [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y `const`.
+Todas las consideraciones acerca de la " [zona muerta temporal](/es/docs/Web/JavaScript/Reference/Statements/let#muerta) " se aplican tanto a [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y `const`.
 
 > **Advertencia:** `const` ~~es~~ **fue** una **extensión especifica de Mozilla**, no ~~es~~ **era** soportado en IE, pero ~~tiene~~ **tenia** soporte parcial por Opera desde la versión 9.0 y por Safari.
 
@@ -114,4 +114,4 @@ MY_ARRAY = ['B']
 
 - {{jsxref("Sentencias/var", "var")}}
 - {{jsxref("Sentencias/let", "let")}}
-- [Constants in JavaScript Guide](/en/JavaScript/Guide/Values,_Variables,_and_Literals#Constants)
+- [Constants in JavaScript Guide](/es/docs/Web/JavaScript/Guide/Grammar_and_types#constants)

@@ -110,7 +110,7 @@ document.addEventListener("visibilitychange", async () => {
 
 ## 機能ポリシーの統合
 
-画面起動ロック API へのアクセスは、[機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)の {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}} ディレクティブによって制御されています。使用方法のリファレンスは[機能ポリシーの使用](/ja/docs/Web/HTTP/Feature_Policy/Using_Feature_Policy)を参照してください。
+画面起動ロック API へのアクセスは、[機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}} ディレクティブによって制御されています。使用方法のリファレンスは[機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)を参照してください。
 
 ## 仕様書
 
@@ -126,4 +126,4 @@ document.addEventListener("visibilitychange", async () => {
 
 - [An introductory article on the Screen Wake Lock API](https://web.dev/wakelock/)
 - [A Screen Wake Lock API demo on glitch](https://wake-lock-demo.glitch.me/)
-- [機能ポリシー](/ja/docs/Web/HTTP/Feature_Policy)の {{HTTPHeader("Feature-Policy/screen-wake-lock","screen-wake-lock")}} ディレクティブ
+- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)の {{HTTPHeader("Permissions-Policy/screen-wake-lock","screen-wake-lock")}} ディレクティブ

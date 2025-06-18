@@ -7,7 +7,7 @@ slug: Web/API/Document/images
 
 ## Summary
 
-`document.images` retorna uma coleção de [imagens](/pt-BR/docs/DOM/Image) do documento HTML.
+`document.images` retorna uma coleção de [imagens](/pt-BR/docs/Web/API/HTMLImageElement/Image) do documento HTML.
 
 ## Sintaxe
 

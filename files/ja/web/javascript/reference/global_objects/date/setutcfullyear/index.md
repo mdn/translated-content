@@ -9,7 +9,22 @@ l10n:
 
 **`setUTCFullYear()`** メソッドは、協定世界時に基づき、指定された日付の年を設定します。
 
-{{EmbedInteractiveExample("pages/js/date-setutcfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setUTCFullYear()")}}
+
+```js interactive-example
+const event = new Date("December 31, 1975 23:15:30 GMT-3:00");
+
+console.log(event.getUTCFullYear());
+// Expected output: 1976
+
+console.log(event.toUTCString());
+// Expected output: "Thu, 01 Jan 1976 02:15:30 GMT"
+
+event.setUTCFullYear(1975);
+
+console.log(event.toUTCString());
+// Expected output: "Wed, 01 Jan 1975 02:15:30 GMT"
+```
 
 ## 構文
 

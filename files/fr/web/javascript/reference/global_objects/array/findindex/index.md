@@ -7,7 +7,16 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/findIndex
 
 La méthode **`findIndex()`** renvoie l'**index** du **premier élément** du tableau qui satisfait une condition donnée par une fonction. Si la fonction renvoie faux pour tous les éléments du tableau, le résultat vaut -1.
 
-{{EmbedInteractiveExample("pages/js/array-findindex.html")}}
+{{InteractiveExample("JavaScript Demo: Array.findIndex()")}}
+
+```js interactive-example
+const array1 = [5, 12, 8, 130, 44];
+
+const isLargeNumber = (element) => element > 13;
+
+console.log(array1.findIndex(isLargeNumber));
+// Expected output: 3
+```
 
 Voir également la méthode {{jsxref("Array.find", "find()")}} qui renvoie la **valeur** (et non l'index) d'un des éléments trouvés.
 
@@ -45,7 +54,7 @@ S'il existe un tel élément, `findIndex` renverra immédiatement l'index de l'�
 
 `callback` possède trois arguments : la valeur de l'élément, l'index de l'élément et l'objet Array qui est parcouru
 
-Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Opérateurs/L_opérateur_this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
+Si l'argument `argumentThis` est fourni à la méthode `findIndex`, il sera utilisé comme « contexte » [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour chaque appel de `callback`. S'il n'est pas fourni, {{jsxref("undefined")}} sera utilisé.
 
 `findIndex` ne modifie pas le tableau sur laquelle elle est appelée. Les éléments qui seront traités par `findIndex` sont « récoltés » avant le premier appel de `callback`. Tout élément qui sera ajouté au tableau après l'appel de `findIndex` ne sera pas utilisé avec `callback`. Si un élément existant, pas encore visité, est modifié par `callback`, la valeur qui sera passé au `callback` pour cet élément modifié sera celle que `findIndex` utilise lorsqu'elle utilise l'index de l'élément en question. Les éléments supprimés sont bien parcourus.
 
@@ -74,7 +83,7 @@ console.log([4, 6, 7, 12].findIndex(estPremier)); // 2
 
 ### Trouver un index avec une fonction fléchée
 
-Dans cet exemple, on utilise [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Fonctions/Fonctions_fléchées) pour trouver l'index d'un élément :
+Dans cet exemple, on utilise [une fonction fléchée](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) pour trouver l'index d'un élément :
 
 ```js
 const fruits = ["pomme", "banane", "melon", "fraise", "raisin"];

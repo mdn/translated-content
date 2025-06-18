@@ -27,7 +27,7 @@ window.addEventListener("load", yourFunction, true);
 window.addEventListener("load", yourFunction, false);
 ```
 
-事件捕获如何工作的解释，参见 [DOM Level 2 事件捕获](http://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
+事件捕获如何工作的解释，参见 [DOM Level 2 事件捕获](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture)
 
 ### preventBubble 已被移出
 

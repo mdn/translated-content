@@ -7,7 +7,21 @@ l10n:
 
 **`Math.ceil()`** 정적 메서드는 언제나 올림하여 주어진 숫자보다 크거나 같은 가장 작은 정수를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/math-ceil.html")}}
+{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+
+```js interactive-example
+console.log(Math.ceil(0.95));
+// Expected output: 1
+
+console.log(Math.ceil(4));
+// Expected output: 4
+
+console.log(Math.ceil(7.004));
+// Expected output: 8
+
+console.log(Math.ceil(-7.004));
+// Expected output: -7
+```
 
 ## 구문
 

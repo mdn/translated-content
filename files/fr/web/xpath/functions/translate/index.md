@@ -68,7 +68,7 @@ La pandp pdpia.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-translate).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-translate).
 
 ### Support Gecko
 

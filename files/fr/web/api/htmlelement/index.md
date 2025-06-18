@@ -107,61 +107,61 @@ On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant 
 - [`paste`](/fr/docs/Web/API/HTMLElement/paste_event)
   - : Déclenché lorsque l'utilisatrice ou l'utilisateur initie une action de coller via l'interface du navigateur.
 - [`invalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event)
-  - : Déclenché lorsqu'un élément ne respecte pas les contraintes pendant la validation de contrainte. Également disponible via la propriété [`onvalid`](/fr/docs/Web/API/GlobalEventHandlers/oninvalid).
+  - : Déclenché lorsqu'un élément ne respecte pas les contraintes pendant la validation de contrainte. Également disponible via la propriété [`onvalid`](/fr/docs/Web/API/HTMLInputElement/invalid_event).
 
 ### Évènements relatifs aux animations
 
-- [`animationcancel`](/fr/docs/Web/API/HTMLElement/animationcancel_event)
-  - : Déclenché lorsqu'une animation se termine de manière inattendue. Également disponible via la propriété [`onanimationcancel`](/fr/docs/Web/API/GlobalEventHandlers/onanimationcancel).
-- [`animationend`](/fr/docs/Web/API/HTMLElement/animationend_event)
-  - : Déclenché lorsqu'une animation se termine normalement. Également disponible via la propriété [`onanimationend`](/fr/docs/Web/API/GlobalEventHandlers/onanimationend).
-- [`animationiteration`](/fr/docs/Web/API/HTMLElement/animationiteration_event)
-  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible via la propriété [`onanimationiteration`](/fr/docs/Web/API/GlobalEventHandlers/onanimationiteration).
-- [`animationstart`](/fr/docs/Web/API/HTMLElement/animationstart_event)
-  - : Déclenché lorsqu'une animation démarre. Également disponible via la propriété [`onanimationstart`](/fr/docs/Web/API/GlobalEventHandlers/onanimationstart).
+- [`animationcancel`](/fr/docs/Web/API/Element/animationcancel_event)
+  - : Déclenché lorsqu'une animation se termine de manière inattendue. Également disponible via la propriété [`onanimationcancel`](/fr/docs/Web/API/Element/animationcancel_event).
+- [`animationend`](/fr/docs/Web/API/Element/animationend_event)
+  - : Déclenché lorsqu'une animation se termine normalement. Également disponible via la propriété [`onanimationend`](/fr/docs/Web/API/Element/animationend_event).
+- [`animationiteration`](/fr/docs/Web/API/Element/animationiteration_event)
+  - : Déclenché lorsqu'une itération d'une animation est terminée. Également disponible via la propriété [`onanimationiteration`](/fr/docs/Web/API/Element/animationiteration_event).
+- [`animationstart`](/fr/docs/Web/API/Element/animationstart_event)
+  - : Déclenché lorsqu'une animation démarre. Également disponible via la propriété [`onanimationstart`](/fr/docs/Web/API/Element/animationstart_event).
 
 ### Évènements de saisie
 
-- [`beforeinput`](/fr/docs/Web/API/HTMLElement/beforeinput_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) est sur le point d'être modifiée.
-- [`input`](/fr/docs/Web/API/HTMLElement/input_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/GlobalEventHandlers/oninput).
+- [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est sur le point d'être modifiée.
+- [`input`](/fr/docs/Web/API/Element/input_event)
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
 - [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/Input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/Textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/HTMLElement/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
 
 ### Évènements de pointeur
 
-- [`gotpointercapture`](/fr/docs/Web/API/HTMLElement/gotpointercapture_event)
-  - : Déclenché lorsqu'un élément capture un pointeur à l'aide de [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible via la propriété [`ongotpointercapture`](/fr/docs/Web/API/GlobalEventHandlers/ongotpointercapture).
-- [`lostpointercapture`](/fr/docs/Web/API/HTMLElement/lostpointercapture_event)
-  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est relâché. Également disponible via la propriété [`onlostpointercapture`](/fr/docs/Web/API/GlobalEventHandlers/onlostpointercapture).
-- [`pointercancel`](/fr/docs/Web/API/HTMLElement/pointercancel_event)
-  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible via la propriété [`onpointercancel`](/fr/docs/Web/API/GlobalEventHandlers/onpointercancel).
-- [`pointerdown`](/fr/docs/Web/API/HTMLElement/pointerdown_event)
-  - : Déclenché lorsqu'un pointeur devient actif. Également disponible via la propriété [`onpointerdown`](/fr/docs/Web/API/GlobalEventHandlers/onpointerdown).
-- [`pointerenter`](/fr/docs/Web/API/HTMLElement/pointerenter_event)
-  - : Déclenché lorsqu'un pointeur est déplacé dans la zone de contact d'un élément ou d'un de ses descendants. Également disponible via la propriété [`onpointerenter`](/fr/docs/Web/API/GlobalEventHandlers/onpointerenter).
-- [`pointerleave`](/fr/docs/Web/API/HTMLElement/pointerleave_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément. Également disponible via la propriété [`onpointerleave`](/fr/docs/Web/API/GlobalEventHandlers/onpointerleave).
-- [`pointermove`](/fr/docs/Web/API/HTMLElement/pointermove_event)
-  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible via la propriété [`onpointermove`](/fr/docs/Web/API/GlobalEventHandlers/onpointermove).
-- [`pointerout`](/fr/docs/Web/API/HTMLElement/pointerout_event)
-  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément (entre autres). Également disponible via la propriété [`onpointerout`](/fr/docs/Web/API/GlobalEventHandlers/onpointerout).
-- [`pointerover`](/fr/docs/Web/API/HTMLElement/pointerover_event)
-  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur de la zone de contact d'un élément. Également disponible via la propriété [`onpointerover`](/fr/docs/Web/API/GlobalEventHandlers/onpointerover).
-- [`pointerup`](/fr/docs/Web/API/HTMLElement/pointerup_event)
-  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible via la propriété [`onpointerup`](/fr/docs/Web/API/GlobalEventHandlers/onpointerup).
+- [`gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
+  - : Déclenché lorsqu'un élément capture un pointeur à l'aide de [`setPointerCapture()`](/fr/docs/Web/API/Element/setPointerCapture). Également disponible via la propriété [`ongotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event).
+- [`lostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event)
+  - : Déclenché lorsqu'un [pointeur capturé](/fr/docs/Web/API/Pointer_events#pointer_capture) est relâché. Également disponible via la propriété [`onlostpointercapture`](/fr/docs/Web/API/Element/lostpointercapture_event).
+- [`pointercancel`](/fr/docs/Web/API/Element/pointercancel_event)
+  - : Déclenché lorsqu'un évènement de pointeur est annulé. Également disponible via la propriété [`onpointercancel`](/fr/docs/Web/API/Element/pointercancel_event).
+- [`pointerdown`](/fr/docs/Web/API/Element/pointerdown_event)
+  - : Déclenché lorsqu'un pointeur devient actif. Également disponible via la propriété [`onpointerdown`](/fr/docs/Web/API/Element/pointerdown_event).
+- [`pointerenter`](/fr/docs/Web/API/Element/pointerenter_event)
+  - : Déclenché lorsqu'un pointeur est déplacé dans la zone de contact d'un élément ou d'un de ses descendants. Également disponible via la propriété [`onpointerenter`](/fr/docs/Web/API/Element/pointerenter_event).
+- [`pointerleave`](/fr/docs/Web/API/Element/pointerleave_event)
+  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément. Également disponible via la propriété [`onpointerleave`](/fr/docs/Web/API/Element/pointerleave_event).
+- [`pointermove`](/fr/docs/Web/API/Element/pointermove_event)
+  - : Déclenché lorsqu'un pointeur change de coordonnées. Également disponible via la propriété [`onpointermove`](/fr/docs/Web/API/Element/pointermove_event).
+- [`pointerout`](/fr/docs/Web/API/Element/pointerout_event)
+  - : Déclenché lorsqu'un pointeur est déplacé en dehors de la zone de contact d'un élément (entre autres). Également disponible via la propriété [`onpointerout`](/fr/docs/Web/API/Element/pointerout_event).
+- [`pointerover`](/fr/docs/Web/API/Element/pointerover_event)
+  - : Déclenché lorsqu'un pointeur est déplacé à l'intérieur de la zone de contact d'un élément. Également disponible via la propriété [`onpointerover`](/fr/docs/Web/API/Element/pointerover_event).
+- [`pointerup`](/fr/docs/Web/API/Element/pointerup_event)
+  - : Déclenché lorsqu'un pointeur n'est plus actif. Également disponible via la propriété [`onpointerup`](/fr/docs/Web/API/Element/pointerup_event).
 
 ### Évènements de transition
 
-- [`transitioncancel`](/fr/docs/Web/API/HTMLElement/transitioncancel_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/GlobalEventHandlers/ontransitioncancel).
-- [`transitionend`](/fr/docs/Web/API/HTMLElement/transitionend_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionend).
-- [`transitionrun`](/fr/docs/Web/API/HTMLElement/transitionrun_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
-- [`transitionstart`](/fr/docs/Web/API/HTMLElement/transitionstart_event)
-  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
+- [`transitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est annulée. Également disponible via la propriété [`ontransitioncancel`](/fr/docs/Web/API/Element/transitioncancel_event).
+- [`transitionend`](/fr/docs/Web/API/Element/transitionend_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est terminée. Également disponible via la propriété [`ontransitionend`](/fr/docs/Web/API/Element/transitionend_event).
+- [`transitionrun`](/fr/docs/Web/API/Element/transitionrun_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) est initialement créée. Également disponible via la propriété [`ontransitionrun`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionrun).
+- [`transitionstart`](/fr/docs/Web/API/Element/transitionstart_event)
+  - : Déclenché lorsqu'une [transition CSS](/fr/docs/Web/CSS/CSS_transitions/Using_CSS_transitions) a effectivement démarré. Également disponible via la propriété [`ontransitionstart`](/fr/docs/Web/API/GlobalEventHandlers/ontransitionstart).
 
 ## Spécifications
 

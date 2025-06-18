@@ -7,7 +7,7 @@ slug: Web/Accessibility/ARIA/Roles/alertdialog_role
 
 ### Description
 
-Cette technique présente l'utilisation du rôle [`alertdialog`](http://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) role.
+Cette technique présente l'utilisation du rôle [`alertdialog`](https://www.w3.org/TR/2009/WD-wai-aria-20091215/roles#alertdialog) role.
 
 Le rôle `alertdialog` est utilisé pour notifier à l'utilisateur des informations urgentes qui requièrent son attention immédiate. Comme le nom l'indique, `alertdialog` est un type de boîte de dialogue. Cela signifie que la plupart des instructions fournies à propos de l'[utilisation du rôle `dialog`](/fr/Accessibilité/ARIA/Techniques_ARIA/Utiliser_le_rôle_dialog_role) s'appliquent également au rôle `alertdialog`&nbsp;:
 
@@ -65,9 +65,9 @@ L'extrait de code ci-dessous présente la façon de baliser une boîte de dialog
 
 ### Attributs ARIA utilisés
 
-- [alertdialog](http://www.w3.org/TR/wai-aria/roles#dialog)&nbsp;;
-- [aria-labelledby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)&nbsp;;
-- [aria-describedby](http://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby).
+- [alertdialog](https://www.w3.org/TR/wai-aria/roles#dialog)&nbsp;;
+- [aria-labelledby](https://www.w3.org/TR/wai-aria/states_and_properties#aria-labelledby)&nbsp;;
+- [aria-describedby](https://www.w3.org/TR/wai-aria/states_and_properties#aria-describedby).
 
 ### Techniques ARIA connexes
 

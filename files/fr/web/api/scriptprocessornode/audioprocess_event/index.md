@@ -104,4 +104,4 @@ L'événement **audioprocess** est déclenché lorsqu'un tampon d'entrée d'une 
 
 ## Voir aussi
 
-- [Web Audio API](/fr/docs/Web_Audio_API)
+- [Web Audio API](/fr/docs/Web/API/Web_Audio_API)

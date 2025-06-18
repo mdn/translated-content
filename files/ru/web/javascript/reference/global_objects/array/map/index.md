@@ -106,7 +106,7 @@ const reversed = Array.prototype.map
 // Бонус: используйте '===' для проверки того, является ли строка палиндромом
 ```
 
-Более простым способом будет использование метода {{jsxref("String.split()")}} (см. пример [обращение строки при помощи метода split()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split#Example:_Reversing_a_String_using_split)).
+Более простым способом будет использование метода {{jsxref("String.split()")}} (см. пример [обращение строки при помощи метода split()](/ru/docs/Web/JavaScript/Reference/Global_Objects/String/split#example:_reversing_a_string_using_split)).
 
 ### Пример: хитрый вариант использования
 

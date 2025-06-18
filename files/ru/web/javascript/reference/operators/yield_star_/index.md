@@ -154,7 +154,7 @@ console.log(result); // "foo"
 
 ## Смотрите также
 
-- [The Iterator protocol](/ru/docs/Web/JavaScript/Guide/The_Iterator_protocol)
+- [The Iterator protocol](/ru/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Statements/function*", "function*")}}
 - {{jsxref("Operators/function*", "function* expression")}}
 - {{jsxref("Operators/yield", "yield")}}

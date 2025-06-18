@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`replaceSync()`** は {{domxref("CSSStyleSheet")}} インターフェイスのメソッドで、スタイルシートの内容を渡された内容で同期的に置き換えます。.
+**`replaceSync()`** は {{domxref("CSSStyleSheet")}} インターフェイスのメソッドで、スタイルシートの内容を渡された内容で同期的に置き換えます。
 
 `replaceSync()` と {{domxref("CSSStyleSheet.replace()")}} の両メソッドは、 {{domxref("CSSStyleSheet.CSSStyleSheet()","CSSStyleSheet()")}} コンストラクターで作成されたスタイルシートでのみ使用できます。
 

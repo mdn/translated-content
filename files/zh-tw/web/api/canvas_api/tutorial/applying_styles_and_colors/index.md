@@ -573,7 +573,7 @@ draw();
 
 - `createPattern(image, type)`
   - : 呼叫 createPattern()會產一個畫布樣式物件，然後回傳出來。
-    其中 image 是[CanvasImageSource](http://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)類別物件(像是{{domxref("HTMLImageElement")}},、\<canvas>元素、{{HTMLElement("video")}} 元素等)
+    其中 image 是[CanvasImageSource](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html#image-sources-for-2d-rendering-contexts)類別物件(像是{{domxref("HTMLImageElement")}},、\<canvas>元素、{{HTMLElement("video")}} 元素等)
 
 Type 是一串字串，定義了如何產生樣式，允許的值有:
 
@@ -651,7 +651,7 @@ draw();
 `shadowOffsetX和shadowOffsetY會決定陰影延伸大小，若是為正值，則陰影會往右(沿X軸)和往下(沿Y軸)延伸，若是為負值，則會往正值相反方向延伸。`
 
 > [!NOTE]
-> 基於 HTML5 提議規格變更，從 開始，陰影只會在 source-over 的[構圖排列](/zh-TW/docs/Web/Guide/HTML/Canvas_tutorial/Compositing)下產生
+> 基於 HTML5 提議規格變更，從 開始，陰影只會在 source-over 的[構圖排列](/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing)下產生
 
 ### 文字陰影範例
 

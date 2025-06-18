@@ -42,4 +42,4 @@ Dans l'exemple qui suit, on utilise par exemple une requête média avec `min-he
 
 {{EmbedGHLiveSample("css-examples/multicol/overflow/min-height.html", '100%', 800)}}
 
-Dans le dernier guide de cette série, nous verrons [comment la disposition multi-colonnes interagit avec le module de spécification Fragmentation](/fr/docs/Web/CSS/CSS_Columns/Handling_content_breaks_in_multicol) et nous permet de contrôler la façon dont le contenu est coupé entre les colonnes.
+Dans le dernier guide de cette série, nous verrons [comment la disposition multi-colonnes interagit avec le module de spécification Fragmentation](/fr/docs/Web/CSS/CSS_multicol_layout/Handling_content_breaks_in_multicol_layout) et nous permet de contrôler la façon dont le contenu est coupé entre les colonnes.

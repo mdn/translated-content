@@ -40,7 +40,7 @@ window.scrollTo({
 
 ## Примечания
 
-Эта функция выполняет то же, что и [window.scroll](/ru/docs/DOM/Window.scroll). Остальные функции, связанные с прокруткой [window.scrollBy](/ru/docs/DOM/Window.scrollBy), [window.scrollByLines](/ru/docs/DOM/Window.scrollByLines), и [window.scrollByPages](/ru/docs/DOM/Window.scrollByPages).
+Эта функция выполняет то же, что и [window.scroll](/ru/docs/Web/API/Window/scroll). Остальные функции, связанные с прокруткой [window.scrollBy](/ru/docs/Web/API/Window/scrollBy), [window.scrollByLines](/ru/docs/Web/API/Window/scrollByLines), и [window.scrollByPages](/ru/docs/Web/API/Window/scrollByPages).
 
 ## Спецификации
 

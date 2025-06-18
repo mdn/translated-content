@@ -30,7 +30,7 @@ Produzirá:
 
 ## Notas
 
-The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para [evitar o uso de caixas de diálogo para confirmações.](http://alistapart.com/article/neveruseawarning)
+The following text is shared between this article, DOM:window\.prompt and DOM:window\.alert Caixas de diálogo são janelas modais - elas previnem o usuário de acessar o resto da interface da aplicação enquanto a caixa de diálogo não for fechada. Por esta razão, você não deve usar abusivamente nenhuma função que crie uma caixa de diálogo (ou uma janela modal). E independente disso, existem boas razões para [evitar o uso de caixas de diálogo para confirmações.](https://alistapart.com/article/neveruseawarning)
 
 Usuários do [Mozilla Chrome](/pt-BR/Chrome) (Ex.: Extensões do Firefox) devem utilizar métodos de `nsIPromptService`.
 

@@ -26,7 +26,7 @@ l10n:
 
 ## 翻译标题和 ID
 
-文档中的目录导航、与代码块相关联的运行实例等会使用到 HTML ID。而对于 Markdown 文档，其渲染得到的 HTML 文件的 ID 则与 Markdown 文档中的标题相对应（但这并不意味着两者相等，yari 平台对于半角空格、标点等有特殊处理）。
+文档中的目录导航、与代码块相关联的运行实例等会使用到 HTML ID。而对于 Markdown 文档，其渲染得到的 HTML 文件的 ID 则与 Markdown 文档中的标题相对应（但这并不意味着两者相等，rari 平台对于半角空格、标点等有特殊处理）。
 
 例如，对于标题：
 
@@ -53,13 +53,13 @@ l10n:
 例如：
 
 ```md
-If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/en-US/docs/Learn) tutorials.
+If you are new to HTML, CSS, JavaScript, etc., try our [Learn web development](/en-US/docs/Learn_web_development) tutorials.
 ```
 
 在翻译时，应该将 URL 路径开头的 `/en-US` 替换为 `/zh-CN`：
 
 ```md
-如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的 [Web 开发教程](/zh-CN/docs/Learn)。
+如果你刚刚开始了解 HTML、CSS、JavaScript 等相关知识，你可以试着完成我们的[学习 Web 开发](/zh-CN/docs/Learn_web_development)。
 ```
 
 还需特别注意路径后带有片段标识（fragment）的站内链接，请同步更新片段标识为本地化文档中指定标题的 ID（若不清楚标题和 ID 之间的转换规则，可以在浏览器的开发者工具中查找对应标题的 ID）。
@@ -76,7 +76,7 @@ Reference to [Live sample macros](/en-US/docs/MDN/Writing_guidelines/Page_struct
 参考：[运行实例宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples#运行实例宏)。
 ```
 
-> 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。yari 平台可以在指向本地化文档的链接不存在的情况下，自动将其回落到对应英文版本的链接。
+> 请注意，无论指向的本地化文档是否存在，都请让链接指向本地化文档。rari 平台可以在指向本地化文档的链接不存在的情况下，自动将其回落到对应英文版本的链接。
 
 ## 中文翻译的常见问题
 

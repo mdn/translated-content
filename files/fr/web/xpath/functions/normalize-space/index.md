@@ -24,7 +24,7 @@ La chaîne nomalisée.
 
 ### Définition
 
-[XPath 1.0, section 4.2](http://www.w3.org/TR/xpath#function-normalize-space).
+[XPath 1.0, section 4.2](https://www.w3.org/TR/xpath#function-normalize-space).
 
 ### Support Gecko
 

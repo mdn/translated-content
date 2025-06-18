@@ -92,7 +92,7 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
   - : Un booléen qui indique si l'évènement peut bouillonner entre l'arbre du shadow DOM et le DOM standard.
 - [`Event.currentTarget`](/fr/docs/Web/API/Event/currentTarget) {{readonlyinline}}
   - : Une référence vers la cible actuellement enregistrée pour l'évènement. Il s'agit de l'objet vers lequel l'évènement est présentement destiné à être envoyé. Cette cible peut avoir été modifiée pendant la vie de l'évènement via un reciblage.
-- [`Event.deepPath`](/fr/docs/Web/API/Event/deepPath) {{non-standard_inline}}
+- [`Event.deepPath`](/fr/docs/Web/API/Event/composedPath) {{non-standard_inline}}
   - : Un tableau ([`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)) de nœuds ([`Node`](/fr/docs/Web/API/Node)) du DOM qui ont été parcourus lors du bouillonnement/de la remontée de l'évènement.
 - [`Event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) {{readonlyinline}}
   - : Indique si un appel à [`Event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a annulé l'évènement.
@@ -147,5 +147,5 @@ On notera que l'ensemble des interfaces d'évènements ont un nom qui termine pa
 ## Voir aussi
 
 - Les types d'évènement disponibles : [Référence des évènements](/fr/docs/Web/Events)
-- [Comparaison des cibles d'évènements](/fr/docs/Web/API/Event/Comparison_of_Event_Targets) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
+- [Comparaison des cibles d'évènements](/fr/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (`target` vs `currentTarget` vs `relatedTarget` vs `originalTarget`)
 - [Créer et déclencher des évènements personnalisés](/fr/docs/Web/Events/Creating_and_triggering_events)

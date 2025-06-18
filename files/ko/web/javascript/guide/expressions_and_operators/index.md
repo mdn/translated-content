@@ -71,11 +71,11 @@ JavaScript는 이항 연산자와 단항 연산자를 모두 포함하며, 유�
 | [비트 OR 할당](/ko/docs/Web/JavaScript/Reference/Operators/Bitwise_OR_assignment)                           | `x \|= y`   | `x = x \| y`     |
 | [논리 AND 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)                         | `x &&= y`   | `x && (x = y)`   |
 | [논리 OR 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)                           | `x \|\|= y` | `x \|\| (x = y)` |
-| [널 병합 할당](/ko/docs/Web/JavaScript/Reference/Operators/Logical_nullish_assignment)                      | `x ??= y`   | `x ?? (x = y)`   |
+| [널 병합 할당](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)                   | `x ??= y`   | `x ?? (x = y)`   |
 
 #### 속성 할당
 
-어떤 표현식이 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)로 평가된다면, 할당 표현식의 좌항은 객체로 평가되는 표현식의 속성에 할당할 수 있습니다. 예를 들어,
+어떤 표현식이 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_objects)로 평가된다면, 할당 표현식의 좌항은 객체로 평가되는 표현식의 속성에 할당할 수 있습니다. 예를 들어,
 
 ```js
 let obj = {};
@@ -90,7 +90,7 @@ console.log(obj[key]); // 5 출력.
 console.log(obj); // { x: 3, y: 5 } 출력.
 ```
 
-객체에 관한 더 많은 정보를 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)에서 찾아보세요.
+객체에 관한 더 많은 정보를 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects)에서 찾아보세요.
 
 어떤 표현식이 객체로 평가되지 않으면, 그 표현식의 속성에 대한 할당 표현식은 실제로는 할당하지 않습니다.
 
@@ -225,7 +225,7 @@ x[f()] = g();
 
 ##### 평가 예제 3
 
-`x[f()] = g()` 또한 왼쪽에서 오른쪽으로 평가합니다. (이 예제는 어떤 객체가 `x`에 할당됐다는 추가 가정 하에 진행합니다. 객체에 관한 더 많은 정보는 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)를 참고하세요)
+`x[f()] = g()` 또한 왼쪽에서 오른쪽으로 평가합니다. (이 예제는 어떤 객체가 `x`에 할당됐다는 추가 가정 하에 진행합니다. 객체에 관한 더 많은 정보는 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects)를 참고하세요)
 
 1. 할당 표현식 `x[f()] = g()`의 평가를 시작합니다.
    1. 이 할당의 좌항인 `x[f()]` 속성 접근의 평가를 시작합니다.
@@ -233,7 +233,7 @@ x[f()] = g();
       2. 함수 호출 `f()`가 콘솔에 "F!"를 기록한 후 숫자 `2`로 평가됩니다.
    2. 이 할당의 속성 접근 `x[f()]`의 평가가 끝났습니다. 그 결과 값은 변수 속성 참조 `x[2]`입니다.
    3. 다음으로, 함수 호출 `g()`가 콘솔에 "G!"를 기록한 후 숫자 `3`으로 평가됩니다.
-   4. `g()`의 결과인 `3`을 `x[2]`에 할당합니다. (이 단계는 `x`에 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)를 미리 할당한 경우에만 성공합니다)
+   4. `g()`의 결과인 `3`을 `x[2]`에 할당합니다. (이 단계는 `x`에 [객체](/ko/docs/Web/JavaScript/Guide/Working_with_objects)를 미리 할당한 경우에만 성공합니다)
 2. 할당 표현식 `x[f()] = g()`의 평가가 끝났습니다. 표현식의 결과 값은 `x[2]`의 새로운 값, 즉 `3`입니다. `x[2]`에는 `3`이 할당됐고, 콘솔에는 "F!" 후에 "G!"를 기록했습니다.
 
 #### 할당 체이닝을 피해야 할 이유
@@ -250,7 +250,7 @@ let z = (y = x = f());
 
 ### 비교 연산자
 
-비교 연산자는 피연산자를 서로 비교하고, 비교 결과가 참인지에 따라 논리 값을 반환합니다. 피연산자로는 숫자, 문자열, 논리형, [객체](/ko/docs/Web/JavaScript/Guide/Working_with_Objects) 값을 사용할 수 있습니다. 문자열은 Unicode 값을 사용한 표준 사전식 순서에 따라 비교합니다. 만약 두 피연산자가 서로 다른 타입이면, JavaScript는 피연산자들을 서로 비교하기에 적합한 타입으로 변환합니다. 이 동작은 대개 두 값을 모두 숫자로 변환한 후 비교한 결과를 낳습니다. 비교 연산에서 발생하는 타입 변환의 유일한 예외는
+비교 연산자는 피연산자를 서로 비교하고, 비교 결과가 참인지에 따라 논리 값을 반환합니다. 피연산자로는 숫자, 문자열, 논리형, [객체](/ko/docs/Web/JavaScript/Guide/Working_with_objects) 값을 사용할 수 있습니다. 문자열은 Unicode 값을 사용한 표준 사전식 순서에 따라 비교합니다. 만약 두 피연산자가 서로 다른 타입이면, JavaScript는 피연산자들을 서로 비교하기에 적합한 타입으로 변환합니다. 이 동작은 대개 두 값을 모두 숫자로 변환한 후 비교한 결과를 낳습니다. 비교 연산에서 발생하는 타입 변환의 유일한 예외는
 `===`과 `!==` 연산자를 사용해 엄격 일치와 불일치 비교를 수행하는 경우인데, 두 연산자는
 비교 전에 피연산자를 변환하지 않습니다. 아래의 표는 다음 예제 코드를 사용해 각각의 비교 연산자를 설명합니다.
 
@@ -693,7 +693,7 @@ var n3 = !"Cat"; // !t는 false 반환
 표현식에서 유발하게 되는 부수 효과도 전혀 발생하지 않음에 주의하세요.
 
 참고로 `||`을 사용한 두 번째 단락 평가의 경우, 최근 코드에서는 새로운
-[널 병합 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+[널 병합 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 (`??`)를 사용할 수도 있습니다. 널 병합 연산자는 첫 번째 연산자가 "[널과 유사](/ko/docs/Glossary/Nullish)"한, 즉 {{jsxref("null")}}이거나 {{jsxref("undefined")}}일 때만 두 번째 피연산자를 반환합니다. `''`와
 `0`도 유효한 값이라면 널 병합 연산자가 기본 값을 나타낼 때 더 좋은 선택지입니다.
 
@@ -719,7 +719,7 @@ mystring += "글"; // "한글"로 평가되며, mystring에 "한글"을 할당�
 
 ### 조건 (삼항) 연산자
 
-[조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)는 JavaScript에서 세 개의 피연산자를 받는 유일한 연산자입니다. 조건 연산자는 주어진 조건에 따라 두 값 중 하나를 반환하며, 구문은 다음과 같습니다.
+[조건 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Conditional_operator)는 JavaScript에서 세 개의 피연산자를 받는 유일한 연산자입니다. 조건 연산자는 주어진 조건에 따라 두 값 중 하나를 반환하며, 구문은 다음과 같습니다.
 
 ```js
 condition ? val1 : val2;
@@ -739,7 +739,7 @@ var status = age >= 18 ? "성인" : "미성년자";
 
 ### 쉼표 연산자
 
-[쉼표 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comma_Operator)(`,`)는 두 피연산자를 모두 평가한 후 오른쪽 피연산자의 값을 반환합니다. 쉼표 연산자는 주로 `for` 반복문 안에서 사용하여 한 번의 반복으로 여러 변수를 변경할 때 사용합니다. 꼭 필요하지 않다면, 그 외의 상황에 사용하는 것은 좋지 않은 코드 스타일로 여겨집니다. 대개 쉼표 연산자보다는 두 개의 분리된 명령문을 사용하는 편이 낫습니다.
+[쉼표 연산자](/ko/docs/Web/JavaScript/Reference/Operators/Comma_operator)(`,`)는 두 피연산자를 모두 평가한 후 오른쪽 피연산자의 값을 반환합니다. 쉼표 연산자는 주로 `for` 반복문 안에서 사용하여 한 번의 반복으로 여러 변수를 변경할 때 사용합니다. 꼭 필요하지 않다면, 그 외의 상황에 사용하는 것은 좋지 않은 코드 스타일로 여겨집니다. 대개 쉼표 연산자보다는 두 개의 분리된 명령문을 사용하는 편이 낫습니다.
 
 쉼표 연산자의 예제로, 10행 10열의 2차원 배열 `a`를 가정할 때, 아래의 코드는 쉼표 연산자를 사용해서 두 개의 변수를 한번에 업데이트하는 모습을 보입니다. 코드의 실행 결과는 `a`의 요소를 대각선((0, 0\), (1, 1), (2, 2), ...)으로 출력한 것입니다.
 
@@ -967,7 +967,7 @@ if (theDay instanceof Date) {
 | 쉼표               | `,`                                                                                       |
 
 각각의 연산자로 향하는 링크를 포함한 더 자세한 표는
-[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#table)에서 찾을 수
+[JavaScript 참고서](/ko/docs/Web/JavaScript/Reference/Operators/Operator_precedence#table)에서 찾을 수
 있습니다.
 
 ## 표현식

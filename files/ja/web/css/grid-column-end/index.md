@@ -2,14 +2,61 @@
 title: grid-column-end
 slug: Web/CSS/grid-column-end
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
 {{CSSRef}}
 
-**`grid-column-end`** は CSS のプロパティで、グリッド列内のグリッドアイテムの末尾位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の末尾側の端を指定します。
+**`grid-column-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド列内のグリッドアイテムの末尾位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の末尾側の端を指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-column-end.html")}}
+{{InteractiveExample("CSS Demo: grid-column-end")}}
+
+```css interactive-example-choice
+grid-column-end: auto;
+```
+
+```css interactive-example-choice
+grid-column-end: 3;
+```
+
+```css interactive-example-choice
+grid-column-end: -1;
+```
+
+```css interactive-example-choice
+grid-column-end: span 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## 構文
 
@@ -18,16 +65,16 @@ l10n:
 grid-column-end: auto;
 
 /* <custom-ident> 値 */
-grid-column-end: somegridarea;
+grid-column-end: some-grid-area;
 
 /* <integer> + <custom-ident> 値 */
 grid-column-end: 2;
-grid-column-end: somegridarea 4;
+grid-column-end: some-grid-area 4;
 
 /* span + <integer> + <custom-ident> 値 */
 grid-column-end: span 3;
-grid-column-end: span somegridarea;
-grid-column-end: 5 somegridarea span;
+grid-column-end: span some-grid-area;
+grid-column-end: 5 some-grid-area span;
 
 /* グローバル値 */
 grid-column-end: inherit;
@@ -82,7 +129,7 @@ grid-column-end: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_column_end_for_a_grid_item
 <div class="wrapper">
   <div class="box1">One</div>
   <div class="box2">Two</div>
@@ -94,7 +141,7 @@ grid-column-end: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_column_end_for_a_grid_item
 .wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -115,7 +162,7 @@ grid-column-end: unset;
 }
 ```
 
-```css hidden
+```css hidden live-sample___setting_column_end_for_a_grid_item
 * {
   box-sizing: border-box;
 }
@@ -144,7 +191,7 @@ grid-column-end: unset;
 
 #### 結果
 
-{{ EmbedLiveSample('グリッドアイテムの列の末尾位置の設定', '230', '420') }}
+{{ EmbedLiveSample('Setting_column_end_for_a_grid_item', '230', '420') }}
 
 ## 仕様書
 
@@ -156,6 +203,10 @@ grid-column-end: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-column-start")}}, {{cssxref("grid-column")}}, {{cssxref("grid-row-start")}}, {{cssxref("grid-row-end")}}, {{cssxref("grid-row")}}
-- グリッドレイアウトガイド: [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
-- 動画チュートリアル: _[Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)_
+- {{cssxref("grid-column-start")}}
+- {{cssxref("grid-column")}}
+- {{cssxref("grid-row-start")}}
+- {{cssxref("grid-row-end")}}
+- {{cssxref("grid-row")}}
+- [線に基づく配置を使用したグリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
+- 動画: [Line-based placement](https://gridbyexample.com/video/series-line-based-placement/)

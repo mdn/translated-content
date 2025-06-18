@@ -40,7 +40,7 @@ Aucune.
 
 ## Instances de `Memory`
 
-Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/Web/JavaScript/Reference/Objets_globaux/WebAssembly/Memory/prototype) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
+Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/WebAssembly/JavaScript_interface/Memory) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
 
 ### Propriétés
 

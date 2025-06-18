@@ -1,116 +1,48 @@
 ---
 title: DOMParser
 slug: Web/API/DOMParser
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{APIRef("DOM")}}{{SeeCompatTable}}
+{{APIRef("DOM")}}
 
-`DOMParser` 可以將XML或是HTML格式的字串轉成 DOM [文件](/zh-TW/docs/DOM/document)。`DOMParser`的規格請參閱 [DOM 解譯與串流化](https://w3c.github.io/DOM-Parsing/)。
+**`DOMParser`** 介面提供了從字串中解析 {{Glossary("XML")}} 或 {{Glossary("HTML")}} 原始碼成 DOM {{domxref("Document")}} 的能力。
 
-請注意[XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)解譯的是 URL 連結內容裡的 XML 與 HTML 文件。
+若要執行相反的操作，也就是將 DOM 樹轉換成 XML 或 HTML 原始碼，可以使用 {{domxref("XMLSerializer")}} 介面。
 
-## 產生一個 DOMParser
+若是 HTML 文件，也可以透過設定 {{domxref("Element.innerHTML")}} 和 {{domxref("Element.outerHTML", "outerHTML")}} 屬性的值，將 DOM 的部分內容替換為由 HTML 建立的新 DOM 樹。這些屬性也能被讀取，以擷取與對應 DOM 子樹相對應的 HTML 片段。
 
-「`new DOMParser()`」可產生 DOMParser。
+請注意，{{domxref("XMLHttpRequest")}} 可以直接從可透過 URL 存取的資源解析 XML 與 HTML，並在其 {{domxref("XMLHttpRequest.response", "response")}} 屬性中回傳一個 `Document`。
 
-關於如何在 Firefox 外掛程式中產生 DOMParser，請參考 `nsIDOMParser` 文件
+> [!NOTE]
+> 請注意，像是 `<p>` 這樣的[區塊級元素](/zh-TW/docs/Glossary/Block-level_content)，如果另一個區塊級元素嵌套在內部並在關閉 `<p>` 標籤之前被解析，則會自動關閉。
 
-## 解譯 XML
+## 建構子
 
-產生解譯物件後，請呼叫`parseFromString方法函式來將XML字串轉換成DOM物件`:
+- {{domxref("DOMParser.DOMParser","DOMParser()")}}
+  - : 建立一個新的 `DOMParser` 物件。
 
-```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-```
+## 實例方法
 
-### 錯誤處理
+- {{domxref("DOMParser.parseFromString()")}}
+  - : 使用 HTML 或 XML 解析器解析字串，並回傳一個 {{domxref("HTMLDocument")}} 或 {{domxref("XMLDocument")}}。
 
-請注意如果解譯過程出錯,目前的 `DOMParser` 不會丟出異常物件（exception），但是會回傳一個錯誤文件（請看 [Firefox bug 45566](https://bugzil.la/45566)）：
+## 範例
 
-```xml
-<parsererror xmlns="http://www.mozilla.org/newlayout/xml/parsererror.xml">
-(error description)
-<sourcetext>(a snippet of the source XML)</sourcetext>
-</parsererror>
-```
+這個介面唯一的方法 {{domxref("DOMParser.parseFromString()")}} 的文件中，包含了用於解析 XML、SVG 和 HTML 字串的範例。
 
-解譯錯誤也會記錄在錯誤終端機中（[Error Console](/zh-TW/docs/Error_Console)）, 紀錄裡頭的文件 URI (如下) 則為錯誤來源.
+## 規範
 
-## 解譯 SVG 或 HTML 文件
-
-`DOMParser` 也可以用來解譯 SVG 文件或是 HTML 文件。可以依 MIME 格式，輸出三種不同格式. 如果 MIME 格式是 `text/xml`,輸出的格式為 `XMLDocument`, 如果 MIME 格式是 `image/svg+xml`, 輸出格式為 `SVGDocument,` 如果 MIME 格式是 `text/html`, 輸出格式則為 `HTMLDocument`.
-
-```js
-var parser = new DOMParser();
-var doc = parser.parseFromString(stringContainingXMLSource, "application/xml");
-// returns a Document, but not a SVGDocument nor a HTMLDocument
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingXMLSource, "image/svg+xml");
-// returns a SVGDocument, which also is a Document.
-
-parser = new DOMParser();
-doc = parser.parseFromString(stringContainingHTMLSource, "text/html");
-// returns a HTMLDocument, which also is a Document.
-```
-
-### 其他瀏覽器可用的 DOMParser HTML 外掛程式
-
-```js
-/*
- * DOMParser HTML extension
- * 2012-09-04
- *
- * By Eli Grey, http://eligrey.com
- * Public domain.
- * NO WARRANTY EXPRESSED OR IMPLIED. USE AT YOUR OWN RISK.
- */
-
-/*! @source https://gist.github.com/1129031 */
-/*global document, DOMParser*/
-
-(function (DOMParser) {
-  "use strict";
-
-  var proto = DOMParser.prototype,
-    nativeParse = proto.parseFromString;
-  // Firefox/Opera/IE throw errors on unsupported types
-  try {
-    // WebKit returns null on unsupported types
-    if (new DOMParser().parseFromString("", "text/html")) {
-      // text/html parsing is natively supported
-      return;
-    }
-  } catch (ex) {}
-
-  proto.parseFromString = function (markup, type) {
-    if (/^\s*text\/html\s*(?:;|$)/i.test(type)) {
-      var doc = document.implementation.createHTMLDocument("");
-      if (markup.toLowerCase().indexOf("<!doctype") > -1) {
-        doc.documentElement.innerHTML = markup;
-      } else {
-        doc.body.innerHTML = markup;
-      }
-      return doc;
-    } else {
-      return nativeParse.apply(this, arguments);
-    }
-  };
-})(DOMParser);
-```
-
-### DOMParser from Chrome/JSM/XPCOM/Privileged Scope
-
-See article here: [nsIDOMParser](/zh-TW/docs/nsIDOMParser)
+{{Specifications}}
 
 ## 瀏覽器相容性
 
 {{Compat}}
 
-## 參考資料
+## 參見
 
-- [Parsing and serializing XML](/zh-TW/docs/Parsing_and_serializing_XML)
-- [XMLHttpRequest](/zh-TW/docs/DOM/XMLHttpRequest)
-- [XMLSerializer](/zh-TW/docs/XMLSerializer)
-- [Parsing HTML to DOM](/zh-TW/Add-ons/Code_snippets/HTML_to_DOM)
+- [解析與序列化 XML](/zh-TW/docs/Web/XML/Guides/Parsing_and_serializing_XML)
+- {{domxref("XMLHttpRequest")}}
+- {{domxref("XMLSerializer")}}
+- {{jsxref("JSON.parse()")}}——用於 {{jsxref("JSON")}} 文件的對應方法。

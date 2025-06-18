@@ -25,4 +25,4 @@ if (t1.hasAttributes()) {
 
 ## 规范
 
-- [hasAttributes](http://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeHasAttrs)
+- [hasAttributes](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-NodeHasAttrs)

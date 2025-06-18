@@ -136,7 +136,7 @@ Bien que les navigateurs mobiles puissent présenter les problèmes évoqués ci
 
 ### Les "sprites" audio
 
-Les "sprites" audio empruntent leur nom aux ["sprites" CSS](/fr/docs/Web/CSS/CSS_Images/Sprites_CSS) ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.
+Les "sprites" audio empruntent leur nom aux ["sprites" CSS](/fr/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS) ; c'est une technique visuelle permettant d'utiliser CSS avec une seule ressource graphique pour la découper en une série d'objets-images. Nous pouvons appliquer le même principe à l'audio, au lieu de disposer d'un petit nombre de petits fichiers audio qui prennent du temps à charger et à lire, nous avons un fichier audio plus grand contenant tous les fragments audio plus petits dont nous avons besoin. Pour lire un son spécifique à partir du fichier, nous utilisons simplement les périodes de début et de fin connues pour chaque "sprite" audio.
 
 L'avantage est que nous pouvons amorcer un morceau d'audio et avoir nos "sprites" prêts à partir. Pour ce faire, nous pouvons juste jouer et mettre en pause instantanément la plus grande partie de l'audio. Nous réduisons également le nombre de demandes de serveur et économisons de la bande passante.
 
@@ -208,7 +208,7 @@ myAudio.addEventListener(
 
 ## Musique de fond
 
-La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode [`playbackRate()`](/fr/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained) , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.
+La musique dans les jeux peut avoir un effet émotionnel puissant. Vous pouvez mélanger et assortir divers échantillons de musique et, en supposant que vous pouvez contrôler le volume de votre élément audio, vous pouvez fondre différentes pièces musicales. En utilisant la méthode [`playbackRate()`](/fr/docs/Web/Apps/Fundamentals/Audio_and_video_delivery/WebAudio_playbackRate_explained) , vous pouvez même ajuster la vitesse de votre musique sans affecter la hauteur, pour mieux la synchroniser avec l'action.
 
 Tout ceci est possible en utilisant l'élément standard {{HTMLElement ("audio")}} associé à l'API {{domxref("HTMLMediaElement")}} , mais il devient beaucoup plus facile et flexible avec l'[API Web Audio](/fr/docs/Web/API/Web_Audio_API).
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
 
 La fonction **`search()`** de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -22,7 +22,7 @@ var searching = browser.downloads.search(query);
 
 ### Return value
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
 
 ## Compatibilité des navigateurs
 

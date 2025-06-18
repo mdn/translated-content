@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
 
 Enregistre la page en cours en tant que fichier PDF. Cela ouvrira une boîte de dialogue, fournie par le système d'exploitation sous-jacent, demandant à l'utilisateur où il veut enregistrer le fichier PDF.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -24,7 +24,7 @@ var saving = browser.tabs.saveAsPDF(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec une chaîne d'état lorsque la boîte de dialogue sera fermée. La chaîne peut être l'une des :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne d'état lorsque la boîte de dialogue sera fermée. La chaîne peut être l'une des :
 
 - "saved"
 - "replaced"
@@ -34,7 +34,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action du navigateur](/fr/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), puis tente d'enregistrer l'onglet actif en tant que fichier PDF, puis enregistre le résultat:
+Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), puis tente d'enregistrer l'onglet actif en tant que fichier PDF, puis enregistre le résultat:
 
 ```js
 browser.browserAction.onClicked.addListener(() => {

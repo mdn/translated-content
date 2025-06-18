@@ -342,8 +342,8 @@ const endGame = () => {
 
 CSS 动画和转换有自己的事件侦听器，这些也可以通过 Web 动画 API：
 
-- [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/zh-CN/docs/Web/API/Animation/finish).
-- [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/zh-CN/docs/Web/API/Animation/cancel).
+- [`onfinish`](/zh-CN/docs/Web/API/Animation/finish_event) is the event handler for the `finish` event and can be triggered manually with [`finish()`](/zh-CN/docs/Web/API/Animation/finish).
+- [`oncancel`](/zh-CN/docs/Web/API/Animation/cancel_event) is the event handler for the `cancel` event and can be triggers with [`cancel()`](/zh-CN/docs/Web/API/Animation/cancel).
 
 在这里，我们为蛋糕，瓶子和爱丽丝设置回调来触发 endGame 功能：
 
@@ -356,7 +356,7 @@ drinking.onfinish = endGame;
 aliceChange.onfinish = endGame;
 ```
 
-Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/onfinish) and [`oncancel`](/zh-CN/docs/Web/API/Animation/oncancel).
+Prefer promises? The Web Animations API also specifies two promises: [`onfinish`](/zh-CN/docs/Web/API/Animation/finish_event) and [`oncancel`](/zh-CN/docs/Web/API/Animation/cancel_event).
 
 > [!NOTE]
 > These promises are not fully supported as of this writing.

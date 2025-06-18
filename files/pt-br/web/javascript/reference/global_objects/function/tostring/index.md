@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/toString
 
 O método **`toString()`** retorna uma string representando o código fonte da função.
 
-{{EmbedInteractiveExample("pages/js/function-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Function.toString()")}}
+
+```js interactive-example
+function sum(a, b) {
+  return a + b;
+}
+
+console.log(sum.toString());
+// Expected output: "function sum(a, b) {
+//                     return a + b;
+//                   }"
+
+console.log(Math.abs.toString());
+// Expected output: "function abs() { [native code] }"
+```
 
 ## Sintaxe
 

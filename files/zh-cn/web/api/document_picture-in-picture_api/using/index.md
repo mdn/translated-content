@@ -2,7 +2,7 @@
 title: 使用 Document Picture-in-Picture API
 slug: Web/API/Document_Picture-in-Picture_API/Using
 l10n:
-  sourceCommit: d0b23f3f26637aa405ee9ee0a0892fc6e9b742ef
+  sourceCommit: f7ddd45a6bd53eb7fc10dbacc07a3acb168c1352
 ---
 
 {{SeeCompatTable}}{{DefaultAPISidebar("Document Picture-in-Picture API")}}{{securecontext_header}}
@@ -36,7 +36,7 @@ l10n:
       </a>
     </div>
 
-    <div id="controlbar">
+    <div id="control-bar">
       <p class="no-picture-in-picture">
         Document Picture-in-Picture API 不可用
       </p>
@@ -59,7 +59,7 @@ if ("documentPictureInPicture" in window) {
   togglePipButton.textContent = "切换画中画";
   togglePipButton.addEventListener("click", togglePictureInPicture, false);
 
-  document.getElementById("controlbar").appendChild(togglePipButton);
+  document.getElementById("control-bar").appendChild(togglePipButton);
 }
 ```
 
@@ -171,7 +171,7 @@ window.documentPictureInPicture.window.close();
 
 在这里，我们恢复 DOM 更改——隐藏消息并将视频播放器放回主应用窗口中的播放器容器中。我们还使用 {{domxref("Window.close()")}} 方法以编程方式关闭画中画窗口。
 
-但是，你还需要考虑用户通过按下窗口本身上浏览器提供的关闭（X）按钮来关闭画中画窗口的情况。你可以通过使用 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件检测窗口何时关闭来处理这种情况：
+但是，你还需要考虑用户通过按下窗口本身上浏览器提供的 UI 关闭控件来关闭画中画窗口的情况。你可以通过使用 [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event) 事件检测窗口何时关闭来处理这种情况：
 
 ```js
 pipWindow.addEventListener("pagehide", (event) => {
@@ -179,6 +179,9 @@ pipWindow.addEventListener("pagehide", (event) => {
   playerContainer.append(videoPlayer);
 });
 ```
+
+> [!NOTE]
+> 在调用 `DocumentPictureInPicture.requestWindow()` 打开画中画窗口时，可以通过将选项对象中的 [`disallowReturnToOpener`](/zh-CN/docs/Web/API/DocumentPictureInPicture/requestWindow#disallowreturntoopener) 选项设置为 `true` 来隐藏浏览器提供的 UI 关闭控件。
 
 ## 监听网站何时进入画中画模式
 

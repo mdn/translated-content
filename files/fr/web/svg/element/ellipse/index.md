@@ -41,15 +41,15 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 ### Attributs Globaux
 
-- [Attributs centraux](/fr/docs/Web/SVG/Attribute/Core)
+- [Attributs centraux](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('id')}}, {{SVGAttr('tabindex')}}
-- [Attributs de style](/fr/docs/Web/SVG/Attribute/Styling)
+- [Attributs de style](/fr/docs/Web/SVG/Attribute)
   - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute/Conditional_Processing)
+- [Attributs de traitement conditionnel](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
 - Attributs d'événements
-  - : [Attributs d'évènement globaux](/fr/docs/Web/SVG/Attribute/Events#Global_Event_Attributes), [Attributs d'évènement graphiques](/fr/docs/Web/SVG/Attribute/Events#Graphical_Event_Attributes)
-- [Attributs de présentation](/fr/docs/Web/SVG/Attribute/Presentation)
+  - : [Attributs d'évènement globaux](/fr/docs/Web/SVG/Attribute#global_event_attributes), [Attributs d'évènement graphiques](/fr/docs/Web/SVG/Attribute#graphical_event_attributes)
+- [Attributs de présentation](/fr/docs/Web/SVG/Attribute)
   - : Plus notamment : {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('color-interpolation')}}, {{SVGAttr('color-rendering')}}, {{SVGAttr('cursor')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('pointer-events')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
 - Attributs ARIA
   - : `aria-activedescendant`, `aria-atomic`, `aria-autocomplete`, `aria-busy`, `aria-checked`, `aria-colcount`, `aria-colindex`, `aria-colspan`, `aria-controls`, `aria-current`, `aria-describedby`, `aria-details`, `aria-disabled`, `aria-dropeffect`, `aria-errormessage`, `aria-expanded`, `aria-flowto`, `aria-grabbed`, `aria-haspopup`, `aria-hidden`, `aria-invalid`, `aria-keyshortcuts`, `aria-label`, `aria-labelledby`, `aria-level`, `aria-live`, `aria-modal`, `aria-multiline`, `aria-multiselectable`, `aria-orientation`, `aria-owns`, `aria-placeholder`, `aria-posinset`, `aria-pressed`, `aria-readonly`, `aria-relevant`, `aria-required`, `aria-roledescription`, `aria-rowcount`, `aria-rowindex`, `aria-rowspan`, `aria-selected`, `aria-setsize`, `aria-sort`, `aria-valuemax`, `aria-valuemin`, `aria-valuenow`, `aria-valuetext`, `role`
@@ -60,7 +60,7 @@ L'élément `ellipse` est une forme basique SVG,utilisé pour créer des ellipse
 
 ## Interface DOM
 
-Cet élément implémente l'interface [`SVGEllipseElement`](/fr/DOM/SVGEllipseElement).
+Cet élément implémente l'interface [`SVGEllipseElement`](/fr/docs/DOM/SVGEllipseElement).
 
 ## Spécifications
 

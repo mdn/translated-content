@@ -122,4 +122,4 @@ scriptError.addEventListener("click", () => {
 
 ## 相关事件
 
-- This event on `Element` targets: [`error`](/zh-CN/docs/Web/API/Element/error_event) event
+- This event on `Element` targets: [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) event

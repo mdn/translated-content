@@ -27,7 +27,7 @@ Les versions les plus récentes de la spécification permettent de récupérer l
 - {{domxref("CredentialsContainer")}}
   - : Cette interface expose des méthodes pour récupérer des informations d'authentification et notifier l'agent utilisateur lorsque des évènements pertinents se produisent (connexion ou déconnexion réussies par exemple). Cette interface est accessible via `navigator.credentials`.
 - {{domxref("FederatedCredential")}}
-  - : Cette interface fournit des informations relatives à des informations d'authentifcation provenant d'un fournisseur d'identité fédéré (c'est une entité à laquelle un site web fait confiance pour authentifier un utilisateur et qui fournit une API à cet effet). Le _framework_ [OpenID Connect](http://openid.net/developers/specs/) est un exemple d'un tel cas de figure.
+  - : Cette interface fournit des informations relatives à des informations d'authentifcation provenant d'un fournisseur d'identité fédéré (c'est une entité à laquelle un site web fait confiance pour authentifier un utilisateur et qui fournit une API à cet effet). Le _framework_ [OpenID Connect](https://openid.net/developers/specs/) est un exemple d'un tel cas de figure.
 - {{domxref("PasswordCredential")}}
   - : Cette interface fournit des informations à propos d'un couple nom d'utilisateur / mot de passe.
 - {{domxref("PublicKeyCredential")}}

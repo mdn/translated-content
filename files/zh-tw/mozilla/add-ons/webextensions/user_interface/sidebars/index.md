@@ -32,7 +32,7 @@ browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
 
 ## 指定側邊欄
 
-要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/zh-TW/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
+要指定側邊欄，在 manifest.json 裡透過 [`sidebar_action`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) 鍵定義文件、標題以及圖示：
 
 ```json
 "sidebar_action": {

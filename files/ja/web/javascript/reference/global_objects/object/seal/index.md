@@ -9,7 +9,22 @@ l10n:
 
 **`Object.seal()`** 静的メソッドは、オブジェクトを封印します。オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべてのプロパティを構成不可にします。封印されたオブジェクトは、固定されたプロパティ一式を持ちます。新しいプロパティを追加したり、既存のプロパティを除去したり、列挙可能性や構成可能性を変更したり、プロトタイプを再割り当てしたりすることはできません。既存のプロパティの値は、書き込み可能である限り変更することができます。 `seal()` は渡したオブジェクトを返します。
 
-{{EmbedInteractiveExample("pages/js/object-seal.html")}}
+{{InteractiveExample("JavaScript Demo: Object.seal()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+Object.seal(object1);
+object1.property1 = 33;
+console.log(object1.property1);
+// Expected output: 33
+
+delete object1.property1; // Cannot delete when sealed
+console.log(object1.property1);
+// Expected output: 33
+```
 
 ## 構文
 

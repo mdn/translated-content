@@ -52,7 +52,7 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 ## Ver también
 
-- [`wheel`](/es/docs/Web/Reference/Events/wheel)
+- [`wheel`](/es/docs/Web/API/Element/wheel_event)
 - Interfaces reemplazados por este:
 
   - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}

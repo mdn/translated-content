@@ -54,7 +54,7 @@ div {width: 40px; height: 40px;}
 
 {{Specifications}}
 
-## ブラウザー互換性
+## ブラウザーの互換性
 
 {{Compat}}
 

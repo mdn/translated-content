@@ -106,4 +106,4 @@ g.next(2);
 ## 関連情報
 
 - {{jsxref("Statements/function*", "function*")}}
-- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+- [イテレーターとジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)

@@ -8,7 +8,7 @@ slug: Web/CSS/Layout_cookbook
 CSS 布局手册旨在汇集常见的布局样式，这些布局你可能在自己的网站中会用到。这些布局样式不仅仅可以用来开始一个项目，而且提供了具体的使用方法，作为开发人员，你可以做出合适的选择。
 
 > [!NOTE]
-> 如果你是首次接触 CSS 布局，你可以先看一下 [CSS 布局学习模块](/zh-CN/docs/Learn/CSS/CSS_layout)，其中的基础知识有利于你更好的使用本书中的布局样式。
+> 如果你是首次接触 CSS 布局，你可以先看一下 [CSS 布局学习模块](/zh-CN/docs/Learn_web_development/Core/CSS_layout)，其中的基础知识有利于你更好的使用本书中的布局样式。
 
 ## 布局专题
 

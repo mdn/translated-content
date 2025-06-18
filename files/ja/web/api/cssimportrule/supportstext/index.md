@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("CSSOM")}}{{SeeCompatTable}}
 
-**`supportsText`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule)で指定された supports 条件を返します。
+**`supportsText`** は {{domxref("CSSImportRule")}} インターフェイスの読み取り専用プロパティで、 {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で指定された supports 条件を返します。
 
 ## 値
 

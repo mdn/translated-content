@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 Позволяет расширениям получать и устанавливать куки, а также сообщать об их изменении.
 
-Для использования этого API,вам нужно предоставить доступ [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/en-US/Add-ons/WebExtensions/API/cookies#Permissions).
+Для использования этого API,вам нужно предоставить доступ [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) в вашем файле [manifest.json](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json),а также [host permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) для тех сайтов чьи куки вам нужны для доступа.Смотрите [cookie Permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions).
 
 ## Types
 
@@ -38,7 +38,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 
 ## Permissions
 
-In order to use this API, an add-on must specify the "cookies" [API permission](/en-US/Add-ons/WebExtensions/manifest.json/permissions#API_permissions) in its manifest, along with [host permissions](/en-US/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
+In order to use this API, an add-on must specify the "cookies" [API permission](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) in its manifest, along with [host permissions](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) for any sites for which it wishes to access cookies. The add-on may read or write any cookies which could be read or written by a URL matching the host permissions. For example:
 
 - `http://*.example.com/`
 

@@ -23,7 +23,7 @@ Notez que ces PI n'ont aucun effet lorsque la transformation est faite à l'aide
 
 ### Instructions de traitement
 
-Les attributs des PI `xslt-param` et `xslt-param-namespace` sont analysés en utilisant les règles définies dans [xml-stylesheet](http://www.w3.org/TR/xml-stylesheet/). Tous les attributs non reconnus sont ignorés. L'analyse d'un attribut n'échouera pas à cause de la présence d'un attribut non reconnu tant que cet attribut respecte la syntaxe définie dans `xml-stylesheet`.
+Les attributs des PI `xslt-param` et `xslt-param-namespace` sont analysés en utilisant les règles définies dans [xml-stylesheet](https://www.w3.org/TR/xml-stylesheet/). Tous les attributs non reconnus sont ignorés. L'analyse d'un attribut n'échouera pas à cause de la présence d'un attribut non reconnu tant que cet attribut respecte la syntaxe définie dans `xml-stylesheet`.
 
 Les deux instructions de traitement `xslt-param` et `xslt-param-namespace` doivent apparaître dans le prologue du document, c'est-à-dire avant la balise du premier élément. Toutes les PI du prologue sont exécutées, celles présentes avant une PI `xml-stylesheet` comme celles présentes après.
 
@@ -34,7 +34,7 @@ S'il existe plusieurs PI `xml-stylesheet` les paramètres s'appliquent à toutes
 La PI `xslt-param` accepte quatre attributs&nbsp;:
 
 - name
-  - : La partie locale du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut. Cependant, si ce n'est pas un [NCName](http://www.w3.org/TR/REC-xml-names/#NT-NCName) valide, il ne correspondra à aucun paramètre de la feuille de style.
+  - : La partie locale du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut. Cependant, si ce n'est pas un [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) valide, il ne correspondra à aucun paramètre de la feuille de style.
 - namespace
   - : L'espace de nommage du nom du paramètre. Aucune vérification de syntaxe n'est faite pour cet attribut.
 - value

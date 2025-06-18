@@ -146,7 +146,7 @@ console.log(eval(s2.valueOf())); // 数値の 4 を返す
 - 数値は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/toString) と同じアルゴリズムで変換されます。
 - [長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)は [`toString(10)`](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt/toString) と同じアルゴリズムで変換されます。
 - [シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)は {{jsxref("TypeError")}} が発生します。
-- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
+- オブジェクトは最初に[プリミティブに変換](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)され、これは [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) を（`"string"` をヒントとして）呼び出すことで行われ、次に `toString()`、そして `valueOf()` メソッドがこの順序で呼び出されます。結果のプリミティブはそれから文字列に変換されます。
 
 JavaScript でほぼ同じ効果を得る方法はいくつかあります。
 
@@ -308,7 +308,7 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 > これらはとても古い HTML 標準に基づいており、現在利用できる HTML タグや属性のサブセットしか提供していないため、使用するのには限界があります。多くが今日では非推奨または標準外のマークアップを生成します。さらに、単純な文字列の連結を検証やサニタイズなしに行うため、[`innerHTML`](/ja/docs/Web/API/Element/innerHTML) を使用して直接挿入するとセキュリティ上の脅威となる可能性があります。代わりに [DOM API](/ja/docs/Web/API/Document_Object_Model)、例えば [`document.createElement()`](/ja/docs/Web/API/Document/createElement) など使用してください。
 
 - {{jsxref("String.prototype.anchor()")}} {{deprecated_inline}}
-  - : [`<a name="name">`](/ja/docs/Web/HTML/Element/a#name)（ハイパーテキストのターゲット）
+  - : [`<a name="name">`](/ja/docs/Web/HTML/Reference/Elements/a#name)（ハイパーテキストのターゲット）
 - {{jsxref("String.prototype.big()")}} {{deprecated_inline}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}} {{deprecated_inline}}
@@ -318,13 +318,13 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 - {{jsxref("String.prototype.fixed()")}} {{deprecated_inline}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}} {{deprecated_inline}}
-  - : [`<font color="color">`](/ja/docs/Web/HTML/Element/font#color)
+  - : [`<font color="color">`](/ja/docs/Web/HTML/Reference/Elements/font#color)
 - {{jsxref("String.prototype.fontsize()")}} {{deprecated_inline}}
-  - : [`<font size="size">`](/ja/docs/Web/HTML/Element/font#size)
+  - : [`<font size="size">`](/ja/docs/Web/HTML/Reference/Elements/font#size)
 - {{jsxref("String.prototype.italics()")}} {{deprecated_inline}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}} {{deprecated_inline}}
-  - : [`<a href="url">`](/ja/docs/Web/HTML/Element/a#href)（URL へのリンク）
+  - : [`<a href="url">`](/ja/docs/Web/HTML/Reference/Elements/a#href)（URL へのリンク）
 - {{jsxref("String.prototype.small()")}} {{deprecated_inline}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}} {{deprecated_inline}}
@@ -374,5 +374,5 @@ String(undefinedVar); // "undefined"
 
 ## 関連情報
 
-- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Text_formatting)ガイド
+- [テキスト処理](/ja/docs/Web/JavaScript/Guide/Numbers_and_strings)ガイド
 - {{jsxref("RegExp")}}

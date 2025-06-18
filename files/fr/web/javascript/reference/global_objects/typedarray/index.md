@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray
 
 Un objet **_TypedArray_** décrit une vue organisée à la façon d'un tableau pour manipuler [un tampon (_buffer_) de données binaires](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). `TypedArray` n'est pas une propriété globale, il n'existe pas non plus de constructeur `TypedArray`. En revanche, plusieurs propriétés globales existent et leurs valeurs permettent de construire des tableaux typés (<i lang="en">typed arrays</i>) avec différents types de données. Ceux-ci sont listés ci-après. Les pages suivantes permettent de décrire les propriétés et méthodes qui peuvent être utilisées sur les différents tableaux typés.
 
-{{EmbedInteractiveExample("pages/js/typedarray-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+
+```js interactive-example
+// Create a TypedArray with a size in bytes
+const typedArray1 = new Int8Array(8);
+typedArray1[0] = 32;
+
+const typedArray2 = new Int8Array(typedArray1);
+typedArray2[1] = 42;
+
+console.log(typedArray1);
+// Expected output: Int8Array [32, 0, 0, 0, 0, 0, 0, 0]
+
+console.log(typedArray2);
+// Expected output: Int8Array [32, 42, 0, 0, 0, 0, 0, 0]
+```
 
 ## Description
 
@@ -65,9 +80,9 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 
 - [`TypedArray.BYTES_PER_ELEMENT`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/BYTES_PER_ELEMENT)
   - : Renvoie un nombre indiquant la taille, exprimée en octets, de chaque élément du tableau typé.
-- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/name)
+- [`TypedArray.name`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name)
   - : Renvoie la chaîne de caractères correspondant au nom du constructeur (par exemple, `"Int8Array"`).
-- [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@species)
+- [`get TypedArray[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.species)
   - : La fonction de construction utilisée pour créer des objets dérivés.
 - `TypedArray`
   - : Le prototype pour les objes `TypedArray`.
@@ -124,9 +139,9 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
 - [`TypedArray.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/map)
   - : Crée un nouveau tableau dont les éléments sont les résultats de l'appel de la fonction passée en argument pour chaque élément du tableau original. Voir aussi [`Array.prototype.map()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/map).
 - [`TypedArray.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduce)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de gauche à droite), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduce()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce).
 - [`TypedArray.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reduceRight)
-  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/ReduceRight).
+  - : Applique une fonction avec un accumulateur pour chaque valeur du tableau (de droite à gauche), afin de le réduire à une seule valeur. Voir aussi [`Array.prototype.reduceRight()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight).
 - [`TypedArray.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/reverse)
   - : Inverse l'ordre des éléments d'un tableau (le premier devenant le dernier, le dernier devenant le premier et ainsi de suite). Voir aussi [`Array.prototype.reverse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse).
 - [`TypedArray.prototype.set()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/set)
@@ -145,7 +160,7 @@ Où _TypedArray_ est un constructeur donné pour un type de tableau typé exista
   - : Renvoie une chaîne de caractères localisée qui représente le tableau et ses éléments. Voir aussi [`Array.prototype.toLocaleString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toLocaleString).
 - [`TypedArray.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/toString)
   - : Renvoie une chaîne de caractères représentant le tableau et ses éléments. Voir aussi [`Array.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/toString).
-- [`TypedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/@@iterator)
+- [`TypedArray.prototype[@@iterator]()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray/Symbol.iterator)
   - : Renvoie un nouvel objet _itérateur de tableau_ qui contient les valeurs pour chaque indice du tableau.
 
 ## Exemples
@@ -236,7 +251,7 @@ const i32 = new Int32Array(new ArrayBuffer(4));
 ## Voir aussi
 
 - [Une prothèse d'émulation pour les tableaux typés avec la bibliothèque `core-js`](https://github.com/zloirock/core-js#ecmascript-typed-arrays)
-- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Typed_arrays)
+- [Les tableaux typés en JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays)
 - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
 - [`DataView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/DataView)
 - [TextDecoder](/fr/docs/Web/API/TextDecoder), une API utilitaire pour décoder des chaînes de caractères à partir de données numériques

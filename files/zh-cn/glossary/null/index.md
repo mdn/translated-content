@@ -19,7 +19,7 @@ console.log(typeof null); // "object"
 
 ## 参见
 
-- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [JavaScript 数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - JavaScript 全局对象：[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)
 - 维基百科上的[空指针](https://zh.wikipedia.org/wiki/空指针)
 - **[MDN 术语表](/zh-CN/docs/Glossary)**

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
+**`<frequency>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、話し声の高さなどの周波数の値を表します。今のところ、どの CSS プロパティでも使われていません。
 
 ## 構文
 

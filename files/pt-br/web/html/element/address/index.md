@@ -11,17 +11,17 @@ A informação de contato fornecida por um conteúdo do elemento `<address>` pod
 
 `<address>` pode ser usado em uma variedade de contextos, como fornecer informação de contato de uma empresa no header da página, ou indicar o autor de um artigo incluindo um elemento `<address>` dentro do {{HTMLElement("article")}}.
 
-- _[Categoria de conteúdo](/pt-BR/docs/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), conteúdo palpável.
-- _Conteúdo permitido_[Conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), mas sem nenhum elemento \<address> aninhado, e sem conteúdo de cabeçalho ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), e nem conteúdo de seção como ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), e sem{{HTMLElement("header")}} ou o elemento {{HTMLElement("footer")}}.
-- _Omissão de tag_ {{no_tag_omission}}
-- _Elementos-pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/HTML/Content_categories#Flow_content), exceto os elementos \<address> (de acordo com o princípio lógico da simetria, se a tag \<address>, como pai, não pode ter elemento \<address> como filho, então o mesmo conteúdo \<address> não pode ter tag \<address> como pai).
+- _[Categoria de conteúdo](/pt-BR/docs/Web/HTML/Content_categories)_ [Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), conteúdo palpável.
+- _Conteúdo permitido_[Conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), mas sem nenhum elemento \<address> aninhado, e sem conteúdo de cabeçalho ({{HTMLElement("hgroup")}}, {{HTMLElement("h1")}}, {{HTMLElement("h2")}}, {{HTMLElement("h3")}}, {{HTMLElement("h4")}}, {{HTMLElement("h5")}}, {{HTMLElement("h6")}}), e nem conteúdo de seção como ({{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("section")}}, {{HTMLElement("nav")}}), e sem{{HTMLElement("header")}} ou o elemento {{HTMLElement("footer")}}.
+- _Omissão de tag_ Nenhuma, tanto a tag inicial quanto a final são obrigatórias.
+- _Elementos-pai permitidos_ Qualquer elemento que aceite [conteúdo de fluxo](/pt-BR/docs/Web/HTML/Content_categories#flow_content), exceto os elementos \<address> (de acordo com o princípio lógico da simetria, se a tag \<address>, como pai, não pode ter elemento \<address> como filho, então o mesmo conteúdo \<address> não pode ter tag \<address> como pai).
 -
 - _Regras ARIA permitidas_ Nenhuma
 - _Interface DOM_ {{domxref("HTMLElement")}}. Antes do Gecko 2.0 (Firefox 4), Gecko implementava este elemento usando a interface {{domxref("HTMLSpanElement")}}
 
 ## Atributos
 
-Este elemento inclui somente os [atributos globais](/pt-BR/docs/HTML/Global_attributes).
+Este elemento inclui somente os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 ## Notas de uso
 

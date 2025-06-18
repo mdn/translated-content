@@ -33,4 +33,4 @@ L'événement **afterprint** est déclenché après que le document associé a �
 
 ## Evénements liés
 
-- [beforeprint](/fr/docs/Mozilla_event_reference/beforeprint)
+- [beforeprint](/fr/docs/Web/API/Window/beforeprint_event)

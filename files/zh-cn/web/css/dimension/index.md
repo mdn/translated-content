@@ -5,7 +5,7 @@ slug: Web/CSS/dimension
 
 {{CSSRef}}
 
-**`<dimension>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)是一个带有单位的{{CSSxRef("&lt;number&gt;")}}，例如：`10px`
+**`<dimension>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)是一个带有单位的{{CSSxRef("&lt;number&gt;")}}，例如：`10px`
 
 CSS 使用度量值来描述距离 ({{CSSxRef("&lt;length&gt;")}})，时间 ({{CSSxRef("&lt;time&gt;")}})，频率 ({{CSSxRef("&lt;frequency&gt;")}})，分辨率 ({{CSSxRef("&lt;resolution&gt;")}}) 以及其他量。
 

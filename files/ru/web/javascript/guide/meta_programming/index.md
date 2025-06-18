@@ -41,7 +41,7 @@ console.log(p.a, p.b); // 1, 42
 
 ## Обработчики и ловушки
 
-В следующей таблице перечислены ловушки, доступные для использования в объекте `Proxy`. Смотрите подробные объяснения и примеры в [документации](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/handler).
+В следующей таблице перечислены ловушки, доступные для использования в объекте `Proxy`. Смотрите подробные объяснения и примеры в [документации](/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy).
 
 <table class="standard-table">
   <thead>
@@ -388,7 +388,7 @@ Reflect.has(Object, "assign"); // true
 
 ### Улучшенная функция `apply`
 
-В ES5 обычно используется метод {{jsxref("Function.prototype.apply()")}} для вызова функции в определённом контексте (с определённым `this)` и с параметрами, заданными в виде массива (или [массива-подобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#Working_with_array-like_objects)).
+В ES5 обычно используется метод {{jsxref("Function.prototype.apply()")}} для вызова функции в определённом контексте (с определённым `this)` и с параметрами, заданными в виде массива (или [массива-подобного объекта](/ru/docs/Web/JavaScript/Guide/Indexed_collections#working_with_array-like_objects)).
 
 ```js
 Function.prototype.apply.call(Math.floor, undefined, [1.75]);

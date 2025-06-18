@@ -43,7 +43,7 @@ Les événements ont trois fonctions :
     <!---->
 
     - `selectInfo`
-      - : [`object`](#selectInfo).
+      - : [`object`](#selectinfo).
 
 ## Objets supplémentaires
 

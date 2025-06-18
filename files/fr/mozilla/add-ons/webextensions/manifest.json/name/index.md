@@ -26,7 +26,7 @@ Nom de l'extension. Ceci permet d'identifier l'extension dans l'interface utilis
 
 Il est recommandé de garder le nom suffisamment court pour pouvoir s'afficher dans l'interface utilisateur. Google Chrome et Microsoft Edge limitent la longueur du nom à 45 caractères.
 
-C'est une [propriété localisable](/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json).
+C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
 
 ## Exemple
 

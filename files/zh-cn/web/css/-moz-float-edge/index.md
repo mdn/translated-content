@@ -1,5 +1,5 @@
 ---
-title: "-moz-float-edge"
+title: -moz-float-edge
 slug: Web/CSS/-moz-float-edge
 l10n:
   sourceCommit: 4767ebffd07b627275ae9cac6863b153e3e6746d

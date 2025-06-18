@@ -7,7 +7,7 @@ slug: Web/API/Element/keydown_event
 
 Событие **`keydown`** срабатывает, когда клавиша была нажата.
 
-В отличии от события {{Event("keypress")}}, событие keydown срабатывает на всех клавишах, независимо от того, есть ли у них значение.
+В отличии от события [`keypress`](/ru/docs/Web/API/Element/keypress_event), событие keydown срабатывает на всех клавишах, независимо от того, есть ли у них значение.
 
 <table class="properties">
   <thead></thead>
@@ -41,7 +41,7 @@ slug: Web/API/Element/keydown_event
 
 ### Примеры addEventListener keydown
 
-Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code) всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Element/input) элемента.
+Этот пример отображает значение [`KeyboardEvent.code`](/ru/docs/Web/API/KeyboardEvent/code) всякий раз, когда вы нажимаете клавишу внутри [`<input>`](/ru/docs/Web/HTML/Reference/Elements/input) элемента.
 
 ```html
 <input placeholder="Кликните здесь, затем нажмите клавишу." size="40" />
@@ -77,7 +77,7 @@ input.onkeydown = logKey;
 
 ## Смотрите также
 
-- [`input`](/ru/docs/Web/API/HTMLElement/input_event)
+- [`input`](/ru/docs/Web/API/Element/input_event)
 - [`keypress`](/ru/docs/Web/API/Element/keypress_event)
 - [`keyup`](/ru/docs/Web/API/Element/keyup_event)
-- [Document `keydown` event](/ru/docs/Web/API/Document/keydown_event)
+- [Document `keydown` event](/ru/docs/Web/API/Element/keydown_event)

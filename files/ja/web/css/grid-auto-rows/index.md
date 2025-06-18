@@ -2,14 +2,65 @@
 title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
 {{CSSRef}}
 
-**`grid-auto-rows`** は CSS のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
+**`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-auto-rows.html")}}
+{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+
+```css interactive-example-choice
+grid-auto-rows: auto;
+```
+
+```css interactive-example-choice
+grid-auto-rows: 50px;
+```
+
+```css interactive-example-choice
+grid-auto-rows: min-content;
+```
+
+```css interactive-example-choice
+grid-auto-rows: minmax(30px, auto);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+      <div>Four</div>
+      <div>Five</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  font-size: 22px;
+}
+
+#example-element div:last-child {
+  font-size: 13px;
+}
+```
 
 グリッドアイテムが {{cssxref("grid-template-rows")}} で明示的に大きさが指定されていない行に配置された場合、暗黙的に{{glossary("grid", "グリッド")}}トラックが作成され、そのアイテムを保持します。これには、範囲外の行に明示的に配置する場合と、自動配置アルゴリズムによって追加の行が作成される場合があります。
 
@@ -106,7 +157,7 @@ grid-auto-rows: unset;
 
 #### HTML
 
-```html
+```html live-sample___setting_grid_row_size
 <div id="grid">
   <div id="item1"></div>
   <div id="item2"></div>
@@ -116,7 +167,7 @@ grid-auto-rows: unset;
 
 #### CSS
 
-```css
+```css live-sample___setting_grid_row_size
 #grid {
   width: 200px;
   display: grid;
@@ -132,7 +183,7 @@ grid-auto-rows: unset;
 
 #### 結果
 
-{{EmbedLiveSample("グリッド行の寸法を設定", "210px", "210px")}}
+{{EmbedLiveSample("Setting_grid_row_size", "210px", "210px")}}
 
 ## 仕様書
 
@@ -144,6 +195,8 @@ grid-auto-rows: unset;
 
 ## 関連情報
 
-- 関連する CSS プロパティ: {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}}, {{cssxref("grid")}}
-- グリッドレイアウトガイド: [CSS グリッドレイアウトでの自動配置 - 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
-- 動画チュートリアル: _[Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)_
+- {{cssxref("grid-auto-columns")}}
+- {{cssxref("grid-auto-flow")}}
+- {{cssxref("grid")}}
+- [CSS グリッドレイアウトでの自動配置: 暗黙のグリッド内での行の大きさ](/ja/docs/Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout#暗黙のグリッド内での行の大きさ)
+- 動画: [Introducing Grid auto-placement and order](https://gridbyexample.com/video/series-auto-placement-order/)

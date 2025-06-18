@@ -31,6 +31,6 @@ slug: Web/API/Client
 
 ## 参见
 
-- [使用 Service Worker](/zh-CN/docs/Web/API/ServiceWorker_API/Using_Service_Workers)
+- [使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [是否支持 ServiceWorker？](https://jakearchibald.github.io/isserviceworkerready/)
 - [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)

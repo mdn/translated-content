@@ -45,8 +45,7 @@ AudioWorkletGlobalScope.registerProcessor(name, processorCtor);
   - : 다음의 조건 아래서 발생됩니다:
 
     - _processorCtor_ 이 호출 가능한 생성자가 아닙니다.
-    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors",
-        "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
+    - 생성자의 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 속성이 존재하고 {{domxref("AudioParamDescriptor")}} 기반의 객체의 배열을 반환하지 않습니다.
 
 ## 예제
 

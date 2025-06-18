@@ -30,11 +30,11 @@ let getSettings = browser.browsingData.settings()
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，当成功时其会兑现一个包含设置信息的对象。该对象有三个属性：
 
 - `options`
-  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`。一个描述当前选择的删除选项的 `RemovalOptions` 对象。
+  - : {{WebExtAPIRef("browsingData.RemovalOptions")}}。一个描述当前选择的删除选项的 `RemovalOptions` 对象。
 - `dataToRemove`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`。包含可以在浏览器用户界面中切换的每种数据类型的属性。每个属性的值如果选中删除该类型的数据为 `true`，否则为 `false`。
+  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。每个属性的值如果选中删除该类型的数据为 `true`，否则为 `false`。
 - `dataRemovalPermitted`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则对应属性的值为 `true`，否则为 `false`。
+  - : {{WebExtAPIRef("browsingData.DataTypeSet")}}。包含可以在浏览器用户界面中切换的每种数据类型的属性。如果设备的管理员允许用户删除该类型的数据，则对应属性的值为 `true`，否则为 `false`。
 
 如果发生任何错误，Promise 将会被拒绝并带有错误消息。
 

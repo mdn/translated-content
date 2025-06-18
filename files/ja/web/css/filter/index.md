@@ -2,7 +2,7 @@
 title: filter
 slug: Web/CSS/filter
 l10n:
-  sourceCommit: de7d710496266ccf4fce5ade75a67e6605f60ce5
+  sourceCommit: 5178e1e7c9edf0c9c652275ae62f090042ce2422
 ---
 
 {{CSSRef}}
@@ -11,7 +11,58 @@ l10n:
 
 いくつかの[関数](#関数)、例えば `blur()` や `contrast()` などが利用でき、あらかじめ定義された効果を実現するのに役立てることができます。
 
-{{EmbedInteractiveExample("pages/css/filter.html")}}
+{{InteractiveExample("CSS Demo: filter")}}
+
+```css interactive-example-choice
+filter: url("/shared-assets/images/examples/shadow.svg#element-id");
+```
+
+```css interactive-example-choice
+filter: blur(5px);
+```
+
+```css interactive-example-choice
+filter: contrast(200%);
+```
+
+```css interactive-example-choice
+filter: grayscale(80%);
+```
+
+```css interactive-example-choice
+filter: hue-rotate(90deg);
+```
+
+```css interactive-example-choice
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <img
+      id="example-element"
+      src="/shared-assets/images/examples/firefox-logo.svg"
+      width="200" />
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  background-color: #fff;
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#example-element {
+  flex: 1;
+  padding: 30px;
+}
+```
 
 ## 構文
 
@@ -52,7 +103,7 @@ filter: unset;
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
+`url()` を使用して [SVG の filter 要素](/ja/docs/Web/SVG/Reference/Element/filter)を参照することができます。 SVG の {{SVGElement("filter")}} 要素を参照するには、次のような構文を使用してください。
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -154,7 +205,7 @@ filter: contrast(175%) brightness(103%);
 
 ### 補間
 
-アニメーション時、最初のフィルターと最後のフィルターの両方が同じ長さの関数リストであり、 {{cssxref("url","url()")}} を持たない場合、それぞれのフィルター関数は、その特有の規則に従って{{Glossary("interpolation", "補間")}}されます。
+アニメーション時、最初のフィルターと最後のフィルターの両方が同じ長さの関数リストであり、 {{cssxref("url_value", "&lt;url&gt;")}} を持たない場合、それぞれのフィルター関数は、その特有の規則に従って{{Glossary("interpolation", "補間")}}されます。
 
 フィルターリストが異なる形で掲載されている場合、長い方のリストに欠けている同等のフィルター関数が、短い方のリストの終わりに追加されます。追加された関数は、フィルターを変更していない初期値を使用します。掲載されているすべてのフィルターは、フィルター関数特有の仕様に従って補間されます。それ以外の場合は離散補間を用います。
 
@@ -237,4 +288,4 @@ img:nth-of-type(2) {
 - CSS [合成と混合](/ja/docs/Web/CSS/CSS_compositing_and_blending)モジュール（CSS の {{cssxref("background-blend-mode")}} および {{cssxref("mix-blend-mode")}} プロパティを含む）
 - CSS の {{cssxref("mask")}} プロパティ
 - [SVG](/ja/docs/Web/SVG) （SVG の {{SVGElement("filter")}} 要素や {{SVGAttr("filter")}} 属性を含む）
-- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML コンテンツへの SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

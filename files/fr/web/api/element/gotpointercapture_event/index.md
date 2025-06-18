@@ -39,6 +39,6 @@ function init() {
 
 ## Voir aussi
 
-- L'évènement [`Document: gotpointercapture`](/fr/docs/Web/API/Document/gotpointercapture_event)
+- L'évènement [`Document: gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
 - L'évènement [`Element: gotpointercapture`](/fr/docs/Web/API/Element/gotpointercapture_event)
 - {{domxref("Element.setPointerCapture()")}}

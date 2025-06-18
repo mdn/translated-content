@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Number/toString
 
 La méthode **`toString()`** renvoie une chaîne de caractère représentant l'objet Number.
 
-{{EmbedInteractiveExample("pages/js/number-tostring.html")}}
+{{InteractiveExample("JavaScript Demo: Number.toString()")}}
+
+```js interactive-example
+function hexColour(c) {
+  if (c < 256) {
+    return Math.abs(c).toString(16);
+  }
+  return 0;
+}
+
+console.log(hexColour(233));
+// Expected output: "e9"
+
+console.log(hexColour("11"));
+// Expected output: "b"
+```
 
 ## Syntaxe
 

@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
 
 Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -28,7 +28,7 @@ var gettingFrames = browser.webNavigation.getAllFrames(
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
 
 - `errorOccurred`
   - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.

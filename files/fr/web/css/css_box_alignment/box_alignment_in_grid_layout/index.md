@@ -7,9 +7,9 @@ l10n:
 
 {{CSSRef}}
 
-Le module de spécification sur [l'alignement des boîtes (<i lang="en">Box Alignment</i>)](/fr/docs/Web/CSS/CSS_Box_Alignment) détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [les grilles CSS](/fr/docs/Web/CSS/CSS_Grid_Layout).
+Le module de spécification sur [l'alignement des boîtes (<i lang="en">Box Alignment</i>)](/fr/docs/Web/CSS/CSS_box_alignment) détaille le fonctionnement de l'alignement selon les différentes méthodes de disposition. Dans cet article, nous verrons comment fonctionne l'alignement des boîtes avec [les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout).
 
-Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_Box_Alignment).
+Cette page détaille les aspects spécifiques relatifs à l'alignement et aux grilles. Pour une description générale des fonctionnalités communes pour les différentes dispositions, voir [la page principale sur cette spécification](/fr/docs/Web/CSS/CSS_box_alignment).
 
 ## Exemple simple
 
@@ -88,7 +88,7 @@ Les propriétés sans préfixe `grid-` ont été implémentées plus tard par le
 
 ## Guides
 
-- [Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout)
+- [Aligner les boîtes dans une disposition en grille](/fr/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 
 ## Ressources externes
 

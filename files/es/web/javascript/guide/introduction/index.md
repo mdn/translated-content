@@ -78,7 +78,7 @@ La herramienta _Consola web_ integrada en Firefox es útil para experimentar con
 
 ### Entrada unilínea en la consola web
 
-La [Consola web](/es/docs/Tools/Web_Console) te muestra información sobre la página web cargada actualmente, y también incluye un intérprete de JavaScript que puedes usar para ejecutar expresiones de JavaScript en la página actual.
+La [Consola web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) te muestra información sobre la página web cargada actualmente, y también incluye un intérprete de JavaScript que puedes usar para ejecutar expresiones de JavaScript en la página actual.
 
 Para abrir la Consola web (<kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd> en Windows y Linux o <kbd>Cmd</kbd>-<kbd>Opción</kbd>-<kbd>K</kbd> en Mac), abre el menú **Herramientas** en Firefox y selecciona "**Desarrollador ▶ Consola web**".
 
@@ -97,7 +97,7 @@ console.log(eval("3 + 5"));
 
 ### Entrada multilínea en la consola web
 
-El modo de entrada unilínea de la consola web es ideal para realizar pruebas rápidas de expresiones JavaScript, pero aunque puedes ejecutar varias líneas, no es muy conveniente para eso. Para JavaScript más complejo, puedes utilizar el [modo de entrada multilínea](/es/docs/Tools/Web_Console/The_command_line_interpreter#Multi-line_mode).
+El modo de entrada unilínea de la consola web es ideal para realizar pruebas rápidas de expresiones JavaScript, pero aunque puedes ejecutar varias líneas, no es muy conveniente para eso. Para JavaScript más complejo, puedes utilizar el [modo de entrada multilínea](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#multi-line_mode).
 
 ### Hola mundo
 

@@ -9,7 +9,18 @@ l10n:
 
 **`getUTCDate()`** メソッドは、協定世界時に基づき、指定された日時の月内の日（1 ～ 31）を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcdate.html")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCDate()")}}
+
+```js interactive-example
+const date1 = new Date("August 19, 1975 23:15:30 GMT+11:00");
+const date2 = new Date("August 19, 1975 23:15:30 GMT-11:00");
+
+console.log(date1.getUTCDate());
+// Expected output: 19
+
+console.log(date2.getUTCDate());
+// Expected output: 20
+```
 
 ## 構文
 

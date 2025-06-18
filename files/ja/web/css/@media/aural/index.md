@@ -40,7 +40,7 @@ CSS の `aural` メディア種別は — [`speech`](/ja/docs/Web/CSS/@media#spe
 
 ## 関連情報
 
-- [メディアクエリー](/ja/docs/Web/CSS/Media_Queries)
-- [メディアクエリーの使用](/ja/docs/Web/CSS/Media_Queries/Using_media_queries)
+- [メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [`@media`](/ja/docs/Web/CSS/@media)
 - [`speech`](/ja/docs/Web/CSS/@media#speech)

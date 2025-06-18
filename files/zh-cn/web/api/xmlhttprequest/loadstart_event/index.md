@@ -10,7 +10,7 @@ slug: Web/API/XMLHttpRequest/loadstart_event
 ## 基本信息
 
 - 规范文档
-  - : [Progress](http://www.w3.org/TR/progress-events/)
+  - : [Progress](https://www.w3.org/TR/progress-events/)
 - 接口
   - : ProgressEvent
 - 冒泡

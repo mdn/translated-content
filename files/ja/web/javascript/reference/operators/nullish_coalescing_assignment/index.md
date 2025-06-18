@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 Null 合体代入 (`x ??= y`) 演算子は、`x` が {{Glossary("nullish")}} (`null` または `undefined`) である場合にのみ代入を行います。
 
-{{EmbedInteractiveExample("pages/js/expressions-nullish-coalescing-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+
+```js interactive-example
+const a = { duration: 50 };
+
+a.speed ??= 25;
+console.log(a.speed);
+// Expected output: 25
+
+a.duration ??= 10;
+console.log(a.duration);
+// Expected output: 50
+```
 
 ## 構文
 
@@ -19,7 +31,7 @@ expr1 ??= expr2;
 
 ### 短絡評価 (ショートサーキット)
 
-[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)は左から右に評価され、次のルールを使って短絡評価の可能性があるかどうかテストされます。
+[Null 合体演算子](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)は左から右に評価され、次のルールを使って短絡評価の可能性があるかどうかテストされます。
 
 `(null や undefined ではない式) ?? expr` は、左辺が `null` でも `undefined` でもないことが証明されたら、左辺の式が短絡評価されます。
 
@@ -62,7 +74,7 @@ config({}); // { duration: 100, speed: 25 }
 
 ## 関連情報
 
-- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator)
+- [Null 合体演算子 (`??`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing)
 - {{Glossary("Nullish")}}
 - {{Glossary("Truthy", "真値")}}
 - {{Glossary("Falsy", "偽値")}}

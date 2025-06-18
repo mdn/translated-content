@@ -9,7 +9,7 @@ slug: Web/API/MediaStreamTrack
 
 ## 속성
 
-`MediaStreamTrack`은 다음에 나열된 속성 외에도 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}로 설정하고 {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}와 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}로 접근 가능한 제약 속성을 가집니다. [기능, 제약, 설정](/ko/docs/Web/API/Media_Streams_API/Constraints) 문서를 방문해 제약 속성을 다루는 법을 알아보세요. 올바르게 다루지 않으면 불안정한 코드를 낳을 수 있습니다.
+`MediaStreamTrack`은 다음에 나열된 속성 외에도 {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}}로 설정하고 {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}와 {{domxref("MediaStreamTrack.getSettings", "getSettings()")}}로 접근 가능한 제약 속성을 가집니다. [기능, 제약, 설정](/ko/docs/Web/API/Media_Capture_and_Streams_API/Constraints) 문서를 방문해 제약 속성을 다루는 법을 알아보세요. 올바르게 다루지 않으면 불안정한 코드를 낳을 수 있습니다.
 
 - {{domxref("MediaStreamTrack.contentHint")}}
   - : 트랙 유형에 대한 힌트를 제공하는 문자열입니다. 웹 애플리케이션이 트랙의 처리 방식을 결정할 때 사용할 수 있습니다.
@@ -62,16 +62,16 @@ slug: Web/API/MediaStreamTrack
 
 - [`ended`](/ko/docs/Web/API/MediaStreamTrack/ended_event)
   - : 트랙의 플레이백이 끝났을 때, 즉 {{domxref("MediaStreamTrack.readyState", "readyState")}}의 값이 `ended`로 변했을 때 발생합니다.
-    [`onended`](/ko/docs/Web/API/MediaStreamTrack/onended) 이벤트 처리기 속성으로도 수신할 수 있습니다.
+    [`onended`](/ko/docs/Web/API/MediaStreamTrack/ended_event) 이벤트 처리기 속성으로도 수신할 수 있습니다.
 - [`mute`](/ko/docs/Web/API/MediaStreamTrack/mute_event)
   - : 기술적인 이유(네트워크 문제 등)로 인해 일시적으로 트랙이 데이터를 제공하지 못할 때, 즉 {{domxref("MediaStreamTrack.muted", "muted")}}의 값이 `true`로 변했을 때 발생합니다.
-    [`onmute`](/ko/docs/Web/API/MediaStreamTrack/onmute) 이벤트 처리기 속성으로도 수신할 수 있습니다.
+    [`onmute`](/ko/docs/Web/API/MediaStreamTrack/mute_event) 이벤트 처리기 속성으로도 수신할 수 있습니다.
 - [`isolationchange`](/ko/docs/Web/API/MediaStreamTrack/isolationchange_event)
   - : 문서가 트랙에 대한 접근 권한을 얻거나 잃었을 때, 즉 {{domxref("MediaStreamTrack.isolated", "isolated")}}의 값이 변할 때 발생합니다.
     [`onisolationchange`](/ko/docs/Web/API/MediaStreamTrack/onisolationchange) 이벤트 처리기 속성으로도 수신할 수 있습니다.
 - [`unmute`](/ko/docs/Web/API/MediaStreamTrack/unmute_event)
   - : 데이터를 다시 사용할 수 있어서 `muted` 상태가 끝날 때 발생합니다.
-    [`onunmute`](/ko/docs/Web/API/MediaStreamTrack/onunmute) 이벤트 처리기 속성으로도 수신할 수 있습니다.
+    [`onunmute`](/ko/docs/Web/API/MediaStreamTrack/unmute_event) 이벤트 처리기 속성으로도 수신할 수 있습니다.
 
 <dl class="hidden"><dt><code><a href="/ko/docs/Web/API/MediaStreamTrack/overconstrained_event">overconstrained</a></code> {{deprecated_inline}}</dt><dd>지정한 제약이 트랙과 호환되지 않아서 해당 제약을 무시할 때 발생합니다.<br><code><a href="/ko/docs/Web/API/MediaStreamTrack/onoverconstrained">onoverconstrained</a></code> 이벤트 처리기 속성으로도 수신할 수 있습니다.</dd></dl>
 
@@ -85,5 +85,5 @@ slug: Web/API/MediaStreamTrack
 
 ## 같이 보기
 
-- [Media Capture and Streams API](/ko/docs/Web/API/Media_Streams_API)
+- [Media Capture and Streams API](/ko/docs/Web/API/Media_Capture_and_Streams_API)
 - {{domxref("MediaStream")}}

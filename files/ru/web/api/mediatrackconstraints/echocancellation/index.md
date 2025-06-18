@@ -39,8 +39,8 @@ constraintsObject.echoCancellation = constraint;
 
 ## Смотрите также
 
-- [Media Capture and Streams API](/ru/docs/Web/API/Media_Streams_API)
-- [Capabilities, constraints, and settings](/ru/docs/Web/API/Media_Streams_API/Constraints)
+- [Media Capture and Streams API](/ru/docs/Web/API/Media_Capture_and_Streams_API)
+- [Capabilities, constraints, and settings](/ru/docs/Web/API/Media_Capture_and_Streams_API/Constraints)
 - {{domxref("MediaTrackConstraints")}}
 - {{domxref("MediaDevices.getSupportedConstraints()")}}
 - {{domxref("MediaTrackSupportedConstraints")}}

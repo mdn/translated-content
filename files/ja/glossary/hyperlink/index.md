@@ -12,7 +12,7 @@ slug: Glossary/Hyperlink
 ### 一般知識
 
 - Wikipedia の [Hyperlink](https://ja.wikipedia.org/wiki/Hyperlink)
-- MDN の [ハイパーリンク](/ja/docs/Web/Guide/HTML/Hyperlink) ガイド
+- MDN の [ハイパーリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links) ガイド
 
 ### 技術リファレンス
 
@@ -21,5 +21,5 @@ slug: Glossary/Hyperlink
 
 ### これについて学習する
 
-- [MDN の `<a>`](/ja/docs/Web/HTML/Element/a)
-- [MDN の `<link>`](/ja/docs/Web/HTML/Element/link)
+- [MDN の `<a>`](/ja/docs/Web/HTML/Reference/Elements/a)
+- [MDN の `<link>`](/ja/docs/Web/HTML/Reference/Elements/link)

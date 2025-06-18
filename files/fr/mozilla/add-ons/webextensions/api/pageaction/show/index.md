@@ -26,7 +26,7 @@ browser.pageAction.show(
 
 ### Valeur renvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie avec `undefined`.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `undefined`.
 
 ## Compatibilité des navigateurs
 
@@ -34,7 +34,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui se
 
 ## Exemples
 
-Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+Cette exemple montre l'action de la page pour l'onglet actif lorsque l'utilisateur sélectionne un élément de menu contextuel. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
 
 ```js
 browser.contextMenus.create({

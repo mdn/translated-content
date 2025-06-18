@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/assign
 
 **`Object.assign()`** 静态方法将一个或者多个*源对象*中所有{{jsxref("Object/propertyIsEnumerable", "可枚举", "", 1)}}的{{jsxref("Object/hasOwn", "自有属性", "", 1)}}复制到*目标对象*，并返回修改后的目标对象。
 
-{{EmbedInteractiveExample("pages/js/object-assign.html")}}
+{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+
+```js interactive-example
+const target = { a: 1, b: 2 };
+const source = { b: 4, c: 5 };
+
+const returnedTarget = Object.assign(target, source);
+
+console.log(target);
+// Expected output: Object { a: 1, b: 4, c: 5 }
+
+console.log(returnedTarget === target);
+// Expected output: true
+```
 
 ## 语法
 
@@ -223,5 +236,5 @@ console.log(copy);
 
 - [`core-js` 中 `Object.assign` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [构造字面量对象时使用展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax#构造字面量对象时使用展开语法)

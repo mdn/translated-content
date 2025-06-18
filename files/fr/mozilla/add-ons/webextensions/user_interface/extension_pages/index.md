@@ -65,11 +65,11 @@ function onVisited(historyItem) {
 browser.history.onVisited.addListener(onVisited);
 ```
 
-Pour utiliser l'API historique, vous devez demander la [permission](/fr/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;`history`&nbsp;» dans votre fichier [`manifest.json`](/fr/Add-ons/WebExtensions/manifest.json).
+Pour utiliser l'API historique, vous devez demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;`history`&nbsp;» dans votre fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
 
 ## Conception des pages Web
 
-Pour plus de détails sur la façon de concevoir votre page Web pour correspondre au style de Firefox, voir la documentation sur le [système de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/Add-ons/WebExtensions/user_interface/Browser_styles).
+Pour plus de détails sur la façon de concevoir votre page Web pour correspondre au style de Firefox, voir la documentation sur le [système de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles).
 
 ## Exemples
 

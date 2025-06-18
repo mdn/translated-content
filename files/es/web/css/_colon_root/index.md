@@ -1,5 +1,5 @@
 ---
-title: ":root"
+title: :root
 slug: Web/CSS/:root
 ---
 
@@ -21,7 +21,7 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:root`** de [CSS](/es/docs
 
 ## Ejemplo
 
-`:root` puede ser útil para declarar [variables CSS](/es/docs/Web/CSS/Using_CSS_variables) globales:
+`:root` puede ser útil para declarar [variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties) globales:
 
 ```css
 :root {

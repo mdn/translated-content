@@ -12,7 +12,7 @@ Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires
 
 ## Permissions
 
-Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/Add-ons/WebExtensions/manifest.json/permissions#Host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
+Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
 
 <table>
   <colgroup>
@@ -229,5 +229,5 @@ En plus des API mentionnées jusqu'à présent, l'API Cookies propose également
 
 Si vous voulez en savoir plus sur l'API Cookies, consultez :
 
-- [Cookies API reference](/fr/Add-ons/WebExtensions/API/cookies).
+- [Cookies API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies).
 - [List-cookies](https://github.com/mdn/webextensions-examples/tree/master/list-cookies) exemple.

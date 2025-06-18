@@ -15,7 +15,7 @@ slug: Glossary/Number
 
 ### 技術リファレンス
 
-- JavaScript のデータ構造 : [Number](/ja/docs/Web/JavaScript/Data_structures#数値型)
+- JavaScript のデータ構造 : [Number](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型)
 - JavaScript のグローバルオブジェクト {{jsxref("Number")}}
 
 <!---->
@@ -26,4 +26,4 @@ slug: Glossary/Number
   - {{Glossary("Primitive")}}
 
 - {{jsxref("Number")}}
-- [JavaScript データ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript データ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)

@@ -2,22 +2,60 @@
 title: border
 slug: Web/CSS/border
 l10n:
-  sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**`border`** は [CSS](/ja/docs/Web/CSS) の [一括指定](/ja/docs/Web/CSS/Shorthand_properties)プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
+**`border`** は [一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
-{{EmbedInteractiveExample("pages/css/border.html")}}
+{{InteractiveExample("CSS Demo: border")}}
+
+```css interactive-example-choice
+border: solid;
+```
+
+```css interactive-example-choice
+border: dashed red;
+```
+
+```css interactive-example-choice
+border: 1rem solid;
+```
+
+```css interactive-example-choice
+border: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構成要素のプロパティ
 
 このプロパティは以下の CSS プロパティの一括指定です。
 
-- [`border-color`](/ja/docs/Web/CSS/border-color)
-- [`border-style`](/ja/docs/Web/CSS/border-style)
 - [`border-width`](/ja/docs/Web/CSS/border-width)
+- [`border-style`](/ja/docs/Web/CSS/border-style)
+- [`border-color`](/ja/docs/Web/CSS/border-color)
 
 ## 構文
 
@@ -58,7 +96,7 @@ border: unset;
 
 ## 解説
 
-他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/Web/CSS/initial_value)に設定されます。重要なことですが、 `border` は {{cssxref("border-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
+他の一括指定プロパティと同様、省略された部分値は[初期値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#初期値)に設定されます。重要なことですが、 `border` は {{cssxref("border-image")}} のカスタム値を指定することができず、初期値、つまり `none` に設定します。
 
 `border` による一括指定は、四辺をすべて同じに設定したい場合に特に便利です。しかし、それぞれが異なる場合は、それぞれの辺に異なる値を設定できる個別指定の {{cssxref("border-width")}}、 {{cssxref("border-style")}}、 {{cssxref("border-color")}} プロパティを使用してください。他に、一度に一つの境界線を対象とした、物理的 ({{cssxref("border-top")}} など) や論理的 ({{cssxref("border-block-start")}} など) な境界線プロパティを使用することもできます。
 
@@ -83,13 +121,13 @@ border: unset;
 
 #### HTML
 
-```html
-<div>I have a border, an outline, and a box shadow! Amazing, isn't it?</div>
+```html-nolint live-sample___setting_a_pink_outset_border
+<div>ここには境界線、概要、ボックスシャドウがあります！すごいと思いませんか？</div>
 ```
 
 #### CSS
 
-```css
+```css live-sample___setting_a_pink_outset_border
 div {
   border: 0.5rem outset pink;
   outline: 0.5rem solid khaki;
@@ -104,7 +142,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample('ピンク色の出っ張った境界の設定')}}
+{{EmbedLiveSample('Setting_a_pink_outset_border')}}
 
 ## 仕様書
 
@@ -121,4 +159,4 @@ div {
 - {{Cssxref("border-color")}}
 - {{Cssxref("outline")}}
 - [背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)
-- [CSS の学習: 背景と境界](/ja/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
+- [CSS の学習: 背景と境界](/ja/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)

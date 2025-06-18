@@ -11,7 +11,7 @@ slug: Glossary/Dynamic_typing
 
 ### これについて学習する
 
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)
 
 ### 一般知識
 

@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [感知性能](/zh-CN/docs/Learn/Performance/Perceived_performance)
+- [感知性能](/zh-CN/docs/Learn_web_development/Extensions/Performance/Perceived_performance)

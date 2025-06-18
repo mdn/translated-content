@@ -3,7 +3,25 @@ title: Date.prototype.toLocaleTimeString()
 slug: Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString
 ---
 
-{{JSRef}}O método **`toLocaleTimeString()`** retorna uma string com uma representação sensível ao idioma de uma porção de tempo desta data. Os novos argumentos `locales` e `options` possibilitam aplicações especificarem que formato de linguagem deve ser usado, podendo customizar o comportamento da função. Em implementações antigas, que ignoram os argumentos `locales` e `options`, o local utilizado e o formato retornado da string são implementações completamente dependentes.{{EmbedInteractiveExample("pages/js/date-tolocaletimestring.html")}}
+{{JSRef}}
+
+O método **`toLocaleTimeString()`** retorna uma string com uma representação sensível ao idioma de uma porção de tempo desta data. Os novos argumentos `locales` e `options` possibilitam aplicações especificarem que formato de linguagem deve ser usado, podendo customizar o comportamento da função. Em implementações antigas, que ignoram os argumentos `locales` e `options`, o local utilizado e o formato retornado da string são implementações completamente dependentes.
+
+{{InteractiveExample("JavaScript Demo: Date.toLocaleTimeString()")}}
+
+```js interactive-example
+// Depending on timezone, your results will vary
+const event = new Date("August 19, 1975 23:15:30 GMT+00:00");
+
+console.log(event.toLocaleTimeString("en-US"));
+// Expected output: "1:15:30 AM"
+
+console.log(event.toLocaleTimeString("it-IT"));
+// Expected output: "01:15:30"
+
+console.log(event.toLocaleTimeString("ar-EG"));
+// Expected output: "١٢:١٥:٣٠ ص"
+```
 
 ## Sintaxe
 
@@ -13,9 +31,9 @@ dateObj.toLocaleTimeString([locales[, options]])
 
 ### Parâmetros
 
-Confira a seção [Browser compatibility](#Browser_Compatibility) para ver o suporte em browsers dos argumentos `locales` e `options`, e [Checking for support for `locales` and `options` arguments](#Checking_for_support_for_locales_and_options_arguments) para ver suas features.
+Confira a seção [Browser compatibility](#browser_compatibility) para ver o suporte em browsers dos argumentos `locales` e `options`, e [Checking for support for `locales` and `options` arguments](#checking_for_support_for_locales_and_options_arguments) para ver suas features.
 
-{{page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters')}}
+<!-- TODO: page macro not supported: page('/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/DateTimeFormat', 'Parameters') -->
 
 O valor default para cada propriedade do componente date-time é {{jsxref("undefined")}}, mas se as propriedades `hour`, `minute`, `second` são todas {{jsxref("undefined")}}, então `hour`, `minute`, e `second` espera-se que seja `"numeric"`.
 

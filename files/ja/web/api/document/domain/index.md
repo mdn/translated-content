@@ -17,7 +17,7 @@ l10n:
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされた。
+  - : この機能の使用が[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされた。
 
 ## 例
 
@@ -31,7 +31,7 @@ const currentDomain = document.domain;
 
 このプロパティのゲッターは、現在の文書のオリジンのドメイン部分を返します。ほとんどの場合、これは文書の URL のホスト名部分になります。しかし、いくつかの例外があります：
 
-- 例えば、[データ URL](/ja/docs/Web/HTTP/Basics_of_HTTP/Data_URLs) を持つページのように、そのページに不透明な{{glossary("origin", "オリジン")}}がある場合は、空文字列を返します。
+- 例えば、[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を持つページのように、そのページに不透明な{{glossary("origin", "オリジン")}}がある場合は、空文字列を返します。
 - もし `document.domain` [セッター](#セッター)が使用されていれば、設定した値を返します。
 
 ゲッターはセッターと同じ方法で危険ではありませんが、代わりに {{domxref("Location.hostname")}} プロパティを使用する方がシンプルで有益な場合があります。

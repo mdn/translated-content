@@ -62,5 +62,5 @@ if (connection) {
 ## Véase también
 
 - [Network Information API Specification](http://w3c.github.io/netinfo/)
-- [Online and offline events](/es/docs/Online_and_offline_events)
+- [Online and offline events](/es/docs/Web/API/Navigator/onLine)
 - {{domxref("Navigator.connection", "window.navigator.connection")}}

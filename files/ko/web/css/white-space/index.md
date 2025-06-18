@@ -7,7 +7,59 @@ slug: Web/CSS/white-space
 
 CSS **`white-space`** 속성은 요소가 공백 문자를 처리하는 법을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/white-space.html")}}
+{{InteractiveExample("CSS Demo: white-space")}}
+
+```css interactive-example-choice
+white-space: normal;
+```
+
+```css interactive-example-choice
+white-space: pre;
+```
+
+```css interactive-example-choice
+white-space: pre-wrap;
+```
+
+```css interactive-example-choice
+white-space: pre-line;
+```
+
+```css interactive-example-choice
+white-space: wrap;
+```
+
+```css interactive-example-choice
+white-space: collapse;
+```
+
+```css interactive-example-choice
+white-space: preserve nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    <p>
+      But ere she from the church-door stepped She smiled and told us why: 'It
+      was a wicked woman's curse,' Quoth she, 'and what care I?' She smiled, and
+      smiled, and passed it off Ere from the door she stept—
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 16rem;
+}
+
+#example-element p {
+  border: 1px solid #c5c5c5;
+  padding: 0.75rem;
+  text-align: left;
+}
+```
 
 > [!NOTE]
 > 단어 안에서 줄이 바뀌기를 원하는 경우 {{CSSxRef("overflow-wrap")}}, {{CSSxRef("word-break")}}, {{CSSxRef("hyphens")}}를 사용하세요.

@@ -5,7 +5,7 @@ slug: Web/API/DOMStringList
 
 {{ APIRef("DOM") }}
 
-Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/Web/API/DOMString) (_chaînes de caractères_).
+Un type renvoyé par certaines API contenant une liste de [DOMString](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) (_chaînes de caractères_).
 
 ## Propriétés
 

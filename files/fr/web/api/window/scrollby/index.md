@@ -43,7 +43,7 @@ window.scrollBy(0, window.innerHeight);
 
 ## Notes
 
-[window.scrollBy](/fr/docs/DOM/Window.scrollBy) fait défiler en fonction d'un nombre précis, alors que [window.scroll](/fr/docs/DOM/Window.scroll) fait défiler vers une position absolue dans le document. Voir aussi [window.scrollByLines](/fr/docs/DOM/Window.scrollByLines), [window.scrollByPages](/fr/docs/DOM/Window.scrollByPages)
+[window.scrollBy](/fr/docs/Web/API/Window/scrollBy) fait défiler en fonction d'un nombre précis, alors que [window.scroll](/fr/docs/Web/API/Window/scroll) fait défiler vers une position absolue dans le document. Voir aussi [window.scrollByLines](/fr/docs/Web/API/Window/scrollByLines), [window.scrollByPages](/fr/docs/Web/API/Window/scrollByPages)
 
 ## Spécifications
 

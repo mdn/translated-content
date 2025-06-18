@@ -15,6 +15,6 @@ slug: Glossary/UDP
 
 ### Référence technique
 
-- [Spécification](http://tools.ietf.org/html/rfc768)
+- [Spécification](https://tools.ietf.org/html/rfc768)
 
 <!---->

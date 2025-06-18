@@ -40,13 +40,13 @@ let maVoiture = {
 };
 ```
 
-Les propriétés d'un objet qui n'ont pas été affectées auront la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) (et non [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)).
+Les propriétés d'un objet qui n'ont pas été affectées auront la valeur [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) (et non [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)).
 
 ```js
 maVoiture.color; // undefined
 ```
 
-On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_Accessors) pour plus de détails). Les objets sont parfois appelés «&nbsp;tableaux associatifs&nbsp;». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
+On peut aussi définir ou accéder à des propriétés JavaScript en utilisant une notation avec les crochets (voir la page sur [les accesseurs de propriétés](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors) pour plus de détails). Les objets sont parfois appelés «&nbsp;tableaux associatifs&nbsp;». Cela peut se comprendre, car chaque propriété est associée avec une chaîne de caractères qui permet d'y accéder. Ainsi, par exemple, on peut accéder aux propriétés de l'objet `maVoiture` de la façon suivante :
 
 ```js
 maVoiture["fabricant"] = "Ford";
@@ -526,7 +526,7 @@ Pour plus d'informations sur les opérateurs de comparaisons, voir [cet article]
 
 ## Voir aussi
 
-- Pour aller plus loin, voir [les détails du modèle objet javaScript](/fr/docs/Web/JavaScript/Guide/Details_of_the_Object_Model)
+- Pour aller plus loin, voir [les détails du modèle objet javaScript](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
 - Pour en savoir plus sur les classes ECMAScript 2015 (une nouvelle façon de créer des objets), lire le chapitre sur les [classes JavaScript](/fr/docs/Web/JavaScript/Reference/Classes).
 
 {{PreviousNext("Web/JavaScript/Guide/Keyed_collections", "Web/JavaScript/Guide/Details_of_the_Object_Model")}}

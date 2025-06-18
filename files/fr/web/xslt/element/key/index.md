@@ -33,7 +33,7 @@ Haut niveau, doit être l'enfant de `<xsl:stylesheet>` ou de `<xsl:transform>`.
 
 ### Définition
 
-[XSLT 1.0, section 12.2](http://www.w3.org/TR/xslt#key).
+[XSLT 1.0, section 12.2](https://www.w3.org/TR/xslt#key).
 
 ### Support Gecko
 

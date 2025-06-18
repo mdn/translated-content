@@ -32,7 +32,7 @@ border-collapse: value
 
 ### Ejemplos
 
-[Ver El Ejemplo Vivo](/samples/cssref/border-collapse.html)
+[Ver El Ejemplo Vivo](https://mdn.dev/archives/media/samples/cssref/border-collapse.html)
 
 ```
 <table border="1" style="border-collapse: collapse" bordercolor="#111111" width="500">

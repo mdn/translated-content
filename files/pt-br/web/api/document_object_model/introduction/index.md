@@ -24,7 +24,7 @@ alert(paragraphs[0].nodeName);
 
 Todas as propriedades, métodos e eventos disponíveis para manipular e criar páginas da Web são organizados em objetos (por exemplo, o objeto de `document` que representa o próprio documento, o objeto de `table` que implementa a Interface especial DOM {{domxref ("HTMLTableElement")}} para acessar tabelas HTML e assim por diante). Esta documentação fornece uma referência objeto a objeto ao DOM.
 
-O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM) adiciona suporte para representar documentos HTML no DOM principal.
+O DOM moderno é construído usando várias APIs que trabalham juntas. O [DOM](/pt-BR/docs/Web/API/Document_Object_Model) principal define os objetos que descrevem fundamentalmente um documento e os objetos dentro dele. Isso é expandido conforme necessário por outras APIs que adicionam novos recursos e capacidades ao DOM. Por exemplo, a [HTML DOM API](/pt-BR/docs/Web/API/HTML_DOM_API) adiciona suporte para representar documentos HTML no DOM principal.
 
 ## DOM e JavaScript
 
@@ -44,7 +44,7 @@ doc.nodeName # propriedade do objeto de documento DOM
 p_list = doc.getElementsByTagName("para")
 ```
 
-Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte [JavaScript technologies overview](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+Para obter mais informações sobre quais tecnologias estão envolvidas na criação de JavaScript na Web, consulte [JavaScript technologies overview](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ## Acessando o DOM
 
@@ -303,7 +303,7 @@ Nesse exemplo, os menus drop-down atualizam dinamicamente os aspectos acessávei
 
 - [DOM Reference](/pt-BR/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/pt-BR/docs/Web/API/Document_Object_Model/Events)
+- [Events and the DOM](/pt-BR/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/pt-BR/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

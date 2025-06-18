@@ -1,5 +1,5 @@
 ---
-title: ":read-write"
+title: :read-write
 slug: Web/CSS/:read-write
 ---
 
@@ -21,7 +21,7 @@ input:read-write {
 ```
 
 > [!NOTE]
-> 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) 属性的 {{htmlelement("p")}} 元素。
+> 这个选择器不仅仅选择 {{htmlElement("input")}} 元素，它也会选择所有可以被用户编辑的元素，例如设置了 [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) 属性的 {{htmlelement("p")}} 元素。
 
 ## 语法
 
@@ -77,4 +77,4 @@ p[contenteditable="true"] {
 ## 参见
 
 - {{cssxref(":read-only")}}
-- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Global_attributes#contenteditable) attribute
+- HTML [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#contenteditable) attribute

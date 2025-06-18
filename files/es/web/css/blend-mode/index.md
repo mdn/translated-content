@@ -411,4 +411,4 @@ Los cambios entre modos de mezcla no son interpolados. Cualquier cambio ocurrir�
 
 - Propiedades que usan valores de este tipo: {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}
 - [Blend modes](http://en.wikipedia.org/wiki/Blend_modes)
-- Índice de [Referencia CSS](/es/docs/CSS/CSS_Reference)
+- Índice de [Referencia CSS](/es/docs/Web/CSS/Reference)

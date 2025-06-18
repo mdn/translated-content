@@ -23,8 +23,8 @@ Nesta página você pode encontrar links para a nossa ferramenta de desenvolvime
   - : O Shumway é um renderizador para o Adobe Flash construído inteiramente em JavaScript, WebGL, etc., reduzindo a diferença entre os padrões do Flash e da web. Este artigo mostra como fazer uso do Shumway e como contribuir correções e bugs para o projeto.
 - Toolchain for developing and debugging games
 
-  - : Como isso difere da depuração normal de aplicativos da web? Que ferramentas especializadas estão disponíveis? Um monte disso está sendo coberto pelo Will em [ferramentas](/pt-BR/docs/Tools), mas aqui nós devemos fornecer um tipo de tutorial de prática para jogos de depuração toolchain, com links para coisas do Will:
+  - : Como isso difere da depuração normal de aplicativos da web? Que ferramentas especializadas estão disponíveis? Um monte disso está sendo coberto pelo Will em [ferramentas](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mas aqui nós devemos fornecer um tipo de tutorial de prática para jogos de depuração toolchain, com links para coisas do Will:
 
     - Visão geral de ferramentas básicas
-    - [Editor de shader](/pt-BR/docs/Tools/Shader_Editor)
+    - [Editor de shader](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
     - Ferramentas de performance (ainda en produção, estimada no início de 2014)

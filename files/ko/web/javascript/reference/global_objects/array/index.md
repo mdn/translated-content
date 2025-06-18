@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-다른 프로그래밍 언어의 배열과 마찬가지로, **`Array`** 객체는 [여러 항목의 컬렉션을 단일 변수 이름 아래 저장할 수 있고](/ko/docs/Learn/JavaScript/First_steps/Arrays), [일반적인 배열 연산을 수행하기](#예제) 위한 멤버가 있습니다.
+다른 프로그래밍 언어의 배열과 마찬가지로, **`Array`** 객체는 [여러 항목의 컬렉션을 단일 변수 이름 아래 저장할 수 있고](/ko/docs/Learn_web_development/Core/Scripting/Arrays), [일반적인 배열 연산을 수행하기](#예제) 위한 멤버가 있습니다.
 
 ## 설명
 
@@ -130,7 +130,7 @@ console.log(fruits.length); // 2
 
 어떤 메서드는 메서드가 호출된 배열을 변경하며, 이 경우 반환값은 메서드에 따라 다릅니다. 때로는 같은 배열에 대한 참조를 반환하고, 때로는 새 배열의 길이를 반환합니다.
 
-다음 메서드는 [`this.constructor[Symbol.species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)에 접근하여 사용할 생성자를 결정하고 새 배열을 생성합니다.
+다음 메서드는 [`this.constructor[Symbol.species]`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)에 접근하여 사용할 생성자를 결정하고 새 배열을 생성합니다.
 
 - {{jsxref("Array/concat", "concat()")}}
 - {{jsxref("Array/filter", "filter()")}}
@@ -372,7 +372,7 @@ f("a", "b"); // 'a+b'
   - : 배열의 각 인덱스의 값을 포함하는 새 [배열 순회자](/ko/docs/Web/JavaScript/Guide/Iterators_and_generators) 객체를 반환합니다.
 - {{jsxref("Array.prototype.with()")}}
   - : 원래 배열을 수정하지 않고, 지정된 인덱스의 요소를 지정된 값으로 바꾼 새 배열을 반환합니다.
-- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/@@iterator)
+- [`Array.prototype[@@iterator]()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator)
   - : 기본적으로 [`values()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/values) 메서드의 별칭입니다.
 
 ## 예제
@@ -380,7 +380,7 @@ f("a", "b"); // 'a+b'
 이 구획은 JavaScript에서 흔히 사용되는 배열 연산에 대한 몇 가지 예제를 제공합니다.
 
 > [!NOTE]
-> 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn/JavaScript/First_steps/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
+> 배열의 기초가 아직 익숙하지 않다면, 먼저 [JavaScript 첫걸음: 배열](/ko/docs/Learn_web_development/Core/Scripting/Arrays)을 읽어보세요. 이곳은 [배열이 무엇인지](/ko/docs/Learn_web_development/Core/Scripting/Arrays#배열이란) 설명하고 일반적인 배열 연산에 대한 다른 예제를 포함하고 있습니다.
 
 ### 배열 만들기
 
@@ -680,7 +680,7 @@ const fruitsCopy3 = fruits.slice();
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 ```
 
-[`structuredClone()`](/ko/docs/Web/API/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
+[`structuredClone()`](/ko/docs/Web/API/Window/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
 
 마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
 

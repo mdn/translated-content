@@ -94,7 +94,7 @@ wm1.has(o1); // false
 ## Veja também
 
 - [WeakMap bug at Mozilla](https://bugzilla.mozilla.org/show_bug.cgi?id=547941)
-- [Hiding Implementation Details with ECMAScript 2015 WeakMaps](http://fitzgeraldnick.com/weblog/53/)
+- [Hiding Implementation Details with ECMAScript 2015 WeakMaps](https://fitzgeraldnick.com/weblog/53/)
 - {{jsxref("Map")}}
 - {{jsxref("Set")}}
 - {{jsxref("WeakSet")}}

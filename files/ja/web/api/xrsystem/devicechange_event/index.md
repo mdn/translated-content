@@ -22,7 +22,7 @@ addEventListener("devicechange", (event) => {});
 ondevicechange = (event) => {};
 ```
 
-WebXR の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされている場合、 `devicechange` イベントは発行されません。
+WebXR の使用が `xr-spatial-tracking` [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされている場合、 `devicechange` イベントは発行されません。
 
 ## イベント型
 

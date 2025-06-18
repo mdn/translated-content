@@ -3,7 +3,7 @@ title: Creating toolbar buttons
 slug: orphaned/Creating_toolbar_buttons
 ---
 
-この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](/ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](/ja/XUL) と [CSS](/ja/CSS) の基礎知識を備えた [拡張機能](/ja/Extension) の開発者が対象です。
+この記事ではツールキットアプリケーション（Firefox、Thunderbird、Nvu など）に [オーバレイ](/ja/XUL_Overlays) を使用してツールバーボタンを追加する方法を説明します。[XUL](/ja/XUL) と [CSS](/ja/docs/Web/CSS) の基礎知識を備えた [拡張機能](/ja/Extension) の開発者が対象です。
 
 また、Firefox の拡張機能の作り方の基礎に通じており、[Hello World 拡張機能](/ja/Building_an_Extension) を動作させられることも前提です。別のチュートリアルも [利用可能](/ja/Custom_Toolbar_Button) です。そちらは全体の過程を最初から見ていく形式です。
 
@@ -11,7 +11,7 @@ slug: orphaned/Creating_toolbar_buttons
 
 はじめに、機能を強化させたいツールバーを含む文書への [オーバレイ](/ja/XUL_Overlays) を作成する必要があります。オーバレイの説明はこのチュートリアルでは扱いません。[XUL チュートリアル](/ja/XUL_Tutorial/Cross_Package_Overlays) をご覧ください。
 
-文書をオーバレイするには、その文書の URI を知らなければなりません。よくオーバレイされる文書の URI は [このページの最後](#.E3.82.88.E3.81.8F.E3.82.AA.E3.83.BC.E3.83.90.E3.83.AC.E3.82.A4.E3.81.95.E3.82.8C.E3.82.8B.E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E6.8C.81.E3.81.A4.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88) にあります。
+文書をオーバレイするには、その文書の URI を知らなければなりません。よくオーバレイされる文書の URI は [このページの最後](#.e3.82.88.e3.81.8f.e3.82.aa.e3.83.bc.e3.83.90.e3.83.ac.e3.82.a4.e3.81.95.e3.82.8c.e3.82.8b.e3.83.84.e3.83.bc.e3.83.ab.e3.83.90.e3.83.bc.e3.82.92.e6.8c.81.e3.81.a4.e3.82.a6.e3.82.a3.e3.83.b3.e3.83.89.e3.82.a6.e3.81.ae.e3.83.aa.e3.82.b9.e3.83.88) にあります。
 
 > [!NOTE]
 > 
@@ -34,7 +34,7 @@ slug: orphaned/Creating_toolbar_buttons
 
 注意：
 
-- パレットの `id`（この例では `BrowserToolbarPalette`）はボタンを追加したいツールバーのあるウィンドウによって異なります。[下](#.E3.82.88.E3.81.8F.E3.82.AA.E3.83.BC.E3.83.90.E3.83.AC.E3.82.A4.E3.81.95.E3.82.8C.E3.82.8B.E3.83.84.E3.83.BC.E3.83.AB.E3.83.90.E3.83.BC.E3.82.92.E6.8C.81.E3.81.A4.E3.82.A6.E3.82.A3.E3.83.B3.E3.83.89.E3.82.A6.E3.81.AE.E3.83.AA.E3.82.B9.E3.83.88) のよく使われるパレットの ID のリストを参照してください。
+- パレットの `id`（この例では `BrowserToolbarPalette`）はボタンを追加したいツールバーのあるウィンドウによって異なります。[下](#.e3.82.88.e3.81.8f.e3.82.aa.e3.83.bc.e3.83.90.e3.83.ac.e3.82.a4.e3.81.95.e3.82.8c.e3.82.8b.e3.83.84.e3.83.bc.e3.83.ab.e3.83.90.e3.83.bc.e3.82.92.e6.8c.81.e3.81.a4.e3.82.a6.e3.82.a3.e3.83.b3.e3.83.89.e3.82.a6.e3.81.ae.e3.83.aa.e3.82.b9.e3.83.88) のよく使われるパレットの ID のリストを参照してください。
 - `class="toolbarbutton-1"` によって、「アイコンと文字」モードで正常にツールバーボタンが表示されるようになります。さらにパッディングも調整されます。
 - `oncommand` 属性で、ボタンがクリックされたときに実行されるコマンドを指定してください。ミドルクリックを扱いたい場合は `onclick` ハンドラを追加し、その中で `event.button` を確認してください。
 
@@ -137,7 +137,7 @@ style chrome://global/content/customizeToolbar.xul chrome://myextension/skin/too
 
 **原因：** スタイルシートが正しく記述されていないか、またはスタイルシートが適用されていない。
 
-**解決法：** スタイルシートに誤りがないか、\<tt>contents.rdf\</tt>（または \<tt>chrome.manifest\</tt>）に誤りがないかを確認し、確実に \<tt>customizeToolbar.xul\</tt> に [スタイルシートを適用する](#.E3.82.B9.E3.82.BF.E3.82.A4.E3.83.AB.E3.82.B7.E3.83.BC.E3.83.88.E3.81.AE.E9.81.A9.E7.94.A8)。
+**解決法：** スタイルシートに誤りがないか、\<tt>contents.rdf\</tt>（または \<tt>chrome.manifest\</tt>）に誤りがないかを確認し、確実に \<tt>customizeToolbar.xul\</tt> に [スタイルシートを適用する](#.e3.82.b9.e3.82.bf.e3.82.a4.e3.83.ab.e3.82.b7.e3.83.bc.e3.83.88.e3.81.ae.e9.81.a9.e7.94.a8)。
 
 ### よくオーバレイされるツールバーを持つウィンドウのリスト
 

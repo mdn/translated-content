@@ -1,5 +1,5 @@
 ---
-title: ":scope"
+title: :scope
 slug: Web/CSS/:scope
 l10n:
   sourceCommit: 06bb246b52a759cc0b70c0bc2f72531afa7f8c6a
@@ -107,7 +107,7 @@ La portée de `context` est l'élément dont [l'identifiant (`id`)](/fr/docs/Web
 ## Voir aussi
 
 - La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [`:root`](/fr/docs/Web/CSS/:root)
-- [Localiser des éléments du DOM grâce aux sélecteurs](/fr/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors)
+- [Localiser des éléments du DOM grâce aux sélecteurs](/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - [`Element.querySelector()`](/fr/docs/Web/API/Element/querySelector) et [`Element.querySelectorAll()`](/fr/docs/Web/API/Element/querySelectorAll)
 - [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) et [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll)
 - [`DocumentFragment.querySelector()`](/fr/docs/Web/API/DocumentFragment/querySelector) et [`DocumentFragment.querySelectorAll()`](/fr/docs/Web/API/DocumentFragment/querySelectorAll)

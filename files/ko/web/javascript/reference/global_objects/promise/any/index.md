@@ -9,7 +9,19 @@ l10n:
 
 **`Promise.any()`** 정적 메서드는 순회 가능한 여러 프로미스를 입력으로 받아 단일 {{jsxref("Promise")}}를 반환합니다. 이 반환된 프로미스는 입력으로 들어온 여러 프로미스 중 하나라도 이행되면 이를 이행 값으로 하는 프로미스를 반환합니다. 입력의 모든 프로미스가 거부되면(빈 반복이 전달된 경우 포함) 최종적으로 이 메서드도 거부되며, 거부된 사유가 배열이 포함된 {{jsxref("AggregateError")}}가 반환됩니다.
 
-{{EmbedInteractiveExample("pages/js/promise-any.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+
+```js interactive-example
+const promise1 = Promise.reject(0);
+const promise2 = new Promise((resolve) => setTimeout(resolve, 100, "quick"));
+const promise3 = new Promise((resolve) => setTimeout(resolve, 500, "slow"));
+
+const promises = [promise1, promise2, promise3];
+
+Promise.any(promises).then((value) => console.log(value));
+
+// Expected output: "quick"
+```
 
 ## 구문
 

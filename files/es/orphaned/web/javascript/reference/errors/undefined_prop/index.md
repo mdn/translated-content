@@ -1,5 +1,5 @@
 ---
-title: 'ReferenceError: reference to undefined property "x"'
+title: "ReferenceError: reference to undefined property \"x\""
 slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
 original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
 ---
@@ -14,13 +14,13 @@ ReferenceError: reference to undefined property "x" (Firefox)
 
 ## Tipo de error
 
-Advertencia {{jsxref("ReferenceError")}} únicamente en [modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto).
+Advertencia {{jsxref("ReferenceError")}} únicamente en [modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode).
 
 ## ¿Qué salió mal?
 
-El script intentó acceder a una propiedad no definida en un objeto. Hay dos formas de acceder a las propiedades; vea la página [operadores de miembros](/es/docs/Web/JavaScript/Referencia/Operadores/Miembros) para aprender más sobre ellas.
+El script intentó acceder a una propiedad no definida en un objeto. Hay dos formas de acceder a las propiedades; vea la página [operadores de miembros](/es/docs/Web/JavaScript/Reference/Operators/Property_accessors) para aprender más sobre ellas.
 
-Los errores sobre referencias a propiedades no definidas ocurren únicamente en el [modo de código estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto). En el modo no estricto, estos intentos de obtener propiedades no definidas son silenciosamente ignorados.
+Los errores sobre referencias a propiedades no definidas ocurren únicamente en el [modo de código estricto](/es/docs/Web/JavaScript/Reference/Strict_mode). En el modo no estricto, estos intentos de obtener propiedades no definidas son silenciosamente ignorados.
 
 ## Ejemplos
 
@@ -58,4 +58,4 @@ if (foo.hasOwnProperty("bar")) {
 
 ## Vea también
 
-- [Modo estricto](/es/docs/Web/JavaScript/Referencia/Modo_estricto)
+- [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)

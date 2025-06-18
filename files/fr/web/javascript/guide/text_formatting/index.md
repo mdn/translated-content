@@ -216,7 +216,7 @@ Le tableau suivant résume les méthodes des objets {{jsxref("String")}}.
 
 ### Les littéraux de modèle multi-lignes
 
-Le [littéraux de modèle](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) sont des littéraux de chaîne de caractères permettant des expressions intégrées. Avec eux, vous pouvez utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation de chaînes.
+Le [littéraux de modèle](/fr/docs/Web/JavaScript/Reference/Template_literals) sont des littéraux de chaîne de caractères permettant des expressions intégrées. Avec eux, vous pouvez utiliser des chaînes de caractères multi-lignes et des fonctionnalités d'interpolation de chaînes.
 
 Les littéraux de gabarits sont délimités par des [accents graves](https://fr.wikipedia.org/wiki/Accent_grave) (ou _backticks\` \`_ en anglais), au lieu des apostrophes simples ou doubles. Les littéraux de modèle peuvent contenir des marque-places. Ceux-ci sont indiqués par le signe dollar et des accolades (`${expression}`).
 
@@ -264,7 +264,7 @@ console.log(`Quinze vaut ${a + b} et\npas ${2 * a + b}.`);
 // pas 20."
 ```
 
-Pour plus d'informations, voir les [Littéraux de modèles](/fr/docs/Web/JavaScript/Reference/Littéraux_gabarits) dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
+Pour plus d'informations, voir les [Littéraux de modèles](/fr/docs/Web/JavaScript/Reference/Template_literals) dans la [Référence JavaScript](/fr/docs/Web/JavaScript/Reference).
 
 ## Internationalisation
 

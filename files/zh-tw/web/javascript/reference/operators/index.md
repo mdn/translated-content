@@ -204,7 +204,7 @@ slug: Web/JavaScript/Reference/Operators
   - : 位元 OR 賦值。
 - {{jsxref("Operators/Destructuring_assignment", "[a, b] = [1, 2]")}}
   {{jsxref("Operators/Destructuring_assignment", "{a, b} = {a:1, b:2}")}}
-  - : 解構賦值讓你可使用如陣列或物件書寫格式來賦值給陣列或物件的屬性。
+  - : 解構讓你可使用如陣列或物件書寫格式來賦值給陣列或物件的屬性。
 
 ### 逗號運算子
 
@@ -228,4 +228,4 @@ slug: Web/JavaScript/Reference/Operators
 
 ## 相關文獻
 
-- [Operator precedence](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_Precedence)
+- [Operator precedence](/zh-TW/docs/Web/JavaScript/Reference/Operators/Operator_precedence)

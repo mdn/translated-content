@@ -51,7 +51,7 @@ L'élément SVG `feMergeNode` se place à l'intérieur d'un élément {{ SVGElem
 
 ### Attributs globaux
 
-- [Attributs de base](/fr/docs/Web/SVG/Attribute#Attributs_de_base)
+- [Attributs de base](/fr/docs/Web/SVG/Attribute#attributs_de_base)
 
 ### Attributs spécifiques
 
@@ -75,4 +75,4 @@ Cet élément implémente l'interface {{domxref("SVGFEMergeNodeElement")}}.
 - {{ SVGElement("animate") }}
 - {{ SVGElement("set") }}
 - {{ SVGElement("feMerge") }}
-- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutoriel/filtres)
+- [Tutoriel SVG: Filtres](/fr/docs/Web/SVG/Tutorial/Filter_effects)

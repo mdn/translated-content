@@ -1,13 +1,55 @@
 ---
 title: border-block-end-style
 slug: Web/CSS/border-block-end-style
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-block-end-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの終端側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{EmbedInteractiveExample("pages/css/border-block-end-style.html")}}
+{{InteractiveExample("CSS Demo: border-block-end-style")}}
+
+```css interactive-example-choice
+border-block-end-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-end-style: groove;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-end-style: dashed;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これは周囲に境界線があるボックスです。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 
@@ -21,6 +63,7 @@ border-block-end-style: groove;
 border-block-end-style: inherit;
 border-block-end-style: initial;
 border-block-end-style: revert;
+border-block-end-style: revert-layer;
 border-block-end-style: unset;
 ```
 
@@ -33,7 +76,7 @@ border-block-end-style: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -41,13 +84,13 @@ border-block-end-style: unset;
 
 ## 例
 
-<h3 id="Dashed_border_with_vertical_text">縦書きテキストの破線の境界</h3>
+### 縦書きテキストの破線の境界
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -69,7 +112,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Dashed_border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの破線の境界", 140, 140)}}
 
 ## 仕様書
 
@@ -81,5 +124,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-style")}}, {{cssxref("border-right-style")}}, {{cssxref("border-bottom-style")}}, {{cssxref("border-left-style")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

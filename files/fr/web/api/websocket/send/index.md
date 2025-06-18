@@ -19,7 +19,7 @@ WebSocket.send("Coucou serveur !");
 
   - : Les données à envoyer au serveur. La valeur peut avoir un des types suivants :
 
-    - [`USVString`](/fr/docs/Web/API/USVString)
+    - [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String)
       - : Une chaîne de caractères. Cette chaîne est ajoutée au tampon au format UTF-8 et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires pour représenter cette chaîne de caractères UTF-8.
     - [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
       - : Les données binaires peuvent aussi être envoyées avec un tableau typé. Son contenu binaire est mis en tampon et la valeur de `bufferedAmount` est augmentée du nombre d'octets nécessaires.
@@ -31,9 +31,9 @@ WebSocket.send("Coucou serveur !");
 
         binaire. La valeur de `bufferedAmount` est augmentée du nombre d'octets utilisés pour représenter ces données brutes.
 
-    - [`ArrayBufferView`](/fr/docs/Web/API/ArrayBufferView)
+    - [`ArrayBufferView`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)
 
-      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Typed_arrays) sous la forme d'une
+      - : Il est possible d'envoyer n'importe quel objet étant [un tableau typé JavaScript](/fr/docs/Web/JavaScript/Guide/Typed_arrays) sous la forme d'une
 
         <i lang="en">frame</i>
 

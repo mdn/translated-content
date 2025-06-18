@@ -41,5 +41,5 @@ La propriété `accelerationIncludingGravity` est un objet fournissant une infor
 - L'évènement [`deviceorientation`](/fr/docs/Web/API/Window/deviceorientation_event)
 - [`DeviceOrientationEvent`](/fr/docs/Web/API/DeviceOrientationEvent)
 - [`Accelerometer`](/fr/docs/Web/API/Accelerometer)
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/Events/Detecting_device_orientation)
-- [Explication des données d'orientation et de mouvement](/fr/docs/Web/Events/Orientation_and_motion_data_explained)
+- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
+- [Explication des données d'orientation et de mouvement](/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained)

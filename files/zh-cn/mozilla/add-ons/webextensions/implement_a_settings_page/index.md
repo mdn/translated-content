@@ -47,7 +47,7 @@ document.body.style.border = "10px solid blue";
 
 这只是向网页加入了一一个蓝色边框
 
-现在 [安装该扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
+现在 [安装该扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) 并测试它——打开任意一个网页：
 
 {{EmbedYouTube("E-WUhihF8fw")}}
 
@@ -172,7 +172,7 @@ settings/
 
 现在：
 
-- [重新载入扩展](/zh-CN/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#Reloading_a_temporary_add-on)
+- [重新载入扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on)
 - 加载一个网页
 - 打开设置页面并修改边框颜色
 - 重载网页查看变化。

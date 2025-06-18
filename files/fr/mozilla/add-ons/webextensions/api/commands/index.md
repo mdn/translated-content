@@ -5,12 +5,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands
 
 {{AddonSidebar}}
 
-Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
+Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Types
 
 - {{WebExtAPIRef("commands.Command")}}
-  - : Objet représentant une commande. Il contient les informations spécifiées pour la commande dans les [clés `commands` du fichier manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands).
+  - : Objet représentant une commande. Il contient les informations spécifiées pour la commande dans les [clés `commands` du fichier manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 
 ## Fonctions
 

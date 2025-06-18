@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/commands/update
 
 Changez la description ou le raccourci clavier pour la commande donnée.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise).
+C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Syntaxe
 
@@ -28,11 +28,11 @@ browser.commands.update(
     - `description`{{optional_inline}}
       - : `string`. Une nouvelle description à définir pour la commande.
     - `shortcut`{{optional_inline}}
-      - : `string`. Un nouveau raccourci à définir pour la commande. Cela doit correspondre au format donné dans la documentation pour les [`commands` de la clé manifest.json](/fr/Add-ons/WebExtensions/manifest.json/commands). S'il ne correspond pas à ce format, la fonction va générer une erreur.
+      - : `string`. Un nouveau raccourci à définir pour la commande. Cela doit correspondre au format donné dans la documentation pour les [`commands` de la clé manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). S'il ne correspond pas à ce format, la fonction va générer une erreur.
 
 ### Valeur retournée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.
+Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.
 
 ## Compatibilité des navigateurs
 

@@ -7,7 +7,15 @@ slug: Web/HTML/Element/object
 
 L'élément HTML **`<object>`** représente une ressource externe qui peut être interprétée comme une image, un contexte de navigation imbriqué ou une ressource à traiter comme un _plugin_.
 
-{{EmbedInteractiveExample("pages/tabbed/object.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;object&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<object
+  type="video/mp4"
+  data="/shared-assets/videos/flower.mp4"
+  width="250"
+  height="200"></object>
+```
 
 <table class="properties">
   <tbody>
@@ -51,7 +59,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `data`
   - : L'adresse de la ressource, une URL valide. Au moins un attribut `data` et un attribut `type` doivent être définis.
 - `form`
-  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/Form) du même document.
+  - : L'élément de formulaire éventuel auquel l'élément est associé. La valeur de cet attribut doit être l'identifiant d'un élément [`<form>`](/fr/docs/Web/HTML/Element/form) du même document.
 - `height`
   - : La hauteur de la ressource à afficher, exprimée en [pixels CSS](https://drafts.csswg.org/css-values/#px) (uniquement en valeur absolue, [pas de pourcentage autorisé](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes)).
 - `name`

@@ -27,7 +27,7 @@ Instruction, apparaît dans un modèle.
 
 ### Définition
 
-[XSLT 1.0, section 5.6](http://www.w3.org/TR/xslt#apply-imports).
+[XSLT 1.0, section 5.6](https://www.w3.org/TR/xslt#apply-imports).
 
 ### Support Gecko
 

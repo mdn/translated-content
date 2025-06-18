@@ -5,9 +5,29 @@ slug: Web/HTML/Element/p
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Web/HTML/Éléments_en_bloc).
+L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes sont généralement représentés comme des blocs et séparés par un espace vertical, leur première ligne est également parfois indentée. Les paragraphes sont [des éléments blocs](/fr/docs/Glossary/Block-level_content).
 
-{{EmbedInteractiveExample("pages/tabbed/p.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;p&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<p>
+  Geckos are a group of usually small, usually nocturnal lizards. They are found
+  on every continent except Antarctica.
+</p>
+
+<p>
+  Some species live in houses where they hunt insects attracted by artificial
+  light.
+</p>
+```
+
+```css interactive-example
+p {
+  margin: 10px 0;
+  padding: 5px;
+  border: 1px solid #999;
+}
+```
 
 Étant des éléments de bloc, les paragraphes se fermeront automatiquement si un autre élément de bloc est analysé avant la balise de fermeture `</p>` (voir Omission de balises dans le tableau qui suit).
 
@@ -16,7 +36,7 @@ L'élément HTML **`<p>`** représente un paragraphe de texte. Les paragraphes s
 
 ## Attributs
 
-Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Attributs_universels).
+Cet élément, comme les autres éléments HTML, inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 > [!NOTE]
 > L'attribut `align` pour les balises `<p>` est obsolète et ne doit plus être utilisé.

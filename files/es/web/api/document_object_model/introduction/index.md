@@ -5,7 +5,7 @@ slug: Web/API/Document_Object_Model/Introduction
 
 {{DefaultAPISidebar("DOM")}}
 
-Ésta sección da una breve introducción conceptual del [DOM](/es/DOM): qué es, cómo proporciona la estructura para los documentos [HTML](/es/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
+Ésta sección da una breve introducción conceptual del [DOM](/es/docs/Web/API/Document_Object_Model): qué es, cómo proporciona la estructura para los documentos [HTML](/es/docs/Web/HTML) y [XML](/es/XML), cómo se accede a él, y cómo esta ["API"](https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones) presenta la información de referencia y ejemplos.
 
 ## ¿Qué es el DOM?
 
@@ -13,7 +13,7 @@ El modelo de objeto de documento (DOM) es una interfaz de programación para los
 
 Una página web es un documento. Éste documento puede exhibirse en la ventana de un navegador o también como código fuente HTML. Pero, en los dos casos, es el mismo documento. El modelo de objeto de documento (DOM) proporciona otras formas de presentar, guardar y manipular este mismo documento. El DOM es una representación completamente orientada al objeto de la página web y puede ser modificado con un lenguaje de script como JavaScript.
 
-El [W3C DOM](http://www.w3.org/DOM/) estándar forma la base del funcionamiento del DOM en muchos navegadores modernos. Varios navegadores ofrecen extensiones más allá del estándar W3C, hay que ir con extremo cuidado al utilizarlas en la web, ya que los documentos pueden ser consultados por navegadores que tienen DOMs diferentes.
+El [W3C DOM](https://www.w3.org/DOM/) estándar forma la base del funcionamiento del DOM en muchos navegadores modernos. Varios navegadores ofrecen extensiones más allá del estándar W3C, hay que ir con extremo cuidado al utilizarlas en la web, ya que los documentos pueden ser consultados por navegadores que tienen DOMs diferentes.
 
 Por ejemplo, el DOM de W3C especifica que el método `getElementsByTagName` en el código de abajo debe devolver una lista de todos los elementos `<p>` del documento:
 
@@ -28,7 +28,7 @@ Todas las propiedades, métodos y eventos disponibles para la manipulación y la
 
 ## DOM y JavaScript
 
-El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](/es/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
+El ejemplo corto de abajo, como casi todos los ejemplos de esta referencia, es [JavaScript](/es/docs/Web/JavaScript). Es decir, es _escrito_ en JavaScript pero _utiliza_ el DOM para acceder al documento y a sus elementos. El DOM no es un lenguaje de programación pero sin él, el lenguaje JavaScript no tiene ningún modelo o noción de las páginas web, de la páginas XML ni de los elementos con los cuales es usualmente relacionado. Cada elemento -"el documento íntegro, el título, las tablas dentro del documento, los títulos de las tablas, el texto dentro de las celdas de las tablas"- es parte del modelo de objeto del documento para cada documento, así se puede acceder y manipularlos utilizando el DOM y un lenguaje de escritura, como JavaScript.
 
 En el comienzo, JavaScript y el DOM estaban herméticamente enlazados, pero después se desarrollaron como entidades separadas. El contenido de la página es almacenado en DOM y el acceso y la manipulación se hace vía JavaScript, podría representarse aproximadamente así:
 
@@ -48,7 +48,7 @@ p_list = doc.getElementsByTagName("para");
 
 No se tiene que hacer nada especial para empezar a utilizar el DOM. Los diferentes navegadores tienen directrices DOM distintas, y éstas directrices tienen diversos grados de conformidad al actual estándar DOM (un tema que se intenta evitar en este manual), pero todos los navegadores web usan el modelo de objeto de documento para hacer accesibles las páginas web al script.
 
-Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/DOM/document) o [`window`](/es/DOM/window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/DOM/window.alert) desde el objeto [`window`](/es/DOM/window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
+Cuando se crea un script –esté en un elemento `<SCRIPT>` o incluido en una página web por la instrucción de cargar un script– inmediatamente está disponible para usarlo con el API, accediendo así a los elementos [`document`](/es/docs/Web/API/Document) o [`window`](/es/docs/Web/API/Window), para manipular el documento mismo o sus diferentes partes, las cuales son los varios elementos de una página web. La programación DOM hace algo tan simple como lo siguiente, lo cual abre un mensaje de alerta usando la función [`alert()`](/es/docs/Web/API/Window/alert) desde el objeto [`window`](/es/docs/Web/API/Window), o permite métodos DOM más sofisticados para crear realmente un nuevo contenido, como en el largo ejemplo de más abajo.
 
 ```html
 <body onload="window.alert('Bienvenido a mi página!');"></body>
@@ -119,7 +119,7 @@ Pero puede resultar confuso el funcionamiento de la fuerte relación entre objet
 
 ## Interfaces y objetos
 
-En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](/es/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](/es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
+En algunos casos un objeto pone en ejecución a una sola interfaz. Pero a menudo un objeto toma prestada una tabla HTML (`table`) desde muchas interfaces diversas. El objeto table, por ejemplo, pone en funcionamiento una [Interfaz especial del elemento table HTML](/es/docs/DOM/tabla), la cual incluye métodos como `createCaption` y `insertRow`. Pero como también es un elemento HTML, table pone en marcha a la interfaz del `Element` descrita en el capítulo [La referencia al elemento del DOM](/es/Referencia_DOM_de_Gecko/elemento). Y finalmente, puesto que un elemento HTML es también, por lo que concierna al DOM, un nodo en el árbol de nodos que hace el modelo de objeto para una página web o XML, el elemento de table hace funcionar la interfaz más básica de `Node`, desde el cual deriva `Element`.
 
 La referencia a un objeto `table`, como en el ejemplo siguiente, utiliza estas interfaces intercambiables sobre el objeto.
 
@@ -149,10 +149,10 @@ Esta sección lista las interfaces más comúnmente utilizadas en el DOM. La ide
 - `element.setAttribute`
 - `element.element.getAttribute`
 - `element.addEventListener`
-- [`window.content`](/es/DOM/window.content)
-- [`window.onload`](/es/DOM/window.onload)
-- [`window.dump`](/es/DOM/window.dump)
-- [`window.scrollTo`](/es/DOM/window.scrollTo)
+- [`window.content`](/es/docs/Web/API/Window)
+- [`window.onload`](/es/docs/conflicting/Web/API/Window/load_event)
+- [`window.dump`](/es/docs/Web/API/Window/dump)
+- [`window.scrollTo`](/es/docs/Web/API/Window/scrollTo)
 
 ## Probando el API del DOM
 
@@ -229,5 +229,5 @@ En este ejemplo, los menúes desplegables actualizan dinámicamente los aspectos
 
 - [Referencia DOM](/es/docs/Web/API/Document_Object_Model)
 - [Introducción al DOM](/es/docs/Web/API/Document_Object_Model/Introduction)
-- [Eventos y el DOM](/es/docs/Web/API/Document_Object_Model/Events)
+- [Eventos y el DOM](/es/docs/Learn_web_development/Core/Scripting/Events)
 - [Ejemplos](/es/docs/Web/API/Document_Object_Model/Examples)

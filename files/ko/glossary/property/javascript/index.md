@@ -32,11 +32,11 @@ const obj = {
 
 [클래스](/ko/docs/Web/JavaScript/Reference/Classes) 속성 맥락은 각 인스턴스가 소유하는 "인스턴스 속성"과 클래스가 소유하고 모든 인스턴스에 공통 데이터를 보유하는 "정적 속성"으로 나눌 수 있습니다. [상속](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 맥락에서 속성은 객체 자체가 소유하는 "고유 속성"과 객체의 프로토타입 체인에 있는 객체가 소유하는 "상속 속성"으로 나눌 수 있습니다.
 
-읽기와 쓰기 속성에 대한 더 많은 정보는 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_Objects)를 참조하세요.
+읽기와 쓰기 속성에 대한 더 많은 정보는 [객체로 작업하기](/ko/docs/Web/JavaScript/Guide/Working_with_objects)를 참조하세요.
 
 ## 같이 보기
 
 - [속성 (프로그래밍)](<https://en.wikipedia.org/wiki/Property_(programming)>) on Wikipedia
-- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [객체 속성](/ko/docs/Web/JavaScript/Data_structures#properties)
 - [속성의 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

@@ -20,7 +20,7 @@ l10n:
 > ブラウザーがサードパーティのクッキーをブロックするように構成されていた場合で、 `navigator.cookieEnabled` がサードパーティの iframe の中で呼び出された場合、 Safari, Edge Spartan, IE では `true` を返します (この場合にクッキーを設定しようとしても失敗するにもかかわらず)。 Firefox および Chromium ベースのブラウザーでは `false` を返します。
 
 > [!NOTE]
-> ウェブブラウザーは特定の場面で特定のクッキーを書き込むことを阻止することがあります。例えば、 Chrome ベースのブラウザーや、 Firefox の一部の実験的なバージョンでは、 [`SameSite=None`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 属性の付いたクッキーを作成することを許可しませんが、 HTTPS 上で生成され `Secure` 属性がある場合は例外です。
+> ウェブブラウザーは特定の場面で特定のクッキーを書き込むことを阻止することがあります。例えば、 Chrome ベースのブラウザーや、 Firefox の一部の実験的なバージョンでは、 [`SameSite=None`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 属性の付いたクッキーを作成することを許可しませんが、 HTTPS 上で生成され `Secure` 属性がある場合は例外です。
 
 ## 例
 

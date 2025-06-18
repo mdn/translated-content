@@ -38,5 +38,5 @@ _A interface `PositionError` não herda nenhuma propriedade_.
 
 ## Veja também
 
-- [Usando geolocation](/pt-BR/docs/WebAPI/Using_geolocation)
+- [Usando geolocation](/pt-BR/docs/Web/API/Geolocation_API)
 - A interface {{domxref("Geolocation")}} que o utiliza.

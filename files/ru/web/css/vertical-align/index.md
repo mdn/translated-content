@@ -5,16 +5,58 @@ slug: Web/CSS/vertical-align
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство `vertical-align` устанавливает вертикальное позиционирование строчных (inline), строчно-блочных (inline-block) элементов или ячеек таблицы (table-cell).
+[CSS](/ru/docs/Web/CSS)-свойство `vertical-align` устанавливает вертикальное выравнивание строчных (англ. _inline_) и строчно-блочных (англ. _inline-block_) элементов или ячеек таблицы (table-cell).
 
-{{EmbedInteractiveExample("pages/css/vertical-align.html")}}
+{{InteractiveExample("CSS Demo: vertical-align")}}
+
+```css interactive-example-choice
+vertical-align: baseline;
+```
+
+```css interactive-example-choice
+vertical-align: top;
+```
+
+```css interactive-example-choice
+vertical-align: middle;
+```
+
+```css interactive-example-choice
+vertical-align: bottom;
+```
+
+```css interactive-example-choice
+vertical-align: sub;
+```
+
+```css interactive-example-choice
+vertical-align: text-top;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <p>
+    Align the star:
+    <img id="example-element" src="/shared-assets/images/examples/star2.png" />
+  </p>
+</section>
+```
+
+```css interactive-example
+#default-example > p {
+  line-height: 3em;
+  font-family: monospace;
+  font-size: 1.2em;
+  text-decoration: underline overline;
+}
+```
 
 Свойство `vertical-align` может использоваться в двух контекстах:
 
-- Для вертикального позиционирования области строчного элемента внутри содержащей его строки. Например, с помощью него можно задать [вертикальное позиционирование изображения в строке текста](#вертикальное_позиционирование_строчного_элемента).
-- Для вертикального позиционирования [содержимого ячейки таблицы](#вертикальное_позиционирование_содержимого_ячейки_таблицы).
+- Для вертикального выравнивания области строчного элемента внутри содержащей его строки. Например, с помощью него можно задать [вертикальное позиционирование изображения в строке текста](#вертикальное_позиционирование_строчного_элемента).
+- Для вертикального выравнивания [содержимого ячейки таблицы](#вертикальное_позиционирование_содержимого_ячейки_таблицы).
 
-Следует иметь в виду, что свойство `vertical-align` применяется только к строчным и строчно-блочных элементам, а также к элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Glossary/Block-level_content).
+Следует иметь в виду, что свойство `vertical-align` применяется только к строчным и строчно-блочным элементам, а также к элементам ячеек таблицы: его нельзя использовать для вертикального позиционирования [блочных элементов](/ru/docs/Glossary/Block-level_content).
 
 ## Синтаксис
 
@@ -53,7 +95,7 @@ vertical-align: unset;
 Данные значения позиционируют элемент по вертикали относительно родительского элемента:
 
 - `baseline`
-  - : Выравнивает базовую линию элемента с базовой линией родительского элемента. Базовая линия некоторых [замещаемых элементов](/ru/docs/Web/CSS/Replaced_element), таких как {{HTMLElement("textarea")}}, не описана в спецификации HTML, что означает, что их поведение при указании данного ключевого слова может отличаться в зависимости от браузера.
+  - : Выравнивает базовую линию элемента с базовой линией родительского элемента. Базовая линия некоторых [замещаемых элементов](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties), таких как {{HTMLElement("textarea")}}, не описана в спецификации HTML, что означает, что их поведение при указании данного ключевого слова может отличаться в зависимости от браузера.
 - `sub`
   - : Выравнивает базовую линию элемента с базовой линией подстрочного индекса своего родителя.
 - `super`

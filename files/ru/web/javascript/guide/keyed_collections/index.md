@@ -60,7 +60,7 @@ for (var [key, value] of sayings) {
 
 Больше примеров, полное описание, а также обсуждение "Зачем _WeakMap_?" на странице справочника {{jsxref("WeakMap")}}.
 
-Отметим, что `WeakMap,` в частности, может элегантно использоваться для упаковки приватных данных или деталей реализации. Следующий пример из статьи Nick Fitzgerald ["Hiding Implementation Details with ECMAScript 6 WeakMaps"](http://fitzgeraldnick.com/weblog/53/). Приватная часть сохраняется как значение в `privates` и имеет время жизни такое же как и сущность класса. Сам класс и его методы публичны; прочее недоступно извне модуля:
+Отметим, что `WeakMap,` в частности, может элегантно использоваться для упаковки приватных данных или деталей реализации. Следующий пример взят из статьи Ника Фитцджеральда [«Hiding Implementation Details with ECMAScript 6 WeakMaps»](https://fitzgen.com/2014/01/13/hiding-implementation-details-with-e6-weakmaps.html) (англ.). Приватная часть сохраняется как значение в `privates` и имеет время жизни такое же как и сущность класса. Сам класс и его методы публичны; прочее недоступно извне модуля:
 
 ```js
 const privates = new WeakMap();
@@ -109,7 +109,7 @@ for (let item of mySet) console.log(item);
 
 #### Преобразования между Array и Set
 
-Можно создать {{jsxref("Array")}} из Set с помощью {{jsxref("Array.from")}} или используя [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_operator).
+Можно создать {{jsxref("Array")}} из Set с помощью {{jsxref("Array.from")}} или используя [spread operator](/ru/docs/Web/JavaScript/Reference/Operators/Spread_syntax).
 
 В свою очередь, конструктор `Set` может принимать `Array` в качестве аргумента.
 

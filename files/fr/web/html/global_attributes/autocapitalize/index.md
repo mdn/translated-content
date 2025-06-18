@@ -5,7 +5,7 @@ slug: Web/HTML/Global_attributes/autocapitalize
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Attributs_universels) **`autocapitalize`** est un attribut à valeurs contraintes qui contrôle la façon dont le texte saisi est automatiquement converti en majuscules ou non. Voici les valeurs autorisées pour cet attribut :
+L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`autocapitalize`** est un attribut à valeurs contraintes qui contrôle la façon dont le texte saisi est automatiquement converti en majuscules ou non. Voici les valeurs autorisées pour cet attribut :
 
 - `off` ou `none` : aucune transformation automatique n'est appliquée (par défaut, les lettres sont écrites en minuscules)
 - `on` ou `sentences` : la première lettre de chaque phrase est automatiquement écrite en majuscule, les autres lettres ne sont pas transformées (elles sont par défaut en minuscules)

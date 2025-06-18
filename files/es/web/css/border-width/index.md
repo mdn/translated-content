@@ -45,7 +45,7 @@ La propiedad **`border-width`** define el ancho del borde.
 
 ### Ejemplos
 
-[V](/samples/cssref/border.html)er el ejemplo en vivo
+[V](https://mdn.dev/archives/media/samples/cssref/border.html)er el ejemplo en vivo
 
 ```
 element {

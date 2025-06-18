@@ -63,7 +63,7 @@ _No hay cambios._
 
 ### HTTP
 
-- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
+- La cookie **`SameSite`** ha sido implementada. Mira [Set-Cookie](/es/docs/Web/HTTP/Reference/Headers/Set-Cookie) y [HTTP cookies](/es/docs/Web/HTTP/Guides/Cookies) ([Error 795346 en Firefox](https://bugzil.la/795346)).
 
 ### Seguridad
 

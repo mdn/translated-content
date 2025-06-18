@@ -47,7 +47,7 @@ Alternar é a ação padrão de clicar em uma caixa de seleção. Este exemplo d
 </html>
 ```
 
-Você pode ver o `preventDefault` em ação [aqui](/samples/domref/dispatchEvent.html).
+Você pode ver o `preventDefault` em ação [aqui](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html).
 
 O exemplo a seguir demonstra como um input com texto inválido pode ser parado ao chegar ao campo de entrada com o preventDefault().
 
@@ -106,7 +106,7 @@ Chamar preventDefault durante qualquer fase do fluxo de eventos cancela o evento
 > [!NOTE]
 > A partir do Gecko 6.0, chamar o `preventDefault()` faz com que o {{ domxref("event.defaultPrevented") }} se torne true.
 
-Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/event.cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
+Você pode usar o [event.cancelable](/pt-BR/docs/Web/API/Event/cancelable) para checar se o evento é cancelável. Chamar o `preventDefault` para um evento não cancelável não fará efeito.
 
 `Se o preventDefault não parar a propagação do evento através do DOM. event.stopPropagation deve ser usada para isso.`
 

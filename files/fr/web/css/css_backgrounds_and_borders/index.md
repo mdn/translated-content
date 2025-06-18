@@ -126,7 +126,7 @@ Pour voir le code de cet exemple, [regardez le code source sur GitHub](https://g
 
 ### Autres
 
-- La fonction CSS [`url()`](/fr/docs/Web/CSS/url)
+- La fonction CSS [`url()`](/fr/docs/Web/CSS/url_value)
 - Le type de donnée [`<color>`](/fr/docs/Web/CSS/color)
 - Le type de donnée [`<image>`](/fr/docs/Web/CSS/image)
 - Le type de donnée[`<position>`](/fr/docs/Web/CSS/position)

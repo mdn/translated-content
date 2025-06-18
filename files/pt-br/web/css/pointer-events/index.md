@@ -7,7 +7,7 @@ slug: Web/CSS/pointer-events
 
 ## Resumo
 
-A propriedade CSS `pointer-events` permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o [alvo](/pt-BR/docs/Web/API/event.target) do evento do mouse. Quando essa propriedade não é especificada, as mesmas características do valor `visiblePainted` é aplicada no conteúdo SVG.``
+A propriedade CSS `pointer-events` permite autores controlarem sob qualquer circustancia(se houver) um elemento gráfico particular podendo ser o [alvo](/pt-BR/docs/Web/API/Event/target) do evento do mouse. Quando essa propriedade não é especificada, as mesmas características do valor `visiblePainted` é aplicada no conteúdo SVG.``
 
 Além de indicar que este elemento não é o alvo do evento do mouse, o valor `none` instrui o evento do mouse a "passar" o elemento e tudo que está "abaixo" deste elemento.
 
@@ -35,7 +35,7 @@ pointer-events: inherit;
 - `auto`
   - : O elemento se comporta como se a propriedade `pointer-events` não fosse especificada. Em conteúdo SVG, esse valor e o valor `visiblePainted` tem o mesmo efeito.
 - `none`
-  - : O elemento nunca é o [alvo](/pt-BR/docs/Web/API/event.target) de eventos do mouse; contudo, o evento do mouse pode direcionar seus elementos descendentes se esses descendentes tiverem algum outro valor configurado no `pointer-events.` Nessas circunstâncias, os eventos do mouse vão acionar eventos de escuta em seus elementos pai conforme apropriado no seu caminho de/para o descendente, durante as fases do evento captura/[borbulha.](/pt-BR/docs/Web/API/event.bubbles)
+  - : O elemento nunca é o [alvo](/pt-BR/docs/Web/API/Event/target) de eventos do mouse; contudo, o evento do mouse pode direcionar seus elementos descendentes se esses descendentes tiverem algum outro valor configurado no `pointer-events.` Nessas circunstâncias, os eventos do mouse vão acionar eventos de escuta em seus elementos pai conforme apropriado no seu caminho de/para o descendente, durante as fases do evento captura/[borbulha.](/pt-BR/docs/Web/API/Event/bubbles)
 - `visiblePainted`
   - : Apenas SVG. O elemento pode apenas ser alvo de um evento de mouse quando a propriedade `visibility` é definida como `visible` e quando o cursor do mouse estiver sobre o interior (exemplo: "preenchimento") do elemento e a propriedade `fill` tiver um valor exceto `none`, ou quando o cursor do mouse estiver sobre o perímetro(exemplo: "linha") do elemento e a propriedade `stroke` estiver definida com um valor exceto `none`.
 - `visibleFill`
@@ -107,5 +107,5 @@ Esta propriedade pode também ser usada para alcançar melhores taxas de quadros
 ## Veja também
 
 - The SVG attribute {{SVGAttr("pointer-events")}}
-- [WebKit Specs PointerEventsProperty](http://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
+- [WebKit Specs PointerEventsProperty](https://webkit.org/specs/PointerEventsProperty.html) extended for use in (X)HTML content
 - [60fps scrolling using pointer-events: none](http://www.thecssninja.com/javascript/pointer-events-60fps)

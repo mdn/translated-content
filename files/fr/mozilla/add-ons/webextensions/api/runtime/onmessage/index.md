@@ -11,7 +11,7 @@ Voici quelques exemples de cas d'utilisation :
 
 - **dans un [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)**, pour écouter les messages d'un [script d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) ;
 - **dans un script d'arrière-plan**, pour écouter les messages d'un script de contenu&nbsp;;
-- **dans une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/User_interface_components#popups)**, pour écouter les messages d'un script d'arrière-plan&nbsp;;
+- **dans une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups)**, pour écouter les messages d'un script d'arrière-plan&nbsp;;
 - **dans un script d'arrière-plan**, pour écouter les messages d'une page d'options ou d'un script de popup.
 
 Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.
@@ -26,12 +26,12 @@ En plus du message, l'écouteur reçoit en paramètres&nbsp;:
 - Un objet `sender` donnant les détails sur l'expéditeur du message&nbsp;;
 - Une fonction `sendResponse()` qui peut être utilisée pour renvoyer une réponse à l'expéditeur.
 
-Vous pouvez envoyer une réponse synchrone au message en appelant la fonction `sendResponse()` dans votre écouteur. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_a_synchronous_response).
+Vous pouvez envoyer une réponse synchrone au message en appelant la fonction `sendResponse()` dans votre écouteur. [Voir un exemple](#sending_a_synchronous_response).
 
 Pour envoyer une réponse asynchrone, il existe deux options&nbsp;:
 
-- Renvoyer `true` à partir de l'écouteur d'événement. Cela permet de conserver la fonction `sendResponse()` après le retour de l'écouteur pour éventuellement l'appeler plus tard. [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_sendresponse).
-- Renvoyer une `Promise` depuis l'écouteur d'événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d'erreur). [Voir un exemple](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#sending_an_asynchronous_response_using_a_promise).
+- Renvoyer `true` à partir de l'écouteur d'événement. Cela permet de conserver la fonction `sendResponse()` après le retour de l'écouteur pour éventuellement l'appeler plus tard. [Voir un exemple](#sending_an_asynchronous_response_using_sendresponse).
+- Renvoyer une `Promise` depuis l'écouteur d'événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d'erreur). [Voir un exemple](#sending_an_asynchronous_response_using_a_promise).
 
 > [!WARNING]
 > Retourner une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) est désormais la méthode à privilégier car `sendResponse()` [sera retirée de la spécification W3C](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219).
@@ -264,7 +264,7 @@ function isBookmarked(message, sender, response) {
 browser.runtime.onMessage.addListener(isBookmarked);
 ```
 
-Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitement construire une promesse. Cet exemple plutôt artificiel envoie une réponse après un délai d'une seconde, en utilisant [`Window.setTimeout()`](/fr/docs/Web/API/WindowOrWorkerGlobalScope/setTimeout)&nbsp;:
+Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitement construire une promesse. Cet exemple plutôt artificiel envoie une réponse après un délai d'une seconde, en utilisant [`Window.setTimeout()`](/fr/docs/Web/API/Window/setTimeout)&nbsp;:
 
 ```js
 // background-script.js

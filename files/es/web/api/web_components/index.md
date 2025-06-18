@@ -27,11 +27,11 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
 ## Tutoriales
 
-- [Utilizando elementos personalizados (Using custom elements)](/es/docs/Web/Web_Components/Using_custom_elements)
+- [Utilizando elementos personalizados (Using custom elements)](/es/docs/Web/API/Web_components/Using_custom_elements)
   - : Guía que muestra como usar las características de los elementos personalizados para crear componentes web sencillos, así como revisar las llamadas del ciclo de vida y algunas características más avanzadas.
-- [Utilizando el shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM)
+- [Utilizando el shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM)
   - : Guía que trata los fundamentos del shadow DOM, mostrando como adjuntar un shadow DOM a un elemento, añadir el árbol del shadow DOM, añadirle estilos y más.
-- [Usando templates y slots](/es/docs/Web/Web_Components/Using_templates_and_slots)
+- [Usando templates y slots](/es/docs/Web/API/Web_components/Using_templates_and_slots)
   - : Guía que muestra como definir una estructura HTML reutilizable utilizando elementos {{htmlelement("template")}} y {{htmlelement("slot")}} elements, y entonces usar esa estructura debto del componente web.
 
 ## Referencia
@@ -42,7 +42,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene funcionalidad relacionada a los elementos personalizados, más notablemente el método {{domxref("CustomElementRegistry.define()")}} utilizado para registrar nuevos elementos personalizados para que se puedan usar en el documento
 - {{domxref("Window.customElements")}}
   - : Retorna una referencia al objeto `CustomElementRegistry`.
-- [Llamadas del ciclo de vida (Life cycle callbacks)](/es/docs/Web/Web_Components/Using_custom_elements#Using_the_lifecycle_callbacks)
+- [Llamadas del ciclo de vida (Life cycle callbacks)](/es/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
 
   - : Llamadas de funciones especiales declaradas dentro de la clase de definición de los componentes personalizados, los que afectan su comportamiento:
 
@@ -65,15 +65,15 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Pseudo-clases relacionadas específicamente a elementos personalizados:
 
     - {{cssxref(":defined")}}: Coincide con cualquier elemento declarado, incluyendo elementos incorporados y elementos personalizados definidos con `CustomElementRegistry.define()`).
-    - {{cssxref(":host")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado.
-    - {{cssxref(":host()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el _shadow host_.
-    - {{cssxref(":host-context()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/Web_Components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el shadow host de los ancestros del sitio desde el cual esta ubicado en la jerarquía del DOM.
+    - {{cssxref(":host")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado.
+    - {{cssxref(":host()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el _shadow host_.
+    - {{cssxref(":host-context()")}}: Selecciona el _shadow host_ del [shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM) conteniendo el CSS que es usado (para que se pueda seleccionar un elemento personalizado desde dentro de su _shadow DOM_) — pero solo si el selector determinado como el parámetro de la función coincide con el shadow host de los ancestros del sitio desde el cual esta ubicado en la jerarquía del DOM.
 
 - Pseudo-elementos CSS
 
   - : Pseudo-elementos relacionados especificamente a elementos personalizados:
 
-    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/Web_Components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) que coincida.
+    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) que coincida.
 
 ### Shadow DOM
 

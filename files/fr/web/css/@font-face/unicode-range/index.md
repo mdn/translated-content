@@ -92,7 +92,7 @@ div {
 - [`font-stretch`](/fr/docs/Web/CSS/@font-face/font-stretch)
 - [`font-style`](/fr/docs/Web/CSS/@font-face/font-style)
 - [`font-weight`](/fr/docs/Web/CSS/@font-face/font-weight)
-- [`font-variant`](/fr/docs/Web/CSS/@font-face/font-variant)
+- [`font-variant`](/fr/docs/Web/CSS/@font-face)
 - [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings)
 - [`font-variation-settings`](/fr/docs/Web/CSS/@font-face/font-variation-settings)
 - [`src`](/fr/docs/Web/CSS/@font-face/src)

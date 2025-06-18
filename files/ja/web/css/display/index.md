@@ -2,16 +2,77 @@
 title: display
 slug: Web/CSS/display
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
 
-**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/CSS_flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などを設定します。
+**`display`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素を[ブロックボックスとインラインボックス](/ja/docs/Web/CSS/CSS_display/Flow_layout)のどちらとして扱うか、およびその子要素のために使用されるレイアウト、例えば [フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)などを設定します。
 
-正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
+正式には、 **`display`** プロパティは要素の内側と外側の表示種別を設定します。外側の型は要素の[フローレイアウト](/ja/docs/Web/CSS/CSS_display/Flow_layout)への参加方法を設定し、内側の型は子要素のレイアウトを設定します。 `display` のいくつかの値は、それ自身の個別の仕様書で完全に定義されています。例えば、 `display: flex` が宣言されたときに何が起こるかの詳細は、 CSS Flexible Box Model 仕様書で定義されています。
 
-{{EmbedInteractiveExample("pages/css/display.html")}}
+{{InteractiveExample("CSS Demo: display")}}
+
+```css interactive-example-choice
+display: block;
+```
+
+```css interactive-example-choice
+display: inline-block;
+```
+
+```css interactive-example-choice
+display: none;
+```
+
+```css interactive-example-choice
+display: flex;
+```
+
+```css interactive-example-choice
+display: grid;
+```
+
+```html interactive-example
+<p>
+  Apply different <code>display</code> values on the dashed orange-bordered
+  <code>div</code>, which contains three child elements.
+</p>
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    Some text A.
+    <div id="example-element">
+      <div class="child">Child 1</div>
+      <div class="child">Child 2</div>
+      <div class="child">Child 3</div>
+    </div>
+    Some text B.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  width: 100%;
+  height: 100%;
+}
+
+code {
+  background: #8888;
+}
+
+#example-element {
+  border: 3px dashed orange;
+}
+
+.child {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background-color: #ccccff;
+  border: 1px solid #ababab;
+  color: black;
+}
+```
 
 ## 構文
 
@@ -83,21 +144,21 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 > }
 > ```
 >
-> 詳しくは [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)を参照してください。
+> 詳しくは [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)を参照してください。
 
 ### 内側
 
 - {{CSSxRef("&lt;display-inside&gt;")}}
 
-  - : これらのキーワードは、要素の内側の表示種別を指定します。これは、要素 (置換要素ではないものとする) の内容物をレイアウトする整形コンテキストの種類を定義します。
+  - : これらのキーワードは、要素の内側の表示種別を指定します。これは、要素 (置換要素ではないものとする) のコンテンツをレイアウトする整形コンテキストの種類を定義します。
 
-    - `flow` {{Experimental_Inline}}
+    - `flow`
 
-      - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、内容物をレイアウトします。
+      - : 要素は、フローレイアウト (ブロックおよびインラインのレイアウト) を使用して、コンテンツをレイアウトします。
 
-        外側の表示種別が `inline` または `run-in` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックコンテナーボックスを生成します。
+        外側の表示種別が `inline` であり、またブロックまたはインラインの整形コンテキストに関係する場合は、インラインボックスを生成します。そうでない場合は、ブロックボックスを生成します。
 
-        ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、または内容物が親の整形コンテキストに吸収されます。
+        ほかのプロパティ ({{CSSxRef("position")}}, {{CSSxRef("float")}}, {{CSSxRef("overflow")}} など) の値や、要素自体がブロックまたはインラインの整形コンテキストに関係するかによって、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context) (BFC) を生成する、またはコンテンツが親の整形コンテキストに吸収されます。
 
     - `flow-root`
       - : 要素は、新たな[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)を確立するブロック要素ボックスを生成し、整形ルートがある場所を定義します。
@@ -107,18 +168,18 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
       - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[フレックスボックスモデル](/ja/docs/Web/CSS/CSS_flexible_box_layout)に従ってレイアウトします。
     - `grid`
       - : 要素は、ブロックレベル要素のように動作しつつ、そのコンテンツを[グリッドモデル](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)に従ってレイアウトします。
-    - `ruby` {{Experimental_Inline}}
-      - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
+    - `ruby`
+      - : 要素は、インラインレベル要素のように動作しつつ、そのコンテンツをルビ (ruby) 整形モデルに従ってレイアウトします。HTML の {{HTMLElement("ruby")}} 要素のように動作します。
 
 > [!NOTE]
 > 複数キーワードの構文に対応しているブラウザーは、**内側**の表示種別のみが指定されていると（`display: flex` や `display: grid` など）、外側の表示種別を `block` に設定します（`display: block flex` や `display: block grid` など）。
 
-### リスト項目
+### リストアイテム
 
 - {{CSSxRef("&lt;display-listitem&gt;")}}
-  - : 要素は内容のためにブロックボックスと、個別のリスト項目のインラインボックスを生成します。
+  - : 要素はコンテンツのためにブロックボックスと、個別のリストアイテムのインラインボックスを生成します。
 
-`list-item` 単独の値を指定すると、要素はリスト項目のように動作します。これは {{CSSxRef("list-style-type")}} や {{CSSxRef("list-style-position")}} と共に使用することができます。
+`list-item` 単独の値を指定すると、要素はリストアイテムのように動作します。これは {{CSSxRef("list-style-type")}} や {{CSSxRef("list-style-position")}} と共に使用することができます。
 
 `list-item` は {{CSSxRef("&lt;display-outside&gt;")}} キーワードのいずれかと、 {{CSSxRef("&lt;display-inside&gt;")}} の `flow` または `flow-root` キーワードと組み合わせることもできます。
 
@@ -149,13 +210,13 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
       - : これらの要素は HTML の {{HTMLElement("col")}} 要素のように動作します。
     - `table-caption`
       - : これらの要素は HTML の {{HTMLElement("caption")}} 要素のように動作します。
-    - `ruby-base` {{Experimental_Inline}}
+    - `ruby-base`
       - : これらの要素は HTML の {{HTMLElement("rb")}} 要素のように動作します。
-    - `ruby-text` {{Experimental_Inline}}
+    - `ruby-text`
       - : これらの要素は HTML の {{HTMLElement("rt")}} 要素のように動作します。
-    - `ruby-base-container` {{Experimental_Inline}}
+    - `ruby-base-container`
       - : これらの要素は無名のボックスとして生成されます。
-    - `ruby-text-container` {{Experimental_Inline}}
+    - `ruby-text-container`
       - : これらの要素は HTML の {{HTMLElement("rtc")}} 要素のように動作します。
 
 ### ボックス
@@ -192,13 +253,13 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 
     - `inline-flex`
 
-      - : 要素は、インラインレベル要素のようにふるまいつつ、その内容物をフレックスボックスモデルに従ってレイアウトします。
+      - : 要素は、インラインレベル要素のようにふるまいつつ、そのコンテンツをフレックスボックスモデルに従ってレイアウトします。
 
         これは `inline flex` と等価です。
 
     - `inline-grid`
 
-      - : 要素は、インラインレベル要素のようにふるまいつつ、その内容物をグリッドモデルに従ってレイアウトします。
+      - : 要素は、インラインレベル要素のようにふるまいつつ、そのコンテンツをグリッドモデルに従ってレイアウトします。
 
         これは `inline grid` と等価です。
 
@@ -223,7 +284,7 @@ CSS の `display` プロパティは、キーワード値を使用して指定�
 }
 ```
 
-これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)の記事を参照してください。
+これらの変更の詳細については、 [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)の記事を参照してください。
 
 ### グローバル
 
@@ -240,15 +301,15 @@ display: unset;
 
 ### 複数キーワード値
 
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)
 
 ### CSS フローレイアウト (display: block, display: inline)
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_overflow)
-- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
-- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [フローレイアウトとオーバーフロー](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_overflow)
+- [フローレイアウトと書字方向](/ja/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
+- [フロー内とフローの外](/ja/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow)
 
 ### display: flex
 
@@ -271,7 +332,7 @@ display: unset;
 - [グリッドレイアウトのボックス配置](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)
 - [グリッド、論理的な値、書字方向](/ja/docs/Web/CSS/CSS_grid_layout/Grids_logical_values_and_writing_modes)
 - [グリッドレイアウトとアクセシビリティ](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [グリッドを使用したよくあるレイアウトの実現](/ja/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 ### display のアニメーション
@@ -294,28 +355,30 @@ display: unset;
 
 `display` プロパティのトランジションの例は、 [`@starting-style`](/ja/docs/Web/CSS/@starting-style#例) と [`transition-behavior`](/ja/docs/Web/CSS/transition-behavior#例) のページを参照してください。
 
-## アクセシビリティの考慮
+## アクセシビリティ
 
 ### display: none
 
-要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
+要素の `display` の値に `none` を使用すると、その要素は[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から削除されます。すなわち、その要素とすべての子孫要素は読み上げ技術によって読み上げられなくなります。
 
-要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link)を使用できます。
+要素を視覚的に隠したい場合は、よりアクセシブルな代替手段として、画面から視覚的に要素を削除しますが、スクリーンリーダーのような支援技術が解析可能な状態を維持するための、[プロパティの組み合わせ](https://webaim.org/techniques/css/invisiblecontent/)が利用できます。
+
+`display: none` はアクセシビリティツリーからコンテンツを隠しますが、隠されている要素でも、可視要素の `aria-describedby` または `aria-labelledby` 属性から参照されている場合は、支援技術に公開されます。
 
 ### display: contents
 
-一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [CSS 仕様書](https://drafts.csswg.org/css-display/#valdef-display-contents)によれば正しくありません。
+一部のブラウザーの現在の実装では、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)から `display` の値が `contents` であるすべての要素を削除します (ただし子孫は残ります)。これにより、その要素自身は読み上げソフトでは読み上げられなくなります。これは [CSS 仕様書](https://drafts.csswg.org/css-display/#valdef-display-contents)によれば正しくありません。
 
 - [More accessible markup with display: contents | Hidde de Vries](https://hidde.blog/more-accessible-markup-with-display-contents/)
 - [Display: Contents Is Not a CSS Reset | Adrian Roselli](https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html)
 
 ### 表
 
-一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
+一部のブラウザーでは、 {{HTMLElement("table")}} 要素の `display` の値を `block`、`grid`、あるいは `flex` に変更すると、[アクセシビリティツリー](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)での表現が変わります。これにより、表が読み上げ技術によって適切に読み上げられなくなります。
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://www.tpgi.com/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN WCAG を理解する ― ガイドライン 1.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
+- [MDN WCAG を理解する ― ガイドライン 1.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.3_—_さまざまな方法で提示できるコンテンツの作成)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## 公式定義
@@ -353,19 +416,33 @@ display: unset;
   <label for="display">display の値を選択:</label>
   <select id="display">
     <option selected>block</option>
+    <option>block flow</option>
     <option>inline</option>
-    <option>inline-block</option>
-    <option>inline flow-root</option>
-    <option>none</option>
-    <option>flex</option>
-    <option>inline-flex</option>
-    <option>inline flex</option>
-    <option>grid</option>
-    <option>inline-grid</option>
-    <option>inline grid</option>
+    <option>inline flow</option>
+    <option>flow</option>
+    <option>flow-root</option>
+    <option>block flow-root</option>
     <option>table</option>
     <option>block table</option>
+    <option>flex</option>
+    <option>block flex</option>
+    <option>grid</option>
+    <option>block grid</option>
     <option>list-item</option>
+    <option>block flow list-item</option>
+    <option>inline flow list-item</option>
+    <option>block flow-root list-item</option>
+    <option>inline flow-root list-item</option>
+    <option>contents</option>
+    <option>none</option>
+    <option>inline-block</option>
+    <option>inline flow-root</option>
+    <option>inline-table</option>
+    <option>inline table</option>
+    <option>inline-flex</option>
+    <option>inline flex</option>
+    <option>inline-grid</option>
+    <option>inline grid</option>
   </select>
 </div>
 ```
@@ -424,12 +501,20 @@ updateDisplay();
 
 なお、説明のために、以下に相当する複数キーワードの値が追加されています。
 
+- `block` = `block flow`
+- `inline` = `inline flow`
+- `flow` = `block flow`
+- `flow-root` = `block flow-root`
+- `table` = `block table`
+- `flex` = `block flex`
+- `grid` = `block grid`
+- `list-item` = `block flow list-item`
 - `inline-block` = `inline flow-root`
+- `inline-table` = `inline table`
 - `inline-flex` = `inline flex`
 - `inline-grid` = `inline grid`
-- `table` = `block table`
 
-[値のグループ](#値のグループ)以下にあるそれぞれの独立した表示データ型のページに、より多くの例があります。
+[値のグループ](#値のグループ)以下にあるそれぞれの独立した表示型のページに、より多くの例があります。
 
 ## 仕様書
 
@@ -441,7 +526,7 @@ updateDisplay();
 
 ## 関連情報
 
-- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow)
-- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts)
+- [通常フローでのブロックおよびインラインレイアウト](/ja/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)
+- [整形コンテキストの紹介](/ja/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts)
 - {{CSSxRef("visibility")}}, {{CSSxRef("float")}}, {{CSSxRef("position")}}
 - {{CSSxRef("grid")}}, {{CSSxRef("flex")}}

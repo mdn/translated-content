@@ -48,5 +48,5 @@ xhr.send(null);
 
 ## Смотрите также
 
-- Список [HTTP response codes](/ru/docs/Web/HTTP/Response_codes)
+- Список [HTTP response codes](/ru/docs/Web/HTTP/Reference/Status)
 - [HTTP](/ru/docs/Web/HTTP)

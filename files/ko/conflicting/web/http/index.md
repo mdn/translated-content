@@ -14,19 +14,19 @@ HTTP는 확장 가능한 프로토콜로 리소스 및 URI(Uniform Resource Iden
 
 - [HTTP의 개요](/ko/docs/Web/HTTP/Overview)
   - : HTTP는 무엇이고 웹 아키텍처에서 그 역할은 무엇인지, 프로토콜 스택에서의 위치를 서술하고 있습니다.
-- [HTTP의 진화](/ko/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [HTTP의 진화](/ko/docs/Web/HTTP/Evolution_of_HTTP)
   - : HTTP는 1990년대 초반에 만들어지고 여러번 확장되어 왔습니다. 이 항목에서는 HTTP의 역사에 대해서 훑어보고 HTTP/0.9, HTTP/1.0, HTTP/1.1 그리고 수년에 걸쳐 중요하지는 않지만 새로운 기능이 소개된 현대의 HTTP/2에 대해서 서술하고 있습니다.
-- [리소스와 URIs](/ko/docs/Web/HTTP/Resources_and_URIs)
+- [리소스와 URIs](/ko/docs/conflicting/Web/HTTP/Basics_of_HTTP/MIME_types)
   - : 리소스에 대한 개념, 식별자, 그리고 웹에서의 위치에 대해서 간략히 소개합니다.
-- [웹 리소스 식별](/ko/docs/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
+- [웹 리소스 식별](/ko/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
   - : 웹 리소스가 어떻게 참조되는지 그리고 어디에 위치하는지를 서술합니다.
-- [데이터 URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Data_URLs)
+- [데이터 URL](/ko/docs/Web/URI/Schemes/data)
   - : 특정 종류의 URI는 직접 대표하는 리소스를 포함합니다. 데이터 URL은 매우 편리하지만 위험성을 가지고 있습니다.
-- [리소스 URL](/ko/docs/Web/HTTP/Basics_of_HTTP/Resource_URLs) {{Non-standard_Inline}}
+- [리소스 URL](/ko/docs/Web/URI/Schemes/resource) {{Non-standard_Inline}}
   - : 리소스 URL(`resource` 스키마가 접두사로 붙어있는 URL)은 Firefox와 Firefox 확장 프로그램들에서 내적으로 리소스를 로드하기 위해서 사용됩니다. 하지만 몇몇 브라우저로 연결할 수 있는 사이트의 정보로도 사용할 수 있습니다.
-- [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types)
+- [MIME 타입](/ko/docs/Web/HTTP/MIME_types)
   - : HTTP/1.0부터는 다양한 타입의 콘텐츠를 전송할 수 있습니다. 이 글에서는 {{HTTPHeader("Content-Type")}} 헤더와 MIME 표준을 사용하여 이를 수행하는 방법을 설명합니다.
-- [www와 비-www URL 중에서 선택하기](/ko/docs/Web/HTTP/Basics_of_HTTP/Choosing_between_www_and_non-www_URLs)
+- [www와 비-www URL 중에서 선택하기](/ko/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
   - : 이 글에서는 www 접두사 도메인을 사용할지 여부를 선택하는 방법과, 그 선택의 결과에 대한 지침을 제공합니다.
 - [HTTP 세션의 흐름](/ko/docs/Web/HTTP/Session)
   - : 이 글은 일반적인 HTTP 세션에 대해서 서술합니다. 예를 들어, 당신이 웹 페이지에서 링크 또는 이미지를 클릭하였을 때 무슨 일이 일어나는지를 들 수 있습니다.

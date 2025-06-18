@@ -2,16 +2,17 @@
 title: inherit
 slug: Web/CSS/inherit
 l10n:
-  sourceCommit: 13c58b0430c3972566ea2d3a254129c18b1ed800
+  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
 {{CSSRef}}
 
-**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/computed_value)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
+**`inherit`** は CSS のキーワードで、要素のプロパティの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)を親要素から取得するよう指定します。 CSS の一括指定 {{cssxref("all")}} を含め、すべての CSS プロパティに適用することができます。
 
-[継承プロパティ](/ja/docs/Web/CSS/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
+[継承プロパティ](/ja/docs/Web/CSS/CSS_cascade/Inheritance#継承プロパティ)においては、既定の動作を推進するものであり、他のルールを上書きする場合にのみ必要です。
 
-親要素が包含ブロックではなかった場合であっても、常に文書ツリー内の親要素から継承が行われます。
+> [!NOTE]
+> 親要素が包含ブロックではなかった場合であっても、常に文書ツリー内の親要素から継承が行われます。
 
 ## 例
 
@@ -49,7 +50,7 @@ div#current {
 
 ## 関連情報
 
-- [継承](/ja/docs/Web/CSS/Inheritance)
+- [継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{cssxref("initial")}} を使用すると、プロパティを初期値に設定します。
 - {{cssxref("revert")}} キーワードを使用すると、プロパティをユーザーエージェントのスタイルシート（またはもしあれば、ユーザーのスタイル）で設定された値に初期化します。
 - {{cssxref("revert-layer")}} キーワードを使用すると、プロパティを直前のカスケードレイヤーで確立された値に戻します。

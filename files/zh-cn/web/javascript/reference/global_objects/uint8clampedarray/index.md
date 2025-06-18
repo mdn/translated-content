@@ -16,7 +16,7 @@ new Uint8ClampedArray(object);
 new Uint8ClampedArray(buffer [, byteOffset [, length]]);
 ```
 
-关于构造函数语法和参数的更多信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#Syntax)_。
+关于构造函数语法和参数的更多信息，参见 _[TypedArray](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#syntax)_。
 
 ## 静态属性
 
@@ -112,6 +112,6 @@ var dv = new Uint8ClampedArray([1, 2, 3]);
 
 ## 参见
 
-- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Typed_arrays)
+- [JavaScript typed arrays](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)
 - {{jsxref("ArrayBuffer")}}
 - {{jsxref("DataView")}}

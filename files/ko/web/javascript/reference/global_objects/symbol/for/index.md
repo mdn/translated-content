@@ -10,7 +10,20 @@ l10n:
 **`Symbol.for(key)`** 메서드는 주어진 키를 사용해 런타임 범위의 심볼 레지스트리에서 존재하는 심볼을 찾고,
 존재할 경우 이를 반환합니다. 존재하지 않는 경우에는 해당 키를 사용해 전역 심볼 레지스트리에 새로운 심볼을 생성합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+
+```js interactive-example
+console.log(Symbol.for("bar") === Symbol.for("bar"));
+// Expected output: true
+
+console.log(Symbol("bar") === Symbol("bar"));
+// Expected output: false
+
+const symbol1 = Symbol.for("foo");
+
+console.log(symbol1.toString());
+// Expected output: "Symbol(foo)"
+```
 
 ## 구문
 

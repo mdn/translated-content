@@ -33,7 +33,7 @@ ImageData ctx.getImageData(sx, sy, sw, sh);
 - `IndexSizeError`
   - : Выбрасывает, если аргумент высоты или ширины равен нулю.
 - `SecurityError`
-  - : The canvas contains or may contain pixels which were loaded from an origin other than the one from which the document itself was loaded. To avoid `SecurityError` being thrown in this situation, configure CORS to allow the source image to be used in this way. See [Allowing cross-origin use of images and canvas](/ru/docs/Web/HTML/CORS_enabled_image).
+  - : The canvas contains or may contain pixels which were loaded from an origin other than the one from which the document itself was loaded. To avoid `SecurityError` being thrown in this situation, configure CORS to allow the source image to be used in this way. See [Allowing cross-origin use of images and canvas](/ru/docs/Web/HTML/How_to/CORS_enabled_image).
 
 ## Примеры
 

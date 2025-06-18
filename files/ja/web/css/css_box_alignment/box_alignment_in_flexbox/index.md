@@ -1,17 +1,49 @@
 ---
 title: フレックスボックスでのボックス配置
 slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
+l10n:
+  sourceCommit: f11e9200b6f9d5c191051eb7ccbe7ebd44966e43
 ---
 
 {{CSSRef}}
 
-[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、フレックスボックスのコンテキストにおいてボックス配置がどのように働くかを探ります。このページの目的は、フレックスボックスとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_Box_Alignment)ページを合わせてお読みください。
+[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の仕様書では、さまざまなレイアウト方式で配置がどのように働くかを詳述しています。このページでは、フレックスボックスのコンテキストにおいてボックス配置がどのように働くかを探ります。このページの目的は、フレックスボックスとボックス配置として定められた事柄を詳述するためのものですので、ボックス配置の様々なレイアウト方式の間で共通の機能について詳述した、主となる[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)ページを合わせてお読みください。
 
 ## 基本的な例
 
 この例では、3 つのフレックスアイテムが {{cssxref("justify-content")}} を使用して主軸に、 {{cssxref("align-items")}} を使用して交差軸に配置されます。最初のアイテムはグループに対して設定された `align-items` の値を上書きし、 {{cssxref("align-self")}} で `center` に設定しています。
 
-{{EmbedGHLiveSample("css-examples/box-alignment/overview/flex-align-items.html", '100%', 500)}}
+```html-nolint live-sample___flex-align-items
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three <br />に追加<br />テキスト</div>
+</div>
+```
+
+```css hidden live-sample___flex-align-items
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___flex-align-items
+.box {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box :first-child {
+  align-self: center;
+}
+```
+
+{{EmbedLiveSample("flex-align-items")}}
 
 ## 軸と flex-direction
 
@@ -46,7 +78,36 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 開始点に配置された一連のフレックスアイテムのうち、1 つのアイテムで {{cssxref("margin")}} を `auto` に設定することで、分割ナビゲーションを作成できます。これは、フレックスボックスと alignment プロパティでうまくいきます。 auto のマージンに使用できる領域がなくなると、アイテムは他のすべてのフレックスアイテムと同じように動作し、空間に収まるように縮小します。
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/auto-margins.html", '100%', 500)}}
+```html-nolint live-sample___auto-margins
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div class="push">Four</div>
+  <div>Five</div>
+</div>
+```
+
+```css hidden live-sample___auto-margins
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___auto-margins
+.box {
+  display: flex;
+  border: 2px dotted rgb(96 139 168);
+}
+.push {
+  margin-left: auto;
+}
+```
+
+{{EmbedLiveSample("auto-margins")}}
 
 ## `gap` プロパティ
 
@@ -60,7 +121,42 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 
 交差軸では、`row-gap` プロパティは、隣接するフレックス行の間隔を作成するので、この効果を得るには `flex-wrap` を `wrap` に設定する必要があります。
 
-{{EmbedGHLiveSample("css-examples/box-alignment/flexbox/gap.html", '100%', 700)}}
+```html-nolint live-sample___gap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+</div>
+```
+
+```css hidden live-sample___gap
+.box > * {
+  padding: 20px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+```css live-sample___gap
+.box {
+  width: 450px;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 2em;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.box > * {
+  flex: 1;
+}
+```
+
+{{EmbedLiveSample("gap")}}
 
 ## リファレンス
 
@@ -85,9 +181,3 @@ slug: Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox
 ## ガイド
 
 - [フレックスコンテナー内のアイテムの配置](/ja/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
-
-## 外部リソース
-
-- [Box alignment cheatsheet](https://rachelandrew.co.uk/css/cheatsheets/box-alignment)
-- [CSS Grid, Flexbox and Box Alignment](https://www.smashingmagazine.com/2016/11/css-grids-flexbox-box-alignment-new-layout-standard/)
-- [Thoughts on partial implementations of Box Alignment](https://blogs.igalia.com/jfernandez/2017/05/03/can-i-use-css-box-alignment/)

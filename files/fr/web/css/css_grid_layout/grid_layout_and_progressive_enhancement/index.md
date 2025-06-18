@@ -206,7 +206,7 @@ Si on réinitialise la largeur avec `auto`, on n'aura plus le résultat souhait�
 
 #### Une solution avec les requêtes de fonctionnalité
 
-Les requêtes de fonctionnalité ressemblent beaucoup aux [requêtes de média](/fr/docs/Web/CSS/Media_Queries) qu'on utilise pour créer des dispositions adaptatives. Ici, plutôt que de vérifier la largeur de la zone d'affichage ou telle caractéristique du navigateur ou de l'appareil, on vérifie la prise en charge d'une propriété CSS avec une certaine valeur grâce à une règle {{cssxref("@supports")}}. À l'intérieur de cette requête, on peut écrire le CSS nécessaire pour obtenir la nouvelle disposition et retiré tout ce qui est nécessaire pour l'ancienne mise en forme.
+Les requêtes de fonctionnalité ressemblent beaucoup aux [requêtes de média](/fr/docs/Web/CSS/CSS_media_queries) qu'on utilise pour créer des dispositions adaptatives. Ici, plutôt que de vérifier la largeur de la zone d'affichage ou telle caractéristique du navigateur ou de l'appareil, on vérifie la prise en charge d'une propriété CSS avec une certaine valeur grâce à une règle {{cssxref("@supports")}}. À l'intérieur de cette requête, on peut écrire le CSS nécessaire pour obtenir la nouvelle disposition et retiré tout ce qui est nécessaire pour l'ancienne mise en forme.
 
 ```css
 @supports (display: grid) {

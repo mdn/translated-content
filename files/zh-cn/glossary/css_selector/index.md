@@ -35,7 +35,7 @@ div.warning {
 }
 ```
 
-选择器例如：`"p"`（文档中的 {{HTMLElement("p")}} 元素都会应用绿色字体的样式）、`"div.warning"`（文档中所有 [class](/zh-CN/docs/Web/HTML/Global_attributes/class) 包含 `"warning"` 的 {{HTMLElement("div")}} 元素都会有一个看起来像警告框的样式）和 `"#customized"`（id 为 `"customized"` 的元素中的文本为 16px 高，字体是 Lucida Grande 和一些用作回落的字体）。
+选择器例如：`"p"`（文档中的 {{HTMLElement("p")}} 元素都会应用绿色字体的样式）、`"div.warning"`（文档中所有 [class](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class) 包含 `"warning"` 的 {{HTMLElement("div")}} 元素都会有一个看起来像警告框的样式）和 `"#customized"`（id 为 `"customized"` 的元素中的文本为 16px 高，字体是 Lucida Grande 和一些用作回落的字体）。
 
 我们可以把上面的 CSS 应用到 HTML 中，如下：
 
@@ -57,7 +57,7 @@ div.warning {
 
 ## 参见
 
-- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn/CSS/Building_blocks/Selectors)
+- 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基础选择器
 
   - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`

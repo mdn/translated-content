@@ -12,4 +12,4 @@ Un nombre de dominio es la dirección de un sitio web en {{Glossary("Internet")}
 ### Conocimientos generales
 
 - [Dominio de Internet](https://es.wikipedia.org/wiki/Dominio_de_Internet) en Wikipedia
-- [Entendiendo los nombres de los dominios](/es/Learn/Understanding_domain_names)
+- [Entendiendo los nombres de los dominios](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

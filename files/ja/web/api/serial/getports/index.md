@@ -26,7 +26,7 @@ getPorts()
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : [Feature Policy](/ja/docs/Web/HTTP/Feature_Policy) でこの API の使用が制限されていたり、ユーザーの操作によって API の使用が許可されていないとき、返された `Promise` がこのエラーで拒否されます。
+  - : [Feature Policy](/ja/docs/Web/HTTP/Guides/Permissions_Policy) でこの API の使用が制限されていたり、ユーザーの操作によって API の使用が許可されていないとき、返された `Promise` がこのエラーで拒否されます。
 
 ## 例
 

@@ -258,9 +258,9 @@ Recall that while the display order of the elements is independent of their orde
 
 有時候配置 Flex item 的演算法會有點難以理解。因此，在設計 Flexible box 時有一些指引，能讓你避免負面意義上的驚嘆。
 
-Flexible box 通常會盡量貼合 [writing mode](/zh-TW/docs/CSS/writing-mode) 的配置，這意味著 **main start** 與 **main end** 會基於 **start** 與 **end** 的位置來配置。
+Flexible box 通常會盡量貼合 [writing mode](/zh-TW/docs/Web/CSS/writing-mode) 的配置，這意味著 **main start** 與 **main end** 會基於 **start** 與 **end** 的位置來配置。
 
-**cross start** 與 **cross end** 依賴 **start** 或 **before** 的定義的位置，其依賴 [`direction` 的值](/zh-TW//docs/Web/CSS/direction)。
+**cross start** 與 **cross end** 依賴 **start** 或 **before** 的定義的位置，其依賴 [`direction` 的值](/zh-TW_docs/Web/CSS/direction)。
 
 Page breaks are possible in flexible boxes layout as long as `break-` property allows it. CSS3 `break-after`, `break-before`, and `break-inside` as well as CSS 2.1 `page-break-before`, `page-break-after`, and `page-break-inside` properties are accepted on a flex container, flex items, and inside flex items.
 

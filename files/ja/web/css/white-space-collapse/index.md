@@ -2,12 +2,12 @@
 title: white-space-collapse
 slug: Web/CSS/white-space-collapse
 l10n:
-  sourceCommit: 0b999684ee7e7e2849f3b486064ad4f279d6281a
+  sourceCommit: 63e23080dd90d7802be807ac9beca286f6f31f7f
 ---
 
 {{CSSRef}}
 
-**`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように折りたたむかを制御します。
+**`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}を統合する方法を制御します。
 
 > **メモ:** `white-space-collapse` および {{CSSxRef("text-wrap")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。
 
@@ -34,11 +34,11 @@ white-space-collapse: unset;
 ### 値
 
 - `collapse`
-  - : 連続したホワイトスペースを[折りたたみます](#ホワイトスペースの折り畳み)。
+  - : 連続したホワイトスペースを[統合します](#ホワイトスペースの統合)。
 - `preserve`
   - : 連続したホワイトスペースと区間区切り文字を維持します。
 - `preserve-breaks`
-  - : 連続したホワイトスペースを折りたたみますが、区間区切り文字は維持します。
+  - : 連続したホワイトスペースを統合しますが、区間区切り文字は維持します。
 - `preserve-spaces`
   - : 連続したホワイトスペースを維持しますが、タブと区間区切り文字は空白に変換します。
 - `break-spaces`
@@ -49,17 +49,17 @@ white-space-collapse: unset;
 
 > **メモ:** _区間区切り文字_ とは、テキストを新しい行に改行させる行送り文字などのことです。
 
-## ホワイトスペースの折り畳み
+## ホワイトスペースの統合
 
-ユーザーエージェントは、以下のようにホワイトスペースの折りたたみを処理します。
+ユーザーエージェントは、以下のようにホワイトスペースの統合を処理します。
 
 - タブは一般に空白に変換します。
-- 区間区切り文字が折りたたまれる場合は、次のようになります。
-  - 連続した区間区切り文字は、単一の区間区切り文字に折りたたまれます。
+- 区間区切り文字が統合される場合は、次のようになります。
+  - 連続した区間区切り文字は、単一の区間区切り文字に統合されます。
   - 空白で単語を区切る言語（英語など）の場合は空白に変換し、空白で単語を区切らない言語（中国語など）の場合は完全に除去します。
-- 空白が折りたたまれる場合は、次のようになります。
+- 空白が統合される場合は、次のようになります。
   - 区間区切り文字の前後の空白またはタブは除去されます。
-  - 連続した空白は、単一の空白に変換、または「折り畳み」ます。
+  - 連続した空白は、単一の空白に変換、または「統合」ます。
 - 空白が維持される場合、連続した空白はそれぞれの並びの末尾でソフト折り返しされることを除けば、改行されないものとして扱われます。つまり、次の行は常に次の空白でない文字から始まります。ただし、`break-spaces` 値の場合、それぞれの空白の後にソフト折り返しが発生する可能性があるので、次の行は 1 つ以上の空白で始まる可能性があります。
 
 ## 公式定義
@@ -76,14 +76,17 @@ white-space-collapse: unset;
 
 <!-- prettier-ignore-start -->
 ```html
-<h2 class="collapse">Default behavior; all whitespace is 
-    collapsed          in the          heading     .</h2>
+<h2 class="collapse">Default behavior;
+  all   whitespace   is   collapsed
+  in    the          heading       .</h2>
 
-<h2 class="preserve">In this case all whitespace is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve">In this case
+  all   whitespace   is   preserved
+  in    the          heading       .</h2>
 
-<h2 class="preserve-breaks">In this case only the line break is 
-    preserved          in the          heading     .</h2>
+<h2 class="preserve-breaks">In this case only
+  the   line breaks  are  preserved
+  in    the          heading       .</h2>
 ```
 <!-- prettier-ignore-end -->
 

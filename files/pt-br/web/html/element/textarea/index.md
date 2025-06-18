@@ -7,7 +7,37 @@ slug: Web/HTML/Element/textarea
 
 O **elemento** HTML `<textarea>` representa um controle de edição para uma caixa de texto, útil quando você quer permitir ao usuário informar um texto extenso em formato livre, como um comentário ou formulário de retorno.
 
-{{EmbedInteractiveExample("pages/tabbed/textarea.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<label for="story">Tell us your story:</label>
+
+<textarea id="story" name="story" rows="5" cols="33">
+It was a dark and stormy night...
+</textarea>
+```
+
+```css interactive-example
+label,
+textarea {
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+
+textarea {
+  padding: 10px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 1px #999;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+```
 
 Os exemplos acima demonstram vários recursos do `<textarea>`. O primeiro exemplo mostra o uso mais simples, com apenas um `id` atributo para permitir que o`<textarea>` estar associado a um {{htmlelement("label")}} elemento para fins de acessibilidade e um `name` atributo para definir o nome do ponto de dados associado enviado ao servidor quando o formulário é enviado.
 
@@ -92,7 +122,7 @@ Este elemento inclui os atributos globais.
 
 `<textarea>` é um elemento substituído - possui dimensões intrínsecas, como uma imagem rasterizada. Por padrão, sua{{cssxref("display")}} o valor é bloco. Em comparação com outros elementos de formulário, é relativamente fácil de estilizar, com seu modelo de caixa, fontes, esquema de cores etc. sendo facilmente manipuláveis usando CSS comum.
 
-[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/HTML/Forms/Styling_HTML_forms)`<textarea>`s.
+[O estilo de formulários HTML fornece algumas dicas úteis sobre estilo](/pt-BR/docs/Learn/Forms/Styling_web_forms)`<textarea>`s.
 
 ### Inconsistência da linha de base
 

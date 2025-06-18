@@ -15,7 +15,7 @@ l10n:
 
 ## 参见
 
-- [命名空间速成课](/zh-CN/docs/Web/SVG/Namespaces_Crash_Course)
+- [命名空间速成课](/zh-CN/docs/Web/SVG/Guides/Namespaces_crash_course)
 - [CSS 命名空间](/zh-CN/docs/Web/CSS/CSS_namespaces) 模块
 - CSS {{CSSXref("@namespace")}}
 - [`Document.createElementNS()`](/zh-CN/docs/Web/API/Document/createElementNS) 方法

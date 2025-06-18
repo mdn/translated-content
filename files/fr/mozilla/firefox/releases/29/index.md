@@ -15,11 +15,11 @@ Les principaux changements comprennent:
 
 - Console web largement améliorée - Les tableaux sont affichés en lgne sans cliquer pour faire apparaître l'inspecteur de droite, les objets de fenêtre affichent leur URL, etc.
 - Ajout de l'[API console](/fr/docs/Web/API/console) aux Web Workers ([bug 620935](https://bugzilla.mozilla.org/show_bug.cgi?id=620935)). Vous pouvez désormais consigner les messages dans la console Web à partir de Web Workers.
-- L'outil [Moniteur réseau](/fr/docs/Outils/Moniteur_réseau) affiche désormais des statistiques de performances à l'aide de graphiques à secteurs ([bug Firefox 846601](https://bugzil.la/846601)).
-- Sur l'[inspecteur](/fr/docs/Outils/Inspecteur), des info-bulles d'aperçu des transformations CSS sont désormais disponibles ([bug Firefox 726427](https://bugzil.la/726427)).
+- L'outil [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) affiche désormais des statistiques de performances à l'aide de graphiques à secteurs ([bug Firefox 846601](https://bugzil.la/846601)).
+- Sur l'[inspecteur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html), des info-bulles d'aperçu des transformations CSS sont désormais disponibles ([bug Firefox 726427](https://bugzil.la/726427)).
 - Les éléments DOM vus dans le débogueur et la console peuvent être supprimés ou inspectés directement, via les nouveaux boutons à droite de la liste des variables.
-- Une carte source CSS est désormais prise en charge par l'[éditeur de style](/fr/docs/Outils/Éditeur_de_style) ([bug Firefox 926014](https://bugzil.la/926014)).
-- L'Autocompletion des propriétés et valeurs CSS a été ajoutée à l'[éditeur de style](/fr/docs/Outils/Éditeur_de_style) ([bug Firefox 717369](https://bugzil.la/717369)).
+- Une carte source CSS est désormais prise en charge par l'[éditeur de style](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([bug Firefox 926014](https://bugzil.la/926014)).
+- L'Autocompletion des propriétés et valeurs CSS a été ajoutée à l'[éditeur de style](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) ([bug Firefox 717369](https://bugzil.la/717369)).
 
 _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/css-source-map-support-network-performance-analysis-more-firefox-developer-tools-episode-29/) pour plus de détails et d'autres changements mineurs._
 
@@ -44,7 +44,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 ### JavaScript
 
 - Nouvelles méthodes de chaîne ECMAScript 6 : {{jsxref("String.prototype.codePointAt()")}} et {{jsxref("String.prototype.fromCodePoint()")}} ont été implémentées ([bug Firefox 918879](https://bugzil.la/918879)).
-- L'[API d'internationalisation ECMAScript (ECMA-402)](http://www.ecma-international.org/ecma-402/1.0/) a été implémentée et est désormais activée par défaut dans Firefox Desktop ([bug Firefox 853301](https://bugzil.la/853301)):
+- L'[API d'internationalisation ECMAScript (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) a été implémentée et est désormais activée par défaut dans Firefox Desktop ([bug Firefox 853301](https://bugzil.la/853301)):
 
   - Nouveaux objets dans le nouvel espace de noms d'objet {{jsxref("Intl")}} :
 
@@ -82,7 +82,7 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 - {{domxref("Window._content")}} n'est plus disponible pour le contenu web ([bug Firefox 946564](https://bugzil.la/946564)).
 - Le comportement de {{domxref("URLUtils.port")}} a été légèrement modifié: définir sur `''` le définira sur le port par défaut associé au protocole, et `0` sur `0.` ([bug Firefox 930450](https://bugzil.la/930450))
 - {{domxref("Document.referrer")}} est maintenant basé sur le script en place ([bug Firefox 887928](https://bugzil.la/887928)).
-- L'[API Gamepad API](/fr/docs/Web/Guide/API/Gamepad) est activée par défaut ([bug Firefox 878828](https://bugzil.la/878828)).
+- L'[API Gamepad API](/fr/docs/Web/API/Gamepad_API/Using_the_Gamepad_API) est activée par défaut ([bug Firefox 878828](https://bugzil.la/878828)).
 - La méthode {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} a été renommée en {{domxref("CanvasRenderingContext2D.drawFocusIfNeeded()")}} ([bug Firefox 959820](https://bugzil.la/959820)).
 
 ### MathML
@@ -99,7 +99,7 @@ _Pas de changement._
 
 ## Modifications pour les développeurs d'add-on et Mozilla
 
-- [Compatibilité Australis et add-on](/fr/Firefox/Australis_add-on_compat) - Il s'agit d'un changement majeur de thème Firefox qui affecte la plupart des extensions impliquant l'interface utilisateur de Firefox.
+- [Compatibilité Australis et add-on](/fr/docs/Mozilla/Firefox/Australis_add-on_compat) - Il s'agit d'un changement majeur de thème Firefox qui affecte la plupart des extensions impliquant l'interface utilisateur de Firefox.
 - `nsISecurityCheckedComponent` a été supprimé ([bug Firefox 794943](https://bugzil.la/794943)). La plupart des consommateurs peuvent simplement supprimer nsISecurityCheckedComponent de leur définition d'interface et ils continueront à fonctionner.
 
 Changements non-Australis à déterminer.

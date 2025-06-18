@@ -30,7 +30,7 @@ Commençons par nous intéresser aux briques de base de tout langage : les types
 - Les objets : [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
 - Les symboles : [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (apparus avec la sixième édition d'ECMAScript, ES2015)
 
-On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), qui sont relativement étranges. Les [tableaux ou `Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) permettent d'organiser des séries d'objets au sein d'un même objet. Les [dates (`Date`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et les [expressions rationnelles (`RegExp`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) qui sont également des objets nativement disponibles en JavaScript. Afin d'être tout à fait précis, les fonctions sont aussi une sorte particulière d'objets, de sorte que le diagramme de types ressemble plutôt à ceci :
+On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) et [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), qui sont relativement étranges. Les [tableaux ou `Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) permettent d'organiser des séries d'objets au sein d'un même objet. Les [dates (`Date`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date) et les [expressions rationnelles (`RegExp`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) qui sont également des objets nativement disponibles en JavaScript. Afin d'être tout à fait précis, les fonctions sont aussi une sorte particulière d'objets, de sorte que le diagramme de types ressemble plutôt à ceci :
 
 - [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number)
 - [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
@@ -44,7 +44,7 @@ On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Object
   - [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)
   - [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
 
-- [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null)
+- [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null)
 - [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined)
 
 Enfin, il y a également quelques types natifs pour gérer les exceptions : [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error). Pour garder une approche simple, nous utiliserons la première de ces listes pour présenter les types.
@@ -184,7 +184,7 @@ C'est notre première rencontre avec les objets JavaScript ! Les chaînes peuven
 
 ## Les autres types
 
-JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/Global_Objects/null), qui est un objet de type `object` indiquant une absence délibérée de valeur, et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est un objet de type `undefined` indiquant une variable non initialisée — c'est-à-dire qui n'a pas encore été assignée. Nous parlerons des variables plus tard, mais en JavaScript il est possible de déclarer une variable sans lui assigner de valeur. Si vous faites cela, le type de la variable sera `undefined` qui est une constante.
+JavaScript fait la distinction entre [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null), qui est un objet de type `object` indiquant une absence délibérée de valeur, et [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) qui est un objet de type `undefined` indiquant une variable non initialisée — c'est-à-dire qui n'a pas encore été assignée. Nous parlerons des variables plus tard, mais en JavaScript il est possible de déclarer une variable sans lui assigner de valeur. Si vous faites cela, le type de la variable sera `undefined` qui est une constante.
 
 JavaScript dispose d'un type booléen, dont les valeurs possibles sont `true` (vrai) et `false` (faux). L'un et l'autre sont des mots clés. Toute valeur peut être convertie en une valeur booléenne selon les règles suivantes :
 

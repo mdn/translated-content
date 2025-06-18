@@ -36,5 +36,5 @@ var defaultReference = new Default();
 
 ### 技術資訊
 
-- MDN 的 [JavaScript 物件導向介紹](/zh-TW/docs/Learn/JavaScript/Objects#the_constructor)
+- MDN 的 [JavaScript 物件導向介紹](/zh-TW/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects#the_constructor)
 - MDN 的 [JavaScript 的 new 操作符](/zh-TW/docs/Web/JavaScript/Reference/Operators/new)

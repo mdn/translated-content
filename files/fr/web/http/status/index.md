@@ -22,7 +22,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 - [`102 Processing`](/fr/docs/Web/HTTP/Status/102) ([WebDAV](/fr/docs/Glossary/WebDAV))
   - : Ce code indique que le serveur a reçu et est en train de traiter la requête mais qu'une réponse n'est pas encore disponible.
 - [`103 Early Hints`](/fr/docs/Web/HTTP/Status/103)
-  - : Ce code de statut est conçu pour être utilisé avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link), ce qui permet à l'agent utilisateur de commencer [le préchargement](/fr/docs/Web/HTML/Link_types/preload) des ressources tandis que le serveur prépare une réponse.
+  - : Ce code de statut est conçu pour être utilisé avec l'en-tête [`Link`](/fr/docs/Web/HTTP/Headers/Link), ce qui permet à l'agent utilisateur de commencer [le préchargement](/fr/docs/Web/HTML/Attributes/rel/preload) des ressources tandis que le serveur prépare une réponse.
 
 ## Réponses de succès
 

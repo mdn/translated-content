@@ -31,7 +31,7 @@ La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature
 } /* Independiente de la fuente */
 ```
 
-La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicionales).
+La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/At-rule#grupos_de_reglas_condicionales).
 
 ## Sintaxis
 

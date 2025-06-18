@@ -24,7 +24,7 @@ audioCtx.close().then(function() { ... });
 
 ## 例子
 
-下面这段代码是[AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([直接运行](http://mdn.github.io/audiocontext-states/)) 中的，点击停止按钮调用`close()`。promise 释放后，回到初始状态。
+下面这段代码是[AudioContext states demo](https://github.com/mdn/audiocontext-states/settings) ([直接运行](https://mdn.github.io/audiocontext-states/)) 中的，点击停止按钮调用`close()`。promise 释放后，回到初始状态。
 
 ```js
 stopBtn.onclick = function () {
@@ -46,5 +46,5 @@ stopBtn.onclick = function () {
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web_Audio_API/Using_Web_Audio_API)
+- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)

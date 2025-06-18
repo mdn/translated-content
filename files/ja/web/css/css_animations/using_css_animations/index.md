@@ -53,7 +53,7 @@ CSS スタイルでアニメーションのタイミングを定義するため�
 
 この例では文字列がブラウザーのウィンドウ右端の外側からすべり込むように、 {{HTMLElement("p")}} 要素へスタイルを設定しています。
 
-このようなアニメーションは、ページ幅がブラウザーウィンドウの幅よりも広くなる原因になるので注意してください。 これは、アニメーションする要素をコンテナ内に置き、そのコンテナのスタイルに {{cssxref("overflow")}}`:hidden` を指定することで回避できます。
+このようなアニメーションは、ページ幅がブラウザーウィンドウの幅よりも広くなる原因になるので注意してください。 これは、アニメーションする要素をコンテナー内に置き、そのコンテナーのスタイルに {{cssxref("overflow")}}`:hidden` を指定することで回避できます。
 
 ```css
 p {
@@ -386,5 +386,5 @@ function listener(event) {
 ## 関連情報
 
 - {{domxref("AnimationEvent", "AnimationEvent")}}
-- [CSS アニメーションの対応の検出](/ja/docs/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
-- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions)
+- [CSS アニメーションの対応の検出](/ja/docs/orphaned/Web/CSS/CSS_Animations/Detecting_CSS_animation_support)
+- [CSS トランジションの使用](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)

@@ -14,4 +14,4 @@ UTF-8(UCS Transformation Format 8)은 월드 와이드 웹의 가장 일반적�
 ## 같이 보기
 
 - 위키백과의 [UTF-8](https://ko.wikipedia.org/wiki/UTF-8)
-- [유니코드 웹사이트의 UTF-8에 대한 FAQ](http://www.unicode.org/faq/utf_bom.html#UTF8)
+- [유니코드 웹사이트의 UTF-8에 대한 FAQ](https://www.unicode.org/faq/utf_bom.html#UTF8)

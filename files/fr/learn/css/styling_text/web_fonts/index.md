@@ -32,7 +32,7 @@ Dans le premier article du module, nous avons exploré les fonctions CSS de base
 
 ## Rappel : familles de fontes
 
-Comme nous l'avons vu dans [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte), les fontes appliquées aux HTML sont contrôlées par la propriété {{cssxref("font-family")}}. Elle accepte un ou plusieurs noms de familles de fontes et le navigateur parcourt la liste jusqu'à trouver la fonte disponible sur le système sur lequel il tourne :
+Comme nous l'avons vu dans [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals), les fontes appliquées aux HTML sont contrôlées par la propriété {{cssxref("font-family")}}. Elle accepte un ou plusieurs noms de familles de fontes et le navigateur parcourt la liste jusqu'à trouver la fonte disponible sur le système sur lequel il tourne :
 
 ```css
 p {
@@ -40,7 +40,7 @@ p {
 }
 ```
 
-Ce système fonctionne bien, mais généralement, le choix des développeurs Web en matière de polices sont limités. Il n'y en a qu'une poignée dont la disponibilité soit garantie sur tous les systèmes courants — les polices dites [Web-safe](/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte#Polices_web_sûres). La pile de polices vous permet de préciser la police préférable, puis la police alternative sûre pour le Web, puis la police par défaut du système, mais cela induit du travail supplémentaire de tests pour s'assurer que le désign reste correct avec chaque police, etc.
+Ce système fonctionne bien, mais généralement, le choix des développeurs Web en matière de polices sont limités. Il n'y en a qu'une poignée dont la disponibilité soit garantie sur tous les systèmes courants — les polices dites [Web-safe](/fr/docs/Learn/CSS/Styling_text/Fundamentals#polices_web_sûres). La pile de polices vous permet de préciser la police préférable, puis la police alternative sûre pour le Web, puis la police par défaut du système, mais cela induit du travail supplémentaire de tests pour s'assurer que le désign reste correct avec chaque police, etc.
 
 ## Fontes Web
 
@@ -79,7 +79,7 @@ L'utilisation des polices n'est généralement pas gratuite. Vous devez payer po
 
 En gardant en tête ce qui précède, construisons un exemple de police web de base à partir des premiers principes. Il est difficile de le montrer à l'aide d'un exemple direct intégré&nbsp;: nous aimerions donc que vous suiviez les étapes détaillées dans les paragraphes ci‑après afin d'avoir une idée du processus.
 
-Utilisez les fichiers [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) et [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) comme point de départ pour ajouter votre code (voir l'[exemple en direct](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html) aussi.) Faites une copie de ces fichiers dans un nouveau répertoire sur votre ordinateur. Dans le fichier `web-font-start.css`, vous trouverez un CSS minimal pour traiter la mise en page et la composition de base de l'exemple.
+Utilisez les fichiers [web-font-start.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.html) et [web-font-start.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-start.css) comme point de départ pour ajouter votre code (voir l'[exemple en direct](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-start.html) aussi.) Faites une copie de ces fichiers dans un nouveau répertoire sur votre ordinateur. Dans le fichier `web-font-start.css`, vous trouverez un CSS minimal pour traiter la mise en page et la composition de base de l'exemple.
 
 ### Recherche des polices
 
@@ -132,7 +132,7 @@ Vous devriez obtenir une page de démonstration avec les belles polices impléme
 ![](web-font-example.png)
 
 > [!NOTE]
-> Si vous avez des problèmes pour faire fonctionner votre travail, n'hésitez pas à comparer votre version à nos fichiers finis — voyez [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) et [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) (lancez l'[exemple terminé directement](http://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
+> Si vous avez des problèmes pour faire fonctionner votre travail, n'hésitez pas à comparer votre version à nos fichiers finis — voyez [web-font-finished.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.html) et [web-font-finished.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/web-font-finished.css) (lancez l'[exemple terminé directement](https://mdn.github.io/learning-area/css/styling-text/web-fonts/web-font-finished.html)).
 
 ## Utiliser un service de polices en ligne
 
@@ -148,7 +148,7 @@ La plupart de ces services sont faciles à utiliser, donc nous n'en parlerons pa
 6. Copiez ensuite les déclarations CSS listées dans la CSS comme il convient pour appliquer la fonte personnalisée à votre HTML.
 
 > [!NOTE]
-> Vous pourrez trouver une version complétée sur [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) et [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si vous avez besoin de vérifier votre travail par rapport au nôtre ([voir en direct](http://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
+> Vous pourrez trouver une version complétée sur [google-font.html](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.html) et [google-font.css](https://github.com/mdn/learning-area/blob/master/css/styling-text/web-fonts/google-font.css), si vous avez besoin de vérifier votre travail par rapport au nôtre ([voir en direct](https://mdn.github.io/learning-area/css/styling-text/web-fonts/google-font.html)).
 
 ## @font-face plus en détail
 
@@ -169,7 +169,7 @@ Examinons la syntaxe générée par fontsquirrel pour `@font-face`. C'est un blo
 }
 ```
 
-Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;» (_syntaxe @font-face à puces garanties_), d'après un post de Paul Irish lors des débuts des succès de `@font-face` ([Bulletproof @font-face Syntax](http://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Voyons les actions&nbsp;:
+Elle est désignée sous le vocable «&nbsp;bulletproof @font-face syntax&nbsp;» (_syntaxe @font-face à puces garanties_), d'après un post de Paul Irish lors des débuts des succès de `@font-face` ([Bulletproof @font-face Syntax](https://www.paulirish.com/2009/bulletproof-font-face-implementation-syntax/)). Voyons les actions&nbsp;:
 
 - `font-family`&nbsp;: cette ligne précise la référence à la police. Vous pouvez mettre cette assertion comme bon vous semble, pour autant que ce soit utilisé de manière cohérent dans la CSS.
 - `src` : ces lignes indiquent les chemins vers les fichiers de fontes à importer dans la CSS (la partie `url`) et le format de chaque fichier de fonte (la partie `format`). Cette dernière partie est dans chaque cas optionnelle, mais il est utile de la déclarer car elle permet aux navigateurs de trouver la police à utiliser plus rapidement. Plusieurs déclarations peuvent être mises dans la liste, séparées par des virgules — le navigateur cherchera parmi celles-ci et utilisera la première trouvée qu'il comprend — toutefois il est préférable de mettre en tête les formats nouveaux comme WOFF2 et le plus anciens comme TTF en fin de liste. Les fontes EOT font exception — elles seront placées en tête pour corriger une paire de bogues dans les anciennes versions de IE, car IE essayera d'utiliser la première trouvée même s'il est en fait incapable de l'utiliser.

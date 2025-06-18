@@ -59,4 +59,4 @@ body {
 
 ## Ver también
 
-- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_variables)
+- [Usando variables CSS](/es/docs/Web/CSS/Using_CSS_custom_properties)

@@ -26,7 +26,7 @@ l10n:
   - : **인증서 투명성**은 인증서의 오류를 방지하고 모니터링하도록 설계된 개방형 프레임워크입니다. 새로 발급된 인증서는 공개적으로 실행되도록 '로그'되며, 발급된 TLS 인증서의 추가 전용 암호화 보증 기록을 유지하는 독립적인 CT 로그인 경우가 많습니다.
 - [혼합 콘텐츠](/ko/docs/Web/Security/Mixed_content)
   - : 일반 텍스트 HTTP를 사용하여 가져온 콘텐츠가 포함된 HTTPS 페이지를 **혼합 콘텐츠** 페이지라고 합니다. 이런 페이지는 부분적으로만 암호화되어있어 스니퍼와 중간자 공격자가 암호화되지 않은 콘텐츠에 액세스할 수 있습니다.
-- [혼합 콘텐츠가 차단된 웹사이트를 고치는 방법](/ko/docs/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
+- [혼합 콘텐츠가 차단된 웹사이트를 고치는 방법](/ko/docs/orphaned/Web/Security/Mixed_content/How_to_fix_website_with_mixed_content)
   - : 웹 사이트에가 HTTPS 페이지를 제공한다면, HTTP를 통해 제공되는 모든 [혼합 활성 콘텐츠](/ko/docs/Web/Security/Mixed_content)는 기본적으로 차단됩니다. 결과적으로 여러분의 웹사이트는 사용자에게 깨진 것처럼 보일 수 있습니다(iframe 또는 플러그인이 로드되지 않는 경우 등). [혼합 패시브 콘텐츠](/ko/docs/Web/Security/Mixed_content)는 기본적으로 표시되지만 사용자는 이러한 유형의 콘텐츠를 차단하도록 기본 설정을 지정할 수도 있습니다. 이 페이지에서는 웹 개발자로서 알아야 할 사항을 살펴봅니다.
 - [보안 컨텍스트](/ko/docs/Web/Security/Secure_Contexts)
   - : **보안 컨텍스트**는 콘텐츠가 안전하게 전달되었다는 합리적인 확신이 있고 (HTTPS/TLS를 통해) 안전하지 **않은** 컨텍스트와의 통신 가능성은 제한되는 `Window` 또는 `Worker`입니다. 많은 웹 API와 기능은 보안 컨텍스트에서만 액세스할 수 있습니다. 보안 컨텍스트의 주요 목표는 [중간자 공격자](https://ko.wikipedia.org/wiki/%EC%A4%91%EA%B0%84%EC%9E%90_%EA%B3%B5%EA%B2%A9)가 피해자를 추가로 손상시킬 수 있는 강력한 API에 액세스하지 못하도록 방지하는 것입니다.
@@ -60,7 +60,7 @@ l10n:
 - [HTTP Access-Control-Allow-Origin](/ko/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 응답 헤더는 주어진 {{glossary("origin", "출처")}}의 요청 코드와 응답을 공유할 수 있는지 여부를 나타냅니다.
 - [HTTP X-Content-Type-Options](/ko/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** HTTP 응답 헤더는 {{HTTPHeader("Content-Type")}} 헤더에 광고된 [MIME 타입](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 유형을 변경허나 따르지 않아야 함을 나타내기 위해 서버에서 사용하는 마커입니다. 이는 [MIME 스니핑](/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types#mime_스니핑)을 빠져나오는 방법입니다. 즉, MIME 유형이 의도적으로 구성되었음을 나타냅니다.
+  - : **`X-Content-Type-Options`** HTTP 응답 헤더는 {{HTTPHeader("Content-Type")}} 헤더에 광고된 [MIME 타입](/ko/docs/Web/HTTP/MIME_types) 유형을 변경허나 따르지 않아야 함을 나타내기 위해 서버에서 사용하는 마커입니다. 이는 [MIME 스니핑](/ko/docs/Web/HTTP/MIME_types#mime_스니핑)을 빠져나오는 방법입니다. 즉, MIME 유형이 의도적으로 구성되었음을 나타냅니다.
 
 ## 클릭재킹 보호
 

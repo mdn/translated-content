@@ -16,7 +16,7 @@ var gl = canvas.getContext("webgl");
 gl.getParameter(gl.LINE_WIDTH);
 ```
 
-一部の定数については、[WebGL 拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)から提供されることもあります。[リスト](#Constants_defined_in_WebGL_extensions)が以下に記載されています。
+一部の定数については、[WebGL 拡張機能](/ja/docs/Web/API/WebGL_API/Using_Extensions)から提供されることもあります。[リスト](#constants_defined_in_webgl_extensions)が以下に記載されています。
 
 ```js
 var debugInfo = gl.getExtension("WEBGL_debug_renderer_info");
@@ -27,9 +27,9 @@ var vendor = gl.getParameter(debugInfo.UNMASKED_VENDOR_WEBGL);
 
 ## Table of contents
 
-- [Standard WebGL 1 constants](#Standard_WebGL_1_constants)
-- [Standard WebGL 2 constants](#Additional_constants_defined_WebGL_2)
-- [WebGL extension constants](#Constants_defined_in_WebGL_extensions)
+- [Standard WebGL 1 constants](#standard_webgl_1_constants)
+- [Standard WebGL 2 constants](#additional_constants_defined_webgl_2)
+- [WebGL extension constants](#constants_defined_in_webgl_extensions)
 
 ## Standard WebGL 1 constants
 

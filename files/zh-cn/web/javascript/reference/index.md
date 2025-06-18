@@ -69,7 +69,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("String")}}
 - {{jsxref("RegExp")}}
 
-### 索引集合类
+### 索引集合
 
 - {{jsxref("Array")}}
 - {{jsxref("Int8Array")}}
@@ -294,7 +294,7 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 - {{jsxref("Operators/Logical_AND_assignment", "&amp;&amp;=")}}
 - {{jsxref("Operators/Logical_OR_assignment", "||=")}}
 - {{jsxref("Operators/Nullish_coalescing_assignment", "??=")}}
-- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+- [`[a, b] = arr`, `{ a, b } = obj`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)
 
 ### Yield 运算符
 
@@ -334,8 +334,8 @@ JavaScript 语言旨在用于更加广泛的环境，不论是浏览器、服务
 
 ## 附加参考页面
 
-- {{jsxref("Lexical_grammar", "词法文法", "", 1)}}
-- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Data_structures)
+- {{jsxref("Lexical_grammar", "词法语法", "", 1)}}
+- [数据类型和数据结构](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - [迭代协议](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols)
 - [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)
 - [错误参考](/zh-CN/docs/Web/JavaScript/Reference/Errors)

@@ -115,7 +115,7 @@ MDN Web Docs チームは、レビュアーと担当者 (assignee) を使用し�
 
 ### プルリクエストのレビュー
 
-プルリクエストの変更点に関して言えば、コンテンツと文章は [MDN 執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に、サンプルコードは[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)に従わなければなりません。
+プルリクエストの変更点に関して言えば、コンテンツと文章は [MDN 執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)に、サンプルコードは[コードスタイルガイド](/ja/docs/MDN/Writing_guidelines/Code_style_guide)に従わなければなりません。
 
 プルリクエストをレビューするときは、次のようにしてください。
 
