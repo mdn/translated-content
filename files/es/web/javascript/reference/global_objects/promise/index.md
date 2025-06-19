@@ -123,7 +123,7 @@ Un objeto de configuración es un [entorno](https://html.spec.whatwg.org/multipa
 
 Para representar mejor esto, podemos echar un vistazo más de cerca a cómo el campo podría ser un problema. Se puede pensar aproximadamente en un **campo** como el objeto global. Lo que es único acerca de los campos es que contienen toda la información necesaria para ejecutar código JavaScript. Esto incluye objetos como [Array](/es/docs/Web/JavaScript/Reference/Global_Objects/Array) y [Error](/es/docs/Web/JavaScript/Reference/Global_Objects/Error). Cada objeto de configuración tiene su propia "copia" de estos y no se comparten. Eso puede causar algún comportamiento inesperado en relación con las promesas. Para evitar esto, hacemos un seguimiento de algo llamado **objeto de configuración titular**. Esto representa información específica del contexto del código de usuario responsable de una determinada llamada de función.
 
-Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`](/es/docs/Web/HTML/Element/iframe) incrustado en un documento se comunica con su _host_. Dado que todas las API web conocen el objeto de configuración correspondiente, lo siguiente funcionará en todos los navegadores:
+Para ilustrar esto un poco más, podemos echar un vistazo a cómo un [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe) incrustado en un documento se comunica con su _host_. Dado que todas las API web conocen el objeto de configuración correspondiente, lo siguiente funcionará en todos los navegadores:
 
 ```html
 <!doctype html> <iframe></iframe>
