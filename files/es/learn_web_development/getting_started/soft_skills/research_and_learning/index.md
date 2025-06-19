@@ -202,7 +202,7 @@ Si realmente eres un principiante en el desarrollo web, tendrás que estudiar y 
 
 Cuando encuentres soluciones a tales problemas, vale la pena escribir notas sobre lo que hiciste y mantener algunos ejemplos de código mínimos en un directorio en algún lugar para que puedas mirar hacia atrás en el trabajo anterior.
 
-Además, la web tiene [herramientas de desarrollo](/es/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
+Además, la web tiene [herramientas de desarrollo](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) que te permiten ver el código utilizado para crear cualquier sitio en la web, si no tienes una solución a mano, un buen método de investigación es encontrar sitios web con características similares en la naturaleza y averiguar cómo lo hicieron.
 
 > [!NOTE]
 > Observa cómo hablamos antes sobre el problema que estamos tratando de resolver primero, y la tecnología utilizada para resolverlo, en segundo lugar. Esta, casi siempre es la mejor manera de hacerlo — no comiences con una tecnología nueva y genial que desees usar, e intenta adaptarla a tu caso de uso.
