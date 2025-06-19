@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-left
 slug: Web/CSS/scroll-padding-left
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-left` プロパティは、スクロールポートの*最適表示領域*の左のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-left` プロパティは、スクロールポートの*最適表示領域*の左のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-left")}}
+{{InteractiveExample("CSS デモ: scroll-padding-left")}}
 
 ```css interactive-example-choice
 scroll-padding-left: 0;
@@ -28,7 +30,7 @@ scroll-padding-left: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -87,6 +89,7 @@ scroll-padding-left: 10%;
 scroll-padding-left: inherit;
 scroll-padding-left: initial;
 scroll-padding-left: revert;
+scroll-padding-left: revert-layer;
 scroll-padding-left: unset;
 ```
 
@@ -116,4 +119,4 @@ scroll-padding-left: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

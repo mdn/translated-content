@@ -107,7 +107,7 @@ caption {
 - `axis` {{deprecated_inline}}
   - : 包含一个空格分隔的字符串列表。每个字符串对应一组该表头适用的单元格的 `id` 属性。该属性以弃用，请使用 [`scope`](#scope) 属性代替。
 - `bgcolor` {{deprecated_inline}}
-  - : 定义表头单元格的背景色。其值为 HTML 颜色；可以是带有“#”前缀的 [6 位十六进制的 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)或[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他的 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。该属性已弃用，请使用 CSS {{cssxref("background-color")}} 属性代替。
+  - : 定义表头单元格的背景色。其值为 HTML 颜色；可以是带有“#”前缀的 [6 位十六进制的 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)或[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他的 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。该属性已弃用，请使用 CSS {{cssxref("background-color")}} 属性代替。
 - `char` {{deprecated_inline}}
   - : 无任何行为。它最初用于将内容与表头单元格的指定字符对齐。当尝试对齐数字或货币值时，其值通常包含一个句点（`.`）。如果 [`align`](#align) 属性没有设置为 `char`，则此属性将被忽略。
 - `charoff` {{deprecated_inline}}

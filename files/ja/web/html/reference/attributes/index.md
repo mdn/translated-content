@@ -2,9 +2,8 @@
 title: HTML 属性リファレンス
 short-title: 属性
 slug: Web/HTML/Reference/Attributes
-original_slug: Web/HTML/Attributes
 l10n:
-  sourceCommit: 56cbe48e4426172461d9297523b68716922690e5
+  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---
 
 {{HTMLSidebar("Attributes")}}
@@ -33,23 +32,23 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#accept-charset">accept-charset</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form#accept-charset">accept-charset</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>文字集合であり、指定した場合は <code>"UTF-8"</code> でなければなりません。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/accesskey">accesskey</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/accesskey">accesskey</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素をアクティブ化したり、フォーカスを与えたりするためのショートカットキーです。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#action">action</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form#action">action</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -73,7 +72,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#allow">allow</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/iframe#allow">allow</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>iframe の機能ポリシーを指定します。</td>
@@ -90,7 +89,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/link#as">as</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/link#as">as</a></code>
       </td>
       <td>
         {{ HTMLElement("link") }}
@@ -99,17 +98,17 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#async">async</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/script#async">async</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>スクリプトを非同期で実行します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/autocapitalize">autocapitalize</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize">autocapitalize</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         ユーザーによる入力が入力欄で自動的に大文字化されるかどうかを設定します。
@@ -199,7 +198,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#charset">charset</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta#charset">charset</a></code>
       </td>
       <td>
         {{ HTMLElement("meta") }}
@@ -208,7 +207,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#checked">checked</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#checked">checked</a></code>
       </td>
       <td>
         {{ HTMLElement("input") }}
@@ -228,10 +227,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/class">class</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/class">class</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>よく使われるプロパティで要素にスタイルを適用するために CSS と共によく用いられます。</td>
     </tr>
@@ -253,7 +252,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#cols">cols</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/textarea#cols">cols</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストエリアの桁数 (水平方向の文字数) を定義します。</td>
@@ -271,7 +270,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#content">content</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta#content">content</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>
@@ -280,10 +279,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/contenteditable">contenteditable</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable">contenteditable</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素の内容が編集可能であるかどうかを示します。</td>
     </tr>
@@ -301,7 +300,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/area#coords">coords</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/area#coords">coords</a></code>
       </td>
       <td>{{ HTMLElement("area") }}</td>
       <td>
@@ -331,17 +330,17 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/object#data">data</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/object#data">data</a></code>
       </td>
       <td>{{ HTMLElement("object") }}</td>
       <td>リソースの URL を指定します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/data-*">data-*</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/data-*">data-*</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>HTML 要素にカスタム属性が添付できるようにします。</td>
     </tr>
@@ -357,14 +356,14 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#decoding">decoding</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/img#decoding">decoding</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像をデコードする推奨の方法を示します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#default">default</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/track#default">default</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>
@@ -373,7 +372,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#defer">defer</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/script#defer">defer</a></code>
       </td>
       <td>{{ HTMLElement("script") }}</td>
       <td>
@@ -382,10 +381,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/dir">dir</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/dir">dir</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         テキストの書字方向を定義します。使用できる値は ltr (Left-To-Right) または rtl (Right-To-Left) です。
@@ -427,16 +426,16 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/draggable">draggable</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/draggable">draggable</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素がドラッグ可能であるかどうかを示します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#enctype">enctype</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form#enctype">enctype</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -445,11 +444,11 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint">enterkeyhint</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint">enterkeyhint</a></code>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/ja/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         <a href="https://html.spec.whatwg.org/multipage/interaction.html#input-modalities:-the-enterkeyhint-attribute"><code>enterkeyhint</code></a> は、仮想キーボードの Enter キーにあるアクションラベル (またはアイコン) が何であるかを指定します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
@@ -504,7 +503,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>enctype</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用するエンコーディング型を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Reference/Elements/form">フォーム</a>の <code>enctype</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -516,7 +515,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>GET</code>, <code>POST</code>, など) を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>method</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォーム送信で使用する送信メソッド (<code>GET</code>, <code>POST</code>, など) を設定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Reference/Elements/form">フォーム</a>の <code>method</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -528,7 +527,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>novalidate</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この論理属性はフォームが送信時に検証されないことを指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Reference/Elements/form">フォーム</a>の <code>novalidate</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -540,7 +539,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
         {{ HTMLElement("input") }}
       </td>
       <td>
-        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Element/form">フォーム</a>の <code>target</code> 属性より優先されます。
+        button や input が{{Glossary("submit button", "送信ボタン")}}である場合 (<code>type="submit"</code>)、この属性はフォームを送信した後で受け取るレスポンスを表示する閲覧コンテキスト (例えば、タブ、ウィンドウ、インラインフレーム) を指定します。この属性が指定された場合、ボタンを所有する<a href="/ja/docs/Web/HTML/Reference/Elements/form">フォーム</a>の <code>target</code> 属性より優先されます。
       </td>
     </tr>
     <tr>
@@ -577,10 +576,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/hidden">hidden</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/hidden">hidden</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         この要素のレンダリングを抑制しますが、 script 要素などの子要素は有効なままにします。
@@ -588,7 +587,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#high">high</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meter#high">high</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最大値の下限を示します。</td>
@@ -614,17 +613,17 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meta#http-equiv">http-equiv</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meta#http-equiv">http-equiv</a></code>
       </td>
       <td>{{ HTMLElement("meta") }}</td>
       <td>プラグマディレクティブを定義します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/id">id</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/id">id</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         特定の要素へスタイルを設定するために CSS と共によく使われます。この属性の値は一意でなければなりません。
@@ -645,7 +644,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/img#intrinsicsize"><code>intrinsicsize</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/img#intrinsicsize"><code>intrinsicsize</code></a>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("img") }}</td>
@@ -655,11 +654,11 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes/inputmode"><code>inputmode</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes/inputmode"><code>inputmode</code></a>
       </td>
       <td>
         {{ HTMLElement("textarea") }},
-        <a href="/ja/docs/Web/HTML/Global_attributes/contenteditable"><code>contenteditable</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable"><code>contenteditable</code></a>
       </td>
       <td>
         要素やその内容を編集する際に、ユーザーが入力する可能性のあるデータの種類のヒントを提供します。この属性はフォームコントロール (<code>textarea</code> 要素の値など) と共に、または編集対象となっている要素 (例えば <code>contenteditable</code> 属性の使用など) の中で使用することができます。
@@ -667,23 +666,23 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/img#ismap">ismap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/img#ismap">ismap</a></code>
       </td>
       <td>{{ HTMLElement("img") }}</td>
       <td>画像がサーバーサイドイメージマップの一部であることを示します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/itemprop">itemprop</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/itemprop">itemprop</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#kind">kind</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/track#kind">kind</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td>テキストトラックの種類を指定します。</td>
@@ -701,16 +700,16 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/lang">lang</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/lang">lang</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素内で用いられている言語を定義します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/script#language">language</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/script#language">language</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("script") }}</td>
@@ -727,7 +726,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/input#list">list</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/input#list">list</a></code>
       </td>
       <td>{{ HTMLElement("input") }}</td>
       <td>ユーザーに提案するため、事前に定義した選択肢のリストを示す。</td>
@@ -747,7 +746,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#low">low</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meter#low">low</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最小値の上限を示します。</td>
@@ -798,7 +797,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#method">method</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form#method">method</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -861,7 +860,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/form#novalidate">novalidate</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/form#novalidate">novalidate</a></code>
       </td>
       <td>{{ HTMLElement("form") }}</td>
       <td>
@@ -882,7 +881,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/meter#optimum">optimum</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/meter#optimum">optimum</a></code>
       </td>
       <td>{{ HTMLElement("meter") }}</td>
       <td>最適な値を示します。</td>
@@ -898,7 +897,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/a#ping">ping</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/a#ping">ping</a></code>
       </td>
       <td>{{ HTMLElement("a") }}, {{ HTMLElement("area") }}</td>
       <td>
@@ -917,7 +916,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#playsinline">playsinline</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/video#playsinline">playsinline</a></code>
       </td>
       <td>
         {{ HTMLElement("video") }}
@@ -926,7 +925,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/video#poster">poster</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/video#poster">poster</a></code>
       </td>
       <td>{{ HTMLElement("video") }}</td>
       <td>
@@ -991,7 +990,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#reversed">reversed</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/ol#reversed">reversed</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>
@@ -1000,14 +999,14 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles">role</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles">role</a></code>
       </td>
-      <td><a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a></td>
       <td>支援技術が使用するための要素の明示的な役割を定義します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#rows">rows</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/textarea#rows">rows</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストエリアの行数を定義します。</td>
@@ -1023,7 +1022,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#sandbox">sandbox</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox">sandbox</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td>
@@ -1032,7 +1031,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/th#scope">scope</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/th#scope">scope</a></code>
       </td>
       <td>{{ HTMLElement("th") }}</td>
       <td>
@@ -1041,7 +1040,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/style#scoped">scoped</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/style#scoped">scoped</a></code>
         {{non-standard_inline}} {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("style") }}</td>
@@ -1049,7 +1048,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/option#selected">selected</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/option#selected">selected</a></code>
       </td>
       <td>{{ HTMLElement("option") }}</td>
       <td>ページ読込時に、対象要素を選択状態にします。</td>
@@ -1085,10 +1084,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/slot">slot</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/slot">slot</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素にシャドウ DOM のシャドウツリーのスロットを割り当てます。</td>
     </tr>
@@ -1104,10 +1103,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/spellcheck">spellcheck</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck">spellcheck</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>要素のスペルチェックを有効にするかどうかを示します。</td>
     </tr>
@@ -1129,14 +1128,14 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/iframe#srcdoc">srcdoc</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/iframe#srcdoc">srcdoc</a></code>
       </td>
       <td>{{ HTMLElement("iframe") }}</td>
       <td></td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/track#srclang">srclang</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/track#srclang">srclang</a></code>
       </td>
       <td>{{ HTMLElement("track") }}</td>
       <td></td>
@@ -1152,7 +1151,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/ol#start">start</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/ol#start">start</a></code>
       </td>
       <td>{{ HTMLElement("ol") }}</td>
       <td>1 以外から始まる場合の最初の値を定義します。</td>
@@ -1166,16 +1165,16 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/style">style</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/style">style</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>これまで設定されたスタイルを上書きする CSS スタイルを定義します。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/table#summary">summary</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/table#summary">summary</a></code>
         {{deprecated_inline}}
       </td>
       <td>{{ HTMLElement("table") }}</td>
@@ -1183,10 +1182,10 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/tabindex">tabindex</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/tabindex">tabindex</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         ブラウザーによる既定のタブ順を無効化して、指定した順序に従うようにします。
@@ -1206,19 +1205,19 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/title">title</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/title">title</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>この要素にポインターを当てたときに表示されるツールチップのテキストです。</td>
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Global_attributes/translate">translate</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Global_attributes/translate">translate</a></code>
       </td>
       <td>
-        <a href="/ja/docs/Web/HTML/Global_attributes">グローバル属性</a>
+        <a href="/ja/docs/Web/HTML/Reference/Global_attributes">グローバル属性</a>
       </td>
       <td>
         ページが翻訳版である場合、要素の属性値と子の <code><a href="https://dom.spec.whatwg.org/#text">Text</a></code> ノードが翻訳されているか、変更せずにそのままであるかを指定します。
@@ -1292,7 +1291,7 @@ HTML 要素には**属性**が存在します。これは、ユーザーが求�
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Element/textarea#wrap">wrap</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/textarea#wrap">wrap</a></code>
       </td>
       <td>{{ HTMLElement("textarea") }}</td>
       <td>テキストを折り返すかどうかを示します。</td>

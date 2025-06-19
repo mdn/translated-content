@@ -112,7 +112,7 @@ tfoot td {
 
 - `bgcolor` {{deprecated_inline}}
 
-  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("color_value", "&lt;color&gt")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
+  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("color_value", "&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `border` {{deprecated_inline}}
 

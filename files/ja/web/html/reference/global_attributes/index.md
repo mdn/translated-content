@@ -1,9 +1,8 @@
 ---
 title: グローバル属性
 slug: Web/HTML/Reference/Global_attributes
-original_slug: Web/HTML/Global_attributes
 l10n:
-  sourceCommit: 8d5d18805ad96e1c56d72de5c26de60e86dfa817
+  sourceCommit: 960a94a198ca60fb04fe63857ea61d7306465791
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -69,7 +68,7 @@ l10n:
 - [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert)
   - : ブラウザーがその要素に対するユーザー入力イベントを無視するようにする論理値です。クリックイベントが存在している場合に有用です。
 - [`inputmode`](/ja/docs/Web/HTML/Reference/Global_attributes/inputmode)
-  - : この要素やその内容を編集する時に使用する仮想キーボードの種類の構成に関するヒントをブラウザーに与えます。主に {{HTMLElement("input")}} 要素で使用されますが、 [`contenteditable`](#contenteditable) モードにあるすべての要素で使用することができます。
+  - : この要素やその内容を編集する時に使用する仮想キーボードの種類の構成に関するヒントをブラウザーに与えます。主に {{HTMLElement("input")}} 要素で使用されますが、 [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) モードにあるすべての要素で使用することができます。
 - [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is)
   - : 標準の HTML 要素が、登録したカスタム組み込み要素のようにふるまうように指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)を参照）。
 
@@ -112,7 +111,7 @@ l10n:
 
     - _負の数_: 要素はフォーカスを受け付けますが、順番的なキーボードナビゲーションでは到達できません。
     - `0`: 要素はフォーカスを受け付けて、順番的なキーボードナビゲーションで到達できます。その順番はプラットフォームの慣習に従って定義されます。
-    - _正の数_: 要素はフォーカスを受け付けて、順番的なキーボードナビゲーションで到達できることを表します。その相対的な順序は属性の値で定義され、 [**tabindex**](#tabindex) の数値の昇順にフォーカスを移します。複数の要素が同じ tabindex の値を持っている場合は、文書内における要素の相対的な位置に従います。
+    - _正の数_: 要素はフォーカスを受け付けて、順番的なキーボードナビゲーションで到達できることを表します。その相対的な順序は属性の値で定義され、 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) の数値の昇順にフォーカスを移します。複数の要素が同じ tabindex の値を持っている場合は、文書内における要素の相対的な位置に従います。
 
 - [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title)
   - : 要素に関するアドバイザリー情報を表すテキストを設定します。この情報は通常、ツールチップとしてユーザーに表示されますが、必ず表示されるとは限りません。

@@ -1,9 +1,8 @@
 ---
 title: 413 Content Too Large
 slug: Web/HTTP/Reference/Status/413
-original_slug: Web/HTTP/Status/413
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
