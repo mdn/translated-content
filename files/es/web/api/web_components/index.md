@@ -57,7 +57,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : &#x20;
 
-    - El atributo global HTML [`is`](/es/docs/Web/HTML/Global_attributes#is): Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
+    - El atributo global HTML [`is`](/es/docs/Web/HTML/Reference/Global_attributes#is): Permite especificar que un elemento estandar HTML debe comportarse como un elemento incorporado personalizado registrado.
     - La opción "is" del método {{domxref("Document.createElement()")}}: Permite crear una instancia de un elemento HTML estandar que se comporta como un determinado elemento incorporado personalizado registrado.
 
 - Pseudo-clases CSS
@@ -73,7 +73,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
 
   - : Pseudo-elementos relacionados especificamente a elementos personalizados:
 
-    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) que coincida.
+    - {{cssxref("::part")}}: Representa cualquier elemento dentro del [shadow tree](/es/docs/Web/API/Web_components/Using_shadow_DOM) que contiene un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) que coincida.
 
 ### Shadow DOM
 
@@ -108,7 +108,7 @@ La aproximación básica para implementar un componente web, generalmente es la 
   - : Contiene un fragmento de HTML que no es renderizado cuando se carga inicialmente un documento que lo contiene, pero puede ser desplegado en tiempo de ejecución usando JavaScript, principalmente usado como la base de la estructura de los elementos personalizados. La interfaz DOM asociada es {{domxref("HTMLTemplateElement")}}.
 - {{htmlelement("slot")}}
   - : Un espacio termporal dentro de un componente web que se puede llenar con una plantilla de marcado propia, lo que permite crear árboles DOM separados y presentarlos juntos. La interfaz DOM asociada es {{domxref("HTMLSlotElement")}}.
-- El atributo global HTML [`slot`](/es/docs/Web/HTML/Global_attributes/slot)
+- El atributo global HTML [`slot`](/es/docs/Web/HTML/Reference/Global_attributes/slot)
   - : Asigna un slot en un _shadow tree_ de un _shadow DOM_ shadow tree a un elemento.
 - {{domxref("Slotable")}}
   - : Un mixin implementado tanto por los nodos {{domxref("Element")}} y {{domxref("Text")}}, definiendo características que les permiten convertirse en el contenido de un elemento {{htmlelement("slot")}}. El mixin define un atributo, {{domxref("Slotable.assignedSlot")}}, el cual retorna una referencia al nodo del slot donde esta insertado.
