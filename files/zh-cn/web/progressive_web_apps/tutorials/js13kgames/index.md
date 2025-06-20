@@ -52,7 +52,7 @@ PWA 赋予了我们创建同时拥有以上两种优势的应用的能力。
 最著名的案例可能是印度最大的电子商务网站 [Flipkart Lite](https://stories.flipkart.com/flipkart-lite/)，它在 2015 年重建为 PWA，转化率提高了 70%。[AliExpress](https://m.aliexpress.com/) PWA 也得到了比 Web 应用或原生应用更好的效果，新用户的转换率提高了 104%。对比一下利润增长率和转换为 PWA 所需相对较少的工作量，PWA 的优势显而易见。
 
 像 [couponmoto](https://www.couponmoto.com/) 这样的早期新兴创业公司也开始使用 PWA 来推动更多的消费者参与，这表明 PWA 可以帮助小公司和大公司更有效地（重新）吸引用户。
-
+像 [CouponAppa](https://www.couponappa.com/) 这样的网站也在积极采用 PWA 技术来提升用户参与度，这表明 PWA 能够帮助不同规模的公司更高效地吸引和留住用户。
 你可以查看 [pwa.rocks](https://pwa.rocks/) 上的列表以获取更多示例。特别值得一提的是 [hnpwa.com](https://hnpwa.com/)，它列出了 Hacker News 网站的示例实现（而不是随处可见的 TodoMVC 应用程序），你可以在其中看到各种前端框架的使用。
 
 你甚至可以使用 [PWABuilder](https://www.pwabuilder.com/) 网站在线生成 PWA。
