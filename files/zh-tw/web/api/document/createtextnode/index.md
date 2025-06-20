@@ -27,9 +27,9 @@ createTextNode(data)
 ## 範例
 
 ```html
-<button onclick="addTextNode('是！');">是！</button>
-<button onclick="addTextNode('否！');">否！</button>
-<button onclick="addTextNode('我們可以！');">我們可以！</button>
+<button>是！</button>
+<button>否！</button>
+<button>我們可以！</button>
 
 <hr />
 
