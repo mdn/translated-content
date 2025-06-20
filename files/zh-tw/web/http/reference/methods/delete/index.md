@@ -71,7 +71,7 @@ HTTP/1.1 204 No Content
 Date: Wed, 04 Sep 2024 10:16:04 GMT
 ```
 
-{{HTTPStatus("200", "200 OK")}} 回應表示請求成功且回應主體包含描述結果的表示，狀態碼可能為 {{HTTPStatus("200")}}（`OK`）。
+{{HTTPStatus("200", "200 OK")}} 回應表示請求已成功，且回應主體中包含描述結果的表示法：
 
 ```http
 HTTP/1.1 200 OK
