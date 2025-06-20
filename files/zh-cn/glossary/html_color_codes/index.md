@@ -15,7 +15,7 @@ l10n:
 
 ### 基础知识
 
-维基百科上的 [Web 颜色](https://en.wikipedia.org/wiki/Web_colors)
+维基百科上的 [Web 颜色](https://zh.wikipedia.org/wiki/网页颜色)
 
 ### 技术参考
 
