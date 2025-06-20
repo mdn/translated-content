@@ -51,7 +51,7 @@ DELETE <request-target>["?"<query>] HTTP/1.1
 - `<request-target>`
   - : 結合 {{HTTPHeader("Host")}} 標頭提供的資訊後，用來識別請求目標資源。在發送給原始伺服器的請求中，這是一個絕對路徑（例如：`/path/to/file.html`）；在發送給代理伺服器的請求中，則是一個絕對 URL（例如：`http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
-  - : 可選的查詢元件，前面加上問號 `?`。通常用於以 `key=value` 形式攜帶識別資訊。
+  - : 可選的查詢組件，前面加上問號 `?`。通常用於以 `key=value` 鍵值對的形式攜帶識別資訊。
 
 ## 範例
 
