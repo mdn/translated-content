@@ -75,7 +75,7 @@ dfn {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -85,7 +85,7 @@ dfn {
 
 다음 규칙을 따라 현재 용어가 어느건지 판별합니다.
 
-1. `<dfn>` 요소가 [`title`](/ko/docs/Web/HTML/Global_attributes#title) 특성을 가지고 있으면 그 값을 현재 정의 중인 용어로 간주합니다. `<dfn>`은 여전히 텍스트 콘텐츠를 가지고 있겠지만, 완전한 용어 대신 준말({{htmlelement("abbr")}})을 넣을 수도 있고, 다른 대체 형태일 수도 있습니다.
+1. `<dfn>` 요소가 [`title`](/ko/docs/Web/HTML/Reference/Global_attributes#title) 특성을 가지고 있으면 그 값을 현재 정의 중인 용어로 간주합니다. `<dfn>`은 여전히 텍스트 콘텐츠를 가지고 있겠지만, 완전한 용어 대신 준말({{htmlelement("abbr")}})을 넣을 수도 있고, 다른 대체 형태일 수도 있습니다.
 2. `<dfn>`이 다른 텍스트는 없이 하나의 자식만 가지는데, 그 자식이 `title` 특성을 가진{{htmlelement("abbr")}}인 경우, 자식 `<abbr>`의 `title` 특성 값을 현재 용어로 간주합니다.
 3. 모두 아닌 경우 `<dfn>`의 텍스트 콘텐츠를 현재 용어로 간주합니다. [아래의 첫 번째 예제](#기본적인_용어_식별)에서 확인할 수 있습니다.
 
@@ -93,7 +93,7 @@ dfn {
 
 ### `<dfn>` 요소를 가리키는 링크
 
-`<dfn>` 요소에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을 지정하면 {{HTMLElement("a")}} 요소로 `<dfn>`을 가리킬 수 있습니다. 사용자가 용어 뜻을 잘 모를 경우, 링크를 클릭해 빠르게 정의를 확인할 수 있습니다. 따라서 링크 콘텐츠는 용어의 사용 예시 등을 담고 있어야 합니다.
+`<dfn>` 요소에 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성을 지정하면 {{HTMLElement("a")}} 요소로 `<dfn>`을 가리킬 수 있습니다. 사용자가 용어 뜻을 잘 모를 경우, 링크를 클릭해 빠르게 정의를 확인할 수 있습니다. 따라서 링크 콘텐츠는 용어의 사용 예시 등을 담고 있어야 합니다.
 
 [정의로 링크 예제](#정의로_링크)에서 확인할 수 있습니다.
 
@@ -160,7 +160,7 @@ dfn {
 </p>
 ```
 
-이번에는 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성에 `"definition-dfn"`을 사용한 용어 정의입니다. 코드 뒤쪽에서는 `<a>` 태그와 [`href`](/ko/docs/Web/HTML/Element/a#href) 특성 값 `"#definition-dfn"`으로, 정의를 가리키는 링크를 생성합니다.
+이번에는 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성에 `"definition-dfn"`을 사용한 용어 정의입니다. 코드 뒤쪽에서는 `<a>` 태그와 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 특성 값 `"#definition-dfn"`으로, 정의를 가리키는 링크를 생성합니다.
 
 #### 결과
 

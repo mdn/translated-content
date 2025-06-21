@@ -54,7 +54,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
   - : 모던 웹사이트와 애플리케이션들은 종종 다양하고 정교한 그래픽을
     제공해야합니다.
 
-- [오디오 및 비디오 전달](/ko/docs/Web/Media/Audio_and_video_delivery)
+- [오디오 및 비디오 전달](/ko/docs/Web/Media/Guides/Audio_and_video_delivery)
 
   - : 우리는 '정적' 미디어 파일에서 적응형 라이브 스트림에 이르기까지 다양한
     방법으로 웹에서 오디오와 비디오를 전달할 수 있습니다. 이 문서는 웹 기반
@@ -91,7 +91,7 @@ MDN 문서에는 많은 가이드가 있습니다. 이 문서는 추가 사용 �
     제공합니다. 이 문서에서는 이에 대해 여러분이 알아야 할 모든 것들에 대해
     알려드립니다.
 
-- [XML 파싱 및 직렬화](/ko/docs/Web/XML/Parsing_and_serializing_XML)
+- [XML 파싱 및 직렬화](/ko/docs/Web/XML/Guides/Parsing_and_serializing_XML)
 
   - : 웹 플랫폼은 각각 장단점이 있는 다양한 XML 구문을 분석하고 직렬화하는
     방법을 제공합니다.

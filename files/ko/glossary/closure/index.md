@@ -12,4 +12,4 @@ l10n:
 ## 같이 보기
 
 - 위키백과의 [클로저](https://en.wikipedia.org/wiki/Closure_%28computer_programming%29)
-- MDN의 [클로저](/ko/docs/Web/JavaScript/Closures)
+- MDN의 [클로저](/ko/docs/Web/JavaScript/Guide/Closures)

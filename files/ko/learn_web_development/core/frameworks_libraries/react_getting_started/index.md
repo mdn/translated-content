@@ -52,9 +52,9 @@ React는 많은 패턴에 모던 JavaScript의 특징을 이용합니다. JavaSc
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-이 heading 상수는 **JSX 표현식(JSX expression)** 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/ko/docs/Web/HTML/Element/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
+이 heading 상수는 **JSX 표현식(JSX expression)** 으로 알려져 있습니다. React는 애플리케이션에 [`<h1>`](/ko/docs/Web/HTML/Reference/Elements/Heading_Elements) 태그를 렌더링할 때 이 표현식을 사용할 수 있습니다.
 
-[`<header>`](/ko/docs/Web/HTML/Element/header) 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서 하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
+[`<header>`](/ko/docs/Web/HTML/Reference/Elements/header) 태그로 heading을 감싸고 싶다고 가정해보겠습니다. JSX는 HTML에서 하던 것처럼 요소를 다른 요소 안에 중첩할 수 있습니다.
 
 ```js
 const header = (
@@ -75,7 +75,7 @@ const header = (
 );
 ```
 
-하지만, 표현식을 시작하는 [`<header>`](/ko/docs/Web/HTML/Element/header) 태그가 클로징 태그와 상응하는 위치에 들여쓰기가 되어있지 않기 때문에 이 코드는 살짝 이상해 보입니다.
+하지만, 표현식을 시작하는 [`<header>`](/ko/docs/Web/HTML/Reference/Elements/header) 태그가 클로징 태그와 상응하는 위치에 들여쓰기가 되어있지 않기 때문에 이 코드는 살짝 이상해 보입니다.
 
 </div>
 
@@ -99,7 +99,7 @@ JSX에 대해 더 알고 싶다면, React 팀의 [JSX in Depth](https://reactjs.
 
 React를 사용하는 데에는 많은 방법이 있지만, 여기서는 커맨드-라인 인터페이스(command-line interface; CLI) 툴인 create-react-app을 사용할 겁니다. 이전에 말했듯이, 이 툴은 패키지를 설치하고 파일들을 생성하여 앞서 설명한 툴링들로 React 애플리케이션을 개발하는 과정을 신속히 처리합니다.
 
-[create-react-app 없이 웹 사이트에 React를 추가하는 것](https://reactjs.org/docs/add-react-to-a-website.html)은 HTML 파일에서 [`<script>`](/ko/docs/Web/HTML/Element/script) 요소들을 복사해오는 것으로 가능하지만, create-react-app CLI는 React 애플리케이션을 만드는 가장 흔한 시작점입니다. 애플리케이션을 빌드하는 데에는 더 많은 시간이 걸리나 설정에 걸리는 시간은 줄일 수 있습니다.
+[create-react-app 없이 웹 사이트에 React를 추가하는 것](https://reactjs.org/docs/add-react-to-a-website.html)은 HTML 파일에서 [`<script>`](/ko/docs/Web/HTML/Reference/Elements/script) 요소들을 복사해오는 것으로 가능하지만, create-react-app CLI는 React 애플리케이션을 만드는 가장 흔한 시작점입니다. 애플리케이션을 빌드하는 데에는 더 많은 시간이 걸리나 설정에 걸리는 시간은 줄일 수 있습니다.
 
 ### 요구되는 것들
 
@@ -174,7 +174,7 @@ moz-todo-react
 
 **`src`** 디렉토리는 애플리케이션의 소스 코드가 있는 곳으로서, 가장 많은 시간을 보낼 곳입니다.
 
-**`public`** 디렉토리는 앱을 개발하는 동안 브라우저가 읽을 파일들을 가지고 있습니다; 이들 중 가장 중요한 것은 `index.html` 입니다. React는 코드를 이 html 파일에 주입하여 브라우저가 코드를 실행할 수 있게 합니다. create-react-app function에 도움이 되는 다른 마크업도 있기 때문에, 무엇을 하는지 모른다면 함부로 편집하지 않도록 주의하세요. 애플리케이션의 타이틀에 반영되도록 `index.html` 파일의 [`<title>`](/ko/docs/Web/HTML/Element/title) 요소 안의 텍스트를 바꿔야 합니다. 정확한 페이지 타이틀은 접근성을 위해 중요하니까요!
+**`public`** 디렉토리는 앱을 개발하는 동안 브라우저가 읽을 파일들을 가지고 있습니다; 이들 중 가장 중요한 것은 `index.html` 입니다. React는 코드를 이 html 파일에 주입하여 브라우저가 코드를 실행할 수 있게 합니다. create-react-app function에 도움이 되는 다른 마크업도 있기 때문에, 무엇을 하는지 모른다면 함부로 편집하지 않도록 주의하세요. 애플리케이션의 타이틀에 반영되도록 `index.html` 파일의 [`<title>`](/ko/docs/Web/HTML/Reference/Elements/title) 요소 안의 텍스트를 바꿔야 합니다. 정확한 페이지 타이틀은 접근성을 위해 중요하니까요!
 
 `public` 디렉토리 또한 앱의 프로덕션 버전을 빌드하고 배포할 때 퍼블리시 됩니다. 이 튜토리얼에서는 배포에 대해 다루지 않지만, [Deploying our app](/ko/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment) 튜토리얼에 기술된 것과 비슷한 해결책을 사용할 수 있을 겁니다.
 
@@ -263,9 +263,9 @@ function App() {
 
 `App` 함수는 JSX 표현식을 반환합니다. 이 표현식은 브라우저가 궁극적으로 DOM에 렌더링할 것을 정의하고 있습니다.
 
-표현식의 어떤 요소들은 HTML에 쓰인 것과 같이 속성들을 가지고 `attribute="value"`와 같은 패턴을 따르고 있습니다. 세 번째 줄에서, 여는 [`div`](/ko/docs/Web/HTML/Element/div) 태그는 `className` 속성을 가지고 있습니다. 이건 HTML의 [`class`](/ko/docs/Web/HTML/Global_attributes/class) 속성과 같지만, JSX는 JavaScript이므로 `class` 라는 단어를 쓸 수 없습니다. 거꾸로 말하자면, JavaScript는 이미 이 단어를 특별한 목적을 위해 사용하고 있어 코드 안에서 사용한다면 문제를 발생시킬 것입니다. 같은 이유로 몇 개의 다른 HTML 속성들이 HTML에서 그랬던 것과는 다르게 JSX에서 쓰이고 있습니다.
+표현식의 어떤 요소들은 HTML에 쓰인 것과 같이 속성들을 가지고 `attribute="value"`와 같은 패턴을 따르고 있습니다. 세 번째 줄에서, 여는 [`div`](/ko/docs/Web/HTML/Reference/Elements/div) 태그는 `className` 속성을 가지고 있습니다. 이건 HTML의 [`class`](/ko/docs/Web/HTML/Reference/Global_attributes/class) 속성과 같지만, JSX는 JavaScript이므로 `class` 라는 단어를 쓸 수 없습니다. 거꾸로 말하자면, JavaScript는 이미 이 단어를 특별한 목적을 위해 사용하고 있어 코드 안에서 사용한다면 문제를 발생시킬 것입니다. 같은 이유로 몇 개의 다른 HTML 속성들이 HTML에서 그랬던 것과는 다르게 JSX에서 쓰이고 있습니다.
 
-여섯 번째 줄의 [`<p>`](/ko/docs/Web/HTML/Element/p) 태그 안의 텍스트를 "Hello, world!"로 바꾸고, 파일을 저장하세요. 브라우저에서 `http://localhost:3000`에 실행되고 있는 개발 서버에 즉시 변화가 렌더링 되는 것을 볼 수 있을 겁니다. 이제 [`<a>`](/ko/docs/Web/HTML/Element/a) 태그를 지우고 저장해보세요. "Learn React" 링크가 사라질 겁니다.
+여섯 번째 줄의 [`<p>`](/ko/docs/Web/HTML/Reference/Elements/p) 태그 안의 텍스트를 "Hello, world!"로 바꾸고, 파일을 저장하세요. 브라우저에서 `http://localhost:3000`에 실행되고 있는 개발 서버에 즉시 변화가 렌더링 되는 것을 볼 수 있을 겁니다. 이제 [`<a>`](/ko/docs/Web/HTML/Reference/Elements/a) 태그를 지우고 저장해보세요. "Learn React" 링크가 사라질 겁니다.
 
 이제 `App` 컴포넌트는 아래와 같을 겁니다.
 

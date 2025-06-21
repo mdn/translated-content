@@ -13,4 +13,4 @@ l10n:
 
 ## 같이 보기
 
-- [Latency 이해하기](/ko/docs/Web/Performance/Understanding_latency)
+- [Latency 이해하기](/ko/docs/Web/Performance/Guides/Understanding_latency)

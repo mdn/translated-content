@@ -60,7 +60,7 @@ HTTP는 사람이 읽을 수 있으며 간단하게 고안되었습니다. 심�
 
 ### HTTP은 확장 가능합니다
 
-HTTP/1.0에서 소개된, [HTTP 헤더](/ko/docs/Web/HTTP/Headers)는 HTTP를 확장하고 실험하기 쉽게 만들어주었습니다. 클라이언트와 서버가 새로운 헤더의 시맨틱에 대해 간단한 합의만 한다면, 언제든지 새로운 기능을 추가할 수 있습니다.
+HTTP/1.0에서 소개된, [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)는 HTTP를 확장하고 실험하기 쉽게 만들어주었습니다. 클라이언트와 서버가 새로운 헤더의 시맨틱에 대해 간단한 합의만 한다면, 언제든지 새로운 기능을 추가할 수 있습니다.
 
 ### HTTP은 상태는 없지만 세션은 있습니다
 
@@ -83,7 +83,7 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
 
 다음은 HTTP 사용하여 제어 가능한 일반적인 기능 목록입니다.
 
-- **[캐시](/ko/docs/Web/HTTP/Caching)**
+- **[캐시](/ko/docs/Web/HTTP/Guides/Caching)**
 
   - HTTP로 문서가 캐시되는 방식을 제어할 수 있습니다. 서버는 캐시 대상과 기간을 프록시와 클라이언트에 지시할 수 있고 클라이언트는 저장된 문서를 무시하라고 중간 캐시 프록시에게 지시할 수 있습니다.
 
@@ -93,7 +93,7 @@ HTTP의 확장 가능한 특성은 수년 간에 걸쳐 웹의 점점 더 많은
 
 - **인증**
 
-  - 어떤 페이지들은 보호되어 오로지 특정 사용자만이 그것에 접근할 수도 있습니다. 기본 인증은 HTTP를 통해 {{HTTPHeader("WWW-Authenticate")}} 또는 유사한 헤더를 사용해 제공되거나, [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)를 사용해 특정 세션을 설정하여 이루어질 수도 있습니다.
+  - 어떤 페이지들은 보호되어 오로지 특정 사용자만이 그것에 접근할 수도 있습니다. 기본 인증은 HTTP를 통해 {{HTTPHeader("WWW-Authenticate")}} 또는 유사한 헤더를 사용해 제공되거나, [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)를 사용해 특정 세션을 설정하여 이루어질 수도 있습니다.
 
 - **[프록시와 터널링](/ko/docs/Web/HTTP/Proxy_servers_and_tunneling)**
 
@@ -146,10 +146,10 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 
 ![HTTP 요청](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-request.svg)
 
-- HTTP [메서드](/ko/docs/Web/HTTP/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
+- HTTP [메서드](/ko/docs/Web/HTTP/Reference/Methods), 보통 클라이언트가 수행하고자 하는 동작을 정의한 {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}} 같은 동사나 {{HTTPMethod("OPTIONS")}}나 {{HTTPMethod("HEAD")}}와 같은 명사입니다. 일반적으로, 클라이언트는 리소스를 가져오거나(`GET`을 사용하여) [HTML 폼](/ko/docs/Learn_web_development/Extensions/Forms)의 데이터를 전송(`POST`를 사용하여)하려고 하지만, 다른 경우에는 다른 동작이 요구될 수도 있습니다.
 - 가져오려는 리소스의 경로; 예를 들면 {{glossary("protocol", "프로토콜")}} (`http://`), {{glossary("domain", "도메인")}} (여기서는 `developer.mozilla.org`), 또는 TCP {{glossary("port", "포트")}} (여기서는 `80`)인 요소들을 제거한 리소스의 URL입니다.
 - HTTP 프로토콜의 버전.
-- 서버에 대한 추가 정보를 전달하는 선택적 [헤더들](/ko/docs/Web/HTTP/Headers).
+- 서버에 대한 추가 정보를 전달하는 선택적 [헤더들](/ko/docs/Web/HTTP/Reference/Headers).
 - `POST`와 같은 몇 가지 메서드를 위한, 전송된 리소스를 포함하는 응답의 본문과 유사한 본문.
 
 ### 응답
@@ -159,9 +159,9 @@ HTTP 메시지의 두 가지 타입인 요청(requests)과 응답(responses)은 
 ![HTTP 응답](https://mdn.github.io/shared-assets/images/diagrams/http/overview/http-response.svg)
 
 - HTTP 프로토콜의 버전
-- 요청의 성공 여부와, 그 이유를 나타내는 [상태 코드](/ko/docs/Web/HTTP/Status)
+- 요청의 성공 여부와, 그 이유를 나타내는 [상태 코드](/ko/docs/Web/HTTP/Reference/Status)
 - 아무런 영향력이 없는, 상태 코드의 짧은 설명을 나타내는 상태 메시지
-- 요청 헤더와 비슷한, HTTP [헤더들](/ko/docs/Web/HTTP/Headers)
+- 요청 헤더와 비슷한, HTTP [헤더들](/ko/docs/Web/HTTP/Reference/Headers)
 - 선택 사항으로 가져온 리소스가 포함되는 본문
 
 ## HTTP 기반 API
