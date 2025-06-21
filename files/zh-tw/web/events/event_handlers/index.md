@@ -1,7 +1,8 @@
 ---
 title: 事件處理（概覽）
 slug: Web/Events/Event_handlers
-page-type: guide
+l10n:
+  sourceCommit: 20cff31570e35c6da44ddd84158fcebd9f4f42d9
 ---
 
 事件是在瀏覽器視窗內觸發的信號，用以通知瀏覽器或作業系統環境的變化。程式設計師可以建立*事件處理器*程式碼，當事件觸發時執行，讓網頁能對變化做出適當的回應。
