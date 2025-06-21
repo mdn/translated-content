@@ -7,7 +7,27 @@ slug: Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/getOwnPropertyDescript
 
 **`handler.getOwnPropertyDescriptor()`** 메서드는 {{jsxref("Object.getOwnPropertyDescriptor()")}}에 대한 트랩입니다.
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-getownpropertydescriptor.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  eyeCount: 4,
+};
+
+const handler1 = {
+  getOwnPropertyDescriptor(target, prop) {
+    console.log(`called: ${prop}`);
+    // Expected output: "called: eyeCount"
+
+    return { configurable: true, enumerable: true, value: 5 };
+  },
+};
+
+const proxy1 = new Proxy(monster1, handler1);
+
+console.log(Object.getOwnPropertyDescriptor(proxy1, "eyeCount").value);
+// Expected output: 5
+```
 
 ## 구문
 

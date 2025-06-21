@@ -7,7 +7,60 @@ slug: Web/CSS/order
 
 La propriété **`order`** définit l'ordre avec lequel on dessine les éléments d'un conteneur d'éléments flexibles ou d'une grille d'éléments. Les éléments sont appliqués dans l'ordre croissant des valeurs de `order`. Les éléments ayant la même valeur pour `order` seront appliqués dans l'ordre selon lequel ils apparaissent dans le code source du document.
 
-{{EmbedInteractiveExample("pages/css/order.html")}}
+{{InteractiveExample("CSS Demo: order")}}
+
+```css interactive-example-choice
+order: 0;
+```
+
+```css interactive-example-choice
+order: 3;
+```
+
+```css interactive-example-choice
+order: -1;
+```
+
+```css interactive-example-choice
+order: 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">Box 1:</div>
+  <div style="order: 1">Box 2: <code>order: 1;</code></div>
+  <div style="order: 2">Box 3: <code>order: 2;</code></div>
+  <div style="order: 2">Box 4: <code>order: 2;</code></div>
+  <div style="order: 3">Box 5: <code>order: 3;</code></div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  max-height: 300px;
+  display: flex;
+  flex-flow: column;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+
+#example-element::after {
+  content: attr(style);
+  outline: 2px dashed;
+  font-family: monospace;
+}
+```
 
 > **Note :** `order` est uniquement conçue pour affecter **l'ordre visuel**. Elle ne doit pas être utilisée pour modifier l'ordre logique ou l'ordre de tabulation. **`order`** ne doit pas être utilisée avec les média non visuels comme les informations vocales.
 

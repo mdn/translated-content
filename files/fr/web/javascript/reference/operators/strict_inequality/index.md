@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/Strict_inequality
 
 L'opérateur d'inégalité stricte (`!==`) vérifie si ses deux opérandes ne sont pas égaux et renvoie un booléen correspondant au résultat. À la différence de [l'opérateur d'inégalité](/fr/docs/Web/JavaScript/Reference/Operators/Inequality), l'opérateur d'inégalité stricte considère toujours des opérandes de types différents comme étant différents.
 
-{{EmbedInteractiveExample("pages/js/expressions-strict-inequality.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+
+```js interactive-example
+console.log(1 !== 1);
+// Expected output: false
+
+console.log("hello" !== "hello");
+// Expected output: false
+
+console.log("1" !== 1);
+// Expected output: true
+
+console.log(0 !== false);
+// Expected output: true
+```
 
 ## Syntaxe
 

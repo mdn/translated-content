@@ -7,7 +7,7 @@ slug: Web/CSS/border
 
 ### Propiedades Constitutivas
 
-Esta es una [propiedad abreviada](/es/docs/Web/CSS/Shorthand_properties) para las siguientes propiedades CSS:
+Esta es una [propiedad abreviada](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) para las siguientes propiedades CSS:
 
 - border-color
 - border-style

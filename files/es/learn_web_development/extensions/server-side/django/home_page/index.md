@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Home_page
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
 
-Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.
+Estamos listos ahora para añadir el código para mostrar nuestra primera página entera — una página de inicio del sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) que muestra cuántos registros tenemos de cada tipo de modelo y proporciona una barra lateral con enlaces de navegación a nuestras otras páginas. Por el camino ganaremos experiencia práctica en escritura básica de mapeos de URL y vistas, obtención de resgistros de la base de datos y uso de plantillas.
 
 <table>
   <tbody>
@@ -84,7 +84,7 @@ La primera página que crearemos será la página index (`catalog/`). Esto despl
 
 ### Mapeador URL
 
-Hemos creado un archivo básico **/catalog/urls.py** para nuestra aplicación catálogo cuando creamos el [esqueleto del sitio Web](/es/docs/Learn/Server-side/Django/skeleton_website). Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a `catalog/`, entonces las URLs que llegan a este mapeador deben empezar con `catalog/` (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).
+Hemos creado un archivo básico **/catalog/urls.py** para nuestra aplicación catálogo cuando creamos el [esqueleto del sitio Web](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website). Las URLs de la aplicación catálogo fueron incluidas dentro del proyecto con un mapeador a `catalog/`, entonces las URLs que llegan a este mapeador deben empezar con `catalog/` (el mapeador funciona sobre todos los string en la URL después de la barra diagonal).
 
 Abra **urls.py** y pegue la línea en negrita que aparece a continuación.
 
@@ -154,7 +154,7 @@ def index(request):
     )
 ```
 
-La primera parte de la función vista extrae contadores de registros usando el atributo `objects.all()` en las clases del modelo. Tambien obtiene una lista de los objetos `BookInstance` que tienen un valor del campo status de 'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo ([Django Tutorial Part 3: Usando modelos > Buscando registros](/es/docs/Learn/Server-side/Django/Models#searching_for_records)).
+La primera parte de la función vista extrae contadores de registros usando el atributo `objects.all()` en las clases del modelo. Tambien obtiene una lista de los objetos `BookInstance` que tienen un valor del campo status de 'a' (Disponible). Puedes encontrar un poco más sobre cómo acceder desde modelos en nuestro tutorial previo ([Django Tutorial Part 3: Usando modelos > Buscando registros](/es/docs/Learn_web_development/Extensions/Server-side/Django/Models#searching_for_records)).
 
 Al final de la función invocamos a la función `render()` para crear y retornar una página HTML como una respuesta (esta función atajo envuelve una serie, simplicando este caso de uso muy común). Esta recibe como parametros el objeto `request original` (una `ConsultaHttp`), una plantilla HTML con marcadores para los datos, y una variable de `contexto` (un diccionario Python que contiene los datos que serán insertados en esos marcadores).
 

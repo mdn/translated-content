@@ -13,7 +13,14 @@ l10n:
 - アロー関数は[コンストラクター](/ja/docs/Glossary/Constructor)として使用することはできません。 [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけて呼び出すと {{jsxref("TypeError")}} が発生します。 [`new.target`](/ja/docs/Web/JavaScript/Reference/Operators/new.target) キーワードにアクセスすることもできません。
 - アロー関数は本体内で [`yield`](/ja/docs/Web/JavaScript/Reference/Operators/yield) を使用することができず、ジェネレーター関数として作成することもできません。
 
-{{EmbedInteractiveExample("pages/js/functions-arrow.html")}}
+{{InteractiveExample("JavaScript Demo: Functions =>")}}
+
+```js interactive-example
+const materials = ["Hydrogen", "Helium", "Lithium", "Beryllium"];
+
+console.log(materials.map((material) => material.length));
+// Expected output: Array [8, 6, 7, 9]
+```
 
 ## 構文
 
@@ -39,7 +46,7 @@ l10n:
 }
 ```
 
-引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)には対応していますが、常に括弧が必要になります。
+引数内での[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)、[構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)には対応していますが、常に括弧が必要になります。
 
 ```js-nolint
 (a, b, ...r) => 式
@@ -84,7 +91,7 @@ a => a + 100;
 
 上の例では、引数を囲む括弧と関数本体を囲む中括弧の両方を省略することができます。ただし、省略できるのは特定の場合のみです。
 
-括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、分割代入、残余引数がある場合は、引数リストを括弧で囲む必要があります。
+括弧を省略できるのは、関数に単一の単純な引数がある場合だけです。複数の引数がある場合、引数がない場合、デフォルト引数、構造分解、残余引数がある場合は、引数リストを括弧で囲む必要があります。
 
 ```js
 // 従来の無名関数
@@ -208,7 +215,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の本体は `this` コンテキストを持っているので、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)のようなアロー関数はクラスの `this` コンテキストを閉じ、アロー関数の本体の中の `this` はインスタンス（または[静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)の場合はクラス自体）を正しく参照します。しかし、これは関数自身のバインディングではなく、[クロージャ](/ja/docs/Web/JavaScript/Closures)であるため、 `this` の値が実行コンテキストによって変わることはありません。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)の本体は `this` コンテキストを持っているので、[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)のようなアロー関数はクラスの `this` コンテキストを閉じ、アロー関数の本体の中の `this` はインスタンス（または[静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)の場合はクラス自体）を正しく参照します。しかし、これは関数自身のバインディングではなく、[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)であるため、 `this` の値が実行コンテキストによって変わることはありません。
 
 ```js
 class C {

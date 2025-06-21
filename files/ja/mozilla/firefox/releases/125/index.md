@@ -45,15 +45,15 @@ l10n:
 
   以下の HTML グローバル属性をサポートしました:
 
-  - [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget)
-  - [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction)
+  - [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
   ([Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993))
 
 - {{domxref("RTCIceTransport")}} の {{domxref("RTCIceTransport/state","state")}} および {{domxref("RTCIceTransport/gatheringState","gatheringState")}} プロパティと、これらに関連づけられる {{domxref("RTCIceTransport/statechange_event","statechange")}} および {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} イベントをサポートしました。また、{{domxref("RTCDtlsTransport.iceTransport")}} プロパティ ({{domxref("RTCDtlsTransport")}} の基礎をなす `RTCIceTransport` を返します) もサポートしました。
   これらは、{{domxref("RTCPeerConnection")}} の {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} および {{domxref("RTCPeerConnection.connectionState","connectionState")}} プロパティで提供されるものよりとてもきめ細かいモニタリングを可能にします。
   ([Firefox bug 1811912](https://bugzil.la/1811912))
-- {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。
+- {{domxref("Element.ariaBrailleLabel")}} および {{domxref("Element.ariaBrailleRoleDescription")}} をサポートしました。それぞれ、ARIA のグローバル HTML 属性である [`aria-braillelabel`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) および [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) を反映します ([Firefox bug 1861201](https://bugzil.la/1861201))。
 
 - キャンバスが一時的に自身の 2D コンテキストを失ったとき、ウェブアプリケーションが体裁よく回復できるようになりました。これはキャンバスが GPU でハードウェアアクセラレーションされていて、GPU のドライバーがクラッシュしたときに発生する可能性があります ([Firefox bug 1887729](https://bugzil.la/1887729))。
   以下は、キャンバスのコンテキストが失われたり回復したりするときのイベントの詳細情報です:
@@ -62,7 +62,7 @@ l10n:
   - `contentlost` が発生した後、ブラウザーはデフォルトで失われたコンテキストの再開を試みますが、コードでイベントをキャンセルするとこの動作を抑止できます。
   - オフスクリーンキャンバスも同じ方法で監視できますが、[`OffScreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) の [`contextlost`](/ja/docs/Web/API/OffscreenCanvas/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/OffscreenCanvas/contextrestored_event) イベントを [`OffscreenCanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#context) とともに使用します。
 
-- `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Element/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
+- `<template>` 要素の [`shadowrootclonable`](/ja/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性、およびこれを反映して `HTMLTemplateElement` インターフェイスの [`shadowRootClonable`](/ja/docs/Web/API/HTMLTemplateElement/shadowRootClonable) プロパティをサポートしました。
   これらは、[`<template>`] 要素を使用して宣言的に作成した [`ShadowRoot`](/ja/docs/Web/API/ShadowRoot) の [`clonable`](/ja/docs/Web/API/ShadowRoot/clonable) プロパティを設定します
   ([Firefox bug 1880188](https://bugzil.la/1880188))。
 
@@ -71,7 +71,7 @@ l10n:
 
 #### Media、WebRTC、Web Audio
 
-- [AV1](/ja/docs/Web/Media/Formats/Video_codecs#av1) コーデックを [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) でサポートしました。動画ストリーミング提供者から、より高品質な再生が可能になります ([Firefox bug 1601817](https://bugzil.la/1601817))。
+- [AV1](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) コーデックを [Encrypted Media Extensions](/ja/docs/Web/API/Encrypted_Media_Extensions_API) でサポートしました。動画ストリーミング提供者から、より高品質な再生が可能になります ([Firefox bug 1601817](https://bugzil.la/1601817))。
 
 #### 廃止
 
@@ -84,7 +84,7 @@ l10n:
   メモリーは JavaScript で作成して Wasm モジュールにインポートする、または Wasm モジュールで作成してエクスポートすることができます。
   Wasm インスタンス内にあるそれぞれの新規線形メモリーに、ゼロから始まる連番のインデックスが与えられます。
   WebAssembly の [メモリー命令](/ja/docs/WebAssembly/Reference/Memory) で、操作するメモリーを参照するためにインデックスを使用します。インデックスを指定しない場合は、最初のメモリーが既定値として定義されます。
-  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_メモリー) をご覧ください ([Firefox bug 1860816](https://bugzil.la/1860816))。
+  詳しくは _WebAssembly テキスト形式の理解_ で [WebAssembly メモリー](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_メモリー) をご覧ください ([Firefox bug 1860816](https://bugzil.la/1860816))。
 
 ### WebDriver conformance (WebDriver BiDi, Marionette)
 
@@ -103,7 +103,7 @@ l10n:
 
 ## アドオン開発者向けの変更点一覧
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシ向けに加えて) HTTP プロキシに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} の `proxyAuthorization` プロパティの内容を、[CONNECT](/ja/docs/Web/HTTP/Reference/Methods/CONNECT) リクエストの一部として (すでにサポートする HTTPS プロキシー向けに加えて) HTTP プロキシーに送信する {{httpheader("Proxy-Authorization")}} リクエストヘッダーに渡すようになりました ([Firefox bug 1794464](https://bugzil.la/1794464))。
 
 ## 実験的なウェブ機能
 
@@ -115,7 +115,7 @@ l10n:
 
 - **区分コンテンツ内の `<h1>` のユーザーエージェントスタイル:** `layout.css.h1-in-section-ua-styles.enabled`。
 
-  [区分要素](/ja/docs/Web/HTML/Content_categories#sectioning_content) `<article>`、`<aside>`、`<nav>`、`<section>` の内部にある `<h1>` 見出しのフォントサイズは小さくなりません。HTML 仕様書からアウトラインのアルゴリズムが [削除された](https://github.com/whatwg/html/pull/7829) ため、区分要素の内部にある `<h1>` のユーザーエージェントスタイルは適切でなくなりました ([Firefox bug 1883896](https://bugzil.la/1883896))。
+  [区分要素](/ja/docs/Web/HTML/Guides/Content_categories#sectioning_content) `<article>`、`<aside>`、`<nav>`、`<section>` の内部にある `<h1>` 見出しのフォントサイズは小さくなりません。HTML 仕様書からアウトラインのアルゴリズムが [削除された](https://github.com/whatwg/html/pull/7829) ため、区分要素の内部にある `<h1>` のユーザーエージェントスタイルは適切でなくなりました ([Firefox bug 1883896](https://bugzil.la/1883896))。
 
   > **注記:** この機能の設定は逆に機能します。Nightly ビルドでは `false` に設定しており、区分要素の内部にある見出しのユーザーエージェントスタイルを削除します。その他すべてのチャンネルでは `true` に設定しており、入れ子になった見出し用の既存のユーザーエージェントスタイルを維持します。
 

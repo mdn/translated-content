@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/break
 
 **Оператор `break`** прерывает выполнение текущего цикла, оператора множественного выбора {{jsxref("Statements/switch", "switch")}} или блочного {{jsxref("Statements/label", "выражения с меткой", "", 1)}}. Выполнение кода продолжается с конструкции, следующей за прерванной.
 
-{{EmbedInteractiveExample("pages/js/statement-break.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
 
 ## Синтаксис
 

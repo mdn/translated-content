@@ -9,7 +9,19 @@ l10n:
 
 {{jsxref("Map")}} 인스턴스의 **`delete()`** 메서드는 이 Map 에서 특정 요소를 제거합니다.
 
-{{EmbedInteractiveExample("pages/js/map-prototype-delete.html")}}
+{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+
+```js interactive-example
+const map1 = new Map();
+map1.set("bar", "foo");
+
+console.log(map1.delete("bar"));
+// Expected result: true
+// True indicates successful removal
+
+console.log(map1.has("bar"));
+// Expected result: false
+```
 
 ## 구문
 

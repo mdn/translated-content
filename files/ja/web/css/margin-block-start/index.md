@@ -2,14 +2,69 @@
 title: margin-block-start
 slug: Web/CSS/margin-block-start
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
+**`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
-{{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
+{{InteractiveExample("CSS Demo: margin-block-start")}}
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block-start: 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## 構文
 
@@ -18,6 +73,8 @@ l10n:
 margin-block-start: 10px; /* 絶対的な長さ */
 margin-block-start: 1em; /* テキストの大きさに対する相対値 */
 margin-block-start: 5%; /* 直近のブロックコンテナーの大きさに対する相対値 */
+margin-block-start: anchor-size(width);
+margin-block-start: calc(anchor-size(--myAnchor block, 20px) / 3);
 
 /* キーワード値 */
 margin-block-start: auto;

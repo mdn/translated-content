@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 
 **`getUTCMilliseconds()`** 方法根據世界時回傳指定日期的毫秒數。
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCMilliseconds()", "shorter")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// Expected output: 678
+```
 
 ## 語法
 

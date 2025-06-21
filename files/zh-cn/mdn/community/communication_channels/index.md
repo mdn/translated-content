@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 934dace5fd2f456fb9178b687ad0abb6e4b0a049
 ---
 
-{{MDNSidebar}}
-
 社区可以通过多种沟通渠道与 MDN Web 文档的员工联系并参与讨论。
 
 ## 聊天室
@@ -50,7 +48,7 @@ MDN Web 文档的 [GitHub 讨论](https://github.com/orgs/mdn/discussions)是一
 
 ## 本地化沟通渠道
 
-每一个本地化团队都有自己的[沟通方式](/zh-CN/docs/MDN/Community/Contributing/Translated_content)。
+每一个本地化团队都有自己的[沟通方式](/zh-CN/docs/MDN/Community/Translated_content)。
 
 ## 电子邮件
 

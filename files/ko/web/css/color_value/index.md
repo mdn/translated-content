@@ -1203,7 +1203,7 @@ hsla(240 100% 50% / 5%)   /*   5% opaque blue */
 
 ## 접근성 고려사항
 
-색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
+색을 구별하기 어려운 사람도 있으므로, [WCAG 2.0](https://www.w3.org/TR/WCAG/#visual-audio-contrast) 권고안은 특정 메시지, 행동, 또는 결과를 나타내는 방법으로 오직 색만 사용하는걸 강력히 반대하고 있습니다. [색과 색상 대비](/ko/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)를 참고하세요.
 
 ## 명세
 

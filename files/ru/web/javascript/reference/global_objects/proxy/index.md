@@ -332,7 +332,7 @@ console.log(products.number); // 3
 
 ### Пример использования всех перехватчиков
 
-В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать _не нативный_ объект, который частично приспособлен для этого - `docCookies,` созданном в разделе ["little framework" и опубликованном на странице `document.cookie`](/ru/docs/Web/API/document/cookie#a_little_framework.3a_a_complete_cookies_reader.2fwriter_with_full_unicode_support).
+В данном примере, использующем все виды перехватчиков, мы попытаемся проксировать _не нативный_ объект, который частично приспособлен для этого - `docCookies,` созданном в разделе ["little framework" и опубликованном на странице `document.cookie`](/ru/docs/Web/API/Document/cookie#a_little_framework.3a_a_complete_cookies_reader.2fwriter_with_full_unicode_support).
 
 ```js
 /*

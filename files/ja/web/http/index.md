@@ -13,39 +13,39 @@ l10n:
 
 ガイドやチュートリアルで、 HTTP の使い方を学びましょう。
 
-- [HTTP の概要](/ja/docs/Web/HTTP/Overview)
+- [HTTP の概要](/ja/docs/Web/HTTP/Guides/Overview)
   - : クライアントサーバープロトコルの基本的な特徴です。 HTTP で実現できること、また何故それを使用すべきなのかを説明します。
-- [HTTP キャッシュ](/ja/docs/Web/HTTP/Caching)
+- [HTTP キャッシュ](/ja/docs/Web/HTTP/Guides/Caching)
   - : キャッシュは高速で快適なウェブサイトの閲覧を可能にするために非常に需要な要素です。この記事では様々なキャッシュの手法や、HTTP ヘッダーでどのようにそれらを制御するかを説明します。
-- [HTTP Cookie](/ja/docs/Web/HTTP/Cookies)
+- [HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies)
   - : Cookie の動作は [RFC 6265](https://datatracker.ietf.org/doc/html/rfc6265) で定義されています。サーバーは HTTP リクエストをクライアント側に送信する際、`Set-Cookie` ヘッダー付与することができます。クッキーの値は `Cookie` リクエストのヘッダーの識別子に含まれた、同一サーバーに対する全てのリクエストを保持しており、クライアント側はそれを返します。また、Cookie に有効期限を設定したり、特定のドメインやパスだけにステートフルな挙動を限定することもできます。
-- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
   - : **サイト間 HTTP リクエスト**とは、リクエストを生成したリソースがあるドメインとは **別のドメイン** のリソースをリクエストする HTTP リクエストのことを指します。例えば、ドメイン A (`http://domaina.example/`) から読み込まれた HTML ページが、`img` 要素を使用してドメイン B の画像 (`http://domainb.foo/image.jpg`) に対するリクエストを発行することがそれにあたります。昨今のウェブページでは、CSS スタイルシートや画像、スクリプト、その他のリソースを含め、上記の例のようにサイトを跨ってデータを読み込むのが一般的になっています。CORS によって、ウェブ開発者がこのようなサイト間リクエストに対して個々のサイトが示す挙動を制御することができます。
-- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Client_hints)
+- [HTTP クライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints)
   - : **クライアントヒント**は、サーバーがクライアントから端末、ネットワーク、ユーザー、ユーザーエージェント固有の環境設定に関する情報を積極的にリクエストするために使用できるレスポンスヘッダーの集合です。
     サーバーは、クライアントが提供する情報をもとに、送信するリソースを決定することができます。
-- [HTTP の進化](/ja/docs/Web/HTTP/Evolution_of_HTTP)
+- [HTTP の進化](/ja/docs/Web/HTTP/Guides/Evolution_of_HTTP)
   - : 初期バージョンの HTTP から最新の HTTP/2、姿を現した HTTP/3 以降までの変革を端的に説明します。
 - [Mozilla ウェブセキュリティガイドライン](https://infosec.mozilla.org/guidelines/web_security)
   - : 運用チームがセキュアなウェブアプリケーションを開発するのに役立つコツをまとめました。
-- [HTTP メッセージ](/ja/docs/Web/HTTP/Messages)
+- [HTTP メッセージ](/ja/docs/Web/HTTP/Guides/Messages)
   - : HTTP/1.x や HTTP/2 の多様なメッセージが持つ型や構造を説明します。
-- [HTTP セッションの典型例](/ja/docs/Web/HTTP/Session)
+- [HTTP セッションの典型例](/ja/docs/Web/HTTP/Guides/Session)
   - : 一般的な HTTP セッションのフローを示しながら説明します。
-- [HTTP/1.x のコネクション制御](/ja/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [HTTP/1.x のコネクション制御](/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : HTTP/1.x で使用できる 3 種類の通信制御モデルの持つ長所と短所を説明します。
 
 ## リファレンス
 
 詳細な HTTP の参考資料を見ていきましょう。
 
-- [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)
+- [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
   - : HTTP メッセージヘッダーは、リソース、あるいはサーバーやクライアントの挙動を示すために使用します。ヘッダーは [IANA レジストリー](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers) に収録されていますが。IANA は [新たに提案された HTTP メッセージヘッダーのレジストリー](https://www.iana.org/assignments/message-headers/message-headers.xhtml#prov-headers)も管理しています。
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
   - : HTTP では多様な操作を実現することができます。一般的な {{HTTPMethod("GET")}} や {{HTTPMethod("POST")}} だけでなく、{{HTTPMethod("OPTIONS")}} や {{HTTPMethod("DELETE")}}、{{HTTPMethod("TRACE")}} などのあまり一般的ではないリクエストも包括しています。
-- [HTTP ステータスレスポンスコード](/ja/docs/Web/HTTP/Status)
+- [HTTP ステータスレスポンスコード](/ja/docs/Web/HTTP/Reference/Status)
   - : HTTP レスポンスコードは、特定の HTTP リクエストが正常に完了したかを示します。レスポンスは通知レスポンス、成功レスポンス、リダイレクション、クライアントエラー、サーバーエラーの 5 つのクラスに分類されます。
-- [CSP ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [CSP ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
   - : ウェブサイトの管理者は、{{HTTPHeader("Content-Security-Policy")}} レスポンスヘッダーフィールドで、ユーザーエージェントが特定のページで読み込むことが許可されているリソースを制御することができます。いくつか例外はありますが、大元のサーバーやスクリプトのエンドポイントの特定をポリシーとして含んでいることが多いです。
 
 ## ツールとリソース

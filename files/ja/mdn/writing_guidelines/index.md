@@ -2,24 +2,26 @@
 title: 執筆ガイドライン
 slug: MDN/Writing_guidelines
 l10n:
-  sourceCommit: dab1b3e38e8b58b64991218c682f41b236032a36
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
-{{MDNSidebar}}
-
-MDN Web Docs はオープンソースのプロジェクトです。以下のセクションは、MDN Web Docs で私たちが*何を*文書化し、*どのように*それを行うかについてのガイドラインを記述したものです。どのように協力するかについては、[協力ガイドライン](/ja/docs/MDN/Community)を参照してください。
+MDN Web Docs はオープンソースのプロジェクトです。以下のセクションは、MDN Web Docs で私たちが「何を」文書化し、「どのよう」にそれを行うかについてのガイドラインを記述したものです。どのように協力するかについては、[協力ガイドライン](/ja/docs/MDN/Community)を参照してください。
 
 - [私たちが書くものは何か](/ja/docs/MDN/Writing_guidelines/What_we_write)
 
   - : このコーナーでは MDN Web Docs に載せるものと載せないもの、そして新しい技術について書く場合、コンテンツの提案プロセス、外部リンクを受け入れるかどうかなど、他の多くのポリシーについて説明します。私たちのためにコンテンツを書いたり更新したりすることを検討しているのであれば、これは良い出発点です。このコーナーには、以下の記事も載せています。
 
-    - [掲載基準](/ja/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [掲載基準](/ja/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
       - : MDN Web Docs に載せるべきコンテンツの詳細な基準、 MDN Web Docs で新しい文書化をしてもらうための申請プロセス、申請する側の希望やガイドラインを提供しています。
 
 - [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : 執筆スタイルガイドは、 MDN Web Docs で使用する言語とスタイルを扱います。また、[サンプルコードの書式化](/ja/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide)の方法も扱っています。
+  - : 執筆スタイルガイドは、 MDN Web Docs で使用する言語とスタイルを扱います。また、[サンプルコードの書式化](/ja/docs/MDN/Writing_guidelines/Code_style_guide)の方法も扱っています。
+
+- [ウェブ開発の学習の執筆ガイドライン](/ja/docs/MDN/Writing_guidelines/Learning_content)
+
+  - : MDN の「[ウェブ開発の学習](/ja/docs/Learn_web_development)」の章は、ウェブ開発の基本を学んでいる人々を対象としており、そのため、 MDN の他のコンテンツとは異なる手法が要求されます。この記事では、学習コンテンツを執筆するためのガイドラインを提供しています。
 
 - [MDN Web Docs への書き方](/ja/docs/MDN/Writing_guidelines/Howto)
 

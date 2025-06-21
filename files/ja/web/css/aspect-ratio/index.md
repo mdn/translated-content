@@ -2,7 +2,7 @@
 title: aspect-ratio
 slug: Web/CSS/aspect-ratio
 l10n:
-  sourceCommit: d7a5a9761b68e13cdd3bffafdd238a8712eb23d4
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{CSSRef}}
@@ -11,7 +11,41 @@ l10n:
 
 `aspect-ratio` が何らかの効果を持つためには、ボックスのサイズの少なくとも 1 つが自動である必要があります。幅も高さも自動サイズでない場合、指定されたアスペクト比はボックスの推奨サイズに何の影響も持ちません。
 
-{{EmbedInteractiveExample("pages/css/aspect-ratio.html")}}
+{{InteractiveExample("CSS Demo: aspect-ratio")}}
+
+```css interactive-example-choice
+aspect-ratio: auto;
+```
+
+```css interactive-example-choice
+aspect-ratio: 1 / 1;
+```
+
+```css interactive-example-choice
+aspect-ratio: 16 / 9;
+```
+
+```css interactive-example-choice
+aspect-ratio: 0.5;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    height="640"
+    id="example-element"
+    src="/shared-assets/images/examples/plumeria.jpg"
+    width="466" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 100%;
+  width: auto;
+}
+```
 
 ## 構文
 
@@ -31,7 +65,7 @@ aspect-ratio: revert-layer;
 aspect-ratio: unset;
 ```
 
-このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/Replaced_element)（[`<img>`](/ja/docs/Web/HTML/Element/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
+このプロパティは、キーワード `auto` または `<ratio>` のいずれか、または両方で指定します。両方が指定され、要素が[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（[`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) など）である場合、コンテンツが読み込まれるまでは指定された比率が使用されます。コンテンツが読み込まれた後は、 `auto` の値が適用され、読み込まれたコンテンツの内在的なアスペクト比が使用されます。
 
 要素が置換要素でない場合は、指定された `ratio` が使用されます。
 
@@ -39,7 +73,7 @@ aspect-ratio: unset;
 
 - `auto`
 
-  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/Replaced_element)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
+  - : 内在的なアスペクト比がある[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)の場合は、*その*アスペクト比を使用し、それ以外の場合はボックスに推奨アスペクト比が設定されません。内在的なアスペクト比を使用して寸法を計算する際には、常にコンテンツボックスの寸法に対して行われます。
 
 - {{cssxref("&lt;ratio&gt;")}}
 
@@ -139,7 +173,7 @@ img {
 
 ## 関連情報
 
-- [メディアのコンテナー要素の幅と高さの属性をアスペクト比にマッピングする](/ja/docs/Learn/Performance/Multimedia)
-- [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
+- [アスペクト比を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
+- [画像の aspect-ratio: ジャンクの防止](/ja/docs/Learn_web_development/Extensions/Performance/Multimedia#レンダリング戦略_画像を読み込むときのジャンクの防止)
 - [Designing an aspect ratio unit for CSS](https://www.smashingmagazine.com/2019/03/aspect-ratio-unit-css/)
 - [Setting Height And Width On Images Is Important Again](https://www.smashingmagazine.com/2020/03/setting-height-width-images-important-again/)

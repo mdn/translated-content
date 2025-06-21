@@ -54,7 +54,7 @@ slug: Mozilla/Firefox/Releases/65
 
 - События теперь отправляются на отключённые элементы HTML, то есть элементы {{htmlelement("button")}}, {{htmlelement("fieldset")}}, {{htmlelement("input")}}, {{htmlelement("select")}} и {{htmlelement("textarea")}} с установленными атрибутами `disabled` ([Firefox bug 329509](https://bugzil.la/329509)).
 - Как в Chrome и Safari, удаление атрибута `src` у элемента {{htmlelement("iframe")}} загружает в него `about:blank` ([Firefox bug 1501418](https://bugzil.la/1501418)) . До этого удаление `src` не влияло на содержимое `iframe`.
-- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Element/script#referrerpolicy) у элементов {{htmlelement("script")}} ([Firefox bug 1460920](https://bugzil.la/1460920)).
+- Добавлена поддержка атрибута [`referrerpolicy`](/ru/docs/Web/HTML/Reference/Elements/script#referrerpolicy) у элементов {{htmlelement("script")}} ([Firefox bug 1460920](https://bugzil.la/1460920)).
 
 ### CSS
 
@@ -135,7 +135,7 @@ _Без изменений._
 #### Fetch и сервис-воркеры
 
 - Метод {{domxref("Response.redirect()")}} теперь корректно выбрасывает `TypeError`, если в качестве первого параметра указан невалидный URL ([Firefox bug 1503276](https://bugzil.la/1503276)).
-- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
+- Методы {{domxref("ServiceWorkerContainer.register()")}} и {{domxref("WorkerGlobalScope.importScripts()")}} (когда они используется сервис-воркером) отныне принимают любые файлы с валидными [MIME-типом JavaScript](/ru/docs/Web/HTTP/Guides/MIME_types#textjavascript) ([Firefox bug 1354577](https://bugzil.la/1354577)).
 - Добавлена поддержка свойств {{domxref("FetchEvent.replacesClientId")}} и {{domxref("FetchEvent.resultingClientId")}} ([Firefox bug 1264177](https://bugzil.la/1264177)).
 - Реализована поддержка {{domxref("ServiceWorkerGlobalScope.onmessageerror")}} и {{domxref("ServiceWorkerContainer.onmessageerror")}} ([Firefox bug 1399446](https://bugzil.la/1399446)).
 - Заголовок {{httpheader("Origin")}} больше не устанавливается у запросов Fetch с методом {{HTTPMethod("HEAD")}} или {{HTTPMethod("GET")}} ([Firefox bug 1508661](https://bugzil.la/1508661)).

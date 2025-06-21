@@ -28,7 +28,7 @@ window.CSS.registerProperty({
 
 ### @property
 
-CSS で同じ登録を行うことができます。 次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用して登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
+CSS で同じ登録を行うことができます。 次の例では、 {{cssxref('--*', 'CSS カスタムプロパティ')}} として `--my-prop` を {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用して登録します。 `--my-prop` は CSS 色構文を使用し、既定値として `#c0ffee` があり、値を継承しないようにします。
 
 ```css
 @property --my-prop {

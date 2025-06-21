@@ -2,10 +2,10 @@
 title: SpeechGrammar：weight 属性
 slug: Web/API/SpeechGrammar/weight
 l10n:
-  sourceCommit: 23e1a97d50050a3b3518a4b2f67ccf42e5fd75b7
+  sourceCommit: 706cbf21987296c604cc96b7f95095ed7aba6bb8
 ---
 
-{{APIRef("Web Speech API")}}{{SeeCompatTable}}
+{{APIRef("Web Speech API")}}{{deprecated_header}}{{non-standard_header}}
 
 {{domxref("SpeechGrammar")}} 接口的 **`weight`** 可选属性用于设置和返回 `SpeechGrammar` 对象的权重。
 

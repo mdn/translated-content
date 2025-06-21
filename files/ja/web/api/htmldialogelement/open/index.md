@@ -7,11 +7,11 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`open`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、HTML の [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性を反映した論理値です。これは {{htmlelement("dialog")}} が操作できる状態であるかどうかを示します。
+**`open`** は {{domxref("HTMLDialogElement")}} インターフェイスのプロパティで、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性を反映した論理値です。これは {{htmlelement("dialog")}} が操作できる状態であるかどうかを示します。
 
 ## 値
 
-論理値で、HTML の [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性の状態を表します。`true` は設定されており、従ってダイアログは表示されています。`false` は設定されておらず、従ってダイアログは表示されていません。
+論理値で、HTML の [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性の状態を表します。`true` は設定されており、従ってダイアログは表示されています。`false` は設定されておらず、従ってダイアログは表示されていません。
 
 このプロパティは読み取り専用になりました。プログラムにより値を設定してダイアログを表示または非表示にすることは可能です。
 

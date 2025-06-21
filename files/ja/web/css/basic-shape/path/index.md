@@ -6,9 +6,44 @@ original_slug: Web/CSS/path
 
 {{CSSRef}}
 
-**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
+**`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
 
-{{EmbedInteractiveExample("pages/css/function-path.html")}}
+{{InteractiveExample("CSS Demo: path()")}}
+
+```css interactive-example-choice
+clip-path: path(
+  "M  20  240 \
+ L  20  80 L 160  80 \
+ L 160  20 L 280 100 \
+ L 160 180 L 160 120 \
+ L  60 120 L  60 240 Z"
+);
+```
+
+```css interactive-example-choice
+clip-path: path(
+  "M 20 240 \
+ C 20 0 300 0 300 240 Z"
+);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 
@@ -30,9 +65,9 @@ path([<'fill-rule'>,]?<string>)
   - : パス内の塗りつぶしルールです。
     指定可能な値は `nonzero` または `evenodd` です。
     既定値は `nonzero` です。
-    詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Attribute/fill-rule)を参照してください。
+    詳細は[塗りつぶしルール](/ja/docs/Web/SVG/Reference/Attribute/fill-rule)を参照してください。
 - `<string>`
-  - : 文字列で、[SVG パス](/ja/docs/Web/SVG/Element/path)を定義する[データ文字列](/ja/docs/Web/SVG/Attribute/d)です。
+  - : 文字列で、[SVG パス](/ja/docs/Web/SVG/Reference/Element/path)を定義する[データ文字列](/ja/docs/Web/SVG/Reference/Attribute/d)です。
 
 ## 例
 
@@ -51,7 +86,7 @@ path(evenodd,"M 10 80 C 40 10, 65 10, 95 80 S 150 150, 180 80");
 
 ### SVG パスで d 属性の値を変更する
 
-`path()` は SVG の [`d` 属性](/ja/docs/Web/SVG/Attribute/d) の値を変更するために使用することができます。 CSS で `none` に設定することも可能です。
+`path()` は SVG の [`d` 属性](/ja/docs/Web/SVG/Reference/Attribute/d) の値を変更するために使用することができます。 CSS で `none` に設定することも可能です。
 
 "V" マークは、 CSS のプロパティとして `d` が対応していれば、カーソルを置いたときに縦に反転します。
 

@@ -19,13 +19,13 @@ Firefox 60 は、米国時間 2018 年 5 月 9 日にリリースされました
 
 - CSS ペインのルールビュー ([CSS の調査と編集](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html) をご覧ください) で精密に値を増減する (0.1 ずつ増減) キーボードショートカットを、Linux および Windows で OS の既定のショートカットと衝突しないようにするため、 `Alt` + `Up`/`Down` to `Ctrl` + `Up`/`Down` に変更しました ([Firefox バグ 1413314](https://bugzil.la/1413314))。
 
-- CSS ペインのルールビューで、[CSS 変数名](/ja/docs/Web/CSS/Using_CSS_custom_properties) の自動補完が可能になりました ([Firefox バグ 1422635](https://bugzil.la/1422635))。プロパティの値に `var(` と入力してダッシュ (`-`) を押下すると、CSS で宣言した変数を自動補完のリストに表示します。
+- CSS ペインのルールビューで、[CSS 変数名](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) の自動補完が可能になりました ([Firefox バグ 1422635](https://bugzil.la/1422635))。プロパティの値に `var(` と入力してダッシュ (`-`) を押下すると、CSS で宣言した変数を自動補完のリストに表示します。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で、タッチのシミュレーションを切り替えたときやシミュレーションするユーザーエージェントを変更したときにページを自動的に再読み込みする機能を有効化/無効化できる、_Reload when..._ ドロップダウンメニューを追加しました。詳しくは [ページ再読み込みの動作を制御する](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling-page-reload-behavior) をご覧ください ([Firefox バグ 1428816](https://bugzil.la/1428816))。
 - 設定項目 `view_source.tab` を削除しましたので、[ソース表示](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) モードを新しいタブか新しいウィンドウで選ぶことができなくなりました。ページのソースは、常に新しいタブで表示されます ([Firefox バグ 1418403](https://bugzil.la/1418403))。
 
 ### HTML
 
-- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
+- `designMode` および `contenteditable` の状況で、ブロックレベルの編集ホストの子であるインライン要素またはテキストノードの内部にキャレットがあるときに Enter キーを押下すると、`<div>` 要素を挿入するようになりました。以前は、`<br>` 要素を挿入していました。アプリで以前の動作を望む場合は、`document.execCommand()` で実現できます。詳しくは [マークアップ生成の違い](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable#differences_in_markup_generation) をご覧ください ([Firefox バグ 1430551](https://bugzil.la/1430551))。
 
 ### CSS
 
@@ -40,7 +40,7 @@ _変更なし。_
 
 - ECMAScript 2015 モジュールを、デフォルトで有効にしました ([Firefox バグ 1438139](https://bugzil.la/1438139))。詳しくは [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) および [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) をご覧ください。または、MDN のリファレンス文書を確認してください。
 
-  - [`<script src="main.js" type="module">`](/ja/docs/Web/HTML/Element/script#attr-type) および [`<script nomodule src="fallback.js">`](/ja/docs/Web/HTML/Element/script#attr-nomodule)
+  - [`<script src="main.js" type="module">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-type) および [`<script nomodule src="fallback.js">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-nomodule)
   - [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文。
 
 - {{jsxref("Array.prototype.values()")}} メソッドを再び追加しました ([Firefox バグ 1420101](https://bugzil.la/1420101))。互換性の問題のために無効化されました。このメソッドを独自に実装していないことを確認してください。

@@ -129,5 +129,5 @@ var myRequest = new Request("flowers.jpg", myInit);
 
 - [Fetch API](/ru/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ru/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)

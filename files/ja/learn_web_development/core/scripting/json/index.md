@@ -346,7 +346,7 @@ myString;
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_JSON)を参照してください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: JSON](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/JSON)を参照してください。
 
 ## まとめ
 
@@ -357,6 +357,6 @@ myString;
 - [JSON リファレンス](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [フェッチ API の概要](/ja/docs/Web/API/Fetch_API)
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Methods)
+- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Network_requests","Learn_web_development/Core/Scripting/Debugging_JavaScript", "Learn_web_development/Core/Scripting")}}

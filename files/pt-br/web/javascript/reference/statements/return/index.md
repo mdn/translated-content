@@ -94,7 +94,7 @@ counter();
 
 ### Retornando uma função
 
-Veja também o artigo sobre [Closures](/pt-BR/docs/Web/JavaScript/Closures).
+Veja também o artigo sobre [Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures).
 
 ```js
 function magic(x) {
@@ -118,4 +118,4 @@ answer(1337); // 56154
 ## Veja também
 
 - [Funções](/pt-BR/docs/Web/JavaScript/Reference/Functions)
-- [Closures](/pt-BR/docs/Web/JavaScript/Closures)
+- [Closures](/pt-BR/docs/Web/JavaScript/Guide/Closures)

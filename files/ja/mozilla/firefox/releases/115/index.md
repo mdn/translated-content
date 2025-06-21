@@ -13,13 +13,13 @@ l10n:
 
 ### HTML
 
-- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Element/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Attributes/rel/modulepreload) キーワードをサポートしました。
+- {{HTMLElement("link")}} 要素の [`rel`](/ja/docs/Web/HTML/Reference/Elements/link#rel) 属性で [`modulepreload`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) キーワードをサポートしました。
   これは [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules) やその依存先を早期に (非同期で) 並列で読み込むことができ、それらは文書のモジュールマップに保存されます ([Firefox bug 1425310](https://bugzil.la/1425310))。
 
 ### CSS
 
 - CSSの {{cssxref("animation-composition")}} プロパティを、デフォルトで有効にしました。このプロパティを使用して、複数のアニメーションが同じプロパティへ同時に影響を与えるときの合成処理を指定できます ([Firefox bug 1823862](https://bugzil.la/1823862))。
-- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
+- CSS {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の `supports()` で `supports-conditions` をデフォルトで有効にしました。この機能で、指定した機能がユーザーのブラウザーでサポートされている場合に限り、スタイルシートをインポートできます ([Firefox bug 1830779](https://bugzil.la/1830779))。
 
 ### JavaScript
 
@@ -34,7 +34,7 @@ l10n:
 
 ### HTTP
 
-- [`Sec-Purpose`](/ja/docs/Web/HTTP/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
+- [`Sec-Purpose`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) HTTP {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}} が、リソースを {{Glossary("Prefetch", "プリフェッチ")}} する要求に含まれるようになりました。
   これにより要求に対してキャッシュの期限を調節するなど、サーバーが必要に応じて特別な制御を行うことができます ([Firefox bug 1836328](https://bugzil.la/1836328))。
 
 ### API

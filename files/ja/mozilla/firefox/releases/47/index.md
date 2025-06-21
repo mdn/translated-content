@@ -11,7 +11,7 @@ Firefox 47 は、米国時間 2016 年 6 月 7 日にリリースされました
 
 ### 開発者ツール
 
-- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で [ユーザーエージェントをスプーフィング](/ja/docs/Web/HTTP/Browser_detection_using_the_user_agent) する
+- [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で [ユーザーエージェントをスプーフィング](/ja/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent) する
 - メモリーツールの [Retaining paths パネル](https://firefox-source-docs.mozilla.org/devtools-user/memory/dominators_view/index.html#retaining_paths_panel)
 - [Service Worker](/ja/docs/Web/API/ServiceWorker) と [Push API](/ja/docs/Web/API/Push_API) のデバッグ
 

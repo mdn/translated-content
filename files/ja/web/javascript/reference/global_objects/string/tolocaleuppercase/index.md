@@ -9,7 +9,17 @@ l10n:
 
 **`toLocaleUpperCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて大文字に変換して返します。
 
-{{EmbedInteractiveExample("pages/js/string-tolocaleuppercase.html")}}
+{{InteractiveExample("JavaScript Demo: String.toLocaleUpperCase()")}}
+
+```js interactive-example
+const city = "istanbul";
+
+console.log(city.toLocaleUpperCase("en-US"));
+// Expected output: "ISTANBUL"
+
+console.log(city.toLocaleUpperCase("TR"));
+// Expected output: "İSTANBUL"
+```
 
 ## 構文
 

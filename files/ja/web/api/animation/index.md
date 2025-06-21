@@ -73,12 +73,12 @@ l10n:
 
 注意欠陥多動性障碍（ADHD）などの認知能力に不安のある方にとって、まばたきや点滅するアニメーションは問題となることがあります。さらに、ある種の動作は、前庭障害、てんかん、片頭痛、スコトピック過敏症の引き金になることがあります。
 
-アニメーションを一時停止したり、無効にしたりするメカニズムを提供したり、[動作縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#ユーザーエージェントクライアントヒント) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}})）を使って、アニメーションなしの操作を希望するユーザーのために補完的な操作を提供することを検討してください。
+アニメーションを一時停止したり、無効にしたりするメカニズムを提供したり、[動作縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント) {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}})）を使って、アニメーションなしの操作を希望するユーザーのために補完的な操作を提供することを検討してください。
 
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN WCAG を理解する　ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN WCAG を理解する　ガイドライン 2.2 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 仕様書

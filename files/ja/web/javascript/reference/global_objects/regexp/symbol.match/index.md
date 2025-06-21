@@ -9,7 +9,22 @@ l10n:
 
 **`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-@@match.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+
+```js interactive-example
+class RegExp1 extends RegExp {
+  [Symbol.match](str) {
+    const result = RegExp.prototype[Symbol.match].call(this, str);
+    if (result) {
+      return "VALID";
+    }
+    return "INVALID";
+  }
+}
+
+console.log("2012-07-02".match(new RegExp1("([0-9]+)-([0-9]+)-([0-9]+)")));
+// Expected output: "VALID"
+```
 
 ## 構文
 

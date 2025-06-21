@@ -11,7 +11,20 @@ l10n:
 
 `charCodeAt()` は常に [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして文字列をインデックスするので、孤立サロゲートを返すかもしれません。コードポイント値全体を取得したい場合は、 {{jsxref("Global_Objects/String/codePointAt", "codePointAt()")}} を使用してください。
 
-{{EmbedInteractiveExample("pages/js/string-charcodeat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charCodeAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(
+  `Character code ${sentence.charCodeAt(index)} is equal to ${sentence.charAt(
+    index,
+  )}`,
+);
+// Expected output: "Character code 113 is equal to q"
+```
 
 ## 構文
 

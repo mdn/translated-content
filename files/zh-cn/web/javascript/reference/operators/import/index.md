@@ -68,7 +68,7 @@ import("./data.json", { with: { type: "json" } });
 
 *模块命名空间对象*是一个描述模块所有导出的对象。它是一个静态对象，在模块被求值时创建。有两种方式可以访问模块的模块命名空间对象：通过[命名空间导入](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#命名空间导入)（`import * as name from moduleName`）或通过动态导入的兑现值。
 
-模块命名空间对象是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的、具有 [`null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象。也就是说，对象的所有字符串键对应于模块的导出，并且永远不会有额外的键。所有键都是以字典序[可枚举的](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)（即 [`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#描述) 的默认行为），默认导出以名为 `default` 的键可用。此外，模块命名空间对象具有一个值为 `"Module"` 的 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，在 {{jsxref("Object.prototype.toString()")}} 中被使用。
+模块命名空间对象是一个[密封](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/isSealed)的、具有 [`null` 原型](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#null_原型对象)的对象。也就是说，对象的所有字符串键对应于模块的导出，并且永远不会有额外的键。所有键都是以字典序[可枚举的](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)（即 [`Array.prototype.sort()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#描述) 的默认行为），默认导出以名为 `default` 的键可用。此外，模块命名空间对象具有一个值为 `"Module"` 的 [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性，在 {{jsxref("Object.prototype.toString()")}} 中被使用。
 
 在使用 {{jsxref("Object.getOwnPropertyDescriptors()")}} 获取它们的描述符时会发现，字符串属性是不可配置的和可写入的。然而它们实际上是只读的，因为你不能给属性重新赋一个新的值。这些值可以由导出它们的模块重新赋值，但不能由导入它们的模块重新赋值——这种行为反映了静态导入所创建的“[实时绑定](/zh-CN/docs/Web/JavaScript/Reference/Statements/import#导入的值只能由导出者修改)”。属性的可写入性反映了值是可能发生变化的，因为不可配置和不可写入的属性必须是常量。例如，你可以重新给一个导出的变量赋值，并且可以在模块命名空间对象中观察到新的值。
 

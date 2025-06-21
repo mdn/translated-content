@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Sessions
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django")}}
 
-이 튜토리얼에서는 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website을 확장시킬 것입니다. 방문 수를 셀 수 있는 session-based 기능을 더한 홈페이지입니다. 이것은 상대적으로 간단한 예제인데, 이는 당신의 홈페이지에서 익명의 유저들에게 지속적으로 서비스를 제공하는 session framework의 사용법입니다.
+이 튜토리얼에서는 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website을 확장시킬 것입니다. 방문 수를 셀 수 있는 session-based 기능을 더한 홈페이지입니다. 이것은 상대적으로 간단한 예제인데, 이는 당신의 홈페이지에서 익명의 유저들에게 지속적으로 서비스를 제공하는 session framework의 사용법입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -28,7 +28,7 @@ original_slug: Learn/Server-side/Django/Sessions
 
 ## 개요
 
-이전 튜토리얼에서 우리가 만든 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website는 카탈로그에서 유저가 책과 저자를 검색할 수 있도록 합니다. 컨텐츠가 Database로부터 다이나믹하게 생성되기 때문에, 모든 유저는 사용시에 필수적으로 같은 페이지와 정보 타입에 필수적으로 접근할 것입니다.
+이전 튜토리얼에서 우리가 만든 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website는 카탈로그에서 유저가 책과 저자를 검색할 수 있도록 합니다. 컨텐츠가 Database로부터 다이나믹하게 생성되기 때문에, 모든 유저는 사용시에 필수적으로 같은 페이지와 정보 타입에 필수적으로 접근할 것입니다.
 
 실제 도서관에서는 각각의 유저들에게 그들의 이전 사이트 사용과 선호 등에 기반한 커스텀된 경험을 제공하고 싶을지도 모릅니다 . 예를 들어, 유저가 이미 알고 있는 경고 메세지들을 숨길 수도 있습니다. 그 유저들이 다음에 사이트를 방문하거나 그들의 선호사항(e.g. 그들이 각 페이지에서 보여지길 원하는 검색의 결과 수)에 대해서 저장하는 것을 말합니다.
 

@@ -7,7 +7,42 @@ slug: Web/CSS/background-clip
 
 La propriété **`background-clip`** définit la façon dont l'arrière-plan d'un élément (que ce soit l'image ou la couleur) s'étend sous la boîte de bordure, la boîte de remplissage (_padding_) ou la boîte de contenu.
 
-{{EmbedInteractiveExample("pages/css/background-clip.html")}}
+{{InteractiveExample("CSS Demo: background-clip")}}
+
+```css interactive-example-choice
+background-clip: border-box;
+```
+
+```css interactive-example-choice
+background-clip: padding-box;
+```
+
+```css interactive-example-choice
+background-clip: content-box;
+```
+
+```css interactive-example-choice
+background-clip: text;
+color: transparent;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 Si aucune image ({{cssxref("background-image")}}) ni couleur ({{cssxref("background-color")}}) d'arrière-plan n'est définie, cette propriété aura uniquement un effet visuel lorsque la bordure possède des régions transparentes (via {{cssxref("border-style")}} ou {{cssxref("border-image")}}). Dans les autres cas, la bordure recouvrira la zone où se situera la différence .
 

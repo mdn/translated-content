@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("Web Animations")}}
 
-`commitStyles()` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、アニメーションの現在のスタイルの[計算値](/ja/docs/Web/CSS/computed_value)をターゲット要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) に書き込みます。 `commitStyles()` はアニメーションが[自動削除](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#満了したアニメーションの自動削除)されていてもうまく動作します。
+`commitStyles()` は[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) の {{domxref("Animation")}} インターフェイスのメソッドで、アニメーションの現在のスタイルの[計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値)をターゲット要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) に書き込みます。 `commitStyles()` はアニメーションが[自動削除](/ja/docs/Web/API/Web_Animations_API/Using_the_Web_Animations_API#満了したアニメーションの自動削除)されていてもうまく動作します。
 
-`commitStyles()` は `fill` と組み合わせて使用することができ、アニメーションが終わった後も最終的な状態を維持させることができます。同じ効果は `fill` だけでも得られますが、[無期限に満たすアニメーションを使用することは推奨されません](https://drafts.csswg.org/web-animations-1/#fill-behavior)。アニメーションは[すべての静的スタイルよりも優先されます](/ja/docs/Web/CSS/Cascade#cascading_order)ので、無期限の塗りつぶしアニメーションは対象とする要素が通常のスタイル設定をされることを妨げる可能性があります。
+`commitStyles()` は `fill` と組み合わせて使用することができ、アニメーションが終わった後も最終的な状態を維持させることができます。同じ効果は `fill` だけでも得られますが、[無期限に満たすアニメーションを使用することは推奨されません](https://drafts.csswg.org/web-animations-1/#fill-behavior)。アニメーションは[すべての静的スタイルよりも優先されます](/ja/docs/Web/CSS/CSS_cascade/Cascade#cascading_order)ので、無期限の塗りつぶしアニメーションは対象とする要素が通常のスタイル設定をされることを妨げる可能性があります。
 
-`commitStyles()` を使用することができます スタイル設定は要素の [`style`](/ja/docs/Web/HTML/Global_attributes#style) 属性に書き込まれます。
+`commitStyles()` を使用することができます スタイル設定は要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性に書き込まれます。
 
 ## 構文
 

@@ -8,7 +8,7 @@ original_slug: Glossary/Clickjacking
 
 クリックジャッキングとは、ウェブサイトの利用者をだまして、悪意のあるリンクを無意識にクリックさせるインターフェイスベースの攻撃です。クリックジャッキングでは、攻撃者は、ウェブサイト内のボタンや正規のページに悪意のあるリンクを埋め込みます。攻撃が仕込まれた{{glossary("Site", "サイト")}}では、ユーザーが正規のリンクをクリックするたびに、攻撃者はそのユーザーの機密情報を取得し、最終的にインターネット上でのユーザーのプライバシーを侵害することになります。
 
-クリックジャッキングは、[Content Security Policy (frame-ancestors)](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) の実装と、[Set-Cookie 属性](/ja/docs/Web/HTTP/Headers/Set-Cookie#属性)の実装により防ぐことができます。
+クリックジャッキングは、[Content Security Policy (frame-ancestors)](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors) の実装と、[Set-Cookie 属性](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#属性)の実装により防ぐことができます。
 
 ## さらに学ぶ
 

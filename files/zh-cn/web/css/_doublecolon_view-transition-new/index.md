@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-new"
+title: ::view-transition-new
 slug: Web/CSS/::view-transition-new
 ---
 
@@ -7,7 +7,7 @@ slug: Web/CSS/::view-transition-new
 
 **`::view-transition-new`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的新视图状态——即过渡后新视图的实时表示。
 
-在视图过渡期间，`::view-transition-new` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-image-pair")}} 的子节点，并且它不会有任何子节点。
+在视图过渡期间，`::view-transition-new` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition-image-pair")}} 的子节点，并且它不会有任何子节点。
 
 它是一个可替换元素，因此可以使用 {{cssxref("object-fit")}} 和 {{cssxref("object-position")}} 等属性进行操作。它的自然尺寸等于内容的大小。
 
@@ -104,5 +104,5 @@ figcaption {
 
 ## 参见
 
-- [View Transitions API](/zh-CN/docs/Web/API/View_Transitions_API)
+- [View Transitions API](/zh-CN/docs/Web/API/View_Transition_API)
 - [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

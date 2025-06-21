@@ -2,7 +2,7 @@
 title: Notification
 slug: Web/API/Notification
 l10n:
-  sourceCommit: aa8fa82a902746b0bd97839180fc2b5397088140
+  sourceCommit: 79f5e2c8ed9833f409e9054e69e02798b83422d1
 ---
 
 {{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}

@@ -9,7 +9,46 @@ slug: Web/CSS/border-image-outset
 
 `border-image-outset`으로 인해 요소 바깥에 그려지는 테두리로는 스크롤이 생기지 않으며 마우스 이벤트를 잡아낼 수도 없습니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-outset.html")}}
+{{InteractiveExample("CSS Demo: border-image-outset")}}
+
+```css interactive-example-choice
+border-image-outset: 0;
+```
+
+```css interactive-example-choice
+border-image-outset: 15px;
+```
+
+```css interactive-example-choice
+border-image-outset: 30px;
+```
+
+```css interactive-example-choice
+border-image-outset: 40px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## 구문
 

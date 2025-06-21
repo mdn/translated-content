@@ -19,7 +19,60 @@ box-shadow 包括内阴影和外阴影、单个或多个阴影，以及实心或
 
 此边框、背景和阴影示例由线性渐变和径向渐变组成的居中背景图像组成。一系列框阴影使边框看起来像是“弹出”的。左侧元素设置了边框图像。右侧元素具有圆角虚线边框。
 
-{{EmbedGHLiveSample("css-examples/modules/backgrounds.html", '100%', 430)}}
+```html hidden live-sample___backgrounds
+<article>
+  <div></div>
+  <div></div>
+</article>
+```
+
+```css hidden live-sample___backgrounds
+article {
+  display: flex;
+  gap: 10px;
+}
+div {
+  color: #58ade3;
+  height: 320px;
+  width: 240px;
+  padding: 20px;
+  margin: 10px;
+  border: dotted 15px; /* defaults to `currentcolor` */
+  border-radius: 100px 0;
+  background-image:
+    radial-gradient(
+      circle,
+      transparent 60%,
+      currentcolor 60% 70%,
+      transparent 70%
+    ),
+    linear-gradient(45deg, currentcolor, white),
+    linear-gradient(transparent, transparent);
+  /* the third transparent background image was added to provide space for the background color to show through */
+  background-color: currentcolor;
+  background-position: center;
+  background-size:
+    60px 60px,
+    120px 120px;
+  background-clip: content-box, content-box, padding-box;
+  box-shadow:
+    inset 5px 5px 5px rgb(0 0 0 / 0.4),
+    inset -5px -5px 5px rgb(0 0 0 / 0.4),
+    5px 5px 5px rgb(0 0 0 / 0.4),
+    -5px -5px 5px rgb(0 0 0 / 0.4);
+}
+div:first-of-type {
+  border-radius: 0;
+  border-image-source: repeating-conic-gradient(
+    from 3deg at 25% 25%,
+    currentColor 0 3deg,
+    transparent 3deg 6deg
+  );
+  border-image-slice: 30;
+}
+```
+
+{{EmbedLiveSample("backgrounds", "", "450px")}}
 
 背景图像使用 {{cssxref("background-image")}} 定义。图像使用 {{cssxref("background-position")}} 居中。为多个背景图像使用 {{cssxref("background-clip")}} 属性的不同值，使背景图像保持在内容框内。背景颜色被裁剪到填充框，防止背景通过 {{cssxref("border-image")}} 和 {{cssxref("border-style", "dotted")}} {{cssxref("border")}} 的透明部分显示出来。右侧元素中的圆角使用 {{cssxref("border-radius")}} 属性创建。使用单个 {{cssxref("box-shadow")}} 声明设置所有阴影，包括内阴影和外阴影。
 

@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/new.target
 
 **`new.target`** は擬似プロパティで、関数やコンストラクターが [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたかどうかを検出することができます。 [new](/ja/docs/Web/JavaScript/Reference/Operators/new) 演算子を使用して呼び出されたコンストラクターや関数の中では、 `new.target` はコンストラクターや関数への参照を返します。通常の関数呼び出しの場合、 `new.target` は {{jsxref("undefined")}} になります。
 
-{{EmbedInteractiveExample("pages/js/expressions-newtarget.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - new.target")}}
+
+```js interactive-example
+function Foo() {
+  if (!new.target) {
+    throw new TypeError("calling Foo constructor without new is invalid");
+  }
+}
+
+try {
+  Foo();
+} catch (e) {
+  console.log(e);
+  // Expected output: TypeError: calling Foo constructor without new is invalid
+}
+```
 
 ## 構文
 

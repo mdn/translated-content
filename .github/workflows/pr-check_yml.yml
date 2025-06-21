@@ -10,6 +10,8 @@ on:
       - "**/*.yml"
       - .github/workflows/pr-check_yml.yml
 
+permissions: {}
+
 jobs:
   docs:
     # do not run on PRs in forks

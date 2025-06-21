@@ -56,9 +56,9 @@ React は、そのパターンの多くに最新の JavaScript の機能を利�
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-この定数 heading は、 **JSX 式**と呼ばれます。 React はこのように [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) タグをレンダリングすることができます。
+この定数 heading は、 **JSX 式**と呼ばれます。 React はこのように [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) タグをレンダリングすることができます。
 
-意味論の観点から、 [`<header>`](/ja/docs/Web/HTML/Element/header) タグで見出しを囲みたいとします。JSX では、 HTML のように、要素を相互にネストすることができます。
+意味論の観点から、 [`<header>`](/ja/docs/Web/HTML/Reference/Elements/header) タグで見出しを囲みたいとします。JSX では、 HTML のように、要素を相互にネストすることができます。
 
 ```jsx
 const header = (
@@ -77,7 +77,7 @@ const header = (
 > </header>;
 > ```
 >
-> ただし、[`<header>`](/ja/docs/Web/HTML/Element/header) 式を開始するタグが、対応する終了タグと同じ位置にインデントされていないため、これは少し読みにくいかもしれません。
+> ただし、[`<header>`](/ja/docs/Web/HTML/Reference/Elements/header) 式を開始するタグが、対応する終了タグと同じ位置にインデントされていないため、これは少し読みにくいかもしれません。
 
 もちろん、ブラウザーはそのままでは JSX を読むことができません。（[Babel](https://babeljs.io/) や [Parcel](https://parceljs.org/) などのツールを使用して）コンパイルすると、ヘッダー式は次のようになります。
 
@@ -99,7 +99,7 @@ JSX の詳細については、React チームの [JSX でマークアップを�
 
 新しい React アプリケーションを作成する方法はたくさんあります。今回は Vite を使用してコマンドラインから新しいアプリケーションを作成します。
 
-[既存のプロジェクトに React を追加する](https://ja.react.dev/learn/add-react-to-an-existing-project)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Element/script) を HTML ファイルにコピーすることで可能ですが、 Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
+[既存のプロジェクトに React を追加する](https://ja.react.dev/learn/add-react-to-an-existing-project)には、いくつかの [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) を HTML ファイルにコピーすることで可能ですが、 Vite を使用することで、より多くの時間をアプリの構築に費やすことができ、セットアップに費やす時間を減らすことができます。
 
 ### 必要条件
 
@@ -179,7 +179,7 @@ moz-todo-react
 └── vite.config.js
 ```
 
-**`index.html`** は最も重要な最上位のファイルです。 Vite はコードをこのファイルに注入し、ブラウザーが実行できるようにします。チュートリアル中にこのファイルを編集する必要はありませんが、このファイルの [`<title>`](/ja/docs/Web/HTML/Element/title) 要素内のテキストをアプリケーションのタイトルを反映するように変更してください。正確なページタイトルはアクセシビリティにとって重要です。
+**`index.html`** は最も重要な最上位のファイルです。 Vite はコードをこのファイルに注入し、ブラウザーが実行できるようにします。チュートリアル中にこのファイルを編集する必要はありませんが、このファイルの [`<title>`](/ja/docs/Web/HTML/Reference/Elements/title) 要素内のテキストをアプリケーションのタイトルを反映するように変更してください。正確なページタイトルはアクセシビリティにとって重要です。
 
 **`public`** ディレクトリーには、 Vite のビルドツールによって処理されることなく、ブラウザーに直接提供される静的ファイルが格納されます。これで、 Vite のロゴだけが格納されます。
 
@@ -351,7 +351,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
 アプリを作り始めるには、Vite が指定された定型コードを削除する必要があります。
 
-まず最初の練習として、 `App.jsx` の [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素を "Hello, World!" となるように変更し、ファイルを保存しましょう。この変更は、ブラウザーで `http://localhost:3000` で実行している開発サーバーですぐにレンダリングされることがわかるでしょう。このことを念頭に置いてアプリを動作させてください。
+まず最初の練習として、 `App.jsx` の [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素を "Hello, World!" となるように変更し、ファイルを保存しましょう。この変更は、ブラウザーで `http://localhost:3000` で実行している開発サーバーですぐにレンダリングされることがわかるでしょう。このことを念頭に置いてアプリを動作させてください。
 
 残りのコードは使用しません。`App.jsx` の内容を以下のもので置き換えます。
 

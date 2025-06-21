@@ -9,7 +9,39 @@ l10n:
 
 **`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
-{{EmbedInteractiveExample("pages/css/image-rendering.html")}}
+{{InteractiveExample("CSS Demo: image-rendering")}}
+
+```css interactive-example-choice
+image-rendering: auto;
+```
+
+```css interactive-example-choice
+image-rendering: smooth;
+```
+
+```css interactive-example-choice
+image-rendering: crisp-edges;
+```
+
+```css interactive-example-choice
+image-rendering: pixelated;
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/lizard.png" />
+</section>
+```
+
+```css interactive-example
+#example-element {
+  height: 480px;
+  object-fit: cover;
+}
+```
 
 {{Glossary("User agent", "ユーザーエージェント")}}は、ページの作者が自然な寸法とは異なる寸法を指定したとき、画像を拡大縮小します。拡大縮小は、ユーザー操作 (ズーム) によって発生することもあります。例えば、画像の自然な寸法が `100×100px` であって、実際の寸法が `200×200px` (または `50×50px`) であるとき、画像は `image-rendering` で指定されたアルゴリズムを使用して拡大 (または縮小) されます。このプロパティは拡大/縮小されない画像には効果がありません。
 

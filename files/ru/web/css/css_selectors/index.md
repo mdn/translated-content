@@ -121,4 +121,4 @@ slug: Web/CSS/CSS_selectors
 
 ## Смотрите также
 
-[CSS специфичность](/ru/docs/Web/CSS/Specificity)
+[CSS специфичность](/ru/docs/Web/CSS/CSS_cascade/Specificity)

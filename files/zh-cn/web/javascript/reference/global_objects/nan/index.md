@@ -9,7 +9,22 @@ l10n:
 
 全局属性 **`NaN`** 是一个表示非数字的值。
 
-{{EmbedInteractiveExample("pages/js/globalprops-nan.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - NaN")}}
+
+```js interactive-example
+function sanitize(x) {
+  if (isNaN(x)) {
+    return NaN;
+  }
+  return x;
+}
+
+console.log(sanitize("1"));
+// Expected output: "1"
+
+console.log(sanitize("NotANumber"));
+// Expected output: NaN
+```
 
 ## 值
 
@@ -85,7 +100,7 @@ arr.includes(NaN); // true
 arr.findIndex((n) => Number.isNaN(n)); // 2
 ```
 
-有关 `NaN` 及其比较的更多信息，请参阅[相等性判断](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness)。
+有关 `NaN` 及其比较的更多信息，请参阅[相等性判断](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)。
 
 ### 明显不同的 NaN 值
 

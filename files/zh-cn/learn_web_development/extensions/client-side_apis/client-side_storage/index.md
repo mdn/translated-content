@@ -1,12 +1,9 @@
 ---
 title: 客户端存储
 slug: Learn_web_development/Extensions/Client-side_APIs/Client-side_storage
-original_slug: Learn/JavaScript/Client-side_web_APIs/Client-side_storage
 l10n:
   sourceCommit: bc0d0d1ef796435e969f6d65c7e5d3c08f4023aa
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}
 
@@ -50,9 +47,9 @@ l10n:
 
 ### 老做派：cookie
 
-客户端存储的概念已经存在很长一段时间了。从 Web 的早期时代开始，网站就使用 [cookie](/zh-CN/docs/Web/HTTP/Cookies) 来存储信息，以在网站上提供个性化的用户体验。它们是 Web 中最早、最常用的客户端存储形式。
+客户端存储的概念已经存在很长一段时间了。从 Web 的早期时代开始，网站就使用 [cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 来存储信息，以在网站上提供个性化的用户体验。它们是 Web 中最早、最常用的客户端存储形式。
 
-如今，有更简单的机制可用于存储客户端数据，因此我们在本文中不会教授如何使用 cookie。然而，这并不意味着 cookie 在现代 Web 上完全没有用处——它们仍然被广泛用于存储与用户个性化和状态相关的数据，例如会话 ID 和访问令牌。有关 cookie 的更多信息，请参见我们的[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Cookies) 文章。
+如今，有更简单的机制可用于存储客户端数据，因此我们在本文中不会教授如何使用 cookie。然而，这并不意味着 cookie 在现代 Web 上完全没有用处——它们仍然被广泛用于存储与用户个性化和状态相关的数据，例如会话 ID 和访问令牌。有关 cookie 的更多信息，请参见我们的[使用 HTTP cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies) 文章。
 
 ### 新流派：Web 存储和 IndexedDB
 
@@ -475,7 +472,7 @@ function displayData() {
 
 再次，让我们打破这个：
 
-- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素的内容，然后填充更新的内容。如果你不这样做，那么每次更新时都会添加大量重复内容。
+- 首先，我们清空 [`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul) 元素的内容，然后填充更新的内容。如果你不这样做，那么每次更新时都会添加大量重复内容。
 - 接下来，我们 `notes` 使用 [`IDBDatabase.transaction()`](/zh-CN/docs/Web/API/IDBDatabase/transaction) 和 [`IDBTransaction.objectStore()`](/zh-CN/docs/Web/API/IDBTransaction/objectStore) 我们一样得到对象存储的引用 `addData()`，除了这里我们将它们链接在一行中。
 - 下一步是使用 [`IDBObjectStore.openCursor()`](/zh-CN/docs/Web/API/IDBObjectStore/openCursor) 方法打开对游标的请求——这是一个可用于迭代对象存储中的记录的构造。我们将一个 `onsuccess` 处理器链接到该行的末尾以使代码更简洁——当成功返回游标时，运行处理器。
 - 我们 [`IDBCursor`](/zh-CN/docs/Web/API/IDBCursor) 使用 let 获取对游标本身（对象）的引用 `cursor = e.target.result`。
@@ -528,7 +525,7 @@ function deleteItem(e) {
 
 如上所述，IndexedDB 可用于存储不仅仅是简单的文本字符串。你可以存储任何你想要的东西，包括复杂的对象，如视频或图像 blob。并且它比任何其他类型的数据更难实现。
 
-为了演示如何操作，我们编写了另一个名为 [IndexedDB 视频存储](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)的（也可[在线运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们——这使得后续加载更快，占用空间更少。
+为了演示如何操作，我们编写了另一个名为 [IndexedDB 视频存储](https://github.com/mdn/learning-area/tree/main/javascript/apis/client-side-storage/indexeddb/video-store)的（也可[在线运行](https://mdn.github.io/learning-area/javascript/apis/client-side-storage/indexeddb/video-store/)）。首次运行示例时，它会从网络下载所有视频，将它们存储在 IndexedDB 数据库中，然后在 UI 内部 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 元素中显示视频。第二次运行它时，它会在数据库中找到视频并从那里获取它们而不是显示它们——这使得后续加载更快，占用空间更少。
 
 让我们来看看这个例子中最有趣的部分。我们不会全部看——它的很多内容与上一个示例类似，代码注释得很好。
 
@@ -756,7 +753,7 @@ self.addEventListener("fetch", (e) => {
 
 - [Web 存储 API](/zh-CN/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/zh-CN/docs/Web/API/IndexedDB_API)
-- [Cookie](/zh-CN/docs/Web/HTTP/Cookies)
+- [Cookie](/zh-CN/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs", "Learn_web_development/Extensions/Client-side_APIs")}}

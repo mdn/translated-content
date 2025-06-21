@@ -21,9 +21,9 @@ HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합�
 ## 중요한 자료
 
 - HTML 소개
-  - : 웹 개발이 처음이시라면 [HTML 기본](/ko/docs/Learn/Getting_started_with_the_web/HTML_basics) 문서에서 HTML이란 무엇인지, 그리고 HTML의 사용법을 배워보세요.
+  - : 웹 개발이 처음이시라면 [HTML 기본](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content) 문서에서 HTML이란 무엇인지, 그리고 HTML의 사용법을 배워보세요.
 - HTML 자습서
-  - : [HTML 학습지](/ko/docs/Learn/HTML)를 방문하시면 HTML 사용법과 자습서, 완전한 예제를 찾아보실 수 있습니다.
+  - : [HTML 학습지](/ko/docs/Learn_web_development/Core/Structuring_content)를 방문하시면 HTML 사용법과 자습서, 완전한 예제를 찾아보실 수 있습니다.
 - HTML 참고서
   - : 방대한 [HTML 참고서](/ko/docs/Web/HTML/Reference)에서는 HTML을 구성하는 모든 요소와 특성의 자세한 설명을 볼 수 있습니다.
 
@@ -37,17 +37,17 @@ HTML 요소는 "태그"를 사용해서 문서의 다른 텍스트와 구분합�
 
 ## 초보자 자습서
 
-MDN [HTML 학습지](/ko/docs/Learn/HTML)는 HTML을 처음부터 알려주는 모듈로 구성되어 있습니다. 사전 지식도 필요하지 않습니다.
+MDN [HTML 학습지](/ko/docs/Learn_web_development/Core/Structuring_content)는 HTML을 처음부터 알려주는 모듈로 구성되어 있습니다. 사전 지식도 필요하지 않습니다.
 
-- [HTML 소개](/ko/docs/Learn/HTML/Introduction_to_HTML)
+- [HTML 소개](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : 이 모듈에서는 텍스트에 HTML을 추가하고, 하이퍼링크를 작성하고, HTML을 이용해 웹 페이지의 구조를 작성하는 등 중요한 개념과 구문에 익숙해지도록 기초를 다집니다.
-- [멀티미디어와 임베딩](/ko/docs/Learn/HTML/Multimedia_and_embedding)
+- [멀티미디어와 임베딩](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b)
   - : 이 모듈에서는 HTML을 사용해 웹 페이지에 이미지를 추가하는 여러가지 방법과 오디오, 비디오, 혹은 다른 웹 페이지를 통째로 삽입하는 등 멀티미디어를 삽입하는 방법을 살펴봅니다.
-- [HTML 표](/ko/docs/Learn/HTML/Tables)
+- [HTML 표](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content/HTML_table_basics)
   - : 표 형태의 데이터를 웹페이지에 이해하기도 쉽고 접근하기도 쉬운 방식으로 표현하는 것은 어려울 수 있습니다. 이 모듈은 기본적인 표 마크업 작성법과, 캡션과 요약 등 고급 기능 구현도 다룹니다.
-- [HTML 양식](/ko/docs/Learn/Forms)
+- [HTML 양식](/ko/docs/Learn_web_development/Extensions/Forms)
   - : 양식은 웹의 매우 중요한 부분으로, 회원가입과 로그인, 피드백 전송, 상품 구매 등 웹 사이트의 상호작용에 필요한 많은 기능을 제공합니다. 이 모듈은 양식의 클라이언트 사이트 개발 방법을 안내합니다.
-- [일반적인 HTML 문제 해결하기](/ko/docs/Learn/HTML/Howto)
+- [일반적인 HTML 문제 해결하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems)
   - : 이 모듈은 HTML을 사용해서 웹 페이지 제목, 이미지와 비디오 추가, 콘텐츠 강조, 기본적인 양식 생성처럼 일반적인 문제를 해결하는 법을 설명합니다.
 
 ## 고급 주제

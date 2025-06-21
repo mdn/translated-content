@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Performance API")}}{{SeeCompatTable}}
 
-**`identifier`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用のプロパティで、その要素の [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性の値を返します。
+**`identifier`** は {{domxref("PerformanceElementTiming")}} インターフェイスの読み取り専用のプロパティで、その要素の [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性の値を返します。
 
 ## 値
 
@@ -18,7 +18,7 @@ l10n:
 
 ### `identifier` の使用
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"要素"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) の値は `big-image` です。したがって `entry.identifier` を呼び出すと文字列 `big-image` を返します。
+この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"要素"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) の値は `big-image` です。したがって `entry.identifier` を呼び出すと文字列 `big-image` を返します。
 
 ```html
 <img

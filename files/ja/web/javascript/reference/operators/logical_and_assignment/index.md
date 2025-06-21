@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 
 論理積代入 (`x &&= y`) 演算子は、`x` が{{Glossary("truthy", "真値")}}である場合にのみ代入を行います。
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+
+```js interactive-example
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
+```
 
 ## 構文
 

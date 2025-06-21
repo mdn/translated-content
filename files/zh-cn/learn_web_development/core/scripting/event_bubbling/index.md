@@ -1,10 +1,9 @@
 ---
 title: 事件冒泡
 slug: Learn_web_development/Core/Scripting/Event_bubbling
-original_slug: Learn/JavaScript/Building_blocks/Event_bubbling
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting/Image_gallery", "Learn_web_development/Core/Scripting")}}
 
 ## 事件冒泡
 
@@ -107,9 +106,7 @@ HTML 代码看起来像这样：
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
         >替代链接</a
@@ -202,9 +199,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
         >替代链接</a
@@ -348,7 +343,7 @@ container.addEventListener("click", (event) => {
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)页面进行测试。
+你已经到了本文的结尾，但你能记住最重要的信息吗？在你继续前进之前，要验证你是否记住了这些信息，请前往[技能测试：事件](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Events)页面进行测试。
 
 ## 结论
 

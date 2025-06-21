@@ -47,7 +47,7 @@ l10n:
 [`alt` 속성은 아래에 설명되어 있습니다](#alternative_text).
 
 > [!NOTE]
-> 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#url과_path에_대한_기본_지침)을 읽어보세요.
+> 계속하기 전에 절대 URL, 상대 URL에 대해 복습하기 위해 [URL과 path에 대한 기본 지침](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links#url과_path에_대한_기본_지침)을 읽어보세요.
 
 예를 들어, 당신의 이미지 파일 이름이 `dinosaur.jpg`이고, 당신의 HTML 페이지와 같은 디렉토리 아래에 위치한다면 이런 식으로 이미지를 삽입할 수 있습니다.
 
@@ -115,13 +115,13 @@ l10n:
 
 - **꾸밈 요소.** 꾸미는 이미지를 위해서 [CSS 배경 이미지](#css_배경_이미지)를 사용하는 것이 좋습니다. 하지만 HTML을 사용해야 한다면, 빈 `alt=""` 를 추가하세요. 만약 이미지가 콘텐츠의 일부가 아니라면, 스크린 리더는 그것을 읽는 데 시간을 낭비하지 않을 것입니다.
 - **내용.** 이미지가 중요한 정보를 제공한다면, _간단한_ `alt` 텍스트나 더 좋은 방법으로, 모든 사람들이 볼 수 있는 메인 텍스트에 동일한 정보를 제공하세요. 중복된 `alt` 텍스트를 작성하지 마세요. 만약 모든 문단이 메인 콘텐츠에 두 번 쓰여진다면 시각 장애인 사용자에게 얼마나 귀찮은 일일까요? 이미지가 메인 텍스트에 의해 충분히 설명되고 있다면, `alt=""` 를 사용할 수 있습니다.
-- **링크.** 만약 이미지를 {{htmlelement("a")}} 태그 안에 넣는다면, 이미지를 링크로 만들기 위해서, 여전히 [접근 가능한 링크 텍스트](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#링크_명을_명확하게)를 제공해야 합니다. 이러한 경우에는, `<a>` 요소 안에 작성하거나, 이미지의 `alt` 속성 안에 작성할 수 있습니다. 어떤 것이 더 좋은지는 당신의 상황에 따라 다릅니다.
+- **링크.** 만약 이미지를 {{htmlelement("a")}} 태그 안에 넣는다면, 이미지를 링크로 만들기 위해서, 여전히 [접근 가능한 링크 텍스트](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links#링크_명을_명확하게)를 제공해야 합니다. 이러한 경우에는, `<a>` 요소 안에 작성하거나, 이미지의 `alt` 속성 안에 작성할 수 있습니다. 어떤 것이 더 좋은지는 당신의 상황에 따라 다릅니다.
 - **텍스트.** 텍스트를 이미지 안에 넣어서는 안됩니다. 예를 들어, 메인 헤딩이 드롭 쉐도우가 필요하다면, 텍스트를 이미지 안에 넣는 대신에 [CSS](/ko/docs/Web/CSS/text-shadow)를 사용하세요. 하지만, 만약 이것을 피할 수 없다면, `alt` 속성 안에 텍스트를 제공해야 합니다.
 
 본질적으로 핵심은 이미지를 볼 수 없는 상황에서도 사용 가능한 경험을 제공하는 것입니다. 이것은 모든 사용자들이 콘텐츠를 놓치지 않도록 합니다. 브라우저에서 이미지를 끄고 어떻게 보이는지 확인해 보세요. 이미지가 보이지 않는다면 대체 텍스트가 얼마나 유용한지 빨리 깨닫게 될 것입니다.
 
 > [!NOTE]
-> 더 많은 정보를 원한다면, [대체 텍스트](/ko/docs/Learn/Accessibility/HTML#대체_텍스트) 가이드를 참고하세요.
+> 더 많은 정보를 원한다면, [대체 텍스트](/ko/docs/Learn_web_development/Core/Accessibility/HTML#대체_텍스트) 가이드를 참고하세요.
 
 ### 너비와 높이
 
@@ -185,11 +185,11 @@ HTML에 이미지의 실제 사이즈를 명시했다면, `width`와 `height` �
 >
 > 만약 이미지 크기를 너무 크게 설정한다면, 이미지가 거칠거나, 흐릿하거나 너무 작아 보이고, 사용자의 요구에 맞지 않는 이미지를 다운로드 하는데 많은 대역폭을 사용하게 될 것입니다. 이미지는 또한 왜곡되어 보일 수 있습니다. 만약 올바른 [종횡비](https://en.wikipedia.org/wiki/Aspect_ratio_%28image%29)를 유지하지 않는다면. 웹페이지에 올리기 전에 이미지 편집기를 사용하여 이미지를 올바른 크기로 조정해야 합니다.
 >
-> 만약 이미지의 크기를 조정해야 한다면, [CSS](/ko/docs/Learn/CSS)를 사용하세요.
+> 만약 이미지의 크기를 조정해야 한다면, [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)를 사용하세요.
 
 ### 이미지 제목
 
-[링크](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#title_속성에_부가적인_정보를_더하기)와 마찬가지로, 이미지에 `title` 속성을 추가하여, 필요한 경우 추가적인 정보를 제공할 수 있습니다. 우리의 예제에서, 우리는 다음과 같이 할 수 있습니다.
+[링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links#title_속성에_부가적인_정보를_더하기)와 마찬가지로, 이미지에 `title` 속성을 추가하여, 필요한 경우 추가적인 정보를 제공할 수 있습니다. 우리의 예제에서, 우리는 다음과 같이 할 수 있습니다.
 
 ```html
 <img
@@ -617,7 +617,7 @@ p {
 
 요약하기: 이미지가 의미가 있다면, 콘텐츠 관점에서, HTML 이미지를 사용해야 합니다. 이미지가 순전히 장식이라면, CSS 배경 이미지를 사용해야 합니다.
 
-> **참고:** [CSS 배경 이미지](/ko/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/Learn/CSS) 주제에서 더 자세히 배울 수 있습니다.
+> **참고:** [CSS 배경 이미지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)에 대해서는 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) 주제에서 더 자세히 배울 수 있습니다.
 
 ## 스킬을 테스트 하세요!
 

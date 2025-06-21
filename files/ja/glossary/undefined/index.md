@@ -23,4 +23,4 @@ console.log("x's value is", x); //ログ："x's value is undefined"
 
 ### 技術リファレンス
 
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)

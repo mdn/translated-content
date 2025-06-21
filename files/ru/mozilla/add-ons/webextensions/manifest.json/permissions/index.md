@@ -114,7 +114,7 @@ browser.extension.getURL("");
 В большинстве случаев полномочие просто делает возможным доступ к определённому API, за исключением следующих ситуаций:
 
 - `tabs` предоставляет доступ к [привилегированным частям `tabs` API](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs): `Tab.url`, `Tab.title`, and `Tab.faviconUrl`. В Firefox, вам так же понадобятся `tabs` полномочия, если вы собираетесь использовать `url` ключ в параметре `queryInfo` для [`tabs.query()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) метода. Весь остальной `tabs` API доступен без запрашивания каких-либо полномочий.
-- `webRequestBlocking` позволяет вам использовать "blocking" аргумент, для возможности [изменять и отменять запросы](/ru/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest).
+- `webRequestBlocking` позволяет вам использовать "blocking" аргумент, для возможности [изменять и отменять запросы](/ru/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
 - `downloads.open` позволяет использовать {{WebExtAPIRef("downloads.open()")}} API.
 - `tabHide` позволяет использовать {{WebExtAPIRef("tabs.hide()")}} API.
 

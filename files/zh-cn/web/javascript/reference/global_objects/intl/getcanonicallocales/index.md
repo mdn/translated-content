@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/getCanonicalLocales
 
 **`Intl.getCanonicalLocales()`** 方法返回一个数组，数组包含规范的区域语言代码，重复的元素将会被去除，每一个元素都会被验证为格式有效的区域语言代码。
 
-{{EmbedInteractiveExample("pages/js/intl-getcanonicallocales.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.GetCanonicalLocales")}}
+
+```js interactive-example
+console.log(Intl.getCanonicalLocales("EN-US"));
+// Expected output: Array ["en-US"]
+
+console.log(Intl.getCanonicalLocales(["EN-US", "Fr"]));
+// Expected output: Array ["en-US", "fr"]
+
+try {
+  Intl.getCanonicalLocales("EN_US");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output (Firefox/Safari): RangeError: invalid language tag: "EN_US"
+  // Expected output (Chrome): RangeError: Incorrect locale information provided
+}
+```
 
 ## 语法
 

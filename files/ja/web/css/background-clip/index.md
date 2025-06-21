@@ -9,13 +9,48 @@ l10n:
 
 **`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/background-clip.html")}}
+{{InteractiveExample("CSS Demo: background-clip")}}
+
+```css interactive-example-choice
+background-clip: border-box;
+```
+
+```css interactive-example-choice
+background-clip: padding-box;
+```
+
+```css interactive-example-choice
+background-clip: content-box;
+```
+
+```css interactive-example-choice
+background-clip: text;
+color: transparent;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is the content of the element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/leopard.jpg");
+  color: #d73611;
+  text-shadow: 2px 2px black;
+  padding: 20px;
+  border: 10px dashed #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+```
 
 背景は常に境界線の背後に描画されるため、 `background-clip: border-box` は、境界線が部分的に透明であるか、透明または半透明な領域がある場合にのみ視覚的な効果があります。また、 `background-clip: text` プロパティは、テキストが透明または半透明な場合、視覚的な効果はほとんどありません。
 
-> **メモ:** [ルート要素](/ja/docs/Web/HTML/Element/html)は異なる背景の描画領域を持っているため、その要素に `background-clip` プロパティが指定されても効果はありません。「[特殊要素の背景](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)」を参照してください。
+> **メモ:** [ルート要素](/ja/docs/Web/HTML/Reference/Elements/html)は異なる背景の描画領域を持っているため、その要素に `background-clip` プロパティが指定されても効果はありません。「[特殊要素の背景](https://drafts.csswg.org/css-backgrounds-3/#special-backgrounds)」を参照してください。
 
-> **メモ:** [ルート要素](/ja/docs/Web/HTML/Element/html)が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が `none` であり、その {{cssxref("background-color")}} が `transparent` であると、ユーザーエージェントは代わりに、 `background` プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その `<body>` 要素の `background` プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 `<body>` 要素にキャンバスの背景を指定することを推奨します。
+> **メモ:** [ルート要素](/ja/docs/Web/HTML/Reference/Elements/html)が HTML 要素である文書の場合、ルート要素上の {{cssxref("background-image")}} の計算値が `none` であり、その {{cssxref("background-color")}} が `transparent` であると、ユーザーエージェントは代わりに、 `background` プロパティの計算値をその要素の HTML の {{HTMLElement("body")}} の子要素から伝搬させなければなりません。その `<body>` 要素の `background` プロパティの使用値はその初期値であり、伝搬された値は、それらがルート要素上で指定されたかのように扱われます。 HTML 文書を作成するときは、 HTML 要素ではなく、 `<body>` 要素にキャンバスの背景を指定することを推奨します。
 
 ## 構文
 

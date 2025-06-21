@@ -19,11 +19,11 @@ slug: Web/JavaScript/Guide/Introduction
 
 Документация по JavaScript на MDN включает:
 
-- [Изучение Web](/ru/docs/Learn) предоставляет информацию для начинающих и вводит в базовые концепции программирования и Internet.
+- [Изучение Web](/ru/docs/Learn_web_development) предоставляет информацию для начинающих и вводит в базовые концепции программирования и Internet.
 - [Руководство по JavaScript](/ru/docs/Web/JavaScript/Guide) (данное руководство) предоставляет обзор JavaScript и его объектов.
 - [Справочник по JavaScript](/ru/docs/Web/JavaScript/Reference) предоставляет подробную информацию по JavaScript.
 
-Если вы являетесь новичком в JavaScript, то начните с [Изучение Web](/ru/docs/Learn) и [Руководство по JavaScript](/ru/docs/Web/JavaScript/Guide). Как только вы освоите фундаментальные концепции, используйте [Справочник по JavaScript](/ru/docs/Web/JavaScript/Reference) для того, чтобы получить более подробную информацию о конкретных объектах или операторах.
+Если вы являетесь новичком в JavaScript, то начните с [Изучение Web](/ru/docs/Learn_web_development) и [Руководство по JavaScript](/ru/docs/Web/JavaScript/Guide). Как только вы освоите фундаментальные концепции, используйте [Справочник по JavaScript](/ru/docs/Web/JavaScript/Reference) для того, чтобы получить более подробную информацию о конкретных объектах или операторах.
 
 ## Что такое JavaScript?
 
@@ -52,13 +52,13 @@ Java — это язык программирования, основанный 
 | Типы данных переменных не объявляются (динамическая типизация).                                                                                                                      | Типы данных переменных должны быть объявлены (статическая типизация).                                                                                                             |
 | Не может автоматически записывать на жёсткий диск.                                                                                                                                   | Может автоматически записывать на жёсткий диск.                                                                                                                                   |
 
-Для получения дополнительной информации о различиях между JavaScript и Java, прочитайте [Details of the object model](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Для получения дополнительной информации о различиях между JavaScript и Java, прочитайте [Details of the object model](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ## JavaScript и спецификация ECMAScript
 
 JavaScript стандартизирован европейской ассоциацией [Ecma International](https://www.ecma-international.org/), деятельность которой посвящена стандартизации информационных и коммуникационных систем (изначально ECMA являлся акронимом European Computer Manufacturers Association). Эта стандартизированная версия JavaScript, называемая ECMAScript, работает одинаково во всех приложениях, поддерживающих стандарт. Компании могут использовать открытый стандарт языка, чтобы разработать собственную реализацию JavaScript. Стандарт ECMAScript задокументирован в спецификации ECMA-262.
 
-Стандарт ECMA-262 также утверждён [ISO](http://www.iso.org/iso/home.html) (International Organization for Standardization) как ISO-16262. Вы можете найти спецификацию на [сайте Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). Спецификация ECMAScript не описывает Document Object Model (DOM), которая стандартизирована [World Wide Web Consortium (W3C)](https://www.w3.org/). DOM определяет способ для доступа к объектам HTML документа из вашего скрипта. Чтобы получить более точное представление о различных технологиях, используемых при программировании на JavaScript, прочитайте [Обзор JavaScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview).
+Стандарт ECMA-262 также утверждён [ISO](http://www.iso.org/iso/home.html) (International Organization for Standardization) как ISO-16262. Вы можете найти спецификацию на [сайте Ecma International](https://www.ecma-international.org/publications/standards/Ecma-262.htm). Спецификация ECMAScript не описывает Document Object Model (DOM), которая стандартизирована [World Wide Web Consortium (W3C)](https://www.w3.org/). DOM определяет способ для доступа к объектам HTML документа из вашего скрипта. Чтобы получить более точное представление о различных технологиях, используемых при программировании на JavaScript, прочитайте [Обзор JavaScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ### Документация JavaScript против спецификации ECMAScript
 

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-{{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Cookies)を読み書きすることができます。
+{{domxref("Document")}} の `cookie` プロパティで、文書に関連付けられた[クッキー](/ja/docs/Web/HTTP/Guides/Cookies)を読み書きすることができます。
 これは実際のクッキーの値に対するゲッターとセッターとして動作します。
 
 ## 構文
@@ -53,9 +53,9 @@ document.cookie = newCookie;
 
   - `;partitioned`: クッキーが分離されたストレージを使用して格納されることを示します。詳細は [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
 
-  - `;path=パス`: このクッキーの `Path` 属性の値です（詳しくは、[クッキーの送信先の定義](/ja/docs/Web/HTTP/Cookies#cookie_の送信先の定義)を参照してください）。
+  - `;path=パス`: このクッキーの `Path` 属性の値です（詳しくは、[クッキーの送信先の定義](/ja/docs/Web/HTTP/Guides/Cookies#cookie_の送信先の定義)を参照してください）。
 
-  - `;samesite`: {{httpheader("Set-Cookie")}} ヘッダーの `SameSite` 属性は、クッキーがいつ送られるかを指定するためにサーバーによって設定されることがあります。利用可能な値は `lax`、`strict`、`none` です（[`SameSite` によるサードパーティクッキーの制御](/ja/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)も参照してください）。
+  - `;samesite`: {{httpheader("Set-Cookie")}} ヘッダーの `SameSite` 属性は、クッキーがいつ送られるかを指定するためにサーバーによって設定されることがあります。利用可能な値は `lax`、`strict`、`none` です（[`SameSite` によるサードパーティクッキーの制御](/ja/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)も参照してください）。
 
     - `lax` 値はすべての同一サイトリクエストと最上位のナビゲーション GET リクエストにクッキーを送信します。
       ユーザー追跡にはこれで十分ですが、多くの[クロスサイトリクエストフォージェリー](/ja/docs/Glossary/CSRF) (CSRF) 攻撃を防ぐことができます。
@@ -355,7 +355,7 @@ Accept: */*
 
 ## 関連情報
 
-- [HTTP Cookie](/ja/docs/Web/HTTP/Cookies)
+- [HTTP Cookie](/ja/docs/Web/HTTP/Guides/Cookies)
 - [DOM ストレージ](/ja/docs/Web/API/Web_Storage_API)
 - [`URL.pathname`](/ja/docs/Web/API/URL/pathname)
 - {{jsxref("Date.toUTCString()")}}

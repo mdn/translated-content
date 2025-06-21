@@ -1,5 +1,5 @@
 ---
-title: "::-moz-focus-inner"
+title: ::-moz-focus-inner
 slug: Web/CSS/::-moz-focus-inner
 l10n:
   sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0

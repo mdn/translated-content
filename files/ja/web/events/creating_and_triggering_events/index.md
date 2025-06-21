@@ -161,6 +161,6 @@ function simulateClick() {
 
 <section id="Quick_links">
   <ol>
-    <li><a href="/ja/docs/Learn/JavaScript/Building_blocks/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
+    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">イベント入門</a></li><li><a href="/ja/docs/Web/Events/Event_handlers">イベントハンドラー (概要)</a></li><li><a href="/ja/docs/Web/Events">イベントリファレンス</a></li>
   </ol>
 </section>

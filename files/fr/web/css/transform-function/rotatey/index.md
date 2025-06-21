@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/rotateY
 
 La fonction **`rotateY()`** définit une rotation, qui déplace l'élément autour de l'axe des ordonnées, sans le déformer. L'angle de rotation est défini par l'argument passé à la fonction. Si l'angle indiqué est positif, le mouvement sera appliqué dans le sens horaire et sinon il sera appliqué dans le sens inverse des aiguilles d'une montre.
 
-{{EmbedInteractiveExample("pages/css/function-rotateY.html")}}
+{{InteractiveExample("CSS Demo: rotateY()")}}
+
+```css interactive-example-choice
+transform: rotateY(0);
+```
+
+```css interactive-example-choice
+transform: rotateY(45deg);
+```
+
+```css interactive-example-choice
+transform: rotateY(-0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotateY(3.142rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 L'axe de la rotation passe par l'origine du repère, définie par la propriété [`transform-origin`](/fr/docs/Web/CSS/transform-origin).
 

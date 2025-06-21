@@ -14,7 +14,7 @@ Blink — это браузерный движок с открытым исхо�
 - [Blink (Rendering Engine)](https://www.chromium.org/blink/)
 - [Blink (движок)](<https://ru.wikipedia.org/wiki/Blink_(движок)>) в Википедии
 - [Часто задаваемые вопросы](https://www.chromium.org/blink/developer-faq/) на сайте Blink (англ.)
-- Связанные термины:
+- Связанные термины глоссария:
   - {{glossary("Google Chrome")}}
   - {{glossary("Gecko")}}
   - {{glossary("Trident")}}

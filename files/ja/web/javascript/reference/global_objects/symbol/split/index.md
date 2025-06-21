@@ -7,9 +7,28 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 **`Symbol.split`** ウェルノウンシンボルは、正規表現に一致する位置で文字列を分割するメソッドを指定します。この関数は {{jsxref("String.prototype.split()")}} メソッドによって呼び出されます。
 
-詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
+詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[Symbol.split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
 
-{{EmbedInteractiveExample("pages/js/symbol-split.html")}}{{js_property_attributes(0,0,0)}}
+{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+
+```js interactive-example
+class Split1 {
+  constructor(value) {
+    this.value = value;
+  }
+  [Symbol.split](string) {
+    const index = string.indexOf(this.value);
+    return `${this.value}${string.substring(0, index)}/${string.substring(
+      index + this.value.length,
+    )}`;
+  }
+}
+
+console.log("foobar".split(new Split1("foo")));
+// Expected output: "foo/bar"
+```
+
+{{js_property_attributes(0,0,0)}}
 
 ## 例
 
@@ -40,4 +59,4 @@ console.log("Another one bites the dust".split(new ReverseSplit()));
 - {{jsxref("Symbol.match")}}
 - {{jsxref("Symbol.replace")}}
 - {{jsxref("Symbol.search")}}
-- {{jsxref("RegExp.@@split", "RegExp.prototype[@@split]()")}}
+- {{jsxref("RegExp.@@split", "RegExp.prototype[Symbol.split]()")}}

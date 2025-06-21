@@ -9,7 +9,23 @@ l10n:
 
 **`JSON.stringify()`** メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 
-{{EmbedInteractiveExample("pages/js/json-stringify.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: JSON.stringify()", "taller")}}
+
+```js interactive-example
+console.log(JSON.stringify({ x: 5, y: 6 }));
+// Expected output: '{"x":5,"y":6}'
+
+console.log(
+  JSON.stringify([new Number(3), new String("false"), new Boolean(false)]),
+);
+// Expected output: '[3,"false",false]'
+
+console.log(JSON.stringify({ x: [10, undefined, function () {}, Symbol("")] }));
+// Expected output: '{"x":[10,null,null,null]}'
+
+console.log(JSON.stringify(new Date(2006, 0, 2, 15, 4, 5)));
+// Expected output: '"2006-01-02T15:04:05.000Z"'
+```
 
 ## 構文
 
@@ -68,7 +84,7 @@ JSON.stringify(value, replacer, space)
 
     {{jsxref("Date")}} のインスタンスは文字列を返す `toJSON()` を実装しています ([`date.toISOString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) と同じです)。そのため、これは文字列に変換されます。
 
-  - [列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)のみが文字列化されます。そのため、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} などは `"{}"` に変換されます。引数 [`replacer`](#replacer_引数) を用いることで、これらをより実用的なものに変換できます。
+  - [列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)のみが文字列化されます。そのため、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} などは `"{}"` に変換されます。引数 [`replacer`](#replacer_引数) を用いることで、これらをより実用的なものに変換できます。
 
   プロパティは、[`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) と同じアルゴリズムで走査されます。このアルゴリズムは、完全に定義された順番を用い、実装間で一貫性があります。例えば、`JSON.stringify()` を同じオブジェクトに対して用いると、常に同じ文字列を生成します。また、`JSON.parse(JSON.stringify(obj))` は (オブジェクトが完全に JSON に変換可能であると仮定すると) もとのオブジェクトと同じキーの順番を持つオブジェクトを生成します。
 

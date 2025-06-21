@@ -94,6 +94,6 @@ Como puedes notar, cuando navegamos por la web con un navegador, normalmente uti
 
 ## Próximos pasos
 
-- [Cómo funciona la Web.](/es/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
-- [Comprender la diferencia entre una página web, un sitio web, un servidor web y un motor de búsqueda.](/es/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines)
-- [La comprensión de los nombres de dominio.](/es/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
+- [Cómo funciona la Web.](/es/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
+- [Comprender la diferencia entre una página web, un sitio web, un servidor web y un motor de búsqueda.](/es/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web)
+- [La comprensión de los nombres de dominio.](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)

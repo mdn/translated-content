@@ -14,5 +14,5 @@ l10n:
 ## 같이 보기
 
 - 위키백과의 [객체 지향 프로그래밍](https://ko.wikipedia.org/wiki/%EA%B0%9D%EC%B2%B4_%EC%A7%80%ED%96%A5_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D)
-- [객체 지향 JavaScript의 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript의 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)

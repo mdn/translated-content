@@ -40,15 +40,15 @@ Sec-WebSocket-Version: 13
 
 客户可以在这里请求扩展和/或子协议；详情请见[杂项](#miscellaneous)。当然，你也可以在这里加上你所需要的一般请求头如`User-Agent`， `Referer`， `Cookie`或者认证头。WebSocket 没有作要求，忽略它们也是安全的。在大多数情况下，反向代理已经做了这些处理。
 
-如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/Web/HTTP/Status#400)”并立即关闭套接字。像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
+如果任何请求头信息不被理解或者具有不正确的值，则服务器应该发送“[400 Bad Request](/zh-CN/docs/Web/HTTP/Reference/Status#400)”并立即关闭套接字。像往常一样，它也可能会给出 HTTP 响应正文中握手失败的原因，但可能永远不会显示消息（浏览器不显示它）。如果服务器不理解该版本的 WebSocket，则应该发送一个`Sec-WebSocket-Version`头，其中包含它理解的版本。（本指南解释了最新的 v13）。下面我们来看看奇妙的请求头`Sec-WebSocket-Key`。
 
 > [!NOTE]
-> 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/Web/HTTP/CORS#origin)请求头。你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/Web/HTTP/Status#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
+> 所有浏览器将会发送一个 [`Origin`](/zh-CN/docs/Web/HTTP/Guides/CORS#origin)请求头。你可以将这个请求头用于安全方面（检查是否是同一个域，白名单/ 黑名单等），如果你不喜欢这个请求发起源，你可以发送一个[403 Forbidden](/zh-CN/docs/Web/HTTP/Reference/Status#403)。需要注意的是非浏览器只能发送一个模拟的 `Origin`。大多数应用会拒绝不含这个请求头的请求.。
 
 > [!NOTE]
 > 请求 URI（这里的是`/chat`）在规范里没有定义。很多开发者聪明地把这点用于控制多功能 WebSocket 应用。例如`example.com/chat`会请求一个多方会话应用，而在相同服务器上`example.com/game`则会请求一个多玩家游戏应用。
 
-> **备注：** [常规 HTTP 状态码](/zh-CN/docs/Web/HTTP/Status)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
+> **备注：** [常规 HTTP 状态码](/zh-CN/docs/Web/HTTP/Reference/Status)只能在握手之前使用。握手成功后，你必须使用一组不同的代码（在规范的第 7.4 节中定义）。
 
 ### 服务器握手响应
 

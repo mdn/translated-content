@@ -109,7 +109,7 @@ Les combinateurs sont des sélecteurs qui établissent une relation entre deux s
 - [Règles @ (_at-rules_)](/fr/docs/Web/CSS/At-rule)
 - [Cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
 - [Commentaires](/fr/docs/Web/CSS/Comments)
-- [Descripteurs](</fr/docs/Glossary/Descriptor_(CSS)>)
+- [Descripteurs](/fr/docs/Glossary/CSS_Descriptor)
 - [Héritage](/fr/docs/Web/CSS/Inheritance)
 - [Propriétés raccourcies](/fr/docs/Web/CSS/Shorthand_properties)
 - [Spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#spécificité)

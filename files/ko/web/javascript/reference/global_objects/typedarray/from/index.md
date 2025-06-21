@@ -9,7 +9,14 @@ l10n:
 
 **`TypedArray.from()`** 정적 메서드는 순회 가능한 객체 혹은 유사 배열로부터 새로운 [형식화 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)을 생성합니다. 이 메서드는 {{jsxref("Array.from()")}}와 거의 같습니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-from.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.from()", "shorter")}}
+
+```js interactive-example
+const uint16 = Int16Array.from("12345");
+
+console.log(uint16);
+// Expected output: Int16Array [1, 2, 3, 4, 5]
+```
 
 ## 구문
 

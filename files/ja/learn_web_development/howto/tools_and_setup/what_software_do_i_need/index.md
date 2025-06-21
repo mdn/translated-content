@@ -1,7 +1,6 @@
 ---
 title: ウェブサイトを作るのにどんなソフトウェアが必要か
 slug: Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need
-original_slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
 l10n:
   sourceCommit: 607ad9bea4b3b216e83baaf47218bf8971cda0c4
 ---
@@ -17,7 +16,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        すでに<a href="/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>について知っておく必要があります。
+        すでに<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>について知っておく必要があります。
       </td>
     </tr>
     <tr>
@@ -43,7 +42,7 @@ l10n:
 
 ## アクティブラーニング
 
-_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Contributing/Getting_started)。_
+_利用可能なアクティブラーニングはまだありません。[ぜひ協力をご検討ください](/ja/docs/MDN/Community/Getting_started)。_
 
 ## より深く掘り下げる
 
@@ -180,12 +179,12 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 
 ### ウェブ上へのファイルのアップロード
 
-ウェブサイトを公開する準備が整ったら、ウェブページをウェブサーバーにアップロードする必要があります。さまざまなプロバイダーからサーバー上のスペースを購入できます（[ウェブ上で何かをするためにどれくらいコストがかかる？](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)を参照）。どのプロバイダーを使用するかが決まったら、プロバイダーは通常、SFTP URL、ユーザー名、パスワード、およびそれらのサーバーへの接続に必要なその他の情報の形式で、アクセス情報をメールで送信します。(S)FTPは今や幾分時代遅れになっていて、 [RSync](https://ja.wikipedia.org/wiki/Rsync) や [Git/GitHub](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site) のような他のアップロードシステムが普及し始めていることを覚えておいてください。
+ウェブサイトを公開する準備が整ったら、ウェブページをウェブサーバーにアップロードする必要があります。さまざまなプロバイダーからサーバー上のスペースを購入できます（[ウェブ上で何かをするためにどれくらいコストがかかる？](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を参照）。どのプロバイダーを使用するかが決まったら、プロバイダーは通常、SFTP URL、ユーザー名、パスワード、およびそれらのサーバーへの接続に必要なその他の情報の形式で、アクセス情報をメールで送信します。(S)FTPは今や幾分時代遅れになっていて、 [RSync](https://ja.wikipedia.org/wiki/Rsync) や [Git/GitHub](https://docs.github.com/ja/pages/configuring-a-custom-domain-for-your-github-pages-site) のような他のアップロードシステムが普及し始めていることを覚えておいてください。
 
 > [!NOTE]
 > FTP は本質的に安全ではありません。ホスティングプロバイダーが安全な接続、例えば SSH を介した SFTP または RSync の使用を許可していることを確認してください。
 
-ウェブサーバーを作成する際、ウェブサーバーにファイルをアップロードすることは非常に重要なステップなので、[別の記事](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)で詳しく説明します。ここでは、単純な機能に限った無料 (S)FTP クライアントの例を示すにとどめます。
+ウェブサーバーを作成する際、ウェブサーバーにファイルをアップロードすることは非常に重要なステップなので、[別の記事](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)で詳しく説明します。ここでは、単純な機能に限った無料 (S)FTP クライアントの例を示すにとどめます。
 
 <table class="standard-table">
   <thead>
@@ -260,12 +259,12 @@ _利用可能なアクティブラーニングはまだありません。[ぜひ
 特定のグループ (技術プラットフォームや国など) を対象にする場合は、追加で [Opera](https://www.opera.com/), [Konqueror](https://apps.kde.org/konqueror/) などのブラウザーでサイトをテストする必要があります。
 
 しかし、ブラウザーによっては特定のオペレーティングシステムでしか動作しないものがあるため、テストをすることは複雑になります。 Apple Safari は iOS と Mac OS 上で動作し、 Internet Explorer は Windows 上でのみ動作します。 [Browsershots](https://browsershots.org/) や [Browserstack](https://www.browserstack.com/) のようなサービスを利用するのが最善です。 Browsershots は、様々なブラウザーで見た場合のウェブサイトのスナップショットを提供します。 Browserstack は実際には仮想マシンへの完全なリモートアクセスを提供し、最も一般的な環境でサイトをテストすることができます。他にも、独自の仮想マシンをセットアップする方法もありますが、それにはいくらかの専門知識が必要です。
-詳しくは[テスト実行のための戦略: テストラボを用意する](/ja/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#テストラボを用意する)を参照してください。
+詳しくは[テスト実行のための戦略: テストラボを用意する](/ja/docs/Learn_web_development/Extensions/Testing/Testing_strategies#テストラボを用意する)を参照してください。
 
 是非、実際の端末、特に実際のモバイル端末でいくつかのテストを実行してください。モバイル端末のシミュレーションは、進化中の新技術であり、デスクトップのシミュレーションよりも信頼性が低いです。もちろん、モバイル端末はお金を必要としますので、 [Open Device Lab initiative](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls) の取り組みを見てみることをお勧めします。多くのプラットフォームでテストする場合は、過度な出費を抑えて端末を共有することもできます。
 
 ## 次のステップ
 
-- 一部のソフトウェアは無料ですが、すべてではありません。[ウェブ上で何かをするのにいくらのコストがかかるかを調べましょう](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)。
-- テキストエディターについてさらに学びたいのなら、[テキストエディターの選び方とインストール方法](/ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)に関する記事をお読みください。
-- ウェブ上にウェブサイトを公開する方法が分からないのであれば、[「ウェブサーバーにファイルをアップロードする方法」](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)を参照してください。
+- 一部のソフトウェアは無料ですが、すべてではありません。[ウェブ上で何かをするのにいくらのコストがかかるかを調べましょう](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)。
+- テキストエディターについてさらに学びたいのなら、[テキストエディターの選び方とインストール方法](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)に関する記事をお読みください。
+- ウェブ上にウェブサイトを公開する方法が分からないのであれば、[「ウェブサーバーにファイルをアップロードする方法」](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)を参照してください。

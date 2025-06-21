@@ -3,9 +3,7 @@ title: 学习论坛
 slug: MDN/Community/Learn_forum
 ---
 
-{{MDNSidebar}}
-
-我们的[学习 web 开发](/zh-CN/docs/Learn)页面每个月可以获得上百万次的浏览量，且拥有[活跃的论坛](https://discourse.mozilla.org/c/mdn/learn/250)可供人们寻求普遍的帮助，或请求对他们的测验进行评估。我们乐于帮助人们回答帖子中的问题，以让这个学习社区更加壮大。
+我们的[学习 web 开发](/zh-CN/docs/Learn_web_development)页面每个月可以获得上百万次的浏览量，且拥有[活跃的论坛](https://discourse.mozilla.org/c/mdn/learn/250)可供人们寻求普遍的帮助，或请求对他们的测验进行评估。我们乐于帮助人们回答帖子中的问题，以让这个学习社区更加壮大。
 
 ## 我们需要的帮助
 
@@ -28,7 +26,7 @@ slug: MDN/Community/Learn_forum
 ## 怎样帮助
 
 1. 如果你还没有 [Mozilla Discourse](https://discourse.mozilla.org/) 账号，请注册一个。
-2. 如果还不熟悉相关内容，请看一下[学习 web 开发](/zh-CN/docs/Learn)部分，并对那里的内容有一些初步的了解（请查阅下述 [MDN 学习区的结构](#mdn_学习区的结构)一节）。
+2. 如果还不熟悉相关内容，请看一下[学习 web 开发](/zh-CN/docs/Learn_web_development)部分，并对那里的内容有一些初步的了解（请查阅下述 [MDN 学习区的结构](#mdn_学习区的结构)一节）。
 
 当你准备好了之后：
 
@@ -63,7 +61,7 @@ slug: MDN/Community/Learn_forum
 
 ## MDN 学习区的结构
 
-当帮助回答 MDN [学习 web 开发](/zh-CN/docs/Learn)相关的问题时，最好先自行阅读其中的一些文章，获得基础的知识，并熟悉那里的内容架构。
+当帮助回答 MDN [学习 web 开发](/zh-CN/docs/Learn_web_development)相关的问题时，最好先自行阅读其中的一些文章，获得基础的知识，并熟悉那里的内容架构。
 
 1. 大致通读一遍页面的结构。
 2. 特别是查看一下现有的评估类型：

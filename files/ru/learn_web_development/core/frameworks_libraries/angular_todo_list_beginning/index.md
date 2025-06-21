@@ -9,9 +9,9 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginnin
 
 Сейчас мы готовы приступить к созданию приложения списка дел с использованием Angular. Готовое приложение будет отображать список дел, позволять редактировать, удалять и добавлять элементы. В этой статье вы познакомитесь со структурой приложения и поработаете над базовым отображением списка дел.
 
-| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn/HTML), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line).          |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных. |
+| Необходимые условия: | Понимание основ [HTML](/ru/docs/Learn_web_development/Core/Structuring_content), [CSS](/ru/docs/Learn/CSS), и [JavaScript](/ru/docs/Learn/JavaScript), знание [терминала/командной строки](/ru/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line). |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Создать базовую структуру приложения, сделать так, чтобы оно отображало список дел, и понять фундаментальные концепции Angular: структуру компонентов, совместное использование данных между компонентами и использование циклов вывода данных.                            |
 
 ## Структура приложения списка дел
 
@@ -199,7 +199,7 @@ addItem(description: string) {
 - [Основные функции фреймворков](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features)
 - React
 
-  - [Начало работы с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started)
+  - [Начало работы с React](/ru/docs/Learn_web_development/Core/Frameworks_libraries/React_getting_started)
   - [Начало создания приложения списка дел с React](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning)
   - [Компоненты React приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components)
   - [Интерактивность React: события и состояние](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state)
@@ -241,9 +241,9 @@ addItem(description: string) {
 
 - Angular
 
-  - [Начало работы с Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started)
-  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_todo_list_beginning)
-  - [Стилизация Angular приложения](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_styling)
-  - [Создание компонента элемента (item component)](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_item_component)
-  - [Фильтрация списка дел](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_filtering)
-  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_building)
+  - [Начало работы с Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_getting_started)
+  - [Начинаем приложение списка дел с использованием Angular](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning)
+  - [Стилизация Angular приложения](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_styling)
+  - [Создание компонента элемента (item component)](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_item_component)
+  - [Фильтрация списка дел](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_filtering)
+  - [Сборка Angular приложений и другие ресурсы](/ru/docs/Learn_web_development/Core/Frameworks_libraries/Angular_building)

@@ -9,7 +9,18 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 
 只有 [ISO 8601 格式](https://tc39.es/ecma262/#sec-date-time-string-format)（ `YYYY-MM-DDTHH:mm:ss.sssZ`）為明確指定支援的格式。其餘格式因實作方式而異，不一定跨瀏覽器通用。若需要涵蓋多種格式，可以引入函式庫協助。
 
-{{EmbedInteractiveExample("pages/js/date-parse.html")}}
+{{InteractiveExample("JavaScript Demo: Date.parse()")}}
+
+```js interactive-example
+const unixTimeZero = Date.parse("01 Jan 1970 00:00:00 GMT");
+const javaScriptRelease = Date.parse("04 Dec 1995 00:12:00 GMT");
+
+console.log(unixTimeZero);
+// Expected output: 0
+
+console.log(javaScriptRelease);
+// Expected output: 818035920000
+```
 
 ## 語法
 

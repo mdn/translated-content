@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/get
 
 Статический метод **`Reflect.get()`** работает также, словно если бы мы получали свойство объекта (`target[propertyKey]`) с помощью функции.
 
-{{EmbedInteractiveExample("pages/js/reflect-get.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.get()")}}
+
+```js interactive-example
+const object1 = {
+  x: 1,
+  y: 2,
+};
+
+console.log(Reflect.get(object1, "x"));
+// Expected output: 1
+
+const array1 = ["zero", "one"];
+
+console.log(Reflect.get(array1, 1));
+// Expected output: "one"
+```
 
 ## Синтаксис
 

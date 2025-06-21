@@ -11,7 +11,7 @@ slug: Glossary/Protocol
 
 - 維基百科上的[網路傳輸協定](https://zh.wikipedia.org/wiki/网络传输协议)
 - [RFC 官方網路通訊協定標準](https://www.rfc-editor.org/standards)
-- [HTTP 概述](/zh-TW/docs/Web/HTTP/Overview)
+- [HTTP 概述](/zh-TW/docs/Web/HTTP/Guides/Overview)
 - 術語表：
 
   - {{glossary("TCP")}}

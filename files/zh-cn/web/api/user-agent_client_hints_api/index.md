@@ -2,12 +2,12 @@
 title: 用户代理客户端提示 API
 slug: Web/API/User-Agent_Client_Hints_API
 l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{DefaultAPISidebar("User-Agent Client Hints API")}}{{SeeCompatTable}}
 
-**用户代理客户端提示 API**（User-Agent Client Hints API）扩展了[客户端提示](/zh-CN/docs/Web/HTTP/Client_hints)，以提供一种通过用户代理响应和请求标头以及 JavaScript API 公开浏览器和平台信息的方法。
+**用户代理客户端提示 API**（User-Agent Client Hints API）扩展了[客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)，以提供一种通过用户代理响应和请求标头以及 JavaScript API 公开浏览器和平台信息的方法。
 
 ## 概念和用法
 

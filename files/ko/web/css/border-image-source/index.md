@@ -7,7 +7,50 @@ slug: Web/CSS/border-image-source
 
 **`border-image-source`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image)로 사용할 원본 이미지를 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-source.html")}}
+{{InteractiveExample("CSS Demo: border-image-source")}}
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-diamonds.png");
+```
+
+```css interactive-example-choice
+border-image-source: url("/shared-assets/images/examples/border-stars.png");
+```
+
+```css interactive-example-choice
+border-image-source: repeating-linear-gradient(
+  45deg,
+  transparent,
+  #4d9f0c 20px
+);
+```
+
+```css interactive-example-choice
+border-image-source: none;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 {{cssxref("border-image-slice")}} 속성으로 나뉜 구역을 사용해 최종 테두리 이미지를 생성합니다.
 

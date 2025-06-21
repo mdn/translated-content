@@ -14,7 +14,7 @@ slug: Mozilla/Firefox/Releases/3.5
 #### HTML 5 サポート
 
 - [Firefox での音声と動画の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Element/audio) および [video](/ja/docs/Web/HTML/Element/video) 要素がサポートされます。
+  - : Firefox 3.5 では HTML 5 の [audio](/ja/docs/Web/HTML/Reference/Elements/audio) および [video](/ja/docs/Web/HTML/Reference/Elements/video) 要素がサポートされます。
 - [Firefox でのオフラインリソース](/ja/docs/Web/HTML/Using_the_application_cache)
   - : Firefox 3.5 では HTML 5 のオフラインリソース仕様をすべてサポートしています。
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
@@ -108,13 +108,13 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### ネットワーク機能
 
-- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/CORS)
+- [HTTP 向けのクロスサイトアクセスコントロール](/ja/docs/Web/HTTP/Guides/CORS)
   - : Firefox 3.5 では、サーバーがサポートする場合に、[`XMLHttpRequest`](/ja/docs/Web/API/XMLHttpRequest) によるものも含む HTTP リクエストでドメインを超える動作が可能になりました。
 - [`XMLHttpRequest` のための Progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress)
   - : Progress イベントが拡張がリクエストの進捗を監視できるようにするために提供されるようになりました。
 - 同期 `XMLHttpRequest`サポートの改善
   - : [DOM Timeout](https://bugzilla.mozilla.org/show_bug.cgi?id=340345) と [Input Events](https://bugzilla.mozilla.org/show_bug.cgi?id=333198) が同期 `XMLHttpRequest中に抑制されるようになりました。`
-- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [DNS プリフェッチの制御](/ja/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)
   - : Firefox 3.5 では DNS プリフェッチが提供され、それにより現在のページに含まれるリンクのドメイン名解決が事前に行われ、リンクが実際にクリックされたときの時間を節約しま す。この記事ではウェブサイト側でプリフェッチを無効にする、もしくは、プリフェッチの動作を調整する方法について説明しています。
 
 #### 新しい Canvas の機能
@@ -130,14 +130,14 @@ slug: Mozilla/Firefox/Releases/3.5
 
 #### 新しい SVG の機能
 
-- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [HTML の内容への SVG 効果の適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
   - : SVG 効果を HTML および XHTML の内容に適用できるようになりました。この記事はその方法について説明しています。
 
 #### その他の新機能
 
 - [Firefox での ICC カラー補正](/ja/docs/Mozilla/Firefox/Releases/3.5/ICC_color_correction_in_Firefox)
   - : Firefox 3.5 では タグ付けられた画像に対して ICC カラー補正がサポートされています。
-- [script](/ja/docs/Web/HTML/Element/script) 要素で defer 属性がサポート
+- [script](/ja/docs/Web/HTML/Reference/Elements/script) 要素で defer 属性がサポート
   - : この属性はスクリプトが実行し終わるの待たずにブラウザーにパースし描画し続けることを選択させます。
 
 ### その他の改善
@@ -153,7 +153,7 @@ slug: Mozilla/Firefox/Releases/3.5
 - 非 Chrome スコープにおいて、例外でキャッチされるオブジェクトがスローされたオブジェクトを含む [XPConnect](/ja/docs/XPConnect) ラッパーではなく実際にスローされたオブジェクトになりました。
 - SVG ID 参照が動的な変更に対応するようになりました。
 - SVG フィルターが `foreignObject` でも動作するようになりました。
-- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Element/object) および [`iframe`](/ja/docs/Web/HTML/Element/iframe) 要素に追加されました。
+- 互換性のために `GetSVGDocument()` メソッドが [`object`](/ja/docs/Web/HTML/Reference/Elements/object) および [`iframe`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素に追加されました。
 - JavaScript においてオブジェクトおよび配列の初期化子によるプロパティの暗黙的な設定ではセッターの定義を行わないようになりました。詳細は [オブジェクトおよび配列の初期化子は評価時にセッターの定義を行うべきではない](/web-tech/2009/04/29/object-and-array-initializers-should-not-invoke-setters-when-evaluated) というブログ投稿を参照してください。
 - `gDownloadLastDir.path` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDir.file` に名称変更されました。
 - `gDownloadLastDirPath` 変数は、パスではなく `nsIFile` を参照しているので、 `gDownloadLastDirFile` に名称変更されました。

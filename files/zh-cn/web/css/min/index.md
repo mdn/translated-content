@@ -44,7 +44,7 @@ width: min(1vw, 4em, 80px);
 
 ```html
 <img
-  src="https://developer.mozilla.org/static/img/web-docs-sprite.svg"
+  src="/shared-assets/images/examples/web-docs-sprite.svg"
   alt="MDN Web Docs"
   class="logo" />
 ```
@@ -101,7 +101,7 @@ small {
 
 这用于保证最小值是 1rem，这样在页面缩放时文本也会缩放。
 
-- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Understanding WCAG, Guideline 1.4 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 
 ## 规范

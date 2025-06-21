@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Global_Objects/TypedArray/values
 
 La méthode **`values()`** renvoie un nouvel objet `Array Iterator` qui contient les valeurs pour chaque indice du tableau.
 
-{{EmbedInteractiveExample("pages/js/typedarray-values.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+
+```js interactive-example
+const uint8 = new Uint8Array([10, 20, 30, 40, 50]);
+const array1 = uint8.values();
+
+array1.next();
+array1.next();
+
+console.log(array1.next().value);
+// Expected output: 30
+```
 
 ## Syntaxe
 

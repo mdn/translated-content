@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Operators/Logical_AND_assignment
 
 Оператор присваивания логического И (`x &&= y`) присваивает значение переменной `x` только в случае, если её текущее значение {{Glossary("truthy", "истинноподобно")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-logical-and-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Logical AND assignment")}}
+
+```js interactive-example
+let a = 1;
+let b = 0;
+
+a &&= 2;
+console.log(a);
+// Expected output: 2
+
+b &&= 2;
+console.log(b);
+// Expected output: 0
+```
 
 ## Синтаксис
 

@@ -3,9 +3,21 @@ title: String.prototype.toLocaleLowerCase()
 slug: Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase
 ---
 
-{{JSRef}}El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.{{EmbedInteractiveExample("pages/js/string-tolocalelowercase.html")}}
+{{JSRef}}
 
-Los fuentes para este ejemplo interactivo están almacenados en un repositorio GitHub. Si quieres contribuir en el proyecto de ejemplos interactivos, por favor clona `https://github.com/mdn/interactive-examples` y envíanos un pull request.
+El método **`toLocaleLowerCase()`** retorna la cadena de texto desde la que se llama convertida en minúsculas, de acuerdo con cualquier localización específica de correspondencia de mayúsculas y minúsculas.
+
+{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+
+```js interactive-example
+const dotted = "İstanbul";
+
+console.log(`EN-US: ${dotted.toLocaleLowerCase("en-US")}`);
+// Expected output: "i̇stanbul"
+
+console.log(`TR: ${dotted.toLocaleLowerCase("tr")}`);
+// Expected output: "istanbul"
+```
 
 ## Sintaxis
 

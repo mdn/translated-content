@@ -23,7 +23,7 @@ register(scriptURL, options)
 ### 引数
 
 - `scriptURL`
-  - : サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な [JavaScript の MIME タイプ](/ja/docs/Web/HTTP/MIME_types#textjavascript)が必要です。
+  - : サービスワーカースクリプトの URL。 登録されたサービスワーカーファイルには、有効な [JavaScript の MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types#textjavascript)が必要です。
 - `options` {{optional_inline}}
 
   - : 登録オプションを含むオブジェクト。 現在利用可能なオプションは次のとおりです。

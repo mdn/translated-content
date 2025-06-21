@@ -7,7 +7,91 @@ slug: Web/CSS/transform-function/rotate3d
 
 **`rotate3d()`** CSS 函数定义一个变换，它将元素围绕固定轴移动而不使其变形。运动量由指定的角度定义; 如果为正，运动将为顺时针，如果为负，则为逆时针。
 
-{{EmbedInteractiveExample("pages/css/rotate3d.html")}}
+{{InteractiveExample("CSS Demo: rotate3d()")}}
+
+```css interactive-example-choice
+transform: rotate3d(0);
+```
+
+```css interactive-example-choice
+transform: rotate3d(1, 1, 1, 45deg);
+```
+
+```css interactive-example-choice
+transform: rotate3d(2, -1, -1, -0.2turn);
+```
+
+```css interactive-example-choice
+transform: rotate3d(0, 1, 0.5, 3.142rad);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="face front">1</div>
+    <div class="face back">2</div>
+    <div class="face right">3</div>
+    <div class="face left">4</div>
+    <div class="face top">5</div>
+    <div class="face bottom">6</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: linear-gradient(skyblue, khaki);
+  perspective: 550px;
+}
+
+#example-element {
+  width: 100px;
+  height: 100px;
+  transform-style: preserve-3d;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: inherit;
+  font-size: 60px;
+  color: white;
+}
+
+.front {
+  background: rgba(90, 90, 90, 0.7);
+  transform: translateZ(50px);
+}
+
+.back {
+  background: rgba(0, 210, 0, 0.7);
+  transform: rotateY(180deg) translateZ(50px);
+}
+
+.right {
+  background: rgba(210, 0, 0, 0.7);
+  transform: rotateY(90deg) translateZ(50px);
+}
+
+.left {
+  background: rgba(0, 0, 210, 0.7);
+  transform: rotateY(-90deg) translateZ(50px);
+}
+
+.top {
+  background: rgba(210, 210, 0, 0.7);
+  transform: rotateX(90deg) translateZ(50px);
+}
+
+.bottom {
+  background: rgba(210, 0, 210, 0.7);
+  transform: rotateX(-90deg) translateZ(50px);
+}
+```
 
 在 3D 空间之中，旋转有 3 个自由维度，描述了旋转轴。旋转轴由一组 \[x, y, z] 矢量定义，并且通过变换源点传递（即通过 {{ cssxref("transform-origin") }} CSS 属性定义）。如果这些矢量被赋予非标准值，即 3 个坐标值的平方和不等于 1 时，它将会被内部隐式标准化。非标准矢量，例如空值和 \[0, 0, 0]，将会使旋转不起作用，但是不影响整个 CSS 属性的其他效果（译者注：如 transform 中的多项变换）。
 

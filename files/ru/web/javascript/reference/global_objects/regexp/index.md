@@ -11,7 +11,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp
 
 Введение в то, что представляют собой регулярные выражения, читайте в [главе «Регулярные выражения» в руководстве по JavaScript](/ru/docs/Web/JavaScript/Guide/Regular_expressions).
 
-{{EmbedInteractiveExample("pages/js/regexp-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+
+```js interactive-example
+const regex1 = /\w+/;
+const regex2 = new RegExp("\\w+");
+
+console.log(regex1);
+// Expected output: /\w+/
+
+console.log(regex2);
+// Expected output: /\w+/
+
+console.log(regex1 === regex2);
+// Expected output: false
+```
 
 ## Синтаксис
 

@@ -146,7 +146,7 @@ $.ajax({
 
 ## Envío de formularios y carga de archivos vía AJAX sin objetos `FormData`
 
-Si quiere saber cómo serializar y enviar vía [AJAX](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data) un formulario _sin_ utilizar objetos FormData, por favor leer [este párrafo](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) .
+Si quiere saber cómo serializar y enviar vía [AJAX](/es/docs/Learn_web_development/Core/Scripting/Network_requests) un formulario _sin_ utilizar objetos FormData, por favor leer [este párrafo](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#submitting_forms_and_uploading_files) .
 
 ## Vea también
 

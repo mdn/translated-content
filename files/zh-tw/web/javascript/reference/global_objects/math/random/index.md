@@ -5,25 +5,40 @@ slug: Web/JavaScript/Reference/Global_Objects/Math/random
 
 {{JSRef}}
 
-函數 **`Math.random()`** 會回傳一個偽隨機小數 (pseudo-random) 介於 0 到 1 之間(包含 0，不包含 1) ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，你可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。{{EmbedInteractiveExample("pages/js/math-random.html")}}
+函數 **`Math.random()`** 會回傳一個介於 0 到 1 之間（包含 0，不包含 1）的偽隨機（pseudo-random）小數 ，大致符合數學與統計上的均勻分佈 (uniform distribution) ，你可以選定想要的數字區間，它會透過演算法被產生並且不允許使用者自行跳選或重設成特定數字。
 
-> **備註：** `Math.random()` 所產生的偽隨機小數不符合加密學安全性要求。_請勿使用於任何加密、資安相關領域。_
->
-> _如有加密需求建議參考 Web Crypto API_[`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/Crypto/getRandomValues)
+> **備註：** `Math.random()` 所產生的偽隨機小數不符合加密學安全性要求。請勿使用於任何加密、資安相關領域。如有加密需求建議參考 Web Crypto API 的 {{domxref("Crypto.getRandomValues()")}} 方法。
+
+{{InteractiveExample("JavaScript Demo: Math.random()")}}
+
+```js interactive-example
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+}
+
+console.log(getRandomInt(3));
+// Expected output: 0, 1 or 2
+
+console.log(getRandomInt(1));
+// Expected output: 0
+
+console.log(Math.random());
+// Expected output: a number from 0 to <1
+```
 
 ## 語法
 
-```plain
+```js-nolint
 Math.random()
 ```
 
-### 回傳值 Return value
+### 回傳值
 
-回傳一個偽隨機小數 (pseudo-random)，小數也稱浮點數； 介於 0 到 1 之間(包含 0，不包含 1) 。
+回傳一個偽隨機浮點數，介於 0 到 1 之間（包含 0，不包含 1）。
 
 ## 範例
 
-請留意 JavaScript 中的數字與許多語言一樣使用 IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. If extremely large bounds are chosen (2^53 or higher), it's possible in _extremely_ rare cases to calculate the usually-excluded upper bound.
+Note that as numbers in JavaScript are IEEE 754 floating point numbers with round-to-nearest-even behavior, the ranges claimed for the functions below (excluding the one for `Math.random()` itself) aren't exact. Usually, the claimed upper bound is not attainable, but if `Math.random()` returns a number very close to 1, the tiny difference may not be representable at the requested maximum, therefore causing the upper bound to be attained.
 
 ### Getting a random number between 0 (inclusive) and 1 (exclusive)
 
@@ -49,14 +64,14 @@ This example returns a random _integer_ between the specified values. The value 
 
 ```js
 function getRandomInt(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
 }
 ```
 
 > [!NOTE]
-> might be tempting to use `Math.round()` to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
+> It might be tempting to use [`Math.round()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Math/round) to accomplish that, but doing so would cause your random numbers to follow a non-uniform distribution, which may not be acceptable for your needs.
 
 ### Getting a random integer between two values, inclusive
 
@@ -64,9 +79,9 @@ While the `getRandomInt()` function above is inclusive at the minimum, it's excl
 
 ```js
 function getRandomIntInclusive(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+  const minCeiled = Math.ceil(min);
+  const maxFloored = Math.floor(max);
+  return Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled); // The maximum is inclusive and the minimum is inclusive
 }
 ```
 
@@ -78,6 +93,6 @@ function getRandomIntInclusive(min, max) {
 
 {{Compat}}
 
-## 其他參考資料
+## 參見
 
-- [`window.crypto.getRandomValues()`](/zh-TW/docs/Web/API/Crypto/getRandomValues)
+- {{domxref("Crypto.getRandomValues()")}}

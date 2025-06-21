@@ -7,9 +7,54 @@ l10n:
 
 {{CSSRef}}
 
-**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
+**`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
 
-{{EmbedInteractiveExample("pages/css/flex-flow.html")}}
+{{InteractiveExample("CSS Demo: flex-flow")}}
+
+```css interactive-example-choice
+flex-flow: row wrap;
+```
+
+```css interactive-example-choice
+flex-flow: row-reverse nowrap;
+```
+
+```css interactive-example-choice
+flex-flow: column wrap-reverse;
+```
+
+```css interactive-example-choice
+flex-flow: column wrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+    <div>Item Four</div>
+    <div>Item Five</div>
+    <div>Item Six</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 ## 構成要素のプロパティ
 

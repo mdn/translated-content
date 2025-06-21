@@ -27,7 +27,7 @@ XMLHttpRequest.overrideMimeType(mimeType)
 这个样例指定 Content-Type 为“text/plain",为接受的数据重写 ContentType
 
 > [!NOTE]
-> 如果服务器没有指定一个[`Content-Type`](/zh-CN/docs/Web/HTTP/Headers/Content-Type) 头，{{domxref("XMLHttpRequest")}} 默认 MIME 类型为`"text/xml"`. 如果接受的数据不是有效的 XML，将会出现格”格式不正确“的错误。你能够通过调用 `overrideMimeType()` 指定各种类型来避免这种情况。
+> 如果服务器没有指定一个[`Content-Type`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Type) 头，{{domxref("XMLHttpRequest")}} 默认 MIME 类型为`"text/xml"`. 如果接受的数据不是有效的 XML，将会出现格”格式不正确“的错误。你能够通过调用 `overrideMimeType()` 指定各种类型来避免这种情况。
 
 ```js
 // Interpret the received data as plain text

@@ -27,7 +27,7 @@ const AsyncIteratorPrototype = Object.getPrototypeOf(
 
 ## インスタンスメソッド
 
-- [`AsyncIterator.prototype[@@asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/@@asyncIterator)
+- [`AsyncIterator.prototype[Symbol.asyncIterator]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncIterator/Symbol.asyncIterator)
   - : 非同期イテレーターオブジェクト自身を返します。これにより、非同期イテレーターオブジェクトも非同期反復可能オブジェクトになります。
 
 ## 例

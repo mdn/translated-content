@@ -30,23 +30,23 @@ slug: Web/API/Web_Workers_API/Structured_clone_algorithm
 
 ## Поддерживаемые типы
 
-| Object type                                                                     | Notes                                                                                                    |
-| ------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [All primitive types](/ru/docs/Web/JavaScript/Data_structures#primitive_values) | However not symbols                                                                                      |
-| [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) object      |                                                                                                          |
-| String object                                                                   |                                                                                                          |
-| [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)                   |                                                                                                          |
-| [RegExp](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)               | The `lastIndex` field is not preserved.                                                                  |
-| {{ domxref("Blob") }}                                                           |                                                                                                          |
-| {{ domxref("File") }}                                                           |                                                                                                          |
-| {{ domxref("FileList") }}                                                       |                                                                                                          |
-| [ArrayBuffer](/ru/docs/Web/API/ArrayBuffer)                                     |                                                                                                          |
-| [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)  | This basically means all [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays) like Int32Array etc. |
-| {{ domxref("ImageData") }}                                                      |                                                                                                          |
-| [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)                 |                                                                                                          |
-| [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)               | This just includes plain objects (e.g. from object literals)                                             |
-| [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)                     |                                                                                                          |
-| [Set](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)                     |                                                                                                          |
+| Object type                                                                           | Notes                                                                                                    |
+| ------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [All primitive types](/ru/docs/Web/JavaScript/Guide/Data_structures#primitive_values) | However not symbols                                                                                      |
+| [Boolean](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean) object            |                                                                                                          |
+| String object                                                                         |                                                                                                          |
+| [Date](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)                         |                                                                                                          |
+| [RegExp](/ru/docs/Web/JavaScript/Reference/Global_Objects/RegExp)                     | The `lastIndex` field is not preserved.                                                                  |
+| {{ domxref("Blob") }}                                                                 |                                                                                                          |
+| {{ domxref("File") }}                                                                 |                                                                                                          |
+| {{ domxref("FileList") }}                                                             |                                                                                                          |
+| [ArrayBuffer](/ru/docs/Web/API/ArrayBuffer)                                           |                                                                                                          |
+| [ArrayBufferView](/ru/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)        | This basically means all [typed arrays](/ru/docs/Web/JavaScript/Guide/Typed_arrays) like Int32Array etc. |
+| {{ domxref("ImageData") }}                                                            |                                                                                                          |
+| [Array](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)                       |                                                                                                          |
+| [Object](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)                     | This just includes plain objects (e.g. from object literals)                                             |
+| [Map](/ru/docs/Web/JavaScript/Reference/Global_Objects/Map)                           |                                                                                                          |
+| [Set](/ru/docs/Web/JavaScript/Reference/Global_Objects/Set)                           |                                                                                                          |
 
 ## Другой вариант: вложенное копирование‎
 

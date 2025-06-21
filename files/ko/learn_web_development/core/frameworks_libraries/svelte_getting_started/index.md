@@ -421,7 +421,7 @@ npm install
 npm run dev
 ```
 
-git 및 GitHub에 대해 자세히 알아보려면 저희가 정리한 유용한 가이드 링크 목록을 보세요. [Git 및 GitHub](/ko/docs/Learn/Tools_and_testing/GitHub)
+git 및 GitHub에 대해 자세히 알아보려면 저희가 정리한 유용한 가이드 링크 목록을 보세요. [Git 및 GitHub](/ko/docs/Learn_web_development/Core/Version_control)
 
 > [!NOTE]
 > git repo를 복제하지 않고 파일을 다운로드하기만 하려면 `npx degit opensas/mdn-svelte-tutorial`과 같은 degit 도구를 사용할 수 있습니다. `npx degit opensas/mdn-svelte-tutorial/01-getting-started`를 사용하여 특정 폴더를 다운로드할 수도 있습니다. Degit은 로컬 git repo를 만들지 않고 지정된 폴더의 파일만 다운로드합니다.

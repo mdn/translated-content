@@ -13,7 +13,7 @@ l10n:
 
 - 在维基百科中的[通信协议](https://zh.wikipedia.org/wiki/通信协议)
 - [RFC 官方互联网协议标准](https://www.rfc-editor.org/standards)
-- [HTTP 概述](/zh-CN/docs/Web/HTTP/Overview)
+- [HTTP 概述](/zh-CN/docs/Web/HTTP/Guides/Overview)
 - 术语：
 
   - {{glossary("TCP")}}

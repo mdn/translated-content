@@ -189,7 +189,8 @@ CSS の基本をいくつか勉強しましたので、`style.css` ファイル�
    ```css
    html {
      font-size: 10px; /* px は「ピクセル」 (pixels) の意味。ベースフォントサイズは 10 ピクセルの高さになった */
-     font-family: "Open Sans", sans-serif; /* これが Google フォントから取得した残りの出力になるはず。 */
+     font-family:
+       "Open Sans", sans-serif; /* これが Google フォントから取得した残りの出力になるはず。 */
    }
    ```
 

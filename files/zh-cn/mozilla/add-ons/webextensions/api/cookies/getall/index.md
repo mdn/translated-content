@@ -74,7 +74,7 @@ let getting = browser.cookies.getAll(
 
 ### 返回值
 
-一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 `{{WebExtAPIRef('cookies.Cookie')}}` 对象数组，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
+一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个 {{WebExtAPIRef('cookies.Cookie')}} 对象数组，这些对象与 `details` 参数中给定的属性匹配。仅返回未过期的 Cookie。返回的 Cookie 将按路径长度排序，从最长到最短。如果多个 Cookie 的路径长度相同，则创建时间最早的将排在最前面。
 
 ## 浏览器兼容性
 
@@ -101,7 +101,7 @@ browser.cookies
 {{WebExtExamples}}
 
 > [!NOTE]
-> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-getAll) API。本文档源自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
+> 此 API 基于 Chromium 的 [`chrome.cookies`](https://developer.chrome.google.cn/docs/extensions/reference/api/cookies#method-getAll) API。该文档衍生自 Chromium 代码中的 [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

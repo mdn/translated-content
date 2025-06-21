@@ -15,6 +15,6 @@ TTFB = responseStart - requestStart
 
 ## Смотрите также
 
-- [A typical HTTP session](/ru/docs/Web/HTTP/Session)
+- [A typical HTTP session](/ru/docs/Web/HTTP/Guides/Session)
 - [PerformanceResourceTiming](/ru/docs/Web/API/PerformanceResourceTiming)
 - [PerformanceTiming](/ru/docs/Web/API/PerformanceTiming)

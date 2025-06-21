@@ -9,7 +9,19 @@ l10n:
 
 **`global`** 접근자 속성은 `g` 플래그가 정규표현식에 사용되었는지 여부를 나타냅니다.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-global.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.global")}}
+
+```js interactive-example
+const regex1 = new RegExp("foo", "g");
+
+console.log(regex1.global);
+// Expected output: true
+
+const regex2 = new RegExp("bar", "i");
+
+console.log(regex2.global);
+// Expected output: false
+```
 
 ## 설명
 

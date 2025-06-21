@@ -13,7 +13,7 @@ l10n:
 
 当请求失败（例如，因为请求 URL 的格式错误或网络错误）时，`fetch()` 的 promise 才会被拒绝。`fetch()` 的 promise *不会*因为服务器响应表示错误的 HTTP 状态码（`404`、`504`，等）而被拒绝。因此，`then()` 处理器必须检查 {{domxref("Response.ok")}} 和/或 {{domxref("Response.status")}} 属性。
 
-`fetch()` 方法由[内容安全策略](/zh-CN/docs/Web/HTTP/Headers/Content-Security-Policy)的 `connect-src` 指令（而不是它查询的资源的指令）控制。
+`fetch()` 方法由[内容安全策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的 `connect-src` 指令（而不是它查询的资源的指令）控制。
 
 > **备注：** `fetch()` 方法的参数与 {{domxref("Request.Request","Request()")}} 构造函数是一样的。
 
@@ -45,7 +45,7 @@ fetch(resource, options)
 - `AbortError` {{domxref("DOMException")}}
   - : 请求被 {{domxref("AbortController")}} 的 {{domxref("AbortController.abort", "abort()")}} 方法调用所终止。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 [Topics API](/zh-CN/docs/Web/API/Topics_API) 的使用被 {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)明确禁止，且 `fetch()` 请求中包含 `browsingTopics: true`，则会抛出此异常。
+  - : 如果 [Topics API](/zh-CN/docs/Web/API/Topics_API) 的使用被 {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)明确禁止，且 `fetch()` 请求中包含 `browsingTopics: true`，则会抛出此异常。
 - {{jsxref("TypeError")}}
   - : 可以由以下原因引起：
 
@@ -59,7 +59,7 @@ fetch(resource, options)
   <tbody>
     <tr>
       <td>被权限策略阻止</td>
-      <td><a href="/zh-CN/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> 的使用被 <a href="/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} 所阻止，而 <code>fetch()</code> 请求又指定了 <code>attributionReporting</code>。</td>
+      <td><a href="/zh-CN/docs/Web/API/Attribution_Reporting_API">Attribution Reporting API</a> 的使用被 <a href="/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/attribution-reporting"><code>attribution-reporting</code></a> {{httpheader("Permissions-Policy")}} 所阻止，而 <code>fetch()</code> 请求又指定了 <code>attributionReporting</code>。</td>
     </tr>
     <tr>
       <td>无效的标头名称。</td>
@@ -251,5 +251,5 @@ const req = new Request("flowers.jpg", options);
 - {{domxref("WorkerGlobalScope.fetch()")}}
 - [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

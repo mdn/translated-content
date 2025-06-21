@@ -12,7 +12,24 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/supportedValuesOf
 이 메서드는 특정 기능 구현시에 값이 지원되는지 여부를 테스트하고, 필요한 경우에만 폴리필을 다운로드받는데 사용할 수 있습니다.
 또한 사용자가 선호하는 지역화된 값을 선택할 수 있게 하는 UI(예를 들어 UI가 WebGL 또는 서버사이드로 구현되었을 때)를 만드는 데에도 사용됩니다.
 
-{{EmbedInteractiveExample("pages/js/intl-supportedvaluesof.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Intl.supportedValuesOf", "taller")}}
+
+```js interactive-example
+console.log(Intl.supportedValuesOf("calendar"));
+console.log(Intl.supportedValuesOf("collation"));
+console.log(Intl.supportedValuesOf("currency"));
+console.log(Intl.supportedValuesOf("numberingSystem"));
+console.log(Intl.supportedValuesOf("timeZone"));
+console.log(Intl.supportedValuesOf("unit"));
+// Expected output: Array ['key'] (for each key)
+
+try {
+  Intl.supportedValuesOf("someInvalidKey");
+} catch (err) {
+  console.log(err.toString());
+  // Expected output: RangeError: invalid key: "someInvalidKey"
+}
+```
 
 ## 구문
 

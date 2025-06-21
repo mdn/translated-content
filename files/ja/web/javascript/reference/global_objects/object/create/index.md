@@ -9,7 +9,24 @@ l10n:
 
 **`Object.create()`** 静的メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
 
-{{EmbedInteractiveExample("pages/js/object-create.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+
+```js interactive-example
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  },
+};
+
+const me = Object.create(person);
+
+me.name = "Matthew"; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+```
 
 ## 構文
 
@@ -23,7 +40,7 @@ Object.create(proto, propertiesObject)
 - `proto`
   - : 新たに生成されるオブジェクトのプロトタイプになるべきオブジェクトです。
 - `propertiesObject` {{Optional_inline}}
-  - : 指定されていて、 {{jsxref("undefined")}} でない場合、それ自身の[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)が、それらのプロパティ名を伴う一連のプロパティ記述子を指定し、新たに生成されるオブジェクトに追加されることになります。これらのプロパティは、 {{jsxref("Object.defineProperties()")}} の 2 番目の引数に対応するものです。
+  - : 指定されていて、 {{jsxref("undefined")}} でない場合、それ自身の[列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)が、それらのプロパティ名を伴う一連のプロパティ記述子を指定し、新たに生成されるオブジェクトに追加されることになります。これらのプロパティは、 {{jsxref("Object.defineProperties()")}} の 2 番目の引数に対応するものです。
 
 ### 返値
 

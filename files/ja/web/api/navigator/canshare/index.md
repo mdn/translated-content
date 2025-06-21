@@ -17,7 +17,7 @@ l10n:
 - ファイルが指定されているが、実装がファイル共有に対応していない場合。
 - 指定したデータを共有すると、ユーザーエージェントから「敵対的な共有」と見なされる場合。
 
-[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)は [web-share](/ja/docs/Web/HTTP/Headers/Permissions-Policy/web-share) 権限ポリシーによって制限されています。
+[ウェブ共有 API](/ja/docs/Web/API/Web_Share_API)は [web-share](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 権限ポリシーによって制限されています。
 `canShare()` メソッドは、その権限に対応しているが付与されていない場合、 `false` を返します。
 
 ## 構文

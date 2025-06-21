@@ -1,10 +1,7 @@
 ---
 title: 使用HTML解決日常問題
 slug: Learn_web_development/Howto/Solve_HTML_problems
-original_slug: Learn/HTML/Howto
 ---
-
-{{LearnSidebar}}
 
 以下連結會給出 HTML 常見待解問題的方法
 
@@ -84,7 +81,7 @@ HTML 只建立文件的基礎架構，可以透過 {{glossary("CSS")}} 或腳本
 
 ### 進階圖片 & 多媒體
 
-- [如何在網頁中加入響應式圖片](/zh-TW/docs/Web/HTML/Responsive_images)
+- [如何在網頁中加入響應式圖片](/zh-TW/docs/Web/HTML/Guides/Responsive_images)
 - [如何在網頁中加入向量圖片](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [如何在圖片上加入圖像映射](/zh-TW/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
 

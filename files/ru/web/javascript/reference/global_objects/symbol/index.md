@@ -134,7 +134,7 @@ Symbol.keyFor(Symbol.for("tokenString")) === "tokenString"; // true
   - : Возвращает строку с описанием символа. Переопределяет метод {{jsxref("Object.prototype.toString()")}}.
 - {{jsxref("Symbol.prototype.valueOf()")}}
   - : Возвращает символ. Переопределяет метод {{jsxref("Object.prototype.valueOf()")}}.
-- [`Symbol.prototype[@@toPrimitive]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/@@toPrimitive)
+- [`Symbol.prototype[@@toPrimitive]()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol/Symbol.toPrimitive)
   - : Возвращает символ.
 
 ## Примеры
@@ -209,5 +209,5 @@ obj[Object(sym)]; // тоже 1
 
 - [Полифил `Symbol` в `core-js`](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Типы и структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures)
+- [Типы и структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures)
 - [ES6 In Depth: Symbols](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/) на hacks.mozilla.org (2015)

@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- [Content-Security-Policy](/ja/docs/Web/HTTP/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
+- [Content-Security-Policy](/ja/docs/Web/HTTP/Guides/CSP) の `'strict-dynamic'` ソース式が `default-src` ディレクティブに強制されていなかった不具合を修正しました。
   `script-src` が提供されていないときに代替として `default-src` ディレクティブの値を使用することで、動作が仕様書に合致するようになりました ([Firefox bug 1313937](https://bugzil.la/1313937))。
 
 - `Range` ヘッダーが、値が 1 バイトの範囲内である (例: `bytes=100-200`) 場合に [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header) になります。
@@ -63,7 +63,7 @@ l10n:
 
 ### Developer tools
 
-- ネットワークモニターでプロキシを経由した要求の情報を表示するようになりました。プロキシのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
+- ネットワークモニターでプロキシーを経由した要求の情報を表示するようになりました。プロキシーのアドレス、状態、HTTP バージョンを [ヘッダータブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html) で表示します ([Firefox bug 1707192](https://bugzil.la/1707192))。
 
 - [計測ツール](https://firefox-source-docs.mozilla.org/devtools-user/measure_a_portion_of_the_page/index.html) で選択した領域をキーボードショートカットでリサイズおよび移動できるようになりました。
   矢印キーを押すと選択した領域の移動、<kbd>Ctrl</kbd> + 矢印キー (Mac では <kbd>Cmd</kbd> + 矢印キー) を押すと選択した領域のリサイズになります。

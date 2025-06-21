@@ -260,4 +260,4 @@ CSS는 치수를 사용해 아래와 같은 것들을 표시합니다:
 ## 같이 보기
 
 - [CSS의 기본 자료형](/ko/docs/Web/CSS/CSS_Types)
-- [CSS 개론: 값과 단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)
+- [CSS 개론: 값과 단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)

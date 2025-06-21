@@ -16,13 +16,13 @@ _このインターフェイスには、親である {{domxref("HTMLElement")}} 
 - {{domxref("HTMLOutputElement.defaultValue")}}
   - : 文字列で、要素の既定値を表します。初期値は空文字列です。
 - {{domxref("HTMLOutputElement.form")}} {{ReadOnlyInline}}
-  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Element/output#form) 属性を反映します。
+  - : {{domxref("HTMLFormElement")}} で、コントロールに関連付けられたフォームを表し、定義されていれば HTML の [`form`](/ja/docs/Web/HTML/Reference/Elements/output#form) 属性を反映します。
 - {{domxref("HTMLOutputElement.htmlFor")}} {{ReadOnlyInline}}
-  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Element/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
+  - : {{domxref("DOMTokenList")}} で、HTML の [`for`](/ja/docs/Web/HTML/Reference/Elements/output#for) 要素を反映し、計算値の `value` に寄与する（または他の形で影響する）同じ文書内の他の要素の ID のリストが入ります。
 - {{domxref("HTMLOutputElement.labels")}} {{ReadOnlyInline}}
   - : {{domxref("NodeList")}} で、この要素に関連付けられた {{HTMLElement("label")}} 要素です。
 - {{domxref("HTMLOutputElement.name")}}
-  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Element/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
+  - : 文字列で、 HTML の [`name`](/ja/docs/Web/HTML/Reference/Elements/output#name) 属性を反映し、フォームデータと共に送信されるコントロールの名前が入ります。
 - {{domxref("HTMLOutputElement.type")}} {{ReadOnlyInline}}
   - : 文字列で "`output`" です。
 - {{domxref("HTMLOutputElement.validationMessage")}} {{ReadOnlyInline}}

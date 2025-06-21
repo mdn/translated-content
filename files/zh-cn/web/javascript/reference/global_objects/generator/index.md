@@ -11,7 +11,23 @@ l10n:
 
 `Generator` 是隐藏类 {{jsxref("Iterator")}} 的子类。
 
-{{EmbedInteractiveExample("pages/js/expressions-functionasteriskexpression.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+
+```js interactive-example
+const foo = function* () {
+  yield "a";
+  yield "b";
+  yield "c";
+};
+
+let str = "";
+for (const val of foo()) {
+  str = str + val;
+}
+
+console.log(str);
+// Expected output: "abc"
+```
 
 ## 构造函数
 

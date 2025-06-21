@@ -13,13 +13,13 @@ MDN Web Docs es un proyecto de código abierto. Las secciones que se describen a
 
   - : Esta sección cubre lo que incluimos en MDN Web Docs y lo que no, así como una serie de otras políticas, como cuándo escribimos sobre nuevas tecnologías, el proceso de sugerencia de contenido y si aceptamos enlaces externos. Este es un buen lugar para comenzar si está considerando escribir o actualizar contenido para nosotros. Esta sección también incluye:
 
-    - [Criterios de inclusión](/es/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)
+    - [Criterios de inclusión](/es/docs/MDN/Writing_guidelines/Criteria_for_inclusion)
 
       - : Proporciona criterios detallados para que el contenido se incluya en MDN Web Docs, el proceso de solicitud para agregar nueva documentación en MDN Web Docs y las expectativas y pautas para la parte que solicita.
 
 - [Nuestra guía de estilo de escritura](/es/docs/MDN/Writing_guidelines/Writing_style_guide)
 
-  - : La guía de estilo de escritura cubre el idioma y el estilo que usamos para escribir en MDN Web Docs. También cubre cómo [formatear ejemplos de código](/es/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide).
+  - : La guía de estilo de escritura cubre el idioma y el estilo que usamos para escribir en MDN Web Docs. También cubre cómo [formatear ejemplos de código](/es/docs/MDN/Writing_guidelines/Code_style_guide).
 
 - [Cómo escribir para MDN Web Docs](/es/docs/MDN/Writing_guidelines/Howto)
 

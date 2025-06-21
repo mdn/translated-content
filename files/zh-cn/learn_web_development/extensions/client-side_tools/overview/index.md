@@ -1,10 +1,9 @@
 ---
 title: 客户端工具概述
 slug: Learn_web_development/Extensions/Client-side_tools/Overview
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Overview
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}
+{{NextMenu("Learn_web_development/Extensions/Client-side_tools/Package_management", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本文中，我们提供了现代 web 工具的概述，有哪些工具可用，在 web 应用程序开发的生命周期中你将在哪里遇到它们，以及如何使用各个工具寻求帮助。
 

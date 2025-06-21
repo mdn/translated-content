@@ -1,10 +1,9 @@
 ---
 title: 有用的字符串方法
 slug: Learn_web_development/Core/Scripting/Useful_string_methods
-original_slug: Learn/JavaScript/First_steps/Useful_string_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Strings", "Learn_web_development/Core/Scripting/Arrays", "Learn_web_development/Core/Scripting")}}
 
 現在我們已經了解了字符串的基礎知識，讓我們開始思考我們可以使用內置方法對字符串執行哪些有用的操作，例如查找文本字符串的長度，連接和拆分字符串 ，將字符串中的一個字符替換為另一個字符，等等。
 
@@ -35,7 +34,7 @@ var string = "This is my string";
 
 **好的，在你腦袋燒壞之前先別擔心！**在這趟學習旅程中，關於這些大部分對於現在的你其實還不需要知道。不過有一些你可能會經常使用，我們將在這裡介紹。
 
-Let's enter some examples into a fresh console. We've provided one below (you can also [open this console](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) in a separate tab or window, or use the [browser developer console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) if you'd prefer).
+讓我們在[瀏覽器開發者控制台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)輸入一些範例。
 
 ```html hidden
 <!doctype html>

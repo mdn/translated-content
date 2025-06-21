@@ -9,7 +9,23 @@ l10n:
 
 La méthode statique **`Reflect.construct()`** agit comme l'opérateur [`new`](/fr/docs/Web/JavaScript/Reference/Operators/new) sous la forme d'une fonction. Elle est équivalente à `new cible(...args)` et permet d'indiquer une valeur différente pour [`new.target`](/fr/docs/Web/JavaScript/Reference/Operators/new.target).
 
-{{EmbedInteractiveExample("pages/js/reflect-construct.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: Reflect.construct()", "taller")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  this.sum = a + b + c;
+}
+
+const args = [1, 2, 3];
+const object1 = new func1(...args);
+const object2 = Reflect.construct(func1, args);
+
+console.log(object2.sum);
+// Expected output: 6
+
+console.log(object1.sum);
+// Expected output: 6
+```
 
 ## Syntaxe
 

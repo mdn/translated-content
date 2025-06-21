@@ -9,7 +9,17 @@ l10n:
 
 {{jsxref("Symbol")}} 값의 **`valueOf()`** 메서드는 심볼 값을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/symbol-prototype-valueof.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.prototype.valueOf()")}}
+
+```js interactive-example
+const symbol1 = Symbol("foo");
+
+console.log(typeof Object(symbol1));
+// Expected output: "object"
+
+console.log(typeof Object(symbol1).valueOf());
+// Expected output: "symbol"
+```
 
 ## 구문
 

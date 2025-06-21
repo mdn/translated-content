@@ -128,7 +128,7 @@ _変更なし。_
 
 ### HTTP
 
-- Cookie の **`SameSite`** ディレクティブを実装しました。[Set-Cookie](/ja/docs/Web/HTTP/Headers/Set-Cookie) および [HTTP cookies](/ja/docs/Web/HTTP/Cookies) をご覧ください ([Firefox バグ 795346](https://bugzil.la/795346))。
+- Cookie の **`SameSite`** ディレクティブを実装しました。[Set-Cookie](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie) および [HTTP cookies](/ja/docs/Web/HTTP/Guides/Cookies) をご覧ください ([Firefox バグ 795346](https://bugzil.la/795346))。
 
 ### ネットワーク
 

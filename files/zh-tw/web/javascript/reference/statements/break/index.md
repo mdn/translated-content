@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/break
 
 **break 陳述句**會中斷目前的迭代、{{jsxref("Statements/switch", "switch")}} 或 {{jsxref("Statements/label", "label")}} 陳述句，並將程式流程轉到被中斷之陳述句後的陳述句。
 
-{{EmbedInteractiveExample("pages/js/statement-break.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+
+```js interactive-example
+let i = 0;
+
+while (i < 6) {
+  if (i === 3) {
+    break;
+  }
+  i = i + 1;
+}
+
+console.log(i);
+// Expected output: 3
+```
 
 ## 語法
 

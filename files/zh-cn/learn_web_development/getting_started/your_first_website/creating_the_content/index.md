@@ -1,12 +1,9 @@
 ---
 title: HTML 基础
 slug: Learn_web_development/Getting_started/Your_first_website/Creating_the_content
-original_slug: Learn/Getting_started_with_the_web/HTML_basics
 l10n:
   sourceCommit: 88467d31d2ad7bdfade8b38ec69f6702fee080d1
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website")}}
 
@@ -43,7 +40,7 @@ My cat is very grumpy
 
 ![段落开始标签，以及高亮的 class 属性：class=editor-note](grumpy-cat-attribute-small.png)
 
-属性包含的是不想在真正的内容中出现的和元素有关的额外信息。本例中，`class` 是属性*名*，`editor-note` 是属性*值*。`class` 属性是可以用于定位元素（以及任何其他有相同 `class` 值的元素）的标识名称，以便进一步为元素指定样式或进行其他操作时使用。一些属性没有值，如 [`required`](/zh-CN/docs/Web/HTML/Attributes/required)。
+属性包含的是不想在真正的内容中出现的和元素有关的额外信息。本例中，`class` 是属性*名*，`editor-note` 是属性*值*。`class` 属性是可以用于定位元素（以及任何其他有相同 `class` 值的元素）的标识名称，以便进一步为元素指定样式或进行其他操作时使用。一些属性没有值，如 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)。
 
 有值的属性应该包含：
 
@@ -104,7 +101,7 @@ My cat is very grumpy
 - `<html></html>`——{{htmlelement("html")}} 元素。该元素包含整个页面的所有内容，有时候也称作根元素。它还包含 `lang` 属性，设置页面的主要语种。
 - `<head></head>`——{{htmlelement("head")}} 元素。该元素作为想在 HTML 页面中包含但不想向用户显示的内容的容器。包括想在搜索结果中显示的{{Glossary("keyword", "关键字")}}和页面描述、用于设置页面样式的 CSS、字符集声明等等。
 - `<meta charset="utf-8">`——该元素指明你的文档使用 UTF-8 字符编码，UTF-8 包括世界绝大多数书写语言的字符。它基本上可以处理任何文本内容。以它为编码还可以避免以后出现某些问题，没有理由再选用其他编码。
-- `<meta name="viewport" content="width=device-width">`——[视口元素](/zh-CN/docs/Web/CSS/Viewport_concepts#移动设备的视口)可以确保页面以视口宽度进行渲染，避免移动端浏览器以比视口更宽的宽度渲染内容，导致内容缩小。
+- `<meta name="viewport" content="width=device-width">`——[视口元素](/zh-CN/docs/Web/CSS/CSSOM_view/Viewport_concepts#移动设备的视口)可以确保页面以视口宽度进行渲染，避免移动端浏览器以比视口更宽的宽度渲染内容，导致内容缩小。
 - `<title></title>`——{{htmlelement("title")}} 元素。该元素设置页面的标题，显示在浏览器标签页上，也作为收藏网页的描述文字。
 - `<body></body>`——{{htmlelement("body")}} 元素。该元素包含期望让用户在访问页面时看到的*全部*内容，包括文本、图像、视频、游戏、可播放的音轨或其他内容。
 
@@ -118,7 +115,7 @@ My cat is very grumpy
 
 正如之前讲的那样，该元素通过在属性 `src` 中包含图像文件路径的地址，可在所在位置嵌入图像。
 
-该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Element/img#使用有实际意义的备用描述)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
+该元素还包括一个替换文字属性 `alt`。在 [`alt` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/img#使用有实际意义的备用描述)中，是图像的描述内容，用于当图像不能被用户看见时显示，不可见的原因可能是：
 
 1. 用户有视觉障碍。有严重视觉障碍的用户可以使用屏幕阅读器来朗读 alt 属性的内容。
 2. 有些错误使图像无法显示。可以试着故意将 `src` 属性里的路径改错。保存并刷新页面就可以在图像位置看到：

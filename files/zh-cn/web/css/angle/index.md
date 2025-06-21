@@ -7,9 +7,43 @@ l10n:
 
 {{CSSRef}}
 
-**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中被使用。
+**`<angle>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示以度（degrees）、百分度（gradians）、弧度（radians）或圈数（turns）表示的角度值。例如，它在 {{cssxref("&lt;gradient&gt;")}} 和 {{cssxref("transform")}} 的某些函数中被使用。
 
-{{EmbedInteractiveExample("pages/css/type-angle.html")}}
+{{InteractiveExample("CSS Demo: &lt;angle&gt;")}}
+
+```css interactive-example-choice
+transform: rotate(45deg);
+```
+
+```css interactive-example-choice
+transform: rotate(3.1416rad);
+```
+
+```css interactive-example-choice
+transform: rotate(-50grad);
+```
+
+```css interactive-example-choice
+transform: rotate(1.75turn);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This box can rotate to different angles.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #0118f3;
+  padding: 0.75em;
+  width: 180px;
+  height: 120px;
+  color: white;
+}
+```
 
 ## 语法
 
@@ -84,7 +118,7 @@ l10n:
 
 ## 参见
 
-- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Types)
+- [CSS 数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [`<gradient>`](/zh-CN/docs/Web/CSS/gradient) 类型
 - CSS 旋转变换：[`rotate()`](/zh-CN/docs/Web/CSS/transform-function/rotate)、[`rotate3d()`](/zh-CN/docs/Web/CSS/transform-function/rotate3d)、[`rotateX()`](/zh-CN/docs/Web/CSS/transform-function/rotateX)、[`rotateY()`](/zh-CN/docs/Web/CSS/transform-function/rotateY) 和 [`rotateZ()`](/zh-CN/docs/Web/CSS/transform-function/rotateZ)
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)

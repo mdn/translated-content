@@ -9,7 +9,21 @@ l10n:
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## 構文
 
@@ -24,7 +38,7 @@ typeof operand
 
 ## 解説
 
-以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Data_structures)のページも参照してください。
+以下は `typeof` が返す可能性がある値の一覧です。型とプリミティブの詳細については、[JavaScript のデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)のページも参照してください。
 
 | 型                                                                                                                                                                                              | 結果                              |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------- |

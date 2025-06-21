@@ -1,25 +1,11 @@
 ---
-title: 创建精美的信纸
+title: 挑战：创建精美的信纸
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
-original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
 如果你想给人留下好印象，把信写在一张精美的信纸上会是个不错的开始，在这个评估里我们希望你能创建一个在线模版来达到这样的效果。
-
-<table>
-  <tbody>
-    <tr>
-      <th scope="row">前提：</th>
-      <td>在开始这个评估之前你应该已经学习过这个模块里的所有其他文章。</td>
-    </tr>
-    <tr>
-      <th scope="row">目标：</th>
-      <td>测试对 CSS 盒模型和其他盒相关特性的掌握程度，比如实现背景等。</td>
-    </tr>
-  </tbody>
-</table>
 
 ## 起点
 
@@ -59,14 +45,10 @@ original_slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
 - 记住，你可以这样为较旧的浏览器创建一个后备方案：先写一个较旧的浏览器支持的后备声明，然后再接着写只有较新的浏览器才支持的声明。这样比较旧的浏览器会应用第一个声明而忽略掉第二个不支持的声明，与此同时比较新的浏览器会先应用第一个声明，然后用第二个声明把它覆盖掉。
 - 如果想的话你可以随意地用自己的图片来做这个评估。
 
-## 范例
+## 示例
 
 完成之后的信纸可能会像下面的截图这样：
 
 ![](letterhead.png)
-
-## 评估
-
-如果这个评估是一系列课程的一部分，你应该可以让你的老师或导师为你批改。如果你是自学，可以很容易地在 [discussion thread for this exercise](https://discourse.mozilla.org/t/creating-fancy-letterheaded-paper-assessment/24684/1) 或[Mozilla IRC](https://wiki.mozilla.org/IRC)的[#mdn](irc://irc.mozilla.org/mdn) IRC 频道回复得到批改指南。请先自己试着做——作弊学不到任何东西！
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}

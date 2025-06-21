@@ -9,7 +9,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webRequest
 
 Каждое событие запущено на определённой стадии запроса. Типичный порядок событий такой:![](webrequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после [HSTS](/ru/docs/Web/HTTP/Headers/Strict-Transport-Security) обновления, событие `onBeforeRedirect` будет запущено сразу же после `onBeforeRequest`.
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} Может быть запущен в любой момент во время запроса. Чреда событий может отличаться от приведённой выше: например, в Firefox, после [HSTS](/ru/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) обновления, событие `onBeforeRedirect` будет запущено сразу же после `onBeforeRequest`.
 
 Все события, кроме `onErrorOccurred`, могут принимать три аргумента в `addListener()`:
 

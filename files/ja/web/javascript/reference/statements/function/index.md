@@ -11,7 +11,16 @@ l10n:
 
 また、 {{jsxref("Function")}} のコンストラクターと{{jsxref("Operators/function", "関数式", "", 1)}}を使用して関数を定義することもできます。
 
-{{EmbedInteractiveExample("pages/js/statement-function.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Statement - Function", "shorter")}}
+
+```js interactive-example
+function calcRectArea(width, height) {
+  return width * height;
+}
+
+console.log(calcRectArea(5, 6));
+// Expected output: 30
+```
 
 ## 構文
 

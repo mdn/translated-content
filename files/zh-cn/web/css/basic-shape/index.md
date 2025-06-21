@@ -7,9 +7,58 @@ l10n:
 
 {{CSSRef}}
 
-**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
+**`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
 
-{{EmbedInteractiveExample("pages/css/type-basic-shape.html")}}
+{{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
+
+```css interactive-example-choice
+clip-path: inset(22% 12% 15px 35px);
+```
+
+```css interactive-example-choice
+clip-path: circle(6rem at 12rem 8rem);
+```
+
+```css interactive-example-choice
+clip-path: ellipse(115px 55px at 50% 40%);
+```
+
+```css interactive-example-choice
+clip-path: polygon(
+  50% 2.4%,
+  34.5% 33.8%,
+  0% 38.8%,
+  25% 63.1%,
+  19.1% 97.6%,
+  50% 81.3%,
+  80.9% 97.6%,
+  75% 63.1%,
+  100% 38.8%,
+  65.5% 33.8%
+);
+```
+
+```css interactive-example-choice
+clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 语法
 
@@ -100,13 +149,13 @@ polygon( <`fill-rule`>?, [ <length-percentage> <length-percentage> ]# )
 
 ### 路径语法
 
-{{cssxref("basic-shape/path","path()")}} 函数使用 SVG 的 {{SVGAttr("fill-rule")}} 和 SVG [路径定义](/zh-CN/docs/Web/SVG/Attribute/d)来定义一个形状。
+{{cssxref("basic-shape/path","path()")}} 函数使用 SVG 的 {{SVGAttr("fill-rule")}} 和 SVG [路径定义](/zh-CN/docs/Web/SVG/Reference/Attribute/d)来定义一个形状。
 
 ```plain
 path( <`fill-rule`>?, ]? <string> )
 ```
 
-必需的 `<string>` 是一个作为引用字符串的 [SVG 路径](/zh-CN/docs/Web/SVG/Attribute/d)。`path()` 函数不是有效的 {{cssxref("shape-outside")}} 属性值。
+必需的 `<string>` 是一个作为引用字符串的 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Attribute/d)。`path()` 函数不是有效的 {{cssxref("shape-outside")}} 属性值。
 
 ### 形状语法
 
@@ -116,7 +165,7 @@ path( <`fill-rule`>?, ]? <string> )
 shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 ```
 
-`from <coordinate-pair>` 参数表示第一个形状命令的起点，而 `<shape-command>` 则定义了一个或多个形状命令，这些命令类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Attribute/d#path_commands)。`shape()` 函数不是有效的 {{cssxref("shape-outside")}} 属性值。
+`from <coordinate-pair>` 参数表示第一个形状命令的起点，而 `<shape-command>` 则定义了一个或多个形状命令，这些命令类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#path_commands)。`shape()` 函数不是有效的 {{cssxref("shape-outside")}} 属性值。
 
 ## 描述
 
@@ -147,7 +196,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 
 - **两个形状均为 `polygon()` 类型**：如果它们使用相同的 `<fill-rule>` 并且具有相同数量的逗号分隔的坐标对，则对每个相应的值应用插值。
 
-- **两个形状均为 `path()` 类型**：如果两个形状中的路径字符串匹配[路径数据命令](/zh-CN/docs/Web/SVG/Attribute/d#path_commands)的数量、类型和顺序，则将每个参数作为 {{cssxref("&lt;number&gt;")}} 应用插值。
+- **两个形状均为 `path()` 类型**：如果两个形状中的路径字符串匹配[路径数据命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#path_commands)的数量、类型和顺序，则将每个参数作为 {{cssxref("&lt;number&gt;")}} 应用插值。
 
 - **两个形状均为 `shape()` 类型**：如果它们具有相同的命令关键字并且使用相同的 `<by-to>` 关键字，则对每个相应的值应用插值。如果 `shape()` 用于 {{cssxref("clip-path")}} 属性，则当它们还具有相同的 `<fill-rule>` 时，对这两个形状进行插值。
 

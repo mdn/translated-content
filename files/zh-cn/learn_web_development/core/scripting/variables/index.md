@@ -1,10 +1,9 @@
 ---
 title: 如何存储你需要的信息——变量
 slug: Learn_web_development/Core/Scripting/Variables
-original_slug: Learn/JavaScript/First_steps/Variables
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting")}}
 
 在读完之前的一些文章之后，你现在应该大概知道了 JavaScript 是什么，你能用它干什么，它是怎么跟其他 web 技术协同工作的，以及从上层来看，它有哪些主要特性。在本文中，我们将深入了解真正的基础知识，学习如何使用 JavaScript 最基础的构建单元——变量。
 
@@ -85,7 +84,7 @@ let myName;
 let myAge;
 ```
 
-在这里我们声明了两个变量 `myName` 和 `myAge`. 那么现在尝试输入这些代码到你的浏览器终端或者下面提供的 JavaScript 终端 (你也可以在另一个独立的标签页或窗口 [open this consol](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/variables/index.html) ). 此外，你也可以多声明几个变量。
+在这里，我们声明了 `myName` 和 `myAge` 两个变量。请尝试在 web 浏览器的控制台中输入这几行内容。然后，尝试创建一个（或两个）变量，并选择自己的名称。
 
 ```html hidden
 <!doctype html>

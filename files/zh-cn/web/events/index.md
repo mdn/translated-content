@@ -360,7 +360,7 @@ l10n:
       <td>清单</td>
       <td>
         <p>
-          与安装<a href="/zh-CN/docs/Web/Manifest">渐进式 web 应用清单</a>相关的事件。
+          与安装<a href="/zh-CN/docs/Web/Progressive_web_apps/Manifest">渐进式 web 应用清单</a>相关的事件。
         </p>
       </td>
       <td>
@@ -407,8 +407,8 @@ l10n:
         >、<a href="/zh-CN/docs/Web/API/TextTrack#事件"><code>TextTrack</code></a
         >、<a href="/zh-CN/docs/Web/API/TextTrackList#事件"
           ><code>TextTrackList</code></a
-        >、<a href="/zh-CN/docs/Web/HTML/Element/audio#事件">Element/audio</a>,
-        <a href="/zh-CN/docs/Web/HTML/Element/video#事件">Element/video</a> 上触发的事件。
+        >、<a href="/zh-CN/docs/Web/HTML/Reference/Elements/audio#事件">Element/audio</a>,
+        <a href="/zh-CN/docs/Web/HTML/Reference/Elements/video#事件">Element/video</a> 上触发的事件。
       </td>
     </tr>
     <tr>

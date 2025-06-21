@@ -5,12 +5,12 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 {{CSSRef}}
 
-**媒体查询**（**Media queries**）非常实用，尤其是当你想要根据设备的大致类型（如打印设备与带屏幕的设备）或者特定的特征和设备参数（例如屏幕分辨率和浏览器{{glossary("viewport", "视窗")}}宽度）来修改网站或应用程序时。
+**媒体查询**（**Media query**）非常实用，尤其是当你想要根据设备的大致类型（如打印设备与带屏幕的设备）或者特定的特征和设备参数（例如屏幕分辨率和浏览器{{glossary("viewport", "视口")}}宽度）来修改网站或应用程序时。
 
 媒体查询常被用于以下目的：
 
-- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at-rules](/zh-CN/docs/Web/CSS/At-rule) 用[CSS](/zh-CN/docs/Web/CSS) 装饰样式。
-- 用 `media=` 属性为{{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}和其他[HTML](/zh-CN/docs/Web/HTML)元素指定特定的媒体类型。如：
+- 有条件的通过 {{cssxref("@media")}} 和 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用 [CSS](/zh-CN/docs/Web/CSS) 装饰样式。
+- 用 `media=` 属性为{{HTMLElement("style")}}、{{HTMLElement("link")}}、{{HTMLElement("source")}}和其他 [HTML](/zh-CN/docs/Web/HTML) 元素指定特定的媒体类型。如：
 
 ```html
 <link rel="stylesheet" src="styles.css" media="screen" />

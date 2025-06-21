@@ -53,7 +53,7 @@ Java 是一個為了快速執行與安全型態而設計的基於類別的程式
 | 變數資料型態沒有宣告就可使用（動態定型，dynamic typing）。                                                                          | 變數資料型態必須宣告才可使用（靜態定型，static typing）。                                                                     |
 | 無法自動覆寫到硬碟。                                                                                                                | 無法自動覆寫到硬碟。                                                                                                          |
 
-更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) 。
+更多關於 JavaScript 和 Java 的差異比較，請參見 [Details of the Object Model](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) 。
 
 ## JavaScript 與 ECMAScript 規格
 

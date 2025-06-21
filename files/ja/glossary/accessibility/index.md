@@ -12,7 +12,7 @@ _ウェブアクセシビリティ_ (略語: **A11Y**、Accessibility の A か�
 ## 関連情報
 
 - [MDN 上 の アクセシビリティについてのリソース](/ja/docs/Web/Accessibility)
-- [MDN でアクセシビリティについて学ぶ](/ja/docs/Learn/Accessibility)
+- [MDN でアクセシビリティについて学ぶ](/ja/docs/Learn_web_development/Core/Accessibility)
 - [MDN 上の ARIA についてのドキュメント](/ja/docs/Web/Accessibility/ARIA)
 - [WAI-ARIA 勧告](https://www.w3.org/TR/wai-aria/)
 - [ウェブアクセシビリティ](https://en.wikipedia.org/wiki/Web_accessibility) (Wikipedia)

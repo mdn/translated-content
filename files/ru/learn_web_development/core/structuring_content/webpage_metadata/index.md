@@ -14,9 +14,9 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 В этой статье мы рассмотрим всё вышеперечисленное и многое другое, чтобы дать вам хорошую основу для работы с разметкой.
 
-| Предварительные требования: | Базовое знакомство с HTML , описанное в [Начало работы с HTML](/ru/docs/Learn/HTML/Introduction_to_HTML/Getting_started).              |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:                     | Узнать о заголовке HTML, его значении, важнейших элементах, которые содержатся в нём, и о том, как он может повлиять на HTML-документ. |
+| Предварительные требования: | Базовое знакомство с HTML , описанное в [Начало работы с HTML](/ru/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax). |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| Задача:                     | Узнать о заголовке HTML, его значении, важнейших элементах, которые содержатся в нём, и о том, как он может повлиять на HTML-документ.     |
 
 ## Что такое \<head>?
 
@@ -44,7 +44,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 </head>
 ```
 
-Однако на больших страницах блок \<head> может быть довольно объёмным. Попробуйте зайти на какие-нибудь из ваших любимых сайтов и посмотреть содержимое \<head> с помощью [инструментов разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Наша цель сейчас — не в том, чтобы показать вам, как использовать всё, что только можно добавить в head, а дать представление и научить вас, как использовать основные элементы. Давайте начнём.
+Однако на больших страницах блок \<head> может быть довольно объёмным. Попробуйте зайти на какие-нибудь из ваших любимых сайтов и посмотреть содержимое \<head> с помощью [инструментов разработчика](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools). Наша цель сейчас — не в том, чтобы показать вам, как использовать всё, что только можно добавить в head, а дать представление и научить вас, как использовать основные элементы. Давайте начнём.
 
 ## Название страницы (title)
 
@@ -199,25 +199,18 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- Для iPhone с Retina-экраном высокого разрешения: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- Для iPad первого и второго поколения: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- Для других случаев - обычный favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
@@ -260,7 +253,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 ## Основной язык HTML страницы
 
-Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
+Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Reference/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
 
 ```
 <html lang="en-US">

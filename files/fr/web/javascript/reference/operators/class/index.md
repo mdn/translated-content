@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/class
 
 Une **expression de classe** est un moyen de définir une classe avec ECMASCript 2015 (ES6). Semblable aux [expressions de fonctions](/fr/docs/Web/JavaScript/Reference/Operators/function), les expressions de classes peuvent être nommées ou anonymes. Si l'expression est nommée, le nom de la classe ne sera local que pour le corps de la fonction. Cette syntaxe n'est qu'un « sucre syntaxique » pour faciliter l'écriture du code, elle ne modifie en aucun cas le modèle d'héritage utilisé par JavaScript qui est un modèle à base de prototypes.
 
-{{EmbedInteractiveExample("pages/js/expressions-classexpression.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+
+```js interactive-example
+const Rectangle = class {
+  constructor(height, width) {
+    this.height = height;
+    this.width = width;
+  }
+  area() {
+    return this.height * this.width;
+  }
+};
+
+console.log(new Rectangle(5, 8).area());
+// Expected output: 40
+```
 
 ## Syntaxe
 

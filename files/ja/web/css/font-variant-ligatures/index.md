@@ -9,7 +9,44 @@ l10n:
 
 **`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
-{{EmbedInteractiveExample("pages/css/font-variant-ligatures.html")}}
+{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+
+```css interactive-example-choice
+font-variant-ligatures: normal;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: no-common-ligatures;
+```
+
+```css interactive-example-choice
+font-variant-ligatures: common-ligatures;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 ## 構文
 

@@ -9,7 +9,7 @@ slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 
 К каждому шагу прилагаются редактируемые live-примеры, с которыми можно поиграть, чтобы увидеть, как должна выглядеть игра на промежуточных этапах. Вы изучите основы использования элемента {{htmlelement("canvas")}} для реализации таких фундаментальных игровых механик, как рендеринг и перемещение изображений, обнаружение столкновений, механизмы управления, а также состояния выигрыша и проигрыша.
 
-Для извлечения максимальной пользы из этой серии статей необходимо иметь средние (или хотя бы базовые) знания языка [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics). После прохождения этого урока вы сможете создавать собственные простые браузерные игры.
+Для извлечения максимальной пользы из этой серии статей необходимо иметь средние (или хотя бы базовые) знания языка [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). После прохождения этого урока вы сможете создавать собственные простые браузерные игры.
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

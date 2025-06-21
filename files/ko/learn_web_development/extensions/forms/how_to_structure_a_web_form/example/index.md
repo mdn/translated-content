@@ -6,7 +6,7 @@ l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
 
-[HTML 폼 구성 방법](/ko/docs/Learn/Forms/How_to_structure_a_web_form)의 기본 결제 폼 예제 입니다.
+[HTML 폼 구성 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)의 기본 결제 폼 예제 입니다.
 
 ## 결제 폼
 

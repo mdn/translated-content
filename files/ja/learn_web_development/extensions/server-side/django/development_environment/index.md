@@ -37,7 +37,7 @@ Django は自分のコンピューターをセットアップするのはとて�
 
 Django 自体が提供する主なツールは、Django プロジェクトを作成して作業するための Python スクリプトと、ローカルの（つまり、外部のウェブサーバーではなく）Django ウェブアプリケーションをあなたのコンピューター上のウェブブラウザーでテストするための簡単な開発用ウェブサーバーです。
 
-開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための[テキストエディター](/ja/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors)や IDE、自動成型するためのリンター、などがあります。すでにテキストエディターがインストールされていると仮定しています。
+開発環境の一部を構成する他の周辺ツールがありますが、ここではカバーしません。これには、コードを編集するための[テキストエディター](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Available_text_editors)や IDE、自動成型するためのリンター、などがあります。すでにテキストエディターがインストールされていると仮定しています。
 
 ### Django の構成オプションとは
 
@@ -424,7 +424,7 @@ Git（と GitHub）は、コードを格納する最上位の「バケツ」と�
 
 最初に GitHub で無料アカウントを作成します。
 無料アカウントではプライベートリポジトリーを作成することはできませんが、_public_ リポジトリー ("repos") を好きなだけ作成することができます。
-次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
+次に、このチュートリアルの残りの部分で進化させる [ローカルライブラリーウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) を格納するために "django_local_library" という名前のリポジトリーを作成し、構成可能な状態にします。
 
 手順は次の通りです。
 

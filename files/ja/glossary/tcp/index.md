@@ -21,4 +21,4 @@ TCP の役割は、パケットがエラーなく信頼性高く配信される�
 
 3. 関連情報
 
-   1. [HTTP の概要](/ja/docs/Web/HTTP/Overview)
+   1. [HTTP の概要](/ja/docs/Web/HTTP/Guides/Overview)

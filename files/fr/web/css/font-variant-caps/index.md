@@ -7,7 +7,44 @@ slug: Web/CSS/font-variant-caps
 
 La propriété **`font-variant-caps`** permet de contrôler les glyphes utilisés pour représenter les lettres en capitales. Les scripts peuvent avoir différents glyphes de différentes tailles pour les différentes représentations des capitales et cette propriété permet de choisir une de ces formes.
 
-{{EmbedInteractiveExample("pages/css/font-variant-caps.html")}}
+{{InteractiveExample("CSS Demo: font-variant-caps")}}
+
+```css interactive-example-choice
+font-variant-caps: normal;
+```
+
+```css interactive-example-choice
+font-variant-caps: small-caps;
+```
+
+```css interactive-example-choice
+font-variant-caps: all-small-caps;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+```
 
 Quand une fonte inclut des glyphes de lettres capitales avec différents corps (taille), cette propriété sélectionne la plus appropriée. Si les très petites capitales ne sont pas toutes présentes pour cette fonte, ce seront les petites capitales qui seront utilisées. Si celles-ci ne sont pas présentes, le moteur les synthétisera à partir des glyphes des capitales.
 

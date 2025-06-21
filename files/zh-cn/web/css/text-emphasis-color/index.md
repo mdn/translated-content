@@ -9,7 +9,39 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-color`** 设置强调色。这个值也可以使用简写属性 {{cssxref("text-emphasis")}} 来设置。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis-color.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis-color")}}
+
+```css interactive-example-choice
+text-emphasis-color: currentColor;
+```
+
+```css interactive-example-choice
+text-emphasis-color: red;
+```
+
+```css interactive-example-choice
+text-emphasis-color: rgba(90, 200, 160, 0.8);
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-emphasis: filled;
+}
+```
 
 ## 语法
 

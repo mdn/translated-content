@@ -7,7 +7,56 @@ slug: Web/CSS/shape-margin
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`shape-margin`** 用于设定由{{cssxref("shape-outside")}}创建的 CSS 形状的外边距。
 
-{{EmbedInteractiveExample("pages/css/shape-margin.html")}}
+{{InteractiveExample("CSS Demo: shape-margin")}}
+
+```css interactive-example-choice
+shape-margin: 0;
+```
+
+```css interactive-example-choice
+shape-margin: 20px;
+```
+
+```css interactive-example-choice
+shape-margin: 1em;
+```
+
+```css interactive-example-choice
+shape-margin: 5%;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  margin: 20px;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background-color: rebeccapurple;
+  shape-outside: circle(50%);
+}
+```
 
 这个外边距可以让你调整（浮动元素的）形状边缘与环绕内容之间的距离。
 

@@ -9,7 +9,32 @@ slug: Web/CSS/color-scheme
 
 操作系统颜色方案的常见选择为“亮色”和“暗色”，或“日间模式”和“夜间模式”。当用户选择其中一种颜色方案时，操作系统会对用户界面进行调整，包括表单控件、滚动条和 CSS 系统颜色的使用值。
 
-{{EmbedInteractiveExample("pages/css/color-scheme.html")}}
+{{InteractiveExample("CSS Demo: color-scheme")}}
+
+```css interactive-example-choice
+color-scheme: normal;
+```
+
+```css interactive-example-choice
+color-scheme: dark;
+```
+
+```css interactive-example-choice
+color-scheme: light;
+```
+
+```html interactive-example
+<section class="default-example container" id="default-example">
+  <textarea id="example-element">Text Area</textarea>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 50%;
+}
+```
 
 ## 语法
 

@@ -13,17 +13,110 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 物件接着就会在容器内换行。在接下来的例子里，我有 10 个`160px`的`flex-basis`物件，它们都具备伸展和收缩能力。一旦第一行达到了没有足够空间放置额外 160 像素物件的点，一个新的弹性行就会被建立，一直这样直到所有的物件被放置。因为物件可以伸展，它们会扩展大于 160 像素从而完整地填充一行。如果在最后一行只有 1 个物件，它就将拉长了充满整行。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-wrap.html", '100%', 650)}}
+```html live-sample___row-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___row-wrap
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+{{EmbedLiveSample("row-wrap")}}
 
 我们可以看到相同的事情也发生在列上。容器会需要有一个高度让物件可以开始换行并且制造新的列，并且物件会拉伸高度来填满每一个列。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/column-wrap.html", '100%', 810)}}
+```html live-sample___column-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___column-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 80px;
+}
+```
+
+{{EmbedLiveSample("column-wrap", "", "320px")}}
 
 ## 包装和弹性方向
 
 当结合 `flex-direction` 属性，包装就如你所期待的方式工作。如果 `flex-direction` 被设置成 row-reverse 那么物件就会从容器的底边开始并且以行的反向顺序堆叠自身。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/row-reverse-wrap.html", '100%', 750)}}
+```html live-sample___row-reverse-wrap
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___row-reverse-wrap
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  width: 500px;
+}
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 160px;
+}
+```
+
+{{EmbedLiveSample("row-reverse-wrap")}}
 
 注意反向只能发生在行内、行的方向。我们从右面开始然后跳到第二行再从右边开始。我们没有在两个方向上都反向，从容器底部上来的反向！
 
@@ -35,7 +128,37 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 如果你想在二维方向上布局，那么你很可能想要网格布局。我们可以比较我们上面的行换行例子和 CSS 网格版本的布局来看一下区别。一下实时的例子使用 CSS 网格布局来构建一个布局，它具有至少 160 像素的列的布局，在所有列之间分配额外的空间。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/grid-example.html", '100%', 700)}}
+```html live-sample___grid-example
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___grid-example
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  width: 500px;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("grid-example")}}
 
 这就是一维和二维布局的区别。在一维的方式里就像弹性盒子，我们仅仅控制行或者列。在二维布局里就像网格，我们同时控制两个。如果你想按行分布空间，使用弹性盒子。如果不是，使用网格。
 
@@ -45,7 +168,42 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 这里我有设置 `flex-grow` 和 `flex-shrink` 为 `0` 来使固定弹性物件，并且接着使用百分比来控制弹性，正如我们在浮动布局里所使用的那样。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/flex-grid.html", '100%', 650)}}
+```html live-sample___flex-grid
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+  <div>Four</div>
+  <div>Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+</div>
+```
+
+```css live-sample___flex-grid
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 33.3333%;
+}
+```
+
+{{EmbedLiveSample("flex-grid")}}
 
 如果你需要弹性物件在坐标轴上对齐，用这样的方法来控制宽度就能达到这个效果。在大多数的情况下，向弹性物件增加款宽度的做法演示了你可能会比将组件切换成网格布局提供的更好体验。
 
@@ -57,7 +215,42 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 正是这个间隔属性的需求，一旦实现，将为我们解决问题。适当的间隙只发生在物件的内边缘。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/gaps.html", '100%', 830)}}
+```html live-sample___gaps
+<div class="wrapper">
+  <div class="box">
+    <div>One</div>
+    <div>Two</div>
+    <div>Three</div>
+    <div>Four</div>
+    <div>Five</div>
+    <div>Six</div>
+    <div>Seven</div>
+    <div>Eight</div>
+    <div>Nine</div>
+    <div>Ten</div>
+  </div>
+</div>
+```
+
+```css live-sample___gaps
+.wrapper {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.box > * {
+  flex: 1 1 160px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+```
+
+{{EmbedLiveSample("gaps", "", "220px")}}
 
 ## 折叠物件
 
@@ -72,7 +265,44 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 > [!NOTE]
 > 对下面的两个例子使用 Firefox 浏览器，因为 Chrome 和 Safari 会把折叠处理为隐藏。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/visibility-collapse.html", '100%', 650)}}
+```html hidden live-sample___visibility-collapse
+<p>
+  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+</p>
+```
+
+```html live-sample___visibility-collapse
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div class="collapse">Three <br />has <br />extra <br />text</div>
+</div>
+```
+
+```css live-sample___visibility-collapse
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  width: 600px;
+}
+.box > * {
+  flex: 1 1 200px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+}
+.collapse {
+  visibility: collapse;
+}
+```
+
+```css hidden live-sample___visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
+}
+```
+
+{{EmbedLiveSample("visibility-collapse")}}
 
 当处理多行弹性容器时你会需要理解包装会在折叠*后*被重做。所以浏览器需要重做包装的行为来计算新的还留在行内方向里的被折叠物件的空间。
 
@@ -80,7 +310,55 @@ Flexbox 被设计为一维的布局工具，这意味着在处理元素布局方
 
 我已经在下一个实时例子里构建了这样的表现。你可以看到基于折叠物件的位置，伸展改变了它们所在的行。如果你加入更多的内容到第二个物件里，一旦获得了足够多的内容它就改变了行。然后首行仅仅成为和单行文本一样的高度。
 
-{{EmbedGHLiveSample("css-examples/flexbox/wrapping/wrapped-visibility-collapse.html", '100%', 750)}}
+```html hidden live-sample___wrapped-visibility-collapse
+<p>
+  <label><input type="checkbox" /> Toggle <code>visibility</code> value</label>
+</p>
+```
+
+```html live-sample___wrapped-visibility-collapse
+<div class="box">
+  <div>One</div>
+  <div>Two is the width of this sentence.</div>
+  <div class="collapse">Three <br />is <br />five <br />lines <br />tall.</div>
+  <div>Four</div>
+  <div>Five<br />Five</div>
+  <div>Six</div>
+  <div>Seven</div>
+  <div>Eight</div>
+  <div>Nine</div>
+  <div>Ten</div>
+  <div>Eleven is longer</div>
+</div>
+```
+
+```css live-sample___wrapped-visibility-collapse
+.box {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.box > * {
+  padding: 10px;
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+  min-width: 50px;
+}
+.collapse {
+  visibility: collapse;
+}
+```
+
+```css hidden live-sample___wrapped-visibility-collapse
+p:has(:checked) + div .collapse {
+  visibility: visible;
+}
+```
+
+{{EmbedLiveSample("wrapped-visibility-collapse", "", "300")}}
 
 如果这对你的布局造成了麻烦，可能就需要重新考虑这个结构，比如，将每一行放置到分开的弹性容器里从而它们不会跨行。
 

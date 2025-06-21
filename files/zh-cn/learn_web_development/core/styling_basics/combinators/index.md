@@ -1,10 +1,9 @@
 ---
 title: 关系选择器
 slug: Learn_web_development/Core/Styling_basics/Combinators
-original_slug: Learn/CSS/Building_blocks/Selectors/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
@@ -43,7 +42,18 @@ body article p
 
 下面的示例中，我们只会匹配处于带有`.box`类的元素里面的`<p>`元素。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/descendant.html", '100%', 500)}}
+```html live-sample___descendant
+<div class="box"><p>Text in .box</p></div>
+<p>Text not in .box</p>
+```
+
+```css live-sample___descendant
+.box p {
+  color: red;
+}
+```
+
+{{EmbedLiveSample("descendant")}}
 
 ## 子代关系选择器
 
@@ -57,7 +67,26 @@ article > p
 
 如果你移去指定子代选择器的`>`的话，你最后得到的是后代选择器，所有的`<li>`会有个红色的边框。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
+```html live-sample___child
+<ul>
+  <li>Unordered item</li>
+  <li>
+    Unordered item
+    <ol>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ol>
+  </li>
+</ul>
+```
+
+```css live-sample___child
+ul > li {
+  border-top: 5px solid red;
+}
+```
+
+{{EmbedLiveSample("child")}}
 
 ## 邻接兄弟
 
@@ -71,7 +100,36 @@ p + img
 
 如果你往`<h1>`和`<p>`之间插入其他的某个元素，例如`<h2>`，你将会发现，段落不再与选择器匹配，因而不会应用元素邻接时的前景和背景色。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
+```html live-sample___adjacent
+<article>
+  <h1>A heading</h1>
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+</article>
+```
+
+```css live-sample___adjacent
+body {
+  font-family: sans-serif;
+}
+
+h1 + p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+{{EmbedLiveSample("adjacent", "", "220px")}}
 
 ## 通用兄弟
 
@@ -83,7 +141,29 @@ p ~ img
 
 在下面的示例中，我们选中了所有的 `<h1>`之后的`<p>`元素，虽然文档中还有个 `<div>`，其后的`<p>`还是被选中了。
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+```html live-sample___general
+<article>
+  <h1>A heading</h1>
+  <p>I am a paragraph.</p>
+  <div>I am a div</div>
+  <p>I am another paragraph.</p>
+</article>
+```
+
+```css live-sample___general
+body {
+  font-family: sans-serif;
+}
+
+h1 ~ p {
+  font-weight: bold;
+  background-color: #333;
+  color: #fff;
+  padding: 0.5em;
+}
+```
+
+{{EmbedLiveSample("general", "", "220px")}}
 
 ## 使用关系选择器
 
@@ -100,7 +180,7 @@ ul > li[class="a"] {
 
 ## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)。
 
 ## 继续学习
 

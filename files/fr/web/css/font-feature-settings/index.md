@@ -7,7 +7,68 @@ slug: Web/CSS/font-feature-settings
 
 La propriété **`font-feature-settings`** permet de contrôler les fonctionnalités typographiques des polices OpenType.
 
-{{EmbedInteractiveExample("pages/css/font-feature-settings.html")}}
+{{InteractiveExample("CSS Demo: font-feature-settings")}}
+
+```css interactive-example-choice
+font-feature-settings: normal;
+```
+
+```css interactive-example-choice
+font-feature-settings: "liga" 0;
+```
+
+```css interactive-example-choice
+font-feature-settings: "tnum";
+```
+
+```css interactive-example-choice
+font-feature-settings: "smcp", "zero";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>Difficult waffles</p>
+    <table>
+      <tr>
+        <td><span class="tabular">0O</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">3.14</span></td>
+      </tr>
+      <tr>
+        <td><span class="tabular">2.71</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  font-family: "Fira Sans";
+  src:
+    local("FiraSans-Regular"),
+    url("/shared-assets/fonts/FiraSans-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+section {
+  font-family: "Fira Sans", sans-serif;
+  margin-top: 10px;
+  font-size: 1.5em;
+}
+
+#example-element table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabular {
+  border: 1px solid;
+}
+```
 
 > [!NOTE]
 > Lorsque c'est possible, les auteurs devraient utiliser la propriété raccourcie {{cssxref("font-variant")}} ou l'une des propriétés détaillées correspondantes parmi {{cssxref("font-variant-ligatures")}}, {{cssxref("font-variant-caps")}}, {{cssxref("font-variant-east-asian")}}, {{cssxref("font-variant-alternates")}}, {{cssxref("font-variant-numeric")}} ou {{cssxref("font-variant-position")}}.

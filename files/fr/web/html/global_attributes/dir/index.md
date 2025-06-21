@@ -7,7 +7,21 @@ slug: Web/HTML/Global_attributes/dir
 
 L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`dir`** est un attribut à valeur contrainte qui indique la direction du texte contenu dans l'élément.
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-dir.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+
+```html interactive-example
+<p dir="rtl">
+  This paragraph is in English but incorrectly goes right to left.
+</p>
+<p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+
+<hr />
+
+<p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+<p dir="auto">
+  هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.
+</p>
+```
 
 Les valeurs autorisées pour cet attribut sont :
 

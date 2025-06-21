@@ -2,14 +2,26 @@
 title: Date.prototype.setMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`setMilliseconds()`** メソッドは、地方時に基づき、指定された日時の「ミリ秒」を設定します。
+**`setMilliseconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、地方時に基づき、指定された日時の「ミリ秒」を設定します。
 
-{{EmbedInteractiveExample("pages/js/date-setmilliseconds.html")}}
+{{InteractiveExample("JavaScript デモ: Date.prototype.setMilliseconds()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+console.log(event.getMilliseconds());
+// 予想される結果: 0
+
+event.setMilliseconds(456);
+
+console.log(event.getMilliseconds());
+// 予想される結果: 456
+```
 
 ## 構文
 
@@ -24,7 +36,7 @@ setMilliseconds(millisecondsValue)
 
 ### 返値
 
-協定世界時 (UTC) 1970 年 1 月 1 日 00:00:00 から更新された日時までの間のミリ秒単位の数値。
+その場で {{jsxref("Date")}} オブジェクトを変更し、新しい[タイムスタンプ](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)を返します。 `millisecondsValue` が `NaN` （または `undefined` など、 `NaN` に[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#数値への変換)されるその他の値）の場合、日付は[無効な日時](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)に設定され、 `NaN` が返されます。
 
 ## 解説
 

@@ -285,9 +285,9 @@ log("주 프로그램 종료");
 
 - [심층 탐구: 마이크로태스크와 JavaScript 런타임 환경](/ko/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("queueMicrotask()")}}
-- [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous)
-  - [일반적인 비동기 프로그래밍 개념](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [비동기 JavaScript 소개](/ko/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - [협조적인 비동기 JavaScript: 타임아웃과 인터벌](/ko/docs/Learn/JavaScript/Asynchronous)
-  - [프로미스와 함께하는 우아한 비동기 프로그래밍](/ko/docs/Learn/JavaScript/Asynchronous/Promises)
-  - [올바른 접근법 선택하기](/ko/docs/Learn/JavaScript/Asynchronous)
+- [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS)
+  - [일반적인 비동기 프로그래밍 개념](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [비동기 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing)
+  - [협조적인 비동기 JavaScript: 타임아웃과 인터벌](/ko/docs/Learn_web_development/Extensions/Async_JS)
+  - [프로미스와 함께하는 우아한 비동기 프로그래밍](/ko/docs/Learn_web_development/Extensions/Async_JS/Promises)
+  - [올바른 접근법 선택하기](/ko/docs/Learn_web_development/Extensions/Async_JS)

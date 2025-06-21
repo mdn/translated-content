@@ -5,7 +5,7 @@ slug: Web/API/CSSImportRule/layerName
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSImportRule")}} 接口的 **`layerName`** 只读属性返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)创建的层叠层的名称。
+{{domxref("CSSImportRule")}} 接口的 **`layerName`** 只读属性返回由 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)创建的层叠层的名称。
 
 如果创建的层是匿名的，则字符串为空（`""`），如果没有创建层，则为 `null` 对象。
 

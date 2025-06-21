@@ -31,7 +31,7 @@ Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume
 - Sur les évènements de la souris, l'attribut [`MouseEvent.buttons`](/fr/docs/Web/API/MouseEvent) pour interroger l'état des boutons de la souris, a été implémenté.
 - Sur les évènements du clavier, l'attribut [KeyboardEvent.location](/fr/docs/Web/API/KeyboardEvent#attributes_location) pour interroger l'emplacement de la clé (standard, à gauche ou à droite de la touche de modification, dans le pavé numérique), a été implémenté ([bug Firefox 166240](https://bugzil.la/166240)).
 - Le résultat de KeyboardEvent.keyCode a été calculé à partir de meilleures règles qui étaient presque identiques sous Windows/Linux/Mac. Et désormais elles sont disponibles sur certaines configurations de clavier qui n'ont pas la disposition ASCII sur Linux et Mac, comme l'arabe, le cyrillique, thaï et ainsi de suite. Voir [le document des codes pour les touches virtuelles](/fr/docs/Web/API/KeyboardEvent#virtual_key_codes).
-- La méthode [`range.detach()`](/fr/docs/Web/API/range/detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
+- La méthode [`range.detach()`](/fr/docs/Web/API/Range/detach) a été tranformée en no-op et sera probablement supprimée dans le futur.
 - La méthode `HTMLVideoElement.mozHasAudio()` a été implémentée. Elle indique si une piste audio est associée à un élément vidéo. ([bug Firefox 480376](https://bugzil.la/480376))
 - L'API `Performance` a une nouvelle méthode, `now()`, supportant les horloges haute résolution du type de `DOMHighResTimeStamp`. ([bug Firefox 539095](https://bugzil.la/539095)).
 - L'[API WebSMS](/fr/docs/API/WebSMS) a été mise à jour et supporte à présent l'attribut `read` indiquant si un SMS est lu ou non.

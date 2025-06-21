@@ -3,14 +3,12 @@ title: "Window: setInterval() メソッド"
 short-title: setInterval()
 slug: Web/API/Window/setInterval
 l10n:
-  sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
 {{APIRef("HTML DOM")}}
 
 **`setInterval()`** は {{domxref("Window")}} インターフェイスのメソッドで、一定の間隔を置いて関数やコードスニペットを繰り返し呼び出します。
-
-このメソッド、インターバルを一意に識別するインターバル ID を返します。よって {{domxref("Window.clearInterval", "clearInterval()")}} を呼び出して、後でインターバルを削除できます。
 
 ## 構文
 
@@ -40,14 +38,16 @@ setInterval(func, delay, arg1, arg2, /* …, */ argN)
 
 ### 返値
 
-返値 `intervalID` は 0 ではない正の整数値で、 `setInterval()` を呼び出して作成したタイマーを識別します。この値を {{domxref("Window.clearInterval", "clearInterval()")}} へ渡せば、インターバルを取り消すことができます。
+`setInterval()` メソッドは、呼び出しによって作成されたインターバルタイマーを一意に識別する正の整数（通常は 1 から 2,147,483,647 の範囲）を返します。この識別子は、よく「インターバル ID」と呼ばれ、 {{domxref("Window.clearInterval", "clearInterval()")}} に渡すことで、指定した関数の反復実行を停止することができます。
 
-`setInterval()` と {{domxref("Window.setTimeout", "setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("Window.clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることを意識すると役に立つでしょう。
-ただし明快さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
+同じグローバル環境（特定のウィンドウやワーカーなど）では、元のタイマーがアクティブである限り、インターバル ID は確実に一意となりあり、新しいインターバルタイマーには再利用されません。ただし、グローバル環境が異なると、それぞれ独立したインターバル ID のプールが管理されます。
+
+`setInterval()` と {{domxref("Window.setTimeout", "setTimeout()")}} は同じ ID プールを共有しており、 `clearInterval()` と {{domxref("Window.clearTimeout", "clearTimeout()")}} は技術的に入れ替えて使用できることに注意してください。
+ただし明確さのために、コードを整備するときは混乱を避けるため、常に一致させるようにするべきです。
 
 > [!NOTE]
 > 引数 `delay` は、符号付き 32 ビット整数に変換されます。
-> IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms に制限されます。
+> IDL における符号付き整数の定義によって、`delay` は事実上 2147483647ms、およそ 24.8 日に制限されます。
 
 ## 例
 
@@ -76,8 +76,8 @@ function myCallback(a, b) {
 <div id="my_box">
   <h3>Hello World</h3>
 </div>
-<button id="start">Start</button>
-<button id="stop">Stop</button>
+<button id="start">開始</button>
+<button id="stop">停止</button>
 ```
 
 #### CSS
@@ -95,13 +95,11 @@ function myCallback(a, b) {
 
 ```js
 // intervalID を格納する変数
-let nIntervId;
+let intervalId;
 
 function changeColor() {
   // 既にインターバルがセットアップされているかどうかを検査
-  if (!nIntervId) {
-    nIntervId = setInterval(flashText, 1000);
-  }
+  intervalId ??= setInterval(flashText, 1000);
 }
 
 function flashText() {
@@ -110,9 +108,9 @@ function flashText() {
 }
 
 function stopTextColor() {
-  clearInterval(nIntervId);
+  clearInterval(intervalId);
   // 変数から intervalID を解放
-  nIntervId = null;
+  intervalId = null;
 }
 
 document.getElementById("start").addEventListener("click", changeColor);
@@ -144,10 +142,10 @@ myArray.myMethod(1); // "one" と表示
 setTimeout(myArray.myMethod, 1000); // "[object Window]" と 1 秒後に表示
 setTimeout(myArray.myMethod, 1500, "1"); // "undefined" と 1.5 秒後に表示
 
-// Passing the 'this' object with .call won't work
-// because this will change the value of this inside setTimeout itself
-// while we want to change the value of this inside myArray.myMethod.
-// In fact, it will be an error because setTimeout code expects this to be the window object:
+// 'this' オブジェクトを .call で渡しても動作しません。
+// これは、 myArray.myMethod 内の this の値を変更したいのに、
+// setTimeout 自体の中で this の値が変更されてしまうからです。
+// 実際、setTimeout のコードはこれがウィンドウオブジェクトであることを期待しているため、エラーになります。
 setTimeout.call(myArray, myArray.myMethod, 2000); // エラー: "NS_ERROR_XPC_BAD_OP_ON_WN_PROTO: Illegal operation on WrappedNative prototype object"
 setTimeout.call(myArray, myArray.myMethod, 2500, 2); // 同じエラー
 ```
@@ -164,7 +162,7 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 
 `setInterval()` 関数は一般に、アニメーションのように何度も実行される関数のために待ち時間を設定するのに使われます。 {{domxref("Window.clearInterval", "clearInterval()")}} を使ってインターバルを取り消すことができます。
 
-指定時間後に*一度*だけ関数を呼び出したい場合には、　{{domxref("Window.setTimeout", "setTimeout()")}} を使用してください。
+指定時間後に一度だけ関数を呼び出したい場合には、 {{domxref("Window.setTimeout", "setTimeout()")}} を使用してください。
 
 ### 待ち時間の制約
 
@@ -200,7 +198,7 @@ IE に対応する必要がある場合は、[`Function.prototype.bind()`](/ja/d
 
 ## 関連情報
 
-- [core-js にある `setInterval` のポリフィルで、コールバックに引数を渡すことができるもの](https://github.com/zloirock/core-js#settimeout-and-setinterval)
+- [`setInterval` のポリフィルで、コールバックに引数を渡すことができるもの (`core-js`)](https://github.com/zloirock/core-js#settimeout-and-setinterval)
 - {{domxref("Window.clearInterval()")}}
 - {{domxref("WorkerGlobalScope.setInterval()")}}
 - {{domxref("Window.setTimeout()")}}

@@ -149,4 +149,4 @@ p {
   - [`text-transform`](/ja/docs/Web/CSS/text-transform)
 
 - [SVG](/ja/docs/Web/SVG) の {{SVGAttr("text-rendering")}} 属性
-- [SVG と CSS](/ja/docs/Web/SVG/Tutorial/SVG_and_CSS)
+- [SVG と CSS](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_and_CSS)

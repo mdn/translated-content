@@ -43,7 +43,7 @@ l10n:
 
 - **2진수** — 10진수를 0과 1를 이용해 나타내는 데이터 타입입니다.
 - **8진수** — 10진수를 0부터 7까지의 수를 이용해 나타내는 데이터 타입입니다.
-- **16진수** — 10진수를 0부터 15까지의 수(1\~10, A\~F)를 이용해 나타내는 데이터 타입입니다. [CSS의 색상](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
+- **16진수** — 10진수를 0부터 15까지의 수(1\~10, A\~F)를 이용해 나타내는 데이터 타입입니다. [CSS의 색상](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#hexadecimal_values)을 지정할 때 쉽게 볼 수 있습니다.
 
 **어려워서 힘들다고 느끼기 전에, 잠시 멈추세요!** 시작하기 위해서 우리는 이제부터 10진수만 사용하도록 하겠습니다. 다른 유형에 대해 생각할 필요가 없습니다.
 
@@ -91,7 +91,7 @@ twoDecimalPlaces;
 
 ### 숫자 데이터 타입으로 변환하기
 
-때로는 계산을 수행하기 어렵게 문자열 형식으로 숫자가 저장된 경우가 있습니다. 주로 [입력 폼](/ko/docs/Learn/Forms)의 [입력 타입이 텍스트](/ko/docs/Web/HTML/Element/input/text)인 경우에 발생합니다. 이러한 경우에는 문자열 값을 [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 생성자로 전달하면 같은 숫자를 나타내는 숫자 데이터 타입으로 변환할 수 있습니다.
+때로는 계산을 수행하기 어렵게 문자열 형식으로 숫자가 저장된 경우가 있습니다. 주로 [입력 폼](/ko/docs/Learn_web_development/Extensions/Forms)의 [입력 타입이 텍스트](/ko/docs/Web/HTML/Element/input/text)인 경우에 발생합니다. 이러한 경우에는 문자열 값을 [`Number()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number) 생성자로 전달하면 같은 숫자를 나타내는 숫자 데이터 타입으로 변환할 수 있습니다.
 
 예를 들어, 콘솔에 다음과 같이 입력해보세요.
 
@@ -190,7 +190,7 @@ num2 + num1 / 8 + 2;
 
 ## 증감 연산자
 
-가끔은 반복해서 숫자 변수의 값을 1 씩 더하거나 빼고 싶을 때가 있습니다. 이럴 때는 증가(`++`) 연산자와 감소(`--`) 연산자를 사용하면 편리합니다. 우리는 [JavaScript 첫 입문](/ko/docs/Learn/JavaScript/First_steps/A_first_splash) 문서에서 `guessCount` 변수에 1을 추가하여 매 턴마다 사용자의 남은 추측 횟수를 추적할 때 ++를 사용했습니다.
+가끔은 반복해서 숫자 변수의 값을 1 씩 더하거나 빼고 싶을 때가 있습니다. 이럴 때는 증가(`++`) 연산자와 감소(`--`) 연산자를 사용하면 편리합니다. 우리는 [JavaScript 첫 입문](/ko/docs/Learn_web_development/Core/Scripting/A_first_splash) 문서에서 `guessCount` 변수에 1을 추가하여 매 턴마다 사용자의 남은 추측 횟수를 추적할 때 ++를 사용했습니다.
 
 ```js
 guessCount++;
@@ -344,6 +344,6 @@ function updateBtn() {
 다음 글에서는 텍스트와 JavaScript에서 텍스트를 조작하는 방법에 대해 알아보겠습니다.
 
 > [!NOTE]
-> 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_dates), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators) 문서에서 시작하기 좋습니다.
+> 수학을 좋아하고 JavaScript에서 수학이 어떻게 구현되는지 더 자세히 알고 싶으시다면 MDN의 메인 JavaScript 섹션에서 더 자세한 내용을 확인할 수 있습니다. [숫자와 날짜](/ko/docs/Web/JavaScript/Guide/Numbers_and_strings), [표현식 및 연산자](/ko/docs/Web/JavaScript/Guide/Expressions_and_operators) 문서에서 시작하기 좋습니다.
 
 {{PreviousMenuNext("Learn/JavaScript/First_steps/Variables", "Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps")}}

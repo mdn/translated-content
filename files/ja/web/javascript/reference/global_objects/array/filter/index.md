@@ -9,7 +9,16 @@ l10n:
 
 **`filter()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された配列の中から指定された関数で実装されているテストに合格した要素だけを抽出した[シャローコピー](/ja/docs/Glossary/Shallow_copy)を作成します。
 
-{{EmbedInteractiveExample("pages/js/array-filter.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.filter()", "shorter")}}
+
+```js interactive-example
+const words = ["spray", "elite", "exuberant", "destruction", "present"];
+
+const result = words.filter((word) => word.length > 6);
+
+console.log(result);
+// Expected output: Array ["exuberant", "destruction", "present"]
+```
 
 ## 構文
 

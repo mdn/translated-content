@@ -44,7 +44,7 @@ l10n:
 
 ### 関連トピック
 
-- [サーバーからのデータ取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [サーバーからのデータ取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [JavaScript](/ja/docs/Web/JavaScript)
 - [WebSocket](/ja/docs/Web/API/WebSockets_API)
 

@@ -27,7 +27,7 @@ l10n:
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
+> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

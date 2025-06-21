@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
+**`<color-interpolation-method>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示用于在 {{CSSXref("&lt;color&gt;")}} 值之间插值的[色彩空间](/zh-CN/docs/Glossary/Color_space)。它可用于覆盖像 {{CSSXref("color_value/color-mix", "color-mix()")}} 和 {{CSSXref("gradient/linear-gradient", "linear-gradient()")}} 等与颜色相关的函数符号所用的默认插值色彩空间。
 
 在对 `<color>` 值插值时，插值色彩空间默认为 `oklab`。
 

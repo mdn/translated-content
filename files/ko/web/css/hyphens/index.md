@@ -7,7 +7,34 @@ slug: Web/CSS/hyphens
 
 [CSS](/ko/docs/Web/CSS) **`hyphens`** 속성은 여러 줄에 걸치는 텍스트에서 단어에 붙임표를 추가하는 방식을 설정합니다. 붙임표를 아예 방지할 수도 있고, 수동으로 지정한 곳에서만 발생하도록 나타낼 수도 있으며, 브라우저가 자동으로 적절한 곳에 붙임표를 삽입하도록 허용할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/css/hyphens.html")}}
+{{InteractiveExample("CSS Demo: hyphens")}}
+
+```css interactive-example-choice
+hyphens: none;
+```
+
+```css interactive-example-choice
+hyphens: manual;
+```
+
+```css interactive-example-choice
+hyphens: auto;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">An extra­ordinarily long English word!</p>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 2px dashed #999;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 7rem;
+}
+```
 
 붙임표 규칙은 언어별로 다릅니다. HTML의 언어는 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 특성으로 알아낼 수 있으며, 브라우저는 lang 특성과 해당 언어에 적합한 붙임표 규칙이 모두 사용 가능할 때에만 붙임표를 추가합니다. XML에서는 [`xml:lang`](/ko/docs/Web/SVG/Attribute/xml:lang) 특성을 사용해야 합니다.
 

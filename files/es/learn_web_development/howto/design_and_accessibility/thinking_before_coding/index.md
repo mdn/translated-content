@@ -35,7 +35,7 @@ Todo esto es llamado _idealización del proyecto_ y es un primer paso necesario 
 
 ## Aprendizaje Activo
 
-_No hay aprendizaje activo todavía. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Contributing/Getting_started)._
+_No hay aprendizaje activo todavía. [Por favor, considere la posibilidad de contribuir](/es/docs/MDN/Community/Getting_started)._
 
 ## Profundizando
 

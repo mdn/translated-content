@@ -14,7 +14,7 @@ l10n:
 
 相同的构造样式表也可以通过使用 [`ShadowRoot.adoptedStyleSheets`](/zh-CN/docs/Web/API/ShadowRoot/adoptedStyleSheets) 属性与一个或多个 {{domxref("ShadowRoot")}} 实例共享。更改已采用的样式表会影响采用该样式表的所有对象。
 
-该属性中的样式表将与文档的其他样式表一起根据 [CSS 层叠算法](/zh-CN/docs/Web/CSS/Cascade)进行求值。在规则解析考虑样式表的顺序时，`adoptedStyleSheets` 被假定排列在 [`Document.styleSheets`](/zh-CN/docs/Web/API/Document/styleSheets) 中那些样式表之后。
+该属性中的样式表将与文档的其他样式表一起根据 [CSS 层叠算法](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)进行求值。在规则解析考虑样式表的顺序时，`adoptedStyleSheets` 被假定排列在 [`Document.styleSheets`](/zh-CN/docs/Web/API/Document/styleSheets) 中那些样式表之后。
 
 只有在当前 {{domxref("Document")}} 上下文中使用 [`CSSStyleSheet()` 构造函数](/zh-CN/docs/Web/API/CSSStyleSheet/CSSStyleSheet)创建的样式表才可以被采用。
 

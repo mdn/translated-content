@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
 ---
 
-{{MDNSidebar}}
-
 与[常用的宏](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Macros/Commonly_used_macros)中列出的宏相比，本文中记录的宏很少使用或仅在特定上下文中使用，或者已弃用。
 
 ## 特定上下文

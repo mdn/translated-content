@@ -73,7 +73,7 @@ function setupVideo(url) {
 
 そして最後に、 `src` 属性を設定し、 `play` を呼び出して動画の読み込みと再生を開始します。
 
-WebGL にテクスチャデータを提供するために使用するためには、元の動画を安全なソースから読み込む必要があります。つまり、安全なウェブサーバーを使用するようにコードを展開する必要があるだけでなく、テストするための安全なサーバーも必要になります。[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+WebGL にテクスチャデータを提供するために使用するためには、元の動画を安全なソースから読み込む必要があります。つまり、安全なウェブサーバーを使用するようにコードを展開する必要があるだけでなく、テストするための安全なサーバーも必要になります。[ローカルテストサーバーを用意するには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
 
 ## 動画フレームをテクスチャとして使用する
 
@@ -185,6 +185,6 @@ function render(now) {
 
 ## 関連情報
 
-- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [HTML5 の audio 要素と video 要素の使用](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 {{Previous("Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}

@@ -1,12 +1,11 @@
 ---
 title: HTML 中的图片
 slug: Learn_web_development/Core/Structuring_content/HTML_images
-original_slug: Learn/HTML/Multimedia_and_embedding/Images_in_HTML
 l10n:
   sourceCommit: 26aeffa549ae61cd863afcb8fdcb3ba0e1e33b0c
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
 最初，web 仅有文字，非常乏味。幸运的是，不久之后，我们就能在网页中嵌入图片和其他更有趣的内容类型了。尽管有多种多媒体类型需要考虑，但是从在网页中嵌入简单图片的 {{htmlelement("img")}} 元素开始更加合理。在这篇文章中，我们将详细介绍如何使用 {{htmlelement("img")}} 元素，包括它的基本属性，如何用 {{htmlelement("figure")}} 元素为它添加标题，它与 {{glossary("CSS")}} 背景图片的关系，以及其他 web 平台上的图形类型。
 
@@ -81,7 +80,7 @@ l10n:
 ![一个嵌入到浏览器中的恐龙基本图像，上面写着“Images in HTML”](basic-image.png)
 
 > [!NOTE]
-> 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在[替换元素](/zh-CN/docs/Web/CSS/Replaced_element)中了解更多相关信息。
+> 像 {{htmlelement("img")}} 和 {{htmlelement("video")}} 这样的元素有时被称为**可替换元素（replaced elements）**。这是因为元素的内容和大小由外部资源（如图像或视频文件）定义，而不是由元素本身的内容定义。你可以在{{glossary("Replaced elements", "可替换元素")}}中了解更多相关信息。
 
 > [!NOTE]
 > 你也可以在 [GitHub](https://mdn.github.io/learning-area/html/multimedia-and-embedding/images-in-html/index.html) 仓库中找到本节的完整示例（请参阅[源代码](https://github.com/mdn/learning-area/blob/main/html/multimedia-and-embedding/images-in-html/index.html)）。
@@ -123,7 +122,7 @@ l10n:
 
 ### 宽度和高度
 
-你可以用 [`width`](/zh-CN/docs/Web/HTML/Element/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
+你可以用 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/img#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/img#height) 属性来指定你的图片的宽度和高度。它们的值是不带单位的整数，以像素为单位表示图像的宽度和高度。
 
 你可以用多种方式了解你的图片的宽度和高度，例如在 Mac 上，你可以用 <kbd>Cmd</kbd> + <kbd>I</kbd> 来得到显示的图片文件的信息。回到我们的例子，你可以这样做：
 
@@ -450,7 +449,7 @@ Copyleft 许可在软件界中很常见。其基本思想是使用 copyleft 许�
 {{htmlelement("figcaption")}} 元素告诉浏览器和辅助技术工具，这段说明文字描述了 {{htmlelement("figure")}} 元素的内容。
 
 > [!NOTE]
-> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Element/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
+> 从无障碍的角度来说，说明文字和 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文本扮演着不同的角色。看得见图片的人们同样可以受益于说明文字，而 [`alt`](/zh-CN/docs/Web/HTML/Reference/Elements/img#alt) 文字只有在图片无法显示时才会发挥作用。所以，说明文字和 `alt` 的内容不应该一样，因为当图片无法显示时，它们会同时出现。尝试不让你的图片显示，看看效果如何。
 
 figure 里不一定要是图片，只要是这样的独立内容单元即可：
 
@@ -630,7 +629,7 @@ p {
 
 ## 技能测试！
 
-你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images)。
+你已经阅读完本文，但你能记住重要的信息吗？在继续之前，你可以进行一些进一步的测试，以验证你是否掌握了这些信息。请参阅[技能测试：HTML 图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images)。
 
 ## 总结
 

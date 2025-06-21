@@ -9,7 +9,32 @@ l10n:
 
 **`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
 
-{{EmbedInteractiveExample("pages/js/proxyhandler-deleteproperty.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+
+```js interactive-example
+const monster1 = {
+  texture: "scaly",
+};
+
+const handler1 = {
+  deleteProperty(target, prop) {
+    if (prop in target) {
+      delete target[prop];
+      console.log(`property removed: ${prop}`);
+      // Expected output: "property removed: texture"
+    }
+  },
+};
+
+console.log(monster1.texture);
+// Expected output: "scaly"
+
+const proxy1 = new Proxy(monster1, handler1);
+delete proxy1.texture;
+
+console.log(monster1.texture);
+// Expected output: undefined
+```
 
 ## 構文
 
@@ -32,7 +57,7 @@ new Proxy(target, {
 
 ### 返値
 
-`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Data_structures#論理型)を返さなければなりません。
+`deleteProperty()` メソッドはプロパティが正しく削除されたかどうか示す[論理値](/ja/docs/Web/JavaScript/Guide/Data_structures#論理型)を返さなければなりません。
 
 ## 解説
 

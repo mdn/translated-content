@@ -5,7 +5,7 @@ slug: Web/CSS/tan
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Functions) **`tan()`** 为三角函数，返回某数的正切值，此值介于 `−infinity` 和 `infinity` 之间。此函数含有单个计算式，此式须将参数结果按弧度数解析为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;angle&gt;")}}。
+[CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`tan()`** 为三角函数，返回某数的正切值，此值介于 `−infinity` 和 `infinity` 之间。此函数含有单个计算式，此式须将参数结果按弧度数解析为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;angle&gt;")}}。
 
 ## 语法
 

@@ -7,7 +7,48 @@ slug: Web/CSS/flex-direction
 
 **`flex-direction`** [CSS](/ko/docs/Web/CSS) 속성은 플렉스 컨테이너 내의 아이템을 배치할 때 사용할 주축 및 방향(정방향, 역방향)을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/flex-direction.html")}}
+{{InteractiveExample("CSS Demo: flex-direction")}}
+
+```css interactive-example-choice
+flex-direction: row;
+```
+
+```css interactive-example-choice
+flex-direction: row-reverse;
+```
+
+```css interactive-example-choice
+flex-direction: column;
+```
+
+```css interactive-example-choice
+flex-direction: column-reverse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <div>Item One</div>
+    <div>Item Two</div>
+    <div>Item Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 80%;
+  display: flex;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  width: 60px;
+  margin: 10px;
+}
+```
 
 `row`와 `row-reverse`의 경우 플렉스 컨테이너의 방향성에 영향을 받음을 참고하세요. 컨테이너의 `dir` 값이 `ltr`이라면 `row`는 왼쪽부터 시작하는 가로축을, `row-reverse`는 오른쪽부터 시작하는 가로축을 나타냅니다. 그러나 `dir` 값이 `rtl`이라면 `row`가 오른쪽부터 시작하는 가로축을, `row-reverse`가 왼쪽부터 시작하는 가로축을 나타냅니다.
 

@@ -13,7 +13,45 @@ C'est une propriété raccourcie qui permet de définir les valeurs de :
 - {{cssxref("border-top-style")}},
 - {{cssxref("border-top-color")}}.
 
-{{EmbedInteractiveExample("pages/css/border-top.html")}}
+{{InteractiveExample("CSS Demo: border-top")}}
+
+```css interactive-example-choice
+border-top: solid;
+```
+
+```css interactive-example-choice
+border-top: dashed red;
+```
+
+```css interactive-example-choice
+border-top: 1rem solid;
+```
+
+```css interactive-example-choice
+border-top: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-top: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 > [!NOTE]
 > Les trois valeurs de la propriété raccourcie peuvent être définies dans n'importe quel ordre et une ou deux d'entre elles peuvent être absentes.

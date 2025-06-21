@@ -1,12 +1,11 @@
 ---
 title: 文本处理——JavaScript 中的字符串
 slug: Learn_web_development/Core/Scripting/Strings
-original_slug: Learn/JavaScript/First_steps/Strings
 l10n:
   sourceCommit: 3e77d220b829f7477da24af0fa4acf1a54f5dbc9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Math", "Learn_web_development/Core/Scripting/Useful_string_methods", "Learn_web_development/Core/Scripting")}}
 
 接下来，我们将把注意力转向字符串——也就是编程中所说的文本片段。在本文中，我们将了解在学习 JavaScript 时，你应该了解的关于字符串的所有常见内容，例如创建字符串、在字符串中转义引号和连接字符串。
 

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
+**`<system-color>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、ウェブページの様々な部分に通常使用する既定の色を反映します。
 
 しかし、ユーザーエージェントは強制色モードと呼ばれるアクセシビリティ機能を提供することができ、このモードでは色はユーザーとユーザーエージェントが定義したパレットに制限され、特定のプロパティで作者が選択した色を上書きします。強制色モードでは、 `<system-color>` は選択された色を公開するので、ページの残りの部分はそれらと統合することができます。強制色モードの例としては、 [Windows の高コントラストモード](https://blogs.windows.com/msedgedev/2020/09/17/styling-for-windows-high-contrast-with-new-standards-for-forced-colors/)があります。
 

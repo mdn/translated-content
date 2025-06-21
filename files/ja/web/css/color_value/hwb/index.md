@@ -9,7 +9,37 @@ l10n:
 
 **`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
 
-{{EmbedInteractiveExample("pages/css/function-hwb.html")}}
+{{InteractiveExample("CSS Demo: hwb()")}}
+
+```css interactive-example-choice
+background: hwb(12 50% 0%);
+```
+
+```css interactive-example-choice
+background: hwb(50deg 30% 40%);
+```
+
+```css interactive-example-choice
+background: hwb(0.5turn 10% 0% / 0.5);
+```
+
+```css interactive-example-choice
+background: hwb(0 100% 0% / 50%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-width: 100%;
+  min-height: 100%;
+  padding: 10%;
+}
+```
 
 ## 構文
 

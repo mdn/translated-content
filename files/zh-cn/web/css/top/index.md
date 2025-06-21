@@ -7,7 +7,57 @@ slug: Web/CSS/top
 
 **`top`**[CSS](/zh-CN/docs/Web/CSS) 属性定义了定位元素的上外边距边界与其包含块上边界之间的偏移，非定位元素设置此属性无效。
 
-{{EmbedInteractiveExample("pages/css/top.html")}}
+{{InteractiveExample("CSS Demo: top")}}
+
+```css interactive-example-choice
+top: 0;
+```
+
+```css interactive-example-choice
+top: 4em;
+```
+
+```css interactive-example-choice
+top: 10%;
+```
+
+```css interactive-example-choice
+top: 20px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <div id="example-element">I am absolutely positioned.</div>
+    <p>
+      As much mud in the streets as if the waters had but newly retired from the
+      face of the earth, and it would not be wonderful to meet a Megalosaurus,
+      forty feet long or so, waddling like an elephantine lizard up Holborn
+      Hill.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 0.75em solid;
+  padding: 0.75em;
+  text-align: left;
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+}
+
+#example-element {
+  background-color: #264653;
+  border: 4px solid #ffb500;
+  color: white;
+  position: absolute;
+  width: 140px;
+  height: 60px;
+}
+```
 
 `top`的效果取决于元素的`position`属性：
 

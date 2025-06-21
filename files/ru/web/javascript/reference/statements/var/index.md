@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Statements/var
 
 Оператор **var** объявляет переменную, инициализируя её при необходимости.
 
-{{EmbedInteractiveExample("pages/js/statement-var.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Var")}}
+
+```js interactive-example
+var x = 1;
+
+if (x === 1) {
+  var x = 2;
+
+  console.log(x);
+  // Expected output: 2
+}
+
+console.log(x);
+// Expected output: 2
+```
 
 ## Синтаксис
 

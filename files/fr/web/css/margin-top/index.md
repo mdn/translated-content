@@ -7,7 +7,57 @@ slug: Web/CSS/margin-top
 
 La propriété **`margin-top`** définit l'espace vertical pour la marge appliquée en haut de l'élément. Une valeur négative peut être utilisée.
 
-{{EmbedInteractiveExample("pages/css/margin-top.html")}}
+{{InteractiveExample("CSS Demo: margin-top")}}
+
+```css interactive-example-choice
+margin-top: 1em;
+```
+
+```css interactive-example-choice
+margin-top: 10%;
+```
+
+```css interactive-example-choice
+margin-top: 10px;
+```
+
+```css interactive-example-choice
+margin-top: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 Cette propriété n'a aucun effet sur les éléments non-remplacés en ligne (_inline_) tels que {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 

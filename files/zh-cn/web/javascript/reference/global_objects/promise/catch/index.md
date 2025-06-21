@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("Promise")}} 实例的 **`catch()`** 方法用于注册一个在 promise 被拒绝时调用的函数。它会立即返回一个等效的 {{jsxref("Promise")}} 对象，这可以允许你[链式](/zh-CN/docs/Web/JavaScript/Guide/Using_promises#链式调用)调用其他 promise 的方法。此方法是 {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} 的一种简写形式。
 
-{{EmbedInteractiveExample("pages/js/promise-catch.html")}}
+{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+
+```js interactive-example
+const promise1 = new Promise((resolve, reject) => {
+  throw new Error("Uh-oh!");
+});
+
+promise1.catch((error) => {
+  console.error(error);
+});
+// Expected output: Error: Uh-oh!
+```
 
 ## 语法
 

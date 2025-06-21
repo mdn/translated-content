@@ -52,7 +52,7 @@ html(lang='en')
 
 The template uses (and includes) JavaScript and CSS from [Bootstrap](http://getbootstrap.com/) to improve the layout and presentation of the HTML page. Using Bootstrap or another client-side web framework is a quick way to create an attractive page that can scale well on different browser sizes, and it also allows us to deal with the page presentation without having to get into any of the details—we just want to focus on the server-side code here!
 
-The layout should be fairly obvious if you've read our above [Template primer](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
+The layout should be fairly obvious if you've read our above [Template primer](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data#template_primer). Note the use of `block content` as a placeholder for where the content for our individual pages will be placed.
 
 The base template also references a local css file (**style.css**) that provides a little additional styling. Open **/public/stylesheets/style.css** and replace its content with the following CSS code:
 
@@ -68,5 +68,5 @@ When we get round to running our site, we should see the sidebar appear! In the 
 
 ## Next steps
 
-- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data).
+- Return to [Express Tutorial Part 5: Displaying library data](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data).
 - Proceed to the next subarticle of part 5: [Home page](/ja/docs/Learn/Server-side/Express_Nodejs/Displaying_data/Home_page).

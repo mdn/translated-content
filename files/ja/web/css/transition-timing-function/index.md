@@ -9,7 +9,47 @@ l10n:
 
 **`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
-{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
+{{InteractiveExample("CSS Demo: transition-timing-function")}}
+
+```css interactive-example-choice
+transition-timing-function: linear;
+```
+
+```css interactive-example-choice
+transition-timing-function: ease-in;
+```
+
+```css interactive-example-choice
+transition-timing-function: steps(6, end);
+```
+
+```css interactive-example-choice
+transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 このプロパティは、簡単に言えば加速曲線を定義するもので、それによりトランジション実行中の値の変更速度を操作することができます。
 
@@ -98,7 +138,7 @@ transition-timing-function: unset;
 
 アニメーションは、ユーザーがどのようなアクションを期待されているのかを理解するためのガイド、ユーザーインターフェイス内の関係性の表示、どのようなアクションが発生したのかをユーザーに通知するなど、役に立つことがあります。アニメーションは、認知的な負荷を軽減し、変化に気づかないことを防ぎ、空間的な関係をよりよく思い出すことに役立ちます。しかし、アニメーションの中には、注意欠陥多動性障害 (ADHD) の人の認知に問題が発生するものや、前庭障害、てんかん、片頭痛、スコトープ過敏症の引き金となるような動きをするものもあります。
 
-アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Client_hints#ユーザーエージェントクライアントヒント)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}）を使用して、アニメーションを減らすことを希望するユーザーにも快適な利用環境を提供することを検討してください。
+アニメーションを一時停止または無効にする機能を提供するとともに、[動きの縮減メディアクエリー](/ja/docs/Web/CSS/@media/prefers-reduced-motion)（または同等の[ユーザーエージェントクライアントヒント](/ja/docs/Web/HTTP/Guides/Client_hints#ユーザーエージェントクライアントヒント)である {{HTTPHeader("Sec-CH-Prefers-Reduced-Motion")}}）を使用して、アニメーションを減らすことを希望するユーザーにも快適な利用環境を提供することを検討してください。
 
 ## 公式定義
 

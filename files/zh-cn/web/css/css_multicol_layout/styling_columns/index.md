@@ -19,7 +19,38 @@ slug: Web/CSS/CSS_multicol_layout/Styling_columns
 
 你可以通过将 `column-gap` 的值设置为任何长度单位来更改间距。在下面的示例中，`column-gap` 设置为 40px。
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-gap.html", '100%', 750)}}
+```html live-sample___column-gap
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-gap
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-gap: 40px;
+}
+```
+
+{{EmbedLiveSample("column-gap", "", "300px")}}
 
 `column-gap` 允许的值是 `<length-percentage>`，这意味着允许使用百分比。`column-gap` 的百分比值是根据多列容器宽度的百分比计算的。
 
@@ -31,13 +62,78 @@ slug: Web/CSS/CSS_multicol_layout/Styling_columns
 
 在接下来的示例中，使用长格式值创建了一个宽度为 5px、颜色为 `rebeccapurple` 的点状分栏线条。
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule.html", '100%', 550)}}
+```html hidden live-sample___column-rule
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-rule
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-rule-width: 5px;
+  column-rule-style: dotted;
+  column-rule-color: rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("column-rule", "", "300px")}}
 
 请注意，分栏线条本身不占用任何空间：宽分栏线条不会将列分开以为分栏线条腾出空间。相反，分栏线条覆盖了间隙。
 
 下面的示例使用了非常宽的 40px 分栏线条和 10px 间距。分栏线条在列内容的下方显示。为了在分栏线条两侧腾出空间，间距需要增加到大于 40px。
 
-{{EmbedGHLiveSample("css-examples/multicol/styling/column-rule-wide.html", '100%', 550)}}
+```html hidden live-sample___column-rule-wide
+<div class="container">
+  <p>
+    Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion
+    daikon amaranth tatsoi tomatillo melon azuki bean garlic.
+  </p>
+  <p>
+    Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette
+    tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato.
+    Dandelion cucumber earthnut pea peanut soko zucchini.
+  </p>
+  <p>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale. Celery potato scallion desert raisin horseradish spinach
+    carrot soko.
+  </p>
+</div>
+```
+
+```css live-sample___column-rule-wide
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  column-count: 3;
+  column-gap: 10px;
+  column-rule: 40px solid rebeccapurple;
+}
+```
+
+{{EmbedLiveSample("column-rule-wide", "", "300px")}}
 
 ## 下一步
 

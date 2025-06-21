@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Functions/get
 
 **`get`** 語法會將物件屬性，綁定到屬性被檢索時，所呼叫的函式。
 
-{{EmbedInteractiveExample("pages/js/functions-getter.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+
+```js interactive-example
+const obj = {
+  log: ["a", "b", "c"],
+  get latest() {
+    return this.log[this.log.length - 1];
+  },
+};
+
+console.log(obj.latest);
+// Expected output: "c"
+```
 
 ## 語法
 

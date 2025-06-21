@@ -23,8 +23,8 @@ insertRule(rule, index)
 
   - : 一个包含了将要插入的规则的 {{domxref("DOMString")}}。规则字符串必须包含的内容取决于它的类型：
 
-    - **[rule-set](/zh-CN/docs/Web/CSS/Syntax#css_语句) 类型**（普通带有选择器的规则），需要[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)和样式声明；
-    - **[at-rule](/zh-CN/docs/Web/CSS/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等），需要 at-identifier 和规则内容。
+    - **[rule-set](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句) 类型**（普通带有选择器的规则），需要[选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)和样式声明；
+    - **[at-rule](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 类型**（以 `@` 开头的规则，如 `@import, @media` 等），需要 at-identifier 和规则内容。
 
 - `index` {{optional_inline}}
   - : 一个小于或等于 `stylesheet.cssRules.length` 的正整数，表示新插入的规则在`{{domxref("CSSStyleSheet", "", "", "1")}}.cssRules` 中的位置。默认值是 `0`。（在过去的实现中，这个参数是必需的，详情参见[浏览器兼容性](#浏览器兼容性)。）

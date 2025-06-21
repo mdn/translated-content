@@ -5,7 +5,7 @@ slug: Web/CSS/hex-color
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types) **`<hex-color>`** 为描述 [sRGB](/zh-CN/docs/Glossary/RGB) 颜色的*十六进制颜色语法*的记号，此记号将颜色的主分量（红、绿、蓝）及其透明度写为十六进制数。
+[CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) **`<hex-color>`** 为描述 [sRGB](/zh-CN/docs/Glossary/RGB) 颜色的*十六进制颜色语法*的记号，此记号将颜色的主分量（红、绿、蓝）及其透明度写为十六进制数。
 
 在可使用 {{CSSXref("&lt;color&gt;")}} 的任意位置均可使用 `<hex-color>` 值。
 

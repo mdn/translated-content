@@ -9,7 +9,16 @@ l10n:
 
 El método **`every()`** de las instancias de {{jsxref("Array")}} prueba si todos los elementos del arreglo pasan la prueba implementada por la función proporcionada. Devuelve un valor booleano.
 
-{{EmbedInteractiveExample("pages/js/array-every.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.every()", "shorter")}}
+
+```js interactive-example
+const isBelowThreshold = (currentValue) => currentValue < 40;
+
+const array1 = [1, 30, 39, 29, 10, 13];
+
+console.log(array1.every(isBelowThreshold));
+// Expected output: true
+```
 
 ## Sintaxis
 

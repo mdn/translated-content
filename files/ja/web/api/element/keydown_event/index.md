@@ -3,7 +3,7 @@ title: "Element: keydown イベント"
 short-title: keydown
 slug: Web/API/Element/keydown_event
 l10n:
-  sourceCommit: bbf7f25f9cf95fb154e2740a9fdc9c02818981bf
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef}}
@@ -14,18 +14,9 @@ l10n:
 
 `keydown` と [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントは、どのキーが押されたかを示すコードを提供し、 `keypress` はどの文字が入力されたかを示します。例えば、小文字の "a" は `keydown` と `keyup` では 65 と報告され、 `keypress` では 97 と報告されます。大文字の "A" は、どのイベントでも 65 と報告されます。
 
-キーボードイベントは `<input>`, `<textarea>`, `<summary>` と `contentEditable` または `tabindex` 属性を持つものだけが生成します。捕捉されなかった場合、それらは {{domxref("Document")}} に到達するまで [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を[バブリング](/ja/docs/Learn/JavaScript/Building_blocks/Events#イベントのバブリングとキャプチャリング)します。
+キーボード操作の対象となるイベントのターゲットは、現在フォーカスされている、キーボード操作を処理している要素です。これには、{{HTMLElement("input")}}、{{HTMLElement("textarea")}}、[`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) がついた何らかの要素、および、{{HTMLElement("a")}}、{{HTMLElement("button")}}、{{HTMLElement("summary")}} など、キーボードで操作できる何らかの要素が含まれます。適切な要素にフォーカスが当たっていなければ、イベントのターゲットは {{HTMLElement("body")}} またはルートになります。イベントが捕捉されなければ、イベントは [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#what_is_a_dom_tree)を {{domxref("Document")}} に達するまでバブリングします。
 
-Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
-
-```js
-eventTarget.addEventListener("keydown", (event) => {
-  if (event.isComposing || event.keyCode === 229) {
-    return;
-  }
-  // 何かを行う
-});
-```
+イベントのターゲットは、異なるキーイベント間で変更されることがあります。例えば、 <kbd>Tab</kbd> キーを押したときの `keydown` のターゲットは、 `keyup` のターゲットとは異なるものになるでしょう。フォーカスが変更されるからです。
 
 ## 構文
 
@@ -66,13 +57,6 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
   - : 論理値で、このイベントが `compositionstart` と `compositionend` の間に発生したものであれば `true` を返します。
 - {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : 文字列で、このイベントが表すキーのキー値を表します。
-- {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
-
-  - : 文字列で、キーボードに設定されているロケールを示すロケール文字列を返します。ブラウザーや端末がキーボードのロケールを知らない場合は空文字列となります。
-
-    > [!NOTE]
-    > このプロパティは入力データのロケールを表すわけではありません。例えば、ユーザーが使用するキーボードレイアウトと入力テキストとで言語が異なる場合があります。
-
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、上記の[キーボード上の位置](/ja/docs/Web/API/KeyboardEvent#キーボード上の位置)にあります。
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
@@ -109,11 +93,21 @@ function logKey(e) {
 
 {{EmbedLiveSample("addEventListener_keydown_example")}}
 
-### onkeydown による同等の例
+### keydown イベントと IME
+
+Firefox 65 以降では、CJKT ユーザーのブラウザー間の互換性を高めるために、 `keydown` および [`keyup`](/ja/docs/Web/API/Element/keyup_event) イベントが IME 変換中に発行されるようになりました（[Firefox バグ 354358](https://bugzil.la/354358)）。変換操作中の `keydown` イベントをすべて無視するには、次のようにしてください （229 は、IME によって処理されたイベントに関連する `keyCode` に設定される特別な値です）。
 
 ```js
-input.onkeydown = logKey;
+eventTarget.addEventListener("keydown", (event) => {
+  if (event.isComposing || event.keyCode === 229) {
+    return;
+  }
+  // 何かを行う
+});
 ```
+
+> [!NOTE]
+> IME を開くための最初の文字を入力したときに、 `compositionstart` が `keydown` の後に発行されることがあります。また、 IME を閉じられり最後の文字を入力したときに、 `compositionend` が `keydown` の前に発行されることがあります。これらの場合、イベントが変換の一部であっても、`isComposing` は false となります。しかし、これらの場合でも {{domxref("KeyboardEvent.keyCode")}} は `229` のままなので、非推奨ではあるものの、やはり `keyCode` も調べることをお勧めします。
 
 ## 仕様書
 

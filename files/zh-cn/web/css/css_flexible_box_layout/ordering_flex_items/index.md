@@ -47,7 +47,47 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 在下面的实时示例中，我添加了一种焦点样式，以便当你从一个链接到另一个标签时，可以看到突出显示的样式。如果使用`flex-direction`更改顺序，则可以看到制表符顺序如何继续遵循源中列出的项目的顺序。
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/order.html", '100%', 500)}}
+```html live-sample___order
+<div class="box">
+  <div><a href="#">1</a></div>
+  <div><a href="#">2</a></div>
+  <div><a href="#">3</a></div>
+  <div><a href="#">4</a></div>
+  <div><a href="#">5</a></div>
+</div>
+```
+
+```css live-sample___order
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row;
+}
+.box :nth-child(1) {
+  order: 2;
+}
+.box :nth-child(2) {
+  order: 3;
+}
+.box :nth-child(3) {
+  order: 1;
+}
+.box :nth-child(4) {
+  order: 3;
+}
+.box :nth-child(5) {
+  order: 1;
+}
+```
+
+{{EmbedLiveSample("order")}}
 
 与更改`flex-direction`的值不会更改项目导航到的顺序相同，更改此值不会更改绘制顺序。它仅是项目的视觉反转。
 
@@ -77,7 +117,35 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 你可以在下面的实时示例中使用这些值，并查看如何更改顺序。另外，尝试将`flex-direction`更改为`row-reverse`，看看会发生什么—切换了起始行，以便从相反的一侧开始排序。
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/flex-direction.html", '100%', 440)}}
+```html live-sample___flex-direction
+<div class="box">
+  <div><a href="#">One</a></div>
+  <div><a href="#">Two</a></div>
+  <div><a href="#">Three</a></div>
+</div>
+```
+
+```css live-sample___flex-direction
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box > * a:focus {
+  background-color: yellow;
+  color: black;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-direction: row-reverse;
+}
+```
+
+{{EmbedLiveSample("flex-direction")}}
 
 弹性项目默认 `order` 值为 `0`, 因此整数值大于 0 的项目，将会显示在那些未指定 `order` 值的项目之后。
 
@@ -85,7 +153,43 @@ Flexbox 和 Grid 等新的布局方法为内容的顺序控制提供了可能。
 
 在下面的实时代码示例中，我使用 Flexbox 布置了项目。通过更改在 HTML 中为其分配了类`active`，你可以更改首先显示的项目，你可以更改首先显示哪个项目，因此在布局顶部变为全宽，而在其下方显示其他项目。
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/negative-order.html", '100%', 520)}}
+```html live-sample___negative-order
+<div class="box">
+  <div><a href="#">1</a></div>
+  <div><a href="#">2</a></div>
+  <div class="active"><a href="#">3</a></div>
+  <div><a href="#">4</a></div>
+  <div><a href="#">5</a></div>
+</div>
+```
+
+```css live-sample___negative-order
+* {
+  box-sizing: border-box;
+}
+
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.active {
+  order: -1;
+  flex: 1 0 100%;
+}
+```
+
+{{EmbedLiveSample("negative-order")}}
 
 这些项目以规范中描述的顺序修改的文档顺序显示。在显示项目之前，将考虑 order 属性的值。
 
@@ -115,6 +219,47 @@ The card is going to be our flex container, with `flex-direction` set to column.
 
 该卡将成为我们的伸缩容器，`flex-direction`设置为 column。然后，我将日期定为`-1`。这将其拉到标题上方。
 
-{{EmbedGHLiveSample("css-examples/flexbox/order/usecase-order.html", '100%', 730)}}
+```html live-sample___usecase-order
+<div class="wrapper">
+  <div class="card">
+    <h3>News item title</h3>
+    <div class="date">1 Nov 2017</div>
+    <p>This is the content of my news item. Very newsworthy.</p>
+  </div>
+  <div class="card">
+    <h3>Another title</h3>
+    <div class="date">6 Nov 2017</div>
+    <p>This is the content of my news item. Very newsworthy.</p>
+  </div>
+</div>
+```
+
+```css live-sample___usecase-order
+body {
+  font-family: sans-serif;
+}
+
+.wrapper {
+  display: flex;
+  flex: 1 1 200px;
+  gap: 1em;
+}
+
+.card {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.date {
+  order: -1;
+  text-align: right;
+}
+```
+
+{{EmbedLiveSample("usecase-order", "", "220px")}}
 
 这些小的调整是`order`属性有意义的情况。保持逻辑顺序为文档的阅读和制表符顺序，并以最易于访问和结构化的方式进行维护。然后使用`order`进行纯粹的视觉设计调整。这样做时，请注意不要重新排序在用户四处浏览时可能由键盘访问的项目。尤其是在使用较新的布局方法时，应确保浏览器测试包括仅使用键盘而不是鼠标或触摸屏来测试站点。你将快速查看你的开发选择是否使绕过内容变得困难。

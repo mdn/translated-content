@@ -1,11 +1,16 @@
 ---
 title: scripting
 slug: Web/CSS/@media/scripting
+l10n:
+  sourceCommit: 0702c8b455d44d12892863735bf7f507ea8eb1cf
 ---
 
 {{CSSRef}}
 
 **`scripting`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、 (JavaScript などの) スクリプトが利用できるかどうかを調べるために使用することができます。
+
+> [!NOTE]
+> 検出は、ユーザーの設定に基づいてブラウザーによって行われます。一部のブラウザー拡張機能は、さまざまな手法を使用してスクリプトのブロックを実装しています。そのような場合、 `scripting` メディア機能は期待どおりに動作しない場合があります。
 
 ## 構文
 
@@ -70,5 +75,5 @@ p {
 
 ## 関連情報
 
-- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
 - [@media](/ja/docs/Web/CSS/@media)
+- [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)

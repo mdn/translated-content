@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 
 Основы позиционирования, приведённые в последней статье, мы теперь рассмотрим, как создать некоторые примеры реального мира, чтобы проиллюстрировать, какие вещи вы можете сделать с позиционированием.
 
-| Предпосылки: | Основы HTML (уроки [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и идея о том, как работает CSS (уроки [Introduction to CSS](/ru/docs/Learn/CSS/First_steps).) |
-| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:      | Чтобы получить представление о практичности позиционирования                                                                                                                        |
+| Предпосылки: | Основы HTML (уроки [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), и идея о том, как работает CSS (уроки [Introduction to CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:      | Чтобы получить представление о практичности позиционирования                                                                                                                                                                                   |
 
 ## Информационный блок с вкладками
 
@@ -76,7 +76,7 @@ slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
 
 Итак, у нас есть элемент {{htmlelement ("section")}} с `классом` `info-box`, который содержит {{htmlelement ("ul")}} и {{htmlelement ("div")}}. Неупорядоченный список содержит три элемента списка со ссылками внутри, которые станут фактическими вкладками для отображения наших панелей контента. `div` содержит три элемента {{htmlelement ("article")}}, которые будут составлять панели содержимого, соответствующие каждой вкладке. Каждая панель содержит некоторый образец контента.
 
-Идея здесь заключается в том, что мы будем стилизовать вкладки, чтобы они выглядели как стандартное меню горизонтальной навигации и нарисуем панели, чтобы они сидели друг над другом, используя абсолютное позиционирование. Мы также предоставим вам немного JavaScript для включения на вашу страницу, чтобы отобразить соответствующую панель при нажатии вкладки и вы создадите саму вкладку. Вам не нужно будет понимать сам JavaScript на данном этапе, но вы должны подумать об изучении базового [JavaScript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics) как можно скорее - чем сложнее ваши функции пользовательского интерфейса, тем больше вероятность того, что вам понадобится JavaScript для реализации желаемую функциональность.
+Идея здесь заключается в том, что мы будем стилизовать вкладки, чтобы они выглядели как стандартное меню горизонтальной навигации и нарисуем панели, чтобы они сидели друг над другом, используя абсолютное позиционирование. Мы также предоставим вам немного JavaScript для включения на вашу страницу, чтобы отобразить соответствующую панель при нажатии вкладки и вы создадите саму вкладку. Вам не нужно будет понимать сам JavaScript на данном этапе, но вы должны подумать об изучении базового [JavaScript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) как можно скорее - чем сложнее ваши функции пользовательского интерфейса, тем больше вероятность того, что вам понадобится JavaScript для реализации желаемую функциональность.
 
 ### Общая настройка
 
@@ -431,9 +431,9 @@ So that rounds off our look at positioning — by now, you should have an idea o
 
 ## In this module
 
-- [Introduction to CSS layout](/ru/docs/Learn/CSS/CSS_layout/Introduction)
-- [Floats](/ru/docs/Learn/CSS/CSS_layout/Floats)
-- [Positioning](/ru/docs/Learn/CSS/CSS_layout/Positioning)
-- [Practical positioning examples](/ru/docs/Learn/CSS/CSS_layout/Practical_positioning_examples)
-- [Flexbox](/ru/docs/Learn/CSS/CSS_layout/Flexbox)
-- [Grids](/ru/docs/Learn/CSS/CSS_layout/Grids)
+- [Introduction to CSS layout](/ru/docs/Learn_web_development/Core/CSS_layout/Introduction)
+- [Floats](/ru/docs/Learn_web_development/Core/CSS_layout/Floats)
+- [Positioning](/ru/docs/Learn_web_development/Core/CSS_layout/Positioning)
+- [Practical positioning examples](/ru/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples)
+- [Flexbox](/ru/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+- [Grids](/ru/docs/Learn_web_development/Core/CSS_layout/Grids)

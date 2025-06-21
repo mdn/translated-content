@@ -12,7 +12,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_scripts
 Content scripts 只能使用[一小部分的擴充套件 API](#擴充套件_api)，但它們可以透過一個訊息系統[來與後端腳本溝通](#與後端腳本溝通)，從而間接地使用擴充套件 API。
 
 > [!NOTE]
-> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/CSP) 錯誤。
+> 留意到 content scripts 目前會在 addons.mozilla.org 和 testpilot.firefox.com 中被阻擋。如果你嘗試在這些網域下的頁面注入一段 content script 會失敗並且在日誌裡記下一個 [CSP](/zh-TW/docs/Web/HTTP/Guides/CSP) 錯誤。
 
 > [!NOTE]
 > 由於錯誤 [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996)，透過 `var foo` or `window.foo = "bar"` 加入 content script 的 global 作用域的值可能會消失。
@@ -145,7 +145,7 @@ window.confirm("Are you sure?"); // 呼叫原本的 window.confirm()
 
 內容腳本跟套件的其他部分擁有相同的跨網域權限： 所以如果套件在 manifest.json 中透過 [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 鍵要求了某一網域的使用，那麼它的內容腳本也能使用同樣的網域。
 
-這是透過公開更多內容腳本中授權的 XHR 以及 fetch 實例來達成的。這件事情會導致標頭中不會設置 [`Origin`](/zh-TW/docs/Web/HTTP/Headers/Origin) 與 [`Referer`](/zh-TW/docs/Web/HTTP/Headers/Referer)的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從 58 版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 `content.XMLHttpRequest` 與 `content.fetch()`。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。
+這是透過公開更多內容腳本中授權的 XHR 以及 fetch 實例來達成的。這件事情會導致標頭中不會設置 [`Origin`](/zh-TW/docs/Web/HTTP/Reference/Headers/Origin) 與 [`Referer`](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的副作用，就像頁面請求自己一樣，一般會避免請求將跨來源泄露出去。從 58 版本號以後套件要傳送一些彷彿是頁面內容自己傳送的請求時可以改用 `content.XMLHttpRequest` 與 `content.fetch()`。對跨瀏覽器套件來說，這些事情的存在必須要能被做特徵檢測。
 
 ## 與後端腳本溝通
 

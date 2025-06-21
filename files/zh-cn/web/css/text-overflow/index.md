@@ -7,7 +7,48 @@ slug: Web/CSS/text-overflow
 
 **`text-overflow`** [CSS](/zh-CN/docs/Web/CSS) 属性用于确定如何提示用户存在隐藏的溢出内容。其形式可以是裁剪、显示一个省略号（“`…`”）或显示一个自定义字符串。
 
-{{EmbedInteractiveExample("pages/css/text-overflow.html")}}
+{{InteractiveExample("CSS Demo: text-overflow")}}
+
+```css interactive-example-choice
+text-overflow: clip;
+```
+
+```css interactive-example-choice
+text-overflow: ellipsis;
+```
+
+```css interactive-example-choice
+text-overflow: "-";
+```
+
+```css interactive-example-choice
+text-overflow: "";
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element-container">
+    <p id="example-element">"Is there any tea on this spaceship?" he asked.</p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element-container {
+  width: 100%;
+  max-width: 18em;
+}
+
+#example-element {
+  line-height: 50px;
+  border: 1px solid #c5c5c5;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: sans-serif;
+  padding: 0 0.5em;
+  text-align: left;
+}
+```
 
 `text-overflow` 属性并不会强制“溢出”事件的发生，因此为了能让文本能够溢出容器，你需要在元素上添加几个额外的属性：{{cssxref("overflow")}} 和 {{cssxref("white-space")}}。例如：
 

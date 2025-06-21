@@ -65,7 +65,7 @@ browsingTopics(options)
 
 - `NotAllowedError` {{domxref("DOMException")}}
   - : 以下の場合に発生します。
-    - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によって不許可になっていた場合。
+    - [トピック API](/ja/docs/Web/API/Topics_API)の使用が {{httpheader('Permissions-Policy/browsing-topics','browsing-topics')}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によって不許可になっていた場合。
     - 呼び出されたウェブサイトに、成功した[プライバシーサンドボックスの登録プロセス](/ja/docs/Web/Privacy/Privacy_sandbox/Enrollment)にに含まれるトピック API がない場合。
 
 ## 例

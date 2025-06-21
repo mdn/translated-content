@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
+**`<ratio>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、幅と高さの比例関係を記述します。これは、メディアクエリー {{cssxref("@media")}} における `aspect-ratio` メディア特性の値として、コンテナークエリー {{cssxref("@container")}} における `aspect-ratio` サイズ特性の値として、 CSS {{cssxref("aspect-ratio")}} プロパティの値として使用します。
 
 ## 構文
 
@@ -74,6 +74,6 @@ l10n:
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)ガイド
 - [コンテナーのサイズおよびスタイルクエリーの使用](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)ガイド
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)モジュール
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)モジュール
 - [CSS ボックスサイズ](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール

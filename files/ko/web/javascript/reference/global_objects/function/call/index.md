@@ -10,7 +10,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
 > [!NOTE]
 > 이 함수 구문은 {{jsxref("Function.prototype.apply", "apply()")}}와 거의 동일하지만, `call()`은 **인수 목록**을, 반면에 `apply()`는 **인수 배열 하나**를 받는다는 점이 중요한 차이점입니다.
 
-{{EmbedInteractiveExample("pages/js/function-call.html")}}
+{{InteractiveExample("JavaScript Demo: Function.call()")}}
+
+```js interactive-example
+function Product(name, price) {
+  this.name = name;
+  this.price = price;
+}
+
+function Food(name, price) {
+  Product.call(this, name, price);
+  this.category = "food";
+}
+
+console.log(new Food("cheese", 5).name);
+// Expected output: "cheese"
+```
 
 ## 구문
 
@@ -147,4 +162,4 @@ display.call(); // Cannot read the property of 'sData' of undefined
 
 - {{jsxref("Function.prototype.bind()")}}
 - {{jsxref("Function.prototype.apply()")}}
-- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)

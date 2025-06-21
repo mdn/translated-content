@@ -9,7 +9,16 @@ l10n:
 
 **`Math.SQRT1_2`** 정적 데이터 속성은 약 0.707의 값을 나타내는 제곱근 1/2을 나타냅니다
 
-{{EmbedInteractiveExample("pages/js/math-sqrt1_2.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Math.SQRT1_2", "shorter")}}
+
+```js interactive-example
+function getRoot1Over2() {
+  return Math.SQRT1_2;
+}
+
+console.log(getRoot1Over2());
+// Expected output: 0.7071067811865476
+```
 
 ## 값
 

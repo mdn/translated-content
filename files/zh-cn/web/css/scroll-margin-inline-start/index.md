@@ -7,7 +7,70 @@ slug: Web/CSS/scroll-margin-inline-start
 
 **`scroll-margin-inline-start`** 属性定义了滚动吸附区域的行首外边距，此区域用于将此盒吸附至滚动口。滚动吸附区域的确定方法为：取变换后的边框盒，求其矩形包围盒（与滚动容器的坐标空间中的轴对齐），再加上指定的外边距。
 
-{{EmbedInteractiveExample("pages/css/scroll-margin-inline-start.html")}}
+{{InteractiveExample("CSS Demo: scroll-margin-inline-start")}}
+
+```css interactive-example-choice
+scroll-margin-inline-start: 0;
+```
+
+```css interactive-example-choice
+scroll-margin-inline-start: 20px;
+```
+
+```css interactive-example-choice
+scroll-margin-inline-start: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller">
+    <div>1</div>
+    <div id="example-element">2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  flex-wrap: wrap;
+}
+
+.default-example .info {
+  width: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+}
+
+.scroller {
+  text-align: left;
+  width: 250px;
+  height: 250px;
+  overflow-x: scroll;
+  display: flex;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: x mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  width: 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 语法
 

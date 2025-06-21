@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-new"
+title: ::view-transition-new
 slug: Web/CSS/::view-transition-new
 l10n:
   sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06

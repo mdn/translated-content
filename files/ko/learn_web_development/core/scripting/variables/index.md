@@ -321,7 +321,7 @@ myNumberArray[2]; // 위치 2의 40을 반환
 
 대괄호에 반환하려는 값의 위치에 해당하는 인덱스 값을 넣습니다. 위의 코드에 따라 JavaScript에서 배열은 첫 번째 요소가 인덱스 0에 있는 제로 인덱스 배열이라는 것을 알 수 있습니다.
 
-배열에 대한 더 많은 것을 [배열](/ko/docs/Learn/JavaScript/First_steps/Arrays)에서 확인할 수 있습니다.
+배열에 대한 더 많은 것을 [배열](/ko/docs/Learn_web_development/Core/Scripting/Arrays)에서 확인할 수 있습니다.
 
 ### 객체
 
@@ -339,7 +339,7 @@ let dog = { name: "Spot", breed: "Dalmatian" };
 dog.name;
 ```
 
-지금은 객체에 대해 더 이상 살펴보지 않으므로 [향후 과정](/ko/docs/Learn/JavaScript/Objects)에서 객체에 대해 더 많이 배울 수 있습니다.
+지금은 객체에 대해 더 이상 살펴보지 않으므로 [향후 과정](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)에서 객체에 대해 더 많이 배울 수 있습니다.
 
 ## 동적 타입
 
@@ -421,7 +421,7 @@ console.log(bird.species); // "Striated Caracara"
 
 ## 실력 테스트
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 장으로 넘어가기 전에 이 장의 내용을 잘 학습하고 이해하셨는지 확인할 수 있는 [실력 테스트: 변수](/ko/docs/Learn/JavaScript/First_steps/Test_your_skills:_variables)가 있습니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 장으로 넘어가기 전에 이 장의 내용을 잘 학습하고 이해하셨는지 확인할 수 있는 [실력 테스트: 변수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables)가 있습니다.
 
 ## 요약
 

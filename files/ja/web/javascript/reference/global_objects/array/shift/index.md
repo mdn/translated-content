@@ -9,7 +9,19 @@ l10n:
 
 **`shift()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列から**最初**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変えます。
 
-{{EmbedInteractiveExample("pages/js/array-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Array.shift()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+console.log(array1);
+// Expected output: Array [2, 3]
+
+console.log(firstElement);
+// Expected output: 1
+```
 
 ## 構文
 

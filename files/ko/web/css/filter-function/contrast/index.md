@@ -7,7 +7,33 @@ slug: Web/CSS/filter-function/contrast
 
 **`contrast()`** [CSS](/ko/docs/Web/CSS) 함수는 주어진 이미지의 대비를 조절합니다. 반환 값은 {{cssxref("&lt;filter-function&gt;")}}입니다.
 
-{{EmbedInteractiveExample("pages/css/function-contrast.html")}}
+{{InteractiveExample("CSS Demo: contrast()")}}
+
+```css interactive-example-choice
+filter: contrast(1);
+```
+
+```css interactive-example-choice
+filter: contrast(1.75);
+```
+
+```css interactive-example-choice
+filter: contrast(50%);
+```
+
+```css interactive-example-choice
+filter: contrast(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 구문
 

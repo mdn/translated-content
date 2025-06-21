@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`initial-value`** は [CSS](/ja/docs/Web/CSS) の記述子で、構文があらゆる有効なトークンストリームを受け入れない限り {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用する上で必須です。そのプロパティの初期値を設定します。
+**`initial-value`** は [CSS](/ja/docs/Web/CSS) の記述子で、構文があらゆる有効なトークンストリームを受け入れない限り {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用する上で必須です。そのプロパティの初期値を設定します。
 
 `initial-value` として選択された値は、構文の定義に従って正しく解釈しなければなりません。したがって、もし構文が `<color>` であれば、初期値は有効な {{cssxref("color")}} 値でなければなりません。
 
@@ -43,7 +43,7 @@ l10n:
 
 `--my-color` {{cssxref('--*', 'カスタムプロパティ')}}に、有効な色となる初期値を色として型チェックを追加します。
 
-[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用すると次のようになります。
+[CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用すると次のようになります。
 
 ```css
 @property --my-color {

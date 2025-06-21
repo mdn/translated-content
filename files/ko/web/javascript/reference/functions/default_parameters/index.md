@@ -9,7 +9,19 @@ l10n:
 
 기본값 함수 매개변수 (**default function parameter**)를 사용하면 값이 전달되지 않거나 `undefined`인 경우 명명된 매개변수를 기본값으로 초기화할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/js/functions-default.html")}}
+{{InteractiveExample("JavaScript Demo: Functions Default")}}
+
+```js interactive-example
+function multiply(a, b = 1) {
+  return a * b;
+}
+
+console.log(multiply(5, 2));
+// Expected output: 10
+
+console.log(multiply(5));
+// Expected output: 5
+```
 
 ## 구문
 

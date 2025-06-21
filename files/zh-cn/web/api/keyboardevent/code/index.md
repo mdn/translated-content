@@ -140,7 +140,7 @@ function updatePosition(offset) {
 }
 ```
 
-The `refresh()` function handles applying the rotation and position by using an [SVG transform](/zh-CN/docs/Web/SVG/Attribute/transform).
+The `refresh()` function handles applying the rotation and position by using an [SVG transform](/zh-CN/docs/Web/SVG/Reference/Attribute/transform).
 
 ```js
 function refresh() {

@@ -105,7 +105,7 @@ URL의 첫 번째 부분은 브라우저가 리소스를 요청하는 데 사용
 
 어떤 URL이든 브라우저의 주소 표시줄에 직접 입력면 리소스에 액세스할 수 있습니다. 그러나 이것은 빙산의 일각에 불과합니다!
 
-[다음에 설명할](/ko/docs/Learn/HTML/Introduction_to_HTML) HTML 언어는 URL을 광범위하게 사용합니다.
+[다음에 설명할](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content) HTML 언어는 URL을 광범위하게 사용합니다.
 
 - {{HTMLElement("a")}} 요소를 사용하여 다른 문서에 대한 링크를 생성합니다.
 - {{HTMLElement("link")}} 또는 {{HTMLElement("script")}}와 같은 다양한 요소를 통해 문서와 관련 리소스를 연결합니다.

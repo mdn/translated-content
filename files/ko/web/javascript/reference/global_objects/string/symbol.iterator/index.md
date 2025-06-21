@@ -10,7 +10,22 @@ l10n:
 
 {{jsxref("String")}}의 **`[@@iterator]()`** 메서드는 [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)을 구현하여 [전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax) 및 {{jsxref("Statements/for...of", "for...of")}} 루프와 같이 반복자를 기대하는 대부분의 구문에서 문자열을 사용할 수 있게 합니다. 문자열 값의 유니코드 코드 포인트를 개별 문자열로 산출하는 [문자열 반복자 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Iterator)를 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-prototype-@@iterator.html")}}
+{{InteractiveExample("JavaScript Demo: String.prototype[Symbol.iterator]()")}}
+
+```js interactive-example
+const str = "The quick red fox jumped over the lazy dog's back.";
+
+const iterator = str[Symbol.iterator]();
+let theChar = iterator.next();
+
+while (!theChar.done && theChar.value !== " ") {
+  console.log(theChar.value);
+  theChar = iterator.next();
+  // Expected output: "T"
+  //                  "h"
+  //                  "e"
+}
+```
 
 ## 구문
 
@@ -84,6 +99,6 @@ console.log(strIter.next().value); // "\uD835\uDC68"
 ## 같이 보기
 
 - [`core-js`에서 `String.prototype[@@iterator]`의 폴리필](https://github.com/zloirock/core-js#ecmascript-string-and-regexp)
-- [Text formatting](/ko/docs/Web/JavaScript/Guide/Text_formatting) 가이드
+- [Text formatting](/ko/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings) 가이드
 - {{jsxref("Symbol.iterator")}}
 - [순회 프로토콜](/ko/docs/Web/JavaScript/Reference/Iteration_protocols)

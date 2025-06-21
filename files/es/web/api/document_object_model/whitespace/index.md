@@ -278,7 +278,7 @@ Hay algunas formas de solucionar este problema:
 
 #### Usando flexbox
 
-Utiliza [Flexbox](/es/docs/Learn/CSS/CSS_layout/Flexbox) para crear la lista horizontal de elementos en lugar de probar una solución de `inline-block`. Esto se encarga de todo por ti y definitivamente es la solución preferida:
+Utiliza [Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para crear la lista horizontal de elementos en lugar de probar una solución de `inline-block`. Esto se encarga de todo por ti y definitivamente es la solución preferida:
 
 ```css
 ul {

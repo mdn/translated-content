@@ -9,7 +9,32 @@ Les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type **`password`
 
 Un tel élément se présente comme un contrôle de saisie de texte sur une ligne et dans lequel chaque caractère est remplacé par un symbole (un astérisque (`*`) ou un point (`•`)) afin que le texte saisi ne puisse être lu. Le caractère utilisé pour masquer dépend de l'agent utilisateur et du système d'exploitation utilisé.
 
-{{EmbedInteractiveExample("pages/tabbed/input-password.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username" />
+</div>
+
+<div>
+  <label for="pass">Password (8 characters minimum):</label>
+  <input type="password" id="pass" name="password" minlength="8" required />
+</div>
+
+<input type="submit" value="Sign in" />
+```
+
+```css interactive-example
+label {
+  display: block;
+}
+
+input[type="submit"],
+label {
+  margin-top: 1rem;
+}
+```
 
 La façon dont le texte saisi est traité dépend du navigateur utilisé. Sur les appareils mobiles, par exemple, le caractère tapé est souvent laissé affiché un court instant afin que l'utilisatrice ou l'utilisateur puisse contrôler que c'est bien le bon caractère. Ainsi, même si le clavier est petit et virtuel, on peut éviter de faire trop d'erreurs.
 

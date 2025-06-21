@@ -23,7 +23,53 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 下列示例演示了由 `scroll-snap-type` 所定义的纵轴方向的滚动吸附。此外，`scroll-snap-align` 被应用于 `<section>` 元素的所有子元素，决定了每个子元素的滚动止点。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-y.html", "100%", 700)}}
+```html live-sample___mandatory-y
+<article class="scroller">
+  <section>
+    <h2>Section one</h2>
+  </section>
+  <section>
+    <h2>Section two</h2>
+  </section>
+  <section>
+    <h2>Section three</h2>
+  </section>
+</article>
+```
+
+```css hidden live-sample___mandatory-y
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___mandatory-y
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+{{EmbedLiveSample("mandatory-y", "", "350px")}}
 
 ## 使用 scroll-snap-type
 
@@ -40,7 +86,71 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 在下列示例中，可以在 `mandatory` 和 `proximity` 之间改变取值，看看对滚动产生的效果。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/mandatory-proximity.html", "100%", 700)}}
+```html live-sample___mandatory-proximity
+<article class="scroller">
+  <section>
+    <h2>Section one</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+  <section>
+    <h2>Section two</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+  <section>
+    <h2>Section three</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+</article>
+```
+
+```css hidden live-sample___mandatory-proximity
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___mandatory-proximity
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+{{EmbedLiveSample("mandatory-proximity", "", "350px")}}
 
 在上述示例中的滚动容器上同时设置了 {{CSSXref("height", "height: 300px;")}} 和 {{CSSXref("overflow-y", "overflow-y: scroll;")}}。
 
@@ -50,7 +160,71 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 {{CSSXref("scroll-snap-align")}} 属性的有效值包括 `start`、`end`、`center` 和 `none`。这些值用于标示内容应当吸附到滚动容器中的哪个点。在下列示例中，可以改变 `scroll-snap-align` 的值，看看滚动行为如何变化。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/align.html", "100%", 700)}}
+```html hidden live-sample___align
+<article class="scroller">
+  <section>
+    <h2>Section one</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+  <section>
+    <h2>Section two</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+  <section>
+    <h2>Section three</h2>
+    <p>
+      Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+      kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus
+      winter purslane kale. Celery potato scallion desert raisin horseradish
+      spinach carrot soko.
+    </p>
+  </section>
+</article>
+```
+
+```css hidden live-sample___align
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___align
+.scroller {
+  height: 200px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+{{EmbedLiveSample("align", "", "250px")}}
 
 如果 `scroll-snap-type` 是 `mandatory` 而且某个子元素上的 `scroll-snap-align` 被设置为 `none` 或者未被设置（此时默认为 `none`），那么用户会无法把这个元素滚入视野。
 
@@ -60,17 +234,174 @@ slug: Web/CSS/CSS_scroll_snap/Basic_concepts
 
 在下列示例中，`scroll-padding` 被设置为 `40px`。当内容吸附到第二和第三节的开头时，滚动会停在离章节开头 40 像素远的位置。试试改变 `scroll-padding` 的值，看看距离如何变化。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding.html", "100%", 700)}}
+```html live-sample___scroll-padding
+<article class="scroller">
+  <section>
+    <h2>Section one</h2>
+  </section>
+  <section>
+    <h2>Section two</h2>
+  </section>
+  <section>
+    <h2>Section three</h2>
+  </section>
+</article>
+```
+
+```css hidden live-sample___scroll-padding
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___scroll-padding
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 50px;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+{{EmbedLiveSample("scroll-padding", "", "350px")}}
 
 如果有像导航栏这种可能遮盖滚动内容的[固定](/zh-CN/docs/Web/CSS/position#固定定位)元素，那么这个属性可以派上用场。使用 `scroll-padding` 可以为固定元素留出空间。例如在下列示例中，当内容在 `<h1>` 元素下方滚动时，`<h1>` 在屏幕上保持不动。如果没有内边距，那么在发生吸附时，标题会遮盖一些内容。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-padding-sticky.html", "100%", 700)}}
+```html hidden live-sample___scroll-padding-sticky
+<article class="scroller">
+  <h1>Sticky Heading</h1>
+  <section>
+    <h2>Section one</h2>
+  </section>
+  <section>
+    <h2>Section two</h2>
+  </section>
+  <section>
+    <h2>Section three</h2>
+  </section>
+</article>
+```
+
+```css hidden live-sample___scroll-padding-sticky
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___scroll-padding-sticky
+.scroller h1 {
+  position: sticky;
+  top: 0;
+  min-height: 40px;
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.scroller h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 50px;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+}
+```
+
+{{EmbedLiveSample("scroll-padding-sticky", "", "350px")}}
 
 ## 使用 scroll-margin
 
 在子元素上可以设置 {{CSSXref("scroll-margin")}} 属性或者全称滚动外边距值，用于定义指定盒子的外边距。这可以让不同的子元素有不同大小的空间，而且可以和父元素上的 `scroll-padding` 一起使用。在下列示例中尝试一下。
 
-{{EmbedGHLiveSample("css-examples/scroll-snap/scroll-margin.html", "100%", 700)}}
+```html hidden live-sample___scroll-margin
+<article class="scroller">
+  <section>
+    <h2>Section one</h2>
+  </section>
+  <section>
+    <h2>Section two</h2>
+  </section>
+  <section>
+    <h2>Section three</h2>
+  </section>
+</article>
+```
+
+```css hidden live-sample___scroll-margin
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.scroller {
+  border: 4px solid #333;
+  width: 300px;
+}
+
+.scroller section {
+  min-height: 100%;
+  padding: 10px;
+}
+
+.scroller section:nth-child(odd) {
+  background-color: #ccc;
+}
+```
+
+```css live-sample___scroll-margin
+.scroller {
+  height: 300px;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller section {
+  scroll-snap-align: start;
+  scroll-margin: 40px;
+}
+```
+
+{{EmbedLiveSample("scroll-margin", "", "350px")}}
 
 ## 使用 scroll-snap-stop
 

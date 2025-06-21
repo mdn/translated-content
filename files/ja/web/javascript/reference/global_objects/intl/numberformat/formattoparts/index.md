@@ -7,7 +7,19 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 
 **`Intl.Numberformat.prototype.formatToParts()`** メソッドは `NumberFormat` フォーマッターによって生成された文字列のロケールに応じた書式設定を可能にします。
 
-{{EmbedInteractiveExample("pages/js/intl-numberformat-prototype-formattoparts.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts")}}
+
+```js interactive-example
+const amount = 654321.987;
+const options = { style: "currency", currency: "USD" };
+const numberFormat = new Intl.NumberFormat("en-US", options);
+
+const parts = numberFormat.formatToParts(amount);
+const partValues = parts.map((p) => p.value);
+
+console.log(partValues);
+// Expected output: "["$", "654", ",", "321", ".", "99"]"
+```
 
 ## 構文
 
@@ -84,7 +96,7 @@ formatter.format(number);
 // "3.500,00 €"
 ```
 
-しかし、多くのユーザーインターフェースでは、この文字列の書式形式をカスタマイズしたいと要望があります。 `formatToParts` メソッドは `NumberFormat` フォーマッターによって生成された文字列を要素ごとの文字列として提供することでロケールに応じた書式設定を可能にします。
+しかし、多くのユーザーインターフェイスでは、この文字列の書式形式をカスタマイズしたいと要望があります。 `formatToParts` メソッドは `NumberFormat` フォーマッターによって生成された文字列を要素ごとの文字列として提供することでロケールに応じた書式設定を可能にします。
 
 ```js
 formatter.formatToParts(number);

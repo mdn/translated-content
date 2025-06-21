@@ -9,7 +9,19 @@ l10n:
 
 **`exec()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、指定された文字列の中でこの正規表現と一致するものを検索し、その結果の配列、または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) を返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-exec.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.exec()")}}
+
+```js interactive-example
+const regex1 = RegExp("foo*", "g");
+const str1 = "table football, foosball";
+let array1;
+
+while ((array1 = regex1.exec(str1)) !== null) {
+  console.log(`Found ${array1[0]}. Next starts at ${regex1.lastIndex}.`);
+  // Expected output: "Found foo. Next starts at 9."
+  // Expected output: "Found foo. Next starts at 19."
+}
+```
 
 ## 構文
 

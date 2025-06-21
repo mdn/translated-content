@@ -9,7 +9,20 @@ l10n:
 
 **`Symbol.for()`** は静的メソッドで、引数で与えられたキーでランタイム全体のシンボルレジストリー内に存在しているシンボルを検索し、見つかった場合はそれを返します。さもなければ、新しいシンボルがこのキーでグローバルシンボルレジストリー内に生成されます。
 
-{{EmbedInteractiveExample("pages/js/symbol-for.html")}}
+{{InteractiveExample("JavaScript Demo: Symbol.for()")}}
+
+```js interactive-example
+console.log(Symbol.for("bar") === Symbol.for("bar"));
+// Expected output: true
+
+console.log(Symbol("bar") === Symbol("bar"));
+// Expected output: false
+
+const symbol1 = Symbol.for("foo");
+
+console.log(symbol1.toString());
+// Expected output: "Symbol(foo)"
+```
 
 ## 構文
 

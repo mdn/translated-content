@@ -36,7 +36,7 @@ En este artículo vas a iniciar tu viaje hacia el dominio la aplicación de esti
 Como ya habrás experimentado en tu trabajo con el HTML y el CSS, el texto incluido en un elemento se dispone dentro de la caja de contenido del elemento. Esta empieza en la parte superior izquierda del área de contenido (o en la esquina superior derecha, en el caso del contenido de los lenguajes RTL, o right-to-left, que se escriben de derecha a izquierda) y fluye hacia el final de la línea. Una vez que llega al final, baja a la línea siguiente y sigue, y luego continúa a la línea siguiente, hasta que todo el contenido se ha ubicado en la caja. El contenido de texto se comporta efectivamente como una serie de elementos en línea, distribuidos en líneas adyacentes entre sí, y sin crear saltos de línea hasta que se llega al final de la línea, a menos que se fuerce un salto de línea manual con el elemento {{htmlelement("br")}}.
 
 > [!NOTE]
-> Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn/CSS/Building_blocks/The_box_model) antes de continuar.
+> Si el párrafo anterior te parece confuso, no te preocupes: vuelve atrás y revisa el artículo sobre el [modelo de caja](/es/docs/Learn_web_development/Core/Styling_basics/Box_model) antes de continuar.
 
 Las propiedades CSS que se usan para aplicar estilo al texto pueden clasificarse generalmente en dos categorías, que veremos por separado en este artículo:
 
@@ -71,7 +71,7 @@ Puedes ver el [ejemplo completo en Github](https://mdn.github.io/learning-area/c
 
 La propiedad {{cssxref("color")}} establece el color del contenido de los elementos seleccionados (que normalmente es texto, pero también puede incluir un par cosas más, como un subrayado o una línea superpuesta al texto con la propiedad {{cssxref("text-decoration")}} ).
 
-La propiedad `color` puede admitir cualquier [unidad de color CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units), por ejemplo:
+La propiedad `color` puede admitir cualquier [unidad de color CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units), por ejemplo:
 
 ```css
 p {
@@ -131,7 +131,7 @@ La lista de los tipos de letra seguros para la web cambia al ir evolucionando lo
 > Entre otros recursos, el sitio [cssfontstack.com](http://www.cssfontstack.com/) mantiene una lista de tipos de letra seguros disponibles en los sistemas operativos para Windows y Mac, que puede ayudarte en la toma de decisiones acerca de lo que consideras seguro para tus propósitos.
 
 > [!NOTE]
-> Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn/CSS/Styling_text/Web_fonts) del módulo.
+> Hay una manera de descargar un tipo de letra personalizado junto con la página web, que te permite personalizar el uso de los tipos de letra de la manera que desees: **web fonts**. Esto es un poco más complejo, y lo vamos a exponer más adelante en un [artículo independiente](/es/docs/Learn_web_development/Core/Text_styling/Web_fonts) del módulo.
 
 #### Fuentes predeterminadas
 
@@ -226,7 +226,7 @@ Esto nos da el resultado siguiente:
 
 ### Tamaño de la letra
 
-En el artículo sobre [Unidades y valores de CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de nuestro módulo anterior, revisamos las unidades de longitud y tamaño. El tamaño del tipo de letra (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y en otras, como [porcentajes](/es/docs/Learn/CSS/Building_blocks/Values_and_units#porcentajes)). Sin embargo, las unidades más comunes que vas a usar para ajustar el tamaño del texto son:
+En el artículo sobre [Unidades y valores de CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) de nuestro módulo anterior, revisamos las unidades de longitud y tamaño. El tamaño del tipo de letra (establecido con la propiedad {{cssxref("font-size")}}) puede tomar valores medidos en la mayoría de estas unidades (y en otras, como [porcentajes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units#porcentajes)). Sin embargo, las unidades más comunes que vas a usar para ajustar el tamaño del texto son:
 
 - Unidades `px` (píxeles): El número de píxeles de altura que deseas que tenga el texto. Esta es una unidad absoluta, da como resultado el mismo valor calculado final para el tipo de letra en la página en casi cualquier situación.
 - Unidades `em`: 1em equivale al tamaño de tipo de letra que se haya establecido en el elemento padre del elemento activo al que aplicamos estilo (más específicamente, el ancho de una letra M mayúscula contenida dentro del elemento padre). Este puede ser complejo de resolver si hay muchos elementos anidados con diferentes tamaños de tipo de letra establecidos, pero es factible, como verás a continuación. Pero, ¿para qué molestarse en ello? Porque resulta bastante natural una vez que te acostumbras a ello, y puedes usar unidades `em` para establecer el tamaño de todo, no solo del texto. Puedes tener un sitio web completo dimensionado con unidades `em`, lo que facilita su mantenimiento.
@@ -369,10 +369,10 @@ text-shadow: 1px 1px 1px red;
 
 Las cuatro propiedades son las siguientes:
 
-1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
+1. El desplazamiento horizontal de la sombra desde el texto original; admite la mayoría de las [unidades y magnitudes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) de que dispone CSS, pero lo más habitual es usar `px`. Es un valor obligatorio.
 2. El desplazamiento vertical de la sombra desde el texto original; se comporta básicamente igual que el desplazamiento horizontal, excepto porque mueve la sombra arriba/abajo, y no hacia derecha/izquierda. Es un valor obligatorio.
-3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units) de que dispone el CSS.
-4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn/CSS/Building_blocks/Values_and_units). Si no se incluye este valor, el valor predeterminado es `negro`.
+3. El radio de desenfoque; cuanto más alto es este valor, mayor es la dispersión de la sombra. Si no se incluye este valor, el valor por defecto es 0, y no hay desenfoque. Esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units) de que dispone el CSS.
+4. El color de base de la sombra, que admite cualquier [unidad de color de que dispone CSS](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units). Si no se incluye este valor, el valor predeterminado es `negro`.
 
 > [!NOTE]
 > Los valores con desplazamiento positivo mueven la sombra hacia la derecha o hacia abajo, mientras que los valores con desplazamiento negativo, por ejemplo `-1px -1px`, mueven la sombrea hacia la izquierda o hacia arriba.
@@ -498,7 +498,7 @@ p {
 
 ### Interlineado
 
-La propiedad {{cssxref("line-height")}} establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units), pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad {{cssxref("font-size")}} para obtener la altura de la línea (`line-height`). El texto del cuerpo (`body`) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:
+La propiedad {{cssxref("line-height")}} establece la altura entre cada línea de texto; esta propiedad admite la mayoría de las [unidades y magnitudes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units), pero también puede tomar un valor sin unidades, que actúa como un multiplicador y generalmente se considera la mejor opción porque se multiplica la propiedad {{cssxref("font-size")}} para obtener la altura de la línea (`line-height`). El texto del cuerpo (`body`) generalmente se ve mejor y es más fácil de leer si hay más separación entre las líneas; la altura recomendada de la línea es entre 1.5-2 (a doble espacio). Por lo tanto, para configurar nuestras líneas de texto a 1.5 veces la altura de la fuente, deberías usar esto:
 
 ```css
 line-height: 1.5;
@@ -553,7 +553,7 @@ p {
 
 ### Espacio entre letras y espacio entre palabras
 
-Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espacio entre las letras y entre las palabras del texto. No los usarás a menudo, pero podría ser útil para obtener una apariencia determinada o para mejorar la legibilidad de un tipo de letra particularmente denso. Estas propiedades admiten la mayoría de las [unidades y magnitudes](/es/docs/Learn/CSS/Building_blocks/Values_and_units).
+Las propiedades {{cssxref("letter-spacing")}} y {{cssxref("word-spacing")}} te permiten establecer el espacio entre las letras y entre las palabras del texto. No los usarás a menudo, pero podría ser útil para obtener una apariencia determinada o para mejorar la legibilidad de un tipo de letra particularmente denso. Estas propiedades admiten la mayoría de las [unidades y magnitudes](/es/docs/Learn_web_development/Core/Styling_basics/Values_and_units).
 
 Así, como ejemplo, podemos aplicar a la primera línea de los elementos {{htmlelement("p")}} de nuestro ejemplo lo siguiente:
 

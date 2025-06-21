@@ -8,7 +8,16 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 전역 **`globalThis`** 속성에는 일반적으로 [전역 객체](/ko/docs/Glossary/Global_object)와 유사한
 [전역 `this`](/ko/docs/Web/JavaScript/Reference/Operators/this#global_context) 값이 포함됩니다.
 
-{{EmbedInteractiveExample("pages/js/globalprops-globalthis.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+
+```js interactive-example
+function canMakeHTTPRequest() {
+  return typeof globalThis.XMLHttpRequest === "function";
+}
+
+console.log(canMakeHTTPRequest());
+// Expected output (in a browser): true
+```
 
 ## 값
 

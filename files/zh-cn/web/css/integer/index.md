@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Types)是一种特殊的 {{cssxref("number")}} 类型，它表示一个整数。整数可用于许多 CSS 属性和描述符，例如 {{cssxref("column-count")}}、{{cssxref("counter-increment")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("z-index")}} 属性和 {{cssxref("@counter-style/range", "range")}} 描述符。
+**`<integer>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)是一种特殊的 {{cssxref("number")}} 类型，它表示一个整数。整数可用于许多 CSS 属性和描述符，例如 {{cssxref("column-count")}}、{{cssxref("counter-increment")}}、{{cssxref("grid-column")}}、{{cssxref("grid-row")}}、{{cssxref("z-index")}} 属性和 {{cssxref("@counter-style/range", "range")}} 描述符。
 
 ## 语法
 

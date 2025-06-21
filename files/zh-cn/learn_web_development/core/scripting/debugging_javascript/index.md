@@ -1,12 +1,11 @@
 ---
 title: 处理常见的 JavaScript 问题
 slug: Learn_web_development/Core/Scripting/Debugging_JavaScript
-original_slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
 l10n:
   sourceCommit: e8d495591fefeb3c0c484b989cc155b84b50bb57
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/JSON","Learn_web_development/Core/Frameworks_libraries", "Learn_web_development/Core/Scripting")}}
 
 现在，我们将探讨常见的跨浏览器 JavaScript 问题以及如何解决它们。这包括使用浏览器开发者工具来跟踪和修复问题，使用 polyfill 和库来解决问题，在较旧的浏览器中使用现代 JavaScript 特性等信息。
 
@@ -82,30 +81,9 @@ if (window.XMLHttpRequest) {
 
 [JSHint 主页](https://jshint.com/)提供了一个在线 linter，它可以让你在左侧输入 JavaScript 代码，并在右侧提供包含指标、警告和错误的输出。
 
-![JSHint 屏幕截图。左边面板是一个有代码高亮并且显示行数的代码编辑器。右边面板为关于函数和警告的数量、大小和构成的指标。警告包括问题和所在行号。](jshint-online.png)
-
 #### 代码编辑器插件
 
 每次把代码复制并粘贴到网页上以检查其有效性并不方便，你真正需要的是能融入你的标准工作流程的 linter，而且麻烦最少。许多代码编辑器都有 linter 插件，例如，请参见 [JSHint 安装页面](https://jshint.com/install/)的“文本编辑器和 IDE 的插件”部分。
-
-#### 其他方式
-
-还有其他的方法来使用这种 linter；你可以在 [JSHint](https://jshint.com/install/) 和 [ESLint](https://eslint.org/docs/user-guide/getting-started) 的安装页面上读到这些方法。
-
-值得一提的是命令行的使用——你可以使用 npm（Node 包管理器——你必须先安装 [NodeJS](https://nodejs.org/zh-cn/)）将这些工具作为命令行工具来安装（可通过 CLI——命令行界面）。例如，下面的命令安装了 JSHint：
-
-```bash
-npm install -g jshint
-```
-
-然后，你可以用这些工具处理你想 lint 的 JavaScript 文件，比如说：
-
-![命令行输入了 jshint filename.js。响应是一个有行号的列表和对发现的错误的描述。](js-hint-commandline.png)
-
-你也可以将这些工具与任务运行器/构建工具（如 [Gulp](https://gulpjs.com/) 或 [Webpack](https://webpack.github.io/)）一起使用，以便在开发过程中自动对你的 JavaScript 进行 lint。（见后面文章中的[使用任务运行器来自动测试工具](/zh-CN/docs/Learn_web_development/Extensions/Testing/Automated_testing#使用任务运行器作为自动化测试工具)。）关于 ESLint 选项，请参见 [ESLint 集成](https://eslint.org/docs/user-guide/integrations)；Grunt 开箱即支持 JSHint，并且还有其他可用的集成，例如 [Webpack 的 JSHint 加载器](https://github.com/webpack-contrib/jshint-loader)。
-
-> [!NOTE]
-> 尽管 ESLint 的安装和配置过程比起 JSHint 更繁琐，但是它也更强大。
 
 ### 浏览器开发者工具
 
@@ -287,90 +265,6 @@ JavaScript 库往往有几个主要的种类（有些库包含其中的一个以
 
 > [!NOTE]
 > 你也会在 web 上遇到一些 JavaScript 框架，比如 [Ember](https://emberjs.com/) 和 [Angular](https://angularjs.org/)。库通常可用于解决个别问题并放入现有网站中，而框架则更倾向于开发复杂 web 应用的完整解决方案。
-
-#### Polyfill
-
-Polyfill 也由第三方的 JavaScript 文件组成，你可以把它们放到你的项目中，但它们与库不同。库倾向于加强现有的功能，使一些需求可以更容易实现，而 Polyfill 提供的是根本不存在的功能。Polyfill 完全使用 JavaScript 或其他技术来建立对浏览器不支持的特性的支持。例如，你可以使用 [es6-promise](https://github.com/stefanpenner/es6-promise) 这样的 polyfill 来使 promise 在没有原生支持的浏览器中也能工作。
-
-让我们一起来完成一个练习——在这个示例中，我们将使用 Fetch polyfill 和 es6-promise polyfill。虽然现代浏览器已经完全支持 Fetch 和 Promise，但如果我们的目标浏览器不支持 Fetch，那么这种浏览器很可能也不支持 Promise，因为 Fetch 依赖于 Promise。
-
-1. 为了开始工作，在一个新的目录中复制我们的 [fetch-polyfill.html](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) 示例文件和[漂亮的鲜花图片](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg)。我们将编写代码来获取花的图片并在页面中显示。
-2. 接下来，在与 HTML 相同的目录中保存一份 [Fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js) 的副本。
-3. 使用以下代码将 polyfill 脚本应用到页面上，将这些脚本放在现有的 {{htmlelement("script")}} 元素上方，这样当我们开始尝试使用 Fetch 时，它们就已经在页面上可用了（我们还从 CDN 加载一个 Promise polyfill，因为 IE11 支持 promise，这是 fetch 所需要的）：
-
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-   <script src="fetch.js"></script>
-   ```
-
-4. 在原来的 {{htmlelement("script")}} 元素内添加下列代码：
-
-   ```js
-   const myImage = document.querySelector(".my-image");
-
-   fetch("flowers.jpg").then((response) => {
-     response.blob().then((myBlob) => {
-       const objectURL = URL.createObjectURL(myBlob);
-       myImage.src = objectURL;
-     });
-   });
-   ```
-
-5. 即使你在不支持 [Fetch](/zh-CN/docs/Web/API/Window/fetch) 的浏览器中加载它，你仍然能够看到花的图像——这不是很酷吗？
-   ![一个 fetch 基本示例的标题，配一张紫色花朵的照片](fetch-image.jpg)
-
-> [!NOTE]
-> 你可以在 [fetch-polyfill-finished.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) 找到我们的完成版（也请看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)）。
-
-> [!NOTE]
-> 在此重申，polyfill 有许多种方法可以利用——具体请查阅每个 polyfill 单独的文档。
-
-你可能会问：“为什么我们要加载 polyfill 代码，即便在不需要的时候？”这是一个合理的疑问。随着网站变得更加复杂，开始引入更多的库和 polyfill，你可能会加载大量不必要的代码。这会影响网站性能，尤其是在性能较低的设备上。因此，只有在需要时才加载相应的文件是明智的。
-
-要做到这一点，你需要在 JavaScript 代码中进行一些额外的配置。你需要进行特性检测，以确定浏览器是否支持你想要使用的特性：
-
-```js
-if (browserSupportsAllFeatures()) {
-  main();
-} else {
-  loadScript("polyfills.js", main);
-}
-
-function main(err) {
-  // 主要的应用代码
-}
-```
-
-因此，我们首先执行一个条件判断，检查 `browserSupportsAllFeatures()` 函数是否返回 `true`。如果返回 `true`，我们就执行 `main()` 函数（该函数包含我们应用程序的全部代码）。`browserSupportsAllFeatures()` 函数的实现可能如下所示：
-
-```js
-function browserSupportsAllFeatures() {
-  return window.Promise && window.fetch;
-}
-```
-
-在这段代码中，我们检测浏览器是否支持 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 对象和 [`fetch()`](/zh-CN/docs/Web/API/Window/fetch) 函数。如果浏览器支持这两者，函数就会返回 `true`。如果函数返回 `false`，我们将执行条件语句的第二部分，调用名为 `loadScript()` 的函数来将 polyfill 加载到页面，然后执行 `main()` 函数。`loadScript()` 函数的实现可能是这样的：
-
-```js
-function loadScript(src, done) {
-  const js = document.createElement("script");
-  js.src = src;
-  js.onload = () => {
-    done();
-  };
-  js.onerror = () => {
-    done(new Error(`Failed to load script ${src}`));
-  };
-  document.head.appendChild(js);
-}
-```
-
-此函数创建一个新的 `<script>` 元素，并设置其 `src` 属性为我们在上述代码中调用时指定的路径（`'polyfills.js'`）。脚本加载完成后，会执行我们第二个参数指定的函数（`main()`）。如果在加载脚本时发生错误，该函数仍会被调用，但会传入一个自定义错误，这样如果出现问题，我们可以通过这个错误来进行调试。
-
-请注意，`polyfills.js` 实际上是将我们正在使用的两个 polyfill 合并到一个文件中。虽然我们是手动完成这一过程的，但也有更智能的工具可以自动为你生成捆绑文件——例如 [Browserify](https://browserify.org/)（你可以参考 [Browserify 基础教程](https://www.sitepoint.com/getting-started-browserify/)来了解如何开始使用）。将多个 JavaScript 文件捆绑在一起是一个好方法，它通过减少所需进行的 HTTP 请求数量来提升网站性能。
-
-你可以在 [fetch-polyfill-only-when-needed.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) 查看这段代码的实际运行情况（也可查看[源代码](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)）。我们需要指出的是，这段代码的原创者是 Philip Walton。你可以阅读他的文章[只在需要时加载 Polyfill](https://philipwalton.com/articles/loading-polyfills-only-when-needed/)，了解更多关于原始代码的信息，以及围绕这个主题的许多有用讨论。
 
 #### 转译 JavaScript
 

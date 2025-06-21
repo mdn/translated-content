@@ -100,8 +100,7 @@ tres formas de analizar y parsear esta cadena de HTML en bruto:
 Aunque {{domxref("XMLHttpRequest")}} se utiliza normalmente para enviar y recibir
 datos textuales, puede utilizarse para enviar y recibir contenido binario. Existen varios
 métodos probados para forzar a la respuesta de un `XMLHttpRequest` para que envíe datos
-binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType",
-  "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
+binarios. Se trata de utilizar la función {{domxref("XMLHttpRequest.overrideMimeType", "overrideMimeType()")}} en el objeto `XMLHttpRequest` y es una
 solución viable.
 
 ```js

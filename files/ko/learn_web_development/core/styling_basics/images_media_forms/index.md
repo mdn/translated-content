@@ -64,7 +64,7 @@ original_slug: Learn/CSS/Building_blocks/Images_media_form_elements
 
 overflow 문제에 대해 우리는 무엇을 할 수 있습니까?
 
-[이전 수업](/ko/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/ko/docs/Web/HTML/Element/video) 또는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
+[이전 수업](/ko/docs/Learn_web_development/Core/Styling_basics/Sizing) 에서 배운 것처럼 일반적인 기술은 이미지의 {{cssxref("max-width")}} 를 100% 로 만드는 것입니다. 이렇게하면 이미지가 박스보다 작지만 커질 수 없습니다. 이 기술은 [`<video>`](/ko/docs/Web/HTML/Element/video) 또는 [`<iframe>`](/ko/docs/Web/HTML/Element/iframe) 과 같은 다른 대체 요소와 함께 작동합니다.
 
 **위 예에서 `<img>` 요소에 `max-width: 100%` 를 추가하십시오. 작은 이미지는 변경되지 않지만, 큰 이미지는 박스에 맞게 작아집니다.**
 
@@ -103,7 +103,7 @@ img {
 
 ## 양식 (Form) 요소
 
-CSS 로 스타일링 할 때, 양식 요소는 까다로운 문제가 될 수 있으며 [웹 양식 모듈](/ko/docs/Learn/Forms) 에는 약식 요소의 까다로운 측면에 대한 자세한 안내서가 포함되어 있습니다. 이 기사에서 강조할 가치가 있는 몇 가지 기본 사항이 있습니다.
+CSS 로 스타일링 할 때, 양식 요소는 까다로운 문제가 될 수 있으며 [웹 양식 모듈](/ko/docs/Learn_web_development/Extensions/Forms) 에는 약식 요소의 까다로운 측면에 대한 자세한 안내서가 포함되어 있습니다. 이 기사에서 강조할 가치가 있는 몇 가지 기본 사항이 있습니다.
 
 [`<input>`](/ko/docs/Web/HTML/Element/input) 요소를 통해 많은 양식 컨트롤이 페이지에 추가됩니다 — 텍스트 입력과 같은 간단한 양식 필드를 정의하고 색상 및 날짜 선택자와 같은 HTML5 에 추가된 보다 복잡한 필드를 통해 정의합니다. 여러줄로 된 텍스트 입력을 위한 [`<textarea>`](/ko/docs/Web/HTML/Element/textarea) 와 같은 일부 추가 요소와 [`<fieldset>`](/ko/docs/Web/HTML/Element/fieldset) 및 [`<legend>`](/ko/docs/Web/HTML/Element/legend) 와 같은 양식의 일부를 포함하고 레이블을 지정하는 데 사용되는 요소가 있습니다.
 
@@ -137,7 +137,7 @@ textarea {
 
 ### 양식 요소 및 박스 크기 조정
 
-여러 브라우저 양식 요소는 서로 다른 위젯에 다른 박스 크기 조정 규칙을 사용합니다. [박스 모델 학습](/ko/docs/Learn/CSS/Building_blocks/The_box_model) 에서 `box-sizing` 속성에 대해 학습했으며 양식을 스타일링할 때 이 지식을 사용하여 양식 요소에서 너비와 높이를 설정할 때 일관된 경험을 보장할 수 있습니다.
+여러 브라우저 양식 요소는 서로 다른 위젯에 다른 박스 크기 조정 규칙을 사용합니다. [박스 모델 학습](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model) 에서 `box-sizing` 속성에 대해 학습했으며 양식을 스타일링할 때 이 지식을 사용하여 양식 요소에서 너비와 높이를 설정할 때 일관된 경험을 보장할 수 있습니다.
 
 일관성을 유지하려면 모든 요소에서 마진과 패딩을 `0` 으로 설정한 다음 특정 컨트롤을 스타일링할 때 다시 마진을 추가하는 것이 좋습니다.
 

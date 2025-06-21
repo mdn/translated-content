@@ -2,14 +2,29 @@
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
 
 **`Math.E`** 靜態資料屬性代表歐拉數（Euler's number），即自然對數的底數 e ，其值約為 2.718。
 
-{{EmbedInteractiveExample("pages/js/math-e.html")}}
+{{InteractiveExample("JavaScript Demo: Math.E")}}
+
+```js interactive-example
+function compoundOneYear(interestRate, currentVal) {
+  return currentVal * Math.E ** interestRate;
+}
+
+console.log(Math.E);
+// 預期輸出：2.718281828459045
+
+console.log((1 + 1 / 1000000) ** 1000000);
+// 預期輸出：2.718280469 (approximately)
+
+console.log(compoundOneYear(0.05, 100));
+// 預期輸出：105.12710963760242
+```
 
 ## 值
 

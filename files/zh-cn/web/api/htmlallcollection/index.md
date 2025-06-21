@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Deprecated_Header}}
 
-**`HTMLAllCollection`** 接口表示*所有*文档元素（通过索引（类似于数组）和元素的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 访问）的集合。它由 {{domxref("document.all")}} 属性返回。
+**`HTMLAllCollection`** 接口表示*所有*文档元素（通过索引（类似于数组）和元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 访问）的集合。它由 {{domxref("document.all")}} 属性返回。
 
 `HTMLAllCollection` 的形态与 {{domxref("HTMLCollection")}} 非常相似，但两者在行为上存在许多细微差异，例如，`HTMLAllCollection` 可以作为函数调用，并且其 `item()` 方法可以使用表示元素 `id` 和 `name` 属性的字符串调用。
 
@@ -21,7 +21,7 @@ l10n:
 - {{domxref("HTMLAllCollection.item()")}}
   - : 返回位于集合中指定偏移位置的元素，或者返回其 `id` 或 `name` 属性具有指定值的元素。如果未找到任何元素，则返回 `null`。
 - {{domxref("HTMLAllCollection.namedItem()")}}
-  - : 返回集合中第一个其 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 或 `name` 属性与给定的字符串名称匹配的[元素](/zh-CN/docs/Web/API/Element)，如果没有匹配的元素，则返回 `null`。
+  - : 返回集合中第一个其 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 或 `name` 属性与给定的字符串名称匹配的[元素](/zh-CN/docs/Web/API/Element)，如果没有匹配的元素，则返回 `null`。
 
 ## JavaScript 中的用法
 

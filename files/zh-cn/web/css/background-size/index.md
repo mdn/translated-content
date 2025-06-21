@@ -7,7 +7,42 @@ slug: Web/CSS/background-size
 
 `background-size` 设置背景图片大小。图片可以保有其原有的尺寸，或者拉伸到新的尺寸，或者在保持其原有比例的同时缩放到元素的可用空间的尺寸。
 
-{{EmbedInteractiveExample("pages/css/background-size.html")}}
+{{InteractiveExample("CSS Demo: background-size")}}
+
+```css interactive-example-choice
+background-size: contain;
+```
+
+```css interactive-example-choice
+background-size: contain;
+background-repeat: no-repeat;
+```
+
+```css interactive-example-choice
+background-size: cover;
+```
+
+```css interactive-example-choice
+background-size: 30%;
+```
+
+```css interactive-example-choice
+background-size: 200px 100px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-image: url("/shared-assets/images/examples/hand.jpg");
+  min-width: 100%;
+  min-height: 100%;
+}
+```
 
 ```css
 /* 关键字 */
@@ -92,9 +127,9 @@ background-size: unset;
 ### 属性值
 
 - `<length>`
-  - : `{{cssxref("&lt;length&gt;")}}` 值，指定背景图片大小，不能为负值。
+  - : {{cssxref("&lt;length&gt;")}} 值，指定背景图片大小，不能为负值。
 - `<percentage>`
-  - : `{{cssxref("&lt;percentage&gt;")}}` 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为`fixed`，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。
+  - : {{cssxref("&lt;percentage&gt;")}} 值，指定背景图片相对背景区（background positioning area）的百分比。背景区由{{cssxref("background-origin")}}设置，默认为盒模型的内容区与内边距，也可设置为只有内容区，或者还包括边框。如果{{cssxref("background-attachment","attachment")}} 为`fixed`，背景区为浏览器可视区（即视口），不包括滚动条。不能为负值。
 - `auto`
   - : 以背景图片的比例缩放背景图片。
 - `cover`
@@ -125,15 +160,13 @@ background-size: unset;
 
 注意，对于没有固有尺寸或固有比例的矢量图不是所有的浏览器都支持。特别注意测试 Firefox 7- 与 Firefox 8+，以确定不同之处能否接受。
 
-### Formal syntax
+## 形式定义
 
-[如何阅读 CSS 语法。](/zh-CN/docs/Web/CSS/Value_definition_syntax)
+{{cssinfo}}
+
+## 形式语法
 
 {{csssyntax}}
-
-## 案例
-
-[`background-size: cover` 演示](https://whereswalden.com/files/mozilla/background-size/page-cover.html)与 [`background-size: contain` 演示](https://whereswalden.com/files/mozilla/background-size/page-contain.html)在新窗口打开，这样你可以看到当背景区大小变化时 `contain` 与 `cover` 是怎样的。 [系列演示：`background-size` 及其与 `background-*` 属性的关联](https://whereswalden.com/files/mozilla/background-size/more-examples.html)很好的说明了单独使用 `background-size` 及与其他属性共同使用。
 
 ## 示例
 
@@ -164,30 +197,6 @@ background-size: unset;
 
 {{EmbedLiveSample("大图像平铺", 340, 340)}}
 
-## 备注
-
-如果用渐变作为背景并且对它使用了`background-size` ，最好不要只用一个 auto，或者只指定一个宽度值 (例如 `background-size: 50%`)。对这两种情况 Firefox 8 有所改变，并且目前各浏览器表现不一致，不是全部浏览器都完全支持 [CSS3 `background-size` 规范](https://www.w3.org/TR/css3-background/#the-background-size) 与 [CSS3 Image Values gradient 规范](https://dev.w3.org/csswg/css3-images/#gradients) 。
-
-```css
-.bar {
-  width: 50px;
-  height: 100px;
-  background-image: gradient(...);
-
-  /* 不推荐 */
-  background-size: 25px;
-  background-size: 50%;
-  background-size: auto 50px;
-  background-size: auto 50%;
-
-  /* 可行 */
-  background-size: 25px 50px;
-  background-size: 50% 50%;
-}
-```
-
-特别不推荐对渐变 px 与`auto`一起用，因为 Firefox 8 之前不能重复渲染，并且对于没有实现 Firefox 8 渲染特性的浏览器，不知道指定了背景的元素的确切大小。
-
 ## 规范
 
 {{Specifications}}
@@ -196,37 +205,8 @@ background-size: unset;
 
 {{Compat}}
 
-## Polyfills and Workarounds
-
-### For Internet Explorer prior IE8
-
-Though Internet Explorer 8 doesn't support the `background-size` property, it is possible to emulate some of its functionality using the non-standard `-ms-filter` property:
-
-```css
--ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='path_relative_to_the_HTML_file', sizingMethod='scale')";
-```
-
-This simulates the value `cover`.
-
-### In Firefox 3.5
-
-While this property was added in Firefox 3.6, it is possible to stretch a image fully over the background in Firefox 3.5 by using {{cssxref("-moz-border-image")}}.
-
-```css
-.foo {
-  background-image: url(bg-image.png);
-
-  -webkit-background-size: 100% 100%; /* Safari 3.0 */
-  -moz-background-size: 100% 100%; /* Gecko 1.9.2 (Firefox 3.6) */
-  -o-background-size: 100% 100%; /* Opera 9.5 */
-  background-size: 100% 100%; /* Gecko 2.0 (Firefox 4.0) and other CSS3-compliant browsers */
-
-  -moz-border-image: url(bg-image.png) 0; /* Gecko 1.9.1 (Firefox 3.5) */
-}
-```
-
 ## 参见
 
-- [CSS Reference](/zh-CN/docs/Web/CSS/Reference)
-- [Multiple backgrounds](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-- [Scaling background images](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [调整背景图片的大小](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
+- [SVG 背景缩放](/zh-CN/docs/Web/CSS/CSS_backgrounds_and_borders/Scaling_of_SVG_backgrounds)
+- {{cssxref("object-fit")}}

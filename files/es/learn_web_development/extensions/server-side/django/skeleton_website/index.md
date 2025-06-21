@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Tutorial_local_library_website", "Learn/Server-side/Django/Models", "Learn/Server-side/Django")}}
 
-Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
+Este segundo artículo de nuestro [Tutorial Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) muestra cómo puedes crear un proyecto de "esqueleto" de sitio web como base, que puedes continuar luego llenado de configuraciones específicas del sitio, urls, modelos, vistas y plantillas.
 
 <table>
   <tbody>
@@ -50,7 +50,7 @@ El proceso es sencillo:
 3. Registrar las nuevas aplicaciones para incluirlas en el proyecto.
 4. Conectar el mapeador url de cada aplicación.
 
-Para el [sitio web de la BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) la carpeta del sitio y la carpeta de su proyecto se llamarán _locallibrary_, y tendremos sólo una aplicación llamada _catalog_. El nivel más alto de la estructura de carpetas quedará por tanto como sigue:
+Para el [sitio web de la BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) la carpeta del sitio y la carpeta de su proyecto se llamarán _locallibrary_, y tendremos sólo una aplicación llamada _catalog_. El nivel más alto de la estructura de carpetas quedará por tanto como sigue:
 
 ```bash
 locallibrary/         # Carpeta del sitio web
@@ -154,7 +154,7 @@ INSTALLED_APPS = [
 La nueva linea especifica el objeto de configuración de la aplicación (`CatalogConfig`) que se generó para tí en **/locallibrary/catalog/apps.py** cuando creaste la aplicación.
 
 > [!NOTE]
-> Te habrás fijado que hay ya un montón de otras `INSTALLED_APPS` (y `MIDDLEWARE`, más abajo en el fichero de ajustes). Éstas habilitan en soporte para el [Sitio de admistración Django](/es/docs/Learn/Server-side/Django/Admin_site) y como consecuencia el motón de la funcionalidad que usa (incluyendo sesiones, autenticación, etc).
+> Te habrás fijado que hay ya un montón de otras `INSTALLED_APPS` (y `MIDDLEWARE`, más abajo en el fichero de ajustes). Éstas habilitan en soporte para el [Sitio de admistración Django](/es/docs/Learn_web_development/Extensions/Server-side/Django/Admin_site) y como consecuencia el motón de la funcionalidad que usa (incluyendo sesiones, autenticación, etc).
 
 ## Especificación de la base de datos
 
@@ -363,7 +363,7 @@ Como has visto arriba, se ha añadido ya un mapeo de URLs para el sitio de admin
 
 ahora ya has creado un proyecto de esqueleto completo de sitio web, con el que puedes continuar rellenando con urls, modelos, vistas y plantillas.
 
-Ahora que el esqueleto del [sitio web de la BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) está completo y funcionando, es hora de empezar a escribir el código que hace que este sitio haga lo que se supone que debe hacer.
+Ahora que el esqueleto del [sitio web de la BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) está completo y funcionando, es hora de empezar a escribir el código que hace que este sitio haga lo que se supone que debe hacer.
 
 ## Ver también
 

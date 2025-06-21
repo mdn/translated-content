@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/indexOf
 
 **`indexOf()`** 方法返回数组中第一次出现给定元素的下标，如果不存在则返回 -1。
 
-{{EmbedInteractiveExample("pages/js/array-indexof.html")}}
+{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+
+```js interactive-example
+const beasts = ["ant", "bison", "camel", "duck", "bison"];
+
+console.log(beasts.indexOf("bison"));
+// Expected output: 1
+
+// Start from index 2
+console.log(beasts.indexOf("bison", 2));
+// Expected output: 4
+
+console.log(beasts.indexOf("giraffe"));
+// Expected output: -1
+```
 
 ## 语法
 

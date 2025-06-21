@@ -11,7 +11,21 @@ l10n:
 
 > **警告:** `[Symbol.species]` が存在すると、任意のコードの実行が可能になり、セキュリティ上の脆弱性が生じる可能性があります。また、ある種の最適化も非常に難しくなります。エンジンの実装者たちは、[この機能を削除するかどうか調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能に頼ることは避けてください。
 
-{{EmbedInteractiveExample("pages/js/regexp-getregexp-@@species.html")}}
+{{InteractiveExample("JavaScript Demo: RegExp[Symbol.species]")}}
+
+```js interactive-example
+class MyRegExp extends RegExp {
+  // Overwrite MyRegExp species to the parent RegExp constructor
+  static get [Symbol.species]() {
+    return RegExp;
+  }
+}
+
+const regex1 = new MyRegExp("foo", "g");
+
+console.log(regex1.test("football"));
+// Expected output: true
+```
 
 ## 構文
 

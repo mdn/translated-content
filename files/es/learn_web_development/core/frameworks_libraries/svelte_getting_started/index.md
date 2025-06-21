@@ -281,7 +281,7 @@ Si tienes experiencia trabajando con CSS, el siguiente código te debería ser f
 </style>
 ```
 
-Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Element/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
+Como puedes ver, estamos aplicando estilos a nuestro elemento [`<h1>`](/es/docs/Web/HTML/Reference/Elements/Heading_Elements). Tomando en cuenta lo anterior ¿Qué piensas que le pasará a los demás `<h1>` que se encuentran dentro de otros componentes?
 
 En Svelte, el CSS dentro del bloque `<style>` de un componente solo afecta al componente en cuestión. Para que esto funcione, se agrega una clase a los elementos seleccionados, la cual se basa en el _hash_ de los estilos del componente.
 
@@ -427,7 +427,7 @@ npm install
 npm run dev
 ```
 
-Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn/Tools_and_testing/GitHub).
+Si quieres aprender más sobre git y GitHub, hemos compilado una lista de enlaces a guías que te podrían ser útiles. Visita [Git y GitHub](/es/docs/Learn_web_development/Core/Version_control).
 
 > [!NOTE]
 > Si solo quieres descargar los archivos sin clonar el repositorio de git, puedes utilizar la herramienta degit de la siguiente manera: `npx degit opensas/mdn-svelte-tutorial`. También puedes descargar una carpeta específica con el comando `npx degit opensas/mdn-svelte-tutorial/01-getting-started`. Degit no creará un repositorio local de git, en su lugar, simplemente descarga los archivos de la carpeta especificada.

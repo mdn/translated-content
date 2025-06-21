@@ -9,7 +9,7 @@ HTML формы могут декларативно отправлять [HTTP](
 
 ## Формы не всегда формы
 
-В современных веб-приложениях, одностраничных приложениях и приложениях на основе фреймворков, обычно [HTML-формы](/ru/docs/Learn/Forms) используются для отправки данных без загрузки нового документа при получении данных ответа. В начале поговорим о том почему это требует другого подхода.
+В современных веб-приложениях, одностраничных приложениях и приложениях на основе фреймворков, обычно [HTML-формы](/ru/docs/Learn_web_development/Extensions/Forms) используются для отправки данных без загрузки нового документа при получении данных ответа. В начале поговорим о том почему это требует другого подхода.
 
 ### Получение контроля над глобальным интерфейсом
 
@@ -17,7 +17,7 @@ HTML формы могут декларативно отправлять [HTTP](
 
 Многие современные пользовательские интерфейсы используют HTML формы только для сбора пользовательского ввода, а не для для отправки данных. Когда пользователь пытается отправить свои данные, приложение берёт контроль и асинхронно передаёт данные в фоновом режиме, обновляя только ту часть всего интерфейса пользователя, которой требуется обновление.
 
-Асинхронная отправка произвольных данных обычно называется [AJAX](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), что означает **"Asynchronous JavaScript And XML"** (Асинхронный JavaScript и XML).
+Асинхронная отправка произвольных данных обычно называется [AJAX](/ru/docs/Learn_web_development/Core/Scripting/Network_requests), что означает **"Asynchronous JavaScript And XML"** (Асинхронный JavaScript и XML).
 
 ### Чем он отличается?
 
@@ -107,7 +107,7 @@ btn.addEventListener("click", function () {
 {{EmbedLiveSample("Создание_XMLHttpRequest_вручную", "100%", 50)}}
 
 > [!NOTE]
-> This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/Web/HTTP/CORS).
+> This use of {{domxref("XMLHttpRequest")}} is subject to the {{glossary('same-origin policy')}} if you want to send data to a third party web site. For cross-origin requests, you'll need [CORS and HTTP access control](/ru/docs/Web/HTTP/Guides/CORS).
 
 ### Using XMLHttpRequest and the FormData object
 
@@ -389,19 +389,19 @@ Depending on the browser and the type of data you are dealing with, sending form
 ### Learning path
 
 - [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
+- [How to structure an HTML form](/ru/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [The native form widgets](/ru/docs/Learn/Forms/Basic_native_form_controls)
 - [HTML5 input types](/ru/docs/Learn/Forms/HTML5_input_types)
 - [Additional form controls](/ru/docs/Learn/Forms/Other_form_controls)
 - [UI pseudo-classes](/ru/docs/Learn/Forms/UI_pseudo-classes)
-- [Styling HTML forms](/ru/docs/Learn/Forms/Styling_web_forms)
-- [Form data validation](/ru/docs/Learn/Forms/Form_validation)
-- [Sending form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [Styling HTML forms](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [Form data validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [Sending form data](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
 
 ### Advanced Topics
 
-- [Sending forms through JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
-- [How to build custom form widgets](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
+- [How to build custom form widgets](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
 - [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
 - [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
 - [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

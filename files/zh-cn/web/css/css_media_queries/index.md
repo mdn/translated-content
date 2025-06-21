@@ -13,7 +13,7 @@ l10n:
 
 ![笔记本电脑和移动设备具有不同的视口大小，可以使用媒体查询进行查询，我们可以看到内容布局的不同。](media-queries.svg)
 
-在 CSS 中，可以使用 {{cssxref("@media")}} [at 规则](/zh-CN/docs/Web/CSS/At-rule)根据媒体查询的结果有条件地应用样式表的一部分。要有条件地应用整个样式表，请使用 {{cssxref("@import")}}。
+在 CSS 中，可以使用 {{cssxref("@media")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)根据媒体查询的结果有条件地应用样式表的一部分。要有条件地应用整个样式表，请使用 {{cssxref("@import")}}。
 
 在设置可重用的 HTML 组件时，你还可以使用容器查询，它允许你根据容器元素的大小而非视口或者其他设备特征来应用样式。
 
@@ -21,9 +21,9 @@ l10n:
 
 在 [HTML](/zh-CN/docs/Web/HTML) 中，媒体查询可以应用于各种元素：
 
-- 在 {{HTMLElement("link")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/link#media) 属性中，其定义待应用链接资源（通常是 CSS）的媒体。
-- 在 {{HTMLElement("source")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/source#media) 属性中，其定义待应用源的媒体。（这仅在 {{HTMLElement("picture")}} 元素内有效。）
-- 在 {{HTMLElement("style")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Element/style#media) 属性中，其定义待应用样式的媒体。
+- 在 {{HTMLElement("link")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/link#media) 属性中，其定义待应用链接资源（通常是 CSS）的媒体。
+- 在 {{HTMLElement("source")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/source#media) 属性中，其定义待应用源的媒体。（这仅在 {{HTMLElement("picture")}} 元素内有效。）
+- 在 {{HTMLElement("style")}} 元素的 [`media`](/zh-CN/docs/Web/HTML/Reference/Elements/style#media) 属性中，其定义待应用样式的媒体。
 
 ### 在 JavaScript 中使用媒体查询
 

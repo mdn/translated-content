@@ -25,6 +25,6 @@ if (window.length) {
 }
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}

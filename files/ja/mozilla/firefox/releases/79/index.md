@@ -27,7 +27,7 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 #### その他のツール
 
-- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Manifest) の調査やデバッグの機能を提供します。
+- 新たに [アプリケーションパネル](https://firefox-source-docs.mozilla.org/devtools-user/application/index.html) が使用可能になりました。まずは [service worker](/ja/docs/Web/API/Service_Worker_API) および [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Manifest) の調査やデバッグの機能を提供します。
 - ネットワークモニターのメッセージタブを、[応答タブ](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#response_tab) に統合しました ([Firefox バグ 1636421](https://bugzil.la/1636421))。
 - アクセシビリティインスペクターが、タブにアクセスすると自動的に有効化します。明示的に有効化することが不要になりました ([Firefox バグ 1602075](https://bugzil.la/1602075))。
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html#controlling_responsive_design_mode) でタッチシミュレーションを有効にしたとき、マウスドラッグのイベントをタッチ & ドラッグまたはスワイプのイベントとして解釈するようになりました ([Firefox バグ 1621781](https://bugzil.la/1621781))。
@@ -35,8 +35,8 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### HTML
 
-- [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
-- [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
+- [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
+- [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
 
 ### CSS
 
@@ -101,9 +101,9 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### WebAssembly
 
-- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
-- [WebAssembly の Reference types](/ja/docs/WebAssembly/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
-- [WebAssembly の Threads](/ja/docs/WebAssembly/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
+- [WebAssembly の Bulk memory operations](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#大規模メモリー操作) をサポートしました ([Firefox バグ 1528294](https://bugzil.la/1528294))。
+- [WebAssembly の Reference types](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#参照型) をサポートしました ([Firefox バグ 1637884](https://bugzil.la/1637884))。
+- [WebAssembly の Threads](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_スレッド) (Shared memory および Atomics) をサポートしました ([Firefox バグ 1389458](https://bugzil.la/1389458), [Firefox バグ 1648685](https://bugzil.la/1648685))。
 
 ## アドオン開発者向けの変更点
 

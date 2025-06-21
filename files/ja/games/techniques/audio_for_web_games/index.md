@@ -430,7 +430,7 @@ if (offset === 0) {
 ## 関連情報
 
 - [ウェブオーディオ API (MDN)](/ja/docs/Web/API/Web_Audio_API)
-- [`<audio>` (MDN)](/ja/docs/Web/HTML/Element/audio)
+- [`<audio>` (MDN)](/ja/docs/Web/HTML/Reference/Elements/audio)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/games/)
 - [Mixing Positional Audio and WebGL (HTML5Rocks)](https://www.html5rocks.com/en/tutorials/webaudio/positional_audio/)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)

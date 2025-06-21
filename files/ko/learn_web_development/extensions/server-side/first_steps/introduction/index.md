@@ -30,7 +30,7 @@ MDN의 초심자용 서버측 프로그래밍 코스에 오신 것을 환영합�
 
 ## 서버측 웹 사이트 프로그래밍이 무엇인가요?
 
-[web servers](/ko/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)와 통신하는 웹 브라우저는 **H**yper**T**ext **T**ransport **P**rotocol ({{glossary("HTTP")}})을사용하고 있습니다. 당신이 웹 페이지의 링크를 클릭하거나 폼을 전송하거나 검색을 시작할 때 당신의 웹 브라우저는 **HTTP request**를 목적 서버에 전달합니다. 요청에는 영향을받는 리소스를 식별하는 URL, 필요한 작업을 정의하는 메서드가 포함됩니다 (예를 들면 리소스를 가져 오거나, 삭제하거나 게시하는 방법), 그리고 URL매개변수([query 문자열](https://en.wikipedia.org/wiki/Query_string)을 통해 전송된 필드 값-쌍), POST 데이터 ([HTTP POST method](/ko/docs/Web/HTTP/Methods/POST)에 의해 전송된 데이터), 또는{{glossary("Cookie", "associated cookies")}}를 이용하여 인코딩된 추가 정보를 포함 할 수 있습니다.
+[web servers](/ko/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server)와 통신하는 웹 브라우저는 **H**yper**T**ext **T**ransport **P**rotocol ({{glossary("HTTP")}})을사용하고 있습니다. 당신이 웹 페이지의 링크를 클릭하거나 폼을 전송하거나 검색을 시작할 때 당신의 웹 브라우저는 **HTTP request**를 목적 서버에 전달합니다. 요청에는 영향을받는 리소스를 식별하는 URL, 필요한 작업을 정의하는 메서드가 포함됩니다 (예를 들면 리소스를 가져 오거나, 삭제하거나 게시하는 방법), 그리고 URL매개변수([query 문자열](https://en.wikipedia.org/wiki/Query_string)을 통해 전송된 필드 값-쌍), POST 데이터 ([HTTP POST method](/ko/docs/Web/HTTP/Methods/POST)에 의해 전송된 데이터), 또는{{glossary("Cookie", "associated cookies")}}를 이용하여 인코딩된 추가 정보를 포함 할 수 있습니다.
 
 웹 서버는 클라이언트의 요청이 오길 기다리고, 요청이 도착하면 작업을 진행하여, 웹 브라우저에 **HTTP 응답** 메시지를 보냅니다. 그 응답은 요청이 성공 또는 실패를 지시하는 상태 라인을 포함하고 있습니다 (예: "HTTP/1.1 200 OK" for success). 요청에 대한 응답이 성공적이라면 본문은 요청 리소스(예. 새로운 HTML 페이지, 또는 이미지, 기타 등등...)를 포함 할 것이며 이는 웹 브라우저에 보여질 수 있습니다.
 
@@ -62,7 +62,7 @@ _아래의 다이어그램은 정적사이트의 기본적인 웹 구조를 보�
 
 브라우저에서 실행되는 코드는 **client-side code**라고 알려져 있습니다. **client-side code**의 주 관심사는 렌더링된 웹페이지의 모양과 행동을 개선시키는 것 입니다. 이것은 UI 구성 요소 선택 및 스타일 지정, 레이아웃 만들기, 탐색, 양식 유효성 검사 등을 포함 하고 있습니다. 대조적으로, server-side 웹 사이트 프로그래밍은 대부분 브라우저의 요청에 대한 응답으로 어떤 컨텐츠를 반환하는지 선택하는것을 포함 합니다. Server-side code는 제출 된 데이터 및 요청의 유효성 검사, 데이터 저장 및 검색을위한 데이터베이스 사용, 필요에 따라 올바른 데이터 전송과 같은 작업을 처리합니다.
 
-클라이언트 측 코드는 [HTML](/ko/docs/Learn/HTML), [CSS](/ko/docs/Learn/CSS), 그리고 [JavaScript](/ko/docs/Learn/JavaScript)로 작성됩니다— 이것들은 웹 브라우저 안에서 실행되고 기본운영체제와 연결되지 않거나 아주 약간 연결 됩니다(파일 시스템의 연결의 제한이 포함 되어 있습니다). 웹 개발자는 모든 사용자가 웹 사이트를 보는 데 사용할 수있는 브라우저를 조작 할 수 없습니다 —브라우저는 클라이언트 측 코드 기능과 일관성없는 수준의 호환성을 제공하며, 클라이언트 측 프로그래밍의 어려움은 브라우저 지원의 차이를 정상적으로 처리 하는 것 입니다.
+클라이언트 측 코드는 [HTML](/ko/docs/Learn_web_development/Core/Structuring_content), [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1), 그리고 [JavaScript](/ko/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)로 작성됩니다— 이것들은 웹 브라우저 안에서 실행되고 기본운영체제와 연결되지 않거나 아주 약간 연결 됩니다(파일 시스템의 연결의 제한이 포함 되어 있습니다). 웹 개발자는 모든 사용자가 웹 사이트를 보는 데 사용할 수있는 브라우저를 조작 할 수 없습니다 —브라우저는 클라이언트 측 코드 기능과 일관성없는 수준의 호환성을 제공하며, 클라이언트 측 프로그래밍의 어려움은 브라우저 지원의 차이를 정상적으로 처리 하는 것 입니다.
 
 서버측 코드는 다양한 프로그래밍 언어로 작성 될 수 있습니다 — 대중적인 서버측 웹 언어를 포한 한 예로 PHP, Python, Ruby 그리고 C#. 서버측 코드는 서버의 운영체제와 모든 접속권한을 가지며, 개발자는 그들이 원하는 프로그래밍 언어(그리고 특정 버전)를 사용할 수 있습니다.
 

@@ -27,7 +27,7 @@ l10n:
 - **その他の値**
   - : 埋め込まれたコンテンツはデータブロックとして扱われ、ブラウザーによって処理されることはありません。
 
-詳しくは {{HTMLElement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Element/script/type) 属性を参照してください。
+詳しくは {{HTMLElement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性を参照してください。
 
 ## 例
 

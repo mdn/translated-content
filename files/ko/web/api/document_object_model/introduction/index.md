@@ -278,7 +278,7 @@ table.summary = "note: increased border";
 
 - [DOM Reference](/ko/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/ko/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ko/docs/Learn/JavaScript/Building_blocks/Events)
+- [Events and the DOM](/ko/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/ko/docs/Web/API/Document_Object_Model/Examples)
 
 {{DefaultAPISidebar("DOM")}}

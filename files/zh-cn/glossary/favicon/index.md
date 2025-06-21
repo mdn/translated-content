@@ -18,7 +18,7 @@ Favicon（也被称为网站图标）是与网站一起包含的微小图标，�
 ## 参见
 
 - 维基百科上的 [Favicon](https://zh.wikipedia.org/wiki/Favicon)
-- [link rel="icon"](/zh-CN/docs/Web/HTML/Attributes/rel#icon) 元素文档，用于将网站图标添加到页面。
+- [link rel="icon"](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#icon) 元素文档，用于将网站图标添加到页面。
 - 工具
 
   - [免费网站图标生成器](https://favicon.io/)

@@ -11,7 +11,14 @@ l10n:
 [형식화 배열](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects)를 생성합니다.
 이 메서드는 {{jsxref("Array.of()")}}와 거의 동일합니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-of.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.of()", "shorter")}}
+
+```js interactive-example
+const int16array = Int16Array.of("10", "20", "30", "40", "50");
+
+console.log(int16array);
+// Expected output: Int16Array [10, 20, 30, 40, 50]
+```
 
 ## 구문
 

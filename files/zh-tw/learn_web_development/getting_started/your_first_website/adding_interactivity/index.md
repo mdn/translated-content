@@ -1,10 +1,9 @@
 ---
 title: JavaScript 基礎
 slug: Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
-original_slug: Learn/Getting_started_with_the_web/JavaScript_basics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Your_first_website/Styling_the_content", "Learn_web_development/Getting_started/Your_first_website/Publishing_your_website", "Learn_web_development/Getting_started/Your_first_website")}}
 
 JavaScript 是一個可以幫你在網站裡加入互動功能的程式語言（舉例來說，一個遊戲可能會在按鈕按下或資料被輸入表單內時回應、動態更改樣式、以及展示動畫等）。這篇文章會幫助你踏上學習這個令人興奮的語言的旅程，並展示她可以實現的所有可能。
 
@@ -107,7 +106,7 @@ let myVariable = 'Bob';
 myVariable = 'Steve';
 ```
 
-請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Data_structures)：
+請記得這些變數有著不同的[資料型態](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)：
 
 <table class="standard-table">
   <thead>

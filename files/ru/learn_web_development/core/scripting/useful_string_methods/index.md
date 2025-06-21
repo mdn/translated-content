@@ -25,7 +25,7 @@ let string = 'This is my string';
 
 **Только не волнуйтесь!** Большинство из них вам не нужно знать сейчас на ранней стадии вашего обучения. Но некоторые из них вы, возможно, будете использовать довольно часто. Их мы и рассмотрим.
 
-Введем несколько примеров в [консоль разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+Введем несколько примеров в [консоль разработчика](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Поиск длины строки
 

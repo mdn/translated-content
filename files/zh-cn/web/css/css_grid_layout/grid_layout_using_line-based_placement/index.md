@@ -136,7 +136,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement
 
 ## `grid-column` 和 `grid-row` 的简写
 
-我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
+我们用了不少代码定位每个元素，你应该不会惊讶有[简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。{{cssxref("grid-column-start")}} 和 {{cssxref("grid-column-end")}} 属性可以合并为 {{cssxref("grid-column")}}、{{cssxref("grid-row-start")}} 和 {{cssxref("grid-row-end")}} 则合并为 {{cssxref("grid-row")}}。
 
 ```css hidden
 * {

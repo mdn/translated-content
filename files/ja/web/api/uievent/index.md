@@ -50,5 +50,5 @@ _このインターフェイスは、親である {{domxref("Event")}} からメ
 
 ## 関連情報
 
-- [イベント入門](/ja/docs/Learn/JavaScript/Building_blocks/Events)
+- [イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

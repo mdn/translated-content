@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Operators/typeof
 
 Оператор **`typeof`** возвращает строку, указывающую тип операнда.
 
-{{EmbedInteractiveExample("pages/js/expressions-typeof.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+
+```js interactive-example
+console.log(typeof 42);
+// Expected output: "number"
+
+console.log(typeof "blubber");
+// Expected output: "string"
+
+console.log(typeof true);
+// Expected output: "boolean"
+
+console.log(typeof undeclaredVariable);
+// Expected output: "undefined"
+```
 
 ## Синтаксис
 
@@ -23,7 +37,7 @@ typeof operand
 
 ## Описание
 
-В следующей таблице приведены возможные возвращаемые значения `typeof`. Дополнительная информация о типах и примитивах находится на странице [структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures).
+В следующей таблице приведены возможные возвращаемые значения `typeof`. Дополнительная информация о типах и примитивах находится на странице [структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures).
 
 | Type                                                       | Result                     |
 | ---------------------------------------------------------- | -------------------------- |

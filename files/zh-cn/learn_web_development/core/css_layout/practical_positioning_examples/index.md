@@ -1,10 +1,7 @@
 ---
 title: 定位实例练习
 slug: Learn_web_development/Core/CSS_layout/Practical_positioning_examples
-original_slug: Learn/CSS/CSS_layout/Practical_positioning_examples
 ---
-
-{{LearnSidebar}}
 
 掌握了上一篇文章中的定位的基础知识，我们将着眼于实现一些现实中的例子，来演示你能用定位来做什么。
 

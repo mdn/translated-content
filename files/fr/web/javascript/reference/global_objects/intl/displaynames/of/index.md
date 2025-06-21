@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames/of
 
 La méthode **`Intl.DisplayNames.prototype.of()`** prend comme argument un code et renvoie une chaîne de caractères selon les options et la locale fournies lors de l'instanciation de l'objet `Intl.DisplayNames`.
 
-{{EmbedInteractiveExample("pages/js/intl-displaynames.html")}}
+{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+
+```js interactive-example
+const regionNamesInEnglish = new Intl.DisplayNames(['en'], { type: 'region' });
+const regionNamesInTraditionalChinese = new Intl.DisplayNames(['zh-Hant'], {
+  type: 'region',
+});
+
+console.log(regionNamesInEnglish.of('US'));
+// Expected output: "United States"
+
+console.log(regionNamesInTraditionalChinese.of('US'));
+// Expected output: "美國"
+```
 
 ## Syntaxe
 

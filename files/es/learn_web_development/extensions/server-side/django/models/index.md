@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Models
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django")}}
 
-Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.
+Este artículo muestra cómo definir modelos para el sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). En él se explica lo que es un modelo, cómo se declara, y cuáles son algunos de los principales tipos de campos de un modelo. También veremos, brevemente, cuáles son algunas de las maneras en que puede accederse a los datos del modelo.
 
 <table>
   <tbody>
@@ -35,7 +35,7 @@ Este artículo muestra cómo definir modelos para el sitio web de la [Biblioteca
 
 Las aplicaciones web de Django acceden y administran los datos a través de objetos de Python a los que se hace referencia como modelos. Los modelos definen la _estructura_ de los datos almacenados, incluidos los _tipos_ de campo y los atributos de cada campo, como su tamaño máximo, valores predeterminados, lista de selección de opciones, texto de ayuda para la documentación, texto de etiqueta para formularios, etc. La definición del modelo es independiente de la base de datos subyacente. puede elegir una de entre varias como parte de la configuración de su proyecto. Una vez que haya elegido la base de datos que desea usar, no necesita hablar directamente con ella. Simplemente escriba la estructura de su modelo y algo de código, y Django se encargará de todo el trabajo sucio, al comunicarse con la base de datos por usted.
 
-Este tutorial muestra cómo definir y acceder a los modelos para el ejemplo del [sitio web LocalLibrary](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Este tutorial muestra cómo definir y acceder a los modelos para el ejemplo del [sitio web LocalLibrary](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
 ## Diseñando los modelos de LocalLibrary
 

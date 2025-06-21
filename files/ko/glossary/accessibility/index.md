@@ -12,7 +12,7 @@ l10n:
 ## 같이 보기
 
 - [MDN의 접근성 리소스](/ko/docs/Web/Accessibility)
-- [MDN에서 접근성 알아보기](/ko/docs/Learn/Accessibility)
+- [MDN에서 접근성 알아보기](/ko/docs/Learn_web_development/Core/Accessibility)
 - [MDN의 ARIA 문서](/ko/docs/Web/Accessibility/ARIA)
 - [The WAI-ARIA 권고안](https://www.w3.org/TR/wai-aria/)
 - 위키백과의 [웹 접근성](https://ko.wikipedia.org/wiki/%EC%9B%B9_%EC%A0%91%EA%B7%BC%EC%84%B1)

@@ -9,7 +9,18 @@ l10n:
 
 **`while`** 语句创建一个循环，只要测试条件求值为真，则循环执行指定语句。在执行语句前会先对条件进行求值。
 
-{{EmbedInteractiveExample("pages/js/statement-while.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - While")}}
+
+```js interactive-example
+let n = 0;
+
+while (n < 3) {
+  n++;
+}
+
+console.log(n);
+// Expected output: 3
+```
 
 ## 语法
 

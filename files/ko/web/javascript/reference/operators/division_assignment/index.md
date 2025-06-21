@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Operators/Division_assignment
 
 나누기 할당 연산자(`/=`)는 오른쪽 피연산자의 값으로 변수를 나눈 결과를 다시 변수에 할당합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-division-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+
+```js interactive-example
+let a = 3;
+
+a /= 2;
+console.log(a);
+// Expected output: 1.5
+
+a /= 0;
+console.log(a);
+// Expected output: Infinity
+
+a /= "hello";
+console.log(a);
+// Expected output: NaN
+```
 
 ## 구문
 

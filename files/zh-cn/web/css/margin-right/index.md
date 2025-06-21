@@ -9,7 +9,55 @@ l10n:
 
 **`margin-right`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素右侧的[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使其远离相邻元素，负值使其更加靠近。
 
-{{EmbedInteractiveExample("pages/css/margin-right.html")}}
+{{InteractiveExample("CSS Demo: margin-right")}}
+
+```css interactive-example-choice
+margin-right: 1em;
+```
+
+```css interactive-example-choice
+margin-right: 10%;
+```
+
+```css interactive-example-choice
+margin-right: 10px;
+```
+
+```css interactive-example-choice
+margin-right: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
 
 两个相邻的盒子的垂直边距可能会合并。这被称为[_外边距折叠_](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
@@ -39,7 +87,7 @@ margin-right: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 外边距的大小为固定值。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
+  - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
 - `auto`
 
   - : 右边距接收未使用的水平空间中的一部分（这主要由所使用的布局模式确定）。如果 `margin-left` 和 `margin-right` 的值都是 `auto`，则最后计算的空间是均匀分布的。下表总结了不同的情况：

@@ -1,12 +1,9 @@
 ---
 title: 什么是浏览器开发者工具？
 slug: Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools
-original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools
 l10n:
   sourceCommit: 9a5b5597483ca34a58d400060f2e0534dceda240
 ---
-
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
 
 每一个现代网络浏览器都包含一套强大的开发工具套件。这些工具可以检查当前加载的 HTML、CSS 和 JavaScript，显示每个资源页面的请求以及载入所花费的时间。本文阐述了如何利用浏览器的开发工具的基本功能。
 

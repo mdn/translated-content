@@ -32,7 +32,7 @@ var miRespuesta = new Response(cuerpo,opciones);
 
     - `status`: El código de estado HTTP, p.e.: `200`.
     - `statusText`: El mensaje de estado asociado con el código de estado HTTP, p.e.: `OK`.
-    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Headers) para más información).
+    - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) para más información).
 
 ## Ejemplos
 
@@ -55,5 +55,5 @@ var miRespuesta = new Response(miBlob, opciones);
 ## Relacionado
 
 - [ServiceWorker API](/es/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/es/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/es/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/es/docs/Web/HTTP)

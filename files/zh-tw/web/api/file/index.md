@@ -40,7 +40,7 @@ slug: Web/API/File
 - {{domxref("File.size")}} {{readonlyinline}}
   - : 回傳檔案大小（單位為位元組）。
 - {{domxref("File.type")}} {{readonlyinline}}
-  - : 回傳檔案的 [MIME](/zh-TW/docs/Web/HTTP/MIME_types) 類型。
+  - : 回傳檔案的 [MIME](/zh-TW/docs/Web/HTTP/Guides/MIME_types) 類型。
 
 ## 方法
 

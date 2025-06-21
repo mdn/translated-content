@@ -1,10 +1,7 @@
 ---
 title: 设计与无障碍
 slug: Learn_web_development/Howto/Design_and_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility
 ---
-
-{{LearnSidebar}}
 
 本节列出了与美学、页面结构、辅助功能等相关的问题。
 

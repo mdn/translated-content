@@ -10,7 +10,21 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 Метод **`eval()`** выполняет JavaScript-код, представленный строкой.
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## Синтаксис
 
@@ -100,7 +114,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Замыкания](/ru/docs/Web/JavaScript/Closures) также полезны как способ создания функций с параметрами без конкатенации строк.
+[Замыкания](/ru/docs/Web/JavaScript/Guide/Closures) также полезны как способ создания функций с параметрами без конкатенации строк.
 
 ### Разбор JSON (конвертирование строк в JavaScript объекты)
 

@@ -110,4 +110,4 @@ mask-border-slice: 30 fill;
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [1 到 4 值语法的图解说明](/zh-CN/docs/Web/CSS/Shorthand_properties#棘手的边界情况)
+- [1 到 4 值语法的图解说明](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties#棘手的边界情况)

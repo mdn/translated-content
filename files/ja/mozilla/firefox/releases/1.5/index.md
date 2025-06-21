@@ -24,7 +24,7 @@ Firefox 1.5 での新機能のいくつかを紹介します。
 
 ### ウェブサイト、ウェブアプリケーション開発者向け
 
-- [XHTML の中での SVG についての導入](/ja/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)
+- [XHTML の中での SVG についての導入](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/SVG_In_HTML_Introduction)
   - : SVG を XHTML ページの中でどのように利用し、JavaScript と CSS を通常の XHTML でのスクリプトと同様な方法で画像を操作する方法について学習します。[SVG in Firefox](/ja/docs/SVG_in_Firefox) も読み、 Firefox における SVG 実装の問題点と現状について学習してください。
 - [Canvas での画像の描き方](/ja/docs/Web/API/Canvas_API/Tutorial)
   - : 新しい `<canvas>` タグについて、Firefox においてどのようにグラフやその他のオブジェクトを描くかについて学習します。
@@ -51,7 +51,7 @@ Firefox 1.5 での新機能のいくつかを紹介します。
 ### ネットワーク関係の変更
 
 - 証明書のプロンプトは、チャネルごとに上書き可能になりました。これは、[nsIChannel](/ja/docs/NsIChannel) の notificationCallbacks へインターフェイスリクエスタとして設定し、[nsIBadCertListener](/ja/docs/NsIBadCertListener) へインターフェイスを設定することで動作します。
-- nsIWebBrowserPersist のリスナは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェイスを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
+- nsIWebBrowserPersist のリスナーは、[nsIInterfaceRequestor](/ja/docs/NsIInterfaceRequestor)::GetInterface を実装し、[nsIProgressEventSink](/ja/docs/NsIProgressEventSink) ([nsIWebProgressListener](/ja/docs/NsIWebProgressListener) と重複し、そう使い勝手がいいわけではありません) を含む問い合わせがくる可能性のあるチャネルのすべてのインターフェイスを提供する機会をもちました。これには、[nsIChannelEventSink](/ja/docs/NsIChannelEventSink) と [nsIBadCertListener](/ja/docs/NsIBadCertListener) も含みます。
 - XMLHttpRequest を含む、拡張機能や他の necko 利用側は、cookie ヘッダーを明示的に設定でき、necko はそれを置き換えません。保存された cookie は、明示的に設定されたヘッダーと組み合わされ、保存された cookie を上書きします。
 
 ## 新しいエンドユーザー向け機能
@@ -81,11 +81,11 @@ Firefox のウェブ標準のサポートは、一貫性のあるクロスプラ
 - Document Object Model ([DOM](/ja/docs/Web/API/Document_Object_Model)): [DOM Level 1](https://www.w3.org/TR/2000/WD-DOM-Level-1-20000929/), [DOM Level 2](https://www.w3.org/DOM/DOMTR#dom2) と [DOM Level 3](https://www.w3.org/DOM/DOMTR#dom3) の一部
 - Mathematical Markup Language: [MathML Version 2.0](https://www.w3.org/Math/)
 - Extensible Markup Language ([XML](/ja/docs/Web/XML)): [XML 1.0](https://www.w3.org/TR/REC-xml), [XML 名前空間](https://www.w3.org/TR/REC-xml-names/), [XML 文書へのスタイルシートの関連付け 1.0](https://www.w3.org/TR/xml-stylesheet/), [XML のフラグメント同定](https://lists.w3.org/Archives/Public/www-xml-linking-comments/2001AprJun/att-0074/01-NOTE-FIXptr-20010425.htm)
-- XSL 変換 ([XSLT](/ja/docs/Web/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
-- XML Path Language ([XPath](/ja/docs/Web/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
+- XSL 変換 ([XSLT](/ja/docs/Web/XML/XSLT)): [XSLT 1.0](https://www.w3.org/TR/xslt)
+- XML Path Language ([XPath](/ja/docs/Web/XML/XPath)): [XPath 1.0](https://www.w3.org/TR/xpath)
 - Resource Description Framework ([RDF](/ja/docs/RDF)): [RDF](https://www.w3.org/RDF/)
 - Simple Object Access Protocol (SOAP): [SOAP 1.1](https://www.w3.org/TR/SOAP/)
-- [ECMA-262](/ja/docs/Web/JavaScript/JavaScript_technologies_overview), revision 3 に基づく [JavaScript](/ja/docs/Web/JavaScript) 1.6: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
+- [ECMA-262](/ja/docs/Web/JavaScript/Reference/JavaScript_technologies_overview), revision 3 に基づく [JavaScript](/ja/docs/Web/JavaScript) 1.6: [ECMA-262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
 
 Firefox 1.5 は、データ転送プロトコル (HTTP/FTP/SSL/TLS/その他)、他言語文字データ (Unicode)、画像 (GIF/JPEG/PNG/SVG/その他) や、世界でもっとも普及したスクリプト言語の最新版である [JavaScript 1.6](/ja/docs/New_in_JavaScript_1.6) をサポートしています。
 

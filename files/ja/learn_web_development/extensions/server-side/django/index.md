@@ -12,7 +12,7 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 
 ## 前提条件
 
-このモジュールを進める前に、Django を知る必要はありません。理想は、[サーバーサイドのウェブサイトプログラミング第一歩](/ja/docs/Learn/Server-side/First_steps) を読んで、サーバーサイドのウェブプログラミングとウェブフレームワークについて理解しておくことです。
+このモジュールを進める前に、Django を知る必要はありません。理想は、[サーバーサイドのウェブサイトプログラミング第一歩](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps) を読んで、サーバーサイドのウェブプログラミングとウェブフレームワークについて理解しておくことです。
 
 プログラミングの概念と [Python](/ja/docs/Glossary/Python) に関する一般的な知識はあるとよいですが、主要概念を理解していることは必須ではありません。
 
@@ -21,13 +21,13 @@ Django は、Python で書かれた高機能なサーバーサイドウェブフ
 
 ## ガイド
 
-- [Django の紹介](/ja/docs/Learn/Server-side/Django/Introduction)
+- [Django の紹介](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Introduction)
   - : この最初の Django の記事では、「Django とは何か」という問いに答え、このウェブフレームワークの特徴と概要を説明します。主な機能の概要と、このモジュールで詳しく説明しない高度な機能などを紹介します。また、Django アプリケーションの主要な構成部品のいくつかを示して、使いはじめる前にどのように使うのか、何ができるのかを知っておきます。
-- [Django 開発環境の設定](/ja/docs/Learn/Server-side/Django/development_environment)
+- [Django 開発環境の設定](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)
   - : Django がどのようなものか知ったので、次は Windows、Linux (Ubuntu)、Mac OS X で Django 開発環境をセットアップしてテストする方法を説明します。一般的なオペレーティングシステムを使っていれば、この記事で Django アプリケーションの開発を始められるでしょう。
-- [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn/Server-side/Django/Tutorial_local_library_website)
+- [Django チュートリアル: 地域図書館ウェブサイト](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website)
   - : 最初の記事は、実践的なチュートリアルで学習する内容を説明し、「地域図書館ウェブサイト」の概要を示します。このウェブサイトの例は、後の記事で作り進めていきます。
-- [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn/Server-side/Django/skeleton_website)
+- [Django チュートリアル Part 2: ウェブサイトの骨組み作成](/ja/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)
   - : この記事は、基本的なウェブサイトプロジェクトの「骨組み」をどのように作っていくのかを示します。サイト固有の設定、URL、モデル、ビュー、テンプレートを作成する方法について説明します。
 - [Django チュートリアル Part 3: モデルの使用](/ja/docs/Learn/Server-side/Django/Models)
   - : この記事は、地域図書館ウェブサイト用のモデルを定義する方法を示します ― モデルはアプリケーションのデータを格納するデータ構造を表し、Django はデータベースにデータを格納できます。モデルとは何か、どのように定義されるのか、および主要なフィールドタイプのいくつかを説明します。また、モデルデータにアクセスする主な方法のいくつかを簡単に示します。

@@ -96,7 +96,7 @@ Les événements ont trois fonctions :
 - `requestId`
   - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
 - `requestHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes HTTP qui sont envoyés avec cette demande.
 - `tabId`
   - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
 - `timeStamp`

@@ -36,20 +36,20 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 
 ## パフォーマンスに影響を与える要素と属性
 
-- [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture)
-- [`<video>` 要素](/ja/docs/Web/HTML/Element/video)
-- [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
-- [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
+- [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture)
+- [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
+- [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
+- [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
-- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
 - `async` / `defer` 属性
 - {{htmlelement('iframe')}}
 - {{htmlelement('object')}}
 - {{htmlelement('script')}}
-- [`rel` 属性](/ja/docs/Web/HTML/Attributes/rel)
+- [`rel` 属性](/ja/docs/Web/HTML/Reference/Attributes/rel)
 
 ## まとめ
 
@@ -57,12 +57,12 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 
 ## 関連情報
 
-- [`<picture>` 要素](/ja/docs/Web/HTML/Element/picture)
-- [`<video>` 要素](/ja/docs/Web/HTML/Element/video)
-- [`<source>` 要素](/ja/docs/Web/HTML/Element/source)
-- [`<img> srcset` 属性](/ja/docs/Web/HTML/Element/img#attributes)
+- [`<picture>` 要素](/ja/docs/Web/HTML/Reference/Elements/picture)
+- [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
+- [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
+- [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
 
-  - [レスポンシブ画像](/ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
-- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Attributes/rel/preload)
+- [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
 - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))

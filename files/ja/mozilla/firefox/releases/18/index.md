@@ -13,9 +13,9 @@ Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。
 
 ### HTML
 
-- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Element/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
-- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Element/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
-- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Element/iframe#mozallowfullscreen) は非推奨になりました。
+- {{HTMLElement("ol")}} 要素の [`reversed`](/ja/docs/Web/HTML/Reference/Elements/ol#reversed) 属性をサポートしました。([Firefox バグ 601912](https://bugzil.la/601912))
+- {{HTMLElement("link")}} 要素の [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/link#crossorigin) 属性をサポートしました。([Firefox バグ 786564](https://bugzil.la/786564))
+- {{HTMLElement("iframe")}} 要素の [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性が実装され、接頭辞つきの古いもの [`mozallowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#mozallowfullscreen) は非推奨になりました。
 
 ### CSS
 
@@ -54,7 +54,7 @@ Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。
 ### ネットワーク
 
 - HTTPの `Accept-Language` ヘッダーの Quality プロパティ ("q-values") は 2 桁に丸められるようになりました。 ([Firefox バグ 672448](https://bugzil.la/672448))
-- [`X-FRAME-OPTIONS`](/ja/docs/Web/HTTP/Headers/X-Frame-Options) HTTP レスポンスヘッダーの `ALLOW-FROM` 構文がサポートされました。([Firefox バグ 690168](https://bugzil.la/690168))
+- [`X-FRAME-OPTIONS`](/ja/docs/Web/HTTP/Reference/Headers/X-Frame-Options) HTTP レスポンスヘッダーの `ALLOW-FROM` 構文がサポートされました。([Firefox バグ 690168](https://bugzil.la/690168))
 
 ### 開発者ツール
 

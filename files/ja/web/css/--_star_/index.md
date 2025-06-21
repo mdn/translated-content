@@ -85,5 +85,5 @@ l10n:
 
 ## 関連情報
 
-- [CSS 変数の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS 変数の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 - {{cssxref("var", "var()")}} 関数

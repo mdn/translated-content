@@ -14,7 +14,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/call
   <thead>
     <tr>
       <th colspan="2">
-        <a href="/zh-TW/docs/JavaScript/Reference/Global_Objects/Function"
+        <a href="/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Function"
           >Function </a
         >物件的方法
       </th>

@@ -1,5 +1,5 @@
 ---
-title: ":-moz-ui-invalid"
+title: :-moz-ui-invalid
 slug: Web/CSS/:user-invalid
 ---
 

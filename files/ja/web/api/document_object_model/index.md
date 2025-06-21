@@ -2,7 +2,7 @@
 title: ドキュメントオブジェクトモデル (DOM)
 slug: Web/API/Document_Object_Model
 l10n:
-  sourceCommit: 56c76424a5edb45f6716ac4ee48861dac8e7ae38
+  sourceCommit: df2a728b3b3911a396a4b47d363e4a335a5c8065
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -58,7 +58,7 @@ DOM とは何であるか、どのように文書を表現するのかについ�
 
 ### 廃止された DOM インターフェイス
 
-ドキュメントオブジェクトモデルは高度に単純化されてきています。このため、 DOM レベル 3 以前の仕様書にあった以下のインターフェイスは削除されています。一部が再導入されるかどうかはまだ不明ですが、当面は廃止されたと考え、使用を避けてください。
+ドキュメントオブジェクトモデルは、高度に単純化されてきています。このため、 DOM レベル 3 以前の仕様書にあった以下のインターフェイスは削除されています。これらはウェブ開発者はもう利用できません。
 
 - `DOMConfiguration`
 - `DOMErrorHandler`
@@ -83,181 +83,9 @@ HTML を含む文書は、 HTML 仕様で拡張した様々な HTML 固有の機
 
 HTML DOM API によって、タブやウィンドウ、 CSS スタイルやスタイルシート、ブラウザーの履歴など、様々なブラウザーの機能にアクセスすることができます。これらのインターフェイスの詳細については、 [HTML DOM API](/ja/docs/Web/API/HTML_DOM_API) のドキュメントにあります。
 
-## SVG のインターフェイス
+## SVG DOM
 
-### SVG 要素のインターフェイス
-
-- {{DOMxRef("SVGAElement")}}
-- {{DOMxRef("SVGAnimationElement")}}
-- {{DOMxRef("SVGAnimateElement")}}
-- {{DOMxRef("SVGAnimateColorElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAnimateMotionElement")}}
-- {{DOMxRef("SVGAnimateTransformElement")}}
-- {{DOMxRef("SVGCircleElement")}}
-- {{DOMxRef("SVGClipPathElement")}}
-- {{DOMxRef("SVGComponentTransferFunctionElement")}}
-- {{DOMxRef("SVGCursorElement")}}
-- {{DOMxRef("SVGDefsElement")}}
-- {{DOMxRef("SVGDescElement")}}
-- {{DOMxRef("SVGElement")}}
-- {{DOMxRef("SVGEllipseElement")}}
-- {{DOMxRef("SVGFEBlendElement")}}
-- {{DOMxRef("SVGFEColorMatrixElement")}}
-- {{DOMxRef("SVGFEComponentTransferElement")}}
-- {{DOMxRef("SVGFECompositeElement")}}
-- {{DOMxRef("SVGFEConvolveMatrixElement")}}
-- {{DOMxRef("SVGFEDiffuseLightingElement")}}
-- {{DOMxRef("SVGFEDisplacementMapElement")}}
-- {{DOMxRef("SVGFEDistantLightElement")}}
-- {{DOMxRef("SVGFEDropShadowElement")}}
-- {{DOMxRef("SVGFEFloodElement")}}
-- {{DOMxRef("SVGFEFuncAElement")}}
-- {{DOMxRef("SVGFEFuncBElement")}}
-- {{DOMxRef("SVGFEFuncGElement")}}
-- {{DOMxRef("SVGFEFuncRElement")}}
-- {{DOMxRef("SVGFEGaussianBlurElement")}}
-- {{DOMxRef("SVGFEImageElement")}}
-- {{DOMxRef("SVGFEMergeElement")}}
-- {{DOMxRef("SVGFEMergeNodeElement")}}
-- {{DOMxRef("SVGFEMorphologyElement")}}
-- {{DOMxRef("SVGFEOffsetElement")}}
-- {{DOMxRef("SVGFEPointLightElement")}}
-- {{DOMxRef("SVGFESpecularLightingElement")}}
-- {{DOMxRef("SVGFESpotLightElement")}}
-- {{DOMxRef("SVGFETileElement")}}
-- {{DOMxRef("SVGFETurbulenceElement")}}
-- {{DOMxRef("SVGFilterElement")}}
-- {{DOMxRef("SVGFilterPrimitiveStandardAttributes")}}
-- {{DOMxRef("SVGFontElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceFormatElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceNameElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceSrcElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFontFaceUriElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGForeignObjectElement")}}
-- {{DOMxRef("SVGGElement")}}
-- {{DOMxRef("SVGGeometryElement")}}
-- {{DOMxRef("SVGGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGGlyphRefElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGGradientElement")}}
-- {{DOMxRef("SVGGraphicsElement")}}
-- {{DOMxRef("SVGHatchElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHatchpathElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGHKernElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGImageElement")}}
-- {{DOMxRef("SVGLinearGradientElement")}}
-- {{DOMxRef("SVGLineElement")}}
-- {{DOMxRef("SVGMarkerElement")}} {{Experimental_Inline}}
-- {{DOMxRef("SVGMaskElement")}}
-- {{DOMxRef("SVGMetadataElement")}}
-- {{DOMxRef("SVGMissingGlyphElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGMPathElement")}}
-- {{DOMxRef("SVGPathElement")}}
-- {{DOMxRef("SVGPatternElement")}}
-- {{DOMxRef("SVGPolylineElement")}}
-- {{DOMxRef("SVGPolygonElement")}}
-- {{DOMxRef("SVGRadialGradientElement")}}
-- {{DOMxRef("SVGRectElement")}}
-- {{DOMxRef("SVGScriptElement")}}
-- {{DOMxRef("SVGSetElement")}}
-- {{DOMxRef("SVGStopElement")}}
-- {{DOMxRef("SVGStyleElement")}}
-- {{DOMxRef("SVGSVGElement")}}
-- {{DOMxRef("SVGSwitchElement")}}
-- {{DOMxRef("SVGSymbolElement")}}
-- {{DOMxRef("SVGTextContentElement")}}
-- {{DOMxRef("SVGTextElement")}}
-- {{DOMxRef("SVGTextPathElement")}}
-- {{DOMxRef("SVGTextPositioningElement")}}
-- {{DOMxRef("SVGTitleElement")}}
-- {{DOMxRef("SVGTRefElement")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGTSpanElement")}}
-- {{DOMxRef("SVGUseElement")}}
-- {{DOMxRef("SVGViewElement")}}
-- {{DOMxRef("SVGVKernElement")}} {{Deprecated_Inline}}
-
-### SVG データ型のインターフェイス
-
-SVG のプロパティと属性の定義で使用されるデータタイプの DOM API を次に示します。
-
-#### 静的型
-
-- {{DOMxRef("SVGAngle")}}
-- {{DOMxRef("SVGColor")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGICCColor")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGElementInstance")}}
-- {{DOMxRef("SVGElementInstanceList")}}
-- {{DOMxRef("SVGLength")}}
-- {{DOMxRef("SVGLengthList")}}
-- {{DOMxRef("SVGNameList")}}
-- {{DOMxRef("SVGNumber")}}
-- {{DOMxRef("SVGNumberList")}}
-- {{DOMxRef("SVGPaint")}}
-- {{DOMxRef("SVGPathSeg")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegClosePath")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegMovetoAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegMovetoRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegArcAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegArcRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoHorizontalAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoHorizontalRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoVerticalAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegLinetoVerticalRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicSmoothAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoCubicSmoothRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothAbs")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegCurvetoQuadraticSmoothRel")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPathSegList")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPoint")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPointList")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGPreserveAspectRatio")}}
-- {{DOMxRef("SVGRect")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGStringList")}}
-- {{DOMxRef("SVGTransform")}}
-- {{DOMxRef("SVGTransformList")}}
-
-#### アニメーション型
-
-- {{DOMxRef("SVGAnimatedAngle")}}
-- {{DOMxRef("SVGAnimatedBoolean")}}
-- {{DOMxRef("SVGAnimatedEnumeration")}}
-- {{DOMxRef("SVGAnimatedInteger")}}
-- {{DOMxRef("SVGAnimatedLength")}}
-- {{DOMxRef("SVGAnimatedLengthList")}}
-- {{DOMxRef("SVGAnimatedNumber")}}
-- {{DOMxRef("SVGAnimatedNumberList")}}
-- {{DOMxRef("SVGAnimatedPathData")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGAnimatedPreserveAspectRatio")}}
-- {{DOMxRef("SVGAnimatedRect")}}
-- {{DOMxRef("SVGAnimatedString")}}
-- {{DOMxRef("SVGAnimatedTransformList")}}
-
-### SMIL 関連インターフェイス
-
-- {{DOMxRef("ElementTimeControl")}}
-- {{DOMxRef("TimeEvent")}}
-
-### その他 SVG インターフェイス
-
-- {{DOMxRef("GetSVGDocument")}}
-- {{DOMxRef("ShadowAnimation")}}
-- {{DOMxRef("SVGColorProfileRule")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGCSSRule")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGDocument")}}
-- {{DOMxRef("SVGException")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGFitToViewBox")}}
-- {{DOMxRef("SVGLocatable")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGRenderingIntent")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGUnitTypes")}}
-- {{DOMxRef("SVGUseElementShadowRoot")}}
-- {{DOMxRef("SVGViewSpec")}} {{Deprecated_Inline}}
-- {{DOMxRef("SVGZoomEvent")}} {{Deprecated_Inline}}
+同様に、 SVG を含む文書も {{DOMxRef("Document")}} インターフェイスを使用して記述されており、 SVG 仕様によって拡張され、さまざまな SVG 固有の機能が含まれています。特に、 {{domxref("Element")}} インターフェイスは拡張されて {{domxref("SVGElement")}} およびさまざまなサブクラスとなり、それぞれが要素または密接に関連する要素の集合を表します。これらのインターフェイスについては、 [SVG API](/ja/docs/Web/API/SVG_API) のドキュメントでさらに詳しく説明されています。
 
 ## 仕様書
 

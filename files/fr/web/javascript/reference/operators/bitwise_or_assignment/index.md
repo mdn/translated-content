@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 
 L'opérateur d'affectation après OU binaire (`|=`) utilise la représentation binaire des deux opérandes et effectue un OU logique entre chaque puis affecte le résultat à la variable représentée par l'opérande gauche.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-or-assignment.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment")}}
+
+```js interactive-example
+let a = 5; // 00000000000000000000000000000101
+a |= 3; // 00000000000000000000000000000011
+
+console.log(a); // 00000000000000000000000000000111
+// Expected output: 7
+```
 
 ## Syntaxe
 

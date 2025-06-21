@@ -1,5 +1,5 @@
 ---
-title: "-webkit-print-color-adjust"
+title: -webkit-print-color-adjust
 slug: Web/CSS/print-color-adjust
 ---
 
@@ -24,7 +24,7 @@ La propiedad CSS `-webkit-print-color-adjust` es una extensión CSS no estándar
 
 ## Herencia
 
-Esta propiedad es [heredada](/es/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Esta propiedad es [heredada](/es/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 ## Especificaciones
 

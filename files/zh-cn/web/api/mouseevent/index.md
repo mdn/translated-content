@@ -31,9 +31,9 @@ _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型�
 - {{domxref("MouseEvent.buttons")}} {{readonlyinline}}
   - : 当鼠标事件触发的时，如果多个鼠标按钮被按下（如果有的话），将会返回一个或者多个代表鼠标按钮的数字。
 - {{domxref("MouseEvent.clientX")}} {{readonlyinline}}
-  - : 鼠标指针在点击元素（DOM）中的 X 坐标。
+  - : 鼠标指针在[视口坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems#视口)中的 X 坐标。
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
-  - : 鼠标指针在点击元素（DOM）中的 Y 坐标。
+  - : 鼠标指针在[视口坐标系](/zh-CN/docs/Web/CSS/CSSOM_view/Coordinate_systems#视口)中的 Y 坐标。
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
   - : 当鼠标事件触发时，如果 <kbd>control</kbd> 键被按下，则返回 true；
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}

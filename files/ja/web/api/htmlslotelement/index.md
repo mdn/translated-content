@@ -28,7 +28,7 @@ l10n:
 ## イベント
 
 - {{domxref('HTMLSlotElement.slotchange_event', 'slotchange')}}
-  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/ja/docs/Web/HTML/Element/slot) 要素) に発生します。
+  - : スロットに含まれるノードが変更されたときに `HTMLSlotElement` インスタンス ([`<slot>`](/ja/docs/Web/HTML/Reference/Elements/slot) 要素) に発生します。
 
 ## 例
 

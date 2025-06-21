@@ -7,7 +7,45 @@ slug: Web/CSS/font-variation-settings
 
 La propriété CSS **`font-variation-settings`** permet de contrôler les caractéristiques typographiques de bas niveau OpenType ou TrueType en utilisant les quatres lettres représentant les axes des caractéristiques qu'on souhaite faire varier, ainsi que les valeurs pour les variations associées.
 
-{{EmbedInteractiveExample("pages/css/font-variation-settings.html")}}
+{{InteractiveExample("CSS Demo: font-variation-settings")}}
+
+```css interactive-example-choice
+font-variation-settings: "wght" 50;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wght" 850;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 25;
+```
+
+```css interactive-example-choice
+font-variation-settings: "wdth" 75;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    ...it would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+p {
+  font-size: 1.5rem;
+  font-family: Amstelvar;
+}
+```
 
 Cette propriété fonctionne à un niveau plus bas que {{cssxref("font-feature-settings")}} qui permet de définir les valeurs et les étiquettes (_tags_) pour les caractéristiques des polices.
 

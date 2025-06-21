@@ -16,6 +16,6 @@ l10n:
 - 维基百科上的[互联网媒体类型](https://zh.wikipedia.org/wiki/互联网媒体类型)
 - [MIME 类型列表](https://www.iana.org/assignments/media-types/media-types.xhtml)
 - [正确配置服务器 MIME 类型](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types)
-- 有关在 Web 环境中使用 [MIME 类型](/zh-CN/docs/Web/HTTP/MIME_types)的详细信息。
-- [MIME 类型的不完整列表](/zh-CN/docs/Web/HTTP/MIME_types/Common_types)
+- 有关在 Web 环境中使用 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)的详细信息。
+- [MIME 类型的不完整列表](/zh-CN/docs/Web/HTTP/Guides/MIME_types/Common_types)
 - [MediaRecorder.mimeType](/zh-CN/docs/Web/API/MediaRecorder/mimeType)

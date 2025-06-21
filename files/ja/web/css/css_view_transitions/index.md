@@ -77,4 +77,4 @@ l10n:
 
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
 - [関数擬似クラス](/ja/docs/Web/CSS/Pseudo-classes#関数擬似クラス)
-- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
+- [CSS の構成要素: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

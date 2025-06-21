@@ -13,7 +13,7 @@ l10n:
 
 모든 과정은 플레이 가능하고 편집가능한 라이브 샘플을 포함하고 있습니다. 이 샘플을 통해, 여러분은 중간 스테이지들이 어떻게 보여져야 하는지 확인할 수 있습니다. 여러분은 이미지의 렌더링과 움직임, 충돌 감지, 컨트롤 메카니즘들과 승리와 패배 상태와 같은 기본적인 게임 원리들을 구현하기 위해서, {{htmlelement("canvas")}}엘리먼트의 기본적인 사용 방법을 배우게 될 것입니다.
 
-이 시리즈를 최대한 활용하려면 중급의 [JavaScript](/ko/docs/Learn/Getting_started_with_the_web/JavaScript_basics) 지식이 있어야 합니다. 이 튜토리얼을 끝낸 후에는 여러분은 스스로 간단한 웹 게임들을 만들 수 있게 될 것입니다.
+이 시리즈를 최대한 활용하려면 중급의 [JavaScript](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) 지식이 있어야 합니다. 이 튜토리얼을 끝낸 후에는 여러분은 스스로 간단한 웹 게임들을 만들 수 있게 될 것입니다.
 
 ![Gameplay screen from the game MDN Breakout where you can use your paddle to bounce the ball and destroy the brick field, with keeping the score and lives.](mdn-breakout-gameplay.png)
 

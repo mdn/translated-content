@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/eval
 
 **`eval()`** 函数会将传入的字符串当做 JavaScript 代码进行执行。
 
-{{EmbedInteractiveExample("pages/js/globalprops-eval.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+
+```js interactive-example
+console.log(eval("2 + 2"));
+// Expected output: 4
+
+console.log(eval(new String("2 + 2")));
+// Expected output: 2 + 2
+
+console.log(eval("2 + 2") === eval("4"));
+// Expected output: true
+
+console.log(eval("2 + 2") === eval(new String("2 + 2")));
+// Expected output: false
+```
 
 ## 语法
 
@@ -223,7 +237,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener('click', function() { ... } , false);
 ```
 
-[闭包](/zh-CN/docs/Web/JavaScript/Closures) 也有助于创建参数化函数而不用连接字符串。
+[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures) 也有助于创建参数化函数而不用连接字符串。
 
 ### 解析 JSON（将字符串转化为 JavaScript 对象）
 

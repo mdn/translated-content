@@ -8,11 +8,11 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`ariaBrailleRoleDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) 属性の値を反映し、要素の ARIA 点字ロール記述を定義します。
+**`ariaBrailleRoleDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、[`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性の値を反映し、要素の ARIA 点字ロール記述を定義します。
 
-このプロパティは、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 値の短縮版を提供するために使用することができます。
+このプロパティは、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 値の短縮版を提供するために使用することができます。
 これは `aria-roledescription` が存在する場合にのみ使用されるべきで、まれにそれが点字にとって冗長すぎる場合に使用されます。
-[`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription) には、このプロパティが設定されるべき時についての追加情報が含まれています。
+[`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) には、このプロパティが設定されるべき時についての追加情報が含まれています。
 
 ## 値
 

@@ -6,7 +6,7 @@
 
 ## 翻譯標題 ID
 
-基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章會使用到 HTML ID。而對於 Markdown 文件，其渲染得到的 HTML 文件的 ID 則與 Markdown 文件中的標題相對應（但這並不意味著兩者相同，yari 平台對於空格、半角標點等有特殊處理）。
+基於自動產生文章內的導覽、識別程式碼區塊用於建立實際範例、以及其他的原因，我們的文章會使用到 HTML ID。而對於 Markdown 文件，其渲染得到的 HTML 文件的 ID 則與 Markdown 文件中的標題相對應（但這並不意味著兩者相同，rari 平台對於空格、半角標點等有特殊處理）。
 
 > 對於 [Live Sample][] 等需要用到 HTML ID 的地方，可以透過查看網頁原始碼的方式確定標題對應的 ID。
 
@@ -107,11 +107,11 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 #### 中文標點符號參考資源
 
 - [教育部《重訂標點符號手冊》修訂版](https://language.moe.gov.tw/001/upload/files/site_content/m0001/hau/haushou.htm)。
-- [維基百科標點符號](https://zh.wikipedia.org/zh-tw/%E6%A0%87%E7%82%B9%E7%AC%A6%E5%8F%B7)。
+- [維基百科標點符號](https://zh.wikipedia.org/wiki/标点符号)。
 
 ### 中文及拉丁語系文字間不加修飾空白
 
-中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如 [W3C 中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/%e4%b8%ad%e8%8b%b1%e6%96%87%e4%b9%8b%e9%96%93%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e6%9c%89%e7%a9%ba%e6%a0%bc%e6%88%91%e5%95%8f/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8C/%E5%AD%98%E6%A1%A35#%E6%8F%90%E8%AD%B0%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F%E6%89%8B%E5%86%8A%E4%B8%AD%E7%9A%84%E7%A9%BA%E6%A0%BC%E7%AB%A0%E7%AF%80)之討論）。
+中文網路界，有一派習慣是在中文字與半形英數、符號字元間，手動加入半形空格，以便視覺上美觀（如[盤古之白](https://github.com/vinta/pangu.js/blob/master/README.md)倡議）；但也有人主張中英文間不應手動加入空白，而應以系統來調整顯示樣式（如 [W3C 中文排版需求草案](https://www.w3.org/TR/clreq/#mixed_text_composition_in_horizontal_writing_mode)、[Fred Jame](https://fredjame.wordpress.com/2014/09/14/中英文之間為什麼要有空格我問/)、及[中文維基百科](https://zh.wikipedia.org/wiki/Wikipedia_talk:格式手册/存档5#提議修改格式手冊中的空格章節)之討論）。
 
 ~~經 MDN 在地化團隊[討論](https://t.me/c/1099275693/2056)，著眼於簡化格式規範，並考量作業系統與瀏覽器層級中英文混排的 kerning 實作將越來越良好（如 iOS 13、macOS 10.15 ），MDN 上「不」在中英文間手動插入空白字元。~~
 
@@ -182,7 +182,7 @@ For example, consider the [JavaScript](/en-US/docs/Web/JavaScript) guide, which 
 其他日常用語
 
 - [行政院陸委會正簡體對照表](https://www.mac.gov.tw/Content_List.aspx?n=87AE0F44904650AB)
-- [政治大學正簡體對照表](http://nccur.lib.nccu.edu.tw/bitstream/140.119/35617/12/031112.pdf)
+- [政治大學正簡體對照表](https://nccur.lib.nccu.edu.tw/bitstream/140.119/35617/12/031112.pdf)
 - [陸委會大陸資訊及研究中心](https://www.mac.gov.tw/MAIRC/cp.aspx?n=78790EF4BAE05CCF)
 
 ### 中文相關文法

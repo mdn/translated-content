@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
+**`<dashed-ident>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 {{glossary("identifier")}} として使用される任意の文字列を示します。
 
 ## 構文
 
@@ -21,7 +21,7 @@ l10n:
 
 ### CSS カスタムプロパティでの使用
 
-`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/var)の中で使用されます。
+`<dashed-ident>` は [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で使用されます。まずプロパティが宣言され、 [CSS の var() 関数](/ja/docs/Web/CSS/var)の中で使用されます。
 
 ```css
 html {

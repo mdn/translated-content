@@ -43,7 +43,7 @@ l10n:
 - `protectedContentEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。仅在 Windows 中可用。若为 `true`，则浏览器将为插件提供一个唯一的 ID 以运行受保护的内容。
 - `referrersEnabled`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头。
 - `resistFingerprinting`
 
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
@@ -55,7 +55,7 @@ l10n:
     默认取值为 `false`。
 
 - `thirdPartyCookiesAllowed`
-  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止[第三方 cookie](/zh-CN/docs/Web/Privacy/Third-party_cookies)。
+  - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
 - `trackingProtectionMode`
 
   - : 浏览器的“跟踪保护”特性会阻止向已知会跨站点跟踪用户的域名发出的请求。最常见跟踪用户的站点通常是第三方广告和分析站点。该设置是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象，用于确定浏览器是否应启用跟踪保护。其底层值是一个字符串，可以取如下的三个值之一：
@@ -103,7 +103,7 @@ browser.browserAction.onClicked.addListener(() => {
 {{WebExtExamples}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。本文衍生自 Chromium 代码中的 [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json)。
+> 此 API 基于 Chromium 的 [`chrome.privacy`](https://developer.chrome.google.cn/docs/extensions/reference/api/privacy) API。该文档衍生自 Chromium 代码中的 [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -52,7 +52,7 @@ Firefox 網頁主控台會在網站含有混合內容時，於「網路」標籤
 
 ![顯示 Web 控制台中的混合內容警告的擷圖。](mixed_content_-_net_pane.png)
 
-找到網頁主控台的警告後，可以在你的網站使用 [Content Security Policy (CSP)](/zh-TW/docs/Web/HTTP/CSP) 或網站爬蟲找到問題，，例如 [HTTPS Checker](https://httpschecker.net/guides/https-checker) 或是 [Mixed Content Scan](https://github.com/bramus/mixed-content-scan)。
+找到網頁主控台的警告後，可以在你的網站使用 [Content Security Policy (CSP)](/zh-TW/docs/Web/HTTP/Guides/CSP) 或網站爬蟲找到問題，例如 [HTTPS Checker](https://httpschecker.net/guides/https-checker) 或是 [Mixed Content Scan](https://github.com/bramus/mixed-content-scan)。
 
 從 Firefox 23 以後，預設會封鎖混合內容（要封鎖混合的顯示內容也可以設定）。為了令 web 開發者便於尋找混合內容的錯誤，所有遭到封鎖的混合內容會被紀錄到網頁主控台的安全標籤，如下所示：
 

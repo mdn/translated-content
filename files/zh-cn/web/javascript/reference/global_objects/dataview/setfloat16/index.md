@@ -9,7 +9,18 @@ l10n:
 
 {{jsxref("DataView")}} 实例的 **`setFloat16()`** 接受一个数字，并将其以 16 位浮点数的形式存储在从当前 `DataView` 的指定偏移位置开始处的 2 字节中。如果没有对齐约束；则可以在边界内的任意偏移位置处存储多字节值。
 
-{{EmbedInteractiveExample("pages/js/dataview-setfloat16.html")}}
+{{InteractiveExample("JavaScript Demo: DataView.setFloat16()")}}
+
+```js interactive-example
+// Create an ArrayBuffer with a size in bytes
+const buffer = new ArrayBuffer(16);
+
+const view = new DataView(buffer);
+view.setFloat16(1, Math.PI);
+
+console.log(view.getFloat16(1));
+// Expected output: 3.140625
+```
 
 ## 语法
 

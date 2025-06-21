@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/construct
 
 **`Reflect.construct()`** 정적 메서드는 [`new` 연산자](/ko/docs/Web/JavaScript/Reference/Operators/new)처럼 동작하는 함수입니다. `new target(...args)`를 호출하는 것과 같습니다. 추가 기능으로 다른 프로토타입을 지정할 수도 있습니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-construct.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.construct()")}}
+
+```js interactive-example
+function func1(a, b, c) {
+  this.sum = a + b + c;
+}
+
+const args = [1, 2, 3];
+const object1 = new func1(...args);
+const object2 = Reflect.construct(func1, args);
+
+console.log(object2.sum);
+// Expected output: 6
+
+console.log(object1.sum);
+// Expected output: 6
+```
 
 ## 구문
 

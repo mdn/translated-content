@@ -9,7 +9,12 @@ l10n:
 
 **`String.fromCodePoint()`** 정적 메서드는 명시된 코드 포인트의 시퀀스로부터 생성된 문자열을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-fromcodepoint.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCodePoint()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+// Expected output: "☃★♲你"
+```
 
 ## 구문
 

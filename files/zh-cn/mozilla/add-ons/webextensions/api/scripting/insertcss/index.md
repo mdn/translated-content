@@ -45,7 +45,7 @@ await browser.scripting.insertCSS(
 
       - : `string`。注入的样式来源，可以是 `USER`（将 CSS 作为用户样式表添加）、`AUTHOR`（将 CSS 作为作者样式表添加）。默认为 `AUTHOR`。
 
-        - `USER` 允许你防止网站覆盖你注入的 CSS：参见[层叠顺序](/zh-CN/docs/Web/CSS/Cascade#层叠顺序)。
+        - `USER` 允许你防止网站覆盖你注入的 CSS：参见[层叠顺序](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#层叠顺序)。
         - `AUTHOR` 样式表的行为就好像它们出现在页面指定的所有作者规则之后一样。这种行为包括页面的脚本动态添加的任何作者样式表，即使这种添加发生在 `insertCSS` 调用完成之后。
 
     - `target`
@@ -98,4 +98,4 @@ browser.action.onClicked.addListener(async (tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-insertCSS) API。
+> 此 API 基于 Chromium 的 [`chrome.scripting`](https://developer.chrome.google.cn/docs/extensions/reference/api/scripting#method-insertCSS) API。

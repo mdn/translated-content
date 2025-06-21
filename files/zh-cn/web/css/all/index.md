@@ -5,9 +5,62 @@ slug: Web/CSS/all
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值，或继承值。
+[CSS](/zh-CN/docs/Web/CSS) **`all`** [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) 将除了 {{cssxref("unicode-bidi")}} 与 {{cssxref("direction")}} 之外的所有属性重设至其初始值或继承值。
 
-{{EmbedInteractiveExample("pages/css/all.html")}}
+{{InteractiveExample("CSS Demo: all")}}
+
+```css interactive-example-choice
+/*no all property*/
+```
+
+```css interactive-example-choice
+all: initial;
+```
+
+```css interactive-example-choice
+all: inherit;
+```
+
+```css interactive-example-choice
+all: unset;
+```
+
+```css interactive-example-choice
+all: revert;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container-bg">
+    <div class="example-container">
+      <p id="example-element">
+        This paragraph has a font size of 1.5rem and a color of gold. It also
+        has 1rem of vertical margin set by the user-agent. The parent of the
+        paragraph is a &lt;div&gt; with a dashed blue border.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  color: gold;
+  padding: 10px;
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+}
+
+.example-container {
+  border: 2px dashed #2d5ae1;
+}
+
+.example-container-bg {
+  background-color: #77767b;
+  padding: 20px;
+}
+```
 
 ## 语法
 
@@ -28,18 +81,18 @@ all: revert;
 - {{cssxref("initial")}}
   - : 该关键字代表改变该元素或其父元素的所有属性至初始值。
 - {{cssxref("inherit")}}
-  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[inherited values](/zh-CN/docs/Web/CSS/Inheritance)
+  - : 该关键字代表改变该元素或其父元素的所有属性的值至他们的父元素属性的值。[继承值](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - {{cssxref("unset")}}
   - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
 - {{cssxref("revert")}}
 
-  - : 指定依赖于声明所属的样式表原点的行为：
+  - : 指定依赖于声明所属的样式表来源的行为：
 
-    - [User-agent origin](/zh-CN/docs/Web/CSS/Cascade#user-agent_stylesheets)
+    - [用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)
       - : 相当于 `unset`
-    - [User origin](/zh-CN/docs/Web/CSS/Cascade#user_stylesheets)
+    - [用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)
       - : 将层叠回滚到用户代理级别，以便计算指定的值，就好像没有为该元素指定作者级别或用户级别规则。
-    - [Author origin](/zh-CN/docs/Web/CSS/Cascade#author_stylesheets)
+    - [作者来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#作者样式表)
       - : 将层叠回滚到用户级别，以便计算指定的值，就好像没有为元素指定作者级规则。出于`revert`的目的，“作者”原点包括“覆盖”和“动画”原点。
 
 ### 形式定义
@@ -191,4 +244,4 @@ blockquote {
 
 ## 参见
 
-CSS 通用属性值： {{cssxref("initial")}}、{{cssxref("inherit")}} 和 {{cssxref("unset")}}。
+CSS 通用属性值：{{cssxref("initial")}}、{{cssxref("inherit")}} 和 {{cssxref("unset")}}。

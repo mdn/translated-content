@@ -30,7 +30,7 @@ _インスタンスプロパティを親である {{jsxref("Function")}} から�
 
 - {{jsxref("Object/constructor", "AsyncFunction.prototype.constructor")}}
   - : インスタンスオブジェクトを作成したコンストラクター関数。`AsyncFunction` インスタンスの場合、初期値は {{jsxref("AsyncFunction/AsyncFunction", "AsyncFunction")}} コンストラクターです。
-- `AsyncFunction.prototype[@@toStringTag]`
+- `AsyncFunction.prototype[Symbol.toStringTag]`
   - : [`@@toStringTag`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は、文字列 `"AsyncFunction"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
 > **メモ:** `AsyncFunction` のインスタンスには [`prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function) プロパティがありません。

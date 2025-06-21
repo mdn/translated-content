@@ -16,4 +16,4 @@ l10n:
 ## 参见
 
 - [requestIdleCallback](/zh-CN/docs/Web/API/Window/requestIdleCallback)
-- [延迟加载](/zh-CN/docs/Web/Performance/Lazy_loading)
+- [懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)

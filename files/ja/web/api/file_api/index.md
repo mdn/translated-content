@@ -11,7 +11,7 @@ l10n:
 
 ファイル API は、ウェブアプリケーションがファイルとそのコンテンツにアクセスできるようにするためのものです。
 
-ウェブアプリケーションは、ユーザーがファイルを利用可能にしたとき、すなわち [file 型の `<input>` 要素](/ja/docs/Web/HTML/Element/input/file)を使用するか、[ドラッグ＆ドロップを介する](/ja/docs/Web/API/DataTransfer/files)かのどちらかでファイルにアクセスすることができるようになります。
+ウェブアプリケーションは、ユーザーがファイルを利用可能にしたとき、すなわち [file 型の `<input>` 要素](/ja/docs/Web/HTML/Reference/Elements/input/file)を使用するか、[ドラッグ＆ドロップを介する](/ja/docs/Web/API/DataTransfer/files)かのどちらかでファイルにアクセスすることができるようになります。
 
 このようにして利用可能になった一連のファイルは {{domxref("FileList")}} オブジェクトとして表され、ウェブアプリケーションが個々の {{domxref("File")}} オブジェクトを取得することができるようになっています。そして、 {{domxref("File")}} オブジェクトから、ファイル名、サイズ、型、最終更新日時などのメタデータにアクセスすることができます。
 
@@ -41,7 +41,7 @@ l10n:
 
 ### ファイルの読み取り
 
-この例では、 [file 型の `<input>` 要素](/ja/docs/Web/HTML/Element/input/file)を用意しており、ユーザーがファイルを選択すると、最初に選択したファイルの内容をテキストとして読み込み、結果を {{HTMLElement("div")}} で表示します。
+この例では、 [file 型の `<input>` 要素](/ja/docs/Web/HTML/Reference/Elements/input/file)を用意しており、ユーザーがファイルを選択すると、最初に選択したファイルの内容をテキストとして読み込み、結果を {{HTMLElement("div")}} で表示します。
 
 #### HTML
 
@@ -88,5 +88,5 @@ fileInput.addEventListener("change", () => {
 
 ## 関連情報
 
-- [`<input type="file">`](/ja/docs/Web/HTML/Element/input/file): file 型の入力要素
+- [`<input type="file">`](/ja/docs/Web/HTML/Reference/Elements/input/file): file 型の入力要素
 - {{domxref("DataTransfer")}} インターフェイス

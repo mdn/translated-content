@@ -11,7 +11,7 @@ l10n:
 
 > **警告：** `ProcessingInstruction` 节点仅在 XML 文档中受支持，在 HTML 文档中不被支持。在 HTML 文档中，处理指令会被视为注释，并在树中表示为 {{domxref("Comment")}} 对象。
 
-处理指令可能与 [XML 声明](/zh-CN/docs/Web/XML/XML_introduction#xml_声明)不同。
+处理指令可能与 [XML 声明](/zh-CN/docs/Web/XML/Guides/XML_introduction#xml_声明)不同。
 
 > [!NOTE]
 > 用户定义的处理指令不能以 `xml` 开头，因为以 `xml` 为前缀的处理指令目标名称是由 xml 规范为特定用途保留的（如 `<?xml-stylesheet ?>`）。

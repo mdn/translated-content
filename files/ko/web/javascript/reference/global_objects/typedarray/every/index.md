@@ -11,7 +11,18 @@ l10n:
 이 메서드는 {{jsxref("Array.prototype.every()")}}와 같은 알고리즘을 가지고 있습니다.
 TypedArray은 [형식화 배열 타입](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_객체) 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/js/typedarray-every.html")}}
+{{InteractiveExample("JavaScript Demo: TypedArray.every()")}}
+
+```js interactive-example
+function isNegative(element, index, array) {
+  return element < 0;
+}
+
+const int8 = new Int8Array([-10, -20, -30, -40, -50]);
+
+console.log(int8.every(isNegative));
+// Expected output: true
+```
 
 ## 구문
 

@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Left_shift
 
 L'opérateur de **décalage binaire à gauche (`<<`)** décale la séquence de bits représentée par le premier opérande d'autant de bits vers la gauche que le nombre indiqué par le second opérande. Les bits en excès à gauche sont écartés et des bits à zéro sont introduits à droite.
 
-{{EmbedInteractiveExample("pages/js/expressions-left-shift.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Left shift operator")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 2; // 00000000000000000000000000000010
+
+console.log(a << b); // 00000000000000000000000000010100
+// Expected output: 20
+```
 
 ## Syntaxe
 

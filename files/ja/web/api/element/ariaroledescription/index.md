@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaRoleDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、要素のロールに関する人間が読み取り可能な、作者がローカライズした説明を定義する [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性の値を反映します。
+**`ariaRoleDescription`** は {{domxref("Element")}} インターフェイスのプロパティで、要素のロールに関する人間が読み取り可能な、作者がローカライズした説明を定義する [`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 属性の値を反映します。
 
 ## 値
 
@@ -42,4 +42,4 @@ console.log(el.ariaRoleDescription); // "an updated description of this widget"
 
 {{Compat}}
 
-- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Roles/application_role)
+- [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)

@@ -9,7 +9,43 @@ La propriété **`line-height`** définit la hauteur de la boîte d'une ligne.
 
 Sur les éléments de bloc, la propriété **`line-height`** indique la hauteur minimale des lignes au sein de l'élément. Sur les éléments en ligne qui ne sont pas [remplacés](/fr/docs/Web/CSS/Replaced_element), **`line-height`** indique la hauteur utilisée pour calculer la hauteur de la boîte d'une ligne.
 
-{{EmbedInteractiveExample("pages/css/line-height.html")}}
+{{InteractiveExample("CSS Demo: line-height")}}
+
+```css interactive-example-choice
+line-height: normal;
+```
+
+```css interactive-example-choice
+line-height: 2.5;
+```
+
+```css interactive-example-choice
+line-height: 3em;
+```
+
+```css interactive-example-choice
+line-height: 150%;
+```
+
+```css interactive-example-choice
+line-height: 32px;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy lies a small unregarded yellow sun.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-family: Georgia, sans-serif;
+  max-width: 200px;
+}
+```
 
 ## Syntaxe
 

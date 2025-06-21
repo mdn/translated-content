@@ -25,40 +25,40 @@ Si eres un principiante, el desarrollo web puede ser un desafío: iremos de la m
 ## Donde empezar
 
 - Principiante
-  - : Si eres un principiante en el desarrollo web, te recomendamos que empieces trabajando con nuestro módulo [Cómo empezar con la web](/es/docs/Learn/Getting_started_with_the_web), que proporciona una introducción práctica al desarrollo web.
+  - : Si eres un principiante en el desarrollo web, te recomendamos que empieces trabajando con nuestro módulo [Cómo empezar con la web](/es/docs/Learn_web_development/Getting_started/Your_first_website), que proporciona una introducción práctica al desarrollo web.
 - Mas allá de lo básico
-  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/Learn/CSS/First_steps).
+  - : Si ya tienes un poco de conocimiento, el siguiente paso es aprender {{glossary("HTML")}} y {{glossary("CSS")}} en detalle: comience con nuestra [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content) y pase a nuestro módulo [Primeros pasos con CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics).
 - Pasando al código
-  - : Si ya te sientes cómodo con HTML y CSS, o si estás principalmente interesado en la codificación, querrá pasar a {{glossary("JavaScript")}} o al desarrollo del lado del servidor. Comience con nuestros módulos [Primeros pasos de JavaScript](/es/docs/Learn/JavaScript/First_steps) y [Primeros pasos del lado del servidor](/es/docs/Learn/Server-side/First_steps).
+  - : Si ya te sientes cómodo con HTML y CSS, o si estás principalmente interesado en la codificación, querrá pasar a {{glossary("JavaScript")}} o al desarrollo del lado del servidor. Comience con nuestros módulos [Primeros pasos de JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Primeros pasos del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side/First_steps).
 - _Frameworks_ y herramientas
-  - : Después de dominar los conceptos básicos de HTML, CSS y JavaScript estándar, debe aprender sobre [herramientas de desarrollo web del lado del cliente](/es/docs/Learn/Tools_and_testing/Understanding_client-side_tools), y luego considerar profundizar en [_frameworks_ de JavaScript del lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), y [programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
+  - : Después de dominar los conceptos básicos de HTML, CSS y JavaScript estándar, debe aprender sobre [herramientas de desarrollo web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_tools), y luego considerar profundizar en [_frameworks_ de JavaScript del lado del cliente](/es/docs/Learn_web_development/Core/Frameworks_libraries), y [programación de sitios web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side).
 
 > [!NOTE]
-> Nuestro [glosario](/es/docs/Glossary) proporciona definiciones terminológicas. Además, si tienes una pregunta específica sobre desarrollo web, nuestra sección [Preguntas comunes](/es/docs/Learn/Common_questions) puede tener algo para ayudarte.
+> Nuestro [glosario](/es/docs/Glossary) proporciona definiciones terminológicas. Además, si tienes una pregunta específica sobre desarrollo web, nuestra sección [Preguntas comunes](/es/docs/Learn_web_development/Howto) puede tener algo para ayudarte.
 
 ## Temas cubiertos
 
 La siguiente es una lista de todos los temas que cubrimos en el área de aprendizaje de MDN.
 
-- [Comenzando con la web](/es/docs/Learn/Getting_started_with_the_web)
+- [Comenzando con la web](/es/docs/Learn_web_development/Getting_started/Your_first_website)
   - : Proporciona una introducción práctica al desarrollo web para principiantes.
-- [HTML: Estructura de la web](/es/docs/Learn/HTML)
+- [HTML: Estructura de la web](/es/docs/Learn_web_development/Core/Structuring_content)
   - : HTML es el lenguaje que usamos para estructurar las diferentes partes de nuestro contenido y definir cuál es su significado o propósito. Este tema enseña HTML en detalle.
-- [CSS: Dar estilo a la web](/es/docs/Learn/CSS)
+- [CSS: Dar estilo a la web](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
   - : CSS es el lenguaje que usamos para controlar el estilo y el diseño de tu contenido web, así como para agregar comportamientos como la animación. Este tema proporciona una cobertura completa de CSS.
-- [JavaScript: Código dinámico del lado del cliente](/es/docs/Learn/JavaScript)
+- [JavaScript: Código dinámico del lado del cliente](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792)
   - : JavaScript es el lenguaje utilizado para agregar funcionalidad dinámica a las páginas web. Este tema enseña todos los elementos esenciales necesarios para sentirse cómodo con la escritura y la comprensión de JavaScript.
-- [Formularios web: Trabajar con datos de usuario](/es/docs/Learn/Forms)
+- [Formularios web: Trabajar con datos de usuario](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios web son una herramienta potente para interactuar con los usuarios; por lo general, se utilizan para recopilar datos de los usuarios o permitirles controlar una interfaz de usuario. En los artículos que se enumeran a continuación, cubriremos todos los aspectos esenciales de la estructuración, el estilo y la interacción con formularios web.
-- [Accesibilidad: Hacer que la web sea utilizable por todos](/es/docs/Learn/Accessibility)
+- [Accesibilidad: Hacer que la web sea utilizable por todos](/es/docs/Learn_web_development/Core/Accessibility)
   - : La accesibilidad es la práctica de hacer que el contenido web esté disponible para la mayor cantidad de personas posible, independientemente de la discapacidad, el dispositivo, el lugar u otros factores diferenciadores. Este tema te brinda todo lo que necesitas saber.
-- [Rendimiento web: Hacer que los sitios web sean rápidos y responsivos](/es/docs/Learn/Performance)
+- [Rendimiento web: Hacer que los sitios web sean rápidos y responsivos](/es/docs/Learn_web_development/Extensions/Performance)
   - : El rendimiento web es el arte de garantizar que las aplicaciones web se descarguen rápidamente y respondan a la interacción del usuario, independientemente del ancho de banda, el tamaño de la pantalla, la red o las capacidades del dispositivo del usuario.
 - [MathML](/es/docs/Learn/MathML)
   - : MathML es el lenguaje que podemos usar para escribir fórmulas matemáticas en páginas web usando fracciones, scripts, radicales, matrices, integrales, series, etc. Este tema cubre MathML.
-- [Herramientas y pruebas](/es/docs/Learn/Tools_and_testing)
+- [Herramientas y pruebas](/es/docs/conflicting/Learn_web_development/Extensions/Testing)
   - : Este tema cubre las herramientas que usan los desarrolladores para facilitar su trabajo, como herramientas de prueba entre navegadores, _linters_, formateadores, herramientas de transformación, sistemas de control de versiones, herramientas de implementación y _frameworks_ JavaScript del lado del cliente.
-- [Programación de sitios web del lado del servidor](/es/docs/Learn/Server-side)
+- [Programación de sitios web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side)
   - : Incluso si te estás concentrando en el desarrollo web del lado del cliente, sigue siendo útil saber cómo funcionan los servidores y las características del código del lado del servidor. Este tema proporciona una introducción general sobre cómo funciona el lado del servidor y tutoriales detallados que muestran cómo crear una aplicación del lado del servidor utilizando dos _frameworks_ populares: Django (Python) y Express (Node.js).
 
 ## Obtener nuestros ejemplos de código
@@ -95,7 +95,7 @@ Puedes actualizar el repositorio `learning-area` con cualquier cambio realizado 
 
 Si quieres ponerte en contacto sobre cualquier cosa, utiliza los [canales de comunicación](/es/docs/MDN/Community/Communication_channels). Nos gustaría saber de ti sobre cualquier cosa que creas que está mal o que falta en el sitio, solicitudes de nuevos temas de aprendizaje, solicitudes de ayuda con elementos que no comprendes o cualquier otra pregunta o inquietud.
 
-Si estás interesado en ayudar a desarrollar/mejorar el contenido, echa un vistazo a [cómo puedes ayudar](/es/docs/MDN/Community/Contributing) ¡y ponte en contacto! Estamos más que felices de hablar contigo, ya sea un alumno, un maestro, un desarrollador web experimentado o cualquier otra persona interesada en ayudar a mejorar la experiencia de aprendizaje.
+Si estás interesado en ayudar a desarrollar/mejorar el contenido, echa un vistazo a [cómo puedes ayudar](/es/docs/conflicting/MDN/Community) ¡y ponte en contacto! Estamos más que felices de hablar contigo, ya sea un alumno, un maestro, un desarrollador web experimentado o cualquier otra persona interesada en ayudar a mejorar la experiencia de aprendizaje.
 
 ## Véase también
 

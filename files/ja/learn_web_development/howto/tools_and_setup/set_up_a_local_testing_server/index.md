@@ -1,7 +1,6 @@
 ---
 title: ローカルテストサーバーを用意するには
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
-original_slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
 l10n:
   sourceCommit: f21b731803ee077d060a11038d9b284bab37ecc3
 ---
@@ -15,9 +14,9 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work"
+        <a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work"
           >インターネットの仕組み</a
-        >および<a href="/ja/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server">ウェブサーバーとは何かを</a>知っておく必要があります。
+        >および<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server">ウェブサーバーとは何かを</a>知っておく必要があります。
       </td>
     </tr>
     <tr>
@@ -37,7 +36,7 @@ l10n:
 
 一部のサンプルはローカルファイルとして開くと実行されません。これにはさまざまな理由があります。最も可能性が高いのは、
 
-- **非同期リクエストを特徴としている**。 一部のブラウザー (Chrome を含む) は、ローカルファイルからサンプルを実行するだけでは非同期リクエストは実行しません ([サーバーからのデータの取得](/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)を参照)。これはセキュリティ上の制限があるためです (ウェブセキュリティの詳細については、[ウェブサイトのセキュリティ](/ja/docs/Learn/Server-side/First_steps/Website_security)を参照してください)
+- **非同期リクエストを特徴としている**。 一部のブラウザー (Chrome を含む) は、ローカルファイルからサンプルを実行するだけでは非同期リクエストは実行しません ([サーバーからのデータの取得](/ja/docs/Learn_web_development/Core/Scripting/Network_requests)を参照)。これはセキュリティ上の制限があるためです (ウェブセキュリティの詳細については、[ウェブサイトのセキュリティ](/ja/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)を参照してください)
 - **サーバー側の言語を使用している**。 サーバー側の言語 (PHP や Python など) では、コードを解釈して結果を提供する特別なサーバーが必要です。
 - **他のファイルをインクルードしている**。 ブラウザーは通常、`file://` スキーマを使用してリソースを読み込むリクエストをオリジン間リクエストとして扱います。
   そのため、他のローカルファイルを入れることができるローカルファイルを読み込むと、 {{Glossary("CORS")}} エラーが発生することがあります。
@@ -110,8 +109,8 @@ VSCode については、以下の無料拡張機能を調べると良いでし�
 
 Python の `http.server` （Python 2 では `SimpleHTTPServer`）モジュールは便利ですが、単なる静的ファイルサーバーに過ぎません。 Python、PHP、JavaScript などの言語で書かれたコードの実行方法はわかりません。これを処理するには、必要なことがあります。必要なのは、実行しようとしているサーバー側の言語に依存します。いくつかの例があります。
 
-- Python のサーバー側コードを実行するには、Python ウェブフレームワークを使用する必要があります。 Python のウェブフレームワークには、 Django（[ガイド](/ja/docs/Learn/Server-side/Django)が利用できます）、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com) など人気のものが多く存在します。
-- Node.js (JavaScript) サーバー側コードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。 Express は良い選択です - [Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn/Server-side/Express_Nodejs) を参照してください
+- Python のサーバー側コードを実行するには、Python ウェブフレームワークを使用する必要があります。 Python のウェブフレームワークには、 Django（[ガイド](/ja/docs/Learn_web_development/Extensions/Server-side/Django)が利用できます）、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com) など人気のものが多く存在します。
+- Node.js (JavaScript) サーバー側コードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。 Express は良い選択です - [Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) を参照してください
 - PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](https://www.php.net/manual/ja/features.commandline.webserver.php)を起動してください。
 
   ```bash

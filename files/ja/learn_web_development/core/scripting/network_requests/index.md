@@ -181,7 +181,7 @@ fetch("products.json")
 
 この関数の中では、以下のようなことを行っています。
 
-- サーバーがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
+- サーバーがエラー（[`404 Not Found`](/ja/docs/Web/HTTP/Reference/Status/404) のような値）を返さなかったかどうか調べます。もしエラーが発生した場合は、そのエラーを報告します。
 - レスポンスに対して {{domxref("Response.json","json()")}} を呼び出します。これにより、データは [JSON オブジェクト](/ja/docs/Learn_web_development/Core/Scripting/JSON)として取得されます。`response.json()` が返すプロミス値を返します。
 
 次に、返されたプロミスの `then()` メソッドに、関数を渡します。この関数には、レスポンスデータを JSON として含むオブジェクトが渡され、それを `initialize()` 関数に渡します。この関数は、ユーザーインターフェイスにすべての製品を表示する処理を開始します。
@@ -261,7 +261,7 @@ try {
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [プロミス](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 - [JSON データの操作](/ja/docs/Learn_web_development/Core/Scripting/JSON)
-- [HTTP の概要](/ja/docs/Web/HTTP/Overview)
+- [HTTP の概要](/ja/docs/Web/HTTP/Guides/Overview)
 - [サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/DOM_scripting","Learn_web_development/Core/Scripting/JSON", "Learn_web_development/Core/Scripting")}}

@@ -8,7 +8,55 @@ l10n:
 {{CSSRef}}
 **`place-content`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties) 은 [그리드](/ko/docs/Web/CSS/CSS_grid_layout) 혹은 [플렉스박스](/ko/docs/Web/CSS/CSS_flexible_box_layout) 같은 관계형 레이아웃 시스템에서 블록 방향과 인라인 방향에서 한번에 콘텐츠를 정렬합니다. (예를 들어, {{CSSxRef("align-content")}} 와 {{CSSxRef("justify-content")}} 속성)
 
-{{EmbedInteractiveExample("pages/css/place-content.html")}}
+{{InteractiveExample("CSS Demo: place-content")}}
+
+```css interactive-example-choice
+place-content: end space-between;
+```
+
+```css interactive-example-choice
+place-content: space-around start;
+```
+
+```css interactive-example-choice
+place-content: start space-evenly;
+```
+
+```css interactive-example-choice
+place-content: end center;
+```
+
+```css interactive-example-choice
+place-content: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  height: 180px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 구성 속성
 

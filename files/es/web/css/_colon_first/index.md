@@ -1,9 +1,9 @@
 ---
-title: ":first"
+title: :first
 slug: Web/CSS/:first
 ---
 
-{{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
+{{CSSRef}}La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:first` de [CSS](/es/docs/Web/CSS), utilizada con la [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) {{cssxref("@page")}}, representa la primera página de un documento impreso.
 
 ```css
 /* Selecciona la primera página al imprimir */

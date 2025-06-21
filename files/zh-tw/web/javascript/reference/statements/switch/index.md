@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Statements/switch
 
 **`switch` 語句**會比對一個[表達式](/zh-TW/docs/Web/JavaScript/Guide/Expressions_and_operators)裡頭的值是否符合 `case` 條件，然後執行跟這個條件相關的[陳述式](/zh-TW/docs/Web/JavaScript/Reference/Statements)，以及此一符合條件以外，剩下其他條件裡的陳述式。
 
-{{EmbedInteractiveExample("pages/js/statement-switch.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - Switch")}}
+
+```js interactive-example
+const expr = "Papayas";
+switch (expr) {
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Mangoes":
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    // Expected output: "Mangoes and papayas are $2.79 a pound."
+    break;
+  default:
+    console.log(`Sorry, we are out of ${expr}.`);
+}
+```
 
 ## 語法
 

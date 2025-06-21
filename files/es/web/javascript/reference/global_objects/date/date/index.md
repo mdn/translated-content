@@ -9,7 +9,21 @@ l10n:
 
 El constructor **`Date()`** crea objetos de tipo {{jsxref("Date")}}. Cuando se llama como una función, devuelve una cadena que representa la hora actual.
 
-{{EmbedInteractiveExample("pages/js/date-constructor.html")}}
+{{InteractiveExample("JavaScript Demo: Date Constructor")}}
+
+```js interactive-example
+const date1 = new Date("December 17, 1995 03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+const date2 = new Date("1995-12-17T03:24:00");
+// Sun Dec 17 1995 03:24:00 GMT...
+
+console.log(date1 === date2);
+// Expected output: false
+
+console.log(date1 - date2);
+// Expected output: 0
+```
 
 ## Sintaxis
 
@@ -54,7 +68,7 @@ Cuando no se proporcionan parámetros, el objeto `Date` recién creado represent
 - `dateObject`
   - : Un objeto `Date` existente. Esto efectivamente hace una copia del objeto `Date` existente con la misma fecha y hora. Esto es equivalente a `new Date(dateObject.valueOf())`, excepto que no se llama al método `valueOf()`.
 
-Cuando se pasa un parámetro al constructor `Date()`, las instancias de `Date` se tratan de manera especial. Todos los demás valores se [convierten a datos primitivos](/es/docs/Web/JavaScript/Data_structures#primitive_coercion). Si el resultado es una cadena, se analizará como una cadena de fecha. De lo contrario, el valor primitivo resultante se convierte en un número y se trata como una marca de tiempo.
+Cuando se pasa un parámetro al constructor `Date()`, las instancias de `Date` se tratan de manera especial. Todos los demás valores se [convierten a datos primitivos](/es/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion). Si el resultado es una cadena, se analizará como una cadena de fecha. De lo contrario, el valor primitivo resultante se convierte en un número y se trata como una marca de tiempo.
 
 #### Valores individuales de componentes de fecha y hora
 

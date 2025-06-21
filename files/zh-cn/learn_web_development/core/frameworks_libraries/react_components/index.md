@@ -1,10 +1,7 @@
 ---
 title: 组件化我们的 React App
 slug: Learn_web_development/Core/Frameworks_libraries/React_components
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning","Learn_web_development/Core/Frameworks_libraries/React_interactivity_events_state", "Learn_web_development/Core/Frameworks_libraries")}}
 
@@ -67,7 +64,7 @@ export default function Todo() {
 }
 ```
 
-目前为止很顺利，但我们的组件必须返回一些东西！回到 `src/App.js`，从无序列表中复制第一个 [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 并将其粘贴到 `Todo.js`，代码看起来像这样：
+目前为止很顺利，但我们的组件必须返回一些东西！回到 `src/App.js`，从无序列表中复制第一个 [`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li) 并将其粘贴到 `Todo.js`，代码看起来像这样：
 
 ```js
 export default function Todo() {
@@ -195,7 +192,7 @@ export default function Todo(props) {
 
 ### 请给我一些 `id`
 
-我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML 写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Global_attributes/id)必须是不同的（它们被 CSS、JavaScript 等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
+我们的 `<Todo />` 组件给每个任务的 `id` 属性都设为 `todo-0` 了。这是个不好的 HTML 写法，因为 [`id` 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)必须是不同的（它们被 CSS、JavaScript 等用作文档片段的唯一标识符）。这意味着我们需要给每一个 `Todo` 组件一个不同 `id` prop。
 
 为了遵循最初的规则，让我们给每个 `<Todo />` 组件实例一个 `todo-i` 格式的 ID，其中数字 `i` 每次增加一。
 

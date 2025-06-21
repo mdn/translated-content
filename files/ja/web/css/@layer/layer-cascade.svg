@@ -1,0 +1,73 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 820">
+    <title>スタイルオリジンとレイヤー、優先順位の高い順</title>
+<style>
+ text {
+   color: black;
+   font-family: sans-serif;
+   font-size: 1rem;
+   text-anchor: middle;
+ }
+[fill="#fff"],
+.css {
+   font-style: italic;
+}
+</style>
+
+<path fill="#fffed9" stroke="#d6b656" d="M180 0h420v820H180z"/>
+
+<text x="80" y="20" >優先順位：高</text>
+<g stroke="#000" stroke-miterlimit="10" stroke-width="3" id="arrow">
+  <path fill="none" d="M80 771V41.1" />
+  <path d="m80 34.35 4.5 9L80 41.1l-4.5 2.25Z"/>
+</g>
+
+<path fill="#fff2cc" stroke="#d6b656" d="M190 10h400v40H190z"/>
+<text x="390" y="35" class="css">トランジション宣言</text>
+
+<g id="all_important">
+    <path fill="#fff2cc" stroke="#d6b656" d="M190 60h400v40H190z"/>
+    <text x="390" y="85">重要なユーザーエージェント宣言</text>
+    <path fill="#fff2cc" stroke="#d6b656" d="M190 110h400v40H190z"/>
+    <text x="390" y="135">重要なユーザー宣言</text>
+    <g id="important-author">
+        <path fill="none" stroke="#000" d="M190 160h400v240H190z"/>
+        <text x="390" y="185">重要な作成者宣言</text>
+        <path fill="#dae8fc" stroke="#6c8ebf" d="M200 199h380v30H200z"/>
+        <text x="390" y="219">重要な @layer 1 { ... }</text>
+        <path fill="#d5e8d4" stroke="#82b366" d="M200 238h380v30H200z"/>
+        <text x="390" y="258">重要な @layer 2 { ... }</text>
+        <path fill="#ffe6cc" stroke="#d79b00" d="M200 278h380v30H200z"/>
+        <text x="390" y="298">重要な @layer ... { ... }</text>
+        <path fill="#e1d5e7" stroke="#9673a6" d="M200 318h380v30H200z"/>
+        <text x="390" y="338">重要な @layer N { ... }</text>
+        <path fill="#647687" stroke="#314354" d="M200 358h380v30H200z"/>
+        <text x="390" y="378" fill="#fff">レイヤー外の重要な宣言</text>
+    </g>
+</g>
+
+<path fill="#fff2cc" stroke="#d6b656" d="M190 411h400v30H190z"/>
+<text x="390" y="431" class="css">アニメーション宣言</text>
+
+<g id="all_normal">
+    <g id="author_normal">
+        <path fill="none" stroke="#000" d="M190 450h400v250H190z"/>
+        <text x="391" y="481">通常の作成者宣言</text>
+        <path fill="#dae8fc" stroke="#6c8ebf" d="M200 655h380v30H200z"/>
+        <text x="390" y="675">@layer 1 { ... }</text>
+        <path fill="#d5e8d4" stroke="#82b366" d="M200 615h380v30H200z"/>
+        <text x="390" y="635">@layer 2 { ... }</text>
+        <path fill="#ffe6cc" stroke="#d79b00" d="M200 575h380v30H200z"/>
+        <text x="390" y="595">@layer ... { ... }</text>
+        <path fill="#e1d5e7" stroke="#9673a6" d="M200 535h380v30H200z"/>
+        <text x="390" y="555">@layer N { ... }</text>
+        <path fill="#647687" stroke="#314354" d="M200 495h380v30H200z"/>
+        <text x="390" y="515" fill="#fff">レイヤー外の宣言</text>
+    </g>
+    <path fill="#fff2cc" stroke="#d6b656" d="M190 714h400v40H190z"/>
+    <text x="390" y="739">通常のユーザー宣言</text>
+    <path fill="#fff2cc" stroke="#d6b656" d="M190 764h400v40H190z"/>
+    <text x="390" y="789">通常のユーザーエージェント宣言</text>
+</g>
+<text x="80" y="800" >優先順位：低</text>
+</svg>

@@ -2,14 +2,27 @@
 title: Date.prototype.getUTCMonth()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMonth
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`getUTCMonth()`** メソッドは、協定世界時に基づき、指定された日付の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
+**`getUTCMonth()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の「月」を表す 0 を基点とした値（すなわち 0 が年の最初の月を示す）を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcmonth.html")}}
+{{InteractiveExample("JavaScript デモ: Date.prototype.getUTCMonth()")}}
+
+```js interactive-example
+const date1 = new Date("December 31, 1975, 23:15:30 GMT+11:00");
+const date2 = new Date("December 31, 1975, 23:15:30 GMT-11:00");
+
+// December
+console.log(date1.getUTCMonth());
+// 予想される結果: 11
+
+// January
+console.log(date2.getUTCMonth());
+// 予想される結果: 0
+```
 
 ## 構文
 
@@ -17,10 +30,13 @@ l10n:
 getUTCMonth()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-数値です。`Date` オブジェクトが有効な日時を表している場合、0 から 11 までの整数値で、指定された日時の月が世界時で何月になるかに対応します。0 は 1 月、1 は 2 月、2 は 3 月、といった具合になります。
-数値です。それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+指定された日時の、協定世界時に基づく「月」を表す 0 から 11 までの整数です。1 月ならば 0、 2 月ならば 1 となります。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
 ## 例
 

@@ -2,7 +2,7 @@
 title: ユーザーによる有効化によって制御される機能
 slug: Web/Security/User_activation
 l10n:
-  sourceCommit: 199c317d91bf506a81a6f68f53d6c63499651dff
+  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
 ---
 
 {{QuickLinksWithSubpages("/ja/docs/Web/Security")}}
@@ -27,51 +27,58 @@ l10n:
 
 {{Glossary("Transient activation", "一時的な有効化")}}は､ユーザーが最近ボタンを押したか､マウスを動かしたか､メニューを使用したか､他の何らかの操作をしたことを表すウインドウの状態です｡一時的な有効化は (他の操作によって更新されなければ) タイムアウトによって無効になり、({{domxref("Window.open()")}} のような) API によって消費されることもあります。
 
-以下が、一時的な有効化を必要とする API の例です。
+一時的な有効化を必要とする API の例です（すべてではありません）。
 
-- [`beforeunload` イベント](/ja/docs/Web/API/Window/beforeunload_event)
+- {{domxref("Clients.openWindow()")}}
 - {{domxref("Clipboard.read()")}}
 - {{domxref("Clipboard.readText()")}}
+- {{domxref("Clipboard.write()")}}
 - {{domxref("Clipboard.writeText()")}}
+- {{domxref("ContactsManager.select()")}}
 - {{domxref("Document.requestStorageAccess()")}}
-- {{domxref("Element.requestFullScreen()")}}
+- {{domxref("DocumentPictureInPicture.requestWindow()")}}
+- {{domxref("Element.requestFullscreen()")}}
 - {{domxref("Element.requestPointerLock()")}}
-- `GPUAdapter.requestAdapterInfo()`
+- {{domxref("EyeDropper.open()")}}
 - {{domxref("HID.requestDevice()")}}
 - {{domxref("HTMLInputElement.showPicker()")}}
+- {{domxref("HTMLSelectElement.showPicker()")}}
 - {{domxref("HTMLVideoElement.requestPictureInPicture()")}}
-- {{domxref("IdleDetector.requestPermission()")}}
+- {{domxref("IdleDetector/requestPermission_static", "IdleDetector.requestPermission()")}}
+- {{domxref("Keyboard.lock()")}}
+- {{domxref("MediaDevices.getDisplayMedia()")}}
+- `MediaDevices.getViewportMedia()`
 - {{domxref("MediaDevices.selectAudioOutput()")}}
 - `MediaStreamTrack.sendCaptureAction()`
-- `MediaDevices.getViewportMedia()`
-- {{domxref("MediaDevices.getDisplayMedia()")}}
 - {{domxref("Navigator.share()")}}
 - {{domxref("PaymentRequest.show()")}}
 - {{domxref("PresentationRequest.start()")}}
 - {{domxref("RemotePlayback.prompt()")}}
+- {{domxref("Serial.requestPort()")}}
 - {{domxref("USB.requestDevice()")}}
-- {{domxref("Keyboard.lock()")}}
+- {{domxref("Window.getScreenDetails()")}}
 - {{domxref("Window.open()")}}
+- {{domxref("Window.queryLocalFonts()")}}
+- {{domxref("Window.showDirectoryPicker()")}}
 - {{domxref("Window.showOpenFilePicker()")}}
 - {{domxref("Window.showSaveFilePicker()")}}
-- {{domxref("Window.showDirectoryPicker()")}}
-- `Window.getScreenDetails()`
-- `Window.queryLocalFonts()`
+- {{domxref("WindowClient.focus()")}}
 - {{domxref("XRSystem.requestSession()")}}
 
 ## 粘着的な有効化
 
-{{Glossary("Sticky activation", "粘着的な有効化")}}は、ユーザーがボタンを押したか、マウスを動かしたか、メニューを使用したか、他の何らかの操作をしたことを表すウインドウの状態です。これは、(一時的な有効化と違って) 最初にセットされた後はリセットされません。
+{{Glossary("Sticky activation", "粘着的な有効化")}}は、ユーザーがボタンを押したか、マウスを動かしたか、メニューを使用したか、他の何らかの操作をしたことを表すウインドウの状態です。これは、（一時的な有効化と違って）最初にセットされた後はリセットされません。
 
-以下が､粘着的な有効化を必要とする API の例です｡
+以下が､粘着的な有効化を必要とする API の例です（すべてではありません）｡
 
+- {{domxref("Window/beforeunload_event", "beforeunload")}} イベント
 - {{domxref("Navigator.vibrate()")}}
-- `navigator.getAutoplayPolicy()`
-- `navigator.virtualKeyboard.show()`
+- {{domxref("VirtualKeyboard.show()")}}
+- [メディアとウェブオーディオ API](/ja/docs/Web/Media/Guides/Autoplay) の自動再生（特に [`AudioContexts`](/ja/docs/Web/API/AudioContext)）。
 
 ## UserActivation API
 
-ウインドウで粘着的または一時的なユーザーによる有効化がなされているかどうかをプログラムから識別するため、{{domxref("UserActivation")}} API は {{domxref("navigator.userActivation")}} を通じて利用可能な 2 個のプロパティを提供しています。
+ウインドウで粘着的または一時的なユーザーによる有効化がなされているかどうかをプログラムから識別するため、 {{domxref("UserActivation")}} API は {{domxref("Navigator.userActivation")}} を通じて利用可能な 2 個のプロパティを提供しています。
 
 - {{domxref("UserActivation.hasBeenActive")}} は、ウインドウで粘着的な有効化がなされているかを表します。
 - {{domxref("UserActivation.isActive")}} は、ウインドウで一時的な有効化がなされているかを表します｡
@@ -81,4 +88,4 @@ l10n:
 - {{Glossary("Transient activation", "一時的な有効化")}}
 - {{Glossary("Sticky activation", "粘着的な有効化")}}
 - {{domxref("UserActivation")}} API
-- [安全なコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)
+- [保護されたコンテキストに制限されている機能](/ja/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)

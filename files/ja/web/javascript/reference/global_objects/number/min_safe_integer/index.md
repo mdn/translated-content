@@ -11,7 +11,21 @@ l10n:
 
 これよりも小さな整数値を表す場合は、 {{jsxref("BigInt")}} を使用することを検討してください。
 
-{{EmbedInteractiveExample("pages/js/number-min-safe-integer.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+
+```js interactive-example
+const x = Number.MIN_SAFE_INTEGER - 1;
+const y = Number.MIN_SAFE_INTEGER - 2;
+
+console.log(Number.MIN_SAFE_INTEGER);
+// Expected output: -9007199254740991
+
+console.log(x);
+// Expected output: -9007199254740992
+
+console.log(x === y);
+// Expected output: true
+```
 
 ## 値
 

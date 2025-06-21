@@ -71,7 +71,7 @@ _変更なし。_
 
 - {{jsxref("String.prototype.matchAll")}} を実装して、デフォルトで有効にしました ([Firefox バグ 1435829](https://bugzil.la/1435829)、[Firefox バグ 1531830](https://bugzil.la/1531830))。
 - 動的なモジュールの {{jsxref("Statements/import", "import()", "#Dynamic_Imports")}} の提案のサポートを、デフォルトで有効にしました ([Firefox バグ 1517546](https://bugzil.la/1517546))。
-- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#hashbang_comments) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
+- [シバン構文](/ja/docs/Web/JavaScript/Reference/Lexical_grammar#ハッシュバンコメント) の提案を実装しました ([Firefox バグ 1519097](https://bugzil.la/1519097))。
 
 ### API
 
@@ -92,7 +92,7 @@ _変更なし。_
 
 #### メディア、Web Audio、WebRTC
 
-- The [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を Linux でサポートしました。
+- The [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を Linux でサポートしました。
 - [dav1d](https://code.videolan.org/videolan/dav1d) が [AV1](https://aomediacodec.github.io/av1-spec/av1-spec.pdf) の既定のメディアデコーダーになりました ([Firefox バグ 1533742](https://bugzil.la/1533742) および [Firefox バグ 1535038](https://bugzil.la/1535038) をご覧ください)。
 - 新しいトラックを追加するためストリームを指定せずに {{domxref("RTCPeerConnection.addTrack()")}} を呼び出したとき、予期するとおりに動作するようになりました。ストリームがないトラックをコネクションに追加します。それぞれのピアは、トラックとストリームの関係を管理する責任を持ちます ([Firefox バグ 1231414](https://bugzil.la/1231414))。
 - {{domxref("MediaDeviceInfo.groupId")}} プロパティを実装しました ([Firefox バグ 1213453](https://bugzil.la/1213453))。これは Firefox 39 から存在していましたが、実際は関連するデバイスを同じグループ ID に集めていませんでした。
@@ -110,7 +110,7 @@ _変更なし。_
 
 ### セキュリティ
 
-- [Notifications](/ja/docs/Web/API/Notifications_API) が [安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts) に限り使用可能になりました ([Firefox バグ 1429432](https://bugzil.la/1429432))。
+- [Notifications](/ja/docs/Web/API/Notifications_API) が [保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts) に限り使用可能になりました ([Firefox バグ 1429432](https://bugzil.la/1429432))。
 - {{htmlelement("iframe")}} で、外部プロトコル URL の読み込みをブロックするようになりました ([Firefox バグ 1527882](https://bugzil.la/1527882))。
 
 ### WebDriver conformance (Marionette)

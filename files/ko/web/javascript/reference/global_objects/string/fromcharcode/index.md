@@ -7,7 +7,12 @@ slug: Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
 **`String.fromCharCode()`** 메서드는 UTF-16 코드 유닛의 시퀀스로부터 문자열을 생성해 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/string-fromcharcode.html")}}
+{{InteractiveExample("JavaScript Demo: String.fromCharCode()")}}
+
+```js interactive-example
+console.log(String.fromCharCode(189, 43, 190, 61));
+// Expected output: "½+¾="
+```
 
 ## 구문
 

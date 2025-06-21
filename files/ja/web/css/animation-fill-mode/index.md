@@ -2,14 +2,118 @@
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 l10n:
-  sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/animation-fill-mode.html")}}
+{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+
+```css interactive-example-choice
+animation-fill-mode: none;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: forwards;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: backwards;
+animation-delay: 1s;
+```
+
+```css interactive-example-choice
+animation-fill-mode: both;
+animation-delay: 1s;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>アニメーション<span id="playstatus"></span></div>
+  <div id="example-element">モードを選択すると開始します！</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  color: white;
+  margin: auto;
+  margin-left: 0;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation: slide 1s ease-in 1;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "待機中";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "動作中";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "完了";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} を使用すると便利です。
 
@@ -51,6 +155,8 @@ animation-fill-mode: unset;
     | `alternate-reverse`   | 偶数                        | `100%` または `to` |
     | `alternate-reverse`   | 奇数                        | `0%` または `from` |
 
+    アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
+
 - `backwards`
 
   - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
@@ -81,17 +187,17 @@ animation-fill-mode: unset;
 
 以下の例で `animation-fill-mode` の効果を見ることができます。これは無限に繰り返されるアニメーションが、元の状態に戻るのではなく最後の状態を維持するようにすることができます（既定の状態）。
 
-### HTML
+#### HTML
 
 ```html
 <p>マウスを灰色のボックスの上に乗せてください！</p>
 <div class="demo">
-  <div class="growsandstays">これは大きくなって大きいままになります。</div>
+  <div class="grows-and-stays">これは大きくなって大きいままになります。</div>
   <div class="grows">これは大きくなるだけです。</div>
 </div>
 ```
 
-### CSS
+#### CSS
 
 ```css
 .demo {
@@ -113,7 +219,7 @@ animation-fill-mode: unset;
   animation-duration: 3s;
 }
 
-.demo:hover .growsandstays {
+.demo:hover .grows-and-stays {
   animation-name: grow;
   animation-duration: 3s;
   animation-fill-mode: forwards;

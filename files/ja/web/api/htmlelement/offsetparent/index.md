@@ -12,7 +12,7 @@ l10n:
 
 位置指定祖先とは、以下のいずれかです。
 
-- 絶対位置指定要素の場合は[包含ブロック](/ja/docs/Web/CSS/Containing_block#包含ブロックの識別)
+- 絶対位置指定要素の場合は[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)
 - この要素とは異なる実効[ズーム](/ja/docs/Web/CSS/zoom)値（つまり、その親のすべての変倍率の積）を持つ要素。
 - 要素自体が静的位置指定である場合の `td`、`th`、`table`
 

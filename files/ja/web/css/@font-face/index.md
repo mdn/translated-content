@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
+**`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
 
 ## 構文
 
@@ -83,14 +83,15 @@ l10n:
 
 ### メモ
 
-- ウェブフォントは同一ドメイン制約の対象となります（フォントファイルはそれを使用するページと同じドメインに存在しなければなりません）。ただし、 [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS)を使用するとこの制限を緩和することができます。
+- ウェブフォントは同一ドメイン制約の対象となります（フォントファイルはそれを使用するページと同じドメインに存在しなければなりません）。ただし、 [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS)を使用するとこの制限を緩和することができます。
 - `@font-face` は CSS セレクターの中で宣言することはできません。例えば、以下の例は動作しません。
 
   ```css example-bad
   .className {
     @font-face {
       font-family: "MyHelvetica";
-      src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+      src:
+        local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
         url("MgOpenModernaBold.ttf");
       font-weight: bold;
     }
@@ -133,7 +134,8 @@ body {
 ```css
 @font-face {
   font-family: "MyHelvetica";
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url("MgOpenModernaBold.ttf");
   font-weight: bold;
 }

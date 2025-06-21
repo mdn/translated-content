@@ -7,7 +7,67 @@ slug: Web/CSS/scroll-padding-top
 
 **`scroll-padding-top`** 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的上内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
 
-{{EmbedInteractiveExample("pages/css/scroll-padding-top.html")}}
+{{InteractiveExample("CSS Demo: scroll-padding-top")}}
+
+```css interactive-example-choice
+scroll-padding-top: 0;
+```
+
+```css interactive-example-choice
+scroll-padding-top: 20px;
+```
+
+```css interactive-example-choice
+scroll-padding-top: 2em;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="scroller" id="example-element">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  <div class="info">Scroll »</div>
+</section>
+```
+
+```css interactive-example
+.default-example .info {
+  inline-size: 100%;
+  padding: 0.5em 0;
+  font-size: 90%;
+  writing-mode: vertical-rl;
+}
+
+.scroller {
+  text-align: left;
+  height: 250px;
+  width: 270px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 1px solid black;
+  scroll-snap-type: y mandatory;
+}
+
+.scroller > div {
+  flex: 0 0 250px;
+  background-color: rebeccapurple;
+  color: #fff;
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+.scroller > div:nth-child(even) {
+  background-color: #fff;
+  color: rebeccapurple;
+}
+```
 
 ## 语法
 

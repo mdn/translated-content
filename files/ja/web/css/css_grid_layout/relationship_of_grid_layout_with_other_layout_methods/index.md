@@ -593,5 +593,5 @@ CSS グリッドレイアウトと[CSS フレックスボックスレイアウ�
 
 ## 関連情報
 
-- [フレックスボックスガイド](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [フレックスボックスガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
 - [段組みレイアウトガイド](/ja/docs/Web/CSS/CSS_multicol_layout)

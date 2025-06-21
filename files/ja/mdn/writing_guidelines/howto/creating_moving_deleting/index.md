@@ -13,7 +13,7 @@ l10n:
 
 > [!CALLOUT]
 > 訳注:
-> この記事は英語版のページを作成する方法を示しています。翻訳記事を作成する場合は、 [MDN Web Docs のローカライズ](/ja/docs/MDN/Community/Contributing/Translated_content)を参照してください。
+> この記事は英語版のページを作成する方法を示しています。翻訳記事を作成する場合は、 [MDN Web Docs のローカライズ](/ja/docs/MDN/Community/Translated_content)を参照してください。
 
 MDN Web Docs のすべてのページは Markdown 形式で書かれています。内容は `index.md` という名前のファイルに書かれ、自分自身で固有のディレクトリーに格納されます。ディレクトリー名はページの名前を表します。例えば、 `align-content` が新しい CSS プロパティであり、新しいリファレンスページを作成したい場合、 `en-us/web/css` に `align-content` という名前のフォルダーを作成し、その中に `index.md` という名前のファイルを作成してください。
 

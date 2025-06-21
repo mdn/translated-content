@@ -7,7 +7,20 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 
 **`decodeURIComponent()`** 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。
 
-{{EmbedInteractiveExample("pages/js/globalprops-decodeuricomponent.html")}}
+{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+
+```js interactive-example
+function containsEncodedComponents(x) {
+  // ie ?,=,&,/ etc
+  return decodeURI(x) !== decodeURIComponent(x);
+}
+
+console.log(containsEncodedComponents("%3Fx%3Dtest")); // ?x=test
+// Expected output: true
+
+console.log(containsEncodedComponents("%D1%88%D0%B5%D0%BB%D0%BB%D1%8B")); // шеллы
+// Expected output: false
+```
 
 ## 構文
 
@@ -53,9 +66,9 @@ try {
 // URIError: malformed URI sequence
 ```
 
-### URL からのクエリパラメータのデコード
+### URL からのクエリーパラメータのデコード
 
-decodeURIComponent は、URL からのクエリパラメータを解析するために直接使用することはできません。少し準備が必要です。
+decodeURIComponent は、URL からのクエリーパラメータを解析するために直接使用することはできません。少し準備が必要です。
 
 ```js
 function decodeQueryParam(p) {
@@ -66,7 +79,7 @@ decodeQueryParam("search+query%20%28correct%29");
 // 'search query (correct)'
 ```
 
-## 仕様
+## 仕様書
 
 {{Specifications}}
 

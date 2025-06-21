@@ -19,11 +19,11 @@ Este guia assume que você tem os seguintes conhecimentos básicos:
 
 A documentação de JavaScript na MDN inclui o seguinte:
 
-- [Aprendendo sobre a internet](/pt-BR/docs/Learn) fornece informações aos iniciantes e introduz os conceitos básicos de programação e da internet.
+- [Aprendendo sobre a internet](/pt-BR/docs/Learn_web_development) fornece informações aos iniciantes e introduz os conceitos básicos de programação e da internet.
 - [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide) (este guia) dá uma visão geral sobre a linguagem de programação JavaScript e seus objetos.
 - [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) provê um material de referência detalhado da linguagem JavaScript.
 
-Se você é novo em JavaScript, comece com os artigos na [área de aprendizado](/pt-BR/docs/Learn) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para ter mais detalhes sobre objetos e declarações.
+Se você é novo em JavaScript, comece com os artigos na [área de aprendizado](/pt-BR/docs/Learn_web_development) e com o [Guia JavaScript](/pt-BR/docs/Web/JavaScript/Guide). Quando você já possuir uma compreensão dos princípios básicos, você pode usar a [Referência JavaScript](/pt-BR/docs/Web/JavaScript/Reference) para ter mais detalhes sobre objetos e declarações.
 
 ## O que é JavaScript?
 
@@ -58,7 +58,7 @@ Em contraste, JavaScript descende em espírito de uma linhagem de linguagens men
 
 O JavaScript é padronizado pela [Ecma International](https://www.ecma-international.org/) — a associação Europeia para a padronização de sistemas de comunicação e informação (antigamente ECMA era um acrônimo para European Computer Manufacturers Association) para entregar uma linguagem de programação padronizada, internacional baseada em JavaScript. Esta versão padronizada de JavaScript, chamada ECMAScript, comporta-se da mesma forma em todas as aplicações que suportam o padrão. As empresas podem usar a linguagem de padrão aberto para desenvolver a sua implementação de JavaScript. O padrão ECMAScript é documentado na especificação ECMA-262.
 
-O padrão ECMA-262 também é aprovado pela [ISO](https://www.iso.org/home.html) (International Organization for Standardization) como ISO-16262. Você também pode encontrar a especificação no site da [Ecma International](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). A especificação ECMAScript não descreve o Document Object Model (DOM), que é padronizado pelo [World Wide Web Consortium (W3C)](https://www.w3.org/) e/ou [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org). O DOM define a maneira na qual os objetos do documento HTML estão expostos no seu script. Para ter uma ideia melhor sobre as diferentes tecnologias que são usadas durante a programação com JavaScript, consultar o artigo [Visão Geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/JavaScript_technologies_overview).
+O padrão ECMA-262 também é aprovado pela [ISO](https://www.iso.org/home.html) (International Organization for Standardization) como ISO-16262. Você também pode encontrar a especificação no site da [Ecma International](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/). A especificação ECMAScript não descreve o Document Object Model (DOM), que é padronizado pelo [World Wide Web Consortium (W3C)](https://www.w3.org/) e/ou [WHATWG (Web Hypertext Application Technology Working Group)](https://whatwg.org). O DOM define a maneira na qual os objetos do documento HTML estão expostos no seu script. Para ter uma ideia melhor sobre as diferentes tecnologias que são usadas durante a programação com JavaScript, consultar o artigo [Visão Geral das tecnologias JavaScript](/pt-BR/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 ### Documentação JavaScript versus especificação ECMAScript
 

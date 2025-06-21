@@ -42,13 +42,13 @@ l10n:
 
   已支持以下 HTML 全局属性：
 
-  - [`popovertarget`](/zh-CN/docs/Web/HTML/Element/button#popovertarget)
-  - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Element/button#popovertargetaction)
+  - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
+  - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
   （[Firefox bug 1823757](https://bugzil.la/1823757)、[Firefox bug 1866993](https://bugzil.la/1866993)）。
 
 - 现已支持 {{domxref("RTCIceTransport")}} 的 {{domxref("RTCIceTransport/state","state")}} 和 {{domxref("RTCIceTransport/gatheringState","gatheringState")}} 属性及与之关联的 {{domxref("RTCIceTransport/statechange_event","statechange")}} 和 {{domxref("RTCIceTransport/gatheringstatechange_event","gatheringstatechange")}} 事件，以及 {{domxref("RTCDtlsTransport.iceTransport")}} 属性（返回 {{domxref("RTCDtlsTransport")}} 的底层 `RTCIceTransport`）。这些特性提供了比 {{domxref("RTCPeerConnection")}} 的 {{domxref("RTCPeerConnection.iceGatheringState","iceGatheringState")}} 和 {{domxref("RTCPeerConnection.connectionState","connectionState")}} 属性更细粒度的监控。（[Firefox bug 1811912](https://bugzil.la/1811912)）。
-- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
+- 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
 
 - 添加了允许 Web 应用程序在画布临时丢失其 2D 上下文时进行优雅恢复的支持。这可能发生在画布使用 GPU 进行硬件加速而出现驱动程序崩溃的情况下。（[Firefox bug 1887729](https://bugzil.la/1887729)）。以下是有关丢失和恢复画布上下文的事件的一些额外细节：
 
@@ -56,12 +56,12 @@ l10n:
   - 在触发 `contentlost` 后，浏览器将会默认尝试恢复和重启丢失的上下文，但代码可以通过取消这一事件来阻止这一行为。
   - 可以通过相同方式监视离屏画布，但应该使用 [`OffScreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 的 [`contextlost`](/zh-CN/docs/Web/API/OffscreenCanvas/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/OffscreenCanvas/contextrestored_event) 事件，以及 [`OffscreenCanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D#上下文)。
 
-- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Element/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性用于设置以声明方式使用 [`<template>`](/zh-CN/docs/Web/HTML/Element/template) 元素创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
+- 已添加对 `<template>` 元素的 [`shadowrootclonable`](/zh-CN/docs/Web/HTML/Reference/Elements/template#shadowrootclonable) 属性以及 `HTMLTemplateElement` 接口中与之对应的 [`shadowRootClonable`](/zh-CN/docs/Web/API/HTMLTemplateElement/shadowRootClonable) 属性的支持。该属性用于设置以声明方式使用 [`<template>`](/zh-CN/docs/Web/HTML/Reference/Elements/template) 元素创建的 [`ShadowRoot`](/zh-CN/docs/Web/API/ShadowRoot) 的 [`clonable`](/zh-CN/docs/Web/API/ShadowRoot/clonable) 属性。（[Firefox bug 1880188](https://bugzil.la/1880188)）。
 - 现已支持 [`Clipboard`](/zh-CN/docs/Web/API/Clipboard) 接口的 [`readText()`](/zh-CN/docs/Web/API/Clipboard/readText) 方法，其用于从系统剪贴板异步读取文本。在读取不是由同源页面提供的剪贴板数据时，将会出现粘贴上下文菜单，以供用户确认。（[Firefox bug 1877400](https://bugzil.la/1877400)）。
 
 #### Media、WebRTC 和 Web Audio
 
-- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
+- 现已为[加密媒体扩展](/zh-CN/docs/Web/API/Encrypted_Media_Extensions_API) 提供 [AV1](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs#av1) 编解码器的支持，其用于播放来自视频流提供商的更高质量的视频。（[Firefox bug 1601817](https://bugzil.la/1601817)）。
 
 #### 移除
 
@@ -69,7 +69,7 @@ l10n:
 
 ### WebAssembly
 
-- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
+- 已添加对 Wasm 模块使用多个独立线性内存的支持。多内存区域使模块之间的互操作更高效，并为即将到来的 Wasm 标准提供更好的 polyfill。例如，它们可以用于为内部和共享数据、临时和持久数据或需要在线程之间共享的数据创建单独的内存。内存可以在 JavaScript 中创建并导入到 Wasm 模块中，或在 Wasm 模块中创建并导出。Wasm 实例中的每个新的线性内存区域都会被赋予一个从零开始的顺序索引。WebAssembly 的[内存指令](/zh-CN/docs/WebAssembly/Reference/Memory)使用索引引用它们正在操作的内存，如果未指定索引，则默认为第一块定义的内存区域。有关更多信息，请参阅*理解 WebAssembly 文本格式*中的 [WebAssembly Memory](/zh-CN/docs/WebAssembly/Guides/Understanding_the_text_format#webassembly_内存)。（[Firefox bug 1860816](https://bugzil.la/1860816)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 
@@ -88,7 +88,7 @@ l10n:
 
 ## 为附加组件开发者带来的变化
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
+- {{WebExtAPIRef("proxy.ProxyInfo")}} 的 `proxyAuthorization` 属性的内容现在会作为 [CONNECT](/zh-CN/docs/Web/HTTP/Reference/Methods/CONNECT) 请求的 {{httpheader("Proxy-Authorization")}} 请求标头的值传递给 HTTP 代理（除了现有的对 HTTPS 代理的支持）（[Firefox bug 1794464](https://bugzil.la/1794464)）。
 
 ## 实验性 Web 特性
 
@@ -100,7 +100,7 @@ l10n:
 
 - **嵌套在分段元素中的 `<h1>` 的用户代理样式**：`layout.css.h1-in-section-ua-styles.enabled`。
 
-  现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
+  现在，当 `<h1>` 标题嵌套在[分段元素](/zh-CN/docs/Web/HTML/Guides/Content_categories#分段内容) `<article>`、`<aside>`、`<nav>` 和 `<section>` 中时，其字体大小不再减小。由于大纲算法已从 HTML 规范中[移除](https://github.com/whatwg/html/pull/7829)，嵌套在分段元素中的 `<h1>` 不再与用户代理样式相关联。（[Firefox bug 1883896](https://bugzil.la/1883896)）。
 
   > [!NOTE]
   > 此特性的首选项是反向工作的：在 Nightly 版本中，它被设置为 `false`，从而移除嵌套在分段元素中的标题的用户代理样式。在所有其他更新通道中，它被设置为 `true`，从而保留了嵌套标题的现有用户代理样式。

@@ -1,12 +1,11 @@
 ---
 title: 部署以及下一步
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_deployment_next
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_deployment_next
 l10n:
   sourceCommit: e769461724eef53106e9e44656d95b99c4d520e5
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们了解了 Svelte 对 TypeScript 的支持，以及如何使用它使应用程序更加健壮。在本文中，我们将学习如何部署应用程序并将其发布到在线环境，并分享一些你应该继续使用的资源，以继续你的 Svelte 学习之旅。
 

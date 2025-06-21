@@ -7,7 +7,50 @@ slug: Web/CSS/padding-left
 
 **`padding-left`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 왼쪽에 [안쪽 여백 영역](/ko/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#padding-area)을 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/padding-left.html")}}
+{{InteractiveExample("CSS Demo: padding-left")}}
+
+```css interactive-example-choice
+padding-left: 1.5em;
+```
+
+```css interactive-example-choice
+padding-left: 10%;
+```
+
+```css interactive-example-choice
+padding-left: 20px;
+```
+
+```css interactive-example-choice
+padding-left: 1ch;
+```
+
+```css interactive-example-choice
+padding-left: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 요소의 안쪽 여백 영역은 콘텐츠와 테두리 사이의 공간입니다.
 

@@ -7,7 +7,18 @@ slug: Web/JavaScript/Reference/Statements/for
 
 **`for` 문**은 괄호로 감싸고 세미콜론으로 구분한 세 개의 선택식과, 반복을 수행할 문(주로 {{jsxref("Statements/block", "블럭문", "", 0)}})으로 이루어져 있습니다.
 
-{{EmbedInteractiveExample("pages/js/statement-for.html")}}
+{{InteractiveExample("JavaScript Demo: Statement - For")}}
+
+```js interactive-example
+let str = "";
+
+for (let i = 0; i < 9; i++) {
+  str = str + i;
+}
+
+console.log(str);
+// Expected output: "012345678"
+```
 
 ## 구문
 

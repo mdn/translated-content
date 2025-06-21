@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isSealed
 
 **`Object.isSealed()`** 메서드는 객체가 봉인됐는지 판별합니다.
 
-{{EmbedInteractiveExample("pages/js/object-issealed.html")}}
+{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Object.isSealed(object1));
+// Expected output: false
+
+Object.seal(object1);
+
+console.log(Object.isSealed(object1));
+// Expected output: true
+```
 
 ## 구문
 

@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/includes
 
 O método `includes()` determina se um array contém um determinado elemento, retornando `true` ou `false` apropriadamente.
 
-{{EmbedInteractiveExample("pages/js/array-includes.html")}}
+{{InteractiveExample("JavaScript Demo: Array.includes()")}}
+
+```js interactive-example
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2));
+// Expected output: true
+
+const pets = ["cat", "dog", "bat"];
+
+console.log(pets.includes("cat"));
+// Expected output: true
+
+console.log(pets.includes("at"));
+// Expected output: false
+```
 
 ## Sintaxe
 

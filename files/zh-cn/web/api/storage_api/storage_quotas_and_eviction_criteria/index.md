@@ -27,7 +27,7 @@ slug: Web/API/Storage_API/Storage_quotas_and_eviction_criteria
 
 源的“最后访问时间”会更新，当其中任何一个被激活/停用时——所有这些源下的配额客户端的数据会被回收。
 
-在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、WebSQL 和 [File System API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction) 的配额管理。
+在 Chrome/Opera 中，Quota Management API 处理 [AppCache](/zh-CN/docs/Web/HTML/Using_the_application_cache)、[IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)、WebSQL 和[文件系统 API](/zh-CN/docs/Web/API/File_System_API) 的配额管理。
 
 ## 数据存储的不同类型
 

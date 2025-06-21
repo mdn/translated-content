@@ -64,5 +64,5 @@ item.textContent = `この CSS の @layer 文は、 ${layer.nameList.join(
 ## 関連情報
 
 - {{cssxref("@layer")}}
-- [名前付きレイヤーのための @layer 文のアットルール](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)
+- [名前付きレイヤーのための `@layer` 文のアットルール](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#名前付きレイヤーのための_layer_文のアットルール)
 - {{DOMxRef("CSSLayerBlockRule")}}

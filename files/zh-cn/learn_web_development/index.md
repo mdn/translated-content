@@ -1,12 +1,9 @@
 ---
 title: 学习 Web 开发
 slug: Learn_web_development
-original_slug: Learn
 l10n:
   sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
 ---
-
-{{LearnSidebar}}
 
 欢迎来到 MDN 学习区。本系列文章意在为 Web 开发的纯新手提供编写网站的基本技巧，而非意在让你从“新手”变成“专家”，但能让你从“新手”变得“熟练”。从那之后，你就能开始以你自己的方式学习 [MDN 的其余部分](/zh-CN/)，和其他需要大量前置知识的中高级资源。
 

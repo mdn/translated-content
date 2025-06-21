@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/defineProperty
 
 **`Object.defineProperty()`** 静态方法会直接在一个对象上定义一个新属性，或修改其现有属性，并返回此对象。
 
-{{EmbedInteractiveExample("pages/js/object-defineproperty.html")}}
+{{InteractiveExample("JavaScript Demo: Object.defineProperty()")}}
+
+```js interactive-example
+const object1 = {};
+
+Object.defineProperty(object1, "property1", {
+  value: 42,
+  writable: false,
+});
+
+object1.property1 = 77;
+// Throws an error in strict mode
+
+console.log(object1.property1);
+// Expected output: 42
+```
 
 ## 语法
 
@@ -194,7 +209,7 @@ console.log(o.a); // 37；赋值不会成功
 
 #### Enumerable 特性
 
-`enumerable` 特性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)。
+`enumerable` 特性定义了属性是否可以被 {{jsxref("Object.assign()")}} 或[展开运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)所考虑。对于非 {{jsxref("Global_Objects/Symbol", "Symbol")}} 属性，它还定义了属性是否会在 {{jsxref("Statements/for...in", "for...in")}} 循环和 {{jsxref("Object.keys()")}} 中显示。更多信息，请参见[属性的枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)。
 
 ```js
 const o = {};
@@ -491,7 +506,7 @@ console.log(MyClass.prototype.y); // 1
 
 ## 参见
 
-- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [属性的可枚举性和所有权](/zh-CN/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

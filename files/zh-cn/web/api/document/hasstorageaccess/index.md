@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("Storage Access API")}}
 
-{{domxref("Document")}} 接口的 **`hasStorageAccess()`** 方法返回一个会兑现为指示文档是否有权访问[第三方](/zh-CN/docs/Web/Privacy/Third-party_cookies)[未分区](/zh-CN/docs/Web/API/Storage_Access_API#未分区_cookie_与分区_cookie_的对比) cookie 的布尔值的 {{jsxref("Promise")}}。
+{{domxref("Document")}} 接口的 **`hasStorageAccess()`** 方法返回一个会兑现为指示文档是否有权访问[第三方](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)[未分区](/zh-CN/docs/Web/API/Storage_Access_API#未分区_cookie_与分区_cookie_的对比) cookie 的布尔值的 {{jsxref("Promise")}}。
 
 此方法属于[存储访问 API](/zh-CN/docs/Web/API/Storage_Access_API)。
 

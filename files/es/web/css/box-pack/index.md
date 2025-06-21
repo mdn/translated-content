@@ -1,5 +1,5 @@
 ---
-title: "-moz-box-pack"
+title: -moz-box-pack
 slug: Web/CSS/box-pack
 ---
 

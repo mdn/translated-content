@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**CSS ボックスモデル**は、要素に対して作成され、パディングやマージンを含む長方形のボックスを定義します。これは[視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)によってレイアウトされます。
+**CSS ボックスモデル**は、要素に対して作成され、パディングやマージンを含む長方形のボックスを定義します。これは[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)によってレイアウトされます。
 
 ## ボックスモデルの概要
 
@@ -71,7 +71,7 @@ CSS のボックスは、テキスト、画像、その他の HTML 要素が表�
   - : CSS の基礎的概念の 1 つである、ボックスモデルを解説します。このモデルは CSS が要素とそのコンテンツ領域、パディング領域、境界領域、マージン領域をどのように配置するかを定義しています。
 - [マージンの相殺の理解](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - : 2 つの隣接するマージンが 1 つに相殺されることがあります。この記事ではいつなぜそれが発生し、どのように制御するかを説明します。
-- [視覚整形モデル](/ja/docs/Web/CSS/Visual_formatting_model)
+- [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - : 視覚整形モデルを説明します。
 
 ## 仕様書

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 027477cb8fe471c15c216c08592b607ea9118e35
 ---
 
-{{MDNSidebar}}
-
 ## 添加图像
 
 要在文档中添加图像，请将图像文件添加到该文档的文件夹中，然后在文档的 `index.md` 文件中使用 [Markdown 图像语法](https://github.github.com/gfm/#images)或等效的 HTML `<img>` 元素引用该图像。

@@ -11,7 +11,7 @@ A menos que use intencionalmente un trabajador web, como un trabajador de servic
 
 ## Véase también
 
-- [Asynchronous JavaScript](/es/docs/Learn/JavaScript/Asynchronous)
+- [Asynchronous JavaScript](/es/docs/Learn_web_development/Extensions/Async_JS)
 - [Web worker API](/es/docs/Web/API/Web_Workers_API)
 - [Service worker API](/es/docs/Web/API/Service_Worker_API)
 - [Glosario de MDN Web Docs](/es/docs/Glossary)

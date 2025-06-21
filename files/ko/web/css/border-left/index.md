@@ -7,7 +7,45 @@ slug: Web/CSS/border-left
 
 **`border-left`** [CSS](/ko/docs/Web/CSS) [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소의 왼쪽 테두리를 설정합니다. {{cssxref("border-left-width")}}, {{cssxref("border-left-style")}}, {{cssxref("border-left-color")}}의 값을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-left.html")}}
+{{InteractiveExample("CSS Demo: border-left")}}
+
+```css interactive-example-choice
+border-left: solid;
+```
+
+```css interactive-example-choice
+border-left: dashed red;
+```
+
+```css interactive-example-choice
+border-left: 1rem solid;
+```
+
+```css interactive-example-choice
+border-left: thick double #32a1ce;
+```
+
+```css interactive-example-choice
+border-left: 4mm ridge rgba(211, 220, 50, 0.6);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 다른 단축 속성과 마찬가지로, `border-left`는 자신이 포함한 모든 값을 지정하며 사용자가 명시하지 않은 속성도 기본값으로 설정합니다. 즉, 아래 두 코드는 사실 동일합니다.
 

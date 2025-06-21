@@ -49,7 +49,7 @@ WebVR API がどのように動作するのかを説明するために、次の�
 このデモのメインの [JavaScript ファイル](https://github.com/mdn/webvr-tests/blob/main/webvr/raw-webgl-example/webgl-demo.js)のソースコードを見ていくと、先行するコメントで "WebVR" という文字列を探せば、簡単に WebVR に特化した部分を見つけることができます。
 
 > [!NOTE]
-> 基本的な JavaScript と WebGL については、 [JavaScript 学習素材](/ja/docs/Learn/JavaScript)、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
+> 基本的な JavaScript と WebGL については、 [JavaScript 学習素材](/ja/docs/Learn_web_development/Core/Scripting)、[WebGL チュートリアル](/ja/docs/Web/API/WebGL_API/Tutorial)を参照してください。
 
 ## アプリはどう動くか
 

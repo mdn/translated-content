@@ -15,7 +15,55 @@ La propiedad abreviada de CSS **`text-wrap`** controla cómo se envuelve el text
 > [!NOTE]
 > Las propiedades {{CSSxRef("white-space-collapse")}} y `text-wrap` pueden declararse juntas usando la propiedad abreviada {{CSSxRef("white-space")}}.
 
-{{EmbedInteractiveExample("pages/css/text-wrap.html")}}
+{{InteractiveExample("CSS Demo: text-wrap")}}
+
+```css interactive-example-choice
+text-wrap: wrap;
+```
+
+```css interactive-example-choice
+text-wrap: nowrap;
+```
+
+```css interactive-example-choice
+text-wrap: balance;
+```
+
+```css interactive-example-choice
+text-wrap: pretty;
+```
+
+```css interactive-example-choice
+text-wrap: stable;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## Propiedades constituyentes
 
@@ -67,7 +115,7 @@ Cuando el contenido estilizado se limitará a un número corto de líneas, como 
 
 Para secciones de texto más largas, se puede usar `text-wrap: pretty`. Tenga en cuenta que `pretty` tiene un efecto negativo en el rendimiento, por lo que solo debe usarse para bloques de texto más largos cuando el diseño es más importante que la velocidad.
 
-El valor `stable` mejora la experiencia del usuario cuando se usa en [`contenteditable`](/es/docs/Web/HTML/Global_attributes/contenteditable) (contenido que es editable). Este valor asegura que, a medida que el usuario está editando texto, las líneas anteriores en el área que se está editando permanezcan estables.
+El valor `stable` mejora la experiencia del usuario cuando se usa en [`contenteditable`](/es/docs/Web/HTML/Reference/Global_attributes/contenteditable) (contenido que es editable). Este valor asegura que, a medida que el usuario está editando texto, las líneas anteriores en el área que se está editando permanezcan estables.
 
 ## Definición formal
 

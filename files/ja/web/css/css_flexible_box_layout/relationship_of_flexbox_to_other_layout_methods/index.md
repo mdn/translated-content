@@ -58,7 +58,7 @@ l10n:
 
 `sideways-rl` と `sideways-lr` の対応は現時点では Firefox のみです。
 
-CSS の `writing-mode` プロパティを文書全体の書字方向を変更するために使うことはあまりないでしょう。通常は HTML 上で [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性と [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性を {{htmlelement("html")}} 要素に指定することで、文書の言語とテキスト方向を指定します。それによって CSS が読み込まれなかったとしても文書を正しく表示することができます。
+CSS の `writing-mode` プロパティを文書全体の書字方向を変更するために使うことはあまりないでしょう。通常は HTML 上で [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性と [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を {{htmlelement("html")}} 要素に指定することで、文書の言語とテキスト方向を指定します。それによって CSS が読み込まれなかったとしても文書を正しく表示することができます。
 
 ## フレックスボックスと他のレイアウト方法
 

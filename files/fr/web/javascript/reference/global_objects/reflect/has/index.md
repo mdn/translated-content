@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/has
 
 La méthode statique **`Reflect.has()`** fonctionne comme [l'opérateur `in`](/fr/docs/Web/JavaScript/Reference/Operators/in) mais sous forme d'une fonction.
 
-{{EmbedInteractiveExample("pages/js/reflect-has.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.has()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+console.log(Reflect.has(object1, "property1"));
+// Expected output: true
+
+console.log(Reflect.has(object1, "property2"));
+// Expected output: false
+
+console.log(Reflect.has(object1, "toString"));
+// Expected output: true
+```
 
 ## Syntaxe
 

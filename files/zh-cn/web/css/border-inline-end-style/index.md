@@ -7,7 +7,43 @@ slug: Web/CSS/border-inline-end-style
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-inline-end-style`** 定义了元素的逻辑行末的边框线型，并根据元素的书写模式、行内方向和文本朝向对应至实体边框线型。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-style")}}、{{CSSXref("border-right-style")}}、{{CSSXref("border-bottom-style")}} 或 {{CSSXref("border-left-style")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/border-inline-end-style.html")}}
+{{InteractiveExample("CSS Demo: border-inline-end-style")}}
+
+```css interactive-example-choice
+border-inline-end-style: dotted;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-end-style: dotted;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-end-style: groove;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 语法
 

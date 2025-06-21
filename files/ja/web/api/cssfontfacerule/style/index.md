@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`style`** は {{domxref("CSSFontFaceRule")}} インターフェイスの読み取り専用プロパティで、この {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/At-rule)からスタイル情報を返します。これは {{domxref("CSSStyleDeclaration")}} オブジェクトの形です。
+**`style`** は {{domxref("CSSFontFaceRule")}} インターフェイスの読み取り専用プロパティで、この {{cssxref("@font-face")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)からスタイル情報を返します。これは {{domxref("CSSStyleDeclaration")}} オブジェクトの形です。
 
 ## 値
 
@@ -20,7 +20,8 @@ l10n:
 ```css
 @font-face {
   font-family: MyHelvetica;
-  src: local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
+  src:
+    local("Helvetica Neue Bold"), local("HelveticaNeue-Bold"),
     url(MgOpenModernaBold.ttf);
   font-weight: bold;
 }

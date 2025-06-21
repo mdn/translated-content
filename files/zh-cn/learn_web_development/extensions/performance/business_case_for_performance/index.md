@@ -1,10 +1,9 @@
 ---
 title: web 性能的商业案例
 slug: Learn_web_development/Extensions/Performance/business_case_for_performance
-original_slug: Learn/Performance/business_case_for_performance
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/CSS", "Learn_web_development/Extensions/Performance/Web_Performance_Basics", "Learn_web_development/Extensions/Performance")}}
 
 我们已经讨论了 web 性能的重要性。你已经了解了如何优化 web 性能。但是如何说服你的客户和/或管理层优先考虑并投资于性能呢？在本节中，我们将讨论如何创建一个清晰的商业案例，以说服决策者进行投资。
 

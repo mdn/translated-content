@@ -70,6 +70,6 @@ _LocalLibrary는 이 튜토리얼 시리즈에서 우리가 만들고 개선시�
 
 ## 요약
 
-LocalLibrary 웹사이트와 당신이 앞으로 배울 내용에 대해 좀 더 알게되었다. 이제 우리 예제를 담을 [뼈대 프로젝트(skeleton project)](/ko/docs/Learn/Server-side/Django/skeleton_website)를 생성해볼 차례이다.
+LocalLibrary 웹사이트와 당신이 앞으로 배울 내용에 대해 좀 더 알게되었다. 이제 우리 예제를 담을 [뼈대 프로젝트(skeleton project)](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)를 생성해볼 차례이다.
 
 {{PreviousMenuNext("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django/skeleton_website", "Learn/Server-side/Django")}}

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions) は、引数の絶対値を同じ型で返します。
+**`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、引数の絶対値を同じ型で返します。
 
 ## 構文
 
@@ -59,7 +59,7 @@ div {
 
 ### 後方互換性のためのフォールバック
 
-CSS `abs()` 関数をサポートしていない古いブラウザでは、次のように CSS {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
+CSS `abs()` 関数をサポートしていない古いブラウザーでは、次のように CSS {{CSSxRef("max")}} 関数を使用することで同じ結果を得られます。
 
 ```css
 p {

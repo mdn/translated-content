@@ -9,7 +9,22 @@ l10n:
 
 **`Number.MAX_VALUE`** 静的データプロパティは、 JavaScript において表すことが可能な最大の数値を表します。
 
-{{EmbedInteractiveExample("pages/js/number-maxvalue.html")}}
+{{InteractiveExample("JavaScript Demo: Number.MAX_VALUE")}}
+
+```js interactive-example
+function multiply(x, y) {
+  if (x * y > Number.MAX_VALUE) {
+    return "Process as Infinity";
+  }
+  return x * y;
+}
+
+console.log(multiply(1.7976931348623157e308, 1));
+// Expected output: 1.7976931348623157e+308
+
+console.log(multiply(1.7976931348623157e308, 2));
+// Expected output: "Process as Infinity"
+```
 
 ## 値
 

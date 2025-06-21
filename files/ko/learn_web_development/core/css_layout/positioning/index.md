@@ -79,7 +79,7 @@ left: 30px;
 ```
 
 > [!NOTE]
-> 이러한 속성의 값은 당신이 논리적으로 예상할 수 있는 모든 [단위](/ko/docs/Learn/CSS/Building_blocks/Values_and_units)를 취할 수 있습니다. 예로 pixels, mm, rems, % 등이 해당한다.
+> 이러한 속성의 값은 당신이 논리적으로 예상할 수 있는 모든 [단위](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units)를 취할 수 있습니다. 예로 pixels, mm, rems, % 등이 해당한다.
 
 이제 저장하고 새로고침하면 다음과 같은 내용의 결과를 얻을 것입니다.
 

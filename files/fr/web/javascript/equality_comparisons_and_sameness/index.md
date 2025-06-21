@@ -7,8 +7,8 @@ slug: Web/JavaScript/Equality_comparisons_and_sameness
 
 JavaScript fournit trois opérations permettant de comparer des valeurs :
 
-- L'égalité stricte (ou identité ou « triple égal ») utilisant [`===`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>),
-- L'égalité faible (ou « double égal ») utilisant [`==`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_simple_(.3D.3D)>),
+- L'égalité stricte (ou identité ou « triple égal ») utilisant [`===`](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>),
+- L'égalité faible (ou « double égal ») utilisant [`==`](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_simple_(.3D.3D)>),
 - {{jsxref("Object.is")}} (ajouté avec ECMAScript 2015).
 
 Ces trois opérations sont associées à quatre algorithmes d'égalité (depuis ES2015) :
@@ -197,7 +197,7 @@ On utilise la même égalité que l'égalité de valeur et on considère que `+0
 
 ## Égalité abstraite, égalité stricte et valeurs identiques : la spécification
 
-Selon ES5, la comparaison effectuée par [`==`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_simple_(.3D.3D)>) est décrite dans [la section 11.9.3 sur l'algorithme d'égalité abstraite (_Abstract Equality Algorithm_)](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparaison donnée par [`===`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) est décrite dans [la section 11.9.6 sur l'algorithme d'égalité stricte (_Strict Equality Algorithm_)](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). Ces documents sont en anglais mais sont tout à fait abordables, ne pas hésiter à les consulter (conseil : d'abord commencer par l'algorithme d'égalité stricte). ES5 décrit également, dans [la section 9.12 sur l'algorithme SameValue](https://ecma-international.org/ecma-262/5.1/#sec-9.12), l'opération utilisée en interne par le moteur JavaScript. Cet algorithme est principalement basé sur l'algorithme d'égalité stricte : 11.9.6.4 et 9.12.4 diffèrent en ce qui concerne les nombres. ES6 (ECMAScript 2015) permet d'utiliser cet algorithme grâce à la méthode {{jsxref("Object.is")}}.
+Selon ES5, la comparaison effectuée par [`==`](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_simple_(.3D.3D)>) est décrite dans [la section 11.9.3 sur l'algorithme d'égalité abstraite (_Abstract Equality Algorithm_)](https://ecma-international.org/ecma-262/5.1/#sec-11.9.3). La comparaison donnée par [`===`](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) est décrite dans [la section 11.9.6 sur l'algorithme d'égalité stricte (_Strict Equality Algorithm_)](https://ecma-international.org/ecma-262/5.1/#sec-11.9.6). Ces documents sont en anglais mais sont tout à fait abordables, ne pas hésiter à les consulter (conseil : d'abord commencer par l'algorithme d'égalité stricte). ES5 décrit également, dans [la section 9.12 sur l'algorithme SameValue](https://ecma-international.org/ecma-262/5.1/#sec-9.12), l'opération utilisée en interne par le moteur JavaScript. Cet algorithme est principalement basé sur l'algorithme d'égalité stricte : 11.9.6.4 et 9.12.4 diffèrent en ce qui concerne les nombres. ES6 (ECMAScript 2015) permet d'utiliser cet algorithme grâce à la méthode {{jsxref("Object.is")}}.
 
 Dans ces documents, on peut voir que l'algorithme d'égalité stricte est un sous-ensemble de l'algorithme d'égalité abstraite (exception faite de la vérification du type) car 11.9.6.2–7 correspond exactement à 11.9.3.1.a–f.
 
@@ -237,7 +237,7 @@ Cependant, ce « modèle de pensées » ne peut pas être étendu avec l'arrivé
 
 ## Quand utiliser {{jsxref("Object.is")}} et quand utiliser l'égalité stricte
 
-En plus de la façon dont {{jsxref("Object.is")}} traite `NaN`, la spécificité d'`Object.is()` réside dans sa façon de traiter les valeurs proches de zéro. Dans des cas d'utilisation où on a besoin d'effectuer de la méta-programmation, notamment pour imiter certaines caractéristiques de {{jsxref("Object.defineProperty")}}. Si le scénario d'utilisation ne nécessite pas ce comportement, il est conseillé d'utiliser [`===`](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>). Même si on souhaite pouvoir comparer `NaN` avec lui-même et que ce test vaille `true`, il sera plus simple d'utiliser la méthode {{jsxref("isNaN")}} disponible avec les versions antérieures d'ECMAScript. En effet, cela évite d'avoir à traiter des cas plus complexes où il faudrait gérer les signes des zéros dans les différentes comparaisons.
+En plus de la façon dont {{jsxref("Object.is")}} traite `NaN`, la spécificité d'`Object.is()` réside dans sa façon de traiter les valeurs proches de zéro. Dans des cas d'utilisation où on a besoin d'effectuer de la méta-programmation, notamment pour imiter certaines caractéristiques de {{jsxref("Object.defineProperty")}}. Si le scénario d'utilisation ne nécessite pas ce comportement, il est conseillé d'utiliser [`===`](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>). Même si on souhaite pouvoir comparer `NaN` avec lui-même et que ce test vaille `true`, il sera plus simple d'utiliser la méthode {{jsxref("isNaN")}} disponible avec les versions antérieures d'ECMAScript. En effet, cela évite d'avoir à traiter des cas plus complexes où il faudrait gérer les signes des zéros dans les différentes comparaisons.
 
 Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuvent entraîner l'apparition des valeurs `-0` et `+0` dans le code :
 

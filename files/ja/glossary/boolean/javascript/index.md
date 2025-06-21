@@ -14,4 +14,4 @@ JavaScript において **Boolean** は [プリミティブ値](/ja/docs/Glossar
 ## 関連情報
 
 - [Boolean](/ja/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures)
+- [JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures)

@@ -5,7 +5,7 @@ slug: Web/CSS/exp
 
 {{CSSRef}}
 
-**`exp()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Functions)は指数関数で、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
+**`exp()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は指数関数で、引数として数値を取り、その数値で数学定数 `e` を累乗した値を返します。
 
 数学定数 [e](<https://en.wikipedia.org/wiki/E_(mathematical_constant)>) は自然対数の底で、約 `2.718281828459045` です。
 

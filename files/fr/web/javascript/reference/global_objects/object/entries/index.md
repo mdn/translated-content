@@ -9,7 +9,22 @@ La méthode **`Object.entries()`** renvoie un tableau des propriétés propres �
 
 L'ordre du tableau renvoyé par cette méthode ne dépend pas de la façon dont l'objet est défini. S'il faut garantir un certain ordre, on pourra utiliser la méthode {{jsxref("Array.sort()")}}.
 
-{{EmbedInteractiveExample("pages/js/object-entries.html")}}
+{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+
+```js interactive-example
+const object1 = {
+  a: "somestring",
+  b: 42,
+};
+
+for (const [key, value] of Object.entries(object1)) {
+  console.log(`${key}: ${value}`);
+}
+
+// Expected output:
+// "a: somestring"
+// "b: 42"
+```
 
 ## Syntaxe
 

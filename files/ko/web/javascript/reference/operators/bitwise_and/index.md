@@ -7,7 +7,15 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_AND
 
 AND 비트 연산자(`&`)는 두 개의 피연산자의 각 자리마다 대응하는 비트가 모두 `1`일 경우 `1`을 반환합니다.
 
-{{EmbedInteractiveExample("pages/js/expressions-bitwise-and.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Bitwise AND")}}
+
+```js interactive-example
+const a = 5; // 00000000000000000000000000000101
+const b = 3; // 00000000000000000000000000000011
+
+console.log(a & b); // 00000000000000000000000000000001
+// Expected output: 1
+```
 
 ## 구문
 

@@ -7,7 +7,14 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCSeconds
 
 **`getUTCSeconds()`** 方法根據世界時回傳指定日期的秒數。
 
-{{EmbedInteractiveExample("pages/js/date-getutcseconds.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: Date.getUTCSeconds()", "shorter")}}
+
+```js interactive-example
+const moonLanding = new Date("July 20, 1969, 20:18:04 UTC");
+
+console.log(moonLanding.getUTCSeconds());
+// Expected output: 4
+```
 
 ## 語法
 

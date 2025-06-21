@@ -9,7 +9,12 @@ l10n:
 
 **`String.fromCharCode()`** 静的メソッドは、指定された UTF-16 コード単位の並びから生成された文字列を返します。
 
-{{EmbedInteractiveExample("pages/js/string-fromcharcode.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: String.fromCharCode()", "shorter")}}
+
+```js interactive-example
+console.log(String.fromCharCode(189, 43, 190, 61));
+// Expected output: "½+¾="
+```
 
 ## 構文
 

@@ -7,7 +7,37 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`repeating-radial-gradient()`** fonctionne de façon similaire à [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) mais répète les couleurs de façon infinie dans toutes les deux directions avec des répétitions formant des bandes de dégradé (de façon analogue à [`repeating-linear-gradient()`](/fr/docs/Web/CSS/gradient/repeating-linear-gradient) qui permet de répéter un dégradé linéaire ([`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)).
 
-{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#e66465, #9198e5 20%);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(
+  circle at 100%,
+  #333,
+  #333 10px,
+  #eee 10px,
+  #eee 20px
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 À chaque répétition, les positions des arrêts de couleur sont décalés d'un multiple du dégradé unitaire (ce dernier couvrant la distance entre le premier et le dernier arrêt de couleur). Ainsi, la position de chaque arrêt de couleur final coïncide avec l'arrêt de couleur initial qui suit&nbsp;: si les couleurs sont différentes, on aura une transition abrupte. Pour ne pas obtenir cet effet, on pourra réutiliser la couleur du premier arrêt de couleur pour le dernier arrêt de couleur.
 

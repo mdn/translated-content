@@ -5,9 +5,21 @@ slug: Web/JavaScript/Reference/Global_Objects/RegExp/flags
 
 {{JSRef}}
 
-La propriété **`flags`** renvoie une chaîne de caractères contenant les [drapeaux (_flags_)](</fr/docs/Web/JavaScript/Guide/Expressions_régulières#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)>) de l'objet {{jsxref("RegExp")}} auquel elle appartient.
+La propriété **`flags`** renvoie une chaîne de caractères contenant les [drapeaux (_flags_)](</fr/docs/Web/JavaScript/Guide/Regular_expressions#Effectuer_des_recherches_avanc.C3.A9es_en_utilisant_les_drapeaux_(flags)>) de l'objet {{jsxref("RegExp")}} auquel elle appartient.
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-flags.html")}}{{js_property_attributes(0, 0, 1)}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.flags")}}
+
+```js interactive-example
+// Outputs RegExp flags in alphabetical order
+
+console.log(/foo/gi.flags);
+// Expected output: "gi"
+
+console.log(/bar/muy.flags);
+// Expected output: "muy"
+```
+
+{{js_property_attributes(0, 0, 1)}}
 
 ## Description
 

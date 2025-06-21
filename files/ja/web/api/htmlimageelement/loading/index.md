@@ -49,7 +49,7 @@ l10n:
 
 `loading` 属性が `lazy` に設定されているために読み込みが遅れていた画像がようやく読み込まれると、ブラウザーは画像のスタイルと固有の寸法に基づいて {{HTMLElement("img")}} 要素の最終サイズを決定し、必要に応じて文書を再フローして画像に合わせて要素に加えられたサイズ変更に基づき、要素の位置を更新します。
 
-この再フローを防ぐには、画像要素の [`width`](/ja/docs/Web/HTML/Element/img#width) および [`height`](/ja/docs/Web/HTML/Element/img#height) 属性を使用して画像の表示サイズを明示的に指定してください。
+この再フローを防ぐには、画像要素の [`width`](/ja/docs/Web/HTML/Reference/Elements/img#width) および [`height`](/ja/docs/Web/HTML/Reference/Elements/img#height) 属性を使用して画像の表示サイズを明示的に指定してください。
 この方法で固有の{{glossary("aspect ratio", "アスペクト比")}}を設定すれば、文書の読み込みに関して要素が動いてしまい、遅延読み込みと再フローのタイミングによっては、良くて不愉快にさせたり、最悪の場合は間違ったものをクリックさせてしまう原因となることを防ぐことができます。
 
 ## 例
@@ -85,5 +85,5 @@ function addImageToList(url) {
 ## 関連情報
 
 - {{HTMLElement("img")}} 要素
-- [ウェブパフォーマンス](/ja/docs/Learn/Performance)（MDN 学習領域）
-- [遅延読み込み](/ja/docs/Web/Performance/Lazy_loading)（MDN ウェブパフォーマンスガイド）
+- [ウェブパフォーマンス](/ja/docs/Learn_web_development/Extensions/Performance)（MDN 学習領域）
+- [遅延読み込み](/ja/docs/Web/Performance/Guides/Lazy_loading)（MDN ウェブパフォーマンスガイド）

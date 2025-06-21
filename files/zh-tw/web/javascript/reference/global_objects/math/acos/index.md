@@ -2,7 +2,7 @@
 title: Math.acos()
 slug: Web/JavaScript/Reference/Global_Objects/Math/acos
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -13,7 +13,20 @@ l10n:
   <semantics><mrow><mo>∀</mo><mi>x</mi><mo>∊</mo><mo stretchy="false">[</mo><mrow><mo>−</mo><mn>1</mn></mrow><mo>,</mo><mn>1</mn><mo stretchy="false">]</mo><mo>,</mo><mspace width="0.2777777777777778em"></mspace><mrow><mo lspace="0em" rspace="0.16666666666666666em">𝙼𝚊𝚝𝚑.𝚊𝚌𝚘𝚜</mo><mo stretchy="false">(</mo><mi>𝚡</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mo lspace="0em" rspace="0em">arccos</mo><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>=</mo><mtext>the unique&nbsp;</mtext><mi>y</mi><mo>∊</mo><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo><mtext>&nbsp;such that&nbsp;</mtext><mo lspace="0em" rspace="0em">cos</mo><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo><mo>=</mo><mi>x</mi></mrow><annotation encoding="TeX">\forall x \in [{-1}, 1],\;\mathtt{\operatorname{Math.acos}(x)} = \arccos(x) = \text{the unique } y \in [0, \pi] \text{ such that } \cos(y) = x</annotation></semantics>
 </math>
 
-{{EmbedInteractiveExample("pages/js/math-acos.html")}}
+{{InteractiveExample("JavaScript Demo: Math.acos()")}}
+
+```js interactive-example
+// 計算直角三角形的角度（以弧度表示）
+function calcAngle(adjacent, hypotenuse) {
+  return Math.acos(adjacent / hypotenuse);
+}
+
+console.log(calcAngle(8, 10));
+// 預期輸出：0.6435011087932843
+
+console.log(calcAngle(5, 3));
+// 預期輸出：NaN
+```
 
 ## 語法
 

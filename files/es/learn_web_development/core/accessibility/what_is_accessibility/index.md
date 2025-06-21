@@ -168,9 +168,9 @@ Este artículo debería haber dado una descripción detallada sobre la accesibil
 
 ## Véase también
 
-- [WCAG](/es/docs/Web/Accessibility/Understanding_WCAG)
+- [WCAG](/es/docs/Web/Accessibility/Guides/Understanding_WCAG)
 
-  - [Perceptible](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable)
+  - [Perceptible](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Operable](/es/docs/Web/Accessibility/Understanding_WCAG/Operable)
   - [Comprensible](/es/docs/Web/Accessibility/Understanding_WCAG/Understandable)
   - [Robusto](/es/docs/Web/Accessibility/Understanding_WCAG/Robust)

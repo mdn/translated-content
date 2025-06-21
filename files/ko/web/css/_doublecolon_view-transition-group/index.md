@@ -1,5 +1,5 @@
 ---
-title: "::view-transition-group"
+title: ::view-transition-group
 slug: Web/CSS/::view-transition-group
 l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
@@ -70,5 +70,5 @@ view-transition-group(embed-container) {
 
 ## 같이 보기
 
-- [뷰 전환 API](/ko/docs/Web/API/View_Transitions_API)
+- [뷰 전환 API](/ko/docs/Web/API/View_Transition_API)
 - [뷰 전환 API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)

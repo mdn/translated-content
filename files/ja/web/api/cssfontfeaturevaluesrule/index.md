@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSFontFeatureValuesRule`** インターフェイスは {{cssxref("@font-feature-values")}} [アットルール](/ja/docs/Web/CSS/At-rule)を表し、開発者が開発者が各フォントフェイスに対して、 {{cssxref("font-variant-alternates")}} で使用する機能インデックスを指定するための共通の名前を割り当てることができます。
+**`CSSFontFeatureValuesRule`** インターフェイスは {{cssxref("@font-feature-values")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を表し、開発者が開発者が各フォントフェイスに対して、 {{cssxref("font-variant-alternates")}} で使用する機能インデックスを指定するための共通の名前を割り当てることができます。
 
 {{InheritanceDiagram}}
 

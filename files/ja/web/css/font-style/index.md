@@ -9,7 +9,48 @@ l10n:
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
 
-{{EmbedInteractiveExample("pages/css/font-style.html")}}
+{{InteractiveExample("CSS Demo: font-style")}}
+
+```css interactive-example-choice
+font-style: normal;
+```
+
+```css interactive-example-choice
+font-style: italic;
+```
+
+```css interactive-example-choice
+font-style: oblique;
+```
+
+```css interactive-example-choice
+font-style: oblique 40deg;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    London. Michaelmas term lately over, and the Lord Chancellor sitting in
+    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
+    as if the waters had but newly retired from the face of the earth, and it
+    would not be wonderful to meet a Megalosaurus, forty feet long or so,
+    waddling like an elephantine lizard up Holborn Hill.
+  </p>
+</section>
+```
+
+```css interactive-example
+@font-face {
+  src: url("/shared-assets/fonts/variable-fonts/AmstelvarAlpha-VF.ttf");
+  font-family: Amstelvar;
+  font-style: normal;
+}
+
+section {
+  font-size: 1.2em;
+  font-family: Amstelvar;
+}
+```
 
 **italic** フォントフェイスは通常、本質的に筆記体であり、装飾されていない書体より水平方向の幅が小さいのが一般的です。一方 **oblique** フェイスはたいてい、通常のフェイスを傾けただけです。 italic と oblique のいずれも、通常のフェイスの字形を人工的に傾けることによってシミュレートされます (この制御については {{cssxref("font-synthesis")}} をご覧ください)。
 
@@ -82,7 +123,7 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 テキストの長い区間に渡って `font-style` の値を `italic` に設定すると、失読症のような認知問題を抱える人にとって読むのが難しくなる可能性があります。
 
-- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN "WCAG を理解する ― ガイドライン 1.4 の解説"](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [W3C Understanding WCAG 2.1](https://www.w3.org/TR/WCAG21/#visual-presentation)
 
 ## 公式定義
@@ -131,4 +172,4 @@ TrueType または OpenType の可変フォントでは、 `"slnt"` 変数が ob
 
 - {{cssxref("font-family")}}
 - {{cssxref("font-weight")}}
-- [基本的なテキストとフォントの装飾](/ja/docs/Learn/CSS/Styling_text/Fundamentals)
+- [基本的なテキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)

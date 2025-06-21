@@ -9,7 +9,22 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/reduceRight
 
 对于从左至右遍历的相似方法，请参阅 {{jsxref("Array.prototype.reduce()")}}。
 
-{{EmbedInteractiveExample("pages/js/array-reduce-right.html","shorter")}}
+{{InteractiveExample("JavaScript Demo: Array.reduceRight()", "shorter")}}
+
+```js interactive-example
+const array1 = [
+  [0, 1],
+  [2, 3],
+  [4, 5],
+];
+
+const result = array1.reduceRight((accumulator, currentValue) =>
+  accumulator.concat(currentValue),
+);
+
+console.log(result);
+// Expected output: Array [4, 5, 2, 3, 0, 1]
+```
 
 ## 语法
 

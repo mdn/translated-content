@@ -10,7 +10,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/apply
 > [!NOTE]
 > 이 함수의 구문은 거의 {{jsxref("Function.call", "call()")}} 구문과 유사합니다. 근본적인 차이점은 `call()` 은 함수에 전달될 **인수 리스트**를 받는데 비해, `apply()` 는 **인수들의 단일 배열**을 받는다는 점입니다.
 
-{{EmbedInteractiveExample("pages/js/function-apply.html")}}
+{{InteractiveExample("JavaScript Demo: Function.apply()")}}
+
+```js interactive-example
+const numbers = [5, 6, 2, 3, 7];
+
+const max = Math.max.apply(null, numbers);
+
+console.log(max);
+// Expected output: 7
+
+const min = Math.min.apply(null, numbers);
+
+console.log(min);
+// Expected output: 2
+```
 
 ## 구문
 

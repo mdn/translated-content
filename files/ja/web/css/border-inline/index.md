@@ -1,13 +1,50 @@
 ---
 title: border-inline
 slug: Web/CSS/border-inline
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/Shorthand_properties)です。
+**`border-inline`** は [CSS](/ja/docs/Web/CSS) のプロパティで、論理的なインライン方向のそれぞれの境界プロパティをスタイルシートの 1 ヶ所で設定する[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-{{EmbedInteractiveExample("pages/css/border-inline.html")}}
+{{InteractiveExample("CSS Demo: border-inline")}}
+
+```css interactive-example-choice
+border-inline: solid;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline: dashed red;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline: 1rem solid;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    これは周囲に境界線があるボックスです。
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #8b008b;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 `border-inline` の割り当て先の物理的な境界は、要素の書字方向によって決まります。 {{cssxref("border-top")}} と {{cssxref("border-bottom")}}、または {{cssxref("border-right")}} と {{cssxref("border-left")}} のどちらかの組み合わせに対して、 {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} に設定された値に応じて対応づけられます。
 
@@ -32,6 +69,7 @@ border-inline: medium dashed blue;
 border-inline: inherit;
 border-inline: initial;
 border-inline: revert;
+border-inline: revert-layer;
 border-inline: unset;
 ```
 
@@ -43,8 +81,8 @@ border-inline: unset;
   - : 境界の幅です。 {{cssxref("border-width")}} を参照してください。
 - `<'border-style'>`
   - : 境界線のスタイルです。 {{cssxref("border-style")}} を参照してください。
-- `<'color'>`
-  - : 境界の色です。 {{cssxref("color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
@@ -56,13 +94,13 @@ border-inline: unset;
 
 ## 例
 
-<h3 id="Border_with_vertical_text">テキストが垂直の場合の境界</h3>
+### テキストが垂直の場合の境界
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -83,7 +121,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("テキストが垂直の場合の境界", 140, 140)}}
 
 ## 仕様書
 
@@ -95,5 +133,6 @@ div {
 
 ## 関連情報
 
-- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} の何れかに対応づけられます。
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
+- このプロパティは物理的な境界プロパティである {{cssxref("border-top")}}、{{cssxref("border-right")}}、{{cssxref("border-bottom")}}、{{cssxref("border-left")}} のいずれかに対応づけられます。
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

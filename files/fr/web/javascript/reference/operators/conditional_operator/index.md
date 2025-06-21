@@ -7,7 +7,22 @@ slug: Web/JavaScript/Reference/Operators/Conditional_operator
 
 L'**opérateur (ternaire) conditionnel** est le seul opérateur JavaScript qui comporte trois opérandes. Cet opérateur est fréquemment utilisé comme raccourci pour la déclaration de {{jsxref("Instructions/if...else")}}.
 
-{{EmbedInteractiveExample("pages/js/expressions-conditionaloperators.html")}}
+{{InteractiveExample("JavaScript Demo: Expressions - Conditional operator")}}
+
+```js interactive-example
+function getFee(isMember) {
+  return isMember ? "$2.00" : "$10.00";
+}
+
+console.log(getFee(true));
+// Expected output: "$2.00"
+
+console.log(getFee(false));
+// Expected output: "$10.00"
+
+console.log(getFee(null));
+// Expected output: "$10.00"
+```
 
 ## Syntaxe
 

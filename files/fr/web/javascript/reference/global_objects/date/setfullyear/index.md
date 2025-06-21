@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Date/setFullYear
 
 La méthode **`setFullYear()`** définit l'année complête pour une date, d'après l'heure locale.
 
-{{EmbedInteractiveExample("pages/js/date-setfullyear.html")}}
+{{InteractiveExample("JavaScript Demo: Date.setFullYear()")}}
+
+```js interactive-example
+const event = new Date("August 19, 1975 23:15:30");
+
+event.setFullYear(1969);
+
+console.log(event.getFullYear());
+// Expected output: 1969
+
+event.setFullYear(0);
+
+console.log(event.getFullYear());
+// Expected output: 0
+```
 
 ## Syntaxe
 

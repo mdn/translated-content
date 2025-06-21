@@ -5,7 +5,7 @@ slug: Web/API/SubtleCrypto/importKey
 
 {{APIRef("Web Crypto API")}}
 
-O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informção dada como parâmetro.
+O método **`SubtleCrypto.importKey()`** retorna como {{jsxref("Promise")}} de uma {{domxref("CryptoKey")}} de uma informação dada como parâmetro.
 
 ## Sintaxe
 

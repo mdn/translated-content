@@ -44,7 +44,7 @@ selectAudioOutput(options)
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，则会返回此错误。
+  - : 如果使用 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)来阻止使用音频输出（此外不会显示用于选择音频输出的弹出窗口），或者用户关闭选择提示而没有选择设备时，则会返回此错误。
 - `NotFoundError` {{domxref("DOMException")}}
   - : 如果没有可用的音频输出设备，则会返回此错误。
 - `InvalidStateError` {{domxref("DOMException")}}
@@ -57,7 +57,7 @@ selectAudioOutput(options)
 - 方法必须在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
 - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。
   用户必须与页面或 UI 元素进行交互，才能使用此特性。
-- 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Headers/Permissions-Policy/midi) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)的控制。
+- 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/midi) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的控制。
 
 权限状态可以通过 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 的 {{domxref("Permissions.query", "navigator.permissions.query()")}} 方法进行查询（传递一个带有 `speaker-selection` 权限的权限描述符）。
 

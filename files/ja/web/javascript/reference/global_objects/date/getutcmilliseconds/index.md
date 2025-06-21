@@ -2,14 +2,21 @@
 title: Date.prototype.getUTCMilliseconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMilliseconds
 l10n:
-  sourceCommit: d6ce8fcbbc4a71ec9209f379e5ea9774bbf1f5ac
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}
 
-**`getUTCMilliseconds()`** メソッドは、協定世界時に基づき、指定された日時の「ミリ秒」を返します。
+**`getUTCMilliseconds()`** は {{jsxref("Date")}} インスタンスのメソッドで、協定世界時に基づき、指定された日時の「ミリ秒」を返します。
 
-{{EmbedInteractiveExample("pages/js/date-getutcmilliseconds.html","shorter")}}
+{{InteractiveExample("JavaScript デモ: Date.prototype.getUTCMilliseconds()", "shorter")}}
+
+```js interactive-example
+const exampleDate = new Date("2018-01-02T03:04:05.678Z"); // 2 January 2018, 03:04:05.678 (UTC)
+
+console.log(exampleDate.getUTCMilliseconds());
+// 予想される結果: 678
+```
 
 ## 構文
 
@@ -17,13 +24,15 @@ l10n:
 getUTCMilliseconds()
 ```
 
+### 引数
+
+なし。
+
 ### 返値
 
-数値です。
-もし `Date` オブジェクトが有効な日時を表している場合には、指定された `Date` オブジェクトの世界時によるミリ秒単位を表す 0 から 999 までの整数値です。
-それ以外の場合は、`Date` オブジェクトが有効な日時を表していなければ [`NaN`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number/NaN) が返されます。
+指定された日時の、協定世界時に基づく「ミリ秒」を表す 0 から 999 までの整数です。日時が[無効](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date#元期、タイムスタンプ、無効な日時)な場合は `NaN` を返します。
 
-Unix 元期の時刻と混同しないでください。 1970/01/01 からの経過ミリ秒を取得するには、 [`getTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) メソッドを使用してください。
+タイムスタンプと混同しないでください。元期からの経過ミリ秒数を取得するには、 [`getTime()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime) メソッドを使用してください。
 
 ## 例
 

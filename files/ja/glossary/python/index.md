@@ -17,7 +17,7 @@ Python は OSI に承認されたオープンソースライセンスのもと�
    2. [Official Python docs tutorials](https://docs.python.org/3/tutorial/index.html)
    3. [Tutorialspoint Python tutorial](http://www.tutorialspoint.com/python/index.htm)
    4. [AlphaCodingSkills Python Tutorial](https://www.alphacodingskills.com/python/python-tutorial.php)
-   5. MDN の [Django Web Framework (Python)](/ja/docs/Learn/Server-side/Django)
+   5. MDN の [Django Web Framework (Python)](/ja/docs/Learn_web_development/Extensions/Server-side/Django)
 
 2. 関連用語:
 

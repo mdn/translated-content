@@ -9,7 +9,16 @@ slug: Web/JavaScript/Reference/Global_Objects/String/charAt
 
 `charAt()` 方法总是将字符串作为 [UTF-16 码元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_字符、unicode_码位和字素簇)序列进行索引，因此它可能会返回孤项代理。要获取给定索引处的完整 Unicode 码位，请使用 {{jsxref("String.prototype.codePointAt()")}} 和 {{jsxref("String.fromCodePoint()")}}。
 
-{{EmbedInteractiveExample("pages/js/string-charat.html", "shorter")}}
+{{InteractiveExample("JavaScript Demo: String.charAt()", "shorter")}}
+
+```js interactive-example
+const sentence = "The quick brown fox jumps over the lazy dog.";
+
+const index = 4;
+
+console.log(`The character at index ${index} is ${sentence.charAt(index)}`);
+// Expected output: "The character at index 4 is q"
+```
 
 ## 语法
 

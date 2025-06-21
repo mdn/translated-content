@@ -76,11 +76,11 @@ l10n:
 
 ## 構成するファイルが解釈される順序
 
-ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/How_browsers_work#構文解析)順序を知ることが重要です。
+ブラウザーがサーバーに HTML ファイルのリクエストを送信するとき、こうした HTML ファイルには {{htmlelement("link")}} 要素が外部の [CSS](/ja/docs/Learn_web_development/Core/Styling_basics) スタイルシートを参照していたり、 {{htmlelement("script")}} 要素が外部の [JavaScript](/ja/docs/Learn_web_development/Core/Scripting) のスクリプトを参照していたりすることがよくあります。ブラウザーがページを読み込むときに、これらのファイルが[ブラウザーによって構文解析される](/ja/docs/Web/Performance/Guides/How_browsers_work#構文解析)順序を知ることが重要です。
 
 - ブラウザーはまず HTML ファイルを解釈し、 `<link>` 要素による外部 CSS スタイルシートへの参照や、 `<script>` 要素によるスクリプトへの参照を認識するようになります。
 - ブラウザーは HTML を解釈しながら、 `<link>` 要素から見つかった CSS ファイルと `<script>` 要素から見つかった JavaScript ファイルに対してサーバーにリクエストを送り返し、それらから CSS と JavaScript を解釈します。
-- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/How_browsers_work#javascript_のコンパイル)します。
+- ブラウザーは解釈された HTML からメモリー内にある [DOM](/ja/docs/Web/API/Document_Object_Model) ツリーを生成し、解釈された CSS からメモリー内に [CSSOM](/ja/docs/Glossary/CSSOM) 構造を生成し、解釈された JavaScript を[コンパイルして実行](/ja/docs/Web/Performance/Guides/How_browsers_work#javascript_のコンパイル)します。
 - ブラウザーが DOM ツリーを構築し、 CSSOM ツリーからスタイルを適用して JavaScript を実行すると、ページの視覚表現が画面に描かれ、ユーザーはページの内容を見て、それとの対話を始めることができます。
 
 ## DNS の説明

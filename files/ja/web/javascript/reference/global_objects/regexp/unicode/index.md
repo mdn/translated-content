@@ -9,7 +9,24 @@ l10n:
 
 **`unicode`** は {{jsxref("RegExp")}} インスタンスのアクセサープロパティで、この正規表現に `u` フラグが使用されているかどうかを返します。
 
-{{EmbedInteractiveExample("pages/js/regexp-prototype-unicode.html", "taller")}}
+{{InteractiveExample("JavaScript Demo: RegExp.prototype.unicode", "taller")}}
+
+```js interactive-example
+const regex1 = new RegExp("\u{61}");
+const regex2 = new RegExp("\u{61}", "u");
+
+console.log(regex1.unicode);
+// Expected output: false
+
+console.log(regex2.unicode);
+// Expected output: true
+
+console.log(regex1.source);
+// Expected output: "a"
+
+console.log(regex2.source);
+// Expected output: "a"
+```
 
 ## 解説
 

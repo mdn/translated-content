@@ -7,7 +7,73 @@ slug: Web/CSS/shape-image-threshold
 
 La propriété **`shape-image-threshold`** définit le seuil, en terme de canal alpha, à utiliser pour extraire la forme d'une image. Cette forme pourra être utilisée pour {{cssxref("shape-outside")}}.
 
-{{EmbedInteractiveExample("pages/css/shape-image-threshold.html")}}
+{{InteractiveExample("CSS Demo: shape-image-threshold")}}
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.2;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.4;
+```
+
+```css interactive-example-choice
+shape-outside: linear-gradient(
+  50deg,
+  rgb(77, 26, 103),
+  transparent 80%,
+  transparent
+);
+shape-image-threshold: 0.6;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element"></div>
+    We had agreed, my companion and I, that I should call for him at his house,
+    after dinner, not later than eleven o’clock. This athletic young Frenchman
+    belongs to a small set of Parisian sportsmen, who have taken up “ballooning”
+    as a pastime. After having exhausted all the sensations that are to be found
+    in ordinary sports, even those of “automobiling” at a breakneck speed, the
+    members of the “Aéro Club” now seek in the air, where they indulge in all
+    kinds of daring feats, the nerve-racking excitement that they have ceased to
+    find on earth.
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  text-align: left;
+  padding: 20px;
+}
+
+#example-element {
+  float: left;
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  background-image: linear-gradient(
+    50deg,
+    rgb(77, 26, 103),
+    transparent 80%,
+    transparent
+  );
+}
+```
 
 Touts les pixels dont la composante alpha est supérieure à ce seuil seront retenus pour délimiter les contours de la formes. Une valeur de 0.5 indiquera par exemple qu'on prend la forme qui englobe tous les pixels dont l'opacité est supérieure à 50%.
 

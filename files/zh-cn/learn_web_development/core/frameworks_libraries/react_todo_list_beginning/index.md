@@ -1,10 +1,9 @@
 ---
 title: 开始我们的 React 待办清单
 slug: Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Main_features","Learn_web_development/Core/Frameworks_libraries/React_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 假设我们的任务是在 React 中创建一个概念验证——一个允许用户添加、编辑和删除他们想做的任务的应用程序，并且在不删除任务的情况下将其标记为完成。这篇文章将引导你完成基本的 `App` 组件结构和样式，为以后添加的单个组件定义和交互性做好准备。
 
@@ -178,7 +177,7 @@ function App(props) {
 }
 ```
 
-现在打开 `public/index.html`，把 [`<title>`](/zh-CN/docs/Web/HTML/Element/title) 元素的文本改为 `TodoMatic` 。这样，它将与我们应用程序顶部的 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 相匹配。
+现在打开 `public/index.html`，把 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 元素的文本改为 `TodoMatic` 。这样，它将与我们应用程序顶部的 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 相匹配。
 
 ```html
 <title>TodoMatic</title>
@@ -190,10 +189,10 @@ function App(props) {
 
 它很难看，而且还没有功能，但这没关系——我们一会儿就会为它设计样式。首先，考虑一下我们的 JSX，以及它是如何与我们的用户故事相对应的。
 
-- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Element/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
+- 我们有一个 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form) 元素，有一个 [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 用于写出一个新任务，还有一个按钮用于提交表单。
 - 我们有一组按钮，用于筛选我们的任务。
 - 我们有一个标题，用于告诉我们还有多少任务。
-- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
+- 我们有三个任务，安排在一个无序的列表中。每项任务都是一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li)），有编辑和删除的按钮，还有一个复选框可以将其勾选为完成。
 
 这些表格将允许我们*添加*任务；按钮让我们可以对任务进行*筛选*；我们通过标题和列表*查看*任务。用于*编辑*任务的 UI 目前很缺乏。这没关系——我们以后再写。
 
@@ -213,7 +212,7 @@ function App(props) {
 
 `visually-hidden` 这个类还没有效果，因为我们还没有包含任何 CSS。一旦我们把样式写好，任何带有这个类的元素都会被隐藏起来，视力正常的用户不会看到，而屏幕阅读器用户仍然可以使用——这是因为视力正常的用户不需要这些词；它们的存在是为了给没有额外视觉环境帮助的屏幕阅读器用户提供更多关于这个按钮的信息。
 
-再往下，你可以找到我们的 [`<ul>`](/zh-CN/docs/Web/HTML/Element/ul) 元素：
+再往下，你可以找到我们的 [`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul) 元素：
 
 ```html
 <ul

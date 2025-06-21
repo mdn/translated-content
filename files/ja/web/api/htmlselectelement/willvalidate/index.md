@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`willValidate`** は {{domxref("HTMLSelectElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("select")}} 要素が[制約検証](/ja/docs/Web/HTML/Constraint_validation)の対象となる候補であるかどうかを示します。 例えば、{{domxref("HTMLSelectElement.disabled", "disabled")}} プロパティが `true` である場合など、何か制約検証を妨げる条件がある場合は、このプロパティは `false` となります。
+**`willValidate`** は {{domxref("HTMLSelectElement")}} インターフェイスの読み取り専用のプロパティで、この {{htmlelement("select")}} 要素が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)の対象となる候補であるかどうかを示します。 例えば、{{domxref("HTMLSelectElement.disabled", "disabled")}} プロパティが `true` である場合など、何か制約検証を妨げる条件がある場合は、このプロパティは `false` となります。
 
 ## 値
 
@@ -27,5 +27,5 @@ l10n:
 - {{domxref("HTMLSelectElement.checkValidity()")}}
 - {{HTMLElement("select")}}
 - {{HTMLElement("form")}}
-- [学習: クライアント側フォーム検証](/ja/docs/Learn/Forms/Form_validation)
-- [ガイド: 制約検証](/ja/docs/Web/HTML/Constraint_validation)
+- [学習: クライアント側フォーム検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [ガイド: 制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)

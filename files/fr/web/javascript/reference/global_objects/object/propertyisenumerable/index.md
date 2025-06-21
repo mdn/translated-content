@@ -7,7 +7,23 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/propertyIsEnumerable
 
 La méthode **`propertyIsEnumerable()`** renvoie un booléen qui indique si la propriété donnée est énumérable.
 
-{{EmbedInteractiveExample("pages/js/object-prototype-propertyisenumerable.html")}}
+{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()")}}
+
+```js interactive-example
+const object1 = {};
+const array1 = [];
+object1.property1 = 42;
+array1[0] = 42;
+
+console.log(object1.propertyIsEnumerable("property1"));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable(0));
+// Expected output: true
+
+console.log(array1.propertyIsEnumerable("length"));
+// Expected output: false
+```
 
 ## Syntaxe
 

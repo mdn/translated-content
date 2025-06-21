@@ -15,4 +15,4 @@ slug: Glossary/Closure
 
 ### 技術リファレンス
 
-- MDN の[クロージャ](/ja/docs/Web/JavaScript/Closures)
+- MDN の[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)

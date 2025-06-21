@@ -36,5 +36,4 @@ slug: Web/API/FileSystem
 ## 参见
 
 - [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件与目录条目 API 介绍](/zh-CN/docs/Web/API/File_and_Directory_Entries_API/Introduction)
 - {{domxref("FileSystemEntry")}}、{{domxref("FileSystemFileEntry")}} 和 {{domxref("FileSystemDirectoryEntry")}}

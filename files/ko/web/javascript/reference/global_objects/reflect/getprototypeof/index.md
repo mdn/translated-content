@@ -7,7 +7,21 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getPrototypeOf
 
 **`Reflect.getPrototypeOf()`** 정적 메서드는 주어진 객체의 프로토타입을 반환합니다. {{jsxref("Object.getPrototypeOf()")}}와 거의 동일합니다.
 
-{{EmbedInteractiveExample("pages/js/reflect-getprototypeof.html")}}
+{{InteractiveExample("JavaScript Demo: Reflect.getPrototypeOf()")}}
+
+```js interactive-example
+const object1 = {
+  property1: 42,
+};
+
+const proto1 = Reflect.getPrototypeOf(object1);
+
+console.log(proto1);
+// Expected output: Object {  }
+
+console.log(Reflect.getPrototypeOf(proto1));
+// Expected output: null
+```
 
 ## 구문
 

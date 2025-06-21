@@ -7,7 +7,7 @@ l10n:
 
 이벤트는 브라우저 창 내부에서 발생하는 신호로 브라우저 또는 운영 체제 환경의 변화를 알려줍니다. 프로그래머는 이벤트가 발생할 때 실행되는 이벤트 처리기 코드를 생성하여 웹 페이지가 변화에 적절하게 반응하도록 할 수 있습니다.
 
-이 페이지에서는 이벤트 및 이벤트 처리기 작업 방법에 대한 매우 간략한 "리마인더"를 제공합니다. 새로운 개발자는 대신 [이벤트 소개](/ko/docs/Learn/JavaScript/Building_blocks/Events)를 읽어야 합니다.
+이 페이지에서는 이벤트 및 이벤트 처리기 작업 방법에 대한 매우 간략한 "리마인더"를 제공합니다. 새로운 개발자는 대신 [이벤트 소개](/ko/docs/Learn_web_development/Core/Scripting/Events)를 읽어야 합니다.
 
 ## 이용 가능한 이벤트는 무엇입니까?
 
@@ -20,7 +20,7 @@ l10n:
 이벤트 처리기를 등록하기 위해서는 두 가지 방법을 권장합니다. 이벤트 처리기 코드는 대상 요소의 해당 onevent 속성에 할당하거나 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 메서드를 사용하여 이벤트 처리기를 요소의 이벤트 수신기로 등록하여 실행할 수 있습니다. 어느 경우에나 이벤트 수신기는 [`이벤트` 인터페이스](/ko/docs/Web/API/Event) 또는 [파생된 인터페이스](/ko/docs/Web/API/Event#introduction)를 준수하는 객체를 수신합니다. 주요 차이점은 이벤트 수신기 방법을 사용하여 여러 이벤트 처리기를 추가하거나 제거할 수 있다는 것입니다.
 
 > [!WARNING]
-> HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장하지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
+> HTML onevent 특성을 사용하여 이벤트 처리기를 설정하는 세 번째 접근 방식은 권장하지 않습니다. 마크업을 부풀리고 읽기 어렵고 디버그하기 어렵게 만듭니다. 자세한 내용은 [인라인 이벤트 처리기](/ko/docs/Learn_web_development/Core/Scripting/Events#inline_event_handlers_—_dont_use_these)를 참조하십시오.
 
 ### onevent 속성 사용
 

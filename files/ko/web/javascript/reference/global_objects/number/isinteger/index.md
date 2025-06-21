@@ -9,7 +9,22 @@ l10n:
 
 **`Number.isInteger()`** 정적 메서드는 전달받은 값의 정수 여부를 판별합니다.
 
-{{EmbedInteractiveExample("pages/js/number-isinteger.html")}}
+{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+
+```js interactive-example
+function fits(x, y) {
+  if (Number.isInteger(y / x)) {
+    return "Fits!";
+  }
+  return "Does NOT fit!";
+}
+
+console.log(fits(5, 10));
+// Expected output: "Fits!"
+
+console.log(fits(5, 11));
+// Expected output: "Does NOT fit!"
+```
 
 ## 구문
 

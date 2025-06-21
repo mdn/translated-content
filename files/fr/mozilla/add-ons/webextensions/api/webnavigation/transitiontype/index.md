@@ -7,7 +7,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType
 
 Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
 
-Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/WebNavigation/TransitionType#browser_compatibility) pour plus de détails.
+Notez que beaucoup de valeurs ne sont actuellement pas supportées dans Firefox : voir la [table de compatibilité du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation/TransitionType#browser_compatibility) pour plus de détails.
 
 ## Type
 

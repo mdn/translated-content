@@ -77,7 +77,7 @@ Promise가 왜 좋은지 이해하기 위해 구식 callbacks을 살펴보고 �
 2. 그다음 피자를 주문합니다. 식당이 바빠서 피자가 나오는 데 오래 걸릴 수 있고, 마침 재료가 다 떨어졌으면 피자를 만들 수 없다고 할 것 입니다.
 3. 마지막으로 피자를 받아서 먹습니다. 그런데! 만약 지갑을 놓고 와서 돈을 내지 못한다면 피자를 먹지 못할 수 있습니다.
 
-구식 [callbacks](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
+구식 [callbacks](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#callbacks)을 사용하면 아래와 같은 모습의 코드가 나타날것 입니다. :
 
 ```js
 chooseToppings(function (toppings) {
@@ -165,10 +165,10 @@ Promise는 이벤트 리스너와 유사하지만 몇 가지 다른점이 있습
 
 모던 웹 API는 잠재적으로 긴 작업을 수행하는 함수에 Promise를 사용하므로 Promise가 무엇인지 이해하는것은 매우 중요합니다. 현대적인 웹 기술을 사용하려면 Promise를 사용해야합니다. 챕터의 후반부에서 직접 Promise를 만들어보겠지만, 지금은 일단 웹 API에서 접할 수 있는 몇 가지 예제를 살펴보겠습니다.
 
-첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn/JavaScript/Asynchronous/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
+첫 번째로, 웹에서 이미지를 가져오기 위하여 [`fetch()`](/ko/docs/Web/API/Window/fetch) 메서드를 사용할 때 입니다.{{domxref("Body.blob", "blob()")}} 메서드는 fetch가 응답한 원시 body컨텐츠를 {{domxref("Blob")}} 오브젝트로 변환시켜주고{{htmlelement("img")}} 엘리먼트에 표현합니다. 이예제는 [first article of the series](/ko/docs/Learn_web_development/Extensions/Async_JS/Introducing#asynchronous_javascript)유사합니다. 다만 Promise를 사용하기 위해 약간의 변경을 하겠습니다.
 
 > [!NOTE]
-> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
+> The following example will not work if you just run it directly from the file (i.e. via a `file://` URL). You need to run it through a [local testing server](/ko/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or use an online solution such as [Glitch](https://glitch.com/) or [GitHub pages](/ko/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages).
 
 1. 먼저 [simple HTML template](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 와 fetch할 이미지인 [sample image file](https://github.com/mdn/learning-area/blob/master/javascript/asynchronous/promises/coffee.jpg) 을 다운받습니다.
 2. HTML {{htmlelement("body")}} 하단에 {{htmlelement("script")}} 엘리먼트를 삽입합니다.

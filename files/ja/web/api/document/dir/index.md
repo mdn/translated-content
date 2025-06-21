@@ -24,4 +24,4 @@ l10n:
 
 ## 関連情報
 
-- [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) グローバル属性
+- [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) グローバル属性

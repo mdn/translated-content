@@ -3,8 +3,6 @@ title: MDN 收录规则
 slug: MDN/Writing_guidelines/What_we_write
 ---
 
-{{MDNSidebar}}
-
 MDN Web 文档的内容是通用的，并不偏向某一个浏览器。这使得 Web 开发人员可以编写与任何浏览器都兼容的代码。本文介绍了在 MDN Web 文档上应该包含哪些主题或类型的内容的有关信息。
 
 ## 编辑准则
@@ -31,7 +29,7 @@ MDN Web 文档上记录的 Web 技术应该朝着标准方向发展，并且必�
 
 对于新的参考页面或指南，请在我们的社区存储库上进行[讨论](https://github.com/mdn/mdn-community/discussions/categories/content-suggestions)，概述你建议的内容和原因（请尽可能明确）。
 
-如建议涉及新内容的大型项目，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)，该页面简述了申请流程。
+如建议涉及新内容的大型项目，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/Criteria_for_inclusion)，该页面简述了申请流程。
 
 ## 哪些话题在 MDN 的范畴内
 
@@ -62,7 +60,7 @@ MDN Web 文档上记录的 Web 技术应该朝着标准方向发展，并且必�
 
 MDN Web 文档上的所有内容都必须与其出现的技术部分相关。贡献者应遵循这些 MDN 的编写风格、代码示例以及一些其他主题的[撰写指南](/zh-CN/docs/MDN/Writing_guidelines)。
 
-有关技术是否可以记录在 MDN Web 文档上的标准的更多详细信息，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)。
+有关技术是否可以记录在 MDN Web 文档上的标准的更多详细信息，请参阅[包含页面的标准](/zh-CN/docs/MDN/Writing_guidelines/Criteria_for_inclusion)。
 
 ### 我们何时记录一项新技术
 

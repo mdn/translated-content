@@ -67,7 +67,7 @@ PWA 非常值得一试，你可以自己查看它是否适用于你的应用程�
 
 PWA 所需的关键要素是 [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API) 支持。值得庆幸的是，桌面和移动设备上的[所有主流浏览器都支持](https://jakearchibald.github.io/isserviceworkerready/) Service Worker。
 
-至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Guides/Making_PWAs_installable)功能也得到了广泛的支持。目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。但是，其他主流浏览器都支持这里的所有功能。
+至于其他功能，像是[推送通知](/zh-CN/docs/Web/API/Push_API)、[通知功能](/zh-CN/docs/Web/API/Notifications_API)和[添加至主屏](/zh-CN/docs/Web/AppsProgressive_web_apps/Progressive/Guides/Making_PWAs_installable)功能也得到了广泛的支持。目前，Safari 对 [Web App Manifest](/zh-CN/docs/Web/Progressive_web_apps/Manifest) 和添加至主屏的支持有限，并且不支持 Web 推送通知。但是，其他主流浏览器都支持这里的所有功能。
 
 其中一些 API 是实验性的，文档仍在草稿中，但是 Flipkart 和 AliExpress 这样的成功案例应该也能说服你尝试在 Web 应用程序中实现一些 PWA 功能。
 
