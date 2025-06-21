@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
+**`[Symbol.matchAll]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/matchAll) がどのように動作するのかを指定します。
 
 {{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.matchAll]()", "taller")}}
 

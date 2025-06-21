@@ -21,7 +21,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Introducción a HTML](/es/docs/conflicting/Learn_web_development/Core/Structuring_content)
   - : Este módulo prepara el escenario, acostumbrándolo a conceptos y sintaxis importantes, analizando la aplicación de HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
-- [Referencia de Elementos HTML](/es/docs/Web/HTML/Element)
+- [Referencia de Elementos HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Una referencia completa sobre elementos HTML y cómo los implementan los diferentes navegadores.
 - [Crear una página web sencilla con HTML](https://www.theblogstarter.com/html-for-beginners/)
   - : Una guía HTML para principiantes que incluye explicaciones de etiquetas comunes, incluidas las etiquetas HTML. También incluye una guía paso a paso para crear una página web básica con ejemplos de código.
@@ -39,7 +39,7 @@ Estos recursos son creados por empresas y desarrolladores web con visión de fut
 
 - [Formularios en HTML](/es/docs/Learn_web_development/Extensions/Forms)
   - : Los formularios son una parte muy importante de la Web: brindan gran parte de la funcionalidad que necesita para interactuar con sitios web, por ejemplo, registrarse e iniciar sesión, enviar comentarios, comprar productos y más. Este módulo lo ayuda a comenzar a crear las partes del lado del cliente de los formularios.
-- [Consejos para la creación de páginas HTML de carga rápida](/es/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [Consejos para la creación de páginas HTML de carga rápida](/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : Optimice las páginas web para proporcionar un sitio más receptivo para los visitantes y reducir la carga en su servidor web y conexión a Internet.
 
 ## Tutoriales CSS

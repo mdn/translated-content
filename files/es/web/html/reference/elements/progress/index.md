@@ -23,15 +23,15 @@ label {
 }
 ```
 
-- _[Categorias de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido)_[Flujo de contenido](/es/docs/Web/HTML/Content_categories#flujo_de_contenido), [contenido de redacción](/es/docs/Web/Guide/HTML/categorias_de_contenido#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
-- _Contenido permitido_ [Contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content), pero no debe haber ningún elemento de progreso entre sus descendientes
+- _[Categorias de contenido](/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido)_[Flujo de contenido](/es/docs/Web/HTML/Guides/Content_categories#flujo_de_contenido), [contenido de redacción](/es/docs/Web/HTML/Guides/Content_categories#Contenido_de_redacci%C3%B3n), contenido etiquetable, contenido palpable.
+- _Contenido permitido_ [Contenido de redacción](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content), pero no debe haber ningún elemento de progreso entre sus descendientes
 - _Etiquetas por omisión_ Ninguna, tanto la etiqueta inicial como la final son obligatorias.
-- _Elementos padres permitidos_ Cualquier elemento que acepte [contenido de redacción](/es/docs/Web/HTML/Content_categories#phrasing_content).
+- _Elementos padres permitidos_ Cualquier elemento que acepte [contenido de redacción](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _DOM interfaz_ {{domxref("HTMLProgressElement")}}
 
 ## Atributos
 
-Este elemento incluye [Atributos Globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye [Atributos Globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `max`
   - : Este atributo indica la cantidad de trabajo que demorá la carga, se define en el elemento `progress`. Por ejemplo max="100".

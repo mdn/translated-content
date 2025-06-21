@@ -564,10 +564,10 @@ avg(2, 3, 4, 5); // 3.5
 
 関数が引数のリストを受け入れ、それらがすでに配列にある場合、関数呼び出しの中で[スプレッド構文](/ja/docs/Web/JavaScript/Reference/Operators/Spread_syntax)を使って、配列を要素のリストとして展開することができます。例えば `avg(...numbers)` のようにします。
 
-JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
+JavaScript には名前付き引数がないと述べました。しかし、オブジェクトを便利にパックしたり展開したりできる[オブジェクト構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して実装することは可能です。
 
 ```js
-// { } 中括弧はオブジェクト野分割代入する
+// { } 中括弧はオブジェクトを構造分解する
 function area({ width, height }) {
   return width * height;
 }

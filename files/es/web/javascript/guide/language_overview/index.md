@@ -480,7 +480,7 @@ obj["for"] = "Simon"; // trabaja bien
 > [!NOTE]
 > A partir de ECMAScript 5, las palabras reservadas se pueden utilizar como nombres de propiedad de objeto "en bruto". Esto significa que no necesitan "vestirse" entre comillas al definir objeto literales. Consulta la [especificación](http://es5.github.io/#x7.6.1) de ES5.
 
-Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Objetos_Globales/Object/prototype", "Object.prototype")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Para obtener más información sobre objetos y prototipos, consulta {{jsxref("Objetos_Globales/Object/prototype", "Object.prototype")}}. Para obtener una explicación de los prototipos de objetos y las cadenas de prototipos de objetos, consulta [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 > [!NOTE]
 > A partir de ECMAScript 2015, las claves de objeto se pueden definir mediante la variable en notación de corchetes al crearlas. `{[phoneType]: 12345}` es posible en lugar de solo `var userPhone = {}; userPhone[phoneType] = 12345`.
@@ -736,7 +736,7 @@ Ten en cuenta que las funciones de JavaScript en sí mismas son objetos, como to
 ## Objetos personalizados
 
 > [!NOTE]
-> Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Learn/JavaScript/Objects).
+> Para obtener una descripción más detallada de la programación orientada a objetos en JavaScript, consulta [Introducción a JavaScript orientado a objetos](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects).
 
 En la programación clásica orientada a objetos, los objetos son colecciones de datos y métodos que operan sobre esos datos. JavaScript es un lenguaje basado en prototipos que no contiene una declaración de clase, como la encontrarías en C++ o Java (esto, a veces es confuso para los programadores acostumbrados a lenguajes con una declaración de clase). En cambio, JavaScript usa funciones como clases. Consideremos un objeto `person` con campos `first` y `last name`. Hay dos formas de mostrar el nombre: como "primero último" o como "último, primero". Usando las funciones y objetos que hemos explicado anteriormente, podríamos mostrar los datos de esta manera:
 

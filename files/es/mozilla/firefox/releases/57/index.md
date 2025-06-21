@@ -24,7 +24,7 @@ _No hay ningún cambio._
 
 ### HTML
 
-- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
+- Los tipos [«date»](/es/docs/Web/HTML/Reference/Elements/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
 
 ### CSS
 
