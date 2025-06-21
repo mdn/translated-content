@@ -2,8 +2,6 @@
 title: "HTML 属性: content"
 short-title: content
 slug: Web/HTML/Reference/Attributes/content
-page-type: html-attribute
-browser-compat: html.elements.meta.content
 ---
 
 {{HTMLSidebar}}
@@ -20,10 +18,8 @@ browser-compat: html.elements.meta.content
 
 ### 设置文档的元数据中的描述属性
 
-以下示例中， `<meta>` 标签使用 `name=description` 为文档设置了 “元数据中的描述” 属性。
+以下示例中， `<meta>` 标签使用 `name=description` 为文档设置了“元数据”中的“描述”属性。
 `content` 属性提供了元数据的值：
-The following `<meta>` tag uses `name=description` to set a "meta description" for a document.
-The `content` attribute provides the value for the metadata:
 
 ```html
 <meta
