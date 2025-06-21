@@ -25,5 +25,3 @@ Un {{jsxref("object")}} avec les propriétés suivantes :
 > [!NOTE]
 >
 > Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
->
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
