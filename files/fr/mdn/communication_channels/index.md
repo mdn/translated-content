@@ -1,8 +1,9 @@
 ---
 title: Canaux de communication
-slug: MDN/Community/communication_channels
-sidebar: mdnsidebar
+slug: MDN/Community/Communication_channels
 ---
+
+{{MDNSidebar}}
 
 Il existe divers canaux de communication que la communauté peut utiliser pour contacter l'équipe de MDN Web Docs et participer aux discussions.
 
