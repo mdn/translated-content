@@ -9,7 +9,7 @@ l10n:
 
 El módulo **shadow parts de CSS** define el pseudoelemento {{CSSXref("::part", "::part()")}} que se puede establecer en un [shadow host](/es/docs/Glossary/Shadow_tree). Al usar este pseudoelemento, puedes habilitar shadow hosts para exponer el elemento seleccionado en el shadow tree al exterior de la página para poder estilarlo.
 
-Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de sus respectivos shadow roots. El módulo shadow parts de CSS habilita la inclusión de un atributo [`part`](/es/docs/Web/HTML/Global_attributes#part) en los descendientes de {{HTMLElement("template")}} que componen el elemento personalizado, exponiendo el nodo shadow tree para estilarlo usando el pseudoelemento `::part()`.
+Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de sus respectivos shadow roots. El módulo shadow parts de CSS habilita la inclusión de un atributo [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part) en los descendientes de {{HTMLElement("template")}} que componen el elemento personalizado, exponiendo el nodo shadow tree para estilarlo usando el pseudoelemento `::part()`.
 
 ## Referencia
 
@@ -19,8 +19,8 @@ Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de su
 
 ### Atributos HTML
 
-- [`part`](/es/docs/Web/HTML/Global_attributes#part)
-- [`exportparts`](/es/docs/Web/HTML/Global_attributes#exportparts)
+- [`part`](/es/docs/Web/HTML/Reference/Global_attributes#part)
+- [`exportparts`](/es/docs/Web/HTML/Reference/Global_attributes#exportparts)
 
 ### Definiciones
 

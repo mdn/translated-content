@@ -134,6 +134,6 @@ También puedes comprobar el contraste de color sobre la marcha utilizando las h
 
 ## Ver también
 
-- [Color and color contrast](/es/docs/Learn/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
-- [Multiple labels](/es/docs/Learn/Forms/How_to_structure_a_web_form#multiple_labels)
+- [Color and color contrast](/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast)
+- [Multiple labels](/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form#multiple_labels)
 - [Understanding Non-Text Contrast](https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html)

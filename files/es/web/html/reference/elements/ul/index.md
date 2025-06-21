@@ -16,7 +16,7 @@ original_slug: Web/HTML/Element/ul
 
     **Crea una caja**: En bloque.
 
-    **Puede contener**: Uno o más elementos [li](/es/docs/Web/HTML/Element/li)
+    **Puede contener**: Uno o más elementos [li](/es/docs/Web/HTML/Reference/Elements/li)
 
 #### Atributos
 

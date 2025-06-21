@@ -62,7 +62,7 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes), y los indicados a continuación.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), y los indicados a continuación.
 
 - `type`
 
@@ -174,7 +174,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     Véase el [Estándar WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) para információn más detallada.
 
-    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
+    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Reference/Elements/form#autocomplete) en {{HTMLElement("form")}}.
 
     El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
 
@@ -208,7 +208,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `form`
   - : El elemento form al que está asociado el elemento (su _formulario propietario_). El valor del atributo debe ser el **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento `<input>` deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos `<input>` en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.
 - `formaction`
-  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo [`action`](/es/docs/Web/HTML/Element/form#action) del formulario al que pertenece el elemento.
+  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo [`action`](/es/docs/Web/HTML/Reference/Elements/form#action) del formulario al que pertenece el elemento.
 - `formenctype`
 
   - : Si el elemento es de tipo `submit` o `image`, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
@@ -217,7 +217,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo [`type`](#type) de valor `file`.
     - `text/plain`
 
-    Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Reference/Elements/form#enctype) del formulario al que pertenece el elemento.
 
 - `formmethod`
 
@@ -226,13 +226,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `post`: Los datos del formulario son incluidos en el cuerpo del formulario, y enviados al servidor.
     - `get`: Los datos del formulario son añadidos al URI del **form** con un símbolo '?' como separador, y el URI resultante es enviado al servidor. Se usa este método cuando el formulario no tiene efectos secundarios y contiene solamente caracteres ASCII.
 
-    Si este atributo está especificado, reemplaza al atributo [`method`](/es/docs/Web/HTML/Element/form#method) del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`method`](/es/docs/Web/HTML/Reference/Elements/form#method) del formulario al que pertenece el elemento.
 
 - `formnovalidate`
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) del formulario al que pertenece el elemento.
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo [`novalidate`](/es/docs/Web/HTML/Reference/Elements/form#novalidate) del formulario al que pertenece el elemento.
 - `formtarget`
 
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo [`target`](/es/docs/Web/HTML/Element/form#target) del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo [`target`](/es/docs/Web/HTML/Reference/Elements/form#target) del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
 
     - `_self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
     - `_blank`: Carga la respuesta en un contexto de navegación nuevo.

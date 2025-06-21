@@ -71,7 +71,7 @@ El **elemento HTML `<source>`** especifica recursos de medios múltiples para lo
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `sizes` {{experimental_inline}}
   - : Es una lista de tamaños del origen que describe el ancho renderizado final de la imagen representada por el origen. Cada tamaño de origen consiste de una lista separada por comas de pares de longitud de condición de medios. Esta información es utilizada por el navegador para determinar, antes de distribuir la página, qué imagen definida en [`srcset`](#srcset) se utilizará.

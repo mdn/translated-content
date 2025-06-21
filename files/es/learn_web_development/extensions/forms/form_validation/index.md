@@ -68,8 +68,8 @@ Hay dos tipos diferentes de validación por parte del cliente que encontrarás e
 Una de las características más importantes de los [controles de formulario de HTML5](/es/docs/Learn_web_development/Extensions/Forms/HTML5_input_types) es la capacidad de validar la mayoría de los datos de usuario sin depender de JavaScript. Esto se realiza mediante el uso de atributos de validación en los elementos del formulario. Los hemos visto anteriormente en el curso, pero recapitulamos aquí:
 
 - [`required`](/es/docs/Web/HTML/Attributes/required): Especifica si un campo de formulario debe completarse antes de que se pueda enviar el formulario.
-- [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
-- [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max): Especifican los valores mínimo y máximo de los tipos de entrada numéricos.
+- [`minlength`](/es/docs/Web/HTML/Reference/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength): Especifican la longitud mínima y máxima de los datos de texto (cadenas).
+- [`min`](/es/docs/Web/HTML/Reference/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max): Especifican los valores mínimo y máximo de los tipos de entrada numéricos.
 - `type`: Especifica si los datos deben ser un número, una dirección de correo electrónico o algún otro tipo de preajuste específico.
 - [`pattern`](/es/docs/Web/HTML/Attributes/pattern): Especifica una [expresión regular](/es/docs/Web/JavaScript/Guide/Regular_expressions) que define un patrón que los datos que se introduzcan deben seguir.
 
@@ -211,20 +211,20 @@ En este punto, intenta cambiar el valor dentro del atributo [`pattern`](/es/docs
 Si un valor no vacío de {{HTMLElement("input")}} no coincide con el patrón de la expresión regular, `input` coincidirá con la pseudoclase {{cssxref(':invalid')}}.
 
 > [!NOTE]
-> Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple).
+> Algunos tipos de elementos {{HTMLElement ("input")}} no necesitan validar una expresión regular con el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern). Especificar el tipo de correo electrónico (`email`), por ejemplo, valida el valor de las entradas con un patrón de dirección de correo electrónico bien formado o un patrón que coincida con una lista de direcciones de correo electrónico separadas por comas si tiene el atributo [`multiple`](/es/docs/Web/HTML/Reference/Attributes/multiple).
 
 > [!NOTE]
 > El elemento {{HTMLElement("textarea")}} no admite el atributo [`pattern`](/es/docs/Web/HTML/Attributes/pattern).
 
 ### Restringir la longitud de tus entradas
 
-Puedes restringir la longitud de los caracteres de todos los campos de texto creados por {{HTMLElement("input")}} o {{HTMLElement("textarea")}} utilizando los atributos [`minlength`](/es/docs/Web/HTML/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength). Un campo no es válido si tiene un valor y ese valor tiene menos caracteres que el valor de longitud mínima ([`minlength`](/es/docs/Web/HTML/Attributes/minlength)), o más que el valor de longitud máxima ([`maxlength`](/es/docs/Web/HTML/Attributes/maxlength)).
+Puedes restringir la longitud de los caracteres de todos los campos de texto creados por {{HTMLElement("input")}} o {{HTMLElement("textarea")}} utilizando los atributos [`minlength`](/es/docs/Web/HTML/Reference/Attributes/minlength) y [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength). Un campo no es válido si tiene un valor y ese valor tiene menos caracteres que el valor de longitud mínima ([`minlength`](/es/docs/Web/HTML/Reference/Attributes/minlength)), o más que el valor de longitud máxima ([`maxlength`](/es/docs/Web/HTML/Attributes/maxlength)).
 
 Los navegadores a menudo no permiten que el usuario escriba un valor más largo de lo esperado en los campos de texto. Lo que otorga una mejor experiencia de usuario que `maxlength` es proporcionar comentarios de recuento de caracteres de manera accesible y permitirles editar su contenido a un tamaño más reducido. Un ejemplo de esto es el límite de caracteres de Twitter. JavaScript, incluidas las [soluciones que utilizan `maxlength`](https://github.com/mimo84/bootstrap-maxlength), se puede utilizar para proporcionar esta funcionalidad.
 
 ### Restringir los valores de tus entradas
 
-Los atributos [`min`](/es/docs/Web/HTML/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max) se pueden usar para proporcionar a los campos numéricos (es decir, [`<input type="number">`](/es/docs/Web/HTML/Element/input/number)) un rango de valores válidos. El campo no será válido si contiene un valor fuera de este rango.
+Los atributos [`min`](/es/docs/Web/HTML/Reference/Attributes/min) y [`max`](/es/docs/Web/HTML/Attributes/max) se pueden usar para proporcionar a los campos numéricos (es decir, [`<input type="number">`](/es/docs/Web/HTML/Reference/Elements/input/number)) un rango de valores válidos. El campo no será válido si contiene un valor fuera de este rango.
 
 Veamos otro ejemplo. Crea una nueva copia del archivo [fruit-start.html](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-start.html).
 
@@ -379,26 +379,26 @@ Debes usar JavaScript si quieres controlar la apariencia de los mensajes de erro
 
 La mayoría de los navegadores admiten la [API de validación de restricciones](/es/docs/Learn_web_development/Extensions/Forms/Form_validation), que consta de un conjunto de métodos y propiedades disponibles en las interfaces DOM de elementos de formulario siguientes:
 
-- [`HTMLButtonElement`](/es/docs/Web/API/HTMLButtonElement) (representa un elemento [`<button>`](/es/docs/Web/HTML/Element/button))
-- [`HTMLFieldSetElement`](/es/docs/Web/API/HTMLFieldSetElement) (representa un elemento [`<fieldset>`](/es/docs/Web/HTML/Element/fieldset))
-- [`HTMLInputElement`](/es/docs/Web/API/HTMLInputElement) (representa un elemento [`<input>`](/es/docs/Web/HTML/Element/input))
+- [`HTMLButtonElement`](/es/docs/Web/API/HTMLButtonElement) (representa un elemento [`<button>`](/es/docs/Web/HTML/Reference/Elements/button))
+- [`HTMLFieldSetElement`](/es/docs/Web/API/HTMLFieldSetElement) (representa un elemento [`<fieldset>`](/es/docs/Web/HTML/Reference/Elements/fieldset))
+- [`HTMLInputElement`](/es/docs/Web/API/HTMLInputElement) (representa un elemento [`<input>`](/es/docs/Web/HTML/Reference/Elements/input))
 - [`HTMLOutputElement`](/es/docs/Web/API/HTMLOutputElement) (representa un elemento [`<output>`](/es/docs/Web/HTML/Element/output))
-- [`HTMLSelectElement`](/es/docs/Web/API/HTMLSelectElement) (representa un elemento [`<select>`](/es/docs/Web/HTML/Element/select))
-- [`HTMLTextAreaElement`](/es/docs/Web/API/HTMLTextAreaElement) (representa un elemento [`<textarea>`](/es/docs/Web/HTML/Element/textarea))
+- [`HTMLSelectElement`](/es/docs/Web/API/HTMLSelectElement) (representa un elemento [`<select>`](/es/docs/Web/HTML/Reference/Elements/select))
+- [`HTMLTextAreaElement`](/es/docs/Web/API/HTMLTextAreaElement) (representa un elemento [`<textarea>`](/es/docs/Web/HTML/Reference/Elements/textarea))
 
 La API de validación de restricciones hace que las propiedades siguientes estén disponibles en los elementos anteriores.
 
 - `validationMessage`: Devuelve un mensaje localizado que describe las restricciones de validación que el control no satisface (si corresponde). Si el control no es candidato para la validación de restricciones (`willValidate` es `false`) o el valor del elemento satisface sus restricciones (es válido), esto devolverá una cadena vacía.
 - `validity`: Devuelve un objeto `ValidityState` que contiene varias propiedades que describen el estado de validez del elemento. Puedes encontrar todos los detalles de todas las propiedades disponibles en la página de referencia {{domxref("ValidityState")}}; a continuación se enumeran algunos de los más comunes:
 
-  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el [`pattern`](/es/docs/Web/HTML/Element/input#pattern) especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo [`maxlength`](/es/docs/Web/HTML/Element/input#maxlength), o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo [`minlength`](/es/docs/Web/HTML/Element/input#minlength), o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
-  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve `true` si el valor es mayor que el máximo especificado por el atributo [`max`](/es/docs/Web/HTML/Element/input#max), o `false` si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve `true` si el valor es menor que el mínimo especificado por el atributo [`min`](/es/docs/Web/HTML/Element/input#min), o `false` si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
-  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve `true` si el valor no está en la sintaxis requerida (cuando [`type`](/es/docs/Web/HTML/Element/input#type) es `email` o `url`), o `false` si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el [`pattern`](/es/docs/Web/HTML/Reference/Elements/input#pattern) especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo [`maxlength`](/es/docs/Web/HTML/Reference/Elements/input#maxlength), o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo [`minlength`](/es/docs/Web/HTML/Reference/Elements/input#minlength), o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - {{domxref("ValidityState.rangeOverflow", "rangeOverflow")}}: Devuelve `true` si el valor es mayor que el máximo especificado por el atributo [`max`](/es/docs/Web/HTML/Reference/Elements/input#max), o `false` si es menor o igual que el máximo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
+  - {{domxref("ValidityState.rangeUnderflow", "rangeUnderflow")}}: Devuelve `true` si el valor es menor que el mínimo especificado por el atributo [`min`](/es/docs/Web/HTML/Reference/Elements/input#min), o `false` si es mayor o igual que el mínimo. Si es verdadero, el elemento coincide con las pseudoclases {{cssxref(":invalid")}} y {{cssxref(":out-of-range")}} de CSS.
+  - {{domxref("ValidityState.typeMismatch", "typeMismatch")}}: Devuelve `true` si el valor no está en la sintaxis requerida (cuando [`type`](/es/docs/Web/HTML/Reference/Elements/input#type) es `email` o `url`), o `false` si la sintaxis es correcta. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
   - `valid`: Devuelve `true` si el elemento cumple con todas sus restricciones de validación y por lo tanto se considera válido, o `false` si falla alguna restricción. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":valid")}} de CSS; o con la pseudoclase {{cssxref(":invalid")}} de CSS de lo contrario.
-  - `valueMissing`: Devuelve `true` si el elemento tiene un atributo [`required`](/es/docs/Web/HTML/Element/input#required) pero no tiene valor, o `false` de lo contrario. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
+  - `valueMissing`: Devuelve `true` si el elemento tiene un atributo [`required`](/es/docs/Web/HTML/Reference/Elements/input#required) pero no tiene valor, o `false` de lo contrario. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
 
 - `willValidate`: Devuelve `true` si el elemento se valida cuando se envía el formulario; `false` de lo contrario.
 
@@ -480,7 +480,7 @@ En primer lugar, el código HTML. Una vez más, siéntete libre de construir est
 
 Este sencillo formulario usa el atributo [`novalidate`](/es/docs/Web/HTML/Attributes/novalidate) para desactivar la validación automática del navegador; esto permite que nuestra secuencia de comandos tome control sobre la validación. Sin embargo, esto no deshabilita la compatibilidad para la API de validación de restricciones ni la aplicación de pseudoclases de CSS como {{cssxref(":valid")}}, etc. Eso significa que, aunque el navegador no verifica automáticamente la validez del formulario antes de enviar los datos, puedes hacerlo tú mismo y diseñar el formulario en consecuencia.
 
-Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Element/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
+Nuestra entrada para validar es [`<input type="email">`](/es/docs/Web/HTML/Reference/Elements/input/email), que es obligatoria y tiene una longitud mínima (`minlength`) de 8 caracteres. Vamos a verificar esto con nuestro propio código para que muestre un mensaje de error personalizado para cada elemento.
 
 Nuestro objetivo es mostrar los mensajes de error dentro de un elemento `<span>`. El atributo [`aria-live`](/es/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) se establece en ese `<span>` para asegurar que todo el mundo podrá ver nuestro mensaje de error personalizado, incluidos los usuarios de lectores de pantalla.
 
