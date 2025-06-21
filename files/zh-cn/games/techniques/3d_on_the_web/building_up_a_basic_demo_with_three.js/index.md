@@ -176,7 +176,7 @@ cube.rotation.set(0.4, 0.2, 0);
 
 ## Three.js 形状示例
 
-如果你已经顺利地完成了所有步骤，那么你已经使用 Three.js 在 3D 环境中创建了第一个对象！这比你想象的要容易得多，对吗？你的代码应该与下面的实时示例相似。可以点击“Play”在 MDN Playground 中查看和编辑代码：
+如果你已经顺利地完成了所有步骤，那么你已经使用 Three.js 在 3D 环境中创建了第一个对象！这比你想象的要容易得多，对吗？你的代码应该与下面的实时示例相似。可以点击“Play”在 MDN 代码演练场中查看和编辑代码：
 
 ```html hidden live-sample___three-js-intro
 <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
@@ -314,7 +314,7 @@ dodecahedron.position.y = -7 * Math.sin(t * 2);
 
 ## Three.js 动画示例
 
-下面是带有动画形状的最终代码。你可以点击“Play”在 MDN Playground 中编辑示例：
+下面是带有动画形状的最终代码。你可以点击“Play”在 MDN 代码演练场中编辑示例：
 
 ```html hidden live-sample___three-js-animation
 <script src="https://cdn.jsdelivr.net/npm/three-js@79.0.0/three.min.js"></script>
