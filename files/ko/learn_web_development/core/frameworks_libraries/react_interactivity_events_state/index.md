@@ -78,7 +78,7 @@ function handleSubmit(e) {
 }
 ```
 
-이 함수를 사용하려면, [`<form>`](/ko/docs/Web/HTML/Element/form) 요소에 `onSubmit` 속성을 추가하고, 해당 값을 `handleSubmit` 함수로 설정합니다.
+이 함수를 사용하려면, [`<form>`](/ko/docs/Web/HTML/Reference/Elements/form) 요소에 `onSubmit` 속성을 추가하고, 해당 값을 `handleSubmit` 함수로 설정합니다.
 
 ```jsx
 <form onSubmit={handleSubmit}>
@@ -152,7 +152,7 @@ const [name, setName] = useState("Use hooks!");
 
 - 초기 `name` 값을 "Use hooks!"로 설정하고 있습니다.
 - `setName()`이라고 불리는 `name`을 수정하는 일을 하는 함수를 정의하고 있습니다.
-- `useState()`는 이 두 가지를 반환하므로, [배열 비구조화](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 사용하여 두 가지를 별도의 변수로 캡처합니다.
+- `useState()`는 이 두 가지를 반환하므로, [배열 비구조화](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 사용하여 두 가지를 별도의 변수로 캡처합니다.
 
 ### 상태 읽기
 

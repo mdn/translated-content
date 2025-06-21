@@ -64,7 +64,7 @@ l10n:
 웹이 처음 등장한 90년대 초중반에는 이러한 문제가 존재하지 않았습니다. 당시에는 웹을 탐색할 수 있는 기기가 데스크톱과 노트북뿐이었기 때문에 브라우저 엔지니어와 사양 작성자는 해결책을 구현할 생각조차 하지 못했죠. 반응형 이미지 기술은 위에서 언급한 문제를 해결하기 위해 최근에 구현된 기술로, 동일한 내용을 표시하지만 픽셀 수가 다른 여러 이미지 파일을 브라우저에 제공하거나(해상도 전환), 공간 할당에 적합한 다른 이미지를 제공(아트 디렉션)할 수 있도록 합니다.
 
 > [!NOTE]
-> 이 문서에서 설명하는 새로운 기능인 [srcset](/ko/docs/Web/HTML/Element/img#srcset)/[sizes](/ko/docs/Web/HTML/Element/img#sizes)/{{htmlelement("picture")}} 은 최신 데스크톱 및 모바일 브라우저에서 모두 지원됩니다.
+> 이 문서에서 설명하는 새로운 기능인 [srcset](/ko/docs/Web/HTML/Reference/Elements/img#srcset)/[sizes](/ko/docs/Web/HTML/Reference/Elements/img#sizes)/{{htmlelement("picture")}} 은 최신 데스크톱 및 모바일 브라우저에서 모두 지원됩니다.
 
 ## 반응형 이미지를 어떻게 만드나요?
 
@@ -78,7 +78,7 @@ l10n:
 <img src="elva-fairy-800w.jpg" alt="요정 옷을 입은 엘바" />
 ```
 
-그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Element/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
+그러나 두 가지 속성([`srcset`](/ko/docs/Web/HTML/Reference/Elements/img#srcset) 및 [`sizes`](/ko/docs/Web/HTML/Reference/Elements/img#sizes))을 사용하여 브라우저가 올바른 이미지를 선택하는 데 도움이 되는 힌트와 함께 여러 개의 추가 소스 이미지를 제공할 수 있습니다. 이에 대한 예제는 GitHub의 [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) 예제에서 확인할 수 있습니다([소스 코드](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html) 참조).
 
 ```html
 <img
@@ -120,7 +120,7 @@ l10n:
 >
 > 어떤 이미지가 로드되었는지 확인하려면 Firefox 개발자 도구의 [네트워크 모니터](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) 탭 또는 Chrome 개발자 도구의 [네트워크](https://developer.chrome.com/docs/devtools/network/) 패널을 사용하면 됩니다. Chrome의 경우 [캐시를 비활성화](https://stackoverflow.com/questions/5690269/disabling-chrome-cache-for-website-development/7000899#7000899)하여 이미 다운로드한 이미지를 선택하지 못하도록 할 수도 있습니다.
 
-이러한 기능을 지원하지 않는 구형 브라우저는 이를 무시합니다. 대신 해당 브라우저는 [`src`](/ko/docs/Web/HTML/Element/img#src) 속성에 참조된 이미지를 정상적으로 로드합니다.
+이러한 기능을 지원하지 않는 구형 브라우저는 이를 무시합니다. 대신 해당 브라우저는 [`src`](/ko/docs/Web/HTML/Reference/Elements/img#src) 속성에 참조된 이미지를 정상적으로 로드합니다.
 
 > [!NOTE]
 > 위에 링크된 예제의 {{htmlelement("head")}}에 `<meta name="viewport" content="width=device-width">`라는 줄이 있는데, 이는 모바일 브라우저가 웹 페이지를 로드할 때 실제 뷰포트 너비를 적용하도록 합니다. 일부 모바일 브라우저는 뷰포트 너비를 속이고 더 큰 뷰포트 너비로 페이지를 로드한 다음 로드한 페이지를 축소하므로 반응형 이미지나 디자인에 도움이 되지 않습니다.
@@ -197,7 +197,7 @@ img {
 여기까지 반응형 이미지에 대해 알아보았습니다. 새로운 기술을 사용해 보셨기를 바랍니다. 요약하자면, 여기서 논의한 문제는 크게 두 가지입니다.
 
 - **아트 디렉션**: 데스크톱 레이아웃에는 전체 장면을 보여주는 가로 이미지를, 모바일 레이아웃에는 주요 피사체를 확대하여 보여주는 세로 이미지를 제공하는 등 다양한 레이아웃에 맞게 잘린 이미지를 제공하려는 경우 문제가 발생할 수 있습니다. 이 문제는 {{htmlelement("picture")}} 요소를 사용하여 해결할 수 있습니다.
-- **해상도 전환**: 데스크톱 디스플레이처럼 큰 이미지가 필요하지 않은 좁은 화면 기기에는 작은 이미지 파일을 제공하고, 고밀도/저밀도 화면에는 서로 다른 해상도의 이미지를 제공하려는 경우 문제가 발생할 수 있습니다. [`벡터 그래픽`](/ko/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)(SVG 이미지)과 [`sizes`](/ko/docs/Web/HTML/Element/img#sizes) 속성이 있는 [`srcset`](/ko/docs/Web/HTML/Element/img#srcset)을 사용하여 이 문제를 해결할 수 있습니다.
+- **해상도 전환**: 데스크톱 디스플레이처럼 큰 이미지가 필요하지 않은 좁은 화면 기기에는 작은 이미지 파일을 제공하고, 고밀도/저밀도 화면에는 서로 다른 해상도의 이미지를 제공하려는 경우 문제가 발생할 수 있습니다. [`벡터 그래픽`](/ko/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)(SVG 이미지)과 [`sizes`](/ko/docs/Web/HTML/Reference/Elements/img#sizes) 속성이 있는 [`srcset`](/ko/docs/Web/HTML/Reference/Elements/img#srcset)을 사용하여 이 문제를 해결할 수 있습니다.
 
 이것으로 [멀티미디어 및 임베딩](/ko/docs/conflicting/Learn_web_development/Core/Structuring_content_010016f551c464adb3e557818ac7189b) 모듈 전체가 끝났습니다! 이제 다음 단계로 넘어가기 전에 해야 할 일은 [멀티미디어 및 임베딩 평가](/ko/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page)에 도전해보고 여러분의 실력을 확인하는 것입니다. 즐거운 시간 보내세요!
 

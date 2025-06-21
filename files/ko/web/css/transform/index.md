@@ -43,7 +43,7 @@ transform: scale(0.5) translate(-100%, -100%);
 </section>
 ```
 
-`none`이 아닌 값을 지정하면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)을 생성합니다. 이 경우, {{cssxref("position")}}이 `fixed`거나 `absolute`인 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block)으로서 작용합니다.
+`none`이 아닌 값을 지정하면 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)을 생성합니다. 이 경우, {{cssxref("position")}}이 `fixed`거나 `absolute`인 요소의 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block)으로서 작용합니다.
 
 > [!WARNING]
 > 변형 가능한 요소만 `transform`할 수 있습니다. 즉, CSS 박스 모델이 레이아웃을 결정하는 모든 요소 중 [비대체 인라인 박스](/ko/docs/Web/CSS/Visual_formatting_model#Inline-level_elements_and_inline_boxes), [표 열 박스](/ko/docs/Web/HTML/Element/col), [표 열 그룹 박스](/ko/docs/Web/HTML/Element/colgroup)를 제외한 요소에만 적용할 수 있습니다.

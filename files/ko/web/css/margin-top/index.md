@@ -59,7 +59,7 @@ margin-top: 0;
 }
 ```
 
-{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/Replaced_element)non-replaced 인라인 요소에는 효과가 없습니다.
+{{HTMLElement("span")}}, {{HTMLElement("code")}} 등 [비대체](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)non-replaced 인라인 요소에는 효과가 없습니다.
 
 ## 구문
 

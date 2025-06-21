@@ -39,7 +39,7 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 
 ### 사각형
 
-[rect](/ko/docs/Web/SVG/Element/rect) 요소는 당신이 생각하는 것과 일치하며 화면에 사각형을 그린다. 여기에는 화면상에서 직사각형의 위치와 모양을 제어하는 6가지 기본 속성만 있다. 앞서 보여준 이미지는 두 개의 rect 요소를 보여주며 약간 중복된다. 오른쪽에 있는 이미지는 rx 와 ry 속성이 설정되어 있어서 모서리가 둥글다. rx 와 ry 가 설정되지 않은 경우에는 기본값 0으로 들어간다.
+[rect](/ko/docs/Web/SVG/Reference/Element/rect) 요소는 당신이 생각하는 것과 일치하며 화면에 사각형을 그린다. 여기에는 화면상에서 직사각형의 위치와 모양을 제어하는 6가지 기본 속성만 있다. 앞서 보여준 이미지는 두 개의 rect 요소를 보여주며 약간 중복된다. 오른쪽에 있는 이미지는 rx 와 ry 속성이 설정되어 있어서 모서리가 둥글다. rx 와 ry 가 설정되지 않은 경우에는 기본값 0으로 들어간다.
 
 ```xml
 <rect x="10" y="10" width="30" height="30"/>
@@ -61,7 +61,7 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 
 ### 원
 
-당신이 추측한 것 처럼, [circle](/ko/docs/Web/SVG/Element/circle) 요소는 화면에 원을 그린다. circle 요소에 실제로 적용할 수 있는 속성은 세 가지 뿐이다.
+당신이 추측한 것 처럼, [circle](/ko/docs/Web/SVG/Reference/Element/circle) 요소는 화면에 원을 그린다. circle 요소에 실제로 적용할 수 있는 속성은 세 가지 뿐이다.
 
 ```html
 <circle cx="25" cy="75" r="20" />
@@ -76,7 +76,7 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 
 ### 타원
 
-[Ellipse](/ko/docs/Web/SVG/Element/ellipse)는 원의 x와 y 반경 (수학자들은 장반경, 단반경 이라고 함)을 개별적으로 확장 할 수 있는 circle 요소의 좀 더 일반적인 형태이다.
+[Ellipse](/ko/docs/Web/SVG/Reference/Element/ellipse)는 원의 x와 y 반경 (수학자들은 장반경, 단반경 이라고 함)을 개별적으로 확장 할 수 있는 circle 요소의 좀 더 일반적인 형태이다.
 
 ```html
 <ellipse cx="75" cy="75" rx="20" ry="5" />
@@ -93,7 +93,7 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 
 ### 선
 
-[Line](/ko/docs/Web/SVG/Element/line)s은 단지 직선이다. line 요소는 선의 시작과 끝 지점을 지정하는 두 점을 속성으로 갖는다.
+[Line](/ko/docs/Web/SVG/Reference/Element/line)s은 단지 직선이다. line 요소는 선의 시작과 끝 지점을 지정하는 두 점을 속성으로 갖는다.
 
 ```html
 <line x1="10" x2="50" y1="110" y2="150" />
@@ -134,13 +134,13 @@ SVG 드로잉에는 몇 가지 기본 도형들이 있다. 도형들의 목적�
 
 ### 패스
 
-[패스](/ko/docs/Web/SVG/Element/path)는 아마 SVG에서 사용할 수 있는 가장 일반적인 형태일 것이다. path 요소를 사용해서 당신은 사각형(둥근 모서리가 있거나 없는), 원, 타원, 폴리라인 및 다각형을 그릴 수 있다. 기본적으로 다른 모든 종류의 모양, 베지에 곡선, 2차원 곡선 등이 가능하다. 그러한 이유로, paths 는 튜토리얼의 [the next section](/ko/docs/Web/SVG/Tutorial/Paths) 에 들어가지만, 지금은 모양을 제어하는 데 사용되는 단일 속성이 있음을 알려주겠다.
+[패스](/ko/docs/Web/SVG/Element/path)는 아마 SVG에서 사용할 수 있는 가장 일반적인 형태일 것이다. path 요소를 사용해서 당신은 사각형(둥근 모서리가 있거나 없는), 원, 타원, 폴리라인 및 다각형을 그릴 수 있다. 기본적으로 다른 모든 종류의 모양, 베지에 곡선, 2차원 곡선 등이 가능하다. 그러한 이유로, paths 는 튜토리얼의 [the next section](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) 에 들어가지만, 지금은 모양을 제어하는 데 사용되는 단일 속성이 있음을 알려주겠다.
 
 ```html
 <path d="M 20 230 Q 40 205, 50 230 T 90230" />
 ```
 
 - `d`
-  - : A list of points and other information about how to draw the path. See the [Paths](/ko/docs/Web/SVG/Tutorial/Paths) section for more information.
+  - : A list of points and other information about how to draw the path. See the [Paths](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) section for more information.
 
 {{ PreviousNext("Web/SVG/Tutorial/Positions", "Web/SVG/Tutorial/Paths") }}

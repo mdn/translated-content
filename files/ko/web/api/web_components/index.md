@@ -55,7 +55,7 @@ slug: Web/API/Web_components
 
   - : The following extensions are defined:
 
-    - [`is`](/ko/docs/Web/HTML/Global_attributes#is) 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
+    - [`is`](/ko/docs/Web/HTML/Reference/Global_attributes#is) 전역 HTML 어트리뷰트: 표준 HTML 엘리먼트가 등록된 커스텀 내장 엘리먼트처럼 동작하도록 지정을 허용합니다.
     - {{domxref("Document.createElement()")}} 메소드의 "is" 옵션: 주어진 등록된 커스텀 내장 엘리먼트처럼 동작하는 표준 HTML 엘리먼트의 인스턴스를 생성하는 것을 허용합니다.
 
 - CSS 수도(pseudo) 클래스
@@ -100,7 +100,7 @@ slug: Web/API/Web_components
   - : 다큐먼트가 처음 로드될 때 렌더링되지 않지만 JavaScript를 사용하는 런타임에 나타나는 HTML 조각을 포함합니다. 주로 커스텀 엘리먼트 구조의 기본으로 사용됩니다. 관련된 DOM 인터페이스로 {{domxref("HTMLTemplateElement")}} 가 있습니다.
 - {{htmlelement("slot")}}
   - : 자신만의 마크업으로 채울 수 있는 웹 컴포넌트 내부의 placeholder 입니다. 별도의 DOM 트리로 생성하고 함께 보여줄 수 있게 해줍니다. 관련된 DOM 인터페이스로 {{domxref("HTMLSlotElement")}} 가 있습니다.
-- [`slot`](/ko/docs/Web/HTML/Global_attributes/slot) 전역 HTML 어트리뷰트
+- [`slot`](/ko/docs/Web/HTML/Reference/Global_attributes/slot) 전역 HTML 어트리뷰트
   - : shadow DOM shadow 트리내의 slot을 엘리먼트로 할당합니다.
 - {{domxref("Slotable")}}
 

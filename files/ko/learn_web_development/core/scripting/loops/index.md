@@ -875,7 +875,7 @@ do {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 반복문](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 반복문](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops).
 
 ## 결론
 

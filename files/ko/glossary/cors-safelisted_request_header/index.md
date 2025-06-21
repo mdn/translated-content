@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-[CORS 허용 목록에 있는 요청 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)는 다음 [HTTP 헤더](/ko/docs/Web/HTTP/Headers) 중 하나입니다.
+[CORS 허용 목록에 있는 요청 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)는 다음 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers) 중 하나입니다.
 
 - {{HTTPHeader("Accept")}},
 - {{HTTPHeader("Accept-Language")}},
