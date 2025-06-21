@@ -1,9 +1,8 @@
 ---
 title: Canaux de communication
 slug: MDN/Community/communication_channels
+sidebar: mdnsidebar
 ---
-
-{{MDNSidebar}}
 
 Il existe divers canaux de communication que la communauté peut utiliser pour contacter l'équipe de MDN Web Docs et participer aux discussions.
 
@@ -21,9 +20,10 @@ Rejoignez la communauté MDN Web Docs via notre [invitation Discord](/discord).
 
 Les salles de discussion Matrix sont une alternative au serveur Discord.
 
-- [Salle MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur l'application web Mozilla Element
-- [Salle MDN](https://app.element.io/#/room/#mdn:mozilla.org) sur l'application web Matrix Element
-- [Salle Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org)
+- [Salon du MDN](https://chat.mozilla.org/#/room/#mdn:mozilla.org) sur l'application web Mozilla Element
+- [Salon du MDN](https://app.element.io/#/room/#mdn:mozilla.org) sur l'application web Matrix Element
+- [Salon du MDN Français](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org) sur l'application web Mozilla Element
+- [Salon des Add-ons](https://chat.mozilla.org/#/room/#addons:mozilla.org)
 - [Liste de toutes les salles Mozilla](https://wiki.mozilla.org/Matrix#Commonly_used_rooms)
 
 ## Discussions sur GitHub
@@ -39,7 +39,7 @@ Consultez les [lignes directrices pour les discussions](/fr/docs/MDN/Community/D
 
 ## Réseaux sociaux
 
-Vous pouvez suivre MDN Web Docs sur [Mastodon](https://mozilla.social/@mdn) et [X](https://x.com/MozDevNet).
+Vous pouvez suivre MDN Web Docs sur [Bluesky](https://bsky.app/profile/developer.mozilla.org), [Mastodon](https://mozilla.social/@mdn) et [X](https://x.com/MozDevNet).
 N'hésitez pas à nous mentionner dans vos publications si vous souhaitez partager quelque chose avec nous ou nous dire bonjour, bien que nous ne puissions pas garantir de répondre à tout.
 
 ## Forums
@@ -49,3 +49,11 @@ Vous pouvez utiliser les forums listés ci-dessous pour discuter des problèmes 
 - [Forum Discourse MDN](https://discourse.mozilla.org/c/mdn/236)
 - [Catégorie d'apprentissage du forum Discourse MDN](https://discourse.mozilla.org/c/mdn/learn/250)
 - [Forum Add-ons Discourse](https://discourse.mozilla.org/c/add-ons/35)
+
+## Les canaux de traduction
+
+Chaque équipe de traduction a une [méthode de communication](/fr/docs/MDN/Community/Translated_content).
+
+## Courriel
+
+Pour toute communication privée, envoyez un courriel à [mdn-web-docs@mozilla.com](mailto:mdn-web-docs@mozilla).
