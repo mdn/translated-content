@@ -1,9 +1,9 @@
 ---
 title: "Tableaux HTML : dispositions avancées et accessibilité"
-slug: Learn/HTML/Tables/Advanced
+slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
 
 Dans le second article de ce module, nous examinerons quelques dispositions avancées des tableaux HTML — comme intitulés ou résumés, groupement des rangées dans l'en-tête, le corps ou le pied de page du tableau — ainsi que l'accessibilité des tableaux aux utilisateurs malvoyants.
 
@@ -13,7 +13,7 @@ Dans le second article de ce module, nous examinerons quelques dispositions avan
       <th scope="row">Prérequis&nbsp;:</th>
       <td>
         Les bases de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
+        <a href="/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
           >Introduction au HTML</a
         >).
       </td>
@@ -424,4 +424,4 @@ En revenant à notre exemple de tableau des dépenses et des coûts, les deux ex
 
 Il reste encore quelques autres choses à apprendre sur les tableaux HTML, mais nous vous avons vraiment indiqué tout ce qu'il est nécessaire de savoir pour le moment. À ce stade, vous voulez peut-être en apprendre plus sur les styles de tableaux HTML — voyez alors [Décor des tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables).
 
-{{PreviousMenuNext("Learn/HTML/Tables/Basics", "Learn/HTML/Tables/Structuring_planet_data", "Learn/HTML/Tables")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_table_basics", "Learn_web_development/Core/Structuring_content/Planet_data_table", "Learn_web_development/Core/Structuring_content")}}
