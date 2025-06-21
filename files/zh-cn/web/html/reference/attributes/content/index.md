@@ -6,7 +6,7 @@ slug: Web/HTML/Reference/Attributes/content
 
 {{HTMLSidebar}}
 
-**`content`** 属性指定了由 <meta> 标签的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name) 属性定义的元数据名称的值。
+**`content`** 属性指定了由 `<meta>` 标签的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/meta/name) 属性定义的元数据名称的值。
 它接受一个字符串作为其值，并且预期的语法会根据所使用的 `name` 的值的变化而变化。
 
 ## 值
