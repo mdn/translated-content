@@ -25,7 +25,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。Microsoft Edge の互換性データは Microsoft Corporation から提供されており、Creative Commons Attribution 3.0 United States License のもとにここに含まれています。
+> この API は Chromium の[`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#type-MutedInfoReason) API に基づいています。このドキュメントは Chromium コードの[`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json)から派生したものです。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

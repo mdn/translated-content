@@ -253,12 +253,12 @@ function draw() {
 
 ```js
 function draw() {
-  var canvas = document.getElementById('canvas');
+  var canvas = document.getElementById("canvas");
   if (canvas.getContext) {
-    var ctx = canvas.getContext('2d');
+    var ctx = canvas.getContext("2d");
 
-    for (var i = 0; i &#x3C; 4; i++) {
-      for (var j = 0; j &#x3C; 3; j++) {
+    for (var i = 0; i < 4; i++) {
+      for (var j = 0; j < 3; j++) {
         ctx.beginPath();
         var x = 25 + j * 50; // x coordinate
         var y = 25 + i * 50; // y coordinate

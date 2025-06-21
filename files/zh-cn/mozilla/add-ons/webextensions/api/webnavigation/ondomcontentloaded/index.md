@@ -38,7 +38,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
   - : 为当此事件发生时需要被调用的函数。该函数将传递以下参数：
 
     - `details`
-      - : `object`。有关导航事件的详细信息。参见 [details](#details_2) 小节以获取更多信息。
+      - : `object`。有关导航事件的详细信息。参见 [details](#details) 一节以获取更多信息。
 
 - `filter`{{optional_inline}}
   - : `object`。包含单个属性 `url` 的对象，这是一个 {{WebExtAPIRef("events.UrlFilter")}} {{jsxref("Array")}} 对象。如果包含此参数，则该事件将仅触发转换为与数组中至少一个 `UrlFilter` 匹配的 URL。如果省略此参数，则该事件将触发所有转换。

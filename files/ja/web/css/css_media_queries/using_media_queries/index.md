@@ -1,30 +1,64 @@
 ---
 title: メディアクエリーの使用
 slug: Web/CSS/CSS_media_queries/Using_media_queries
+l10n:
+  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
 {{CSSRef}}
 
-**メディアクエリー**は、一般的な端末の種類 (プリンタと画面など)や特定の特性 (画面の解像度やブラウザーの{{glossary("viewport", "ビューポート")}}の幅など) に応じてサイトやアプリを変更したいときに便利です。
+**メディアクエリー**によって、端末の種類（プリンターや画面など）や、画面の解像度、向き、{{glossary("aspect ratio", "アスペクト比")}}、ブラウザーの{{glossary("viewport", "ビューポート")}}の幅や高さ、ユーザーの設定（動きの軽減、データの使用、透明度など）などの機能や特徴に応じて CSS スタイルを適用することができます。
 
 メディアクエリーは以下の用途で使用されます。
 
 - [CSS](/ja/docs/Web/CSS) の {{cssxref("@media")}} および {{cssxref("@import")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)により、条件付きでスタイルを適用する。
-- {{HTMLElement("link")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}}, などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性を付けて特定のメディアを対象とする。
-- [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、[JavaScript](/ja/docs/Web/JavaScript) で {{domxref("Window.matchMedia()")}} および {{domxref("MediaQueryList.addListener()")}} メソッドを使用する
+- {{HTMLElement("style")}}, {{HTMLElement("link")}}, {{HTMLElement("source")}} などの [HTML](/ja/docs/Web/HTML) 要素で `media=` 属性や `sizes="` 属性を付けて特定のメディアを対象とする。
+- [メディアの状態の検査と監視](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)をするために、 {{domxref("Window.matchMedia()")}} および {{domxref("EventTarget.addEventListener()")}} メソッドを使用する
 
 > [!NOTE]
 > このページの例では説明のために CSS の `@media` を使用していますが、基本構文はすべての種類のメディアクエリーで共通です。
 
 ## 構文
 
-メディアクエリーは、任意の*メディア種別*と任意の数の*メディア特性*の式で構成されます。*論理演算子*を使用して、複数のクエリーを様々な形で組み合わせることができます。メディアクエリーは大文字小文字の区別がありません。
+メディアクエリーは、任意の「メディア種別」と任意の数の「メディア特性」の式で構成されます。「論理演算子」を使用して、複数のクエリーを様々な形で組み合わせることができます。メディアクエリーは大文字小文字の区別がありません。
 
-- [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)は、メディアクエリーを適用する機器の大まかな分類を `all`, `print`, `screen`, `speech` で定義します。
+- [メディア種別](/ja/docs/Web/CSS/@media#メディア種別)は、メディアクエリーを適用する機器の大まかな分類を `all`, `print`, `screen` で定義します。
 
-  種別は省略可能 (`all` と見なされる) ですが、 `not` や `only` 論理演算子を使用する場合は例外です。
+  種別は省略可能（`all` と見なされる）ですが、 `only` 論理演算子を使用する場合は例外です。
 
-- [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。 {{cssxref("@media/any-hover", "any-hover")}}, {{cssxref("@media/any-pointer", "any-pointer")}}, {{cssxref("@media/aspect-ratio", "aspect-ratio")}}, {{cssxref("@media/color", "color")}}, {{cssxref("@media/color-gamut", "color-gamut")}}, {{cssxref("@media/color-index", "color-index")}}, {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}, {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}, {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}, {{cssxref("@media/display-mode", "display-mode")}}, {{cssxref("@media/forced-colors", "forced-colors")}}, {{cssxref("@media/grid", "grid")}}, {{cssxref("@media/height", "height")}}, {{cssxref("@media/hover", "hover")}}, {{cssxref("@media/inverted-colors", "inverted-colors")}}, {{cssxref("@media/monochrome", "monochrome")}}, {{cssxref("@media/orientation", "orientation")}}, {{cssxref("@media/overflow-block", "overflow-block")}}, {{cssxref("@media/overflow-inline", "overflow-inline")}}, {{cssxref("@media/pointer", "pointer")}}, {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}, {{cssxref("@media/prefers-contrast", "prefers-contrast")}}, {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}, {{cssxref("@media/resolution", "resolution")}}, {{cssxref("@media/scripting", "scripting")}}, {{cssxref("@media/update-frequency", "update")}}, {{cssxref("@media/width", "width")}} があります。
+- [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。
+
+  - {{cssxref("@media/any-hover", "any-hover")}}
+  - {{cssxref("@media/any-pointer", "any-pointer")}}
+  - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}
+  - {{cssxref("@media/color", "color")}}
+  - {{cssxref("@media/color-gamut", "color-gamut")}}
+  - {{cssxref("@media/color-index", "color-index")}}
+  - {{cssxref("@media/device-aspect-ratio", "device-aspect-ratio")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-height", "device-height")}} {{deprecated_inline}}
+  - {{cssxref("@media/device-posture", "device-posture")}}
+  - {{cssxref("@media/device-width", "device-width")}} {{deprecated_inline}}
+  - {{cssxref("@media/display-mode", "display-mode")}}
+  - {{cssxref("@media/dynamic-range", "dynamic-range")}}
+  - {{cssxref("@media/forced-colors", "forced-colors")}}
+  - {{cssxref("@media/grid", "grid")}}
+  - {{cssxref("@media/height", "height")}}
+  - {{cssxref("@media/hover", "hover")}}
+  - {{cssxref("@media/inverted-colors", "inverted-colors")}}
+  - {{cssxref("@media/monochrome", "monochrome")}}
+  - {{cssxref("@media/orientation", "orientation")}}
+  - {{cssxref("@media/overflow-block", "overflow-block")}}
+  - {{cssxref("@media/overflow-inline", "overflow-inline")}}
+  - {{cssxref("@media/pointer", "pointer")}}
+  - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
+  - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
+  - {{cssxref("@media/prefers-reduced-motion", "prefers-reduced-motion")}}
+  - {{cssxref("@media/prefers-reduced-transparency", "prefers-reduced-transparency")}}
+  - {{cssxref("@media/resolution", "resolution")}}
+  - {{cssxref("@media/scripting", "scripting")}}
+  - {{cssxref("@media/update", "update")}}
+  - {{cssxref("@media/video-dynamic-range", "video-dynamic-range")}}
+  - {{cssxref("@media/width", "width")}}
 
   例えば、{{cssxref("@media/hover", "hover")}} という機能では、端末が要素の上で停止したことを検出できるかどうかをクエリーで検査することができます。
   メディア特性式は、その存在や値をテストするもので、完全にオプションです。
@@ -42,19 +76,26 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 
 ## メディア種別を対象にする
 
-メディア種別は、その機器の一般的な分類を記述します。ウェブサイトは一般的に画面を想定してデザインされていますが、プリンターや、音声ベースのスクリーンリーダーのような特殊な機器を対象としたスタイルを作成したい場合もあるでしょう。例えば、この CSS はプリンターを対象としています。
+メディア種別は、その機器の一般的な分類を記述します。ウェブサイトは一般的に画面を想定してデザインされていますが、プリンターや、音声ベースのスクリーンリーダーのような特殊な機器を対象としたスタイルを作成したい場合もあるでしょう。
+例えば、この CSS はプリンターを対象としています。
 
 ```css
-@media print { ... }
+@media print {
+  /* … */
+}
 ```
 
-複数の機器を対象にすることもできます。例えば、この `@media` ルールは 2 つのメディアクエリーを使用して、画面とプリンターの両方の端末を対象としています。
+複数の機器を対象にすることもできます。
+例えば、この `@media` ルールは 2 つのメディアクエリーを使用して、画面とプリンターの両方の端末を対象としています。
 
 ```css
-@media screen, print { ... }
+@media screen, print {
+  /* … */
+}
 ```
 
-すべてのメディア種別の一覧は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)を参照してください。とても大まかな用語で端末を記述するため、数はわずかしかありません。もっと具体的な属性で対象にするには、代わりに*メディア特性*を使用してください。
+すべてのメディア種別の一覧は、[メディア種別](/ja/docs/Web/CSS/@media#メディア種別)を参照してください。
+メディア種別は端末をとても大まかに記述するため、元々定義されていたメディア種別のほとんどは非推奨となり、`screen`、`print`、`all` だけが残りました。より詳細な属性を指定するには、代わりに「メディア特性」を使用してください。
 
 ## メディア特性を対象にする
 
@@ -63,158 +104,242 @@ slug: Web/CSS/CSS_media_queries/Using_media_queries
 この例は、ユーザーの*主な*入力手段（マウスなど）が要素の上で停止したことを検出できる場合にスタイルを適用します。
 
 ```css
-@media (hover: hover) { ... }
+@media (hover: hover) {
+  /* … */
+}
 ```
 
-多くのメディア特性は*範囲特性*であり、 "min-" または "max-" の接頭辞をつけて「最小条件」または「最大条件」の制約を表現します。例えば、この CSS はブラウザーの{{glossary("viewport", "ビューポート")}}の幅が 12450px 以下である場合のみ、スタイルを適用します。
+メディア機能は、範囲であったり離散的であったりします。
+
+「離散的特性」は、値を一連の{{glossary("enumerated", "列挙型")}}キーワード値から取得します。例えば、 `orientation` 特性は `landscape` と `portrait` のどちらかを受け入れます。
 
 ```css
-@media (max-width: 12450px) { ... }
+@media print and (orientation: portrait) {
+  /* … */
+}
 ```
 
-値を指定せずにメディア特性クエリーを作成した場合、特性の値がゼロ (または Level 4 では `none`) ではない場合に中のスタイルが使用されます。例えば、この CSS はカラー画面を持つ任意の端末に適用されます。
+多くのメディア特性は「範囲特性」であり、 "min-" または "max-" の接頭辞をつけて「最小条件」または「最大条件」の制約を表現します。例えば、この CSS はブラウザーの{{glossary("viewport", "ビューポート")}}の幅が 1250px 以下である場合のみ、スタイルを適用します。
 
 ```css
-@media (color) { ... }
+@media (max-width: 1250px) {
+  /* … */
+}
 ```
 
-ブラウザーを実行している端末である特性が適用されない場合、メディア特性に向けた式は常に偽です。例えば、以下のクエリーの中のスタイルは、音声のみの端末には画面のアスペクト比がないので、決して使われません。
+次のメディアクエリーは、上記の例と同等です。
 
 ```css
-@media speech and (aspect-ratio: 11/5) { ... }
+@media (width <= 1250px) {
+  /* … */
+}
+
+@media (1250px >= width) {
+  /* … */
+}
 ```
+
+メディアクエリー範囲特性を使用すると、その値を含む `min-` および `max-` 接頭辞、またはより簡潔な範囲構文演算子 `<=` および `>=` を使用することができます。
+
+以下のメディアクエリーは等価です。
+
+```css
+@media (min-width: 30em) and (max-width: 50em) {
+  /* … */
+}
+
+@media (30em <= width <= 50em) {
+  /* … */
+}
+
+@media (50em >= width >= 30em) {
+  /* … */
+}
+```
+
+上記の範囲の比較は指定された値を含みます。比較値を除外するには、`<` および/または `>` を使用してください。
+
+```css
+@media (30em < width < 50em) {
+  /* … */
+}
+
+@media (50em > width > 30em) {
+  /* … */
+}
+```
+
+値を指定せずにメディア特性クエリーを作成した場合、特性の値が `0` または `none` ではない場合に中のスタイルが使用されます。例えば、この CSS はカラー画面を持つ任意の端末に適用されます。
+
+```css
+@media (color) {
+  /* … */
+}
+```
+
+その特性が、ブラウザーが動作している端末で適用されない場合、そのメディア特性を含む式は常に false となります。
 
 その他の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)の例については、それぞれの特性のリファレンスページを参照してください。
 
 ## 複合メディアクエリーの作成
 
-複数の条件に依存するメディアクエリーを作成したくなる場合があるかもしれません。これは、 `not`, `and`, `only` の**論理演算子**の出番です。その上、複数のメディアクエリーを**カンマ区切りのリスト**で結合することができます。これによって、同じスタイルを異なる場面で適用することができます。
+複数の条件に依存するメディアクエリーを作成したくなる場合があるかもしれません。これは、 `not`, `and`, `only` の**論理演算子**の出番です。
+さらに、複数のメディアクエリーをカンマで区切ったリストに結合することができます。これにより、異なる状況で同じスタイルを適用することができ、含まれているメディアクエリーは論理 `or` 合成として評価されます。つまり、各メディアクエリーは括弧で囲まれ、その間に `or` が挿入されているかのように解釈されます。
 
 以前の例で、すでに `and` 演算子がメディア*種別*とメディア*特性*をグループ化するために使用されているのを見ました。
-`and` 演算子は、複数のメディア特性を 1 つのメディアクエリーに結合することもできます。一方で `not` 演算子は、メディアクエリーを反転し、基本的に普通の意味とは逆になります。
-`only` 演算子は古いブラウザーでスタイルが適用されるのを防止します。
+`and` 演算子は、複数のメディア特性を 1 つのメディアクエリーに結合することもできます。
+`not` 演算子は、メディアクエリーや、括弧で囲まれたメディア特性を反転したりして、基本的に普通の意味とは逆になります。
+`or` 演算子は、特定の条件下で、単一のメディアクエリー内に複数のメディア機能を組み合わせるために使用することができます。
+最後に、 `only` 演算子は、古いブラウザーがメディア機能式を評価せずにスタイルを適用することを防ぐために使用されていましたが、現行のブラウザーでは効果はありません。
 
 > [!NOTE]
-> 多くの場合、 `all` メディア種別が他のタイプが指定されない場合に既定で使用されます。
-> しかし、 `not` または `only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。
+> 多くの場合、 `all` メディア種別は他の種別が指定されない場合に既定で使用されます。
+> ただし、`only` 演算子を使用する場合は、メディア種別を明示的に指定する必要があります。全体として `only screen` または `only print` と書くことができます。
 
 ### 複数の種別または特性の組み合わせ
 
-`and` キーワードはメディア特性をメディア種別、*または*他のメディア特性に結合します。この例は2つのメディア特性を結合して、スタイルを横長で幅が 30em 以上ある端末に制限します。
+`and` キーワードはメディア特性をメディア種別、*または*他のメディア特性に結合します。
+この例は 2 つのメディア特性を結合して、スタイルを横長で幅が 30em 以上ある端末に制限します。
 
 ```css
-@media (min-width: 30em) and (orientation: landscape) { ... }
+@media (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
 ```
 
 スタイルを画面に限定する場合は、メディア特性に `screen` メディア種別を結合します。
 
 ```css
-@media screen and (min-width: 30em) and (orientation: landscape) { ... }
+@media screen and (min-width: 30em) and (orientation: landscape) {
+  /* … */
+}
 ```
 
 ### 複数のクエリーの検査
 
-カンマ区切りのリストを使うと、ユーザーの端末が様々なメディア種別、特性、状態のいずれか一つに一致する場合にスタイルを適用させることができます。例えば、以下のルールはユーザーの端末の高さが 680px 以上*または*画面が縦長モードであるときにスタイルが適用されます。
+カンマ区切りのリストを使うと、ユーザーの端末が様々なメディア種別、特性、状態のいずれか一つに一致する場合にスタイルを適用させることができます。
+
+次のルールには 2 つのメディアクエリーが含まれています。ユーザーの端末の高さが 680px 以上である場合、またはブラウザーのビューポートが縦向きモード（ビューポートの高さがビューポートの幅よりも大きい）の場合、このブロックのスタイルが適用されます。
 
 ```css
-@media (min-height: 680px), screen and (orientation: portrait) { ... }
+@media (min-height: 680px), screen and (orientation: portrait) {
+  /* … */
+}
 ```
 
-上記の例について言えば、もしユーザーがページの縦が 800px のプリンターを持っていた場合、最初のクエリーが適用されるので media ステートメントは真を返します。同様に、ユーザーが縦長モードでビューポートの高さが 480px のスマートフォンを使っていた場合、2番目のクエリーが適用され、 media ステートメントはやはり真を返します。
+この例では、ユーザーが PDF に出力しており、ページの高さが 800px の場合、最初のクエリー要素（ビューポートの高さが 680px 以上であるかどうかをテストする）が真であるため、メディアクエリーは true を返します。
+同様に、ユーザーがスマートフォンを縦向きで使用しており、ビューポートの高さが 480px の場合、2 番目のクエリー要素が真であるため、メディアクエリーは true を返します。
+
+カンマで区切られたメディアクエリーの一覧では、個々のメディアクエリーはカンマで、または、リスト内の最後のメディアクエリーの場合は、開括弧 (`{`) で終わります。
 
 ### クエリーの意味の反転
 
-`not` キーワードはメディアクエリー全体の意味を反転します。これは、適用される特定のメディアクエリーを単純に反転します。
-(従って、メディアクエリーのカンマ区切りのリストにあるそれぞれのメディアクエリーには適用されません。)
-`not` キーワードは個別の特性クエリーに対して使用することができず、クエリー全体のみを反転します。 `not` は以下のクエリーの最後に評価されます。
+`not` キーワードは単一のメディアクエリーの意味を反転します。例えば、このメディアクエリー内の CSS スタイルは、印刷されるメディアを除くすべてのメディアに適用されます。
 
 ```css
-@media not all and (monochrome) { ... }
+@media not print {
+  /* … */
+}
 ```
 
-... よって、上記のクエリーは次のように評価されます。
+`not` は、それが適用されるメディアクエリーのみを否定します。括弧のない `not` は、それが含まれるメディアクエリー内のすべての機能を否定します。つまり、カンマで区切られたメディアクエリーのリストでは、それぞれ `not` は、それが含まれている単一のクエリーに適用され、その単一のクエリー内のすべての機能に適用されます。この例では、`not` は最初のメディアクエリーに適用され、最初のカンマで終了します。
 
 ```css
-@media not (all and (monochrome)) { ... }
+@media not screen and (color), print and (color) {
+  /* … */
+}
 ```
 
-... このようにはなりません。
+上記のクエリーは、次のように評価されます。
+
+```css
+@media (not (screen and (color))), print and (color) {
+  /* … */
+}
+```
+
+どちらの例も有効です。メディア条件は、括弧 (`()`) で囲むことでグループ化できます。これらのグループは、単一のメディアクエリーと同じように、条件内に入れ子にすることができます。
+
+`not` はメディアクエリーの中で最後に評価されます。これは、 `not` の直後に開括弧が追加され、メディアクエリーの末尾で閉じられた場合と同様に、クエリー内の単一の機能ではなく、メディアクエリー全体に適用されるということです。
+
+次のクエリーは、
+
+```css
+@media not all and (monochrome) {
+  /* … */
+}
+```
+
+このように評価されます。
+
+```css
+@media not (all and (monochrome)) {
+  /* … */
+}
+```
+
+次のようには評価されません。
 
 ```css example-bad
-@media (not all) and (monochrome) { ... }
+@media (not all) and (monochrome) {
+  /* … */
+}
 ```
 
-他の例を挙げます。以下のメディアクエリーは、
+メディアクエリー内の単一の機能を否定するには、括弧を使用します。`not` とメディア機能を括弧で囲むと、否定されるクエリーの要素が制限されます。
+
+この例では、`hover` メディア特性を否定しますが、`all` メディア種別は否定しません。
 
 ```css
-@media not screen and (color), print and (color) { ... }
+@media all and (not(hover)) {
+  /* … */
+}
 ```
 
-... 次のように評価されます。
-
-```css
-@media (not (screen and (color))), print and (color) { ... }
-```
+`not(hover)` は、端末にホバー機能がない場合に一致します。この場合、括弧があるため、`not` は `hover` に適用されますが、`all` には適用されません。
 
 ### 古いブラウザーとの互換性の維持
 
-`only` キーワードは、メディア特性がついたメディアクエリーに対応していない古いブラウザーで、そのスタイルが適用されるのを防ぎます。_最近のブラウザーでは効果がありません。_
+`only` キーワードは、メディア特性がついたメディアクエリーに対応していない古いブラウザーで、そのスタイルが適用されるのを防ぎます。
+最近のブラウザーでは効果がありません。
 
 ```css
-@media only screen and (color) { ... }
+@media only screen and (color) {
+  /* … */
+}
 ```
 
-## Level 4 での構文の拡張
+### `or` による複数の機能の検査
 
-Media Queries Level 4 仕様書では、例えば幅や高さについて、よりすっきりとした "range" 型を持つ特性を使ってメディアクエリーを作れるよう構文が拡張されました。
-Level 4 はこのようなクエリーを書くために*範囲コンテキスト*を追加しています。例えば、幅について `max-` の特性を使用する場合は、以下のように書くことができます。
-
-> [!NOTE]
-> Media Queries Level 4 仕様は、最新のブラウザーはそれなりに対応していますが、一部のメディア機能には十分に対応していません。詳細は [`@media` ブラウザー互換性一覧表](/ja/docs/Web/CSS/@media#ブラウザーの互換性)を参照してください。
+`or` を使用して複数の特性の中の一つと一致するか検査することができ、特性のうちの何れかが true であれば `true` になります。
+例えば、次のクエリーは端末がモノクロ画面である、またはホバーができるかどうかを検査します。
 
 ```css
-@media (max-width: 30em) { ... }
+@media (not (color)) or (hover) {
+  /* … */
+}
 ```
 
-Media Queries Level 4 では、これを次のように書くことができます。
+`or` 演算子は、 `and` および `not` 演算子と同じレベルで使用することはできないことに注意してください。メディア特性をカンマで区切るか、括弧を使用してメディア特性の部分式をグループ化して、評価の順序を明確にすることができます。
+
+例えば、次のクエリーはどちらも有効です。
 
 ```css
-@media (width <= 30em) { ... }
-```
+@media ((color) and (hover)) or (monochrome) {
+  /* … */
+}
 
-`min-` および `max-` を使用すると、次のようにして幅が2つの値の間にあるかどうかを検査することができます。
-
-```css
-@media (min-width: 30em) and (max-width: 50em) { ... }
-```
-
-Level 4 の構文に変換すると、次のようになります。
-
-```css
-@media (30em <= width <= 50em ) { ... }
-```
-
-また、 Media Queries Level 4 では **and**, **not**, **or** を伴う完全な論理代数を使ったメディアクエリーの組み合わせの方法も追加されました。
-
-### `not` による特性の否定
-
-`not()` を使用してメディア特性を囲むと、クエリーのその特性を否定します。例えば、 `not(hover)` は端末でホバーができない場合に一致します。
-
-```css
-@media (not(hover)) { ... }
-```
-
-### Testing for multiple features with `or`
-
-`or` を使用して複数の特性の中の一つと一致するか検査することができ、特性のうちの何れかが true であれば `true` になります。例えば、次のクエリーは端末がモノクロ画面である、またはホバーができるかどうかを検査します。
-
-```css
-@media (not (color)) or (hover) { ... }
+/* or */
+@media (color) and (hover), (monochrome) {
+  /* … */
+}
 ```
 
 ## 関連情報
 
+- [@media](/ja/docs/Web/CSS/@media)
+- [コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - [プログラムからのメディアクエリーの検査](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
 - [CSS Animations Between Media Queries](https://davidwalsh.name/animate-media-queries)
-- [Mozilla 拡張メディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#media_features)
-- [WebKit 拡張メディア特性](/ja/docs/Web/CSS/WebKit_Extensions#media_features)
+- [Mozilla 拡張のメディア特性](/ja/docs/Web/CSS/Mozilla_Extensions#メディア特性)
+- [WebKit 拡張のメディア特性](/ja/docs/Web/CSS/WebKit_Extensions#メディア特性)

@@ -1,13 +1,15 @@
 ---
 title: scroll-margin-inline
 slug: Web/CSS/scroll-margin-inline
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 `scroll-margin-inline` は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、インライン方向のスクロールマージンを設定します。
 
-{{InteractiveExample("CSS Demo: scroll-margin-inline")}}
+{{InteractiveExample("CSS デモ: scroll-margin-inline")}}
 
 ```css interactive-example-choice
 scroll-margin-inline: 0;
@@ -32,7 +34,7 @@ scroll-margin-inline: 0px 3em;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -94,17 +96,18 @@ scroll-margin-inline: 1em 0.5em;
 scroll-margin-inline: inherit;
 scroll-margin-inline: initial;
 scroll-margin-inline: revert;
+scroll-margin-inline: revert-layer;
 scroll-margin-inline: unset;
 ```
 
 ### 値
 
-- `<length>`
+- {{CSSXref("&lt;length&gt;")}}
   - : スクロールコンテナーの対応する辺からの距離です。
 
 ## 解説
 
-scroll-margin 系のプロパティは、このボックスをスナップポートにスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して (スクロールコンテナーの座標空間における軸に合わせられ)、それから指定された外部距離が追加されます。
+scroll-margin 系のプロパティは、このボックスを[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)にスナップするために使用されます。スクロールスナップ領域は変換された境界ボックスによって定義され、四角形の囲みボックスを探して（スクロールコンテナーの座標空間における軸に合わせられ）、それから指定された外部距離が追加されます。
 
 ## 公式定義
 
@@ -116,15 +119,15 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 ## 例
 
-<h3 id="Simple_demonstration">簡単なデモ</h3>
+### 基本的なデモ
 
-この例では、上記のインタラクティブ例と非常によく似たものを実装していますが、ここではその実装方法を説明します。
+この例では、上記のインタラクティブサンプルととてもよく似たものを実装していますが、ここではその実装方法を説明します。
 
 ここでの目的は、水平方向にスクロールする 4 つのブロックを作成することです。2 つ目と 3 つ目のブロックは、それぞれのブロックの右端に近いところでスナップします。
 
 #### HTML
 
-ブロックを表す HTML はとても簡単です。
+HTML には、4 つの子要素を持つスクローラーがあります。
 
 ```html
 <div class="scroller">
@@ -137,7 +140,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 #### CSS
 
-外側のコンテナーのスタイルは以下のようになっています。
+CSS を一通り見てみましょう。外側のコンテナーは次のようにスタイル設定されています。
 
 ```css
 .scroller {
@@ -175,7 +178,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 }
 ```
 
-ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端 (ここでは x 軸に沿った「末尾」) をスナップ点として指定するものです。
+ここで最も重要なのは `scroll-snap-align: end` で、これは右側の端（ここでは X 軸方向の「末尾」）をスナップ点として指定するものです。
 
 最後に、スクロールのマージン値を指定しますが、これは 2 番目と 3 番目の子要素に対して異なる値を指定します。
 
@@ -198,7 +201,7 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 
 自分でやってみましょう。
 
-{{EmbedLiveSample('Simple_demonstration', '100%', 300)}}
+{{EmbedLiveSample('Basic_demonstration', '100%', 300)}}
 
 ## 仕様書
 
@@ -211,4 +214,4 @@ scroll-margin 系のプロパティは、このボックスをスナップポー
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

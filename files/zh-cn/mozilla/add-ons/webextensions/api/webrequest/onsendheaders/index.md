@@ -9,7 +9,7 @@ l10n:
 
 此事件在发送标头之前触发。如果你的扩展或其他扩展在 {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} 中修改了标头，你将在此处得到修改后的标头。
 
-此事件仅供参考。
+此事件仅用于提供信息。
 
 ## 语法
 

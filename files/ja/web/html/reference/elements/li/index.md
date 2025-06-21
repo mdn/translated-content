@@ -1,19 +1,18 @@
 ---
-title: "<li>: リスト項目要素"
+title: "<li>: リストアイテム要素"
 slug: Web/HTML/Reference/Elements/li
-original_slug: Web/HTML/Element/li
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 **`<li>`** は [HTML](/ja/docs/Web/HTML) の要素で、リストの項目を表すために用いられます。この要素は、その項目が属する順序付きリスト ({{HTMLElement("ol")}})、順序なしリスト ({{HTMLElement("ul")}})、メニュー ({{HTMLElement("menu")}}) のいずれかの子要素として配置する必要があります。メニュー要素および順序なしリスト内においては、リストの項目は通常、行頭文字を伴って表示されます。順序付きリスト内では、数字や文字による連番のリストマーカーを伴って表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;li&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;li&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
-<p>Apollo astronauts:</p>
+<p>アポロ宇宙飛行士:</p>
 
 <ul>
   <li>Neil Armstrong</li>
@@ -42,8 +41,8 @@ p {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `value`
-  - : これは整数値の属性で、{{HTMLElement("ol")}} 要素で定義されたリスト項目の序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリスト項目は、その番号から続いて採番されます。順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では **value** 属性は意味がありません。
-- `type` {{Deprecated_inline}} {{Non-standard_Inline}}
+  - : これは整数値の属性で、{{HTMLElement("ol")}} 要素で定義されたリストアイテムの序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリストアイテムは、その番号から続いて採番されます。この属性は順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では意味を持ちません。
+- `type` {{Deprecated_inline}}
 
   - : 文字の属性で、表示するリストマーカーの種類を指定します。
 
@@ -66,9 +65,9 @@ p {
 
 ```html
 <ol>
-  <li>最初のリスト項目</li>
-  <li>二番目のリスト項目</li>
-  <li>三番目のリスト項目</li>
+  <li>最初のアイテム</li>
+  <li>2 番目のアイテム</li>
+  <li>3 番目のアイテム</li>
 </ol>
 ```
 
@@ -80,9 +79,9 @@ p {
 
 ```html
 <ol type="I">
-  <li value="3">third item</li>
-  <li>fourth item</li>
-  <li>fifth item</li>
+  <li value="3">3 番目のアイテム</li>
+  <li>4 番目のアイテム</li>
+  <li>5 番目のアイテム</li>
 </ol>
 ```
 
@@ -94,9 +93,9 @@ p {
 
 ```html
 <ul>
-  <li>最初のリスト項目</li>
-  <li>二番目のリスト項目</li>
-  <li>三番目のリスト項目</li>
+  <li>最初のアイテム</li>
+  <li>2 番目のアイテム</li>
+  <li>3 番目のアイテム</li>
 </ul>
 ```
 
@@ -110,14 +109,14 @@ p {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>なし</td>
     </tr>
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >
       </td>
@@ -125,29 +124,26 @@ p {
     <tr>
       <th scope="row">タグの省略</th>
       <td>
-        直後に別の {{HTMLElement("li")}}
-        要素が続く場合、または他のリスト項目が続くことなく親要素が閉じられた場合は、終了タグが省略可能。
+        直後に別の <code>&lt;li&gt;</code> 要素が続く場合、または他のアイテムが続くことなく親要素が閉じられた場合は、終了タグが省略可能です。
       </td>
     </tr>
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        {{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}}。すでに廃止されているが、{{HTMLElement("dir")}}
-        の子要素としても配置可能であった。
+        {{HTMLElement("ul")}}、{{HTMLElement("ol")}}、{{HTMLElement("menu")}}。すでに廃止されていますが、{{HTMLElement("dir")}} の子要素としても配置可能でした。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Listitem_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role"
             >listitem</a
           ></code
         >
-        when child of an
-        <code><a href="/ja/docs/Web/HTML/Element/ol">ol</a></code
-        >, <code><a href="/ja/docs/Web/HTML/Element/ul">ul</a></code> or
-        <code><a href="/ja/docs/Web/HTML/Element/menu">menu</a></code>
+        （<code><a href="/ja/docs/Web/HTML/Reference/Elements/ol">ol</a></code
+        >, <code><a href="/ja/docs/Web/HTML/Reference/Elements/ul">ul</a></code>,
+        <code><a href="/ja/docs/Web/HTML/Reference/Elements/menu">menu</a></code> の子要素の場合）
       </td>
     </tr>
     <tr>
@@ -182,5 +178,5 @@ p {
 - `<li>` の整形に便利な CSS プロパティ:
 
   - 箇条書き記号の表示を選択するための {{cssxref("list-style")}}
-  - 複雑な入れ子状リストを処理するのに使用できる [CSS counters](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
-  - リスト項目のインデントの調整に用いることができる {{cssxref("margin")}}
+  - 複雑な入れ子状リストを処理するのに使用できる [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+  - リストアイテムのインデントの調整に用いることができる {{cssxref("margin")}}

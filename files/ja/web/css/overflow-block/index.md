@@ -2,7 +2,7 @@
 title: overflow-block
 slug: Web/CSS/overflow-block
 l10n:
-  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
+  sourceCommit: 737125e41bb99b0cf1c733aac13f79f806f7f296
 ---
 
 {{CSSRef}}
@@ -162,4 +162,4 @@ div {
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
 - [CSS スクロールバースタイル設定](/ja/docs/Web/CSS/CSS_scrollbars_styling)モジュール
 - [書字方向](/ja/docs/Web/CSS/CSS_writing_modes)
-- [CSS の構成要素: 要素のオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)
+- [学習: コンテンツのオーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow)

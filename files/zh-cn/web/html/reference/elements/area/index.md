@@ -1,71 +1,172 @@
 ---
-title: <area>
+title: <area>：图像映射区域元素
 slug: Web/HTML/Reference/Elements/area
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-## 简要
+{{HTMLSidebar}}
 
-_HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个超链接。\<area>元素仅在\<map>元素内部使用。_
+**`<area>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了图像映射中的一个区域，该区域具有预定义的可点击区域。*图像映射*允许将图像上的几何区域与{{Glossary("Hyperlink", "超链接")}}关联起来。
 
-- _[内容分类](/zh-CN/docs/Web/HTML/Guides/Content_categories)_ [流内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#flow_content), [短语内容](/zh-CN/docs/Web/HTML/Guides/Content_categories#phrasing_content).
-- *允许的内容*它是一个空的元素不允许嵌套任何子元素或者文本。
-- *标签省略*只能允许有开始标签不允许有结束标签。
-- _允许的父元素_ \<area>元素必须拥有一个\<map>元素祖先元素，但不一定是直接的父元素。
-- _DOM 接口_ {{domxref("HTMLAreaElement")}}
+此元素仅用于 {{HTMLElement("map")}} 元素内。
+
+{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+
+```html interactive-example
+<map name="infographic">
+  <area
+    shape="poly"
+    coords="129,0,260,95,129,138"
+    href="https://developer.mozilla.org/docs/Web/HTTP"
+    alt="HTTP" />
+  <area
+    shape="poly"
+    coords="260,96,209,249,130,138"
+    href="https://developer.mozilla.org/docs/Web/HTML"
+    alt="HTML" />
+  <area
+    shape="poly"
+    coords="209,249,49,249,130,139"
+    href="https://developer.mozilla.org/docs/Web/JavaScript"
+    alt="JavaScript" />
+  <area
+    shape="poly"
+    coords="48,249,0,96,129,138"
+    href="https://developer.mozilla.org/docs/Web/API"
+    alt="Web APIs" />
+  <area
+    shape="poly"
+    coords="0,95,128,0,128,137"
+    href="https://developer.mozilla.org/docs/Web/CSS"
+    alt="CSS" />
+</map>
+<img
+  usemap="#infographic"
+  src="/shared-assets/images/examples/mdn-info.png"
+  alt="MDN 信息图表" />
+```
+
+```css interactive-example
+img {
+  display: block;
+  margin: 0 auto;
+  width: 260px;
+  height: 260px;
+}
+```
 
 ## 属性
 
-该元素包括全局属性。
+这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-- `accesskey` {{Deprecated_Inline}}
-  - : 为元素指定一个获取焦点的快捷键。在与指定字符关联的情况下，按 ALT 或类似键选择与该键序列相关联的表单控件。页面设计人员避免使用已经绑定到浏览器的快捷键。这个属性自 HTML5 以来是全局性的。
 - `alt`
-  - : 在未显示图像的浏览器上显示代替的文本字符串。这个文本应该能传达给用户与显示图像而没有文本的情况下同等的选择（译者注：就是字和图片表达一个意思）。在 HTML4 中，这个属性时必需的，但是可以是一个空的串 ("")。在 HTML5 中，这个属性只有在**href** 属性被使用的时候才是必需的。
+  - : 在不显示图像的浏览器上显示的替代文本字符串。文本内容应当以一种表达方式呈现给用户，使其能获得与图像显示时相同的选择体验。只有在使用了 [`href`](#href) 属性时，此属性才是必需的。
 - `coords`
-  - : 给热点区域设定具体的坐标值。这个值的数值和意义取决于这个值所描述的**形状**属性。对于矩形或长方形，这个 **coords** 值为两个 X,Y 对：左上、右下。对于圆形，这个值是 `x,y,r`，这里的 `x,y` 是一对确定圆的中心的坐标而 `r` 则表示的是半径值。对于多边和多边形，这个值是用 x,y 对表示的多边形的每一个点：`x1,y1,x2,y2,x3,y3` 等等。HTML4 里，值可能是像素数量或者百分比，区别是不是有 % 出现; HTML5 里，只可能是像素的数量。
+
+  - : `coords` 属性用于具体描述 `<area>` 元素中 [`shape`](#shape) 属性指定区域的大小、形状和位置。如果 `shape` 属性设置为 `default`，则不得使用此属性。
+
+    - `rect`：该值为 `x1,y1,x2,y2`，表示矩形的左上角和右下角的坐标。例如，在 `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` 中，坐标分别是 `0,0` 和 `253,27`，对应矩形的左上角和右下角。
+    - `circle`：该值为 `x,y,radius`，表示圆的中心坐标和半径。例如：`<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
+    - `poly`：该值为 `x1,y1,x2,y2,..,xn,yn`，表示多边形各边的坐标。如果第一个和最后一个坐标对不相同，浏览器会自动将最后一个坐标对添加进去以闭合多边形。
+
+    这些值是以 CSS 像素为单位的数字。
+
 - `download`
-  - : 这个属性如果存在的话，表明作者想把超链接用于下载一个资源。请查看{{HTMLElement("a")}} 获得关于 [`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download)属性的完整描述。
+  - : 如果存在此属性，表示链接的资源是用于下载而非在浏览器中显示。完整说明请参见 {{HTMLElement("a")}} 中的 [`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download) 属性。
 - `href`
-  - : area 的超链接，值为一个 URL. HTML4 里，这个值不管是不是有值都要明确指定出来。HTML5 里则不需要。
-- `hreflang`
-  - : 指明链接资源的语言类型，值的范围参考[BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). 这个属性只能在指明 href 属性之后使用。
-- `name` {{Deprecated_Inline}}
-  - : 为可点击区域定义一个名字以使旧浏览器解析。
-- `media`
-  - : 指明链接资源的媒体类型，例：print and screen。如果此属性省略，默认全部。仅在 href 属性存在情况下使用。
-- `nohref` {{Deprecated_Inline}}
+  - : 该区域的超链接目标。其值为有效的 URL。此属性可以省略；若省略，则 `<area>` 元素不表示超链接。
+- `ping`
+  - : 包含以空格分隔的 URL 列表，当点击超链接时，浏览器会（在后台）向这些 URL 发送带有 `PING` 内容的 HTTP {{HTTPMethod("POST")}} 请求。通常用于追踪目的。
+- `referrerpolicy`
 
-  - : 指明此区域没有超链接。在\<area>中必须存在 nohref 或者 href。
+  - : 表示在获取资源时应使用哪个引用来源（referrer）的字符串：
+    - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
+    - `no-referrer-when-downgrade`：不会将 {{HTTPHeader("Referer")}} 标头发送到不使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin", "源")}}。
+    - `origin`：发送的引用来源将被限制为引用页面的源：包括其[方案](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主机")}}和{{Glossary("port", "端口")}}。
+    - `origin-when-cross-origin`：发送到其他源的引用来源将仅包含方案、主机和端口；而对于同源的导航，请求中仍会包含路径信息。
+    - `same-origin`：对于{{Glossary("Same-origin policy", "同源")}}请求会发送来源地址，但跨源请求将不包含任何引用来源信息。
+    - `strict-origin`：仅当协议的安全级别保持一致时（例如 HTTPS → HTTPS），才会将文档的源作为引用来源发送；但不会在从更安全的协议跳转到不太安全的目的地时（例如 HTTPS → HTTP）发送引用来源。
+    - `strict-origin-when-cross-origin`（默认）：当执行同源请求时应发送完整的 URL；若协议的安全等级保持一致（例如 HTTPS→HTTPS），则仅发送源；若请求目标的协议安全等级较低（例如 HTTPS→HTTP），则不应发送请求标头。
+    - `unsafe-url`：来源标头会包含源*和*路径（但不会包含[片段](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)或[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**此值是不安全的**，因为它会将受 TLS 保护的资源的源和路径泄露给不安全的目标地址。
 
-    > [!NOTE]
-    > 此属性在 html5 中是废弃的，而忽略 href 属性就足够了。
-
-- `rel`
-  - : 对于包含 href 属性的锚，该属性指定目标对象与链接对象的关系。该值是一个逗号分隔的链接类型值列表。这些值及其语义将由一些可能对文档作者有意义的权威进行注册。如果没有其他的关系，默认的关系是无效的。只有当 href 属性是 presen 时才使用该属性
+- [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
+  - : 对于包含 [`href`](#href) 属性的锚点元素，该属性指定目标对象与链接对象之间的关系。其值是以空格分隔的链接类型列表。这些值及其语义将由某个可能对文档作者有意义的权威机构进行注册。如果未指定其他关系类型，则默认关系为空。仅当存在 [`href`](#href) 属性时，才应使用该属性。
 - `shape`
-  - : 相关联的热点的形状。HTML 5 和 HTML 4 的规范定义了值 rect，它定义了一个矩形区域;圆圈，它定义了一个圆形区域;多边形，它定义了一个多边形;默认情况下，这表示整个区域超出了任何定义的形状。许多浏览器，特别是 Internet Explorer 4 和更高版本，支持弧形、多边形和矩形作为形状的有效值;这些值{ { Non-standard_inline } }。
-- `tabindex` {{Deprecated_Inline}}
-  - : 用于指定浏览器 tab 键获取焦点的顺序。在 html5 中是全局属性。
+  - : 该属性用于指定图像热点区域的形状，可选值包括 `rect`，表示矩形区域；`circle`，表示圆形区域；`poly`，表示多边形区域；和 `default` 表示除已定义形状之外的整个区域。
 - `target`
 
-  - : 本属性指明了在什么地方显示链接的资源。HTML4 里，这个值是一个 frame 的链接或者关键字。HTML5 里，它是一个浏览器上下文 (比如：标签，窗口或者内嵌的 frame) 的链接或者关键字。值的含义：
+  - : 一个关键字或作者自定义的名称，用于指定用于显示所链接资源的{{Glossary("browsing context", "浏览上下文")}}；其中一些关键字具有特殊含义：
 
-    - `_self`: 在当前区域加载链接指向的资源。这个是默认值。
-    - `_blank`: 在新的未命名的窗口或者 tab 里加载超链接资源。
-    - `_parent`: 在父级加载超链接资源。HTML4 里，是当前 frame 的父级，HTML5 里是当前的浏览器上下文，如果当前环境没有父级，行为和`_self`一样。
-    - `_top`: HTML4 里：将响应加载到完整的原始窗口中，取消所有其他帧。在 HTML5 中：将响应加载到顶级浏览上下文 (也就是说，浏览上下文是当前版本的祖先，并且没有父类)。如果没有父类，这个选项的行为方式与 self 相同本属性只能在指明 href 属性之后使用。
+    - `_self`（默认）：在当前浏览上下文中显示资源。
+    - `_blank`：在新的、未命名的浏览上下文中显示资源。
+    - `_parent`：如果当前页面位于一个框架内，则在其父级浏览上下文中显示该资源；如果没有父级，则效果等同于 `_self`。
+    - `_top`：在最顶层的浏览上下文中显示该资源（即当前浏览上下文的最上层父级，上层不再有父级）。如果不存在父级，则与 `_self` 行为相同。
 
-- `type`
-  - : 该属性指定了用于链接目标的 MIME 类型的媒体类型。一般来说，这是严格的咨询信息;然而，在未来，浏览器可能会为多媒体类型添加一个小图标。例如，当类型设置为音频/wav 时，浏览器可能会添加一个小的扬声器图标。公认的 MIME 类型的完整列表，请参阅 <http://www.w3.org/TR/html4/references.html> ref-MIMETYPES。只有当 href 属性存在时才使用该属性。
+    仅当存在 [`href`](#href) 属性时，才使用此属性。
 
-## 例子
+    > [!NOTE]
+    > 在 `<area>` 元素上设置 `target="_blank"` 会隐式地提供与设置 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noopener) 相同的 `rel` 行为，即不会设置 `window.opener`。支持情况请参见[浏览器兼容性](#浏览器兼容性)。
+
+## 示例
 
 ```html
 <map name="primary">
-  <area shape="circle" coords="200,250,25" href="another.htm" />
-  <area shape="default" nohref />
+  <area shape="circle" coords="75,75,75" href="left.html" alt="点击向左" />
+  <area shape="circle" coords="275,75,75" href="right.html" alt="点击向右" />
 </map>
+<img
+  usemap="#primary"
+  src="https://dummyimage.com/350x150"
+  alt="350 x 150 pic" />
 ```
+
+### 结果
+
+{{ EmbedLiveSample('示例', 360, 160) }}
+
+## 技术概要
+
+<table class="properties">
+  <tbody>
+    <tr>
+      <th scope="row">
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories">内容分类</a>
+      </th>
+      <td>
+        <a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#流式内容">流式内容</a>、<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的内容</th>
+      <td>无；这是一个{{Glossary("void element", "空元素")}}。</td>
+    </tr>
+    <tr>
+      <th scope="row">标签省略</th>
+      <td>必须有开始标签，且不能有结束标签。</td>
+    </tr>
+    <tr>
+      <th scope="row">允许的父元素</th>
+      <td>
+        任何接受<a href="/zh-CN/docs/Web/HTML/Guides/Content_categories#短语内容">短语内容</a>的元素。<code>&#x3C;area></code> 元素必须有一个 {{HTMLElement("map")}} 父元素，但不需要是其直接父元素。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">隐含的 ARIA 角色</th>
+      <td>
+        当存在 <a href="#href"><code>href</code></a> 属性时为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>，否则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>。
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">允许的 ARIA 角色</th>
+      <td>没有允许的 <code>role</code></td>
+    </tr>
+    <tr>
+      <th scope="row">DOM 接口</th>
+      <td>{{domxref("HTMLAreaElement")}}</td>
+    </tr>
+  </tbody>
+</table>
 
 ## 规范
 
@@ -74,17 +175,3 @@ _HTML `<area>` 元素 在图片上定义一个热点区域，可以关联一个�
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 注意
-
-HTML 3.2, 4.0，和 HTML 5 规范中，不允许有 `</area>` 单闭合标签。
-
-XHTML 1.0 规范要求有尾部的斜线：`<area />`.
-
-**id**, **class**, 和**style** 属性和其他的 HTML4 属性一样，但是只有 Netscape 和 Microsoft 定义了这些属性。
-
-Netscape 1–level 浏览器不能解析**target** 链接到 frames 的属性。
-
-HTML 3.2 只定义了**alt**, **coords**, **href**, **nohref**, 和**shape**.
-
-{{HTMLSidebar}}
