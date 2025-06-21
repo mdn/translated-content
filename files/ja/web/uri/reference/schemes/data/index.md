@@ -1,12 +1,10 @@
 ---
-title: データ URL
+title: "data: URL"
+short-title: "data:"
 slug: Web/URI/Reference/Schemes/data
-original_slug: Web/URI/Schemes/data
 l10n:
-  sourceCommit: 6b730e3cfdf0f51940b44efa71bd59c84ce76e71
+  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/URI")}}
 
 **データ URL** は `data:` スキームが先頭についた URL で、小さなファイルをインラインで文書に埋め込むことができます。以前、 WHATWG で取り下げられるまでは「データ URI」と呼ばれていました。
 
@@ -15,22 +13,22 @@ l10n:
 
 ## 構文
 
-データ URL は接頭辞 (`data:`)、データの種類を示す [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)、テキストではないデータである場合のオプションである `base64` トークン、データ自体の 4 つの部品で構成されます。
+データ URL は接頭辞 (`data:`)、データの種類を示す [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)、テキストではないデータである場合のオプションである `base64` トークン、データ自体の 4 つの部品で構成されます。
 
 ```plain
-data:[<mediatype>][;base64],<data>
+data:[<media-type>][;base64],<data>
 ```
 
-`mediatype` は [MIME タイプ](/ja/docs/Web/HTTP/MIME_types)で, 例えば `'image/jpeg'` で JPEG 画像を表します。省略時の既定値は `text/plain;charset=US-ASCII` です。
+`media-type` は [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)で, 例えば `'image/jpeg'` で JPEG 画像を表します。省略時の既定値は `text/plain;charset=US-ASCII` です。
 
 データに [RFC 3986 で予約文字として定義されている文字](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)が含まれている場合、または空白文字、改行文字、その他の出力されない文字が含まれている場合は、それらの文字は{{Glossary("Percent-encoding", "パーセントエンコード")}}でエンコードする必要があります。
 
-データが文字ならば、そのまま埋め込めます (埋め込む文書タイプに応じて、適切な実体参照やエスケープを行なってください)。それ以外では `base64` を指定し、 base64 エンコードしたバイナリーデータを埋め込みます。 MIME タイプについての詳しい情報は[こちら](/ja/docs/Web/HTTP/MIME_types)や[こちら](/ja/docs/Web/HTTP/MIME_types/Common_types)にあります。
+データが文字ならば、そのまま埋め込めます (埋め込む文書タイプに応じて、適切な実体参照やエスケープを行なってください)。それ以外では `base64` を指定し、 base64 エンコードしたバイナリーデータを埋め込みます。 MIME タイプについての詳しい情報は[こちら](/ja/docs/Web/HTTP/Guides/MIME_types)や[こちら](/ja/docs/Web/HTTP/Guides/MIME_types/Common_types)にあります。
 
 例:
 
 - `data:,Hello%2C%20World%21`
-  - : text/plain データで `Hello, World!` です。なお、カンマは{{Glossary("Percent-encoding", "パーセントエンコード")}}で `%2C`となり、スペースは `%20` となります。
+  - : text/plain データで `Hello, World!` です。なお、カンマは{{Glossary("Percent-encoding", "パーセントエンコード")}}で `%2C`となり、空白は `%20` となります。
 - `data:text/plain;base64,SGVsbG8sIFdvcmxkIQ==`
   - : 同じ内容の base64 エンコード版
 - `data:text/html,%3Ch1%3EHello%2C%20World%21%3C%2Fh1%3E`
@@ -42,13 +40,13 @@ data:[<mediatype>][;base64],<data>
 
 Base64 は、バイナリーからテキストへエンコードする方式の総称で、バイナリーデータを {{Glossary("ASCII")}} 文字列形式へ、64 進表現に変換することで表します。URL 構文で許可されている文字（「URL セーフ」）のみで構成されているため、データ URL にバイナリーデータを安全にエンコードすることができます。Base64 は、URL で特別な意味を持つ可能性のある文字 `+` と `/` を使用することができます。データ URL には URL パス区間やクエリー引数がないため、このコンテキストではこのエンコード方式は安全です。
 
-### Javascript でのエンコード
+### JavaScript でのエンコード
 
-Web API には、 Base64 をエンコードまたはデコードするためのネイティブメソッド、 [Base64](/ja/docs/Glossary/Base64) があります。
+Web API には、 base64 をエンコードまたはデコードするためのネイティブメソッド、 [Base64](/ja/docs/Glossary/Base64) があります。
 
 ### Unix システムでのエンコード
 
-Linux や Mac OS X システムでのファイルまたは文字列の Base64 エンコードは、コマンドラインの `base64` (または、他にも `uuencode` ユーティリティの `-m` オプションつき) を使用して実現できます。
+Linux や macOS システムでのファイルまたは文字列の Base64 エンコードは、コマンドラインの `base64` （または、他にも `uuencode` ユーティリティの `-m` オプションつき）を使用して実現できます。
 
 ```bash
 echo -n hello|base64
@@ -98,13 +96,15 @@ lots of text…
 - HTML におけるフォーマット
   - : `data` はファイル内でファイルを提供しますが、外側の文書に比べて幅がとても広くなる可能性があります。 URL としては、 `data` はホワイトスペース (改行、タブ、空白) で体裁を整えることができるはずですが、 [base64 エンコードをすると起こる問題](https://bugzil.la/73026#c12) があります。
 - 長さの制限
-  - : ブラウザーは特定の最大長のデータに対応する必要はありません。たとえば、 Opera 11 ブラウザーでは URL が 65535 文字に制限されており、 `data` URL は 65529 文字に制限されています (65529 文字は、 MIME タイプを指定せずにプレーンの `data:` を使用した場合、ソースではなくエンコードされたデータの長さです)。Firefox 97 以降 では、最大 32MB の `data` URL がサポートされます (97 より前のバージョンでは、制限は約 256MB でした)。 Chromium は 512MB 以上の URL 、Webkit (Safari) は 2048MB 以上の URL をサポートしています。
+  - : ブラウザーは特定の最大長のデータに対応する必要はありません。
+    Chromium と Firefox では `data` URL は 512MB に制限されており、 Safari (WebKit) は 2048MB に制限されています。
+    なお、 Firefox 97 では制限が 256KB から 32MB へ拡大され、 [Firefox 136 ではさらに 512MB に拡大されました](/ja/docs/Mozilla/Firefox/Releases/136)。
 - エラー処理の欠如
   - : メディア内の不正な引数や、 `'base64'` の定義内の打ち間違いは無視され、何もエラーは出ません。
 - クエリー文字列のサポートの欠如、など
-  - : データ URL のデータ部分は不透明 (opaque) なので、データ URL と一緒にクエリー文字列 (`<url>?parameter-data` という構文で表されるページ固有のパラメーター) を使うと、データ URL が表現するデータに単にクエリー文字列が含まれたものになります。
+  - : データ URL のデータ部分は不透明 (opaque) なので、データ URL と一緒にクエリー文字列 (`<url>?parameter-data` という構文で表されるページ固有の引数) を使うと、データ URL が表現するデータに単にクエリー文字列が含まれたものになります。
 - セキュリティの課題
-  - : 多数のセキュリティ問題 (フィッシングなど) がデータ URL に関連付けられており、ブラウザーの最上位でそれらに移動しています。このような問題を軽減するために、Firefox 59+ (リリース版、Nightly/Beta は 58 以降) では `data:` URL へのトップレベルのナビゲーションがブロックされており、他のブラウザーがすぐに対応することを期待しています。詳細については、[Firefox 58 におけるデータ URL へのトップレベルナビゲーションのブロック](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-58/)を参照してください。
+  - : 多数のセキュリティ問題 (フィッシングなど) がデータ URL に関連付けられており、ブラウザーの最上位でそれらに移動しています。このような問題を軽減するために、最近のすべてのブラウザーでは `data:` URL へのトップレベルのナビゲーションがブロックされています。詳細については、 [Mozilla Security Team のブログ投稿](https://blog.mozilla.org/security/2017/11/27/blocking-top-level-navigations-data-urls-firefox-59/)を参照してください。
 
 ## 仕様書
 
@@ -120,5 +120,5 @@ lots of text…
 - {{Glossary("Percent-encoding", "パーセントエンコーディング")}}
 - {{domxref("WorkerGlobalScope.atob()", "atob()")}}
 - {{domxref("WorkerGlobalScope.btoa()", "btoa()")}}
-- CSS の {{CSSXref("url", "url()")}}
+- CSS {{CSSXref("url_value", "&lt;url&gt;")}}
 - {{Glossary("URI")}}

@@ -9,9 +9,9 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 
 Однако в последние годы CSS развивался чтобы лучше поддерживать разную направленность контента, включая контент с направлением справа налево, а также контент сверху вниз (например, в японском языке) - эти разные направления называются режимами письма. По мере того, как вы продвигаетесь в обучении и начинаете работать с макетом, понимание режимов письма будет вам очень полезно, поэтому мы сейчас и познакомимся с ними.
 
-| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), basic knowledge of [working with files](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), and an idea of how CSS works (study [CSS first steps](/ru/docs/Learn/CSS/First_steps).) |
-| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                               |
+| Prerequisites: | Basic computer literacy, [basic software installed](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), basic knowledge of [working with files](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), HTML basics (study [Introduction to HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), and an idea of how CSS works (study [CSS first steps](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| -------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:          | Понять важность режимов письма для современного CSS.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 
 ## Какие бывают режимы письма?
 
@@ -31,7 +31,7 @@ slug: Learn_web_development/Core/Styling_basics/Handling_different_text_directio
 
 ## Writing modes and block and inline layout
 
-We have already discussed [block and inline layout](/ru/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
+We have already discussed [block and inline layout](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model#block_and_inline_boxes), and the fact that some things display as block elements and others as inline elements. As we have seen described above, block and inline is tied to the writing mode of the document, and not the physical screen. Blocks are only displayed from the top to the bottom of the page if you are using a writing mode that displays text horizontally, such as English.
 
 If we look at an example this will become clearer. In this next example I have two boxes that contain a heading and a paragraph. The first uses `writing-mode: horizontal-tb`, a writing mode that is written horizontally and from the top of the page to the bottom. The second uses `writing-mode: vertical-rl`; this is a writing mode that is written vertically and from right to left.
 
@@ -113,21 +113,21 @@ In the next module we will take a good look at overflow in CSS.
 
 ## In this module
 
-1. [Cascade and inheritance](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [CSS selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-   - [Type, class, and ID selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Attribute selectors](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Combinators](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+   - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+   - [Combinators](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
 
-3. [The box model](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Backgrounds and borders](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Handling different text directions](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Overflowing content](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Values and units](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Sizing items in CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Images, media, and form elements](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Styling tables](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Debugging CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+3. [The box model](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+4. [Backgrounds and borders](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+5. [Handling different text directions](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+6. [Overflowing content](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
+7. [Values and units](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+8. [Sizing items in CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
+9. [Images, media, and form elements](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+10. [Styling tables](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+11. [Debugging CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
 12. [Organizing your CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

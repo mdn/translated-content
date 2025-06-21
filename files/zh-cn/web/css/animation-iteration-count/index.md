@@ -7,7 +7,104 @@ slug: Web/CSS/animation-iteration-count
 
 **`animation-iteration-count`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画序列在停止前应播放的次数
 
-{{EmbedInteractiveExample("pages/css/animation-iteration-count.html")}}
+{{InteractiveExample("CSS Demo: animation-iteration-count")}}
+
+```css interactive-example-choice
+animation-iteration-count: 0;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 2;
+```
+
+```css interactive-example-choice
+animation-iteration-count: 1.5;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div>Animation <span id="playstatus"></span></div>
+  <div id="example-element">Select a count to start!</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  align-items: center;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: center;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#playstatus {
+  font-weight: bold;
+}
+
+.animating {
+  animation-name: slide;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const status = document.getElementById("playstatus");
+
+  function update() {
+    status.textContent = "delaying";
+    el.className = "";
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        el.className = "animating";
+      });
+    });
+  }
+
+  el.addEventListener("animationstart", () => {
+    status.textContent = "playing";
+  });
+
+  el.addEventListener("animationend", () => {
+    status.textContent = "finished";
+  });
+
+  const observer = new MutationObserver(() => {
+    update();
+  });
+
+  observer.observe(el, {
+    attributes: true,
+    attributeFilter: ["style"],
+  });
+
+  update();
+});
+```
 
 使用动画的简写属性 {{cssxref("animation")}} 可以一次性设置所有动画属性，这通常非常方便。
 
@@ -38,7 +135,7 @@ animation-iteration-count: unset;
 
 - `infinite`
   - : 无限循环播放动画。
-- `{{cssxref("&lt;number&gt;")}}`
+- {{cssxref("&lt;number&gt;")}}
   - : 动画重复的次数；默认为 `1`。你可以指定非整数值以播放动画循环的一部分：例如，`0.5` 将播放动画循环的一半。负值是无效的。
 
 > [!NOTE]

@@ -264,7 +264,7 @@ for (let i = 0; i < cats.length; i++) {
 
 ## break로 반복문 종료하기
 
-만약 여러분이 모든 반복이 완료되기 전에 반복문을 종료하고 싶다면, 여러분은 [break](/ko/docs/Web/JavaScript/Reference/Statements/break)문을 사용할 수 있습니다. 우리는 이미 이것을 지난 문서에서 [switch문](/ko/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements)을 살펴볼 때 만났습니다 — 입력 표현식과 일치하는 switch문에서 case가 충족되었을 때, `break`문은 즉시 switch문을 종료하고 switch문 다음에 있는 코드로 이동합니다.
+만약 여러분이 모든 반복이 완료되기 전에 반복문을 종료하고 싶다면, 여러분은 [break](/ko/docs/Web/JavaScript/Reference/Statements/break)문을 사용할 수 있습니다. 우리는 이미 이것을 지난 문서에서 [switch문](/ko/docs/Learn_web_development/Core/Scripting/Conditionals#switch_statements)을 살펴볼 때 만났습니다 — 입력 표현식과 일치하는 switch문에서 case가 충족되었을 때, `break`문은 즉시 switch문을 종료하고 switch문 다음에 있는 코드로 이동합니다.
 
 이것은 반복문과 같은 것입니다 — `break`문은 즉시 반복문을 종료하고 브라우저가 반복문 뒤에 있는 코드로 이동하게 합니다.
 
@@ -691,7 +691,7 @@ textarea.onkeyup = function () {
 - `refused.textContent +=` — 무언가를 `refused.textContent`의 끝에 연결할 줄의 시작.
 - `admitted.textContent +=` — 무언가를 `admitted.textContent`의 끝에 연결할 줄의 시작.
 
-추가 보너스 질문 — 위의 일을 성공적으로 완료한 이후에, 여러분은 콤마로 나눠진 두 이름 목록을 가지고 있을 것이지만, 그것들은 단정치 못합니다 — 각 목록의 끝에 콤마가 있을 것입니다. 각 경우에 어떻게 마지막 콤마를 잘라낸 줄을 작성하고, 끝에 마침표를 추가할 지 알아내실 수 있으신가요? 도움을 위해 [유용한 문자열 메서드](/ko/docs/Learn/JavaScript/First_steps/Useful_string_methods) 문서를 한 번 봐 보세요.
+추가 보너스 질문 — 위의 일을 성공적으로 완료한 이후에, 여러분은 콤마로 나눠진 두 이름 목록을 가지고 있을 것이지만, 그것들은 단정치 못합니다 — 각 목록의 끝에 콤마가 있을 것입니다. 각 경우에 어떻게 마지막 콤마를 잘라낸 줄을 작성하고, 끝에 마침표를 추가할 지 알아내실 수 있으신가요? 도움을 위해 [유용한 문자열 메서드](/ko/docs/Learn_web_development/Core/Scripting/Useful_string_methods) 문서를 한 번 봐 보세요.
 
 만약 실수했다면, 언제나 예제를 "Reset" 버튼으로 리셋할 수 있습니다. 만약 정말로 막혔다면, 답을 보기 위해 "Show solution"을 누르세요.
 
@@ -875,13 +875,13 @@ do {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 반복문](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Loops).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 반복문](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops).
 
 ## 결론
 
 이 문서는 여러분에게 JavaScript에서의 반복문에 대한 기본 개념과 이용 가능한 다른 옵션들을 드러내 보였습니다. 여러분은 이제 왜 반복문이 반복적인 코드를 다루는 데 좋은 메커니즘인지 확실히 이해하고, 여러분만의 예제에서 그것들을 사용하고 싶어서 몸이 근질거리실 것입니다!
 
-만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn#contact_us)에서 도움을 요청해 보세요.
+만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn_web_development#contact_us)에서 도움을 요청해 보세요.
 
 ## 같이 보기
 

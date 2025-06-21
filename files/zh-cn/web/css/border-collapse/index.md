@@ -7,7 +7,47 @@ slug: Web/CSS/border-collapse
 
 **`border-collapse`** [CSS](/zh-CN/docs/Web/CSS) 属性是用来决定表格的边框是分开的还是合并的。在分隔模式下，相邻的单元格都拥有独立的边框。在合并模式下，相邻单元格共享边框。
 
-{{EmbedInteractiveExample("pages/css/border-collapse.html")}}
+{{InteractiveExample("CSS Demo: border-collapse")}}
+
+```css interactive-example-choice
+border-collapse: collapse;
+```
+
+```css interactive-example-choice
+border-collapse: separate;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <table class="transition-all" id="example-element">
+    <tr>
+      <td>Cell 1.1</td>
+      <td>Cell 1.2</td>
+    </tr>
+    <tr>
+      <td>Cell 2.1</td>
+      <td>Cell 2.2</td>
+    </tr>
+    <tr>
+      <td>Cell 3.1</td>
+      <td>Cell 3.2</td>
+    </tr>
+  </table>
+</section>
+```
+
+```css interactive-example
+table {
+  width: 15rem;
+  table-layout: fixed;
+}
+
+td {
+  border: 5px solid;
+  border-color: crimson dodgerblue orange limegreen;
+  padding: 0.75rem;
+}
+```
 
 合并（_collapsed_）模式下，表格中相邻单元格共享边框。在这种模式下，CSS 属性{{ Cssxref("border-style") }} 的值 inset 表现为槽，值 outset 表现为脊。
 

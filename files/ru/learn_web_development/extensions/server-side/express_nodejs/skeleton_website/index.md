@@ -7,11 +7,11 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_websi
 
 {{PreviousMenuNext("Learn/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn/Server-side/Express_Nodejs/mongoose", "Learn/Server-side/Express_Nodejs")}}
 
-Эта вторая статья в нашем [учебнике Express](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website) показывает, как создать каркас проекта веб-сайта, который позже можно будет заполнить с помощью путей сайта, шаблонов представлений и обращений к базе данных.
+Эта вторая статья в нашем [учебнике Express](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website) показывает, как создать каркас проекта веб-сайта, который позже можно будет заполнить с помощью путей сайта, шаблонов представлений и обращений к базе данных.
 
-| Необходимые знания: | [Установить среду разработки Node](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment). Просмотреть учебник Express. |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:             | Научиться запускать свои проекты используя _Express Application Generator_.                                                         |
+| Необходимые знания: | [Установить среду разработки Node](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment). Просмотреть учебник Express. |
+| ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:             | Научиться запускать свои проекты используя _Express Application Generator_.                                                                                    |
 
 ## Обзор
 

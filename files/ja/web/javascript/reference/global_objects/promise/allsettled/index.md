@@ -95,7 +95,7 @@ Promise.allSettled([
 
 - [`Promise.allSettled` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-promise)
 - [プロミスの使用](/ja/docs/Web/JavaScript/Guide/Using_promises)ガイド
-- [プロミスを使った行儀のよい非同期のプログラミング](/ja/docs/Learn/JavaScript/Asynchronous/Promises)
+- [プロミスを使った行儀のよい非同期のプログラミング](/ja/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}
 - {{jsxref("Promise.any()")}}

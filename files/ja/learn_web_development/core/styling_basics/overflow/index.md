@@ -1,11 +1,10 @@
 ---
 title: コンテンツのオーバーフロー
+short-title: オーバーフロー
 slug: Learn_web_development/Core/Styling_basics/Overflow
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
@@ -217,7 +216,7 @@ CSS は可能な限りコンテンツを隠しません。これをやってし�
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: オーバーフロー](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow)を見てください。
 
 ## まとめ
 

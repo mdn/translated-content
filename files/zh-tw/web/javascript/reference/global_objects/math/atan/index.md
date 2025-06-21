@@ -2,7 +2,7 @@
 title: Math.atan()
 slug: Web/JavaScript/Reference/Global_Objects/Math/atan
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -16,16 +16,16 @@ l10n:
 {{InteractiveExample("JavaScript Demo: Math.atan()")}}
 
 ```js interactive-example
-// Calculates angle of a right-angle triangle in radians
+// 計算直角三角形的角度（以弧度表示）
 function calcAngle(opposite, adjacent) {
   return Math.atan(opposite / adjacent);
 }
 
 console.log(calcAngle(8, 10));
-// Expected output: 0.6747409422235527
+// 預期輸出：0.6747409422235527
 
 console.log(calcAngle(5, 3));
-// Expected output: 1.0303768265243125
+// 預期輸出：1.0303768265243125
 ```
 
 ## 語法

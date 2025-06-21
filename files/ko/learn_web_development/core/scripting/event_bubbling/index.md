@@ -113,9 +113,7 @@ HTML은 다음과 같습니다.
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       이 브라우저는 HTML 동영상을 지원하지 않습니다. 대신
       <a href="rabbit320.mp4">동영상 링크</a>를 제공합니다.
@@ -208,9 +206,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       이 브라우저는 HTML 동영상을 지원하지 않습니다. 대신
       <a href="rabbit320.mp4">동영상 링크</a>를 제공합니다.
@@ -396,7 +392,7 @@ button.addEventListener("click", handleClick);
 
 ## 스킬 테스트!
 
-이 문서의 마지막까지 왔습니다. 그런데 가장 중요한 정보를 기억하고 있나요? 계속하기 전에 이 정보를 기억했는지 확인하려면 [스킬 테스트: 이벤트](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events)를 참조하세요.
+이 문서의 마지막까지 왔습니다. 그런데 가장 중요한 정보를 기억하고 있나요? 계속하기 전에 이 정보를 기억했는지 확인하려면 [스킬 테스트: 이벤트](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events)를 참조하세요.
 
 ## 요약
 

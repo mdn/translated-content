@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}
 
-Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico.
+Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo páginas de listas y detalles de libros y autores. Aquí aprenderemos sobre vistas genéricas basadas en clases, y mostraremos cómo éstas pueden reducir la cantidad de código que tienes que escribir para casos de uso común. También entraremos en el manejo de URL en gran detalle, mostrando cómo realizar un emparejamiento de patrones básico.
 
 <table>
   <tbody>
@@ -37,7 +37,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/
 
 ## Visión General
 
-En este tutorial vamos a completar la primera versión del sitio web [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) añadiendo páginas de lista y detalle para libros y autores (o para ser más precisos, te mostraremos cómo implementar las páginas de libros, ¡y te dejaremos crear las páginas de autores por tí mismo!)
+En este tutorial vamos a completar la primera versión del sitio web [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) añadiendo páginas de lista y detalle para libros y autores (o para ser más precisos, te mostraremos cómo implementar las páginas de libros, ¡y te dejaremos crear las páginas de autores por tí mismo!)
 
 El proceso es similar al de creación de la página índice, que mostramos en el tutorial anterior. Aquí también necesitaremos crear mapeos URL, vistas y plantillas. La principal diferencia es que para las páginas de detalle tendremos el reto adicional de extraer información desde patrones en las URLs y pasarla a la vista. Para estas páginas vamos a mostrar un tipo de vista completamente diferente: vistas genéricas de lista y detalle basadas en clases. Estas pueden reducir significativamente la cantidad de código requerido para las vistas, haciéndolas más fáciles de escribir y mantener.
 

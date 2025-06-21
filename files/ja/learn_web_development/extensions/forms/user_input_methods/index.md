@@ -21,7 +21,7 @@ l10n:
 
 - タッチパネルのディスプレイに対応するるため、[タッチイベント](/ja/docs/Web/API/Touch_events)は、モバイル端末から冷蔵庫のパネル、博物館のキオスクディスプレイに至るまで、タッチベースのユーザーインターフェイス上での指の動きを解釈します。
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API) を使用すると、コンテンツを全画面モードで表示することができます。これは、冷蔵庫や博物館のキオスクでフォームを表示する場合に必要となります。
-- リッチテキストエディターのようなカスタムフォームコントロールを作成する必要がある場合、 [`contentEditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を使用すると、通常は編集できない HTML 要素から編集可能なコントロールを作成することができます。0
+- リッチテキストエディターのようなカスタムフォームコントロールを作成する必要がある場合、 [`contentEditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を使用すると、通常は編集できない HTML 要素から編集可能なコントロールを作成することができます。0
 - [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) により、ユーザーはページ上の要素をドラッグして、異なる場所にドロップすることができます。 これによって、アップロードするファイルの選択や、ページ内のコンテンツモジュールの並べ替えなどを行う際の使い勝手が改善されます。
 - レイアウトで画面方向が重要である場合、 [CSS メディアクエリー](/ja/docs/Web/CSS/@media/orientation)を使用してブラウザーの方向に基づいてフォームのスタイル設定を行うことができます。また、 [画面方向 API](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) を使用して画面方向の状態を読み取り、他のアクションを行うことができます。
 
@@ -123,7 +123,7 @@ if (elem.requestFullscreen) {
 
 私たちが実装する点は以下です:
 
-- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Global_attributes#attr-draggable) 属性を `true` にセットします。
+- ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
 > **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
@@ -132,7 +132,7 @@ if (elem.requestFullscreen) {
 
 一般に、ユーザーからデータを収集するには、 {{HTMLElement("form")}} 内の {{HTMLElement("textarea")}} または適切な {{HTMLElement("input")}} 型を、 {{HTMLElement("form")}} 内で説明用の {{HTMLElement("label")}} とともに使用すべきです。しかし、これらの要素がニーズを満たさない場合もあります。例えば、リッチテキストエディターは、イタリック体、太字、通常文字を収集できますが、リッチテキストを収集できるフォームコントロールは存在しません。このようなケースでは、スタイル設定や編集が可能なカスタムコントロールを作成する必要があります。そのための属性があります。
 
-どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#attr-contenteditable) 属性を使うことで、直接編集することができるようになります。
+どの DOM 要素も、 [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を使うことで、直接編集することができるようになります。
 
 ```css hidden
 div {
@@ -146,18 +146,18 @@ div {
 <div contenteditable="true">このテキストはユーザーが編集することができます。</div>
 ```
 
-`contenteditable` 属性を指定すると、自動的に要素が文書の既定のタブ順序に追加されます。つまり、 [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を追加する必要はありません。しかし、[独自のフォームコントロールを作成](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)する際に、データ入力用に意味を持たない要素を使用する場合は、 JavaScript と [ARIA](/ja/docs/Web/Accessibility/ARIA) を追加して、フォームコントロールの機能を持たせる必要があります。
+`contenteditable` 属性を指定すると、自動的に要素が文書の既定のタブ順序に追加されます。つまり、 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を追加する必要はありません。しかし、[独自のフォームコントロールを作成](/ja/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)する際に、データ入力用に意味を持たない要素を使用する場合は、 JavaScript と [ARIA](/ja/docs/Web/Accessibility/ARIA) を追加して、フォームコントロールの機能を持たせる必要があります。
 
 使い勝手を良くするためには、作成するカスタムフォームコントロールは、アクセシビリティがあり、ネイティブのフォームコントロールと同じ機能を持つ必要があります。
 
-- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) を ARIA で追加する必要があります。
+- 要素の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、[ラベル](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)、[説明](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) を ARIA で追加する必要があります。
 - すべてのユーザー入力方法、たとえば[キーボード](#キーボード)、[マウス](#マウス)、[タッチ](#指でのタッチ)、[ポインター](#ポインターイベント)の各イベントに対応する必要があります。
 - ユーザーが更新したコンテンツの[検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)、[送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)、[保存](/ja/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)などの機能を処理するには、 JavaScript が必要です。
 
 {{EmbedLiveSample("contentEditable")}}
 
 > [!NOTE]
-> 例やその他リソースに関する情報は[コンテンツを編集可能にするガイド](/ja/docs/Web/HTML/Global_attributes/contenteditable)で確認することができます。
+> 例やその他リソースに関する情報は[コンテンツを編集可能にするガイド](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)で確認することができます。
 
 ## チュートリアル
 
@@ -177,4 +177,4 @@ div {
 - [Screen Orientation](/ja/docs/Web/API/CSS_Object_Model/Managing_screen_orientation) API
 - [全画面](/ja/docs/Web/API/Fullscreen_API) API
 - [ドラッグ＆ドロップ](/ja/docs/Web/API/HTML_Drag_and_Drop_API) API
-- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性

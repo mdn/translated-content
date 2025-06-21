@@ -7,7 +7,53 @@ slug: Web/CSS/color
 
 CSS **`color`** 属性设置元素的文本以及[文本装饰](/zh-CN/docs/Web/CSS/text-decoration)的前景色[颜色值](/zh-CN/docs/Web/CSS/color_value)，并设置 [`currentcolor`](/zh-CN/docs/Web/CSS/color_value#currentcolor_关键字) 值。`currentcolor` 可以用作*其他*属性的间接值，且为其他颜色属性（如 {{cssxref("border-color")}}）的默认值。
 
-{{EmbedInteractiveExample("pages/css/color.html")}}
+{{InteractiveExample("CSS Demo: color")}}
+
+```css interactive-example-choice
+color: rebeccapurple;
+```
+
+```css interactive-example-choice
+color: #00a400;
+```
+
+```css interactive-example-choice
+color: rgb(214, 122, 127);
+```
+
+```css interactive-example-choice
+color: hsl(30deg 82% 43%);
+```
+
+```css interactive-example-choice
+color: hsla(237deg 74% 33% / 61%);
+```
+
+```css interactive-example-choice
+color: hwb(152deg 0% 58% / 70%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="example-container">
+    <p id="example-element">
+      London. Michaelmas term lately over, and the Lord Chancellor sitting in
+      Lincoln's Inn Hall. Implacable November weather.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  font-size: 1.5em;
+}
+
+.example-container {
+  background-color: white;
+  padding: 10px;
+}
+```
 
 对于在 HTML 中使用颜色的概述，请参考[使用 CSS 为 HTML 元素应用颜色](/zh-CN/docs/Web/CSS/CSS_colors/Applying_color)。
 
@@ -78,7 +124,7 @@ color: unset;
 颜色的对比度是通过比较文本和背景颜色值的亮度确定的。要符合当前的 [Web 内容无障碍指南（WCAG）](https://www.w3.org/WAI/intro/wcag)，文本至少要有 4.5:1 的比例，大文本（比如标题）至少要有 3:1 的比例。具有[加粗](/zh-CN/docs/Web/CSS/font-weight)和至少 18.66px 大小，或者具有至少 24px 大小的文本称为大文本。
 
 - [WebAIM：颜色对比度检查器](https://webaim.org/resources/contrastchecker/)
-- [MDN 理解 WCAG，指南 1.4 解释](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN 理解 WCAG，指南 1.4 解释](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.4_Make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 - [理解成功标准 1.4.3 | W3C 理解 WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html)
 
 ## 形式定义

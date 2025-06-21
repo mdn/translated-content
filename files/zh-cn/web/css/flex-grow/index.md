@@ -7,7 +7,45 @@ slug: Web/CSS/flex-grow
 
 CSS 属性 **`flex-grow`** [CSS](/zh-CN/docs/Web/CSS) 设置 flex 项 [主尺寸](https://www.w3.org/TR/css-flexbox/#main-size) 的 flex 增长系数。
 
-{{EmbedInteractiveExample("pages/css/flex-grow.html")}}
+{{InteractiveExample("CSS Demo: flex-grow")}}
+
+```css interactive-example-choice
+flex-grow: 1;
+```
+
+```css interactive-example-choice
+flex-grow: 2;
+```
+
+```css interactive-example-choice
+flex-grow: 3;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">I grow</div>
+  <div>Item Two</div>
+  <div>Item Three</div>
+</section>
+```
+
+```css interactive-example
+.default-example {
+  border: 1px solid #c5c5c5;
+  width: auto;
+  max-height: 300px;
+  display: flex;
+}
+
+.default-example > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+```
 
 ## 语法
 

@@ -2,7 +2,7 @@
 title: animation-timeline
 slug: Web/CSS/animation-timeline
 l10n:
-  sourceCommit: d04e974da0f45889bbaaa91bf3803eca46b1b73c
+  sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
 {{CSSRef}}{{SeeCompatTable}}
@@ -19,7 +19,7 @@ l10n:
   - 名前付きビュー進行タイムラインは、 {{cssxref("view-timeline-name")}} プロパティ（または {{cssxref("view-timeline")}} の一括指定プロパティ）を用いて主題の名前を明示的に指定するものです。そして、その名前を要素の `animation-timeline` プロパティの値として指定することで、アニメーションさせる要素にリンクします。これは重要な点です。名前付きビュー進行タイムラインでは、アニメーションさせる要素は被写体と同じである必要はありません。
   - 無名ビュー進行タイムラインとは、 {{cssxref("animation-timeline/view", "view()")}} 関数を `animation-timeline` 値として指定され、最も近い親スクローラー内の位置に基づいてアニメーションが発生させられるものです。
 
-> **メモ:** {{cssxref("animation-timeline")}} はリセット専用の値として {{cssxref("animation")}} 一括指定に含められます。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
+> **メモ:** `animation-timeline` はリセット専用の値として {{cssxref("animation")}} 一括指定に含められています。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -61,13 +61,13 @@ animation-timeline: unset;
 
   - : アニメーションのタイムラインはこの文書の既定の [DocumentTimeline](/ja/docs/Web/API/DocumentTimeline) です。
 
-- `scroll()` {{Experimental_Inline}}
+- `scroll()`
 
   - : 無名スクロール進行タイムラインは、現在の要素の祖先スクローラーによって指定されます。関数の引数でスクローラーを選択し、タイムラインが測定されるスクロール軸を選択することができます。
 
     詳しくは {{cssxref("animation-timeline/scroll", "scroll()")}} を参照してください。
 
-- `view()` {{Experimental_Inline}}
+- `view()`
 
   - : 無名ビュー進行タイムラインは、`animation-timeline: view();`が設定された主体から提供されます。関数の引数では、タイムラインの進行が追跡されるスクロールバーの軸と、主体が表示されているとみなされるボックスの位置を調整するインセットを選択できます。
 

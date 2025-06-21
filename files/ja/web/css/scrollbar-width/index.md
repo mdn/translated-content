@@ -59,8 +59,8 @@ scrollbar-width: unset;
 
 WCAG 基準 2.1.1 (キーボード) は、長らく基本的なキーボードのアクセシビリティを勧告してきており、これはコンテンツ領域のスクロールも含みます。また、 WCAG 2.1 で導入された基準 2.5.5 (対象の寸法) では、タッチ対象の幅と高さを 44px 以上にすることを推奨しています (ただし、この問題は高解像度の画面ではさらに複雑になるため、十分なテストが必要です)。
 
-- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
-- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#ガイドライン_2.5_—_入力様式_キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする)
+- [MDN WCAG の理解、ガイドライン 2.1 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.1_—_キーボードアクセス可能_キーボードから全ての機能を利用可能にする)
+- [MDN WCAG の理解、ガイドライン 2.5 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.5_—_入力様式_キーボードを超えた様々な入力を通して機能をユーザーが操作しやすくする)
 - [Understanding Success Criterion 2.1.1 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/keyboard)
 - [Understanding Success Criterion 2.5.5 | W3C Understanding WCAG 2.1](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html)
 

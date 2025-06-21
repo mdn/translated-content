@@ -32,7 +32,7 @@ original_slug: Learn/JavaScript/Building_blocks/Return_values
 
 **반환 값**(return value)이란 그냥 들리는 그대로입니다 — 함수가 완료되었을 때 함수가 반환하는 값입니다. 여러분은 이미 수 차례 반환 값을 마주쳤습니다. 비록 그것들에 대해 분명하게 생각하지는 않았을지도 모르지만요.
 
-(이 시리즈의 [지난 문서](/ko/docs/Learn/JavaScript/Building_blocks/Functions#built-in_browser_functions)에서 본) 익숙한 예제로 돌아가 봅시다.
+(이 시리즈의 [지난 문서](/ko/docs/Learn_web_development/Core/Scripting/Functions#built-in_browser_functions)에서 본) 익숙한 예제로 돌아가 봅시다.
 
 ```js
 let myText = "The weather is cold";
@@ -184,13 +184,13 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions).
 
 ## 결론
 
 이제 끝났습니다 — 함수는 즐겁고, 아주 유용하고, 그리고 비록 함수의 문법과 기능성에 대해 이야기할 것들이 많지만, 그것들은 꽤 이해하기 쉽습니다.
 
-만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn#contact_us)에서 도움을 요청해 보세요.
+만약 뭐든지 이해하지 못한 게 있다면, 자유롭게 이 문서를 다시 읽거나, [문의하기](/ko/docs/Learn_web_development#contact_us)에서 도움을 요청해 보세요.
 
 ## 같이 보기
 

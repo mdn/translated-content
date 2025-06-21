@@ -24,8 +24,6 @@ console.log(
 // Expected output: Array ["a", "ä", "Z", "z"]
 ```
 
-<!--このデモのソースファイルは GitHub リポジトリーに格納されています。デモプロジェクトに協力していただける場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
-
 ## コンストラクター
 
 - {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}
@@ -41,7 +39,7 @@ console.log(
 - {{jsxref("Intl/Collator/compare", "Intl.Collator.prototype.compare")}}
   - : この {{jsxref("Global_Objects/Intl/Collator", "Intl.Collator")}} オブジェクトのソート順に応じて 2 つの文字列を比較する関数を返します。
 - {{jsxref("Intl/Collator/resolvedOptions", "Intl.Collator.prototype.resolvedOptions()")}}
-  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 

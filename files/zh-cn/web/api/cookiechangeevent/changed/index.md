@@ -2,7 +2,7 @@
 title: CookieChangeEvent：changed 属性
 slug: Web/API/CookieChangeEvent/changed
 l10n:
-  sourceCommit: de4bd74771b88bb6352c1136b608811edf24ffda
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{securecontext_header}}{{APIRef("Cookie Store API")}}
@@ -29,7 +29,7 @@ l10n:
   - : 一个{{jsxref("boolean", "布尔值", "", 1)}}，表示 cookie 是否仅在安全上下文中使用（HTTPS 而不是 HTTP）。
 - `sameSite`
 
-  - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
+  - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
 
     - `"strict"`
       - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。

@@ -1,10 +1,9 @@
 ---
 title: Express 教學 3：使用資料庫（Mongoose）
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
-original_slug: Learn/Server-side/Express_Nodejs/mongoose
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/routes", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 本文簡短介紹數據庫，以及如何搭配 Node / Express 應用，使用數據庫。接下來會演示我們如何使用 [Mongoose](http://mongoosejs.com/)，為本地圖書館提供數據庫存取。本文說明物件要求與模型如何宣告，主要的欄位型態，以及基本驗證。本文也簡短演示一些存取模型數據的主要方法。
 

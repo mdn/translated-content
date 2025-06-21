@@ -17,7 +17,7 @@ l10n:
 
 ### MathML
 
-- [`<ms>`](/ja/docs/Web/MathML/Element/ms) MathML 要素で、独自の始めと終わりの引用符を示すための非推奨属性であった `lquote` および `rquote` 属性を無効にしました。
+- [`<ms>`](/ja/docs/Web/MathML/Reference/Element/ms) MathML 要素で、独自の始めと終わりの引用符を示すための非推奨属性であった `lquote` および `rquote` 属性を無効にしました。
   この動作は `mathml.ms_lquote_rquote_attributes.disabled` で設定しており、既定値を `true` にしました ([Firefox バグ 1793387](https://bugzil.la/1793387))。
 
 ### CSS

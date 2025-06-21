@@ -7,7 +7,41 @@ slug: Web/CSS/height
 
 **`height`** CSS 속성은 요소의 높이를 지정합니다. 기본값은 콘텐츠 영역의 높이지만, {{cssxref("box-sizing")}}이 `border-box`라면 테두리 영역의 높이를 설정합니다.
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 {{cssxref("min-height")}}와 {{cssxref("max-height")}} 속성은 `height`를 덮어씁니다.
 

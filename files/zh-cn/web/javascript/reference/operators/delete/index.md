@@ -70,7 +70,7 @@ delete console.log(1);
 // 输出 1，返回 true，但是没有删除任何东西
 ```
 
-`delete` 运算符从一个对象中删除一个给定的属性。在成功删除时，它将返回 `true`，否则将返回 `false`。不像一般人认为的那样（也许是由于其他编程语言，如 [C++ 中的 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)），`delete` 操作符与直接释放内存**没有**关系。内存管理是通过破坏引用间接完成的。更多细节请参见[内存管理](/zh-CN/docs/Web/JavaScript/Memory_management)页面。
+`delete` 运算符从一个对象中删除一个给定的属性。在成功删除时，它将返回 `true`，否则将返回 `false`。不像一般人认为的那样（也许是由于其他编程语言，如 [C++ 中的 delete](https://docs.microsoft.com/cpp/cpp/delete-operator-cpp?view=msvc-170)），`delete` 操作符与直接释放内存**没有**关系。内存管理是通过破坏引用间接完成的。更多细节请参见[内存管理](/zh-CN/docs/Web/JavaScript/Guide/Memory_management)页面。
 
 但是，以下情况需要重点考虑：
 

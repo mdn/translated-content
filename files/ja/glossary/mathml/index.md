@@ -13,5 +13,5 @@ l10n:
 
 - Wikipedia 上の [MathML](https://ja.wikipedia.org/wiki/MathML)
 - [MathML](/ja/docs/Web/MathML)
-- [MathML の作成](/ja/docs/Web/MathML/Authoring)
+- [MathML の作成](/ja/docs/Web/MathML/Guides/Authoring)
 - [What is MathML](https://www.w3.org/Math/whatIsMathML.html)

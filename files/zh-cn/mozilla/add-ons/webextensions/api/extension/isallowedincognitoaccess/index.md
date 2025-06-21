@@ -9,7 +9,7 @@ l10n:
 
 检查插件是否允许访问在“隐私浏览”模式下打开的标签页。
 
-这是返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
+这是一个返回 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise) 的异步函数。
 
 ## 语法
 

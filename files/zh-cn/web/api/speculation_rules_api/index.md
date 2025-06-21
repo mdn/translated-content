@@ -9,14 +9,14 @@ l10n:
 
 **推测规则 API**（Speculation Rules API）是为了提升未来网页导航的速度而设计的。它主要针对网页的 URL，而不是特定的资源文件，所以更适合多页面应用（MPA），而不是单页面应用（SPA）。
 
-推测规则 API 是广泛支持的 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch) 的替代品，并且打算取代仅 Chrome 支持、已经弃用的 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender) 特性。它相比这些技术提供了很多改进，并且有更灵活、可配置的方式来指定哪些文档应该被预取（prefetch）或预渲染（prerender）。
+推测规则 API 是广泛支持的 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/prefetch) 的替代品，并且打算取代仅 Chrome 支持、已经弃用的 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/prerender) 特性。它相比这些技术提供了很多改进，并且有更灵活、可配置的方式来指定哪些文档应该被预取（prefetch）或预渲染（prerender）。
 
 > [!NOTE]
 > 推测规则 API 并不处理子资源的预取；为此还是需要使用 `<link rel="prefetch">`。
 
 ## 概念和用法
 
-推测规则可以写在内联的 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 标签中，或者通过 {{httpheader("Speculation-Rules")}} 响应标头引用的外部文本文件来定义。这些规则以 JSON 格式指定。
+推测规则可以写在内联的 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) 标签中，或者通过 {{httpheader("Speculation-Rules")}} 响应标头引用的外部文本文件来定义。这些规则以 JSON 格式指定。
 
 脚本示例：
 
@@ -47,7 +47,7 @@ l10n:
 </script>
 ```
 
-如果网站包含了使用 `<script>` 标签的推测规则，那么其必须被 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令明确允许。可通过添加 `'inline-speculation-rules'` 来源、哈希来源（hash-source）或 nonce 来源（nonce-source）来实现。
+如果网站包含了使用 `<script>` 标签的推测规则，那么其必须被 {{httpheader("Content-Security-Policy")}} 的 `script-src` 指令明确允许。可通过添加 `'inline-speculation-rules'` 来源、散列来源（hash-source）或 nonce 来源（nonce-source）来实现。
 
 一个 HTTP 标头的例子：
 
@@ -62,7 +62,7 @@ Speculation-Rules: "/rules/prefetch.json"
 
 每种推测加载类型（比如 `"prerender"` 或 `"prefetch"`）都有一个专门的数组来存放规则。每条规则都是一个对象，指定了比如要加载的资源列表、每个规则的选项（例如显式的 {{httpheader("Referrer-Policy")}} 设置）。注意，预渲染的 URL 也会被预取。
 
-参见 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) 以获取可用语法的完整说明。
+参见 [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) 以获取可用语法的完整说明。
 
 ### 使用预取
 
@@ -77,7 +77,7 @@ Speculation-Rules: "/rules/prefetch.json"
 > [!NOTE]
 > 将来会通过 {{httpheader("Supports-Loading-Mode")}} 标头提供跨站预取的启用选项，但在撰写本文时还没有实现（只有同源、同站的[预渲染](#使用预渲染)启用选项可用）。
 
-对于支持的浏览器，推测规则预取应该优先于旧的预取机制，即 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Attributes/rel/prefetch) 和设置了 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}}。因为我们知道，推测规则预取是为了导航，而不是一般的资源预取：
+对于支持的浏览器，推测规则预取应该优先于旧的预取机制，即 [`<link rel="prefetch">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/prefetch) 和设置了 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}}。因为我们知道，推测规则预取是为了导航，而不是一般的资源预取：
 
 - 它可以用于跨站点导航，而 `<link rel="prefetch">` 不能。
 - 它不会被 {{httpheader("Cache-Control")}} 标头阻止，而 `<link rel="prefetch">` 通常会被阻止。
@@ -104,7 +104,7 @@ Speculation-Rules: "/rules/prefetch.json"
 
 预渲染默认限制在同源的文档中。跨源、同站的渲染是可能的——它需要导航目标使用具有 `credentialed-prerender` 值的 {{httpheader("Supports-Loading-Mode")}} 标头来启用。跨站预渲染目前还不可能。
 
-对于支持它的浏览器，推测规则预渲染应该优先于旧的预渲染机制，即 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Attributes/rel/prerender)：
+对于支持它的浏览器，推测规则预渲染应该优先于旧的预渲染机制，即 [`<link rel="prerender">`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/prerender)：
 
 - `<link rel="prerender">` 是 Chrome 特有的，从未标准化，Chrome 工程团队正在逐步淘汰它。
 - 它会加载那些通过 JavaScript 加载的子资源，而 `<link rel="prerender">` 不会。
@@ -424,7 +424,7 @@ if (document.prerendering) {
 
 ## HTML 特性
 
-- [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Element/script/type/speculationrules) {{experimental_inline}}
+- [`<script type="speculationrules">`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/speculationrules) {{experimental_inline}}
   - : 用于在当前文档中定义一组预取和/或预渲染推测规则，这些规则被添加到文档的推测规则集中。
 
 ## 示例
@@ -442,4 +442,4 @@ if (document.prerendering) {
 ## 参见
 
 - developer.chrome.google.cn 上的[在 Chrome 中预渲染页面以实现即时网页导航](https://developer.chrome.google.cn/docs/web-platform/prerender-pages)（2023）
-- [推测性加载](/zh-CN/docs/Web/Performance/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。
+- [推测性加载](/zh-CN/docs/Web/Performance/Guides/Speculative_loading)用于比较推测规则和其他类似的性能改进特性。

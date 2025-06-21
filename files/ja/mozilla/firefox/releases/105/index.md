@@ -17,7 +17,7 @@ l10n:
 
 ### CSS
 
-- SVG の定義や [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 内部のコンテンツなどの埋め込みコンテンツが、OS やブラウザーのテーマ設定ではなくコンテンツを埋め込んでいる要素のテーマ設定を重視するようになりました (両者の設定が異なっている場合があります)。
+- SVG の定義や [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 内部のコンテンツなどの埋め込みコンテンツが、OS やブラウザーのテーマ設定ではなくコンテンツを埋め込んでいる要素のテーマ設定を重視するようになりました (両者の設定が異なっている場合があります)。
   特に、埋め込みコンテンツは埋め込み元要素の [`color-scheme`](/ja/docs/Web/CSS/color-scheme) を継承するようになりました。また、埋め込みコンテンツの [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーは OS やブラウザーレベルの color-scheme 設定ではなく埋め込み元要素の color-scheme の値を重視します ([Firefox バグ 1779457](https://bugzil.la/1779457))。
 
 ### JavaScript

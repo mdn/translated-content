@@ -14,9 +14,9 @@ l10n:
 
 この関数を使用して {{HTTPHeader("Accept")}} ヘッダーが設定されなかった場合、 {{domxref("XMLHttpRequest.send", "send()")}} が呼び出されると、 `Accept` ヘッダーは `*/*` の値で送信されます。
 
-セキュリティ上の理由から、ユーザーエージェントによって値が制御される{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}がいくつかあります。フロントエンドの JavaScript コードからこれらのヘッダーの値を設定しようとすると、警告やエラーなしに無視されます。
+セキュリティ上の理由から、ユーザーエージェントによって値が制御される{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}がいくつかあります。フロントエンドの JavaScript コードからこれらのヘッダーの値を設定しようとすると、警告やエラーなしに無視されます。
 
-さらに、 HTTP の [`Authorization`](/ja/docs/Web/HTTP/Headers/Authorization) ヘッダーをリクエストに追加することができますが、そのリクエストがオリジン間でリダイレクトされたときには削除されます。
+さらに、 HTTP の [`Authorization`](/ja/docs/Web/HTTP/Reference/Headers/Authorization) ヘッダーをリクエストに追加することができますが、そのリクエストがオリジン間でリダイレクトされたときには削除されます。
 
 > [!NOTE]
 > カスタムフィールドについては、ドメインをまたがってリクエストを行うと、 "**not allowed by Access-Control-Allow-Headers in preflight response**" の例外に遭遇することがあります。

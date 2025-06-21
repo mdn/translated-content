@@ -32,5 +32,5 @@ NDEFRecord.lang
 
 ## 関連情報
 
-- [HTML の `lang` 属性](/ja/docs/Web/HTML/Global_attributes/lang): 文書やその要素のコンテンツの言語を宣言します
+- [HTML の `lang` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang): 文書やその要素のコンテンツの言語を宣言します
 - コンテンツの言語を宣言する HTTP ヘッダー: {{HTTPHeader("Content-Language")}} および {{HTTPHEader("Accept-Language")}}

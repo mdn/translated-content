@@ -10,7 +10,7 @@ original_slug: WebAssembly/JavaScript_interface/CompileError
 
 ## コンストラクター
 
-- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/JavaScript_interface/CompileError/CompileError)
+- [`WebAssembly.CompileError()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/CompileError/CompileError)
   - : 新しい `WebAssembly.CompileError` オブジェクトを生成します。
 
 ## インスタンスプロパティ
@@ -66,5 +66,5 @@ try {
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

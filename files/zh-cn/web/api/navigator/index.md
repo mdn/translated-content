@@ -52,7 +52,7 @@ _不继承任何属性_。
 - {{domxref("Navigator.locks")}} {{ReadOnlyInline}} {{SecureContext_Inline}}
   - : 返回一个 {{domxref("LockManager")}} 对象，提供了请求新的 {{domxref('Lock')}} 对象和查询现有的 {{domxref('Lock')}} 对象的方法。
 - {{domxref("Navigator.login")}} {{ReadOnlyInline}} {{Experimental_Inline}} {{SecureContext_Inline}}
-  - : 提供对浏览器 {{domxref("NavigatorLogin")}} 对象的访问权限，联合身份提供程序（IdP）可以使用它在用户登录或退出 IdP 时设置其登录状态。更多详细信息请参阅[联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)。
+  - : 提供对浏览器 {{domxref("NavigatorLogin")}} 对象的访问权限，联合身份提供商（IdP）可以使用它在用户登录或退出 IdP 时设置其登录状态。更多详细信息请参阅[联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)。
 - {{domxref("Navigator.maxTouchPoints")}} {{ReadOnlyInline}}
   - : 返回当前设备支持的最大同时触摸接触点数。
 - {{domxref("Navigator.mediaCapabilities")}} {{ReadOnlyInline}}

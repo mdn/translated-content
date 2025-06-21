@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`<relative-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Types)で、相対サイズのキーワードを記述します。 `<relative-size>` キーワードは、親要素の計算サイズからの相対サイズを定義します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
+**`<relative-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、相対サイズのキーワードを記述します。 `<relative-size>` キーワードは、親要素の計算サイズからの相対サイズを定義します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
 
 ## 構文
 

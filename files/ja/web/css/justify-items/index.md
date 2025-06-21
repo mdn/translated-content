@@ -9,7 +9,51 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`justify-items`** プロパティは、ボックスのすべてのアイテムに既定の {{CSSxRef("justify-self")}} を定義し、それぞれのボックスの調整を適切な軸に沿って、既定の方法で行ないます。
 
-{{EmbedInteractiveExample("pages/css/justify-items.html")}}
+{{InteractiveExample("CSS Demo: justify-items")}}
+
+```css interactive-example-choice
+justify-items: stretch;
+```
+
+```css interactive-example-choice
+justify-items: center;
+```
+
+```css interactive-example-choice
+justify-items: start;
+```
+
+```css interactive-example-choice
+justify-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 40px;
+  grid-gap: 10px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 このプロパティの効果は、現在のレイアウトモードに依存します。
 

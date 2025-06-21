@@ -29,7 +29,7 @@ original_slug: Learn/JavaScript/Building_blocks/Functions
 
 JavaScript 어디서든 함수를 찾을 수 있습니다. 사실, 우리는 지금까지 수업에서 함수를 계속 사용해왔습니다. 함수에 대해서 아주 많이 말해오지 않았을 뿐이죠. 그러나 이제 함수에 대해서 분명하게 말하고, 실제로 문법을 탐험할 때가 되었습니다.
 
-[for loop](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#%EB%A3%A8%ED%94%84%EC%9D%98_%ED%91%9C%EC%A4%80), [while 과 do...while loop](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code#while_%EA%B7%B8%EB%A6%AC%EA%B3%A0_do_..._while), 또는 [if...else문](/ko/docs/Learn/JavaScript/Building_blocks/%EC%A1%B0%EA%B1%B4%EB%AC%B8#if_..._else_%EB%AC%B8)과 같은 일반적인 내장 언어 구조를 사용하지 **않고** — `()` —같은 괄호 쌍을 사용했다면 여러분은 함수를 사용하고 있던 겁니다.
+[for loop](/ko/docs/Learn_web_development/Core/Scripting/Loops#%EB%A3%A8%ED%94%84%EC%9D%98_%ED%91%9C%EC%A4%80), [while 과 do...while loop](/ko/docs/Learn_web_development/Core/Scripting/Loops#while_%EA%B7%B8%EB%A6%AC%EA%B3%A0_do_..._while), 또는 [if...else문](/ko/docs/Learn/JavaScript/Building_blocks/%EC%A1%B0%EA%B1%B4%EB%AC%B8#if_..._else_%EB%AC%B8)과 같은 일반적인 내장 언어 구조를 사용하지 **않고** — `()` —같은 괄호 쌍을 사용했다면 여러분은 함수를 사용하고 있던 겁니다.
 
 ## 브라우저 내장 함수
 
@@ -71,7 +71,7 @@ var myNumber = Math.random();
 
 JavaScript 언어는 여러분 스스로 코드 전체를 적을 필요 없이, 유용한 것들을 할 수 있게 해주는 많은 내장 함수를 가지고 있습니다. 사실, 브라우저 내장 함수를 **호출**("함수를 실행하다(run 또는 execute)"는 말을 멋있게 "호출하다(invoke)"라고 하기도 합니다)할 때 호출하는 일부 코드는 JavaScript로 작성될 수 없었습니다 — 이러한 함수 중 상당수는 백그라운드 브라우저 코드의 일부를 호출하고 있으며, 이는 JavaScript와 같은 웹 언어가 아니라 대체로 C++와 같은 저수준 시스템 언어로 작성됩니다.
 
-몇몇 브라우저 내장함수는 핵심(core) JavaScript 언어의 일부가 아니라는 것을 유념하세요. 몇몇은 브라우저 API의 일부로써 정의되어 있는데, 더욱 많은 기능성을 제공하기 위해 기본(default) 언어의 위에 개발되었습니다 ([앞선 코스](/ko/docs/Learn/JavaScript/First_steps/What_is_JavaScript#%EA%B7%B8%EB%9E%98%EC%84%9C_%EC%A7%84%EC%A7%9C_%EC%96%B4%EB%96%A4_%EC%9D%BC%EC%9D%84_%ED%95%A0_%EC%88%98_%EC%9E%88%EB%82%98%EC%9A%94)에서 더 자세한 설명을 볼 수 있습니다). 브라우저 API를 다루는 법은 나중에 더 살펴보도록 하겠습니다.
+몇몇 브라우저 내장함수는 핵심(core) JavaScript 언어의 일부가 아니라는 것을 유념하세요. 몇몇은 브라우저 API의 일부로써 정의되어 있는데, 더욱 많은 기능성을 제공하기 위해 기본(default) 언어의 위에 개발되었습니다 ([앞선 코스](/ko/docs/Learn_web_development/Core/Scripting/What_is_JavaScript#%EA%B7%B8%EB%9E%98%EC%84%9C_%EC%A7%84%EC%A7%9C_%EC%96%B4%EB%96%A4_%EC%9D%BC%EC%9D%84_%ED%95%A0_%EC%88%98_%EC%9E%88%EB%82%98%EC%9A%94)에서 더 자세한 설명을 볼 수 있습니다). 브라우저 API를 다루는 법은 나중에 더 살펴보도록 하겠습니다.
 
 ## 함수 대 메소드
 
@@ -79,7 +79,7 @@ JavaScript 언어는 여러분 스스로 코드 전체를 적을 필요 없이, 
 
 우리가 지금까지 사용해 왔던 내장된(built-in) 코드는 두 형태로 나타납니다. 바로 **함수**와 **메서드**입니다. 여러분은 내장 함수의 전체 목록과, 내장 객체와 그들의 해당하는 메서드들 또한 [여기서](/ko/docs/Web/JavaScript/Reference/Global_Objects) 확인할 수 있습니다.
 
-여러분은 또한 많은 **사용자 정의 함수**(custom functions)들을 이 코스에서 지금까지 봐 왔습니다. — 브라우저 내부에서 정의된 게 아니라, 여러분의 코드에서 정의된 함수 말입니다. 괄호 바로 앞에 있는 사용자 정의 이름을 봤을 때마다, 여러분은 사용자 정의 함수를 사용하고 있었던 것입니다. [반복문(loops) 문서](/ko/docs/Learn/JavaScript/Building_blocks/Looping_code)의 [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 예제 (전체 [소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) 또한 보세요)에서, 우리는 다음과 같은 사용자 정의 `draw()` 함수를 포함했었습니다.
+여러분은 또한 많은 **사용자 정의 함수**(custom functions)들을 이 코스에서 지금까지 봐 왔습니다. — 브라우저 내부에서 정의된 게 아니라, 여러분의 코드에서 정의된 함수 말입니다. 괄호 바로 앞에 있는 사용자 정의 이름을 봤을 때마다, 여러분은 사용자 정의 함수를 사용하고 있었던 것입니다. [반복문(loops) 문서](/ko/docs/Learn_web_development/Core/Scripting/Loops)의 [random-canvas-circles.html](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) 예제 (전체 [소스 코드](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/random-canvas-circles.html) 또한 보세요)에서, 우리는 다음과 같은 사용자 정의 `draw()` 함수를 포함했었습니다.
 
 ```js
 function draw() {
@@ -436,7 +436,7 @@ function subFunction3(value) {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). 이 테스트들은 다음 두 문서에서 다뤄지는 기술들을 요구하므로, 여러분은 그 문서들을 이 테스트를 시도해 보기 전에 먼저 읽기를 원할지도 모릅니다.
 
 ## 결론
 

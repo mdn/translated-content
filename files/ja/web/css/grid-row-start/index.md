@@ -9,7 +9,54 @@ l10n:
 
 **`grid-row-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド行の中におけるグリッドアイテムの先頭の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭の端を指定します。
 
-{{EmbedInteractiveExample("pages/css/grid-row-start.html")}}
+{{InteractiveExample("CSS Demo: grid-row-start")}}
+
+```css interactive-example-choice
+grid-row-start: auto;
+```
+
+```css interactive-example-choice
+grid-row-start: 3;
+```
+
+```css interactive-example-choice
+grid-row-start: -1;
+```
+
+```css interactive-example-choice
+grid-row-start: span 2;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">One</div>
+    <div>Two</div>
+    <div>Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-rows: repeat(3, minmax(40px, auto));
+  grid-gap: 10px;
+  width: 200px;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 ## 構文
 

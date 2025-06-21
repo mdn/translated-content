@@ -203,4 +203,4 @@ div {
 
 - [`transform`](/fr/docs/Web/CSS/transform)
 - [`<transform-function>`](/fr/docs/Web/CSS/transform-function)
-- [`scale3d()`](</fr/docs/Web/CSS/transform-function/scale3d()>)
+- [`scale3d()`](/fr/docs/Web/CSS/transform-function/scale3d)

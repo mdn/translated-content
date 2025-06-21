@@ -58,7 +58,7 @@ const audioContext = new AudioContext();
 ```
 
 > [!NOTE]
-> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/CORS) 取得更多信息。
+> 如果你要加载的声音文件保留在其他域中，则需要使用 `crossorigin` 属性；查看 [Cross Origin Resource Sharing (CORS)](/zh-CN/docs/Web/HTTP/Guides/CORS) 取得更多信息。
 
 为了使用 Web Audio API 的优秀特性，我们需要从该元素中获取源并将其传入我们创建的上下文中。幸运的是，有一个方法可以让我们做到这一点 — {{domxref("AudioContext.createMediaElementSource")}}:
 
@@ -171,7 +171,7 @@ track.connect(gainNode).connect(audioContext.destination);
 
 默认增益为 1；这使当前音量保持不变。增益可以设置的最小值约`-3.4028235E38`，最大约`3.4028235E38`。这里我们将允许音箱增益可以设置到 2（2 倍的原音量）和降低到 0（这可以有效的静音）。
 
-让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Element/input/range) ：
+让我们给用户这样的控制 — 我们将会使用 [range input](/zh-CN/docs/Web/HTML/Reference/Elements/input/range) ：
 
 ```js
 <input type="range" id="volume" min="0" max="2" value="1" step="0.01">

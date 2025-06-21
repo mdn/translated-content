@@ -250,7 +250,7 @@ and HTML Apps." />
 これらすべてのアイコンを正しい方法で実装することについて、今はあまり心配する必要はありません。これはかなり高度な機能であり、このコースの進行にこの知識を持っている必要はありません。ここで重要なのは、他にもウェブサイトのソースコードを閲覧している際に、このようなことがあり得るということを知っておくことです。これらの値すべてについて、また、その選び方を学びたい場合は、 {{HTMLElement("link")}} 要素のリファレンスページをご覧ください。
 
 > [!NOTE]
-> もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
+> もし、サイトがセキュリティを向上させるために Content Security Policy (CSP) を使用している場合、ポリシーがファビコンに適用されます。ファビコンが読み込まれないという問題に遭遇したら、 {{HTTPHeader("Content-Security-Policy")}} ヘッダーの [`img-src` ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/img-src)がアクセスを妨害していないかを確認してください。
 
 ## HTML に CSS と JavaScript を追加する
 
@@ -288,7 +288,7 @@ and HTML Apps." />
 
 ## 文書の主要な言語の設定
 
-最後に、ページの言語を設定することができること（そしてそうすべきこと）に言及する価値があるでしょう。これは、 [lang 属性](/ja/docs/Web/HTML/Global_attributes/lang)を開始 HTML タグに追加することで実現することができます（[meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) に表示され、以下に表示されています）。
+最後に、ページの言語を設定することができること（そしてそうすべきこと）に言及する価値があるでしょう。これは、 [lang 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)を開始 HTML タグに追加することで実現することができます（[meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) に表示され、以下に表示されています）。
 
 ```html
 <html lang="en-US">

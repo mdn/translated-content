@@ -9,7 +9,32 @@ l10n:
 
 **`@layer`** [CSS](/ko/docs/Web/CSS) [at-rule](/ko/docs/Web/CSS/At-rule)은 캐스케이드 레이어를 선언하는 데 사용되며, 여러 캐스케이드 레이어가 있을 경우 우선순위를 정의하는 데도 사용할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/at-rule-layer.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: @layer", "tabbed-standard")}}
+
+```css interactive-example
+@layer module, state;
+
+@layer state {
+  .alert {
+    background-color: brown;
+  }
+  p {
+    border: medium solid limegreen;
+  }
+}
+
+@layer module {
+  .alert {
+    border: medium solid violet;
+    background-color: yellow;
+    color: white;
+  }
+}
+```
+
+```html interactive-example
+<p class="alert">Beware of the zombies</p>
+```
 
 ## 구문
 
@@ -205,6 +230,6 @@ p {
 - [`!important`](/ko/docs/Web/CSS/important)
 - [`revert-layer`](/ko/docs/Web/CSS/revert-layer)
 - [Introducing the CSS cascade](/ko/docs/Web/CSS/Cascade)
-- [계단식 및 상속](/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-- [종속 계층](/ko/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+- [종속 계층](/ko/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
 - [The future of CSS: Cascade layers](https://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/) on bram.us (2021)

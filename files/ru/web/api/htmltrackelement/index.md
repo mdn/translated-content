@@ -14,15 +14,15 @@ slug: Web/API/HTMLTrackElement
 _Наследует свойства своего родителя, {{domxref("HTMLElement")}}._
 
 - {{domxref("HTMLTrackElement.kind")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`kind`](/ru/docs/Web/HTML/Element/track#kind). Показывает, как будет использоваться текстовый трек. Возможные значения: `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` (субтитры, подписи, описания, главы или метаданные).
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`kind`](/ru/docs/Web/HTML/Reference/Elements/track#kind). Показывает, как будет использоваться текстовый трек. Возможные значения: `subtitles`, `captions`, `descriptions`, `chapters`, `metadata` (субтитры, подписи, описания, главы или метаданные).
 - {{domxref("HTMLTrackElement.src")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`src`](/ru/docs/Web/HTML/Element/track#src). Указывает адрес файла текстового трека.
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`src`](/ru/docs/Web/HTML/Reference/Elements/track#src). Указывает адрес файла текстового трека.
 - {{domxref("HTMLTrackElement.srclang")}}
-  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`srclang`](/ru/docs/Web/HTML/Element/track#srclang). Указывает язык текстового трека.
+  - : Тип данных {{domxref("DOMString")}}, так как отображает значение HTML-атрибута [`srclang`](/ru/docs/Web/HTML/Reference/Elements/track#srclang). Указывает язык текстового трека.
 - {{domxref("HTMLTrackElement.label")}}
-  - : Тип данных {{domxref("DOMString")}} , так как отображает значение HTML-атрибута [`label`](/ru/docs/Web/HTML/Element/track#label). Определяет видимый пользователю заголовок трека.
+  - : Тип данных {{domxref("DOMString")}} , так как отображает значение HTML-атрибута [`label`](/ru/docs/Web/HTML/Reference/Elements/track#label). Определяет видимый пользователю заголовок трека.
 - {{domxref("HTMLTrackElement.default")}}
-  - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Element/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
+  - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Reference/Elements/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
 
   - : Возвращает значение типа `unsigned short`, которое показывает доступность трека для чтения:

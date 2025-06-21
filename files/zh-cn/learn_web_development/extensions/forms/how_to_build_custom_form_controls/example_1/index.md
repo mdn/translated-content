@@ -1,7 +1,6 @@
 ---
 title: 示例 1
 slug: Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls/Example_1
-original_slug: Learn/Forms/How_to_build_custom_form_controls/Example_1
 ---
 
 这是第一个[如何构建自定义表单控件](/zh-CN/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)的代码解释事例。

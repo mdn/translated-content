@@ -37,7 +37,7 @@ Con "Servidor web" podemos referirnos a hardware o software, o a ambos trabajand
 1. En cuanto a hardware, un servidor web es una computadora que almacena el software de servidor web, y los archivos que componen un sitio web (por ejemplo, documentos HTML, imágenes, hojas de estilos CSS y archivos JavaScript). Un servidor web -hardware- se conecta a internet y mantiene el intercambio de datos con otros dispositivos conectados a la web.
 2. En cuanto a software, un servidor web tiene muchas partes que controlan cómo los usuarios de la web obtienen acceso a los archivos alojados en el servidor; es decir, mínimamente, un _servidor HTTP_. Un servidor HTTP es una pieza de software capaz de comprender {{Glossary("URL","URLs")}} (direcciones web) y {{Glossary("HTTP")}} (el protocolo que tu navegador usa para obtener las páginas web). Un servidor HTTP puede ser accedido a través de los nombres de dominio de los sitios web que aloja, y entrega el contenido de esos sitios web alojados al dispositivo del usuario final.
 
-Al nivel más básico, cuando un navegador necesita un archivo que está almacenado en un servidor web, el navegador requerirá el archivo al servidor mediante el protocolo HTTP. Cuando la petición alcanza al servidor web correcto (hardware), el _servidor HTTP_ (software) acepta la solicitud, encuentra el documento requerido y lo envía de regreso al navegador, tambien a través de HTTP. (Si el servidor no encuentra el documento requerido, devuelve una respuesta [404](/es/docs/Web/HTTP/Status/404) en su lugar.)
+Al nivel más básico, cuando un navegador necesita un archivo que está almacenado en un servidor web, el navegador requerirá el archivo al servidor mediante el protocolo HTTP. Cuando la petición alcanza al servidor web correcto (hardware), el _servidor HTTP_ (software) acepta la solicitud, encuentra el documento requerido y lo envía de regreso al navegador, tambien a través de HTTP. (Si el servidor no encuentra el documento requerido, devuelve una respuesta [404](/es/docs/Web/HTTP/Reference/Status/404) en su lugar.)
 
 ![Representación básica de una conexión cliente/servidor a través de HTTP](web-server.svg)
 
@@ -51,7 +51,7 @@ Por ejemplo, para producir las páginas web que finalmente ves en tu navegador, 
 
 ## Aprendizaje activo
 
-_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Contributing/Getting_started)_
+_No hay aprendizaje activo disponible. [**Por favor, considere colaborar.**](/es/docs/MDN/Community/Getting_started)_
 
 ## Inmersión más profunda
 
@@ -68,7 +68,7 @@ Técnicamente, puede alojar todos esos archivos en su propia computadora, pero e
 - tiene la misma dirección IP todo el tiempo.
 - es mantenido por un proveedor externo.
 
-Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#alojamiento).
+Por todas estas razones, encontrar un buen proveedor de alojamiento es una parte clave del desarrollo de su sitio web. Investigue a través de los diversos servicios que ofrecen las compañías y elija uno que se ajuste a sus necesidades y a su presupuesto (los servicios van desde los gratuitos hasta los miles de dólares al mes). Puede encontrar mas información [en este artículo](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#alojamiento).
 
 Una vez que configura una solución de alojamiento web, solo tiene que [cargar sus archivos en su servidor web](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
 
@@ -89,7 +89,7 @@ HTTP proporciona reglas claras sobre cómo se comunican un cliente y un servidor
 - Al solicitar un archivo a través de HTTP, los clientes deben proporcionar la URL del archivo.
 - El servidor web debe responder a todas las solicitudes HTTP, al menos con un mensaje de error.
 
-[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/docs/Web/HTTP/Status/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
+[![The MDN 404 page as an example of such error page](mdn-404.jpg)](/es/docs/Web/HTTP/Reference/Status/404) En un servidor web, el servidor HTTP es responsable de procesar y responder las solicitudes entrantes.
 
 1. Al recibir una solicitud, un servidor HTTP primero verifica si la URL solicitada coincide con un archivo existente.
 2. Si es así, el servidor web envía el contenido del archivo de nuevo al navegador. Si no, un servidor de aplicaciones construye el archivo necesario.
@@ -105,12 +105,12 @@ Es imposible sugerir un único servidor de aplicaciones que sea la solución cor
 
 La mayoría de los desarrolladores de sitios web no necesitarán crear un servidor de aplicaciones desde cero, porque hay muchas soluciones listas para usar, muchas de las cuales son altamente configurables.
 Pero si necesita crear su propio servidor, probablemente querrá utilizar un _framework_ de servidor, aprovechando su código y bibliotecas existentes, y extendiendo solo las partes que necesita para satisfacer su caso de uso.
-Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn/Server-side).
+Solo un número relativamente pequeño de desarrolladores debería necesitar desarrollar un servidor completamente desde cero: por ejemplo, para cumplir con restricciones de recursos en un sistema integrado. Si desea experimentar con la creación de un servidor, eche un vistazo a los recursos en la [vía de aprendizaje de programación de sitios web del lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side).
 
 ## Próximos pasos
 
 Ahora que estás familiarizado con los servidores web, podrías:
 
-- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
+- leer sobre [cuánto cuesta hacer algo en la web](/es/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)
+- consultar otros artículos relacionados con[los diferentes software que puedes utilizar para crear un sitio web](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)
 - pasar a algo práctico tipo: [¿cómo subir archivos al servidor?](/es/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).

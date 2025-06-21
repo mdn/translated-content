@@ -76,7 +76,7 @@ new PaymentRequest(methodData, details, options)
 ### 例外
 
 - `SecurityError` {{domxref("DOMException")}}
-  - : この機能を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)によってブロックされている。
+  - : この機能を使用することが、[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)によってブロックされている。
 
 ## 例
 

@@ -139,7 +139,7 @@ let myVariable = "Bob";
 myVariable = "Steve";
 ```
 
-なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Data_structures)の値を保持することもできます。
+なお、変数は様々な[データ型](/ja/docs/Web/JavaScript/Guide/Data_structures)の値を保持することもできます。
 
 <table class="standard-table">
   <thead>

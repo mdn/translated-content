@@ -18,7 +18,38 @@ p:read-write {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-read-write.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
+
+```css interactive-example
+label,
+input[type="submit"] {
+  display: block;
+  margin-top: 1em;
+}
+
+*:read-write {
+  background-color: ivory;
+  border: 2px solid darkorange;
+  border-radius: 5px;
+}
+```
+
+```html interactive-example
+<p>Please fill in your details:</p>
+
+<form>
+  <label for="email">Email Address:</label>
+  <input id="email" name="email" type="email" value="test@example.com" />
+
+  <label for="note">Short note about yourself:</label>
+  <textarea id="note" name="note">Don't be shy</textarea>
+
+  <label for="pic">Your picture:</label>
+  <input id="pic" name="pic" type="file" />
+
+  <input type="submit" value="Submit form" />
+</form>
+```
 
 ## 構文
 
@@ -57,7 +88,7 @@ textarea:read-write {
 
 ### フォーム以外の読み書き用コントロールのスタイル付け
 
-このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Element/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) が設定されたものを選択します。
+このセレクターは {{htmlElement("input")}}/{{htmlElement("textarea")}} 要素に [`readonly`](/ja/docs/Web/HTML/Reference/Elements/input#readonly) が設定されているものだけを選択するのではありません。ユーザーが編集できる*あらゆる*要素、例えば {{htmlelement("p")}} 要素に [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) が設定されたものを選択します。
 
 ```html
 <p contenteditable>この段落は編集可能です。読み書き可です。</p>
@@ -95,4 +126,4 @@ p:read-write {
 ## 関連情報
 
 - {{cssxref(":read-only")}}
-- HTML の [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) 属性
+- HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性

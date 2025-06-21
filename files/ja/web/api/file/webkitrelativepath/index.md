@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}{{AvailableInWorkers}}
 
-**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Element/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
+**`webkitRelativePath`** は {{domxref("File")}} インターフェイスの読み取り専用プロパティで、[`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input#webkitdirectory) 属性が設定された {{HTMLElement("input")}} 要素において、ユーザーが選択したディレクトリーに対するファイルのパスを指定する文字列を保持します。
 
 ## 値
 

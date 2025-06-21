@@ -2,14 +2,95 @@
 title: animation-direction
 slug: Web/CSS/animation-direction
 l10n:
-  sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`animation-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーション再生の向きを順方向、逆方向、前後反転のいずれにするかを設定します。
 
-{{EmbedInteractiveExample("pages/css/animation-direction.html")}}
+{{InteractiveExample("CSS Demo: animation-direction")}}
+
+```css interactive-example-choice
+animation-direction: normal;
+```
+
+```css interactive-example-choice
+animation-direction: reverse;
+```
+
+```css interactive-example-choice
+animation-direction: alternate;
+```
+
+```css interactive-example-choice
+animation-direction: alternate-reverse;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+  <button id="play-pause">再生</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-play-state: paused;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#play-pause {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const button = document.getElementById("play-pause");
+
+  button.addEventListener("click", () => {
+    if (el.classList.contains("running")) {
+      el.classList.remove("running");
+      button.textContent = "再生";
+    } else {
+      el.classList.add("running");
+      button.textContent = "一時停止";
+    }
+  });
+});
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
@@ -47,7 +128,7 @@ animation-direction: unset;
 
 > **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、`reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。alternate`の値（{{cssxref("animation-iteration-count")}}と結合子）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
+> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、 `reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。 `alternate` の値（{{cssxref("animation-iteration-count")}} との組み合わせ）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
 
 ## 公式定義
 

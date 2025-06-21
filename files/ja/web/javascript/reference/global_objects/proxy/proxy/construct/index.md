@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
+**`handler.construct()`** メソッドは、オブジェクトの `[[Construct]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/new", "new")}} 演算子などの操作で使用されます。結果としてのプロキシーオブジェクトが new 演算子を使用できるようにするためには、プロキシーを初期化するために使用されるターゲット自体が有効なコンストラクターである必要があります。
 
 {{InteractiveExample("JavaScript Demo: handler.construct()", "taller")}}
 

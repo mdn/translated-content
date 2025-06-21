@@ -2,7 +2,7 @@
 title: 依赖方
 slug: Glossary/Relying_party
 l10n:
-  sourceCommit: e63979cfb7866a20a546623e6cf736ccf9055f03
+  sourceCommit: 50e5e8a9b8a6b7d0dd9877610c9639d8b90f329f
 ---
 
 {{GlossarySidebar}}
@@ -13,6 +13,6 @@ l10n:
 
 ## 参见
 
-- {{glossary("Federated identity", "联合身份")}}
-- {{glossary("Identity provider", "身份提供者")}}
-- [联合凭证管理（FedCM）API](/zh-CN/docs/Web/API/FedCM_API)
+- 相关术语：
+  - {{glossary("Federated identity", "联合身份")}}
+  - {{glossary("Identity provider", "身份提供商")}}

@@ -56,7 +56,7 @@ sayings.size; // 0
 
 ### WeakMap 对象
 
-{{jsxref("WeakMap")}} 是键/值对的集合，其键必须是对象或[非注册符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，其值为任意 [JavaScript 类型](/zh-CN/docs/Web/JavaScript/Data_structures)，并且不会对其键创建强引用。也就是说，一个对象作为键出现在 `WeakMap` 中并不会阻止该对象被垃圾回收。一旦作为键的对象被收集，其在任何 `WeakMap` 中的相应值也会被垃圾收集，只要它们没有在其他地方被强引用。唯一可用作 `WeakMap` 键的原始类型类型是 symbol，更具体地说，是[非注册 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，因为非注册 symbol 保证是唯一的，并且不能被重新创建。
+{{jsxref("WeakMap")}} 是键/值对的集合，其键必须是对象或[非注册符号](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，其值为任意 [JavaScript 类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)，并且不会对其键创建强引用。也就是说，一个对象作为键出现在 `WeakMap` 中并不会阻止该对象被垃圾回收。一旦作为键的对象被收集，其在任何 `WeakMap` 中的相应值也会被垃圾收集，只要它们没有在其他地方被强引用。唯一可用作 `WeakMap` 键的原始类型类型是 symbol，更具体地说，是[非注册 symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol#全局共享的_symbol)，因为非注册 symbol 保证是唯一的，并且不能被重新创建。
 
 `WeakMap` API 与 `Map` API 基本相同。不过，`WeakMap` 不允许观察其键的有效性，这也是它不允许枚举的原因。因此，没有任何方法可以获取 `WeakMap` 中的键的列表。如果有的话，该列表将取决于垃圾回收的状态，从而引入非确定性。
 
@@ -144,7 +144,7 @@ mySet2 = new Set([1, 2, 3, 4]);
 
 ## Map 和 Set 的键值相等
 
-`Map` 对象和 `Set` 对象的键和值的等值判断都基于 [SameValueZero 算法](/zh-CN/docs/Web/JavaScript/Equality_comparisons_and_sameness#零值相等)：
+`Map` 对象和 `Set` 对象的键和值的等值判断都基于 [SameValueZero 算法](/zh-CN/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#零值相等)：
 
 - 等价的作用类似于严格相等运算符 `===`。
 - `-0` 和 `+0` 相等。

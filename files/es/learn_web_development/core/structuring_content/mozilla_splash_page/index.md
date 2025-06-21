@@ -71,14 +71,14 @@ Justo dentro del elemento {{htmlelement("article")}} (debajo de la etiqueta de a
 
 ### Agregar imágenes receptivas a los enlaces de información adicional
 
-Dentro de {{htmlelement("div")}} con clase `further-info` encontrarás cuatro elementos {{htmlelement("a")}} -cada uno de los cuales vincula a una página interesante relacionada con Mozilla-. Para completar esta sección, debes insertar un elemento {{htmlelement("img")}} dentro de cada uno que contenga los atributos [`src`](/es/docs/Web/HTML/Element/img#src), [`alt`](/es/docs/Web/HTML/Element/img#alt), [`srcset`](/es/docs/Web/HTML/Element/img#srcset) y [`sizes`](/es/docs/Web/HTML/Element/img#sizes).
+Dentro de {{htmlelement("div")}} con clase `further-info` encontrarás cuatro elementos {{htmlelement("a")}} -cada uno de los cuales vincula a una página interesante relacionada con Mozilla-. Para completar esta sección, debes insertar un elemento {{htmlelement("img")}} dentro de cada uno que contenga los atributos [`src`](/es/docs/Web/HTML/Reference/Elements/img#src), [`alt`](/es/docs/Web/HTML/Reference/Elements/img#alt), [`srcset`](/es/docs/Web/HTML/Reference/Elements/img#srcset) y [`sizes`](/es/docs/Web/HTML/Reference/Elements/img#sizes).
 
 En cada caso, (excepto uno que es inherentemente receptivo) queremos que el navegador sirva la versión 120px cuando el ancho de la ventana de visualización sea de 500px o menos, o la versión de 400px en otro caso.
 
 ¡Asegúrate de hacer coincidir las imágenes correctas con los enlaces correctos!
 
 > [!NOTE]
-> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
+> Para probar correctamente los ejemplos `srcset`/`sizes` necesitarás cargar tu sitio a un servidor (usar [Github pages](/es/docs/Learn_web_development/Howto/Tools_and_setup/Using_GitHub_pages) es una solución fácil y gratis), y desde allí puedes probar si funcionan correctamente usando herramientas de desarrollo del navegador como Firefox [Network Monitor](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html).
 
 ### Un "red-panda" con arte dirigido
 

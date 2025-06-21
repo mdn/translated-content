@@ -13,7 +13,7 @@ slug: Glossary/CORS
 
 ### 一般知識
 
-- MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS)
+- MDN 上の [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - Wikipedia 上の [Cross-origin_resource_sharing](https://ja.wikipedia.org/wiki/Cross-origin_resource_sharing) （英語）
 
 ### CORS のヘッダー
@@ -33,7 +33,7 @@ slug: Glossary/CORS
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される HTTP ヘッダーをサーバーに知らせるために使用します。
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される [HTTP メソッド](/ja/docs/Web/HTTP/Methods)をサーバーに知らせるために使用します。
+  - : プリフライトリクエストを発行する際に、実際のリクエストを行う際に使用される [HTTP メソッド](/ja/docs/Web/HTTP/Reference/Methods)をサーバーに知らせるために使用します。
 - {{HTTPHeader("Origin")}}
   - : どのオリジンからアクセスしているかを示します。
 

@@ -7,7 +7,43 @@ slug: Web/CSS/border-block-width
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-width`** 定义了元素的逻辑块向的边框宽度，并根据元素的书写模式、行内方向和文本朝向对应至实体边框宽度。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-width")}} 和 {{CSSXref("border-bottom-width")}}，或者 {{CSSXref("border-left-width")}} 和 {{CSSXref("border-right-width")}} 属性。
 
-{{EmbedInteractiveExample("pages/css/border-block-width.html")}}
+{{InteractiveExample("CSS Demo: border-block-width")}}
+
+```css interactive-example-choice
+border-block-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-block-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-block-width: 4px;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 另一方向的边框宽度可用 {{CSSXref("border-inline-width")}} 设置，此属性会设置 {{CSSXref("border-inline-start-width")}} 和 {{CSSXref("border-inline-end-width")}}。
 

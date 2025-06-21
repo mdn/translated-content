@@ -7,9 +7,43 @@ l10n:
 
 {{CSSRef}}
 
-**`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが形状の頂点を表します。
+**`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが形状の頂点を表します。
 
-{{EmbedInteractiveExample("pages/css/function-polygon.html")}}
+{{InteractiveExample("CSS Demo: polygon()")}}
+
+```css interactive-example-choice
+clip-path: polygon(
+  0% 20%,
+  60% 20%,
+  60% 0%,
+  100% 50%,
+  60% 100%,
+  60% 80%,
+  0% 80%
+);
+```
+
+```css interactive-example-choice
+clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#default-example {
+  background: #fe9;
+}
+
+#example-element {
+  background: linear-gradient(to bottom right, #f52, #05f);
+  width: 100%;
+  height: 100%;
+}
+```
 
 ## 構文
 
@@ -27,13 +61,13 @@ polygon(nonzero, 0% 0%, 50% 50%, 0% 100%)
 polygon(evenodd, 0% 0%, 50% 50%, 0% 100%)
 ```
 
-`polygon()` の引数はカンマとオプションの空白で区切られます。最初の引数はオプションの [`<fill-rule>`](/ja/docs/Web/SVG/Attribute/fill-rule) 値です。追加の引数は多角形を定義する点です。この点はそれぞれ x/y 座標 {{cssxref("length-percentage")}} の値を空間で区切ったもので、例えば左/上隅は "0 0"、右下隅は "100% 100%" となります。
+`polygon()` の引数はカンマとオプションの空白で区切られます。最初の引数はオプションの [`<fill-rule>`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) 値です。追加の引数は多角形を定義する点です。この点はそれぞれ x/y 座標 {{cssxref("length-percentage")}} の値を空間で区切ったもので、例えば左/上隅は "0 0"、右下隅は "100% 100%" となります。
 
-メモ: SVG の [`<polygon>`](/ja/docs/Web/SVG/Element/polygon) 要素には、[`fill-rule`](/ja/docs/Web/SVG/Attribute/fill-rule) と [`points`](/ja/docs/Web/SVG/Attribute/points) の独立した属性があり、`points` は区切り文字としてスペースとカンマを柔軟に使用できます。 CSS の `polygon()` では区切り文字に対するルールは厳密に適用されます。
+メモ: SVG の [`<polygon>`](/ja/docs/Web/SVG/Reference/Element/polygon) 要素には、[`fill-rule`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) と [`points`](/ja/docs/Web/SVG/Reference/Attribute/points) の独立した属性があり、`points` は区切り文字としてスペースとカンマを柔軟に使用できます。 CSS の `polygon()` では区切り文字に対するルールは厳密に適用されます。
 
 ### 値
 
-- [`<fill-rule>`](/ja/docs/Web/SVG/Attribute/fill-rule) {{optional_inline}}
+- [`<fill-rule>`](/ja/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : オプションで `nonzero` （省略時の既定値）または `evenodd` のどちらかであり、塗りつぶしルールを指定します。
 - {{cssxref("length-percentage")}}
   - : 多角形の各頂点は `<length-percentage>` の値の組で表します。この値は図形の[参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)からの相対座標で頂点の x/y 座標を表します。

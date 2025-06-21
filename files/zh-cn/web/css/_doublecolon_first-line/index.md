@@ -5,7 +5,7 @@ slug: Web/CSS/::first-line
 
 {{CSSRef}}
 
-**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-element](/zh-CN/docs/Web/CSS/Pseudo-elements) （CSS 伪元素）在某 [block-level element](/zh-CN/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes) （块级元素）的第一行应用样式。第一行的长度取决于很多因素，包括元素宽度，文档宽度和文本的文字大小。
+**`::first-line`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)在[区块容器](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#区块容器)的第一行应用样式。
 
 和其他所有的 伪元素一样，::first-line 不能匹配任何真实存在的 html 元素。
 

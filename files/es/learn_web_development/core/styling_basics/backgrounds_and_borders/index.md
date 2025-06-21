@@ -271,7 +271,7 @@ Y las no abreviadas:
 ```
 
 > [!NOTE]
-> Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> Estas propiedades para el borde superior, derecho, inferior e izquierdo también tienen propiedades _lógicas_ asignadas que se relacionan con el modo de escritura del documento (por ejemplo, texto de izquierda a derecha o de derecha a izquierda, o de arriba a abajo). Exploraremos esto en la próxima lección, que expone el [uso de diferentes direcciones de texto](/es/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions).
 
 **Hay una variedad de estilos que puedes usar para los bordes. En el ejemplo siguiente, hemos utilizado un estilo de borde diferente para los cuatro lados de la caja. Juega con el estilo, el ancho y el color del borde para ver cómo funcionan los bordes.**
 

@@ -103,7 +103,7 @@ console.log(Object.keys(100)); // []
 ## 関連情報
 
 - [`Object.keys` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [列挙可能性とプロパティの所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.entries()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

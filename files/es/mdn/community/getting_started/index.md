@@ -22,7 +22,7 @@ Para comenzar a contribuir en MDN, necesitas [crearte una cuenta en GitHub](http
 
 ### Paso 2: Elige una tarea que completar
 
-Una vez iniciada la sesión, lee las descripciones de los distintos tipos de tareas disponibles en la [página principal de Contribuir](/es/docs/MDN/Community/Contributing), y decide cuál es la que más te interesa. Puedes elegir la tarea que quieras y comenzar tu contribución.
+Una vez iniciada la sesión, lee las descripciones de los distintos tipos de tareas disponibles en la [página principal de Contribuir](/es/docs/conflicting/MDN/Community), y decide cuál es la que más te interesa. Puedes elegir la tarea que quieras y comenzar tu contribución.
 
 ### Paso 3: Hacer la tarea
 
@@ -45,7 +45,7 @@ antes de empezar a trabajar en el contenido. Si no conoces los siguientes
 temas, te aconsejamos consultar los enlaces que le ayudarán a ponerse al día
 rápidamente:
 
-- Tecnologías web: Si eres nuevo en HTML, CSS, JavaScript, etc., echa un vistazo a nuestros tutoriales [Aprender desarrollo web](/es/docs/Learn).
+- Tecnologías web: Si eres nuevo en HTML, CSS, JavaScript, etc., echa un vistazo a nuestros tutoriales [Aprender desarrollo web](/es/docs/Learn_web_development).
 - Código abierto: Si nunca has contribuido a un proyecto de código abierto, lee [Normas básicas para proyectos de código abierto](/es/docs/MDN/Community/Open_source_etiquette).
-- Git y GitHub: Si no estás familiarizado con estas herramientas, [GitHub para principiantes](/es/docs/MDN/Community/Contributing/Getting_started) te ayudará a empezar.
-- Estructuras de repositorios de MDN: Si no estás seguro de qué repositorios debes editar para realizar cambios en las diferentes partes del contenido de MDN, [¿Dónde está todo en MDN?](/es/docs/MDN/Community/Contributing/Our_repositories) indica los lugares correctos.
+- Git y GitHub: Si no estás familiarizado con estas herramientas, [GitHub para principiantes](/es/docs/MDN/Community/Getting_started) te ayudará a empezar.
+- Estructuras de repositorios de MDN: Si no estás seguro de qué repositorios debes editar para realizar cambios en las diferentes partes del contenido de MDN, [¿Dónde está todo en MDN?](/es/docs/MDN/Community/Our_repositories) indica los lugares correctos.

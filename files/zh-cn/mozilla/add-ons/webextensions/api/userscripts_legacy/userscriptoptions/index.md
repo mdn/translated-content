@@ -1,11 +1,14 @@
 ---
-title: UserScripts.UserScriptOptions
+title: UserScripts.UserScriptOptions（旧版）
 slug: Mozilla/Add-ons/WebExtensions/API/userScripts_legacy/UserScriptOptions
 l10n:
-  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
+  sourceCommit: 6b26a56826b43f539b79033378683bb3be5bbba9
 ---
 
 {{AddonSidebar}}
+
+> [!WARNING]
+> 本文档针对旧版 `userScripts` API 编写，适用于 Firefox Manifest V2 版本。如希望在 Manifest V3 中使用用户脚本功能，可参见新的 {{WebExtAPIRef("userScripts")}} API。
 
 UserScriptOptions 对象表示要注册的内容脚本。它具有与 browser.contentScripts.register 支持的 contentScript 选项类似的语法。不同之处在于：
 

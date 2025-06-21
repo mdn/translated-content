@@ -7,7 +7,47 @@ slug: Web/CSS/border-start-start-radius
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-start-start-radius`** 定义了元素的逻辑边框半径，并根据元素的书写模式、行内方向和文本朝向对应至实体边框半径。此属性便于构建适应各种[文本朝向](/zh-CN/docs/Web/CSS/text-orientation)和[书写模式](/zh-CN/docs/Web/CSS/CSS_writing_modes)的样式。
 
-{{EmbedInteractiveExample("pages/css/border-start-start-radius.html")}}
+{{InteractiveExample("CSS Demo: border-start-start-radius")}}
+
+```css interactive-example-choice
+border-start-start-radius: 80px 80px;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 250px 100px;
+direction: rtl;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-lr;
+```
+
+```css interactive-example-choice
+border-start-start-radius: 50%;
+writing-mode: vertical-rl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a top left rounded corner.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  color: white;
+  padding: 10px;
+}
+```
 
 此属性影响元素块首与行首之间的拐角。例如在 `horizontal-tb` 书写模式和 `ltr` 行内方向下，此属性对应于 {{CSSXref("border-top-left-radius")}} 属性。
 

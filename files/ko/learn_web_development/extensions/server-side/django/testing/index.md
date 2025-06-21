@@ -30,7 +30,7 @@ original_slug: Learn/Server-side/Django/Testing
 
 ## 개요
 
-이제까지 개발된 [LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) 의 현재 상태는 다음과 같다. 모든 book과 author의 목록, `Book` 과 `Author` 항목별 상세 뷰, `BookInstance` 갱신용 페이지, `Author` 항목의 생성,갱신,삭제를 위한 페이지( [forms tutorial](/ko/docs/Learn/Server-side/Django/Forms) 편의 도전과제도 완성 했다면 `Book` 편집 페이지도 포함)가 완성 되었다. 상대적으로 작은 이 사이트조차, 각 페이지가 기대한 대로 동작하는지 손으로 대강 체크하는 것만 해도 몇 분 정도는 걸린다. 사이트가 성장하면서 수정사항이 늘어날수록 적절하게 동작하는지 우리가 수동으로 체크해야 하는 양도 늘어날 수 밖에 없다. 손으로 직접 테스트 하는 방법을 계속 유지한다면, 결국은 대부분의 시간을 테스트에 사용하고 코드를 개선할 수 있는 시간은 거의 없어질 것이다.
+이제까지 개발된 [LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 의 현재 상태는 다음과 같다. 모든 book과 author의 목록, `Book` 과 `Author` 항목별 상세 뷰, `BookInstance` 갱신용 페이지, `Author` 항목의 생성,갱신,삭제를 위한 페이지( [forms tutorial](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Forms) 편의 도전과제도 완성 했다면 `Book` 편집 페이지도 포함)가 완성 되었다. 상대적으로 작은 이 사이트조차, 각 페이지가 기대한 대로 동작하는지 손으로 대강 체크하는 것만 해도 몇 분 정도는 걸린다. 사이트가 성장하면서 수정사항이 늘어날수록 적절하게 동작하는지 우리가 수동으로 체크해야 하는 양도 늘어날 수 밖에 없다. 손으로 직접 테스트 하는 방법을 계속 유지한다면, 결국은 대부분의 시간을 테스트에 사용하고 코드를 개선할 수 있는 시간은 거의 없어질 것이다.
 
 자동화된 테스트는 이러한 문제를 진짜로 해결할 수 있다! 명백한 이점은 수동 테스트보다는 훨신 빠르고, 훨씬 세부적인 내용까지도 테스트 할수 있으며, 매번 정확히 같은 기능을 테스트할 수 있다는 점(사람이 테스트한다면 결코 신뢰성있게 할 수 없는 부분!) 이다. 자동화 테스트는 빠르기 때문에 좀 더 정기적으로 실행할 수 있고, 테스트 실패시 코드가 기대대로 동작하지 않았던 부분을 정확히 지목할 수 있다.
 
@@ -128,7 +128,7 @@ catalog/
 당신의 LocalLibrary 프로젝트에서 위와 같은 구조의 파일을 만드십시오. \_\_init\_\_.py 파일은 비어있는 파일입니다.(이것은 Python에게 이 디렉토리가 패키지임을 알려줍니다) skeleton 테스트파일인 /catalog/tests.py를 복사하여 이름을 바꿔서 위의 세개의 테스트파일을 만드십시오.
 
 > [!NOTE]
-> 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
+> 이 skeleton 테스트파일 **/catalog/tests.py 은 우리가** [Django skeleton website](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) 를 만들었을 때 자동으로 생성됩니다. 당신의 테스트들을 여기에 모두 넣는 것도 괜찮습니다만, 당신이 적절하게 테스트를 해나가면 당신은 금방 매우 크고, 관리할 필요 없는 테스트파일로 끝나게 될 것입니다.
 >
 > 이 skeleton 파일은 우리에게 필요하지 않으니 지우십시오.
 

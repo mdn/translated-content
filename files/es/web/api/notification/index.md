@@ -109,7 +109,7 @@ Estos métodos están disponibles solo en el objeto de `Notificación` en sí.
 
 ### Instance methods
 
-These properties are available only on an instance of the `Notification` object or through its [`prototype`](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
+These properties are available only on an instance of the `Notification` object or through its [`prototype`](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain). The `Notification` object also inherits from the {{domxref("EventTarget")}} interface.
 
 - {{domxref("Notification.close()")}}
   - : Programmatically closes a notification.

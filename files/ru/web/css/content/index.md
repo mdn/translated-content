@@ -5,7 +5,7 @@ slug: Web/CSS/content
 
 {{CSSRef}}
 
-[CSS](/ru/docs/Web/CSS)-свойство **`content`** заменяет элемент сгенерированным значением. Объекты, добавленные с помощью свойства `content` являются _анонимными_ property are _anonymous [замещаемыми элементами](/ru/docs/Web/CSS/Replaced_element)._
+[CSS](/ru/docs/Web/CSS)-свойство **`content`** заменяет элемент сгенерированным значением. Объекты, добавленные с помощью свойства `content` являются _анонимными_ property are _anonymous [замещаемыми элементами](/ru/docs/Web/CSS/CSS_images/Replaced_element_properties)._
 
 ```css
 /* Ключевые слова, которые нельзя комбинировать с другими значениями */
@@ -265,7 +265,7 @@ li {
 
 ## Доступность
 
-Сгенерированный CSS контент не включён в [DOM](/ru/docs/Web/API/Document_Object_Model/Introduction). Из-за этого он не будет представлен в [accessibility tree](/ru/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis) и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.
+Сгенерированный CSS контент не включён в [DOM](/ru/docs/Web/API/Document_Object_Model/Introduction). Из-за этого он не будет представлен в [accessibility tree](/ru/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis) и некоторые комбинации вспомогательных технологий/браузеров не будут его объявлять. Если контент содержит информацию, которая имеет решающее значение для понимания цели страницы, лучше включить её в основной документ.
 
 - [Accessibility support for CSS generated content – Tink](https://tink.uk/accessibility-support-for-css-generated-content/)
 - [Explanation of WCAG, Guideline 1.3 – MDN](/ru/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)

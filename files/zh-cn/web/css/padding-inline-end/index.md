@@ -7,7 +7,47 @@ slug: Web/CSS/padding-inline-end
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-inline-end`** 定义了元素的逻辑行末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
-{{EmbedInteractiveExample("pages/css/padding-inline-end.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-end")}}
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-end: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-end: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 语法
 

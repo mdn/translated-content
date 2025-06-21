@@ -353,7 +353,7 @@ button {
 
 ## スキルテスト
 
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills)を見てください。
+この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を保持しているか検証するテストがあります。 [スキルテスト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox)を見てください。
 
 ## まとめ
 

@@ -7,7 +7,55 @@ slug: Web/CSS/place-content
 
 **`place-content`** 属性是{{CSSxRef("align-content")}} 和 {{CSSxRef("justify-content")}}的简写。使用这两个属性的值可以用于任何的布局情况。
 
-{{EmbedInteractiveExample("pages/css/place-content.html")}}
+{{InteractiveExample("CSS Demo: place-content")}}
+
+```css interactive-example-choice
+place-content: end space-between;
+```
+
+```css interactive-example-choice
+place-content: space-around start;
+```
+
+```css interactive-example-choice
+place-content: start space-evenly;
+```
+
+```css interactive-example-choice
+place-content: end center;
+```
+
+```css interactive-example-choice
+place-content: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  grid-template-columns: 60px 60px;
+  grid-auto-rows: 40px;
+  height: 180px;
+  width: 220px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 ## 语法
 

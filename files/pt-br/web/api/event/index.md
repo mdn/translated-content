@@ -114,7 +114,7 @@ _Esta interface não herda nenhum método._
 ## Veja também
 
 - Tipos de eventos disponíveis: [Referência de eventos](/pt-BR/docs/Web/Events)
-- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn/JavaScript/Building_blocks/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
+- [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn_web_development/Core/Scripting/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
 - [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
 - Para desenvolvedores de extensões para o Firefox:
 

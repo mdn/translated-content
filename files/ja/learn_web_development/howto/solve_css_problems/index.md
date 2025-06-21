@@ -1,5 +1,5 @@
 ---
-title: CSS を使ってよくある問題を解決する
+title: よくある CSS の問題の解決
 slug: Learn_web_development/Howto/Solve_CSS_problems
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc

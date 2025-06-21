@@ -9,7 +9,7 @@ slug: Web/JavaScript
 
 Эта часть сайта посвящена самому языку JavaScript, и она не затрагивает тонкостей, связанных с веб-страницами или окружением, в котором исполняется JavaScript. Информация об {{Glossary("API")}}, относящихся к веб-страницам, находится в разделах, посвящённых [Веб-API](/ru/docs/Web/API) и [DOM](/ru/docs/Web/API/Document_Object_Model).
 
-Стандартом языка JavaScript является [ECMAScript](/ru/docs/Web/JavaScript/JavaScript_technologies_overview). По состоянию на 2012 год, все современные браузеры полностью поддерживают ECMAScript 5.1. Старые версии браузеров поддерживают по крайней мере - ECMAScript 3. 17 июня 2015 года состоялся выпуск шестой версии ECMAScript. Эта версия официально называется ECMAScript 2015, которую чаще всего называют ECMAScript 2015 или просто ES2015. С недавнего времени стандарты ECMAScript выпускаются ежегодно. Эта документация относится к последней версии черновика, которой является [ECMAScript 2018](http://tc39.github.io/ecma262/).
+Стандартом языка JavaScript является [ECMAScript](/ru/docs/Web/JavaScript/Reference/JavaScript_technologies_overview). По состоянию на 2012 год, все современные браузеры полностью поддерживают ECMAScript 5.1. Старые версии браузеров поддерживают по крайней мере - ECMAScript 3. 17 июня 2015 года состоялся выпуск шестой версии ECMAScript. Эта версия официально называется ECMAScript 2015, которую чаще всего называют ECMAScript 2015 или просто ES2015. С недавнего времени стандарты ECMAScript выпускаются ежегодно. Эта документация относится к последней версии черновика, которой является [ECMAScript 2018](http://tc39.github.io/ecma262/).
 
 Не следует путать JavaScript c [языком программирования Java](https://ru.wikipedia.org/wiki/Java). И "Java", и "JavaScript" являются торговыми марками или зарегистрированными торговыми марками Oracle в США и других странах. Однако, у обоих языков различный синтаксис, семантика и применение.
 
@@ -23,15 +23,15 @@ slug: Web/JavaScript
 
 - [Первые шаги в JavaScript](/ru/docs/Web/JavaScript/Guide)
   - : Отвечаем на такие вопросы, как "что такое JavaScript?", "как он выглядит?", "и что он может делать?", а также обсуждаем основные возможности JavaScript, такие, как переменные, строки, числа и массивы.
-- [Структурные элементы JavaScript](/ru/docs/Learn/JavaScript/Building_blocks)
+- [Структурные элементы JavaScript](/ru/docs/Learn_web_development/Core/Scripting)
   - : Продолжаем наше изучение главных возможностей JavaScript, обращаем наше внимание на самые часто встречающиеся блоки кода, такие, как условные выражения, циклы, функции и события.
 - [Введение в объекты JavaScript](/ru/docs/Learn/JavaScript/%D0%9E%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B)
 
   - : Объектно-ориентированная природа JavaScript важна для понимания, если вы хотите углубить знание языка и писать более эффективный код. Поэтому мы подготовили модуль, который поможет вам в этом.
 
-- [Асинхронный JavaScript](/ru/docs/Learn/JavaScript/Asynchronous)
+- [Асинхронный JavaScript](/ru/docs/Learn_web_development/Extensions/Async_JS)
   - : Обсуждение асинхронного JavaScript: почему это так важно, как эта возможность языка может использована для обработки потенциальных блокирующих операций, как, например получение данных с сервера.
-- [Клиентские (браузерные) веб-API](/ru/docs/Learn/JavaScript/Client-side_web_APIs)
+- [Клиентские (браузерные) веб-API](/ru/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Когда вы пишите клиент веб-сайтов или приложений на JavaScript, вы не далеко уйдёте без использования API – интерфейсов для взаимодействия с браузером и операционной системой, на которой запущен сайт, или даже для операций с данными, полученными от других веб-сайтов и сервисов. В этом цикле статей мы разбираемся, что такое API и как использовать некоторые самые распространённые API, которые вам встретятся при разработке.
 
 ### Руководство по JavaScript
@@ -41,28 +41,28 @@ slug: Web/JavaScript
 
 ### Средний уровень
 
-- [Понимание JavaScript-фреймворков для фронтенда](/ru/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Понимание JavaScript-фреймворков для фронтенда](/ru/docs/Learn_web_development/Core/Frameworks_libraries)
   - : JavaScript-ффреймворки являются неотъемлемой частью современной веб-разработки,предоставляя разработчикам проверенные и протестированныеинструменты для создания масштабируемых и интерактивных веб-приложений. Многиесовременные компании используют фреймворки для своих решений, поэтому многие задачи связанные с разработкой клиентской части веб-приложений теперь требуют опыта работы с ними.
-- [Повторное введение в JavaScript](/ru/docs/Web/JavaScript/Language_overview)
+- [Повторное введение в JavaScript](/ru/docs/Web/JavaScript/Guide/Language_overview)
   - : Обзор для тех, кто _думает_, что знает JavaScript.
-- [Структуры данных JavaScript](/ru/docs/Web/JavaScript/Data_structures)
+- [Структуры данных JavaScript](/ru/docs/Web/JavaScript/Guide/Data_structures)
   - : Обзор существующих структур данных в JavaScript.
-- [Операторы сравнения и тождественности](/ru/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Операторы сравнения и тождественности](/ru/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript предоставляет три различных оператора сравнения значений: строгое равенство `===`, с приведением типов `==` и метод {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
-- [Замыкания](/ru/docs/Web/JavaScript/Closures)
+- [Замыкания](/ru/docs/Web/JavaScript/Guide/Closures)
   - : Замыкания это сочетание функции и лексического окружения в котором она была определена.
 
 ### Продвинутый уровень
 
-- [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Наследование и цепочка прототипов](/ru/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Статья разъясняет бытующие заблуждения и недооцененность наследования, основанного на прототипах.
 - [Строгий режим — "use strict"](/ru/docs/Web/JavaScript/Reference/Strict_mode)
   - : Строгий режим говорит о том, что вы не можете использовать какую-либо переменную до её объявления. Это ограниченный вариант ECMAScript 5, для более быстрой производительности и простой отладки.
 - [Типизированные массивы](/ru/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Типизированные массивы предоставляют механизм для работы с необработанными двоичными данными в JavaScript.
-- [Управление памятью](/ru/docs/Web/JavaScript/Memory_management)
+- [Управление памятью](/ru/docs/Web/JavaScript/Guide/Memory_management)
   - : Жизненный цикл памяти и сборка мусора в JavaScript.
-- [Модель параллелизма (мультипоточности) и цикл событий](/ru/docs/Web/JavaScript/Event_loop)
+- [Модель параллелизма (мультипоточности) и цикл событий](/ru/docs/Web/JavaScript/Reference/Execution_model)
   - : В JavaScript есть модель параллелизма, основанная на "цикле событий".
 - [Введение в использование XPath в JavaScript](/ru/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
   - : Этот документ описывает интерфейс для использования [XPath](/ru/docs/Web/XPath) в JavaScript напрямую, внутри расширений и на веб-сайтах.

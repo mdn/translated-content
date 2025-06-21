@@ -7,7 +7,57 @@ slug: Web/CSS/margin-bottom
 
 La propriété **`margin-bottom`** définit la marge basse appliquée à un élément. On peut définir une marge négative qui rapprochera l'élément de ses voisins ou une marge positive qui l'en écartera..
 
-{{EmbedInteractiveExample("pages/css/margin-bottom.html")}}
+{{InteractiveExample("CSS Demo: margin-bottom")}}
+
+```css interactive-example-choice
+margin-bottom: 1em;
+```
+
+```css interactive-example-choice
+margin-bottom: 10%;
+```
+
+```css interactive-example-choice
+margin-bottom: 10px;
+```
+
+```css interactive-example-choice
+margin-bottom: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row"></div>
+    <div class="row transition-all" id="example-element"></div>
+    <div class="row"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 Cette propriété n'a aucun effet sur les éléments en ligne (_inline_) qui ne sont pas remplacés comme {{HTMLElement("tt")}} ou {{HTMLElement("span")}}.
 

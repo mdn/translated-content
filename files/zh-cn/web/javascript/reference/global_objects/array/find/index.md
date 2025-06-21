@@ -83,7 +83,7 @@ console.log(inventory.find(isCherries));
 // { name: 'cherries', quantity: 5 }
 ```
 
-### 使用箭头函数和解构赋值
+### 使用箭头函数和解构
 
 ```js
 const inventory = [

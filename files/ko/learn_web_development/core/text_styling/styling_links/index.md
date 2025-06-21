@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
 
-[링크](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)의 스타일을 지정할 때는 의사 클래스를 사용하여 링크의 상태를 효과적으로 스타일링하는 방법을 이해하는 것이 중요합니다. 탐색 메뉴 및 탭과 같이 콘텐츠가 다양한 공통 인터페이스 기능에서 사용할 링크의 스타일을 지정하는 방법도 알아야 합니다. 이 글에서는 이 두 가지 주제를 모두 살펴보겠습니다.
+[링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)의 스타일을 지정할 때는 의사 클래스를 사용하여 링크의 상태를 효과적으로 스타일링하는 방법을 이해하는 것이 중요합니다. 탐색 메뉴 및 탭과 같이 콘텐츠가 다양한 공통 인터페이스 기능에서 사용할 링크의 스타일을 지정하는 방법도 알아야 합니다. 이 글에서는 이 두 가지 주제를 모두 살펴보겠습니다.
 
 <table>
   <tbody>
@@ -29,11 +29,11 @@ l10n:
 
 ## 몇 가지 링크를 살펴보겠습니다
 
-[하이퍼링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)의 모범 사례에 따라 HTML에서 링크가 구현되는 방식을 살펴봤습니다. 이 글에서는 이러한 지식을 바탕으로 링크의 스타일을 지정하는 모범 사례를 보여드리겠습니다.
+[하이퍼링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)의 모범 사례에 따라 HTML에서 링크가 구현되는 방식을 살펴봤습니다. 이 글에서는 이러한 지식을 바탕으로 링크의 스타일을 지정하는 모범 사례를 보여드리겠습니다.
 
 ### 링크 상태
 
-가장 먼저 이해해야 할 것은 링크가 존재할 수 있는 다양한 상태인 링크 상태의 개념입니다. 이러한 상태는 다양한 [의사 클래스](/ko/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes)를 사용하여 스타일을 지정할 수 있습니다.
+가장 먼저 이해해야 할 것은 링크가 존재할 수 있는 다양한 상태인 링크 상태의 개념입니다. 이러한 상태는 다양한 [의사 클래스](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#pseudo-classes)를 사용하여 스타일을 지정할 수 있습니다.
 
 - **링크**: {{cssxref(":link")}} 의사 클래스를 사용하여 스타일이 지정된 대상(즉, 명명된 앵커가 아닌)이 있는 링크입니다.
 - **방문 횟수**: 이미 방문한 링크(브라우저 기록에 존재)로, {{cssxref(":visited")}} 의사 클래스를 사용하여 스타일이 지정됩니다.
@@ -373,19 +373,19 @@ a[href^="http"] {
 
 {{ EmbedLiveSample('Including_icons_on_links', '100%', 150) }}
 
-무슨 내용일까요? 대부분의 CSS는 이전에 살펴본 것과 동일한 정보이므로 생략하겠습니다. 하지만 마지막 규칙이 흥미로운데, 지난 글에서 [목록 항목의 사용자 정의 글머리 기호](/ko/docs/Learn/CSS/Styling_text/Styling_lists#using_a_custom_bullet_image)를 처리한 것과 비슷한 방식으로 외부 링크에 사용자 정의 배경 이미지를 삽입하고 있습니다. 하지만 이번에는 개별 속성 대신 {{cssxref("background")}} 약어를 사용합니다. 삽입할 이미지의 경로를 설정하고, 사본이 한 번만 삽입되도록 `no-repeat`로 지정한 다음, 위치를 텍스트 콘텐츠의 오른쪽 100%, 상단에서 0픽셀로 지정합니다.
+무슨 내용일까요? 대부분의 CSS는 이전에 살펴본 것과 동일한 정보이므로 생략하겠습니다. 하지만 마지막 규칙이 흥미로운데, 지난 글에서 [목록 항목의 사용자 정의 글머리 기호](/ko/docs/Learn_web_development/Core/Text_styling/Styling_lists#using_a_custom_bullet_image)를 처리한 것과 비슷한 방식으로 외부 링크에 사용자 정의 배경 이미지를 삽입하고 있습니다. 하지만 이번에는 개별 속성 대신 {{cssxref("background")}} 약어를 사용합니다. 삽입할 이미지의 경로를 설정하고, 사본이 한 번만 삽입되도록 `no-repeat`로 지정한 다음, 위치를 텍스트 콘텐츠의 오른쪽 100%, 상단에서 0픽셀로 지정합니다.
 
 또한 {{cssxref("background-size")}}를 사용하여 배경 이미지가 표시될 크기를 지정할 수 있습니다. 반응형 웹 디자인을 위해 아이콘을 크게 만든 다음 필요에 따라 이와 같이 크기를 조정하는 것이 유용합니다. 하지만 이 기능은 IE 9 이상에서만 작동합니다. 따라서 이전 브라우저를 지원해야 하는 경우 이미지 크기를 조정하여 그대로 삽입하면 됩니다.
 
 마지막으로, 배경 이미지가 텍스트와 겹치지 않도록 링크에 {{cssxref("padding-right")}}을 설정하여 배경 이미지가 표시될 공간을 확보했습니다.
 
-마지막으로 외부 링크만 어떻게 선택했나요? [HTML 링크](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)를 올바르게 작성했다면 외부 링크에는 절대 URL만 사용해야 하며, 내 사이트의 다른 부분으로 연결할 때는 상대 링크를 사용하는 것이 더 효율적입니다(첫 번째 링크와 마찬가지로). 따라서 "http" 텍스트는 두 번째 및 세 번째 링크와 같이 외부 링크에만 표시되어야 하며, [속성 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors#attribute_selectors)를 사용하여 이를 선택할 수 있습니다. `a[href^="http"]`는 {{htmlelement("a")}} 요소를 선택하지만 값이 "http"로 시작하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성이 있는 경우에만 선택됩니다.
+마지막으로 외부 링크만 어떻게 선택했나요? [HTML 링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)를 올바르게 작성했다면 외부 링크에는 절대 URL만 사용해야 하며, 내 사이트의 다른 부분으로 연결할 때는 상대 링크를 사용하는 것이 더 효율적입니다(첫 번째 링크와 마찬가지로). 따라서 "http" 텍스트는 두 번째 및 세 번째 링크와 같이 외부 링크에만 표시되어야 하며, [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors)를 사용하여 이를 선택할 수 있습니다. `a[href^="http"]`는 {{htmlelement("a")}} 요소를 선택하지만 값이 "http"로 시작하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성이 있는 경우에만 선택됩니다.
 
 여기까지입니다. 위의 능동적 학습 섹션을 다시 한 번 살펴보고 이 새로운 기법을 사용해 보세요!
 
 > **참고:** `href` 값이 이상하게 보이는데, 여기서는 실제로 아무데도 연결되지 않는 더미 링크를 사용했습니다. 그 이유는 실제 링크를 사용하면 라이브 예제가 임베드된 `<iframe>`에 외부 사이트가 로드되어 예제가 손실될 수 있기 때문입니다.
 
-> **참고:** [배경](/ko/docs/Learn/CSS/Building_blocks)과 [반응형 웹 디자인](/ko/docs/Learn/CSS/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
+> **참고:** [배경](/ko/docs/Learn_web_development/Core/Styling_basics)과 [반응형 웹 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)에 아직 익숙하지 않더라도 다른 곳에서 설명되어 있으니 걱정하지 마세요.
 
 ## 버튼으로 링크 스타일링하기
 
@@ -454,7 +454,7 @@ HTML은 `"container"` 클래스가 있는 {{HTMLElement("nav")}} 요소를 정�
 CSS에는 컨테이너와 컨테이너에 포함된 링크에 대한 스타일이 포함됩니다.
 
 - 두 번째 규칙은 다음과 같습니다.
-  - 컨테이너는 [플렉스 박스](/ko/docs/Learn/CSS/CSS_layout/Flexbox)입니다. 여기에 포함된 항목(이 경우 링크)은 *플렉스 항목*이 됩니다.
+  - 컨테이너는 [플렉스 박스](/ko/docs/Learn_web_development/Core/CSS_layout/Flexbox)입니다. 여기에 포함된 항목(이 경우 링크)은 *플렉스 항목*이 됩니다.
   - 플렉스 항목 사이의 간격은 컨테이너 너비의 `0.625%`가 됩니다.
 - 세 번째 규칙은 링크의 스타일을 지정합니다.
   - 첫 번째 선언인 `flex: 1`은 컨테이너의 사용 가능한 모든 공간을 사용하도록 항목의 너비를 조정한다는 의미입니다.
@@ -463,6 +463,6 @@ CSS에는 컨테이너와 컨테이너에 포함된 링크에 대한 스타일�
 
 ## 요약
 
-이 글이 링크에 대해 알아야 할 모든 것을 알려드렸기를 바랍니다. 스타일링 텍스트 모듈의 마지막 글에서는 웹사이트에 [사용자 정의 글꼴](/ko/docs/Learn/CSS/Styling_text/Web_fonts)(또는 더 잘 알려진 웹 글꼴)을 사용하는 방법에 대해 자세히 설명합니다.
+이 글이 링크에 대해 알아야 할 모든 것을 알려드렸기를 바랍니다. 스타일링 텍스트 모듈의 마지막 글에서는 웹사이트에 [사용자 정의 글꼴](/ko/docs/Learn_web_development/Core/Text_styling/Web_fonts)(또는 더 잘 알려진 웹 글꼴)을 사용하는 방법에 대해 자세히 설명합니다.
 
 {{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}

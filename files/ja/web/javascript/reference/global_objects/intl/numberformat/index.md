@@ -49,17 +49,17 @@ console.log(
 ## インスタンスメソッド
 
 - {{jsxref("NumberFormat.format", "Intl.NumberFormat.prototype.format")}}
-  - : ゲッター関数で、ローケルに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
+  - : ゲッター関数で、ロケールに応じて、この {{jsxref("NumberFormat")}} オブジェクトのオプションを持つ数値を書式化する関数を返します。
 - {{jsxref("NumberFormat.formatToParts", "Intl.NumberFormat.prototype.formatToParts()")}}
   - : オブジェクトの {{jsxref("Array")}} を返し、これは専用のロケールを意識した書式で使用することができる部品内の数値文字列を表します。
 - {{jsxref("NumberFormat.resolvedOptions", "Intl.NumberFormat.prototype.resolvedOptions()")}}
-  - : ローケルを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
+  - : ロケールを反映しているプロパティとオブジェクトの初期化中に計算された照合オプションをもった新しいオブジェクトを返します。
 
 ## 例
 
 ### 基本的な使用
 
-ローケルを指定しない基本的な使い方では、既定のローケルとオプションで書式化された文字列が返されます。
+ロケールを指定しない基本的な使い方では、既定のロケールとオプションで書式化された文字列が返されます。
 
 ```js
 var number = 3500;

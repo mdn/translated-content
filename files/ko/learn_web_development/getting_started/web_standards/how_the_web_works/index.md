@@ -63,7 +63,7 @@ original_slug: Learn/Getting_started_with_the_web/How_the_Web_works
 
 ## 여기도 보세요
 
-- [인터넷 작동 방식](/ko/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [인터넷 작동 방식](/ko/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work)
 - [HTTP — 어플리케이션-계층 규약](https://dev.opera.com/articles/http-basic-introduction/)
 - [HTTP: Let's GET It On!](https://dev.opera.com/articles/http-lets-get-it-on/)
 - [HTTP: 응답 코드](https://dev.opera.com/articles/http-response-codes/)

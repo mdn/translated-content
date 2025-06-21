@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`xywh()`** は [CSS](/ja/docs/Web/CSS) の関数で、包含ブロックの左端 (`x`) と上端 (`y`) からの距離を指定し、矩形の幅 (`w`) と高さ (`h`) を指定して矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Types)の基本図形関数です。 `xywh()` 関数を{{cssxref("offset-path")}}のようなCSSプロパティで使用し、要素が移動される矩形のパスを作成したり、{{cssxref("clip-path")}}でクリッピング領域の図形を定義することができます。
+**`xywh()`** は [CSS](/ja/docs/Web/CSS) の関数で、包含ブロックの左端 (`x`) と上端 (`y`) からの距離を指定し、矩形の幅 (`w`) と高さ (`h`) を指定して矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の基本図形関数です。 `xywh()` 関数を{{cssxref("offset-path")}}のようなCSSプロパティで使用し、要素が移動される矩形のパスを作成したり、{{cssxref("clip-path")}}でクリッピング領域の図形を定義することができます。
 
 ## 構文
 

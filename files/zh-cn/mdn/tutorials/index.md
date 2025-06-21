@@ -20,7 +20,7 @@ l10n:
 
 - [HTML 简介](/zh-CN/docs/Learn_web_development/Core/Structuring_content)
   - : 这个模块为学习 HTML 奠定了基础，让你熟悉重要的概念和语法，了解如何在文本中应用 HTML，如何创建超链接以及如何使用 HTML 构建网页结构。
-- [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Element)
+- [MDN 的 HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)
   - : 完整的 HTML 元素参考以及不同浏览器的兼容性信息。
 - [用 HTML 创建简单的网页](https://www.theblogstarter.com/html-for-beginners/)
   - : 一篇面向初学者的 HTML 指南——解释常见的标签，其中包含 HTML 标签。同时包含一篇带代码示例的分步指南——创建基础的网页。
@@ -38,7 +38,7 @@ l10n:
 
 - [HTML 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms)
   - : 表单是 Web 中非常重要的一部分——其提供了网站交互所需的很多功能，例如，注册、登录、发送反馈、购买产品，等等。在这个模块中你会学习如何创建客户端表单。
-- [让 HTML 页面加载快的技巧](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [让 HTML 页面加载快的技巧](/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
   - : 网页优化能为用户提供一个响应更好的站点，能减少 Web 服务器和互联网连接的加载时间。
 
 ## CSS 教程

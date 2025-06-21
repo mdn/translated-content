@@ -121,10 +121,10 @@ Les outils d'assistance ne peuvent pas analyser les images d'arrière-plan. Si l
 ## Voir aussi
 
 - [`<image>`](/fr/docs/Web/CSS/image)
-- [`url()`](</fr/docs/Web/CSS/url()>)
+- [`url()`](/fr/docs/Web/CSS/url_value)
 - [`image()`](</fr/docs/Web/CSS/image/image()>)
 - [`image-set()`](</fr/docs/Web/CSS/image/image-set()>)
-- [`element()`](</fr/docs/Web/CSS/element()>)
+- [`element()`](/fr/docs/Web/CSS/element)
 - [Utiliser les dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
 - Fonctions de création de dégradés&nbsp;:
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)

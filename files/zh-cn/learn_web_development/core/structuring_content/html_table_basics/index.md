@@ -1,10 +1,7 @@
 ---
 title: HTML 表格基础
 slug: Learn_web_development/Core/Structuring_content/HTML_table_basics
-original_slug: Learn/HTML/Tables/Basics
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content/Table_accessibility", "Learn_web_development/Core/Structuring_content")}}
 
@@ -230,8 +227,8 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 对于表格的理论知识，我们已经说了很多了，所以，让我们来看一个使用的例子，并建立一个简单的表格。
 
 1. 首先，将 [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/blank-template.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) 文件拷贝到你的本地环境上。
-2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Element/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
-3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Element/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
+2. 每一个表格的内容都包含在这两个标签中：**[`<table></table>`](/zh-CN/docs/Web/HTML/Reference/Elements/table)**。在你的 HTML 的 {{htmlelement("body")}} 中添加这些内容。
+3. 在表格中，最小的内容容器是单元格，是通过 **[`<td>`](/zh-CN/docs/Web/HTML/Reference/Elements/td)** 元素创建的（其中“td”代表“table data”）。把下面的内容添加到你的表格标签中：
 
    ```html
    <td>我是第一个单元格</td>
@@ -248,7 +245,7 @@ HTML 表格应该用于表格数据，这正是 HTML 表格设计出来的用途
 
 你会看到，单元格不会放置在彼此的下方，而是自动与同一行上的其他单元格对齐。每个 `<td>` 元素 创建一个单独单元格，它们共同组成了第一行。我们添加的每个单元格都使行的长度变长。
 
-如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Element/tr)** 元素（其中“tr”代表“table row”）。让我们现在来证实一下。
+如果想让这一行停止增加，并让单元格从第二行开始，我们需要使用 **[`<tr>`](/zh-CN/docs/Web/HTML/Reference/Elements/tr)** 元素（其中“tr”代表“table row”）。让我们现在来证实一下。
 
 1. 把你已经创建好的 4 个单元格放入 `<tr>` 标签，就像这样：
 
@@ -367,7 +364,7 @@ th {
 让我们来改进这个表格。
 
 1. 首先，把 [dogs-table.html](https://github.com/mdn/learning-area/blob/main/html/tables/basic/dogs-table.html) 和 [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/basic/minimal-table.css) 文件保存到你的本地环境，HTML 文件包含上文你看到的几种狗的数据。
-2. 为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 **[`<th>`](/zh-CN/docs/Web/HTML/Element/th)** 元素（其中“th”代表“table header”），用法和 `<td>`是一样的，除了它表示为标题，不是普通的单元格以外。进入你的 HTML 文件，将表格中应该是标题的 `<td>` 元素标记的内容，都改为用 `<th>` 元素标记。
+2. 为了将表格的标题在视觉上和语义上都能被识别为标题，你可以使用 **[`<th>`](/zh-CN/docs/Web/HTML/Reference/Elements/th)** 元素（其中“th”代表“table header”），用法和 `<td>`是一样的，除了它表示为标题，不是普通的单元格以外。进入你的 HTML 文件，将表格中应该是标题的 `<td>` 元素标记的内容，都改为用 `<th>` 元素标记。
 3. 保存你的 HTML 文件，然后在浏览器中加载，然后你应该会看到，现在的标题更像标题了。
 
 > [!NOTE]
@@ -447,7 +444,7 @@ th {
 
 ### 不使用 \<col> 应用样式
 
-在继续阅读之前，我们将在本文介绍最后一个特性。HTML 有一种为整列数据的定义样式信息的方法：就是 **[`<col>`](/zh-CN/docs/Web/HTML/Element/col)** 和 **[`<colgroup>`](/zh-CN/docs/Web/HTML/Element/colgroup)** 元素。它们存在是因为如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 `<td>` 或 `<th>` 上定义样式，或者使用一个复杂的选择器，比如 {{cssxref(":nth-child()")}}。
+在继续阅读之前，我们将在本文介绍最后一个特性。HTML 有一种为整列数据的定义样式信息的方法：就是 **[`<col>`](/zh-CN/docs/Web/HTML/Reference/Elements/col)** 和 **[`<colgroup>`](/zh-CN/docs/Web/HTML/Reference/Elements/colgroup)** 元素。它们存在是因为如果你想让一列中的每个数据的样式都一样，那么你就要为每个数据都添加一个样式，这样的做法是令人厌烦和低效的。你通常需要在列中的每个 `<td>` 或 `<th>` 上定义样式，或者使用一个复杂的选择器，比如 {{cssxref(":nth-child()")}}。
 
 > [!NOTE]
 > 这样设计列的样式[仅限于几个属性](https://www.w3.org/TR/CSS22/tables.html#columns)：[`border`](/zh-CN/docs/Web/CSS/border)、[`background`](/zh-CN/docs/Web/CSS/background)、[`width`](/zh-CN/docs/Web/CSS/width) 和 [`visibility`](/zh-CN/docs/Web/CSS/visibility)。要设置其他属性，必须对列中的每个 `<td>` 或 `<th>` 进行样式设置，或者使用复杂的选择器，如 {{cssxref(":nth-child")}}。
@@ -515,7 +512,7 @@ th {
 就像 `colspan` 和 `rowspan` 一样，`span` 需要一个无单位的数字值，用来指定让这个样式应用到表格中多少列。
 
 > [!NOTE]
-> 如果表格、列和列中的单元格都是单独样式化的，那么应用于单元格的样式将绘制在列样式之上，而列样式将绘制在表格之上。这是因为先渲染表格层，然后渲染列层，[单元格层渲染在所有其他表格层之上](/zh-CN/docs/Web/HTML/Element/table#table_layers_and_transparency)。
+> 如果表格、列和列中的单元格都是单独样式化的，那么应用于单元格的样式将绘制在列样式之上，而列样式将绘制在表格之上。这是因为先渲染表格层，然后渲染列层，[单元格层渲染在所有其他表格层之上](/zh-CN/docs/Web/HTML/Reference/Elements/table#table_layers_and_transparency)。
 
 ### 动手练习：colgroup 和 col
 

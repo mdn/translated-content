@@ -1,12 +1,9 @@
 ---
 title: <xsl:variable>
 slug: Web/XML/XSLT/Reference/Element/variable
-original_slug: Web/XSLT/Reference/Element/variable
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:variable>` 要素はスタイルシートにグローバル変数またはローカル変数を宣言し、値を与えます。XSLT は副作用を許さないため、変数の値が設定されると、変数がスコープから外れるまでは変わりません。
 
@@ -36,6 +33,6 @@ l10n:
 
 XSLT, section 11.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

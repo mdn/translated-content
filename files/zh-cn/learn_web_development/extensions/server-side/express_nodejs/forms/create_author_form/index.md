@@ -1,12 +1,9 @@
 ---
 title: 创建作者表单
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms/Create_author_form
-original_slug: Learn/Server-side/Express_Nodejs/forms/Create_author_form
 l10n:
   sourceCommit: 8d5440dbd259fd6eea32b4f4a200f25257d1bf41
 ---
-
-{{LearnSidebar}}
 
 本章节将演示如何定义一个用于创建 `Author` 对象的页面。
 

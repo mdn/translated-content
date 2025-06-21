@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Sessions
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django/authentication", "Learn/Server-side/Django")}}
 
-Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website), añadiendo un contador de visitas a tu página de inicio basado en sesiones. Es un ejemplo relativamente simple, pero muestra cómo puedes usar el framework de sesión para proporcionar persistencia a usuarios anónimos en tus propios sitios.
+Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), añadiendo un contador de visitas a tu página de inicio basado en sesiones. Es un ejemplo relativamente simple, pero muestra cómo puedes usar el framework de sesión para proporcionar persistencia a usuarios anónimos en tus propios sitios.
 
 <table>
   <tbody>
@@ -28,7 +28,7 @@ Este tutorial extiende nuestro sitio web de la [BibliotecaLocal](/es/docs/Learn/
 
 ## Descripción general
 
-El sitio web de la [BibliotecaLocal](/es/docs/Learn/Server-side/Django/Tutorial_local_library_website) que creamos en los tutoriales previos permite a los usuarios explorar los libros y autores en el catálogo. Mientras que el contenido se genera dinámicamente desde la base de datos, todos los usuarios básicamente tendrán acceso a las mismas páginas y tipos de información cuando usan el sitio.
+El sitio web de la [BibliotecaLocal](/es/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) que creamos en los tutoriales previos permite a los usuarios explorar los libros y autores en el catálogo. Mientras que el contenido se genera dinámicamente desde la base de datos, todos los usuarios básicamente tendrán acceso a las mismas páginas y tipos de información cuando usan el sitio.
 
 En una biblioteca "real" podrías querer dar a cada usuario individual una experiencia personalizada, basada en su uso previo del sitio, preferencias, etc. Por ejemplo, podrías ocultar los mensajes de advertencia que el usuario ya ha aceptado previamente la próxima vez que visite el sitio, o guardar y respetar sus preferencias (ej. el número de resultados de búsqueda que quiere desplegar en cada página).
 
@@ -44,7 +44,7 @@ Django usa una cookie que contiene un _id de sesión_ específica para identific
 
 ## Habilitando las sesiones
 
-Las sesiones fueron automáticamente habilitadas cuando [creamos el sitio web esqueleto](/es/docs/Learn/Server-side/Django/skeleton_website) (en el tutorial 2).
+Las sesiones fueron automáticamente habilitadas cuando [creamos el sitio web esqueleto](/es/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (en el tutorial 2).
 
 La configuración está establecida en las secciones `INSTALLED_APPS` y `MIDDLEWARE` del archivo del proyecto (**locallibrary/locallibrary/settings.py**), como se muestra abajo:
 

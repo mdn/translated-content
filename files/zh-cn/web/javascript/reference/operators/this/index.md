@@ -60,7 +60,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 注意，虽然函数是相同的，但是根据其调用的方式，`this` 的值是不同的。这与函数参数的工作方式类似。
 
-`this` 的值不是拥有此函数作为自己属性的对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
+`this` 的值不是拥有此函数作为自己属性的对象，而是用于调用此函数的对象。你可以通过调用对象在[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)中的方法来证明这一点。
 
 ```js
 const obj3 = {
@@ -158,7 +158,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-箭头函数在其周围的作用域上创建一个 `this` 值的[闭包](/zh-CN/docs/Web/JavaScript/Closures)，这意味着箭头函数的行为就像它们是“自动绑定”的——无论如何调用，`this` 都绑定到函数创建时的值（在上面的例子中，是全局对象）。在其他函数内部创建的箭头函数也是如此：它们的 `this` 值保持为闭合词法上下文的 `this`。[参见下面的例子](#箭头函数中的_this)。
+箭头函数在其周围的作用域上创建一个 `this` 值的[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)，这意味着箭头函数的行为就像它们是“自动绑定”的——无论如何调用，`this` 都绑定到函数创建时的值（在上面的例子中，是全局对象）。在其他函数内部创建的箭头函数也是如此：它们的 `this` 值保持为闭合词法上下文的 `this`。[参见下面的例子](#箭头函数中的_this)。
 
 此外，当使用 `call()`、`bind()` 或 `apply()` 调用箭头函数时，`thisArg` 参数会被忽略。不过，你仍然可以使用这些方法传递其他参数。
 
@@ -255,7 +255,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 在全局执行上下文中（在任何函数或类之外；可能在全局范围内定义的[块](/zh-CN/docs/Web/JavaScript/Reference/Statements/block)或[箭头函数](#箭头函数)内部），`this` 值取决于脚本运行的执行上下文。像[回调](#回调)一样，`this` 值由运行时环境（调用者）确定。
 
-在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同——例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素内并作为脚本执行，`this === window`。
+在脚本的顶层，无论是否在严格模式下，`this` 会指向{{jsxref("globalThis")}}。这通常与全局对象相同——例如，如果源代码放在 HTML 的 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素内并作为脚本执行，`this === window`。
 
 > **备注：** `globalThis` 通常与全局对象的概念相同（即向 `globalThis` 添加属性会使它们成为全局变量）——这对于浏览器和 Node 是这样的——但主机可以为 `globalThis` 提供与全局对象无关的不同值。
 
@@ -452,7 +452,7 @@ for (const element of elements) {
 
 ### 内联事件处理器中的 this
 
-当代码从内联[事件处理器属性](/zh-CN/docs/Web/HTML/Attributes#event_handler_attributes)调用时，它的 `this` 绑定到放置监听器的 DOM 元素上：
+当代码从内联[事件处理器属性](/zh-CN/docs/Web/HTML/Reference/Attributes#event_handler_attributes)调用时，它的 `this` 绑定到放置监听器的 DOM 元素上：
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

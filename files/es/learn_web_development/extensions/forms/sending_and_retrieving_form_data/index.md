@@ -49,7 +49,7 @@ La web se basa en una arquitectura cliente / servidor muy básica que se puede r
 En el lado del cliente, un formulario HTML no es más que una manera fácil de usar conveniente para configurar una petición HTTP para enviar datos a un servidor. Esto permite al usuario para proporcionar información a ser entregada en la petición HTTP.
 
 > [!NOTE]
-> Para tener una mejor idea de cómo funcionan las arquitecturas cliente-servidor, lea nuestra [programación de páginas web del lado del servidor, módulo: primeros pasos](/es/docs/Learn/Server-side/First_steps). En el lado del cliente: Debes definir como envías los datos.
+> Para tener una mejor idea de cómo funcionan las arquitecturas cliente-servidor, lea nuestra [programación de páginas web del lado del servidor, módulo: primeros pasos](/es/docs/Learn_web_development/Extensions/Server-side/First_steps). En el lado del cliente: Debes definir como envías los datos.
 
 El elemento {{HTMLElement ( "form")}} define cómo se enviarán los datos. Todos sus atributos están diseñados para que pueda configurar la solicitud que se enviará cuando un usuario pulsa un botón de envío. Los dos atributos más importantes son [`acción`](/es/docs/Web/HTML/Element/forma#acción) y [`método`](/es/docs/Web/HTML/Element/forma#método).
 
@@ -75,16 +75,16 @@ Cuando se especifica sin atributos, como abajo, el {{HTMLElement ( "form")}} los
 <form></form>
 ```
 
-Muchas páginas más antiguas utilizan la siguiente notación para indicar que los datos deben ser enviados a la misma página que contiene el formulario; Esto fue necesario porque hasta HTML5, el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) fue requerido . Esto ya no es necesario.
+Muchas páginas más antiguas utilizan la siguiente notación para indicar que los datos deben ser enviados a la misma página que contiene el formulario; Esto fue necesario porque hasta HTML5, el atributo [`acción`](/es/docs/Web/HTML/Reference/Elements/form#acción) fue requerido . Esto ya no es necesario.
 
 ```html
 <form action="#"></form>
 ```
 
 > [!NOTE]
-> Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo [`acción`](/es/docs/Web/HTML/Element/form#acción) , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez que intenten enviar datos, ya que estos no se pueden cifrar.
+> Es posible especificar una dirección URL que utiliza el protocolo HTTPS (HTTP seguro). Al hacer esto, los datos se cifran junto con el resto de la solicitud, incluso si el propio formulario está alojado en una página insegura se accede a través de HTTPS. Por otro lado, si el formulario está alojado en una página segura, pero se especifica una dirección URL HTTP insegura con el atributo [`acción`](/es/docs/Web/HTML/Reference/Elements/form#acción) , todos los navegadores mostrarán una advertencia de seguridad para el usuario cada vez que intenten enviar datos, ya que estos no se pueden cifrar.
 
-#### El atributo [`método`](/es/docs/Web/HTML/Element/form#método)
+#### El atributo [`método`](/es/docs/Web/HTML/Reference/Elements/form#método)
 
 Este atributo define cómo se envían los datos. El [protocolo HTTP](/es/docs/Web/HTTP) proporciona varias formas de realizar una solicitud; Los datos del formulario HTML se pueden transmitir a través de un número de diferentes queridos, los más comunes de los cuales son el método `GET` y el método `POST`.
 
@@ -135,7 +135,7 @@ Anfitrión: foo.com
 
 El `POST` método es un poco diferente. Es el método que el navegador utiliza para comunicarse con el servidor cuando se pide una respuesta que tenga en cuenta los datos proporcionados en el cuerpo de la petición HTTP: "Hey servidor, echa un vistazo a estos datos y envíame de vuelta un resultado apropiado." Si un formulario se envía utilizando este método, los datos se anexan al cuerpo de la petición HTTP.
 
-Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` del apartado anterior, pero con el [`método`](/es/docs/Web/HTML/Element/form#método) atributo establecido `post`.
+Veamos un ejemplo - se trata de algo similar a como se vió en el método `GET` del apartado anterior, pero con el [`método`](/es/docs/Web/HTML/Reference/Elements/form#método) atributo establecido `post`.
 
 ```html
 <form action="http://foo.com" method="post">
@@ -232,15 +232,15 @@ Las dos plantillas de referencia en el código anterior son los siguientes:
 - [greeting.html](https://github.com/mdn/learning-area/blob/master/html/forms/sending-form-data/templates/greeting.html) :Esta plantilla solo contiene una línea que representa los dos bits de datos que se le pasan cuando se procesa. Esto se hace a través de la función `hello()` que se ha visto anteriormente, y que se ejecuta cuando la URL`/hello` es accedida.
 
 > [!NOTE]
-> Una vez más, este código no funcionará si sólo intenta cargarlo en un navegador directamente. Python funciona un poco diferente a PHP - Para ejecutar este código local que necesita para [instalar Python / PIP](/es/docs/Learn/Server-side/Django/development_environment#installing_python_3) , a continuación, instalar el frasco utilizando `pip3 install flask`. En este punto, usted debe ser capaz de ejecutar el ejemplo utilizando `python3 python-example.py`, a continuación, deberá navegar a `localhost:5000` en su barra de direcciones.
+> Una vez más, este código no funcionará si sólo intenta cargarlo en un navegador directamente. Python funciona un poco diferente a PHP - Para ejecutar este código local que necesita para [instalar Python / PIP](/es/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#installing_python_3) , a continuación, instalar el frasco utilizando `pip3 install flask`. En este punto, usted debe ser capaz de ejecutar el ejemplo utilizando `python3 python-example.py`, a continuación, deberá navegar a `localhost:5000` en su barra de direcciones.
 
 #### Otros lenguajes y frameworks
 
 Hay muchas otras tecnologías del lado del servidor que puede utilizar para el manejo de formularios, incluyendo [Perl](/es/docs/Web), [Java](/es/docs/Web), [.Net](https://www.microsoft.com/net), [Ruby](/es/docs/Web) , etc. Sólo tiene que elegir el que más le guste. Dicho esto, vale la pena señalar que es muy raro de usar estas tecnologías directamente porque esto puede ser complicado. Es más común el uso de uno de los muchos marcos de trabajo para un manejo más fácil del código, tales como:
 
 - [Symfony](http://symfony.com/) para PHP
-- [Django](/es/docs/Learn/Server-side/Django) para Python (un poco más pesado que el [frasco](http://flask.pocoo.org/) , pero con más herramientas y opciones).
-- [Express](/es/docs/Learn/Server-side/Express_Nodejs) de Node.js
+- [Django](/es/docs/Learn_web_development/Extensions/Server-side/Django) para Python (un poco más pesado que el [frasco](http://flask.pocoo.org/) , pero con más herramientas y opciones).
+- [Express](/es/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) de Node.js
 - [Ruby on Rails](http://rubyonrails.org/) Ruby
 - [Grails](http://grails.org/) para Java
 - etc.
@@ -254,15 +254,15 @@ Vale la pena señalar que incluso el uso de estos marcos, trabajar con formulari
 
 El envío de archivos con formularios HTML es un caso especial. Los archivos son datos binarios - o considerados como tal - mientras que todos los demás datos son datos de texto. Debido a que HTTP es un protocolo de texto, existen requisitos especiales para el manejo de datos binarios.
 
-### El [`enctype`](/es/docs/Web/HTML/Element/form#enctype) atributo
+### El [`enctype`](/es/docs/Web/HTML/Reference/Elements/form#enctype) atributo
 
 Este atributo le permite especificar el valor de la cabecera `Content-Type` HTTP incluido en la solicitud que se genera cuando se envía el formulario. Esta cabecera es muy importante porque le dice al servidor qué tipo de datos se está enviando. Por defecto, su valor es `application/x-www-form-urlencoded`. En términos humanos, esto significa: "Estos son datos de formulario que han sido codificados dentro de los parámetros de la URL."
 
 Si desea enviar archivos, es necesario tomar tres pasos adicionales:
 
-- Ajuste el [`método`](/es/docs/Web/HTML/Element/form#método) atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
-- Establecer el valor de [`enctype`](/es/docs/Web/HTML/Element/form#enctype) que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
-- Incluir uno o más widgets [selector de archivos](/es/docs/Learn/Forms/Basic_native_form_controls#file_picker) para permitir a los usuarios seleccionar el archivo (s) que será subido.
+- Ajuste el [`método`](/es/docs/Web/HTML/Reference/Elements/form#método) atributo `POST` porque el contenido del archivo no se puede poner dentro de los parámetros de URL.
+- Establecer el valor de [`enctype`](/es/docs/Web/HTML/Reference/Elements/form#enctype) que `multipart/form-data` debido a que los datos se dividen en múltiples partes, una para cada archivo más uno para los datos de texto incluidos en el cuerpo del formulario (si también se introduce el texto en la formulario).
+- Incluir uno o más widgets [selector de archivos](/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#file_picker) para permitir a los usuarios seleccionar el archivo (s) que será subido.
 
 Por ejemplo:
 
@@ -279,7 +279,7 @@ Por ejemplo:
 ```
 
 > [!NOTE]
-> Algunos navegadores son compatibles con la [`múltiple`](/es/docs/Web/HTML/Element/input#múltiple) atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo para subir con un único elemento `<input>` . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.
+> Algunos navegadores son compatibles con la [`múltiple`](/es/docs/Web/HTML/Reference/Elements/input#múltiple) atributo en el elemento {{HTMLElement ( "input")}}, lo que permite elegir más de un archivo para subir con un único elemento `<input>` . Cómo el servidor gestiona los archivos realmente depende de la tecnología utilizada en el servidor. Como se mencionó anteriormente, el uso de un marco le hará la vida mucho más fácil.
 
 > [!WARNING]
 > Muchos servidores están configurados con un límite de tamaño para los archivos y las peticiones HTTP con el fin de prevenir el abuso. Es importante comprobar este límite con el administrador del servidor antes de enviar un archivo.
@@ -327,17 +327,17 @@ Todos los datos que vienen a su servidor deben comprobarse y ser desinfectados. 
 Debería evitar muchos o la mayoría de estos problemas, si sigue estas tres reglas, pero siempre es una buena idea obtener una revisión de seguridad realizada por una tercera parte competente. No asuma que usted ha visto todos los posibles problemas.
 
 > [!NOTE]
-> La [seguridad del sitio web](/es/docs/Learn/Server-side/First_steps/Website_security) el artículo de nuestro [lado del servidor](/es/docs/Learn/Server-side) tema de aprendizaje analiza las amenazas anteriores y las posibles soluciones con más detalle.
+> La [seguridad del sitio web](/es/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security) el artículo de nuestro [lado del servidor](/es/docs/Learn_web_development/Extensions/Server-side) tema de aprendizaje analiza las amenazas anteriores y las posibles soluciones con más detalle.
 
 ## Conclusión
 
-Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible [realizar la validación de los datos del lado del cliente](/es/docs/Learn/Forms/Form_validation) , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que sucede en el lado del cliente.
+Como se puede ver, el envío de los datos del formulario es fácil, pero asegurar una aplicación puede ser complicado. Sólo recuerde que un desarrollador de aplicaciones para usuario no es el que debe definir el modelo de seguridad de los datos. Sí, como veremos, es posible [realizar la validación de los datos del lado del cliente](/es/docs/Learn_web_development/Extensions/Forms/Form_validation) , pero el servidor no puede confiar en esta validación porque no tiene manera de saber realmente lo que sucede en el lado del cliente.
 
 ## Ver también
 
 Si desea obtener más información sobre la seguridad de una aplicación web, se puede excavar en estos recursos:
 
-- [programación web del lado del servidor primeros pasos](/es/docs/Learn/Server-side/First_steps)
+- [programación web del lado del servidor primeros pasos](/es/docs/Learn_web_development/Extensions/Server-side/First_steps)
 - [El Proyecto Open Web Application Security (OWASP)](https://www.owasp.org/index.php/Main_Page)
 - [el blog de Chris Shiflett sobre Seguridad en PHP](http://shiflett.org/)
 

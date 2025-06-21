@@ -7,9 +7,45 @@ l10n:
 
 {{CSSRef}}
 
-**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
+**`text-decoration`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性设置文本上的装饰性线条的外观。它是 {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} 和较新的 {{cssxref("text-decoration-thickness")}} 属性的缩写。
 
-{{EmbedInteractiveExample("pages/css/text-decoration.html")}}
+{{InteractiveExample("CSS Demo: text-decoration")}}
+
+```css interactive-example-choice
+text-decoration: underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted;
+```
+
+```css interactive-example-choice
+text-decoration: underline dotted red;
+```
+
+```css interactive-example-choice
+text-decoration: green wavy underline;
+```
+
+```css interactive-example-choice
+text-decoration: underline overline #ff3028;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 文本装饰会覆盖子文本元素。这意味着如果一个元素指定了文本装饰，那么子元素无法去除这个装饰。例如，在标记 `<p>这段文字中有<em>一些强调词</em>。</p>` 中，样式规则 `p { text-decoration: underline; }` 会导致整个段落包含下划线。样式规则 `em { text-decoration: none; }` 不会有任何变化；整个段落仍然会包含下划线。但是，规则 `em { text-decoration: overline; }` 会导致“一些强调词”上出现上划线。
 

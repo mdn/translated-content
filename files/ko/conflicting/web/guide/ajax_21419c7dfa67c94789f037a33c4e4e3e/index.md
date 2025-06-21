@@ -102,7 +102,7 @@ if (httpRequest.readyState === XMLHttpRequest.DONE) {
 - 3 (interactive) - (**request(요청)을 처리하는 중**)
 - 4 (complete) - (**request에 대한 처리가 끝났으며 응답할 준비가 완료됨**)
 
-([원문](/ko/docs/Web/Guide/AJAX/Getting_Started#Step_2_%E2%80%93_Handling_the_server_response) 참고)
+([원문](/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e#Step_2_%E2%80%93_Handling_the_server_response) 참고)
 
 그 다음에는 [HTTP 응답 상태 코드](/ko/docs/Web/HTTP/Status)를 검사해야 합니다. 가능한 모든 코드 값의 목록은 [W3C](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) 에서 확인할 수 있습니다. 아래 예제에서는 AJAX 요청이 정상적으로 처리되었는지 아닌지만을 검사하기 위해 응답 코드가 [200 OK](/ko/docs/Web/HTTP/Status#%EC%84%B1%EA%B3%B5_%EC%9D%91%EB%8B%B5) 인지 검사하는 예제입니다.
 

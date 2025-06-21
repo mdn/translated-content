@@ -393,7 +393,7 @@ a = b = 5;
     <tr>
       <td>
         <a
-          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator"
+          href="/zh-TW/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing"
           >Nullish Coalescing</a
         >
       </td>

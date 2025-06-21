@@ -235,7 +235,7 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 
 ## Активное изучение
 
-_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Contributing/Getting_started)._
+_Активное изучение пока не доступно. [Пожалуйста, рассмотрите возможность внести свой вклад](/ru/docs/MDN/Community/Getting_started)._
 
 ## Копай глубже
 
@@ -325,4 +325,4 @@ When you install a new text editor, your OS will probably continue to open text 
 
 ## Next steps
 
-Now that you have a good text editor, you could take some time to finalize [your basic working environment](/ru/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/ru/docs/Learn/Getting_started_with_the_web).
+Now that you have a good text editor, you could take some time to finalize [your basic working environment](/ru/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server), or, if you want to play with it right away, write [your very first web page](/ru/docs/Learn_web_development/Getting_started/Your_first_website).

@@ -7,7 +7,47 @@ slug: Web/CSS/text-decoration-style
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-style`** 用于设置由 {{ cssxref("text-decoration-line") }} 设定的线的样式。线的样式会应用到所有被 `text-decoration-line` 设定的线，不能为其中的每条线设置不同的样式。当要设置多个线修饰属性时，用 {{cssxref("text-decoration")}} 简写属性会比分别写多个属性更方便。
 
-{{EmbedInteractiveExample("pages/css/text-decoration-style.html")}}
+{{InteractiveExample("CSS Demo: text-decoration-style")}}
+
+```css interactive-example-choice
+text-decoration-style: solid;
+```
+
+```css interactive-example-choice
+text-decoration-style: double;
+```
+
+```css interactive-example-choice
+text-decoration-style: dotted;
+```
+
+```css interactive-example-choice
+text-decoration-style: dashed;
+```
+
+```css interactive-example-choice
+text-decoration-style: wavy;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+
+#example-element {
+  text-decoration-line: underline;
+}
+```
 
 如果设定的修饰效果具有特定的语义，例如删除线的意味着某些文本被删除了，开发者最好使用有语义的 HTML 标签来表达，比如 {{ HTMLElement("del") }} 或 {{ HTMLElement("s") }} 标签，因为浏览器有时可能会屏蔽某些样式，但语义化的标签则不会出现这样的问题。
 

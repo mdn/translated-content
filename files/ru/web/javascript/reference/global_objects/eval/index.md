@@ -114,7 +114,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-[Замыкания](/ru/docs/Web/JavaScript/Closures) также полезны как способ создания функций с параметрами без конкатенации строк.
+[Замыкания](/ru/docs/Web/JavaScript/Guide/Closures) также полезны как способ создания функций с параметрами без конкатенации строк.
 
 ### Разбор JSON (конвертирование строк в JavaScript объекты)
 

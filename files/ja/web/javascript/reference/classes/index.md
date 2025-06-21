@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Classes")}}
 
-クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
+クラスはオブジェクトを作成するためのテンプレートです。処理するためのコードでデータをカプセル化します。 JS のクラスは[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)に基づいて構築されていますが、一部の構文や意味はクラスに固有です。
 
 例や説明については、[クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイドを参照してください。
 

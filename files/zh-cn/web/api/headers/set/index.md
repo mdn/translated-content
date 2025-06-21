@@ -11,7 +11,7 @@ l10n:
 
 `set()` 和 {{domxref("Headers.append")}} 的不同之处在于：如果指定的标头已经存在且其可以接受多个值，`set()` 会使用新值覆盖已存在的值，而 {{domxref("Headers.append")}} 将新值追加到值集合的末尾。
 
-由于安全因素，某些标头只能被用户代理控制。这类标头包括{{Glossary("Forbidden_header_name", "禁止修改的标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
+出于安全考虑，某些标头只能由用户代理控制。这些标头包括{{Glossary("Forbidden_request_header", "禁止修改的请求标头")}}和{{Glossary("Forbidden_response_header_name", "禁止修改的响应标头")}}。
 
 ## 语法
 
@@ -66,5 +66,5 @@ myHeaders.get("Accept-Encoding"); // 返回“gzip”
 ## 参见
 
 - [ServiceWorker API](/zh-CN/docs/Web/API/Service_Worker_API)
-- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/CORS)
+- [HTTP 访问控制（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/zh-CN/docs/Web/HTTP)

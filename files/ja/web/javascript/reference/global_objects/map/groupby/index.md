@@ -96,7 +96,7 @@ console.log(result.get(restock));
 // [{ name: "bananas", type: "fruit", quantity: 5 }]
 ```
 
-関数の引数 `{ quantity }` は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。これは、引数として渡されたオブジェクトの `quantity` プロパティを展開し、関数本体の `quantity` という変数に代入します。これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
+関数の引数 `{ quantity }` は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。これは、引数として渡されたオブジェクトの `quantity` プロパティを展開し、関数本体の `quantity` という変数に代入します。これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
 キーである `Map` は内容を変更しても使用し続けることができます。しかし、キーを再作成して使用することはできません。このため、`Map` を使用する必要があるものは、そのキーへの参照を保持し続けることが重要です。
 

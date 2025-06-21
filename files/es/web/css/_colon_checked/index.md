@@ -5,7 +5,7 @@ slug: Web/CSS/:checked
 
 {{ CSSRef() }}
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Element/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Element/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/Web/CSS) representa cualquier **radio** ([\<input type="radio">](/es/docs/Web/HTML/Reference/Elements/input/radio)), **checkbox** ([\<input type="checkbox">](/es/docs/Web/HTML/Reference/Elements/input/checkbox)) u **option** ({{ HTMLElement("option") }} en un elemento {{ HTMLElement("select") }}) que está marcado o conmutado a un estado `on`.
 
 ```css
 /* Coincide con cualquier checked/selected radio, checkbox, u option */
@@ -18,7 +18,7 @@ La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) `:checked` de [CSS](/es/docs/
 El usuario puede activar este estado marcando/seleccionando un elemento, o desactivándolo desmarcando/deseleccionando el elemento.
 
 > [!NOTE]
-> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/Replaced_element), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
+> Debido a que los navegadores a menudo tratan las `<option>` s como [elementos reemplazados](/es/docs/Web/CSS/CSS_images/Replaced_element_properties), la medida en que se pueden diseñar con la pseudo-clase `:checked` varía de un navegador a otro.
 
 ## Sintaxis
 

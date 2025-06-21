@@ -56,8 +56,8 @@ l10n:
 
       - : ブラウザーはリクエストに一致するレスポンスを HTTP キャッシュから探します。
 
-        - 一致したものがあり[新しい](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)場合、それをキャッシュから返します。
-        - もし一致するものがあっても[古い](/ja/docs/Web/HTTP/Caching#age_に基づく新鮮さと古さ)場合は、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
+        - 一致したものがあり[新しい](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)場合、それをキャッシュから返します。
+        - もし一致するものがあっても[古い](/ja/docs/Web/HTTP/Guides/Caching#age_に基づく新鮮さと古さ)場合は、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
         - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードされたリソースでキャッシュを更新します。
 
     - `no-store`
@@ -68,7 +68,7 @@ l10n:
 
       - : ブラウザーは、リクエストに一致するレスポンスがないか、HTTP キャッシュを探します。
 
-        - 一致するものがあれば、新しいか古いかを問わず、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
+        - 一致するものがあれば、新しいか古いかを問わず、ブラウザーはリモートサーバーに[条件付きリクエスト](/ja/docs/Web/HTTP/Guides/Conditional_requests)を行います。サーバーがリソースが変更されていないことを示した場合、そのリソースはキャッシュから返されます。そうでなければ、リソースはサーバーからダウンロードされ、キャッシュが更新されます。
         - 一致するものがない場合、ブラウザーは通常のリクエストを行い、ダウンロードされたリソースでキャッシュを更新します。
 
     - `force-cache`
@@ -108,7 +108,7 @@ l10n:
 
   - : リクエストに追加したいヘッダーで、 {{domxref("Headers")}} オブジェクト、またはキーがヘッダー名で値がヘッダー値であるオブジェクトリテラルが入ります。
 
-    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{glossary("Forbidden header name", "禁止ヘッダー名")}}と呼ばれています。
+    多くのヘッダーはブラウザーによって自動的に設定され、スクリプトによって設定することはできません。これらは{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
 
     `mode` オプションが `no-cors` に設定されている場合、{{glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}のみを設定することができます。
 
@@ -118,7 +118,7 @@ l10n:
 
   - : このリクエストの[サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)の値を保持します。
 
-    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Element/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
+    これは {{htmlelement("script")}} 要素に [`integrity`](/ja/docs/Web/HTML/Reference/Elements/script#integrity) 属性を設定したときと同じように、リソースをフェッチしたときに調べられます。ブラウザーはフェッチされたリソースの {{glossary("Cryptographic_hash_function", "hash")}} を指定されたアルゴリズムで計算し、その結果が指定された値と一致しない場合、ネットワークエラーでフェッチリクエストを拒否します。
 
     このオプションは `<hash-algo>-<hash-source>` という書式です。
 
@@ -134,7 +134,7 @@ l10n:
     これにより、ユーザーがページから離れたり閉じたりした場合でも、 {{domxref('Window.fetch','fetch()')}} リクエストによりセッションの終わりに分析データを送信することができます。
 
     これは、同じ目的で {{domxref("Navigator.sendBeacon()")}} を使用するよりもいくつかの利点があります。
-    例えば、 [`POST`](/ja/docs/Web/HTTP/Methods/POST) 以外の HTTP メソッドを使用することができます。また、リクエストプロパティをカスタマイズしたり、フェッチのプロミス ({{jsxref("Promise")}}) の履行を通じて、サーバーレスポンスにアクセスしたりすることができます。
+    例えば、 [`POST`](/ja/docs/Web/HTTP/Reference/Methods/POST) 以外の HTTP メソッドを使用することができます。また、リクエストプロパティをカスタマイズしたり、フェッチのプロミス ({{jsxref("Promise")}}) の履行を通じて、サーバーレスポンスにアクセスしたりすることができます。
     [サービスワーカー](/ja/docs/Web/API/Service_Worker_API)でも利用可能です。
 
     `keepalive` リクエストの本体サイズは 64 キロバイトに制限されています。
@@ -143,7 +143,7 @@ l10n:
 
 - `method` {{optional_inline}}
 
-  - : [リクエストメソッド](/ja/docs/Web/HTTP/Methods)です。
+  - : [リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)です。
 
     既定値は {{httpmethod("GET")}} です。
 
@@ -157,7 +157,7 @@ l10n:
 
     - `cors`
 
-      - : このリクエストがオリジン間リクエストであった場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。 {{glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}のみがレスポンスに公開されます。
+      - : このリクエストがオリジン間リクエストであった場合、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用します。 {{glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}のみがレスポンスに公開されます。
 
     - `no-cors`
 
@@ -192,7 +192,7 @@ l10n:
 
 - `redirect` {{optional_inline}}
 
-  - : サーバーが[リダイレクトステータス](/ja/docs/Web/HTTP/Status#リダイレクトメッセージ)でレスポンスした場合のブラウザー動作を決定します。以下の値のいずれかです。
+  - : サーバーが[リダイレクトステータス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)でレスポンスした場合のブラウザー動作を決定します。以下の値のいずれかです。
 
     - `follow`
       - : 自動的にリダイレクトを行います。
@@ -299,5 +299,5 @@ async function post() {
 
 - [フェッチの使用](/ja/docs/Web/API/Fetch_API/Using_Fetch)
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

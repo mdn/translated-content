@@ -7,7 +7,35 @@ slug: Web/CSS/:not
 
 **`:not()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用来匹配不符合一组选择器的元素。由于它的作用是防止特定的元素被选中，它也被称为*反选伪类*（_negation pseudo-class_）。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-not.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+
+```css interactive-example
+p:not(.irrelevant) {
+  font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+  color: crimson;
+}
+
+p > :not(strong, b.important) {
+  color: darkmagenta;
+}
+```
+
+```html interactive-example
+<p>
+  <b>Mars</b> is one of the most Earth-like planets. <b>Mars</b> day is almost
+  the same as an Earth day, only <strong>37 minutes</strong> longer.
+</p>
+
+<p class="irrelevant">
+  <b class="important">NASA</b>'s Jet <del>Momentum</del> Propulsion Laboratory
+  is designing mission concepts to survive the <b>Venus</b> extreme temperatures
+  and atmospheric pressure.
+</p>
+```
 
 `:not()` 伪类有许多[怪异、技巧和意料之外的结果](#描述)，你在使用它之前应该意识到这些。
 

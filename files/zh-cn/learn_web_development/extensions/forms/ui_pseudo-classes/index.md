@@ -1,10 +1,9 @@
 ---
 title: UI 伪类
 slug: Learn_web_development/Extensions/Forms/UI_pseudo-classes
-original_slug: Learn/Forms/UI_pseudo-classes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Advanced_form_styling", "Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 在以前的文章中，我们以一般的方式介绍了各种表单控件的样式。这包括一些伪类的使用，例如，使用 `:checked` 来选择一个选中的复选框。在这篇文章中，我们将详细探讨在现代浏览器中可用的不同 UI 伪类，以便在不同状态下对表单添加样式。
 
@@ -41,7 +40,7 @@ original_slug: Learn/Forms/UI_pseudo-classes
 - {{cssxref(':required')}} 和 {{cssxref(':optional')}}：针对必需的或可选的表单控件。
 - {{cssxref(":valid")}} 和 {{cssxref(":invalid")}}、{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}：针对表单控件，根据对其设置的表单验证约束，或范围内/范围外，是有效/无效的。
 - {{cssxref(":enabled")}} 和 {{cssxref(":disabled")}}、{{cssxref(":read-only")}} 和 {{cssxref(":read-write")}}：针对启用或禁用的表单控件（例如，设置了 `disabled` HTML 属性），以及读写或只读的表单控件（例如，设置了 `readonly` HTML 属性）。
-- {{cssxref(":checked")}}、{{cssxref(":indeterminate")}} 和 {{cssxref(":default")}}：分别针对被选中的复选框和单选按钮，处于不确定的状态（既不被选中也不被选中），以及页面加载时默认选择的选项（例如，一个设置了 `checked` 属性的 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)，或者一个设置了 `selected` 属性的 [`<option>`](/zh-CN/docs/Web/HTML/Element/option) 元素）。
+- {{cssxref(":checked")}}、{{cssxref(":indeterminate")}} 和 {{cssxref(":default")}}：分别针对被选中的复选框和单选按钮，处于不确定的状态（既不被选中也不被选中），以及页面加载时默认选择的选项（例如，一个设置了 `checked` 属性的 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)，或者一个设置了 `selected` 属性的 [`<option>`](/zh-CN/docs/Web/HTML/Reference/Elements/option) 元素）。
 
 还有很多其他的，但上面列出的是最明显有用的。其中一些旨在解决非常具体的小众问题，或者在浏览器中还没有得到很好的支持。上面列出的那些都有相当好的浏览器支持，但当然，你应该仔细测试你的表单实现，以确保它们对你的目标受众有效。
 
@@ -150,7 +149,7 @@ input[type="radio"]:checked::before {
 
 当屏幕阅读器用户到达每个需要的输入时，他们会得到“required”这个额外的信息，而视力正常的用户会看到我们的标签。
 
-由于表单输入不直接支持将生成的内容放在上面（这是因为生成的内容是相对于元素的格式化框放置的，但表单输入的工作方式更像被替换的元素，因此没有格式化框），我们将添加一个空的 [`<span>`](/zh-CN/docs/Web/HTML/Element/span) 元素来存放生成的内容：
+由于表单输入不直接支持将生成的内容放在上面（这是因为生成的内容是相对于元素的格式化框放置的，但表单输入的工作方式更像被替换的元素，因此没有格式化框），我们将添加一个空的 [`<span>`](/zh-CN/docs/Web/HTML/Reference/Elements/span) 元素来存放生成的内容：
 
 ```html
 <div>
@@ -199,7 +198,7 @@ input:required + span::after {
 
 ## 根据数据是否有效为控件添加样式
 
-表单验证中另一个真正重要的基本概念是表单控件的数据是否有效（在数值数据的情况下，我们也可以谈论范围内和范围外的数据）。具有[约束限制](/zh-CN/docs/Web/HTML/Constraint_validation)的表单控件可以根据这些状态来进行定位。
+表单验证中另一个真正重要的基本概念是表单控件的数据是否有效（在数值数据的情况下，我们也可以谈论范围内和范围外的数据）。具有[约束限制](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)的表单控件可以根据这些状态来进行定位。
 
 ### :valid 和 :invalid
 
@@ -208,7 +207,7 @@ input:required + span::after {
 - 没有约束验证的表单控件永远是有效的，因此永远与 `:valid` 匹配。
 - 设定了 `required`，且没有任何值的表单控件是无效的——它们与 `:invalid` 和 `:required` 匹配。
 - 具有内置验证功能的控件，如 `<input type="email">` 或 `<input type="url">`，当输入的数据与它们所需的模式不匹配时，会被（与）`:invalid` 匹配（但当它们为空时是有效的）。
-- 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
+- 当前值超出 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性所指定的范围限制的控件，会被（与）`:invalid` 匹配，但也会被 {{cssxref(":out-of-range")}} 匹配，后面还会看到。
 - 还有一些其他的方法可以使元素被 `:valid`/`:invalid` 匹配，你会在[客户端表单验证](/zh-CN/docs/Learn_web_development/Extensions/Forms/Form_validation)文章中看到。但目前还没有必要介绍得太复杂。
 
 让我们看看一个简单的 `:valid`/`:invalid` 的示例（访问 [valid-invalid.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/valid-invalid.html) 以查看实时演示，也可以查看[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/valid-invalid.html)）。
@@ -264,7 +263,7 @@ input:valid + span::before {
 
 ### 在范围内和不在范围内的数据
 
-正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 指定，分别供其数据在指定范围之内或之外所使用。
+正如我们上面所提示的内容一样，还有两个相关的伪类需要考虑——{{cssxref(":in-range")}} 和 {{cssxref(":out-of-range")}}。这些与数字输入相匹配，其中范围限制由 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 指定，分别供其数据在指定范围之内或之外所使用。
 
 > [!NOTE]
 > 数值输入类型包括 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range`。
@@ -597,7 +596,7 @@ input[type="radio"]:indeterminate {
 > 你也可以在 GitHub 的 [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) 上找到这个示例的运行实例，也可以参见[源代码](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html)。
 
 > [!NOTE]
-> 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Element/input/checkbox#中间状态复选框)。
+> 你可以在 [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox) 参考页上找到一个[涉及 `indeterminate` 状态的有趣示例](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#中间状态复选框)。
 
 ## 更多伪类
 
@@ -607,7 +606,7 @@ input[type="radio"]:indeterminate {
 
 - {{cssxref(":focus-within")}} 伪类匹配一个已经收到焦点的元素或*包含*一个已经收到焦点的元素。如果你想让整个表单在其内部的输入被聚焦时以某种方式突出显示，这很有用。
 - {{cssxref(":focus-visible")}} 伪类匹配通过键盘交互（而不是触摸或鼠标）获得焦点的元素。如果你想对键盘焦点与鼠标（或其他）焦点显示不同的样式，这很有用。
-- {{cssxref(":placeholder-shown")}} 伪类匹配占位符（即 [`placeholder`](/zh-CN/docs/Web/HTML/Element/input#placeholder) 属性的内容）正在显示的 {{htmlelement('input')}} 和 {{htmlelement('textarea')}} 元素，因为该元素的值为空。
+- {{cssxref(":placeholder-shown")}} 伪类匹配占位符（即 [`placeholder`](/zh-CN/docs/Web/HTML/Reference/Elements/input#placeholder) 属性的内容）正在显示的 {{htmlelement('input')}} 和 {{htmlelement('textarea')}} 元素，因为该元素的值为空。
 
 下面这些也很有意思，但在浏览器中还没有得到很好的支持：
 
@@ -616,7 +615,7 @@ input[type="radio"]:indeterminate {
 
 ## 技能测试！
 
-你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling).
+你已经看到了本文的结尾，但你还记得本文的绝大多数重要的信息吗？在继续学习新的内容之前，你可以找一些进一步的测验来验证你已经掌握了这些信息——参见[技能测试：进阶样式](/zh-CN/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling)。
 
 ## 总结
 

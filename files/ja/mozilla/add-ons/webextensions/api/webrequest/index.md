@@ -11,7 +11,7 @@ websocket が ws\:// and wss\:// としてリクエストするものも含め�
 
 ![](webRequest-flow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
+{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} はリクエストの期間中のあらゆる時に発火します。また注意点としてイベントシーケンスがこれと違うこともあります: 例えば、Firefox では、[HSTS](/ja/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security) 更新の時には、`onBeforeRequest` のすぐ後に `onBeforeRedirect` イベントが発火します。
 
 `onErrorOccurred` を除くすべてのイベントは `addListener()` への次の 3 つの引数を取ります:
 
@@ -132,7 +132,7 @@ TLS ハンドシェイクについて詳しく読むことができますが、�
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest) API. This documentation is derived from [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

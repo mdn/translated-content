@@ -82,7 +82,7 @@ For example, [you could implement MPEG-DASH using JavaScript while offloading th
 A couple of HTTP-based live streaming video formats are beginning to see support across browsers.
 
 > [!NOTE]
-> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
+> You can find a guide to encoding HLS and MPEG-DASH for use on the web at [Setting up adaptive streaming media sources](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources).
 
 ### MPEG-DASH
 
@@ -177,7 +177,7 @@ Although you can install software like GStreamer, SHOUTcast and Icecast you will
 - [HLS Browser Support](https://www.jwplayer.com/html5/hls/)
 - [HTTP Live Streaming JavaScript player](https://github.com/RReverser/mpegts)
 - [The Basics of HTTP Live Streaming](http://www.larryjordan.biz/app_bin/wordpress/archives/2369)
-- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/Media/DASH_Adaptive_Streaming_for_HTML_5_Video)
+- [DASH Adaptive Streaming for HTML 5 Video](/ja/docs/Web/API/Media_Source_Extensions_API/DASH_Adaptive_Streaming)
 - [Dynamic Adaptive Streaming over HTTP (MPEG-DASH)](http://en.wikipedia.org/wiki/Dynamic_Adaptive_Streaming_over_HTTP)
 - [MPEG-DASH Media Source Demo](https://dash-mse-test.appspot.com/media.html)
 - [DASH Reference Client](https://dashif.org/reference/players/javascript/1.0.0/index.html)

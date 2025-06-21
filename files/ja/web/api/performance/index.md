@@ -65,7 +65,7 @@ _`Performance` インターフェイスはメソッドを継承しません。_
 
 ## イベント
 
-`addEventListener()` を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナを割り当てることで、イベントを監視します。
+`addEventListener()` を使用するか、このインターフェイスの `oneventname` プロパティにイベントリスナーを割り当てることで、イベントを監視します。
 
 - {{DOMxRef("Performance.resourcetimingbufferfull_event", "resourcetimingbufferfull")}}
   - : ブラウザーの[リソースタイミングバッファー](/ja/docs/Web/API/Performance/setResourceTimingBufferSize)が満杯になったときに発生します。

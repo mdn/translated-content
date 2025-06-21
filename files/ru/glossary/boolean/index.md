@@ -52,4 +52,4 @@ for (let i = 0; i < 3; i++) {
 ### Техническая справка
 
 - Глобальный объект JavaScript: {{jsxref("Boolean")}}
-- [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Data_structures)
+- [Типы данных JavaScript и структуры данных](/ru/docs/Web/JavaScript/Guide/Data_structures)

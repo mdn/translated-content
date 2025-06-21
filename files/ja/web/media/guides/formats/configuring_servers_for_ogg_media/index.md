@@ -108,5 +108,5 @@ It's important to note that it appears that `oggz-info` makes a read pass of the
 
 ## 関連情報
 
-- [Video and audio content](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Media formats supported by the audio and video elements](/ja/docs/Web/Media/Formats)
+- [Video and audio content](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Media formats supported by the audio and video elements](/ja/docs/Web/Media/Guides/Formats)

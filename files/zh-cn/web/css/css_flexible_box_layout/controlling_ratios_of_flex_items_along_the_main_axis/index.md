@@ -39,7 +39,29 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 第二段设置了 `max-content` 值，其与前者相反。它会变得尽可能大，没有自动换行的机会。如果容器太窄，它就会溢出其自身的盒子。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/min-max-content.html", '100%', 750)}}
+```html live-sample___min-max-content
+<p class="min-content">
+  I am sized with min-content and so I will take all of the soft-wrapping
+  opportunities.
+</p>
+<p class="max-content">
+  I am sized with max-content and so I will take none of the soft-wrapping
+  opportunities.
+</p>
+```
+
+```css live-sample___min-max-content
+.min-content {
+  width: min-content;
+  border: 2px dotted rgb(96 139 168);
+}
+.max-content {
+  width: max-content;
+  border: 2px dotted rgb(96 139 168);
+}
+```
+
+{{EmbedLiveSample("min-max-content", "", "260px")}}
 
 记住这种行为，以及 `min-content` 和 `max-content` 所产生的影响，我们将在后文中探索 `flex-grow` 和 `flex-shrink`。
 
@@ -65,7 +87,34 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 在这个示例中我们创建了一些固定的盒子，它们的 `flex-grow` 和`flex-shrink` 都设置为 `0`。这里我们看看第一个元素，显式地设置其宽度为 150px，作为主尺寸，即设置 `flex-basis` 为 150px，而另外两个元素没有设置宽度而是根据它们内容的宽度设置尺寸。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-basis.html", '100%', 500)}}
+```html live-sample___flex-basis
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three</div>
+</div>
+```
+
+```css live-sample___flex-basis
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 auto;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.box :first-child {
+  width: 150px;
+}
+```
+
+{{EmbedLiveSample("flex-basis")}}
 
 除了 `auto` 关键字以外，你还可以使用 `content` 关键字作为 `flex-basis` 的值。这会导致即使元素设置了宽度，`flex-basis` 还是会根据内容大小进行设置。你也可以通过设置 flex-basis 为 `auto` 并确保你的元素没有设置宽度来达到相同的效果，以便它能自动调整大小。
 
@@ -99,7 +148,30 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 尝试在这个实例中将 `flex-grow` 的值从 1 更改为 0 以查看不同的行为：
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow.html", '100%', 520)}}
+```html live-sample___flex-grow
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three has more content</div>
+</div>
+```
+
+```css live-sample___flex-grow
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 0;
+}
+
+.box {
+  width: 400px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("flex-grow")}}
 
 ### 为元素设置不同的 flex-grow 因子
 
@@ -111,7 +183,41 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 `flex-basis` 值为 `0` 意味着可用空间会根据以下规则分配。我们需要将弹性增长因子相加，然后将弹性容器的正可用空间总量除以该值，在这个例子中为 4。而后我们就可以根据每一个的值分配空间——第一个元素得到一个单位、第二个元素得到一个单位、第三个元素得到二个单位。也就是说第三个元素是第一个和第二个元素的两倍。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-grow-ratios.html", '100%', 520)}}
+```html live-sample___flex-grow-ratios
+<div class="box">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+</div>
+```
+
+```css live-sample___flex-grow-ratios
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 0;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+
+.one {
+  flex: 1 1 0;
+}
+
+.two {
+  flex: 1 1 0;
+}
+
+.three {
+  flex: 2 1 0;
+}
+```
+
+{{EmbedLiveSample("flex-grow-ratios")}}
 
 记住你要在这里使用正值。这是一个元素和其他元素之间的比例。你还可以使用更大的数字或者更小的数字——这由你自己决定。把上例中分配的值更改为 `.25`、`.25` 和 `.50` 并去测试——你会得到相同的结果。
 
@@ -125,7 +231,31 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 下一个示例中我们的弹性容器有三个元素，我们已经给它们每一个设置了 200px 的宽度，并且设置容器为 500px 宽。设置 `flex-shrink` 为 `0` 的元素不允许收缩，以使它们溢出了盒子。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink.html", '100%', 500)}}
+```html live-sample___flex-shrink
+<div class="box">
+  <div>One</div>
+  <div>Two</div>
+  <div>Three has more content</div>
+</div>
+```
+
+```css live-sample___flex-shrink
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+.box {
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("flex-shrink")}}
 
 改变 `flex-shrink` 值为 `1` 你会发现每个元素都收缩了同样大小的量，现在所有元素都适应盒子。这样做后它们已变得比它们的初始宽度还小。
 
@@ -141,7 +271,30 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 在下面的例子中，在 `flex-basis` 解析为内容大小的位置你会看到 `min-content` 的铺设。如果你改变弹性容器的宽度——比如增加到 700px 宽，再减少弹性元素的宽度，你会看到前两个元素将换行，但是它们绝不会小于 `min-content` 的大小。随着盒子变得越来越小，第三个元素随后从空间中溢出。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-min-content.html", '100%', 500)}}
+```html live-sample___flex-shrink-min-content
+<div class="box">
+  <div>Item One</div>
+  <div>Item Two</div>
+  <div>Item Three has more content and so has a larger size</div>
+</div>
+```
+
+```css live-sample___flex-shrink-min-content
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  flex: 1 1 auto;
+}
+
+.box {
+  border: 2px dotted rgb(96 139 168);
+  width: 500px;
+  display: flex;
+}
+```
+
+{{EmbedLiveSample("flex-shrink-min-content")}}
 
 在实践中，收缩行为会倾向于给你合理的结果。你通常不希望自己的内容完全消失，或者文本框比自己的最小内容要小，因此上述规则对于需要缩小以适应容器的内容的合理行为而言是有意义的。
 
@@ -151,7 +304,42 @@ slug: Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the
 
 在下面的示例中第一个元素设置 `flex-shrink` 的值为 1、第二个为 `0`（因此它将不会收缩）、第三个为 `4`。第三个元素比第一个收缩的更快。任意设置不同的值——你可以给 `flex-grow` 使用小数或者大一点的数。选择对于你来说任意合理的数。
 
-{{EmbedGHLiveSample("css-examples/flexbox/ratios/flex-shrink-ratios.html", '100%', 570)}}
+```html live-sample___flex-shrink-ratios
+<div class="box">
+  <div class="one">One</div>
+  <div class="two">Two</div>
+  <div class="three">Three</div>
+</div>
+```
+
+```css live-sample___flex-shrink-ratios
+.box > * {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  width: 200px;
+}
+
+.box {
+  display: flex;
+  width: 500px;
+  border: 2px dotted rgb(96 139 168);
+}
+
+.one {
+  flex: 1 1 auto;
+}
+
+.two {
+  flex: 1 0 auto;
+}
+
+.three {
+  flex: 2 4 auto;
+}
+```
+
+{{EmbedLiveSample("flex-shrink-ratios")}}
 
 ## 掌握弹性元素的大小
 

@@ -79,7 +79,7 @@ l10n:
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action) API。该文档衍生自 Chromium 代码中的 [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

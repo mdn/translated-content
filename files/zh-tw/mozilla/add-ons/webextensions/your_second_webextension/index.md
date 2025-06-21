@@ -162,7 +162,7 @@ HTML 內容長得像這樣：
 </html>
 ```
 
-我們在 ID 為 `"popup-content"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Element/div) 元件來處理。
+我們在 ID 為 `"popup-content"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元件裡建立了一個包含每種動物選項的元件。當載入 popup 發生問題時，用另外一個 ID 為 `"error-content"` 且類別定義為 `"hidden"` 的 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元件來處理。
 
 值得注意的是我們在這個檔案裡引用了 CSS 與 JS 檔案，就如同一般網頁。
 

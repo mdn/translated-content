@@ -15,7 +15,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 
 Поскольку пользователи привыкли к внешнему виду своих соответствующих платформ, поставщики браузеров неохотно делают элементы управления формами стилевыми; и по сей день все ещё чрезвычайно трудно перестроить все элементы управления, чтобы сделать их стилизованными.
 
-Даже сегодня ни один браузер полностью не реализует CSS 2.1. Однако со временем поставщики браузеров улучшили свою поддержку CSS для элементов формы, и, несмотря на плохую репутацию в отношении удобства использования, теперь вы можете использовать CSS для стилизации [HTML форм](/ru/docs/Learn/Forms).
+Даже сегодня ни один браузер полностью не реализует CSS 2.1. Однако со временем поставщики браузеров улучшили свою поддержку CSS для элементов формы, и, несмотря на плохую репутацию в отношении удобства использования, теперь вы можете использовать CSS для стилизации [HTML форм](/ru/docs/Learn_web_development/Extensions/Forms).
 
 ### Не все виджеты созданы равными, когда задействован CSS
 
@@ -36,7 +36,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 
 Некоторые элементы редко могут быть стилизованы, и могут потребовать некоторых сложных уловок, иногда требующих углублённых знаний CSS3.
 
-Они включают в себя элемент {{HTMLElement ("legend")}}, но его нельзя правильно расположить на всех платформах. Флажки и переключатели также не могут быть стилизованы напрямую, однако, благодаря CSS3 вы можете обойти это. Контент [`placeholder`](/ru/docs/Web/HTML/Element/input#placeholder) не может быть стилизован каким-либо стандартным способом, однако все браузеры, которые его реализуют, также реализуют собственные псевдо-элементы CSS или псевдоклассы, которые позволяют его стилизовать.
+Они включают в себя элемент {{HTMLElement ("legend")}}, но его нельзя правильно расположить на всех платформах. Флажки и переключатели также не могут быть стилизованы напрямую, однако, благодаря CSS3 вы можете обойти это. Контент [`placeholder`](/ru/docs/Web/HTML/Reference/Elements/input#placeholder) не может быть стилизован каким-либо стандартным способом, однако все браузеры, которые его реализуют, также реализуют собственные псевдо-элементы CSS или псевдоклассы, которые позволяют его стилизовать.
 
 Мы опишем, как обрабатывать эти более конкретные случаи, в статье [«Расширенные стили для HTML-форм».](/ru/docs/Learn/Forms/Advanced_form_styling)
 
@@ -44,7 +44,7 @@ slug: Learn_web_development/Extensions/Forms/Styling_web_forms
 
 Some elements simply can't be styled using CSS. These include: all advanced user interface widgets, such as range, color, or date controls; and all the dropdown widgets, including {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} and {{HTMLElement("datalist")}} elements. The file picker widget is also known not to be stylable at all. The new {{HTMLElement("progress")}} and {{HTMLElement("meter")}} elements also fall in this category.
 
-The main issue with all these widgets, comes from the fact that they have a very complex structure, and CSS is not currently expressive enough to style all the subtle parts of those widgets. If you want to customize those widgets, you have to rely on JavaScript to build a DOM tree you'll be able to style. We explore how to do this in the article [How to build custom form widgets](/ru/docs/Learn/Forms/How_to_build_custom_form_controls).
+The main issue with all these widgets, comes from the fact that they have a very complex structure, and CSS is not currently expressive enough to style all the subtle parts of those widgets. If you want to customize those widgets, you have to rely on JavaScript to build a DOM tree you'll be able to style. We explore how to do this in the article [How to build custom form widgets](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls).
 
 ## Basic styling
 
@@ -210,7 +210,7 @@ Your fonts need some more processing before you start:
 1. Go to the fontsquirrel [Webfont Generator](https://www.fontsquirrel.com/tools/webfont-generator).
 2. Using the form, upload both your font files and generate a webfont kit. Download the kit to your computer.
 3. Unzip the provided zip file.
-4. Inside the unzipped contents you will find two `.woff` files and two `.woff2` files. Copy these four files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximise browser compatibility; see our [Web fonts](/ru/docs/Learn/CSS/Styling_text/Web_fonts) article for a lot more information.
+4. Inside the unzipped contents you will find two `.woff` files and two `.woff2` files. Copy these four files into a directory called fonts, in the same directory as before. We are using two different files for each font to maximise browser compatibility; see our [Web fonts](/ru/docs/Learn_web_development/Core/Text_styling/Web_fonts) article for a lot more information.
 
 ### The CSS
 
@@ -407,13 +407,13 @@ As you can see, as long as we want to build forms with just text fields and butt
 ## In this module
 
 - [Your first HTML form](/ru/docs/Learn/Forms/Your_first_form)
-- [How to structure an HTML form](/ru/docs/Learn/Forms/How_to_structure_a_web_form)
+- [How to structure an HTML form](/ru/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 - [The native form widgets](/ru/docs/Learn/Forms/Basic_native_form_controls)
-- [Sending form data](/ru/docs/Learn/Forms/Sending_and_retrieving_form_data)
-- [Form data validation](/ru/docs/Learn/Forms/Form_validation)
-- [How to build custom form widgets](/ru/docs/Learn/Forms/How_to_build_custom_form_controls)
-- [Sending forms through JavaScript](/ru/docs/Learn/Forms/Sending_forms_through_JavaScript)
+- [Sending form data](/ru/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)
+- [Form data validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation)
+- [How to build custom form widgets](/ru/docs/Learn_web_development/Extensions/Forms/How_to_build_custom_form_controls)
+- [Sending forms through JavaScript](/ru/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript)
 - [HTML forms in legacy browsers](/ru/docs/Learn/Forms/HTML_forms_in_legacy_browsers)
-- [Styling HTML forms](/ru/docs/Learn/Forms/Styling_web_forms)
+- [Styling HTML forms](/ru/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - [Advanced styling for HTML forms](/ru/docs/Learn/Forms/Advanced_form_styling)
 - [Property compatibility table for form widgets](/ru/docs/Learn/Forms/Property_compatibility_table_for_form_controls)

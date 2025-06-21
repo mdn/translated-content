@@ -114,7 +114,7 @@ API は大まかに 2 種類に分けられます。
 - [位置情報 API](/ja/docs/Web/API/Geolocation_API) は地理的な情報を取得します。これは [Google マップ](https://www.google.com/maps)が現在の所在地を見つけて地図上にプロットする場合に使用されています。
 - [キャンバス](/ja/docs/Web/API/Canvas_API)と [WebGL](/ja/docs/Web/API/WebGL_API) の API は 2D や 3D グラフィックでのアニメーションを可能とします。
   このウェブ技術を使用してすごいことをやってのける人たちがいます。 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) や [webglsamples](https://webglsamples.org/) などのページを見てください。
-- [音声と動画の API](/ja/docs/Web/Media/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や [WebRTC](/ja/docs/Web/API/WebRTC_API) などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
+- [音声と動画の API](/ja/docs/Web/Media/Guides/Audio_and_video_delivery)、たとえば {{domxref("HTMLMediaElement")}} や [WebRTC](/ja/docs/Web/API/WebRTC_API) などは適切な音声・動画をウェブページで再生したり、ウェブカメラの動画を撮って他の人のコンピューターで流したりするような、マルチメディアの可能性を示してくれます（私たちの [Snapshot demo](https://chrisdavidmills.github.io/snapshot/) を見てみてください）。
 
 **サードパーティ API** はブラウザーには組み込まれておらず、さらに普通はウェブ上のどこかからそのコードと情報を探さなければなりません。例えば、
 

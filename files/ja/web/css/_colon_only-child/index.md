@@ -14,7 +14,33 @@ p:only-child {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+
+```css interactive-example
+li:only-child {
+  color: fuchsia;
+}
+
+b:only-child {
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>Stars expected to attend:</p>
+<ol>
+  <li>Robert Downey, Jr.</li>
+</ol>
+
+<p>Stars yet to confirm:</p>
+<ol>
+  <li>Scarlett Johansson</li>
+  <li>Samuel L. Jackson</li>
+  <li>Chris Pratt</li>
+</ol>
+
+<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+```
 
 > [!NOTE]
 > 最初の定義では、親のある要素のみが選択されていました。 Selectors Level 4 の初期に、これは必要なくなりました。

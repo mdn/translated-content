@@ -7,7 +7,49 @@ slug: Web/CSS/animation
 
 [CSS](/zh-CN/docs/Web/CSS) **animation** 属性是 {{cssxref("animation-name")}}，{{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}，{{cssxref("animation-delay")}}，{{cssxref("animation-iteration-count")}}，{{cssxref("animation-direction")}}，{{cssxref("animation-fill-mode")}} 和 {{cssxref("animation-play-state")}} 属性的一个简写属性形式。
 
-{{EmbedInteractiveExample("pages/css/animation.html")}}
+{{InteractiveExample("CSS Demo: animation")}}
+
+```css interactive-example-choice
+animation: 3s ease-in 1s infinite reverse both running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite running slidein;
+```
+
+```css interactive-example-choice
+animation: 3s linear 1s infinite alternate slidein;
+```
+
+```css interactive-example-choice
+animation: 0.5s linear 1s infinite alternate slidein;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #1766aa;
+  margin: 20px;
+  border: 5px solid #333;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: -20%;
+  }
+  to {
+    margin-left: 100%;
+  }
+}
+```
 
 ## 语法
 
@@ -131,7 +173,7 @@ animation:
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
+- [MDN Understanding WCAG, Guideline 2.2 explanations](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#Guideline_2.2_%E2%80%94_Enough_Time_Provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 规范

@@ -64,7 +64,7 @@ JavaScript の MIME タイプに関する情報を探していると、JavaScrip
 ブラウザーはこれらの代替 MIME タイプのいずれか、いくつか、またはすべてに対応しているかもしれませんが、JavaScript ファイルの MIME タイプを示すには、`text/javascript` **のみ**を使用しましょう。
 
 > [!NOTE]
-> 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/MIME_types)をご覧ください。
+> 詳しくは [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Guides/MIME_types)をご覧ください。
 
 ## 設定する MIME タイプの決定方法
 
@@ -79,7 +79,7 @@ JavaScript の MIME タイプに関する情報を探していると、JavaScrip
 - Firefox では
 
   - ファイルを読み込み、**ツール > ページの情報**を実行して、アクセスしたページの MIME タイプを確認してください。
-  - **ツール > ウェブ開発者 > ネットワーク**を実行して、ページを再読み込みしてください。リクエストタブには、ページが読み込んでいるすべてのリソースのリストが表示されます。いずれかのリソースをクリックすると、ページの [`Content-Type`](/ja/docs/Web/HTTP/Headers/Content-Type) ヘッダーを含む、利用可能なすべての情報が一覧表示されます。
+  - **ツール > ウェブ開発者 > ネットワーク**を実行して、ページを再読み込みしてください。リクエストタブには、ページが読み込んでいるすべてのリソースのリストが表示されます。いずれかのリソースをクリックすると、ページの [`Content-Type`](/ja/docs/Web/HTTP/Reference/Headers/Content-Type) ヘッダーを含む、利用可能なすべての情報が一覧表示されます。
 
 - Chrome では
 
@@ -111,6 +111,6 @@ header('Content-Type: application/pdf')
 
 - [IANA | MIME Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml)（英語）
 - [Hypertext Transfer Protocol — HTTP/1.1](https://www.w3.org/Protocols/rfc2616/rfc2616.html)（英語）
-- [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/MIME_types)
+- [MIME タイプ（IANA メディア種別）](/ja/docs/Web/HTTP/Guides/MIME_types)
 - [Apache vs Nginx: Practical Considerations](https://www.digitalocean.com/community/tutorials/apache-vs-nginx-practical-considerations)（英語）
 - [Migrate Apache .htaccess to Nginx server block](https://barryvanveen.nl/articles/56-migrate-apache-htaccess-to-nginx-server-block)（英語）

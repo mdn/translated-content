@@ -83,7 +83,7 @@ body {
   - : 複数行のフレックスコンテナーを作成する方法と、それらの行内でのアイテムの表示方法の制御。
 - [フレックスボックスの典型的な用途](/ja/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 典型的なフレックスボックスの用途の一般的なデザインパターン。
-- [CSS レイアウト: フレックスボックス](/ja/docs/Learn/CSS/CSS_layout/Flexbox)
+- [CSS レイアウト: フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : フレックスボックスレイアウトを使用してウェブレイアウトを作成する方法を学びます。
 - [フレックスボックスのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
   - : [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)の詳細機能のうち、フレックスボックスに特有のものです。
@@ -122,4 +122,4 @@ body {
 ## 関連情報
 
 - [CSS 書字方向](/ja/docs/Web/CSS/CSS_writing_modes)モジュール
-- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/display/multi-keyword_syntax_of_display)
+- [CSS display の複数キーワード構文の使用](/ja/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)

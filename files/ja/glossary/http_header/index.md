@@ -56,7 +56,7 @@ X-Cache-Info: cached
 
 ## 関連情報
 
-- [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Headers)
+- [全ての HTTP ヘッダー一覧](/ja/docs/Web/HTTP/Reference/Headers)
 - [ヘッダー](https://datatracker.ietf.org/doc/html/rfc7230#section-3.2) の構文（HTTP 仕様書、英語）
 - 関連用語:
 
@@ -65,7 +65,7 @@ X-Cache-Info: cached
   - {{Glossary("Response header", "レスポンスヘッダー")}}
   - {{Glossary("Representation header", "表現ヘッダー")}}
   - {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}
-  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+  - {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
   - {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
   - {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
   - {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}

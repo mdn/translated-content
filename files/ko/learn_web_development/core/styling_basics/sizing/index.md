@@ -58,7 +58,7 @@ HTML 요소는 CSS 의 영향을 받기 전에 설정한 자연스러운 크기�
 
 ## 특정 크기 설정
 
-물론 디자인의 요소에 특정 크기를 줄 수 있습니다. 요소에 크기가 주어지면 (그리고 그 내용이 그 크기에 맞아야 함) 우리는 이것을 **외적인 크기 (extrinsic size)** 로 지칭합니다. 위의 예에서 `<div>` 를 가져와서 — 구체적인 {{cssxref("width")}} 및 {{cssxref("height")}} 값을 지정할 수 있으며, 이제 어떤 내용이 들어가든 해당 크기를 갖습니다. [overflow 에 대한 이전 수업](/ko/docs/Learn/CSS/Building_blocks/Overflowing_content) 에서 발견한 것처럼 요소에 맞는 공간보다 많은 콘텐츠가 있으면 설정된 높이로 인해 콘텐츠가 overflow 될 수 있습니다.
+물론 디자인의 요소에 특정 크기를 줄 수 있습니다. 요소에 크기가 주어지면 (그리고 그 내용이 그 크기에 맞아야 함) 우리는 이것을 **외적인 크기 (extrinsic size)** 로 지칭합니다. 위의 예에서 `<div>` 를 가져와서 — 구체적인 {{cssxref("width")}} 및 {{cssxref("height")}} 값을 지정할 수 있으며, 이제 어떤 내용이 들어가든 해당 크기를 갖습니다. [overflow 에 대한 이전 수업](/ko/docs/Learn_web_development/Core/Styling_basics/Overflow) 에서 발견한 것처럼 요소에 맞는 공간보다 많은 콘텐츠가 있으면 설정된 높이로 인해 콘텐츠가 overflow 될 수 있습니다.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -66,7 +66,7 @@ HTML 요소는 CSS 의 영향을 받기 전에 설정한 자연스러운 크기�
 
 ### 백분율 사용하기
 
-여러 방법으로 백분율은 길이 단위처럼 작동하며, [값과 단위에 대한 수업에서 논의한 것처럼](/ko/docs/Learn/CSS/Building_blocks/Values_and_units#percentages), 종종 길이와 상호 교환적으로 사용될 수 있습니다. 백분율을 사용하는 경우 백분율이 **_얼마인지_** 알고 있어야 합니다. 다른 container 안에 있는 박스의 경우 자식 박스에 백분율 너비를 지정하면, 부모 container 너비의 백분율이 됩니다.
+여러 방법으로 백분율은 길이 단위처럼 작동하며, [값과 단위에 대한 수업에서 논의한 것처럼](/ko/docs/Learn_web_development/Core/Styling_basics/Values_and_units#percentages), 종종 길이와 상호 교환적으로 사용될 수 있습니다. 백분율을 사용하는 경우 백분율이 **_얼마인지_** 알고 있어야 합니다. 다른 container 안에 있는 박스의 경우 자식 박스에 백분율 너비를 지정하면, 부모 container 너비의 백분율이 됩니다.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
@@ -104,7 +104,7 @@ HTML 요소는 CSS 의 영향을 받기 전에 설정한 자연스러운 크기�
 
 이 기술은 이미지를 반응형으로 만드는 데 사용되므로 더 작은 장치에서 볼 때 이미지가 적절하게 축소됩니다. 그러나 이 기술을 사용하여 실제로 큰 이미지를 로드한 다음 브라우저에서 축소하면 안됩니다. 이미지는 디자인에 표시되는 가장 큰 크기보다 커야합니다. 지나치게 큰 이미지를 다운로드하면, 사이트 속도가 느려질 수 있으며, 데이터 요금제인 경우 더 많은 비용이 발생할 수 있습니다.
 
-> **참고:** [반응형 이미지 기술](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) 에 대해 자세히 알아보십시오.
+> **참고:** [반응형 이미지 기술](/ko/docs/Web/HTML/Responsive_images) 에 대해 자세히 알아보십시오.
 
 ## Viewport 단위
 
@@ -120,6 +120,6 @@ viewport 에 따라 크기를 조정하면 디자인에 유용할 수 있습니�
 
 ## 요약
 
-이번 수업에서는 웹에서 크기를 조정할 때 발생할 수 있는 몇 가지 주요 문제에 대해 설명합니다. [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout) 으로 이동할 때, 크기 조정은 다양한 레이아웃 방법을 익히는 데 매우 중요하므로 계속 진행하기 전에 여기에서 개념을 이해하는 것이 좋습니다.
+이번 수업에서는 웹에서 크기를 조정할 때 발생할 수 있는 몇 가지 주요 문제에 대해 설명합니다. [CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout) 으로 이동할 때, 크기 조정은 다양한 레이아웃 방법을 익히는 데 매우 중요하므로 계속 진행하기 전에 여기에서 개념을 이해하는 것이 좋습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

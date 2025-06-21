@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef}}
 
-**`HTMLAnchorElement.referrerPolicy`** 属性反映 {{HTMLElement("a")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Element/a#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址（referrer）。
+**`HTMLAnchorElement.referrerPolicy`** 属性反映 {{HTMLElement("a")}} 元素的 HTML [`referrerpolicy`](/zh-CN/docs/Web/HTML/Reference/Elements/a#referrerpolicy) 属性，该属性定义获取资源时发送哪个来源地址（referrer）。
 
 ## 值
 

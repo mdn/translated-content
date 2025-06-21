@@ -155,4 +155,4 @@ browser.webRequest.onBeforeSendHeaders.addListener(
 
 ## 了解更多
 
-学习你能使用的所有`webRequest` API，查看 [reference documentation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/WebRequest)。
+学习你能使用的所有`webRequest` API，查看 [reference documentation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)。

@@ -50,7 +50,7 @@ alert("This is a message");
 기본적인 함수를 만들면서 시작해 봅시다.
 
 > [!NOTE]
-> 함수에 이름을 붙일 때 [변수 명명 규칙](/ko/docs/Learn/JavaScript/First_steps/Variables#an_aside_on_variable_naming_rules)과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.
+> 함수에 이름을 붙일 때 [변수 명명 규칙](/ko/docs/Learn_web_development/Core/Scripting/Variables#an_aside_on_variable_naming_rules)과 같은 규칙을 따라야 합니다. 함수와 변수를 떼어놓고 이야기할 수 있으므로, 이렇게 하는 것은 괜찮습니다 — 함수명은 뒤에 괄호가 나타나지만 변수는 그렇지 않습니다.
 
 1. [function-start.html](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/functions/function-start.html) 파일을 다운로드한 후 시작해 봅시다. HTML은 간단합니다 — body는 버튼 하나만을 포함하고 있습니다. 또한 커스텀 메시지 박스를 꾸밀 기본적인 CSS와, JavaScript를 넣을 빈 {{htmlelement("script")}} 요소가 제공됩니다.
 2. 다음으로, 다음을 `<script>` 요소 내부에 추가해 보세요:
@@ -117,7 +117,7 @@ panel.appendChild(closeBtn);
 
 마지막으로, 우리는 버튼이 클릭되었을 때, 전체 패널을 페이지에서 삭제하기 위해 — 메시지 박스를 닫기 위해 — 몇몇 코드가 실행되도록 {{domxref("GlobalEventHandlers.onclick")}} 이벤트 핸들러를 사용합니다.
 
-간략하게 말하자면, `onclick` 핸들러는 버튼이 클릭되었을 때 어떤 코드를 실행할 지 명시하기 위해 함수에 설정될 수 있는, 버튼에서 (사실은, 페이지에 있는 어떠한 요소들에서든지) 사용 가능한 프로퍼티입니다. 차후의 [이벤트 문서](/ko/docs/Learn/JavaScript/Building_blocks/Events)에서 이것에 대해 더 많이 배울 것입니다. 우리는 `onclick` 핸들러를 익명 함수로 만들었는데, 이는 버튼이 클릭되었을 때 실행할 코드를 포함합니다. 함수 내부의 코드는 우리가 특정한 자식 요소 — 이 경우 패널 `<div>` — 를 제거하고 싶다는 것을 명시하기 위해 {{domxref("Node.removeChild()")}} DOM API를 사용합니다.
+간략하게 말하자면, `onclick` 핸들러는 버튼이 클릭되었을 때 어떤 코드를 실행할 지 명시하기 위해 함수에 설정될 수 있는, 버튼에서 (사실은, 페이지에 있는 어떠한 요소들에서든지) 사용 가능한 프로퍼티입니다. 차후의 [이벤트 문서](/ko/docs/Learn_web_development/Core/Scripting/Events)에서 이것에 대해 더 많이 배울 것입니다. 우리는 `onclick` 핸들러를 익명 함수로 만들었는데, 이는 버튼이 클릭되었을 때 실행할 코드를 포함합니다. 함수 내부의 코드는 우리가 특정한 자식 요소 — 이 경우 패널 `<div>` — 를 제거하고 싶다는 것을 명시하기 위해 {{domxref("Node.removeChild()")}} DOM API를 사용합니다.
 
 ```js
 closeBtn.onclick = function () {
@@ -294,7 +294,7 @@ btn.onclick = displayMessage();
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Functions). 이 평가들은 다음 문서에서 다뤄지는 기술들을 요구하므로, 평가를 시도해보기 전에 다음 문서를 먼저 읽을 수도 있습니다.
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions). 이 평가들은 다음 문서에서 다뤄지는 기술들을 요구하므로, 평가를 시도해보기 전에 다음 문서를 먼저 읽을 수도 있습니다.
 
 ## 결론
 

@@ -21,15 +21,15 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
   - : 列挙型のプロパティを表す文字列で、要素の内容を周囲のコンテキストから見てどう配置するかを示します。指定可能な値は `"left"`, `"right"`, `"center"`, `"justify"` です。
 - {{domxref("HTMLEmbedElement.height")}}
-  - : 文字列で HTML の [`height`](/ja/docs/Web/HTML/Element/embed#height) 属性を反映しており、リソースが表示される高さが入ります。
+  - : 文字列で HTML の [`height`](/ja/docs/Web/HTML/Reference/Elements/embed#height) 属性を反映しており、リソースが表示される高さが入ります。
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
   - : 文字列で、埋め込まれたオブジェクトの名前を表します。
 - {{domxref("HTMLEmbedElement.src")}}
-  - : 文字列で、HTML の [`src`](/ja/docs/Web/HTML/Element/embed#src) 属性を反映しており、リソースの場所が入ります。
+  - : 文字列で、HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/embed#src) 属性を反映しており、リソースの場所が入ります。
 - {{domxref("HTMLEmbedElement.type")}}
-  - : 文字列で、HTML の [`type`](/ja/docs/Web/HTML/Element/embed#type) 属性を反映しており、リソースの型が入ります。
+  - : 文字列で、HTML の [`type`](/ja/docs/Web/HTML/Reference/Elements/embed#type) 属性を反映しており、リソースの型が入ります。
 - {{domxref("HTMLEmbedElement.width")}}
-  - : 文字列で、HTML の [`width`](/ja/docs/Web/HTML/Element/embed#width) 属性を反映しており、リソースが表示される幅が入ります。
+  - : 文字列で、HTML の [`width`](/ja/docs/Web/HTML/Reference/Elements/embed#width) 属性を反映しており、リソースが表示される幅が入ります。
 
 ## インスタンスメソッド
 

@@ -96,7 +96,7 @@ SVG에는 지금까지 설명한 것 외에도 몇 가지 추가적인 이점이
 
 ### 빠른 방법: `img` 요소
 
-{{htmlelement("img")}} 요소를 통해 SVG를 임베드하려면 예상대로 src 속성에서 참조하기만 하면 됩니다. `height` 또는 `width` 속성(또는 SVG에 고유한 가로 세로 비율이 없는 경우 둘 다)이 필요합니다. 아직 읽어보지 않았다면 [HTML로 이미지 만들기](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)를 읽어보세요.
+{{htmlelement("img")}} 요소를 통해 SVG를 임베드하려면 예상대로 src 속성에서 참조하기만 하면 됩니다. `height` 또는 `width` 속성(또는 SVG에 고유한 가로 세로 비율이 없는 경우 둘 다)이 필요합니다. 아직 읽어보지 않았다면 [HTML로 이미지 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images)를 읽어보세요.
 
 ```html
 <img
@@ -164,7 +164,7 @@ SVG가 전혀 표시되지 않는다면 서버가 제대로 설정되지 않았�
 
 ### `iframe`을 사용하여 SVG를 삽입하는 방법
 
-웹페이지처럼 브라우저에서 SVG 이미지를 열 수 있습니다. 따라서 `<iframe>`으로 SVG 문서를 임베드하는 것은 [다른 임베딩 기술인 \<object>에서 \<iframe>으로](/ko/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)에서 공부한 것처럼 수행됩니다.
+웹페이지처럼 브라우저에서 SVG 이미지를 열 수 있습니다. 따라서 `<iframe>`으로 SVG 문서를 임베드하는 것은 [다른 임베딩 기술인 \<object>에서 \<iframe>으로](/ko/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)에서 공부한 것처럼 수행됩니다.
 
 간단히 살펴보세요.
 
@@ -325,7 +325,7 @@ textarea.onkeyup = function () {
 
 이 글에서는 벡터 그래픽과 SVG가 무엇인지, 왜 알아두면 유용한지, 웹페이지에 SVG를 포함하는 방법에 대해 간략하게 살펴보았습니다. 이 글은 SVG를 배우기 위한 완전한 가이드가 아니라 웹을 돌아다니다가 SVG를 만났을 때 어떤 것인지 알 수 있도록 포인터를 제공하기 위한 것입니다. 따라서 아직 SVG 전문가가 아니라고 생각되더라도 걱정하지 마세요. 작동 원리에 대해 자세히 알아보고 싶으시다면 아래에 도움이 될 만한 링크가 포함되어 있습니다.
 
-이 모듈의 마지막 글에서는 [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)에 대해 자세히 살펴보면서 다양한 기기에서 이미지가 더 잘 작동하도록 하는 HTML의 도구를 살펴봅니다.
+이 모듈의 마지막 글에서는 [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)에 대해 자세히 살펴보면서 다양한 기기에서 이미지가 더 잘 작동하도록 하는 HTML의 도구를 살펴봅니다.
 
 ## 같이 보기
 

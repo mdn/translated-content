@@ -9,7 +9,46 @@ l10n:
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-x`** 设置当内容溢出块级元素的左右两侧时所显示的内容。可以不显示，或显示滚动条，或显示溢出内容。也可以使用 [`overflow`](/zh-CN/docs/Web/CSS/overflow) 简写属性来设置该属性。
 
-{{EmbedInteractiveExample("pages/css/overflow-x.html")}}
+{{InteractiveExample("CSS Demo: overflow-x")}}
+
+```css interactive-example-choice
+overflow-x: visible;
+```
+
+```css interactive-example-choice
+overflow-x: hidden;
+```
+
+```css interactive-example-choice
+overflow-x: clip;
+```
+
+```css interactive-example-choice
+overflow-x: scroll;
+```
+
+```css interactive-example-choice
+overflow-x: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">
+    The value of Pi is 3.1415926535897932384626433832795029. The value of e is
+    2.7182818284590452353602874713526625.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 15em;
+  height: 9em;
+  border: medium dotted;
+  padding: 0.75em;
+  text-align: left;
+}
+```
 
 ## 语法
 

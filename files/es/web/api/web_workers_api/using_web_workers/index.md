@@ -470,7 +470,7 @@ self.close();
 
 ## Manejo de errores
 
-When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/es/docs/DOM/event.preventDefault)method.
+When a runtime error occurs in worker, its `onerror` event handler is called. It receives an event named `error` which implements the `ErrorEvent` interface. The event doesn't bubble and is cancelable; to prevent the default action from taking place, the worker can call the error event's [`preventDefault()`](/es/docs/Web/API/Event/preventDefault)method.
 
 The error event has the following three fields that are of interest:
 

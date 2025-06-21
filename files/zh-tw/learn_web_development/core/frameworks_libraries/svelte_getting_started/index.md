@@ -1,10 +1,8 @@
 ---
 title: Svelte 入門
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_getting_started
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Svelte_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
 此篇文章我們將摘要說明 [Svelte 框架](https://svelte.dev/)。我們將會看到 Svelte 如何運作，以及它與其它框架和工具的不同之處。接著我們將學習如何設置我們的開發環境並建立一個範例應用程式，了解其專案結構及如何在本地運行，最後可以將其建置於正式環境。
@@ -278,7 +276,7 @@ Svelte 也支援一些標籤，像是 `{#if...}`，`{#each...}` 和 `{#await...}
 </style>
 ```
 
-我們現在對 [`<h1>`](/zh-TW/docs/Web/HTML/Element/Heading_Elements) 元素套用了一些樣式。對於其它元件中的 `<h1>` 元素們將會有什麼影響呢？
+我們現在對 [`<h1>`](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素套用了一些樣式。對於其它元件中的 `<h1>` 元素們將會有什麼影響呢？
 
 在 Svelte 中，CSS 在元件 `<style>` 區塊中且被侷限於該元件範圍之內。這是透過對所選的元素加上一個類別來實現，而這個類別則會是基於元件樣式的雜湊值。
 

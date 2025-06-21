@@ -65,7 +65,7 @@ console.log(obj2.getThis()); // { name: 'obj2', getThis: [Function: getThis] }
 
 関数は同じですが、呼び出し方法によって `this` の値が異なることに注目してください。これは、関数への引数がどのように動作するのかと似ています。
 
-`this` の値は、自分自身のプロパティとして機能を持つオブジェクトではなく、その機能を呼び出すために使用されるオブジェクトです。これを証明するために、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)の上位にあるオブジェクトのメソッドを呼び出してみましょう。
+`this` の値は、自分自身のプロパティとして機能を持つオブジェクトではなく、その機能を呼び出すために使用されるオブジェクトです。これを証明するために、[プロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)の上位にあるオブジェクトのメソッドを呼び出してみましょう。
 
 ```js
 const obj3 = {
@@ -163,7 +163,7 @@ const foo = () => this;
 console.log(foo() === globalObject); // true
 ```
 
-アロー関数は、その関数が存在するスコープの `this` 値を囲む[クロージャ](/ja/docs/Web/JavaScript/Closures)を作成します。つまり、アロー関数は「自動バインド」されているかのように動作します。つまり、どのように呼び出されたとしても、`this` は関数が作成された時点での値（例えば、グローバルオブジェクト）にバインドされます。他の関数内で作成されたアロー関数にも同じことが言えます。そのthisは、それを囲む字句コンテキストのままです。[下記の例を参照してください](#アロー関数内の_this)。
+アロー関数は、その関数が存在するスコープの `this` 値を囲む[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)を作成します。つまり、アロー関数は「自動バインド」されているかのように動作します。つまり、どのように呼び出されたとしても、`this` は関数が作成された時点での値（例えば、グローバルオブジェクト）にバインドされます。他の関数内で作成されたアロー関数にも同じことが言えます。そのthisは、それを囲む字句コンテキストのままです。[下記の例を参照してください](#アロー関数内の_this)。
 
 さらに、`call()`、`bind()`、`apply()` を使用してアロー関数を呼び出す場合、`thisArg` 引数は無視されます。ただし、これらのメソッドを使用しても、他にも引数を渡すことができます。
 
@@ -259,7 +259,7 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 グローバル実行コンテキスト（関数やクラスの外部、グローバルスコープで定義された[ブロック](/ja/docs/Web/JavaScript/Reference/Statements/block)または[アロー関数](#アロー関数)の内部の場合もあり）では、スクリプトが動作する実行コンテキストによって `this` の値が決まります。 [コールバック](#コールバック)と同様に、`this` の値は実行環境（呼び出し側）によって決定されます。
 
-スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Element/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
+スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
 
 > **メモ:** `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
 
@@ -456,7 +456,7 @@ for (const element of elements) {
 
 ### インラインイベントハンドラー内の this
 
-コードがインラインの[イベントハンドラー属性](/ja/docs/Web/HTML/Attributes#イベントハンドラー属性)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
+コードがインラインの[イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Attributes#イベントハンドラー属性)から呼び出されたとき、その `this` にはリスナーが配置されている DOM 要素が設定されます。
 
 ```html
 <button onclick="alert(this.tagName.toLowerCase());">Show this</button>

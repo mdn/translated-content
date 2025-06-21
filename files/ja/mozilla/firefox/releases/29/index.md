@@ -25,7 +25,7 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 ### CSS
 
-- [CSS variables](/ja/docs/Web/CSS/Using_CSS_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
+- [CSS variables](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) を実装しました ([Firefox バグ 773296](https://bugzil.la/773296))。この件に関する Mozilla Hacks の記事は[こちら](https://hacks.mozilla.org/2013/12/css-variables-in-firefox-nightly/)です。これは Release ビルド以外でのみデフォルトで有効です (Release ビルドで使用したい場合は設定項目 `layout.css.variables.enabled` を `true` に変更してください)。
 - Flexbox で {{cssxref("visibility")}}`: collapse` をサポートしました ([Firefox バグ 783470](https://bugzil.la/783470))。
 - {{cssxref("box-sizing")}} プロパティの接頭辞を外しました ([Firefox バグ 243412](https://bugzil.la/243412))。
 - 何かがアニメーションするであろうというヒントを与える、{{cssxref("will-change")}} プロパティを追加しました。有効化するには設定項目 `layout.css.will-change.enabled` を `true` に変更しなければなりません。([Firefox バグ 940842](https://bugzil.la/940842))

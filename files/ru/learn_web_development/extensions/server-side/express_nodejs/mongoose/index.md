@@ -5,11 +5,11 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
-В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать [Mongoose](http://mongoosejs.com/) для доступа к базе данных веб-сайта [LocalLibrary](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны основные методы доступа к данным модели.
+В этой статье даётся краткое введение в базы данных, и методика их использования в приложениях Node/Express. Затем мы покажем, как можно использовать [Mongoose](http://mongoosejs.com/) для доступа к базе данных веб-сайта [LocalLibrary](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website). Мы объясним, как объявляются схемы и модели объектов, укажем основные типы полей, и методику базовой валидации. В статье также кратко показаны основные методы доступа к данным модели.
 
-| Предварительные сведения: | [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website) |
-| ------------------------- | ------------------------------------------------------------------------------------------------------------------ |
-| Цель:                     | Уметь спроектировать и создать свои модели, используя Mongoose.                                                    |
+| Предварительные сведения: | [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website) |
+| ------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                     | Уметь спроектировать и создать свои модели, используя Mongoose.                                                                               |
 
 ## Обзор
 
@@ -533,7 +533,7 @@ SomeModel.find(callback_function);
 
 ## Установка Mongoose
 
-Откройте окно команд и перейдите в каталог, в котором создан [каркас веб-сайта Local Library](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл **package.json**, если вы ещё не сделали этого ранее, при чтении [Учебника по Mongoose](#installing_mongoose_and_mongodb).
+Откройте окно команд и перейдите в каталог, в котором создан [каркас веб-сайта Local Library](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). Введите команду install, чтобы установить Mongoose (и её зависимости), а также добавьте её в файл **package.json**, если вы ещё не сделали этого ранее, при чтении [Учебника по Mongoose](#installing_mongoose_and_mongodb).
 
 ```bash
 npm install mongoose
@@ -734,12 +734,12 @@ module.exports = mongoose.model("BookInstance", BookInstanceSchema);
 
 ## In this module
 
-- [Express/Node introduction](/ru/docs/Learn/Server-side/Express_Nodejs/Introduction)
-- [Setting up a Node (Express) development environment](/ru/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/ru/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn/Server-side/Express_Nodejs/mongoose)
-- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn/Server-side/Express_Nodejs/routes)
-- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
-- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn/Server-side/Express_Nodejs/forms)
+- [Express/Node introduction](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction)
+- [Setting up a Node (Express) development environment](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Creating a skeleton website](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Using a Database (with Mongoose)](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
+- [Express Tutorial Part 4: Routes and controllers](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/routes)
+- [Express Tutorial Part 5: Displaying library data](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
+- [Express Tutorial Part 6: Working with forms](/ru/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/forms)
 - [Express Tutorial Part 7: Deploying to production](/ru/docs/Learn/Server-side/Express_Nodejs/deployment)

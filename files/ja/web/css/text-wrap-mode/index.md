@@ -14,7 +14,43 @@ l10n:
 > [!NOTE]
 > このプロパティの名前は、 CSSWG がより良い名前を探すまでのプレースホルダーです。
 
-{{EmbedInteractiveExample("pages/css/text-wrap-mode.html")}}
+{{InteractiveExample("CSS Demo: text-wrap-mode")}}
+
+```css interactive-example-choice
+text-wrap-mode: wrap;
+```
+
+```css interactive-example-choice
+text-wrap-mode: nowrap;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="whole-content-wrapper">
+    <p>Edit the text in the box:</p>
+    <div class="transition-all" id="example-element">
+      <p contenteditable="">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem aut
+        cum eum id quos est.
+      </p>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.whole-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#example-element {
+  border: 1px solid #c5c5c5;
+  width: 250px;
+}
+```
 
 ## 構文
 

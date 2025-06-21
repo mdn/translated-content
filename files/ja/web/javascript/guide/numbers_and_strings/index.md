@@ -15,7 +15,7 @@ JavaScript では、数値はすべて [64 ビット倍精度浮動小数点数�
 
 浮動小数点数の表現に加えて、数値型は 3 つの記号的な値を持っています。 {{jsxref("Infinity")}}、`-Infinity`、{{jsxref("NaN")}}（非数、not-a-number）です。
 
-JavaScript における他のプリミティブ型との関わりについては、[JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Data_structures) もご覧ください。
+JavaScript における他のプリミティブ型との関わりについては、[JavaScript のデータ型とデータ構造](/ja/docs/Web/JavaScript/Guide/Data_structures) もご覧ください。
 
 4 種類の数値リテラル、10 進数、2 進数、8 進数、16 進数を使用することができます。
 

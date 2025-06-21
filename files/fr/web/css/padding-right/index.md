@@ -7,7 +7,50 @@ slug: Web/CSS/padding-right
 
 La propriété **`padding-right`** d'un élément correspond à l'espace nécessaire à la droite d'un élément. La [zone de remplissage](/fr/docs/Learn/CSS/Building_blocks/The_box_model) correspond à l'espace entre le contenu et la bordure. `padding-right` ne peut pas recevoir de valeurs négatives.
 
-{{EmbedInteractiveExample("pages/css/padding-right.html")}}
+{{InteractiveExample("CSS Demo: padding-right")}}
+
+```css interactive-example-choice
+padding-right: 1.5em;
+```
+
+```css interactive-example-choice
+padding-right: 10%;
+```
+
+```css interactive-example-choice
+padding-right: 20px;
+```
+
+```css interactive-example-choice
+padding-right: 1ch;
+```
+
+```css interactive-example-choice
+padding-right: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+}
+```
 
 > [!NOTE]
 > La propriété raccourcie {{cssxref("padding")}} permet de paramétrer les dimensions des quatre côtés de cette boîte (y compris `padding-right` donc).

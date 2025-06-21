@@ -108,7 +108,7 @@ counter();
 
 ### 返回一个函数
 
-请参阅有关[闭包](/zh-CN/docs/Web/JavaScript/Closures)的文章。
+请参阅有关[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)的文章。
 
 ```js
 function magic() {
@@ -132,4 +132,4 @@ answer(1337); // 56154
 ## 参见
 
 - [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)
-- [闭包](/zh-CN/docs/Web/JavaScript/Closures)
+- [闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)

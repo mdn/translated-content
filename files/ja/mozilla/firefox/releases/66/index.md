@@ -88,7 +88,7 @@ _変更なし。_
 
 #### メディア、ウェブオーディオ、WebRTC
 
-- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Formats/Video_codecs#av1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ([Firefox バグ 1521181](https://bugzil.la/1521181)、[Firefox バグ 1452146](https://bugzil.la/1452146)、[Firefox バグ 1534814](https://bugzil.la/1534814))。
+- 新しい [AV1 動画コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs#av1) を macOS および Windows (Intel プロセッサー用) で、デフォルトで有効にしました。Linux は Firefox 67 でサポートする予定です ([Firefox バグ 1521181](https://bugzil.la/1521181)、[Firefox バグ 1452146](https://bugzil.la/1452146)、[Firefox バグ 1534814](https://bugzil.la/1534814))。
 - {{domxref("MediaDevices")}} の {{domxref("MediaDevices.getDisplayMedia", "getDisplayMedia()")}} メソッド (`navigator.mediaDevices.getDisplayMedia()` として使用可能) を追加して、仕様書に一致させました。このメソッドは、スクリーンまたはスクリーンの一部を {{domxref("MediaStream")}} として取得して、操作または共有できます ([Firefox バグ 1321221](https://bugzil.la/1321221))。
 - スクリーンやウィンドウの内容を取得するための、Firefox 独自の {{domxref("MediaDevices.getUserMedia", "getUserMedia()")}} に基づくメソッドを最終的に非推奨にする取り組みの一部として、非標準の `mediaSource` 定数を値 `screen` および `window` と同等に扱うようになりました。どちらも、ユーザーが選択するスクリーンやウィンドウのリストを提供します ([Firefox バグ 1474376](https://bugzil.la/1474376))。
 - ローカル出力の {{domxref("RTCRTPStreamStats")}} オブジェクトに {{domxref("RTCRtpStreamStats.qpSum", "qpSum")}} を追加しました。これは、ビデオトラックで送受信するすべてのフレームの量子化パラメーターの合計を表します。この値が高ければ、ストリームはより圧縮されていると考えられます ([Firefox バグ 1347070](https://bugzil.la/1347070))。

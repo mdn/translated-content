@@ -94,7 +94,7 @@ btn.onclick = function () {
 
 이 지점에서 언급할 가치가 있는 다른 것은 이벤트는 JavaScript 특유의 것이 아니라는 것입니다 — 대부분의 프로그래밍 언어는 몇몇 종류의 이벤트 모델을 가지고 있고, 그 모델이 작동하는 방식은 종종 JavaScript의 방법과는 다릅니다. 사실, 웹 페이지를 위한 JavaScript에서의 이벤트 모델은 다른 환경에서 쓰이는 JavaScript에 대한 이벤트 모델과는 다릅니다.
 
-예를 들자면, 개발자들이 JavaScript를 네트워크와 서버사이드 어플리케이션을 제작하기 위해 사용하는 것을 가능하게 하는 [Node.js](/ko/docs/Learn/Server-side/Express_Nodejs)는 매우 인기있는 JavaScript 런타임입니다. [Node.js 이벤트 모델](https://nodejs.org/docs/latest-v12.x/api/events.html)은 이벤트를 듣는 리스너와 이벤트를 주기적으로 발산하는 이미터(emitter)에 의존하고 있습니다 — 이것은 그렇게 다른 것처럼 들리지 않지만, 코드는 상당히 다른데, 이벤트 리스너를 등록하기 위해 `on()`, 이벤트 리스너를 등록하고 한 번 실행된 이후에 등록을 해제하는 `once()`같은 함수를 사용합니다. [HTTP connect 이벤트 문서](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect)는 좋은 예시를 제공합니다.
+예를 들자면, 개발자들이 JavaScript를 네트워크와 서버사이드 어플리케이션을 제작하기 위해 사용하는 것을 가능하게 하는 [Node.js](/ko/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs)는 매우 인기있는 JavaScript 런타임입니다. [Node.js 이벤트 모델](https://nodejs.org/docs/latest-v12.x/api/events.html)은 이벤트를 듣는 리스너와 이벤트를 주기적으로 발산하는 이미터(emitter)에 의존하고 있습니다 — 이것은 그렇게 다른 것처럼 들리지 않지만, 코드는 상당히 다른데, 이벤트 리스너를 등록하기 위해 `on()`, 이벤트 리스너를 등록하고 한 번 실행된 이후에 등록을 해제하는 `once()`같은 함수를 사용합니다. [HTTP connect 이벤트 문서](https://nodejs.org/docs/latest-v12.x/api/http.html#http_event_connect)는 좋은 예시를 제공합니다.
 
 [WebExtensions](/ko/docs/Mozilla/Add-ons/WebExtensions)이라 불리는 기술을 사용하여, 여러분은 또한 크로스 브라우저 애드온(cross-browser add-on) — 브라우저 기능성 강화 — 을 개발하기 위해 JavaScript를 사용할 수 있습니다. 이 이벤트 모델은 웹 이벤트 모델과 유사하나, 조금 다릅니다 — 이벤트 리스너 프로퍼티들은 (`onmessage`가 아니라 `onMessage`와 같이) 카멜케이스(camel-case)화 되어있고, `addListener` 함수와 연결될 필요가 있습니다. 예시를 위해 [`runtime.onMessage` 페이지](/ko/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage#examples)를 봐 보세요.
 
@@ -120,7 +120,7 @@ btn.onclick = function () {
 
 [`onclick`](/ko/docs/Web/API/Element/click_event) 프로퍼티는 이 상황에서 쓰이고 있는 이벤트 핸들러 프로퍼티입니다. 이것은 본질적으로 버튼에서 사용 가능한 다른 것들과 같은 프로퍼티지만 (예: [`btn.textContent`](/ko/docs/Web/API/Node/textContent), 또는 [`btn.style`](/ko/docs/Web/API/HTMLElement/style)), 이것은 특별한 타입입니다 — 어떤 코드와 동일한 것을 설정했을 때, 그 코드는 버튼에서 이벤트가 발생되었을 때 실행됩니다.
 
-여러분은 또한 기명 함수 이름과 같은 핸들러 프로퍼티를 설정할 수 있습니다 ([자신만의 함수 만들기](/ko/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)에서 본 것처럼요). 다음은 아주 똑같이 동작합니다:
+여러분은 또한 기명 함수 이름과 같은 핸들러 프로퍼티를 설정할 수 있습니다 ([자신만의 함수 만들기](/ko/docs/Learn_web_development/Core/Scripting/Build_your_own_function)에서 본 것처럼요). 다음은 아주 똑같이 동작합니다:
 
 ```js
 const btn = document.querySelector("button");
@@ -629,7 +629,7 @@ video.onclick = function (e) {
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 이벤트](/ko/docs/Learn/JavaScript/Building_blocks/Test_your_skills:_Events).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 이벤트](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Events).
 
 ## 결론
 

@@ -75,7 +75,7 @@ copy.length = 1;
 
 ## Смотрите также
 
-- [\[\[Configurable\]\]](/ru/docs/Web/JavaScript/Data_structures#Properties)
+- [\[\[Configurable\]\]](/ru/docs/Web/JavaScript/Guide/Data_structures#Properties)
 - {{jsxref("Array.length")}}
 - {{jsxref("Object.defineProperty()")}}
 - {{jsxref("Object.seal()")}}

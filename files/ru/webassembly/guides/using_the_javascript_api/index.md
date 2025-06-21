@@ -5,10 +5,10 @@ slug: WebAssembly/Guides/Using_the_JavaScript_API
 
 {{WebAssemblySidebar}}
 
-Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/C_to_Wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.
+Если вы уже [компилировали модуль из другого языка, используя такие инструменты как Emscripten](/ru/docs/WebAssembly/Guides/C_to_Wasm), или загружали и запускали код, то следующим шагом будет углублённое изучение возможностей WebAssembly JavaScript API. Эта статья даст необходимые знания по этому вопросу.
 
 > [!NOTE]
-> Если вы незнакомы с фундаментальными понятиями, упомянутыми в этой статье, и вам нужны дополнительные объяснения, то вам нужно сначала прочитать про [Основы WebAssembly](/ru/docs/WebAssembly/Concepts).
+> Если вы незнакомы с фундаментальными понятиями, упомянутыми в этой статье, и вам нужны дополнительные объяснения, то вам нужно сначала прочитать про [Основы WebAssembly](/ru/docs/WebAssembly/Guides/Concepts).
 
 ## Несколько простых примеров
 
@@ -21,7 +21,7 @@ slug: WebAssembly/Guides/Using_the_JavaScript_API
 
 1. Для начала нам нужен wasm-модуль! Возьмите наш файл [simple.wasm](https://github.com/mdn/webassembly-examples/raw/master/js-api-examples/simple.wasm) и сохраните копию в новой директории на своём локальном компьютере.
 2. Далее, давайте создадим в той же директории что и wasm-модуль простой HTML-файл и назовём его `index.html` (можно использовать [HTML шаблон](https://github.com/mdn/webassembly-examples/blob/master/template/template.html) если вы этого ещё не сделали).
-3. Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Text_format_to_Wasm#a_first_look_at_the_text_format)):
+3. Теперь, для того чтобы понять что происходит в коде модуля, давайте взглянем на его текстовое представление (которое мы также встречали в [Перевод из текстового формата WebAssembly в wasm](/ru/docs/WebAssembly/Guides/Text_format_to_Wasm#a_first_look_at_the_text_format)):
 
    ```
    (module
@@ -285,7 +285,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 - Один экземпляр модуля может использовать от 0 до 1 объекта таблицы - это "адресное пространство для функций" экземпляра модуля используется для реализации С/С++ указателей на функции. Будущие версии WebAssembly позволят иметь 0–N экземпляров таблиц на один экземпляр модуля.
 - Один объект памяти или объект таблицы может быть использован в 0-N экземплярах модулей - эти все экземпляры будут разделять одно и то же адресное пространство, позволяя выполнять [динамическое связывание](http://webassembly.org/docs/dynamic-linking).
 
-Чтобы ознакомится с множественностью в действии, смотрите нашу объясняющую статью [Изменяющиеся таблицы и динамическое связывание](/ru/docs/WebAssembly/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
+Чтобы ознакомится с множественностью в действии, смотрите нашу объясняющую статью [Изменяющиеся таблицы и динамическое связывание](/ru/docs/WebAssembly/Guides/Understanding_the_text_format#mutating_tables_and_dynamic_linking).
 
 ## Резюме
 
@@ -294,5 +294,5 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 ## Смотрите также
 
 - [webassembly.org](http://webassembly.org/)
-- [Основы WebAssembly](/ru/docs/WebAssembly/Concepts)
+- [Основы WebAssembly](/ru/docs/WebAssembly/Guides/Concepts)
 - [WebAssembly на Mozilla Research](https://research.mozilla.org/webassembly/)

@@ -132,7 +132,7 @@ console.log(nonenumOnly);
 ## 関連情報
 
 - [`Object.getOwnPropertyNames` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-object)
-- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.hasOwn()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
 - {{jsxref("Object.create()")}}

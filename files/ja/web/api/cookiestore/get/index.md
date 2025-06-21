@@ -62,7 +62,7 @@ get(options)
 
 - `sameSite`
 
-  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
+  - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
 
     - `"strict"`
       - : Cookie はファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
@@ -73,7 +73,7 @@ get(options)
 
 - `secure`
 
-  - : 論理値で、この Cookie が安全なコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
+  - : 論理値で、この Cookie が保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
 
 - `value`
   - : この Cookie の値が入った文字列です。

@@ -47,8 +47,7 @@ new Proxy(target, handler);
   - : {{JSxRef("Operators/delete", "delete")}} 연산자에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/get", "handler.get()")}}
   - : 속성 값을 가져오기(get) 위한 트랩.
-- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor",
-    "handler.getOwnPropertyDescriptor()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/getOwnPropertyDescriptor", "handler.getOwnPropertyDescriptor()")}}
   - : {{JSxRef("Object.getOwnPropertyDescriptor")}}에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/getPrototypeOf", "handler.getPrototypeOf()")}}
   - : {{JSxRef("Object.getPrototypeOf")}}에 대한 트랩.
@@ -58,8 +57,7 @@ new Proxy(target, handler);
   - : {{JSxRef("Object.isExtensible")}}에 대한 트랩.
 - {{JSxRef("Global_Objects/Proxy/Proxy/ownKeys", "handler.ownKeys()")}}
   - : {{JSxRef("Object.getOwnPropertyNames")}}와 {{JSxRef("Object.getOwnPropertySymbols")}}에 대한 트랩
-- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions",
-    "handler.preventExtensions()")}}
+- {{JSxRef("Global_Objects/Proxy/Proxy/preventExtensions", "handler.preventExtensions()")}}
   - : {{JSxRef("Object.preventExtensions")}}에 대한 트랩
 - {{JSxRef("Global_Objects/Proxy/Proxy/set", "handler.set()")}}
   - : 속성 값 설정(set)에 대한 트랩.

@@ -1,16 +1,15 @@
 ---
 title: local-name
 slug: Web/XML/XPath/Reference/Functions/local-name
-original_slug: Web/XPath/Reference/Functions/local-name
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `local-name` 関数は、与えられたノード集合内の最初のノードのローカル名 (local name) を表す文字列を返します。
 
-### 構文
+## 構文
 
-```
+```plain
 local-name( [node-set] )
 ```
 
@@ -23,14 +22,14 @@ local-name( [node-set] )
 
 文字列。
 
-### 注
+## 解説
 
 - ローカル名は展開名 ([expanded-name](https://www.w3.org/TR/xpath#dt-expanded-name)) のローカル部分です。
 
-### 定義
+## 仕様書
 
-[XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-local-name)
+[XPath 1.0 4.1](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-local-name)
 
-### Gecko での対応
+### Gecko の対応
 
 対応済み。

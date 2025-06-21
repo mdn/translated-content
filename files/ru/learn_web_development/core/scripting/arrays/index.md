@@ -17,7 +17,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 
 Если бы у нас не было массивов, мы должны были бы хранить каждый элемент в отдельной переменной, а затем вызывать код, выполняющий печать и добавляющий отдельно каждый элемент. Написание такого кода займёт намного больше времени, сам код будет менее эффективным и подверженным ошибкам. Если бы у нас было 10 элементов для добавления в счёт-фактуру, это ещё куда ни шло, но как насчёт 100 предметов? Или 1000? Мы вернёмся к этому примеру позже в статье.
 
-Как и в предыдущих статьях, давайте узнаем о реальных основах работы с массивами, введя некоторые примеры в [консоль разработчика](/ru/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools).
+Как и в предыдущих статьях, давайте узнаем о реальных основах работы с массивами, введя некоторые примеры в [консоль разработчика](/ru/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 
 ### Создание массива
 
@@ -41,7 +41,7 @@ slug: Learn_web_development/Core/Scripting/Arrays
 
 ### Получение и изменение элементов массива
 
-Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Вы можете после этого получать доступ к отдельным элементам в массиве, используя квадратные скобки, таким же способом каким вы [получаете доступ к буквам в строке](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Введите следующее в вашу консоль:
 
@@ -211,9 +211,9 @@ var myArray = [
 
 1. Ниже комментария `// number 1` имеется ряд строк, каждая из которых содержит название продукта и цену, разделённые двоеточием. Нужно превратить их в массив и сохранить его под названием `products`.
 2. На строке с комментарием `// number 2` начинается цикл for. В строке цикла имеется `i <= 0`, что является условием , которое заставляет цикл for выполняться только один раз, так как это значение i сообщает циклу: «останавливаться, когда `i` меньше или равен 0», при этом `i` начинается с 0. Нужно заменить `i <= 0` условным тестом, который останавливает цикл, когда `i` перестаёт быть меньше длины массива `products` .
-3. Под комментарием `// number 3` мы хотим, чтобы вы написали строку кода, которая разбивает текущий элемент массива (`name:price`) на два отдельных элемента: один содержит только имя, а другой - содержащее только цену. Если не знаете, как это сделать, ещё раз просмотрите статью [Полезные строковые методы](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods), а лучше, посмотрите раздел [Преобразование между строками и массивами](#преобразование_между_строками_и_массивами) этой статьи.
-4. В рамках приведённой выше строки нужно преобразовать цену из строки в число. Если не помните, как это сделать, ознакомьтесь со статьёй [строки в JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings).
-5. В верхней части кода есть переменная с именем `total` , которая содержит значение `0`. Внутри цикла (под комментарием `// number 4`) нужно добавить строку, которая добавляет текущую цену товара к этой сумме на каждой итерации цикла, так чтобы в конце кода была выведена корректная сумма в счёт-фактуре. Для этого вам может понадобится [оператор присваивания](/ru/docs/Learn/JavaScript/First_steps/Math#операторы_присваивания).
+3. Под комментарием `// number 3` мы хотим, чтобы вы написали строку кода, которая разбивает текущий элемент массива (`name:price`) на два отдельных элемента: один содержит только имя, а другой - содержащее только цену. Если не знаете, как это сделать, ещё раз просмотрите статью [Полезные строковые методы](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods), а лучше, посмотрите раздел [Преобразование между строками и массивами](#преобразование_между_строками_и_массивами) этой статьи.
+4. В рамках приведённой выше строки нужно преобразовать цену из строки в число. Если не помните, как это сделать, ознакомьтесь со статьёй [строки в JavaScript](/ru/docs/Learn_web_development/Core/Scripting/Strings).
+5. В верхней части кода есть переменная с именем `total` , которая содержит значение `0`. Внутри цикла (под комментарием `// number 4`) нужно добавить строку, которая добавляет текущую цену товара к этой сумме на каждой итерации цикла, так чтобы в конце кода была выведена корректная сумма в счёт-фактуре. Для этого вам может понадобится [оператор присваивания](/ru/docs/Learn_web_development/Core/Scripting/Math#операторы_присваивания).
 6. Под комментарием `// number 5` нужно изменить строку так, чтобы переменная `itemText` была равна "current item name — $current item price", например "Shoes — $23.99" для каждого случая, чтобы корректная информация для каждого элемента была напечатана в счёте-фактуре. Здесь обычная конкатенация строк, которая должна быть вам знакома.
 
 ```html hidden
@@ -574,12 +574,12 @@ textarea.onkeyup = function () {
 
 ## В этом разделе
 
-- [Что такое JavaScript?](/ru/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-- [A first splash into JavaScript](/ru/docs/Learn/JavaScript/First_steps/A_first_splash)
-- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn/JavaScript/First_steps/What_went_wrong)
-- [Storing the information you need — Variables](/ru/docs/Learn/JavaScript/First_steps/Variables)
-- [Basic math in JavaScript — numbers and operators](/ru/docs/Learn/JavaScript/First_steps/Math)
-- [Handling text — strings in JavaScript](/ru/docs/Learn/JavaScript/First_steps/Strings)
-- [Useful string methods](/ru/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-- [Массивы](/ru/docs/Learn/JavaScript/First_steps/Arrays)
-- [Assessment: Silly story generator](/ru/docs/Learn/JavaScript/First_steps/Silly_story_generator)
+- [Что такое JavaScript?](/ru/docs/Learn_web_development/Core/Scripting/What_is_JavaScript)
+- [A first splash into JavaScript](/ru/docs/Learn_web_development/Core/Scripting/A_first_splash)
+- [What went wrong? Troubleshooting JavaScript](/ru/docs/Learn_web_development/Core/Scripting/What_went_wrong)
+- [Storing the information you need — Variables](/ru/docs/Learn_web_development/Core/Scripting/Variables)
+- [Basic math in JavaScript — numbers and operators](/ru/docs/Learn_web_development/Core/Scripting/Math)
+- [Handling text — strings in JavaScript](/ru/docs/Learn_web_development/Core/Scripting/Strings)
+- [Useful string methods](/ru/docs/Learn_web_development/Core/Scripting/Useful_string_methods)
+- [Массивы](/ru/docs/Learn_web_development/Core/Scripting/Arrays)
+- [Assessment: Silly story generator](/ru/docs/Learn_web_development/Core/Scripting/Silly_story_generator)

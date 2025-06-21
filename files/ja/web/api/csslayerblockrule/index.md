@@ -2,25 +2,25 @@
 title: CSSLayerBlockRule
 slug: Web/API/CSSLayerBlockRule
 l10n:
-  sourceCommit: d541534313520301ec9053591ac1a72a8dc41f35
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{APIRef("CSSOM")}}
 
-**`CSSLayerBlockRule`** は {{cssxref("@layer")}} ブロックルールを表します。 これは、他のルールを含むことができる、すなわちグループ化アットルールであり、名前で識別される所定のカスケードレイヤーに関連付けられます。
+**`CSSLayerBlockRule`** は {{cssxref("@layer")}} ブロックルールを表します。
 
 {{InheritanceDiagram}}
 
 ## インスタンスプロパティ
 
-_親インターフェイスである {{DOMxRef("CSSGroupingRule")}} から継承したプロパティもあります。_
+_祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したプロパティもあります。_
 
 - {{DOMxRef("CSSLayerBlockRule.name")}} {{ReadOnlyInline}}
   - 関連するカスケードレイヤーの名前を含む文字列です。
 
 ## インスタンスメソッド
 
-_親インターフェイスである {{DOMxRef("CSSGroupingRule")}} から継承したメソッドもあります。_
+_祖先である {{domxref("CSSGroupingRule")}} および {{domxref("CSSRule")}} から継承したメソッドもあります。_
 
 ## 例
 
@@ -69,4 +69,4 @@ item.textContent = `この CSSLayerBlockRule は "${layer.name}" レイヤーの
 
 - {{cssxref("@layer")}}
 - {{DOMxRef("CSSLayerStatementRule")}}
-- [CSS カスケードレイヤーの学習](/ja/docs/Learn/CSS/Building_blocks/Cascade_layers)
+- [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)

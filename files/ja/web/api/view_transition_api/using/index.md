@@ -487,9 +487,9 @@ window.addEventListener("pagereveal", async (e) => {
 2. 重要なスクリプトが読み込まれ、実行されます。
 3. ユーザーが最初にページを表示した際に目にする HTML は解釈できるので、一貫した表示が可能です。
 
-スタイルは既定ではレンダーブロックされ、スクリプトは [`blocking="render"`](/ja/docs/Web/HTML/Element/script#blocking) 属性を使用してレンダーブロックすることができます。
+スタイルは既定ではレンダーブロックされ、スクリプトは [`blocking="render"`](/ja/docs/Web/HTML/Reference/Elements/script#blocking) 属性を使用してレンダーブロックすることができます。
 
-遷移アニメーションが実行される前に、初期の HTML が確実に解析され、常に一貫したレンダリングが行われることを保証するには、[`<link rel="expect">`](/ja/docs/Web/HTML/Attributes/rel#expect) を使用することができます。この要素には、以下の属性を含めることができます。
+遷移アニメーションが実行される前に、初期の HTML が確実に解析され、常に一貫したレンダリングが行われることを保証するには、[`<link rel="expect">`](/ja/docs/Web/HTML/Reference/Attributes/rel#expect) を使用することができます。この要素には、以下の属性を含めることができます。
 
 - `rel="expect"` は、この `<link>` 要素を使用して、ページ上の HTML をレンダーブロックすることを示します。
 - `href="#element-id"` は、レンダーブロックしたい要素の ID を示します。
@@ -526,7 +526,7 @@ window.addEventListener("pagereveal", async (e) => {
 
 その結果、リードコンテンツである `<div>` が解釈できるまで、文書内のレンダリングがブロックされ、一貫したビュー遷移を保証できます。
 
-また、 [`media`](/ja/docs/Web/HTML/Element/link#media) 属性を `<link rel="expect">` 要素に指定することもできます。例えば、画面が狭い端末でページを読み込んだ際には、広い画面の端末で読み込む場合よりも、コンテンツのレンダリングをブロックしたい場合があるかもしれません。これは理にかなっています。モバイル端末では、デスクトップの場合よりも、ページが最初に読み込まれた際にはコンテンツが少なく表示されるからです。
+また、 [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性を `<link rel="expect">` 要素に指定することもできます。例えば、画面が狭い端末でページを読み込んだ際には、広い画面の端末で読み込む場合よりも、コンテンツのレンダリングをブロックしたい場合があるかもしれません。これは理にかなっています。モバイル端末では、デスクトップの場合よりも、ページが最初に読み込まれた際にはコンテンツが少なく表示されるからです。
 
 これは、次の HTML で実現できます。
 

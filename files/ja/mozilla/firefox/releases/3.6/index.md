@@ -26,12 +26,12 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 
 #### その他の CSS の変更
 
-- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/Length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
+- [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) で定義されている長さの単位 [`rem`](/ja/docs/Web/CSS/length#relative_length_units) がサポートされました。 [バグ 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195)
 - [`image-rendering`](/ja/docs/Web/CSS/image-rendering) が画像、背景画像、ビデオ、canvas でサポートされました。 [バグ 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756)
 - [`text-align`](/ja/docs/Web/CSS/text-align):end がサポートされました。[バグ 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837)
 - table [`display`](/ja/docs/Web/CSS/display) タイプの要素に対する DOM の変更がより良く動作するようになりました。
-- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/Web/HTML/Element/Input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
-- [`:-moz-locale-dir(ltr)`](</ja/docs/Web/CSS/:-moz-locale-dir(ltr)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](</ja/docs/Web/CSS/:-moz-locale-dir(rtl)> 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
+- `indeterminate` 属性が `true` である `checkbox` [`input`](/ja/docs/Web/HTML/Reference/Elements/input) 要素にマッチする [`:indeterminate`](/ja/docs/Web/CSS/:indeterminate) 擬似クラスのサポートが追加されました。
+- [`:-moz-locale-dir(ltr)`](/ja/docs/Web/CSS/:-moz-locale-dir_ltr 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが左から右へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "ltr" に設定されていることで特定されます。') と [`:-moz-locale-dir(rtl)`](/ja/docs/Web/CSS/:-moz-locale-dir_rtl 'CSS の :-moz-locale-dir(ltr) 擬似クラスは Mozilla 拡張であり、ユーザーインターフェイスが右から左へ向けて表示される要素に一致します。これは設定の intl.uidirection.locale (locale は現在のロケール) が "rtl" に設定されていることで特定されます。') が追加され、ユーザーインターフェイスが left-to-right または right-to-left のどちらで描画されるかに応じて、容易にレイアウトをカスタマイズできるようになりました。[バグ 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416)
 - ウィンドウ化されたプラグインは CSS transforms の中では表示されなくなりました。これはコンポジターによって正しく変換されないためです。
 
 ### HTML
@@ -42,9 +42,9 @@ Firefox 3.6 では新規あるいは開発中のウェブ標準のサポート�
 <!---->
 
 - HTML5 video がポスター・フレームをサポート
-  - : [`video`](/ja/docs/Web/HTML/Element/video) 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
+  - : [`video`](/ja/docs/Web/HTML/Reference/Elements/video) 要素で `poster` 属性がサポートされ、コンテンツがビデオの再生が開始されるまでに表示されるポスター・フレームを指定できるようになりました。
 - チェックボックスとラジオボタンが `indeterminate` 属性をサポート
-  - : `checkbox` と `radio` タイプの HTML [`input`](/ja/docs/Web/HTML/Element/Input) 要素が indeterminate 属性をサポートし、3 番目の "indeterminate" 状態を持てるようになりました。
+  - : `checkbox` と `radio` タイプの HTML [`input`](/ja/docs/Web/HTML/Reference/Elements/input) 要素が indeterminate 属性をサポートし、3 番目の "indeterminate" 状態を持てるようになりました。
 - Canvas 画像のスムージングが制御可能に
   - : [`canvas`](/ja/docs/Web/API/Canvas_API) 要素のスケーリング時に、新しい [`mozImageSmoothingEnabled`](/ja/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) プロパティでスムージングの有無を指定できるようになりました。
 
@@ -81,7 +81,7 @@ Gecko 1.9.2 は JavaScript 1.8.2 を採用し、[ECMAScript 5 standard](/ja/docs
 ### XPath
 
 - choose() XPath メソッドをサポート
-  - : [`choose()`](/ja/docs/Web/XPath/Functions/choose) メソッドが [XPath](/ja/docs/Web/XPath) でサポートされました。
+  - : [`choose()`](/ja/docs/Web/XML/XPath/Reference/Functions/choose) メソッドが [XPath](/ja/docs/Web/XML/XPath) でサポートされました。
 
 ## XUL とアドオン開発者向け
 

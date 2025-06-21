@@ -84,7 +84,7 @@ _変更なし。_
 ## セキュリティ
 
 - SSL 3.0 や RC4 といった弱いプロトコルや暗号方式をサイトで使用していることを警告するため、それらが使用されたことをコンソールに記録するようになりました ([Firefox バグ 1092835](https://bugzil.la/1092835))。
-- [CSP](/ja/docs/Web/HTTP/CSP) 1.1 の `referrer` [ディレクティブ](/ja/docs/Web/HTTP/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 965727](https://bugzil.la/965727))。
+- [CSP](/ja/docs/Web/HTTP/Guides/CSP) 1.1 の `referrer` [ディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)をサポートしました ([Firefox バグ 965727](https://bugzil.la/965727))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 

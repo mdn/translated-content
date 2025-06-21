@@ -14,7 +14,7 @@ l10n:
 
 その要素の描画時間を表す {{domxref("DOMHighResTimeStamp")}} です。
 
-画像の場合、これは**画像の描画タイムスタンプ**になります。これは画像が完全に読み込まれた後に発生する次のペイントとして定義されます。[Timing-allow-origin](/ja/docs/Web/HTTP/Headers/Timing-Allow-Origin) ヘッダーによって定義されています。タイミング許可チェックが失敗した場合、これは `0` を返します。
+画像の場合、これは**画像の描画タイムスタンプ**になります。これは画像が完全に読み込まれた後に発生する次のペイントとして定義されます。[Timing-allow-origin](/ja/docs/Web/HTTP/Reference/Headers/Timing-Allow-Origin) ヘッダーによって定義されています。タイミング許可チェックが失敗した場合、これは `0` を返します。
 
 テキストノードの場合、これは **テキスト描画タイムスタンプ** になります。これは、要素にテキストが描画されるようになったタイミングを定義します。
 
@@ -22,7 +22,7 @@ l10n:
 
 ### `renderTime` のログ出力
 
-この例では、[`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.renderTime` を呼び出すと、画像要素のレンダリング時刻を返します。
+この例では、[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("image")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.renderTime` を呼び出すと、画像要素のレンダリング時刻を返します。
 
 ```html
 <img

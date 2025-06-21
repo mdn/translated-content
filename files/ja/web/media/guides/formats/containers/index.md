@@ -678,7 +678,7 @@ QuickTime ファイルは主に macOS で対応していますが、何年か前
 ただし、 Windows Media Player はこれで QuickTime バージョン 2.0 以前のファイルに統合的に対応しており、それ以降のバージョンの QuickTime に対応するにはサードパーティによる追加が必要です。
 
 Mac OS では、 QuickTime フレームワークは QuickTime 形式の動画ファイルおよびコーデックに対応しているだけでなく、一般的および特殊な音声および動画コーデック、さらに静止画形式にも幅広く対応しています。
-QuickTime を通じて、 Mac アプリケーション（QuickTime プラグインや QuickTime との直接統合によるウェブブラウザを含む）は、 AAC、AIFF、MP3、PCM、Qualcomm PureVoice などの音声形式、AVI、DV、Pixlet、ProRes、FLAC、Cinepak、3GP、H.261からH.265、MJPEG、MPEG-1とMPEG-4 Part 2、Sorenson などの動画形式の読み取りや書き込みを行うことができたのである。
+QuickTime を通じて、 Mac アプリケーション（QuickTime プラグインや QuickTime との直接統合によるウェブブラウザーを含む）は、 AAC、AIFF、MP3、PCM、Qualcomm PureVoice などの音声形式、AVI、DV、Pixlet、ProRes、FLAC、Cinepak、3GP、H.261からH.265、MJPEG、MPEG-1とMPEG-4 Part 2、Sorenson などの動画形式の読み取りや書き込みを行うことができたのである。
 
 さらに、 QuickTime 用のサードパーティ製コンポーネントも多数利用でき、その中には、追加のコーデックに対応しているものもあります。
 
@@ -691,7 +691,7 @@ Apple 社自身も、これで一般的に動画に MP4 を使用するように
 | `video/quicktime` |
 
 `video/quicktime` の MIME タイプは、 QuickTime メディアコンテナーを入力するための基本的な型です。
-QuickTime (Mac OS 上のメディアフレームワーク) はさまざまなコンテナとコーデックに対応、実際には他の多くの MIME タイプをサポートしていることはメモしておく価値があります。
+QuickTime (Mac OS 上のメディアフレームワーク) はさまざまなコンテナーとコーデックに対応、実際には他の多くの MIME タイプをサポートしていることはメモしておく価値があります。
 
 MIME タイプ文字列に [`codecs` 引数を追加](/ja/docs/Web/Media/Formats/codecs_parameter#iso-bmff) して、音声トラックやビデオトラックにどのコーデックを使用するかを指定したり、プロファイル、レベル、その他コーデック構成の詳細に関するオプションを提供したりすることが可能です。
 
@@ -1097,15 +1097,27 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 例えば、 Ogg や WebM の動画を最初の選択肢として提供し、フォールバックとして MP4 形式の動画を提供することができます。
 さらに、レトロな QuickTime や AVI をフォールバックとして提供することもできます。
 
-これを行うには、 [`src`](/ja/docs/Web/HTML/Element/video#src) 属性のない `<video>` （または `<audio>`）要素を作成します。
+これを行うには、 [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src) 属性のない `<video>` （または `<audio>`）要素を作成します。
 そして、`<video>` 要素の中に、提供する動画のバージョンごとに子要素である {{HTMLElement("source")}} を追加します。
 これは、帯域幅の利用可能性に応じて選択できるさまざまなバージョンの動画を提供するために使用できますが、私たちの場合は、形式オプションを提供するために使用することにします。
 
 ここに示す例では、動画が 2 つの形式でブラウザーに提供されています。 WebM と MP4 です。
 
-{{EmbedInteractiveExample("pages/tabbed/source.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
 
-動画は最初に WebM 形式で提供されます（[`type`](/ja/docs/Web/HTML/Element/video#type) 属性に `video/webm` を設定した場合）。
+```html interactive-example
+<video controls width="250" height="200" muted>
+  <source src="/shared-assets/videos/flower.webm" type="video/webm" />
+  <source src="/shared-assets/videos/flower.mp4" type="video/mp4" />
+  Download the
+  <a href="/shared-assets/videos/flower.webm">WEBM</a>
+  or
+  <a href="/shared-assets/videos/flower.mp4">MP4</a>
+  video.
+</video>
+```
+
+動画は最初に WebM 形式で提供されます（[`type`](/ja/docs/Web/HTML/Reference/Elements/video#type) 属性に `video/webm` を設定した場合）。
 もし {{Glossary("user agent")}} がそれを再生できなければ、`type` が `video/mp4` に指定された次のオプションに移動します。
 どちらも再生できない場合、"This browser does not support the HTML video element." というテキストが表示されます。
 

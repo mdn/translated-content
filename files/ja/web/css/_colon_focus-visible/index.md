@@ -9,7 +9,41 @@ l10n:
 
 **`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus-visible.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :focus-visible", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:focus-visible {
+  outline: 2px solid crimson;
+  border-radius: 3px;
+}
+
+select:focus-visible {
+  border: 2px dashed crimson;
+  border-radius: 3px;
+  outline: none;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
 
 このセレクターは、ユーザーの入力方法（マウスなのかキーボードなのか）によって異なるフォーカス表示を提供したい場合に便利です。
 
@@ -35,7 +69,7 @@ l10n:
 
 ### :focus と :focus-visible の比較
 
-この例では 3 組のコントロールを表示しています。それぞれのペアは [`text`](/ja/docs/Web/HTML/Element/input/text) 入力とボタンで構成されています。
+この例では 3 組のコントロールを表示しています。それぞれのペアは [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力とボタンで構成されています。
 
 - 最初のペアは、フォーカス状態のカスタムスタイルを追加せず、 既定の場合を示しています。
 - 2 つ目のペアは `:focus` 擬似クラスを使用してスタイルを追加します。

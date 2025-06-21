@@ -37,7 +37,7 @@ expr1 || expr2
 - 空字符串（`""` 或 `''` 或 ` `` `）；
 - `undefined`。
 
-尽管 `||` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双{{JSxRef("Operators/Logical_NOT", "非运算符", "", 1)}}或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
+尽管 `||` 运算符可以与非布尔操作数一起使用，但它仍然被认为是一个布尔运算符，因为它的返回值总是可以被转换为[布尔基本类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#boolean_类型)。要明确地将其返回值（或任何一般的表达式）转换为相应的布尔值，请使用双{{JSxRef("Operators/Logical_NOT", "非运算符", "", 1)}}或 {{jsxref("Global_Objects/Boolean/Boolean", "Boolean")}} 构造函数。
 
 ### 短路求值
 

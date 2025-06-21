@@ -38,7 +38,58 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 在下面的例子里，我有两个盒子——第一个用 `float: left` 设置了浮动，第二个用了 `float: inline-start`。如果把 `writing-mode` 改成 `vertical-rl` 或者把 `direction` 改成 `rtl`，你会看到浮动到左侧的盒子总是贴在左侧，而浮动到 `inline-start` 的元素随着 `direction` 和 `writing-mode` 变动。
 
-{{EmbedGHLiveSample("css-examples/logical/float.html", "100%", 700)}}
+```html live-sample___float
+<div class="container">
+  <div class="inner">
+    <div class="physical box"></div>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale.
+  </div>
+  <div class="inner">
+    <div class="logical box"></div>
+    Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce
+    kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter
+    purslane kale.
+  </div>
+</div>
+```
+
+```css hidden live-sample___float
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.container {
+  display: flex;
+}
+
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```css live-sample___float
+.inner {
+  /* direction: rtl; */
+  /* writing-mode: vertical-rl; */
+}
+
+.physical {
+  float: left;
+}
+
+.logical {
+  float: inline-start;
+}
+```
+
+{{EmbedLiveSample("float", "", "220px")}}
 
 ## 示例：定位布局的偏移属性
 
@@ -50,7 +101,58 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 在下面的例子里，带灰色点状边框的区域设置了 `position: relative`。为了在这个区域里用绝对定位放置蓝色盒子，我用了 `inset-block-start` 和 `inset-inline-end` 属性。把 `writing-mode` 属性改成 `vertical-rl`，或者加上 `direction: rtl`，看看相对于流的盒子是怎么根据文本方向保持位置的。
 
-{{EmbedGHLiveSample("css-examples/logical/positioning-inset.html", "100%", 700)}}
+```html live-sample___positioning-inset
+<div class="container">
+  <div class="inner">
+    <div class="physical box"></div>
+  </div>
+  <div class="inner">
+    <div class="logical box"></div>
+  </div>
+</div>
+```
+
+```css hidden live-sample___positioning-inset
+.container {
+  display: flex;
+}
+
+.inner {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border: 2px dotted grey;
+}
+
+.box {
+  border: 2px solid rgb(96 139 168);
+  border-radius: 5px;
+  background-color: rgb(96 139 168 / 0.2);
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+}
+```
+
+```css live-sample___positioning-inset
+.inner {
+  writing-mode: horizontal-tb;
+}
+
+.physical {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.logical {
+  position: absolute;
+  inset-block-start: 20px;
+  inset-inline-end: 0;
+}
+```
+
+{{EmbedLiveSample("positioning-inset", "", "250px")}}
 
 ## 新的二值和四值简写属性
 
@@ -66,6 +168,43 @@ slug: Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning
 
 如果把 `direction` 改成 `rtl`，你会看到第一个块还是右对齐的，但是第二个跑到了在左边的逻辑行末。
 
-{{EmbedGHLiveSample("css-examples/logical/text-align.html", "100%", 700)}}
+```html live-sample___text-align
+<div class="container">
+  <div class="inner physical">Aligned text</div>
+  <div class="inner logical">Aligned text</div>
+</div>
+```
+
+```css hidden live-sample___text-align
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.inner {
+  width: 200px;
+  border: 2px dotted grey;
+  padding: 10px;
+}
+```
+
+```css live-sample___text-align
+.inner {
+  direction: ltr;
+}
+
+.physical {
+  text-align: right;
+}
+
+.logical {
+  text-align: end;
+}
+```
+
+{{EmbedLiveSample("text-align")}}
 
 相比用实体方向对齐，在使用盒对齐的时候用首和末得到的效果更一致。

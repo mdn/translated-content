@@ -7,9 +7,41 @@ l10n:
 
 {{CSSRef}}
 
-[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis-style")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-CN/docs/Web/CSS/Shorthand_properties)。
+[CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis`** 将强调标记应用到除去空格和控制字符的文本。这个值是 {{cssxref("text-emphasis-style")}} 和 {{cssxref("text-emphasis-color")}} 的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
-{{EmbedInteractiveExample("pages/css/text-emphasis.html")}}
+{{InteractiveExample("CSS Demo: text-emphasis")}}
+
+```css interactive-example-choice
+text-emphasis: none;
+```
+
+```css interactive-example-choice
+text-emphasis: filled red;
+```
+
+```css interactive-example-choice
+text-emphasis: "x";
+```
+
+```css interactive-example-choice
+text-emphasis: filled double-circle #ffb703;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p>
+    I'd far rather be
+    <span class="transition-all" id="example-element">happy than right</span>
+    any day.
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+}
+```
 
 `text-emphasis` 属性与 {{cssxref("text-decoration")}} 完全不同。`text-decoration` 属性不可继承，并且指定的装饰会应用于整个元素。然而，`text-emphasis` 是可继承的，这意味着可以为其子元素更改强调标记。
 

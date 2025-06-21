@@ -7,7 +7,38 @@ slug: Web/CSS/:focus
 
 **`:focus`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示获得焦点的元素（如表单输入）。当用户点击或轻触一个元素或使用键盘的 <kbd>Tab</kbd> 键选择它时，它会被触发。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-focus.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :focus", "tabbed-shorter")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+input:focus {
+  background-color: lightblue;
+}
+
+select:focus {
+  background-color: ivory;
+}
+```
+
+```html interactive-example
+<form>
+  <p>Which flavor would you like to order?</p>
+  <label>Full Name: <input name="firstName" type="text" /></label>
+  <label
+    >Flavor:
+    <select name="flavor">
+      <option>Cherry</option>
+      <option>Green Tea</option>
+      <option>Moose Tracks</option>
+      <option>Mint Chip</option>
+    </select>
+  </label>
+</form>
+```
 
 > [!NOTE]
 > 此伪类仅适用于焦点的元素自身。如果要选择*包含*焦点元素的元素，请使用 {{cssxref(":focus-within")}}。

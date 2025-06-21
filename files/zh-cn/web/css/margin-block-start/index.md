@@ -7,7 +7,62 @@ slug: Web/CSS/margin-block-start
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`margin-block-start`** 定义了元素的逻辑块首外边距，并根据元素的书写模式、行内方向和文本朝向对应至实体外边距。
 
-{{EmbedInteractiveExample("pages/css/margin-block-start.html")}}
+{{InteractiveExample("CSS Demo: margin-block-start")}}
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+margin-block-start: 20%;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+margin-block-start: auto;
+writing-mode: vertical-lr;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="row">One</div>
+    <div class="row transition-all" id="example-element">Two</div>
+    <div class="row">Three</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.row {
+  height: 33.33%;
+  display: inline-block;
+  border: solid #ce7777 10px;
+  background-color: #2b3a55;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffbf00;
+  background-color: #2b3a55;
+}
+```
 
 ## 语法
 

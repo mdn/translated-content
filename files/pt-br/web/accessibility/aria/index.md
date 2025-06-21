@@ -16,7 +16,7 @@ O conjunto ARIA pode ser implementado nos navegadores mais populares e em leitor
 
 ### Começando em ARIA
 
-- [Apresentando ARIA](/pt-BR/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+- [Apresentando ARIA](/pt-BR/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)
   - : Uma rápida introdução sobre como tornar um conteúdo dinâmico acessível com ARIA: Veja, também, o clássico [ARIA intro by Gez Lemon](https://dev.opera.com/articles/view/introduction-to-wai-aria/), de 2008.
 - [Aplicações _Web_ e ARIA FAQ](/pt-BR/docs/Web/Accessibility/ARIA)
   - : Respostas às perguntas frequentes sobre WAI-ARIA e sobre por que é necessário tornar as aplicações _web_ acessíveis.
@@ -94,9 +94,9 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 
 - [A Força-Tarefa da Acessibilidade Open AJAX](http://www.openajax.org/member/wiki/Accessibility)
   - : Os centros de pesquisa Open AJAX envolvem ferramentas de desenvolvimento, modelos de arquivos e testes automatizados para ARIA.
-- [Em Construção: Técnicas ARIA WCAG 2.0](/pt-BR/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+- [Em Construção: Técnicas ARIA WCAG 2.0](/pt-BR/docs/Web/Accessibility/ARIA/Guides/Techniques)
   - : A comunidade necessita de um conjunto completo de técnicas WCAG voltadas para WAI-ARIA + HTML, a fim de que as organizações possam estar confortáveis ao proclamar que o teor de suas ARIAs habilitadas é compatível com essas técnicas WCAG. É muito importante que as regulamentações, ou políticas, sejam baseadas em WCAG.
 
 ### Tópicos Relacionados
 
-- [Accessibilidade](/pt-BR/docs/Web/Accessibility), [AJAX](/pt-BR/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data), [JavaScript](/pt-BR/docs/Web/JavaScript)
+- [Accessibilidade](/pt-BR/docs/Web/Accessibility), [AJAX](/pt-BR/docs/Learn_web_development/Core/Scripting/Network_requests), [JavaScript](/pt-BR/docs/Web/JavaScript)

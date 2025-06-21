@@ -245,7 +245,7 @@ function generatePrimes(quota) {
 しかし、ワーカーには他にも種類があります。
 
 - [_共有ワーカー_](/ja/docs/Web/API/SharedWorker)は、異なるウィンドウで動作する複数の異なるスクリプトで共有することができます。
-- [_サービスワーカー_](/ja/docs/Web/API/Service_Worker_API)は、プロキシサーバーのような役割を果たし、リソースをキャッシュすることで、ユーザーがオフラインのときでもウェブアプリケーションを動作させることができます。[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)の重要な構成要素である。
+- [_サービスワーカー_](/ja/docs/Web/API/Service_Worker_API)は、プロキシーサーバーのような役割を果たし、リソースをキャッシュすることで、ユーザーがオフラインのときでもウェブアプリケーションを動作させることができます。[プログレッシブウェブアプリ](/ja/docs/Web/Progressive_web_apps)の重要な構成要素である。
 
 ## まとめ
 

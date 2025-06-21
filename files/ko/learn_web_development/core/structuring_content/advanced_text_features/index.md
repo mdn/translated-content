@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML/Document_and_website_structure", "Learn/HTML/Introduction_to_HTML")}}
 
-텍스트 서식에 있어서 [HTML 텍스트 기본](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다(그리고 이것은 완전한 목록이 아닙니다). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 아래 첨자, 위 첨자, 연락처 정보 등을 표시하는 방법에 대해 배울 것입니다.
+텍스트 서식에 있어서 [HTML 텍스트 기본](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs) 에서 이야기 하지 않은 수많은 요소들이 있습니다. 이 글에서 설명하는 요소들은 비교적 많이 알려져 있지않지만 여전히 유용합니다(그리고 이것은 완전한 목록이 아닙니다). 이 글에서 여러분은 인용구, 서술문, 컴퓨터 코드 및 관력 텍스트, 아래 첨자, 위 첨자, 연락처 정보 등을 표시하는 방법에 대해 배울 것입니다.
 
 <table>
   <tbody>
@@ -40,7 +40,7 @@ l10n:
 
 ## 설명 목록
 
-HTML 텍스트 기본에서 [기본 목록을 마크업하는 방법](/ko/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists)을 안내했지만, 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **설명 목록**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
+HTML 텍스트 기본에서 [기본 목록을 마크업하는 방법](/ko/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists)을 안내했지만, 해당 글에는 여러분이 앞으로 종종 마주할 세 번째 리스트 타입인 **설명 목록**에 대해선 언급하지 않았습니다. 이 리스트의 목적은 용어 및 정의, 질문 및 답변과 같은 일련의 항목 및 관련 설명을 표시하는 것입니다. 아래의 예시를 살펴봅시다.
 
 ```plain
 soliloquy

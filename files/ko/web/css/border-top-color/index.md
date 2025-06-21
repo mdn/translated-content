@@ -7,7 +7,46 @@ slug: Web/CSS/border-top-color
 
 **`border-top-color`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 위쪽 테두리 색상을 지정합니다. {{cssxref("border-color")}} 또는 {{cssxref("border-top")}} 단축 속성으로도 지정할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/border-top-color.html")}}
+{{InteractiveExample("CSS Demo: border-top-color")}}
+
+```css interactive-example-choice
+border-top-color: red;
+```
+
+```css interactive-example-choice
+border-top-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-top-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-top-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-top-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 구문
 

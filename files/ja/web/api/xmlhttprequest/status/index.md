@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}}
 
-**`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Status)を返します。
+**`XMLHttpRequest.status`** プロパティは読み取り専用で、 `XMLHttpRequest` のレスポンスにおける数値の HTTP [ステータスコード](/ja/docs/Web/HTTP/Reference/Status)を返します。
 
 リクエストが完了する前は、 `status` の値は 0 になります。 `XMLHttpRequest` がエラーになった場合も、ブラウザーはステータスとして 0 を返します。
 
@@ -55,5 +55,5 @@ xhr.send();
 
 ## 関連情報
 
-- [HTTP ステータス](/ja/docs/Web/HTTP/Status)の一覧
+- [HTTP ステータス](/ja/docs/Web/HTTP/Reference/Status)の一覧
 - [HTTP](/ja/docs/Web/HTTP)

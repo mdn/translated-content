@@ -44,7 +44,7 @@ function(a, b, ...theArgs) {
 剩余参数和 [`arguments`](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments)对象之间的区别主要有三个：
 
 - 剩余参数只包含那些没有对应形参的实参，而 `arguments` 对象包含了传给函数的所有实参。
-- `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-CN/docs/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)。
+- `arguments`对象不是一个真正的数组，而剩余参数是真正的 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)实例，也就是说你能够在它上面直接使用所有的数组方法，比如 [`sort`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)，[`map`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map)，[`forEach`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)或[`pop`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/pop)。
 - `arguments`对象还有一些附加的属性（如`callee`属性）。
 
 ### 从 arguments 到数组
@@ -77,7 +77,7 @@ function f(...args) {
 
 ### 解构剩余参数
 
-剩余参数可以被解构，这意味着他们的数据可以被解包到不同的变量中。请参阅[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)。
+剩余参数可以被解构，这意味着他们的数据可以被解包到不同的变量中。请参阅[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)。
 
 ```js
 function f(...[a, b, c]) {

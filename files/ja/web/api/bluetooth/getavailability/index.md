@@ -10,7 +10,7 @@ l10n:
 
 **`getAvailability()`** は {{DOMxRef("Bluetooth")}} インターフェイスのメソッドで、（端末に Bluetooth アダプターがあるために）ユーザーエージェントが Bluetooth に対応する場合は実質的に `true` を返し、そうでない場合は `false` を返します。
 
-もし Web Bluetooth API を使用する権限が [`Permissions-Policy: bluetooth`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/bluetooth) 権限によって許可されていない場合、このメソッドは常に `false` を返すため、「実質的に」という言葉を使用しています。
+もし Web Bluetooth API を使用する権限が [`Permissions-Policy: bluetooth`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/bluetooth) 権限によって許可されていない場合、このメソッドは常に `false` を返すため、「実質的に」という言葉を使用しています。
 さらに、ユーザーはブラウザーが動作可能な Bluetooth アダプターを持っている場合でも、`getAvailability()` の呼び出しで `false` を返すように構成することができます。その逆も同様です。アクセスがその権限によってブロックされている場合、この設定値は無視されます。
 
 `getAvailability()` が `true` を返し、端末に実際に Bluetooth アダプターがある場合でも、{{DOMxRef("Bluetooth.requestDevice","navigator.bluetooth.requestDevice()")}} が {{DOMxRef("BluetoothDevice")}} で解決しないかもしれません。
@@ -30,7 +30,7 @@ getAvailability()
 
 論理値で解決する {{JSxRef("Promise")}} を返します。
 
-この {{JSxRef("Promise")}} は、[`Permissions-Policy: bluetooth`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/bluetooth) によってアクセスが許可されていない場合、ユーザーが常に `false` で解決するようにブラウザーが構成されている場合、または端末に Bluetooth アダプターがない場合に `false` の値を持ちます。
+この {{JSxRef("Promise")}} は、[`Permissions-Policy: bluetooth`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/bluetooth) によってアクセスが許可されていない場合、ユーザーが常に `false` で解決するようにブラウザーが構成されている場合、または端末に Bluetooth アダプターがない場合に `false` の値を持ちます。
 そうでない場合は `true` で解決されます。
 
 ### 例外

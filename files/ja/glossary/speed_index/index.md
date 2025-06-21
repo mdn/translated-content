@@ -15,4 +15,4 @@ l10n:
 
 ## 関連情報
 
-- [ウェブの性能について学ぶ](/ja/docs/Learn/Performance)
+- [ウェブの性能について学ぶ](/ja/docs/Learn_web_development/Extensions/Performance)

@@ -9,7 +9,38 @@ l10n:
 
 **`linear-gradient()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 두 개 이상의 색상이 직선을 따라 점진적으로 변화되는 선형 그라데이션 그림을 생성합니다. 그 결과는 {{CSSxRef("&lt;gradient&gt;")}} 데이터 유형의 객체이며, 이는 {{CSSxRef("&lt;image&gt;")}}의 특별한 종류 중 하나입니다.
 
-{{EmbedInteractiveExample("pages/css/function-linear-gradient.html")}}
+{{InteractiveExample("CSS Demo: linear-gradient()")}}
+
+```css interactive-example-choice
+background: linear-gradient(#e66465, #9198e5);
+```
+
+```css interactive-example-choice
+background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: linear-gradient(to left, #333, #333 50%, #eee 75%, #333 75%);
+```
+
+```css interactive-example-choice
+background:
+  linear-gradient(217deg, rgba(255, 0, 0, 0.8), rgba(255, 0, 0, 0) 70.71%),
+  linear-gradient(127deg, rgba(0, 255, 0, 0.8), rgba(0, 255, 0, 0) 70.71%),
+  linear-gradient(336deg, rgba(0, 0, 255, 0.8), rgba(0, 0, 255, 0) 70.71%);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 ## 구문
 

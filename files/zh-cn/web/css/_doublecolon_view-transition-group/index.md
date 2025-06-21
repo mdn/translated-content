@@ -7,7 +7,7 @@ slug: Web/CSS/::view-transition-group
 
 **`::view-transition-group`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示单个视图过渡组。
 
-在视图过渡期间，`::view-transition-group` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transitions_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition")}} 的子节点，并且有一个 {{cssxref("::view-transition-image-pair")}} 子节点。
+在视图过渡期间，`::view-transition-group` 包含在相关的伪元素树上，如[视图过渡过程](/zh-CN/docs/Web/API/View_Transition_API#视图过渡过程)中所述。它只能是 {{cssxref("::view-transition")}} 的子节点，并且有一个 {{cssxref("::view-transition-image-pair")}} 子节点。
 
 `::view-transition-group` 在 UA 样式表中具有以下默认样式：
 
@@ -68,5 +68,5 @@ view-transition-group(embed-container) {
 
 ## 参见
 
-- [View Transitions API](/zh-CN/docs/Web/API/View_Transitions_API)
+- [View Transitions API](/zh-CN/docs/Web/API/View_Transition_API)
 - [使用 View Transitions API 实现平滑、简单的过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)

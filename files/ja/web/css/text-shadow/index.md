@@ -9,7 +9,51 @@ l10n:
 
 **`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
-{{EmbedInteractiveExample("pages/css/text-shadow.html")}}
+{{InteractiveExample("CSS Demo: text-shadow")}}
+
+```css interactive-example-choice
+text-shadow: 1px 1px 2px pink;
+```
+
+```css interactive-example-choice
+text-shadow: #fc0 1px 0 10px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 5px #558abb;
+```
+
+```css interactive-example-choice
+text-shadow: red 2px 5px;
+```
+
+```css interactive-example-choice
+text-shadow: 5px 10px;
+```
+
+```css interactive-example-choice
+text-shadow:
+  1px 1px 2px red,
+  0 0 1em blue,
+  0 0 0.2em blue;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">
+    Far out in the uncharted backwaters of the unfashionable end of the western
+    spiral arm of the Galaxy...
+  </p>
+</section>
+```
+
+```css interactive-example
+p {
+  font:
+    1.5em Georgia,
+    serif;
+}
+```
 
 ## 構文
 

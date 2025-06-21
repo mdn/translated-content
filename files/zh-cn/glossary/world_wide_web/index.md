@@ -23,6 +23,6 @@ Tim Berners-Lee 在发明 Web 之后不久就创建了 {{Glossary("W3C")}}（万
 
 ## 参见
 
-- [学习 Web](/zh-CN/docs/Learn)
+- [学习 Web](/zh-CN/docs/Learn_web_development)
 - 维基百科上的[万维网](https://zh.wikipedia.org/wiki/万维网)
 - [W3C 网站](https://www.w3.org/)

@@ -5,7 +5,7 @@ slug: Web/API/VRFrameData/leftProjectionMatrix
 
 {{APIRef("WebVR API")}}{{Deprecated_Header}}
 
-**`leftProjectionMatrix`** は {{domxref("VRFrameData")}} インタフェースの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用される射影を表します。
+**`leftProjectionMatrix`** は {{domxref("VRFrameData")}} インターフェイスの読み取り専用プロパティで、 4 行 4 列の行列を表す {{jsxref("Float32Array")}} を返します。この行列は、左目の描画に利用される射影を表します。
 
 > [!NOTE]
 > このインターフェイスは、古い [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/) の一部でした。 [WebXR Device API](https://immersive-web.github.io/webxr/)に置き換えられました。

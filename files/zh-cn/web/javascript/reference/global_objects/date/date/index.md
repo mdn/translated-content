@@ -73,7 +73,7 @@ Date()
 - `dateObject`
   - : 一个现有的 `Date` 对象。这实际上是在现有的 `Date` 对象上复制了一个相同的日期和时间。这等同于 `new Date(dateObject.valueOf())`，除了不调用 `valueOf()` 方法。
 
-当一个参数被传递给 `Date()` 构造函数时，`Date` 实例被特别处理。所有其他的值都被[转换为原始值](/zh-CN/docs/Web/JavaScript/Data_structures#强制原始值转换)。如果结果是一个字符串，它将被解析为一个日期字符串。否则，产生的会被进一步强制转换为数值，并被视为时间戳。
+当一个参数被传递给 `Date()` 构造函数时，`Date` 实例被特别处理。所有其他的值都被[转换为原始值](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#强制原始值转换)。如果结果是一个字符串，它将被解析为一个日期字符串。否则，产生的会被进一步强制转换为数值，并被视为时间戳。
 
 #### 日期和时间组件的单独值
 

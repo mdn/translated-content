@@ -116,7 +116,7 @@ processor.doLoad();
 This is a pretty simple example showing how to manipulate video frames using a canvas. For efficiency, you should consider using {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} instead of `setTimeout()` when running on browsers that support it.
 
 > [!NOTE]
-> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/CORS) on your video server.
+> Due to potential security issues if your video is on a different domain than your code, you'll need to enable [CORS (Cross Origin Resource Sharing)](/ru/docs/Web/HTTP/Guides/CORS) on your video server.
 
 ### Видео и WebGL
 
@@ -297,7 +297,7 @@ window.addEventListener("load", setFilter);
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
 > [!NOTE]
-> Unless you have [CORS](/ru/docs/Web/HTTP/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
+> Unless you have [CORS](/ru/docs/Web/HTTP/Guides/CORS) enabled, to avoid security issues your video should be on the same domain as your code.
 
 #### Типичные для аудио фильтры
 

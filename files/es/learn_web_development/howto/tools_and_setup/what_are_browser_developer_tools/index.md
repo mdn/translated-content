@@ -9,7 +9,7 @@ original_slug: Learn/Common_questions/Tools_and_setup/What_are_browser_developer
 Todos los navegadores web modernos incluyen un potente conjunto de herramientas para desarrolladores. Estas herramientas hacen una variedad de cosas, desde inspeccionar HTML, CSS y JavaScript actualmente cargados, hasta mostrar qué activos ha solicitado la página y cuánto tiempo tardaron en cargarse. Este artículo explica cómo utilizar las funciones básicas de las herramientas de desarrollo de tu navegador.
 
 > [!NOTE]
-> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
+> Antes de ejecutar los siguientes ejemplos, abre el [sitio de ejemplo para principiantes](https://mdn.github.io/beginner-html-site-scripted/) que creamos durante la serie de artículos [Introducción a la Web](/es/docs/Learn_web_development/Getting_started/Your_first_website). Lo deberías tener abierto mientras sigues los pasos que explicamos a continuación.
 
 ## Cómo abrir devtools en tu navegador
 
@@ -233,5 +233,5 @@ Obtén más información sobre la consola de JavaScript en diferentes navegadore
 
 ## Ve también
 
-- [Depurar HTML.](/es/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-- [Depurar CSS.](/es/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+- [Depurar HTML.](/es/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML)
+- [Depurar CSS.](/es/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)

@@ -33,7 +33,7 @@ l10n:
 - [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)
   - : {{Glossary("Cross-site_scripting", "교차 사이트 스크립팅(XSS)")}}과 데이터 삽입 공격을 포함한 특정 유형의 공격을 감지하고 완화하는 데 도움이 되는 추가 보안 계층입니다. 이러한 공격은 데이터 도용부터 사이트 손상 또는 맬웨어 배포까지, 모든 곳에 사용됩니다. 코드는 피해자에 의해 실행되며 공격자는 접근 제어를 우회하고 사용자를 가장할 수 있습니다.
 - [X-Frame-Options 응답 헤더](/ko/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : `X-Frame-Options:` [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 브라우저가 {{ HTMLElement("frame") }}에서 페이지를 렌더링하도록 허용해야 하는지의 여부를 나타내는 데 사용할 수 있습니다. 사이트는 이를 이용하여 콘텐츠가 다른 사이트에 포함되지 않도록 함으로써 [클릭재킹](/ko/docs/Glossary/Clickjacking) 공격을 피할 수 있습니다.
+  - : `X-Frame-Options:` [HTTP](/ko/docs/Web/HTTP) 응답 헤더는 브라우저가 {{ HTMLElement("frame") }}에서 페이지를 렌더링하도록 허용해야 하는지의 여부를 나타내는 데 사용할 수 있습니다. 사이트는 이를 이용하여 콘텐츠가 다른 사이트에 포함되지 않도록 함으로써 [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking) 공격을 피할 수 있습니다.
 - 웹사이트 구성을 통한 접근 제어
   - : 사이트를 보호하는 가장 좋은 방법입니다. 특정 IP를 무시하고, 웹사이트의 특정 영역에 대한 접근을 제한하고, 다른 파일을 보호하고, 이미지 핫링크로부터 보호하는 등의 작업을 할 수 있습니다. 예를 들어 .htaccess 파일은 [Apache HTTP Server](https://httpd.apache.org/)에서 호스팅되는 웹 사이트에 사용됩니다.
 

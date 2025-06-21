@@ -21,7 +21,7 @@ Warning: -file- is being assigned a //# sourceMappingURL, but already has one.
 
 JavaScript ソースに対して、ソースマップが複数回指定されています。
 
-より効率的にサーバから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 [ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。
+より効率的にサーバーから配信するため、しばしば JavaScript ソースの結合や縮小が行われます。 [ソースマップ](https://www.html5rocks.com/en/tutorials/developertools/sourcemaps/)を使用すると、デバッガーは実行されているコードと元のソースファイルを対応付けできます。ソースマップを割り当てるには、コメントを使用するか JavaScript ファイルにヘッダーを設定するかの 2 つの方法があります。
 
 ## 例
 

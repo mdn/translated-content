@@ -108,7 +108,7 @@ src: url(fonts.svg#WhichFont);
 
 > [!NOTE]
 >
-> - `format(svg)` 表示 [SVG 字体](/zh-CN/docs/Web/SVG/Tutorial/SVG_fonts)，而 `tech(color-SVG)` 表示[带有 SVG 表的 OpenType 字体](https://learn.microsoft.com/en-us/typography/opentype/spec/svg)（也称为 OpenType-SVG 彩色字体），两者完全不同。
+> - `format(svg)` 表示 [SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)，而 `tech(color-SVG)` 表示[带有 SVG 表的 OpenType 字体](https://learn.microsoft.com/en-us/typography/opentype/spec/svg)（也称为 OpenType-SVG 彩色字体），两者完全不同。
 > - 无论字体文件使用的是三次菱形曲线（在 CFF/CFF2 表中）还是二次菱形曲线（在字形表中），`opentype` 和 `truetype` 值都是相同的。
 
 旧的非规范化 `format()` 值有以下等效语法；出于向后兼容的考虑，以带引号的字符串形式提供：

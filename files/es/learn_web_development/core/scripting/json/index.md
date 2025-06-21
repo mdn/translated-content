@@ -8,9 +8,9 @@ original_slug: Learn/JavaScript/Objects/JSON
 
 JavaScript Object Notation (JSON) es un formato basado en texto estándar para representar datos estructurados en la sintaxis de objetos de JavaScript. Es comúnmente utilizado para transmitir datos en aplicaciones web (por ejemplo: enviar algunos datos desde el servidor al cliente, así estos datos pueden ser mostrados en páginas web, o vice versa). Se enfrentará a menudo con él, así que este artículo le entrega todo lo que necesita saber para trabajar con JSON utilizando JavaScript, incluyendo el análisis JSON para acceder a los datos en su interior, y cómo crear JSON.
 
-| Prerrequisitos: | Alfabetismo computacional básico, una comprensión básica de HTML y CSS, familiaridad con los temas básicos de JavaScript (vea [First steps](/es/docs/Learn/JavaScript/First_steps) y [Building blocks](/es/docs/Learn/JavaScript/Building_blocks)) y OOJS básico (vea [Introduction to objects](/es/docs/Learn/JavaScript/Objects/Basics)). |
-| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Objetivo:       | Entender cómo trabajar con datos almacenados en JSON, y crear objetos JSON propios.                                                                                                                                                                                                                                                         |
+| Prerrequisitos: | Alfabetismo computacional básico, una comprensión básica de HTML y CSS, familiaridad con los temas básicos de JavaScript (vea [First steps](/es/docs/conflicting/Learn_web_development/Core/Scripting) y [Building blocks](/es/docs/Learn_web_development/Core/Scripting)) y OOJS básico (vea [Introduction to objects](/es/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Objetivo:       | Entender cómo trabajar con datos almacenados en JSON, y crear objetos JSON propios.                                                                                                                                                                                                                                                                                                    |
 
 ## ¿Qué es realmente JSON?
 
@@ -67,7 +67,7 @@ Como se describió previamente, un JSON es una cadena cuyo formato recuerda al d
 }
 ```
 
-Si se carga este objeto en un programa de JavaScript, convertido (_parseado_) en una variable llamada `superHeroes` por ejemplo, se podría acceder a los datos que contiene utilizando la misma notación de punto/corchete que se revisó en el artículo [JavaScript object basics](/es/docs/Learn/JavaScript/Objects/Basics). Por ejemplo:
+Si se carga este objeto en un programa de JavaScript, convertido (_parseado_) en una variable llamada `superHeroes` por ejemplo, se podría acceder a los datos que contiene utilizando la misma notación de punto/corchete que se revisó en el artículo [JavaScript object basics](/es/docs/Learn_web_development/Core/Scripting/Object_basics). Por ejemplo:
 
 ```js
 superHeroes.homeTown;
@@ -260,7 +260,7 @@ function showHeroes(jsonObj) {
 
 Para empezar, se almacena la propiedad `members` del objeto JavaScript en una nueva variable. Este arreglo contiene múltiples objetos que contienen la información para cada héroe.
 
-A continuación, se utiliza un ciclo [for](/es/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop) para recorrer cada objeto en el arreglo. Para cada uno:
+A continuación, se utiliza un ciclo [for](/es/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop) para recorrer cada objeto en el arreglo. Para cada uno:
 
 1. Se crean varios elementos nuevos: un `<article>`, un `<h2>`, tres `<p>`s, y una `<ul>`.
 2. Se asigna al `<h2>` para que muestre el `name` del héroe.
@@ -273,7 +273,7 @@ A continuación, se utiliza un ciclo [for](/es/docs/Learn/JavaScript/Building_bl
 > Si tiene problemas en lograr que el ejemplo funcione, intente con el código fuente [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (vea también [running live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
 
 > [!NOTE]
-> Si encuentra dificultades en seguir la notacion de punto/corchete que se utiliza para acceder a los objetos de JavaScript, puede ser útil tener el archivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) abierto en otra pestaña o en su editor de texto, y revisarlo mientras observa el código JavaScript. También puede referirse al artículo [JavaScript object basics](/es/docs/Learn/JavaScript/Objects/Basics) para mayor información sobre la notación de punto y corchete.
+> Si encuentra dificultades en seguir la notacion de punto/corchete que se utiliza para acceder a los objetos de JavaScript, puede ser útil tener el archivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) abierto en otra pestaña o en su editor de texto, y revisarlo mientras observa el código JavaScript. También puede referirse al artículo [JavaScript object basics](/es/docs/Learn_web_development/Core/Scripting/Object_basics) para mayor información sobre la notación de punto y corchete.
 
 ## Conversiones entre objetos y texto
 
@@ -323,7 +323,7 @@ En este artículo se ha entregado una guía simple para utilizar JSON en sus pro
 - [JSON object reference page](/es/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest object reference page](/es/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP request methods](/es/docs/Web/HTTP/Methods)
+- [HTTP request methods](/es/docs/Web/HTTP/Reference/Methods)
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

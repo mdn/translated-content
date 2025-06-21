@@ -105,7 +105,7 @@ if (typeof <function> === "function") {
 
 ### Manifest 字段
 
-4 个主要浏览器支持的 [`manifest.json`](/zh-CN/docs_zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) 文件字段的差异大致可分为三类：
+主要浏览器支持的 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件字段的差异大致可分为三类：
 
 - **扩展信息属性。**例如，在撰写本文时，Firefox 和 Opera 包含和 [`author`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility) 地位相等的 [`developer`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) 关键字，以获取扩展的开发者和作者的详细信息。
 - **扩展功能。**例如，在编写本文时，Edge 不支持扩展定义快捷键的 [`commands`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#Browser_compatibility) 字段。

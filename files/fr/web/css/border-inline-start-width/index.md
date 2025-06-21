@@ -7,7 +7,43 @@ slug: Web/CSS/border-inline-start-width
 
 La propriété **`border-inline-start-width`** définit la largeur de la bordure pour le côté du début « logique » de l'élément. Cette propriété logique correspond à l'une des propriétés physiques équivalentes en fonction du mode d'écriture, de la directionnalité et de l'orientation du texte. Autrement dit, elle correspondra à {{cssxref("border-top-width")}}, {{cssxref("border-right-width")}}, {{cssxref("border-bottom-width")}} ou a {{cssxref("border-left-width")}} selon les valeurs des propriétés pour {{cssxref("writing-mode")}}, {{cssxref("direction")}} et {{cssxref("text-orientation")}}.
 
-{{EmbedInteractiveExample("pages/css/border-inline-start-width.html")}}
+{{InteractiveExample("CSS Demo: border-inline-start-width")}}
+
+```css interactive-example-choice
+border-inline-start-width: thick;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+border-inline-start-width: thick;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+border-inline-start-width: 4px;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: palegreen;
+  color: #000;
+  border: 0 solid crimson;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+  unicode-bidi: bidi-override;
+}
+```
 
 Cette propriété logique est à rapprocher des autres propriétés logiques {{cssxref("border-block-start-width")}}, {{cssxref("border-block-end-width")}} et {{cssxref("border-inline-end-width")}} qui permettent de définir la largeur de la bordure pour les différents côtés de l'élément.
 

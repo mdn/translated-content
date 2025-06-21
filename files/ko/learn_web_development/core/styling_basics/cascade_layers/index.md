@@ -427,6 +427,6 @@ body {
 
 ## 요약
 
-이 기사의 대부분을 이해했다면, 잘 한 것입니다. 이제 CSS 종속 계층의 기본 메커니즘에 익숙해졌습니다. 다음으로 [박스 모델](/ko/docs/Learn/CSS/Building_blocks/The_box_model)을 자세히 살펴보겠습니다.
+이 기사의 대부분을 이해했다면, 잘 한 것입니다. 이제 CSS 종속 계층의 기본 메커니즘에 익숙해졌습니다. 다음으로 [박스 모델](/ko/docs/Learn_web_development/Core/Styling_basics/Box_model)을 자세히 살펴보겠습니다.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}

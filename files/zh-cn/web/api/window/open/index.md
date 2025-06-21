@@ -5,7 +5,7 @@ slug: Web/API/Window/open
 
 {{APIRef}}
 
-[`Window`](/zh-CN/docs/Web/API/Window) 接口的 **`open()`** 方法，是用指定的名称将指定的资源加载到新的或已存在的浏览上下文（标签、窗口或 [iframe](/zh-CN/docs/Web/HTML/Element/iframe)）中。
+[`Window`](/zh-CN/docs/Web/API/Window) 接口的 **`open()`** 方法，是用指定的名称将指定的资源加载到新的或已存在的浏览上下文（标签、窗口或 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)）中。
 
 ## 语法
 
@@ -24,9 +24,9 @@ open(url, target, windowFeatures)
 
 - `target` {{optional_inline}}
 
-  - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Element/a#target)：`_self`、`_blank`、`_parent` 和 `_top`。
+  - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Reference/Elements/a#target)：`_self`、`_blank`、`_parent` 和 `_top`。
 
-    该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target) 元素的 `target` 属性。
+    该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) 元素的 `target` 属性。
 
 - `windowFeatures` {{optional_inline}}
 
@@ -68,7 +68,7 @@ open(url, target, windowFeatures)
         使用 `noopener` 时，在决定是否打开新的浏览上下文时，除 `_top`、`_self` 和 `_parent` 以外的非空目标名称会像 `_blank` 一样处理。
 
     - `noreferrer`
-      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Attributes/rel/noreferrer) 。
+      - : 如果设置了此特性，浏览器将省略 [`Referer`](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头，并将 `noopener` 设为 true。更多信息请参阅 [`rel="noreferrer"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/noreferrer) 。
 
 > **备注：** `windowFeatures` 中要求的位置（`top`、`left`）和尺寸（`width`、`height`）值，如果其中任何一个值不允许在用户操作系统应用程序的工作区内呈现整个浏览器弹出窗口，**则将被更正**。换句话说，新弹出窗口的任何部分最初都不能置于屏幕之外。
 
@@ -159,7 +159,7 @@ link.addEventListener(
 上述代码解决了一些与链接打开弹出窗口有关的可用性问题。代码中的 `event.preventDefault()` 的目的是取消链接的默认操作：如果执行了 `click` 的事件监听器，则无需执行链接的默认操作。但如果用户的浏览器禁用或不支持 JavaScript，则会忽略 `click` 的事件监听器，浏览器会在名称为 `"WikipediaWindowName"` 的目标框架或窗口中加载引用的资源。如果没有名称为 `"WikipediaWindowName"` 的框架或窗口，浏览器将创建一个新窗口并将其命名为 `"WikipediaWindowName"`。
 
 > [!NOTE]
-> 有关 `target` 属性的更多细节，请参阅 [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target)。
+> 有关 `target` 属性的更多细节，请参阅 [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target)。
 
 ### 复用已有窗口，避免 `target="_blank"`
 
@@ -260,7 +260,7 @@ console.log(sameOriginContext.origin);
 
 当复制/拖动链接、在新标签/窗口中打开链接、添加书签时，或者当 JavaScript 正在加载、出错或禁用时，这些虚假的 `href` 值会导致意外的行为。它们还会向屏幕阅读器等辅助技术传达不正确的语义。
 
-如有必要，请使用 [`<button>`](/zh-CN/docs/Web/HTML/Element/button) 元素代替。一般来说，_只应使用链接导航到真正的 URL_。
+如有必要，请使用 [`<button>`](/zh-CN/docs/Web/HTML/Reference/Elements/button) 元素代替。一般来说，_只应使用链接导航到真正的 URL_。
 
 ### 始终指明指向二级窗口的链接
 
@@ -277,7 +277,7 @@ console.log(sameOriginContext.origin);
 如果在上下文发生极端变化之前就明确指出，那么用户就可以决定是否要继续使用，或者为这种变化做好准备：他们不仅不会感到困惑或迷失方向，而且更有经验的用户还可以更好地决定如何打开这些链接（是否在新窗口、是否在同一窗口、是否在新标签页、是否“在后台”）。
 
 - [WebAIM：链接与超文本——超文本链接](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN / 理解 WCAG，指南 3.2](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200：只在必要时从链接打开新窗口和标签页](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201：打开新窗口时，给用户额外提示](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -292,11 +292,11 @@ console.log(sameOriginContext.origin);
 ## 参见
 
 - `target` 属性文档：
-  - [`<a>`](/zh-CN/docs/Web/HTML/Element/a#target)
-  - [`<form>`](/zh-CN/docs/Web/HTML/Element/form#target)
+  - [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a#target)
+  - [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target)
 - [`window.close()`](/zh-CN/docs/Web/API/Window/close)
 - [`window.closed`](/zh-CN/docs/Web/API/Window/closed)
 - [`window.focus()`](/zh-CN/docs/Web/API/Window/focus)
 - [`window.opener`](/zh-CN/docs/Web/API/Window/opener)
-- [`rel="opener"`](/zh-CN/docs/Web/HTML/Attributes/rel#opener) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Attributes/rel#noopener)
+- [`rel="opener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#opener) 和 [`rel="noopener"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel#noopener)
 - [同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)

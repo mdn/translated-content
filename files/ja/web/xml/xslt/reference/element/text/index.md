@@ -1,12 +1,9 @@
 ---
 title: <xsl:text>
 slug: Web/XML/XSLT/Reference/Element/text
-original_slug: Web/XSLT/Reference/Element/text
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:text>` 要素はリテラルテキストを出力ツリーに書き込みます。 `#PCDATA`、リテラルテキスト、およびエンティティ参照を含むことがあります。
 
@@ -20,12 +17,16 @@ l10n:
 
 ### 必須属性
 
-なし
+なし。
 
 ### 任意属性
 
-- `disable-output-escaping` (Netscape は変換の結果 - 下の「出力」 - を直列化しませんので、この属性は本質的に文脈上は無関係です。html エンティティを出力するには、代わりに数値を使用します (例: `&nbsp`の `&#160`) )
+- `disable-output-escaping`
+
   - : 出力に書き込まれたときに特殊文字をエスケープするかどうかを指定します。使用可能な値は "`yes`" または "`no`" です。たとえば "`yes`" が設定されている場合、文字 `>` は `&gt;` ではなく `>` として出力されます。
+
+    > [!NOTE]
+    > 古いブラウザーでは、変換結果（下記の「出力」）をシリアライズしない場合があり、このようなコンテキストでは、この属性は無関係となります。 HTML エンティティを出力するには、数値を使用します。例えば、 `&nbsp;` の場合は `&#160;` とします。
 
 ### 種類
 
@@ -35,6 +36,6 @@ l10n:
 
 XSLT, section 7.2
 
-### Gecko のサポート
+## Gecko の対応
 
-注意の通りサポートされています。
+メモの通り対応しています。

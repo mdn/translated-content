@@ -115,7 +115,7 @@ processor.doLoad();
 これは、キャンバスを使用して動画フレームを加工する方法を示すとてもシンプルな例です。効率をよくするために、対応しているブラウザーで実行する場合は {{domxref("Window.requestAnimationFrame", "requestAnimationFrame()")}} を `setTimeout()` の代わりに使用することを検討したほうがいいでしょう。
 
 > [!NOTE]
-> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/CORS) を有効にする必要があります。
+> 潜在的なセキュリティ上の問題により、動画がコードと異なるドメインより配信されている場合、動画を配信しているサーバーで [CORS (オリジン間リソース共有)](/ja/docs/Web/HTTP/Guides/CORS) を有効にする必要があります。
 
 ### 動画と WebGL
 
@@ -293,7 +293,7 @@ window.addEventListener("load", setFilter);
 
 {{ EmbedLiveSample('Playable_code_2', 700, 425) }}
 
-> **メモ:** [CORS](/ja/docs/Web/HTTP/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
+> **メモ:** [CORS](/ja/docs/Web/HTTP/Guides/CORS) が有効になっていない環境では、動画はコードと同じドメイン上になければなりません。これはセキュリティ上の問題を避けるためです。
 
 #### よく使われる音声フィルター
 

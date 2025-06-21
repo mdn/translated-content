@@ -43,9 +43,9 @@ l10n:
 
 `<textarea>` と通常の単一行のテキストフィールドとの主な違いは、ユーザーが送信データの中に改行を（リターンキーを押すことで）入れることができることです。
 
-`<textarea>` は閉じタグを取ることができ、既定のテキストを開始タグと終了タグの間に置いてください。これに対し、 {{HTMLElement("input")}} は閉じタグのない{{glossary("void element", "空要素")}}です。 [`value`](/ja/docs/Web/HTML/Element/input#値) 属性の中に既定の値が入ります。
+`<textarea>` は閉じタグを取ることができ、既定のテキストを開始タグと終了タグの間に置いてください。これに対し、 {{HTMLElement("input")}} は閉じタグのない{{glossary("void element", "空要素")}}です。 [`value`](/ja/docs/Web/HTML/Reference/Elements/input#値) 属性の中に既定の値が入ります。
 
-注意として、`<textarea>` 要素（その他の HTML 要素、CSS、JavaScript を含む）には何でも入れられるものの、この性質により、プレーンテキストコンテンツのように描画されます（フォームコントロール以外で [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) を使うと、プレーンテキストの代わりに HTML/「リッチ」コンテンツの API を使用できます）。
+注意として、`<textarea>` 要素（その他の HTML 要素、CSS、JavaScript を含む）には何でも入れられるものの、この性質により、プレーンテキストコンテンツのように描画されます（フォームコントロール以外で [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) を使うと、プレーンテキストの代わりに HTML/「リッチ」コンテンツの API を使用できます）。
 
 視覚的には、入力されたテキストは折り返され、フォームコントロールは既定でサイズ変更可能です。最近のブラウザーではドラッグハンドルを提供しており、これをドラッグすることでテキストエリアのサイズを大きくしたり小さくしたりすることができます。
 
@@ -55,11 +55,11 @@ l10n:
 
 {{htmlelement("textarea")}} では、複数行にまたがってレンダリングするのを制御する 3 つの属性を受け付けます。
 
-- [`cols`](/ja/docs/Web/HTML/Element/textarea#cols)
+- [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols)
   - : このテキストコントロールの幅（桁数）を、平均的な文字幅で指定します。これは `<textarea>` をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の幅です。何も指定されていない場合、既定値は 20 です。
-- [`rows`](/ja/docs/Web/HTML/Element/textarea#rows)
+- [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows)
   - : このコントロールの行数を指定します。これは `<textarea>`をリサイズすることで変更でき、また CSS で上書きもできるため、有効な開始時の高さです。何も指定されていない場合、既定値は 2 です。
-- [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap)
+- [`wrap`](/ja/docs/Web/HTML/Reference/Elements/textarea#wrap)
   - : コントロールがどのようにテキストを折り返すかを指定します。値は `soft` （既定値）、この値では送信されるテキストは改行されないが、ブラウザーで表示されるテキストは折り返される、 `hard` （この値を使うには `cols` 属性を指定する必要がある）、この値では送信テキストとレンダリングされるテキストの両方が折り返される、`off`、この値では折り返しを行わない、のいずれかを取ります。
 
 ### テキストエリアのリサイズの制御
@@ -97,7 +97,7 @@ l10n:
 
 {{EmbedLiveSample("Basic_example", 120, 120)}}
 
-必要に応じて、希望する {{HTMLElement("option")}} 要素の [`selected`](/ja/docs/Web/HTML/Element/option#selected) 属性を用いて、選択ボックスの既定値を設定することができます。
+必要に応じて、希望する {{HTMLElement("option")}} 要素の [`selected`](/ja/docs/Web/HTML/Reference/Elements/option#selected) 属性を用いて、選択ボックスの既定値を設定することができます。
 この選択肢は、ページが読み込まれたときにあらかじめ選択されています。
 
 #### optgroup の使用
@@ -121,7 +121,7 @@ l10n:
 
 {{EmbedLiveSample("Using_optgroup", 120, 120)}}
 
-{{HTMLElement("optgroup")}} 要素では、 [`label`](/ja/docs/Web/HTML/Element/optgroup#label) 属性の値が入れ子になった選択肢の値の前に表示されます。ブラウザーは通常、それらを選択肢から視覚的に離して（すなわち太字にしたり、入れ子レベルを変えたりして）表示しますので、実際の選択肢と混同される可能性は低くなります。
+{{HTMLElement("optgroup")}} 要素では、 [`label`](/ja/docs/Web/HTML/Reference/Elements/optgroup#label) 属性の値が入れ子になった選択肢の値の前に表示されます。ブラウザーは通常、それらを選択肢から視覚的に離して（すなわち太字にしたり、入れ子レベルを変えたりして）表示しますので、実際の選択肢と混同される可能性は低くなります。
 
 #### value 属性の使用
 
@@ -137,11 +137,11 @@ l10n:
 </select>
 ```
 
-既定では、選択ボックスの高さは、単一の値を表示するのに十分です。選択肢の [`size`](/ja/docs/Web/HTML/Attributes/size) 属性は、選択ボックスにフォーカスがない場合に表示される選択肢の数を制御します。
+既定では、選択ボックスの高さは、単一の値を表示するのに十分です。選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size) 属性は、選択ボックスにフォーカスがない場合に表示される選択肢の数を制御します。
 
 ### 複数選択の選択ボックス
 
-既定では、選択ボックスは、ユーザーに単一の値を選択させるだけです。 [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性を {{HTMLElement("select")}} 要素に追加することで、オペレーティングシステムが提供する既定のメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
+既定では、選択ボックスは、ユーザーに単一の値を選択させるだけです。 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性を {{HTMLElement("select")}} 要素に追加することで、オペレーティングシステムが提供する既定のメカニズム（例えば、デスクトップでは、 <kbd>Cmd</kbd>/<kbd>Ctrl</kbd> を押しながら複数の値をクリックするなど）を使用して、ユーザーが複数の値を選択できるようにすることができます。
 
 ```html
 <select id="multi" name="multi" multiple size="2">
@@ -161,15 +161,15 @@ l10n:
 {{EmbedLiveSample("Multiple_choice_select_box", 120, 120)}}
 
 > [!NOTE]
-> 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう。代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Attributes/size)属性はウィジェットの高さを決定します。
+> 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう。代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)属性はウィジェットの高さを決定します。
 
-> **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Element/select#multiple) 属性にも対応しています。
+> **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性にも対応しています。
 
 ### 自動補完のボックス
 
 フォームウィジェット用の自動補完の提案値は、{{HTMLElement("datalist")}} 要素と {{HTMLElement("option")}} 子要素を用いて提供することができます。この `<datalist>` には `id`が必要です。
 
-データリストは、 {{htmlelement("input")}} 要素（つまり`text` や `email` の入力型）の [`list`](/ja/docs/Web/HTML/Element/input#list) 属性の値をデータリストの `id` の値を指定することで結びつけます。
+データリストは、 {{htmlelement("input")}} 要素（つまり`text` や `email` の入力型）の [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性の値をデータリストの `id` の値を指定することで結びつけます。
 
 データリストがフォームウィジェットに関連づけられると、選択肢はユーザーが入力する自動補完テキストに使われます。典型的には、これはユーザーが入力に打ち込んだものに一致するドロップダウンボックスで表示されます。
 
@@ -196,11 +196,11 @@ l10n:
 
 #### より目立たない datalist の使用方法
 
-[HTML 仕様書](https://html.spec.whatwg.org/multipage/input.html#attr-input-list)によると、 [`list`](/ja/docs/Web/HTML/Element/input#list) 属性と {{HTMLElement("datalist")}} 要素はユーザーの入力を必要とするあらゆる種類のウィジェットに使用することができます。このため、少し目立たないと思われるような使用法もあります。
+[HTML 仕様書](https://html.spec.whatwg.org/multipage/input.html#attr-input-list)によると、 [`list`](/ja/docs/Web/HTML/Reference/Elements/input#list) 属性と {{HTMLElement("datalist")}} 要素はユーザーの入力を必要とするあらゆる種類のウィジェットに使用することができます。このため、少し目立たないと思われるような使用法もあります。
 
-例えば、 `range` 入力型で `{{htmlelement("datalist")}}` に対応しているブラウザーでは、 datalist の `{{htmlelement("option")}}` 値の範囲ごとに小さなチェックマークが範囲の上に表示されます。 [`<input type="range">` のリファレンスページの例](/ja/docs/Web/HTML/Element/input/range#目盛の追加)で見ることができます。
+例えば、 `range` 入力型で `{{htmlelement("datalist")}}` に対応しているブラウザーでは、 datalist の `{{htmlelement("option")}}` 値の範囲ごとに小さなチェックマークが範囲の上に表示されます。 [`<input type="range">` のリファレンスページの例](/ja/docs/Web/HTML/Reference/Elements/input/range#目盛の追加)で見ることができます。
 
-また、 {{htmlelement('datalist')}} と [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color) に対応しているブラウザーは、フルカラーパレットを利用できるようにしつつ、カスタマイズしたパレットを既定で表示することができます。
+また、 {{htmlelement('datalist')}} と [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) に対応しているブラウザーは、フルカラーパレットを利用できるようにしつつ、カスタマイズしたパレットを既定で表示することができます。
 
 この場合、ブラウザーによって挙動が異なるため、このような使用はプログレッシブエンハンスメントとして考え、グレイスフルデグラデーションを保証するようにしましょう。
 
@@ -217,19 +217,19 @@ l10n:
 
 #### meter
 
-メーターバーは [`max`](/ja/docs/Web/HTML/Element/meter#max) と [`min`](/ja/docs/Web/HTML/Element/meter#min)t/meter#min) 値で区切られた範囲内の固定された値を表します。この値は視覚的にバーとして表示され、このバーがどのように見えるかを知るために、他のいくつかの設定された値と比較します。
+メーターバーは [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) と [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min)t/meter#min) 値で区切られた範囲内の固定された値を表します。この値は視覚的にバーとして表示され、このバーがどのように見えるかを知るために、他のいくつかの設定された値と比較します。
 
-- [`low`](/ja/docs/Web/HTML/Element/meter#low) と [`high`](/ja/docs/Web/HTML/Element/meter#high) の値は範囲を 3 つに分割します。
+- [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) と [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) の値は範囲を 3 つに分割します。
 
-  - 範囲の下位の部分は [`min`](/ja/docs/Web/HTML/Element/meter#min) と [`low`](/ja/docs/Web/HTML/Element/meter#low) 値の間であり、端も含みます。
-  - 範囲の中位の部分は [`low`](/ja/docs/Web/HTML/Element/meter#low) と [`high`](/ja/docs/Web/HTML/Element/meter#high) 値の間であり、端を含みません。
-  - 範囲の上位の部分は [`high`](/ja/docs/Web/HTML/Element/meter#high) と [`max`](/ja/docs/Web/HTML/Element/meter#max) 値の間であり、端も含みます。
+  - 範囲の下位の部分は [`min`](/ja/docs/Web/HTML/Reference/Elements/meter#min) と [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) 値の間であり、端も含みます。
+  - 範囲の中位の部分は [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) と [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 値の間であり、端を含みません。
+  - 範囲の上位の部分は [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) と [`max`](/ja/docs/Web/HTML/Reference/Elements/meter#max) 値の間であり、端も含みます。
 
-- [`optimum`](/ja/docs/Web/HTML/Element/meter#optimum) 値は {{HTMLElement("meter")}} 要素の最適な値を定義します。 [`low`](/ja/docs/Web/HTML/Element/meter#low) および [`high`](/ja/docs/Web/HTML/Element/meter#high) 値と組み合わせて、どの範囲の値を推奨するかを定義します。
+- [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) 値は {{HTMLElement("meter")}} 要素の最適な値を定義します。 [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low) および [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high) 値と組み合わせて、どの範囲の値を推奨するかを定義します。
 
-  - [`optimum`](/ja/docs/Web/HTML/Element/meter#optimum) の値が範囲の下位の部分にある場合、範囲の下位の部分を推奨部分、中位の部分を平均部分、上位の部分を最悪の部分と見なします。
-  - [`optimum`](/ja/docs/Web/HTML/Element/meter#optimum) の値が範囲の中位の部分にある場合、範囲の下位の部分を平均部分、中位の部分を推奨部分、上の部分を同じく平均部分と見なします。
-  - [`optimum`](/ja/docs/Web/HTML/Element/meter#optimum) の値が範囲の上位の部分にある場合、範囲の下位の部分を最悪の部分、中位の部分を平均部分、上位の部分を推奨部分と見なします。
+  - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の下位の部分にある場合、範囲の下位の部分を推奨部分、中位の部分を平均部分、上位の部分を最悪の部分と見なします。
+  - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の中位の部分にある場合、範囲の下位の部分を平均部分、中位の部分を推奨部分、上の部分を同じく平均部分と見なします。
+  - [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum) の値が範囲の上位の部分にある場合、範囲の下位の部分を最悪の部分、中位の部分を平均部分、上位の部分を推奨部分と見なします。
 
 すべてのブラウザーは、 {{HTMLElement("meter")}} 要素を実装するために、メーターバーの色を変更するためにこれらの値を使用します。
 
@@ -249,7 +249,7 @@ l10n:
 
 #### progress
 
-プログレスバーは、 [`max`](/ja/docs/Web/HTML/Element/progress#max) 属性を用いて指定した最大値まで時間と共に変化する値を表します。このようなバーは、 {{ HTMLElement("progress")}} 要素を使用して作成されます。
+プログレスバーは、 [`max`](/ja/docs/Web/HTML/Reference/Elements/progress#max) 属性を用いて指定した最大値まで時間と共に変化する値を表します。このようなバーは、 {{ HTMLElement("progress")}} 要素を使用して作成されます。
 
 ```html
 <progress max="100" value="75">75/100</progress>
@@ -263,7 +263,7 @@ l10n:
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: その他のコントロール](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls) を見てください。
 
 ## まとめ
 

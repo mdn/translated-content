@@ -20,4 +20,4 @@ l10n:
 
 ## 参见
 
-- [推荐的 Web 性能时间：应该有多长](/zh-CN/docs/Web/Performance/How_long_is_too_long)
+- [推荐的 Web 性能时间：应该有多长](/zh-CN/docs/Web/Performance/Guides/How_long_is_too_long)

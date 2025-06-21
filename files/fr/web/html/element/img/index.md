@@ -9,7 +9,20 @@ l10n:
 
 L'élément [HTML](/fr/docs/Web/HTML) **`<img>`** permet d'intégrer une image dans un document.
 
-{{EmbedInteractiveExample("pages/tabbed/img.html", "tabbed-standard")}}
+{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+
+```html interactive-example
+<img
+  class="fit-picture"
+  src="/shared-assets/images/examples/grapefruit-slice.jpg"
+  alt="Grapefruit slice atop a pile of other slices" />
+```
+
+```css interactive-example
+.fit-picture {
+  width: 250px;
+}
+```
 
 L'exemple qui précède illustre l'utilisation de l'élément `<img>`&nbsp;:
 
@@ -296,7 +309,7 @@ Selon son type, une image peut avoir une largeur et une hauteur intrinsèque. Po
 Dans l'exemple qui suit, l'image est accompagnée d'un texte alternatif qui sert l'accessibilité.
 
 ```html
-<img src="favicon144.png" alt="Logo de MDN" />
+<img src="/shared-assets/images/examples/favicon144.png" alt="Logo de MDN" />
 ```
 
 {{EmbedLiveSample('fournir_un_texte_alternatif', '100%', '160')}}
@@ -307,7 +320,9 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 
 ```html
 <a href="https://developer.mozilla.org">
-  <img src="favicon144.png" alt="Visiter le site MDN" />
+  <img
+    src="/shared-assets/images/examples/favicon144.png"
+    alt="Visiter le site MDN" />
 </a>
 ```
 
@@ -318,7 +333,10 @@ Cet exemple intègre l'image précédente et la transforme en lien. Pour cela, l
 Dans cet exemple, on utilise l'attribut `srcset` avec une référence vers une version du logo en haute résolution. Pour les appareils avec une haute résolution, celle-ci sera chargée à la place à la place de l'image indiquée par `src`. Pour les agents utilisateurs qui prennent en charge l'attribut `srcset`, l'image référencée par l'attribut `src` sera considérée comme une candidate avec le descripteur `1x`.
 
 ```html
-<img src="favicon72.png" alt="Logo MDN" srcset="favicon144.png 2x" />
+<img
+  src="/shared-assets/images/examples/favicon72.png"
+  alt="Logo MDN"
+  srcset="/shared-assets/images/examples/favicon144.png 2x" />
 ```
 
 {{EmbedLiveSample("utiliser_lattribut_srcset", "100%", "160")}}

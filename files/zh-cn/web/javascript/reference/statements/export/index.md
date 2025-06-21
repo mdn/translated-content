@@ -254,7 +254,7 @@ console.log(foo); // 4.555806215962888
 着重注意以下几点：
 
 - 在你的 HTML 中需要包含 type="module" 的 {{htmlelement("script")}} 元素这样的脚本，以便它被识别为模块并正确处理
-- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/CORS) 错误。你需要通过 HTTP 服务器运行。
+- 不能通过 `file://` URL 运行 JS 模块 — 这将导致 [CORS](/zh-CN/docs/Web/HTTP/Guides/CORS) 错误。你需要通过 HTTP 服务器运行。
 
 ### 使用默认导出
 

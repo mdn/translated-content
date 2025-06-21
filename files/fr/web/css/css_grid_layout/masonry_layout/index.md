@@ -10,7 +10,7 @@ l10n:
 
 {{SeeCompatTable}}
 
-La propriété CSS **`align-tracks`** définit l'alignement dans l'axe de maçonnerie pour les conteneurs de grille qui ont [`masonry`](/fr/docs/Web/CSS/CSS_Grid_Layout/Masonry_Layout) comme axe de bloc.
+La propriété CSS **`align-tracks`** définit l'alignement dans l'axe de maçonnerie pour les conteneurs de grille qui ont [`masonry`](/fr/docs/Web/CSS/CSS_grid_layout/Masonry_layout) comme axe de bloc.
 
 ## Syntaxe
 

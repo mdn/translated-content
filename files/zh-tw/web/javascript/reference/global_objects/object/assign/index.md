@@ -243,4 +243,4 @@ if (typeof Object.assign != "function") {
 ## 參閱
 
 - {{jsxref("Object.defineProperties()")}}
-- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)

@@ -28,7 +28,7 @@ l10n:
 
 - `cors`
 
-  - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/CORS) の仕組みを使用します。
+  - : このリクエストがオリジン間リクエストであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用します。
 
 - `navigate`
 
@@ -40,7 +40,7 @@ l10n:
 
 たとえば、 `Request` オブジェクトが {{domxref("Request.Request", "Request()")}} コンストラクターで生成された場合、 `mode` の値は `cors` に設定されます。
 
-しかし、リクエストが {{domxref("Request.Request", "Request()")}} コンストラクター以外で生成された場合は、ふつう `no-cors` がモードとして設定されます。たとえば、マークアップから生成された埋め込みリソースのようなリクエストは、 [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性が設定されていない限り、 `no-cors`を利用します。そのようなものの例として、 {{HTMLElement("link")}} や {{HTMLElement("script")}} 要素（ただしモジュールを除く）、 {{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} 要素などが存在します。
+しかし、リクエストが {{domxref("Request.Request", "Request()")}} コンストラクター以外で生成された場合は、ふつう `no-cors` がモードとして設定されます。たとえば、マークアップから生成された埋め込みリソースのようなリクエストは、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性が設定されていない限り、 `no-cors`を利用します。そのようなものの例として、 {{HTMLElement("link")}} や {{HTMLElement("script")}} 要素（ただしモジュールを除く）、 {{HTMLElement("img")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}}、{{HTMLElement("object")}}、{{HTMLElement("embed")}}、{{HTMLElement("iframe")}} 要素などが存在します。
 
 ## 例
 
@@ -62,5 +62,5 @@ const myMode = myRequest.mode; // 既定では "cors" を返す
 ## 関連情報
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

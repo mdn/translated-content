@@ -323,7 +323,7 @@ void setRequestHeader(
 
 - [Using XMLHttpRequest](/es/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
 - [`FormData`](/es/docs/Web/API/FormData)
-- [MDC AJAX introduction](/es/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
+- [MDC AJAX introduction](/es/docs/Learn_web_development/Core/Scripting/Network_requests)
 - [XMLHttpRequest - REST and the Rich User Experience](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)
 - [Apple developers' reference](https://developer.apple.com/internet/webcontent/xmlhttpreq.html)

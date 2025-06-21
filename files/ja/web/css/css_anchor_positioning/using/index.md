@@ -9,7 +9,7 @@ l10n:
 
 **CSS アンカー位置指定**モジュールは、要素を結びつけるための機能を定義します。要素は、**アンカー要素**と**アンカー位置指定要素**として定義できます。アンカー位置指定要素は、アンカー要素に束縛することができます。アンカー位置決めされた要素は、そのサイズと位置を、結合されたアンカー要素のサイズと位置に相対的に設定することができます。
 
-CSS のアンカーポジショニングは、アンカーポジショニングされた要素の複数の代替位置を指定するための CSS だけのメカニズムも提供します。例えば、ツールチップがフォームフィールドにアンカーされているが、既定の位置設定では画面外にレンダリングされる場合、ブラウザは別の提案された位置でレンダリングし、画面上に配置することができます。
+CSS のアンカーポジショニングは、アンカーポジショニングされた要素の複数の代替位置を指定するための CSS だけのメカニズムも提供します。例えば、ツールチップがフォームフィールドにアンカーされているが、既定の位置設定では画面外にレンダリングされる場合、ブラウザーは別の提案された位置でレンダリングし、画面上に配置することができます。
 
 この記事では、基本的なアンカー位置決めの概念と、モジュールの関連付け、位置決め、サイズ調整機能の基本的な使い方を説明します。以下で説明する各概念について、追加の例や構文の詳細が記載されている参照ページへのリンクが含まれています。代替位置の指定とアンカー位置の要素の非表示については、[オーバーフローの処理: フォールバックと条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)をお試しください。
 
@@ -30,7 +30,7 @@ CSS のアンカーポジショニングは、アンカーポジショニング�
 
 ## アンカー要素と位置指定要素の関連付け
 
-要素をアンカーに関連付けるには、まず最初の宣言でどの要素がアンカーであるかを指定し、次に、そのアンカーに関連付ける位置指定要素を指定します。これは、CSS で行うか、HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を介して行うことができます。
+要素をアンカーに関連付けるには、まず最初の宣言でどの要素がアンカーであるかを指定し、次に、そのアンカーに関連付ける位置指定要素を指定します。これは、CSS で行うか、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介して行うことができます。
 
 ### CSS のみによる方法
 
@@ -55,7 +55,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 }
 ```
 
-要素をアンカー位置指定要素に変換するには、2 段階のプロセスが必要です。まず、{{cssxref("position")}} プロパティを使用して、絶対[位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)または固定位置指定にする必要があります。次に、位置指定された要素の {{cssxref("position-anchor")}} プロパティに、アンカー要素の `anchor-name` プロパティの値を設定して、2 つの要素を関連付けます。
+要素をアンカー位置指定要素に変換するには、2 段階のプロセスが必要です。まず、{{cssxref("position")}} プロパティを使用して、絶対[位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)または固定位置指定にする必要があります。次に、位置指定された要素の {{cssxref("position-anchor")}} プロパティに、アンカー要素の `anchor-name` プロパティの値を設定して、2 つの要素を関連付けます。
 
 ```css hidden
 .infobox {
@@ -93,7 +93,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 
 ### HTML による方法
 
-HTML で位置指定された要素をアンカーに関連付けるには、[`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を使用することができます。アンカー要素には [`id`](/ja/docs/Web/HTML/Global_attributes/id) を指定する必要があります。そして `anchor` 属性をアンカー位置指定要素に、関連付けたいアンカー要素の `id` と同じ値で設定します。
+HTML で位置指定された要素をアンカーに関連付けるには、[`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を使用することができます。アンカー要素には [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を指定する必要があります。そして `anchor` 属性をアンカー位置指定要素に、関連付けたいアンカー要素の `id` と同じ値で設定します。
 
 これは次の HTML で実現できます。
 
@@ -139,7 +139,7 @@ HTML で位置指定された要素をアンカーに関連付けるには、[`a
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> **メモ:** [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
+> **メモ:** [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Reference/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
 
 2 つの要素は関連付けられましたが、まだ結び付けられていません。 それらを結び付けるには、位置指定された要素をアンカーに対して相対的に位置指定する必要があります。これは CSS で行います。
 
@@ -164,7 +164,7 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 
 - `<anchor-element>`
 
-  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
+  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > **メモ:** `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
@@ -305,7 +305,7 @@ body {
 - 3 つの行は、物理的な値では `top`、`center`、`bottom` で表します。 また、`start`、`center`、`end` といった論理的な値や、`y-start`、`center`、`y-end` といった座標の値もあります。
 - 3 つの列は、物理的な値では `left`、`center`、`right` で表します。また、`start`、`center`、`end` といった論理的な値や、`x-start`、`center`、`x-end` といった座標の値もあります。
 
-中央のタイルの寸法は、アンカー要素の[包含ブロック](/ja/docs/Web/CSS/Containing_block)によって定義され、中央のタイルとグリッドの外縁との間の距離は、位置指定要素の包含ブロックによって定義されます。
+中央のタイルの寸法は、アンカー要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)によって定義され、中央のタイルとグリッドの外縁との間の距離は、位置指定要素の包含ブロックによって定義されます。
 
 `position-area` プロパティの値は、上記の行と列の値に基づいて 1 つまたは 2 つの値で構成され、要素が配置されるべきグリッドの領域を定義するためのスパニングオプションが利用可能です。
 
@@ -468,7 +468,7 @@ selectElem.addEventListener("change", () => {
 
 例えば、上記の例では、位置指定された要素のサイズを明示的に指定していません。 意図的にサイズ指定を省略することで、それが引き起こす動作を観察できるようにしてあります。
 
-配置された要素が明示的なサイズ指定なしに `position-area` グリッドセルに配置されると、指定されたグリッド領域に配置され、{{cssxref("width")}} が {{cssxref("max-content")}} に設定されているかのように動作します。 そのサイズは、その[包含ブロック](/ja/docs/Web/CSS/Containing_block)サイズ（コンテンツの幅）に従って決定されます。 このサイズは、`position: fixed` の設定によって強制的に決定されます。 自動的にサイズが決定され、絶対位置指定された要素は、自動的にサイズが決定され、テキストコンテンツに合わせて必要に応じて幅が広げられますが、ビューポートの端によって制約されます。この場合、グリッドの左辺に `left` または `inline-start` 値で配置された場合、テキストは折り返されます。アンカー要素の `max-content` サイズがアンカーよりも狭い場合、または短い場合、アンカーのサイズに一致するように拡大することはありません。
+配置された要素が明示的なサイズ指定なしに `position-area` グリッドセルに配置されると、指定されたグリッド領域に配置され、{{cssxref("width")}} が {{cssxref("max-content")}} に設定されているかのように動作します。 そのサイズは、その[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)サイズ（コンテンツの幅）に従って決定されます。 このサイズは、`position: fixed` の設定によって強制的に決定されます。 自動的にサイズが決定され、絶対位置指定された要素は、自動的にサイズが決定され、テキストコンテンツに合わせて必要に応じて幅が広げられますが、ビューポートの端によって制約されます。この場合、グリッドの左辺に `left` または `inline-start` 値で配置された場合、テキストは折り返されます。アンカー要素の `max-content` サイズがアンカーよりも狭い場合、または短い場合、アンカーのサイズに一致するように拡大することはありません。
 
 `position-area: bottom center` のように、配置された要素が垂直方向に中央揃えされている場合、指定されたグリッドセルに配置され、幅はアンカー要素と同じになります。この場合、その最小の高さは、アンカー要素の包含ブロックサイズになります。`min-width` が {{cssxref("min-content")}}、つまり、最も長い単語と同じ幅以上になるため、はみ出すことはありません。
 
@@ -600,7 +600,7 @@ anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 }
 ```
 
-例えば、HTML と基本 CSS は、フォーカス可能なアンカー要素に [`tabindex="0"`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性が指定されていることを除いて、これまでの例と同じです。情報ボックスは修正された位置指定が指定され、これまでと同様にアンカーに関連付けられています。しかし、今回は `position-area` を使用してアンカーの右側に固定し、アンカーの幅の 5 倍の幅を指定しています。
+例えば、HTML と基本 CSS は、フォーカス可能なアンカー要素に [`tabindex="0"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性が指定されていることを除いて、これまでの例と同じです。情報ボックスは修正された位置指定が指定され、これまでと同様にアンカーに関連付けられています。しかし、今回は `position-area` を使用してアンカーの右側に固定し、アンカーの幅の 5 倍の幅を指定しています。
 
 ```html hidden
 <p>
@@ -695,6 +695,6 @@ body {
 
 - [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)モジュール
 - [オーバーフローの扱い: 代替や条件付き非表示](/ja/docs/Web/CSS/CSS_anchor_positioning/Try_options_hiding)
-- [位置指定](/ja/docs/Learn/CSS/CSS_layout/Positioning)
+- [位置指定](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning)
 - [CSS 論理プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュール
-- [CSS におけるアイテムのサイズ設定](/ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
+- [CSS におけるアイテムのサイズ設定](/ja/docs/Learn_web_development/Core/Styling_basics/Sizing)

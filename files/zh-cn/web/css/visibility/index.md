@@ -7,7 +7,51 @@ slug: Web/CSS/visibility
 
 **`visibility`** CSS 属性显示或隐藏元素而不更改文档的布局。该属性还可以隐藏 {{HTMLElement("table")}} 中的行或列。
 
-{{EmbedInteractiveExample("pages/css/visibility.html")}}
+{{InteractiveExample("CSS Demo: visibility")}}
+
+```css interactive-example-choice
+visibility: visible;
+```
+
+```css interactive-example-choice
+visibility: hidden;
+```
+
+```css interactive-example-choice
+visibility: collapse;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">Hide me</div>
+    <div>Item 2</div>
+    <div>Item 3</div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.example-container {
+  border: 1px solid #c5c5c5;
+  padding: 0.75em;
+  width: 80%;
+  max-height: 300px;
+  display: flex;
+}
+
+.example-container > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+  margin: 10px;
+  flex: 1;
+}
+
+#example-element {
+  background-color: rgba(255, 0, 200, 0.2);
+  border: 3px solid rebeccapurple;
+}
+```
 
 要隐藏*并从文档布局中移除*元素，请将 {{cssxref("display")}} 属性设置为 `none` 来代替 `visibility` 属性。
 
@@ -34,7 +78,7 @@ visibility: unset;
 - `visible`
   - : 元素框可见。
 - `hidden`
-  - : 元素框不可见（不绘制），但仍然影响常规的布局。如果将其子元素的 `visibility` 设置为 `visible`，则该子元素依然可见。元素无法获得焦点（例如通过 [tab 索引](/zh-CN/docs/Web/HTML/Global_attributes/tabindex)进行键盘导航）。
+  - : 元素框不可见（不绘制），但仍然影响常规的布局。如果将其子元素的 `visibility` 设置为 `visible`，则该子元素依然可见。元素无法获得焦点（例如通过 [tab 索引](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex)进行键盘导航）。
 - `collapse`
 
   - : `collapse` 关键字对于不同的元素有不同的效果：

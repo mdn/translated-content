@@ -7,7 +7,7 @@ slug: Web/HTTP/Headers/Allow
 
 L'entête **`Allow`** liste les méthodes supportées par une ressource.
 
-Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatus("405")}} `Method Not Allowed` pour indiquer quelles méthodes peuvent être utilisées pour la requête. Une entête `Allow` vide indique que la ressource n'autorise aucune méthode, ce qui peut erriver temporairement pour une ressource donnée, par exemple.
+Cet entête doit être envoyée si le serveur répond avec un statut {{HTTPStatus("405")}} `Method Not Allowed` pour indiquer quelles méthodes peuvent être utilisées pour la requête. Une entête `Allow` vide indique que la ressource n'autorise aucune méthode, ce qui peut arriver temporairement pour une ressource donnée, par exemple.
 
 <table class="properties">
   <tbody>

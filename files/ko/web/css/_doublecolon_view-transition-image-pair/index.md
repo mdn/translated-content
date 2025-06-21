@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-**`::view-transition-image-pair`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 컨테이너의 [뷰 전환](/ko/docs/Web/API/View_Transitions_API)의 오래된 뷰 상태와 새로운 뷰 상태, 전환의 전후를 나타냅니다.
+**`::view-transition-image-pair`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 컨테이너의 [뷰 전환](/ko/docs/Web/API/View_Transition_API)의 오래된 뷰 상태와 새로운 뷰 상태, 전환의 전후를 나타냅니다.
 
 뷰 전환이 이루어지는 동안, `::view-transition-image-pair` 는 [뷰 전환 의사 요소 트리](/ko/docs/Web/API/View_Transitions_API/Using#the_view_transition_pseudo-element_tree) 에 기술된 것처럼 연관된 의사 요소 트리에 포함됩니다. 이는 {{cssxref("::view-transition-group")}} 의 자식 요소로만 존재합니다. 자식 요소로 {{cssxref("::view-transition-new")}} 또는 {{cssxref("::view-transition-old")}}를 가질 수 있으며, 둘 다 가질 수도 있습니다.
 
@@ -61,5 +61,5 @@ l10n:
 
 ## 같이 보기
 
-- [뷰 전환 API](/ko/docs/Web/API/View_Transitions_API)
+- [뷰 전환 API](/ko/docs/Web/API/View_Transition_API)
 - [뷰 전환 API와 부드럽고 간단한 트랜지션](https://developer.chrome.com/docs/web-platform/view-transitions/)

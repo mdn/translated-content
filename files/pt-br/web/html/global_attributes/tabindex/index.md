@@ -7,7 +7,37 @@ slug: Web/HTML/Global_attributes/tabindex
 
 O [atributo global](/pt-BR/docs/Web/HTML/Global_attributes) **tabindex** indica se um elemento pode receber foco de entrada (se ele é _focável_), se e em qual posição ele deve fazer parte da navegação sequencial do teclado (geralmente com a tecla <kbd>Tab</kbd>, daí seu nome).
 
-{{EmbedInteractiveExample("pages/tabbed/attribute-tabindex.html","tabbed-standard")}}
+{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+
+```html interactive-example
+<p>Click anywhere in this pane, then try tabbing through the elements.</p>
+
+<label>First in tab order:<input type="text" /></label>
+
+<div tabindex="0">Tabbable due to tabindex.</div>
+
+<div>Not tabbable: no tabindex.</div>
+
+<label>Third in tab order:<input type="text" /></label>
+```
+
+```css interactive-example
+p {
+  font-style: italic;
+  font-weight: bold;
+}
+
+div,
+label {
+  display: block;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+div:focus {
+  font-weight: bold;
+}
+```
 
 Ele aceita valores inteiros, com diferentes resultados dependendo do valor desse inteiro:
 

@@ -2,7 +2,7 @@
 title: Math.E
 slug: Web/JavaScript/Reference/Global_Objects/Math/E
 l10n:
-  sourceCommit: 761b9047d78876cbd153be811efb1aa77b419877
+  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
 ---
 
 {{JSRef}}
@@ -17,13 +17,13 @@ function compoundOneYear(interestRate, currentVal) {
 }
 
 console.log(Math.E);
-// Expected output: 2.718281828459045
+// 預期輸出：2.718281828459045
 
 console.log((1 + 1 / 1000000) ** 1000000);
-// Expected output: 2.718280469 (approximately)
+// 預期輸出：2.718280469 (approximately)
 
 console.log(compoundOneYear(0.05, 100));
-// Expected output: 105.12710963760242
+// 預期輸出：105.12710963760242
 ```
 
 ## 值

@@ -17,6 +17,6 @@ TTFB = responseStart - navigationStart
 
 ## 関連情報
 
-- [典型的な HTTP セッション](/ja/docs/Web/HTTP/Session)
+- [典型的な HTTP セッション](/ja/docs/Web/HTTP/Guides/Session)
 - [PerformanceResourceTiming](/ja/docs/Web/API/PerformanceResourceTiming)
 - [PerformanceTiming](/ja/docs/Web/API/PerformanceTiming)

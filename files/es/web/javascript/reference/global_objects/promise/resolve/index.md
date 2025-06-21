@@ -18,8 +18,6 @@ promise1.then((value) => {
 });
 ```
 
-La fuente para esta demostración interactiva se encuentra en un repositorio de GitHub. Si te gustaría contribuir al proyecto de la demostración interactiva, por favor clona <https://github.com/mdn/interactive-examples> y envíanos una _pull request_.
-
 ## Sintáxis
 
 ```js

@@ -39,7 +39,7 @@ Le dernier index auquel on trouve la valeur dans le tableau, -1 si elle n'est pa
 
 ## Description
 
-`lastIndexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Opérateurs/Opérateurs_de_comparaison#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (l'égalité utilisée par l'opérateur ===).
+`lastIndexOf` compare `élémentRecherché` aux éléments contenus dans le tableau en utilisant une [égalité stricte](</fr/docs/Web/JavaScript/Reference/Operators#.C3.89galit.C3.A9_stricte_(.3D.3D.3D)>) (l'égalité utilisée par l'opérateur ===).
 
 ## Exemples
 

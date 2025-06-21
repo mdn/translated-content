@@ -36,7 +36,7 @@ let settingIcon = browser.action.setIcon(
 
     - `imageData` {{optional_inline}}
 
-      - : `{{WebExtAPIRef('action.ImageDataType')}}` 或 `object`，这要么是 `ImageData` 对象，要么是一个字典对象。
+      - : {{WebExtAPIRef('action.ImageDataType')}} 或 `object`，这要么是 `ImageData` 对象，要么是一个字典对象。
 
         使用一个字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的名称是其尺寸，值是 `ImageData` 对象，如下所示：
 
@@ -158,7 +158,7 @@ browser.action.onClicked.addListener((tab) => {
 {{Compat}}
 
 > [!NOTE]
-> 该 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setIcon) API。本文衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
+> 此 API 基于 Chromium 的 [`chrome.action`](https://developer.chrome.google.cn/docs/extensions/reference/api/action#method-setIcon) API。该文档衍生自 Chromium 代码中的 [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

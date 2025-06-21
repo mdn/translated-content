@@ -19,7 +19,7 @@ slug: Learn_web_development/Core/Scripting/DOM_scripting
 
 ![](document-window-navigator.png)
 
-- Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn/JavaScript/Building_blocks/Events#a_series_of_fortunate_events)) к текущему окну и многое другое.
+- Окно - это вкладка браузера, в которую загружается веб-страница; это представлено в JavaScript объектом {{domxref("Window")}}. Используя методы, доступные для этого объекта, вы можете делать такие вещи, как возврат размера окна (см. {{Domxref("Window.innerWidth")}} и {{domxref("Window.innerHeight")}}), манипулировать документом, загруженным в этот window, хранить данные, специфичные для этого документа на стороне клиента (например, используя локальную базу данных или другой механизм хранения), присоединить обработчик событий ([event handler](/ru/docs/Learn_web_development/Core/Scripting/Events#a_series_of_fortunate_events)) к текущему окну и многое другое.
 - Навигатор представляет состояние и идентификатор браузера (т. е. пользовательский агент), как он существует в Интернете. В JavaScript это представлено объектом {{domxref("Navigator")}}. Вы можете использовать этот объект для извлечения таких вещей, как геолокационная информация, предпочтительный язык пользователя, медиапоток с веб-камеры пользователя и т. д.
 - Документ (представленный DOM в браузерах) представляет собой фактическую страницу, загруженную в окно, и представлен в JavaScript объектом {{domxref("Document")}}. Вы можете использовать этот объект для возврата и обработки информации о HTML и CSS, содержащей документ, например, получить ссылку на элемент в DOM, изменить его текстовый контент, применить к нему новые стили, создать новые элементы и добавить их в текущий элемент как дочерний элемент, или даже вообще удалить его.
 
@@ -95,7 +95,7 @@ DOM, с другой стороны, выглядит так:
    link.href = "https://developer.mozilla.org";
    ```
 
-Обратите внимание, что, как и во многих вещах в JavaScript, существует множество способов выбора элемента и хранения ссылки на него в переменной. {{domxref("Document.querySelector()")}} - рекомендуемый современный подход, который считается удобным, потому что он позволяет вам выбирать элементы с помощью селекторов CSS. Вышеупомянутый запрос `querySelector()` будет соответствовать первому элементу {{htmlelement("a")}}, который появляется в документе. Если вы хотите совместить и делать что-то с несколькими элементами, вы можете использовать {{domxref ("Document.querySelectorAll()")}}, который соответствует каждому элементу документа, который соответствует селектору и сохраняет ссылки на них в массиве [массива](/ru/docs/Learn/JavaScript/First_steps/Arrays)-подобном объекте, называемом NodeList.
+Обратите внимание, что, как и во многих вещах в JavaScript, существует множество способов выбора элемента и хранения ссылки на него в переменной. {{domxref("Document.querySelector()")}} - рекомендуемый современный подход, который считается удобным, потому что он позволяет вам выбирать элементы с помощью селекторов CSS. Вышеупомянутый запрос `querySelector()` будет соответствовать первому элементу {{htmlelement("a")}}, который появляется в документе. Если вы хотите совместить и делать что-то с несколькими элементами, вы можете использовать {{domxref ("Document.querySelectorAll()")}}, который соответствует каждому элементу документа, который соответствует селектору и сохраняет ссылки на них в массиве [массива](/ru/docs/Learn_web_development/Core/Scripting/Arrays)-подобном объекте, называемом NodeList.
 
 Существуют более старые методы для захвата ссылок на элементы, например:
 
@@ -288,7 +288,7 @@ linkPara.parentNode.removeChild(linkPara);
 
 1. Для начала загрузите копию нашего начального файла [shopping-list.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/document-manipulation/shopping-list.html) и скопируйте его где-нибудь. Вы увидите, что у него есть минимальный CSS, список с меткой, ввод и кнопка, пустой список и элемент {{htmlelement("script")}}. Вы будете делать все свои дополнения внутри скрипта.
 2. Создайте три переменные, содержащие ссылки на список ({{htmlelement("ul")}}, {{htmlelement("input")}} и {{htmlelement("button")}} элементы.
-3. Создайте [function](/ru/docs/Learn/JavaScript/Building_blocks/Functions), которая будет запускаться в ответ на нажатие кнопки.
+3. Создайте [function](/ru/docs/Learn_web_development/Core/Scripting/Functions), которая будет запускаться в ответ на нажатие кнопки.
 4. Внутри тела функции начните с сохранения текущего значения ([value](/ru/docs/Web/API/HTMLInputElement#Properties)) входного элемента в переменной.
 5. Затем очистите элемент ввода, установив его значение в пустую строку — `''`.
 6. Создайте три новых элемента - элемент списка ({{htmlelement('li')}}), {{htmlelement('span')}} и {{htmlelement('button')}} и сохраните их в переменных.
@@ -320,10 +320,10 @@ linkPara.parentNode.removeChild(linkPara);
 
 ## В этот модуль входит
 
-- [Introduction to web APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Introduction to web APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction)
+- [Manipulating documents](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting)
+- [Fetching data from the server](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [Third party APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Client-side storage](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)

@@ -9,7 +9,45 @@ l10n:
 
 **`resize`** [CSS](/ko/docs/Web/CSS) 속성은 요소의 크기 조절 여부와 방향을 설정할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/css/resize.html")}}
+{{InteractiveExample("CSS Demo: resize")}}
+
+```css interactive-example-choice
+resize: both;
+```
+
+```css interactive-example-choice
+resize: horizontal;
+```
+
+```css interactive-example-choice
+resize: vertical;
+```
+
+```css interactive-example-choice
+resize: none;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div id="example-element">Try resizing this element.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background: linear-gradient(135deg, #0ff 0%, #0ff 94%, #fff 95%);
+  border: 3px solid #c5c5c5;
+  overflow: auto;
+  width: 250px;
+  height: 250px;
+  font-weight: bold;
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+```
 
 `resize` 는 다음 요소들에는 적용되지 않습니다.
 

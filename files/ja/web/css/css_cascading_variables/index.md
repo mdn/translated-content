@@ -109,7 +109,7 @@ input {
 
 ## ガイド
 
-- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/Using_CSS_custom_properties)
+- [CSS カスタムプロパティ（変数）の使用](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)
 
   - : CSS や JavaScript でカスタムプロパティを使用する方法を、未定義値や不正な値の処理、代替値、継承などのヒントを交えて解説します。
 

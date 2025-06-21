@@ -29,7 +29,7 @@ MDN의 JavaScript 초급자 과정에 오신 걸 환영합니다!
 
 ## 높은 수준의 정의
 
-JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있는 스크립팅 또는 프로그래밍 언어입니다. 웹 페이지가 단순히 정적인 정보를 표시하는 것 이상으로 시의적절한 콘텐츠 업데이트, 대화형 지도, 애니메이션 2D/3D 그래픽, 스크롤링 비디오 주크박스 등을 표시할 때마다 JavaScript가 관련되어 있을 가능성이 높습니다. JavaScript는 표준 웹 기술이라는 케이크의 세 번째 층입니다. 다른 두 개([HTML](/ko/docs/Learn/HTML)과 [CSS](/ko/docs/Learn/CSS))는 학습장의 다른 곳에서 자세히 알아봤습니다.
+JavaScript는 웹 페이지에서 복잡한 기능을 구현할 수 있는 스크립팅 또는 프로그래밍 언어입니다. 웹 페이지가 단순히 정적인 정보를 표시하는 것 이상으로 시의적절한 콘텐츠 업데이트, 대화형 지도, 애니메이션 2D/3D 그래픽, 스크롤링 비디오 주크박스 등을 표시할 때마다 JavaScript가 관련되어 있을 가능성이 높습니다. JavaScript는 표준 웹 기술이라는 케이크의 세 번째 층입니다. 다른 두 개([HTML](/ko/docs/Learn_web_development/Core/Structuring_content)과 [CSS](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1))는 학습장의 다른 곳에서 자세히 알아봤습니다.
 
 ![표준 웹 기술의 세 가지 계층, HTML, CSS, JavaScript](cake.png)
 
@@ -115,7 +115,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
 
 > [!NOTE]
 > 위의 데모 중 상당수는 구형 브라우저에서 작동하지 않으므로 실험할 때는 Firefox, Chrome, Edge, Opera와 같은 최신 브라우저를 사용하여 코드를 실행하는 것이 좋습니다.
-> 이후에 프로덕션 코드 (고객이 사용하게 될 코드) 배포에 다가가게 되면 [크로스 브라우저 테스트](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing)를 고려하세요.
+> 이후에 프로덕션 코드 (고객이 사용하게 될 코드) 배포에 다가가게 되면 [크로스 브라우저 테스트](/ko/docs/Learn_web_development/Extensions/Testing)를 고려하세요.
 
 **서드파티 API**는 기본적으로 브라우저에 내장되어 있지 않으며, 일반적으로 웹 어딘가에서 해당 코드와 정보를 가져와야 합니다.
 
@@ -123,7 +123,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
 - [Google 지도 API](https://developers.google.com/maps/)와 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API)로 웹 사이트에 지도를 삽입하고, 지도 관련 기능을 추가할 수 있습니다.
 
 > [!NOTE]
-> 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. 이에 대한 자세한 내용은 [클라이언트 사이드 웹 API 과정](/ko/docs/Learn/JavaScript/Client-side_web_APIs)에서 알아보세요.
+> 위의 서드파티 API는 고급 기능으로, 이 과정에서는 다루지 않습니다. 이에 대한 자세한 내용은 [클라이언트 사이드 웹 API 과정](/ko/docs/Learn_web_development/Extensions/Client-side_APIs)에서 알아보세요.
 
 여기 나열된 항목 말고도 훨씬 다양한 API들이 존재합니다! 하지만 아직 너무 앞서나가진 마세요. JavaScript를 하루 배운 것으로 차세대 Facebook, Google 지도, Instagram을 만들 수는 없는 법입니다. 아직 배워야 할 기본이 많이 남았고, 기본을 배우는 것이 이 과정을 보는 이유이니, 시작해 봅시다!
 
@@ -131,7 +131,7 @@ API는 일반적으로 두 개의 범주로 나뉩니다.
 
 여기서는 실제로 몇 가지 코드를 살펴보면서 페이지에서 JavaScript를 실행하면 실제로 어떤 일이 일어나는지 살펴보겠습니다.
 
-브라우저에서 웹 페이지를 로드할 때 어떤 일이 일어나는지 간단히 정리해 보겠습니다. ([CSS 동작 방식](/ko/docs/Learn/CSS/First_steps/How_CSS_works#css_는_실제로_어떻게_작동합니까)에서 먼저 알아봤습니다.) 브라우저에서 웹 페이지를 로드하면 실행 환경(브라우저 탭) 내에서 코드(HTML, CSS 및 JavaScript)를 실행하게 됩니다. 이는 원재료(코드)를 받아 제품(웹 페이지)을 출력하는 공장과 같습니다.
+브라우저에서 웹 페이지를 로드할 때 어떤 일이 일어나는지 간단히 정리해 보겠습니다. ([CSS 동작 방식](/ko/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_는_실제로_어떻게_작동합니까)에서 먼저 알아봤습니다.) 브라우저에서 웹 페이지를 로드하면 실행 환경(브라우저 탭) 내에서 코드(HTML, CSS 및 JavaScript)를 실행하게 됩니다. 이는 원재료(코드)를 받아 제품(웹 페이지)을 출력하는 공장과 같습니다.
 
 ![페이지가 로드될 때 HTML, CSS, JavaScript 코드가 함께 브라우저 탭에 콘텐츠를 생성합니다.](execution.png)
 
@@ -199,7 +199,7 @@ JavaScript는 가볍고, 인터프리터를 사용하는 프로그래밍 언어�
 
 반대로 서버 사이드 코드는 서버에서 실행되고 그 결과가 다운로드되어 브라우저에 표시됩니다.
 인기 있는 서버 사이드 웹 언어로는 PHP, Python, Ruby, ASP.NET, 그리고 JavaScript가 있습니다!
-JavaScript는 브라우저 뿐만 아니라, 많은 사람들이 사용하는 Node.js 환경처럼 서버 사이드 언어로도 사용할 수 있습니다. 서버 사이드 JavaScript에 관해서는 [동적 웹 사이트 – 서버 사이드 프로그래밍](/ko/docs/Learn/Server-side) 과정에서 더 알아보세요.
+JavaScript는 브라우저 뿐만 아니라, 많은 사람들이 사용하는 Node.js 환경처럼 서버 사이드 언어로도 사용할 수 있습니다. 서버 사이드 JavaScript에 관해서는 [동적 웹 사이트 – 서버 사이드 프로그래밍](/ko/docs/Learn_web_development/Extensions/Server-side) 과정에서 더 알아보세요.
 
 ### 동적 코드와 정적 코드
 
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 ```
 
 이건 이벤트, 그중에서도 HTML 본문 전체를 불러와 읽었다는 것을 나타내는 브라우저의 `DOMContentLoaded` 이벤트를 수신하는 이벤트 수신기입니다.
-이 블록 내부의 JavaScript는 이벤트가 발생하기 전에는 실행되지 않으므로 로딩 시점으로 인한 오류를 예방할 수 있습니다. (이후 과정에서 [이벤트에 대해 배우기](/ko/docs/Learn/JavaScript/Building_blocks/Events)를 참조하세요.)
+이 블록 내부의 JavaScript는 이벤트가 발생하기 전에는 실행되지 않으므로 로딩 시점으로 인한 오류를 예방할 수 있습니다. (이후 과정에서 [이벤트에 대해 배우기](/ko/docs/Learn_web_development/Core/Scripting/Events)를 참조하세요.)
 
 외부 예제에서는 `<script>` 태그 요소에 도달하면 브라우저에 HTML 콘텐츠를 계속 다운로드하도록 지시하는 `defer` 속성이라는 보다 최신 JavaScript 기능을 사용하여 문제를 해결합니다.
 
@@ -485,6 +485,6 @@ for (const button of buttons) {
 그 과정에서 몇 가지 코드 예제를 보고 JavaScript가 웹사이트의 나머지 코드와 어떻게 조화를 이루는지 등을 배웠습니다.
 
 지금 당장은 JavaScript가 약간 버겁게 느껴질지도 모르겠지만, 너무 걱정하지 마세요. 이 과정에 걸친 간단한 단계들을 밟다 보면 전체적인 모습이 보일겁니다.
-다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn/JavaScript/First_steps/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
+다음 글에서는 [바로 실전으로 들어가서](/ko/docs/Learn_web_development/Core/Scripting/A_first_splash) 스스로 JavaScript 예제를 만들어보도록 합시다.
 
 {{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}

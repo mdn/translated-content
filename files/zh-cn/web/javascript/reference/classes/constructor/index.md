@@ -137,7 +137,7 @@ try {
 3. 当前类的[字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)将被初始化。
 4. 执行调用 `super()` 后的 `constructor` 主体（如果是基类，则对整个主体）。
 
-在 `constructor` 主体中，你可以通过 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 访问正在创建的对象，并通过 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 访问用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用的类。请注意，在执行 `constructor` 之前，方法（包括 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)）和[原型链](/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)已在 `this` 上初始化，因此你甚至可以从父类的构造函数访问子类的方法。但是，如果这些方法使用了 `this`，这时 `this` 尚未完全初始化。这意味着读取派生类的公共字段的结果是 `undefined`，而读取私有字段将导致 `TypeError`。
+在 `constructor` 主体中，你可以通过 [`this`](/zh-CN/docs/Web/JavaScript/Reference/Operators/this) 访问正在创建的对象，并通过 [`new.target`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 访问用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 调用的类。请注意，在执行 `constructor` 之前，方法（包括 [getter](/zh-CN/docs/Web/JavaScript/Reference/Functions/get) 和 [setter](/zh-CN/docs/Web/JavaScript/Reference/Functions/set)）和[原型链](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)已在 `this` 上初始化，因此你甚至可以从父类的构造函数访问子类的方法。但是，如果这些方法使用了 `this`，这时 `this` 尚未完全初始化。这意味着读取派生类的公共字段的结果是 `undefined`，而读取私有字段将导致 `TypeError`。
 
 ```js example-bad
 new (class C extends class B {

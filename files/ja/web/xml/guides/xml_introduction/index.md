@@ -1,20 +1,17 @@
 ---
 title: XML 入門
 slug: Web/XML/Guides/XML_introduction
-original_slug: Web/XML/XML_introduction
 l10n:
-  sourceCommit: 6b6907f5886f657b504aa705e68182dcba2083c5
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/XML")}}
 
 XML (Extensible Markup Language) は {{Glossary("HTML")}} に似たマークアップ言語ですが、使用するタグがあらかじめ定義されていません。代わりに、ニーズに応じて自分自身でタグを定義します。これは、格納、検索、共有が可能な形式でデータを格納するための強力な方法です。最も重要なことは、XML の基本形式が標準化されているため、ローカルまたはインターネットを介して、システムやプラットフォーム間で XML を共有または送信する場合でも、標準化された XML 構文により、受信者はデータを解釈できるということです。
 
-XML に基づいた言語はたくさんあります。[XHTML](/ja/docs/Glossary/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[RSS](/ja/docs/Glossary/RSS)、[RDF](/ja/docs/Glossary/RDF) などがあります。独自のものを定義することもできます。
+XML に基づいた言語はたくさんあります。 [XHTML](/ja/docs/Glossary/XHTML)、[MathML](/ja/docs/Web/MathML)、[SVG](/ja/docs/Web/SVG)、[RSS](/ja/docs/Glossary/RSS)、[RDF](/ja/docs/Glossary/RDF) などがあります。独自のものを定義することもできます。
 
 ## XML 文書構造
 
-XML および XML ベースの言語の全体の構造は{{Glossary("tag", "タグ")}}に基づいて構築されています。
+XML および XML ベースの言語の全体の構造は{{Glossary("Tag", "タグ")}}に基づいて構築されています。
 
 ### XML 宣言
 
@@ -109,7 +106,7 @@ XML ページに見た目を持たせる方法の一つは、`xml-stylesheet` �
 <?xml-stylesheet type="text/css" href="stylesheet.css"?>
 ```
 
-XML を表示するもう 1 つのより強力な方法もあります。XSL を HTML などの他の言語に変換するために使用できる Extensible Stylesheet Language Transformation ([XSLT](/ja/docs/Web/XSLT)) です。 これにより、XML は非常に用途が広くなります。
+XML を表示するもう 1 つのより強力な方法もあります。XSL を HTML などの他の言語に変換するために使用できる Extensible Stylesheet Language Transformation ([XSLT](/ja/docs/Web/XML/XSLT)) です。 これにより、XML は非常に用途が広くなります。
 
 ```xml
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>

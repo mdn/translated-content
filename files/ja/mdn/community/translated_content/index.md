@@ -1,12 +1,10 @@
 ---
 title: MDN Web Docs のローカライズ
+short-title: ローカライズ
 slug: MDN/Community/Translated_content
-original_slug: MDN/Community/Contributing/Translated_content
 l10n:
-  sourceCommit: 7eed0e1e4ab478d78dc7ca23c19ae77406776e4e
+  sourceCommit: 269fa421f0a79b18f6000a26baebe30c74571b1f
 ---
-
-{{MDNSidebar}}
 
 2020 年 12 月 14 日より、MDN は GitHub ベースの新しい [Yari プラットフォーム](https://github.com/mdn/yari)で運用しています。これは MDN にとって多くの利点がありますが、ローカライズを扱う方法を大幅に変更する必要がありました。というのも、アメリカ英語以外のロケールでは、保守されていない古いコンテンツが多く存在しているため、今後はそれらをより適切に管理していきたいと考えているからです。
 
@@ -23,17 +21,17 @@ l10n:
 ### ブラジルのポルトガル語 (`pt-BR`)
 
 - ディスカッション: [Telegram (`MDN localization in Brazilian Portuguese`)](https://t.me/mdn_l10n_pt_br)
-- 現在の貢献者: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
+- 現在の管理者: [Nathália Pissuti](https://github.com/nathipg), [Josiel Rocha](https://github.com/josielrocha), [Clóvis Lima Júnior](https://github.com/clovislima)
 
 ### 中国語 (`zh-CN`, `zh-TW`)
 
 - ディスカッション: [Discord (`#zh-cn`)](/discord), [Discord (`#zh-tw`)](/discord), [Telegram (`MozTW L10n`)](https://moztw.org/community/telegram/)
-- 現在の貢献者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
+- 現在の管理者: [Irvin](https://github.com/irvin), [t7yang](https://github.com/t7yang), [yin1999](https://github.com/yin1999), [jasonren0403](https://github.com/jasonren0403), [JasonLamv-t](https://github.com/JasonLamv-t)
 
 ### フランス語 (`fr`)
 
 - ディスカッション: [Matrix (`#l10n-fr`)](https://chat.mozilla.org/#/room/#l10n-fr:mozilla.org)
-- 現在の貢献者: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
+- 現在の管理者: [cw118](https://github.com/cw118), [SphinxKnight](https://github.com/SphinxKnight), [tristantheb](https://github.com/tristantheb)
 
 ### 日本語 (`ja`)
 
@@ -43,17 +41,17 @@ l10n:
 ### 韓国語 (`ko`)
 
 - ディスカッション: [Discord (`#korean`)](/discord), [Google Groups (`yari-content-ko`)](https://groups.google.com/g/yari-content-ko)
-- 現在の貢献者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
+- 現在の管理者: [hochan222](https://github.com/hochan222), [yechoi42](https://github.com/yechoi42), [wisedog](https://github.com/wisedog), [sunhpark42](https://github.com/sunhpark42), [1ilsang](https://github.com/1ilsang)
 
 ### ロシア語 (`ru`)
 
 - ディスカッション: [Matrix (`#mdn-l10n-ru`)](https://chat.mozilla.org/#/room/#mdn-l10n-ru:mozilla.org)
-- 現在の貢献者: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
+- 現在の管理者: [leon-win](https://github.com/leon-win), [sashasushko](https://github.com/sashasushko), [Saionaro](https://github.com/Saionaro), [yanaklose](https://github.com/yanaklose), [myshov](https://github.com/myshov), [lex111](https://github.com/lex111)
 
 ### スペイン語 (`es`)
 
-- ディスカッション: [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
-- 現在の管理者: [JuanVqz](https://github.com/JuanVqz), [Graywolf9](https://github.com/Graywolf9)
+- ディスカッション: [Matrix (`#mdn-l10n-es`)](https://chat.mozilla.org/#/room/#mdn-l10n-es:mozilla.org), [Telegram (`MDN l10n ES`)](https://t.me/+Dr6qKQCAepw4MjFj), [Discord (`#spanish`)](/discord)
+- 現在の管理者: [JuanVqz](https://github.com/JuanVqz), [davbrito](https://github.com/davbrito), [Graywolf9](https://github.com/Graywolf9), [Vallejoanderson](https://github.com/Vallejoanderson), [marcelozarate](https://github.com/marcelozarate), [Jalkhov](https://github.com/Jalkhov)
 
 ## 関連情報
 

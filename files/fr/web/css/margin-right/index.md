@@ -7,7 +7,55 @@ slug: Web/CSS/margin-right
 
 La propriété **`margin-right`** d'un élément définit l'espace horizontal à droite qui formera la marge à droite. On peut avoir une marge droite négative.
 
-{{EmbedInteractiveExample("pages/css/margin-right.html")}}
+{{InteractiveExample("CSS Demo: margin-right")}}
+
+```css interactive-example-choice
+margin-right: 1em;
+```
+
+```css interactive-example-choice
+margin-right: 10%;
+```
+
+```css interactive-example-choice
+margin-right: 10px;
+```
+
+```css interactive-example-choice
+margin-right: 0;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="container">
+    <div class="col"></div>
+    <div class="col transition-all" id="example-element"></div>
+    <div class="col"></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#container {
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
+}
+
+.col {
+  width: 33.33%;
+  border: solid #5b6dcd 10px;
+  background-color: rgba(229, 232, 252, 0.6);
+  flex-shrink: 0;
+}
+
+#example-element {
+  border: solid 10px #ffc129;
+  background-color: rgba(255, 244, 219, 0.6);
+}
+```
 
 Les marges des côtés droit et gauche de deux boîtes adjacentes peuvent fusionner entre elles. C'est ce qu'on appelle [_la fusion de marges_](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing).
 

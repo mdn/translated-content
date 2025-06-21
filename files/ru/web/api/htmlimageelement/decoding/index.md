@@ -39,4 +39,4 @@ img.src = "img/logo.png";
 
 ## Смотрите также
 
-- [\<img>: The Image Embed element](/ru/docs/Web/HTML/Element/img)
+- [\<img>: The Image Embed element](/ru/docs/Web/HTML/Reference/Elements/img)

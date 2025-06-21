@@ -14,7 +14,25 @@ La méthode statique **`Object.groupBy()`** groupe les éléments d'un itérable
 
 Cette méthode devrait être utilisée lorsque les noms des groupes peuvent être représentés par des chaînes de caractères. S'il vous faut grouper des éléments selon une clé qui peut être une valeur arbitraire, privilégiez la méthode [`Map.groupBy()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy).
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## Syntaxe
 

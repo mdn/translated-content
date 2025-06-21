@@ -395,7 +395,7 @@ if (window.fetch) {
 ## Смотрите также
 
 - [ServiceWorker API](/ru/docs/Web/API/Service_Worker_API)
-- [HTTP CORS](/ru/docs/Web/HTTP/CORS)
+- [HTTP CORS](/ru/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ru/docs/Web/HTTP)
 - [Полифил Fetch](https://github.com/github/fetch)
 - [Примеры работы с Fetch](https://github.com/mdn/dom-examples/tree/main/fetch) на GitHub

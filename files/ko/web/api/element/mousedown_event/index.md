@@ -93,7 +93,7 @@ onmousedown = (event) => {};
 
 ## 같이 보기
 
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
+- [이벤트 입문](/ko/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Element/mouseup_event", "mouseup")}}
 - {{domxref("Element/mousemove_event", "mousemove")}}
 - {{domxref("Element/click_event", "click")}}

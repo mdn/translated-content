@@ -7,7 +7,44 @@ slug: Web/CSS/outline-style
 
 La propriété **`outline-style`** permet de définir la mise en forme utilisée pour dessiner la bordure d'un élément. Cette bordure est dessinée autour de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et peut être utilisée afin de faire ressortir l'élément.
 
-{{EmbedInteractiveExample("pages/css/outline-style.html")}}
+{{InteractiveExample("CSS Demo: outline-style")}}
+
+```css interactive-example-choice
+outline-style: none;
+```
+
+```css interactive-example-choice
+outline-style: dotted;
+```
+
+```css interactive-example-choice
+outline-style: solid;
+```
+
+```css interactive-example-choice
+outline-style: groove;
+```
+
+```css interactive-example-choice
+outline-style: inset;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with an outline around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  outline: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 Cette propriété est synthétisée grâce à la propriété {{cssxref("outline")}} qui regroupe outline-style, {{cssxref("outline-width")}} et {{cssxref("outline-color")}}.
 

@@ -14,7 +14,7 @@ l10n:
 - {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}}
   - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [JavaScript](/ja/docs/Web/JavaScript) の {{domxref('CSS/registerProperty_static', 'CSS.registerProperty')}} を介してこのインターフェイスにアクセスします。
 - {{cssxref('@property')}}
-  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を介してこのインターフェイスにアクセスします。
+  - : ブラウザーが {{cssxref('--*', 'CSS カスタムプロパティ')}}を構文解析する方法を定義します。 [CSS](/ja/docs/Web/CSS) の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を介してこのインターフェイスにアクセスします。
 
 ## 例
 
@@ -29,7 +29,7 @@ window.CSS.registerProperty({
 });
 ```
 
-[CSS](/ja/docs/Web/CSS) では次の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/At-rule)を使用して、同じ登録を行うことができます。
+[CSS](/ja/docs/Web/CSS) では次の {{cssxref('@property')}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用して、同じ登録を行うことができます。
 
 ```css
 @property --my-color {

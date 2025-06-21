@@ -395,7 +395,7 @@ UI 컨트롤에서 텍스트 라벨은 모든 사용자에게 유용하지만, �
 </p>
 ```
 
-> **참고:** [하이퍼링크 만들기](/ko/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) 아티클에서 링크 구현과 모범 사례에 대한 더 많은 정보를 찾아볼 수 있습니다. 또한 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)와 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)에서도 좋은 예시와 나쁜 예시들을 살펴볼 수 있습니다.
+> **참고:** [하이퍼링크 만들기](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links) 아티클에서 링크 구현과 모범 사례에 대한 더 많은 정보를 찾아볼 수 있습니다. 또한 [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html)와 [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html)에서도 좋은 예시와 나쁜 예시들을 살펴볼 수 있습니다.
 
 폼 라벨은 또한 각각의 인풋에 어떤 내용을 입력해야 하는지에 대한 단서를 주기 때문에 중요합니다. 다음 예시는 충분히 합리적인 것처럼 보입니다.
 
@@ -462,7 +462,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 - 테이블 헤더가 {{htmlelement("th")}} 요소를 통해 정의되어 있습니다. 또한 `scope` 속성을 통해 행을 위한 헤더인지 열을 위한 헤더인지도 명시할 수 있습니다. 이것은 스크린 리더가 하나의 단위로 읽을 수 있는 완전한 데이터 그룹을 만듭니다.
 - {{htmlelement("caption")}} 요소와 `<table>` 요소의 `summary` 속성은 둘 다 테이블의 대체 텍스트로서 비슷한 기능을 합니다. 스크린 리더 사용자에게 테이블 내용에 대한 유용하고 빠른 요약을 제공하는 것이죠. 사실 두개 다 사용하지는 않아도 됩니다. 주로 볼 수 있는 사용자들에게도 해당 콘텐츠를 제공하는 `<caption>` 요소가 선호됩니다.
 
-> **참고:** [HTML table advanced features and accessibility](/ko/docs/Learn/HTML/Tables/Advanced) 아티클에서 접근성을 갖춘 데이터 테이블에 대한 더 자세한 내용을 살펴보세요.
+> **참고:** [HTML table advanced features and accessibility](/ko/docs/Learn_web_development/Core/Structuring_content/Table_accessibility) 아티클에서 접근성을 갖춘 데이터 테이블에 대한 더 자세한 내용을 살펴보세요.
 
 ## 대체 텍스트
 
@@ -508,7 +508,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 한 가지 고려할 부분은 이미지 내용에 의미가 포함되어 있는지, 아니면 순전히 시각적인 장식을 위한 것인지 입니다. 그저 장식 요소라면 `alt` 속성에는 빈 문자열([빈 alt 속성](#빈_alt_속성))을 확인하세요)을 작성하거나 CSS background로 페이지에 포함시키는 편이 좋습니다.
 
 > [!NOTE]
-> 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)과 [반응형 이미지](/ko/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)를 읽어보세요.
+> 이미지 구현에 대한 훨씬 많은 정보와 모범 사례가 궁금하다면 [HTML의 이미지](/ko/docs/Learn_web_development/Core/Structuring_content/HTML_images)과 [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)를 읽어보세요.
 
 추가로 맥락 정보를 제공하고 싶다면, 이미지 주변 텍스트나 위에서 살펴본 것처럼 `title` 속성 내부에 입력하세요. 이 경우 스크린 리더는 대체 텍스트, title 속성, 그리고 파일명을 읽어줍니다. 또한 브라우저가 마우스 오버에 title 텍스트를 툴팁으로 제공할 것입니다.
 

@@ -38,5 +38,5 @@ slug: Web/API/EventTarget
 ## 같이 보기
 
 - [이벤트 참고서](/ko/docs/Web/Events) - 웹 플랫폼에서 사용할 수 있는 이벤트 목록
-- [이벤트 입문](/ko/docs/Learn/JavaScript/Building_blocks/Events)
+- [이벤트 입문](/ko/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} 인터페이스

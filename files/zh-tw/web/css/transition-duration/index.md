@@ -7,7 +7,51 @@ slug: Web/CSS/transition-duration
 
 **`transition-duration`** [CSS](/zh-TW/docs/Web/CSS) 屬性指定轉場動畫所需經歷的時間，以秒或是毫秒為單位。默認值為 0，表示沒有任何轉場動畫。
 
-{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
+{{InteractiveExample("CSS Demo: transition-duration")}}
+
+```css interactive-example-choice
+transition-duration: 500ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-duration: 3s, 1s;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 你可以指定多個時間長度，每一個時間長度都會被應用在{{ cssxref("transition-property") }} 設定的對應屬性上(which acts as a master list.) 如果指定的時間長度的數量比對應屬性的數量少，那麼時間長度就會被重複使用。反之，多餘的時間長度就會被刪去。而這兩種情況之下的 CSS 宣告都是有效的。
 

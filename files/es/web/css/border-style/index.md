@@ -7,7 +7,54 @@ slug: Web/CSS/border-style
 
 La propiedad **`border-style`** [CSS](/es/docs/Web/CSS) es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
 
-{{EmbedInteractiveExample("pages/css/border-style.html")}}
+{{InteractiveExample("CSS Demo: border-style")}}
+
+```css interactive-example-choice
+border-style: none;
+```
+
+```css interactive-example-choice
+border-style: dotted;
+```
+
+```css interactive-example-choice
+border-style: inset;
+```
+
+```css interactive-example-choice
+border-style: dashed solid;
+```
+
+```css interactive-example-choice
+border-style: dashed double none;
+```
+
+```css interactive-example-choice
+border-style: dashed groove none dotted;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+
+body {
+  background-color: #fff;
+}
+```
 
 ## Syntax
 

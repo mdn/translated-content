@@ -9,7 +9,49 @@ l10n:
 
 **`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表のセルボックス内におけるインラインレベルコンテンツの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} と同じように機能しますが、水平方向に機能します。
 
-{{EmbedInteractiveExample("pages/css/text-align.html")}}
+{{InteractiveExample("CSS Demo: text-align")}}
+
+```css interactive-example-choice
+text-align: start;
+```
+
+```css interactive-example-choice
+text-align: end;
+```
+
+```css interactive-example-choice
+text-align: center;
+```
+
+```css interactive-example-choice
+text-align: justify;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+  </div>
+</section>
+```
+
+```css interactive-example
+section {
+  font-size: 1.5em;
+}
+
+#default-example > div {
+  width: 250px;
+}
+```
 
 ## 構文
 
@@ -58,7 +100,7 @@ text-align: unset;
 
 両端揃えによって生じる単語間の一貫性のない間隔は、ディスレクシアなどの認知的な懸念を持つ人々にとって問題となる可能性があります。
 
-- [MDN WCAG を理解する - ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
+- [MDN WCAG を理解する - ガイドライン 1.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#ガイドライン_1.4_前景と背景の区別を含め、ユーザーがコンテンツを見たり聞いたりしやすくする)
 - [Understanding Success Criterion 1.4.8 | Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-visual-presentation.html)
 
 ## 公式定義

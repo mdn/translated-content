@@ -52,7 +52,7 @@ display: unset;
 
 #### HTML
 
-HTML は、 [popover](/ja/docs/Web/HTML/Global_attributes/popover) 属性を使用してポップオーバーとして宣言された {{htmlelement("div")}} 要素と、 [popovertarget](/ja/docs/Web/HTML/Element/button#popovertarget) 属性を使用してポップオーバーの表示コントロールとして指定された {{htmlelement("button")}} 要素を含んでいます。
+HTML は、 [popover](/ja/docs/Web/HTML/Reference/Global_attributes/popover) 属性を使用してポップオーバーとして宣言された {{htmlelement("div")}} 要素と、 [popovertarget](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性を使用してポップオーバーの表示コントロールとして指定された {{htmlelement("button")}} 要素を含んでいます。
 
 ```html-nolint
 <button popovertarget="mypopover">ポップオーバーを表示</button>

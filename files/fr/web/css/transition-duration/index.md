@@ -7,7 +7,51 @@ slug: Web/CSS/transition-duration
 
 La propriété **`transition-duration`** définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, `0s`, indique qu'il n'y aura aucune animation.
 
-{{EmbedInteractiveExample("pages/css/transition-duration.html")}}
+{{InteractiveExample("CSS Demo: transition-duration")}}
+
+```css interactive-example-choice
+transition-duration: 500ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-duration: 2s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-duration: 3s, 1s;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 Il est possible de définir plusieurs durées, chacune sera appliquée à la propriété correspondante listée par {{cssxref("transition-property")}} (qui agit comme un index des propriétés impactées par les animations). S'il y a moins de durées que d'éléments dans cette liste, l'agent utilisateur dupliquera les durées. S'il y a trop de durées, la liste sera tronquée. Dans les deux cas, la déclaration CSS sera considérée comme valide.
 

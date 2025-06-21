@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Web Components")}}
 
-**`reportValidity()`** は {{domxref("ElementInternals")}} インターフェイスのメソッドで、適用された[制約検証](/ja/docs/Web/HTML/Constraint_validation)ルールをこの要素が満たしているかどうかをチェックします。
+**`reportValidity()`** は {{domxref("ElementInternals")}} インターフェイスのメソッドで、適用された[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)ルールをこの要素が満たしているかどうかをチェックします。
 
 `reportValidity` が `false` を返した場合、キャンセル可能な [invalid イベント](/ja/docs/Web/API/HTMLInputElement/invalid_event)が要素で発生します。
 

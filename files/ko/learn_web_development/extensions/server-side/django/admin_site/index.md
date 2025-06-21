@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Admin_site
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-[LocalLibrary](/ko/docs/Learn/Server-side/Django/Tutorial_local_library_website) website의 모델을 만들었으므로, 우리는 Django Admin 을 이용해서 "실제" book data를 추가할 것입니다. 첫째로 우리는 당신에게 관리자 사이트에 모델들을 등록는 방법과, 이후 어떻게 로그인해서 데이터를 만들지를 보여줄 것입니다. 끝으로는 Admin site를 더 개선할 수 있는 방법들에 대해서 알아볼 것입니다.
+[LocalLibrary](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) website의 모델을 만들었으므로, 우리는 Django Admin 을 이용해서 "실제" book data를 추가할 것입니다. 첫째로 우리는 당신에게 관리자 사이트에 모델들을 등록는 방법과, 이후 어떻게 로그인해서 데이터를 만들지를 보여줄 것입니다. 끝으로는 Admin site를 더 개선할 수 있는 방법들에 대해서 알아볼 것입니다.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -33,7 +33,7 @@ original_slug: Learn/Server-side/Django/Admin_site
 
 장고의 관리자 어플리케이션은 모델을 사용하여 당신이 만들고, 보고, 업데이트하고, 그리고 삭제하는 데에 사용할 수 있는 사이트 영역을 자동적으로 만드는 데에 사용할 수 있습니다. 이는 당신이 시간을 많이 절약할 수 있도록 돕고, 모델을 쉽게 테스트 할 수 있게 하며 당신이 정확한 데이터를 가지고 있다는 느낌을 가질수 있도록 돕습니다. 관리자 어플리케이션은 또한 웹 사이트의 유형에 따라 production의 데이터를 관리하는 데 유용합니다. 모델 중심 접근 방식은 모델에 관한 많은 불필요한 세부 사항을 사용자들에게 노출하는, 모든 사용자들에게 가장 좋은 방식이라고 말할 수 없기 때문에, 장고 프로젝트는 internal 데이터 관리만을(즉, 관리자, 또는 당신의 조직 안에 있는 사람들을 위한 사용만을) 위해서 사용하는 것을 추천합니다.
 
-웹사이트 안에 관리자 어플리케이션을 포함시키기 위해 요구되는 모든 설정은 [created the skeleton project](/ko/docs/Learn/Server-side/Django/skeleton_website)를 생성했을 때 자동적으로 완료됩니다(실제 종속성에 대한 정보는, 여기 [Django docs here](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/)를 확인하세요). 결과적으로, 모델을 관리자 어플리케이션에 추가하기 위해서 **꼭 해야만** 하는 것은 그것들을 등록하는(register) 것입니다. 이 글의 마지막에서 모델 데이터를 더 잘 나타내기 위한 관리자 영역의 추가적인 설정을 짧게 보여드리겠습니다.
+웹사이트 안에 관리자 어플리케이션을 포함시키기 위해 요구되는 모든 설정은 [created the skeleton project](/ko/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website)를 생성했을 때 자동적으로 완료됩니다(실제 종속성에 대한 정보는, 여기 [Django docs here](https://docs.djangoproject.com/en/2.0/ref/contrib/admin/)를 확인하세요). 결과적으로, 모델을 관리자 어플리케이션에 추가하기 위해서 **꼭 해야만** 하는 것은 그것들을 등록하는(register) 것입니다. 이 글의 마지막에서 모델 데이터를 더 잘 나타내기 위한 관리자 영역의 추가적인 설정을 짧게 보여드리겠습니다.
 
 모델을 등록한 뒤로는 새로운 "superuser"를 만들어서 사이트에 로그인을 하며, 이후에는 books, 저자, book instances 그리고 장르를 만들 것입니다. 이것들은 다음 튜토리얼에서 만들기 시작할 뷰와 템플릿을 테스트할 때 유용할 것입니다.
 
@@ -58,7 +58,7 @@ admin.site.register(Genre)
 admin.site.register(BookInstance)
 ```
 
-> **참고:** **주의**: 책의 언어를 나타내기 위한 모델을 생성하는 도전과제를 수행했다면 ([see the models tutorial article](/ko/docs/Learn/Server-side/Django/Models)), 그 모델도 import 한 후 등록하세요!
+> **참고:** **주의**: 책의 언어를 나타내기 위한 모델을 생성하는 도전과제를 수행했다면 ([see the models tutorial article](/ko/docs/Learn_web_development/Extensions/Server-side/Django/Models)), 그 모델도 import 한 후 등록하세요!
 
 이것은 모델이나 모델들을 사이트에 등록(register)하는 가장 간단한 방법입니다. 관리자 사이트는 커스터마이즈 범위가 넓고, 아래에서 모델을 등록하는 다른 방법들에 관해 다르겠습니다.
 

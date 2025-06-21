@@ -9,7 +9,41 @@ l10n:
 
 La propiedad CSS **`height`** especifica la altura de un elemento. Por defecto, la propiedad define la altura del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area). Sin embargo, si {{cssxref("box-sizing")}} está configurado como `border-box`, determina la altura del [área de borde](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border_area).
 
-{{EmbedInteractiveExample("pages/css/height.html")}}
+{{InteractiveExample("CSS Demo: height")}}
+
+```css interactive-example-choice
+height: 150px;
+```
+
+```css interactive-example-choice
+height: 6em;
+```
+
+```css interactive-example-choice
+height: 75%;
+```
+
+```css interactive-example-choice
+height: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the height.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 Las propiedades {{cssxref("min-height")}} y {{cssxref("max-height")}} anulan a la propiedad `height` .
 
@@ -60,7 +94,7 @@ height: unset;
 
 Asegúrese de que los elementos definidos con `height` no se truncan y/o no oscurecen otros contenidos cuando la página se amplía para aumentar el tamaño del texto.
 
-- [MDN Entender las WCAG, explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
+- [MDN Entender las WCAG, explicaciones de la directriz 1.4](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.4_make_it_easier_for_users_to_see_and_hear_content_including_separating_foreground_from_background)
 
 - [Understanding Success Criterion 1.4.4 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-scale.html)
 

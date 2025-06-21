@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`max`** は {{domxref("HTMLInputElement")}} インターフェースのプロパティで、この {{HTMLElement("input")}} 要素の [`max`](/ja/docs/Web/HTML/Element/input#max) 属性を反映します。この属性は通常、数値または日付時刻入力の有効な最大値を定義します。この属性が明示的に設定されていない場合、`max` プロパティは空文字列となります。
+**`max`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、この {{HTMLElement("input")}} 要素の [`max`](/ja/docs/Web/HTML/Reference/Elements/input#max) 属性を反映します。この属性は通常、数値または日付時刻入力の有効な最大値を定義します。この属性が明示的に設定されていない場合、`max` プロパティは空文字列となります。
 
 ## 値
 

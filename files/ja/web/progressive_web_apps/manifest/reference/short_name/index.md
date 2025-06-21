@@ -1,43 +1,50 @@
 ---
 title: short_name
 slug: Web/Progressive_web_apps/Manifest/Reference/short_name
-original_slug: Web/Manifest/Reference/short_name
+l10n:
+  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Manifest")}}
+{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">型</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">必須</th>
-      <td>はい</td>
-    </tr>
-  </tbody>
-</table>
+`short_name` はマニフェストメンバーで、ウェブアプリケーションの短縮名を指定するために使用します。これは、完全な [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name) が利用できる空間に対して長すぎる場合に、使用されるかもしれません。
 
-_`short_name`_ メンバーは文字列で、 [`name`](/ja/docs/Web/Manifest/name) を表示するのに十分なスペースがない場合 (例えば、携帯電話のホーム画面にあるアイコンのラベルなど) に、ユーザーに表示するウェブアプリケーションの名前を表します。 `short_name` は書字方向に対応しており、 [`dir`](/ja/docs/Web/Manifest) および [`lang`](/ja/docs/Web/Manifest) の各マニフェストメンバーの値に基づいて左書きで表示されたり右書きで表示されたりします。
+## 構文
+
+```json-nolint
+/* ウェブアプリの短縮名 */
+"short_name": "TaskPlanner"
+"short_name": "RecipePantry"
+```
+
+### 値
+
+- `short_name`
+  - : ウェブアプリの [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name) の短縮版を指定する文字列です。
+
+## 解説
+
+ブラウザーは、端末のホーム画面やアプリケーションスイッチャー、その他の空間に制約のあるコンテキストなど、フルネームを表示するのに十分な空間がない場合、 `short_name` を [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name) の代わりに使用することがあります。
+
+ウェブアプリの短縮名を決定する際には、次の点に留意してください。
+
+- これは、アプリの `name` の簡潔なバージョンであるべきです。
+- 簡潔さを追求しながらも、認識可能で意味のあるものでなければなりません。
+- 空間が制約されるコンテキストでどのように現れるかを考慮してください。
+- 文化的な感受性と商標に関しては、名前付きの場合と同じガイドラインに従ってください。
 
 ## 例
 
-単純な `short_name` を左書き言語で:
+### ウェブアプリに短縮名を追加する
+
+ユーザーがハイキングの計画を立てたり、冒険のログを出力したりするのに役立つウェブアプリを考えてみましょう。 `name` は `Trail Navigator` として定義されています。 `short_name` をマニフェストに追加するには、次の手順に従います。
 
 ```json
-"name": "Awesome application",
-"short_name": "Awesome app"
+"name": "Trail Navigator",
+"short_name": "TrailNav"
 ```
 
-アラビア語で右書きの `short_name`:
-
-```json
-"dir": "rtl",
-"lang": "ar",
-"name": "تطبيق رائع",
-"short_name": "رائع"
-```
+このアプリの短い名前 `TrailNav` は簡潔で、制限のある空間コンテキストに適しています。この名前はアプリの完全な名前とのつながりを維持しており、覚えやすいものです。
 
 ## 仕様書
 
@@ -46,3 +53,8 @@ _`short_name`_ メンバーは文字列で、 [`name`](/ja/docs/Web/Manifest/nam
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- [`name`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/name) マニフェストメンバー
+- [ウェブアプリマニフェスト](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#the_web_app_manifest)で、ウェブアプリをインストール可能にする

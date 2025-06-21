@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/At-rule)全体の内容に対応します。
+**`CSSKeyframesRule`** インターフェイスは、 CSS アニメーションにおけるキーフレームの完全なセットを表すオブジェクトを記述します。これは {{cssxref("@keyframes")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)全体の内容に対応します。
 
 {{InheritanceDiagram}}
 

@@ -1,12 +1,10 @@
 ---
 title: 使用 Svelte store
 slug: Learn_web_development/Core/Frameworks_libraries/Svelte_stores
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_stores
 l10n:
   sourceCommit: e9be22eaa7416206e3f263a058f0d509a7f81f88
 ---
 
-{{LearnSidebar}}
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Svelte_reactivity_lifecycle_accessibility","Learn_web_development/Core/Frameworks_libraries/Svelte_TypeScript", "Learn_web_development/Core/Frameworks_libraries")}}
 
 在上一篇文章中，我们完成了应用程序的开发，将其组织为组件，并讨论了一些处理响应式、处理 DOM 节点以及暴露组件功能的高级技术。在本文中，我们将展示另一种在 Svelte 中处理状态管理的方式：[store](https://learn.svelte.dev/tutorial/writable-stores)。store 是全局数据存储库，用于保存值。组件可以订阅 store 并在其值发生变化时接收通知。
@@ -386,7 +384,7 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
 
 ## 使我们的 Alert 组件具有无障碍性
 
-我们的 `Alert` 组件工作得很好，但对辅助技术来说并不友好。问题在于页面上动态添加和删除的元素。虽然对于能看到页面的用户来说很明显，但对于使用辅助技术（如屏幕阅读器）的用户来说可能不太明显。为了处理这些情况，我们可以利用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)，它提供了以编程方式公开动态内容更改的方法，以便辅助技术可以检测并宣布这些更改。
+我们的 `Alert` 组件工作得很好，但对辅助技术来说并不友好。问题在于页面上动态添加和删除的元素。虽然对于能看到页面的用户来说很明显，但对于使用辅助技术（如屏幕阅读器）的用户来说可能不太明显。为了处理这些情况，我们可以利用 [ARIA 实时区域](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions)，它提供了以编程方式公开动态内容更改的方法，以便辅助技术可以检测并宣布这些更改。
 
 我们可以使用 `aria-live` 属性和礼让设置（politeness setting）来声明包含动态内容的区域，以便辅助技术可以宣布它们。礼让设置用于设置屏幕阅读器处理该区域更新的优先级。可能的设置有 `off`、`polite` 或 `assertive`。
 

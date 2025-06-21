@@ -16,7 +16,7 @@ slug: MDN/Tutorials
 
 - [HTML 入門](/zh-TW/docs/Learn_web_development/Core/Structuring_content)
   - : 此單元，為了孰悉重要的概念和語法，思考將 HTML 轉為文字, 如何建立超連鏈接, 以及如何使用 HTML 架構建立網站做好準備。
-- **[MDN HTML 元素引用](/zh-TW/docs/Web/HTML/Element)**
+- **[MDN HTML 元素引用](/zh-TW/docs/Web/HTML/Reference/Elements)**
   - : HTML 元素綜合參考。以及在不同瀏覽器的支援程度。
 - **[使用 HTML 建立一個簡易網站](https://www.theblogstarter.com/html-for-beginners/) (The Blog Starter)**
   - : 適用於 HTML 初學者的指南，其中包含常見的標籤( tag ), 其中包括利用編碼範例步驟，一步步指導建立一個基本網頁。
@@ -101,7 +101,7 @@ slug: MDN/Tutorials
   - : In JavaScript, most things are objects, from core JavaScript features like strings and arrays to the browser APIs built on top of JavaScript. You can even create your own objects to encapsulate related functions and variables into efficient packages. The object-oriented nature of JavaScript is important to understand if you want to go further with your knowledge of the language and write more efficient code, therefore we've provided this module to help you. Here we teach object theory and syntax in detail, look at how to create your own objects, and explain what JSON data is and how to work with it.
 - [Client-side web APIs](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : When writing client-side JavaScript for web sites or applications, you won't go very far before you start to use APIs — interfaces for manipulating different aspects of the browser and operating system the site is running on, or even data from other web sites or services. In this module we will explore what APIs are, and how to use some of the most common APIs you'll come across often in your development work.
-- **[A re-Introduction to JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)**
+- **[A re-Introduction to JavaScript](/zh-TW/docs/Web/JavaScript/Guide/Language_overview)**
   - : A recap of the JavaScript programming language aimed at intermediate-level developers.
 - **[Eloquent JavaScript](https://eloquentjavascript.net/)**
   - : A comprehensive guide to intermediate and advanced JavaScript methodologies.

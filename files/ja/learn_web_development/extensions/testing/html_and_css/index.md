@@ -102,7 +102,7 @@ CSS にも同様の話があります — プロパティ名が正しくつづ�
 
 認識されない HTML 要素は、ブラウザーに無名インライン要素（意味づけのないインライン要素、{{htmlelement("span")}}要素に似ています）として扱われます。例えば、それらを名前付きで参照し、CSS でスタイル設定することはできます。望むようにそれらが動作していることを確認する必要があるだけです。必要に応じて `display` プロパティを `inline` 以外に設定するなど、他の要素と同じようにスタイル設定してください。
 
-HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/HTML/Element/audio), [`<picture>`](/ja/docs/Web/HTML/Element/picture), [`<object>`](/ja/docs/Web/HTML/Element/object), [`<canvas>`](/ja/docs/Web/HTML/Element/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
+HTML の [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video), [`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio), [`<picture>`](/ja/docs/Web/HTML/Reference/Elements/picture), [`<object>`](/ja/docs/Web/HTML/Reference/Elements/object), [`<canvas>`](/ja/docs/Web/HTML/Reference/Elements/canvas) など（他にもあります）のようなより複雑な要素は、リンクされているリソースに対応していない場合に代替手段を追加するための自然なメカニズムを持っています。開始タグと閉じられたタグの間に代替コンテンツを追加することができ、対応していないブラウザーでは、効果的に外側の要素を無視して内側のコンテンツを実行します。
 
 例えば次のようなものです。
 
@@ -123,7 +123,7 @@ HTML の [`<video>`](/ja/docs/Web/HTML/Element/video), [`<audio>`](/ja/docs/Web/
 
 この例では、HTML 動画プレイヤーでも動作しない場合に動画をダウンロードできる単純リンクを記載しているので、少なくともユーザーは動画にアクセスすることができます。
 
-もう一つの例はフォーム要素です。新しい [`<input>`](/ja/docs/Web/HTML/Element/input) 型が、時間、日付、色、数字など、フォームに固有の情報を入力するために導入されたとき、ブラウザーがその新しい機能に対応していなかった場合、ブラウザーは `type="text"` の既定を使用しました。 入力型が追加されましたが、これはとても有益なものです。特にモバイルプラットフォームでは、データを入力するのに苦労しない方法を提供することが、使い勝手としてとても重要です。プラットフォームは、日付入力用のカレンダーウィジェットのように、入力型によって異なる UI ウィジェットを提供します。ブラウザーが入力型に対応していなくても、ユーザーは必要なデータを入力することができます。
+もう一つの例はフォーム要素です。新しい [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 型が、時間、日付、色、数字など、フォームに固有の情報を入力するために導入されたとき、ブラウザーがその新しい機能に対応していなかった場合、ブラウザーは `type="text"` の既定を使用しました。 入力型が追加されましたが、これはとても有益なものです。特にモバイルプラットフォームでは、データを入力するのに苦労しない方法を提供することが、使い勝手としてとても重要です。プラットフォームは、日付入力用のカレンダーウィジェットのように、入力型によって異なる UI ウィジェットを提供します。ブラウザーが入力型に対応していなくても、ユーザーは必要なデータを入力することができます。
 
 次の例は日付と時刻の入力の例です。
 
@@ -254,9 +254,9 @@ form > #date
 
 ### レスポンシブデザインの問題
 
-レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Viewport_meta_tag)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
+レスポンシブデザインとは、例えば画面の幅や向き（縦長か横長か）、解像度が異なるなど、異なる端末の形態に応じて変化するウェブレイアウトを作成することです。例えばデスクトップ用のレイアウトはモバイル端末で見るとひどいことになるので、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)を使って適切なモバイル用レイアウトを提供し、[ビューポート](/ja/docs/Web/HTML/Guides/Viewport_meta_element)を使ってそれが正しく適用されるようにする必要があります。[レスポンシブデザインのガイド](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)にそのような実践の詳細な説明があります。
 
-解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Element/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Element/img#sizes) 属性を含め、たくさんあります。
+解像度も大きな課題です。例えば、モバイル端末は大きな重い画像を必要とする可能性がデスクトップコンピューターよりも低く、インターネット接続が遅く、場合によっては帯域幅の無駄が問題になるような高価なデータプランを利用している可能性もあります。さらに、端末によって解像度の範囲があるため、小さな画像がピクセル化して現れる意味もあります。このような問題を作業するためのテクニックは、[メディアクエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Responsive_Design#メディアクエリー)からより複雑な[レスポンシブ画像テクニック](/ja/docs/Web/HTML/Guides/Responsive_images#解像度の切り替え_様々な寸法)、 {{HTMLElement('picture')}} および {{HTMLElement('img')}} 要素の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/img#sizes) 属性を含め、たくさんあります。
 
 ## ヘルプを探す
 
@@ -266,7 +266,7 @@ HTML と CSS で遭遇する課題は他にもたくさんあり、オンライ�
 
 Mozilla Developer Network (MDN) を使用するために、ほとんどの人は検索エンジンで情報を探そうとしている技術に "MDN" という単語を加えて検索します（例えば "MDN HTML video"）。MDN にはいくつかの有益な種類のコンテンツが収められています。
 
-- クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Element/video)など。
+- クライアント側ウェブ技術のブラウザーの対応情報を参照する素材、例えば [\<video> リファレンスページ](/ja/docs/Web/HTML/Reference/Elements/video)など。
 - その他の補助的なリファレンス素材、例えば[ウェブ上のメディア型と形式のガイド](/ja/docs/Web/Media/Guides/Formats)など。
 - 特定の問題を解決する有益なチュートリアル、例えば[ブラウザー横断の動画プレーヤーの作成](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/cross_browser_video_player)。
 

@@ -12,9 +12,9 @@ original_slug: Learn/JavaScript/First_steps
 
 Вам не нужно иметь никаких предварительных знаний JavaScript чтобы приступить к этому модулю, но у вас должно быть некоторое представление о HTML и CSS. Рекомендуем ознакомиться со следующими материалами, прежде чем начинать знакомство с JavaScript:
 
-- [Начало работы с Web](/ru/docs/Learn/Getting_started_with_the_web) (которое включает в себя общее [введение в Javascript](/ru/docs/Learn/Getting_started_with_the_web/JavaScript_basics))
+- [Начало работы с Web](/ru/docs/Learn_web_development/Getting_started/Your_first_website) (которое включает в себя общее [введение в Javascript](/ru/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity))
 - [Введение в HTML](/ru/docs/Learn/HTML/%D0%92%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5_%D0%B2_HTML)
-- [Введение в CSS](/ru/docs/Learn/CSS/First_steps)
+- [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics)
 
 > [!NOTE]
 > Если вы работаете на компьютере, планшете или другом устройстве, где нет возможности полноценно работать с файлами, можете использовать такие онлайн сервисы как [JSBin](https://jsbin.com/) или [Glitch](https://glitch.com/).

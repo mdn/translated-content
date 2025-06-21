@@ -23,10 +23,10 @@ CSS3 이후, CSS 명세의 범위가 엄청나게 넓어짐에 따라 여러 CSS
 ## 중요한 자료
 
 - CSS 소개
-  - : 웹 개발이 처음이시라면 [CSS 기본](/ko/docs/Learn/Getting_started_with_the_web/CSS_basics) 문서에서 CSS란
+  - : 웹 개발이 처음이시라면 [CSS 기본](/ko/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) 문서에서 CSS란
     무엇인지, 그리고 CSS의 사용법을 배워보세요.
 - CSS 자습서
-  - : MDN의 [CSS 학습지](/ko/docs/Learn/CSS)는 기초 수준부터 숙련 레벨까지, 모든 기초를 망라하는 방대한
+  - : MDN의 [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)는 기초 수준부터 숙련 레벨까지, 모든 기초를 망라하는 방대한
     자습서를 포함하고 있습니다.
 - CSS 참고서
   - : MDN의 [CSS 전체 참고서](/ko/docs/Web/CSS/Reference)는 숙련된 개발자를 위해 CSS의 모든 속성과 개념의
@@ -38,36 +38,36 @@ CSS3 이후, CSS 명세의 범위가 엄청나게 넓어짐에 따라 여러 CSS
 
 ## 자습서
 
-MDN [CSS 학습지](/ko/docs/Learn/CSS)는 CSS를 처음부터 알려주는 모듈로 구성되어 있습니다. 사전 지식도
+MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)는 CSS를 처음부터 알려주는 모듈로 구성되어 있습니다. 사전 지식도
 필요하지 않습니다.
 
-- [CSS 첫걸음](/ko/docs/Learn/CSS/First_steps)
+- [CSS 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)
   - : CSS(Cascading Style Sheets)는 웹 페이지에 스타일과 레이아웃을 적용할 때 사용합니다. 예시를 몇 가지 들자면 글꼴,
     색상, 크기를 조절하고, 콘텐츠의 간격을 조정하고, 페이지를 여러개의 열로 나누고, 애니메이션 등 장식을 추가할 수도
     있습니다. 이 모듈에서는 CSS의 기본적인 작동 원리와 구문의 생김새, HTML에 실제로 적용하는 법을 배우면서 다음 과정으로
     가는 길을 닦습니다.
-- [CSS의 구성 블록](/ko/docs/Learn/CSS/Building_blocks)
+- [CSS의 구성 블록](/ko/docs/Learn_web_development/Core/Styling_basics)
 
-  - : 이 모듈은 [CSS 첫걸음](/ko/docs/Learn/CSS/First_steps)이 끝난 곳부터 시작합니다. 이제 언어와 구문에
+  - : 이 모듈은 [CSS 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)이 끝난 곳부터 시작합니다. 이제 언어와 구문에
     익숙해졌고, 기본적인 사용법도 익혀봤으니 약간 더 깊게 들어갈 차례입니다. 이 모듈에서는 종속과 상속, 사용할 수 있는
     모든 선택자 유형, 단위와 크기, 배경과 테두리 스타일, 디버깅 등등 많은 것을 알아봅니다.
 
     여기의 목표는 여러분이 훌륭한 CSS를 작성할 수 있도록 도구를 제공하고,
-    [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)나
-    [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout)처럼 더 상세한 주제로 들어가기 전에 알고 있어야 할 필수
+    [텍스트 스타일링](/ko/docs/Learn_web_development/Core/Text_styling)나
+    [CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout)처럼 더 상세한 주제로 들어가기 전에 알고 있어야 할 필수
     이론을 익히는 것입니다.
 
-- [텍스트 스타일링](/ko/docs/Learn/CSS/Styling_text)
+- [텍스트 스타일링](/ko/docs/Learn_web_development/Core/Text_styling)
   - : CSS 언어 기초를 다뤘으니, 다음 주제는 대표적인 CSS의 영역인 텍스트 스타일링에 집중합니다. 여기서는 글꼴 설정, 굵기,
     기울임꼴, 행간과 자간, 그림자 등 다양한 텍스트 기능을 배웁니다. 그 후 사용자 지정 글꼴을 페이지에 적용하는 법,
     그리고 리스트와 링크 스타일로 모듈을 마무리합니다.
-- [CSS 레이아웃](/ko/docs/Learn/CSS/CSS_layout)
+- [CSS 레이아웃](/ko/docs/Learn_web_development/Core/CSS_layout)
   - : 여기까지 왔으면 이미 CSS 기초, 텍스트 스타일링, 그리고 콘텐츠가 들어갈 박스를 조작하고 스타일을 적용하는 법을
     다뤘으니, 이번엔 박스를 뷰포트나 다른 박스에 상대적인 위치에 원하는 대로 배치하는 법을 알아봅니다. 필요한 사전
     지식은 모두 학습했으니 서로 다른 `display` 설정과 플렉스박스, CSS 그리드처럼 최신 레이아웃 방식, 위치
     조정처럼 CSS 레이아웃을 더 자세히 살펴보겠습니다. 마지막으로, 오래됐지만 여전히 알고 있으면 도움이 될만한 레이아웃
     방법도 몇 가지 둘러봅니다.
-- [일반적인 CSS 문제 해결하기](/ko/docs/Learn/CSS/Howto)
+- [일반적인 CSS 문제 해결하기](/ko/docs/Learn_web_development/Howto/Solve_CSS_problems)
   - : 이 모듈은 웹 페이지를 만들 때의 일반적인 문제를 CSS를 사용해서 해결하는 법을 설명합니다.
 
 ## 참고서

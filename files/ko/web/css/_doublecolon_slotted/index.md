@@ -11,7 +11,65 @@ l10n:
 
 이는 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM) 내에 배치된 CSS 내에서만 동작합니다. 이 선택자는 슬롯에 배치된 텍스트 노트를 선택하지 않고, 실제 요소만을 대상으로 한다는 점을 참고하세요.
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-slotted.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::slotted()", "tabbed-shorter")}}
+
+```css interactive-example
+/* This CSS is being applied inside the shadow DOM. */
+
+::slotted(.content) {
+  background-color: aqua;
+}
+
+h2 ::slotted(span) {
+  background: silver;
+}
+```
+
+```html interactive-example
+<template id="card-template">
+  <div>
+    <h2><slot name="caption">title goes here</slot></h2>
+    <slot name="content">content goes here</slot>
+  </div>
+</template>
+
+<my-card>
+  <span slot="caption">Error</span>
+  <p class="content" slot="content">Build failed!</p>
+</my-card>
+```
+
+```js interactive-example
+customElements.define(
+  "my-card",
+  class extends HTMLElement {
+    constructor() {
+      super();
+
+      const template = document.getElementById("card-template");
+      const shadow = this.attachShadow({ mode: "open" });
+      shadow.appendChild(template.content.cloneNode(true));
+
+      const elementStyle = document.createElement("style");
+      elementStyle.textContent = `
+        div {
+          width: 200px;
+          border: 2px dotted red;
+          border-radius: 4px;
+        }`;
+      shadow.appendChild(elementStyle);
+
+      const cssTab = document.querySelector("#css-output");
+      const editorStyle = document.createElement("style");
+      editorStyle.textContent = cssTab.textContent;
+      shadow.appendChild(editorStyle);
+      cssTab.addEventListener("change", () => {
+        editorStyle.textContent = cssTab.textContent;
+      });
+    }
+  },
+);
+```
 
 ```css
 /* 슬롯 내에 위치한 모든 요소를 선택합니다. */

@@ -2,7 +2,7 @@
 title: ウェブの閲覧
 slug: Learn_web_development/Getting_started/Environment_setup/Browsing_the_web
 l10n:
-  sourceCommit: dedba82f11d06e50a2742ed285a321820baf4977
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
 {{LearnSidebar}}

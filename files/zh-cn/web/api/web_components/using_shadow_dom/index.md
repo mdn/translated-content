@@ -68,7 +68,7 @@ _影子_ DOM 允许将隐藏的 DOM 树附加到常规 DOM 树中的元素上—
 
 ## 创建一个影子 DOM
 
-下面的页面包含两个元素，一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性为 `"host"` 的 {{htmlelement("div")}} 元素，以及一个包含了一些文本的 {{htmlelement("span")}} 元素：
+下面的页面包含两个元素，一个 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性为 `"host"` 的 {{htmlelement("div")}} 元素，以及一个包含了一些文本的 {{htmlelement("span")}} 元素：
 
 ```html
 <div id="host"></div>

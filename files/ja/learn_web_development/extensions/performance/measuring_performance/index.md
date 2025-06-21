@@ -52,7 +52,7 @@ l10n:
 
 [PerformanceObserver API](/ja/docs/Web/API/PerformanceObserver) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
 
-この記事ではこれらの API に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ API を使う例についてより深く知りたい場合は[ナビゲーションとタイミング](/ja/docs/Web/Performance/Navigation_and_resource_timings)の記事を参照してください。
+この記事ではこれらの API に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ API を使う例についてより深く知りたい場合は[ナビゲーションとタイミング](/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings)の記事を参照してください。
 
 ## ツールと指標
 

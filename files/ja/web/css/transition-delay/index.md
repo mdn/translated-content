@@ -9,7 +9,51 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
-{{EmbedInteractiveExample("pages/css/transition-delay.html")}}
+{{InteractiveExample("CSS Demo: transition-delay")}}
+
+```css interactive-example-choice
+transition-delay: 250ms;
+transition-property: margin-right;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: background-color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s;
+transition-property: margin-right, color;
+```
+
+```css interactive-example-choice
+transition-delay: 1s, 250ms;
+transition-property: margin-right, color;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 待ち時間はゼロ、正の数、負の数で指定します。
 

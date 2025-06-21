@@ -9,7 +9,46 @@ l10n:
 
 **`border-right-color`** は CSS のプロパティで、要素の右側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-right")}} でも設定することができます。
 
-{{EmbedInteractiveExample("pages/css/border-right-color.html")}}
+{{InteractiveExample("CSS Demo: border-right-color")}}
+
+```css interactive-example-choice
+border-right-color: red;
+```
+
+```css interactive-example-choice
+border-right-color: #32a1ce;
+```
+
+```css interactive-example-choice
+border-right-color: rgb(170, 50, 220, 0.6);
+```
+
+```css interactive-example-choice
+border-right-color: hsl(60, 90%, 50%, 0.8);
+```
+
+```css interactive-example-choice
+border-right-color: transparent;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box with a border around it.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #eee;
+  color: #000;
+  border: 0.75em solid;
+  padding: 0.75em;
+  width: 80%;
+  height: 100px;
+}
+```
 
 ## 構文
 

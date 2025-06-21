@@ -5,7 +5,7 @@ slug: Web/URI
 
 {{QuickLinksWithSubpages("/ru/docs/Web/URI")}}
 
-**Uniform Resource Identifiers (URI)** используются для идентификации «ресурсов» в Интернете. Обычно они используются в качестве целей запросов [HTTP](/ru/docs/Web/HTTP), в таком случае URI представляет местоположение физического ресурса, такого как документ, фотография, двоичные данные и т.д. URI также могут использоваться для других действий, например, открытия почтового клиента, отправки текстовых сообщений или выполнение JavaScript, при использовании в других местах, таких как атрибут [`href`](/ru/docs/Web/HTML/Element/a#href) HTML-ссылки `<a>`.
+**Uniform Resource Identifiers (URI)** используются для идентификации «ресурсов» в Интернете. Обычно они используются в качестве целей запросов [HTTP](/ru/docs/Web/HTTP), в таком случае URI представляет местоположение физического ресурса, такого как документ, фотография, двоичные данные и т.д. URI также могут использоваться для других действий, например, открытия почтового клиента, отправки текстовых сообщений или выполнение JavaScript, при использовании в других местах, таких как атрибут [`href`](/ru/docs/Web/HTML/Reference/Elements/a#href) HTML-ссылки `<a>`.
 
 ## URL и URN
 
@@ -50,7 +50,7 @@ urn:ietf:rfc:7230
 
 | Схема       | Описание                                                                   |
 | ----------- | -------------------------------------------------------------------------- |
-| data        | [Data URIs](/ru/docs/Web/URI/Schemes/data)                                 |
+| data        | [Data URIs](/ru/docs/Web/URI/Reference/Schemes/data)                       |
 | file        | Доступ к файлам на локальном компьютере                                    |
 | ftp         | [File Transfer Protocol](/ru/docs/Glossary/FTP) (протокол передачи файлов) |
 | http/https  | [Hyper text transfer protocol (Secure)](/ru/docs/Glossary/HTTP)            |
@@ -111,5 +111,5 @@ mailto:help@supercyberhelpdesk.info
 
 ## Читайте также
 
-- [Что такое URL?](/ru/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
+- [Что такое URL?](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)
 - [Список URI-схем IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)

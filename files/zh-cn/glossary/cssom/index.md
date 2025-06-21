@@ -11,4 +11,4 @@ l10n:
 
 ## 参见
 
-- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/How_browsers_work)
+- [渲染页面：浏览器的工作原理](/zh-CN/docs/Web/Performance/Guides/How_browsers_work)

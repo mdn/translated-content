@@ -9,7 +9,33 @@ l10n:
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
 
-{{EmbedInteractiveExample("pages/css/text-underline-offset.html")}}
+{{InteractiveExample("CSS Demo: text-underline-offset")}}
+
+```css interactive-example-choice
+text-underline-offset: auto;
+```
+
+```css interactive-example-choice
+text-underline-offset: 8px;
+```
+
+```css interactive-example-choice
+text-underline-offset: -0.5rem;
+```
+
+```html interactive-example
+<section id="default-example">
+  <p id="example-element">And after all we are only ordinary</p>
+</section>
+```
+
+```css interactive-example
+p {
+  font: 1.5em sans-serif;
+  text-decoration-line: underline;
+  text-decoration-color: #ff0000;
+}
+```
 
 `text-underline-offset` は {{cssxref('text-decoration')}} の一括指定の一部ではありません。一つの要素が複数の `text-decoration` による線を持つため、 `text-underline-offset` は下線のみに影響し、 `overline` や `line-through` などの他の装飾線には影響**しません**。
 

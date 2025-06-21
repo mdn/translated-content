@@ -93,7 +93,7 @@ Para incluir suporte ao `Object.entries` em ambientes mais antigos, você pode a
 
 ## Veja também
 
-- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerabilidade e posse de propriedades](/pt-BR/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}} {{experimental_inline}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

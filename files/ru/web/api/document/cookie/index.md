@@ -46,7 +46,7 @@ document.cookie = newCookie;
     - See {{jsxref("Date.toUTCString()")}} for help formatting this value.
 
   - `;secure` Cookie to only be transmitted over secure protocol as https. Before Chrome 52, this flag could appear with cookies from http domains.
-  - `;samesite` [SameSite](/ru/docs/Web/HTTP/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are `lax` or `strict`.
+  - `;samesite` [SameSite](/ru/docs/Web/HTTP/Guides/Cookies#samesite_cookies) prevents the browser from sending this cookie along with cross-site requests. Possible values for the flag are `lax` or `strict`.
 
     - The `strict` value will prevent the cookie from being sent by the browser to the target site in all cross-site browsing context, even when following a regular link.
     - The `lax` value will only send cookies for TOP LEVEL navigation GET requests. This is sufficient for user tracking, but it will prevent many CSRF attacks.
@@ -361,7 +361,7 @@ executeOnce(alertSomething, null, "Hello world!!!!", "alert_something");
 
 ## Смотрите также
 
-- [HTTP cookies](/ru/docs/Web/HTTP/Cookies)
+- [HTTP cookies](/ru/docs/Web/HTTP/Guides/Cookies)
 - [DOM Storage](/ru/docs/Web/API/Web_Storage_API)
 - [`URLUtils.pathname`](/ru/docs/Web/API/URLUtils.pathname)
 - {{jsxref("Date.toUTCString()")}}

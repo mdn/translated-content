@@ -17,13 +17,13 @@ slug: Web/CSS/CSS_positioned_layout/Understanding_z-index
 
 本文将通过一些简单的例子来解释这些规则。
 
-1. [不含 z-index 的堆叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)：默认的摆放规则，即不含有 z-index 属性时
-2. [层叠与浮动](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)：浮动元素的处理方式
-3. [添加 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)：使用 z-index 来改变堆放顺序
-4. [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)：内容堆放注意事项
-5. [堆叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)：在两层元素的第二层上使用 z-index
-6. [堆叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)：在两层元素的所有层上使用 z-index
-7. [堆叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)：在三层元素的第二层上使用 z-index
+1. [不含 z-index 的堆叠](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)：默认的摆放规则，即不含有 z-index 属性时
+2. [层叠与浮动](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)：浮动元素的处理方式
+3. [添加 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)：使用 z-index 来改变堆放顺序
+4. [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)：内容堆放注意事项
+5. [堆叠上下文示例 1](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)：在两层元素的第二层上使用 z-index
+6. [堆叠上下文示例 2](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)：在两层元素的所有层上使用 z-index
+7. [堆叠上下文示例 3](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)：在三层元素的第二层上使用 z-index
 
 ## 原始文档信息
 

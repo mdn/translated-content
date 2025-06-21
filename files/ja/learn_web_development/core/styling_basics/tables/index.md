@@ -85,7 +85,7 @@ HTML の表をスタイル設定することは、世界で最も魅力的な仕
 </table>
 ```
 
-[`scope`](/ja/docs/Web/HTML/Element/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません ([punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) でライブを見る)。
+[`scope`](/ja/docs/Web/HTML/Reference/Elements/th#scope)、{{htmlelement("caption")}}、{{htmlelement("thead")}}、{{htmlelement("tbody")}} などの機能のおかげで、表はうまくマークアップされ、簡単に装飾を整えられ、アクセスしやすくなりました。 残念なことに、画面に表示したときは見栄えがよくありません ([punk-bands-unstyled.html](https://mdn.github.io/learning-area/css/styling-boxes/styling-tables/punk-bands-unstyled.html) でライブを見る)。
 
 ![イギリスの有名パンクバンドの概要を表示させた無粋な表。](table-unstyled.png)
 
@@ -309,7 +309,7 @@ caption {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 表](/ja/docs/Learn_web_development/Core/Styling_basics/Tables_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 表](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables)を見てください。
 
 ## まとめ
 

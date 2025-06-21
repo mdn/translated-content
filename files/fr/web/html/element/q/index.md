@@ -7,7 +7,23 @@ slug: Web/HTML/Element/q
 
 L'élément HTML **`<q>`** indique que le texte qu'il contient est une citation en incise. La plupart des navigateurs modernes entoure le texte de cet élément avec des marques de citation. Cet élément est destiné aux citations courtes qui ne nécessitent pas de sauts de paragraphe. Pour les plus grandes citations, on utilisera l'élément {{HTMLElement("blockquote")}}.
 
-{{EmbedInteractiveExample("pages/tabbed/q.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<p>
+  When Dave asks HAL to open the pod bay door, HAL answers:
+  <q
+    cite="https://www.imdb.com/title/tt0062622/quotes/?item=qt0396921&ref_=ext_shr_lnk">
+    I'm sorry, Dave. I'm afraid I can't do that.
+  </q>
+</p>
+```
+
+```css interactive-example
+q {
+  font-style: italic;
+}
+```
 
 > [!NOTE]
 > La plupart des navigateurs récents ajoutent automatiquement des guillemets autours du contenu d'un élément `<q>` mais il peut être nécessaire d'ajouter une règle CSS pour les ajouter dans les anciens navigateurs.

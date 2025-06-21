@@ -7,9 +7,43 @@ slug: Web/CSS/transform
 
 La propiedad CSS `transform` te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
 
-{{EmbedInteractiveExample("pages/css/transform.html")}}
+{{InteractiveExample("CSS Demo: transform")}}
 
-Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
+```css interactive-example-choice
+transform: matrix(1, 2, 3, 4, 5, 6);
+```
+
+```css interactive-example-choice
+transform: translate(120px, 50%);
+```
+
+```css interactive-example-choice
+transform: scale(2, 0.5);
+```
+
+```css interactive-example-choice
+transform: rotate(0.5turn);
+```
+
+```css interactive-example-choice
+transform: skew(30deg, 20deg);
+```
+
+```css interactive-example-choice
+transform: scale(0.5) translate(-100%, -100%);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
+
+Si la propiedad tiene un valor diferente a none, se creará un [contexto de pila](/es/docs/Web/CSS/CSS_positioned_layout/Stacking_context). En ese caso, el objeto actuará como un bloque de contención para los elementos con "position: fixed" que contenga.
 
 ## Síntaxis
 
@@ -102,7 +136,7 @@ Específica una matriz de transformación 2D compuesta por seis valores a especi
 
 #### Información adicional
 
-- [Ejemplo de transformación general de SVG](/es/docs/Web/SVG/Attribute/transform#general_transformation)
+- [Ejemplo de transformación general de SVG](/es/docs/Web/SVG/Reference/Attribute/transform#general_transformation)
 - [Ejemplos de transformación lineal de matrices](http://en.wikipedia.org/wiki/Linear_transformation#Examples_of_linear_transformation_matrices) Wikipedia
 - [Transformación de coordenadas de matrices](http://www.mathamazement.com/Lessons/Pre-Calculus/08_Matrices-and-Determinants/coordinate-transformation-matrices.html)mathamazement.com
 - [Filtro matriz de Microsoft](<http://msdn.microsoft.com/en-us/library/ms533014(VS.85,loband).aspx>) MSDN

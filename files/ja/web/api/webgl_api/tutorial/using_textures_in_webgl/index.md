@@ -2,7 +2,7 @@
 title: WebGL でのテクスチャの使用
 slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
 l10n:
-  sourceCommit: 5a651fade3a92110761d2fb613d0e4f6da47826e
+  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
 ---
 
 {{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
@@ -14,7 +14,7 @@ l10n:
 始めに、テクスチャを読み込むコードを追加します。今回は単一のテクスチャを用いて、そのテクスチャを立方体の全 6 面に貼り付けますが、テクスチャがいくつある場合でも同じ方法が適用できます。
 
 > [!NOTE]
-> テクスチャの読み込みは[クロスドメインのルール](/ja/docs/Web/HTTP/CORS)に従うことへの注意が重要です。すなわち、コンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。詳しくは以下の[ドメインをまたぐテクスチャ](#ドメインをまたぐテクスチャ)を参照してください。
+> テクスチャの読み込みは[クロスドメインのルール](/ja/docs/Web/HTTP/Guides/CORS)に従うことへの注意が重要です。すなわち、コンテンツが CORS で認可されているサイトからのみ、テクスチャを読み込むことができます。詳しくは以下の[ドメインをまたぐテクスチャ](#ドメインをまたぐテクスチャ)を参照してください。
 
 > [!NOTE]
 > これら 2 つの関数を "webgl-demo.js" スクリプトに追加しましょう。
@@ -108,13 +108,13 @@ gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
 gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 ```
 
-繰り返しますが、これらの引数を付加すると、 WebGL デバイスは自動的に（対応する最大サイズまでの）任意の解像度のテクスチャを受け入れます。上記の構成を行わないと、 WebGL は NPOT テクスチャのすべてのサンプルを、透明な黒 (`rgba(0,0,0,0)`) を返して失敗させる必要があります。
+繰り返しますが、これらの引数を付加すると、 WebGL デバイスは自動的に（対応する最大サイズまでの）任意の解像度のテクスチャを受け入れます。上記の構成を行わないと、 WebGL は NPOT テクスチャのすべてのサンプルを、透明な黒 (`rgb(0 0 0 / 0%)`) を返して失敗させる必要があります。
 
 画像を読み込むために、 `main()` 関数内に `loadTexture()` 関数の呼び出しを追加します。これは `initBuffers(gl)` 呼び出しの後に追加できます。
 
 しかし、ブラウザーは読み込まれたイメージのピクセルを上から下、つまり左上の角から順にコピーするのに対し、 WebGL はピクセルを下から上、つまり左下の角から順にコピーするという点に注意してください。（詳細については、 [Why is my WebGL texture upside-down?](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/) を参照してください。）
 
-そのため、レンダリング時に画像テクスチャが間違った方向になるのを防ぐために、 [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して呼び出す必要があります。
+したがって、レンダリング時に結果の画像テクスチャの方向が間違って表示されないようにするには、 `gl.UNPACK_FLIP_Y_WEBGL` 引数を `true` に設定して [`pixelStorei()`](/ja/docs/Web/API/WebGLRenderingContext/pixelStorei) を呼び出す必要があります。これにより、ピクセルが WebGL が期待する下から上への順序に反転されます。
 
 > [!NOTE]
 > 以下のコードを `main()` 関数の `initBuffers()` を呼び出した直後に追加してください。
@@ -127,7 +127,7 @@ gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
 ```
 
 > [!NOTE]
-> 最後に、 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
+> 最後に、[cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードしましょう。
 
 ## テクスチャを表面にマッピングする
 
@@ -222,7 +222,7 @@ const vsSource = `
   `;
 ```
 
-ここでの重要な変更は、頂点の色を取得する代わりに、テクスチャ座標を取得して頂点シェーダーに渡していることです。これにより、頂点に対応するテクスチャ内の位置を示します。
+ここでの重要な変更は、頂点の色を取得する代わりに、テクスチャ座標を取得してフラグメントシェーダーに渡していることです。これにより、頂点に対応するテクスチャ内の位置を示します。
 
 ### フラグメントシェーダー
 
@@ -236,21 +236,23 @@ const fsSource = `
     varying highp vec2 vTextureCoord;
 
     uniform sampler2D uSampler;
-    out vec4 fragColor;
 
     void main(void) {
-      fragColor = texture(uSampler, vTextureCoord);
+      gl_FragColor = texture2D(uSampler, vTextureCoord);
     }
   `;
 ```
 
-フラグメントの色に色の値を割り当てる代わりに、フラグメントの色を {{Glossary("texel")}} （つまり、テクスチャ内のピクセル）を取得することで、色と同様に頂点間で補間される `vTextureCoord` の値に基づいて計算するようにします。
+フラグメントの色に色の値を割り当てる代わりに、フラグメントの色を {{Glossary("Texel")}} （つまり、テクスチャ内のピクセル）を取得することで、色と同様に頂点間で補間される `vTextureCoord` の値に基づいて計算するようにします。
 
 ### 属性とユニフォームの位置
 
 属性を変更し、ユニフォームを追加したので、それらの位置を調べていく必要があります。
 
-> **メモ:** `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> `main()` 関数の `programInfo` 宣言を次のように更新しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 const programInfo = {
@@ -304,7 +306,10 @@ setTextureAttribute(gl, buffers, programInfo);
 
 次に、面にマッピングするテクスチャを指定するコードを追加します。
 
-> **メモ:** `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+<!-- prettier-ignore-start -->
+> [!NOTE]
+> `drawScene()` 関数の中で、 `gl.uniformMatrix4fv()` を 2 回呼び出した直後に、以下のコードを追加しましょう。
+<!-- prettier-ignore-end -->
 
 ```js
 // テクスチャユニット 0 に影響を与えたいことを WebGL に伝える
@@ -321,13 +326,15 @@ WebGL は最低 8 つのテクスチャユニットを提供します。その�
 
 最後に、`drawScene()` 関数の引数として `texture` を追加します。
 
-> **メモ:** `drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
+`drawScene()` 関数の宣言を更新し、新しい引数を追加しましょう。
 
-```js-nolint
+```js
 function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+  // …
+}
 ```
 
-> **メモ:** `main()` 関数の `drawScene()` を呼び出す場所を更新しましょう。
+`main()` 関数の `drawScene()` を呼び出す場所を更新しましょう。
 
 ```js
 drawScene(gl, programInfo, buffers, texture, cubeRotation);
@@ -341,9 +348,9 @@ drawScene(gl, programInfo, buffers, texture, cubeRotation);
 
 ## ドメインをまたぐテクスチャ
 
-WebGL のテクスチャの読み込みは、ドメイン間アクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、 CORS で許可を得なければなりません。 CORS について詳しくは、 [HTTP アクセス制御](/ja/docs/Web/HTTP/CORS) をご覧ください。
+WebGL のテクスチャの読み込みは、ドメイン間アクセス制御に従います。コンテンツで他のドメインからテクスチャを読み込むためには、 CORS で許可を得なければなりません。 CORS について詳しくは、 [HTTP アクセス制御](/ja/docs/Web/HTTP/Guides/CORS) をご覧ください。
 
-WebGL は安全なコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
+WebGL は保護されたコンテキストからテクスチャを読み込む必要があるため、 WebGL で `file:///` の URL から読み込んだテクスチャを使用することはできません。つまり、コードのテストと展開には、安全なウェブサーバーが必要だということです。ローカルでテストする場合は[ローカルテストサーバーを用意するには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)を参照してください。
 
 CORS で許可された画像を WebGL のテクスチャとして使用する方法の説明を、[こちらの hacks.mozilla.org の記事](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)に掲載しています。
 

@@ -7,7 +7,42 @@ slug: Web/CSS/width
 
 La propriété **`width`** permet de définir la largeur de la [boîte du contenu](/fr/docs/Learn/CSS/Building_blocks/The_box_model) d'un élément. Par défaut, sa valeur est **`auto`**, c'est à dire la largeur automatiquement calculée de son contenu. Si {{cssxref("box-sizing")}} vaut `border-box`, la valeur appliquée incluera les dimensions de la boîte d'encadrement (_border_) et de la boîte de remplissage (_padding_).
 
-{{EmbedInteractiveExample("pages/css/width.html")}}
+{{InteractiveExample("CSS Demo: width")}}
+
+```css interactive-example-choice
+width: 150px;
+```
+
+```css interactive-example-choice
+width: 20em;
+```
+
+```css interactive-example-choice
+width: 75%;
+```
+
+```css interactive-example-choice
+width: auto;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    This is a box where you can change the width.
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  display: flex;
+  flex-direction: column;
+  background-color: #5b6dcd;
+  height: 80%;
+  justify-content: center;
+  color: #ffffff;
+}
+```
 
 > [!NOTE]
 > Les propriétés {{cssxref("min-width")}} et {{cssxref("max-width")}} permettent de surcharger {{cssxref("width")}}.

@@ -12,7 +12,7 @@ slug: Web/CSS/border-top-right-radius
 一个背景通常以一张图片或者颜色开始，在边框处被剪切，更甚至就是一个圆形；剪切的额外定位通过一个 CSS 属性"background-clip"来定义。
 
 > [!NOTE]
-> 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](/zh-CN/docs/CSS/Shorthand_properties)重新设置成它的初始值。
+> 在 border-top-radius-radiu 属性值之后，如果作用在一个元素上没有设置“border-radius”简写属性，那么这个属性值就会通过[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)重新设置成它的初始值。
 
 ## 语法
 

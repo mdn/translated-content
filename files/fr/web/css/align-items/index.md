@@ -11,7 +11,51 @@ La propriété `align-self` définit elle l'alignement d'un objet au sein de son
 
 L'exemple qui suit illustre le fonctionnement des différentes valeurs de `align-items` au sein d'une grile.
 
-{{EmbedInteractiveExample("pages/css/align-items.html")}}
+{{InteractiveExample("CSS Demo: align-items")}}
+
+```css interactive-example-choice
+align-items: stretch;
+```
+
+```css interactive-example-choice
+align-items: center;
+```
+
+```css interactive-example-choice
+align-items: start;
+```
+
+```css interactive-example-choice
+align-items: end;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="example-container">
+    <div class="transition-all" id="example-element">
+      <div>One</div>
+      <div>Two</div>
+      <div>Three</div>
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 1px solid #c5c5c5;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 80px;
+  grid-gap: 10px;
+}
+
+#example-element > div {
+  background-color: rgba(0, 0, 255, 0.2);
+  border: 3px solid blue;
+}
+```
 
 À l'heure actuelle, cette propriété est prise en charge pour les dispositions _Flexbox_ et grilles CSS. Pour les boîtes flexibles, cela contrôle l'alignement des objets sur l'axe secondaire et pour les grilles, cela contrôle l'alignement sur l'axe en bloc.
 

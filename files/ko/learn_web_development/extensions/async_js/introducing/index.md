@@ -256,7 +256,7 @@ document.querySelector("#reload").addEventListener("click", () => {
 
 {{EmbedLiveSample("Event handlers", 600, 120)}}
 
-[이전에 접한 이벤트 처리기](/ko/docs/Learn/JavaScript/Building_blocks/Events)와 유사하지만, 이벤트가 버튼 클릭과 같은 사용자 행동이 아닌 어떤 객체의 상태 변화라는 점이 다릅니다.
+[이전에 접한 이벤트 처리기](/ko/docs/Learn_web_development/Core/Scripting/Events)와 유사하지만, 이벤트가 버튼 클릭과 같은 사용자 행동이 아닌 어떤 객체의 상태 변화라는 점이 다릅니다.
 
 ## 콜백
 

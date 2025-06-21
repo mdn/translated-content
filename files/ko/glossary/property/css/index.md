@@ -27,6 +27,6 @@ div {
 
 ## 같이 보기
 
-- [CSS 배우기](/ko/docs/Learn/CSS)
+- [CSS 배우기](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1)
 - [MDN에서 CSS 참조](/ko/docs/Web/CSS/Reference)
 - [CSS 작업 그룹의 현재 작업](https://www.w3.org/Style/CSS/current-work)

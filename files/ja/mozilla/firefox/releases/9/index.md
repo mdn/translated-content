@@ -11,19 +11,19 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### HTML
 
-- [`<li>`](/ja/docs/Web/HTML/Element/li) 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
-- [`<audio>`](/ja/docs/Web/HTML/Element/audio) と [`<video>`](/ja/docs/Web/HTML/Element/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) できるようになりました。
-- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language)するようになりました。
-- Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Element/input) 要素`のときに`、ユーザーがブラウザーからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
+- [`<li>`](/ja/docs/Web/HTML/Reference/Elements/li) 要素の `value` 属性が負の値を取れるようになりました。これは HTML5 仕様に基づくもので、HTML5 以前は 0 に変換されていました。
+- [`<audio>`](/ja/docs/Web/HTML/Reference/Elements/audio) と [`<video>`](/ja/docs/Web/HTML/Reference/Elements/video) 要素を用いるときのメディアの URI において、[メディアの開始時間と終了時間を指定](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) できるようになりました。
+- [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素と [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) 要素が、スペルチェッカーの実行において [`lang` 属性の値を加味](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language)するようになりました。
+- Android 版 Firefox において、 `type="file"` と `accept="image/*" を指定している`[`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素`のときに`、ユーザーがブラウザーからアプリを切り替えることなく電話のカメラを用いて写真を撮れるようになりました。
 - Windows Vista スタイル PNG ICO イメージがサポートされるようになりました。
-- CORS が許可されているときに、CORS アクセスを要求するために [`crossorigin`](/ja/docs/Web/HTML/Attributes/crossorigin) 属性 を用いた画像を描いても、不正に [Canvas を制限状態に](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)しないようになりました。
-- [`rowspan`](/ja/docs/Web/HTML/Element/td#attr-rowspan) 属性に指定できる値の最大値が 8190 から 65,534 になりました。
+- CORS が許可されているときに、CORS アクセスを要求するために [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性 を用いた画像を描いても、不正に [Canvas を制限状態に](/ja/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)しないようになりました。
+- [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#attr-rowspan) 属性に指定できる値の最大値が 8190 から 65,534 になりました。
 
 ### CSS
 
 - [`font-stretch`](/ja/docs/Web/CSS/font-stretch) プロパティがサポートされました。
 - [`columns`](/ja/docs/Web/CSS/columns) プロパティが [-moz](/ja/docs/Glossary/Vendor_Prefix) 接頭辞付きでサポートされました。このプロパティは [`column-width`](/ja/docs/Web/CSS/column-width) と [`column-count`](/ja/docs/Web/CSS/column-count) をまとめて記述する短縮形プロパティです。
-- [`<link>`](/ja/docs/Web/HTML/Element/link) 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/Web/HTML/Element/link#stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
+- [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素を用いて取り込まれたスタイルシートが完全にロードされてパースされたとき (しかしまだドキュメントに適用されていない状態)、[`load` イベント](/ja/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) が発生するようになりました。また、スタイルシートの処理においてエラーが起きた場合、`error` イベントが発生します。
 - [`text-overflow`](/ja/docs/Web/CSS/text-overflow) 向けの 2 つの値を指定できる新しい構文を用いて、左端と右端の両方のオーバフロー設定を指定できるようになりました。
 
 ### DOM
@@ -36,7 +36,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - [`Node.contains()`](/ja/docs/Web/API/Node/contains) メソッドがサポートされました。このメソッドによって、あるノードが別のノードの子孫であるかを調べられます。
 - [`Node.parentElement`](/ja/docs/Web/API/Node/parentElement) 属性が実装されました。このメソッドは DOM ノードの親 [`Element`](/ja/docs/Web/API/Element) 、または、親が要素ではない場合は `null` を返します。
 - DOM Level 3 [Composition イベント](/ja/docs/Web/API/CompositionEvent) がサポートされました。
-- [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Element/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
+- [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
 - [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported) メソッドが実装されました。
 - 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9)
 - 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/Glossary/JSON) 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
@@ -53,16 +53,16 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 
 ### MathML
 
-- [`<maction>`](/ja/docs/Web/MathML/Element/maction) 要素の `actiontype` 属性における非推奨な値 `restyle` が削除されました。
-- まだ要素自体はサポートされていませんが、[`<mlabeledtr>`](/ja/docs/Web/MathML/Element/mlabeledtr) 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は [バグ 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) を参照してください。
+- [`<maction>`](/ja/docs/Web/MathML/Reference/Element/maction) 要素の `actiontype` 属性における非推奨な値 `restyle` が削除されました。
+- まだ要素自体はサポートされていませんが、[`<mlabeledtr>`](/ja/docs/Web/MathML/Reference/Element/mlabeledtr) 要素を用いても、描画を完全に壊さないようになりました。この要素の実際のサポートの進捗は [バグ 689641](https://bugzilla.mozilla.org/show_bug.cgi?id=689641) を参照してください。
 
 ### Networking
 
-- You can now send the contents of [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_objects/ArrayBuffer) object) [using XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
+- You can now send the contents of [JavaScript typed arrays](/ja/docs/Web/JavaScript/Guide/Typed_arrays) (that is, the contents of an [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) object) [using XMLHttpRequest](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#sending_typed_arrays_as_binary_data).
 - WebSocket connections now permit non-characters in otherwise valid UTF-8 data frames to be received, instead of failing.
 - The HTTP `Accept` header for XSLT requests has been changed to simply "\*/\*" for simplicity. Since fetching XSLT has always fallen back to "\*/\*" anyway, it made sense to simplify the initial request.
 - Attempts by a server to use the `301 Moved Permanently` or `307 Temporary Redirect` response codes to redirect the user to a `javascript:` URI now [result in a "bad connection" error](/ja/docs/Web/HTTP#more_on_redirection_responses) instead of actually redirecting. This prevents certain types of cross-site scripting attacks.
-- Content served with an empty [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Headers/Content-Disposition) were "inline".
+- Content served with an empty [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were previously treated as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were "attachment"; this didn't always work as expected. These are now handled as if the [`Content-Disposition`](/ja/docs/Web/HTTP/Reference/Headers/Content-Disposition) were "inline".
 - The default maximum size of an item in the disk cache has been increased to 50 MB; previously, only items up to 5 MB were cached.
 
 ### Developer tools

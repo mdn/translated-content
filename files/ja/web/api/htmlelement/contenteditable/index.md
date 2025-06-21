@@ -35,4 +35,4 @@ l10n:
 ## 関連情報
 
 - {{domxref("HTMLElement.isContentEditable")}}
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes#contenteditable) グローバル属性
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性

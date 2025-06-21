@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/At-rule)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/font-palette) の既定値をカスタマイズすることができます。
+**`@font-palette-values`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、フォントメーカーが作成した [font-palette](/ja/docs/Web/CSS/font-palette) の既定値をカスタマイズすることができます。
 
 ## 構文
 
@@ -20,7 +20,7 @@ l10n:
 }
 ```
 
-[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/var)で囲まれていません。
+[&lt;dashed-ident&gt;](/ja/docs/Web/CSS/dashed-ident) はユーザー定義された識別子で、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)のように見えますが、別の方法で動作し、 [CSS var() 関数](/ja/docs/Web/CSS/var)で囲まれていません。
 
 ### 記述子
 

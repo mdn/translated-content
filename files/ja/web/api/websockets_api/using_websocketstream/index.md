@@ -115,7 +115,7 @@ wss.close({
 > [!NOTE]
 > この例を動作させるには、サーバーコンポーネントも必要です。[WebSocket サーバーを JavaScript (Deno) で書く](/ja/docs/Web/API/WebSockets_API/Writing_a_WebSocket_server_in_JavaScript_Deno)で説明されている Deno サーバーと連携するようにクライアントを書きましたが、互換性のあるサーバーであればどれでも構いません。
 
-デモの HTML は以下の通りです。情報的な [`<h2>`](/ja/docs/Web/HTML/Element/Heading_Elements) と {{htmlelement("p")}} 要素、初期状態では無効になっている WebSocket 接続を閉じるための{{htmlelement("button")}}、および出力メッセージを書き込むための {{htmlelement("div")}} があります。
+デモの HTML は以下の通りです。情報的な [`<h2>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) と {{htmlelement("p")}} 要素、初期状態では無効になっている WebSocket 接続を閉じるための{{htmlelement("button")}}、および出力メッセージを書き込むための {{htmlelement("div")}} があります。
 
 ```html
 <h2>WebSocketStream Test</h2>

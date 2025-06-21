@@ -5,9 +5,9 @@ slug: Web/CSS/display
 
 {{CSSRef}}
 
-La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_flow_layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_flow_layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_grid_layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_flexible_box_layout)(Flexible).
+La propiedad CSS **`display`** especifica si un elemento es tratado como [block or inline element](/es/docs/Web/CSS/CSS_display/Flow_layout) y el diseño usado por sus hijos, como [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout)(Diseño de Flujo), [grid](/es/docs/Web/CSS/CSS_grid_layout)(Cuadricula) o [flex](/es/docs/Web/CSS/CSS_flexible_box_layout)(Flexible).
 
-Formalmente la propiedad `display` establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en [flow layout](/es/docs/Web/CSS/CSS_flow_layout); la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de `display` estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando `display: flex` es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. **Vea** la siguientes tablas para mas especificaciones individuales.
+Formalmente la propiedad `display` establece los tipos de visualización interna y externa de un elemento. La tipo externa establece la participacion de un elemento en [flow layout](/es/docs/Web/CSS/CSS_display/Flow_layout); la tipo interna establece el layout(Diseño) de los hijos. Algunos valores de `display` estan totalmente definidos con sus especificaciones propias; por ejemplo el detalle de que pasa cuando `display: flex` es declarado y definido en la especificacion de Modelo Flexible de Caja(Flexible Box Model specification) de CSS. **Vea** la siguientes tablas para mas especificaciones individuales.
 
 Además de los Diferentes Tipos de caja de Visualizacion, el valor de `none` permite Desactivar la Visualizacion DE UN Elemento; cuando no se utiliza `none`, todos los elementos descendentes también quedan desactivados. El documento se procesa como si el elemento no existiera en el árbol de documentos.
 
@@ -168,7 +168,7 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
 
 ### `display: none;`
 
-Al utilizar un valor de `none` en la propiedad `display` el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
+Al utilizar un valor de `none` en la propiedad `display` el elemento se elimina del [árbol de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis). El efecto de esto será que este elemento y sus hijos no serán anunciados a los lectores de pantalla utilizados por no videntes.
 
 Si deseas ocultar el elemento solo de forma visible, pero que los lectores de accesibilidad lo sigan anunciando, puedes utilizar [un método alternativo con una combinación de propiedades de CSS](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link).
 
@@ -189,7 +189,7 @@ Para más información por favor referirse a los siguientes artículos:
 
 - [Short note on what CSS display properties do to table semantics — The Paciello Group](https://developer.paciellogroup.com/blog/2018/03/short-note-on-what-css-display-properties-do-to-table-semantics/)
 - [Hidden content for better a11y | Go Make Things](https://gomakethings.com/hidden-content-for-better-a11y/)
-- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
+- [MDN Understanding WCAG, Guideline 1.3 explanations](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#Guideline_1.3_%E2%80%94_Create_content_that_can_be_presented_in_different_ways)
 - [Understanding Success Criterion 1.3.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html)
 
 ## Ejemplos

@@ -124,7 +124,7 @@ counter();
 
 ### 関数を返す
 
-[クロージャ](/ja/docs/Web/JavaScript/Closures)についての記事も参照のこと。
+[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)についての記事も参照のこと。
 
 ```js
 function magic() {
@@ -148,4 +148,4 @@ answer(1337); // 56154
 ## 関連情報
 
 - [関数](/ja/docs/Web/JavaScript/Reference/Functions)
-- [クロージャ](/ja/docs/Web/JavaScript/Closures)
+- [クロージャ](/ja/docs/Web/JavaScript/Guide/Closures)

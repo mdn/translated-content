@@ -7,18 +7,18 @@ slug: Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs
 
 API, которые мы рассмотрели до сих пор, встроены в браузер, но не все API таковы. Многие крупные веб-сайты и сервисы, такие как Google Maps, Twitter, Facebook, PayPal и т. д., Предоставляют API-интерфейсы, позволяющие разработчикам использовать свои данные (например, показывать ваш твиттер-поток в вашем блоге) или сервисы (например, отображение пользовательских карт Google на вашем сайте, или использование логина Facebook для входа в систему ваших пользователей). В этой статье рассматривается различие между API-интерфейсами браузера и сторонними API и показано типичное использование последних.
 
-| Необходимые условия: | Основы JavaScript (см. [первые шаги](/ru/docs/Learn/JavaScript/First_steps), [структурные элементы](/ru/docs/Learn/JavaScript/Building_blocks), [объекты JavaScript](/ru/docs/Learn/JavaScript/Objects)), the [основы клиентских API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction) |
-| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Задача:              | Изучить, как работают сторонние API, и как использовать их для улучшения ваших сайтов.                                                                                                                                                                                                             |
+| Необходимые условия: | Основы JavaScript (см. [первые шаги](/ru/docs/conflicting/Learn_web_development/Core/Scripting), [структурные элементы](/ru/docs/Learn_web_development/Core/Scripting), [объекты JavaScript](/ru/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)), the [основы клиентских API](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction) |
+| -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Задача:              | Изучить, как работают сторонние API, и как использовать их для улучшения ваших сайтов.                                                                                                                                                                                                                                                                                     |
 
 ## Что такое сторонние API?
 
-Сторонние API - это API, предоставляемые третьими лицами — как правило, такими компаниями, как Facebook, Twitter, or Google — чтобы вы могли получить доступ к их функциям с помощью JavaScript и использовать его на своём собственном сайте. Как мы показали в нашей [вводной статье об API](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction), одним из наиболее очевидных примеров является использование [Google Maps APIs](https://developers.google.com/maps/) для отображения пользовательских карт на ваших страницах.
+Сторонние API - это API, предоставляемые третьими лицами — как правило, такими компаниями, как Facebook, Twitter, or Google — чтобы вы могли получить доступ к их функциям с помощью JavaScript и использовать его на своём собственном сайте. Как мы показали в нашей [вводной статье об API](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction), одним из наиболее очевидных примеров является использование [Google Maps APIs](https://developers.google.com/maps/) для отображения пользовательских карт на ваших страницах.
 
 Давайте снова посмотрим на наш пример карты (см. [исходный код на GitHub](https://github.com/mdn/learning-area/blob/master/javascript/apis/introduction/maps-example.html); [см. это в действии](https://mdn.github.io/learning-area/javascript/apis/introduction/maps-example.html)), и используем его для иллюстрации того, как сторонние API отличаются от API-интерфейсов браузера.
 
 > [!NOTE]
-> Возможно вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn#получение_наших_примеров_кода), в этом случае вы можете просто искать репозиторий с файлами примеров, которые вам нужны в каждом разделе.
+> Возможно вы захотите сразу [получить все наши примеры кода](/ru/docs/Learn_web_development#получение_наших_примеров_кода), в этом случае вы можете просто искать репозиторий с файлами примеров, которые вам нужны в каждом разделе.
 
 ### Они находятся на сторонних серверах
 
@@ -58,11 +58,11 @@ var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 Это вся информация, которую API Карт Google требует для построения простой карты. Сервер, к которому вы подключаетесь, обрабатывает все сложные вещи, такие как отображение правильных фрагментов карты для отображаемой области и т. д.
 
 > [!NOTE]
-> Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
+> Некоторые API обрабатывают доступ к их функциям несколько иначе, требуя от разработчика сделать HTTP-запрос (см. [Получение данных с сервера](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)) на определённый шаблон URL для получения определённых данных. Они называются RESTful API, и мы покажем пример этого позже в статье.
 
 ### Разрешения обрабатываются по-разному
 
-Безопасность API-интерфейсов браузеров, как правило, обрабатывается запросами разрешения, как [описано в нашей первой статье](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). Целью этого является то, что пользователь знает, что происходит на сайтах, которые он посещает, и с меньшей вероятностью может стать жертвой того, кто использует API, злонамеренно.
+Безопасность API-интерфейсов браузеров, как правило, обрабатывается запросами разрешения, как [описано в нашей первой статье](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction#they_have_additional_security_mechanisms_where_appropriate). Целью этого является то, что пользователь знает, что происходит на сайтах, которые он посещает, и с меньшей вероятностью может стать жертвой того, кто использует API, злонамеренно.
 
 Сторонние API имеют немного другую систему разрешений - они, как правило, используют ключевые коды, чтобы позволить разработчикам получить доступ к функциям API. Просмотрите URL-адрес библиотеки API Карт Google, с которой мы связались:
 
@@ -80,7 +80,7 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
 
 Теперь когда мы рассмотрели пример API Карт Google и посмотрели, как он работает, добавим ещё несколько функций, чтобы показать, как использовать некоторые другие функции API.
 
-1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn#getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
+1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn_web_development#getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
 2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
 
    1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
@@ -203,7 +203,7 @@ Most APIs require you to use some kind of developer key, for reasons of security
 
 1. Let's request a key for the "Article Search API" — fill in the form, selecting this as the API you want to use.
 2. Next, wait a few minutes, then get the key from your email.
-3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
+3. Now, to start the example off, make copies of [nytimes_start.html](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes_start.html) and [nytimes.css](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/nytimes/nytimes.css) in a new directory on your computer. If you've already [cloned the examples repository](/ru/docs/Learn_web_development#getting_our_code_examples), you'll already have a copy of these files, which you can find in the _javascript/apis/third-party-apis/nytimes_ directory. Initially the `<script>` element contains a number of variables needed for the setup of the example; below we'll fill in the required functionality.
 
 The app will end up allowing you to type in a search term and optional start and end dates, which it will then use to query the Article Search API and display the search results.
 
@@ -213,7 +213,7 @@ The app will end up allowing you to type in a search term and optional start and
 
 First, you'll need to make a connection between the API, and your app. This is usually done either by connecting to the API's JavaScript (as we did in the Google Maps API), or by making requests to the correct URL(s).
 
-In the case of this API, you need to include the API key as a [get](/ru/docs/Web/HTTP/Methods/GET) parameter every time you request data from it.
+In the case of this API, you need to include the API key as a [get](/ru/docs/Web/HTTP/Reference/Methods/GET) parameter every time you request data from it.
 
 1. Find the following line:
 
@@ -283,7 +283,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=4f3c267e125943d
 > You can find more details of what URL parameters can be included in the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json).
 
 > [!NOTE]
-> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn/Forms/Form_validation) for more details on how these work.
+> The example has rudimentary form data validation — the search term field has to be filled in before the form can be submitted (achieved using the `required` attribute), and the date fields have `pattern` attributes specified, which means they won't submit unless their values consist of 8 numbers (`pattern="[0-9]{8}"`). See [Form data validation](/ru/docs/Learn_web_development/Extensions/Forms/Form_validation) for more details on how these work.
 
 ### Requesting data from the API
 
@@ -438,10 +438,10 @@ This article has given you a useful introduction to using third party APIs to ad
 
 ## In this module
 
-- [Introduction to web APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Introduction)
-- [Manipulating documents](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents)
-- [Fetching data from the server](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)
-- [Third party APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Third_party_APIs)
+- [Introduction to web APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Introduction)
+- [Manipulating documents](/ru/docs/Learn_web_development/Core/Scripting/DOM_scripting)
+- [Fetching data from the server](/ru/docs/Learn_web_development/Core/Scripting/Network_requests)
+- [Third party APIs](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Third_party_APIs)
 - [Drawing graphics](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
 - [Video and audio APIs](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs)
-- [Client-side storage](/ru/docs/Learn/JavaScript/Client-side_web_APIs/Client-side_storage)
+- [Client-side storage](/ru/docs/Learn_web_development/Extensions/Client-side_APIs/Client-side_storage)

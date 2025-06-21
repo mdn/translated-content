@@ -311,8 +311,7 @@ The following is a shim to provide support to non-supporting browsers:
     For most languages, this will return the same as
     {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}}.
 
-- {{jsxref("String.prototype.toLocaleUpperCase()",
-    "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
+- {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
 
   - : The characters within a string are converted to uppercase while respecting the
     current locale.

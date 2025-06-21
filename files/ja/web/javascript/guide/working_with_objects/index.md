@@ -145,7 +145,7 @@ car1 にプロパティ `color` を追加し、そこに "black" という値を
 
 ### Object.create() メソッドの使用
 
-オブジェクトは {{jsxref("Object.create()")}} メソッドを使用して作成することもできます。このメソッドは、コンストラクター関数を定義せずに作りたいオブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を選べるため、とても便利です。
+オブジェクトは {{jsxref("Object.create()")}} メソッドを使用して作成することもできます。このメソッドは、コンストラクター関数を定義せずに作りたいオブジェクトの[プロトタイプ](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を選べるため、とても便利です。
 
 ```js
 // Animal のプロパティとメソッドをカプセル化
@@ -321,7 +321,7 @@ function listAllProperties(myObj) {
 }
 ```
 
-詳しくは、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)を参照してください。
+詳しくは、[プロパティの列挙可能性と所有権](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)を参照してください。
 
 ### プロパティの削除
 
@@ -340,7 +340,7 @@ console.log("a" in myObj); // false
 
 ## 継承
 
-JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジェクトを継承しています。継承元になるオブジェクトはプロトタイプと呼ばれ、継承されたプロパティはコンストラクターの `prototype` オブジェクトにあります。詳細は[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)を参照してください。
+JavaScript のすべてのオブジェクトは、1 つ以上の他のオブジェクトを継承しています。継承元になるオブジェクトはプロトタイプと呼ばれ、継承されたプロパティはコンストラクターの `prototype` オブジェクトにあります。詳細は[継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)を参照してください。
 
 ### ある型のオブジェクトすべてに対するプロパティの定義
 
@@ -512,7 +512,7 @@ console.log(anotherFruit); // { name: "apple" } ではなく { name: "grape" } �
 
 ## 関連情報
 
-- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [継承とプロトタイプチェーン](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
 - [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
 
 {{PreviousNext("Web/JavaScript/Guide/Regular_expressions", "Web/JavaScript/Guide/Using_classes")}}

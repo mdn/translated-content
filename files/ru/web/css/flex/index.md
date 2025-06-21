@@ -7,7 +7,7 @@ slug: Web/CSS/flex
 
 ## Описание
 
-Свойство [CSS](/ru/docs/Web/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
+Свойство [CSS](/ru/docs/Web/CSS) **`flex`** - это [сокращённое свойство](/ru/docs/Web/CSS/CSS_cascade/Shorthand_properties), определяющее способность гибкого элемента растягиваться или сжиматься для заполнения собой доступного свободного пространства. Это свойство устанавливает [flex-grow](/ru/docs/Web/CSS/flex-grow), [flex-shrink](/ru/docs/Web/CSS/flex-shrink) и [flex-basis](/ru/docs/Web/CSS/flex-basis).
 
 {{cssinfo}}
 

@@ -16,7 +16,7 @@ h1:has(+ p) {
 }
 ```
 
-`:has()` 疑似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/Specificity)が `:has()` の詳細度として与えられます。
+`:has()` 疑似クラスは {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} と同様に、引数の中で最も大きい[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が `:has()` の詳細度として与えられます。
 
 ## 構文
 

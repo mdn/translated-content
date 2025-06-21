@@ -7,7 +7,33 @@ slug: Web/CSS/:only-child
 
 **`:only-child`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示没有任何兄弟元素的元素。这与 `:first-child:last-child` 或 `:nth-child(1):nth-last-child(1)` 相同，但前者具有更小的权重性。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-only-child.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+
+```css interactive-example
+li:only-child {
+  color: fuchsia;
+}
+
+b:only-child {
+  text-decoration: underline;
+}
+```
+
+```html interactive-example
+<p>Stars expected to attend:</p>
+<ol>
+  <li>Robert Downey, Jr.</li>
+</ol>
+
+<p>Stars yet to confirm:</p>
+<ol>
+  <li>Scarlett Johansson</li>
+  <li>Samuel L. Jackson</li>
+  <li>Chris Pratt</li>
+</ol>
+
+<p>The ceremony is going to be held in <b>The Dolby Theatre</b>.</p>
+```
 
 > [!NOTE]
 > 按照最初的定义，被选择的元素必须拥有一个父级元素。从选择器 Level 4 开始，这不再是必须的了。

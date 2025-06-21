@@ -7,7 +7,37 @@ slug: Web/CSS/gradient/repeating-radial-gradient
 
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`repeating-radial-gradient()`** 创建一个从原点辐射的重复渐变组成的 {{cssxref("&lt;image&gt;")}}，类似于 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} 并且采用相同的参数，但是它会在所有方向上无限重复色标，以覆盖其整个容器，类似于 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}。函数的结果是 {{cssxref("&lt;gradient&gt;")}} 数据类型的对象，此对象是一种特殊的 {{cssxref("&lt;image&gt;")}} 类型。
 
-{{EmbedInteractiveExample("pages/css/function-repeating-radial-gradient.html")}}
+{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+
+```css interactive-example-choice
+background: repeating-radial-gradient(#e66465, #9198e5 20%);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
+```
+
+```css interactive-example-choice
+background: repeating-radial-gradient(
+  circle at 100%,
+  #333,
+  #333 10px,
+  #eee 10px,
+  #eee 20px
+);
+```
+
+```html interactive-example
+<section class="display-block" id="default-example">
+  <div id="example-element"></div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  min-height: 100%;
+}
+```
 
 每次重复时，色标（color stop）的位置的偏移量都是基准径向渐变长度（最后一个色标和第一个之间的距离）的倍数。因此，最后色标的颜色应该与第一个颜色的颜色保持一致；如果不一致，会导致非常突兀的渐变效果，可以通过将第一个色标重复添加到最后一个中来解决。
 

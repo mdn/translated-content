@@ -75,7 +75,7 @@ console.log(this.y); // undefined
 
 ### Emulating private members
 
-In dealing with [constructors](/zh-TW/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/zh-TW/docs/Web/JavaScript/Closures):
+In dealing with [constructors](/zh-TW/docs/Glossary/Constructor) it is possible to use the **`let`** bindings to share one or more private members without using [closures](/zh-TW/docs/Web/JavaScript/Guide/Closures):
 
 ```js
 var Thing;

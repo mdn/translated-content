@@ -1,10 +1,9 @@
 ---
 title: 循环吧，代码
 slug: Learn_web_development/Core/Scripting/Loops
-original_slug: Learn/JavaScript/Building_blocks/Looping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Conditionals","Learn_web_development/Core/Scripting/Functions", "Learn_web_development/Core/Scripting")}}
 
 编程语言可以很迅速方便地帮我们完成一些重复性的任务，从多个基本计算到几乎完成了很多类似工作的其他情况。现在我们来看看处理这种需求的 JavaScript 中可用的循环结构。
 
@@ -40,7 +39,7 @@ original_slug: Learn/JavaScript/Building_blocks/Looping_code
 - **一个结束条件，**这是循环停止的标准 - 通常计数器达到一定值。以上所说的“我有足够的食物”吗？假设他需要 10 份食物来养活他的家人。
 - **一个迭代器，**这通常在每个连续循环上递增少量的计数器，直到达到退出条件。我们以前没有明确说明，但是我们可以考虑一下农民能够每小时收集 2 份食物。每小时后，他收集的食物量增加了两倍，他检查他是否有足够的食物。如果他已经达到 10 分（退出条件），他可以停止收集回家。
 
-在 {{glossary("伪代码")}} 中，这看起来就像下面这样：
+在{{glossary("Pseudocode", "伪代码")}}中，这看起来就像下面这样：
 
 ```js
 loop(food = 0; foodNeeded = 10) {
@@ -702,13 +701,13 @@ do {
 
 ## 技能测试！
 
-你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Loops)。
+你已经到达了本文的末尾，但你还记得最重要的知识吗？在你继续学习之前，你可以做一些深入的测试，来验证你已经记住了这些知识——请参阅[技能测试：循环](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Loops)。
 
 ## 结论
 
 本文向你展示了背后的基本概念，以及 JavaScript 中循环代码时可用的不同选项。你现在应该明白为什么循环是一个处理重复代码的好机制，并且在你自己的例子中使用它们！
 
-如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn#contact_us)寻求帮助。
+如果你有什么不明白的地方，可以再通读一遍，或者[联系我们](/zh-CN/docs/Learn_web_development#联系我们)寻求帮助。
 
 ## 参见
 

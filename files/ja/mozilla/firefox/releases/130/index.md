@@ -13,8 +13,8 @@ l10n:
 
 ### HTML
 
-- `<details>` 要素の [`name`](/ja/docs/Web/HTML/Element/details#name) 属性で、`<details>` 要素のグループ化が可能になりました。グループの中で同時にひとつの要素だけを開くことができます。これにより、JavaScript を使用せずに排他的なアコーディオンを作成できます ([Firefox bug 1856460](https://bugzil.la/1856460)、[Firefox bug 1909613](https://bugzil.la/1909613))。
-- [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#属性の継承) における動作など、[`dir`](/ja/docs/Web/HTML/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) [グローバル属性](/ja/docs/Web/HTML/Global_attributes) の継承を改良しました ([Firefox bug 1876163](https://bugzil.la/1876163))。
+- `<details>` 要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/details#name) 属性で、`<details>` 要素のグループ化が可能になりました。グループの中で同時にひとつの要素だけを開くことができます。これにより、JavaScript を使用せずに排他的なアコーディオンを作成できます ([Firefox bug 1856460](https://bugzil.la/1856460)、[Firefox bug 1909613](https://bugzil.la/1909613))。
+- [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM#属性の継承) における動作など、[`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) および [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) の継承を改良しました ([Firefox bug 1876163](https://bugzil.la/1876163))。
 
 ### CSS
 
@@ -65,7 +65,7 @@ l10n:
 
 - **Reporting API を使用した CSP 違反報告:** `dom.reporting.enabled`。
 
-  [Content Security Policy (CSP)](/ja/docs/Web/HTTP/CSP) 違反の報告に [Reporting API](/ja/docs/Web/API/Reporting_API) が使用可能になりました。
+  [Content Security Policy (CSP)](/ja/docs/Web/HTTP/Guides/CSP) 違反の報告に [Reporting API](/ja/docs/Web/API/Reporting_API) が使用可能になりました。
   これは値が `"csp-violation"` である `type` プロパティと {{domxref('CSPViolationReportBody')}} のインスタンスである `body` プロパティを持つ {{domxref('Report')}} オブジェクト、{{httpheader('Content-Security-Policy')}} HTTP レスポンスヘッダーの {{CSP("report-to")}} ディレクティブ、{{httpheader('Reporting-Endpoints')}} HTTP レスポンスヘッダー、{{httpheader('Report-To')}} HTTP レスポンスヘッダーのサポートを含みます。
   この機能はデフォルトで無効です ([Firefox bug 1391243](https://bugzil.la/1391243))。
 

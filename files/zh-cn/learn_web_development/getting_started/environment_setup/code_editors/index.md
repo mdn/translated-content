@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f12c4c8c5128f0e84d1167f8a6285fc68c1eb8e2
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在前面的学习中，我们安装了一个代码编辑器，因为在我们的学习路径中这是必需的。在这篇文章中，我们将更详细地探讨代码编辑器，让你了解它们都能做什么。

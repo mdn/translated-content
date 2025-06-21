@@ -107,9 +107,9 @@ original_slug: Learn/Forms/Your_first_form
 
 {{HTMLelement("li")}} 요소는 코드를 편리하게 구성하고 스타일을 더 쉽게 지정하기 위한 것입니다 (이 글의 뒷 부분을 참조하세요). 사용성과 접근성을 위해서 각 폼 컨트롤에 명시적인 label을 포함했습니다. 모든 {{HTMLelement("label")}} 요소에 [`for`](/ko/docs/Web/HTML/Attributes/for) 속성을 사용하는 것에 주목하세요. 이 속성은 연결된 폼 컨트롤의 [`id`](/ko/docs/Web/HTML/Global_attributes/id)를 값으로 사용하기 때문에 폼 컨트롤을 label과 연결할 수 있습니다.
 
-이렇게 label을 폼 컨트롤과 연결하면 큰 이점이 있습니다. 마우스, 트랙패드, 터치 장치 사용자가 label을 클릭하면 일치하는 컨트롤을 활성화할 수 있습니다. 그리고 스크린 리더의 사용자가 읽을 수 있는 접근 가능한 이름을 스크린 리더에게 제공할 수 있는 큰 이점도 있습니다. 폼 label에 대한 자세한 내용은 [웹 폼 구조화 방법](/ko/docs/Learn/Forms/How_to_structure_a_web_form)에서 확인할 수 있습니다.
+이렇게 label을 폼 컨트롤과 연결하면 큰 이점이 있습니다. 마우스, 트랙패드, 터치 장치 사용자가 label을 클릭하면 일치하는 컨트롤을 활성화할 수 있습니다. 그리고 스크린 리더의 사용자가 읽을 수 있는 접근 가능한 이름을 스크린 리더에게 제공할 수 있는 큰 이점도 있습니다. 폼 label에 대한 자세한 내용은 [웹 폼 구조화 방법](/ko/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)에서 확인할 수 있습니다.
 
-{{HTMLelement("input")}} 요소에서 가장 중요한 속성은 `type` 속성입니다. 이 속성은 {{HTMLelement("input")}} 요소가 표시되고 작동하는 방식을 정의하기 때문에 매우 중요합니다. 이에 대한 자세한 내용은 나중에 [기본 폼 컨트롤](/ko/docs/Learn/Forms/Basic_native_form_controls) 문서에서 확인할 수 있습니다.
+{{HTMLelement("input")}} 요소에서 가장 중요한 속성은 `type` 속성입니다. 이 속성은 {{HTMLelement("input")}} 요소가 표시되고 작동하는 방식을 정의하기 때문에 매우 중요합니다. 이에 대한 자세한 내용은 나중에 [기본 폼 컨트롤](/ko/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls) 문서에서 확인할 수 있습니다.
 
 - 간단한 예제에서 첫 번째 input에 이 속성의 기본값인 {{HTMLelement("input/text", "text")}} 값을 사용할 것입니다. 이 값은 모든 종류의 텍스트 입력을 허용하는 기본 한 줄 텍스트 필드를 나타냅니다.
 

@@ -68,7 +68,7 @@ article {
 - {{cssxref("float")}} 布局将在指定元素内独立执行。
 - 外边距不会跨越布局局限边界折叠。
 - 布局容器是 `absolute` 和 `fixed` 定位子元素的[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)。
-- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
+- 包含盒子创建了一个[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)，因此可以使用 {{cssxref("z-index")}}。
 
 > [!NOTE]
 > 当使用 {{cssxref("container-type")}} 和 {{cssxref("container-name")}} 属性时，`contain` 的 `style` 和 `layout` 值会自动应用。
@@ -81,7 +81,7 @@ article {
 }
 ```
 
-绘制局限本质上将盒子裁剪到[主盒子](/zh-CN/docs/Web/CSS/Visual_formatting_model#the_principal_box)的内边距边缘。不能有可见的溢出。`paint` 局限的其他附加说明与 `layout` 局限相同（见上文）。
+绘制局限本质上将盒子裁剪到[主盒子](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model#主盒子)的内边距边缘。不能有可见的溢出。`paint` 局限的其他附加说明与 `layout` 局限相同（见上文）。
 
 另一个优点是，如果应用了局限的元素不在屏幕上，浏览器不需要绘制其子元素——因为它们完全被该盒子包含，也不在屏幕上。
 

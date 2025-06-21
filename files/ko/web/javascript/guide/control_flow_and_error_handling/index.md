@@ -433,5 +433,4 @@ catch (e) {
 }
 ```
 
-{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types",
-  "Web/JavaScript/Guide/Loops_and_iteration")}}
+{{PreviousNext("Web/JavaScript/Guide/Grammar_and_types", "Web/JavaScript/Guide/Loops_and_iteration")}}

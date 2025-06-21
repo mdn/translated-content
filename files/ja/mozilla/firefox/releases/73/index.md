@@ -11,7 +11,7 @@ Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされまし�
 
 ### 開発者ツール
 
-- [CORS のエラー](/ja/docs/Web/HTTP/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
+- [CORS のエラー](/ja/docs/Web/HTTP/Guides/CORS/Errors) をコンソールでエラーとして示す (警告として表示しない) ことで、適切な表示になりました ([Firefox バグ 1602093](https://bugzil.la/1602093))。
 - ウェブコンソールの文字列検索や正規表現検索で、['-' を前につけて否定することが可能になりました](https://firefox-source-docs.mozilla.org/devtools-user/web_console/console_messages/index.html#filtering_and_searching) ([Firefox バグ 1291192](https://bugzil.la/1291192))。
 
 ### HTML
@@ -48,7 +48,7 @@ _変更なし。_
 
 #### WebVR
 
-- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [安全なコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#api_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ([Firefox バグ 1381645](https://bugzil.la/1381645))。
+- 非推奨の [WebVR API](/ja/docs/Web/API/WebVR_API) ([拡張現実](https://ja.wikipedia.org/wiki/%E6%8B%A1%E5%BC%B5%E7%8F%BE%E5%AE%9F) および [バーチャル・リアリティ](https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%BC%E3%83%81%E3%83%A3%E3%83%AB%E3%83%BB%E3%83%AA%E3%82%A2%E3%83%AA%E3%83%86%E3%82%A3) アプリケーションの両方をサポートする [WebXR](/ja/docs/Web/API/WebXR_Device_API) に取って代わられました) を動作させるために、{{Glossary("HTTPS")}} プロトコルを使用する [保護されたコンテキストが必要になりました](/ja/docs/Web/API/WebVR_API#api_availability)。これは、個人情報を含む可能性がある機微な入力ソースを使用できるためです ([Firefox バグ 1381645](https://bugzil.la/1381645))。
 
 #### 廃止
 

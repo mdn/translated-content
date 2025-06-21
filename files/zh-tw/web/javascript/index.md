@@ -37,26 +37,26 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 
 - [客戶端 web API](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : 在為網站或應用程序編寫客戶端 JavaScript 時，你將很快遇到應用程式介面（API）。 API 是應用程式介面，用於操作運行站點的瀏覽器和操作系統的不同方面，或操縱來自其他網站或服務的資料。 在本單元中，我們將探討 API 是什麼，以及如何使用你在開發工作中經常遇到的一些最常見的 API。
-- [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/Language_overview)
+- [重新介紹 JavaScript](/zh-TW/docs/Web/JavaScript/Guide/Language_overview)
   - : 為了那些*以為*他們懂 JavaScript 的人寫的簡介。
-- [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Data_structures)
+- [JavaScript 資料結構](/zh-TW/docs/Web/JavaScript/Guide/Data_structures)
   - : 簡介在 JavaScript 可用的資料結構。
-- [相等值比較和相等度](/zh-TW/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [相等值比較和相等度](/zh-TW/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript 提供了三種不同的數值比較方式：嚴謹的相等用 `===`，寬鬆的相等用 `==，`以及 {{jsxref("Global_Objects/Object/is", "Object.is()")}} 方法。
-- [閉包（Closure)](/zh-TW/docs/Web/JavaScript/Closures)
+- [閉包（Closure)](/zh-TW/docs/Web/JavaScript/Guide/Closures)
   - : 閉包（Closure）是函式以及該宣告函式所包含的作用域環境（lexical environment）的組合。
 
 ### 進階
 
-- [繼承與原型鍊](/zh-TW/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [繼承與原型鍊](/zh-TW/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : 對於原型繼承的常見的迷思和誤解。
 - [嚴謹模式](/zh-TW/docs/Web/JavaScript/Reference/Strict_mode)
   - : 嚴謹模式會禁止你使用未初始化過的變數。這樣的限制源自於 ECMAScript 5 的規範，為了提高效率和簡化偵錯。
 - [JavaScript 型別陣列](/zh-TW/docs/Web/JavaScript/Guide/Typed_arrays)
   - : JavaScript 類型陣列提供一個存取二進制資料的機制。
-- [記憶體管理](/zh-TW/docs/Web/JavaScript/Memory_management)
+- [記憶體管理](/zh-TW/docs/Web/JavaScript/Guide/Memory_management)
   - : JavaScript 的記憶體生命週期和垃圾回收機制。
-- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/Event_loop)
+- [併行模組和事件循環](/zh-TW/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript 具有基於「事件循環」的併行模組。
 
 ## 參考
@@ -78,7 +78,7 @@ JavaScript 所採用的標準是 [ECMAScript Language Specification](https://tc3
 
 - [Firefox 開發工具](https://firefox-source-docs.mozilla.org/devtools-user/index.html)
   - : [網頁主控台 (Web Console)](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)、[JavaScript 效能分析器(JavaScript Profiler)](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)、[除錯器 (Debugger)](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) 等等。
-- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/JavaScript_technologies_overview#shell)
+- [JavaScript Shell](/zh-TW/docs/Web/JavaScript/Reference/JavaScript_technologies_overview#shell)
   - : JavaScript Shell 讓你更快的測試片段的 JavaScript。
 - [TogetherJS](https://togetherjs.com/)Paste
   - : 合作更簡單了。藉著在你的網站增加 TogetherJS，你的用戶們能在網站上互助 in real time！

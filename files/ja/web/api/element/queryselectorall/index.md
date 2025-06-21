@@ -22,7 +22,7 @@ querySelectorAll(selectors)
 
   - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な CSS セレクター文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
 
-    HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
+    HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。
 
     なお、セレクターは `querySelectorAll()` が呼ばれた特定の要素だけでなく、文書全体に適用されることに注意してください。セレクターを `querySelectorAll()` が呼び出された要素に限定するには、セレクターの最初に [`:scope`](/ja/docs/Web/CSS/:scope) 擬似クラスを記述してください。[セレクターのスコープ](#セレクターのスコープ)の例を参照してください。
 
@@ -185,7 +185,7 @@ selectScope.addEventListener("click", () => {
 
 ### 属性値のエスケープ
 
-例えば、 HTML 文書の中の [`id`](/ja/docs/Web/HTML/Global_attributes/id) が有効な [CSS 識別子](/ja/docs/Web/CSS/ident)ではないものが含まれている場合、 `querySelector()` で使用する前に属性値をエスケープする必要があります。
+例えば、 HTML 文書の中の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) が有効な [CSS 識別子](/ja/docs/Web/CSS/ident)ではないものが含まれている場合、 `querySelector()` で使用する前に属性値をエスケープする必要があります。
 
 #### HTML
 

@@ -5,7 +5,7 @@ slug: Web/CSS/:required
 
 {{ CSSRef }}
 
-**`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち [`required`](/ja/docs/Web/HTML/Element/input#required) 属性が設定されているものを表します。
+**`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されているものを表します。
 
 ```css
 /* 必須の <input> をすべて選択 */
@@ -14,7 +14,42 @@ input:required {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-required.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
+
+```css interactive-example
+label {
+  display: block;
+  margin-top: 1em;
+}
+
+.req {
+  color: red;
+}
+
+*:required {
+  background-color: gold;
+}
+```
+
+```html interactive-example
+<form>
+  <label for="name">Name: <span class="req">*</span></label>
+  <input id="name" name="name" type="text" required />
+
+  <label for="birth">Date of Birth:</label>
+  <input id="birth" name="birth" type="date" />
+
+  <label for="origin"
+    >How did you find out about us? <span class="req">*</span></label
+  >
+  <select id="origin" name="origin" required>
+    <option>Google</option>
+    <option>Facebook</option>
+    <option>Advertisement</option>
+  </select>
+  <p><span class="req">*</span> - Required field</p>
+</form>
+```
 
 この擬似クラスは、フォームを送信する前に有効なデータを持っている必要がある入力欄を強調表示するのに便利です。
 
@@ -76,11 +111,11 @@ input:required:invalid {
 
 ## アクセシビリティの考慮
 
-入力が必須の {{htmlelement("input")}} には [`required`](/ja/docs/Web/HTML/Element/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
+入力が必須の {{htmlelement("input")}} には [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性を適用してください。これによって、読み上げソフトなどの支援技術を使用している人が、フォームを送信するためにどの入力欄が有効なコンテンツを必要とするかを理解することができます。
 
 フォームに[任意](/ja/docs/Web/CSS/:optional)の入力欄も含まれている場合、必須の入力欄を視覚的に示すのを色だけに依存しないようにしてください。通常、説明する文字列やアイコンが使用されます。
 
-- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
+- [MDN WCAG を理解する ― ガイドライン 3.3 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.3_%e2%80%94_input_assistance_help_users_avoid_and_correct_mistakes)
 - [Understanding Success Criterion 3.3.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-cues.html)
 
 ## 仕様書
@@ -94,4 +129,4 @@ input:required:invalid {
 ## 関連情報
 
 - 他の検証関連の擬似クラス: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [フォームデータの検証](/ja/docs/Learn/Forms/Form_validation)
+- [フォームデータの検証](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)

@@ -41,7 +41,7 @@ new WebAssembly.Memory(memoryDescriptor);
 
 ### 新しい Memory インスタンスの作成
 
-`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/WebAssembly/JavaScript_interface/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
+`WebAssembly.Memory` オブジェクトを取得する方法は 2 つあります。 1 つ目は JavaScript から構築する方法です。次の例では、新しい WebAssembly Memory インスタンスを初期サイズが 10 ページ (640KiB) 、最大サイズが 100 ページ (6.4MiB) で生成しています。この [`buffer`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Memory/buffer) プロパティは [`ArrayBuffer`](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) を返します。
 
 ```js
 var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
@@ -64,7 +64,7 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 
 ### 共有メモリーの作成
 
-既定では、 WebAssembly のメモリーは共有されていません。[共有メモリー](/ja/docs/WebAssembly/Understanding_the_text_format#共有メモリー)を作成するには、コンストラクター
+既定では、 WebAssembly のメモリーは共有されていません。[共有メモリー](/ja/docs/WebAssembly/Guides/Understanding_the_text_format#共有メモリー)を作成するには、コンストラクター
 の初期化オブジェクトに `shared: true` を渡してください。
 
 ```js
@@ -88,5 +88,5 @@ let memory = new WebAssembly.Memory({
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

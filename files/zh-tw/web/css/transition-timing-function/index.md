@@ -7,7 +7,47 @@ slug: Web/CSS/transition-timing-function
 
 **`transition-timing-function`** CSS 屬性用於表示各個被[動畫特效](/zh-TW/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)影響的屬性的區間值計算方式。
 
-{{EmbedInteractiveExample("pages/css/transition-timing-function.html")}}
+{{InteractiveExample("CSS Demo: transition-timing-function")}}
+
+```css interactive-example-choice
+transition-timing-function: linear;
+```
+
+```css interactive-example-choice
+transition-timing-function: ease-in;
+```
+
+```css interactive-example-choice
+transition-timing-function: steps(6, end);
+```
+
+```css interactive-example-choice
+transition-timing-function: cubic-bezier(0.29, 1.01, 1, -0.68);
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">Hover to see<br />the transition.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  background-color: #e4f0f5;
+  color: #000;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font: 1em monospace;
+  width: 100%;
+  transition: margin-right 2s;
+}
+
+#default-example:hover > #example-element {
+  background-color: #909;
+  color: #fff;
+  margin-right: 40%;
+}
+```
 
 本質上，這個屬性讓你使用加速度曲線來表示動畫變換的速度。
 

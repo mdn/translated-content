@@ -186,7 +186,7 @@ CreatedConstructor.prototype.create = function () {
 new CreatedConstructor().create().create(); // うまく動作する
 ```
 
-`constructor` のプロパティを手動で追加する場合は、そのプロパティを[列挙不可](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)にすることが重要です。そうすれば、 `constructor` が [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで参照されることはなくなります。
+`constructor` のプロパティを手動で追加する場合は、そのプロパティを[列挙不可](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)にすることが重要です。そうすれば、 `constructor` が [`for...in`](/ja/docs/Web/JavaScript/Reference/Statements/for...in) ループで参照されることはなくなります。
 
 上記のコードが定型文のように見える場合は、 [`Object.setPrototypeOf()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf) を使用してプロトタイプチェーンを操作することもできます。
 

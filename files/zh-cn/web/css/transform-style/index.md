@@ -7,7 +7,42 @@ slug: Web/CSS/transform-style
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`transform-style`** 设置元素的子元素是位于 3D 空间中还是平面中。
 
-{{EmbedInteractiveExample("pages/css/transform-style.html")}}
+{{InteractiveExample("CSS Demo: transform-style")}}
+
+```css interactive-example-choice
+transform-style: flat;
+```
+
+```css interactive-example-choice
+transform-style: preserve-3d;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all layer" id="example-element">
+    <p>Parent</p>
+    <div class="numeral"><code>rotate3d(1, 1, 1, 45deg)</code></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+.layer {
+  background: #623e3f;
+  border-radius: 0.75rem;
+  color: white;
+  transform: perspective(200px) rotateY(30deg);
+}
+
+.numeral {
+  background-color: #ffba08;
+  border-radius: 0.2rem;
+  color: #000;
+  margin: 1rem;
+  padding: 0.2rem;
+  transform: rotate3d(1, 1, 1, 45deg);
+}
+```
 
 如果选择平面，元素的子元素将不会有 3D 的遮挡关系。
 

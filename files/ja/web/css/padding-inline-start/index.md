@@ -2,14 +2,54 @@
 title: padding-inline-start
 slug: Web/CSS/padding-inline-start
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`padding-inline-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のインライン方向の論理的な先頭側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{EmbedInteractiveExample("pages/css/padding-inline-start.html")}}
+{{InteractiveExample("CSS Demo: padding-inline-start")}}
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: horizontal-tb;
+```
+
+```css interactive-example-choice
+padding-inline-start: 20px;
+writing-mode: vertical-rl;
+```
+
+```css interactive-example-choice
+padding-inline-start: 5em;
+writing-mode: horizontal-tb;
+direction: rtl;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div class="transition-all" id="example-element">
+    <div class="box">
+      Far out in the uncharted backwaters of the unfashionable end of the
+      western spiral arm of the Galaxy lies a small unregarded yellow sun.
+    </div>
+  </div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  border: 10px solid #ffc129;
+  overflow: hidden;
+  text-align: left;
+}
+
+.box {
+  border: dashed 1px;
+  unicode-bidi: bidi-override;
+}
+```
 
 ## 構文
 
@@ -34,11 +74,11 @@ padding-inline-start: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : パディングの寸法を固定値で指定します。負の値は指定できません。
 - {{cssxref("&lt;percentage&gt;")}}
-  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
+  - : パディングの寸法を[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)のインラインサイズ（{{cssxref("writing-mode")}} で横書き言語と定義されている場合は _width_）に対するパーセント値で示したものです。負の数であってはいけません。
 
 ## 解説
 
-`padding-inline-start` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ると仕様で定義されています。しかし、このプロパティが対応づけられる物理的なプロパティは、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値に依存します。したがって、{{cssxref("padding-top")}}, {{cssxref("padding-right")}}, {{cssxref("padding-left")}} の何れかに対応づけられる可能性があります。
+`padding-inline-start` プロパティは、{{cssxref("padding-top")}} プロパティと同じ値を取ります。しかし、このプロパティは {{cssxref("padding-left")}}, {{cssxref("padding-right")}}, `padding-top`, {{cssxref("padding-bottom")}} のいずれかと同等になります。これは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に設定された値によって決まります。
 
 関連プロパティとして、要素の他のマージンを定義する {{cssxref("padding-block-start")}}, {{cssxref("padding-block-end")}}, {{cssxref("padding-inline-end")}} があります。
 
@@ -56,7 +96,7 @@ padding-inline-start: unset;
 
 #### HTML
 
-```html live-sample___setting_inline_start_padding_for_vertical_text
+```html
 <div>
   <p class="exampleText">テキストの例</p>
 </div>
@@ -64,7 +104,7 @@ padding-inline-start: unset;
 
 #### CSS
 
-```css live-sample___setting_inline_start_padding_for_vertical_text
+```css
 div {
   background-color: yellow;
   width: 120px;
@@ -80,7 +120,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Setting_inline_start_padding_for_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストにおけるインライン方向の先頭のパディングの設定", 140, 140)}}
 
 ## 仕様書
 

@@ -415,7 +415,7 @@ a?.b.c; // 首先对 `a` 求值，如果 `a` 是 `null` 或 `undefined` 则直�
             <td><code>… || …</code></td>
         </tr>
         <tr>
-            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_operator">空值合并 (??)</a></td>
+            <td><a href="/zh-CN/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing">空值合并 (??)</a></td>
             <td>从左到右</td>
             <td><code>… ?? …</code></td>
         </tr>

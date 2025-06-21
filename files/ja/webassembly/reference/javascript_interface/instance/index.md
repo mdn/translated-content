@@ -6,11 +6,11 @@ original_slug: WebAssembly/JavaScript_interface/Instance
 
 {{WebAssemblySidebar}}
 
-**`WebAssembly.Instance`** オブジェクトは、ステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。 `Instance` オブジェクトには JavaScript から WebAssembly コードを呼び出すことができるすべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Exported_functions)が含まれます。
+**`WebAssembly.Instance`** オブジェクトは、ステートフルで実行可能な {{jsxref("WebAssembly.Module")}} のインスタンスです。 `Instance` オブジェクトには JavaScript から WebAssembly コードを呼び出すことができるすべての[エクスポートされた WebAssembly 関数](/ja/docs/WebAssembly/Guides/Exported_functions)が含まれます。
 
 ## コンストラクター
 
-- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/JavaScript_interface/Instance/Instance)
+- [`WebAssembly.Instance()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/Instance/Instance)
   - : 新しい `Instance` オブジェクトを生成します。
 
 ## インスタンスプロパティ
@@ -71,5 +71,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## 関連情報
 
 - [WebAssembly](/ja/docs/WebAssembly) 概要ページ
-- [WebAssembly の概念](/ja/docs/WebAssembly/Concepts)
-- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly の概念](/ja/docs/WebAssembly/Guides/Concepts)
+- [WebAssembly JavaScript API の使用](/ja/docs/WebAssembly/Guides/Using_the_JavaScript_API)

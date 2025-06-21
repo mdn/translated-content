@@ -7,7 +7,28 @@ slug: Web/CSS/text-orientation
 
 **`text-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、行内のテキストの向きを設定します。このプロパティは縦書きのテキスト ({{cssxref("writing-mode")}} が `horizontal-tb` 以外の場合) でのみ効果があります。これは縦書きを使用する言語の表示を制御したり、縦書きの表見出しを作成したりするのに有用です。
 
-{{EmbedInteractiveExample("pages/css/text-orientation.html")}}
+{{InteractiveExample("CSS Demo: text-orientation")}}
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: mixed;
+```
+
+```css interactive-example-choice
+writing-mode: vertical-rl;
+text-orientation: upright;
+```
+
+```html interactive-example
+<section class="default-example" id="default-example">
+  <div class="transition-all" id="example-element">
+    <p>
+      In another moment down went Alice after it, never once considering how in
+      the world she was to get out again.
+    </p>
+  </div>
+</section>
+```
 
 ## 構文
 

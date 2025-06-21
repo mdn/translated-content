@@ -7,7 +7,33 @@ slug: Web/CSS/transform-function/skewY
 
 La [fonction](/fr/docs/Web/CSS/CSS_Functions) [CSS](/fr/docs/Web/CSS) **`skewY()`** permet d'opérer une distorsion verticale en étirant chaque point de l'élément d'un certain angle dans la direction verticale. La valeur obtenue par cette fonction est de type [`<transform-function>`](/fr/docs/Web/CSS/transform-function).
 
-{{EmbedInteractiveExample("pages/css/function-skewY.html")}}
+{{InteractiveExample("CSS Demo: skewY()")}}
+
+```css interactive-example-choice
+transform: skewY(0);
+```
+
+```css interactive-example-choice
+transform: skewY(35deg);
+```
+
+```css interactive-example-choice
+transform: skewY(-0.06turn);
+```
+
+```css interactive-example-choice
+transform: skewY(0.352rad);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 Cette transformation est [une transvection](https://fr.wikipedia.org/wiki/Transvection) dans laquelle on augmente l'ordonnée d'un élément d'une valeur proportionnelle à l'angle donné et à la distance de l'origine. Plus le point est éloigné de l'origine et loin de l'axe, plus le décalage obtenu sera important.
 

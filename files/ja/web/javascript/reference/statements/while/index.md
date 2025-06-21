@@ -95,7 +95,7 @@ while (currentNode = iterator.nextNode()) {
 
 この行の問題は、条件式にはふつう[比較演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#比較演算子)、例えば `===` を使用するものですが、この行の `=` は比較演算子ではなく、[代入演算子](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators#代入演算子)です。そのため、`=` は `===` の間違いのように見えてしまいます（実際には間違いではなくても）。
 
-従って、このようにすると、一部の[コードリンティングツール](/ja/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain#code_linting_tools)、例えば ESLint の [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) ルールなどは、誤記の可能性があるものを発見して修正しやすくするために、以下のような警告を報告します。
+従って、このようにすると、一部の[コードリンティングツール](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#code_linting_tools)、例えば ESLint の [`no-cond-assign`](https://eslint.org/docs/latest/rules/no-cond-assign) ルールなどは、誤記の可能性があるものを発見して修正しやすくするために、以下のような警告を報告します。
 
 > Expected a conditional expression and instead saw an assignment.（条件式が期待されるところに代入がありました。）
 

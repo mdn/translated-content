@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Scripting/JSON
 
 Обозначение объектов JavaScript (JSON - JavaScript Object Notation) - стандартный текстовый формат для представления структурированных данных на основе синтаксиса объекта JavaScript. Он обычно используется для передачи данных в веб-приложениях (например, отправка некоторых данных с сервера клиенту,таким образом чтобы это могло отображаться на веб-странице или наоборот). Вы будете сталкиваться с этим довольно часто, поэтому в этой статье мы даём вам все, что вам нужно для работы с JSON используя JavaScript, включая парсинг JSON, чтобы вы могли получить доступ к данным внутри него при создании JSON.
 
-| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. [First steps](/ru/docs/Learn/JavaScript/First_steps) и [Building blocks](/ru/docs/Learn/JavaScript/Building_blocks)) и основами OOJS (see [Introduction to objects](/ru/docs/Learn/JavaScript/Objects/Basics)). |
-| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Цель:               | Понять, как работать с данными, хранящимися в JSON, и создавать свои собственные объекты JSON.                                                                                                                                                                                                                     |
+| Необходимые знания: | Базовая компьютерная грамотность, базовые знания HTML и CSS, знакомство с основами JavaScript (см. [First steps](/ru/docs/conflicting/Learn_web_development/Core/Scripting) и [Building blocks](/ru/docs/Learn_web_development/Core/Scripting)) и основами OOJS (see [Introduction to objects](/ru/docs/Learn_web_development/Core/Scripting/Object_basics)). |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:               | Понять, как работать с данными, хранящимися в JSON, и создавать свои собственные объекты JSON.                                                                                                                                                                                                                                                                |
 
 ## Нет, действительно, что такое JSON?
 
@@ -66,7 +66,7 @@ JSON существует как строка,что необходимо при
 }
 ```
 
-Если бы мы загрузили этот объект в программу JavaScript, создали переменную с названием `superHeroes`, мы могли бы затем получить доступ к данным внутри неё, используя те же самые точечную и скобочную нотации, которые мы рассмотрели в статье [JavaScript object basics](/ru/docs/Learn/JavaScript/Objects/Basics). Например:
+Если бы мы загрузили этот объект в программу JavaScript, создали переменную с названием `superHeroes`, мы могли бы затем получить доступ к данным внутри неё, используя те же самые точечную и скобочную нотации, которые мы рассмотрели в статье [JavaScript object basics](/ru/docs/Learn_web_development/Core/Scripting/Object_basics). Например:
 
 ```js
 superHeroes.homeTown;
@@ -175,7 +175,7 @@ var section = document.querySelector("section");
 
    Это занимает не менее двух параметров - есть другие доступные параметры. Нам нужно только два обязательных для этого простого примера:
 
-   - Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае [`GET`](/ru/docs/Web/HTTP/Methods/GET) самый подходящий, так как мы просто извлекаем некоторые простые данные.
+   - Метод HTTP, который следует использовать при выполнении сетевого запроса. В этом случае [`GET`](/ru/docs/Web/HTTP/Reference/Methods/GET) самый подходящий, так как мы просто извлекаем некоторые простые данные.
    - URL-адрес для запроса - это URL-адрес файла JSON, который мы сохранили ранее.
 
 4. Затем добавьте следующие две строки: здесь мы устанавливаем [`responseType`](/ru/docs/Web/API/XMLHttpRequest/responseType) в JSON, так что XHR знает, что сервер будет возвращать JSON и, что это должно быть преобразовано за кулисами в объект JavaScript. Затем мы отправляем запрос методом [`send()`](/ru/docs/Web/API/XMLHttpRequest/send):
@@ -261,7 +261,7 @@ function showHeroes(jsonObj) {
 
 Для начала сохраним свойство `members` объекта JavaScript в новой переменной. Этот массив содержит несколько объектов, которые содержат информацию для каждого героя.
 
-Затем мы используем [for loop](/ru/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop) для циклического прохождения каждого объекта в массиве. Для каждого из них мы:
+Затем мы используем [for loop](/ru/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop) для циклического прохождения каждого объекта в массиве. Для каждого из них мы:
 
 1. Создаём несколько новых элементов: `<article>`, `<h2>`, три `<p>` и `<ul>`.
 2. Устанавливаем `<h2>`, чтобы содержать `name` текущего героя.
@@ -274,7 +274,7 @@ function showHeroes(jsonObj) {
 > Если вам не удаётся заставить этот пример работать, попробуйте обратиться к нашему исходному коду [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (см. также он работает [в режиме live](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html)).
 
 > [!NOTE]
-> Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье [JavaScript objectbasics](/ru/docs/Learn/JavaScript/Objects/Basics) чтобы получить дополнительную информацию о нотации точек и скобок.
+> Если у вас возникли проблемы после нотации точек / скобок, которые мы используем для доступа к объекту JavaScript, в этом поможет открытие файла [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) на другой вкладке или в текстовом редакторе ,и обращаться к нему каждый раз, когда вам нужен JavaScript. Вы также можете обратиться к нашей статье [JavaScript objectbasics](/ru/docs/Learn_web_development/Core/Scripting/Object_basics) чтобы получить дополнительную информацию о нотации точек и скобок.
 
 ## Преобразование между объектами и текстом
 
@@ -324,7 +324,7 @@ myString;
 - [JSON object reference page](/ru/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [XMLHttpRequest object reference page](/ru/docs/Web/API/XMLHttpRequest)
 - [Using XMLHttpRequest](/ru/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [HTTP request methods](/ru/docs/Web/HTTP/Methods)
+- [HTTP request methods](/ru/docs/Web/HTTP/Reference/Methods)
 - [Official JSON web site with link to ECMA standard](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}

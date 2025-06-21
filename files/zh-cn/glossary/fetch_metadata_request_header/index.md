@@ -29,8 +29,8 @@ fetch 元数据请求标头：
 
 - [使用 Fetch 元数据保护你的资源免受网络攻击](https://web.developers.google.cn/articles/fetch-metadata)（web.developers.google.cn）
 - [Fetch 元数据请求标头的 playground](https://secmetadata.appspot.com/)（secmetadata.appspot.com）
-- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Headers)
-- [所有 HTTP 标头列表 > Fetch 元数据请求标头](/zh-CN/docs/Web/HTTP/Headers#fetch_元数据请求标头)
+- [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
+- [所有 HTTP 标头列表 > Fetch 元数据请求标头](/zh-CN/docs/Web/HTTP/Reference/Headers#fetch_元数据请求标头)
 - [术语](/zh-CN/docs/Glossary)
 
   - {{Glossary("Representation header", "表示标头")}}

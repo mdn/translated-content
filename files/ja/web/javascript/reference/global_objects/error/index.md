@@ -177,7 +177,7 @@ StackOverflow の突っ込んだ議論、 ["What's a good way to extend Error in
 > **警告**: 組み込みのサブクラス化は、ES6 より古いコードに確実にトランスパイルできるわけではありません。なぜなら、 {{jsxref("Reflect.construct()")}} を使わずに特定の `new.target` を持つ基底クラスを構築する手段がないためです。[追加の設定](https://github.com/loganfsmyth/babel-plugin-transform-builtin-extend)を行うか、コンストラクターの最後で {{jsxref("Object/setPrototypeOf", "Object.setPrototypeOf(this, CustomError.prototype)")}} を手動で呼ぶ必要があります。そうしないと、構築されたインスタンスは `CustomError` のインスタンスになりません。詳しくは [the TypeScript FAQ](https://github.com/microsoft/TypeScript/wiki/FAQ#why-doesnt-extending-built-ins-like-error-array-and-map-work) をご覧ください。
 
 > [!NOTE]
-> ES2015 クラスを使用した場合、一部のブラウザはスタックトレース上に `CustomError` コンストラクターを含めます。
+> ES2015 クラスを使用した場合、一部のブラウザーはスタックトレース上に `CustomError` コンストラクターを含めます。
 
 ```js
 class CustomError extends Error {

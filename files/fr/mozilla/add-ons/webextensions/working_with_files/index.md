@@ -132,7 +132,7 @@ Exemple : [Store Collected Images](https://github.com/mdn/webextensions-examples
 API Référence : [idb-file-storage library](https://rpl.github.io/idb-file-storage/)
 
 > [!NOTE]
-> Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/IndexedDB_API) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/docs/Mozilla/Add-ons/WebExtensions/API/Storage).
+> Vous pouvez également utiliser l' [IndexedDB API](/fr/docs/Web/API/IndexedDB_API) pour stocker des données de votre extension. Cela peut être utile lorsque vous devez stocker des données qui ne sont pas bien gérées par les paires de clés / valeurs simples offertes par le DOM [Storage API](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage).
 
 ## Traitement de fichiers dans une application locale
 

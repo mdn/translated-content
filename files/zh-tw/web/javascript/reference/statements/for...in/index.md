@@ -113,7 +113,7 @@ alert(show_own_props(o, "o")); /* alerts: o.color = red */
 - [`for each...in`](/zh-TW/docs/JavaScript/Reference/Statements/for_each...in) - a similar statement, but iterates over the values of object's properties, rather than the property names themselves ([New in JavaScript 1.6](/zh-TW/docs/JavaScript/New_in_JavaScript/1.6) but deprecated)
 - [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for)
 - [Generator expressions](/zh-TW/docs/Web/JavaScript/Guide/Iterators_and_generators) (uses the `for...in` syntax)
-- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/zh-TW/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [`getOwnPropertyNames`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyNames)
 - [`hasOwnProperty`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty)
 - [`Array.prototype.forEach`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)

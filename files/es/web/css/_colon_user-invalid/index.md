@@ -7,7 +7,7 @@ slug: Web/CSS/:user-invalid
 
 ## Resumen
 
-La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-moz-ui-invalid` representa cualquier elemento de los formularios que, en determinadas circunstancias, tiene [restricciones de validación](/es/docs/Learn/Forms#constraint_validation) y no es válido. Esta pseudo-clase se aplica siguiendo la siguiente reglas::
+La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) CSS `:-moz-ui-invalid` representa cualquier elemento de los formularios que, en determinadas circunstancias, tiene [restricciones de validación](/es/docs/Learn_web_development/Extensions/Forms#constraint_validation) y no es válido. Esta pseudo-clase se aplica siguiendo la siguiente reglas::
 
 - Si el control no tiene el foco y el valor no es válido se aplica la pseudo-clase.
 - Si el control tiene el foco y el valor era válido (incluyendo si es un elemento vacío) cuando obtuvo el foco, no se aplica la pseudo-clase.

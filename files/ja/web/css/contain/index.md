@@ -2,7 +2,7 @@
 title: contain
 slug: Web/CSS/contain
 l10n:
-  sourceCommit: 4dec42ed700040565e8af0e14ff104054ebc20f5
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -10,9 +10,70 @@ l10n:
 **`contain`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素とそのコンテンツが文書ツリーの残りの部分から可能な限り独立していることを示します。
 拘束によって DOM のサブセクションを分離することができ、レイアウト、スタイル、描画、サイズ、または任意の組み合わせの計算をページ全体ではなく DOM サブツリーに制限することによって、性能上で有利になります。拘束は、CSS カウンターや引用のスコープにも使用することができます。
 
-{{EmbedInteractiveExample("pages/css/contain.html")}}
+{{InteractiveExample("CSS Demo: contain")}}
 
-CSS 拘束には、サイズ、レイアウト、スタイル、描画の 4 種類があり、コンテナーに設定します。
+```css interactive-example-choice
+contain: none;
+```
+
+```css interactive-example-choice
+contain: size;
+```
+
+```css interactive-example-choice
+contain: layout;
+```
+
+```css interactive-example-choice
+contain: paint;
+```
+
+```css interactive-example-choice
+contain: strict;
+```
+
+```html-nolint interactive-example
+<section class="default-example" id="default-example">
+  <div class="card" id="example-element">
+    <h2>'<code>contain</code>' 付きの要素</h2>
+    <p>
+      金魚は、その鮮やかな色と模様で最もよく知られている観賞魚の一種です。
+    </p>
+    <div class="fixed"><p>right 4px に固定</p></div>
+  </div>
+</section>
+```
+
+```css interactive-example
+h2 {
+  margin-top: 0;
+}
+
+#default-example {
+  text-align: left;
+  padding: 4px;
+  font-size: 16px;
+}
+
+.card {
+  text-align: left;
+  border: 3px dotted;
+  padding: 20px;
+  margin: 10px;
+  width: 85%;
+  min-height: 150px;
+}
+
+.fixed {
+  position: fixed;
+  border: 3px dotted;
+  right: 4px;
+  padding: 4px;
+  margin: 4px;
+}
+```
+
+CSS コンテナーには、サイズ、レイアウト、スタイル、描画の 4 種類があり、コンテナーに設定します。
 プロパティは、5 つの標準値のサブセットか、2 つの一括指定値のうちの 1 つをスペースで区切ったリストです。
 コンテナー内の拘束プロパティへの変更は、内包された要素の外側からページの残りの部分には伝搬されません。
 拘束の主な利点は、ブラウザーが DOM やページレイアウトを頻繁に再レンダリングする必要がなくなることで、静的なページのレンダリング時にはわずかなパフォーマンス上の利点を、より動的なアプリケーションではより大きなパフォーマンス上の利点につながります。
@@ -22,8 +83,8 @@ CSS 拘束には、サイズ、レイアウト、スタイル、描画の 4 種�
 > [!NOTE]
 > (`paint`, `strict`, `content` のいずれかの値で) 適用された場合、このプロパティは以下のものを生成します。
 >
-> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
-> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)。
+> 1. 新しい[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block) ({{cssxref("position")}} プロパティが `absolute` または `fixed` である子孫を対象とする)。
+> 2. 新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。
 > 3. 新しい[ブロック整形コンテキスト](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)。
 
 ## 構文
@@ -277,7 +338,7 @@ body {
 
 ## 関連情報
 
-- [CSS 拘束](/ja/docs/Web/CSS/CSS_containment)
+- [CSS コンテナー](/ja/docs/Web/CSS/CSS_containment)
 - [CSS コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)
 - CSS の {{cssxref("content-visibility")}} プロパティ
 - CSS の {{cssxref("position")}} プロパティ

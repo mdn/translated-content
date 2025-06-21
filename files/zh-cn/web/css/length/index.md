@@ -19,7 +19,7 @@ l10n:
 > [!NOTE]
 > 有些属性支持使用负数的 `<length>` 值，而有些不支持。
 
-长度的[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/specified_value)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/computed_value)是解析为绝对长度的指定长度，其单位没有区分。
+长度的[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)由其数量和单位表示。长度的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)是解析为绝对长度的指定长度，其单位没有区分。
 
 `<length>` 的单位可以是相对或绝对的。相对长度表示以其他距离为单位的测量值。根据单位的不同，这个距离可以是特定字符的大小、[行高](/zh-CN/docs/Web/CSS/line-height)或{{Glossary("viewport", "视口")}}的大小。使用相对长度单位的样式表可以更容易地从一个输出环境扩展到另一个输出环境。
 

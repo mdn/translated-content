@@ -103,6 +103,6 @@ slug: Mozilla/Add-ons/WebExtensions
 ### Manifest keys
 
 - [manifest.json の概要](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-- [manifest.json のブラウザー互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [manifest.json のブラウザー互換性](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
 
 {{ ListSubpages ("/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json") }}

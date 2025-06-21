@@ -145,7 +145,7 @@ Esto sería muy aburrido y difícil de mantener.
 
 La mayoría de las veces, cuando usas un bucle, tendrás una colección de artículos y querrás hacer algo con cada artículo.
 
-Un tipo de colección es el {{jsxref("Array","Arreglo")}}, que conocimos en el capítulo de [Arreglos](/es/docs/Learn/JavaScript/First_steps/Arrays) de este curso.
+Un tipo de colección es el {{jsxref("Array","Arreglo")}}, que conocimos en el capítulo de [Arreglos](/es/docs/Learn_web_development/Core/Scripting/Arrays) de este curso.
 Pero también hay otras colecciones en JavaScript, como {{jsxref ("Set")}} y {{jsxref("Map")}}.
 
 ### El bucle for...of
@@ -206,7 +206,7 @@ console.log(filtrado);
 // [ "Leopardo", "León" ]
 ```
 
-Esto se parece mucho a `map()`, excepto que la función que pasamos devuelve un [booleano](/es/docs/Learn/JavaScript/First_steps/Variables#booleans): si devuelve `true`, entonces el elemento se incluye en el nuevo arreglo.
+Esto se parece mucho a `map()`, excepto que la función que pasamos devuelve un [booleano](/es/docs/Learn_web_development/Core/Scripting/Variables#booleans): si devuelve `true`, entonces el elemento se incluye en el nuevo arreglo.
 Nuestra función prueba que el elemento comienza con la letra "L", por lo que el resultado es una matriz que contiene solo gatos cuyos nombres comienzan con "L":
 
 ```js-nolint
@@ -381,7 +381,7 @@ console.log(myFavoriteCats); // "Mis gatos se llaman Pete, Biggles y Jasmine."
 ## Saliendo de bucles con break
 
 Si desea salir de un bucle antes de que se hayan completado todas las iteraciones, puede usar la instrucción [break](/es/docs/Web/JavaScript/Reference/Statements/break).
-Ya vimos esto en el artículo anterior cuando analizamos las [sentencias switch](/es/docs/Learn/JavaScript/Building_blocks/conditionals#switch_statements): cuando se cumple un caso en una sentencia switch que coincide con la expresión de entrada, la sentencia `break` sale inmediatamente de la sentencia switch y pasa al código después de ella.
+Ya vimos esto en el artículo anterior cuando analizamos las [sentencias switch](/es/docs/Learn_web_development/Core/Scripting/Conditionals#switch_statements): cuando se cumple un caso en una sentencia switch que coincide con la expresión de entrada, la sentencia `break` sale inmediatamente de la sentencia switch y pasa al código después de ella.
 
 Es lo mismo con los bucles: una instrucción `break` saldrá inmediatamente del bucle y hará que el navegador pase a cualquier código que lo siga.
 
@@ -782,7 +782,7 @@ Ya te hemos proporcionado:
 
 Pregunta de bonificación adicional: después de completar las tareas anteriores con éxito, te quedarán dos listas de nombres, separadas por comas, pero estarán desordenadas: habrá una coma al final de cada una.
 ¿Puedes averiguar cómo escribir líneas que corten la última coma en cada caso y añadir un punto al final?
-Consulta el artículo [Métodos de cadenas útiles](/es/docs/Learn/JavaScript/First_steps/Useful_string_methods) para obtener ayuda.
+Consulta el artículo [Métodos de cadenas útiles](/es/docs/Learn_web_development/Core/Scripting/Useful_string_methods) para obtener ayuda.
 
 Si comete un error, siempre puede restablecer el ejemplo con el botón "Restablecer".
 Si te quedas realmente atascado, pulsa "Mostrar solución" para ver una solución.
@@ -1005,7 +1005,7 @@ Has llegado al final de este artículo, pero ¿puedes recordar la información m
 Este artículo te ha revelado los conceptos básicos que hay detrás y las diferentes opciones disponibles al hacer bucles de código en JavaScript.
 ¡Ahora deberías tener claro por qué los bucles son un buen mecanismo para lidiar con el código repetitivo y tener ganas de usarlos en tus propios ejemplos!
 
-Si hay algo que no entendiste, vuelve a leer el artículo o [ponte en contacto con nosotros](/es/docs/Learn#contact_us) para pedir ayuda.
+Si hay algo que no entendiste, vuelve a leer el artículo o [ponte en contacto con nosotros](/es/docs/Learn_web_development#contact_us) para pedir ayuda.
 
 ## Vease también
 

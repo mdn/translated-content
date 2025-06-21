@@ -66,7 +66,7 @@ getDisplayMedia(options)
 - `InvalidStateError` {{domxref("DOMException")}}
   - : `getDisplayMedia()` を呼び出すコードが、イベントハンドラーなど、{{glossary("transient activation", "一時的な活性化")}}により実行されている場合、例外が発生します。 また、ブラウザーのコンテキストが完全にアクティブでない場合やフォーカスされていない場合にも発生します。 また、`controller` オプションが、別の {{domxref("MediaStream")}} を生成する際にすでに使用されている場合にも発生します。
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Permissions_Policy)で）許可されていない場合に発生します。
+  - : ユーザーによって画面領域へのアクセス許可が拒否された場合、または現在の閲覧インスタンスが画面共有へのアクセスを（例えば[権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)で）許可されていない場合に発生します。
 - `NotFoundError` {{domxref("DOMException")}}
   - : キャプチャ可能な画面映像のソースが存在しない場合に発生します。
 - `NotReadableError` {{domxref("DOMException")}}

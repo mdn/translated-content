@@ -46,7 +46,7 @@ param => {
 }
 ```
 
-参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)，并且始终需要使用括号：
+参数部分支持[剩余参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[默认参数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Default_parameters)和[解构](/zh-CN/docs/Web/JavaScript/Reference/Operators/Destructuring)，并且始终需要使用括号：
 
 ```js-nolint
 (a, b, ...r) => expression
@@ -171,7 +171,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象文字中的键。
+这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象字面量中的键。
 
 要解决这个问题，可以用括号将对象字面量包装起来：
 
@@ -215,7 +215,7 @@ Object.defineProperty(obj, "b", {
 });
 ```
 
-由于[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)体具有 `this` 上下文，因此作为[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)的箭头函数会关闭类的 `this` 上下文，箭头函数体中的 `this` 将正确指向实例（对于[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)来说是类本身）。但是，由于它是一个[闭包](/zh-CN/docs/Web/JavaScript/Closures)，而不是函数本身的绑定，因此 `this` 的值不会根据执行上下文而改变。
+由于[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)体具有 `this` 上下文，因此作为[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)的箭头函数会关闭类的 `this` 上下文，箭头函数体中的 `this` 将正确指向实例（对于[静态字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/static)来说是类本身）。但是，由于它是一个[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures)，而不是函数本身的绑定，因此 `this` 的值不会根据执行上下文而改变。
 
 ```js
 class C {

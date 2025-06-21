@@ -31,7 +31,7 @@ slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
 </div>
 ```
 
-Основной интерфейс представляется в двух колонках. В левой находиться кнопка старта и элемент {{HTMLElement("video")}} , который отображает предварительный просмотр видео. Это видео, воспроизводится камерой устройства. Заметьте, что используется атрибут [`autoplay`](/ru/docs/Web/HTML/Element/video#autoplay), что бы поток начал воспроизводиться немедленно, снимаясь прямо с камеры. Атрибут [`muted`](/ru/docs/Web/HTML/Element/video#muted) гарантирует отключение звука с микрофона, для предотвращения цикличного эхо эффекта.
+Основной интерфейс представляется в двух колонках. В левой находиться кнопка старта и элемент {{HTMLElement("video")}} , который отображает предварительный просмотр видео. Это видео, воспроизводится камерой устройства. Заметьте, что используется атрибут [`autoplay`](/ru/docs/Web/HTML/Reference/Elements/video#autoplay), что бы поток начал воспроизводиться немедленно, снимаясь прямо с камеры. Атрибут [`muted`](/ru/docs/Web/HTML/Reference/Elements/video#muted) гарантирует отключение звука с микрофона, для предотвращения цикличного эхо эффекта.
 
 ```html
 <div class="right">
@@ -42,7 +42,7 @@ slug: Web/API/MediaStream_Recording_API/Recording_a_media_element
 </div>
 ```
 
-Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. Обратите внимание, что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), а также установлен атрибут [`controls`](/ru/docs/Web/HTML/Element/video#controls), что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, паузы и т. д.
+Справа мы видим кнопку остановки и элемент `<video>,` который будет использоваться для воспроизведения записанного видео. Обратите внимание, что на панели воспроизведения не установлен режим автозапуска (поэтому воспроизведение не начинается сразу после поступления мультимедиа), а также установлен атрибут [`controls`](/ru/docs/Web/HTML/Reference/Elements/video#controls), что говорит о необходимости показывать пользовательские элементы управления для воспроизведения, паузы и т. д.
 
 Под элементом воспроизведения находится кнопка для загрузки записанного видео.
 
@@ -250,9 +250,9 @@ When a {{domxref("Element/click_event", "click")}} event occurs, here's what hap
   - : When the preview video begins to play, we know there's media to record, so we respond by calling the [`startRecording()`](#starting_media_recording) function we created earlier, passing in the preview video stream (as the source media to be recorded) and `recordingTimeMS` as the number of milliseconds of media to record. As mentioned before, `startRecording()` returns a {{jsxref("Promise")}} whose resolution handler is called (receiving as input an array of {{domxref("Blob")}} objects containing the chunks of recorded media data) once recording has completed.
 - Lines 11-15
 
-  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/ru/docs/Web/HTML/Element/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
+  - : The recording process's resolution handler receives as input an array of media data `Blob`s locally known as `recordedChunks`. The first thing we do is merge the chunks into a single {{domxref("Blob")}} whose MIME type is `"video/webm"` by taking advantage of the fact that the {{domxref("Blob.Blob", "Blob()")}} constructor concatenates arrays of objects into one object. Then {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}} is used to create an URL that references the blob; this is then made the value of the recorded video playback element's [`src`](/ru/docs/Web/HTML/Reference/Elements/video#src) attribute (so that you can play the video from the blob) as well as the target of the download button's link.
 
-    Then the download button's [`download`](/ru/docs/Web/HTML/Element/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
+    Then the download button's [`download`](/ru/docs/Web/HTML/Reference/Elements/a#download) attribute is set. While the `download` attribute can be a Boolean, you can also set it to a string to use as the name for the downloaded file. So by setting the download link's `download` attribute to "RecordedVideo.webm", we tell the browser that clicking the button should download a file named `"RecordedVideo.webm"` whose contents are the recorded video.
 
 - Lines 17-18
   - : The size and type of the recorded media are output to the log area below the two videos and the download button.

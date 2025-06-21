@@ -2,14 +2,91 @@
 title: animation-duration
 slug: Web/CSS/animation-duration
 l10n:
-  sourceCommit: 762f2305c59bd38ddd10a55b4909de7e07180f84
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
-{{EmbedInteractiveExample("pages/css/animation-duration.html")}}
+{{InteractiveExample("CSS Demo: animation-duration")}}
+
+```css interactive-example-choice
+animation-duration: 750ms;
+```
+
+```css interactive-example-choice
+animation-duration: 3s;
+```
+
+```css interactive-example-choice
+animation-duration: 0s;
+```
+
+```html interactive-example
+<section class="flex-column" id="default-example">
+  <div class="animating" id="example-element"></div>
+  <button id="play-pause">再生</button>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-name: slide;
+  animation-play-state: paused;
+  animation-timing-function: ease-in;
+  background-color: #1766aa;
+  border-radius: 50%;
+  border: 5px solid #333;
+  color: white;
+  height: 150px;
+  margin: auto;
+  margin-left: 0;
+  width: 150px;
+}
+
+#example-element.running {
+  animation-play-state: running;
+}
+
+#play-pause {
+  font-size: 2rem;
+}
+
+@keyframes slide {
+  from {
+    background-color: orange;
+    color: black;
+    margin-left: 0;
+  }
+  to {
+    background-color: orange;
+    color: black;
+    margin-left: 80%;
+  }
+}
+```
+
+```js interactive-example
+"use strict";
+
+window.addEventListener("load", () => {
+  const el = document.getElementById("example-element");
+  const button = document.getElementById("play-pause");
+
+  button.addEventListener("click", () => {
+    if (el.classList.contains("running")) {
+      el.classList.remove("running");
+      button.textContent = "再生";
+    } else {
+      el.classList.add("running");
+      button.textContent = "一時停止";
+    }
+  });
+});
+```
 
 アニメーションのプロパティすべてを一度に設定するには、一括指定プロパティである {{cssxref("animation")}} プロパティを使用すると便利です。
 
@@ -35,11 +112,11 @@ animation-duration: unset;
 
 ### 値
 
-- `auto` {{Experimental_Inline}}
+- `auto`
 
   - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
-- `{{cssxref("&lt;time&gt;")}}`
+- {{cssxref("&lt;time&gt;")}}
 
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 

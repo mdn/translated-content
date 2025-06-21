@@ -216,5 +216,5 @@ obj[Object(sym)]; // still 1
 
 - [Glossary: Symbol data type](/zh-CN/docs/Glossary/Symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [Data types and data structures](/zh-CN/docs/Web/JavaScript/Data_structures)
+- [Data types and data structures](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - ["ES6 In Depth: Symbols"（深入 ES6 Symbols）on hacks.mozilla.org](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)

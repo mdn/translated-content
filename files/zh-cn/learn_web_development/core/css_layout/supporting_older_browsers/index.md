@@ -3,8 +3,6 @@ title: 支持旧浏览器
 slug: Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers
 ---
 
-{{LearnSidebar}}
-
 本文中，我们推荐使用弹性盒和网格作为你的设计的主要布局方式。但是，你的网站的访客会有人使用旧浏览器，或者是不支持你已经使用的方式。这总是 Web 上存在的情况，因为新的特性被开发出来，不同的浏览器会优先支持不同的特性。本文解释了如何使用现代的 Web 技术，而无需让采用旧技术的用户被拒之门外。
 
 <table>

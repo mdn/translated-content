@@ -37,7 +37,7 @@ toString()
 
 `toString()` メソッドは `this` 値が `String` プリミティブまたはラッパーオブジェクトであることを要求します。他の `this` の値に対しては、文字列値に変換しようとせずに {{jsxref("TypeError")}} を発生します。
 
-`String` には [`[@@toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、JavaScript は `toString()` メソッドを、文字列が求められるコンテキスト、例えば[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)で `String` オブジェクトが使用されると、自動的に呼び出します。しかし、文字列プリミティブ値は[文字列に変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)ために `toString()` を呼び出しません。既に文字列なので、変換が実施されないからです。
+`String` には [`[Symbol.toPrimitive]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) メソッドがないため、JavaScript は `toString()` メソッドを、文字列が求められるコンテキスト、例えば[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)で `String` オブジェクトが使用されると、自動的に呼び出します。しかし、文字列プリミティブ値は[文字列に変換する](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)ために `toString()` を呼び出しません。既に文字列なので、変換が実施されないからです。
 
 ```js
 String.prototype.toString = () => "Overridden";

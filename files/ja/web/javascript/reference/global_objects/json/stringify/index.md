@@ -84,7 +84,7 @@ JSON.stringify(value, replacer, space)
 
     {{jsxref("Date")}} のインスタンスは文字列を返す `toJSON()` を実装しています ([`date.toISOString()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Date/toISOString) と同じです)。そのため、これは文字列に変換されます。
 
-  - [列挙可能なプロパティ](/ja/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)のみが文字列化されます。そのため、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} などは `"{}"` に変換されます。引数 [`replacer`](#replacer_引数) を用いることで、これらをより実用的なものに変換できます。
+  - [列挙可能なプロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)のみが文字列化されます。そのため、{{jsxref("Map")}}、{{jsxref("Set")}}、{{jsxref("WeakMap")}}、{{jsxref("WeakSet")}} などは `"{}"` に変換されます。引数 [`replacer`](#replacer_引数) を用いることで、これらをより実用的なものに変換できます。
 
   プロパティは、[`Object.keys()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/keys) と同じアルゴリズムで走査されます。このアルゴリズムは、完全に定義された順番を用い、実装間で一貫性があります。例えば、`JSON.stringify()` を同じオブジェクトに対して用いると、常に同じ文字列を生成します。また、`JSON.parse(JSON.stringify(obj))` は (オブジェクトが完全に JSON に変換可能であると仮定すると) もとのオブジェクトと同じキーの順番を持つオブジェクトを生成します。
 

@@ -4,7 +4,7 @@ slug: Learn_web_development/Core/Challenges
 original_slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 ---
 
-このページは、 [CSS Getting Started](/ja/docs/Learn/CSS) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
+このページは、 [CSS Getting Started](/ja/docs/Learn_web_development/Core/Styling_basics) チュートリアルにあるチャレンジの解答例です。これ以外の解答も考えられます。以下の章名はチュートリアルページのタイトルと一致します。
 
 ## CSS をなぜ用いるか
 

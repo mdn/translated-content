@@ -7,7 +7,7 @@ slug: Web/CSS/page-break-after
 
 **`page-break-after`** CSS 属性调整当前元素之后的分页符。
 
-此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 [`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
+此属性适用于生成一个盒子的块元素。它不适用于不会生成一个盒子的空 [`<div>`](/zh-CN/docs/Web/HTML/Reference/Elements/div)。
 
 ```plain
 /* Keyword values */

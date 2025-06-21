@@ -142,7 +142,7 @@ let resetButton;
 
 - 마지막 두 변수는 플레이어가 사용한 턴 수인 1과, 지금은 없지만 이 글의 뒤에서 추가할 초기화 버튼의 참조를 저장하기 위해 사용합니다.
 
-> **참고:** [바로 다음 글](/ko/docs/Learn/JavaScript/First_steps/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
+> **참고:** [바로 다음 글](/ko/docs/Learn_web_development/Core/Scripting/Variables)을 시작으로, 이후 과정에서 변수와 상수에 대해 많이 배울 수 있습니다.
 
 ### 함수
 
@@ -166,7 +166,7 @@ checkGuess();
 
 키보드의 <kbd>Return</kbd>/<kbd>Enter</kbd> 키를 누르면 `I am a placeholder`라는 경고 창이 나타날 겁니다. 이로써, 우리 코드 안에 호출할 때마다 경고 창을 띄우는 함수를 정의했습니다.
 
-> **참고:** [이후 과정](/ko/docs/Learn/JavaScript/Building_blocks/Functions)에서 함수에 대해 많이 배울 수 있습니다.
+> **참고:** [이후 과정](/ko/docs/Learn_web_development/Core/Scripting/Functions)에서 함수에 대해 많이 배울 수 있습니다.
 
 ### 연산자
 
@@ -421,7 +421,7 @@ for (const fruit of fruits) {
 
 결과가 어떤가요? 세 문자열 `'apples', 'bananas', 'cherries'`가 콘솔에 출력됐을 겁니다.
 
-이것이 반복입니다. `const fruits = ['apples', 'bananas', 'cherries'];`는 배열이라는 걸 생성합니다. 배열이 뭔지는 이 과정 뒤쪽의 [완전한 배열 안내서](/ko/docs/Learn/JavaScript/First_steps/Arrays)에서 알아보는 걸로 하고, 지금 당장은 아이템을 모은 컬렉션(위 코드의 경우, 문자열의 컬렉션)이라고 생각하면 충분합니다.
+이것이 반복입니다. `const fruits = ['apples', 'bananas', 'cherries'];`는 배열이라는 걸 생성합니다. 배열이 뭔지는 이 과정 뒤쪽의 [완전한 배열 안내서](/ko/docs/Learn_web_development/Core/Scripting/Arrays)에서 알아보는 걸로 하고, 지금 당장은 아이템을 모은 컬렉션(위 코드의 경우, 문자열의 컬렉션)이라고 생각하면 충분합니다.
 
 `for...of` 반복문을 사용하면 배열의 각 아이템을 하나씩 가져와서, 지정한 JavaScript 코드를 실행할 때 제공할 수 있습니다. `for (const fruit of fruits)`라는 코드의 뜻은 다음과 같습니다.
 
@@ -462,7 +462,7 @@ guessField.focus();
 const guessField = document.querySelector(".guessField");
 ```
 
-이 참조를 가져오기 위해 {{domxref("document")}} 객체의 {{domxref("document.querySelector", "querySelector()")}} 메서드를 사용하는 모습입니다. `querySelector()`는 하나의 정보 — 참조를 가져오고자 하는 요소를 선택할 수 있는 [CSS 선택자](/ko/docs/Learn/CSS/Building_blocks/Selectors)를 요구합니다.
+이 참조를 가져오기 위해 {{domxref("document")}} 객체의 {{domxref("document.querySelector", "querySelector()")}} 메서드를 사용하는 모습입니다. `querySelector()`는 하나의 정보 — 참조를 가져오고자 하는 요소를 선택할 수 있는 [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)를 요구합니다.
 
 이제 {{htmlelement("input")}} 요소의 참조를 담고 있으니, `guessField`는 다양한 속성(객체 안에 저장된 변수라고 생각할 수 있음, 일부 속성은 값을 바꿀 수 없음)과 메서드(객체 안에 저장된 함수)에 접근할 수 있습니다. 그 메서드 중 하나가 바로 `focus()`로, 다음과 같이 사용해서 텍스트 입력 칸에 포커스를 부여할 수 있습니다.
 

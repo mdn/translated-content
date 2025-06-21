@@ -169,7 +169,7 @@ observer.observe(userListElement, {
 
 ### 属性値の監視
 
-この例では、属性値の変更を監視する要素を観察し、その要素の [`dir`](/ja/docs/Web/HTML/Global_attributes/dir) 属性を `"ltr"` と `"rtl"` との間で切り替えるボタンを追加します。オブザーバーのコールバックの中で、属性の古い値をログ出力します。
+この例では、属性値の変更を監視する要素を観察し、その要素の [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir) 属性を `"ltr"` と `"rtl"` との間で切り替えるボタンを追加します。オブザーバーのコールバックの中で、属性の古い値をログ出力します。
 
 #### HTML
 

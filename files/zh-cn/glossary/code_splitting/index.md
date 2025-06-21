@@ -13,6 +13,6 @@ l10n:
 
 ## 参见
 
-- [延迟加载](/zh-CN/docs/Web/Performance/Lazy_loading)
+- [懒加载](/zh-CN/docs/Web/Performance/Guides/Lazy_loading)
 - [HTTP/2](/zh-CN/docs/Glossary/HTTP_2)
 - [摇树优化](/zh-CN/docs/Glossary/Tree_shaking)

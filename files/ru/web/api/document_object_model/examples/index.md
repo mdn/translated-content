@@ -420,5 +420,5 @@ getComputedStyle () возвращает объект ComputedCSSStyleDeclaratio
 
 - [DOM Reference](/ru/docs/Web/API/Document_Object_Model)
 - [Introduction to the DOM](/ru/docs/Web/API/Document_Object_Model/Introduction)
-- [Events and the DOM](/ru/docs/Learn/JavaScript/Building_blocks/Events)
+- [Events and the DOM](/ru/docs/Learn_web_development/Core/Scripting/Events)
 - [Examples](/ru/docs/Web/API/Document_Object_Model/Examples)
