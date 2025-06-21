@@ -248,7 +248,8 @@ Le balisage suivant montre un tableau simple imbriqué :
     <td>cell5</td>
     <td>cell6</td>
   </tr>
-</table>https://github.com/mdn/translated-content/blob/main/files/fr/learn/html/tables/advanced/index.md
+</table>
+https://github.com/mdn/translated-content/blob/main/files/fr/learn/html/tables/advanced/index.md
 ```
 
 Voici la sortie qui en résulte :
