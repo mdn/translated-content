@@ -1,6 +1,8 @@
 ---
 title: HTML spellcheck 全域屬性
 slug: Web/HTML/Reference/Global_attributes/spellcheck
+l10n:
+  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
 
 {{HTMLSidebar("Global_attributes")}}
