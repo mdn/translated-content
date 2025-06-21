@@ -257,7 +257,7 @@ Voici la sortie qui en résulte :
 | title1                                                                            | title2 | title3 |
 | --------------------------------------------------------------------------------- | ------ | ------ |
 | <table><tbody><tr><td>cell1</td><td>cell2</td><td>cell3</td></tr></tbody></table> | cell2  | cell3  |
-| cell4 | cell5  | cell6  |
+| cell4                                                                             | cell5  | cell6  |
 
 ## Tableaux pour utilisateurs malvoyants
 
