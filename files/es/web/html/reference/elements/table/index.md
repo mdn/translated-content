@@ -69,7 +69,7 @@ El _Elemento de Tabla HTML_ (`<table>`) representa datos en dos o mas dimensione
 
 ### Atributos
 
-Al igual que otros elementos HTML, este elemento también soporta [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Al igual que otros elementos HTML, este elemento también soporta [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{Deprecated_inline}}
 
