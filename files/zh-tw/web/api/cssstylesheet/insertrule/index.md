@@ -2,7 +2,7 @@
 title: CSSStyleSheet：insertRule() 方法
 slug: Web/API/CSSStyleSheet/insertRule
 l10n:
-  sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
+  sourceCommit: d64189632da72d059dcc110f4d0b0684ef45ba16
 ---
 
 {{APIRef("CSSOM")}}
@@ -87,19 +87,18 @@ function addStylesheetRules(rules) {
   // 取得樣式表
   const styleSheet = styleEl.sheet;
 
-  for (let i = 0; i < rules.length; i++) {
-    let j = 1,
-      rule = rules[i],
+  for (let rule of rules) {
+    let i = 1,
       selector = rule[0],
       propStr = "";
     // 若第二個參數是由多個陣列組成的陣列，則重新設定變數。
     if (Array.isArray(rule[1][0])) {
       rule = rule[1];
-      j = 0;
+      i = 0;
     }
 
-    for (let pl = rule.length; j < pl; j++) {
-      const prop = rule[j];
+    for (; i < rule.length; i++) {
+      const prop = rule[i];
       propStr += `${prop[0]}: ${prop[1]}${prop[2] ? " !important" : ""};\n`;
     }
 
