@@ -16,8 +16,7 @@ l10n:
       <td>
         熟悉核心的 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
         <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 和
-        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言，並了解
-        <a
+        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言，並了解<a
           href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
           >終端機／命令列</a
         >。
