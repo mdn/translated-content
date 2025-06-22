@@ -16,7 +16,7 @@ original_slug: Web/HTML/Element/colgroup
 
     **Está definido como**: Elemento [para tablas](/es/docs/HTML/Elemento/Tipos_de_elementos#para_tablas).
 
-    **Puede contener**: Cero o más elementos [col](/es/docs/Web/HTML/Element/col).
+    **Puede contener**: Cero o más elementos [col](/es/docs/Web/HTML/Reference/Elements/col).
 
 #### Atributos
 

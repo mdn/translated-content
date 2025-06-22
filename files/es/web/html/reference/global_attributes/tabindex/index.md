@@ -9,7 +9,7 @@ original_slug: Web/HTML/Global_attributes/tabindex
 > [!NOTE]
 > El valor máximo para tabindex no debe de exceder 32767 ([sección 17.11.1 del W3C](https://www.w3.org/TR/html401/interact/forms.html#h-17.11.1)). Si no se especifica, el valor asignado por defecto es -1.
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **tabindex** indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla _Tab_, de ahí el nombre). Acepta un entero como valor, con diferentes resultados que dependen de dicho valor:
+El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **tabindex** indica si su elemento puede ser enfocado, y si participa en la navegación secuencial del teclado (usualmente con la tecla _Tab_, de ahí el nombre). Acepta un entero como valor, con diferentes resultados que dependen de dicho valor:
 
 - un _valor negativo_ (usualmente tabindex="-1") significa que el elemento debe ser enfocado, pero no debe de ser accesible a través de la navegación secuencial del teclado. Es útil para crear widgets accesibles con JavaScript.
 - tabindex="0" significa que el elemento debe ser enfocado y ser accesible a través de la navegación secuencial del teclado, pero su orden relativo es definido por convención de la plataforma.

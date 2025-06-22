@@ -230,11 +230,11 @@ original_slug: Web/HTML/Element/blockquote
 </blockquote>
 ```
 
-- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Element/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Element/q) para citas en línea.
+- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Reference/Elements/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Reference/Elements/q) para citas en línea.
 
 <!---->
 
-- A diferencia de [q](/es/docs/Web/HTML/Element/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
+- A diferencia de [q](/es/docs/Web/HTML/Reference/Elements/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
 
 ### Referencia
 

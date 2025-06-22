@@ -17,4 +17,4 @@ En esta lista, cada pagina esta ordenada por nombre (el tipo de error) y el mens
 
 ## Ve también
 
-- [¿Qué salió mal? Solucionando Javascript](/es/docs/Learn/JavaScript/First_steps/What_went_wrong): El tutorial introductorio para principiantes sobre la reparación en errores de JavaScript.
+- [¿Qué salió mal? Solucionando Javascript](/es/docs/Learn_web_development/Core/Scripting/What_went_wrong): El tutorial introductorio para principiantes sobre la reparación en errores de JavaScript.

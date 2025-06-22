@@ -81,7 +81,7 @@ li {
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `download`
 
@@ -97,7 +97,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `href`
 
   - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
-    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
+    Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Reference/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
     Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
 
     > [!NOTE]
@@ -116,7 +116,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `'unsafe-url'` significa que la referencia (_referrer_) incuirá el origen(`origin`) y la trayectoria (_path_), pero no el fragmento, contraseña o nombre de usuario. Esto es inseguro, ya que puede filtrar datos desde una URL segura hacia URLs inseguras.
 
 - `rel`
-  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Attributes/rel).
+  - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Reference/Attributes/rel).
 - `target`
 
   - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
@@ -148,7 +148,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
     > [!NOTE]
-    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/Web/HTML/Global_attributes#attr-id) en su lugar.
+    > Este atributo es obsoleto en HTML5, se utiliza el [atributo global `id`](/es/docs/Web/HTML/Reference/Global_attributes#attr-id) en su lugar.
 
 - `rev` {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
@@ -157,7 +157,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
 
     > [!NOTE]
-    > Utilice el [atributo `usemap`](/es/docs/Web/HTML/Element/img#attr-usemap) para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (_hotspots_) en lugar del atributo `shape`.
+    > Utilice el [atributo `usemap`](/es/docs/Web/HTML/Reference/Elements/img#attr-usemap) para el elemento {{HTMLElement("img")}} y el elemento asociado {{HTMLElement("map")}} para definir puntos de acceso (_hotspots_) en lugar del atributo `shape`.
 
 ## Ejemplos
 

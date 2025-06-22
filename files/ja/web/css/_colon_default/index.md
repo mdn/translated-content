@@ -1,13 +1,15 @@
 ---
 title: :default
 slug: Web/CSS/:default
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
 
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
 
-{{InteractiveExample("CSS Demo: :default", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :default", "tabbed-shorter")}}
 
 ```css interactive-example
 label,
@@ -22,26 +24,24 @@ input:default {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
-  <p>How did you find out about us?</p>
+  <p>どのように私たちを知りましたか？</p>
   <label
     ><input name="origin" type="radio" value="google" checked /> Google</label
   >
   <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Please agree to our terms:</p>
+  <p>利用規約に同意してください。</p>
 
   <label
-    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
-    a personalized newsletter.</label
+    ><input name="newsletter" type="checkbox" checked /> パーソナライズされたニュースレターを購読したいです。</label
   >
 
   <label
-    ><input name="privacy" type="checkbox" /> I have read and I agree to the
-    Privacy Policy.</label
+    ><input name="privacy" type="checkbox" />プライバシーポリシーをを読み、同意します。</label
   >
 
-  <input type="submit" value="Submit form" />
+  <input type="submit" value="送信フォーム" />
 </form>
 ```
 
@@ -53,8 +53,10 @@ input:default {
 
 ## 構文
 
-```
-:default
+```css
+:default {
+  /* ... */
+}
 ```
 
 ## 例
@@ -63,19 +65,19 @@ input:default {
 
 ```html
 <fieldset>
-  <legend>Favorite season</legend>
+  <legend>好きな季節</legend>
 
-  <input type="radio" name="season" id="spring" />
-  <label for="spring">Spring</label>
+  <input type="radio" name="season" id="spring" value="spring" />
+  <label for="spring">春</label>
 
-  <input type="radio" name="season" id="summer" checked />
-  <label for="summer">Summer</label>
+  <input type="radio" name="season" id="summer" value="summer" checked />
+  <label for="summer">夏</label>
 
-  <input type="radio" name="season" id="fall" />
-  <label for="fall">Fall</label>
+  <input type="radio" name="season" id="fall" value="fall" />
+  <label for="fall">秋</label>
 
-  <input type="radio" name="season" id="winter" />
-  <label for="winter">Winter</label>
+  <input type="radio" name="season" id="winter" value="winter" />
+  <label for="winter">冬</label>
 </fieldset>
 ```
 

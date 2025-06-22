@@ -31,9 +31,9 @@ set(key, value)
 ### Parámetros
 
 - `key`
-  - : La llave del elemento que se va a agregar al objeto `Map`. La llave puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
+  - : La llave del elemento que se va a agregar al objeto `Map`. La llave puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objetos)).
 - `value`
-  - : El valor de el elemento que se va a agregar al objeto `Map`. El valor puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Data_structures#objetos)).
+  - : El valor de el elemento que se va a agregar al objeto `Map`. El valor puede ser cualquiera de los [tipos de dato de JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures) (cualquier [valor primitivo](/es/docs/Web/JavaScript/Guide/Data_structures#valores_primitivos) o cualquier tipo de [objeto JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objetos)).
 
 ### Valor devuelto
 

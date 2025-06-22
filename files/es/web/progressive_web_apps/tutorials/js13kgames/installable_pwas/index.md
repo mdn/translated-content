@@ -74,7 +74,7 @@ La mayoría de los campos se explican por sí mismos, pero para estar seguros de
 - `theme_color`: Un color primario para la interfaz de usuario, utilizado por el sistema operativo.
 - `background_color`: Un color que se utiliza como fondo predeterminado de la aplicación, usado durante la instalación y en la pantalla de bienvenida.
 
-Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Manifest) para obtener más detalles.
+Un manifiesto web mínimo debe tener al menos un `name` y un campo `icons` con al menos un icono definido; ese icono debe tener al menos los subcampos `src`, `sizes` y `type` también. Más allá de eso, todo es opcional, aunque se recomiendan los campos `description`, `short_name` y `start_url`. Incluso, hay más campos que puedes usar de los que se enumeran anteriormente; asegúrate de consultar la [referencia del manifiesto de la aplicación web](/es/docs/Web/Progressive_web_apps/Manifest) para obtener más detalles.
 
 ## Agregar a la pantalla inicial
 

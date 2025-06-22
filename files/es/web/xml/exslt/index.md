@@ -40,8 +40,8 @@ El paquete Common de EXSLT proporciona funciones básicas que incrementan las ca
 
 #### Funciones
 
-- [exsl:node-set](/es/docs/Web/EXSLT/exsl/node-set)
-- [exsl:object-type](/es/docs/Web/EXSLT/exsl/object-type)
+- [exsl:node-set](/es/docs/Web/XML/EXSLT/Reference/exsl/node-set)
+- [exsl:object-type](/es/docs/Web/XML/EXSLT/Reference/exsl/object-type)
 
 ### Math
 
@@ -49,10 +49,10 @@ El paquete Math de EXSLT proporciona funciones para el trabajo con valores numé
 
 #### Funciones
 
-- [math:highest](/es/docs/Web/EXSLT/math/highest)
-- [math:lowest](/es/docs/Web/EXSLT/math/lowest)
-- [math:max](/es/docs/Web/EXSLT/math/max)
-- [math:min](/es/docs/Web/EXSLT/math/min)
+- [math:highest](/es/docs/Web/XML/EXSLT/Reference/math/highest)
+- [math:lowest](/es/docs/Web/XML/EXSLT/Reference/math/lowest)
+- [math:max](/es/docs/Web/XML/EXSLT/Reference/math/max)
+- [math:min](/es/docs/Web/XML/EXSLT/Reference/math/min)
 
 ### Regular Expressions
 
@@ -62,9 +62,9 @@ El espacio de nombres del paquete Regular Expressions es `http://exslt.org/regul
 
 #### Funciones
 
-- [regexp:match](/es/docs/Web/EXSLT/regexp/match)
-- [regexp:replace](/es/docs/Web/EXSLT/regexp/replace)
-- [regexp:test](/es/docs/Web/EXSLT/regexp/test)
+- [regexp:match](/es/docs/Web/XML/EXSLT/Reference/regexp/match)
+- [regexp:replace](/es/docs/Web/XML/EXSLT/Reference/regexp/replace)
+- [regexp:test](/es/docs/Web/XML/EXSLT/Reference/regexp/test)
 
 ### Sets
 
@@ -72,12 +72,12 @@ El paquete Sets de EXSLT ofrece funciones que permiten realizar operaciones con 
 
 #### Funciones
 
-- [set:difference](/es/docs/Web/EXSLT/set/difference)
-- [set:distinct](/es/docs/Web/EXSLT/set/distinct)
-- [set:intersection](/es/docs/Web/EXSLT/set/intersection)
-- [set:has-same-node](/es/docs/Web/EXSLT/set/has-same-node)
-- [set:leading](/es/docs/Web/EXSLT/set/leading)
-- [set:trailing](/es/docs/Web/EXSLT/set/trailing)
+- [set:difference](/es/docs/Web/XML/EXSLT/Reference/set/difference)
+- [set:distinct](/es/docs/Web/XML/EXSLT/Reference/set/distinct)
+- [set:intersection](/es/docs/Web/XML/EXSLT/Reference/set/intersection)
+- [set:has-same-node](/es/docs/Web/XML/EXSLT/Reference/set/has-same-node)
+- [set:leading](/es/docs/Web/XML/EXSLT/Reference/set/leading)
+- [set:trailing](/es/docs/Web/XML/EXSLT/Reference/set/trailing)
 
 ### Strings
 
@@ -85,9 +85,9 @@ El paquete Strings de EXSLT proporciona funciones que permiten la manipulación 
 
 #### Funciones
 
-- [str:concat](/es/docs/Web/EXSLT/str/concat)
-- [str:split](/es/docs/Web/EXSLT/str/split)
-- [str:tokenize](/es/docs/Web/EXSLT/str/tokenize)
+- [str:concat](/es/docs/Web/XML/EXSLT/Reference/str/concat)
+- [str:split](/es/docs/Web/XML/EXSLT/Reference/str/split)
+- [str:tokenize](/es/docs/Web/XML/EXSLT/Reference/str/tokenize)
 
 ### Vea también
 

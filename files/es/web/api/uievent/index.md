@@ -50,5 +50,5 @@ _Esta interfaz también hereda métodos de su padre, {{domxref("Event")}}._
 
 ## Véase también
 
-- [Introducción a eventos](/es/docs/Learn/JavaScript/Building_blocks/Events)
+- [Introducción a eventos](/es/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}}

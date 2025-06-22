@@ -59,7 +59,7 @@ El **elemento HTML `<datalist>`** contiene un conjunto de elementos {{HTMLElemen
 
 ## Atributos
 
-Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), comunes a todos los elementos.
 
 ## Ejemplos
 
@@ -91,7 +91,7 @@ Este elemento no tiene otros atributos mas que los [atributos globales](/es/docs
 
 ## Ver también
 
-- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Element/input#list);
+- El elemento {{HTMLElement("input")}}, y más especificamente este atributo [`list`](/es/docs/Web/HTML/Reference/Elements/input#list);
 - El elemento {{HTMLElement("option")}}.
 
 {{HTMLSidebar}}

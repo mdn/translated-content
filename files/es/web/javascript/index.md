@@ -25,17 +25,17 @@ Aprende a programar en JavaScript con guías y tutoriales.
 
 ### Para completos principiantes
 
-Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/JavaScript) si quieres aprender JavaScript pero no tienes experiencia previa de JavaScript o programación. Los módulos completos disponibles allí son los siguientes:
+Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting_41cf930b8cfd2b83c76f8086a5e24792) si quieres aprender JavaScript pero no tienes experiencia previa de JavaScript o programación. Los módulos completos disponibles allí son los siguientes:
 
-- [Primeros pasos en JavaScript](/es/docs/Learn/JavaScript/First_steps)
+- [Primeros pasos en JavaScript](/es/docs/conflicting/Learn_web_development/Core/Scripting)
   - : Responde algunas preguntas fundamentales tales como "¿qué es JavaScript?", "¿cómo se ve?", y "¿qué puede hacer?", junto con la discusión de características clave de JavaScript, como variables, cadenas, números y arreglos.
-- [Bloques de construcción JavaScript](/es/docs/Learn/JavaScript/Building_blocks)
+- [Bloques de construcción JavaScript](/es/docs/Learn_web_development/Core/Scripting)
   - : Continúa nuestra cobertura de las características fundamentales clave de JavaScript, dirigiendo nuestra atención a los tipos de bloques de código que se encuentran comúnmente, tales como declaraciones condicionales, bucles, funciones y eventos.
-- [Introducción a objetos JavaScript](/es/docs/Learn/JavaScript/Objects)
+- [Introducción a objetos JavaScript](/es/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
   - : Es importante comprender la naturaleza de la orientación a objetos en JavaScript si deseas ir más allá con tu conocimiento del lenguaje y la escritura de código más eficiente, por lo tanto, hemos proporcionado este módulo para ayudarte.
-- [JavaScript asíncrono](/es/docs/Learn/JavaScript/Asynchronous)
+- [JavaScript asíncrono](/es/docs/Learn_web_development/Extensions/Async_JS)
   - : Analiza el JavaScript asíncrono, por qué es importante y cómo se puede usar para manejar eficazmente las potenciales operaciones de bloqueo, tales como recuperar recursos de un servidor.
-- [API web del lado del cliente](/es/docs/Learn/JavaScript/Client-side_web_APIs)
+- [API web del lado del cliente](/es/docs/Learn_web_development/Extensions/Client-side_APIs)
   - : Explora qué son las APIs y cómo usar algunas de las APIs más comunes que encontrarás a menudo en tu trabajo de desarrollo.
 
 ### Guía de JavaScript
@@ -45,28 +45,28 @@ Dirígete a nuestro tema del [Area de Aprendizaje JavaScript](/es/docs/Learn/Jav
 
 ### Intermedio
 
-- [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
+- [Comprendiendo los frameworks JavaScript de lado del cliente](/es/docs/Learn_web_development/Core/Frameworks_libraries)
   - : Los frameworks de JavaScript son una parte esencial del desarrollo web front-end moderno, ya que proporcionan a los desarrolladores herramientas probadas y comprobadas para crear aplicaciones web interactivas y escalables. Este módulo te brinda algunos conocimientos básicos sobre cómo funcionan los frameworks del lado del cliente y cómo encajan en tu conjunto de herramientas, antes de pasar a la serie de tutoriales que cubren algunos de los más populares en la actualidad.
-- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Language_overview)
+- [Una reintroducción a JavaScript](/es/docs/Web/JavaScript/Guide/Language_overview)
   - : Una descripción general para aquellos que _piensan_ que saben JavaScript.
-- [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Data_structures)
+- [Estructuras de datos en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures)
   - : Descripción general de las estructuras de datos disponibles en JavaScript.
-- [Comparaciones de igualdad y similaridad](/es/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [Comparaciones de igualdad y similaridad](/es/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)
   - : JavaScript proporciona tres diferentes operadores de comparación de valores: igualdad estricta usando `===`, igualdad abstracta usando `==` y el método {{jsxref("Global_Objects/Object/is", "Object.is()")}}.
-- [Cierres (clousures)](/es/docs/Web/JavaScript/Closures)
+- [Cierres (clousures)](/es/docs/Web/JavaScript/Guide/Closures)
   - : Un cierre es la combinación de una función y un entorno léxico dentro del cual se declaró esa función.
 
 ### Avanzado
 
-- [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
   - : Explicación de la herencia basada en prototipos ampliamente incomprendida y subestimada.
 - [Modo estricto](/es/docs/Web/JavaScript/Reference/Strict_mode)
   - : El modo estricto define que no puedes usar ninguna variable antes de iniciarla. Es una variable restringida de ECMAScript 5, para un rendimiento más rápido y una depuración más fácil.
 - [Arreglos tipados en JavaScript](/es/docs/Web/JavaScript/Guide/Typed_arrays)
   - : Los arreglos tipados en JavaScript proveen un mecanismo para acceder a datos binarios sin formato.
-- [Gestión de la Memoria](/es/docs/Web/JavaScript/Memory_management)
+- [Gestión de la Memoria](/es/docs/Web/JavaScript/Guide/Memory_management)
   - : Ciclo de vida de la memoria y recolección de basura en JavaScript.
-- [Modelo de Concurrencia y Bucle de Eventos](/es/docs/Web/JavaScript/Event_loop)
+- [Modelo de Concurrencia y Bucle de Eventos](/es/docs/Web/JavaScript/Reference/Execution_model)
   - : JavaScript tiene un modelo de concurrencia basado en un "bucle de eventos".
 
 ## Referencia

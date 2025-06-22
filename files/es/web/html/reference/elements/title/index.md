@@ -68,7 +68,7 @@ El elemento **`<title>`** [HTML](/es/docs/Web/HTML) define el título del docume
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 

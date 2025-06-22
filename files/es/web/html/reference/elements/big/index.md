@@ -271,7 +271,7 @@ Observa el siguiente ejemplo:
 
 ### Notas
 
-- **big** tiene un elemento opuesto, [small](/es/docs/Web/HTML/Element/small). Si **big** aumenta el tamaño de la fuente [small](/es/docs/Web/HTML/Element/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
+- **big** tiene un elemento opuesto, [small](/es/docs/Web/HTML/Reference/Elements/small). Si **big** aumenta el tamaño de la fuente [small](/es/docs/Web/HTML/Reference/Elements/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
 - El W3C (y nosotros) desaconseja el uso de este elemento, para manejar el tamaño del texto es mejor usar CSS.
 
 ### Referencia

@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemscope
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype), es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](https://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
+**`itemscope`** es un [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) booleano que define el scope asociado del metadata. Especificando el atributo **`itemscope`** en un elemento crea un nuevo item, cuyos resultados estan en los numeros de pares name-value asociados con el elemento. Un atributo relativo, [`itemtype`](/es/docs/Web/HTML/Reference/Global_attributes#itemtype), es usado para especificar el URL valido de un medio/recipe (como lo es [schema.org](https://schema.org/)) que describe que el item es de propiedad contextual. En cada uno de los siguientes ejemplos, el medio/recipe es de [schema.org](https://schema.org/).
 
 Todos los elementos HTML pueden tener un atributo `itemscope` especifico. Un elemento `itemscope` no tiene un asociado `itemtype` pero tiene un sociado `itemref`.
 
@@ -72,7 +72,7 @@ La siguiente tabla muestran los datos esctructurados mostrados en el anterior ej
 
 ### `itemscope` Atributos ID
 
-Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un [`id`](/es/docs/Web/HTML/Global_attributes#id) attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
+Cuando especificas el atributo `itemscope` para un elemento, un nuevo item es creado. El item consiste de un grupo de pares de name-value. Para elementos con un atributo `itemscope` y un atributo `itemtype`, podrias tambien especificar un [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id) attribute. Puedes usar el atributo `id` para establecer un identificador global para el nuevo item. Un identificador global permite que los items relativos a otros items encuentren paginas atraves de la Web.
 
 ### Ejemplo
 
@@ -247,10 +247,10 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
 
 ## Ver tambien
 
-- [Otros atributos globales diferentes](/es/docs/Web/HTML/Global_attributes)
+- [Otros atributos globales diferentes](/es/docs/Web/HTML/Reference/Global_attributes)
 - Otro, microdata relativo, atributos globales:
 
-  - [`itemid`](/es/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/es/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/es/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemtype`](/es/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/es/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/es/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemtype`](/es/docs/Web/HTML/Reference/Global_attributes#itemtype)

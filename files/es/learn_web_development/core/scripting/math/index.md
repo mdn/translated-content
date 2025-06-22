@@ -281,7 +281,7 @@ Puede ver el operador de igualdad utilizado justo dentro de la función `updateB
 
 ## Pon a prueba tus habilidades
 
-Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [¡Pon a prueba tus habilidades!: Matemáticas](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Math).
+Llegaste al final de este artículo, pero ¿puédes recordar la información más importante? Puedes encontrar algunas pruebas para verificar que has comprendido esta información antes de seguir avanzando — Ve [¡Pon a prueba tus habilidades!: Matemáticas](/es/docs/Learn_web_development/Core/Scripting/Test_your_skills/Math).
 
 ## Resumen
 

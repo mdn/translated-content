@@ -116,7 +116,7 @@ function hazUnaVez() {
 
 ### Seguridad
 
-Es importante mencionar que la restricción path no protege contra la lectura no autorizada de cookies de una ruta distinta. Puede ser fácilmente resuelto mediante DOM (por ejemplo creando un [iframe](/es/docs/Web/HTML/Element/iframe) oculto con la ruta de la cookie y accediendo a la propiedad contentDocument.cookie del iframe). La única manera de proteger el acceso a cookies es ocupando un dominio o subdominio diferente, debido a la [política de mismo origen](/en-US/Same_origin_policy_for_JavaScript).
+Es importante mencionar que la restricción path no protege contra la lectura no autorizada de cookies de una ruta distinta. Puede ser fácilmente resuelto mediante DOM (por ejemplo creando un [iframe](/es/docs/Web/HTML/Reference/Elements/iframe) oculto con la ruta de la cookie y accediendo a la propiedad contentDocument.cookie del iframe). La única manera de proteger el acceso a cookies es ocupando un dominio o subdominio diferente, debido a la [política de mismo origen](/en-US/Same_origin_policy_for_JavaScript).
 
 ### Notas
 

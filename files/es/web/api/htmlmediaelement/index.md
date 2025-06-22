@@ -17,7 +17,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
   - : Un {{domxref("AudioTrackList")}} que lista los {{domxref("AudioTrack")}} objetos contenidos en el elemento.
 - {{domxref("HTMLMediaElement.autoplay")}}
 
-  - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Element/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
+  - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Reference/Elements/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
 
     > [!NOTE]
     > Los sitios que reproducen automáticamente audio (o vídeos con una pista de audio) pueden ser una experiencia desagradable para los usuarios, por lo que deben evitarse en la medida de lo posible. Si debe ofrecer la funcionalidad de autojuego, debe hacer que se active (requiriendo que el usuario lo habilite específicamente). Sin embargo, esto puede ser útil a la hora de crear elementos multimedia cuya fuente se establecerá más adelante, bajo el control del usuario.
@@ -37,7 +37,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.currentTime")}}
   - : Es un doble indicador del tiempo de reproducción actual en segundos. Fijar este valor busca que los medios de comunicación se adapten a los nuevos tiempos.
 - {{domxref("HTMLMediaElement.defaultMuted")}}
-  - : Es un {{jsxref('booleano')}} que refleja el [`silenciado`](/es/docs/Web/HTML/Element/video#silenciado). Atributo HTML, que indica si la salida de audio del elemento multimedia debe silenciarse de forma predeterminada.
+  - : Es un {{jsxref('booleano')}} que refleja el [`silenciado`](/es/docs/Web/HTML/Reference/Elements/video#silenciado). Atributo HTML, que indica si la salida de audio del elemento multimedia debe silenciarse de forma predeterminada.
 - {{domxref("HTMLMediaElement.defaultPlaybackRate")}}
   - : Es un doble que indica la velocidad de reproducción predeterminada del material.
 - {{domxref("HTMLMediaElement.disableRemotePlayback")}}
@@ -49,9 +49,9 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.error")}} {{readonlyinline}}
   - : Returns a {{domxref("MediaError")}} object for the most recent error, or `null` if there has not been an error.
 - {{domxref("HTMLMediaElement.loop")}}
-  - : Is a {{jsxref('Boolean')}} that reflects the [`loop`](/es/docs/Web/HTML/Element/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
+  - : Is a {{jsxref('Boolean')}} that reflects the [`loop`](/es/docs/Web/HTML/Reference/Elements/video#loop) HTML attribute, which indicates whether the media element should start over when it reaches the end.
 - {{domxref("HTMLMediaElement.mediaGroup")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`mediagroup`](/es/docs/Web/HTML/Element/video#mediagroup) HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
+  - : Is a {{domxref("DOMString")}} that reflects the [`mediagroup`](/es/docs/Web/HTML/Reference/Elements/video#mediagroup) HTML attribute, which indicates the name of the group of elements it belongs to. A group of media elements shares a common {{domxref('MediaController')}}.
 - {{domxref("HTMLMediaElement.mediaKeys")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("MediaKeys")}} object or `null`. MediaKeys is a set of keys that an associated HTMLMediaElement can use for decryption of media data during playback.
 - {{domxref("HTMLMediaElement.mozAudioCaptured")}} {{readonlyinline}} {{non-standard_inline}}
@@ -77,7 +77,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.played")}} {{readonlyinline}}
   - : Returns a {{domxref('TimeRanges')}} object that contains the ranges of the media source that the browser has played, if any.
 - {{domxref("HTMLMediaElement.preload")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`preload`](/es/docs/Web/HTML/Element/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
+  - : Is a {{domxref("DOMString")}} that reflects the [`preload`](/es/docs/Web/HTML/Reference/Elements/video#preload) HTML attribute, indicating what data should be preloaded, if any. Possible values are: `none`, `metadata`, `auto`.
 - {{domxref("HTMLMediaElement.preservesPitch")}} {{non-standard_inline}}
   - : Is a {{jsxref('Boolean')}} that determines if the pitch of the sound will be preserved. If set to `false`, the pitch will adjust to the speed of the audio. This is implemented with prefixes in Firefox (`mozPreservesPitch`) and WebKit (`webkitPreservesPitch`).
 - {{domxref("HTMLMediaElement.readyState")}} {{readonlyinline}}
@@ -89,7 +89,7 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.sinkId")}} {{readonlyinline}} {{experimental_inline}}
   - : Returns a {{domxref("DOMString")}} that is the unique ID of the audio device delivering output, or an empty string if it is using the user agent default. This ID should be one of the `MediaDeviceInfo.deviceid` values returned from {{domxref("MediaDevices.enumerateDevices()")}}, `id-multimedia`, or `id-communications`.
 - {{domxref("HTMLMediaElement.src")}}
-  - : Is a {{domxref("DOMString")}} that reflects the [`src`](/es/docs/Web/HTML/Element/video#src) HTML attribute, which contains the URL of a media resource to use.
+  - : Is a {{domxref("DOMString")}} that reflects the [`src`](/es/docs/Web/HTML/Reference/Elements/video#src) HTML attribute, which contains the URL of a media resource to use.
 - {{domxref("HTMLMediaElement.srcObject")}}
   - : Is a {{domxref('MediaStream')}} representing the media to play or that has played in the current `HTMLMediaElement`, or `null` if not assigned.
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
@@ -142,7 +142,7 @@ _This interface also inherits methods from its ancestors {{domxref("HTMLElement"
 - {{domxref("HTMLMediaElement.fastSeek()")}}
   - : Directly seeks to the given time.
 - {{domxref("HTMLMediaElement.load()")}}
-  - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/es/docs/Web/HTML/Element/video#src) attribute or the {{HTMLElement("source")}} element.
+  - : Resets the media to the beginning and selects the best available source from the sources provided using the [`src`](/es/docs/Web/HTML/Reference/Elements/video#src) attribute or the {{HTMLElement("source")}} element.
 - {{domxref("HTMLMediaElement.mozCaptureStream()")}} {{non-standard_inline}}
   - : \[enter description]
 - {{domxref("HTMLMediaElement.mozCaptureStreamUntilEnded()")}} {{non-standard_inline}}
@@ -184,6 +184,6 @@ These methods are obsolete and should not be used, even if a browser still suppo
 
 - Articles
 
-  - [Using HTML5 audio and video](/es/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+  - [Using HTML5 audio and video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Media formats supported by the audio and video elements](/es/docs/Web/Media/Formats)
   - [Web Audio API](/es/docs/Web/API/Web_Audio_API)

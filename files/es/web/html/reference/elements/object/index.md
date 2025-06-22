@@ -90,7 +90,7 @@ El **elemento HTML `<object>`** representa un recurso externo, que puede ser tra
 
 ## Atributos
 
-Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `archive` only {{deprecated_inline}}
   - : Una lista separada por espacios de las URl's de archivos o recursos para el objeto.
@@ -121,7 +121,7 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Global_attribute
 - `typemustmatch`
   - : Este valor booleano indica si el atributo **type** y el [content type](/es/docs/Glossary/MIME_type) real del recurso deben coincidir para porder ser usados.
 - `usemap`
-  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Element/map#name) de un elemento map.
+  - : Una refercia hash-name a un elemento {{HTMLElement("map")}}; es decir un '#' seguido del valor de un [`name`](/es/docs/Web/HTML/Reference/Elements/map#name) de un elemento map.
 - `width`
   - : El ancho del recurso mostrado, en [CSS pixels](https://drafts.csswg.org/css-values/#px). — (Valores absolutos unicamente. [NO percentages](https://html.spec.whatwg.org/multipage/embedded-content.html#dimension-attributes))
 

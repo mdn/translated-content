@@ -41,7 +41,7 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### Directivas
 
 - `name`
-  - : Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo [`multiple`](/es/docs/Web/HTML/Element/input#multiple) de un elemento `{{HTMLElement("input","&lt;input type=file&gt;")}}`), puede haber varias subpartes con el mismo nombre.
+  - : Es seguida de un texto que contiene el nombre del campo de HTML en el formulario a la que el contenido de la subparte refiere. Cuando se usan múltiples archivos en el mismo campo (por ejemplo, el atributo [`multiple`](/es/docs/Web/HTML/Reference/Elements/input#multiple) de un elemento `{{HTMLElement("input","&lt;input type=file&gt;")}}`), puede haber varias subpartes con el mismo nombre.
     Un `name` con valor de `'_charset_'` indica que la parte no es un campo HTML, sino el conjunto de caracteres predeterminado para partes sin información explícita sobre su conjunto de caracteres.
 - `filename`
   - : Es seguida de un texto que contiene el nombre original del archivo transmitido. Siempre es opcional y no debe ser utilizado a ciegas por la aplicación: información sobre la ruta debe ser despojada, y se debe realizar una conversión a las reglas del sistema de archivos del servidor. Este parámetro provee mayormente información indicativa. Cuando se usa en combinación con `Content-Disposition: attachment`, es utilizado como el nombre de archivo predeterminado en caso de que se presente al usuario un diálogo de 'Guardar como'.

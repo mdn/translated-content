@@ -1023,7 +1023,7 @@ Esta es la regla de oro: el uso de `<b>`, `<i>` o `<u>` resulta adecuado cuando 
 
 ## ¡Pon a prueba tus habilidades!
 
-Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics).
+Has llegado al final de este artículo, pero ¿puedes recordar la información más importante? Encontrarás más ejercicios con los que comprobar que has retenido esta información antes de seguir adelante en [Pon a prueba tus habilidades: Prueba de conocimientos básicos de HTML](/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics).
 
 ## Resumen
 

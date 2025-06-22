@@ -16,7 +16,7 @@ original_slug: Web/HTML/Element/ol
 
     **Está definido como**: [Elemento de lista](/es/docs/HTML/Elemento/Tipos_de_elementos#de_lista).
 
-    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Element/li)
+    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Reference/Elements/li)
 
 #### Atributos
 

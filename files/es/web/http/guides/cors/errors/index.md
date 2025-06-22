@@ -57,6 +57,6 @@ La consola de Firefox muestra mensajes en su consola cuando las solicitudes fall
 - Glosario: {{Glossary("CORS")}}
 - [Introducción a CORS](/es/docs/Web/HTTP/Guides/CORS)
 - [Configuración de CORS del lado del servidor](/es/docs/Web/HTTP/Guides/CORS)
-- [Imagen habilitada para CORS](/es/docs/Web/HTML/CORS_enabled_image)
-- [Atributos de configuración de CORS](/es/docs/Web/HTML/Attributes/crossorigin)
+- [Imagen habilitada para CORS](/es/docs/Web/HTML/How_to/CORS_enabled_image)
+- [Atributos de configuración de CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – página para probar solicitudes CORS

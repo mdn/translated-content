@@ -73,7 +73,7 @@ La API de captura de pantalla agrega propiedades a los siguientes diccionarios d
 
 ## Validación de la política de permisos
 
-Los {{Glossary("User agent")}} que admiten la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) (ya sea utilizando el HTTP {{HTTPHeader("Permissions-Policy")}} o el atributo {{HTMLElement("iframe")}} [`allow`](/es/docs/Web/HTML/Element/iframe#allow)) puede especificar el deseo de usar la API de captura de pantalla usando la directiva `display-capture`:
+Los {{Glossary("User agent")}} que admiten la [Política de permisos](/es/docs/Web/HTTP/Permissions_Policy) (ya sea utilizando el HTTP {{HTTPHeader("Permissions-Policy")}} o el atributo {{HTMLElement("iframe")}} [`allow`](/es/docs/Web/HTML/Reference/Elements/iframe#allow)) puede especificar el deseo de usar la API de captura de pantalla usando la directiva `display-capture`:
 
 ```html
 <iframe allow="display-capture" src="/some-other-document.html">…</iframe>

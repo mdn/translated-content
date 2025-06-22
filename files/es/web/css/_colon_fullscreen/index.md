@@ -144,4 +144,4 @@ fullscreenButton.addEventListener("click", enterFullscreen);
 - [Usando el modo de pantalla completa](/es/docs/Web/API/Fullscreen_API)
 - {{cssxref("::backdrop")}}
 - DOM API: {{ domxref("Element.requestFullscreen()") }}, {{ domxref("Document.exitFullscreen()") }}, {{ domxref("Document.fullscreen") }}, {{ domxref("Document.fullscreenElement") }}
-- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Element/iframe#allowfullscreen)
+- Atributo [`allowfullscreen`](/es/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

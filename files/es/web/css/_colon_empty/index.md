@@ -60,7 +60,7 @@ body {
 
 ## Problemas de accesibilidad
 
-La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo ([anclajes](/es/docs/Web/HTML/Element/a), [botones](/es/docs/Web/HTML/Element/button), etc.). Los nombres accesibles exponen el control interactivo al [árbol de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis), una API que comunica información útil para las tecnologías de asistencia.
+La tecnología de asistencia, como los lectores de pantalla, no puede analizar el contenido interactivo que está vacío. Todo el contenido interactivo debe tener un nombre accesible, que se crea proporcionando un valor de texto para el elemento principal del control interactivo ([anclajes](/es/docs/Web/HTML/Reference/Elements/a), [botones](/es/docs/Web/HTML/Reference/Elements/button), etc.). Los nombres accesibles exponen el control interactivo al [árbol de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis), una API que comunica información útil para las tecnologías de asistencia.
 
 El texto que proporciona el nombre accesible del control interactivo se puede ocultar mediante una [combinación de propiedades](https://gomakethings.com/hidden-content-for-better-a11y/#hiding-the-link) que lo eliminan visualmente de la pantalla, pero que la tecnología de asistencia lo puede analizar. Esto se usa comúnmente para botones que dependen solo de un ícono para transmitir el propósito.
 

@@ -82,7 +82,7 @@ Posee dos atributos, pero no hay etiqueta de cierre `</img>` ni contenido encerr
 
 ### Anatomía de un documento HTML
 
-Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files)):
+Hasta ahora has visto lo básico de elementos HTML individuales, pero estos no son muy útiles por sí solos. Ahora verás cómo los elementos individuales son combinados para formar una página HTML entera. Vuelve a visitar el código de tu ejemplo en `index.html` (que viste por primera vez en el artículo [Manejo de archivos](/es/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)):
 
 ```html
 <!doctype html>
@@ -148,7 +148,7 @@ Los elementos de encabezado permiten especificar que ciertas partes del contenid
 Intenta ahora añadir un título apropiado para tu página HTML, antes de tu elemento {{htmlelement("img")}}.
 
 > [!NOTE]
-> Verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn/Accessibility/HTML#contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#¿por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
+> Verás que el encabezamiento de nivel 1 tiene un estilo implícito. No utilices elementos de encabezado para hacer el texto más grande o más oscuro, porque este elemento se utiliza por [accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML#contenido_del_texto) y otras [razones como el posicionamiento en buscadores](/es/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#¿por_qué_necesitamos_estructura) (_Search Engine Optimization, SEO_). Intenta crear una secuencia significativa de encabezados en tus páginas, sin saltarte niveles.
 
 ### Párrafos
 
@@ -158,7 +158,7 @@ Como se explicó más arriba, los elementos {{htmlelement("p")}} se utilizan par
 <p>Este es un simple parrafo</p>
 ```
 
-Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuando estudiaste [_¿Cuál será la apariencia de tu sitio web?_](/es/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)), colocados directamente debajo del elemento \<img>.
+Agrega uno o algunos párrafos a tu texto de ejemplo (deberías tenerlo de cuando estudiaste [_¿Cuál será la apariencia de tu sitio web?_](/es/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)), colocados directamente debajo del elemento \<img>.
 
 ### Listas
 
@@ -233,6 +233,6 @@ Si lograste seguir todas las instrucciones de este artículo, deberías terminar
 
 Si te estancas en algún paso, puedes comparar tu trabajo con el [código de ejemplo terminado](https://github.com/mdn/beginner-html-site/blob/gh-pages/index.html) en Github.
 
-Aquí realmente solo has rasguñado la superficie de HTML. Para aprender más, ve a la [página de Aprendizaje HTML](/es/docs/Learn/HTML).
+Aquí realmente solo has rasguñado la superficie de HTML. Para aprender más, ve a la [página de Aprendizaje HTML](/es/docs/Learn_web_development/Core/Structuring_content).
 
 {{PreviousMenuNext("Learn/Getting_started_with_the_web/Dealing_with_files", "Learn/Getting_started_with_the_web/CSS_basics","Learn/Getting_started_with_the_web")}}

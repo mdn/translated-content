@@ -339,7 +339,7 @@ Para números `BigInt` octales, siempre utiliza cero seguido de la letra "o" (ma
 0o755n;
 ```
 
-Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Data_structures#bigint_type).
+Para obtener más información sobre `BigInt`, consulta también [estructuras de datos JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#bigint_type).
 
 #### Separadores numéricos
 

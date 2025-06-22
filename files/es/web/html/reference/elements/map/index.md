@@ -16,7 +16,7 @@ original_slug: Web/HTML/Element/map
 
     **Está definido como**: [Elemento especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial).
 
-    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Element/area)
+    **Puede contener**: Uno o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque), o elementos [area](/es/docs/Web/HTML/Reference/Elements/area)
 
 #### Atributos
 
