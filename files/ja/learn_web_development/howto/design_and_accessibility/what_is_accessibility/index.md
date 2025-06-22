@@ -1,12 +1,9 @@
 ---
 title: アクセシビリティとは
 slug: Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility
-original_slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("ja/Learn/Common_questions")}}
 
 この記事はウェブアクセシビリティの背景にある基本的な概念を紹介します。
 
