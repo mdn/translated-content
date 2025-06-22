@@ -2,7 +2,7 @@
 title: 篩選我們的待辦事項
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_filtering
 l10n:
-  soureCommit: ffa6f5871f50856c60983a125cef7de267be7aeb
+  sourceCommit: ffa6f5871f50856c60983a125cef7de267be7aeb
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Angular_item_component","Learn_web_development/Core/Frameworks_libraries/Angular_building", "Learn_web_development/Core/Frameworks_libraries")}}
