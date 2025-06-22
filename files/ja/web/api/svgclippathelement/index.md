@@ -2,7 +2,7 @@
 title: SVGClipPathElement
 slug: Web/API/SVGClipPathElement
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 1c24dd81053cd34f393ce2c4b2ac071886007625
 ---
 
 {{APIRef("SVG")}}

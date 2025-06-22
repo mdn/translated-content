@@ -2,7 +2,7 @@
 title: :buffering
 slug: Web/CSS/:buffering
 l10n:
-  sourceCommit: 415324c4a53612154ec3186c23fc7326676e53b0
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
 {{CSSRef}}
