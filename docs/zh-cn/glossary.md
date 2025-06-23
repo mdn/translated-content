@@ -69,7 +69,7 @@
 | Demo                   | 演示         | 交互示例的标题     |                                                                              |
 | Examples               | 示例         |                    |                                                                              |
 | Exceptions             | 异常         |                    |                                                                              |
-| Expected output        | 期望输出     | 交互示例的文字提示   |                                                                              |
+| Expected output        | 期望输出     | 交互示例的文字提示 |                                                                              |
 | Formal Definition      | 形式定义     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
 | Formal syntax          | 形式语法     |                    | https://zh.wikipedia.org/zh-cn/形式文法                                      |
 | Learning outcomes      | 学习成果     | 在学习区表格中使用 |                                                                              |
