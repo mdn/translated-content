@@ -66,7 +66,7 @@
 | Associated roles       | 相关角色     |                    |                                                                              |
 | Browser compatibility  | 浏览器兼容性 |                    |                                                                              |
 | Conclusion             | 总结         |                    | https://github.com/mdn/translated-content/pull/13329#discussion_r1199677894  |
-| Demo                   | 演示         | 交互示例的标题      |                                                                              |
+| Demo                   | 演示         | 交互示例的标题     |                                                                              |
 | Examples               | 示例         |                    |                                                                              |
 | Exceptions             | 异常         |                    |                                                                              |
 | Expected output        | 期望输出     | 交互示例的文字提示   |                                                                              |
