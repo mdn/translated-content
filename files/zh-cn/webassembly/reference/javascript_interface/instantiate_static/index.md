@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1c0262ad5b8f30779c90fc8527785bd45748c331
 ---
 
-**`WebAssembly.instantiate()`** 函数允许你编译和实例化 WebAssembly 代码。它有两个重载方式：
+**`WebAssembly.instantiate()`** 静态方法允许你编译和实例化 WebAssembly 代码。它有两个重载方式：
 
 - 主重载方式使用[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}} 格式的 WebAssembly 二进制代码，并在一个步骤中执行编译和实例化。返回的 `Promise` 将兑现为已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 和该模块的第一个 [`WebAssembly.Instance`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance)。
 - 次重载方式使用已编译的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module), 返回的 `Promise` 将兑现为该 `Module` 的 `Instance`。当 `Module` 已经被编译时这种方式较为有用。
