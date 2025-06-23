@@ -1,20 +1,15 @@
 ---
 title: :any-link
 slug: Web/CSS/:any-link
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
 
 **`:any-link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、訪問の有無とは独立したソースアンカーとして振る舞う要素を表します。言い換えれば、 `href` 属性を持つすべての {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を選択します。つまり、 {{cssxref(":link")}} または {{cssxref(":visited")}} に一致するすべての要素を選択します。
 
-```css
-/* :link または :visited に該当するすべての要素を選択 */
-:any-link {
-  color: green;
-}
-```
-
-{{InteractiveExample("CSS Demo: :any-link", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :any-link", "tabbed-shorter")}}
 
 ```css interactive-example
 p {
@@ -28,7 +23,7 @@ a:any-link {
 ```
 
 ```html interactive-example
-<p>Pages that you might have visited:</p>
+<p>訪問済みの可能性のあるページ:</p>
 <ul>
   <li>
     <a href="https://developer.mozilla.org">MDN Web Docs</a>
@@ -37,21 +32,23 @@ a:any-link {
     <a href="https://www.youtube.com/YouTube">Google</a>
   </li>
 </ul>
-<p>Pages unlikely to be in your history:</p>
+<p>履歴にない可能性が高いページ:</p>
 <ul>
   <li>
-    <a href="https://developer.mozilla.org/missing-3">Random MDN page</a>
+    <a href="https://developer.mozilla.org/missing-3">ランダム MDN ページ</a>
   </li>
   <li>
-    <a href="https://example.com/missing-3">Random Example page</a>
+    <a href="https://example.com/missing-3">ランダム Example ページ</a>
   </li>
 </ul>
 ```
 
 ## 構文
 
-```
-:any-link
+```css
+:any-link {
+  /* ... */
+}
 ```
 
 ## 例
@@ -59,9 +56,9 @@ a:any-link {
 ### HTML
 
 ```html
-<a href="https://example.com">External link</a><br />
-<a href="#">Internal target link</a><br />
-<a>Placeholder link (won't get styled)</a>
+<a href="https://example.com">外部リンク</a><br />
+<a href="#">内部ターゲットリンク</a><br />
+<a>プレースホルダーリンク（スタイルは適用されません）</a>
 ```
 
 ### CSS
@@ -72,7 +69,7 @@ a:any-link {
   color: orange;
 }
 
-/* WebKit browsers */
+/* WebKit ブラウザー向け */
 a:-webkit-any-link {
   border: 1px solid blue;
   color: orange;
