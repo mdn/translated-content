@@ -32,9 +32,7 @@ Object.fromEntries(iterable)
 ### 引数
 
 - `iterable`
-
   - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)、例えば {{jsxref("Array")}} や {{jsxref("Map")}} など、オブジェクトを含むリスト。それぞれのオブジェクトには 2 つのプロパティがあります。
-
     - `0`
       - : 文字列または[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)で、プロパティのキーを表します。
     - `1`

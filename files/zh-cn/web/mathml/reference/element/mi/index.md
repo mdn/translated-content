@@ -17,14 +17,11 @@ l10n:
 ## 属性
 
 - `mathvariant`
-
   - : 当前规范中允许的唯一值是 `normal`（不区分大小写）：
-
     - `normal`
       - : 使用默认/普通渲染，移除单个字符自动设置为斜体的样式。
 
     弃用的旧值包括：
-
     - `bold` {{deprecated_inline}}
       - : 尝试使用粗体字符，例如“𝐀”。
     - `italic` {{deprecated_inline}}

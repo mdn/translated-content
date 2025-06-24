@@ -59,7 +59,6 @@ div.warning {
 
 - 在 CSS 介绍中[学习更多 CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基础选择器
-
   - [标签选择器](/zh-CN/docs/Web/CSS/Type_selectors) `elementname`
   - [类选择器](/zh-CN/docs/Web/CSS/Class_selectors) `.classname`
   - [ID 选择器](/zh-CN/docs/Web/CSS/ID_selectors) `#idname`
@@ -68,17 +67,14 @@ div.warning {
   - [状态选择器](/zh-CN/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - 分组选择器
-
   - [选择器列表](/zh-CN/docs/Web/CSS/Selector_list) `A, B`
 
 - 关系选择器
-
   - [接续兄弟选择器](/zh-CN/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - [后续兄弟选择器](/zh-CN/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [直接子元素选择器](/zh-CN/docs/Web/CSS/Child_combinator) `A > B`
   - [后代元素选择器](/zh-CN/docs/Web/CSS/Descendant_combinator) `A B`
 
 - 伪选择器（Pseudo）
-
   - [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes) `:`
   - [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements) `::`

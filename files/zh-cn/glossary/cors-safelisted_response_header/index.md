@@ -39,7 +39,6 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "列入 CORS 白名单的请求标头")}}
   - {{Glossary("Forbidden header name", "禁止修改的标头")}}

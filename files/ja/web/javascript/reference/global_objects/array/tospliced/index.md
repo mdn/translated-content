@@ -22,14 +22,12 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
 ### 引数
 
 - `start`
-
   - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
     - 負のインデックスは配列の末尾から数えます。 `start < 0` の場合は `start + array.length` を使用します。
     - `start < -array.length` または `start` が省略された場合は `0` が使用されます。
     - `start >= array.length` である場合、削除される要素はありませんが、このメソッドは追加関数として動作し、提供されただけの要素を追加します。
 
 - `deleteCount` {{optional_inline}}
-
   - : 整数で、配列内で `start` から削除する要素の数を示します。
 
     `deleteCount` を省略した場合、またはその値が `start` で指定した位置以降の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、もし `itemN` 引数を渡したい場合は、 `Infinity` を `deleteCount` に渡して `start` 以降の要素をすべて削除してください。明示的に `undefined` を指定すると `0` に[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されてしまうからです。
@@ -38,7 +36,6 @@ toSpliced(start, deleteCount, item1, item2, /* …, */ itemN)
     この場合、少なくとも 1 つの新しい要素を指定する必要があります（下記参照）。
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : 配列に追加する要素を `start` から始めます。
 
     要素を指定しない場合、 `toSpliced()` は配列から要素を取り除くだけです。

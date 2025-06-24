@@ -27,7 +27,6 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 - [学习 CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
   - : CSS（层叠样式表）用于设置网页的样式及布局——比如，可以更改内容的字体、颜色、大小以及间距，或是将其分列，或是添加动画及赋予内容其他装饰性的特征。本模块将通过阐述基本原理，展示语法示例，以及如何与 HTML 相联系三方面，为你日后精通 CSS 提供一个友好的开端。
 - [CSS 构建](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
-
   - : 本模块是[学习 CSS 第一步](/zh-CN/docs/Learn_web_development/Core/Styling_basics)的延续，相信你已经熟悉了这门语言及它的语法，并拥有一些使用它的基本经验，是时候更进一步了。本模块着眼于层叠和继承、所有可用的选择器类型、单位、大小、背景、边框、调试等等。
 
     其目的在于先为你提供编写功能强大的 CSS 工具包，了解所有基础理论，之后再进行进一步的学习，诸如[样式化文本](/zh-CN/docs/Learn_web_development/Core/Text_styling)和 [CSS 布局](/zh-CN/docs/Learn_web_development/Core/CSS_layout)。
@@ -43,7 +42,6 @@ CSS 是**开放 Web** 的核心语言之一，并根据 [W3C 规范](https://www
 
 - [CSS 参考](/zh-CN/docs/Web/CSS/Reference)：针对资深 Web 开发者的详细参考手册，其中描述了 CSS 的各个属性和概念。
 - CSS 关键概念：
-
   - [语言语法和形式](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)、[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)和[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)
   - [盒模型](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)和[外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)

@@ -39,7 +39,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 Fetch 指令控制指定资源类型可以从哪里加载。
 
 - {{CSP("child-src")}}
-
   - : 为 [Web Worker](/zh-CN/docs/Web/API/Web_Workers_API) 和其他嵌套浏览上下文（例如用 {{HTMLElement("frame")}} 和 {{HTMLElement("iframe")}} 加载到页面的内容）指定合法源。
 
     `frame-src` 和 `worker-src` 的[后备值](#后备值)。
@@ -47,7 +46,6 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("connect-src")}}
   - : 限制能通过脚本接口加载的 URL。
 - {{CSP("default-src")}}
-
   - : 为其他 {{Glossary("Fetch directive", "Fetch 指令")}}提供后备值。
 
     其他所有 Fetch 指令的[后备值](#后备值)。
@@ -69,7 +67,6 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 指定预加载或预渲染的合法源。
 - {{CSP("script-src")}}
-
   - : 指定 JavaScript 或 WebAssembly 的合法源。
 
     `script-src-elem` 和 `script-src-attr` 的[后备值](#后备值)。
@@ -79,7 +76,6 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 - {{CSP("script-src-attr")}}
   - : 指定 JavaScript 内联事件处理器的合法源。
 - {{CSP("style-src")}}
-
   - : 指定层叠样式表文件的合法源。
 
     `style-src-elem` 和 `style-src-attr` 的[后备值](#后备值)。
@@ -131,7 +127,6 @@ Fetch 指令控制指定资源类型可以从哪里加载。
 报告指令控制 CSP 违规报告的目标 URL。作用于 `Content-Security-Policy` 和 {{HTTPHeader("Content-Security-Policy-Report-Only")}}。
 
 - {{CSP("report-to")}}
-
   - : 提供代表一个或多个报告端点的 token，用于发送 CSP 违规信息。
     token 代表的断点通过其他 HTTP 标头提供，比如 {{HTTPHeader("Reporting-Endpoints")}} 和 {{HTTPHeader("Report-To")}} {{deprecated_inline}}。
 

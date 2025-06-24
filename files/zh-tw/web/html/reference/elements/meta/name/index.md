@@ -2,7 +2,7 @@
 title: <meta> name 屬性
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: d9b6cad3b5e14b42061608fb5283e32c75808a3d
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{HTMLSidebar}}
@@ -24,7 +24,6 @@ l10n:
 HTML 規範定義了以下一組標準後設資料名稱：
 
 - `application-name`
-
   - : 瀏覽器可以使用它來識別在網頁中執行的應用程式。這與 {{HTMLElement("title")}} 元素不同，後者可能包含應用程式（或網站）名稱，但 `<title>` 可能會加入如文件名稱或狀態等上下文資訊。個別頁面不應定義自己獨特的 `application-name`。若要提供翻譯，請為每種語言使用帶有 `lang` 屬性的多個 `<meta>` 標籤：
 
     ```html

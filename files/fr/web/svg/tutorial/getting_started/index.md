@@ -33,7 +33,6 @@ Copiez le code précédent dans un document texte, puis enregistrez-le sous le n
 Quelques explications s'imposent quant au fonctionnement du rendu :
 
 1. Nous commençons avec l'élément [`svg`](/fr/docs/Web/SVG/Element/svg) à la racine :
-
    - La déclaration du doctype que l'on voit en (X)HTML peut être enlevée, car la validation DTD du SVG provoque plus de problèmes qu'elle n'en résout.
    - Avant SVG 2, pour identifier la version du SVG pour d'autre types de validation, les attributs `version` et `baseProfile` devaient toujours être utilisés. Ces deux attributs sont dépréciés en SVG 2.
    - En tant que langage basé sur XML, l'espace de noms du document SVG doit être correct, d'où l'attribut `xmlns`. Pour plus d'informations, n'hésitez pas à consulter la page [Cours d'introduction aux espaces de noms.](/fr/docs/Web/SVG/Namespaces_Crash_Course)
@@ -46,7 +45,6 @@ Quelques explications s'imposent quant au fonctionnement du rendu :
 
 - La première chose à retenir est l'ordre de rendu des éléments. La règle qui prévaut pour le SVG est que les éléments déclarés les plus récemment sont ceux qui seront affichés par-dessus les autres. En gros, l'élément défini en bas du document sera celui qui s'affichera au-dessus de tous les autres.
 - Les fichiers SVG peuvent être affichés directement dans un navigateur ou même être incorporés directement dans un fichier HTML, en suivant plusieurs méthodes :
-
   - Si le HTML est du XHTML et est distribué avec le type MIME `application/xhtml+xml`, le SVG peut directement être intégré dans la source XML.
   - SI le HTML est du HTML5 et que le navigateur est conforme HTML5, le SVG peut aussi être intégré directement dans les sources. Toutefois, il peut être nécessaire d'effectuer des modifications de syntaxe pour rendre le document compatible aux spécifications HTML5.
   - Le document SVG peut être défini avec un élément `object` :

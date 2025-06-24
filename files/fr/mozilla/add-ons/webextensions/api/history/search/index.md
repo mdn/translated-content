@@ -20,11 +20,8 @@ var searching = browser.history.search(
 ### Paramètres
 
 - `query`
-
   - : Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :
-
     - `text`
-
       - : `string`. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.
 
         Par exemple, considérez cet article :

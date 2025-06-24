@@ -68,14 +68,12 @@ La dirección URL base de un documento puede ser consultado a partir de una secu
 
 ## Attributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `href`
   - : La dirección URL base que se usa en todo el documento para las direcciones URL relativas. Si no se especifica este atributo, este elemento debe venir antes de cualesquiera otros elementos con atributos cuyos valores son direcciones URL. Se permiten las direcciones URL absolutas y relativas.
 - `target`
-
   - : Un nombre o una palabra clave que indica la ubicación predeterminada para navegar por el resultado de hipervínculos o formas, para los elementos que no tienen una referencia explícita del objetivo . Es un nombre o una palabra clave para un contexto de navegación (por ejemplo: pestaña, ventana o marco en línea). Las siguientes palabras clave tienen un significado especial: tab, window, o inline frame).Las siguientes palabras clave tienen un significado especial:
-
     - `_self`: Carga el resultado en el mismo contexto de navegación que el actual. Este valor es el valor por defecto si no se especifica el atributo.
     - `_blank`: Carga el resultado en un nuevo contexto de navegación sin nombre .
     - `_parent`: Cargar el resultado en el contexto de navegación padre del actual. Si no hay padre, esta opción se comporta de la misma manera que \_self.

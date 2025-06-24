@@ -27,11 +27,11 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLHyperlinkElementUtils.hostname")}}
   - : Es un {{domxref ("USVString")}} que representa el nombre de host en la URL referenciada.
 - {{domxref ("HTMLHyperlinkElementUtils.href")}}
-  - : Es un {{domxref ("USVString")}} que refleja el atributo HTML [`href`](/es/docs/Web/HTML/Element/a#href), que contiene una URL válida de un recurso vinculado.
+  - : Es un {{domxref ("USVString")}} que refleja el atributo HTML [`href`](/es/docs/Web/HTML/Reference/Elements/a#href), que contiene una URL válida de un recurso vinculado.
 - {{domxref ("HTMLAnchorElement.hreflang")}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`hreflang`](/es/docs/Web/HTML/Element/a#hreflang), que indica el idioma del recurso vinculado.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`hreflang`](/es/docs/Web/HTML/Reference/Elements/a#hreflang), que indica el idioma del recurso vinculado.
 - {{domxref ("HTMLAnchorElement.media")}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`media`](/es/docs/Web/HTML/Element/a#media), que indica los medios previstos para el recurso vinculado.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`media`](/es/docs/Web/HTML/Reference/Elements/a#media), que indica los medios previstos para el recurso vinculado.
 - {{domxref ("HTMLAnchorElement.name")}} {{deprecated_inline}}
   - : Es un {{domxref ("DOMString")}} que representa el nombre del ancla.
 - {{domxref ("HTMLHyperlinkElementUtils.password")}}
@@ -45,13 +45,13 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLHyperlinkElementUtils.protocol")}}
   - : Es un {{domxref ("USVString")}} que representa el componente de protocolo, incluidos los puntos finales (':'), de la URL a la que se hace referencia.
 - {{domxref ("HTMLAnchorElement.referrerPolicy")}} {{experimental_inline}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo [`referrerpolicy`](/es/docs/Web/HTML/Element/a#referrerpolicy) HTML que indica qué referencia usar.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo [`referrerpolicy`](/es/docs/Web/HTML/Reference/Elements/a#referrerpolicy) HTML que indica qué referencia usar.
 - {{domxref ("HTMLAnchorElement.rel")}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`rel`](/es/docs/Web/HTML/Element/a#rel), que especifica la relación del objeto de destino con el objeto vinculado.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`rel`](/es/docs/Web/HTML/Reference/Elements/a#rel), que especifica la relación del objeto de destino con el objeto vinculado.
 - {{domxref ("HTMLAnchorElement.relList")}} {{readonlyInline}}
-  - : Devuelve un {{domxref ("DOMTokenList")}} que refleja el atributo HTML [`rel`](/es/docs/Web/HTML/Element/a#rel), como una lista de tokens.
+  - : Devuelve un {{domxref ("DOMTokenList")}} que refleja el atributo HTML [`rel`](/es/docs/Web/HTML/Reference/Elements/a#rel), como una lista de tokens.
 - {{domxref ("HTMLAnchorElement.rev")}} {{deprecated_inline}}
-  - : Es un {{domxref ("DOMString")}} que representa el atributo HTML [`rev`](/es/docs/Web/HTML/Element/a#rev), que especifica la relación del objeto de enlace con el objeto de destino.
+  - : Es un {{domxref ("DOMString")}} que representa el atributo HTML [`rev`](/es/docs/Web/HTML/Reference/Elements/a#rev), que especifica la relación del objeto de enlace con el objeto de destino.
 - {{domxref ("HTMLHyperlinkElementUtils.search")}}
   - : Es un {{domxref ("USVString")}} que representa el elemento de búsqueda, incluido el signo de interrogación principal ('?'), Si lo hay, de la URL a la que se hace referencia.
 - {{domxref ("HTMLAnchorElement.shape")}} {{deprecated_inline}}
@@ -59,11 +59,11 @@ Hereda propiedades de su elemento primario, {{domxref ("HTMLElement")}}, y las i
 - {{domxref ("HTMLAnchorElement.tabindex")}}
   - : Es un largo que contiene la posición del elemento en el orden de navegación de tabulación para el documento actual.
 - {{domxref ("HTMLAnchorElement.target")}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`target`](/es/docs/Web/HTML/Element/a#target), que indica dónde mostrar el recurso vinculado.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`target`](/es/docs/Web/HTML/Reference/Elements/a#target), que indica dónde mostrar el recurso vinculado.
 - {{domxref ("HTMLAnchorElement.text")}}
   - : Es un {{domxref ("DOMString")}} un sinónimo de la propiedad {{domxref ("Node.textContent")}}.
 - {{domxref ("HTMLAnchorElement.type")}}
-  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`type`](/es/docs/Web/HTML/Element/a#type), que indica el tipo MIME del recurso vinculado.
+  - : Es un {{domxref ("DOMString")}} que refleja el atributo HTML [`type`](/es/docs/Web/HTML/Reference/Elements/a#type), que indica el tipo MIME del recurso vinculado.
 - {{domxref ("HTMLHyperlinkElementUtils.nombre de usuario")}}
   - : Es un {{domxref ("USVString")}} que contiene el nombre de usuario especificado antes del nombre de dominio.
 

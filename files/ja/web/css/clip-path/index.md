@@ -119,9 +119,7 @@ clip-path: unset;
 - `<clip-source>`
   - : {{cssxref("url_value", "&lt;url&gt;")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリーボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 内部の長方形を定義します。
     - {{cssxref("basic-shape/circle","circle()")}}
@@ -140,9 +138,7 @@ clip-path: unset;
       - : 参照ボックスの上端と左端からの指定距離、および長方形の幅と高さを指定して、長方形を定義します。
 
 - `<geometry-box>`
-
   - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形 ({{cssxref("border-radius")}} など) を含めてクリッピングパスにします。ジオメトリーボックスは以下の値のうちの一つが指定できます。
-
     - `margin-box`
       - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
     - `border-box`
@@ -700,6 +696,5 @@ clipPathSelect.addEventListener("change", (evt) => {
 - CSS プロパティ: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - SVG 属性:
-
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

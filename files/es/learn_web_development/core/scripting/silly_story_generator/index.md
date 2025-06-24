@@ -67,7 +67,6 @@ Variables y funciones iniciales:
 
 1. En el archivo de texto sin procesar, copia todo el código bajo el encabezado "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" y pégalo en la parte superior del archivo main.js. Esto te dará tres variables que almacenan las referencias al campo de texto "Enter custom name" (`customName`), el botón "Generate random story" (`randomize`), y el elemento {{htmlelement("p")}} al fondo del cuerpo HTML en el que la historia será copiada en (`story`), respectivamente. Además, obtendrás una funcion llamada `randomValueFromArray()` que toma un arreglo, y devuelve uno de los elementos guardados dentro del arreglo al azar.
 2. Ahora observa la segunda sección del archivo de texto sin procesar — "2. RAW TEXT STRINGS". Esta contiene cadenas de texto que actuarán como entrada en nuestro programa. Nos gustaría que mantengas estas variables internas dentro del archivo `main.js`:
-
    1. Almacena la primera, la más larga, cadena de texto dentro de una variable llamada `storyText`.
    2. Almacena el primer conjunto de tres cadenas dentro de un arreglo llamado `insertX`.
    3. Almacena el segundo conjunto de tres cadenas dentro de un arreglo llamado `insertY`.
@@ -77,7 +76,6 @@ Colocar el controlador de evento y la función incompleta:
 
 1. Ahora regresa al archivo de texto sin procesar.
 2. Copia el código encontrado bajo el encabezado "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" y pégalo al fondo de tu archivo `main.js` . Esto:
-
    - Añade un detector de eventos a la variable `randomize`, de manera que cuando al botón que esta representa se le haya dado un clic, la función `result()` se ejecute.
    - Añade una definición de la función parcialmente completada `result()` a tu código. Por el resto de la evaluación, vas a escribir tú código dentro de esta función para completarla y hacer que funcione adecuadamente.
 
@@ -88,7 +86,6 @@ Completando la función `result()`:
 3. A continuación, queremos reemplazar los tres marcadores de posición en la cadena `newStory` — `:insertx:`, `:inserty:`, y `:insertz:` — con las cadenas almacenadas en `xItem`, `yItem`, y `zItem`. Hay dos posibles métodos de cadena que te ayudarán aquí: en cada caso, haga que la llamada al método sea igual a `newStory` de modo que cada vez que se llame, `newStory` se iguale a sí mismo, pero con sustituciones. Entonces, cada vez que se presiona el botón, estos marcadores de posición se reemplazan con una cadena absurda aleatoria. Como sugerencia adicional, dependiendo de el método que elijas, es posible que debas realizar una de las llamadas dos veces.
 4. Dentro del primer bloque `if`, agregue otra llamada al método de reemplazo de cadena para reemplazar el nombre 'Bob' que se encuentra en la cadena `newStory` con la variable de `name`. En este bloque estamos diciendo "Si se ingresó un valor en la entrada de texto `customName` reemplace a Bob en la historia con ese nombre personalizado."
 5. Dentro del segundo bloque `if`, verificamos si se ha seleccionado el botón de opción `uk`. Si es así, queremos convertir los valores de peso y temperatura en la historia de libras y Fahrenheit a piedras y grados centígrados. Lo que debe hacer es lo siguiente:
-
    1. Busque las fórmulas para convertir libras a piedras, y Fahrenheit en grados centígrados.
    2. Dentro de la línea que define la variable `weight`, reemplace 300 con un cálculo que convierta 300 libras en piedras. Concatenar `'stone'` al final del resultado de la llamada `Math.round()`.
    3. Al lado de la línea que define la variable `temperature`, reemplace 94 con un cálculo que convierta 94 Fahrenheit en centígrados. Concatenar `'centigrade'` al final del resultado de la llamada `Math.round()`.

@@ -40,9 +40,7 @@ original_slug: Web/HTML/Element/video
 - `controls`
   - : 이 속성이 존재하면, 소리 조절(volume), 동영상 탐색(seek), 일시 정지(pause)/재시작(resume)을 할 수 있는 컨트롤러를 제공합니다.
 - `crossorigin`
-
   - : crossorigin 속성은 CORS를 사용해서 관련 이미지를 패치해야 하는지 여부를 나타냅니다. [CORS-enabled resources](/ko/docs/Web/HTML/CORS_enabled_image) 는 {{HTMLElement("canvas")}} 요소에서 재사용 될 수 있으며 오염되지 않습니다. 허용되는 값은 다음과 같습니다:
-
     - anonymous
       - : CORS(`Origin:` HTTP 헤더 사용)를 수행 합니다. 하지만 credential가 전송되지 않습니다. (즉, cookie, X.509 certificate, HTTP 기본 인증이 전송되지 않습니다). 서버가 원본 사이트에 credentials를 제공하지 않는 경우 (즉, `Access-Control-Allow-Origin:` HTTP 헤더를 설정하지 않음으로써), 이미지가 오염되고 사용이 제한됩니다.
     - use-credentials
@@ -59,9 +57,7 @@ original_slug: Web/HTML/Element/video
 - `played`
   - : 재생된 동영상 영역을 나타내는 {{domxref("TimeRanges")}} 객체 입니다.
 - `preload`
-
   - : 이 속성은 저작자가 생각하는 가장 좋은 사용자 경험이 어떠한 것인지 브라우저에 미리 정보를 알려주는 용도록 사용됩니다. 다음 값들 중 하나를 가질 수 있습니다:
-
     - none: 저작자가 생각하기에 사용자가 비디오를 보지 않거나 서버가 최소한의 트래픽을 유지하고자 함을 의미합니다. 다시 말해서 비디오가 캐시되지 않아야 함을 의미합니다.
     - metadata: 저작자가 생각하기에 사용자가 비디오를 보지 않을 수도 있지만 메타데이터(예를 들어서 길이)를 미리 가져오는 것은 합리적임을 의미합니다.
     - auto: 사용자가 우선순위를 가지고 있음을 의미합니다. 다시 말해서 사용자가 이를 사용하지 않을 지라도 필요하다면 전체 비디오가 다운로드 될 수 있음을 의미합니다.

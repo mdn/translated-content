@@ -112,12 +112,10 @@ font: caption;
 如果 `font` 指定为字体相关的属性的简写：
 
 - 必须包含以下值：
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 可以选择性包含以下值：
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

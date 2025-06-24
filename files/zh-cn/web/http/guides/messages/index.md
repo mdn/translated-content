@@ -34,7 +34,6 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)_，一个动词（像 {{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}）或者一个名词（像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}），描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据（创建或修改资源，或者产生要返回的临时文件）。
 2. _请求目标_（request target），通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
-
    - 一个绝对路径，末尾跟上一个 `'?'` 和查询字符串。这是最常见的形式，称为*原始形式*（origin form），被 `GET`、`POST`、`HEAD` 和 `OPTIONS` 方法所使用。
      - `POST / HTTP/1.1`
      - `GET /background.png HTTP/1.0`

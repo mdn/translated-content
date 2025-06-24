@@ -35,7 +35,6 @@ L'attribut **`style`** définit les [informations de style](/fr/docs/Web/CSS) po
 </table>
 
 - \<style>
-
   - : La syntaxe des données de style dépend du langage de la feuille de style. Par défaut, le langage est [CSS](/fr/docs/Web/CSS).
 
     > [!NOTE]
