@@ -327,15 +327,12 @@ label {
 ### 属性各论
 
 - `accept`
-
   - : 仅对 `file` 输入类型有效。`accept` 属性定义了 `file` 上传控件可选择文件类型的列表。参见 {{HTMLElement("input/file", "file")}} 输入类型以了解更多信息。
 
 - `alt`
-
   - : 仅对 `image` 类型有效。`alt` 属性提供了图片的替代文字，在图片的 [`src`](#src) 属性缺失或对应资源加载失败时，会显示该属性的值。参见 {{HTMLElement("input/image", "image")}} 输入类型以了解更多信息。
 
 - [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)
-
   - : （**不是**一个布尔属性！）[`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性将一个空格分隔的字符串作为其值，描述输入应该提供什么类型的自动完成功能。一个典型的自动完成的实现是回忆以前在同一输入字段中输入的值，但也可能存在更复杂的自动完成形式。例如，浏览器可以与设备的联系人列表集成，在电子邮件输入栏中自动完成 `email` 地址。请参阅 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete#值) 以了解允许的值。
 
     `autocomplete` 属性对 `hidden`、`text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range`、`color` 和 `password` 类型的输入有效。该属性对于那些不返回数值或文本数据的输入控件没有效果，对除了 `checkbox`、`radio`、`file` 和任何按钮类型的所有输入类型均有效。
@@ -343,7 +340,6 @@ label {
     查看 [HTML autocomplete 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)以了解额外信息，包括密码安全和对于 `hidden` 来说，`autocomplete` 的方式与其他输入类型略有不同。
 
 - `autofocus`
-
   - : 一个布尔属性，如果存在，表示当页面加载完毕（或包含该元素的 `<dialog>` 显示完毕）时，该 input 元素应该自动拥有焦点。
 
     > [!NOTE]
@@ -359,11 +355,9 @@ label {
     在应用 `autofocus` 属性时，要仔细考虑无障碍问题。自动聚焦于一个控件会导致页面在加载时滚动。焦点也会导致动态键盘在某些触摸设备上显示。虽然屏幕阅读器会宣布收到焦点的表单控件的标签，但屏幕阅读器不会宣布标签之前的任何内容，在小设备上的视力良好的用户同样会错过前面的内容所创造的背景。
 
 - `capture`
-
   - : 在 HTML 媒体捕获规范中引入，仅对 `file` 输入类型有效，`capture` 属性定义了应该使用哪种媒体（如麦克风、视频或相机）来捕获一个新文件，以便在支持场景中用 `file` 上传控件上传。参见 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `checked`
-
   - : 布尔属性，对于 `radio` 和 `checkbox` 类型有效。如果在 `radio` 类型上出现，代表该单选按钮是当前同名称组中所选定的那一个。如果在 `checkbox` 类型上出现，代表页面加载时，默认选择该复选框，这并*不*代表复选框当前是否选择：如果复选框状态改变，该内容属性不会反馈这种改变，只会更新 [`HTMLInputElement` 的 `checked` IDL 属性](/zh-CN/docs/Web/API/HTMLInputElement)。
 
     > [!NOTE]
@@ -372,7 +366,6 @@ label {
     > 例如，`name` 为 `fruit` 的复选框含有 `value` 为 `cherry` 的一项，且该复选框为选中状态，提交的表单数据将包含 `fruit=cherry`；如果复选框为非活动状态，它不会列入到表单数据中。复选框和单选按钮的默认 `value` 值为 `on`。
 
 - `dirname`
-
   - : 仅对 `text` 和 `search` 输入类型有效。`dirname` 属性允许提交元素的方向。当包含这个属性时，表单控件将提交两个名称/值对：第一个是 [`name`](#name) 和 [`value`](#value)，第二个是 `dirname` 作为名称，其值为浏览器设置的 `ltr` 或 `rtl`。
 
     ```html
@@ -389,7 +382,6 @@ label {
     当提交上述表单时，会发送 `name` / `value` 对 `fruit=cherry` 和 `dirname` / 方向对 `fruit.dir=ltr`。
 
 - `disabled`
-
   - : 一个布尔属性，如果存在的话，表示用户不应该与该输入进行交互。禁用的输入通常以较暗的颜色呈现，或使用一些其他形式的指示，表明该字段不能使用。
 
     具体来说，禁用的输入不会接收 {{domxref("Element/click_event", "click")}} 事件，而且禁用的输入不会随表单提交。
@@ -398,7 +390,6 @@ label {
     > 虽然规范中没有要求，但 Firefox 默认会在不同的页面加载中[保持 `<input>` 的动态禁用状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](#autocomplete) 属性来控制这个特性。
 
 - `form`
-
   - : 一个字符串，指定该输入与之相关的 {{HTMLElement("form")}} 元素（即其**表单所有者**）。如果存在该属性，该字符串的值必须与相同文档中的 `<form>` 元素的 [`id`](#id) 相同。如果没有指定该属性，该 `<input>` 元素与最近包含它的表单相关。
 
     `form` 属性可以让你在文档的任何地方放置一个输入控件，但在文档的其他地方包含一个表单。
@@ -423,7 +414,6 @@ label {
 - `inputmode`
   - : 对所有元素都有效的全局值，它为浏览器提供了一个提示，说明在编辑这个元素或其内容时要使用的虚拟键盘配置类型。值包括 `none`、`text`、`tel`、`url`、`email`、`numeric`、`decimal` 和 `search`。
 - `list`
-
   - : 给予 `list` 属性的值应该是位于同一文档中的 {{HTMLElement("datalist")}} 元素的 {domxref("Element.id", "id")}}。`<datalist>` 提供了一个预定义值的列表，向用户建议这个输入。列表中任何与[`type`](#type)不兼容的值都不包括在建议的选项中。所提供的值是建议，不是要求：用户可以从这个预定义的列表中选择，或者提供不同的值。
 
     在 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`range` 和 `color` 上均有效。
@@ -435,19 +425,16 @@ label {
     参见 {{htmlelement('datalist')}} 元素。
 
 - `max`
-
   - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最大值。如果输入到元素中的 [`value`](#value) 超过此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `max` 属性的值不是数字，则元素没有最大值。
 
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`max` 的值可能低于 `min` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
 - `maxlength`
-
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最大字符数（以 UTF-16 码点为单位）。必须为大于等于 `0` 的整数。如果未指定 `maxlength` 或指定了无效的值，则该字段将没有最大值。这个值也必须大于等于 `minlength` 的值。
 
     如果文本框中的字符数大于 `maxlength` UTF-16 编码单元长度，则输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。默认情况下，浏览器将阻止用户输入超过 `maxlength` 属性所指定的值的字符。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `min`
-
   - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效，定义了允许值范围内的最小值。如果输入到元素的 [`value`](#value) 小于此值，则该元素将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)。如果 `min` 指定的值不是数字，则输入没有最小值。
 
     该值必须小于或等于 `max` 属性的值。如果 `min` 属性存在但没有指定或无效，则不应用 `min` 值。如果 `min` 属性有效，并且非空值小于 `min` 属性所允许的最小值，约束验证将阻止表单提交。参见[客户端验证](#客户端验证)一节以获取更多信息。
@@ -455,23 +442,19 @@ label {
     有一种特殊情况：如果数据类型是周期性的（如日期或时间），`min` 的值可能高于 `max` 的值，这表明范围可以环绕；例如，这允许你指定一个从晚上 10 点到凌晨 4 点的时间范围。
 
 - `minlength`
-
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。它定义了用户可以输入到该字段中的最小字符数（以 UTF-16 码点为单位）。该值必须是小于等于 `maxlength` 指定的值的非负整数值。如果未指定 `minlength` 或指定了无效的值，则该字段将没有最小值。
 
     如果输入字段的文本长度小于 `minlength` UTF-16 代码单元的长度，输入将无法通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，阻止表单提交。参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `multiple`
-
   - : 如果设置了布尔值 `multiple` 属性，意味着用户可以在电子邮件部件中输入逗号分隔的电子邮件地址，或者可以通过 `file` 输入选择多个文件。参见 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型。
 
 - `name`
-
   - : 一个指定输入控件名称的字符串。当表单数据被提交时，这个名字会和控件的值一起提交。
 
     通常把 `name` 看作是一个必需的属性（即使它不是）。如果一个输入没有指定 `name`，或者 `name` 是空的，那么这个输入的值就不会和表单一起提交！禁用的控件、未选中的单选按钮、未选中的复选框和重置按钮也不会被发送。
 
     考虑这两个特殊情况：
-
     1. `_charset_`：如果被用作 {{HTMLElement("input/hidden", "hidden")}} 类型的 `<input>` 元素的名称，该输入的 `value` 会被{{Glossary("user agent","用户代理")}}自动设置为提交表单时使用的字符编码。
     2. `isindex`：由于历史原因，不允许使用 [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) 这个名字。
 
@@ -497,7 +480,6 @@ label {
     > 避免给表单元素一个与表单内置属性相对应的 `name`，因为这样你就会用这个对相应输入的引用来覆盖预定义的属性或方法。
 
 - `pattern`
-
   - : 对 `text`、`search`、`url`、`tel`、`email` 和 `password` 类型有效。为了使 `value` 通过[约束验证](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)，必须满足 `pattern` 属性给定的正则表达式。它必须是 {{jsxref("RegExp")}} 类型的有效 JavaScript 正则表达式，并且已在我们的[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)中进行了说明；在编译正则表达式时指定了 `'u'` 标志，因此该模式被视为 Unicode 代码点的序列，而不是 ASCII。模式文本周围无需指定正斜杠。
 
     如果 `pattern` 属性存在，但是未指定模式或无效，则不应用任何正则表达式，并且将完全忽略此属性。如果模式属性是有效的，并且该非空值与模式不匹配，约束验证将阻止表单提交。
@@ -507,37 +489,30 @@ label {
     > 参见[客户端验证](#客户端验证)一节以了解更多信息。
 
 - `placeholder`
-
   - : 对 `text`、`search`、`url`、`tel`、`email`、`password` 和 `number` 有效。`placeholder` 属性可向用户提供有关该字段中需要什么样的信息的简短提示。它应该是一个单词或短语来说明预期的数据类型，而不是说明性消息。文本中*不得*包含回车符或换行符。例如，某个字段需要收集用户的姓氏，其标签为“First Name”，一个适合的占位文字可能是“如 Mustafa”。
 
     > **备注：** `placeholder` 属性在语义上不如其他解释表单的方式有用，而且会对你的内容造成意想不到的技术问题。参见[标签](#标签)以获得更多信息。
 
 - `readonly`
-
   - : 一个布尔属性，如果存在，则表示该字段不能由用户编辑。`readonly` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `password` 输入类型。
 
     参见 [HTML 属性：`readonly`](/zh-CN/docs/Web/HTML/Reference/Attributes/readonly) 以了解更多信息。
 
 - `required`
-
   - : `required` 是一个布尔属性，如果存在，则表示用户必须在提交表单之前指定一个非空值。`required` 属性支持 `text`、`search`、`url`、`tel`、`email`、`date`、`month`、`week`、`time`、`datetime-local`、`number`、`password`、`checkbox`、`radio` 和 `file` 输入类型。
 
     参见[客户端验证](#客户端验证)和 [HTML 属性：`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required)以了解更多信息。
 
 - `size`
-
   - : 对 `email`、`password`、`tel`、`url` 和 `text` 有效。`size` 属性指示显示输入控件的多少。基本上创建了与设置 CSS [`width`](/zh-CN/docs/Web/CSS/width)属性相同的结果，但有一些特殊性，值的具体单位取决于输入类型。对于 `password` 和 `text`，它是字符数量（或 `em` 单位大小），默认值是 `20`。对于其他情况，是像素值（或 `px` 单位大小）。CSS `width` 的优先级会高于 `size` 属性。
 
 - `src`
-
   - : 仅对 `image` 输入按钮有效。指定将要在提交按钮上显示的图像的 URL。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 
 - `step`
-
   - : 对 `date`、`month`、`week`、`time`、`datetime-local`、`number` 和 `range` 输入类型有效。[`step`](/zh-CN/docs/Web/HTML/Reference/Attributes/step) 属性指定了值必须满足的粒度。
 
     如果没有明确包含它：
-
     - `step` 对于类型为 `number` 和 `range` 的默认值为 1。
     - 每一种日期/事件输入类型有一个适合的默认 `step` 值，请查阅相关的页面以获取：[`date`](/zh-CN/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time#step) 和 [`week`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week#step)。
 
@@ -552,25 +527,20 @@ label {
     > 参见[客户端验证](#客户端验证)以获取更多信息。
 
 - `tabindex`
-
   - : 对所有元素有效的全局属性，包括所有的输入类型，是一个整数属性，表示该元素如果参与顺序键盘导航，是否可以接受输入焦点（可聚焦）。由于除了隐藏类型的输入外，所有的输入类型都是可聚焦的，这个属性不应该用在表单控件上，因为这样做需要管理文档中所有元素的聚焦顺序，如果设置错误，就有可能损害可用性和无障碍性。
 
 - `title`
-
   - : 对所有元素有效的全局属性，包括所有的输入类型，包含一个代表与它所属的元素相关的咨询信息的文本。这样的信息通常以工具提示的形式呈现给用户（但不必要）。标题不应作为表单控件用途的主要解释。相反，可以使用 {{htmlelement('label')}} 元素，其 `for` 属性设置为表单控件的 [`id`](#id) 属性。参见下面的[标签](#标签)。
 
 - `type`
-
   - : 一个字符串，指定要渲染的控件的类型。例如，要创建一个复选框，使用 `checkbox` 的值。如果省略（或指定一个未知值），则使用输入类型 `text`，创建一个纯文本输入字段。
 
     允许的值列在了上方的 [Input 类型](#input_类型)中。
 
 - `value`
-
   - : 输入控件的值。当在 HTML 中指定时，这是初始值。从那时起，它可以在任何时候用 JavaScript 访问相应的 {{domxref("HTMLInputElement")}} 对象的 `value` 属性，用于改变或检索。`value` 属性总是可选的，不过对于 `checkbox`、`radio` 和 `hidden` 来说，应该被认为是必须的。
 
 - `width`
-
   - : 仅对 `image` 输入按钮有效。`width` 是呈现在图片提交按钮上的图片宽度。参见 {{HTMLElement("input/image", "image")}} 输入类型。
 
 ### 非标准属性
@@ -628,16 +598,13 @@ label {
 </table>
 
 - `autocorrect` {{non-standard_inline}}
-
   - : （仅 Safari 适用）。一个字符串，表示是否在用户编辑该字段时激活自动更正。允许的值为：
-
     - `on`
       - : 启用自动更正，如果配置了文字替换，则一同处理它们。
     - `off`
       - : 禁用自动更正和文字替换。
 
 - `incremental` {{non-standard_inline}}
-
   - : 布尔属性 `incremental` 是 WebKit 和 Blink 的扩展（所以 Safari、Opera、Chrome 等都支持），如果存在的话，就会告诉{{Glossary("user agent","用户代理")}}将输入作为实时搜索处理。当用户编辑该字段的值时，用户代理将 {{domxref("HTMLInputElement/search_event", "search")}} 事件发送到代表搜索框的 {{domxref("HTMLInputElement")}} 对象。这使得你的代码能够在用户编辑搜索时实时更新搜索结果。
 
     如果没有指定 `incremental` 属性，则仅当用户明确发起搜索（如按下键盘上 <kbd>Enter</kbd> 或 <kbd>Return</kbd>）时，才会发送 {{domxref("HTMLInputElement/search_event", "search")}} 事件。
@@ -645,17 +612,14 @@ label {
     `search` 事件是限速的，因此它的发送频率不会超过实施定义的间隔。
 
 - `orient` {{non-standard_inline}}
-
   - : 类似于影响 {{htmlelement('progress')}} 和 {{htmlelement('meter')}} 元素的非标准 CSS 属性 -moz-orient，`orient` 属性定义范围滑块的方向。值包括 `horizontal`，代表范围滑块水平呈现；和 `vertical`，代表范围滑块垂直呈现。
 
 - `results` {{non-standard_inline}}
-
   - : 只有 Safari 支持的 `results` 属性是一个数值，可以让你覆盖 {{HTMLElement("input")}} 元素原生提供的先前搜索查询下拉菜单中显示的最大条目数。
 
     该值必须是一个非负的十进制数字。如果没有提供，或者提供了一个无效的值，则使用浏览器的默认最大条目数。
 
 - `webkitdirectory` {{non-standard_inline}}
-
   - : 布尔属性 `webkitdirectory` 如果存在，表示在文件选取界面中，只有目录可供用户选择。参见 {{domxref("HTMLInputElement.webkitdirectory")}} 以了解更多细节和例子。
 
     虽然最初只为基于 WebKit 的浏览器实现，但 `webkitdirectory` 也可以在 Microsoft Edge 以及 Firefox 50 和更高版本中使用。然而，尽管它有相对广泛的支持，它仍然不是标准的，除非你没有其他选择，否则不应该使用。

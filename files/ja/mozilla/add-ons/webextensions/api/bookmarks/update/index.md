@@ -24,18 +24,14 @@ browser.bookmarks.update(
 - `id`
   - : 更新したいブックマーク / フォルダーの ID を表す {{jsxref("string")}} です。
 - `changes`
-
   - : 適用したい変更内容を表す {{jsxref("object")}} であり、以下のプロパティから構成されます。指定しなかったプロパティについて、ブックマークやフォルダーが変更されることはありません。
-
     - `title`{{optional_inline}}
       - : `id` がフォルダーを表す場合、ブックマークの新しいタイトル / フォルダーの新しい名前を指定する {{jsxref("string")}} です。
     - `url`{{optional_inline}}
       - : ブックマークの新しい URL を指定する {{jsxref("string")}} です。
 
 - `callback`{{optional_inline}}
-
   - : 変更が適用された際に実行される関数です。この関数には次の引数が 1 つ渡ります。
-
     - `result`
       - : 更新されたブックマークを表す{{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトです。
 

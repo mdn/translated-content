@@ -26,7 +26,6 @@ scrollbar-width: unset;
 ### 取值
 
 - _\<scrollbar-width>_
-
   - : 将滚动条的宽度定义为数值宽度或者预定义宽度，当被定义为预定义宽度时，则必须为下列值之一：
 
     <table class="standard-table">

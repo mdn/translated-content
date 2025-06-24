@@ -31,9 +31,7 @@ browser.captivePortal.onStateChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。函数被传入此参数：
-
     - `details`
       - : `string`。强制门户状态，为 `unknown`、`not_captive`、`unlocked_portal` 或 `locked_portal` 之一。
 

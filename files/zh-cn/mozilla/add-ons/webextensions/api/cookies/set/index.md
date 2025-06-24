@@ -24,9 +24,7 @@ let setting = browser.cookies.set(
 ### 参数
 
 - `details`
-
   - : 一个包含你想要设置的 cookie 详细信息的 `object`。它可以包含以下属性：
-
     - `domain` {{optional_inline}}
       - : 一个表示 cookie 域的 `string`。如果省略，cookie 将成为仅限主机（host-only）的 cookie。
     - `expirationDate` {{optional_inline}}

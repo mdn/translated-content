@@ -94,9 +94,7 @@ left: unset;
 ### Valeurs
 
 - `<length>`
-
   - : Une valeur de longueur qui peut être positive, nulle ou négative et qui représente :
-
     - La distance au bord gauche du bloc englobant _pour les éléments positionnés de façon absolue_
     - Le décalage vers la gauche qui est appliqué à l'élément par rapport à sa position normale dans le flux _pour les éléments positionnés de façon relative_.
 
@@ -105,9 +103,7 @@ left: unset;
 - `<percentage>`
   - : Une valeur en pourcentage (type {{cssxref("&lt;percentage&gt;")}} par rapport à la largeur du bloc englobant.
 - `auto`
-
   - : Un mot-clé qui représente :
-
     - Pour les éléments positionnés de façon absolue : la position de l'élément selon la valeur de la propriété {{cssxref("right")}}, on considère `width: auto` comme une largeur basée sur le contenu.
     - Pour les éléments positionnés de façon relative : le décalage à gauche de l'élément par rapport à sa position initiale selon la valeur de la propriété {{cssxref("right")}}. SI `right` vaut également `auto`, il n'y a aucun décalage.
 

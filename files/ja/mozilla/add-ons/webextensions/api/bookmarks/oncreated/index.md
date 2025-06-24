@@ -32,14 +32,11 @@ browser.bookmarks.onCreated.hasListener(listener)
 ### 引数
 
 - `callback`
-
   - : イベントが発火した際に呼び出される {{jsxref("function")}} です。この関数には以下の引数が渡ります。
-
     - `id`
       - : `string`.
 
     <!---->
-
     - `bookmark`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}.
 

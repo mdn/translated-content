@@ -72,7 +72,6 @@ Sin embargo, es importante considerar los siguientes escenarios:
   (en otras palabras, `delete` sólo tiene efecto en los propiedades propias).
 - Cualquier propiedad declarada con {{jsxref("Statements/var","var")}} no puede ser eliminada
   desde el ámbito global o desde el ámbito de una función.
-
   - Del mismo modo, `delete` no puede eliminar ninguna función en el ámbito global (ya sea parte de una definición de una función o una expresión de función).
   - Funciones que son partes de un objeto (y no sean del ámbito global) sí pueden ser eliminadas con `delete`.
 

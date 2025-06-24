@@ -495,7 +495,7 @@ setupHelp();
 
 Este ejemplo usa `const` en lugar de `var`, por lo que cada _closure_ vincula la variable de alcance de bloque, lo que significa que no se requieren _closure_ adicionales.
 
-Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Element/input), como se muestra:
+Otra alternativa podría ser usar `forEach()` para iterar sobre la matriz `helpText` y adjuntar un detector a cada [`<input>`](/es/docs/Web/HTML/Reference/Elements/input), como se muestra:
 
 ```js
 function showHelp(help) {
@@ -573,4 +573,4 @@ MyObject.prototype.getMessage = function () {
 };
 ```
 
-En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) para obtener más información.
+En los dos ejemplos anteriores, el prototipo heredado puede ser compartido por todos los objetos y las definiciones del método no necesitan ocurrir en cada creación de objetos. Consulte [La herencia y la cadena de prototipos](/es/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) para obtener más información.

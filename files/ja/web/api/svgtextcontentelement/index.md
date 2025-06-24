@@ -58,14 +58,12 @@ _このインターフェイスには、親である {{domxref("SVGGraphicsEleme
 - {{domxref("SVGTextContentElement.getSubStringLength()")}}
   - : 要素内のテキストの一部分の書式化されたテキストの進む距離を表す float 値を返します。このメソッドは、テキストの一部分のグリフの幅と、 CSS の `letter-spacing` および `word-spacing` プロパティによって挿入される追加の間隔のみを考慮します。 `x` 属性によって視覚的に調整された間隔は無視されます。
 - {{domxref("SVGTextContentElement.getStartPositionOfChar()")}}
-
   - : テキストのレイアウトが実行された後の組版文字の位置を表す {{domxref("DOMPoint")}} を返します。
 
     > [!NOTE]
     > SVG 1.1 では、このメソッドは {{domxref("SVGPoint")}} を返していました。
 
 - {{domxref("SVGTextContentElement.getEndPositionOfChar()")}}
-
   - : テキストのレイアウトが行われた後の組版文字の末尾の位置を表す {{domxref("DOMPoint")}} を返します。
 
     > [!NOTE]

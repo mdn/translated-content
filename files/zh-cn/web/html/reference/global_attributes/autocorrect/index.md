@@ -24,11 +24,9 @@ l10n:
 可能的值有：
 
 - `on` 或 `""`（空字符串）
-
   - : 启用拼写和标点符号的自动更正特性。
 
 - `off`
-
   - : 禁用可编辑文字的自动更正。
 
 不支持自动更正的 {{htmlelement("input")}} 元素类型（[`password`](/zh-CN/docs/Web/HTML/Reference/Elements/input/password)、[`email`](/zh-CN/docs/Web/HTML/Reference/Elements/input/email) 和 [`url`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url)）始终处于 `off` 状态。

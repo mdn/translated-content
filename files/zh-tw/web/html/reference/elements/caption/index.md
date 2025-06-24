@@ -99,7 +99,6 @@ tr:nth-child(odd) td {
 以下屬性已被廢棄，不應使用。它們僅作為更新現有代碼和歷史興趣的參考而記錄如下。
 
 - `align` {{deprecated_inline}}
-
   - : 指定標題應顯示在表格的哪一側。可能的{{Glossary("enumerated", "枚舉")}}值為 `left`、`top`、`right` 或 `bottom`。請改用 {{cssxref("caption-side")}} 和 {{cssxref("text-align")}} CSS 屬性，因為此屬性已被廢棄。
 
 ## 使用注意事項

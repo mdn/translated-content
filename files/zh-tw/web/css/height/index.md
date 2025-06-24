@@ -53,9 +53,7 @@ height: unset;
 - `available` {{experimental_inline}}
   - : The containing block height minus vertical margin, border and padding.
 - `fit-content` {{experimental_inline}}
-
   - : The larger of:
-
     - the intrinsic minimum height
     - the smaller of the intrinsic preferred height and the available height
 

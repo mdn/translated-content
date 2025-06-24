@@ -59,7 +59,6 @@ No exemplo abaixo, criamos uma _grade explícita_ de três colunas e duas linhas
 1. CSS Grid Layout Guide:
    _[Basic concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)_
 2. Property reference
-
    1. {{cssxref("grid-template-columns")}}
    2. {{cssxref("grid-template-rows")}}
    3. {{cssxref("grid")}}

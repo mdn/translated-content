@@ -266,7 +266,6 @@ MDN 团队将会联系被提名的人，以获得在[网站](/zh-CN/)“Contribu
 - `@OWD`：来自 Open Web Docs 非营利组织的贡献者
 - `@sre`：支持 MDN Web 文档网站可靠性的工程师
 - `@yari-content`：MDN Web 文档所有的内容审查团队的总称
-
   - 在不同的领域下，如无障碍、插件、CSS、HTML、HTTP、JavaScript、SVG、Web API 和 WebAssembly 下会存在很多子团队。如 `@yari-content-css` 和 `@yari-content-svg`。
   - 在不同本地化语言下，如巴西葡萄牙语、汉语、法语、日语、韩语、俄语和西班牙语下也会存在很多子团队。如 `@yari-content-fr` 和 `@yari-content-ko`。
 

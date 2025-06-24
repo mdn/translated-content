@@ -33,9 +33,7 @@ browser.tabs.onMoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。用户移动的标签页的 ID。
     - `moveInfo`
