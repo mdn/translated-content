@@ -18,11 +18,8 @@ requestPermission(descriptor)
 ### 参数
 
 - `descriptor` {{optional_inline}}
-
   - : 一个对象，指定需要查询的权限模式，包含以下选项：
-
     - `'mode'` {{optional_inline}}
-
       - : 可以是 `'read'` 或 `'readwrite'`。
 
 ### 返回值

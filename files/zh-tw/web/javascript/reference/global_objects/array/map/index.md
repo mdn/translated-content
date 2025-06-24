@@ -30,11 +30,9 @@ let new_array = arr.map(function callback( currentValue[, index[, array]]) {
 ### 參數
 
 - `callback`
-
   - : 呼叫 `arr` 所有元素的回呼函式。新數值會在每次執行 `callback` 時加到 `new_array`。
 
     `callback` 函式可傳入以下三個參數：
-
     - `currentValue`
       - : 原陣列目前所迭代處理中的元素。
     - `index`{{optional_inline}}

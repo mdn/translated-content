@@ -34,7 +34,6 @@ l10n:
 >     Formatear como _NameOfTheParentInterface_**.**_NameOfTheProperty_.
 >     Por ejemplo, la propiedad [`capabilities`](/es/docs/Web/API/VRDisplay/capabilities) de la interfaz [`VRDisplay`](/es/docs/Web/API/VRDisplay) su `title` es `VRDisplay.capabilities`.
 > - **slug**
->
 >   - : El final de la ruta de la URL después de `https://developer.mozilla.org/es/docs/`.
 >     Esto se formateará como `Web/API/NameOfTheParentInterface/NameOfTheProperty`.
 >
@@ -45,7 +44,6 @@ l10n:
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
->
 >   - : Reemplace el valor de marcador de posición `path.to.feature.NameOfTheProperty` con la cadena de consulta para la propiedad en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad y especificación (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}`).
 >

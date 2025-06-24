@@ -55,22 +55,17 @@ label {
 这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autocapitalize`
-
   - : 控制输入文本是否自动大写。有关更多信息，请参阅 [`autocapitalize`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize) 全局属性页面。
 
 - `autocomplete`
-
   - : 此属性指示浏览器是否可以自动完成控件的值。可能的值包括：
-
     - `off`：每次使用时，用户都必须明确为此字段输入值，或者文档提供自己的自动完成方法；浏览器不会自动完成条目。
     - `on`：浏览器可以根据用户在以前使用过程中输入的值自动完成该值。
 
     如果 `<textarea>` 元素上未指定 `autocomplete` 属性，那么浏览器将使用 `<textarea>` 元素表单所有者的 `autocomplete` 属性值。表单所有者要么是此 `<textarea>` 元素所属的 {{HTMLElement("form")}} 元素，要么是通过 `form` 属性指定其 `id` 的表单元素。有关更多信息，请参阅 {{HTMLElement("form")}} 中的 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/form#autocomplete) 属性。
 
 - `autocorrect` {{non-standard_inline}}
-
   - : 一个字符串，指示在用户编辑此 `textarea` 时是否激活自动拼写纠正和文本替换（如果有配置）。允许的值包括：
-
     - `on`
       - : 启用自动拼写纠正和文本替换。
     - `off`
@@ -81,7 +76,6 @@ label {
 - `cols`
   - : 文本控件的可见宽度，以平均字符宽度为单位。若已指定，其值必须为正整数。若未指定，默认值为 `20`。
 - `dirname`
-
   - : 此属性用于指示元素内容的文本方向性，类似于 `<input>` 元素的 [`dirname`](/zh-CN/docs/Web/HTML/Reference/Elements/input#dirname) 属性。有关更多信息，请参见 [`dirname` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/dirname)。
 
 - `disabled`
@@ -95,7 +89,6 @@ label {
 - `name`
   - : 控件的名称。
 - `placeholder`
-
   - : 对用户关于可在该控件中输入内容的提示。在占位符文本内部的回车或换行符在渲染提示时必须被视为换行处理。
 
     > [!NOTE]
@@ -108,17 +101,13 @@ label {
 - `rows`
   - : 显示控件的指定的可见文本行数，其值必须为正整数。若未指定，默认值为 2。
 - `spellcheck`
-
   - : 指定是否应由底层浏览器/操作系统对 `<textarea>` 进行拼写检查。可能的值包括：
-
     - `true`：指示应对此元素进行拼写和语法检查。
     - `default`：指示元素应遵循默认行为，该行为可能基于其父元素自身的 `spellcheck` 值。
     - `false`：指示不应对此元素进行拼写检查。
 
 - `wrap`
-
   - : 指示控件应如何对表单提交时的值进行换行。可能的值包括：
-
     - `hard`：浏览器会自动插入换行符（CR+LF），以确保每一行不超过控件宽度；要使此效果生效，必须指定 [`cols`](#cols) 属性。
     - `soft`：浏览器确保输入值中的所有换行均为 `CR+LF` 一对，但不会为此值添加额外的换行。
     - `off` {{non-standard_inline}}：类似于 `soft`，但外观表现为 `white-space: pre`，即超出 `cols` 宽度的不会换行，此时 `<textarea>` 将变为水平可滚动。

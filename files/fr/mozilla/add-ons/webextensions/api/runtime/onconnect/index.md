@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `fonction`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants:
-
     - `port`
       - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script courant à l'autre contexte auquel il se connecte.
 
@@ -67,7 +65,6 @@ Le script d'arrière-plan correspondant :
 
 - Ecoute les tentatives de connexion de script de contenu
 - Quand il reçoit une tentative de connexion :
-
   - Stocke le port dans une variable nommée `portFromCS`
   - Envoie un message au script de contenu en utilisant le port
   - Commence à écouter les messages reçus sur le port et les enregistre

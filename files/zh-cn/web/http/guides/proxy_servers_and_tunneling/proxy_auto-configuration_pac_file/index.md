@@ -54,7 +54,6 @@ function FindProxyForURL(url, host)
 - `SOCKS4 host:port`
 
   `SOCKS5 host:port`
-
   - : SOCKS 代理（同时指定 SOCKS 版本）
 
 如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
@@ -96,7 +95,6 @@ application/x-ns-proxy-autoconfig
 这些函数可以在 PAC 文件中使用：
 
 - 基于主机名的判断函数
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -104,28 +102,23 @@ application/x-ns-proxy-autoconfig
   - [`isInNet()`](#isinnet)
 
 - 和代理相关的功能函数
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - 基于 URL 或主机名的判断函数
-
   - [`shExpMatch()`](#shexpmatchstr_shexp)
 
 - 基于时间的判断函数
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - 日志记录功能函数
-
   - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
-
   - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
 > [!NOTE]
@@ -392,7 +385,6 @@ weekdayRange(wd1, wd2, [gmt])
 #### 参数
 
 - wd1 和 wd2
-
   - : One of the ordered weekday strings:
 
   ```plain
@@ -400,7 +392,6 @@ weekdayRange(wd1, wd2, [gmt])
   ```
 
 - gmt
-
   - : 可以指定为字符串 "`GMT`"，或留白不指定。
 
 Only the first parameter is mandatory. Either the second, the third, or both may be left out.

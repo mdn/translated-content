@@ -171,19 +171,16 @@ La première chose à faire en regardant ce résumé, c'est de le décomposer en
 4. Stocker l'ensemble des propositions de nombres pour que le joueur puisse les consulter.
 5. Vérifier si le nombre saisi par le joueur est correct.
 6. S'il est correct :
-
    1. Afficher un message de félicitations.
    2. Empêcher que le joueur saisisse de nouveau un nombre.
    3. Afficher un contrôle pour que le joueur puisse rejouer.
 
 7. S'il est faux et que le joueur a encore des tours à jouer :
-
    1. Informer le joueur que sa proposition de nombre est fausse.
    2. Lui permettre d'entrer une nouvelle proposition de nombre.
    3. Incrémenter le nombre de tours de 1.
 
 8. S'il est faux et que le joueur n'a plus de tours à jouer :
-
    1. Informer le joueur qu'il a perdu et que la partie est finie.
    2. Empêcher que le joueur saisisse de nouveau un nombre.
    3. Afficher un contrôle pour que le joueur puisse rejouer.
@@ -479,7 +476,6 @@ Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce 
 
 - La ligne 6 ajoute la valeur courante `userGuess` à la fin du paragraphe `guesses` , plus un espace vide de sorte qu'il y aura un espace entre chaque supposition faite.
 - Le bloc suivant (lignes 8-24) effectue quelques vérifications :
-
   - Le premier `if(){ }` vérifie si la supposition de l'utilisateur est égale au nombre aléatoire `randomNumber` situé en haut de notre code JavaScript. Si c'est le cas, le joueur a deviné correctement et a gagné le jeu, nous affichons donc un message de félicitations d'une belle couleur verte au joueur, effaçons le contenu de la boîte d'information sur la position de l'estimation et exécutons une fonction appelée `setGameOver()`, dont nous reparlerons plus tard.
   - Ensuite, nous chaînons un autre test à la fin du précédent avec une structure `else if(){ }`. Cette structure vérifie si l'utilisateur a épuisé toutes ses tentatives. Si c'est le cas, le programme fait la même chose que dans le bloc précédent, mais avec un message de fin de partie au lieu d'un message de félicitations.
   - Le dernier bloc chaîné à la fin de ce code (`else { }`) contient du code qui n'est exécuté que si aucun des deux autres tests n'a renvoyé _vrai_ (c'est-à-dire que le joueur n'a pas deviné juste, mais qu'il lui reste des possibilité de supposition). Dans ce cas, nous lui disons que sa supposition est mauvaise, puis nous effectuons un autre test conditionnel pour vérifier si elle est supérieure ou inférieure à la valeur exacte et affichons un autre message approprié pour indiquer si sa supposition est trop forte ou trop faible.

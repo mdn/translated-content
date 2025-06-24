@@ -19,12 +19,10 @@ Les outils de développement, s'affichent généralement dans une sous-fenêtre 
 Comment faire pour que cette sous-fenêtre apparaisse&nbsp;? Trois méthodes&nbsp;:
 
 - Au clavier&nbsp;: _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_, sauf pour&nbsp;:
-
   - Edge&nbsp;: <kbd>F12</kbd>
   - macOS&nbsp;: _<kbd>⌘</kbd> + <kbd>⌥</kbd> + <kbd>I</kbd>_
 
 - Via les menus
-
   - Firefox&nbsp;: _Menu ➤ Outils supplémentaires ➤ Outils de développement web_
   - Chrome&nbsp;: _Plus d'outils ➤ Outils de développement_
   - Safari&nbsp;: _Développement ➤ Afficher l'inspecteur web._ Si vous ne pouvez pas voir le menu _Développement_, aller sous _Safari ➤ Préférences ➤ Avancé_ et vérifiez que l'option _Afficher le menu de développement_ est bien coché.

@@ -201,18 +201,15 @@ transform-origin: unset;
 La propriété `transform-origin` peut être définie en utiisant une, deux ou trois valeurs.
 
 - Avec une valeur, celle-ci doit être :
-
   - Une longueur (type {{cssxref("&lt;length&gt;")}})
   - Un pourcentage (type {{cssxref("&lt;percentage&gt;")}}
   - Un mot-clé parmi `left`, `center`, `right`, `top`, `bottom`.
 
 - Avec deux valeurs
-
   - La première valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `left`, `center`, `right`
   - La seconde valeur doit être une longueur (type {{cssxref("&lt;length&gt;")}}), un pourcentage (type {{cssxref("&lt;percentage&gt;")}} ou un mot-clé parmi `top`, `center`, `bottom`.
 
 - Avec trois valeurs
-
   - Les deux premières valeurs doivent être structurées comme la syntaxe avec deux valeurs
   - La troisième valeur doit être une longueur (type {{cssxref("length")}}
 

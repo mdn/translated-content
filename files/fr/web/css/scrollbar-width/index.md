@@ -58,7 +58,6 @@ scrollbar-width: unset;
 ### Valeurs
 
 - `<scrollbar-width>`
-
   - : Une valeur qui définit l'épaisseur de la barre de défilement. Cette valeur est une longueur (cf. {{cssxref("&lt;length&gt;")}}) positive ou bien un mot-clé. Si c'est un mot-clé, ce dernier doit avoir l'une des valeurs suivantes :
 
     <table class="standard-table">

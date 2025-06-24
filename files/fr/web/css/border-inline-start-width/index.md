@@ -110,7 +110,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("border-top-width")}}
   - {{cssxref("border-right-width")}}
   - {{cssxref("border-bottom-width")}}

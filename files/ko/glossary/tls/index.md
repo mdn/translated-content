@@ -22,6 +22,5 @@ l10n:
 - [전송 계층 보안](/ko/docs/Web/Security/Transport_Layer_Security)
 - [OWASP: Transport Layer Protection Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("HTTPS")}}
   - {{Glossary("SSL")}}

@@ -29,7 +29,6 @@ l10n:
 - {{domxref("TouchEvent.touches","touches")}} - 現在画面上にあるすべてのタッチ点のリストです。
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - ターゲット DOM 要素上のタッチ点のリストです。
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - 関連するイベント種別に依存する項目を持つタッチ点のリストです。
-
   - {{domxref("Element/touchstart_event", "touchstart")}} イベントにおいては、現在のイベントでアクティブになったタッチ点のリストです。
   - {{domxref("Element/touchmove_event", "touchmove")}} イベントにおいては、前回のイベント以降に変更されたタッチ点のリストです。
   - {{domxref("Element/touchend_event", "touchend")}} イベントにおいては、表面から除去されたタッチ点のリスト（つまり、表面に触れなくなった指に対応するタッチ点の集合）です。

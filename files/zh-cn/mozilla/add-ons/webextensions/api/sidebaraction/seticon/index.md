@@ -38,11 +38,8 @@ let settingIcon = browser.sidebarAction.setIcon(
 ### 参数
 
 - `details`
-
   - : `object`。包含如下属性的对象：
-
     - `imageData` {{optional_inline}}
-
       - : {{WebExtAPIRef('sidebarAction.ImageDataType')}} 或 `object`。这要么是一个单一的 `ImageData` 对象，要么是一个字典对象。
 
         使用字典对象来指定多个不同尺寸的 `ImageData` 对象，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的值是一个 `ImageData` 对象，其名称是其大小，例如：
@@ -59,7 +56,6 @@ let settingIcon = browser.sidebarAction.setIcon(
         浏览器将根据屏幕的像素密度选择要使用的图像。有关更多信息，请参阅[选择图标大小](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
-
       - : `string` 或 `object`。这要么是指向图标文件的相对路径，要么是一个字典对象。
 
         使用字典对象来指定多个不同尺寸的图标文件，这样图标就不必为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的值是一个相对路径，其名称是其大小，例如：

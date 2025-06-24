@@ -33,9 +33,7 @@ X-Content-Type-Options: nosniff
 ## Директивы
 
 - `nosniff`
-
   - : Блокирует запрос, если запрошенный тип:
-
     - "`style`" и его MIME не "`text/css`", или
     - "`script`" и его MIME не [JavaScript MIME-тип](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 

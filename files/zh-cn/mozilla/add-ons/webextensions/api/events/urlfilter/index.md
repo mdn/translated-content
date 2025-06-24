@@ -18,25 +18,19 @@ l10n:
 需要注意的是，最后两个模式不会匹配主机名的最后一个部分，因为主机名的末尾没有隐式的点。例如，`"org."` 将匹配 `https://borg.com`，但不会匹配 `https://example.org`。要匹配这些模式，请使用 `hostSuffix`。
 
 - `hostContains` {{optional_inline}}
-
   - : `string`，匹配 URL 的[主机名](/zh-CN/docs/Web/API/HTMLAnchorElement/hostname)（不包括协议或端口——请参见 `schemes` 和 `ports`）包含给定字符串的情况。
-
     - 要测试主机名的某个部分是否以“foo”开头，请使用 `".foo"`。这将匹配 `www.foobar.com` 和 `foo.com`，因为主机名的开头添加了一个隐式的点。
     - 要测试主机名的某个部分是否以“foo”结尾，请使用 `"foo."`。
     - 要测试主机名的某个部分是否完全匹配“foo”，请使用 `".foo."`。
 
 - `hostEquals` {{optional_inline}}
-
   - : `string`，匹配 URL 的主机名是否等于指定的字符串。
-
     - 示例：`"www.example.com"` 匹配 `http://www.example.com` 和 `https://www.example.com/`，但不匹配 `http://example.com/`。
 
 - `hostPrefix` {{optional_inline}}
   - : `string`，匹配 URL 的主机名是否以指定的字符串开头。
 - `hostSuffix` {{optional_inline}}
-
   - : `string`，匹配 URL 的主机名是否以指定的字符串结尾。
-
     - 示例：`".example.com"` 匹配 `http://www.example.com/`，但不匹配 `http://example.com/`。
     - 示例：`"example.com"` 匹配 `http://www.example.com/`，以及 `http://fakeexample.com/`。
 
@@ -61,31 +55,23 @@ l10n:
 - `urlEquals` {{optional_inline}}
   - : `string`，匹配 URL（不含片段标识符）是否等于指定字符串。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 - `urlMatches` {{optional_inline}}
-
   - : `string`，检查 URL（不含片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
-
     - 示例：`urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` 匹配 `https://mozilla.org/`、`https://developer.mozilla.org/`，但不匹配 `https://developer.fakemozilla.org/`。
 
 - `originAndPathMatches` {{optional_inline}}
   - : `string`，检查 URL（不含查询段和片段标识符）是否与指定的[正则表达式](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)匹配。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
 - `urlPrefix` {{optional_inline}}
-
   - : `string`，检查 URL（不含片段标识符）是否以指定的字符串开头。如果端口号与默认端口号一致，则会从 URL 中删除端口号。
-
     - 示例：`"https://developer"` 匹配 `https://developer.mozilla.org/` 和 `https://developers.facebook.com/`。
 
 - `urlSuffix` {{optional_inline}}
   - : `string`，检查 URL（不含片段标识符）是否以指定的字符串结尾。如果端口号与默认端口号一致，则会从 URL 中删除端口号。请注意，在主机名后添加了一个隐式的正斜杠“/”，因此 `"com/"` 匹配 `https://example.com`，但 `"com"` 不匹配。
 - `schemes` {{optional_inline}}
-
   - : `string` 数组（`array`），检查 URL 的方案是否等于数组中指定的任何方案。因为方案总是转换为小写，所以应该始终以小写形式给出，否则永远不会匹配。
-
     - 示例：`["https"]` 只匹配 HTTPS URL。
 
 - `ports` {{optional_inline}}
-
   - : 由 `integer` 或 `integer` 数组（`array`）组成的数组（`array`）——可能包含整数和整数数组的数组。整数指代端口号，而整数数组指代端口范围。如果 URL 的端口号与任何端口号匹配或包含在任何范围中，则匹配。
-
     - 示例：`[80, 443, [1000, 1200]]` 匹配端口为 80、443 和端口在 1000-1200 范围内的所有请求。
 
 ## 浏览器兼容性

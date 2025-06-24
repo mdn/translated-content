@@ -53,7 +53,6 @@ Object.is(value1, value2)
 - 都是 [BigInt](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 且具有相同的数值
 - 都是 [symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol) 且引用相同的 symbol 值
 - 都是数字且
-
   - 都是 `+0`
   - 都是 `-0`
   - 都是 {{jsxref("NaN")}}

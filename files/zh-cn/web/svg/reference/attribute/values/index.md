@@ -29,9 +29,7 @@ values 属性具有不同的含义，具体取决于使用的上下文，它可�
 | Animatable    | Yes                                                                                                                                                      |
 
 - `<list-of-numbers>`
-
   - : 该值是一个数字列表，根据 type 属性的值来定义不同解释：
-
     - `type="matrix"`，`values` 是 20 个矩阵值（a00 a01 a02 a03 a04 a10 a11 ... a34）的列表，以空格和/或逗号分隔。
     - `type="saturate"`，`values` 是单个实数值（0 到 1）。
     - `type="hueRotate"`，`values` 是一个单一的实数值（度）。

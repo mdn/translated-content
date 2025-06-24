@@ -23,7 +23,6 @@ Não há limitação para a profundidade e a imbricação das listas definidas c
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `compact` {{Deprecated_inline}}
-
   - : Este atributo boleano sugere que a lista deve ser renderizada em um estilo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > [!NOTE]
@@ -32,16 +31,13 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `reversed`
   - : Este atributo boleano especifica que as partes desta lista serão especificadas em ordem reversa, isto é, a menos importante será listada primeiro.
 - `start`
-
   - : Este atributo inteiro especifica o valor inicial para a numeração dos itens da lista. Embora o tipo de ordenação dos elementos possa ser com algarismos romanos, tal como XXXI, ou letras, o valor inicial sempre é representado como um inteiro. Para iniciar a contagem a partir da letra "C", utilize \<ol start="3">.
 
     > [!NOTE]
     > Este atributo, obsoleto na HTML4, foi reintroduzido na HTML5.
 
 - `type`
-
   - : Indica o tipo de numeração:
-
     - `'a'` indica letras minúsculas,
     - `'A'` indica letras maiúsculas,
     - `'i'` indica algarismos romanos minúsculos,
@@ -104,7 +100,6 @@ A saída HTML acima será:
 
 1. primeiro item
 2. segundo item
-
    1. segundo item primeiro subitem
    2. segundo item segundo subitem
    3. segundo item terceiro subitem
@@ -134,7 +129,6 @@ A saída HTML acima será:
 
 1. primeiro item
 2. segundo item
-
    - segundo item primeiro subitem
    - segundo item segundo subitem
    - segundo item terceiro subitem
@@ -153,7 +147,6 @@ A saída HTML acima será:
 
 - Outros elementos HTML relacionados à lista: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} e o obsoleto {{HTMLElement("dir")}};
 - Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento`<ol>`:
-
   - a propriedade {{cssxref("list-style")}}, conveniente para escolher a forma como os ordinais são exibidos,
   - [contadores CSS](/pt-BR/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), útil para gerenciar listas complexas aninhadas,
   - a propriedade {{cssxref("line-height")}}, proficiente para simular o atributo obsoleto [`compact`](#compact),

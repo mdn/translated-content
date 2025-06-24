@@ -30,7 +30,6 @@ l10n:
 - `media`
   - : 由 {{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素加载的资源。
 - `object`
-
   - : 由 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素加载的资源。
 
     没有专用的 `object_subrequest` 类型的浏览器（参见下方的浏览器兼容性）也将插件发送的后续请求标记为 `object`。
@@ -38,7 +37,6 @@ l10n:
 - `object_subrequest`
   - : 插件发送的请求。
 - `ping`
-
   - : 当点击超链接时，发送到超链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中指定的 URL 的请求。
 
     没有专用的 `beacon` 类型的浏览器（参见下方的浏览器兼容性）也将通过 Beacon API 发送的请求标记为 `ping`。

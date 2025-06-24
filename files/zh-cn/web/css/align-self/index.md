@@ -91,9 +91,7 @@ align-self: unset;
 - `auto`
   - : 设置为父元素的 {{cssxref("align-items") }} 值。
 - `normal`
-
   - : 效果取决于当前的布局模式：
-
     - 绝对定位布局中，normal 在绝对定位的替代元素上表现为`start`，在*所有其他*绝对定位元素上表现为`stretch`。
     - 在绝对定位的静态元素上表现为`stretch`。
     - flex 布局中表现为 stretch。

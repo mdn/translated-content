@@ -36,13 +36,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
-
     - `changeInfo`
-
       - : Un `objet` contenant les détails de la modification survenue. Ses propriétés sont les suivantes :
-
         - `removed`
           - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon false.
         - `cookie`

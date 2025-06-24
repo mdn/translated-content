@@ -205,7 +205,6 @@ Planeje cuidadosamente o que você realmente vai gravar e pratique as etapas alg
   Em um vídeo curto do DevTools, por exemplo, é uma boa ideia começar abrindo o DevTools para permitir que o visualizador se oriente.
 - Considere quais são suas ações, desacelere e torne-as óbvias.
   Sempre que você tiver que executar uma ação (digamos, clicar em um ícone), vá devagar e torne isso óbvio. Assim, por exemplo:
-
   - Mova o mouse sobre o ícone.
   - Destaque ou zoom (nem sempre, dependendo se parece necessário).
   - Faça uma pausa.

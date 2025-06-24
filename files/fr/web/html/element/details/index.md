@@ -130,7 +130,6 @@ Les implémentations entièrement conformes aux normes appliquent automatiquemen
 Comme tous les éléments HTML, cet élément accepte les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `open`
-
   - : Cet attribut booléen indique si les détails — c'est-à-dire le contenu de l'élément `<details>` — sont actuellement visibles ou non. Les détails sont affichés lorsque cet attribut existe, ou cachés lorsque cet attribut est absent. Par défaut, cet attribut est absent, ce qui signifie que les détails ne sont pas visibles.
 
     > [!NOTE]

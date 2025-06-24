@@ -23,7 +23,6 @@ foo = true; // foo ahora es un booleano
 El último estándar ECMAScript define nueve tipos:
 
 - Seis **tipos de datos** {{Glossary("Primitive", "primitivos")}}, controlados por el {{jsxref("Operators/typeof", "operador typeof")}}
-
   - {{Glossary("Undefined")}}: `typeof instance === "undefined"`
   - {{Glossary("Boolean")}}: `typeof instance === "boolean"`
   - {{Glossary("Number")}}: `typeof instance === "number"`

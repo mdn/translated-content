@@ -86,9 +86,7 @@ width: unset;
 - `min-content` {{ experimental_inline }}
   - : 元素内容固有的最小宽度。
 - `fit-content` {{ experimental_inline }}
-
   - : 取以下两种值中的较大值：
-
     - 固有的最小宽度
     - 固有首选宽度（max-content）和可用宽度（available）两者中的较小值
 

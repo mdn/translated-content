@@ -16,9 +16,7 @@ decrypt(algorithm, key, data)
 ### 参数
 
 - `algorithm`
-
   - : 一个对象，用于指定使用的[算法](#支持的算法)，以及任何需要的额外参数。额外提供的参数的值必须与对应的 {{domxref("SubtleCrypto.encrypt()", "encrypt()")}} 调用所传入的值相匹配。
-
     - 使用 [RSA-OAEP](#rsa-oaep)，则传入 {{domxref("RsaOaepParams")}} 对象。
     - 使用 [AES-CTR](#aes-ctr)，则传入 {{domxref("AesCtrParams")}} 对象。
     - 使用 [AES-CBC](#aes-cbc)，则传入 {{domxref("AesCbcParams")}} 对象。

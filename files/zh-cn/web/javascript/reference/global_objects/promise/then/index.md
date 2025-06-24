@@ -30,18 +30,14 @@ then(onFulfilled, onRejected)
 ### 参数
 
 - `onFulfilled` {{optional_inline}}
-
   - : 一个在此 Promise 对象被兑现时异步执行的函数。它的返回值将成为 `then()` 返回的 Promise 对象的兑现值。此函数被调用时将传入以下参数：
-
     - `value`
       - : Promise 对象的兑现值。
 
     如果 `onFulfilled` 不是一个函数，则内部会被替换为一个*恒等*函数（`(x) => x`），它只是简单地将兑现值向前传递。
 
 - `onRejected` {{optional_inline}}
-
   - : 一个在此 Promise 对象被拒绝时异步执行的函数。它的返回值将成为 `catch()` 返回的 Promise 对象的兑现值。此函数被调用时将传入以下参数：
-
     - `reason`
       - : Promise 对象被拒绝的原因。
 

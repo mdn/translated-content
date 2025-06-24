@@ -119,13 +119,11 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 - NOTE: All features can be set to yes, 1 or just be present to be "on", set to _no_ or _0_ or in most cases just not present to be "off"
   - : example "status=yes", "status=1" and "status" have identical results
 - menubar
-
   - : If this feature is on, then the new secondary window renders the menubar. Mozilla and Firefox users can force new windows to always render the menubar by setting `dom.disable_window_open_feature.menubar` to _true_ in [about:config](https://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](https://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 - toolbar
   - : If this feature is on, then the new secondary window renders the Navigation Toolbar (Back, Forward, Reload, Stop buttons). In addition to the Navigation Toolbar, Mozilla-based browsers will render the Tab Bar if it is visible, present in the parent window. (If this feature is set to _no_ all toolbars in the window will be invisible, for example extension toolbars). Mozilla and Firefox users can force new windows to always render the Navigation Toolbar by setting `dom.disable_window_open_feature.toolbar` to _true_ in [about:config](https://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](https://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - location
-
   - : If this feature is on, then the new secondary window renders the Location bar in Mozilla-based browsers. MSIE 5+ and Opera 7.x renders the Address Bar. Mozilla and Firefox users can force new windows to always render the location bar by setting `dom.disable_window_open_feature.location` to _true_ in [about:config](https://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](https://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js).
 
     > [!NOTE]
@@ -143,7 +141,6 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 ### Características de funcionalidad de window
 
 - attention {{NonStandardBadge}}
-
   - : If this feature is specified, the window is able to open even if another application is already in the foreground. This feature is for Firefox OS applications only, and is currently restricted to certified applications. See [Internal (Certified) app permissions](</es/docs/Archive/B2G_OS/Firefox_OS_apps/App_permissions#internal_(certified)_app_permissions>) for more information. Supported in: ![](firefox_os_logo_wordmark-75px.png)
 
 - dependent
@@ -153,7 +150,6 @@ If the `strWindowFeatures` parameter is used and if no position features are def
 - fullscreen
   - : Do not use. Not implemented in Mozilla. There are no plans to implement this feature in Mozilla. This feature no longer works in MSIE 6 SP2 the way it worked in MSIE 5.x. The Windows taskbar, as well as the titlebar and the status bar of the window are not visible, nor accessible when fullscreen is enabled in MSIE 5.x. `fullscreen` always upsets users with large monitor screen or with dual monitor screen. Forcing `fullscreen` onto other users is also extremely unpopular and is considered an outright rude attempt to impose web author's viewing preferences onto users. [Note on fullscreen](#note_on_fullscreen) Supported in: ![Internet Explorer 5+](msie_ico.png) `fullscreen` does not really work in MSIE 6 SP2.
 - resizable
-
   - : If this feature is on, the new secondary window will be resizable. **Note**: Starting with version 1.4, Mozilla-based browsers have a window resizing grippy at the right end of the status bar, this ensures that users can resize the browser window even if the web author requested this secondary window to be non-resizable. In such case, the maximize/restore icon in the window's titlebar will be disabled and the window's borders won't allow resizing but the window will still be resizable via that grippy in the status bar.
 
     Starting with Firefox 3, secondary windows are always resizable ([Error 177838 en Firefox](https://bugzil.la/177838))
@@ -166,7 +162,6 @@ If the `strWindowFeatures` parameter is used and if no position features are def
     to _true_ in [about:config](https://support.mozilla.com/en-US/kb/Editing+configuration+files#about_config) or in their [user.js file](https://support.mozilla.com/en-US/kb/Editing+configuration+files#user_js). Supported in: ![Internet Explorer 5+](msie_ico.png), ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 
 - scrollbars
-
   - : If this feature is on, the new secondary window will show horizontal and/or vertical scrollbar(s) if the document doesn't fit into the window's viewport.
 
     > [!NOTE]
@@ -185,7 +180,6 @@ The following features require the `UniversalBrowserWrite` privilege, otherwise 
 - dialog
   - : **Note**: Starting with Firefox 44, this feature can only be used with chrome privileges. If content attempts to toggle this feature, it will be ignored. [![MenuSystemCommands.png](menusystemcommands.png?size=webview)](menusystemcommands.png)The `dialog` feature removes all icons (restore, minimize, maximize) from the window's titlebar, leaving only the close button. Mozilla 1.2+ and Netscape 7.1 will render the other menu system commands (in FF 1.0 and in NS 7.0x, the command system menu is not identified with the Firefox/NS 7.0x icon on the left end of the titlebar: that's probably a bug. You can access the command system menu with a right-click on the titlebar). Dialog windows are windows which have no minimize system command icon and no maximize/restore down system command icon on the titlebar nor in correspondent menu item in the command system menu. They are said to be dialog because their normal, usual purpose is to only notify info and to be dismissed, closed. On Mac systems, dialog windows have a different window border and they may get turned into a sheet. Supported in: ![Netscape 6.x](ns6.gif), ![Netscape 7.x](ns7_ico4.gif), ![Mozilla 1.x](mozilla1_ico.png), ![Firefox 1.x](ff1x.png)
 - modal
-
   - : **Note**: Starting with Mozilla 1.2.1, this feature requires the `UniversalBrowserWrite` privilege ([Error 180048 en Firefox](https://bugzil.la/180048)). Without this privilege, it is ignored. If on, the new window is said to be modal. The user cannot return to the main window until the modal window is closed. A typical modal window is created by the [alert() function](/es/docs/Web/API/Window/alert). The exact behavior of modal windows depends on the platform and on the Mozilla release version.
 
     > [!NOTE]

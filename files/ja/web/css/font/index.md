@@ -112,12 +112,10 @@ font: caption;
 `font` を様々なフォント関連プロパティの一括指定とする場合は、次のようになります。
 
 - 次の値を含めなければなりません。
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 次の値は任意で含めることができます。
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

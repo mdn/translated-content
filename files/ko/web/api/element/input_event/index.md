@@ -68,7 +68,6 @@ function updateValue(e) {
 ## 같이 보기
 
 - 관련 이벤트
-
   - {{domxref("HTMLElement/beforeinput_event", "beforeinput")}}
   - {{domxref("HTMLElement/change_event", "change")}}
   - {{domxref("HTMLInputElement/invalid_event", "invalid")}}

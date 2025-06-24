@@ -31,7 +31,6 @@ _継承している静的メソッドはありません。_
 - {{DOMxRef("CSS.escape_static", "CSS.escape()")}}
   - : 主に CSS セレクターの一部として使用するための文字列をエスケープするのに使用できます。
 - {{DOMxRef("CSS/factory_functions_static", 'CSS ファクトリー関数')}}
-
   - : 使用したファクトリー関数のメソッドの名前を単位としてパラメーターの数値の値を持つ新しい [`CSSUnitValue`](/ja/docs/Web/API/CSSUnitValue) を返すために使用できます。
 
     ```js

@@ -94,7 +94,6 @@ Generalmente hablando debe seleccionar un motor de plantillas que le brinde toda
 - Estilo — Algunos motores de plantillas usan marcas específicas para indicar inserción de contenido dentro del HTML "ordinario", mientras que otros construyen el HTML usando una sintaxis diferente (por ejemplo, usando indentación (sangría) y nombres de bloque).
 - Tiempo Renderizado/desempeño.
 - Características — debe considerar si los motores que elija poseen las siguientes características disponibles:
-
   - Herencia del diseño: Le permite definir una plantilla base y luego "heredar" sólo las partes que desea que sean diferentes para una página particular. Típicamente esto es un mejor enfoque que construir plantillas incluyendo un número de componentes requeridos, contruyéndolas desde cero cada vez.
   - Soporte para incluir: Le permite construir plantillas incluyendo otras plantillas.
   - Control consiso de la sintanxis de variables y ciclos.
@@ -175,7 +174,6 @@ En este punto tenemos un esqueleto completo de nuestro proyecto. El sitio web no
    ```
 
 2. Luego ejecute la aplicación.
-
    - En Windows, use este comando:
 
      ```bash

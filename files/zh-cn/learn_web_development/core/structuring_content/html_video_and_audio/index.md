@@ -168,9 +168,7 @@ l10n:
 - [`poster`](/zh-CN/docs/Web/HTML/Reference/Elements/video#poster)
   - : 这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
 - [`preload`](/zh-CN/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : 这个属性被用来缓冲较大的文件，有三个值可选：
-
     - `"none"`：不缓冲文件
     - `"auto"`：页面加载后缓存媒体文件
     - `"metadata"`：仅缓冲文件的元数据

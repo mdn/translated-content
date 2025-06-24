@@ -24,7 +24,6 @@ let configuredWorld = browser.userScripts.configureWorld(
 ### 参数
 
 - `properties`
-
   - : {{WebExtAPIRef("userScripts.WorldProperties")}}。`USER_SCRIPT` 环境的配置详情。
 
     当 `worldId` 被省略或为空字符串时，更新将应用于默认环境和所有没有显式配置的环境。当指定了 `worldId` 时，仅将只配置这一环境。

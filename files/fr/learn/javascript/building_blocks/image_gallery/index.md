@@ -115,7 +115,6 @@ Si vous souhaitez que votre travail soit évalué, ou si vous êtes bloqué et q
 
 1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/).
 2. Rédiger un sujet pour demander une évaluation et/ou une aide à le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn). Ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Votre message doit inclure :
-
    - Un titre descriptif tel que "Évaluation demandée pour la galerie d'images".
    - Des détails sur ce que vous souhaitez que nous fassions — par exemple ce que vous avez déjà essayé, si vous êtes bloqué et avez besoin d'aide.
    - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.

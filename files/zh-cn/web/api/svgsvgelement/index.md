@@ -38,25 +38,20 @@ _此接口还从其父_ _{{domxref("SVGGraphicsElement")}}_ _继承属性，并�
 - {{domxref("SVGSVGElement.useCurrentView")}}
   - : 当前最内层 SVG 文档片段的初始视图（即放大和平移之前）可以是“标准”视图，即基于{{SVGElement("svg")}}元素的属性，例如{{SVGAttr ("viewBox")}}）或“自定义”视图（即指向特定{{SVGElement("view")}}或其他元素的超链接）。如果初始视图是“标准”视图，则此属性为`false`。如果初始视图是“自定义”视图，则此属性为`true`。
 - {{domxref("SVGSVGElement.currentView")}}
-
   - : {{domxref("SVGViewSpec")}}定义当前最里面的 SVG 文档片段的初始视图（即，放大和平移之前）。意义取决于具体情况：如果初始视图是“标准”视图，则：
-
     - {{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于`SVGSVGElement`直接打开的相应 DOM 属性
     - } {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为 null
 
     如果初始视图是{{SVGElement("view")}}元素的链接，那么：
-
     - 在{{SVGAttr("currentView")}}中{{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("zoomAndPan")}}的值将对应于给定{{SVGElement("view")}}元素的相应属性
     - } {{SVGAttr("currentView")}}中的{{SVGAttr("transform")}}和{{SVGAttr("viewTarget")}}的值将为 null
 
     如果初始视图是指向另一个元素的链接（即，除了{{SVGElement("view")}}之外的其他元素，则：
-
     - {{SVGAttr("viewBox")}}，{{SVGAttr("preserveAspectRatio")}}和{{SVGAttr("currentView")}}中的{{SVGAttr("zoomAndPan")}}的值将与值匹配对于`SVGSVGElement`直接用于最近祖先{{SVGElement("svg")}}元素的相应 DOM 属性
     - {{SVGAttr("currentView")}}中{{SVGAttr("transform")}}的值将为 null
     - {{SVGAttr("currentView")}}中的{{SVGAttr("viewTarget")}}将代表链接的目标
 
     如果初始视图是使用 SVG 视图规范片段标识符（即#svgView（...））链接到 SVG 文档片段，则：
-
     - the values for {{SVGAttr("viewBox")}}, {{SVGAttr("preserveAspectRatio")}}, {{SVGAttr("zoomAndPan")}}, {{SVGAttr("transform")}} and {{SVGAttr("viewTarget")}} within {{SVGAttr("currentView")}} will correspond to the values from the SVG view specification fragment identifier
 
 - {{domxref("SVGSVGElement.currentScale")}}
@@ -69,7 +64,6 @@ _此接口还从其父_ _{{domxref("SVGGraphicsElement")}}_ _继承属性，并�
 _This interface also inherits methods from its parent, {{domxref("SVGGraphicsElement")}} and also implements the ones from {{domxref("SVGZoomAndPan")}}, {{domxref("SVGFitToViewBox")}}._
 
 - {{domxref("SVGSVGElement.suspendRedraw()")}} {{deprecated_inline}}
-
   - : Takes a time-out value which indicates that redraw shall not occur until:
 
     the corresponding unsuspendRedraw() call has been made, an unsuspendRedrawAll() call has been made, or its timer has timed out.

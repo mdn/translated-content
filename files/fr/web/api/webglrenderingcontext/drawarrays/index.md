@@ -16,9 +16,7 @@ void gl.drawArrays(mode, premier, compte);
 ### Paramètres
 
 - `mode`
-
   - : Un {{domxref ("GLenum")}} indiquant la primitive de type à dessiner. Les valeurs possibles sont :
-
     - `gl.POINTS`&nbsp;: dessine un seul point ;
     - `gl.LINE_STRIP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant ;
     - `gl.LINE_LOOP`&nbsp;: dessine une ligne droite jusqu'au sommet suivant, et relie le dernier sommet au premier ;

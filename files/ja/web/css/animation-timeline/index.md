@@ -58,23 +58,19 @@ animation-timeline: unset;
 - `none`
   - : アニメーションはタイムラインに関連付けられません。
 - `auto`
-
   - : アニメーションのタイムラインはこの文書の既定の [DocumentTimeline](/ja/docs/Web/API/DocumentTimeline) です。
 
 - `scroll()`
-
   - : 無名スクロール進行タイムラインは、現在の要素の祖先スクローラーによって指定されます。関数の引数でスクローラーを選択し、タイムラインが測定されるスクロール軸を選択することができます。
 
     詳しくは {{cssxref("animation-timeline/scroll", "scroll()")}} を参照してください。
 
 - `view()`
-
   - : 無名ビュー進行タイムラインは、`animation-timeline: view();`が設定された主体から提供されます。関数の引数では、タイムラインの進行が追跡されるスクロールバーの軸と、主体が表示されているとみなされるボックスの位置を調整するインセットを選択できます。
 
     詳しくは {{cssxref("animation-timeline/view", "view()")}} を参照してください。
 
 - `<dashed-ident>`
-
   - : {{cssxref('scroll-timeline-name')}} または {{cssxref('view-timeline-name')}} プロパティ（または {{cssxref('scroll-timeline')}} または {{cssxref('view-timeline')}} 一括指定プロパティ）で前回宣言された名前付きタイムラインを識別する {{cssxref('dashed-ident')}} です。
 
     > [!NOTE]

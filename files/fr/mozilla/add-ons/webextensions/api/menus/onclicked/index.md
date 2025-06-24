@@ -31,14 +31,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `info`
       - : {{WebExtAPIRef('menus.OnClickData')}}. Informations sur l'élément cliqué et le contexte dans lequel le clic s'est produit.
 
     <!---->
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
 

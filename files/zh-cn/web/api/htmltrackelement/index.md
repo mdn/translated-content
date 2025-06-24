@@ -26,7 +26,6 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLTrackElement.default")}}
   - : 反映 [`default`](/zh-CN/docs/Web/HTML/Reference/Elements/track#default) 属性的布尔值，如果用户的偏好没有指示另一个轨道更合适，则指示要启用该轨道。
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
-
   - : 返回 `unsigned short` 显示轨道的准备状态：
 
     | 常量      | 值  | 描述                                                                                                  |

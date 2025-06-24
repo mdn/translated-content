@@ -43,34 +43,26 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 - [`Window.customElements`](/fr/docs/Web/API/Window/customElements)
   - : Renvoie une référence à l'objet `CustomElementRegistry`.
 - [Fonctions de rappel pour le cycle de vie](/fr/docs/Web/API/Web_components/Using_custom_elements#using_the_lifecycle_callbacks)
-
   - : Des fonctions de rappel spéciales qui définissent le comportement d'un élément personnalisé&nbsp;:
-
     - `connectedCallback`&nbsp;: appelée lorsque l'élément personnalisé est connecté pour la première fois au DOM du document.
     - `disconnectedCallback`&nbsp;: appelée lorsque l'élément personnalisé est déconnecté du DOM du document.
     - `adoptedCallback`&nbsp;: appelée lorsque l'élément personnalisé est déplacé vers un nouveau document.
     - `attributeChangedCallback`&nbsp;: appelé lorsque des attributs sont ajoutés, supprimés ou modifiés sur l'élément.
 
 - Des extensions pour créer des éléments personnalisés de façon native&nbsp;:
-
   - : Les extensions suivantes sont définies&nbsp;:
-
     - L'attribut universel HTML [`is`](/fr/docs/Web/HTML/Global_attributes/is) qui permet d'indiquer qu'un élément HTML standard devrait se comporter à la manière d'un élément personnalisé enregistré.
     - L'option "is" de la méthode [`Document.createElement()`](/fr/docs/Web/API/Document/createElement) qui permet de créer une instance d'un élément HTML standard qui se comporte comme un élément personnalisé enregistré.
 
 - Des pseudo-classes CSS&nbsp;:
-
   - : Quelques pseudo-classes CSS sont spécifiquement liées aux éléments personnalisés&nbsp;:
-
     - [`:defined`](/fr/docs/Web/CSS/:defined) cible tout élément défini, c'est-à-dire les éléments natifs et les éléments personnalisés définis avec `CustomElementRegistry.define()`.
     - [`:host`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser pour cet hôte. Autrement dit, elle permet de sélectionner un élément personnalisé depuis l'intérieur du DOM sombre.
     - [`:host()`](/fr/docs/Web/CSS/:host) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser en fonction d'un sélecteur passé en paramètre.
     - [`:host-context()`](</fr/docs/Web/CSS/:host-context()>) cible l'hôte sombre du [DOM sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) contenant le CSS à utiliser (afin de pouvoir sélectionner un élément personnalisé depuis son DOM sombre), uniquement si le sélecteur passé en argument à la fonction correspond à un ancêtre de l'élément dans la hiérarchie du DOM.
 
 - Des pseudo-éléments CSS&nbsp;:
-
   - : Un pseudo-élément CSS est spécifiquement lié aux éléments personnalisés&nbsp;:
-
     - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Global_attributes/part) correspondant.
 
 ### Le DOM sombre (<i lang="en">Shadow DOM</i>)
@@ -78,23 +70,17 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 - [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot)
   - : Représente le nœud racine du sous-arbre du DOM sombre.
 - Extensions à [`Element`](/fr/docs/Web/API/Element)
-
   - : Les extensions à l'interface `Element` pour le DOM sombre sont&nbsp;:
-
     - [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow) qui permet d'attacher un arbre de DOM sombre à l'élément indiqué.
     - [`Element.shadowRoot`](/fr/docs/Web/API/Element/shadowRoot) qui est une propriété qui retourne la racine sombre associée à l'élément indiqué, ou `null` s'il n'y a pas de racine sombre attachée.
 
 - Additions à [`Node`](/fr/docs/Web/API/Node)
-
   - : Voici les ajouts à l'interface `Node` qui portent sur le DOM sombre&nbsp;:
-
     - [`Node.getRootNode()`](/fr/docs/Web/API/Node/getRootNode) qui est une méthode renvoyant la racine du contexte et qui inclut éventuellement la racine sombre si elle est disponible.
     - [`Node.isConnected`](/fr/docs/Web/API/Node/isConnected) qui est une propriété booléenne indiquant si le nœud est connecté (directement ou indirectement) à l'object contexte (soit [`Document`](/fr/docs/Web/API/Document) pour le cas du DOM normal ou soit [`ShadowRoot`](/fr/docs/Web/API/ShadowRoot) dans le cas du DOM sombre).
 
 - Extensions à [`Event`](/fr/docs/Web/API/Event)
-
   - : Voici les extensions à l'interface `Event` relatives au DOM sombre&nbsp;:
-
     - [`Event.composed`](/fr/docs/Web/API/Event/composed) qui est une propriété booléenne indiquant si l'évènement se propagera au-delà des frontières du DOM sombre jusque dans le DOM standard.
     - [`Event.composedPath`](/fr/docs/Web/API/Event/composedPath) qui est une propriété renvoyant le chemin de l'évènement (les objets sur lesquels les gestionnaires d'évènements seront appelés). Cela n'inclut pas les nœuds des arbres sombres si la racine sombre a été créée avec un mode ([`ShadowRoot.mode`](/fr/docs/Web/API/ShadowRoot/mode)) fermé.
 
@@ -111,15 +97,11 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 - [`Text.assignedSlot`](/fr/docs/Web/API/Text/assignedSlot)
   - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein duquel le nœud texte est inséré.
 - Les extensions à [`Element`](/fr/docs/Web/API/Element)
-
   - : Les extensions à l'interface `Element` sont&nbsp;:
-
     - [`Element.slot`](/fr/docs/Web/API/Element/slot) qui renvoie le nom de l'emplacement de DOM sombre associé à l'élément.
 
 - Les pseudo-éléments CSS
-
   - : Voici les pseudo-éléments relatifs aux emplacements pour le shadow DOM&nbsp;:
-
     - [`::slotted`](/fr/docs/Web/CSS/::slotted) qui cible le contenu inséré dans un emplacement.
 
 - L'évènement [`slotchange`](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)

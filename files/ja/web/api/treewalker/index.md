@@ -16,7 +16,6 @@ _このインターフェイスが継承するプロパティはありません�
 - {{domxref("TreeWalker.root")}} {{readonlyInline}}
   - : `TreeWalker` を作成したときに指定したルートノードを表す {{domxref("Node")}} を返します。
 - {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
-
   - : 提供しなければならない {{domxref("Node")}} の型を表す定数で構成されるビットマスクである `unsigned long` を返します。一致しないノードはスキップされますが、その子は関連があれば含まれます。使用できる値は以下のとおりです。
 
     | 定数                                                     | 数値                                    | 説明                                                                                                                                                                                                                                                                                                                                |
@@ -49,7 +48,6 @@ _このインターフェイスが継承しているメソッドはありませ�
 - {{domxref("TreeWalker.parentNode()")}}
   - : 現在の {{domxref("Node")}} を文書内の順序で最初の*可視状態*である祖先ノードに移動して、発見したノードを返します。また、現在のノードをこの位置に移動します。該当するノードがない、あるいはオブジェクト生成時に定義した*ルートノード*より前にある場合は、`null` を返して現在のノードは変更しません。
 - {{domxref("TreeWalker.firstChild()")}}
-
   - : 現在の {{domxref("Node")}} を現在のノードで最初の*可視状態*である子に移動して、発見した子ノードを返します。また、現在のノードをこの子ノードに移動します。該当する子がない場合は、`null` を返して現在のノードは変更しません。なお、 `firstChild()` が返すノードは、 `TreeWalker` オブジェクトのインスタンス化時に設定された `whatToShow` の値に依存することに注意してください。次のような HTML ツリーを想定して、 `whatToShow` を `NodeFilter.SHOW_ALL` に設定して `firstChild()` を呼び出すと、`HTMLDivElement` オブジェクトではなく `Text` ノードが返されます。
 
     ```html

@@ -40,7 +40,6 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 - [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
 - [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
-
   - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
@@ -61,7 +60,6 @@ HTML は既定で高速でアクセシビリティに優れています。開発
 - [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
 - [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
-
   - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの先読み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)

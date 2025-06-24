@@ -36,19 +36,15 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `request`
       - : `any`. La requête envoyée par le script appelant.
 
     <!---->
-
     - `sender`
       - : {{WebExtAPIRef('runtime.MessageSender')}}.
 
     <!---->
-
     - `sendResponse`
       - : `function`. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur `onRequest` dans le même document, un seul peut envoyer une réponse.
 

@@ -43,7 +43,6 @@ On indique en fait que les minuscules de la fonte utilisée doivent mesurer `7px
 - `none`
   - : La taille de la fonte est uniquement choisie grâce à la propriété {{cssxref("font-size")}}.
 - `<number>`
-
   - : La taille de la fonte est choisie afin que les minuscules (selon la taille horizontale de la fonte) mesurent X fois {{cssxref("font-size")}}.
 
     Le nombre indiqué (cf. le type {{cssxref("&lt;number&gt;")}}) devrait la plupart du temps correspondre au facteur de forme de la première fonte listée avec {{cssxref("font-family")}}. Cela permet d'obtenir le même résultat dans les différents navigateurs, qu'ils supportent `font-size-adjust` ou non.

@@ -23,7 +23,6 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 - `autoplay`
   - : Un atributo booleano; si se especifica, el video comenzará a reproducirse automáticamente tan pronto como sea posible, sin detenerse para terminar de cargar los datos.
 - `autobuffer` {{ Non-standard_inline() }} {{deprecated_inline}}
-
   - : Un atributo booleano; si se especifica, el video comenzará automáticamente a almacenarse en el búfer, incluso si no está listo para reproducirse de forma automática. Esto se debe utilizar para los casos en los que se considera probable que el video se reproduzca (por ejemplo, si el usuario accedió a esa página específica para reproducir el video, no si hay un video insertado junto con otros contenidos). El video se almacena en el búfer hasta que el caché de medios esté lleno.
 
     > [!NOTE]
@@ -38,9 +37,7 @@ Para obtener una lista de formatos compatibles, consulta [Formatos multimedia ad
 - `loop`
   - : Un atributo booleano; si se especifica, al alcanzar el final del video, buscaremos automáticamente hasta el principio.
 - `preload` [Error 548523 en Firefox](https://bugzil.la/548523)
-
   - : El objetivo de este atributo enumerado es proporcionar una sugerencia al navegador sobre qué cree el autor que llevará a la mejor experiencia para el usuario . Puede tener uno de los siguientes valores:
-
     - none: sugiere bien que el autor cree que el usuario no tendrá que consultar ese video, bien que el servidor desea minimizar su tráfico; es decir, esta sugerencia indica que no se debe almacenar en caché este video.
     - metadatos: sugiere que aunque el autor piensa que el usuario no tendrá que consultar este video, es razonable capturar los metadatos (p. ej. longitud).
     - auto: sugiere que el usuario necesita tener prioridad; es decir, esta sugerencia indica que, si es necesario, se puede descargar el video completo, incluso aunque el usuario no vaya a usarlo.

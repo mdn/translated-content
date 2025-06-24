@@ -12,17 +12,14 @@ Le type **`browsingData.RemovalOptions`** contient des options permettant de con
 Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes:
 
 - `hostnames` {{optional_inline}}
-
   - : `Array` of `string`. Cette propriété s'applique uniquement aux cookies et aux éléments de stockage locaux. Ne supprimez que les cookies et les éléments de stockage locaux associés à ces noms d'hôte.
 
     Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : `google.com` et non `https://google.com`). Vous pouvez utiliser l'interface [`URL`](/fr/docs/Web/API/URL) pour analyser une URL brute et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.
 
 - `originTypes` {{optional_inline}}
-
   - : `object`. Permet de contrôler si les données doivent être supprimées uniquement des pages Web normales ou des applications et extensions Web hébergées. Si cette option est omise, seules les données des pages Web normales ("`unprotectedWeb`") sont supprimées. Avant de supprimer des données d'applications ou d'extensions Web, veillez à ce que ce soit vraiment ce que l'utilisateur souhaite.
 
     Cet objet peut contenir l'une des propriétés suivantes :
-
     - `unprotectedWeb` {{optional_inline}}
       - : `boolean`. Si présent et `true`, supprime les données de la pages Web normales.
     - `protectedWeb` {{optional_inline}}

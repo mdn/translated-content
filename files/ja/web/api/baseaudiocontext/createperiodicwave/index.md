@@ -27,9 +27,7 @@ createPeriodicWave(real, imag, constraints)
 配列 `real` と `imag` は同じ長さでなければならず、そうでない場合はエラーが発生します。
 
 - `constraints` {{optional_inline}}
-
   - : 正規化を無効にするかどうか（指定しない場合、正規化は既定で有効）を指定する辞書オブジェクトです。 1 つのプロパティを持ちます。
-
     - `disableNormalization`
       - : `true` に設定すると、周期的な波の正規化を無効にします。既定値は `false` です。
 

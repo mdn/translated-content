@@ -12,7 +12,6 @@ Essas palavras-chave especificam o interior do elemento{{CSSxRef("display")}} ty
 O `<display-inside>` O valor é definido usando uma palavra-chave da lista abaixo:
 
 - `flow` {{Experimental_Inline}}
-
   - : O elemento expõe seu conteúdo usando o layout de fluxo (layout em bloco e em linha).
     Se o seu tipo de exibição externo for
 
@@ -106,7 +105,6 @@ Neste exemplo, a caixa pai foi fornecida `display: flow-root` e assim estabelece
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

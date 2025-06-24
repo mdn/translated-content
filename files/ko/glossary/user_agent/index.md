@@ -24,9 +24,7 @@ l10n:
 - [사용자 에이전트를 이용한 브라우저 감지](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header
 - [Glossary:](/ko/docs/Glossary)
-
   - {{Glossary("Browser")}}
 
 - HTTP Headers
-
   - {{HTTPHeader("User-agent")}}

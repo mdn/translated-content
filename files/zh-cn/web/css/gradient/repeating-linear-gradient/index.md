@@ -69,7 +69,6 @@ repeating-linear-gradient(to right, red 0%, green 10%, red 20%);
 ### 值
 
 - `<side-or-corner>`
-
   - : 渐变线的起始点位置。如果指定了，则包含 `to` 和两个关键字：一个指定水平位置（`left` 或 `right`），另一个指定竖直位置（`top` 或 `bottom`）。关键字的先后顺序无影响。如果没有指定，则默认为 `to bottom`。
 
     `to top`、`to bottom`、`to left` 和 `to right` 分别等价于 `0deg`、`180deg`、`270deg` 和 `90deg`。其余值会被转换为角度。

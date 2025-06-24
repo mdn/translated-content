@@ -113,15 +113,12 @@ animation-duration: unset;
 ### 値
 
 - `auto`
-
   - : 時間ベースのアニメーションでは、 `auto` は `0s` の値と等価です（下記参照）。 [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)では、 `auto` はタイムライン全体をアニメーションで埋めます。
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : 1 回のアニメーションの周期にかかる時間。この値は、秒 (`s`) またはミリ秒 (`ms`) で指定することができます。値は正の数か 0 でなければならず、単位は必須です。
 
     値が指定されなかった場合、既定値である `0s` が使用され、この場合でもアニメーションは実行されます（[`animationStart`](/ja/docs/Web/API/Element/animationstart_event) と [`animationEnd`](/ja/docs/Web/API/Element/animationend_event) イベントが発生します）。長さが `0s` のときにアニメーションが表示されるかどうかは、下記で説明する [`animation-fill-mode`](/ja/docs/Web/CSS/animation-fill-mode) の値によります。
-
     - `animation-fill-mode` を `backwards` または `both` に設定した場合、 `animation-direction` で定義したアニメーションの最初のフレームが `animation-delay`(/ja/docs/Web/CSS/animation-delay) のカウントダウン中に表示されます。
     - `animation-fill-mode` が `forwards` または `both` に設定した場合、アニメーションの最後のフレームは `animation-delay` が経過した後に、 `animation-direction` で定義したように表示されます。
     - `animation-fill-mode` を `none` に設定すると、アニメーションは目に見える効果はありません。

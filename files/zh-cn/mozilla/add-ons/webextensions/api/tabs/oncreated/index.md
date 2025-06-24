@@ -33,9 +33,7 @@ browser.tabs.onCreated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}。已创建标签页的详细信息。
 

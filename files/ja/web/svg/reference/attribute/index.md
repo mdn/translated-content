@@ -341,7 +341,6 @@ SVG 要素は、その要素がどのように処理され描画されるべき�
 ### 一般属性
 
 - コア属性
-
   - {{SVGAttr("id")}}
   - {{SVGAttr("class")}}
   - {{SVGAttr("style")}}

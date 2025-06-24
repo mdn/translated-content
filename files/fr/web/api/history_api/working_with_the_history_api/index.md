@@ -12,13 +12,11 @@ L'API <i lang="en">History</i> permet à un site web d'interagir avec l'historiq
 L'interface principale de cette API est l'interface [`History`](/fr/docs/Web/API/History) qui définit deux ensembles de méthodes&nbsp;:
 
 - Les méthodes pour naviguer vers une page de l'historique&nbsp;:
-
   - [`History.back()`](/fr/docs/Web/API/History/back)
   - [`History.forward()`](/fr/docs/Web/API/History/forward)
   - [`History.go()`](/fr/docs/Web/API/History/go)
 
 - Les méthodes pour modifier l'historique de la session&nbsp;:
-
   - [`History.pushState()`](/fr/docs/Web/API/History/pushState)
   - [`History.replaceState()`](/fr/docs/Web/API/History/replaceState)
 

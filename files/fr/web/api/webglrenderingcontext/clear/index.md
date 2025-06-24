@@ -20,9 +20,7 @@ void gl.clear(masque);
 ### Paramètres
 
 - `masque`
-
   - : Un masque OU par bits {{domxref("GLbitfield")}} qui indique les tampons à effacer. Les valeurs possibles sont :
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

@@ -44,7 +44,6 @@ Existem algumas restrições a serem consideradas ao usar palavras-chave:
 - Palavras-chave desconhecidas tornam a propriedade CSS inválida. Propriedades inválidas sendo ignoradas, a cor não terá efeito. Esse é um comportamento diferente do HTML.
 - Nenhuma palavra-chave de core definida em CSS têm qualquer transparência — eles são cores simples, sólidas.
 - Várias palavras-chave indicam as mesmas cores:
-
   - `darkgray` / `darkgrey`
   - `darkslategray` / `darkslategrey`
   - `dimgray` / `dimgrey`
@@ -1228,7 +1227,6 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
 - \-moz-dragtargetzone
 
   \-moz-EvenTreeRow
-
   - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
@@ -1265,7 +1263,6 @@ Not all system colors are supported on all systems. {{deprecated_inline}} for us
   \-moz-mac-menutextselect
 
   \-moz-MenuHover
-
   - : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
 
 - \-moz-MenuHoverText

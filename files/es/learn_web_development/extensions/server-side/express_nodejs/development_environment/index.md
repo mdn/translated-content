@@ -75,7 +75,6 @@ Para poder utilizar _Express_ primero tiene que instalar _Nodejs_ y el [Administ
 Instalar _Node_ y _NPM_ en Windows y macOS es sencillo, porque simplemente debe utilizar el instalador provisto:
 
 1. Descargue el instalador requerido:
-
    1. Vaya a [https://nodejs.org/es/](https://nodejs.org/en/)
    2. Seleccione el boton para descargar la versión LTS que es "Recomendada la mayoría de los usuarios".
 

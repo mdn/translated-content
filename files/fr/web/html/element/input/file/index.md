@@ -338,11 +338,8 @@ input.addEventListener("change", updateImageDisplay);
 - On récupère l'objet {{domxref("FileList")}} qui contient les informations sur les fichiers sélectionnés et on le stocke dans une variable intitulée `curFiles`.
 - On vérifie si aucun fichier n'a été sélectionné (ce qui se traduit par vérifier si `curFiles.length` vaut 0). Si c'est le cas, on place un message dans le `<div>` de prévisualisation pour indiquer qu'aucun fichier n'a été sélectionné.
 - Si des fichiers ont été sélectionnés, on les parcourt afin d'afficher des informations sur ces fichiers dans l'élément `<div>`. Quelques notes :
-
   - On utilise une fonction `validFileType()` afin de vérifier si le fichier est bien du bon type (c'est-à-dire qu'il respecte les extensions d'image indiquées dans l'attribut `accept`).
-
     - Si c'est le cas :
-
       - On affiche le nom et la taille du fichier dans une liste à l'intérieur du `<div>` (obtenus à partir de `curFiles[i].name` et `curFiles[i].size`). La fonction `returnFileSize()` est utilisée ici afin d'afficher la taille de façon lisible (en octets, kilo-octets ou mega-octets plutôt que toujours en octets).
       - On génère un aperçu de l'image en appelant la méthode `window.URL.createObjectURL(curFiles[i])` et en réduisant l'image grâce à du CSS puis on insère cette image dans la liste.
 

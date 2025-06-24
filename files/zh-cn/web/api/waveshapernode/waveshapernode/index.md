@@ -20,9 +20,7 @@ _继承_ _{{domxref("AudioNodeOptions")}} 字典的参数。_
 - _context_
   - : {{domxref("AudioContext")}}的一个引用。
 - _options_ {{optional_inline}}
-
   - : Options 参数如下：
-
     - `curve`: 用于波形形成效果的修正曲线。输入信号通常在 \[-1;1] 的范围间。
     - `oversample`: 指定在应用修正曲线时会被使用的过采样的类别（如果有的话）。有效的值有'`none`', '`2x`', 或者'`4x`'。缺省情况下是'`none`'。
 

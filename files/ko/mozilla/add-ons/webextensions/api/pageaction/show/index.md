@@ -22,9 +22,7 @@ browser.pageAction.show(
 ### 매개변수
 
 - `details`
-
   - : `object`. An object containing the `tabId` to check.
-
     - `tabId`
       - : `integer`. ID of the tab to check.
 

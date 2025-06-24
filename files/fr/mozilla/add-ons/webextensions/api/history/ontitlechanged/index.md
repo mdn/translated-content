@@ -27,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
-
     - `url`
       - : `String`. URL of the page visited.
     - `title`

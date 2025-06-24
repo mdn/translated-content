@@ -265,7 +265,6 @@ MY_OBJECT.key = "otherValue";
 最新 ECMAScript 標準定義以下七種資料型別:
 
 - 六種基本({{Glossary("Primitive", "primitives")}})資料型別 :
-
   - {{Glossary("Boolean")}}. `true` and `false`.
   - {{Glossary("null")}}. A special keyword denoting a null value. Because JavaScript is case-sensitive, `null` is not the same as `Null`, `NULL`, or any other variant.
   - {{Glossary("undefined")}}. A top-level property whose value is undefined.

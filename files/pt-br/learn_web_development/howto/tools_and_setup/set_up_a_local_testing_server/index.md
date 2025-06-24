@@ -52,7 +52,6 @@ Para contornar o problema de requisições assíncronas, precisamos testar esses
 Para fazer isso:
 
 1. Instale o Python. Se você estiver usando Linux ou macOS, ele já deverá estár disponível em seu sistema. Se você é um usuário do Windows, pode obter um instalador na página inicial do Python e seguir as instruções para instalá-lo:
-
    - Vá para [python.org](https://www.python.org/) (em inglês)
    - Na seção Download, clique no link para Python "3.xxx".
    - Na parte inferior da página, escolha o instalador executável do _Windows x86_ e baixe-o.

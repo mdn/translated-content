@@ -16,14 +16,12 @@ l10n:
 ![主流程和下文描述的附加流程的可视化。](we-flow.png)
 
 - 主流程为：
-
   - {{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}
   - {{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}
   - {{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}
   - {{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}
 
 - 此外：
-
   - 如果浏览器需要为导航创建新标签页或新窗口（例如，用户在新标签页中打开链接），则 {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}} 会在 `onBeforeNavigate` 之前触发。
   - 如果页面使用 [history API](/zh-CN/docs/Web/API/History_API) 更新了浏览器地址栏中的 URL，则会触发 {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}}。
   - 如果页面的[片段标识符](/zh-CN/docs/Web/URI/Reference/Fragment)发生变化，则会触发 {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}}。

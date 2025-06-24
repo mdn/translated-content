@@ -32,13 +32,11 @@ replaceAll(patrón, reemplazo)
 ### Parámetros
 
 - `patrón`
-
   - : Puede ser una cadena o un objeto con un método [`Symbol.replace`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) — el típico ejemplo es una [expresión regular (_regex_)](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp). Cualquier valor que no tenga el método `Symbol.replace` será convertido a una cadena.
 
     Si `patrón` [es una _regex_](/es/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes), entonces debe tener el parámetro global (`g`) establecido, o un {{jsxref("TypeError")}} es lanzado.
 
 - `reemplazo`
-
   - : Puede ser una cadena o una función. El reemplazo tiene la misma semántica que la de [`String.prototype.replace()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/replace).
 
 ### Valor de retorno

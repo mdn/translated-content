@@ -18,9 +18,7 @@ l10n:
 - `quality` {{optional_inline}}
   - : `integer`。当格式是 `"jpeg"` 时，这将决定结果图片的质量。这应是 0—100 之间的数字，并将被转换为 0—1 之间的取值作为 [`HTMLCanvasElement.toDataURL()`](/zh-CN/docs/Web/API/HTMLCanvasElement/toDataURL) 方法的 `encoderOptions` 参数传递给函数。在属性被忽略时将采用 92 作为默认取值。随着质量的降低，结果图片将有更多视觉伪影，存储所需的字节数也将减少。当图片格式设置为 PNG 时，该值将被忽略。
 - `rect` {{optional_inline}}
-
   - : `object`，指定要捕获的文档区域，单位为 CSS 像素，相对于页面。所有属性默认为 `0`。这些属性是：
-
     - `x`：矩形左侧的坐标。
     - `y`：矩形顶部的坐标。
     - `width`：矩形的宽度。

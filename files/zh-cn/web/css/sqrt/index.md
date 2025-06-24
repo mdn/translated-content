@@ -23,7 +23,6 @@ width: calc(100px * sqrt(100)); /* 1000px */
 `sqrt(x)` 函数仅接受一值作为其参数。
 
 - `x`
-
   - : 解析为大于等于 0 的 {{CSSXref("&lt;number&gt;")}} 的计算式。
 
 ### 返回值

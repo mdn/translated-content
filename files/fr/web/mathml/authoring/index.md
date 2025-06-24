@@ -145,13 +145,11 @@ En théorie, les clients de messagerie instantanée basés sur Gecko peuvent int
 Il y a de nombreuses notations simples (par exemple les syntaxes wiki ou markdown) pour générer des pages HTML. De fait, cela est aussi vrai pour MathML: par exemple les syntaxes ASCII telles qu'utilisées dans les calculatrices ou le plus puissant langage LaTeX, très populaire dans la communauté scientifique. Dans cette section, nous présenterons quelques-uns de ces outils pour convertir du texte respectant une certaine syntaxe en MathML.
 
 - Avantages :
-
   - Écrire des expressions mathématiques peut ne nécessiter qu'un éditeur de texte standard.
   - De nombreux outils sont disponibles et certains sont compatibles avec le convertisseur LaTeX-to-PDF.
   - Cela donne accès à des fonctionnalités avancées de LaTeX comme les macros.
 
 - Inconvénients :
-
   - Ce peut être plus difficile à utiliser : il faut apprendre la syntaxe, une erreur dans le code amène facilement à une erreur de conversion ou de rendu etc
   - L'interface n'est pas conviviale : l'on n'a accès qu'à un éditeur de code sans rendu en direct de l'expression mathématique.
   - Aucune des syntaxes n'a été standardisée, rendant la compatibilité entre convertisseurs difficile. Par exemple, le langage populaire LaTeX continue de recevoir de nouveaux paquets et tous les convertisseurs ne sont pas à jour.
@@ -161,12 +159,10 @@ Il y a de nombreuses notations simples (par exemple les syntaxes wiki ou markdow
 Dans un environnement web, la plus évidente méthode pour convertir un texte brut respectant une syntaxe en une arborescence DOM est d'utiliser Javascript. De fait, de nombreuses bibliothèques ont été développées pour accomplir cette tâche.
 
 - Avantages :
-
   - Mise en place aisée : seulement un peu de Javascript et de CSS.
   - C'est une solution purement basée Web : tout est fait par les navigateurs et non par d'autres programmes nécessitant une installation.
 
 - Inconvénients :
-
   - Cela ne fonctionnera pas si l'utilisateur a désactivé Javascript.
   - Le code MathML n'est pas présenté aux robots d'indexation (par exemple ceux des moteurs de recherche mathématique ou les agrégateurs de contenu).
   - La conversion doit être faite à chaque chargement de page, pouvant amener à un ralentissement du chargement ou à des conflits avec l'analyse HTML (par exemple "<" pour les balises)
@@ -229,13 +225,11 @@ Un autre outil de conversion, simple et côté client, est [ASCIIMathML](http://
 Un moyen alternatif est de convertir les expressions LaTeX avant de publier votre site web. Vous pouvez utiliser des programmes en ligne de commande pour générer et publier ces pages statiques sur votre serveur.
 
 - Avantages :
-
   - On obtient des pages web statiques : le code source en LaTeX ne nécessite pas d'être converti à chaque chargement, le code MathML est exposé aux robots d'indexation et l'on peut ajouter le code MathML aisément sur tout serveur web.
   - Des programmes binaires peuvent s'exécuter plus vite que des programmes Javascript et être plus sophistiqués, c'est-à-dire avoir un support LaTeX plus complet ou générer d'autres formats comme l'EPUB.
   - Vous pouvez assurer la compatibilité avec d'autres outils pour générer un PDF, c'est-à-dire que vous pouvez utiliser le même fichier source.tex pour à la fois faire du LaTeX et du LaTeXML.
 
 - Inconvénients :
-
   - Cela requiert d'installer des programmes sur son ordinateur, ce qui peut être plus compliqué ; et ces programmes peuvent être indisponibles sur certaines plates-formes.
   - Vous devez exécuter ces programmes sur votre ordinateur et avoir un flux de travail pour obtenir vos pages web à la fin ; cela peut s'avérer quelque peu fastidieux.
   - Les programmes binaires ne sont pas appropriés dans une extension Mozilla ou une application XUL.
@@ -304,11 +298,9 @@ latexmlc --dest foo.html --splitat=section foo.tex
 ### Conversion côté serveur
 
 - Avantages :
-
   - La conversion est faite côté serveur et le rendu MathML peut être mis en cache, ce qui est plus efficace et propre qu'une conversion côté serveur.
 
 - Inconvénients :
-
   - Ce pourrait être plus difficile à mettre en œuvre puisque vous pourriez avoir besoin de droits d'administrateur sur le serveur.
 
 [TeXZilla](https://github.com/fred-wang/TeXZilla), [LaTeXML](https://dlmf.nist.gov/LaTeXML/) et [Mathoid](https://github.com/gwicke/mathoid) peuvent être utilisés pour effectuer une conversion LaTeX vers MathML côté serveur. [Instiki](http://instiki.org/show/HomePage) et [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki) sont deux moteurs de wiki qui prennent en charge la conversion LaTeX vers MathML.

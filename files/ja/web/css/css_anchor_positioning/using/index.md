@@ -163,16 +163,13 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-element>`
-
   - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > **メモ:** `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
-
   - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。
 
 - `<fallback>`
-
   - : {{cssxref("length-percentage")}} は、要素が絶対位置指定または固定位置指定されていない場合、使用された `<anchor-side>` 値が `anchor()` 関数が設定されたインセットプロパティと互換性がない場合、またはアンカー要素が存在しない場合に、代替値として使用する距離を定義します。
 
 `anchor()` 関数の返値は、アンカーの位置に基づいて計算された長さの値です。アンカー位置指定要素のインセットプロパティに直接長さやパーセント値を設定すると、アンカー要素に結び付けられていないかのように位置指定されます。これは、`<anchor-side>` の値が設定されたインセットプロパティと互換性がなく、代替値が使用された場合と同じ動作です。次の 2 つの宣言は同等です。

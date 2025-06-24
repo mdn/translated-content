@@ -21,9 +21,7 @@ _继承参数自 {{domxref("AudioNodeOptions")}} 字典_.
 - _context_ {{Deprecated_Inline}}
   - : 一个 {{domxref("AudioContext")}} 对象。(这个参数已经被标准移除，详细信息请参阅浏览器兼容性部分.)
 - _options_ {{optional_inline}}
-
   - : Options are as follows:
-
     - `length`: buffer 中采样帧的长度。
     - `numberOfChannels`: buffer 的通道数。默认值为 1.
     - `sampleRate`: buffer 的采样率 (Hz). 默认值为构造此对象时使用的 `context` 的采样率。

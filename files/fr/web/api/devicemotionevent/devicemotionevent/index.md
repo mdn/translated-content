@@ -18,9 +18,7 @@ var deviceMotionEvent = new DeviceMotionEvent(type[, options])
 - _type_
   - : Doit être `"devicemotion"`.
 - _options_ {{optional_inline}}
-
   - : Les options sont les suivantes :
-
     - `acceleration` : un objet donnant l'accélération de l'appareil sur les 3 axes X, Y et Z. L'accélération est exprimée en [m/s<sup>2</sup>](https://en.wikipedia.org/wiki/Meter_per_second_squared)
 
       <sup>2</sup>

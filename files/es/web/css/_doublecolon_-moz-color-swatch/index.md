@@ -46,5 +46,4 @@ No es parte de ninguna especificacion. Es un pseudo-elemento patentado específi
 ## Ver tambien
 
 - Pseudo-elementos similares usados por otros buscadores:
-
   - {{cssxref("::-webkit-color-swatch")}}, pseudo-elemento soportado por WebKit y Blink (Safari, Chrome, and Opera)

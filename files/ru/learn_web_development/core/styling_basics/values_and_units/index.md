@@ -258,7 +258,6 @@ For example, understanding that [`<image>`](/ru/docs/Web/CSS/image) also allows 
 
 1. [Cascade and inheritance](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 2. [CSS selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
    - [Type, class, and ID selectors](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
    - [Attribute selectors](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
    - [Pseudo-classes and pseudo-elements](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

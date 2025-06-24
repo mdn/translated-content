@@ -25,9 +25,7 @@ let updating = browser.windows.update(
 - `windowId`
   - : `integer`。要更新的窗口的 ID。
 - `updateInfo`
-
   - : `object`。包含要更新的属性值。
-
     - `drawAttention` {{optional_inline}}
       - : `boolean`。若为 `true`，则以一种吸引用户的注意力而不改变当前聚焦的窗口的方式显示这一窗口。效果持续到用户将焦点切换到窗口为止。如果窗口是被聚焦的窗口则此选项无效。设置为 `false` 可以取消之前的 `drawAttention` 请求。
     - `focused` {{optional_inline}}

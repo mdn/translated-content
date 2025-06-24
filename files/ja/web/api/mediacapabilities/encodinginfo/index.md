@@ -20,13 +20,9 @@ encodingInfo(configuration)
 ### 引数
 
 - `configuration`
-
   - : `type` プロパティと、適切な型の構成を格納する `video` または `audio` プロパティを持つオブジェクトです。 <!-- 仕様書上の MediaEncodingConfiguration -->
-
     - `type`
-
       - : 検査対象のメディアの種類。これは 2 つの値のうちの 1 つを取ります。
-
         - `record`
           - : メディアの録画構成を表します。例えば、{{domxref("MediaRecorder")}}を使用します。
         - `webrtc`
@@ -35,10 +31,8 @@ encodingInfo(configuration)
           - : Firefox で使用する `webrtc` の同義語。
 
     - `video`
-
       - : 動画メディアソースの構成オブジェクト。
         これは、以下のプロパティを持ちます。 <!-- 仕様書上の VideoConfiguration -->
-
         - `contentType`
           - : 有効な動画の MIME タイプ、および（オプションで）[`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)の入った文字列です。
         - `width`
@@ -51,10 +45,8 @@ encodingInfo(configuration)
           - : 動画再生の 1 秒を構成するフレーム数。
 
     - `audio`
-
       - : 音声メディアソースの構成オブジェクト。
         これは、以下のプロパティを持ちます。 <!-- 仕様書上の AudioConfiguration -->
-
         - `contentType`
           - : 有効な音声の MIME タイプ、および（オプションで）[`codecs` 引数](/ja/docs/Web/Media/Formats/codecs_parameter)の入った文字列です。
         - `channels`

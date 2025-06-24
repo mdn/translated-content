@@ -29,7 +29,6 @@ cloneNode(deep)
 ### 参数
 
 - `deep` {{optional_inline}}
-
   - : 如果为 `true`，则节点及其整个子树，包括可能存在于 {{domxref("Text")}} 子节点中的文本，也会被复制。
 
     如果为 `false`，则仅复制节点本身。子树，包括节点包含的任何文本，将不会被复制。

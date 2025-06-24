@@ -70,6 +70,5 @@ l10n:
 - [CSS データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)
 - 関連する CSS データ型:
-
   - {{cssxref("frequency", "&lt;frequency&gt;")}}
   - {{cssxref("percentage", "&lt;percentage&gt;")}}

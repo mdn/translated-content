@@ -99,7 +99,6 @@ cursor:
 - `<x>` `<y>` {{experimental_inline}}
   - : Des coordonnées en abscisses et en ordonnées sans unité, inférieures à 32.
 - Valeurs utilisant un mot-clé
-
   - : **Vous pouvez déplacer votre souris au-dessus de chaque ligne pour tester.**
 
     <table class="standard-table">

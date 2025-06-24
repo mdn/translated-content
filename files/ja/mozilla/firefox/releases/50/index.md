@@ -128,10 +128,8 @@ l10n:
 ### ファイルとディレクトリー
 
 - 以前は Google Chrome との互換性しか有していなかったサイトとの互換性を向上するため、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) のサブセットを実装しました ([Firefox バグ 1265767](https://bugzil.la/1265767))。
-
   - 非同期 API インターフェイスを実装しましたが、ファイルの読み取りしかサポートしませんので注意してください。例えば {{domxref("FileSystemFileEntry.createWriter()")}} メソッドは何も行いません。
   - 以下のインターフェイスを実装しました:
-
     - {{domxref("FileSystem")}}
     - {{domxref("FileSystemEntry")}} (プロパティのみ。メソッドは未実装)
     - {{domxref("FileSystemFileEntry")}} ({{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} を除く)

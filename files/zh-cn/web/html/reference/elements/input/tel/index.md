@@ -533,7 +533,6 @@ input:valid + span::after {
 
 - [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - 相关的 {{HTMLElement("input")}} 元素
-
   - [`<input type="text">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text)
   - [`<input type="email">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/email)
 

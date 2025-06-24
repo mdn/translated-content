@@ -22,11 +22,9 @@ await registeredUserScript.unregister();
 ### Paramètres
 
 - `userScriptOptions`
-
   - : `object`. Un objet `UserScriptOptions` représentant les scripts de contenu à enregistrer. Il a une syntaxe similaire aux options supportées par {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
 
     L'objet `UserScriptOptions` possède les propriétés suivantes :
-
     - scriptMetadata `{{Optional_Inline}}`
       - : Un objet `JSON` qui contient certaines propriétés de métadonnées associées aux `userScripts` enregistrés
     - `allFrames {{Optional_Inline}}`

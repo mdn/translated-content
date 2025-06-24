@@ -22,9 +22,7 @@ let gettingIsEnabled = browser.browserAction.isEnabled(
 ### 参数
 
 - `details`
-
   - : `object`。一个可选包含 `tabId` 或 `windowId` 以供检查的对象。
-
     - `tabId` {{optional_inline}}
       - : `integer`。要检查的标签页的 ID。
     - `windowId` {{optional_inline}}

@@ -113,7 +113,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-right-color")}},
   - {{cssxref("border-bottom-color")}},

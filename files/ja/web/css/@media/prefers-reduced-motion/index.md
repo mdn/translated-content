@@ -32,7 +32,6 @@ l10n:
 Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 - GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation がオンになっている場合。
-
   - GNOME の古いバージョンでは、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
   - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration) の `[Settings]` に追加する方法もあります。
 

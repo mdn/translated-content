@@ -63,7 +63,6 @@ new Date(year, monthIndex, day, hours, minutes, seconds, milliseconds);
 #### 타임스탬프 문자열
 
 - `dateString`
-
   - : {{jsxref("Date.parse()")}} 메서드가 인식할 수 있는 형태로 나타낸 날짜 문자열입니다.
     [IETF 호환 RFC 2822 타임스탬프](https://datatracker.ietf.org/doc/html/rfc2822#page-14)와,
     [ISO8601의 특정 버전](https://www.ecma-international.org/ecma-262/11.0/#sec-date.parse)을 인식할 수

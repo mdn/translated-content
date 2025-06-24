@@ -19,13 +19,9 @@ requestPort(options)
 ### 引数
 
 - `options`
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `filters`
-
       - : 接続されたデバイスの探索に使用するベンダー ID とプロダクト ID を格納したオブジェクトのリストです。[USB Implementors Forum](https://www.usb.org/) が特定の会社に ID を割り当てます。それぞれの会社がその製品に ID を割り当てます。フィルターは以下の値を含みます。
-
         - `usbVendorId`
           - : USB デバイスの製造元を特定する `unsigned short` の整数です。
         - `usbProductId`

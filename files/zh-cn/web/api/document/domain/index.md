@@ -23,9 +23,7 @@ document.domain = domainString;
 ### 异常
 
 - 安全错误
-
   - : 已尝试在以下情况之一下设置域：
-
     - 文件在 html 中的 iframe 元素里
     - 该文件没有参考上下文
     - 该文档的有效域为 null

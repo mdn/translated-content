@@ -99,9 +99,7 @@ slug: Web/HTML/Reference/Elements/meta
 - `content`
   - : 此属性包含 [`http-equiv`](#http-equiv) 或 [`name`](#name) 属性的值，具体取决于所使用的值。
 - `http-equiv`
-
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：
-
     - `content-security-policy`
       允许页面作者定义当前页面的[内容策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)。内容策略常用来指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
 
@@ -117,7 +115,6 @@ slug: Web/HTML/Reference/Elements/meta
 
     - `refresh`
       这个属性指定：
-
       - 页面重新加载的秒数——仅当 [`content`](#content) 属性包含非负整数时。
       - 页面重定向到指定链接的秒数——仅当 content 属性包含非负整数后跟字符串“`;url=`”和有效的 URL 时。
 

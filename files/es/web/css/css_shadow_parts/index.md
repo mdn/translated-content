@@ -29,11 +29,9 @@ Por defecto, los elementos en un shadow tree solo se pueden estilar dentro de su
 ## Guías
 
 - [Pseudoelementos CSS](/es/docs/Web/CSS/Pseudo-elements)
-
   - : Lista alfabética de pseudoelementos definidos por todas las especificaciones de CSS y WebVTT
 
 - [Componentes web](/es/docs/Web/API/Web_components)
-
   - : Vista general de las diferentes API que habilitan la creación de elementos personalizados reusables o componentes web.
 
 ## Conceptos relacionados

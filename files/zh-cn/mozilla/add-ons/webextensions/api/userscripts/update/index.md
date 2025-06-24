@@ -20,7 +20,6 @@ let updatingUserScript = browser.userScripts.update(
 ### 参数
 
 - `scripts`
-
   - : {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 的数组（`array`）。要更新的用户脚本的详细信息。
 
     属性为 `null` 或省略时将不更改这些属性。向 `matches`、`excludeMatches`、`globs` 和 `excludeGlobs` 属性传入空数组会清除这些属性。

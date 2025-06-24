@@ -18,9 +18,7 @@ controlTransferOut(setup, data)
 ### 引数
 
 - `setup`
-
   - : オプションを設定するオブジェクトです。以下のオプションが使用可能です。
-
     - `requestType`
       - : 転送の性質を示します。`"standard"` (すべての USB デバイスに共通)、`"class"` (業界標準のクラスまたはデバイスに共通)、`"vendor"` のいずれかの値でなければなりません。
     - `recipient`

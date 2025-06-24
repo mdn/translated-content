@@ -51,7 +51,6 @@ Considérations sur les sélecteurs et les jeux de règles founis dans le fichie
 
 - Ensuite, regardez les quatre sélecteurs et calculez la spécificité de chacun. Notez-les quelque part où vous pourrez les retrouver plus tard, par exemple dans un commentaire en haut de votre CSS.
 - Maintenant, mettez le bon sélecteur avec le bon jeu de règles ! Vous avez quatre paires sélecteurs régles qui correspondent dans les ressources CSS. Faites cela maintenant et ajoutez‑les dans le fichier de la CSS. Il faut que :
-
   - entre autres choses, le conteneur de carte principale ait une largeur et une hauteur fixes, une couleur de fond unie, un encadrement et un rayon d'encadrement (des coins arrondis !).
   - l'en‑tête ait un gradient d'arrière‑plan allant du plus soutenu au plus léger, plus des coins arrondis correspondant à ceux du conteneur de la carte principale.
   - le pied ait un gradient d'arrière‑plan allant du plus léger au plus soutenu, plus des coins arrondis correspondant à ceux du conteneur de la carte principale.

@@ -453,14 +453,12 @@ slug: Learn_web_development/Howto/Tools_and_setup/Available_text_editors
 当安装新的文本编辑器时，你的操作系统可能会继续使用其默认编辑器打开文本文件，直到更改[文件关联](https://zh.wikipedia.org/zh-cn/文件关联)。这些说明将帮助你在指定操作系统中双击打开文件时选定首选编辑器：
 
 - Windows
-
   - [Windows 8](https://support.microsoft.com/zh-CN/windows#WindowsVersion=Windows_8.1&ID0EBBD=Windows_8.1)
   - [Windows 7](https://support.microsoft.com/zh-cn/windows/更改-windows-7-默认使用的程序-62fd162f-8c82-0436-806f-c60d69dcf495)
   - [更旧的系统](https://www.lifewire.com/how-to-change-file-associations-in-windows-2624477)
 
 - [Mac OS X](http://osxdaily.com/2013/08/08/change-default-application-open-files-mac-os-x/)
 - Linux
-
   - [Ubuntu Unity](http://askubuntu.com/questions/289337/how-can-i-change-file-association-globally)
   - [GNOME](https://help.gnome.org/users/gnome-help/stable/files-open.html.en)
   - [KDE](http://doc.opensuse.org/documentation/html/openSUSE_113/opensuse-kdeuser/cha.kde.cust.html#pro.kde.cust.system.fileass)

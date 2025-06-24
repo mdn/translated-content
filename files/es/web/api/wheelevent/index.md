@@ -29,7 +29,6 @@ _Este interfaz hereda propiedades de estos padres, {{domxref("MouseEvent")}}, {{
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : Devuelve un doble que representa la cantidad de desplazamiento del eje-z.
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
-
   - : Devuelve un entero largo sin signo que representa la unidad manejada por los valores de cantidad de desplazamiento delta. Los valores permitidos son:
 
     | Constant          | Value  | Description                                       |
@@ -54,6 +53,5 @@ _Este interfaz no define ningún método, pero hereda métodos de estos padres, 
 
 - [`wheel`](/es/docs/Web/API/Element/wheel_event)
 - Interfaces reemplazados por este:
-
   - Objeto del evento de la rueda del ratón legado de la plataforma Gecko: {{ domxref("MouseScrollEvent") }}
   - Navegadores no-gecko, objeto del evento de la rueda del ratón legado: {{ domxref("MouseWheelEvent") }}

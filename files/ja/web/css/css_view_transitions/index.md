@@ -47,7 +47,6 @@ l10n:
 ## ガイド
 
 - [ビュー遷移 API の使用](/ja/docs/Web/API/View_Transition_API/Using)
-
   - : ビュー遷移を作成する方法と、ビュー遷移のアニメーションをカスタマイズする方法について説明します。アクティブなビュー遷移の操作方法についても記載しています。
 
 ## 関連概念
@@ -57,7 +56,6 @@ l10n:
 - {{domxref("Document.visibilityState")}}
 
 - [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)モジュール
-
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
@@ -65,7 +63,6 @@ l10n:
   - [ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API)
 
 - [CSS 座標変換](/ja/docs/Web/CSS/CSS_transforms)モジュール
-
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

@@ -122,7 +122,6 @@ input {
 ## Смотрите также
 
 - Другие связанные элементы:
-
   - {{HTMLElement("form")}}
   - {{HTMLElement("legend")}}
   - {{HTMLElement("label")}}

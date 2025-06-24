@@ -87,7 +87,6 @@ As informações ARIA nos blogues tendem a ficar desatualizadas rapidamente. Sem
 - [Especificações WAI-ARIA](https://www.w3.org/TR/wai-aria/)
   - : As especificações W3C são referências úteis. Note que, nesta fase, é importante testar a compatibilidade, uma vez que as implementações ainda estão inconsistentes.
 - [Práticas Oficiais WAI-ARIA](https://www.w3.org/WAI/PF/aria-practices/)
-
   - : Conforme as especificações da W3C WAI-ARIA, a excelênca nas práticas oficiais representam o futuro ideal - o dia em que todos os autores possam trabalhar em suas realizações sobre uma base ARIA consistente em navegadores e leitores de tela. A documentação W3C proporcionará a você uma visão aprofundada de ARIA.
 
     Por enquanto, desenvolvedores _web_ que implementem ARIA devem priorizar a compatibilidade. Use as melhores documentações das práticas e exemplos baseados em implementações atuais.

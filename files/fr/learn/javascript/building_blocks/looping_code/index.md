@@ -171,7 +171,6 @@ Nous avons ici :
 
 1. Le mot-clé `for`, suivi par des parenthèses.
 2. A l'intérieur des parenthèses, on a trois objets&nbsp;:
-
    1. Une **initialisation**&nbsp;: il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
    2. Une **condition de sortie**&nbsp;: comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
    3. Une **expression finale**&nbsp;: elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
@@ -231,7 +230,6 @@ Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et
 1. L'itérateur, `i`, commence à `0` (`let i = 0`).
 2. On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
 3. Au sein de la boucle, on concatène les éléments présents dans cette boucle (`cats[i]` est `cats[quelle que soit la valeur de i lors de l'itération]`) avec une virgule et un espace, à la fin de la variable `info`. Donc&nbsp;:
-
    1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
    2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à ("Jeff, ")
    3. Et ainsi de suite. Après chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
@@ -367,7 +365,6 @@ bouton.addEventListener("click", function () {
 2. Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
 3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, avant de vider l'input et le recentrer, prêt pour la recherche suivante.
 4. Maintenant sur la partie intéressante, la boucle `for`&nbsp;:
-
    1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
    2. À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
    3. Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
@@ -527,13 +524,11 @@ Dans cet exercice, nous vous proposons d'écrire un compte à rebours de lanceme
 
 - Créer une boucle de 10 jusqu'à 0. Nous vous avons fourni un initialiseur — `let i = 10;`
 - Pour chaque itération, créer un nouveau paragraphe à ajouter dans la balise de sortie `<div>` que nous avons sélectionnée en utilisant : `const output = document.querySelector('.output');` En commentaire, nous vous avons fourni trois lignes de code qui doivent être utilisées quelque part à l'intérieur de la boucle&nbsp;:
-
   - `const para = document.createElement('p');` — crée un nouveau paragraphe.
   - `output.appendChild(para);` — ajoute le paragraphe à la sortie `<div>`.
   - `para.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
 
 - Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `para.textContent = )`
-
   - Si le nombre est 10, écrire «&nbsp;Countdown 10&nbsp;» dans le paragraphe.
   - Si le nombre est 0, écrire «&nbsp;Blast off!&nbsp;» dans le paragraphe.
   - Pour tout autre nombre, écrire simplement le nombre dans le paragraphe.
@@ -656,7 +651,6 @@ Plus précisément, nous attendons de vous&nbsp;:
 
 - Que vous écriviez une boucle qui crée une itération de 0 jusqu'à la fin du tableau `people`. Vous aurez besoin de commencer avec un initialiseur type `let i = 0;` , mais quelle sera la condition de sortie
 - Au cours de chaque itération, vérifiez si l'élément actuel du tableau est "Phil" ou "Lola" en utilisant une déclaration conditionnelle.
-
   - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
   - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted` du `textContent` suivi d'une virgule et d'un espace.
 

@@ -126,7 +126,6 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 - [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - 아래와 같이 문자열 리터럴을 전달할 때 :
   `window.setTimeout("alert(\"Hello World!\");", 500);`
-
   - {{domxref("window.setTimeout")}}
   - {{domxref("window.setInterval")}}
   - {{domxref("window.setImmediate")}}

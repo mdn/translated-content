@@ -97,7 +97,6 @@ l10n:
 ## 関連情報
 
 - `<head>` の中で使用することができる要素:
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

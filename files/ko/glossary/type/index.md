@@ -20,7 +20,6 @@ l10n:
 - 위키백과의 [데이터 타입](https://en.wikipedia.org/wiki/Data_type)
 - [JavaScript 데이터 타입](/ko/docs/Web/JavaScript/Data_structures)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

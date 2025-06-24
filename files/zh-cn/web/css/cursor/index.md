@@ -99,7 +99,6 @@ cursor:
 - `<x>` `<y>` {{experimental_inline}}
   - : 可选 x，y 坐标。两个小于 32 的无单位非负数。
 - 关键字值
-
   - : 鼠标悬浮于值上可实时演示
 
     <table class="standard-table">

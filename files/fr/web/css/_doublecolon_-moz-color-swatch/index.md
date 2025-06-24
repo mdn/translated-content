@@ -46,5 +46,4 @@ Ce pseudo-élément est spécifique à Gecko et ne fait partie d'aucune spécifi
 ## Voir aussi
 
 - Les pseudo-éléments semblables utilisés par les autres navigateurs :
-
   - {{cssxref("::-webkit-color-swatch")}} pris en charge par WebKit et Blink (utilisés par Safari, Chrome et Opera)

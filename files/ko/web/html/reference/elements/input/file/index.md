@@ -384,7 +384,6 @@ input.addEventListener("change", updateImageDisplay);
 - 반면, 파일을 선택한 경우라면, 각각의 파일을 순회하며 각각의 정보를 미리보기 `<div>`에 출력합니다. 참고할 점:
 - 뒤에서 작성할 `validFileType()` 함수를 사용해 순회 중인 파일이 올바른 유형, 즉 `accept` 특성에 속한 파일인지 판별합니다.
 - 올바른 파일이라면,
-
   - `<div>` 안의 목록에 해당 파일의 이름과 크기를 항목으로 추가합니다. 이름은 `file.name`과 `file.size`로 가져옵니다. 또 다른 함수인 `returnFileSize()`는 파일 크기를 보기 좋게 바이트/KB/MB로 서식해 출력합니다. (브라우저는 바이트 크기로만 알려줍니다)
   - {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}}를 호출해 이미지 미리보기 썸네일을 생성하고, 새로 만든 {{htmlelement("img")}} 태그의 [`src`](/ko/docs/Web/HTML/Element/img#src)에 지정한 후, 이미지도 목록의 항목에 추가합니다.
 

@@ -50,9 +50,7 @@ findLast(function(element, index, array) { /* … */ }, thisArg)
 ### Paramètres
 
 - `fnRappel`
-
   - : Une fonction utilisée pour tester les éléments du tableau. Elle est appelée avec les arguments suivants&nbsp;:
-
     - `element`
       - : L'élément courant du tableau.
     - `index`

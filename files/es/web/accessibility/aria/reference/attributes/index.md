@@ -18,7 +18,6 @@ Los atributos <abbr>ARIA</abbr> permiten modificar los estados y las propiedades
 Hay 4 categorías de estados y propiedades ARIA:
 
 1. ### Atributos de widgets
-
    - [`aria-autocomplete`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
    - [`aria-checked`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
    - [`aria-disabled`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
@@ -45,19 +44,16 @@ Hay 4 categorías de estados y propiedades ARIA:
    - [`aria-valuetext`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
 2. ### Atributos de región en vivo
-
    - [`aria-busy`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
    - [`aria-live`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-live)
    - [`aria-relevant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
    - [`aria-atomic`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 
 3. ### Atributos de arrastrar y soltar
-
    - [`aria-dropeffect`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 
 4. ### Atributos de relación
-
    - [`aria-activedescendant`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
    - [`aria-colcount`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
    - [`aria-colindex`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)

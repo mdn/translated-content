@@ -20,9 +20,7 @@ var querying = browser.tabs.query(
 ### パラメーター
 
 - `queryInfo`
-
   - : `object`. `query()` 関数はここで指定されたプロパティにマッチするタブだけを取得します。 このプロパティについての詳細は {{WebExtAPIRef("tabs.Tab")}} を参照してください。
-
     - `active`{{optional_inline}}
       - : `boolean`. 各ウインドウの中でアクティブかどうか。
     - `audible`{{optional_inline}}

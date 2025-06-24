@@ -171,7 +171,6 @@ Para obtener información sobre la compatibilidad del navegador, consulta la {{J
 ## Ve también
 
 - {{JSxRef("../Guide/Regular_Expressions", "Guía de expresiones regulares")}}
-
   - {{JSxRef("../Guide/Regular_Expressions/Character_Classes", "Clases de caracteres")}}
   - {{JSxRef("../Guide/Regular_Expressions/Assertions", "Aserciones")}}
   - {{JSxRef("../Guide/Regular_Expressions/Escapes_de_propiedades_Unicode", "Escapes de propiedades Unicode")}}

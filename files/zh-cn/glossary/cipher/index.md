@@ -25,7 +25,6 @@ l10n:
 - 维基百科上的[密码](https://zh.wikipedia.org/zh-cn/密码)词条
 - [加密与解密](/zh-CN/docs/Archive/Security/Encryption_and_Decryption)
 - [MDN 术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
   - {{Glossary("Ciphertext","密文")}}
   - {{Glossary("Cipher suite", "密码套件")}}

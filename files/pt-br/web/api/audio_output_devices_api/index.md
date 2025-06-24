@@ -46,13 +46,11 @@ O acesso à API está sujeito às seguintes restrições:
 - Todos os métodos e propriedades só podem ser chamados em um [contexto seguro](/pt-BR/docs/Web/Security/Secure_Contexts).
 
 - [`MediaDevices.selectAudioOutput()`](/pt-BR/docs/Web/API/MediaDevices/selectAudioOutput) concede permissão do usuário para um dispositivo selecionado ser usado como o dispositivo de saída de áudio:
-
   - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
   - [Ativação de usuário transitória](/pt-BR/docs/Web/Security/User_activation) é necessária.
     O usuário deve interagir com a página ou um elemento de interface do usuário para que o método seja chamado.
 
 - [`HTMLMediaElement.setSinkId()`](/pt-BR/docs/Web/API/HTMLMediaElement/setSinkId) define um ID permitido como saída de áudio:
-
   - O acesso pode ser controlado pela política de permissões HTTP [`speaker-selection`](/pt-BR/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection).
   - É necessária a permissão do usuário para definir um ID de dispositivo não padrão.
     - Isso pode vir da seleção na janela de diálogo lançada por `MediaDevices.selectAudioOutput()`

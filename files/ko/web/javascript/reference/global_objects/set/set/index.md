@@ -36,7 +36,6 @@ new Set(iterable)
 ### 매개변수
 
 - `iterable` {{optional_inline}}
-
   - : [순회 가능한 객체](/ko/docs/Web/JavaScript/Reference/Statements/for...of)가 전달되면 모든 요소가 새로운 `Set`에 추가됩니다.
 
     이 매개변수를 지정하지 않거나 값이 `null`일 경우 새로운 `Set`은 비어있게 됩니다.

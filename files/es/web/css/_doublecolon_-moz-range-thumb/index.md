@@ -51,12 +51,10 @@ No es parte de ninguna especificación. El un pseudo-elemento propietario de Gec
 ## Ver además
 
 - Los pseudo-elements usados por Gecko para dar estilo a otras parte de un input con typue="range":
-
   - {{cssxref("::-moz-range-track")}},
   - {{cssxref("::-moz-range-progress")}}
 
 - Pseudo-elementos similares usados por otras nevagadores:
-
   - {{cssxref("::-ms-thumb")}}, pseudo-elemento soportado por Internet Explorer y Edge.
   - {{cssxref("::-webkit-slider-thumb")}}, pseudo-elemento souportado por WebKit y Blink (Safari, Chrome and Opera).
 

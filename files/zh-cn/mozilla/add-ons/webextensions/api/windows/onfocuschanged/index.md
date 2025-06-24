@@ -34,9 +34,7 @@ browser.windows.onFocusChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `windowId`
       - : `integer`。新聚焦的窗口 ID。
 

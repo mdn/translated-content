@@ -50,7 +50,6 @@ text {
 | 可动画的 | 是                                                    |
 
 - `_replace` {{deprecated_inline}}
-
   - : 当前 SVG 图像被与当前 SVG 图像在同一帧中相同矩形区域中的链接内容替换。
 
     > [!NOTE]

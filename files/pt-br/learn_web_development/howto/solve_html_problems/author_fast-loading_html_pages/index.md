@@ -123,7 +123,6 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 - `html`
 
 - `head`
-
   - `link`...
     Arquivos CSS requeridos para a aparência da página. Minimize o número de arquivos para performance enquanto mantém CSS não-relacionado em arquivos separados para manutenção.
 
@@ -134,7 +133,6 @@ Note, contudo, que muitas das dicas listadas neste artigo são técnicas de sens
 
 - `body`
 - Páginas de conteúdo visíveis ao usuário em pequenas divisões (tabelas / divs) que podem ser exibidas sem esperar a página inteira ser baixada.
-
   - `script`...
     Quaisquer scripts que forem usados para realizar DHTML. Um script DHTML geralmente só pode ser executado após o carregamento completo da página e a inicialização de todos os objetos necessários. Não há necessidade de carregar esses scripts antes do conteúdo. Isso apenas desacelera a aparência inicial do carregamento da página.
 

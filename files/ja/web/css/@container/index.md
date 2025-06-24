@@ -75,9 +75,7 @@ l10n:
 ### 値
 
 - `<container-condition>`
-
   - : オプションの `<container-name>` および `<container-query>`。条件が真の場合、この `<stylesheet>` で定義されたスタイルが適用されます。
-
     - `<container-name>`
       - : オプション。クエリーが真と評価された際にスタイルが適用されるコンテナーの名前を、{{cssxref("ident")}} として指定します。
     - `<container-query>`
@@ -158,23 +156,18 @@ l10n:
 ```
 
 - `aspect-ratio`
-
   - : コンテナーの {{cssxref("aspect-ratio")}} は、 {{cssxref("ratio")}} 値として発生したコンテナーの高さに対する幅として計算されます。
 
 - `block-size`
-
   - : コンテナーの {{cssxref("block-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `height`
-
   - : コンテナーの高さを {{cssxref("length")}} 値で表現したものです。
 
 - `inline-size`
-
   - : コンテナーの {{cssxref("inline-size")}} を {{cssxref("length")}} 値で表したものです。
 
 - `orientation`
-
   - : コンテナーの[方向](/ja/docs/Web/CSS/@media/orientation)で、`landscape` または `portrait` のいずれかです。
 
 - `width`
@@ -199,9 +192,7 @@ l10n:
 スクロール状態コンテナー記述子に対応しているキーワードには、物理値および{{glossary("flow relative values", "フロー相対値")}}が含まれます。
 
 - `scrollable`
-
   - : スクロールバーをドラッグしたり、トラックパッドのジェスチャーを使用したりといった、ユーザーによるスクロールによって、コンテナーを指定した方向にスクロールできるかどうかを問い合わせます。つまり、指定した方向にスクロールできるコンテンツがあふれているかどうかです。有効な `scrollable` 値には、次のキーワードを含めることができます。
-
     - `none`
       - : このコンテナーが{{glossary("scroll container", "スクロールコンテナー")}}でないか、その他の理由でどの方向にもスクロールできない場合。
     - `top`
@@ -240,9 +231,7 @@ l10n:
     ```
 
 - `snapped`
-
   - : コンテナーが、指定された軸に沿って[スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)コンテナーの祖先にスナップされているか、またはスナップされるかどうかを問い合わせます。有効な `snapped` の値としては、次のキーワードがあります。
-
     - `none`
       - : コンテナーは、その親スクロールコンテナーのスクロール[スナップターゲット](/ja/docs/Glossary/Scroll_snap#スナップターゲット)ではありません。 `snapped: none` クエリーを実装している場合、スクロールコンテナーのスナップターゲットであるコンテナーには `@container` スタイルは適用されませんが、スナップターゲットではないコンテナーにはスタイルが適用されます。
     - `x`
@@ -269,9 +258,7 @@ l10n:
     ```
 
 - `stuck`
-
   - : {{cssxref("position")}} 値が [`sticky`](/ja/docs/Learn_web_development/Core/CSS_layout/Positioning#粘着位置指定) であるコンテナーが、そのスクロールコンテナーの祖先の端に固定されているかどうかを問い合わせます。有効な `stuck` の値には、次のキーワードがあります。
-
     - `none`
       - : コンテナーは、そのコンテナーのどの端にも固定されていません。コンテナーに `position: sticky` が設定されていなくても、`none` クエリーは一致することに注意してください。
     - `top`

@@ -34,7 +34,6 @@ l10n:
 2. `position` プロパティが **`absolute`** の場合、包含ブロックは `position` の値が `static` 以外 (`fixed`, `absolute`, `relative`, `sticky`) の直近の祖先要素における<em>パディングボックス</em>の辺によって構成されます。
 3. `position` プロパティが **`fixed`** の場合、包含ブロックは{{glossary("Viewport", "ビューポート")}} （連続的なメディアの場合）またはページ領域（ページメディアの場合）によって確立されます。
 4. `position` プロパティが **`absolute`** または **`fixed`** の場合、包含ブロックは以下の条件を持った直近の祖先要素におけるパディングボックスの辺によって構成されることがあります。
-
    - {{cssxref("filter")}}、{{cssxref("backdrop-filter")}}、{{cssxref("transform")}}、{{cssxref("perspective")}} の値が `none` 以外である。
    - {{cssxref("contain")}} の値が `layout`、`paint`、`strict`、`content` のいずれかである。（例 `contain: paint;`）
    - {{cssxref("container-type")}} の値が `normal` 以外である。

@@ -64,7 +64,6 @@ Les abréviations communes (etc., i.e.) pourront être utilisées dans les notes
 #### Dans le texte
 
 - Dans le texte principal (en dehors des notes ou des parenthèses), on privilégiera les formes développées plutôt que les abréviations.
-
   - **Correct** : les navigateurs web tels que Firefox peuvent être utilisés…
   - **Incorrect** : les navigateurs, ex. Firefox, peuvent être utilisés…
 

@@ -49,7 +49,6 @@ view-timeline: --custom_name_for_timeline;
 ### 値
 
 - `<view-timeline-name>`
-
   - : [`view-timeline-name`](/ja/docs/Web/CSS/view-timeline-name) を参照してください。
 
 - `<view-timeline-axis>`

@@ -17,10 +17,8 @@ void ctx.fill(path[, fillRule]);
 ### Paramètres
 
 - `fillRule`
-
   - : L'algorithme utilisé pour déterminer si un point est à l'intérieur ou à l'extérieur du chemin.
     Valeurs possible:
-
     - `nonzero`
       - : La [règle de remplissage extérieur/intérieur non nul](http://en.wikipedia.org/wiki/Nonzero-rule), qui est la règle par défaut.
     - `evenodd`

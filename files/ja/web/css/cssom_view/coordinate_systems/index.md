@@ -142,14 +142,12 @@ HTML は `"log"` クラスを持つ `<p>` を収めており、マウスイベ�
 - [ビューポートの概念](/ja/docs/Web/CSS/CSSOM_view/Viewport_concepts)
 - [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms): 座標系を変更する方法
 - {{domxref("MouseEvent")}} の座標:
-
   - {{domxref("MouseEvent.offsetX")}} と {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} と {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} と {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} と {{domxref("MouseEvent.screenY")}}
 
 - {{domxref("Touch")}} の座標:
-
   - {{domxref("Touch.clientX")}} と {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} と {{domxref("Touch.pageY")}}
   - {{domxref("Touch.screenX")}} と {{domxref("Touch.screenY")}}

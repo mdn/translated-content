@@ -120,7 +120,6 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
 - `babel.config.js` ：這是 [Babel](https://babeljs.io/) 的組態檔案，在開發階段我們可以使用一些 Javascript 的新功能，透過這個檔案轉換成在產品環境可以跨瀏覽器運行的舊版語法。你也可以在這個檔案裡註冊額外的 babel 套件。
 - `.browserslistrc` ：這是 [Browserslist](https://github.com/browserslist/browserslist) 的組態檔案。你可以透過它來控制需要對哪些瀏覽器進行支持與優化
 - `public` ：這個資料夾包含了所有發布的靜態檔案，這些檔案在建置過程不會經過 [Webpack](https://webpack.js.org/) 加工。（但是有一個例外： `index.html` 會有一些處理）。
-
   - `favicon.ico` ：這是應用程式的 favicon。目前是 Vue 的標誌。
   - `index.html` ：這是應用程式的模板。你的 Vue 應用程式會透過這個 HTML 頁面來運行，你也可以使用 lodash 樣板語言在這個頁面穿插一些值。
 
@@ -128,7 +127,6 @@ CLI 會開始建構你的專案，並且安裝所需的相依套件。
     > 這個模板不是用來管理你的應用程式的版面－而是用來管理應用程式以外的靜態 HTML 檔案，只有在使用一些進階的功能才需要修改這個檔案。
 
 - `src` ：這個資料夾是 Vue 專案的核心。
-
   - `main.js` ：這是應用程式的進入點。目前，這個檔案會初始化你的 Vue 應用程式並定義要將應用掛載到 `index.html` 檔案中的哪個 HTML 元素。通常還會在這個檔案註冊全域性元件或載入其他 Vue 函式庫。
   - `App.vue` ：這是 Vue 應用程式的根節點元件。往下看可以了解更多關於 Vue 元件的說明。
   - `components` ：你可以把你的元件放在這個資料夾。目前它只有放一個範例元件。

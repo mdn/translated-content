@@ -181,7 +181,6 @@ div:not(:is(.foo, .bar)) {
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
 - [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - 関連する CSS 擬似クラス:
-
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

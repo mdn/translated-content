@@ -103,7 +103,6 @@ Firefox 53 был выпущен 19 апреля 2017. В этой статье 
 ### HTTP / Networking
 
 - Gecko теперь имеет прив доступный в , `about:config` чтобы позволить пользователям устанавливать их по умолчанию {{HTTPHeader ( "Referrer-политики")}} - ([Firefox bug 1304623](https://bugzil.la/1304623)). Возможные значения: `network.http.referer.userControlPolicy`
-
   - 0 - `no-referrer`
   - 1 - `same-origin`
   - 2 - `strict-origin-when-cross-origin`

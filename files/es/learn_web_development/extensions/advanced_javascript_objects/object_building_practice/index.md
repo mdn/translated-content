@@ -98,7 +98,6 @@ Con esta función cada objeto pelota `Ball()` puede dibujarse en la pantalla uti
 - Primero usamos [`beginPath()`](/es/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que empezaremos a dibujar una forma en el _canvas_.
 - A continuación usamos el [`fillStyle`](/es/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir el color de la forma. Haremos que coincida con la propiedad `color.`
 - A continuación con el método [`arc()`](/es/docs/Web/API/CanvasRenderingContext2D/arc) se traza un arco. Sus parámetros son:
-
   - La posición `x` e `y` del centro del arco. Corresponderán a las coordenadas del centro de la pelota.
   - El radio del arco - que vendrá dado por la propiedad de tamaño `size` de la pelota.
   - Los últimos dos parámetros especifican el comienzo y final del arco en radianes. En este caso se especifican 0 y `2*PI` . Que corresponden a 0 y 360 grados. Esto es un circulo completo. Si se quisiese especificar únicamente medio círculo, 180 grados, se especificaría `PI`.
@@ -253,7 +252,6 @@ Ahora, un poco de diversión, añadamos la detección de colisiones a nuestro c�
    ```
 
    Esta función es un poco complicada, así que no hay que preocuparse mucho si de momento no se comprende del todo.
-
    - Para cada pelota, necesitamos comprobar si chocará con cada una de las otras pelotas. Para esto, en un bucle `for` para recorrer todas las pelotas.
    - Dentro del bucle, usamos un `if` para comprobar si la pelota que estamos mirando en ese ciclo del bucle `for` es la pelota que estamos mirando. No queremos mirar si una pelota ha chocado consigo misma. Para esto miramos si la pelota actual (es decir la pelota que está invocando al método que resuelve la detección de colisiones) es la misma que la indicada por el bucle. Usamos un operador `!` para indicar una negación en la comparación, así que el código dentro de la condición solo se ejecuta si estamos mirando dos pelotas distintas.
    - Usamos un algoritmo común para comprobar la colisión de los dos pelotas. Básicamente miramos si el área de dos círculos se superponen. Esto se explica mejor en el enlace [detección de colision 2D](/es/docs/Games/Techniques/2D_collision_detection).

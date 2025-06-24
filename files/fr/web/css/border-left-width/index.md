@@ -71,9 +71,7 @@ border-left-width: unset;
 ### Valeurs
 
 - `<br-width>`
-
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le côté gauche de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
-
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
@@ -135,14 +133,12 @@ border-left-width: unset;
 ## Voir aussi
 
 - Les autres propriétés liées à la largeur de la bordure :
-
   - {{cssxref("border-right-width")}},
   - {{cssxref("border-top-width")}},
   - {{cssxref("border-bottom-width")}},
   - {{cssxref("border-width")}}
 
 - Les autres propriétés CSS liées à la bordure du côté gauche :
-
   - {{cssxref("border")}},
   - {{cssxref("border-left")}},
   - {{cssxref("border-left-style")}},

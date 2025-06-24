@@ -39,7 +39,6 @@ WebSocket WebSocket(
 ```
 
 - `url`
-
   - : 連線用的 URL，WebSocket 伺服器會回應這個 URL。
 
     根據網際網路工程任務小組（Internet Engineering Task Force，IETF）定義之規範， URL 的協議類型必須是 `ws://` （非加密連線）或是 `wss://` （加密連線）

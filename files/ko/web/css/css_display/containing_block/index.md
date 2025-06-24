@@ -33,7 +33,6 @@ original_slug: Web/CSS/Containing_block
 2. `position` **속성이 `absolute`**인 경우, 컨테이닝 블록은 `position` 속성 값이 `static`이 아닌(`fixed`, `absolute`, `relative`, `sticky`) 가장 가까운 조상의 내부 여백 영역입니다.
 3. `position` **속성이 `fixed`인** 경우, 컨테이닝 블록은 {{glossary("viewport", "뷰포트")}}나 페이지 영역(페이지로 나뉘는 매체인 경우)입니다.
 4. `position` **속성이** `absolute` **나** `fixed` 인 경우, 다음 조건 중 하나를 만족하는 가장 가까운 조상의 내부 여백 영역이 컨테이닝 블록이 될 수도 있습니다.
-
    1. {{cssxref("transform")}}이나 {{cssxref("perspective")}} 속성이 `none`이 아님.
    2. {{cssxref("will-change")}} 속성이 `transform`이나 `perspective`임.
    3. {{cssxref("filter")}} 속성이 `none`임. (Firefox에선 `will-change`가 `filter`일 때도 적용)
@@ -246,7 +245,6 @@ p {
 ## 같이 보기
 
 - CSS 주요 개념
-
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
@@ -257,7 +255,6 @@ p {
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
-
     - [초깃값](/ko/docs/Web/CSS/initial_value)
     - [계산값](/ko/docs/Web/CSS/computed_value)
     - [결정값](/ko/docs/Web/CSS/resolved_value)

@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Parameters
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadDelta`
       - : Un [`objet`](#downloaddelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
 

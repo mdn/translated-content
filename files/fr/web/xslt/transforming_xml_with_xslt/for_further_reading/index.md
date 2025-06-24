@@ -14,7 +14,6 @@ l10n:
 ### Livres
 
 - **<i lang="en">XSLT: Programmer's Reference, Second Edition</i>**
-
   - **Auteur**&nbsp;: Michael H. Kay
   - **Nombre de pages**&nbsp;: 992 pages
   - **Éditeur**&nbsp;: Wrox; 2 edition (May 3, 2001)
@@ -24,7 +23,6 @@ l10n:
 <https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
 
 - **XSLT**
-
   - **Auteur**&nbsp;: Doug Tidwell
   - **Nombre de pages**&nbsp;: 473 pages
   - **Éditeur**&nbsp;: O'Reilly Media&nbsp;; 1<sup>re</sup> édition (15 août 2001)
@@ -34,7 +32,6 @@ l10n:
 <https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
 
 - **<i lang="en">Learning XML, Second Edition</i>**
-
   - **Auteur**&nbsp;: Erik T. Ray
   - **Nombre de pages**&nbsp;: 432 pages
   - **Éditeur**&nbsp;: O'Reilly Media&nbsp;; 2<sup>e</sup> édition (22 septembre 2003)
@@ -48,7 +45,6 @@ l10n:
 ### Sites web
 
 - **<i lang="en">World Wide Web Consortium</i>**
-
   - **Page d'accueil du W3C**&nbsp;: <https://www.w3.org/>
   - **Page de XSL**&nbsp;: <https://www.w3.org/Style/XSL/>
   - **Aperçu des spécifications XSLT**&nbsp;: <https://www.w3.org/TR/xslt>
@@ -71,6 +67,5 @@ l10n:
 
 - [<i lang="en">Extensible Stylesheet Language</i> (XSL)](http://xml.coverpages.org/xsl.html)
 - **Liste de diffusion XSL-List**
-
   - **S'inscrire**&nbsp;: <https://www.mulberrytech.com/xsl/xsl-list/index.html>
   - **Archives**&nbsp;: <https://www.biglist.com/lists/xsl-list/archives/>

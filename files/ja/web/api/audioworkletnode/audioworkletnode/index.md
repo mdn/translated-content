@@ -24,7 +24,6 @@ new AudioWorkletNode(context, name, options)
   - : このノードのもととなる {{domxref("AudioWorkletProcessor")}} の名前を表す文字列です。
     指定の名前の処理器が {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} メソッドで登録されている必要があります。
 - `options` {{optional_inline}}
-
   - : 以下の任意のプロパティのうち 0 個以上を持ち、新しいノードの設定をするオブジェクトです。
 
     <!-- 仕様書ではこのオブジェクトは AudioWorkletNodeOptions と呼ばれています -->
@@ -32,7 +31,6 @@ new AudioWorkletNode(context, name, options)
     > [!NOTE]
     > このオブジェクトに[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)を適用した結果が内部で対応する {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}} コンストラクターに渡されます。
     > これにより、用いるユーザー定義の {{domxref("AudioWorkletProcessor")}} の初期化のカスタマイズが可能になります。
-
     - `numberOfInputs` {{optional_inline}}
       - : {{domxref("AudioNode.numberOfInputs", "numberOfInputs")}} プロパティを初期化する値です。デフォルト値は 1 です。
     - `numberOfOutputs` {{optional_inline}}
@@ -47,7 +45,6 @@ new AudioWorkletNode(context, name, options)
 ### 例外
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : 指定された `options.outputChannelCount` が `0` である、または現在の実装が対応する最大値より大きいとき投げられます。
 
     `options.numberOfInputs` と `options.numberOfOutputs` の両方が 0 であるとき投げられます。

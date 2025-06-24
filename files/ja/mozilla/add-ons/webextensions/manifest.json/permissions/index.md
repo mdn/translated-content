@@ -120,7 +120,6 @@ API 権限には、拡張機能から使用したい [WebExtension API](/ja/docs
 ほとんどの場合、権限はその API へのアクセス権を付与するだけですが、以下のような例外があります。
 
 - `tabs` 権限は、 {{webextAPIref("tabs", "<code>tabs</code> API のうち特権が必要なもの")}}に対して、 [host 権限](#host_permissions)なしにアクセスできます。対象は `Tab.url`, `Tab.title`, `Tab.faviconUrl` です。
-
   - Firefox 85 以前では、 `tabs` は `url` を `queryInfo` 引数に含めて {{webextAPIref("tabs/query", "tabs.query()")}} を呼び出す際にも必要です。 `tabs` API の他の部分は、権限を要求することなく使用できます。
   - Firefox 86 および Chrome 50 では、 "tabs" 権限の代わりに matching [host 権限](#host_permissions)を使用することもできます。
 

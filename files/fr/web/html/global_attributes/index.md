@@ -20,9 +20,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `accesskey`
   - : Cet attribut fournit une indication permettant de générer un raccourci clavier pour l'élément courant. Cet attribut se compose d'une liste de caractères séparés par des espaces. Le navigateur doit utiliser le premier caractère qui existe selon la disposition du clavier utilisée.
 - `autocapitalize`
-
   - : Cet attribut contrôle la façon dont le texte saisi est automatiquement converti en majuscules. Les valeurs autorisées pour cet attribut sont :
-
     - `off` ou `none` : il n'y pas de convertion en majuscules réalisée.
     - `on` ou `sentences` : la première lettre de chaque phrase est écrite en majuscule par défaut. Les autres lettres sont en minuscules par défaut.
     - `words` : la première lettre de chaque mot est écrite en majuscule par défaut, les autres lettres sont en minuscules par défaut.
@@ -31,9 +29,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `class`
   - : Une liste de classes, séparées par des espaces, qui permettent de catégoriser l'élément. Les classes permettent au CSS et à JavaScript de manipuler des éléments spécifiques grâce à [des sélecteurs de classe](/fr/docs/Web/CSS/Class_selectors) (pour CSS) ou grâce à des fonctions telles que {{domxref("Document.getElementsByClassName()")}} (pour JavaScript).
 - `contenteditable`
-
   - : Un attribut à valeur contrainte qui indique si l'élément peut être édité par l'utilisateur. Si c'est le cas, le navigateur modifie l'interface utilisateur afin de permettre l'édition. Les valeur autorisées pour cet attribut sont :
-
     - `true` ou la chaîne vide : ces valeurs indiquent que l'élément doit pouvoir être édité
     - `false` qui indique que l'élément ne doit pas pouvoir être édité.
 
@@ -42,24 +38,18 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `data-*`
   - : Cette classe d'attribut, appelée « attributs de données personnalisés », permet d'échanger des informations dans un format propriétaire entre le HTML et le DOM afin de pouvoir les manipuler via des langage de scripts. La propriété {{domxref("HTMLElement.dataset")}} permet d'accéder à l'ensemble des attribut définis de cette façon.
 - `dir`
-
   - : Un attribut à valeur contrainte qui indique la directionnalité du texte de l'élément. Les valeurs autorisées pour cet attribut sont :
-
     - `ltr` (l'abbréviation anglaise pour _Left To Right_) indique que le contenu est écrit de gauche à droite (comme le français par exemple)
     - `rtl` (l'abbréviation anglaise pour _Right To Left_) indique que le contenu est écrit de droite à gauche (comme l'arabe par exemple)
     - `auto` : c'est l'agent utilisateur qui décide. Il utilise un algortihme qui analyse les caractères du contenu de l'élément jusqu'à trouver un caractère avec une forte directionnalité qu'il applique alors à l'ensemble de l'élément.
 
 - `draggable`
-
   - : Un attribut à valeur contrainte qui indique qu'un élément peut être glissé/déposé grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/HTML_Drag_and_Drop_API). Les valeurs autorisées pour cet attribut sont :
-
     - `true` : l'élément peut être glissé/déposé
     - `false` : l'élément ne peut pas être glissé/déposé.
 
 - `dropzone` {{experimental_inline}}
-
   - : Un attribut à valeur contrainte qui indique le type de contenu qui peut être déposé sur un élément grâce à l'[API _Drag & Drop_](/fr/docs/Web/API/HTML_Drag_and_Drop_API). Les valeurs autorisées pour cet attribut sont :
-
     - `copy` : lorsque l'élément est déposé, une copie de l'élément est créée
     - `move` : lorsque l'élément est déposé, il est déplacé vers ce nouvel emplacement
     - `link` : un lien est créé vers les données qui sont déplacée.
@@ -91,18 +81,14 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `slot`
   - : Cet attribut affecte un créneau de l'arbre du _[shadow DOM](/fr/docs/Web/API/Web_components/Using_shadow_DOM)_ pour un élément. L'élément ayant l'attribut `slot` est affecté au créneau créé par l'élément {{HTMLElement("slot")}} pour lequel l'attribut [`name`](/fr/docs/Web/HTML/Element/slot#name) correspond à la valeur de l'attribut `slot`.
 - `spellcheck` {{experimental_inline}}
-
   - : Un attribut à valeur contrainte qui définit s'il faut détecter les fautes d'orthographe/grammaire dans le texte de l'élément. Les valeurs autorisées pour cet attribut sont :
-
     - `true` qui indique que, si possible, il faut vérifier les erreurs d'orthographe
     - `false` qui indique qu'il ne faut pas vérifier les erreurs.
 
 - `style`
   - : Cet attribut contient les déclarations [CSS](/fr/docs/Web/CSS) utilisées pour mettre en forme l'élément. Note : il est recommandé d'utiliser un ou plusieurs fichiers séparés, plutôt que cet attribut, pour définir les règles de mise en forme. Le rôle de l'élément {{HTMLElement("style")}} consiste à permettre une mise en forme rapide, notamment pour des tests.
 - `tabindex`
-
   - : Cet attribut à valeur entière indique l'ordre dans lequel l'élément participe à la navigation au clavier via la tabulation. Il peut prendre différente valeur :
-
     - une valeur négative indiquera que l'élément peut recevoir le focus mais n'est pas accessible via la navigation séquentielle au clavier
     - `0` indiquera que l'élément peut recevoir le focus et être accessible via la navigation au clavier mais l'ordre est relatif et déterminé par l'agent utilisateur
     - une valeur positive indiquera que l'élément peut recevoir le focus et qu'il est accessible via la navigation au clavier. La valeur utilisée indique l'ordre relatif de l'élément dans la navigation. Autrement dit, la navigation au clavier ira dans le sens croissant des éléments selon leurs valeurs respectives de `tabindex`. Si plusieurs éléments ont la même valeur, ce sera leur ordre relatif dans le document qui sera utilisé.
@@ -110,9 +96,7 @@ En plus des attributs universels HTML, il existe également les attributs univer
 - `title`
   - : Cet attribut contient une représentation textuelle de l'information auquel il est lié. Une telle information est généralement, mais pas nécessairement, affichée sous la forme d'une bulle d'informations.
 - `translate` {{experimental_inline}}
-
   - : Un attribut à valeur contrainte qui est utilisé pour définir si les valeurs des attributs et des éléments fils de type {{domxref("Text")}} doivent être traduits lorsque la page est localisée. Les valeurs autorisées pour cet attribut sont :
-
     - La chaîne vide ou `yes` qui indiquent que l'élément doit être traduit
     - `no` qui indique que l'élément ne sera pas traduit.
 

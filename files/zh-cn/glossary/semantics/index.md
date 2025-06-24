@@ -71,5 +71,4 @@ HTML 应该编写为表示将要填充的*数据*，而不是基于其默认的�
 - MDN 上的[使用 HTML 章节和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements#使用要点)
 - 维基百科上的[计算机科学中语义的意义](https://en.wikipedia.org/wiki/Semantics#Computer_science)
 - 相关术语：
-
   - {{Glossary("SEO")}}

@@ -177,7 +177,6 @@ Planifiez soigneusement les étapes que vous allez enregistrer et pratiquez cett
 
 - Ne commencez pas une vidéo au milieu d'une suite d'étape. Veillez à ce qu'il y ait suffisamment de contexte pour que les actions illustrées aient du sens.
 - Pour chacune de vos actions, assurez-vous de les réaliser suffisamment lentement et de les mettre en évidence. Par exemple, lorsqu'on doit cliquer quelque part on pourra&nbsp;:
-
   - Déplacer la souris sur l'icône
   - Mettre en évidence ou zoomer (selon ce qui est le plus pertinent)
   - Suspendre le mouvement pendant un instant

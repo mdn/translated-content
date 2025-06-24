@@ -14,7 +14,6 @@ l10n:
 ## 같이 보기
 
 - [용어 사전](/ko/docs/Glossary)
-
   - {{glossary("GZIP")}}
   - {{glossary("Brotli")}}
   - {{glossary("PNG")}}

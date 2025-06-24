@@ -20,9 +20,7 @@ var querying = browser.tabs.query(
 ### Paramètres
 
 - `queryInfo`
-
   - : `object`. La fonction `query()` obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
-
     - `active`{{optional_inline}}
       - : `boolean`. Si les onglets sont actifs dans leurs fenêtres.
     - `audible`{{optional_inline}}

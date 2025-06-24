@@ -29,9 +29,7 @@ arr.findIndex(callback[, thisArg])
 ### 參數
 
 - `callback`
-
   - : 針對陣列中的每個元素，都會執行該回呼函式，執行時會自動傳入下面三個參數：
-
     - `element`
       - : 當前元素。
     - `index`{{optional_inline}}

@@ -43,9 +43,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails de la demande. Ceci inclura les en-têtes de réponse si vous avez inclus `"responseHeaders"` dans `extraInfoSpec`.
 
@@ -54,9 +52,7 @@ Les événements ont trois fonctions :
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
     - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet `détails` transmis à l'auditeur
 
@@ -71,7 +67,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -79,17 +74,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy

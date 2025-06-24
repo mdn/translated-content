@@ -32,7 +32,6 @@ reduceRight(callbackFn, initialValue)
 ### 引数
 
 - `callbackFn`
-
   - : 型付き配列の各要素に対して実行される関数です。その返値は、次に `callbackFn` を呼び出す際の `accumulator` 引数の値になります。最後の呼び出しでは、返値は `reduce()` の返値となります。この関数は以下の引数で呼び出されます。
     - `accumulator`
       - : 前回 `callbackFn` を呼び出した結果の値。最初の呼び出しでは、後で `initialValue` を指定した場合はその値になり、指定されなかった場合は型付き配列の最後の要素になります。

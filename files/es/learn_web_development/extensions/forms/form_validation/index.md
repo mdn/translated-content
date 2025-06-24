@@ -390,7 +390,6 @@ La API de validación de restricciones hace que las propiedades siguientes esté
 
 - `validationMessage`: Devuelve un mensaje localizado que describe las restricciones de validación que el control no satisface (si corresponde). Si el control no es candidato para la validación de restricciones (`willValidate` es `false`) o el valor del elemento satisface sus restricciones (es válido), esto devolverá una cadena vacía.
 - `validity`: Devuelve un objeto `ValidityState` que contiene varias propiedades que describen el estado de validez del elemento. Puedes encontrar todos los detalles de todas las propiedades disponibles en la página de referencia {{domxref("ValidityState")}}; a continuación se enumeran algunos de los más comunes:
-
   - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: Devuelve `true` si el valor no coincide con el [`pattern`](/es/docs/Web/HTML/Reference/Elements/input#pattern) especificado, y `false` si coincide. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
   - {{domxref("ValidityState.tooLong", "tooLong")}}: Devuelve `true` si el valor es mayor que la longitud máxima especificada por el atributo [`maxlength`](/es/docs/Web/HTML/Reference/Elements/input#maxlength), o `false` si es menor o igual al máximo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
   - {{domxref("ValidityState.tooShort", "tooShort")}}: Devuelve `true` si el valor es menor que la longitud mínima especificada por el atributo [`minlength`](/es/docs/Web/HTML/Reference/Elements/input#minlength), o `false` si es mayor o igual al mínmo. Si es verdadero, el elemento coincide con la pseudoclase {{cssxref(":invalid")}} de CSS.
@@ -631,9 +630,7 @@ Antes de validar el formulario, hazte estas preguntas:
 - ¿Qué debo hacer si el formulario no se valida?
   - : Esto es claramente un problema de la interfaz de usuario. Tienes que decidir cómo se comportará el formulario. ¿El formulario va a enviar los datos de todos modos? ¿Deberías resaltar los campos que dan error? ¿Deberías mostrar mensajes de error?
 - ¿Cómo puedo ayudar al usuario a corregir datos no válidos?
-
   - : Para reducir la frustración del usuario, es muy importante proporcionar tanta información útil como sea posible para guiarlo a fin de que corrija sus entradas de datos. Debes ofrecer sugerencias por adelantado para que sepan lo que se espera de ellos, así como mensajes de error claros. Si deseas profundizar en los requisitos de interfaz de usuario para la validación de formularios, aquí hay algunos artículos útiles que debes leer:
-
     - SmashingMagazine: [Validación de campo de formulario: El enfoque de solo errores](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Validación de formularios web: Buenas prácticas y tutoriales](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Six Revision: [Buenas prácticas para sugerencias y validación de formularios web](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)

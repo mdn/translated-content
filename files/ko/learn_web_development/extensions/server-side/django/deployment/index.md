@@ -155,7 +155,6 @@ Heroku는 현재까지 가장 오래 운영된 서비스들중 하나이며, 인
 - Heroku는 정말 돈 낼 필요가 없는 [무료 단계 (free tier)](https://www.heroku.com/pricing) 를 지원한다. (물론 약간의 제약이 있긴하다).
 - Heroku는 PaaS 개념의 서비스로 많은 웹 기반환경의 관리를 제공한다. 서버관리, 로드 밸런싱, 역방향 프록시등 여러가지 웹 기반환경들을 Heroku가 내부적으로 모두 제공하므로 이에 대한 걱정을 덜고 쉽게 개발을 시작할수 있다.
 - 제약이 있긴하지만, 이 제약들은 우리가 진행하려는 어플리케이션 개발에는 영향이 없을 것이다. 예를 들면 다음과 같다:
-
   - 무료 단계의 Heroku는 활성주기가 짧은 저장공간을 제공하므로 유저가 업로드한 파일을 Heroku 자체에 안전하게 저장할 수는 없다.
   - 무료 단계에서는 30분동안 아무런 요청도 없다면 웹 앱은 비활성화 될 것이다. 이 후에 요청이 오면 응답하는데 몇 초정도 약간의 시간이 더 필요하게 될것이다.
   - 무료 단계에서는 웹 사이트의 동작 가능 시간이 매월 특정시간 만큼으로 제한된다 ( 사이트가 "비활성(asleep)"상태인 경우의 시간은 제외된다). 이 제약은 사용빈도가 낮고/ 예제 확인용 사이트인 경우는 문제가 되지 않지만, 계속 활성화 상태가 필요한 앱의 경우에는 적합하지 않을것이다.
@@ -199,7 +198,6 @@ git 으로 작업하는 수많은 방법이 있지만, [Github](https://github.c
 1. 이곳( <https://github.com/> )을 방문하여 계정을 생성하라.
 2. 로그인 해서 꼭대기 툴바의 **+** 링크를 클릭하여 **New repository**를 선택하라.
 3. 이 폼의 모든 필드에 기입하라. 그렇지 않으면 진행이 불가한 것은 아니지만, 모두 채울것을 강력 추천한다.
-
    - 새로운 저장소 이름 (예시: _django_local_library_)과 설명 (예시: "Local Library website written in Django")을 입력하라.
    - "_Add .gitignore" 선택 목록에서 "_**Python**_"을 선택하라_.
    - "_Add a license" 선택 목록에서 선호하는 라이센스 유형을 선택하라_.
@@ -629,7 +627,6 @@ heroku ps   #Display dyno status
 ## See also
 
 - [Deploying Django](https://docs.djangoproject.com/en/2.0/howto/deployment/) (Django docs)
-
   - [Deployment checklist](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/) (Django docs)
   - [Deploying static files](https://docs.djangoproject.com/en/2.0/howto/static-files/deployment/) (Django docs)
   - [How to deploy with WSGI](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/) (Django docs)
@@ -637,7 +634,6 @@ heroku ps   #Display dyno status
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
-
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)
@@ -651,7 +647,6 @@ heroku ps   #Display dyno status
   - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 

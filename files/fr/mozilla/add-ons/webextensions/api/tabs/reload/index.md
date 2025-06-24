@@ -23,9 +23,7 @@ var reloading = browser.tabs.reload(
 - `tabId`{{optional_inline}}
   - : `integer`. L'ID de l'onglet à recharger. Par défaut à l'onglet sélectionné de la fenêtre en cours.
 - `reloadProperties`{{optional_inline}}
-
   - : `object`.
-
     - `bypassCache`{{optional_inline}}
       - : `boolean`. Contourner le cache web local. La valeur par défaut est `false`.
 

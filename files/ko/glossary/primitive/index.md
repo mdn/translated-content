@@ -28,7 +28,6 @@ l10n:
 - [JavaScript 자료 구조](/ko/docs/Web/JavaScript/Data_structures)
 - 위키백과의 [윈시 데이터 타입](https://en.wikipedia.org/wiki/Primitive_data_type)
 - [Glossary](/ko/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

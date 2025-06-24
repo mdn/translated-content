@@ -54,7 +54,6 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autoplay`
-
   - : Un attribut booléen qui indique que la vidéo doit automatiquement être lancée dès qu'elle peut être jouée sans être arrêtée par le chargement des données.
 
     > [!NOTE]
@@ -71,7 +70,6 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 - `controls`
   - : Si cet attribut est présent, le navigateur affichera des contrôles pour permettre à l'utilisateur de contrôler la lecture de la vidéo, le volume et la mise sur pause.
 - `controlslist` {{experimental_inline}}
-
   - : L'attribut `controlslist`, lorsqu'il est indiqué, aide le navigateur à choisir les contrôles à afficher pour la manipulation du média lorsque l'attribut `controls` est utilisé.
 
     Les valeurs autorisées pour cet attribut sont `nodownload`, `nofullscreen` et `noremoteplayback`.
@@ -79,9 +77,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
     On utilisera l'attribut `disablePictureInPicture` afin de désactiver ce mode et les contrôles associés.
 
 - `crossorigin`
-
   - : Cet attribut à valeur contrainte permet d'indiquer si le CORS doit être utilisé pour récupérer la vidéo. [Les ressources avec le CORS activé](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément {{HTMLElement("canvas")}} sans le _corrompre_. Les valeurs autorisées sont :
-
     - `anonymous` : une requête _cross-origine_ est envoyée sans information d'authentification. Autrement dit, un en-tête HTTP {{HTTPHeader("Origin")}} est envoyé, sans cookie, certificat X.509 ou sans authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.
     - `use-credentials` : une requête _cross-origine_ est envoyée avec une information d'authentification. Autrement dit, un en-tête HTTP `Header` est envoyé, avec un cookie, une certification ou une authentification HTTP simple. Si le serveur ne fournit pas d'informations d'authentification au site d'origine (c'est-à-dire en n'envoyant pas l'en-tête HTTP {{HTTPHeader("Access-Control-Allow-Origin")}}), la vidéo sera corrompue et son utilisation sera restreinte.
 
@@ -100,9 +96,7 @@ Pour apprendre les bases concernant `<video>`, nous vous conseillons de consulte
 - `playsinline`
   - : Un attribut booléen qui indique que la vidéo doit être jouée en incise, c'est-à-dire au sein de la zone de lecture de l'élément. À noter : l'absence de cet attribut n'implique pas que la vidéo sera lancée en plein écran.
 - `preload`
-
   - : Cet attribut à valeur contrainte est une indication destinée au navigateur sur la meilleure façon de charger la vidéo (selon l'auteur de la page). Il peut prendre l'une des valeurs suivantes :
-
     - `none` : la vidéo ne doit pas être préchargée.
     - `metadata` : seules les métadonnées de la vidéo (sa durée par exemple) sont récupérées.
     - `auto` : le fichier entier peut être téléchargé, même si l'utilisateur ne s'en sert pas.

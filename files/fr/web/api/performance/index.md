@@ -17,14 +17,12 @@ Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule {{
 _L'interface `Performance` n'hérite d'aucune propriété._
 
 - {{domxref("performance.navigation")}} {{readonlyInline}} {{deprecated_inline}}
-
   - : {{domxref("PerformanceNavigation")}} est un objet qui fournit des informations contextuelles sur les opérations incluses dans les indicateurs de `timing`, notamment si la page a été chargée ou actualisée, combien de redirections ont été effectuées, etc…
 
     > [!NOTE]
     > Indisponible dans les Web Workers.
 
 - {{domxref("performance.timing")}} {{readonlyInline}} {{deprecated_inline}}
-
   - : {{domxref("PerformanceTiming")}} est un objet contenant des informations de performance liées à la latence.
 
     > [!NOTE]

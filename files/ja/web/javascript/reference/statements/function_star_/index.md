@@ -268,7 +268,6 @@ for (const power of powers(2)) {
 - {{jsxref("Operators/function", "function")}} 式
 - {{jsxref("Functions", "関数と関数スコープ", "", 1)}}
 - その他のウェブリソース:
-
   - [Regenerator](https://facebook.github.io/regenerator/) an ES2015 generator compiler to ES5
   - [Forbes Lindesay: Promises and Generators: control flow utopia — JSConf EU 2013](https://www.youtube.com/watch?v=qbKWsbJ76-s)
   - [Task.js](https://github.com/mozilla/task.js)

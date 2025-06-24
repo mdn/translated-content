@@ -55,9 +55,7 @@ clip-path: shape(
 ### 参数
 
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
-
   - : 指定了如何填充形状的重叠区域。可能的取值包括：
-
     - `nonzero`：如果从某点绘制的射线穿过的左到右路径段多于右到左路径段，即导致非零计数，则该点被视为在形状内部。当省略 `<fill-rule>` 时，这是默认值。
 
     - `evenodd`：如果从某点绘制的射线穿过的路径段数量为奇数，则该点被视为在形状内部。这意味着每当射线进入形状时，它都没有相等数量的退出，表明缺少对应的退出而具有奇数个条目。
@@ -65,11 +63,9 @@ clip-path: shape(
     > **警告：** `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
 
 - `from <coordinate-pair>`
-
   - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。
 
 - `<shape-command>`
-
   - : 指定一个或多个逗号分隔的命令列表，用于定义形状，其语法类似于 [SVG 路径命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#路径命令)。命令包括 `<move-command>`、`<line-command>`、`<hv-line-command>`、`<curve-command>`、`<smooth-command>`、`<arc-command>` 和 `close`。每个命令的起始点是前一个命令的结束点，形状的第一个点由 [`from <coordinate-pair>`](#from_coordinate-pair) 参数定义。
 
     大多数形状命令的语法是一个关键字，提供一个指令，如 `move` 或 `line`，后跟 `by` 或 `to` 关键字，以及一组坐标。
@@ -90,12 +86,10 @@ clip-path: shape(
     `<hv-line-command>`：指定为 `[hline | vline] [by | to] <length-percentage>`。此命令将水平（`hline`）或垂直（`vline`）[LineTo 命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#lineto_路径命令)添加到形状命令列表中。使用 `hline`，从命令的起始点绘制水平线到由 `<length-percentage>` 定义的 `x` 位置的 `to` 或 `by`。使用 `vline`，从命令的起始点绘制垂直线到由 `<length-percentage>` 定义的 `y` 位置的 `to` 或 `by`。`by` 或 `to` 关键字分别确定了“相对”或“绝对”结束点。此命令相当于 `<line-command>`，其中一个坐标值由单个 `<length-percentage>` 设置，另一个坐标值与命令开始时的保持一致。
 
     `<curve-command>`：指定为 `curve [by | to] <coordinate-pair> via <coordinate-pair> [<coordinate-pair>]`。此命令将一个[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对”还是“绝对”。`via` 关键字指定贝塞尔曲线的控制点。
-
     - 如果只提供一个 `<coordinate-pair>`，该命令会绘制一条[二次贝塞尔曲线](/zh-CN/docs/Web/SVG/Reference/Attribute/d#二次贝塞尔曲线)，它由三个点（起点、控制点和终点）定义。
     - 如果提供两个 `<coordinate-pair>` 值，该命令会绘制一条三次贝塞尔曲线，它由四个点（起点、两个控制点和终点）定义。
 
     `<smooth-command>`：指定为 `smooth [by | to] <coordinate-pair> [via <coordinate-pair>]`。此命令将一个平滑的[贝塞尔曲线命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#三次贝塞尔曲线)添加到形状命令列表中。`by` 或 `to` 关键字确定由第一个 `<coordinate-pair>` 指定的曲线的结束点是“相对“还是”绝对“。
-
     - 如果省略 `via <coordinate-pair>`，该命令会绘制一条平滑的二次贝塞尔曲线，该曲线使用前一个控制点和当前终点来定义。
     - 如果包含可选的 `via` 关键字，则通过 `<coordinate-pair>` 指定曲线的控制点，绘制一条平滑的三次贝塞尔曲线，该曲线由前一个控制点、当前控制点和当前终点定义。
 
@@ -106,13 +100,11 @@ clip-path: shape(
     椭圆弧曲线命令定义了两个可能的椭圆，这两个椭圆都与起始点和结束点相交，并且每个椭圆都可以顺时针或逆时针追踪，从而根据弧的大小、方向和角度得到四个可能的弧。`of` 关键字指定从中获取弧的椭圆的大小。第一个 `<length-percentage>` 提供椭圆的水平半径，第二个提供垂直半径。如果只提供一个 `<length-percentage>`，则该值用于两个半径（圆的半径）。
 
     以下参数有助于确定使用哪个弧：
-
     - `<arc-sweep>`：指示所需的弧是否是顺时针（`cw`）或逆时针（`ccw`）围绕椭圆追踪的。如果省略，这默认为 `ccw`。
     - `<arc-size>`：指示所需的弧是否是两个弧中较大的一个（`large`）或较小的一个（`small`）。如果省略，这默认为 `small`。
     - `<angle>`：指定椭圆相对于 x 轴旋转的角度，单位为度。正角度将椭圆顺时针旋转，负角度将其逆时针旋转。如果省略，这默认为 `0deg`。
 
     特殊情况处理如下：
-
     - 如果只提供一个 `<length-percentage>`，则该值用于水平和垂直半径，从而有效地创建一个圆。在这种情况下，`<arc-size>` 和 `<angle>` 没有影响。
     - 如果任一半径为零，则该命令等同于到终点的 `<line-command>`。
     - 如果任一半径为负，则使用其绝对值。

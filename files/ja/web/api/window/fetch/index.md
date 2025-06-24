@@ -30,14 +30,11 @@ fetch(resource, options)
 ### 引数
 
 - `resource`
-
   - : 取得したいリソースを定義します。以下のどちらかが使用できます。
-
     - 文字列または{{Glossary("stringifier", "文字列化")}}できるその他のオブジェクト（{{domxref("URL")}} オブジェクトを含む）。取得したいリソースの直接の URL を含む文字列です。この URL は、文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} となります。
     - {{domxref("Request")}} オブジェクト。
 
 - `options` {{optional_inline}}
-
   - : リクエストに適用する独自の設定を含む {{domxref("RequestInit")}} オブジェクトです。
 
 ### 返値

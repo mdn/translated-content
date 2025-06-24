@@ -33,15 +33,11 @@ Authorization: <type> <credentials>
 ## Directives
 
 - _\<type>_
-
   - : [Le type d'authentification](/fr/docs/Web/HTTP/Authentication#schéma_d'authentification). Le type [`"Basic"`](/fr/docs/Web/HTTP/Authentication#basic_authentication_scheme) est souvent utilisé. Pour connaître les autres types :
-
     - [IANA registry of Authentication schemes](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
 
 - _\<credentials>_
-
   - : Si c'est le type d'authentification `"Basic"` qui est utilisé, les identifiants sont construits de la manière suivante :
-
     - L'identifiant de l'utilisateur et le mot de passe sont combinés avec deux-points : (`aladdin:sesameOuvreToi`).
     - Cette chaîne de caractères est ensuite encodée en [base64](/fr/docs/Glossary/Base64) (`YWxhZGRpbjpzZXNhbWVPdXZyZVRvaQ==`).
 

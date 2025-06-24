@@ -50,7 +50,6 @@ CSS フォントモジュールは可変フォントにも対応しています�
 ### アットルール
 
 - アットルール: {{cssxref("@font-face")}}
-
   - : 記述子:
     - {{cssxref("@font-face/ascent-override", "ascent-override")}}
     - {{cssxref("@font-face/descent-override", "descent-override")}}
@@ -67,7 +66,6 @@ CSS フォントモジュールは可変フォントにも対応しています�
     - {{cssxref("@font-face/unicode-range", "unicode-range")}}
 
 - アットルール: {{cssxref("@font-feature-values")}}
-
   - : 記述子:
     - {{cssxref("@font-feature-values/font-display", "font-display")}}
 
@@ -138,23 +136,18 @@ CSS フォントモジュールは可変フォントにも対応しています�
 ## ガイド
 
 - [テキストとフォントのスタイル設定の基礎](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-
   - : この初心者向けの学習記事では、テキストとフォントのスタイル設定の基本に応じた内容を扱っています。 {{cssxref("font")}} 一括指定を使ってフォントの太さ、ファミリ、スタイルを設定する方法や、テキストの配置、行間や字間を管理する方法などに応じた内容となっています。
 
 - [学習: ウェブフォント](/ja/docs/Learn_web_development/Core/Text_styling/Web_fonts)
-
   - : この初心者向け学習記事では、ウェブページでカスタムフォントを使用して、より多様で独自のテキストスタイル設定を実現する方法を説明します。
 
 - [OpenType フォント特性ガイド](/ja/docs/Web/CSS/CSS_fonts/OpenType_fonts_guide)
-
   - : フォント特性または変化形は、 OpenType フォントに含まれている様々な字形や文字スタイルを参照します。これらには合字 ('fi' や 'ffl' のような特殊な形の文字の組み合わせ)、カーニング (特定の字形の組み合わせにおける間隔の調整)、分数、数字のスタイル、他にもたくさんあります。これらはすべて OpenType の特性として参照され、特定のプロパティや低水準の制御プロパティ — {{cssxref("font-feature-settings")}} を通してウェブ上で使用することができます。この記事は、 CSS で OpenType フォント特性を使用することについて知る必要があるすべてのことを紹介します。
 
 - [可変フォントガイド](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)
-
   - : この記事は可変フォントを使用し始めるのに役立つでしょう。
 
 - [フォントのパフォーマンスの改善](/ja/docs/Learn_web_development/Extensions/Performance/CSS#improving_font_performance)
-
   - : CSS パフォーマンスガイドの一部であるこの記事では、フォントの読み込み、要求されるグリフのみの読み込み、 `font-display` 記述子によるフォント表示の動作を定義することについて説明しています。
 
 ## 関連概念

@@ -74,7 +74,6 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 
 - 内部で選択範囲が動いたときに editing hosts がどのようにフォーカスを得るかについて、他のブラウザーへ合わせるために [Selection API](/ja/docs/Web/API/Selection) を更新しました ([Firefox バグ 1318312](https://bugzil.la/1318312))。詳しくは[編集ホストのフォーカス変更に関する選択 API の挙動](/ja/docs/Web/API/Selection#編集ホストのフォーカス変更に関する選択_api_の挙動)をご覧ください。
 - 最近の仕様の変更に合致するよう、{{domxref("Selection")}} API を更新しました ([Firefox バグ 1359371](https://bugzil.la/1359371)):
-
   - {{domxref("Selection.collapse", "collapse()")}} および {{domxref("Selection.extend", "extend()")}} メソッドの `offset` 引数を省略可能にしました。
   - {{domxref("Selection.collapse", "collapse()")}} メソッドの `node` 引数を null にすることが可能になりました。
   - {{domxref("Selection.containsNode", "containsNode()")}} メソッドの `partialContainment` 引数が省略可能になりました。

@@ -14,7 +14,6 @@ prop in object
 ### Parámetros
 
 - `prop`
-
   - : Una cadena o expresión númerica que representa el nombre de una propiedad o el índice de un array (lo que no sea un símbolo se forzará a string).
 
 - `object`

@@ -258,16 +258,13 @@ W—Z
 ### {{cssxref("background-image")}}
 
 - Gradientes
-
   - {{cssxref("-moz-linear-gradient")}}
   - {{cssxref("-moz-radial-gradient")}}
 
 - Elementos
-
   - {{cssxref("-moz-element")}}
 
 - Sub-imágenes
-
   - {{cssxref("-moz-image-rect")}}
 
 ### {{Cssxref("border-color")}}

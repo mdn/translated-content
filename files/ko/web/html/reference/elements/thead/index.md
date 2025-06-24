@@ -130,9 +130,7 @@ td {
 ### 더 이상 사용하지 않는 특성
 
 - `align` {{deprecated_inline}}
-
   - : 아래에 나열된 속성들은 각 셀 컨텐츠의 수평 정렬 방법을 지정합니다. 가능한 값:
-
     - `left`, 컨텐츠를 셀의 왼쪽으로 정렬합니다.
     - `center`, 컨텐츠를 셀의 가운데로 정렬합니다.
     - `right`, 컨텐츠를 셀의 오른쪽으로 정렬합니다.
@@ -147,9 +145,7 @@ td {
     > - `char` 값과 같은 효과를 내고 싶다면, CSS3에서 {{cssxref("text-align")}} 속성의 값으로 [`char`](#char)의 값을 사용할 수 있습니다.
 
 - `bgcolor` {{Non-standard_inline}}
-
   - : 이 특성은 열의 각 셀의 배경색을 정의합니다. 앞에 '#'을 붙인 [sRGB](https://www.w3.org/Graphics/Color/sRGB) 6자리 16진수 코드입니다. 미리 정의된 16개의 색상 문자열을 사용할 수도 있습니다.
-
     - `black` = "#000000"
     - `green` = "#008000"
     - `silver` = "#C0C0C0"
@@ -171,22 +167,18 @@ td {
     > 이 특성은 표준이 아니며, Microsoft Internet Explorer의 몇몇 버전에서만 구현되므로 사용하지 마십시오. {{HTMLElement("thead")}} 요소에 스타일을 적용하려면 [CSS](/ko/docs/Web/CSS)를 사용해야 합니다. **bgcolor** 특성과 비슷한 효과를 내고 싶다면, 관련된 {{HTMLElement("td")}} 또는 {{HTMLElement("th")}} 요소에 [CSS](/ko/docs/Web/CSS) {{cssxref("background-color")}} 속성을 사용하세요.
 
 - `char` {{deprecated_inline}}
-
   - : 이 특성은 열의 셀을 정렬할 문자를 설정하는 데 사용됩니다. 숫자 또는 통화 값을 정렬할 때에는 일반적으로 마침표(.)가 포함됩니다. 만약 [`align`](#align)이 `char`로 설정되어 있지 않으면, 이 특성은 무시됩니다.
 
     > [!NOTE]
     > 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오. [`char`](#char)와 같은 효과를 내고 싶다면, CSS3에서 [`char`](#char) 특성을 {{cssxref("text-align")}} 속성의 값으로 하여 문자 집합을 사용할 수 있습니다.
 
 - `charoff` {{deprecated_inline}}
-
   - : 이 특성은 **char** 특성으로 지정된 정렬 문자에서 열 데이터를 오프셋할 문자의 수를 나타내는 데 사용됩니다.
 
     > **주의:** 이 특성은 최신 표준에서는 사용되지 않으며 지원되지 않으므로 사용하지 마십시오.
 
 - `valign` {{deprecated_inline}}
-
   - : 이 특성은 표 머리글의 각 행 내에 있는 텍스트의 수직 정렬 방식을 지정합니다. 이 특성에 사용 가능한 값:
-
     - `baseline`, 텍스트를 가능한 셀의 하단에 가깝게, 하지만 텍스트의 [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29)에 맞춰 배치합니다. 만약 문자들의 크기가 모두 같다면, 이것은 `bottom`과 같은 효과를 가집니다.
     - `bottom`, 텍스트를 가능한 한 셀의 하단에 가깝게 배치합니다.
     - `middle`, 텍스트를 셀의 가운데에 배치합니다.
@@ -211,6 +203,5 @@ td {
 
 - 테이블과 관련된 다른 HTML 요소들: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("tr")}}.
 - `<thead>` 요소에 스타일을 지정할 때 특히 유용할 CSS 속성과 가상 클래스들:
-
   - 각 열의 셀들을 정렬할 때 사용하는 {{cssxref(":nth-child")}} 가상 클래스.
   - '.'같은 동일한 문자에 모든 셀 내용을 정렬할 때 사용하는 {{cssxref("text-align")}} 속성.

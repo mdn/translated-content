@@ -152,9 +152,7 @@ tfoot td {
 ### 棄用屬性
 
 - `align` {{Deprecated_inline}}
-
   - : 這個枚舉屬性會指示表格中的文字要如何對齊。可用值如下：left：意思是表格應該顯示在文件的左方。
-
     - center：意思是表格應該顯示在文件的中間。
     - right：意思是表格應該顯示在文件的右方。在 CSS 要得出類似效果，應該設定 {{cssxref("margin-left")}} 與 {{cssxref("margin-right")}}；如果要置中，則要把 {{cssxref("margin")}} 屬性設定為 `0 auto`。
 
@@ -169,9 +167,7 @@ tfoot td {
 - `frame` {{Deprecated_inline}}
   - : 這個枚舉屬性定義圍繞在表格邊框的哪一邊要顯示。在 CSS 要得出類似效果，應該使用 {{cssxref("border-style")}} 與 {{cssxref("border-width")}} 屬性。
 - `rules` {{Deprecated_inline}}
-
   - : 這個枚舉屬性定義諸如線條之類的規則，要如何出現在表格。它擁有以下數值：`none`，代表沒有任何規則上的指示。這是預設值。
-
     - `groups`，只標示行群組和列群組（行群組由 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、和 {{HTMLElement("tfoot")}} 定義；列群組由 {{HTMLElement("col")}} 與 {{HTMLElement("colgroup")}} 定義）；
     - `rows`，會創立一組標示行的規則；
     - `columns`，會創立一組標示列的規則；
@@ -384,7 +380,6 @@ td {
 ## 參見
 
 - CSS properties that may be especially useful to style the `<table>` element:
-
   - {{cssxref("width")}} to control the width of the table;
   - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} to control the aspect of cell borders, rules and frame;
   - {{cssxref("margin")}} and {{cssxref("padding")}} to style the individual cell content;

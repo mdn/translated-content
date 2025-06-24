@@ -242,7 +242,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新の ECMAScript 標準では、以下の 8 つのデータ型が定義されています。
 
 - {{Glossary("Primitive", "プリミティブ型")}}のデータ型が 7 つあります。
-
   1. {{Glossary("Boolean", "論理型")}}。 `true` または `false`。
   2. {{Glossary("null")}}。null 値を意味する特殊なキーワードです。（JavaScript は大文字・小文字を区別するため、`null` は `Null` や `NULL` などと同じではありません。）
   3. {{Glossary("undefined")}}。値が未定義である最上位プロパティです。

@@ -46,9 +46,7 @@ var evaluating = browser.devtools.inspectedWindow.eval(
 - `expression`
   - : `string`. L'expression JavaScript à évaluer. La chaîne doit évaluer un objet qui peut être représenté comme JSON, ou une exception sera lancée. Par exemple, l'expression ne doit pas évaluer une fonction.
 - `options`{{optional_inline}}
-
   - : `object`. Options pour la fonction (Notez que Firefox ne supporte pas encore cette option), comme suit :
-
     - `frameURL`{{optional_inline}}
       - : `string`. L'URL du cadre dans lequel à évaluer l'expression. Si cela est supprimé, l'expression est évaluée dans la trame principale de la fenêtre.
     - `useContentScriptContext`{{optional_inline}}
@@ -65,12 +63,10 @@ Si aucune erreur n'est survenue, l'élément 0 contiendra le résultat de l'éva
 Si une erreur s'est produite, l'élément 0 sera indéfini et l'élément 1 contiendra un objet donnant des détails sur l'erreur. Deux types différents d'erreurs sont distingués :
 
 - Des erreurs rencontrées lors de l'évaluation du JavaScript (par exemple, des erreurs de syntaxe dans l'expression). Dans ce cas, l'élément 1 contiendra :
-
   - Une propriété boolean isException, définie sur true
   - Une valeur de propriété de chaîne, en donnant plus de détails.
 
 - D'autres erreurs (par exemple, une expression qui évalue sur un objet qui ne peut pas être représenté comme JSON). Dans ce cas, l'élément 1 contiendra:
-
   - Une propriété booléenne isError, définie sur true
   - Un code de propriété de chaîne contenant un code d'erreur.
 

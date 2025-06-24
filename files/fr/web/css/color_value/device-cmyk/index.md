@@ -22,7 +22,6 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34))
 ### Valeurs
 
 - `device-cmyk( <composante-cmjn>{4} [ / <alpha> ]? , <couleur>? )`
-
   - : `<composante-cmjn>` est une liste de 4 valeurs numériques (type [`<number>`](/fr/docs/Web/CSS/number)) ou pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) qui indiquent respectivement les composantes cyan, magenta, jaune et noire de la couleur.
 
     `/ <alpha>` peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète).

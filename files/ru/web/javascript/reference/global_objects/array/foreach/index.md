@@ -30,9 +30,7 @@ arr.forEach(function callback(currentValue, index, array) {
 ### Параметры
 
 - `callback`
-
   - : Функция, которая будет вызвана для каждого элемента массива. Она принимает от одного до трёх аргументов:
-
     - `currentValue`
       - : Текущий обрабатываемый элемент в массиве.
     - `index`{{optional_inline}}

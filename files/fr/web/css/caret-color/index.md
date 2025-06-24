@@ -58,7 +58,6 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ### Valeurs
 
 - `auto`
-
   - : L'agent utilisateur doit utiliser `currentcolor` mais peut ajuster la couleur du curseur afin d'améliorer la visibilité et le contraste avec le contenu environnant (l'arrière-plan, les ombres, etc.).
 
     > [!NOTE]

@@ -189,7 +189,6 @@ var section = document.querySelector("section");
    ```
 
    這樣就顧到至少 2 個參數。當然也有其他參數可選擇。但這個簡易範例只需要 2 個強制參數：
-
    - 在設立網路請求時，應使用 HTTP 函式。因為這裡只要檢索簡單的資料，所以用 [`GET`](/zh-TW/docs/Web/HTTP/Reference/Methods/GET) 就可以。
    - URL 提供請求目的地 — 這也就是我們剛剛儲存的 JSON 檔案網址。
 

@@ -20,7 +20,6 @@ l10n:
 - [在 JavaScript 中定义方法](/zh-CN/docs/Web/JavaScript/Reference/Functions/Method_definitions)（传统语法与新的简写语法的比较）
 - [JavaScript 内置方法列表](/zh-CN/docs/Web/JavaScript/Reference)
 - [MDN Web 文档术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("function", "函数")}}
   - {{Glossary("object", "对象")}}
   - {{Glossary("property", "属性")}}

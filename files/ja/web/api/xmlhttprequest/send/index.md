@@ -26,9 +26,7 @@ send(body)
 ### 引数
 
 - `body` {{optional_inline}}
-
   - : XHR のリクエストの中で送られる本文データです。次のものが使用できます。
-
     - {{domxref("Document")}}: 送信前にシリアライズされている場合。
     - `XMLHttpRequestBodyInit`: [Fetch の仕様書](https://fetch.spec.whatwg.org/#typedefdef-xmlhttprequestbodyinit)によれば、{{domxref("Blob")}}、{{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}}、{{jsxref("DataView")}}、{{domxref("FormData")}}、{{domxref("URLSearchParams")}}、文字列リテラル、オブジェクトが利用できます。
     - `null`

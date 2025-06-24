@@ -215,7 +215,6 @@ The following screenshot provide an example of what the finished program should 
 
 1. 建立一個此網站的專案及 app 骨架(可以參考[Django 教學 2 : 建立一個網站骨架](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website))。你也許會用『diyblog』作為專案名稱，『blog』作為 app 的名稱。
 2. 建立部落格文章、評論與其他任何所需物件的模型。當你在思考怎麼設計的時候，請記得：
-
    - 每一個評論都只屬於一篇部落格文章，但每一個部落格文章可以有很多筆評論。
    - 部落格文章必須要依照發布時間排序(新至舊)，評論要依照發布排序(舊至新)。
    - 不是每位使用者都是部落客，但是每一位使用者都可以留下評論。
@@ -236,12 +235,10 @@ Some general hints:
 1. The index page can be implemented as a basic function view and template (just like for the locallibrary).
 2. The list view for blog posts and bloggers, and the detail view for blog posts can be created using the [generic list and detail views](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django/Generic_views).
 3. The list of blog posts for a particular author can be created by using a generic list Blog list view and filtering for blog object that match the specified author.
-
    - You will have to implement `get_queryset(self)` to do the filtering (much like in our library class `LoanedBooksAllListView`) and get the author information from the URL.
    - You will also need to pass the name of the author to the page in the context. To do this in a class-based view you need to implement `get_context_data()` (discussed below).
 
 4. The _add comment_ form can be created using a function-based view (and associated model and form) or using a generic `CreateView`. If you use a `CreateView` (recommended) then:
-
    - You will also need to pass the name of the blog post to the comment page in the context (implement `get_context_data()` as discussed below).
    - The form should only display the comment "description" for user entry (date and associated blog post should not be editable). Since they won't be in the form itself, your code will need to set the comment's author in the `form_valid()` function so it can be saved into the model ([as described here](https://docs.djangoproject.com/en/2.0/topics/class-based-views/generic-editing/#models-and-request-user) — Django docs). In that same function we set the associated blog. A possible implementation is shown below (`pk` is a blog id passed in from the URL/URL configuration).
 

@@ -30,9 +30,7 @@ li {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - **`download`**
-
   - : Sans valeur, le navigateur proposera un nom de fichier/extension, généré à partir de diverses sources :
-
     - L'en-tête HTTP [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
     - Le segment final dans l'URL : [path](/fr/docs/Web/API/URL/pathname)
     - Le [Type MIME](/fr/docs/Glossary/MIME_type) (de l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type), le début d'une URL [`data:`](/fr/docs/Web/URI/Schemes/data), ou [`Blob.type`](/fr/docs/Web/API/Blob/type) pour une URL [`blob:`](/fr/docs/Web/API/URL/createObjectURL_static)).
@@ -43,14 +41,11 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     >
     > - `download` ne fonctionne que pour [les URLs de même origine](/fr/docs/Web/Security/Same-origin_policy), ou les schémas `blob:` et `data:`.
     > - Si l'en-tête `Content-Disposition` comporte des informations différentes de celles de l'attribut `download`, le comportement résultant peut différer :
-    >
     >   - Si l'en-tête spécifie un `nom de fichier`, il a priorité sur un nom de fichier spécifié dans l'attribut `download`.
     >   - Si l'en-tête spécifie une disposition de `inline`, Chrome, et Firefox 82+, donnent la priorité à l'attribut et le traitent comme un téléchargement. Les versions de Firefox antérieures à 82 donnent la priorité à l'en-tête et affichent le contenu en ligne.
 
 - **`href`**
-
   - : L'URL vers laquelle pointe l'hyperlien. Les liens ne sont pas limités aux URL basées sur HTTP - ils peuvent utiliser n'importe quel schéma d'URL pris en charge par les navigateurs :
-
     - Sections d'une page avec des fragments d'URL
     - Des morceaux de fichiers médias avec des fragments de médias
     - Les numéros de téléphone avec l'URL `tel:`.
@@ -66,9 +61,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`rel`**
   - : Cet attribut indique la relation entre la cible du lien et l'objet faisant le lien. La valeur est une liste de [types de liens](/fr/docs/Web/HTML/Attributes/rel) séparés par des espaces.
 - **`target`**
-
   - : Où afficher l'URL liée, comme nom d'un _contexte de navigation_ (un onglet, une fenêtre ou un [`<iframe>`](/fr/docs/Web/HTML/Element/iframe)). Les mots-clés suivants ont des significations spéciales pour l'endroit où charger l'URL :
-
     - `_self` : le contexte de navigation actuel. (Par défaut)
     - `_blank` : généralement un nouvel onglet, mais les utilisateurs peuvent configurer les navigateurs pour ouvrir une nouvelle fenêtre à la place.
     - `_parent` : le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, il se comporte comme `_self`.
@@ -83,7 +76,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 ### Attributs obsolètes
 
 - **`charset`** {{Deprecated_Inline}}
-
   - : Fait allusion aux [encodages des caractères](/fr/docs/Glossary/Character_encoding) de l'URL liée.
 
     > [!NOTE]
@@ -92,7 +84,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`coords`** {{Deprecated_Inline}}
   - : Utilisé avec [l'attribut `shape`](#shape). Une liste de coordonnées séparées par des virgules.
 - **`name`** {{Deprecated_Inline}}
-
   - : Était nécessaire pour définir un emplacement cible possible dans une page. En HTML 4.01, `id` et `name` pouvaient tous deux être utilisés sur `<a>`, pour autant qu'ils aient des valeurs identiques.
 
     > [!NOTE]
@@ -101,7 +92,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`rev`** {{Deprecated_Inline}}
   - : Spécifiait un lien inverse ; l'opposé de [l'attribut `rel`](#rel). Déprécié pour avoir été très confus.
 - **`shape`** {{Deprecated_Inline}}
-
   - : La forme de la région de l'hyperlien dans une carte d'image.
 
     > [!NOTE]

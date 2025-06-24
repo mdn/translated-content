@@ -16,9 +16,7 @@ l10n:
 该类型的值是一个对象。其包含以下属性：
 
 - `fingerprint`
-
   - : `Object`。包含下列属性的对象：
-
     - `sha1`
       - : `String`。证书 DER 编码的 SHA-1 散列值。
     - `sha256`
@@ -27,7 +25,6 @@ l10n:
 - `isBuiltInRoot`
   - : `Boolean`。当证书是在浏览器中安装的信任根证书之一时为 `true`，否则为 `false`。
 - `issuer`
-
   - : `String`。颁发此证书的组织的专有名称，格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US”。
@@ -37,22 +34,17 @@ l10n:
 - `serialNumber`
   - : `String`。证书的[序列号](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.2).
 - `subject`
-
   - : `String`。被颁发此证书的组织的专有名称，格式化为逗号分隔的相对专有名称的列表，其中各项的形式都是“type=value”。
 
     例如“CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US”。
 
 - `subjectPublicKeyInfoDigest`
-
   - : `Object`。包含下列属性的对象：
-
     - `sha256`
       - : `String`。DER 编码的[公钥信息](https://datatracker.ietf.org/doc/html/rfc5280#section-4.1.2.7)的 SHA-256 散列值的 Base64 编码。
 
 - `validity`
-
   - : `Object`。该证书的有效期。包含下列属性的对象：
-
     - `start`
       - : `Number`。证书有效期的开始时间，以[自纪元以来的毫秒数](https://zh.wikipedia.org/wiki/Unix时间)表示。
     - `end`

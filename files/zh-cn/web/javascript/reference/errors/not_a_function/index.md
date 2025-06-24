@@ -25,11 +25,9 @@ TypeError: "x" is not a function
 再比如，在 JavaScript 中很多原生对象的内置方法需要你提供一个（回调）函数。所以你必须提供一个函数，以使这些方法正常工作：
 
 - 当你在使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 对象时：
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - 当你在使用 {{jsxref("Map")}} 和 {{jsxref("Set")}} 对象时：
-
   - {{jsxref("Map.prototype.forEach()")}} and {{jsxref("Set.prototype.forEach()")}}
 
 ## 示例

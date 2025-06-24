@@ -37,7 +37,6 @@ Comencemos observando los componentes básicos de cualquier lenguaje: los tipos.
 - {{jsxref("Boolean", "Booleanos")}}
 - {{jsxref("Symbol", "Símbolos")}} (nuevo en ES2015)
 - {{jsxref("Object", "Objetos")}}
-
   - {{jsxref("Function", "Funciones")}}
   - {{jsxref("Array")}}
   - {{jsxref("Date")}}

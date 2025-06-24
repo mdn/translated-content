@@ -28,9 +28,7 @@ new SharedWorker(aURL, options)
 - `name` {{optional_inline}}
   - : ワーカーのスコープを表す {{domxref("SharedWorkerGlobalScope")}} の識別名を指定する文字列で、同じ共有ワーカーのインスタンスの作成やデバッグに有用です。
 - `options` {{optional_inline}}
-
   - : オブジェクトのインスタンスを作成する際に設定することができる、オプションプロパティを格納したオブジェクト。利用できるプロパティは以下のとおりです。
-
     - `type`
       - : 作成するワーカーの種類を指定する文字列です。この値には `classic` または `module` を指定することができます。指定しない場合、既定では `classic` が使用されます。
     - `credentials`

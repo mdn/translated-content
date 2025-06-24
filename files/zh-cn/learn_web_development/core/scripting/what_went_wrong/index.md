@@ -50,7 +50,6 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
    ![不是函数](屏幕快照_2018-10-17_20.27.08.png)
 
 2. 这个错误很容易跟踪，浏览器为你提供了几条有用的信息（截图来自 Firefox，其他浏览器也提供类似信息）。从左到右依次为：
-
    - 红色“!”表示这是一个错误。
    - 一条出错信息，表示问题出在哪儿：“TypeError：**guessSubmit**.addeventListener is not a function”（类型错误：**guessSubmit**.addeventListener 不是函数）
    - 点击 \[详细了解] 将跳转到一个 MDN 页面，其中包含了此类错误超详细的解释。

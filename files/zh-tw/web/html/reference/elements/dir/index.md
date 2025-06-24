@@ -33,7 +33,6 @@ slug: Web/HTML/Reference/Elements/dir
 
 - 其他與列表相關的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}；
 - 可能特別有用於樣式化 `<dir>` 元素的 CSS 屬性：
-
   - {{cssxref('list-style')}} 屬性，用於選擇序數的顯示方式。
   - [CSS 計數器](/zh-TW/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用於處理複雜的巢狀列表。
   - {{Cssxref('line-height')}} 屬性，用於模擬已棄用的 [`compact`](#compact) 屬性。

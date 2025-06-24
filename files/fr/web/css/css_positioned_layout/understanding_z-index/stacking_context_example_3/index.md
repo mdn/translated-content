@@ -24,11 +24,8 @@ Ainsi donc, un menu de troisième niveau s'empilera sous les menus de deuxième 
 Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement&nbsp;:
 
 - Contexte d'empilement racine
-
   - Niveau #1
-
     - Niveau #2 (z-index&nbsp;: 1)
-
       - Niveau #3
       - …
       - Niveau #3

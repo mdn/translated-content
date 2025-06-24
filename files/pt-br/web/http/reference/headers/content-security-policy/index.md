@@ -38,7 +38,6 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 #### Lista de Diretivas de busca de Política de Segurança de Conteúdo (CSP)
 
 - {{CSP("child-src")}}
-
   - : Define uma origem válida para [web workers](/pt-BR/docs/Web/API/Web_Workers_API) e contextos aninhados de navegação carregados usando elementos como {{HTMLElement("frame")}} e {{HTMLElement("iframe")}}.
 
     > [!WARNING]
@@ -59,7 +58,6 @@ Diretivas de busca (_Fetch directives_) controlam as localizações dos quais ce
 - {{CSP("media-src")}}
   - : Especifica origens válidas para carregar dados de media usando os elementos {{HTMLElement("audio")}} , {{HTMLElement("video")}} e {{HTMLElement("track")}}.
 - {{CSP("object-src")}}
-
   - : Especifica origens válidas para os elementos {{HTMLElement("object")}}, {{HTMLElement("embed")}}, e {{HTMLElement("applet")}}.
 
     > [!NOTE]
@@ -115,7 +113,6 @@ Diretivas de Relatório controlam o processo de reportar as violações CSP. Vej
 #### Lista de Diretivas de Relatório da Política de Segurança de Conteúdo
 
 - {{CSP("report-uri")}}{{deprecated_inline}}
-
   - : Instrui ao agente de usuário para reportar tentativas de violaçnao de Política de Segurança de Conteúdo. Esses relatórios de violação consistem de documentos {{Glossary("JSON")}} enviados por requisição HTTP `POST` para uma URI especificada.
 
     > [!WARNING]

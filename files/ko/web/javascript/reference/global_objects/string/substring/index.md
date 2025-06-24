@@ -30,7 +30,6 @@ str.substring(indexStart[, indexEnd])
 - `indexStart`
   - : 반환문자열의 시작 인덱스
 - `indexEnd`
-
   - : 옵션. 반환문자열의 마지막 인덱스 (포함하지 않음.)
 
 ### 반환값

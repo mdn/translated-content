@@ -47,7 +47,6 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
     있습니다. 이 모듈에서는 CSS의 기본적인 작동 원리와 구문의 생김새, HTML에 실제로 적용하는 법을 배우면서 다음 과정으로
     가는 길을 닦습니다.
 - [CSS의 구성 블록](/ko/docs/Learn_web_development/Core/Styling_basics)
-
   - : 이 모듈은 [CSS 첫걸음](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics)이 끝난 곳부터 시작합니다. 이제 언어와 구문에
     익숙해졌고, 기본적인 사용법도 익혀봤으니 약간 더 깊게 들어갈 차례입니다. 이 모듈에서는 종속과 상속, 사용할 수 있는
     모든 선택자 유형, 단위와 크기, 배경과 테두리 스타일, 디버깅 등등 많은 것을 알아봅니다.
@@ -74,7 +73,6 @@ MDN [CSS 학습지](/ko/docs/conflicting/Learn_web_development/Core/Styling_basi
 
 - [CSS 참고서](/ko/docs/Web/CSS/Reference): 숙련된 웹 개발자를 위해 CSS의 모든 속성과 개념을 설명합니다.
 - CSS 핵심 개념
-
   - [언어 구문과 형태](/ko/docs/Web/CSS/Syntax)
   - [명시도](/ko/docs/Web/CSS/Specificity), [상속](/ko/docs/Web/CSS/Inheritance),
     [종속](/ko/docs/Web/CSS/Cascade)

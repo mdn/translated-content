@@ -115,7 +115,6 @@ original_slug: Web/XSLT/Transforming_XML_with_XSLT
 
 - [Books](/ko/Transforming_XML_with_XSLT/For_Further_Reading#Books)
 - [Online](/ko/Transforming_XML_with_XSLT/For_Further_Reading#Online)
-
   - [The World Wide Web Consortium](/ko/Transforming_XML_with_XSLT/For_Further_Reading#The_World_Wide_Web_Consortium)
   - [Portals](/ko/Transforming_XML_with_XSLT/For_Further_Reading#Portals)
   - [Articles](/ko/Transforming_XML_with_XSLT/For_Further_Reading#Articles)

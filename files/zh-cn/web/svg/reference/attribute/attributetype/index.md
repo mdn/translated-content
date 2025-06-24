@@ -17,7 +17,6 @@ slug: Web/SVG/Reference/Attribute/attributeType
 - CSS
   - : 指定{{ SVGAttr("attributeName") }}的值是一个 CSS 属性名。
 - XML
-
   - : 指定{{ SVGAttr("attributeName") }}的值是一个 XML 属性名，在目标元素的默认 XML 命名空间里。
 
 - auto

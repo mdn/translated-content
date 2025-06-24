@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètre
 
 - `callback`
-
   - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}. L'onglet qui était actif lorsque l'icône a été cliquée .
 

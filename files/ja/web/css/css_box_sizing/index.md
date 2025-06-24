@@ -60,23 +60,18 @@ l10n:
 ## ガイド
 
 - [アスペクト比を理解する](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-
   - : `aspect-ratio` プロパティについて学び、置換要素と非置換要素のアスペクト比について議論し、一般的なアスペクト比の使用例を検討します。
 
 - [CSS ボックスモデルの紹介](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-
   - : CSS の基本概念のひとつであるボックスモデルについての解説です。このモデルは、CSS が要素をどのようにレイアウトするかを定義するもので、コンテンツ、パディング、境界、マージン領域などが含まれます。
 
 - [マージンの相殺をマスターする](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
-
   - : 隣接する 2 つのマージンが 1 つに折りたたまれることがあります。この記事では、この現象がいつ、なぜ起こるのか、そしてどのように制御するのかについて説明します。
 
 - [視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)
-
   - : 視覚整形モデルを説明します。
 
 - [主軸方向のフレックスアイテムの比率の制御](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-
   - : 内在的なサイズ調整について、{{CSSxRef("flex-grow")}}、{{CSSxRef("flex-shrink")}}、{{CSSxRef("flex-basis")}} を使用して主軸に沿ってフレックスアイテムのサイズと柔軟性を制御する方法を理解する前段階として説明します。
 
 ## 関連概念

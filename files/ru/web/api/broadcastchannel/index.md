@@ -24,7 +24,6 @@ _Этот интерфейс также наследует свойства от
 ### Обработчики событий
 
 - {{domxref("BroadcastChannel.onmessage")}}
-
   - : свойство [`event handler`](/ru/docs/Web/Events/Event_handlers), определяющее функцию, которая будет запущена, когда произойдёт вызов события [`message`](/ru/docs/Web/API/BroadcastChannel/message_event) на этом объекте.
 
 - {{domxref("BroadcastChannel.onmessageerror")}}

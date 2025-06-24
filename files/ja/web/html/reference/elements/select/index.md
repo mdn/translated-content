@@ -62,7 +62,6 @@ select {
 - [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
   - : 論理属性で、ユーザーがそのコントロールを利用することができないことを示します。もしこの属性が指定されていない場合、コントロールはその設定を親要素、例えば {{htmlelement("fieldset")}} 要素から継承します。もし親要素に `disabled` 属性を持つものがなければ、そのコントロールは利用可能です。
 - `form`
-
   - : `<select>` を関連付ける {{HTMLElement("form")}} 要素（_フォームオーナー_）です。この属性の値は、同じ文書内の `<form>` 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければなりません。（この属性が設定されていない場合は、 `<select>` はその祖先である `<form>` が存在すればそれと関連付けられます。）
 
     この属性によって、 `<select>` 要素は、 `<form>` 要素の子孫に限らず、文書内のどこの `<form>` と結び付けることもできます。これは祖先の `<form>` を上書きすることもできます。
@@ -74,7 +73,6 @@ select {
 - [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
   - : 論理属性で、空ではない文字列の値の選択肢を選択しなければならないことを示します。
 - [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
-
   - : コントロールがスクロールするリストボックスとして表示される場合（つまり、 `multiple` が指定されている場合）、この属性は一度に見えるべきリストの行数を表します。ブラウザーは、 select 要素をスクロールリストボックスとして提供する必要はありません。既定値は `0` です。
 
     > [!NOTE]

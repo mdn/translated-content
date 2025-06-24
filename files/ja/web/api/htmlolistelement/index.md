@@ -20,9 +20,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLOListElement.start")}}
   - : `long` 型の値で [`start`](/ja/docs/Web/HTML/Reference/Elements/ol#start) を反映しており、リストの最初の要素の最初の番号の値を定義します。
 - {{domxref("HTMLOListElement.type")}}
-
   - : 文字列で [`type`](/ja/docs/Web/HTML/Reference/Elements/ol#type) を反映しており、表示に使用するマーカーの種類を定義します。以下の値を取ることができます。
-
     - `'1'` は数字が使用されることを意味します。例: `1`, `2`, `3`, `4`, `5`, …
     - `'a'` は小文字のラテンアルファベットが使用されることを意味します。例: `a`, `b`, `c`, `d`, `e`, …
     - `'A'` は大文字のラテンアルファベットが使用されることを意味します。例: `A`, `B`, `C`, `D`, `E`, …

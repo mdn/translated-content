@@ -22,9 +22,7 @@ insertRule(rule, index)
 ### 參數
 
 - `rule`
-
   - : 包含要插入規則的字串。插入規則的內容需視其類型而定：
-
     - **針對[規則集](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax#css_語句)**，需包含[選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)及樣式宣告。
     - **針對 [at-規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)**，需包含 at-識別符與規則內容。
 

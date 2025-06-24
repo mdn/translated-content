@@ -15,6 +15,5 @@ l10n:
 
 - [동일 출처 정책](/ko/docs/Web/Security/Same-origin_policy)
 - [MDN 웹 문서 용어사전](/ko/docs/Glossary):
-
   - {{Glossary("CORS")}}
   - {{Glossary("origin")}}

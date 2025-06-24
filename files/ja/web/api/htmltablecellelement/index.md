@@ -26,9 +26,7 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLTableCellElement.rowSpan")}}
   - : 符号なし整数で、このセルがまたがらなければならない行数を示します。これは [`rowspan`](/ja/docs/Web/HTML/Reference/Elements/td#rowspan) 属性を反映したものです。
 - {{domxref("HTMLTableCellElement.scope")}}
-
   - : {{HTMLElement("th")}} セルのスコープを示す文字列です。見出しセルは `scope` プロパティを用いて、指定された行または列、あるいは現在の行グループ内のまだスコープされていないセル（つまり、同じ祖先の {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}} 要素）に適用するように設定することが可能です。もし `scope` に何も値が指定されなければ、見出しはこの方法で直接セルと関連付けられることはありません。 `scope` に指定可能な値は以下の通りです。
-
     - `col`
       - : 見出しセルは同じ列（`colspan`が使われている場合は列）の続くセルに適用され、列の終わりか列内の別の `<th>` が新しいスコープを確立するまで適用されます。
     - `colgroup`

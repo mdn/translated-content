@@ -78,7 +78,6 @@ l10n:
 
 1. [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), [Glitch](https://glitch.com/)와 같은 온라인 공유가능한 편집기에 작업 내용을 넣어주세요.
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250)에서 평가 또는 도움 요청용 게시물을 작성하세요. 게시물에는 다음과 같은 내용이 포함되어야 합니다.
-
    - "멋지게 보이는 박스"와 같이 설명적인 제목.
    - 이미 시도한 내용과 원하는 도움이나 평가에 대한 세부 정보. 예를 들어, 도움이 필요하거나 평가를 원하는 상황을 설명하세요.
    - 온라인 공유 가능한 편집기(위의 단계 1에서 언급한 사이트)에 작업 내용을 공유하는 링크. 다른 사람의 코드를 보지 못하면 코딩 문제를 도와드리기 어려울 수 있으므로 이 점을 유의하세요.

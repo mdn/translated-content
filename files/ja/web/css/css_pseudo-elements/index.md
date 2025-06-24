@@ -45,15 +45,12 @@ l10n:
 ## ガイド
 
 - [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-
   - : すべての CSS 仕様と WebVTT で定義されている擬似要素のアルファベット順リスト。
 
 - [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
-
   - : セレクターに関する CSS 構成要素の節の一部です。この記事では、擬似要素とは何か、擬似クラスとどのように組み合わせ、 `::before` および `::after` 擬似要素でコンテンツを生成するために使用できるかを定義します。
 
 - [擬似要素を使用した装飾的なボックスの作成](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes#pseudo-elements)
-
   - : 視覚効果のために `::before` と `::after` 擬似要素を使用して生成コンテンツをスタイル設定する例です。
 
 ## 関連する概念
@@ -61,34 +58,28 @@ l10n:
 - {{cssxref("::backdrop")}}
 
 - Web Video Text Tracks Format (WebVTT) キュー:
-
   - {{cssxref("::cue")}}
   - {{cssxref("::cue", "::cue()")}}
 
 - [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュール
-
   - {{cssxref("::column")}}
 
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-
   - {{cssxref("::scroll-button()")}}
   - {{cssxref("::scroll-marker")}}
   - {{cssxref("::scroll-marker-group")}}
   - {{cssxref(":target-current")}}
 
 - [CSS スコープ化](/ja/docs/Web/CSS/CSS_scoping)モジュール
-
   - {{CSSXref(":host")}}
   - {{CSSXref(":host_function", ":host()")}}
   - {{CSSXref(":host-context", ":host-context()")}}
   - {{CSSXref("::slotted", "::slotted()")}}
 
 - [CSS シャドウ部品](/ja/docs/Web/CSS/CSS_shadow_parts)モジュール
-
   - {{CSSXref("::part")}}
 
 - [CSS ビュー遷移](/ja/docs/Web/CSS/CSS_view_transitions)モジュール
-
   - {{cssxref("::view-transition")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-image-pair()")}} {{Experimental_Inline}}
   - {{cssxref("::view-transition-group()")}} {{Experimental_Inline}}
@@ -96,7 +87,6 @@ l10n:
   - {{cssxref("::view-transition-old()")}} {{Experimental_Inline}}
 
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)
-
   - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors)
   - [結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators#結合子)
   - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors)
@@ -109,7 +99,6 @@ l10n:
 - [`:placeholder-shown`](/ja/docs/Web/CSS/:placeholder-shown) セレクター
 
 - [CSS 生成コンテンツ](/ja/docs/Web/CSS/CSS_generated_content)
-
   - {{cssxref("content")}} プロパティ
   - {{cssxref("quotes")}} プロパティ
 

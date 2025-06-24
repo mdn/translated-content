@@ -31,14 +31,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `addedTabId`
       - : `integer`. ID de l'onglet de remplacement.
 
     <!---->
-
     - `removedTabId`
       - : `integer`. ID de l'onglet qui a été remplacé.
 

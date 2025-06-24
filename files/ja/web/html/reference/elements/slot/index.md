@@ -15,7 +15,6 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `name`
-
   - : スロットの名前です。
 
     **名前付きスロット**は、 `<slot>` 要素に `name` 属性が付きます。

@@ -22,9 +22,7 @@ var removing = browser.cookies.remove(
 ### Paramètres
 
 - `details`
-
   - : Un `objet` contenant des informations permettant d'identifier le cookie à supprimer. Il contient les propriétés suivantes :
-
     - `firstPartyDomain`{{optional_inline}}
       - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
     - `name`

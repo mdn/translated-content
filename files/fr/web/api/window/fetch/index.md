@@ -26,16 +26,12 @@ const fetchResponsePromise = Promise<Response> fetch(entrée[, init]);
 ### Paramètres
 
 - `entrée`
-
   - : Définit la ressource que vous voulez obtenir. Cela peut être :
-
     - Un {{domxref("USVString")}} qui contient l'URL de la ressource à obtenir. Certains navigateurs acceptent `blob:` et `data:`.
     - Un objet {{domxref("Request")}}.
 
 - `init` {{optional_inline}}
-
   - : Un objet qui contient les paramètres de votre requête. Les options possibles sont :
-
     - `method`
       - : La méthode de la requête, par exemple `GET` ou `POST`. Comme spécifié, dans la [spécification WHATWG](https://fetch.spec.whatwg.org/#methods), toute méthode définie dans la [RFC 9110](https://www.rfc-editor.org/rfc/rfc9110#name-overview) sera automatiquement mise en majuscule. Si vous souhaitez utiliser une méthode exotique (comme `PATCH`), vous devrez la mettre en majuscule vous-même. Notez que l'en-tête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) n'était pas défini dans les requêtes `fetch()` avec les méthodes [`HEAD`](/fr/docs/Web/HTTP/Methods/HEAD) ou [`GET`](/fr/docs/Web/HTTP/Methods/GET) à cause d'un bug pour Firefox avant Firefox 65 (voir [bug 1508661](https://bugzil.la/1508661)).
     - `headers`

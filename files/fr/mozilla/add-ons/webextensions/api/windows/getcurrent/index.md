@@ -22,9 +22,7 @@ var gettingCurrent = browser.windows.getCurrent(
 ### Paramètres
 
 - `getInfo`{{optional_inline}}
-
   - : `object`.
-
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets de la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` si le fichier manifest de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}

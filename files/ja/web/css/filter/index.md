@@ -116,7 +116,6 @@ filter: url(file.svg#filter-element-id);
 `filter` プロパティ値に複数の関数が指定されている場合、フィルターは順番通りに適用されます。
 
 - {{cssxref("filter-function/blur", "blur()")}}
-
   - : 入力画像にガウスぼかしを適用します。
 
     ```css
@@ -124,7 +123,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/brightness", "brightness()")}}
-
   - : 関数は、入力画像に線形乗数を適用して明るさを明るくしたり暗くしたりします。 `0%` の値を設定すると、完全な黒の画像が作成されます。 `100%` の値を指定すると、入力は変更されません。 `100%` を超える値が許されており、より明るい結果が得られます。
 
     ```css
@@ -132,7 +130,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/contrast", "contrast()")}}
-
   - : 入力画像のコントラストを調整します。 `0%` の値を指定するとグレーの画像が作成されます。 `100%` の値を指定すると、入力画像は変更されません。 `100%` を超える値を指定すると、コントラストを増加させます。
 
     ```css
@@ -140,7 +137,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/drop-shadow", "drop-shadow()")}}
-
   - : 引数 `<shadow>` を画像の輪郭に沿ってドロップシャドウとして適用します。影の構文は `<box-shadow>` （[CSS 背景と境界モジュール](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)で定義されています）と似ていますが、`inset` キーワードと `spread` 引数は使用できません。すべての `filter` プロパティ値と同様に、`drop-shadow()` 以降のフィルターが影に適用されます。
 
     ```css
@@ -148,7 +144,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/grayscale", "grayscale()")}}
-
   - : 画像をグレースケールに変換します。値 `100%` は完全にグレースケールです。初期値の `0%` は入力を変更しません。 `0%` と `100%` の間の値は、効果に対する線形乗数です。
 
     ```css
@@ -156,7 +151,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/hue-rotate", "hue-rotate()")}}
-
   - : 色相の角度を回転させます。 `<angle>` の値は、入力サンプルが調整される色相環の度数を定義します。 `0deg` の値では入力は変更されません。
 
     ```css
@@ -164,7 +158,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/invert", "invert()")}}
-
   - : 入力画像のサンプルを反転します。 `100%` の値を指定すると、完全に反転されます。 `0%` では入力画像が変化しないままになります。 `0%` と `100%` の間は効果の線形乗数になります。
 
     ```css
@@ -172,7 +165,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/opacity", "opacity()")}}
-
   - : 透過率を適用します。 `0%` は画像を完全に透明にし、 `100%` は画像をそのままにします。
 
     ```css
@@ -180,7 +172,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/saturate", "saturate()")}}
-
   - : 画像の彩度を設定します。 `0%` は完全に彩度をなくし、 `100%` はそのまま、 `100%` 以上の値は彩度を上げます。
 
     ```css
@@ -188,7 +179,6 @@ filter: url(file.svg#filter-element-id);
     ```
 
 - {{cssxref("filter-function/sepia", "sepia()")}}
-
   - : 画像をセピア調にします。値を `100%` にすると画像は完全にセピアになり、`0%` にすると何も変わりません。
 
     ```css

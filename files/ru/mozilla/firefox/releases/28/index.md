@@ -41,7 +41,6 @@ Firefox 28 был выпущен 18 марта 2014 года. Список кл�
 ### JavaScript
 
 - [ECMAScript 6](/ru/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) implementation continues:
-
   - New `Array` methods have been implemented: {{jsxref("Array.prototype.entries()")}} and {{jsxref("Array.prototype.keys()")}} ([Firefox bug 894658](https://bugzil.la/894658)).
 
 ### Интерфейс/API/DOM

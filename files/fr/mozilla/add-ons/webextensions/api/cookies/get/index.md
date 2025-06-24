@@ -22,9 +22,7 @@ var getting = browser.cookies.get(
 ### Paramètres
 
 - `details`
-
   - : Un `objet` contenant les informations pouvant être utilisées pour récupérer un cookie. Il peut inclure les propriétés suivantes :
-
     - `firstPartyDomain`{{optional_inline}}
       - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
     - `name`

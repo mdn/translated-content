@@ -39,7 +39,6 @@ Anteriormente en este curso, hicimos que escribieras algunos comandos JavaScript
 
 1. Ve a la pestaña dónde tienes abierto `number-game-errors.html` y abre tu consola JavaScript. Deberías ver un mensaje de error con las siguientes líneas: ![](not-a-function.png)
 2. Este es un error bastante fácil de rastrear, y el navegador le brinda varios bits de información útil para ayudarte (la captura de pantalla anterior es de Firefox, pero otros navegadores proporcionan información similar). De izquierda a derecha, tenemos:
-
    - Una "x" roja para indicar que se trata de un error.
    - Un mensaje de error para indicar qué salió mal: "TypeError: guessSubmit.addeventListener no es una función"
    - Un enlace a "Más información" que te lleva a una página de MDN dónde explica detalladamente qué significa este error.

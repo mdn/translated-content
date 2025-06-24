@@ -93,9 +93,7 @@ video.onended = (event) => {
 - {{HTMLElement("audio")}}
 - {{HTMLElement("video")}}
 - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)
-
   - [メディアキャプチャとストリーム](/ja/docs/Web/API/Media_Capture_and_Streams_API)[: ended イベント](/ja/docs/Web/API/MediaStreamTrack/ended_event)
 
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
-
   - [ウェブオーディオ API: ended イベント](/ja/docs/Web/API/AudioScheduledSourceNode/ended_event)

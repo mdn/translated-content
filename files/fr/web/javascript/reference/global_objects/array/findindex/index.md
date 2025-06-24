@@ -29,9 +29,7 @@ arr.findIndex(callback(element[, index[, tableau]])[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : Une fonction à exécuter sur chaque valeur du tableau jusqu'à ce que celle-ci renvoie `true`. Cette fonction prend trois arguments :
-
     - `élément`
       - : L'élément du tableau qui doit être traité.
     - `index`{{optional_inline}}

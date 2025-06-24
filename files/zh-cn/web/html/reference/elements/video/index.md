@@ -34,7 +34,6 @@ l10n:
 类似于所有其他 HTML 元素，此元素也支持[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
-
   - : 一个布尔属性；声明该属性后，视频会尽快自动开始播放，不会停下来等待数据全部加载完成。
 
     > [!NOTE]
@@ -47,7 +46,6 @@ l10n:
 - `controls`
   - : 如果存在该属性，浏览器会在视频底部提供一个控制面板，允许用户控制视频的播放，包括音量、拖动进度、暂停或恢复播放。
 - `controlslist`
-
   - : 当浏览器显示视频底部的播放控制面板（例如，指定了 `controls` 属性）时，[`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性会帮助浏览器选择在控制面板上显示哪些 `video` 元素控件。
 
     允许的值有 `nodownload`、`nofullscreen` 和 `noremoteplayback`。
@@ -55,13 +53,10 @@ l10n:
     如果要禁用画中画模式（和控件），请使用 [`disablepictureinpicture`](#disablepictureinpicture) 属性。
 
 - `crossorigin`
-
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指明是否使用 CORS 来获取相关视频。[允许 CORS 的资源](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可在 {{HTMLElement("canvas")}} 元素中被重用，而不会被*污染*。允许的值如下：
-
     - `anonymous`
       - : 在发送跨源请求时不携带凭据（credential）信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将不会携带 cookie、X.509 证书，也不会执行任何 HTTP 基本身份验证。如果服务器没有给予源站点信任（也就是说没有设置 `Access-Control-Allow-Origin:` HTTP 标头），资源会被*污染*，并且它的使用会受到限制。
     - `use-credentials`
-
       - : 在发送跨源请求时携带凭据信息。也就是说，浏览器在发送 `Origin:` HTTP 标头时将会携带 cookie、证书，或执行 HTTP 基本身份验证。如果服务器没有给予源站点信任（通过设置 `Access-Control-Allow-Credentials:` HTTP 标头），图像会被*污染*，并且它的使用会受到限制。
 
       不加这个属性时，获取资源不会使用 CORS 请求（即不会发送 `Origin:` HTTP 请求标头），保证其在 {{HTMLElement('canvas')}} 元素中使用时不会被污染。如果指定无效值，会被当作指定了枚举关键字 `anonymous` 一样使用。查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)获取更多信息。
@@ -69,7 +64,6 @@ l10n:
 - `disablepictureinpicture`
   - : 防止浏览器显示画中画上下文菜单或在某些情况下自动请求画中画模式。
 - `disableremoteplayback`
-
   - : 一个布尔属性，用于在使用有线（HDMI、DVI 等）和无线技术（Miracast、Chromecast、DLNA、AirPlay 等）连接设备时，禁用远程播放功能。
 
     在 Safari 中，你可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作为兜底方案。
@@ -85,9 +79,7 @@ l10n:
 - `poster`
   - : 海报帧图片 URL，用于在视频处于下载中的状态时显示。如果未指定该属性，则在视频第一帧可用之前不会显示任何内容，然后将视频的第一帧会作为海报（poster）帧来显示。
 - `preload`
-
   - : 该枚举属性旨在提示浏览器，作者认为在播放视频之前，加载哪些内容会达到最佳的用户体验。可能是下列值之一：
-
     - `none`: 表示不应该预加载视频。
     - `metadata`: 表示仅预先获取视频的元数据（例如长度）。
     - `auto`: 表示可以下载整个视频文件，即使用户不希望使用它。
@@ -536,7 +528,6 @@ AddType video/webm .webm
 ## 参见
 
 - [Web 媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
-
   - [媒体容器格式（文件类型）](/zh-CN/docs/Web/Media/Guides/Formats/Containers)
   - [web 视频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Video_codecs)
   - [web 音频编码指南](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)

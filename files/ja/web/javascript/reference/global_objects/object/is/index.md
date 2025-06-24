@@ -55,7 +55,6 @@ Object.is(value1, value2)
 - どちらも同じ数値の[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)
 - どちらも同じシンボル値の[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
 - どちらも数で、
-
   - どちらも `+0`
   - どちらも `-0`
   - どちらも {{jsxref("NaN")}}

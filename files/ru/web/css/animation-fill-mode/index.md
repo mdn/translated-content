@@ -31,7 +31,6 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : Стили анимации не будут применены к элементу до и после её выполнения.
 - `forwards`
-
   - : По окончании анимации элемент сохранит стили последнего ключевого кадра, который определяется значениями {{cssxref("animation-direction")}} и {{cssxref("animation-iteration-count")}}:
 
     | `animation-direction` | `animation-iteration-count` | последний ключевой кадр |
@@ -44,7 +43,6 @@ animation-fill-mode: both, forwards, none;
     | `alternate-reverse`   | нечётное                    | `0%` или `from`         |
 
 - `backwards`
-
   - : Элемент сохранит стиль первого [ключевого кадра](/ru/docs/Web/CSS/@keyframes) на протяжении периода {{cssxref("animation-delay")}}. Первый ключевой кадр определяется значением {{cssxref("animation-direction")}}:
 
     | `animation-direction`             | первый ключевой кадр |

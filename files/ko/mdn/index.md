@@ -16,11 +16,9 @@ l10n:
 기여 방법을 알아보려면 [시작하기](/ko/docs/MDN/Community/Contributing/Getting_started) 페이지를 방문하세요. 질문이 있거나 대화에 참여하고 싶다면 [MDN Web Docs 채팅방](/ko/docs/MDN/Community/Communication_channels#채팅)에서 소통하세요.
 
 - [커뮤니티 안내서](/ko/docs/MDN/Community)
-
   - : 이 안내서들은 MDN Web Docs 기여하는 방법을 안내하며, 작업과 문제 해결, 논의 참여, 콘텐츠 제안 방법 등을 다룹니다. 도움이 필요하거나 문의가 있을 때 여기에 정보가 있습니다.
 
 - [작성 안내서](/ko/docs/MDN/Writing_guidelines)
-
   - : 이 안내서들은 MDN Web Docs의 문서를 작성하는 방법에 관한 모든 정보가 포함되어 있습니다. 작성할 콘텐츠와 작성하지 않을 콘텐츠 유형에 관한 정책을 설명하며, 작성 스타일 가이드, 다양한 콘텐츠 작업을 수행하는 방법 가이드, 페이지 구조 정보도 포함되어 있습니다.
 
 - [MDN 제품 자문 위원회](/ko/docs/MDN/MDN_Product_Advisory_Board)

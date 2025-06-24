@@ -24,9 +24,7 @@ getAll(options)
 または
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つ文字列です。
-
     - `name`
       - : Cookie の名前が入っている文字列です。
     - `url`
@@ -41,29 +39,22 @@ getAll(options)
 各オブジェクトは、以下のプロパティを持ちます。
 
 - `domain`
-
   - : クッキーのドメインを持つ文字列です。
 
 - `expires`
-
   - : クッキーの期限が入ったタイムスタンプで、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)です。
 
 - `name`
-
   - : クッキーの名前が入った文字列です。
 
 - `partitioned`
-
   - : 論理値で、クッキーがパーティション化クッキーであるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
 
 - `path`
-
   - : クッキーのパスが入った文字列です。
 
 - `sameSite`
-
   - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
-
     - `"strict"`
       - : クッキーはファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
     - `"lax"`
@@ -72,7 +63,6 @@ getAll(options)
       - : クッキーはすべてのコンテキストで、送信されます。
 
 - `secure`
-
   - : 論理値で、このクッキーが保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
 
 - `value`

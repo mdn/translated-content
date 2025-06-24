@@ -88,16 +88,13 @@ p {
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - `value`
-
   - : {{HTMLElement("ol")}} 요소 내부에서 항목의 현재 서수 값을 나타내는 정수. 리스트가 로마 숫자나 문자로 표시되더라도 이 특성에는 숫자만 넣을수 있습니다. `value`를 지정한 항목을 뒤따르는 다른 항목은 이 값에서부터 번호를 매깁니다. `value` 속성은 비정렬 목록({{HTMLElement("ul")}})과 메뉴({{HTMLElement("menu")}})에서는 아무 의미가 없습니다.
 
     > [!NOTE]
     > HTML4에서는 `value`의 사용을 중단했지만 HTML5에서 다시 도입했습니다.
 
 - `type` {{Deprecated_inline}}
-
   - : 넘버링 타입을 나타내는 문자.
-
     - `a`: 소문자 글자
     - `A`: 대문자 글자
     - `i`: 소문자 로마 숫자
@@ -161,7 +158,6 @@ p {
 
 - 리스트 관련 다른 요소: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}.
 - `<li>` 요소와 유용하게 사용할 수 있는 CSS 속성
-
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
   - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 항목의 들여쓰기를 조정하기 위한 {{cssxref("margin")}} 속성.

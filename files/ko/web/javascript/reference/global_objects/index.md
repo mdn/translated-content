@@ -36,7 +36,6 @@ slug: Web/JavaScript/Reference/Global_Objects
 - {{JSxRef("Global_Objects/decodeURI", "decodeURI()")}}
 - {{JSxRef("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
 - **Deprecated**
-
   - {{JSxRef("Global_Objects/escape", "escape()")}} {{Deprecated_Inline}}
   - {{JSxRef("Global_Objects/unescape", "unescape()")}} {{Deprecated_Inline}}
 

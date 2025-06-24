@@ -10,25 +10,21 @@ CSS 2 utilisant une syntaxe avec un seul mot-clé comme valeur pour la propriét
 ## Syntaxe
 
 - `inline-block`
-
   - : L'élément s'inscrit dans le contenu environnant comme une boîte en ligne et organise son propre contenu en bloc.
 
     Ce mot-clé est équivalent à la combinaison `inline flow-root`.
 
 - `inline-table`
-
   - : La valeur `inline-table` n'a pas de correspondance directe en HTML. Un tel élément se comporte comme un élément HTML {{HTMLElement("table")}} avec une boîte en ligne et pas de bloc. À l'intérieur de la boîte de tableau, on aura un contexte de bloc.
 
     Ce mot-clé est équivalent à la combinaison `inline table`.
 
 - `inline-flex`
-
   - : L'élément se comporte comme un élément en ligne et organise son propre contenu selon le modèle des boîtes flexibles.
 
     Ce mot-clé est équivalent à la combinaison `inline flex`.
 
 - `inline-grid`
-
   - : L'élément se comporte comme un élément en ligne et organise son propre contenu selon le modèle des grilles CSS.
 
     Ce mot-clé est équivalent à la combinaison `inline grid`.
@@ -79,7 +75,6 @@ Avec la nouvelle syntaxe, on peut décrire le conteneur avec deux valeurs : la p
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

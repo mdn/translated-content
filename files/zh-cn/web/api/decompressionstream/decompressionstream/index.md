@@ -16,9 +16,7 @@ new DecompressionStream(format)
 ### 参数
 
 - `format`
-
   - : 以下允许的解压格式之一：
-
     - `"gzip"`
     - `"deflate"`
     - `"deflate-raw"`

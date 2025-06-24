@@ -17,10 +17,8 @@ Lo que puede ser considerado extraño es que el DIV #2 (z-index: 2) está encima
 Para entender mejor esta situación, esta es la jerarquía del contexto de apilamiento:
 
 - contexto de apilamiento raíz
-
   - DIV #2 (z-index 2)
   - DIV #3 (z-index 1)
-
     - DIV #4 (z-index 10)
 
 > [!NOTE]

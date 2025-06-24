@@ -25,9 +25,7 @@ let duplicating = browser.tabs.duplicate(
 - `tabId`
   - : `integer`。要复制的标签页的 ID。
 - `duplicateProperties` {{optional_inline}}
-
   - : `object`。一个描述如何复制标签页的对象。它包含以下属性：
-
     - `index` {{optional_inline}}
       - : `integer`。新标签页在窗口中的位置。该值的范围限制为零到窗口中标签页的数量。
     - `active` {{optional_inline}}

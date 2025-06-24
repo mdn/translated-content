@@ -27,9 +27,7 @@ Este método puede plantear un{{domxref("DOMException")}} con una {{domxref("DOM
 - `TransactionInactiveError`
   - : Esta transacción en el Cursor IDB está inactiva.
 - `DataError`
-
   - : El parámetro de una tecla podría tener una de las siguientes condiciones:
-
     - La tecla no es una tecla valida.
     - La tecla está más atrás o en el mismo sitio que la posición del cursor y además la dirección del cursor es la siguiente o la única siguiente.
     - La tecla está más adelante o en el mismo sitio que la posición del cursor y además la dirección del cursor es previa o la única previa.

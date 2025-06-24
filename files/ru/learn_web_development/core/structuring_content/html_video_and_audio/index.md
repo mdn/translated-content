@@ -140,9 +140,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 - **[`poster`](/ru/docs/Web/HTML/Reference/Elements/video#poster)**
   - : Этот атрибут принимает в качестве значения URL-адрес изображения, который будет отображаться до воспроизведения видео. Он предназначен для заставки к видео или рекламы.
 - **[`preload`](/ru/docs/Web/HTML/Reference/Elements/video#preload)**
-
   - : этот атрибут используется в элементе для буферизации больших файлов. Он может принимать одно из трёх значений:
-
     - `"none"` не буферизирует файл
     - `"auto"` буферизирует медиафайл
     - `"metadata"` буферирует только метаданные файла

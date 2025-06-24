@@ -31,13 +31,9 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : La fonction de rappel appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `details`
-
       - : Un objet avec les propriétés suivantes :
-
         - `id`{{optional_inline}}
           - : `string`. L'ID de l'extension de module partagé importé mise à jour. Ceci n'est présent que si la valeur de `raison` est `shared_module_update`.
         - `previousVersion`{{optional_inline}}

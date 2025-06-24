@@ -63,7 +63,6 @@ function sayHello() {
 
 - ウィキペディアの[第一級関数](https://ja.wikipedia.org/wiki/第一級関数)
 - 関連用語:
-
   - {{glossary("Callback function", "コールバック関数")}}
   - {{glossary("Function", "関数")}}
   - {{glossary("Variable", "変数")}}

@@ -40,12 +40,10 @@ hanging-punctuation: unset;
 
 - 一个值 语法：在下面列表中的任意一个值。
 - 两个值 语法：
-
   - 或者与以下任何一个一起使用，并以它们结尾：last，allow-end 或 force-end
   - 或者与以下任何一个一起使用，并以它们开头：first，allow-end 或 force-end。
 
 - 三个值 语法：
-
   - 或者`first`, `allow-end`, 和`last`
   - 或者 `first`, `force-end`, 和 `last`.
 

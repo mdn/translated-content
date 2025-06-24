@@ -86,7 +86,6 @@ Luego puede ampliarlo con más detalles, agregando cada interfaz y sus miembros.
 
 - Web_Audio_API
 - AudioContext
-
   - AudioContext.currentTime
   - AudioContext.destination
   - AudioContext.listener
@@ -96,7 +95,6 @@ Luego puede ampliarlo con más detalles, agregando cada interfaz y sus miembros.
   - ...
 
 - AudioNode
-
   - AudioNode.context
   - AudioNode.numberOfInputs
   - AudioNode.numberOfOutputs
@@ -106,7 +104,6 @@ Luego puede ampliarlo con más detalles, agregando cada interfaz y sus miembros.
 
 - AudioParam
 - Events (update list)
-
   - start
   - end
   - …

@@ -28,17 +28,14 @@ l10n:
 - `media`
   - : 由 {{HTMLElement("video")}} 或 {{HTMLElement("audio")}} 元素加载的资源。
 - `object`
-
   - : 由 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素加载的资源。
 
     没有专用 `object_subrequest` 类型的浏览器（请参阅下面的浏览器兼容性）还将插件发送的后续请求标记为 `object`。
 
 - `object_subrequest`
-
   - : 由插件发送的请求。
 
 - `ping`
-
   - : 当点击链接时，发送到链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中给定的 URL。
 
     没有专用 `beacon` 类型的浏览器（请参阅下面的浏览器兼容性）还将通过 Beacon API 发送的请求标记为 `ping`。

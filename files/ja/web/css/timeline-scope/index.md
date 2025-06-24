@@ -29,7 +29,6 @@ timeline-scope: custom_name_for_timeline;
 - `none`
   - : タイムラインのスコープに変更はありません。
 - `<dashed-ident>`
-
   - : 子孫要素で定義されている既存の名前付きタイムライン（{{cssxref("scroll-timeline-name")}} または {{cssxref("view-timeline-name")}} を用いて宣言されたもの）の名前を指定します。これにより、タイムラインのスコープは `timeline-scope` が設定された要素とその子孫要素まで拡張されます。
 
     > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/custom-ident) の値は `--` で始める必要があり、標準的な CSS キーワードとの名前の衝突を避けるのに役立ちます。

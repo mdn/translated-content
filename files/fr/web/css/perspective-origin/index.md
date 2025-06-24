@@ -122,18 +122,14 @@ perspective-origin: unset;
 ### Valeurs
 
 - _x-position_
-
   - : Indique l'abscisse de la position du point de fuite. La valeur peut être :
-
     - De type {{cssxref("&lt;length-percentage&gt;")}} : la position est indiquée comme une longueur absolue ou relativement à la largeur de l'élément. La valeur peut être négative.
     - `left` : un mot-clé qui est un alias pour indiquer une longueur nulle.
     - `center` : un mot-clé qui est un alias pour indiquer une valeur de pourcentage de `50%`.
     - `right` : un mot-clé qui est un alias pour indiquer un pourcentage de `100%`.
 
 - _y-position_
-
   - : Indique l'ordonnée de la position du point de fuite. La valeur peut être :
-
     - De type {{cssxref("&lt;length-percentage&gt;")}} : la position est indiquée comme une longueur absolue ou relativement à la hauteur de l'élément. La valeur peut être négative.
     - De type {{cssxref("&lt;length&gt;")}} : la position est indiquée avec une valeur de longueur. La valeur peut être négative.
     - `top` : un mot-clé qui est un alias pour indiquer une longueur nulle.

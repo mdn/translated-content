@@ -16,7 +16,6 @@ void gl.enable(cap);
 ### Параметры
 
 - `cap`
-
   - : A {{domxref("GLenum")}} specifying which WebGL capability to enable. Possible values:
 
     | Константа                     | Описание                                                                                                                                          |

@@ -17,7 +17,6 @@ TCP의 역할은 에러가 없이 패킷이 신뢰할 수 있게 전달 되었�
 - [HTTP 개요](/ko/docs/Web/HTTP/Overview)
 - [브라우저는 어떻게 작동하는가](/ko/docs/Web/Performance/How_browsers_work)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("IPv4")}}
   - {{Glossary("IPv6")}}
   - {{Glossary("Packet")}}

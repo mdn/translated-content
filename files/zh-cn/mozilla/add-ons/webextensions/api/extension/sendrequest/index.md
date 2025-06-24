@@ -31,9 +31,7 @@ chrome.extension.sendRequest(
 - `request`
   - : `any`。
 - `responseCallback` {{optional_inline}}
-
   - : `function`，将传递如下参数的函数：
-
     - `response`
       - : `any`，由请求处理器发送的 JSON 响应对象。如果在连接到插件时发生错误，回调函数将不带参数地被调用，且 {{WebExtAPIRef('runtime.lastError')}} 将被设置为错误消息。
 

@@ -63,7 +63,6 @@ HTML 文档结构非常的简单，这个游戏将整个被渲染在框架生成
 - 渲染方式。有三个选项分别是 `AUTO`，`CANVAS` 和 `WEBGL`。我们可以指定使用 Canvas 还是 WebGL 来渲染，如果使用了 Auto 则优先使用 WebGL，如果浏览器不支持则会选择 Canvas。
 - {{htmlelement("canvas")}} 的 id。如果该参数有值，则使用该值作为 canvas 标签的 id，我们传入 null，则 phaser 会决定 canvas 的 id 值。
 - 第四个参数指定了 phaser 的三个生命周期所对应的函数。我们使用相同的名字来让程序更清晰
-
   - `preload` 进行资源的加载。
   - `create` 会在资源加载完成后执行一次。
   - `update` 会一直循环执行来处理每一帧动画。

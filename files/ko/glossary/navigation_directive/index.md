@@ -17,7 +17,6 @@ l10n:
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
 - 다른 종류의 지시문:
-
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Reporting directive")}}

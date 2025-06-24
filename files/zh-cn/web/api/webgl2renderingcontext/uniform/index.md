@@ -73,9 +73,7 @@ uniform4uiv(location, data, srcOffset, srcLength)
 - `location`
   - : 一个包含了要修改的 uniform 属性的位置的 {{domxref("WebGLUniformLocation")}} 对象。
 - `data`、`v0`、`v1`、`v2`、`v3`
-
   - : 要被应用到 uniform 变量中的新值。可能的类型：
-
     - {{jsxref("Number")}}：用于无符号整数值（具有 `ui` 的方法）、整数值（具有 `i` 的方法）或浮点数（具有 `f` 的方法）。
     - {{jsxref("Uint32Array")}}：用于无符号整数向量方法（具有 `uiv` 的方法）。
 

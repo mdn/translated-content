@@ -156,6 +156,5 @@ Below is a list of interfaces which are based on the main `Event` interface, wit
 - [各種 Event Targets 的比較](/zh-TW/docs/Learn_web_development/Core/Scripting/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
 - [建立和觸發事件](/zh-TW/docs/Web/Events/Creating_and_triggering_events)
 - 給 Firefox 插件開發者：
-
   - [Listening to events in Firefox extensions](/zh-TW/docs/Listening_to_events_in_Firefox_extensions)
   - [Listening to events on all tabs](/zh-TW/docs/Listening_to_events_on_all_tabs)

@@ -344,7 +344,6 @@ Cada vez que se invoca la función `updateImageDisplay()`, nosotros:
 - Si se han seleccionado archivos, iteramos a través de cada uno, imprimiendo información sobre él en el `<div>` de previsualización. Cosas a notar aquí:
 - Usamos la función personalizada `validFileType()` para verificar si el archivo es del tipo correcto (por ejemplo, los tipos de imagen especificados en el atributo `accept`).
 - Si lo es, nosotros:
-
   - Imprimimos su nombre y tamaño en un elemento de lista dentro del `<div>` de previsualización (obtenido de `file.name` y `file.size`). La función personalizada `returnFileSize()` devuelve una versión bien formateada del tamaño en bytes/KB/MB (por defecto, el navegador informa el tamaño en bytes absolutos).
   - Generamos una vista previa en miniatura de la imagen llamando a {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Luego, insertamos la imagen en el elemento de lista también creando un nuevo `<img>` y estableciendo su [`src`](/es/docs/Web/HTML/Reference/Elements/img#src) en la miniatura.
 

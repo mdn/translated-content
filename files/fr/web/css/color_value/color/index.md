@@ -23,7 +23,6 @@ color(display-p3 1 0.5 0 / .5)
 ### Valeurs
 
 - `color( <identifiant>? [ <number-percentage>+ | <string> ] [ / <alpha> ]?)`
-
   - : `[<ident> | <dashed-ident>]` est un identifiant (type [`<ident>`](/fr/docs/Web/CSS/ident) ou [`<dashed-ident>`](/fr/docs/Web/CSS/dashed-ident)) indiquant l'espace de couleur. S'il s'agit d'une valeur de type `<ident>`, elle indique un des espaces de couleur prédéfini (par exemple `display-p3`). S'il s'agit d'une valeur de type `<dashed-ident>`, elle indique un espace de couleur personnalisé, défini via une règle [`@color-profile`](/fr/docs/Web/CSS/@color-profile).
 
     `[ <number-percentage>+ | <string> ]` indique un ou plusieurs nombres (type [`<number>`](/fr/docs/Web/CSS/number)) ou pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) fournissant les valeurs que prend l'espace de couleur en entrée, ou une chaîne de caractères (type [`<string>`](/fr/docs/Web/CSS/string)) indiquant le nom d'une couleur définie dans l'espace de couleur.

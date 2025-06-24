@@ -113,9 +113,7 @@ Les caractères du texte sont dessinés à partir du point de départ dans la di
 Comme pour tous les éléments, on peut appliquer [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - **`dir`**
-
   - : La direction du texte au sein de l'élément. Cet attribut peut valoir :
-
     - `ltr` : pour un texte allant de gauche à droite (_left-to-right_).
     - `rtl` : pour un texte allant de droite à gauche (_right-to-left_).
 

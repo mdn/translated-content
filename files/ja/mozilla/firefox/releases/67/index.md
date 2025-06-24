@@ -12,14 +12,12 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 ### 開発者ツール
 
 - デバッガーの更新:
-
   - [カラムブレークポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/set_a_breakpoint/index.html) で、デバッガーに一時停止させたい行の特定の箇所 (またはカラム) を選択できます ([Firefox バグ 1528417](https://bugzil.la/1528417))。
   - [ログポイント](https://firefox-source-docs.mozilla.org/devtools-user/debugger/set_a_logpoint/index.html) で、コードの実行を一時停止したりコードを変更することなく、実行中に特定の情報をコンソールに記録できます。
   - [マップスコープ機能](https://firefox-source-docs.mozilla.org/devtools-user/debugger/using_the_debugger_map_scopes_feature/index.html) で、元のソースの編集を表示できます。
   - デバッガーで、[worker](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#Debugging_worker_threads) のスレッドを直接デバッグできます。
 
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) の更新:
-
   - キーボードを使用して、コンソールの詳細情報を移動できます ([Firefox バグ 1424159](https://bugzil.la/1424159))。
   - macOS では Cmd + K で、コンソールの内容を消去するようになりました ([Firefox バグ 1532939](https://bugzil.la/1532939))。
   - ユーザーがコンソールの出力を消去するとき、エラーメッセージのキャッシュも消去するようになりました ([Firefox バグ 717611](https://bugzil.la/717611))。
@@ -30,7 +28,6 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
   - ユーザーがコンソールの内容をフィルタリングしたとき、フィルターをクリアするアイコンをテキストボックスに表示するようになりました ([Firefox バグ 1525821](https://bugzil.la/1525821))。
 
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) の改良:
-
   - ネットワークモニターの [ヘッダー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_details/index.html#headers) パネルで、既知のトラッカーに関するリソースの通知を表示するようになりました ([Firefox バグ 1485416](https://bugzil.la/1485416))。
   - ネットワークモニターの [要求の列](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) で、表示する列や列の並べ替えを制御できます。このコンテキストメニューに、リストの並べ替えをリセットするコマンドを追加しました ([Firefox バグ 1454962](https://bugzil.la/1454962))。
   - ネットワークモニターで、作業しやすいように [列の幅を変更する](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/request_list/index.html#network-request-columns) ことが可能になりました ([Firefox バグ 1358414](https://bugzil.la/1358414))。
@@ -38,13 +35,11 @@ Firefox 67 は、米国時間 2019 年 5 月 21 日 にリリースされまし�
 #### 廃止
 
 - 以下の開発ツールのパネルを削除しました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
-
   - Canvas デバッガー ([Firefox バグ 1403938](https://bugzil.la/1403938))
   - シェーダーエディター ([Firefox バグ 1342237](https://bugzil.la/1342237))
   - WebAudio エディター([Firefox バグ 1403944](https://bugzil.la/1403944))
 
 - 以下の開発ツールのパネルを非推奨にしました (詳しくは [Deprecated tools](https://firefox-source-docs.mozilla.org/devtools-user/deprecated_tools/index.html) をご覧ください):
-
   - WebIDE ([Firefox バグ 1539462](https://bugzil.la/1539462))
   - Connect... ページ ([Firefox バグ 1539462](https://bugzil.la/1539462))
 

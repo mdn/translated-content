@@ -67,7 +67,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 - `<shape>`
   - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
 - `<extent-keyword>`
-
   - : Un mot-clé décrivant la taille de la forme de terminaison. Les valeurs possibles sont&nbsp;:
 
     | Mot-clé           | Description                                                                                                                                                                                        |

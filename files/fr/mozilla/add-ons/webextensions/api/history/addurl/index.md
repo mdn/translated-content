@@ -20,9 +20,7 @@ var addingUrl = browser.history.addUrl(
 ### Paramètres
 
 - `details`
-
   - : `object`. Objet contenant l'URL à ajouter.
-
     - `url`
       - : `string`. L'URL à ajouter.
     - `title`{{optional_inline}}

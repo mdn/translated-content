@@ -12,7 +12,6 @@ slug: Web/API/GeolocationPositionError
 _Интерфейс **PositionError** не наследует никаких свойств._
 
 - {{domxref("PositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
-
   - : Возвращает _unsigned short,_ представляющий код ошибки. Возможны следующие значения:
 
     | Значение | Связанная константа    | Описание                                                                                                                                              |

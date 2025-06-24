@@ -16,7 +16,6 @@ arr.slice([inicio [, fin]])
 ## Parámetros
 
 - `inicio`
-
   - : Índice donde empieza la extracción. El primer elemento corresponde con el índice 0.
 
     Si el índice especificado es negativo, indica un desplazamiento desde el final del array.`slice(-2)` extrae los dos últimos elementos del array
@@ -26,7 +25,6 @@ arr.slice([inicio [, fin]])
     Si `inicio` es mayor a la longitud del array, se devuelve un array vacío.
 
 - `fin`
-
   - : Índice que marca el final de la extracción. `slice` extrae hasta, pero sin incluir el final.
 
     `slice(1,4)` extrae desde el segundo elemento hasta el cuarto (los elementos con índices 1, 2, y 3).

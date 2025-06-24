@@ -53,19 +53,15 @@ Content-Security-Policy: default-src <source> <source>;
 La \<source> peut être une des suivantes :
 
 - \<host-source>
-
   - : Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un [protocole](/fr/docs/URIs_and_URLs) et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque `'*'`), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides.
     Exemples:
-
     - `http://*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole `http:`.
     - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
     - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
     - `*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com en utilisant le protocole courant.
 
 - \<scheme-source>
-
   - : Un protocole tel que `http:` ou `https:`. Les deux-points sont nécessaires. Contrairement à d'autres valeurs ci-bas, les guillemets ne devraient pas être employés. Vous pouvez aussi spécifier des schémas de données (quoi que ce ne soit pas recommandé).
-
     - `data:` permet aux [URI `data:`](/fr/docs/Web/URI/Schemes/data) d'être utilisées comme sources de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie certainement pas pour des scripts._
     - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
     - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.
@@ -127,7 +123,6 @@ Content-Security-Policy: connect-src 'self';
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP directives (<https://www.w3.org/TR/CSP/#csp-directives>):
-
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Document directive")}}
   - {{Glossary("Navigation directive")}}

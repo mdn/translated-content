@@ -84,7 +84,6 @@ Les constantes sont définies avec la précision des nombres réels en JavaScrip
 - {{jsxref("Objets_globaux/Math/imul", "Math.imul(x, y)")}}
   - : Retourne le résultat de la multiplication d'entiers sur 32 bits.
 - {{jsxref("Objets_globaux/Math/log", "Math.log(x)")}}
-
   - : Retourne le logarithme naturel (log
 
     <sub>e</sub>

@@ -52,7 +52,6 @@ input {
 - `form`
   - : {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性を指定し、たとえ `<fieldset>` 要素がその中になくても、その一部とすることができます。なお、 `<fieldset>` 内の {{HTMLElement("input")}} 要素をフォームに関連付けたい場合は、それらの要素に直接 `form` 属性を使用する必要があります。どの要素がフォームに関連付けられているかは、 JavaScript で {{domxref("HTMLFormElement.elements")}} を使用して確認することができます。
 - `name`
-
   - : グループに関連付けられた名前です。
 
     > [!NOTE]

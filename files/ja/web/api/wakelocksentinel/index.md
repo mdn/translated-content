@@ -18,10 +18,8 @@ _このインターフェイスは以下のプロパティを提供していま�
 - {{domxref("WakeLockSentinel.released", "released")}} {{ReadOnlyInline}}
   - : 論理値で、 `WakeLockSentinel` が解放されたかどうかを示します。
 - {{domxref("WakeLockSentinel.type", "type")}} {{ReadOnlyInline}}
-
   - : 文字列で、取得した現在の `WakeLockSentinel` の種別を示します。
     返値は次の通りです。
-
     - `'screen'`: 画面の起動ロックです。端末の画面が暗くなったりロックされたりすることを防ぎます。
 
 ## イベント

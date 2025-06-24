@@ -28,7 +28,6 @@ scrollbar-width: unset;
 ### 値
 
 - `<scrollbar-width>`
-
   - : スクロールバーの幅を、長さまたはキーワードのどちらかで定義します。キーワードが使用する場合は、以下の値のうちの一つでなければなりません。
 
     <table class="standard-table">

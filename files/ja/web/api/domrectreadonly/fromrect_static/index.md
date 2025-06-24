@@ -20,9 +20,7 @@ DOMRectReadOnly.fromRect(rectangle)
 ### 引数
 
 - `rectangle` {{optional_inline}}
-
   - : 矩形の位置と寸法を指定するオブジェクト。すべてのプロパティは既定で `0` です。プロパティは次の通りです。
-
     - `x`: 矩形の左端の座標です。
     - `y`: 矩形の上端の座標です。
     - `width`: 矩形の幅です。

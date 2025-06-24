@@ -356,7 +356,6 @@ Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:valid`](/fr/docs/Web/CS
 Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indiquer une erreur de validation&nbsp;:
 
 - La méthode `setCustomValidity(message)` pour les éléments suivants&nbsp;:
-
   - [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset). Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
   - [`<input>`](/fr/docs/Web/HTML/Element/input)
   - [`<output>`](/fr/docs/Web/HTML/Element/output)

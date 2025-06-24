@@ -36,7 +36,6 @@ some(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。要素がテストに合格した場合は[真値](/ja/docs/Glossary/Truthy)を返し、そうでなければ[偽値](/ja/docs/Glossary/Falsy)を返す必要があります。この関数は以下の引数で呼び出されます。
     - `element`
       - : 現在処理されている型付き配列の要素です。

@@ -22,9 +22,7 @@ var uninstallingSelf = browser.management.uninstallSelf(
 ### Paramètres
 
 - `options{{optional_inline}}`
-
   - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
-
     - `showConfirmDialog{{optional_inline}}`
       - : Boolean. Si `showConfirmDialog` est `true`, le navigateur affiche la boite de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
     - `dialogMessage{{optional_inline}}`

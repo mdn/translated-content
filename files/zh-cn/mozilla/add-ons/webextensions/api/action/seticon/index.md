@@ -31,11 +31,8 @@ let settingIcon = browser.action.setIcon(
 ### 参数
 
 - `details`
-
   - : `object`，包含 `imageData`、`path` 属性其一的对象，并且可选的包含 `tabId`、`windowId` 属性。
-
     - `imageData` {{optional_inline}}
-
       - : {{WebExtAPIRef('action.ImageDataType')}} 或 `object`，这要么是 `ImageData` 对象，要么是一个字典对象。
 
         使用一个字典对象来指定不同尺寸的多个 `ImageData` 对象，这样图标就不需要为具有不同像素密度的设备进行缩放。如果 `imageData` 是一个字典，那么每个属性的名称是其尺寸，值是 `ImageData` 对象，如下所示：
@@ -52,7 +49,6 @@ let settingIcon = browser.action.setIcon(
         浏览器会根据屏幕的像素密度选择要使用的图像。有关更多信息，请参见[选择图标尺寸](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#选择图标大小)。
 
     - `path` {{optional_inline}}
-
       - : `string` 或 `object`，这要么是一个图标文件的相对路径，要么是一个字典对象。
 
         使用一个字典对象来指定不同尺寸的多个图标文件，这样图标就不需要为具有不同像素密度的设备进行缩放。如果 `path` 是一个字典，那么每个属性的名称是其尺寸，值是相对路径，如下所示：

@@ -20,11 +20,9 @@ const new_array = arr.map(function callback( currentValue[, index[, array]]) {
 ### Параметры
 
 - `callback`
-
   - : Функция, вызываемая для каждого элемента массива `arr`. Каждый раз, когда `callback` выполняется, возвращаемое значение добавляется в `new_array`.
 
     Функция `callback`, создающая элемент в новом массиве, принимает три аргумента:
-
     - `currentValue`
       - : Текущий обрабатываемый элемент массива.
     - `index`{{optional_inline}}

@@ -49,9 +49,7 @@ height: inherit
 - `available` {{ experimental_inline }}
   - : Altura da caixa menos margem vertical, borda e padding.
 - `fit-content` {{ experimental_inline }}
-
   - : O maior de:
-
     - a altura mínima intrínseca
     - a menor entre a altura intrínseca preferida e a altura disponível
 

@@ -81,12 +81,10 @@ If `font` is specified as a system keyword, it must be one of: [`caption`](#capt
 If `font` is specified as a shorthand for several font-related properties, then:
 
 - it must include values for:
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - it may optionally include values for:
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

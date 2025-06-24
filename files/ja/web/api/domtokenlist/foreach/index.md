@@ -20,9 +20,7 @@ forEach(callback, thisArg)
 ### 引数
 
 - `callback`
-
   - : それぞれの要素に対して呼び出す関数で、 3 つの引数を取ります。
-
     - `currentValue`
       - : 配列内で処理中の現在の要素です。
     - `currentIndex`

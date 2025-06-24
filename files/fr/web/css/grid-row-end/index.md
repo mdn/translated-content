@@ -85,7 +85,6 @@ grid-row-end: unset;
 - `auto`
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'objet sur la grille. Par défaut, la taille du fragment allouée vaut `1` s'il n'y a pas d'autres contraintes.
 - `<custom-ident>`
-
   - : S'il existe une ligne nommée '\<custom-ident>-end', cela placera l'élément sur la première ligne correspondante..
 
     > [!NOTE]
@@ -96,13 +95,11 @@ grid-row-end: unset;
     `<custom-ident>` ne peut pas prendre la valeur `span`.
 
 - `<integer> && <custom-ident>?`
-
   - : Contribue au placement de l'élément sur la n-ième ligne. Si une valeur négative est fournie, les lignes correspondantes sont comptées depuis la dernière. Si un nom est fourni pour \<custom-ident>, seules les lignes avec ce nom sont comptées. S'il n'y a pas suffisamment de lignes avec ce nom, on considère que toutes les lignes sont intitulées avec ce nom afin de trouver une position.
 
     Un entier nul ne peut pas être utilisé (la règle est invalide).
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Un fragment de grille est utilisé pour le placement de l'élément sur la grille afin que le début de la ligne pour l'élément de la grille soit placé à n lignes du bord situé au début.
 
     Si un nom fourni pour \<custom-ident>, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, tout les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées afin de placer ce fragment.

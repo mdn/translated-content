@@ -45,9 +45,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当事件发生时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 参数中指定了 `"responseHeaders"`，则会包含响应标头。
 
@@ -56,9 +54,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
-
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下任意值：
-
     - `"blocking"` 用于使请求同步，以便于修改请求和响应的标头
     - `"responseHeaders"` 将响应标头包含在传递给监听器的 `details` 对象中
 
@@ -71,9 +67,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `documentUrl`
   - : `string`。将加载的资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
-
   - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
-
     - `url`
       - : `string`。文档加载来源的 URL。
     - `frameId`
@@ -90,7 +84,6 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `method`
   - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
 - `originUrl`
-
   - : `string`。触发请求的资源的 URL。例如，若用户点击了“https\://example.com”页面中的链接，则结果请求的 `originUrl` 为“https\://example.com”。
 
     `originUrl` 通常与 `documentUrl` 相同，但并不总是如此。例如，如果页面包含 iframe，并且 iframe 包含加载新文档的链接，则结果请求的 `documentUrl` 将是 iframe 的父文档 URL，而 `originUrl` 将是包含链接的 iframe 中的文档的 URL。
@@ -98,17 +91,13 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `parentFrameId`
   - : `integer`。包含发起请求的框架的父框架 ID。如果不存在父框架则为 -1。
 - `proxyInfo`
-
   - : `object`。仅当请求被代理时，此属性才存在。它包含以下属性：
-
     - `host`
       - : `string`。代理服务器的主机名。
     - `port`
       - : `integer`。代理服务器的端口号。
     - `type`
-
       - : `string`。代理服务器的类型，以下值之一：
-
         - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
         - `"https"`：通过 TLS 连接到代理的 HTTP 代理
         - `"socks"`：SOCKS v5 代理
@@ -142,16 +131,13 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `url`
   - : `string`。请求的目标 URL。
 - `urlClassification`
-
   - : `object`。与请求相关的跟踪类型（如果请求由 [Firefox 跟踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)分类）。包含以下属性的对象：
-
     - `firstParty`
       - : `string` 的数组（`array`）。请求的第一方的分类标志。
     - `thirdParty`
       - : `string` 的数组（`array`）。请求或其窗口层次结构的第三方的分类标志。
 
     分类标志包括：
-
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
       - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
       - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。

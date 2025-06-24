@@ -32,7 +32,6 @@ CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加
 ウェブアプリケーションは、次の 3 つの値の中から 1 つ受け取ることができる {{HTTPHeader("Cross-Origin-Resource-Policy")}} の HTTP レスポンスヘッダーを介してクロスオリジンリソースポリシーを設定します。
 
 - same-site
-
   - : 同じ _{{Glossary("Site")}}_ からのリクエストのみリソースを読み込めます。
 
     > [!WARNING]

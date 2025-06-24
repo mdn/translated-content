@@ -61,7 +61,6 @@ content: unset;
 - {{cssxref("&lt;image&gt;")}}
   - : {{cssxref("&lt;url&gt;")}}이나 {{cssxref("&lt;gradient&gt;")}} 자료형을 사용한 {{cssxref("&lt;image&gt;")}}, 또는 {{cssxref("element")}} 함수를 사용해 가리킨, 보여줄 웹페이지의 일부.
 - {{cssxref("&lt;counter&gt;")}}
-
   - : 보통 숫자인 <a href="/ko/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters">CSS 카운터 값</a>.{{cssxref("counter")}}나 {{cssxref("counters")}} 함수를 사용해 지정할 수 있습니다.
 
     {{cssxref("counter")}} 함수는 `counter(<var>name</var>)`과 `counter(<var>name</var>, <var>style</var>)`의 두 형태를 가지고 있습니다. 생성하는 값은 주어진 의사 요소의 현재 범위에서, 해당하는 이름을 가진 가장 안쪽 카운터의 값입니다. 지정한 스타일(기본 `decimal`)에 맞춰 서식을 적용합니다.

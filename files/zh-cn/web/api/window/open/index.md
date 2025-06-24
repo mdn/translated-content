@@ -19,21 +19,16 @@ open(url, target, windowFeatures)
 ### 参数
 
 - `url` {{optional_inline}}
-
   - : 一个字符串，表示要加载的资源的 URL 或路径。如果指定空字符串（`""`）或省略此参数，则会在目标浏览上下文中打开一个空白页。
 
 - `target` {{optional_inline}}
-
   - : 一个不含空格的字符串，用于指定加载资源的浏览上下文的[名称](/zh-CN/docs/Web/API/Window/name)。如果该名称无法识别现有的上下文，则会创建一个新的上下文，并赋予指定的名称。还可以使用特殊的 [`target` 关键字](/zh-CN/docs/Web/HTML/Reference/Elements/a#target)：`_self`、`_blank`、`_parent` 和 `_top`。
 
     该名称可用作 [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a#target) 或 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form#target) 元素的 `target` 属性。
 
 - `windowFeatures` {{optional_inline}}
-
   - : 一个字符串，包含以逗号分隔的窗口特性列表，形式为 `name=value`，布尔特性则仅为 `name`。这些特性包括窗口的默认大小和位置、是否打开最小弹出窗口等选项。支持以下选项：
-
     - `popup`
-
       - : 如果启用此特性，则要求使用最小弹出窗口。弹出窗口中包含的用户界面功能将由浏览器自动决定，一般只包括地址栏。
 
         如果未启用 `popup`，也没有声明窗口特性，则新的浏览上下文将是一个标签页。
@@ -46,23 +41,18 @@ open(url, target, windowFeatures)
         例如：`popup=yes`、`popup=1`、`popup=true` 和`popup` 的结果完全相同。
 
     - `width` 或 `innerWidth`
-
       - : 指定内容区域（包括滚动条）的宽度。最小要求值为 100。
 
     - `height` 或 `innerHeight`
-
       - : 指定内容区域（包括滚动条）的高度。最小要求值为 100。
 
     - `left` 或 `screenX`
-
       - : 指定从用户操作系统定义的工作区左侧到新窗口生成位置的距离（以像素为单位）。
 
     - `top` 或 `screenY`
-
       - : 指定从用户操作系统定义的工作区顶部到新窗口生成位置的距离（以像素为单位）。
 
     - `noopener`
-
       - : 如果设置了此特性，新窗口将无法通过 [`Window.opener`](/zh-CN/docs/Web/API/Window/opener) 访问原窗口，并返回 `null`。
 
         使用 `noopener` 时，在决定是否打开新的浏览上下文时，除 `_top`、`_self` 和 `_parent` 以外的非空目标名称会像 `_blank` 一样处理。

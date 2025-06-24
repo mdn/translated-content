@@ -73,7 +73,6 @@ Content-Security-Policy: report-uri <uri> <uri>;
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 違反が発生した文書のリファラーです。
 - `script-sample`
-
   - : 違反が発生したインラインスクリプト、イベントハンドラー、スタイル設定の最初の 40 文字。
     外部ファイルに起因する違反はレポートに含まれません。
 

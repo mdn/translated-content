@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :
-
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
 

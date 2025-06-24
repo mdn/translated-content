@@ -29,9 +29,7 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
 - `requestId`
   - : `string`。要获取安全信息的请求的 ID。可以从传递给任何 `webRequest` 事件监听器的 `details` 对象中获取。
 - `options` {{optional_inline}}
-
   - : `object`。一个可以包含以下属性的对象：
-
     - `certificateChain` {{optional_inline}}
       - : `boolean`。如果为 `true`，返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象将包含完整的证书链和信任根证书。如果为 `false` 则仅包含服务器证书。默认为 `false`。
     - `rawDER` {{optional_inline}}

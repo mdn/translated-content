@@ -31,7 +31,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 绘制流程包括以下几步：
 
 1. 从 {{SVGElement("svg")}} 根元素开始：
-
    - 应舍弃来自 (X)HTML 的 doctype 声明，因为基于 DTD 的 SVG 验证导致的问题比它能解决的问题更多。
    - SVG 2 之前 `version` 属性和 `baseProfile` 属性用来供其他类型的验证识别 SVG 的版本。SVG 2 已弃用 `version` 和 `baseProfile` 这两个属性。
    - 作为 XML 的一种方言，SVG 必须正确的绑定命名空间（在 xmlns 属性中绑定）。请阅读[命名空间速成](/zh-CN/docs/Web/SVG/Guides/Namespaces_crash_course)页面获取更多信息。
@@ -44,7 +43,6 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 
 - 最值得注意的一点是元素的渲染顺序。SVG 文件全局有效的规则是“后来居上”，越后面的元素越可见。
 - web 上的 SVG 文件可以直接在浏览器上展示，或者通过以下几种方法嵌入到 HTML 文件中：
-
   - 如果 HTML 是 XHTML 并且声明类型为 `application/xhtml+xml`，可以直接把 SVG 嵌入到 XML 源码中。
   - SVG 可以直接被嵌入到 HTML 中。
   - 可以使用 `img` 元素。

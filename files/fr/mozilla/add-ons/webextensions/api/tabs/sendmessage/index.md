@@ -29,9 +29,7 @@ var sending = browser.tabs.sendMessage(
 - `message`
   - : `any`. Un objet qui peut être sérialisé en JSON.
 - `options`{{optional_inline}}
-
   - : `object`.
-
     - `frameId`{{optional_inline}}
       - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
 

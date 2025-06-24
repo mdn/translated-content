@@ -69,7 +69,6 @@ Lorsqu'aucun paramètre n'est fourni, le nouvel objet `Date` ainsi créé repré
 Soient au moins une année et un mois, cette forme de `Date()` renvoie un objet `Date` dont les valeurs des composantes (année, mois, jour, heure, minute, seconde, et milliseconde) proviennent des paramètres suivants. Chaque champ manquant prendra la valeur la plus basse possible (soit `1` pour le paramètre `day` et `0` pour les autres). Les valeurs des paramètres sont évaluées selon le fuseau horaire local et pas UTC.
 
 - `year`
-
   - : Une valeur entière représentant l'année.
 
     Les valeurs de `0` à `99` correspondent aux années `1900` à `1999`. Les autres valeurs correspondent aux années avec cette valeur. Voir [l'exemple](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date#les_années_sur_deux_chiffres_correspondent_à_la_période_1900_–_1999).

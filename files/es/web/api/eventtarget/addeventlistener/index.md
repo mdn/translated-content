@@ -23,7 +23,6 @@ target.addEventListener(tipo, listener[, useCapture, wantsUntrusted {{ Non-stand
 - `listener`
   - : El objeto que recibe una notificación cuando un evento de el tipo especificado ocurre. Debe ser un objeto implementando la interfaz [`EventListener`](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-EventListener) o solo una [function](/es/docs/Web/JavaScript/Guide/Functions) en JavaScript.
 - `useCapture` {{ optional_inline() }}
-
   - : Si es `true`, `useCapture` indica que el usuario desea iniciar la captura. Después de iniciar la captura, todos los eventos del tipo especificado serán lanzados al `listener` registrado antes de comenzar a ser controlados por algún `EventTarget` que esté por debajo en el arbol DOM del documento.
 
     > [!NOTE]

@@ -25,7 +25,6 @@ l10n:
 - {{cssxref("opacity")}}가 1보다 작은 요소. ([불투명도 명세](https://www.w3.org/TR/css3-color/#transparency) 참고)
 - {{cssxref("mix-blend-mode")}}가 `normal`이 아닌 요소.
 - 다음 속성 중 하나라도 `none`이 아닌 값을 가진 요소.
-
   - {{cssxref("transform")}}
   - {{cssxref("filter")}}
   - {{cssxref("backdrop-filter")}}
@@ -56,11 +55,9 @@ l10n:
 위의 예시에서, 모든 요소는 각자의 포지션과 `z-index`로 인해 자신의 쌓임 맥락을 형성합니다. 쌓임 맥락의 계층 구조는 다음과 같습니다.
 
 - 루트
-
   - DIV #1
   - DIV #2
   - DIV #3
-
     - DIV #4
     - DIV #5
     - DIV #6

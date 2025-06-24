@@ -166,9 +166,7 @@ tfoot td {
 ### 弃用的属性
 
 - `align` {{Deprecated_inline}}
-
   - : 这个[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了包含在文档中的表格必须如何对齐。可能含有如下值：
-
     - `left`：表格将在文档左侧显示；
     - `center`：表格将在文档中央显示；
     - `right`：表格将在文档右侧显示；
@@ -176,39 +174,32 @@ tfoot td {
     设置 {{cssxref("margin-left")}}、{{cssxref("margin-right")}} 为 `auto`，或者将 {{cssxref("margin")}} 设置为 `0 auto` 来实现类似于 align 属性的效果。
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : 表格的背景颜色。它是一个 [6 位的十六进制 RGB 编码](/zh-CN/docs/Web/CSS/hex-color)，以 `'#'` 作为前缀。当然也可以使用下面已经被预先定义的[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。
 
     为了实现相似的效果，可以使用 CSS 属性 {{cssxref("background-color")}}。
 
 - `border` {{Deprecated_inline}}
-
   - : 这个整型属性定义了环绕表格外部的框的大小。如果设置为 0，这意味着 [`frame`](#frame) 属性被设置为空。
 
     为了实现相似的效果，可以使用 CSS 简写属性 {{cssxref("border")}}。
 
 - `cellpadding` {{Deprecated_inline}}
-
   - : 这个属性定义了一个单元格的内容和它的边框之间的空间，无论显示与否。如果 cellpadding 的长度是用像素定义的，这个像素大小的空间将被应用到单元格内容的所有四边。如果长度是用百分比值定义的，内容将被居中，总的垂直空间（顶部和底部）将代表这个值。对于总的水平空间（左边和右边）也是如此。
 
     为了实现相似的效果，可以在 `<table>` 元素上使用属性值为 collapse 的 {{cssxref("border-collapse")}} 属性，在 {{HTMLElement("td")}} 元素上使用属性 {{cssxref("padding")}}。
 
 - `cellspacing` {{Deprecated_inline}}
-
   - : 这个属性定义了水平和垂直方向上两个单元格之间空间的大小，使用百分比或像素，包括了表格的顶部与第一行的单元格、表的左边与第一列单元格、表的右边与最后一列的单元格、表的底部与最后一行单元格之间的空间。
 
     为了实现相似的效果，可以在 `<table>` 元素上使用 CSS 属性 {{cssxref("border-spacing")}}。`border-spacing` 在 {{cssxref("border-collapse")}} 设置为 collapse 时将无效。
 
 - `frame` {{Deprecated_inline}}
-
   - : 这个枚举属性定义了包围在表格周围的框架的哪个边必须显示。
 
     为了实现相似的效果，可以使用 CSS 属性 {{cssxref("border-style")}} 和 {{cssxref("border-width")}}。
 
 - `rules` {{Deprecated_inline}}
-
   - : 这个枚举属性定义了在一个表格中分隔线的显示位置。它可以有以下值：
-
     - `none`，这表明没有分隔线将被显示；这是默认的值；
     - `groups`，这将使得分隔线只显示在行组（row group，通过 {{HTMLElement("thead")}}、{{HTMLElement("tbody")}} 和 {{HTMLElement("tfoot")}} 元素定义）和列组（column group，通过 {{HTMLElement("col")}} 和 {{HTMLElement("colgroup")}} 元素定义）之间
     - `rows`，这将使得分隔线在行之间显示；
@@ -762,7 +753,6 @@ tr:last-child td {
 
 - [HTML 数据表格初步](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - 可能特别有用的关于设定表格元素样式的 CSS 属性：
-
   - {{cssxref("width")}} 控制表格的宽度；
   - {{cssxref("border")}}、{{cssxref("border-style")}}、{{cssxref("border-color")}}、{{cssxref("border-width")}}、{{cssxref("border-collapse")}}、{{cssxref("border-spacing")}} 控制单元格边框，分隔线和框架方面；
   - {{cssxref("margin")}} 和 {{cssxref("padding")}} 设定特定的单元格内容样式；

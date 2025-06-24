@@ -18,14 +18,11 @@ element.scrollIntoView(scrollIntoViewOptions); // argumento Objeto
 ### Parâmetros
 
 - `alignToTop` {{optional_inline}}
-
   - : É um valor {{jsxref("Boolean")}}:
-
     - Se `true`, a parte superior do elemento ficará alinhada com o topo da área visível do elemento-pai. Correponde a `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Este é o valor default.
     - `Se false`, a parte inferior do elemento ficará alinhada com o fundo da área visível do elemento-pai. Corresponde a `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
 
 - `scrollIntoViewOptions` {{optional_inline}}
-
   - : Um booleano ou um objeto com as seguintes opções:
 
     ```webidl

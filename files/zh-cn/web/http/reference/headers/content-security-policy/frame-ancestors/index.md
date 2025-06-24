@@ -54,9 +54,7 @@ Content-Security-Policy: frame-ancestors <space separated list of sources>;
     - `mail.example.com:443`: 匹配所有对于 mail.example.com 在 443 端口的访问意图。
     - `https://store.example.com`: 匹配所有使用 `https:` 访问 store.example.com 的意图。
 - \<scheme-source>
-
   - : 一个 schema 配置，比如'http:'或'https:'。注意，冒号是必要的。你同样也可以指定一个 data schema（但并不推荐）。
-
     - '`data:`' 允许 [`data:` URI](/zh-CN/docs/Web/URI/Reference/Schemes/data) 作为内容源。_这是不安全的，攻击者可以用此来注入恶意代码。请谨慎使用，并不要令其作用于脚本。_
     - `'mediastream:'` 允许 [`mediastream:` URI](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API) 作为内容源。
     - `'blob:'` 允许 [`blob:` URI](/zh-CN/docs/Web/API/Blob) 作为内容源。

@@ -178,9 +178,7 @@ Isso nos dará uma saída parecida com esta:
 - [`poster`](/pt-BR/docs/Web/HTML/Element/video#poster)
   - : O URL de uma imagem que será exibida antes da reprodução do vídeo. Destina-se a ser usado para uma tela inicial ou tela de publicidade.
 - [`preload`](/pt-BR/docs/Web/HTML/Element/video#preload)
-
   - : Usado para armazenar arquivos grandes em buffer; pode levar um dos três valores:
-
     - `"none"` não armazena em buffer o arquivo
     - `"auto"` armazena em buffer o arquivo de mídia
     - `"metadata"` armazena em buffer apenas os metadados do arquivo

@@ -122,7 +122,6 @@ Les textes de substitution ne doivent pas remplacer les éléments {{htmlelement
 - {{HTMLElement("input")}}
 - {{HTMLElement("textarea")}}
 - Les équivalents **non-standards** :
-
   - {{cssxref("::-webkit-input-placeholder")}}
   - {{cssxref("::placeholder")}}
   - {{cssxref(":-ms-input-placeholder")}}

@@ -102,9 +102,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 ### Attributs dépréciés
 
 - `align` {{Deprecated_inline}}
-
   - : Cet attribut énumérée indique la manière dont la table doit être aligné en regard du document qui la contient. Ile peut prendre les valeurs suivantes :
-
     - `left`, signifiant que la table doit être affichée à la gauche du document ;
     - `center`, signifiant que la table doit être affichée centrée dans le document ;
     - `right`, signifiant que la table doit être affichée à droite du document.
@@ -115,28 +113,24 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     > - Avant Firefox 4, Firefox supportait également, en mode quirks uniquement, les valeurs `middle`, `absmiddle`, et `abscenter` comme synonymes de `center`_._
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : Cet attribut définit la couleur d'arrière-plan de toutes les cellules. C'est un code à 6 chiffres hexadécimaux comme défini par le [sRGB](https://www.w3.org/Graphics/Color/sRGB). Il est précédé d'un '#'. Un des [mots-clés préfédinis pour les couleurs](/fr/docs/Web/CSS/color_value#color_keywords) peut également être utilisé.
 
     > [!NOTE]
     > Il est fortement conseillé de ne pas utiliser cet attribut car celui-ci a été déprécié. La mise en forme d'un tableau doit se faire en utilisant CSS. Il est possible d'utiliser la propriété CSS {{cssxref("background-color")}} pour cet effet.
 
 - `border` {{Deprecated_inline}}
-
   - : Cet attribut entier définit, en pixels, la taille de la bordure entourant le tableau. S'il vaut 0, cela implique que l'attribut [`frame`](#frame) est vide.
 
     > [!NOTE]
     > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Les propriétés CSS {{cssxref("border")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}} et {{cssxref("border-style")}} devraient être utilisées à la place.
 
 - `cellpadding` {{Deprecated_inline}}
-
   - : Cet attribut définit la taille de l'espace entre le contenu d'une cellule et sa bordure, qu'lle soit affichée ou non. Si cet attribut est exprimé en pixels, le décalage sera appliqué sur les quatre côtés. S'il est exprimé en pourcents, le contenu sera centré verticalement et la somme des espaces en haut et en bas représentera le pourcentage, il en va de même pour l'espace horizontal (droite et gauche).
 
     > [!NOTE]
     > Cet attribut ayant été déprécié, il ne doit pas être utilisé. La mise en forme d'un tableau doit s'effectuer en utilisant CSS. Pour réaliser un effet similaire, la propriété {{cssxref("border-collapse")}} avec la valeur collapse doit être utilisée sur l'élément {{HTMLElement("table")}} et la propriété {{cssxref("padding")}} sur l'élément {{HTMLElement("td")}}.
 
 - `cellspacing` {{Deprecated_inline}}
-
   - : Cet attribut définit la taille (en pourcents ou pixels) de l'espace (vertical et horizontal) entre deux cellules, entre la haut du tableau et les cellules de la première ligne, la gauche du tableau et les cellules de la première colonne, puis de la même manière pour le bas et le côté droit du tableau.
 
     > [!NOTE]
@@ -145,7 +139,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <!---->
 
 - `frame` {{Deprecated_inline}}
-
   - : Cet attribut à valeurs multiples définit les côtés du tableau sur lesquels dessiner une bordure. Il peut prendre les valeurs suivantes : `above, hsides, lhs, border, void, below, vsides, rhs, box`.
 
     > [!NOTE]
@@ -154,9 +147,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <!---->
 
 - `rules` {{Deprecated_inline}}
-
   - : Cet attribut à valeurs multiples définit la manière dont les traits doivent apparaître au sein du tableau. Il peut avoir les valeurs suivantes :
-
     - `none`, les traits ne doivent pas être affichés, c'est la valeur par défaut
     - `groups`, les traits sont uniquement affichés entre les groupes de lignes du tableau (définis par les éléments {{HTMLElement("thead")}}, {{HTMLElement("tbody")}} et {{HTMLElement("tfoot")}}) et entre les groupes de colonnes (définis par les éléments {{HTMLElement("col")}} et {{HTMLElement("colgroup")}})
     - `rows`, les traits seront affichées entre les lignes du tableau
@@ -171,7 +162,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <!---->
 
 - `summary` {{Deprecated_inline}}
-
   - : Cet attribut définit un texte alternatif à utiliser afin de décrire le tableau. Un tel texte peut être utilisé par un agent utilisateur qui ne pourrait pas afficher le tableau. Il est généralement utilisé pour les personnes souffrant d'une déficience visuelle, comme par exemple les aveugles qui navigueront sur des pages web en utilisant un écran Braille. Si l'information contenue dans cet attribut serait également utile aux autres utilisateurs, il faudra plutôt utiliser l'élément {{HTMLElement("caption")}}. L'attribut **`summary`** n'est pas obligatoire et peut être omis lorsqu'un élément {{HTMLElement("caption")}} remplit ce rôle.
 
     > [!NOTE]
@@ -187,7 +177,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 <!---->
 
 - `width` {{Deprecated_inline}}
-
   - : Cet attribut définit la largeur du tableau. Elle peut être exprimée en pixels ou en pourcent (représentant alors la fraction du conteneur que le tableau peut occuper).
 
     > [!NOTE]
@@ -543,7 +532,6 @@ Si le tableau ne peut pas être subdivisé, on pourra utiliser les attributs [`i
 
 - Les autres éléments HTML relatifs aux tableaux : {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}}
 - Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<table>` :
-
   - {{cssxref("width")}} qui permet de contrôler la largeur du tableau ;
   - {{cssxref("border")}}, {{cssxref("border-style")}}, {{cssxref("border-color")}}, {{cssxref("border-width")}}, {{cssxref("border-collapse")}}, {{cssxref("border-spacing")}} qui permettent de contrôler l'aspect des bordures pour les cellules et le contour du tableau ;
   - {{cssxref("margin")}} et {{cssxref("padding")}} qui s'appliquent sur le contenu d'une cellule individuelle ;

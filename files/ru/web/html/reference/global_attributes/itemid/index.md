@@ -75,7 +75,6 @@ slug: Web/HTML/Reference/Global_attributes/itemid
 
 - [Другие различные глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes)
 - Другие глобальные атрибуты, связанные с микроданными
-
   - [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop)
   - [`itemref`](/ru/docs/Web/HTML/Reference/Global_attributes#itemref)
   - [`itemscope`](/ru/docs/Web/HTML/Reference/Global_attributes#itemscope)

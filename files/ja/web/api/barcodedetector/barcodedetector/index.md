@@ -16,9 +16,7 @@ new BarcodeDetector();
 ### 引数
 
 - _barcodeDetectorOptions_ {{optional_inline}}
-
   - : 後続の {{domxref('BarcodeDetector.detect()','detect()')}} 呼び出しで検索する一連の `BarcodeFormats` を含むオプションオブジェクトです。オプションは以下の通りです。
-
     - `formats`: バーコードの形式を文字列で表した {{jsxref('Array')}} です。対応している形式の完全な一覧は{{domxref('Barcode Detection API','バーコード検出 API の概要ページ','',1)}}を参照してください。
 
 ## 例

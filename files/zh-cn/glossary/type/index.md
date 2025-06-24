@@ -20,7 +20,6 @@ l10n:
 - 维基百科上的[数据类型](https://zh.wikipedia.org/wiki/資料類型)
 - [JavaScript 的数据类型](/zh-CN/docs/Web/JavaScript/Guide/Data_structures)
 - 相关术语：
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string", "字符串")}}
   - {{Glossary("Number")}}

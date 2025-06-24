@@ -18,7 +18,6 @@ objeto instanceof constructor
 ### Parámetros
 
 - `objeto`
-
   - : Objeto a verificar.
 
 - `constructor`

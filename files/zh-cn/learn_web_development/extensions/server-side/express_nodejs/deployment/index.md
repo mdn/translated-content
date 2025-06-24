@@ -219,7 +219,6 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 - Heroku 有一个[免费套餐](https://www.heroku.com/pricing)（尽管有一些限制）。
 - 作为 PaaS，Heroku 为我们提供了大量的 Web 基础架构。这使得入门更加容易，因为你不必担心服务器，负载平衡器，反向代理，崩溃时重新启动网站，或者 Heroku 为我们提供的任何其他 Web 基础结构。
 - 虽然它确实有一些限制，但这些不会影响这个特定的应用程序。例如：
-
   - Heroku 只提供短期存储，因此用户上传的文件无法安全地存储在 Heroku 本身。
   - 如果半小时内没有请求，免费套餐将使不活动的网络应用程序进入睡眠。然后，该网站可能需要几秒钟才能被唤醒。
   - 免费套餐将你网站运行的时间，限制为每月一定的小时数（不包括网站“睡着”的时间）。这对于低使用/演示站点来说很好，但如果需要 100％的正常运行时间，则不适用。
@@ -255,7 +254,6 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 访问 <https://github.com/> 并创建一个帐户。
 2. 登录后，单击顶部工具栏中的 **+** 号链接，然后选择新建存储库**New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
-
    - 输入新的存储库名称（例如，express-locallibrary-tutorial）和描述（例如“以 Express（node）编写的本地图书馆网站”）。
    - 在 Add .gitignore 选择列表中选择 **Node**。
    - 在添加许可证 _Add license_ 选择列表中，选择你偏好的许可证。
@@ -493,7 +491,6 @@ heroku ps   #Display dyno status
 - [Production best practices: performance and reliability](https://expressjs.com/en/advanced/best-practice-performance.html) (Express docs)
 - [Production Best Practices: Security](https://expressjs.com/en/advanced/best-practice-security.html) (Express docs)
 - Heroku
-
   - [Getting Started on Heroku with Node.js](https://devcenter.heroku.com/articles/getting-started-with-nodejs) (Heroku docs)
   - [Deploying Node.js Applications on Heroku](https://devcenter.heroku.com/articles/deploying-nodejs) (Heroku docs)
   - [Heroku Node.js Support](https://devcenter.heroku.com/articles/nodejs-support) (Heroku docs)
@@ -504,7 +501,6 @@ heroku ps   #Display dyno status
   - [Limits](https://devcenter.heroku.com/articles/limits) (Heroku docs)
 
 - Digital Ocean
-
   - [Express](https://www.digitalocean.com/community/tutorials?q=express) tutorials
   - [Node.js](https://www.digitalocean.com/community/tutorials?q=node.js) tutorials
 

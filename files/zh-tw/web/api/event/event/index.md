@@ -18,7 +18,6 @@ event = new Event(typeArg, eventInit);
 - _typeArg_
   - : 為一 {{domxref("DOMString")}} ，用來表示事件名稱。
 - _eventInit_{{optional_inline}}
-
   - : 一個 `EventInit` object，包含以下欄位
 
     | 參數           | 可選 | 默認值  | 類型                  | 說明                              |

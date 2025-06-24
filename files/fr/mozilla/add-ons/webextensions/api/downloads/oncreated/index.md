@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadItem`
       - : L'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question.
 

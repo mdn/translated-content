@@ -25,7 +25,6 @@ let updatedRules = browser.declarativeNetRequest.updateDynamicRules(
 ### 参数
 
 - `options`
-
   - : 包含要从动态规则中添加或删除的规则详细信息的对象。
     - `addRules` {{optional_inline}}
       - : 一个 {{WebExtAPIRef("declarativeNetRequest.Rule")}} 数组。要添加的规则的详细信息。

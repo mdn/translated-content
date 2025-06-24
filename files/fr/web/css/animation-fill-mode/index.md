@@ -132,7 +132,6 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : L'animation n'appliquera aucun style à la cible, avant et après l'exécution. Le style utilisé sera celui défini par les autres règles CSS.
 - `forwards`
-
   - : La cible retiendra les valeurs calculées définies lors de la dernière étape (_keyframe_). La dernière étape considérée dépend de la valeur de {{cssxref("animation-direction")}} et de {{cssxref("animation-iteration-count")}} :
 
     | `animation-direction` | `animation-iteration-count` | dernière _keyframe_ |
@@ -145,7 +144,6 @@ animation-fill-mode: both, forwards, none;
     | `alternate-reverse`   | impair                      | `0%` ou `from`      |
 
 - `backwards`
-
   - : L'animation appliquera les valeur définies par la première _keyframe_ pertinente et les retiendra pendant la durée indiquée par {{cssxref("animation-delay")}}. La première _keyframe_ pertinente dépend de la valeur de {{cssxref("animation-direction")}} :
 
     | `animation-direction`            | première _keyframe_ |

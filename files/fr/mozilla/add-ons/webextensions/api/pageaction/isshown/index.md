@@ -20,9 +20,7 @@ let gettingIsShown = browser.pageAction.isShown(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant le `tabId` à vérifier.
-
     - `tabId`
       - : `integer`. ID de l'onglet à vérifier.
 

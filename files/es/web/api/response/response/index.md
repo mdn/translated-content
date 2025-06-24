@@ -16,9 +16,7 @@ var miRespuesta = new Response(cuerpo,opciones);
 ### Parámetros
 
 - _cuerpo_ {{optional_inline}}
-
   - : Un objeto que define el cuerpo de la respuesta. Puede ser `null`, o uno de los siguientes elementos:
-
     - {{domxref("Blob")}}
     - {{domxref("BufferSource")}}
     - {{domxref("FormData")}}
@@ -27,9 +25,7 @@ var miRespuesta = new Response(cuerpo,opciones);
     - {{domxref("USVString")}}
 
 - _opciones_ {{optional_inline}}
-
   - : Un objeto que contiene las opciones de personalización para la respuesta HTTP. Las opciones posibles son:
-
     - `status`: El código de estado HTTP, p.e.: `200`.
     - `statusText`: El mensaje de estado asociado con el código de estado HTTP, p.e.: `OK`.
     - `headers`: Cualquier cabecera que quieras añadir a la respuesta. Puede ser un objeto {{domxref("Headers")}} o un objeto literal de {{domxref("ByteString")}} pares claves/valor (ver [Cabeceras HTTP](/es/docs/Web/HTTP/Reference/Headers) para más información).

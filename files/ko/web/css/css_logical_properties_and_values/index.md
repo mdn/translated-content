@@ -105,19 +105,15 @@ CSS 는 본래 물리적인 좌표만을 위해 고안되었습니다. 논리적
 ## 안내서
 
 - [논리적 속성과 값의 기본 개념](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-
   - : 흐름 상대적인 속성과 값들 전반에 대해 다룹니다.
 
 - [크기 조절을 위한 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-
   - : 페이지의 요소의 크기 조절에 사용되는 물리적 속성과 논리적 속성들 사이의 흐름 상대적인 매핑에 대해 다룹니다.
 
 - [바깥 여백, 테두리, 그리고 안쪽 여백에 관한 논리적 속성들](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-
   - : 바깥 여백, 테두리, 그리고 안쪽 여백에 관한 흐름 상대적인 매핑과 그에 대한 단축 속성들에 대해 다룹니다.
 
 - [플로팅과 위치 지정을 위한 논리적 속성](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
-
   - : `float`, `clear`, [inset 속성](/ko/docs/Glossary/Inset_properties) 그리고 `resize` 에 사용되는 물리적인 값과 논리적인 값들 사이의 상세 매핑에 대해 다룹니다.
 
 ## 연관 개념

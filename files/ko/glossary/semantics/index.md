@@ -72,5 +72,4 @@ HTML은 채워질 '데이터'를 나타내도록 코딩해야 합니다. 기본 
 - MDN의 [HTML 구역과 윤곽선 사용하기](/ko/docs/Web/HTML/Element/Heading_Elements#usage_notes)
 - 위키백과의 [컴퓨터 과학에서 시맨틱의 의미](https://en.wikipedia.org/wiki/Semantics#Computer_science) on Wikipedia
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("SEO")}}

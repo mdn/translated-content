@@ -86,9 +86,7 @@ align-items: unset;
 ### Valores
 
 - `normal`
-
   - : O efeito desta palavra-chave depende do modo de layout em que nos encontramos:
-
     - Em layouts absolutamente posicionados, a palavra-chave se comporta como `start` em _replaced_ de caixas absolutamente posicionadas, e como `stretch` em _all others_ de caixas absolutamente posicionadas.
     - Em posição estática de layouts absolutamente posicionados, a palavra-chave se comporta como `stretch`.
     - Para itens-flex, a palavra chave se comporto como `stretch`.
@@ -114,7 +112,6 @@ align-items: unset;
   `first baseline`
 
   `last baseline`
-
   - : Todos itens-flex são alinhados de tal forma que suas [baselines de container flex](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) estejam alinhados. O item com a maior distância entre o eixo de início de sua margem e sua baseline é juntado com eixo de início da linha.
 
 - `stretch`

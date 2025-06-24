@@ -33,7 +33,6 @@ l10n:
 - [모든 HTTP 헤더 목록](/ko/docs/Web/HTTP/Headers)
 - [모든 HTTP 헤더 > 메타데이터 가져오기 요청 헤더 목록](/ko/docs/Web/HTTP/Headers#fetch_metadata_request_headers)
 - [용어사전](/ko/docs/Glossary)
-
   - {{Glossary("Representation header", "Representation 헤더")}}
   - {{Glossary("HTTP_header","HTTP 헤더")}}
   - {{Glossary("Response header", "Response 헤더")}}

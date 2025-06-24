@@ -97,18 +97,14 @@ bottom: unset;
 ### Valores
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : Una {{cssxref("&lt;length&gt;", "longitud")}} negativa, nula o positiva que representa:
-
     - para _elementos posicionados absolutamente_, la distancia hasta el borde inferior del bloque contenedor..
     - para _elementos posicionados relativamente_, la distancia que el elemento se mueve por encima de su posición normal..
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : Un {{cssxref("&lt;percentage&gt;", "porcentaje")}} de la altura del bloque contenedor.
 - `auto`
-
   - : Especifica que:
-
     - para _elementos posicionados absolutamente_, la posición del elemento esta basado en la propiedad {{Cssxref("top")}}, mientras que `height: auto` se trata como una altura según el contenido; o si `top` es también `auto`, el elemento se coloca donde debería ubicarse verticalmente si fuera un elemento estático.
     - para _elementos posicionados relativamente_, la distancia del elemento de su posición normal se basa en la propiedad {{Cssxref("top")}}; o si `top` tambièn es `auto`, el elemento no se mueve verticalmente.
 

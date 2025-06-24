@@ -187,5 +187,4 @@ settings/
 - [`storage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/storage) API 文档
 - 使用[`runtime.openOptionsPage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 直接打开你的设置页面
 - 另一个设置页面例子：
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/main/favourite-colour)

@@ -54,7 +54,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 ## 属性
 
 - `<cookie-name>=<cookie-value>`
-
   - : 定义 cookie 的名称和值。cookie 的定义以一个名称/值对开始。
 
     `<cookie-name>` 可以包含除了控制字符（{{Glossary("ASCII")}} 字符 0 至 31，以及 ASCII 字符 127）和分隔符（空格、制表符和以下字符：`( ) < > @ , ; : \ " / [ ] ? = { }`）之外的任何 US-ASCII 字符。
@@ -71,7 +70,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > **`__Host-` 前缀**：以 `__Host-` 为前缀的 cookie，必须与 `secure` 标志一同设置，必须应用于安全页面（HTTPS），也禁止指定 domain 属性（也就不会发送给子域名），同时 path 属性的值必须为 `/`。
 
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : 指定 cookie 可以送达的主机。
 
     只能将值设置为当前域名或更高级别的域名（除非是公共后缀）。设置域名将会使 cookie 对指定的域名及其所有子域名可用。
@@ -83,7 +81,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     多个主机/域名的值是*不*被允许的，但如果*指定*了一个域名，则其子域名也总会被包含。
 
 - `Expires=<date>` {{optional_inline}}
-
   - : 以 HTTP 日期时间戳形式指定的 cookie 的最长有效时间。参见 {{HTTPHeader("Date")}} 以了解要求的格式。
 
     如果没有指定，那么会是一个**会话期 cookie**。会话在客户端被关闭时结束，这意味着会话期 cookie 会在彼时被移除。
@@ -100,26 +97,21 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Partitioned` {{optional_inline}}{{experimental_inline}}
   - : 表示应使用分区存储来存储 cookie。有关更多详细信息，请参见[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 - `Path=<path-value>` {{optional_inline}}
-
   - : 表示浏览器要发送该 `Cookie` 标头时，请求的 URL 中所*必须*存在的路径。
 
     正斜杠（`/`）字符可以解释为目录分隔符，且子目录也满足匹配的条件。例如，如果 `path=/docs`，那么
-
     - 请求路径 `/docs`、`/docs/`、`/docs/Web/` 和 `/docs/Web/HTTP` 都满足匹配条件。
     - 请求路径 `/`、`/docsets` 或者 `/fr/docs` 则不满足匹配条件。
 
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - : 控制 cookie 是否随跨站请求一起发送，这样可以在一定程度上防范跨站请求伪造攻击（{{Glossary("CSRF")}}）。
 
     可选的属性值有：
-
     - `Strict`
       - : 这意味浏览器仅对同一站点的请求发送 cookie，即请求来自设置 cookie 的站点。如果请求来自不同的域名或协议（即使是相同域名），则携带有 `SameSite=Strict` 属性的 cookie 不会被发送。
     - `Lax`
       - : 这意味着 cookie 不会在跨站请求中被发送，如：加载图像或框架（frame）的请求。但 cookie 在用户从外部站点导航到源站时，cookie 也会被发送（例如，访问一个链接）。这是 `SameSite` 属性未被设置时的默认行为。
     - `None`
-
       - : 这意味着浏览器在跨站和同站请求中均会发送 cookie。在设置这一属性值时，必须同时设置 `Secure` 属性，就像这样：`SameSite=None; Secure`。如果未设置 `Secure`，则会出现以下错误：
 
         ```plain
@@ -131,7 +123,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         > **备注：** [`Secure`](#secure) cookie 仅在使用 HTTPS 协议发送加密请求时才会被发送到服务器。请注意，非安全站点（`http:`）无法为 cookie 设置 `Secure` 指令，因此也无法使用 `SameSite=None`。
 
 - `Secure` {{optional_inline}}
-
   - : 表示仅当请求通过 `https:` 协议（localhost 不受此限制）发送时才会将该 cookie 发送到服务器，因此其更能够抵抗[中间人](/zh-CN/docs/Glossary/MitM)攻击。
 
     > [!NOTE]

@@ -48,7 +48,6 @@ One or more `<repeat-style>` values, separated by commas.
 ### 取值
 
 - `<repeat-style>`
-
   - : 单值语法可将两个值简写为一个：
 
     | **单值**    | **与之等效的双值**    |

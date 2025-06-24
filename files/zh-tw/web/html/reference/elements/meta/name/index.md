@@ -89,7 +89,6 @@ HTML 規範定義了以下標準後設資料名稱：
   瀏覽器將根據用戶的瀏覽器或設備設定，與此訊息結合決定從背景到前景、表單控件到滾動條的顏色。`<meta name="color-scheme">` 的主要用途是指示文件對淺色與深色模式的相容性及偏好順序。
 
   `color-scheme` 的 [`content`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#content) 屬性值可能是以下之一：
-
   - `normal`
     - : 文件未考慮顏色方案，應使用預設調色板進行渲染。
   - `light`、`dark`、`light dark`、`dark light`

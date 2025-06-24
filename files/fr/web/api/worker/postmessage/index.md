@@ -20,7 +20,6 @@ worker.postMessage(aMessage, [transferList]);
 - _aMessage_
   - : L'objet à envoyer au worker; il va être dans le champ de donnée `data` dans l'évènement délivré au gestonnaire d'évènement {{domxref("Worker.onmessage")}}. Cette donnée peut être de n'importe quelle valeur ou un objet JavaScript pris en charge par l'algorithme de [clone structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm), qui inclut les références cycliques.
 - _transferList_ {{optional_inline}}
-
   - : Un tableau optionnel d'objets {{domxref("Transferable")}} desquels on doit transférer la propriété. Si la propriété d'un objet est transférée, il devient inutilisable (_neutralisé_) pour le contexte émétteur et devient disponible uniquement pour le worker auquel cela a été envoyé.
 
     Seulement des objets de types {{domxref("MessagePort")}}, {{domxref("ArrayBuffer")}} ou {{domxref("ImageBitmap")}} peuvent être transférés. `null` n'est pas une valeur accéptée pour `transfer`.

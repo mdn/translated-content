@@ -32,7 +32,6 @@ Los errores de JavaScript contienen un enlace de "Más información" que lo llev
 
 - Utilice una estructura copiada de uno de los documentos de error existentes o comience desde cero. ¡Tu elección!
 - Deberías tener al menos:
-
   - Un cuadro de sintaxis que contiene el mensaje tal como se lanza en diferentes navegadores.
   - El tipo de error.
   - Un texto que explica por qué ocurrió este error y cuáles son sus consecuencias. Ir más allá del mensaje lanzado.

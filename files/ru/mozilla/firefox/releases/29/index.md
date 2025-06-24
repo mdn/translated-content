@@ -45,15 +45,12 @@ _Больше деталей и изменений смотрите в [блог
 
 - Реализованы новые методы строк в ECMAScript 6: {{jsxref("String.prototype.codePointAt()")}} и {{jsxref("String.prototype.fromCodePoint()")}} ([Firefox bug 918879](https://bugzil.la/918879)).
 - The [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) has been implemented and is now enabled by default in Firefox Desktop ([Firefox bug 853301](https://bugzil.la/853301)):
-
   - New objects in the new {{jsxref("Intl")}} object namespace:
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - The following methods of {{jsxref("String")}}, {{jsxref("Number")}} and {{jsxref("Date")}} have been updated to include the `locales` and `options` arguments per ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}

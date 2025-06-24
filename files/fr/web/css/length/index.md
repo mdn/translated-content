@@ -35,7 +35,6 @@ Les unités relatives aux polices de caractères permettent d'obtenir des longue
 - `ch`
   - : Cette unité représente la largeur du caractère « 0 » (zéro, le caractère Unicode U+0030) dans la police actuelle. Dans les cas où il est impossible ou trop complexe de déterminer la taille du glyphe pour « 0 », on prend l'hypothèse que celui-ci mesure 0.5em de large sur 1em de haut.
 - `em`
-
   - : Cette unité représente la {{cssxref("font-size")}} calculée de l'élément. Si utilisée avec la propriété {{cssxref("font-size")}}, elle représente la taille de police _héritée_ de l'élément.
 
     > [!NOTE]
@@ -48,7 +47,6 @@ Les unités relatives aux polices de caractères permettent d'obtenir des longue
 - `lh`
   - : Cette unité représente la valeur calculée de la propriété {{cssxref("line-height")}}, convertie en longueur absolue, de l'élément sur lequel elle est utilisée.
 - `rem`
-
   - : Cette unité représente la {{cssxref("font-size")}} de l'élément racine (par exemple la taille de la police de l'élément {{HTMLElement("html")}}). Quand utilisée avec {{cssxref("font-size")}} sur l'élément racine, elle représente sa valeur initiale.
 
     > [!NOTE]
@@ -66,7 +64,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 - `vb`
   - : 1 % de la taille du bloc englobant initial selon la direction de bloc (la direction orthogonale au sens d'écriture) de l'élément racine.
 - `vh`
-
   - : 1/100
 
     <sup>e</sup>
@@ -76,7 +73,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
 - `vi`
   - : 1 % de la taille du bloc englobant initial selon la direction en ligne (la direction du sens d'écriture) de l'élément racine.
 - `vw`
-
   - : 1/100
 
     <sup>e</sup>
@@ -84,7 +80,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
     de la largeur du _viewport_.
 
 - `vmin`
-
   - : 1/100
 
     <sup>e</sup>
@@ -92,7 +87,6 @@ Dans un bloc de déclaration {{cssxref("@page")}}, l'utilisation des longueurs l
     du côté le plus petit du _viewport_.
 
 - `vmax`
-
   - : 1/100
 
     <sup>e</sup>
@@ -115,7 +109,6 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
 - `mm`
   - : Un millimètre. Pour l'affichage sur écran, le nombre de pixels par millimètre est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 - `Q`{{experimental_inline}}
-
   - : Un quart de millimètre (1/40
 
     <sup>e</sup>
@@ -127,7 +120,6 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
 - `in`
   - : Un pouce (soit 2,54 centimètres). Pour l'affichage sur écran, le nombre de pixels par pouce est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 - `pt`
-
   - : Un point pica (soit 1/72
 
     <sup>e</sup>
@@ -135,7 +127,6 @@ Pour les périphériques ayant un nombre de points par pouce élevé, les pouces
     de pouce). Pour l'affichage sur écran, le nombre de pixels par point est déterminé par l'estimation du système (souvent incorrecte) de la résolution de son affichage.
 
 - `pc`
-
   - : Un pica (soit 12 points, soit 1/6
 
     <sup>e</sup>

@@ -46,19 +46,15 @@ let executing = browser.tabs.executeScript(
 ### 参数
 
 - `tabId` {{optional_inline}}
-
   - : `integer`。要运行脚本的标签页的 ID。
 
     默认为当前窗口的活动标签页。
 
 - `details`
-
   - : 描述要运行的脚本的对象。
 
     它包含以下属性：
-
     - `allFrames` {{optional_inline}}
-
       - : `boolean`。如果为 `true`，代码将注入到当前页面的所有框架中。
 
         如果为 `true` 并且设置了 `frameId`，则会引发错误。（`frameId` 和 `allFrames` 是互斥的。）
@@ -68,35 +64,29 @@ let executing = browser.tabs.executeScript(
         默认为 `false`。
 
     - `code` {{optional_inline}}
-
       - : `string`。要注入的代码，作为文本字符串。
 
         > [!WARNING]
         > 不要使用此属性将不受信任的数据插入 JavaScript，因为这可能会导致安全问题。
 
     - `file` {{optional_inline}}
-
       - : `string`。包含要注入代码的文件的路径。
-
         - 在 Firefox 中，不从扩展根目录开始的相对 URL 相对于当前页面 URL 解析。
         - 在 Chrome 中，这些 URL 相对于扩展的根 URL 解析。
 
         为了跨浏览器工作，可以指定从扩展根目录开始的相对 URL，如：`"/path/to/script.js"`。
 
     - `frameId` {{optional_inline}}
-
       - : `integer`。应注入代码的框架。
 
         默认为 `0`（顶层框架）。
 
     - `matchAboutBlank` {{optional_inline}}
-
       - : `boolean`。如果为 `true`，且你的扩展具有访问其父文档的权限，代码将注入到内嵌的 `about:blank` 和 `about:srcdoc` 框架中。代码不能注入到顶层 `about:` 框架中。
 
         默认为 `false`。
 
     - `runAt` {{optional_inline}}
-
       - : {{WebExtAPIRef('extensionTypes.RunAt')}}。代码将在标签页中注入的最早时间。
 
         默认为 `"document_idle"`。

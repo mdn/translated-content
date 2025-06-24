@@ -12,7 +12,6 @@ Voir [Same origin policy](/fr/docs/Web/Security/Same-origin_policy) pour plus d'
 ## Voir aussi
 
 - [Glossaire MDN](/fr/docs/Glossary)&nbsp;:
-
   - {{Glossary("CORS")}}
   - {{Glossary("origine")}}
 

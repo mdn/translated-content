@@ -26,9 +26,7 @@ get(options)
 或
 
 - `options` {{optional_inline}}
-
   - : 一个包括以下属性的对象：
-
     - `name`
       - : 记录 cookie 名称的字符串。
     - `url`
@@ -41,29 +39,22 @@ get(options)
 一个兑现为与提交的 `name` 或 `options` 匹配的第一个 cookie 的 {{jsxref("Promise")}}。该对象包含以下属性：
 
 - `domain`
-
   - : 记录 cookie 域名的字符串。
 
 - `expires`
-
   - : {{glossary("Unix time", "Unix 时间戳")}}（以毫秒为单位表示），记录 cookie 的到期日期。
 
 - `name`
-
   - : 记录 cookie 名称的字符串。
 
 - `partitioned`
-
   - : 一个布尔值，表示 cookie 是否是分区 cookie（`true`）或（`false`）。更多信息请参阅[具有独立分区状态的 Cookie（CHIPS）](/zh-CN/docs/Web/Privacy/Guides/Privacy_sandbox/Partitioned_cookies)。
 
 - `path`
-
   - : 记录 cookie 路径的字符串。
 
 - `sameSite`
-
   - : 以下 [`SameSite`](/zh-CN/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 的值之一：
-
     - `"strict"`
       - : Cookie 只会在第一方上下文中发送，不会与第三方网站发起的请求一起发送。
     - `"lax"`
@@ -72,7 +63,6 @@ get(options)
       - : Cookie 将会在所有上下文中发送。
 
 - `secure`
-
   - : 一个布尔值，表示 cookie 是否仅在安全上下文中使用（`true`）或（`false`）。
 
 - `value`

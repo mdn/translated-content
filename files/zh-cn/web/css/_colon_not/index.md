@@ -177,7 +177,6 @@ div:not(:is(.foo, .bar)) {
 - [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)
 - [伪类和伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - 其他功能性 CSS 伪类包括：
-
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

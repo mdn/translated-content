@@ -37,7 +37,6 @@ x < y;
 - 最初に、オブジェクトは [`Symbol.ToPrimitive`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) の `hint` 引数を `'number'` として使用してプリミティブに変換されます。
 - 両方の値が文字列である場合、それらに含まれる Unicode コードポイントの値に基づいて、文字列として比較されます。
 - それ以外の場合、 JavaScript は非数値型を数値に変換しようとします。
-
   - 論理値 `true` および `false` は、それぞれ 1 および 0 に変換されます。
   - `null` は 0 に変換されます。
   - `undefined` は `NaN` に変換されます。

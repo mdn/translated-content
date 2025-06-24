@@ -170,7 +170,6 @@ for (initializer; exit - condition; final - expression) {
 
 1. 關鍵字「 for」，即跟隨其後的一些括號。
 2. 在括號內，我們有三個項目，以 ; 分隔：
-
    1. 初始化程序-通常是一個設置為數字的變量，該變量將遞增以計算循環運行的次數。 有時也稱為計數器變量。
    2. 退出條件-如前所述，它定義了循環何時應停止循環。 通常，這是一個具有比較運算符的表達式，該測試用於檢驗是否滿足退出條件。
    3. 最終表達式—每當循環經過完整的迭代時，總是對它進行評估（或運行）。 它通常用於遞增（或在某些情況下遞減）計數器變量，以使其更接近退出條件值。
@@ -229,7 +228,6 @@ para.textContent = info;
 1. 迭代器 i 從 0 開始（變量 i = 0）。
 2. 它被告知運行，直到它不再小於 cats 數組的長度為止。 這很重要,退出條件顯示了循環仍將運行的條件。 因此，在這種情況下，儘管 i \<cats.length 仍然為 true，循環仍將運行。
 3. 在循環內部，我們將當前循環項（cats \[i]是 cats \[無論 i 當時是什麼]）與一個逗號和一個空格連接到 info 變量的末尾。 所以：
-
    1. 在第一次運行中，i = 0，因此 cats \[0] +'，'將連接到 info（「 Bill，」）上。
    2. 在第二次運行中，i = 1，因此 cats \[1] +'，'將連接到 info（「 Jeff，」）上
    3. 等等。每次循環運行後，將 1 加到 i（i ++），然後該過程將再次開始。
@@ -363,7 +361,6 @@ btn.addEventListener("click", function () {
 2. 接下來，我們將事件監聽器附加到按鈕（btn），以便在按下按鈕時，將運行一些代碼來執行搜索並返回結果。
 3. 我們將輸入到文本輸入中的值存儲在一個名為 searchName 的變量中，然後清空文本輸入並再次對其進行聚焦，以準備進行下一次搜索。
 4. 現在到有趣的部分，for 循環：
-
    1. 我們從 0 開始啟動計數器，運行循環直到計數器不再小於 contact.length，然後在每次循環之後將 i 遞增 1。
    2. 在循環內部，我們首先將當前觸點（contacts \[i]）分割為冒號字符，並將得到的兩個值存儲在名為 splitContact 的數組中。
    3. 然後，我們使用條件語句來測試 splitContact \[0]（聯繫人的姓名）是否等於輸入的 searchName。 如果是這樣，我們在段落中輸入一個字符串以報告聯繫人的電話號碼，然後使用 break 結束循環。
@@ -524,13 +521,11 @@ In this exercise, we want you to print out a simple launch countdown to the outp
 
 - Loop from 10 down to 0. We've provided you with an initializer — `var i = 10;`.
 - For each iteration, create a new paragraph and append it to the output `<div>`, which we've selected using `var output = document.querySelector('.output');`. In comments, we've provided you with three code lines that need to be used somewhere inside the loop:
-
   - `var para = document.createElement('p');` — creates a new paragraph.
   - `output.appendChild(para);` — appends the paragraph to the output `<div>`.
   - `para.textContent =` — makes the text inside the paragraph equal to whatever you put on the right hand side, after the equals sign.
 
 - Different iteration numbers require different text to be put in the paragraph for that iteration (you'll need a conditional statement and multiple `para.textContent =` lines):
-
   - If the number is 10, print "Countdown 10" to the paragraph.
   - If the number is 0, print "Blast off!" to the paragraph.
   - For any other number, print just the number to the paragraph.
@@ -679,7 +674,6 @@ Specifically, we want you to:
 
 - Write a loop that will iterate from 0 to the length of the `people` array. You'll need to start with an initializer of `var i = 0;`, but what exit condition do you need?
 - During each loop iteration, check if the current array item is equal to "Phil" or "Lola" using a conditional statement:
-
   - If it is, concatenate the array item to the end of the `refused` paragraph's `textContent`, followed by a comma and a space.
   - If it isn't, concatenate the array item to the end of the `admitted` paragraph's `textContent`, followed by a comma and a space.
 

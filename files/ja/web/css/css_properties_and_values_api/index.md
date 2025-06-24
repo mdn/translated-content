@@ -81,7 +81,6 @@ CSS.registerProperty({
 ## ガイド
 
 - [CSS プロパティと値 API の使用](/ja/docs/Web/API/CSS_Properties_and_Values_API/guide)
-
   - : CSS や JavaScript でカスタムプロパティを登録する方法について、未定義値や無効値の扱い方、代替、継承などのヒントを交えて解説しています。
 
 - [CSS Houdini](/ja/docs/Web/API/Houdini_APIs)

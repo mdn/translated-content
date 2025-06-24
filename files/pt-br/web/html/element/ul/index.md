@@ -57,15 +57,12 @@ Não há nenhuma limitação para a profundidade e a imbricação das listas def
 Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `compact`{{ Deprecated_inline() }}
-
   - : Este atributo booleano sugere que a lista será processada em um modelo compacto. A interpretação deste atributo depende do perfil de navegação (_user agent_) e não funciona em todos os navegadores.
 
     > **Note:** **Nota de utilização:** Não aplique este atributo, que foi preterido - o elemento {{ HTMLElement("ul") }} deve ser definido utilizando-se a folha de estilos [CSS](/pt-BR/docs/Web/CSS). Para dar um efeito similar ao atributo compacto, a propriedade [line-height](/pt-BR/docs/CSS/line-height) (espaçamento), da [CSS](/pt-BR/docs/Web/CSS), pode ser utilizada com um valor de 80%.
 
 - `type`{{ Deprecated_inline() }}
-
   - : Usados para estabelecer o tipo de marcador da lista. Os valores definidos durante a [HTML3.2](/pt-BR/HTML3.2) e a versão de transição de [HTML 4.0/4.01](/pt-BR/HTML4.01), são:
-
     - `círculo`,
     - `disco`,
     - e `quadrado`.
@@ -126,10 +123,8 @@ A saída HTML acima, é:
 
 - primeiro item
 - segundo item
-
   - segundo item primeiro subitem
   - segundo item segundo subitem
-
     - segundo item segundo subitem primeiro sub-subitem
     - segundo item segundo subitem segundo sub-subitem
     - segundo item segundo subitem terceiro sub-subitem
@@ -161,7 +156,6 @@ A saída HTML acima será:
 
 - primeiro item
 - segundo item
-
   1. segundo item primeiro subitem
   2. segundo item segundo subitem
   3. segundo item terceiro subitem
@@ -172,7 +166,6 @@ A saída HTML acima será:
 
 - Outros elementos HTML relacionados à lista: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} e o obsoleto {{ HTMLElement("dir") }};
 - Propriedades CSS que podem ser especialmente úteis para determinar o modelo do elemento \<ul>:
-
   - a propriedade [list-style](/pt-BR/docs/CSS/list-style), conveniente para escolher a maneira como os ordinais serão mostrados,
   - [CSS counters](/pt-BR/CSS_Counters), eficientes para guiar listas complexas aninhadas,
   - a propriedade [line-height](/pt-BR/docs/CSS/line-height), válida para simular o atributo ultrapassado [`compact`](#compact),

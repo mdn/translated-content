@@ -19,6 +19,5 @@ l10n:
 
 - 维基百科上的词条[数据库](https://zh.wikipedia.org/wiki/数据库)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

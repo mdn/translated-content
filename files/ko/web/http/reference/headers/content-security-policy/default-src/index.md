@@ -38,18 +38,14 @@ Content-Security-Policy: default-src <source> <source>;
 \<source> 에는 다음에 항목이 포함됩니다.
 
 - \<host-source>
-
   - : 부수적으로 [URL scheme](/ko/docs/URIs_and_URLs) 및/또는 port 번호가 포함된 도메인 또는 IP 주소와 같은 인터넷 호스트, 또한 사이트의 주소 및 포트에 와일트 카드를 사용할 수 도 있습니다 (`'*'`), 이를 사용하면 모든 주소 또는 포트에서의 유효함을 나타냅니다.
     예:
-
     - `http://*.example.com`: `http:` 를 사용하는 모든 서브도메인에서 매칭됩
     - `mail.example.com:443`: 443 포트로 mail.example.com에 접근하는 경우 매칭됨
     - `https://store.example.com`: store.example.com를 `https:`로 접근하는 경우 매칭됨
 
 - \<scheme-source>
-
   - : 'http:' 또는 'https:'와 같은 스키마. **콜론이 필수적이며, 작은 따음표는 사용하지 않아야 합니다.** 스키마도 지정할 수 있습니다 (추천하지 않음).
-
     - `data:`[`data:` URIs](/ko/docs/Web/URI/Schemes/data) 를 컨텐츠 출처로 허용합니다. 이것은 안전하지 않습니다. _공격자가 임의의 데이터를 주입할 수도 있기 때문에 script에는 사용하지 마십시오._
     - `mediastream:`[`mediastream:` URIs](/ko/docs/Web/API/Media_Capture_and_Streams_API) 을 콘텐츠 출처로 허용합니다.
     - `blob:`[`blob:` URIs](/ko/docs/Web/API/Blob)을 콘텐츠 출처로 허용합니다.

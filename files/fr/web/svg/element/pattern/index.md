@@ -49,7 +49,6 @@ svg {
   - : Cet attribut référence un patron de motif qui fournit les valeurs par défaut des attributs de l'élément `<pattern>`.
     _Type de valeur_: [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
 - {{SVGAttr("patternContentUnits")}}
-
   - : Cet attribut définit le système de coordonnées pour le contenu de {{SVGElement("pattern")}}. _Type de valeur_ : `userSpaceOnUse`|`objectBoundingBox`; _Valeur par défaut_ : `userSpaceOnUse`; _Animable_: **yes**
 
     > [!NOTE]
@@ -70,7 +69,6 @@ svg {
 - {{SVGAttr("x")}}
   - : Cet attribut détermine le déplacement en coordonnée x du motif de mosaïque._Type de valeur_ : [**\<length>**](/fr/docs/Web/SVG/Content_type#Length)|[**\<percentage>**](/fr/docs/Web/SVG/Content_type#Percentage) ; _Valeur par défaut_ : `0`; _Animatable_: **yes**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
-
   - : Cet attribut référence un patron de motif qui fournit des valeurs par défaut pour les attributs du `<pattern>`.
     _Type de valeur_ : [**\<URL>**](/fr/docs/Web/SVG/Content_type#URL); _Valeur par défaut_ : _none_; _Animable_: **yes**
 

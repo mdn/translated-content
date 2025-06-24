@@ -155,13 +155,11 @@ form.addEventListener(
 除了所有 {{HTMLElement("input")}} 元素共通的属性外，`radio` 输入还支持以下属性：
 
 - `checked`
-
   - : 一个布尔值属性，如果出现，代表这个单选按钮是组中被选中的那个。
 
     不像其他浏览器那样，Firefox 默认在不同页面之间[保持了 `<input>` 动态选择的状态](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。使用 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Elements/input#autocomplete) 属性来控制这个特性。
 
 - `value`
-
   - : `value` 属性是所有 {{HTMLElement("input")}} 元素共有的属性之一；然而，对于 `radio` 类型的输入，有特殊用途：当表单提交时，只有当前选定的单选按钮才会提交到服务器，并且报告的值为 `value` 属性的值。如果没有指定 `value`，默认为字符串 `on`。这个行为已经在[值](#值)这一节中描述。
 
 - `required`

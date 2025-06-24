@@ -26,9 +26,7 @@ var updating = browser.bookmarks.update(
 - `id`
   - : Un {{jsxref("string")}} spécifiant l'ID du dossier de signet ou de dossier de signets à mettre à jour.
 - `changes`
-
   - : Un {{jsxref("object")}} spécifiant les changements à appliquer, avec une combinaison des champs suivants. Tous les éléments non spécifiés ne sont pas modifiés dans le signet ou le dossier référencé :
-
     - `title` {{optional_inline}}
       - : Un {{jsxref("string")}} contenant le nouveau titre du signet, ou le nouveau nom du dossier si l'`id` fait référence à un dossier.
     - `url` {{optional_inline}}

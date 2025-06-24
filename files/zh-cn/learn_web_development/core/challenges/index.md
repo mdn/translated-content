@@ -12,7 +12,6 @@ slug: Learn_web_development/Core/Challenges
 - 挑战
   - : 更改样式表，当鼠标指针移到任何一片花瓣上时，内层花瓣都会变成粉红色，但不改变外层花瓣的工作方式。
 - 解决方案
-
   - : 将 :hover 伪类的位置从特定花瓣移动到所有花瓣
 
     ```css

@@ -32,7 +32,6 @@ figure {
 该元素包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
-
   - : 布尔值属性；声明该属性，音频会尽快自动播放，不会等待整个音频文件下载完成。
 
     > [!NOTE]
@@ -49,7 +48,6 @@ figure {
 - `currentTime`
   - : 读取 `currentTime` 属性将返回一个双精度浮点值，用以标明以秒为单位的当前音频的播放位置。如果音频的元数据暂时无法访问——这意味着你无法的知道媒体的开始或持续时间。这时，`currentTime` 相对应的，能够被用于改变重播的时间。否则，设置 `currentTime` 将设置当前的播放位置，并且会自动搜寻到媒体的那个位置，如果媒体目前已经被加载的话。如果音频是以流的形式加载的，并且数据超出了媒体的缓冲区（buffer），{{Glossary("user agent")}} 可能无法获取资源的某些部分。另一些音频的时间轴可能并非从 0 秒开始，所以设置 `currentTime` 到一个开始时间之前的时间可能会失败。举个例子，如果音频媒体的时间轴从 12 小时开始，把 `currentTime` 设置到 3600 将会尝试把当前播放位置设置到媒体的开始位置之前，从而导致错误。{{domxref("HTMLMediaElement.getStartDate", "getStartDate()")}} 方法能够用于确定媒体时间轴的开始位置。
 - `disableRemotePlayback` {{experimental_inline}}
-
   - : 这是一个布尔值，用来禁用在远程设备上进行进度控制的能力。这些设备通过有线（比如 HDMI, DVI）或无线技术（比如 Miracast, Chromecast, DLNA, AirPlay,）来与 web 连接。请参考 [this proposed specification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) 来获取更多信息。
 
     > [!NOTE]
@@ -62,9 +60,7 @@ figure {
 - `muted`
   - : 表示是否静音的布尔值。默认值为 `false`，表示有声音。
 - `preload`
-
   - : 枚举属性，让开发者自行思考来示意浏览器使用何种加载方式以达到最好的用户体验。可以是以下属性之一：
-
     - `none`: 示意用户可能不会播放该音频，或者服务器希望节省带宽；换句话说，该音频不会被缓存；
     - `metadata`: 示意即使用户可能不会播放该音频，但获取元数据 (例如音频长度) 还是有必要的。
     - `auto`: 示意用户可能会播放音频；换句话说，如果有必要，整个音频都将被加载，即使用户不期望使用。
@@ -305,7 +301,6 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 ## 参见
 
 - [Web media technologies](/zh-CN/docs/Web/Media)
-
   - [Media container formats (file types)](/zh-CN/docs/Web/Media/Guides/Formats/Containers)
   - [Guide to audio codecs used on the web](/zh-CN/docs/Web/Media/Guides/Formats/Audio_codecs)
 

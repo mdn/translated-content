@@ -23,9 +23,7 @@ Además de los siguientes atributos, el elemento `<math>` acepta cualquier atrib
 - mathcolor
   - : El color de texto. Puedes usar `#rgb`, `#rrggbb` y [palabras clave de colores](/es/docs/Web/CSS/color_value#palabras_clave_de_colores).
 - display
-
   - : Este atributo enumerado especifica de qué manera el marcado MathML debería ser renderizado. Puede tomar uno de los siguientes valores:
-
     - `block`, el cual indica que este elemento será incluido fuera del fragmento de texto actual , en forma de bloque individual que puede ser posicionado en cualquier sitio sin cambiar el significado del texto;
     - `inline`, el cual indica que este elemento será incluido en el fragmento de texto actual, y no puede ser sacado del mismo sin cambiar el significado del texto.
 

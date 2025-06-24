@@ -13,7 +13,6 @@ La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Ce
 - Prise en charge de l'élément `pattern` ([spécification](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
 - Prise en charge de l'élément `mask` ([spécification](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
 - Prise en charge de l'ensemble des filtres SVG 1.1 ([spécification](https://www.w3.org/TR/SVG11/filters.html))&nbsp;:
-
   - `filter`
   - `feDistantLight`
   - `fePointLight`

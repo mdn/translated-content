@@ -85,14 +85,12 @@ Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne 
 
 - {{cssxref("border-block-start")}}
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("border-top")}}
   - {{cssxref("border-right")}}
   - {{cssxref("border-bottom")}}
   - {{cssxref("border-left")}}
 
 - Les propriétés qui déterminent les propriétés logiques par rapport aux propriétés physiques
-
   - {{cssxref("writing-mode")}}
   - {{cssxref("direction")}}
   - {{cssxref("text-orientation")}}

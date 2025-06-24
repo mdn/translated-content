@@ -22,17 +22,12 @@ let createContext = browser.contextualIdentities.create(
 ### 参数
 
 - `details`
-
   - : `object`。包含新场景身份属性的对象。这包含以下属性：
-
     - `name`
-
       - : `string`。新标识的名称。这将显示在浏览器的用户界面中，使用户能够打开属于此身份的新标签。它还将在属于此身份的标签的 URL 栏中显示。
 
     - `color`
-
       - : `string`。与新身份关联的颜色。这将用于突出显示属于此身份的标签。你可以在此处提供以下任何值：
-
         - "blue"
         - "turquoise"
         - "green"
@@ -44,9 +39,7 @@ let createContext = browser.contextualIdentities.create(
         - "toolbar"
 
     - `icon`
-
       - : `string`。显示在属于此身份的标签的 URL 栏中的图标名称。你可以在此处提供以下任何值：
-
         - "fingerprint"
         - "briefcase"
         - "dollar"

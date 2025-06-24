@@ -23,9 +23,7 @@ l10n:
 - [`contrast()`](/ja/docs/Web/CSS/filter#contrast)
   - : CSS の {{cssxref("&lt;percentage&gt;")}} を取ります。描画するコントラストを調整します。値を `0%` にすると、完全に黒い絵を作成します。値を `100%` にすると絵は変更されません。
 - [`drop-shadow()`](/ja/docs/Web/CSS/filter#drop-shadow)
-
   - : 描画にドロップシャドウ効果を適用します。ドロップシャドウは、特定の色で描画された描画のアルファマスクをぼかし、ずらして、描画の下に合成した効果です。この関数は最大 5 つの引数を取ります。
-
     - `<offset-x>`
       - : 利用可能な単位は {{cssxref("&lt;length&gt;")}} を参照してください。影の水平距離を指定します。
     - `<offset-y>`

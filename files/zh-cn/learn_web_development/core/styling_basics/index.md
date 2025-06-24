@@ -26,9 +26,7 @@ slug: Learn_web_development/Core/Styling_basics
 - [层叠与继承](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : 本节目标是帮你建立对——层叠、优先级和继承——这三个最基本的 CSS 概念的理解。这些概念控制着 CSS 如何应用于 HTML 以及应用时的优先顺序。
 - [CSS 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : 有各种类型的 CSS 选择器，以供我们精确选出要添加样式的元素。在本文及其子文章中，我们会详细过一遍不同类型的选择器，以此窥探 CSS 选择器的运行机理。子文章包括了：
-
     - [类型、类以及 ID 选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
     - [属性选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [伪类与伪元素](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

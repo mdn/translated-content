@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/center
 ### Definición
 
 - El elemento obsoleto [center](/es/docs/Web/HTML/Reference/Elements/center) (centro) crea una caja en bloque con el contenido centrado. En realidad es equivalente a un [div](/es/docs/Web/HTML/Reference/Elements/div) con `align="center"`
-
   - : **Sus etiquetas son**: \<center> y \</center> (ambas obligatorias).
 
     **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque).

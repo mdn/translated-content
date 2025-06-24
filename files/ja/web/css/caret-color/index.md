@@ -65,7 +65,6 @@ caret-color: unset;
 ### 値
 
 - `auto`
-
   - : ユーザーエージェントはキャレットの適切な色を選択します。これは一般的に {{cssxref("&lt;color&gt;","currentcolor","#currentcolor_keyword")}} ですが、視認性や周囲のコンテンツとのコントラストを高めるために、ユーザーエージェントが `currentcolor`、背景色、影の色、その他の要因を考慮して、別な色を選択することがあります。
 
     > [!NOTE]

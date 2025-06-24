@@ -33,11 +33,9 @@ while (condition);
 ```
 
 - `statement`
-
   - : 少なくとも 1 回は実行され、条件が真と評価されるたびに再実行される文。ループ内で複数の文を実行するには、それらの文をグループ化するために{{jsxref("Statements/block", "ブロック", "", 1)}}文 (`{ /* ... */ }`) を使ってください。
 
 - `condition`
-
   - : ループを通過した後ごとに評価される式。もし `condition` が [true に評価される](/ja/docs/Glossary/Truthy)なら、`statement` は再度実行されます。`condition` が [false に評価される](/ja/docs/Glossary/Falsy)ときは、制御が `do...while` に続く文へ渡ります。
 
     メモ: {{jsxref("Statements/break", "break")}} 文を使うと、`condition` が false と評価される前にループを停止することができます。

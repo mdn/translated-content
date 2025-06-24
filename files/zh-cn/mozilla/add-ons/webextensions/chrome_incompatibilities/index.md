@@ -14,12 +14,10 @@ WebExtension API 的目标是提供对所有主要浏览器的兼容性，因此
 - 不同浏览器对 WebExtension API 的支持各不相同。详情请参阅[浏览器对 JavaScript API 的支持](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)。
 - 不同浏览器对 `manifest.json` 键的支持有所不同。请参阅 [`manifest.json`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json#浏览器兼容性) 页面上的[“浏览器兼容性”部分](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json)了解更多详情。
 - 扩展 API 命名空间：
-
   - **在 Firefox 和 Safari 中**：扩展 API 在 `browser` 命名空间下访问。为了与 Chrome 浏览器兼容，还支持 `chrome` 命名空间。
   - **在 Chrome 浏览器中**：扩展 API 在 `chrome` 命名空间下访问。（参见 [Chrome bug 798169](https://crbug.com/798169)）
 
 - 异步 API：
-
   - **在 Firefox 和 Safari 中**：异步 API 使用 Promise 实现。
   - **在 Chrome 浏览器中**：在 Manifest V2 中，异步 API 使用回调实现。在 Manifest V3 中，大多数适当的方法都支持 [promise](https://developer.chrome.google.cn/docs/extensions/develop/migrate#promises)。（参见 [Chrome bug 328932](https://crbug.com/328932)）Manifest V3 支持回调，以实现向后兼容。
 
@@ -136,11 +134,9 @@ Firefox 和 Chrome 浏览器都包含代理 API。不过，这两个 API 的设�
 #### WebRequest API
 
 - **在 Firefox 中**：
-
   - 只有当原始 URL 使用了 `http:` 或 `https:` 协议时，请求才能被重定向。
   - `activeTab` 权限不允许拦截当前标签页中的网络请求。（参见 [bug 1617479](https://bugzil.la/1617479)）
   - 系统请求（如扩展升级或搜索栏建议）不会触发事件。
-
     - **从 Firefox 57 开始**：Firefox 对需要拦截 {{WebExtAPIRef("webRequest.onAuthRequired")}} 代理授权的扩展例外处理。请参阅 {{WebExtAPIRef("webRequest.onAuthRequired")}} 的文档。
 
   - 如果扩展希望将公共（如 HTTPS）URL 重定向到[扩展页面](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages)，扩展的 `manifest.json` 文件必须包含 [`web_accessible_resources`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) 键，其中包含扩展页面的 URL。

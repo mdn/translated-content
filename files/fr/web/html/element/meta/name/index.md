@@ -12,7 +12,6 @@ L'élément [`<meta>`](/fr/docs/Web/HTML/Element/meta) permet de fournir des mé
 La spécification HTML définit les noms de métadonnées standard suivants&nbsp;:
 
 - `application-name`
-
   - : Le nom de l'application qui s'exécute sur la page web.
 
     > [!NOTE]
@@ -29,7 +28,6 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 - `keywords`
   - : Les mots-clés pertinents pour décrire le contenu de la page, séparés par des virgules.
 - `referrer`
-
   - : Contrôle l'en-tête HTTP [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) pour les requêtes envoyées depuis le document&nbsp;:
 
     <table class="standard-table">
@@ -78,13 +76,11 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 - [`theme-color`](/fr/docs/Web/HTML/Element/meta/name/theme-color)
   - : Fournit une suggestion de couleur que les agents utilisateur peuvent utiliser afin de personnaliser l'affichage de la page ou l'interface utilisateur environnante. L'attribut `content` doit contenir une couleur CSS valide (voir la page sur le type [`<color>`](/fr/docs/Web/CSS/color_value).
 - `color-scheme`
-
   - : Définit un ou plusieurs schémas de couleurs avec lesquels le document est compatible.
 
     Le navigateur utilisera cette information en complément des réglages du navigateur et du système sous-jacent pour déterminer les couleurs à utiliser en arrière-plan et en premier plan pour les contrôles de formulaire et les barres de défilement. L'utilisation principale de `<meta name="color-scheme">` consiste à indiquer la compatibilité avec les modes de thèmes clair ou sombre et l'ordre de préférence associé.
 
     Pour `color-scheme`, la valeur de l'attribut [`content`](/fr/docs/Web/HTML/Element/meta#attr-content) peut être&nbsp;:
-
     - `normal`
       - : Le document n'a pas de schéma de couleurs particulier connu et devrait être affiché avec la palette de couleurs par défaut.
     - \[`light` | `dark`]+
@@ -105,7 +101,6 @@ La spécification HTML définit les noms de métadonnées standard suivants&nbsp
 La spécification CSS sur l'adaptation des appareils (<i lang="en">Device Adaptation</i>) définit les noms de métadonnées suivants&nbsp;:
 
 - `viewport`
-
   - : Fournit une indication à propos de la taille initiale de la zone d'affichage ([<i lang="en">viewport</i>](/fr/docs/Glossary/Viewport)).
 
     <table class="fullwidth-table">
@@ -180,7 +175,6 @@ Désactiver la possibilité de zoomer en utilisant `user-scalable` avec la valeu
 - `publisher`
   - : Le nom de l'éditrice ou de l'éditeur (pour la publication) du document.
 - `robots`
-
   - : Le comportement que les robots d'indexation devraient suivre sur la page. Il s'agit d'une liste de valeurs séparées par des virgules et qui sont décrites dans le tableau suivant&nbsp;:
 
     | Valeur         | Description                                                                                   | Utilisée par                                                                                                                                                                                                                                           |

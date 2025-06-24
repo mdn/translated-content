@@ -21,11 +21,9 @@ write(data)
 ### 引数
 
 - `data`
-
   - : ファイルに書き込むデータを表す {{jsxref("ArrayBuffer")}}・{{jsxref("TypedArray")}}・
     {{jsxref("DataView")}}・{{domxref('Blob')}}・{{jsxref("String")}} オブジェクト・文字列リテラルのいずれかです。
     もしくは、以下のプロパティを持つオブジェクトです。
-
     - `type`
       - : `"write"`・`"seek"`・`"truncate"` のいずれかの文字列です。
     - `data`

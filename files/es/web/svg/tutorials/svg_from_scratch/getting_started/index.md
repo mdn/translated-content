@@ -32,7 +32,6 @@ Copie el código y guárdelo como demo1.svg. Luego ábralo en Firefox. Lo verá 
 El proceso de renderizado incluye lo siguiente :
 
 1. Comenzamos con el elemento raiz del `svg`:
-
    - La declaracion de tipo de documento (doctype) usual en (X)HTML debería dejarse de lado debido a que la validación DTD based SVG conduce a mas problemas que soluciones.
    - Antes de SVG 2, para identificar la versión del SVG para otros tipos de validación se debían utilizar siempre los atributos `version` y `baseProfile` en su lugar. Los atributos `version` y `baseProfile` están obsoletos en SVG 2.
    - Debido a SVG es una especie de dialecto de XML, SVG debe unir siempre los namespaces correctamente (en el atributo xmlns). Para mayor información, vea [Namespaces Crash Course](/es/docs/Web/SVG/Namespaces_Crash_Course).
@@ -45,7 +44,6 @@ El proceso de renderizado incluye lo siguiente :
 
 - Lo primero que hay que tener en cuenta es el orden de representación de los elementos. La regla globalmente válida para los archivos SVG es que los elementos posteriores se renderizan encima de los anteriores. Cuanto más abajo esté un elemento, más visible será.
 - En la web, los archivos SVG pueden mostrarse directamente en el navegador o incrustarse en archivos HTML mediante varios métodos:
-
   - Si el HTML es XHTML y se entrega como tipo application/xhtml+xml, el SVG puede incrustarse directamente en la fuente XML.
   - El SVG también puede incrustarse directamente en HTML.
   - Se puede utilizar con el elemento [`<img>`](/es/docs/Web/HTML/Reference/Elements/img)

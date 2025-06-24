@@ -653,7 +653,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
 2. [**CSS Reference**](/es/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
 4. **Guides**
-
    1. [Basics concepts of grid layout](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relationship to other layout methods](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Line-based placement](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -667,7 +666,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
    11. [Realizing common layouts using grids](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Properties**
-
    1. [grid](/es/docs/Web/CSS/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
@@ -688,7 +686,6 @@ Setting auto margins, using `margin-right` or `margin-left` however, or absolute
    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
-
    1. [Grid](/es/docs/Glossary/Grid)
    2. [Grid lines](/es/docs/Glossary/Grid_Lines)
    3. [Grid tracks](/es/docs/Glossary/Grid_tracks)

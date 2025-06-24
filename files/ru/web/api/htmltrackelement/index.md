@@ -24,7 +24,6 @@ _Наследует свойства своего родителя, {{domxref("H
 - {{domxref("HTMLTrackElement.default")}}
   - : Тип данных {{domxref("Boolean")}}, отображает значение HTML-атрибута [`default`](/ru/docs/Web/HTML/Reference/Elements/track#default). Указывает, что это текстовый трек по умолчанию, если пользовательские настройки не определят другой трек, как более уместный.
 - {{domxref("HTMLTrackElement.readyState")}} {{ReadOnlyInline}}
-
   - : Возвращает значение типа `unsigned short`, которое показывает доступность трека для чтения:
 
     | Константа | Значение | Описание                                                                                                                                                                                              |

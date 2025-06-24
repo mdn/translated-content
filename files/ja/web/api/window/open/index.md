@@ -22,21 +22,16 @@ open(url, target, windowFeatures)
 ### 引数
 
 - `url` {{optional_inline}}
-
   - : 文字列で、読み込むリソースの URL を示します。これは HTML ページ、画像ファイル、その他のブラウザーが対応しているリソースのパスまたは URL にすることができます。空文字列 (`""`) がこの時期数に指定されると、対象の閲覧コンテキストに空のページが開きます。
 
 - `target` {{optional_inline}}
-
   - : ホワイトスペースのない文字列で、リソースを読み込むための閲覧コンテキストの[名前](/ja/docs/Web/API/Window/name)を指定します。その名前で既存のコンテキストが識別できない場合は、新しいコンテキストが指定された名前で作成されます。特殊な [`target` キーワード](/ja/docs/Web/HTML/Reference/Elements/a#target)である `_self`、`_blank`（既定値）、`_parent`、`_top`、`_unfencedTop` も利用することができます。 `_unfencedTop` は[フェンスフレーム](/ja/docs/Web/API/Fenced_frame_API)でのみ関連します。
 
     この名前は [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) や [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) 要素の `target` 属性として使うことができます。
 
 - `windowFeatures` {{optional_inline}}
-
   - : `name=value` の形式、または論理特性の場合は `name` だけで、ウィンドウの特性をカンマで区切った文字列です。論理値は、`name`、`name=yes`、`name=true`、`name=n` （`n` は 0 以外の整数） のいずれかを使用して true に設定できます。これらの機能には、ウィンドウの既定のサイズと位置、最小ポップアップウィンドウを開くかどうかなどのオプションが含まれます。次のオプションに対応しています。
-
     - `attributionsrc` {{experimental_inline}}
-
       - : ブラウザーに、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを `open()` 呼び出しとともに送信するように指示します。この呼び出しは、ユーザーの操作から 5 秒以内に、[一時的な有効化](/ja/docs/Glossary/Transient_activation)（つまり、 `click` などのユーザー操作イベントハンドラー内）で行わなければなりません。サーバー側では、このヘッダーは、帰属ソースの登録を完了するために、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を起動するために使用されます。
 
         さらに、 `open()` メソッドが完了すると、関連付けられたソースデータ （{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの） を格納するために、ブラウザーも開始されます。
@@ -46,11 +41,9 @@ open(url, target, windowFeatures)
         > **メモ:** `open()` の呼び出しは、帰属トリガーの登録のために使用することはできません。
 
     - `popup`
-
       - : 既定では、`window.open` は新しいタブでページを開きます。 `popup` を true に設定すると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。 `popup` が存在し、false に設定されている場合でも、新しいタブは開かれます。
 
         開いたウィンドウの UI 機能を制御するために使用されていた、いくつかの古い機能があります。現行のブラウザーでは、これらの機能はポップアップを要求する効果しかありません。`popup` が指定されておらず、`windowFeatures` に `noopener`、`noreferrer`、`attributionsrc` 以外の機能（認識されない機能も含む）のいずれかが含まれてる場合、次の条件のいずれかが当てはまる場合、ウィンドウはポップアップとして開かれます。
-
         - `location` と `toolbar` がともに false であるか存在しない
         - `menubar` が false であるか存在しない
         - `resizable` が false である
@@ -60,23 +53,18 @@ open(url, target, windowFeatures)
         それ以外の場合は、ウィンドウはタブとして開かれます。
 
     - `width` または `innerWidth`
-
       - : スクロールバーを含むコンテンツ領域の幅を指定します。必要最小値は 100 です。
 
     - `height` または `innerHeight`
-
       - : スクロールバーを含むコンテンツ領域の高さを指定します。必要最小値は 100 です。
 
     - `left` または `screenX`
-
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の左側からの距離をピクセル単位で指定します。
 
     - `top` または `screenY`
-
       - : 新しいウィンドウを生成する、ユーザーのオペレーティングシステムによって定義される作業領域の上側からの距離をピクセル単位で指定します。
 
     - `noopener`
-
       - : この特性が設定されている場合、新しいウィンドウは [`Window.opener`](/ja/docs/Web/API/Window/opener) を介して元のウィンドウにアクセスすることはできず、 `null` を返します。
 
         `noopener` を使用した場合、 `_top`, `_self`, `_parent` 以外の空でないターゲット名は、新しい閲覧コンテキストを開くかどうかの判断において、 `_blank` と同様に扱われます。

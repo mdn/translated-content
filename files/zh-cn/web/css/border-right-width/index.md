@@ -74,9 +74,7 @@ border-right-width: unset;
 ### 值
 
 - `<line-width>`
-
   - : 定义边框的宽度，明确的非负 {{cssxref("&lt;length&gt;")}} 值或者是关键字。如果它是关键字，则必须是以下值之一：
-
     - `thin`
     - `medium`
     - `thick`

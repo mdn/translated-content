@@ -20,9 +20,7 @@ var gettingAll = browser.windows.getAll(
 ### Paramètres
 
 - `getInfo`{{optional_inline}}
-
   - : `object`. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.
-
     - `populate`{{optional_inline}}
       - : `boolean` Par défaut à `false`. S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
     - `windowTypes`{{optional_inline}}

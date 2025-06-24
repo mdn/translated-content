@@ -32,7 +32,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     - `"use-credentials"`
       - : Una solicitud a un origen cruzado (esto es, con el encabezado HTTP `Origin:`) es realizada, enviando credenciales (es decir, se envían cookies, certificado y autenticación básica HTTP). Si el servidor no otorga credenciales al sitio de origen (a través del encabezado HTTP `Access-Control-Allow-Credentials:`), la imagen estará _corrupta_, y su uso estará restringido.Si no está presente, el recurso es obtenido sin una solicitud CORS (sin enviar el encabezado HTTP `Origin:`), previniendo así su uso no corrupto en elementos {{HTMLElement('canvas')}}. Si se introduce un valor no permitido, se maneja como si usara el valor **anonymous**. Véase [atributos de configuración CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para más información.
 - `disabled` {{Non-standard_inline}}
-
   - : Este atributo es usado para deshabilitar una relación de enlace. Agregando programación, este atributo puede ser usado para habilitar o deshabilitar la relación con distintas hojas de estilos.
     > [!NOTE]
     > Aunque no hay atributo `disabled` en el estándar de HTML, **sí** hay un atributo `disabled` en el objeto DOM `HTMLLinkElement`.El uso de `disabled` como atributo HTML no es estándar, y solo puede ser usado en algunos navegadores ([W3 #27677](https://www.w3.org/Bugs/Public/show_bug.cgi?id=27677)). **No debe usarse**. Para lograr un efecto similar, se puede usar una de las siguientes técnicas:
@@ -47,7 +46,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `integrity` {{experimental_inline}}
   - : Contiene metadatos en línea, el valor criptográfico codificado a base 64 de un recurso (archivo) que se le está indicando al navegador que obtenga, el cual puede ser utilizado por el agente usuario para verificar si el recurso obtenido ha sido entregado libre de manipulaciones inesperadas. Véase [Integridad de subrecursos](/es/docs/Web/Security/Subresource_Integrity).
 - `media`
-
   - : Este atributo especifica el tipo de medio al que aplica el recurso enlazado. Su valor debe ser un [media query](/es/docs/Web/CSS/CSS_media_queries/Using_media_queries). Este atributo es usado principalmente cuando se enlaza a una hoja de esetilos externa en la que se le permita al agenete usuario seleccionar la que mejor se adapte al dispositivo sobre el que se ejecuta.
     > [!NOTE]
     >
@@ -69,7 +67,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     > [!NOTE]
     > Este atributo es obsoleto en HTML5. **No debe usarse**. Para lograr este efecto, use el atributo [`rel`](#rel) con el [tipo de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) contrario, por ejemplo, made debe reemplazar a author. Además, este atributo no significa _revision_ y no debe ser usado con un número de versión, que es desafortunadamente el caso de muchos sitios.
 - `sizes`
-
   - : Este atributo define los tamaños de los íconos para medios visuales contenidos en el recurso. Debe estar presente solo si el atributo [`rel`](#rel) contiene el [tipo de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) icon. Puede tener los siguientes valores:
     - `any`, significa que el ícono puede ser escalado a cualquier tamaño, ya que está en un formato vectorial, como `image/svg+xml`.
     - una lista de tamaños separados por espacios en blanco, cada uno en formato `<anchura en píxeles>` x `<altura en píxeles>` or `<anchura en píxeles>` X `<altura en píxeles>`. Cada uno de estos tamaños debe estar contenido en el recurso.

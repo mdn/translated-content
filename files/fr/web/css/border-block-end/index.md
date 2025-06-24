@@ -123,7 +123,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("border-top")}},
   - {{cssxref("border-right")}},
   - {{cssxref("border-bottom")}},

@@ -14,34 +14,26 @@ Para usar esta API, você precisa incluir a [API permission](/pt-BR/docs/Mozilla
 Para usar esta API, uma extensão especificar a "cookies" [API permission](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) em seu arquivo manifest, junto com a [host permissions](/pt-BR/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) para qualquer site que deseja acessar os cookies. O add-on pode ler ou escrever qualquer cookie no qual poderia ser lido ou escrito pela URL correspondente nas permissões de host, por exemplo:
 
 - `http://*.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler um cookie inseguro para `www.example.com`, com qualquer caminho.
     - Escrever um cookie seguro ou inseguro para `www.example.com`, com qualquer caminho.
 
     _não_ pode:
-
     - Ler um cookie seguro de `www.example.com`.
 
 - `http://www.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler um cookie não seguro para `www.example.com`, com qualquer caminho.
     - Ler um cookie não seguro para `.example.com`, com qualquer caminho.
     - Escrever um cookie seguro ou não seguro para `www.example.com` com qualquer caminho.
     - Escrever um cookie seguro ou não seguro para `.example.com` com qualquer caminho.
 
     _não_ pode:
-
     - Ler ou escrever um cookie para `foo.example.com`.
     - Ler ou escrever um cookie para `foo.www.example.com`.
 
 - `*://*.example.com/`
-
   - : Uma extensão com esta permissão de host pode:
-
     - Ler ou escrever um cookie seguro ou inseguro para `www.example.com` com qualquer caminho.
 
 ## Isolamento de primera parte

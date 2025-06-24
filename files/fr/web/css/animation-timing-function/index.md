@@ -131,11 +131,9 @@ Une fonction de progression pour une animation qui est définie pour une étape 
 ### Valeurs
 
 - `<timing-function>`
-
   - : Chaque valeur {{cssxref("easing-function")}} représente une fonction temporelle à rattacher à une animation définie grâce à {{cssxref("animation-name")}}.
 
     Les valeurs avec des mots-clés (`ease`, `linear`, `ease-in-out`, etc.) correspondent à une courbe de Bézier cubique fixe avec quatre valeurs prédéfinies; La fonction `cubic-bezier()` permet de paramétrer une courbe spécifique. Les fonctions en escalier permettent de diviser l'animation en intervalles de même durée.
-
     - `ease`
       - : Correspond à `cubic-bezier(0.25, 0.1, 0.25, 1.0)` : c'est la valeur par défaut, la vitesse de l'animation augmente au milieu de celle-ci puis ralentit à la fin.
     - `linear`
@@ -149,9 +147,7 @@ Une fonction de progression pour une animation qui est définie pour une étape 
     - `cubic-bezier(p1, p2, p3, p4)`
       - : Une courbe de Bézier paramétrable à l'aide de quatre coefficient compris entre 0 et 1.
     - `steps( n, <jumpterm>)`
-
       - : L'animation s'effectue selon _n_ étapes de durées égales. Ainsi, si n vaut 5, l'animation se composera de cinq paliers. Selon la valeur du paramètre _jumpterm_, ces paliers se trouveront entre 0%, 20%, 40%, 60% et 80%, ou entre 20%, 40%, 60%, 80% et 100%, or ou inclueront également 0% et 100% (soit 0%, 25%, 50%, 75% et 100%) :
-
         - `jump-start`
           - : La fonction est continue à gauche et le premier saut se produit au début de l'animation.
         - `jump-end`

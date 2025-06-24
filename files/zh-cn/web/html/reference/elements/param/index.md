@@ -23,9 +23,7 @@ l10n:
 - `type` {{deprecated_inline}}
   - : 仅在 `valuetype` 设置为 `ref` 时使用。指定在 value 指定的 URI 中找到的值的 MIME 类型。
 - `valuetype` {{deprecated_inline}}
-
   - : 指定 `value` 属性类型。可能的值包括：
-
     - `data`：默认值。该值以字符串形式传递给对象实现。
     - `ref`：该值是存储运行时值的资源的 URI。
     - `object`：在同一文档中另一个 {{HTMLElement("object")}} 元素的 ID。

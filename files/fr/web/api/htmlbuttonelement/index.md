@@ -40,9 +40,7 @@ _Hérite des propriétés de son parent, [`HTMLElement`](/fr/docs/Web/API/HTMLEl
 - [`HTMLButtonElement.tabIndex`](/fr/docs/Web/API/HTMLButtonElement/tabIndex)
   - : Une valeur numérique de type `long` qui représente la position de cet élément au sein de l'ordre de tabulation.
 - [`HTMLButtonElement.type`](/fr/docs/Web/API/HTMLButtonElement/type)
-
   - : Une chaîne de caractères qui indique le comportement du bouton. Il s'agit d'un attribut à valeur contrainte parmi une liste&nbsp;:
-
     - `submit`
       - : Le bouton envoi le formulaire. Il s'agit de la valeur par défaut si l'attribut n'est pas indiqué ou s'il a été changé dynamiquement vers une valeur vide ou invalide.
     - `reset`

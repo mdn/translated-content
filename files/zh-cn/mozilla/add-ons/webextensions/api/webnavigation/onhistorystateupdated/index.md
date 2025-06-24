@@ -34,9 +34,7 @@ browser.webNavigation.onHistoryStateUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 部分以了解更多信息。
 

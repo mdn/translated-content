@@ -481,7 +481,6 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
 ## Tutoriels concernant la diffusion en direct (streaming)
 
 - [Diffusion en direct de fichiers audio et vidéo sur le web](/fr/docs/Web/Media/Audio_and_video_delivery/Live_streaming_web_audio_and_video)
-
   - : Les technologies de diffusion en direct sont souvent employées pour diffuser en direct des évènements sportifs, des concerts et plus généralement des programmes télévisuels ou radiophoniques qui se déroulent en direct. Le terme est souvent raccourci en parlant de «&nbsp;direct&nbsp;» ou en anglais de
 
     <i lang="en">streaming</i>
@@ -493,7 +492,6 @@ Un certain nombre de bibliothèques JavaScript audio et vidéo existent. Les plu
     . Il s'agit du processus de transmission en direct d'une source média. Cela est plutôt complexe et sujet à de nombreux paramètres. Cet article fait une présentation générale du sujet et indique comment débuter.
 
 - [Mettre en place une ressource média diffusée en direct adaptative](/fr/docs/Web/Media/Audio_and_video_delivery/Setting_up_adaptive_streaming_media_sources)
-
   - : Si vous avez besoin de mettre en place une ressource média diffusée en direct et adaptative sur un serveur, et que cette ressource doit être consommée au sein d'un élément média HTML5, cet article explique comment faire. Il détaille les deux principaux formats, MPEG-DASH et HLS (
 
     <i lang="en">HTTP Live Streaming</i>

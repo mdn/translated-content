@@ -212,7 +212,6 @@ var schema = new Schema({
 
 - フィールドの*name* と *type*を key-value ペアのように書く (例えば `name`, `binary`, `living` のように）.
 - `type`定義するオブジェクトが続くフィールド名、およびフィールドの他のオプション。オプションには次のようなものがあります:
-
   - 初期値.
   - ビルドインのバリデータ (例えば最大値/最小値) それからカスタマイズしたバリデーション機能.
   - そのヒールドが必須かどうか
@@ -229,7 +228,6 @@ Mongoose はビルドインもしくはカスマイズしたバリデータや�
 - すべての [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) に [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required) があります。 これはドキュメントを保存するために必要なフィールドを指定するために使われます。
 - [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) に [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min)（最小値を指定） と [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max)（最大値を指定） バリデータがあります。
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js) には以下のバリデータがあります:
-
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): フィールドに利用可能な値の配列を指定します。
   - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): マッチさせる正規表現を指定します。
   - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) と [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength): 文字数の最大値と最小値を指定します。
@@ -497,7 +495,6 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 1. Click **Create New** in the _MongoDB Deployments_ section.![](mLabCreateNewDeployment.png)
 2. This will open the _Cloud Provider Selection_ screen.
    ![MLab - screen for new deployment](mLab_new_deployment_form_v2.png)
-
    - Select the SANDBOX (Free) plan from the Plan Type section.
    - Select any provider from the _Cloud Provider_ section. Different providers offer different regions (displayed below the selected plan type).
    - Click the **Continue** button.
@@ -505,17 +502,14 @@ After logging in, you'll be taken to the [home](https://mlab.com/home) screen:
 3. This will open the _Select Region_ screen.
 
    ![Select new region screen](mLab_new_deployment_select_region_v2.png)
-
    - Select the region closest to you and then **Continue**.
 
 4. This will open the _Final Details_ screen.
    ![New deployment database name](mLab_new_deployment_final_details.png)
-
    - Enter the name for the new database as `local_library` and then select **Continue**.
 
 5. This will open the _Order Confirmation_ screen.
    ![Order confirmation screen](mLab_new_deployment_order_confirmation.png)
-
    - Click **Submit Order** to create the database.
 
 6. You will be returned to the home screen. Click on the new database you just created to open its details screen. As you can see the database has no collections (data).

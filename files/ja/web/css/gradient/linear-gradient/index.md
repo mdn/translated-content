@@ -83,7 +83,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ### 値
 
 - `<side-or-corner>`
-
   - : グラデーション軸の開始点の位置。指定する場合は、 `to` に続けて 2 つ以下のキーワードから成ります。一つは水平方向の辺 (`left` または `right`)、もう一方は垂直方向の辺 (`top` または `bottom`) です。辺を表すキーワードは順不同です。指定しない場合は、 `to bottom` が既定になります。
 
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。

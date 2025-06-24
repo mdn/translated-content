@@ -105,7 +105,6 @@ afficher("de-DE");
 
 - Introduction : ['The ECMAScript Internationalisation API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Constructeurs
-
   - {{jsxref("Collator", "Intl.Collator")}}
   - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
   - {{jsxref("ListFormat", "Intl.ListFormat")}}
@@ -115,7 +114,6 @@ afficher("de-DE");
   - {{jsxref("Locale", "Intl.Locale")}}
 
 - Méthodes
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

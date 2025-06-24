@@ -77,9 +77,7 @@ function startCapture(displayMediaOptions) {
 Существуют три новых ограничения, добавленные в объект типа `MediaTrackConstraints` (а так же в {{domxref("MediaTrackSupportedConstraints")}} и {{domxref("MediaTrackSettings")}}) для конфигурирования потока захвата экрана:
 
 - {{domxref("MediaTrackConstraints.cursor", "cursor")}}
-
   - : Указывает, следует ли захватывать курсор мыши и, если да, делать это постоянно или только во время движения мыши. Возможные значения:
-
     - `always`
       - : (всегда) Курсор мыши всегда захватывается в результирующий поток.
     - `motion`

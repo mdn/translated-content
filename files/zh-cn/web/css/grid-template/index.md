@@ -108,7 +108,6 @@ grid-template: unset;
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : 指定{{cssxref("grid-template-rows")}}与{{cssxref("grid-template-columns")}}之值，并设{{cssxref("grid-template-areas")}}为`none`。
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?`
-
   - : 设{{cssxref("grid-template-areas")}}为列得`<string>`、{{cssxref("grid-template-columns")}}为\<explicit-track-list>（默认为`none`）、{{cssxref("grid-template-rows")}}为`<track-size>`（默认为`auto`）并拼接尺寸前后所定义之行。
 
     注：轨道被用以与“ASCII art”（即字符画，此处指`<string>`）中行列逐一视觉对齐，故`<explicit-track-list>`中不允许{{cssxref("repeat()")}}。
@@ -185,7 +184,6 @@ footer {
 
 - 相关 CSS 属性：{{cssxref("grid-template-rows")}}、{{cssxref("grid-template-columns")}}、{{cssxref("grid-template-areas")}}
 - 网格布局指导：
-
   - _[CSS 网格中基于线的定位](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)_
   - _[网格定义的简写规则](/zh-CN/docs/Web/CSS/CSS_grid_layout/Grid_template_areas#网格定义的简写规则)_
 

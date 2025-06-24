@@ -278,13 +278,11 @@ Le contenu à l'intérieur d'un élément [`<progress>`](/fr/docs/Web/HTML/Eleme
 Une jauge représente une valeur fixe au sein d'un intervalle délimité par les valeurs des attributs [`max`](/fr/docs/Web/HTML/Element/meter#attr-max) et [`min`](/fr/docs/Web/HTML/Element/meter#attr-min). Cette valeur s'affiche comme une barre. Pour connaître comment la valeur est affichée, il faut la comparer à d'autres valeurs&nbsp;:
 
 - Les attributs [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) partagent l'intervalle en trois parties&nbsp;:
-
   - La partie inférieure de l'intervalle est comprise entre [`min`](/fr/docs/Web/HTML/Element/meter#attr-min) et [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) (inclus).
   - La partie intermédiaire de l'intervalle est comprise entre [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) (inclus).
   - La partie supérieure de l'intervalle est comprise entre [`high`](/fr/docs/Web/HTML/Element/meter#attr-high) et [`max`](/fr/docs/Web/HTML/Element/meter#attr-max) (inclus).
 
 - La valeur de l'attribut [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) définit la valeur optimale pour l'élément [`<meter>`](/fr/docs/Web/HTML/Element/meter). Avec les valeurs des attributs [`low`](/fr/docs/Web/HTML/Element/meter#attr-low) et [`high`](/fr/docs/Web/HTML/Element/meter#attr-high), elle définit les parties de l'intervalle qui sont privilégiées&nbsp;:
-
   - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie inférieure, c'est cette partie qui est privilégiée, la partie intermédiaire étant considérée comme moyenne et la partie supérieure étant considérée comme la pire.
   - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie intermédiaire, la partie inférieure et la partie supérieure sont considérées comme moyennes et la partie intermédiaire est considérée comme privilégiée.
   - Si la valeur [`optimum`](/fr/docs/Web/HTML/Element/meter#attr-optimum) est contenue dans la partie supérieure, la partie inférieure sera considérée comme la pire, la partie intermédiaire sera considérée comme moyenne et la partie supérieure sera considérée comme privilégiée.

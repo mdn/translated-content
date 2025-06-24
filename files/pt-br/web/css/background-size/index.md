@@ -129,7 +129,6 @@ Com base nas dimensões e proporções intrínsecas, o tamanho renderizado da im
 - **Se o `background-size` for `contain` ou `cover`:** Embora preservando suas proporções intrínsecas, a imagem é renderizada no maior tamanho contido ou cobrindo a área de posicionamento do plano de fundo.
   Se a imagem não possui proporções intrínsecas, então ela é renderizada no tamanho da área de posicionamento do plano de fundo.
 - **Se o `background-size` for `auto` ou `auto auto`:**
-
   - Se a imagem tiver dimensões intrínsecas horizontais e verticais, ela será renderizada nesse tamanho.
   - Se a imagem não tiver dimensões intrínsecas e proporções intrínsecas, ela será renderizada no tamanho da área de posicionamento do plano de fundo.
   - Se a imagem não tiver dimensões intrínsecas, mas tiver proporções intrínsecas, ela será renderizada como se `contain` tivesse sido especificado.
@@ -141,7 +140,6 @@ Com base nas dimensões e proporções intrínsecas, o tamanho renderizado da im
   > Imagens SVG têm um atributo [preserveAspectRatio](/pt-BR/docs/Web/SVG/Attribute/preserveAspectRatio) que é equivalente ao `contain`; um `background-size` explícito faz com que `preserveAspectRatio` seja ignorado.
 
 - **Se o `background-size` tem um componente `auto` e um componente não `auto`:**
-
   - Se a imagem tiver proporções intrínsecas, ela será ampliada para a dimensão especificada.
     A dimensão não especificada é calculada usando a dimensão especificada e as proporções intrínsecas.
   - Se a imagem não tiver proporções intrínsecas, ela será ampliada para a dimensão especificada.

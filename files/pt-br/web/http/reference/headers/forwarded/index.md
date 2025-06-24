@@ -34,9 +34,7 @@ Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ## Diretivas
 
 - \<identifier>
-
   - : Um identificador divulgando a informação que é alterada ou perdida usando um proxy. Ela pode ser tanto:
-
     - um endereço IP (v4 ou v6, opicionalmente com a porta, e IPv6 encapsulado por colchetes e aspas),
     - um identificador ofuscado (como um "\_hidden" ou "\_secret"),
     - ou "unknown" (desconhecido) quando a entidade precedente não é conhecida (e você ainda quer indicar que aquela repassagem da requisição foi feita).

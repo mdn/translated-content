@@ -33,13 +33,11 @@ WCAG 2.1 には以下が含まれます。
 
 - WCAG 2.0 の全て（逐語的、一字一句違わないで）
 - A / AA / AAA レベルの 17 の新しい達成基準は、主に次の分野におけるユーザーのニーズに対応しています。
-
   - モバイルアクセシビリティ
   - ロービジョン
   - 認知
 
 - WCAG 2.1 についてもっと読む
-
   - Deque: [WCAG 2.1: アクセシビリティガイドラインの次のステップ](https://www.deque.com/blog/wcag-2-1-what-is-next-for-accessibility-guidelines/)（英語）
   - TPG: [ウェブコンテンツ・アクセシビリティガイドライン（WCAG）2.1](https://developer.paciellogroup.com/blog/2018/06/web-content-accessibility-guidelines-wcag-2-1/)（英語）
 

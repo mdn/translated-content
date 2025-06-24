@@ -267,7 +267,6 @@ document.body.addEventListener("click", function () {
 
 - 监听 content script 的所有连接企图。
 - 当收到连接请求后：
-
   - 存贮 Port 对象至 `portFromCS`
   - 使用 portFromCS 发送一个消息到 content script
   - 开始监听消息并记录它们。

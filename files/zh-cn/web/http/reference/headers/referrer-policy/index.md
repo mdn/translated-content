@@ -43,7 +43,6 @@ Referrer-Policy: unsafe-url
 - `strict-origin-when-cross-origin`（默认值）
   - : 对于同源的请求，发送来源、路径以及查询字符串。对于在相同安全级别的情况下（HTTPS→HTTPS）的跨源请求，仅发送来源。在目标的安全级别下降的情况下（HTTPS→HTTP）则不发送 {{HTTPHeader("Referer")}} 标头。
 - `unsafe-url`
-
   - : 无论是同源请求还是非同源请求，都发送完整的 URL（移除参数信息之后）作为引用地址。
 
     > [!NOTE]
@@ -128,7 +127,6 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 
 - [HTTP referer on Wikipedia](https://zh.wikipedia.org/wiki/HTTP_referer)
 - 其他设定页面引用策略的方式：
-
   - A {{HTMLElement("meta")}} element with a [name of `referrer`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - A `referrerpolicy` attribute on an {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("link")}} element.
   - The `noreferrer` link relation on an a, area, or link element (`rel="noreferrer"`).

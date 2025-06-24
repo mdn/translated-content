@@ -23,7 +23,6 @@ Puede tener un número ilimitado de cursores al mismo tiempo. Siempre se obtiene
 <!---->
 
 - {{domxref("IDBCursor.delete()")}}
-
   - : Devuelve un objeto {{domxref("IDBRequest")}} y, en un hilo separado, elimina el registro en la posición del cursor, sin cambiar la posición del cursor. Esto se puede utilizar para borrar registros específicos.
 
     {{domxref("IDBCursor.update()")}}

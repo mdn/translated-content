@@ -24,11 +24,9 @@ Se ha intentado llamar a un elemento o valor como si fuera una función, pero no
 Hay muchas funciones propias de Javascript (built-in) que necesitan una función de callback, por lo que tienes que pasar esa función como parámetro para que estos métodos funcionen correctamente.
 
 - Cuando se usen objetos {{jsxref("Array")}} o {{jsxref("TypedArray")}}:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Cuando se usen objetos {{jsxref("Map")}} y {{jsxref("Set")}}:
-
   - {{jsxref("Map.prototype.forEach()")}} y {{jsxref("Set.prototype.forEach()")}}
 
 ## Ejemplos

@@ -26,7 +26,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 就层叠上下文而言，DIV #1 和 DIV #3 隶属于根元素，因此层次结构如下所示：
 
 - 根层叠上下文（root stacking context）
-
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 

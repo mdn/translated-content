@@ -156,13 +156,13 @@ Somebody must've stolen the crown jewels
 </video>
 ```
 
-### HTML またはスタイルシートは WebVTT のスタイル設定
+### HTML またはスタイルシートの中の WebVTT のスタイル設定
 
 WebVTT キューは、{{cssxref("::cue")}} 擬似要素を使用して要素と照合することで、スタイル設定することができます。
 これにより、すべてのキューテキストの外観を変更することも、特定の要素だけを変更することもできます。この例では、[上記の最初の例](#webvtt_api_を使用してキャプションを追加)にスタイル設定を追加します。
 
 > [!NOTE]
-> また、[WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)でスタイルを定義することも可能です。
+> [WebVTT ファイル形式](/ja/docs/Web/API/WebVTT_API/Web_Video_Text_Tracks_Format)でもスタイルを定義することも可能です。
 
 #### HTML
 
@@ -289,7 +289,7 @@ video::cue(i) {
 }
 
 video::cue(c) {
-  color: lightpurple;
+  color: lavender;
 }
 ```
 

@@ -15,7 +15,6 @@ l10n:
 - [HTTPS 커뮤니티 가이드로 이동](https://movingtohttps.com/)
 - [보안 문맥](/ko/docs/Web/Security/Secure_Contexts)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("SSL")}}
   - {{glossary("TLS")}}

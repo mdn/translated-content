@@ -77,7 +77,6 @@ Por defecto, las imágenes repetidas son ajustadas al tamaño del elemento, pero
 ### Valores
 
 - `<repeat-style>`
-
   - : Los atributos de valor único son una abreviación de los atributos de doble valor.
 
     | **Valor único** | **Doble valor equivalente** |

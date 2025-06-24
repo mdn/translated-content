@@ -109,13 +109,11 @@ grid-template-rows: unset;
 - `min-content`
   - : 是一个用来表示以网格项的最大的最小内容来占据网格轨道的关键字。
 - {{cssxref("minmax", "minmax(min, max)")}}
-
   - : 是一个来定义大小范围的属性，大于等于 min 值，并且小于等于 max 值。如果 max 值小于 min 值，则该值会被视为 min 值。最大值可以设置为网格轨道系数值`<flex>` ，但最小值则不行。
 
     Note: 该规范在将来可能会允许设置最小值为 `flex` ，也会调整网格轨道算法 ([track sizing algorithm](https://www.w3.org/TR/css-grid-1/#track-sizing-algorithm)) 计算出正确的大小。
 
 - `auto`
-
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>` ，为最小时，则等同于 `<min-content>` 。
 
     Note: 网格轨道大小为 `auto` (且只有为 `auto` ) 时，才可以被属性{{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 拉伸。

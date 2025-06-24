@@ -34,6 +34,5 @@ myNotification.close();
 - Techopedia의 [정적 메서드](https://www.techopedia.com/definition/24034/static-method-java)
 - [static](/ko/docs/Web/JavaScript/Reference/Classes/static)
 - [MDN 웹 문서 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Object")}}
   - {{Glossary("Method")}}

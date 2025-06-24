@@ -27,7 +27,6 @@ slug: Web/API/Touch_events/Using_Touch_Events
 - {{domxref("TouchEvent.touches","touches")}} - 屏幕上当前所有触摸点的列表。
 - {{domxref("TouchEvent.targetTouches","targetTouches")}} - 目标 DOM 元素上的触摸点列表。
 - {{domxref("TouchEvent.changedTouches","changedTouches")}} - 依赖于关联的触摸事件类型的触摸点列表：
-
   - 对于 [`touchstart`](/zh-CN/docs/Web/API/Element/touchstart_event) 事件，它是当前事件变为活动的触摸点的列表。
   - 对于 [`touchmove`](/zh-CN/docs/Web/API/Element/touchmove_event) 事件，它是自上次事件以来更改的触摸点列表。
   - 对于 [`touchend`](/zh-CN/docs/Web/API/Element/touchend_event) 事件，它是从表面移除的触摸点的列表（即，与手指不再接触表面的触摸点集合）。

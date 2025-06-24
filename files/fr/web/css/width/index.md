@@ -100,9 +100,7 @@ La propriété `width` se définit avec
 - `available` {{experimental_inline}}
   - : La largeur du bloc contenant le bloc courant, moins la marge horizontale, la bordure et le remplissage (_padding_).
 - `fit-content` {{experimental_inline}}
-
   - : La quantité la plus grande entre :
-
     - La largeur intrinsèque minimum
     - Le minimum entre la largeur intrinsèque préférée et la largeur disponible
 

@@ -23,9 +23,7 @@ var resolving = browser.dns.resolve(
 - `hostname`
   - : `string`. Le nom d'hôte à résoudre.
 - `flags` {{optional_inline}}
-
   - : `array` de `string`. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à `false`. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :
-
     - `"allow_name_collisions"`: autorise les résultats de collision de noms qui sont normalement filtrés.
     - `"bypass_cache"`: Supprime le cache de recherche DNS interne.
     - `"canonical_name"`: Le nom canonique de l'hôte spécifié sera interrogé.

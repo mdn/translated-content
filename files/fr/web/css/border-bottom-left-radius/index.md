@@ -76,7 +76,6 @@ Cette propriété peut prendre deux formes :
 
 - Une première avec une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure pour ce coin
 - Une seconde avec deux valeurs
-
   - La première est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe horizontal de l'ellipse pour ce coin
   - La seconde est une longueur (`<length>`) ou un pourcentage (`<percentage>`) qui indique le rayon de courbure de l'axe vertical de l'ellipse pour ce coin
 
@@ -150,7 +149,6 @@ div {
 
 - La propriété raccourcie {{cssxref("border-radius")}}
 - Les propriétés pour les autres coins :
-
   - {{cssxref("border-top-right-radius")}},
   - {{cssxref("border-top-left-radius")}},
   - {{cssxref("border-bottom-right-radius")}}.

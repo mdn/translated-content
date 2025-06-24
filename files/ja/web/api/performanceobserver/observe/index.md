@@ -23,15 +23,12 @@ observe(options)
 ### 引数
 
 - `options`
-
   - : 以下の使用可能メンバーを持つオブジェクトです。
-
     - `buffered`
       - : 論理値のフラグで、バッファリングされた項目をオブザーバーのバッファーにキューイングするかどうかを示します。 "`type`" オプションと一緒の場合のみ使用してください。
     - `durationThreshold`
       - : {{domxref("PerformanceEventTiming")}} 項目の閾値を定義する {{domxref("DOMHighResTimeStamp")}} です。既定値では 104ms で、8ms 単位で丸められます。使用可能な閾値の最小値は 16ms です。 `entryTypes` オプションと一緒に使用することはできません。
     - `entryTypes`
-
       - : 文字列オブジェクトの配列で、それぞれ観測するパフォーマンス項目の型を指定します。 "`type`", "`buffered`", "`durationThreshold`" オプションと一緒に使用することはできません。
 
         有効なパフォーマンス項目名の一覧は {{domxref("PerformanceEntry.entryType")}} を参照ください。認識できない型は無視されますが、開発者がコードをデバッグするのを支援するために、ブラウザーがコンソールに警告メッセージを出力することがあります。有効な型が見つからなかった場合、 `observe()` は何の効果もありません。

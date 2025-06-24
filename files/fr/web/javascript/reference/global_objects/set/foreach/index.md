@@ -34,9 +34,7 @@ monSet.forEach(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction qu'on souhaite exécuter pour chaque élément et qui sera appelée avec trois arguments :
-
     - `valeurCourante`, `cléCourante`
       - : L'élément courant appartenant à l'ensemble `Set`. Un ensemble n'ayant pas de clé, c'est la même valeur qui est passée pour deux arguments de la fonction de rappel.
     - `set`

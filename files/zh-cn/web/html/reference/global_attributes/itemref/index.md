@@ -95,7 +95,6 @@ slug: Web/HTML/Reference/Global_attributes/itemref
 
 - [其他不同的全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
 - 其他 microdata 相关的全局属性
-
   - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemid)
   - [`itemprop`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemprop)
   - [`itemref`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#itemref)

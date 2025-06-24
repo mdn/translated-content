@@ -24,9 +24,7 @@ let bboxRect = object.getBBox();
 ### 매개변수
 
 - `Options` {{experimental_inline}} {{optional_inline}}
-
   - : 요소의 어떤 부분들이 바운딩 박스에 포함되는지를 제어하는 데 쓰이는 옵션 dictionary. 가능한 옵션은 아래와 같습니다.
-
     - `fill`
       - : fill이 바운딩 박스에 포함되어야 함을 나타내는 boolean 값. 기본 값은 `true` 입니다.
     - `stroke`

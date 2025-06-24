@@ -81,7 +81,6 @@ background: no-repeat center/80% url("../img/image.png");
 각 레이어의 구문은 다음과 같습니다.
 
 - 각 레이어는 다음 값을 가지거나 가지지 않을 수 있습니다.
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)

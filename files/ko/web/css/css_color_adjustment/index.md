@@ -23,7 +23,6 @@ l10n:
 
 - {{cssxref("&lt;color&gt;")}} CSS 데이터 타입
 - 관련 {{CSSxRef("@media")}} 기능:
-
   - {{cssxref("@media/prefers-color-scheme", "prefers-color-scheme")}}
   - {{cssxref("@media/prefers-contrast", "prefers-contrast")}}
   - {{cssxref("@media/forced-colors", "forced-colors")}}

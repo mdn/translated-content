@@ -36,7 +36,6 @@ scrollbar-color: unset;
 ### 値
 
 - `<scrollbar-color>`
-
   - : スクロールバーの色を定義します。
 
     <table class="standard-table">

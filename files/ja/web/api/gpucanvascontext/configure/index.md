@@ -18,9 +18,7 @@ configure(configuration)
 ### 引数
 
 - `configuration`
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `alphaMode` {{optional_inline}}
       - : {{domxref("GPUCanvasContext.getCurrentTexture()", "getCurrentTexture()")}} が返したテクスチャが読み取り・表示・画像ソースとしての使用をされるとき、アルファ値が持つ効果を指定する列挙値です。以下の値が使用可能です。
         - `opaque`: アルファ値は無視されます。テクスチャが不透明ではない場合は、画像ソースとして使用されたり画面に表示される際にアルファチャンネルは 1.0 にクリアされます。これがデフォルト値です。
@@ -32,9 +30,7 @@ configure(configuration)
     - `format`
       - : `getCurrentTexture()` が返すテクスチャの形式です。`bgra8unorm`・`rgba8unorm`・`rgba16float` のいずれかの値をとれます。現在のシステムで最適なキャンバスのテクスチャ形式は、{{domxref("GPU.getPreferredCanvasFormat()")}} で取得できます。これを使用することが推奨されます。キャンバスコンテキストを設定する際に好ましい形式を使用しないと、プラットフォームによっては、テクスチャのコピーが増えるなど、オーバーヘッドが増加する可能性があります。
     - `usage` {{optional_inline}}
-
       - : `getCurrentTexture()` が返すテクスチャで許可する使用法を指定する{{glossary("Bitwise flags", "ビットフラグ")}}です。以下の値が使用可能です。
-
         - `GPUTextureUsage.COPY_SRC`: テクスチャは、コピー操作のソースとして使用できます。たとえば、{{domxref("GPUCommandEncoder.copyTextureToBuffer()")}} を呼び出す際の引数 `source` で使用できます。
         - `GPUTextureUsage.COPY_DST`: テクスチャは、コピー操作や書き込み操作のデスティネーションとして使用できます。たとえば、{{domxref("GPUCommandEncoder.copyTextureToTexture()")}} を呼び出す際の引数 `destination` で使用できます。
         - `GPUTextureUsage.RENDER_ATTACHMENT`: テクスチャは、レンダーパスにおけるカラーアタッチメントとして使用できます。たとえば、{{domxref("GPUCommandEncoder.beginRenderPass()")}} を呼び出す際のカラーアタッチメントビューとして使用できます。`GPUTextureUsage.RENDER_ATTACHMENT` はデフォルトの `usage` ですが、他の値を明示的に設定した場合は自動で含まれないことに注意してください。この場合、自分で追加で含めなければなりません。

@@ -24,14 +24,11 @@ let registering = browser.contentScripts.register(
 ### 参数
 
 - `contentScriptOptions`
-
   - : `object`。表示要注册的内容脚本的 `RegisteredContentScriptOptions` 对象。它的语法与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 清单键数组中的对象类似。不同之处在于：
-
     - 属性名称使用{{Glossary("camel_case", "驼峰命名法")}}，而不是{{Glossary("snake_case", "蛇形命名法")}}——例如，使用 `excludeMatches` 而不是 `exclude_matches`。
     - `js` 和 `css` 属性允许你注册字符串和 URL，因此它们的语法必须区分这些类型。
 
     `RegisteredContentScriptOptions` 对象具有以下属性：
-
     - `allFrames` {{optional_inline}}
       - : 与 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 键中的 `all_frames` 相同。
     - `cookieStoreId` {{optional_inline}}

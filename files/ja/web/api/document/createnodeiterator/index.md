@@ -21,11 +21,9 @@ createNodeIterator(root, whatToShow, filter)
 ### 引数
 
 - `root`
-
   - : {{ domxref("NodeIterator") }} の探索の開始地点になるルートノードです。
 
 - `whatToShow` {{optional_inline}}
-
   - : オプションの `unsigned long` 値で、 [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter) の定数プロパティを組み合わせて作られたビットマスクを表します。
     これは特定の種類のノードを絞り込みするのに便利な方法です。既定値は `0xFFFFFFFF` で、 `SHOW_ALL` 定数を表します。
 

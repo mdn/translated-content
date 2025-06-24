@@ -190,7 +190,6 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.reject()")}}
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
-
   - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
 
     通常，如果你不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成 Promise 对象，并将返回值作为 Promise 来处理。

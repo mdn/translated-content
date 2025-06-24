@@ -84,7 +84,6 @@ The `font-size` property is specified in one of the following ways:
 - `larger`, `smaller`
   - : Relative-size keywords. The font will be larger or smaller relative to the parent element's font size, roughly by the ratio used to separate the absolute-size keywords above.
 - {{cssxref("&lt;length&gt;")}}
-
   - : A positive {{cssxref("&lt;length&gt;")}} value. For most font-relative units (such as `em` and `ex`), the font size is relative to the parent element's font size.
 
     For font-relative units that are root-based (such as `rem`), the font size is relative to the size of the font used by the {{HTMLElement("html")}} (root) element.

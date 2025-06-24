@@ -22,9 +22,7 @@ l10n:
 ## 实例方法
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}} {{Experimental_Inline}}
-
   - : 返回一个 {{jsxref('Promise')}}，它兑现一个具有以下属性的 `DetectedBarcode` 对象数组：
-
     - `boundingBox`: 一个 {{domxref('DOMRectReadOnly')}}，返回表示检测到的条形码范围的矩形尺寸，与图像对齐。
     - `cornerPoints`：检测到的条形码的四个角点相对于图像的 x 和 y 坐标，从左上角开始顺时针旋转。由于图像内的透视变形，这可能不是方形的。
     - `format`：检测到的条形码格式。（有关格式的完整列表，请参阅[受支持的条形码格式类型](/zh-CN/docs/Web/API/Barcode_Detection_API#支持的条形码格式)）

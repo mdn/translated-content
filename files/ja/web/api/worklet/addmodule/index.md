@@ -19,9 +19,7 @@ addModule(moduleURL, options);
 - `moduleURL`
   - : 文字列で、追加するモジュールの JavaScript ファイルの URL を指定します。
 - `options` {{optional_inline}}
-
   - : 次のオプションを指定するためのオブジェクトです。
-
     - `credentials`
       - : モジュールをロードする際に、資格情報（例: Cookie や HTTP 認証）を送信するかどうかを指定する {{domxref("Request.credentials")}} 値です。 `"omit"`, `"same-origin"`, `"include"` のいずれかを指定することができます。既定値は `"same-origin"` です。 {{domxref("Request.credentials")}} も参照してください。
 

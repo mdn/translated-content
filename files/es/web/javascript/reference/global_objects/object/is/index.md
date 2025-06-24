@@ -34,7 +34,6 @@ Este método devuelve un valor de tipo {{jsxref("Boolean")}} indicando si los va
 - ambos son strings y tienen la misma longitud con los mismos carácteres
 - ambos son el mismo objeto
 - ambos son números y
-
   - `ambos +0 (mayores que 0)`
   - `ambos -0 (menores que 0)`
   - ambos son {{jsxref("NaN")}}

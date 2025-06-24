@@ -76,7 +76,6 @@ font-variant-east-asian: unset;
 - `ruby`
   - : このキーワードは、ルビ文字のための特殊な表記の使用を強制します。ふつうは小さめで、フォントの作者がよく特定の形状でデザインし、ふつうはコントラストを上げるためにわずかに太くします。このキーワードは OpenType の `ruby` の値に対応します。
 - `<east-asian-variant-values>`
-
   - : これらの値は、表示に使用される字形の違いのセットを指定します。利用可能な値は以下の通りです。
 
     | キーワード    | 標準による形状の定義                                                 | OpenType の対応 |
@@ -89,9 +88,7 @@ font-variant-east-asian: unset;
     | `traditional` | なし。繁体字中国語の字形を使用                                       | `trad`          |
 
 - `<east-asian-width-values>`
-
   - : これらの値は東アジアの文字の大きさを制御します。2 つの値が利用できます。
-
     - `proportional-width` は、東アジアの文字の幅が多様なセットを有効にします。 OpenType の `pwid` の値に対応します。
     - `full-width` は、東アジアの文字がすべて同じ、およそ正方形で、一定幅のセットを有効にします。 OpenType の `fwid` に対応します。
 

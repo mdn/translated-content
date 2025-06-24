@@ -22,7 +22,6 @@ opacity:  <valor alfanumérico>
 ### Valores
 
 - `<alphavalue>`
-
   - : Es un número cuyo valor se encuentra entre 0.0 y 1.0, ambos incluidos. Este valor representa la opacidad. Si el valor se sale de la escala, será ajustado al valor válido más cercano.
 
     | valor                       | Significado                              |

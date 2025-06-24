@@ -119,7 +119,6 @@ La propriété `min-inline-size` peut prendre les mêmes valeurs que les propri�
 ## Voir aussi
 
 - Les propriétés physiques correspondantes
-
   - {{cssxref("min-width")}}
   - {{cssxref("min-height")}}
 

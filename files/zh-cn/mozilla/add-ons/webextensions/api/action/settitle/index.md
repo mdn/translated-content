@@ -23,17 +23,13 @@ browser.action.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`，包含新的标题的对象，可选地包含要设置的标签页或窗口的 id。
-
     - `title`
-
       - : `string` 或 `null`，当鼠标移动到浏览器操作上时需要显示的字符串。
 
         若 `title` 是空字符串，那么使用的标题将是扩展名，但是 {{WebExtAPIRef("action.getTitle")}} 仍然会提供空字符串。
 
         若 `title` 是 `null`：
-
         - 若指定了 `tabId`，并且标签页设置了特定的标题，那么标签页将继承其所属窗口的标题。
         - 若指定了 `windowId`，并且窗口设置了特定的标题，那么窗口将继承全局标题。
         - 否则，全局标题将重置为清单标题。

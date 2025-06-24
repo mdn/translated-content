@@ -23,11 +23,8 @@ var removing = browser.tabs.removeCSS(
 - `tabId` {{optional_inline}}
   - : `integer`. L'ID de l'onglet à partir duquel supprimer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
 - `details`
-
   - : Un objet décrivant le CSS à retirer de la page. Il contient les propriétés suivantes :
-
     - `allFrames`{{optional_inline}}
-
       - : `boolean`. si `true`, le code sera supprimé de toutes les images de la page en cours. si c'est `false`, le code est seulement retiré du cadre supérieur. Par défaut à `false`.
 
     - `code`{{optional_inline}}

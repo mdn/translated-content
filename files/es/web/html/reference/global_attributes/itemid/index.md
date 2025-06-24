@@ -82,7 +82,6 @@ Este ejemplo utiliza atributos de microdatos para representar los siguientes dat
 
 - Todos los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 - Otros atributos globales relacionados con los microdatos:
-
   - [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - [`itemref`](/es/docs/Web/HTML/Reference/Global_attributes/itemref)
   - [`itemscope`](/es/docs/Web/HTML/Reference/Global_attributes/itemscope)

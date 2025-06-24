@@ -32,11 +32,9 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `name`
   - : Defina um nome para a área clicável de modo que possa ser programado por navegadores mais antigos.
 - `media`
-
   - : Uma dica da mídia para o qual o recurso ligado foi projetado, por exemplo `impressão e tela` . Se omitido, o padrão é `tudo` . Utilize este atributo somente se a **href** atributo está presente.
 
 - `nohref`
-
   - : Indica que não existe hyperlink para a área associada. Ou este atributo ou a **href** atributo deve estar presente no elemento.
 
     > **Note:** **Nota de Uso:** Este atributo é obsoleto em HTML5, em vez omitindo o atributo **href** é suficiente.
@@ -48,9 +46,7 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `tabindex`
   - : Um valor numérico que especifica a posição da área definida na ordem de tabulação browser. Este atributo é global em HTML5.
 - `target`
-
   - : Este atributo especifica onde exibir o recurso ligado. Em HTML4, este é o nome de, ou uma palavra-chave para um quadro. Em HTML5, que é um nome ou palavra-chave para um _contexto de navegação_ (por exemplo, aba, janela ou quadro embutido). As seguintes palavras-chave têm significados especiais:
-
     - `_self` : Carregar a resposta no mesmo quadro HTML4 (ou contexto de navegação HTML5), como o atual. Este valor é o padrão se o atributo não é especificado.
     - `_blank` : Coloque a resposta em uma nova janela sem nome HTML4 ou contexto de navegação HTML5.
     - `_parent` : Carregar a resposta para o pai HMTL4 conjunto de quadros do quadro atual ou HTML5 pai contexto de navegação do atual. Se não houver nenhum pai, esta opção se comporta da mesma maneira que `_self` .

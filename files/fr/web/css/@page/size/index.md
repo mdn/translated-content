@@ -48,9 +48,7 @@ size: A4 portrait;
 - `<length>`
   - : Une valeur de longueur (cf. {{cssxref("&lt;length&gt;")}}). La première valeur utilisée correspond à la largeur de la boîte de la page et la deuxième correspond à la hauteur. Si une seule valeur est fournie, celle-ci sera utilisée pour la largeur et pour la hauteur.
 - `<page-size>`
-
   - : Un mot-clé avec l'une des valeurs suivantes :
-
     - `A5`
       - : Ce mot-clé correspond aux dimensions ISO standard : 148mm x 210mm.
     - `A4`

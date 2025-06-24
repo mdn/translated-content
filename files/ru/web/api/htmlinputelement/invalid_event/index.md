@@ -14,7 +14,6 @@ slug: Web/API/HTMLInputElement/invalid_event
 - **Взаимодействие** {{domxref("Event")}}
 
   Всплытия
-
   - : Нет
 
 - Отменяемый

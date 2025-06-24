@@ -37,9 +37,7 @@ Même aujourd'hui, malgré toute l'attention portée aux appareils mobiles, la m
 - Contenu principal
   - : Cette section occupe la plus grande partie de l'espace et contient du contenu unique, relatif à la page consultée.
 - Contenu secondaire
-
   - : Il peut s'agir&nbsp;:
-
     1. d'informations complémentaires au contenu principal&nbsp;;
     2. d'informations partagées entre un sous-ensemble de pages&nbsp;;
     3. d'un moyen alternatif de navigation. En fait, ce peut être un peu tout ce qui est superflu par rapport au contenu principal.

@@ -46,16 +46,12 @@ Intl.NumberFormat.call(this[, locales[, options]])
 ### Parâmetros
 
 - `locales`
-
   - : Opcional. Uma string com uma tag de linguagem BCP 47 ou uma matriz delas. Para a forma geral e interpretação do argumento `locales`, veja {{jsxref("Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}. A seguinte chave extendida Unicode é permitida:
-
     - `nu`
       - : O sistema de numeração que será usado. Os valores permitidos são: `"arab"`, `"arabext"`, `"bali"`, `"beng"`, `"deva"`, `"fullwide"`, `"gujr"`, `"guru"`, `"hanidec"`, `"khmr"`, `"knda"`, `"laoo"`, `"latn"`, `"limb"`, `"mlym"`, `"mong"`, `"mymr"`, `"orya"`, `"tamldec"`, `"telu"`, `"thai"`, `"tibt"`.
 
 - `options`
-
   - : Opcional. Um objeto com alguns ou todas as seguintes propriedades:
-
     - `localeMatcher`
       - : O algoritmo de comparação de localização para utilizar. Os valores permitidos são `"lookup"` e `"best fit"`; o padrão é `"best fit"`. Para mais informações sobre esta opção, veja {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}}.
     - `style`
@@ -68,7 +64,6 @@ Intl.NumberFormat.call(this[, locales[, options]])
       - : Se usar separadores de agrupamento, como separadores de milhares ou milhares/cem mil/dez milhões. Os valores permitidos são `true` e `false`; o padrão é `true`.
 
     As próximas propriedades se dividem em dois grupos: `minimumIntegerDigits`, `minimumFractionDigits`, e `maximumFractionDigits` no primeiro grupo, `minimumSignificantDigits` and `maximumSignificantDigits` em outro. Se pelo menos uma propriedade do segundo grupo for informado, então o primeiro grupo é ignorado.
-
     - `minimumIntegerDigits`
       - : A quantidade mínima de dígitos inteiros para utilizar. É possível usar valores de 1 a 21; o padrão é 1.
     - `minimumFractionDigits`

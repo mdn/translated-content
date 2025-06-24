@@ -195,7 +195,6 @@ Ese elemento {{HTMLElement("template")}} tiene varias características.
 
 - El {{HTMLElement ("template")}} tiene un elemento {{HTMLElement ("style")}} con un conjunto de estilos CSS ajustados al ámbito del fragmento de documento que {{HTMLElement ("template")}} crea.
 - El elemento {{HTMLElement("template")}} usa {{HTMLElement("slot")}} y su atributo [`name`](/es/docs/Web/HTML/Reference/Elements/slot#name) para hacer tres [slots con el atributo name](/es/docs/Web/HTML/Reference/Elements/slot#named-slot):
-
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`

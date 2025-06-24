@@ -43,9 +43,7 @@ new Intl.DateTimeFormat(locales, options);
 ### Paramètres
 
 - `locales` {{optional_inline}}
-
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale). Les clés d'extension Unicode suivantes sont autorisées&nbsp;:
-
     - `nu`
       - : Le système de numération à utiliser. Les valeurs possibles sont&nbsp;: "`arab`", "`arabext`", "`bali`", "`beng`", "`deva`", "`fullwide`", "`gujr`", "`guru`", "`hanidec`", "`khmr`", "`knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", "`mong`", "`mymr`", "`orya`", "`tamldec`", "`telu`", "`thai`", "`tibt`".
     - `ca`
@@ -54,13 +52,9 @@ new Intl.DateTimeFormat(locales, options);
       - : Le cycle horaire à utiliser. Les valeurs possibles sont&nbsp;: "`h11`", "`h12`", "`h23`", "`h24`".
 
 - `options` {{optional_inline}}
-
   - : Un objet avec une ou plusieurs propriétés parmi les suivantes&nbsp;:
-
     - `dateStyle`
-
       - : Le style de formatage pour la date à utiliser avec `format()`. Les valeurs possibles sont&nbsp;:
-
         - "`full`"
         - "`long`"
         - "`medium`"
@@ -69,9 +63,7 @@ new Intl.DateTimeFormat(locales, options);
         > **Note :** `dateStyle` peut être utilisée avec `timeStyle`, mais pas avec les autres options (comme `weekday`, `hour`, `month`, etc.).
 
     - `timeStyle`
-
       - : Le style de formatage des heures à utiliser avec `format()`. Les valeurs possibles sont&nbsp;:
-
         - "`full`"
         - "`long`"
         - "`medium`"
@@ -82,7 +74,6 @@ new Intl.DateTimeFormat(locales, options);
     - `calendar`
       - : Le calendrier à utiliser. Les valeurs possibles sont&nbsp;: "`buddhist`", "`chinese`", " `coptic`", "`ethiopia`", "`ethiopic`", "`gregory`", "`hebrew`", "`indian`", "`islamic`", "`iso8601`", "`japanese`", "`persian`", "`roc`".
     - `dayPeriod`
-
       - : Le style de formatage à utiliser pour les périodes du jour comme «&nbsp;dans la matinée&nbsp;», «&nbsp;à midi&nbsp;», etc. Les valeurs possibles sont&nbsp;:
         "`narrow`", "`short`", " `long`".
 
@@ -103,7 +94,6 @@ new Intl.DateTimeFormat(locales, options);
       - : L'algorithme de correspondance des formats à utiliser. Les valeurs possibles sont "`basic`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Voir les paragraphes suivants à propos de l'utilisation de cette propriété.
 
     Les propriétés suivantes décrivent les composantes d'horodatage qui peuvent être utilisées pour le format de production ainsi que leurs différentes représentations. Les implémentations doivent au moins prendre en charge les sous-ensembles suivants&nbsp;:
-
     - `weekday`, `year`, `month`,
       `day`, `hour`, `minute`,
       `second`
@@ -116,34 +106,25 @@ new Intl.DateTimeFormat(locales, options);
     - `hour`, `minute`
 
     Les moteurs peuvent prendre en charge d'autres sous-ensembles et la recherche de la meilleure correspondance aura lieu parmi toutes les combinaisons disponibles. Deux algorithmes sont disponibles pour cette recherche et la propriété `formatMatcher` permet de choisir l'un ou l'autre&nbsp;: [un algorithme explicitement spécifié, "`basic`"](https://www.ecma-international.org/ecma-402/1.0/#BasicFormatMatcher) et un algorithme laissé à l'implémentation&nbsp;: "`best fit`".
-
     - `weekday`
-
       - : La représentation du jour de la semaine. Les valeurs possibles sont&nbsp;:
-
         - "`long`" (par exemple, `mardi`)
         - "`short`" (par exemple, `mar`)
         - "`narrow`" (par exemple, `m`). Deux jours différents de la semaine peuvent avoir la même représentation avec ce style.
 
     - `era`
-
       - : La représentation d'une ère. Les valeurs possibles sont&nbsp;:
-
         - "`long`" (par exemple, `Anno Domini`)
         - "`short`" (par exemple, `AD`)
         - "`narrow`" (par exemple, `A`)
 
     - `year`
-
       - : La représentation de l'année. Les valeurs possibles sont&nbsp;:
-
         - "`numeric`" (par exemple, `2012`)
         - "`2-digit`" (par exemple, `12`)
 
     - `month`
-
       - : La représentation du mois. Les valeurs possibles sont&nbsp;:
-
         - "`numeric`" (par exemple, `3`)
         - "`2-digit`" (par exemple, `03`)
         - "`long`" (par exemple, `mars`)
@@ -151,9 +132,7 @@ new Intl.DateTimeFormat(locales, options);
         - "`narrow`" (par exemple, `m`). Deux mois différents peuvent avoir la même représentation avec ce style.
 
     - `day`
-
       - : La représentation du jour. Les valeurs possibles sont&nbsp;:
-
         - "`numeric`" (par exemple, `1`)
         - "`2-digit`" (par exemple, `01`)
 
@@ -164,18 +143,14 @@ new Intl.DateTimeFormat(locales, options);
     - `second`
       - : La représentation des secondes. Les valeurs possibles sont&nbsp;: "`numeric`", "`2-digit`".
     - `fractionalSecondDigits`
-
       - : Le nombre de chiffres à utiliser pour représenter la partie décimale des secondes (tout chiffre supplémentaire sera tronqué). Les valeurs possibles sont&nbsp;:
-
         - `0` (la partie décimale est tronquée)
         - `1`
         - `2`
         - `3`
 
     - `timeZoneName`
-
       - : La représentation localisée du nom du fuseau horaire. Les valeurs possibles sont&nbsp;:
-
         - "`long`" pour le format long (par exemple, `Pacific Standard Time`, `Nordamerikanische Westküsten-Normalzeit`)
         - "`short`" pour la forme courte localisée (par exemple, `PST`, `GMT-8`)
         - "`shortOffset`" pour la forme courte GMT localisée (par exemple, `GMT-8`)

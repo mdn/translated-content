@@ -229,7 +229,6 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 다음 두가지 매게변수를 확인 할 수 있습니다.
 
 - 전역 변수를 설정하는 두 가지 속성이 포함 된 객체.
-
   - `value`: WebAssembly 모듈에서 사용할 수 있는 데이터 타입입니다. 다음의 값을 사용할 수 있습니다. — `i32`, `i64`, `f32`, `f64`.
   - `mutable`: boolean 값이며 mutable이 가능한지 여부를 지정합니다.
 

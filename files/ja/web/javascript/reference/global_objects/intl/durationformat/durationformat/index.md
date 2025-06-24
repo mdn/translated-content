@@ -22,20 +22,16 @@ new Intl.DurationFormat(locales, options)
 ### 引数
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 言語タグまたは {{jsxref("Intl.Locale")}} インスタンスを持つ文字列、あるいはそのようなロケール識別子の配列。 `undefined` が渡された場合、または指定されたロケール識別子がどれも対応していない場合は、ランタイムの既定のロケールが使われます。 `locales` 引数の一般的な形式および解釈については、[Intl メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数)を参照してください。
 
     次の Unicode 拡張キーが使用できます。
-
     - `nu`
       - : [`numberingSystem`](#numberingsystem) を参照してください。
 
     このキーは、`options` （以下に掲載）でも設定できます。両方が設定されている場合、 `options` プロパティが優先されます。
 
 - `options` {{optional_inline}}
-
   - : 次のプロパティを含むオブジェクト（取得順、すべてオプションです）。
-
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。利用可能な値は "`lookup`" と "`best fit`" です。既定値は "`best fit`" です。このオプションについての詳細は、[ロケールの識別とネゴシエーション](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#ロケールの識別とネゴシエーション)を参照してください。
     - `numberingSystem`

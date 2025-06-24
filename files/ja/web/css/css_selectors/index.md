@@ -112,31 +112,24 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 ## ガイド
 
 - [CSS セレクターと結合子](/ja/docs/Web/CSS/CSS_selectors/Selectors_and_combinators)
-
   - : CSS セレクターと CSS 擬似モジュールで定義されている、さまざまな種類の単純なセレクターとさまざまな結合子の概要です。
 
 - [CSS セレクターの構造](/ja/docs/Web/CSS/CSS_selectors/Selector_structure)
-
   - : CSS セレクターの構造と、CSS セレクターモジュールで紹介されている用語について、「単純なセレクター」から「寛容な相対セレクターリスト」まで解説しています。
 
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
-
   - : 擬似クラスは、文書ツリーには含まれない状態情報に基づいて要素を選択できるようにするセレクターの一覧で、さまざまな CSS モジュールや HTML で定義されています。
 
 - [学習: CSS セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : CSS の構成要素の一部で、チュートリアルとして[要素・クラス・ID によるセレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)、[属性セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)、[擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)、[結合子](/ja/docs/Learn_web_development/Core/Styling_basics/Combinators)、[競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)、[カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)があります。
 
 - [セレクターでの `:target` 擬似クラスの利用](/ja/docs/Web/CSS/CSS_selectors/Using_the_:target_pseudo-class_in_selectors)
-
   - : {{CSSXref(":target")}} 擬似クラスを使って、 URL のフラグメント識別子をターゲット要素にスタイルを設定する方法を学びます。
 
 - [学習: UI 擬似クラス](/ja/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes)
-
   - : さまざまな状態のフォームをスタイル設定するために利用できる、さまざまな UI 擬似クラスについて学びます。
 
 - [セレクターを使用した DOM 要素の特定](/ja/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
-
   - : セレクター API を使用すると、 JavaScript でセレクターを使用して DOM から要素ノードを取得できます。
 
 ## 関連概念
@@ -146,14 +139,12 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
 - [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュール
   - : [`&` 入れ子セレクター](/ja/docs/Web/CSS/Nesting_selector)
 - [CSS scoping](/ja/docs/Web/CSS/CSS_scoping) モジュール
-
   - {{CSSXref(":host")}} 擬似クラス
   - {{CSSXref(":host_function", ":host()")}} 擬似クラス
   - {{cssxref(":host-context", ":host-context()")}} 擬似クラス
   - {{CSSXref("::slotted")}} 擬似要素
 
 - [CSS 擬似要素モジュール](/ja/docs/Web/CSS/CSS_pseudo-elements)（HTML に含まれないものを表すために使用）
-
   - {{CSSXref("::after")}}
   - {{CSSXref("::before")}}
   - {{CSSXref("::file-selector-button")}}
@@ -167,15 +158,12 @@ CSS では、セレクターはスタイルを設定したい要素と照合、�
   - {{CSSXref("::target-text")}}
 
 - [CSS シャドウ部品モジュール](/ja/docs/Web/CSS/CSS_shadow_parts)
-
   - {{CSSXref("::part")}} 擬似要素
 
 - [CSS 位置指定レイアウトモジュール](/ja/docs/Web/CSS/CSS_positioned_layout)
-
   - {{CSSxRef("::backdrop")}}
 
 - その他の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-
   - {{CSSxRef("::cue")}}
 
 - {{CSSXref("@namespace")}} アットルール

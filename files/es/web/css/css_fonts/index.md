@@ -34,9 +34,7 @@ slug: Web/CSS/CSS_fonts
 ### Atributos
 
 - {{cssxref("@font-face")}}
-
   - : &#x20;
-
     - {{cssxref("@font-face/font-family", "font-family")}}
     - {{cssxref("@font-face/font-feature-settings", "font-feature-settings")}}
     - {{cssxref("@font-face/font-style", "font-style")}}

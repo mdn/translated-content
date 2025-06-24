@@ -72,7 +72,6 @@ _Без изменений._
 #### DOM
 
 - Включены по умолчанию следующие элементы API {{domxref("Web_Animations_API", "Web Animations", "", "1")}} (см. [Firefox bug 1476158](https://bugzil.la/1476158)):
-
   - Свойства {{DOMxRef("Animation.ready", "ready")}} и {{DOMxRef("Animation.finished", "finished")}} {{DOMxRef("Animation")}}, указывающие на {{JSxRef("Promise")}} `ready` и `finished` объекта `Animation`.
   - Свойство {{DOMxRef("Animation.effect", "effect")}} объекта {{DOMxRef("Animation")}}.
   - Интерфейсы {{DOMxRef("KeyframeEffect")}} и {{DOMxRef("AnimationEffect")}}.
@@ -182,7 +181,6 @@ _Без изменений._
 - {{WebExtAPIRef("browserAction.getBadgeTextColor()")}} и {{WebExtAPIRef("browserAction.setBadgeTextColor()")}} позволяют получать и настраивать цвет текста значков {{WebExtAPIRef("browserAction")}} ([Firefox bug 1424620](https://bugzil.la/1424620)).
 - Объект `colors` ключа `theme` теперь поддерживает свойства `ntp_text` (для указания цвета текста в новой вкладке) и `ntp_background` (для указания цвета фона) ([Firefox bug 1347204](https://bugzil.la/1347204)).
 - Темы получили возможность настраивать цвет боковых панелей, например, боковой панели закладок ([Firefox bug 1418602](https://bugzil.la/1418602)). Соответствующие свойства:
-
   - `sidebar`: цвет фона.
   - `sidebar_text`: цвет текста.
   - `sidebar_highlight`: цвет фона выделенного элемента.

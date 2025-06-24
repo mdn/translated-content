@@ -14,23 +14,17 @@ l10n:
 - 不采取任何行动
   - : 监听器可以什么都不做，只观察请求。如果情况发生，监听器将不会影响请求的处理，并且浏览器会在适当情况下要求用户登录。
 - 取消请求
-
   - : 监听器可以取消请求。如果这样做，身份验证将失败，并且不会要求用户登录。扩展可以通过以下方式取消请求：
-
     - 在 addListener 中，在 `extraInfoSpec` 参数中传递 `"blocking"`
     - 在监听器中，返回一个 `cancel` 属性设置为 `true` 的对象
 
 - 同步提供凭据
-
   - : 如果凭据可以同步获取，扩展可以同步提供它们。如果扩展这样做，浏览器会尝试使用这些凭据登录。监听器可以通过以下方式同步提供凭据：
-
     - 在 addListener 中，在 `extraInfoSpec` 参数中传递 `"blocking"`
     - 在监听器中，返回一个 `authCredentials` 属性设置为要提供的凭据的对象
 
 - 异步提供凭据
-
   - : 扩展可能需要异步获取凭据。例如，扩展可能需要从存储中获取凭据或询问用户。在这种情况下，监听器可以通过以下方式异步提供凭据：
-
     - 在 addListener 中，在 Chrome 和 Firefox 中传递 `"asyncBlocking"` 或在 Firefox 中传递 `"blocking"` 到 `extraInfoSpec` 参数
     - 如果提供了 `"blocking"`，扩展可以返回一个 `webRequest.BlockingResponse` 对象或一个兑现为 `webRequest.BlockingResponse` 对象的 Promise
     - 如果提供了 `"asyncBlocking"`，事件监听器函数会接收一个 `asyncCallback` 函数作为其第二个参数。`asyncCallback` 可以异步调用，并接受一个 `webRequest.BlockingResponse` 对象作为其唯一参数
@@ -80,13 +74,10 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `details`
       - : `object`。有关请求的详细信息。有关更多信息，请参阅 [details](#details_2) 部分。
     - `asyncCallback` {{optional_inline}}
-
       - : 一个最多调用一次的函数，用于异步修改请求对象。只有在事件监听器注册时传入的 `extraInfoSpec` 数组中包含 `"asyncBlocking"`，该参数才会被提供。如果未提供 `extraInfoSpec` 或数组中包含 `"blocking"`，则 `asyncCallback` 为 undefined。
 
     返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}} 或 {{jsxref("Promise")}}，具体取决于 `extraInfoSpec` 中的设置。
@@ -94,16 +85,12 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
-
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下值中的任何一个：
-
     - `"blocking"`：使请求阻塞，以便你可以取消请求或提供身份验证凭据。返回一个 `BlockingResponse` 对象，其 `cancel` 或 `authCredentials` 属性已设置。
-
       - 在 Chrome 中，事件监听器必须同步响应。
       - 在 Firefox 中，事件监听器可以同步响应，也可以返回一个兑现为 `BlockingResponse` 对象的 Promise 以异步响应。
 
     - `"asyncBlocking"`：异步处理请求。事件监听器的返回值将被忽略。要兑现事件，请将 `asyncCallback` 参数传递给一个 `BlockingResponse` 对象。
-
       - 从 Chrome 120 和 Firefox 128 开始支持。
       - Safari 不支持。
 
@@ -112,9 +99,7 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 ### details
 
 - `challenger`
-
   - : `object`。请求身份验证的服务器。这是一个具有以下属性的对象：
-
     - `host`
       - : `string`。服务器的[主机名](https://zh.wikipedia.org/wiki/主機名稱)。
     - `port`
@@ -134,17 +119,13 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 - `parentFrameId`
   - : `integer`。包含发起请求的框架的父框架 ID。如果不存在父框架则为 -1。
 - `proxyInfo`
-
   - : `object`。仅当请求被代理时，此属性才存在。它包含以下属性：
-
     - `host`
       - : `string`。代理服务器的主机名。
     - `port`
       - : `integer`。代理服务器的端口号。
     - `type`
-
       - : `string`。代理服务器的类型，以下值之一：
-
         - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
         - `"https"`：通过 TLS 连接到代理的 HTTP 代理
         - `"socks"`：SOCKS v5 代理
@@ -182,16 +163,13 @@ browser.webRequest.onAuthRequired.hasListener(listener)
 - `url`
   - : `string`。请求的目标 URL。
 - `urlClassification`
-
   - : `object`。与请求相关的跟踪类型（如果请求由 [Firefox 跟踪保护](https://support.mozilla.org/zh-CN/kb/enhanced-tracking-protection-firefox-desktop)分类）。包含以下属性的对象：
-
     - `firstParty`
       - : `string` 的数组（`array`）。请求的第一方的分类标志。
     - `thirdParty`
       - : `string` 的数组（`array`）。请求或其窗口层次结构的第三方的分类标志。
 
     分类标志包括：
-
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
       - `fingerprinting` 表示域名属于指纹识别和跟踪类别。示例包括广告商的域名关联用户画像与到访用户。
       - `fingerprinting_content` 表示域名仅属指纹识别类别。示例包括支付提供商的域名使用指纹识别技术用于识别到访用于反欺诈目的。

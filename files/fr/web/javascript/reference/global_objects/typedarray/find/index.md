@@ -31,9 +31,7 @@ typedarray.find(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter pour chaque valeur du tableau typé. Elle prend trois arguments :
-
     - `élément`
       - : L'élément du tableau typé en cours de traitement.
     - `index`

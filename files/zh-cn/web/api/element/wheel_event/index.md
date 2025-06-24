@@ -39,7 +39,6 @@ _此接口从父接口：{{DOMxRef("MouseEvent")}}、{{DOMxRef("UIEvent")}} 和 
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : 返回一个浮点数（`double`）表示 z 轴方向的滚动量。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : 返回一个无符号长整型数（`unsigned long`），表示 `delta*` 值滚动量的单位。允许的值为：
 
     | 常量                         | 值     | 描述                                                                                  |

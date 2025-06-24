@@ -330,7 +330,6 @@ h1 {
 - 명시도 계산기: CSS 규칙을 테스트하고 이해할 수 있는 대화형 웹사이트 - <https://specificity.keegan.st/>
 - CSS3 선택자 명시도 - <http://www.w3.org/TR/selectors/#specificity>
 - CSS 주요 개념
-
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
@@ -341,7 +340,6 @@ h1 {
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
-
     - [초깃값](/ko/docs/Web/CSS/initial_value)
     - [계산값](/ko/docs/Web/CSS/computed_value)
     - [결정값](/ko/docs/Web/CSS/resolved_value)

@@ -108,7 +108,6 @@ grid-template: unset;
 - `<'grid-template-rows'> / <'grid-template-columns'>`
   - : Voir {{cssxref("grid-template-rows")}} et {{cssxref("grid-template-columns")}} pour les valeurs définies. {{cssxref("grid-template-areas")}} recevra la valeur `none`.
 - `[ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <track-list> ]?`
-
   - : {{cssxref("grid-template-areas")}} est définie avec les chaînes listées, {{cssxref("grid-template-rows")}} est définie avec les tailles de piste suivant chaque chaîne (`auto` sera utilisé pour les tailles manquantes), les lignes seront découpées selon les noms avant et après chaque taille. {{cssxref("grid-template-columns")}} sera définie avec la valeur listée après la barre oblique (ou `none` sinon).
 
     > [!NOTE]

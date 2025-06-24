@@ -44,7 +44,6 @@ btn.addEventListener("click", () => {
 
 1. 我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
 2. 我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
-
    1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
    2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
    3. 給予一段文字內容。

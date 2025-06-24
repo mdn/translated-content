@@ -30,7 +30,6 @@ cloneNode(deep)
 ### 引数
 
 - `deep` {{optional_inline}}
-
   - : `true` の場合、ノードとそのサブツリーは、子ノードの {{domxref("Text")}} にあるテキストも含め複製されます。
 
     `false` の場合、このノードのみが複製されます。

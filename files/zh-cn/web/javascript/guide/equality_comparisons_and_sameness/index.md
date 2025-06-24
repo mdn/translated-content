@@ -187,7 +187,6 @@ function sameValueZero(x, y) {
 这是一个不全面的列表，其中包含可能导致你的代码中出现 `-0` 和 `+0` 之间差异的内置方法和运算符：
 
 - [`-`（一元减）](/zh-CN/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-
   - : 注意下面的示例：
 
     ```js
@@ -197,15 +196,12 @@ function sameValueZero(x, y) {
     如果 `obj.velocity` 是 `0`（或计算为 `0`），则在该位置引入 `-0` 并向 `stoppingForce` 传播。
 
 - {{jsxref("Math.atan2")}}、{{jsxref("Math.ceil")}}、{{jsxref("Math.pow")}}、{{jsxref("Math.round")}}
-
   - : 在某些情况下，即使没有 `-0` 作为参数之一，这些方法的返回值仍可能作为表达式中的 `-0` 被引入。例如，使用 `Math.pow` 将 {{jsxref("Infinity", "-Infinity")}} 的任何负奇数次幂求值为 `-0`。请参阅各个方法的文档。
 
 - {{jsxref("Math.floor")}}、{{jsxref("Math.max")}}、{{jsxref("Math.min")}}、{{jsxref("Math.sin")}}、{{jsxref("Math.sqrt")}}、{{jsxref("Math.tan")}}
-
   - : 在某些情况下，当参数中存在 `-0` 时，这些方法可能会返回一个 `-0` 值。例如，`Math.min(-0, +0)` 的计算结果为 `-0`。请参考各个方法的文档。
 
 - [`~`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT)、[`<<`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Left_shift)、[`>>`](/zh-CN/docs/Web/JavaScript/Reference/Operators/Right_shift)
-
   - : 这些运算符中的每一个都在内部使用 ToInt32 算法。由于在内部 32 位整数类型中只有一个表示 0 的表示形式，`-0` 在反向操作后将不会存在。例如，`Object.is(~~(-0), -0)` 和 `Object.is(-0 << 2 >> 2, -0)` 都会计算为 `false`。
 
 如果不考虑零的符号，依赖于 {{jsxref("Object.is")}} 可能会很危险。当意图区分 `-0` 和 `+0` 时，它当然会做到期望的效果。

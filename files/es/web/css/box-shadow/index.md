@@ -43,7 +43,6 @@ box-shadow: unset;
 Especifica una sola box-shadow utilizando:
 
 - Dos, tres, o cuatro valores [`<length>`](/es/docs/Web/CSS/length).
-
   - Si solo dos valores son definidos, son interpretados como valores [`<offset-x><offset-y>`](#offset-x).
   - Si un tercer valor es dado, es interpretado como un [`<blur-radius>`](#blur-radius).
   - Si un cuarto valor es dado, es interpretado como un [`<spread-radius>`](#spread-radius).

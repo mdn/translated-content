@@ -18,7 +18,6 @@ str.match(regexp);
 ### Parâmetros
 
 - `regexp`
-
   - : Um objeto de [expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). Se _`regexp`_ não for uma **`RegExp`**, o mesmo será convertido para uma nova RegExp usando `new RegExp(regexp)`.
 
     Se você não fornecer nenhum parâmetro ao usar o método `match()`, você obterá um {{jsxref ("Array")}} com uma string vazia: `[""]`.

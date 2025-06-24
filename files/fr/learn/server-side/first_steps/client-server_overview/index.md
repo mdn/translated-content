@@ -37,7 +37,6 @@ Cette requête inclut&nbsp;:
 
 - Une URL identifiant la cible et la ressource (un fichier HTML, un point particulier de données sur le serveur ou un outil à lancer).
 - Une méthode qui définit l'action requise ( par exemple récupérer un fichier ou sauvegarder certaines données ou mises à jour). Les différentes méthodes/verbes et les actions associées sont listées ci-dessous :
-
   - `GET`: Récupérer une ressource spécifique, par exemple un fichier html contenant des informations sur un produit ou une liste de produits.
   - `POST`: Crée une ressource comme un nouvel article dans un wiki, ajouter un contact dans une base de données, enregistrer les données d'un formulaire d'inscription...
   - `HEAD`: Récupérer les informations "metadata" d'une ressource spécifique sans le "body" comme ferait GET. Vous pouvez utiliser une requête HEAD pour, par exemple, la date de dernière mise à jour d'une ressource puis, utiliser GET (plus "coûteuse") seulement si la ressource a été changée.
@@ -46,7 +45,6 @@ Cette requête inclut&nbsp;:
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: ces verbes sont utilisés pour des tâches moins communes ou plus avancées nous ne les couvrirons donc pas ici.
 
 - Des informations complémentaires peuvent être encodées avec la requête (des données de formulaire HTML par exemple). Ces informations peuvent être encodées comme :
-
   - Paramètres URL : les requêtes `GET` encodent les données dans l'URL envoyée au serveur en ajoutant des paires nom/valeur en fin de celle-ci. Exemple : `http://mysite.com?name=Fred&age=11`. Il y a toujours un point d'interrogation (`?`) séparant le début de l'URL des paramètres passés. Ainsi qu'un signe égal (`=`) séparant le nom de la valeur associée et une esperluette (`&`) séparant chaque paire. Les paramètres URL ne sont pas sécurisés car ils peuvent être changés et soumis une deuxième fois par l'utilisateur. Pour cette raison, les requêtes URL paramètres/`GET` requests ne sont pas utilisées pour des requêtes mettant à jour des données sur un serveur.
 
 - `POST` data. Les requêtes `POST` ajoutent de nouvelles ressources dont les données sont encodées dans le corps de la requête.

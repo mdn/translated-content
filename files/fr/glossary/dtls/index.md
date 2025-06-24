@@ -17,12 +17,10 @@ Ces caractéristiques sont particulièrement utiles pour les domaines où DTLS e
 
 - [La page Wikipédia sur DTLS](https://fr.wikipedia.org/wiki/Datagram_Transport_Layer_Security)
 - Les spécifications directes&nbsp;:
-
   - [La RFC 9147 qui définit le protocole DTLS en version 1.3 (en anglais)](https://datatracker.ietf.org/doc/html/rfc9147)
   - [La RFC 6347 qui définit le protocole DTLS en version 1.3 (en anglais)](https://datatracker.ietf.org/doc/html/rfc6347)
 
 - Les spécifications connexes&nbsp;:
-
   - [La RFC 5763 dressant le cadre pour utiliser SRTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc5763)
   - [La RFC 5764 spécifiant une extension DTLS pour l'établissement des clés pour SRTP (en anglais)](https://datatracker.ietf.org/doc/html/rfc5764)
   - [La RFC 6083 dressant le cadre pour utiliser SCTP avec DTLS (en anglais)](https://datatracker.ietf.org/doc/html/rfc6083)

@@ -29,14 +29,11 @@ Les événements ont trois fonctions :
 ### Parameters
 
 - `callback`
-
   - : Function that will be called when this event occurs. The function will be passed the following arguments:
-
     - `id`
       - : `string`. ID of the item that was moved.
 
     <!---->
-
     - `moveInfo`
       - : [`object`](#moveinfo). Object containing more details about the move.
 

@@ -143,7 +143,6 @@ text-decoration: unset;
 
 - L'attribut {{cssxref("list-style")}} qui contrôle la façon dont les éléments apparaissent dans les listes HTML {{HTMLElement("ol")}} et {{HTMLElement("ul")}}.
 - Les propriétés détaillées associées à cette propriété raccourcie :
-
   - {{cssxref("text-decoration-line")}}
   - {{cssxref("text-decoration-color")}}
   - {{cssxref("text-decoration-style")}}.

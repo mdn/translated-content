@@ -92,9 +92,7 @@ original_slug: Web/HTML/Element/meta
 - `content`
   - : [`http-equiv`](#http-equiv) 또는 [`name`](#name) 특성의 값을 담습니다.
 - `http-equiv`
-
   - : 프래그마 지시문을 정의합니다. 특성의 이름(`http-equiv(alent)`)에서 알 수 있듯이, 가능한 값은 특정 HTTP 헤더입니다.
-
     - `content-security-policy`
 
       현재 페이지의 [콘텐츠 정책](/ko/docs/Web/HTTP/Headers/Content-Security-Policy)을 정의할 수 있습니다. 대부분의 콘텐츠 정책은 허용하는 서버 출처와 스크립트 엔드포인트를 지정해 사이트 간 스크립트 공격 방어에 도움을 줍니다.
@@ -112,7 +110,6 @@ original_slug: Web/HTML/Element/meta
       지정할 경우, `content` 특성의 값은 반드시 "`IE=edge`"여야 합니다. 사용자 에이전트는 이 프래그마를 무시해야 합니다.
 
     - `refresh` 다음을 지정합니다.
-
       - [`content`](#content) 특성에 양의 정수 값을 설정한 경우, 페이지를 다시 불러오기 전까지의 초 단위 대기시간.
       - [`content`](#content) 특성이 양의 정수 값을 가지고 그 뒤를 문자열 `;url=`과 유효한 URL이 뒤따른다면, 해당 URL로 이동하기 전까지의 초 단위 대기시간.
 
@@ -127,7 +124,6 @@ original_slug: Web/HTML/Element/meta
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - `name`
-
   - : `name`과 `content` 특성을 함께 사용하면 문서의 메타데이터를 이름-값 쌍으로 제공할 수 있습니다. `name`은 이름, `content`는 값을 담당합니다.
 
     [표준 메타데이터 이름](/ko/docs/Web/HTML/Element/meta/name) 문서에서 HTML 명세에 포함된 표준 메타데이터 목록을 살펴보세요.

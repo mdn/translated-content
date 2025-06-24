@@ -173,7 +173,6 @@ li {
 
 - Другие элементы HTML списка: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - CSS-свойства, которые могут быть полезны для стилизации `<ol>` элемента:
-
   - свойство {{CSSxRef("list-style")}}, для порядковых показов
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), для более сложных вложенных списков
   - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства `compact`

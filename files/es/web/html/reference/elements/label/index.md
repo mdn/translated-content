@@ -21,7 +21,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `accesskey`
   - : Una tecla de atajo para acceder a este elemento desde el teclado.
 - `for`
-
   - : El ID del elemento de formulario etiquetable relacionado en el mismo documento que el elemento label. El primer elemento en el documento con tal ID que coincida con el dispuesto en el atributo for será el control etiquetado para este elemento.
 
     > [!NOTE]

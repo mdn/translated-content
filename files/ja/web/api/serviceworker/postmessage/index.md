@@ -23,7 +23,6 @@ postMessage(message, options)
 ### 引数
 
 - `message`
-
   - : ワーカーに配信するオブジェクトです。これは {{domxref("ServiceWorkerGlobalScope.message_event", "message")}} イベントに配信されるイベントの `data` フィールドに入ります。これは [構造化クローンアルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) によって扱える JavaScript オブジェクトであれば何でもかまいません。
 
     `message` 引数は必須です。ワーカーに渡すデータが重要でない場合は、`null` または `undefined` を明示的に渡す必要があります。

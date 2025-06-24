@@ -34,7 +34,6 @@ search(regexp)
 ### 매개변수
 
 - `regexp`
-
   - : 정규식 객체 또는 [`Symbol.search`](/ko/docs/Web/JavaScript/Rference/Global_Objects/Symbol/search) 메서드가 있는 모든 객체입니다.
 
     `regexp`가 `RegExp` 객체가 아니고 `Symbol.search` 메서드가 없는 경우, `new RegExp(regexp)`를 사용하여 암시적으로 {{jsxref("RegExp")}}로 변환됩니다.

@@ -270,13 +270,11 @@ Unicode 文字の上に、書記素クラスターと呼ばれる 1 つの視覚
 - {{jsxref("String/substring")}}
   - : 呼び出した文字列の指定された位置以降（または区間）にある文字が入った新しい文字列を返します。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : 文字列内の文字が、現在のロケールに沿って小文字に変換されます。
 
     ほとんどの言語では、これは {{jsxref("String/toLowerCase", "toLowerCase()")}} と同じものを返します。
 
 - {{jsxref("String.prototype.toLocaleUpperCase()")}}
-
   - : 文字列内の文字が、現在のロケールに沿って大文字に変換されます。
 
     ほとんどの言語では、これは {{jsxref("String/toUpperCase", "toUpperCase()")}} と同じものを返します。

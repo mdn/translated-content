@@ -16,9 +16,7 @@ generateKey(algorithm, extractable, keyUsages)
 ### 参数
 
 - `algorithm`
-
   - : 一个对象，用于定义要生成的算法类型，并提供所需的参数。
-
     - 对于 [RSASSA-PKCS1-v1_5](/zh-CN/docs/Web/API/SubtleCrypto/sign#rsassa-pkcs1-v1_5)、[RSA-PSS](/zh-CN/docs/Web/API/SubtleCrypto/sign#rsa-pss) 或 [RSA-OAEP](/zh-CN/docs/Web/API/SubtleCrypto/encrypt#rsa-oaep) 算法：传递 [`RsaHashedKeyGenParams`](/zh-CN/docs/Web/API/RsaHashedKeyGenParams) 对象。
     - 对于 [ECDSA](/zh-CN/docs/Web/API/SubtleCrypto/sign#ecdsa) 或 [ECDH](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey#ecdh) 算法：传递 [`EcKeyGenParams`](/zh-CN/docs/Web/API/EcKeyGenParams) 对象。
     - 对于 [HMAC](/zh-CN/docs/Web/API/SubtleCrypto/sign#hmac) 算法：传递 [`HmacKeyGenParams`](/zh-CN/docs/Web/API/HmacKeyGenParams) 对象。

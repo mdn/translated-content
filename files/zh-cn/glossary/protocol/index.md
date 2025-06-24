@@ -15,6 +15,5 @@ l10n:
 - [RFC 官方互联网协议标准](https://www.rfc-editor.org/standards)
 - [HTTP 概述](/zh-CN/docs/Web/HTTP/Guides/Overview)
 - 术语：
-
   - {{glossary("TCP")}}
   - {{glossary("Packet", "数据包")}}

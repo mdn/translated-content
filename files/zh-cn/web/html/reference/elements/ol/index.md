@@ -68,16 +68,13 @@ li {
 - `reversed`
   - : 此布尔值属性指定列表中的条目是否是倒序排列的，即编号是否应从高到低反向标注。
 - `start`
-
   - : 一个整数值属性，指定了列表编号的起始值。此属性的值应为阿拉伯数字，尽管列表条目的编号类型 `type` 属性可能指定为了罗马数字编号等其他类型的编号。比如说，想要让元素的编号从英文字母 "d" 或者罗马数字 "iv" 开始，都应当使用 `start="4"`。
 
     > [!NOTE]
     > 这个属性在 HTML4 中弃用，但是在 HTML5 中被重新引入。
 
 - `type`
-
   - : 设置编号的类型：
-
     - `a` 表示小写英文字母编号
     - `A` 表示大写英文字母编号
     - `i` 表示小写罗马数字编号
@@ -210,7 +207,6 @@ li {
 
 - 其他列表相关的 HTML 元素：{{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} and the obsolete {{HTMLElement("dir")}};
 - 对 `<ol>` 元素常用的 CSS 属性：
-
   - the {{cssxref("list-style")}} 属性，有用的选择序数的显示方式，
   - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), 用于处理复杂的嵌套列表，
   - {{cssxref("line-height")}} 属性，可以模拟过时的 [`compact`](#compact) 属性；

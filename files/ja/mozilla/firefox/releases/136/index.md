@@ -39,7 +39,6 @@ l10n:
 - 要素のプロパティが [要素参照を含む Aria 属性](/ja/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references) に反映されるようになりました ([Firefox bug 1919102](https://bugzil.la/1919102))。
 
   以下のプロパティが含まれます:
-
   - {{domxref("Element")}} インターフェイスの {{domxref("Element/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("Element/ariaControlsElements","ariaControlsElements")}}、{{domxref("Element/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("Element/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("Element/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("Element/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("Element/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("Element/ariaOwnsElements","ariaOwnsElements")}}。
   - {{domxref("ElementInternals")}} インターフェイスの {{domxref("ElementInternals/ariaActiveDescendantElement","ariaActiveDescendantElement")}}、{{domxref("ElementInternals/ariaControlsElements","ariaControlsElements")}}、{{domxref("ElementInternals/ariaDescribedByElements","ariaDescribedByElements")}}、{{domxref("ElementInternals/ariaDetailsElements","ariaDetailsElements")}}、{{domxref("ElementInternals/ariaErrorMessageElements","ariaErrorMessageElements")}}、{{domxref("ElementInternals/ariaFlowToElements","ariaFlowToElements")}}、{{domxref("ElementInternals/ariaLabelledByElements", "ariaLabelledByElements")}}、{{domxref("ElementInternals/ariaOwnsElements","ariaOwnsElements")}}。
 

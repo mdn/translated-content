@@ -36,7 +36,6 @@ scrollbar-color: unset;
 ### 值
 
 - `<scrollbar-color>`
-
   - : 定义滚动条的颜色。
 
     <table class="standard-table">

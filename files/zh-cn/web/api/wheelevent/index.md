@@ -31,7 +31,6 @@ _该接口继承了父接口 {{domxref("MouseEvent")}}、{{domxref("UIEvent")}} 
 - {{domxref("WheelEvent.deltaZ")}} {{readonlyinline}}
   - : 返回一个 `double` 值，该值表示滚轮的 z 轴方向上的滚动量。
 - {{domxref("WheelEvent.deltaMode")}} {{readonlyinline}}
-
   - : 返回一个 `unsigned long` 值，该值表示上述各 `delta*` 的值的单位。允许的值如下：
 
     | 常量                         | 值     | 描述                                                                        |

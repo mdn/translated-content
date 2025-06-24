@@ -24,9 +24,7 @@ createOffer(successCallback, failureCallback, options) // 已弃用
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 为提议提供以下请求选项的对象：
-
     - `iceRestart` {{optional_inline}}
       - : 要在活动连接上重新启动 ICE，请将其设置为 `true`。这将导致返回的提议与已经存在提议的凭据不同。如果你应用返回的提议，则 ICE 将重新启动。指定 `false` 以保留相同的凭据，因此不重新启动 ICE。**默认值为 `false`**。请考虑调用 {{domxref("RTCPeerConnection.restartIce()")}}（会在下一次调用 `createOffer()` 时自动设置标志）来代替这个选项的使用。
     - `offerToReceiveAudio` {{optional_inline}} {{deprecated_inline}}

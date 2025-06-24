@@ -21,11 +21,9 @@ new MutationObserver(callback)
 ### 引数
 
 - `callback`
-
   - : 対象となるノードやサブツリー、および指定されたオプションの条件を満たす DOM の変更が起きるたびに呼び出される関数です。
 
     この `callback` 関数は、2 つの引数を受け取ります。
-
     1. 発生したそれぞれの変更を記述した {{domxref("MutationRecord")}} オブジェクトの配列。
     2. `callback` を呼び出した {{domxref("MutationObserver")}} です。これは {{domxref("MutationObserver.disconnect()")}} を使用してオブザーバーを切断するときによく使われます。
 

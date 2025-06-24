@@ -27,7 +27,6 @@ getData(format);
 ### 注意事項
 
 - データの利用可能性
-
   - [HTML5 Drag and Drop 仕様書](https://www.w3.org/TR/2011/WD-html5-20110113/dnd.html#drag-data-store-mode)では、「ドラッグデータストアモード」が規定されています。
     これは、 **`DataTransfer.getData()`** が期待した値を返さないという、予期しない動作をする可能性があります。すべてのブラウザーがこの制限を強制しているわけではないからです。
 

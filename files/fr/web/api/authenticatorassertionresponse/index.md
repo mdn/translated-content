@@ -12,9 +12,7 @@ L'interface **`AuthenticatorAssertionResponse`**, rattachée à l'[API Web Authe
 - `AuthenticatorAssertionResponse.clientDataJSON`
   - : Les données du client pour l'authentification telles que l'origine et le _challenge_. La propriété {{domxref("AuthenticatorAttestationResponse.clientDataJSON","clientDataJSON")}} est héritée de {{domxref("AuthenticatorResponse")}}.
 - {{domxref("AuthenticatorAssertionResponse.authenticatorData")}}
-
   - : Un objet {{jsxref("ArrayBuffer")}} contenant les informations sur l'authenticateur telles que :
-
     - l'empreinte d'identifiant (_Relying Party ID Hash_) `rpidHash`
     - un compteur de signature
     - un test de présence d'utilisateur

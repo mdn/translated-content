@@ -32,7 +32,6 @@ text-decoration-style: unset;
 ### Valores
 
 - `solid double dotted dashed wavy`
-
   - : Es una de las siguientes palabras clave:
 
     | Palabra clave                        | Descripción                  | Comentario                                                                    |

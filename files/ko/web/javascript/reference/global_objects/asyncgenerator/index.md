@@ -58,7 +58,6 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 아래 속성은 `AsyncGenerator.prototype`에 정의되어 있으며 모든 `AsyncGenerator` 인스턴스에서 공유됩니다.
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : 인스턴스 객체를 생성하는 생성자 함수입니다. `AsyncGenerator` 객체를 위한 초기 값은 [`AsyncGeneratorFunction.prototype`](/ko/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)입니다.
 
     > **참고:** `AsyncGenerator` 객체는 자신을 생성한 비동기 생성기 함수의 참조를 저장하고 있지 않습니다.

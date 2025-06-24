@@ -21,11 +21,8 @@ read(formats)
 ### 参数
 
 - `formats` {{optional_inline}}
-
   - : 包含以下属性的可选对象：
-
     - `unsanitized` {{optional_inline}}
-
       - : 包含字符串的数组（{{jsxref("Array")}}），这些字符串为在从剪贴板读取时不应被净化的数据格式的 MIME 类型。
 
         某些浏览器在读取剪贴板数据时可能会对其进行净化，以防止恶意内容被粘贴到文档中。例如，Chrome（及其他基于 Chromium 的浏览器）会通过去除 `<script>` 标签和其他潜在危险内容来净化 HTML 数据。使用 `unsanitized` 数组可以指定不应被净化的 MIME 类型列表。

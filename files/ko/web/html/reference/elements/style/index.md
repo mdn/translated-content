@@ -47,7 +47,6 @@ p {
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
 
 - `type`
-
   - : 스타일 언어의 MIME 유형. 문자셋은 지정하지 않아야 합니다. 선택 사항이며, 기본값은 `text/css`입니다. 빈 문자열과 `text/css` 외의 값은 사용하지 않습니다.
 
     > [!NOTE]
@@ -63,7 +62,6 @@ p {
 ### 사용 중단된 특성
 
 - `scoped` {{non-standard_inline}} {{deprecated_inline}}
-
   - : 지정한 경우, `<style>` 요소의 부모 및 부모의 자식에만 스타일을 적용합니다.
 
     > **참고:** `scoped` 특성은 <https://github.com/w3c/csswg-drafts/issues/3547>에 따라 나중에 다시 추가될 수도 있습니다. 지금 사용하고 싶은 경우 [폴리필](https://github.com/samthor/scoped)을 추가하세요.

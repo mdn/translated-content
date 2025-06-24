@@ -35,7 +35,6 @@ La propiedad `background` se especifica como una o más capas de fondo, separada
 La sintaxis de cada capa es la siguiente:
 
 - Cada capa puede incluir cero o una ocurrencia de cualquiera de los siguientes valores
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)

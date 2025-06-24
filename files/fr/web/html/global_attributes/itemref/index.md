@@ -62,7 +62,6 @@ Au format [JSON-LD](https://json-ld.org/) :
 
 - [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-
   - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
   - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
   - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)

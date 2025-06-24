@@ -22,9 +22,7 @@ original_slug: Web/HTML/Global_attributes
 - [`accesskey`](/ko/docs/Web/HTML/Global_attributes/accesskey)
   - : 현재 요소에 대한 키보드 단축키 생성을 위한 힌트를 제공합니다. 이 특성은 공백으로 구분한 문자 목록으로 구성됩니다. 브라우저는 주어진 여러 개의 값 중 장치의 키보드 레이아웃에 존재하는 첫 번째 키를 사용해야 합니다.
 - [`autocapitalize`](/ko/docs/Web/HTML/Global_attributes/autocapitalize)
-
   - : 사용자가 입력 또는 수정하는 텍스트를 자동으로 대문자로 변환할지 여부와 변환하는 방법을 제어합니다. 다음과 같은 값이 가능합니다.
-
     - `off` 또는 `none`, 대소문자 자동 변환이 발생하지 않음 (모든 글자가 기본값 소문자)
     - `on` 또는 `sentences`, 각 문장의 첫 글자를 대문자로 변환, 나머지 글자는 기본값 소문자
     - `words`, 각 단어의 첫 글자를 대문자로 변환, 나머지 글자는 기본값 소문자
@@ -74,9 +72,7 @@ original_slug: Web/HTML/Global_attributes
 - [`style`](/ko/docs/Web/HTML/Global_attributes/style)
   - : 요소에 적용할 [CSS](/ko/docs/Web/CSS) 스타일 선언을 담습니다. 단, 스타일은 별도 파일에 정의하는 것이 추천하는 방식임을 유의하세요. 이 특성과 {{HTMLElement("style")}} 요소는 테스트 등을 위한 빠른 스타일링이 주 용도입니다.
 - [`tabindex`](/ko/docs/Web/HTML/Global_attributes/tabindex)
-
   - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can takes several values:
-
     - a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
     - `0` means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
     - a _positive value_ means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the [**tabindex**](#tabindex). If several elements share the same tabindex, their relative order follows their relative positions in the document.

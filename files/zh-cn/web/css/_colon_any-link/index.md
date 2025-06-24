@@ -91,6 +91,5 @@ a:-webkit-any-link {
 - [创建超链接](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links)
 - 匹配 HTML 元素：具有 [`href`](/zh-CN/docs/Web/HTML/Reference/Elements/a#href) 属性的 [`<a>`](/zh-CN/docs/Web/HTML/Reference/Elements/a) 和 [`<area>`](/zh-CN/docs/Web/HTML/Reference/Elements/area)
 - 相关的 CSS 选择器：
-
   - [`:visited`](/zh-CN/docs/Web/CSS/:visited)
   - [`:link`](/zh-CN/docs/Web/CSS/:link)

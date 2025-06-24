@@ -27,7 +27,6 @@ devtools 页面没有任何可见的 DOM，但可以包含使用\<script>标记�
 - 可通过全局窗口对象访问的普通 DOM API
 - 与内容脚本中相同的 WebExtension API
 - The devtools APIs:
-
   - [`devtools.inspectedWindow`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

@@ -14,7 +14,6 @@ Este tipo representa um atributo de elemento DOM como um objeto. Na maioria dos 
 ## Propriedades
 
 - {{domxref("Attr.name", "name")}} {{readOnlyInline}}
-
   - : O nome do Atributo.
 
 - {{domxref("Attr.namespaceURI", "namespaceURI")}} {{readOnlyInline}}

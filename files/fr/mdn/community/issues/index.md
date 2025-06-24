@@ -84,11 +84,8 @@ Il se peut que vous n'ayez pas la solution au problème rapporté ou que vous n'
 ## Choisir un ticket GitHub sur lequel contribuer
 
 1. Rédigez un commentaire indiquant que vous souhaitez contribuer et le ticket vous sera affecté.
-
    - Si quelqu'un est déjà affecté au ticket&nbsp;:
-
      1. Si cela date de plus d'une semaine et qu'il n'y a pas eu beaucoup d'activité, mentionnez leur nom avec `@` et demandez-leur si vous pouvez poursuivre à leur place ou les aider à progresser.
-
         - Si cette personne est d'accord, nous vous affecterons le ticket et retirerons la précédente personne.
         - Si cette personne est d'accord et qu'un travail a déjà été effectué ou qu'il s'agit d'aider, nous vous affecterons au ticket avec cette personne.
 
@@ -99,7 +96,6 @@ Il se peut que vous n'ayez pas la solution au problème rapporté ou que vous n'
 ## Lorsqu'un ticket vous est affecté
 
 1. Déterminez précisément ce qu'il reste à faire.
-
    - Si le ticket est plutôt bien décrit et rédigé, que le travail à accomplir est explicite, allez-y&nbsp;!
    - Si le ticket est flou ou ambigu et que vous avez un doute sur ce qu'il faut faire, n'hésitez pas à mentionner la rapporteuse ou le rapporteur pour demander plus de précisions.
    - Si vous avez un doute sur la personne à solliciter, demandez de l'aide sur [le canal Matrix #mdn (en anglais)](https://chat.mozilla.org/#/room/#mdn:mozilla.org) ou [#l10n-fr (en français)](https://matrix.to/#/#l10n-fr:mozilla.org).

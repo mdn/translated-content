@@ -36,13 +36,9 @@ browser.cookies.onChanged.hasListener(listener);
 ### 參數
 
 - `callback`
-
   - : 能被呼叫的 callback 函式會在此事件發生的時候觸發。函式會 passed 以下參數：
-
     - `changeInfo`
-
       - : 一個含有觸發事件資訊的 `object`。它有兩個屬性：
-
         - `removed`
           - : 一個 `boolean`。如果 cookie 被刪除則為 `true`，否則為 `false`。
         - `cookie`

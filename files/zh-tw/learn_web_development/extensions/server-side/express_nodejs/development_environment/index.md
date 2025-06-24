@@ -69,7 +69,6 @@ Node 有許多[版本](https://nodejs.org/en/blog/release/)，更新的版本代
 直接使用安裝檔吧！
 
 1. 下載需要的安裝檔：
-
    1. 開啟 <https://nodejs.org/en/>
    2. 對於大部分的使用者來說，直接下載 LTS 版本
 

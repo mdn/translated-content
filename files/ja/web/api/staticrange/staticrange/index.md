@@ -21,9 +21,7 @@ new StaticRange(rangeSpec)
 ### 引数
 
 - `rangeSpec`
-
   - : 要求される `rangeSpec` 引数は、以下の 4 つのプロパティを格納したオブジェクトです。
-
     - `startContainer`
       - : 範囲の始点がある {{domxref("Node")}} です。
     - `startOffset`

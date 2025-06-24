@@ -22,9 +22,7 @@ browser.browserAction.openPopup(
 ### 参数
 
 - `details` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `windowId` {{optional_inline}}
       - : `integer`。要为其打开弹出窗口的窗口。默认为当前窗口。
 

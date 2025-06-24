@@ -34,7 +34,6 @@ attr(data-something, "default");
 - `attribute-name`
   - : Le nom de l'attribut de l'élément HTML ciblé par la déclaration CSS.
 - `<type-or-unit>` {{experimental_inline}}
-
   - : Un mot-clé indiquant le type de valeur pour l'attribut ou l'unité dans laquelle elle est exprimée. Si la valeur `<type-or-unit>` est invalide pour l'attribut ciblé, l'expression `attr()` sera également considérée comme invalide. Si cette valeur est absente, elle vaudra `string` par défaut. La liste des valeurs valides est :
 
     <table class="standard-table">

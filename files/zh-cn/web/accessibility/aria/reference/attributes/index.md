@@ -15,7 +15,6 @@ ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
 ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
 1. ### 小部件（widget）特性
-
    - [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
    - [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
    - [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
@@ -42,19 +41,16 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
    - [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
 2. ### 活动区域特性
-
    - [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
    - [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
    - [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
    - [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 
 3. ### 拖放特性
-
    - [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 
 4. ### 关系特性
-
    - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
    - [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
    - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)

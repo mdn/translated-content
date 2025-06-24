@@ -24,26 +24,20 @@ l10n:
 ユーザーが選択を行った後、 `files` の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
 
 - PhotoAlbums
-
   - Birthdays
-
     - Jamie's 1st birthday
-
       - PIC1000.jpg
       - PIC1004.jpg
       - PIC1044.jpg
 
     - Don's 40th birthday
-
       - PIC2343.jpg
       - PIC2344.jpg
       - PIC2355.jpg
       - PIC2356.jpg
 
   - Vacations
-
     - Mars
-
       - PIC5533.jpg
       - PIC5534.jpg
       - PIC5556.jpg

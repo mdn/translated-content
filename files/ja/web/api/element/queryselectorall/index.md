@@ -19,7 +19,6 @@ querySelectorAll(selectors)
 ### 引数
 
 - `selectors`
-
   - : 照合する 1 つまたは複数のセレクターを含む文字列です。この文字列は妥当な CSS セレクター文字列でなければなりません。そうでない場合は `SyntaxError` 例外が発生します。
 
     HTML 仕様では、属性値が有効な CSS 識別子であることを求めていないことに注意してください。 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) または [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の値が有効な CSS 識別子でない場合は、セレクターで使用する前に、値に対して {{domxref("CSS.escape_static", "CSS.escape()")}} で呼び出してエスケープするか、または「[文字エスケープ](/ja/docs/Web/CSS/ident#文字のエスケープ)」で記述されているテクニックのいずれかを使用してエスケープする必要があります。例えば、「[属性値のエスケープ](#属性値のエスケープ)」を参照してください。

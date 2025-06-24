@@ -24,15 +24,12 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### 値
 
 - `<rectangular-color-space>`
-
   - : `srgb`、`srgb-linear`、`lab`、`oklab`、`xyz`、`xyz-d50`、`xyz-d65` のいずれかのキーワードです。
 
 - `<polar-color-space>`
-
   - : `hsl`、`hwb`、`lch`、`oklch` のいずれかです。
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-
   - : 色相補間のアルゴリズム。既定値は `shorter hue` です。
 
 ### 形式文法

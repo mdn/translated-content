@@ -38,7 +38,6 @@ Les opérateurs d'égalité stricte (`===` et `!==`) utilisent [l'algorithme de 
 - Si les deux opérandes valent `null` ou si les deux opérandes valent `undefined`, on renvoie `true`.
 - Si au moins l'un des opérandes vaut `NaN`, on renvoie `false`.
 - Sinon, on compare la valeur des deux opérandes :
-
   - Les nombres doivent avoir la même valeur. `+0` and `-0` sont considérés comme égaux.
   - Les chaînes de caractères doivent avoir les mêmes caractères, dans le même ordre.
   - Les booléens doivent avoir la même valeur (tous les deux `true` ou tous les deux `false`).

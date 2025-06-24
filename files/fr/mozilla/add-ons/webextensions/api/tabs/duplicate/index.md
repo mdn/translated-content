@@ -23,9 +23,7 @@ let duplicating = browser.tabs.duplicate(
 - `tabId`
   - : `integer`. L'identifiant de l'onglet à dupliquer.
 - `duplicateProperties` Optionnel
-
   - : `object`. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes&nbsp;:
-
     - `index` Optionnel
       - : `integer`. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.
     - `active` Optionnel

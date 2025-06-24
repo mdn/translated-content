@@ -26,13 +26,10 @@ let updating = browser.bookmarks.update(
 ### 参数
 
 - `id`
-
   - : {{jsxref("string", "字符串", "", 1)}}，指定要更新的书签或书签文件夹的 ID。
 
 - `changes`
-
   - : {{jsxref("object", "对象", "", 1)}}，指定要应用的更改，其中包含以下某些字段的组合。未指定的任何项目在引用的书签或文件夹中不会被更改：
-
     - `title` {{optional_inline}}
       - : {{jsxref("string", "字符串", "", 1)}}，包含书签的新标题；或者，如果 `id` 引用文件夹，则包含文件夹的新名称。
     - `url` {{optional_inline}}

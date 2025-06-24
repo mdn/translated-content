@@ -26,15 +26,12 @@ l10n:
 ## ガイド
 
 - [学習: 表のスタイル設定](/ja/docs/Learn_web_development/Core/Styling_basics/Tables)
-
   - : HTML 表の外観を改善するためのガイドで、表のスタイル設定手法にを扱います。
 
 - [学習: HTML の表の基本](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
-
   - : HTML の表の概要で、行とセル、見出し、および複数の列と行にまたがるセルを作成するための HTML を含みます。
 
 - [学習: HTML 票のアクセシビリティ](/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility)
-
   - : キャプションや表の行を表のヘッダー、本体、フッターのセクションにグループ化する機能など、高度な HTML 表の機能を見ていきます。また、視覚障碍のあるユーザーのための表のアクセシビリティについても見ていきます。
 
 ## 関連概念
@@ -44,7 +41,6 @@ l10n:
 - {{cssxref("text-align")}} プロパティ
 
 - [CSS ボックスサイズ指定](/ja/docs/Web/CSS/CSS_box_sizing)モジュール
-
   - {{cssxref("box-sizing")}}
   - {{cssxref("height")}}
   - {{cssxref("max-width")}}
@@ -54,14 +50,12 @@ l10n:
   - {{cssxref("min-content")}} キーワード
 
 - [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
-
   - {{cssxref("border")}} 一括指定
   - {{cssxref("border-width")}}
   - {{cssxref("border-style")}}
   - {{cssxref("border-color")}}
 
 - HTML 表関連要素:
-
   - {{htmlelement("table")}}
   - {{htmlelement("caption")}}
   - {{htmlelement("colgroup")}}

@@ -33,9 +33,7 @@ l10n:
 - [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class)
   - : 要素のクラスの空白区切りリストです。 CSS の [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) や JavaScript の {{DOMxRef("Document.getElementsByClassName()")}} メソッドのような関数を使えば、特定の要素を選択したりアクセスしたりすることができます。
 - [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)
-
   - : ユーザーによる要素の編集が可能かどうかを示す[列挙型](/ja/docs/Glossary/Enumerated)属性です。編集可能な場合、ブラウザーはその要素を編集可能なものに変更します。この属性の値は、以下のどちらかでなければなりません。
-
     - `true` または 空文字列: 要素が編集可能であることを示す
     - `false`: 要素は編集不可であることを示す
     - `plaintext-only`: これは、要素の生テキストは編集可能であるが、リッチテキストの書式設定は無効であることを示します。
@@ -43,17 +41,13 @@ l10n:
 - [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : これらの属性はカスタムデータ属性と呼ばれており、 [HTML](/ja/docs/Web/HTML) とその {{glossary("DOM")}} 表現との間で、固有の情報を交換できるようにします。すべてのカスタムデータは、その属性を設定した要素の {{DOMxRef("HTMLElement")}} インターフェイスを通して使用することができます。 {{DOMxRef("HTMLElement.dataset")}} プロパティでカスタムデータにアクセスできます。
 - [`dir`](/ja/docs/Web/HTML/Reference/Global_attributes/dir)
-
   - : 要素のテキストの書字方向を示す、列挙型属性です。以下の値を使用することができます。
-
     - `ltr`: _left to right_ を表し、左書きの言語 (日本語、英語など) に対して使用します。
     - `rtl`: _right to left_ を表し、右書きの言語 (アラビア語など) に対して使用します。
     - `auto`: ユーザーエージェントに決定させます。要素の中の文字を、書字方向を強く決定する文字が見つかるまで解析し、その方向を要素全体に適用する基本的なアルゴリズムを使用します。
 
 - [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
-
   - : [ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API) を使用して要素をドラッグすることができるかを示す列挙型属性です。以下の値を使用することができます。
-
     - `true`: 要素がドラッグ可能であることを示す
     - `false`: 要素がドラッグ不可であることを示す
 
@@ -97,18 +91,14 @@ l10n:
 - [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot)
   - : [シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウツリー内のスロットを、要素に割り当てます。`slot` 属性を持つ要素は、 `slot` 属性の値と一致する [`name`](/ja/docs/Web/HTML/Reference/Elements/slot#name) 属性の値を持つ {{HTMLElement("slot")}} 要素が生成したスロットに割り当てられます。
 - [`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-
   - : 列挙型属性で、要素でスペルチェックを行うかどうかを定義します。以下の値が利用できます。
-
     - 空文字列または `true`: 可能であればその要素でスペルチェックを行うことを示す
     - `false` は、その要素でスペルチェックを行わないことを示します。
 
 - [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)
   - : 要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を設定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用することです。
 - [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex)
-
   - : 要素が入力フォーカスを受け付ける (_focusable_ の) 場合に、順番的なキーボードナビゲーションに参加するかどうか、参加するならばどの位置に入るかを示す、整数値属性です。いくつかの値を取ることができます。
-
     - _負の数_: 要素はフォーカスを受け付けますが、順番的なキーボードナビゲーションでは到達できません。
     - `0`: 要素はフォーカスを受け付けて、順番的なキーボードナビゲーションで到達できます。その順番はプラットフォームの慣習に従って定義されます。
     - _正の数_: 要素はフォーカスを受け付けて、順番的なキーボードナビゲーションで到達できることを表します。その相対的な順序は属性の値で定義され、 [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) の数値の昇順にフォーカスを移します。複数の要素が同じ tabindex の値を持っている場合は、文書内における要素の相対的な位置に従います。
@@ -116,23 +106,17 @@ l10n:
 - [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title)
   - : 要素に関するアドバイザリー情報を表すテキストを設定します。この情報は通常、ツールチップとしてユーザーに表示されますが、必ず表示されるとは限りません。
 - [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate)
-
   - : 列挙型属性で、要素の属性値や子孫 {{DOMxRef("Text")}} ノードの値が、ページをローカライズするときに翻訳対象となるか、あるいは変更せずにおくかを指定します。以下の値を使用することができます。
-
     - 空文字列または `yes`: 要素が翻訳対象になることを示します。
     - `no`: 要素が翻訳対象にならないことを示します。
 
 - [`virtualkeyboardpolicy`](/ja/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy) {{Experimental_Inline}}
-
   - : {{Glossary("enumerated", "列挙型")}}属性で、タブレットやモバイル端末などのハードウェアキーボードが利用できない端末において、コンテンツが編集可能な要素（例えば、 {{htmlelement("input")}} や {{htmlelement("textarea")}} 要素、あるいは [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を設定した要素）において画面上の仮想キーボードの動作を制御するために使用します。
-
     - `auto` または空文字列: 要素がフォーカスまたはタップされたときに、自動的に仮想キーボードを示します。
     - `manual`: 要素へのフォーカスやタップを仮想キーボードの状態から切り離します。
 
 - [`writingsuggestions`](/ja/docs/Web/HTML/Reference/Global_attributes/writingsuggestions)
-
   - : {{glossary("enumerated", "列挙型")}}属性であり、ブラウザーが指定した入力補完を要素のスコープで有効にするかどうかを示します。
-
     - `false`: ブラウザーの入力補完を無効にします。
     - `true` または空文字列: 入力補間を有効にします。
 

@@ -14,9 +14,7 @@ slug: Web/CSS/@counter-style/symbols
 ### 値
 
 - `<symbol>`
-
   - : そのカウンターシステムで使用される記号を表します。これは以下のデータ型のうちの一つである必要があります。
-
     - {{cssxref("&lt;string&gt;")}}
     - {{cssxref("&lt;image&gt;")}} (注: この値は「リスクあり」であり、仕様書から削除されるかもしれません。これはまだ実装されていません。)
     - {{cssxref("&lt;custom-ident&gt;")}}

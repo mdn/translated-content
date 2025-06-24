@@ -45,10 +45,8 @@ Accept: text/html, application/xhtml+xml, application/xml;q=0.9, */*;q=0.8
 - `<MIME_type>/<MIME_subtype>`
   - : Un único y preciso tipo [MIME](/es/docs/Web/HTTP/Guides/MIME_types), como `text/html`.
 - `<MIME_type>/*`
-
   - : Un tipo MIME, pero con cualquier subtipo.
     Por ejmplo, image/\* comincide con:
-
     - image/png
     - image/svg
     - image/gif

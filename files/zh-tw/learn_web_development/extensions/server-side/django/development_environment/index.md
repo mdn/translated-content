@@ -132,7 +132,6 @@ python3 -V
 你可以輕鬆從[python.org](https://www.python.org/)安裝 Python 3（以及 pip3 工具）:
 
 1. 下載所需的安裝程序:
-
    1. 點擊<https://www.python.org/downloads/>
    2. 選擇**Download Python 3.7.0**按鈕(確切的版本號可能不同).
 
@@ -157,7 +156,6 @@ pip3 list
 windows 默認不安裝,但你可以從[python.org](https://www.python.org/)輕鬆安裝它（以及 pip3 工具）：
 
 1. 下載所需版本:
-
    1. 點擊 <https://www.python.org/downloads/>
    2. 選擇 **Download Python 3.7.0** 按鈕(確切的版本號可能不同).
    3. 通過雙擊下載的文件並按照提示安裝 Python

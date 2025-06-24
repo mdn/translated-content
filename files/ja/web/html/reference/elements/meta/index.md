@@ -99,9 +99,7 @@ l10n:
 - `content`
   - : この属性は状況に応じて、[`http-equiv`](#http-equiv) 属性または [`name`](#name) 属性に関連付けられた値を持ちます。
 - `http-equiv`
-
   - : プラグマディレクティブを定義します。属性名が `http-equiv(alent)` なのは、利用できる値のすべてが特定の HTTP ヘッダーの名前だからです。
-
     - `content-security-policy`
 
       この値により、ページ作者がページの[コンテンツポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)を定義できます。いくつかの例外を除き、ポリシーはサーバーオリジンやスクリプトのエンドポイントの指定に関与します。これは、クロスサイトスクリプティング攻撃の対策になります。
@@ -113,13 +111,11 @@ l10n:
     - `default-style`
 
     既定の [CSS スタイルシート](/ja/docs/Web/CSS)セットの名前を設定します。
-
     - `x-ua-compatible`
 
       指定された場合、 `content` 属性は "`IE=edge`" という値を持つ必要があります。ユーザーエージェントはこのプラグマを無視することが要求されます。
 
     - `refresh` これは以下のことを指定する指示です。
-
       - [`content`](#content) 属性に非負の整数が 1 つだけ含まれている場合は、ページを再読み込みするまでの秒数。
       - [`content`](#content) 属性に非負の整数と、その後に文字列 '`;url=`' と有効な URL がある場合は、別のページにリダイレクトするまでの秒数。
 
@@ -134,7 +130,6 @@ l10n:
       > - [Understanding Success Criterion 3.2.5 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-no-extreme-changes-context.html)
 
 - `name`
-
   - : `name` 属性と `content` 属性を一緒に使用すると、文書のメタデータを名前と値のペアで提供することができます。 `name` 属性はメタデータの名前、 `content` 属性がその値を指定します。
 
     HTML 仕様書で定義されている標準的なメタデータ名のセットについては、[標準メタデータ名](/ja/docs/Web/HTML/Reference/Elements/meta/name)を参照してください。

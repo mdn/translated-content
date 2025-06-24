@@ -26,7 +26,6 @@ new URL(url, base)
     `url` が相対参照である場合、`base` は必須であり、最終的な URL を解決するために使用されます。
     `url` が絶対 URL である場合、指定された `base` は結果の URL を作成するためには使用されません。
 - `base` {{optional_inline}}
-
   - : 文字列で、`url` が相対参照の場合に使用するベース URL を表します。
     指定されなかった場合、既定値は `undefined` です。
 

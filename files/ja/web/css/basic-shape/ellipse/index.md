@@ -57,9 +57,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ### 値
 
 - `<shape-radius>`
-
   - : 2 つの半径で、x および y をその順で指定します。{{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
-
     - `closest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。楕円の場合は、半径の軸で最も近い辺となります。
     - `farthest-side`

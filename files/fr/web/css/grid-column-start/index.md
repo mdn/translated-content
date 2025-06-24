@@ -95,11 +95,9 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
 ### Valeurs
 
 - `auto`
-
   - : Un mot-clé qui indique que la propriété ne contribue pas au placement de l'élément sur la grille. Cela indique un placement automatique, une taille de fragment (<i lang="en">span</i>) automatique ou une taille par défaut de `1`.
 
 - [`<custom-ident>`](/fr/docs/Web/CSS/custom-ident)
-
   - : S'il existe une ligne nommée avec '\<custom-ident>-start', le début de l'élément coincide avec la première ligne correspondante.
 
     > [!NOTE]
@@ -108,7 +106,6 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
     Sinon, la valeur est traitée comme si on avait utilisé `<custom-ident>` et la valeur `1`.
 
 - `<integer> && <custom-ident>?`
-
   - : Le début de l'élément est placé sur la n-ième ligne de la grille. Si un entier négatif est utilisé, le comptage sera fait depuis la fin de la grille explicite.
 
     Si un nom est fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existant avec ce nom, toutes les lignes implicites seront considérées afin de trouver la position.
@@ -116,7 +113,6 @@ La valeur de cette propriété prend la forme d'une seule valeur `<grid-line>`. 
     Une valeur entière de `0` sera considérée comme invalide.
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : Le début de l'élément est placé relativement au bord de fin pour occuper n colonnes.
 
     Si un nom fourni pour `<custom-ident>`, seules les lignes ayant ce nom seront comptées. S'il n'y a pas suffisamment de lignes existantes avec ce nom, toutes les lignes implicites du côté de la grille explicite et qui correspondent à la direction de la recherche seront comptées pour l'étendue de l'élément.

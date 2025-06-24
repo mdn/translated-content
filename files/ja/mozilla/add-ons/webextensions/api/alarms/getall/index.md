@@ -18,9 +18,7 @@ browser.alarms.getAll(
 ### 引数
 
 - `callback`
-
   - : `function`. この関数には以下の引数が渡ります。
-
     - `alarms`
       - : 予約されたアラームすべてを含む `{{WebExtAPIRef('alarms.Alarm')}}` の配列です。予約されたアラームがない場合は空の配列となります。
 

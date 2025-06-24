@@ -57,7 +57,6 @@ svg {
 - [SVG プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute#presentation_attributes)、例えば {{SVGAttr("fill")}} や {{SVGAttr("stroke")}}
 
 - **他の SVG 基本図形:**
-
   - {{ SVGElement('circle') }}
   - {{ SVGElement('ellipse') }}
   - {{ SVGElement('line') }}

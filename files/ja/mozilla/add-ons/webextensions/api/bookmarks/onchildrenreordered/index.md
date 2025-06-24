@@ -32,14 +32,11 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 ### 引数
 
 - `callback`
-
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
-
     - `id`
       - : 子要素の順序が変更されたフォルダーの ID を表す {{jsxref("string")}} です。
 
     <!---->
-
     - `reorderInfo`
       - : 詳細情報を含んだ {{jsxref("object")}} です。
 

@@ -63,21 +63,16 @@ Les événements ont trois fonctions&nbsp;:
 ### Paramètres
 
 - _`listener`_
-
   - : Une fonction d'écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants&nbsp;:
-
     - _`message`_
       - : Un objet qui est le message lui-même. C'est un objet sérialisable (voir [l'algorithme de clonage de données](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
 
     <!---->
-
     - _`sender`_
       - : Un objet {{WebExtAPIRef("runtime.MessageSender")}} représentant l'expéditeur du message.
 
     <!---->
-
     - `sendResponse`
-
       - : Une fonction à appeler, au plus une fois, pour envoyer une réponse au `message`. La fonction prend un seul argument, qui peut être n'importe quel objet sérialisable (voir [l'algorithme de clonage de données](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). Cet argument est renvoyé à l'expéditeur du message.
 
         Si vous avez plus d'un écouteur `onMessage()` dans le même document, alors un seul peut envoyer une réponse.
@@ -85,7 +80,6 @@ Les événements ont trois fonctions&nbsp;:
         Pour envoyer une réponse de manière synchrone, appelez `sendResponse()` avant le retour de la fonction d'écoute.
 
         Pour envoyer une réponse de manière asynchrone :
-
         - soit on gardera une référence à l'argument `sendResponse()` et on retournera `true` depuis la fonction listenener. `sendResponse()` pourra être appelée après le retour de la fonction d'écoute.
         - ou on retournera {{jsxref("Promise")}} à partir de la fonction d'écoute et on résoudra la promesse lorsque la réponse sera prête. C'est la méthode à privilégier.
 

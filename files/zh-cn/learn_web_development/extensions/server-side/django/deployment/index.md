@@ -158,7 +158,6 @@ Heroku 是运行时间最长，且最受欢迎的基于云的 PaaS 服务之一�
 - Heroku 有一个真正免费的免费套餐[free tier](https://www.heroku.com/pricing) （尽管有一些限制）。
 - 作为 PaaS，Heroku 为我们提供了大量的 Web 基础架构。这使得入门更加容易，因为你不必担心 Heroku 为我们提供的服务器，负载平衡器，反向代理或任何其他 Web 基础结构。
 - 虽然它确实有一些限制，但这些不会影响本教程的应用程序。例如：
-
   - Heroku 只提供短期储存，因此用户上传的文件无法安全地存储在 Heroku 本身。
   - 如果半小时内没有请求，免费套餐将使不活动的网络应用程序进入睡眠。然后，该网站可能需要几秒钟才能被唤醒。
   - 免费套餐将你网站运行的时间，限制为每月一定的小时数（不包括网站“睡着”的时间）。这对于低使用/演示站点来说很好，但如果需要 100％的正常运行时间则不适用。
@@ -204,7 +203,6 @@ Heroku 与 **git** 源代码版本控制系统紧密集成，使用它来上传/
 1. 访问 <https://github.com/> 并创建一个帐户。
 2. 登录后，点击顶部工具栏中的 + 链接，然后选择新建储存库 **New repository**。
 3. 填写此表单上的所有字段。虽然这些不是强制性的，但强烈建议使用它们。
-
    - 输入新的储存库名称（例如 django_local_library）和描述（例如“用 Django 编写的本地图书馆网站”）。
    - 在 Add .gitignore 选择列表中，选择 **Python**。
    - 在添加许可证选择列表中，选择你想要的许可证。
@@ -640,7 +638,6 @@ heroku ps   #Display dyno status
 ## 也可以参考
 
 - [Deploying Django](https://docs.djangoproject.com/en/2.0/howto/deployment/) (Django 文档)
-
   - [Deployment checklist](https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/) (Django 文档)
   - [Deploying static files](https://docs.djangoproject.com/en/2.0/howto/static-files/deployment/) (Django 文档)
   - [How to deploy with WSGI](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/) (Django 文档)
@@ -648,7 +645,6 @@ heroku ps   #Display dyno status
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/gunicorn/) (Django 文档)
 
 - Heroku
-
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku 文档)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku 文档)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku 文档)
@@ -662,7 +658,6 @@ heroku ps   #Display dyno status
   - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 

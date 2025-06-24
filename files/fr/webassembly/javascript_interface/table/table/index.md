@@ -16,9 +16,7 @@ new WebAssembly.Table(descripteurTable);
 ### Paramètres
 
 - _descripteurTable_
-
   - : Un objet qui peut contenir les propriétés suivantes&nbsp;:
-
     - `element`
       - : Une chaîne de caractères représentant le type de valeur à stocker dans la table. Pour le moment, sa valeur ne peut être que `"anyfunc"` (indiquant les fonctions).
     - `initial`

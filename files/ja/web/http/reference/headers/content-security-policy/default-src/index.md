@@ -51,7 +51,6 @@ Content-Security-Policy: default-src <source-expression-list>;
 - `'none'`
   - : リソースは読み込まれません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のいずれかが適用できます。
 
 ## 例
@@ -128,7 +127,6 @@ SVG 画像は、`default-src 'none'` ポリシーを設定していると、 Fir
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - CSP ディレクティブ (<https://www.w3.org/TR/CSP/#csp-directives>):
-
   - {{Glossary("Fetch directive", "フェッチディレクティブ")}}
   - {{Glossary("Document directive", "文書ディレクティブ")}}
   - {{Glossary("Navigation directive", "ナビゲーションディレクティブ")}}

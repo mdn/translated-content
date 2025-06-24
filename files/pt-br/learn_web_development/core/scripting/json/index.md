@@ -205,7 +205,6 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
    ```
 
    Isso leva pelo menos dois parâmetros — existem outros parâmetros opcionais disponíveis. Nós só precisamos dos dois obrigatórios para este exemplo simples:
-
    - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
    - O URL para fazer a solicitação — esta é a URL do arquivo JSON que armazenamos anteriormente.
 

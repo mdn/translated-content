@@ -30,18 +30,15 @@ l10n:
 - 现已完全支持 [Popover API](/zh-CN/docs/Web/API/Popover_API)，其用于创建顶级的，可用于操作菜单、自定义“吐司”通知、表单元素建议、内容选择器等的“弹出框”UI 元素。可以使用 HTML 属性或 JavaScript 来创建弹出框及其触发按钮（或输入），并使用 CSS 设置样式。
 
   已实现以下 Web API：
-
   - [`HTMLButtonElement`](/zh-CN/docs/Web/API/HTMLButtonElement) 的 [`popoverTargetElement`](/zh-CN/docs/Web/API/HTMLButtonElement/popoverTargetElement) 和 [`popoverTargetAction`](/zh-CN/docs/Web/API/HTMLButtonElement/popoverTargetAction) 属性。
   - [`HTMLInputElement`](/zh-CN/docs/Web/API/HTMLInputElement) 的 [`popoverTargetElement`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetElement) 和 [`popoverTargetAction`](/zh-CN/docs/Web/API/HTMLInputElement/popoverTargetAction) 属性。
   - [`HTMLElement`](/zh-CN/docs/Web/API/HTMLElement) 的 [`popover`](/zh-CN/docs/Web/API/HTMLElement/popover) 属性，[`hidePopover()`](/zh-CN/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/zh-CN/docs/Web/API/HTMLElement/showPopover) 和 [`togglePopover()`](/zh-CN/docs/Web/API/HTMLElement/togglePopover) 方法，[`beforetoggle`](/zh-CN/docs/Web/API/HTMLElement/beforetoggle_event) 和 [`toggle_event`](/zh-CN/docs/Web/API/HTMLElement/toggle_event) 事件（类型为 [`ToggleEvent`](/zh-CN/docs/Web/API/ToggleEvent)）。
 
   已支持以下用于弹出框的 CSS 伪类和元素：
-
   - [`:popover-open`](/zh-CN/docs/Web/CSS/:popover-open)
   - [`::backdrop`](/zh-CN/docs/Web/CSS/::backdrop) 已被扩展以支持弹出框
 
   已支持以下 HTML 全局属性：
-
   - [`popovertarget`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertarget)
   - [`popovertargetaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
@@ -51,7 +48,6 @@ l10n:
 - 现已支持 {{domxref("Element.ariaBrailleLabel")}} 和 {{domxref("Element.ariaBrailleRoleDescription")}}，它们分别反映了全局 ARIA HTML 属性 [`aria-braillelabel`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-braillelabel) 和 [`aria-brailleroledescription`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription)。（[Firefox bug 1861201](https://bugzil.la/1861201)）。
 
 - 添加了允许 Web 应用程序在画布临时丢失其 2D 上下文时进行优雅恢复的支持。这可能发生在画布使用 GPU 进行硬件加速而出现驱动程序崩溃的情况下。（[Firefox bug 1887729](https://bugzil.la/1887729)）。以下是有关丢失和恢复画布上下文的事件的一些额外细节：
-
   - 应用程序可以监听 [`contextlost`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/HTMLCanvasElement/contextrestored_event) 事件，这些事件分别在上下文丢失和恢复时于 [`HTMLCanvasElement`](/zh-CN/docs/Web/API/HTMLCanvasElement) 上触发，还可以使用 [`CanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/CanvasRenderingContext2D/isContextLost) 来检查上下文。
   - 在触发 `contentlost` 后，浏览器将会默认尝试恢复和重启丢失的上下文，但代码可以通过取消这一事件来阻止这一行为。
   - 可以通过相同方式监视离屏画布，但应该使用 [`OffScreenCanvas`](/zh-CN/docs/Web/API/OffscreenCanvas) 的 [`contextlost`](/zh-CN/docs/Web/API/OffscreenCanvas/contextlost_event) 和 [`contextrestored`](/zh-CN/docs/Web/API/OffscreenCanvas/contextrestored_event) 事件，以及 [`OffscreenCanvasRenderingContext2D.isContextLost()`](/zh-CN/docs/Web/API/OffscreenCanvasRenderingContext2D#上下文)。

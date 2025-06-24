@@ -31,9 +31,7 @@ forEach(function(currentValue, index, array) { /* … */ }, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 各要素に対して実行する関数で、3 つの引数を取ります。
-
     - `currentValue`
       - : 現在処理中の要素の値です。
     - `index` {{optional_inline}}

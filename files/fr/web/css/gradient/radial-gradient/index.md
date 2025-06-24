@@ -57,7 +57,6 @@ Un dégradé radial est défini en indiquant le centre du dégradé (là où ser
 - `<ending-shape>`
   - : La forme du contour du dégradé. Elle vaut soit `circle` (la forme du dégradé sera un cercle de rayon constant) ou `ellipse` (la forme est une ellipse alignée sur les axes). La valeur par défaut est `ellipse`.
 - `<size>`
-
   - : La taille du contour du dégradé. La valeur par défaut est `farthest-corner`. Cette taille peut être définie explicitement ou décrite par un mot-clé. Pour les définitions des mots-clés qui suivent, on considèrera que les bords de la boîte du dégradé s'étendent indéfiniment dans les deux directions (plutôt que d'être finies).
 
     Les dégradés circulaires et elliptiques prennent en charge les mots-clés suivants pour `<size>`&nbsp;:

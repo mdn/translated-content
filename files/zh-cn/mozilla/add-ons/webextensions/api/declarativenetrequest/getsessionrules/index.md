@@ -18,7 +18,6 @@ let sessionRules = await browser.declarativeNetRequest.getSessionRules();
 ### 参数
 
 - `filter` {{optional_inline}}
-
   - : 一个用于过滤返回的规则列表的对象。
     - `ruleIds` {{optional_inline}}
       - : 一个包含 `integer` 的数组。要返回的规则的 ID。

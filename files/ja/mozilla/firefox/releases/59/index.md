@@ -140,19 +140,16 @@ SMIL の `accessKey` 機能のサポートを廃止しました ([Firefox バグ
 ### WebExtensions
 
 - [Theme](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) の更新:
-
   - 新しいプロパティ: `colors.background_tab_text`, `colors.toolbar_field_border`
   - すべての色関連プロパティで、Chrome 形式の配列と CSS の色の値の両方をサポートしました。
 
 - 新しい [ブラウザー設定](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings):
-
   - [`contextMenuShowEvent`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent)
   - [`openBookmarksInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs)
   - [`openSearchResultsInNewTabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs)
   - [`proxyConfig`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings)
 
 - 新しい [`tabs`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs) の API:
-
   - [`tabs.captureTab()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/captureTab)
   - [`tabs.hide()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/hide)
   - [`tabs.show()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/show)
@@ -160,13 +157,11 @@ SMIL の `accessKey` 機能のサポートを廃止しました ([Firefox バグ
 - [`contextMenus`](/ja/docs/Archive/Add-ons/Legacy_Firefox_for_Android/API/NativeWindow/contextmenus) API で ["bookmark" コンテキスト](/ja/docs/Mozilla/Add-ons/WebExtensions/API/menus/ContextType) をサポートしました。
 - 新しい [`contentScripts`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/contentScripts) API で、ランタイムがコンテンツスクリプトを登録できます。
 - 新しい [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction), [`SidebarAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction) の API:
-
   - `browserAction/pageAction/sidebarAction.set*` 関数で、変更を元に戻すための `null` をサポートしました。
   - [`browserAction.isEnabled()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled), [`pageAction.isShown()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/isShown) , [`sidebarAction.isOpen()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/isOpen) 関数。
 
 - デフォルトでページアクションを表示するための、[`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) の新しいオプション。
 - `protocol_handers` の新しい値:
-
   - Secure Scuttlebutt 通信のための "ssb"
   - DATproject のための "dat"
   - IPFS のための "ipfs", "ipns", "dweb"

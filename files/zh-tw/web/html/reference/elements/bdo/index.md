@@ -42,9 +42,7 @@ bdo {
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `dir`
-
   - : 此元素內容中文本應該呈現的方向。可能的值有：
-
     - `ltr`：表示文本應該從左到右顯示。
     - `rtl`：表示文本應該從右到左顯示。
 

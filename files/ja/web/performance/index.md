@@ -115,7 +115,6 @@ HTML
 - [`<video>` 要素](/ja/docs/Web/HTML/Reference/Elements/video)
 - [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)
 - [`<img> srcset` 属性](/ja/docs/Web/HTML/Reference/Elements/img#attributes)
-
   - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
 
 - [`rel="preload"` によるコンテンツの事前読み込み](/ja/docs/Web/HTML/Reference/Attributes/rel/preload)
@@ -149,7 +148,6 @@ API
 - [リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing)
 - [ページ可視性](/ja/docs/Web/API/Page_Visibility_API)
 - [Background Tasks API の協調スケジューリング](/ja/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/ja/docs/Web/API/Window/requestIdleCallback)
 
 - [ビーコン API](/ja/docs/Web/API/Beacon_API)
@@ -176,7 +174,6 @@ API
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [ウェブワーカーの使用](/ja/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API)
 
 - [オフラインとバックグラウンド操作](/ja/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)

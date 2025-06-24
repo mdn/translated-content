@@ -14,14 +14,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ![](we-flow.png)
 
 - 主なフローは次の通り:
-
   - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
   - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
   - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
   - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
 
 - 追加のものは次の通り:
-
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` は、ブラウザーがナビゲーション用にタブやウィンドウを作成する必要がある場合 (例えば、ユーザーがリンクを新しいタブで開いたために)、`onBeforeNavigate` の前に発火します。
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} はページが [history API](http://diveintohtml5.info/history.html) を使ってブラウザーのロケーションバーに表示された URL を更新する場合に発火します。
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} はページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変更された場合に発火します。

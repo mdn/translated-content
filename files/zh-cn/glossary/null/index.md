@@ -23,7 +23,6 @@ console.log(typeof null); // "object"
 - JavaScript 全局对象：[`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)
 - 维基百科上的[空指针](https://zh.wikipedia.org/wiki/空指针)
 - **[MDN 术语表](/zh-CN/docs/Glossary)**
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("string")}}
   - {{Glossary("number")}}

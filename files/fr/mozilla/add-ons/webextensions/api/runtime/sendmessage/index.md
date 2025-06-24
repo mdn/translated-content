@@ -31,7 +31,6 @@ var sending = browser.runtime.sendMessage(
 ### Paramètres
 
 - `extensionId`{{optional_inline}}
-
   - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
 
     Si `extensionId` est omis, le message sera envoyé à votre propre extension.
@@ -39,9 +38,7 @@ var sending = browser.runtime.sendMessage(
 - `message`
   - : `any`. Un objet qui peut être structuré clone sérialisé.
 - `options`{{optional_inline}}
-
   - : `object`.
-
     - `includeTlsChannelId`{{optional_inline}}
       - : `boolean`. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.
     - `toProxyScript{{optional_inline}}`
@@ -51,9 +48,7 @@ En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. 
 
 - **Si un argument est donné**, c'est le message à envoyer, et le message sera envoyé en interne.
 - **Si deux arguments sont donnés :**
-
   - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
-
     1. Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
     2. null
     3. indéfini

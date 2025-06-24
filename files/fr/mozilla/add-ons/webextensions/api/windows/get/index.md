@@ -23,9 +23,7 @@ var getting = browser.windows.get(
 - `windowId`
   - : `integer`. L'ID de l'objet de fenêtre souhaité est retourné.
 - `getInfo`{{optional_inline}}
-
   - : `object`. Contient des options pour filtrer le type de fenêtre.
-
     - `populate`{{optional_inline}}
       - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` i le fichier manifeste de l'extension comprend la permission `"tabs"`.
     - `windowTypes`{{optional_inline}}

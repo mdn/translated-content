@@ -39,9 +39,7 @@ void gl.uniform4iv(emplacement, valeur);
 - emplacement
   - : Un objet {{domxref("WebGLUniformLocation")}} contenant l'emplacement de l'attribut uniform à modifier.
 - `valeur, v0, v1, v2, v3`
-
   - : La nouvelle valeur à utiliser pour la variable uniform. Types possibles :
-
     - Un {{jsxref("Number")}} flottant pour les valeurs flottantes (méthodes avec "f").
     - Une suite de nombres flottants (par exemple, un {{jsxref("Float32Array")}} ou un {{jsxref("Array")}} de nombres) pour les méthodes de vecteurs de flottants (méthodes avec "fv").
     - Un {{jsxref("Number")}} entier pour les valeurs entières (méthodes avec "i").

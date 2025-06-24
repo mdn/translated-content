@@ -31,7 +31,6 @@ El atributo `transform` exhibe una lista de definiciones de transformación que 
 - skewX(\<a>)
   - : This transform definition specifies a skew transformation along the x axis by `a` degrees. The operation corresponds to the matrix <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn></mtd><mtd><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX">\begin{pmatrix} 1 &#x26; \tan(a) &#x26; 0 \\ 0 &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
 - skewY(\<a>)
-
   - : This transform definition specifies a skew transformation along the y axis by `a` degrees. The operation corresponds to the matrix <math display="block"><semantics><mrow><mo>(</mo><mtable rowspacing="0.5ex"><mtr><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mo lspace="0em" rspace="0em">tan</mo><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mtd><mtd><mn>1</mn></mtd><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><annotation encoding="TeX"> \begin{pmatrix} 1 &#x26; 0 &#x26; 0 \\ \tan(a) &#x26; 1 &#x26; 0 \\ 0 &#x26; 0 &#x26; 1 \end{pmatrix}</annotation></semantics></math>
 
 ## Example

@@ -162,7 +162,6 @@ Estamos optando por usar o Heroku por vários motivos:
 - O Heroku tem um [nível gratuito](https://www.heroku.com/pricing) que é realmente gratuito (embora com algumas limitações).
 - Como PaaS, o Heroku cuida de grande parte da infraestrutura web para nós. Isso torna muito mais fácil começar, porque você não se preocupa com servidores, balanceadores de carga, proxies reversos ou qualquer outra infraestrutura web que o Heroku fornece para nós nos bastidores.
 - Embora tenha algumas limitações, elas não afetarão este aplicativo específico. Por exemplo:
-
   - O Heroku fornece apenas armazenamento de curta duração, portanto, os arquivos carregados pelo usuário não podem ser armazenados com segurança no próprio Heroku.
   - O nível gratuito suspenderá um aplicativo da web inativo se não houver solicitações dentro de um período de meia hora. O site pode levar vários segundos para responder quando for ativado.
   - O nível gratuito limita o tempo de execução do seu site a uma determinada quantidade de horas todos os meses (sem incluir o tempo em que o site fica "adormecido"). Isso é bom para um site de baixo uso/demonstração, mas não será adequado se 100% de tempo de atividade for necessário.
@@ -208,7 +207,6 @@ There are a lot of ways to work with git, but one of the easiest is to first set
 1. Visit <https://github.com/> and create an account.
 2. Once you are logged in, click the **+** link in the top toolbar and select **New repository**.
 3. Fill in all the fields on this form. While these are not compulsory, they are strongly recommended.
-
    - Enter a new repository name (e.g. _django_local_library_), and description (e.g. "Local Library website written in Django".
    - Choose **Python** in the _Add .gitignore_ selection list.
    - Choose your preferred license in the _Add license_ selection list.
@@ -652,7 +650,6 @@ The next step is to read our last few articles, and then complete the assessment
 ## See also
 
 - [Deploying Django](https://docs.djangoproject.com/en/2.1/howto/deployment/) (Django docs)
-
   - [Deployment checklist](https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/) (Django docs)
   - [Deploying static files](https://docs.djangoproject.com/en/2.1/howto/static-files/deployment/) (Django docs)
   - [How to deploy with WSGI](https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/) (Django docs)
@@ -660,7 +657,6 @@ The next step is to read our last few articles, and then complete the assessment
   - [How to use Django with Gunicorn](https://docs.djangoproject.com/en/2.1/howto/deployment/wsgi/gunicorn/) (Django docs)
 
 - Heroku
-
   - [Configuring Django apps for Heroku](https://devcenter.heroku.com/articles/django-app-configuration) (Heroku docs)
   - [Getting Started on Heroku with Django](https://devcenter.heroku.com/articles/getting-started-with-python#introduction) (Heroku docs)
   - [Django and Static Assets](https://devcenter.heroku.com/articles/django-assets) (Heroku docs)
@@ -674,7 +670,6 @@ The next step is to read our last few articles, and then complete the assessment
   - [Other Heroku Django docs](https://devcenter.heroku.com/search?q=django)
 
 - Digital Ocean
-
   - [How To Serve Django Applications with uWSGI and Nginx on Ubuntu 16.04](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-uwsgi-and-nginx-on-ubuntu-16-04)
   - [Other Digital Ocean Django community docs](https://www.digitalocean.com/community/tutorials?q=django)
 

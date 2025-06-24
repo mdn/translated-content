@@ -61,11 +61,8 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ### 值
 
 - `<string>`
-
   - : 可以指定一个 URL 或 SVG 形状的 ID 的字符串。
-
     - url
-
       - : 为相对地址、绝对地址的 URL，或指向所包含的 web 资源的指针，或数据 URL，可选择使用单引号或双引号。如果 URL 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
 
         ```css

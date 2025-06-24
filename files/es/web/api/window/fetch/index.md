@@ -26,16 +26,12 @@ Promise<Response> fetch(input[, init]);
 ### Parámetros
 
 - _input_
-
   - : Define el recurso que se quiere solicitar. Puede ser:
-
     - Un {{domxref("USVString")}} con la URL del recurso a solicitar. Algunos navegadores aceptan los esquemas `blob:` y `data:`.
     - Un objeto {{domxref("Request")}}.
 
 - _init_ {{optional_inline}}
-
   - : Objeto de opciones que contiene configuraciones para personalizar la solicitud. Estas opciones pueden ser:
-
     - `method`: El método de solicitud, p.ej., `GET`, `POST`.
     - `headers`: Cualquier cabecera que se quiera añadir a la solicitud, contenidas en un objeto {{domxref("Headers")}} o un objeto literal con valores {{domxref("ByteString")}}.
     - `body`: Cualquier cuerpo que se quiera añadir a la solicitud: puede ser un {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, u objeto {{domxref("USVString")}}. Nótese que las solicitudes con métodos `GET` o `HEAD` no pueden tener cuerpo.

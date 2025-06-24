@@ -27,7 +27,6 @@ _Нет изменений._
 - Удалён нестандартный метод {{jsxref("Number.toInteger()")}} ([Firefox bug 1022396](https://bugzil.la/1022396)).
 - Методы {{jsxref("Map.prototype.set()")}}, {{jsxref("WeakMap.prototype.set()")}} and {{jsxref("Set.prototype.add()")}} можно использовать последовательно, больше не возвращают `undefined` в место этого возвращают объект. ([Firefox bug 1031632](https://bugzil.la/1031632)).
 - Добавлена поддержка типа данных "Symbol" из стандарта ECMAScript 6 ([Firefox bug 645416](https://bugzil.la/645416)):
-
   - {{jsxref("Symbol")}}
   - {{jsxref("Symbol.for()")}}
   - {{jsxref("Symbol.keyFor()")}}

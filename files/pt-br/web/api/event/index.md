@@ -117,7 +117,6 @@ _Esta interface não herda nenhum método._
 - [Comparitivo dos Alvos de Eventos](/pt-BR/docs/Learn_web_development/Core/Scripting/Event_bubbling) (target vs currentTarget vs relatedTarget vs originalTarget)
 - [Criação e gatilho de eventos customizados](/pt-BR/docs/Web/Events/Creating_and_triggering_events)
 - Para desenvolvedores de extensões para o Firefox:
-
   - [Escutando eventos em extensões do Firefox](/pt-BR/docs/Listening_to_events_in_Firefox_extensions)
   - [Escutando eventos em todas as abas](/pt-BR/docs/Listening_to_events_on_all_tabs)
 

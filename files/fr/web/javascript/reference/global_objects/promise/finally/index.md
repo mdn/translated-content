@@ -35,7 +35,6 @@ La méthode `finally` est similaire à l'utilisation de la forme `.then(onFinall
 
 - Lorsqu'on crée une fonction en ligne, on peut ne la passer qu'une seule fois et éviter d'avoir à déclarer une variable ou à la déclarer à deux reprises.
 - Un _callback_ `finally` ne recevra pas d'argument car on ne peut pas savoir si la promesse a été tenue ou rompue. Cette fonction est précisément appelée lorsqu'on ne s'intéresse pas à la raison du rejet ou à la réussite de la promesse. Une telle valeur est donc superflue. Ainsi :
-
   - À la différence de `Promise.resolve(2).then(() => {}, () => {})` qui sera résolue avec la valeur {{jsxref("undefined")}}, `Promise.resolve(2).finally(() => {})` sera résolue avec la valeur `2`.
   - De même, à la différence de `Promise.reject(3).then(() => {}, () => {})` qui sera résolue avec la valeur `undefined`, `Promise.reject(3).finally(() => {})` sera rejetée avec `3`.
 

@@ -384,7 +384,6 @@ list 属性指定了一个 {{HTMLElement("datalist")}} 元素的 {{domxref("Elem
 - [`<input type="tel">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/tel)
 - [`<input type="url">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/url)
 - 属性：
-
   - [`list`](/zh-CN/docs/Web/HTML/Attributes/list)
   - [`minlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/minlength)
   - [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Attributes/maxlength)

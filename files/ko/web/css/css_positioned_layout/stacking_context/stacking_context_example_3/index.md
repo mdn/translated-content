@@ -25,11 +25,8 @@ original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_cont
 이 상황을 더 잘 이해하기 위해 쌓임 맥락 계층 구조를 그려보자.
 
 - 뿌리 엘리먼트 쌓임 맥락
-
   - LEVEL #1
-
     - LEVEL #2 (z-index: 1)
-
       - LEVEL #3
       - ...
       - LEVEL #3

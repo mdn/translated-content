@@ -14,34 +14,26 @@ l10n:
 要使用此 API，扩展必须在其 [manifest.json](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json) 文件中指定“cookies” [API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，以及针对希望访问 cookie 的任何站点的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。扩展可以读取或写入任何可以被与主机权限匹配的 URL 读取或写入的 cookie。例如：
 
 - `http://*.example.com/`
-
   - : 拥有此主机权限的扩展可以：
-
     - 读取 `www.example.com` 的任何路径下的非安全 cookie。
     - 在 `www.example.com` 的任何路径下写入安全或非安全 cookie。
 
     它*不能*：
-
     - 读取 `www.example.com` 的安全 cookie。
 
 - `http://www.example.com/`
-
   - : 拥有此主机权限的扩展可以：
-
     - 读取 `www.example.com` 的任何路径下的非安全 cookie。
     - 读取 `.example.com` 的任何路径下的非安全 cookie。
     - 在 `www.example.com` 的任何路径下写入安全或非安全 cookie。
     - 在 `.example.com` 的任何路径下写入安全或非安全 cookie。
 
     它*不能*：
-
     - 读取或写入 `foo.example.com` 的 cookie。
     - 读取或写入 `foo.www.example.com` 的 cookie。
 
 - `*://*.example.com/`
-
   - : 拥有此主机权限的扩展可以：
-
     - 读取或写入任何路径下 `www.example.com` 的安全或非安全 cookie。
 
 ## 跟踪保护

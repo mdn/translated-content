@@ -19,7 +19,6 @@ Python 是在 OSI 認可的開源許可證規範下開發的，使其能自由�
 - [AlphaCodingSkills Python 教學](https://www.alphacodingskills.com/python/python-tutorial.php)
 - MDN 的 [Django 網站框架 (Python)](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django)
 - [MDN 術語表](/zh-TW/docs/Glossary)
-
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("PHP")}}

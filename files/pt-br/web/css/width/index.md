@@ -59,9 +59,7 @@ width: unset;
 - `available` {{experimental_inline}}
   - : Do bloco contendo a largura menos a margin horizontal, borda ou preenchimento.
 - `fit-content` {{experimental_inline}}
-
   - : A largura:
-
     - do comprimento interno mínimo.
     - do menor comprimento interno preferível e da largura disponível.
 

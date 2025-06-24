@@ -11,7 +11,6 @@ La méthode la positionne le curseur de façon approprié, selon la direction in
 
 - Si aucun intervalle de clé n'est spécifié ou qu'il vaut {{jsxref("null")}}, l'intervalle résultant contiendra l'ensemble des enregistrements
 - L'évènement `success` est toujours déclenché :
-
   - Si un enregistrement est trouvé la propriété `result` de l'évènement contient le nouvel objet {{domxref("IDBCursor")}} et la valeur (`value`) de ce curseur est un clône de la valeur référencée
   - Si aucun enregistrement n'est trouvé la propriété `result` de l'évènement vaudra `null`.
 

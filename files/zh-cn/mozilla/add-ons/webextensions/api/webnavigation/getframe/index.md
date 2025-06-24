@@ -22,9 +22,7 @@ let gettingFrame = browser.webNavigation.getFrame(
 ### 参数
 
 - `details`
-
   - : `object`。要获取信息的框架的信息。
-
     - `tabId`
       - : `integer`。该框架所属的标签页 ID。
     - `processId` {{optional_inline}} {{deprecated_inline}}

@@ -37,7 +37,6 @@ Function(arg1, arg2, /* …, */ argN, functionBody)
 ### 引数
 
 - `arg1`, …, `argN` {{optional_inline}}
-
   - : 関数で仮引数名として使用される名前。それぞれ、JavaScript で有効な引数（プレーン[識別子](/ja/docs/Glossary/Identifier)、[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)、[分割](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)引数のいずれか、オプションで[既定](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)値付き）に対応する文字列、またはカンマで区切られたそのような文字列のリストでなければなりません。
 
     引数は関数式と同様に解釈できるため、空白やコメントも受け入れられます。例えば、`"x", "theValue = 42", "[a, b] /* 数値 */"`、または `"x, theValue = 42, [a, b] /* 数値 */"` です。（`"x, theValue = 42", "[a, b]"` も正しいですが、とても読みづらいです。）

@@ -37,7 +37,6 @@ _Наследует свойства от родителей {{domxref("EventTar
 - {{domxref("Node.nodePrincipal")}} {{Non-standard_inline()}}
   - : `nsIPrincipal` представляет основной узел.
 - {{domxref("Node.nodeType")}}{{readonlyInline}}
-
   - : Возвращает беззнаковое короткое число `(unsigned short`) представляющее тип узла. Возможные значения:
 
     | Имя                                             | Значение |

@@ -18,9 +18,7 @@ StylePropertyMapReadOnly.forEach(function callback(currentValue[, index[, array]
 ### 引数
 
 - `callback`
-
   - : それぞれの要素に対して呼び出す関数であり、 3 つの引数を取ります。
-
     - `currentValue`
       - : 処理しようとしている現在の要素の値です。
     - `index`{{optional_inline}}

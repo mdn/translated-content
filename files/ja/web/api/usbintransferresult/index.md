@@ -19,9 +19,7 @@ l10n:
 - {{domxref("USBInTransferResult.data")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : あれば、USB デバイスから受信したデータが格納された `DataView` オブジェクトを返します。
 - {{domxref("USBInTransferResult.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 転送要求の状態を返します。以下のいずれかです。
-
     - `"ok"` — 転送は成功しました。
     - `"stall"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。コントロールエンドポイントでのストールをクリアする必要はありません。バルクエンドポイントやインタラプトエンドポイントでのストールは、次の `transferIn()` の呼び出しの前に `clearHalt()` を呼び出してクリアする必要があります。
     - `"babble"` — デバイスは想定より多くのデータで応答しました。

@@ -18,7 +18,6 @@ l10n:
 ARIA の状態とプロパティには、4 つのカテゴリーがあります。
 
 1. ### ウィジェット属性
-
    - [`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
    - [`aria-checked`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
    - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
@@ -45,19 +44,16 @@ ARIA の状態とプロパティには、4 つのカテゴリーがあります�
    - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
 2. ### ライブリージョン属性
-
    - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
    - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
    - [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
    - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 
 3. ### ドラッグ＆ドロップ属性
-
    - [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 
 4. ### リレーションシップ属性
-
    - [`aria-activedescendant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
    - [`aria-colcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
    - [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)

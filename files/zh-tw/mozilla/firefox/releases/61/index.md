@@ -97,7 +97,6 @@ _無變動。_
 
 - 從未良好實作且已為標準所廢棄的 {{domxref("SVGViewElement")}}`.viewTarget` 屬性已經移除。（[Firefox bug 1455763](https://bugzil.la/1455763)）
 - 在標準規格中廢棄的下列屬性已經自 {{domxref("SVGSVGElement")}} 移除（[Firefox bug 1133172](https://bugzil.la/1133172)）：
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`

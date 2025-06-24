@@ -32,7 +32,6 @@ arr.copyWithin(cible, début, fin);
 ### Paramètres
 
 - `cible`
-
   - : Indice à partir duquel la séquence sera copiée. Si la valeur est négative, `cible` sera compté à partir de la fin du tableau.
 
     Si `cible` est supérieur ou égal à `arr.length`, rien ne sera copié. Si `cible` est positionné apès `début`, la séquence copiée sera réduite pour correspondre à `arr.length`.

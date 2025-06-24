@@ -25,9 +25,7 @@ let resolving = browser.dns.resolve(
 - `hostname`
   - : `string`。要解析的主机名。
 - `flags` {{optional_inline}}
-
   - : `string` 数组。用于修改主机名解析方式的标志。任何省略的标志默认值为 `false`。你可以传递零个或多个以下标志：
-
     - `"allow_name_collisions"`：允许通常被过滤掉的名称冲突结果。
     - `"bypass_cache"`：禁用内部 DNS 查询缓存。
     - `"canonical_name"`：将查询指定主机的规范名称。

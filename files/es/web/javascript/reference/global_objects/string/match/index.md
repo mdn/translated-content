@@ -27,7 +27,6 @@ match(regexp)
 ### Parámetros
 
 - `regexp`
-
   - : Un objeto de expresión regular o cualquier objeto que tenga un método [`Symbol.match`](/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match).
 
     Si `regexp` no es un objeto `RegExp` y no tiene un método `Symbol.match`, se convierte implícitamente en {{jsxref('RegExp')}} usando `new RegExp(regexp)`.

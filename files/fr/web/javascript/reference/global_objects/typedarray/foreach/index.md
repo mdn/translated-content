@@ -16,9 +16,7 @@ tableauTypé.forEach(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction à utiliser pour chaque élément du tableau typé. Elle prend trois arguments :
-
     - `valeurÉlément`
       - : La valeur de l'élément traité actuellement.
     - `indiceÉlément`

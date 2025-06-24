@@ -148,21 +148,17 @@ El contenido del proyecto consta de los siguientes archivos:
 - `.gitignore`: Le indica a Git cuales son los archivos y carpetas que debe ignorar del proyecto. Esto será de gran ayuda si decides incluir tu aplicación en un repositorio de git.
 - `rollup.config.js`: Svelte usa [rollup.js](https://rollupjs.org/) como un empaquetador de módulos. Este archivo de configuración le dice a _rollup_ cómo compilar y construir tu aplicación. Si prefieres utilizar [webpack](https://webpack.js.org/), en su lugar puedes crear tu proyecto con `npx degit sveltejs/template-webpack svelte-app`.
 - `scripts`: Contiene los _scripts_ de configuración requeridos. Actualmente debería contener únicamente `setupTypeScript.js`.
-
   - `setupTypeScript.js`: Este script configura el soporte de Typescript dentro de Svelte. Hablaremos más a detalle de este tema en el último artículo.
 
 - `src`: En este directorio se encuentra el código fuente de tu aplicación. Es decir, donde crearás la mayor parte de código.
-
   - `App.svelte`: Este es el componente principal de tu aplicación. De momento solo renderiza el mensaje 'Hello world'.
   - `main.js`: El punto de entrada a nuestra aplicación. Se encarga de instanciar el componente `App` y lo enlaza con el _body_ de tu página HTML.
 
 - `public`: Este directorio contiene todos los archivos que serán publicados en producción.
-
   - `favicon.png`: Este es el _favicon_ para tu aplicación. Actualmente es el logo de Svelte.
   - `index.html`: Esta es la página principal de tu aplicación. Inicialmente es simplemente una página HTML vacía que carga los paquetes de archivos CSS y JavaScript generados por Svelte.
   - `global.css`: Este archivo contiene los estilos globales. Es un archivo regular de CSS que será aplicado a toda tu aplicación.
   - `build`: Este directorio contiene el código fuente de JavaScript y CSS que fue generado.
-
     - `bundle.css`: El archivo CSS generado por Svelte a partir de los estilos definidos por cada componente.
     - `bundle.js`: El archivo de código Javascript compilado a partir de todo el código fuente de tu aplicación.
 
@@ -450,7 +446,6 @@ Para iniciar un REPL, abre tu navegador web y navega a <https://svelte.dev/repl>
 - La barra que se encuentra arriba del código te permite crear archivos `.svelte` y `.js` y reordenarlos. Para crear un archivo dentro de una carpeta, simplemente especifica el nombre completo de su dirección, de la siguiente manera: `components/MiComponente.svelte`. La carpeta será creada automáticamente.
 - Arriba de la barra se muestra el título del REPL. Haz click en él para editarlo.
 - Del lado derecho tienes tres pestañas:
-
   - La pestaña _Result_ muestra la salida de tu aplicación, y proporciona una consola en la parte inferior.
   - La pestaña _JS output_ te permite inspeccionar el código JavaScript generado por Svelte, así como configurar el compilador.
   - La pestaña de _CSS output_ muestra el código CSS generado por Svelte.

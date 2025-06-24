@@ -31,9 +31,7 @@ browser.tabs.onAttached.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。附加到新窗口的标签页的 ID。
     - `attachInfo`

@@ -170,7 +170,6 @@ function listTabs() {
 
 1. {{WebExtAPIRef("tabs.Tab")}} オブジェクトからの最初の 5 項目でループする。
 2. 各項目ごとに、文書のフラグメントのハイパーリンクを追加する。
-
    - リンクのラベル—つまり、そのテキスト—が、タブのタイトル (ない場合はその ID)を使って、セットされる
    - タブの ID を使ってリンクのアドレスがセットされる。
 
@@ -534,12 +533,10 @@ browser.pageAction.onClicked.addListener(toggleCSS);
 `toggleCSS()` gets the title of the `pageAction` and then takes the action described:
 
 - **For "Apply CSS":**
-
   - toggles the `pageAction` icon and title to the "remove" versions.
   - applies the CSS using {{WebExtAPIRef("tabs.insertCSS")}}.
 
 - **For "Remove CSS":**
-
   - toggles the `pageAction` icon and title to the "apply" versions.
   - removes the CSS using {{WebExtAPIRef("tabs.removeCSS")}}.
 

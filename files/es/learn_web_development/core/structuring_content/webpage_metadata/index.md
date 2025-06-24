@@ -67,7 +67,6 @@ Ya hemos visto el elemento {{htmlelement("title")}} en acción — se puede usar
 ### Aprendizaje activo: Análisis de un ejemplo sencillo
 
 1. Para comenzar este aprendizaje activo, te proponemos ir a nuestro repositorio de GitHub y descargues una copia de nuestra página [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html). Lo puedes hacer de las siguientes maneras:
-
    1. Copia y pega el código de la página en un archivo de texto nuevo en tu editor de código, luego guárdalo en un lugar conveniente.
    2. Presiona el botón "Raw" en la página de GitHub, lo cual hace que aparezca el código sin procesar (posiblemente en una nueva pestaña del navegador). A continuación, en el menú de tu navegador elige _Archivo → Guardar página como..._ y selecciona un lugar adecuado para guardar el archivo.
 

@@ -87,9 +87,7 @@ height: unset;
 - `available` {{experimental_inline}}
   - : La hauteur du bloc englobant à laquelle on a soustrait la marge verticale, la bordure verticale et le remplissage (_padding_) vertical.
 - `fit-content` {{experimental_inline}}
-
   - : La plus grande des valeurs entre :
-
     - La hauteur minimale intrinsèque.
     - Le minimum entre la hauteur intrinsèque préférrée et la hauteur disponible
 

@@ -29,7 +29,6 @@ open(method, url, async, user, password)
 - `url`
   - : 文字列または{{Glossary("stringifier", "文字列化")}}のあるその他のオブジェクト、例えば {{domxref("URL")}} オブジェクトで、リクエストの送信先となる URL を表します。
 - `async` {{optional_inline}}
-
   - : 任意の論理値の引数で、既定値は `true`です。操作が非同期的に行われるかどうかを示します。値が `false` の場合、 `send()` メソッドはレスポンスを受信するまで戻りません。 `true` の場合は、トランザクション完了の通知はイベントリスナーを使用して配信されます。 `multipart` 属性が `true` である場合は true で*なければならず*、さもなくば例外が発生します。
 
     > [!NOTE]

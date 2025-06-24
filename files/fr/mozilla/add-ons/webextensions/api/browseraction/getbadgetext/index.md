@@ -20,9 +20,7 @@ var gettingText = browser.browserAction.getBadgeText(
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `tabId`{{optional_inline}}
       - : `integer`. Spécifie l'onglet pour obtenir le texte du badge.
     - `windowId`{{optional_inline}}

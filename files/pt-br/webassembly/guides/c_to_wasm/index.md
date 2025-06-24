@@ -90,7 +90,6 @@ Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no co
    ```
 
    As opções que passamos são um pouco diferentes desta vez:
-
    - Nós especificamos `-o hello2.html`, o que significa que o compilador ainda produzirá o código de cola JavaScript e `.html`.
    - Também especificamos `--shell-file html_template/shell_minimal.html` — isso fornece o caminho para o modelo HTML que você deseja usar para criar o HTML pelo qual você executará seu exemplo.
 

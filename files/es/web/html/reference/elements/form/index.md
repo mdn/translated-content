@@ -25,14 +25,12 @@ Es posible usar las pseudo-clasess de CSS [`:valid`](/es/docs/Web/CSS/:valid) e 
 Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)
 
 - `accept` {{deprecated_inline}}
-
   - : Una lista separada por comas de los tipos de contenido que el servidor acepta.
 
     > [!NOTE]
     > Eeste atributo ha sido removido en HTML5 y no debe ser usado. En su lugar, usar el atributo **[accept](/es/docs/Web/HTML/Reference/Elements/input#attr-accept)** del elemento específico {{ HTMLElement("input") }}.
 
 - `accept-charset`
-
   - : Una lista de codificación de caracteres que el servidor acepta. La lista puede ser delimitada por espacios o comas. El navegador los usa en el orden en que cada uno son listados. Los valores por defecto es la cadena reservada "UNKNOWN", en tal caso la codificación corresponde a la codificación del documento conteniendo el elemento form.
 
     HTML 4: En versiones anteriores de HTML, las diferentes codificaciones de caracteres pueden ser delimitadas por espacios o comas. Este no es más el caso en HTML5, donde sólo los espacios son correctos.
@@ -40,9 +38,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 - `action`
   - : La URI de un programa que procesa la información enviada por medio del formulario. Este valor puede ser sobreescrito por un atributo [`formaction`](/es/docs/Web/HTML/Reference/Elements/button#formaction) en un {{ HTMLElement("button") }} o en el elemento{{ HTMLElement("input") }}.
 - `autocomplete`
-
   - : Indica cuales de los controles en este formulario puede tener sus valores automáticamente completados por el navegador. Esta configuración puede ser sobreescrita por un atributo `autocomplete` en un elemento que pertenezca al formulario:
-
     - `off`: El usuario debe ingresar explicitamente cada valor dentro de cada campo por cada uso, o el documento provee su propio método de autocompletado; el navegador no autocompleta las entradas.
     - `on`: El navegador puede completar automáticamente valores basados en lo que el usuario ha ingresado durante entradas previas al formulario.
 
@@ -50,10 +46,8 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
     > Si se establece `autocomplete` a un valor de `off` en un formulario porque el documento provee su propio auto-completado entonces también se debería establecer `autocomplete` al valor `off` para cada uno de los elementos de formulario `input` que el documento pueda autocompletar [Notas para Google Chrome](#notas_para_google_chrome).
 
 - `enctype`
-
   - : Cuando el valor del atributo `method` es post, este atributo es el [tipo MIME](http://en.wikipedia.org/wiki/Mime_type) del contenido que es usado para enviar el formulario al servidor.
     Los posibles valores son:
-
     - `application/x-www-form-urlencoded`: El valor por defecto si un atributo no está especificado.
     - `multipart/form-data`: Usar este valor si se está usando el elemento {{ HTMLElement("input") }} con el atributo `type` ajustado a "file".
     - `text/plain` (HTML5)
@@ -61,9 +55,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
     Este valor puede ser sobreescrito por un atributo[`formenctype`](/es/docs/Web/HTML/Reference/Elements/button#formenctype)en un {{ HTMLElement("button") }} o un elemento {{ HTMLElement("input") }}.
 
 - `method`
-
   - : El método [HTTP](https://www.w3.org/Protocols/rfc2616/rfc2616.html) que el navegador usa para enviar el formulario. Valores posibles son:
-
     - `post`: Corresponde al [método POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) HTTP ; los datos del formulario son incluidos en el cuerpo del formulario y son enviados al servidor.
     - `get`: Corresponde al [método GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) HTTP; los datos del formulario son adjuntados a la URI del atributo `action` , con un '?' como separador, y la URI resultante es enviada al servidor. Use este método cuando el formulario no tiene efectos secundarios y contiene solo caracteres ASCII.
 
@@ -74,9 +66,7 @@ Como cualquier otro elemento HTML, este elemento soporta [atributos globales](/e
 - `novalidate`
   - : Este atributo booleano indica que el formulario no es validado cuando es enviado. Si el atributo no existe [`formnovalidate`](/es/docs/Web/HTML/Reference/Elements/button#formnovalidate) en un {{ HTMLElement("button") }} o en un elemento {{ HTMLElement("input") }} que pertenece al formulario.
 - `target`
-
   - : Un nombre o keyword indicando donde mostrar la respuesta que es recibida después de enviar el formulario. En HTML 4, este es el nombre de, o una palabra clave, para un marco. En HTML5, es un nombre de, o palabra clave para, un contexto de navegación (por ejemplo, tab, window o marco en línea). Las siguientes palabras clave tienen significados especiales:
-
     - `_self`: Carga la respuesta dentro del mismo frame HTML 4 (o en HTML5, contexto de navegación) como el marco actual. Este valor es por defecto si el atributo no es especificado.
     - `_blank`: Carga la respuesta dentro de una nueva ventana sin nombre en HTML 4 o un contexto de navegación en HTML5.
     - `_parent`: Carga la respuesta en el marco padre del marco actual en HTML 4 o en el contexto de navegación padre del marco actual en HTML5. Si no hay marco padre, esta opción se comporta de la misma manera que \_self.

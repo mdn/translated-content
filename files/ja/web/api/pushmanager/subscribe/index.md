@@ -21,9 +21,7 @@ subscribe(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : オプションの設定パラメーターを含むオブジェクトです。以下のプロパティを指定することができます。
-
     - `userVisibleOnly`
       - : 論理値で、返されたプッシュサブスクリプションの効果が、ユーザーに表示するメッセージにのみ使われるかを示します。
     - `applicationServerKey`

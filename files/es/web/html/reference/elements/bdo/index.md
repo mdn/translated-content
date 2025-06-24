@@ -11,7 +11,6 @@ original_slug: Web/HTML/Element/bdo
 **bdo** Bi-Directional Overriding=Anulación de bidireccionalidad.
 
 - La dirección de escritura del texto está relacionada con el idioma y se declara con el atributo dir. Pero en ocasiones esto no es suficiente, entonces entra en juego el elemento [bdo](/es/docs/Web/HTML/Reference/Elements/bdo) (anulación del algoritmo bidireccional) que al anular el algoritmo permite un control total de la direccionalidad.
-
   - : **Sus etiquetas son**: \<bdo> y \</bdo> (ambas obligatorias).
 
     **Crea una caja**: En línea.

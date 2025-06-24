@@ -15,9 +15,7 @@ slug: Web/API/BarcodeDetector
 ## メソッド
 
 - {{domxref('BarcodeDetector.detect', 'detect()')}}
-
   - : {{jsxref('Promise')}} で、以下のプロパティを持つ `detectedBarcode` オブジェクトの配列で履行されます。
-
     - `boundingBox`: {{domxref('DOMRectReadOnly')}} で、画像内にある検出されたバーコードの範囲を表す矩形の寸法を返します。
     - `cornerPoints`: 検出されたバーコードの四隅の点の、画像に対する X および Y 座標で、左上から時計回りに算出されます。画像内の遠近感の歪みにより、正方形にならない場合があります。
     - `format`: 検出されたバーコードの形式。（形式の完全な一覧については{{domxref('Barcode Detection API', 'バーコード検出 API 概要ページ', '', 1)}}を参照してください。）

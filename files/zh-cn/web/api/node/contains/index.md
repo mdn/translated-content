@@ -19,7 +19,6 @@ contains(otherNode)
 ## 参数
 
 - `otherNode`
-
   - : 要测试的[节点](/zh-CN/docs/Web/API/Node)。
 
     > **备注：** `otherNode` 不是可选的，但是可以设置为 `null`。

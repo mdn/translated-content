@@ -71,7 +71,6 @@ console.log(foo); // 5
 - Después de encontrarla, evalúa la expresión, `foo` se reemplaza por 5 y el motor de JavaScript pasa ese valor a las funciones como argumento
 - Antes de ejecutar las declaraciones dentro del cuerpo de las funciones, **JavaScript toma una copia del argumento originalmente pasado** (que es un primitivo) y crea una copia local. Estas copias, que existen solo dentro del ámbito de las funciones, son accesibles a través de los identificadores que especificaste en las definiciones de las funciones (`num` para `addTwo`, `foo` para `addTwo_v2`)
 - Luego, se ejecutan las instrucciones de las funciones:
-
   - En la primera función, se creó una variable `num` local. ¡Estas aumentando su valor en 2, no el valor original de `foo`!
   - En la segunda función, se creó una variable `foo` local. ¡Esto incrementa su valor en 2, no el valor original (externo) de `foo`!, además, en esta situación, no se puede acceder directamente a la variable `foo` externa. Esto se debe al alcance léxico de JavaScript y al ensombrecimiento de variables resultante. El `foo` local oculta al `foo` externo. Para obtener más información, consulta {{JSxRef("Closures", "Cierres")}}. (Ten en cuenta que `window.foo` aún se podría usar para acceder a la variable `foo` externa).
 

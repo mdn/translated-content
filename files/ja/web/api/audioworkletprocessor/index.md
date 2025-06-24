@@ -45,7 +45,6 @@ _`AudioWorkletProcessor` インターフェイスはイベントに反応しま�
 
 1. 別のファイルを作ります。
 2. このファイルで以下を行います。
-
    1. `AudioWorkletProcessor` クラスを継承 ([「派生クラスの作成」の節](#%E6%B4%BE%E7%94%9F%E3%82%AF%E3%83%A9%E3%82%B9%E3%81%AE%E4%BD%9C%E6%88%90)を参照) し、その中で自身の {{domxref("AudioWorkletProcessor.process", "process()")}} メソッドを定義します。
    2. 作成した処理器を {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} メソッドで登録します。
 

@@ -25,7 +25,6 @@ slug: Web/CSS/::-webkit-slider-runnable-track
 
 - {{CSSxRef("::-webkit-slider-thumb")}}
 - 他のブラウザーで使われている類似の擬似要素:
-
   - {{CSSxRef("::-ms-track")}}
   - {{CSSxRef("::-moz-range-track")}}
 

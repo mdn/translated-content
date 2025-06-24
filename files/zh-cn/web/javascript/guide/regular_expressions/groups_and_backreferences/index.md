@@ -218,7 +218,6 @@ do {
 ## 参见
 
 - [正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)
-
   - [字符类](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)
   - [断言](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Assertions)
   - [量词](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Quantifiers)

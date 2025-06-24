@@ -21,9 +21,7 @@ new Response(body, options)
 ### 引数
 
 - `body` {{optional_inline}}
-
   - : レスポンスの本体を定義するオブジェクトです。これは `null` （既定値）か、以下のうちのいずれかです。
-
     - {{domxref("Blob")}}
     - {{jsxref("ArrayBuffer")}}
     - {{jsxref("TypedArray")}}
@@ -35,9 +33,7 @@ new Response(body, options)
     - 文字列リテラル
 
 - `options` {{optional_inline}}
-
   - : レスポンスに適用したオプションで、カスタム設定したい場合の可能なオプションは、次のとおりです。:
-
     - `status`
       - : このレスポンスのステータスコードです。
         既定値は `200` です。

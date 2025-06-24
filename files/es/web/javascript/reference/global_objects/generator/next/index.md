@@ -23,7 +23,6 @@ gen.next(valor)
 Un {{jsxref("Object")}} con dos propiedades:
 
 - `done` (booleano)
-
   - Es `verdadero` si el iterador ya llegó al final de la secuencia. En este caso `valor` define opcionalmente el _valor de retorno_ del iterador.
   - Es `falso` si el iterador puede dar un siguiente valor en la secuencia. Es equivalente a no definir la propiedad `done`.
 

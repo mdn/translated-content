@@ -73,7 +73,6 @@ A entrada `submit` será exibida como um botão (por padrão) que pode ser press
 
 - `action`: O recurso/URL para onde os dados devem ser enviados para processamento quando o formulário é enviado. Se isso não estiver configurado (ou configurado para uma string vazia), o formulário será enviado de volta para URL da página atual.
 - `method`: O método HTTP method utilizado para enviar os dados: _post_ or _get_.
-
   - O método `POST` deve sempre ser utilizado se os dados forem resultar em uma alteração no banco de dados do servidor, pois é mais resistente a ataques de falsificação de solicitação entre sites.
   - O método `GET` deve ser utilizado somente para formulários que não alteram dados de usuário (um formulário de busca, por exemplo). Ele é recomendado para quando você quiser poder favoritar ou compartilhar a URL.
 
@@ -92,16 +91,13 @@ Um fluxograma do processo de como o Django lida com solicitações de formulári
 Com base no diagrama acima, as principais coisas que o manuseio de formulários do Django faz são:
 
 1. Exiba o formulário padrão na primeira vez em que for solicitado pelo usuário
-
    - O formulário pode conter campos em branco (por exemplo, se você estiver criando um novo registro) ou pode ser preenchido previamente com valores iniciais (por exemplo, se você estiver alterando um registro ou tiver valores iniciais padrão úteis).
    - O formulário é referido como _unbound_ neste momento, porque não está associado a nenhum dado inserido pelo usuário (embora possa ter valores iniciais).
 
 2. Receba dados de uma solicitação de envio e vincule-os ao formulário.
-
    - Vincular dados ao formulário significa que os dados inseridos pelo usuário e quaisquer erros estão disponíveis quando precisamos exibir novamente o formulário.
 
 3. Limpe e valide os dados.
-
    - A limpeza dos dados executa a higienização da entrada (por exemplo, removendo caracteres inválidos que podem ser usados para enviar conteúdo malicioso ao servidor) e os converte em tipos consistentes de Python.
    - A validação verifica se os valores são apropriados para o campo (por exemplo, estão no período certo, não são muito curtos ou muito longos etc.)
 

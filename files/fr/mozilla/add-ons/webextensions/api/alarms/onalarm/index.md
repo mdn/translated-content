@@ -29,9 +29,7 @@ Cet évènement possède trois méthodes :
 ### Paramètres
 
 - `listener`
-
   - : La fonction qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
-
     - `alarm`
       - : {{WebExtAPIRef('alarms.Alarm')}}. L'alarme qui s'est déclenchée. La propriété `Alarm.name` pourra être utilisée afin de déterminer l'alarme qui s'est déclenchée.
 

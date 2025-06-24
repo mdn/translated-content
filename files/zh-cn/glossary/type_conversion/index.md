@@ -15,6 +15,5 @@ l10n:
 
 - 维基百科上的[类型转换](https://zh.wikipedia.org/wiki/类型转换)
 - 相关术语：
-
   - {{Glossary("Type", "类型")}}
   - {{Glossary("Type coercion", "强制类型转换")}}

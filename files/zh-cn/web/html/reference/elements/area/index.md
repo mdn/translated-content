@@ -63,9 +63,7 @@ img {
 - `alt`
   - : 在不显示图像的浏览器上显示的替代文本字符串。文本内容应当以一种表达方式呈现给用户，使其能获得与图像显示时相同的选择体验。只有在使用了 [`href`](#href) 属性时，此属性才是必需的。
 - `coords`
-
   - : `coords` 属性用于具体描述 `<area>` 元素中 [`shape`](#shape) 属性指定区域的大小、形状和位置。如果 `shape` 属性设置为 `default`，则不得使用此属性。
-
     - `rect`：该值为 `x1,y1,x2,y2`，表示矩形的左上角和右下角的坐标。例如，在 `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` 中，坐标分别是 `0,0` 和 `253,27`，对应矩形的左上角和右下角。
     - `circle`：该值为 `x,y,radius`，表示圆的中心坐标和半径。例如：`<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
     - `poly`：该值为 `x1,y1,x2,y2,..,xn,yn`，表示多边形各边的坐标。如果第一个和最后一个坐标对不相同，浏览器会自动将最后一个坐标对添加进去以闭合多边形。
@@ -79,7 +77,6 @@ img {
 - `ping`
   - : 包含以空格分隔的 URL 列表，当点击超链接时，浏览器会（在后台）向这些 URL 发送带有 `PING` 内容的 HTTP {{HTTPMethod("POST")}} 请求。通常用于追踪目的。
 - `referrerpolicy`
-
   - : 表示在获取资源时应使用哪个引用来源（referrer）的字符串：
     - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`：不会将 {{HTTPHeader("Referer")}} 标头发送到不使用 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的{{Glossary("origin", "源")}}。
@@ -95,9 +92,7 @@ img {
 - `shape`
   - : 该属性用于指定图像热点区域的形状，可选值包括 `rect`，表示矩形区域；`circle`，表示圆形区域；`poly`，表示多边形区域；和 `default` 表示除已定义形状之外的整个区域。
 - `target`
-
   - : 一个关键字或作者自定义的名称，用于指定用于显示所链接资源的{{Glossary("browsing context", "浏览上下文")}}；其中一些关键字具有特殊含义：
-
     - `_self`（默认）：在当前浏览上下文中显示资源。
     - `_blank`：在新的、未命名的浏览上下文中显示资源。
     - `_parent`：如果当前页面位于一个框架内，则在其父级浏览上下文中显示该资源；如果没有父级，则效果等同于 `_self`。

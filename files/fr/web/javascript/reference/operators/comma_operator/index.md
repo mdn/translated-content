@@ -54,7 +54,7 @@ Dans le code suivant, `a` est défini avec la valeur de `b = 3` (qui est 3) et l
 
 ```js
 var a, b, c;
-(a = b = 3), (c = 4); // Renvoie 4 dans la console
+((a = b = 3), (c = 4)); // Renvoie 4 dans la console
 console.log(a); // 3
 ```
 
@@ -74,7 +74,7 @@ Un autre exemple consiste à effectuer un certain traitement sur la variable pui
 function maFonction() {
   var x = 0;
 
-  return (x += 1), x; // ce qui revient à renvoyer ++x
+  return ((x += 1), x); // ce qui revient à renvoyer ++x
 }
 ```
 

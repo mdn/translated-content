@@ -33,13 +33,9 @@ browser.commands.onChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当命令的快捷键更改时调用的函数。该函数接收以下参数：
-
     - `changeInfo`
-
       - : `object`。包含命令名称、新的激活快捷键和旧的快捷键的对象。
-
         - `name`
           - : `string`。命令的名称。这与在 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中命令给出的名称相匹配。
         - `newShortcut`

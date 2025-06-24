@@ -20,7 +20,6 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
 ¿Cómo la levantas? Existen tres distintas maneras:
 
 - _**Teclado:** <kbd>Ctrl</kbd>+<kbd>Mayús</kbd>+<kbd>I</kbd>_, excepto en
-
   - **Internet Explorer y Edge:**
 
     <kbd>F12</kbd>
@@ -28,7 +27,6 @@ Las herramientas para desarrolladores (`devtools`) viven dentro de tu navegador 
   - **macOS:** _<kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>I</kbd>_
 
 - _**Barra de menú:**_
-
   - **Firefox**: Menú ![Devtools](2014-01-10-13-08-08-f52b8c.png)
 
     _➤ Desarrollador web ➤ Alternar herramientas,_ o _➤ Herramientas_
@@ -98,7 +96,6 @@ Notarás una serie de pestañas en las que se puede hacer clic en la parte super
 
 - _Calculado_: Muestra los estilos calculados para el elemento seleccionado actualmente (los valores finales normalizados que aplica el navegador).
 - _Diseño_: En Firefox, esta área incluye dos secciones:
-
   - _Modelo de caja_: representa visualmente el modelo de caja del elemento actual, por lo que de un vistazo puedes identificar qué relleno, borde y margen se le aplica, y qué tan grande es su contenido.
   - _Cuadrícula_: Si la página que estás inspeccionando utiliza Grid CSS, esta sección te permite ver los detalles de la cuadrícula.
 

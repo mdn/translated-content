@@ -344,7 +344,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - [`autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete)
   - : **Cet attribut n'est pas booléen&nbsp;!** Il prend comme valeur une chaîne de caractères dont les valeurs sont séparées par des espaces qui décrivent, le cas échéant, le type de fonctionnalité à fournir pour l'autocomplétion du champ. Généralement, l'implémentation de l'autocomplétion repose sur les valeurs précédemment saisies dans le même champ, mais le navigateur peut implémenter une forme d'autocomplétion plus avancée (par exemple intégrer la liste des contacts connue de l'appareil pour autocompléter les champs `email`). Voir [la page sur cet attribut](/fr/docs/Web/HTML/Attributes/autocomplete#valeurs) pour les valeurs autorisées. Cet attribut est valide pour les types de champ `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, et `password`. Il n'a pas d'effet pour les types de champs qui ne renvoient pas de données numériques ou text et est donc valide pour tous les types de champs à l'exception de `checkbox`, `radio`, `file`, ou des types de bouton. Voir [la page de l'attribut HTML `autocomplete`](/fr/docs/Web/HTML/Attributes/autocomplete) pour plus d'informations, y compris sur la sécurité des mots de passe et sur la façon dont `autocomplete` s'applique légèrement différemment pour les champs de type `hidden`.
 - `autofocus`
-
   - : Un attribut booléen qui, s'il est présent, indique que le contrôle devrait automatiquement recevoir le focus lorsque le chargement de la page est terminé (ou lorsque l'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) qui contient ce contrôle a été affiché).
 
     > [!NOTE]
@@ -362,7 +361,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `capture`
   - : Cet attribut, introduit avec la spécification HTML <i lang="en">Media Capture</i>, est uniquement valide pour le type `file`. Il définit quel appareil (micro, caméra, appareil photo) qui devrait être utilisé pour capturer un nouveau fichier à uploader. Voir la page détaillée sur [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file).
 - `checked`
-
   - : Cet attribut booléen est valide pour les types `radio` et `checkbox`. Lorsqu'il est présent sur un contrôle de type `radio`, il indique que ce bouton radio sera celui sélectionné parmi le groupe de boutons radio qui partagent le même nom. Lorsqu'il est présent sur un contrôle de type `checkbox`, il indique que la case est cochée par défaut au chargement de la page. Attention, il _n'indique pas_ que la case est actuellement cochée, si l'état de la case à cocher change, l'attribut ne reflète pas ce changement (seul l'attribut IDL [`HTMLInputElement.checked`](/fr/docs/Web/API/HTMLInputElement) est mis à jour).
 
     > [!NOTE]
@@ -371,7 +369,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > Ainsi, si une case à cocher dont l'attribut `name` vaut `fruit` et dont l'attribut `value` vaut `cerise`, si la case est cochée, les données envoyées avec le formulaire contiendront `fruit=cerise`. Si la case à cocher n'est pas active, elle ne fera pas partie des données envoyées. Pour les cases à cocher et les boutons radio, la valeur par défaut de l'attribut `value` est `on`.
 
 - `dirname`
-
   - : Cet attribut, uniquement valide pour les types `text` et `search`, permet d'envoyer également le sens d'écriture de la valeur dans le formulaire. Lorsqu'il est présent, le contrôle du formulaire enverra deux paires nom/valeur&nbsp;: la première composée de [`name`](#name) et [`value`](#value), et la seconde composée de la valeur de `dirname` comme nom et de `ltr` ou `rtl` comme valeur, indiquée par le navigateur.
 
     ```html
@@ -388,7 +385,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Lorsque le formulaire précédent est envoyé, on aura l'envoi de deux paires de clé/valeur `name`/`value` d'une part avec `fruit=cerise` et `dirname`/sens d'écriture d'autre part avec `fruit.dir=ltr`.
 
 - `disabled`
-
   - : Un attribut booléen qui, lorsqu'il est présent, indique qu'il n'est pas possible d'interagir avec le champ. Les champs désactivés sont généralement affichés avec une couleur plus sombre ou une autre forme d'indication pour signifier que le champ n'est pas utilisable.
 
     Plus précisément, les champs désactivés ne reçoivent pas les évènements [`click`](/fr/docs/Web/API/Element/click_event) et ne sont pas envoyés avec le formulaire.
@@ -397,7 +393,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > Bien que cela ne soit pas nécessaire selon la spécification, par défaut, Firefox [fera persister l'état désactivé obtenu dynamiquement](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) pour un champ `<input>` même après des rechargements de la page. C'est l'attribut [`autocomplete`](#autocomplete) qui contrôle cette fonctionnalité.
 
 - `form`
-
   - : Une chaîne de caractères qui indique l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel le contrôle est associé (on parle de son **formulaire propriétaire**). La valeur de la chaîne de caractères, si elle est présente, doit correspondre à la valeur d'un identifiant (l'attribut [`id`](#id)) d'un élément `<form>` du même document. Si cet attribut n'est pas défini, l'élément `<input>` est associé au formulaire qui le contient le plus proche, s'il existe.
 
     L'attribut `form` permet ainsi de placer un champ n'importe où dans le document tout en l'associant à un formulaire du document situé autre part.
@@ -422,7 +417,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `inputmode`
   - : Un attribut universel, valide pour tous les éléments, qui fournit une indication au navigateur quant au type de clavier virtuel à utiliser pour l'édition de l'élément ou de son contenu. Les valeurs possibles sont `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, et `search`.
 - `list`
-
   - : La valeur fournie à l'attribut `list` doit être l'identifiant (l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes/id)) d'un élément [`<datalist>`](/fr/docs/Web/HTML/Element/datalist) situé dans le même document. L'élément `<datalist>` fournit alors une liste de valeurs prédéfinies qui peuvent être suggérées pour la saisie dans le champ. Toute valeur de cette liste qui n'est pas compatible avec l'attribut [`type`](#type) ne sera pas incluse dans les suggestions. Les valeurs ainsi fournies sont des suggestions et pas des contraintes, une personne pourra tout à fait choisir parmi cette liste ou fournir une valeur différente.
 
     Cet attribut est valide pour les champs de type `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, et `color`.
@@ -434,19 +428,16 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Voir également [la page de référence pour l'élément `<datalist>`](/fr/docs/Web/HTML/Element/datalist).
 
 - `max`
-
   - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la plus grande valeur possible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément dépasse la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `max` n'est pas un nombre, l'élément n'a pas de valeur maximale.
 
     Il existe un cas particulier pour les types de données périodiques (comme les dates ou les heures), où la valeur de `max` peut être inférieure à celle de `min`, pour avoir par exemple un intervalle de temps entre 10 heures du soir et 4 heures du matin.
 
 - `maxlength`
-
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre maximal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif. Si aucune valeur de `maxlength` n'est indiquée ou qu'une valeur invalide est fournie, le champ n'a pas de longueur maximale. La valeur de cet attribut doit être supérieure ou égale à celle de `minlength`.
 
     Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) si longueur du texte saisi est supérieure à `maxlength` comme nombre de codets UTF-16. Par défaut, les navigateurs empêchent de saisir plus de caractères que ce qui est permis par l'attribut `maxlength`. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
 - `min`
-
   - : Cet attribut est valide pour les types `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`, il définit la valeur la plus faible de l'intervalle des valeurs autorisées. Si la valeur saisie dans l'élément est inférieure à la valeur de cet attribut, l'élément échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation). Si la valeur de l'attribut `min` n'est pas un nombre, l'élément n'a pas de valeur minimale.
 
     Cette valeur doit être inférieure ou égale à la valeur fournie par l'attribut `max`. Si l'attribut `min` est présent mais sans valeur ou avec une valeur invalide, aucune contrainte de minimum n'est appliquée. Si l'attribut `min` est valide et que la valeur saisie dans le contrôle est inférieure à celle de cet attribut, la validation des contraintes empêchera l'envoi du formulaire. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
@@ -454,7 +445,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Il existe un cas particulier pour les types de données périodiques (comme les dates ou les heures), où la valeur de `max` peut être inférieure à celle de `min`, pour avoir par exemple un intervalle de temps entre 10 heures du soir et 4 heures du matin.
 
 - `minlength`
-
   - : Cet attribut est valide pour les types `text`, `search`, `url`, `tel`, `email`, et `password`, il définit le nombre minimal de caractères (exprimé en nombre de codets UTF-16) qu'il est possible de saisir dans le champ. La valeur de cet attribut doit être un entier positif inférieur ou égal à celle de `maxlength`. Si cet attribut est absent ou qu'une valeur invalide est indiquée, le champ n'aura pas de longueur minimale.
 
     Le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) si longueur du texte saisi est inférieure à `minlength` comme nombre de codets UTF-16. Voir [la validation côté client](#validation_côté_client) pour plus d'information.
@@ -462,13 +452,11 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `multiple`
   - : Un attribut booléen qui, lorsqu'il est présent, permet de saisir plusieurs adresses électroniques séparées par des virgules ou de sélectionner plusieurs fichiers si le contrôle est de type `file`. Voir les page détaillées sur [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) et [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email).
 - `name`
-
   - : Une chaîne de caractères qui fourni le nom associé au contrôle. Le nom est envoyé avec la valeur du contrôle lors de l'envoi du formulaire.
 
     Cet attribut n'est pas strictement obligatoire mais devrait être utilisé dans la grande majorité des cas. Si un champ n'a pas d'attribut `name` ou que celui-ci est vide, la valeur du champ n'est pas envoyée avec le formulaire (à l'instar des contrôles désactivés, des boutons radio ou cases décochés, et des boutons de réinitialisation).
 
     Il existe deux cas spéciaux&nbsp;:
-
     - `_charset_`&nbsp;: Si cette valeur est utilisée comme nom pour un élément `<input>` de type [`hidden`](/fr/docs/Web/HTML/Element/input/hidden), la valeur du champ est automatiquement renseignée par [l'agent utilisateur](/fr/docs/Glossary/User_agent) et porte l'encodage de caractères utilisé pour l'envoi du formulaire.
     - `isindex`&nbsp;: Pour des raisons historiques, le nom [`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) n'est pas autorisé.
 
@@ -495,7 +483,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     > On évitera de donner aux éléments de formulaire un nom qui correspond à une propriété native du DOM. Cela surchargerait la propriété ou la méthode native pour pointer vers le champ correspondant.
 
 - `pattern`
-
   - : Valie pour les champs de type `text`, `search`, `url`, `tel`, `email`, cet attribut est une expression rationnelle que la valeur du champ doit respecter afin de [valider les contraintes](/fr/docs/Web/HTML/Constraint_validation). Cette valeur doit être une expression rationnelle JavaScript valide (voir [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp)) telle que documentée dans [le guide sur les expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Le marqueur `'u'` est implicitement appliqué à la compilation de l'expression et le motif est donc traité comme une séquence de codets Unicode et non ASCII. Il ne faut pas encadrer le motif de barres obliques.
 
     Si l'attribut `pattern` est présent mais sans valeur ou que celle-ci est valide, aucune expression rationnelle n'est appliquée et l'attribut est ignoré. Si la valeur de `pattern` est valide et que la valeur du champ ne respecte pas le motif, le champ échouera à [la validation des contraintes](/fr/docs/Web/HTML/Constraint_validation) et empêchera l'envoi du formulaire.
@@ -506,20 +493,16 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
     Voir [la validation côté client](#validation_côté_client) pour plus d'information.
 
 - `placeholder`
-
   - : Valide pour les champs de type `text`, `search`, `url`, `tel`, `email`, `password`, et `number`, cet attribut est une chaîne de caractères qui fournit une brève indication quant au type d'information attendu dans le champ. Sa valeur devrait être un mot ou une courte phrase qui indique le type de données attendu plutôt qu'une explication ou une consigne. Le texte de cet attribut _ne doit pas_ inclure de retour chariot ou de saut de ligne. Ainsi, si un champ est destiné à la saisie d'un prénom et que le libellé est «&nbsp;Prénom&nbsp;», une valeur appropriée pour cet attribut pourra être `"ex. Mustafa"`.
 
     > [!NOTE]
     > Sur le plan sémantique, l'attribut `placeholder` n'est pas aussi utile que d'autres méthodes pour expliquer le formulaire. Il peut aussi causer certains problèmes inattendus avec le contenu. Voir [les libellés](#libellés) pour plus d'informations.
 
 - `popovertarget`
-
   - : Transforme un élément `<input type="button">` en un contrôleur de <i lang="en">popover</i>. Il prend comme valeur l'`id` de l'élément <i lang="en">popover</i> à contrôler. Voir la page de [l'API Popover](/fr/docs/Web/API/Popover_API) pour plus d'informations.
 
 - `popovertargetaction`
-
   - : Définit l'action à accomplir sur l'élément <i lang="en">popover</i> contrôlé par l'élément `<input type="button">`. Les valeurs possibles sont&nbsp;:
-
     - `"hide"`
       - : Le bouton va masquer un <i lang="en">popover</i> affiché. Si vous essayez de masquer un <i lang="en">popover</i> déjà masqué, aucune action ne sera effectuée.
     - `"show"`
@@ -528,13 +511,11 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
       - : Le bouton va basculer un <i lang="en">popover</i> entre les états affiché et masqué. Si le <i lang="en">popover</i> est masqué, il sera affiché&nbsp;; si le <i lang="en">popover</i> est affiché, il sera masqué. Si `popovertargetaction` est omis, `"toggle"` est l'action par défaut qui sera effectuée par le bouton de contrôle.
 
 - `readonly`
-
   - : Un attribut booléen qui, lorsqu'il est présent, indique qu'il ne devrait pas être possible d'éditer la valeur du champ. Cet attribut est pris en charge par les types de contrôle `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, et `password`.
 
     Voir [l'attribut HTML `readonly`](/fr/docs/Web/HTML/Attributes/readonly) pour plus d'informations.
 
 - `required`
-
   - : Un attribut booléen qui, lorsqu'il est présent, indique qu'une valeur doit être saisie avant que le formulaire puisse être envoyé. Cet attribut est pris en charge pour les types de contrôle `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, et `file`.
 
     Voir [la validation côté client](#validation_côté_client) et [l'attribut HTML `required`](/fr/docs/Web/HTML/Attributes/required) pour plus d'informations.
@@ -544,11 +525,9 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `src`
   - : Cet attribut est uniquement valide pour le type `image` et indique l'URL du fichier de l'image à afficher sur le bouton. Voir [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) pour plus d'informations.
 - `step`
-
   - : Cet attribut est valide pour les contrôles de type numériques et temporels (`date`, `month`, `week`, `time`, `datetime-local`, `number`, et `range`). L'attribut [`step`](/fr/docs/Web/HTML/Attributes/step) est un nombre qui définit la granularité de la valeur.
 
     S'il n'est pas explicitement inclus&nbsp;:
-
     - Pour les types `number` et `range`, sa valeur par défaut sera 1.
     - Pour les types temporels, la valeur par défaut de `step` dépend du type. Voir les pages individuelles pour plus de détails&nbsp;: [`date`](/fr/docs/Web/HTML/Element/input/date#step), [`datetime-local`](/fr/docs/Web/HTML/Element/input/datetime-local#step), [`month`](/fr/docs/Web/HTML/Element/input/month#step), [`time`](/fr/docs/Web/HTML/Element/input/time#step), et [`week`](/fr/docs/Web/HTML/Element/input/week#step).
 
@@ -568,7 +547,6 @@ Certains attributs non-standard supplémentaires sont listés après les descrip
 - `title`
   - : Un attribut universel, valide pour tous les éléments, y compris tous les types de `<input>`. Sa valeur est un texte fournissant des informations à propos de l'élément auquel il appartient. Une telle information est généralement (mais pas nécessairement) affichée sous la forme d'une bulle d'information. `title` ne devrait pas être utilisé comme méthode principale pour expliquer le rôle d'un contrôle de formulaire. Il faut plutôt utiliser l'élément [`<label>`](/fr/docs/Web/HTML/Element/label) avec un attribut `for` dont la valeur correspond à la valeur de l'attribut [`id`](#id) du champ de formulaire. Voir [la section sur les libellés](#libellés) ci-après.
 - `type`
-
   - : Une chaîne de caractères qui indique le type de contrôle à afficher. On utilisera par exemple la valeur `checkbox` pour afficher une case à cocher. Si cet attribut est absent (ou qu'une valeur inconnue est utilisée), ce sera un champ de type `text` qui sera utilisé, permettant de saisir un texte dans le contrôle de formulaire.
 
     Les valeurs autorisées pour cet attribut sont listées dans [la section sur les types de champ](#les_différents_types_de_champs_input) ci-avant.
@@ -629,7 +607,6 @@ Les attributs qui suivent ne sont pas standard et sont disponibles dans certains
     - `off`
       - : La correction automatique et les substitutions de texte sont désactivées.
 - `incremental` {{non-standard_inline}}
-
   - : Cet attribut booléen est une extension de WebKit et Blink (présent donc dans les navigateurs Safari, Opera, Chrome, etc.) qui indique, s'il est présent, que le champ doit être traité comme un champ de recherche dynamique. Lorsque la personne édite la valeur du champ, l'agent utilisateur envoie des évènements [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) à l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) qui représente le champ de recherche. Cela permet de gérer, via du code, la mise à jour des résultats de recherche en temps réel lors de l'édition.
 
     Si `incremental` n'est pas indiqué, l'évènement [`search`](/fr/docs/Web/API/HTMLInputElement/search_event) est uniquement envoyé lorsque la personne initie explicitement une recherche, c'est-à-dire en appuyant sur la touche <kbd>Entrée</kbd> ou <kbd>Retour</kbd> lors de l'édition du champ.

@@ -95,7 +95,6 @@ l10n:
 ## 参见
 
 - 可用于 `<head>` 内部的元素：
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

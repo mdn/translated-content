@@ -74,7 +74,6 @@ Para utilizar o Express, você terá que instalar o Nodejs e o [NPM](https://doc
 Instalar o Node e o NPM no Windows ou no macOS é uma tarefa rápida e simples. Siga os seguintes passos:
 
 1. Baixar o instalador:
-
    1. Vá para <https://nodejs.org/en/>
    2. Selecione o botão de download da versão LTS, que é a recomendada para a maioria dos usuários.
 

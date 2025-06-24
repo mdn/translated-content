@@ -370,7 +370,6 @@ function handleFiles() {
 1. 创建一个无序列表（{{HTMLElement("ul")}}）元素。
 2. 通过调用列表的 {{DOMxRef("Node.appendChild()")}} 方法来将新的列表元素插入到 {{HTMLElement("div")}} 块。
 3. 遍历 `files` 代表的文件集合 {{DOMxRef("FileList")}} 中的每个 {{DOMxRef("File")}}：
-
    1. 创建一个新的列表项（{{HTMLElement("li")}}）元素并插入到列表中。
    2. 创建一个新的图片（{{HTMLElement("img")}}）元素。
    3. 设置图片的源为一个新的指代文件的对象 URL，使用 {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} 来创建 blob URL。

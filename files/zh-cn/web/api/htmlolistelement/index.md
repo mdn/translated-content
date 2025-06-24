@@ -20,9 +20,7 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLOListElement.start")}}
   - : 一个 `long` 值，反映 [`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 并定义列表第一个元素的开始序号的值。
 - {{domxref("HTMLOListElement.type")}}
-
   - : 一个字符串，反映 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#type) 并定义要用于显示的标记种类，它可以具有以下的值：
-
     - `'1'` 意味着使用十进制数字：`1`、`2`、`3`、`4`、`5`、…
     - `'a'` 意味着使用小写拉丁字母：`a`、`b`、`c`、`d`、`e`、…
     - `'A'` 意味着使用大写拉丁字母：`A`、`B`、`C`、`D`、`E`、…

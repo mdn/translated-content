@@ -44,7 +44,6 @@ l10n:
 ## 指南
 
 - [使用视图过渡 API](/zh-CN/docs/Web/API/View_Transition_API/Using)
-
   - : 解释如何创建视图过渡和自定义过渡动画，包括操纵活动的视图过渡。
 
 ## 相关概念
@@ -54,7 +53,6 @@ l10n:
 - {{domxref("Document.visibilityState")}}
 
 - [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)模块
-
   - {{cssxref("animation")}}
   - {{cssxref("@keyframes")}}
   - {{domxref("CSSKeyframesRule")}}
@@ -62,7 +60,6 @@ l10n:
   - [Web 动画 API](/zh-CN/docs/Web/API/Web_Animations_API)
 
 - [CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms)模块
-
   - {{cssxref("transform")}}
   - {{cssxref("transform-function")}}
 

@@ -50,7 +50,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 ## Voir aussi
 
 - Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
-
   - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb)
   - [`::-moz-range-track`](/fr/docs/Web/CSS/::-moz-range-track)
 

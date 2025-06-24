@@ -540,9 +540,7 @@ Cette page fournit une «&nbsp;antisèche&nbsp;» sur l'ensemble des fonctionnal
 - NomPropriétéUnicodeBinaire
   - : Le nom d'une [propriété binaire Unicode](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties). Par exemple [`ASCII`](https://unicode.org/reports/tr18/#General_Category_Property), [`Alpha`](https://unicode.org/reports/tr44/#Alphabetic), `Math`, [`Diacritic`](https://unicode.org/reports/tr44/#Diacritic), [`Emoji`](https://unicode.org/reports/tr51/#Emoji_Properties), [`Hex_Digit`](https://unicode.org/reports/tr44/#Hex_Digit), `Math`, [`White_space`](https://unicode.org/reports/tr44/#White_Space), etc. Voir [la liste des propriétés dans les données Unicode](https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt) pour plus d'informations.
 - NomPropriétéUnicode
-
   - : Le nom d'une propriété [non-binaire](https://tc39.es/ecma262/multipage/text-processing.html#table-nonbinary-unicode-properties)&nbsp;:
-
     - [General_Category](https://unicode.org/reports/tr18/#General_Category_Property) (`gc`)
     - [Script](https://unicode.org/reports/tr24/#Script) (`sc`)
     - [Script_Extensions](https://unicode.org/reports/tr24/#Script_Extensions) (`scx`)

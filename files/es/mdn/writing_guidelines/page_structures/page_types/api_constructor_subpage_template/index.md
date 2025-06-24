@@ -42,7 +42,6 @@ l10n:
 > - **status**
 >   - : Incluir claves de estado de tecnología apropiadas: [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**deprecated**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **non-standard** (si no está en una pista de estándar).
 > - **browser-compat**
->
 >   - : Reemplace el valor de marcador de posición `ruta.hacia.caracteristica.NombreDelConstructor` con la cadena de consulta para el constructor en el [repositorio de datos de compatibilidad del navegador](https://github.com/mdn/browser-compat-data).
 >     La cadena se utiliza automáticamente para rellenar las secciones de compatibilidad y especificaciones (reemplazando los macros `\{{Compat}}` y `\{{Specifications}}`).
 >

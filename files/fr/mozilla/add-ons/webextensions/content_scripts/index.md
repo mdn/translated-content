@@ -312,7 +312,6 @@ Le script d'arrière plan qui correspond ·
 
 - Écoute les tentatives de connexion depuis le script de contenu.
 - Quand il reçoit une tentative de connexion&nbsp;:
-
   - Enregistre le port dans une variable nommée `portFromCS`
   - Envoie un message au script de contenu en utilisant le port
   - Commence à écouter les messages reçus sur le port et les enregistre.

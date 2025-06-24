@@ -51,9 +51,7 @@ Transactions can fail for a fixed number of reasons, all of which (except the us
 ### Event handlers
 
 - {{domxref("IDBTransaction.onabort")}} {{readonlyInline}}
-
   - : The event handler for the `abort` event, fired when the transaction is aborted. This can happen due to:
-
     - bad requests, e.g. trying to add() the same key twice, or put() with the same index key with a uniqueness constraint and there is no error handler on the request to call preventDefault() on the event,
     - an explicit abort() call from script
     - uncaught exception in request's success/error handler,

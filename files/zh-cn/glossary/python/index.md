@@ -21,7 +21,6 @@ Python 是根据 OSI 批准的开源许可证开发的，使其免费使用和�
 - [AlphaCodingSkills Python 教程](https://www.alphacodingskills.com/python/python-tutorial.php)
 - MDN 上的 [Django Web 框架 (Python)](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django)
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("Java")}}
   - {{Glossary("JavaScript")}}
   - {{Glossary("PHP")}}

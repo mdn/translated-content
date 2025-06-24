@@ -70,9 +70,7 @@ border-left-width: unset;
 ### 数值
 
 - `<br-width>`
-
   - : 定义边框的宽度，或者作为显性非负的长度值 {{cssxref("&lt;length&gt;")}} 或者是关键字。如果他是一个关键字，它必须是下列值的一种：
-
     - `thin` 一个细边框
     - `medium` 一个中等边框
     - `thick` 一个粗边框

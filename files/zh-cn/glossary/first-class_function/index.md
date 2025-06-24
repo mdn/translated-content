@@ -64,7 +64,6 @@ function sayHello() {
 
 - 维基百科上的[头等函数](https://zh.wikipedia.org/wiki/头等函数)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{glossary("Callback function", "回调函数")}}
   - {{glossary("Function", "函数")}}
   - {{glossary("Variable", "变量")}}

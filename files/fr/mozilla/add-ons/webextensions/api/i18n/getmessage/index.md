@@ -19,9 +19,7 @@ browser.i18n.getMessage(
 ### Paramètres
 
 - `messageName`
-
   - : `string`. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :
-
     - Firefox renvoie "" et enregistre une erreur.
     - Chrome renvoie "" et n'enregistre pas d'erreur.
 

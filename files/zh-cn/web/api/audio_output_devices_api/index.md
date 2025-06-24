@@ -44,12 +44,10 @@ l10n:
 - 所有方法和属性只能在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中调用。
 
 - {{domxref("MediaDevices.selectAudioOutput()")}} 授予对所选设备用作音频输出的用户权限：
-
   - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的限制。
   - 需要[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)。用户必须与页面或 UI 元素交互，才能调用此方法。
 
 - {{domxref("HTMLMediaElement.setSinkId()")}} 将允许的 ID 设置为音频输出：
-
   - 访问可能受 [`speaker-selection`](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) HTTP [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的限制。
   - 需要用户权限来设置非默认设备 ID。
     - 这可以通过在由 `MediaDevices.selectAudioOutput()` 启动的提示中选择来获得。

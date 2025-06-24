@@ -10,7 +10,6 @@ slug: Glossary/Lossless_compression
 一方、{{glossary("Lossy compression", "非可逆圧縮")}}は元のファイルから一部のデータを犠牲にすることで厳密ではない近似値を使用しており、元に戻すことができない圧縮方法です。
 
 1. 関連用語:
-
    1. {{glossary("GZIP")}}
    2. {{glossary("Brotli")}}
    3. {{glossary("PNG")}}

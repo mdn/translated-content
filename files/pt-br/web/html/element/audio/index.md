@@ -38,9 +38,7 @@ Como todos os elementos HTML, este elemento suporta os [global attributes](/pt-B
 - `played`
   - : Um objeto {{ domxref("TimeRanges") }}indicando que todo o áudio foi reproduzido.
 - `preload`
-
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
-
     - none: indica que o usuário não necessitará consultar o áudio ou que o servidor quer minimizar seu tráfego; em outros termos indica que o áudio não deve ser pré-carregado;
     - metadata: indica que embora o usuário não necessitará consultar o áudio, pegar os meta-dados (ex: comprimento) é interessante;
     - auto: indica que o usuário necessita ter prioridade; em outros termos isso significa que, se necessário, o áudio inteiro pode ser baixado, mesmo que não seja esperado a execução;

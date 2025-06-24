@@ -30,19 +30,15 @@ CSS スタイルには、グローバルスコープと、{{Glossary("shadow tre
 ## ガイド
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
-
   - : 再利用可能なウェブコンポーネント（他のコードから機能をカプセル化したカスタム要素）を作成するために使用するさまざまな技術を紹介します。
 
 - [シャドウ DOM の使用](/ja/docs/Web/API/Web_components/Using_shadow_DOM)
-
   - : 要素へのシャドウ DOM の適用、シャドウ DOM ツリーへの追加、スタイル設定など、シャドウ DOM の基礎を記載します。
 
 - [テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)
-
   - : {{htmlelement("template")}} と {{htmlelement("slot")}} 要素を用いて再利用可能な HTML 構造を定義し、ウェブコンポーネントの内部でその構造を使用します。
 
 - [カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)
-
   - : 機能をカプセル化するカスタム要素を作成するために使用する JavaScript API、Custom Elements API の紹介です。
 
 ## 関連概念

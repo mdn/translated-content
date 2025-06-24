@@ -18,5 +18,4 @@ l10n:
 - [RFC 1939](https://datatracker.ietf.org/doc/html/rfc1939)（POP3 的规范）
 - [RFC 2449](https://datatracker.ietf.org/doc/html/rfc2449)（POP3 拓展机制的规范）
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("IMAP")}}

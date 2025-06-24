@@ -664,6 +664,5 @@ clipPathSelect.addEventListener("change", (evt) => {
 - CSS properties: {{cssxref("mask")}}, {{cssxref("filter")}}
 - [Applying SVG effects to HTML content](/ko/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
 - SVG attributes:
-
   - {{SVGAttr("clip-path")}}
   - {{SVGAttr("clip-rule")}}

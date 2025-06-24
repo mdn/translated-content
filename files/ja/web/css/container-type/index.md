@@ -39,22 +39,18 @@ container-type: unset;
 `container-type` プロパティは、以下のリスト内の 1 つの値、または 2 つの値（そのうちの 1 つは `scroll-state` で、もう 1 つは `inline-size` または `size`）を指定できます。言い換えれば、要素は、サイズクエリーコンテナー、スクロール状態クエリーコンテナー、その両方、またはどちらでもないものとして設定できます。
 
 - `inline-size`
-
   - : コンテナーの[インライン軸](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)上のサイズクエリー用のクエリーコンテナーを確立します。
     要素にレイアウト、スタイル、インラインサイズ抑制を適用します。
 
     インラインサイズ抑制が要素に適用されます。要素のインラインサイズは、子要素を無視して[単独で計算](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ抑制)することができます （[CSS コンテナーの使用](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)を参照してください）。
 
 - `normal`
-
   - : この要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、[コンテナースタイルクエリー](/ja/docs/Web/CSS/@container#コンテナースタイルクエリー)のクエリーコンテナーであることに変わりはありません。
 
 - `scroll-state`
-
   - : コンテナーのスクロール状態クエリー用のクエリコンテナーを設定します。この場合、要素のサイズは単独で計算されず、抑制は適用されません。
 
 - `size`
-
   - : [インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)の両方の寸法で コンテナーサイズクエリーのためのクエリー コンテナーを確立します。
     コンテナーにレイアウト抑制、スタイル抑制、サイズ抑制を適用します。
 

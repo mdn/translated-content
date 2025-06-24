@@ -74,11 +74,9 @@ HTML は既定の表示スタイルに基づくのではなく、入力される
 <!---->
 
 - 関連用語:
-
   - {{Glossary("SEO")}}
 
 - HTML におけるセマンティック要素の一部
-
   - {{htmlelement("article")}}
   - {{htmlelement("aside")}}
   - {{htmlelement("details")}}

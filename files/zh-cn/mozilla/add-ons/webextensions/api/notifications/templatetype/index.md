@@ -16,7 +16,6 @@ l10n:
 该类型的取值是字符串。可能的取值包括：
 
 - `"basic"`：通知包括：
-
   - 标题（`NotificationOptions.title`）
   - 消息（`NotificationOptions.message`）
   - 图标（`NotificationOptions.iconUrl`）{{optional_inline}}
@@ -24,15 +23,12 @@ l10n:
   - 最多两个按钮（`NotificationOptions.buttons`）{{optional_inline}}
 
 - `"image"`：包括 `"basic"` 中的所有内容，以及：
-
   - 图像（`NotificationOptions.imageUrl`）
 
 - `"list"`：包括 `"basic"` 中的所有内容，以及：
-
   - 项目列表（`NotificationOptions.items`）
 
 - `"progress"`：包括 `"basic"` 中的所有内容，以及：
-
   - 进度条（`NotificationOptions.progress`）
 
 目前 Firefox 仅支持“basic”。

@@ -41,9 +41,7 @@ var executing = browser.tabs.executeScript(
 - `tabId` {{optional_inline}}
   - : `integer`. L'ID de l'onglet dans lequel exécuter le script. Par défaut, l'onglet actif de la fenêtre en cours.
 - `details`
-
   - : Un objet décrivant le script à exécuter. Il contient les propriétés suivantes&nbsp;:
-
     - `allFrames` {{optional_inline}}
       - : `boolean`. Si `true`, le code sera injecté dans toutes les cadres de la page courante. Si `true` et `frameId` est défini, alors il y aura une erreur, frameId et allFrames sont mutuellement exclusifs. Si c'est `false`, le code n'est injecté que dans le cadre supérieur. La valeur par défaut est `false`.
     - `code` {{optional_inline}}

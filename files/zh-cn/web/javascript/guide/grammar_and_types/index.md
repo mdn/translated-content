@@ -242,7 +242,6 @@ console.log(MY_ARRAY); // ['HTML', 'CSS', 'JAVASCRIPT'];
 最新的 ECMAScript 标准定义了 8 种数据类型：
 
 - 七种{{Glossary("Primitive", "基本")}}数据类型：
-
   1. {{Glossary("Boolean")}}。`true` 和 `false`。
   2. {{Glossary("null")}}。一个表示空值的特殊关键字。（因为 JavaScript 是区分大小写的，所以 `null` 和 `Null`、`NULL` 或其他变体是不一样的。）
   3. {{Glossary("undefined")}}。一个未定义值的顶级属性。

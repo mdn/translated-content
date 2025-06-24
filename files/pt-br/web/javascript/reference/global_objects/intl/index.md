@@ -67,13 +67,11 @@ One property is supported by all language sensitive constructors and functions: 
 
 - Introduction: [The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - Constructors
-
   - {{jsxref("Collator", "Intl.Collator")}}
   - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
   - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
 - Methods
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

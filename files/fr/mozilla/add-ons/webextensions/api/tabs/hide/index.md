@@ -33,7 +33,6 @@ var hiding = browser.tabs.hide(
 ### Paramètres
 
 - `tabIds`
-
   - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à masquer.
 
     Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez `[1, 3]`, et `1` identifie l'onglet actif, alors seulement `3` seront cachés.

@@ -285,7 +285,6 @@ Ici nous utilisons en ligne 4 la fonction {{domxref("Window.prompt()", "Window.p
    ```
 
 3. Si vous avez une variable numérique que vous souhaitez convertir en chaîne sans autre modification, ou une variable numérique que vous voulez convertir en chaîne sans autre modification, vous pouvez utiliser les constructions suivantes&nbsp;:
-
    - L'objet {{jsxref("Number")}} convertit tout ce qui lui est passé en nombre, si c'est possible. Essayez&nbsp;:
 
      ```js

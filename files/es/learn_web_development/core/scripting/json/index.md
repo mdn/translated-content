@@ -175,7 +175,6 @@ Para obtener el JSON se utilizará un API llamado {{domxref("XMLHttpRequest")}} 
    ```
 
    Esto requiere al menos dos parámetros — Existen otros parámetros opcionales disponibles. Sólo se requieren los dos obligatorios para este ejemplo:
-
    - El método HTTP a usar cuando se hace una solicitud en red. En este caso `GET` es adecuado, dado que sólo se estan recuperando algunos datos simples.
    - La URL a la que se realiza la solicitud — esta es la URL del archivo que se almacenó antes.
 

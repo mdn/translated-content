@@ -82,7 +82,6 @@ box-shadow: unset;
 La propriété `box-shadow` peut être définie grâce :
 
 - À deux, trois ou quatre valeurs de longueur ({{cssxref("&lt;length&gt;")}}) :
-
   - Avec deux valeurs, celles-ci sont respectivement considérées comme les coordonnées de décalage de l'ombre : [`<offset-x>` et `<offset-y>`](#offset)
   - Si une troisième valeur est fournie, celle-ci correspondra au rayon du flou : [`<blur-radius>`](#blur)
   - Si une quatrième valeur est fournie, celle-ci correspondra au rayon d'étalement : [`<spread-radius>`](#spread).

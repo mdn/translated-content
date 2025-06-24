@@ -49,7 +49,6 @@ span {
 ## 같이 보기
 
 - CSS 주요 개념
-
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
@@ -60,7 +59,6 @@ span {
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
-
     - [초깃값](/ko/docs/Web/CSS/initial_value)
     - [계산값](/ko/docs/Web/CSS/computed_value)
     - [결정값](/ko/docs/Web/CSS/resolved_value)

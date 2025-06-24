@@ -20,11 +20,9 @@ let querying = browser.tabs.query(queryInfo)
 ### 参数
 
 - `queryInfo`
-
   - : `object`。`query()` 函数将仅获取其属性与此处包含的属性相匹配的标签页。
 
     请参阅 {{WebExtAPIRef("tabs.Tab")}} 文档以了解有关这些属性的详细信息。
-
     - `active` {{optional_inline}}
       - : `boolean`。标签页是否在窗口中处于活动状态。
     - `attention` {{optional_inline}}

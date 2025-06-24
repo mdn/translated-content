@@ -136,7 +136,6 @@ python3 -V
 Vous pouvez facilement installer Python 3 (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/):
 
 1. Téléchargez l'installeur requis :
-
    1. Allez sur <https://www.python.org/downloads/>
    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 
@@ -160,7 +159,6 @@ pip3 list
 Windows n'inclut pas Python par défaut, mais vous pouvez facilement l'installer (ainsi que l'outil _pip3_) sur [python.org](https://www.python.org/)&nbsp;:
 
 1. Téléchargez l'installeur requis :
-
    1. Allez sur <https://www.python.org/downloads/>
    2. Sélectionnez le bouton **Download Python 3.7.2** (le numéro de version mineure peut varier).
 

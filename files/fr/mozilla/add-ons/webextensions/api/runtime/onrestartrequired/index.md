@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `fonction`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
-
     - `raison`
       - : Une valeur {{WebExtAPIRef('runtime.OnRestartRequiredReason')}} — La raison pour laquelle l'événemtn est envoyé.
 

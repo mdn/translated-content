@@ -23,10 +23,8 @@ focus(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : フォーカス処理の制御の側面のためのオプションのオブジェクト。
     このオブジェクトには、次のプロパティが含まれる場合があります。
-
     - `preventScroll` {{optional_inline}}
       - : 論理値で、ブラウザーが文書をスクロールして、新しくフォーカスされた要素を表示するかどうかを示します。`preventScroll` の値が `false`（既定値）の場合、ブラウザーは要素をフォーカスした後、その要素をスクロールして表示します。`preventScroll` が `true` に設定されている場合、スクロールしません。
     - `focusVisible` {{optional_inline}} {{experimental_inline}}

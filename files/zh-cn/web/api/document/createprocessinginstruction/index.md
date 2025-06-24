@@ -30,9 +30,7 @@ createProcessingInstruction(target, data)
 ### 异常
 
 - `InvalidCharacterError` {{domxref("DOMException")}}
-
   - : 如果满足以下任意条件，则抛出该异常：
-
     - [`target`](#target) 值不是有效的 [XML 名称](https://www.w3.org/TR/REC-xml/#dt-name)；例如，以数字、连字符或句号开头，或包含字母数字字符、下划线、连字符或句号以外的字符。
     - _闭合处理指令序列_（`?>`）是 [`data`](#data) 值的一部分。
 

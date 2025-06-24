@@ -28,7 +28,6 @@ process(inputs, outputs, parameters)
 ### 引数
 
 - `inputs`
-
   - : ノードに接続されている _入力_ の配列です。この配列のそれぞれの要素は _チャンネル_ の配列です。それぞれの _チャンネル_ は 128 個のサンプルが入った {{jsxref("Float32Array")}} です。たとえば、`inputs[n][m][i]` は `n` 番目の入力の `m` 番目のチャンネルの `i` 番目のサンプルにアクセスします。
 
     それぞれのサンプルの値は `[-1 .. 1]` の範囲です。
@@ -40,7 +39,6 @@ process(inputs, outputs, parameters)
 - `outputs`
   - : _出力_ の配列で、引数 `inputs` と似た構造です。`process()` メソッドの実行時に値を入れられることを意図しています。各出力チャンネルはゼロで初期化されます。すなわち、出力の配列を変更しない場合は処理器は無音を出力します。
 - `parameters`
-
   - : 文字列のキーと {{jsxref("Float32Array")}} の値を持つオブジェクトです。{{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} ゲッターで定義した独自の {{domxref("AudioParam")}} それぞれについて、`name` がこのオブジェクトのキーとなり、値が {{jsxref("Float32Array")}} となります。配列に格納する値は、スケジュールされた自動化イベントを考慮して計算されます。
 
     パラメーターの自動化レートが [`"a-rate"`](/ja/docs/Web/API/AudioParam#a-rate) の場合は、配列には 128 個の値が格納され、現在の音声ブロックのそれぞれのフレームに値が 1 個ずつ対応します。現在のブロックが表す時間中に自動化が行われていない場合は、同じ値を 128 個格納するかわりに、ブロック全体で変わらない 1 個の値が格納されることがあります。

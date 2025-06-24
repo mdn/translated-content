@@ -393,7 +393,6 @@ Esto fue lo que sucedió: se almacena una referencia a tu elemento {{htmlelement
 
 1. El código recupera el valor del atributo `src` de la imagen.
 2. El código usa una condicional para comprobar si el valor `src` es igual a la ruta de la imagen original:
-
    1. Si es así, el código cambia el valor de `src` a la ruta de la segunda imagen, forzando a que se cargue la otra imagen en el elemento {{htmlelement("img")}}.
    2. Si no es así (significa que ya fue modificada), se cambiará el valor de `src` nuevamente a la ruta de la imagen original, regresando a como era en un principio.
 

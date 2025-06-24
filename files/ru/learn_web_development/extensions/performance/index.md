@@ -39,7 +39,6 @@ This topic contains the following guides. The following is a suggested order for
 - [Multimedia: images](/ru/docs/Learn/Performance/Multimedia)
   - : The lowest hanging fruit of web performance is often media optimization. Serving different media files based on each user agent's capability, size, and pixel density is possible. In this article we discuss the impact images have on performance, and the methods to reduce the number of bytes sent per image.
 - [Multimedia: video](/ru/docs/Learn/Performance/video)
-
   - : The lowest hanging fruit of web performance is often media optimization. In this article we discuss the impact video content has on performance, and cover tips like removing audio tracks from background videos can improve performance.
 
 - [JavaScript performance best practices](/ru/docs/Learn/Performance/JavaScript)

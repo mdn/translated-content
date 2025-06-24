@@ -26,9 +26,7 @@ typedarray.map(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction qui renvoie l'élément à placer dans le nouveau tableau typé. Cette fonction utilise trois arguments :
-
     - `valeurCourante`
       - : La valeur de l'élément du tableau typé courant, celui traité par la fonction.
     - `indice`

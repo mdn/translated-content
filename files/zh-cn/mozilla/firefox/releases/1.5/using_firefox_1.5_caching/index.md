@@ -14,7 +14,6 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - 页面使用 `unload` 或者 `beforeunload` 处理程序;
 - 页面设置 "cache-control: no-store".
 - 页面是 HTTPS 同时页面至少有一个以下设置：
-
   - "Cache-Control: no-cache"
   - "Pragma: no-cache"
   - 使用 "Expires: 0" 或者 "Expires" 设置相对于“Date”header 值的过去日期值 (除非指定 "Cache-Control: max-age=");

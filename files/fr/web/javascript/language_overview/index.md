@@ -38,7 +38,6 @@ On aura également [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Object
 - [`Boolean`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [`Symbol`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (apparu avec la sixième édition d'ECMAScript, ES2015)
 - [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
   - [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
   - [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array)
   - [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date)

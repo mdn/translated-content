@@ -23,9 +23,7 @@ Trailer: header-names
 ## 指令
 
 - `header-names`
-
   - : 出现在分块信息挂载部分的消息首部。以下首部字段**不允许**出现：
-
     - 用于信息分帧的首部 (例如{{HTTPHeader("Transfer-Encoding")}} 和 {{HTTPHeader("Content-Length")}}),
     - 用于路由用途的首部 (例如 {{HTTPHeader("Host")}})，
     - 请求修饰首部 (例如控制类和条件类的，如{{HTTPHeader("Cache-Control")}}，{{HTTPHeader("Max-Forwards")}}，或者 {{HTTPHeader("TE")}})，

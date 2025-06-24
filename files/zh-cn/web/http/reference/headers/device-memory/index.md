@@ -72,7 +72,6 @@ Device-Memory: 1
 - {{DOMxRef("Navigator.deviceMemory")}}
 - {{DOMxRef("WorkerNavigator.deviceMemory")}}
 - 设备客户端提示
-
   - {{HTTPHeader("Content-DPR")}}
   - {{HTTPHeader("DPR")}}
   - {{HTTPHeader("Viewport-Width")}}

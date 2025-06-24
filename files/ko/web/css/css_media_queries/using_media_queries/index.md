@@ -27,7 +27,6 @@ l10n:
   미디어 유형은 `not`이나 `only` 논리연산자를 사용할 때를 제외하면 선택사항이며 지정하지 않으면 `all`을 사용합니다.
 
 - [미디어 특성](/ko/docs/Web/CSS/@media#media_features) 은 {{glossary("user agent", "사용자 에이전트")}}, 출력 장치, 환경 등의 특징을 나타냅니다.
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}

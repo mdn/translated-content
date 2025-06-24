@@ -47,9 +47,7 @@ l10n:
 ### 値
 
 - `related_applications`
-
   - : オブジェクトの配列で、それぞれがウェブアプリに関連するプラットフォーム専用のネイティブアプリケーションを表します。各オブジェクトには、 `platform` プロパティと、 `url` または `id` （またはその両方）の少なくとも 1 つを記載する必要があります。
-
     - `platform`
       - : アプリケーションが得られるプラットフォームを識別する文字列。
         例えば、`amazon` (Amazon App Store)、`play` (Google Play Store)、`windows` (Windows Store) などがあります。

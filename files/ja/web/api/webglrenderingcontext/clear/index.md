@@ -20,9 +20,7 @@ void gl.clear(mask);
 ### 引数
 
 - `mask`
-
   - : 消去されるバッファーを示す {{domxref("GLbitfield")}} のビット論理和マスクです。以下の値を取ることができます。
-
     - `gl.COLOR_BUFFER_BIT`
     - `gl.DEPTH_BUFFER_BIT`
     - `gl.STENCIL_BUFFER_BIT`

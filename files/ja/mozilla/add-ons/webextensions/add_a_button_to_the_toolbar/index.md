@@ -200,7 +200,6 @@ button/
 - [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) マニフェストキー
 - [`browserAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) API
 - ブラウザーアクションの例:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [Bookmark it!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
@@ -209,5 +208,4 @@ button/
 - [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) マニフェストキー
 - [`pageAction`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/pageAction) API
 - ページアクションの例:
-
   - [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)

@@ -24,18 +24,14 @@ En plus des informations présentées ci-après, vous pourrez trouver un guide s
 ### Conversion des noms
 
 - Conversion du format HTML avec les tirets au format JavaScript `camelCase`
-
   - : Le nom d'un attribut de données est transformé en clé d'un élément [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) en suivant l'algorithme suivant&nbsp;:
-
     1. Toutes les lettres ASCII majuscules (`A` à `Z`) sont converties en minuscules&nbsp;;
     2. Le préfixe `data-` est retiré (tiret complet)&nbsp;;
     3. Pour tout tiret (`U+002D`) suivi d'une lettre ASCII minuscule (`a` à `z`), on retire le tiret et on convertit la lettre en majuscule&nbsp;;
     4. Les autres caractères (y compris les autres tirets) sont laissés inchangés.
 
 - Conversion du format JavaScript `camelCase` au format HTML avec les tirets
-
   - : La transformation symétrique, permettant de passer d'une clé de propriété à un nom d'attribut, se fait avec l'algorithme suivant&nbsp;:
-
     1. **Vérification :** Avant toute transformation, un tiret _ne doit pas_ être immédiatement suivi d'une lettre ASCII en minuscule (`a` à `z`)&nbsp;;
     2. Le préfixe `data-` est ajouté&nbsp;;
     3. On ajoute un tiret devant chaque lettre ASCII majuscule (`A` à `Z`), et on convertit la lettre en minuscule&nbsp;;

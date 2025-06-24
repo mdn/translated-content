@@ -56,16 +56,13 @@ El elemento **HTML `<th>`** define una celda como encabezado de un grupo de celd
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `abbr` {{deprecated_inline}} in HTML5
-
   - : Este atributo contiene una breve descripción del contenido de las celdas. Algunos agentes de usuario (e.g., a speech reader) pueden presentar esta descripción antes que el propio contenido.
 
     > [!NOTE]
     > No uses este atributo, ya que se ha vuelto obsoleto en el último estandar. Alternativamente, puedes poner la descripción abreviada dentro de la celda y colocarla el largo contenido en el atributo de **title**.
 
 - `align` {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
-
   - : Este atributo enumerado especifica cómo se tratará el alineado horizontal de la celda. Los valores posibles son:
-
     - `left`: El contenido se alinea a la izquierda de la celda.
     - `center`: El contenido se centra en la celda.
     - `right`: El contenido se alinea a la derecha de la celda.
@@ -81,14 +78,12 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     > - Para lograr el mismo efecto que con el valor `char`, dar a la propiedad {{cssxref("text-align")}} el mismo valor que usarías para [`char`](#char).
 
 - `axis` {{deprecated_inline}} in HTML5
-
   - : Este atributo contiene una lista de cadenas separadas por espacios. Cada cadena es el `id` de un grupo de celdas a las que se les aplica esta cabecera.
 
     > [!NOTE]
     > Este atributo está obsoleto en el último estándar y no debe usarse. Puedes sustituirlo por [`scope`](#scope).
 
 - `bgcolor` {{Non-standard_inline}}
-
   - : Este atributo define el color de fondo de cada celda en una columna. Consiste en una código hexadecimal de 6 digitos, con un prefijo '#'. Este atributo puede usarse con uno de los 16 colores predefinidos:
 
     |     | `black` = "#000000"   |     | `green` = "#008000"  |
@@ -107,7 +102,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 <!---->
 
 - `char` {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
-
   - : El contenido de la celda se alinea con un caracter en el elemento `<th>`. Los valores típicos incluyen un punto (.) para alinear números o valores monetarios. Si no se establece [`align`](#align) como char, el atributo es ignorado.
 
     > [!NOTE]
@@ -116,7 +110,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 <!---->
 
 - `charoff` {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
-
   - : This attribute is used to shift column data to the right of the character specified by the **char** attribute. Its value specifies the length of this shift.
 
     > [!NOTE]
@@ -131,9 +124,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `rowspan`
   - : This attribute contains a positive integer value that indicates over how many rows a cells is extended. Its default value is `1.` If its value is set to `0`, the cell is extended to the last element of the table sections ({{HTMLElement("thead")}}, {{HTMLElement("tbody")}} or {{HTMLElement("tfoot")}}). Values higher than 65534 are clipped down to 65534.
 - `scope`
-
   - : This enumerated attribute defines the cells that the header (defined in the {{HTMLElement("th")}}) element relates to. It may have the following values:
-
     - `row`: The header relates to all cells of the row it belongs to.
     - `col`: The header relates to all cells of the column it belongs to.
     - `rowgroup`: The header belongs to a rowgroup and relates to all of its cells. These cells can be placed to the right or the left of the header, depending on the value of the [`dir`](/es/docs/Web/HTML/Reference/Global_attributes/dir) attribute in the {{HTMLElement("table")}} element.
@@ -141,9 +132,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     - `auto`
 
 - `valign` {{Deprecated_inline}} in HTML4, {{deprecated_inline}} in HTML5
-
   - : This attribute specifies how a text is vertically aligned inside a cell. Possible values for this attribute are:
-
     - `baseline`: Positions the text near the bottom of the cell and aligns it with the [baseline](https://en.wikipedia.org/wiki/Baseline_%28typography%29) of the characters instead of the bottom. If characters don't descend below the baseline, the baseline value achieves the same effect as `bottom`.
     - `bottom`: Positions the text near the bottom of the cell.
     - `middle`: Centers the text in the cell.
@@ -153,7 +142,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     > Do not use this attribute as it is no longer supported by the latest standard: use the CSS {{cssxref("vertical-align")}} property instead.
 
 - `width` {{Deprecated_inline}} in HTML4.01
-
   - : This attribute is used to define a recommended cell width. Additional space can be added with the [cellspacing](/es/docs/Web/API/HTMLTableElement/cellSpacing) and [cellpadding](/es/docs/Web/API/HTMLTableElement/cellPadding) properties and the width of the {{HTMLElement("col")}} element can also create extra width. But, if a column's width is too narrow to show a particular cell properly, it will be widened when displayed.
 
     > [!NOTE]

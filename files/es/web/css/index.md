@@ -12,15 +12,12 @@ slug: Web/CSS
 Desde CSS3, el alcance de las especificaciones se incrementó de forma significativa y el progreso de los diferentes módulos de CSS comenzó a mostrar varias diferencias, lo que hizo más efectivo [desarrollar y publicar recomendaciones separadas por módulos](https://www.w3.org/Style/CSS/current-work). En vez de versionar las especificaciones de CSS, la W3C actualmente realiza una captura de las [últimas especificaciones estables de CSS](https://www.w3.org/TR/css/).
 
 - Introducción a CSS
-
   - : Si eres nuevo en el desarrollo web, asegúrate de leer nuestro artículo de [conceptos básicos de CSS](/es/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content) para saber qué es CSS y cómo usarlo.
 
 - Tutoriales CSS
-
   - : Nuestra [área de aprendizaje de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics_b957eec7deaf1ea2b20721d6838ea6e1) contiene una gran cantidad de tutoriales que te llevan desde el nivel de principiante hasta el nivel de competencia, cubriendo todos los aspectos fundamentales.
 
 - Referencia CSS
-
   - : Nuestra [exhaustiva referencia de CSS](/es/docs/Web/CSS/Reference) para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
 
 ## Tutoriales
@@ -33,7 +30,6 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 <!---->
 
 - [Bloques de construcción CSS.](/es/docs/Learn_web_development/Core/Styling_basics)
-
   - : Este módulo continúa a partir de donde dejó el módulo de [primeros pasos de CSS](/es/docs/conflicting/Learn_web_development/Core/Styling_basics). Ahora que has adquirido familiaridad con el lenguaje y su sintaxis, y has ganado cierta experiencia básica con su uso, es hora de profundizar un poco más. Este módulo analiza la cascada y la herencia, todos los tipos de selectores que tenemos disponibles, unidades, tamaño, estilo de fondos y bordes, depuración (_debugging_) y mucho más.
 
     El propósito de este módulo es proporcionarte un set de herramientas para escribir CSS competente y ayudarte a entender todas la teoría esencial antes de avanzar hacia cuestiones más específicas como [estilo de textos](/es/docs/Learn_web_development/Core/Text_styling) y [diseño CSS](/es/docs/Learn_web_development/Core/CSS_layout).
@@ -49,7 +45,6 @@ Nuestra [área de aprendizaje CSS](/es/docs/conflicting/Learn_web_development/Co
 
 - [Referencia CSS:](/es/docs/Web/CSS/Reference) Esta referencia exhaustiva para desarrolladores web experimentados describe cada propiedad y concepto de CSS.
 - Conceptos clave de CSS:
-
   - La [sintaxis y las formas del lenguaje](/es/docs/Web/CSS/CSS_syntax/Syntax)
   - [Especificidad](/es/docs/Web/CSS/CSS_cascade/Specificity), [herencia](/es/docs/Web/CSS/CSS_cascade/Inheritance) y [la cascada](/es/docs/Web/CSS/Cascade)
   - [Unidades y valores CSS](/es/docs/Web/CSS/CSS_Values_and_Units)

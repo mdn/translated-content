@@ -113,16 +113,12 @@ Vous pouvez également vérifier le contraste des couleurs directement via les o
 ## Critères de réussite associés aux WCAG
 
 - [1.4.3 Contraste minimum (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
-
   - : Le contraste des couleurs entre le contenu d'arrière-plan et de premier plan doit être au minimum pour garantir la lisibilité:
-
     - Le texte et son arrière-plan doivent avoir un ratio de contraste d'au moins 4.5:1.
     - Le texte d'en-tête (ou juste "plus grand") doit avoir un ratio d'au moins 3:1. Le texte "plus grand" est défini comme au moins 18pt, ou 14pt en gras.
 
 - [1.4.6 Contraste amélioré (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
-
   - : Cela suit et s'appuie sur le critère 1.4.3.
-
     - Le texte et son arrière-plan doivent avoir un ratio de contraste d'au moins 7:1.
     - Le texte d'en-tête (ou juste "plus grand") doit avoir un ratio d'au moins 4.5:1.
 

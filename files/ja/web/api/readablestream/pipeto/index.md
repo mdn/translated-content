@@ -22,14 +22,11 @@ pipeTo(destination, options)
 ### 引数
 
 - `destination`
-
   - : {{domxref("ReadableStream")}} の最終的な宛先として機能する {{domxref("WritableStream")}}。
 
 - `options` {{optional_inline}}
-
   - : `writable` ストリームにパイプ接続するときに使用するオプションです。
     利用できるオプションは以下の通りです。
-
     - `preventClose`
       - : これを `true` に設定すると、入力元の `ReadableStream` が閉じられても、出力先の `WritableStream` が閉じられることはなくなります。
         このメソッドは、この処理が完全に終了すると履行されるプロミスを返します。ただし、出力先を閉じる際にエラーが発生した場合は、そのエラーで拒否されます。

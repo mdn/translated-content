@@ -53,7 +53,6 @@ Each `@counter-style` is identified by a name and has a set of descriptors.
 <!---->
 
 - {{cssxref("@counter-style/symbols", "symbols")}}
-
   - : Specifies the symbols that are to be used for the marker representations. Symbols can contain string, images or custom identifiers. How the symbols are used to construct the marker representation is up to the algorithm specified in the system descriptor. For example, if the system specified is fixed, then each of the N symbols specified in the descriptor will be used to represent the first N counter symbols. Once the specified set of symbols have exhausted, the fallback style will be used for the rest of the list.
 
     The below @counter-style rule uses images instead of character symbols.

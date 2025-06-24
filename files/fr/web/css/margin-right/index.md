@@ -87,7 +87,6 @@ La valeur de cette propriété peut être le mot-clé `auto`, une longueur (`<le
 - `<percentage>`
   - : Une valeur exprimée en pourcentage (type {{cssxref("&lt;percentage&gt;")}} relative à la largeur du bloc englobant.
 - `auto`
-
   - : Un mot-clé qui indique que la marge droite s'adapte à l'espace restant. Cet espace est principalement défini par le mode de disposition utilisé.L'espace calculé sera réparti de façon équitable entre la marge droite et la marge gauche si celle-ci vaut également `auto`. Le tableau suivant précise les différents cas :
 
     <table class="standard-table">

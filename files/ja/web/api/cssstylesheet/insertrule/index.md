@@ -21,9 +21,7 @@ insertRule(rule, index)
 ### 引数
 
 - `rule`
-
   - : 挿入されるルールが入った文字列です。どのようなルールを挿入するかは、種類によります。
-
     - **[ルールセット](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の文)** の場合、[セレクター](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)とスタイル定義です。
     - **[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)** の場合、アットマーク付き識別子とルールの内容です。
 

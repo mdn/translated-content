@@ -273,7 +273,6 @@ Aquí estamos usando una función {{domxref("Window.prompt()", "Window.prompt()"
    ```
 
 3. Si tienes una variable numérica, que deseas convertir en una string, pero no cambiar de otra forma, o una variable string, que deseas convertir a número, pero no cambiarla de otra forma, puedes usar las siguientes construcciones:
-
    - El objecto {{jsxref("Number")}} convertirá cualquier cosa que se le pase en un número, si puede. Intenta lo siguiente:
 
      ```js

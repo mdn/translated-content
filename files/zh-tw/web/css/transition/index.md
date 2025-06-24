@@ -96,7 +96,6 @@ transition: unset;
 每一項設定都描述著每一項屬性所對應的轉場效果（或是 `all` 及 `none`這兩個特殊值）。其包含了：
 
 - 無或一個對應的屬性名稱。可以是：
-
   - 關鍵字 `none`
   - 關鍵字 `all`
   - 以 {{cssxref("&lt;custom-ident&gt;")}} 命名的 CSS 屬性。

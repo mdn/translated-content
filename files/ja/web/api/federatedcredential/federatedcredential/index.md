@@ -19,9 +19,7 @@ new FederatedCredential(init)
 ### 引数
 
 - `init`
-
   - : オプションは次の通りです。
-
     - `provider`
       - : 文字列で、資格情報プロバイダーを識別します。
 

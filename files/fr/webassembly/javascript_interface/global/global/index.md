@@ -16,9 +16,7 @@ new WebAssembly.Global(descripteur, valeur);
 ### Paramètres
 
 - _descripteur_
-
   - : Un objet dictionnaire `GlobalDescriptor` qui contient deux propriétés&nbsp;:
-
     - `value`: Une chaîne [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de données de la variable globale. Elle peut être `i32`, `i64`, `f32`, ou `f64`. `USVString` correspond à l'ensemble des différentes séquences Unicode scalaires possibles. `USVString` correspond à `String` lorsqu'il est renvoyé en JavaScript et est un type généralement utilisé par les API qui effectuent du traitement de texte et qui ont besoin de manipuler une chaîne de valeurs Unicode scalaire. `USVString` est équivalent à `DOMString` sauf qu'il n'accepte pas les codets surrogate non appairés. De tels caractères présents dans une valeur `USVString` seront convertis par le navigateur en caractères de remplacement Unicode&nbsp;: U+FFFD, (�).
     - `mutable`: Une valeur booléenne qui indique si la variable globale est modifiable ou non. Par défaut, elle vaut `false`.
 

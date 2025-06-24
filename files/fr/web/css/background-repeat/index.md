@@ -77,7 +77,6 @@ background-repeat: unset;
 ### Valeurs
 
 - `<repeat-style>`
-
   - : Un mot-clé qui peut être utilisé dans la syntaxe à une valeur ou à deux valeurs. La syntaxe utilisant une valeur est une notation raccourcie dont voici le tableau de correspondance&nbsp;:
 
     <table class="standard-table">
@@ -114,7 +113,6 @@ background-repeat: unset;
     </table>
 
     Lorsqu'on utilise la syntaxe à deux valeurs, la première indique la méthode de répétition pour l'axe horizontal et la seconde celle pour l'axe vertical. Voici une définition des différentes options&nbsp;:
-
     - `repeat`
       - : L'image est répétée autant de fois que nécessaire pour recouvrir la zone dédiée à l'arrière-plan. La dernière image sera rognée si nécessaire.
     - `space`

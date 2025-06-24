@@ -35,7 +35,6 @@ localeCompare(compareString, locales, options);
 - `compareString`
   - `referenceStr`가 비교되는 문자열.
 - `locales`와 `options`
-
   - 이러한 인수는 함수의 동작을 사용자 정의하여 응용 프로그램에서 포맷 규칙을 사용할 언어를 지정합니다.
     `"locales"`와 `"options"`의 인자를 무시하는 구현에서는 사용되는 로케일과 반환되는 문자열의 형식은
     완전히 구현에 의존합니다.

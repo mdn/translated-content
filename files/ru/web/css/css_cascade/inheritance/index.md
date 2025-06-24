@@ -57,7 +57,6 @@ p {
 
 - [CSS документация](/ru/docs/Web/CSS/Reference)
 - Ключевые концепции CSS
-
   - [Синтаксис CSS](/ru/docs/Web/CSS/CSS_syntax/Syntax)
   - [@-правила](/ru/docs/Web/CSS/CSS_syntax/At-rule)
   - [комментарии](/ru/docs/Web/CSS/CSS_syntax/Comments)

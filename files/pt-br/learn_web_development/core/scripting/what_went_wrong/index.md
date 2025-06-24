@@ -56,7 +56,6 @@ Anteriormente no curso, nós fizemos você digitar alguns comandos simples de Ja
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
    ![](nao-e-uma-funcao.png)
 2. Esse é um erro bem fácil de identifcar, e o navegador lhe fornece várias informações úteis para lhe ajudar (a captura de tela acima foi feita no Firefox, mas os outros navegadores oferecem informações similares). Da esquerda para a direita, nós temos:
-
    - Um "x" laranja para indicar que esse é um erro.
    - Uma mensagem de erro para indicar o que está errado: "TypeError: envioPalpite.addeventListener is not a function"
    - Um link "Learn More" que encaminha à uma página no MDN docs explicando o que esse erro significa em uma quantidade enorme de detalhes.

@@ -14,7 +14,6 @@ slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 - страница использует обработчик `unload` или `beforeunload`;
 - страница устанавливает заголовок «cache-control: no-store».
 - доступ к сайту происходит по протоколу HTTPS, а страница устанавливает по меньшей мере один из следующих заголовков:
-
   - «Cache-Control: no-cache»
   - «Pragma: no-cache»
   - с заголовком «Expires: 0» or «Expires» со значением даты, лежащим в прошлом относительно значению заголовка «Date» (если только не указан также заголовок «Cache-Control: max-age=»);

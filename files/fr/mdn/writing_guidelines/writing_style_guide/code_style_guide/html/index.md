@@ -10,14 +10,12 @@ Les directives suivantes couvrent la manière d'écrire du HTML pour les exemple
 ## Dans cet article
 
 - [Doctype et méta-données](#doctype_and_metadata)
-
   - [Doctype](#doctype)
   - [Langue du document](#document_language)
   - [Jeu de caractères du document](#document_characterset)
   - [Méta-balise Viewport](#viewport_meta_tag)
 
 - [Style général de codage des balises](#general_markup_coding_style)
-
   - [Utiliser les minuscules](#use_lowercase)
   - [Barre oblique de fermeture (slash)](#trailing_slashes)
   - [Guillemets des attributs](#quoting_attributes)

@@ -11,7 +11,6 @@ Firefox 3 ofrece una mejor implementación de [Gráficos Vectoriales Escalables 
 - Implementado el elemento `pattern` ([especificación](https://www.w3.org/TR/SVG11/pservers.html#PatternElement)).
 - Implementado el elemento `mask` ([especificación](https://www.w3.org/TR/SVG11/masking.html#MaskElement)).
 - Implementados nuevos filtros ([especificación](https://www.w3.org/TR/SVG11/filters.html)):
-
   - `filter`
   - `feDistantLight`
   - `fePointLight`

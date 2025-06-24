@@ -31,7 +31,6 @@ MDN Web 文档上的 [HTTP 标头参考](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - 从我们的 [HTTP 标头模板页面](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Page_types#http_标头参考页)开始，或者使用你从步骤 2 中找到的现有 HTTP 标头文档中的一个复制的结构。由你自己决定。
 - 撰写关于新 HTTP 标头的内容。
 - 确保你有以下这些部分：
-
   - 介绍性文本，其中第一句提到标头名称（加粗）并总结其目的。
   - 信息框，其中至少包含标头类型以及标头是否为{{Glossary("Forbidden header name", "禁止修改的标头")}}。
   - 语法框，其中包含 HTTP 标头的所有可能的指令/参数/值。

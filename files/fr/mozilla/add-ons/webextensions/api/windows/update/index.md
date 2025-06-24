@@ -23,9 +23,7 @@ var updating = browser.windows.update(
 - `windowId`
   - : `integer`. ID de la fenêtre à mettre à jour.
 - `updateInfo`
-
   - : `object`. Objet contenant les propriétés de mise à jour.
-
     - `drawAttention` {{optional_inline}}
       - : `boolean`. si cela est vrai, la fenêtre doit être affichée de manière à attirer l'attention de l'utilisateur sur la fenêtre, sans changer la fenêtre ciblée. L'effet dure jusqu'à ce que l'utilisateur change de focus sur la fenêtre. Cette option n'a aucun effet si la fenêtre a déjà un focus. Si cela est faux pour annuler la requête précéndete `drawAttention`.
     - `focused` {{optional_inline}}

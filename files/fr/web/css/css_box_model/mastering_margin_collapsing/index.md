@@ -8,7 +8,6 @@ slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 La fusion des marges se produit si on a l'un de ces trois cas :
 
 - Des éléments voisins adjacents
-
   - : Les marges des éléments voisins adjacents sont fusionnés (sauf quand le dernier voisin doit passer à la ligne pour [dégager](/fr/docs/Web/CSS/clear) les flottements). Ainsi :
 
     ```html

@@ -9,11 +9,8 @@ original_slug: Web/HTML/Element/frameset
 ### Definición
 
 - **frameset** -_conjunto de marcos_ . Define la organización de los marcos dentro de la ventana del usuario.
-
   - : **Sus etiquetas son**: `<frameset>` y `</frameset>` (ambas obligatorias).
-
     - **Está definido como**: Elemento [para marcos](/es/docs/HTML/Elemento/Tipos_de_elementos#paramarcos).
-
       - : Con un doctype para marcos está definido como contenido de html.
 
     **Crea una caja**: .

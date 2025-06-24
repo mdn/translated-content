@@ -46,7 +46,6 @@ Lorsqu'une seule valeur est indiquée, c'est celle-ci qui est appliquée par dé
   `fill`
 
   `markers`
-
   - : Indiquent les valeurs dans l'ordre dans lequel on veut qu'elles soient peintes.
 
 ## Définition formelle

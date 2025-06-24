@@ -27,9 +27,7 @@ slug: Learn_web_development/Core/Styling_basics
 - [Каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : Цель данного урока — углубить ваше понимание основных концепций CSS — каскадов, спецификаций и наследования, — которые контролируют, как CSS добавляется в HTML и как разрешаются конфликты.
 - [CSS-селекторы](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : Существует широкий выбор CSS-селекторов, позволяющий максимально точно отбирать элементы для стилизации. В этой статье и её подстатьях мы рассмотрим разные типы в мельчайших подробностях и увидим как они работают. Подстатьи по порядку:
-
     - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Type_Class_and_ID_Selectors)
     - [Селекторы атрибутов](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Attribute_selectors)
     - [Псевдоклассы, псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/%D0%A1%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D1%8B/Pseudo-classes_and_pseudo-elements)
@@ -52,7 +50,6 @@ slug: Learn_web_development/Core/Styling_basics
 - [Стилизация таблиц](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
   - : Стилизация HTML таблиц — это не самая гламурная работа в мире, но иногда нам нужно это делать. Эта статья описывает, как сделать, чтобы Ваши HTML-таблицы выглядели хорошо, и некоторые свойства, подробно рассмотренные в предыдущих статьях.
 - [Отладка CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
-
   - : При написании CSS вы можете столкнуться с тем, что ваш CSS-код работает не так, как вы того хотели. Вы узнаете, как отлаживать CSS и как с помощью инструментов разработчика понять, где неполадка.
 
 - [Организация CSS-кода](/ru/docs/Learn/CSS/Building_blocks/Organizing)

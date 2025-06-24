@@ -84,7 +84,6 @@ slug: Web/HTML/Reference/Elements/head
 ## 參見
 
 - 可以使用在 `<head>` 中的元素：
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

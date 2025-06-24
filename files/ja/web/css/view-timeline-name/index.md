@@ -31,7 +31,6 @@ view-timeline-name: --custom_name_for_timeline;
 - `none`
   - : タイムラインには名前がありません。
 - `<dashed-ident>`
-
   - : ビュー進行タイムラインの名前を定義する任意のカスタム識別子で、[`animation-timeline`](/ja/docs/Web/CSS/animation-timeline) プロパティで参照することができます。
 
     > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) の値は `--` から始める必要があり、これによって CSS の標準キーワードとの名前の衝突を避けることができます。

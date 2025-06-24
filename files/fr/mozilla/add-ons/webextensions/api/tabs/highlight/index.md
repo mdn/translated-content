@@ -18,13 +18,10 @@ var highlighting = browser.tabs.highlight(
 ### Paramètres
 
 - `highlightInfo`
-
   - : `object`.
-
     - `windowId`{{optional_inline}}
       - : `integer`. ID de la fenêtre contenant les onglets.
     - `populate`{{optional_inline}}
-
       - : `boolean`. Par défaut la valeur est `true`. S'il est défini sur `false`, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété `tabs` contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
 
         > [!NOTE]

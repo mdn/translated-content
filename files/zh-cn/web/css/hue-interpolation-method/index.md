@@ -30,9 +30,7 @@ decreasing hue
 有四种确定所用弧的算法：
 
 - `shorter`
-
   - : 使用劣弧。当两条半径重合时，此弧退化为单点。当两段弧长度相等时：
-
     - 若 `θ1 < θ2`，则使用顺时针弧；
     - 若 `θ1 > θ2`，则使用逆时针弧。
 
@@ -41,14 +39,11 @@ decreasing hue
     | ![shorter，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![shorter，θ1 = -225deg 且 θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
-
   - : 使用优弧。当两条半径重合时：
-
     - 若 `θ1 ≤ θ2`，则此弧变为顺时针定向的整个圆周。
     - 若 `θ1 > θ2`，则此弧变为逆时针定向的整个圆周。
 
     当两段弧长度相等时：
-
     - 若 `θ1 < θ2`，则使用顺时针弧。
     - 若 `θ1 > θ2`，则使用逆时针弧。
 
@@ -57,9 +52,7 @@ decreasing hue
     | ![longer，θ1 = 45deg 且 θ2 = -225deg](longer_decreasing.png) | ![longer，θ1 = 135deg 且 θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
-
   - : 使用顺时针弧。当两条半径重合时：
-
     - 若 `θ1 < θ2`，则此弧变为顺时针定向的整个圆周。
     - 若 `θ1 ≥ θ2`，则此弧退化为单点。
 
@@ -68,9 +61,7 @@ decreasing hue
     | ![increasing，θ1 = 45deg 且 θ2 = 135deg](shorter_increasing.png) | ![increasing，θ1 = 495deg 且 θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
-
   - : 使用逆时针弧。当两条半径重合时：
-
     - 若 `θ1 ≤ θ2`，则此弧退化为单点。
     - 若 `θ1 > θ2`，则此弧变为逆时针定向的整个圆周。
 

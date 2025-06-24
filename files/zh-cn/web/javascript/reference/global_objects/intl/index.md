@@ -74,7 +74,6 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
 
 - 介绍：[The ECMAScript Internationalization API](http://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - 构造函数
-
   - {{jsxref("Collator", "Intl.Collator")}}
   - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
   - {{jsxref("ListFormat", "Intl.ListFormat")}}
@@ -83,7 +82,6 @@ BCP 47 也支持扩展，其中一个和 JavaScript 国际化方法相关的是�
   - {{jsxref("RelativeTimeFormat", "Intl.RelativeTimeFormat")}}
 
 - 方法
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

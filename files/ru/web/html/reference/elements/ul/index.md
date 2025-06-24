@@ -146,7 +146,6 @@ li li {
 
 - Остальные списковые HTML-элементы: {{ HTMLElement("ol") }}, {{ HTMLElement("li") }}, {{ HTMLElement("menu") }} и устаревший {{ HTMLElement("dir") }};
 - CSS-свойства, которые могут быть полезны для стилизации `<ul>` элементов:
-
   - свойство [list-style](/ru/docs/Web/CSS/list-style), полезное для выбора способа отображения маркеров,
   - [CSS счётчики](/ru/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), для более сложных вложенных списков,
   - свойство [line-height](/ru/docs/Web/CSS/line-height), для замены убранного свойства [`compact`](#compact),

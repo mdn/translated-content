@@ -81,7 +81,6 @@ El método [`handleEnter()`](/es/NsIAutoCompleteController#handleEnter.28.29) de
 
 - Cuando se inicia una instancia de `DOMParser`, ésta hereda el código de la llamada principal, además de los códigos `documentURI` y `baseURI` de la ventana del constructor de donde proviene.
 - Si el llamante tiene privilegios UniversalXPConnect, puede pasar parámetros a `new DOMParser()`. Si se pasan menos de tres parámetros, los parámetros restantes se pasarán con el valor `null` de forma predeterminada.
-
   - El primer parámetro es el principal que se debe utilizar y por esto, se sobrescribe el valor principal predeterminado generalmente heredado.
   - El segundo parámetro es el `documentURI` que se debe utilizar.
   - El tercer parámetro es el `baseURI` que se debe utilizar.
@@ -140,7 +139,6 @@ _Añade aquí cambios sencillos que debas realizar cuando actualizas tu extensi�
 - El elemento [tabbrowser](/en-US/XUL/tabbrowser) ya no forma parte del "conjunto de herramientas" ( [bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964) ). Esto significa que este elemento ya no está disponible en aplicaciones y extensiones XUL. Este elemento sigue siendo parte de la ventana principal de Firefox (browser.xul).
 - Es necesario documentar los cambios en [nsISupports proxies](/es/NsISupports_proxies) [\[1\]](https://groups.google.com/group/mozilla.dev.platform/browse_thread/thread/78236a4b312a2de4/939240fc3f5123a8?lnk=st&rnum=1#939240fc3f5123a8) y posiblemente, también aquellos relacionados con el procesamiento de interfaces.
 - Si utilizas instrucciones de proceso XML, como por ejemplo `<?xml-stylesheet ?>` en tus archivos XUL, ten en cuenta los cambios descriptos en el [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654) :
-
   1. Se han añadido los XML PIs al DOM del documento XUL. Esto significa que no se garantiza que [`document.firstChild`](/es/docs/Web/API/Node/firstChild) sea el elemento raíz. Si necesitas hacer referencia al documento raíz en tu script, usa [`document.documentElement`](/es/docs/Web/API/Document/documentElement) en su lugar.
   2. Las instrucciones de procesamiento `<?xml-stylesheet ?>` y `<?xul-overlay ?>` ahora no tienen efecto fuera del prólogo del documento.
 

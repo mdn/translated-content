@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `activeInfo`
       - : [`object`](#activeinfo). ID de l'onglet qui a été activé, et ID de sa fenêtre.
 

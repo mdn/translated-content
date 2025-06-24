@@ -20,9 +20,7 @@ new WritableStream(underlyingSink, queuingStrategy)
 ### 引数
 
 - `underlyingSink` {{optional_inline}}
-
   - : 構築されたストリームのインスタンスの振る舞いを定義するメソッドとプロパティを含むオブジェクト。 `underlyingSink` には以下を含めることができます。このメソッドに渡される `controller` 引数は {{domxref("WritableStreamDefaultController")}} であり、これを使用して中止やエラーの通知を行うことができます。
-
     - `start(controller)` {{optional_inline}}
       - : これは、オブジェクトが構築されたときにすぐに呼び出されるメソッドです。このメソッドの中身は開発者が定義し、基礎となるシンクにアクセスすることを目的とする必要があります。この処理が非同期で行われる場合は、成功か失敗かを示すプロミスを返すことができます。
     - `write(chunk, controller)` {{optional_inline}}
@@ -34,9 +32,7 @@ new WritableStream(underlyingSink, queuingStrategy)
       - : このメソッドも開発者によって定義され、アプリが突然ストリームを閉じてエラー状態にしたいことを合図したときに呼び出されます。これは `close()` のように保持されたリソースを整理することができますが、書き込みがキューイングされている場合でも `abort()` が呼び出されます - これらのチャンクは破棄されます。この処理が非同期の場合、成功や失敗のシグナルのためにプロミスを返すことができます。 `reason` 引数には、ストリームが中断された理由を記述する文字列を指定します。
 
 - `queuingStrategy` {{optional_inline}}
-
   - : オプションでストリームのキューイング戦略を定義するオブジェクト。 これには次の 2 つの引数が必要です。
-
     - `highWaterMark`
       - : 負でない整数です。これは、背圧が適用される前に内部キューに含めることができるチャンクの総数を定義します。
     - `size(chunk)`

@@ -145,24 +145,19 @@ Ce qui suit est une définition formelle de la représentation JSON pour les car
 La carte d'import doit être un objet JSON valide qui définit au plus deux clés optionnelles&nbsp;: `imports` et `scopes`. Les valeurs de ces clés doivent être un objet, potentiellement vide.
 
 - `imports` {{optional_inline}}
-
   - : La valeur doit être [une carte de spécificateur de module](#module_specifier_map), qui fournit les correspondances entre les spécificateurs utilisés dans les instructions `import` ou les opérateurs `import()`, et le texte qui les remplacera lors de leur résolution.
 
     Il s'agit de la carte de correspondance qui est utilisée par défaut si les spécificateurs de module ne sont pas présents (via leur nom ou via leur chemin) dans les portées décrites via l'attribut `scopes`.
-
     - `<module specifier map>`
-
       - : Une carte de spécificateur de module est un objet JSON valide où les _clés_ correspondent au texte qui peut être présent dans le spécificateur de module lors de l'import et où les _valeurs_ correspondantes sont les URL ou les chemins qui remplaceront ce texte lorsque le spécificateur de module sera résolu en une adresse.
 
         L'objet JSON représentant une carte de spécificateur de module doit respecter les règles suivantes&nbsp;:
-
         - Aucune des clés ne doit être vide.
         - Toutes les valeurs doivent être des chaînes de caractères, qui définissent soit une URL absolue valide, soit une chaîne d'URL valide commençant par `/`, `./`, ou `../`.
         - Si la clé finit par `/`, la valeur correspondante doit également finir par `/`. On pourra utiliser une clé se terminant par `/` comme préfixe lors de la correspondance entre les adresses de modules.
         - L'ordre des propriétés de l'objet n'a pas d'importance, si plusieurs clés peuvent correspondre pour un même spécificateur de module, c'est la clé la plus spécifique qui est utilisée (autrement dit le spécificateur `"olive/branche/"` correspondrait avant `"olive/"`).
 
 - `scopes` {{optional_inline}}
-
   - : Les portées définissent des [cartes de spécificateur de module](#module_specifier_map) pour des chemins spécifiques, permettant de choisir la correspondance à effectuer en fonction du chemin du code qui importe le module.
 
     L'objet `scopes` est un objet JSON valide où chaque propriété est une clé de portée (représentée par une URL) avec une valeur correspondante qui est une carte de spécificateur de module.

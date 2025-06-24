@@ -18,15 +18,12 @@ browser.browserAction.setPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`{{optional_inline}}
       - : `integer`. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
     - `windowId`{{optional_inline}}
       - : `integer`. Définit le popup uniquement pour la fenêtre spécifiée.
     - `popup`
-
       - : `string` ou `null`. Le fichier HTML à afficher dans un popup, spécifié comme URL.
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple `https://example.org/`).
