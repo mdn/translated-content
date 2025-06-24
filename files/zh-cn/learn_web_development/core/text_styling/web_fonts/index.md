@@ -138,11 +138,11 @@ html {
 
 ## 使用在线字体服务
 
-在线字体服务通常会为你存储和服务字体，这样你就不用担心写`@font-face`代码了，通常只需要在你的网站上插入一两行代码就可以让一切都运行。例子包括[Typekit](https://typekit.com/) 和[Cloud.typography](http://www.typography.com/cloud/welcome/)。大多数这些服务都是基于订阅的，除了[Google Fonts](https://www.google.com/fonts)，这是一个有用的免费服务，特别是对于快速的测试工作和编写演示。
+在线字体服务通常会为你存储和服务字体，这样你就不用担心写`@font-face`代码了，通常只需要在你的网站上插入一两行代码就可以让一切都运行。例子包括[Typekit](https://typekit.com/) 和[Cloud.typography](http://www.typography.com/cloud/welcome/)。大多数这些服务都是基于订阅的，除了[Google Fonts](https://fonts.google.com)，这是一个有用的免费服务，特别是对于快速的测试工作和编写演示。
 
 大多数这些服务都很容易使用，所以我们不会详细地介绍它们。让我们快速浏览一下 Google Fonts，这样你就能明白它的意思了。再次的，使用`web-font-start.html` 和 `web-font-start.css` a 的副本作为你的开始。
 
-1. 前往 [Google Fonts](https://www.google.com/fonts).
+1. 前往 [Google Fonts](https://fonts.google.com).
 2. 使用左边的过滤器来显示你想要选择的字体类型，并选择一些你喜欢的字体。
 3. 要选择字体种类，按下按钮旁边的 ⊕ 按钮。
 4. 当你选择好字体种类时，按下页面底部的*\[Number]* 种类选择。

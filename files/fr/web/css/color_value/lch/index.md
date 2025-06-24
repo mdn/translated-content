@@ -20,7 +20,6 @@ lch(52.2345% 72.2 56.2 / .5)
 ### Valeurs
 
 - `lch(L C H [/ A])`
-
   - : `L` indique la luminosité [CIE](https://fr.wikipedia.org/wiki/Commission_internationale_de_l%27éclairage) sous la forme d'un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) compris entre `0%`, pour le noir, et `100%`, pour le blanc.
 
     Le deuxième argument, `C`, indique la [chroma](https://fr.wikipedia.org/wiki/Chrominance) (indiquant en quelque sorte la quantité de couleur). Sa valeur minimale est 0 et sa valeur maximale est théoriquement infinie, bien qu'elle n'excède pas `0.4` en pratique.

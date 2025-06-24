@@ -94,7 +94,6 @@ HTML5 호환 브라우저는 `<head>`가 없는 경우 자동으로 생성합니
 ## 같이 보기
 
 - `<head>` 안에 배치할 수 있는 요소
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

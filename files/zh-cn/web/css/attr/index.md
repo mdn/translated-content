@@ -39,7 +39,6 @@ attr(data-something, "default");
 - `attribute-name`
   - : 是 CSS 所引用的 HTML 属性名称。
 - `<type-or-unit>`
-
   - : 表示所引用的属性值的单位。如果该单位相对于所引用的属性值不合法，那么`attr()`表达式也不合法。若省略，则默认值为`string`。其合法值包括：
 
     | 关键字                                                                                                           | 类型                              | 备注                                                                                                                                                                                                                                                                                     | 默认值                                                   |

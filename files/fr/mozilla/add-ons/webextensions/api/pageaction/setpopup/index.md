@@ -18,9 +18,7 @@ browser.pageAction.setPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. L'ID de l'onglet pour lequel vous souhaitez définir la fenêtre contextuelle.
     - `popup`

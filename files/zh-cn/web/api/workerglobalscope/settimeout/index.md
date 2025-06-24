@@ -29,7 +29,6 @@ setTimeout(functionRef, delay, param1, param2, /* …, */ paramN)
 - `code`
   - : 这是一个代替语法，允许你包含在定时器到期后编译和执行的字符串而非函数。这个语法因为与 {{jsxref("Global_Objects/eval", "eval()")}} 存在相同的安全风险所以**不推荐**使用。
 - `delay` {{optional_inline}}
-
   - : 定时器在执行指定的函数或代码之前应该等待的时间，单位是毫秒。如果省略该参数，则使用值 0，意味着“立即”执行，或者更准确地说，在下一个事件循环执行。
 
     注意，无论是哪种情况，实际延迟可能会比预期长一些，参见[延时比指定值更长的原因](/zh-CN/docs/Web/API/Window/setTimeout#延时比指定值更长的原因)。

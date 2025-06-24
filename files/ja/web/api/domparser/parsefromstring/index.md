@@ -25,9 +25,7 @@ parseFromString(string, mimeType)
   - : 構文解析する文字列です。
     {{Glossary("HTML")}}、{{Glossary("xml")}}、{{Glossary("XHTML")}}、{{Glossary("svg")}} のいずれかの文書が入っている必要があります。
 - `mimeType`
-
   - : 文字列。 この文字列は、文字列を構文解析する際に XML パーサーと HTML パーサーのどちらを使用するかを決定します。 有効な値は次のとおりです。
-
     - `text/html`
     - `text/xml`
     - `application/xml`

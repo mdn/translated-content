@@ -51,7 +51,6 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario y espe
 ## Ver además
 
 - Los pseudo-elementos usados por WebKit/Blink para dar estilo a otras partes del elemento {{HTMLElement("progress")}}:
-
   - {{ cssxref("::-webkit-progress-value") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

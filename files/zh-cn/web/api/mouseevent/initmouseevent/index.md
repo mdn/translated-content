@@ -43,7 +43,6 @@ initMouseEvent(type, canBubble, cancelable, view,
 - _`clientY`_
   - : 事件的客户端 y 坐标。取值集合见{{domxref("MouseEvent.clientY")}}。
 - _`ctrlKey`_
-
   - : 事件发生时&#x20;
 
     <kbd>control</kbd>
@@ -51,7 +50,6 @@ initMouseEvent(type, canBubble, cancelable, view,
     &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.ctrlKey")}}。
 
 - _`altKey`_
-
   - : 事件发生时&#x20;
 
     <kbd>alt</kbd>
@@ -59,7 +57,6 @@ initMouseEvent(type, canBubble, cancelable, view,
     &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.altKey")}}。
 
 - _`shiftKey`_
-
   - : 事件发生时&#x20;
 
     <kbd>shift</kbd>
@@ -67,7 +64,6 @@ initMouseEvent(type, canBubble, cancelable, view,
     &#x20;键是否被按下。取值集合见{{domxref("MouseEvent.shiftKey")}}。
 
 - _`metaKey`_
-
   - : 事件发生时&#x20;
 
     <kbd>meta</kbd>

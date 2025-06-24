@@ -24,15 +24,11 @@ animate(keyframes, options)
 - `keyframes`
   - : キーフレームオブジェクトの配列、**または**プロパティが反復処理可能な値の配列である単一のキーフレームオブジェクトのどちらかです。詳しくは [Keyframe の書式](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats)を参照してください。
 - `options`
-
   - : **アニメーションの再生時間を表す整数値**（ミリ秒単位）、**または** [`KeyframeEffect()` のオプションの引数](/ja/docs/Web/API/KeyframeEffect/KeyframeEffect#引数)や以下のオプションで記述された 1 つ以上のタイミングプロパティを含むオブジェクトのどちらかです。
-
     - `id` {{optional_inline}}
       - : `animate()` の固有のプロパティです。このアニメーションを参照する文字列です。
     - `rangeEnd` {{optional_inline}}
-
       - : タイムラインに沿ったアニメーションの適用範囲の終わり、つまりタイムラインのどこでアニメーションが終わるかを指定します。CSS の {{cssxref("animation-range-end")}} プロパティに相当します。`rangeEnd` は以下のように、様々な値を取ることができます。
-
         - 文字列で、`normal`（アニメーションの範囲に変更がないことを意味します）、オフセットを表す CSS の {{cssxref("length-percentage")}}、`<timeline-range-name>`、`<timeline-range-name>` のいずれかと、それに続く `<length-percentage>` です。例えば次のようになります。
 
           ```

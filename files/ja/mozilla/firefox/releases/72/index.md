@@ -42,7 +42,6 @@ _変更なし。_
 
 - CSS Shadow Parts が有効になりました。これは [`part` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/part) や [`::part` 擬似要素](/ja/docs/Web/CSS/::part) が含まれており、スタイル設定のためにシャドウホストが自身のシャドウツリーから選択した要素を選択的に出力ページへ公開できます ([Firefox バグ 1559074](https://bugzil.la/1559074))。
 - [CSS モーションパス](/ja/docs/Web/CSS/CSS_motion_path) を実装しました ([Firefox バグ 1582554](https://bugzil.la/1582554) および [実装目的](https://groups.google.com/forum/#!topic/mozilla.dev.platform/nOOIRsuxvuc) をご覧ください)。以下のプロパティが含まれます。
-
   - {{cssxref("offset")}}
   - {{cssxref("offset-path")}}
   - {{cssxref("offset-anchor")}}
@@ -71,13 +70,11 @@ _変更なし。_
 #### DOM
 
 - 最近の仕様変更に応じて、[位置情報 API](/ja/docs/Web/API/Geolocation_API) でいくつかのインターフェイス名を更新しました ([Firefox バグ 1575144](https://bugzil.la/1575144)):
-
   - `Coordinates` を {{domxref("GeolocationCoordinates")}} に変更しました。
   - `Position` を {{domxref("GeolocationPosition")}} に変更しました。
   - `PositionError` を {{domxref("GeolocationPositionError")}} に変更しました。
 
 - いくつかのプロパティを、標準の文字列化子を使用するように更新しました ([Firefox バグ 824857](https://bugzil.la/824857))。
-
   - {{domxref("DOMTokenList.value")}}
   - {{domxref("HTMLAnchorElement.href")}}
   - {{domxref("Location.href")}}

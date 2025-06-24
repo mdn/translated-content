@@ -21,11 +21,9 @@ l10n:
 元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
-
   - : 为 `<fencedframe>` 指定[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)，该策略根据请求的来源定义 `<fencedframe>` 可用的特性。请参见[围栏框架可用的权限策略](#围栏框架可用的权限策略)了解在围栏框架上设置的策略来控制哪些特性的详细信息。
 
 - `height` {{experimental_inline}}
-
   - : 以 CSS 像素为单位表示围栏框架高度的无单位的整数。默认值为 `150`。
 
 - `width` {{experimental_inline}}

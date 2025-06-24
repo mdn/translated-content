@@ -28,7 +28,7 @@ more information on that area." />
 </map>
 ```
 
-Ver la [página de referencia del elemento](/es/docs/Web/HTML/Element/area) [`<area>`](/es/docs/Web/HTML/Element/area) para unu ejemplo interactivo.
+Ver la [página de referencia del elemento](/es/docs/Web/HTML/Reference/Elements/area) [`<area>`](/es/docs/Web/HTML/Reference/Elements/area) para unu ejemplo interactivo.
 
 ### Ver también
 
@@ -39,7 +39,7 @@ Ver la [página de referencia del elemento](/es/docs/Web/HTML/Element/area) [`<a
 
 Para cualquier contenedor cuyo contenido actue como una caja de diálogo (por ejemplo, un modal preguntando al usuario realizar una elección o responder a una acción siendo tomada), debe tener una etiqueta descriptiva o nombre, para que la tecnología asistiva le permita al usuario descrubir fácilmente cual es su propósito.
 
-Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role) o [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role); se puede usar tanto el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label) o [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) para proporcionar una etiqueta.
+Una caja de diálogo es generalmente denominada con un ARIA [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role) o [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role); se puede usar tanto el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) o [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute) para proporcionar una etiqueta.
 
 ### Ejemplos
 
@@ -66,8 +66,8 @@ Si la caja de diálogo no tiene un encabezado, se puede usar `aria-label` para c
 ### Ver también
 
 - [`role="dialog"`](/es/docs/Web/Accessibility/ARIA/Roles/dialog_role)
-- [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Roles/alertdialog_role)
-- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`role="alertdialog"`](/es/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
+- [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
 - [`aria-labelledby`](/es/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)
 - [WAI-ARIA: dialog role](https://www.w3.org/TR/wai-aria-1.2/#dialog)
 - [Dialog authoring practices](https://www.w3.org/TR/wai-aria-practices/#dialog_roles_states_props)
@@ -149,7 +149,7 @@ Usuarios de tecnologías asistivas encuentras esta descripción útil cuando tra
 </form>
 ```
 
-Puede ver un ejemplo interactivo en la [página de referencia de `<fieldset>`](/es/docs/Web/HTML/Element/fieldset).
+Puede ver un ejemplo interactivo en la [página de referencia de `<fieldset>`](/es/docs/Web/HTML/Reference/Elements/fieldset).
 
 ### Ver también
 
@@ -204,7 +204,7 @@ Al escribir ecuaciones con MathML, a cada elemento {{mathmlelement("mglyph")}} s
 
 Asegurarse que los encabezados tengan un contenido no vacío y no estén ocultos como con el CSS `display:none` o `aria-hidden=true`. Los usuarios de lectores de pantalla confían en los encabezados para entender la estructura y el contenido de un documento.
 
-Además, es importante usar los [elementos de encabezado](/es/docs/Web/HTML/Element/Heading_Elements) sólo para los encabezados de sección reales, y no como una forma rápida de hacer que el texto se destaque. Los lectores de pantalla suelen "hojear" los encabezados de una página, de manera muy parecida a los usuarios con visión, el texto que no sea encabezado que se marca con elementos de encabezamiento puede causar confusión.
+Además, es importante usar los [elementos de encabezado](/es/docs/Web/HTML/Reference/Elements/Heading_Elements) sólo para los encabezados de sección reales, y no como una forma rápida de hacer que el texto se destaque. Los lectores de pantalla suelen "hojear" los encabezados de una página, de manera muy parecida a los usuarios con visión, el texto que no sea encabezado que se marca con elementos de encabezamiento puede causar confusión.
 
 ## Los encabezados deberían tener contenido de texto visible
 
@@ -229,7 +229,7 @@ Proporcionar un texto descriptivo para todas las imágenes y elementos parecidos
 
 ## Elementos interactivos deben ser etiquetados
 
-Si un elemento esta destinado para que los usuarios interactúen con él, debe estar etiquetado. Los elementos interactivos incluyen enlaces ({{htmlelement("a")}}), elementos de un formulario, botones, y cualquier elemento que tenga manejadores de eventos para ratón o teclado. La forma para etiquetar un elemento depende de su tipo: para elementos de un formulario, utilizar un {{htmlelement("label")}}; para enlaces, botones y elementos sobre los que se puede hacere click, el contenido del texto del elemento suele proporcionar la etiqueta. Si no existe otra opción para etiquetar un elemento, utilizar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label).
+Si un elemento esta destinado para que los usuarios interactúen con él, debe estar etiquetado. Los elementos interactivos incluyen enlaces ({{htmlelement("a")}}), elementos de un formulario, botones, y cualquier elemento que tenga manejadores de eventos para ratón o teclado. La forma para etiquetar un elemento depende de su tipo: para elementos de un formulario, utilizar un {{htmlelement("label")}}; para enlaces, botones y elementos sobre los que se puede hacere click, el contenido del texto del elemento suele proporcionar la etiqueta. Si no existe otra opción para etiquetar un elemento, utilizar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label).
 
 ## Usar el atributo label en elementos optgroup
 
@@ -257,7 +257,7 @@ En este ejemplo, el atributo `label` en los elementos `<optgroup>` da un nombre 
 
 ## Las barras de herramientas deben ser etiquetadas cuando haya más de una barra
 
-Si se define más una barra de herramientas en una aplicación web utilizando el rol ARIA `toolbar`, se debe usar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Attributes/aria-label) para etiquetar cada una de ellas de manera que pueda ser descrita por la tecnología de asistencia. Es una buena práctica etiquetar una barra de herramientas aún cuando solo haya una en la página
+Si se define más una barra de herramientas en una aplicación web utilizando el rol ARIA `toolbar`, se debe usar el atributo [`aria-label`](/es/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) para etiquetar cada una de ellas de manera que pueda ser descrita por la tecnología de asistencia. Es una buena práctica etiquetar una barra de herramientas aún cuando solo haya una en la página
 
 ### Ver también
 

@@ -22,23 +22,18 @@ l10n:
 ## チュートリアル
 
 - [ウェブサイトをどんな外見にするか](/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
-
   - : ウェブサイトのコードを書き始める前に、まずは計画を立てることが大切です。あなたのウェブサイトにはどんな情報を載せますか？フォントや色はどうしたいですか？ここでは、コンテンツやデザインを計画するのに役に立つ簡単な方法を紹介します。
 
 - [コンテンツの作成](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
-
   - : HTML（**H**yper**T**ext **M**arkup **L**anguage、ハイパーテキストマークアップ言語）とは、ウェブコンテンツを構成し、その内容に意味や目的を持たせるために使用するコードのことです。例えば、コンテンツは段落、箇条書きのリスト、または画像やデータ表を使用して構造化することができます。この記事では、 HTML とその機能の基本的な理解を深め、最初のウェブサイト用の基本的なコンテンツを作成する方法を説明します。
 
 - [コンテンツのスタイル設定](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
-
   - : CSS（カスケーディングスタイルシート、Cascading Style Sheets）は、ウェブサイトの見た目を決めるために使うコードです。 「コンテンツのスタイル設定」では、始めるために何が必要かを一通り追って行きます。 例えば、テキストを赤くするにはどうすればよいでしょうか？ コンテンツを（ウェブページ）レイアウトの特定の位置に表示するにはどうすればよいでしょうか？ 背景画像や背景色を使ってウェブページを装飾するにはどうすればよいでしょうか？
 
 - [操作の追加](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
-
   - : JavaScript は、ウェブサイトに操作を追加するために使うプログラミング言語です。これはゲーム、ボタンが押された際のレスポンスの動作、フォームへのデータ入力、動的なスタイル設定、アニメーションなど、さまざまな場面で現れます。この記事は、JavaScriptを使い始めたり、何ができるのかを理解したりするのに役立ちます。
 
 - [サンプルコードの公開](/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
-
   - : コードを書き終え、ウェブサイトを構成するファイルを整理したら、人々が探せるようにすべてをオンラインで公開する必要があります。この記事では、最小限の手間でサンプルウェブサイトをどのようにオンラインで公開するかを説明します。
 
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Command_line", "Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like", "Learn_web_development/Getting_started")}}

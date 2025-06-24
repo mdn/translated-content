@@ -2,7 +2,7 @@
 title: XMLHttpRequest
 slug: Web/API/XMLHttpRequest
 l10n:
-  sourceCommit: 5e270e3cdab4f3c8ad3f5752976c72c6e8312eb9
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
@@ -39,7 +39,6 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("E
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : 回傳請求的 [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-
   - : 回傳一個字串，其中包含 HTTP 伺服器回傳的回應字串。與 {{domxref("XMLHttpRequest.status")}} 不同，這包含回應訊息的完整文字（例如 `「OK」`）。
 
     > [!NOTE]
