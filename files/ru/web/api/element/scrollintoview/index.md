@@ -18,9 +18,7 @@ element.scrollIntoView(scrollIntoViewOptions); // аргумент типа Obje
 ### Параметры
 
 - `alignToTop` {{optional_inline}}
-
   - : Параметр типа {{jsxref("Boolean")}}:
-
     - `true`, верхняя граница элемента будет выровнена по верху видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. Значение по умолчанию.
     - `false`, нижняя граница элемента будет выровнена по низу видимой области прокрутки. Соответствует `scrollIntoViewOptions: {block: "end", inline: "nearest"}`
 

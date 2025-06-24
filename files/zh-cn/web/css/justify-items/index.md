@@ -112,9 +112,7 @@ justify-items: unset;
 - `auto`
   - : 使用的值是父元素的 justify-items 属性的值，除非该方框没有父元素，或者是绝对定位的，在这些情况下，`auto` 代表 `normal`。
 - `normal`
-
   - : 这个关键字的效果取决于我们所处的布局模式：
-
     - 在块级布局中，相当于是 `start`。
     - In absolutely-positioned layouts, the keyword behaved like `start` on _replaced_ absolutely-positioned boxes, and as `stretch` on _all other_ absolutely-positioned boxes.
     - In table cell layouts, this keyword has no meaning as this property is _ignored_.

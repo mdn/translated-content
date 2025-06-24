@@ -22,7 +22,6 @@ original_slug: Web/CSS/At-rule
 - {{cssxref("@import")}} — CSS 엔진에게 외부 스타일 시트를 포함하도록 알림.
 - {{cssxref("@namespace")}} — CSS 엔진에게 모든 콘텐츠가 XML 네임스페이스로 시작하(prefix가 붙)는 것이 고려되어야 함을 알림.
 - **_중첩 @-규칙_** — 중첩 문의 부분 집합으로, 조건부 그룹 규칙 속뿐만 아니라 스타일 시트의 문으로 사용될 수 있습니다:
-
   - {{cssxref("@media")}} — 장치가 미디어 질의(_media query_)를 사용하여 정의된 조건의 기준을 만족하면 해당 콘텐츠를 적용하는 조건부 그룹 규칙.
   - {{cssxref("@supports")}} — 브라우저가 주어진 조건의 기준을 만족하면 해당 콘텐츠를 적용하는 조건부 그룹 규칙.
   - {{cssxref("@document")}} {{experimental_inline}} — 스타일 시트가 적용되는 문서가 주어진 조건의 기준을 만족하면 해당 콘텐츠를 적용하는 조건부 그룹 규칙. _(CSS Spec 레벨 4로 연기됨)_

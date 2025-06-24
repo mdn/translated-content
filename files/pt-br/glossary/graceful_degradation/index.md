@@ -16,7 +16,6 @@ slug: Glossary/Graceful_degradation
 2. [Handling common HTML and CSS problems](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 3. [Implementing feature detection](/pt-BR/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 4. [MDN Web Docs Glossary](/pt-BR/docs/Glossary)
-
    1. {{Glossary("Graceful degradation")}}
    2. {{Glossary("Polyfill")}}
    3. {{Glossary("Progressive enhancement")}}

@@ -53,7 +53,6 @@ Authorization: Digest username=<username>,
 ## 指令
 
 - `<auth-scheme>`
-
   - : 定義如何編碼憑證的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Guides/Authentication#基本驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
@@ -64,7 +63,6 @@ Authorization: Digest username=<username>,
 ### 基本驗證
 
 - `<credentials>`
-
   - : 根據指定方案編碼的憑證。
 
     > [!NOTE]

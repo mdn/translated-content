@@ -52,7 +52,6 @@ l10n:
   この大きな変更のため、いくつかのリグレッションが存在する可能性があります。何らかの問題が発生した場合は、[Remote Agent のバグ報告をお願いします](https://bugzilla.mozilla.org/enter_bug.cgi?product=Remote%20Protocol&component=Remote%20Agent)。リグレッションがテストの実行を妨げる場合は、Firefox の設定項目 `remote.events.async.enabled` を `false` に設定することで、一時的に以前の動作に戻すことができます。
 
 - アクションの処理を親プロセスで制御するようにしたことに伴って、以下の不具合も修正しました:
-
   - 競合状態を起こさない、アクションシーケンスの適切なキューイングをサポートしました。これは特に WebDriver BiDi の `input.performActions` コマンドで重要です。このコマンドは並列に複数回呼び出すことができ、キューにあるアクションは順番に実行しなければなりません ([Firefox bug 1915798](https://bugzilla.mozilla.org/show_bug.cgi?id=1915798))。
 
   - アクションを発行するときに `input cancel list` が、アクションの発行が成功した後に限って正しく更新されるようになりました。以前はアクションの実行が失敗した場合に逆のアクションがその場に残ることがあり、`input source` の状態をリセットするときに予期せぬ副作用を引き起こしていました ([Firefox bug 1930845](https://bugzilla.mozilla.org/show_bug.cgi?id=1930845))。

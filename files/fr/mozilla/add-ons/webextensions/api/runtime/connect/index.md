@@ -28,9 +28,7 @@ var port = browser.runtime.connect(
 - `extensionId`{{optional_inline}}
   - : `string`. L'ID de l'extension à laquelle se connecter. Si la cible à défini un ID dans la clé [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) du fichier manifest.json, alors `extensionId` doit avoir cette valeur. Autrement, il doit avoir l'ID qui a été généré pour la cible.
 - `connectInfo`{{optional_inline}}
-
   - : `object`. Détails de la connexion:
-
     - `name`{{optional_inline}}
       - : `string`. Sera passé dans {{WebExtAPIRef("runtime.onConnect")}} pour les processus qui écoutent un évènement de type connexion.
     - `includeTlsChannelId`{{optional_inline}}
@@ -72,7 +70,6 @@ Les scripts d'arrière plan correspondant :
 
 - Ecoute les tentatives de connexion du script de contenu.
 - Quand il reçoit une tentative de connexion :
-
   - Stocke le port dans une variable nommé `portFromCS`.
   - envoie un message au script de contenu en utiliant le port.
   - Commence à écouter les messages reçus sur le port, et les enregistre.

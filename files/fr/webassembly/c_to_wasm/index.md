@@ -84,7 +84,6 @@ Vous souhaiterez parfois utiliser un template HTML personnalisé. Voyons comment
    ```
 
    Les options que nous avons donné sont un peu différentes cette fois :
-
    - Nous avons spécifié `-o hello2.html`, ce qui signifie que le compilateur va générer du code JavaScript "glue" ainsi qu'un `.html`.
    - Nous avons également spécifié `--shell-file html_template/shell_minimal.html` — cela fournit le chemin vers le template HTML que vous souhaitez utiliser pour créer le HTML qui vous permettra d'exécuter l'exemple.
 

@@ -33,7 +33,6 @@ sab.slice(début, fin);
 ### Paramètres
 
 - `début` {{optional_inline}}
-
   - : L'indice auquel commencer l'extraction (le début du tableau se situe à l'indice 0).
 
     Si la valeur est négative, `début` indique le décalage à partir de la fin du tableau. Ainsi `slice(-2)` permettra d'extraire les deux derniers éléments du tableau.
@@ -41,7 +40,6 @@ sab.slice(début, fin);
     Si `début` est absent, `slice` commencera l'extraction à partir de l'indice 0.
 
 - `fin` {{optional_inline}}
-
   - : L'indice auquel finir l'extraction. Attention, la valeur du tableau pour cet indice n'est pas incluse dans l'extraction.
 
     Ainsi, `slice(1,4)` permettra d'extraire entre le deuxième et le quatrième élément (c'est-à-dire les trois éléments dont les indices sont respectivement 1, 2 et 3).

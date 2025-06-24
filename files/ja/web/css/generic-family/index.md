@@ -21,51 +21,39 @@ l10n:
 `<generic-family>` は{{glossary("enumerated", "列挙")}}型で、下記の一覧の値のいずれかを使用して指定します：
 
 - `serif`
-
   - : セリフは文字の大きなストロークの終わりに付けられた小さな行またはストロークです。 セリフフォントでは、グリフには仕上げのストロークがあり、終わりはフレア状または先細り状になっています。例えば、 Lucida Bright、Lucida Fax、Palatino、Palatino Linotype、Palladio、URW Palladio、明朝体などが挙げられます。
 
 - `sans-serif`
-
   - : セリフのないフォントです。グリフのストロークの終わりは平坦で、装飾はありません。 サンセリフフォントの例として、Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L、ゴシック体などが挙げられます。
 
 - `monospace`
-
   - : すべてのグリフの幅は同じ固定幅です。 等幅フォントの例としては、Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console が挙げられます。
 
 - `cursive`
-
   - : 筆記体フォントのグリフは一般的に、結合ストロークや イタリック体以上の他の筆記体の特徴を有しています。筆記体フォントの例としてあh、 Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery が挙げられます。
 
 - `fantasy`
-
   - : ファンタジーフォントは、主に文字の遊び心のある表現を含む装飾的なフォントです。ファンタジーフォントの例には、Papyrus、Herculanum、Party LET、Curlz MT、Harrington などがあります。
 
 - `system-ui`
-
   - : グリフは指定されたプラットフォームの既定ユーザーインターフェイスフォントから採られます。タイポグラフィの伝統は世界中で大きく異なるため、この一般的なファミリーは、他にきれいに割り当てられなかった書体のために提供されています。
 
 - `ui-serif`
-
   - : ユーザーインターフェイスの既定のセリフフォント。上記の `serif` の定義を参照してください。
 
 - `ui-sans-serif`
-
   - : ユーザーインターフェイスの既定のサンセリフフォント。上記の `sans-serif` の定義を参照してください。
 
 - `ui-monospace`
-
   - : ユーザーインターフェイスの既定の等幅フォント。上記の `monospace` の定義を参照してください。
 
 - `ui-rounded`
-
   - : ユーザーインターフェイスの既定の丸まった特徴を持つフォント。
 
 - `math`
-
   - : 数式を表示するためのフォント、例えば上付きや下付き、複数の行をまたぐ括弧、入れ子式、明確な意味を持つ二重打ちグリフなど。
 
 - `emoji`
-
   - : 絵文字のレンダリングに特化したフォント。
 
 - `fangsong`

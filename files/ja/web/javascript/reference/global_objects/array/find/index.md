@@ -87,7 +87,7 @@ console.log(inventory.find(isCherries));
 // { name: 'cherries', quantity: 5 }
 ```
 
-#### アロー関数と分割代入の使用
+#### アロー関数と構造分解の使用
 
 ```js
 const inventory = [

@@ -58,7 +58,6 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 这些属性定义在 `AsyncGenerator.prototype` 并由所有 `AsyncGenerator` 实例共享。
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : 用于创建实例对象的构造函数。对于 `AsyncGenerator` 实例，初始值是 [`AsyncGeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction)。
 
     > **备注：** `AsyncGenerator` 对象并不会存储创建它们的异步生成器函数的引用。

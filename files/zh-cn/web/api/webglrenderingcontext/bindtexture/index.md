@@ -16,13 +16,10 @@ void gl.bindTexture(target, texture);
 ### 参数
 
 - target
-
   - : {{domxref("GLenum")}} 指定绑定点（目标）。可能的值：
-
     - `gl.TEXTURE_2D`: 二维纹理。
     - `gl.TEXTURE_CUBE_MAP`: 立方体映射纹理。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-
       - `gl.TEXTURE_3D`: 三维纹理。
       - `gl.TEXTURE_2D_ARRAY`: 二维数组纹理。
 

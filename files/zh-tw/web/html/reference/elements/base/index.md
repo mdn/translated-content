@@ -20,9 +20,7 @@ slug: Web/HTML/Reference/Elements/base
     允許絕對和相對 URL。
     不允許 [`data:`](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `javascript:` URL。
 - `target`
-
   - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{Glossary("browsing context", "瀏覽上下文")}}。以下關鍵字具有特殊含義：
-
     - `_self`（默認）：在當前瀏覽上下文中顯示結果。
     - `_blank`：在新的、未命名的瀏覽上下文中顯示結果。
     - `_parent`：如果當前頁面位於框架中，則在當前瀏覽上下文的父瀏覽上下文中顯示結果。如果沒有父瀏覽上下文，則與 `_self` 相同。

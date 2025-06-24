@@ -139,7 +139,6 @@ div {
 - {{HTMLElement("img")}}
 - 与图像相关的数据类型：{{cssxref("&lt;image&gt;")}}、{{cssxref("&lt;gradient&gt;")}}
 - 与图像相关的函数：
-
   - {{cssxref("cross-fade", "cross-fade()")}}
   - {{cssxref("element", "element()")}}
   - {{cssxref("image/image", "image()")}}
