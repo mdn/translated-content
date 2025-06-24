@@ -100,7 +100,6 @@ font-stretch: unset;
 - `semi-expanded`、`expanded`、`extra-expanded` 和 `ultra-expanded`
   - : 指定比普通字体更扩展的字体，其中 `ultra-expanded` 为扩展程度最大的字体。
 - `<percentage>`
-
   - : 介于 50% 和 200% 之间的 {{cssxref("&lt;percentage&gt;")}} 值（包含两侧）。此属性不允许使用负值。
 
 ### 关键字到数值的映射

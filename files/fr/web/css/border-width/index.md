@@ -96,9 +96,7 @@ La propriété `border-width` peut être définie avec une, deux, trois ou quatr
 ### Valeurs
 
 - `<line-width>`
-
   - : Une valeur de longueur (type {{cssxref("&lt;length&gt;")}} ou un mot-clé indiquant l'épaisseur de la bordure. Le mot-clé doit être l'une des valeurs suivantes :
-
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
@@ -181,13 +179,11 @@ p {
 ## Voir aussi
 
 - Les propriétés raccourcies liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-style")}}
   - {{cssxref("border-color")}}
 
 - Les propriétés liées à la largeur des bordures
-
   - {{cssxref("border-bottom-width")}},
   - {{cssxref("border-left-width")}},
   - {{cssxref("border-right-width")}},

@@ -22,7 +22,6 @@ Este artículo inicia el módulo con un buen vistazo a lo que realmente es el re
 - [Ruta crítica de renderización](/es/docs/Web/Performance/Critical_rendering_path)
   - : Algunos atributos y el orden en los origenes del código pueden afectar el rendimiento o su sitio web. Al minimizar el número de nodos del DOM, asegurándose de utilizar el mejor orden y los atributos para el contenido incluido, como estilos, código, elementos multimedia y código de terceros, puede mejorar drásticamente la experiencia del usuario. Este artículo analiza en detalle cómo el HTML y la ruta crítica de renderización pueden usarse para garantizar el máximo rendimiento.
 - [Mejores prácticas de rendimiento de Javascript](/es/docs/Learn/Performance/JavaScript)
-
   - : JavaScript, cuando se usa correctamente, puede permitir experiencias web interactivas e inmersivas ... o puede dañar significativamente el tiempo de descarga, el tiempo de reproducción, el rendimiento de la aplicación, la duración de la batería y la experiencia del usuario. Este artículo describe algunas de las mejores prácticas de JavaScript que pueden garantizar que, incluso el contenido más complejo, tenga el mejor rendimiento posible.
 
 - [Multimedia: Images and Video](/es/docs/Learn/Performance/Multimedia)
@@ -49,7 +48,6 @@ Este artículo inicia el módulo con un buen vistazo a lo que realmente es el re
 - [HTTP/2 y tu](/es/docs/Learn/Performance/HTTP2)
   - : La capa de transporte, es decir, HTTP, es absolutamente esencial para el funcionamiento de la web, y solo recientemente se ha visto una actualización importante en la forma de HTTP/2. Viendolo de otra forma HTTP/2 proporciona muchas mejoras de rendimiento y ventajas sobre su predecesor, pero también cambia el panorama. En este artículo, aprenderá lo que HTTP/2 hace por usted, y cómo ajustar su aplicación para que vaya más allá.
 - El papel de TLS en el rendimiento
-
   - : TLS o HTTPS, como solemos llamarlo, es crucial para crear experiencias de usuario seguras. Si bien el hardware ha reducido los impactos negativos que TLS ha tenido en el rendimiento del servidor, todavía representa una porción sustancial del tiempo que pasamos esperando que los navegadores se conecten a los servidores. Este artículo explica el proceso de reconocimiento de TLS y ofrece algunos consejos para reducir este tiempo, como el grapado OCSP, los encabezados de precarga de HSTS y el posible papel de las sugerencias de recursos en el enmascaramiento de la latencia TLS para terceros.
 
 - Leyendo gráficos de rendimientos
@@ -108,7 +106,6 @@ HTML
 - [El elemento `<video>`](/es/docs/Web/HTML/Reference/Elements/video)
 - [El elemento `<source>`](/es/docs/Web/HTML/Reference/Elements/source)
 - [El atributo `<img> srcset`](/es/docs/Web/HTML/Reference/Elements/img#attributes)
-
   - [Imagenes responsivas](/es/docs/Web/HTML/Guides/Responsive_images)
 
 - [Precargando contenido con `rel="preload"`](/es/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
@@ -142,7 +139,6 @@ APIs
 - [Resource Timing API](/es/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/es/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/es/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/es/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/es/docs/Web/API/Beacon_API)
@@ -172,7 +168,6 @@ Best Practices
 
 - [Using Service Workers](/es/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Using Web Workers](/es/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [Web Workers API](/es/docs/Web/API/Web_Workers_API)
 
 - [PWA](/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)

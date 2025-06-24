@@ -45,7 +45,6 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   [`-moz-column-rule-style`](/es/docs/Web/CSS/column-rule-style)
 
   [`-moz-column-rule-color`](/es/docs/Web/CSS/column-rule-color)
-
   - : Firefox 3.5 añade la posibilidad de usar estas extensiones al CSS de Mozilla.
 
 - [The `-moz-nativehyperlinktext` color value](/es/docs/Web/CSS/color#mozilla_specific_colors)
@@ -69,7 +68,6 @@ Firefox 3.5 implementa nuevas funcionalidades, además de agregar y mejorar el f
   [`:last-of-type`](/es/docs/Web/CSS/:nth-last-of-type)
 
   [`:only-of-type`](/es/docs/Web/CSS/:only-of-type)
-
   - : Estos selectores pueden ser usados en Firefox 3.5.
 
 #### Nuevas funcionalidades del DOM

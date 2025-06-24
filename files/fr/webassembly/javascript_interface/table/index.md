@@ -21,9 +21,7 @@ var monTableau = new WebAssembly.Table(descripteurTableau);
 ### Paramètres
 
 - `descripteurTableau`
-
   - : Un objet composé des propriétés qui suivent :
-
     - `element`
       - : Une chaîne de caractères qui représente le type de référence enregistrée dans le tableau. Actuellement, la seule valeur possible est `"anyfunc"` (pour indiquer des fonctions).
     - `initial`

@@ -22,9 +22,7 @@ Proxy-Authorization: <type> <credentials>
 - \<type>
   - : [身份验证类型](/zh-CN/docs/Web/HTTP/Guides/Authentication#authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
 - \<credentials>
-
   - : 凭证的构成方式如下：
-
     - 将用户名和密码用冒号拼接（aladdin:opensesame）。
     - 将拼接生成的字符串使用 [base64](/zh-CN/docs/Glossary/Base64) 编码方式进行编码（YWxhZGRpbjpvcGVuc2VzYW1l）。
 

@@ -20,7 +20,6 @@ _このインターフェイスは祖先である {{domxref("HTMLElement")}}, {{
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : {{domxref("AudioTrackList")}} で、この要素に含まれる {{domxref("AudioTrack")}} オブジェクトを列挙します。
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : 論理値で、 HTML の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay) 属性の値を反映し、中断なしに再生できるだけの十分なデータが揃った時点で自動的に再生を始めるかどうかを示します。
 
     > [!NOTE]

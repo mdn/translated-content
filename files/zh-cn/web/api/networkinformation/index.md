@@ -26,9 +26,7 @@ _此接口也从其父接口 {{domxref("EventTarget")}} 继承属性。_
 - {{domxref("NetworkInformation.saveData")}} {{ReadOnlyInline}}
   - : 如果用户在用户代理上设置了减少数据使用的选项，则返回 `true`。
 - {{domxref("NetworkInformation.type")}} {{ReadOnlyInline}}
-
   - : 返回设备用于网络通信的连接类型。它会是以下值之一：
-
     - `bluetooth`
     - `cellular`
     - `ethernet`

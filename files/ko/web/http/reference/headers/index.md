@@ -67,7 +67,6 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
 - {{HTTPHeader("DPR")}} {{experimental_inline}}
   - : `DPR` 요청 헤더 필드는 레이아웃 뷰포트(Section 9.1.1 of [\[CSS2\]](https://httpwg.org/http-extensions/client-hints.html#CSS2))의 CSS px(Section 5.2 of [\[CSSVAL\]](https://httpwg.org/http-extensions/client-hints.html#CSSVAL))를 통한 물리적 픽셀 비율인 클라이언트의 현재 기기 픽셀 비율(DPR)을 나타내는 숫자입니다.
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-
   - : &#x20;
 
     <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a>
@@ -79,13 +78,11 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
     ] 요청 헤더 필드는 절약한 데이터 사용에 대한 유저 에이전트의 설정을 나타내는 하나 이상의 토큰으로 이루어져있습니다.
 
 - {{HTTPHeader("Viewport-Width")}} {{experimental_inline}}
-
   - : `Viewport-Width` 요청 헤더 필드는 CSS px 단위의 레이아웃 뷰포트 width를 나타내는 숫자입니다. 제공된 CSS px값은 정수로 반올림된 숫자입니다(예, 올림 값).
 
     하나 이상의 메시지에서 `Viewport-Width`가 나타난다면, 마지막 값이 모든 이전의 값을 덮어씁니다.
 
 - {{HTTPHeader("Width")}} {{experimental_inline}}
-
   - : `Width` 요청 헤더 필드는 물리적 px(예, 이미지의 실제 크기) 단위의 원하는 리소스 width를 나타내는 숫자입니다. 제공된 물리적 px 값은 정수로 반올림된 숫자입니다(예, 올림 값).
 
     원하는 리소스 width를 요청 시점에 알 수 없거나 리소스가 표출 width를 갖지 않을 경우, `Width` 헤더 필드는 생략될 수 있습니다. 하나 이상의 메시지에서 `Width`가 나타난다면, 마지막 값이 모든 이전의 값을 덮어씁니다.

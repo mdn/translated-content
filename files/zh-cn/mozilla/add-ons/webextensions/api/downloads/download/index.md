@@ -23,13 +23,9 @@ var downloading = browser.downloads.download(
 ### 参数
 
 - `options`
-
   - : 一个 `object` ，用来指定你想要下载的文件和其他想要在下载时设置的首选项。可以包含以下属性：
-
     - `allowHttpErrors`{{optional_inline}}
-
       - : 一个 `boolean`，启用后即使遇到 HTTP 错误仍然继续下载。例如，可以使用该标志下载服务错误页面。默认值为`false`. 当设置为以下值时：
-
         - `false`,遇到 HTTP 错误时下载会被取消。
         - `true`, 即使遇到 HTTP 错误也会继续下载，并且不会弹出 HTTP 服务错误报告。但是，如果下载失败的原因是文件相关，网络相关，用户相关，或者说其他错误，仍然会报错。
 
@@ -46,7 +42,6 @@ var downloading = browser.downloads.download(
     - `method`{{optional_inline}}
       - : 一个 `string`，表示`url`使用 HTTP\[S] 协议时使用的 HTTP 方法。其值可能是 "GET" 或 "POST"。
     - `saveAs`{{optional_inline}}
-
       - : 一个`boolean` 指定是 (`true`) 否 (`false`) 提供一个文件选择对话框允许用户选择文件名。
 
         如果该选项省略，浏览器会根据用户对于该行为的偏好设置决定是否提供一个文件选择对话框 (在火狐这项设置标签在 about:preferences 里为"每次都问你要存到哪" ，或者 about:config 里 `browser.download.useDownloadDir` )。

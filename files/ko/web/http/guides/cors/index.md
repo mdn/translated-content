@@ -51,13 +51,11 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 단순 요청은 다음 조건을 모두 충족하는 요청입니다.
 
 - 다음 중 하나의 메서드
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - 사용자 에이전트가 자동으로 설정한 헤더(예를 들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name)) 외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -65,7 +63,6 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
   - {{HTTPHeader("Range")}} (오직 [단순 범위 헤더 값](https://fetch.spec.whatwg.org/#simple-range-header-value), 예를 들어 `bytes=256-` 혹은 `bytes=127-255`)
 
 - {{HTTPHeader("Content-Type")}} 헤더에 지정된 {{Glossary("MIME type","미디어 타입")}}에 대해 허용된 타입/서브타입 조합은 다음과 같습니다.
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -504,7 +501,6 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [모든(현대) 브라우저에서 CORS 사용하기](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [CORS 없이 Chrome 브라우저를 실행하는 방법](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [일반적인 문제를 다루기 위한 방법에 대한 스택 오버플로우 답변](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
   - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

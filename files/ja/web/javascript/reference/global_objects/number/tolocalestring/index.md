@@ -43,13 +43,11 @@ toLocaleString(locales, options)
 [`Intl.NumberFormat` API](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) に対応している実装では、これらの引数は正確に [`Intl.NumberFormat()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) コンストラクターの引数に対応します。`Intl.NumberFormat` に対応していない実装では、引数を無視するように求められ、使用するロケールと返す文字列の形式を完全に実装に依存するようになります。
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。`Intl.NumberFormat()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 引数に対応します。
 
     `Intl.NumberFormat` の対応がない実装では、この引数は無視され、普通はホストのロケールが使用されます。
 
 - `options` {{optional_inline}}
-
   - : 出力する書式を調整するオブジェクトです。`Intl.NumberFormat()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 引数に対応します。
 
     `Intl.NumberFormat` の対応がない実装では、この引数は無視されます。

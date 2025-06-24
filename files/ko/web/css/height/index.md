@@ -85,9 +85,7 @@ height: unset;
 - `available` {{experimental_inline}}
   - : 컨테이닝 블록 높이에서 수평 여백, 테두리, 패딩을 제외한 값.
 - `fit-content` {{experimental_inline}}
-
   - : 다음 중 더 큰 값.
-
     - 본질적인 최소 높이
     - 본질적인 선호 높이와 사용 가능한 높이 중 작은 값
 

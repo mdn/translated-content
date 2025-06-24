@@ -163,7 +163,6 @@ event.dataTransfer.effectAllowed = "copy";
 - linkMove
 
   all
-
   - : 複製、移動或連結皆可。
 
 [effectAllowed](/zh-TW/docs/Web/API/DataTransfer#effectallowed.28.29) 屬性預設所有作業都接受，如 all 值。

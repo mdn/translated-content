@@ -91,7 +91,6 @@ content: unset;
 - [`<image>`](/fr/docs/Web/CSS/image)
   - : Une image (valeur de type [`<image>`](/fr/docs/Web/CSS/image)) avec une [`url()`](/fr/docs/Web/CSS/url_value) ou [`<gradient>`](/fr/docs/Web/CSS/gradient) ou une partie de la page web fournie par la fonction [`element()`](/fr/docs/Web/CSS/element) et qui indique le contenu à afficher.
 - [`counter()`](/fr/docs/Web/CSS/counter)
-
   - : Un [compteur CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), généralement un nombre, produit via les propriétés [`<counter-reset>`](/fr/docs/Web/CSS/counter-reset) et [`<counter-increment>`](/fr/docs/Web/CSS/counter-increment) et qui peut être affiché grâce à la fonction [`counter()`](/fr/docs/Web/CSS/counter) ou [`counters()`](/fr/docs/Web/CSS/counters).
 
     [`counter()`](/fr/docs/Web/CSS/counter) possède deux formes&nbsp;: `counter(_name_)` ou `counter(_name_, _style_)`. Le texte généré est la valeur du compteur le plus profond possédant un nom donné dans ce pseudo-élément&nbsp;; il est formaté selon le style ([`<list-style-type>`](/fr/docs/Web/CSS/list-style-type) indiqué (`decimal` par défaut).

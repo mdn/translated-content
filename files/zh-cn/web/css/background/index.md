@@ -72,7 +72,6 @@ background: no-repeat center/80% url("../img/image.png");
 每一层的语法如下：
 
 - 在每一层中，下列的值可以出现 0 次或 1 次：
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)
