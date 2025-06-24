@@ -24,9 +24,7 @@ new Notification(title, options)
 - `title`
   - : 定义一个通知的标题，它将显示在通知窗口的顶部。
 - `options` {{optional_inline}}
-
   - : 一个包含要应用于通知的任何自定义设置的选项对象。可能的选项有：
-
     - `actions` {{optional_inline}}
       - : 必须未指定或为空数组。`actions` 仅支持使用 {{domxref("ServiceWorkerRegistration.showNotification()")}} 从 service worker 触发的持久通知。
     - `badge` {{optional_inline}}

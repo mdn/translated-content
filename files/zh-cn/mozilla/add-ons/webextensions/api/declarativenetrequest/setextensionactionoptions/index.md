@@ -20,7 +20,6 @@ let count = browser.declarativeNetRequest.setExtensionActionOptions(
 ### 参数
 
 - `extensionActionOptions`
-
   - : 包含标签页操作计数配置详细信息的对象。
     - `displayActionCountAsBadgeText` {{optional_inline}}
       - : `boolean`。是否自动将页面的操作计数显示为扩展的徽章文本。此首选项在会话之间持久存在。

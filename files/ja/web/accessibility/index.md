@@ -23,7 +23,7 @@ l10n:
   - : この記事では、オペレーティングシステムに組み込まれている個人設定やアクセシビリティ設定を活用して、前庭障碍のある方やその支援者の方々にとってウェブコンテンツをアクセシブルにする方法について説明します。
 - [アクセシブルなウェブアプリケーションとウィジェット](/ja/docs/Web/Accessibility/Guides/Accessible_web_applications_and_widgets)
   - : 多くの JavaScript ライブラリーは、使い慣れたデスクトップインターフェイスの動作を模倣したクライアントサイドウィジェットのライブラリーを提供しています。
-    これにより、デスクトップのウィジェットと同様の外観のウィジェットを作成することができますが、通常、支援技術で使用できるだけの意味情報（マークアップ）はマークアップには含まれていません。
+    これにより、デスクトップのウィジェットと同様の外観のウィジェットを作成することができますが、通常、支援技術で使用できるだけの意味情報はマークアップには含まれていません。
     この記事では、このようなウィジェットのアクセシビリティを向上させるための手法について記述しています。
 - [キーボードで操作可能な JavaScript ウィジェット](/ja/docs/Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets)
   - : 今まで、スタイル付きの `<div>` や `<span>` ベースのウィジェットをアクセシブルにしたいというウェブ開発者にとって、適切な技術がありませんでした。
@@ -66,7 +66,7 @@ MDN の[アクセシビリティ学習領域](/ja/docs/Learn_web_development/Cor
 ## リファレンス
 
 - [ARIA リファレンス](/ja/docs/Web/Accessibility/ARIA/Reference)
-  - : Reference documentation for Accessible Rich Internet Applications (ARIA) attributes and roles.
+  - : アクセシブルなリッチインターネットアプリケーション (ARIA) の属性およびロールに関するリファレンスドキュメントです。
 
 ## 関連情報
 

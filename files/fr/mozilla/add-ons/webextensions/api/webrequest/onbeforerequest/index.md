@@ -46,9 +46,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
-
     - `details`
       - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
 
@@ -57,9 +55,7 @@ Les événements ont trois fonctions :
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
 - `extraInfoSpec`{{optional_inline}}
-
   - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
-
     - `"blocking"`: rendre la requête synchrone, de sorte que vous pouvez annuler ou rediriger la requête
     - `"requestBody"`: include `requestBody` dans l'objet `details` transmis à l'auditeur
 
@@ -70,9 +66,7 @@ Les événements ont trois fonctions :
 - `documentUrl`
   - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
 - `frameAncestors`
-
   - : `array`. Contient des informations pour chaque document dans la hiérarchie des cadres jusqu'au document de niveau supérieur. Le premier élément du tableau contient des informations sur le parent immédiat du document demandé, et le dernier élément contient des informations sur le document de niveau supérieur. Si la charge est réellement pour le document de niveau supérieur, alors ce tableau est vide.
-
     - `url`
       - : `string`. URL à partir de laquelle le document a été chargé.
     - `frameId`
@@ -83,7 +77,6 @@ Les événements ont trois fonctions :
 - `method`
   - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
 - `originUrl`
-
   - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
 
     L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
@@ -91,17 +84,13 @@ Les événements ont trois fonctions :
 - `parentFrameId`
   - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
 - `proxyInfo`
-
   - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
-
     - `host`
       - : `string`. Le nom d'hôte du serveur proxy.
     - `port`
       - : `integer`. Le numéro de port du serveur proxy.
     - `type`
-
       - : `string`. Le type de serveur proxy. L'un des :
-
         - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
         - "https": proxy HTTP sur connexion TLS vers proxy
         - "socks": SOCKS v5 proxy
@@ -117,13 +106,10 @@ Les événements ont trois fonctions :
       - : `integer`. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.
 
 - `requestBody`{{optional_inline}}
-
   - : `object`. Contient les données du corps de la requête HTTP. Seulement si `extraInfoSpec` contient `"requestBody"`.
-
     - `error`{{optional_inline}}
       - : `string`. Ce paramètre est défini si des erreurs ont été rencontrées lors de l'obtention des données du corps de la demande.
     - `formData`{{optional_inline}}
-
       - : `object`. Cet objet est présent si la méthode de requête est POST et que le corps est une séquence de paires clé-valeur codées en UTF-8 sous la forme "multipart/form-data" ou "application/x-www-form-urlencoded".
 
         Il s'agit d'un dictionnaire dans lequel chaque clé contient la liste de toutes les valeurs de cette clé. Par exemple: `{'key': ['value1', 'value2']}`. Si les données sont d'un autre type de support, ou si elles sont malformées, l'objet n'est pas présent.

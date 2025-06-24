@@ -21,11 +21,9 @@ l10n:
 該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
-
   - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
 - `height` {{experimental_inline}}
-
   - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
 
 - `width` {{experimental_inline}}

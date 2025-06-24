@@ -134,7 +134,6 @@ python3 -V
 你可以轻松地从[python.org](https://www.python.org/) 安装 Python 3（以及 pip3 工具）:
 
 1. 下载所需的安装程序：
-
    1. 点击 <https://www.python.org/downloads/>
    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 
@@ -158,7 +157,6 @@ pip3 list
 windows 默认不包含 Python, 但你可以从[python.org](https://www.python.org/) 轻松地安装它（以及 pip3 工具）：
 
 1. 下载所需版本：
-
    1. 点击 <https://www.python.org/downloads/>
    2. 选择 **Download Python 3.8.2** (具体的版本号可能不同)。
 

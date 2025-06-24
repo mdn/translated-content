@@ -20,9 +20,7 @@ var gettingFrame = browser.webNavigation.getFrame(
 ### Paramètres
 
 - `details`
-
   - : `object`. Informations sur le cadre pour récupérer des informations sur :
-
     - `tabId`
       - : `integer`. L'ID de l'onglet dans lequel se trouve le cadre.
     - `processId` {{optional_inline}}

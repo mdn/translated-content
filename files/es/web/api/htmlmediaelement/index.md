@@ -16,7 +16,6 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : Un {{domxref("AudioTrackList")}} que lista los {{domxref("AudioTrack")}} objetos contenidos en el elemento.
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : Un {{jsxref("Booleano")}} que refleja el [`autoplay`](/es/docs/Web/HTML/Reference/Elements/video#autoplay). Atributo HTML, que indica si la reproducción debe comenzar automáticamente tan pronto como haya suficiente material disponible para hacerlo sin interrupción.
 
     > [!NOTE]
@@ -59,7 +58,6 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
   - : Is a `double` that provides access to the fragment end time if the media element has a fragment URI for `currentSrc`, otherwise it is equal to the media duration.
 - {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
-
   - : Is a `unsigned long` that indicates the number of samples that will be returned in the framebuffer of each `MozAudioAvailable` event. This number is a total for all channels, and by default is set to be the number of channels \* 1024 (e.g., 2 channels \* 1024 samples = 2048 total).
 
     The `mozFrameBufferLength` property can be set to a new value for lower latency, larger amounts of data, etc. The size given _must_ be a number between 512 and 16384. Using any other size results in an exception being thrown. The best time to set a new length is after the [loadedmetadata](/es/docs/Web/API/HTMLMediaElement/loadedmetadata_event) event fires, when the audio info is known, but before the audio has started or `MozAudioAvailable` events have begun firing.
@@ -95,7 +93,6 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 - {{domxref("HTMLMediaElement.textTracks")}} {{readonlyinline}}
   - : Returns the list of {{domxref("TextTrack")}} objects contained in the element.
 - {{domxref("HTMLMediaElement.videoTracks")}} {{readonlyinline}}
-
   - : Returns the list of {{domxref("VideoTrack")}} objects contained in the element.
 
     > [!NOTE]
@@ -107,7 +104,6 @@ Esta interfaz también hereda propiedades de sus antepasados {{domxref("HTMLElem
 ### Event handlers
 
 - {{domxref("HTMLMediaElement.onencrypted")}}
-
   - : Sets the {{domxref('EventHandler')}} called when the media is encrypted.
 
 - {{domxref("HTMLMediaElement.onwaitingforkey")}}
@@ -178,12 +174,10 @@ These methods are obsolete and should not be used, even if a browser still suppo
 ## See also
 
 - References
-
   - {{HTMLElement("video")}} and {{HTMLElement("audio")}} HTML elements.
   - {{domxref("HTMLVideoElement")}} and {{domxref("HTMLAudioElement")}} interfaces, derived from `HTMLMediaElement`.
 
 - Articles
-
   - [Using HTML5 audio and video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - [Media formats supported by the audio and video elements](/es/docs/Web/Media/Formats)
   - [Web Audio API](/es/docs/Web/API/Web_Audio_API)

@@ -116,16 +116,12 @@ También puedes comprobar el contraste de color sobre la marcha utilizando las h
 ## Criterios de conformidad relacionados con WCAG
 
 - [1.4.3 Contraste mínimo (AA)](https://www.w3.org/TR/WCAG21/#contrast-minimum)
-
   - : El contraste de color entre el fondo y el contenido del primer plano debe tener un nivel mínimo para garantizar la legibilidad:
-
     - El texto y el fondo deben tener una relación de contraste de al menos 4.5:1.
     - Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 3:1. El texto más grande se define como de al menos 18pt, o 14pt en negrita.
 
 - [1.4.6 Contraste mejorado (AAA)](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
-
   - : Esto sigue y se basa en el criterio 1.4.3.
-
     - El texto y el fondo deben tener una relación de contraste de al menos 7:1.
     - Los encabezados (o simplemente el texto más grande) deben tener una relación de contraste de al menos 4.5:1.
 

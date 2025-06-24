@@ -90,14 +90,12 @@ li li {
 이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
 
 - `compact` {{Deprecated_inline}}
-
   - : This Boolean attribute hints that the list should be rendered in a compact style. The interpretation of this attribute depends on the {{glossary("user agent")}}, and it doesn't work in all browsers.
 
     > [!WARNING]
     > Do not use this attribute, as it has been deprecated: use [CSS](/ko/docs/Web/CSS) instead. To give a similar effect as the `compact` attribute, the CSS property {{cssxref("line-height")}} can be used with a value of `80%`.
 
 - `type` {{Deprecated_inline}}
-
   - : This attribute sets the bullet style for the list. The values defined under [HTML3.2](/ko/docs/HTML3.2) and the transitional version of [HTML 4.0/4.01](/ko/docs/HTML4.01) are:
 
     `circle`
@@ -197,7 +195,6 @@ li li {
 
 - 리스트 관련 다른 요소: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
-
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
   - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}

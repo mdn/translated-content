@@ -56,7 +56,6 @@ slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_ski
 
 1. 将你完成的内容放到在线、可分享的编辑器，如：[CodePen](https://codepen.io/)、[jsFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。你可以自行编写代码，或使用上面小节中链接的初始文件。
 2. 在 [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn/250) 中发贴寻求打分评估或帮助。你的贴子需要包含：
-
    - 一个描述的标题，如：“Assessment wanted for OOJS 1 skill test”。
    - 你已经尝试过的详细内容，以及你希望我们能够做什么，例如：你遇到了困难，想要寻求帮助；或希望得到打分评估。
    - 一个指向用于打分评估或寻求帮助的示例代码的链接（使用上文中提到的任意一种在线的、可分享的编辑器）。这是一种很好的形式——如果别人没法看到你的代码，他们很难对你提供代码上的帮助。

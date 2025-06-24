@@ -20,7 +20,6 @@ A tecla de atalho para acessar este elemento a partir do teclado.
 - `accesskey`
   - : A tecla de atalho para acessar este elemento a partir do teclado.
 - `for`
-
   - : O ID de um elemento de formulário relacionados com labelable no mesmo documento como o elemento label. O primeiro elemento tal no documento com uma ID correspondente ao valor do atributo é o controle marcado for este elemento etiqueta.
 
     > [!NOTE]

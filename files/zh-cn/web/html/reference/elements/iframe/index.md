@@ -38,7 +38,6 @@ iframe {
 该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow`
-
   - : 用于为 `<iframe>` 指定其[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。该策略根据请求的来源规定 `<iframe>` 可以使用哪些特性（例如，访问麦克风、摄像头、电池、web 共享等）。
 
     示例请参见 `Permissions-Policy` 中的 [iframe](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframe)。
@@ -47,14 +46,12 @@ iframe {
     > 通过 `allow` 属性指定的权限策略会在 {{httpheader("Permissions-Policy")}} 标头指定的策略基础上进一步地限制。它不会替换原有策略。
 
 - `allowfullscreen`
-
   - : 设置为 `true` 时，可以通过调用 `<iframe>` 的 {{domxref("Element.requestFullscreen", "requestFullscreen()")}} 方法激活全屏模式。
 
     > [!NOTE]
     > 这是一个历史遗留属性，已经被重新定义为 `allow="fullscreen"`。
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
-
   - : 设置为 `true` 时，跨源的 `<iframe>` 就可以调用[支付请求 API](/zh-CN/docs/Web/API/Payment_Request_API)。
 
     > [!NOTE]
@@ -69,13 +66,10 @@ iframe {
 - `height`
   - : 以 CSS 像素格式指定框架的高度。默认值为 `150`。
 - `loading`
-
   - : 表示浏览器应当何时加载 iframe：
-
     - `eager`
       - : 在页面加载时立即加载 iframe（默认值）。
     - `lazy`
-
       - : 推迟 iframe 的加载，直到达到浏览器定义的{{glossary("visual viewport", "可视视口")}}的计算距离。目的是在浏览器确定需要它前，避免占用获取框架所需的网络和存储带宽。这改进了在大多数使用场景中的性能表现，尤其是减少了页面的首次加载时间。
 
         > [!NOTE]
@@ -84,9 +78,7 @@ iframe {
 - `name`
   - : 可定位嵌入的浏览上下文的名称。该名称可以用作 {{HTMLElement("a")}}、{{HTMLElement("form")}} 或 {{HTMLElement("base")}} 元素的 `target` 属性值，也可以用作 {{HTMLElement("input")}} 和 {{HTMLElement("button")}} 元素的 `formtarget` 属性值，还可以用作 {{domxref("Window.open()","window.open()")}} 方法的 `windowName` 参数值。
 - `referrerpolicy`
-
   - : 表示在获取 iframe 资源时发送哪个 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
-
     - `no-referrer`
       - : 不发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`
@@ -105,9 +97,7 @@ iframe {
       - : 始终在 referrer 标头中包含源*和*路径（但不包括[片段标识符](/zh-CN/docs/Web/API/HTMLAnchorElement/hash)、[密码](/zh-CN/docs/Web/API/HTMLAnchorElement/password)和[用户名](/zh-CN/docs/Web/API/HTMLAnchorElement/username)）。**这个值是不安全的**，因为这样做会向不安全的源暴露受 TLS 保护的资源的源和路径。
 
 - `sandbox`
-
   - : 控制应用于嵌入在 `<iframe>` 中的内容的限制。该属性的值可以为空以应用所有限制，也可以为空格分隔的标记以解除特定的限制：
-
     - `allow-downloads`
       - : 允许通过带有 [download](/zh-CN/docs/Web/HTML/Reference/Elements/a#download) 属性的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素或者通过导航来下载文件，无论是用户通过点击链接触发，还是在用户没有交互的情况下通过 JS 代码触发。
     - `allow-forms`
@@ -146,14 +136,12 @@ iframe {
     > 在带有 `sandbox` 属性的 `<iframe>` 嵌入的页面中，当用户被重定向，打开一个弹出窗口或者打开一个新标签页时，新的浏览上下文同样受到 `sandbox` 的限制。这可能会产生问题——例如，如果一个页面被嵌入到没有设置 `sandbox="allow-forms"` 或 `sandbox="allow-popups-to-escape-sandbox"` 属性的 `<iframe>` 时，当这个页面在独立的标签页中打开一个新站点，这个页面的表单提交将会静默失败。
 
 - `src`
-
   - : 被嵌入的页面的 URL 地址。使用 `about:blank` 值可以嵌入一个遵从[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)的空白页。还需要注意的是，在 Firefox（版本 65 及更高版本）、基于 Chromium 的浏览器、Safari/iOS 中使用代码移除 `iframe` 的 src 属性（例如通过 {{domxref("Element.removeAttribute()")}}）会导致 `about:blank` 被载入框架。
 
     > [!NOTE]
     > 在解析任何相对 URL（例如锚点链接）时，`about:blank` 页面会使用嵌入的文档的 URL 作为它的基准 URL。
 
 - `srcdoc`
-
   - : 要嵌入的内联 HTML，会覆盖 `src` 属性。其内容应遵循完整的 HTML 文档的语法（包含文档类型指令、`<html>`、`<body>` 标签等，虽然绝大多数标签可以被省略，仅保留主体内容）。该文档会以 `about:srcdoc` 作为其位置。如果浏览器不支持 `srcdoc` 属性，其会回退到 `src` 属性的 URL。
 
     > [!NOTE]
@@ -177,9 +165,7 @@ iframe {
 - `marginwidth` {{Deprecated_Inline}}
   - : 框架的内容距其左边框和右边框的距离（以像素为单位）。
 - `scrolling` {{Deprecated_Inline}}
-
   - : 指示浏览器是否应为框架提供滚动条：
-
     - `auto`
       - : 仅当框架的内容超出框架的尺寸时显示滚动条。
     - `yes`

@@ -38,9 +38,7 @@ chrome.extension.onRequest.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数传递以下参数：
-
     - `request`
       - : `any`。由调用脚本发送的请求。
     - `sender`

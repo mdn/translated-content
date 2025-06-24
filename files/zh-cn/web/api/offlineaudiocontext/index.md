@@ -44,7 +44,6 @@ _从其父接口 {{domxref("BaseAudioContext")}} 继承方法。_
 通过使用 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 或给这个接口的 `oneventname` 属性指定一个事件监听器来监听这些事件。
 
 - [`complete`](/zh-CN/docs/Web/API/OfflineAudioContext/complete_event)
-
   - : 当离线音频上下文的渲染完成时触发。
 
 ## 示例

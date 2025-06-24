@@ -47,7 +47,6 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 
 1. 切換到你開啟了`number-game-errors.html` 的分頁，然後打開你的 JavaScript 主控台。你應該會看到如下的幾行錯誤訊息：![](not-a-function.png)
 2. 這是一個非常容易追尋的錯誤，而且瀏覽器還給你了不少有用的資訊來幫助你（這張截圖是 Firefox 的，但其他瀏覽器也會提示相似的錯誤訊息）。從左到右，我們可以看到：
-
    - 一個紅色的「X」代表這是一個錯誤訊息。
    - 一條錯誤訊息提示你什麼東西出錯了：「TypeError: guessSubmit.addeventListener is not a function（TypeError: guessSubmit.addeventListener 並不是一個函式）」
    - 一個「Learn More」連結連向一個解釋這個錯誤並包含大量詳細資訊的 MDN 頁面。

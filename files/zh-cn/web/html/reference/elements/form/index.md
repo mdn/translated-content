@@ -52,7 +52,6 @@ label {
 此元素拥有[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `accept`{{Deprecated_Inline}}
-
   - : 一个逗号分隔的列表，包括服务器能接受的内容类型。
 
     > **备注：** **此属性已在 HTML5 中被移除并且不再被使用**。作为替代，可以使用 `<input type=file>` 元素中的 [`accept`](/zh-CN/docs/Web/HTML/Reference/Elements/input#accept) 属性。
@@ -60,18 +59,14 @@ label {
 - `accept-charset`
   - : 服务器接受的{{Glossary("character encoding", "字符编码")}}。规范允许使用单个不区分大小写的值——`"UTF-8"`，反应了这种编码的普遍性（历史上，可以以逗号分隔列表或空格分隔列表的形式指定多个字符编码）。
 - `autocapitalize` {{non-standard_inline}}
-
   - : 这是一个被 iOS Safari 使用的非标准属性。当用户在一些表单的文本后代控件中，输入/编辑一些文本值时，此属性控制了这些文本值的首字母是否大写或者使用其他的大写样式。如果 `autocapitalize` 属性在某个单独的表单后代控件被指定的话，那么此单独的设定会覆盖原来表单范围内的 `autocapitalize` 设定。默认值为 `sentences`。可以选择的值如下：
-
     - `none`：完全禁用自动首字母大写。
     - `sentences`：自动对每句话首字母大写。
     - `words`：自动对每个单词首字母大写。
     - `characters`：自动大写所有的字母。
 
 - `autocomplete`
-
   - : 用于指示 input 元素是否能够拥有一个默认值，此默认值是由浏览器自动补全的。此设定可以被属于此表单的子元素的 `autocomplete` 属性覆盖。可能的值有：
-
     - `off`：浏览器可能不会自动补全条目（在疑似登录表单中，浏览器倾向于忽略该值，而提供密码自动填充功能，参见[自动填充属性和登录](/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#autocomplete_属性和登录字段)）
     - `on`：浏览器可自动补全条目
 
@@ -87,17 +82,13 @@ label {
 - `action`
   - : 处理表单提交的 URL。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formaction`](/zh-CN/docs/Web/HTML/Reference/Elements/button#formaction) 属性覆盖。
 - `enctype`
-
   - : 当 `method` 属性值为 `post` 时，`enctype` 就是将表单的内容提交给服务器的 [MIME 类型](https://zh.wikipedia.org/wiki/互联网媒体类型)。可能的取值有：
-
     - `application/x-www-form-urlencoded`：未指定属性时的默认值。
     - `multipart/form-data`：当表单包含 `type=file` 的 {{HTMLElement("input")}} 元素时使用此值。
     - `text/plain`：出现于 HTML5，用于调试。这个值可被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/image) 元素上的 [`formenctype`](/zh-CN/docs/Web/HTML/Reference/Elements/button#formenctype) 属性覆盖。
 
 - `method`
-
   - : 浏览器使用这种 [HTTP](/zh-CN/docs/Web/HTTP) 方法来提交 表单。可能的值有：
-
     - `post`：{{HTTPMethod("POST")}} 方法；表单数据会包含在表单体内然后发送给服务器。
     - `get`（默认）：{{HTTPMethod("GET")}} 方法；表单数据会附加在 `action` 属性的 URL 中，并以 `?` 作为分隔符，[没有副作用](/zh-CN/docs/Glossary/Idempotent)时使用这个方法。
     - `dialog`：如果表单在 {{HTMLElement("dialog")}} 元素中，提交时关闭对话框。此值可以被 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/image) 元素中的 [`formmethod`](/zh-CN/docs/Web/HTML/Reference/Elements/button#formmethod) 属性覆盖。
@@ -105,9 +96,7 @@ label {
 - `novalidate`
   - : 此布尔值属性表示提交表单时不需要验证表单。如果没有声明该属性（因此表单需要通过验证）。该属性可以被表单中的 {{HTMLElement("button")}}、[`<input type="submit">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/submit) 或 [`<input type="image">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/image) 元素中的 [`formnovalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/button#formnovalidate) 属性覆盖。
 - `target`
-
   - : 表示在提交表单之后，在哪里显示响应信息。这是一个*浏览上下文*的名字/关键字（如标签页、窗口或 iframe）。下述关键字有特别含义：
-
     - `_self`（默认）：在相同浏览上下文中加载。
     - `_blank`：在新的未命名的浏览上下文中加载。
     - `_parent`：在当前上下文的父级浏览上下文中加载，如果没有父级，则与 `_self` 表现一致。

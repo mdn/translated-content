@@ -249,7 +249,6 @@ Los siguientes son un ejemplo renderizado resultado del codigo del anterior ejem
 
 - [Otros atributos globales diferentes](/es/docs/Web/HTML/Reference/Global_attributes)
 - Otro, microdata relativo, atributos globales:
-
   - [`itemid`](/es/docs/Web/HTML/Reference/Global_attributes#itemid)
   - [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes#itemprop)
   - [`itemref`](/es/docs/Web/HTML/Reference/Global_attributes#itemref)

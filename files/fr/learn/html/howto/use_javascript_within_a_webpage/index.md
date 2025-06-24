@@ -74,7 +74,6 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
 
 - **Tout le contenu d'un document doit être disponible sous forme de texte (structuré).** HTML doit être utilisé le plus possible pour stocker le contenu. Par exemple, si vous avez implémenté une super barre de chargement, n'oubliez pas de fournir les pourcentages en texte dans le HTML. De la même façon, les menus déroulants doivent être structurées en [listes non ordonnées](/fr/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML) de [liens](/fr/docs/Learn/HTML/Howto/Create_a_hyperlink).
 - **Toutes les fonctionnalités doivent être accessibles depuis le clavier.**
-
   - Les utilisateurs doivent pouvoir utiliser la touche de tabulation pour naviguer entre les différents contrôles (les liens, les entrées de formulaires, etc.) en suivant un ordre logique.
   - Si vous utilisez les événements liés au pointage (les évènements liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles via le clavier.
   - Testez votre site en utilisant uniquement le clavier.
@@ -83,7 +82,6 @@ L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut
 - **Les animations doivent être courtes et légères, sans clignotement.** Les clignotements peuvent agacer, ou pire, [entraîner des crises d'épilepsie](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Si une animation dure plus longtemps que quelques secondes, il faudra fournir une méthode pour l'annuler.
 - **Laissez les utilisateurs initier les interactions.** Cela signifie qu'il ne faut pas mettre à jour du contenu, rediriger vers un autre document ou rafraîchir la page automatiquement. Il ne faut pas utiliser de caroussels ou afficher des pop-ups sans aucun avertissement.
 - **Ayez un plan de secours pour les utilisateurs qui n'ont pas JavaScript activé.** Certaines personnes désactivent JavaScript afin d'améliorer les performances ou la sécurité. D'autres peuvent rencontrer des problèmes de connectivité qui empêcheraient le chargement des scripts. De plus, certains scripts tiers (publicités, scripts de tracking, extensions de navigateurs) peuvent casser les scripts que vous avez écrit.
-
   - _A minima_, laissez un court message grâce à la balise {{HTMLElement("noscript")}} : `<noscript>Pour utiliser ce site, merci d'activer JavaScript.</noscript>`
   - Idéalement, lorsque c'est possible, dupliquez les fonctionnalités offertes par JavaScript via le HTML et des scripts exécutés côté serveur.
   - Si vous souhaitez mettre en place des effets visuels, CSS vous permettra d'y parvenir plus intuitivement.

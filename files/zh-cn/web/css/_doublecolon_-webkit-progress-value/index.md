@@ -49,7 +49,6 @@ progress {
 ## 参见
 
 - WebKit/Blink 使用的用来修改{{HTMLElement("progress")}}元素其他部分样式的伪元素：
-
   - {{ cssxref("::-webkit-progress-bar") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

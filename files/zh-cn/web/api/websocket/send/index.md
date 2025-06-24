@@ -16,9 +16,7 @@ WebSocket.send("Hello server!");
 ### 参数
 
 - `data`
-
   - : 用于传输至服务器的数据。它必须是以下类型之一：
-
     - {{domxref("USVString")}}
       - : 文本字符串。字符串将以 UTF-8 格式添加到缓冲区，并且 `bufferedAmount` 将加上该字符串以 UTF-8 格式编码时的字节数的值。
     - {{domxref("ArrayBuffer")}}
