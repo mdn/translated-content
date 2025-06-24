@@ -84,7 +84,6 @@ li {
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `download`
-
   - : Este atributo, indica descargar a los navegadores una URL en lugar de navegar hacia ella, por lo que el usuario será dirigido para salvarla como un archivo local. Si el atributo tiene un valor, éste se utilizará como nombre de archivo por defecto en el mensaje Guardar que se abre cuando el usuario hace clic en el enlace (sin embargo, el usuario puede cambiar el nombre antes de guardar el archivo). No hay restricciones sobre los valores permitidos, aunque: / y: \ se convertirán en guiones bajos (_underscores_), lo que evitará sugerencias de ruta específicas. Se debe tener en cuenta que la mayoría de los sistemas de archivos tienen limitaciones con respecto a los símbolos de puntuación admitidos en los nombres de archivo, por lo que los navegadores ajustarán los nombres de los archivos en consecuencia.
 
     > [!NOTE]
@@ -95,7 +94,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     > - Si `Content-Disposition:` está ajustado a `inline`, Firefox prioriza `Content-Disposition`, como en el caso del nombre de archivo, mientras que Chrome prioriza el atributo `download`.
 
 - `href`
-
   - : Contiene una URL o un fragmento de URL al cual apunta el enlace.
     Un fragmento de URL es un nombre ("name") precedido por el símbolo de número (`#`), el cual especifíca una ubicación interna objetivo (un [ID](/es/docs/Web/HTML/Reference/Global_attributes#attr-id) de un elemento HTML) dentro del actual documento. Las URLs no están restringidas sólo a documentos de internet basados en HTTP, sin embargo pueden utilizar cualquier protocolo soportado por el navegador. Por ejemplo, [`file:`](https://en.wikipedia.org/wiki/File_URI_scheme), `ftp:`, and `mailto:` funcionan en la mayoría de los navegadores.
     Este atributo puede ser omitido (a partir de HTML5) para crear un enlace de marcador de posición. Un enlace de marcador de posición se parece a un enlace tradicional, pero que no dirige a algún lugar.
@@ -106,9 +104,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `hreflang`
   - : Este atributo indica el lenguaje humano del recurso al que se enlaza. Este es únicamente informativo, sin ninguna funcionalidad incorporada. Los valores permitidos están determinados por [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt).
 - `referrerpolicy` {{experimental_inline}}
-
   - : Indica que [referencia (_referer_)](/es/docs/Web/HTTP/Reference/Headers/Referer) enviar cuado la URL es recuperada:
-
     - `'no-referrer'` significa `Referer:` el encabezado no será enviado.
     - `'no-referrer-when-downgrade'` significa sin `Referer:` el encabezado será enviado cuando se navega a un origen (`origin`) sin HTTPS. Este es un comportamiento por defecto.
     - `'origin'` significa que el "referrer" estará en el [origen](/es/docs/Glossary/Origin) (`origin`) de la página, no incluye la información posterior al dominio.
@@ -118,9 +114,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `rel`
   - : Especifica la relación del objeto de destino con el objeto de enlace. El valor es una lista separada por espacios de tipos de enlace[tipos de enlace (link types)](/es/docs/Web/HTML/Reference/Attributes/rel).
 - `target`
-
   - : Especifica en donde desplegar la URL enlazada. Es un nombre (_name of_), o palabra clave (_keyword for_), un contexto de navegación _(browsing context)_: una pestaña, ventana, o `<iframe>`. Las siguientes palabras clave (_keywords_) tienen significado especial:
-
     - `_self`: Carga la URL en el mismo contexto de navegación que el actual. Este es el comportamiento por defecto.
     - `_blank`: Carga la URL en un nuevo contexto de navegación. Usualmente es una pestaña, sin embargo, los usuarios pueden configurar los navegadores para utilizar una ventana nueva en lugar de la pestaña.
     - `_parent`: Carga la URL en el contexto de navegación padre (_parent_) del actual. Si no existe el padre, este se comporta del mismo modo que `_self`.
@@ -135,7 +129,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 ### Atributos obsoletos
 
 - `charset` {{Deprecated_Inline}}
-
   - : Este atributo define la [codificación de caracteres (character encoding)](/es/docs/Glossary/Character_encoding) de la URL enlazada. El valor debe de ser una lista delimitada por espacio y/o coma de caracteres definidos en [RFC 2045](https://tools.ietf.org/html/rfc2045). El valor por defecto es `ISO-8859-1`.
 
     > [!NOTE]
@@ -144,7 +137,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `coords` {{Deprecated_Inline}}
   - : Para utilizar con el siguiente atributo `shape`, este atributo utiliza una lista de números separada por comas para definir las coordenadas del enlace en la página.
 - `name` {{Deprecated_Inline}}
-
   - : Este atributo era requerido para anclas (_anchors_) que definían una posible ubicación dentro de la página. En HTML 4.01, `id` y `name` podían ser utilizados simultáneamente en un elemento `<a>` simpre y cuando tuvieran valores idénticos.
 
     > [!NOTE]
@@ -153,7 +145,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `rev` {{Deprecated_Inline}}
   - : Este atributo especifica un enlace inverso, la relación inversa del atributo **rel**. Fue desechado por ser muy confuso.
 - `shape` {{Deprecated_Inline}}
-
   - : Este atributo era utilizado para definir una región de enlaces para crear un mapa de imagen. El valore es `circle`, `default`, `polygon`, y `rect`. El formato del atributo `coords` depende del valor de la forma geométrica. Para `circle`, el valor es `x,y,r` donde `x` y `y` son las coordenadas en pixel para el centro del círculo y `r` es el valor del radio en pixeles. Para `rect`, el atributo `coords` debe ser `x,y,w,h`. Los valores `x y y` definen la esquina superior izquierda del rectángulo, mientras que `w` y `h` definen el ancho y el alto respectivamente. Un valor del `polygon` para `shape` requiere los valores `x1,y1,x2,y2,...` para `coords`. Cada uno de los pares `x,y` definen un punto en el polígono, con puntos sucesivos que son unidos por líneas rectas y el útlimo punto se une al primer punto. El valor `default` para `shape` Requiere que el área encerrada, típicamente una imágen, sea utilizada.
 
     > [!NOTE]

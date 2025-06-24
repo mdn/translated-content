@@ -53,7 +53,6 @@ l10n:
 - {{Glossary("Scroll_container", "スクロールコンテナー")}}と[スクロールポート](/ja/docs/Glossary/Scroll_container#スクロールポート)（用語集の用語）
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュール:
-
   - {{cssxref("scroll-padding")}} 一括指定プロパティ
   - {{cssxref("scroll-snap-type")}} プロパティ
   - {{cssxref("scroll-margin")}} 一括指定プロパティ

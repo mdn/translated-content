@@ -20,11 +20,9 @@ new MutationObserver(callback)
 ### 매개변수
 
 - `callback`
-
   - : 주어진 노드 또는 하위 트리와 옵션을 만족하는 DOM 변경을 감지하면 호출할 콜백입니다.
 
     `callback` 함수는 두 개의 매개변수를 받습니다.
-
     1. 일어난 변경 각각을 나타내는 {{domxref("MutationRecord")}} 객체들의 배열
     2. 콜백을 호출한 {{domxref("MutationObserver")}}
 

@@ -37,7 +37,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `error`
   - : `object`. Si le port a été déconnecté en raison d'une erreur, il sera défini sur un objet avec un `message`, de propriété de chaîne, vous donnant plus d'informations sur l'erreur. Voir `onDisconnect`.
 - `onDisconnect`
-
   - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété `error` donnant plus d'informations sur l'erreur :
 
     ```js
@@ -91,7 +90,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script.
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`.
   - sends the content script a message using the port.
   - starts listening to messages received on the port, and logs them.

@@ -31,7 +31,6 @@ toLocaleUpperCase(locales)
 ### 引数
 
 - `locale` {{optional_inline}}
-
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 ロケール固有の大文字小文字の対応付けに従って大文字に変換するために使用するロケールを示します。 引数 `locales` の一般的な形成と解釈については、[`Intl` メインページの引数の説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl#locales_引数) を参照してください。
 
     引数 `locales` を使用する他のメソッドとは異なり、`toLocaleLowerCase()` はロケールの照合を許可しません。 そのため、引数 `locales` の有効性を調べた後、 `toLocaleLowerCase()` は常にリストの最初のロケール（リストが空の場合は既定値）を、そのロケールに実装で対応していない場合でも使用します。

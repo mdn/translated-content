@@ -18,6 +18,5 @@ HTTP/2 不会修改 HTTP 协议的语义。HTTP 1.1 中的所有核心概念（�
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - 维基百科上的 [HTTP/2](https://zh.wikipedia.org/wiki/HTTP/2)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("Latency", "延迟")}}

@@ -14,7 +14,6 @@ l10n:
 _`GeolocationPositionError` 介面不繼承任何屬性。_
 
 - {{domxref("GeolocationPositionError.code")}} {{ReadOnlyInline}}
-
   - : 回傳一個 `unsigned short`，表示錯誤代碼。可能的值如下：
 
     | 值  | 相關常數               | 描述                                                                                                                 |

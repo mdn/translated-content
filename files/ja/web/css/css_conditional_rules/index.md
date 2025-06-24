@@ -71,33 +71,26 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
 ## ガイド
 
 - [機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
-
   - : 機能クエリーを使用すると、指定したプロパティおよび値のブラウザーの対応を確認してから、 CSS ルールを選択的に適用します。
 
 - [CSS メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : メディアクエリー、その構文、およびメディアクエリー式を構築するために使用される演算子とメディア特性について紹介します。
 
 - [古いブラウザーの対応: 機能クエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#機能クエリー)
-
   - : ブラウザーのウェブ機能の対応レベルに応じて、 CSS を対象とする機能クエリーを使用する方法です。
 
 - [ブラウザーの機能検出: CSS `@supports`](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)
-
   - : CSS の `@supports` を含む、JavaScript および CSS の機能検出について見ていきます。
 
 - [コンテナースクロール状態クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-
   - : コンテナーのスクロール状態クエリーの使用、種別ごとの例付きです。
 
 ## 関連概念
 
 - [CSS カスケードと継承](/ja/docs/Web/CSS/CSS_cascade)モジュール
-
   - {{cssxref("@import")}} アットルール
 
 - [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)モジュール
-
   - [`<media-feature>`](/ja/docs/Web/CSS/@media#media_features)
   - [`<media-type>`](/ja/docs/Web/CSS/@media#media_types)
   - [`<media-condition>`](/ja/docs/Web/CSS/@media#logical_operators)
@@ -105,7 +98,6 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
   - [CSS logical operators](/ja/docs/Web/CSS/@media#logical_operators) (`not`, `or`, `and`)
 
 - [CSSOM view](/ja/docs/Web/CSS/CSSOM_view) モジュール
-
   - {{domxref("CSS")}} API
   - {{domxref("CSSGroupingRule")}} API
   - {{domxref("MediaQueryList")}} API
@@ -114,7 +106,6 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
     - {{domxref("MediaList.mediaText")}} プロパティ
 
 - [CSS 構文](/ja/docs/Web/CSS/CSS_syntax)モジュール
-
   - {{cssxref("@charset")}} 宣言
   - {{cssxref("at-rule")}} 用語
   - [`invalid`](/ja/docs/Web/CSS/CSS_syntax/Error_handling) 用語
@@ -122,7 +113,6 @@ CSS 条件付きルールモジュールは、 `@media` も拡張し、アット
   - [style rule](/ja/docs/Web/API/CSSStyleRule) 用語
 
 - [CSS 名前空間](/ja/docs/Web/CSS/CSS_namespaces) モジュール
-
   - {{cssxref("@namespace")}} アットルール
 
 ## 仕様書

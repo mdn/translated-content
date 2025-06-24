@@ -26,9 +26,7 @@ cache.matchAll(request, { options }).then(function (response) {
 - request {{optional_inline}}
   - : {{domxref("Cache")}} 中你尝试查找的 The {{domxref("Request")}} . 如果忽略这一参数，你将获取到 cache 中所有 `response` 的副本。
 - options {{optional_inline}}
-
   - : 一个选项对象，允许你为 `match` 操作中要做的匹配设置特定控制选项。可用选项包括：
-
     - `ignoreSearch`: 一个 {{domxref("Boolean")}} 值用来设置匹配操作是否忽略 url 中的 query 部分。如果该参数设置为 `true` ，那么 `http://foo.com/?value=bar` 中的 `?value=bar` 部分就会在匹配中被忽略。该选项默认为 `false`。
     - `ignoreMethod`: 一个 {{domxref("Boolean")}} 值，如果设置为 `true`在匹配时就不会验证 {{domxref("Request")}} 对象的`http` 方法 (通常只允许是 `GET` 或 `HEAD` 。) 该参数默认值为 `false`。
     - `ignoreVary`: 一个 {{domxref("Boolean")}} 值，该值如果为 `true` 则匹配时不进行 `VARY` 部分的匹配。例如，如果一个 URL 匹配，此时无论{{domxref("Response")}}对象是否包含`VARY`头部，都会认为是成功匹配。该参数默认为 `false`。

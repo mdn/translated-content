@@ -188,7 +188,6 @@ function sameValueZero(x, y) {
 다음은 코드에서 `-0`과 `+0`을 구분할 수 있는 내장 메서드와 연산자의 일부 목록입니다.
 
 - [`-` (단항 부정)](/ko/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-
   - : 다음 예제를 참조하세요.
 
     ```js

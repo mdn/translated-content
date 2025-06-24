@@ -15,7 +15,6 @@ El elemento **`<script>`** [HTML](/es/docs/Web/HTML) se utiliza para incrustar c
 Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
-
   - : Para scripts clásicos, si el atributo `async` está presente, el script clásico se descargará en paralelo al análisis y se evaluará tan pronto como esté disponible.
 
     Para [scripts de módulo](/es/docs/Web/JavaScript/Guide/Modules), si el atributo `async` está presente, los scripts y todas sus dependencias se descargarán en paralelo al análisis y se evaluarán tan pronto como estén disponibles.
@@ -32,14 +31,12 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     Consulte [Compatibilidad con navegadores](#browser_compatibility) para notas sobre el soporte del navegador. Consulte también [Scripts asíncronos para asm.js](/es/docs/Games/Techniques/Async_scripts).
 
 - `attributionsrc` {{experimental_inline}}
-
   - : Especifica que deseas que el navegador envíe un encabezado {{httpheader("Attribution-Reporting-Eligible")}} junto con la solicitud del recurso del script. En el lado del servidor, esto se utiliza para activar el envío de un encabezado {{httpheader("Attribution-Reporting-Register-Source")}} o {{httpheader("Attribution-Reporting-Register-Trigger")}} en la respuesta, para registrar una [fuente de atribución](/es/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources) o un [disparador de atribución](/es/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers) basado en JavaScript, respectivamente. Qué encabezado de respuesta se debe enviar depende del valor del encabezado `Attribution-Reporting-Eligible` que activó el registro.
 
     > [!NOTE]
     > Alternativamente, las fuentes de atribución o disparadores basados en JavaScript se pueden registrar enviando una solicitud {{domxref("Window/fetch", "fetch()")}} que contenga la opción `attributionReporting` (ya sea configurada directamente en la llamada `fetch()` o en un objeto {{domxref("Request")}} pasado a la llamada `fetch()`), o enviando un {{domxref("XMLHttpRequest")}} con {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} invocado en el objeto de solicitud.
 
     Hay dos versiones de este atributo que puedes configurar:
-
     - Booleano, es decir, solo el nombre `attributionsrc`. Esto especifica que deseas que el encabezado {{httpheader("Attribution-Reporting-Eligible")}} se envíe al mismo servidor al que apunta el atributo `src`. Esto es adecuado cuando manejas el registro de fuentes de atribución o disparadores en el mismo servidor. Al registrar un disparador de atribución, esta propiedad es opcional y se usará un valor de cadena vacía si se omite.
     - Valor que contiene una o más URL, por ejemplo:
 
@@ -57,16 +54,13 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     Consulta la [API de informes de atribución](/es/docs/Web/API/Attribution_Reporting_API) para más detalles.
 
 - `blocking`
-
   - : Este atributo indica explícitamente que ciertas operaciones deben bloquearse al obtener el script. Las operaciones que se deben bloquear deben ser una lista separada por espacios de tokens de bloqueo enumerados a continuación.
     - `render`: Se bloquea el renderizado del contenido en la pantalla.
 
 - [`crossorigin`](/es/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : Los elementos `script` normales pasan información mínima al {{domxref('Window.error_event', 'window.onerror')}} para scripts que no superan las comprobaciones estándar de {{Glossary("CORS")}}. Para permitir el registro de errores en sitios que utilizan un dominio separado para medios estáticos, usa este atributo. Consulta [Atributos de configuración CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para una explicación más descriptiva de sus argumentos válidos.
 
 - `defer`
-
   - : Este atributo booleano se establece para indicar al navegador que el script debe ejecutarse después de que el documento haya sido analizado, pero antes de que se dispare el evento {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}.
 
     Los scripts con el atributo `defer` evitarán que el evento `DOMContentLoaded` se dispare hasta que el script se haya cargado y evaluado por completo.
@@ -83,10 +77,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     Si el atributo se especifica junto con el atributo `async`, el elemento actuará como si solo se especificara el atributo `async`.
 
 - `fetchpriority`
-
   - : Proporciona una pista sobre la prioridad relativa a usar al obtener un script externo.
     Valores permitidos:
-
     - `high`
       - : Obtiene el script externo con una prioridad alta en relación con otros scripts externos.
     - `low`
@@ -99,21 +91,16 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     Consulta {{domxref("HTMLScriptElement.fetchPriority")}} para obtener más información.
 
 - `integrity`
-
   - : Este atributo contiene metadatos en línea que un agente de usuario puede usar para verificar que un recurso obtenido se haya entregado sin manipulación inesperada. El atributo no debe especificarse si el atributo `src` no está especificado. Consulta [Integridad de subrecursos](/es/docs/Web/Security/Subresource_Integrity).
 
 - `nomodule`
-
   - : Este atributo booleano se establece para indicar que el script no debe ejecutarse en navegadores que admiten [módulos ES](/es/docs/Web/JavaScript/Guide/Modules), en efecto, esto puede usarse para servir scripts de respaldo a navegadores más antiguos que no admiten código JavaScript modular.
 
 - `nonce`
-
   - : Un nonce (número usado una vez) criptográfico para permitir scripts en una [política de seguridad de contenido script-src](/es/docs/Web/HTTP/Headers/Content-Security-Policy/script-src). El servidor debe generar un valor único de nonce cada vez que transmite una política. Es fundamental proporcionar un nonce que no pueda adivinarse, ya que de lo contrario, eludir la política de un recurso sería trivial.
 
 - `referrerpolicy`
-
   - : Indica qué [referer](/es/docs/Web/API/Document/referrer) enviar al obtener el script o recursos obtenidos por el script:
-
     - `no-referrer`: El encabezado {{HTTPHeader("Referer")}} no será enviado.
     - `no-referrer-when-downgrade`: El encabezado {{HTTPHeader("Referer")}} no se enviará a {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`: El referer enviado se limitará al origen de la página de referencia: su [esquema](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port")}}.
@@ -127,14 +114,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
     > Un valor de cadena vacía (`""`) es tanto el valor predeterminado como un valor de respaldo si `referrerpolicy` no es compatible. Si no se especifica explícitamente `referrerpolicy` en el elemento `<script>`, adoptará una política de referer de nivel superior, es decir, una establecida en todo el documento o dominio. Si no hay una política de nivel superior disponible, la cadena vacía se trata como equivalente a `strict-origin-when-cross-origin`.
 
 - `src`
-
   - : Este atributo especifica la URI de un script externo; se puede usar como una alternativa a incrustar un script directamente dentro de un documento.
 
 - [`type`](/es/docs/Web/HTML/Element/script/type)
-
   - : Este atributo indica el tipo de script representado.
     El valor de este atributo será uno de los siguientes:
-
     - **El atributo no está establecido (por defecto), una cadena vacía o un tipo MIME de JavaScript**
       - : Indica que el script es un "script clásico", que contiene código JavaScript.
         Se recomienda que los autores omitan el atributo si el script hace referencia a código JavaScript en lugar de especificar un tipo MIME.

@@ -423,7 +423,6 @@ Adicionalmente, el elemento {{HTMLElement("label")}} se utiliza para establecer 
 - [`<input type="tel">`](/es/docs/Web/HTML/Element/input/tel)
 - [`<input type="url">`](/es/docs/Web/HTML/Element/input/url)
 - Atributos:
-
   - [`list`](/es/docs/Web/HTML/Attributes/list)
   - [`minlength`](/es/docs/Web/HTML/Reference/Attributes/minlength)
   - [`maxlength`](/es/docs/Web/HTML/Attributes/maxlength)

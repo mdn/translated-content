@@ -27,9 +27,7 @@ let windows = browser.extension.getViews(
 ### 参数
 
 - `fetchProperties` {{optional_inline}}
-
   - : 包含如下属性的对象：
-
     - `type` {{optional_inline}}
       - : `string`，指示要获取的视图类型的 {{WebExtAPIRef('extension.ViewType')}}。如果省略，此函数将返回所有视图。
     - `windowId` {{optional_inline}}

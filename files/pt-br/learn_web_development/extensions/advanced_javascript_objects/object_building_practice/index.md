@@ -118,7 +118,6 @@ Usando esta função, podemos dizer a nossa bola para desenhar-se na tela, chama
 - Primeiro, usamos [`beginPath()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/beginPath) para declarar que queremos desenhar uma forma no papel.
 - Em seguida, usamos [`fillStyle`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/fillStyle) para definir a cor que queremos que a forma seja — nós a definimos como a propriedade `color` da nossa bola.
 - Em seguida, usamos o método [`arc()`](/pt-BR/docs/Web/API/CanvasRenderingContext2D/arc) para traçar uma forma de arco no papel. Seus parâmetros são:
-
   - A posição `x` e `y` do centro do arco — estamos especificando as propriedades `x` e `y` da nossa bola.
   - O raio do nosso arco — estamos especificando a propriedade `size` da nossa bola.
   - Os dois últimos parâmetros especificam o número inicial e final de graus em volta do círculo em que o arco é desenhado entre eles. Aqui nós especificamos 0 graus e `2 * PI`, que é o equivalente a 360 graus em radianos (irritantemente, você tem que especificar isso em radianos). Isso nos dá um círculo completo. Se você tivesse especificado apenas `1 * PI`, você obteria um semicírculo (180 graus).
@@ -239,7 +238,6 @@ Agora vamos tornar isso divertido. Vamos começar a adicionar bolas à tela e a 
    ```
 
    Todos os programas que animam as coisas geralmente envolvem um loop de animação, que serve para atualizar as informações no programa e renderizar a visualização resultante em cada quadro da animação; esta é a base para a maioria dos jogos e outros programas. Nossa função `loop()` faz o seguinte:
-
    - Define a cor de preenchimento da tela como preto semitransparente e desenha um retângulo com a cor em toda a largura e altura da tela, usando `fillRect()` (os quatro parâmetros fornecem uma coordenada de início e uma largura e altura para o retângulo desenhado ). Isso serve para encobrir o desenho do quadro anterior antes que o próximo seja desenhado. Se você não fizer isso, você verá apenas longas cobras se movimentando ao redor da tela, em vez de mover as bolas! A cor do preenchimento é definida como semitransparente, `rgba(0,0,0,0.25)`, para permitir que os poucos quadros anteriores brilhem levemente, produzindo as pequenas trilhas atrás das bolas à medida que elas se movem. Se você mudou 0,25 para 1, você não vai mais vê-los. Tente variar esse número para ver o efeito que ele tem.
    - Percorre todas as bolas no array `balls` e executa a função `draw()` e `update()` de cada bola para desenhar cada uma delas na tela, depois faz as atualizações necessárias para a posição e a velocidade a tempo para o próximo quadro.
    - Executa a função novamente usando o método `requestAnimationFrame()` — quando esse método é executado constantemente e passa o mesmo nome de função, ele executará essa função um número definido de vezes por segundo para criar uma animação suave. Isso geralmente é feito de forma recursiva — o que significa que a função está chamando a si mesma toda vez que é executada, portanto, ela será executada repetidas vezes.
@@ -282,7 +280,6 @@ Agora, para um pouco de diversão, vamos adicionar alguma detecção de colisão
    ```
 
    Esse método é um pouco complexo, então não se preocupe se você não entender exatamente como isso funciona agora. Uma explicação a seguir:
-
    - Para cada bola, precisamos checar todas as outras bolas para ver se ela colidiu com a bola atual. Para fazer isso, abrimos outro loop `for` para percorrer todas as bolas no array `balls[]`.
    - Imediatamente dentro de nosso loop for, usamos uma instrução `if` para verificar se a bola atual em loop é a mesma bola que estamos verificando no momento. Não queremos verificar se uma bola colidiu consigo mesma! Para fazer isso, verificamos se a bola atual (ou seja, a bola cujo método collisionDetect está sendo invocado) é a mesma que a bola de loop (ou seja, a bola que está sendo referenciada pela iteração atual do loop for no collisionDetect método). Nós então usamos `!` para negar a verificação, para que o código dentro da instrução if seja executado apenas se eles não forem iguais.
    - Em seguida, usamos um algoritmo comum para verificar a colisão de dois círculos. Estamos basicamente verificando se alguma das áreas dos dois círculos se sobrepõe. Isso é explicado ainda mais na [2D collision detection](/pt-BR/docs/Games/Techniques/2D_collision_detection).

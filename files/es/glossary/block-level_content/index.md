@@ -68,7 +68,6 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("dl") }}
   - : Lista de definición.
 - {{ HTMLElement("fieldset") }}
-
   - : Etiqueta de conjunto de campos.
 
 - {{ HTMLElement("figcaption") }}
@@ -92,7 +91,6 @@ La siguiente es una lista completa de todos los elementos en bloque de HTML (aun
 - {{ HTMLElement("main") }}
   - : Engloba el único contenido central del documento.
 - {{ HTMLElement("nav") }}
-
   - : Contiene enlaces de navegación.
 
 - {{ HTMLElement("noscript") }}

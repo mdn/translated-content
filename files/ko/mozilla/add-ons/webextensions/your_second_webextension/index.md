@@ -13,7 +13,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 - **Firefox 툴바에 추가된 버튼의 [browser action](/ko/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)을 정의합니다.**
   버튼을 위해 필요한것:
-
   - "beasts-32.png" 아이콘
   - 버튼을 누를때 나오는 팝업. 이 팝업은 HTML과 CSS, JavaScript로 구성됩니다.
 
@@ -83,7 +82,6 @@ cd beastify
 - [`icons`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 도 선택사항이나 애드온 매니저에서 확장 기능 아이콘을 보여줄 수 있기에 권장됩니다.
 - [`permissions`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 은 확장 기능이 필요로 하는 권한의 목록입니다. 이 확장 기능에서는 [`activeTab` 권한](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 을 사용합니다.
 - [`browser_action`](/ko/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)는 툴바에 나오는 버튼을 정의하고 세 가지 정보를 정의합니다.
-
   - `default_icon` 는 필수이고, 버튼의 아이콘을 정의합니다.
   - `default_title` 는 선택사항이고 툴팁을 정의합니다.
   - `default_popup` 은 사용자가 버튼을 클릭할때 팝업을 보여주고 싶을 때 사용합니다. 이 키로 확장 기능에 포함된 HTML파일을 지정합니다.

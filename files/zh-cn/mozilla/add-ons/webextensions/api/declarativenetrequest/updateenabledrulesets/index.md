@@ -20,7 +20,6 @@ let updatedRulesets = browser.declarativeNetRequest.updateEnabledRulesets(
 ### 参数
 
 - `options`
-
   - : 一个详细说明扩展的静态规则集中要激活或禁用的规则集的对象。
     - `disableRulesetIds` {{optional_inline}}
       - : 一个 `string` 数组。要禁用的静态规则集的 ID。

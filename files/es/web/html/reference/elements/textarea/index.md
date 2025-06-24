@@ -30,9 +30,7 @@ Este elemento contiene [global attributes](/es/docs/Web/HTML/Reference/Global_at
     - `on`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
     - `off`: {{deprecated_inline()}} En desuso desde la versión 5 de iOS.
 - `autocomplete`
-
   - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador. Los posibles valores son:
-
     - `off`: El usuario debe explícitamente introducir el valor del campo para cada uso, o el documento proporciona su propio método de auto-completado; el navegador no completa automáticamente.
     - `on`: El navegador puede completar automáticamente el valor basándose en valores que el usuario haya insertado durante usos previos.
 

@@ -20,20 +20,15 @@ new Intl.PluralRules(locales, options);
 - `locales` {{optional_inline}}
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
 - `options` {{optional_inline}}
-
   - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
-
     - `localeMatcher`
       - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
     - `type`
-
       - : Le type à utiliser. Les valeurs possibles sont&nbsp;:
-
         - "`cardinal`" pour les nombres cardinaux (qui indiquent une quantité de choses). C'est la valeur par défaut.
         - "`ordinal`" pour les nombres ordinaux (qui indiquent un ordre ou un classement comme "1er", "2e", "3e").
 
     Les propriétés suivantes appartiennent à deux groupes distincts&nbsp;: `minimumIntegerDigits`, `minimumFractionDigits`, et `maximumFractionDigits` pour le premier et `minimumSignificantDigits` et `maximumSignificantDigits` dans l'autre. Si au moins une des propriétés du second groupe est définie, le premier groupe est ignoré.
-
     - `minimumIntegerDigits`
       - : Le nombre minimal de chiffres à utiliser. Les valeurs possibles vont de 1 à 21&nbsp;; la valeur par défaut est 1.
     - `minimumFractionDigits`

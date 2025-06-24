@@ -43,7 +43,6 @@ Vous avez les fichiers nécessaires à la création d'un modèle de papier à en
 
 - appliquer la CSS au HTML,
 - ajouter à la lettre une déclaration `background` qui&nbsp;:
-
   - place l'image haute en en‑tête de lettre
   - place l'image basse en pied de lettre
   - ajoute un gradient semi-transparent au‑dessus des deux arrière‑plans ci‑dessus pour donner un peu de texture à la lettre. Faites en sorte qu'il soit légèrement obscurcissant en en‑tête et pied de page, mais totalement transparent sur la plus grande partie du centre de la lettre,

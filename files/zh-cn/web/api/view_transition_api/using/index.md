@@ -20,7 +20,6 @@ l10n:
      > 活动的视图过渡具有关联的 {{domxref("ViewTransition")}} 实例（例如，在同文档（SPA）过渡的情况下，由 `startViewTransition()` 返回）。`ViewTransition` 对象包含多个 Promise，允许你运行代码以响应到达视图过渡过程的不同部分。有关更多信息，请参阅[使用 JavaScript 控制视图过渡](#使用_JavaScript_控制视图过渡)。
 2. 在当前（旧页面）视图上，API 捕获声明了 {{cssxref("view-transition-name")}} 的元素的快照。
 3. 视图更改发生：
-
    - 对于同文档（SPA）过渡，将调用传递给 `startViewTransition()` 的回调，这会导致 DOM 发生更改。
 
      当回调成功运行时，{{domxref("ViewTransition.updateCallbackDone")}} promise 将兑现，允许你响应 DOM 更新。
@@ -295,7 +294,6 @@ figcaption {
 
 1. 对于同文档（SPA）过渡，{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} 方法返回与过渡关联的 `ViewTransition` 对象。
 2. 对于跨文档（MPA）过渡：
-
    - 当文档由于导航而即将卸载时，将触发 {{domxref("Window.pageswap_event", "pageswap")}} 事件。其事件对象（{{domxref("PageSwapEvent")}}）通过 {{domxref("PageSwapEvent.viewTransition")}} 属性提供对 `ViewTransition` 对象的访问，以及通过 {{domxref("PageSwapEvent.activation")}} 提供对 {{domxref("NavigationActivation")}} 的访问，其中包含导航类型以及当前和目标文档的历史记录条目。
      > [!NOTE]
      > 如果导航在重定向链中的任意位置具有跨源 URL，则 `activation` 属性返回 `null`。
