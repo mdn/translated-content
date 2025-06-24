@@ -32,9 +32,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants:
-
     - `details`
       - : [`object`](#details). Détails sur l'événement de navigation.
 

@@ -41,7 +41,6 @@ slug: Web/API/XMLHttpRequest
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 응답의 [HTTP 상태 코드](/ko/docs/Web/HTTP/Status)를 반환합니다.
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-
   - : HTTP 서버가 반환한 응답 문자열을 담은 `string`을 반환합니다. {{domxref("XMLHttpRequest.status")}}와 달리, `statusText`는 "`OK`"와 같은 응답 상태 메시지의 전문을 반환합니다
 
     > [!NOTE]
@@ -113,7 +112,6 @@ slug: Web/API/XMLHttpRequest
 
 - {{domxref("XMLSerializer")}}: DOM 트리를 XML로 직렬화
 - `XMLHttpRequest`를 다루는 MDN 자습서:
-
   - [Ajax 시작하기](/ko/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e)
   - [XMLHttpRequest 사용하기](/ko/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
   - [XMLHttpRequest에서의 HTML](/ko/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)

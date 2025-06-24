@@ -85,9 +85,7 @@ all: revert;
 - {{cssxref("unset")}}
   - : 요소의 모든 속성을, 속성이 값을 상속하는 경우 상속값으로, 아니면 초깃값으로 변경합니다.
 - {{cssxref("revert")}}
-
   - : 선언이 속한 스타일시트의 출처에 따라 다른 동작을 합니다.
-
     - [사용자 에이전트 출처](/ko/docs/Web/CSS/Cascade#User-agent_stylesheets)
       - : `unset`과 동일합니다.
     - [사용자 출처](/ko/docs/Web/CSS/Cascade#User_stylesheets)

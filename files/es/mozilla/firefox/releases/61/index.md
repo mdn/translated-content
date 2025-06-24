@@ -95,7 +95,6 @@ _No hay cambios._
 
 - La obsoleta (y nunca implementada correctamente) propiedad {{domxref("SVGViewElement")}}`.viewTarget` ha sido eliminada ([Error 1455763 en Firefox](https://bugzil.la/1455763)).
 - Las siguientes propiedades obsoletas han sido eliminadas de {{domxref("SVGSVGElement")}} ([Error 1133172 en Firefox](https://bugzil.la/1133172)):
-
   - `pixelUnitToMillimeterX`
   - `pixelUnitToMillimeterY`
   - `screenPixelToMillimeterX`

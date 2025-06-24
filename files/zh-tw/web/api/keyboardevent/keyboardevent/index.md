@@ -18,9 +18,7 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
 - `type`
   - : 一 {{domxref("DOMString")}} 用來表示事件名稱。
 - `options` {{optional_inline}}
-
   - : 一個 `KeyboardEventInit` dictionary，能接受以下參數：
-
     - `key` {{optional_inline}}
       - : 一個字符串，默認值為 `""`，用來設定 {{domxref("KeyboardEvent.key")}} 的值。
     - `code` {{optional_inline}}

@@ -24,7 +24,6 @@ execCommand(aCommandName, aShowDefaultUI, aValueArgument)
 ### 參數
 
 - `aCommandName`
-
   - : 指定要執行的命令名稱的字串。以下命令被指定：
     - `backColor`
       - : 更改文件背景顏色。在 `styleWithCss` 模式下，它會改變包含區塊的背景顏色。這需要傳遞一個 {{cssxref("&lt;color&gt;")}} 值字串作為引數值。

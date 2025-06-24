@@ -52,23 +52,18 @@ l10n:
 ## ガイド
 
 - [ボックス配置の概要](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment)
-
   - : CSS ボックス配置モジュールで使える一般概念の概要です。
 
 - [フレックスボックスでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-
   - : フレックスボックスのコンテキストにおけるボックスの配置の動作です。
 
 - [CSS グリッドレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)
-
   - : グリッドレイアウトのコンテキストにおけるボックスの配置の動作です。
 
 - [段組みレイアウトでのボックス配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)
-
   - : 段組みのコンテキストにおけるボックスの配置の動作です。
 
 - [ブロック、絶対配置、表レイアウトのブロック配置](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)
-
   - : ブロックレイアウトのコンテキストにおけるボックスの配置の動作。浮動ボックス、位置指定要素、表要素も含まれます。
 
 ## 関連概念

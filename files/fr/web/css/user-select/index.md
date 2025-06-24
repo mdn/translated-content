@@ -41,9 +41,7 @@ user-select: unset;
 - `none`
   - : On ne pourra pas sélectionner le texte de l'élément et celui de ses descendants. Toutefois, l'objet {{domxref("Selection")}} pourra contenir ces éléments. À partir de Firefox 21, `none` se comporte comme `-moz-none` et la sélection peut donc être réactivée sur les éléments fils avec `-moz-user-select:text`.
 - `auto`
-
   - : Le texte sera sélectionné avec les propriétés par défaut appliquées par l'agent utilisateur. La valeur calculée est déterminée de la façon suivante :
-
     - Pour les pseudo-éléments `::before` et `::after`, la valeur calculée sera `none`
     - Si l'élément est un élément éditable, la valeur calculée est `contain`
     - Sinon, si la valeur calculée de `user-select` pour l'élément parent est `all`, la valeur calculée sera `all`
@@ -57,7 +55,6 @@ user-select: unset;
 - `contain`
 
   `element` {{non-standard_inline}} (alias spécifique à IE)
-
   - : Uniquement supporté par Internet Explorer. Cela permet d'activer la sélection au sein de l'élément, celle-ci ne pourra pas « sortir » de cet élément.
 
 > [!NOTE]

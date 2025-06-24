@@ -44,7 +44,6 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
 - [계단식 및 상속](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 
 - CSS 주요 개념:
-
   - [CSS 문법](/ko/docs/Web/CSS/Syntax)
   - [@규칙](/ko/docs/Web/CSS/At-rule)
   - [주석](/ko/docs/Web/CSS/Comments)
@@ -54,7 +53,6 @@ slug: Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model
   - [시각적 서식 모델](/ko/docs/Web/CSS/Visual_formatting_model)
   - [마진 중첩](/ko/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 값
-
     - [초기 값](/ko/docs/Web/CSS/initial_value)
     - [계산 값](/ko/docs/Web/CSS/computed_value)
     - [사용 값](/ko/docs/Web/CSS/used_value)

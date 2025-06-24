@@ -28,11 +28,9 @@ l10n:
 取りうる値は次の通りです。
 
 - `on` または `""` （空文字列）
-
   - : 綴りや句読点の誤りを自動修正する機能を有効にします。
 
 - `off`
-
   - : 編集可能なテキストの自動修正を無効にします。
 
 {{htmlelement("input")}} 要素型のうち、自動修正に対応していないものは、常に `off` の状態になります。[`password`](/ja/docs/Web/HTML/Reference/Elements/input/password)、[`email`](/ja/docs/Web/HTML/Reference/Elements/input/email)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/url) です。

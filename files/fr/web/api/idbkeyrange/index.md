@@ -24,13 +24,11 @@ Un intervalle de clé peut être une seule valeur ou un intervalle avec des born
 Une clé est contenue dans un intervalle de clé lorsque les conditions suivantes sont réunies :
 
 - La borne inférieure de l'intervalle de clé est :
-
   - `undefined`
   - Inférieure à la valeur de la clé
   - Égal à la valeur de la clé si `lowerOpen` est `false` (l'intervalle est fermé à gauche)
 
 - La borne supérieure de l'intervalle de clé est :
-
   - `undefined`
   - Supérieure à la valeur de la clé
   - Égal à la valeur de la clé si `upperOpen` vaut `false` (l'intervalle est fermé à droite)

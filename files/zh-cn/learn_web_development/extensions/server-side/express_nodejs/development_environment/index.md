@@ -67,7 +67,6 @@ Express 应选用最新版本。
 在 Windows 和 macOS 上安装 Node 和 NPM 非常简单明了，使用现成的安装包就行了：
 
 1. 下载安装包：
-
    1. 访问 <https://nodejs.org/zh-cn/>
    2. 左侧按钮上写着“推荐多数用户使用（LTS）”，点击下载。
 

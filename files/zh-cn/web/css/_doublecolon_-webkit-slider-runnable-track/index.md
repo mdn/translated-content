@@ -29,7 +29,6 @@ l10n:
 
 - {{CSSxRef("::-webkit-slider-thumb")}}
 - 其他浏览器使用的与之类似的伪元素：
-
   - {{CSSxRef("::-moz-range-track")}}
 
 - [CSS-Tricks：使用 CSS 设置跨浏览器兼容的 range 输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

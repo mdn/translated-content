@@ -82,7 +82,6 @@ La propriété `flex-basis` est définie grâce au mot-clé [`content`](#content
 - `<'width'>`
   - : Un longueur absolue (type {{cssxref("&lt;length&gt;")}} ou un pourcentage (type {{cssxref("&lt;percentage&gt;")}})relatif à la taille principale du conteneur flexible ou encore le mot-clé `auto`. Les valeurs négatives ne sont pas autorisées. La valeur par défaut est `auto`.
 - `content`
-
   - : Le dimensionnement se fera de façon automatique selon le contenu de l'élément flexible.
 
     > [!NOTE]

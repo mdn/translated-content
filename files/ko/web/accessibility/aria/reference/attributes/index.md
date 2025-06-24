@@ -18,7 +18,6 @@ l10n:
 ARIA 상태와 속성에는 4가지 유형이 있습니다:
 
 1. ### 위젯 속성
-
    - [`aria-autocomplete`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
    - [`aria-checked`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
    - [`aria-disabled`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
@@ -45,19 +44,16 @@ ARIA 상태와 속성에는 4가지 유형이 있습니다:
    - [`aria-valuetext`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
 2. ### 실시간 영역 속성
-
    - [`aria-busy`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
    - [`aria-live`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-live)
    - [`aria-relevant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
    - [`aria-atomic`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
 
 3. ### 드래그 & 드랍 속성
-
    - [`aria-dropeffect`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
    - [`aria-grabbed`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
 
 4. ### 관계 속성
-
    - [`aria-activedescendant`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
    - [`aria-colcount`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
    - [`aria-colindex`](/ko/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)

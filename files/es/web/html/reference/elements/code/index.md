@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/code
 ### Definición
 
 - Es el apropiado para marcar el código de un programa.
-
   - : **Sus etiquetas son**: \<code> y \</code> (ambas obligatorias)
 
     **Crea una caja**: [en linea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_linea).

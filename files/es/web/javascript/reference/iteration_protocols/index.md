@@ -27,11 +27,8 @@ Un objeto es un iterador cuando este implementa un método **`next()`** con la s
 - Propiedad
   - : `next`
 - Valor
-
   - : Una función sin argumentos que retorna un objeto con dos propiedades:
-
     - `done` (boleano)
-
       - Su valor es `true` si el iterador está más allá del final de la secuencia iterada. En este caso `value` opcionalmente especifica el _valor retornado_ por el iterador. Los valores retornados son explicados [aquí](https://www.2ality.com/2013/06/iterators-generators.html#generators-as-threads).
       - Su valor es `false` si el iterador pudo producir el siguiente valor en la secuencia. Esto es equivalente a no especificar la propiedad `done` en su totalidad.
 

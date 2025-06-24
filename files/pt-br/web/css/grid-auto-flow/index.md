@@ -35,7 +35,6 @@ Esta propriedade pode ser de duas maneiras:
 - `column` (coluna)
   - : É uma keyword (palavra-chave) que determina que o algoritmo de arrumação automática coloque os itens preenchendo colunas, adicionando novas se necessário.
 - `dense` (denso)
-
   - : Keyword (palavra-chave) que determina que o algoritmo de arrumação automática use um formato de compactação "denso", que tenta preencher os espaços anteriores do grid caso receba itens menores após. Isto talvez deixe os itens fora de ordem, preenchendo espaços deixados por itens maiores.
 
     Se omitido, o algoritmo "esparso" é utilizado, onde o algoritmo de arrumação somente "avança" no grid ao colocar os itens, nunca voltando para preencher os espaços. Isso garante que todos os itens colocados automaticamente apareçam "em ordem", mesmo que deixem espaçs que poderiam ser preenchidos por itens posteriores.
@@ -134,7 +133,6 @@ function changeGridAutoFlow() {
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
 4. **Guias**
-
    1. [Conceitos básicos do grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relacionamento com outros tipos de layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Arrumação baseada em linha](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -148,7 +146,6 @@ function changeGridAutoFlow() {
    11. [Identificando layouts comuns usando grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propriedades**
-
    1. [grid](/pt-BR/docs/Web/CSS/grid)
    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
@@ -169,7 +166,6 @@ function changeGridAutoFlow() {
    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossário**
-
    1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
    2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
    3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)

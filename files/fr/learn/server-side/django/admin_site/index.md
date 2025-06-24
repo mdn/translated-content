@@ -133,13 +133,11 @@ La cadriciel Django réalise une excellente assistance avec la création d'un si
 mais vous avez la possibilité de personnaliser le comportement du site d'administration. Vous allez pouvoir notamment faire :
 
 - Des vues en liste
-
   - Ajouter des champs ou des informations supplémentaires affichés pour chaque enregistrement.
   - Ajouter des filtres pour sélectionner les enregistrements répertoriés, en fonction de la date ou d'une autre valeur de sélection (par exemple, le statut du prêt du livre).
   - Ajouter des options supplémentaires au menu Actions dans les vues de liste et choisir l'emplacement où ce menu est affiché dans le formulaire.
 
 - Vues détaillées
-
   - Choisir les champs à afficher (ou à exclure), ainsi que leur ordre, leur groupement, leur caractère modifiable, le widget utilisé, leur orientation, etc.
   - Ajouter des champs associés à un enregistrement pour permettre la modification en ligne (par exemple, ajoutez la possibilité d'ajouter et de modifier des enregistrements de livre lors de la création de leur auteur).
 

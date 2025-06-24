@@ -235,7 +235,6 @@ Además de como trata [`NaN`](/es/docs/Web/JavaScript/Reference/Global_Objects/N
 Aquí podemos ver una lista exhaustiva de los método y operadores nativos que pueden distinguir entre -0 y +0 en tu código:
 
 - [`- (unary negation)`](/es/docs/Web/JavaScript/Reference/Operators#-_.28unary_negation.29)
-
   - : Obviamente negar 0 genera -0. `Pero al abstracción de una expresión puede causar que un valor -0 se cuele sin darte cuenta` Consideremos el siguiente ejemplo:
 
     ```js

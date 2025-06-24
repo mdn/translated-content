@@ -370,7 +370,6 @@ function handleFiles() {
 1. 新しく順序なしリスト ({{HTMLElement("ul")}}) 要素を作成します。
 2. 新しいリスト要素は、{{HTMLElement("div")}} ブロックの中に {{DOMxRef("Node.appendChild()")}} メソッドを呼び出すことで挿入されます。
 3. `files` で表される {{DOMxRef("FileList")}} 内のそれぞれの {{DOMxRef("File")}} に対して次の処理を実行します。
-
    1. 新しくリストアイテム ({{HTMLElement("li")}}) 要素を作成し、リストに挿入します。
    2. 新しく画像 ({{HTMLElement("img")}}) 要素を作成します。
    3. {{DOMxref("URL.createObjectURL_static", "URL.createObjectURL()")}} を用いて、Blob の URL を作成して、画像のソースをファイルを表す新しいオブジェクト URL に設定します。

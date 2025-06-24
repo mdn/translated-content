@@ -1,21 +1,15 @@
 ---
 title: :checked
 slug: Web/CSS/:checked
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
 
 **`:checked`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、**ラジオボタン** ([`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio))、 **チェックボックス** ([`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox))、 **オプションボタン** ({{HTMLElement("select")}} の中の {{HTMLElement("option")}}) 要素がチェックされていたり `on` の状態にあったりすることを表します。
 
-```css
-/* すべての選択中のラジオボタン、チェックボックス、オプションボタン */
-:checked {
-  margin-left: 25px;
-  border: 1px solid blue;
-}
-```
-
-{{InteractiveExample("CSS Demo: :checked", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :checked", "tabbed-shorter")}}
 
 ```css interactive-example
 label,
@@ -30,38 +24,38 @@ input:checked {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <form>
-  <p>How did you find out about us?</p>
+  <p>どのように私たちを知りましたか？</p>
   <label
     ><input name="origin" type="radio" value="google" checked /> Google</label
   >
   <label><input name="origin" type="radio" value="facebook" /> Facebook</label>
-  <p>Please agree to our terms:</p>
+  <p>利用規約に同意してください。</p>
 
   <label
-    ><input name="newsletter" type="checkbox" checked /> I want to subscribe to
-    a personalized newsletter.</label
+    ><input name="newsletter" type="checkbox" checked /> パーソナライズされたニュースレターを購読したいです。</label
   >
 
   <label
-    ><input name="privacy" type="checkbox" /> I have read and I agree to the
-    Privacy Policy.</label
+    ><input name="privacy" type="checkbox" />プライバシーポリシーをを読み、同意します。</label
   >
 
-  <input type="submit" value="Submit form" />
+  <input type="submit" value="送信フォーム" />
 </form>
 ```
 
 ユーザーは要素をチェック/選択することでこの状態にすることができ、要素のチェックや選択を外すとこの状態から外れます。
 
 > [!NOTE]
-> ブラウザーは `<option>` を[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。
+> ブラウザーは `<option>` を{{ glossary("replaced elements", "置換要素")}}として扱うことが多いので、 `:checked` 擬似クラスでスタイルが適用される部分の大きさはブラウザーによって異なります。[カスタマイズ可能な選択要素](/ja/docs/Learn_web_development/Extensions/Forms/Customizable_select)の機能を使用すると、対応しているブラウザーで、通常の DOM 要素と同様に、 `<option>` 要素を完全にカスタマイズすることができます。
 
 ## 構文
 
-```
-:checked
+```css
+:checked {
+  /* ... */
+}
 ```
 
 ## 例
@@ -72,22 +66,22 @@ input:checked {
 
 ```html
 <div>
-  <input type="radio" name="my-input" id="yes" />
-  <label for="yes">Yes</label>
+  <input type="radio" name="my-input" id="yes" value="yes" />
+  <label for="yes">はい</label>
 
-  <input type="radio" name="my-input" id="no" />
-  <label for="no">No</label>
+  <input type="radio" name="my-input" id="no" value="no" />
+  <label for="no">いいえ</label>
 </div>
 
 <div>
   <input type="checkbox" name="my-checkbox" id="opt-in" />
-  <label for="opt-in">Check me!</label>
+  <label for="opt-in">チェックしてください</label>
 </div>
 
 <select name="my-select" id="fruit">
-  <option value="opt1">Apples</option>
-  <option value="opt2">Grapes</option>
-  <option value="opt3">Pears</option>
+  <option value="opt1">りんご</option>
+  <option value="opt2">ぶどう</option>
+  <option value="opt3">なし</option>
 </select>
 ```
 
@@ -137,41 +131,41 @@ option:checked {
 <table>
   <thead>
     <tr>
-      <th>Column #1</th>
-      <th>Column #2</th>
-      <th>Column #3</th>
+      <th>列 #1</th>
+      <th>列 #2</th>
+      <th>列 #3</th>
     </tr>
   </thead>
   <tbody>
     <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
     </tr>
     <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
+      <td>[セルのテキスト]</td>
+      <td>[セルのテキスト]</td>
+      <td>[セルのテキスト]</td>
     </tr>
     <tr>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
-      <td>[cell text]</td>
+      <td>[セルのテキスト]</td>
+      <td>[セルのテキスト]</td>
+      <td>[セルのテキスト]</td>
     </tr>
     <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
     </tr>
     <tr class="expandable">
-      <td>[more text]</td>
-      <td>[more text]</td>
-      <td>[more text]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
+      <td>[追加のテキスト]</td>
     </tr>
   </tbody>
 </table>
 
-<label for="expand-toggle" id="expand-btn">Toggle hidden rows</label>
+<label for="expand-toggle" id="expand-btn">隠された行を表示/非表示</label>
 ```
 
 #### CSS
@@ -224,6 +218,6 @@ option:checked {
 ## 関連情報
 
 - [ウェブフォーム — ユーザーデータでの作業](/ja/docs/Learn_web_development/Extensions/Forms)
-- [ウェブフォームの整形](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
+- [ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
 - 関連する HTML 要素: [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio), {{HTMLElement("select")}}, {{HTMLElement("option")}}
-- [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)
+- {{glossary("Replaced elements", "置換要素")}}

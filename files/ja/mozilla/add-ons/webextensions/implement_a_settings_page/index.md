@@ -201,5 +201,4 @@ Firefox で設定ページにアクセスするには about:addons に移動し�
 - [`storage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/storage) API のリファレンス文書
 - 拡張機能から直接設定ページを開くには [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) API を使う
 - 設定ページの例:
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

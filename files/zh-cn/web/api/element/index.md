@@ -52,7 +52,6 @@ _`Element` 从其父接口 {{DOMxRef("Node")}} 以及该接口的父接口 {{DOM
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : 一个字符串，代表元素限定名称的本地部分。
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : 元素对应的命名空间 URI，如果没有则返回 `null`。
 
     > [!NOTE]

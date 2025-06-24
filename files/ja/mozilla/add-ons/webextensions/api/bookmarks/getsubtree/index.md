@@ -23,9 +23,7 @@ browser.bookmarks.getSubTree(
 - `id`
   - : 取得したい部分木のルートノードに対応する ID を表す {{jsxref("string")}} です。
 - `callback`
-
   - : リクエストしたノードが取得された際に呼び出される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : 指定した ID に対応する {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトが 1 つ含まれた配列
 

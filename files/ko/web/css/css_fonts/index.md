@@ -75,11 +75,9 @@ p {
 ## 가이드
 
 - [기본적인 텍스트 및 글꼴 스타일링](/ko/docs/Learn_web_development/Core/Text_styling/Fundamentals)
-
   - 초보자를 위한 이 학습 기사에서는 텍스트/글꼴의 스타일링에 있어 기본적인 부분을 상세하게 설명하고 있습니다. 글꼴의 굵기, 패밀리, 스타일링의 설정, 글꼴의 일괄 지정, 텍스트의 배치 등의 효과, 행과 문자의 간격 설정 등을 포함합니다.
 
 - [OpenType 글꼴 특성 가이드](/ko/docs/Web/CSS/CSS_Fonts/OpenType_fonts_guide)
-
   - 글꼴의 특성 혹은 변형은 OpenType 글꼴에 포함된 다양한 자형(glyphs)이나 문자 스타일을 나타냅니다. 이것에는 합자(ligatures)('fi'나 'ffl'와 같은 특수한 형태의 문자 조합), 커닝(kerning)(특정 글자꼴 쌍 사이의 간격 조정), 분수, 숫자의 스타일, 외에도 다양한 것이 포함됩니다.이러한 기능은 모두 OpenType 특성(OpenType Features)이라고 하며, 특정 속성과 낮은 수준의 제어 속성인 — {{cssxref("font-feature-settings")}}을 통하여 웹에서 사용할 수 있습니다. 이 기사에서는 CSS에서 OpenType 글꼴 특성을 사용하는 것에 있어 알아야 할 모든 것들을 소개합니다.
 
 - [가변 글꼴 가이드](/ko/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide)

@@ -38,7 +38,6 @@ A requisição inclui:
 
 - Uma URL que identifica o servidor e o recurso de destino(e.g. por exemplo, um arquivo HTML, um determinado ponto de dados no servidor ou uma ferramenta a ser executada).
 - Um método que define a ação necessária(por exemplo, para obter um arquivo ou para salvar ou atualizar alguns dados). Os diferentes métodos e suas ações associadas estão listados abaixo :
-
   - `GET`: Obtenha um recurso específico(por exemplo, um arquivo contendo informações sobre um produto ou uma lista de produtos) .
   - `POST`: Crie um novo recurso(por exemplo, adicione um novo artigo a uma wiki, adicione um novo contato a um banco de dados e entre outros) .
   - `HEAD`: Obtenha as informações de metadados sobre um recurso específico, sem obter o corpo, como o GET faria. Você pode, por exemplo, usar uma solicitação HEAD para descobrir a última vez que um recurso foi atualizado e, em seguida, usar a solicitação GET(mais "CARA") para baixar o recurso se ele tiver sido alterado.
@@ -47,7 +46,6 @@ A requisição inclui:
   - `TRACE`, `OPTIONS`, `CONNECT`, `PATCH`: Esses métodos são para tarefas menos comuns/avançadas, não os cobriremos por aqui.
 
 - Informações adicionais podem ser codificadas com a solicitação(por exemplo, dados de formulário HTML). As informações podem ser codificadas como :
-
   - Paramêtros de URL : Solicitações `GET` codificam dados na URL enviada ao servidor, adicionando pares de nome/valor ao final dela— por exemplo, `http://mysite.com?name=Fred&age=11`. Você sempre tem um ponto de interrogação (`?`) separando o resto da URL dos paramêtros de URL, um sinal de igual (`=`) separando cada nome de seu valor associado , e um "E" comercial (`&`) separando cada par. Os paramêtros URL são inerentemente inseguros, pois podem ser alterados pelos usuários e reenviados. Como resultado, os parâmetros de URL/ solicitações GET não são usados para solicitações que atualizam dados no servidor.
   - `POST` data(dados de postagem). As solicitações POST adicionam novos recursos, cujos dados são codificados no corpo da solicitação.
   - Cookies do lado do cliente. Os cookies contêm dados de sessão sobre o cliente, incluindo chaves que o servidor pode usar para determinar seu status de login e permissões aos recursos.
