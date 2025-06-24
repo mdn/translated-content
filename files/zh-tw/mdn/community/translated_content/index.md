@@ -1,5 +1,5 @@
 ---
-title: MDN 線上文件的在地化
+title: MDN Web 文件的在地化
 short-title: 在地化
 slug: MDN/Community/Translated_content
 l10n:
@@ -12,7 +12,7 @@ l10n:
 
 ## 如何貢獻
 
-如果你想要對以下任一個活躍的在地化語言作出貢獻，請查閱[位在 GitHub 上的 mdn/translated-content 儲存庫（repository）](https://github.com/mdn/translated-content)。這個儲存庫包含了所有活躍語言的所有已在地化的文件，以及問題（issue）追蹤功能。我們建議先閱讀[翻譯指南](https://github.com/mdn/translated-content/tree/main/docs)。
+如果你想要對以下任一個活躍的在地化語言作出貢獻，請查閱[位在 GitHub 上的 mdn/translated-content 倉儲（repository）](https://github.com/mdn/translated-content)。這個倉儲包含了所有活躍語言的所有已在地化的文件，以及問題（issue）追蹤功能。我們建議先閱讀[翻譯指南](https://github.com/mdn/translated-content/tree/main/docs)。
 
 如果你需要幫助，或者有任何疑問，請隨時聯繫下列任一活躍成員或社群，也可以[聯繫我們](/zh-TW/docs/MDN/Community/Communication_channels)。
 
@@ -57,13 +57,13 @@ l10n:
 
 以下實驗性語言是從英文語言機器翻譯而來。
 
-### German (`de`)
+### 德文（`de`）
 
 - 倉儲：[mdn/translated-content-de](https://github.com/mdn/translated-content-de)
 - 討論群組：[Discord (`#german`)](/discord)
 - 目前的維護者：[caugner](https://github.com/caugner)
 
-### Italian (`it`)
+### 義大利文（`it`）
 
 - 倉儲：[mdn/translated-content-it](https://github.com/mdn/translated-content-it)
 - 討論群組：[Discord (`#italian`)](/discord)
