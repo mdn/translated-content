@@ -27,9 +27,7 @@ fetch(resource, options)
 ### 参数
 
 - `resource`
-
   - : 定义你想要获取的资源。可以是：
-
     - 一个字符串或任何其他具有{{Glossary("stringifier", "字符串化器")}}的对象（包括 {{domxref("URL")}} 对象），提供你想要获取的资源的 URL。URL 可以是相对于基础 URL 的，基础 URL 是窗口上下文中文档的 {{domxref("Node.baseURI", "baseURI")}} 或者 worker 上下文中的 {{domxref("WorkerGlobalScope.location")}}。
     - 一个 {{domxref("Request")}} 对象。
 

@@ -41,7 +41,6 @@ Comme pour les autres éléments HTML, cet élément inclut également [les attr
 - `optimum`
   - : Cet attribut représente la valeur idéale pour la mesure. Si cet attribut est défini, il doit s'agir d'un nombre à virgule compris entre les valeurs des attributs **`min`** et **`max`**. Si la valeur de **`optimum`** est inférieure à **`low`**, s'il est défini, cela signifie que les valeurs les plus petites sont meilleures; si sa valeur est supérieure à **`high`**, s'il est défini, cela signifie que les valeurs les plus grandes sont meilleures; enfin, s'il est compris entre **`low`** et **`high`**, cela signifie que les extrêmes ne sont pas les meilleures grandeurs.
 - `value`
-
   - : Cette attribut représente la valeur courante de la mesure. Cet attribut est obligatoire.
 
     > [!NOTE]

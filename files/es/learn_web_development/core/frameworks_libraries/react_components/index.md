@@ -70,7 +70,7 @@ export default function Todo() {
 }
 ```
 
-Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/es/docs/Web/HTML/Element/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
+Esto esta bien hasta ahora, ¡pero nuestro componente debe devolver algo!, Vamos de vuelta a `src/App.js`, copie el primer [`<li>`](/es/docs/Web/HTML/Reference/Elements/li) de la lista desordenada y péguelo en `Todo.js` para que se lea así:
 
 ```jsx
 export default function Todo() {
@@ -200,7 +200,7 @@ Si cambia el _prop_ `completed` en cada componente `<Todo />`, su navegador marc
 
 ### Asigna algún `id`, porfavor
 
-Ahora, nuestro componente `<Todo />` asigna un atributo `id` con el valor `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
+Ahora, nuestro componente `<Todo />` asigna un atributo `id` con el valor `todo-0` a cada tarea. Esto es una mala practica en HTML porque los [atributos `id`](/es/docs/Web/HTML/Reference/Global_attributes/id) deben ser únicos (son utilizados como un identificador único para fragmentos de documentos, por CSS, JavaScript, etc.). Esto significa que debemos darle a nuestro componente un `id` que tome un valor único para cada `Todo`
 
 Para seguir con el mismo patron que teníamos inicialmente, vamos a darle a cada instancia del componente `<Todo />` un ID con el formato `todo-i`, donde `i` cada vez es mas grande por uno:
 

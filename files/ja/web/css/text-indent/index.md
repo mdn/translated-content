@@ -248,7 +248,6 @@ p {
 
 - [CSS を使用した HTML のスタイル付け](/ja/docs/Learn_web_development/Core/Styling_basics)
 - 関連する CSS プロパティ:
-
   - [`text-justify`](/ja/docs/Web/CSS/text-justify)
   - [`text-orientation`](/ja/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/ja/docs/Web/CSS/text-overflow)

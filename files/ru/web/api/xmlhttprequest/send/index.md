@@ -18,9 +18,7 @@ XMLHttpRequest.send(body)
 ### Параметры
 
 - _body_ {{optional_inline}}
-
   - : Данные из параметра body оправляются в запросе через XHR. Это могут быть:
-
     - {{domxref("Document")}}, и в этом случае данные будут сериализованы перед отправкой.
     - `BodyInit`, которые, согласно спецификации [Fetch](https://fetch.spec.whatwg.org/#bodyinit) могут быть: {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}}, или объектом {{domxref("USVString")}}.
 

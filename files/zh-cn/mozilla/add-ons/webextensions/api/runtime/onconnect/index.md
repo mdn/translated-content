@@ -29,9 +29,7 @@ browser.runtime.onConnect.hasListener(listener);
 ### 参数
 
 - `function`
-
   - : A callback function that will be called when this event occurs. The function will be passed the following arguments:
-
     - `port`
       - : A {{WebExtAPIRef('runtime.Port')}} object connecting the current script to the other context it is connecting to.
 
@@ -67,7 +65,6 @@ The corresponding background script:
 
 - listens for connection attempts from the content script
 - when it receives a connection attempt:
-
   - stores the port in a variable named `portFromCS`
   - sends the content script a message using the port
   - starts listening to messages received on the port, and logs them

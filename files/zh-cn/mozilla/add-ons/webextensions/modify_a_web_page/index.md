@@ -236,12 +236,10 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - 使用`tabs.executeScript()`的例子：
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

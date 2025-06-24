@@ -63,7 +63,6 @@ Sec-Fetch-User: ?1
 ## 関連情報
 
 - 関連ヘッダー
-
   - {{HTTPHeader("Sec-Fetch-Dest")}}
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}

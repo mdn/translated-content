@@ -24,11 +24,9 @@ TypeError: "x" is not a function
 Есть множество функций, нуждающихся в колбэк-функциях. Вы должны будете предоставить колбэк-функцию для того, чтобы эти методы работы правильно:
 
 - Когда работаете с {{jsxref("Array")}} или {{jsxref("TypedArray")}} объектами:
-
   - {{jsxref("Array.prototype.every()")}}, {{jsxref("Array.prototype.some()")}}, {{jsxref("Array.prototype.forEach()")}}, {{jsxref("Array.prototype.map()")}}, {{jsxref("Array.prototype.filter()")}}, {{jsxref("Array.prototype.reduce()")}}, {{jsxref("Array.prototype.reduceRight()")}}, {{jsxref("Array.prototype.find()")}}
 
 - Когда работаете с {{jsxref("Map")}} и {{jsxref("Set")}} объектами:
-
   - {{jsxref("Map.prototype.forEach()")}} и {{jsxref("Set.prototype.forEach()")}}
 
 ## Примеры

@@ -49,7 +49,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 ## Voir aussi
 
 - Les pseudo-éléments relatifs à WebKit/Blink qui permettent de mettre en forme les autres parties des éléments [`<progress>`](/fr/docs/Web/HTML/Element/progress)
-
   - [`::-webkit-progress-bar`](/fr/docs/Web/CSS/::-webkit-progress-bar)
   - [`::-webkit-progress-value`](/fr/docs/Web/CSS/::-webkit-progress-value)
 

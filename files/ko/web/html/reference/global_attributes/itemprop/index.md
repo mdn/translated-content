@@ -275,13 +275,11 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 **토큰**(**Tokens**)은 문자열이거나 URL일 수 있습니다. item이 URL일 경우는 **typed item**이라고 하고 그렇지 않은 경우는 문자열(string)이라고 합니다. 문자열에는 마침표(period)나 콜론(colon)이 포함되어서는 안됩니다(아래 참고).
 
 1. 아이템이 typed item일 경우 다음 중 하나이어야 합니다:
-
    1. 정의된 프로퍼티 이름이거나
    2. 어휘(vocabulary)의 정의를 참조하는 유효한 URL이거나
    3. 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
 
 2. 아이템이 typed item이 아닐 경우 다음을 따라야 합니다:
-
    1. "**.**" (U+002E FULL STOP) 문자나 "**:**" characters (U+003A COLON) 문자를 포함하지 않는 문자열로 전용(proprietary) 아이템 프로퍼티(예: 공개된 명세서에 정의되지 않은)로 사용되는 유효한 URL이어야 합니다.
 
 > [!NOTE]
@@ -292,35 +290,27 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 이름-값 쌍의 프로퍼티 값은 다음 목록에서 처음으로 일치하는 값입니다:
 
 - 해당 요소가 **itemscope** 속성을 가지고 있을 경우
-
   - 그 값은 해당 요소가 생성한 **아이템**(**item**)입니다.
 
 - 해당 요소가 **meta** 요소일 경우
-
   - 그 값은 해당 요소의 **content** 속성의 값입니다.
 
 - 해당 요소가 **audio**, **embed**, **iframe**, **img**, **source**, **track**, 또는 **video**일 경우
-
   - 그 값은 src 속성이 해당 요소에 설정될 당시 노드 문서(node document;[Microdata DOM API](/ko/docs/Web/HTML/Microdata)의 일부)에 상대적인 src 속성의 값을 파싱한 URL 문자열입니다.
 
 - 해당 요소가 **a**, **area**, 또는 **link** 요소일 경우
-
   - 그 값은 href 속성이 해당 요소에 설정될 당시 노드 문서에 상대적인 href 속성의 값을 파싱한 URL 문자열입니다.
 
 - 해당 요소가 **object** 요소일 경우
-
   - 그 값은 data 속성이 해당 요소에 설정될 당시 노드 문서에 상대적인 data 속성의 값을 파싱한 URL 문자열입니다.
 
 - 해당 요소가 **data**일 경우
-
   - 그 값은 해당 요소의 value 속성의 값입니다.
 
 - 해당 요소가 **meter**일 경우
-
   - 그 값은 해당 요소의 **value** 속성의 값입니다.
 
 - 해당 요소가 **time**일 경우
-
   - 그 값은 해당 요소의 **datetime** 값 입니다.
 
 그 외의 경우
@@ -430,7 +420,6 @@ ID가 사람에게 친화적인 형태가 아니므로, 사람이 읽을 수 있
 
 - [다른 전역 특성](/ko/docs/Web/HTML/Global_attributes)
 - 다른 마이크로데이터와 관련된 전역 속성:
-
   - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
   - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/ko/docs/Web/HTML/Global_attributes#itemscope)

@@ -39,7 +39,6 @@ flex-basis: unset;
 - `width`
   - : Definido por un número seguido de una unidad absoluta tal como `px`, `mm` o `pt`, o un porcentaje del tamaño principal de un contenedor flexible padre. Los valores negativos no son válidos.
 - `content`
-
   - : Indica el dimensionamiento automático, basado en el contenido del elemento flexible.
 
     > [!NOTE]

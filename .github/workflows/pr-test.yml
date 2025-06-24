@@ -76,6 +76,10 @@ jobs:
         env:
           GIT_DIFF_CONTENT: ${{ steps.check.outputs.GIT_DIFF_CONTENT }}
 
+          # Used by the `rari` cli to avoid rate limiting issues
+          # when fetching the latest releases info from the GitHub API.
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
           CONTENT_ROOT: ${{ github.workspace }}/mdn/content/files
           CONTENT_TRANSLATED_ROOT: ${{ github.workspace }}/files
 

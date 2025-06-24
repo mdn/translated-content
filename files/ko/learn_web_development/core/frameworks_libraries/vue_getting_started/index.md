@@ -146,7 +146,6 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
 - `babel.config.js`: [Babel](https://babeljs.io/)의 config 파일입니다. Babel은 개발용으로 사용하는 최신 JavaScript 기능을 상용 브라우저 호환이 가능하도록 구버전으로 번역하는 역할을 합니다. 대표적으로, ECMA Script 2015(비공식적으로 ES6라고도 불림)로 작성된 코드를 ES5로 변환해 IE 등의 브라우저에서 동작할 수 있도록 해주는 것이 Babel이 하는 일입니다. 이 파일에 부가적인 babel 플러그인을 등록할 수 있습니다.
 - `.browserslistrc`: [Browserslist](https://github.com/browserslist/browserslist)의 config 파일입니다. 우리가 사용하는 도구를 어떤 브라우저에 최적화할지 이 파일에 정의할 수 있습니다.
 - `public`: public 디렉토리는 [Webpack](https://webpack.js.org/)의 처리를 받지 않고 퍼블리싱되는 정적 자산(static assets)을 포함합니다. (단, `index.html`의 경우 일부 Webpack의 처리를 받습니다)
-
   - `favicon.ico`: 앱의 대표 favicon 파일입니다. 기본값으로 Vue 로고가 들어가 있습니다.
   - `index.html`: 앱의 템플릿 파일입니다. 우리의 Vue 앱은 이 HTML 페이지로부터 실행됩니다. lodash 템플릿 구문을 사용해 보간법으로 값을 지정할 수 있습니다.
 
@@ -154,7 +153,6 @@ Vue의 다양한 기능을 알아보기 위해, 예제로 할 일 목록(todo li
     > index.html 파일은 애플리케이션 레이아웃을 관리하는 템플릿이 아닙니다. 이 파일은 Vue 앱 외부의 정적 HTML을 제어하는 템플릿입니다. 고급 사용 사례를 제외하면 이 파일을 직접 편집할 일은 거의 없습니다.
 
 - `src`: 우리의 Vue 애플리케이션의 핵심 내용을 포함하게 될 디렉토리입니다.
-
   - `main.js`: 이 파일은 애플리케이션의 진입점입니다. 현재 이 파일은 Vue 앱을 초기화하고 `index.html` 파일에서 어떤 HTML 엘리멘트를 앱에 붙여야 하는지 (예제 프로젝트에서는 #app 엘리멘트) 나타냅니다. 이 파일에 전역 컴포넌트나 부가적인 Vue 라이브러리를 등록하는 경우가 많습니다.
   - `App.vue`: Vue 애플리케이션의 최상위 컴포넌트입니다. Vue 컴포넌트에 대한 자세한 내용은 아래를 참조하세요.
   - `components`: 우리가 앞으로 만들 Vue 컴포넌트를 저장할 디렉토리입니다. 지금은 한 개의 예시 컴포넌트만을 포함하고 있습니다.

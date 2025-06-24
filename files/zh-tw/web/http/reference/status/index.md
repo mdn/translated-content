@@ -34,14 +34,11 @@ HTTP 回應狀態碼表示特定的 [HTTP](/zh-TW/docs/Web/HTTP) 請求是否已
 ## 成功回應
 
 - {{HTTPStatus(200, "200 OK")}}
-
   - : 請求成功。「成功」的結果含義取決於 HTTP 方法：
-
     - {{HTTPMethod("GET")}}：資源已被擷取並在訊息主體中傳送。
     - {{HTTPMethod("HEAD")}}：回應中包含表示標頭，但沒有任何訊息主體。
     - {{HTTPMethod("PUT")}} 或 {{HTTPMethod("POST")}}：描述操作結果的資源在訊息主體中傳送。
     - {{HTTPMethod("TRACE")}}：訊息主體包含了伺服器接收到的請求訊息。
-
 - {{HTTPStatus(201, "201 Created")}}
   - : 請求成功，並因此建立了一個新的資源。這通常是在 {{HTTPMethod("POST")}} 請求或某些 {{HTTPMethod("PUT")}} 請求之後發送的回應。
 - {{HTTPStatus(202, "202 Accepted")}}

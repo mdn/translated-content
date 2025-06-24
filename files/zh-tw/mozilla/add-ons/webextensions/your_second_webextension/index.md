@@ -13,7 +13,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 - **定義一個 [browser action](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) 給新增於 Firefox 工具列的按鈕。**
   這個按鈕，我們將提供以下功能：
-
   - 按鈕的 icon，命名為 "beasts-32.png"
   - 當按下按鈕時顯示一個彈出視窗 (pop-up)，這個 pop-up 將會包含 HTML, CSS 和 JavaScript。
 
@@ -85,7 +84,6 @@ cd beastify
 - [`icons`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 為非必要但建議加上：它允許附加元件指定圖示、也會在附加元件的管理員顯示
 - [`permissions`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 列出了該 extension 所需要的權限。這邊我們只會要求 [`activeTab` permission](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) 。
 - [`browser_action`](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) 定義工具列的按鈕，在這邊我們將會提供三種 key：
-
   - `default_icon` 為必要的：告訴 button 該使用的 icon 為何
   - `default_title`為非必要的：該 value 會顯示在 button 的 tip 裡
   - `default_popup` 如果想要顯示 pop-up，此為必要的 key：此教學中有使用到 pop-up 故為必要的，並將 HTML 檔案指給他。
