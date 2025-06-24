@@ -1,8 +1,8 @@
 ---
-title: Strict-Transport-Security 標頭
+title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

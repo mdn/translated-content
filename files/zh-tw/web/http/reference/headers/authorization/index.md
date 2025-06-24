@@ -2,7 +2,7 @@
 title: Authorization 標頭
 slug: Web/HTTP/Reference/Headers/Authorization
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{HTTPSidebar}}
@@ -105,7 +105,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
+> [!WARNING]
+> {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
 
 參閱 [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本驗證來保護你的網站。
 
