@@ -24,7 +24,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `autocomplete` {{non-standard_inline}}
   - : O uso desse atributo em um {{HTMLElement("button")}} não está padronizado nem dentro das especificações do Firefox. Por padrão, diferente de outros navegadores, o [Firefox persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} nas páginas carregadas. Definir o valor desse atributo para `off` (ex: `autocomplete="off"`) desabilita esse recurso. Veja [Erro do Firefox 654072](https://bugzil.la/654072).
 - `disabled`
-
   - : Esse atributo booleano indica que o usuário não poderá interagir com o botão. Se esse atributo não for especificado, o botão herdará a configuração do elemento que o contém, por exemplo {{HTMLElement("fieldset")}}, se não existir nenhum elemento com o atributo **disabled** definido, então o botão estará habilitado.
 
     Firefox irá, diferente de outros navegadores, por padrão, [persiste com o estado dinâmico desativado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de um {{HTMLElement("button")}} sob as páginas carregadas. Use o atributo [`autocomplete`](#autocomplete) para controlar esse recurso.
@@ -34,9 +33,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `formaction`
   - : A URI de um programa que processa a informação submetida pelo botão. Se especificado, ele sobrescreve o atributo [`action`](/pt-BR/docs/Web/HTML/Element/form#action) do formulário proprietário do botão.
 - `formenctype`
-
   - : Se o botão é um botão de envio, esse atributo especifica o tipo de conteúdo que é usado para enviar o formulário para o servidor; Possíveis valores são:
-
     - `application/x-www-form-urlencoded`: O valor padrão se o atributo não está especificado.
     - `multipart/form-data`: Use esse valor se você está usando um elemento {{HTMLElement("input")}} com o atributo [`type`](/pt-BR/docs/Web/HTML/Element/input#type) definido para o `arquivo`.
     - `text/plain`
@@ -44,9 +41,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     Se esse atributo fro especificado, ele sobrescreve o atributo [`enctype`](/pt-BR/docs/Web/HTML/Element/form#enctype) do formulário proprietário do botão.
 
 - `formmethod`
-
   - : Se o botão for um botão de envio, esse atributo especifica o método HTTP que o navegador usará para enviar o formulário. Possíveis valores são:
-
     - `post`: Os dados obtidos do formulário são incluídos em seu corpo e enviados para o servidor.
     - `get`: Os dados obtidos do formulário são anexados aos atributos URI do **formulário**, com uma '?' como separador, e o resultado URI é enviado para o servidor. Use esse método quando o formulário não possui efeitos colaterais e contém apenas caracteres ASCII.
 
@@ -55,9 +50,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `formnovalidate`
   - : Se o botão é um botão de envio, esse atributo Booleano especifica que o formulário não é para ser validado quando submetido. Se esse atributo for especificado, ele sobrescreve o atributo [`novalidate`](/pt-BR/docs/Web/HTML/Element/form#novalidate) do formulário proprietário do botão.
 - `formtarget`
-
   - : Se o botão é um botão de envio, esse atributo é um nome ou palavra-chave indicando onde exibir a resposta que é recebida após o envio do formulário. Esse é um nome de, ou palavra-chave para, um _contexto de navegação_ (por exemplo, uma aba, janela ou quadro embutido). Se esse atributo é especificado, ele sobrescreve o atributo [`target`](/pt-BR/docs/Web/HTML/Element/form#target) do formulário proprietário do botão. As seguintes palavras-chaves possuem significados especiais:
-
     - `_self`: Carrega a resposta no mesmo contexto navegação como o atual. Esse valor é o padrão se o atributo não é especificado.
     - `_blank`: Carrega a resposta em um contexto de navegação sem nome.
     - `_parent`: Carrega a resposta no contexto de navegação pai do atual. Se não há nenhum pai, essa opção passa a ser o mesmo que `_self`.
@@ -66,9 +59,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `name`
   - : O nome do botão que é enviado com os dados do formulário.
 - `type`
-
   - : O tipo de botão. O possíveis valores são:
-
     - `submit`: O botão envia os dados do formulário para o servidor. Esse é o padrão se o atributo não for especifidado, ou se o atributo é dinamicamente mudado para um valor vazio ou inválido.
     - `reset`: O botão restaura todos os controles para seus valores iniciais.
     - `button`: O botão não possui comportamento padrão. Ele pode ter scripts do lado do cliente associado com os eventos do elemento, no qual são acionados quando o evento ocorrer.

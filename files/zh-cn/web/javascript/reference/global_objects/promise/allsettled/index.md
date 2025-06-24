@@ -42,7 +42,6 @@ Promise.allSettled(iterable)
 
 - **已兑现（already fulfilled）**，如果传入的 `iterable` 为空的话。
 - **异步兑现（asynchronously fulfill）**，当给定的 `iterable` 中所有 promise 已经敲定时（要么已兑现，要么已拒绝）。兑现的值是一个对象数组，其中的对象按照 `iterable` 中传递的 promise 的顺序，描述每一个 promise 的结果，无论完成顺序如何。每个结果对象都有以下的属性：
-
   - `status`
     - : 一个字符串，要么是 `"fulfilled"`，要么是 `"rejected"`，表示 promise 的最终状态。
   - `value`

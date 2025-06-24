@@ -227,7 +227,6 @@ p {
 
 - [学习使用 CSS 为 HTML 添加样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)
 - 相关 CSS 属性：
-
   - [`text-justify`](/zh-CN/docs/Web/CSS/text-justify)
   - [`text-orientation`](/zh-CN/docs/Web/CSS/text-orientation)
   - [`text-overflow`](/zh-CN/docs/Web/CSS/text-overflow)

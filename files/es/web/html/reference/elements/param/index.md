@@ -21,9 +21,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Globa
 - `type` {{deprecated_inline}}
   - : Se usa solo si `valuetype` es `ref`. Especifica el tipo MIME de los valores encontrados en la URI especificada por el valor.
 - `valuetype` {{deprecated_inline}}
-
   - : Especifica el tipo del atributo `value`. Los posibles valores son:
-
     - `data`: Valor por defecto. El valor se pasa a la implementación del objeto como una cadena.
     - `ref`: El valor es una URI hacia un recurso donde se almacenan los valores en tiempo de ejecución.
     - `object`: Un ID de otro {{HTMLElement("object")}} que se encuentra en el mismo documento.

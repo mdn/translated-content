@@ -22,9 +22,7 @@ El elemento HTML _fila de tabla_ (_table row_) `<tr>` define una fila de celdas 
 Este elemento incluye los [global attributes](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{deprecated_inline}}
-
   - : Este atributo enumerado especifica como será gestionado el alineamiento horizontal del contenido de cada celda. Hay varios valores:
-
     - `left`, alinea el contenidoa la izquierda de las celdas
     - `center`, centra el contenido en las celdas
     - `right`, alinea el contenido a la derecha de las celdas
@@ -39,19 +37,16 @@ Este elemento incluye los [global attributes](/es/docs/Web/HTML/Reference/Global
     > - Para lograr el mismo efecto que el valor char, en CSS3, puede utilizar el valor de la [`char`](#char) como el valor de la propiedad {{cssxref("text-align")}}.
 
 - `bgcolor` {{deprecated_inline}}
-
   - : Este atributo define el color de fondo de cada celda de la fila. Puede ser un código de #RRGGBB o una palabra clave de color de SVG.
     > [!NOTE]
     > El elemento {{HTMLElement("tr")}} debe ser de estilo con CSS. Para dar un efecto similar al atributo bgcolor, utilice la propiedad CSS {{cssxref("background-color")}}.
 
 - `char` {{deprecated_inline}}
-
   - : Este atributo es utilizado para establecer el caracter para alinear las celdas de una columna. Los valores típicos para éste incluyen un punto (.) al intentar alinear los números o valores monetarios. Si [`align`](#align) no se ha ajustado a char, este atributo se ignora.
     > [!NOTE]
     > No utilice este atributo, ya que es obsoleta (y no es compatible) en el último estándar. Para lograr el mismo efecto que el [`char`](#char), en CSS3, puedes utilizar el juego de carácteres utilizando el atributo [`char`](#char) como el valor de la referencia externa de la propiedad {{cssxref("text-align")}}.
 
 - `charoff` {{deprecated_inline}}
-
   - : Este atributo se utiliza para indicar el número de caracteres para compensar los datos de la columna de los carácteres de alineación especificado por el atributo char.
     > [!NOTE]
     > No utilice este atributo, ya que está obsoleto (y no es compatible) en el último estándar.
@@ -85,7 +80,6 @@ Ver {{HTMLElement("table")}} para ejemplos de `<tr>`.
 
 - Otros elementos relacionados con tablas HTML: {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}};
 - Las propiedades CSS y pseudo-clases que pueden ser especialmente útiles para el estilo del elemento \<tr>:
-
   - El {{cssxref(":nth-child")}} pseudo-clase para establecer la alineación en las células de la columna;
   - El {{cssxref("text-align")}} propiedad para alinear todas las células contenidos en el mismo carácter, como '.'. <
 

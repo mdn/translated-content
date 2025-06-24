@@ -10,7 +10,6 @@ l10n:
 ## 颜色
 
 - 颜色对比度必须遵循 [WCAG 2.1 AA 等级需求](https://www.w3.org/TR/WCAG/#contrast-minimum)：
-
   - 普通文本的对比率为 4.5:1（小于 18 磅或黑体 14 磅）
   - 大文本对比率为 3:1（大于等于 18 磅或黑体 14 磅）
 
@@ -20,14 +19,12 @@ l10n:
 
 - 内容隐藏技术（如零不透明度、z-index 顺序和离屏位置）不得仅用于处理可见性。
 - 当前可见的屏幕之外的内容，必须*确实*是不可见的（特别是单一页面应用中的多个*卡片*）：
-
   - 使用 `hidden` 特性或 `visibility`、`display` 样式属性。
   - 除非不可避免，不应该使用 `aria-hidden` 特性。
 
 ## 焦点
 
 - 所有可激活元素必须可被聚焦：
-
   - 标准控件，如链接、按钮、表单域默认可被聚焦。
   - 非标准控件必须为它们分配一个适当的 [ARIA 角色](https://www.w3.org/TR/wai-aria/roles)，如 `button`、`link` 或 `checkbox`。
 
@@ -36,7 +33,6 @@ l10n:
 ## 文本等效
 
 - 应用中，每个展示的非文本元素都必须提供等效文本。
-
   - 恰当的位置使用 _alt_ 和 _title_（请参考 Steve Faulkner 关于[使用 HTML title 特性](https://www.tpgi.com/using-the-html-title-attribute-updated/) 的帖子。）
   - 如果上面的特性不适用，使用恰当的 [ARIA 状态与属性](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def)，比如 `aria-label`、`aria-labelledby` 或 `aria-describedby`。
 
@@ -51,7 +47,6 @@ l10n:
 ## 方向
 
 - 除非必要，否则不应将内容限制在单一方向，如纵向或横向。见 [WCAG 2.1：方向](https://www.w3.org/WAI/WCAG21/Understanding/orientation.html)
-
   - 例如，钢琴应用程序和银行支票都需要一定的方向。
 
 ## 通用指南
@@ -68,7 +63,6 @@ l10n:
 
 - 应使用 [ARIA 地标角色](https://www.washington.edu/accessibility/websites/regions/)描述应用或文档的结构，如 `banner`、`complementary`、`contentinfo`、`main`、`navigation` 和 `search`。
 - 对于触摸事件，以下至少有一项必须为真（[WCAG 2.1：指针取消](https://www.w3.org/WAI/WCAG21/Understanding/pointer-cancellation.html)）：
-
   - 不应使用按下事件来触发任何操作
   - 操作在释放事件上触发，并提供中止操作的选项，在其完成之前或提供撤消操作的选项
   - 松开事件将撤消在按下事件上触发的任何操作

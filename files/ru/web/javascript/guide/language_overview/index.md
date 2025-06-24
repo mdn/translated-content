@@ -33,7 +33,6 @@ JavaScript является объектно-ориентированным яз
 - [Логические типы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
 - [Символы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (новый тип из шестой редакции)
 - [Объекты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
   - [Функции](/ru/docs/Web/JavaScript/Reference/Global_Objects/Function)
   - [Массивы](/ru/docs/Web/JavaScript/Reference/Global_Objects/Array)
   - [Даты](/ru/docs/Web/JavaScript/Reference/Global_Objects/Date)

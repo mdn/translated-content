@@ -68,7 +68,6 @@ l10n:
 - **Cookie Store API:** `dom.cookieStore.enabled`。
 
   [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) は新しい {{jsxref("Promise")}} ベースの Cookie 管理方法で、イベントループをブロックせず、{{domxref("Document")}} に依存しません (このため [サービスワーカー](/ja/docs/Web/API/Service_Worker_API) で使用できます)。Firefox 132 では Cookie Store API のサブセットを実装しました ([Firefox bug 1800882](https://bugzil.la/1800882))。以下のプロパティが含まれます:
-
   - [`CookieStore`](/ja/docs/Web/API/CookieStore) インターフェイス。ただし戻り値に `partitioned` は含まれません。
   - [`CookieChangeEvent`](/ja/docs/Web/API/CookieChangeEvent) インターフェイス。ただし `partitioned` プロパティを除きます。
   - [`Window.cookieStore`](/ja/docs/Web/API/Window/cookieStore) プロパティ。

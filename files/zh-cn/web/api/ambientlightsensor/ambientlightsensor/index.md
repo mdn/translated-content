@@ -16,9 +16,7 @@ var ambientLightSensor = new AmbientLightSensor(options)
 ### 参数
 
 - _options_ {{optional_inline}}
-
   - : 以下是设置属性：
-
     - `frequency`: TBD
 
 ## 规范

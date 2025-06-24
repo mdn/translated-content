@@ -27,14 +27,11 @@ fetch(resource, options)
 ### 引数
 
 - `resource`
-
   - : フェッチしたいリソースを定義します。以下を指定できます。
-
     - フェッチしたいリソースの URL を表す文字列または{{Glossary("stringifier", "文字列化子")}}を持つその他のオブジェクト ({{domxref("URL")}} オブジェクトなど)。この URL には、ベース URL (ウィンドウコンテキストでは文書の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}}) からの相対 URL も使用できます。
     - {{domxref("Request")}} オブジェクト
 
 - `options` {{optional_inline}}
-
   - : リクエストに適用したいカスタム設定をすべて格納した {{domxref("RequestInit")}} オブジェクトです。
 
 ### 返値

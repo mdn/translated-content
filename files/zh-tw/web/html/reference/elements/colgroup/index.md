@@ -74,7 +74,6 @@ td {
 此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `span`
-
   - : 指定`<colgroup>`元素跨越的連續欄數。該值必須是大於零的正整數。如果沒有指定，預設值為 `1`。
 
     > [!NOTE]
@@ -85,7 +84,6 @@ td {
 以下屬性已棄用，不應使用。此處僅將其記錄，以供更新現有代碼和僅供歷史興趣時參考。
 
 - `align` {{deprecated_inline}}
-
   - : 指定每個欄群組儲存格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支援時，`char` 值將文字內容對齊到 [`char`](#char) 屬性中定義的字元和 [`charoff`](#charoff) 屬性中定義的偏移。請注意，後代{{HTMLElement("col")}}元素可能會使用其自己的 [`align`](/zh-TW/docs/Web/HTML/Reference/Elements/col#align) 屬性覆蓋此值。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
     > [!NOTE]
@@ -96,19 +94,15 @@ td {
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 
 - `bgcolor` {{deprecated_inline}}
-
   - : 定義每個欄群組儲存格的背景顏色。該值是一個 HTML 顏色；可以是 [6 位十六進制 RGB 碼](/zh-TW/docs/Web/CSS/hex-color)，前綴為「`#`」，或者是一個[顏色關鍵字](/zh-TW/docs/Web/CSS/named-color)。不支援其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。請改用 {{cssxref("background-color")}} CSS 屬性，因為此屬性已棄用。
 
 - `char` {{deprecated_inline}}
-
   - : 指定每個欄群組儲存格內容與字符的對齊方式。這個屬性的典型值包括當試圖對齊數字或貨幣值時使用的句點（`.`）。如果 [`align`](#align) 未設置為 `char`，則忽略此屬性，但它仍將作為屬於此欄群組的 {{HTMLElement("col")}} 元素的 [`align`](/zh-TW/docs/Web/HTML/Reference/Elements/col#align) 的默認值使用。
 
 - `charoff` {{deprecated_inline}}
-
   - : 指定要從 [`char`](#char) 屬性指定的對齊字符偏移的字符數。
 
 - `valign` {{deprecated_inline}}
-
   - : 指定每個欄群組儲存格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`valign`](/zh-TW/docs/Web/HTML/Reference/Elements/col#valign) 屬性覆蓋此值。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素，因為此屬性已棄用。
 
     > [!NOTE]
@@ -119,7 +113,6 @@ td {
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，可以通過組合適當的 CSS 屬性選擇器來達到效果，例如像 `[colspan=n]`，儘管這並不簡單。
 
 - `width` {{deprecated_inline}}
-
   - : 指定當前欄群組中每個欄的默認寬度。除了標準的像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨越的欄的寬度應該是容納欄內容所需的最小寬度。也可以使用相對寬度，如 `5*`。請注意，後代 {{HTMLElement("col")}} 元素可能會使用其自己的 [`width`](/zh-TW/docs/Web/HTML/Reference/Elements/col#width) 屬性覆蓋此值。請改用 {{cssxref("width")}} CSS屬性，因為此屬性已棄用。
 
 ## 使用說明

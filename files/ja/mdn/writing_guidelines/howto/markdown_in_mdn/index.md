@@ -342,11 +342,9 @@ const greeting = "I'm a bad example";
 
 ````md
 - term1
-
   - : My description of term1
 
 - `term2`
-
   - : My description of term2
 
     複数の段落やコードブロックを格納することもできます。

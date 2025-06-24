@@ -36,7 +36,6 @@ La mayoría de los valores de alinean verticalmente el elemento de forma relativ
 - [`<length>`](/es/docs/Web/CSS/length)
   - : Aligns the baseline of the element at the given length above the baseline of its parent.
 - `<percentage>`
-
   - : Like \<length> values, with the percentage being a percent of the {{ Cssxref("line-height") }} property.
 
     For elements that do not have a baseline, the bottom margin edge is used instead.

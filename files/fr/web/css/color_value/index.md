@@ -71,7 +71,6 @@ La plupart des conceptrices et concepteurs trouvent le modèle HSL plus intuitif
 Les couleurs HSL sont exprimées à l'aide des notations fonctionnelles `hsl()` et `hsla()`.
 
 - [`hsl()`](/fr/docs/Web/CSS/color_value/hsl) ou [`hsla()`](/fr/docs/Web/CSS/color_value/hsl)&nbsp;: `hsl[a](H, S, L[, A])` ou `hsl[a](H S L[ / A])`
-
   - : `H` (pour la teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
 
     `S` (saturation) et `L` (luminosité) sont exprimées en pourcentages. Une **saturation** à `100%` indique une couleur complètement saturée, tandis qu'une saturation à `0%` fournira un niveau de gris (une couleur complètement désaturée). Une **luminosité** à `100%` fournira du blanc, tandis qu'une luminosité à `0%` fournira du noir et `50%` une luminosité «&nbsp;normale&nbsp;».
@@ -93,7 +92,6 @@ Les couleurs du modèle HWB sont exprimées à l'aide de la notation fonctionnel
 > La fonction `hwb()` **ne permet pas** d'utiliser des virgules pour séparer les valeurs des arguments (contrairement aux autres fonctions de création de couleur qui l'ont précédée).
 
 - [`hwb()`](/fr/docs/Web/CSS/color_value/hwb): `hwb(H W B[ / A])`
-
   - : Comme pour le modèle HSL, `H` (la teinte, <i lang="en">hue</i> en anglais) un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
 
     `W` (blancheur, <i lang="en">whiteness</i> en anglais) et `B` (noirceur, <i lang="en">blackness</i>) sont des pourcentages (type [`<percentage>`](/fr/docs/Web/CSS/percentage)). Ces deux valeurs sont mélangées et il faut donc `0%` de blancheur **et** `100%` de noirceur afin de produire du noir. Réciproquement, il faudra `100%` de blancheur et `0%` de noirceur pour produire du blanc. `50%` sur l'une ou l'autre des valeurs produira une teinte de gris intermédiaire avec une teinte de la couleur fournie avec le premier paramètre.

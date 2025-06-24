@@ -19,9 +19,7 @@ toSorted(compareFn)
 ### 引数
 
 - `compareFn` {{optional_inline}}
-
   - : ソート順を定義する関数を指定します。省略した場合は、配列の要素を文字列に変換し、 Unicode コードポイントの値に従って並べ替えます。
-
     - `a`
       - : 比較する最初の要素です。
     - `b`

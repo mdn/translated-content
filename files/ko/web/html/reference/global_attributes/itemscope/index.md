@@ -273,7 +273,6 @@ original_slug: Web/HTML/Global_attributes/itemscope
 
 - 다른 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
 - 마이크로데이터 관련 다른 전역 특성
-
   - [`itemid`](/ko/docs/Web/HTML/Global_attributes#itemid)
   - [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop)
   - [`itemref`](/ko/docs/Web/HTML/Global_attributes#itemref)

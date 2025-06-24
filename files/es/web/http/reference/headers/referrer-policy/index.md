@@ -53,7 +53,6 @@ Referrer-Policy: unsafe-url
 - strict-origin-when-cross-origin
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente, se enviará únicamente el origen del documento a destinos igual de seguros _a priori_ (HTTPS → HTTPS) y no se enviará ninguna cabecera a destinos menos seguros (HTTPS → HTTP).
 - unsafe-url
-
   - : Se enviará un URL completo al realizarse una solicitud de origen equivalente o de origen transversal.
 
     > [!NOTE]
@@ -93,7 +92,6 @@ Referrer-Policy: unsafe-url
 
 - [Referente HTTP en Wikipedia](https://es.wikipedia.org/wiki/HTTP_referer)
 - Otras maneras de definir una directiva de referentes:
-
   - Un elemento {{HTMLElement("meta")}} con un [nombre de `referrer`](/es/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - Un atributo `referrerpolicy` en un elemento {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}} o {{HTMLElement("link")}}.
   - La [relación de enlace](/es/docs/Web/HTML/Reference/Attributes/rel) `noreferrer` en un elemento a, area o link (`rel="noreferrer"`).

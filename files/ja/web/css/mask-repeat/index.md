@@ -47,7 +47,6 @@ mask-repeat: unset;
 ### 値
 
 - `<repeat-style>`
-
   - : 単一の値の構文は、2 つの値の構文の一括指定です。
 
     <table class="standard-table">

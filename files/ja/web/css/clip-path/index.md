@@ -113,9 +113,7 @@ clip-path: unset;
 - `<clip-source>`
   - : {{cssxref("url_value", "&lt;url&gt;")}} で、[SVG](/ja/docs/Web/SVG) の {{SVGElement("clipPath")}} 要素を参照します。
 - {{cssxref("&lt;basic-shape&gt;")}}
-
   - : `<geometry-box>` 値で寸法と位置が定義されるシェイプです。ジオメトリーボックスが指定されない場合、参照ボックスとして `border-box` が使用されます。以下のいずれかです。
-
     - {{cssxref("basic-shape/inset","inset()")}}
       - : 内部の長方形を定義します。
     - {{cssxref("basic-shape/circle","circle()")}}

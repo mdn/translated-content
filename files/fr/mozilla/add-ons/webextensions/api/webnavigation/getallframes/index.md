@@ -20,9 +20,7 @@ var gettingFrames = browser.webNavigation.getAllFrames(
 ### Paramètres
 
 - `details`
-
   - : `object`. Informations sur l'onglet pour récupérer toutes les images.
-
     - `tabId`
       - : `integer`. L'identifiant de l'onglet
 

@@ -361,7 +361,6 @@ document.querySelector("html").addEventListener("click", () => {
 
 1. 获取这张图片的 `src` 属性值。
 2. 用一个条件句来判断 `src` 的值是否等于原始图片的路径：
-
    1. 如果是，则将 `src` 的值改为第二张图片的路径，在 {{htmlelement("img")}} 内强制加载第二张图片。
    2. 如果不是（意味着它已经修改过）, 则把 `src` 的值重新设置为原始图片的路径，即原始状态。
 

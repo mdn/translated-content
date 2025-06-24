@@ -56,7 +56,6 @@ Las siguientes propiedades son obsoletos. Where available, the appropriate repla
 - `ownerDocument`
   - : Seguramente nunca usaste esta propiedad asi que no deberias preocuparte si esque ya no está disponible.
 - `ownerElement` {{deprecated_inline}} {{readOnlyInline}}
-
   - : Since you get an `Attr` object from an {{domxref("Element")}}, you should already know the associated element.
 
     Contrary to above claim, {{domxref("Document.evaluate")}} can return `Attr` objects from an XPath, in which case you would not easily know the owner.

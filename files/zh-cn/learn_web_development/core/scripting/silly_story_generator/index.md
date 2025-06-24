@@ -136,7 +136,6 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 
 1. 将刚下载的文本文件中的“1. 定义变量和函数”标题项下所有代码复制粘贴至 main.js 中。此时你就有了三个变量（`customName` 是对“输入自定义的名字”文本框的引用，`randomize` 是对“随机生成笑话”按钮的引用，`story` 是对 HTML 底部的、准备存放笑话的 {{htmlelement("p")}} 元素的引用）和一个函数（`randomValueFromArray()` 取一个数组作参数，随机返回数组中的一个元素）。
 2. 然后是文本文件的第二节——“2. 纯文本字符串”。这里包含了一些字符串，这些字符串是项目的输入信息。你应该在 main.js 文件中用变量来保存它们。
-
    1. 用 `storyText` 变量保存第一个长字符串，“今天气温……”。
    2. 用 `insertX` 数组保存第一组三个字符串，“怪兽威利……”。
    3. 用 `insertY` 数组保存第二组三个字符串。“肯德基……”。
@@ -146,7 +145,6 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 
 1. 返回刚才的文本文件。
 2. 将“3. 事件监听器和未完成的函数定义”标题项下的代码复制粘贴至 `main.js` 文件。这将：
-
    - 为 `randomize` 变量增加一个点击事件的监听器。于是当所引用的按钮被点击时，`result()` 函数就会运行。
    - 为代码添加一个未完成的 `result()` 函数定义。本测验剩下的工作就是完成这个函数，让程序正常运行起来。
 
@@ -157,7 +155,6 @@ slug: Learn_web_development/Core/Scripting/Silly_story_generator
 3. 接下来将 `newStory` 中的占位符（`:inserta:`、`:insertb:` 和 `:insertc:` ）替换为 `xItem`、`yItem` 和 `zItem`。有专用的字符串方法可供使用，并用该方法的返回值为 `newStory` 赋值。每当按下按钮时，这些占位符都会替换为随机的笑话字符串。再给你一点提示，我们所说的这种方法每次只会将所找到的首个子字符串进行替换，因此该方法对某个占位符需要执行两次。
 4. 在第一个 `if` 块中再次调用这个字符串替换方法，以使 `newStory` 字符串中的名字“李雷”替换为变量 `name` 的值。这里我们说：“如果 `customName` 中有值，就把故事里的“李雷”替换成它。”如果是汉化版将 newStory 中的“李雷”替换成 `name` 的值；
 5. 在第二个 `if` 块中检查 `american` 单选按钮是否被选中。如果选中，就要将故事中的重量和温度值从公斤和摄氏度转换为磅和华氏度，具体事项如下：
-
    1. 确定英美单位的转换公式。
    2. 定义变量 `weight`、`temperature` 的行中，分别将美制单位按公式转化为英制，用 `Math.round()` 对计算结果取整。然后将英式单位连接到末尾。
    3. 就在上述两个变量的定义下方增加两个字符串置换操作，将“35 摄氏度”替换为 `temperature` 的值，将“140 公斤”替换为 `weight` 的值。

@@ -150,21 +150,17 @@ moz-todo-svelte
 - `.gitignore`: プロジェクトから無視するファイルもしくはフォルダーを git に指示します。アプリを git リポジトリーに含める場合に便利です。
 - `rollup.config.js`: Svelte ではモジュールバンドラーとして [rollup.js](https://rollupjs.org/)（英語）を使用しています。この設定ファイルはアプリのコンパイルとビルドの方法を rollup に指示します。 [webpack](https://webpack.js.org/)（英語）が好きな方は `npx degit sveltejs/template-webpack svelte-app` でスタータープロジェクトを作成することもできます。
 - `scripts`: 必要に応じてセットアップスクリプトが含まれます。現在は `setupTypeScript.js` のみを含める必要があります。
-
   - `setupTypeScript.js`: このスクリプトは Svelte の TypeScript サポートを設定するものです。最後の記事で詳しく説明します。
 
 - `src`: このディレクトリーにはアプリケーションのソースコードが入れられます。つまりアプリのコードを作成する場所です。
-
   - `App.svelte`: アプリの最上位コンポーネントです。今のところは 'Hello World!' をレンダリングするだけです。
   - `main.js`: アプリケーションのエントリーポイントです。これは `App` コンポーネントをインスタンス化して、HTML ページの body にバインドするだけです。
 
 - `public`: このディレクトリーには、本番環境で公開される全てのファイルが含まれています。
-
   - `favicon.png`: アプリのファビコンです。現在は Svelte のロゴになっています。
   - `index.html`: これがアプリのメインページです。最初は空の HTML ページで、その後 Svelte によって生成された CSS ファイルと js バンドルが読み込まれます。
   - `global.css`: このファイルにはスコープされていないスタイルが書かれています。これはアプリケーション全体に適用される通常の CSS ファイルです。
   - `build`: このフォルダーには、生成された CSS と JavaScript のソースコードが入っています。
-
     - `bundle.css`: 各コンポーネントに定義されたスタイルから Svelte が生成した CSS ファイル。
     - `bundle.js`: 全ての JavaScript のソースコードからコンパイルされた JavaScript ファイル。
 
@@ -450,7 +446,6 @@ REPL を使い始めるには、ブラウザーを開いて <https://svelte.jp/r
 - コードの上にあるバーで `.svelte` と `.js` のファイルの作成や並べ替えができます。フォルダー内にファイルを作成する場合は、`components/MyComponent.svelte` のように完全なパス名を指定してください。そうすることで自動的にフォルダーが作成されます。
 - そのバーの上には REPL のタイトルがあります。これはクリックすることで編集が可能です。
 - 右側には下記 3 つのタブがあります。
-
   - _Result_ タブにはアプリの出力が表示され、下部にはコンソールが用意されています。
   - _JS output_ タブでは Svelte が生成した JavaScript コードの検査とコンパイラーオプションの設定ができます。
   - _CSS output_ タブには Svelte によって生成された CSS が表示されます。

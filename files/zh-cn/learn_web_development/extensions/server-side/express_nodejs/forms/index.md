@@ -70,7 +70,6 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 
 - `action`: 提交表单时，要发送数据以进行处理的资源/ URL。如果未设置（或设置为空字符串），则表单将提交回当前页面 URL。
 - `method`: 用于发送数据的 HTTP 方法：`POST` 或 `GET`。
-
   - 如果数据将导致服务器数据库的更改，则始终应该使用`POST`方法，因为这更加可以抵抗跨站点伪造请求攻击。
   - `GET`方法只应用于不更改用户数据的表单（例如，搜索表单）。当你希望能够为 URL 添加书签或共享时，建议使用此选项。
 
@@ -85,7 +84,6 @@ slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/forms
 如上图所示，构成处理代码所需要做的主要是：
 
 1. 在用户第一次请求时显示默认表单。
-
    - 表单可能包含空白字段（例如，如果你正在创建新记录），或者可能预先填充了初始值（例如，如果你要更改记录，或者具有有用的默认初始值）。
 
 2. 接收用户提交的数据，通常是在 HTTP `POST`请求中。
