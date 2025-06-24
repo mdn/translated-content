@@ -15,6 +15,5 @@ l10n:
 - JavaScript 타입: [`Number`](/ko/docs/Web/JavaScript/Data_structures#number_type)
 - JavaScript 전역 객체 {{jsxref("Number")}}
 - [Glossary:](/ko/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("Primitive", "원시 값")}}

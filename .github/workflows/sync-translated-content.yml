@@ -45,8 +45,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
-          cache: "yarn"
-          cache-dependency-path: mdn/content/yarn.lock
 
       - name: Install all yarn packages
         working-directory: ${{ github.workspace }}/mdn/content

@@ -34,17 +34,13 @@ await browser.scripting.insertCSS(
 ### 参数
 
 - `details`
-
   - : 描述要注入的 CSS 和注入位置的对象。它包含以下属性：
-
     - `css` {{optional_inline}}
       - : `string`。包含要注入的 CSS 的字符串。必须指定 `css` 或 `files` 其中之一。
     - `files` {{optional_inline}}
       - : `string` 的数组（`array`）。要注入的 CSS 文件相对于扩展根目录的路径。必须指定 `files` 或 `css` 其中之一。
     - `origin` {{optional_inline}}
-
       - : `string`。注入的样式来源，可以是 `USER`（将 CSS 作为用户样式表添加）、`AUTHOR`（将 CSS 作为作者样式表添加）。默认为 `AUTHOR`。
-
         - `USER` 允许你防止网站覆盖你注入的 CSS：参见[层叠顺序](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#层叠顺序)。
         - `AUTHOR` 样式表的行为就好像它们出现在页面指定的所有作者规则之后一样。这种行为包括页面的脚本动态添加的任何作者样式表，即使这种添加发生在 `insertCSS` 调用完成之后。
 

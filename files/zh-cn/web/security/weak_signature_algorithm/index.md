@@ -1,6 +1,8 @@
 ---
 title: 弱签名算法
 slug: Web/Security/Weak_Signature_Algorithm
+l10n:
+  sourceCommit: ade8d870ed7e18a71dc51fe25aa13d812fb82558
 ---
 
 在给{{Glossary("Digital certificate", "数字证书")}}{{Glossary("Signature/Security", "签名")}}时，用到的散列算法的强度对证书的安全性至关重要。本文将提供一些已知的弱签名算法的信息，以便你在适当的时候避免使用它们。
@@ -15,8 +17,6 @@ slug: Web/Security/Weak_Signature_Algorithm
 
 对基于 MD5 的签名的支持在 2012 年初被移除。
 
-## 相关资料
+## 参见
 
 - [Mozilla Security Blog 关于弃用 SHA-1 的文章](https://blog.mozilla.org/security/2014/09/23/phasing-out-certificates-with-sha-1-based-signature-algorithms/)
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}

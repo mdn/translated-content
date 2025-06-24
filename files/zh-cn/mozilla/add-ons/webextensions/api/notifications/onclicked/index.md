@@ -31,9 +31,7 @@ browser.notifications.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数需要你传递下列参数：
-
     - `notificationId`
       - : `string`。用户点击的通知的 ID。
 

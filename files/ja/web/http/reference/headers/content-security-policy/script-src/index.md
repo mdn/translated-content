@@ -40,7 +40,6 @@ Content-Security-Policy: script-src <source-expression-list>;
 - `'none'`
   - : この種類のリソースは読み込まれません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のいずれかが適用できます。
 
 ## 例
@@ -215,7 +214,6 @@ Content-Security-Policy:  script-src 'unsafe-hashes' 'sha256-{HASHED_EVENT_HANDL
 - {{jsxref("Global_Objects/eval", "eval()")}}
 - {{jsxref("Function", "Function()")}}
 - メソッドの文字列リテラルを `setTimeout("alert(\"Hello World!\");", 500);` のように渡した場合
-
   - {{domxref("Window.setTimeout", "setTimeout()")}}
   - {{domxref("Window.setInterval", "setInterval()")}}
   - {{domxref("Window.setImmediate", "setImmediate()")}}

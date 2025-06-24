@@ -26,7 +26,6 @@ AudioContext.createBuffer(Number numOfChannels, Number length, Number sampleRate
   - : 一个定义了 buffer 中包含的声频通道数量的整数。
     一个标准的实现必须包含至少 32 个声频通道。
 - length
-
   - : 一个代表 buffer 中的样本帧数的整数。
 
 - sampleRate

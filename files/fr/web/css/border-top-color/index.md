@@ -122,18 +122,15 @@ border-top-color: unset;
 ## Voir aussi
 
 - Les propriétés raccourciées liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-top")}},
   - {{cssxref("border-color")}}.
 
 - Les propriétés de couleur pour les autres bordures :
-
   - {{cssxref("border-right-color")}},
   - {{cssxref("border-bottom-color")}},
   - {{cssxref("border-left-color")}}.
 
 - Les autres propriétés liées à la bordure du haut :
-
   - {{cssxref("border-top-style")}},
   - {{cssxref("border-top-width")}}.

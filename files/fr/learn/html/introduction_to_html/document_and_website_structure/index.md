@@ -54,7 +54,6 @@ Les pages web peuvent sembler assez différentes les unes des autres, mais elles
 - Barre latérale
   - : Quelques informations autour du sujet, liens, citations, annonces, etc. Habituellement c'est contextuel au contenu principal (par exemple sur une page d'informations, la barre latérale peut contenir la biographie de l'auteur, ou des liens vers des articles connexes) mais il y a aussi des cas où vous trouverez des éléments récurrents comme un système de navigation secondaire.
 - Pied de page
-
   - : Une bande au bas de la page qui contient généralement, en petits caractères, des avis de droit d'auteur ou des coordonnées de contact. C'est un endroit pour mettre de l'information commune (comme l'en-tête), mais il s'agit dans ce cas d'informations non‑critiques, voire secondaires par rapport au site Web lui-même. Le pied de page est aussi parfois utilisé à des fins de {{Glossary("SEO")}}, en fournissant des liens pour un accès rapide à des contenus prisés.
 
     Un «&nbsp;site web typique&nbsp;» pourrait ressembler à quelque chose comme ceci&nbsp;:

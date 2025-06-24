@@ -42,9 +42,7 @@ new Intl.ListFormat([locales[, options]])
 - `locales`
   - : 可选的.。符合 BCP 47 语言标注的字符串或字符串数组。`locales` 参数的一般形式和相关解释，请参阅 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_identification_and_negotiation", 1)}}.
 - `options`
-
   - : 可选的。拥有下面所列属性中任意几个或全部的对象：
-
     - `localeMatcher`
       指定要使用的本地匹配算法。可选的值有`"lookup"` 和 `"best fit"`；默认情况下使用`"best fit"`。该参数的更多信息，请参考[`Intl` page](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl#locale_negotiation).
     - `type`

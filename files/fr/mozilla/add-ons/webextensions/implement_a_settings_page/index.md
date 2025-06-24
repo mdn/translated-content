@@ -199,5 +199,4 @@ Dans Firefox vous pouvez accéder à la page des paramètres en visitant about:a
 - [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) documentation de référence sur l'API
 - Ouvrez la page de paramètres directement depuis votre extension en utilisant l'API [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage)
 - Exemple de page de paramètres :
-
   - [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)

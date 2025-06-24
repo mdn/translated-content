@@ -34,9 +34,7 @@ Feature-Policy: <directive> <allowlist>
 - `<directive>`
   - : La directive de fonctionnalité à laquelle s'applique la liste d'autorisation `allowlist`. Voir [la section Directives](#directives) ci-après pour les noms de directive autorisés.
 - `<allowlist>`
-
   - : Une liste d'autorisation contenant des origines, décrites par une ou plusieurs des valeurs suivantes, et séparées par des espaces&nbsp;:
-
     - `*`&nbsp;: La fonctionnalité est autorisée pour ce document ainsi que l'ensemble des contextes de navigation imbriqués (via les éléments `<iframe>`) quelles que soient leurs origines.
     - `'self'`&nbsp;: La fonctionnalité sera autorisée dans ce document et pour tous les contextes de navigation imbriqués de la même origine. La fonctionnalité n'est pas autorisée pour les contextes de navigation d'autres origines.
     - `'src'`&nbsp;: Pour l'attribut `allow` d'une <i lang="en">iframe</i> uniquement. La fonctionnalité sera autorisée pour cette <i lang="en">iframe</i> uniquement si le document qui y est chargé provient de la même origine que celle indiquée par l'attribut [`src`](/fr/docs/Web/HTML/Element/iframe#attributs) de l'élément HTML.

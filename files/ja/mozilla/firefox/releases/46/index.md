@@ -27,7 +27,6 @@ slug: Mozilla/Firefox/Releases/46
 ### CSS
 
 - CSS グリッドの実装を更新しました。
-
   - キーワード `auto-fill` および `auto-fit` を、`repeat()` 関数内で使用できるようになりました ([Firefox バグ 1118820](https://bugzil.la/1118820))。
   - 値 `true` を `unsafe` に改名しました。これは {{cssxref("justify-content")}}、{{cssxref("align-content")}}、{{cssxref("justify-self")}}、{{cssxref("align-self")}}、{{cssxref("justify-items")}}、{{cssxref("align-items")}} の各プロパティに影響します ([Firefox バグ 1230478](https://bugzil.la/1230478))。
 
@@ -98,7 +97,6 @@ _変更なし。_
 
 - 非同期の {{domxref("FileReader")}} を、Web workers で使用できるようになりました ([Firefox バグ 901097](https://bugzil.la/901097))。
 - [Web Animations API](/ja/docs/Web/API/Web_Animations_API) の実験的な実装を更新しました。
-
   - {{domxref("AnimationEffectTimingReadOnly")}} および {{domxref("AnimationEffect/getTiming", "AnimationEffectReadOnly.timing")}} を実装しました ([Firefox バグ 1214536](https://bugzil.la/1214536))。
 
 - [権限 API](/ja/docs/Web/API/Permissions_API) が、Nightly だけでなくすべてのリリース版で、既定で有効になりました ([Firefox バグ 1221106](https://bugzil.la/1221106))。

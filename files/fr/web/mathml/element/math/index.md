@@ -22,9 +22,7 @@ En plus des attributs qui suivent, l'élément `<math>` accepte tous les attribu
 - mathcolor
   - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - display
-
   - : Cet attribut à valeur donnée définit la façon dont le balisage MathML doit être rendu. Il peut avoir l'une des valeurs suivantes :
-
     - `block`, ce qui signifie que cet élément sera affiché en dehors du fragment de texte courant, comme un bloc qui pourra être positionné n'importe où sans que cela change le sens du texte ;
     - `inline`, ce qui signifie que cet élément sera affiché au sein du fragment de texte courant et qu'il ne peut pas être déplacé sans que cela change le sens de ce texte.
 

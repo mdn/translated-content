@@ -29,9 +29,7 @@ _このインターフェイスは、親である {{domxref("EventTarget")}} の
 - {{domxref("NetworkInformation.saveData")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : ユーザーがユーザーエージェントにデータ使用量の削減オプションを設定している場合、 `true` を返します。
 - {{domxref("NetworkInformation.type")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 端末がネットワーク通信に使用している接続の種類を返します。値は次のうちのいずれかです。
-
     - `bluetooth`
     - `cellular`
     - `ethernet`

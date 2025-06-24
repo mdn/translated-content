@@ -34,7 +34,6 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
 - {{cssxref("transition-property")}}
   - : Especifica o nome ou nomes das propriedades CSS que as transições serão aplicadas. Somente as propriedades listadas aqui serão animadas durante a transição; alterações e todas outras propriedades ocorrem instantaneamente.
 - {{cssxref("transition-duration")}}
-
   - : Especifica a duração em que as transições devem ocorrer. Você pode especificar uma única duração que se aplica a todas as propriedades durante a transição ou vários valores para permitir que cada propriedade faça a transição em um período de tempo diferente.
 
     `transition-duration: 0.5s`
@@ -322,7 +321,6 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
     {{EmbedLiveSample("duration_4s",275,150)}}
 
 - {{cssxref("transition-timing-function")}}
-
   - : ![](/files/3434/TF_with_output_gt_than_1.png) Especifica uma função para definir como os valores intermediários das propriedades são calculados. As [timing functions](/pt-BR/docs/Web/CSS/easing-function) determinam como os valores intermediários da transição são calculados. A maioria das funções de temporização pode ser especificada fornecendo o gráfico da função correspondente, conforme definido por quatro pontos definindo um bezier cúbico. Você também pode escolher o [Easing Functions Cheat Sheet](https://easings.net/).
 
     `transition-timing-function: ease`
@@ -602,7 +600,6 @@ Você pode controlar componentes individuais da transição com a seguinte sub p
     {{EmbedLiveSample("ttf_step4end",275,150)}}
 
 - {{cssxref("transition-delay")}}
-
   - : Define quanto tempo esperar entre o momento que uma propriedade é alterada e a transição começa.
 
     `transition-delay: 0.5s`

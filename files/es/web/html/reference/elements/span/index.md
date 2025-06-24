@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/span
 ### Definición
 
 - **span** - _abarcar_. Es un contenedor en línea. Sirve para aplicar estilo al texto o agrupar elementos en línea.
-
   - : **Sus etiquetas son**: `<span>` y `</span>` (ambas obligatorias).
 
     **Está definido como**: Elemento [especial](/es/docs/HTML/Elemento/Tipos_de_elementos#especial), y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).

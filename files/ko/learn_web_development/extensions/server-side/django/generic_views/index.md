@@ -474,13 +474,13 @@ class BookListView(generic.ListView):
     <div class="pagination">
       <span class="page-links">
         {% if page_obj.has_previous %}
-          <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+          <a href="\{{ request.path }}?page=\{{ page_obj.previous_page_number }}">previous</a>
         {% endif %}
         <span class="page-current">
-          <p>Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.</p>
+          <p>Page \{{ page_obj.number }} of \{{ page_obj.paginator.num_pages }}.</p>
         </span>
         {% if page_obj.has_next %}
-          <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+          <a href="\{{ request.path }}?page=\{{ page_obj.next_page_number }}">next</a>
         {% endif %}
       </span>
     </div>

@@ -236,7 +236,6 @@ function notify(message) {
 
 - Одна из сторон должна ждать соединений, используя [`runtime.onConnect`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect)
 - Другая сторона должна вызвать:
-
   - [`tabs.connect()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (при соединении со встраиваемым скриптом); или
   - [`runtime.connect()`](/ru/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (при соединении с фоновым скриптом).
 
@@ -278,7 +277,6 @@ document.body.addEventListener("click", function () {
 
 - Ожидает попытки соединения от встраиваемого скрипта
 - Когда он получает эту попытку соединения:
-
   - сохраняет свой порт в переменную `portFromCS`
   - отправляет сообщение встроенному скрипту, используя этот порт
   - начинает ожидать сообщений, приходящих на порт, и записывать их

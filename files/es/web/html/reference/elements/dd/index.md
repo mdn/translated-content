@@ -98,14 +98,14 @@ dd {
 
 ## Atributos
 
-Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Los atributos de este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `nowrap` {{Non-standard_inline}}
   - : Si el valor de este atributo es definido como `yes`, el texto de la definición no se encapsulará. El valor por defecto es `no`.
 
 ## Ejemplo
 
-Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Element/dl#examples).
+Para un ejemplo, ver [ejemplos \<dl>](/es/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Especificaciones
 
