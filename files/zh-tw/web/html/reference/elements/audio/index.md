@@ -32,26 +32,21 @@ figure {
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `autoplay`
-
   - : 一個布林屬性：如果指定，音訊將會在能夠開始播放時自動開始播放，而不需要等待整個音訊文件下載完成。
 
     > [!NOTE]
     > 自動播放音訊（或帶有音訊軌道的影片）的網站對用戶來說可能是一種不愉快的體驗，因此應盡可能避免。如果必須提供自動播放功能，你應該使其成為選擇加入的（需要用戶明確啟用）。然而，在創建源將在稍後由用戶控制的媒體元素時，這可能很有用。有關如何正確使用自動播放的其他信息，請參見我們的[自動播放指南](/zh-TW/docs/Web/Media/Guides/Autoplay)。
 
 - `controls`
-
   - : 如果存在此屬性，瀏覽器將提供控件，允許用戶控制音訊播放，包括音量、搜索和暫停/恢復播放。
 
 - `controlslist`
-
   - : 當指定此屬性時，該 [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 屬性將幫助瀏覽器選擇在瀏覽器顯示自己的一組控件時（即，當指定了 `controls` 屬性時）為 `audio` 元素顯示什麼控件。
 
     允許的值包括 `nodownload`、`nofullscreen` 和 `noremoteplayback`。
 
 - `crossorigin`
-
   - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性指示是否使用 CORS 來獲取相關音訊文件。[啟用 CORS 的資源](/zh-TW/docs/Web/HTML/How_to/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重複使用而不會被*汙染*。允許的值有：
-
     - `anonymous`
       - : 發送沒有憑據的跨源請求。換句話說，它發送了沒有 cookie、X.509 憑證或執行 HTTP 基本身份驗證的 `Origin:` HTTP 標頭。如果伺服器沒有向源站提供憑證（通過不設置 `Access-Control-Allow-Origin:` HTTP 標頭），資源將是*汙染*的，並限制其使用。
     - `use-credentials`
@@ -60,21 +55,17 @@ figure {
     當未指定時，該資源將不使用 CORS 請求進行提取（即不發送 `Origin:` HTTP 標頭），從而防止其在 {{HTMLElement('canvas')}} 元素中的非汙染使用。如果無效，則處理為使用列舉關鍵字 **anonymous**。有關其他信息，請參見 [CORS 設置屬性](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin)。
 
 - `disableremoteplayback`
-
   - : 一個布林屬性，用於禁用使用有線（HDMI、DVI 等）和無線技術（Miracast、Chromecast、DLNA、AirPlay 等）連接的設備的遠程播放功能。更多信息請參見[此提議的規範](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)。
 
     在 Safari 中，你可以使用 [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) 作為回退。
 
 - `loop`
-
   - : 一個布林屬性：如果指定，音訊播放器將在達到音訊結束時自動回到開頭。
 
 - `muted`
   - : 一個布林屬性，指示音訊是否初始靜音。其默認值為 `false`。
 - `preload`
-
   - : 此[列舉](/zh-TW/docs/Glossary/Enumerated)屬性旨在為瀏覽器提供有助於獲得最佳用戶體驗的提示。它可能具有以下值之一：
-
     - `none`：表示不應預先載入音訊。
     - `metadata`：表示僅應提取音訊後設資料（例如長度）。
     - `auto`：表示即使用戶不預期使用它，也可以下載整個音訊文件。
@@ -450,7 +441,6 @@ Welcome to the Time Keeper's podcast! In this episode we're discussing which Swi
 ## 參見
 
 - [Web 媒體技術](/zh-TW/docs/Web/Media)
-
   - [媒體容器格式（檔案類型）](/zh-TW/docs/Web/Media/Guides/Formats/Containers)
   - [網頁上使用的音訊編解碼器指南](/zh-TW/docs/Web/Media/Guides/Formats/Audio_codecs)
 

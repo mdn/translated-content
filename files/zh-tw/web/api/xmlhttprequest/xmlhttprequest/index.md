@@ -34,9 +34,7 @@ const request = new XMLHttpRequest(paramsDictionary);
 ### Parameters (non-standard)
 
 - `objParameters`
-
   - : There are two flags you can set:
-
     - `mozAnon`
       - : Boolean: Setting this flag to `true` will cause the browser not to expose the {{Glossary("origin")}} and [user credentials](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) when fetching resources. Most important, this means that {{Glossary("Cookie", "cookies")}} will not be sent unless explicitly added using setRequestHeader.
     - `mozSystem`

@@ -1,11 +1,12 @@
 ---
 title: "Worker: error イベント"
+short-title: error
 slug: Web/API/Worker/error_event
 l10n:
-  sourceCommit: 6d697b8a86ea3ce1bf82615c5dc006aeaa22d90b
+  sourceCommit: f5e710f5c620c8d3c8b179f3b062d6bbdc8389ec
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 **`error`** は {{domxref("Worker")}} インターフェイスのイベントで、ワーカーでエラーが発生したときに発行されます。
 
@@ -13,10 +14,10 @@ l10n:
 
 このイベント名を {{domxref("EventTarget.addEventListener", "addEventListener()")}} などのメソッドで使用するか、イベントハンドラープロパティを設定するかしてください。
 
-```js
-addEventListener("error", (event) => {});
+```js-nolint
+addEventListener("error", (event) => { })
 
-onerror = (event) => {};
+onerror = (event) => { }
 ```
 
 ## イベント型

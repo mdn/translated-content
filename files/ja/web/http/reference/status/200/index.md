@@ -1,9 +1,8 @@
 ---
 title: 200 OK
 slug: Web/HTTP/Reference/Status/200
-original_slug: Web/HTTP/Status/200
 l10n:
-  sourceCommit: b085d5418eb8ef812682e647045746221bad0e7e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}

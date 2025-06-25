@@ -87,7 +87,6 @@ Cette propriété peut prendre deux formes :
 - `column`
   - : Les éléments sont organisés en remplissant chacune des colonnes au fur et à mesure, quitte à en ajouter si besoin.
 - `dense`
-
   - : L'algorithme de placement automatique utilisera une méthode de « regroupement dense » où il essaie de remplir les trous dans la grille si des éléments plus petits arrivent ensuite. De fait, on peut obtenir une impression de désordre alors qu'il s'agit simplement du comblement des espaces libres.
 
     Si cette valeur est absente, le moteur utilisera un algorithme simple qui ne fait que se déplacer vers l'avant, sans revenir vers les espaces vides. De cette façon, les éléments apparaitront nécessairement dans l'ordre mais pourront laisser des trous.

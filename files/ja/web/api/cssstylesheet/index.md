@@ -36,7 +36,6 @@ h2 {
 _親である {{domxref("StyleSheet")}} からプロパティを継承しています。_
 
 - {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
-
   - : 生きた {{domxref("CSSRuleList")}} を返します。これは、スタイルシートを構成する {{domxref("CSSRule")}} オブジェクトの最新リストを維持します。
 
   > [!NOTE]
@@ -70,7 +69,6 @@ _これらのプロパティは、Microsoft が導入した古いプロパティ
 _これらのメソッドは、Microsoft が導入した古いメソッドであり、既存のサイトとの互換性を保つために維持されています。_
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
-
   - : スタイルシートに、スタイルが適用されるセレクターと、一致する要素に適用するスタイルブロックを指定して、新しいルールを追加します。
 
     これは、単一の文字列としてルール全体のテキスト表現を取る {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} とは異なります。

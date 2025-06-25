@@ -39,7 +39,6 @@ p {
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `value`
-
   - : Cette valeur entière indique la valeur ordinale en cours de l'élément de liste tel que défini par l'élément {{HTMLElement("ol")}}. La seule valeur autorisée pour cet attribut est un nombre, même si la liste est affichée avec des chiffres romains ou des lettres. Les éléments de la liste qui suivent celui-ci continueront la numérotation à partir de la valeur indiquée. L'attribut **value** n'a pas de signification pour les listes non ordonnées ({{HTMLElement("ul")}}) ou pour les menus ({{HTMLElement("menu")}}).
 
     > [!NOTE]
@@ -49,9 +48,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     > Avant Gecko 9.0, des valeurs négatives étaient incorrectement converties en 0. A partir de Gecko 9.0, toutes les valeurs entières ont été correctement analysées.
 
 - `type` {{Deprecated_inline}}
-
   - : Cet attribut de caractère indique le type de numérotation utilisé pour la liste :
-
     - `a` : lettres minuscules
     - `A` : lettres majuscules
     - `i` : chiffres romains en minuscules
@@ -183,7 +180,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 - Les autres éléments liés aux listes : {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} et {{HTMLElement("dir")}} (obsolète) ;
 - Les propriétés CSS qui peuvent être particulièrement utiles pour mettre en forme l'élément `<li>` :
-
   - la propriété {{cssxref("list-style")}}, pour choisir la manière d'afficher l'ordinal,
   - les [compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), pour gérer des listes imbriquées complexes,
   - la propriété {{cssxref("margin")}}, pour contrôler l'indentation de l'élément de liste.

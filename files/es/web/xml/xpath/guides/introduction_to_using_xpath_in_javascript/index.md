@@ -6,7 +6,7 @@ original_slug: Web/XPath/Guides/Introduction_to_using_XPath_in_JavaScript
 
 {{XsltSidebar}}
 
-Este documento describe la interfaz para usar [XPath](/es/docs/Web/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
+Este documento describe la interfaz para usar [XPath](/es/docs/Web/XML/XPath) internamente en JavaScript, en extensiones y desde sitios web. Mozilla implementa una gran parte del [DOM 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/xpath.html). Esto significa que las expresiones XPath pueden correrse en documentos HTML y XML.
 
 La interfaz principal a usar con XPath es la función [evaluate](/es/docs/DOM/document.evaluate) del objeto [document](/es/docs/Web/API/Document).
 
@@ -31,7 +31,6 @@ La función [evaluate](/es/docs/DOM/document.evaluate) toma un total de 5 parám
 - `xpathExpression`: Una cadena que contiene la expresión XPath a evaluar.
 - `contextNode`: Un nodo en el documento contra la `xpathExpression` debe ser evaluada, incluyendo todos los nodos descendientes. El nodo [document](/es/docs/Web/API/Document) es el usado más comúnmente.
 - `namespaceResolver`: Una función que pasará cualquier prefijo de namespace contenido en una `xpathExpression` la cúal regresará una cadena representando al URI del namespace asociado con ese prefijo. Esto activa la conversión entre los prefijos usados en las expresiones XPath y los posiblemente distintos prefijos usados en el documento. La función puede ser:
-
   - Creada usando el metodo [`createNSResolver`](/es/docs/Web/API/Document/createNSResolver) de un objeto [`XPathEvaluator`](/en-US/XPathEvaluator). Deberías usar este virtualmente todo el tiempo.
   - `null`, el cúal puede ser usado para documentos HTML o cuando no son usados prefijos de namespace. Note que, si la expresión XPath contiene un prefijo de namespace, esto resultará en una `DOMException` siendo arrojada con el código `NAMESPACE_ERR`.
   - Una función definida por el usuario. Mira la sección [Usar un Solucionador de Namespace definido por el usuario](#implementing_a_user_defined_namespace_resolver) en el apéndice para detalles.

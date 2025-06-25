@@ -22,7 +22,6 @@ Cet élément implémente l'interface [`HTMLDirectoryElement`](/fr/docs/Web/API/
 Comme pour tous les autres éléments HTML, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 - `compact`
-
   - : Cet attribut booléen indique que la liste doit être rendue avec un affichage compact. L'interprétation de cet attribut dépend de l'agent utilisateur. Il ne fonctionne pas dans tous les navigateurs.
 
     > [!WARNING]
@@ -40,7 +39,6 @@ Ne fait pas partie des spécifications actuelles.
 
 - Les autres éléments HTML utilisés pour les listes : [`<ol>`](/fr/docs/Web/HTML/Element/ol), [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<li>`](/fr/docs/Web/HTML/Element/li), and [`<menu>`](/fr/docs/Web/HTML/Element/menu);
 - Les propriétés CSS qui peuvent être utilisées pour mettre en forme l'élément `<dir>` :
-
   - La propriété [`list-style`](/fr/docs/Web/CSS/list-style) est utile pour choisir l'apparence des puces.
   - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters) sont utiles pour gérer des listes imbriquées complexes.
   - La propriété [`line-height`](/fr/docs/Web/CSS/line-height) est utile pour reproduire l'attribut déprécié [`compact`](#attr-compact).

@@ -50,7 +50,6 @@ input {
 - `form`
   - : `<fieldset>` 요소와 연결할 {{htmlelement("form")}} 요소("양식 소유자")의 [`id`](/ko/docs/Web/HTML/Global_attributes#id). `<fieldset>`이 해당 `<form>` 안에 위치하지 않아도 연결할 수 있습니다.
 - `name`
-
   - : 그룹과 연관지을 이름.
 
     > **참고:** `<fieldset>`에 대한 설명은 자신이 포함한 첫 번째 {{htmlelement("legend")}} 요소가 담당합니다.

@@ -48,7 +48,6 @@ Pour contourner le problème des requêtes asynchrones, nous devons tester de te
 Voilà la marche à suivre :
 
 1. Installer Python. Si vous utilisez GNU/Linux ou macOS, un environnement python est sans doute déjà disponible sur votre machine. Les utilisateurs de Windows pourront trouver un installeur depuis la page d'accueil de Python (on y trouve toutes les instructions)&nbsp;:
-
    - Allez à [python.org](https://www.python.org/)
    - Sous Télécharger, cliquez le lien pour Python "3.xxx".
    - Tout en bas de la page, télécharger le fichier pointé par le lien _Windows x86 executable installer_.

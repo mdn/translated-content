@@ -141,7 +141,6 @@ If everything went successfully, the CLI should have created a series of files a
 - `babel.config.js`: This is the config file for [Babel](https://babeljs.io/), which transforms modern JavaScript features being used in development code into older syntax that is more cross-browser compatible in production code. You can register additional babel plugins in this file.
 - `.browserslistrc`: This is a config for [Browserslist](https://github.com/browserslist/browserslist). You can use this to control which browsers your tooling optimizes for.
 - `public`: This directory contains static assets that are published, but not processed by [Webpack](https://webpack.js.org/) during build (with one exception; gets some processing) `index.html`.
-
   - `favicon.ico`: This is the favicon for your app. Currently, it's the Vue logo.
   - `index.html`: This is the template for your app. Your Vue app is run from this HTML page, and you can use lodash template syntax to interpolate values into it.
 
@@ -149,7 +148,6 @@ If everything went successfully, the CLI should have created a series of files a
     > This is not the template for managing the layout of your application — this template is for managing static HTML that sits outside of your Vue app. Editing this file typically only occurs in advanced use cases.
 
 - `src`: This directory contains the core of your Vue app.
-
   - `main.js`: this is the entry point to your application. Currently, this file initializes your Vue application and signifies which HTML element in the file your app should be attached to. This file is often where you register global components or additional Vue libraries.`index.html`
   - `App.vue`: this is the top-level component in your Vue app. See below for more explanation of Vue components.
   - `components`: this directory is where you keep your components. Currently it just has one example component.

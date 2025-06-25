@@ -15,6 +15,5 @@ l10n:
 
 - 위키백과 [타입 변환](https://en.wikipedia.org/wiki/Type_conversion)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Type", "타입")}}
   - {{Glossary("Type coercion", "형변환")}}

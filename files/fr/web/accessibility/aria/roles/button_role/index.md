@@ -68,7 +68,6 @@ Les boutons peuvent être manipulés avec une souris, le toucher et le clavier. 
 - `onclick`
   - : Gère l'évènement déclenché lorsque le bouton est activé avec un clic de souris ou au toucher.
 - `onKeyDown`
-
   - : Gère l'évènement déclenché lorsque le bouton est activé à l'aide de la touche
 
     <kbd>Espace</kbd>

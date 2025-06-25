@@ -20,9 +20,7 @@ var myFile = new File(bits, name[, options]);
 - _name_
   - : 檔案名稱或檔案的路徑（{{domxref("USVString")}}）。
 - _options_ {{optional_inline}}
-
   - : 物件選項，包含物件非必要的屬性，以下為可得到的屬性：
-
     - `type`: 物件的 MIME 類型（{{domxref("DOMString")}} ）將被放進檔案中，預設為 ""（空值）。
     - `lastModified`: 檔案最後修改時間，格式為毫秒，預設為 {{jsxref("Date.now()")}}.
 

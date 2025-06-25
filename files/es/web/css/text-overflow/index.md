@@ -80,7 +80,6 @@ Cada valor se especificará como una de las siguientes opciones:
 - `fade` {{experimental_inline}}
   - : El valor de esta palabra clave recorta el contenido en línea del texto que se desborda y aplica un efecto de atenuación cerca del borde de la linea de la caja con total transparencia en el borde.
 - `fade( <length> | <percentage> )` {{experimental_inline}}
-
   - : Esta función recorta el contenido desbordante en línea y aplica un efecto de atenuación cerca del límite de la caja con total transparencia en el borde.
 
     El argumento determina la distancia sobre la que se aplica el efecto de atenuación. El {{cssxref("&lt;percentage&gt;")}} se revuelve contra la anchura de la línea de la caja. Los valore menores que `0` se truncan a `0`. Los valores mayores que el ancho de la caja se recortan al ancho de la caja.

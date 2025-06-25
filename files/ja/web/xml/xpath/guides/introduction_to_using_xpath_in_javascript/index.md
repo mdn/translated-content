@@ -33,7 +33,6 @@ const xpathResult = document.evaluate(
 - `xpathExpression`: 評価する XPath 式を文字列で指定します。
 - `contextNode`: `xpathExpression` を評価する対象となる文書内のノードを指定します。指定されたノードの全ての子ノードに対しても評価が行われます。もっともよく使用される値は [document](/ja/docs/Web/API/Document) ノードです。
 - `namespaceResolver`: `xpathExpression` に含まれるあらゆる名前空間接頭辞を渡され、その接頭辞に対応する名前空間 URI を表す文字列を返す関数です。この関数により、 XPath 式で使われている接頭辞と文書内で使われている接頭辞が異なっていたとしてもそれを変換することが可能になります。この関数は次のいずれかです。
-
   - [`XPathEvaluator`](http://www.xulplanet.com/references/objref/XPathEvaluator.html) オブジェクトの [`createNSResolver`](/ja/docs/Web/API/Document/createNSResolver) メソッドにより[作成された](#既定の名前空間リゾルバーの実装)もの。ほとんどの場合はこれを使うべきでしょう。
   - HTML 文書の場合や、名前空間接頭辞が使われていない場合は `null`。 `xpathExpression` に名前空間接頭辞が含まれている場合は、 `DOMException` が `NAMESPACE_ERR` のコードで発生するので注意してください。
   - ユーザー定義のカスタム関数。詳しくは付録の[ユーザー定義名前空間リゾルバーの使用](#ユーザー定義の名前空間リゾルバーの実装)の節を参照してください。

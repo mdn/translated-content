@@ -447,7 +447,8 @@ Fill in your name: <input type="text" id="name" name="name" />
 
 在這種情況下，我們完全不使用 `alt` 屬性——相反，我們將圖片的描述作為常規文字段落呈現，給它一個 `id`，然後使用 `aria-labelledb` 屬性引用該 `id`，這使得螢幕閱讀器將該段落作為圖片的替代文字/標籤。這在你想要為多個圖片使用相同文字作為標籤時特別有用——這是使用 `alt` 屬性無法實現的。
 
-> **備註：** [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分，它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
+> [!NOTE]
+> [`aria-labelledby`](/zh-TW/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) 是 [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 規範的其中一部分，它允許開發者在需要時增加額外的語義，來改善螢幕閱讀器的無障礙性。
 
 ### Figure 和 figure caption
 

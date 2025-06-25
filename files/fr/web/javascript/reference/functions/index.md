@@ -468,7 +468,6 @@ Comparons les exemples suivants :
 Tous ces exemples effectuent à peu près la même chose, mais différent sur quelques points :
 
 - Il y a une distinction entre le nom de la fonction et la variable à laquelle elle est affectée :
-
   - le nom de la fonction ne peut être changé alors que la variable à laquelle la fonction a été assignée peut être réassignée.
   - le nom de la fonction ne peut-être utilisé qu'à l'intérieur du corps de la fonction. Toute tentative d'utilisation en dehors du corps de la fonction entraînera une erreur (ou `undefined` si le nom de la fonction a été déclaré auparavant avec une instruction `var`). Ainsi :
 
