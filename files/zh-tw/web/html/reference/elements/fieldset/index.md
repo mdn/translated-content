@@ -51,7 +51,8 @@ input {
 - `name`
   - : 與該組關聯的名稱。
 
-    > **備註：** `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
+    > [!NOTE]
+    > `<fieldset>` 的標題由嵌套在其中的第一個 {{HTMLElement("legend")}} 元素提供。
 
 ## 使用 CSS 進行樣式設置
 

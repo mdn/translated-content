@@ -71,7 +71,8 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
 2. 現在試著輸入一個猜測並按下 Submit guess 按鈕，你會發現...另一個錯誤！![](variable-is-null.png)
 3. 這次的錯誤是「TypeError: lowOrHi is null（TypeError: lowOrHi 為 null）」，在第 78 行的位置。
 
-   > **備註：** [`Null`](/zh-TW/docs/Glossary/Null)是一個特別的值，代表著「空」、「什麼都沒有」。`lowOrHi`被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。
+   > [!NOTE]
+   > [`Null`](/zh-TW/docs/Glossary/Null)是一個特別的值，代表著「空」、「什麼都沒有」。`lowOrHi`被宣告為一個變數，但並沒有被賦予任何有意義的值——他既沒有變數型態，也沒有值。
 
    > [!NOTE]
    > 這個錯誤並沒有在頁面載入完成後就發生，因為這個錯誤發生在一個函式中（在`checkGuess() { ... }`區塊中）。在之後詳細介紹函式的文章中，你會學到在函式中的程式碼與在函式外的程式碼其實是執行在不同範疇中的。在我們的這個情況裡，有錯誤的程式碼在`checkGuess()`在 86 行被執行前都並沒有執行，也因此錯誤並沒有在頁面一載入就發生。
@@ -94,7 +95,8 @@ slug: Learn_web_development/Core/Scripting/What_went_wrong
    console.log(lowOrHi);
    ```
 
-   > **備註：** [`console.log()`](/zh-TW/docs/Web/API/console/log_static)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
+   > [!NOTE]
+   > [`console.log()`](/zh-TW/docs/Web/API/console/log_static)是一個非常好用的除錯功能，它能夠將值印出至主控台中。所以這行程式碼會在第 48 行賦值給`lowOrHi`後，將它的值印出至主控台中。
 
 7. 存檔並重整，你應該會在主控台中看到`console.log()`輸出的結果。![](console-log-output.png)在這個時間點，`lowOrHi`的值是`null`。所以很明顯的，第 48 行一定出了什麼問題。
 8. 讓我們思考一下發生了什麼問題。第 48 行呼叫了 [`document.querySelector()`](/zh-TW/docs/Web/API/Document/querySelector) 方法來透過 CSS 選擇器取得一個 HTML 元素參照。打開我們的網頁看看我們想要取得的段落元素：
