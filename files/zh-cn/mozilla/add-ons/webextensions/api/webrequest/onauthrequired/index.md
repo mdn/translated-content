@@ -113,7 +113,8 @@ browser.webRequest.onAuthRequired.hasListener(listener)
   - : `boolean`。请求是否来自隐私浏览窗口。
 - `isProxy`
   - : `boolean`。`true` 表示 `Proxy-Authenticate`，`false` 表示 `WWW-Authenticate`。
-    > **备注：** `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
+    > [!NOTE]
+    > `webRequest.onAuthRequired` 仅在需要身份验证的 HTTP 和 HTTPS/TLS 代理服务器上调用，而不适用于需要身份验证的 SOCKS 代理服务器。
 - `method`
   - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
 - `parentFrameId`

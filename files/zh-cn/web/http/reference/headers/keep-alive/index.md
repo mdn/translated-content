@@ -14,7 +14,8 @@ HTTP **`Keep-Alive`** {{Glossary("request header", "响应标头")}}和{{Glossar
 
 HTTP/1.0 默认在每次请求/响应交互后关闭连接，因此 HTTP/1.0 中的持久连接必须经过明确协商。一些客户端和服务器可能希望与以前的持久连接方式兼容，可以使用 `Connection: keep-alive` 请求标头来实现这一点。连接的其他参数可通过 `Keep-Alive` 标头请求。
 
-> **警告：** [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) 和 [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) 禁止使用特定于连接的标头字段，如 {{HTTPHeader("Connection")}} 和 `Keep-Alive`。Chrome 浏览器和 Firefox 浏览器在 HTTP/2 响应中忽略了它们，但 Safari 浏览器符合 HTTP/2 规范要求，不会加载任何包含它们的响应。
+> [!WARNING]
+> [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) 和 [HTTP/3](https://httpwg.org/specs/rfc9114.html#header-formatting) 禁止使用特定于连接的标头字段，如 {{HTTPHeader("Connection")}} 和 `Keep-Alive`。Chrome 浏览器和 Firefox 浏览器在 HTTP/2 响应中忽略了它们，但 Safari 浏览器符合 HTTP/2 规范要求，不会加载任何包含它们的响应。
 
 <table class="properties">
   <tbody>

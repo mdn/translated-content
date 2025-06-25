@@ -15,7 +15,8 @@ l10n:
 
 `fetch()` 方法由[内容安全策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的 `connect-src` 指令（而不是它查询的资源的指令）控制。
 
-> **备注：** `fetch()` 方法的参数与 {{domxref("Request.Request","Request()")}} 构造函数是一样的。
+> [!NOTE]
+> `fetch()` 方法的参数与 {{domxref("Request.Request","Request()")}} 构造函数是一样的。
 
 ## 语法
 
