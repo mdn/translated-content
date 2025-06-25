@@ -49,7 +49,7 @@ OPTIONS
 
 - `*`
   - : 表示用戶端希望對整個伺服器發出 `OPTIONS` 請求，而非伺服器中某個特定的資源。
-- `<absolute-path>`
+- `<request-target>`
   - : 配合 {{HTTPHeader("Host")}} 標頭提供的資訊，指出請求的目標資源。對原始伺服器的請求中，此為絕對路徑（例如 `/path/to/file.html`）；對代理伺服器的請求中，則為絕對 URL（例如 `http://www.example.com/path/to/file.html`）。
 - `<query>` {{optional_inline}}
   - : 可選的查詢組件，以問號 `?` 開頭。通常用來攜帶以 `key=value` 形式的識別資訊。
