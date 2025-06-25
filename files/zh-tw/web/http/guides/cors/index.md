@@ -459,7 +459,8 @@ Origin: <origin>
 
 來源是一個 URL，指示發起請求的伺服器。它不包含任何路徑訊息，只有伺服器名稱。
 
-> **備註：** `origin` 值可以是 `null`。
+> [!NOTE]
+> `origin` 值可以是 `null`。
 
 請注意，在任何訪問控制請求中，{{HTTPHeader("Origin")}} 標頭**始終**會被發送。
 
