@@ -9,7 +9,8 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 
 仅当访问文档的用户使用支持 `X-Frame-Options` 的浏览器时，此附加的安全性才会被提供。
 
-> **备注：** {{HTTPHeader("Content-Security-Policy")}} HTTP 响应头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，支持这一指令的浏览器已经[废弃](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了 `X-Frame-Options` 响应头。
+> [!NOTE]
+> {{HTTPHeader("Content-Security-Policy")}} HTTP 响应头有一个 {{HTTPHeader("Content-Security-Policy/frame-ancestors", "frame-ancestors")}} 指令，支持这一指令的浏览器已经[废弃](https://www.w3.org/TR/CSP2/#frame-ancestors-and-frame-options)了 `X-Frame-Options` 响应头。
 
 <table class="properties">
   <tbody>

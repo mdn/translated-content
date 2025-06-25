@@ -262,7 +262,8 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
    - 对于其他属性
      - : The **`InterfaceName.property`** property is a \\{{domxref("type")}} that…
 
-   > **备注：** `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > [!NOTE]
+   > `InterfaceName.property` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
 5. **值**：Value 部分将包含属性值的描述。这应该包含该属性的数据类型，以及它所代表的内容。关于其示例，详见 {{domxref("SpeechRecognition.grammars")}}。
 
@@ -296,7 +297,8 @@ API 着陆页的长度会有很大的不同，这取决于 API 有多大，但�
    - 第一句话的开头必须遵循这样的结构：
      - : The **InterfaceName.method()** method interface ...
 
-   > **备注：** `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
+   > [!NOTE]
+   > `InterfaceName.method()` 需要使用 `<code>` 包裹，并且应当在首次使用时加粗（`<strong>`）。
 
 5. **语法**：语法部分应该包括一个 2-3 行的例子——通常只是构建接口，然后调用接口方法。
    - 语法应该是类似于这样的结构：

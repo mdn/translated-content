@@ -9,7 +9,8 @@ l10n:
 
 **`ProcessingInstruction`** 接口表示一个[处理指令](https://www.w3.org/TR/xml/#sec-pi)；简单说就是一种包含特定应用指令的 {{domxref("Node")}}，对于那些不识别该应用指令的程序，会忽略它。
 
-> **警告：** `ProcessingInstruction` 节点仅在 XML 文档中受支持，在 HTML 文档中不被支持。在 HTML 文档中，处理指令会被视为注释，并在树中表示为 {{domxref("Comment")}} 对象。
+> [!WARNING]
+> `ProcessingInstruction` 节点仅在 XML 文档中受支持，在 HTML 文档中不被支持。在 HTML 文档中，处理指令会被视为注释，并在树中表示为 {{domxref("Comment")}} 对象。
 
 处理指令可能与 [XML 声明](/zh-CN/docs/Web/XML/Guides/XML_introduction#xml_声明)不同。
 

@@ -180,7 +180,8 @@ l10n:
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **备注：** `--save-dev` 将软件包作为一个依赖项添加到你的项目中。如果你查看你的项目的 `package.json` 文件，你会在 `devDependencies` 属性中看到相应的条目。
+   > [!NOTE]
+   > `--save-dev` 将软件包作为一个依赖项添加到你的项目中。如果你查看你的项目的 `package.json` 文件，你会在 `devDependencies` 属性中看到相应的条目。
 
 2. 将以下依赖加入到 `gulpfile.js` 中：
 
@@ -324,7 +325,8 @@ export function watch() {
 
 现在试着在你的终端输入 `gulp watch` 命令。现在，Gulp 会监视你的目录，并在你保存对 HTML、CSS 或 JavaScript 文件的改动时运行相应的任务。
 
-> **备注：**`*` 字符是一个通配符，这里的含义是“当任何这些类型的文件被保存时运行这些任务”。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
+> [!NOTE]
+> `*` 字符是一个通配符，这里的含义是“当任何这些类型的文件被保存时运行这些任务”。你也可以在你的主要任务中使用通配符，例如 `gulp.src('src/*.css')` 会抓取你所有的 CSS 文件，然后对它们运行管道任务。
 
 你还可以用 Gulp 做很多事情。在 [Gulp 插件目录](https://gulpjs.com/plugins/)中，有成千上万的插件可供使用。
 

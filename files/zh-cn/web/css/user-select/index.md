@@ -51,7 +51,8 @@ user-select: revert-layer;
 user-select: unset;
 ```
 
-> **备注：** `user-select` 不是继承属性，即使默认的属性值 `auto` 的表现基本上以继承为主，似乎是继承属性。甚至，WebKit/基于 Chromium 的浏览器在实现此属性时*将其作为继承属性*，但这和有关规范是相悖的，且会带来一些问题。目前，Chromium 暂时选择[修复将其作为继承属性所带来的问题](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)，使最终表现符合规范。
+> [!NOTE]
+> `user-select` 不是继承属性，即使默认的属性值 `auto` 的表现基本上以继承为主，似乎是继承属性。甚至，WebKit/基于 Chromium 的浏览器在实现此属性时*将其作为继承属性*，但这和有关规范是相悖的，且会带来一些问题。目前，Chromium 暂时选择[修复将其作为继承属性所带来的问题](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)，使最终表现符合规范。
 
 ### 取值
 
