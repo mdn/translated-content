@@ -10,7 +10,8 @@ l10n:
 
 使用 {{Glossary("HTML")}} 时，若能有一种简单的方法记住如何正确使用和应用 HTML 标签，将会非常方便。MDN 提供了丰富的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)和详细指导[使用 HTML 构建 Web](/zh-CN/docs/Learn_web_development/Core/Structuring_content)。但是，许多情况下我们只需要一些快速的提示。这便是速查表的初衷————为常见用法提供一些快速、准确、现成的代码片段。
 
-> **备注：** HTML 标签应根据其语义价值而非外观使用。完全可以使用 {{Glossary("CSS")}} 改变特定标签的外观和特性。因此使用 HTML 时，要花时间留意标签的语义，而非它们的外观。
+> [!NOTE]
+> HTML 标签应根据其语义价值而非外观使用。完全可以使用 {{Glossary("CSS")}} 改变特定标签的外观和特性。因此使用 HTML 时，要花时间留意标签的语义，而非它们的外观。
 
 ## 内联元素
 
@@ -239,7 +240,8 @@ format&#x3C;/code>.</pre
 
 相反，“块元素”，会占用整个网页宽度。它们也会占用网页的一整行；它们无法并列排列。相反，它们会像文章里的段落或像积木塔那样堆叠在一起。
 
-> **备注：** 由于本速查表仅包含少数几个代表特定结构或具备特殊语义的元素，因此 [`div`](/zh-CN/docs/Web/HTML/Reference/Elements/div) 元素被特意排除————因为 `div` 元素不代表任何内容，也不具备任何特殊语义。
+> [!NOTE]
+> 由于本速查表仅包含少数几个代表特定结构或具备特殊语义的元素，因此 [`div`](/zh-CN/docs/Web/HTML/Reference/Elements/div) 元素被特意排除————因为 `div` 元素不代表任何内容，也不具备任何特殊语义。
 
 <table class="standard-table">
   <thead>
