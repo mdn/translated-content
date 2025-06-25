@@ -2,7 +2,7 @@
 title: WebGL2RenderingContext：beginQuery() 方法
 slug: Web/API/WebGL2RenderingContext/beginQuery
 l10n:
-  sourceCommit: 2b942f0d8f84641c233d701cb5d1f4e6c23120ff
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{APIRef("WebGL")}}{{AvailableInWorkers}}
