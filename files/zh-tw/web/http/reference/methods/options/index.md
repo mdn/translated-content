@@ -41,8 +41,7 @@ HTTP **`OPTIONS`** 方法用於請求給定 URL 或伺服器的允許通訊選�
 ## 語法
 
 ```http
-OPTIONS
-*|["?"] HTTP/1.1
+OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 ```
 
 請求目標可以是「星號形式」（`*`），表示整個伺服器，或者像其他方法一樣是具體的請求目標：
