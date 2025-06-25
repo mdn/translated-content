@@ -50,13 +50,11 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
 *簡單請求*是指**符合以下所有條件的請求**：
 
 - 使用以下允許的方法之一：
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - 除了由用戶代理自動設置的標頭（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或 [Fetch 規範中定義為*禁止標頭名稱*的其他標頭](https://fetch.spec.whatwg.org/#forbidden-header-name)）之外，唯一允許手動設置的標頭是 [Fetch 規範定義的 CORS 安全列表請求標頭](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)，這些標頭是：
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -64,7 +62,6 @@ CORS 失敗會導致錯誤，但出於安全原因，關於錯誤的具體訊息
   - {{HTTPHeader("Range")}}（僅限於具有[簡單範圍標頭值](https://fetch.spec.whatwg.org/#simple-range-header-value) 的情況。例如，`bytes=256-` 或 `bytes=127-255`）
 
 - {{HTTPHeader("Content-Type")}} 標頭中指定的唯一允許的類型／子類型組合是：
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -504,7 +501,6 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [如何在沒有 CORS 的情況下運行 Chrome 瀏覽器](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [在所有（現代）瀏覽器中使用 CORS](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow 回答，包含處理常見問題的「操作方法」訊息](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - 如何避免 CORS 預檢
   - 如何使用 CORS 代理來繞過*「沒有Access-Control-Allow-Origin頭」*
   - 如何修復*「Access-Control-Allow-Origin頭不能是通配符」*

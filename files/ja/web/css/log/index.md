@@ -27,7 +27,6 @@ width: calc(100px * log(625, 5)); /* 400px */
 `log(value [, base]?)` 関数は、引数として 2 つのカンマ区切りの計算式を受け取ります。
 
 - `value`
-
   - 0 以上の {{cssxref("&lt;number&gt;")}} に解決される計算式で、対数を取る値です。
 
 - `base`

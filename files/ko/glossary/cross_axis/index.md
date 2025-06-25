@@ -37,13 +37,11 @@ l10n:
 ### 더 읽어보기
 
 - CSS Flexbox Guide:
-
   - [Flexbox의 기본 개념](/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
   - [플렉스 컨테이너 안의 내용 정렬](/ko/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - [플렉스 항목의 래핑 마스터하기](/ko/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
 
 - [Glossary](/ko/docs/Glossary)
-
   - {{Glossary("Flex")}}
   - {{Glossary("Flex Container")}}
   - {{Glossary("Flex Item")}}

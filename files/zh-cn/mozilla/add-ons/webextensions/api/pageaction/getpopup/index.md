@@ -22,9 +22,7 @@ let gettingPopup = browser.pageAction.getPopup(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId`
       - : `integer`。要获取弹窗的标签页 ID。
 

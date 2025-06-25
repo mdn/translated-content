@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/contenteditable
 
 > **Nota:** {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **contenteditable** es un atributo enumerado que indica si el elemento debe de ser editable por el usuario. Si es así, el explorador modifica su widget para permitir la edición. El atributo debe de tener alguno de los siguientes valores:
+El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **contenteditable** es un atributo enumerado que indica si el elemento debe de ser editable por el usuario. Si es así, el explorador modifica su widget para permitir la edición. El atributo debe de tener alguno de los siguientes valores:
 
 - `true` o una cadena vacia, que indica que el elemento debe de ser editable.
 - `false`, que indica que el elemento no debe ser editable.
@@ -25,5 +25,5 @@ Este es un atributo enumerado y no uno _booleano_. Esto significa que el uso exp
 
 ## Ver también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} and {{domxref("HTMLElement.isContentEditable")}}

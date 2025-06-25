@@ -31,7 +31,6 @@ l10n:
 _此接口从其父接口 {{domxref("CharacterData")}}、{{domxref("Node")}} 和 {{domxref("EventTarget")}}继承方法。_
 
 - {{domxref("ProcessingInstruction.sheet")}} {{ReadOnlyInline}}
-
   - : 如果存在关联的 {{domxref("StyleSheet")}} 对象，则返回该对象；否则为 `null` 。
 
 - {{domxref("ProcessingInstruction.target")}} {{ReadOnlyInline}}

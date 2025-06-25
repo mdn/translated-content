@@ -18,7 +18,6 @@ Une valeur `<display-outside>` peut être l'un des mots-clés suivants.
 - `inline`
   - : L'élément génère une ou plusieurs boîtes en lignes qui n'ajoutent pas de passages à la ligne avant ou après. Dans un flux normal, le prochain élément sera sur la même ligne si l'espace le permet.
 - `run-in` {{Experimental_Inline}}
-
   - : L'élément génère une boîte « _run-in_ ». Si le voisin adjacent à l'élément est une boîte de bloc, la boîte `run-in` devient la première boîte en ligne qui suit cette boîte de bloc.
 
     Les éléments _run-in_ se comportent comme des éléments de bloc ou en ligne selon les éléments environnants. Autrement dit, si la boîte _run-in_ contient une boîte de bloc, l'élément se comportera comme un bloc. Si la boîte de bloc suit une boîte _run-in_, la boîte _run-in_ deviendra la première boîte en ligne de la boîte de bloc. Si une boîte en ligne succède à l'élément, la boîte _run-in_ deviendra une boîte de bloc.
@@ -63,7 +62,6 @@ span {
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

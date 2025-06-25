@@ -33,9 +33,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `fonction`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
-
     - `port`
       - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.
 

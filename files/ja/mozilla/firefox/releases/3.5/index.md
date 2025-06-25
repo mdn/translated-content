@@ -49,7 +49,6 @@ slug: Mozilla/Firefox/Releases/3.5
   `-moz-column-rule-style`
 
   `-moz-column-rule-color`
-
   - : Firefox 3.5 ではこれらの CSS への Mozilla 拡張に対するサポートが追加されます。
 
 - {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} カラー値
@@ -73,7 +72,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : これらのセレクターがすべて Firefox 3.5 で新たにサポートされます。
 
 #### 新しい DOM の機能

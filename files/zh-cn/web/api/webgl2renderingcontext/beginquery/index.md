@@ -18,9 +18,7 @@ beginQuery(target, query)
 ### 参数
 
 - `target`
-
   - : 指定查询的目标的 {{domxref("WebGL_API/Types", "GLenum")}}。可能的值有：
-
     - `gl.ANY_SAMPLES_PASSED`
       - : 指定遮挡查询：这类查询检测对象是否可见（局限绘制命令是否通过深度测试；如果通过，则有多少个样本通过）。
     - `gl.ANY_SAMPLES_PASSED_CONSERVATIVE`

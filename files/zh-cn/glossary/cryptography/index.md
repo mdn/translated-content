@@ -15,7 +15,6 @@ l10n:
 
 - 维基百科上的[密码学](https://zh.wikipedia.org/wiki/密码学)
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Block cipher mode of operation", "分组密码工作模式")}}
   - {{Glossary("Cipher", "密码")}}
   - {{Glossary("Ciphertext", "密文")}}

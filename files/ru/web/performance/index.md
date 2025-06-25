@@ -155,7 +155,6 @@ HTML
 - [The `<video>` Element](/ru/docs/Web/HTML/Reference/Elements/video)
 - [The `<source>` Element](/ru/docs/Web/HTML/Reference/Elements/source)
 - [The `<img> srcset` attribute](/ru/docs/Web/HTML/Reference/Elements/img#attributes)
-
   - [Responsive images](/ru/docs/Web/HTML/Guides/Responsive_images)
 
 - [Preloading content with `rel="preload"`](/ru/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/](https://w3c.github.io/preload/))
@@ -189,7 +188,6 @@ APIs
 - [Resource Timing API](/ru/docs/Web/API/Performance_API/Resource_timing)
 - [Page Visibility](/ru/docs/Web/API/Page_Visibility_API)
 - [Cooperative Scheduling of Background Tasks API](/ru/docs/Web/API/Background_Tasks_API)
-
   - [requestIdleCallback()](/ru/docs/Web/API/Window/requestIdleCallback)
 
 - [Beacon API](/ru/docs/Web/API/Beacon_API)
@@ -219,7 +217,6 @@ Best Practices
 
 - [Using Service Workers](/ru/docs/Web/API/Service_Worker_API/Using_Service_Workers)
 - [Using Web Workers](/ru/docs/Web/API/Web_Workers_API/Using_web_workers)
-
   - [Web Workers API](/ru/docs/Web/API/Web_Workers_API)
 
 - [PWA](/ru/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers)

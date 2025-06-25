@@ -39,7 +39,6 @@ Number.parseInt(string, radix)
 - `string`
   - : El valor a analizar, [forzado a una cadena](/es/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion). Se ignoran los espacios en blanco iniciales en este argumento.
 - `radix` {{optional_inline}}
-
   - : Un número entero entre `2` y `36` que representa la _base_ (la base en los sistemas numéricos matemáticos) del `string`.
 
     Si `radix` no está definida o es `0`, se supone que es `10`, excepto cuando el número comienza con los pares de unidades de código `0x` o `0X`, en cuyo caso se asume una base de `16`.

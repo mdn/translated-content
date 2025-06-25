@@ -50,13 +50,11 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 若请求**满足所有下述条件**，则该请求可视为*简单请求*：
 
 - 使用下列方法之一：
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - 除了被用户代理自动设置的标头字段（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或其他在 Fetch 规范中定义为[禁用标头名称](https://fetch.spec.whatwg.org/#forbidden-header-name)的标头），允许人为设置的字段为 Fetch 规范定义的[对 CORS 安全的标头字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -64,7 +62,6 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
 - {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
-
   - `text/plain`
   - `multipart/form-data`
   - `application/x-www-form-urlencoded`
@@ -500,7 +497,6 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 - [如何不带 CORS 的运行 Chrome 浏览器](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [在所有（现代）浏览器中使用 CORS](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow 面对常见问题的解答](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - 如何避免 CORS 预检请求
   - 如何利用 CORS 代理避免“_No Access-Control-Allow-Origin header_”
   - 如何修复“_Access-Control-Allow-Origin header must not be the wildcard_”

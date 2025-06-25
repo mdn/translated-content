@@ -48,7 +48,6 @@ Cet objet peut être vu comme un interpréteur du tableau d'octets fourni par le
 ### Exceptions
 
 - [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-
   - : Levée si les valeurs des paramètres `decalageOctets` ou `longueurOctets` entraînent un dépassement de la vue après la fin du tampon.
 
     Ainsi, si le tampon de mémoire mesure 16 octets, que la valeur fournie pour `decalageOctets` est 8, et que celle fournie pour `longueurOctets` est 10, cette exception sera déclenchée, car la vue résultante dépassera de deux octets la taille du tampon.

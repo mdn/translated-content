@@ -18,9 +18,7 @@ element.scrollIntoView(scrollIntoViewOptions); // Paramètre d'objet
 ### Paramètres
 
 - `alignToTop` {{ optional_inline() }}
-
   - : est une valeur {{jsxref("Boolean")}} optionnelle qui :
-
     - si elle vaut `true` (_vrai_), aligne l'élément avec le haut de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "start", inline: "nearest"}`. C'est la valeur par défaut.
     - Si elle vaut `false` (_faux_), celui-ci sera aligné en bas de la zone visible de l'ancêtre défilable. Correspond à `scrollIntoViewOptions: {block: "end", inline: "nearest"}`.
 

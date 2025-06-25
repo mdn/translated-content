@@ -12,7 +12,6 @@ Ces mots-clés définissent le type d'affichage ({{CSSxRef("display")}}) pour l'
 Une valeur `<display-inside>` est définie avec l'un des mots-clés suivants :
 
 - `flow` {{Experimental_Inline}}
-
   - : L'élément organise son contenu en utilisant la disposition en flux (disposition bloc/en ligne ou « _block and inline layout_ » en anglais).
 
     Si le type d'affichage extérieur est `inline` ou `run-in` et que l'élément participe à un contexte de formatage bloc ou en ligne, il génèrera une boîte en ligne. Sinon, il génèrera un conteneur de bloc.
@@ -80,7 +79,6 @@ Dans l'exemple qui suit, la boîte parente est ciblée avec `display: flow-root`
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

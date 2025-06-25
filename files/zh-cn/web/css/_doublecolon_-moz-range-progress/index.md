@@ -50,12 +50,10 @@ input[type="range"]::-moz-range-progress {
 ## 参见
 
 - Gecko 用于设置范围输入的其他部分样式的伪元素：
-
   - {{cssxref("::-moz-range-thumb")}} 代表在凹槽中滑动的指示器
   - {{cssxref("::-moz-range-track")}} 代表有揪揪滑动的凹槽
 
 - 其他浏览器使用的类似伪元素：
-
   - {{cssxref("::-ms-fill-upper")}}, Internet Explorer 和 Edge 支持的伪元素
 
 - [CSS-Tricks：使用 CSS 设置跨浏览器兼容范围输入的样式](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/)

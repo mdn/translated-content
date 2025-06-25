@@ -130,9 +130,7 @@ li {
 - **`start`**
   - : Un nombre entier à partir duquel on commence à compter pour les éléments de la liste. Toujours un chiffre arabique (1, 2, 3, etc.), même lorsque le `type` de numérotation est constitué de lettres ou de chiffres romains. Par exemple, pour commencer à numéroter les éléments à partir de la lettre "d" ou du chiffre romain "iv", utilisez `start="4"`.
 - **`type`**
-
   - : Définit le type de numérotation :
-
     - `a` pour les lettres minuscules
     - `A` pour les lettres majuscules
     - `i` pour les chiffres romains minuscules
@@ -266,7 +264,6 @@ Pour déterminer la liste à utiliser, essayez de modifier l'ordre des élément
 
 - Les autres éléments HTML relatifs aux listes : [`<ul>`](/fr/docs/Web/HTML/Element/ul), [`<li>`](/fr/docs/Web/HTML/Element/li), [`<menu>`](/fr/docs/Web/HTML/Element/menu)
 - Les propriétés CSS pouvant servir à la mise en forme de l'élément `<ol>` :
-
   - [`list-style`](/fr/docs/Web/CSS/list-style) qui permet de choisir comment les nombres ordinaux sont affichés,
   - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), utiles pour gérer les listes imbriquées complexes,
   - [`line-height`](/fr/docs/Web/CSS/line-height) qui permet d'obtenir le même effet que l'attribut [`compact`](#attr-compact) qui est déprécié,

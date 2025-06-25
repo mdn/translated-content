@@ -15,5 +15,4 @@ l10n:
 
 - 维基百科上的[单指令流多数据流](https://zh.wikipedia.org/wiki/单指令流多数据流)
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("SISD")}}

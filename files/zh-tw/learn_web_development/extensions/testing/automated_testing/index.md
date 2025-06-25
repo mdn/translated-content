@@ -335,7 +335,6 @@ You can then step up a gear, using an API to access functionality programmatical
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-
    - Stop the session
    - Give someone else a URL so they can observe the test remotely.
    - Copy text/notes to a remote clipboard.

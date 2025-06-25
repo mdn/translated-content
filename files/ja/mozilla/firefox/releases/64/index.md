@@ -15,13 +15,11 @@ Firefox 64 は、米国時間 2018 年 12 月 11 日 にリリースされまし
 - [レスポンシブデザインモード](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) で選択したデバイスが、セッションをまたいで保存されるようになりました ([Firefox バグ 1248619](https://bugzil.la/1248619))。
 - [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) で、[トラッキング防止](/ja/docs/Web/Privacy/Firefox_tracking_protection) の影響を受ける可能性があるリソースに印をつけるようになりました ([Firefox バグ 1333994](https://bugzil.la/1333994))。
 - [ウェブコンソール](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) で、コードの入力や評価の機能が向上しました:
-
   - コンソールの式の [オートコンプリート](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) が、大文字・小文字を区別しないようになりました ([Firefox バグ 672733](https://bugzil.la/672733))。
   - bash のような reverse search によって [コンソールの式の履歴](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) をたどれるようになりました ([Firefox バグ 1024913](https://bugzil.la/1024913))。
   - コンソールで [評価されたコード](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) が、入力・出力ともに構文強調を行うようになりました ([Firefox バグ 1463669](https://bugzil.la/1463669))。
 
 - [JavaScript デバッガー](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) のステップ実行の機能も向上しました:
-
   - ステップ実行中は [展開された変数](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#scopes) を維持するようになりました ([Firefox バグ 1491471](https://bugzil.la/1491471))。
   - 関数の [ステップアウト](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) で、戻り値をスキップするようになりました ([Firefox バグ 923975](https://bugzil.la/923975))。
 
@@ -68,7 +66,6 @@ _変更なし。_
 #### DOM
 
 - {{domxref("Fullscreen_API", "Fullscreen API", "", "1")}} に関して、いくつかの変更を施しました:
-
   - API の接頭辞を削除しました ([Firefox バグ 1269276](https://bugzil.la/1269276))。
   - {{domxref("Element.requestFullscreen()")}} および {{domxref("Document.exitFullscreen()")}} メソッドが、モード変更が完了したときに解決する {{jsxref("Promise")}} を返すようになりました ([Firefox バグ 1188256](https://bugzil.la/1188256)、[Firefox バグ 1491212](https://bugzil.la/1491212))。
   - 以前は {{domxref("fullscreenchange")}} および {{domxref("fullscreenerror")}} イベントが始めに {{domxref("Document")}} へ、次に {{domxref("Element")}} へ発行されていました。これを逆にして、要素が始めにイベントを受けるようになりました。これは最新の仕様書や Google Chrome の動作に一致します ([Firefox バグ 1375319](https://bugzil.la/1375319))。
@@ -79,7 +76,6 @@ _変更なし。_
 - 古い `HTMLAllCollection` インターフェイスを、最近の [仕様書の更新](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection) に従って更新しました ([Firefox バグ 1398354](https://bugzil.la/1398354))。
 - プライバシー保護のため、{{domxref("Navigator.buildID")}} で固定値のタイムスタンプが返るようになりました ([Firefox バグ 583181](https://bugzil.la/583181))。
 - 以下の {{domxref("Document.execCommand()")}} UI 機能コマンドを、デフォルトで無効にしました ([Firefox バグ 1490641](https://bugzil.la/1490641)):
-
   - `enableObjectResizing`
   - `enableInlineTableEditing`
   - `enableAbsolutePositionEditor`
@@ -130,7 +126,6 @@ _変更なし。_
 #### メニュー
 
 - 拡張機能で独自のコンテキストメニューを設定するために `contextmenu` DOM イベントから呼び出すことが可能な、`browser.menus.overrideContext()` API を新設しました。この API は、拡張機能が Firefox のすべてのデフォルトのメニュー項目を隠して、独自のコンテキストメニューの UI を提供することを可能にします。このコンテキストメニューは、拡張機能が提供する複数のトップレベルのメニュー項目で構成され、任意で別の拡張機能のタブやブックマークのコンテキストメニューを含むこともできます。詳しくは [こちらのブログ記事](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) をご覧ください。
-
   - `browser.menus.overrideContext()` を実装しました ([Firefox バグ 1280347](https://bugzil.la/1280347))。
   - デフォルトのコンテキストメニューを隠すために使用できる `showDefaults: false` オプションを実装しました ([Firefox バグ 1367160](https://bugzil.la/1367160))。
   - `browser.menus.overrideContext()` が使用されていても、`moz-extension://` 文書 URL をマッチさせるために `documentURLPatterns` を使用できるようになりました。この方法は、独自のメニュー項目を特定の文書に限定させることを確実にできます ([Firefox バグ 1498896](https://bugzil.la/1498896))。

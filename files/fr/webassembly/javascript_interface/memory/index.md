@@ -18,9 +18,7 @@ var maMemoire = new WebAssembly.Memory(descripteurMemoire);
 ### Paramètres
 
 - `descripteurMemoire`
-
   - : Un objet qui contient les propriétés suivantes :
-
     - `initial`
       - : La taille initiale de cet espace mémoire WebAssembly, exprimée en nombre de pages WebAssembly.
     - `maximum` {{optional_inline}}

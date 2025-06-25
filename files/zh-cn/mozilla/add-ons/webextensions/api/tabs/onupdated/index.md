@@ -40,9 +40,7 @@ browser.tabs.onUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。更新的标签页的 ID。
     - `changeInfo`
@@ -51,15 +49,11 @@ browser.tabs.onUpdated.hasListener(listener)
       - : {{WebExtAPIRef('tabs.Tab')}}。标签页的新状态。
 
 - `filter` {{optional_inline}}
-
   - : `object`。一组过滤器，限制发送给此监听器的事件。此对象可以具有以下属性之一或多个。仅当事件满足提供的所有过滤器时才发送事件。
-
     - `urls`
       - : `Array`。一个[匹配模式](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)数组。仅当标签页的当前 `url` 属性匹配任意一个模式时才触发事件。
     - `properties`
-
       - : `Array`。一个由支持的 {{WebExtAPIRef("tabs.Tab")}} 对象属性名称组成的字符串数组。仅当更改了数组中的某个属性时才触发事件。可以使用这些属性：
-
         - `"attention"`
         - `"autoDiscardable"`
         - `"audible"`

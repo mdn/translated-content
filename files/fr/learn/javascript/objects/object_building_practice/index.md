@@ -121,7 +121,6 @@ En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur
 - Premièrement, nous utilisons [`beginPath()`](/fr/docs/Web/API/CanvasRenderingContext2D/beginPath) pour spécifier que nous voulons dessiner une forme sur le papier.
 - Ensuite, nous utilisons [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété `color` de notre balle.
 - Après, nous utilisons la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) pour tracer une forme en arc sur le papier. Ses paramètres sont :
-
   - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
   - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
   - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
@@ -242,7 +241,6 @@ Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au
    ```
 
    Notre fonction `loop()` fonctionne comme suit :
-
    - On définit la couleur de remplissage du canvas en noir semi-transparent, puis dessine un rectangle de couleur sur toute la largeur et la hauteur du canvas, en utilisant `fillRect()` (les quatre paramètres fournissent une coordonnée de départ, une largeur et une hauteur pour le rectangle dessiné). Cela sert à masquer le dessin de l'image précédente avant que la suivante ne soit dessinée. Si vous ne faites pas cela, vous verrez juste de longs serpents se faufiler autour de la toile au lieu de balles qui bougent ! La couleur du remplissage est définie sur semi-transparent, `rgba (0,0,0,.25)`, pour permettre aux quelques images précédentes de briller légèrement, produisant les petites traînées derrière les balles lorsqu'elles se déplacent. Si vous avez changé 0.25 à 1, vous ne les verrez plus du tout. Essayez de faire varier ce dernier nombre (entre 0 et 1) pour voir l'effet qu'il a.
    - On crée un nouvel objet `Ball()` avec des attributs générés aléatoirement grâce à la fonction `random()`, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît. Vous pouvez essayer de faire varier le nombre dans `balls.length <25` pour obtenir plus, ou moins de balles à l'écran. En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !
    - Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction `draw()` et `update()` pour dessiner à l'écran chaque balle et faire les mises à jour de chaque attribut avant le prochain rafraîchissement.
@@ -286,7 +284,6 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
    ```
 
    Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas&nbsp;:
-
    - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec _b_. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
    - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante _b'_ , inspectée dans la boucle, n'est pas égale à la balle _b. Le code correspondant est :_ `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
    - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).

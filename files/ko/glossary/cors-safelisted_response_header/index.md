@@ -39,7 +39,6 @@ Access-Control-Expose-Headers: X-Custom-Header, Content-Encoding
 - [HTTP headers](/ko/docs/Web/HTTP/Headers)
 - {{HTTPHeader("Access-Control-Expose-Headers")}}
 - [용어사전](/ko/docs/Glossary)
-
   - {{Glossary("CORS")}}
   - {{Glossary("CORS-safelisted_request_header", "CORS 허용 목록에 있는 요청 헤더")}}
   - {{Glossary("Forbidden header name", "금지된 헤더 이름")}}

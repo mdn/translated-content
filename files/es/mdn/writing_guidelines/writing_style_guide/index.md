@@ -16,14 +16,12 @@ Aquí se enumeran los usos y costumbres recomendados a la hora de editar los art
 ## Uso de mayúsculas en el nombre de las páginas y los encabezados
 
 - Cuando escribas los nombres de las páginas y de los encabezados, recuerda que sólo debe empezar con mayúscula la primera palabra de la frase.
-
   - **Correcto**: "Guía de estilo"
   - **Incorrecto**: "Guía de Estilo"
 
 ## Infinitivos y gerundios
 
 - En inglés, una práctica muy habitual es la de utilizar verbos acabados en "-ing" en los títulos: "Configuring Firefox", por ejemplo. En estos casos la traducción correcta al español consiste en utilizar el infinitivo del verbo y no el gerundio.
-
   - **Correcto**: Configurar Firefox
   - **Incorrecto**: Configurando Firefox
 
@@ -32,26 +30,22 @@ Aquí se enumeran los usos y costumbres recomendados a la hora de editar los art
 ### Mayúsculas y espacios
 
 - Escribe las siglas en mayúsculas y sin puntos.
-
   - **Correcto**: XUL
   - **Incorrecto**: X.U.L.; Xul
 
 ### Expansión
 
 - Siempre que sea posible, cuando uses siglas deberás expandirlas, es decir, explicar su significado. Recuerda que esto es necesario sólo la primera vez que dicha sigla aparezca en tu artículo.
-
   - **Correcto**: "SVG (Gráficos vectoriales escalables) es un lenguaje de marcado XML..."
   - **Incorrecto**: "SVG es un lenguaje de marcado XML..."
 
 - También existe la opción de usar el elemento abbr:
-
   - El siguiente código: `<abbr title='Gráficos vectoriales escalables'>SVG</abbr>`
   - Se muestra de la siguiente forma: SVG
 
 ### Plurales
 
 - Para indicar el plural de una sigla usas "s".
-
   - **Correcto**: CD-ROMs
   - **Incorrecto**: CD-ROM's
 
@@ -60,14 +54,12 @@ Aquí se enumeran los usos y costumbres recomendados a la hora de editar los art
 ### Fechas
 
 - Para las fechas usa el formato: día mes año.
-
   - **Correcto**: 1 de enero de 2006
   - **Incorrecto**: 01/02/06
 
 ### Cantidades
 
 - Usa coma para separar los decimales y punto para indicar miles:
-
   - **Correcto**: 1,5 GB son 1.536 MB
   - **Incorrecto**: 1.5 GB son 1536 MB
 
