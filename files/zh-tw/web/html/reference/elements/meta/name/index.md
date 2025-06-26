@@ -36,7 +36,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 - [`color-scheme`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)
   - : 指定文件相容的一或多個色彩配置。瀏覽器會將此訊息與使用者的瀏覽器或裝置設定結合使用，以決定從背景、前景到表單控制項和捲軸等所有內容要使用的顏色。`<meta name="color-scheme">` 的主要用途是表示對淺色和深色模式的相容性及偏好順序。
 - `description`
-  - : 頁面內容的簡短而準確的摘要，通常稱為「meta description」。像 Google 這樣的搜尋引擎會使用這些後設資料來調整[網頁在搜尋結果中的外觀](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions)。
+  - : 頁面內容的簡短而準確的摘要，通常稱為「後設描述」。像 Google 這樣的搜尋引擎會使用這些後設資料來調整[網頁在搜尋結果中的外觀](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions)。
 - `generator`
   - : 產生該頁面的軟體識別碼。
 - `keywords`
@@ -44,7 +44,7 @@ HTML 規範定義了以下一組標準後設資料名稱：
 - [`referrer`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/referrer)
   - : 控制從文件發送的請求的 HTTP {{httpheader("Referer")}} 標頭。
 - [`theme-color`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/theme-color)
-  - : 指示使用者代理程式應用於自訂頁面顯示或周圍使用者介面的建議顏色。[`content`](/zh-TW/docs/Web/HTML/Reference/Attributes/content) 屬性包含一個有效的 CSS {{cssxref(""&lt;color&gt;"")}}。可以包含帶有有效媒體查詢列表的 [`media`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#media) 屬性，以設定主題顏色後設資料所適用的媒體。
+  - : 指示使用者代理程式應用於自訂頁面顯示或周圍使用者介面的建議顏色。[`content`](/zh-TW/docs/Web/HTML/Reference/Attributes/content) 屬性包含一個有效的 CSS {{cssxref("&lt;color&gt;")}}。可以包含帶有有效媒體查詢列表的 [`media`](/zh-TW/docs/Web/HTML/Reference/Elements/meta#media) 屬性，以設定主題顏色後設資料所適用的媒體。
 
 ### 其他規範中定義的 meta 名稱
 
@@ -77,4 +77,4 @@ CSS 裝置適應性規範定義了以下後設資料名稱：
 ## 參見
 
 - [Viewport `<meta>` 標籤](/zh-TW/docs/Web/HTML/Guides/Viewport_meta_element)
-- [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_the_meta_element)
+- [後設資料：`<meta>` 元素](/zh-TW/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#metadata_meta_元素)
