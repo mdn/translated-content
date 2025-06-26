@@ -32,7 +32,7 @@ HTTP **`205 Reset Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Statu
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 17
 
 comment=你好！
 ```
