@@ -2,12 +2,14 @@
 title: inset-block-start
 slug: Web/CSS/inset-block-start
 l10n:
-  sourceCommit: 13ec4828f8e5cc3daaca5b210025ad3d9d67ed5e
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-**`inset-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素における先頭からの論理的なオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+**`inset-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロック方向の先頭のオフセットを定義し、要素の書字方向やテキストの向きに従って物理的な内部位置に対応付けられます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}} のいずれかのプロパティに、 {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値に従って対応します。
+
+この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
 {{InteractiveExample("CSS Demo: inset-block-start")}}
 
@@ -28,17 +30,14 @@ direction: rtl;
 writing-mode: vertical-lr;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="example-container" id="example-element">
     <div id="abspos">
-      I am absolutely positioned with inset-block-start: 50px
+      これは inset-block-start: 50px で絶対位置指定されています。
     </div>
     <p>
-      As much mud in the streets as if the waters had but newly retired from the
-      face of the earth, and it would not be wonderful to meet a Megalosaurus,
-      forty feet long or so, waddling like an elephantine lizard up Holborn
-      Hill.
+      まるで地球の表面から水が引き始めたかのように、通りは泥だらけで、ホルボーン通りを象のようなトカゲのようによちよち歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>
@@ -70,6 +69,8 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 inset-block-start: 3px;
 inset-block-start: 2.4em;
+inset-block-start: anchor(end);
+inset-block-start: calc(anchor-size(--myAnchor height, 70px) * 2);
 
 /* 包含ブロックの幅または高さに対する <percentage> 値 */
 inset-block-start: 10%;

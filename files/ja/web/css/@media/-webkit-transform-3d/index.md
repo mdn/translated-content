@@ -1,25 +1,27 @@
 ---
 title: -webkit-transform-3d
 slug: Web/CSS/@media/-webkit-transform-3d
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{ Non-standard_header }}
+{{CSSRef}}
 
-**`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
+**`-webkit-transform-3d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [WebKit 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 > [!NOTE]
-> このメディア特性は WebKit および Blink でのみ対応しています。可能であれば、 {{cssxref("@supports")}} 特性クエリーを代わりに使用してください。
+> このメディア特性は現在、[大部分のブラウザーで対応しています](#ブラウザーの互換性)が、可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ## 構文
 
-`-webkit-transform-3d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
+`-webkit-transform-3d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)であり、ベンダー接頭辞付きの CSS 3D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 ### 値
 
 - `true`
-  - : ブラウザーは三次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
+  - : ブラウザーは 3D の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
 - `false`
-  - : 三次元の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
+  - : 3D の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
 
 ## 例
 
@@ -31,8 +33,12 @@ slug: Web/CSS/@media/-webkit-transform-3d
     transform-style: preserve-3d;
   }
 }
+```
 
-@media (-webkit-transform-3d: 1) {
+ブラウザーの対応を調べるよりよい方法は、機能クエリーをすることです。
+
+```css
+@supports (transform-style) {
   .foo {
     transform-style: preserve-3d;
   }
@@ -53,5 +59,6 @@ slug: Web/CSS/@media/-webkit-transform-3d
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
-
-{{ CSSRef }}
+- {{cssxref("transform")}} および [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@supports")}} および[機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)

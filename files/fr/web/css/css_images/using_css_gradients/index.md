@@ -990,7 +990,6 @@ div {
 ## Voir aussi
 
 - Les fonctions de manipulation des dégradés&nbsp;:
-
   - [`linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient)
   - [`radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient)
   - [`conic-gradient`](/fr/docs/Web/CSS/gradient/conic-gradient)
@@ -999,12 +998,10 @@ div {
   - [`repeating-conic-gradient`](/fr/docs/Web/CSS/gradient/repeating-conic-gradient)
 
 - Les types de donnée CSS relatifs aux dégradés&nbsp;:
-
   - [`<gradient>`](/fr/docs/Web/CSS/gradient)
   - [`<image>`](/fr/docs/Web/CSS/image)
 
 - Certaines propriétés CSS qui permettent d'utiliser des dégradés&nbsp;:
-
   - [`background`](/fr/docs/Web/CSS/background)
   - [`background-image`](/fr/docs/Web/CSS/background-image)
 

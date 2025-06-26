@@ -3,7 +3,7 @@ title: "Navigator: maxTouchPoints プロパティ"
 short-title: maxTouchPoints
 slug: Web/API/Navigator/maxTouchPoints
 l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+  sourceCommit: a77040afd58b77d50a6f4cbb94823c44bfba9d26
 ---
 
 {{APIRef("HTML DOM")}}

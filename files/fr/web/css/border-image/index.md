@@ -189,7 +189,6 @@ On découpe l'image et on la répète pour remplir la zone entre les bordures.
 - [`background-image`](/fr/docs/Web/CSS/background-image)
 - La fonction [`url()`](/fr/docs/Web/CSS/url_value)
 - Fonctions pour les dégradés&nbsp;:
-
   - [`conic-gradient()`](</fr/docs/Web/CSS/gradient/conic-gradient()>)
   - [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient)
   - [`repeating-linear-gradient()`](</fr/docs/Web/CSS/gradient/repeating-linear-gradient()>)

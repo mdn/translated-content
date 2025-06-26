@@ -91,7 +91,6 @@ text-transform: unset;
 ### Valeurs
 
 - `capitalize`
-
   - : En utilisant ce mot-clé, la première lettre de chaque mot sera affichée en capitale. Les autres caractères ne seront pas modifiés et conserveront ainsi la forme originale, contenue dans le texte de l'élément. Ici, une lettre peut être n'importe quel caractère Unicode qui fait partie des catégories génériques Lettre. Cela exclue donc les symboles de ponctuations qui peuvent être utilisés en début de mot.
 
     > [!NOTE]

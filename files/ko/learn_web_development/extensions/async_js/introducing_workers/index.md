@@ -169,7 +169,6 @@ document.querySelector("#reload").addEventListener("click", () => {
 - 먼저 {{domxref("Worker/Worker", "Worker()")}} 생성자를 사용하여 워커를 만듭니다. 이 워커에 워커 스크립트를 가리키는 URL을 전달합니다. 워커가 생성되자마자 워커 스크립트가 실행됩니다.
 
 - 그런 다음 동기화 버전과 마찬가지로 "Generate primes" 버튼에 `click` 이벤트 처리기를 추가합니다. 그러나 이제 `generatePrimes()` 함수를 호출하는 대신 {{domxref("Worker/postMessage", "worker.postMessage()")}}를 사용하여 워커에게 메시지를 보냅니다. 이 메시지는 인수를 받을 수 있으며, 인수를 받은 경우 다음 두 가지 속성을 포함하는 JSON 개체를 전달합니다.
-
   - `command`: 워커가 수행할 작업을 식별하는 문자열입니다.(워커가 둘 이상의 작업을 수행할 수 있는 경우)
   - `quota`: 생성할 소수의 개수입니다.
 

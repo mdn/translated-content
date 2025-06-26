@@ -1,27 +1,13 @@
 ---
 title: border-end-end-radius
 slug: Web/CSS/border-end-end-radius
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`border-end-end-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的な境界の半径を定義します。これは要素の {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} に応じて、物理的な境界の半径に対応づけられます。これは[テキストの方向](/ja/docs/Web/CSS/text-orientation)や[書字方向](/ja/docs/Web/CSS/CSS_writing_modes)に依存せずにスタイルを構築する際に便利です。
-
-```css
-/* <length> 値 */
-/* 値 1 つの場合は角を円にする */
-border-end-end-radius: 10px;
-border-end-end-radius: 1em;
-
-/* 値 2 つの場合は角を楕円にする */
-border-end-end-radius: 1em 2em;
-
-/* グローバル値 */
-border-end-end-radius: inherit;
-border-end-end-radius: initial;
-border-end-end-radius: revert;
-border-end-end-radius: unset;
-```
 
 {{InteractiveExample("CSS Demo: border-end-end-radius")}}
 
@@ -47,7 +33,7 @@ writing-mode: vertical-rl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a bottom right rounded corner.
+    このボックスは、右下の角が丸くなっています。
   </div>
 </section>
 ```
@@ -69,6 +55,23 @@ writing-mode: vertical-rl;
 
 ## 構文
 
+```css
+/* <length> 値 */
+/* 値 1 つの場合は角を円にする */
+border-end-end-radius: 10px;
+border-end-end-radius: 1em;
+
+/* 値 2 つの場合は角を楕円にする */
+border-end-end-radius: 1em 2em;
+
+/* グローバル値 */
+border-end-end-radius: inherit;
+border-end-end-radius: initial;
+border-end-end-radius: revert;
+border-end-end-radius: revert-layer;
+border-end-end-radius: unset;
+```
+
 ### 値
 
 - `<length-percentage>`
@@ -84,17 +87,17 @@ writing-mode: vertical-rl;
 
 ## 例
 
-<h3 id="Border_radius_with_vertical_text">縦書きの時の境界の丸め</h3>
+### 縦書きの時の境界の丸め
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example</p>
+  <p class="exampleText">角丸の例</p>
 </div>
 ```
 
-#### CSS Content
+#### CSS
 
 ```css
 div {
@@ -114,7 +117,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Border_radius_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きの時の境界の丸め", 140, 140)}}
 
 ## 仕様書
 
@@ -126,5 +129,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - 対応する物理的プロパティ: {{CSSxRef("border-bottom-right-radius")}}
 - {{CSSxRef("writing-mode")}}, {{CSSxRef("direction")}}, {{CSSxRef("text-orientation")}}

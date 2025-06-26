@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-top
 slug: Web/CSS/scroll-padding-top
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-top` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-top` プロパティは、スクロールポートの*最適表示領域*のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-top")}}
+{{InteractiveExample("CSS デモ: scroll-padding-top")}}
 
 ```css interactive-example-choice
 scroll-padding-top: 0;
@@ -28,7 +30,7 @@ scroll-padding-top: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -84,12 +86,13 @@ scroll-padding-top: 10%;
 scroll-padding-top: inherit;
 scroll-padding-top: initial;
 scroll-padding-top: revert;
+scroll-padding-top: revert-layer;
 scroll-padding-top: unset;
 ```
 
 ### 値
 
-- `{{cssxref("&lt;length-percentage&gt;")}}`
+- {{cssxref("&lt;length-percentage&gt;")}}
   - : スクロールポートの上辺からの内側のオフセットで、有効な長さまたはパーセント値です。
 - `auto`
   - : オフセットはユーザーエージェントが決定します。これは一般に 0px になりますが、ゼロ以外の値がもっと適切である場合をユーザーエージェントが検出して、他の値を採用することもできます。
@@ -113,4 +116,4 @@ scroll-padding-top: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

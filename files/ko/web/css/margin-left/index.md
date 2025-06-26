@@ -83,7 +83,6 @@ margin-left: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 바깥 여백 크기와 블록 컨테이너 너비의 비율.
 - `auto`
-
   - : 사용한 레이아웃 모드에 따라 가로축 미사용 공간 너비의 일부를 바깥 여백에 할당. `margin-left`와 `margin-right`의 값이 모두 `auto`라면 너비를 양 여백에 동일하게 배정합니다. 아래 표가 가능한 여러 경우를 보입니다.
 
     | {{cssxref("display")}} 값                                                                         | {{cssxref("float")}} 값 | {{cssxref("position")}} 값 | `auto`의 계산 값                                                                                                                                                               | 설명                                                                                                  |

@@ -72,7 +72,6 @@ background-repeat: inherit;
 ### 值
 
 - `<repeat-style>`
-
   - : 单值语法是完整的双值语法的简写：
 
     | **单值**    | **等价于双值**        |
@@ -155,7 +154,8 @@ div {
 
 /* Multiple images */
 .five {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

@@ -106,7 +106,6 @@ Ouvrez le fichier HTML d'index. Vous allez voir que le HTML contient majoritaire
 - Le lecteur complet est englobé dans une balise {{htmlelement("div")}} pour pouvoir appliquer du style sur le bloc complet si nécessaire.
 - La balise {{htmlelement("video")}} contient deux éléments {{htmlelement("source")}} pour permettre la lecture du média selon les capacités de chaque navigateur.
 - La partie _controls_ du HTML est la plus intéressante :
-
   - Il contient 4 {{htmlelement("button")}} : lecture/mise en pause, stop, retour arrière et avance rapide.
   - Chaque `<button>` a un nom de classe, un attribut `data-icon` (pour définir l'icône affichée), et un attribut `aria-label` (qui fournit une description de chaque bouton pour le rendre accessible). Le contenu d'un attribut `aria-label` est lu par les lecteurs d'écran quand l'élément sur lequel il se situe prend le focus.
   - Il y a également un élément {{htmlelement("div")}}, qui affiche le temps écoulé quand la vidéo est en cours de lecture. Pour s'amuser, nous avons mis deux mécanismes en place — un {{htmlelement("span")}} qui affiche le temps écoulé en minutes/secondes, et un autre `<div>` pour afficher une barre de progrès. Pour vous faire une idée du produit final, vous pouvez jeter un d'oeil à [la version finie](https://mdn.github.io/learning-area/javascript/apis/video-audio/finished/).
@@ -233,7 +232,6 @@ Nous avons déjà une interface HTML et CSS assez complète; nous avons maintena
    ```
 
    Ici, nous créons des variables pour stocker les références de tous les objets que nous voulons manipuler. Nous avons trois groupes :
-
    - L'élément `<video>`, et la barre de contrôle.
    - Les boutons play/pause, stop, retour arrière, et avance rapide.
    - Le `<div>` externe, le `<span>` qui décompte le temps écoulé, et le `<div>` interne qui affiche le progrès de la vidéo.
@@ -351,7 +349,6 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
    Vous remarquerez que nous commençons par initialiser deux variables — `intervalFwd` et `intervalRwd` — vous verrez à quoi elles servent plus tard.
 
    Voyons pas à pas `mediaBackward()` (`mediaForward()` fait la même chose, mais dans l'autre sens) :
-
    1. Nous effaçons les classes et intervales qui sont définits sur la fonctionnalité d'avance rapide — de cette manière, si on presse le bouton `rwd` après avoir pressé le bouton `fwd`, on annule l'avance rapide et la remplaçons avec le retour arrière. Si on essayait de faire les deux à la fois, le lecteur échouerait.
    2. Nous utilisons une instruction `if` pour vérifier si la classe `active` a été définie sur le bouton `rwd`, ce qui indique qu'il a déjà été pressé. La propriété {{domxref("classList")}} est une propriété plutôt pratique qui existe sur chaque élément — elle contient une liste de toutes les classes définies sur l'élément, ainsi que des méthodes pour en ajouter/supprimer, etc. Nous utilisons la méthode `classList.contains()` pour vérifier si la liste contient la classe `active`. Cela retourne un booléen `true`/`false` en résultat.
    3. Si la classe `active` a été définie sur le bouton `rwd`, nous la supprimons avec `classList.remove()`, effaçons l'intervale qui a été définit sur le bouton quand il a été pressé (voir ci-dessous pour plus d'explication), et utilisons {{domxref("HTMLMediaElement.play()")}} pour annuler le retour arrière et démarrer la vidéo normalement.
@@ -382,7 +379,6 @@ Il y a différentes manières d'implémenter le retour arrière et l'avance rapi
    ```
 
    Encore une fois, nous allons voir pas à pas la première fonction, puisque les deux fonctions font la même chose mais dans le sens inverse. Dans `windBackward()`, nous faisons comme suit — gardez à l'esprit que la fonction est exécutée toutes les 200 millisecondes.
-
    1. Nous commençons avec une instruction `if` qui vérifie si le temps en cours est inférieur à 3 secondes, c'est à dire si le retour arrière nous ramènerait avant le début de la vidéo. Cela provoquerait un comportement étrange. Ainsi, si c'est le cas, nous arrêtons la vidéo en appelant `stopMedia()`, supprimons la classe `active` du bouton, et stoppons l'intervale `intervalRwd` pour stopper le retour arrière. Si nous n'avions pas ajouté cette dernière étape, la vidéo continuerait de se remboniner éternellement.
    2. Si le temps en cours n'est pas inférieur à 3 secondes, nous retournons en arrière de 3 secondes en exécutant `media.currentTime -= 3`. Dans les faits, on rembobine donc la vidéo de 3 secondes toutes les 200 millisecondes.
 

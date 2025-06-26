@@ -3,8 +3,6 @@ title: 子资源完整性
 slug: Web/Security/Subresource_Integrity
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/Security")}}
-
 **子资源完整性**（Subresource Integrity，SRI）是允许浏览器检查其获得的资源（例如从 [CDN](/zh-CN/docs/Glossary/CDN) 获得的）是否被篡改的一项安全特性。它通过验证获取文件的散列值是否和你提供的散列值一样来判断资源是否被篡改。
 
 > [!NOTE]
@@ -22,7 +20,8 @@ slug: Web/Security/Subresource_Integrity
 
 `integrity` 值至少由一个字符串开始，每个字符串包括一个前缀，表示一个特定的散列算法（目前允许的前缀是 `sha256`、`sha384` 和 `sha512`），后面是一个短横线（-），最后是实际的 base64 编码的散列。
 
-> **备注：** **integrity** 值可以包含多个由空格分隔的散列值，只要文件匹配其中任意一个散列值，就可以通过校验并加载该资源。
+> [!NOTE]
+> **integrity** 值可以包含多个由空格分隔的散列值，只要文件匹配其中任意一个散列值，就可以通过校验并加载该资源。
 
 使用 base64 编码 sha384 算法计算出摘要后的 `integrity` 值的示例：
 

@@ -2,7 +2,7 @@
 title: "@media"
 slug: Web/CSS/@media
 l10n:
-  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
+  sourceCommit: f0fcb3b92e14a1d5b7f51947597cef1fbf4be64c
 ---
 
 {{CSSRef}}
@@ -16,13 +16,15 @@ l10n:
 
 ```css interactive-example
 abbr {
-  color: chocolate;
+  color: #860304;
+  font-weight: bold;
+  transition: color 0.5s ease;
 }
 
 @media (hover: hover) {
   abbr:hover {
-    color: limegreen;
-    transition-duration: 1s;
+    color: #001ca8;
+    transition-duration: 0.5s;
   }
 }
 
@@ -189,7 +191,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
   - : 複数のメディア特性を 1 つのメディアクエリーに結合する際に使用されます。クエリーが `true` になるためには、結合させた各機能が `true` を返すことが必要です。
     また、メディア特性とメディア種別を結合する際にも使用されます。
 - `not`
-
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
 

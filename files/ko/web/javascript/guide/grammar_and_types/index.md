@@ -303,7 +303,6 @@ console.log(MY_ARRAY); //logs ['HTML','CSS','JAVASCRIPT'];
 최신 ECMAScript 표준은 8가지 데이터 형을 정의합니다.
 
 - 7가지 {{Glossary("Primitive", "원시")}} 데이터 형
-
   1. {{Glossary("Boolean")}}. `true`와 `false`
   2. {{Glossary("null")}}. null 값을 나타내는 특별한 키워드. (JavaScript는 대소문자를 구분하므로, `null`은 `Null`, `NULL` 혹은 다른 변형과도 다릅니다.)
   3. {{Glossary("undefined")}}. 값이 정의되어 있지 않은 최상위 속성.

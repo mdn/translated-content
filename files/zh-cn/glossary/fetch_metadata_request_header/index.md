@@ -32,7 +32,6 @@ fetch 元数据请求标头：
 - [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - [所有 HTTP 标头列表 > Fetch 元数据请求标头](/zh-CN/docs/Web/HTTP/Reference/Headers#fetch_元数据请求标头)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Representation header", "表示标头")}}
   - {{Glossary("HTTP_header","HTTP 标头")}}
   - {{Glossary("Response header", "响应标头")}}

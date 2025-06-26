@@ -39,7 +39,8 @@ Accept-Post: <MIME_type>/*
 Accept-Post: */*
 ```
 
-> **備註：** `Accept-Post` 標頭指定的媒體範圍與 {{HTTPHeader("Accept")}} 相同，只是沒有偏好（即沒有 `q` 參數）。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
+> [!NOTE]
+> `Accept-Post` 標頭指定的媒體範圍與 {{HTTPHeader("Accept")}} 相同，只是沒有偏好（即沒有 `q` 參數）。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
 
 ## 指令
 

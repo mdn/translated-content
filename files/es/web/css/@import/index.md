@@ -21,7 +21,6 @@ Para que los agentes de usuario puedan evitar recuperar recursos para tipos de m
 Dónde :
 
 - _url_
-
   - : es una {{cssxref("&lt;string&gt;")}} o un {{cssxref("&lt;uri&gt;")}}
 
     Representa la ubicación del recurso a importar. La _url_ puede ser absoluta o relativa.

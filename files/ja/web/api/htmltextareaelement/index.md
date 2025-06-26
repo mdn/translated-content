@@ -2,12 +2,12 @@
 title: HTMLTextAreaElement
 slug: Web/API/HTMLTextAreaElement
 l10n:
-  sourceCommit: d47348199a379f68bea876a403eb510628ec4ccb
+  sourceCommit: a61be259435257328a25c462cb0f42bc91981a6f
 ---
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLTextAreaElement`** インターフェイスは、 {{HTMLElement("textarea")}} 要素のレイアウトや表示を操作するための特別なプロパティやメソッドを提供します。
+**`HTMLTextAreaElement`** インターフェイスは、 {{HTMLElement("textarea")}} 要素のレイアウトや表示を操作するためのプロパティやメソッドを提供します。
 
 {{InheritanceDiagram}}
 
@@ -89,7 +89,7 @@ _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承し
 
 - {{domxref("HTMLTextAreaElement/select_event", "select")}} イベント
   - : 一部のテキストが選択されたときに発行されます。
-- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} イベント {{experimental_inline}}
+- {{domxref("HTMLTextAreaElement/selectionchange_event", "selectionchange")}} イベント
   - : {{HTMLElement("textarea")}} 要素のテキスト選択範囲が変更されたときに発行されます。
 
 ## 例
@@ -134,36 +134,34 @@ textarea.no-scrollbars {
 
 ### HTML タグを挿入する例
 
-いくつかの HTML タグや、<em>顔文字</em>や、カスタムテキストをテキストエリアに挿入します。
+いくつかの HTML タグをテキストエリアに挿入します。
 
-#### JavaScript
-
-```js
+```js live-sample___insert-html
 function insert(startTag, endTag) {
-  const textArea = document.myForm.myTxtArea;
-  const selectionStart = textArea.selectionStart;
-  const selectionEnd = textArea.selectionEnd;
+  const textArea = document.myForm.myTextArea;
+  const start = textArea.selectionStart;
+  const end = textArea.selectionEnd;
   const oldText = textArea.value;
 
-  const prefix = oldText.substring(0, selectionStart);
-  const inserted =
-    startTag + oldText.substring(selectionStart, selectionEnd) + endTag;
-  const suffix = oldText.substring(selectionEnd);
+  const prefix = oldText.substring(0, start);
+  const inserted = startTag + oldText.substring(start, end) + endTag;
+  const suffix = oldText.substring(end);
+
   textArea.value = `${prefix}${inserted}${suffix}`;
 
-  const newSelectionStart = selectionStart + startTag.length;
-  const newSelectionEnd = selectionEnd + startTag.length;
-  textArea.setSelectionRange(newSelectionStart, newSelectionEnd);
+  const newStart = start + startTag.length;
+  const newEnd = end + startTag.length;
 
+  textArea.setSelectionRange(newStart, newEnd);
   textArea.focus();
 }
 
 function insertURL() {
-  const newURL = prompt("リンクの完全な URL を入力してください");
+  const newURL = prompt("リンクの完全な URL を入力してください。");
   if (newURL) {
     insert(`<a href="${newURL}">`, "</a>");
   } else {
-    document.myForm.myTxtArea.focus();
+    document.myForm.myTextArea.focus();
   }
 }
 
@@ -175,14 +173,12 @@ const code = document.querySelector("#format-code");
 strong.addEventListener("click", (e) => insert("<strong>", "</strong>"));
 em.addEventListener("click", (e) => insert("<em>", "</em>"));
 link.addEventListener("click", (e) => insertURL());
-code.addEventListener("click", (e) => insert("\n<code>\n", "\n</code>\n"));
+code.addEventListener("click", (e) => insert("<code>", "</code>"));
 ```
-
-#### CSS
 
 内部の span をリンクのように動作させるよう装飾する CSS です。
 
-```css
+```css live-sample___insert-html
 .intLink {
   cursor: pointer;
   text-decoration: underline;
@@ -190,27 +186,25 @@ code.addEventListener("click", (e) => insert("\n<code>\n", "\n</code>\n"));
 }
 ```
 
-HTML:
-
-```html
+```html live-sample___insert-html
 <form name="myForm">
   <p>
-    [&nbsp;
+    [
     <span class="intLink" id="format-strong"><strong>Bold</strong></span> |
     <span class="intLink" id="format-em"><em>Italic</em></span> |
     <span class="intLink" id="format-link">URL</span> |
-    <span class="intLink" id="format-code">code</span> &nbsp;]
+    <span class="intLink" id="format-code">code</span> ]
   </p>
 
   <p>
-    <textarea name="myTxtArea" rows="10" cols="50">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem.
+    <textarea name="myTextArea" rows="10" cols="50">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. 
     </textarea>
   </p>
 </form>
 ```
 
-{{EmbedLiveSample('HTML タグを挿入する例', 600, 300)}}
+{{EmbedLiveSample('insert-html', , '300', , , , , 'allow-modals')}}
 
 ## 仕様書
 

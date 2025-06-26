@@ -20,6 +20,5 @@ l10n:
 - 위키백과의 [Favicon](https://en.wikipedia.org/wiki/Favicon)
 - 페이지에 파비콘을 추가하는 데 사용되는 [link rel="icon"](/ko/docs/Web/HTML/Attributes/rel#icon) 요소 문서
 - 도구
-
   - [무료 파비콘 생성기](https://favicon.io/)
   - [Favicon.ico 및 앱 아이콘 생성기](https://www.favicon-generator.org/)

@@ -1,24 +1,29 @@
 ---
 title: -webkit-transform-2d
 slug: Web/CSS/@media/-webkit-transform-2d
+l10n:
+  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{ Non-standard_header }}
+{{CSSRef}} {{ Non-standard_header }}
 
-**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
+> [!NOTE]
+> すべてのブラウザーが、ベンダー接頭辞なしの [`transform`](/ja/docs/Web/CSS/transform#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-transform-2d` メディア特性に対応しています。メディアクエリーとして接頭辞や `2d` なしの `transform` に対応しているブラウザーはありません代わりに、 [`@supports (transform)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。
+
+**`-webkit-transform-2d`** は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [WebKit 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、ベンダー接頭辞付きの CSS の 2D {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 Apple には [Safari CSS リファレンス](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/OtherStandardCSS3Features.html#//apple_ref/doc/uid/TP40007601-SW3)に説明があります。
 
 ## 構文
 
-`-webkit-transform-2d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) で [Chrome 拡張](/ja/docs/Web/CSS/WebKit_Extensions)であり、 `-webkit` 接頭辞付きの CSS の二次元 {{cssxref("transform")}} に対応していれば値が `true` になります。
+`-webkit-transform-2d` は [CSS](/ja/docs/Web/CSS) の論理[メディア特性](/ja/docs/Web/CSS/@media#メディア特性) であり、 `-webkit` 接頭辞付きの CSS の 2D の {{cssxref("transform")}} に対応していれば値が `true` になります。
 
 ### 値
 
 - `true`
-  - : ブラウザーは二次元の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
+  - : ブラウザーは 2D の CSS 座標変換に `-webkit` の接頭辞つきで対応しています。
 - `false`
-  - : 二次元の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
+  - : 2D の CSS 座標変換で `-webkit` の接頭辞が付いたものはブラウザーが対応していません。
 
 ## 例
 
@@ -32,7 +37,7 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 }
 ```
 
-このメディア機能は WebKit でのみ対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
+このメディア機能は WebKit のみが対応しています。接頭辞のない [`transform`](/ja/docs/Web/CSS/transform) プロパティは、現在のすべてのブラウザーが対応しています。可能であれば、代わりに {{cssxref("@supports")}} 機能クエリーを使用してください。
 
 ```css
 @supports (-webkit-transform: translate(100px, 100px)) {
@@ -56,5 +61,6 @@ Apple には [Safari CSS リファレンス](https://developer.apple.com/library
 - {{cssxref("@media/-webkit-transition", "-webkit-transition")}}
 - {{cssxref("@media/-webkit-animation", "-webkit-animation")}}
 - [Test page at quirksmode.org](https://www.quirksmode.org/css/tests/mediaqueries/animation.html)
-
-{{ CSSRef }}
+- {{cssxref("transform")}} および [CSS 座標変換の使用](/ja/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)
+- {{cssxref("@media")}} および[メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- {{cssxref("@supports")}} および[機能クエリーの使用](/ja/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)

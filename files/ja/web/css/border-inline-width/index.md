@@ -1,6 +1,8 @@
 ---
 title: border-inline-width
 slug: Web/CSS/border-inline-width
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -28,7 +30,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -59,6 +61,7 @@ border-inline-width: thick;
 border-inline-width: inherit;
 border-inline-width: initial;
 border-inline-width: revert;
+border-inline-width: revert-layer;
 border-inline-width: unset;
 ```
 
@@ -75,13 +78,13 @@ border-inline-width: unset;
 
 {{csssyntax}}
 
-<h2 id="Examples">例</h2>
+## 例
 
 ### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -101,7 +104,7 @@ div {
 }
 ```
 
-{{EmbedLiveSample("Examples", 140, 140)}}
+{{EmbedLiveSample("例", 140, 140)}}
 
 ## 仕様書
 
@@ -113,5 +116,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの 1 つに対応します
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

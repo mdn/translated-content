@@ -1,24 +1,15 @@
 ---
 title: scroll-snap-stop
 slug: Web/CSS/scroll-snap-stop
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
 **`scroll-snap-stop`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スクロールコンテナーが可能なスナップ位置を「通り過ぎる」ことを許可するかどうかを定義します。
 
-```css
-/* キーワード値 */
-scroll-snap-stop: normal;
-scroll-snap-stop: always;
-
-/* グローバル値 */
-scroll-snap-type: inherit;
-scroll-snap-type: initial;
-scroll-snap-type: unset;
-```
-
-{{InteractiveExample("CSS Demo: scroll-snap-stop")}}
+{{InteractiveExample("CSS デモ: scroll-snap-stop")}}
 
 ```css interactive-example-choice
 scroll-snap-stop: normal;
@@ -28,20 +19,17 @@ scroll-snap-stop: normal;
 scroll-snap-stop: always;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section class="default-example" id="default-example">
   <p class="explanation">
-    The effect of this property can be noticed on devices with a touchpad. Try
-    to scroll through all items with a single swing. Value
-    <b class="keyword">'normal'</b> should pass through all pages, while
-    <b class="keyword">'always'</b> will stop at the second page.
+    このプロパティの効果は、タッチパッドを備えた端末で確認できます。 1 回のスワイプですべてのアイテムをスクロールしてみてください。 <b class="keyword">'normal'</b> の値はすべてのページを通過しますが、 <b class="keyword">'always'</b> は 2 つ目のページで停止します。
   </p>
   <div class="snap-container">
     <div>1</div>
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -95,6 +83,19 @@ scroll-snap-stop: always;
 
 ## 構文
 
+```css
+/* キーワード値 */
+scroll-snap-stop: normal;
+scroll-snap-stop: always;
+
+/* グローバル値 */
+scroll-snap-stop: inherit;
+scroll-snap-stop: initial;
+scroll-snap-stop: revert;
+scroll-snap-stop: revert-layer;
+scroll-snap-stop: unset;
+```
+
 ### 値
 
 - `normal`
@@ -112,15 +113,72 @@ scroll-snap-stop: always;
 
 ## 例
 
-<h3 id="Snapping_in_different_axes">様々な軸でのスナップ</h3>
+### 異なるスナップ停止の値を設定
 
-この例は {{cssxref("scroll-snap-type")}} から複製したものに多少の修正を加えたものです。
+以下の例は、`scroll-snap-stop` の `always` 値と `normal` 値の違いを示しています。 2 つの `scroll-snap-stop` 値の違いは、`scroll-snap-type` プロパティが `mandatory` に設定されている場合（この例で使用されている）でより顕著になります。
+
+#### HTML
+
+```html
+<p>scroll-snap-stop: always (X Mandatory)</p>
+<div class="x mandatory-scroll-snapping always-stop">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: always (X Mandatory) on odd child elements</p>
+<div class="x mandatory-scroll-snapping always-stop-odd">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: always (X Mandatory) on even child elements</p>
+<div class="x mandatory-scroll-snapping always-stop-even">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: normal (X Mandatory)</p>
+<div class="x mandatory-scroll-snapping normal-stop">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: always (Y Mandatory)</p>
+<div class="y mandatory-scroll-snapping always-stop">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+
+<p>scroll-snap-stop: normal (Y Mandatory)</p>
+<div class="y mandatory-scroll-snapping normal-stop">
+  <div>1</div>
+  <div>2</div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+</div>
+```
 
 #### CSS
 
-```css
-/* setup */
-:root,
+```css hidden
+/* 設定 */
 body {
   height: 100%;
   display: flex;
@@ -128,33 +186,57 @@ body {
   justify-content: space-between;
   flex-flow: column nowrap;
   font-family: monospace;
+  text-align: center;
 }
-.container {
+
+div[class] {
+  font-size: 3rem;
   display: flex;
   overflow: auto;
-  outline: 1px dashed lightgray;
   flex: none;
 }
 
-.container.x {
-  width: 100%;
-  height: 128px;
+.x {
+  width: 50%;
+  min-width: 15rem;
+  height: 6rem;
   flex-flow: row nowrap;
 }
 
-.container.y {
-  width: 256px;
-  height: 256px;
+.y {
+  width: 30%;
+  min-width: 12rem;
+  height: 12rem;
   flex-flow: column nowrap;
 }
-/* definite scroll snap */
-.mandatory-scroll-snapping > div {
-  scroll-snap-stop: always;
+
+div > div {
+  flex: none;
+  outline: 1px solid #333;
 }
-.proximity-scroll-snapping > div {
-  scroll-snap-stop: normal;
+
+.x > div {
+  width: 90%;
+  height: 100%;
 }
-/* scroll-snap */
+
+.y > div {
+  width: 100%;
+  height: 80%;
+}
+
+/* 着色 */
+div > div:nth-child(even) {
+  background-color: #87ea87;
+}
+
+div > div:nth-child(odd) {
+  background-color: #87ccea;
+}
+```
+
+```css
+/* 親に強制スクロールスナップを設定 */
 .x.mandatory-scroll-snapping {
   scroll-snap-type: x mandatory;
 }
@@ -163,119 +245,36 @@ body {
   scroll-snap-type: y mandatory;
 }
 
-.x.proximity-scroll-snapping {
-  scroll-snap-type: x proximity;
-}
-
-.y.proximity-scroll-snapping {
-  scroll-snap-type: y proximity;
-}
-
-.container > div {
-  text-align: center;
+/* 子要素のスクロールスナップ配置を定義 */
+div > div {
   scroll-snap-align: center;
-  flex: none;
 }
 
-.x.container > div {
-  line-height: 128px;
-  font-size: 64px;
-  width: 100%;
-  height: 128px;
+/* 子要素のスクロールスナップ停止を定義 */
+.always-stop > div {
+  scroll-snap-stop: always;
 }
 
-.y.container > div {
-  line-height: 256px;
-  font-size: 128px;
-  width: 256px;
-  height: 256px;
-}
-/* appearance fixes */
-.y.container > div:first-child {
-  line-height: 1.3;
-  font-size: 64px;
-}
-/* coloration */
-.container > div:nth-child(even) {
-  background-color: #87ea87;
+.always-stop-odd > div:nth-of-type(odd) {
+  scroll-snap-stop: always;
 }
 
-.container > div:nth-child(odd) {
-  background-color: #87ccea;
+.always-stop-even > div:nth-of-type(even) {
+  scroll-snap-stop: always;
 }
-```
 
-#### HTML
-
-```html
-<div class="container x mandatory-scroll-snapping" dir="ltr">
-  <div>X Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x proximity-scroll-snapping" dir="ltr">
-  <div>X Proximity LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y mandatory-scroll-snapping" dir="ltr">
-  <div>Y Mand. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y proximity-scroll-snapping" dir="ltr">
-  <div>Y Prox. LTR</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x mandatory-scroll-snapping" dir="rtl">
-  <div>X Mandatory RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container x proximity-scroll-snapping" dir="rtl">
-  <div>X Proximity RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y mandatory-scroll-snapping" dir="rtl">
-  <div>Y Mand. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
-
-<div class="container y proximity-scroll-snapping" dir="rtl">
-  <div>Y Prox. RTL</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
-</div>
+.normal-stop > div {
+  scroll-snap-stop: normal;
+}
 ```
 
 #### 結果
 
-{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1630")}}
+下記の X および Y ボックスで、それぞれ左から右、上から下へスクロールしてみてください。 `scroll-snap-stop` プロパティが `always` に設定されている X および Y ボックスでは、高速でスクロールしても、スナップ点でスクロールが強制的に停止します。ただし、 `scroll-snap-stop` プロパティが `normal` に設定されているボックスでは、高速でスクロールしてもスナップ点はスキップされます。
+
+必要に応じて、スクロールコンテナー内で `always` で停止するアイテムを選択することができます。これは、以下の例で、奇数と偶数のアイテムを対象として示されています。要件に応じて、別の戦略を選択することができます。以下の例では、スクロールは、 2 つ目と 3 つ目のボックスの奇数と偶数のアイテムを「通過」しません。
+
+{{EmbedLiveSample("Snapping_in_different_axes", "100%", "1080")}}
 
 ## 仕様書
 
@@ -288,4 +287,4 @@ body {
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

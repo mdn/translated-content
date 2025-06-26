@@ -39,7 +39,6 @@ _此接口继承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("Even
 - {{domxref("XMLHttpRequest.status")}} {{readonlyinline}}
   - : 返回一个无符号短整型（`unsigned short`）数字，代表请求的响应状态。
 - {{domxref("XMLHttpRequest.statusText")}} {{readonlyinline}}
-
   - : 返回一个 {{domxref("DOMString")}}，其中包含 HTTP 服务器返回的响应状态。与 {{domxref("XMLHTTPRequest.status")}} 不同的是，它包含完整的响应状态文本（例如，"`200 OK`"）。
 
     > [!NOTE]

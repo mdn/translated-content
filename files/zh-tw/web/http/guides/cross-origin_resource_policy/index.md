@@ -2,7 +2,7 @@
 title: 跨來源資源政策（CORP）
 slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{HTTPSidebar}}
@@ -24,7 +24,6 @@ CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另�
 Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回應標頭設置跨來源資源政策，該標頭接受下方三個值之一：
 
 - `same-site`
-
   - : 只有來自同一[_站點_](/zh-TW/docs/Glossary/Site)的請求可以讀取資源。
 
     > [!WARNING]

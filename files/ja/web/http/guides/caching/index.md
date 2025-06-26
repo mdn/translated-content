@@ -76,7 +76,7 @@ Cache-Control: no-store
 
 なお、CDNによっては、そのCDNに対してのみ有効なヘッダーを自分自身で提供しているものもあります（`Surrogate-Control` など）。現在、これらを標準化するために [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) ヘッダーを定義する作業が進められています。
 
-![キャッシュの種類](type-of-cache.png)
+![キャッシュの種類](/shared-assets/images/diagrams/http/cache/type-of-cache.svg)
 
 ## ヒューリスティックキャッシュ
 
@@ -161,7 +161,7 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 レスポンスを判別する方法は、基本的に URL に基づいています。
 
-![keyed with url](keyed-with-url.png)
+![keyed with url](/shared-assets/images/diagrams/http/cache/keyed-with-url.svg)
 
 しかし、同じ URL を持っていてもレスポンスのコンテンツが常に同じとは限りません。特にコンテンツネゴシエーションが行われた場合、サーバーからのレスポンスは `Accept`、`Accept-Language`、`Accept-Encoding` リクエストヘッダーの値によって変わる可能性があります。
 
@@ -173,7 +173,7 @@ Vary: Accept-Language
 
 これにより、キャッシュはレスポンス URL と `Accept-Language` リクエストヘッダーの合成に基づいて生成されます。
 
-![URL と言語がキーになる例](keyed-with-url-and-language.png)
+![URL と言語がキーになる例](/shared-assets/images/diagrams/http/cache/keyed-with-url-and-language.svg)
 
 また、（例えばレスポンシブデザインのために）ユーザーエージェントに基づいてコンテンツの最適化を提供している場合、 `Vary` ヘッダーの値に "`User-Agent`" を含めることができます。しかし、一般的に `User-Agent` リクエストヘッダーには非常に多くのバリエーションがあり、キャッシュが再利用される可能性を大幅に縮小します。そのため、可能であれば `User-Agent` リクエストヘッダーに基づくのではなく、機能検出に基づいて動作を変化させる方法を検討してください。
 
@@ -476,7 +476,7 @@ Cache-Control: max-age=31536000
 
 レスポンスが具体的なユーザーにパーソナライズされていて、折りたたみ時に共有されたくない場合は `private` ディレクティブを追加してください。
 
-![リクエストの折りたたみ](request-collapse.png)
+![リクエストの折りたたみ](/shared-assets/images/diagrams/http/cache/request-collapse.svg)
 
 ## 良くあるキャッシュパターン
 

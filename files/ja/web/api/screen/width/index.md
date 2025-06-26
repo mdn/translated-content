@@ -1,6 +1,9 @@
 ---
-title: Screen.width
+title: "Screen: width プロパティ"
+short-title: width
 slug: Web/API/Screen/width
+l10n:
+  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
 {{APIRef("CSSOM")}}
@@ -14,17 +17,15 @@ slug: Web/API/Screen/width
 ## 例
 
 ```js
-// Crude way to check that the screen is at least 1024x768
+// 画面が 1024x768 以上であることを調べる大雑把な方法
 if (window.screen.width >= 1024 && window.screen.height >= 768) {
-  // Resolution is 1024x768 or above
+  // 解像度が 1024x768 以上
 }
 ```
 
 ## メモ
 
 このプロパティによって与えられた幅のすべてがウィンドウ自体に利用できるとは限らないことに注意してください。他のウィジェットが `window` オブジェクトで使用できない空間を占有している場合は、 `window.screen.width` と `window.screen.availWidth` に違いがあります。 {{DOMxRef("screen.height")}} も参照してください。
-
-Internet Explorer は、画面の幅を報告する際に拡大率の設定を考慮します。拡大率が 100% に設定されている場合のみ、実際の画面の幅を返します。
 
 ## 仕様書
 

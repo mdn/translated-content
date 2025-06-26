@@ -20,9 +20,7 @@ Permissions-Policy: <directive> <allowlist>
 ```
 
 - `<allowlist>`
-
   - : 一个来源列表，在括号中包含的以下一个或多个值，并用空格分隔：
-
     - `*`: 允许在当前文档和所有包含的内容（比如 iframes）中使用本特性。
     - `'self'`: 允许在当前文档中使用本特性，但在包含的内容（比如 iframes）仍使用原值。
     - `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，

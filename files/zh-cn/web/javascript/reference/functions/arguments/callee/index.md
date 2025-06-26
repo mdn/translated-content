@@ -16,7 +16,8 @@ slug: Web/JavaScript/Reference/Functions/arguments/callee
 
 {{js_property_attributes(1, 0, 1)}}
 
-> **备注：** `callee` 是仅存在于具有简单参数的非严格函数（在这种情况下 `arguments` 对象也是[自动同步](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#通过索引赋值)的）的数据属性。否则，它是一个访问器属性，其 getter 和 setter 都会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `callee` 是仅存在于具有简单参数的非严格函数（在这种情况下 `arguments` 对象也是[自动同步](/zh-CN/docs/Web/JavaScript/Reference/Functions/arguments#通过索引赋值)的）的数据属性。否则，它是一个访问器属性，其 getter 和 setter 都会抛出 {{jsxref("TypeError")}}。
 
 ## 描述
 

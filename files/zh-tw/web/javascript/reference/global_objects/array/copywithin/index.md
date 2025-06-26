@@ -2,7 +2,7 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 8166ab356cccb30af5e0ad912815d19100249e17
 ---
 
 {{JSRef}}
@@ -47,7 +47,7 @@ copyWithin(target, start, end)
   - : 要結束複製元素的以零為基底的索引，會[轉換為整數](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#整數轉換)。`copyWithin()` 會複製至 `end` 之前的元素，但不包含 `end`。
     - 負數索引會從陣列末尾開始計算 — 若 `-array.length <= end < 0`，則使用 `end + array.length`。
     - 若 `end < -array.length`，則使用 `0`。
-    - 若 `end >= array.length` 或未提供 `end`，則使用 `array.length`，使其複製至結尾。
+    - 若 `end >= array.length` 或 `end` 未提供或為 `undefined`，則使用 `array.length`，使其複製至結尾。
     - 若 `end` 所對應的位置在 `start` 所對應的位置之前或相同，則不會複製任何內容。
 
 ### 回傳值

@@ -2,7 +2,7 @@
 title: margin-block
 slug: Web/CSS/margin-block
 l10n:
-  sourceCommit: 5e7d1f9ae2cce0cb3f7693dfb8dc6e8d375b2231
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -81,6 +81,8 @@ margin-block: 10px 20px; /* 絶対的な長さ */
 margin-block: 1em 2em; /* テキストの大きさに対する相対値 */
 margin-block: 5% 2%; /* 直近のブロックコンテナーの大きさに対する相対値 */
 margin-block: 10px; /* 先頭と末尾の両方を設定 */
+margin-block: anchor-size(inline);
+margin-block: calc(anchor-size(width) / 4) 1em;
 
 /* キーワード値 */
 margin-block: auto;
@@ -106,7 +108,7 @@ margin-block: unset;
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
