@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#HTTP_無狀態，但並非無會話)。
+**cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#http_無狀態，但並非無會話)。
 
 在本文中，我們將探討 Cookie 的主要用途、解釋使用 Cookie 的最佳實踐，並檢視其隱私和安全方面的影響。
 
@@ -30,7 +30,7 @@ Cookie 主要用於三個目的：
 
 ### 資料儲存
 
-在網路早期，當沒有其他選擇時，Cookie 被用於一般的用戶端資料儲存目的。現在建議使用現代的儲存 API，例如 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）和 [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)。
+在 Web 早期，當沒有其他選擇時，Cookie 被用於一般的用戶端資料儲存目的。現在建議使用現代的儲存 API，例如 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)（`localStorage` 和 `sessionStorage`）和 [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)。
 
 它們是為儲存而設計的，永遠不會將資料傳送到伺服器，並且沒有使用 Cookie 進行儲存的其他缺點：
 
@@ -38,7 +38,7 @@ Cookie 主要用於三個目的：
 - Cookie 會隨著每個請求一起傳送，因此可能會降低效能（例如在緩慢的行動數據連線上），特別是當你設定了很多 Cookie 時。
 
 > [!NOTE]
-> 要查看儲存的 Cookie（以及網頁正在使用的其他儲存），你可以在 Firefox 開發者工具中使用[儲存空間](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，或在 Chrome 開發者工具中使用 [Application 面板](https://developer.chrome.com/docs/devtools/progressive-web-apps)。
+> 要查看儲存的 Cookie（以及網頁正在使用的其他儲存），你可以在 Firefox 開發者工具中使用[儲存空間檢測器](https://firefox-source-docs.mozilla.org/devtools-user/storage_inspector/index.html)，或在 Chrome 開發者工具中使用[應用程式面板](https://developer.chrome.com/docs/devtools/progressive-web-apps)。
 
 ## 建立、移除與更新 Cookie
 
@@ -86,7 +86,8 @@ Cookie: yummy_cookie=chocolate; tasty_cookie=strawberry
   Set-Cookie: id=a3fWa; Max-Age=2592000
   ```
 
-  > **備註：** `Expires` 的可用時間比 `Max-Age` 長，但 `Max-Age` 較不易出錯，並且在兩者都設定時具有優先權。這背後的理由是，當你設定 `Expires` 的日期和時間時，它們是相對於設定 Cookie 的用戶端。如果伺服器的時間設定不同，可能會導致錯誤。
+  > [!NOTE]
+  > `Expires` 的可用時間比 `Max-Age` 長，但 `Max-Age` 較不易出錯，並且在兩者都設定時具有優先權。這背後的理由是，當你設定 `Expires` 的日期和時間時，它們是相對於設定 Cookie 的用戶端。如果伺服器的時間設定不同，可能會導致錯誤。
 
 - _會話性_ Cookie——沒有 `Max-Age` 或 `Expires` 屬性的 Cookie——會在目前會話結束時被刪除。瀏覽器定義了「目前會話」何時結束，有些瀏覽器在重新啟動時會使用*會話還原*。這可能導致會話性 Cookie 無限期地持續存在。
 
@@ -147,7 +148,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 - 帶有 `HttpOnly` 屬性的 Cookie 不能被 JavaScript 存取，例如使用 {{domxref("Document.cookie")}}；它只能在到達伺服器時被存取。例如，持久化使用者會話的 Cookie 應該設定 `HttpOnly` 屬性——讓它們對 JavaScript 可用會非常不安全。這項預防措施有助於減輕跨網站指令碼攻擊（[XSS](/zh-TW/docs/Web/Security/Attacks/XSS)）。
 
 > [!NOTE]
-> 根據應用程式的不同，你可能希望使用一個由伺服器查詢的不透明識別碼，而不是直接在 Cookie 中儲存敏感訊息，或者研究替代的身份驗證／機密性機制，例如 [JSON Web Tokens](https://jwt.io/)。
+> 根據應用程式的不同，你可能希望使用一個由伺服器查詢的不透明識別碼，而不是直接在 Cookie 中儲存敏感訊息，或者研究替代的身份驗證／機密性機制，例如 [JSON Web Token](https://jwt.io/)。
 
 ### 定義 Cookie 的傳送位置
 
@@ -168,19 +169,18 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   ```
 
   `%x2F`（「/」）字元被視為目錄分隔符，子目錄也會匹配。例如，如果你設定 `Path=/docs`，這些請求路徑會匹配：
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   但這些請求路徑不會：
-
   - `/`
   - `/docsets`
   - `/fr/docs`
 
-  > **備註：** `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#安全性)從不同路徑未經授權地讀取 Cookie。
+  > [!NOTE]
+  > `path` 屬性讓你根據網站的不同部分來控制瀏覽器傳送哪些 Cookie。它不是作為安全措施，並且[不能防止](/zh-TW/docs/Web/API/Document/cookie#安全性)從不同路徑未經授權地讀取 Cookie。
 
 ### 使用 `SameSite` 控制第三方 Cookie
 
