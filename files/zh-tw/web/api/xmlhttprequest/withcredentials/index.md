@@ -14,12 +14,17 @@ l10n:
 > [!NOTE]
 > 這絕不會影響同源請求。
 
+<<<<<<< api-6
 > [NOTE!]
 > 來自不同網域的 `XMLHttpRequest` 回應，無論 `Access-Control-` 標頭值為何，*不能*為其自己的網域設定 Cookie 值，除非在發出請求前將 `withCredentials` 設定為 `true`。
 
 ## 值
 
 一個布林。
+=======
+> [!NOTE]
+> `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
+>>>>>>> main
 
 ## 範例
 

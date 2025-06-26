@@ -17,7 +17,6 @@ l10n:
 
 - <https://www.w3.org/TR/CSP/#directives-navigation>
 - 其他类型的指令：
-
   - {{Glossary("Fetch directive", "Fetch 指令")}}
   - {{Glossary("Document directive", "文档指令")}}
   - {{Glossary("Reporting directive", "报告指令")}}

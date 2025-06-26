@@ -36,7 +36,6 @@ Consulte la sección [Obtención de una hoja de estilo](#obtención_de_una_hoja_
 _Hereda las propiedades de su padre, {{domxref("StyleSheet")}}._
 
 - {{domxref("CSSStyleSheet.cssRules")}} {{ReadOnlyInline}}
-
   - : Devuelve un {{domxref("CSSRuleList")}} activo que mantiene una lista actualizada de los objetos {{domxref("CSSRuleList")}} que componen la hoja de estilo.
 
     > [!NOTE]
@@ -70,7 +69,6 @@ _Estas propiedades son propiedades heredadas introducidas por Microsoft; estos s
 _Estos métodos son métodos heredados introducidos por Microsoft; estos se mantienen para la compatibilidad con los sitios existentes._
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}} {{Deprecated_Inline}}
-
   - : Agrega una nueva regla a la hoja de estilo dado el selector al que se aplica el estilo y el bloque de estilo para aplicar a los elementos coincidentes.
 
     Esto difiere de {{domxref("CSSStyleSheet.insertRule", "insertRule()")}}, que toma la representación textual de la regla completa como una sola cadena.

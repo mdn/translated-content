@@ -72,7 +72,6 @@ background-repeat: inherit;
 ### 值
 
 - `<repeat-style>`
-
   - : 单值语法是完整的双值语法的简写：
 
     | **单值**    | **等价于双值**        |

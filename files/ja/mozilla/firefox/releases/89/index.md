@@ -45,7 +45,6 @@ _変更なし。_
 #### 廃止
 
 - 以下のセンサーイベントおよび関連するハンドラーを削除しました (主にほかの主要なブラウザーエンジンとの互換性を向上するため、またプライバシー侵害の懸念に対処するため):
-
   - {{domxref("DeviceProximityEvent")}} および `window.ondeviceproximity` イベントハンドラー ([Firefox バグ 1699707](https://bugzil.la/1699707))。
   - {{domxref("UserProximityEvent")}} および `window.onuserproximity`) イベントハンドラー ([Firefox バグ 1699707](https://bugzil.la/1699707))。
   - `DeviceLightEvent` および `window.ondevicelight` イベントハンドラー ([Firefox バグ 1701824](https://bugzil.la/1701824))。

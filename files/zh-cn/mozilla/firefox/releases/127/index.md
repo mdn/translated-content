@@ -22,7 +22,6 @@ l10n:
 ### JavaScript
 
 - 现已支持以下 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法（[Firefox bug 1868423](https://bugzil.la/1868423)）：
-
   - [`Set.prototype.intersection()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection)——返回一个含有同时存在于当前集合以及给定集合中的元素的新集合。
   - [`Set.prototype.union()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/union)——返回一个含有当前集合以及给定集合中的所有元素的新集合。
   - [`Set.prototype.difference()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/difference)——返回一个含有当前集合中存在而给定集合中不存在的元素的新集合。

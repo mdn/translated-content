@@ -66,7 +66,6 @@ Hay ciertos pasos los cuales pueden llevar a derminar el correcto tipo de valor 
 - Si está usando un servidor de red Apache, simplemente copie esto [sample .htaccess file](/es/Sample_.htaccess_file) en el directorio que contiene los archivos que quiere enviar con los tipos correctos MIME. Si tiene un subdirectorio entero de archivos, sólo ubique el archivo en el directorio principal; No necesita ubicarlo en cada subdirectorio.
 - Si usa Microsoft IIS, vea [este artículo](https://www.microsoft.com/technet/prodtechnol/windows2000serv/technologies/iis/maintain/featusability/mimeiis.mspx) en Microsoft TechNet.
 - Si utiliza un servidor script para generar contenido, puede generalmente agregar una línea cerca del principio de su script. Puede servir contenido otro que HTML desde Perl, PHP, ASP, ó Java — sólo cambie el tipo MIME adecuado.
-
   - Para Perl CGI, debería tener la línea `print "Content-Type: text/html\n\n";` antes que cualquier otras líneas de salida. Si utiliza el módulo CGI, puede utilizar la línea `print $cgi->header('text/html');` en lugar de, donde `$cgi` es su referencia para la instancia CGI.
   - Para PHP, debería tener la línea `header('Content-Type: text/html');` antes que cualquier otras líneas de salida.
   - Para ASP, debería tener la línea `response.ContentType = "text/html";` antes que cualquier otras líneas de salida.

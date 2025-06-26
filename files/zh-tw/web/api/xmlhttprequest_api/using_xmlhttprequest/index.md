@@ -138,7 +138,8 @@ oReq.upload.addEventListener("abort", transferCanceled);
 oReq.open();
 ```
 
-> **備註：** `progress` 事件無法用於 `file:` 通訊協定。
+> [!NOTE]
+> `progress` 事件無法用於 `file:` 通訊協定。
 
 > [!NOTE]
 > 自 Gecko 9.0 開始，接收到每一個資料的區塊（chunk）時，`progress` 事件都會被觸發。包括在 `progress` 事件被觸發前，就已經接收到含有最後一個資料區塊的最後一個封包並且關閉連線的狀況下，在載入此封包時仍會自動觸發 `progress` 事件。這代表我們可以僅關注 `progress` 事件即能夠可靠的監視進度。

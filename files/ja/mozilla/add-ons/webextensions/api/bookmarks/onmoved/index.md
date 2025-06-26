@@ -32,14 +32,11 @@ browser.bookmarks.onMoved.hasListener(listener)
 ### 引数
 
 - `callback`
-
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
-
     - `id`
       - : 移動した要素の ID を表す {{jsxref("string")}} です。
 
     <!---->
-
     - `moveInfo`
       - : 移動に関する詳細を含んだ {{jsxref("object")}} です。
 

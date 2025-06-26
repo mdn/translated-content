@@ -89,16 +89,14 @@ Es hora de estudiar la naturaleza permisiva del código HTML por nosotros mismos
    ```
 
 4. Veamos qué problemas podemos descubrir:
-
    - El elemento {{htmlelement("p")}} y el {{htmlelement("li")}} no tienen etiquetas de cierre. Si comprobamos el resultado, no parece que haya generado un efecto grave en la representación del lenguaje de marcado, porque es fácil deducir que donde un elemento acaba, debería comenzar otro.
    - El primer elemento {{htmlelement("strong")}} no tiene etiqueta de cierre. Este resulta ser un poco más problemático porque no es fácil deducir dónde se supone que termina el elemento. De hecho, el énfasis fuerte se ha aplicado al resto del texto.
    - Esta sección está mal anidada: `<strong>negritas <em>negritas enfatizadas?</strong> ¿qué es esto?</em>`. No es fácil de explicar la forma en que ha sido interpretado, debido al problema anterior.
-   - Al valor del atributo [`href`](/es/docs/Web/HTML/Element/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
+   - Al valor del atributo [`href`](/es/docs/Web/HTML/Reference/Elements/a#href) le faltan las comillas de cierre. Esto parece haber causado el problema más grave: el enlace ha desaparecido totalmente.
 
 5. Ahora veamos lo que el navegador ha mostrado en contraposición al código fuente. Para ello podemos usar las herramientas de desarrollo del navegador. Si no estamos familiarizados con el uso de estas herramientas, echemos un vistazo rápido a [Descubrir las herramientas de desarrollo del navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), y luego continuaremos.
 6. En el inspector de objetos (DOM), puedes comprobar la apariencia de cada elemento: ![El inspector de HTML en Firefox, con el párrafo de nuestro ejemplo resaltado, muestra el texto "¿Qué causa los errores en HTML?" Aquí puede ver que el navegador ha cerrado el elemento de párrafo.](html-inspector.png)
 7. Vamos a explorar nuestro código en detalle con el inspector de objetos DOM para ver cómo el navegador ha arreglado nuestros errores de código HTML (lo hemos hecho con Firefox; otros navegadores modernos deberían conducir al mismo resultado):
-
    - Se han añadido etiquetas de cierre a los párrafos y las líneas de las listas.
    - Al no estar claro el final del elemento `<strong>`, el navegador lo ha aplicado individualmente a todos los bloques de texto siguientes, a cada uno le ha añadido su etiqueta `strong` propia, desde donde está ¡hasta el final del documento!
    - El navegador ha arreglado el anidamiento incorrecto del modo siguiente:

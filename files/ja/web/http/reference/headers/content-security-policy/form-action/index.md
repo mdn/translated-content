@@ -42,9 +42,7 @@ Content-Security-Policy: form-action <source> <source>;
 - `'none'`
   - : フォームの送信は行われません。単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。フォームの送信は、指定されたソース表現のいずれかと URL が一致した場合に行われます。このディレクティブでは、以下のソース表現の値が適用できます。
-
     - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)

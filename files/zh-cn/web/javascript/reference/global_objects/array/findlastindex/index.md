@@ -31,7 +31,6 @@ findLastIndex(callbackFn, thisArg)
 ### 参数
 
 - `callbackFn`
-
   - : 对数组中的每个元素执行的函数。回调必须返回一个[真值](/zh-CN/docs/Glossary/Truthy)，表示已找到匹配的元素，否则返回一个[假值](/zh-CN/docs/Glossary/Falsy)。函数在被调用时会传递以下参数：
     - `element`
       - : 当前遍历到的元素。
