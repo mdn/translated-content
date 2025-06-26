@@ -43,7 +43,8 @@ slug: Web/HTML/Reference/Elements/div
 
 此元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-> **備註：** `align` 屬性已廢棄；請不要再使用。取而代之應該使用 CSS 屬性或技術，例如 [CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 來對頁面上的 `<div>` 元素進行對齊和定位。
+> [!NOTE]
+> `align` 屬性已廢棄；請不要再使用。取而代之應該使用 CSS 屬性或技術，例如 [CSS Grid](/zh-TW/docs/Web/CSS/CSS_grid_layout) 或 [CSS Flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox) 來對頁面上的 `<div>` 元素進行對齊和定位。
 
 ## 使用注意事項
 

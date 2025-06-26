@@ -12,5 +12,4 @@ JavaScript の**厳格モード**は、 JavaScript の制限された変化形�
 1. [厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode)
 2. [厳格モードへの移行](/ja/docs/Web/JavaScript/Reference/Strict_mode)
 3. 関連用語:
-
    1. {{Glossary("Sloppy mode")}}

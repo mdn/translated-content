@@ -11,7 +11,8 @@ l10n:
 
 它反映了 {{HTMLElement("ol")}} 元素的 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#type) 属性。
 
-> **备注：** `type` 可以在 CSS 中使用 {{CSSxRef("list-style-type")}} 属性定义。 `list-style-type` 属性提供更多的值。
+> [!NOTE]
+> `type` 可以在 CSS 中使用 {{CSSxRef("list-style-type")}} 属性定义。 `list-style-type` 属性提供更多的值。
 
 ## 值
 

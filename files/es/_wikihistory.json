@@ -24,12 +24,6 @@
       "atlas7jean"
     ]
   },
-  "Games/Introduction_to_HTML5_Game_Development": {
-    "modified": "2019-08-05T12:49:59.324Z",
-    "contributors": [
-      "WilsonIsAliveClone"
-    ]
-  },
   "Games/Publishing_games": {
     "modified": "2019-03-18T21:22:03.542Z",
     "contributors": [
@@ -2776,13 +2770,13 @@
       "cizquierdof"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Input_types": {
     "modified": "2020-07-16T22:22:11.445Z",
     "contributors": [
       "Enesimus"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls": {
+  "Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls": {
     "modified": "2020-07-16T22:22:12.140Z",
     "contributors": [
       "Enesimus"
@@ -3339,22 +3333,6 @@
       "Loba25",
       "blanchart",
       "welm"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2020-07-16T22:22:32.156Z",
-    "contributors": [
-      "ZKoaLa",
-      "nazhaj",
-      "JuanC_01"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-10-29T15:52:03.444Z",
-    "contributors": [
-      "angeljpa95",
-      "camsa",
-      "laatcode"
     ]
   },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
@@ -5968,6 +5946,14 @@
       "djrm"
     ]
   },
+  "Web/API/HTMLDialogElement/showModal": {
+    "modified": "2019-03-18T20:58:55.311Z",
+    "contributors": [
+      "SphinxKnight",
+      "BubuAnabelas",
+      "Grijander81"
+    ]
+  },
   "Web/API/HTMLDivElement": {
     "modified": "2019-03-23T22:03:41.348Z",
     "contributors": [
@@ -8039,14 +8025,6 @@
       "fscholz",
       "AshfaqHossain",
       "VictorArias"
-    ]
-  },
-  "Web/API/Window/showModalDialog": {
-    "modified": "2019-03-18T20:58:55.311Z",
-    "contributors": [
-      "SphinxKnight",
-      "BubuAnabelas",
-      "Grijander81"
     ]
   },
   "Web/API/Window/statusbar": {
@@ -12021,12 +11999,28 @@
       "anfuca"
     ]
   },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2020-07-16T22:22:32.156Z",
+    "contributors": [
+      "ZKoaLa",
+      "nazhaj",
+      "JuanC_01"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2019-03-23T22:46:06.691Z",
     "contributors": [
       "MrCesar107",
       "antoiba86",
       "vltamara"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-10-29T15:52:03.444Z",
+    "contributors": [
+      "angeljpa95",
+      "camsa",
+      "laatcode"
     ]
   },
   "Web/HTML/Reference": {
@@ -18376,13 +18370,6 @@
       "FrankzWolf"
     ]
   },
-  "Web/SVG/Reference/Element/glyph": {
-    "modified": "2019-03-23T22:53:24.929Z",
-    "contributors": [
-      "Sebastianz",
-      "saeioul"
-    ]
-  },
   "Web/SVG/Reference/Element/rect": {
     "modified": "2019-03-23T23:02:06.920Z",
     "contributors": [
@@ -19067,6 +19054,12 @@
     "modified": "2020-10-15T22:00:20.969Z",
     "contributors": [
       "jvalencia"
+    ]
+  },
+  "conflicting/Games/Tools": {
+    "modified": "2019-08-05T12:49:59.324Z",
+    "contributors": [
+      "WilsonIsAliveClone"
     ]
   },
   "conflicting/Glossary/Doctype": {
@@ -19792,6 +19785,13 @@
     "contributors": [
       "teoli",
       "pekechis"
+    ]
+  },
+  "conflicting/Web/CSS/@font-face": {
+    "modified": "2019-03-23T22:53:24.929Z",
+    "contributors": [
+      "Sebastianz",
+      "saeioul"
     ]
   },
   "conflicting/Web/CSS/@viewport": {

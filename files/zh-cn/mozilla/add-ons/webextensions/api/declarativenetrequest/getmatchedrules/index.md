@@ -20,7 +20,6 @@ let gettingMatchedRules = browser.declarativeNetRequest.getMatchedRules(
 ### 参数
 
 - `filter` {{optional_inline}}
-
   - : 一个用于过滤匹配的规则列表的对象。
     - `minTimeStamp` {{optional_inline}}
       - : `number`。如果指定，则仅匹配在指定时间戳之后的规则。

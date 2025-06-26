@@ -2,7 +2,7 @@
 title: 等価性の比較と同一性
 slug: Web/JavaScript/Guide/Equality_comparisons_and_sameness
 l10n:
-  sourceCommit: 9c402dca732167ee04196c5e1785eaacbf4bb5f6
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
 {{jsSidebar("Intermediate")}}
@@ -187,7 +187,6 @@ function sameValueZero(x, y) {
 すべてを網羅してはいませんが、`-0` と `+0` の区別が発生する可能性がある内蔵メソッドや演算子を以下に示します。コード中ではこれらを考慮して下さい:
 
 - [`- (単項否定演算子)`](/ja/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-
   - : 以下例を考えてみてください。
 
     ```js

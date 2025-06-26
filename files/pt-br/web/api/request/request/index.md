@@ -16,19 +16,14 @@ var myRequest = new Request(input[, init]);
 ### Parâmetros
 
 - _input_
-
   - : Define o recurso que você deseja buscar. Isso pode ser:
-
     - Um {{domxref("USVString")}} contendo o URL direto do recurso que você deseja buscar.
     - Um objeto {{domxref("Request")}}, criando efetivamente uma cópia. Observe as seguintes atualizações comportamentais para reter a segurança e, ao mesmo tempo, tornar o construtor menos propenso a gerar exceções:
-
       - Se esse objeto existir em outra origem para a chamada do construtor, o {{domxref("Request.referrer")}} será removido.
       - Se esse objeto tiver um {{domxref("Request.mode")}} de navegação, o valor do modo será convertido para a mesma origem.
 
 - _init_ {{optional_inline}}
-
   - : Um objeto de opções contendo quaisquer configurações personalizadas que você deseja aplicar à solicitação. As opções possíveis são:
-
     - `method`: O método de request, ex: `GET`, `POST`.
     - `headers`: Quaisquer cabeçalhos que você deseja adicionar à sua solicitação, contidos em um objeto {{domxref("Headers")}} ou em um objeto literal com valores de {{domxref("ByteString")}}.
     - `body`: Qualquer corpo que você deseja adicionar à sua solicitação: isso pode ser um {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}, ou objeto {{domxref("ReadableStream")}}. Observe que uma solicitação usando o método GET ou HEAD não pode ter um corpo.

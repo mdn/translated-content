@@ -296,7 +296,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 ### 通用属性
 
 - 核心属性
-
   - {{SVGAttr("id")}}
   - {{SVGAttr("class")}}
   - {{SVGAttr("style")}}
@@ -307,7 +306,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
   - {{SVGAttr("xml:space")}}
 
 - 条件处理属性
-
   - {{SVGAttr("requiredExtensions")}}
   - {{SVGAttr("requiredFeatures")}}
   - {{SVGAttr("systemLanguage")}}

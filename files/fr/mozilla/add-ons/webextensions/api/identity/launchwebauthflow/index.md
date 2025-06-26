@@ -38,17 +38,12 @@ var authorizing = browser.identity.launchWebAuthFlow(
 ### Paramètres
 
 - `details`
-
   - : `object`. Options pour le flux, contenant les propriétés suivantes :
-
     - `url`
-
       - : `string`. URL fournie par le fournisseur de services OAuth2 pour obtenir un jeton d'accès. Les détails de cette URL doivent figurer dans la documentation du fournisseur de services en question, mais les paramètres d'URL doivent toujours inclure :
-
         - redirect_uri: ceci représente l'URI que votre extension est redirigée lorsque le flux est terminé. Il n'est pas nécessaire pour que le flux fonctionne du côté navigateur s'il correspond à l'URL de redirection générée. Voir [Obtenir l'URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url).
 
     - `interactive` {{optional_inline}}
-
       - : `boolean`. Si omis ou `false`, force le flux à se terminer en silence, sans interaction de l'utilisateur.
 
         Si l'utilisateur est déjà connecté et a déjà accordé l'accès pour l'extension, `launchWebAuthFlow()` peut se terminer en mode silencieux, sans interaction de l'utilisateur. Sinon (si le fournisseur de services a besoin que l'utilisateur se connecte ou autorise l'extension), `launchWebAuthFlow()` invite l'utilisateur, c'est-à-dire que le flux sera interactif.

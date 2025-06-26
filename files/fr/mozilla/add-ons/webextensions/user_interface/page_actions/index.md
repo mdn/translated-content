@@ -16,12 +16,10 @@ Le bouton de la barre d'adresse (ou action de la page) est très semblable au bo
 Les différences sont :
 
 - **L'emplacement du bouton :**
-
   - L'action de la page s'affiche dans la barre d'adresse du navigateur.
   - L'action du navigateur s'affiche en dehors de la barre d'adresse, dans la barre d'outils du navigateur.
 
 - La visibilité du bouton **:**
-
   - L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) des clés `show_matches` et `hide_matches`), et vous appelez [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) et [`pageAction.hide()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) pour l'afficher ou la masquer dans des onglets spécifiques.
   - L'action du navigateur est toujours affichée.
 

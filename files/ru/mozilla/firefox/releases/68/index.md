@@ -83,7 +83,6 @@ slug: Mozilla/Firefox/Releases/68
 ### CSS
 
 - [CSS Scroll Snapping](/ru/docs/Web/CSS/CSS_Scroll_Snap) был обновлён до последней версии спецификации ([Firefox bug 1312163](https://bugzil.la/1312163)) и ([Firefox bug 1544136](https://bugzil.la/1544136)):
-
   - Свойство `scroll-padding` ([Firefox bug 1373832](https://bugzil.la/1373832))
   - Свойство `scroll-margin` ([Firefox bug 1373833](https://bugzil.la/1373833))
   - {{CSSxRef("scroll-snap-align")}} ([Firefox bug 1373835](https://bugzil.la/1373835))

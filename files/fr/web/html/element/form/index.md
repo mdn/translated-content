@@ -131,7 +131,6 @@ Il est possible d'utiliser les pseudo-classes CSS [`:valid`](/fr/docs/Web/CSS/:v
 Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `accept` {{deprecated_inline}}
-
   - : Cet attribut indique quels types de contenus sont acceptés par le serveur. Il peut y en avoir plusieurs, séparés par des virgules.
 
     > [!NOTE]
@@ -141,18 +140,14 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
   - : Encodages de caractères séparés par des espaces que le serveur accepte. Le navigateur les utilise dans l'ordre dans lequel ils sont listés. La valeur par défaut signifie [le même encodage que celui de la page](/fr/docs/Web/HTTP/Headers/Content-Encoding).
     (Dans les versions précédentes de HTML, les codages de caractères pouvaient également être délimités par des virgules).
 - `autocapitalize` {{non-standard_inline}}
-
   - : Cet attribut est un attribut non-standard utilisé sur iOS par Safari Mobile qui contrôle la façon dont la valeur du texte est automatiquement transcrite en majuscules lors de la saisie par l'utilisateur. Si l'attribut `autocapitalize` est défini sur un des descendants du formulaire, il surchargera la valeur de `autocapitalize` utilisée pour le formulaire. Les valeurs non-dépréciées sont disponibles pour iOS 5 et supérieurs. La valeur par défaut est `sentences`. Les valeurs possibles sont:
-
     - `none` : La mise en majuscules est totalement désactivée
     - `sentences` : Les premières lettres des phrases sont automatiquement passées en majuscules.
     - `words` : La première lettre de chaque mot est automatiquement passée en majuscule.
     - `characters` : Tous les caractères sont automatiquement passés en majuscules.
 
 - `autocomplete`
-
   - : Cet attribut énuméré est utilisé pour définir le comportement du navigateur quant à l'autocomplétion des champs. Cet attribut peut être surchargé par chacun des éléments du formulaire. Il peut prendre deux valeurs :
-
     - `off` : Le navigateur ne peut pas compléter automatiquement les entrées. (Les navigateurs ont tendance à ignorer ce point pour les formulaires de connexion suspects ; voir [L'attribut autocomplete et les champs de connexion](/fr/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).)
     - `on` : Le navigateur peut compléter automatiquement les entrées.
 
@@ -168,9 +163,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 - `action`
   - : L'URL qui traite l'envoi du formulaire. Cette valeur peut être remplacée par un attribut [`formaction`](/fr/docs/Web/HTML/Element/button#attr-formaction) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 - `enctype`
-
   - : Lorsque la valeur de l'attribut `method` est `post`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisé pour encoder les données envoyées au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
-
     - `application/x-www-form-urlencoded` : la valeur par défaut si l'attribut n'est pas défini
     - `multipart/form-data` : la valeur utilisée par un élément [`<input>`](/fr/docs/Web/HTML/Element/input) avec l'attribut `type="file"`.
     - `text/plain`, correspondant au [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) éponyme et utilisé à des fins de débogage.
@@ -178,9 +171,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
     Cette valeur peut être remplacée par un attribut [`formenctype`](/fr/docs/Web/HTML/Element/button#attr-formenctype) sur un [`<button>`](/fr/docs/Web/HTML/Element/button), [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit), ou [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image).
 
 - `method`
-
   - : Cet attribut définit la méthode [HTTP](/fr/docs/Web/HTTP) qui sera utilisée pour envoyer les données au serveur. C'est un attribut énuméré qui peut prendre les valeurs suivantes :
-
     - `post` : La méthode [POST](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.5) ; données du formulaire envoyées comme [corps de la requête](/fr/docs/Web/API/Body).
     - `get` : La méthode [GET](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.3) ; données du formulaire annexées à l'URL `action` avec un séparateur `?`. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent).
     - `dialog` : Lorsque le formulaire se trouve à l'intérieur d'un [`<dialog>`](/fr/docs/Web/HTML/Element/dialog), ferme la boîte de dialogue à la soumission.
@@ -190,9 +181,7 @@ Les attributs suivants contrôlent le comportement pendant l'envoi du formulaire
 - `novalidate`
   - : Cet attribut booléen indique si le formulaire doit être validé au moment de sa soumission. S'il n'est pas défini, le formulaire sera validé lors de sa soumission. Il peut être surchargé par l'attribut [`formnovalidate`](/fr/docs/Web/HTML/Element/button#attr-formnovalidate) des éléments [`<button>`](/fr/docs/Web/HTML/Element/button) ou [`<input>`](/fr/docs/Web/HTML/Element/input) appartenant au formulaire.
 - `target`
-
   - : Un nom ou un mot-clé indiquant où afficher la réponse après avoir envoyé le formulaire. Dans HTML 4, c'est le nom, ou le mot-clé, d'une frame. Dans HTML5, c'est le nom, ou le mot-clé, d'un _contexte de navigation_ (onglet, fenêtre, frame). Les mots-clés suivants ont un sens particulier :
-
     - `_self` (par défaut) : Charger dans le même contexte de navigation que le contexte actuel.
     - `_blank`: Chargement dans un nouveau contexte de navigation sans nom.
     - `_parent`: Charge dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, se comporte de la même manière que `_self`.

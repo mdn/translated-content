@@ -81,12 +81,10 @@ section {
 `font`를 단축 속성으로 사용하려면,
 
 - 다음 속성의 값을 포함해야 합니다.
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 다음 속성의 값을 포함할 수 있습니다.
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

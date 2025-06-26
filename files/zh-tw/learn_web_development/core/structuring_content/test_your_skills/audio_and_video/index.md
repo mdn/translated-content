@@ -75,7 +75,8 @@ audio, video {
 
 </details>
 
-> **備註：** [下載此測驗的程式碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed1-download.html)在你自己的編輯器或線上編輯器中運行。
+> [!NOTE]
+> [下載此測驗的程式碼](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed1-download.html)在你自己的編輯器或線上編輯器中運行。
 
 ## 任務 2
 
@@ -132,4 +133,5 @@ audio, video {
 
 </details>
 
-> **備註：** [下載此測驗的程式碼](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html)在你自己的編輯器或線上編輯器中運行。
+> [!NOTE]
+> [下載此測驗的程式碼](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/tasks/media-embed/mediaembed2-download.html)在你自己的編輯器或線上編輯器中運行。

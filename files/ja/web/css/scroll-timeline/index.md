@@ -48,7 +48,6 @@ scroll-timeline: --custom_name_for_timeline;
 ### 値
 
 - `<scroll-timeline-name>`
-
   - : [`scroll-timeline-name`](/ja/docs/Web/CSS/scroll-timeline-name) を参照してください。
 
 - `<scroll-timeline-axis>`

@@ -23,7 +23,6 @@ l10n:
 ### 규칙 지시자
 
 - {{cssxref("@counter-style")}}
-
   - {{cssxref("@counter-style/system","system")}}
   - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
   - {{cssxref("@counter-style/negative", "negative")}}

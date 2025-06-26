@@ -39,7 +39,6 @@ _変更なし。_
 ### JavaScript
 
 - ECMAScript 2015 モジュールを、デフォルトで有効にしました ([Firefox バグ 1438139](https://bugzil.la/1438139))。詳しくは [ES6 In Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/) および [ES modules: A cartoon deep dive](https://hacks.mozilla.org/2018/03/es-modules-a-cartoon-deep-dive/) をご覧ください。または、MDN のリファレンス文書を確認してください。
-
   - [`<script src="main.js" type="module">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-type) および [`<script nomodule src="fallback.js">`](/ja/docs/Web/HTML/Reference/Elements/script#attr-nomodule)
   - [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import) 文と [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export) 文。
 
@@ -141,7 +140,6 @@ _変更なし。_
 - headerURL が省略可能になりました。
 - ブラウザー [テーマ](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) を作成するとき、`headerURL` が指定されていない場合は、ヘッダーテキストに適用されている {{cssxref("text-shadow")}} を削除します ([Firefox バグ 1404688](https://bugzil.la/1404688))。
 - 新たにサポートしたプロパティ:
-
   - **tab_line**
   - **tab_selected**
   - **popup**

@@ -33,9 +33,7 @@ Trailer: header-names
 ## Diretivas
 
 - `header-names`
-
   - : Cabeçalhos HTTP que estarão presentes na parte de reboque das mensagens fragmentadas. Estes campos de cabeçalhos **não** estão permitidos:
-
     - cabeçalhos de enquadramento de mensagem (e.g., {{HTTPHeader("Transfer-Encoding")}} e {{HTTPHeader("Content-Length")}}),
     - Cabeçalhos de roteamento (e.g., {{HTTPHeader("Host")}}),
     - Modificadores de requisição (e.g., controles e condicionais, como {{HTTPHeader("Cache-Control")}}, {{HTTPHeader("Max-Forwards")}}, ou {{HTTPHeader("TE")}}),

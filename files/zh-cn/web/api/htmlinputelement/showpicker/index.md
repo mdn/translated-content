@@ -56,7 +56,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 这个示例展示了如何将这个功能用于 `color` 和 `file` 的 input 选择器。
 
-> **备注：** `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
 
 #### HTML
 

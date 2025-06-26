@@ -15,9 +15,9 @@ En [CSS](/es/docs/Web/CSS), use la {{cssxref ("@ media")}} [at-rule](/es/docs/We
 
 En [HTML](/es/docs/Web/HTML), las consultas de medios se pueden aplicar a varios elementos:
 
-En el atributo {{HTMLElement ("link")}} [`media`](/es/docs/Web/HTML/Element/link#media) del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
-En el atributo {{HTMLElement ("source")}} [`media`](/es/docs/Web/HTML/Element/source#media) del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
-En el atributo {{HTMLElement ("style")}} del elemento [`media`](/es/docs/Web/HTML/Element/style#media), definen los medios a los que se debe aplicar el estilo.
+En el atributo {{HTMLElement ("link")}} [`media`](/es/docs/Web/HTML/Reference/Elements/link#media) del elemento, definen los medios a los que se debe aplicar un recurso vinculado (normalmente CSS).
+En el atributo {{HTMLElement ("source")}} [`media`](/es/docs/Web/HTML/Reference/Elements/source#media) del elemento, definen los medios a los que se debe aplicar esa fuente. (Esto solo es válido dentro de los elementos {{HTMLElement ("picture")}}.)
+En el atributo {{HTMLElement ("style")}} del elemento [`media`](/es/docs/Web/HTML/Reference/Elements/style#media), definen los medios a los que se debe aplicar el estilo.
 
 ### Consultas de medios en JavaScript
 
