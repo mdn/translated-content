@@ -34,7 +34,8 @@ req.send();
 
 透過 `XMLHttpRequest` 發出的請求可以透過兩種方式之一來取得資料：非同步或同步。請求的類型由 {{domxref("XMLHttpRequest.open()")}} 方法上設定的選用 `async` 引數（第三個引數）決定。如果此引數為 `true` 或未指定，則 `XMLHttpRequest` 會以非同步方式處理，否則會以同步方式處理。關於這兩種請求類型的詳細討論和示範，可以在[同步與非同步請求](/zh-TW/docs/Web/API/XMLHttpRequest_API/Synchronous_and_Asynchronous_Requests)頁面中找到。你不能在 Web Worker 之外使用同步請求，因為它會凍結主介面。
 
-> **備註：** `XMLHttpRequest` 建構子不僅限於 XML 文件。它以**「XML」**開頭，是因為在它被建立時，最初用於非同步資料交換的主要格式是 XML。
+> [!NOTE]
+> `XMLHttpRequest` 建構子不僅限於 XML 文件。它以**「XML」**開頭，是因為在它被建立時，最初用於非同步資料交換的主要格式是 XML。
 
 ## 處理回應
 
