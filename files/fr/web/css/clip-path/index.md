@@ -117,13 +117,10 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
-
   - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
-
   - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
-
     - [`inset()`](/fr/docs/Web/CSS/basic-shape/inset)
       - : Définit un rectangle.
     - [`circle()`](/fr/docs/Web/CSS/basic-shape/circle)
@@ -136,9 +133,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
       - : Définit une forme en utilisant une règle de remplissage SVG optionnelle et une définition de chemin SVG.
 
 - `<geometry-box>`
-
   - : Si cette valeur est combinée avec une valeur `<basic-shape>`, elle définira la boîte de référence dans laquelle placer la forme. Si elle est utilisée seule, ce sont les bords de la boîte (ainsi que les éventuels coins arrondis définis avec [`border-radius`](/fr/docs/Web/CSS/border-radius)) qui sont utilisés comme ligne de rognage. Cette composante peut prendre les valeurs suivantes&nbsp;:
-
     - `margin-box`
       - : La [boîte de marge](/fr/docs/Web/CSS/CSS_shapes/From_box_values#margin-box) est utilisée comme boîte de référence.
     - `border-box`

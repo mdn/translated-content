@@ -15,7 +15,6 @@ l10n:
 
 - **[ブラウザーアクション](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)**（Firefox のツールバーに表示させるボタン）を定義
   このボタン用に次のものを用意します。
-
   - "beasts-32.png" というアイコン
   - ボタン押下時に開くポップアップ（HTML / CSS / JavaScript で記述）
 
@@ -85,7 +84,6 @@ cd beastify
 - [`icons`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) は省略可能ですが、設定しておくことをお勧めします。この値は拡張機能のアイコンを指定するものであり、アイコンはアドオンマネージャーに表示されます
 - [`permissions`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) は拡張機能に必要なパーミッションのリストです。ここでは [`activeTab` パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) を要請しています
 - [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) はツールバーのボタンを指定するものです。ここでは 3 つの情報を指定しています
-
   - `default_icon` ではボタンのアイコンを指定します（必須項目）
   - `default_title` ではツールチップの文字列を指定します（省略可）
   - `default_popup` ではユーザーがボタンをクリックした際に表示されるポップアップを指定します。今回はポップアップを表示させたいので、拡張機能に含める HTML ファイルを `defualt_popup` キーで指定しています

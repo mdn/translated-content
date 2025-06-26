@@ -634,4 +634,4 @@ Los atributos IDL pueden [reflejar otros tipos](https://www.whatwg.org/specs/web
 
 ## Ver Tambien
 
-- [Elementos](/es/docs/Web/HTML/Element)
+- [Elementos](/es/docs/Web/HTML/Reference/Elements)

@@ -15,6 +15,5 @@ l10n:
 - [RFC 공식 인터넷 프로토콜 표준](https://www.rfc-editor.org/standards)
 - [HTTP 개요](/ko/docs/Web/HTTP/Overview)
 - 용어사전:
-
   - {{glossary("TCP")}}
   - {{glossary("Packet")}}

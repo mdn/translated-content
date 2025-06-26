@@ -18,7 +18,6 @@ var nodeIterator = document.createNodeIterator(root, whatToShow, filter);
 - `root`
   - : Le noeud racine à partir duquel commencer la traversée de {{domxref("NodeIterator")}}.
 - `whatToShow` {{ optional_inline() }}
-
   - : Est un `unsigned long` (_long non signé_) facultatif représentant un masque de bits créé par la combinaison des constantes de la propriété [`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter). C'est un moyen pratique de filtrage pour certains types de noeuds. Il est par défaut `0xFFFFFFFF` représentant la constante `SHOW_ALL`.
 
     <table class="standard-table">

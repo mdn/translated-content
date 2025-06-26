@@ -38,7 +38,12 @@ Accept-Post: */*
 Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
+<<<<<<< head-4
 > **備註：** `Accept-Post` 標頭指定媒體範圍的方式與 {{HTTPHeader("Accept")}} 相同，只是它沒有透過 `q`（{{Glossary("quality values", "品質值")}}）參數來表示偏好。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
+=======
+> [!NOTE]
+> `Accept-Post` 標頭指定的媒體範圍與 {{HTTPHeader("Accept")}} 相同，只是沒有偏好（即沒有 `q` 參數）。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
+>>>>>>> main
 
 ## 指令
 

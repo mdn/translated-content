@@ -15,15 +15,12 @@ Ces trois opérations sont associées à quatre algorithmes d'égalité (depuis 
 
 - [La comparaison d'égalité abstraite (`==`)](#faible)
 - [La comparaison d'égalité stricte (`===`)](#stricte)
-
   - Utilisée par {{jsxref("Array.indexOf")}} et {{jsxref("Array.lastIndexOf")}} et la sensibilité à la casse
 
 - [_SameValueZero_ (l'égalité de valeurs nulles)](#samevaluezero)
-
   - Utilisée par les constructeurs {{jsxref("TypedArray")}} et {{jsxref("ArrayBuffer")}} et par les opérations associées à {{jsxref("Map")}} et {{jsxref("Set")}}. Depuis ES2016, cet algorithme est également utilisé par {{jsxref("String.includes")}} et {{jsxref("Array.includes")}}
 
 - [_SameValue_ (l'égalité de valeurs)](#samevalue)
-
   - Utilisée partout ailleurs
 
 Selon la comparaison qu'on souhaite effectuer, on choisira une de ces opérations.
@@ -242,7 +239,6 @@ En plus de la façon dont {{jsxref("Object.is")}} traite `NaN`, la spécificité
 Voici une liste (non exhaustive) d'opérateurs et de méthodes natives qui peuvent entraîner l'apparition des valeurs `-0` et `+0` dans le code :
 
 - [`-` (négation unaire)](/fr/docs/Web/JavaScript/Reference/Operators#négation_unaire)
-
   - : Si on prend l'opposé de `0`, on aura, bien entendu, `-0`. Cependant, avec les expressions, cela peut faire que la valeur `-0` se glisse dans les variables sans qu'on s'en rende compte. Par exemple :
 
     ```js

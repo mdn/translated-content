@@ -79,6 +79,5 @@ p.onclick = function (event) {
 
 - [`click`](/ru/docs/Web/API/Element/click_event) event
 - Related event handlers
-
   - {{domxref("GlobalEventHandlers.onauxclick")}}
   - {{domxref("GlobalEventHandlers.ondblclick")}}

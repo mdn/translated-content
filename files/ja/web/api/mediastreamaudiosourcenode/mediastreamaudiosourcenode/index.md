@@ -23,9 +23,7 @@ new MediaStreamAudioSourceNode(context, options)
 - `context`
   - : ノードを関連付ける音声コンテキストを表す {{domxref("AudioContext")}} です。
 - `options`
-
   - : `MediaStreamAudioSourceNode` に持たせるプロパティを定義するオブジェクトです。
-
     - `mediaStream`
       - : 必須のプロパティで、ノードが用いる音声の取得元となる {{domxref("MediaStream")}} を指定します。
 

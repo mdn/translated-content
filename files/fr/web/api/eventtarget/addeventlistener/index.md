@@ -26,9 +26,7 @@ target.addEventListener(type, listener [, useCapture, wantsUntrusted {{Non-stand
 - `listener`
   - : L'objet qui recevra un évènement (c'est-à-dire un objet qui implémente l'interface {{domxref("Event")}}) lorsqu'un évènement du type spécifié se produit. Cet argument doit être un objet implémentant l'interface {{domxref("EventListener")}} ou une [fonction](/fr/docs/Web/JavaScript/Guide/Functions) JavaScript. Voir [Fonction de rappel (<i>callback</i>) pour le gestionnaire d'évènement](#fonction_de_rappel_pour_le_gestionnaire_dévènement) pour plus de détails sur le fonctionnement d'une fonction de rappel.
 - `options` {{optional_inline}}
-
   - : Un objet options spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
-
     - `capture`
       - : Un booléen ({{jsxref("Boolean")}}) indiquant que les évènements de ce type seront distribués au `listener` enregistré avant d'être distribués à tout `EventTarget` située en dessous dans l'arborescence DOM.
     - `once`

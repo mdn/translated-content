@@ -159,9 +159,7 @@ Voici les nouvelles fonctionnalités&nbsp;:
 - [`poster`](/fr/docs/Web/HTML/Element/video#poster)
   - : Cet attribut prend comme valeur l'URL d'une image affichée avant la lecture de la vidéo. Il s'utilise en tant que logo de démarrage ou de publicité.
 - [`preload`](/fr/docs/Web/HTML/Element/video#preload)
-
   - : Cet attribut s'utilise pour mettre en tampon les gros fichiers. Il peut prendre 3 valeurs&nbsp;:
-
     - `"none"`&nbsp;: ne pas mettre le fichier dans un tampon
     - `"auto"`&nbsp;: mettre le fichier média dans un tampon
     - `"metadata"`&nbsp;: ne mettre que les métadonnées dans le tampon

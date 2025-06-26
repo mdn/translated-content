@@ -37,16 +37,13 @@ li li {
 此元素包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `compact` {{Deprecated_inline}}
-
   - : 此布林屬性提示應以緊湊樣式呈現清單。此屬性的解釋取決於{{glossary("user agent")}}，並且並非所有瀏覽器都支援。
 
     > [!WARNING]
     > 請勿使用此屬性，因為它已被棄用：請改用 [CSS](/zh-TW/docs/Web/CSS)。要達到與 `compact` 屬性類似的效果，可以使用具有值 `80%` 的 CSS 屬性{{cssxref("line-height")}}。
 
 - `type` {{Deprecated_inline}}
-
   - : 此屬性設置清單的項目符號樣式。在HTML3.2和HTML 4.0/4.01的過渡版本中定義的值有：
-
     - `circle`
     - `disc`
     - `square`
@@ -210,7 +207,6 @@ li li {
 
 - 其他與清單相關的HTML元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}}、{{HTMLElement("menu")}}
 - 可能對樣式化 `<ul>` 元素特別有用的 CSS 屬性：
-
   - {{CSSxRef("list-style")}} 屬性，選擇序數的顯示方式。
   - [CSS 計數器](/zh-TW/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，處理複雜的巢狀清單。
   - {{CSSxRef("line-height")}} 屬性，模擬已棄用的 [`compact`](#compact) 屬性。

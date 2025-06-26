@@ -89,7 +89,6 @@ animation:
 - {{cssxref("&lt;time&gt;")}} 값이 0개, 1개 또는 2개 존재
 
 - 다음 값이 0개 또는 1개 존재
-
   - {{cssxref("animation", "&lt;single-easing-function&gt;", "#single-easing-function")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#single-animation-iteration-count")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#single-animation-direction")}}

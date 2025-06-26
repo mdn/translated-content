@@ -30,22 +30,18 @@ Todos os microformatos consistem de uma raíz e uma coleção de propriedades. A
 Todas os nomes de classes de microformatos utilizam prefixos. Os prefixos são Os prefixos são **independentes da sintaxe dos vocabulários**, os quais são desenvolvidos separadamente.
 
 - **"h-\*" para nome de classes raíz**, p.ex "h-card", "h-entry", "h-feed", e várias outras. Essas classes de alto nível normalmente indicam um tipo e o vocabulário esperado de propriedades correspondente. Por exemplo:
-
   - [h-card](http://microformats.org/wiki/h-card) descreve uma pessoa ou uma organização.
   - [h-entry](http://microformats.org/wiki/h-entry) descreve conteúdo on-line em série ou com data marcada como uma postagem de blog.
   - [h-feed](http://microformats.org/wiki/h-feed) descreve um fluxo de dados ou um feed de postagens.
   - Você pode encontrar vários outros You can find many more [vocabulários na wiki de microformatos2.](http://microformats.org/wiki/microformats2#v2_vocabularies)
 
 - **"p-\*" para propriedades de texto simples,** p.ex "p-name", "p-summary"
-
   - Análise de texto simples, texto de elemento em geral. Em certos elementos HTML, use atributos especiais primeiro, por exemplo img / alt, abbr / título.
 
 - **"u-\*" para propriedades URL**, p.ex "u-url", "u-photo", "u-logo"
-
   - Análise especial necessária: prefer a/href, img/src, object/data etc. atributos sobre o conteúdo do elemento.
 
 - **"dt-\*" para propriedades de data e hora**, p.ex "dt-start", "dt-end", "dt-bday"
-
   - Análise especial necessária: [value-class-pattern](http://microformats.org/wiki/value-class-pattern) and separate date time value parsing for readability.
 
 - **"e-\*" para propriedades da árvore de elementos** em que toda a hierarquia de elementos contidos é o valor, p.ex "e-content". O prefixo "e-" também pode ser lembrado mnemonicamente como "árvore de elementos", "marcação incorporada", ou "marcação encapsulada".

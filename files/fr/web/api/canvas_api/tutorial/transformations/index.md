@@ -218,7 +218,6 @@ draw();
 Enfin, les méthodes de transformation suivantes appliquent des modifications directement à la matrice de transformation.
 
 - {{domxref("CanvasRenderingContext2D.transform", "transform(a, b, c, d, e, f)")}}
-
   - : Multiplie la matrice de transformation actuelle avec la matrice décrite par ses arguments. La matrice de transformation est décrite par :
 
     <math><semantics><mrow><mo>[</mo><mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi></mtd><mtd><mi>c</mi></mtd><mtd><mi>e</mi></mtd></mtr><mtr><mtd><mi>b</mi></mtd><mtd><mi>d</mi></mtd><mtd><mi>f</mi></mtd></mtr><mtr><mtd><mn>0</mn></mtd><mtd><mn>0</mn></mtd><mtd><mn>1</mn></mtd></mtr></mtable><mo>]</mo></mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d &#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>

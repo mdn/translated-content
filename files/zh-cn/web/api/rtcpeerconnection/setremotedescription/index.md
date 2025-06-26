@@ -28,9 +28,7 @@ _这个方法没有返回值。_
 - _successCallback_
   - : Is a `Function` without parameter which will be called when the description has been successfully set. At this point, one can send the offer to a remote server that can forward it to a remote client
 - _errorCallback_
-
   - : Is a `RTCPeerConnectionErrorCallback` which will be called if the description can't be set. It takes the following parameter:
-
     - _errorInformation_ which is a {{domxref("DOMString")}} describing the reason why the description has not been set.
 
 ## Example

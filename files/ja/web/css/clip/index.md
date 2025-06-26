@@ -29,7 +29,6 @@ clip: unset;
 ### 値
 
 - {{cssxref("shape")}}
-
   - : `rect(<top>, <right>, <bottom>, <left>)` 形式の矩形の {{cssxref("&lt;shape&gt;")}} です。 `<top>` と `<bottom>` は、ボックス境界の上辺からのオフセットを表します。`<right>` と `<left>` は、ボックス境界の左辺からのオフセットを表します。これがボックスの中身となります。
 
     `<top>`、`<right>`、`<bottom>`、`<left>` の値は {{cssxref("&lt;length&gt;")}} または `auto` のいずれかです。`auto` が指定されると、その辺の*内部のボックス境界*で切り取られます。

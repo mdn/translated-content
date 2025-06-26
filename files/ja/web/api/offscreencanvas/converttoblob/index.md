@@ -26,7 +26,6 @@ convertToBlob(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
     - `type`
       - : 画像形式を示す文字列。
@@ -44,15 +43,12 @@ convertToBlob(options)
 プロミスは、次の例外を除き、拒否される場合があります。
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : `OffscreenCanvas` は切り離されていません。言い換えれば、それはまだ DOM に関連付けられており、現在のワーカーには関連付けられていません。
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : キャンバスのコンテキストモードは 2d で、このビットマップはオリジンがクリーンではありません。少なくともそのコンテンツの一部は、文書自体が読み込まれたサイト以外のサイトから読み込まれた、あるいは読み込まれた可能性があるからです。
 
 - `IndexSizeError` {{domxref("DOMException")}}
-
   - : キャンバスビットマップにはピクセルは存在しません （水平方向および垂直方向の寸法はいずれも 0 です）。
 
 - `EncodingError` {{domxref("DOMException")}}

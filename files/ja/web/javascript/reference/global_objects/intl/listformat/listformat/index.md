@@ -45,9 +45,7 @@ new Intl.ListFormat(locales, options);
 - `locales` {{optional_inline}}
   - : BCP 47 言語タグの文字列、または、そのような文字列の配列です。 `locales` 引数の一般的な形式と解釈は、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 以下のプロパティの一部またはすべてを持つオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。取りうる値は以下の通りです。
         - "`best fit`" （既定値）

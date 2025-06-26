@@ -15,6 +15,5 @@ l10n:
 - JavaScript 类型：[`Number`](/zh-CN/docs/Web/JavaScript/Guide/Data_structures#number_类型)
 - JavaScript 全局对象 {{jsxref("Number")}}
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("JavaScript")}}
   - {{Glossary("Primitive")}}
