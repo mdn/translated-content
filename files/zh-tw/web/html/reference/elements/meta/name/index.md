@@ -55,7 +55,7 @@ CSS 裝置適應性規範定義了以下後設資料名稱：
 
 ### WHATWG MetaExtensions 維基中定義的 meta 名稱
 
-[WHATWG Wiki MetaExtensions 頁面](https://wiki.whatwg.org/wiki/MetaExtensions) 包含大量非標準的後設資料名稱。其中包含的一些名稱在實務中相當常用，特別是以下幾個：
+[WHATWG Wiki MetaExtensions 頁面](https://wiki.whatwg.org/wiki/MetaExtensions)包含大量非標準的後設資料名稱。其中包含的一些名稱在實務中相當常用，特別是以下幾個：
 
 - `creator`
   - : 文件建立者的名稱，例如組織或機構。如果有多個建立者，應使用多個 {{HTMLElement("meta")}} 元素。
