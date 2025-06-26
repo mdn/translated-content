@@ -27,7 +27,6 @@ h2 {
 继承自 _{{domxref("StyleSheet")}}。_
 
 - {{domxref("CSSStyleSheet.cssRules", "cssRules")}} {{ReadOnlyInline}}
-
   - : 返回一个实时的 {{domxref("CSSRuleList")}}，其中包含组成样式表的 {{domxref("CSSRule")}} 对象的一个最新列表。
 
     这一般用于获取单条规则，如下：
@@ -62,7 +61,6 @@ _这些遗留属性是很久以前由微软提出的，不应该再使用，但�
 _这些遗留方法是很久以前由微软提出的，应尽量避免使用，但这些方法短期内不会被移除。_
 
 - {{domxref("CSSStyleSheet.addRule", "addRule()")}}
-
   - : 向样式表添加一条新规则，需要提供应用样式的选择器和应用在匹配元素上的样式块。
 
     这和 {{domxref("CSSStyleSheet.insertRule", "insertRule()")}} 不同，后者只是简单地将整个传入的规则文本当作一个字符串。

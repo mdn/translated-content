@@ -417,7 +417,6 @@ input:focus:invalid {
 
 - `validationMessage`: コントロールが満たさない検証制約を記述したローカライズされたメッセージを返します（存在する場合）。コントロールが制約検証の候補でない場合（`willValidate`が `false`）、または要素の値が制約を満たしている場合（有効である場合）には、空の文字列を返します。
 - `validity`: 要素の検証状態を説明する `ValidityState` オブジェクトです。取りうる検証状態の詳細は {{domxref("ValidityState")}}のリファレンスを参照してください。下記はよく使われるものを少し、一覧にしています。
-
   - {{domxref("ValidityState.patternMismatch", "patternMismatch")}}: 値が指定した [`pattern`](/ja/docs/Web/HTML/Reference/Elements/input#pattern) に一致しない場合 `true` を、一致する場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
   - {{domxref("ValidityState.tooLong", "tooLong")}}: [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/input#maxlength) 属性で指定した最大値より値が長い場合 `true` を、同じ長さ以下の場合 `false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
   - {{domxref("ValidityState.tooShort", "tooShort")}}: [`minlength`](/ja/docs/Web/HTML/Reference/Elements/input#minlength) 属性で指定した最小値より値が短い場合 `true` を、同じ長さ以上の場合`false` を返す。true なら、要素は {{cssxref(":invalid")}} CSS 擬似クラスに一致する。
@@ -685,11 +684,9 @@ function showError() {
     エラー状態の入力欄を強調しますか？
     エラーメッセージを表示しますか？
 - ユーザーが不正なデータを修正することをどのように支援できるか
-
   - : ユーザーの不満を軽減するためには、ユーザーに入力内容の修正を案内するために、できるだけ多くの役立つ情報を提供することがとても重要です。
     明確なエラーメッセージはもちろん、ユーザーが何を求められているか理解できるように前向きの提案をするべきです。
     フォーム検証のユーザーインターフェイスの要件について深く知りたいのであれば、ぜひ読むべきである有用な記事があります（英語）。
-
     - [Help users enter the right data in forms](https://web.dev/Learn_web_development/Extensions/Forms/validation/)
     - [Validating input](https://www.w3.org/WAI/tutorials/forms/validation/)
     - [How to Report Errors in Forms: 10 Design Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)

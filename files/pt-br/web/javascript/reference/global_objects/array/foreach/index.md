@@ -28,9 +28,7 @@ arr.forEach(callback(currentValue [, index [, array]])[, thisArg]);
 ### Parâmetros
 
 - `callback`
-
   - : Função para executar em cada elemento, recebendo três argumentos:
-
     - `currentValue`
       - : O valor atual do elemento sendo processado no array.
     - `index` {{optional_inline}}

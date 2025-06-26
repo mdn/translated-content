@@ -244,7 +244,8 @@ var intervalID = window.setInterval(showQuote, 10000);
 > [!NOTE]
 > 你可以查看完成的範例 [aria-live.html](https://github.com/mdn/learning-area/blob/master/accessibility/aria/aria-live.html) ([看實際頁面](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html))。
 
-> **備註：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
+> [!NOTE]
+> [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 屬性在即時區塊更新時對於控制讀出甚麼內容也相當有用，例如你可以僅獲得讀出新增或移除的內容。
 
 ### 增強鍵盤無障礙
 

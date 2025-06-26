@@ -91,9 +91,7 @@ caption {
 以下の属性はまだブラウザーが実装していますが、すでに HTML 仕様に含まれていませんのでまったく動作しない、あるいは期待どおりに動作しない可能性があります。使用は避けてください。
 
 - `align` {{deprecated_inline}}
-
   - : 文字列で、行の各セルの中身について、水平方向の配置方法を指定します。これは行内の全セルで個別に `align` を使用することに対する一括指定です。以下の値を指定可能です。
-
     - `left`
       - : 各セルの中身を左側に揃えます。
     - `center`
@@ -111,29 +109,24 @@ caption {
     > 行内のセルで配置方法を指定するには、廃止された `align` 属性の代わりに CSS の {{CSSxRef("text-align")}} プロパティで `left`, `center`, `right`, `justify` を指定してください。文字ベースの配置方法を適用するには、 CSS の {{CSSxRef("text-align")}} プロパティに揃える文字 (`"."` や `","` など) を設定してください。
 
 - `bgcolor` {{deprecated_inline}}
-
   - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
     > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、CSS の {{CSSxRef("background-color")}} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
-
   - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](#align) 属性が `char` ではない場合は、この属性は無視されます。
 
     > [!NOTE]
     > この属性は廃止され、かつほとんど実装されていませんでした。 [`char`](#char) と同様の効果を得るには、 CSS の {{CSSxRef("text-align")}} プロパティの値として `char` の値を使用します（例えば `text-align: "."`）。
 
 - `charoff` {{deprecated_inline}}
-
   - : 文字列で、 `char` 属性で指定した揃え文字から行のデータをオフセットする文字数を示します。例えば通貨単位の 100 分の 1 の値を使用する通貨 (例えばドルであり、100 セントに分割されます) の金額を表示するときは、一般的に値 2 を指定するでしょう。 `char` に `"."` を設定することと組み合わせると、列内の値が小数点できれいに揃い、セントの数値が小数点の右側へ適切に表示されます。
 
     > [!NOTE]
     > この属性は廃止されただけでなく、ほとんど実装されていませんでした。
 
 - `valign` {{deprecated_inline}}
-
   - : 文字列で、行の各セルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
-
     - `baseline`
       - : 異なるフォントやフォントサイズの文字列を、その行で使用されているフォントの[ベースライン](https://en.wikipedia.org/wiki/Baseline)に沿って整列させることによって処理します。もし行の全ての文字が同じサイズであれば、効果は `bottom` と同じになります。
     - `bottom`
@@ -644,5 +637,4 @@ tbody > tr > td:last-of-type {
 - [学習エリア: HTML の表](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics) `<tr>` を含む、表の使用について説明します。
 - {{DOMxRef("HTMLTableRowElement")}}: `<tr>` が準拠するインターフェイスです。
 - 他の表関連要素:
-
   - {{HTMLElement("table")}}, {{HTMLElement("thead")}}, {{HTMLElement("tbody")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("td")}}, {{HTMLElement("th")}}, {{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}

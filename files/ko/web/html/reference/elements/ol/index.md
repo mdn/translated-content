@@ -90,9 +90,7 @@ li {
 - `start`
   - : 항목을 셀 때 시작할 수. `type`이 로마 숫자나 영어 문자인 경우에도 아라비아 숫자로 나타낸 정수(1, 2, 3...)만 가능합니다. 그러므로 영어 문자 "d"나 로마 숫자 "iv"부터 세려고 한다면 `start="4"`를 사용하세요.
 - `type`
-
   - : 항목을 셀 때 사용할 카운터 유형.
-
     - `'a'`는 소문자 알파벳,
     - `'A'`는 대문자 알파벳,
     - `'i'`는 소문자 로마 숫자,
@@ -212,7 +210,6 @@ li {
 
 - 리스트 관련 다른 요소: {{HTMLElement("ul")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - `<ol>` 요소와 유용하게 사용할 수 있는 CSS 속성
-
   - 서수를 표현할 방식을 지정하는 {{cssxref("list-style")}} 속성.
   - 복잡한 중첩 목록을 처리하기 위한 [CSS 카운터](/ko/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - 더 이상 사용하지 않는 `compact` 특성을 대체할 수 있는 {{cssxref("line-height")}}

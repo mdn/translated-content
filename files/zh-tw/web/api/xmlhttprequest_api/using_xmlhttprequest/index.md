@@ -2,7 +2,7 @@
 title: 使用 XMLHttpRequest
 slug: Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{DefaultAPISidebar("XMLHttpRequest API")}}

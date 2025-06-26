@@ -17,5 +17,4 @@ l10n:
 - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)
 - [Service Worker API](/zh-CN/docs/Web/API/Service_Worker_API)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Thread", "线程")}}

@@ -95,9 +95,9 @@ console.log(inventory.findLast(isNotEnough));
 // { name: "fish", quantity: 1 }
 ```
 
-#### アロー関数と分割代入の使用
+#### アロー関数と構造分解の使用
 
-先の例は、アロー関数と[オブジェクトの分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの分割代入)を使用して書くことができるかもしれません。
+先の例は、アロー関数と[オブジェクトの構造分解](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#オブジェクトの構造分解)を使用して書くことができるかもしれません。
 
 ```js
 const inventory = [

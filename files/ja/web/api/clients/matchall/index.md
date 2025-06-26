@@ -1,11 +1,12 @@
 ---
 title: "Clients: matchAll() メソッド"
+short-title: matchAll()
 slug: Web/API/Clients/matchAll
 l10n:
-  sourceCommit: d76defab4ca13261e9de81ae1df125345f847b0a
+  sourceCommit: 2ef36a6d6f380e79c88bc3a80033e1d3c4629994
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
 **`matchAll()`** は {{domxref("Clients")}} インターフェイスのメソッドで、サービスワーカークライアント（{{domxref("Client")}}）オブジェクトのリストの {{jsxref("Promise")}} を返します。 関連するサービスワーカーのオリジンと同じオリジンを持つすべてのサービスワーカークライアントを返すには、`options` 引数を含めます。 オプションが含まれていなかった場合、このメソッドは、サービスワーカーによって制御されるサービスワーカークライアントのみを返します。
 
@@ -19,9 +20,7 @@ matchAll(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 照合操作のオプションを設定できるオプションオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `includeUncontrolled`
       - : 論理値です。`true` に設定すると、照合操作は、現在のサービスワーカーと同じオリジンを共有するすべてのクライアントを返します。 それ以外の場合は、現在のサービスワーカーによって制御されているサービスワーカークライアントのみを返します。 既定値は `false` です。
     - `type`

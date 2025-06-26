@@ -5,7 +5,7 @@ slug: Web/CSS/border-style
 
 {{CSSRef}}
 
-La propiedad **`border-style`** [CSS](/es/docs/Web/CSS) es una [shorthand property](/es/docs/Web/CSS/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
+La propiedad **`border-style`** [CSS](/es/docs/Web/CSS) es una [shorthand property](/es/docs/Web/CSS/CSS_cascade/Shorthand_properties) (Propiedad abreviada) que establece el estilo de línea para los cuatro lados del borde de un elemento.
 
 {{InteractiveExample("CSS Demo: border-style")}}
 
@@ -98,7 +98,6 @@ Cada valor es una palabra clave elegida de la siguiente lista.
 ### Values
 
 - `<br-style>`
-
   - : Describe el estilo del borde. Puede tener los siguientes valores:
 
     | `none`   |     | Like the `hidden` keyword, displays no border. Unless a {{cssxref("background-image")}} is set, the calculated value of {{ cssxref("border-top-width") }} will be `0`, even if the specified value is something else. In the case of table cell and border collapsing, the `none` value has the _lowest_ priority: if any other conflicting border is set, it will be displayed.   |

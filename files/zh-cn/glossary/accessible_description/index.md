@@ -26,7 +26,6 @@ l10n:
 2. [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) 属性。
 
 3. 语言专有的特性可能也会参与到描述的计算中，如果这一特性尚未用于定义{{glossary("accessible name", "无障碍名称")}}。例如：
-
    - {{htmlelement("summary")}} 由其所嵌套的 {{htmlelement("details")}} 的内容描述。
    - {{htmlelement("input")}} 按钮（带有 `button`、`submit` 或 `reset` 类型属性）由其 `value` 属性的值描述。
    - 在 SVG 中，如果存在 [`<desc>`](/zh-CN/docs/Web/SVG/Reference/Element/desc) 元素，则由其内容描述；否则如果其后代文本容器元素（即 [`<text>`](/zh-CN/docs/Web/SVG/Reference/Element/text)）中的文本尚未被用于{{glossary("accessible name", "无障碍名称")}}，则由这些文本描述。

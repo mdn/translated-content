@@ -49,7 +49,6 @@ La [règle @](/fr/docs/Web/CSS/At-rule) [CSS](/fr/docs/Web/CSS) **`@font-face`**
 - [`size-adjust`](/fr/docs/Web/CSS/@font-face/size-adjust)
   - : Définit un multiplicateur pour les contours des glyphes et les métriques associées à cette police. Cela permet de simplifier l'harmonisation de différentes polices lorsqu'elles sont affichées avec le même corps.
 - [`src`](/fr/docs/Web/CSS/@font-face/src)
-
   - : Indique les ressources à utiliser pour la police. La valeur est une liste de valeurs indiquant les ressources à tenter les unes après les autres. Chaque ressource est indiquée avec `url()` ou `local()`. C'est la première ressource de la liste qui est chargée correctement qui est utilisée. Les éléments situés après sont ignorés. Si plusieurs descripteurs `src` sont définis, seule la dernière règle déclarée capable de charger une ressource est appliquée.
 
     > [!NOTE]

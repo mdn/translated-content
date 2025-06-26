@@ -63,7 +63,6 @@ Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez e
 
 1. Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
 2. Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie [«&nbsp;Apprentissage&nbsp;» (<i lang="en">Learning</i>) du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre message doit inclure&nbsp;:
-
    - Un titre explicite, par exemple «&nbsp;Évaluation demandée pour le test de modèle de boîte CSS 1&nbsp;».
    - Des détails sur ce que vous avez déjà tenté, et ce que vous attendez de nous&nbsp;: par exemple, si vous bloquez et avez besoin d'aide, ou si vous souhaitez obtenir une évaluation de votre travail.
    - Un lien vers l'exemple que vous souhaitez voir évalué ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne partageable (comme mentionné dans l'étape 1 au-dessus). C'est une bonne habitude à prendre&nbsp;: il est très difficile d'aider quelqu'un qui rencontre un problème de codage… si vous ne pouvez pas voir leur code&nbsp;!

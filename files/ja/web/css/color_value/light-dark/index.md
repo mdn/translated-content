@@ -40,7 +40,6 @@ color: light-dark(var(--light), var(--dark));
 関数記法: `light-dark(light-color, dark-color)`
 
 - `light-color`
-
   - : {{CSSXref("&lt;color&gt;")}} 値で、明色カラースキーム (light {{CSSXref("color-scheme")}}) で設定するものです。
 
 - `dark-color`

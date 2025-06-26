@@ -34,9 +34,7 @@ var setting = setting.set(
 ### Paramètres
 
 - `details`
-
   - : Un objet qui doit contenir la propriété suivante :
-
     - `value`
       - : `any`. La valeur à laquelle vous souhaitez modifier le paramètre. Son type dépend du réglage particulier.
 

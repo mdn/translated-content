@@ -9,7 +9,8 @@ l10n:
 
 它支持所有属性类型，包括那些无法合理插值的类型，例如字符串和布尔值。对于可以合理插值的属性，通常更推荐使用 {{SVGElement('animate')}}。
 
-> **备注：** `<set>` 元素是非累加性的。{{SVGAttr('additive')}} 和 {{SVGAttr('accumulate')}} 属性不被允许，如果指定了这些属性，将会被忽略。
+> [!NOTE]
+> `<set>` 元素是非累加性的。{{SVGAttr('additive')}} 和 {{SVGAttr('accumulate')}} 属性不被允许，如果指定了这些属性，将会被忽略。
 
 ## 示例
 

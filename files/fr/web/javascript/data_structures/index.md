@@ -22,7 +22,6 @@ toto = true; // toto est désormais un booléen
 L'ensemble des types disponible en JavaScript se compose [_des valeurs primitives_](#les_valeurs_primitives) et [_des objets_](#les_objects).
 
 - [Les valeurs primitives](#les_valeurs_primitives) (des données immuables, représentées au niveau le plus bas du langage)
-
   - [Le type booléen](#le_type_booléen)
   - [Le type nul](#le_type_nul)
   - [Le type indéfini](#le_type_indéfini)
