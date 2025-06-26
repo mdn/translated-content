@@ -58,7 +58,6 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 Firefox 75 で、[Web Animations API](/ja/docs/Web/API/Web_Animations_API) に複数の機能を追加しました:
 
 - ほかの無期限に実行されるアニメーションによって置き換えられたアニメーションを自動的に削除するような、[Implicit to/from keyframes](/ja/docs/Web/API/Web_Animations_API/Keyframe_Formats#implicit_tofrom_keyframes) をサポートしました ([Firefox バグ 1618773](https://bugzil.la/1618773))。これは以下のサポートを含みます:
-
   - [`Animation.commitStyles()`](/ja/docs/Web/API/Animation/commitStyles)
   - [`Animation.onremove`](/ja/docs/Web/API/Animation/remove_event)
   - [`Animation.persist()`](/ja/docs/Web/API/Animation/persist)
@@ -98,7 +97,6 @@ _変更なし。_
 ### API の変更点
 
 - {{WebExtAPIRef("browserSettings")}} に新たな設定を追加しました ([Firefox バグ 1286953](https://bugzil.la/1286953)):
-
   - ズームがサイトごとかタブごとかを制御する {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}。
   - ズームがページ全体に適用されるかテキストのみに適用されるかを制御する {{WebExtAPIRef("browserSettings.zoomFullPage")}}。
 

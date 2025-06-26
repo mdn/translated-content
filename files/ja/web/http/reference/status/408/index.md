@@ -1,14 +1,13 @@
 ---
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
-original_slug: Web/HTTP/Status/408
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
 
-HTTP の **`408 Request Timeout`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウン使用としていることを示します。
+HTTP の **`408 Request Timeout`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがこの未使用のコネクションをシャットダウンしようとしていることを示します。
 サーバーによっては、クライアントから前回のリクエストがなくても、アイドル接続時に `408` が送信されます。
 
 `408` はサーバーがコネクションを待機し続けるのではなく、閉じることを決定することを意味しているため、サーバーはレスポンスで {{HTTPHeader("Connection", "Connection: close")}} ヘッダーフィールドを送信する必要があります。

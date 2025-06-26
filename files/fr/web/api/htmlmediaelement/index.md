@@ -14,7 +14,6 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.audioTracks")}}
   - : est une {{domxref("AudioTrackList")}} qui liste les objets {{domxref("AudioTrack")}} (_pistes audio_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.autoplay")}}
-
   - : est un {{jsxref("Boolean")}} qui reflète l'attribut HTML [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay), indiquant si la lecture doit commencer automatiquement dès que suffisamment de médias sont disponibles pour le faire sans interruption.
 
     > [!NOTE]
@@ -57,7 +56,6 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.mozFragmentEnd")}} {{non-standard_inline}}
   - : est un `double` qui donne accès à l'heure de fin du fragment si l'élément média a un fragment URI pour `currentSrc`, sinon il est égal à la durée du média.
 - {{domxref("HTMLMediaElement.mozFrameBufferLength")}} {{non-standard_inline}} {{deprecated_inline}}
-
   - : est un `unsigned long` qui indique le nombre d'échantillons qui seront renvoyés dans le "framebuffer" de chaque évènement `MozAudioAvailable`. Ce nombre est un total pour tous les canaux, et par défaut est défini par le nombre de canaux \* 1024 (c'est-à-dire, 2 canaux \* 1024 échantillons = total 2048).
 
     La propriété `mozFrameBufferLength` peut être définie à une nouvelle valeur pour une latence plus faible, de plus grandes quantités de données, etc. La taille donnée _doit_ être un nombre compris entre 512 et 16384. L'utilisation d'autres tailles entraîne la levée d'une exception. Le meilleur moment pour définir une nouvelle longueur est après le lancement de l'évènement [loadedmetadata](/fr/docs/Web/API/HTMLMediaElement/loadedmetadata_event), lorsque l'information audio est connue, mais avant que l'audio ait commencé ou que les événements `MozAudioAvailable` aient commencé à se déclencher.
@@ -93,7 +91,6 @@ _Cette interface hérite aussi des propriétés de ses ancêtres_ _{{domxref("HT
 - {{domxref("HTMLMediaElement.textTracks")}}{{readonlyinline}}
   - : Renvoie la liste d'objets {{domxref("TextTrack")}} (_piste de texte_) contenus dans l'élément.
 - {{domxref("HTMLMediaElement.videoTracks")}}{{readonlyinline}}
-
   - : Renvoie la liste d'objets {{domxref("VideoTrack")}} (_pistes vidéo_) contenus dans l'élément.
 
     > [!NOTE]
@@ -174,12 +171,10 @@ Ces méthodes sont obsolètes et ne doivent plus être utilisées, même si un n
 ## Voir aussi
 
 - References
-
   - Les éléments HTML {{HTMLElement("video")}} et {{HTMLElement("audio")}}.
   - Les interfaces {{domxref("HTMLVideoElement")}} et {{domxref("HTMLAudioElement")}}, dérivées de `HTMLMediaElement`.
 
 - Articles
-
   - [Contenu audio et video](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
   - [Formats pris en charge par `audio` et `video`](/fr/docs/Web/Media/Formats)
   - [Web Audio API](/fr/docs/Web/API/Web_Audio_API)

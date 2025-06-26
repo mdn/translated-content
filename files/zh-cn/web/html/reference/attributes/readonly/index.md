@@ -55,7 +55,8 @@ textarea:read-only {
 
 动态修改只读属性值的唯一方法是通过脚本。
 
-> **备注：** `required` 属性不可以在指定了 `readonly` 属性上的 input 控件上使用。
+> [!NOTE]
+> `required` 属性不可以在指定了 `readonly` 属性上的 input 控件上使用。
 
 ### 可用性
 

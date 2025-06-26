@@ -44,7 +44,6 @@ Voici quelques cas d'utilisation (non exhaustifs) pour `<sup>` :
   <sup>2</sup>
 
   .
-
   - Dans le cadre de formules complexes, [MathML](/fr/docs/Web/MathML) peut s'avérer plus pertinent que l'enchaînement d'éléments {{HTMLElement("sub")}} et `<sup>`.
 
 - L'affichage de lettres supérieures pour respecter certaines conventions typographiques (ex. M

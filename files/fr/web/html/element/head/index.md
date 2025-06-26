@@ -95,7 +95,6 @@ La plupart des navigateurs conformes à HTML5 construisent automatiquement l'él
 ## Voir aussi
 
 - Les éléments qui peuvent être utilisés à l'intérieur de l'élément `<head>` :
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

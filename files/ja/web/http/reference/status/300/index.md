@@ -1,9 +1,8 @@
 ---
 title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
-original_slug: Web/HTTP/Status/300
 l10n:
-  sourceCommit: bd4d7bc4176d9f67297e3940ae7163a258f07ef5
+  sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
 {{HTTPSidebar}}
@@ -32,7 +31,7 @@ HTTP の **`300 Multiple Choices`** は[リダイレクトレスポンス](/ja/d
 次の例は、透過的コンテンツネゴシエーションのリクエストとレスポンスのやり取りを示しています。
 Apache サーバーは、[型マップ](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)で定義されたリソースの複数の版を、入力する言語に応じて、英語のコンテンツには `index.html.en`、フランス語のコンテンツには `index.html.fr` というように提供します。
 
-```plain
+```http
 URI: index.html.en
 Content-Language: en
 
@@ -87,7 +86,7 @@ Available variants:
 
 ## 関連情報
 
-- [HTTP リクエストメソッド](/ja/docs/Web/HTTP/Reference/Methods)
+- [HTTP のリダイレクト](/ja/docs/Web/HTTP/Guides/Redirections)
 - [HTTP レスポンスステータスコード](/ja/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("301", "301 Moved Permanently")}}
 - {{HTTPStatus("302", "302 Found")}} 一時リダイレクト

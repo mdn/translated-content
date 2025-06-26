@@ -444,7 +444,6 @@ REPL을 시작하려면 브라우저를 열고 <https://svelte.dev/repl>로 이�
 - 코드 위의 막대를 사용하면 `.svelte` 및 `.js` 파일을 만들고 재배열할 수 있습니다. 폴더 안에 파일을 만들려면 `components/MyComponent.svelte`와 같이 전체 경로 이름을 지정하기만 하면 됩니다. 폴더가 자동으로 생성됩니다.
 - 해당 막대 위에는 REPL의 제목이 있습니다. 그것을 클릭하여 편집하세요.
 - 오른쪽에는 3개의 탭이 있습니다.
-
   - _Result_ 탭에는 앱 출력이 표시되며 하단에 콘솔이 제공됩니다.
   - _JS output_ 탭에서는 Svelte에서 생성된 JavaScript 코드를 검사하고 컴파일러 옵션을 설정할 수 있습니다.
   - _CSS output_ 탭에는 Svelte에서 생성한 CSS가 표시됩니다.

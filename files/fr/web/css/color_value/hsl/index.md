@@ -58,19 +58,15 @@ hsl(teinte, saturation, luminosite, alpha)
 ### Valeurs
 
 - `teinte`
-
   - : Un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc. Ce cercle chromatique pourra vous aider à trouver l'angle associé à une couleur donnée&nbsp;: ![Un cercle chromatique indiquant l'angle de la teinte pour les couleurs primaires (rouge-vert-bleu) et secondaires (jaune-cyan-magenta).](hue-wheel.png)
 
 - `saturation`
-
   - : Un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où `100%` indique une couleur complètement saturée et où `0%` indique une couleur complètement désaturée, c'est-à-dire un niveau de gris.
 
 - `luminosite`
-
   - : Un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)) où `100%` fournit du blanc, où `0%` fournit du noir, et où `50%` fournit une couleur «&nbsp;normale&nbsp;».
 
 - `alpha` {{optional_inline}}
-
   - : `A` (alpha) peut être un nombre (type [`<number>`](/fr/docs/Web/CSS/number)) compris entre `0` et `1`, ou un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `1` correspond à `100%` (opacité complète) et `0` à `0%` (transparence complète).
 
 ## Exemples

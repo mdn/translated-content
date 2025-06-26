@@ -16,9 +16,7 @@ new NDEFMessage(records);
 ### 引数
 
 - `records`
-
   - : 以下のメンバーを持つオブジェクトの配列です。
-
     - `data` {{optional_inline}}
       - : 転送されるデータが入ります。文字列、{{domxref("BufferSource")}}、ネストされたレコードの配列のいずれかです。
     - `encoding` {{optional_inline}}
@@ -30,15 +28,12 @@ new NDEFMessage(records);
     - `mediaType` {{optional_inline}}
       - : 有効な [MIME タイプ](/ja/docs/Web/HTTP/Guides/MIME_types)です。
     - `recordType`
-
       - : `data` に格納されているデータの種類を示す文字列です。以下の値のいずれかでなければなりません。
-
         - `"absolute-url"`
 
           データの絶対 URL です。
 
           `"empty"`
-
           - : 空の {{domxref("NDEFRecord")}} です。
 
         - `"mime"`

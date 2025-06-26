@@ -39,13 +39,10 @@ indexOf(searchString, position)
 ### 引数
 
 - `searchString`
-
   - : 検索する値を表す文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`indexOf()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 
 - `position` {{optional_inline}}
-
   - : このメソッドは、`position`（既定値は `0`）以上の位置で、指定した部分文字列が最初に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列をまったく検索しません。`position` が `0` 未満の場合、このメソッドは `position` が `0` のときと同じように動作します。
-
     - `'hello world hello'.indexOf('o', -5)` は `4` を返します。これは第 2 引数が `0` であるかのように動作し、`o` が `0` 以上の位置で最初に現れるのが `4` だからです。
 
     - `'hello world hello'.indexOf('world', 12)` は `-1` を返します。実際に部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `12` 以上ではないからです。

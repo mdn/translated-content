@@ -342,7 +342,6 @@ input.addEventListener("change", updateImageDisplay);
 - ファイルが選択されて*いた*場合、ループで 1 つずつ、プレビューの `<div>` にそれについての情報を表示します。特筆するべきは次です。
 - 独自の `validFileType()` 関数を使用して、ファイルが正しい形式 (つまり、 `accept` 属性で指定された画像形式) であるかどうかをチェックします。
 - そうであるなら、次のことを行います。
-
   - ファイルの名前とファイルサイズを、前述の `<div>` (`file.name` および `file.size` で取得) 内のリストアイテムに出力します。独自の `returnFileSize()` 関数はファイルサイズを バイト/KB/MB のうち適切な形式で返します (既定でブラウザーは長さを絶対的なバイトで返します)。
   - {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}} を呼び出して、画像のプレビューのサムネイルを生成します。次に、新しい {{htmlelement("img")}} を生成し、その [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) をサムネイルに設定することで、リスト項目にも画像を挿入します。
 

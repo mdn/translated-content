@@ -22,9 +22,7 @@ let gettingPanel = browser.sidebarAction.getPanel(
 ### 参数
 
 - `details`
-
   - : `object`。包含下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。获取特定于给定标签页的侧边栏的面板。
     - `windowId` {{optional_inline}}
