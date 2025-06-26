@@ -7,12 +7,12 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`300 Multiple Choices`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示該請求有多個可能的回應。用戶代理或使用者應該從中選擇一個。
+HTTP **`300 Multiple Choices`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示該請求有多個可能的回應。使用者代理或使用者應該從中選擇一個。
 
 > [!NOTE]
 > 在[代理驅動的內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#代理驅動的內容協商)中，當伺服器有多個資源變體時，用戶端和伺服器會協同決定給定資源的最佳變體。大多數用戶端缺乏自動從回應中選擇的方法，且額外的往返會減慢用戶端與伺服器之間的互動。[伺服器驅動的內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#伺服器驅動的內容協商)更為常見，伺服器會根據請求標頭（{{HTTPHeader("Accept-Language")}}、{{HTTPHeader("Accept")}} 等）為用戶端選擇最合適的資源。
 
-伺服器應在回應中包含內容，其中含有資源後設資料和 URI 的列表，使用者或用戶代理可以從中選擇。內容的格式是實作特定的，但應易於被用戶代理剖析（例如 HTML 或 JSON）。
+伺服器應在回應中包含內容，其中含有資源後設資料和 URI 的列表，使用者或使用者代理可以從中選擇。內容的格式是實作特定的，但應易於被使用者代理剖析（例如 HTML 或 JSON）。
 
 如果伺服器有一個偏好的選項希望用戶端請求，它可以將其包含在 {{HTTPHeader("Location")}} 標頭中。
 
@@ -26,7 +26,7 @@ HTTP **`300 Multiple Choices`** [重新導向回應](/zh-TW/docs/Web/HTTP/Refere
 
 ### 帶有資源列表的 300 回應
 
-以下範例展示了透明內容協商的請求－回應交換過程。一個 Apache 伺服器提供了一個資源的多個變體，這些變體定義在一個[類型對應](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)中；`index.html.en` 是英文版資源，`index.html.fr` 是法文版資源：
+以下範例展示了透明內容協商的—回應交換過程。一個 Apache 伺服器提供了一個資源的多個變體，這些變體定義在一個[類型對應](https://httpd.apache.org/docs/trunk/mod/mod_negotiation.html#typemaps)中；`index.html.en` 是英文版資源，`index.html.fr` 是法文版資源：
 
 ```http
 URI: index.html.en
@@ -36,7 +36,7 @@ URI: index.html.fr
 Content-Language: fr
 ```
 
-`Negotiate: trans` 請求標頭表示用戶端希望使用透明內容協商來選擇資源。由於瀏覽器對此機制的支援不佳，必須改用像 curl 這樣的用戶代理：
+`Negotiate: trans` 請求標頭表示用戶端希望使用透明內容協商來選擇資源。由於瀏覽器對此機制的支援不佳，必須改用像 curl 這樣的使用者代理：
 
 ```bash
  curl -v -H "Negotiate: trans" http://localhost/index
