@@ -2,7 +2,7 @@
 title: Document：forms 屬性
 slug: Web/API/Document/forms
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
@@ -23,35 +23,25 @@ l10n:
 ### 獲取表單資訊
 
 ```html
-<!doctype html>
-<html lang="zh-TW">
-  <head>
-    <title>document.forms 範例</title>
-  </head>
+<form id="robby">
+  <input type="button" value="羅比的表單" />
+</form>
 
-  <body>
-    <form id="robby">
-      <input
-        type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby 的表單" />
-    </form>
+<form id="dave">
+  <input type="button" value="戴夫的表單" />
+</form>
 
-    <form id="dave">
-      <input
-        type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave 的表單" />
-    </form>
+<form id="paul">
+  <input type="button" value="保羅的表單" />
+</form>
+```
 
-    <form id="paul">
-      <input
-        type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul 的表單" />
-    </form>
-  </body>
-</html>
+```js
+document.querySelectorAll("input[type=button]").forEach((button, i) => {
+  button.addEventListener("click", (event) => {
+    console.log(document.forms[i].id);
+  });
+});
 ```
 
 ### 從表單中獲取元素
@@ -61,29 +51,20 @@ const selectForm = document.forms[index];
 const selectFormElement = document.forms[index].elements[index];
 ```
 
-### 名稱存取表單
+### 具名表單存取
 
 ```html
-<!doctype html>
-<html lang="zh-TW">
-  <head>
-    <title>document.forms 範例</title>
-  </head>
+<form name="login">
+  <input name="email" type="email" />
+  <input name="password" type="password" />
+  <button type="submit">登入</button>
+</form>
+```
 
-  <body>
-    <form name="login">
-      <input name="email" type="email" />
-      <input name="password" type="password" />
-      <button type="submit">登入</button>
-    </form>
-
-    <script>
-      const loginForm = document.forms.login; // 或 document.forms['login']
-      loginForm.elements.email.placeholder = "test@example.com";
-      loginForm.elements.password.placeholder = "password";
-    </script>
-  </body>
-</html>
+```js
+const loginForm = document.forms.login; // 或 document.forms['login']
+loginForm.elements.email.placeholder = "test@example.com";
+loginForm.elements.password.placeholder = "password";
 ```
 
 ## 規範
