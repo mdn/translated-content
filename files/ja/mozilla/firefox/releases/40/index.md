@@ -152,7 +152,6 @@ _変更なし。_
 
 - `nsClassInfo::GetImplementationLanguage()` 関数とともに `nsIClassInfo.implementationLanguage` 属性を削除しました。
 - 以下の XPCOM インターフェイスを削除しました。代わりに標準 HTML インターフェイスを使用してください。
-
   - `nsIDOMHTMLBRElement`
   - `nsIDOMDivElement`
   - `nsIDOMHTMLHeadingElement`

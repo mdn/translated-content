@@ -35,7 +35,6 @@ Necesitarás saber o poder sumergirte en algo de [HTTP](/es/docs/Web/HTTP).
 - Comienza desde nuestra [plantilla de página de cabecera HTTP](/es/docs/MDN/Writing_guidelines/Page_structures/Page_types#http_header_reference_page) o usa una estructura copiada de uno de los documentos de cabecera HTTP existentes que encontraste en el paso 2. Es tu elección.
 - Escriba sobre la nueva cabecera HTTP.
 - Asegúrate de tener estas secciones:
-
   - Texto introductorio donde la primera oración menciona el nombre de la cabecera (negrita) y resume su propósito.
   - Cuadro de información que contiene al menos el tipo de cabecera y si la cabecera es un {{Glossary("Forbidden header name","Nombre de cabecera prohibido")}}.
   - Un cuadro de sintaxis que contiene todas las directivas/parámetros/valores posibles de la cabecera HTTP.

@@ -64,7 +64,6 @@ Si vous souhaitez faire évaluer votre travail ou si vous êtes bloqué·e et qu
 
 1. Enregistrez votre travail dans un éditeur en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour le partager. Vous pouvez écrire le code vous-même ou utiliser les fichiers téléchargeables indiqués comme point de départ.
 2. Rédigez un message pour la demande d'aide ou d'évaluation sur [la catégorie _Learning_ du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre billet devrait inclure :
-
    - Un titre descriptif comme « Évaluation demandée pour le test Tableaux JavaScript ».
    - Des détails sur ce que vous avez déjà tenté et sur quels aspects vous avez besoin d'aide si vous bloquez.
    - Un lien vers l'exemple que vous voulez évaluer ou sur lequel vous avez besoin d'aide. Ce lien doit pointer vers un éditeur en ligne (voir l'étape 1). Il s'agit ici d'une bonne pratique pour commencer : il est souvent difficile d'aider quelqu'un si on ne peut pas voir le code.

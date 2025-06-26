@@ -23,12 +23,12 @@ URL.parse(url, base)
 - `url`
   - : 一个字符串或任何其他具有{{Glossary("stringifier", "字符串化器")}}的对象，表示绝对 URL 或 URL 的相对引用。如果 `url` 是相对引用，则 `base` 是必需的，并用于解析最终的 URL。如果 `url` 是绝对 URL，则不会使用给定的 `base` 来创建结果 URL。
 - `base` {{optional_inline}}
-
   - : 一个字符串，表示在 `url` 为相对 URL 时使用的基础 URL。如果未指定，则默认为 `undefined`。
 
     当你指定一个 `base` URL 时，解析后的 URL 并不是简单地将 `url` 和 `base` 拼接起来。对父目录和当前目录的相对引用是相对于 `base` URL 的当前目录解析的，当前目录仅包含直到最后一个斜杠的路径段，但不包括之后的任何内容。对根目录的相对引用是相对于基础 URL 的源解析的。更多信息请参见 [解析 URL 的相对引用](/zh-CN/docs/Web/API/URL_API/Resolving_relative_references)。
 
-> **备注：** `url` 和 `base` 参数会将你传递的任何值字符串化，例如 {{domxref("HTMLAnchorElement")}} 或 {{domxref("HTMLAreaElement")}} 元素，就像其他接受字符串的 Web API 一样。特别是，你可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将从对象的 {{domxref("URL.href", "href")}} 属性中字符串化。
+> [!NOTE]
+> `url` 和 `base` 参数会将你传递的任何值字符串化，例如 {{domxref("HTMLAnchorElement")}} 或 {{domxref("HTMLAreaElement")}} 元素，就像其他接受字符串的 Web API 一样。特别是，你可以为任一参数使用现有的 {{domxref("URL")}} 对象，它将从对象的 {{domxref("URL.href", "href")}} 属性中字符串化。
 
 ### 返回值
 

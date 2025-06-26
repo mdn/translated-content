@@ -33,7 +33,6 @@ search(regexp)
 ### 引数
 
 - `regexp`
-
   - : 正規表現オブジェクト、または [`Symbol.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/search) メソッドを持つ任意のオブジェクトです。
 
     `regexp` が `RegExp` オブジェクトでなく、`Symbol.search` メソッドもなかった場合は、{{jsxref("RegExp")}} オブジェクトに `new RegExp(regexp)` を使用して暗黙的に変換されます。

@@ -177,24 +177,19 @@ Les personnes qui utilisent des lecteurs d'écran naviguent en sautant de titre 
 Les titres peuvent être imbriqués en sous-sections afin de modéliser l'organisation du contenu de la page. La plupart des lecteurs d'écran peut générer une liste ordonnée des titres d'une page, l'aidant ainsi à déterminer rapidement la hiérarchie du contenu&nbsp;:
 
 1. `h1` Coléoptères
-
    1. `h2` Étymologie
    2. `h2` Distribution et diversité
    3. `h2` Évolution
-
       1. `h3` Paléozoïque
       2. `h3` Jurassique
       3. `h3` Crétacé
       4. `h3` Cénozoïque
 
    4. `h2` Morphologie externe
-
       1. `h3` Tête
-
          1. `h4` Mandibules
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 

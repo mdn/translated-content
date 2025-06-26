@@ -37,14 +37,11 @@ X-Content-Type-Options: nosniff
 ## Directives
 
 - `nosniff`
-
   - : Bloque une requête si la destination de la requête est de type
-
     - "`style`" et le MIME n'est pas de type `text/css`, ou
     - "`script`" et le MIME n'est pas de type [JavaScript MIME type](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)
 
     Permet le blocage de la lecture croisée pour les types MIME
-
     - `text/html`
     - `text/plain`
     - `text/json`, `application/json` ou tout autre type avec une extension JSON: `*/*+json`

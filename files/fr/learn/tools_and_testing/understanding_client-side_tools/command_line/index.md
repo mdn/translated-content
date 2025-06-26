@@ -108,7 +108,6 @@ Bien que les outils disponibles à partir de la ligne de commande soient très r
 Assez parlé — voyons maintenant quelques commandes utilisables dans un terminal ! Voici, clés en main, un petit aperçu de tout ce que l'on peut faire en ligne de commande, avec la référence des outils pertinents dans chaque cas :
 
 - Naviguer dans le système de fichiers de votre ordinateur en accomplissant des tâches basiques telles que créer, copier, renommer et effacer :
-
   - Se déplacer dans l'arborescence des répertoires : `cd`
   - Créer des répertoires : `mkdir`
   - Créer des fichiers (et modifier leurs métadonnées): `touch`

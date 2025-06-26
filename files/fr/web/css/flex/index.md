@@ -186,21 +186,17 @@ flex: unset;
 La propriété `flex` peut être définie avec une, deux ou trois valeurs.
 
 - **Avec une valeur**, la syntaxe doit être :
-
   - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
   - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
   - ou le mot-clé [`none`](#none).
 
 - **Avec deux valeurs**
-
   - la première doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) qui correspond à la valeur de [`<flex-grow>`](#grow).
   - la seconde valeur doit être :
-
     - un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
     - ou une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)
 
 - **Avec trois valeurs**
-
   - la première valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-grow>`](#grow)
   - la deuxième valeur doit être un nombre sans unité ({{cssxref("&lt;number&gt;")}}) : celui-ci est alors interprété comme la valeur de [`<flex-shrink>`](#shrink)
   - la troisième valeur doit être une valeur de largeur valide ({{cssxref("width")}}) : celle-ci est alors interprétée comme la valeur de [`<flex-basis>`](#basis)

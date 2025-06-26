@@ -36,7 +36,7 @@ hyphens: auto;
 }
 ```
 
-Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
+Las reglas de separación silábica son específicas del idioma. En HTML, el idioma es determinado por el atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes/lang) y los navegadores separarán únicamente si este atributo está presente y si existe un diccionario de separación silábica adecuado. En XML debe usarse el atributo `xml:lang.`
 
 > [!NOTE]
 > Las reglas que definen cómo se realiza la separación de sílabas no están explícitamente definidas por la especificación, por lo que esta puede variar de un navegador a otro.

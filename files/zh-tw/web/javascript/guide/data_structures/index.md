@@ -22,7 +22,6 @@ var foo = true; // foo 目前是布林值
 最新的 ECMAScript 標準定義了七種資料型別：
 
 - 有六種資料型別是{{Glossary("Primitive", "原始型別")}}：
-
   - {{Glossary("Boolean")}}
   - {{Glossary("Null")}}
   - {{Glossary("Undefined")}}

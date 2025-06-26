@@ -34,7 +34,6 @@ l10n:
 - {{cssxref("image-rendering")}} 属性的 `crisp-edges` 值现已取消前缀化（[Firefox bug 1496617](https://bugzil.la/1496617)）。
 - {{cssxref("scrollbar-color")}} 的 `auto` 值现已解析为 `auto`，而不是两种颜色（[Firefox bug 1501418](https://bugzil.la/1501418)）。
 - 现一实现 `break-*` 属性，且遗留的 `page-break-*` 属性已经成为它们的别名（[Firefox bug 775618](https://bugzil.la/775618)）：
-
   - {{cssxref("break-before")}} 现在是 {{cssxref("page-break-before")}} 的别名。
   - {{cssxref("break-after")}} 现在是 {{cssxref("page-break-after")}} 的别名。
   - {{cssxref("break-inside")}} 现在是 {{cssxref("page-break-inside")}} 的别名。
@@ -42,13 +41,11 @@ l10n:
 - 现已实现 {{cssxref("overflow-wrap")}} 属性的 `anywhere` 值（[Firefox bug 1505786](https://bugzil.la/1505786)）。
 - 现已实现 [`steps()` 时间函数](/zh-CN/docs/Web/CSS/easing-function/steps)中使用的新步骤位置关键字 `jump-start`、`jump-end`、`jump-none` 和 `jump-both`（[Firefox bug 1496619](https://bugzil.la/1496619)）。这也与 `frames()` 定时函数的移除不谋而合，该函数是以前实现此类功能的方法，现已弃用。
 - 为了与其他浏览器兼容，新增了一些新的 {{cssxref("appearance", "-webkit-appearance")}} 值，特别是：
-
   - `meter`，现在用作 UA 样式表中 {{htmlelement("meter")}} 元素的默认值。现有值 `meterbar` 现在是 `meter` 的别名（[Firefox bug 1501483](https://bugzil.la/1501483)）。
   - `progress-bar`，现在用作 UA 样式表中 {{htmlelement("progress")}} 元素的默认值。现有值 `progressbar` 现在是 `progress-bar` 的别名（[Firefox bug 1501506](https://bugzil.la/1501506)）。
   - `textarea`，现在用作 UA 样式表中 {{htmlelement("textarea")}} 元素的默认值。现有值 `textfield-multiline` 现在是 `textarea` 的别名（[Firefox bug 1507905](https://bugzil.la/1507905)）。
 
 - 已更改 {{cssxref("user-select")}} 的行为，使其更符合其他浏览器的要求（[Firefox bug 1506547](https://bugzil.la/1506547)）。具体如下：
-
   - 在元素上设置的 `user-select: all` 不再覆盖在该元素的子元素上设置的其他 `user-select` 值。因此，例如在以下代码段中：
 
     ```html
@@ -160,7 +157,6 @@ _无变化。_
 ### 其他
 
 - 已添加对 [WebP](/zh-CN/docs/Glossary/WebP) 图像的支持（[Firefox bug 1294490](https://bugzil.la/1294490)）。
-
   - 此外，为了在某些情况下促进跨浏览器兼容性，WebP MIMEType（`image/webp`）已被添加到 HTML 文件的标准 HTTP 请求 {{httpheader("Accept")}} 标头中（[Firefox bug 1507691](https://bugzil.la/1507691)）。
 
 - Windows 现已默认支持 AV1 编解码器（[Firefox bug 1452146](https://bugzil.la/1452146)）。
@@ -172,7 +168,6 @@ _无变化。_
 #### Tabs
 
 - {{WebExtAPIRef("tabs", "Tabs API", "", "1")}} 已得到增强，可支持标签页的后继标签页——标签页可分配一个后继标签页，即关闭后将激活的标签页的 ID（[Firefox bug 1500479](https://bugzil.la/1500479)，更多信息请参阅[本博文](https://qiita.com/piroor/items/ea7e727735631c45a366)）。特别是：
-
   - {{WebExtAPIRef("tabs.Tab")}} 类型现拥有 `successorId` 属性，可用于存储/读取标签页后续标签页的 ID。
   - {{WebExtAPIRef("tabs.onActivated")}} 事件监听器的回调现拥有一个新参数 `previousTabId`，其中包含前一个已激活标签页的 ID（如果该标签页仍处于打开状态）。
   - {{WebExtAPIRef("tabs.update()")}} 函数的 `updateProperties` 对象新增了一个可选属性 `successorTabId`，可用于更新。

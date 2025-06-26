@@ -32,7 +32,6 @@ O conteúdo dentro das tags de abertura e fechamento `<video></video>` é exibid
 Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR/docs/Web/HTML/Global_attributes).
 
 - `autoplay`
-
   - : Um atributo Booleano; se especificado, o video vai ser executado assim que possível sem precisar de carregar todo o arquivo.
 
     > [!NOTE]
@@ -45,7 +44,6 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `controls`
   - : Se esse atributo estiver presente, o navegador oferecerá controles para permitir o usuário controlar a reprodução do vídeo, incluindo volume, navegação (seek), e pausa/continuação da reprodução.
 - `controlslist`
-
   - : O atributo [`controlslist`](https://wicg.github.io/controls-list/explainer.html), quando definido, ajuda o navegador a selecionar que controles mostrar no elemento `video` sempre que o navegador exibir o seu próprio conjunto de controles (ou seja, quando o atributo `controls` for especificado).
 
     Os valores permitidos são `nodownload`, `nofullscreen` e `noremoteplayback`.
@@ -53,9 +51,7 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
     Use o atributo [`disablepictureinpicture`](#disablepictureinpicture) se você quiser desabilitar o modo Picture-In-Picture (e o controle).
 
 - `crossorigin`
-
   - : Esse atributo [enumerado](/pt-BR/docs/Glossary/Enumerated) indica se deve usar CORS para buscar o vídeo relacionado. [Recursos habilitados para CORS](/pt-BR/docs/Web/HTML/CORS_enabled_image) podem ser reutilizados no elemento {{HTMLElement("canvas")}} sem serem _contaminados_. Os valores permitidos são:
-
     - `anonymous`
       Envia uma solicitação de origem cruzada sem uma credencial. Em outras palavras, ele envia o cabeçalho HTTP `Origin:` sem um cookie, certificado X.509 ou realizar uma autenticação HTTP Basic. Se o servidor não fornecer credenciais ao site de origem (não definindo o cabeçalho HTTP `Access-Control-Allow-Origin:`), o recurso será contaminado e seu uso restrito.
     - `use-credentials`
@@ -66,7 +62,6 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `disablepictureinpicture`
   - : Impede o navegador de sugerir um menu de contexto Picture-in-Picture ou de solicitar automaticamente o Picture-in-Picture em alguns casos..
 - `disableremoteplayback`
-
   - : Um atributo Booleano usado para desativar a capacidade de reprodução remota em dispositivos conectados usando tecnologias com fio (HDMI, DVI, etc.) e sem fio (Miracast, Chromecast, DLNA, AirPlay, etc.).
 
     No Safari, você pode usar [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) como alternativa.
@@ -82,9 +77,7 @@ Como qualquer elemento HTML, este elemento suporta os [atributos globais](/pt-BR
 - `poster`
   - : Uma URL indicando uma imagem de prévia do vídeo até o usuário reproduzir ou navegar por ele. Se este atributo não estiver especificado, nada será mostrado até que o primeiro quadro esteja disponível; então o primeiro quadro será exibido como imagem de prévia.
 - `preload`
-
   - : Esse atributo enumerado pretende dar uma sugestão ao navegador sobre o que o autor pensa que proporcionará uma melhor experiência do usuário. Ele pode ter os seguintes valores:
-
     - `none`: indica que o usuário não necessitará consultar o vídeo ou que o servidor quer minimizar seu tráfego; em outros termos indica que o vídeo não deve ser pré-carregado.
     - `metadata`: indica que embora o usuário não necessitará consultar o vídeo, pegar os meta-dados (ex: comprimento) é interessante.
     - `auto`: indica que o usuário necessita ter prioridade; em outros termos isso indicou que, se necessário, o vídeo inteiro pode ser baixado, mesmo que não seja esperado a execução.
@@ -550,7 +543,6 @@ As legendas não devem obstruir o assunto principal do vídeo. Elas podem ser po
 ## Veja também
 
 - [Guia para tipos de mídia e formatos para web](/pt-BR/docs/Web/Media/Guides/Formats)
-
   - [Formatos de contêiner de mídia (tipos de arquivo)](/pt-BR/docs/Web/Media/Formats/Containers)
   - [Guia de codecs de vídeo na Web](/pt-BR/docs/Web/Media/Formats/Video_codecs)
   - [Guia de codecs de áudio da Web](/pt-BR/docs/Web/Media/Formats/Audio_codecs)

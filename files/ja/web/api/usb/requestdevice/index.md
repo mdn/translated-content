@@ -18,9 +18,7 @@ requestDevice(filters)
 ### 引数
 
 - `filters`
-
   - : ペア設定をしたいデバイスの候補を決めるフィルターオブジェクトの配列です。それぞれのフィルターオブジェクトは、以下のプロパティーを持つことができます。
-
     - `vendorId`
     - `productId`
     - `classCode`

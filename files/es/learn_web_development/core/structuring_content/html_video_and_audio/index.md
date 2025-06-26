@@ -168,9 +168,7 @@ Las nuevas características son:
 - [`poster`](/es/docs/Web/HTML/Reference/Elements/video#poster)
   - : La URL de una imagen que se mostrará antes de reproducir el vídeo. Está destinado a ser utilizado para una pantalla de presentación o pantalla publicitaria (miniatura del vídeo).
 - [`preload`](/es/docs/Web/HTML/Reference/Elements/video#preload)
-
   - : Se utiliza para almacenar en búfer archivos grandes; Puede tomar uno de estos tres valores:
-
     - `"none"` no almacena el archivo en el búfer
     - `"auto"` almacena el archivo multimedia
     - `"metadata"` almacena solo los metadatos del archivo
