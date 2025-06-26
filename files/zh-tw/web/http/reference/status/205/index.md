@@ -14,7 +14,7 @@ HTTP **`205 Reset Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Statu
 > [!NOTE]
 > 在使用 `205` 狀態的 Web 應用程式中，會假定用戶端在收到 `205` 回應後處理重置內容。這通常是透過 JavaScript 完成的，因為瀏覽器本身不會在收到 `205` 回應後原生處理重置表單等內容。
 
-請注意，回應不得包含任何內容或 {{HTTPHeader("Content-Length")}} 標頭（瀏覽器可能會拒絕包含內容的回應）。也可以使用帶有空區塊的 {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} 標頭來表示空回應。
+請注意，回應不得包含任何內容或 {{HTTPHeader("Content-Length")}} 標頭（瀏覽器可能會拒絕包含內容的回應）。也可以使用帶有空分塊的 {{HTTPHeader("Transfer-Encoding", "Transfer-Encoding: chunked")}} 標頭來表示空回應。
 
 ## 狀態
 
