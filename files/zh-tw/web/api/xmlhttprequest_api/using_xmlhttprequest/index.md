@@ -50,7 +50,8 @@ req.send();
 3. 使用 {{domxref("XMLSerializer")}} 將 **DOM 樹序列化為字串或檔案**。
 4. 如果你總是事先知道 XML 文件的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 XML 程式碼稍有變動，這個方法很可能會失敗。
 
-> **備註：** `XMLHttpRequest` 現在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 屬性為你解析 HTML。參見 [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)文章來了解如何做到這一點。
+> [!NOTE]
+> `XMLHttpRequest` 現在可以使用 {{domxref("XMLHttpRequest.responseXML", "responseXML")}} 屬性為你解析 HTML。參見 [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)文章來了解如何做到這一點。
 
 ### 處理包含 HTML 文件的 responseText 屬性
 
