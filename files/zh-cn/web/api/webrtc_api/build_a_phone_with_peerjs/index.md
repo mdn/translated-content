@@ -31,7 +31,6 @@ WebRTC 的主要问题之一是它相当复杂，使用和开发起来很复杂�
 
 1. [设置](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
 2. [连接对等方](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
-
    1. [获取麦克风权限](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
    2. [显示和隐藏 HTML](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
    3. [创建对等连接](/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)

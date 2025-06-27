@@ -2,27 +2,26 @@
 title: "HTML 属性: autocomplete"
 short-title: autocomplete
 slug: Web/HTML/Reference/Attributes/autocomplete
-original_slug: Web/HTML/Attributes/autocomplete
 l10n:
-  sourceCommit: 0a406fde67d297e7d2771e4ba239f545eee46d07
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-HTML の `autocomplete` 属性は、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
+HTML の `autocomplete` 属性により、ウェブ開発者は入力欄にどの種類の情報が期待されているかをブラウザーに示唆することができるのに加え、{{Glossary("user agent", "ユーザーエージェント")}}がフォーム入力欄の値を埋めるための自動支援を提供する必要があることを指定することができます。
 
 入力値としてテキストまたは数値を取る {{HTMLElement("input")}} 要素、 {{HTMLElement("textarea")}} 要素、 {{HTMLElement("select")}} 要素、 {{HTMLElement("form")}} 要素で利用できます。
 
-{{InteractiveExample("HTML Demo: autocomplete", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: autocomplete", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="firstName">First Name:</label>
-<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
-
-<label for="lastName">Last Name:</label>
+<label for="lastName">苗字:</label>
 <input name="lastName" id="lastName" type="text" autocomplete="family-name" />
 
-<label for="email">Email:</label>
+<label for="firstName">名前:</label>
+<input name="firstName" id="firstName" type="text" autocomplete="given-name" />
+
+<label for="email">メールアドレス:</label>
 <input name="email" id="email" type="email" autocomplete="off" />
 ```
 
@@ -44,7 +43,7 @@ label {
 <input autocomplete="section-user1 billing postal-code" />
 ```
 
-{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、要素の [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された `id` に一致する `<form>` （存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
+{{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素に `autocomplete` 属性がない場合、ブラウザーは[その要素の**所有元フォーム**の `autocomplete` 属性](/ja/docs/Web/HTML/Reference/Elements/form#autocomplete)を使用します。所有元フォームとは、 {{HTMLElement("form")}} 要素のうち `id` が [`form`](/ja/docs/Web/HTML/Reference/Elements/input#form) 属性で指定された値に等しい要素（存在する場合）か、より一般的には、その要素を内部に含んでいる `<form>` です。
 
 > [!NOTE]
 > 自動入力を提供するために、ユーザーエージェントは `<input>`/`<select>`/`<textarea>` 要素に次のことを要求することがあります。
@@ -71,18 +70,15 @@ label {
 この属性の値は、 `off` または `on` のどちらかのキーワード、または自動入力値の意味を記述した空白区切りの `<token-list>` のいずれかです。
 
 - `off`
-
   - : ブラウザーはこのフィールドの値を自動的に入力または選択することが許可されていません。文書やアプリケーションが独自の自動入力機能を提供していたり、セキュリティ上の理由でフィールドの値を自動的に入力しないよう要求していたりする可能性はあります。
 
     > [!NOTE]
-    > ほとんどの現行ブラウザーでは `autocomplete` 属性を `"off"` に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。[ログインフィールドの自動入力の管理](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#autocomplete_属性とログイン欄)をご覧ください。
+    > ほとんどの現行ブラウザーでは `autocomplete` 属性を `"off"` に設定しても、ブラウザーのパスワードマネージャーがユーザー名やパスワードを保存したいかをユーザーに問い合わせたり、ログインフォームにそれらを自動入力したりすることを抑制できません。[ログインフィールドでの自動入力の管理](/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#ログインフィールドでの自動入力の管理)をご覧ください。
 
 - `on`
-
   - : ブラウザーが自動入力することが許可されています。フィールドに求められているデータ型としてのガイダンスが提供されていないので、ブラウザーは独自の判断を行うかもしれません。
 
 - `<token-list>`
-
   - : [空白区切りのトークン](#トークンリストのトークン)の集合で、自動入力の詳細トークンの前にオプションで、名前付きグループ化と、請求や配送のグループ化トークンが続きます。電話番号、メールアドレス、およびメッセージングプロトコルトークンの前には、受信者の種類を識別するトークンが付きます。
 
 詳細情報は [WHATWG Standard](https://html.spec.whatwg.org/multipage/forms.html#autofill) を参照してください。
@@ -136,7 +132,6 @@ label {
 電話番号または番号の構成部分、電話の拡張子、電子メールアドレス、またはインスタントメッセージングプロトコル用のトークンまたはトークンのグループです。
 
 - `tel`
-
   - : 国番号を含む、完全な電話番号です。電話番号を各部分に分割する必要がある場合は、各フィールドに以下の値を使用することができます。
     - `tel-country-code`
       - : 国コードで、例えば "1" はアメリカ、カナダ、その他の北アメリカとカリブ海の一部です。
@@ -159,9 +154,7 @@ label {
 フォームフィールドが電話番号、メールアドレス、またはインスタントメッセージプロトコルでない場合、トークンの空白区切りリストの前に連絡先種別は示されません。
 
 - `name`
-
   - : このフィールドは人の氏名の値が期待されています。一般的には、氏名を各部分に分割すると、多様な人の氏名を扱ったり構成したりしにくくなるため、 `name` を使用することが推奨されます。しかし、氏名をそれぞれの部分に分割する必要があるのであれば、以下の `autocomplete` の値を使用することができます。
-
     - `honorific-prefix`
       - : 接頭辞や敬称 (例: "Mr.", "Ms.", "Dr.", "Mlle")
     - `given-name`
@@ -205,7 +198,6 @@ label {
 - `country-name`
   - : 国名です。
 - `postal-code`
-
   - : 郵便番号です (アメリカでは ZIP コードです)。
 
 - `cc-name`
@@ -253,14 +245,14 @@ label {
 
 {{htmlelement("input")}} と {{htmlelement("textarea")}} では、 `webauthn` トークンを最後に含めることで、ユーザーがコントロールとやりとりする際に、ユーザーエージェントが公開鍵認証情報を表示する必要があることを示すことができます。
 
-- `webauthn` {{experimental_inline}}
+- `webauthn`
   - : [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) によって、条件付きの {{domxref("CredentialsContainer.get()", "navigator.credentials.get()")}} 呼び出し（すなわち、 `mediation: 'conditional'` を含む呼び出し）によってリクエストされた、生成されたパスキー。詳しくは [Sign in with a passkey through form autofill](https://web.dev/articles/passkey-form-autofill) を参照してください。
 
 ## 例
 
 ```html
 <div>
-  <label for="cc-number">Enter your credit card number</label>
+  <label for="cc-number">クレジットカード番号を入力してください</label>
   <input name="cc-number" id="cc-number" autocomplete="off" />
 </div>
 ```

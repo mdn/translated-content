@@ -21,12 +21,10 @@ l10n:
 
 - 위키백과 [사용자 에이전트](https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90_%EC%97%90%EC%9D%B4%EC%A0%84%ED%8A%B8)
 - {{domxref("Navigator/userAgent", "NavigatorID.userAgent")}}
-- [사용자 에이전트를 이용한 브라우저 감지](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent)
+- [사용자 에이전트를 이용한 브라우저 감지](/ko/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)
 - {{RFC(2616, "", "14.43")}}: The `User-Agent` header
 - [Glossary:](/ko/docs/Glossary)
-
   - {{Glossary("Browser")}}
 
 - HTTP Headers
-
   - {{HTTPHeader("User-agent")}}

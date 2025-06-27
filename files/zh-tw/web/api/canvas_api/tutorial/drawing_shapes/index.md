@@ -466,7 +466,7 @@ function roundedRect(ctx, x, y, width, height, radius) {
 
 畫出這樣的圖其實沒有想像中的困難，所以我們就不再描述細節了，其中比較需要注意的是，我們在繪圖環境上用了 fillStyle 屬性以及一個自定義的效用函數(roundedRect())，利用效用函數來執行時常重複的繪圖工作可以幫忙減少程式碼數量與複雜度。
 
-稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色，。
+稍後我們會更進一步介紹 fillStyle 屬性，這個範例我們所做是的透過 fillStyle 屬性來改變路徑填滿色為白色，然後再改回預設黑色，來變換填滿顏色。
 
 {{PreviousNext("Web/Guide/HTML/Canvas_tutorial/Basic_usage", "Web/Guide/HTML/Canvas_tutorial/Using_images")}}
 

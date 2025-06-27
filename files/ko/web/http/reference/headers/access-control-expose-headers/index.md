@@ -35,7 +35,7 @@ Access-Control-Expose-Headers: *
 - `<header-name>`
   - : 클라이언트가 응답에서 접근할 수 있는 헤더 이름 목록이며, 0개 이상의 콤마로 구분됩니다. {{Glossary("CORS-safelisted response header", "CORS 안전 목록 응답 헤더")}}에 추가 됩니다.
 - `*` (와일드카드)
-  - : `*`는 자격 증명이 없는 요청 ([HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)나 HTTP 인증 정보가 없는 요청)에 대한 특별한 와일드카드 값으로 취급됩니다. 자격 증명이 있는 요청에서는 특별한 의미 없이 문자 그대로 헤더 이름 `*`로 취급됩니다.
+  - : `*`는 자격 증명이 없는 요청 ([HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)나 HTTP 인증 정보가 없는 요청)에 대한 특별한 와일드카드 값으로 취급됩니다. 자격 증명이 있는 요청에서는 특별한 의미 없이 문자 그대로 헤더 이름 `*`로 취급됩니다.
 
 ## 예제
 

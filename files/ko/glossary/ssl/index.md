@@ -14,6 +14,5 @@ l10n:
 - [전송 계층 보안](https://en.wikipedia.org/wiki/Transport_Layer_Security) (Wikipedia)
 - [전송 계층 보안(TLS) 프로토콜](/ko/docs/Web/Security/Transport_Layer_Security)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("HTTPS")}}
   - {{Glossary("TLS")}}

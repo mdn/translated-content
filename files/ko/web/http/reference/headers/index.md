@@ -67,7 +67,6 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
 - {{HTTPHeader("DPR")}} {{experimental_inline}}
   - : `DPR` 요청 헤더 필드는 레이아웃 뷰포트(Section 9.1.1 of [\[CSS2\]](https://httpwg.org/http-extensions/client-hints.html#CSS2))의 CSS px(Section 5.2 of [\[CSSVAL\]](https://httpwg.org/http-extensions/client-hints.html#CSSVAL))를 통한 물리적 픽셀 비율인 클라이언트의 현재 기기 픽셀 비율(DPR)을 나타내는 숫자입니다.
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
-
   - : &#x20;
 
     <a class="internalDFN" href="https://wicg.github.io/netinfo/#dom-networkinformation-savedata"><code>SaveData</code></a>
@@ -79,13 +78,11 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
     ] 요청 헤더 필드는 절약한 데이터 사용에 대한 유저 에이전트의 설정을 나타내는 하나 이상의 토큰으로 이루어져있습니다.
 
 - {{HTTPHeader("Viewport-Width")}} {{experimental_inline}}
-
   - : `Viewport-Width` 요청 헤더 필드는 CSS px 단위의 레이아웃 뷰포트 width를 나타내는 숫자입니다. 제공된 CSS px값은 정수로 반올림된 숫자입니다(예, 올림 값).
 
     하나 이상의 메시지에서 `Viewport-Width`가 나타난다면, 마지막 값이 모든 이전의 값을 덮어씁니다.
 
 - {{HTTPHeader("Width")}} {{experimental_inline}}
-
   - : `Width` 요청 헤더 필드는 물리적 px(예, 이미지의 실제 크기) 단위의 원하는 리소스 width를 나타내는 숫자입니다. 제공된 물리적 px 값은 정수로 반올림된 숫자입니다(예, 올림 값).
 
     원하는 리소스 width를 요청 시점에 알 수 없거나 리소스가 표출 width를 갖지 않을 경우, `Width` 헤더 필드는 생략될 수 있습니다. 하나 이상의 메시지에서 `Width`가 나타난다면, 마지막 값이 모든 이전의 값을 덮어씁니다.
@@ -114,7 +111,7 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
 - {{HTTPHeader("Keep-Alive")}}
   - : 지속적인 연결이 열린 상태로 유지할 기간을 제어합니다.
 
-## [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
+## [컨텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)
 
 - {{HTTPHeader("Accept")}}
   - : 돌려줄 데이터 타입에 대해 서버에 알립니다. MIME 타입입니다.
@@ -135,7 +132,7 @@ HTTP 클라이언트 힌트는 작업중에 있습니다. 실제 문서는 [HTTP
 ## 쿠키
 
 - {{HTTPHeader("Cookie")}}
-  - : {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버로부터 이전에 전송됐던 저장된 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)를 포함합니다.
+  - : {{HTTPHeader("Set-Cookie")}} 헤더와 함께 서버로부터 이전에 전송됐던 저장된 [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)를 포함합니다.
 - {{HTTPHeader("Set-Cookie")}}
   - : 서버에서 유저 에이전트로 쿠키를 전송합니다.
 - {{HTTPHeader("Cookie2")}} {{deprecated_inline}}
@@ -162,7 +159,7 @@ _[여기](CORS)에서 CORS에 대해 더 알아보세요._
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 실제 요청이 있을 때 사용될 HTTP 헤더를 서버에 알리기 위한 preflight 요청을 보낼 때 사용됩니다.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 실제 요청이 있을 때 사용될 [HTTP 메소드](/ko/docs/Web/HTTP/Methods)를 서버에 알리기 위한 preflight 요청을 보낼 때 사용됩니다.
+  - : 실제 요청이 있을 때 사용될 [HTTP 메소드](/ko/docs/Web/HTTP/Reference/Methods)를 서버에 알리기 위한 preflight 요청을 보낼 때 사용됩니다.
 - {{HTTPHeader("Origin")}}
   - : 페치가 시작된 위치를 나타냅니다.
 - {{HTTPHeader("Timing-Allow-Origin")}}

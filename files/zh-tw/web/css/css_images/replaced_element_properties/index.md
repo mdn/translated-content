@@ -14,7 +14,6 @@ CSS 中所謂的「可置換元素（**Replaced element**）」，即是該元�
 ## 參見
 
 - CSS 重要概念：
-
   - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
   - [註釋](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
@@ -25,7 +24,6 @@ CSS 中所謂的「可置換元素（**Replaced element**）」，即是該元�
   - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
   - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
     - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
     - [解析值](/zh-TW/docs/Web/CSS/resolved_value)

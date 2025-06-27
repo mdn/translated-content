@@ -3,8 +3,6 @@ title: 如何设置一个本地测试服务器？
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 ---
 
-{{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
-
 本文将会介绍如何在你的计算机上安装一个简单的本地测试服务器，以及它的基本用法。
 
 <table>
@@ -60,7 +58,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 要做到这一点：
 
 1. 安装 Python。如果你正在使用 Linux 或 macOS，那么它应该已经在你的系统上。如果你是 Windows 用户，你可以从 Python 主页获取安装程序，然后按照说明来安装它：
-
    - 访问 [python.org](https://www.python.org/)
    - 在下载部分，点击 Python“3.xxx”的链接。
    - 在页面底部，点击 *Windows 安装程序*链接来下载安装文件。

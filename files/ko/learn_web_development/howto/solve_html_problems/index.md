@@ -75,16 +75,16 @@ HTML은 문서 구조만 설정합니다. 프레젠테이션 문제를 해결하
 ### 데이터 표현
 
 - HTML로 숫자 및 코드 값 표현 — [위 첨자와 아래 첨자](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#위_첨자와_아래_첨자)와 [컴퓨터 코드 나타내기](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#컴퓨터_코드를_나타내기)를 참조하세요.
-- [데이터 속성 사용](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [데이터 속성 사용](/ko/docs/Web/HTML/How_to/Use_data_attributes)
 
 ### 고급 텍스트 의미론
 
-- [HTML 줄 바꿈 제어](/ko/docs/Web/HTML/Element/br)
+- [HTML 줄 바꿈 제어](/ko/docs/Web/HTML/Reference/Elements/br)
 - 변경 사항 표시 (추가 및 제거된 텍스트) — {{htmlelement("ins")}} 와 {{htmlelement("del")}} 요소를 참조하세요.
 
 ### 고급 이미지 & 멀티미디어
 
-- [웹 페이지에 반응형 이미지 추가](/ko/docs/Web/HTML/Responsive_images)
+- [웹 페이지에 반응형 이미지 추가](/ko/docs/Web/HTML/Guides/Responsive_images)
 - [웹 페이지에 백터 이미지 추가](/ko/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [이미지 위에 히트 맵 추가](/ko/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 
@@ -97,4 +97,4 @@ HTML은 단일 언어가 아닙니다. 일반적인 국제화 문제를 처리�
 
 ### 성능
 
-- [빠르게 로드되는 HTML 페이지 작성](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [빠르게 로드되는 HTML 페이지 작성](/ko/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)

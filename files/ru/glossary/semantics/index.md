@@ -70,11 +70,9 @@ HTML должен предоставлять структуру информац
 - [HTML element reference](/ru/docs/Web/HTML/Reference/Elements#inline_text_semantics) on MDN
 - [Using HTML sections and outlines](/ru/docs/Web/HTML/Reference/Elements/Heading_Elements#problems_solved_by_html5) on MDN
 - [MDN Web Docs Glossary](/ru/docs/Glossary)
-
   - {{Glossary("SEO")}}
 
 - Some of semantic elements in HTML
-
   - {{htmlelement("article")}}
   - {{htmlelement("aside")}}
   - {{htmlelement("details")}}

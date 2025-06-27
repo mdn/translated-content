@@ -2,19 +2,18 @@
 title: "HTML 属性: pattern"
 short-title: pattern
 slug: Web/HTML/Reference/Attributes/pattern
-original_slug: Web/HTML/Attributes/pattern
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
 ---
 
 {{HTMLSidebar}}
 
 **`pattern`** 属性は、フォームコントロールの値が一致すべき[正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions)を指定します。`null` 以外の値が `pattern` 値によって設定された制約に適合しない場合、{{domxref('ValidityState')}} オブジェクトの読み取り専用の {{domxref('ValidityState.patternMismatch','patternMismatch')}} プロパティが真になります。
 
-{{InteractiveExample("HTML Demo: pattern", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: pattern", "tabbed-shorter")}}
 
 ```html interactive-example
-<label for="username">Username: (3-16 characters)</label>
+<label for="username">ユーザー名: (3-16 文字)</label>
 <input
   id="username"
   name="username"
@@ -23,7 +22,7 @@ l10n:
   pattern="\w{3,16}"
   required />
 
-<label for="pin">PIN: (4 digits)</label>
+<label for="pin">PIN: (4 桁)</label>
 <input id="pin" name="pin" type="password" pattern="\d{4,4}" required />
 ```
 
@@ -48,7 +47,7 @@ input:invalid {
 
 `pattern` 属性は、[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を通過させるために、入力の [`value`](/ja/docs/Web/HTML/Reference/Elements/input#value) が一致するべき正規表現です。これは有効な JavaScript の正規表現でなければならず、 {{jsxref("RegExp")}} 型で使用されたり、[正規表現ガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されているものと同じものです。
 
-パターンの正規表現は [`'v'` フラグ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)でコンパイルされます。これは正規表現を [unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)にし、文字クラスの解釈方法も変更します。これにより、文字クラスの設定には交差と減算の処理が可能になり、 `]` と `\` に加え、続く文字がリテラル文字 `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|` である場合は、 `\` バックスラッシュを使用してエスケープする必要があります。 2023 年半ば以前は、代わりに `'u'` フラグが指定されていました。古いコードを更新する場合は、[この文書に違いの概要がまとめられています](https://github.com/tc39/proposal-regexp-v-flag#how-is-the-v-flag-different-from-the-u-flag)。
+パターンの正規表現は [`'v'` フラグ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class#v-mode_character_class)でコンパイルされます。これは正規表現を [unicode 対応](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)にし、文字クラスの解釈方法も変更します。これにより、文字クラスの設定には交差と減算の処理が可能になり、 `]` と `\` に加え、続く文字がリテラル文字 `(`, `)`, `[`, `{`, `}`, `/`, `-`, `|` である場合は、 `\` バックスラッシュを使用してエスケープする必要があります。 2023 年半ば以前は、代わりに `'u'` フラグが指定されていました。古いコードを更新する場合は、 [`unicodeSets`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) のリファレンスを参照してください。
 
 パターンの正規表現は、部分文字列に一致させるのではなく、入力の `value` 全体に一致させる必要があります。パターンの始めに `^(?:` が、終わりに `)$` が含まれているかのように扱われます。
 
@@ -64,7 +63,7 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
 
 ### ユーザビリティとアクセシビリティの考慮
 
-コントロールに `pattern` 属性がある場合、 [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性が使われていれば、そのパターンを説明しなければなりません。テキストコンテンツを視覚的な表示するために `title` 属性に頼ることは、多くのユーザーエージェントがアクセス可能な方法で属性を公開しないので、一般的には推奨されません。ブラウザーによっては、タイトルを持つ要素の上にポインターを置いたときにツールチップを表示しますが、キーボードのみのユーザーやタッチのみのユーザーは除外されてしまいます。これが、どのようにコントロールに記入すれば要件に合うかをユーザーに知らせる情報を含める必要がある理由の一つです。
+コントロールに `pattern` 属性がある場合、 [`title`](/ja/docs/Web/HTML/Reference/Elements/input#title) 属性が使われていれば、そのパターンを説明しなければなりません。ユーザーエージェントは、制約の検証中に title のコンテンツを、パターンが一致しないことをユーザーに指示するために使用することができますブラウザーによっては、タイトルを持つ要素の上にポインターを置いたときにツールチップを表示しますが、キーボードのみのユーザーやタッチのみのユーザーは除外されてしまいます。これが、どのようにコントロールに記入すれば要件に合うかをユーザーに知らせる情報を含める必要がある理由の一つです。
 
 多くのユーザーエージェントは `title` 属性をアクセシビリティのある方法で公開していないため、テキストコンテンツの視覚的な表示のためだけに `title`属性を頼ることは推奨されません。ブラウザーによっては、タイトルのある要素にカーソルを合わせるとツールチップを表示させるものもありますが、キーボードのみのユーザーやタッチのみのユーザーを除外することになります。これは、要求に一致するように制御する方法をユーザーに知らせる情報を記載しなければならないいくつかの理由の一つです。
 
@@ -76,22 +75,22 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
 
 以下のものを考えてみてください。
 
-```html
+```html-nolint
 <p>
   <label>
-    Enter your phone number in the format (123) - 456 - 7890 (<input
+    電話番号を (123) - 456 - 7890 の形で入力してください (<input
       name="tel1"
       type="tel"
       pattern="[0-9]{3}"
       placeholder="###"
-      aria-label="3-digit area code"
+      aria-label="3 桁のエリアコード"
       size="2" />) -
     <input
       name="tel2"
       type="tel"
       pattern="[0-9]{3}"
       placeholder="###"
-      aria-label="3-digit prefix"
+      aria-label="3 桁の接頭辞"
       size="2" />
     -
     <input
@@ -99,7 +98,7 @@ pattern 属性に対応している入力型の中には、特に {{HTMLElement(
       type="tel"
       pattern="[0-9]{4}"
       placeholder="####"
-      aria-label="4-digit number"
+      aria-label="4 桁の番号"
       size="3" />
   </label>
 </p>
@@ -125,10 +124,10 @@ input:invalid {
 
 以下の例では、値を 4-8 文字に制限し、小文字のみを含むことを要求しています。
 
-```html
+```html-nolint
 <form>
   <div>
-    <label for="uname">Choose a username: </label>
+    <label for="uname">ユーザー名を選択してください: </label>
     <input
       type="text"
       id="uname"
@@ -136,12 +135,12 @@ input:invalid {
       required
       size="45"
       pattern="[a-z]{4,8}"
-      title="4 to 8 lowercase letters" />
+      title="4 から 8 文字の英小文字" />
     <span class="validity"></span>
-    <p>Usernames must be lowercase and 4-8 characters in length.</p>
+    <p>ユーザー名は小文字で 4-8 文字の長さである必要があります。</p>
   </div>
   <div>
-    <button>Submit</button>
+    <button>送信</button>
   </div>
 </form>
 ```
@@ -174,7 +173,7 @@ input:valid + span::after {
 }
 ```
 
-This renders like so:
+これは次のように表示されます。
 
 {{ EmbedLiveSample('Specifying_a_pattern', 600, 110) }}
 

@@ -23,11 +23,9 @@ let moveContainers = browser.contextualIdentities.move(
 ### 参数
 
 - `cookieStoreIds`
-
   - : 字符串或字符串数组。要移动的场景身份的 cookie 存储 ID 的有序列表。
 
 - `position`
-
   - : `integer`。将 `cookieStoreIds` 移动到场景身份列表中的位置。使用基于零的索引；`0` 表示第一个位置。`-1` 表示将项目移动到列表末尾。
 
 ### 返回值

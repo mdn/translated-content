@@ -24,15 +24,12 @@ in <polar-color-space>[ <hue-interpolation method>]
 ### 值
 
 - `<rectangular-color-space>`
-
   - : 关键字 `srgb`、`srgb-linear`、`display-p3`、`a98-rgb`、`prophoto-rgb`、`rec2020`、`lab`、`oklab`、`xyz`、`xyz-d50` 或 `xyz-d65` 之一。
 
 - `<polar-color-space>`
-
   - : 关键字 `hsl`、`hwb`、`lch` 或 `oklch` 之一。
 
 - {{CSSXref("&lt;hue-interpolation-method&gt;")}} {{optional_inline}}
-
   - : 用于色调插值的算法。默认为 `shorter hue`。
 
 - `<custom-color-space>`

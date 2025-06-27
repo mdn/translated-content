@@ -15,6 +15,5 @@ Ils sont utilisés pour améliorer l'expérience utilisateur et renforcer la coh
 
 - [Favicon](https://fr.wikipedia.org/wiki/Favicon) sur Wikipédia
 - Outils
-
   - [Générateur de favicon gratuit](https://favicon.io/)
   - [Générateur d'icônes Favicon.ico et & app](https://www.favicon-generator.org/)

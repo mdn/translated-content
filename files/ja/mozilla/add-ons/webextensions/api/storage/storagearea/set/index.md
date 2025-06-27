@@ -24,7 +24,6 @@ let settingItem = browser.storage.<storageType>.set(
 ### 引数
 
 - `keys`
-
   - : 保存したい 1 つ以上のキー/値ペアを持つオブジェクトを指定します。アイテムが既に存在する場合、値は上書きされます。
 
     値は [primitive 型](/ja/docs/Glossary/Primitive) (整数型・ブール型・文字列) または[`配列`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array) を指定でできます。

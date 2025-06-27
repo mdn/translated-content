@@ -28,9 +28,7 @@ let movingBookmark = browser.bookmarks.move(
 - `id`
   - : 包含要移动的书签或文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。
 - `destination`
-
   - : 一个指定书签目标位置的{{jsxref("object", "对象", "", 1)}}。此对象必须包含以下一个或两个字段：
-
     - `parentId` {{optional_inline}}
       - : 指定目标文件夹的 ID 的{{jsxref("string", "字符串", "", 1)}}。如果省略此值，则书签将移动到其当前文件夹内的新位置。
     - `index` {{optional_inline}}

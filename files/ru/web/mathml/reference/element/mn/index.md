@@ -25,9 +25,7 @@ slug: Web/MathML/Reference/Element/mn
   - : Размер контента. Смотрите [length](/ru/docs/Web/CSS/length) для возможных значений.
     Устаревшие значения: `small`, `normal` и `big`. Они будут удалены в будущем.
 - mathvariant
-
   - : Этот атрибут определяет логический класс числа, который варьируется в типографике.То есть, хотя имена предполагают типографский стиль для класса, семантически, элементы с одним и тем же классом обрабатываются «одинаково» в выражении, которое может включать или не включать отображение их с именованной типографикой. Допускаются следующие значения:
-
     - `normal` (значение по умолчанию) ;&#x20;
 
       <math><mn mathvariant="normal">Пример</mn></math>
@@ -42,7 +40,6 @@ slug: Web/MathML/Reference/Element/mn
       <math><mn mathvariant="bold-italic"><em><strong>Пример</strong></em></mn></math>
 
     <!---->
-
     - `double-struck` ;&#x20;
 
       <math><mn mathvariant="double-struck">Пример</mn></math>
@@ -64,7 +61,6 @@ slug: Web/MathML/Reference/Element/mn
       <math><mn mathvariant="fraktur">Пример</mn></math>
 
     <!---->
-
     - `sans-serif` ;&#x20;
 
       <math><mn mathvariant="sans-serif">Пример</mn></math>
@@ -86,7 +82,6 @@ slug: Web/MathML/Reference/Element/mn
       <math><mn mathvariant="monospace">Пример</mn></math>
 
     <!---->
-
     - `initial` ;&#x20;
 
       <math><mn mathvariant="initial">مثال</mn></math>

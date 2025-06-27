@@ -141,7 +141,6 @@ h3 {
 
 - [CSS : Le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model)
 - Les quatres propriétés détaillées synthétisées par `padding` :
-
   - {{cssxref("padding-top")}}
   - {{cssxref("padding-right")}}
   - {{cssxref("padding-bottom")}}

@@ -14,11 +14,9 @@ l10n:
 该类型的取值为对象，包含如下属性：
 
 - `allFrames` {{optional_inline}}
-
   - : `boolean`。脚本或 CSS 是否注入到标签页中的所有框架中。默认为 `false`。如果指定了 `frameIds`，则不能为 `true`。
 
 - `frameIds` {{optional_inline}}
-
   - : `number` 数组（`array`）。要注入的框架的 ID 数组。
 
 - `tabId`

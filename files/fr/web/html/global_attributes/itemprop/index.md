@@ -269,13 +269,11 @@ Une propriété est un ensemble non-ordonné de composants uniques sensibles à 
 **Les composants** sont des chaînes de caractères ou des URL. Un objet est appelé un objet typé si c'est une URL. Les chaînes ne peuvent pas contenir de point ou de deux points.
 
 1. Si un objet est un objet typé, il doit être :
-
    1. Un nom de propriété autorisé par la spécification qui définit les types pertinents pour un objet ou
    2. Une URL valide qui est une URL absolue qui définit un nom faisant partie de la spécification du vocabulaire ou
    3. Une URL valide qui est une URL absolue utilisée comme un nom propriétaire ou
 
 2. Si un objet n'est pas un objet typé, le nom doit être :
-
    1. Une chaîne qui ne contient pas de caractères "**.**" (U+002E FULL STOP) ou "**:**" (U+003A COLON) et qui est utilisée comme un nom « propriétaire » pour la propriété (c'est-à-dire avec un nom qui n'est pas défini dans une spécification publique).
 
 > [!NOTE]
@@ -286,35 +284,27 @@ Une propriété est un ensemble non-ordonné de composants uniques sensibles à 
 La valeur d'une propriété est définie comme le premier cas qui correspond dans cette liste :
 
 - Si l'élément possède un attribut **`itemscope` :**
-
   - La valeur est **l'objet** créé par l'élément.
 
 - Si l'élément est un élément **`meta` :**
-
   - La valeur est celle de l'attribut **`content`** s'il existe, la chaîne vide sinon.
 
 - Si l'élément est **`audio`**, **`embed`**, **`iframe`**, **`img`**, **`source`**, **`track`** ou **`video` :**
-
   - La valeur est l'URL correspondant à l'analyse de l'attribut `src` relatif au nœeud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
 
 - Si l'élément est un élément **`a`**, **`area`** ou **`link` :**
-
   - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `href` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
 
 - Si l'élément est un élément **`object` :**
-
   - La valeur est l'URL qui correspond à l'analyse de la valeur de l'attribut `data` relatif au nœud du document ou la chaîne vide s'il n'y pas de tel attribut ou que la recomposition de l'URL échoue.
 
 - Si l'élément est un élément **`data` :**
-
   - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
 
 - Si l'élément est un élément **`meter` :**
-
   - La valeur est la valeur l'attribut `value` s'il est présent ou la chaîne vide sinon.
 
 - Si l'élément est un élément **`time` :**
-
   - La valeur de l'élément est la valeur de l'attribut **`datetime`**.
 
 Sinon :
@@ -405,7 +395,6 @@ Un exemple sur un livre qu'on décrit avec les différents attributs.
 
 - [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-
   - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
   - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
   - [`itemscope`](/fr/docs/Web/HTML/Global_attributes#itemscope)
