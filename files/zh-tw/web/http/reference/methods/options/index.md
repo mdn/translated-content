@@ -125,7 +125,8 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-> **備註：** {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
+> [!NOTE]
+> {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
 
 ## 規範
 
