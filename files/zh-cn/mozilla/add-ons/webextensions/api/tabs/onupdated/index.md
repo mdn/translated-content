@@ -68,7 +68,8 @@ browser.tabs.onUpdated.hasListener(listener)
         - `"title"`
         - `"url"`
 
-        > **备注：** `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
+        > [!NOTE]
+        > `"url"` 值自 Firefox 88 起支持。在 Firefox 87 及更早版本中，可以通过过滤“status”来观察 `"url"` 的更改。
 
     - `tabId`
       - : `Integer`。仅针对此 ID 标识的标签页触发该事件。

@@ -104,7 +104,8 @@ var var2 = 4;
 | [小於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_operator) (`<`)                    | 假如左方運算元小於右方運算元，回傳 True。                                                                                                                      | `var1 < var2 "2" < 12`               |
 | [小於或等於](/zh-TW/docs/Web/JavaScript/Reference/Operators#less_than_or_equal_operator) (`<=`)    | 假如左方運算元小於或等於右方運算元，回傳 True。                                                                                                                | `var1 <= var2 var2 <= 5`             |
 
-> **備註：** `=>` 不是運算子，是 [箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
+> [!NOTE]
+> `=>` 不是運算子，是[箭頭函式](/zh-TW/docs/Web/JavaScript/Reference/Functions/Arrow_functions)。
 
 ### 算術運算子
 

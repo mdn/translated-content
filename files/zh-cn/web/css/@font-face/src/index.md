@@ -68,7 +68,8 @@ src:
 - `<font-face-name>`
   - : 使用 `local()` 组件值指定本地安装的字体的全名或 postscript 名称，该名称可在较大的字体系列中唯一标识单个字体。该名称可以选择用引号括起来。字体名称[不区分大小写](https://drafts.csswg.org/css-fonts-3/#font-family-casing)。
 
-> **备注：** {{domxref("Local Font Access API", "本地字体访问 API","", "nocode")}} 可用于访问用户本地安装的字体数据，其中包括名称、样式和家族等高级细节，以及底层字体文件的原始字节。
+> [!NOTE]
+> {{domxref("Local Font Access API", "本地字体访问 API","", "nocode")}} 可用于访问用户本地安装的字体数据，其中包括名称、样式和家族等高级细节，以及底层字体文件的原始字节。
 
 ## 描述
 

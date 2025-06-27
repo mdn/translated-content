@@ -96,7 +96,8 @@ label {
 
 [`capture`](/zh-CN/docs/Web/HTML/Reference/Attributes/capture) 属性是一个字符串，如果 [`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept) 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 `user` 表示应该使用前置摄像头和（或）麦克风。值 `environment` 表示应该使用后置摄像头和（或）麦克风。如果缺少此属性，则{{Glossary("user agent","用户代理")}}可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。
 
-> **备注：** `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
+> [!NOTE]
+> `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
 
 ### multiple
 

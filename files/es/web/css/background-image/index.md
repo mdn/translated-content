@@ -86,7 +86,7 @@ background-image: unset;
 
 Los navegadores no brindan ninguna información especial sobre imágenes de fondo a la tecnología de asistencia. Esto es importante principalmente para los lectores de pantalla, ya que un lector de pantalla no anunciará su presencia y, por lo tanto, no transmitirá nada a sus usuarios. Si la imagen contiene información crítica para comprender el propósito general de la página, es mejor describirla semánticamente en el documento.
 
-- [MDN Entendiendo las WCAG, Directriz 1.1 explicaciones](/es/docs/Web/Accessibility/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
+- [MDN Entendiendo las WCAG, Directriz 1.1 explicaciones](/es/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable#guideline_1.1_%e2%80%94_providing_text_alternatives_for_non-text_content)
 - [Comprender el Criterio de Conformidad 1.1.1 | W3C Entendiendo las WCAG 2.0](https://www.w3.org/TR/2016/NOTE-UNDERSTANDING-WCAG20-20161007/text-equiv-all.html)
 
 ## Definicion formal

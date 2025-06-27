@@ -129,7 +129,8 @@ JavaScript 中的基本关键字和常用表达式。这些表达式具有最高
 - {{jsxref("Operators/in", "in")}}
   - : `in` 运算符用来判断对象是否拥有给定属性。
 
-> **备注：** `=>` 不是运算符，而是[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的表示符。
+> [!NOTE]
+> `=>` 不是运算符，而是[箭头函数](/zh-CN/docs/Web/JavaScript/Reference/Functions/Arrow_functions)的表示符。
 
 ### 相等运算符
 

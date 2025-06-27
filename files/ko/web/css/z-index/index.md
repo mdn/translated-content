@@ -122,7 +122,7 @@ z-index: 7;
 
 위치 지정 요소(`position`이 `static` 외의 다른 값인 요소)의 박스에 대해, `z-index` 속성은 다음 항목을 지정합니다.
 
-1. 현재 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)에서 자신의 위치.
+1. 현재 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)에서 자신의 위치.
 2. 자신만의 쌓임 맥락 생성 여부.
 
 ## 구문

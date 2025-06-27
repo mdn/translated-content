@@ -34,7 +34,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **备注：** `Symbol()` 只能在没有 {{jsxref("Operators/new", "new")}} 的情况下调用，尝试用 `new` 构造会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `Symbol()` 只能在没有 {{jsxref("Operators/new", "new")}} 的情况下调用，尝试用 `new` 构造会抛出 {{jsxref("TypeError")}}。
 
 ## 参数
 

@@ -202,7 +202,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **備註：** `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 和 `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
 >
 > 你可以使用`which virtualenvwrapper.sh` 和 `which python3`.的命令找到系統的正確位置。
 
@@ -244,7 +245,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **備註：** `VIRTUALENVWRAPPER_PYTHON`變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事，是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON`變量指向 Python3 的正常安裝位置，`source /usr/local/bin/virtualenvwrapper.sh`指向`virtualenvwrapper.sh`腳本的正常位置。如果 virtualenv 在測試時不起作用，那麼要檢查的一件事，是 Python 和腳本位於預期的位置（然後適當地更改啟動文件）。
 >
 > 例如，對 macOS 進行的一次安裝測試，最終在啟動文件中需要以下幾行：
 >

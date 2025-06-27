@@ -39,7 +39,8 @@ Accept-Post: <MIME_type>/*
 Accept-Post: */*
 ```
 
-> **备注：** `Accept-Post` 标头与 {{HTTPHeader("Accept")}} 标头类似，用于指定接受的媒体类型范围，但不同之处在于它并不支持优先级概念（即没有 `q` 参数）。这是因为 `Accept-Post` 是响应标头，而 `Accept` 是请求标头。
+> [!NOTE]
+> `Accept-Post` 标头与 {{HTTPHeader("Accept")}} 标头类似，用于指定接受的媒体类型范围，但不同之处在于它并不支持优先级概念（即没有 `q` 参数）。这是因为 `Accept-Post` 是响应标头，而 `Accept` 是请求标头。
 
 ## 指令
 

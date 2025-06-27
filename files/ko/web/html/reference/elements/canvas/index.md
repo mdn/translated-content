@@ -67,7 +67,7 @@ original_slug: Web/HTML/Element/canvas
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `height`
   - : 좌표 공간의 높이입니다. CSS 픽셀 단위로, 기본값은 150입니다.

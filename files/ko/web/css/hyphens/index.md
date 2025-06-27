@@ -36,7 +36,7 @@ hyphens: auto;
 }
 ```
 
-붙임표 규칙은 언어별로 다릅니다. HTML의 언어는 [`lang`](/ko/docs/Web/HTML/Global_attributes/lang) 특성으로 알아낼 수 있으며, 브라우저는 lang 특성과 해당 언어에 적합한 붙임표 규칙이 모두 사용 가능할 때에만 붙임표를 추가합니다. XML에서는 [`xml:lang`](/ko/docs/Web/SVG/Attribute/xml:lang) 특성을 사용해야 합니다.
+붙임표 규칙은 언어별로 다릅니다. HTML의 언어는 [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 특성으로 알아낼 수 있으며, 브라우저는 lang 특성과 해당 언어에 적합한 붙임표 규칙이 모두 사용 가능할 때에만 붙임표를 추가합니다. XML에서는 [`xml:lang`](/ko/docs/Web/SVG/Attribute/xml:lang) 특성을 사용해야 합니다.
 
 > [!NOTE]
 > 명세는 붙임표 규칙을 명시하지 않고 있으므로 동작 방식이 브라우저마다 다를 수 있습니다.

@@ -184,7 +184,7 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 
 ## 실력을 평가해 보세요!
 
-이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions).
+이 문서를 끝까지 읽으셨지만, 중요한 것들을 여전히 기억하고 계신가요? 다음 문서를 읽기 전에 이 문서의 내용을 잘 학습하고 이해하셨는지 확인하실 수 있습니다 — [실력을 평가해 보세요: 함수](/ko/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions).
 
 ## 결론
 

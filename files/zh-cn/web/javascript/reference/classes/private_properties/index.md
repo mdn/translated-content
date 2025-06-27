@@ -151,7 +151,8 @@ class Subclass extends ClassWithPrivateField {
 new Subclass(); // 在一些开发工具中会显示：Subclass {#privateField: 42, #subPrivateField: 23}
 ```
 
-> **备注：** `ClassWithPrivateField` 基类的 `#privateField` 是 `ClassWithPrivateField` 私有的，不能从派生的 `Subclass` 类中访问。
+> [!NOTE]
+> `ClassWithPrivateField` 基类的 `#privateField` 是 `ClassWithPrivateField` 私有的，不能从派生的 `Subclass` 类中访问。
 
 #### 返回重写对象
 

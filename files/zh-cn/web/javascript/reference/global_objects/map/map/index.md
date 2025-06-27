@@ -14,7 +14,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **备注：** `Map()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试不使用 `new` 调用它会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `Map()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试不使用 `new` 调用它会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

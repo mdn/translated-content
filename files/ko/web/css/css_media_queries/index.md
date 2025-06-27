@@ -9,15 +9,15 @@ slug: Web/CSS/CSS_media_queries
 
 미디어 쿼리는 [반응형 디자인](/ko/docs/Web/Progressive_web_apps)의 핵심 구성 요소입니다. 예를 들어, 미디어 쿼리는 작은 기기에 맞춰 폰트 사이즈를 줄어들게 하거나, 세로 모드(portrait mode)일 때 단락의 패딩 값을 증가시킬 수도 있습니다. 혹은 터치 스크린에서 버튼 사이즈를 키울 수도 있습니다.
 
-[CSS](/ko/docs/Web/CSS)에서는 {{cssxref("@media")}} [@규칙](/ko/docs/Web/CSS/At-rule)을 사용해서 스타일 시트의 일부를 조건부로 적용합니다. 이 스타일 시트는 미디어 쿼리의 결과에 기반한 스타일 시트입니다. {{cssxref("@import")}}를 사용해서 조건부로 전체 스타일시트를 적용해보세요.
+[CSS](/ko/docs/Web/CSS)에서는 {{cssxref("@media")}} [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)을 사용해서 스타일 시트의 일부를 조건부로 적용합니다. 이 스타일 시트는 미디어 쿼리의 결과에 기반한 스타일 시트입니다. {{cssxref("@import")}}를 사용해서 조건부로 전체 스타일시트를 적용해보세요.
 
 ### HTML에서의 미디어 쿼리
 
 [HTML](/ko/docs/Web/HTML)에서 미디어 쿼리는 다양한 요소에 적용될 수 있습니다.:
 
-- {{HTMLElement("link")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/link#media) 속성에서는, 링크된 리소스 (일반적으로 CSS)가 적용되어야하는 미디어를 정의합니다.
+- {{HTMLElement("link")}} 요소의 [`media`](/ko/docs/Web/HTML/Reference/Elements/link#media) 속성에서는, 링크된 리소스 (일반적으로 CSS)가 적용되어야하는 미디어를 정의합니다.
 - {{HTMLElement("source")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/source#media) 속성에서는, 해당 소스가 적용되어야하는 미디어를 정의합니다. (이건 {{HTMLElement("picture")}} 요소 안에서만 유효합니다.)
-- {{HTMLElement("style")}} 요소의 [`media`](/ko/docs/Web/HTML/Element/style#media) 속성에서는, 스타일이 적용되어야하는 미디어를 정의합니다.
+- {{HTMLElement("style")}} 요소의 [`media`](/ko/docs/Web/HTML/Reference/Elements/style#media) 속성에서는, 스타일이 적용되어야하는 미디어를 정의합니다.
 
 ### JavaScript에서의 미디어 쿼리
 

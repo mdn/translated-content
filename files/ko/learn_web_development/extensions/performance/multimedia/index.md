@@ -46,7 +46,7 @@ l10n:
 
 ### 로딩 전략
 
-대부분의 웹사이트에서 가장 큰 개선 사항 중 하나는 방문자의 스크롤 여부와 무관하게 초기 페이지 로드 시 이미지를 모두 다운로드하는 대신, 스크롤을 해야 볼 수 있는 이미지를 [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)하는 것입니다. [lazysizes](https://github.com/aFarkas/lazysizes)와 같은 많은 JavaScript 라이브러리가 지연된 로딩을 구현하고 있으며, 웹 브라우저 제조사들도 내장 `lazyload` 속성을 실험적 기능으로 제공하고 있습니다.
+대부분의 웹사이트에서 가장 큰 개선 사항 중 하나는 방문자의 스크롤 여부와 무관하게 초기 페이지 로드 시 이미지를 모두 다운로드하는 대신, 스크롤을 해야 볼 수 있는 이미지를 [지연 로딩](/ko/docs/Web/Performance/Guides/Lazy_loading)하는 것입니다. [lazysizes](https://github.com/aFarkas/lazysizes)와 같은 많은 JavaScript 라이브러리가 지연된 로딩을 구현하고 있으며, 웹 브라우저 제조사들도 내장 `lazyload` 속성을 실험적 기능으로 제공하고 있습니다.
 
 이미지를 로딩된 이후에는 이미지 형식 자체를 들여다봐야 합니다.
 

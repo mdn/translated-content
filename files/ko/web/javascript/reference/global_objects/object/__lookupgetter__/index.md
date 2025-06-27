@@ -25,13 +25,13 @@ __lookupGetter__(prop)
 
 ### 반환 값
 
-지정된 속성에 접근자로 바인딩된 함수입니다. 해당 속성을 찾을 수 없거나 속성이 [데이터 속성](/ko/docs/Web/JavaScript/Data_structures#data_property)인 경우 `undefined`를 반환합니다.
+지정된 속성에 접근자로 바인딩된 함수입니다. 해당 속성을 찾을 수 없거나 속성이 [데이터 속성](/ko/docs/Web/JavaScript/Guide/Data_structures#data_property)인 경우 `undefined`를 반환합니다.
 
 ## 설명
 
 `Object.prototype`을 상속한 모든 객체(즉, [`null`-프로토타입 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)를 제외한 모든 객체)는 `__lookupGetter__()`를 상속합니다. 만약 [접근자](/ko/docs/Web/JavaScript/Reference/Functions/get)가 객체의 속성으로 정의되었다면 해당 속성은 해당 함수의 반환값을 참조하므로 해당 속성을 통해 접근자 함수를 참조할 수 없습니다. `__lookupGetter__()`를 사용하여 접근자 함수에 대한 참조를 얻을 수 있습니다.
 
-`__lookupGetter__()`는 [프로토타입 체인](/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)을 따라 올라가서 지정된 속성을 찾습니다. 프로토타입 체인에 있는 객체에 지정된 [자체 속성](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)이 있는 경우 해당 속성에 대한 [속성 설명자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)의 `get` 속성이 반환됩니다. 해당 속성이 데이터 속성인 경우 `undefined`이 반환됩니다. 전체 프로토타입 체인에서 해당 속성을 찾을 수 없는 경우 역시 `undefined`이 반환됩니다.
+`__lookupGetter__()`는 [프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)을 따라 올라가서 지정된 속성을 찾습니다. 프로토타입 체인에 있는 객체에 지정된 [자체 속성](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn)이 있는 경우 해당 속성에 대한 [속성 설명자](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)의 `get` 속성이 반환됩니다. 해당 속성이 데이터 속성인 경우 `undefined`이 반환됩니다. 전체 프로토타입 체인에서 해당 속성을 찾을 수 없는 경우 역시 `undefined`이 반환됩니다.
 
 `lookupGetter__()`는 명세에서 "권장 선택 사항"으로 정의되어 있으므로 구현체는 이를 구현할 필요는 없습니다. 그러나 모든 주요 브라우저에서 구현하고 있으며, 계속 사용되고 있기 때문에 제거될 가능성은 낮습니다. 브라우저가 `__lookupGetter__()`를 구현하는 경우 [`__lookupSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__lookupSetter__), [`__defineGetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineGetter__), 그리고 [`__defineSetter__()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/__defineSetter__) 메서드도 구현해야 합니다.
 

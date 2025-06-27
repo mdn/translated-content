@@ -85,7 +85,7 @@ l10n:
 
 - [인증서 투명성](/ko/docs/Web/Security/Certificate_Transparency)
   - : 인증서를 모니터링하고 감사하기 위한 공개 표준으로, 잘못된 인증서를 식별하는 데 사용할 수 있는 공개 로그 데이터베이스를 만듭니다.
-- [HTTP 엄격 전송 보안(HSTS)](/ko/docs/Web/HTTP/Headers/Strict-Transport-Security)
+- [HTTP 엄격 전송 보안(HSTS)](/ko/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
   - : HSTS는 서버가 프로토콜 다운그레이드 및 쿠키 하이재킹 공격으로부터 자신을 보호할 수 있도록 클라이언트에게 HTTPS만을 사용하여 서버와 통신할 수 있음을 알리는 데 사용됩니다.
 - [HTTP/2](/ko/docs/Glossary/HTTP_2)
   - : HTTP/2는 기술적으로 암호화를 사용하지 않아도 되지만, 대부분의 브라우저 개발자는 HTTPS와 함께 사용할 때만 지원하므로 보안/개인정보 보호를 강화하는 기능으로 생각할 수 있습니다.
@@ -98,7 +98,7 @@ l10n:
 
 브라우저는 사용자의 개인정보 보호를 자동으로 강화하는 여러 추적 방지 기능을 구현했습니다. 이들 중 다수는 최상위 도메인에서 설정된 쿠키에 접근하거나 추적 스크립트를 실행하는 등의 제3자 사이트의 능력을 차단하거나 제한합니다.
 
-- {{httpheader("Set-Cookie")}} 헤더의 [`SameSite`](/ko/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 속성의 기본값이 `Lax`로 업데이트되어 추적 및 {{glossary("CSRF")}} 공격에 대한 보호를 제공합니다. 자세한 내용은 [SameSite로 제3자 쿠키 제어](/ko/docs/Web/HTTP/Cookies#controlling_third-party_cookies_with_samesite)를 참조하십시오.
+- {{httpheader("Set-Cookie")}} 헤더의 [`SameSite`](/ko/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 속성의 기본값이 `Lax`로 업데이트되어 추적 및 {{glossary("CSRF")}} 공격에 대한 보호를 제공합니다. 자세한 내용은 [SameSite로 제3자 쿠키 제어](/ko/docs/Web/HTTP/Guides/Cookies#controlling_third-party_cookies_with_samesite)를 참조하십시오.
 - 모든 브라우저는 기본적으로 제3자 쿠키를 차단하기 시작했습니다. 자세한 내용은 [브라우저는 제3자 쿠키를 어떻게 처리합니까?](/ko/docs/Web/Privacy/Third-party_cookies#how_do_browsers_handle_third-party_cookies)를 참조하십시오.
 - 브라우저는 특정 상황에서만 제3자 쿠키를 허용하거나 현재 제3자 쿠키가 필요한 일반적인 사용 사례를 대체하는 기술을 구현하고 있습니다. 자세한 내용은 [제3자 쿠키에서 전환](/ko/docs/Web/Privacy/Third-party_cookies#transitioning_from_third-party_cookies) 및 [제3자 쿠키 대체](/ko/docs/Web/Privacy/Third-party_cookies#replacing_third-party_cookies)를 참조하십시오.
 - 여러 브라우저는 URL에서 알려진 추적 매개변수를 제거합니다. 여기에는 Firefox, Safari, Brave가 포함됩니다. 브라우저 확장 프로그램도 이를 도와줍니다. 예를 들어 [ClearURLs](https://addons.mozilla.org/en-GB/firefox/addon/clearurls/)을 참조하십시오.
@@ -212,7 +212,7 @@ l10n:
 - 사용자 데이터를 수집하기 위한 자체 솔루션을 구현하려면 무엇을 하는지 이해해야 합니다. 경험이 풍부한 서버 측 개발자 및/또는 보안 엔지니어를 고용하여 시스템을 구현하고 철저히 테스트하십시오. 더 나은 보호를 위해 다중 요소 인증(MFA)을 사용하십시오. 클라이언트 측 앱을 간소화하기 위해 [웹 인증](/ko/docs/Web/API/Web_Authentication_API) 또는 [연합 자격 증명 관리](/ko/docs/Web/API/FedCM_API)와 같은 전용 API를 사용하는 것을 고려하십시오.
 - 사용자 가입 정보를 수집할 때, 사용자의 계정 세부 정보를 쉽게 추측할 수 없도록 강력한 비밀번호를 적용하십시오. 약한 비밀번호는 보안 침해의 주요 원인 중 하나입니다. 사용자가 비밀번호 관리자를 사용하여 복잡한 비밀번호를 생성하고 저장하도록 권장하십시오. 이렇게 하면 비밀번호를 기억하는 것에 대해 걱정하지 않거나 적어두어 보안 위험을 초래하지 않습니다.
 - URL에 민감한 데이터를 포함하지 마십시오. 제3자가 URL을 가로채면(예: {{httpheader("Referer")}} 헤더를 통해) 해당 정보를 훔칠 수 있습니다. 이를 피하기 위해 `GET` 요청 대신 `POST` 요청을 사용하십시오.
-- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP) 및 [권한 정책](/ko/docs/Web/HTTP/Permissions_Policy)과 같은 도구를 사용하여 사이트에서 기능 사용 집합을 강제하여 취약성을 도입하기 어렵게 만드십시오. 이를 수행할 때 주의하십시오. 제3자 스크립트가 작동하는 데 의존하는 기능 사용을 차단하면 사이트 기능이 중단될 수 있습니다. 이는 제3자 리소스를 감사할 때 조사할 수 있는 사항입니다(참조: [제3자 리소스 신중하게 관리](#carefully_manage_third-party_resources)).
+- [콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP) 및 [권한 정책](/ko/docs/Web/HTTP/Permissions_Policy)과 같은 도구를 사용하여 사이트에서 기능 사용 집합을 강제하여 취약성을 도입하기 어렵게 만드십시오. 이를 수행할 때 주의하십시오. 제3자 스크립트가 작동하는 데 의존하는 기능 사용을 차단하면 사이트 기능이 중단될 수 있습니다. 이는 제3자 리소스를 감사할 때 조사할 수 있는 사항입니다(참조: [제3자 리소스 신중하게 관리](#carefully_manage_third-party_resources)).
 
 ## 참고 자료
 

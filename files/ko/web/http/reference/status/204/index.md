@@ -43,4 +43,4 @@ HTTP **`204 No Content`** 성공 상태 응답 코드는 요청이 성공했으�
 
 ## 같이 보기
 
-- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)
+- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Reference/Methods)

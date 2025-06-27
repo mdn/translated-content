@@ -37,7 +37,8 @@ slug: Web/HTML/Reference/Elements/img
 
 HTML 标准并没有给出需要支持的图像格式的列表，因此每个{{glossary("user agent", "用户代理")}}支持一组不同的格式。
 
-> **备注：** [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
+> [!NOTE]
+> [网页浏览器图像格式指南](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)提供了有关图像格式及 Web 浏览器支持的综合信息。本节只是一个总结！
 
 Web 最常用的图像格式是：
 

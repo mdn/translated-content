@@ -64,7 +64,8 @@ path( [<fill-rule>,]? <string> )
 
 - [`<fill-rule>`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule) {{optional_inline}}
   - : 可选值为 [`nonzero`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule#nonzero)（默认值，当省略时）或 [`evenodd`](/zh-CN/docs/Web/SVG/Reference/Attribute/fill-rule#evenodd)，定义填充形状内部的规则。
-    > **备注：** {{cssxref("offset-path")}} 不支持 `<fill-rule>` 值，使用它会使属性失效。
+    > [!NOTE]
+    > {{cssxref("offset-path")}} 不支持 `<fill-rule>` 值，使用它会使属性失效。
 
 - {{cssxref("string")}}
   - : 用于定义 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)的[数据字符串](/zh-CN/docs/Web/SVG/Reference/Attribute/d)。该 `<string>` 的内容语法与 SVG 相同。

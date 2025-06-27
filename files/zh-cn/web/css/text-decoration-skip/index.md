@@ -26,7 +26,8 @@ text-decoration-skip: initial;
 text-decoration-skip: unset;
 ```
 
-> **备注：** `ink` 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。
+> [!NOTE]
+> `ink` 值被移动至 {{cssxref("text-decoration-skip-ink")}} 属性。
 
 {{cssinfo}}
 

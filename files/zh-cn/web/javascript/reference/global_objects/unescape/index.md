@@ -7,7 +7,8 @@ l10n:
 
 {{jsSidebar("Objects")}}{{Deprecated_Header}}
 
-> **备注：** `unescape()` 是由浏览器实现的非标准函数，其仅针对跨引擎兼容性而进行了标准化。并不要求所有的 JavaScript 引擎都实现它，并且可能无法在所有地方都正常工作。如果可能的话，请使用 {{jsxref("decodeURIComponent()")}} 或 {{jsxref("decodeURI()")}}。
+> [!NOTE]
+> `unescape()` 是由浏览器实现的非标准函数，其仅针对跨引擎兼容性而进行了标准化。并不要求所有的 JavaScript 引擎都实现它，并且可能无法在所有地方都正常工作。如果可能的话，请使用 {{jsxref("decodeURIComponent()")}} 或 {{jsxref("decodeURI()")}}。
 
 **`unescape()`** 函数计算一个新的字符串，将其中的十六进制转义序列替换为它们所代表的字符。转义序列可能是由 {{jsxref("escape()")}} 等函数引入的。
 

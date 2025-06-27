@@ -10,7 +10,7 @@ l10n:
 
 ## 설명
 
-`aria-describedby` 속성은 객체를 설명하는 요소의 [`id`](/ko/docs/Web/HTML/Global_attributes#id)를 나열합니다. 위젯 또는 그룹과 이를 설명하는 텍스트 간의 관계를 설정하는데 사용됩니다.
+`aria-describedby` 속성은 객체를 설명하는 요소의 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id)를 나열합니다. 위젯 또는 그룹과 이를 설명하는 텍스트 간의 관계를 설정하는데 사용됩니다.
 
 `aria-describedby` 속성은 폼 컨트롤에만 제한되지 않습니다. 정적 텍스트를 위젯, 요소 그룹, 제목이 있는 영역, 정의 등과 연결하는 데에도 사용할 수 있습니다. `aria-describedby` 속성은 시맨틱 HTML 요소와 ARIA [`role`](/ko/docs/Web/Accessibility/ARIA/Roles)이 있는 요소와 함께 사용될 수 있습니다.
 

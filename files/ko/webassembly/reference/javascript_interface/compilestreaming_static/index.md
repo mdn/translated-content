@@ -21,12 +21,12 @@ WebAssembly.compileStreaming(source);
 
 ### Return value
 
-`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/WebAssembly/JavaScript_interface/Module) 객체로 반환됩니다.
+`Promise`는 컴파일 된 모듈로 표현된 [`WebAssembly.Module`](/ko/docs/WebAssembly/Reference/JavaScript_interface/Module) 객체로 반환됩니다.
 
 ### Exceptions
 
 - `bufferSource`가 [typed array](/ko/docs/Web/JavaScript/Guide/Typed_arrays)가 아니면 [`TypeError`](/ko/docs/Web/JavaScript/Reference/Global_Objects/TypeError)가 발생합니다.
-- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/WebAssembly/JavaScript_interface/CompileError)와 함께 reject가 반환됩니다.
+- 컴파일에 실패하면 promise는 [`WebAssembly.CompileError`](/ko/docs/WebAssembly/Reference/JavaScript_interface/CompileError)와 함께 reject가 반환됩니다.
 
 ## Examples
 
@@ -53,5 +53,5 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
 ## See also
 
 - [WebAssembly](/ko/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

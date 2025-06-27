@@ -65,7 +65,7 @@ PWA 접근은 시도해볼만한 가치가 있으며, 여러분의 앱에서 동
 
 PWA를 위해 요구되는 핵심 요소는 [service worker](/ko/docs/Web/API/Service_Worker_API) 지원입니다. 고맙게도 service worker는 현재 데스크탑 및 모바일의 [모든 주요 브라우저에서 지원됩니다](https://jakearchibald.github.io/isserviceworkerready/).
 
-[웹 앱 Manifest](/ko/docs/Web/Manifest), [푸시](/ko/docs/Web/API/Push_API), [알림](/ko/docs/Web/API/Notifications_API), [홈 화면에 추가](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) 기능과 같은 다른 기능들도 널리 지원되고 있습니다. 현재 Safari에서는 웹 앱 Manifest 및 홈 화면에 추가에 지원이 제한적이며 웹 푸시 알림은 지원하지 않습니다. 반면, 다른 주요 브라우저에서는 이 모든 기능들을 지원합니다.
+[웹 앱 Manifest](/ko/docs/Web/Progressive_web_apps/Manifest), [푸시](/ko/docs/Web/API/Push_API), [알림](/ko/docs/Web/API/Notifications_API), [홈 화면에 추가](/ko/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable) 기능과 같은 다른 기능들도 널리 지원되고 있습니다. 현재 Safari에서는 웹 앱 Manifest 및 홈 화면에 추가에 지원이 제한적이며 웹 푸시 알림은 지원하지 않습니다. 반면, 다른 주요 브라우저에서는 이 모든 기능들을 지원합니다.
 
 이러한 API의 일부는 실험중이며 문서도 여전히 완성되지 않았지만, Flipkart 와 AliExpress와 같은 성공 스토리를 보면 여러분의 웹 앱에 PWA 기능의 일부를 시도하고 구현하는 것에 대해 이미 납득이 되었을것입니다.
 

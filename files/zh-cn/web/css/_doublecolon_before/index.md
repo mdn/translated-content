@@ -54,7 +54,8 @@ a::before {
 
 如果 [`content`](/zh-CN/docs/Web/CSS/content) 属性没有明确指定，或者有一个无效值，或者其值为 `normal` 或 `none`，则 `::before` 伪元素不会被渲染。它的行为就好像设置了 `display: none` 一样。
 
-> **备注：** [Selectors 第 3 版](https://drafts.csswg.org/selectors-3/#gen-content)引入了双冒号标记法 `::before`，以将[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)区别开。浏览器也接受由 CSS2 引入的 `:before` 写法。
+> [!NOTE]
+> [Selectors 第 3 版](https://drafts.csswg.org/selectors-3/#gen-content)引入了双冒号标记法 `::before`，以将[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)和[伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)区别开。浏览器也接受由 CSS2 引入的 `:before` 写法。
 
 ## 示例
 

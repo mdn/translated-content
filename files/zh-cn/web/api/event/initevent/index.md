@@ -9,7 +9,8 @@ slug: Web/API/Event/initEvent
 
 用这种方式初始化事件必须是由 {{ domxref("Document.createEvent()") }} 方法创建的实例。本方法必须在事件被触发之前调用（用{{ domxref("EventTarget.dispatchEvent()") }}调用）.事件 一旦被调用，便不再做其他任何事。
 
-> **备注：** **不建议再使用此方法（方法已经过时 deprecated）**
+> [!NOTE]
+> **不建议再使用此方法（方法已经过时 deprecated）**
 >
 > 可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 [Creating and triggering events](/zh-CN/docs/Web/Events/Creating_and_triggering_events) .
 

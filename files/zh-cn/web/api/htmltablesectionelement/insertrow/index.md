@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("HTMLTableSectionElement")}} 接口的 **`insertRow()`** 方法在给定的表格分段元素（{{HTMLElement("thead")}}、{{HTMLElement("tfoot")}} 或 {{HTMLElement("tbody")}}）插入一个新行（{{HtmlElement("tr")}}），然后返回新行的引用。
 
-> **备注：** `insertRow()` 将行直接插入到分段（section）中，该行不需要像使用 {{domxref("Document.createElement()")}} 创建新的 `<tr>` 元素那样单独追加。
+> [!NOTE]
+> `insertRow()` 将行直接插入到分段（section）中，该行不需要像使用 {{domxref("Document.createElement()")}} 创建新的 `<tr>` 元素那样单独追加。
 
 ## 语法
 

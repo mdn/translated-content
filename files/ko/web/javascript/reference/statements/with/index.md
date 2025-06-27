@@ -107,7 +107,7 @@ with (Math) {
 
 ### 현재 스코프에서 속성 구조 분해 할당을 사용하여 with문 피하기
 
-대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
+대부분의 경우 [속성 구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)을 통해서 `with` 사용을 피할 수 있습니다. 여기서는 `with`가 추가 스코프를 생성하는 동작을 모방하기 위해 추가 블록을 만들었지만 실제 사용에서는 이 블록을 보통 생략할 수 있습니다.
 
 ```js
 let a, x, y;

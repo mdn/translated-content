@@ -34,7 +34,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 
 ## `Memory` instances
 
-모든 `Memory` 인스턴스는 `Memory()`생성자의 [prototype object](/ko/docs/WebAssembly/JavaScript_interface/Memory)를 상속합니다.이 인스턴스는 모든 `Memory` 인스턴스에 적용되도록 수정할 수 있습니다.
+모든 `Memory` 인스턴스는 `Memory()`생성자의 [prototype object](/ko/docs/WebAssembly/Reference/JavaScript_interface/Memory)를 상속합니다.이 인스턴스는 모든 `Memory` 인스턴스에 적용되도록 수정할 수 있습니다.
 
 ### Instance properties
 
@@ -82,5 +82,5 @@ WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
 ## See also
 
 - [WebAssembly](/ko/docs/WebAssembly) overview page
-- [WebAssembly concepts](/ko/docs/WebAssembly/Concepts)
-- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Using_the_JavaScript_API)
+- [WebAssembly concepts](/ko/docs/WebAssembly/Guides/Concepts)
+- [Using the WebAssembly JavaScript API](/ko/docs/WebAssembly/Guides/Using_the_JavaScript_API)

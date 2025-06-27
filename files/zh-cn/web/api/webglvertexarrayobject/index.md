@@ -14,7 +14,8 @@ slug: Web/API/WebGLVertexArrayObject
 - {{domxref("WebGL2RenderingContext.isVertexArray()")}}
 - {{domxref("WebGL2RenderingContext.bindVertexArray()")}}
 
-> **备注：** **WebGL 1:** {{domxref("OES_vertex_array_object")}} 扩展允许你在 WebGL 1 上下文环境中使用顶点数组对象。
+> [!NOTE]
+> **WebGL 1:** {{domxref("OES_vertex_array_object")}} 扩展允许你在 WebGL 1 上下文环境中使用顶点数组对象。
 
 ## 示例
 

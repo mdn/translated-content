@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object
 
 {{JSRef}}
 
-**`Object`** 클래스는 [JavaScript의 데이터 유형](/ko/docs/Web/JavaScript/Data_structures) 중 하나를 나타냅니다. 다양한 키 모음 및 더 복잡한 엔티티들을 저장하는 데 사용됩니다. 객체는 {{jsxref("Object/Object", "Object()")}} 생성자 또는 [객체 초기자 / 리터럴 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)를 통해 생성할 수 있습니다.
+**`Object`** 클래스는 [JavaScript의 데이터 유형](/ko/docs/Web/JavaScript/Guide/Data_structures) 중 하나를 나타냅니다. 다양한 키 모음 및 더 복잡한 엔티티들을 저장하는 데 사용됩니다. 객체는 {{jsxref("Object/Object", "Object()")}} 생성자 또는 [객체 초기자 / 리터럴 구문](/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)를 통해 생성할 수 있습니다.
 
 ## 설명
 
@@ -99,7 +99,7 @@ JavaScript의 거의 모든 객체는 {{jsxref("Object")}}의 인스턴스입니
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
   - : 이 메서드를 호출한 객체가 지정한 객체의 프로토타입 체인에 있는지 여부를 나타내는 불리언 값을 반환합니다.
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}
-  - : 내부 [ECMAScript \[\[Enumerable\]\] 속성](/ko/docs/Web/JavaScript/Data_structures##%ec%86%8d%ec%84%b1_properties)이 설정되었는지 여부를 나타내는 불리언 값을 반환합니다.
+  - : 내부 [ECMAScript \[\[Enumerable\]\] 속성](/ko/docs/Web/JavaScript/Guide/Data_structures##%ec%86%8d%ec%84%b1_properties)이 설정되었는지 여부를 나타내는 불리언 값을 반환합니다.
 - {{jsxref("Object.prototype.toLocaleString()")}}
   - : {{jsxref("Object.toString", "toString()")}}를 호출합니다.
 - {{jsxref("Object.prototype.toString()")}}

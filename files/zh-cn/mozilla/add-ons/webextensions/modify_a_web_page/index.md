@@ -44,7 +44,8 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 > [!NOTE]
 > 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
 
-> **备注：** `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
+> [!NOTE]
+> `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
 
 在 "modify-page" 文件夹下创建“page-eater.js”文件，内容如下：
 

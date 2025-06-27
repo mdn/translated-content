@@ -160,7 +160,8 @@ checkGuess();
 
 在按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 之后，你应该会看到一个告警窗口，显示 `I am a placeholder`；我们在代码中定义了一个函数，当我们调用它时，其都会创建一个告警窗口。
 
-> **备注：** [后续课程](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)将讲解更多有关函数的知识。
+> [!NOTE]
+> [后续课程](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions)将讲解更多有关函数的知识。
 
 ### 运算符（Operator）
 

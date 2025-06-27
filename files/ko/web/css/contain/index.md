@@ -11,8 +11,8 @@ slug: Web/CSS/contain
 
 > **참고:** `paint`, `strict`, `content` 값을 설정할 경우 다음을 생성합니다.
 >
-> 1. 새로운 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) ({{cssxref("position")}} 속성이 `absolute` 또는 `fixed`인 자손을 위함).
-> 2. 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context).
+> 1. 새로운 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) ({{cssxref("position")}} 속성이 `absolute` 또는 `fixed`인 자손을 위함).
+> 2. 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context).
 > 3. 새로운 [블록 서식 맥락](/ko/docs/Web/CSS/CSS_display/Block_formatting_context).
 
 ## 구문

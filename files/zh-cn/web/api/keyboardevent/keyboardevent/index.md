@@ -33,7 +33,8 @@ new KeyboardEvent(type, options)
     - `"keyCode"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.keyCode")}} (已废弃) 的值。
     - `"which"`, 可选，默认为 `0`, `unsigned long` 类型，设置{{domxref("KeyboardEvent.which")}} (已废弃) 的值。
 
-    > **备注：** `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
+    > [!NOTE]
+    > `KeyboardEventInit` 字典也可以接受来自 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和 {{domxref("Event.Event", "EventInit")}} 的字典字段值。
 
 ## 规范
 

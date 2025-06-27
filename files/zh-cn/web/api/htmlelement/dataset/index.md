@@ -7,7 +7,8 @@ slug: Web/API/HTMLElement/dataset
 
 {{DOMxRef("HTMLElement")}} 接口的只读属性 **`dataset`** 提供了对元素上[自定义数据属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)（`data-*`）读/写访问。它暴露了一个字符串映射（{{domxref("DOMStringMap")}}），其中包含每个 `data-*` 属性条目。
 
-> **备注：** `dataset` 属性本身可以被读取，但是不能直接写入。相反，所有写入都必须是写入 `dataset` 的单个属性，而 dataset 又表示这些数据的属性。
+> [!NOTE]
+> `dataset` 属性本身可以被读取，但是不能直接写入。相反，所有写入都必须是写入 `dataset` 的单个属性，而 dataset 又表示这些数据的属性。
 
 一个 HTML 的 `data-*` 属性和它相关的 DOM `dataset.property` 根据它们的读取或者写入的位置修改其共享的名称：
 

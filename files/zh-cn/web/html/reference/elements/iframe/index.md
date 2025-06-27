@@ -187,7 +187,8 @@ iframe {
 
 作为一个{{glossary("Replaced elements", "可替换元素")}}，可以使用 {{cssxref("object-position")}} 来调整 `<iframe>` 元素内嵌入的文档的位置。
 
-> **备注：** {{cssxref("object-fit")}} 属性对 `<iframe>` 元素没有影响。
+> [!NOTE]
+> {{cssxref("object-fit")}} 属性对 `<iframe>` 元素没有影响。
 
 ## `error` 和 `load` 事件行为
 

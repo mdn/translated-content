@@ -36,7 +36,7 @@ l10n:
 - 몇 가지 속성들은 모든 양식 컨트롤에 공통적으로 적용됩니다.
 
 > [!NOTE]
-> 다음 두 글에서 더욱 강력한 양식 컨트롤에 대해 다룹니다. 좀 더 고급 참조를 원하시면, [HTML 양식 요소 참조](/ko/docs/Web/HTML/Element#forms)와 특히 [\<input\> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
+> 다음 두 글에서 더욱 강력한 양식 컨트롤에 대해 다룹니다. 좀 더 고급 참조를 원하시면, [HTML 양식 요소 참조](/ko/docs/Web/HTML/Reference/Elements#forms)와 특히 [\<input\> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
 
 ## 텍스트 입력 필드
 
@@ -49,8 +49,8 @@ l10n:
 
 - [`readonly`](/ko/docs/Web/HTML/Element/input#readonly)로 표시될 수 있습니다(사용자는 입력 값을 수정할 수 없지만, 나머지 양식 데이터와 함께 전송됩니다) 또는 [`disabled`](/ko/docs/Web/HTML/Element/input#disabled) (입력 값은 수정할 수 없고, 나머지 양식 데이터와 함께 전송되지 않습니다).
 - [`placeholder`](/ko/docs/Web/HTML/Element/input#placeholder)를 가질 수 있습니다. 이는 텍스트 입력 상자 안에 나타나는 텍스트로, 텍스트 입력 상자의 목적을 간략하게 설명하는 데 사용되어야 합니다.
-- [`size`](/ko/docs/Web/HTML/Attributes/size) (상자의 물리적 크기)와 [`maxlength`](/ko/docs/Web/HTML/Attributes/maxlength) (상자에 입력할 수 있는 최대 문자 수)에서 제한될 수 있습니다.
-- 브라우저가 지원하는 경우 철자 검사를 받을 수 있습니다([`spellcheck`](/ko/docs/Web/HTML/Global_attributes/spellcheck) 속성 사용).
+- [`size`](/ko/docs/Web/HTML/Reference/Attributes/size) (상자의 물리적 크기)와 [`maxlength`](/ko/docs/Web/HTML/Reference/Attributes/maxlength) (상자에 입력할 수 있는 최대 문자 수)에서 제한될 수 있습니다.
+- 브라우저가 지원하는 경우 철자 검사를 받을 수 있습니다([`spellcheck`](/ko/docs/Web/HTML/Reference/Global_attributes/spellcheck) 속성 사용).
 
 > **참고:** {{htmlelement("input")}} 요소는 입력 유형에 따라 여러 가지 형태를 취할 수 있기 때문에 HTML 요소 중에서 유일합니다. 단일 줄 텍스트 필드, 시간 및 날짜 컨트롤, 텍스트 입력 없는 컨트롤(예: 체크박스, 라디오 버튼, 색상 선택기) 및 버튼을 포함한 대부분의 양식 위젯을 생성하는 데 사용됩니다.
 
@@ -101,7 +101,7 @@ l10n:
 
 ## 체크 가능한 항목: 체크박스와 라디오 버튼
 
-체크 가능한 항목은 클릭하여 또는 관련 레이블을 클릭하여 상태를 변경할 수 있는 컨트롤입니다. 체크 가능한 항목에는 체크박스와 라디오 버튼 두 가지 유형이 있습니다. 둘 다 기본적으로 위젯이 체크되어 있는지 여부를 나타내는 [`checked`](/ko/docs/Web/HTML/Element/input/checkbox#checked) 속성을 사용합니다.
+체크 가능한 항목은 클릭하여 또는 관련 레이블을 클릭하여 상태를 변경할 수 있는 컨트롤입니다. 체크 가능한 항목에는 체크박스와 라디오 버튼 두 가지 유형이 있습니다. 둘 다 기본적으로 위젯이 체크되어 있는지 여부를 나타내는 [`checked`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox#checked) 속성을 사용합니다.
 
 이러한 위젯이 다른 양식 위젯과 정확히 같은 방식으로 동작하지 않는 것은 주목할 만한 사실입니다. 대부분의 양식 위젯의 경우, 양식이 제출되면 [`name`](/ko/docs/Web/HTML/Element/input#name) 속성을 가진 모든 위젯이 전송됩니다. 값을 입력하지 않아도 마찬가지입니다. 체크 가능한 항목의 경우, 체크되어 있으면 값만 전송됩니다. 이름조차도 체크되어 있지 않으면 아무것도 전송되지 않습니다, 값이 없지만 체크되어 있으면 이름이 _on_ 값과 함께 전송됩니다.
 
@@ -113,7 +113,7 @@ l10n:
 <input type="checkbox" id="questionOne" name="subscribe" value="yes" checked />
 ```
 
-관련 체크박스 항목은 동일한 [`name`](/ko/docs/Web/HTML/Element/input#name) 속성을 사용해야 합니다. [`checked`](/ko/docs/Web/HTML/Element/input/checkbox#checked) 속성을 포함하면 페이지가 로드될 때 체크박스가 자동으로 체크됩니다. 체크박스를 클릭하거나 관련 레이블을 클릭하면 체크박스가 켜고 꺼집니다.
+관련 체크박스 항목은 동일한 [`name`](/ko/docs/Web/HTML/Element/input#name) 속성을 사용해야 합니다. [`checked`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox#checked) 속성을 포함하면 페이지가 로드될 때 체크박스가 자동으로 체크됩니다. 체크박스를 클릭하거나 관련 레이블을 클릭하면 체크박스가 켜고 꺼집니다.
 
 ### 라디오 버튼
 
@@ -161,7 +161,7 @@ http://foo.com?pos.x=123&pos.y=456
 
 마지막으로 초기 HTML에서 우리에게 제공된 `<input>` 유형이 하나 있습니다. 파일 입력 유형. 양식은 서버로 파일을 전송할 수 있습니다. 파일 선택기 위젯은 전송할 하나 이상의 파일을 선택하는 데 사용될 수 있습니다.
 
-{{HTMLElement("input")}} 요소의 [`type`](/ko/docs/Web/HTML/Element/input#type) 속성 값을 `file`로 설정하여 [파일 선택기 위젯](/ko/docs/Web/HTML/Element/input/file)을 만듭니다. [`accept`](/ko/docs/Web/HTML/Element/input#accept) 속성을 사용하여 허용되는 파일의 유형을 제한할 수 있습니다. 또한 사용자가 여러 파일을 선택하도록 허용하려면 [`multiple`](/ko/docs/Web/HTML/Element/input#multiple) 속성을 추가하면 됩니다.
+{{HTMLElement("input")}} 요소의 [`type`](/ko/docs/Web/HTML/Element/input#type) 속성 값을 `file`로 설정하여 [파일 선택기 위젯](/ko/docs/Web/HTML/Reference/Elements/input/file)을 만듭니다. [`accept`](/ko/docs/Web/HTML/Element/input#accept) 속성을 사용하여 허용되는 파일의 유형을 제한할 수 있습니다. 또한 사용자가 여러 파일을 선택하도록 허용하려면 [`multiple`](/ko/docs/Web/HTML/Element/input#multiple) 속성을 추가하면 됩니다.
 
 ### 예시
 
@@ -183,13 +183,13 @@ http://foo.com?pos.x=123&pos.y=456
 
 폼 컨트롤을 정의하는데 사용되는 많은 요소들은 고유한 특정 속성들을 가지고 있습니다. 그러나 모든 폼 요소에 공통으로 적용되는 속성들이 있습니다. 아래에는 이미 알고 있는 것들을 포함한 그러한 공통 속성들의 목록이 있습니다.
 
-| 속성 이름                                                  | 기본 값 | 설명                                                                                                                                                                                                                                                          |
-| ---------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [autofocus](/ko/docs/Web/HTML/Global_attributes/autofocus) | false   | 이 부울 속성은 페이지가 로드될 때 요소가 자동으로 입력 포커스를 가져야 함을 지정합니다. 문서에 이 속성을 지정할 수 있는 폼 관련 요소는 하나뿐입니다.                                                                                                          |
-| [disabled](/ko/docs/Web/HTML/Attributes/disabled)          | false   | 이 부울 속성은 사용자가 요소와 상호 작용할 수 없음을 나타냅니다. 이 속성이 지정되지 않으면 요소는 포함하는 요소, 예를 들어, {{HTMLElement("fieldset")}}의 설정을 상속합니다. `disabled` 속성이 설정된 포함 요소가 없으면 요소는 활성화됩니다.                 |
-| [form](/ko/docs/Web/HTML/Element/form)                     |         | 위젯이 연결된 <code>&#x3C;form></code> 요소, 중첩되어 있지 않은 경우에 사용됩니다. 속성의 값은 같은 문서의 {{HTMLElement("form")}} 요소의 <code>id</code> 속성이어야 합니다. 이를 통해 폼 컨트롤을 다른 폼 요소 내부에 있더라도 해당 폼과 연결할 수 있습니다. |
-| [name](/ko/docs/Web/HTML/Element/input#name)               |         | 요소의 이름입니다. 이것은 폼 데이터와 함께 제출됩니다.                                                                                                                                                                                                        |
-| [value](/ko/docs/Web/HTML/Element/input#value)             |         | 요소의 초기 값입니다.                                                                                                                                                                                                                                         |
+| 속성 이름                                                   | 기본 값 | 설명                                                                                                                                                                                                                                                          |
+| ----------------------------------------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [autofocus](/ko/docs/Web/HTML/Global_attributes/autofocus)  | false   | 이 부울 속성은 페이지가 로드될 때 요소가 자동으로 입력 포커스를 가져야 함을 지정합니다. 문서에 이 속성을 지정할 수 있는 폼 관련 요소는 하나뿐입니다.                                                                                                          |
+| [disabled](/ko/docs/Web/HTML/Reference/Attributes/disabled) | false   | 이 부울 속성은 사용자가 요소와 상호 작용할 수 없음을 나타냅니다. 이 속성이 지정되지 않으면 요소는 포함하는 요소, 예를 들어, {{HTMLElement("fieldset")}}의 설정을 상속합니다. `disabled` 속성이 설정된 포함 요소가 없으면 요소는 활성화됩니다.                 |
+| [form](/ko/docs/Web/HTML/Reference/Elements/form)           |         | 위젯이 연결된 <code>&#x3C;form></code> 요소, 중첩되어 있지 않은 경우에 사용됩니다. 속성의 값은 같은 문서의 {{HTMLElement("form")}} 요소의 <code>id</code> 속성이어야 합니다. 이를 통해 폼 컨트롤을 다른 폼 요소 내부에 있더라도 해당 폼과 연결할 수 있습니다. |
+| [name](/ko/docs/Web/HTML/Element/input#name)                |         | 요소의 이름입니다. 이것은 폼 데이터와 함께 제출됩니다.                                                                                                                                                                                                        |
+| [value](/ko/docs/Web/HTML/Element/input#value)              |         | 요소의 초기 값입니다.                                                                                                                                                                                                                                         |
 
 ## 실력을 시험해 보세요!
 

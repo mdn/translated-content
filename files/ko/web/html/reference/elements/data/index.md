@@ -74,7 +74,7 @@ data:hover::after {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다
 
 - `value`
   - : 기계가 읽을 수 있는 형태의 콘텐츠 해석본.

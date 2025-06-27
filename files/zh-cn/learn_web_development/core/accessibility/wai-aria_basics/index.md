@@ -253,7 +253,8 @@ const intervalID = setInterval(showQuote, 10000);
 > [!NOTE]
 > 你可在此完成此例子 [aria-live.html](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([在线 demo](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
 
-> **备注：** [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性对于控制更新实时区域时读取的内容也非常有用。例如，你读取内容添加或删除。
+> [!NOTE]
+> [`aria-relevant`](https://www.w3.org/TR/wai-aria-1.1/#aria-relevant) 属性对于控制更新实时区域时读取的内容也非常有用。例如，你读取内容添加或删除。
 
 ### 优化键盘的无障碍操作
 

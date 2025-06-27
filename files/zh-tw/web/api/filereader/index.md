@@ -63,7 +63,8 @@ File 物件可以從使用者於 {{HTMLElement("input")}} 元素選擇之檔案�
 - {{domxref("FileReader.onprogress")}}
   - : [`progress`](/zh-TW/docs/Web/API/XMLHttpRequest/progress_event) 事件處理器，於讀取 {{domxref("Blob")}} 內容時觸發。
 
-> **備註：** `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。
+> [!NOTE]
+> `FileReader` 物件繼承自 {{domxref("EventTarget")}}，其所有的事件也都能夠透過 {{domxref("EventTarget.addEventListener()","addEventListener")}} 方法來註冊事件監聽器。
 
 ## 方法
 

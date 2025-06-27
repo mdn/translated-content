@@ -60,7 +60,8 @@ clip-path: shape(
 
     - `evenodd`：如果从某点绘制的射线穿过的路径段数量为奇数，则该点被视为在形状内部。这意味着每当射线进入形状时，它都没有相等数量的退出，表明缺少对应的退出而具有奇数个条目。
 
-    > **警告：** `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
+    > [!WARNING]
+    > `<fill-rule>` 不受 {{cssxref("offset-path")}} 支持，使用它会使该属性无效。
 
 - `from <coordinate-pair>`
   - : 将第一个 `<shape-command>` 的起始点定义为一对坐标，这些坐标是从[参考框](/zh-CN/docs/Web/CSS/CSS_shapes/Basic_shapes#参考框)的左上角测量得到的。这些坐标被指定为用空格分隔的 `<x> <y>` {{cssxref("&lt;length-percentage&gt;")}} 值，分别表示左偏移和上偏移。百分比值相对于元素的参考框的宽度和高度计算。在此参数后添加逗号。

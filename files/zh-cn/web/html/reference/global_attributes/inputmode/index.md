@@ -26,7 +26,8 @@ slug: Web/HTML/Reference/Global_attributes/inputmode
 
 如果没有设置这个属性，它的默认值是 `"text"`，表明使用本地的标准文本输入键盘。
 
-> **警告：** [WHATWG(超文本应用技术工作组) 规范中列出了 `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), 并且现代浏览器正在努力支持它。但 [W3C HTML 5.2 规范](https://www.w3.org/TR/html52/index.html#contents) 不再将其列出（也就是说将其标记为过时的）。在达成共识之前，你应该认为 WHATWG 规范定义的就是正确的。
+> [!WARNING]
+> [WHATWG(超文本应用技术工作组) 规范中列出了 `inputmode`](https://html.spec.whatwg.org/multipage/interaction.html#attr-inputmode), 并且现代浏览器正在努力支持它。但 [W3C HTML 5.2 规范](https://www.w3.org/TR/html52/index.html#contents) 不再将其列出（也就是说将其标记为过时的）。在达成共识之前，你应该认为 WHATWG 规范定义的就是正确的。
 
 ## 规范
 

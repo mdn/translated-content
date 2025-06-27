@@ -456,7 +456,7 @@ console.log(myclass.prototype.y); // 1
 
 ## 같이 보기
 
-- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.propertyIsEnumerable()")}}
 - {{jsxref("Object.getOwnPropertyDescriptor()")}}

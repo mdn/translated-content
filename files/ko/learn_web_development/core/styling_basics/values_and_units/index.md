@@ -8,7 +8,7 @@ l10n:
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
 
-CSS 규칙은 [선언](/ko/docs/Web/CSS/Syntax#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
+CSS 규칙은 [선언](/ko/docs/Web/CSS/CSS_syntax/Syntax#css_declarations)으로 구성되어 있으며, 이는 다시 속성과 값으로 이루어져 있습니다.
 CSS에서 사용되는 각 속성은 어떤 종류의 값을 가질 수 있는지를 설명하는 **값 유형을** 가지고 있습니다.
 이번 학습에서는 자주 사용되는 값 유형이 무엇인지, 그리고 그것이 어떻게 작동하는지를 살펴보겠습니다.
 
@@ -114,8 +114,8 @@ CSS에서 사용할 수 있는 다양한 숫자 데이터 형식이 있습니다
 | `rem`      | 루트 요소의 글꼴 크기.                                                                                                                                  |
 | `lh`       | 요소의 라인 높이.                                                                                                                                       |
 | `rlh`      | 루트 요소의 라인 높이. 루트 요소의 `font-size` 또는 `line-height` 속성에 사용될 때 속성의 초깃값을 참조합니다.                                          |
-| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비 1%와 같습니다.                                                                    |
-| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이 1%와 같습니다.                                                                    |
+| `vw`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비 1%와 같습니다.                                                        |
+| `vh`       | 뷰포트의 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이 1%와 같습니다.                                                        |
 | `vmin`     | viewport의 작은 치수의 1%.                                                                                                                              |
 | `vmax`     | viewport의 큰 치수의 1%.                                                                                                                                |
 | `vb`       | 초기 컨테이닝 블록의 [블록 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values#%eb%b8%94%eb%a1%9d_%ec%b9%98%ec%88%98) 크기 1%와 같습니다.            |

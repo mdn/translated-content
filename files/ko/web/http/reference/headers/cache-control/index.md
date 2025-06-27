@@ -143,7 +143,7 @@ Cache-Control:public, max-age=31536000
 
 ## 함께 참고할 내용
 
-- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Caching)
+- [HTTP Caching FAQ](/ko/docs/Web/HTTP/Guides/Caching)
 - {{HTTPHeader("Age")}}
 - {{HTTPHeader("Expires")}}
 - {{HTTPHeader("Pragma")}}

@@ -14,4 +14,4 @@ JavaScript에서의 **불리언**은 `true` 또는 `false`일 수 있는 {{Gloss
 ## 같이 보기
 
 - [JavaScript 전역 객체](/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
-- [JavaScript 데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript 데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures)

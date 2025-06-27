@@ -362,7 +362,8 @@ return render(request, 'index.html', context=context)
 
 1. LocalLibrary [base template](#the_locallibrary_base_template) 已定義`title` 欄。 在 [index template](#the_index_template)中覆蓋此塊並為頁面創建一些新標題。
 
-   > **備註：** [Extending templates](#extending_templates) 部分介紹瞭如何創建塊並將其擴展到另一個模板中。
+   > [!NOTE]
+   > [Extending templates](#extending_templates) 部分介紹瞭如何創建塊並將其擴展到另一個模板中。
 
 2. 修改 [view](<#View_(function-based)>)以生成包含特定單詞（不區分大小寫）的流派計數和書籍計數，並將其傳遞給`context` （這與我們創建並使用`num_books` 和`num_instances_available`的方式大致相同）。 然後更新 [index template](#the_index_template) 以使用這些變量。
 

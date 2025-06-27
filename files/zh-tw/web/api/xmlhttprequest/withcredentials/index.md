@@ -12,7 +12,8 @@ In addition, this flag is also used to indicate when cookies are to be ignored i
 > [!NOTE]
 > 永遠不會影響到同源請求。
 
-> **備註：** `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
+> [!NOTE]
+> `XMLHttpRequest` responses from a different domain _cannot_ set cookie values for their own domain unless `withCredentials` is set to `true` before making the request, regardless of `Access-Control-` header values.
 
 ## 範例
 

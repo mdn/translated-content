@@ -68,7 +68,8 @@ while (!result.done) {
 console.log(`已迭代序列的大小：${result.value}`); // 5
 ```
 
-> **备注：** [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
+> [!NOTE]
+> [反射性](https://zh.wikipedia.org/wiki/反射式编程)地知道特定对象是否是迭代器是不可能的。如果你需要这样做，请使用[可迭代对象](#可迭代对象)。
 
 ## 生成器函数
 

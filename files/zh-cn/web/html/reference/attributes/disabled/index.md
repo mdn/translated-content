@@ -64,7 +64,8 @@ label {
 
 因为不能改变一个禁用字段的值，所以 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 对同时指定 `disabled` 属性的输入没有任何影响。此外，由于元素变得不可改变，大多数其他属性，如 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Attributes/pattern)，在控件被启用之前没有任何作用。
 
-> **备注：** `required` 属性不可在含有 `disabled` 属性的 input 元素上使用。
+> [!NOTE]
+> `required` 属性不可在含有 `disabled` 属性的 input 元素上使用。
 
 ### 可用性
 

@@ -15,7 +15,7 @@ l10n:
 포함하는 조건부 요청은 이 필드를 사용합니다.
 
 `Last-Modified`는 {{Glossary("Crawler", "크롤러")}}가 크롤링 빈도를 조정할 때,
-브라우저가 [휴리스틱 캐싱](/ko/docs/Web/HTTP/Caching#heuristic_caching)을 할 때,
+브라우저가 [휴리스틱 캐싱](/ko/docs/Web/HTTP/Guides/Caching#heuristic_caching)을 할 때,
 콘텐츠 관리 시스템(CMS)이 콘텐츠가 마지막으로 수정된 시간을 표시할 때에도 사용됩니다.
 
 <table class="properties">

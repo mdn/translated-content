@@ -31,7 +31,7 @@ l10n:
 </table>
 
 > [!NOTE]
-> 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Element#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
+> 이 글에서 다루는 대부분의 기능은 브라우저 간에 다양하게 지원됩니다. 예외 사항은 알려 드리겠습니다. 브라우저 지원에 대한 자세한 내용을 원하신다면, [HTML 폼 요소 참조](/ko/docs/Web/HTML/Reference/Elements#forms) 및 특히 상세한 [\<input> 유형](/ko/docs/Web/HTML/Element/input) 참조를 참고하십시오.
 
 웹 개발자들은 때때로 사용자 지정 폼 컨트롤을 만들기 위해 HTML 폼 컨트롤 외관을 디자인 사양과 다르게 만들기도 합니다. 우리는 고급 튜토리얼에서 이것을 다룹니다. [사용자 정의 폼 위젯 만들기](/ko/docs/Learn/Forms/How_to_build_custom_form_controls).
 

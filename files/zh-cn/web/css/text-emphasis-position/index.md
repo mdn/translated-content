@@ -152,7 +152,8 @@ text-emphasis-position: unset;
   </tbody>
 </table>
 
-> **备注：** `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
+> [!NOTE]
+> `text-emphasis-position` 无法使用简写属性 {{cssxref("text-emphasis")}} 进行设置，因此也无法进行重置。
 
 ## 形式定义
 

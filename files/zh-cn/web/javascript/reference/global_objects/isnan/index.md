@@ -53,7 +53,8 @@ isNaN(value)
 
 `isNaN()` 函数回答的问题是“在数字上下文中，输入是否在功能上与 {{jsxref("NaN")}} 等价”。如果 `isNaN(x)` 返回 `false`，则可以在算术表达式中使用 `x`，就好像它是一个有效的数字，而不是 `NaN`。如果 `isNaN(x)` 返回 `true`，则 `x` 将被强制转换为 `NaN`，并使大多数算术表达式返回 `NaN`（因为 `NaN` 会传播）。例如，可以使用这种方法来测试函数的参数是否可以进行算术处理（像数字一样使用），并通过抛出错误、提供默认值等来处理不是数字的值。这样，就可以拥有一个可以利用 JavaScript 提供的全部灵活性的函数，该函数可以根据上下文隐式地转换值。
 
-> **备注：** [`+` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)既执行数字加法又执行字符串连接。因此，即使 `isNaN()` 对两个操作数都返回 `false`，`+` 运算符仍可能因为它不是被用作算术运算符而返回字符串。例如，`isNaN("1")` 返回 `false`，而 `"1" + 1` 返回 `"11"`。要确保你正在使用数字，请[将值强制转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)并使用 {{jsxref("Number.isNaN()")}} 来测试结果。
+> [!NOTE]
+> [`+` 运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Addition)既执行数字加法又执行字符串连接。因此，即使 `isNaN()` 对两个操作数都返回 `false`，`+` 运算符仍可能因为它不是被用作算术运算符而返回字符串。例如，`isNaN("1")` 返回 `false`，而 `"1" + 1` 返回 `"11"`。要确保你正在使用数字，请[将值强制转换为数字](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_强制转换)并使用 {{jsxref("Number.isNaN()")}} 来测试结果。
 
 ## 示例
 

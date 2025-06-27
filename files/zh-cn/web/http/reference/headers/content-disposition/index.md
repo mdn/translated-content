@@ -63,7 +63,8 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 - `filename\*`
   - : `filename` 和 `filename*` 两个参数的唯一区别在于，`filename*` 采用了 [RFC 5987](https://tools.ietf.org/html/rfc5987) 中规定的编码方式。当 `filename` 和 `filename*` 同时出现的时候，应该优先采用 `filename*`，假如二者都支持的话。
 
-> **警告：** `filename` 参数后面的字符串应该始终用引号包裹。但由于兼容性原因，许多浏览器会尝试解析不带引号的带有空格的文件名。
+> [!WARNING]
+> `filename` 参数后面的字符串应该始终用引号包裹。但由于兼容性原因，许多浏览器会尝试解析不带引号的带有空格的文件名。
 
 ## 示例
 

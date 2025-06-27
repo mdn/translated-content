@@ -14,7 +14,7 @@ a::after {
 }
 ```
 
-> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/Replaced_element)에 적용할 수 없습니다.
+> **참고:** `::before`와 `::after`로 생성한 의사 요소는 [원본 요소의 서식 박스에 포함되므로](https://www.w3.org/TR/CSS2/generate.html#before-after-content), {{HTMLElement("img")}}나 {{HTMLElement("br")}} 등 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)에 적용할 수 없습니다.
 
 ## 구문
 
@@ -85,7 +85,7 @@ a::after {
 
 ### 툴팁
 
-다음 예제는 `::after`와 함께 CSS {{cssxref("attr", "attr()")}} 표현식, `data-descr` [사용자 설정 데이터 속성](/ko/docs/Web/HTML/Global_attributes/data-*)을 사용해 툴팁을 구현합니다. JavaScript 없이요!
+다음 예제는 `::after`와 함께 CSS {{cssxref("attr", "attr()")}} 표현식, `data-descr` [사용자 설정 데이터 속성](/ko/docs/Web/HTML/Reference/Global_attributes/data-*)을 사용해 툴팁을 구현합니다. JavaScript 없이요!
 
 `tabindex="0"`을 추가해 각 `span`에 포커스가 갈 수 있도록 지정한 후, CSS `:focus` 선택자를 추가하여 키보드 사용자도 지원할 수 있습니다. 예제를 통해 ::before와 ::after가 얼마나 유연한지 확인할 수 있지만, 가장 접근성이 뛰어난 구현을 위해서라면 [요약과 세부 요소](/ko/docs/Web/HTML/Element/details)처럼 의미를 담은 요소를 활용하는 편이 좋습니다.
 

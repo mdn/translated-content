@@ -9,7 +9,8 @@ slug: Web/HTTP/Reference/Headers/Referer
 
 需要注意的是 referer 实际上是 "referrer" 误拼写。参见 [HTTP referer on Wikipedia](https://zh.wikipedia.org/wiki/HTTP_referer)（HTTP referer 在维基百科上的条目）来获取更详细的信息。
 
-> **警告：** `Referer` 请求头可能暴露用户的浏览历史，涉及到用户的隐私问题。
+> [!WARNING]
+> `Referer` 请求头可能暴露用户的浏览历史，涉及到用户的隐私问题。
 
 在以下两种情况下，`Referer` 不会被发送：
 

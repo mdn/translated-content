@@ -38,7 +38,8 @@ input {
 }
 ```
 
-> **备注：** [单选按钮](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
+> [!NOTE]
+> [单选按钮](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio)与复选框类似，但有一个重要的区别——单选按钮被分组为一个集合，一次只能选择一个单选按钮；而复选框允许你选中/取消选中单个值。如果存在多个控件，单选按钮允许从它们中选择一个，而复选框则允许选择多个值。
 
 <table class="properties">
   <tbody>

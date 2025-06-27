@@ -337,7 +337,7 @@ CSS 속성을 특정 값으로 설정하는 것은 CSS 언어의 핵심 기능�
 
 ## @rules
 
-아직, 우리는 [`@rules`](/ko/docs/Web/CSS/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
+아직, 우리는 [`@rules`](/ko/docs/Web/CSS/CSS_syntax/At-rule) ("at-rules" 로 발음) 가 발생하지 않았습니다. 이것들은 CSS 에 행동 방법에 대한 지침을 제공하는 특수 규칙입니다. 일부 `@rules` 는 규칙 이름과 값으로 단순합니다. 예를 들어, 추가 스타일 시트를 기본 CSS 스타일 시트로 가져오려면 `@import` 를 사용할 수 있습니다:
 
 ```css
 @import "styles2.css";

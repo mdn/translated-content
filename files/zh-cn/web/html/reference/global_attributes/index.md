@@ -63,7 +63,8 @@ slug: Web/HTML/Reference/Global_attributes
 - [`is`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/is)
   - : 允许指定标准 HTML 元素的行为如同已注册的自定义内置元素一样（有关更多详细信息，请参阅[使用自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)）。
 
-    > **备注：** `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
+    > [!NOTE]
+    > `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
 
 - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : 项的唯一全局标识符。

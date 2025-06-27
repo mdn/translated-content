@@ -31,4 +31,4 @@ elt.id = idStr; // 아이디를 부여합니다
 
 ## See also
 
-- The DOM [**id**](/ko/docs/Web/HTML/Global_attributes/id) global attribute.
+- The DOM [**id**](/ko/docs/Web/HTML/Reference/Global_attributes/id) global attribute.

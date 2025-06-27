@@ -59,7 +59,7 @@ console.log(window.Math === Math); // true
 
 그러나 전역 객체에 명시적으로 접근해야 하는 한 가지 경우는 일반적으로 [폴리필](/ko/docs/Glossary/Polyfill)을 위해 전역 개체에 **작성** 할 때입니다.
 
-`globalThis` 이전에는 환경에 대한 전역 객체를 가져오는 방법 중 유일하게 믿을만한 교차 플랫폼 방법은 `Function('return this')()` 이었습니다. 그러나 이로 인해 일부 설정에서 [CSP](/ko/docs/Web/HTTP/CSP) 위반이 발생하므로 작성자는 이와 같은 조각별 정의를 사용합니다([원래 core-js 소스](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)).
+`globalThis` 이전에는 환경에 대한 전역 객체를 가져오는 방법 중 유일하게 믿을만한 교차 플랫폼 방법은 `Function('return this')()` 이었습니다. 그러나 이로 인해 일부 설정에서 [CSP](/ko/docs/Web/HTTP/Guides/CSP) 위반이 발생하므로 작성자는 이와 같은 조각별 정의를 사용합니다([원래 core-js 소스](https://github.com/zloirock/core-js/blob/master/packages/core-js/internals/global.js)).
 
 ```js
 function check(it) {

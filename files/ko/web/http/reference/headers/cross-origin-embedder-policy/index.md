@@ -34,7 +34,7 @@ Cross-Origin-Embedder-Policy: unsafe-none | require-corp | credentialless
 - `unsafe-none`
   - : 기본값입니다. 문서가 CORS 프로토콜 또는 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 헤더를 통해 명시적인 권한을 부여하지 않고도 교차 출처 리소스를 가져올 수 있도록 허용합니다.
 - `require-corp`
-  - : 문서는 동일한 출처의 리소스 또는 다른 출처에서 불러오기 가능한 것으로 명시적으로 표시된 리소스만 불러올 수 있습니다. 교차 출처 리소스가 CORS를 지원하는 경우, COEP에 의해 차단되지 않고 불러오려면 [`crossorigin`](/ko/docs/Web/HTML/Attributes/crossorigin) 속성 또는 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 헤더를 사용해야 합니다.
+  - : 문서는 동일한 출처의 리소스 또는 다른 출처에서 불러오기 가능한 것으로 명시적으로 표시된 리소스만 불러올 수 있습니다. 교차 출처 리소스가 CORS를 지원하는 경우, COEP에 의해 차단되지 않고 불러오려면 [`crossorigin`](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 속성 또는 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 헤더를 사용해야 합니다.
 - `credentialless` {{Experimental_Inline}}
   - : [no-cors](/ko/docs/Web/API/Request/mode) 교차 출처 요청은 자격 증명 없이 전송됩니다. 특히 요청에서 쿠키가 생략되고 응답에서 쿠키가 무시됩니다. 응답은 {{HTTPHeader("Cross-Origin-Resource-Policy")}} 헤더를 통해 명시적인 권한 **없이** 허용됩니다. [Navigate](/ko/docs/Web/API/Request/mode) 응답은 `require-corp` 모드와 유사하게 작동합니다. {{HTTPHeader("Cross-Origin-Resource-Policy")}} 응답 헤더가 필요합니다.
 
@@ -67,7 +67,7 @@ if (crossOriginIsolated) {
 
 ### CORS를 통한 COEP 차단 방지
 
-`require-corp`를 사용하여 COEP를 활성화하고 불러와야 하는 교차 출처 리소스가 있는 경우, 해당 리소스는 [CORS](/ko/docs/Web/HTTP/CORS)를 지원해야 하며 다른 출처에서 불러올 수 있는 것으로 명시적으로 표시해야 COEP의 차단을 방지할 수 있습니다. 예를 들어 타사 사이트의 이 이미지에 [`crossorigin`](/ko/docs/Web/HTML/Attributes/crossorigin) 속성을 사용할 수 있습니다.
+`require-corp`를 사용하여 COEP를 활성화하고 불러와야 하는 교차 출처 리소스가 있는 경우, 해당 리소스는 [CORS](/ko/docs/Web/HTTP/Guides/CORS)를 지원해야 하며 다른 출처에서 불러올 수 있는 것으로 명시적으로 표시해야 COEP의 차단을 방지할 수 있습니다. 예를 들어 타사 사이트의 이 이미지에 [`crossorigin`](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 속성을 사용할 수 있습니다.
 
 ```html
 <img src="https://thirdparty.com/img.png" crossorigin />

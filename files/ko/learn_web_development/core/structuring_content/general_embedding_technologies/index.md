@@ -293,7 +293,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 #### CSP 지시어를 설정하세요
 
-{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
+{{Glossary("CSP")}}는 **[콘텐츠 보안 정책](/ko/docs/Web/HTTP/Guides/CSP)** 을 나타내며 HTML 문서 보안을 개선하기 위해 고안된 일련의 HTTP 헤더를 제공합니다. HTTP 헤더란 웹 서버에서 웹페이지가 전송될 때 동반되는 메타데이터입니다. `<iframe>` 보안과 연관 지어 말씀드리자면, [적절한 `X-Frame-Options` 헤더를 전송하도록 설정할 수 있습니다](/ko/docs/Web/HTTP/Reference/Headers/X-Frame-Options). 이렇게 하면 다른 웹사이트에서 여러분의 웹페이지를 삽입하지 못하도록 만들어서 [클릭재킹](/ko/docs/Web/Security/Attacks/Clickjacking)이나 다른 공격의 대상이 되는 일을 막을 수 있습니다. 이전 예시에서 보셨듯이 이것이 바로 MDN 개발자들이 설정해 둔 것입니다.
 
 > [!NOTE]
 > 프레데리크 브라운의 게시글 [On the X-Frame-Options Security Header](https://blog.mozilla.org/security/2013/12/12/on-the-x-frame-options-security-header/)에서 이 주제와 관련된 배경지식을 더 찾아볼 수 있습니다. 자세한 설명을 다루기에는 이 글의 범위를 벗어납니다.

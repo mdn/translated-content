@@ -9,7 +9,8 @@ slug: Web/API/MouseEvent/initMouseEvent
 
 事件初始化是在事件被{{ domxref("Document.createEvent()") }}方法创建后必需的。这个方法必须在事件被{{ domxref("EventTarget.dispatchEvent()") }}方法发送出来前调用。一旦事件被发送后，它将不再起任何作用。
 
-> **备注：** **不要再用此方法，已过时。**
+> [!NOTE]
+> **不要再用此方法，已过时。**
 >
 > 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
 

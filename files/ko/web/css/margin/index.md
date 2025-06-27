@@ -63,7 +63,7 @@ margin: 0;
 }
 ```
 
-위와 아래 여백은 [대체 요소](/ko/docs/Web/CSS/Replaced_element)가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.
+위와 아래 여백은 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties)가 아닌 {{HTMLElement("span")}}, {{HTMLElement("code")}} 등 인라인 요소에선 아무 효과도 없습니다.
 
 > [!NOTE]
 > margin은 요소의 주위에 빈 공간을 추가합니다. 반면 {{cssxref("padding")}}은 요소의 **내부**에 빈 공간을 만듭니다.
@@ -102,7 +102,7 @@ margin: unset;
 - {{cssxref("length")}}
   - : 여백의 크기로 고정값 사용.
 - {{cssxref("&lt;percentage&gt;")}}
-  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 너비의 백분율 사용.
+  - : 여백의 크기로 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 너비의 백분율 사용.
 - `auto`
   - : 브라우저가 적절한 여백 크기를 선택. 예를 들어 요소를 중앙 정렬하고 싶을 때 사용할 수 있습니다.
 

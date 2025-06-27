@@ -160,7 +160,8 @@ a {
 
 {{EmbedLiveSample('链接到相同页面的元素上')}}
 
-> **备注：** [如 HTML 规范所定义](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)的那样，你可以使用 `href="#top"` 或空片段（`href="#"`）来链接到当前页面的顶部。
+> [!NOTE]
+> [如 HTML 规范所定义](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)的那样，你可以使用 `href="#top"` 或空片段（`href="#"`）来链接到当前页面的顶部。
 
 ### 链接到 email 地址
 

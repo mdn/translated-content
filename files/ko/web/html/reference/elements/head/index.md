@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/head
 
 {{HTMLSidebar}}
 
-**HTML `<head>` 요소**는 기계가 식별할 수 있는 문서 정보(메타데이터)를 담습니다. 정보로는 문서가 사용할 [제목](/ko/docs/Web/HTML/Element/title), [스크립트](/ko/docs/Web/HTML/Element/script), [스타일 시트](/ko/docs/Web/HTML/Element/style) 등이 있습니다.
+**HTML `<head>` 요소**는 기계가 식별할 수 있는 문서 정보(메타데이터)를 담습니다. 정보로는 문서가 사용할 [제목](/ko/docs/Web/HTML/Reference/Elements/title), [스크립트](/ko/docs/Web/HTML/Reference/Elements/script), [스타일 시트](/ko/docs/Web/HTML/Reference/Elements/style) 등이 있습니다.
 
 > **참고:** `<head>`의 주 목적은 기계 처리를 위한 정보이고, 사람이 읽을 수 있는 정보가 아닙니다. 최상위 제목, 작성자 목록 등 사람에게 보여야 할 정보는 {{HTMLElement("header")}} 요소를 사용하세요.
 
@@ -66,7 +66,7 @@ original_slug: Web/HTML/Element/head
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 예제
 

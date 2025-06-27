@@ -8,9 +8,9 @@ l10n:
 
 {{HTMLSidebar}}
 
-HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Element/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
+HTML은 이미지 처리를 위해 {{Glossary("CORS")}} header를 포함하고 있는 [`crossorigin`](/ko/docs/Web/HTML/Reference/Elements/img#crossorigin) 속성을 제공합니다. 이는 {{ HTMLElement("img") }} 요소에서 정의된, 외부 origin으로 부터 가져오는 이미지가 {{HTMLElement("canvas")}}에서 사용할 수 있도록 해줍니다. 마치 현재 origin에서 가져온 것처럼 말입니다
 
-`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin) 를 참고하세요.
+`crossorigin` 속성이 어떻게 사용되는지 자세히 알고 싶다면, [CORS settings attributes](/ko/docs/Web/HTML/Reference/Attributes/crossorigin) 를 참고하세요.
 
 ## 보안과 오염된 canvas들
 
@@ -56,7 +56,7 @@ canvas가 오염된 상태에서 이러한 작업을 시도해보면 `SecurityEr
 
 이제 서버가 이미지 교차 출처 검색을 허용하도록 구성되었으므로 코드가 실행중인 동일한 도메인에서 이미지를 제공하는 것처럼 사용자가 이미지를 [로컬 스토리지](/ko/docs/Web/API/Web_Storage_API)에 저장할 수 있도록 하는 코드를 작성할 수 있습니다.
 
-핵심은 로드될 {{domxref("HTMLImageElement")}}에 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}}을 설정하여 [`crossorigin`](/ko/docs/Web/HTML/Global_attributes#crossorigin)속성을 사용하는 것입니다. 이렇게 하면 이미지 데이터를 다운로드 하려고 할때 브라우저가 교차 출처 접근을 요청하도록 지시합니다.
+핵심은 로드될 {{domxref("HTMLImageElement")}}에 {{domxref("HTMLImageElement.crossOrigin", "crossOrigin")}}을 설정하여 [`crossorigin`](/ko/docs/Web/HTML/Reference/Global_attributes#crossorigin)속성을 사용하는 것입니다. 이렇게 하면 이미지 데이터를 다운로드 하려고 할때 브라우저가 교차 출처 접근을 요청하도록 지시합니다.
 
 #### 다운로드 시작하기
 

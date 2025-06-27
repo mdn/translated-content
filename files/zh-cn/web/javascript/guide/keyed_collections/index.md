@@ -112,7 +112,8 @@ for (const item of mySet) {
 
 可以使用 {{jsxref("Array.from")}} 或[展开语法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Spread_syntax)来完成集合到数组的转换。同样，`Set` 的构造函数接受数组作为参数，可以完成从 `Array` 到 `Set` 的转换。
 
-> **备注：** `Set` 对象存储*唯一值*，所以数组转换为 Set 时，任何重复值将会被删除！
+> [!NOTE]
+> `Set` 对象存储*唯一值*，所以数组转换为 Set 时，任何重复值将会被删除！
 
 ```js
 Array.from(mySet);

@@ -60,7 +60,7 @@ Upgrade: example/1, foo/2
 
 서버는 {{HTTPStatus("426")}} `Upgrade Required` 응답의 일부로 이 헤더를 보낼 수도 있으며, 이것은 서버가 현재 프로토콜을 사용하여 요청을 수행하지 않지만, 프로토콜이 변경되면 수행할 수 있음을 나타냅니다. 클라이언트는 위 프로세스를 사용하여 프로토콜 변경을 요청할 수 있습니다.
 
-자세힌 내용과 예제는 [프로토콜 업그레이드 메커니즘](/ko/docs/Web/HTTP/Protocol_upgrade_mechanism) 항목에서 제공합니다.
+자세힌 내용과 예제는 [프로토콜 업그레이드 메커니즘](/ko/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism) 항목에서 제공합니다.
 
 ## 구문
 
@@ -106,7 +106,7 @@ Upgrade: websocket
 
 ## 같이 보기
 
-- [프로토콜 업그레이드 메커니즘](/ko/docs/Web/HTTP/Protocol_upgrade_mechanism)
+- [프로토콜 업그레이드 메커니즘](/ko/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
 - {{HTTPStatus("101")}} `Switching Protocol`
 - {{HTTPStatus("426")}} `Upgrade Required`
 - {{HTTPHeader("Connection")}}

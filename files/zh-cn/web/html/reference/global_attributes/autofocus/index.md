@@ -15,7 +15,8 @@ l10n:
 
 在文档或对话框中，最多只能有一个元素具有 autofocus 属性。如果应用于多个元素，第一个元素将获得焦点。
 
-> **备注：** `autofocus` 属性适用于所有元素，而不仅仅是表单控件。例如，它可用于 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 区域。
+> [!NOTE]
+> `autofocus` 属性适用于所有元素，而不仅仅是表单控件。例如，它可用于 [contenteditable](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable) 区域。
 
 ## 无障碍考虑
 

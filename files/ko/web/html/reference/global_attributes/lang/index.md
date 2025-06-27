@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`lang`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 요소 내의 수정 불가한 텍스트의 언어와, 수정 가능한 텍스트가 사용해야 하는 언어를 정의합니다. 특성의 값은 [Tags for Identifying Languages (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 정의된 형식의 "언어 태그" 한 개입니다.
+**`lang`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 요소 내의 수정 불가한 텍스트의 언어와, 수정 가능한 텍스트가 사용해야 하는 언어를 정의합니다. 특성의 값은 [Tags for Identifying Languages (BCP47)](https://www.ietf.org/rfc/bcp/bcp47.txt)에 정의된 형식의 "언어 태그" 한 개입니다.
 
 > **참고:** `lang`의 기본값은 "알 수 없음"이므로 항상 적절한 값을 지정하는 것이 좋습니다.
 
@@ -57,5 +57,5 @@ CSS {{cssxref(":lang")}} 의사 클래스에서는 유효하지 않은 언어의
 
 ## 같이 보기
 
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
-- [`Content-Language` HTTP 헤더](/ko/docs/Web/HTTP/Headers/Content-Language)
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).
+- [`Content-Language` HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers/Content-Language)

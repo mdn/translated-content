@@ -270,7 +270,7 @@ th {
 
 ### id 및 headers 속성
 
-`scope`를 사용하는 대신 [`id`](/ko/docs/Web/HTML/Global_attributes#id)와 [`headers`](/ko/docs/Web/HTML/Element/td#headers) 속성을 사용하여 헤더와 셀 사이의 연관성을 만들 수 있습니다. 사용 방법은 다음과 같습니다.
+`scope`를 사용하는 대신 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id)와 [`headers`](/ko/docs/Web/HTML/Element/td#headers) 속성을 사용하여 헤더와 셀 사이의 연관성을 만들 수 있습니다. 사용 방법은 다음과 같습니다.
 
 1. 고유한 `id`를 각 `<th>` 요소에 추가합니다.
 2. 각 `<td>` 요소에 `headers` 속성을 추가합니다. 각 `headers` 속성은 해당 셀의 헤더로 작동하는 모든 `<th>` 요소의 `id` 목록을 공백으로 구분하여 포함해야 합니다.

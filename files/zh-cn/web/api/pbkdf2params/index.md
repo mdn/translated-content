@@ -19,7 +19,8 @@ l10n:
     - `SHA-384`：选择 [SHA-384](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 算法。
     - `SHA-512`：选择 [SHA-512](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法) 算法。
 
-    > **警告：** `SHA-1` 在大多数密码学应用中被视为是脆弱的，但在 PBKDF2 中仍被视为是安全的。然而，建议在所有情况下逐步淘汰其使用，因此，除非必须使用 `SHA-1`，否则请不要使用它。请改用其他摘要算法。
+    > [!WARNING]
+    > `SHA-1` 在大多数密码学应用中被视为是脆弱的，但在 PBKDF2 中仍被视为是安全的。然而，建议在所有情况下逐步淘汰其使用，因此，除非必须使用 `SHA-1`，否则请不要使用它。请改用其他摘要算法。
 
 - `salt`
   - : 一个 {{jsxref("ArrayBuffer")}}、{{jsxref("TypedArray")}} 或 {{jsxref("DataView")}}。它应是一个至少 16 字节的随机值或伪随机值。与传递给 [`deriveKey()`](/zh-CN/docs/Web/API/SubtleCrypto/deriveKey) 的输入密钥材料不同，`salt` 无须保密。

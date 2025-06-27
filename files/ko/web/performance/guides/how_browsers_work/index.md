@@ -56,7 +56,7 @@ HTTPS를 이용한 보안성있는 연결을 위해서는 또 다른 "핸드셰�
 
 ## 응답(Response)
 
-웹서버로 한 번 연결이 성립되고 나면, 브라우저는 유저 대신에 초기 [HTTP `GET` request](/ko/docs/Web/HTTP/Methods)를 보냅니다. 웹사이트는 대게 HTML 파일을 요청합니다. 서버가 요청을 받으면, 관련 응답 해더와 함께 HTML의 내용을 응답하게 됩니다.
+웹서버로 한 번 연결이 성립되고 나면, 브라우저는 유저 대신에 초기 [HTTP `GET` request](/ko/docs/Web/HTTP/Reference/Methods)를 보냅니다. 웹사이트는 대게 HTML 파일을 요청합니다. 서버가 요청을 받으면, 관련 응답 해더와 함께 HTML의 내용을 응답하게 됩니다.
 
 ```html
 <!doctype html>
@@ -106,7 +106,7 @@ ACK이 수신되면 혼잡 윈도우(CWND)의 값이 두 배로 증가하여 서
 
 ### DOM 트리 구축(Building the DOM tree)
 
-[중요한 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path)를 다섯 가지 단계로 설명합니다.
+[중요한 렌더링 경로](/ko/docs/Web/Performance/Guides/Critical_rendering_path)를 다섯 가지 단계로 설명합니다.
 
 첫 단계는 HTML을 처리하여 DOM 트리를 만드는 것입니다. HTML 구문 분석은 [토큰화](/ko/docs/Web/API/DOMTokenList)와 트리 생성을 포함합니다. HTML 토큰은 시작 및 종료 태그 그리고 속성 이름 및 값을 포함합니다. 만약 문서가 잘 구성되어 있다면 구문 분석은 명확하고 빠르게 이루어집니다. 구문 분석기는 토큰화된 입력을 분석하여 DOM 트리를 만듭니다.
 
@@ -161,7 +161,7 @@ AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/
 
 중요한 렌더링 경로에서 세 번째 단계는 DOM과 CSSOM을 합쳐 렌더 트리를 만드는 것입니다. 계산된 스타일 트리(다른 말로 렌더 트리)는 DOM 트리의 루트부터 시작하여 눈에 보이는 노드를 순회하며 만들어집니다.
 
-[`<head>`](/ko/docs/Web/HTML/Element/head)와 그 자식 요소 혹은 사용자 정의 스타일 시트에 정의된 `script { display: none; }` 처럼 `display: none` 스타일 속성을 가진 요소와 같이, 화면에 나타나지 않는 태그의 경우 렌더링 결과에 나타나지 않을 것이기 때문에 렌더 트리에 포함되지 않습니다. `visibility: hidden` 속성을 가진 요소는 자리를 차지하기 때문에 렌더 트리에 포함됩니다. 코드 예시에서 사용자 에이전트가 기본으로 설정한 값을 오버라이드하는 정의를 하지 않았기 때문에, `script` 노드는 렌더 트리에 포함되지 않을 것입니다.
+[`<head>`](/ko/docs/Web/HTML/Reference/Elements/head)와 그 자식 요소 혹은 사용자 정의 스타일 시트에 정의된 `script { display: none; }` 처럼 `display: none` 스타일 속성을 가진 요소와 같이, 화면에 나타나지 않는 태그의 경우 렌더링 결과에 나타나지 않을 것이기 때문에 렌더 트리에 포함되지 않습니다. `visibility: hidden` 속성을 가진 요소는 자리를 차지하기 때문에 렌더 트리에 포함됩니다. 코드 예시에서 사용자 에이전트가 기본으로 설정한 값을 오버라이드하는 정의를 하지 않았기 때문에, `script` 노드는 렌더 트리에 포함되지 않을 것입니다.
 
 각각의 보이는 노드는 그 노드에 적용된 CSSOM 규칙이 있습니다. 렌더 트리가 보이는 모든 노드의 내용과 계산된 스타일을 가지고 있습니다. DOM 트리에서 보이는 모든 노드에 관련된 스타일을 모두 맞춰보고, [CSS 캐스케이드](/ko/docs/Web/CSS/Cascade) 방식에 따라서 각 노드의 계산된 스타일이 무엇일지 결정합니다.
 
@@ -181,7 +181,7 @@ AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/
 
 부드러운 스크롤이나 애니메이션을 위해서, 스타일 계산, 리플로우, 페인팅과 같이 메인 쓰레드를 점유하는 모든 작업은 브라우저를 16.67ms 미만만 차지해야만 합니다. 2048 X 1536 화면에서 iPad는 화면에 페인트해야 할 3,145,000 픽셀을 가지고 있습니다. 이는 매우 많은 픽셀이며, 이 픽셀은 매우 빠르게 페인팅되어야 합니다. 첫 페인팅보다 다시 페인팅하는 것이 더 빠르게 마무리되기 위해서, 화면에 그리는 작업은 일반적으로 몇 개의 레이어로 구분됩니다. 이것이 일어나면 합성이 필요합니다.
 
-페인팅은 레이아웃 트리의 요소를 레이어로 분리할 수 있습니다. 컨텐츠를 CPU의 메인 쓰레드에서 GPU 레이어로 격상하는 것은 페인트 및 리페인트 성능을 높입니다. 레이어를 가동시키는 구체적인 속성과 요소가 있습니다. 요소에는 [`<video>`](/ko/docs/Web/HTML/Element/video) 그리고 [`<canvas>`](/ko/docs/Web/HTML/Element/canvas)가 포함되어 있습니다. 구체적인 속성에는 [`opacity`](/ko/docs/Web/CSS/opacity), 3D [`transform`](/ko/docs/Web/CSS/transform), [`will-change`](/ko/docs/Web/CSS/will-change) 등이 있습니다. 자손 노드가 위의 이유 중 하나(혹은 여러 개)로 자신만의 레이어를 필요로 하는 것이 아니라면, 이 노드는 그들의 레이어에서 그들의 자손과 함께 그려집니다.
+페인팅은 레이아웃 트리의 요소를 레이어로 분리할 수 있습니다. 컨텐츠를 CPU의 메인 쓰레드에서 GPU 레이어로 격상하는 것은 페인트 및 리페인트 성능을 높입니다. 레이어를 가동시키는 구체적인 속성과 요소가 있습니다. 요소에는 [`<video>`](/ko/docs/Web/HTML/Reference/Elements/video) 그리고 [`<canvas>`](/ko/docs/Web/HTML/Reference/Elements/canvas)가 포함되어 있습니다. 구체적인 속성에는 [`opacity`](/ko/docs/Web/CSS/opacity), 3D [`transform`](/ko/docs/Web/CSS/transform), [`will-change`](/ko/docs/Web/CSS/will-change) 등이 있습니다. 자손 노드가 위의 이유 중 하나(혹은 여러 개)로 자신만의 레이어를 필요로 하는 것이 아니라면, 이 노드는 그들의 레이어에서 그들의 자손과 함께 그려집니다.
 
 레이어는 성능을 향상시킵니다. 하지만 메모리 관리 측면에서 봤을 때는 비싼 작업입니다. 따라서 웹 성능 최적화 전략으로 과도하게 쓰이지는 않아야 합니다.
 

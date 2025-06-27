@@ -13,7 +13,8 @@ l10n:
 
 以下输入类型支持 `placeholder` 属性：`{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}` 和 `{{HTMLElement("input/password", "password")}}`。`{{HTMLElement("textarea")}}` 元素也支持该功能。下面的[示例](#示例)显示了 `placeholder` 属性的使用情况，以解释输入字段的预期格式。
 
-> **备注：** `placeholder` 属性不能包含换行（LF）或回车（CR）。如果值中包含这两种字符，占位符文本将被裁剪。
+> [!NOTE]
+> `placeholder` 属性不能包含换行（LF）或回车（CR）。如果值中包含这两种字符，占位符文本将被裁剪。
 
 ## 无障碍考虑
 

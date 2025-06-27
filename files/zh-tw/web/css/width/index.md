@@ -180,7 +180,8 @@ p {
 
 {{EmbedLiveSample("examples", "100%", 660)}}
 
-> **備註：** {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
+> [!NOTE]
+> {{cssxref("min-width")}} 和 {{cssxref("max-width")}} 會覆寫 {{cssxref("width")}}.
 
 {{cssinfo}}
 

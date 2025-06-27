@@ -8,10 +8,10 @@ l10n:
 
 {{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
 
-**`Sec-CH-UA-Mobile`** [사용자 에이전트 클라이언트 힌트](/ko/docs/Web/HTTP/Client_hints#user-agent_client_hints) 요청 헤더는 모바일 디바이스의 브라우저인지 아닌지를 나타냅니다.
+**`Sec-CH-UA-Mobile`** [사용자 에이전트 클라이언트 힌트](/ko/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) 요청 헤더는 모바일 디바이스의 브라우저인지 아닌지를 나타냅니다.
 이는 모바일 사용자 경험을 참고하기 위해 데스크톱 브라우저에서도 사용될 수 있습니다.
 
-`Sec-CH-UA-Mobile` 는 [낮은 엔트로피 힌트](/ko/docs/Web/HTTP/Client_hints#low_entropy_hints)입니다.
+`Sec-CH-UA-Mobile` 는 [낮은 엔트로피 힌트](/ko/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints)입니다.
 사용자 에이전트 권한 정책에 차단당하지 않는 한, 서버가 {{HTTPHeader("Accept-CH")}} 를 보내어 옵트 인 할 필요 없이 기본적으로 전송됩니다.
 
 <table class="properties">
@@ -44,7 +44,7 @@ Sec-CH-UA-Mobile: <boolean>
 
 ## 예제
 
-`Sec-CH-UA-Mobile` 가 [낮은 엔트로피 힌트](/ko/docs/Web/HTTP/Client_hints#low_entropy_hints) 이기 때문에 일반적으로 모든 요청을 전송합니다.
+`Sec-CH-UA-Mobile` 가 [낮은 엔트로피 힌트](/ko/docs/Web/HTTP/Guides/Client_hints#low_entropy_hints) 이기 때문에 일반적으로 모든 요청을 전송합니다.
 
 데스크톱 브라우저에서는 보통 다음과 같은 헤더 형태로 요청을 전송합니다.
 
@@ -68,8 +68,8 @@ Sec-CH-UA-Mobile: ?1
 
 ## 같이 보기
 
-- [클라이언트 힌트](/ko/docs/Web/HTTP/Client_hints)
+- [클라이언트 힌트](/ko/docs/Web/HTTP/Guides/Client_hints)
 - [사용자 에이전트 클라이언트 힌트 API](/ko/docs/Web/API/User-Agent_Client_Hints_API)
 - [사용자 에이전트 클라이언트 힌트를 이용한 사용자 프라이버시 향상과 개발자 경험](https://developer.chrome.com/docs/privacy-security/user-agent-client-hints) (developer.chrome.com)
 - {{HTTPHeader("Accept-CH")}}
-- [HTTP 캐싱 > Vary](/ko/docs/Web/HTTP/Caching#vary) 와 {{HTTPHeader("Vary")}}
+- [HTTP 캐싱 > Vary](/ko/docs/Web/HTTP/Guides/Caching#vary) 와 {{HTTPHeader("Vary")}}

@@ -55,10 +55,10 @@ accent-color: hsl(250, 100%, 34%);
 
 현재 `accent-color` 를 지원하는 브라우저에서는 다음 HTML 요소들에 이를 적용합니다.
 
-- [`<input type="checkbox">`](/ko/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/ko/docs/Web/HTML/Reference/Elements/input/checkbox)
 - [`<input type="radio">`](/ko/docs/Web/HTML/Element/input/radio)
 - [`<input type="range">`](/ko/docs/Web/HTML/Element/input/range)
-- [`<progress>`](/ko/docs/Web/HTML/Element/progress)
+- [`<progress>`](/ko/docs/Web/HTML/Reference/Elements/progress)
 
 각각의 사용자 에이전트는 가독성과 대비를 보장하기 위해 변형된 강조 색상을 가지고 있습니다. 강조 색상은 모든 사용자 인터페이스 컨트롤이나 컨트롤의 모든 상태에 사용되는 것은 아닙니다. `accent-color` 는 강조 색상을 사용하는 사용자 인터페이스 컨트롤에만, 그리고 해당 색상이 적용될 수 있는 상태에만 적용됩니다.
 

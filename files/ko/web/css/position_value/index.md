@@ -5,7 +5,7 @@ slug: Web/CSS/position_value
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`<position>`** (또는 **`<bg-position>`**) [자료형](/ko/docs/Web/CSS/CSS_Types)은 요소 박스에 대한 상대 좌표를 나타내는 2차원 좌표입니다. {{cssxref("background-position")}}, {{cssxref("offset-anchor")}} 속성에서 사용합니다.
+[CSS](/ko/docs/Web/CSS) **`<position>`** (또는 **`<bg-position>`**) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 요소 박스에 대한 상대 좌표를 나타내는 2차원 좌표입니다. {{cssxref("background-position")}}, {{cssxref("offset-anchor")}} 속성에서 사용합니다.
 
 > **참고:** `<position>` 값이 설명하는 최종 위치가 요소 박스 내에 위치해야 할 필요는 없습니다.
 

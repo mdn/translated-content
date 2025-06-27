@@ -28,4 +28,4 @@ HTTP **`201 Created`** 는 요청이 성공적으로 처리되었으며, 자원�
 
 ## 같이 보기
 
-- [HTTP request methods](/ko/docs/Web/HTTP/Methods)
+- [HTTP request methods](/ko/docs/Web/HTTP/Reference/Methods)

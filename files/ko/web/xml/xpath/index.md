@@ -12,13 +12,13 @@ XPath는 XML 문서의 계층 구조를 항해하기 위해 경로 표기법(URL
 
 ## 문서
 
-- [Introduction to using XPath in JavaScript](/ko/docs/Web/XPath/Introduction_to_using_XPath_in_JavaScript)
+- [Introduction to using XPath in JavaScript](/ko/docs/Web/XML/XPath/Guides/Introduction_to_using_XPath_in_JavaScript)
   - : XPath의 비XSLT 사용을 기술합니다.
-- [XPath:Axes](/ko/docs/Web/XPath/Axes)
+- [XPath:Axes](/ko/docs/Web/XML/XPath/Reference/Axes)
   - : XPath 명세에 정의된 축의 정의와 목록. 축은 노드 사이의 관계를 기술하는데 씁니다.
-- [XPath:Functions](/ko/docs/Web/XPath/Functions)
+- [XPath:Functions](/ko/docs/Web/XML/XPath/Reference/Functions)
   - : 기본 XPath 함수와 XPath에 더해진 XSLT 고유의 추가분 설명과 나열.
-- [Transforming XML with XSLT](/ko/docs/Web/XSLT/Transforming_XML_with_XSLT)
+- [Transforming XML with XSLT](/ko/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
   - : XSLT는 변환하고 싶은 XML 문서 내의 코드 조각(segment)을 주소지정하기 위해 XPath를 씁니다.
 - [XPath snippets](/ko/docs/Web/XPath/Snippets)
   - : These are JavaScript utility functions, that can be used in your own code, based on [DOM Level 3 XPath](https://www.w3.org/TR/DOM-Level-3-XPath/) APIs.
@@ -32,7 +32,7 @@ XPath는 XML 문서의 계층 구조를 항해하기 위해 경로 표기법(URL
 
 ## Related Topics
 
-- [XSLT](/ko/docs/Web/XSLT), [XML](/ko/docs/Web/XML), [DOM](/ko/docs/Web/API/Document_Object_Model)
+- [XSLT](/ko/docs/Web/XML/XSLT), [XML](/ko/docs/Web/XML), [DOM](/ko/docs/Web/API/Document_Object_Model)
 - [Comparison of CSS Selectors and XPath](/ko/docs/Web/XPath/Comparison_with_CSS_selectors)
 
 <section id="Quick_links">

@@ -666,7 +666,8 @@ myPeerConnection.onsignalingstatechange = function (event) {
 };
 ```
 
-> **备注：** `closed`的信令状态已被弃用，取而代之的是 `closed`{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}。我们在这里监听它以增加一点向后兼容性。
+> [!NOTE]
+> `closed`的信令状态已被弃用，取而代之的是 `closed`{{domxref("RTCPeerConnection.iceConnectionState", "iceConnectionState")}}。我们在这里监听它以增加一点向后兼容性。
 
 ##### ICE 收集状态
 

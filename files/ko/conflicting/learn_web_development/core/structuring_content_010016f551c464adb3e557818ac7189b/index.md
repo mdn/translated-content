@@ -29,7 +29,7 @@ l10n:
   - : 여기서는 웹 페이지에 다양한 콘텐츠 유형을 삽입 할 수있게 해주는 몇가지 추가적인 요소를 살펴봅니다 : {{htmlelement("iframe")}}, {{htmlelement("embed")}} 그리고 {{htmlelement("object")}} 엘리먼트입니다. `<iframe>`은 다른 웹 페이지를 삽입하기위한 것이고, 나머지 두 개는 PDF, SVG 및 플래시까지 포함 할 수 있습니다. — 이 기술들은 사라지는 중이지만 여전히 볼수 있을것입니다.
 - [Vector graphics 웹에 추가하기](/ko/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Vector graphics 는 특정한 상황에서 매우 유용할 수 있습니다. Vector graphics 는 PNG/JPG와 같은 일반적인 형식과 달리 확대 시 왜곡/픽셀레이트가 발생하지 않으며, 스케일링 시 매끄러운 상태를 유지할 수 있습니다. 이 글에서는 Vector graphics 가 무엇인지, 웹 페이지에 인기 있는 {{glossary("SVG")}} 포맷을 포함시키는 방법에 대해 소개합니다.
-- [Responsive images(반응형 이미지)](/ko/docs/Web/HTML/Responsive_images)
+- [Responsive images(반응형 이미지)](/ko/docs/Web/HTML/Guides/Responsive_images)
   - : 휴대전화에서 데스크톱 컴퓨터에 이르기까지, 웹을 검색할 수 있는 매우 다양한 유형의 장치들로 인해서 형성된 현대 웹 세계를 마스터하기 위한 필수적인 개념은 반응형 디자인입니다. 이는 다양한 화면 크기, 해상도 등에 맞춰 기능을 자동으로 변경할 수 있는 웹 페이지를 만드는 것을 말합니다. 이것은 나중에 CSS 모듈에서 훨씬 더 자세히 살펴보겠지만, 현재로서는 HTML이 {{htmlelement("picture")}} 요소를 포함하여 반응형 이미지를 만드는 데 사용할 수 있는 도구를 살펴보기로 하겠습니다.
 
 ## 평가

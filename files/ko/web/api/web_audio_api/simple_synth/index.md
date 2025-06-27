@@ -55,7 +55,7 @@ slug: Web/API/Web_Audio_API/Simple_synth
 </div>
 ```
 
-우리는 기본값을 0.5로 명시하고, ID가 맞는 옵션 목록을 찾기 위해 [`name`](/ko/docs/Web/HTML/Global_attributes#name) 특성을 사용하여 range에 연결된 {{HTMLElement("datalist")}} 요소를 제공합니다; 이 경우, 데이터셋은 `"volume"`이라는 이름입니다. 이는 우리로 하여금 브라우저가 옵션적으로 어떤 방식으로 디스플레이하기를 선택할지도 모르는 특별한 문자열과 일반적인 값의 집합을 제공하게 합니다; 우리는 값 0.0 ("무음")과 1.0 ("100%")에 대해 이름을 제공합니다.
+우리는 기본값을 0.5로 명시하고, ID가 맞는 옵션 목록을 찾기 위해 [`name`](/ko/docs/Web/HTML/Reference/Global_attributes#name) 특성을 사용하여 range에 연결된 {{HTMLElement("datalist")}} 요소를 제공합니다; 이 경우, 데이터셋은 `"volume"`이라는 이름입니다. 이는 우리로 하여금 브라우저가 옵션적으로 어떤 방식으로 디스플레이하기를 선택할지도 모르는 특별한 문자열과 일반적인 값의 집합을 제공하게 합니다; 우리는 값 0.0 ("무음")과 1.0 ("100%")에 대해 이름을 제공합니다.
 
 ##### 파형 선택기
 
@@ -477,7 +477,7 @@ function createKey(note, octave, freq) {
 }
 ```
 
-건반과 건반의 라벨을 표현할 요소를 생성한 이후, 건반의 클래스를 (외양을 설정하는) "key"로 설정함으로써 건반의 요소를 설정합니다. 그리고 나서 건반의 옥타브(`data-octave` 특성), 재생할 음을 표현하는 문자열(`data-note` 특성), 헤르츠로 표현되는 주파수(`data-frequency` 특성)를 포함하는 [`data-*`](/ko/docs/Web/HTML/Global_attributes#data-*) 특성을 추가합니다. 이것은 우리로 하여금 이벤트를 다룰 때 필요한 경우 쉽게 이 정보를 가져올 수 있도록 할 것입니다.
+건반과 건반의 라벨을 표현할 요소를 생성한 이후, 건반의 클래스를 (외양을 설정하는) "key"로 설정함으로써 건반의 요소를 설정합니다. 그리고 나서 건반의 옥타브(`data-octave` 특성), 재생할 음을 표현하는 문자열(`data-note` 특성), 헤르츠로 표현되는 주파수(`data-frequency` 특성)를 포함하는 [`data-*`](/ko/docs/Web/HTML/Reference/Global_attributes#data-*) 특성을 추가합니다. 이것은 우리로 하여금 이벤트를 다룰 때 필요한 경우 쉽게 이 정보를 가져올 수 있도록 할 것입니다.
 
 ### 음악 만들기
 
@@ -531,7 +531,7 @@ function notePressed(event) {
 
 두 가지 이유로, 우리는 주요 마우스 버튼이 눌러졌는지를 확인함으로써 시작합니다. 첫째로, 우리는 오직 주요 마우스 버튼이 노트 재생을 할 수 있게 허용하기를 원합니다. 둘째로, 그리고 더욱 중요하게, 우리는 유저가 음에서 음으로 드래그하는 경우에 대해 {{domxref("Element/mouseover_event", "mouseover")}}를 다루기 위해 이것을 사용하고, 우리는 오직 마우스가 요소에 들어왔을 때 눌러졌다면 노트를 재생하기를 원합니다.
 
-만약 마우스 버튼이 실제로 눌러졌다면, 우리는 눌러진 건반의 [`dataset`](/ko/docs/Web/HTML/Global_attributes#dataset) 특성을 얻습니다; 이는 요소의 사용자 정의 데이터 특성에 접근하는 것을 쉽게 해 줍니다. 우리는 `data-pressed` 특성을 찾습니다; 만약 (음이 이미 재생되고 있지 않다는 것을 나타내는) 그것이 없다면, 요소의 `data-frequency` 특성 값을 전달하며, 우리는 음을 재생하기 위해 `playTone()`을 호출합니다. 반환된 oscillator는 `oscList`에 미래의 참조를 위해 저장되고, `data-pressed`는 음이 재생되고 있다는 것을 나타내기 위해 `yes`로 설정되어 다음 번에 이것이 호출되었을 때 이것을 다시 시작하지 않습니다.
+만약 마우스 버튼이 실제로 눌러졌다면, 우리는 눌러진 건반의 [`dataset`](/ko/docs/Web/HTML/Reference/Global_attributes#dataset) 특성을 얻습니다; 이는 요소의 사용자 정의 데이터 특성에 접근하는 것을 쉽게 해 줍니다. 우리는 `data-pressed` 특성을 찾습니다; 만약 (음이 이미 재생되고 있지 않다는 것을 나타내는) 그것이 없다면, 요소의 `data-frequency` 특성 값을 전달하며, 우리는 음을 재생하기 위해 `playTone()`을 호출합니다. 반환된 oscillator는 `oscList`에 미래의 참조를 위해 저장되고, `data-pressed`는 음이 재생되고 있다는 것을 나타내기 위해 `yes`로 설정되어 다음 번에 이것이 호출되었을 때 이것을 다시 시작하지 않습니다.
 
 #### 음 멈추기
 

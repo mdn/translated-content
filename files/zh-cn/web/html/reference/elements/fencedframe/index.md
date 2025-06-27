@@ -58,7 +58,8 @@ l10n:
 
 作为{{glossary("replaced elements", "可替换元素")}}，`<fencedframe>` 允许使用 {{cssxref("object-position")}} 属性调整嵌入文档在其框内的位置。
 
-> **备注：** {{cssxref("object-fit")}} 属性对 `<fencedframe>` 元素无效。
+> [!NOTE]
+> {{cssxref("object-fit")}} 属性对 `<fencedframe>` 元素无效。
 
 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 对象的内部 `contentWidth` 和 `contentHeight` 属性可用于设置嵌入内容的尺寸。在这种情况下，更改 `<fencedframe>` 的 `width` 或 `height` 将改变页面上嵌入容器的尺寸，但容器内的文档会按比例缩放以适应新的尺寸。嵌入文档的报告宽度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）将保持不变。
 

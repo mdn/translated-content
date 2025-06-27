@@ -30,7 +30,8 @@ new Intl.Segmenter(locales)
 new Intl.Segmenter(locales, options)
 ```
 
-> **备注：** `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来构建。如果尝试不使用 `new` 操作符来构建，将会抛出一个 {{jsxref("TypeError")}} 错误。
+> [!NOTE]
+> `Intl.Segmenter()` 只能通过 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 操作符来构建。如果尝试不使用 `new` 操作符来构建，将会抛出一个 {{jsxref("TypeError")}} 错误。
 
 ### 参数
 

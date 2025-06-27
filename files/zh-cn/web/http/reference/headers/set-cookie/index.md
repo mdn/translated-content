@@ -120,7 +120,8 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         This Set-Cookie was blocked because it had the "SameSite=None" attribute but did not have the "Secure" attribute, which is required in order to use "SameSite=None".
         ```
 
-        > **备注：** [`Secure`](#secure) cookie 仅在使用 HTTPS 协议发送加密请求时才会被发送到服务器。请注意，非安全站点（`http:`）无法为 cookie 设置 `Secure` 指令，因此也无法使用 `SameSite=None`。
+        > [!NOTE]
+        > [`Secure`](#secure) cookie 仅在使用 HTTPS 协议发送加密请求时才会被发送到服务器。请注意，非安全站点（`http:`）无法为 cookie 设置 `Secure` 指令，因此也无法使用 `SameSite=None`。
 
 - `Secure` {{optional_inline}}
   - : 表示仅当请求通过 `https:` 协议（localhost 不受此限制）发送时才会将该 cookie 发送到服务器，因此其更能够抵抗[中间人](/zh-CN/docs/Glossary/MitM)攻击。

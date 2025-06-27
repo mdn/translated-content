@@ -37,7 +37,8 @@ p {
 
 这个元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **备注：** `<p>` 标签的 `align` 属性已被弃用，请不要使用。
+> [!NOTE]
+> `<p>` 标签的 `align` 属性已被弃用，请不要使用。
 
 ## 示例
 

@@ -565,7 +565,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 所有对象都继承了 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter，它可以用来设置现有对象的 `[[Prototype]]`（如果对象的 `__proto__` 属性没有被覆盖）。
 
-> **警告：** `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf`。
+> [!WARNING]
+> `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf`。
 
 ```js
 const obj = {};

@@ -123,7 +123,7 @@ console.log(map); // Map { foo: "bar", baz: 42 }
 
 ### Iterating through an `Object`
 
-[Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
+[Array Destructuring](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring#array_destructuring)을 사용하면 객체를 쉽게 반복 할 수 있습니다.
 
 ```js
 const obj = { foo: "bar", baz: 42 };
@@ -140,7 +140,7 @@ Object.entries(obj).forEach(([key, value]) => console.log(`${key}: ${value}`)); 
 
 ## See also
 
-- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Enumerability and ownership of properties](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.keys()")}}
 - {{jsxref("Object.values()")}}
 - {{jsxref("Object.prototype.propertyIsEnumerable()")}}

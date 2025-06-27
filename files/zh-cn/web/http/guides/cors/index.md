@@ -455,7 +455,8 @@ Origin: <origin>
 
 origin 参数的值为源站 URL。它不包含任何路径信息，只是服务器名称。
 
-> **备注：** `origin` 的值可以为 `null`。
+> [!NOTE]
+> `origin` 的值可以为 `null`。
 
 注意，在所有访问控制请求中，{{HTTPHeader("Origin")}} 标头字段**总是**被发送。
 

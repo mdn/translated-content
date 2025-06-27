@@ -72,7 +72,8 @@ class YourTestClass(TestCase):
 
 大多数测试的最佳基类是 [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase)。此测试类在运行测试之前，创建一个干净的数据库，并在自己的事务中，运行每个测试函数。该类还拥有一个[测试客户端](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#django.test.Client)，你可以使用该客户端，模拟在视图级别与代码交互的用户。在下面的部分中，我们将集中讨论使用此[TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 基类创建的单元测试。
 
-> **备注：** [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，你可能希望用可以用更简单的测试类，替换一些测试。
+> [!NOTE]
+> [django.test.TestCase](https://docs.djangoproject.com/en/2.0/topics/testing/tools/#testcase) 类非常方便，但可能会导致某些测试，比它们需要的速度慢（并非每个测试，都需要设置自己的数据库，或模拟视图交互）。一旦熟悉了这个类可以做什么，你可能希望用可以用更简单的测试类，替换一些测试。
 
 ### 你应该测试什么？
 

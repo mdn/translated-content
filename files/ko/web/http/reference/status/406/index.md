@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Status/406
 
 {{HTTPSidebar}}
 
-하이퍼텍스트 전송 프로토콜(HTTP)의 **`406 Not Acceptable`** 클라이언트 에러 응답 코드는 서버가 요청의 주도적인 [콘텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation) 헤더에 정의된 허용 가능한 값 목록과 일치하는 응답을 생성할 수 없으며, 서버가 기본 표현을 제공하지 않음을 나타냅니다.
+하이퍼텍스트 전송 프로토콜(HTTP)의 **`406 Not Acceptable`** 클라이언트 에러 응답 코드는 서버가 요청의 주도적인 [콘텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation) 헤더에 정의된 허용 가능한 값 목록과 일치하는 응답을 생성할 수 없으며, 서버가 기본 표현을 제공하지 않음을 나타냅니다.
 
 주도적인 콘텐츠 협상 헤더는 다음과 같습니다.
 
@@ -37,4 +37,4 @@ original_slug: Web/HTTP/Status/406
 - {{HTTPHeader("Accept")}}
 - {{HTTPHeader("Accept-Encoding")}}
 - {{HTTPHeader("Accept-Language")}}
-- HTTP [콘텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
+- HTTP [콘텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)

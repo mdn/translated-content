@@ -183,7 +183,8 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 
 {{ EmbedLiveSample('<mi> 自动斜体化', 700, 50) }}
 
-> **备注：** [MathML Core 中的这个表格](https://w3c.github.io/mathml-core/#italic-mappings)提供了受斜体化影响的字符的详尽列表，以及相应的斜体字符。
+> [!NOTE]
+> [MathML Core 中的这个表格](https://w3c.github.io/mathml-core/#italic-mappings)提供了受斜体化影响的字符的详尽列表，以及相应的斜体字符。
 
 ## 阻止对 \<mi> 的自动斜体化
 

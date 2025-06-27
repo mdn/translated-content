@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.species
 
 **`Array[Symbol.species]`** 静态访问器属性返回构造函数，构造函数用于构造数组方法返回值。
 
-> **警告：** `[Symbol.species]` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxref("Array/toReversed", "toReversed()")}}，不使用 `[Symbol.species]` 且始终返回一个新的 `Array` 基类实例。
+> [!WARNING]
+> `[Symbol.species]` 的存在允许执行任意代码，这可能会产生安全漏洞。它还会使某些优化变得更加困难。引擎开发者正在[调查是否要移除此特性](https://github.com/tc39/proposal-rm-builtin-subclassing)。如果可能，请避免依赖它。现代数组方法，如 {{jsxref("Array/toReversed", "toReversed()")}}，不使用 `[Symbol.species]` 且始终返回一个新的 `Array` 基类实例。
 
 ## 语法
 

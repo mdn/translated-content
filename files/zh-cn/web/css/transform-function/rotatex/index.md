@@ -37,7 +37,8 @@ transform: rotateX(3.142rad);
 
 旋转轴围绕原点旋转，而这个原点通过{{cssxref("transform-origin")}} 属性来定义。
 
-> **备注：** `rotateX(a)` 相当于 `rotate3d(1, 0, 0, a)`.
+> [!NOTE]
+> `rotateX(a)` 相当于 `rotate3d(1, 0, 0, a)`.
 
 > [!NOTE]
 > 与二维平面上的旋转不同，三维旋转的组合通常是不可交换的。换句话说，三维旋转的应用顺序，将会影响最终结果。

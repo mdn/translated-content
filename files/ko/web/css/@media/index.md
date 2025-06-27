@@ -5,14 +5,14 @@ slug: Web/CSS/@media
 
 {{CSSRef}}
 
-**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/At-rule)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
+**`@media`** [CSS](/ko/docs/Web/CSS) [@규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule)은 스타일 시트의 일부를 하나 이상의 [미디어 쿼리](/ko/docs/Web/CSS/CSS_media_queries/Using_media_queries) 결과에 따라 적용할 때 사용할 수 있습니다. `@media`를 사용해 미디어 쿼리를 지정하면 해당 쿼리를 만족하는 장치에서만 CSS 블록을 적용할 수 있습니다.
 
 > [!NOTE]
 > JavaScript에서는 `@media`를 {{domxref("CSSMediaRule")}} CSS 객체 모델 인터페이스로 접근할 수 있습니다.
 
 ## 구문
 
-`@media` @규칙은 최상위 코드나, 아무 [조건부 그룹 @규칙](/ko/docs/Web/CSS/At-rule#조건부_그룹_규칙) 안에 중첩해 작성할 수 있습니다.
+`@media` @규칙은 최상위 코드나, 아무 [조건부 그룹 @규칙](/ko/docs/Web/CSS/CSS_syntax/At-rule#조건부_그룹_규칙) 안에 중첩해 작성할 수 있습니다.
 
 ```css
 /* 최상위 코드 레벨 */

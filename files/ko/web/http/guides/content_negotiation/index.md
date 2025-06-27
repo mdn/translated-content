@@ -16,8 +16,8 @@ original_slug: Web/HTTP/Content_negotiation
 
 가장 잘 맞는 프레젠테이션의 결정은 다음 두 개의 메커니즘 중 하나를 통해 이루어집니다:
 
-- 클라이언트가 보내는 특정 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 이용하는 방법(서버 주도 협상 혹은 주도적인 협상)으로, 특정 종류의 리소스에 대한 표준 협상 방법입니다.
-- 서버에 의해 전달되는 {{HTTPStatus("300")}} (다중 선택) 혹은 {{HTTPStatus("406")}} (허용되지 않음) [HTTP 응답 코드](/ko/docs/Web/HTTP/Status)를 이용하는 방법(_에이전트 주도 협상_ 혹은 _리액티브 협상_)으로, 폴백 메커니즘으로써 사용됩니다.
+- 클라이언트가 보내는 특정 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)를 이용하는 방법(서버 주도 협상 혹은 주도적인 협상)으로, 특정 종류의 리소스에 대한 표준 협상 방법입니다.
+- 서버에 의해 전달되는 {{HTTPStatus("300")}} (다중 선택) 혹은 {{HTTPStatus("406")}} (허용되지 않음) [HTTP 응답 코드](/ko/docs/Web/HTTP/Reference/Status)를 이용하는 방법(_에이전트 주도 협상_ 혹은 _리액티브 협상_)으로, 폴백 메커니즘으로써 사용됩니다.
 
 수년 간, *투명한 콘텐츠 협상*과 `Alternates` 헤더와 같은 다른 콘텐츠 협상 제안들이 제안되어 왔습니다. 그런 제안들은 관심을 끄는데 실패했고 결국 버려졌습니다.
 
@@ -27,7 +27,7 @@ original_slug: Web/HTTP/Content_negotiation
 
 ![](httpnegoserver.png)
 
-HTTP/1.1 표준은 서버 주도 협상을 시작하는 표준 헤더 목록({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}})을 정의하고 있습니다. 엄밀히 말하자면 {{HTTPHeader("User-Agent")}}이 리스트 내에 없긴 하지만, 해당 헤더는, 좋은 관례가 아니라고 판단될지라도, 때때로 요청된 리소스의 특정 프레젠테이션을 전송하는데 사용되기도 합니다. 서버는 실제로 콘텐츠 협상에 있어 어떤 헤더가 사용될 지 (더 엄밀히 말하자면 연관된 응답 헤더) 가리키기 위해 {{HTTPHeader("Vary")}} 헤더를 사용하므로 [캐시](/ko/docs/Web/HTTP/Caching)는 최적으로 동작하게 됩니다.
+HTTP/1.1 표준은 서버 주도 협상을 시작하는 표준 헤더 목록({{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}})을 정의하고 있습니다. 엄밀히 말하자면 {{HTTPHeader("User-Agent")}}이 리스트 내에 없긴 하지만, 해당 헤더는, 좋은 관례가 아니라고 판단될지라도, 때때로 요청된 리소스의 특정 프레젠테이션을 전송하는데 사용되기도 합니다. 서버는 실제로 콘텐츠 협상에 있어 어떤 헤더가 사용될 지 (더 엄밀히 말하자면 연관된 응답 헤더) 가리키기 위해 {{HTTPHeader("Vary")}} 헤더를 사용하므로 [캐시](/ko/docs/Web/HTTP/Guides/Caching)는 최적으로 동작하게 됩니다.
 
 이것과 더불어, *클라이언트 힌트*라고 부르는 헤더들을 이용 가능한 헤더 목록에 추가하려는 실험적인 제안도 존재합니다. 클라이언트 힌트는 사용자 에이전트가 실행 중인 기기의 종류가 무엇인지를 알려줍니다(예를 들어, 데스크톱 컴퓨터인지 모바일 기기인지)
 
@@ -80,7 +80,7 @@ HTTP 메시지 압축은 웹 사이트의 성능을 높이는 가장 중요한 �
 ### `User-Agent` 헤더
 
 > [!NOTE]
-> 컨텐츠를 선택함에 있어 이 헤더를 정당하게 사용한다고 할지라도, 사용자 에이전트가 지원하는 것이 무엇인지를 정의하려고 이 헤더에 의지하는 것은 [나쁜 습관으로 간주됩니다](/ko/docs/Web/HTTP/Browser_detection_using_the_user_agent).
+> 컨텐츠를 선택함에 있어 이 헤더를 정당하게 사용한다고 할지라도, 사용자 에이전트가 지원하는 것이 무엇인지를 정의하려고 이 헤더에 의지하는 것은 [나쁜 습관으로 간주됩니다](/ko/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent).
 
 {{HTTPHeader("User-Agent")}} 헤더는 요청을 전송하는 브라우저를 식별하게 해줍니다. 이 문자열은 공백 문자로 구분된 *제품 토큰(product tokens)*과 _코멘트_ 목록을 포함합니다.
 

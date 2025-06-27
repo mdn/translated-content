@@ -72,7 +72,7 @@ if (x === undefined) {
 > **참고:**: `x == undefined`는 `x`가 `null`일 때도 참이기 때문에, 엄격한 동등 연산자(표준 동등 연산자와 반대로)를 사용해야 합니다.
 > 반면에, 엄격한 동등 연산자는 그렇지 않습니다. 이것은 `null`이 `undefined`하고 동일하지 않기 때문입니다.
 >
-> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness) 문서를 확인하세요.
+> 자세한 내용은 [Equality comparison and sameness](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) 문서를 확인하세요.
 
 ### `typeof` 연산자와 `undefined`
 

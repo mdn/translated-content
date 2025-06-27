@@ -42,8 +42,8 @@ mask: url(masks.svg#star) exclude; /* SVGグラフィック内の要素をマス
 
 /* 複数のマスク */
 mask:
-  url(masks.svg#star) left / 16px repeat-y, /* 幅 16px の左端のマスク */
-  url(masks.svg#circle) right / 16px repeat-y; /* 幅 16px の右端のマスク */
+  url(masks.svg#star) left / 16px repeat-y,
+  /* 幅 16px の左端のマスク */ url(masks.svg#circle) right / 16px repeat-y; /* 幅 16px の右端のマスク */
 
 /* グローバル値 */
 mask: inherit;

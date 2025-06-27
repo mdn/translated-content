@@ -100,7 +100,7 @@ function f(...p,) {} // SyntaxError: parameter after rest parameter
 
 ## 구조 분해 할당에서의 trailing comma
 
-[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)의 좌변에도 trailing comma를 사용할 수 있습니다.
+[구조 분해 할당](/ko/docs/Web/JavaScript/Reference/Operators/Destructuring)의 좌변에도 trailing comma를 사용할 수 있습니다.
 
 ```js-nolint
 // Trailing comma가 있는 배열 구조 분해

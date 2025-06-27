@@ -41,5 +41,5 @@ var myCred = myRequest.credentials; // returns "same-origin" by default
 ## See also
 
 - [ServiceWorker API](/ko/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/ko/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

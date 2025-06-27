@@ -26,7 +26,8 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **备注：** `ArrayBuffer()` 只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `ArrayBuffer()` 只能使用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构造。尝试在没有 `new` 的情况下调用会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

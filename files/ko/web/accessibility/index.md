@@ -30,7 +30,7 @@ MDN의 [접근성 학습 공간](/ko/docs/Learn_web_development/Core/Accessibili
 
 ## 기타 문서
 
-- [웹 콘텐츠 접근성 지침 이해하기](/ko/docs/Web/Accessibility/Understanding_WCAG)
+- [웹 콘텐츠 접근성 지침 이해하기](/ko/docs/Web/Accessibility/Guides/Understanding_WCAG)
   - : 이 문서는 W3C 웹 콘텐츠 접근성 가이드라인 2.0(이 글의 목적상, WCAG 2.0 또는 WCAG)에 요약된 권장 사항 준수를 위해 수행해야 하는 단계를 이해하는 데 도움이 되는 간단한 예제를 제공합니다.
 - [색상 및 접근성 소개](/ko/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : 이 글에서는 빛과 색에 대한 우리의 인식을 다루고, 접근성을 보장하는 디자인이 사용하는 색의 기초를 제공하며, 시각적이고 가독성이 있는 콘텐츠에 대한 모범 사례를 보여줍니다.
@@ -38,7 +38,7 @@ MDN의 [접근성 학습 공간](/ko/docs/Learn_web_development/Core/Accessibili
   - : 지금까지는 웹 개발자들이 스타일이 지정된 &lt;div&gt; 및 &lt;span&gt; 을 사용하여 위젯을 만들 때, 접근성을 보장하는 적절한 기술을 찾기가 어려웠습니다. **키보드 접근성**은 개발자가 알아야 할 최소한의 접근성 요구사항의 일부입니다.
 - [ARIA](/ko/docs/Web/Accessibility/ARIA)
   - : ARIA를 사용하여 HTML 문서를 보다 더 접근성 있게 만들 방법을 학습하는 글 모음입니다.
-- [모바일 접근성 점검표](/ko/docs/Web/Accessibility/Mobile_accessibility_checklist)
+- [모바일 접근성 점검표](/ko/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist)
   - : 이 문서는 모바일 앱 개발자를 위한 접근성 요구 사항에 대한 간단한 체크리스트를 제공합니다.
 - [인지 접근성](/ko/docs/Web/Accessibility/Cognitive_accessibility)
   - : 웹 콘텐츠를 만들 때, 인지 장애가 있는 사람이 웹 콘텐츠에 접근할 수 있도록 하는 방법을 숙지해야 합니다.
@@ -48,4 +48,4 @@ MDN의 [접근성 학습 공간](/ko/docs/Learn_web_development/Core/Accessibili
 ## 함께 보기
 
 - [WAI Interest Group](https://www.w3.org/WAI/IG/)
-- [개발자 가이드](/ko/docs/Web/Guide)
+- [개발자 가이드](/ko/docs/MDN/Guides)

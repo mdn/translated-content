@@ -13,14 +13,14 @@ l10n:
 
 JavaScript에서 배열은 [원시 값](/ko/docs/Glossary/Primitive)이 아니라 다음과 같은 핵심적인 특성을 가진 `Array` 객체입니다.
 
-- **JavaScript 배열은 크기를 조정이 가능하고, 다양한 [데이터 형식](/ko/docs/Web/JavaScript/Data_structures)을 혼합하여 저장할 수 있습니다**. (이러한 특성이 바람직하지 않은 경우라면, [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 대신 사용하세요.)
+- **JavaScript 배열은 크기를 조정이 가능하고, 다양한 [데이터 형식](/ko/docs/Web/JavaScript/Guide/Data_structures)을 혼합하여 저장할 수 있습니다**. (이러한 특성이 바람직하지 않은 경우라면, [형식화 배열](/ko/docs/Web/JavaScript/Guide/Typed_arrays)을 대신 사용하세요.)
 - **JavaScript 배열은 연관 배열이 아니므로** 임의의 문자열을 인덱스로 사용하여 배열 요소에 접근할 수 없습니다. 하지만, 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 인덱스로 사용하여 접근해야 합니다.
 - <strong>JavaScript 배열은 [0 인덱스](https://en.wikipedia.org/wiki/Zero-based_numbering)</strong>입니다. 배열의 첫 번째 요소는 인덱스 `0`, 두 번째 요소는 인덱스 `1`, 마지막 요소는 배열의 {{jsxref("Array/length", "length")}} 속성 값에서 1을 뺀 값에 위치합니다.
 - **JavaScript [배열 복사 연산](#배열_복사하기)은 얕은 복사본을 생성합니다**. (모든 JavaScript 객체의 모든 표준 내장 복사 연산은 [깊은 복사본](/ko/docs/Glossary/Deep_copy)이 아닌 얕은 복사본을 생성합니다).
 
 ### 배열 인덱스
 
-`Array` 객체는 ([연관 배열](https://en.wikipedia.org/wiki/Associative_array)에서처럼) 임의의 문자열을 요소 인덱스로 사용할 수 없으며 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 사용해야 합니다. 정수가 아닌 것을 통해 배열의 요소를 설정하거나 접근하려고 하면, 배열 목록 자체에서 요소를 설정하거나 검색하는 것이 아니라 해당 배열의 [객체 속성 컬렉션](/ko/docs/Web/JavaScript/Data_structures#속성)과 연결된 변수를 설정하거나 접근하게 됩니다. 배열의 객체 속성과 배열의 요소 목록은 별개이며, 배열의 [순회 및 수정 연산](/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_메서드)은 이렇게 이름 붙여진 속성에 적용할 수 없습니다.
+`Array` 객체는 ([연관 배열](https://en.wikipedia.org/wiki/Associative_array)에서처럼) 임의의 문자열을 요소 인덱스로 사용할 수 없으며 음수가 아닌 정수(또는 해당 수의 문자열 형식)를 사용해야 합니다. 정수가 아닌 것을 통해 배열의 요소를 설정하거나 접근하려고 하면, 배열 목록 자체에서 요소를 설정하거나 검색하는 것이 아니라 해당 배열의 [객체 속성 컬렉션](/ko/docs/Web/JavaScript/Guide/Data_structures#속성)과 연결된 변수를 설정하거나 접근하게 됩니다. 배열의 객체 속성과 배열의 요소 목록은 별개이며, 배열의 [순회 및 수정 연산](/ko/docs/Web/JavaScript/Guide/Indexed_collections#배열_메서드)은 이렇게 이름 붙여진 속성에 적용할 수 없습니다.
 
 배열 요소는 `toString`이 속성인 것과 같은 방식으로 객체 속성입니다(하지만, 정확히 말하자면 `toString()`은 메서드입니다). 그럼에도 불구하고 다음과 같이 배열의 요소에 접근하려고 하면 속성 이름이 유효하지 않기 때문에 구문 오류가 발생합니다.
 
@@ -682,7 +682,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 [`structuredClone()`](/ko/docs/Web/API/Window/structuredClone) 메서드를 사용하여 깊은 복사본을 만들 수도 있는데, 이 메서드는 소스의 [전송 가능한 객체](/ko/docs/Web/API/Web_Workers_API/Transferable_objects)를 단순히 복제하는 것이 아니라 새 복사본으로 전송할 수 있다는 장점이 있습니다.
 
-마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
+마지막으로, 기존 배열을 새 변수에 할당해도 배열이나 그 요소의 복사본이 생성되지 않는다는 점을 이해하는 것이 중요합니다. 대신 새 변수는 기존 배열에 대한 참조 또는 별칭일 뿐이며, 기존 배열의 이름과 새 변수 이름은 완전히 동일한 객체에 대한 두 개의 이름일 뿐입니다(따라서 항상 [엄격하게 동일](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#를_사용하는_엄격한_동등)한 것으로 평가됩니다). 따라서 기존 배열의 값이나 새 변수의 값을 조금이라도 변경하면, 다른 변수도 변경됩니다.
 
 ```js
 const fruits = ["Strawberry", "Mango"];

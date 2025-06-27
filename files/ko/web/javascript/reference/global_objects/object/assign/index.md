@@ -241,5 +241,5 @@ console.log(copy);
 
 - [`core-js`의 `Object.assign` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
 - {{jsxref("Object.defineProperties()")}}
-- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [속성의 소유권과 열거 가능성](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - [객체 리터럴에서의 전개 구문](/ko/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals)

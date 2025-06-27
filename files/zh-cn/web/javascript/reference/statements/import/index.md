@@ -93,7 +93,8 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **备注：** `import { x, y } from "mod"` 并不等同于 `import defaultExport from "mod"` 然后从 `defaultExport` 中解构出 `x` 和 `y`。具名导入和默认导入是 JavaScript 模块中不同的语法。
+> [!NOTE]
+> `import { x, y } from "mod"` 并不等同于 `import defaultExport from "mod"` 然后从 `defaultExport` 中解构出 `x` 和 `y`。具名导入和默认导入是 JavaScript 模块中不同的语法。
 
 #### 默认导入
 
