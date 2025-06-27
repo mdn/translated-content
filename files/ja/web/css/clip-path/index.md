@@ -133,7 +133,6 @@ clip-path: unset;
 
 - `<geometry-box>`
   - : `<basic-shape>` と共に指定された場合、この値は基本シェイプの参照ボックスを定義します。単独で指定された場合、指定のボックスの辺を、角の形（{{cssxref("border-radius")}} など）を含めてクリッピングパスにします。ジオメトリーボックスは以下の値のうちの一つが指定できます。
-
     - `margin-box`
       - : [マージンボックス](/ja/docs/Web/CSS/CSS_shapes/From_box_values#margin-box)を参照ボックスとして使用します。
     - `border-box`
