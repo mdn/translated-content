@@ -24,7 +24,7 @@ vertexAttrib4fv(index, value)
 ### 参数
 
 - `index`
-  - : {{domxref("GLuint")}} 类型，指定了待修改顶点属性的位置。
+  - : {{domxref("WebGL_API/Types", "GLuint")}} 类型，指定了待修改顶点属性的位置。
 - `v0, v1, v2, v3`
   - : 浮点数类型 {{jsxref("Number")}}，用于设置顶点属性的值。
 - `value`
