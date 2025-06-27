@@ -32,7 +32,6 @@ clip: unset;
 ### 値
 
 - `rect()`
-
   - : `rect()` 関数を使用して、 `rect(<top>, <right>, <bottom>, <left>)` の形で定義された長方形。 `<top>` と `<bottom>` は、ボックス境界の上辺からのオフセットを表します。`<right>` と `<left>` は、ボックス境界の左辺からのオフセットを表します。これがボックスの中身となります。
 
     `<top>`、`<right>`、`<bottom>`、`<left>` の値は {{cssxref("&lt;length&gt;")}} または `auto` のいずれかです。`auto` が指定されると、その辺の境界線の内側で切り取られます。
