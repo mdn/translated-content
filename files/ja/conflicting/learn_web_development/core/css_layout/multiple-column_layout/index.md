@@ -1,7 +1,7 @@
 ---
 title: "スキルテスト: 段組み"
-slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
-original_slug: Learn_web_development/Core/CSS_layout/Multicol_skills
+slug: conflicting/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
+original_slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
