@@ -18,7 +18,7 @@ for (const [key, value] of mySearchParams.entries()) {
 }
 ```
 
-`URLSearchParams` は機能的には {{jsxref("Map")}} に似ていますが、反復処理を行う際には、`Map` では実装方法の関係で発生しないような[落とし穴](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#concurrent_modifications_when_iterating)に陥る可能性があります。
+`URLSearchParams` は機能的には {{jsxref("Map")}} に似ていますが、反復処理を行う際には、`Map` では実装方法の関係で発生しないような[落とし穴](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復処理時の同時進行の変更)に陥る可能性があります。
 
 ## コンストラクター
 

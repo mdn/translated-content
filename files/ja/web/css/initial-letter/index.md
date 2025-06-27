@@ -2,22 +2,26 @@
 title: initial-letter
 slug: Web/CSS/initial-letter
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{CSSRef}}
 
-`initial-letter` は CSS のプロパティで、頭文字をドロップキャップにしたり、上げたり、下げたりすることを設定します。
+`initial-letter` は CSS のプロパティで、ドロップ、レイズ、サンクンされた最初の文字のサイズとシンクを設定します。このプロパティは、 {{cssxref("::first-letter")}} 擬似要素およびブロックコンテナーのインラインレベル最初の子供要素に適用されます。
+
+## 構文
 
 ```css
 /* キーワード値 */
 initial-letter: normal;
 
-/* 数値 */
-initial-letter: 1.5; /* 頭文字が 1.5 行分を占める */
+/* 1 つの値 */
 initial-letter: 3; /* 頭文字が 3 行分を占める */
-initial-letter: 3 2; /* 頭文字が 3 行分を占め、
-                           2 行分下がる */
+initial-letter: 1.5; /* 頭文字が 1.5 行分を占める */
+
+/* ２ つの値 */
+initial-letter: 3 2; /* 頭文字が 3 行分を占め、ベースラインは 2 行目（1 行分上がる） */
+initial-letter: 3 1; /* 頭文字が 3 行分を占め、ベースライン変更なし（2 行分上がる） */
 
 /* グローバル値 */
 initial-letter: inherit;
@@ -27,9 +31,9 @@ initial-letter: revert-layer;
 initial-letter: unset;
 ```
 
-キーワード値の `normal`、または `<number>` と、その後に任意で `<integer>` が付きます。
-
 ### 値
+
+キーワード値の `normal`、または `<number>` と、その後に任意で `<integer>` が付きます。
 
 - `normal`
   - : 頭文字に特別な効果を付与しません。テキストは普通通りに表示されます。
@@ -53,9 +57,9 @@ initial-letter: unset;
 #### HTML
 
 ```html
-<p class="normal">Initial letter is normal</p>
-<p class="onefive">Initial letter occupies 1.5 lines</p>
-<p class="three">Initial letter occupies 3 lines</p>
+<p class="normal">先頭文字は通常通りです。</p>
+<p class="onefive">先頭文字は 1.5 行を占めます。</p>
+<p class="three">先頭文字は 3 行を占めます。</p>
 ```
 
 #### CSS
@@ -75,11 +79,60 @@ initial-letter: unset;
   -webkit-initial-letter: 3;
   initial-letter: 3;
 }
+
+p {
+  outline: 1px dashed red;
+}
 ```
 
 #### 結果
 
 {{EmbedLiveSample('先頭文字の大きさの設定', 250, 180)}}
+
+### sink 値を設定
+
+この例では、すべての最初の文字は同じサイズですが、シンク値が異なります。
+
+#### HTML
+
+```html
+<p class="four">先頭文字: シンク値 = 4</p>
+<p class="same">先頭文字: シンク値は定義されていません（サイズと同じ）</p>
+<p class="two">先頭文字: シンク値 = 2</p>
+<p class="one">先頭文字: シンク値 = 1</p>
+```
+
+#### CSS
+
+```css
+.four::first-letter {
+  -webkit-initial-letter: 3 4;
+  initial-letter: 3 4;
+}
+
+.same::first-letter {
+  -webkit-initial-letter: 3;
+  initial-letter: 3;
+}
+
+.two::first-letter {
+  -webkit-initial-letter: 3 2;
+  initial-letter: 3 2;
+}
+
+.one::first-letter {
+  -webkit-initial-letter: 3 1;
+  initial-letter: 3 1;
+}
+
+p {
+  outline: 1px dashed red;
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample('sink_値を設定', 250, 240)}}
 
 ## 仕様書
 
@@ -91,5 +144,6 @@ initial-letter: unset;
 
 ## 関連情報
 
-- {{cssxref("initial-letter-align")}}
-- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/)
+- {{cssxref("::first-letter")}}
+- {{cssxref(":first-child")}}
+- [Drop caps in CSS](https://www.oddbird.net/2017/01/03/initial-letter/) via Oddbird (2017)

@@ -11,6 +11,6 @@ A missão do MDN Web Docs é fornecer aos desenvolvedores as informações neces
 
 Nós precisamos da sua ajuda! É fácil. Não se preocupe em pedir permissão ou em cometer erros. Por outro lado, por favor, conheça a [comunidade MDN](/pt-BR/docs/MDN/Comunidade); estamos aqui para ajudá-lo! A documentação abaixo, pode te ajudar a começar.
 
-- [Início rápido para iniciantes](/pt-BR/docs/MDN/Community/Contributing/Getting_started) Você é novo no MDN e quer aprender como ajudar a torná-lo melhor? Comece aqui!
-- [Eu sou um usuário avançado](/pt-BR/docs/MDN/Community/Contributing) Acesse nosso guia completo e aprofundado para os colaboradores do MDN para aprender mais quando você se sentir confortável.
+- [Início rápido para iniciantes](/pt-BR/docs/MDN/Community/Getting_started) Você é novo no MDN e quer aprender como ajudar a torná-lo melhor? Comece aqui!
+- [Eu sou um usuário avançado](/pt-BR/docs/conflicting/MDN/Community) Acesse nosso guia completo e aprofundado para os colaboradores do MDN para aprender mais quando você se sentir confortável.
 - [Compartilhe](/pt-BR/docs/MDN/Promote) Se você ama o MDN, compartilhe a nossa a rede! Encontre o material necessário, como arte, ferramentas e guias para promover o MDN.

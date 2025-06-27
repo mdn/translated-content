@@ -12,35 +12,29 @@ Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrion
 ## Dans cet article
 
 - [Directives générales sur le JavaScript](#general_javascript_guidelines)
-
   - [Utiliser une syntaxe étendue](#use_expanded_syntax)
   - [Commentaires JavaScript](#javascript_comments)
   - [Utiliser les fonctions ES6](#use_es6_features)
 
 - [Variables](#variables)
-
   - [Nommage des variables](#variable_naming)
   - [Déclaration des variables](#declaring_variables)
 
 - [Opérateurs et comparaison](#operators_and_comparison)
-
   - [Opérateurs ternaires](#ternary_operators)
   - [Utiliser l'égalité stricte](#use_strict_equality)
   - [Utiliser des raccourcis pour les tests booléens](#use_shortcuts_for_boolean_tests)
 
 - [Instructions de contrôle](#control_statements)
 - [Chaînes de caractères](#strings)
-
   - [Utiliser des modèles littéraux](#use_template_literals)
   - [Utiliser textContent, et non innerHTML](#use_textcontent_not_innerhtml)
 
 - [Conditions](#conditionals)
-
   - [Usage général des boucles](#general_purpose_looping)
   - [Les instructions switch](#switch_statements)
 
 - [Fonctions et objets](#functions_and_objects)
-
   - [Nommage des fonctions](#function_naming)
   - [Définition des fonctions](#defining_functions)
   - [Création d'objets](#creating_objects)
@@ -48,7 +42,6 @@ Ce qui suit est un ensemble assez simple de directives JavaScript. Nous pourrion
   - [Nommage des objets](#object_naming)
 
 - [Tableaux](#arrays)
-
   - [Création de tableaux](#creating_arrays)
   - [Ajout à un tableau](#adding_to_an_array)
 

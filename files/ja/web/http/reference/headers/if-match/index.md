@@ -25,7 +25,7 @@ HTTP の **`If-Match`** リクエストヘッダーは、リクエストを条�
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>

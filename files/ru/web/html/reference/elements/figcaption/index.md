@@ -42,17 +42,17 @@ figcaption {
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Нет                                                                                                                                                                                |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент)                                                                                                        |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
-| Допустимые родители                                        | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                         |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | Нет                                                                                                                                                                                |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                             | [Потоковый контент](/ru/docs/Web/HTML/Guides/Content_categories#потоковый_контент)                                                                                                 |
+| Пропуск тегов                                                     | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
+| Допустимые родители                                               | Элемент {{HTMLElement("figure")}}; элемент `<figcaption>` должен быть первым или последним потомком.                                                                               |
+| Допустимые ARIA-роли                                              | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code> |
+| DOM-интерфейс                                                     | {{domxref("HTMLElement")}}                                                                                                                                                         |
 
 ## Атрибуты
 
-Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент принимает только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Примеры
 

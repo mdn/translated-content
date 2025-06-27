@@ -111,24 +111,23 @@ borderify/
 
 Firefox の場合: [about:debugging](https://firefox-source-docs.mozilla.org/devtools-user/about_colon_debugging/index.html) ページを開いて、"この Firefox" (Firefox の新しいバージョンで)をクリックし、"一時的なアドオンを読み込む" をクリックし、アドオンのディレクトリーにあるファイルをどれか 1 つ選択します。
 
-{{EmbedYouTube("cer9EUKegG4")}}
-
 ここでインストールされたアドオンは Firefox を再起動するまで有効です。
 
 あるいは、[web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) ツールを使ってコマンドラインから拡張機能を実行することもできます。
 
 ### テスト
 
+> [!NOTE]
+> デフォルトでは、[拡張機能はプライベートブラウジングでは動作しません](https://support.mozilla.org/ja/kb/extensions-private-browsing)。拡張機能をプライベートブラウジングでテストしたい場合は、 `about:addons` を開き、対象の拡張機能をクリックして、「プライベートウィンドウでの実行」を許可するラジオボタンを選択してください。
+
 それでは "mozilla.org" 配下のページを開いてみましょう。ページが赤い枠で囲まれていることを確認できるはずです。
 
-{{EmbedYouTube("rxBQl2Z9IBQ")}}
+![mozilla.org に表示される赤い枠](border_on_mozilla_org.png)
 
 > [!NOTE]
 > ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
 
 もう少し実験をします。コンテンツスクリプトを編集して、枠線の色を変更したり、ページのコンテンツに何か他の操作を加えてみましょう。コンテンツスクリプトを保存し、"about:debugging"の"再読み込み"ボタンをクリックして拡張機能ファイルを再読み込みすると、加えた変更がすぐに反映されているはずです。
-
-{{EmbedYouTube("NuajE60jfGY")}}
 
 - [拡張機能の読み込みに関する詳細](/ja/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)
 

@@ -39,7 +39,7 @@ _继承父接口 {{domxref("EventTarget")}} 的方法。_
 - {{domxref("Worker.postMessage()")}}
   - : 发送一条消息到最近的外层对象，消息可由任何 JavaScript 对象组成。
 - {{domxref("Worker.terminate()")}}
-  - : 立即终止 worker。该方法不会给 worker 留下任何完成操作的机会；就是简单的立即停止。Service Woker 不支持这个方法。
+  - : 立即终止 worker。该方法不会给 worker 留下任何完成操作的机会；就是简单的立即停止。Service Worker 不支持这个方法。
 
 ## 示例
 

@@ -1,16 +1,13 @@
 ---
 title: <xsl:param>
 slug: Web/XML/XSLT/Reference/Element/param
-original_slug: Web/XSLT/Reference/Element/param
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:param>` 要素はパラメーターを名前で設定し、オプションでそのパラメーターの既定値を設定します。最上位要素として使用される場合、パラメーターはグローバルです。`<xsl:template>` 要素内で使用される場合、パラメーターはそのテンプレートに対してローカルです。この場合、テンプレートの最初の子要素でなければなりません。
 
-### 構文
+## 構文
 
 ```xml
 <xsl:param name=NAME select=EXPRESSION>
@@ -36,6 +33,6 @@ l10n:
 
 XSLT, section 11.
 
-## Gecko support
+## Gecko の対応
 
-サポート済み
+対応済み。

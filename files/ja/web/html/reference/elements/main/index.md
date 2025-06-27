@@ -79,7 +79,7 @@ header {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"
             >main</a
           ></code
         >

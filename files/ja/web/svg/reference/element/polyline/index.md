@@ -1,14 +1,11 @@
 ---
 title: <polyline>
 slug: Web/SVG/Reference/Element/polyline
-original_slug: Web/SVG/Element/polyline
 l10n:
-  sourceCommit: 2f43f506240fa6c866cc3bc2d018364ae49421d9
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-**`<polyline>`** は [SVG](/ja/docs/Web/SVG) 要素で、複数の点を結ぶ直線を作成する SVG の基本図形です。一般的に `polyline` は開いた図形を作成するために用いられます。最後の点は最初の点に接続されている必要はないからです。閉じた図形については {{SVGElement("polygon")}} 要素を参照してください。
+**`<polyline>`** は [SVG](/ja/docs/Web/SVG) の要素で、複数の点を結ぶ直線を作成する SVG の基本図形です。一般的に `polyline` は開いた図形を作成するために用いられます。最後の点は最初の点に接続されている必要はないからです。閉じた図形については {{SVGElement("polygon")}} 要素を参照してください。
 
 ## 例
 
@@ -36,10 +33,10 @@ svg {
 
 - {{SVGAttr('points')}}
   - : この属性は、連続線を描画するのに必要な点（x,y の絶対座標の組）のリストを定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)+ ; _既定値_: `""`; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)+; _既定値_: `""`; _アニメーション_: **可**
 - {{SVGAttr("pathLength")}}
   - : この属性は、パスの全長をユーザー単位で指定します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) ; _既定値_: _none_; _アニメーション_: **可**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number); _既定値_: _none_; _アニメーション_: **可**
 
 ## 使用可能な場所
 

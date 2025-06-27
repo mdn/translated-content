@@ -184,7 +184,7 @@ body {
 }
 ```
 
-Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Element/body). Revisa una por una:
+Ahora tienes varias declaraciones en el elemento [body](/es/docs/Web/HTML/Reference/Elements/body). Revisa una por una:
 
 - `width: 600px;` — esto hará que el cuerpo siempre tenga 600 píxeles de ancho.
 - `margin: 0 auto;` — cuando seleccionas dos valores dentro de propiedades como `margin` o `padding`, el primer valor afectará los lados superior (top) **e** inferior (bottom) (en este caso haciéndolo en 0), y el segundo valor los lados izquierdo (left) **y** derecho (right) (aquí, `auto` es un valor especial que divide el espacio disponible entre derecha e izquierda). Puedes usar esta propiedad con uno, dos, tres o cuatro valores como se explica en la [sintaxis de padding](/es/docs/Web/CSS/padding#sintaxis).

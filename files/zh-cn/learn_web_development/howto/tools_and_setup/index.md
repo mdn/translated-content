@@ -3,8 +3,6 @@ title: 工具和安装
 slug: Learn_web_development/Howto/Tools_and_setup
 ---
 
-{{LearnSidebar}}
-
 本部分列出了与可用于构建网站的工具/软件相关的问题。
 
 - [你需要什么软件用来造一个网站？](/zh-CN/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)

@@ -15,7 +15,7 @@ l10n:
 
 对于图像，固有尺寸与文本的含义相同——在不应用任何 CSS 来改变渲染的情况下，图像显示的尺寸。
 
-像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
+像素密度和分辨率影响固有尺寸。默认情况下，假定图像具有“1x”像素密度（1 设备像素=1 CSS 像素），此时固有尺寸只是像素高度和宽度。图像的固有尺寸和分辨率可以在其 {{Glossary("EXIF")}} 数据中明确指定。图像的像素密度也可以使用 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性设置。请注意，如果同时使用两种机制，则 `srcset` 值覆盖 EXIF 值。
 
 固有尺寸及其计算方式在 [CSS 尺寸模块](/zh-CN/docs/Web/CSS/CSS_box_sizing)中定义。
 

@@ -3,7 +3,7 @@ title: "Django 教程 6: 通用列表和详细信息视图"
 slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Django/Home_page", "Learn_web_development/Extensions/Server-side/Django/Sessions", "Learn_web_development/Extensions/Server-side/Django")}}
 
 本教程扩充了 [LocalLibrary](/zh-CN/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) 网站，为书本与作者增加列表与细节页面。此处我们将学到通用类别视图，并演示如何降低你必须为一般使用案例撰写的程式码数量。我们也会更加深入 URL 处理细节，演示如何实施基本模式匹配。
 
@@ -427,7 +427,8 @@ def book_detail_view(request,pk):
 
 视图首先尝试从模型中，获取特定的书本记录。如果失败，则视图应引发 `Http404`异常，以指示该书本“未找到”。然后，最后一步是使用模板名称，和上下文参数`context`中的书本数据（作为字典）调用`render()`。
 
-> **备注：** `get_object_or_404()`（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 `Http404` 异常。
+> [!NOTE]
+> `get_object_or_404()`（如上所示）是一个方便的快捷方式，用于在未找到记录时，引发 `Http404` 异常。
 
 ### 创建详细信息视图模板
 

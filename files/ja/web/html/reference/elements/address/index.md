@@ -1,9 +1,8 @@
 ---
 title: "<address>: 連絡先要素"
 slug: Web/HTML/Reference/Elements/address
-original_slug: Web/HTML/Element/address
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -13,7 +12,7 @@ l10n:
 {{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Contact the author of this page:</p>
+<p>このページの作者の連絡先:</p>
 
 <address>
   <a href="mailto:jim@example.com">jim@example.com</a><br />
@@ -49,14 +48,10 @@ a[href^="tel"]::before {
 
 この例は `<address>` 要素で記事の編集者の連絡先情報を示す使い方を示しています。
 
-```html
+```html-nolint
 <address>
-  作者の連絡先は
-  <a href="http://www.somedomain.com/contact"> www.somedomain.com</a>
-  です。<br />
-  バグを発見した場合は<a href="mailto:webmaster@somedomain.com"
-    >ウェブマスターへご連絡ください</a
-  >。<br />
+  作者の連絡先は <a href="http://www.example.com/contact">www.example.com</a> です。<br />
+  バグを発見した場合は<a href="mailto:webmaster@example.com">ウェブマスターへご連絡ください</a>。<br />
   住所は下記の通りです。<br />
   Mozilla Foundation<br />
   331 E Evelyn Ave<br />
@@ -77,12 +72,12 @@ a[href^="tel"]::before {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、知覚可能コンテンツ
       </td>
@@ -90,7 +85,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >。ただし
         <code>&#x3C;address></code> 要素をネストしたり、見出しコンテンツ
@@ -111,23 +106,18 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
-        >
-        を受け入れるすべての要素。ただし <code>&#x3C;address></code> 要素は除く
-        (論理的な対称性の原理によれば、親要素である
-        <code>&#x3C;address></code> タグは
-        <code>&#x3C;address></code>
-        要素を入れ子にすることができません。したがって、同じ
-        <code>&#x3C;address></code> のコンテンツの親に
-        <code>&#x3C;address></code> タグを置くこともできません)。
+        > を受け入れるすべての要素。ただし <code>&#x3C;address></code> 要素は除く（論理的な対称性の原理によれば、親要素である <code>&#x3C;address></code> タグは <code>&#x3C;address></code> 要素を入れ子にすることができません。したがって、同じ <code>&#x3C;address></code> のコンテンツの親に <code>&#x3C;address></code> タグを置くこともできません）。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"
+            >group</a
+          ></code
         >
       </td>
     </tr>
@@ -138,9 +128,7 @@ a[href^="tel"]::before {
     <tr>
       <th scope="row">DOM インターフェイス</th>
       <td>
-        {{domxref("HTMLElement")}}。 Gecko 2.0 (Firefox 4) より前では
-        {{domxref("HTMLSpanElement")}}
-        インターフェイスが提供されます。
+        {{domxref("HTMLElement")}}。 Gecko 2.0 (Firefox 4) より前では {{domxref("HTMLSpanElement")}} インターフェイスが提供されます。
       </td>
     </tr>
   </tbody>

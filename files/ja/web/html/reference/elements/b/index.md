@@ -1,9 +1,8 @@
 ---
 title: "<b>: 注目付け要素"
 slug: Web/HTML/Reference/Elements/b
-original_slug: Web/HTML/Element/b
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -12,18 +11,15 @@ l10n:
 
 {{InteractiveExample("HTML Demo: &lt;b&gt;", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
-  The two most popular science courses offered by the school are
-  <b class="term">chemistry</b> (the study of chemicals and the composition of
-  substances) and <b class="term">physics</b> (the study of the nature and
-  properties of matter and energy).
+  この学校で最も人気のある 2 つの科学コースは、<b class="term">化学</b>（化学物質や物質の合成について学ぶ）と<b class="term">物理学</b>（物質やエネルギーの性質やプロパティについて学ぶ）です。
 </p>
 ```
 
 ```css interactive-example
-/* stylelint-disable-next-line block-no-empty */
 b {
+  /* ここにスタイルを追加 */
 }
 ```
 
@@ -33,7 +29,7 @@ b {
 
 ## 使用上のメモ
 
-- `<b>` は要約に現れるキーワード、レビュー文内での製品名、または、その他の表記上太字で記述される通例のある箇所（但し、特別な重要性を持たない部分）に使用してください。
+- `<b>` は要約に現れるキーワード、レビュー文内での製品名、その他の普通は太字で表現されるテキストの範囲（但し、特別な重要性を持たない部分）に使用してください。
 - `<b>` 要素を {{HTMLElement("strong")}}, {{HTMLElement("em")}}, {{HTMLElement("mark")}} 要素と混同しないでください。 {{HTMLElement("strong")}} は特定の*重要性*を持った文字列を表し、 {{HTMLElement("em")}} はテキストを軽く強調し、 {{HTMLElement("mark")}} は特定の*関連性*を持った文字列を表します。`<b>` はそのような特別な意味を持ちません。他の要素が持つ意味合いに合わないときのみ使用してください。
 - 同様に、`<b>` 要素でタイトルや見出しをマークしないでください。この用途では {{HTMLElement("Heading_Elements", "h1")}} から {{HTMLElement("Heading_Elements", "h6")}} タグを使用てください。さらに、スタイルシートでこれらの要素の既定のスタイルを変更できるので、これらの要素は太字で表示される*とは限りません*。
 - 必要に応じて追加的な意味情報を伝える目的で `<b>` 要素に [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性を使用することはよい使用法です（例えば、段落の最初の文に `<b class="lead">` を設定するなど）。これによって、 `<b>` の様々な使用法が管理しやすくなり、スタイル上の変更が必要になった時、 HTML における使用方法を変更する必要がなくなります。
@@ -42,13 +38,11 @@ b {
 
 ## 例
 
-```html
+```html-nolint
 <p>
-  This article describes several <b class="keywords">text-level</b> elements. It
-  explains their usage in an <b class="keywords">HTML</b> document.
+  この記事では、<b class="keywords">テキストレベル</b>の要素についていくつか説明します。 <b class="keywords">HTML</b> 文書内でのそれらの使用法について説明します。
 </p>
-Keywords are displayed with the default style of the
-<b>element, likely in bold.</b>
+キーワードは、この要素の既定のスタイルで、<b>おそらく太字で</b>表示されます。
 ```
 
 ### 結果
@@ -61,15 +55,15 @@ Keywords are displayed with the default style of the
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -77,7 +71,7 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -89,7 +83,7 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -97,8 +91,10 @@ Keywords are displayed with the default style of the
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

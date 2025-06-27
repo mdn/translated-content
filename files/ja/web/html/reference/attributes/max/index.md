@@ -2,9 +2,8 @@
 title: "HTML 属性: max"
 short-title: max
 slug: Web/HTML/Reference/Attributes/max
-original_slug: Web/HTML/Attributes/max
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{HTMLSidebar}}
@@ -133,7 +132,7 @@ l10n:
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
-- 他の meter の属性: [`low`](/ja/docs/Web/HTML/Attributes/low), [`high`](/ja/docs/Web/HTML/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Attributes/optimum)
+- 他の meter の属性: [`low`](/ja/docs/Web/HTML/Reference/Attributes/low), [`high`](/ja/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Reference/Attributes/optimum)
 - [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}

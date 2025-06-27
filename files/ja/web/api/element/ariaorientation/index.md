@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaOrientation`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の方向が横方向、縦方向、または不明/あいまいであることを示す [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性を反映します。
+**`ariaOrientation`** は {{domxref("Element")}} インターフェイスのプロパティで、この要素の方向が横方向、縦方向、または不明/あいまいであることを示す [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性を反映します。
 
 ## 値
 
@@ -23,7 +23,7 @@ l10n:
 
 ## 例
 
-この例では、IDが `handle_zoomSlider` の要素の [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性は "`vertical`" に設定されています。`ariaOrientation` を使用して値を "`horizontal`" に更新します。
+この例では、IDが `handle_zoomSlider` の要素の [`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性は "`vertical`" に設定されています。`ariaOrientation` を使用して値を "`horizontal`" に更新します。
 
 ```html
 <div

@@ -170,7 +170,7 @@ label {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role"
           >listbox</a
         >
       </td>

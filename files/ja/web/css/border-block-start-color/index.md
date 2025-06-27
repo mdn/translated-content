@@ -1,6 +1,8 @@
 ---
 title: border-block-start-color
 slug: Web/CSS/border-block-start-color
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -32,7 +34,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -59,6 +61,7 @@ border-block-start-color: #4c5d21;
 border-block-start-color: inherit;
 border-block-start-color: initial;
 border-block-start-color: revert;
+border-block-start-color: revert-layer;
 border-block-start-color: unset;
 ```
 
@@ -66,12 +69,12 @@ border-block-start-color: unset;
 
 ### 値
 
-- `<'color'>`
-  - : {{cssxref("border-color")}} を参照してください。
+- {{CSSXref("&lt;color&gt;")}}
+  - : 境界線の色です。
 
 ## 公式定義
 
-{{cssinfo}}
+{{CSSInfo}}
 
 ## 形式文法
 
@@ -79,13 +82,13 @@ border-block-start-color: unset;
 
 ## 例
 
-<h3 id="Border_color_with_vertical_text">縦書きテキストの境界線の色</h3>
+### 縦書きテキストの境界線の色
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -107,7 +110,7 @@ div {
 
 #### 例
 
-{{EmbedLiveSample("Border_color_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("縦書きテキストの境界線の色", 140, 140)}}
 
 ## 仕様書
 
@@ -119,5 +122,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-bottom-color")}}, {{cssxref("border-left-color")}} のうちの一つに対応づけられます
 - {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}}

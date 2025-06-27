@@ -13,7 +13,7 @@ slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 
 ## 反弹边界
 
-让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的边界视为墙壁，而不是让球移过它们。在 Phaser 中，可以使用该 `collideWorldsBound` 属性轻松实现。在现有 `game.physics.enable()` 方法调用之后添加此行：
+让我们的球从墙壁上弹起的最简单的方法是告诉框架，我们想要将 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 元素的边界视为墙壁，而不是让球移过它们。在 Phaser 中，可以使用该 `collideWorldsBound` 属性轻松实现。在现有 `game.physics.enable()` 方法调用之后添加此行：
 
 ```js
 ball.body.collideWorldBounds = true;

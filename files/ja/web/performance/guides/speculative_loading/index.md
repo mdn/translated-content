@@ -140,7 +140,7 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 これは `https://aggregator.example/` からアクセスできません。
 
-> **メモ:** `<link rel="prefetch">` は機能的には {{domxref("fetch()")}} を `priority: "low"` オプション付きで呼び出したのと同等ですが、前者は一般に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。
+> **メモ:** `<link rel="prefetch">` は機能的には {{domxref("Window/fetch", "fetch()")}} を `priority: "low"` オプション付きで呼び出したのと同等ですが、前者は一般に優先度がさらに低く、リクエストに [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーが設定されます。
 
 > **メモ:** `prefetch` 操作の取得リクエストは、 [`Sec-Purpose: prefetch`](/ja/docs/Web/HTTP/Reference/Headers/Sec-Purpose) ヘッダーを含む HTTP リクエストになります。サーバーはこのヘッダーを使用して、リソースのキャッシュ期限を変更したり、他の特別な処理を行ったりするかもしれません。
 > このリクエストでは、 {{HTTPHeader("Sec-Fetch-Dest")}} ヘッダーの値も `empty` に設定されます。

@@ -94,7 +94,7 @@ MDN 有三个大类的页面类型，尽管有些页面类型属于多个类别�
 
 ### 示例
 
-- [`<video>` 元素](/zh-CN/docs/Web/HTML/Element/video)
+- [`<video>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/video)
 
 ### 模板
 

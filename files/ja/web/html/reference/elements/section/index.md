@@ -174,7 +174,7 @@ h2 {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"
             >region</a
           ></code
         >
@@ -190,16 +190,16 @@ h2 {
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/alert_role"><code>alert</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/banner_role"><code>banner</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/complementary_role"><code>complementary</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role"><code>dialog</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/document_role"><code>document</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/log_role"><code>log</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/main_role"><code>main</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/marquee_role"><code>marquee</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role"><code>navigation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/status_role"><code>status</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role"><code>tabpanel</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role"><code>alert</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/banner_role"><code>banner</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/complementary_role"><code>complementary</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/contentinfo_role"><code>contentinfo</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role"><code>dialog</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/log_role"><code>log</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/main_role"><code>main</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/marquee_role"><code>marquee</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"><code>navigation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/status_role"><code>status</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role"><code>tabpanel</code></a>
       </td>
     </tr>
     <tr>

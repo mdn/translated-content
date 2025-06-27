@@ -1,9 +1,8 @@
 ---
 title: <input type="time">
 slug: Web/HTML/Reference/Elements/input/time
-original_slug: Web/HTML/Element/input/time
 l10n:
-  sourceCommit: 84f6af2d3b9779b4168e9c3265e8941531155823
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -15,11 +14,17 @@ l10n:
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<label for="appt">Choose a time for your meeting:</label>
+<label for="appointment">ミーティングの時間を選択してください:</label>
 
-<input type="time" id="appt" name="appt" min="09:00" max="18:00" required />
+<input
+  type="time"
+  id="appointment"
+  name="appointment"
+  min="09:00"
+  max="18:00"
+  required />
 
-<small>Office hours are 9am to 6pm</small>
+<small>オフィスアワーは午前9時から午後6時までです</small>
 ```
 
 ```css interactive-example
@@ -338,7 +343,7 @@ input:valid + span::after {
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong><a href="/ja/docs/Web/HTML/Element/input#値">値</a></strong></td>
+      <td><strong><a href="/ja/docs/Web/HTML/Reference/Elements/input#値">値</a></strong></td>
       <td>時刻を表す文字列、または空欄。</td>
     </tr>
     <tr>
@@ -351,17 +356,17 @@ input:valid + span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsDate</code>,
         <code>valueAsNumber</code>
       </td>

@@ -2,7 +2,7 @@
 title: CSS コンテナークエリー
 slug: Web/CSS/CSS_containment/Container_queries
 l10n:
-  sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
+  sourceCommit: 8905094f4366d2e4d5876a3d75b88880d0aba60b
 ---
 
 {{CSSRef}}
@@ -28,10 +28,10 @@ l10n:
 
 - `size`
   - : クエリーは、コンテナーの[インラインおよびブロック](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    レイアウト、スタイル設定、[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
+    レイアウト、スタイル設定、[サイズ抑制](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment)をコンテナーに適用します。
 - `inline-size`
   - : クエリーは、コンテナーの[インライン](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#ブロック軸とインライン軸)軸の寸法に基づきます。
-    その要素にレイアウト、スタイル設定、インラインサイズ拘束を適用します。
+    その要素にレイアウト、スタイル設定、インラインサイズ抑制を適用します。
 - `normal`
   - : 要素はコンテナーサイズクエリーのクエリーコンテナーではありませんが、コンテナースタイルクエリーのクエリーコンテナーであることに変わりはありません。
 
@@ -119,6 +119,8 @@ l10n:
 コンテナークエリーを使用してコンテナーにスタイルを設定する場合、コンテナークエリーの長さ単位を使用することができます。
 この単位は、クエリーするコンテナーの寸法に相対する長さを指定します。
 コンテナーに対する相対的な長さの単位を使用する成分は、具体的な長さの値を再計算する必要がなく、様々なコンテナーでより柔軟に使用することができます。
+
+クエリに該当するコンテナーが利用できない場合、コンテナーのクエリー長の単位は、既定でその軸の［小さなビューポート単位］（/ja/docs/Web/CSS/length#small_viewport_units） (`sv*`) に設定されます。
 
 コンテナークエリーの長さの単位は以下の通りです。
 

@@ -1,9 +1,9 @@
 ---
-title: 画像とキャンバスをオリジン間で利用できるようにする
+title: 別オリジンの画像を持つ <img> と <canvas> の使用
+short-title: 別オリジンの画像の利用
 slug: Web/HTML/How_to/CORS_enabled_image
-original_slug: Web/HTML/CORS_enabled_image
 l10n:
-  sourceCommit: 730d99b6f2830adccce4bd61e81e79ad5a87c941
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
 {{HTMLSidebar}}
@@ -37,7 +37,7 @@ CORS による許可なしに他のオリジンから読み込んだ何らかの
 
 最初に必要なものは、画像をホスティングし、画像ファイルに対するオリジン間のアクセスを許可するために、 {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーが構成されたサーバーが必要です。
 
-[Apache](https://httpd.apache.org/) を使用してサイトを提供してみましょう。 HTML5 Boilerplate の [CORS 画像のための Apache サーバー構成ファイル](https://github.com/h5bp/server-configs-apache/blob/master/h5bp/cross-origin/images.conf)を考えてみましょう。
+[Apache](https://httpd.apache.org/) を使用してサイトを提供してみましょう。 HTML5 Boilerplate の [CORS 画像のための Apache サーバー構成ファイル](https://github.com/h5bp/server-configs-apache/blob/main/h5bp/cross-origin/images.conf)を考えてみましょう。
 
 ```xml
 <IfModule mod_setenvif.c>
@@ -69,14 +69,14 @@ function startDownload() {
   let imageDescription = "The Mozilla logo";
 
   downloadedImg = new Image();
-  downloadedImg.crossOrigin = "Anonymous";
+  downloadedImg.crossOrigin = "anonymous";
   downloadedImg.addEventListener("load", imageReceived, false);
   downloadedImg.alt = imageDescription;
   downloadedImg.src = imageURL;
 }
 ```
 
-ここではハードコーディングされた URL (`imageURL`) を使用していますが、どこからでも持ってくるのは簡単でしょう。画像のダウンロードを始めるために、新しい {{domxref("HTMLImageElement")}} を {{domxref("HTMLImageElement.Image", "Image()")}} コンストラクターを使用して生成します。それから画像は `crossOrigin` 属性を `"Anonymous"` (つまり、認証のないオリジン間の画像のダウンロード) に設定することで、オリジン間のダウンロードができるように構成します。画像要素で {{domxref("Window/load_event", "load")}} イベントが発生した場合、つまり画像データが受信された場合のイベントリスナーを追加します。
+ここではハードコーディングされた URL (`imageURL`) を使用していますが、どこからでも持ってくるのは簡単でしょう。画像のダウンロードを始めるために、新しい {{domxref("HTMLImageElement")}} を {{domxref("HTMLImageElement.Image", "Image()")}} コンストラクターを使用して生成します。それから画像は `crossOrigin` 属性を `"Anonymous"` (つまり、認証のないオリジン間の画像のダウンロード) に設定することで、オリジン間のダウンロードができるように構成します。画像要素で {{domxref("Window/load_event", "load")}} イベントが発生した場合、つまり画像データが受信された場合のイベントリスナーを追加します。画像に代替テキストが追加されます。 `<canvas>` は `alt` 属性に対応していませんが、その値を使用して `aria-label` またはキャンバスの内部コンテンツを設定することができます。
 
 最後に、画像の {{domxref("HTMLImageElement.src", "src")}} 属性をダウンロードする画像に設定します。これがダウンロードを始める引き金になります。
 

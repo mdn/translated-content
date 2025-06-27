@@ -1,14 +1,11 @@
 ---
 title: <xsl:stylesheet>
 slug: Web/XML/XSLT/Reference/Element/stylesheet
-original_slug: Web/XSLT/Reference/Element/stylesheet
 l10n:
-  sourceCommit: b6f343538eac4a803943b4e99b0c0545b372645a
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
 
-{{XsltSidebar}}
-
-`<xsl:stylesheet>` 要素 (または同等の `<xsl:transform>` 要素) は、スタイルシートの最も外側の要素です。
+`<xsl:stylesheet>` 要素（または同等の `<xsl:transform>` 要素）は、スタイルシートの最も外側の要素です。
 
 ### 名前空間宣言
 

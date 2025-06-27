@@ -24,7 +24,6 @@ l10n:
 ## 値
 
 - `true`
-
   - : テキストボックスは複数行の入力を受け入れます。
 
 - `false`
@@ -45,7 +44,7 @@ l10n:
 
 継承先のロール:
 
-- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role)
+- [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role)
 
 ## 仕様書
 
@@ -54,7 +53,7 @@ l10n:
 ## 関連情報
 
 - ARIA [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role) ロール
-- ARIA [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role) ロール
+- ARIA [`searchbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role) ロール
 
 <section id="Quick_links">
 <strong><a href="/ja/docs/Web/Accessibility/ARIA/Attributes">WAI-ARIA 状態とプロパティ</a></strong>

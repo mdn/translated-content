@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a7444882eb1b18918f3c924d83eb3c78f245643a
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Installing_software", "Learn_web_development/Getting_started/Environment_setup/Code_editors", "Learn_web_development/Getting_started/Environment_setup")}}
 
 当你阅读本模块时，你应该已经在你的计算机或其他可用设备上安装了多个现代 Web 浏览器。本文深入探讨了如何使用浏览器，介绍了 Web 浏览器是如何工作的，那些你通常与之交互的项目之间有何区别，以及怎样搜索信息。
@@ -206,7 +204,6 @@ AI（人工智能）生成的搜索结果是一种非常受欢迎的信息获取
 - 如果你的代码返回特定的错误消息，请尝试在搜索引擎或 AI 聊天中输入这个错误消息。在过去可能已经有其他人解决了同样的错误，并在某个地方公开记录了解决方案。
 - 如果可能，坚持使用推荐的网站，如 MDN 和 [StackOverflow](https://stackoverflow.com)。
 - 在搜索引擎中，你可以使用许多高级搜索技巧，这些技巧比仅仅输入一个普通搜索词能带来更好的结果。输入一个普通的搜索词，如 `ant fish cheese`，将返回包含这些词的任意组合的结果。然而，大多数搜索引擎还支持以下格式的变体：
-
   - 输入 `"ant fish cheese"`（带半角引号，即使你正在搜索中文）将仅返回包含该确切短语的结果（对于中文而言，这意味着搜索词不会被分词变成若干中文短语或单字）。
   - `"ant cheese" -fish` 将返回包含 `ant` 和/或 `cheese` 但不包含 `fish` 的结果。
   - `ant OR cheese` 只会返回只包含其中一个词的结果，而不会同时返回。根据我们的测试，这个方法似乎只在谷歌上有效。

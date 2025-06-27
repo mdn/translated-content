@@ -28,7 +28,7 @@ var myMode = request.mode;
 
 例如，当一个 `Request` 对象以 {{domxref("Request.Request")}} 方式创建，该`Request` 的 `mode` 的值为 `cors` 。
 
-然而，除了以 {{domxref("Request.Request")}} 创建的请求，模式通常为 `no-cors` 。例如，对与嵌入资源发起的请求，除非存在 [`crossorigin`](/zh-CN/docs/Web/HTML/Attributes/crossorigin) 属性，即对于 {{HTMLElement("link")}} 、 {{HTMLElement("script")}}（除了和模块一起使用之外）、 {{HTMLElement("img")}}、 {{HTMLElement("audio")}}、 {{HTMLElement("video")}}、 {{HTMLElement("object")}}、 {{HTMLElement("embed")}}还有 {{HTMLElement("iframe")}} 元素，在大多数情况下是使用 `no-cors` 模式。
+然而，除了以 {{domxref("Request.Request")}} 创建的请求，模式通常为 `no-cors` 。例如，对与嵌入资源发起的请求，除非存在 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin) 属性，即对于 {{HTMLElement("link")}} 、 {{HTMLElement("script")}}（除了和模块一起使用之外）、 {{HTMLElement("img")}}、 {{HTMLElement("audio")}}、 {{HTMLElement("video")}}、 {{HTMLElement("object")}}、 {{HTMLElement("embed")}}还有 {{HTMLElement("iframe")}} 元素，在大多数情况下是使用 `no-cors` 模式。
 
 ## 示例
 

@@ -80,7 +80,7 @@ l10n:
 
 ## ARIA ロール属性
 
-既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
+既定、 HTML の意味を持つすべての要素はロール ([`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)) を持っています。例えば、 `<input type="radio">` は `radio` ロールを持ちます。 HTML の意味を持たない要素はロールを持ちません。 ARIA ロールは、 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) ウィジェットのように、 HTML にネイティブに存在しない要素を記述するために使用することができます。ロールはまた、存在するがまだブラウザーの完全な対応をしていない新しい要素にも役立ちます。例えば、 SVG 画像を使用する場合、開始タグに `role="img"` を追加してください。 [SVG VoiceOver のバグ](https://webkit.org/b/216364) があり、 VoiceOver は SVG 画像を正しくアナウンスできないからです。
 
 ```html
 <img src="mdn.svg" alt="MDN logo" role="img" />

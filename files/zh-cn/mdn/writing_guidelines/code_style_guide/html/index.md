@@ -30,7 +30,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 
 ### 文档语言
 
-在你的 {{htmlelement("html")}} 元素上使用 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes#lang) 属性设置文档的语言：
+在你的 {{htmlelement("html")}} 元素上使用 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang) 属性设置文档的语言：
 
 ```html example-good
 <html lang="zh-CN"></html>
@@ -56,7 +56,7 @@ Prettier 格式化所有代码并保持风格一致。尽管如此，你仍需�
 <meta name="viewport" content="width=device-width" />
 ```
 
-参阅[使用 viewport meta 标签在移动浏览器上控制布局](/zh-CN/docs/Web/HTML/Viewport_meta_tag)了解详情。
+参阅[使用 viewport meta 标签在移动浏览器上控制布局](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)了解详情。
 
 ## 属性
 

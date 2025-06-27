@@ -1,9 +1,8 @@
 ---
 title: "<audio>: 埋め込み音声要素"
 slug: Web/HTML/Reference/Elements/audio
-original_slug: Web/HTML/Element/audio
 l10n:
-  sourceCommit: f10015d1752d5668d8fe0de29f9d9807de475d58
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -14,7 +13,7 @@ l10n:
 
 ```html interactive-example
 <figure>
-  <figcaption>Listen to the T-Rex:</figcaption>
+  <figcaption>T-Rex の声を聴こう:</figcaption>
   <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
   <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
 </figure>
@@ -28,33 +27,28 @@ figure {
 
 上記の例は、 `<audio>` 要素の基本的な使用方法を示しています。 {{htmlelement("img")}} 要素と同様の方法で、埋め込みたいメディアへのパスを `src` 属性に設定します。他にも自動再生や繰り返しを行うかどうか、ブラウザーの既定のオーディオコントロールを表示したいかどうか、などの情報を指定する属性を含めることができます。
 
-開始および終了タグ `<audio></audio>` の中のコンテンツは、この要素に対応してないブラウザーで代替として表示されます。
+開始および終了タグ `<audio></audio>` の中のコンテンツは、この要素に対応してないブラウザーで代替表示されます。
 
 ## 属性
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autoplay`
-
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
-    > 自動的に音声 (あるいは音声トラックを含む動画) を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン (ユーザーが明示的に有効化することを求める) にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
+    > 自動的に音声（あるいは音声トラックを含む動画）を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン（ユーザーが明示的に有効化することを求める）にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
 
 - `controls`
-
   - : この属性が指定された場合、ブラウザーは再生・一時停止、音量、シークの各機能を制御するコントロールを表示します。
 
 - `controlslist`
-
   - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性は、指定された場合、ブラウザーが自分自身で一連のコントロールを表示するとき（つまり、 `controls` 属性が指定されたとき）、 `audio` 要素にどのようなコントロールを表示するかを選択するのを支援します。
 
     取ることができる値は `nodownload`、`nofullscreen`、`noremoteplayback` です。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
-
     - `anonymous`
       - : 資格情報を伴わずにオリジン間リクエストを実行します。すなわち、 Cookie や X.509 証明書がない `Origin:` HTTP ヘッダーを送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに信用情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、画像が*汚染*され、その使用も制限されます。
     - `use-credentials`
@@ -63,7 +57,6 @@ figure {
     この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `disableremoteplayback`
-
   - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
@@ -73,9 +66,7 @@ figure {
 - `muted`
   - : 論理型の属性で、音声の既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` です。
 - `preload`
-
   - : {{Glossary("enumerated","列挙型")}}の属性で、ユーザーに取って最良の結果をもたらすと作者が考えていることのヒントをブラウザーに伝えるためのものです。以下の値のうちひとつを持つことができます。
-
     - `none`: 音声を事前に読み込むべきではないことを示します。
     - `metadata`: 音声のメタデータ (例えば、長さ) を読み込みます。
     - `auto`: ユーザーが音声ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
@@ -244,7 +235,7 @@ figure {
 
 ## 使用上の注意
 
-ブラウザーはすべてが同じ[ファイル形式](/ja/docs/Web/Media/Guides/Formats/Containers)や[音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs)に対応しているわけではありません。内部に含められた {{htmlelement("source")}} 要素で複数のソースを提供することができ、ブラウザーは理解できる最初のものを使用します。
+ブラウザーはすべてが同じ[ファイル形式](/ja/docs/Web/Media/Guides/Formats/Containers)や[音声コーデック](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)に対応しているわけではありません。内部に含められた {{htmlelement("source")}} 要素で複数のソースを提供することができ、ブラウザーは理解できる最初のものを使用します。
 
 ```html
 <audio controls>
@@ -258,6 +249,8 @@ figure {
 ```
 
 音声ソースには、有効な [URL](/ja/docs/Web/URI) を設定することができます。これには HTTP(S) の URL や[データ URL](/ja/docs/Web/URI/Reference/Schemes/data) を含みます。 HTTP(S) の URL を使用する場合、ブラウザーのキャッシュ動作が、サーバーからファイルがリクエストされる頻度に影響することに注意してください。データ URL は音声データを直接 HTML に埋め込みます。これは小さな音声ファイルの場合には有益な使用することができますが、大きな音声ファイルの場合には HTML ファイルサイズが大きくなるため、推奨されません。
+
+{{htmlelement("source")}} 要素を使用している場合、ブラウザーはそれぞれのソースを順番に読み込みます。ソースが失敗した場合 （URL が無効、または対応していない形式の場合など）、次のソースが試されます。すべてのソースが失敗すると、 `<audio>` 要素で `error` イベントが発生します。 `error` イベントは、個々の `<source>` 要素では発生しません。
 
 また、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) を使用することで、既存の音声ファイルをストリーミングするのではなく、 JavaScript コードから直接音声ストリームを生成し、操作することができます。 JavaScript で [`srcObject`](/ja/docs/Web/API/HTMLMediaElement/srcObject) を {{domxref("MediaStream")}} オブジェクトに設定することができます。これはライブ音声ストリームやリアルタイム音声処理に使用するのが一般的です。
 
@@ -275,7 +268,7 @@ navigator.mediaDevices
 
 なお、 `MediaStream` ソースには制限があることに注意してください。 `MediaStream` ソースはシークすることができず、限られたコーデック設定にしか対応していません。
 
-私たちは大量の綿密な[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)と[その中で使用することができる音声コーデックのガイド](/ja/docs/Web/Media/Formats/Audio_codecs)を提供しています。また、[動画で対応しているコーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)も利用することができます。
+私たちは大量の綿密な[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)と[その中で使用することができる音声コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)を提供しています。また、[動画で対応しているコーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Video_codecs)も利用することができます。
 
 他の使用上のメモ:
 
@@ -362,8 +355,7 @@ elem.audioTrackList.onremovetrack = (event) => {
   <source src="myAudio.mp3" type="audio/mpeg" />
   <source src="myAudio.ogg" type="audio/ogg" />
   <p>
-    <a href="myAudio.mp3">MP3</a> または
-    <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> の音声をダウンロードしてください。
+    <a href="myAudio.mp3">MP3</a> または <a href="myAudio.ogg" download="myAudio.ogg">OGG</a> の音声をダウンロードしてください。
   </p>
 </audio>
 ```
@@ -383,7 +375,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 ```html-nolint
 <!-- シンプルな音声再生 -->
 <audio src="AudioTest.ogg" autoplay>
-  <a href="AudioTest.ogg">OGG 音声をダウンロード</a>。
+  <a href="AudioTest.ogg" download="AudioTest.ogg">OGG 音声をダウンロードしてください</a>。
 </audio>
 ```
 
@@ -396,7 +388,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 ```html-nolint
 <audio controls>
   <source src="foo.wav" type="audio/wav" />
-  <a href="foo.wav">WAV 音声をダウンロード</a>。
+  <a href="foo.wav" download="foo.wav">WAV 音声をダウンロードしてください</a>。
 </audio>
 ```
 
@@ -404,7 +396,7 @@ elem.audioTrackList.onremovetrack = (event) => {
 
 この例には複数の `<source>` 要素があります。ブラウザーは、最初の source 要素 (Opus) が再生可能であればそれを読み込もうとし、そうでなければ 2 つ目 (Vorbis) に、最後に MP3 にフォールバックします。
 
-```html-nolint
+```html
 <audio controls>
   <source src="foo.opus" type="audio/ogg; codecs=opus" />
   <source src="foo.ogg" type="audio/ogg; codecs=vorbis" />
@@ -418,10 +410,10 @@ elem.audioTrackList.onremovetrack = (event) => {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテンツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテンツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、記述コンテンツ、埋め込みコンテンツ。
         <a href="#controls"><code>controls</code></a> 属性がある場合は、対話型コンテンツと知覚可能コンテンツ。
@@ -453,7 +445,7 @@ elem.audioTrackList.onremovetrack = (event) => {
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>
@@ -473,13 +465,12 @@ elem.audioTrackList.onremovetrack = (event) => {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
   - [メディアコンテナー形式 (ファイル形式)](/ja/docs/Web/Media/Guides/Formats/Containers)
-  - [ウェブで使用される音声コーデックのガイド](/ja/docs/Web/Media/Formats/Audio_codecs)
+  - [ウェブで使用される音声コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)
 
 - [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API)
 - {{domxref("HTMLAudioElement")}}
 - {{htmlelement("source")}}
 - {{htmlelement("video")}}
 - [学習領域: HTML 動画および音声](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
-- [ブラウザーに依存しない音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)
+- [ブラウザーに依存しない音声の基本](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Cross-browser_audio_basics)

@@ -172,7 +172,7 @@ l10n:
       <th scope="row">許可されている ARIA ロール</th>
       <td>
         この要素に設定可能な ARIA ロールの一覧を記入します。例えば
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/directory_role"><code>directory</code></a>。
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/directory_role"><code>directory</code></a>。
       </td>
     </tr>
     <tr>

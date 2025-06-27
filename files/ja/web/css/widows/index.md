@@ -1,11 +1,17 @@
 ---
 title: widows
 slug: Web/CSS/widows
+l10n:
+  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
 {{CSSRef}}
 
-**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。</p>
+**`widows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[ページ](/ja/docs/Web/CSS/CSS_paged_media)、領域、[段](/ja/docs/Web/CSS/CSS_multicol_layout)の*先頭*に表示されるブロックコンテナーの最小行数を設定します。
+
+組版において、ウィドウ (_widow_) とは (段落が前のページから続いている場合に) 段落の最後の行がページの先頭に単独で現れることです。
+
+## 構文
 
 ```css
 /* <integer> 値 */
@@ -16,14 +22,9 @@ widows: 3;
 widows: inherit;
 widows: initial;
 widows: revert;
+widows: revert-layer;
 widows: unset;
 ```
-
-組版において、ウィドウ (_widow_) とは (段落が前のページから続いている場合に) 段落の最後の行がページの先頭に単独で現れることです。
-
-{{cssinfo}}
-
-## 構文
 
 ### 値
 
@@ -85,4 +86,4 @@ p:first-child {
 ## 関連情報
 
 - {{cssxref("orphans")}}
-- [ページ付きメディア](/ja/docs/Web/CSS/CSS_paged_media)
+- [ページメディア](/ja/docs/Web/CSS/CSS_paged_media)

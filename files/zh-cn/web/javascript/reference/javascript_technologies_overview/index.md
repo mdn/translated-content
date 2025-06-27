@@ -90,7 +90,7 @@ HTML 规范同时还约束了元素之间的关系，例如无序列表 {{htmlel
 - [CSS 对象模型](https://drafts.csswg.org/cssom/) 将 CSS 规则抽象成对象。
 - [WebWorker](https://html.spec.whatwg.org/multipage/workers.html) 允许进行并行计算。
 - [WebSocket](https://html.spec.whatwg.org/multipage/#network) 允许进行底层双向通信。
-- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Element/canvas) 元素的绘图 API。
+- [Canvas 2D Context](https://html.spec.whatwg.org/multipage//#2dcontext) 是 [`<canvas>`](/zh-CN/docs/Web/HTML/Reference/Elements/canvas) 元素的绘图 API。
 - [WebAssembly 接口](https://webassembly.github.io/spec/js-api)为 JavaScript 代码和 [WebAssembly](/zh-CN/docs/WebAssembly) 模块之间提供通信工具。
 
 非浏览器环境（如 Node.js）通常不提供 DOM API——因为它们不与文档进行交互，但它们仍然会实现很多 Web API，例如 {{domxref("Window.fetch", "fetch()")}} 和 {{domxref("Window.setTimeout", "setTimeout()")}}。

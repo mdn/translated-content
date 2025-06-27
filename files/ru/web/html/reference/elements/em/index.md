@@ -7,17 +7,17 @@ slug: Web/HTML/Reference/Elements/em
 
 **HTML `<em>` элемент** отмечает акцентируемый текст. Элемент `<em>` может быть вложенным, причём каждый уровень вложенности указывает на большую степень акцента.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), явный контент. |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                        |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                  |
-| Допустимые родители                                        | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                       |
-| Допустимые ARIA-роли                                       | Любые                                                                                                                                                             |
-| DOM-интерфейс                                              | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента.               |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), явный контент. |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                                | [Фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                               |
+| Пропуск тегов                                                     | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                |
+| Допустимые родители                                               | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                              |
+| Допустимые ARIA-роли                                              | Любые                                                                                                                                                                           |
+| DOM-интерфейс                                                     | {{domxref ("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно Firefox реализует интерфейс {{domxref ("HTMLSpanElement")}} для этого элемента.                             |
 
 ## Атрибуты
 
-К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Примечания по использованию
 

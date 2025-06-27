@@ -130,7 +130,7 @@ Em nosso artigo [Debugging CSS](/pt-BR/docs/Learn/CSS/Building_blocks/Debugging_
 
 ## O que acontece se um navegador não entende o CSS encontrado?
 
-[Em uma lição anterior](/pt-BR/docs/Learn/CSS/First_steps/What_is_CSS#browser_support), eu mencionei que navegadores não implementam todo o novo CSS ao mesmo tempo. Em adição, muitas pessoas não usam a versão mais recente de um navegador. Dado que o CSS é processado o tempo todo, e que portanto está adiantado em relação ao que os browsers podem reconhecer, você pode imaginar o que acontece se um browser encontra um seletor ou uma declaração CSS que ele não reconhece.
+[Em uma lição anterior](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics/What_is_CSS#browser_support), eu mencionei que navegadores não implementam todo o novo CSS ao mesmo tempo. Em adição, muitas pessoas não usam a versão mais recente de um navegador. Dado que o CSS é processado o tempo todo, e que portanto está adiantado em relação ao que os browsers podem reconhecer, você pode imaginar o que acontece se um browser encontra um seletor ou uma declaração CSS que ele não reconhece.
 
 A resposta é que ele não faz nada e vai para o próximo conteúdo em CSS!
 

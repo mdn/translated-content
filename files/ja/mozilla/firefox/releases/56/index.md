@@ -45,7 +45,7 @@ _変更なし。_
 - {{domxref("Gamepad.displayId")}} プロパティを実装しました ([Firefox バグ 1375816](https://bugzil.la/1375816))。
 - {{domxref("PerformanceTiming.secureConnectionStart")}} プロパティを実装しました ([Firefox バグ 772589](https://bugzil.la/772589))。
 - Firefox は `iso-2022-jp` の {{domxref("TextDecoder.TextDecoder","TextDecoder()")}} がインスタンス化されたときに黙って `iso-2022-jp-2` シーケンスを受け入れていました。しかし他のブラウザーはこれに対応しておらず、またこれを使用するページもないようですので、API を単純化するためにこの動作を削除しました ([Firefox バグ 715833](https://bugzil.la/715833))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} の 4ms 制限の動作を、[Timeouts throttled to >=4ms](/ja/docs/Web/API/Window/setTimeout#timeouts_throttled_to_%3e4ms) で説明しているとおり、他のブラウザーに合わせるよう更新しました ([Firefox バグ 1378586](https://bugzil.la/1378586))。
 - [ページ可視性 API](/ja/docs/Web/API/Page_Visibility_API) の {{domxref("Document.onvisibilitychange")}} ハンドラーを追加しました ([Firefox バグ 1333912](https://bugzil.la/1333912))。
 - {{domxref("Window.showModalDialog()")}} メソッドを削除しました ([Firefox バグ 981796](https://bugzil.la/981796))。
 - {{domxref("HTMLFormElement.action")}}、{{domxref("HTMLInputElement.formAction")}}、{{domxref("HTMLButtonElement.formAction")}} プロパティの実装を、仕様書に従って正しい形式のサブミッション URL を返すように変更しました ([Firefox バグ 1366361](https://bugzil.la/1366361))。

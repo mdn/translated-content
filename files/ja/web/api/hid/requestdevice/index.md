@@ -20,15 +20,12 @@ requestDevice(options)
 ### 引数
 
 - `options`
-
   - : ペアリング可能なデバイスを抽出する用のフィルターオブジェクトの配列を含むオブジェクトです。それぞれのフィルターオブジェクトは以下のプロパティを持つことができます。
-
     - `vendorId` {{optional_inline}}
       - : 要求する HID デバイスのベンダー ID を表す整数です。
     - `productId` {{optional_inline}}
       - : 要求する HID デバイスのプロダクト ID を表す整数です。
     - `usagePage` {{optional_inline}}
-
       - : 要求するデバイスの HID 使用法の Usage Page 部分を表す整数です。トップレベルのコレクションの使用法は、デバイスの種類を特定するために使用されます。
 
         標準の HID 使用法の値は、[HID Usage Tables](https://usb.org/document-library/hid-usage-tables-13) に載っています。

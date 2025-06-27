@@ -44,7 +44,8 @@ slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 > [!NOTE]
 > 由于 `content_scripts` 的 `"js"` 属性是一个数组，因此可以使用它将多个脚本注入匹配的页面。如果这样做，页面将按照数组中列出的顺序加载多个脚本。
 
-> **备注：** `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
+> [!NOTE]
+> `content_scripts` 键还具有一个 `"css"` 属性，可以使用它来注入 CSS 样式表。
 
 在 "modify-page" 文件夹下创建“page-eater.js”文件，内容如下：
 
@@ -236,12 +237,10 @@ browser.runtime.onMessage.addListener(eatPage);
 - [`runtime.sendMessage()`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - 使用`content_scripts`的例子：
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/main/borderify)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/main/page-to-extension-messaging)
 
 - 使用`tabs.executeScript()`的例子：
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/main/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/main/context-menu-copy-link-with-types)

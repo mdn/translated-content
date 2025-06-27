@@ -56,7 +56,6 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 ### Активное изучение: разбор простого примера
 
 1. Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
-
    1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
    2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 
@@ -199,25 +198,18 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 <link
   rel="apple-touch-icon-precomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
+  href="favicon144.png" />
 <!-- Для iPhone с Retina-экраном высокого разрешения: -->
 <link
   rel="apple-touch-icon-precomposed"
   sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
+  href="favicon114.png" />
 <!-- Для iPad первого и второго поколения: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon72.png" />
 <!-- Для iPhone, iPod Touch без Retina и устройств с Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
+<link rel="apple-touch-icon-precomposed" href="favicon57.png" />
 <!-- Для других случаев - обычный favicon -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+<link rel="shortcut icon" href="favicon32.png" />
 ```
 
 В комментариях указано, для чего используется каждая иконка — например, при добавлении страницы на домашний экран iPad будет использована иконка в высоком разрешении.
@@ -260,7 +252,7 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 
 ## Основной язык HTML страницы
 
-Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
+Наконец, стоит отметить, что вы можете (и действительно должны) установить язык для своей страницы. Это можно сделать, добавив [атрибут lang](/ru/docs/Web/HTML/Reference/Global_attributes/lang) в открывающий HTML-тег (как в примере [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html): и как показано ниже):
 
 ```
 <html lang="en-US">

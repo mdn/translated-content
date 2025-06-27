@@ -20,23 +20,19 @@ l10n:
 - JavaScript では
   - : カスタムデータ属性のプロパティ名は、同じ HTML 属性の名前から `data-` の接頭辞を除いたものですが、そのプロパティの{{Glossary("camel_case", "キャメルケース")}}の名前であり、単一のダッシュ (`-`) を除いたものです。
 
-以下の情報に加えて、[データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
+以下の情報に加えて、[データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)の記事に、HTML データ属性の使用方法に関するガイドがあります。
 
 ### 名前の変換
 
 - ダッシュスタイルからキャメルケースへの変換
-
   - : カスタムデータ属性名は、次のルールに従って {{domxref("DOMStringMap") }} 項目のキーに変換されます。
-
     1. すべての ASCII の大文字 (`A` から `Z` まで) を小文字にします。
     2. 接頭辞の `data-` を（ダッシュを含め）削除します。
     3. ダッシュ (`U+002D`) に ASCII 小文字の `a` から `z` が続く場合、ダッシュを削除し、その文字を対応する大文字に変換します。
     4. 他の文字 (他のダッシュを含む) は変更しません。
 
 - キャメルケースからダッシュスタイルへの変換
-
   - : キーを属性名にマッピングする逆の変換では、以下のように次のルールが使用されます。
-
     1. **制約事項:** 変換前に置いて、ダッシュの直後に ASCII 小文字 `a` から `z` を続けてはなりません。
     2. 接頭辞として `data-` が追加されます。
     3. ASCII 大文字の `A` から `Z` は、ダッシュと、その後に対応する小文字が続くものに変換されます。
@@ -105,5 +101,5 @@ if (el.dataset.someDataAttr === undefined) {
 ## 関連情報
 
 - HTML の [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) クラスのグローバル属性
-- [データ属性の使用](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [データ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} および {{DOMxRef("Element.setAttribute()")}}

@@ -1,6 +1,8 @@
 ---
 title: border-inline-end-width
 slug: Web/CSS/border-inline-end-width
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -28,7 +30,7 @@ direction: rtl;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    これは周囲に境界線があるボックスです。
   </div>
 </section>
 ```
@@ -56,6 +58,7 @@ border-inline-end-width: thick;
 border-inline-end-width: inherit;
 border-inline-end-width: initial;
 border-inline-end-width: revert;
+border-inline-end-width: revert-layer;
 border-inline-end-width: unset;
 ```
 
@@ -76,13 +79,13 @@ border-inline-end-width: unset;
 
 ## 例
 
-<h3 id="Applying_a_border_with_vertical_text">テキストが垂直方向の場合の境界の適用</h3>
+### テキストが垂直方向の場合の境界の適用
 
 #### HTML
 
 ```html
 <div>
-  <p class="exampleText">Example text</p>
+  <p class="exampleText">テキストの例</p>
 </div>
 ```
 
@@ -104,7 +107,7 @@ div {
 
 #### 結果
 
-{{EmbedLiveSample("Applying_a_border_with_vertical_text", 140, 140)}}
+{{EmbedLiveSample("テキストが垂直方向の場合の境界の適用", 140, 140)}}
 
 ## 仕様書
 
@@ -116,5 +119,6 @@ div {
 
 ## 関連情報
 
+- [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)
 - このプロパティは {{cssxref("border-top-width")}}、{{cssxref("border-right-width")}}、{{cssxref("border-bottom-width")}}、{{cssxref("border-left-width")}} のうちの 1 つに対応づけられます
 - {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}}

@@ -38,7 +38,7 @@ l10n:
 
 当以下情况发生时，不应添加 `aria-hidden="true"`：
 
-- HTML 中存在 [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 属性
+- HTML 中存在 [`hidden`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - 使用 [`display: none`](/zh-CN/docs/Web/CSS/display) 隐藏了元素或元素的祖先元素
 - 使用 [`visibility: hidden`](/zh-CN/docs/Web/CSS/visibility) 隐藏了元素或元素的祖先元素
 
@@ -88,6 +88,6 @@ l10n:
 - [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
 - [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
 - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-- HTML [`hidden`](/zh-CN/docs/Web/HTML/Global_attributes/hidden) 属性
+- HTML [`hidden`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - CSS {{CSSXref('display')}} 属性
 - CSS {{CSSXref('visibility')}} 属性

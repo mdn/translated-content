@@ -1,9 +1,8 @@
 ---
 title: <input type="range">
 slug: Web/HTML/Reference/Elements/input/range
-original_slug: Web/HTML/Element/input/range
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -330,18 +329,18 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#max"><code>max</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#min"><code>min</code></a>, and
-        <a href="/ja/docs/Web/HTML/Element/input#step"><code>step</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#max"><code>max</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#min"><code>min</code></a>, and
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#step"><code>step</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsNumber</code>
       </td>
     </tr>
@@ -359,7 +358,7 @@ CSS の {{cssxref('appearance')}} プロパティを標準外の `slider-vertica
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role">slider</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role">slider</a></code>
       </td>
     </tr>
   </tbody>

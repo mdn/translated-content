@@ -49,16 +49,16 @@ label {
 
 ![Datepicker UI in firefox](firefox_datepicker.png)
 
-| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                           |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                    |
-| **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step) |
-| **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                           |
-| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                             |
+| [Value](#value)             | Возвращает {{domxref("DOMString")}}, с датой в формате **гггг-мм-дд**, **или **пустую строку\*\*                                                                                                                                                                       |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **События**                 | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event)                                                                                                                                                                |
+| **Поддерживаемые атрибуты** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step) |
+| **IDL attributes**          | `list`, `value`, `valueAsDate`, `valueAsNumber`.                                                                                                                                                                                                                       |
+| **Методы**                  | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}                                                                                                         |
 
 ## Значение
 
-Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Element/input#value), например:
+Возвращает {{domxref("DOMString")}}, представляющий значение даты введённой в input. Вы можете установить значение по умолчанию для элемента с помощью добавления атрибута в [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value), например:
 
 ```html
 <input id="date" type="date" value="2017-06-01" />
@@ -92,19 +92,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 ### `max`
 
-Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
+Максимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) является более поздней датой, чем дата, указанная в атрибуте [`max`](#max), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Guides/Constraint_validation). Если в атрибуте `max` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь максимальной даты.
 
 В атрибуте `max` должна быть указана строка с датой, которая больше или равна дате, указанной в атрибуте `min`.
 
 ### `min`
 
-Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Element/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
+Минимально возможная дата для установки. Если [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) является более ранней датой, чем дата, указанная в атрибуте [`min`](#min), элемент отобразит ошибку при помощи [constraint validation](/ru/docs/Web/HTML/Guides/Constraint_validation). Если в атрибуте `min` указано значение, не удовлетворяющее формату `yyyy-MM-dd`, значит элемент не будет иметь минимальной даты.
 
 В атрибуте `min` должна быть указана строка с датой, которая меньше или равна дате, указанной в атрибуте `max`.
 
 ### `step`
 
-Атрибут `step` — это число, указывающее уровень точности, которому должно соответствовать значение, или особое значение `any`, которое описано ниже. Допустимы только значения, соответствующие основанию ([`min`](#min), если указано, [`value`](/ru/docs/Web/HTML/Element/input#value) в противном случае или любое подходящее значение по умолчанию, если не указано ни то, ни другое).
+Атрибут `step` — это число, указывающее уровень точности, которому должно соответствовать значение, или особое значение `any`, которое описано ниже. Допустимы только значения, соответствующие основанию ([`min`](#min), если указано, [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) в противном случае или любое подходящее значение по умолчанию, если не указано ни то, ни другое).
 
 Строковое значение `any` означает, что пошаговое изменение не подразумевается и разрешены любые значения (за исключением других ограничений, таких как [`min`](#min) and [`max`](#max)).
 
@@ -142,7 +142,7 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 
 ### Установка максимальной и минимальной даты
 
-Вы можете использовать атрибуты [`min`](/ru/docs/Web/HTML/Element/input#min) и [`max`](/ru/docs/Web/HTML/Element/input#max), чтобы ограничить дату, которую может выбрать пользователь. В следующем примере мы устанавливаем минимальную дату `2017-04-01` и максимальную дату `2017-04-30`. Пользователь сможет выбрать дату только из этого диапазона:
+Вы можете использовать атрибуты [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min) и [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max), чтобы ограничить дату, которую может выбрать пользователь. В следующем примере мы устанавливаем минимальную дату `2017-04-01` и максимальную дату `2017-04-30`. Пользователь сможет выбрать дату только из этого диапазона:
 
 ```html
 <form>
@@ -163,19 +163,19 @@ console.log(dateControl.valueAsNumber); // prints 1496275200000, a JavaScript ti
 В результате выполнения кода, пользователь сможет выбрать любой день апреля 2017 года, но не сможет выбрать и даже просмотреть дни других месяцев и годов, в том числе через виджет _date picker_.
 
 > [!NOTE]
-> Вы _должны_ уметь использовать атрибут [`step`](/ru/docs/Web/HTML/Element/input#step), чтобы менять количество дней, на которое будет происходить шаг при изменении даты (например, чтобы сделать выбираемыми только субботы). Однако, не похоже, что это где-то применялось на данный момент.
+> Вы _должны_ уметь использовать атрибут [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step), чтобы менять количество дней, на которое будет происходить шаг при изменении даты (например, чтобы сделать выбираемыми только субботы). Однако, не похоже, что это где-то применялось на данный момент.
 
 ### Controlling input size
 
-`<input type="date">` doesn't support form sizing attributes such as [`size`](/ru/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
+`<input type="date">` doesn't support form sizing attributes such as [`size`](/ru/docs/Web/HTML/Reference/Elements/input#size). You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
 
 ## Validation
 
 By default, `<input type="date">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a date — which is helpful — but you can still leave the field empty or (in browsers where the input falls back to type `text`) enter an invalid date (e.g. the 32nd of April).
 
-If you use [`min`](/ru/docs/Web/HTML/Element/input#min) and [`max`](/ru/docs/Web/HTML/Element/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.
+If you use [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max) to restrict the available dates (see [Setting maximum and minimum dates](#setting_maximum_and_minimum_dates)), supporting browsers will display an error if you try to submit a date that is outside the set bounds. However, you'll have to check the results to be sure the value is within these dates, since they're only enforced if the date picker is fully supported on the user's device.
 
-In addition, you can use the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory — again, an error will be displayed if you try to submit an empty date field. This, at least, should work in most browsers.
+In addition, you can use the [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required) attribute to make filling in the date mandatory — again, an error will be displayed if you try to submit an empty date field. This, at least, should work in most browsers.
 
 Let's look at an example — here we've set minimum and maximum dates, and also made the field required:
 
@@ -252,7 +252,7 @@ The second problem is the more serious of the two; as we mentioned earlier, with
 - `mm-dd-yyyy`
 - `Month dd yyyy`
 
-One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute on your date input. Even though the date input doesn't use it, the text input fallback will. For example, try viewing the following example in a non-supporting browser:
+One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Reference/Elements/input#pattern) attribute on your date input. Even though the date input doesn't use it, the text input fallback will. For example, try viewing the following example in a non-supporting browser:
 
 ```html
 <form>

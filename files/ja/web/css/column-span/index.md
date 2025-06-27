@@ -2,7 +2,7 @@
 title: column-span
 slug: Web/CSS/column-span
 l10n:
-  sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -19,19 +19,15 @@ column-span: none;
 column-span: all;
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <section id="default-example">
   <div class="multicol-element">
     <p>
-      London. Michaelmas term lately over, and the Lord Chancellor sitting in
-      Lincoln's Inn Hall.
+      ロンドン。ミカエルマス学期が終わり、リンカーンズ・イン・ホールで大法官が座っています。
     </p>
-    <div id="example-element">Spanner?</div>
+    <div id="example-element">段抜き?</div>
     <p>
-      Implacable November weather. As much mud in the streets as if the waters
-      had but newly retired from the face of the earth, and it would not be
-      wonderful to meet a Megalosaurus, forty feet long or so, waddling like an
-      elephantine lizard up Holborn Hill.
+      容赦のない 11 月の天候。街はまるで地球の表面から水が引き始めたばかりのように泥だらけで、ホルボーン・ヒルを象のようなトカゲのようによちよちと歩く、体長 12 メートルほどのメガロサウルスに出会っても不思議ではないでしょう。
     </p>
   </div>
 </section>

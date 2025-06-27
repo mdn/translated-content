@@ -228,7 +228,7 @@ No entanto, quando os valores das propriedades personalizadas são analisados, o
 
 Infelizmente, esses valores válidos podem ser usados, através da notação funcional `var()`, em um contexto onde eles podem não fazer sentido. Propriedades e variáveis personalizadas podem levar a declarações CSS inválidas, levando ao novo conceito de _válido no tempo computado._
 
-Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/Web/CSS/initial_value) ou [herdado](/pt-BR/docs/Web/CSS/Inheritance) valor da propriedade é usado.
+Quando o navegador encontra uma substituição `var()` inválida, então o [inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) ou [herdado](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance) valor da propriedade é usado.
 
 Os próximos dois exemplos ilustram isso.
 

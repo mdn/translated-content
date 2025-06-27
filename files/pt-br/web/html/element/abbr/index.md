@@ -219,4 +219,4 @@ Você pode usar `<abbr>` em conjunto com {{HTMLElement("dfn")}} para definir uma
 
 ## Veja também
 
-- [Usando o elemento `<abbr>`](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#abreviações)
+- [Usando o elemento `<abbr>`](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#abreviações)

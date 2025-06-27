@@ -3,7 +3,7 @@ title: 非同步的 JavaScript 介紹
 slug: Learn_web_development/Extensions/Async_JS/Introducing
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
+{{NextMenu("Learn_web_development/Extensions/Async_JS/Promises", "Learn_web_development/Extensions/Async_JS")}}
 
 在本篇文章中我們會先簡短回顧在同步的 JavaScript 中所遭遇到的問題，並預先看看往後將會使用哪些非同步的 JavaScript 技巧來解決此問題。
 
@@ -44,7 +44,6 @@ btn.addEventListener("click", () => {
 
 1. 我們先取得已經在 DOM 裡面的 {{htmlelement("button")}} 元素的參考。
 2. 我們加入一個 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件監聽器，因此當按鈕被點擊時：
-
    1. 彈出 [`alert()`](/zh-TW/docs/Web/API/Window/alert) 訊息。
    2. 當關閉警告訊息後，我們新增一個 {{htmlelement("p")}} 元素。
    3. 給予一段文字內容。

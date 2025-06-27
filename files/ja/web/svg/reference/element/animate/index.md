@@ -1,12 +1,9 @@
 ---
 title: <animate>
 slug: Web/SVG/Reference/Element/animate
-original_slug: Web/SVG/Element/animate
 l10n:
-  sourceCommit: da99ca19ae62059f81dbee3f7b4919de784f3510
+  sourceCommit: d8fbe1ea30dcc8fd707048a804f5070a729b57a7
 ---
-
-{{SVGRef}}
 
 **`<animate>`** は [SVG](/ja/docs/Web/SVG) の要素で、時間の経過に応じて要素の属性を変化させる方法を提供します。
 
@@ -49,7 +46,7 @@ svg {
 - [Designing Safer Web Animation For Motion Sensitivity · An A List Apart Article](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
 - [An Introduction to the Reduced Motion Media Query | CSS-Tricks](https://css-tricks.com/introduction-reduced-motion-media-query/)
 - [Responsive Design for Motion | WebKit](https://webkit.org/blog/7551/responsive-design-for-motion/)
-- [MDN Understanding WCAG, Guideline 2.2 explanations](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
+- [MDN WCAG を理解する、ガイドライン 2.2 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.2_%e2%80%94_enough_time_provide_users_enough_time_to_read_and_use_content)
 - [Understanding Success Criterion 2.2.2 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-pause.html)
 
 ## 仕様書

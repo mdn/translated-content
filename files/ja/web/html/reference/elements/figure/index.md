@@ -176,7 +176,7 @@ function NavigatorExample() {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Figure_Role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Figure_Role"
           >figure</a
         >
       </td>

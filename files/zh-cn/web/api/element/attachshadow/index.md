@@ -40,13 +40,9 @@ attachShadow(options)
 ### 参数
 
 - `shadowRootInit`
-
   - : 一个 `ShadowRootInit` 字典，包括下列字段：
-
     - `mode 模式`
-
       - : 指定 Shadow DOM 树*封装模式*的字符串，可以是以下值：
-
         - `open` shadow root 元素可以从 js 外部访问根节点，例如使用 {{domxref("Element.shadowRoot")}}:
 
         ```js

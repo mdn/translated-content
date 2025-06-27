@@ -1,9 +1,9 @@
 ---
 title: XML 简介
 slug: Web/XML/Guides/XML_introduction
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{QuickLinksWithSubpages("/zh-CN/docs/Web/XML")}}
 
 XML（Extensible Markup Language）是一种类似于 {{Glossary("HTML")}}，但是没有使用预定义标记的语言。因此，可以根据自己的设计需求定义专属的标记。这是一种强大将数据存储在一个可以存储、搜索和共享的格式中的方法。最重要的是，因为 XML 的基本格式是标准化的，如果你在本地或互联网上跨系统或平台共享或传输 XML，由于标准化的 XML 语法，接收者仍然可以解析数据。
 
@@ -50,8 +50,8 @@ XML——声明并非是一种标签，其用于传输文档的元数据。
 <?xml version="1.0" encoding="UTF-8"?>
 <message>
     <warning>
-        Hello World
-    <!--missing </warning> -->
+        你好世界
+    <!--缺少 </warning> -->
 </message>
 ```
 
@@ -61,7 +61,7 @@ XML——声明并非是一种标签，其用于传输文档的元数据。
 <?xml version="1.0" encoding="UTF-8"?>
 <message>
     <warning>
-         Hello World
+         你好世界
     </warning>
 </message>
 ```
@@ -122,4 +122,4 @@ XML 通常被用作描述，但是还有很多方法去展示 XML 数据。如�
 
 - [XML.com](https://www.xml.com/)
 - [扩展标记语言（XML）@ W3.org](https://www.w3.org/XML/)
-- [使用 XML: A List Apart](https://alistapart.com/article/usingxml/)
+- [使用 XML：A List Apart](https://alistapart.com/article/usingxml/)

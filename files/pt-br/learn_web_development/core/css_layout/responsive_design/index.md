@@ -132,7 +132,7 @@ On wider screens they move to two columns:
 
 ## Modern layout technologies
 
-Modern layout methods such as [Multiple-column layout](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox), and [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
+Modern layout methods such as [Multiple-column layout](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout), [Flexbox](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Flexbox), and [Grid](/pt-BR/docs/Learn/CSS/CSS_layout/Grids) are responsive by default. They all assume that you are trying to create a flexible grid and give you easier ways to do so.
 
 ### Multicol
 
@@ -156,7 +156,7 @@ If you instead specify a `column-width`, you are specifying a _minimum_ width. T
 
 In Flexbox, flex items will shrink and distribute space between the items according to the space in their container, as their initial behavior. By changing the values for `flex-grow` and `flex-shrink` you can indicate how you want the items to behave when they encounter more or less space around them.
 
-In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
+In the example below the flex items will each take an equal amount of space in the flex container, using the shorthand of `flex: 1` as described in the layout topic [Flexbox: Flexible sizing of flex items](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Flexbox#flexible_sizing_of_flex_items).
 
 ```css
 .container {
@@ -201,7 +201,7 @@ Responsive Images, using the [`<picture>`](/pt-BR/docs/Web/HTML/Element/picture)
 
 You can also _art direct_ images used at different sizes, thus providing a different crop or completely different image to different screen sizes.
 
-You can find a detailed [guide to Responsive Images in the Learn HTML section](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) here on MDN.
+You can find a detailed [guide to Responsive Images in the Learn HTML section](/pt-BR/docs/Web/HTML/Responsive_images) here on MDN.
 
 ## Responsive typography
 

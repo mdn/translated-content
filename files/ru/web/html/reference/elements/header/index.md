@@ -50,13 +50,13 @@ header > time {
 }
 ```
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), [явный контент](/ru/docs/Web/HTML/Content_categories#явный_контент).                                                                                                                                                                |
-| ---------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Основной поток](/ru/docs/Web/HTML/Content_categories#основной_поток), кроме `<header>` и {{HTMLElement("footer")}}                                                                                                                                                                                        |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                           |
-| Допустимые родители                                        | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/HTML/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<header>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("footer")}} или другого элемента `<header>`. |
-| Допустимые ARIA-роли                                       | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                         |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                 |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Основной поток](/ru/docs/Web/HTML/Guides/Content_categories#основной_поток), [явный контент](/ru/docs/Web/HTML/Guides/Content_categories#явный_контент).                                                                                                                                                         |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                             | [Основной поток](/ru/docs/Web/HTML/Guides/Content_categories#основной_поток), кроме `<header>` и {{HTMLElement("footer")}}                                                                                                                                                                                        |
+| Пропуск тегов                                                     | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                                                                                                                  |
+| Допустимые родители                                               | Любой элемент, который разрешает [контент основного потока](/ru/docs/Web/HTML/Guides/Content_categories#основной_поток) в качестве содержимого. Обратите внимание, что элемент `<header>` не должен быть потомком элемента {{HTMLElement("address")}}, {{HTMLElement("footer")}} или другого элемента `<header>`. |
+| Допустимые ARIA-роли                                              | <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/group_role">group</a></code>, <code><a href="/ru/docs/Web/Accessibility/ARIA/Roles/presentation_role">presentation</a></code>                                                                                                                                |
+| DOM-интерфейс                                                     | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                        |
 
 ## Примечание
 
@@ -68,7 +68,7 @@ header > time {
 
 ## Атрибуты
 
-К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+К этому элементу применимы только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Примеры
 

@@ -1,9 +1,8 @@
 ---
 title: "<big>: 大きめのテキスト要素"
 slug: Web/HTML/Reference/Elements/big
-original_slug: Web/HTML/Element/big
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}{{deprecated_header}}

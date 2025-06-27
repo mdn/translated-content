@@ -21,9 +21,7 @@ getHighEntropyValues(hints)
 ### 参数
 
 - `hints`
-
   - : 包含要返回的提示的数组，为以下中的一个或多个：
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactor"`

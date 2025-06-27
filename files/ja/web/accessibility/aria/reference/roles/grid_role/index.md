@@ -45,7 +45,7 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
 
 グリッドウィジェットは、テーマに沿ったインタラクティブなコンテンツの 1 つ以上のセルを持つ 1 つ以上の行を含みます。 それは特定の視覚的表現を暗示するものではありませんが、要素間の関連性を暗示します。 用途は、表形式の情報の表示 (データグリッド) と他のウィジェットのグループ化 (レイアウトグリッド) の 2 つのカテゴリーに分類されます。 データグリッドとレイアウトグリッドの両方が同じ ARIA のロール、ステート、およびプロパティを採用している場合でも、そのコンテンツと目的の違いは、キーボードインタラクションのデザインにおいて考慮すべき重要な要因を表面化させます。 詳細については、[WAI-ARIA Authoring Practices](https://www.w3.org/TR/wai-aria-practices-1.2/#grid) を参照してください。
 
-セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)) ロールと列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)) ロールがあります。 セル要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)) ロールを持つ要素によって所有される必要があります。 行は行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) を使用してグループ化できます。
+セル要素には、行ヘッダーや列ヘッダーでない限り、グリッドセル ([`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)) ロールがあります。 ヘッダー要素には、それぞれ行ヘッダー ([`rowheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Rowheader_Role)) ロールと列ヘッダー ([`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Columnheader_Role)) ロールがあります。 セル要素は、行 ([`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)) ロールを持つ要素によって所有される必要があります。 行は行グループ ([`rowgroup`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)) を使用してグループ化できます。
 
 グリッドをインタラクティブなウィジェットとして使用する場合は、[キーボードインタラクション](#keyboard_interactions)を実装する必要があります。
 
@@ -53,7 +53,7 @@ original_slug: Web/Accessibility/ARIA/Roles/grid_role
 
 #### ロール
 
-- [treegrid](/ja/docs/Web/Accessibility/ARIA/Roles/Treegrid_Role) (サブクラス)
+- [treegrid](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Treegrid_Role) (サブクラス)
   - : グリッドに展開や折りたたみができる列がある場合は、ツリーグリッドを使用できます。
 - [row](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
   - : グリッド内の行。
@@ -588,14 +588,14 @@ TBD
 
 ## 関連情報
 
-- [ARIA composite ロール](/ja/docs/Web/Accessibility/ARIA/Roles/composite_Role)
+- [ARIA composite ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_Role)
 - [ARIA table ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role)
-- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_Role)
+- [ARIA treegrid ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_Role)
 - [ARIA row ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role)
 - [ARIA rowgroup ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowgroup_role)
 - [ARIA: gridcell ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)
-- [ARIA: rowheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Rowheader_Role)
-- [ARIA: columnheader ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role)
+- [ARIA: rowheader ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Rowheader_Role)
+- [ARIA: columnheader ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Columnheader_Role)
 - [HTML の表要素](/ja/docs/Web/HTML/Reference/Elements/table)
 - aria-level
 - aria-multiselectable

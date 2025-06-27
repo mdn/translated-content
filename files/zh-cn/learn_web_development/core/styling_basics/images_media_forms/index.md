@@ -3,7 +3,7 @@ title: 图像、媒体和表单元素
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 在这节课里，我们来看一下，CSS 是如何处理某些特殊元素的。图像、其他媒体和表格元素的表现和普通的盒子有些不同，这取决于你使用 CSS 格式化它们的能力。理解什么可能做到，什么不可能做到能够省些力气，本节课将会聚焦于一些你需要知道的主要的事情上。
 
@@ -84,7 +84,7 @@ img {
 
 那么该如何处理溢出问题呢？
 
-正如我们在[之前的课程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Element/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 起作用。
+正如我们在[之前的课程](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing) 所学的那样，一个常用的方法是将一张图片的 {{cssxref("max-width")}} 设为 100%。这将会使图片的尺寸小于等于盒子。这个技术也会对其他替换元素（例如 [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video)，或者 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 起作用。
 
 **尝试向上面的示例中的 `<img>` 元素加入 `max-width: 100%`，你会看到，左边那张小的图像没有变化，而大的图像变小了，恰好装在了盒子里。**
 
@@ -197,7 +197,7 @@ img {
 
 用 CSS 格式化表单元素是一个需要技巧的工作，[HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)包含了详细的格式化表单元素的指导，我不会在这里复述。本节需要介绍的是一些值得关注的关键基础内容。
 
-很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Element/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Element/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Element/legend) 。
+很多表单控件是通过 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 元素添加到网页上的。该元素定义了简单的表单区域，例如文字输入。更进一步还有 HTML5 新加入的更加复杂的区域，例如颜色和日期撷取器。另外还有一些其他元素，例如用于多行文本输入的 [`<textarea>`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea)，以及那些用来包含和标记表单特定部分的元素，例如 [`<fieldset>`](/zh-CN/docs/Web/HTML/Reference/Elements/fieldset) 和 [`<legend>`](/zh-CN/docs/Web/HTML/Reference/Elements/legend) 。
 
 HTML5 还包含了允许 Web 开发者指定必填区域的特性，甚至还能检验填入内容的类型。如果用户输入了一些不符合要求的内容，或者未填写必填区域，浏览器会显示错误提示。不同的浏览器在给此类元素样式化和自定义方面不尽相同。
 
@@ -336,7 +336,7 @@ textarea {
 
 ## 技能测试
 
-我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks)
+我们在本文中介绍了很多内容，但是你记住最重要的内容了么？在继续之前，你可以通过一些其他测试来验证你是否真正学习到了这些知识，参见[技能测试](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)
 
 ## 小结
 

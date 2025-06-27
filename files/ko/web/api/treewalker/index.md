@@ -16,7 +16,6 @@ _이 인터페이스는 어떤 프라퍼티도 상속하지 않는다._
 - {{domxref("TreeWalker.root")}} {{readonlyInline}}
   - : `TreeWalker` 를 생성할 때 지정한 루트 노드를 나타대는 {{domxref("Node")}}를 반환한다.
 - {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
-
   - : 제공해야할 {{domxref("Node")}} 유형을 기술하는 `unsigned long` 비트마스크를 반환한다. 일치하지 않는 노드들은 건너뛰지만 관련된 경우 그 자식들을 포함할 수 있다. 가능한 값들은:
 
     | 상수                                                     | 숫자 값                           | 설명                                                                                                                                                                                                                                                                                                                      |

@@ -22,7 +22,7 @@ A Documentação aqui é uma wiki, e é curada por uma equipe de voluntários e 
 Para mais informações sobre contribuir com a documentação da MDN, veja:
 
 - [Começando](/pt-BR/docs/Project:en/Project:Getting_started)
-- [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing)
+- [Contribuindo para o MDN](/pt-BR/docs/conflicting/MDN/Community)
 - [Guia do Editor MDN](/pt-BR/docs/MDN/Contribute/Editor)
 
 ## Relatar um problema

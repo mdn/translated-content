@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 6c58c5d4227a031105740b0e85acbc6178223d0a
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics/Sizing", "Learn_web_development/Core/Styling_basics")}}
 
 CSS 规则包含[声明](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_声明)，而声明又由属性和值组成。在 CSS 中使用的每个属性都有一个**值类型**，用于描述该属性允许拥有何种类型的值。在本课中，我们将了解一些最常用的值类型、它们是什么以及如何起作用。
@@ -155,7 +153,7 @@ h1 {
 
 在下面的示例中，你可以看到一些相对长度单位和绝对长度单位的行为。第一个盒子以像素为单位设置 {{cssxref("width")}}。作为一个绝对单位，无论其他地方如何变化，这个宽度将保持不变。
 
-第二个盒子的宽度设置为 `vw`（视口宽度）单位。这个值相对于视口宽度，所以 `10vw` 是视口宽度的 10%。如果你更改浏览器窗口的宽度，那么框的大小应该会更改。但是，这个示例使用 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe) 嵌入到页面中，所以这不会起作用。要查看实际情况，你必须[在打开示例的浏览器选项卡后尝试该示例](https://mdn.github.io/css-examples/learn/values-units/length.html)。
+第二个盒子的宽度设置为 `vw`（视口宽度）单位。这个值相对于视口宽度，所以 `10vw` 是视口宽度的 10%。如果你更改浏览器窗口的宽度，那么框的大小应该会更改。但是，这个示例使用 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 嵌入到页面中，所以这不会起作用。要查看实际情况，你必须[在打开示例的浏览器选项卡后尝试该示例](https://mdn.github.io/css-examples/learn/values-units/length.html)。
 
 第三个盒子使用 `em` 单位。这些是相对于字体大小的。我在包含 {{htmlelement("div")}} 的元素上设置了一个 `1em` 的字体大小，它有一个 `.wrapper` 类。将这个值更改为 `1.5em`，你将看到所有元素的字体大小都增加了，但是只有最后一项会变宽，因为宽度相对于字体大小。
 
@@ -813,7 +811,7 @@ CSS 中还有许多其他数学函数可供使用，例如 [`min()`](/zh-CN/docs
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[技能测试：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——[技能测试：值和单位](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values)。
 
 ## 总结
 

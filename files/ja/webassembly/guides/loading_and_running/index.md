@@ -1,16 +1,13 @@
 ---
 title: WebAssembly コードの読み込みと実行
 slug: WebAssembly/Guides/Loading_and_running
-original_slug: WebAssembly/Loading_and_running
 l10n:
-  sourceCommit: 4a6dacf8c68925a8538585be3b2728bcb271241e
+  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
 ---
-
-{{WebAssemblySidebar}}
 
 JavaScript で WebAssembly を使用するには、まずコンパイル/インスタンス化の前にモジュールをメモリーにプルする必要があります。この記事では、WebAssembly バイトコードをフェッチするために使用できるさまざまなメカニズムのリファレンスと、それをコンパイル/インスタンス化して実行する方法について説明します。
 
-## どんな方法があるの?
+## どんな方法があるか
 
 WebAssembly は `<script type='module'>` または `import` 文とまだ統合されていないため、インポートを使用してブラウザーでモジュールをフェッチする組み込みの方法はありません。
 
@@ -20,9 +17,9 @@ WebAssembly は `<script type='module'>` または `import` 文とまだ統合�
 
 では、どのようにバイト列を配列バッファーに読み込んでコンパイルするのでしょうか? 次の節で説明します。
 
-## Fetch を使用する
+## フェッチを使用する
 
-[Fetch](/ja/docs/Web/API/Fetch_API) はネットワークリソースを取得するための便利で新しい API です。
+[フェッチ](/ja/docs/Web/API/Fetch_API)はネットワークリソースを取得するための便利で新しい API です。
 
 wasm モジュールをフェッチする最も簡単で効率的な方法は、新しい [`WebAssembly.instantiateStreaming()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) メソッドを使用することです。このメソッドは最初の引数として `fetch()` を呼び出すことができ、1 つのステップでフェッチ、モジュールをインスタンス化し、サーバーからストリームされる生のバイトコードにアクセスします。
 
@@ -49,11 +46,11 @@ fetch("module.wasm")
 
 [`WebAssembly.instantiate()`](/ja/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 関数は 2 つのオーバーロードを持ちます。 1 つ目（上の例を参照）はバイトコードを受け取ってプロミスを返します。解決されたプロミスでコンパイルされたモジュールと、それをインスタンス化したものを含むオブジェクトとして受け取ります。オブジェクトの構造は以下のようになります。
 
-```js-nolint
-{
+```js
+({
   module: Module, // コンパイルされた WebAssembly.Module オブジェクト,
-  instance: Instance, // モジュールオブジェクトから生成された WebAssembly.Instance
-}
+  instance: Instance, // モジュールオブジェクトの新しい WebAssembly.Instance
+});
 ```
 
 > [!NOTE]
@@ -73,7 +70,7 @@ WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
     obj.instance.exports.exported_func();
 
     // or access the buffer contents of an exported memory:
-    const i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    const dv = new DataView(obj.instance.exports.memory.buffer);
 
     // or access the elements of an exported table:
     const table = obj.instance.exports.table;

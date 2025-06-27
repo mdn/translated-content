@@ -21,15 +21,15 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLEmbedElement.align")}} {{deprecated_inline}}
   - : 表示枚举属性的字符串，指示元素内容相对于周围上下文的对齐方式。可能的值有：`"left"`、`"right"`、`"center"` 和 `"justify"`。
 - {{domxref("HTMLEmbedElement.height")}}
-  - : 一个反映 [`height`](/zh-CN/docs/Web/HTML/Element/embed#height) HTML 属性的字符串，包含资源显示的高度。
+  - : 一个反映 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/embed#height) HTML 属性的字符串，包含资源显示的高度。
 - {{domxref("HTMLEmbedElement.name")}} {{deprecated_inline}}
   - : 一个表示嵌入对象名字的字符串。
 - {{domxref("HTMLEmbedElement.src")}}
-  - : 一个反映 [`src`](/zh-CN/docs/Web/HTML/Element/embed#src) HTML 属性的字符串，包含资源地址。
+  - : 一个反映 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/embed#src) HTML 属性的字符串，包含资源地址。
 - {{domxref("HTMLEmbedElement.type")}}
-  - : 一个反映 [`type`](/zh-CN/docs/Web/HTML/Element/embed#type) HTML 属性的字符串，包含资源类型。
+  - : 一个反映 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/embed#type) HTML 属性的字符串，包含资源类型。
 - {{domxref("HTMLEmbedElement.width")}}
-  - : 一个反映 [`width`](/zh-CN/docs/Web/HTML/Element/embed#width) HTML 属性的字符串，包含资源的显示宽度。
+  - : 一个反映 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/embed#width) HTML 属性的字符串，包含资源的显示宽度。
 
 ## 实例方法
 

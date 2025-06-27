@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Accept-Encoding
 
 {{HTTPSidebar}}
 
-O cabeçalho de requisição HTTP **`Accept-Encoding`** indica qual codificação de conteúdo, usualmente um algoritmo de compressão, o cliente está apto a entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, a utiliza e informa o cliente da escolha feita com o cabeçalho de resposta {{HTTPHeader("Content-Encoding")}}.
+O cabeçalho de requisição HTTP **`Accept-Encoding`** indica qual codificação de conteúdo, usualmente um algoritmo de compressão, o cliente está apto a entender. Usando [negociação de conteúdo](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation), o servidor seleciona uma das propostas, a utiliza e informa o cliente da escolha feita com o cabeçalho de resposta {{HTTPHeader("Content-Encoding")}}.
 
 Até mesmo se o cliente e o servidor suportarem os mesmos algoritmos de compressão, o servidor pode escolher não comprimir o corpo da resposta, se o valor de identidade também é aceitável. Dois casos comuns levam a isso:
 
@@ -85,6 +85,6 @@ Accept-Encoding: br;q=1.0, gzip;q=0.8, *;q=0.1
 
 ## Veja também
 
-- [Negociação de conteúdo HTTP](/pt-BR/docs/Web/HTTP/Content_negotiation)
+- [Negociação de conteúdo HTTP](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation)
 - Cabeçalho com o resultado do conteúdo de negociação: {{HTTPHeader("Content-Encoding")}}
 - Outros cabeçalhos similares: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept-Language")}}

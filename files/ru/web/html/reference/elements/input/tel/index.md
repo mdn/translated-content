@@ -44,7 +44,7 @@ label {
 
 ## Значение
 
-Атрибут [`value`](/ru/docs/Web/HTML/Element/input#value) элемента {{HTMLElement("input")}} содержит строку, которая представляет номер телефона либо является пустой строкой (`""`).
+Атрибут [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) элемента {{HTMLElement("input")}} содержит строку, которая представляет номер телефона либо является пустой строкой (`""`).
 
 ## Спецификации
 
@@ -58,7 +58,6 @@ label {
 
 - [Руководство по HTML-формам](/ru/docs/Learn_web_development/Extensions/Forms)
 - {{HTMLElement("input")}}
-
   - {{HTMLElement("input/text")}}
   - {{HTMLElement("input/email")}}
 

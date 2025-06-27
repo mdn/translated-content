@@ -19,7 +19,7 @@ l10n:
 
 同じ名前が付けられた {{HTMLElement("input/checkbox","checkbox")}} 入力型のグループでは、 `required` 属性がついたチェックボックスのみが必須になります。
 
-> **メモ:** [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
+> **メモ:** [`aria-required="true"`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) を設定すると、ある要素（任意の要素）が必須であることをスクリーンリーダーに伝えますが、その要素が任意であるかどうかには関係ありません。
 
 ### 属性の相互作用
 

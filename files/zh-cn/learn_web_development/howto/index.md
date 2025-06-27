@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---
 
-{{LearnSidebar}}
-
 学习区的本部分是为可能会遇到的常见问题提供答案，而这些问题不必是结构化的核心学习路径的部分（例如，[HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content) 或 [CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 中的学习文章）。这些文章专注于它们自己的内容。
 
 - [HTML 问题](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems)

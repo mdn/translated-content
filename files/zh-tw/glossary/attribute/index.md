@@ -2,7 +2,7 @@
 title: 屬性
 slug: Glossary/Attribute
 l10n:
-  sourceCommit: 26635ef6b1a40e538501bd81fdcf98725e14e6ea
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{GlossarySidebar}}
@@ -40,8 +40,8 @@ console.log(attr.value); // 打印 `Modified placeholder`
 
 ## 參見
 
-- [HTML 屬性參考](/zh-TW/docs/Web/HTML/Attributes)
-- HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)相關資訊。
+- [HTML 屬性參考](/zh-TW/docs/Web/HTML/Reference/Attributes)
+- HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)相關資訊。
 - [W3C XML 推薦標準](https://www.w3.org/TR/xml#sec-starttags)中的 XML 開始標籤屬性推薦
 - 相關術語：
   - {{Glossary("Element")}}

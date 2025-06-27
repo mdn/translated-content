@@ -46,7 +46,7 @@ transform: scale(0.5) translate(-100%, -100%);
 Если свойство имеет значение, отличное от `none`, будет создан [контекст наложения](/ru/docs/Web/CSS/CSS_positioned_layout/Stacking_context). В этом случае, элемент будет действовать как [содержащий блок](/ru/docs/Web/CSS/CSS_display/Containing_block) для любых элементов `position: fixed;` или `position: absolute;` которые он содержит.
 
 > [!WARNING]
-> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Element/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
+> Только трансформируемый элемент может быть `transform`. Т.е. все элементы, шаблоны которых регулируются блочной моделью CSS, кроме : [неизменяемые инлайновые блоки](/ru/docs/Web/CSS/CSS_display/Visual_formatting_model#inline-level_elements_and_inline_boxes), [блоки таблица-колонка](/ru/docs/Web/HTML/Reference/Elements/col), и [блоки таблица-колонка-группа](/ru/docs/Web/HTML/Element/colgroup).
 
 ## Синтаксис
 

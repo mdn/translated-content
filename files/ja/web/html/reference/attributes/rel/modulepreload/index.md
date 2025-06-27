@@ -1,9 +1,8 @@
 ---
-title: rel=modulepreload
+title: rel="modulepreload"
 slug: Web/HTML/Reference/Attributes/rel/modulepreload
-original_slug: Web/HTML/Attributes/rel/modulepreload
 l10n:
-  sourceCommit: 10b342385644e822d123694ad3bc8c2ca9abb2dc
+  sourceCommit: 0389dd29e0827791ad9d2f6b8cda217c121f9c19
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +17,7 @@ l10n:
 `rel="modulepreload"` を持つリンクは [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を持つリンクと似ています。
 主な違いは、 `preload` はファイルをダウンロードしてキャッシュに格納するだけですが、 `modulepreload` はモジュールを取得し、解釈してコンパイルし、その結果をモジュールマップに格納して実行できるようにします。
 
-`modulepreload` を使用する場合、フェッチリクエストモードは常に [`cors`](/ja/docs/Web/API/Request/mode#cors) であり、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) プロパティを使用してリクエストの資格情報モードを決定します。
+`modulepreload` を使用する場合、フェッチリクエストモードは常に [`cors`](/ja/docs/Web/API/Request/mode#cors) であり、 [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) プロパティを使用してリクエストの[資格情報モード](/ja/docs/Web/API/Request/credentials)を決定します。
 `crossorigin` が [`anonymous`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#anonymous) または [`""`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#sect1) (既定) に設定されていた場合、資格情報モードは [`same-origin`](/ja/docs/Web/API/Request/credentials#same-origin) となり、Cookie や認証のようなユーザー資格情報は `same-origin` のリクエストに対してのみ送信されます。
 `crossorigin` が [`use-credentials`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin#use-credentials) に設定されている場合、資格情報モードは [`include`](/ja/docs/Web/API/Request/credentials#include) となり、オリジン内・オリジン間の両方のリクエストに対してユーザー資格情報が送信されます。
 
@@ -101,4 +100,4 @@ modules/
 ## 関連情報
 
 - [投機的読み込み](/ja/docs/Web/Performance/Guides/Speculative_loading)で、`<link rel="modulepreload">` や他にも同様のパフォーマンス改善機能の比較ができます。
-- [Preloading modules](https://web.dev/articles/modulepreload) (developer.chrome.com)
+- [Preloading modules](https://web.dev/articles/modulepreload) (web.dev)

@@ -84,23 +84,19 @@ slug: Mozilla/Add-ons
 2. [Legacy extensions](/ru/docs/Mozilla/Add-ons/Overlay_Extensions)
 3. [Дополнения на основе SDK](/ru/docs/Mozilla/Add-ons/SDK)
 4. [Techniques](/ru/docs/Mozilla/Add-ons/Techniques)
-
    1. [Promises](/ru/docs/Mozilla/Add-ons/Techniques/Promises)
 
 5. [Рекомендуемая практика](/ru/docs/Mozilla/Add-ons)
-
    1. [Производительность](/ru/docs/Mozilla/Add-ons/Performance_best_practices_in_extensions)
    2. [Безопасность](/ru/docs/Mozilla/Add-ons/Security_best_practices_in_extensions)
    3. [Этикет](/ru/docs/Mozilla/Add-ons/Extension_etiquette)
 
 6. [Темы](/ru/docs/Mozilla/Add-ons)
-
    1. [Легковесные темы](/docs/Mozilla/Add-ons/Themes/Background)
    2. [Легковесные темы FAQ](/docs/Mozilla/Add-ons/Themes/Background/FAQ)
    3. [Полные темы](/ru/docs/Themes)
 
 7. [Legacy Plugins](/ru/docs/Mozilla/Add-ons)
-
    1. [Plug-in Basics](/ru/docs/Glossary/Plugin)
    2. [Plug-in Development Overview](/ru/docs/Glossary/Plugin)
    3. [Initialization and Destruction](/ru/docs/Glossary/Plugin)
@@ -110,7 +106,6 @@ slug: Mozilla/Add-ons
    7. [Memory](/ru/docs/Glossary/Plugin)
    8. [Version, UI, and Status Information](/ru/docs/Glossary/Plugin)
    9. [Plug-in side Plug-in API](/ru/docs/Glossary/Plugin)
-
       1. [NPP_Destroy](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_Destroy)
       2. [NPP_DestroyStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_DestroyStream)
       3. [NPP_GetValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_GetValue)
@@ -129,7 +124,6 @@ slug: Mozilla/Add-ons
       16. [NPP_WriteReady](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPP_WriteReady)
 
    10. [Browser Side Plug-in API](/ru/docs/Glossary/Plugin)
-
        1. [NPN_DestroyStream](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_DestroyStream)
        2. [NPN_ForceRedraw](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ForceRedraw)
        3. [NPN_GetAuthenticationInfo](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_GetAuthenticationInfo)
@@ -156,7 +150,6 @@ slug: Mozilla/Add-ons
        24. [NPN_Write](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_Write)
 
    11. [Scripting plugins](/ru/docs/Glossary/Plugin)
-
        1. [NPString](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPString)
        2. [NPVariant](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPVariant)
        3. [NPN_ReleaseVariantValue](/ru/docs/Mozilla/Add-ons/Plugins/Reference/NPN_ReleaseVariantValue)
@@ -186,11 +179,9 @@ slug: Mozilla/Add-ons
    14. [External Resources](/ru/docs/Mozilla/Add-ons/Plugins/External_resources_for_plugin_creation)
 
 8. [Publishing add-ons](/ru/docs/Mozilla/Add-ons)
-
    1. [Signing and distributing your add-on](/ru/docs/Mozilla/Add-ons/Distribution)
    2. [Submit a new add-on](https://addons.mozilla.org/developers/addon/submit/)
    3. [Policies](https://extensionworkshop.com/documentation/publish/add-on-policies/)
-
       1. [Developer Agreement](/ru/docs/Mozilla/Add-ons/AMO/Policy/Agreement)
       2. [Review Process](/ru/docs/Mozilla/Add-ons/AMO/Policy/Reviews)
       3. [Add-on guidelines](/ru/docs/Mozilla/Add-ons/Add-on_guidelines)
@@ -198,7 +189,6 @@ slug: Mozilla/Add-ons
       5. [Contacting Us](/ru/docs/Mozilla/Add-ons/AMO/Policy/Contact)
 
 9. [Community and Support](/ru/docs/Mozilla/Add-ons)
-
    1. [Add-ons Blog](https://blog.mozilla.org/addons)
    2. [Add-on Forums](https://forums.mozilla.org/addons)
    3. [Stack Overflow](https://stackoverflow.com/questions/tagged/firefox-addon)

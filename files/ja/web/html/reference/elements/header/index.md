@@ -153,7 +153,7 @@ header > time {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Banner_role">banner</a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Banner_role">banner</a>,
         または
         <code><a href="/ja/docs/Web/HTML/Element/article">article</a></code
         >, <code><a href="/ja/docs/Web/HTML/Element/aside">aside</a></code
@@ -163,27 +163,27 @@ header > time {
         <code><a href="/ja/docs/Web/HTML/Element/section">section</a></code>
         の各要素、または
         <code
-          >role=<a href="/ja/docs/Web/Accessibility/ARIA/Roles/Article_Role"
+          >role=<a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Article_Role"
             >article</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Complementary_role"
             >complementary</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Main_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Main_role"
             >main</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Navigation_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Navigation_Role"
             >navigation</a
           ></code
         >,
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Region_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Region_role"
             >region</a
           ></code
         >
@@ -196,8 +196,8 @@ header > time {
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

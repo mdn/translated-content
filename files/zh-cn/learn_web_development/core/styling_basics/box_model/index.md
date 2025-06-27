@@ -5,7 +5,7 @@ l10n:
   sourceCommit: cafb94fe8b20ea9f38db7910b7da1b13e29354b5
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Combinators", "Learn_web_development/Core/Styling_basics/Handling_conflicts", "Learn_web_development/Core/Styling_basics")}}
 
 在 CSS 中，所有的元素都被一个个的“盒子”包围着，理解这些“盒子”的基本原理，是我们使用 CSS 实现准确布局、处理元素排列的关键。本文以 CSS 盒模型为主题，你将了解其工作原理和相关术语。
 
@@ -618,7 +618,7 @@ li {
 
 ## 技能测试！
 
-本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_Model_Tasks)。
+本文已经结束，你还记得最重要的信息吗？在继续学习之前，可以找到一些进一步的测试来验证你是否保留了这些信息——请参阅[技能测试：盒模型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Box_model)。
 
 ## 总结
 

@@ -48,7 +48,7 @@ onpopstate = (event) => {};
 
 ブラウザーは、ページ読み込み時に `popstate` イベントを異なる方法で処理する傾向があります。 Chrome （v34 以前）と Safari ではページ読み込み時に常に `popstate` イベントが発行されますが、 Firefox では発行されません。
 
-> **メモ:** `popstate` イベントを処理する関数を書くときには、 `window.location` のようなプロパティはすでに状態の変化を反映していますが（それが現在の URL に影響する場合）、 `document` はまだ反映されていないかもしれないことを考慮に入れておくことが重要です。新しい文書の状態が完全に反映された瞬間を捉えることが目的であれば、遅延ゼロの {{domxref("setTimeout()")}} メソッド呼び出しを使用して、処理を行う内部の _callback_ 関数をブラウザーのイベントループの最後に効果的に配置する必要があります。例えば `window.onpopstate = () => setTimeout(doSomeThing, 0);` のようにします。
+> **メモ:** `popstate` イベントを処理する関数を書くときには、 `window.location` のようなプロパティはすでに状態の変化を反映していますが（それが現在の URL に影響する場合）、 `document` はまだ反映されていないかもしれないことを考慮に入れておくことが重要です。新しい文書の状態が完全に反映された瞬間を捉えることが目的であれば、遅延ゼロの {{domxref("Window.setTimeout", "setTimeout()")}} メソッド呼び出しを使用して、処理を行う内部の _callback_ 関数をブラウザーのイベントループの最後に効果的に配置する必要があります。例えば `window.onpopstate = () => setTimeout(doSomeThing, 0);` のようにします。
 
 ## popstate が送信される場面
 

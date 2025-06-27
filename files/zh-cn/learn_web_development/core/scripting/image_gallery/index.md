@@ -3,8 +3,6 @@ title: 挑战：图片库
 slug: Learn_web_development/Core/Scripting/Image_gallery
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/Event_bubbling","Learn_web_development/Core/Scripting/Object_basics", "Learn_web_development/Core/Scripting")}}
 
 我们已经学习了 JavaScript 基础的块结构，下面我们通过编写一个常见的基于 JavaScript 的图片库来测验一下你对于循环、函数、条件和事件的掌握情况。

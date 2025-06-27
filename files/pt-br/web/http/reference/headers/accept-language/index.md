@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Accept-Language
 
 {{HTTPSidebar}}
 
-O cabeçalho HTTP **`Accept-Language`** anuncia quais linguas o cliente é capaz de entender, e qual é a preferência do variante do Locale. (Por Linguas, queremos dizer linguas como Inglês e portugues) Usando [content negotiation](/pt-BR/docs/Web/HTTP/Content_negotiation), o servidor seleciona uma das propostas, usa ela e informa o cliente da sua escolha com o {{HTTPHeader("Content-Language")}} cabeçalho de responsta. Navegadores configuram valores adequados para este cabeçalhos de acordo com a língua configurada pelo usuario.
+O cabeçalho HTTP **`Accept-Language`** anuncia quais linguas o cliente é capaz de entender, e qual é a preferência do variante do Locale. (Por Linguas, queremos dizer linguas como Inglês e portugues) Usando [content negotiation](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation), o servidor seleciona uma das propostas, usa ela e informa o cliente da sua escolha com o {{HTTPHeader("Content-Language")}} cabeçalho de responsta. Navegadores configuram valores adequados para este cabeçalhos de acordo com a língua configurada pelo usuario.
 
 Este cabeçalho é uma dica a ser usada pelo servidor quando ele não possui outra forma de determinar a lingua do cliente, como uma URL específica, que é controlada por uma decisão explicita do usuário. É recomendado que o servidor nunca sobreescreva uma decisão explícita. O conteúdo de `Accept-Language` está comumente fora do controle do usuário (em uma viagem a outro país por exemplo); O usuário pode querer acessar a página em outra língua diferente da decidida pelo navegador.
 
@@ -73,6 +73,6 @@ Accept-Language: en-US,en;q=0.5
 
 ## See also
 
-- HTTP [content negotiation](/pt-BR/docs/Web/HTTP/Content_negotiation)
+- HTTP [content negotiation](/pt-BR/docs/Web/HTTP/Guides/Content_negotiation)
 - Header with the result of the content negotiation: {{HTTPHeader("Content-Language")}}
 - Other similar headers: {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Charset")}}, {{HTTPHeader("Accept")}}

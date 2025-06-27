@@ -15,11 +15,11 @@ l10n:
 
 #### 移除
 
-- {{HTMLElement('input')}} 元素不再支持非标准的 `mozactionhint` 属性。请使用 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Global_attributes/enterkeyhint)。（详见 [Firefox bug 1735980](https://bugzil.la/1735980)）。
+- {{HTMLElement('input')}} 元素不再支持非标准的 `mozactionhint` 属性。请使用 [`enterkeyhint`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/enterkeyhint)。（详见 [Firefox bug 1735980](https://bugzil.la/1735980)）。
 
 ### CSS
 
-- CSS 函数 {{cssxref("attr")}} 现在支持回退值。这样，如果缺少[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)，就可以设置回退值（[Firefox bug 1448248](https://bugzil.la/1448248)）。
+- CSS 函数 {{cssxref("attr")}} 现在支持回退值。这样，如果缺少[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，就可以设置回退值（[Firefox bug 1448248](https://bugzil.la/1448248)）。
 
 ### JavaScript
 

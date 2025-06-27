@@ -28,4 +28,4 @@ Comumente, este status é utilizado em requisições do tipo {{HTTPMethod("POST"
 
 ## Veja mais
 
-- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)
+- [HTTP request methods](/pt-BR/docs/Web/HTTP/Reference/Methods)

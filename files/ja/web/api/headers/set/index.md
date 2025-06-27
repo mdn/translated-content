@@ -12,7 +12,7 @@ l10n:
 
 `set()` と {{domxref("Headers.append")}} の違いは、指定されたヘッダーがすでに存在し、複数の値を受け入れられる場合、 `set()` は既存の値を新しい値で上書きするのに対し、 {{domxref("Headers.append")}} は新しい値を値の集合の最後に追加する点です。
 
-セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden_header_name", "禁止ヘッダー名")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
+セキュリティ上の理由から、いくつかのヘッダーはユーザーエージェントでしか制御できません。これには、{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と{{Glossary("Forbidden_response_header_name", "禁止レスポンスヘッダー名")}}があります。
 
 ## 構文
 

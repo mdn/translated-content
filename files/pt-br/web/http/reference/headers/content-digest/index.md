@@ -8,12 +8,12 @@ original_slug: Web/HTTP/Headers/Content-Digest
 
 O cabeçalho de resposta HTTP **`Digest`** provém uma {{Glossary("digest")}} do recurso requisitado.
 
-Nos termos da [RFC 7231](https://tools.ietf.org/html/rfc7231) esta é a _representação selecionada_ de um recurso. A representação selecionada depende dos valores dos cabeçalhos [`Content-Type`](/pt-BR/docs/Web/HTTP/Headers/Content-Type) e [`Content-Encoding`](/pt-BR/docs/Web/HTTP/Headers/Content-Encoding): então um único recurso pode ter diversos valores de "digestão".
+Nos termos da [RFC 7231](https://tools.ietf.org/html/rfc7231) esta é a _representação selecionada_ de um recurso. A representação selecionada depende dos valores dos cabeçalhos [`Content-Type`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Type) e [`Content-Encoding`](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Encoding): então um único recurso pode ter diversos valores de "digestão".
 
 A "digestão" é calculada através da representação inteira. A representação em si pode ser:
 
 - totalmente contida no corpo da mensagem de resposta
-- não contida no corpo da mensagem (por exemplo, na resposta para uma requisição [`HEAD`](/pt-BR/docs/Web/HTTP/Methods/HEAD))
+- não contida no corpo da mensagem (por exemplo, na resposta para uma requisição [`HEAD`](/pt-BR/docs/Web/HTTP/Reference/Methods/HEAD))
 - parcialmente contido no corpo da mensagem (por exemplo, em uma resposta para uma [requisição de intervalo](/pt-BR/docs/Web/HTTP/Range_requests)).
 
 <table class="properties">
@@ -67,4 +67,4 @@ Este cabeçalho foi originalmente definido na [RFC 3230](https://tools.ietf.org/
 
 - {{HTTPHeader("Want-Digest")}}
 - [Requisições de intervalo HTTP](/pt-BR/docs/Web/HTTP/Range_requests)
-- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Status/206)
+- [`206 Partial Content`](/pt-BR/docs/Web/HTTP/Reference/Status/206)

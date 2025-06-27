@@ -1,17 +1,16 @@
 ---
 title: id
 slug: Web/XML/XPath/Reference/Functions/id
-original_slug: Web/XPath/Reference/Functions/id
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `id` 関数は渡された ID に一致するノードを探し、識別されたノードを格納するノード集合を返します。
 
-### 構文
+## 構文
 
-```
-id(expression )
+```plain
+id( expression )
 ```
 
 ### 引数
@@ -24,14 +23,14 @@ id(expression )
 
 与えられた単一または複数の ID によって識別された、単一または複数のノードを格納したノード集合。
 
-### 注
+## 解説
 
 - どの属性が ID として扱われるかは、XML 文書の DTD によって決定されます。 [XPath 1.0 5.2.1](https://www.w3.org/TR/xpath#unique-id) を参照してください。
 
-### 定義
+## 仕様書
 
 [XPath 1.0 4.1](https://www.w3.org/TR/xpath#function-id)
 
-### Gecko での対応
+## Gecko の対応
 
-一部対応。
+部分的に対応。

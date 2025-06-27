@@ -33,12 +33,11 @@ slug: Mozilla/Firefox/Releases/32
 
 ### HTML
 
-- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Element/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
+- Экспериментальная реализация свойства (включается параметром) {{HTMLElement("img")}} [`srcset`](/ru/docs/Web/HTML/Reference/Elements/img#srcset). Чтобы включить его, установите значение `dom.image.srcset.enable` в `true` ([Firefox bug 870021](https://bugzil.la/870021)).
 
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}

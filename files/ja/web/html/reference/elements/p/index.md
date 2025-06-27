@@ -86,7 +86,7 @@ p {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles"
           >paragraph</a
         >
       </td>

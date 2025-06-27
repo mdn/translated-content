@@ -21,7 +21,7 @@ Se você não tem certeza se um tópico específico deve ser abordado no MDN lei
 
 ## Como você pode ajudar
 
-Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Contributing/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
+Você não precisa ser capaz de programar - or escrever - para poder ajudar a MDN! Nós temos muitos caminhos por onde você pode ajudar, de uma revisão de artigos para ter certeza que fazem sentido, até contribuindo com texto, adicionando códigos de exemplo. Na verdade existem tantas formas de ajudar que nós temos uma [ferramenta para ajudá-lo a escolher tarefas para ajudar](/pt-BR/docs/MDN/Community/Getting_started), baseada em seus interesses e na sua quantidade de tempo livre.
 
 ## A comunidade MDN
 

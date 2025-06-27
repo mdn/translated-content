@@ -88,7 +88,6 @@ para.onpointerleave = (event) => {
 ## 関連情報
 
 - 関連イベント
-
   - {{domxref('Element/gotpointercapture_event', 'gotpointercapture')}}
   - {{domxref('Element/lostpointercapture_event', 'lostpointercapture')}}
   - {{domxref('Element/pointerover_event', 'pointerover')}}

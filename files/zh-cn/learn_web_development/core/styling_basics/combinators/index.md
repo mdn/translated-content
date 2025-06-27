@@ -3,7 +3,7 @@ title: 关系选择器
 slug: Learn_web_development/Core/Styling_basics/Combinators
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements", "Learn_web_development/Core/Styling_basics/Box_model", "Learn_web_development/Core/Styling_basics")}}
 
 我们要了解的最后一种选择器被命名为关系选择器（Combinator），这是因为它们在其他选择器之间和其他选择器与文档内容的位置之间建立了一种有用的关系的缘故。
 
@@ -180,7 +180,7 @@ ul > li[class="a"] {
 
 ## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)。
 
 ## 继续学习
 

@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui ne sera appelée lorsque cet événement se produira. La fonction sera passée avec les arguments suivants :
-
     - `permissions`
       - : L'objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été supprimées.
 

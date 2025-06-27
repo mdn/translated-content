@@ -173,7 +173,7 @@ foo(1, 2, 3);
 
 ### 迭代 NodeList
 
-下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Element/article) 元素下的段落添加一个 `read` 类。
+下面的示例通过迭代一个 [`NodeList`](/zh-CN/docs/Web/API/NodeList) DOM 集合，为直接位于 [`<article>`](/zh-CN/docs/Web/HTML/Reference/Elements/article) 元素下的段落添加一个 `read` 类。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");

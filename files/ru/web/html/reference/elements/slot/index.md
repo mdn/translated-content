@@ -7,18 +7,18 @@ slug: Web/HTML/Reference/Elements/slot
 
 HTML-элемент **`<slot>`** является частью набора технологии [Web Components](/ru/docs/Web/API/Web_components), является заполнителем внутри веб компонента, который можно заполнить собственной разметкой, которая позволяет создавать отдельные деревья DOM и представлять их вместе.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Content_categories#flow_content), [содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content) |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model)                                                                          |
-| События                                                    | [`slotchange`](/ru/docs/Web/API/HTMLSlotElement/slotchange_event)                                                                                     |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                      |
-| Допустимые родители                                        | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Content_categories#phrasing_content)                                      |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                   |
-| DOM-интерфейс                                              | {{domxref("HTMLSlotElement")}}                                                                                                                        |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Поток контента](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [содержание формулировки](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content) |
+| ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                             | [Прозрачный](/ru/docs/Web/HTML/Guides/Content_categories#transparent_content_model)                                                                                 |
+| События                                                           | [`slotchange`](/ru/docs/Web/API/HTMLSlotElement/slotchange_event)                                                                                                   |
+| Пропуск тегов                                                     | Нет, открывающий и закрывающий теги обязательны.                                                                                                                    |
+| Допустимые родители                                               | Любой элемент, который принимает[содержание формулировки](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content)                                             |
+| Допустимые ARIA-роли                                              | Нет                                                                                                                                                                 |
+| DOM-интерфейс                                                     | {{domxref("HTMLSlotElement")}}                                                                                                                                      |
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `name`
   - : Название слота._**Именованный слот**_ это элемент `<slot>` с атрибутом `name`.

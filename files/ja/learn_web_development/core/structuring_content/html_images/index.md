@@ -620,7 +620,7 @@ p {
 
 ## スキルテスト
 
-この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images) を見てください。
+この記事の最後に達しましたが、最も大切な情報を覚えていますか？次に進む前に、この情報が身に付いたかどうかを確認するテストがあります。[スキルテスト: HTML 画像](/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images) を見てください。
 
 ## まとめ
 

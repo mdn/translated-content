@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaValueText`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの aria-valuenow の代替となる人間が読み取り可能なテキストを定義する [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性の値を反映します。
+**`ariaValueText`** は {{domxref("Element")}} インターフェイスのプロパティで、範囲ウィジェットの aria-valuenow の代替となる人間が読み取り可能なテキストを定義する [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性の値を反映します。
 
 ## 値
 

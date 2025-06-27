@@ -330,7 +330,7 @@ textarea {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 画像とフォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 画像とフォーム要素](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images)を見てください。
 
 ## まとめ
 

@@ -1,9 +1,8 @@
 ---
 title: <input type="hidden">
 slug: Web/HTML/Reference/Elements/input/hidden
-original_slug: Web/HTML/Element/input/hidden
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -58,7 +57,7 @@ l10n:
 
 ## 例
 
-以前に作成した編集フォーム（[編集された内容の追跡](#tracking_edited_content)を参照）に、隠し入力欄を使用して編集するレコードの ID を記憶する簡単なバージョンを実装する方法を見てみましょう。
+以前に作成した編集フォーム（[編集された内容の追跡](#tracking_edited_content)を参照）に、隠し入力欄を使用して編集するレコードの ID を記憶するバージョンを実装する方法を見てみましょう。
 
 編集フォームの HTML はこのようになっているかもしれません。
 
@@ -148,7 +147,7 @@ textarea {
     </tr>
     <tr>
       <td><strong>対応する共通属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a></td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>

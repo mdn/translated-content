@@ -49,16 +49,16 @@ slug: Web/HTML/Reference/Elements/input/button
 > [!NOTE]
 > Хотя элементы `<input>` с типом `button` по-прежнему являются абсолютно корректными в HTML, новый элемент {{HTMLElement("button")}} теперь является предпочтительным способом создания кнопок. Учитывая, что текст элемента {{HTMLElement("button")}} вставлен между открывающим и закрывающим тегами, вы можете включить в тег HTML, даже изображения.
 
-| **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                     |
-| --------------------------------- | ------------------------------------------------------------------------------------------------- |
-| **Событие**                       | [`click`](/ru/docs/Web/API/Element/click_event)                                                   |
-| **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Element/input#type) и [`value`](/ru/docs/Web/HTML/Element/input#value) |
-| **Атрибуты IDL**                  | `value`                                                                                           |
-| **Методы**                        | None                                                                                              |
+| **[Значение](#значение)**         | {{domxref("DOMString")}} используется в качестве метки кнопки                                                           |
+| --------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| **Событие**                       | [`click`](/ru/docs/Web/API/Element/click_event)                                                                         |
+| **Поддерживаемые общие атрибуты** | [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) и [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) |
+| **Атрибуты IDL**                  | `value`                                                                                                                 |
+| **Методы**                        | None                                                                                                                    |
 
 ## Значение
 
-Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Element/input#value) содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
+Атрибут значения элементов `<input type="button">` elements' [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) содержит строку {{domxref("DOMString")}} , которая используется в качестве метки кнопки.
 
 ```html
 <input type="button" value="Нажми на меня" />
@@ -112,9 +112,9 @@ function updateButton() {
 
 ### Добавление сочетаний клавиш на кнопки
 
-Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут [`accesskey`](/ru/docs/Web/HTML/Global_attributes#accesskey).
+Сочетания клавиш, также известные как клавиши доступа и их эквиваленты на клавиатуре, позволяют пользователю активировать кнопку с помощью клавиши или комбинации клавиш на клавиатуре. Чтобы добавить сочетание клавиш к кнопке — точно так же, как вы сделали бы с любым {{HTMLElement("input")}}, для которого это имеет смысл, — вы используете глобальный атрибут [`accesskey`](/ru/docs/Web/HTML/Reference/Global_attributes#accesskey).
 
-В этом примере, <kbd>s</kbd> это специфичная клавиша доступа (ты должен нажать <kbd>s</kbd> плюс конкретные клавиши-модификаторы для вашей комбинации браузера и операционной системы; вы можете увидеть полный список на странице [accesskey](/ru/docs/Web/HTML/Global_attributes/accesskey)).
+В этом примере, <kbd>s</kbd> это специфичная клавиша доступа (ты должен нажать <kbd>s</kbd> плюс конкретные клавиши-модификаторы для вашей комбинации браузера и операционной системы; вы можете увидеть полный список на странице [accesskey](/ru/docs/Web/HTML/Reference/Global_attributes/accesskey)).
 
 ```html
 <form>
@@ -147,7 +147,7 @@ function updateButton() {
 
 ### Выключенные / Включённые кнопки
 
-Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут [`disabled`](/ru/docs/Web/HTML/Global_attributes#disabled), вот так:
+Чтобы выключить кнопку необходимо просто добавить на неё глобальный атрибут [`disabled`](/ru/docs/Web/HTML/Reference/Global_attributes#disabled), вот так:
 
 ```html
 <input type="button" value="Я выключена" disabled />
@@ -206,7 +206,7 @@ function disableButton() {
 {{EmbedLiveSample("Hidden_code_2", 650, 60)}}
 
 > [!NOTE]
-> Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут [`autocomplete`](/ru/docs/Web/HTML/Element/button#autocomplete) для управления этой функцией.
+> Firefox, в отличие от других браузеров, по умолчанию [сохраняет динамическое отключенние состояния](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) из одного {{HTMLElement("button")}} при загрузке разных страниц. Используйте атрибут [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/button#autocomplete) для управления этой функцией.
 
 ## Валидация
 

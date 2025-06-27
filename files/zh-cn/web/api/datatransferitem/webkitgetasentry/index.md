@@ -30,7 +30,7 @@ webkitGetAsEntry()
 
 ### HTML
 
-HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Element/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
+HTML 建立了放置区本身，它是[`<div>`](/zh-CN/docs/Web/HTML/Reference/Elements/div)具有 ID 的元素`"dropzone"`，以及带有 ID 的无序列表元素`"listing"`。
 
 ```html
 <p>Drag files and/or directories to the box below!</p>
@@ -107,9 +107,9 @@ function scanFiles(item, container) {
 }
 ```
 
-`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Element/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，你很快就会看到。
+`scanFiles()`首先创建一个新[`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li)元素来表示正在扫描的项目，将项目的名称作为文本内容插入其中，然后将其附加到容器中。容器在此示例中始终是列表元素，你很快就会看到。
 
-一旦当前项目在列表中，[`isDirectory`](/zh-CN/docs/Web/API/FileSystemEntry/isDirectory)就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个[`FileSystemDirectoryReader`](/zh-CN/docs/Web/API/FileSystemDirectoryReader)to 来处理获取目录的内容。这是通过调用 item 的[`createReader()`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry/createReader)方法完成的。然后[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。
+一旦当前项目在列表中，[`isDirectory`](/zh-CN/docs/Web/API/FileSystemEntry/isDirectory)就会检查项目的属性。如果该项目是目录，我们需要递归到该目录。第一步是创建一个[`FileSystemDirectoryReader`](/zh-CN/docs/Web/API/FileSystemDirectoryReader)to 来处理获取目录的内容。这是通过调用 item 的[`createReader()`](/zh-CN/docs/Web/API/FileSystemDirectoryEntry/createReader)方法完成的。然后[`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul)创建一个 new 并将其附加到父列表; 这将包含列表层次结构中下一级别的目录内容。
 
 之后，[`directoryReader.readEntries()`](/zh-CN/docs/Web/API/FileSystemDirectoryReader/readEntries)调用读取目录中的所有条目。反过来，这些都被传递到递归调用`scanFiles()`以处理它们。其中任何文件都只是插入到列表中; 将任何目录插入到列表中，并在下面添加列表层次结构的新级别，依此类推。
 

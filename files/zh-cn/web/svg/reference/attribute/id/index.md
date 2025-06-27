@@ -52,7 +52,6 @@ l10n:
 </table>
 
 - \<id>
-
   - : 指定元素的 ID。该 ID 在节点树中必须是唯一的，不能为空字符串，并且不能包含任何空格字符。
 
     > [!NOTE]
@@ -70,5 +69,5 @@ l10n:
 
 ## 参见
 
-- [HTML `id`](/zh-CN/docs/Web/HTML/Global_attributes/id)
+- [HTML `id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id)
 - {{SVGAttr("class")}}

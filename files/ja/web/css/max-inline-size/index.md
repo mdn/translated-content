@@ -1,6 +1,8 @@
 ---
 title: max-inline-size
 slug: Web/CSS/max-inline-size
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
@@ -34,7 +36,7 @@ writing-mode: vertical-lr;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box where you can change the max-inline-size.
+    これは、max-inline-size を変更できるボックスです。
   </div>
 </section>
 ```
@@ -56,20 +58,24 @@ writing-mode: vertical-lr;
 /* <length> 値 */
 max-inline-size: 300px;
 max-inline-size: 25em;
+max-inline-size: anchor-size(width);
+max-inline-size: anchor-size(--myAnchor self-block, 200px);
 
 /* <percentage> 値 */
 max-inline-size: 75%;
 
 /* キーワード値 */
-max-inline-size: auto;
+max-inline-size: none;
 max-inline-size: max-content;
 max-inline-size: min-content;
+max-inline-size: fit-content;
 max-inline-size: fit-content(20em);
 
 /* グローバル値 */
 max-inline-size: inherit;
 max-inline-size: initial;
 max-inline-size: revert;
+max-inline-size: revert-layer;
 max-inline-size: unset;
 ```
 
@@ -87,12 +93,12 @@ max-inline-size: unset;
 
 ## 例
 
-<h3 id="Setting_maximum_inline_size_in_pixels">インライン方向の最大寸法をピクセル単位で設定</h3>
+### インライン方向の最大寸法をピクセル単位で設定
 
 #### HTML
 
 ```html
-<p class="exampleText">Example text</p>
+<p class="exampleText">テキストの例</p>
 ```
 
 #### CSS
@@ -108,7 +114,7 @@ max-inline-size: unset;
 
 #### 結果
 
-{{EmbedLiveSample("Setting_maximum_inline_size_in_pixels")}}
+{{EmbedLiveSample("インライン方向の最大寸法をピクセル単位で設定")}}
 
 ## 仕様書
 

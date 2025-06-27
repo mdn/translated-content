@@ -45,9 +45,7 @@ user-select: unset;
 - `none`
   - : El texto y sus sub elementos no son seleccionables. Tenga en cuenta que el objeto {{domxref("Selection")}} puede contener estos elementos.
 - `auto`
-
   - : El valor calculado auto se determina de la siguiente manera: En los pseudo elementos `::before` y `::after`, el valor calculado es `none`
-
     - Si el elemento es un elemento editable, el valor calculado es `contain`
     - De lo contrario, si el valor calculador de `user-select` en la matriz de este elemento es `all`, el valor calculado es `all`
     - De lo contrario, si el valor calulado de `user-select` en la matriz de este elemento es `none`, el valor calculado es `none`

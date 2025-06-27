@@ -11,7 +11,7 @@ slug: Mozilla/Firefox/Releases/93
 
 ### HTML
 
-- ARIA の [`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role) ロールを実装しました ([Firefox バグ 1727616](https://bugzil.la/1727616))。
+- ARIA の [`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) ロールを実装しました ([Firefox バグ 1727616](https://bugzil.la/1727616))。
 - [`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local) の UI を実装しました ([Firefox バグ 1283388](https://bugzil.la/1283388))。
 
 ### CSS

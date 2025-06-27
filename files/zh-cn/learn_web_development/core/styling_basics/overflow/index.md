@@ -3,7 +3,7 @@ title: 溢出的内容
 slug: Learn_web_development/Core/Styling_basics/Overflow
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics/Images_media_forms", "Learn_web_development/Core/Styling_basics")}}
 
 本节课，我们来了解一下 CSS 中另外一个重要的概念——**溢出**。溢出是在盒子无法容纳下太多的内容的时候发生的。在这篇教程里面，你将会学习到什么是溢出，以及如何控制它。
 
@@ -220,7 +220,7 @@ CSS 中有所谓[**区块格式化上下文**（Block Formatting Context，BFC�
 
 ## 技能测试！
 
-你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks)。
+你已经到了本文的结尾，但你能记住其中重要的信息吗？你可以在继续前进之前进行一些测试来验证你是否记住了这些内容——见[技能测试：溢出](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow)。
 
 ## 小结
 

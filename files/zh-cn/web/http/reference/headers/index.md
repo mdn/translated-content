@@ -188,7 +188,7 @@ HTTP [范围请求](/zh-CN/docs/Web/HTTP/Guides/Range_requests)允许客户端�
 - {{HTTPHeader("Location")}}
   - : 指示要将页面重定向到的 URL。
 - {{HTTPHeader("Refresh")}}
-  - : 指示浏览器重新加载页面或重定向到另一个页面。采用与带有 [`http-equiv="refresh"`](/zh-CN/docs/Web/HTML/Element/meta#attr-http-equiv) 的 `meta` 元素相同的值。
+  - : 指示浏览器重新加载页面或重定向到另一个页面。采用与带有 [`http-equiv="refresh"`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#attr-http-equiv) 的 `meta` 元素相同的值。
 
 ## 请求上下文
 
@@ -343,7 +343,7 @@ HTTP [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)是一组请求�
 服务器使用 {{HTTPHeader("Accept-CH")}} 主动向客户端请求它们感兴趣的客户端提示标头。客户端可以选择在后续的请求中包含请求的标头。
 
 - {{HTTPHeader("Accept-CH")}}
-  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Element/meta#http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
+  - : 服务器可以使用 `Accept-CH` 标头字段或具有 [`http-equiv`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#http-equiv) 属性的等效 HTML `<meta>` 元素来宣告对客户端提示的支持。
 - {{HTTPHeader("Critical-CH")}}
   - : 服务器使用 `Critical-CH` 和 {{HttpHeader("Accept-CH")}} 来指定接受的客户端提示，也是[重要的客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints#重要客户端提示)。
 

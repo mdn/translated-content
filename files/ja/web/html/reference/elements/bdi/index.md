@@ -1,26 +1,25 @@
 ---
 title: "<bdi>: 書字方向分離要素"
 slug: Web/HTML/Reference/Elements/bdi
-original_slug: Web/HTML/Element/bdi
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-**`<bdi>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーの書字方向アルゴリズムにこのテキストが周囲のテキストから独立しているものと扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入するとき、挿入されるテキストの書字方向が不明な場合に便利です。
+**`<bdi>`** は [HTML](/ja/docs/Web/HTML) の要素で、ブラウザーの書字方向アルゴリズムに、このテキストが周囲のテキストから独立しているものと扱うよう指示します。これは特に、ウェブサイトがテキストを動的に挿入するとき、挿入されるテキストの書字方向が不明な場合に便利です。
 
 {{InteractiveExample("HTML Demo: &lt;bdi&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<h1>World wrestling championships</h1>
+<h1>世界レスリングチャンピオン</h1>
 
 <ul>
-  <li><bdi class="name">Evil Steven</bdi>: 1st place</li>
-  <li><bdi class="name">François fatale</bdi>: 2nd place</li>
-  <li><span class="name">سما</span>: 3rd place</li>
-  <li><bdi class="name">الرجل القوي إيان</bdi>: 4th place</li>
-  <li><span class="name" dir="auto">سما</span>: 5th place</li>
+  <li><bdi class="name">Evil Steven</bdi>: 1 位</li>
+  <li><bdi class="name">François fatale</bdi>: 2 位</li>
+  <li><span class="name">سما</span>: 3 位</li>
+  <li><bdi class="name">الرجل القوي إيان</bdi>: 4 位</li>
+  <li><span class="name" dir="auto">سما</span>: 5 位</li>
 </ul>
 ```
 
@@ -29,8 +28,8 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdi {
+  /* ここにスタイルを追加 */
 }
 
 .name {
@@ -49,13 +48,13 @@ bdi {
 
 例えば、以下のようなテキストを想定してください。
 
-```
+```plain
 EMBEDDED-TEXT - 1st place
 ```
 
 `EMBEDDED-TEXT` が左書きである場合、これは正しく動作します。しかし、`EMBEDDED-TEXT` が右書きである場合は、`- 1` は右書きのテキストとして扱われます（中立または弱い文字で構成されているためです）。結果は次のように混乱します。
 
-```
+```plain
 1 - EMBEDDED-TEXTst place
 ```
 
@@ -92,7 +91,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_only_LTR','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_only_LTR','','120') }}
 
 ### bdi がなく右書きを含むテキストの場合
 
@@ -115,7 +114,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('No_bdi_with_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('No_bdi_with_RTL_text','','120') }}
 
 ### bdi を使用した左書きと右書きのあるテキストの場合
 
@@ -138,7 +137,7 @@ body {
 }
 ```
 
-{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120','','','bdi-example') }}
+{{ EmbedLiveSample('Using_bdi_with_LTR_and_RTL_text','','120') }}
 
 ## 技術的概要
 
@@ -146,15 +145,15 @@ body {
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -162,7 +161,7 @@ body {
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -174,17 +173,19 @@ body {
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
-        を受け入れるすべての要素
+        を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

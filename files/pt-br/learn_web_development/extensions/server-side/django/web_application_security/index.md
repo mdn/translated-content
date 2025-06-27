@@ -43,13 +43,13 @@ A boa notícia para usuários Django é que muitas das ameaças mais comuns são
 
 ## Ameaças/proteções comuns
 
-Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website).
+Em vez de duplicar a documentação do Django aqui, neste artigo demonstraremos apenas alguns dos recursos de segurança no contexto do nosso tutorial Django da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website).
 
 ### Cross site scripting (XSS)
 
 XSS é um termo utilizado para descrever uma classe de ataques que permitem um invasor injetar scripts no lado cliente, através do website, no navegador de outros usuários. Issi geralmente é conseguido armazenando scripts maliciosos no banco de dados onde eles podem ser recuperado e exibidos para outros usuários, ou fazendo com que usuários cliquem em um link que fará com que o JavaScript do invasor seja executado pelo navegador do usuário.
 
-O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Django/Forms).
+O sistema de _templates_ do Django protege você da maioria dos ataques XSS [escapando de caracteres específicos](https://docs.djangoproject.com/en/2.0/ref/templates/language/#automatic-html-escaping) que são "perigosos" em HTML. Podemos demonstrar isso tentando injetar algum JavaScript em nosso website LocalLibrary usando o _form_ Create-author que configuramos em [Django Tutorial Parte 9: Trabalhando com formulários](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms).
 
 1. Inicie o website usando o servidor de desenvolvimento (`python3 manage.py runserver`).
 2. Abra o site em seu navegador local e faça login em sua conta de superusuário.
