@@ -351,11 +351,9 @@ Por ejemplo, esto es un `<dl>`:
 
 ````md
 - term1
-
   - : Mi descripción del term1
 
 - `term2`
-
   - : Mi descripción del term2
 
     Puede tener varios párrafos y también bloques de código:

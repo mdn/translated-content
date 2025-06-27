@@ -185,7 +185,6 @@ ul {
 ## Voir aussi
 
 - Les propriétés liées à la couleur de la bordure
-
   - {{cssxref("border")}},
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-right-color")}},
@@ -193,7 +192,6 @@ ul {
   - {{cssxref("border-left-color")}},
 
 - Les autres propriétés raccourcies liées à la bordure :
-
   - {{cssxref("border-width")}},
   - {{cssxref("border-style")}}.
 

@@ -8,7 +8,7 @@ l10n:
 
 {{SVGRef}}
 
-**`<rect>`** 요소는 위치, 너비, 그리고 높이로 정의된 사각형을 그리는 [기본 SVG 모양](/ko/docs/Web/SVG/Tutorial/Basic_Shapes)입니다. 이 직사각형은 둥근 모서리를 가질 수 있습니다.
+**`<rect>`** 요소는 위치, 너비, 그리고 높이로 정의된 사각형을 그리는 [기본 SVG 모양](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)입니다. 이 직사각형은 둥근 모서리를 가질 수 있습니다.
 
 ## 예제
 

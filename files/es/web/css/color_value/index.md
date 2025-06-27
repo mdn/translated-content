@@ -44,7 +44,6 @@ Hay algunas advertencias a tener en cuenta al usar las palabras clave relativas 
 - Colores desconocidos hacen que la propiedad CSS sea declarada inválida. Las propiedades inválidas son ignoradas y , por tanto, el color no tendrá efecto. Esto es un comportamiento diferente al del HTML
 - Ninguna palabra clave de color tiene transparencia en CSS, son colores planos y sólidos.
 - Algunas referencian el mismo color:
-
   - `darkgray` / `darkgrey`
   - `darkslategray` / `darkslategrey`
   - `dimgray` / `dimgrey`
@@ -999,9 +998,7 @@ El color de la una line (un div relleno de color) se adapta al color de su propi
 Los colores puede ser definidos usando el modelo RGB (rojo-verde-azul) de dos maneras:ways:
 
 - Notación Hexadecimal `#RRGGBB` ay `#RGB`
-
   - : &#x20;
-
     - "`#`", seguido de seis caracteres hexadecimales (0-9, A-F).
     - "`#`", seguido de tres caracteres hexadecimales (0-9, A-F).
 
@@ -1174,7 +1171,6 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
 - \-moz-dragtargetzone
 
   \-moz-EvenTreeRow
-
   - : Background color for even-numbered rows in a tree. Should be used with the `-moz-FieldText` foreground color. In Gecko versions prior to 1.9, use `-moz-Field`. See also `-moz-OddTreeRow`.
 
 - \-moz-Field
@@ -1212,7 +1208,6 @@ No todos los colores de sistema son soportados por todos los sistemas. {{depreca
   \-moz-mac-menutextselect
 
   \-moz-MenuHover
-
   - : Background color for hovered menu items. Often similar to `Highlight`. Should be used with the `-moz-MenuHoverText` or `-moz-MenuBarHoverText` foreground color.
 
 - \-moz-MenuHoverText

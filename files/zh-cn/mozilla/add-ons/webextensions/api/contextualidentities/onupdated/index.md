@@ -31,9 +31,7 @@ browser.contextualIdentities.onUpdated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数传递一个参数：
-
     - `changeInfo`
       - : `object`。包含单个属性 `contextualIdentity` 的对象（一个 {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} 对象表示属性被更新的身份）。
 

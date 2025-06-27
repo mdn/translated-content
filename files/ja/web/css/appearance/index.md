@@ -70,20 +70,16 @@ appearance: checkbox;
 いくつかの例を指定しましたが、リストは完全ではありません。
 
 - `none`
-
   - : select要素に掲載されている、リストが展開されたことを示す矢印など、ウィジェットの特定の機能を非表示にします。
 
 - `auto`
-
   - : 特別なスタイル設定のない要素に対しては `none` として動作します。
 
 - `<compat-special>`
-
   - : `menulist-button` または `textfield` のどちらかです。
     これらの値はどちらも、特別なスタイル設定のない要素では `auto` と等価です。
 
 - `<compat-auto>`
-
   - : 利用可能な値は `button`, `checkbox`, `listbox`, `menulist`, `meter`, `progress-bar`, `push-button`, `radio`, `searchfield`, `slider-horizontal`, `square-button`, `textarea` です。
     古いブラウザーとの互換性を保つための `auto` に相当するキーワードです。
 

@@ -54,7 +54,6 @@ function FindProxyForURL(url, host)
 - `SOCKS4 host:port`
 
   `SOCKS5 host:port`
-
   - : SOCKS 代理（同时指定 SOCKS 版本）
 
 如果有多个使用分号分隔的代理配置，将使用最左边的配置，除非 Firefox 无法与其中指定的代理服务器建立连接。在这种情况下，将使用下一个配置，等等。
@@ -96,7 +95,6 @@ application/x-ns-proxy-autoconfig
 这些函数可以在 PAC 文件中使用：
 
 - 基于主机名的判断函数
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -104,28 +102,23 @@ application/x-ns-proxy-autoconfig
   - [`isInNet()`](#isinnet)
 
 - 和代理相关的功能函数
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - 基于 URL 或主机名的判断函数
-
   - [`shExpMatch()`](#shexpmatchstr_shexp)
 
 - 基于时间的判断函数
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - 日志记录功能函数
-
   - [`alert()`](/zh-CN/docs/Web/API/Window/alert)
 
 - 同时，还定义了一个关联数组（associative array），因为 JavaScript 目前无法自行定义它们：
-
   - `ProxyConfig.bindings` {{Deprecated_Inline}}
 
 > [!NOTE]
@@ -392,7 +385,6 @@ weekdayRange(wd1, wd2, [gmt])
 #### 参数
 
 - wd1 和 wd2
-
   - : One of the ordered weekday strings:
 
   ```plain
@@ -400,7 +392,6 @@ weekdayRange(wd1, wd2, [gmt])
   ```
 
 - gmt
-
   - : 可以指定为字符串 "`GMT`"，或留白不指定。
 
 Only the first parameter is mandatory. Either the second, the third, or both may be left out.
@@ -409,7 +400,8 @@ If only one parameter is present, the function returns a value of true on the we
 
 If both **wd1** and **wd1** are defined, the condition is true if the current weekday is in between those two _ordered_ weekdays. Bounds are inclusive, _but the bounds are ordered_. 如果指定了 "`GMT`" 参数，则使用 GMT 时区，否则使用浏览器获取到的平台本地时区。
 
-> **警告：** **The order of the days matters**; Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to true. Now `weekdayRange("WED", "SUN")` will only evaluate true if the current day is Wednesday or Sunday.
+> [!WARNING]
+> **The order of the days matters**; Before Firefox 49, `weekdayRange("SUN", "SAT")` will always evaluate to true. Now `weekdayRange("WED", "SUN")` will only evaluate true if the current day is Wednesday or Sunday.
 
 #### 例子
 
@@ -461,7 +453,8 @@ dateRange(<day1>, <month1>, <year1>, <day2>, <month2>, <year2>, [gmt])
 
 If only a single value is specified (from each category: day, month, year), the function returns a true value only on days that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-> **警告：** **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
+> [!WARNING]
+> **The order of the days, months, and years matter**; Before Firefox 49, `dateRange("JAN", "DEC")` will always evaluate to `true`. Now `dateRange("DEC", "JAN")` will only evaluate true if the current month is December or January.
 
 #### 例子
 
@@ -515,7 +508,8 @@ timeRange(<hour1>, <min1>, <sec1>, <hour2>, <min2>, <sec2>, [gmt])
 
 If only a single value is specified (from each category: hour, minute, second), the function returns a true value only at times that match that specification. If both values are specified, the result is true between those times, including bounds, _but the bounds are ordered_.
 
-> **警告：** **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
+> [!WARNING]
+> **The order of the hour, minute, second matter**; Before Firefox 49, `timeRange(0, 23)` will always evaluate to true. Now `timeRange(23, 0)` will only evaluate true if the current hour is 23:00 or midnight.
 
 #### 例子
 
@@ -694,7 +688,8 @@ function FindProxyForURL(url, host) {
 }
 ```
 
-> **备注：** `shExpMatch()` 也可以做到，例如：
+> [!NOTE]
+> `shExpMatch()` 也可以做到，例如：
 >
 > ```js
 > // ...

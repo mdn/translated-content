@@ -56,7 +56,7 @@ original_slug: Web/HTML/Element/base
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 > [!WARNING]
 > 다음 특성 중 하나라도 지정한 경우, 상대 URL을 특성에 사용한 모든 요소보다 `<base>`가 앞에 위치해야 합니다.
@@ -64,11 +64,9 @@ original_slug: Web/HTML/Element/base
 - `href`
   - : 문서 내 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있습니다.
 - `target`
-
   - : `target` 속성을 명시하지 않은 {{htmlelement("a")}}, {{htmlelement("area")}}, 또는 {{htmlelement("form")}} 요소가 탐색을 유발했을 때, 그 결과를 보여줄 기본 {{glossary("browsing context", "브라우징 맥락")}}. **키워드**나 **저작자 정의 이름**으로 지정합니다.
 
   다음 키워드는 특별한 의미를 갖습니다.
-
   - `_self` (기본값): 결과를 현재 브라우징 맥락에 보여줍니다.
   - `_blank`: 결과를 새로 생성한, 이름 없는 브라우징 맥락에 보여줍니다.
   - `_parent`: 현재 페이지가 프레임 안에 존재하는 경우, 결과를 현재 브라우징 맥락의 부모에 보여줍니다. 부모가 없으면 `_self`와 동일합니다.

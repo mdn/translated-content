@@ -15,7 +15,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_o
 2. 如果从未创建过项目 (project)，会提示你是否选择接收邮箱升级，并需要同意团队服务条款才能继续。
 3. 键入项目名，并编辑项目 ID(请记下你的项目 ID)
    本教程的示例值：
-
    - Project Name: _GAE Sample Site_
    - Project ID: _gaesamplesite_
 
@@ -27,7 +26,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_o
 
 1. 我们需要一个样例应用来发布。如果你还没有，请下载 [sample app](http://gaesamplesite.appspot.com/downloads.html) 并解压。
 2. 看一下这个样例应用的结构—`website`文件夹包括你的网站内`容，app.yaml`文件是你的应用配置文件
-
    - 你的网站内容必须放在`website`文件夹下，并且入口文件必须取名为`index.html`，其他部分可以自行定义。
    - `app.yaml` 文件是一个配置文件，它高速应用引擎怎么映射 UR 到你的静态文件，你不需要编辑它。
 

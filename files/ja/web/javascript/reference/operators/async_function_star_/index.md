@@ -2,7 +2,7 @@
 title: async function* 式
 slug: Web/JavaScript/Reference/Operators/async_function*
 l10n:
-  sourceCommit: a71b8929628a2187794754c202ad399fe357141b
+  sourceCommit: 373fcd42528fc9eafa3703dc99927cc56c75fa8d
 ---
 
 {{jsSidebar("Operators")}}
@@ -11,26 +11,22 @@ l10n:
 
 また、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*) を使って非同期ジェネレーター関数を定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("JavaScript デモ: async function* 式", "taller")}}
 
 ```js interactive-example
-async function* foo() {
+async function joinAll(generator) {
+  let str = "";
+  for await (const val of generator()) {
+    str += val;
+  }
+  return str;
+}
+joinAll(async function* () {
   yield await Promise.resolve("a");
   yield await Promise.resolve("b");
   yield await Promise.resolve("c");
-}
-
-let str = "";
-
-async function generate() {
-  for await (const val of foo()) {
-    str = str + val;
-  }
-  console.log(str);
-}
-
-generate();
-// Expected output: "abc"
+}).then((str) => console.log(str));
+// 予想される出力: "abc"
 ```
 
 ## 構文
@@ -74,7 +70,7 @@ async function* name(param0, param1, /* …, */ paramN) {
 
 ## 例
 
-### async function\* の使用
+### async function\* 式の使用
 
 次の例では、無名の非同期ジェネレーター関数を定義し、それを `x` に代入しています。この関数は引数の2乗を返します。
 
@@ -97,9 +93,10 @@ x(6)
 
 ## 関連情報
 
+- [関数](/ja/docs/Web/JavaScript/Guide/Functions)ガイド
+- [関数](/ja/docs/Web/JavaScript/Reference/Functions)
 - {{jsxref("Statements/async_function*", "async function*")}}
 - {{jsxref("AsyncGeneratorFunction")}}
 - [反復処理プロトコル](/ja/docs/Web/JavaScript/Reference/Iteration_protocols)
 - {{jsxref("Operators/yield", "yield")}}
 - {{jsxref("Operators/yield*", "yield*")}}
-- {{jsxref("Functions", "Functions", "", 1)}}

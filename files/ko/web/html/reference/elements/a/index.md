@@ -28,17 +28,14 @@ li {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `download`
-
   - : 링크로 이동하는 대신 사용자에게 URL을 저장할지 물어봅니다. 값을 지정할 수도 있고, 지정하지 않을 수도 있습니다.
-
     - 값이 없으면 파일 이름과 확장자는 브라우저가 다양한 인자로부터 생성해 제안합니다.
-
       - {{HTTPHeader("Content-Disposition")}} HTTP 헤더
       - [URL 경로](/ko/docs/Web/API/URL/pathname)의 마지막 조각
-      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/URI/Schemes/data)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL_static)의 {{domxref("Blob.type")}}에서 알아냄)
+      - {{glossary("MIME type", "미디어 유형")}} ({{HTTPHeader("Content-Type")}} 헤더, [`data:` URL](/ko/docs/Web/URI/Reference/Schemes/data)의 시작 부분, [`blob:` URL](/ko/docs/Web/API/URL/createObjectURL_static)의 {{domxref("Blob.type")}}에서 알아냄)
 
     - 값을 지정하면 저장할 때의 파일 이름으로서 제안합니다. `/`와 `\` 문자는`_`로 변환합니다. 파일시스템에서 다른 문자도 제한할 수 있으므로, 필요한 경우 브라우저가 추가로 이름을 조정할 수 있습니다.
 
@@ -47,9 +44,7 @@ li {
     > - `Content-Disposition`의 `filename`이 `download`와 다를 땐 헤더가 우선권을 가집니다. (`Content-Disposition: inline`일 때, Firefox는 헤더를 우선하고 Chrome은 `download`를 우선합니다.)
 
 - `href`
-
   - : 하이퍼링크가 가리키는 URL. 링크는 HTTP 기반 URL일 필요는 없고, 브라우저가 지원하는 모든 URL 스킴을 사용할 수 있습니다.
-
     - 페이지 구획을 가리키는 프래그먼트 URL
     - 미디어 파일 일부를 가리키는 미디어 프래그먼트
     - `tel:` URL을 사용하는 전화번호
@@ -57,17 +52,15 @@ li {
     - 웹 브라우저는 다른 URL 스킴을 지원하지 않지만, 웹사이트는 {{domxref("Navigator.registerProtocolHandler()")}}를 통해 지원할 수 있습니다.
 
 - `hreflang`
-  - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Global_attributes/lang)과 동일합니다.
+  - : 링크 URL의 인간 언어에 대한 힌트. 특별한 내장 기능은 없습니다. 가능한 값은 [전역 `lang` 특성](/ko/docs/Web/HTML/Reference/Global_attributes/lang)과 동일합니다.
 - `ping`
   - : 하나의 스페이스로 구분하는 URL 목록. 링크를 클릭해 따라갈 경우, 브라우저가 URL 각각에 {{HTTPMethod("POST")}} 요청을 전송합니다. 대개 추적 용도로 사용합니다.
 - `referrerpolicy` {{experimental_inline}}
   - : URL을 가져올 때 사용할 리퍼러. {{httpheader("Referrer-Policy")}} 문서에서 가능한 값과 효과를 확인하세요.
 - `rel`
-  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Attributes/rel) 목록.
+  - : 하나의 스페이스로 구분하는, 연결한 URL과의 관계를 나타내는 [링크 유형](/ko/docs/Web/HTML/Reference/Attributes/rel) 목록.
 - `target`
-
   - : 링크한 URL을 표시할 위치. 가능한 값은 브라우징 맥락으로, 즉 탭, 창, `<iframe>`의 이름이나 특정 키워드입니다. 다음 키워드는 특별한 뜻을 가지고 있습니다.
-
     - `_self`: URL을 현재 브라우징 맥락에 표시합니다. 기본값.
     - `_blank`: URL을 새로운 브라우징 맥락에 표시합니다. 보통 새 탭이지만, 사용자가 브라우저 설정을 통해 새 창으로 바꿀 수 있습니다.
     - `_parent`: URL을 현재 브라우징 맥락의 부모에 표시합니다. 부모가 존재하지 않으면 `_self`와 동일하게 행동합니다.
@@ -375,7 +368,7 @@ document
 <a href="2017-annual-report.ppt">2017 연간 보고서 (PowerPoint)</a>
 ```
 
-아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Element/img#alt)를 꼭 지정하세요.
+아이콘을 사용해 링크의 행동을 강조할 땐 [대체 텍스트](/ko/docs/Web/HTML/Reference/Elements/img#alt)를 꼭 지정하세요.
 
 ```html
 <a target="_blank" href="https://ko.wikipedia.org">
