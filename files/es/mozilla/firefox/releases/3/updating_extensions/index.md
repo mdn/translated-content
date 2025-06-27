@@ -1,9 +1,8 @@
 ---
 title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Este artículo ofrece información que será de utilidad para desarrolladores que deseen actualizar sus extensiones, para que éstas funcionen correctamente con Firefox 3.
 

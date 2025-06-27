@@ -1,9 +1,8 @@
 ---
 title: Firefox 25 for developers
 slug: Mozilla/Firefox/Releases/25
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
 

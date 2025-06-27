@@ -1,9 +1,8 @@
 ---
 title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Web 开发者需要关注的变化
 

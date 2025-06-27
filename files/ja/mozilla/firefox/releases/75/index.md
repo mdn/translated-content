@@ -1,9 +1,8 @@
 ---
 title: Firefox 75 for developers
 slug: Mozilla/Firefox/Releases/75
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました。このページでは、開発者に影響する Firefox 75 の変更点をまとめています。
 

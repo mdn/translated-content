@@ -3,9 +3,8 @@ title: Firefox 120 for developers
 slug: Mozilla/Firefox/Releases/120
 l10n:
   sourceCommit: 692015f089ff03699f0fe58814502b157c3e92ea
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 120 の変更点をまとめています。Firefox 120 は、米国時間 [2023 年 11 月 21 日](https://whattrainisitnow.com/release/?version=120) にリリースされました。
 

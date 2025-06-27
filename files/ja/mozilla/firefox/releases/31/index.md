@@ -3,9 +3,8 @@ title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
 l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## ウェブ開発者向けの変更点一覧
 

@@ -3,9 +3,8 @@ title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
 

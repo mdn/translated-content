@@ -1,9 +1,8 @@
 ---
 title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Changements pour les développeurs Web
 

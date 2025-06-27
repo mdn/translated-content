@@ -1,9 +1,8 @@
 ---
 title: Firefox 2 pour les développeurs
 slug: Mozilla/Firefox/Releases/2
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Nouvelles fonctionnalités pour les développeurs dans Firefox 2
 

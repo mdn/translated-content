@@ -3,9 +3,8 @@ title: Firefox 115 for developers
 slug: Mozilla/Firefox/Releases/115
 l10n:
   sourceCommit: da3834afbae2d4ceb209593458d5df3c1e2d2d20
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 115 の変更点をまとめています。Firefox 115 は、米国時間 2023 年 7 月 4 日にリリースされました。
 

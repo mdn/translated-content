@@ -1,9 +1,8 @@
 ---
 title: Firefox 19 for developers
 slug: Mozilla/Firefox/Releases/19
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 19 已于 2013 年 2 月 19 日正式发布。
 

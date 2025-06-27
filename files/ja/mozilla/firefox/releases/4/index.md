@@ -1,9 +1,8 @@
 ---
 title: Firefox 4 for developers
 slug: Mozilla/Firefox/Releases/4
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 4 （6 月後半にベータ版リリースが予定されています）では、パフォーマンスが向上し、 HTML 5 やその他の革新的なウェブ技術のさらなるサポートが追加され、さらには、セキュリティも改善しています。 この記事では、この次期リリースについてのとっかかりの情報と、ウェブ開発者、アドオン開発者、そして、Gecko プラットフォーム開発者向けに利用可能になる機能の一覧を提供します。
 

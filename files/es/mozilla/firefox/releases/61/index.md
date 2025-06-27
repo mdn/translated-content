@@ -1,9 +1,8 @@
 ---
 title: Firefox 61 for developers
 slug: Mozilla/Firefox/Releases/61
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Este artículo muestra información sobre los cambios en Firefox 61 que afectarán a los desarrolladores. Firefox 61 es la versión beta actual de Firefox, y se lanzará el 26 de Junio de 2018.
 

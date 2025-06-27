@@ -3,9 +3,8 @@ title: Firefox 119 的开发者说明
 slug: Mozilla/Firefox/Releases/119
 l10n:
   sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 119 中影响开发者的变更信息。Firefox 119 于 2023 年 10 月 24 日发布。
 

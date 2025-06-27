@@ -3,9 +3,8 @@ title: Firefox 126 for developers
 slug: Mozilla/Firefox/Releases/126
 l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 126 の変更点をまとめています。Firefox 126 は、米国時間 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126) にリリースされました。
 

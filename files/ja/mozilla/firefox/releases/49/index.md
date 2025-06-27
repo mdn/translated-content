@@ -3,9 +3,8 @@ title: Firefox 49 for developers
 slug: Mozilla/Firefox/Releases/49
 l10n:
   sourceCommit: dd08ec8cf78926a7854d8f5f7793bf7ae199484e
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 49 は、米国時間 2016 年 9 月 20 日にリリースされました。このページでは、開発者に影響する Firefox 49 の変更点をまとめています。
 

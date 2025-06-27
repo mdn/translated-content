@@ -1,9 +1,8 @@
 ---
 title: Utilisation du cache de Firefox 1.5
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ### Introduction
 

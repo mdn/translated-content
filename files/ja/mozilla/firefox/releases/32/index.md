@@ -3,9 +3,8 @@ title: Firefox 32 for developers
 slug: Mozilla/Firefox/Releases/32
 l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## ウェブ開発者向けの変更点一覧
 

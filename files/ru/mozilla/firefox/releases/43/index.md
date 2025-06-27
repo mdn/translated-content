@@ -1,9 +1,8 @@
 ---
 title: Firefox 43 для разработчиков
 slug: Mozilla/Firefox/Releases/43
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Установить Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 43 был выпущен 15 декабря 2015 года. В этой статье перечислены ключевые изменения, которые полезны не только для веб-разработчиков, но и для разработчиков Firefox и Gecko, а также для разработчиков приложений.
 

@@ -3,9 +3,8 @@ title: Firefox 137 for developers
 slug: Mozilla/Firefox/Releases/137
 l10n:
   sourceCommit: 63cac9936f06f3eb8d4ef52fd8ef1e507f1123fa
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 137 の変更点をまとめています。
 Firefox 137 は、米国時間 [2025 年 4 月 1 日](https://whattrainisitnow.com/release/?version=137) にリリースされました。

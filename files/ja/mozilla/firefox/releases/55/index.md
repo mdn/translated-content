@@ -1,9 +1,8 @@
 ---
 title: Firefox 55 for developers
 slug: Mozilla/Firefox/Releases/55
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 55 の変更点をまとめています。
 

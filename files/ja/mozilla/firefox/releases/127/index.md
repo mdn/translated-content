@@ -3,9 +3,8 @@ title: Firefox 127 for developers
 slug: Mozilla/Firefox/Releases/127
 l10n:
   sourceCommit: 81b27da7107783b4a4d9ff245a99d93f6d3efc3a
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 127 の変更点をまとめています。Firefox 127 は、米国時間 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127) にリリースされました。
 

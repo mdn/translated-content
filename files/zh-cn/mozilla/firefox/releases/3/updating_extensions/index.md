@@ -1,9 +1,8 @@
 ---
 title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 这篇文章为那些想更新其扩展以在 Firefox 3 中正常运行的开发者提供了一些有用的信息。
 

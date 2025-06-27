@@ -1,9 +1,8 @@
 ---
 title: Firefox 103 for developers
 slug: Mozilla/Firefox/Releases/103
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 103 の変更点をまとめています。Firefox 103 は、2022 年 7 月 26 日にリリースされました。
 

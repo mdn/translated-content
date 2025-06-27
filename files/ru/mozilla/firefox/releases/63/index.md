@@ -1,9 +1,8 @@
 ---
 title: Firefox 63 для разработчиков
 slug: Mozilla/Firefox/Releases/63
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 63 был выпущен 23 октября 2018 года.
 

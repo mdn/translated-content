@@ -3,9 +3,8 @@ title: Firefox 105 for developers
 slug: Mozilla/Firefox/Releases/105
 l10n:
   sourceCommit: f5437ee235fabc5188f6ac45b27e54ce1e22615c
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 105 の変更点をまとめています。Firefox 105 は、米国時間 2022 年 9 月 20 日にリリースされました。
 

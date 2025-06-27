@@ -3,9 +3,8 @@ title: Firefox 65 的开发者说明
 slug: Mozilla/Firefox/Releases/65
 l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 65 中影响开发者的变更信息。Firefox 65 于 2019 年 1 月 29 日发布。
 

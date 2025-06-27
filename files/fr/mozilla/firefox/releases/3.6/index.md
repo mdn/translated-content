@@ -1,9 +1,8 @@
 ---
 title: Firefox 3.6 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.6
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 1. Notes de versions pour développeurs
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)

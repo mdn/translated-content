@@ -1,9 +1,8 @@
 ---
 title: Firefox へのフィードリーダーの追加
 slug: Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 2 より、Firefox はフィードを読む際に使う RSS または Atom フィードリーダを選択できるようになっています。この記事ではデフォルトではサポートされていないリーダを追加サポートさせる方法について説明します。
 

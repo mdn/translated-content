@@ -1,9 +1,8 @@
 ---
 title: Firefox 23 pour les développeurs
 slug: Mozilla/Firefox/Releases/23
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ##### Changements pour les développeurs Web
 

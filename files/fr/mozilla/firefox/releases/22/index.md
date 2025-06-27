@@ -1,9 +1,8 @@
 ---
 title: Firefox 22 pour les développeurs
 slug: Mozilla/Firefox/Releases/22
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui ont besoin d'être documentés](http://beta.elchi3.de/doctracker/#list=fx&version=22.0) et lancez-vous !
 

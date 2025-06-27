@@ -1,9 +1,8 @@
 ---
 title: Firefox 5 pour les développeurs
 slug: Mozilla/Firefox/Releases/5
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
 

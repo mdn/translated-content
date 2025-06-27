@@ -1,9 +1,8 @@
 ---
 title: Firefox 6 for developers
 slug: Mozilla/Firefox/Releases/6
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 6 は Gecko 6.0 ベースのブラウザーで、2011 年 8 月 16 日にリリースされました。このページは Firefox 6 のリリースにあたり、開発者に関係する変更についてまとめたものです。
 

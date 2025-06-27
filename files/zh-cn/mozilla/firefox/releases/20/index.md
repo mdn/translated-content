@@ -1,9 +1,8 @@
 ---
 title: Firefox 20 for developers
 slug: Mozilla/Firefox/Releases/20
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 20 正式版发布于 2013 年 4 月 2 日。
 

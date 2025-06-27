@@ -1,9 +1,8 @@
 ---
 title: Actualizar add-ons para Firefox 9
 slug: Mozilla/Firefox/Releases/9/Updating_add-ons
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 9 no tiene grandes cambios que vayan a resultar en problemas de compatibilidad para los desarrolladores de complementos. Sin embargo, hay algunos elementos que pueden ser problematicos, así que vamos a echarles un vistazo.
 

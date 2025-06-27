@@ -3,9 +3,8 @@ title: Firefox 78 的开发者说明
 slug: Mozilla/Firefox/Releases/78
 l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 78 中影响开发者的变更信息。Firefox 78 于 2020 年 6 月 30 日发布。
 

@@ -3,9 +3,8 @@ title: Firefox 106 for developers
 slug: Mozilla/Firefox/Releases/106
 l10n:
   sourceCommit: b326fb5b00ea2f881ae6786338671d7fbd2745b6
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 106 の変更点をまとめています。Firefox 106 は、米国時間 2022 年 10 月 18 日にリリースされました。
 

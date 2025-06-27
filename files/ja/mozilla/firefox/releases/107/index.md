@@ -3,9 +3,8 @@ title: Firefox 107 for developers
 slug: Mozilla/Firefox/Releases/107
 l10n:
   sourceCommit: 27ae7e9c347490290a7327a48842575d333b2f31
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 107 の変更点をまとめています。Firefox 107 は、2022 年 11 月 15 日にリリースされました。
 

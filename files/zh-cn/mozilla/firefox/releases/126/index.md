@@ -3,9 +3,8 @@ title: Firefox 126 的开发者说明
 slug: Mozilla/Firefox/Releases/126
 l10n:
   sourceCommit: e6fcda9d35359bbfec32ddb42086468701f57ee5
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 126 中影响开发者的变更信息。Firefox 126 于 [2024 年 5 月 14 日](https://whattrainisitnow.com/release/?version=126)发布。
 

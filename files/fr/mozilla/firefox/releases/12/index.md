@@ -1,9 +1,8 @@
 ---
 title: Firefox 12 pour les développeurs
 slug: Mozilla/Firefox/Releases/12
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
 

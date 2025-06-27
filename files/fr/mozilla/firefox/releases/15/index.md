@@ -1,9 +1,8 @@
 ---
 title: Firefox 15 pour les développeurs
 slug: Mozilla/Firefox/Releases/15
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 15, basé sur Gecko 15.0, est sorti le 28 août 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
 

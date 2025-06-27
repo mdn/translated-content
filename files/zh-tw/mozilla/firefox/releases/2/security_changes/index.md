@@ -1,9 +1,8 @@
 ---
 title: Firefox 2 的安全功能
 slug: Mozilla/Firefox/Releases/2/Security_changes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文探討 Firefox 2 與安全性相關的變動。
 

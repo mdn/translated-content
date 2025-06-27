@@ -1,9 +1,8 @@
 ---
 title: Firefox 39 for developers
 slug: Mozilla/Firefox/Releases/39
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 

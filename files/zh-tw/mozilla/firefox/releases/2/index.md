@@ -1,9 +1,8 @@
 ---
 title: Firefox 2 技術文件
 slug: Mozilla/Firefox/Releases/2
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Firefox 2 的開發相關特色
 

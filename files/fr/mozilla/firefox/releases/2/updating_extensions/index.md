@@ -1,9 +1,8 @@
 ---
 title: Mise à jour des extensions pour Firefox 2
 slug: Mozilla/Firefox/Releases/2/Updating_extensions
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
 

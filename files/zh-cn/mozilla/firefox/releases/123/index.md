@@ -3,9 +3,8 @@ title: Firefox 123 的开发者说明
 slug: Mozilla/Firefox/Releases/123
 l10n:
   sourceCommit: a9bd012040da7024cc05c00336aa7ebb42c5c227
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 123 中影响开发者的变更信息。Firefox 123 于 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=122)发布。
 

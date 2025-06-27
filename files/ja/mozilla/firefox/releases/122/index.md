@@ -3,9 +3,8 @@ title: Firefox 122 for developers
 slug: Mozilla/Firefox/Releases/122
 l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 122 の変更点をまとめています。Firefox 122 は、米国時間 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122) にリリースされました。
 

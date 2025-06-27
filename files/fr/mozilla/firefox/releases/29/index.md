@@ -1,9 +1,8 @@
 ---
 title: Firefox 29 pour les développeurs
 slug: Mozilla/Firefox/Releases/29
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour es développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 

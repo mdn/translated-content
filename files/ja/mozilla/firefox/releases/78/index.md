@@ -3,9 +3,8 @@ title: Firefox 78 for developers
 slug: Mozilla/Firefox/Releases/78
 l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 78 の変更点をまとめています。Firefox 78 は、 2020 年 6 月 30 日にリリースされました。
 

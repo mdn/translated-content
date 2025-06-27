@@ -3,9 +3,8 @@ title: Firefox 3 で修正された重要なバグ
 slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 この記事は、ドキュメントで必ずしも明白に説明されていない、Firefox 3 で修正された重要なバグの修正の一覧を提供します。
 

@@ -1,9 +1,8 @@
 ---
 title: Firefox 88 for developers
 slug: Mozilla/Firefox/Releases/88
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 88 の変更点をまとめています。Firefox 88 は、米国時間 2021 年 4 月 19 日にリリースされました。
 
