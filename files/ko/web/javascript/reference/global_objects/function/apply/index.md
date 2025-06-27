@@ -144,7 +144,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {
