@@ -58,7 +58,7 @@ label {
 
 이 불리언 속성은 사용자가 버튼과 상호작용하는 것을 방지합니다. 해당 속성이 지정되지 않은 경우에도 {{htmlelement('fieldset')}} 과 같은 상위 요소에 의해 버튼이 여전히 비활성화된 상태일 수도 있습니다. 만약 `disabled` 속성이 지정된 상위 요소가 없다면 버튼이 활성화됩니다.
 
-Firefox는 다른 브라우저들과 달리 페이지를 불러올 때마다 {{htmlelement('button')}} 의 동적 비활성화 상태를 유지합니다. 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Attributes/autocomplete) 속성을 사용합니다.
+Firefox는 다른 브라우저들과 달리 페이지를 불러올 때마다 {{htmlelement('button')}} 의 동적 비활성화 상태를 유지합니다. 이 기능을 제어하기 위해서는 [`autocomplete`](/ko/docs/Web/HTML/Reference/Attributes/autocomplete) 속성을 사용합니다.
 
 ### 속성 상호작용
 

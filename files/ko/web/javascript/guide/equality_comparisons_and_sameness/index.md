@@ -74,7 +74,7 @@ switch (NaN) {
    - BigInt: 두 피연산자가 동일한 값인 경우에만 `true`를 반환합니다.
    - Symbol: 두 피연산자가 동일한 symbol을 참조하는 경우에만 `true`를 반환합니다.
 2. 피연산자 중 하나가 `null`이거나 `undefined`인 경우 `true`를 반환하려면 다른 피연산자도 `null`이거나 `undefined` 여야 합니다. 그렇지 않으면 `false`를 반환합니다.
-3. 피연산자 중 하나가 객체이고 다른 하나가 원시 값인 경우 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Data_structures#primitive_coercion)합니다.
+3. 피연산자 중 하나가 객체이고 다른 하나가 원시 값인 경우 [객체를 원시 값으로 변환](/ko/docs/Web/JavaScript/Guide/Data_structures#primitive_coercion)합니다.
 4. 이 단계에서 두 피연산자는 원시 값(문자열, 숫자, 불리언, Symbol, BigInt 중 하나)로 변환됩니다. 나머지 변환은 사항별로 수행됩니다.
    - 동일한 형식인 경우, 1단계를 사용하여 비교합니다.
    - 피연산자 중 하나가 Symbol이고 다른 피연산자는 아닌 경우, `false`를 반환합니다.

@@ -11,7 +11,7 @@ l10n:
 
 ## 같이 보기
 
-- [MDN의 XPath 문서](/ko/docs/Web/XPath)
+- [MDN의 XPath 문서](/ko/docs/Web/XML/XPath)
 - [XPath 명세서](https://www.w3.org/TR/xpath-30/)
 - [공식 웹사이트](https://www.w3.org/TR/?tag=xml)
 - 위키백과의 [XPath](https://en.wikipedia.org/wiki/XPath)

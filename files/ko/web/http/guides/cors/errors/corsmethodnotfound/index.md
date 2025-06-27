@@ -29,11 +29,11 @@ Access-Control-Allow-Methods: GET,HEAD,POST
 서비스에 접근할 때 코드가 허용된 HTTP 메서드만 사용하는지 확인하세요.
 
 > [!NOTE]
-> 서버의 `Access-Control-Allow-methods` 헤더에 인식되지 않거나 정의되지 않은 메서드 이름이 포함된 경우, 다른 오류가 발생합니다. [`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/ko/docs/Web/HTTP/CORS/Errors/CORSInvalidAllowMethod).
+> 서버의 `Access-Control-Allow-methods` 헤더에 인식되지 않거나 정의되지 않은 메서드 이름이 포함된 경우, 다른 오류가 발생합니다. [`Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Methods'`](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowMethod).
 
 ## See also
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
-- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Methods)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
+- [HTTP 요청 메서드](/ko/docs/Web/HTTP/Reference/Methods)

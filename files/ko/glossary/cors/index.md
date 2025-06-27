@@ -28,7 +28,7 @@ l10n:
 - {{HTTPHeader("Access-Control-Request-Headers")}}
   - : 실제 요청이 이루어질 때 사용될 HTTP 헤더를 서버에 알리기 위해 프리플라이트 요청을 발행할 때 사용됩니다.
 - {{HTTPHeader("Access-Control-Request-Method")}}
-  - : 실제 요청이 이루어질 때 어떤 [HTTP method](/ko/docs/Web/HTTP/Methods)가 사용될 것인지 서버에 알리기 위해 프리플라이트 요청을 발행할 때 사용됩니다.
+  - : 실제 요청이 이루어질 때 어떤 [HTTP method](/ko/docs/Web/HTTP/Reference/Methods)가 사용될 것인지 서버에 알리기 위해 프리플라이트 요청을 발행할 때 사용됩니다.
 - {{HTTPHeader("Origin")}}
   - : 가져오기(fetch) 요청이 시작된 위치를 나타냅니다.
 - {{HTTPHeader("Timing-Allow-Origin")}}
@@ -36,6 +36,6 @@ l10n:
 
 ## 같이 보기
 
-- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS) on MDN
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS) on MDN
 - 위키피디아의 [교차 출처 리소스 공유](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 - [Fetch 명세](https://fetch.spec.whatwg.org)
