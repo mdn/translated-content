@@ -11,21 +11,21 @@ l10n:
 
 <table>
   <tbody>
-   <tr>
-     <th scope="row">先備知識：</th>
-     <td>了解 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS 基礎</a>。</td>
-   </tr>
-   <tr>
-     <th scope="row">學習目標：</th>
-     <td>
-      <ul>
-        <li>什麼是 JavaScript，以及它如何融入網站。</li>
-        <li>你可以用 JavaScript 做什麼。</li>
-        <li>將 JavaScript 加入網頁。</li>
-        <li>在 JavaScript 中撰寫註解。</li>
-      </ul>
-     </td>
-   </tr>
+    <tr>
+      <th scope="row">先備知識：</th>
+      <td>了解 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS 基礎</a>。</td>
+    </tr>
+    <tr>
+      <th scope="row">學習目標：</th>
+      <td>
+        <ul>
+          <li>什麼是 JavaScript，以及它如何融入網站。</li>
+          <li>你可以用 JavaScript 做什麼。</li>
+          <li>將 JavaScript 加入網頁。</li>
+          <li>在 JavaScript 中撰寫註解。</li>
+        </ul>
+      </td>
+    </tr>
   </tbody>
 </table>
 
@@ -327,18 +327,18 @@ for (const button of buttons) {
 
 - 單行註解寫在兩個正斜線（`//`）之後，例如：
 
-   ```js
-   // 我是一行註解
-   ```
+  ```js
+  // 我是一行註解
+  ```
 
 - 多行註解寫在 `/*` 和 `*/` 字串之間，例如：
 
-   ```js
-   /*
+  ```js
+  /*
      我也是
      一行註解
-   */
-   ```
+  */
+  ```
 
 所以，舉例來說，我們可以像這樣用註解來註釋我們最後一個示範的 JavaScript：
 
