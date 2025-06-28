@@ -318,7 +318,7 @@ for (const button of buttons) {
   - 對於外部腳本，你應該在 {{htmlelement("script")}} 元素上加入 `defer`（或者如果你不需要 HTML 準備好，則加入 `async`）屬性。
   - 對於內部腳本，你應該將程式碼包裹在一個 [`DOMContentLoaded` 事件監聽器](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event)中。
 
-   這超出了本教學目前的範圍，但除非你需要支援非常舊的瀏覽器，否則你不需要這樣做，可以直接使用 `<script type="module">`。
+  這超出了本教學目前的範圍，但除非你需要支援非常舊的瀏覽器，否則你不需要這樣做，可以直接使用 `<script type="module">`。
 
 ## 註解
 
