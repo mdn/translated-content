@@ -56,9 +56,7 @@ mask: unset;
 ### 値
 
 - `<mask-layer>`
-
   - : カンマで区切られた 1 つ以上のマスクレイヤーで、以下の要素で構成されます。
-
     - `<mask-reference>`
       - : マスク画像のソースを設定します。 {{cssxref("mask-image")}} を参照してください。
     - `<masking-mode>`
