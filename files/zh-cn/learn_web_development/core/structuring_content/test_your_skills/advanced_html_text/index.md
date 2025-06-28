@@ -5,12 +5,12 @@ l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-这个技能测试的目的是评估你是否理解如何[使用较少为人知的 HTML 元素来标记高级语义特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)。
+本技能测试用于评估你是否理解[如何使用较少为人知的 HTML 元素来标记高级语义特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)。
 
 > [!NOTE]
-> 你可以在此页面的交互式编辑器中或在在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中尝试解决方案。
+> 你可以在此页面的交互式编辑器中或于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中尝试解决方案。
 >
-> 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一联系我们。
+> 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## 任务 1
 
@@ -21,14 +21,98 @@ l10n:
 - 使用下标和上标为化学公式和日期提供正确的语义，并使它们正确显示。
 - 在语义上将机器可读日期与文本中的日期关联起来。
 
+要开始尝试，你可以点击下方代码块中的**“Play”**来在 MDN Playground 中编辑示例。你也可以[下载本任务的起始文件](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html)以在本地编辑器中完成任务。
+
+如果你犯了些错误，你可以点击 MDN Playground 中的 _Reset_ 按钮。如果你真的卡住了，你可以在本节末尾处看到解决方案。
+
+```html live-sample___advanced-text
+<h1>Advanced text semantics</h1>
+
+<p>Let's start with a quote:</p>
+
+<p>
+  HTML, Hypertext Markup Language is by default accessible, if used correctly.
+</p>
+
+<p>CSS can also be used to make web pages more, or less, accessible.</p>
+
+<p>Chemical Formulae: H2O (Water), C2H6O (Ethanol).</p>
+
+<p>
+  Dates: December 25th 2019 (Christmas Day), November 2nd 2019 (Día de los
+  Muertos).
+</p>
+```
+
+```css hidden live-sample___advanced-text
+body {
+  background-color: #fff;
+  color: #333;
+  font:
+    1em / 1.4 Helvetica Neue,
+    Helvetica,
+    Arial,
+    sans-serif;
+  padding: 1em;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
+  color: purple;
+}
+
+p {
+  margin: 0.5em 0;
+}
+
+abbr,
+time {
+  color: green;
+}
+```
+
+{{ EmbedLiveSample('advanced-text', "100%", 260) }}
+
 完成的示例应如下所示：
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2-finished.html", '100%', 300)}}
 
-尝试更新下面的实时代码来重现完成的示例：
+<details>
+<summary>点击此处查看解决方案</summary>
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/advanced-text/advanced-text2.html", '100%', 700)}}
+你完成的 HTML 应该是这样的：
 
-> [!CALLOUT]
->
-> [下载此任务的起始点](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/advanced-text/advanced-text2-download.html) 以在你自己的编辑器或在线编辑器中工作。
+```html
+<h1>Advanced text semantics</h1>
+
+<p>Let's start with a quote:</p>
+
+<blockquote cite="https://developer.mozilla.org/en-US/docs/Learn/Accessibility">
+  <p>
+    <abbr title="HyperText Markup Language">HTML</abbr>, Hypertext Markup
+    Language is by default accessible, if used correctly.
+  </p>
+</blockquote>
+
+<p>
+  <abbr title="Cascading Style Sheets">CSS</abbr>, Cascading Style Sheets, can
+  also be used to make web pages more, or less, accessible.
+</p>
+
+<p>
+  Chemical Formulae: H<sub>2</sub>O (Water), C<sub>2</sub>H<sub>6</sub>O
+  (Ethanol).
+</p>
+
+<p>
+  Dates:
+  <time datetime="2019-12-25">December 25<sup>th</sup> 2019</time>
+  (Christmas Day),
+  <time datetime="2019-11-02">November 2<sup>nd</sup> 2019</time> (Día de los
+  Muertos).
+</p>
+```
+
+</details>
