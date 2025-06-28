@@ -3,9 +3,8 @@ title: Firefox 124 for developers
 slug: Mozilla/Firefox/Releases/124
 l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 124 の変更点をまとめています。Firefox 124 は、米国時間 [2024 年 3 月 19 日](https://whattrainisitnow.com/release/?version=124) にリリースされました。
 

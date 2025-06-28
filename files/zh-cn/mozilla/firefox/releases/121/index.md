@@ -3,9 +3,8 @@ title: Firefox 121 的开发者说明
 slug: Mozilla/Firefox/Releases/121
 l10n:
   sourceCommit: 6534b4d3f496ff00832e465de36e7488188d0776
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 121 中影响开发者的变更信息。Firefox 121 于 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121)发布。
 

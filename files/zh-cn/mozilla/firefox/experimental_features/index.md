@@ -1,9 +1,8 @@
 ---
 title: Firefox 中的实验性特性
 slug: Mozilla/Firefox/Experimental_features
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本页列出了 Firefox 的实验性和部分实现的特性，包括针对提议的或前沿的网络平台标准的特性，以及这些特性的版本信息、是否“默认”激活这些特性，以及可用于激活或停用这些特性的偏好设置。这样，就可以在特性发布前对其进行测试。
 

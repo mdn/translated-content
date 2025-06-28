@@ -3,9 +3,8 @@ title: Firefox 44 for developers
 slug: Mozilla/Firefox/Releases/44
 l10n:
   sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox の最新の開発者向け機能を試すには、 Firefox Developer Edition をインストールしてください](https://www.mozilla.org/ja/firefox/developer/)。 Firefox 44 は、米国時間 2016 年 1 月 26 日にリリースされました。この記事では、ウェブ開発者だけでなく、 Firefox や Gecko の開発者、アドオン開発者にとっても有用な主な変更点を挙げています。
 

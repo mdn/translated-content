@@ -3,9 +3,8 @@ title: Firefox 134 for developers
 slug: Mozilla/Firefox/Releases/134
 l10n:
   sourceCommit: f65bc685391ad06b6d1fbef84b217459002f073f
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 134 の変更点をまとめています。Firefox 134 は、米国時間 [2025 年 1 月 7 日](https://whattrainisitnow.com/release/?version=134) にリリースされました。
 

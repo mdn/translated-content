@@ -1,9 +1,8 @@
 ---
 title: Firefox 35 for developers
 slug: Mozilla/Firefox/Releases/35
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Gecko 35 を搭載した Firefox 35 は、米国時間 2015 年 1 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 35 の変更点をまとめています。
 

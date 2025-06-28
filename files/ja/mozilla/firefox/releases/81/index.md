@@ -1,9 +1,8 @@
 ---
 title: Firefox 81 for developers
 slug: Mozilla/Firefox/Releases/81
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 81 の変更点をまとめています。Firefox 81 は 2020 年 9 月 22 日にリリースされました。
 

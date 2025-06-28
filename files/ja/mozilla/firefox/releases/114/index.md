@@ -3,9 +3,8 @@ title: Firefox 114 for developers
 slug: Mozilla/Firefox/Releases/114
 l10n:
   sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 114 の変更点をまとめています。Firefox 114 は、米国時間 2023 年 6 月 6 日にリリースされました。
 

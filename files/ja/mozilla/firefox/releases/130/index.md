@@ -3,9 +3,8 @@ title: Firefox 130 for developers
 slug: Mozilla/Firefox/Releases/130
 l10n:
   sourceCommit: 2cca85442dcfa50e82bffb7e2c0dbae4c5158256
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 130 の変更点をまとめています。Firefox 130 は、米国時間 [2024 年 9 月 3 日](https://whattrainisitnow.com/release/?version=130) にリリースされました。
 

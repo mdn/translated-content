@@ -3,9 +3,8 @@ title: Firefox 124 的开发者说明
 slug: Mozilla/Firefox/Releases/124
 l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 124 中影响开发者的变更信息。Firefox 124 于 [2024 年 2 月 20 日](https://whattrainisitnow.com/release/?version=124)发布。
 

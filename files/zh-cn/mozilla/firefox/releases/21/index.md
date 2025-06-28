@@ -1,9 +1,8 @@
 ---
 title: Firefox 21 for developers
 slug: Mozilla/Firefox/Releases/21
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 ## Web 开发者需要注意的变化
 

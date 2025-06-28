@@ -1,9 +1,8 @@
 ---
 title: Seguridad en Firefox 2
 slug: Mozilla/Firefox/Releases/2/Security_changes
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox 2](/es/Firefox_2) tiene tanto SSLv2 como la débil "exportación" de juegos de claves desactivados por defecto, en favor de SSLv3. Esto proporciona mejoras en la seguridad.
 

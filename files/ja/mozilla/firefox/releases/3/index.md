@@ -3,9 +3,8 @@ title: Firefox 3 for developers
 slug: Mozilla/Firefox/Releases/3
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 もしあなたが開発者で、Firefox 3 における新機能全体について情報を得ようとしているなら、ここは理解を深めるのに最も適した場所です。この記事は、Firefox 3 に追加された機能をカバーする新しい記事の一覧を提供します。小さな変更が必ずしもすべてカバーされているわけではありませんが、主要な改善を学ぶ助けにはなるでしょう。
 

@@ -3,9 +3,8 @@ title: Firefox
 slug: Mozilla/Firefox
 l10n:
   sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 [Firefox](https://www.mozilla.org/zh-CN/firefox/)（非正式中文名称“火狐”）是 Mozilla 的流行 Web 浏览器，适用于多种平台，包括 Windows、MacOS、Linux 等桌面版，以及所有的 Android 和 iOS 移动设备。得益于对最新的 Web 标准的广泛兼容性和强有力的开发工具，Firefox 是 Web 开发者和终端用户的绝佳选择。
 

@@ -3,9 +3,8 @@ title: Améliorations SVG dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/SVG_improvements
 l10n:
   sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Cet article fournit la liste des fonctionnalités (documentées par ailleurs) des fonctionnalités ajoutées à Firefox 3.
 

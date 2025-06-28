@@ -1,9 +1,8 @@
 ---
 title: Firefox 79 for developers
 slug: Mozilla/Firefox/Releases/79
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 79 の変更点をまとめています。Firefox 79 は、2020 年 7 月 28 日にリリースされました。
 

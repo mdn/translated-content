@@ -3,9 +3,8 @@ title: Firefox 119 for developers
 slug: Mozilla/Firefox/Releases/119
 l10n:
   sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 119 の変更点をまとめています。Firefox 119 は、2023 年 10 月 24 日にリリースされました。
 

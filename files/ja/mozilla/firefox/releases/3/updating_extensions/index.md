@@ -3,9 +3,8 @@ title: Firefox 3 のための拡張機能の更新
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 l10n:
   sourceCommit: a35e5b74ecbe13a768edf765a4666fb81a5153a1
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 この記事は、拡張機能を更新して Firefox 3 に対応させたいと考える開発者のために役立つ情報を提供します。
 

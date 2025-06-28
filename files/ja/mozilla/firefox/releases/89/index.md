@@ -1,9 +1,8 @@
 ---
 title: Firefox 89 for developers
 slug: Mozilla/Firefox/Releases/89
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 89 の変更点をまとめています。Firefox 89 は、米国時間 2021 年 6 月 1 日にリリースされました。
 

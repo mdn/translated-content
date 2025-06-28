@@ -3,9 +3,8 @@ title: Firefox 85 for developers
 slug: Mozilla/Firefox/Releases/85
 l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 85 の変更点をまとめています。Firefox 85 は、2021 年 1 月 26 日にリリースされました。
 

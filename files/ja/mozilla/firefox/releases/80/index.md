@@ -3,9 +3,8 @@ title: Firefox 80 for developers
 slug: Mozilla/Firefox/Releases/80
 l10n:
   sourceCommit: 1822cdf5a86574429c4c49883a402663ef16a4ef
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 80 の変更点をまとめています。Firefox 80 は、2020 年 8 月 25 日にリリースされました。
 

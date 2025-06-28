@@ -3,9 +3,8 @@ title: Firefox 112 for developers
 slug: Mozilla/Firefox/Releases/112
 l10n:
   sourceCommit: af8cedc8aa8af74c129ffb5369e34290cee36d40
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 112 の変更点をまとめています。Firefox 112 は、米国時間 2023 年 4 月 11 日にリリースされました。
 

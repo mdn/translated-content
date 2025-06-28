@@ -3,9 +3,8 @@ title: Firefox 110 for developers
 slug: Mozilla/Firefox/Releases/110
 l10n:
   sourceCommit: a264df392ddc9378b59e07e89b9abdb4f0f776d5
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 110 の変更点をまとめています。Firefox 110 は、米国時間 2023 年 2 月 14 日にリリースされました。
 

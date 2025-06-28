@@ -3,9 +3,8 @@ title: Firefox 87 for developers
 slug: Mozilla/Firefox/Releases/87
 l10n:
   sourceCommit: 7f74644d98484c67817c1dd556a6e394f5a26a6f
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 87 の変更点をまとめています。Firefox 87 は、米国時間 2021 年 3 月 23 日にリリースされました。
 

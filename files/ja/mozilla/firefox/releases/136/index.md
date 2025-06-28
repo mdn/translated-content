@@ -3,9 +3,8 @@ title: Firefox 136 for developers
 slug: Mozilla/Firefox/Releases/136
 l10n:
   sourceCommit: edf3344dc1edb0e2c07a20bd7e85211b4809fa8d
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 136 の変更点をまとめています。Firefox 136 は、米国時間 [2025 年 3 月 4 日](https://whattrainisitnow.com/release/?version=136) にリリースされました。
 

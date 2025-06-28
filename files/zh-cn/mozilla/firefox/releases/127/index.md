@@ -3,9 +3,8 @@ title: Firefox 127 的开发者说明
 slug: Mozilla/Firefox/Releases/127
 l10n:
   sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 本文提供了有关 Firefox 127 中影响开发者的变更信息。Firefox 127 于 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127)发布。
 

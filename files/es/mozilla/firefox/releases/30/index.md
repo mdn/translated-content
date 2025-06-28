@@ -1,9 +1,8 @@
 ---
 title: Firefox 30 for developers
 slug: Mozilla/Firefox/Releases/30
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Want to help document Firefox 30? See the [list of bugs that need to be written about](http://beta.elchi3.de/doctracker/#list=fx&version=30.0) and pitch in!
 

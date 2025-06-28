@@ -3,9 +3,8 @@ title: Firefox 118 for developers
 slug: Mozilla/Firefox/Releases/118
 l10n:
   sourceCommit: 7ac593ab3dc07119665f7988539f869d810a499e
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 118 の変更点をまとめています。Firefox 118 は、米国時間 2023 年 9 月 26 日にリリースされました。
 

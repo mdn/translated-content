@@ -1,9 +1,8 @@
 ---
 title: Firefox 7 pour les développeurs
 slug: Mozilla/Firefox/Releases/7
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
 

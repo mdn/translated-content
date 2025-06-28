@@ -1,9 +1,8 @@
 ---
 title: Firefox 3.5 pour les développeurs
 slug: Mozilla/Firefox/Releases/3.5
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'une gestion améliorée d'une grande variété de standards du Web. Cet article en fournit une longue liste, avec des liens vers des articles décrivant les améliorations majeures.
 

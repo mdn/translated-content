@@ -3,9 +3,8 @@ title: Firefox 128 for developers
 slug: Mozilla/Firefox/Releases/128
 l10n:
   sourceCommit: 95beef16ce880c41315c2e8b9d3e54c17c660124
+sidebar: firefox
 ---
-
-{{FirefoxSidebar}}
 
 このページでは、開発者に影響する Firefox 128 の変更点をまとめています。Firefox 128 は、米国時間 [2024 年 7 月 9 日](https://whattrainisitnow.com/release/?version=128) にリリースされました。
 
