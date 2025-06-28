@@ -35,22 +35,19 @@ l10n:
 ### API
 
 - [Cookie Store API](/ja/docs/Web/API/Cookie_Store_API) をサポートしました ([Firefox bug 1958875](https://bugzil.la/1958875))。
-
   これは Cookie を管理するための、現代的で {{glossary("asynchronous", "非同期")}} で {{jsxref("Promise")}} ベースの方法を提供します。これはメインスレッドと [サービスワーカーservice workers](/ja/docs/Web/API/Service_Worker_API) のどちらでも使用できます。
   API は {{domxref("CookieStore")}} インターフェイスの [`get()`](/ja/docs/Web/API/CookieStore/get) および [`getAll()`](/ja/docs/Web/API/CookieStore/getAll) メソッドで返される Cookie オブジェクトと、`change` イベントにおいて `name` および `value` 以外のすべてのプロパティを省略する ({{domxref("document.cookie")}} が返す情報と一致します) という例外を除いてサポートします。ほかの Cookie プロパティは引き続き [設定](/ja/docs/Web/API/CookieStore/set) が可能であり、これらは内部で使用します。
 
 ### HTML をシリアライズするときに < および > をエスケープする
 
-- {{domxref("Element.innerHTML")}}、{{domxref("Element.outerHTML")}}、{{domxref("Element.getHTML()")}}、{{domxref("ShadowRoot.innerHTML")}}、{{domxref("ShadowRoot.getHTML()")}} は、HTML を文字列にシリアライズする際に `<` および `>` の文字を、それぞれ `&lt;` および `&gt;` に置き換えるようになりましたこれは、HTML をシリアライズして DOM へ再挿入する特定の攻撃を防ぎます 
-  ([Firefox bug 1962084](https://bugzil.la/1962084))。
+- {{domxref("Element.innerHTML")}}、{{domxref("Element.outerHTML")}}、{{domxref("Element.getHTML()")}}、{{domxref("ShadowRoot.innerHTML")}}、{{domxref("ShadowRoot.getHTML()")}} は、HTML を文字列にシリアライズする際に `<` および `>` の文字を、それぞれ `&lt;` および `&gt;` に置き換えるようになりましたこれは、HTML をシリアライズして DOM へ再挿入する特定の攻撃を防ぎます ([Firefox bug 1962084](https://bugzil.la/1962084))。
 
 #### DOM
 
 - [`pointerrawupdate` イベント](/ja/docs/Web/API/Element/pointerrawupdate_event) をサポートしました。
   このイベントは一般的に、対応する [`pointermove`](/ja/docs/Web/API/Element/pointermove_event) イベントに比べて低レイテンシーでポインター移動のプロパティにアクセスでき、ポインターのデータが利用可能になると直ちに発生します。
   これは高精度な入力処理が必要であり、結合した `pointermove` イベントだけではスムーズな操作を達成できないアプリケーションを対象にするものです。
-  このイベントのリスニングはパフォーマンスに影響を与える可能性があるため、その他の用途に使用することは避けるべきです 
-  ([Firefox bug 1550462](https://bugzil.la/1550462))。
+  このイベントのリスニングはパフォーマンスに影響を与える可能性があるため、その他の用途に使用することは避けるべきです ([Firefox bug 1550462](https://bugzil.la/1550462))。
 
 #### 廃止
 
@@ -87,20 +84,17 @@ l10n:
 - **`<dialog>` の `closedBy` 属性** (Nightly): `dom.dialog.light-dismiss.enabled`
 
   {{domxref("HTMLDialogElement")}} インターフェイスの {{domxref("HTMLDialogElement/closedBy", "closedBy")}} 属性、およびこれに対応する {{htmlelement("dialog")}} 要素の [`closedby`](/ja/docs/Web/HTML/Reference/Elements/dialog#closedby) 属性をサポートしました。
-  開発者はこれらを使用して、ダイアログの外でのユーザー操作 ("light dismiss") やプログラムによる閉じる処理など、どのような方法でダイアログを閉じることが可能かを指定できます 
-  ([Firefox bug 1964077](https://bugzil.la/1964077))。
+  開発者はこれらを使用して、ダイアログの外でのユーザー操作 ("light dismiss") やプログラムによる閉じる処理など、どのような方法でダイアログを閉じることが可能かを指定できます ([Firefox bug 1964077](https://bugzil.la/1964077))。
 
 - **`Atomics.waitAsync()`**: `javascript.options.atomics_wait_async`
 
   {{jsxref("Atomics.waitAsync()")}} 静的メソッドは共有メモリーの位置で非同期に待機して、操作の結果を表すオブジェクトを返します。
-  これはブロッキングがなく、メインスレッドで使用できます 
-  ([Firefox bug 1467846](https://bugzil.la/1467846))。
+  これはブロッキングがなく、メインスレッドで使用できます ([Firefox bug 1467846](https://bugzil.la/1467846))。
 
 - **Prioritized Task Scheduling API** (Nightly リリース)。
   [Prioritized Task Scheduling API](/ja/docs/Web/API/Prioritized_Task_Scheduling_API) は、ウェブサイトの開発者のコードで定義されたか、サードパーティーのライブラリーやフレームワークで定義されたかにかかわらず、アプリケーションに所属するすべてのタスクに優先度をつけるための標準された手段を提供します。
   これは作成元の `TaskSignal` のいずれかがトリガーされたときにトリガーされるシグナルを返す、[`TaskSignal.any()`](/ja/docs/Web/API/TaskSignal/any_static) 静的メソッドのサポートを追加します。
-  API の機能は完成しています 
-  ([Firefox bug 1964407](https://bugzil.la/1964407))。
+  API の機能は完成しています ([Firefox bug 1964407](https://bugzil.la/1964407))。
 
 - **`CloseWatcher`** (Nightly - デスクトップ版限定): `dom.closewatcher.enabled`.
   {{domxref("CloseWatcher")}} インターフェイスは、組み込みコンポーネントと同じようにデバイスのネイティブな仕組みを使用して閉じることが可能なコンポーネントを実装することを可能にします。たとえば Windows では、ユーザーが <kbd>Esc</kbd> キーを押したときに独自のサイドバーを閉じるためにこのインターフェイスを使用できます ([Firefox bug 1966459](https://bugzil.la/1966459))。
