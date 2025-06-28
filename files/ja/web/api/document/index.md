@@ -2,12 +2,12 @@
 title: Document
 slug: Web/API/Document
 l10n:
-  sourceCommit: 4558d208395a5b1df4db44b0c8ef4e9a0f8adbbf
+  sourceCommit: 41018309bf920684054c0c2d81d362365b543493
 ---
 
 {{APIRef("DOM")}}
 
-**`Document`** インターフェイスはブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_%e3%83%84%e3%83%aa%e3%83%bc%e3%81%a8%e3%81%af%ef%bc%9f)であるウェブページのコンテンツへの入口としての役割を果たします。
+**`Document`** インターフェイスはブラウザーに読み込まれたウェブページを表し、 [DOM ツリー](/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model#dom_ツリーとは？)であるウェブページのコンテンツへの入口としての役割を果たします。
 
 DOM ツリーには {{HTMLElement("body")}} や {{HTMLElement("table")}} など、[多数の要素](/ja/docs/Web/HTML/Reference/Elements)があります。これはページの URL を取得したり文書で新たな要素を作成するなど、文書全体に関わる機能を提供します。
 
@@ -59,7 +59,7 @@ _このインターフェイスは、 {{DOMxRef("Node")}} インターフェイ�
   - : 現在の文書の {{DOMxRef("FontFaceSet")}} インターフェイスを返します。
 - {{DOMxRef("Document.forms")}} {{ReadOnlyInline}}
   - : {{DOMxRef("HTMLCollection")}} で現在の文書の {{HTMLElement("form")}} 要素を返します。
-- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}} {{Experimental_Inline}}
+- {{DOMxRef("Document.fragmentDirective")}} {{ReadOnlyInline}}
   - : 現在の文書の {{domxref("FragmentDirective")}} を返します。
 - {{DOMxRef("Document.fullscreenElement")}} {{ReadOnlyInline}}
   - : この文書で現在全画面モードになっている要素です。
@@ -122,6 +122,14 @@ _HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocumen
   - : 現在の文書のタイトルを設定または取得します。
 - {{DOMxRef("Document.URL")}} {{ReadOnlyInline}}
   - : 現在の文書の URL を含む文字列を返します。
+- 名前付きプロパティ
+  - : 文書内の一部の要素は、プロパティとしても公開されます。
+    - 個々の {{HTMLElement("embed")}}, {{HTMLElement("form")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{HTMLElement("object")}} 要素では、その `name` （空でない場合）が公開されます。
+      例えば、文書内に `<form name="my_form">` がある場合、`document["my_form"]` （および同等の `document.my_form`）はその要素への参照を返します。
+    - 個々の {{HTMLElement("object")}} 要素では、その `id` （空でない場合）が公開されます。
+    - 個々の {{HTMLElement("img")}} 要素で空でない `name` がある場合は、 `id` （空でない場合）が公開されます。
+
+    プロパティが単一の要素に対応している場合、その要素が直接返されます。その単一の要素が iframe の場合、その {{domxref("HTMLIFrameElement/contentWindow", "contentWindow")}} が代わりに返されます。プロパティが複数の要素に対応している場合、それらすべてを含む {{domxref("HTMLCollection")}} が返されます。
 
 ### 非推奨のプロパティ
 
@@ -196,7 +204,7 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : 指定したタグ名で新しい要素を生成します。
 - {{DOMxRef("Document.createElementNS()")}}
   - : 指定したタグ名およびネームスペース URI で、新しい要素を生成します。
-- {{DOMxRef("Document.createEvent()")}}
+- {{DOMxRef("Document.createEvent()")}} {{deprecated_inline}}
   - : イベントオブジェクトを生成します。
 - {{DOMxRef("Document.createNodeIterator()")}}
   - : {{DOMxRef("NodeIterator")}} オブジェクトを生成します。
@@ -244,6 +252,8 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
   - : {{DOMxRef("Document.hasStorageAccess()")}} の新しい名前です。
 - {{DOMxRef("Document.importNode()")}}
   - : 外部文書のノードの複製を返します。
+- {{DOMxRef("Document.moveBefore()")}} {{Experimental_Inline}}
+  - : 指定された {{domxref("Node")}} を、ノードを除去して挿入し直すことなく、指定された参照ノードの前に、直接の子として `Document` DOM ノード内に移動します。
 - {{DOMxRef("Document.mozSetImageElement()")}} {{Non-standard_Inline}}
   - : 指定した要素 ID の背景画像として使用している要素を変更することができます。
 - {{DOMxRef("Document.prepend()")}}
@@ -263,14 +273,14 @@ _このインターフェイスは、{{DOMxRef("Node")}} インターフェイ�
 - {{DOMxRef("Document.requestStorageAccessFor()")}} {{experimental_inline}}
   - : 最上位のサイトが、同じ[関連ウェブサイト設定](/ja/docs/Web/API/Storage_Access_API/Related_website_sets)内の別のウェブサイトから発信された埋め込みコンテンツの代わりに、サードパーティクッキーへのアクセスをリクエストできるようにします。
 - {{domxref("Document.startViewTransition()")}}
-  - : 新しい{{domxref("View Transitions API", "ビュー遷移", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
+  - : 新しい{{domxref("View Transition API", "ビュー遷移", "", "nocode")}}を開始し、それを表すための {{domxref("ViewTransition")}} オブジェクトを返します。
 
 `Document` インターフェイスは、{{DOMxRef("XPathEvaluator")}} インターフェイスによって拡張されています。
 
 - {{DOMxRef("Document.createExpression()")}}
   - : (繰り返し) 評価に使用できる [`XPathExpression`](/ja/docs/Web/API/XPathExpression) をコンパイルします。
-- {{DOMxRef("Document.createNSResolver()")}}
-  - : {{DOMxRef("XPathNSResolver")}} オブジェクトを生成します。
+- {{DOMxRef("Document.createNSResolver()")}} {{deprecated_inline}}
+  - : 入力ノードをそのまま返します。
 - {{DOMxRef("Document.evaluate()")}}
   - : XPath 表現を評価します。
 
@@ -300,15 +310,17 @@ HTML 文書用の `Document` インターフェイスは {{DOMxRef("HTMLDocument
   - : 現在の領域でフォーマットコマンドをサポートしている場合に、true を返します。
 - {{DOMxRef("Document.queryCommandValue()")}} {{Deprecated_Inline}}
   - : 指定したフォーマットコマンドについて、現在の領域における値を返します。
-- {{DOMxRef("Document.write()")}}
+- {{DOMxRef("Document.write()")}} {{deprecated_inline}}
   - : 文書にテキストを書き込みます。
-- {{DOMxRef("Document.writeln()")}}
+- {{DOMxRef("Document.writeln()")}} {{deprecated_inline}}
   - : 文書にテキスト行を書き込みます。
 
 ## 静的メソッド
 
 _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("EventTarget")}} インターフェイスから継承したメソッドもあります。_
 
+- {{domxref("Document/parseHTML_static", "Document.parseHTML()")}}
+  - : XSS 対策とサニタイズを行った、HTML の文字列から新しい `Document` オブジェクトを作成します。
 - {{domxref("Document/parseHTMLUnsafe_static", "Document.parseHTMLUnsafe()")}}
   - : サニタイズ処理を行わずに、HTML の文字列から新しい `Document` オブジェクトを作成します。
     文字列には宣言敵にシャドウルートを含むことができます。
@@ -317,9 +329,9 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
 
 これらのイベントを待ち受けするには、 `addEventListener()` を使用するか、本インターフェイスの `onイベント名` プロパティへイベントリスナーを代入するかしてください。下記の一覧に掲載されているイベントの他に、文書ツリー内の{{domxref("Node", "ノード", "", "nocode")}}から多くのイベントがバブリングする可能性があります。
 
-- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.afterscriptexecute_event", "afterscriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : 静的な {{HTMLElement("script")}} 要素でスクリプトの実行が完了した時に発生します。
-- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}}
+- {{DOMxRef("Document.beforescriptexecute_event", "beforescriptexecute")}} {{Non-standard_Inline}} {{deprecated_inline}}
   - : 静的な {{HTMLElement("script")}} で実行を開始しようとしている時に発生します。
 - {{domxref("Document.prerenderingchange_event", "prerenderingchange")}} {{experimental_inline}}
   - : 事前レンダリングされた文書がアクティブになった（ユーザーがページを表示した）ときに発行されます。
@@ -327,15 +339,6 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
   - : コンテンツセキュリティポリシーに違反した場合に発行されます。
 - {{DOMxRef("Document/visibilitychange_event", "visibilitychange")}}
   - : タブの内容の表示・非表示の状態が切り替わった時に発行されます。
-
-### クリップボードイベント
-
-- {{DOMxRef("Document/copy_event", "copy")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスからコピー操作を開始した時に発行されます。
-- {{DOMxRef("Document/cut_event", "cut")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスから切り取り操作を開始したときに発行されます。
-- {{DOMxRef("Document/paste_event", "paste")}}
-  - : ユーザーがブラウザーのユーザーインターフェイスから貼り付け操作を開始したときに発行されます。
 
 ### 全画面イベント
 
@@ -364,11 +367,91 @@ _このインターフェイスには {{DOMxRef("Node")}} および {{DOMxRef("E
   - : 文書のビューまたは要素がスクロールされたときに発行されます。
 - {{DOMxRef("Document/scrollend_event", "scrollend")}}
   - : 文書のビューまたは要素のスクロールが完全に終了したときに発行されます。
+- {{domxref("Document/scrollsnapchange_event", "scrollsnapchange")}} {{experimental_inline}}
+  - : スクロール操作の終わりに、新しいスクロールスナップターゲットが選択されたときに、スクロールコンテナーで発行されます。
+- {{domxref("Document/scrollsnapchanging_event", "scrollsnapchanging")}} {{experimental_inline}}
+  - : 新しいスクロールスナップターゲットが待機しているとブラウザーが判断したとき、つまり、現在のスクロールジェスチャーが終わると、スクロールコンテナーで発行されます。
 
 ### 選択イベント
 
 - {{DOMxRef("Document/selectionchange_event", "selectionchange")}}
   - : 文書でのテキスト選択範囲が変化したときに発行されます。
+
+### バブリングするイベント
+
+バブルするイベントすべてが `Document` オブジェクトに到達するわけではありません。以下のイベントだけが `Document` オブジェクトに到達し、待ち受けすることができます。
+
+- `abort`
+- {{domxref("Element/auxclick_event", "auxclick")}}
+- {{domxref("Element/beforeinput_event", "beforeinput")}}
+- {{domxref("Element/beforematch_event", "beforematch")}}
+- {{domxref("HTMLElement/beforetoggle_event", "beforetoggle")}}
+- {{domxref("Element/blur_event", "blur")}}
+- `cancel`
+- {{domxref("HTMLMediaElement/canplay_event", "canplay")}}
+- {{domxref("HTMLMediaElement/canplaythrough_event", "canplaythrough")}}
+- {{domxref("HTMLElement/change_event", "change")}}
+- {{domxref("Element/click_event", "click")}}
+- {{domxref("HTMLDialogElement/close_event", "close")}}
+- {{domxref("HTMLCanvasElement/contextlost_event", "contextlost")}}
+- {{domxref("Element/contextmenu_event", "contextmenu")}}
+- {{domxref("HTMLCanvasElement/contextrestored_event", "contextrestored")}}
+- {{domxref("Element/copy_event", "copy")}}
+- {{domxref("HTMLTrackElement/cuechange_event", "cuechange")}}
+- {{domxref("Element/cut_event", "cut")}}
+- {{domxref("Element/dblclick_event", "dblclick")}}
+- {{domxref("HTMLElement/drag_event", "drag")}}
+- {{domxref("HTMLElement/dragend_event", "dragend")}}
+- {{domxref("HTMLElement/dragenter_event", "dragenter")}}
+- {{domxref("HTMLElement/dragleave_event", "dragleave")}}
+- {{domxref("HTMLElement/dragover_event", "dragover")}}
+- {{domxref("HTMLElement/dragstart_event", "dragstart")}}
+- {{domxref("HTMLElement/drop_event", "drop")}}
+- {{domxref("HTMLMediaElement/durationchange_event", "durationchange")}}
+- {{domxref("HTMLMediaElement/emptied_event", "emptied")}}
+- {{domxref("HTMLMediaElement/ended_event", "ended")}}
+- {{domxref("Element/error_event", "error")}}
+- {{domxref("Element/focus_event", "focus")}}
+- {{domxref("HTMLFormElement/formdata_event", "formdata")}}
+- {{domxref("Element/input_event", "input")}}
+- {{domxref("HTMLElement/invalid_event", "invalid")}}
+- {{domxref("Element/keydown_event", "keydown")}}
+- {{domxref("Element/keypress_event", "keypress")}}
+- {{domxref("Element/keyup_event", "keyup")}}
+- {{domxref("HTMLElement/load_event", "load")}}
+- {{domxref("HTMLMediaElement/loadeddata_event", "loadeddata")}}
+- {{domxref("HTMLMediaElement/loadedmetadata_event", "loadedmetadata")}}
+- {{domxref("HTMLMediaElement/loadstart_event", "loadstart")}}
+- {{domxref("Element/mousedown_event", "mousedown")}}
+- {{domxref("Element/mouseenter_event", "mouseenter")}}
+- {{domxref("Element/mouseleave_event", "mouseleave")}}
+- {{domxref("Element/mousemove_event", "mousemove")}}
+- {{domxref("Element/mouseout_event", "mouseout")}}
+- {{domxref("Element/mouseover_event", "mouseover")}}
+- {{domxref("Element/mouseup_event", "mouseup")}}
+- {{domxref("Element/paste_event", "paste")}}
+- {{domxref("HTMLMediaElement/pause_event", "pause")}}
+- {{domxref("HTMLMediaElement/play_event", "play")}}
+- {{domxref("HTMLMediaElement/playing_event", "playing")}}
+- {{domxref("HTMLMediaElement/progress_event", "progress")}}
+- {{domxref("HTMLMediaElement/ratechange_event", "ratechange")}}
+- {{domxref("HTMLFormElement/reset_event", "reset")}}
+- {{domxref("HTMLVideoElement/resize_event", "resize")}}
+- {{domxref("Element/scroll_event", "scroll")}}
+- {{domxref("Element/scrollend_event", "scrollend")}}
+- {{domxref("Element/securitypolicyviolation_event", "securitypolicyviolation")}}
+- {{domxref("HTMLMediaElement/seeked_event", "seeked")}}
+- {{domxref("HTMLMediaElement/seeking_event", "seeking")}}
+- {{domxref("Element/select_event", "select")}}
+- {{domxref("HTMLSlotElement/slotchange_event", "slotchange")}}
+- {{domxref("HTMLMediaElement/stalled_event", "stalled")}}
+- {{domxref("HTMLFormElement/submit_event", "submit")}}
+- {{domxref("HTMLMediaElement/suspend_event", "suspend")}}
+- {{domxref("HTMLMediaElement/timeupdate_event", "timeupdate")}}
+- {{domxref("HTMLElement/toggle_event", "toggle")}}
+- {{domxref("HTMLMediaElement/volumechange_event", "volumechange")}}
+- {{domxref("HTMLMediaElement/waiting_event", "waiting")}}
+- {{domxref("Element/wheel_event", "wheel")}}
 
 ## 仕様書
 
