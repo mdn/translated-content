@@ -5,13 +5,12 @@ l10n:
   sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-这个技能测试的目的是评估你是否理解了我们的[使用 JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON) 文章。
+本技能测试用于评估你是否理解我们的[使用 JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON) 一文。
 
 > [!NOTE]
-> 你可以通过下载代码并将其放在在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中来尝试解决方案。
-> 如果有错误，它将记录在页面的结果面板中或浏览器的 JavaScript 控制台中，以帮助你调试。
+> 你可以通过下载代码并于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中加载代码来尝试找到解决方案。如果有错误，错误将记录在页面的结果面板中或浏览器的 JavaScript 控制台之中，以期帮助你完成调试。
 >
-> 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)之一联系我们。
+> 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
 ## JSON 1
 
@@ -26,7 +25,7 @@ l10n:
 
 - JSON 数据在 `displayCatInfo()` 函数内作为文本提供。在你能从中获取任何数据之前，你需要将其解析为 JSON。
 - 你可能想要使用外部循环来遍历猫并将它们的名字添加到 `motherInfo` 变量字符串中，以及使用内部循环来遍历所有小猫，计算所有/雄性/雌性小猫的总数，并将这些详细信息添加到 `kittenInfo` 变量字符串中。
-- 最后一只母猫的名字前面应该有一个"和"，后面应该有一个句号。你如何确保无论 JSON 中有多少只猫都能正常工作？
+- 最后一只母猫的名字前面应该有一个“和”字，并且在句末还应该有一个句号。你应如何来确保无论 JSON 中有多少只猫都能正常工作？
 - 为什么 `para1.textContent = motherInfo;` 和 `para2.textContent = kittenInfo;` 行在 `displayCatInfo()` 函数内部，而不是在脚本的末尾？这与异步代码有关。
 
 尝试更新下面的实时代码来重现完成的示例：
@@ -35,4 +34,4 @@ l10n:
 
 > [!CALLOUT]
 >
-> [下载此任务的起始点](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/json1-download.html) 以在你自己的编辑器或在线编辑器中工作。
+> [下载此任务的起始文件](https://github.com/mdn/learning-area/blob/main/javascript/oojs/tasks/json/json1-download.html) 以在你自己的编辑器或在线编辑器中工作。
