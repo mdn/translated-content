@@ -21,6 +21,7 @@ SVG 是由[万维网联盟（W3C）](https://www.w3.org/)自 1999 年开始开�
 
 - [从零开始介绍 SVG](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch)
   - : 本教程旨在解释 SVG 的内部结构，其中包含大量技术细节。如果你只想绘制漂亮的图像，你可以在 [Inkscape 文档页面](https://inkscape.org/learn/) 找到更多有用的资源。W3C 的 [SVG Primer](https://www.w3.org/Graphics/SVG/IG/resources/svgprimer.html) 提供了另一个很好的 SVG 介绍。此外，还可以查看以日历为主题的 [SVG 教程](https://svg-tutorial.com/)，该教程将指导你编程 25 个充满节日气氛的 SVG。
+
 ## 指南
 
 [SVG 指南](/zh-CN/docs/Web/SVG/Guides)可帮助你在网络上使用 SVG，涵盖嵌入、MIME（媒体）类型、处理脚本、动画、过滤器等主题。
