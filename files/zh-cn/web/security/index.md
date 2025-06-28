@@ -60,7 +60,6 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
 - [弱签名算法](/zh-CN/docs/Web/Security/Weak_Signature_Algorithm)
   - : 用于{{Glossary("digital certificate","数字证书")}}{{Glossary("Signature/Security", "签名")}}的摘要算法是保证证书安全性的关键因素。这篇文章提供了一些有关已知的弱签名算法信息，在使用的时候可以避免它们。
- 
 ### 安全上下文和权限特性
 
 浏览器以不同方式控制“强大特性”的使用。这些“强大特性”包括在网站上生成系统通知、使用用户的网络摄像头访问媒体流、操纵系统 GPU 以及使用网络支付。如果网站可以不受限制地使用控制这些功能的 API，那么恶意开发者就可以尝试做以下事情：
@@ -139,7 +138,6 @@ CSP 允许你添加一层安全保护，例如，只允许从特定的可信来�
   - : **`Access-Control-Allow-Origin`** 响应标头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。
 - [HTTP X-Content-Type-Options](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
   - : **`X-Content-Type-Options`** 响应标头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Guides/MIME_types#mime_嗅探)的方法，或者换句话说，MIME 类型是故意配置的。
- 
 ### 净化表单输入
 
 一般来说，不要相信用户在表单中输入的任何内容。在线填写表单既复杂又繁琐，用户很容易输入错误的数据或格式错误的数据。此外，恶意用户擅长在表单字段中输入特定的可执行代码字符串（如 SQL 或 JavaScript）。如果你不小心处理这些输入，他们可能会在你的网站上执行有害代码或删除你的数据库。请参阅 [SQL 注入](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security#sql_注入)以了解如何发生这种情况。
@@ -163,7 +161,6 @@ CSP 允许你添加一层安全保护，例如，只允许从特定的可信来�
   - : **`X-Frame-Options`** [HTTP](/zh-CN/docs/Web/HTTP) 响应标头可以用来表明是否应该允许浏览器在 [`<frame>`](/zh-CN/docs/Web/HTML/Reference/Elements/frame)、[`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)、[`<embed>`](/zh-CN/docs/Web/HTML/Reference/Elements/embed) 或 [`<object>`](/zh-CN/docs/Web/HTML/Reference/Elements/object) 中渲染页面。网站通过这些方法，保证它们的内容不被轻易嵌入至其他站点，可以避免点击劫持攻击。
 - [CSP: frame-ancestors](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/frame-ancestors)
   - : HTTP {{HTTPHeader("Content-Security-Policy")}}（CSP）标头的 **`frame-ancestors`** 指令指定了使用 {{HTMLElement("frame")}}、{{HTMLElement("iframe")}}、{{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素嵌入页面的合法父元素。
- 
 ## 典型的安全实施指南
 
 要获得在网站上有效实施安全功能的全面指导，并确保遵循最佳实践，请参阅我们的[实用安全实施指南](/zh-CN/docs/Web/Security/Practical_implementation_guides)。
