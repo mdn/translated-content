@@ -1,13 +1,15 @@
 ---
 title: scroll-snap-align
 slug: Web/CSS/scroll-snap-align
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーの (配置コンテナーとしての) スナップポート内における (配置主体としての) スナップ領域の配置として指定します。2つの値は、それぞれブロック軸とインライン軸内のスナップ位置合わせを指定します。値が1つだけ指定された場合、2番目の値は同じ値を既定値とします。
+`scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーのスナップポート（つまり{{glossary("alignment container", "配置コンテナー")}}）の中における[スナップ領域](/ja/docs/Glossary/Scroll_snap#スナップ領域)（つまり {{glossary("alignment subject", "配置対象物")}}）の配置として指定します。
 
-{{InteractiveExample("CSS Demo: scroll-snap-align")}}
+{{InteractiveExample("CSS デモ: scroll-snap-align")}}
 
 ```css interactive-example-choice
 scroll-snap-align: start;
@@ -28,7 +30,7 @@ scroll-snap-align: center;
     <div id="example-element">2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -74,30 +76,37 @@ scroll-snap-align: center;
 ## 構文
 
 ```css
-/* キーワード値 */
+/* 単一のキーワード値 */
 scroll-snap-align: none;
-scroll-snap-align: start end; /* 2 つの値を指定すると、1 番目がブロック、2 番目がインラインとなる */
 scroll-snap-align: center;
+scroll-snap-align: start;
+scroll-snap-align: end;
+
+/* 2 つのキーワード値 */
+scroll-snap-align: start end;
+scroll-snap-align: end center;
+scroll-snap-align: center start;
 
 /* グローバル値 */
 scroll-snap-align: inherit;
 scroll-snap-align: initial;
 scroll-snap-align: revert;
+scroll-snap-align: revert-layer;
 scroll-snap-align: unset;
 ```
 
 ### 値
 
+`scroll-snap-align` プロパティには、1 つまたは 2 つの値が指定できます。 1 つの値が設定されている場合、その値はブロック軸とインライン軸の両方に適用されます。 2 つの値が設定されている場合、 1 つ目の値はブロック軸を制御し、 2 つ目の値はインライン軸を制御します。
+
 - `none`
   - : このボックスでは、その軸のスナップ位置を定義しません。
 - `start`
-  - : このスクロールコンテナーのスナップポートの中で、このボックスのスクロールスナップ領域の先頭位置がこの軸のスナップ位置になります。
+  - : このスクロールコンテナーの[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)の中で、このボックスのスクロール[スナップ領域](/ja/docs/Glossary/Scroll_snap#スナップ領域)の先頭位置がこの軸のスナップ位置になります。
 - `end`
   - : このスクロールコンテナーのスナップポートの中で、このボックスのスクロールスナップ領域の末尾位置がこの軸のスナップ位置になります。
 - `center`
   - : このスクロールコンテナーのスナップポートの中で、このボックスのスクロールスナップ領域の中央位置がこの軸のスナップ位置になります。
-
-Safari は現在のところ、2 つの値の構文を誤った順序で実装しており、最初の値がインラインで次の値がブロックになっています。[bug #191865](https://bugs.webkit.org/show_bug.cgi?id=191865) を参照してください。
 
 ## 公式定義
 
@@ -118,4 +127,4 @@ Safari は現在のところ、2 つの値の構文を誤った順序で実装�
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

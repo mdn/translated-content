@@ -27,7 +27,6 @@ Habiendo diferentes maneras de definir la codificación de caracteres en una hoj
 ```
 
 - donde:
-
   - : _charset_
 
     Es un valor {{cssxref("&lt;string&gt;")}} que denota la codificación de caracteres que será usada. Debe ser el nombre de una codificación de caracteres compatible con Web, definida en el [registro IANA](https://www.iana.org/assignments/character-sets). Si varios nombres están asociados a una codificación, solamente se usará el que está marcado como _principal_.

@@ -23,7 +23,6 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 ## Valeurs
 
 - `off`
-
   - : Le navigateur n'est pas autorisé à saisir automatiquement des valeurs pour ce champ. Cette valeur peut être utilisée lorsque le document ou l'application fournit son propre mécanisme d'autocomplétion ou lorsque des raisons de sécurité imposent de ne pas pouvoir saisir la valeur automatiquement.
 
     > [!NOTE]
@@ -32,9 +31,7 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 - `on`
   - : Le navigateur est autorisé à compléter automatiquement le champ. Aucune indication supplémentaire n'est fournie quant au type de donnée attendu et c'est donc au navigateur d'utiliser une heuristique pour proposer des valeurs pertinentes.
 - `name`
-
   - : Le champ correspondant doit recevoir le nom complet de la personne. Utiliser cette valeur plutôt que les différents composants est une méthode souvent privilégiée car on évite ainsi de gérer les différentes structures des différentes locales. Toutefois, on peut utiliser les composants suivants si on souhaite décomposer l'identité de la personne :
-
     - `honorific-prefix`
       - : Le préfixe ou le titre, par exemple « M. », « Mme. », « Me. » , etc.
     - `given-name`
@@ -117,9 +114,7 @@ Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/
 - `sex`
   - : Un genre (tel que « femme », « homme », « Fa'afafine » etc.) sous la forme d'un texte libre sans passage à la ligne.
 - `tel`
-
   - : Un numéro de téléphone complet qui inclut l'identifiant du pays. Si le numéro de téléphone doit être décomposé en composants, on pourra utiliser les valeurs suivantes :
-
     - `tel-country-code`
       - : L'indicateur du pays pour le numéro de téléphone (33 pour la France ou 1 pour les États-Unis par exemple).
     - `tel-national`

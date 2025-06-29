@@ -32,7 +32,6 @@ clip: unset;
 ### 值
 
 - `<shape>`
-
   - : 一个矩形 {{cssxref("&lt;shape&gt;")}}
 
     ```css

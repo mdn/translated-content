@@ -241,8 +241,7 @@ body {
 - [window の load イベント](/ja/docs/Web/API/Window/load_event)時に、 `TabsManual` [クラス](/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)を `tablist` 要素すべてに対して初期化します。
 - `TabsManual` オブジェクトを作成すると、コンストラクターでタブとパネルへの参照すべてが `tabs` と `tabpanels` 変数に収集されるため、後でそれらに対して簡単にさまざまな処理を行うことができます。
 - コンストラクターは、すべてのタブに対して [`click`](/ja/docs/Web/API/Element/click_event) および [`keydown`](/ja/docs/Web/API/Element/keydown_event) イベントハンドラーも登録します。イベントハンドラーには、クリックまたはキー操作を使用してタブが選択された際に現れるべき内容についてのロジックが含まれます。
-- `setSelectedTab(currentTab)` 関数の中で、以下のことが行われます。。
-
+- `setSelectedTab(currentTab)` 関数の中で、以下のことが行われます。
   - `for` ループを使用して、すべてのタブを巡回し、 `aria-selected` プロパティを `false` に設定し、対応するパネルに `is-hidden` クラスを設定することで、それらを選択解除します。
   - 選択されたタブ (`currentTab`) では、 `aria-selected` を `true` に設定し、対応するパネルから `is-hidden` クラスを除去します。
 

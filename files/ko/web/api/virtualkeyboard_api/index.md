@@ -84,7 +84,7 @@ if ("virtualKeyboard" in navigator) {
 
 ### `contenteditable` 요소에서 가상 키보드 제어
 
-기본적으로 [`contenteditable`](/ko/docs/Web/HTML/Global_attributes/contenteditable) 속성을 사용하는 요소는 탭 하거나 클릭하면 가상 키보드를 나타냅니다. 특정 상황에서는 이 동작을 방지하고 대신 다른 이벤트 후에 가상 키보드를 표시하는 것이 바람직할 수 있습니다.
+기본적으로 [`contenteditable`](/ko/docs/Web/HTML/Reference/Global_attributes/contenteditable) 속성을 사용하는 요소는 탭 하거나 클릭하면 가상 키보드를 나타냅니다. 특정 상황에서는 이 동작을 방지하고 대신 다른 이벤트 후에 가상 키보드를 표시하는 것이 바람직할 수 있습니다.
 
 브라우저에서 가상 키보드가 기본적으로 처리되지 않도록 [`virtualkeyboardpolicy`](/ko/docs/Web/HTML/Global_attributes/virtualkeyboardpolicy) 속성을 `manual`으로 설정하고, 대신 {{domxref("VirtualKeyboard")}} 인터페이스의 `show()`와 `hide()` 메서드를 사용하여 직접 처리하세요.
 

@@ -31,7 +31,6 @@ new constructor[([arguments])]
 ### Parámetros
 
 - `constructor`
-
   - : Una clase o función que especifica el tipo de instancia del objeto.
 
 - `arguments`

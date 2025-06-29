@@ -94,9 +94,7 @@ align-items: unset;
 ### Valeurs
 
 - `normal`
-
   - : L'effet obtenu avec ce mot-clé dépend du mode de disposition utilisé :
-
     - Pour les éléments positionnés de façon absolue, ce mot-clé est synonyme de `start` pour les éléments remplacés, pour les autres éléments positionnés de façon absolue, il est synonyme de `stretch`.
     - Pour les éléments avec une position statique sur une disposition absolue, ce mot-clé se comporte comme `stretch`.
     - Pour les éléments flexibles, ce mot-clé est synonyme de `stretch`.
@@ -122,7 +120,6 @@ align-items: unset;
 - `baseline`
 
   `first baseline last baseline`
-
   - : Tous les éléments flexibles sont alignés afin que [leurs différentes lignes de base](https://drafts.csswg.org/css-flexbox-1/#flex-baselines) soient alignées. L'élément pour lequel on a la plus grande distance entre la marge et la ligne de base est aligné sur le bord de la ligne courante.
 
 - `stretch`

@@ -28,38 +28,38 @@ original_slug: Web/XSLT/Element
 
 뒤따르는 요소 주석은 설명과 문법 나열, 필수 속성과 선택 속성 목록, 타입과 자리 설명, W3C 권고안 속 요소 소스와 현 Gecko의 지원 정도에 대한 설명을 포함합니다.
 
-- [`<xsl:apply-imports>`](/ko/docs/Web/XSLT/Element/apply-imports)
-- [`<xsl:apply-templates>`](/ko/docs/Web/XSLT/Element/apply-templates)
-- [`<xsl:attribute>`](/ko/docs/Web/XSLT/Element/attribute)
-- [`<xsl:attribute-set>`](/ko/docs/Web/XSLT/Element/attribute-set)
-- [`<xsl:call-template>`](/ko/docs/Web/XSLT/Element/call-template)
-- [`<xsl:choose>`](/ko/docs/Web/XSLT/Element/choose)
-- [`<xsl:comment>`](/ko/docs/Web/XSLT/Element/comment)
-- [`<xsl:copy>`](/ko/docs/Web/XSLT/Element/copy)
-- [`<xsl:copy-of>`](/ko/docs/Web/XSLT/Element/copy-of)
-- [`<xsl:decimal-format>`](/ko/docs/Web/XSLT/Element/decimal-format)
-- [`<xsl:element>`](/ko/docs/Web/XSLT/Element/element)
-- [`<xsl:fallback>`](/ko/docs/Web/XSLT/Element/fallback) _(not supported)_
-- [`<xsl:for-each>`](/ko/docs/Web/XSLT/Element/for-each)
-- [`<xsl:if>`](/ko/docs/Web/XSLT/Element/if)
-- [`<xsl:import>`](/ko/docs/Web/XSLT/Element/import) _(mostly supported)_
-- [`<xsl:include>`](/ko/docs/Web/XSLT/Element/include)
-- [`<xsl:key>`](/ko/docs/Web/XSLT/Element/key)
-- [`<xsl:message>`](/ko/docs/Web/XSLT/Element/message)
-- [`<xsl:namespace-alias>`](/ko/docs/Web/XSLT/Element/namespace-alias) _(not supported)_
-- [`<xsl:number>`](/ko/docs/Web/XSLT/Element/number) _(partially supported)_
-- [`<xsl:otherwise>`](/ko/docs/Web/XSLT/Element/otherwise)
-- [`<xsl:output>`](/ko/docs/Web/XSLT/Element/output) _(partially supported)_
-- [`<xsl:param>`](/ko/docs/Web/XSLT/Element/param)
-- [`<xsl:preserve-space>`](/ko/docs/Web/XSLT/Element/preserve-space)
-- [`<xsl:processing-instruction>`](/ko/docs/Web/XSLT/Element/processing-instruction)
-- [`<xsl:sort>`](/ko/docs/Web/XSLT/Element/sort)
-- [`<xsl:strip-space>`](/ko/docs/Web/XSLT/Element/strip-space)
-- [`<xsl:stylesheet>`](/ko/docs/Web/XSLT/Element/stylesheet) _(partially supported)_
-- [`<xsl:template>`](/ko/docs/Web/XSLT/Element/template)
-- [`<xsl:text>`](/ko/docs/Web/XSLT/Element/text) _(partially supported)_
-- [`<xsl:transform>`](/ko/docs/Web/XSLT/Element/transform)
-- [`<xsl:value-of>`](/ko/docs/Web/XSLT/Element/value-of) _(partially supported)_
-- [`<xsl:variable>`](/ko/docs/Web/XSLT/Element/variable)
-- [`<xsl:when>`](/ko/docs/Web/XSLT/Element/when)
-- [`<xsl:with-param>`](/ko/docs/Web/XSLT/Element/with-param)
+- [`<xsl:apply-imports>`](/ko/docs/Web/XML/XSLT/Reference/Element/apply-imports)
+- [`<xsl:apply-templates>`](/ko/docs/Web/XML/XSLT/Reference/Element/apply-templates)
+- [`<xsl:attribute>`](/ko/docs/Web/XML/XSLT/Reference/Element/attribute)
+- [`<xsl:attribute-set>`](/ko/docs/Web/XML/XSLT/Reference/Element/attribute-set)
+- [`<xsl:call-template>`](/ko/docs/Web/XML/XSLT/Reference/Element/call-template)
+- [`<xsl:choose>`](/ko/docs/Web/XML/XSLT/Reference/Element/choose)
+- [`<xsl:comment>`](/ko/docs/Web/XML/XSLT/Reference/Element/comment)
+- [`<xsl:copy>`](/ko/docs/Web/XML/XSLT/Reference/Element/copy)
+- [`<xsl:copy-of>`](/ko/docs/Web/XML/XSLT/Reference/Element/copy-of)
+- [`<xsl:decimal-format>`](/ko/docs/Web/XML/XSLT/Reference/Element/decimal-format)
+- [`<xsl:element>`](/ko/docs/Web/XML/XSLT/Reference/Element/element)
+- [`<xsl:fallback>`](/ko/docs/Web/XML/XSLT/Reference/Element/fallback) _(not supported)_
+- [`<xsl:for-each>`](/ko/docs/Web/XML/XSLT/Reference/Element/for-each)
+- [`<xsl:if>`](/ko/docs/Web/XML/XSLT/Reference/Element/if)
+- [`<xsl:import>`](/ko/docs/Web/XML/XSLT/Reference/Element/import) _(mostly supported)_
+- [`<xsl:include>`](/ko/docs/Web/XML/XSLT/Reference/Element/include)
+- [`<xsl:key>`](/ko/docs/Web/XML/XSLT/Reference/Element/key)
+- [`<xsl:message>`](/ko/docs/Web/XML/XSLT/Reference/Element/message)
+- [`<xsl:namespace-alias>`](/ko/docs/Web/XML/XSLT/Reference/Element/namespace-alias) _(not supported)_
+- [`<xsl:number>`](/ko/docs/Web/XML/XSLT/Reference/Element/number) _(partially supported)_
+- [`<xsl:otherwise>`](/ko/docs/Web/XML/XSLT/Reference/Element/otherwise)
+- [`<xsl:output>`](/ko/docs/Web/XML/XSLT/Reference/Element/output) _(partially supported)_
+- [`<xsl:param>`](/ko/docs/Web/XML/XSLT/Reference/Element/param)
+- [`<xsl:preserve-space>`](/ko/docs/Web/XML/XSLT/Reference/Element/preserve-space)
+- [`<xsl:processing-instruction>`](/ko/docs/Web/XML/XSLT/Reference/Element/processing-instruction)
+- [`<xsl:sort>`](/ko/docs/Web/XML/XSLT/Reference/Element/sort)
+- [`<xsl:strip-space>`](/ko/docs/Web/XML/XSLT/Reference/Element/strip-space)
+- [`<xsl:stylesheet>`](/ko/docs/Web/XML/XSLT/Reference/Element/stylesheet) _(partially supported)_
+- [`<xsl:template>`](/ko/docs/Web/XML/XSLT/Reference/Element/template)
+- [`<xsl:text>`](/ko/docs/Web/XML/XSLT/Reference/Element/text) _(partially supported)_
+- [`<xsl:transform>`](/ko/docs/Web/XML/XSLT/Reference/Element/transform)
+- [`<xsl:value-of>`](/ko/docs/Web/XML/XSLT/Reference/Element/value-of) _(partially supported)_
+- [`<xsl:variable>`](/ko/docs/Web/XML/XSLT/Reference/Element/variable)
+- [`<xsl:when>`](/ko/docs/Web/XML/XSLT/Reference/Element/when)
+- [`<xsl:with-param>`](/ko/docs/Web/XML/XSLT/Reference/Element/with-param)

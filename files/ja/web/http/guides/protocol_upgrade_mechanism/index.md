@@ -148,7 +148,6 @@ Sec-WebSocket-Accept: hash
 - [WebSocket API](/ja/docs/Web/API/WebSocket)
 - [HTTP](/ja/docs/Web/HTTP)
 - 仕様書と RFC:
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

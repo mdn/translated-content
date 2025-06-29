@@ -248,7 +248,6 @@ Dessinons un triangle équilatéral sur le canevas.
    Tout d'abord, on dessine une ligne jusqu'au point de coordonnées (150, 50), autrement dit, le chemin progresse de 100 pixels vers la droite sur l'axe horizontal.
 
    Ensuite, on calcule la hauteur du triangle équilatéral en utilisant une formule de trigonométrie. Le triangle sera dessiné avec la pointe vers le bas et les angles d'un triangle équilatéral mesurent tous 60 degrés. Pour calculer la hauteur, on peut diviser le triangle équilatéral en deux triangles rectangles qui auront chacun trois angles&nbsp;: un à 90 degrés, un deuxième à 60 degrés et le troisième à 30 degrés. Les termes utilisés pour les côtés sont&nbsp;:
-
    - **L'hypoténuse** pour le côté le plus long
    - Le côté **adjacent** pour celui qui participe à l'angle de 60 degrés et dont on sait que sa longueur mesure 50 pixels (la moitié de la ligne qu'on vient de dessiner)
    - Le côté **opposé** qui correspond à la hauteur du triangle qu'on veut calculer.
@@ -290,7 +289,6 @@ Dessinons maintenant un cercle dans le canevas. Pour cela, on utilisera la méth
    ```
 
    La structure est similaire ici, avec toutefois deux différences&nbsp;:
-
    - Le dernier paramètre `arc()` vaut `true`, ce qui signifie que l'angle est dessiné dans le sens inverse des aiguilles d'une montre, donc, même si l'angle commence à -45 degrés et finit à 45 degrés, on dessine un arc qui couvre les 270 degrés en dehors de ces deux valeurs. Si vous changez le paramètre de `true` à `false` puis réexécutez le code, vous verrez alors une portion de 90 degrés être dessinée.
    - Avant d'appeler `fill()`, on dessine une ligne jusqu'au centre du cercle. Cela permet d'obtenir une forme ressemblant à un Pac-Man. Si vous retirez l'instruction pour cette ligne (essayez&nbsp;!), vous obtiendrez seulement le cercle qui a été tronqué sur la droite entre le point de départ de l'angle et le point d'arrivée. Cela permet de voir que si on remplit un chemin incomplet (c'est-à-dire un chemin pour lesquels les points qui le composent ne se rejoignent pas), le navigateur remplira une ligne droite entre le point de départ et le point d'arrivée puis remplira la forme ainsi créée.
 
@@ -369,7 +367,6 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
    ```js
    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
    ```
-
    - Le premier paramètre est toujours la référence à l'image (comme avant).
    - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au-dessus du troisième paramètre dans l'image ne sera pas dessiné.
    - Les quatrième et cinquième paramètres définissent la largeur et la hauteur de la zone à rogner de l'image.
@@ -439,7 +436,6 @@ Construisons un exemple simple pour illustrer ce concept.
    ```
 
    À chaque itération&nbsp;:
-
    - On définit `fillStyle` avec une teinte de violet légèrement transparent, qui change selon la valeur de `length`. Vous le verrez ensuite, la longueur portée par la variable `length` diminue à chaque itération. L'effet ainsi obtenu est que la couleur devient de plus en plus vive à chaque itération.
    - On commence un chemin.
    - On déplace le pinceau aux coordonnées `(moveOffset, moveOffset)`. La variable `moveOffset` définit jusqu'où on veut se déplacer à chaque dessin.
@@ -560,7 +556,6 @@ Créons maintenant notre propre animation en recréant un personnage d'un ancien
    ```
 
    Comme vous pouvez le voir&nbsp;:
-
    - On indique la variable `image` comme image à embarquer.
    - Les deuxième et troisième paramètres indiquent les coordonnées du coin supérieur gauche de la zone à découper sur l'image source avec la valeur horizontale qui vaut `sprite` multipliée par 102 (où `sprite` est un numéro d'image entre 0 et 5) et où la coordonnée verticale vaut toujours 0.
    - Les quatrième et cinquième paramètre indiquent la taille de la portion à découper, ici 102 pixels par 148 pixels.
@@ -724,7 +719,6 @@ Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL
    ```
 
    Le constructeur [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) utilise 4 arguments&nbsp;:
-
    - Le champ de vision (<i lang="en">field of view</i> ou FoV)
      - : La largeur angulaire de la zone devant la caméra et qui devrait être visible. Elle est exprimée en degrés.
    - Les proportions
@@ -768,7 +762,6 @@ Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL
    ```
 
    Il y a plus de lignes à expliciter ici. Allons-y par étape&nbsp;:
-
    - On commence par créer une variable globale `cube` pour y accéder puis tout endroit du code.
    - Ensuite, on crée un nouvel objet [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader), puis on appelle la méthode `load()` de celui-ci. `load()` prend ici deux paramètres (elle peut en prendre plus)&nbsp;: la texture à charger (il s'agit de notre fichier PNG) et la fonction à exécuter lorsque la texture a été chargée.
    - Dans cette fonction, on utilise les propriétés de l'objet [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) afin d'indiquer qu'on veut une répétition en 2 x 2 de l'image autour des faces du cube. Ensuite, on crée un nouvel objet [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) et un nouvel objet [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) qu'on combine dans un objet [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) pour créer notre cube. Généralement, un objet a besoin d'une géométrie (sa forme) et d'un matériau (ce à quoi ressemble sa surface).

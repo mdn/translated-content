@@ -15,7 +15,7 @@ l10n:
 このようなアニメーションは、[前庭運動障碍](https://www.a11yproject.com/posts/understanding-vestibular-disorders/)のある人に不快感を引き起こす可能性があります。大きなオブジェクトを拡大縮小したりパンなどしたりするアニメーションは、前庭運動を引き起こす可能性があります。
 
 ```css
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   /* ユーザーの端末の設定が「動きを縮小する」に設定されている場合に適用するスタイル */
 }
 ```
@@ -25,14 +25,13 @@ l10n:
 - `no-preference`
   - : システムが把握している設定をユーザーが行っていないことを示します。このキーワードの値は false と評価されます。
 - `reduce`
-  - : ユーザーが、端末で動きの縮小に関する設定を有効にしていることを示します。このキーワードの値は true として評価されます。
+  - : ユーザーが、端末で動きの縮小に関する設定を有効にしていることを示します。`reduce` のキーワードの値は true として評価されます。よって、`@media (prefers-reduced-motion)` は `@media (prefers-reduced-motion: reduce)` と同等です。
 
 ## ユーザー設定
 
 Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 
 - GTK/GNOME: Settings > Accessibility > Seeing > Reduced animation がオンになっている場合。
-
   - GNOME の古いバージョンでは、 GNOME Tweaks > General タブ (バージョンによっては Appearance タブ) > Animations がオフになっている場合。
   - 他にも、 `gtk-enable-animations = false` を [GTK 3 configuration file](https://wiki.archlinux.org/title/GTK#Configuration) の `[Settings]` に追加する方法もあります。
 
@@ -65,7 +64,7 @@ Firefox では、 `reduce` の要求は以下の場合に尊重されます。
 }
 
 /* 前庭運動を引き起こすのを避けるため、アニメーションを控えめにする */
-@media (prefers-reduced-motion) {
+@media (prefers-reduced-motion: reduce) {
   .animation {
     animation: dissolve 4s linear infinite both;
     background-color: green;

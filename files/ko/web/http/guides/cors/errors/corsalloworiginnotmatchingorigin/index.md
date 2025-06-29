@@ -36,7 +36,7 @@ add_header 'Access-Control-Allow-Origin' 'origin'
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
 - [CORS 사용: 내 서버에 CORS를 추가하고 싶다면](https://enable-cors.org/server.html)

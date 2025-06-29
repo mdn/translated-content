@@ -25,9 +25,7 @@ getHighEntropyValues(hints)
 ### 引数
 
 - `hints`
-
   - : 返すべきヒントを格納した配列で、 1 つまたは複数を指定します。
-
     - `"architecture"`
     - `"bitness"`
     - `"formFactor"`

@@ -5,7 +5,7 @@ slug: Web/CSS/background
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
+[CSS](/ko/docs/Web/API/CSS) **`background`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 색상, 이미지, 원점, 크기, 반복 등 여러 배경 스타일을 한 번에 지정합니다.
 
 {{InteractiveExample("CSS Demo: background")}}
 
@@ -81,7 +81,6 @@ background: no-repeat center/80% url("../img/image.png");
 각 레이어의 구문은 다음과 같습니다.
 
 - 각 레이어는 다음 값을 가지거나 가지지 않을 수 있습니다.
-
   - [`<attachment>`](#attachment)
   - [`<bg-image>`](#bg-image)
   - [`<position>`](#position)

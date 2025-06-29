@@ -5,7 +5,7 @@ slug: Web/CSS/time
 
 {{CSSRef}}
 
-**`<time>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Types)은 시간 값을 초나 밀리초 단위로 나타냅니다. {{cssxref("animation")}}, {{cssxref("transition")}}과 관련 속성에서 사용합니다.
+**`<time>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 시간 값을 초나 밀리초 단위로 나타냅니다. {{cssxref("animation")}}, {{cssxref("transition")}}과 관련 속성에서 사용합니다.
 
 ## 구문
 

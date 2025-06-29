@@ -87,7 +87,7 @@ mark {
 
 ## Atributos
 
-Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene atributos que no sean los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), comunes a todos los elementos.
 
 ## Notas de uso
 

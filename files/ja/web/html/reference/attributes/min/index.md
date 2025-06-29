@@ -2,9 +2,8 @@
 title: "HTML 属性: min"
 short-title: min
 slug: Web/HTML/Reference/Attributes/min
-original_slug: Web/HTML/Attributes/min
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: f4372ac9926fc2a1cbe408dae02b381b7f1909da
 ---
 
 {{HTMLSidebar}}
@@ -127,7 +126,7 @@ input:invalid {
 
 `step` の既定値は 1 なので、有効な値は `7.2`, `8.2`, `9.2`, などになります。 8 の値は有効ではありません。無効な値が入っているので、対応しているブラウザーは値が無効であることを表示します。
 
-{{EmbedLiveSample("Impact_on_step",200,55)}}
+{{EmbedLiveSample("step_への影響",200,55)}}
 
 明示的に含まれていない限り、 `number`、 `range` では `step` は既定値の 1 となり、 date/time 入力型では 1 単位 (秒, 週, 月, 日) となります。
 
@@ -147,7 +146,7 @@ input:invalid {
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
 - [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
-- その他の meter 属性: [`low`](/ja/docs/Web/HTML/Reference/Attributes/low), [`high`](/ja/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Reference/Attributes/optimum)
+- その他の meter 属性: [`low`](/ja/docs/Web/HTML/Reference/Elements/meter#low), [`high`](/ja/docs/Web/HTML/Reference/Elements/meter#high), [`optimum`](/ja/docs/Web/HTML/Reference/Elements/meter#optimum)
 - [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeUnderflow')}}
