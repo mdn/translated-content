@@ -344,5 +344,5 @@ withAwait();
 - {{jsxref("Statements/async_function", "async function")}}
 - [`async function` 표현식](/ko/docs/Web/JavaScript/Reference/Operators/async_function)
 - {{jsxref("AsyncFunction")}}
-- [최상단 await](https://v8.dev/features/top-level-await) on v8.dev (2019)
+- [최상단 await](https://v8.dev/features/top-level-await) (v8.dev, 2019)
 - [typescript-eslint 규칙: `return-await`](https://typescript-eslint.io/rules/return-await/)
