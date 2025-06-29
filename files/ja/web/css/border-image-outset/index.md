@@ -11,7 +11,7 @@ l10n:
 
 境界画像のうち、 `border-image-outset` によって要素の境界ボックスの外に表示された部分は、はみ出した際にスクロールバーを表示させたり、マウスイベントを受け取ったりすることはありません。
 
-{{InteractiveExample("CSS Demo: border-image-outset")}}
+{{InteractiveExample("CSS デモ: border-image-outset")}}
 
 ```css interactive-example-choice
 border-image-outset: 0;
