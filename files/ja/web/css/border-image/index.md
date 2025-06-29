@@ -9,7 +9,7 @@ l10n:
 
 **`border-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定された要素の周りに画像を描きます。これは要素の通常の[境界](/ja/docs/Web/CSS/border)を置き換えます。
 
-{{InteractiveExample("CSS Demo: border-image")}}
+{{InteractiveExample("CSS デモ: border-image")}}
 
 ```css interactive-example-choice
 border-image: url("/shared-assets/images/examples/border-diamonds.png") 30;
