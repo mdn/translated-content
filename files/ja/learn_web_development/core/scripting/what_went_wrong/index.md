@@ -64,6 +64,7 @@ l10n:
    Uncaught TypeError: guessSubmit.addeventListener is not a function
    number-game-errors.html:87:19
    ```
+
    - 最初の部分、 `Uncaught TypeError: guessSubmit.addeventListener is not a function` は何が起きたのかを知らせています。
    - 2 番目の部分、 `number-game-errors.html:87:19` はエラーがコードのどこにあるかを知らせています。 "number-game-errors.html" の 86 行目、 15 文字目です。
 

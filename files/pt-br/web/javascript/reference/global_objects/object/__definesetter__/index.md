@@ -28,6 +28,7 @@ obj.__defineSetter__(prop, fun)
     ```js
     function(val) { . . . }
     ```
+
     - `val`
       - : Um apelido para a variável que contém o valor que se tentou atribuir a `prop`.
 

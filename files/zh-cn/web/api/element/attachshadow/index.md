@@ -49,6 +49,7 @@ attachShadow(options)
         element.attachShadow({ mode: "open" });
         element.shadowRoot; // 返回一个 ShadowRoot 对象
         ```
+
         - `closed` 拒绝从 js 外部访问关闭的 shadow root 节点
 
         ```js

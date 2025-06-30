@@ -367,6 +367,7 @@ Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'
    ```js
    ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
    ```
+
    - Le premier paramètre est toujours la référence à l'image (comme avant).
    - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au-dessus du troisième paramètre dans l'image ne sera pas dessiné.
    - Les quatrième et cinquième paramètres définissent la largeur et la hauteur de la zone à rogner de l'image.
