@@ -2,7 +2,7 @@
 title: Math.asinh()
 slug: Web/JavaScript/Reference/Global_Objects/Math/asinh
 l10n:
-  sourceCommit: e8320dfbed49d37589d0fe759ef6506885f340f7
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
 {{JSRef}}

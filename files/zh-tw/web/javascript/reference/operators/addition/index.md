@@ -2,7 +2,7 @@
 title: 加法（+）
 slug: Web/JavaScript/Reference/Operators/Addition
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
 ---
 
 {{jsSidebar("Operators")}}
@@ -39,7 +39,7 @@ x + y
 - 如果兩者都是 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt)，則執行 BigInt 加法。如果一方是 BigInt 但另一方不是，則會拋出 {{jsxref("TypeError")}}。
 - 否則，兩邊都會[轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)，然後執行數值加法。
 
-字串串接常被認為等同於[模板字面值](/zh-TW/docs/Web/JavaScript/Reference/Template_literals)或 [`String.prototype.concat()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/concat)，但並非如此。加法會將運算式強制轉換為*原始型別*，此過程會優先呼叫 [`valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)；而模板字面值與 `concat()` 則會將運算式強制轉換為*字串*，優先呼叫 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)。如果運算式有 [`[Symbol.toPrimitive]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，字串串接時會以「default」作為提示呼叫，而模板字面值則使用「string」。這對於具有不同字串與原始值表示的物件很重要，例如 [Temporal](https://github.com/tc39/proposal-temporal)，其 `valueOf()` 方法會拋出例外。
+字串串接常被認為等同於[模板字面值](/zh-TW/docs/Web/JavaScript/Reference/Template_literals)或 [`String.prototype.concat()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/concat)，但並非如此。加法會將運算式強制轉換為*原始型別*，此過程會優先呼叫 [`valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)；而模板字面值與 `concat()` 則會將運算式強制轉換為*字串*，優先呼叫 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)。如果運算式有 [`[Symbol.toPrimitive]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，字串串接時會以「default」作為提示呼叫，而模板字面值則使用「string」。這對於具有不同字串與原始值表示的物件很重要，例如 {{jsxref("Temporal")}}，其物件的 `valueOf()` 方法會拋出全部例外。
 
 ```js
 const t = Temporal.Now.instant();

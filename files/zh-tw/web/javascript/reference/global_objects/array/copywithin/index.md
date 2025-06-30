@@ -2,7 +2,7 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: 8166ab356cccb30af5e0ad912815d19100249e17
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
 {{JSRef}}

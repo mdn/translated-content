@@ -2,7 +2,7 @@
 title: data：URL
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
+  sourceCommit: e488eba036b2fee56444fd579c3759ef45ff2ca8
 ---
 
 **Data URL**，即以 `data:` 為前綴的 URL，允許內容創作者將小型檔案內嵌於文件中。它們先前被稱為「資料 URI」，但該名稱已被 WHATWG 廢除。
@@ -22,7 +22,7 @@ data:[<media-type>][;base64],<data>
 
 如果資料包含 [RFC 3986 中定義為保留字元的字元](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)，或者包含空白字元、換行字元或其他不可打印字元，這些字元必須進行{{Glossary("Percent-encoding", "百分比編碼")}}。
 
-如果資料是文字，你可以直接內嵌該文字（根據包裹文件的類型，使用適當的實體或轉義字符）。否則，你可以指定 `base64` 來內嵌以 base64 編碼的二進位資料。你可以在[這裡](/zh-TW/docs/Web/HTTP/Guides/MIME_types)和[這裡](/zh-TW/docs/Web/HTTP/Guides/MIME_types/Common_types)找到更多有關 MIME 類型的資訊。
+如果資料是文字，你可以直接內嵌該文字（根據包裹文件的類型，使用適當的實體或轉義字符）。否則，你可以指定 `base64` 來內嵌以 base64 編碼的二進位資料。你可以參考 [MIME 類型結構的完整解析](/zh-TW/docs/Web/HTTP/Guides/MIME_types)與 [Web 上常見的 MIME 類型的表格](/zh-TW/docs/Web/HTTP/Guides/MIME_types/Common_types)
 
 一些範例：
 
