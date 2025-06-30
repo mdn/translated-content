@@ -25,7 +25,7 @@ block-size: fit-content;
 
 ### Utilisation de `fit-content` pour le dimensionnement des boîtes
 
-#### HTML
+#### HTML et CSS
 
 ```html
 <div class="container">
@@ -37,8 +37,6 @@ block-size: fit-content;
   </div>
 </div>
 ```
-
-#### CSS
 
 ```css
 .container {
@@ -57,7 +55,7 @@ block-size: fit-content;
 
 #### Résultat
 
-{{EmbedLiveSample("utilisation_de_fit-content_pour_le_dimensionnement_des_bo%C3%AEtes", "100%", 230)}}
+{{EmbedLiveSample("utilisation_de_fit-content_pour_le_dimensionnement_des_boites", "100%", 230)}}
 
 ## Spécifications
 
