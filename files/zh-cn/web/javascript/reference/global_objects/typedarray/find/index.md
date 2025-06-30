@@ -52,19 +52,27 @@ find(callbackFn, thisArg)
 下面的示例在类型化数组中寻找质数（如果没有质数则返回 [`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)）。
 
 ```js
-function isPrime(element, index, array) {
-  var start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
-var uint8 = new Uint8Array([4, 5, 8, 12]);
+const uint8 = new Uint8Array([4, 5, 8, 12]);
 console.log(uint8.find(isPrime)); // 5
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ## 规范
 
