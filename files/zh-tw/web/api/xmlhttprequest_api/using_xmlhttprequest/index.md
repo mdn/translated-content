@@ -142,7 +142,7 @@ function transferCanceled(evt) {
 > [!NOTE]
 > 你需要在請求上呼叫 `open()` 之前新增事件監聽器。否則 `progress` 事件將不會觸發。
 
-進度事件處理常式，在此範例中由 `updateProgress()` 函式指定，在事件的 `total` 和 `loaded` 欄位中接收要傳輸的總位元組數以及到目前為止已傳輸的位元組數。然而，如果 `lengthComputable` 欄位為 false，則總長度未知，將為零。
+進度事件處理程式（在此範例中由 `updateProgress()` 函式指定）在事件的 `total` 和 `loaded` 欄位中接收要傳輸的總位元組數以及到目前為止已傳輸的位元組數。然而，如果 `lengthComputable` 欄位為 false，則總長度未知，將為零。
 
 進度事件同時存在於下載和上傳傳輸中。下載事件在 `XMLHttpRequest` 物件本身上觸發，如上例所示。上傳事件在 `XMLHttpRequest.upload` 物件上觸發，如下所示：
 
