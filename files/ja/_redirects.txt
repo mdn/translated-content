@@ -5330,7 +5330,8 @@
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ja/docs/Web/JavaScript/Reference/Classes/Private_properties
+/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ja/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ja/docs/Web/JavaScript/Reference/Classes/Private_properties	/ja/docs/Web/JavaScript/Reference/Classes/Private_elements
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ja/docs/Web/JavaScript/Reference/Errors/Bad_return
