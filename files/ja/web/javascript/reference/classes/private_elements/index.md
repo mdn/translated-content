@@ -1,6 +1,7 @@
 ---
 title: プライベートプロパティ
-slug: Web/JavaScript/Reference/Classes/Private_properties
+slug: Web/JavaScript/Reference/Classes/Private_elements
+original_slug: Web/JavaScript/Reference/Classes/Private_properties
 l10n:
   sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
 ---
