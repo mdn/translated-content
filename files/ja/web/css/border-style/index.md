@@ -9,7 +9,7 @@ l10n:
 
 **`border-style`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界線の 4 辺すべての線のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-style")}}
+{{InteractiveExample("CSS デモ: border-style")}}
 
 ```css interactive-example-choice
 border-style: none;

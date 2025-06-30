@@ -9,7 +9,7 @@ l10n:
 
 **`border-top-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界線](/ja/docs/Web/CSS/border)の色を設定します。一括指定プロパティの {{cssxref("border-color")}} または {{cssxref("border-top")}} でも設定することができます。
 
-{{InteractiveExample("CSS Demo: border-top-color")}}
+{{InteractiveExample("CSS デモ: border-top-color")}}
 
 ```css interactive-example-choice
 border-top-color: red;

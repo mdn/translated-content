@@ -9,7 +9,7 @@ l10n:
 
 **`border-inline-start-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なブロックの先頭側の境界のスタイルを定義し、それが要素の書字方向やテキストの方向に応じて物理的な境界のスタイルに対応づけられます。これは {{cssxref("border-top-style")}}、{{cssxref("border-right-style")}}、{{cssxref("border-bottom-style")}}、{{cssxref("border-left-style")}} の何れかに対応し、どれに対応するかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: border-inline-start-style")}}
+{{InteractiveExample("CSS デモ: border-inline-start-style")}}
 
 ```css interactive-example-choice
 border-inline-start-style: dotted;

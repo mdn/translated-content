@@ -2,24 +2,24 @@
 title: zoom
 slug: Web/CSS/zoom
 l10n:
-  sourceCommit: 1f71ae6ad4874ed03f708e06ed90780997a0934b
+  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
 {{CSSRef}}
 
-要素の拡大レベルを制御するには、[CSS](/ja/docs/Web/CSS) の **zoom** プロパティを使用することができます。このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
+**`zoom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の拡大レベルを制御するために使用できます。
+このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
 
-`zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。拡大縮小の際、デフォルトの {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は上部と中央から拡大縮小されます。
+`zoom` プロパティは、対象となる要素を拡大縮小し、ページレイアウトに影響を与えます。
+拡大縮小の際、既定の {{CSSXRef("writing-mode")}} を使用している場合、拡大縮小された要素は `top` と `center` から拡大縮小されます。
 
-対照的に、{{cssxref("transform-function/scale", "scale()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。`scale()` を使用して、内容が含む要素よりも大きくなった場合は、オーバーフローが有効になります。さらに、`scale()` を使用して調整された要素は、デフォルトでは中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
+一方、 {{cssxref("transform-function/scale", "scale()")}} を使用して拡大縮小された要素は、レイアウトの再計算やページ上の他の要素を移動させることはありません。
+`scale()` を使用して、内容が含む要素よりも大きくなった場合は、 {{CSSXRef("overflow")}} が有効になります。
+さらに、 `scale()` を使用して調整された要素は、既定では中心から変形します。これは、{{CSSXRef("transform-origin")}} プロパティで変更できます。
 
 ## 構文
 
 ```css
-/* キーワード値 */
-zoom: normal;
-zoom: reset;
-
 /* <percentage> 値 */
 zoom: 50%;
 zoom: 200%;
@@ -27,6 +27,10 @@ zoom: 200%;
 /* <number> 値 */
 zoom: 1.1;
 zoom: 0.7;
+
+/* 標準外のキーワード値 */
+zoom: normal;
+zoom: reset;
 
 /* グローバル値 */
 zoom: inherit;
@@ -38,14 +42,17 @@ zoom: unset;
 
 ### 値
 
-- `normal`
-  - : 要素を通常のサイズでレンダリングします。
-- `reset`
-  - : ユーザーが非ピンチベースのズームを利用したとき（例えば <kbd>Ctrl</kbd> \- <kbd>-</kbd> または <kbd>Ctrl</kbd> \+ <kbd>+</kbd> のキーボード・ショートカットを利用したとき）は要素を拡大縮小しない。この値を**使用せず**、代わりに標準の `unset` 値を使用してください。
 - {{cssxref("&lt;percentage&gt;")}}
   - : ズーム率です。`100%` と `normal` は等価です。`100%` よりも大きな値はズームイン、`100%` よりも小さな値はズームアウトします。
 - {{cssxref("&lt;number&gt;")}}
   - : ズーム率です。対応するパーセンテージ（`1.0` = `100%` = `normal`）に相当します。`1.0` よりも大きな値はズームイン、`1.0` よりも小さな値はズームアウトします。
+
+2 つの標準外のキーワード値はお勧めしません。[ブラウザーの互換性](#ブラウザーの互換性)データを調べてください。
+
+- `normal`
+  - : 要素を通常のサイズでレンダリングします。`zoom: 1` と同じです。代わりに、グローバルな {{cssxref("unset")}} キーワードの値を使用してください。
+- `reset`
+  - : ユーザーが非ピンチベースのズームを利用したとき（例えば <kbd>Ctrl</kbd> \- <kbd>-</kbd> または <kbd>Ctrl</kbd> \+ <kbd>+</kbd> のキーボードショートカットを利用したとき）は要素を拡大縮小しない。この値を**使用せず**、代わりに標準の `unset` 値を使用してください。
 
 ## 公式定義
 
@@ -53,10 +60,7 @@ zoom: unset;
 
 ## 形式文法
 
-```plain
-zoom =
-  normal | reset | <number> | <percentage>
-```
+{{csssyntax}}
 
 ## 例
 
@@ -104,7 +108,7 @@ p:hover {
 
 ### 要素のリサイズ
 
-この例では、`div` 要素は `normal`, `<percentage>`, `<number>` の値を使ってズームされています。
+この例では、`div` 要素は `normal`, `<percentage>`, `<number>` の値を使って拡大縮小されています。
 
 #### HTML
 
@@ -142,18 +146,18 @@ div#c {
 
 {{EmbedLiveSample('resizing_elements')}}
 
-### ズーム率を操作する
+### 拡大率コントロールの作成
 
-この例では、`select` フィールドを使ってコンテンツのズームレベルを変更しています。
+この例では、`select` フィールドを使ってコンテンツの拡大レベルを変更しています。
 
 #### HTML
 
-HTML のこの最初のブロックでは、異なるズーム値を持つ `select` フィールドが定義されています。
+HTML のこの最初のブロックでは、異なる `zoom` 値を持つ `select` フィールドが定義されています。
 
 ```html
 <section class="controls">
   <label for="zoom"
-    >Zoom level
+    >ズームレベル
     <select name="zoom" id="zoom">
       <option value="0.5">Extra Small</option>
       <option value="0.75">Small</option>
@@ -165,10 +169,10 @@ HTML のこの最初のブロックでは、異なるズーム値を持つ `sele
 </section>
 ```
 
-この 2 番目のブロックには、ブラウザーが `zoom` をサポートしている場合には非表示となる **not supported** メッセージが追加されています。
+この 2 番目のブロックには、ブラウザーが `zoom` に対応している場合には非表示となる、**対応していません**というメッセージが追加されています。
 
 ```html
-<p class="zoom-notice">CSS zoom is not supported</p>
+<p class="zoom-notice">CSS zoom に対応していません</p>
 ```
 
 最後のブロックは、ズームされるコンテンツを定義しているだけです。
@@ -217,7 +221,7 @@ html {
 }
 ```
 
-この最後の CSS ブロックでは、ブラウザーが `zoom` をサポートしているかどうかをチェックし、サポートしている場合は **not supported** メッセージを `display: none;` に設定しています。
+この最後の CSS ブロックでは、ブラウザーが `zoom` に対応しているかどうかをチェックし、対応している場合は**対応していません**というメッセージを `display: none;` に設定しています。
 
 ```css
 @supports (zoom: 1) {
@@ -229,7 +233,7 @@ html {
 
 #### JavaScript
 
-この JavaScript は、`select` フィールドの変更を監視し、コンテンツ・セクションの `--zoom-level` に新しい値（例えば `style="--zoom-level: 1.5;"`）を設定します。
+この JavaScript は、`select` フィールドの変更を監視し、コンテンツセクションの `--zoom-level` に新しい値（例えば `style="--zoom-level: 1.5;"`）を設定します。
 
 ```js
 const zoomControl = document.querySelector("#zoom");
@@ -255,3 +259,7 @@ zoomControl.addEventListener("change", updateZoom);
 ## 関連情報
 
 - [CSS-Tricks' CSS Almanac の `zoom` の記事](https://css-tricks.com/almanac/properties/z/zoom/)
+- {{cssxref("transform")}}
+- {{cssxref("scale")}}
+- {{cssxref("unset")}} キーワード
+- [Legacy `zoom` property](https://css-tricks.com/almanac/properties/z/zoom/) (CSS-Tricks, 2013)

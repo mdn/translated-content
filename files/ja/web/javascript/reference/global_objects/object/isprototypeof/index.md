@@ -90,7 +90,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-しかし、 `Foo.prototype` が `baz` のプロトタイプチェーンに存在したからといって、 `baz` が `Foo` をコンストラクターとして使用して作成されたとは限りません。例えば、 `baz` が `Foo.prototype` をプロトタイプとして直接割り当てることもできます。この場合、コードが `baz` から `Foo` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を読み込んでも、失敗します。
+しかし、 `Foo.prototype` が `baz` のプロトタイプチェーンに存在したからといって、 `baz` が `Foo` をコンストラクターとして使用して作成されたとは限りません。例えば、 `baz` が `Foo.prototype` をプロトタイプとして直接割り当てることもできます。この場合、コードが `baz` から `Foo` の[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を読み込んでも、失敗します。
 
 ```js
 class Foo {

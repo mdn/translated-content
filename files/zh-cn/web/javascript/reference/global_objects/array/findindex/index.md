@@ -68,12 +68,15 @@ findIndex(callbackFn, thisArg)
 以下示例返回数组中第一个素数的索引，如果没有素数则返回 `-1`。
 
 ```js
-function isPrime(element) {
-  if (element % 2 === 0 || element < 2) {
+function isPrime(n) {
+  if (n < 2) {
     return false;
   }
-  for (let factor = 3; factor <= Math.sqrt(element); factor += 2) {
-    if (element % factor === 0) {
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
@@ -83,6 +86,9 @@ function isPrime(element) {
 console.log([4, 6, 8, 9, 12].findIndex(isPrime)); // -1，没有找到
 console.log([4, 6, 7, 9, 12].findIndex(isPrime)); // 2（array[2] 是 7）
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ### 在稀疏数组上使用 findIndex()
 

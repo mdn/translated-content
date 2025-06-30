@@ -5,11 +5,11 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
 
 {{JSRef}}
 
-**`Intl.Locale.prototype.numberingSystems`** プロパティは、 `Locale` が使用する[命数法](https://en.wikipedia.org/wiki/Numeral_system)に関わる 1 つ以上の識別子を返すアクセサープロパティです。
+**`Intl.Locale.prototype.numberingSystems`** プロパティは、 `Locale` が使用する[記数法](https://en.wikipedia.org/wiki/Numeral_system)に関わる 1 つ以上の識別子を返すアクセサープロパティです。
 
 ## 解説
 
-命数法とは、数値を表現するための体系のことです。 `numberingSystem` プロパティは、世界中のさまざまな国、地域、文化で使用されているさまざまな命数法を表現する支援をします。ほとんどの国際化スキーマと同様に、 `Locale` オブジェクトで `numberingSystem` によって表現できる命数法は、 Unicode で標準化されています。標準的な Unicode の命数法の表を以下に示します。
+記数法とは、数値を表現するための体系のことです。 `numberingSystem` プロパティは、世界中のさまざまな国、地域、文化で使用されているさまざまな記数法を表現する支援をします。ほとんどの国際化スキーマと同様に、 `Locale` オブジェクトで `numberingSystem` によって表現できる記数法は、 Unicode で標準化されています。標準的な Unicode の記数法の表を以下に示します。
 
 | 値       | 説明                                               |
 | -------- | -------------------------------------------------- |
@@ -49,7 +49,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
 | java     | Javanese digits                                    |
 | jpan     | 日本語の漢数字 — アルゴリズム                      |
 | jpanfin  | 日本語の金融用漢数字 — アルゴリズム                |
-| jpanyear | 最初の年を元年とした日本の暦用の命数法             |
+| jpanyear | 最初の年を元年とした日本の暦用の記数法             |
 | kali     | Kayah Li digits                                    |
 | khmr     | Khmer digits                                       |
 | knda     | Kannada digits                                     |
@@ -106,7 +106,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/getNumberingSystems
 
 [Unicode ロケール文字列仕様書](https://www.unicode.org/reports/tr35/)では、 `numberingSystem` が表す値はキー `nu` に対応しています。 `nu` はロケール文字列の「拡張サブタグ」とみなされます。これらのサブタグは、ロケールに関する追加データを追加するもので、拡張キー `-u` を使用してロケール識別子に追加されます。このようして、 `numberingSystem` の値を {{jsxref("Intl/Locale/Locale", "Locale")}} コンストラクターに渡される初期のロケール識別子文字列に追加することができます。 `numeric` の値を設定するには、まず文字列に `-u` 拡張キーを追加します。次に、 `-nu` 拡張キーを追加して、 `numberingSystem` の値を追加していることを示します。最後に、文字列に `numberingSystem` の値を追加します。
 
-指定された `Locale` が対応する命数法の一覧を出力します。
+指定された `Locale` が対応する記数法の一覧を出力します。
 
 ```js
 let arEG = new Intl.Locale("ar-EG");
@@ -129,4 +129,4 @@ console.log(ja.numberingSystems); // logs ["latn"]
 ## 関連情報
 
 - {{jsxref("Intl/Locale", "Intl.Locale")}}
-- [標準 Unicode 命数法の詳細](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)
+- [標準 Unicode 記数法の詳細](https://github.com/unicode-org/cldr/blob/main/common/supplemental/numberingSystems.xml)

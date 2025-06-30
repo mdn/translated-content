@@ -43,13 +43,11 @@ toLocaleString(locales, options)
 [`Intl.NumberFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)를 지원하는 구현에서, 이러한 매개변수는 [`Intl.NumberFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 생성자의 매개변수와 정확히 일치합니다. `Intl.NumberFormat`을 지원하지 않는 구현에서는 두 매개변수를 무시해야 하며, 이에 따라 사용되는 로케일과 반환되는 문자열의 형식은 전적으로 해당 구현에 의해 결정됩니다.
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그 문자열 또는 문자열 배열로, `Intl.NumberFormat()` 생성자의 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 매개변수에 해당합니다.
 
     `Intl.NumberFormat`을 지원하지 않는 구현에서 이 매개변수는 무시되며, 일반적으로 호스트의 로케일로 사용됩니다.
 
 - `options` {{optional_inline}}
-
   - : 출력 형식을 조정하는 객체로, `Intl.NumberFormat()` 생성자의 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 매개변수에 해당합니다.
 
     `Intl.NumberFormat`을 지원하지 않는 구현에서 이 매개변수는 무시됩니다.

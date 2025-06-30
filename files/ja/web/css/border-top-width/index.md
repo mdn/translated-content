@@ -9,7 +9,7 @@ l10n:
 
 **`border-top-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-top-width")}}
+{{InteractiveExample("CSS デモ: border-top-width")}}
 
 ```css interactive-example-choice
 border-top-width: thick;

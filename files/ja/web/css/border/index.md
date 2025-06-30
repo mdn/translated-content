@@ -9,7 +9,7 @@ l10n:
 
 **`border`** は [一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
-{{InteractiveExample("CSS Demo: border")}}
+{{InteractiveExample("CSS デモ: border")}}
 
 ```css interactive-example-choice
 border: solid;

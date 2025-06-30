@@ -152,7 +152,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)だけは例外で、クラス本体で固有のプロパティでなければなりません。
+ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)だけは例外で、クラス本体で固有のプロパティでなければなりません。
 
 ### メソッドの定義
 

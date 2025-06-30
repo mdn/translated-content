@@ -163,7 +163,7 @@ document.getElementById("size-16").onclick = size16;
 
 Java などの言語ではプライベートなメソッドを宣言することが出来ます。これは同じクラス内にあるほかのメソッドからのみ呼び出せるメソッドのことです。
 
-JavaScript には、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)が登場するまで、[プライベートメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties#プライベートメソッド)を宣言するネイティブの方法はありませんでしたが、クロージャを使うとプライベートメソッドを模倣することができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。
+JavaScript には、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)が登場するまで、[プライベートメソッド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#プライベートメソッド)を宣言するネイティブの方法はありませんでしたが、クロージャを使うとプライベートメソッドを模倣することができます。プライベートメソッドはコードへのアクセスを制限するのに役立つだけではなく、コードのパブリックインターフェイスが不要なメソッドでいっぱいになるのを防ぐため、グローバル名前空間を管理するのに非常に有効です。
 
 [モジュールパターン](https://www.google.com/search?q=javascript+module+pattern)としても知られるクロージャを使って、プライベートな関数と変数にアクセスできるパブリック関数を定義するにはこのようにします。
 

@@ -9,7 +9,7 @@ l10n:
 
 **`border-bottom-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom-style")}}
+{{InteractiveExample("CSS デモ: border-bottom-style")}}
 
 ```css interactive-example-choice
 border-bottom-style: none;

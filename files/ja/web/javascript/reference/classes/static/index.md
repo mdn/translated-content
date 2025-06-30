@@ -54,7 +54,7 @@ class ClassWithStatic {
 
 このページでは、静的メソッド、静的アクセサ、静的フィールドを含む、クラスのパブリック静的プロパティを紹介します。
 
-- プライベートな静的機能については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+- プライベートな静的機能については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - インスタンスの機能については、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)、[パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
 パブリック静的機能は、`static` キーワードを使用して宣言します。これらは[クラス評価時](/ja/docs/Web/JavaScript/Reference/Classes#評価の順序)に、 [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（これは本質的に {{jsxref("Object.defineProperty()")}} です）を使用して、クラスのコンストラクターに追加されます。これらは、コンストラクターから再びアクセスします。
@@ -107,7 +107,7 @@ console.log(SubClassWithStaticField.subStaticField); // "基底クラスの静�
 静的フィールド初期化子と[静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)は、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
 > [!NOTE]
-> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 ## 例
 

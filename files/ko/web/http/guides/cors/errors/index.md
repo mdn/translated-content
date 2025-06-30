@@ -48,7 +48,7 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
   added](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Reason: CORS request external redirect
   not allowed](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed)
-- [Reason: CORS request not http](/ko/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
+- [Reason: CORS request not http](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp)
 - [Reason: CORS header
   'Access-Control-Allow-Origin' missing](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin)
 - [Reason: CORS header
@@ -73,8 +73,8 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
 ## 더보기
 
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/ko/docs/Web/HTTP/CORS)
+- [CORS introduction](/ko/docs/Web/HTTP/Guides/CORS)
 - [Server-side CORS settings](/ko/docs/Web/HTTP/Guides/CORS)
-- [CORS enabled image](/ko/docs/Web/HTML/CORS_enabled_image)
-- [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin)
+- [CORS enabled image](/ko/docs/Web/HTML/How_to/CORS_enabled_image)
+- [CORS settings attributes](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – page to test CORS requests
