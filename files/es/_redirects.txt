@@ -2873,7 +2873,8 @@
 /es/docs/Web/JavaScript/Memory_management	/es/docs/Web/JavaScript/Guide/Memory_management
 /es/docs/Web/JavaScript/Primeros_Pasos	/es/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
 /es/docs/Web/JavaScript/Reference/About	/es/docs/conflicting/Web/JavaScript/Reference
-/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
+/es/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
+/es/docs/Web/JavaScript/Reference/Classes/Private_properties	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
 /es/docs/Web/JavaScript/Reference/Errors/Bad_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/es/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /es/docs/Web/JavaScript/Reference/Errors/Falta_puntoycoma_antes_de_declaracion	/es/docs/conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
@@ -2910,7 +2911,7 @@
 /es/docs/Web/JavaScript/Referencia/Características_Despreciadas	/es/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /es/docs/Web/JavaScript/Referencia/Classes	/es/docs/Web/JavaScript/Reference/Classes
 /es/docs/Web/JavaScript/Referencia/Classes/Class_fields	/es/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_properties
+/es/docs/Web/JavaScript/Referencia/Classes/Private_class_fields	/es/docs/Web/JavaScript/Reference/Classes/Private_elements
 /es/docs/Web/JavaScript/Referencia/Classes/constructor	/es/docs/Web/JavaScript/Reference/Classes/constructor
 /es/docs/Web/JavaScript/Referencia/Classes/extends	/es/docs/Web/JavaScript/Reference/Classes/extends
 /es/docs/Web/JavaScript/Referencia/Classes/static	/es/docs/Web/JavaScript/Reference/Classes/static
