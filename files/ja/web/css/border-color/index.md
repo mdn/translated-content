@@ -9,7 +9,7 @@ l10n:
 
 **`border-color`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)を行う [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の色を設定します。
 
-{{InteractiveExample("CSS Demo: border-color")}}
+{{InteractiveExample("CSS デモ: border-color")}}
 
 ```css interactive-example-choice
 border-color: red;

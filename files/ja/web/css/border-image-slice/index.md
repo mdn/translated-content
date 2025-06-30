@@ -9,7 +9,7 @@ l10n:
 
 **`border-image-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("border-image-source")}} で指定された画像を複数の領域に分割します。これらの領域は[境界画像](/ja/docs/Web/CSS/border-image)の部品を構成します。
 
-{{InteractiveExample("CSS Demo: border-image-slice")}}
+{{InteractiveExample("CSS デモ: border-image-slice")}}
 
 ```css interactive-example-choice
 border-image-slice: 30;

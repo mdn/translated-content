@@ -9,7 +9,7 @@ l10n:
 
 **`border-bottom-left-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、角の曲率を定義する楕円の半径 (または半長軸と半短軸の半径) を指定することで、要素の左下の角を丸めます。
 
-{{InteractiveExample("CSS Demo: border-bottom-left-radius")}}
+{{InteractiveExample("CSS デモ: border-bottom-left-radius")}}
 
 ```css interactive-example-choice
 border-bottom-left-radius: 80px 80px;

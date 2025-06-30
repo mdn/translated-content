@@ -9,7 +9,7 @@ l10n:
 
 **`border-right-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の右側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-right-style")}}
+{{InteractiveExample("CSS デモ: border-right-style")}}
 
 ```css interactive-example-choice
 border-right-style: none;

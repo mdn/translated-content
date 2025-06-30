@@ -9,7 +9,7 @@ l10n:
 
 **`border-left-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界線 ({{cssxref("border")}}) のスタイルを設定します。
 
-{{InteractiveExample("CSS Demo: border-left-style")}}
+{{InteractiveExample("CSS デモ: border-left-style")}}
 
 ```css interactive-example-choice
 border-left-style: none;

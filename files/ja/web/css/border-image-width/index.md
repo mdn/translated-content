@@ -9,7 +9,7 @@ l10n:
 
 **`border-image-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-image-width")}}
+{{InteractiveExample("CSS デモ: border-image-width")}}
 
 ```css interactive-example-choice
 border-image-width: 30px;

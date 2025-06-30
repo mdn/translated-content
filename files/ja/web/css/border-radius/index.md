@@ -9,7 +9,7 @@ l10n:
 
 **`border-radius`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の外側の角を丸めます。1 つの半径を設定すると円の角になり、2 つの半径を設定すると楕円の角になります。
 
-{{InteractiveExample("CSS Demo: border-radius")}}
+{{InteractiveExample("CSS デモ: border-radius")}}
 
 ```css interactive-example-choice
 border-radius: 30px;
