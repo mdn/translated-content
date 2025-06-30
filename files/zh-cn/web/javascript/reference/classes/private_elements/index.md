@@ -1,6 +1,7 @@
 ---
 title: 私有属性
-slug: Web/JavaScript/Reference/Classes/Private_properties
+slug: Web/JavaScript/Reference/Classes/Private_elements
+original_slug: Web/JavaScript/Reference/Classes/Private_properties
 l10n:
   sourceCommit: 3ae834dd1eaba420c78d36c903bf178cdd5fbb7a
 ---
