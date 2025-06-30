@@ -115,9 +115,7 @@ flatDeep(arr, Infinity);
 
 ## Especificações
 
-| Especificação                                                                                        | Status | Comentários |
-| ---------------------------------------------------------------------------------------------------- | ------ | ----------- |
-| [`Array.prototype.flat` proposal](https://tc39.github.io/proposal-flatMap/#sec-Array.prototype.flat) | Draft  |             |
+{{Specifications}}
 
 ## Compatibilidade com navegadores
 
