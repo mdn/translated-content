@@ -57,7 +57,7 @@ req.send();
 
 如果你使用 `XMLHttpRequest` 來取得遠端 HTML 網頁的內容，{{domxref("XMLHttpRequest.responseText", "responseText")}} 屬性是一個包含原始 HTML 的字串。這可能會難以操作和分析。分析和解析這個原始 HTML 字串主要有三種方法：
 
-1. 使用 `XMLHttpRequest.responseXML` 屬性，如[XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 文章中所述。
+1. 使用 `XMLHttpRequest.responseXML` 屬性，如 [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest) 文章中所述。
 2. 透過 `fragment.body.innerHTML` 將內容注入到[文件片段](/zh-TW/docs/Web/API/DocumentFragment)的主體中，並遍歷該片段的 DOM。
 3. 如果你總是事先知道 HTML `responseText` 的內容，可以使用 {{jsxref("RegExp")}}。如果你使用 `RegExp` 進行掃描時需要考慮換行符，你可能會想要移除換行符。然而，這種方法是「最後的手段」，因為如果 HTML 程式碼稍有變動，這個方法很可能會失敗。
 
