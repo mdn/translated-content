@@ -1,18 +1,17 @@
 ---
 title: パフォーマンスの測定
 slug: Learn_web_development/Extensions/Performance/Measuring_performance
-original_slug: Learn/Performance/Measuring_performance
 l10n:
-  sourceCommit: 4def230f85756724b59660e3cd9de363db724ef8
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
 
 パフォーマンスの測定は、アプリケーション、サイト、ウェブサービスを評価することを助ける重要な指標を提供します。
 
-たとえば、パフォーマンスの指標を使うことで、競合と比較してアプリケーションをどのように動作させるか決めたり、リリースごとのパフォーマンスを比較したりできます。測定対象として選択する指標はユーザー、サイト、そしてビジネスのゴールに関連するものであるべきです。それらは一貫した手法で収集、測定され、非技術系の関係者にも理解でき、利用可能なフォーマットで分析される必要があります。
+たとえば、パフォーマンスの指標を使うことで、競合と比較してアプリケーションをどのように動作させるか決めたり、リリースごとのパフォーマンスを比較したりできます。指標は、ユーザー、サイト、およびビジネス目標に関連しているものにする必要があります。指標は、技術的な知識のない関係者も利用および理解できる形式で、一貫して収集、測定、分析する必要があります。
 
-この記事ではサイトのパフォーマンス測定と最適化に利用できるウェブパフォーマンスの指標を紹介します。
+この記事では、ウェブパフォーマンスの測定値にアクセスするために使用できるツールを紹介します。このツールは、サイトのパフォーマンスを測定および最適化するために使用できます。
 
 <table>
   <tbody>
@@ -21,10 +20,10 @@ l10n:
       <td>
         基本的なコンピューターリテラシー、
         <a
-          href="/ja/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
+          href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software"
           >基本的なソフトウェアのインストール</a
         >、
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >クライアント側のウェブ技術</a
         >の基本的な知識
       </td>
@@ -32,63 +31,70 @@ l10n:
     <tr>
       <th scope="row">目標:</th>
       <td>
-        様々なウェブパフォーマンス API を通じて収集できる ウェブパフォーマンスの指標とデータの視覚化に利用できるツールの情報を提供すること。
+        <p>
+          さまざまなウェブパフォーマンス API およびそのデータを視覚化するために使用できるツールを通じて収集できる、ウェブパフォーマンスの測定基準に関する情報を提供すること。
+        </p>
       </td>
     </tr>
   </tbody>
 </table>
 
+## パフォーマンスツール
+
+パフォーマンスの測定と改善に役立つさまざまなツールがいくつか利用できます。これらは、一般的に 2 つのカテゴリーに分類できます。
+
+- パフォーマンスを示す、または測定するツール（[PageSpeed Insights](https://pagespeed.web.dev/)、Firefox [ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)、[パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)など）。これらのツールは、ウェブサイトの読み込み速度の速さまたは遅さを表示します。また、ウェブアプリを最適化するために改善できる領域も示します。
+- 独自のパフォーマンスツールを構築するために使用できる[パフォーマンス API](/ja/docs/Web/API/Performance_API)。
+
+## 一般的なパフォーマンス報告ツール
+
+[PageSpeed Insights](https://pagespeed.web.dev/) などのツールを使用すると、パフォーマンスをすばやく測定できます。URL を入力すると、数秒でパフォーマンスレポートが取得できます。レポートには、モバイルおよびデスクトップでのウェブサイトのパフォーマンスを示すスコアが含まれます。これは、何がうまくいっているか、何が改善できるかを理解するための良い出発点となります。
+
+この記事の執筆時点では、MDN のパフォーマンスレポートの概要は次のようになっています。
+
+![Mozilla ホームページの PageSpeed Insights レポートのスクリーンショットです。
+](pagespeed-insight-mozilla-homepage.png)
+
+パフォーマンスレポートには、ページに何かが表示されるまでにユーザーが待つ時間、ページを表示するためにダウンロードする必要のあるバイト数など、さまざまな情報が含まれます。また、測定値が良好か不良かについても知ることができます。
+
+[webpagetest.org](https://www.webpagetest.org/) は、サイトを自動的に検査し、貴重な測定値を返すツールのもう 1 つの例です。
+
+これらのツールを使って、お気に入りのウェブサイトを実行し、スコアを確認してみてください。
+
+## ネットワークモニターツール
+
+最近のブラウザーには、読み込まれたページに対して実行し、そのパフォーマンスを判断するために使用できるツールが備わっています。これらのツールのほとんどは、同様の動作をします。例えば、Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)は、ネットワークからダウンロードしたすべてのセットに関する詳細情報を、ダウンロードに要した時間をウォーターフォールグラフで表示させます。
+
+![Firefox ネットワークモニターは、読み込まれた資産の一覧と、資産ごとの読み込み時間を表示します](network-monitor.png)
+
+また、[Chrome のネットワークモニターに関するドキュメント](https://developer.chrome.com/docs/devtools/network/)も確認してください。
+
+## パフォーマンスモニターツール
+
+また、[Firefox Performance Monitor](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) などのブラウザーのパフォーマンスツールを使用して、さまざまな操作を実行しながら、ウェブアプリケーションやサイトのユーザーインターフェイスのパフォーマンスを測定することもできます。これにより、ウェブアプリケーションやサイトの速度低下の原因となる可能性のある機能を示すことができます。
+
+![記録 1 のウォーターフォールを表示している、開発者ツールパフォーマンスパネル](perf-monitor.png)
+
+[Chrome のパフォーマンスツールのドキュメント](https://developer.chrome.com/docs/devtools/performance/)も参照してください。
+
 ## パフォーマンス API
 
-ウェブのコードを書くとき、自分自身でパフォーマンス測定ツールを作るために利用できるたくさんのウェブ API があります。
+ウェブ用のコードを書く場合、多くの [Web API](/ja/docs/Web/API) を利用して、パフォーマンス測定ツールを自分自身で作成することができます。
 
-クライアントサイドのウェブパフォーマンスを測定するために [ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing) を利用できます。前のページをアンロードするために必要な時間、ドメインのルックアップにかかる時間、ウィンドウのロードハンドラー実行にかかる時間の合計などが含まれます。この API は、下図に示すナビゲーションイベント全てに関する指標として利用できます。
+[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing) を使用すると、前回のページのアンロードに必要な時間、ドメインの検索にかかる時間、ウィンドウのロードハンドラーの実行に費やされた合計時間など、クライアント側のウェブパフォーマンスを測定することができます。この API は、以下の図に示すすべてのナビゲーションイベントに関連する指標に使用できます。
 
 ![ナビゲーションタイミング API が処理できる様々なハンドラーには、次ののものがある。 ナビゲーションタイミング API metrics Prompt for unload redirect unload App cache DNS TCP Request Response Processing onLoad navigationStart redirectStart redirectEnd fetchStart domainLookupEnd domainLookupStart connectStart (secureConnectionStart) connectEnd requestStart responseStart responseEnd unloadStart unloadEnd domLoading domInteractive domContentLoaded domComplete loadEventStart loadEventEnd](navigationtimingapi.jpg)
 
-現在のページのパフォーマンスに関連する情報へのアクセスを提供する [パフォーマンス API](/ja/docs/Web/API/Performance_API/Using_the_Performance_API) は、[パフォーマンスタイムライン API](/ja/docs/Web/API/Performance_Timeline)、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing)、そして [リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) を含みます。これらのインターフェイスにより、JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
+現在のページのパフォーマンスに関連する情報へのアクセスを提供する[パフォーマンス API](/ja/docs/Web/API/Performance_API) は、[ナビゲーションタイミング API](/ja/docs/Web/API/Performance_API/Navigation_timing)、[ユーザータイミング API](/ja/docs/Web/API/Performance_API/User_timing)、そして[リソースタイミング API](/ja/docs/Web/API/Performance_API/Resource_timing) を含みます。これらのインターフェイスにより、 JavaScript のタスクが完了するまでにかかる時間の正確な測定が可能になります。
 
-[PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの*{{domxref("PerformanceMark","mark")}}* または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
+[PerformanceEntry](/ja/docs/Web/API/PerformanceEntry) オブジェクトは、パフォーマンスタイムラインの一部です。パフォーマンスエントリーは アプリケーション内の明示的なポイントでパフォーマンスの _{{domxref("PerformanceMark","mark")}}_ または _{{domxref("PerformanceMeasure","measure")}}_ を作ること（たとえば {{domxref("Performance.mark","mark()")}} メソッドを呼び出すこと）で直接的に作成されます。パフォーマンスエントリーは、画像などリソースの読み込みのようなタイミングで間接的に作成されることもあります。
 
-[PerformanceObserver API](/ja/docs/Web/API/PerformanceObserver) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しいパフォーマンスエントリーが記録されるたびに通知することができます。
+[PerformanceObserver API](/ja/docs/Web/API/PerformanceObserver) はパフォーマンス測定のイベントを観察するために利用できます。さらにブラウザーのパフォーマンスタイムラインに新しい[パフォーマンスエントリー](/ja/docs/Web/API/PerformanceEntry)が記録されるたびに通知することができます。
 
 この記事ではこれらの API に深入りしませんが、これらの存在を知っていると便利です。パフォーマンスウェブ API を使う例についてより深く知りたい場合は[ナビゲーションとタイミング](/ja/docs/Web/Performance/Guides/Navigation_and_resource_timings)の記事を参照してください。
 
-## ツールと指標
+## まとめ
 
-パフォーマンスの改善を助けるために利用できるいくつかの異なるツールがあります。これらは一般的にふたつのカテゴリーに分類できます。
+この記事では、ウェブアプリやウェブサイトのパフォーマンスを測定するのに役立つツールをいくつか簡単に紹介します。次の記事では、サイトのパフォーマンスを改善するために、サイト上の画像を最適化する方法をご紹介します。
 
-- [PageSpeed Insights](https://pagespeed.web.dev/) や Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)と [パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)のようなパフォーマンスを測定したり、指し示したりするツール。これらのツールはウェブアプリケーションやサイトの読み込みがどれくらい速いかまたは遅いかを示します。また、ウェブアプリケーションを最適化して改善するべき領域を指し示します。
-- コードを更新してウェブアプリケーションやサイトのパフォーマンスを改善するツール。たとえば、バンドルツールは HTTP リクエストの回数を減らすためにコードを単一のファイルにまとめ、ミニファイツールはファイルをより小さくするためにコードからホワイトスペースを取り除きます。
-
-このコースでは両方のカテゴリーを取り上げます。そしてパフォーマンスの指標だけではなく、サイトのパフォーマンスが改善しているかどうかを測定するための指標についても議論します。
-
-### 一般的なパフォーマンスレポートツール
-
-[PageSpeed Insights](https://pagespeed.web.dev/) のようなツールではウェブサイトのパフォーマンスを測定できます。URL を入力すると数秒でパフォーマンスのレポートを入手できます。レポートはモバイルとデスクトップの両方でウェブサイトがどの程度の性能を示すかを表すスコアを含みます。これは、すでにできていることと改善が必要な部分についてのアイデアを得る良いスタート地点になります。
-
-本記事の執筆時点で、MDN のパフォーマンスレポートのサマリーは以下のようになっています。
-
-![Mozilla ホームページの PageSpeed Insights レポートのスクリーンショットです。](pagespeed-insight-mozilla-homepage.png)
-
-パフォーマンスレポートは、ページに何かが表示されまでにユーザーがどのくらい待たなければならないか、ページを表示するまでに何バイトのデータがダウンロードされる必要があるかなどの情報を含みます。さらに測定された値が良好と考えられるか、あるいは不良であるかも示します。
-
-[webpagetest.org](https://webpagetest.org) は、サイトを自動的にテストして有益な指標を返すツールのもう一つの実例です。
-
-ぜひ webpagetest.org と PageSpeed Insights の両方であなたの好きなウェブサイトを実行してみてください。そしてスコアを見てみましょう。
-
-### ネットワークツール
-
-多くのブラウザーが、読み込み対象のページに対してそれらがどのように動作しているか確認するために使えるツールを用意しています。たとえば、Firefox の[ネットワークモニター](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html)はネットワークからダウンロードされるすべてのアセットの詳細な情報を、それぞれダウンロードのどのくらいの時間がかかるかを示すグラフと合わせて表示します。
-
-![読み込まれている資産のリストと資産ごとの読み込み時刻を示す Firefox ネットワークモニター](network-monitor.png)
-
-異なるアクションを実行したときのウェブアプリケーションやサイトのユーザーインターフェイスのパフォーマンスを測定するために[パフォーマンスモニター](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html)を利用できます。これは ウェブアプリケーションやサイトを遅くしているかもしれない要素を指し示します。
-
-![開発者ツールのパフォーマンスパネルで、#1 の記録のウォーターフォールを示す。](perf-monitor.png)
-
-## 結論
-
-この記事ではウェブアプリケーションやサイトで利用可能なウェブパフォーマンスの指標の簡単な概要を紹介しました。次は、知覚されるパフォーマンスと、避けられないパフォーマンスへの影響をユーザーに深刻に見せない、あるいは完全に気づかれないようにするいくつかのテクニックを見ていきます。
-
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/Perceived_performance", "Learn_web_development/Extensions/Performance/Multimedia", "Learn_web_development/Extensions/Performance")}}
