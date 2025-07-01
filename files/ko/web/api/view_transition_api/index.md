@@ -74,6 +74,7 @@ function updateView(event) {
          ├─ ::view-transition-old(root)
          └─ ::view-transition-new(root)
    ```
+
    - {{cssxref("::view-transition")}}은 모든 뷰 전환을 포함하고 다른 모든 페이지 콘텐츠 위에 위치하는 뷰 전환 오버레이의 루트입니다.
    - {{cssxref("::view-transition-old")}}는 이전 페이지 뷰의 스크린샷이고, {{cssxref("::view-transition-new")}}는 새 페이지 뷰의 실시간 표현입니다. 이 두 가지 모두 {{htmlelement("img")}} 또는 {{htmlelement("video")}}와 같은 방식으로 대체된 콘텐츠로 렌더링되므로 {{cssxref("object-fit")}} 및 {{cssxref("object-position")}}과 같은 편리한 속성을 사용하여 스타일을 지정할 수 있습니다.
 
