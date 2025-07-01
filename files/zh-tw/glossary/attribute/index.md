@@ -26,8 +26,8 @@ l10n:
 - HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)相關資訊。
 - [W3C XML 推薦標準](https://www.w3.org/TR/xml/#sec-starttags)中的 XML 開始標籤屬性推薦
 - 相關術語：
-  - {{Glossary("Element")}}
-  - {{Glossary("Tag")}}
+  - {{Glossary("Element", "元素")}}
+  - {{Glossary("Tag", "標籤")}}
   - {{Glossary("HTML")}}
   - {{Glossary("XML")}}
   - {{Glossary("Boolean/HTML", "布林屬性")}}
