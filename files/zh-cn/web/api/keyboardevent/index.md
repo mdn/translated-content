@@ -9,7 +9,8 @@ l10n:
 
 **`KeyboardEvent`** 对象描述了用户与键盘的交互。每个事件都描述了用户与一个按键（或一个按键和修饰键的组合）的单个交互；事件类型（{{domxref("Element/keydown_event", "keydown")}}、{{domxref("Element/keypress_event", "keypress")}} 和 {{domxref("Element/keyup_event", "keyup")}}）用于标识不同的键盘活动类型。
 
-> **备注：** `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的场景含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
+> [!NOTE]
+> `KeyboardEvent` 只在低级别提示用户与键盘按键进行了哪些交互，并不提供交互的场景含义。当你需要处理文本输入的时候，使用 {{domxref("Element/input_event", "input")}} 事件代替。用户使用其他方式输入文本时，如使用平板电脑的手写系统或绘图板，键盘事件可能不会触发。
 
 {{InheritanceDiagram}}
 

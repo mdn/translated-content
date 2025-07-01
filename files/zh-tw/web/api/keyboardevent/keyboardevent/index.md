@@ -44,7 +44,8 @@ slug: Web/API/KeyboardEvent/KeyboardEvent
     - `which` {{optional_inline}}
       - : 一個 `unsigned long`，默認值為 `0`，用來設定 {{domxref("KeyboardEvent.which")}} 的值
 
-> **備註：** _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
+> [!NOTE]
+> _`KeyboardEventInit` dictionary 亦接受 {{domxref("UIEvent.UIEvent", "UIEventInit")}} 和{{domxref("Event.Event", "EventInit")}} 所接受的參數。_
 
 ## 規格
 

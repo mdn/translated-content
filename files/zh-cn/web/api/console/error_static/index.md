@@ -18,7 +18,8 @@ error(msg)
 error(msg, subst1, /* …, */ substN)
 ```
 
-> **备注：** `console.exception()` 是 `console.error()` 的别名；它们功能相同。
+> [!NOTE]
+> `console.exception()` 是 `console.error()` 的别名；它们功能相同。
 
 ### 参数
 

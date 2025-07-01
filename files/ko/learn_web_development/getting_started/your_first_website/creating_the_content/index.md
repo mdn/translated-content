@@ -114,7 +114,7 @@ My cat is very grumpy
 
 앞에서 설명한 것처럼 이 요소는 이미지가 나타나야 할 위치에 이미지를 끼워 넣습니다. 이미지 파일의 경로를 포함하는 `src` (source) 속성을 통해 이러한 일을 합니다.
 
-`alt` (대안) 속성도 포함되어 가지고 있습니다. [`alt` 속성](/ko/docs/Web/HTML/Element/img#authoring_meaningful_alternate_descriptions)에서 다음과 같은 이유로 이미지를 볼 수 없는 사용자들을 위한 설명 텍스트를 지정할 수 있습니다.
+`alt` (대안) 속성도 포함되어 가지고 있습니다. [`alt` 속성](/ko/docs/Web/HTML/Reference/Elements/img#authoring_meaningful_alternate_descriptions)에서 다음과 같은 이유로 이미지를 볼 수 없는 사용자들을 위한 설명 텍스트를 지정할 수 있습니다.
 
 1. 시각 장애자인 경우. 시각 장애가 심한 사용자들은 alt 텍스트를 읽어주는 스크린 리더라는 도구를 자주 사용합니다.
 2. 무언가 잘못되어서 이미지를 표시할 수 없는 경우. 예를 들면, `src` 속성 안의 경로를 일부러 틀리게 변경해보세요. 저장한 후에 페이지를 다시 열면, 이미지가 표시되어야할 위치에 다음과 같은 것을 보게 될 것입니다.

@@ -256,7 +256,8 @@ Twitter 还拥有自己的类型的专有元数据协议（称为 [Twitter Cards
   <script src="my-js-file.js" defer></script>
   ```
 
-> **备注：** `<script>` 元素看起来像一个{{glossary("void element","空元素")}}，但它并不是，因此需要一个结束标记。还可以选择将脚本放入 `<script>` 元素中，而不是指向外部脚本文件。
+> [!NOTE]
+> `<script>` 元素看起来像一个{{glossary("void element","空元素")}}，但它并不是，因此需要一个结束标记。还可以选择将脚本放入 `<script>` 元素中，而不是指向外部脚本文件。
 
 ### 主动学习：在网页中应用 CSS 和 JavaScript
 

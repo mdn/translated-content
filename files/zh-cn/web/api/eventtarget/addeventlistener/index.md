@@ -7,7 +7,8 @@ slug: Web/API/EventTarget/addEventListener
 
 **EventTarget.addEventListener()** 方法将指定的监听器注册到 {{domxref("EventTarget")}} 上，当该对象触发指定的事件时，指定的回调函数就会被执行。事件目标可以是一个文档上的元素 {{domxref("Element")}}、{{domxref("Document")}} 和 {{domxref("Window")}}，也可以是任何支持事件的对象（比如 {{domxref("XMLHttpRequest")}}）。
 
-> **备注：** *推荐*使用 `addEventListener()` 来注册一个事件监听器，理由如下：
+> [!NOTE]
+> *推荐*使用 `addEventListener()` 来注册一个事件监听器，理由如下：
 >
 > - 它允许为一个事件添加多个监听器。特别是对库、JavaScript 模块和其他需要兼容第三方库/插件的代码来说，这一功能很有用。
 > - 相比于 `onXYZ` 属性绑定来说，它提供了一种更精细的手段来控制 `listener` 的触发阶段。（即可以选择捕获或者冒泡）。

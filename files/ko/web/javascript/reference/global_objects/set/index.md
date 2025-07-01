@@ -17,7 +17,7 @@ l10n:
 
 ### 값 동등성
 
-값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다.
+값 동일성은 [동일 값 제로 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#동일_값_제로_동등) 알고리즘을 기반으로 합니다. (이전에는 `0`과 `-0`을 다른 값으로 취급하는 [동일 값 동등](/ko/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#same-value_equality_using_object.is)를 사용했습니다. [브라우저 호환성](#브라우저_호환성)을 확인하세요.) 즉, `===` 연산자의 의미에 따라 {{jsxref("NaN")}}은 `NaN`과 동일하게 간주되며(`NaN !== NaN`임에도 불구하고) 다른 모든 값은 동일하게 간주됩니다.
 
 ### 성능
 

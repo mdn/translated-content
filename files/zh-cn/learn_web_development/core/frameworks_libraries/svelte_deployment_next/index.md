@@ -159,7 +159,7 @@ export default {
 
 ### 使用 Vercel 进行部署
 
-部署 Svelte 应用程序的方式中，其中最简单的一种是使用 [Vercel](https://vercel.com/home)。Vercel 是一个专门为静态站点定制的云平台，它对大多数常见的前端工具都有开箱即用的支持，其中包括 Svelte。
+部署 Svelte 应用程序的方式中，其中最简单的一种是使用 [Vercel](https://vercel.com/home)。Vercel 是一个专门为静态站点优化定制的云平台，对大多数常见的前端工具都有开箱即用的支持，其中就包括了 Svelte。
 
 要部署应用程序，请按照以下步骤进行操作。
 

@@ -109,7 +109,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
+> [!WARNING]
+> {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
 
 有关如何配置 Apache 或 Nginx 服务器，以通过 HTTP basic 身份验证保护你的网站，请参见 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)。
 

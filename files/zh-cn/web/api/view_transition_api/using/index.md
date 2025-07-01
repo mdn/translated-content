@@ -216,7 +216,8 @@ figcaption {
 
 第二组伪元素的存在允许将单独的视图过渡样式仅应用于 `<figcaption>` 元素。不同的旧视图捕获和新视图捕获彼此分开处理。
 
-> **备注：** `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
+> [!NOTE]
+> `view-transition-name` 的值可以是你想要的任何值，除了 `none` 以外——`none` 值明确表示元素不会参与视图过渡。
 >
 > `view-transition-name` 值也必须是唯一的。如果两个渲染的元素同时具有相同的 `view-transition-name`，{{domxref("ViewTransition.ready")}} 将拒绝并跳过过渡。
 
@@ -284,7 +285,8 @@ figcaption {
 
 这之所以有效，是因为默认情况下，`::view-transition-group` 以平滑的比例在新旧视图之间转换 `width` 和 `height`。我们只需要在这两个状态上设置一个固定的 `height` 来使其正常工作。
 
-> **备注：** [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
+> [!NOTE]
+> [使用视图过渡 API 实现平滑过渡](https://developer.chrome.google.cn/docs/web-platform/view-transitions)包含其他几个自定义示例。
 
 ## 使用 JavaScript 控制视图过渡
 

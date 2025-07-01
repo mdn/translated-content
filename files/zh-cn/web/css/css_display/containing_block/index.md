@@ -41,7 +41,8 @@ slug: Web/CSS/CSS_display/Containing_block
 > [!NOTE]
 > 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
 
-> **备注：** `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
+> [!NOTE]
+> `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
 
 ## 根据包含块计算百分值
 

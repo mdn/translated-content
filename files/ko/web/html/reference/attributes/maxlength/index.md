@@ -71,7 +71,7 @@ textarea:valid {
 ## 같이 보기
 
 - [`minlength`](/ko/docs/Web/HTML/Attributes/minlength)
-- [`size`](/ko/docs/Web/HTML/Attributes/size)
+- [`size`](/ko/docs/Web/HTML/Reference/Attributes/size)
 - [`pattern`](/ko/docs/Web/HTML/Attributes/pattern)
 - [Constraint validation](/ko/docs/Web/HTML/Constraint_validation)
 - [Form validation](/ko/docs/Learn/Forms/Form_validation)

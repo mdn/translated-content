@@ -7,7 +7,8 @@ slug: Web/HTML/Reference/Elements/dfn
 
 _HTML 定义元素_ (**\<dfn>**) 表示术语的一个定义。
 
-> **备注：** `<dfn>` 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。
+> [!NOTE]
+> `<dfn>` 元素标记了被定义的术语；术语定义应当在 {{HTMLElement("p")}}, {{HTMLElement("section")}}或定义列表 (通常是{{HTMLElement("dt")}}, {{HTMLElement("dd")}} 对) 中给出。
 >
 > - 被定义术语的值由下列规则确定：
 >   1. 如果 `<dfn>` 元素有一个 **`title`** 属性，那么该术语的值就是该属性的值。

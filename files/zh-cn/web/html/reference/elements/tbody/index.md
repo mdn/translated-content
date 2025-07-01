@@ -141,7 +141,8 @@ td {
 
     由于该属性已经废弃，请使用 CSS {{cssxref("text-align")}} 属性作为替代。
 
-    > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
+    > [!NOTE]
+    > `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
 
 - `bgcolor` {{Deprecated_inline}}
   - : 表格的背景颜色。它是一个以 '`#`' 开头的 [6 位数十六进制 RGB 代码](/zh-CN/docs/Web/CSS/color_value#rgb_颜色)。也可以使用任意一个预定义的[颜色关键字](/zh-CN/docs/Web/CSS/color_value#颜色关键字)。
