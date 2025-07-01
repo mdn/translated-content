@@ -2,10 +2,8 @@
 title: ウェブサイトが正しく動作することを確認するには
 slug: Learn_web_development/Howto/Tools_and_setup/Checking_that_your_web_site_is_working_properly
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ウェブサイトのさまざまなトラブルシューティングの手順と、これらの問題を解決するための基本的な操作について説明します。
 
@@ -167,4 +165,4 @@ round-trip min/avg/max/stddev = 147.857/148.468/148.741/0.362 ms
 おめでとうございます、ウェブサイトは誰もが訪れることができるようになっています。それは大きな成果です。これで、さまざまなテーマに深く掘り下げていくことができます。
 
 - 人々は世界中からあなたのウェブサイトに来ることができるので、あなたはそれを[誰にでもアクセス可能](/ja/docs/Learn_web_development/Howto/Design_and_accessibility/What_is_accessibility)にすることを考慮すべきです。
-- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn_web_development/Core/Styling_basics/First_steps/How_CSS_works)時が来ました。
+- ウェブサイトのデザインは少し荒すぎますか？ [CSS についてもっと学ぶ](/ja/docs/Learn_web_development/Core/Styling_basics)時が来ました。

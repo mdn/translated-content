@@ -2,10 +2,8 @@
 title: ローカルテストサーバーを用意するには
 slug: Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server
 l10n:
-  sourceCommit: f21b731803ee077d060a11038d9b284bab37ecc3
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、マシン上に簡単なローカルテストサーバーを設定する方法と、その使い方の基本について説明します。
 
@@ -49,36 +47,55 @@ l10n:
 
 HTML と CSS と JavaScript だけが必要で、サーバーサイドの言語が必要ない場合、最も簡単な方法はコードエディターの拡張機能を調べることです。ローカルの HTTP サーバーへのインストールと設定するには、自動化するだけでなく、コードエディターとうまく統合されます。 HTTP サーバーのローカルファイルをワンクリックでテストできます。
 
-VSCode については、以下の無料拡張機能を調べると良いでしょう。
+VS Code の場合は、次のフリーの拡張機能を試してみてください。
 
-- `vscode-preview-server`。[ホームページ](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)でチェックできます。
+- [Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+- [Preview on Web Server](https://marketplace.visualstudio.com/items?itemName=yuichinukiyama.vscode-preview-server)
+
+### Node.js の使用
+
+Node.js の [`http-server`](https://www.npmjs.com/package/http-server) モジュールは、任意のディレクトリーで HTML ファイルをホストする最も簡単な方法です。
+
+このモジュールを使用するには、次のようにします。
+
+1. Node.js がすでにインストールされているかどうかを調べるには、次のコマンドを実行してください。
+
+   ```bash
+   node -v
+   npm -v
+   npx -v
+   ```
+
+2. Node.js がインストールされていない場合は、インストールする必要があります。Node.js のドキュメントにある[ダウンロード手順](https://nodejs.org/en/download)に従って、上記のコマンドを再度実行し、インストールが正常に行われたことを確認してください。
+
+3. ディレクトリーが `/path/to/project` であると想定しましょう。サーバーを開始するには、次のコマンドを実行します。
+
+   ```bash
+   npx http-server /path/to/project -o -p 9999
+   ```
+
+   これは、`localhost:9999` の `/path/to/project` ディレクトリにあるすべてのファイルをホストします。オプション `-o` は、ウェブブラウザーで `index.html` ページを開くためのものです。`index.html` が存在しない場合は、その代わりにディレクトリーが表示されます。
 
 ### Python の使用
 
 これを実現するためのもう一つの方法は、 Python の `http.server` モジュールを使用することです。
 
 > [!NOTE]
-> 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2.x を使用している場合、`http.server` の使用をすべて `SimpleHTTPServer` に置き換えることで、このガイドを実行することができます。しかし、最新バージョンの Python を使用することをお勧めします。
+> 古いバージョンの Python (バージョン 2.7 まで) では、`SimpleHTTPServer` という名前の似たようなモジュールが提供されていました。Python 2 はすでにサポートが終了していますので、Python 3 を使用することをお勧めします。
 
 このためには次のようにします。
 
-1. Python をインストールします。 Linux または Mac OS X を使用している場合は、既にシステム上で使用可能になっているはずです。 Windows ユーザーの方は、 Python ホームページからインストーラーを入手し、インストーラーの指示に従ってインストールすることができます。
-   - [python.org](https://www.python.org/) に進みます
-   - ダウンロードセクションの下で、 Python "3.xxx" のリンクをクリックします
-   - ページ下部の _Windows Installer_ を選択してダウンロードします
-   - ダウンロードしたら、実行します
-   - インストーラーの最初のページで、 "Add Python 3.xxx to PATH" チェックボックスをオンにします
-   - [インストール]をクリックし、インストールが完了したら[閉じる]をクリックします
-
-2. コマンドプロンプト (Windows)/ターミナル (macOS/ Linux) を開きます。 Python がインストールされていることを確認するには、次のコマンドを入力してください。
+1. Python がすでにインストールされているかどうかを調べるには、次のコマンドを実行してください。
 
    ```bash
    python -V
    # 上記のものが失敗する場合は、次のようにする
    python3 -V
    # または、 "py" コマンドが使用できる場合は、次のようにする
-   py -V
+   py -3 -V
    ```
+
+2. Python がインストールされていない場合は、インストールする必要があります。Python のドキュメントにある [ダウンロード手順](https://www.python.org/downloads/) に従ってください（[Django チュートリアル](/ja/docs/Learn_web_development/Extensions/Server-side/Django/development_environment#python_3_のインストール)にもより詳しい説明があります）。その後、上記のコマンドを再度実行して、インストールが成功したかどうかを確認してください。
 
 3. これによりバージョン番号が返されます。 これで OK であれば、 `cd` コマンドを使用して、テストしたいウェブサイトのコードを格納するディレクトリーに移動します。
 
@@ -92,27 +109,30 @@ VSCode については、以下の無料拡張機能を調べると良いでし�
 4. そのディレクトリーにあるサーバーを起動するコマンドを入力します。
 
    ```bash
-   # 上記で Python のバージョンが 3.X と返ってきた場合
    # Windows では、 "python -m http.server" or "py -3 -m http.server" のようにする
    python3 -m http.server
-   # 上記で Python のバージョンが 2.X と返ってきた場合
-   python -m SimpleHTTPServer
    ```
 
 5. 既定では、これはローカルウェブサーバー上のディレクトリーの内容を 8000 番ポート上で実行します。このサーバーにアクセスするには、ウェブブラウザーで `localhost:8000` の URL に移動します。ここにディレクトリーの内容が表示されるので、実行する HTML ファイルをクリックしてください。
 
 > [!NOTE]
-> すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` (Python 3.x) または `python -m SimpleHTTPServer 7800` (Python 2.x) です。これで `localhost:7800` でコンテンツにアクセスできます。
+> すでに 8000 番ポートで何かが稼働している場合は、 server コマンドを実行して別のポート番号を選択することができます。例えば `python3 -m http.server 7800` です。これで `localhost:7800` でコンテンツにアクセスできます。
 
 ## サーバー側の言語をローカルで実行
 
-Python の `http.server` （Python 2 では `SimpleHTTPServer`）モジュールは便利ですが、単なる静的ファイルサーバーに過ぎません。 Python、PHP、JavaScript などの言語で書かれたコードの実行方法はわかりません。これを処理するには、必要なことがあります。必要なのは、実行しようとしているサーバー側の言語に依存します。いくつかの例があります。
+Python、PHP、JavaScript などのサーバーサイド言語を使用する場合の最適な手法は、使用しているサーバーサイド言語、およびウェブフレームワークを使用しているか「スタンドアロン」のコードを使用しているかによって異なります。
 
-- Python のサーバー側コードを実行するには、Python ウェブフレームワークを使用する必要があります。 Python のウェブフレームワークには、 Django（[ガイド](/ja/docs/Learn_web_development/Extensions/Server-side/Django)が利用できます）、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com) など人気のものが多く存在します。
-- Node.js (JavaScript) サーバー側コードを実行するには、生のノードまたはその上に構築されたフレームワークを使用する必要があります。 Express は良い選択です - [Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) を参照してください
-- PHP サーバー側コードを実行するには、[PHP の組み込み開発サーバー](https://www.php.net/manual/ja/features.commandline.webserver.php)を起動してください。
+ウェブフレームワークを使用している場合、通常、そのフレームワークは独自の開発サーバーを提供しています。
+例えば、次の言語/フレームワークには開発サーバーが付属しています。
+
+- Python のウェブフレームワークは、[Django](/ja/docs/Learn_web_development/Extensions/Server-side/Django)、[Flask](https://flask.palletsprojects.com/)、[Pyramid](https://trypyramid.com/) などです。
+- Node/JavaScript のフレームワークは、[Express Web Framework (Node.js/JavaScript)](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) などです。
+- PHP には独自の[組み込み開発サーバー](https://www.php.net/manual/en/features.commandline.webserver.php)があります。
 
   ```bash
   cd path/to/your/php/code
   php -S localhost:8000
   ```
+
+サーバーサイドのフレームワークや、開発サーバーを提供するプログラミング言語を直接使用していない場合は、 Python の `http.server` モジュールを使用して、サーバーサイドの Common Gateway Interface (CGI) スクリプトを呼び出すことで、Python、PHP、JavaScript などの言語で記述されたサーバーサイドのコードをテストすることもできます。
+この機能の使用例については、realpython.com の「Python コード 1 行で HTTP サーバーを起動する方法」の「[共通ゲートウェイインターフェイス (CGI) を使用してスクリプトをリモートで実行する](https://realpython.com/python-http-server/#execute-a-script-remotely-through-the-common-gateway-interface-cgi)」をご覧ください。
