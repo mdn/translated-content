@@ -392,7 +392,8 @@ a[href^="http"] {
 
 就是这样。重温上文的动手练习部分，试试这种新技巧吧！
 
-> **备注：** `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
+> [!NOTE]
+> `href` 值看起来很奇怪——我们在这里使用的是虚拟链接，并没有真正指向任何地方。这样做的原因是，如果我们使用真正的链接，就可以在实时示例嵌入的 `<iframe>` 中加载外部网站，从而丢失示例。
 
 > [!NOTE]
 > 如果你对[背景](/zh-CN/docs/Learn_web_development/Core/Styling_basics)和[响应式 web 设计](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)还不熟悉，也不用担心，其他地方会有解释。

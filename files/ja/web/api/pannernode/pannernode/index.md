@@ -22,9 +22,7 @@ new PannerNode(context, options)
 - `context`
   - : ノードを関連付けたい音声コンテキストを表す {{domxref("BaseAudioContext")}} です。
 - `options` {{optional_inline}}
-
   - : `PannerNode` に設定したいプロパティを定義する [`PannerOptions`](https://webaudio.github.io/web-audio-api/#idl-def-PannerOptions) 辞書オブジェクトです。
-
     - `panningModel`
       - : {{domxref("PannerNode")}} に設定したい {{domxref("PannerNode.panningModel")}} （既定値は `equalpower` です。）
     - `distanceModel`

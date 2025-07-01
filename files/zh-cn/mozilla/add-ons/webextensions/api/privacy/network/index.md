@@ -18,9 +18,7 @@ l10n:
 - `peerConnectionEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则 [`RTCPeerConnection`](/zh-CN/docs/Web/API/RTCPeerConnection) 接口将被禁用。请注意，[`getUserMedia()`](/zh-CN/docs/Web/API/MediaDevices/getUserMedia) *不*受此设置影响。
 - `webRTCIPHandlingPolicy`
-
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是字符串。这一设置将允许用户指定影响 WebRTC 流量路由方式以及暴露多少本地地址信息的媒体性能/隐私权衡。它可以取以下任一值，从最不私密到最私密：
-
     - `default`
     - `default_public_and_private_interfaces`
     - `default_public_interface_only`
@@ -28,15 +26,12 @@ l10n:
     - `proxy_only`（仅允许基于代理的 TCP 连接的 TURN 连接）
 
 - `httpsOnlyMode`
-
   - : 这一设置允许你的扩展程序确定用户是否启用了 [HTTPS-Only 模式](https://support.mozilla.org/zh-CN/kb/firefox-https)。该属性在所有平台上都是只读的。其底层值是一个字符串，可以取以下三个值之一：
-
     - `"always"`：HTTPS-Only 模式已启用。
     - `"never"`：HTTPS-Only 模式已关闭。
     - `"private_browsing"`：仅在隐私浏览窗口中启用了 HTTPS-Only 模式。
 
 - `globalPrivacyControl`
-
   - : 这一设置允许你的扩展程序确定用户是否启用了[全局隐私控制](/zh-CN/docs/Web/API/Navigator/globalPrivacyControl)。该属性在所有平台上都是只读的。其底层值是一个布尔值，其中 `true` 表示浏览器发送全局隐私控制信号，`false` 表示浏览器不发送这些信号。
 
 ## 浏览器兼容性

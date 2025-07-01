@@ -20,13 +20,10 @@ browser.pageAction.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId`
       - : `integer`。要设置标题的标签页 ID。
     - `title`
-
       - : `string` 或 `null`。工具提示文本。
 
         如果传入了 `null`，则标题将重置为在 [`page_action`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) 清单键中指定的标题。

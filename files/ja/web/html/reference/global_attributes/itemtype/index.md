@@ -203,7 +203,6 @@ Google などの主要な検索エンジンは、構造化データのために 
 
 - [他のグローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - マイクロデータに関連する他のグローバル属性:
-
   - [`itemid`](/ja/docs/Web/HTML/Reference/Global_attributes/itemid)
   - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)

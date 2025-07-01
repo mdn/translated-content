@@ -82,7 +82,6 @@ l10n:
 这个元素包含使用[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `as`
-
   - : 当在 `<link>` 元素上设置了 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 时，该属性为必填属性；当设置了 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload)时，该属性为可选属性，否则不应使用。它指定了 `<link>` 正在加载的内容类型，这对于匹配请求、应用正确的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)和设置正确的 {{HTTPHeader("Accept")}} 请求标头都是必要的。此外，`rel="preload"` 将其用作请求优先级的信号。下表列出了该属性的有效值及其适用的元素或资源。
 
     <table class="standard-table">
@@ -168,14 +167,11 @@ l10n:
     </table>
 
 - `blocking` {{Experimental_Inline}}
-
   - : 该属性明确表示在获取外部资源时应阻止某些操作。它只能在 `rel` 属性包含 `expect` 或 `stylesheet` 关键字时才能使用。要阻止的操作必须是下面列出的以空格分隔的阻止标记列表。
     - `render`：屏幕上的内容渲染被阻止。
 
 - [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性表示在获取资源时是否必须使用 {{Glossary("CORS")}}。[启用 CORS 的图像](/zh-CN/docs/Web/HTML/How_to/CORS_enabled_image)可以在 {{HTMLElement("canvas")}} 元素中重复使用，而不会受到*污染*。允许的值如下：
-
     - `anonymous`
       - : 会发起一个跨源请求（即包含 `Origin` HTTP 标头），但不会发送任何认证信息（即不发送 cookie、X.509 证书和 HTTP 基本认证信息）。如果服务器没有给出源站凭证（不设置 `Access-Control-Allow-Origin` HTTP 标头），资源就会被污染并限制使用。
     - `use-credentials`
@@ -184,15 +180,12 @@ l10n:
     当不设置此属性时，资源将会不使用 {{Glossary("CORS")}} 加载（即不发送 `Origin` HTTP 标头），从而无法使用该资源。若设置了非法的值，则视为使用 **anonymous** 枚举关键字。前往 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)获取更多信息。
 
 - `disabled`
-
   - : 仅对于 `rel="stylesheet"` 而言，`disabled` 布尔属性表示是否应加载所述样式表并将其应用于文档。如果在加载 HTML 时指定了`disabled`，则在页面加载过程中不会加载样式表。相反，如果将 `disabled` 属性更改为 `false` 或删除该属性，将按需加载样式表。
 
     在 DOM 中设置 `disabled` 属性会导致样式表从文档的 {{domxref("Document.styleSheets")}} 列表中删除。
 
 - `fetchpriority`
-
   - : 为获取预加载资源时使用的相对优先级提供提示。允许的值：
-
     - `high`
       - : 表示相对于其他同类型资源，以高优先级获取。
     - `low`
@@ -211,13 +204,10 @@ l10n:
 - `integrity`
   - : 包含内联元数据——（你要求浏览器获取的）资源（文件）的以 base64 编码的密码散列值。浏览器可以使用这一点来验证所获取的资源是否已被传输且没有遭到意外的修改。该属性只有在指定了 `rel` 属性为 `stylesheet`、`preload` 或 `modulepreload` 时才能指定。参见[子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)。
 - `media`
-
   - : 该属性指定链接资源适用的媒体。其值必须是媒体类型或[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。该属性主要用于链接外部样式表——它允许用户代理选择最适合其运行设备的样式表。
 
 - `referrerpolicy`
-
   - : 一个字符串，表示在获取资源时使用哪个 referrer：
-
     - `no-referrer` 表示将不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade` 表示在不使用 TLS（HTTPS）的情况下导航到源时，不会发送 {{HTTPHeader("Referer")}} 标头信息。如果未指定其他策略，这是用户代理的默认行为。
     - `origin` 意味着 referrer 网址将是页面的源，大致是协议、主机和端口。
@@ -227,9 +217,7 @@ l10n:
 - [`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
   - : 此属性命名链接文档与当前文档的关系。该属性必须是[链接类型值](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)的用空格分隔的列表。
 - `sizes`
-
   - : 这个属性定义了包含相应资源的可视化媒体中的图标的大小。只有在 [`rel`](#rel) 包含 `icon` 或诸如 Apple 的 `apple-touch-icon` 等非标准类型的值时，它才可以存在。它可能具有如下值：
-
     - `any` 表示图标可以按矢量格式缩放到任意大小，例如 `image/svg+xml`。
     - 一个由空白符分隔的尺寸列表。每一个都以 `<像素宽度>x<像素高度>` 或 `<像素宽度>X<像素高度>` 给出。尺寸列表中的每一个尺寸都必须包含在资源里。
 
@@ -249,14 +237,12 @@ l10n:
 ### 已弃用的属性
 
 - `charset` {{Deprecated_Inline}}
-
   - : 该属性定义链接资源的字符编码。其值是以空格和/或逗号分隔的字符集列表，如 {{rfc(2045)}} 所定义。默认值为 `iso-8859-1`。
 
     > [!NOTE]
     > 要产生与该过时属性相同的效果，请在链接资源上使用 {{HTTPHeader("Content-Type")}} HTTP 标头。
 
 - `rev` {{Deprecated_Inline}}
-
   - : 此属性的值显示了 [`href`](#href) 属性所定义的当前文档与链接文档的关系。因此，该属性定义了与 rel 属性的值相比的反向关系。该属性的[链接类型值](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)类似于 [`rel`](#rel) 的可能值。
 
     > [!NOTE]

@@ -134,9 +134,7 @@ td {
 ### 非推奨の属性
 
 - `align` {{deprecated_inline}}
-
   - : この列挙属性は各セルの中身について、水平方向の配置方法を制御します。以下の値が指定可能です。
-
     - `left`: 中身をセルの左側に揃えます。
     - `center`: 中身をセル内で中央揃えにします。
     - `right`: 中身をセルの右側に揃えます。
@@ -150,7 +148,6 @@ td {
     > **メモ:** `text-align` プロパティには、 `align="char"` と同等の機能がどのブラウザーでも実装されていません。 [`text-align` のブラウザーの互換性の節](/ja/docs/Web/CSS/text-align#ブラウザーの互換性) で `<string>` の値を確認してください。
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : 表の背景色です。 [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)の先頭に '`#`' をつけたものです。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの一つを利用することもできます。
 
     この属性は非推奨であり、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
@@ -160,9 +157,7 @@ td {
 - `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定した揃え文字から列のデータをオフセットする文字数を示します。
 - `valign` {{deprecated_inline}}
-
   - : この属性は、表本体の各行のセルにおける垂直方向のテキスト配置方法を指定します。以下の値が指定可能です。
-
     - `baseline`: テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.org/wiki/Baseline_%28typography%29)に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
     - `bottom`: テキストを可能な限りセルの下端に近づけて配置します。
     - `middle`: テキストをセル内の中央に置きます。
@@ -382,6 +377,5 @@ tbody > tr > th {
 ## 関連情報
 
 - `<tbody>` 要素のスタイル設定に役立つであろう CSS プロパティと[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes):
-
   - {{ cssxref(":nth-child") }} 擬似クラス: 列内のセルの配置を設定するため
   - {{ cssxref("text-align") }} プロパティ: すべてのセル内コンテンツを '.' などの同一文字で揃えるための

@@ -37,7 +37,6 @@ str.replace(regexp|substr, newSubStr|function)
 - `substr`
   - : Uma {{jsxref ("String")}} que será substituída por `newSubStr`. Ele é tratado como uma string textual e não é interpretado como uma expressão regular. Apenas a primeira ocorrência será substituída.
 - `newSubStr`
-
   - : A {{jsxref("Global_Objects/String", "String")}} que substitui a `substr` recebida do parâmetro #1. Uma série de padrões de substituições especiais são suportados. Veja a seção "
 
     Especificando uma string como parâmetro
@@ -45,7 +44,6 @@ str.replace(regexp|substr, newSubStr|function)
     " abaixo.
 
 - `function`
-
   - : A função (function) chamada cria uma nova substring (para ser colocada no lugar da substring recebida pelo parametro #1). Os argumentos fornececidos para essa função estão descritos na seção "
 
     Especificando uma função como parâmetro
@@ -53,9 +51,7 @@ str.replace(regexp|substr, newSubStr|function)
     " mais abaixo.
 
 - `flags` {{non-standard_inline}}
-
   - : Uma string especificando uma combinação de [flags de expressão regular](/pt-BR/docs/Web/JavaScript/Guide/Regular_expressions). O uso do parâmetro `flags` no método `String.prototype.replace()` é não-padrão. Ao invés de usar este parâmetro, use um objeto {{jsxref("Global_Objects/RegExp", "RegExp")}} com as flags correspondentes. O valor deste parâmetro deve ser uma string consistindo em um ou mais dos seguintes caracteres para afetar a operação, tais como descrito:
-
     - `g`
       - : Combinação global.
     - `i`

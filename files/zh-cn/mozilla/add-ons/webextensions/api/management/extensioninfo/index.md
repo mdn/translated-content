@@ -24,18 +24,14 @@ l10n:
 - `hostPermissions`
   - : `string` 数组。附加组件的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)。
 - `icons`
-
   - : `object` 数组，关于附加组件图标的信息。一个对象数组，其中的每个对象代表一个图标。每个对象包含两个属性：
-
     - `size`：表示图标的宽度和高度（以像素为单位）的整数值。
     - `url`：包含从附加组件的根目录开始到图标的相对 URL 的字符串。
 
 - `id`
   - : `string`，附加组件的 ID。
 - `installType`
-
   - : `string`，描述附加组件是如何被安装的字符串。可能是以下之一：
-
     - “admin”：附加组件是因为管理策略而安装的。
     - “development”：附加组件是从磁盘上的未打包文件安装的。
     - “normal”：附加组件是从安装包正常安装的。
@@ -55,9 +51,7 @@ l10n:
 - `shortName`
   - : `string`，从 manifest.json 的 [short_name](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) 键中获取的附加组件名称的简短版本。
 - `type`
-
   - : `string`，描述附加组件类型的字符串，用于区分扩展、应用和主题。可能取以下任一值：
-
     - “extension”：最常见的附加组件类型。
     - “hosted_app”
     - “packaged_app”

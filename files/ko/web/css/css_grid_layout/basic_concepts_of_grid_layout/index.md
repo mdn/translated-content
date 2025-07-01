@@ -737,7 +737,6 @@ Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.
 2. [**CSS Reference**](/ko/docs/Web/CSS/Reference)
 3. [CSS 그리드 레이아웃](/ko/docs/Web/CSS/CSS_grid_layout)
 4. **가이드**
-
    1. [그리드 레이아웃의 기본 개념](/ko/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [다른 레이아웃 방법과의 관계](/ko/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [라인을 기준으로 한 아이템 배치](/ko/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -751,7 +750,6 @@ Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.
    11. [Realizing common layouts using grids](/ko/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **프로퍼티**
-
    1. [grid](/ko/docs/Web/CSS/grid)
    2. [grid-area](/ko/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/ko/docs/Web/CSS/grid-auto-columns)
@@ -772,7 +770,6 @@ Firefox 개발자 도구에 있는 [Grid Inspector](https://firefox-source-docs.
    18. [grid-template-rows](/ko/docs/Web/CSS/grid-template-rows)
 
 6. **용어집**
-
    1. [Grid](/ko/docs/Glossary/Grid)
    2. [Grid lines](/ko/docs/Glossary/Grid_Lines)
    3. [Grid tracks](/ko/docs/Glossary/Grid_Tracks)

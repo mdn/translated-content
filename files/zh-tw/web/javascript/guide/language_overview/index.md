@@ -33,7 +33,6 @@ Microsoft 在幾個月後隨著 IE 3 推出了跟該語言大致上相容的 JSc
 - String （字串）
 - Boolean （布林）
 - Object （物件）
-
   - Function （函式）
   - Array （陣列）
   - Date （日期）

@@ -21,7 +21,6 @@ Une recette se décompose comme suit :
 1. Un exemple interactif, stocké [sur le dépôt GitHub des exemples CSS](https://github.com/mdn/css-examples)
 2. Une version téléchargeable de cet exemple, également stockée sur le dépôt des exemples CSS.
 3. Une page MDN, rattachée à la section [Livre de recettes CSS](/fr/docs/Web/CSS/Layout_cookbook) qui contient :
-
    1. Les spécifications sommaires
    2. La recette
    3. Les choix effectués

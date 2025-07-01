@@ -7,7 +7,8 @@ slug: Web/CSS/overflow-block
 
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`overflow-block`** 设置了当内容溢出盒的块首和块末侧时所显示的内容。可以不显示，或者显示滚动条或溢出内容。
 
-> **备注：**`overflow-block` 属性根据文档的书写模式对应于 {{CSSXref("overflow-y")}} 或 {{CSSXref("overflow-x")}}。
+> [!NOTE]
+> `overflow-block` 属性根据文档的书写模式对应于 {{CSSXref("overflow-y")}} 或 {{CSSXref("overflow-x")}}。
 
 ## 语法
 

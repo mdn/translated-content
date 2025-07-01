@@ -34,7 +34,8 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes
 </svg>
 ```
 
-> **備註：** `stroke`, `stroke-width` 和 `fill` 等属性会在后面的章节里介绍。
+> [!NOTE]
+> `stroke`, `stroke-width` 和 `fill` 等属性会在后面的章节里介绍。
 
 ### 矩形 rect
 

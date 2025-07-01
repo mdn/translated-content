@@ -35,7 +35,6 @@ l10n:
 
 - 其他和列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("ul")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}；
 - 特定用于 `<dir>` 元素的 CSS 属性：
-
   - {{cssxref('list-style')}} 属性，用于选择序号展示的方式。
   - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于处理复杂的嵌套列表。
   - {{Cssxref('line-height')}} 属性，用于模拟弃用的 [`compact`](#compact) 属性。

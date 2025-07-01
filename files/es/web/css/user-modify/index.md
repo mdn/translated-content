@@ -7,7 +7,7 @@ slug: Web/CSS/user-modify
 
 ## Resumen
 
-La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo [`contenteditable`](/es/docs/Web/HTML/Global_attributes#contenteditable) . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
+La propiedad `-moz-user-modify` determina si el contenido de un elemento puede ser editado por el usuario. Se relaciona con el atributo [`contenteditable`](/es/docs/Web/HTML/Reference/Global_attributes#contenteditable) . `user-focus` , que es una propiedad similar, fue propuesta como parte de los [borradores iniciales de un predecesor de la especificación CSS3 UI](https://www.w3.org/TR/2000/WD-css3-userint-20000216) ,pero fue rechazada por el grupo de trabajo.
 
 {{cssinfo}}
 

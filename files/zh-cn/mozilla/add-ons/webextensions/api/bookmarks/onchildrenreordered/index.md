@@ -31,9 +31,7 @@ browser.bookmarks.onChildrenReordered.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。子项重新排序的文件夹的 ID。
     - `reorderInfo`

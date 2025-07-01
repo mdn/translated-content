@@ -16,6 +16,5 @@ slug: Glossary/Character_set
 - [字元編碼](https://zh.wikipedia.org/wiki/字元編碼)（維基百科）
 - [亂碼](https://zh.wikipedia.org/wiki/亂碼)（維基百科）
 - [術語表](/zh-TW/docs/Glossary)
-
   - {{Glossary("character", "字符")}}
   - {{Glossary("Unicode")}}

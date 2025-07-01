@@ -17,7 +17,6 @@ slug: Web/CSS/::-webkit-slider-thumb
 
 - {{cssxref("::-webkit-slider-runnable-track")}}
 - Похожие псевдоэлементы использующиеся в других браузерах:
-
   - {{cssxref("::-moz-range-thumb")}}
   - {{cssxref("::-ms-thumb")}}
 

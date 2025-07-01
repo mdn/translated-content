@@ -46,7 +46,8 @@ slug: Web/HTML/Reference/Elements/input/button
 }
 ```
 
-> **备注：** `button` 类型的 `<input>` 元素仍然是合法的 HTML 代码，但是新的 {{HTMLElement("button")}} 元素是创建按钮的更好的方式。鉴于 {{HTMLElement("button")}} 的标签文字可以插入至开闭标签之间，你可以在标签中包含 HTML 代码，甚至是图像。
+> [!NOTE]
+> `button` 类型的 `<input>` 元素仍然是合法的 HTML 代码，但是新的 {{HTMLElement("button")}} 元素是创建按钮的更好的方式。鉴于 {{HTMLElement("button")}} 的标签文字可以插入至开闭标签之间，你可以在标签中包含 HTML 代码，甚至是图像。
 
 ## 值
 

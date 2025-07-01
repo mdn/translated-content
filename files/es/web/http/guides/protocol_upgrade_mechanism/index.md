@@ -250,7 +250,6 @@ If the client receiving the `"426 Upgrade Required"` response is willing and abl
 - [WebSocket API](/es/docs/Web/API/WebSocket)
 - [HTTP](/es/docs/Web/HTTP)
 - Especificaciones y RFCs:
-
   - {{RFC(2616)}}
   - {{RFC(6455)}}
   - {{RFC(2817)}}
