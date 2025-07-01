@@ -2,7 +2,7 @@
 title: Window：localStorage 屬性
 slug: Web/API/Window/localStorage
 l10n:
-  sourceCommit: 44c4ec928281dc2d7c5ea42b7d2c74a2013f16ac
+  sourceCommit: 3e097148b4c6cb9c6d8824275599f855ca63827b
 ---
 
 {{APIRef("Web Storage API")}}
@@ -19,7 +19,9 @@ l10n:
 
 - `SecurityError`
 
+
   - : 在以下情況之一會拋出：
+
 
     - 同源不是[一個有效的協定／主機／埠元組](/zh-TW/docs/Web/Security/Same-origin_policy#同源定義)。舉例來說，如果同源使用 `file:` 或 `data:` 協定，就可能發生這種情況。
     - 請求違反了政策決定。例如，使用者已將瀏覽器組態為防止頁面保存資料。
@@ -28,11 +30,11 @@ l10n:
 
 ## 描述
 
-使用 `localStorage` 儲存的鍵和值*永遠*是 UTF-16 字串格式，每個字元使用兩個位元組。與物件一樣，整數鍵會自動轉換為字串。
+使用 `localStorage` 儲存的鍵和值是 {{glossary("UTF-16")}} 字串格式。與物件一樣，整數鍵會自動轉換為字串。
 
 `localStorage` 的資料**與文件的協定有關**。具體來說，對於透過 HTTP（例如 `http://example.com`）載入的網站，`localStorage` 回傳的物件與透過 HTTPS（例如 `https://example.com`）載入的相應網站的 `localStorage` 不同。
 
-對於從 `file:` URL 載入的文件（也就是直接從使用者的本機檔案系統在瀏覽器中開啟的檔案，而不是由網頁伺服器提供），`localStorage` 的行為要求是未定義的，且可能因瀏覽器而異。
+對於從 `file:` URL 載入的文件（也就是直接從使用者的本機檔案系統在瀏覽器中開啟的檔案，而不是由 web 伺服器提供），`localStorage` 的行為要求是未定義的，且可能因瀏覽器而異。
 
 在所有目前的瀏覽器中，`localStorage` 似乎會為每個 `file:` URL 回傳一個不同的物件。換句話說，每個 `file:` URL 似乎都有自己獨特的本機儲存區域。但這種行為沒有保證，所以你不應該依賴它，因為如上所述，`file:` URL 的要求仍然是未定義的。因此，瀏覽器可能隨時更改其對 `localStorage` 的 `file:` URL 處理方式。事實上，一些瀏覽器隨著時間的推移*已經*改變了它們的處理方式。
 
