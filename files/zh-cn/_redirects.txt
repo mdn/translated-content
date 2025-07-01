@@ -3434,7 +3434,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
 /zh-CN/docs/Web/JavaScript/Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Web/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 /zh-CN/docs/Web/JavaScript/Reference/Date/getDate	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate

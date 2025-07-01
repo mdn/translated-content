@@ -54,7 +54,7 @@ class ClassWithStatic {
 
 このページでは、静的メソッド、静的アクセサ、静的フィールドを含む、クラスのパブリック静的プロパティを紹介します。
 
-- プライベートな静的機能については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
+- プライベートな静的機能については、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - インスタンスの機能については、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)、[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)、[パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
 パブリック静的機能は、`static` キーワードを使用して宣言します。これらは[クラス評価時](/ja/docs/Web/JavaScript/Reference/Classes#評価の順序)に、 [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（これは本質的に {{jsxref("Object.defineProperty()")}} です）を使用して、クラスのコンストラクターに追加されます。これらは、コンストラクターから再びアクセスします。

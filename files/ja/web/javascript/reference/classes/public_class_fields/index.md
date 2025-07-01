@@ -30,7 +30,7 @@ class ClassWithField {
 このページでは、パブリックインスタンスフィールドについて詳しく紹介します。
 
 - パブリック静的フィールドについては、 [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static) を参照してください。
-- プライベートフィールドについては、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
+- プライベートフィールドについては、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 - パブリックメソッドについては、[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)を参照してください。
 - パブリックアクセサーについては、[ゲッター](/ja/docs/Web/JavaScript/Reference/Functions/get)および[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を参照してください。
 
@@ -249,7 +249,7 @@ console.log(new Professor("Radev", 54).name); // "Professor Radev"
 
 - [クラスの使用](/ja/docs/Web/JavaScript/Guide/Using_classes)ガイド
 - [クラス](/ja/docs/Web/JavaScript/Reference/Classes)
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - {{jsxref("Statements/class", "class")}}
 - [The semantics of all JS class elements](https://rfrn.org/~shu/2018/05/02/the-semantics-of-all-js-class-elements.html) (Shu-yu Guo, 2018)
 - [Public and private class fields](https://v8.dev/features/class-fields) (v8.dev, 2018)

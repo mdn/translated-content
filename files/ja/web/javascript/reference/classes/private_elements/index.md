@@ -1,16 +1,18 @@
 ---
-title: プライベートプロパティ
+title: プライベート要素
 slug: Web/JavaScript/Reference/Classes/Private_elements
-original_slug: Web/JavaScript/Reference/Classes/Private_properties
 l10n:
-  sourceCommit: 8b6cec0ceff01e7a9d6865cf5306788e15cce4b8
+  sourceCommit: 48184c65d7e6d59e867806d9e349661c737bdc4b
 ---
 
 {{jsSidebar("Classes")}}
 
-**プライベートプロパティ**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベートプロパティはハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベートプロパティにアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベートプロパティを定義するクラス内でのみ可能です。
+**プライベート要素**は、パブリックである通常のクラスプロパティ、例えば[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)やクラスメソッドなどに対するものです。プライベート要素はハッシュ `#` 接頭辞を使用して作成され、クラスの外部から合法的に参照することはできません。これらのクラスプロパティのプライバシーカプセル化は JavaScript 自身によって強制されます。プライベート要素にアクセスするには、[ドット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ドット記法)を使用するしかなく、また、そのアクセスはプライベート要素を定義するクラス内でのみ可能です。
 
-プライベートのプロパティは、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
+プライベート要素は、この構文が存在する以前はネイティブではありませんでした。プロトタイプ継承では、 [`WeakMap`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#emulating_private_members) オブジェクトや[クロージャ](/ja/docs/Web/JavaScript/Guide/Closures#emulating_private_methods_with_closures)でその振る舞いをエミュレートすることができますが、使いやすさの面からは `#` 構文にはかないません。
+
+> [!NOTE]
+> MDN では、「プライベートプロパティ」という用語の使用は避けています。JavaScript の[プロパティ](/ja/docs/Glossary/Property/JavaScript)には文字列またはシンボルのキーがあり、`writable`、`enumerable`、`configurable` などの属性がありますが、プライベート要素にはこれらの属性は存在しません。プライベート要素は、おなじみのドット表記でアクセスできますが、[プロキシー](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy)を行ったり、列挙したり、削除したり、 {{jsxref("Object")}} メソッドを使用して対話したりすることはできません。
 
 ## 構文
 
@@ -50,11 +52,11 @@ class ClassWithPrivate {
 - プライベート静的ゲッター
 - プライベート静的セッター
 
-これらの機能をまとめてプライベートプロパティと呼びます。しかし、JavaScript で[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)をプライベートにすることはできません。クラスの外部でクラスが構築されないようにするには、[プライベートフラグを使用する](#プライベートコンストラクターをシミュレーション)必要があります。
+これらの機能をまとめてプライベート要素と呼びます。しかし、JavaScript で[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)をプライベートにすることはできません。クラスの外部でクラスが構築されないようにするには、[プライベートフラグを使用する](#プライベートコンストラクターをシミュレーション)必要があります。
 
-プライベートプロパティは **# 名前**（「ハッシュ-名前」と読みます）で宣言され、接頭辞として `#` が付けられます。ハッシュ接頭辞はプロパティ名の一部です。古いアンダースコア接頭辞規約 `_privateField` との関係を思い描いてください。しかし、普通の文字列プロパティではないので、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使って動的にアクセスすることはできません。
+プライベート要素は **# 名前**（「ハッシュ-名前」と読みます）で宣言され、接頭辞として `#` が付けられます。ハッシュ接頭辞はプロパティ名の一部です。古いアンダースコア接頭辞規約 `_privateField` との関係を思い描いてください。しかし、普通の文字列プロパティではないので、[ブラケット記法](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors#ブラケット記法)を使って動的にアクセスすることはできません。
 
-スコープ外から `#` 付きの名を参照すると構文エラーになります。また、呼び出される前に宣言されていないプライベートフィールドを参照したり、宣言されているフィールドを [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) で削除しようとしても構文エラーになります。
+クラス外から `#` 付きの名を参照すると構文エラーになります。また、呼び出される前に宣言されていないプライベート要素を参照したり、宣言されている要素を [`delete`](/ja/docs/Web/JavaScript/Reference/Operators/delete) で削除しようとしても構文エラーになります。
 
 ```js-nolint example-bad
 class ClassWithPrivateField {
@@ -73,9 +75,9 @@ instance.#privateField; // Syntax error
 JavaScript は動的言語ですが、ハッシュ識別子の構文が特殊であり、構文レベルで通常のプロパティとは異なるため、このコンパイル時チェックを行うことができます。
 
 > [!NOTE]
-> Chrome コンソールで実行するコードは、クラス外からプライベートプロパティにアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
+> Chrome コンソールで実行するコードは、クラス外からプライベート要素にアクセスすることができます。これは JavaScript の構文制限を開発者ツール限定で緩和したものです。
 
-プロパティを持っていないオブジェクトからプライベートプロパティにアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxref("TypeError")}} が発生します。
+あるプライベート要素を持っていないオブジェクトからその要素にアクセスすると、通常のプロパティのように `undefined` を返すのではなく、{{jsxref("TypeError")}} が発生します。
 
 ```js example-bad
 class C {
@@ -90,9 +92,9 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-この例では、静的関数の中や、外部で定義したクラスのインスタンスでもプライベートプロパティにアクセスできることも示しています。
+この例では、静的関数の中や、外部で定義したクラスのインスタンスでもプライベート要素にアクセスできることも示しています。
 
-[`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、プライベートフィールド（またはプライベートメソッド）が存在するかどうかをチェックできます。そのプライベートフィールドが存在すれば `true` を返し、そうでなければ `false` を返します。
+[`in`](/ja/docs/Web/JavaScript/Reference/Operators/in) 演算子を使用すると、外部で定義されたオブジェクトがそのプライベート要素を持っているかどうかを調べることができます。そのプライベートフィールドまたはメソッドが存在する場合、`true` が返され、それ以外の場合は `false` が返されます。
 
 ```js example-good
 class C {
@@ -112,9 +114,9 @@ console.log(C.getX(new C(new Date()))); // the current date and time
 console.log(C.getX({})); // "obj must be an instance of C"
 ```
 
-オブジェクトが現在のクラスのプライベートプロパティを 1 つでも持っていることが見つかった場合（`try...catch`または`in`チェックのいずれか）、他にもプライベートプロパティをすべて持っている必要があります。あるクラスのプライベートプロパティを持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
+オブジェクトが現在のクラスのプライベート要素を 1 つでも持っていることが見つかった場合（`try...catch` または `in` チェックのいずれか）、他にもプライベート要素をすべて持っている必要があります。あるクラスのプライベート要素を持つオブジェクトは、一般的にそのクラスによって構築されたことを意味しています（[常にではありません](#オーバーライドしたオブジェクトの返却)）。
 
-プライベートプロパティは、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベートプロパティは同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベートプロパティを複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベートプロパティには影響しません。
+プライベート要素は、現在のクラス本体内でのみアクセスすることができ、サブクラスには継承されないため、[プロトタイプ継承モデル](/ja/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)にはありません。クラスが異なると、プライベート要素は同じ名前でも全く異なるものであり、相互運用はできません。クラスごとに管理される、インスタンスに付加された外部メタデータとして考えてください。このため、 {{DOMxRef("Window.structuredClone", "structuredClone()")}} はプライベート要素を複製せず、 {{jsxref("Object.freeze()")}} や {{jsxref("Object.seal()")}} は、プライベート要素には影響しません。
 
 プライベートフィールドがいつ、どのように初期化されるかについての詳細は、[プライベートクラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を参照してください。
 
@@ -183,7 +185,7 @@ console.log(obj); // 一部の開発者ツールでは {#stamp: 42} と表示
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 
-// プライベートプロパティに 2 度刻印することはできません。
+// プライベート要素に 2 度刻印することはできません。
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 
@@ -246,7 +248,7 @@ class Subclass extends ClassWithPrivateStaticField {
 Subclass.callSuperMethod(); // TypeError: Cannot read private member #privateStaticField from an object whose class did not declare it
 ```
 
-静的プライベートフィールドには常に `this` ではなく、クラス名でアクセスするようにしてください。
+プライベート静的フィールドには常に `this` ではなく、クラス名でアクセスするようにしてください。
 
 ### プライベートメソッド
 

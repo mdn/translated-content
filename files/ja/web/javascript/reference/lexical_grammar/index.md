@@ -151,7 +151,7 @@ function fn() {} // 関数宣言
 const obj = { key: "value" }; // オブジェクトキー
 // クラス宣言
 class C {
-  #priv = "value"; // プライベートプロパティ
+  #priv = "value"; // プライベートフィールド
 }
 lbl: console.log(1); // ラベル
 ```
@@ -177,7 +177,7 @@ console.log(\u4f60\u597d); // Hello
 function import() {} // 違反: import は予約語です。
 ```
 
-最も注目すべきは、プライベートプロパティとオブジェクトプロパティは、予約語を許可していることです。
+最も注目すべきは、プライベート要素とオブジェクトプロパティは、予約語を許可していることです。
 
 ```js
 const obj = { import: "value" }; // `import` は予約語だが有効
