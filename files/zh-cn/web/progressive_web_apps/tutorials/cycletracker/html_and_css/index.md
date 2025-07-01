@@ -19,7 +19,7 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 ## 静态网页内容
 
-我们的静态网站 HTML，用 {{HTMLElement("link")}} 和 {{HTMLElement("script")}} 元素作为尚未创建的外部 CSS 和 JavaScript 文件的占位符，如下：
+我们的静态站点的 HTML 使用了 {{HTMLElement("link")}} 和 {{HTMLElement("script")}} 元素占位符服务于尚未创建的外部 CSS 和 JavaScript 文件，如下：
 
 ```html
 <!doctype html>
