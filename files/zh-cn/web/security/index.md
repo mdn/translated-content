@@ -8,15 +8,15 @@ l10n:
 
 网站包含多种不同类型的信息。有些是非敏感信息，例如公共页面上显示的副本。有些是敏感信息，如客户用户名、密码和银行信息，或内部算法和私人产品信息。
 
-敏感信息需要保护，这也是网络安全的重点。如果这些信息落入不法分子之手，就可能被用来：
+敏感信息需要保护，这也是 Web 安全的重点。如果这些信息落入不法分子之手，就可能被用来：
 
 - 与竞争对手共享信息，使公司在竞争中处于不利地位。
 - 禁用或劫持公司服务，再次给公司运营带来严重问题。
 - 将客户的[隐私](/zh-CN/docs/Web/Privacy)置于风险之中，使他们容易受到特征描述、目标锁定、数据丢失、身份盗窃甚至经济损失的影响。
 
-现代浏览器已具备多项功能来保护用户的网络安全，但开发人员也需要使用最佳实践并谨慎编写代码，以确保网站安全。即使代码中存在简单的错误，也可能导致漏洞被坏人利用，从而窃取数据并在未经授权的情况下控制服务。
+现代浏览器已具备多种特性来保护用户的 Web 安全，但开发人员也需要使用最佳实践并谨慎编写代码，以确保网站安全。即使代码中存在简单的错误，也可能导致漏洞被坏人利用，从而窃取数据并在未经授权的情况下控制服务。
 
-本文介绍了网络安全，包括帮助你了解网站漏洞的概念信息和如何确保网站安全的实用指南。
+本文介绍了 Web 安全，包括帮助你了解网站漏洞的概念信息和如何确保网站安全的实用指南。
 
 ## 安全和隐私的关系
 
@@ -26,7 +26,7 @@ l10n:
 
 - **隐私**是指让用户控制其数据的收集、存储和使用方式，同时确保数据不会被不负责任地使用。例如，你应该让用户知道你要从他们那里收集哪些数据，将与哪些方面共享这些数据，以及将如何使用这些数据。用户必须有机会同意你的隐私政策，可以访问你存储的数据，如果他们选择删除，也可以删除。
 
-良好的隐私保护离不开良好的安全性。你可以遵循我们的[网络隐私](/zh-CN/docs/Web/Privacy)指南中列出的所有建议，但如果你的网站不安全，攻击者无论如何都能窃取数据，那么诚信行事和制定健全的隐私政策都是徒劳的。
+良好的隐私保护离不开良好的安全性。你可以遵循我们的 [Web 隐私](/zh-CN/docs/Web/Privacy)指南中列出的所有建议，但如果你的网站不安全，攻击者无论如何都能窃取数据，那么诚信行事和制定健全的隐私政策都是徒劳的。
 
 ## 浏览器提供的安全特性
 
@@ -34,7 +34,7 @@ Web 浏览器遵循严格的安全模式，对内容、浏览器与服务器之�
 
 ### 同源策略和 CORS
 
-[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是 web 的一种基本安全机制，它限制从一个{{Glossary("origin", "源")}}加载的文档或脚本如何与另一个源的资源交互。它有助于隔离潜在的恶意文档，减少可能的攻击载体。
+[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)是 Web 的一种基本安全机制，它限制从一个{{Glossary("origin", "源")}}加载的文档或脚本如何与另一个源的资源交互。它有助于隔离潜在的恶意文档，减少可能的攻击载体。
 
 一般来说，来自一个源的文档不能向其他源发出请求。这样做是有道理的，因为你不希望网站之间相互干扰并访问未经授权的数据。
 
@@ -42,20 +42,20 @@ Web 浏览器遵循严格的安全模式，对内容、浏览器与服务器之�
 
 ### HTTP 通信模式
 
-Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信、请求资源、提供响应（例如，提供请求的资源或详细说明请求失败的原因），并为通信提供安全功能。
+Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信、请求资源、提供响应（例如，提供请求的资源或详细说明请求失败的原因），并为通信提供安全特性。
 
 传输层安全（TLS）通过在网络传输过程中对数据进行加密来提供安全和隐私保护，是 [HTTPS](/zh-CN/docs/Glossary/HTTPS) 协议背后的技术。TLS 有助于保护隐私，因为它能阻止第三方截获传输数据并恶意使用。
 
 所有浏览器都在逐步要求默认使用 HTTPS；实际上已经是这样了，因为没有这个协议，你就无法在网上做很多事情。
 
-相关话题：
+相关主题：
 
 - [传输层安全](/zh-CN/docs/Web/Security/Transport_Layer_Security)（TLS）
   - : TLS 协议是使两个联网应用程序或设备能够私密、稳健地交换信息的标准。使用 TLS 的应用程序可以选择自己的安全参数，这些参数会对数据的安全性和可靠性产生重大影响。
 - [HTTP Strict-Transport-Security](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)
-  - : `Strict-Transport-Security:` [HTTP](/zh-CN/docs/Web/HTTP) 标头可以让网站指定其只能通过 HTTPS 访问。
+  - : `Strict-Transport-Security` [HTTP](/zh-CN/docs/Web/HTTP) 标头可以让网站指定其只能通过 HTTPS 访问。
 - [证书透明度](/zh-CN/docs/Web/Security/Certificate_Transparency)
-  - : **证书透明度**（CT）是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
+  - : 证书透明度（CT）是一个开放的框架，旨在防止和监测证书的误发。新颁发的证书被记录到公开运行的、通常是独立的 CT 日志中，这些日志保持着一个仅有附录的、有密码学保证的 TLS 证书的记录。
 - [混合内容](/zh-CN/docs/Web/Security/Mixed_content)
   - : 如果一个 HTTPS 页面包含明文 HTTP 获取的内容，那么该页面就被称为**混合内容**页面。像这样的页面只能保证部分内容加密，未加密的部分仍然可以被嗅探器和中间人攻击者感知。
 - [弱签名算法](/zh-CN/docs/Web/Security/Weak_Signature_Algorithm)
@@ -67,26 +67,26 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
 
 - 用不需要的通知和其他用户界面功能烦扰用户。
 - 在没有警告的情况下打开网络摄像头，监视用户。
-- 堵塞浏览器/系统，制造{{glossary("denial of service"，"拒绝服务")}}（DoS）攻击。
+- 堵塞浏览器/系统，制造{{glossary("denial of service", "拒绝服务")}}（DoS）攻击。
 - 窃取数据或金钱。
 
 这些“强大特性”通过以下方法控制：
 
-- 仅允许在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中使用此类特性。安全上下文是 {{domxref("Window", "window")}} 或{{domxref("WorkerGlobalScope", "worker")}}，有理由相信其内容已通过 HTTPS/TLS 安全交付。在安全上下文中，与**不**安全的上下文进行通信的可能性是有限的。安全上下文还有助于防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的功能。
+- 仅允许在[安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)中使用此类特性。安全上下文是 {{domxref("Window", "window")}} 或 {{domxref("WorkerGlobalScope", "worker")}}，有理由相信其内容已通过 HTTPS/TLS 安全交付。在安全上下文中，与**不**安全的上下文进行通信的可能性是有限的。安全上下文还有助于防止[中间人攻击者](https://zh.wikipedia.org/wiki/中间人攻击)访问强大的功能。
 
-  要查看仅在安全上下文中可用的 web 平台特性列表，请参阅[限制在安全上下文中使用的功能](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。
+  要查看仅在安全上下文中可用的 Web 平台特性列表，请参阅[限制在安全上下文中使用的特性](/zh-CN/docs/Web/Security/Secure_Contexts/features_restricted_to_secure_contexts)。
 
 - 这些功能的使用受到用户权限系统的限制：用户必须明确选择提供对这些功能的访问权限，这意味着它们不能自动使用。用户权限请求是自动进行的，可以使用[权限 API](/zh-CN/docs/Web/API/Permissions_API) 来查询 API 权限的状态。
 
-- 其他一些浏览器功能只能在响应用户操作（如点击按钮）时使用，这意味着需要在适当的事件处理程序中调用这些功能。这被称为**瞬时激活**。更多信息请参阅[用户激活功能](/zh-CN/docs/Web/Security/User_activation)。
+- 其他一些浏览器功能只能在响应用户操作（如点击按钮）时使用，这意味着需要在适当的事件处理程序中调用这些功能。这被称为**瞬态激活**。更多信息请参阅[用户激活特性](/zh-CN/docs/Web/Security/User_activation)。
 
 ## 更高层次的安全考虑
 
-网络安全需要考虑服务器端和客户端的许多方面。本节主要介绍客户端的安全注意事项。你可以在[网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)（我们的 [服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side) 学习模块的一部分）中找到从服务器端角度出发的安全概要，其中还包括需要注意的常见攻击的说明。
+网络安全需要考虑服务器端和客户端的许多方面。本节主要介绍客户端的安全注意事项。你可以在[网站安全](/zh-CN/docs/Learn_web_development/Extensions/Server-side/First_steps/Website_security)（我们的[服务器端网站编程](/zh-CN/docs/Learn_web_development/Extensions/Server-side)学习模块的一部分）中找到从服务器端角度出发的安全概要，其中还包括需要注意的常见攻击的说明。
 
 ### 负责地存储客户端数据
 
-负责任地处理数据主要涉及减少[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies) 的使用，并谨慎对待你存储和与他们共享的数据。传统上，web 开发人员使用 cookie 来存储各种数据，攻击者很容易利用这种倾向。因此，浏览器已经开始限制跨站 cookie 的使用，目的是在将来完全取消对它们的访问。
+负责任地处理数据主要涉及减少[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies) 的使用，并谨慎对待你存储和与他们共享的数据。传统上，Web 开发人员使用 cookie 来存储各种数据，攻击者很容易利用这种倾向。因此，浏览器已经开始限制跨站 cookie 的使用，目的是在将来完全取消对它们的访问。
 
 你应该通过限制你所依赖的跟踪活动的数量和/或通过以其他方式实现所需信息的持久性，为移除跨站 Cookie 做好准备。更多信息，请参阅[从第三方 cookie 过渡](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#transitioning_from_third-party_cookies)和[替换第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies#replacing_third-party_cookies)。
 
@@ -104,12 +104,12 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
   > [!NOTE]
   > 有些钓鱼网站可能非常复杂，很难与真实网站区分开来。因此，应教育用户不要轻信电子邮件和短信中的随机链接。如果用户收到类似“紧急情况，需要立即登录以解决问题”的信息，他们应该直接在新标签页中访问该网站，并尝试直接登录，而不是点击信息中的链接。或者，他们可以给你打电话或发电子邮件，讨论他们收到的信息。
 
-- 利用{{glossary("rate limit", "速率限制")}}、一定次数的不成功尝试后的账户锁定以及 [CAPTCHA 挑战](https://zh.wikipedia.org/wiki/验证码)，防范登录页面上的暴力攻击。
+- 利用{{glossary("rate limit", "速率限制")}}、一定次数的不成功尝试后的账户锁定以及 [CAPTCHA 质询](https://zh.wikipedia.org/wiki/验证码)，防范登录页面上的暴力攻击。
 - 使用唯一的[会话 ID](https://en.wikipedia.org/wiki/Session_ID)管理用户登录会话，并在用户闲置一段时间后自动注销。
 
 ### 不要在 URL 查询字符串中包含敏感数据
 
-一般来说，不应该[在 URL 查询字符串中包含敏感数据](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url)，因为如果第三方拦截了 URL（例如通过 {{httpheader("Referer")}} HTTP 标头），他们就可能窃取这些信息。更严重的是，这些 URL 可能会被公共网络爬虫、HTTP 代理和归档工具（如 [互联网档案](https://web.archive.org/)）编入索引，这意味着你的敏感数据可能会持续存在于可公开访问的资源中。
+一般来说，不应该[在 URL 查询字符串中包含敏感数据](https://owasp.org/www-community/vulnerabilities/Information_exposure_through_query_strings_in_url)，因为如果第三方拦截了 URL（例如通过 {{httpheader("Referer")}} HTTP 标头），他们就可能窃取这些信息。更严重的是，这些 URL 可能会被公共网络爬虫、HTTP 代理和归档工具（如[互联网档案](https://web.archive.org/)）编入索引，这意味着你的敏感数据可能会持续存在于可公开访问的资源中。
 
 使用 `POST` 请求而非 `GET` 请求可避免这些问题。我们的文章 [Referer 标头策略：隐私和安全考虑](/zh-CN/docs/Web/Security/Referer_header:_privacy_and_security_concerns)更详细地描述了与 `Referer` 标头相关的隐私和安全风险，并提供了降低这些风险的建议。
 
@@ -118,27 +118,27 @@ Web 浏览器和服务器使用 [HTTP](/zh-CN/docs/Web/HTTP) 协议相互通信�
 
 ### 执行使用策略
 
-考虑使用[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）和[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)等 web 平台功能，在网站上强制执行一套功能和资源使用规则，使漏洞更难引入。
+考虑使用[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）和[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)等 Web 平台特性，在网站上强制执行一套功能和资源使用规则，使漏洞更难引入。
 
 CSP 允许你添加一层安全保护，例如，只允许从特定的可信来源加载图片或脚本。这有助于检测和减轻某些类型的攻击，包括跨站脚本攻击（{{Glossary("Cross-site_scripting", "XSS"}}）和数据注入攻击。这些攻击涉及一系列恶意活动，包括数据窃取、网站篡改和恶意软件传播。
 
 权限策略的工作方式与此类似，只是它更关注允许或阻止对特定“强大特性”的访问（[如前所述](#安全上下文和权限特性)）。
 
 > [!NOTE]
-> 此类策略对于确保网站安全非常有用，尤其是在网站使用大量第三方代码的情况下。不过，请记住，如果阻止使用第三方脚本赖以运行的功能，最终可能会破坏网站的功能。
+> 此类策略对于确保网站安全非常有用，尤其是在网站使用大量第三方代码的情况下。不过，请记住，如果阻止使用第三方脚本赖以运行的特性，最终可能会破坏网站的功能。
 
 ### 保持数据完整性
 
 承接上一节的内容，在允许网站使用功能和资源时，应尽量确保资源未被篡改。
 
-相关话题：
+相关主题：
 
 - [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
   - : **子资源完整性**（SRI）是一种安全功能，允许浏览器验证所获取的文件（比如，从一个{{Glossary("CDN","内容分发网络")}}中）没有遭受恶意修改。它的工作原理是允许你提供一个密码散列值，目标文件必须匹配这个值。
 - [HTTP Access-Control-Allow-Origin](/zh-CN/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : **`Access-Control-Allow-Origin`** 响应标头表明响应是否可以与来自给定{{glossary("origin","来源")}}的请求代码共享。
 - [HTTP X-Content-Type-Options](/zh-CN/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
-  - : **`X-Content-Type-Options`** 响应标头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Guides/MIME_types#mime_嗅探)的方法，或者换句话说，MIME 类型是故意配置的。
+  - : **`X-Content-Type-Options`** 响应标头是一个标记，由服务器用来表示应该遵循 {{HTTPHeader("Content-Type")}} 标头中宣告的 [MIME 类型](/zh-CN/docs/Web/HTTP/Guides/MIME_types)，不应该被改变。这是一种选择退出 [MIME 类型嗅探](/zh-CN/docs/Web/HTTP/Guides/MIME_types#mime_嗅探)的方法，或者换句话说，MIME 类型是故意配置的。
 
 ### 净化表单输入
 
