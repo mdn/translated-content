@@ -1,13 +1,15 @@
 ---
 title: scroll-padding-bottom
 slug: Web/CSS/scroll-padding-bottom
+l10n:
+  sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
 {{CSSRef}}
 
-`scroll-padding-bottom` プロパティは、スクロールポートの*最適表示領域*の下のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ (固定位置のツールバーやサイドバーなど) によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
+`scroll-padding-bottom` プロパティは、スクロールポートの*最適表示領域*の下のオフセットを定義します。ユーザーのビュー内でものを配置するためのターゲット領域として使用される領域です。これにより、他のコンテンツ（固定位置のツールバーやサイドバーなど）によって隠されているスクロールポートの領域を除外したり、単にターゲット要素とスクロールポートの端との間により多くの余裕を持たせたりすることができます。
 
-{{InteractiveExample("CSS Demo: scroll-padding-bottom")}}
+{{InteractiveExample("CSS デモ: scroll-padding-bottom")}}
 
 ```css interactive-example-choice
 scroll-padding-bottom: 0;
@@ -28,7 +30,7 @@ scroll-padding-bottom: 2em;
     <div>2</div>
     <div>3</div>
   </div>
-  <div class="info">Scroll »</div>
+  <div class="info">スクロール »</div>
 </section>
 ```
 
@@ -84,6 +86,7 @@ scroll-padding-bottom: 10%;
 scroll-padding-bottom: inherit;
 scroll-padding-bottom: initial;
 scroll-padding-bottom: revert;
+scroll-padding-bottom: revert-layer;
 scroll-padding-bottom: unset;
 ```
 
@@ -113,4 +116,4 @@ scroll-padding-bottom: unset;
 ## 関連情報
 
 - [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)
-- [Well-Controlled Scrolling with CSS Scroll Snap](https://web.dev/css-scroll-snap/)
+- [Well-controlled scrolling with CSS scroll snap](https://web.dev/articles/css-scroll-snap)

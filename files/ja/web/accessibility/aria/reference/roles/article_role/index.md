@@ -83,7 +83,7 @@ original_slug: Web/Accessibility/ARIA/Roles/article_role
 ## 関連情報
 
 - [feed ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role)
-- [section ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Section_Role)
+- [section ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Section_Role)
 - {{htmlelement("article")}} 要素
 - [RSS](/ja/docs/Glossary/RSS)
 

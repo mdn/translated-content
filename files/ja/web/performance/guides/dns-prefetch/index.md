@@ -14,7 +14,7 @@ l10n:
 
 ブラウザーが（サードパーティの）サーバーにリソースをリクエストする場合、ブラウザーがリクエストを発行する前に、その[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメイン名を IP アドレスに解決する必要があります。このプロセスは DNS 解決と呼ばれています。 DNS キャッシュはこの待ち時間を縮小するのに役立ちますが、 DNS 解決はリクエストに大きな待ち時間を追加する可能性があります。多くのサードパーティへの接続を開くためのウェブサイトでは、この待ち時間が読み込みパフォーマンスを大幅に縮小する可能性があります。
 
-`dns-prefetch` は開発者が DNS 解決の遅延をマスクするのに役立ちます。 [HTML の `<link>` 要素](/ja/docs/Web/HTML/Element/link)は [`rel` 属性](/ja/docs/Web/HTML/Attributes/rel) の値 `dns-prefetch` によってこの機能を提供します。[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインは、 [href 属性](/ja/docs/Web/HTML/Attributes)で指定します。
+`dns-prefetch` は開発者が DNS 解決の遅延をマスクするのに役立ちます。 [HTML の `<link>` 要素](/ja/docs/Web/HTML/Reference/Elements/link)は [`rel` 属性](/ja/docs/Web/HTML/Reference/Attributes/rel) の値 `dns-prefetch` によってこの機能を提供します。[別オリジン](/ja/docs/Web/HTTP/Guides/CORS)のドメインは、 [href 属性](/ja/docs/Web/HTML/Reference/Attributes)で指定します。
 
 ## 構文
 
@@ -38,7 +38,7 @@ l10n:
 </html>
 ```
 
-自分のウェブサイトが別オリジンのドメインのリソースを参照するときは、 `dns-prefetch` ヒントを [`<head>` 要素](/ja/docs/Web/HTML/Element/head)に配置する必要がありますが、いくつか注意すべきことがあります。
+自分のウェブサイトが別オリジンのドメインのリソースを参照するときは、 `dns-prefetch` ヒントを [`<head>` 要素](/ja/docs/Web/HTML/Reference/Elements/head)に配置する必要がありますが、いくつか注意すべきことがあります。
 
 ## ベストプラクティス
 
@@ -58,7 +58,7 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 Link: <https://fonts.googleapis.com/>; rel=preconnect
 ```
 
-または [HTML の `<link>` 要素](/ja/docs/Web/HTML/Element/link)でも使用できます。
+または [HTML の `<link>` 要素](/ja/docs/Web/HTML/Reference/Elements/link)でも使用できます。
 
 ```html
 <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin />
@@ -69,13 +69,13 @@ Link: <https://fonts.googleapis.com/>; rel=preconnect
 
 これらのヒントをペアにしている理由は、 dns-prefetch の対応が preconnect の対応よりも優れているからです。 preconnect に対応していないブラウザーでも、 dns-prefetch に代替されることで、ある程度の好ましいことを取得することができます。これは HTML の機能なので、とても耐障害性に優れています。非対応のブラウザーが dns-prefetch のヒントや他のリソースのヒントに遭遇しても、サイトが壊れることはありません。ただ、指定されたことが提供されないだけです。
 
-フォントなど、一部のリソースは無名モードで読み込まれます。そのような場合は preconnect ヒントで [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin) 属性を設定する必要があります。これを除外すると、ブラウザーは DNS 検索のみを行います。
+フォントなど、一部のリソースは無名モードで読み込まれます。そのような場合は preconnect ヒントで [crossorigin](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性を設定する必要があります。これを除外すると、ブラウザーは DNS 検索のみを行います。
 
 ## 関連情報
 
-- [\<link>](/ja/docs/Web/HTML/Element/link)
-- [HTML 属性: rel](/ja/docs/Web/HTML/Attributes/rel)
-- [crossorigin](/ja/docs/Web/HTML/Attributes/crossorigin)
+- [\<link>](/ja/docs/Web/HTML/Reference/Elements/link)
+- [HTML 属性: rel](/ja/docs/Web/HTML/Reference/Attributes/rel)
+- [crossorigin](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
 - [オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)
 - [HTTP の Link ヘッダー](/ja/docs/Web/HTTP/Reference/Headers/Link)

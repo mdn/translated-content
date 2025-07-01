@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("File and Directory Entries API")}}
 
-**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Element/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
+**`HTMLInputElement.webkitdirectory`** はプロパティで、 [`webkitdirectory`](/ja/docs/Web/HTML/Reference/Elements/input/file#webkitdirectory) という HTML 属性の値を反映し、 {{HTMLElement("input")}} 要素によってユーザーがファイルの代わりにディレクトリーを選択できることを示します。
 ディレクトリーが選択された場合、ディレクトリーとその内容の階層構造が選択されたアイテムのセットに含まれます。
 選択されているファイルシステムの項目は、 {{domxref("HTMLInputElement.webkitEntries", "webkitEntries")}} を使用して受け取ることができます。
 
@@ -24,26 +24,20 @@ l10n:
 ユーザーが選択を行った後、 `files` の中のそれぞれの {{domxref("File")}} オブジェクトは各自が {{domxref("File.webkitRelativePath")}} プロパティセットを持ち、ファイルが所在する位置が選択されたディレクトリーの中の相対パスで設定されます。例えば、次のようなファイルシステムを考えてみてください。
 
 - PhotoAlbums
-
   - Birthdays
-
     - Jamie's 1st birthday
-
       - PIC1000.jpg
       - PIC1004.jpg
       - PIC1044.jpg
 
     - Don's 40th birthday
-
       - PIC2343.jpg
       - PIC2344.jpg
       - PIC2355.jpg
       - PIC2356.jpg
 
   - Vacations
-
     - Mars
-
       - PIC5533.jpg
       - PIC5534.jpg
       - PIC5556.jpg

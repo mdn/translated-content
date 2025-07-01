@@ -7,8 +7,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Map/groupBy
 
 La méthode **`groupToMap()`** permet de grouper les éléments du tableau appelant selon les valeurs renvoyées par la fonction de test passée en argument. L'objet [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) renvoyé utilise les valeurs uniques fournies par la fonction de test comme clés, et les valeurs correspondantes sont des tableaux avec les éléments du groupe correspondant.
 
-<!-- {{EmbedInteractiveExample("pages/js/array-groupbytomap.html")}} -->
-
 Cette méthode est notamment utile lorsqu'on veut grouper des éléments associés avec un objet, notamment lorsque cet objet évolue avec le temps. Si cet objet ne varie, vous pouvez à la place utiliser une chaîne de caractères comme clé de regroupement et utiliser la méthode [`Array.prototype.group()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy).
 
 ## Syntaxe
@@ -33,11 +31,9 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ### Paramètres
 
 - `fnRappel`
-
   - : La fonction à exécuter pour chaque élément du tableau.
 
     Elle est appelée avec les arguments suivants&nbsp;:
-
     - `element`
       - : La valeur de l'élément du tableau en cours de traitement.
     - `index`
@@ -48,7 +44,6 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
     La valeur (que ce soit un objet ou une valeur primitive) renvoyée par la fonction de rappel indique le groupe de l'élément courant.
 
 - `thisArg` {{optional_inline}}
-
   - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
 
     Cet argument est ignoré pour les fonctions fléchées qui disposent de leur propre portée lexicale, utilisée à la place. Sinon, si `thisArg` n'est pas fourni, c'est la valeur `this` de la portée d'exécution qui est appelée, ou `undefined` si la fonction est appelée en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).

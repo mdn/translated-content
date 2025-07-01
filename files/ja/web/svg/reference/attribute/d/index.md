@@ -1,20 +1,18 @@
 ---
 title: d
 slug: Web/SVG/Reference/Attribute/d
-original_slug: Web/SVG/Attribute/d
 l10n:
-  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`d`** 属性は描かれるパスを定義します。
 
-パスの定義は[パスコマンド](#パスコマンド)のリストで、各コマンドはコマンド文字とコマンドへの引数を示す数値から構成されます。コマンドの詳細は以下になります。
+パスの定義は[パスコマンド](#パスコマンド)のリストで、各コマンドはコマンド文字とコマンドへの引数を示す数値から構成されます。
+コマンドは[後で説明します](#パスコマンド)。
 
-この属性を使用できるのは、SVG 要素のうち [`<path>`](#path), [`<glyph>`](#glyph), [`<missing-glyph>`](#missing-glyph) です。
+この属性は SVG の [`<path>`](#path) 要素で使用されます。
 
-`d` はプレゼンテーション属性のため、[CSS プロパティとして使用](#css_%E3%83%97%E3%83%AD%E3%83%91%E3%83%86%E3%82%A3%E3%81%A8%E3%81%97%E3%81%A6_d_%E3%82%92%E4%BD%BF%E7%94%A8)することもできます。
+`d` はプレゼンテーション属性であるため、[CSS プロパティとして使用](#css_プロパティとして_d_を使用)することもできます。
 
 ## 例
 
@@ -43,7 +41,7 @@ svg {
 
 ## path
 
-{{SVGElement('path')}} 要素に対しては、`d` 属性は、描かれるパスを定義するパスコマンドの並びを含む文字列です。
+{{SVGElement('path')}} 要素に対しては、 `d` 属性は、描かれるパスを定義するパスコマンドの並びを含む文字列です。
 
 <table class="properties">
   <tbody>
@@ -55,62 +53,7 @@ svg {
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-## glyph
-
-> [!WARNING]
-> SVG2 において、{{SVGElement('glyph')}} は非推奨であり、用いるべきではありません。
-
-{{SVGElement('glyph')}} 要素に対しては、`d` 属性はグリフのアウトライン形状を定義するパスコマンドの並びを含む文字列です。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong><a href="/ja/docs/Web/CSS/string">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>none</em></td>
-    </tr>
-    <tr>
-      <th scope="row">アニメーション</th>
-      <td>可</td>
-    </tr>
-  </tbody>
-</table>
-
-> [!NOTE]
-> 原点 (座標`0`, `0`) は通常、コンテキストの _左上の角_ です。しかし、{{SVGElement("glyph")}} 要素は、それ自身の原点を文字ボックスの _左下_ に持ちます。
-
-## missing-glyph
-
-> [!WARNING]
-> SVG2 において、{{SVGElement('missing-glyph')}} は非推奨であり、用いるべきではありません。
-
-{{SVGElement('missing-glyph')}} 要素に対しては、`d` 属性は、グリフのアウトライン形状を定義するパスコマンドの並びを含んだ文字列です。
-
-<table class="properties">
-  <tbody>
-    <tr>
-      <th scope="row">値</th>
-      <td>
-        <strong><a href="/ja/docs/Web/CSS/string">&#x3C;string></a></strong>
-      </td>
-    </tr>
-    <tr>
-      <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -121,10 +64,10 @@ svg {
 
 ## CSS プロパティとして d を使用
 
-`d` はプレゼンテーション属性であるため、CSS を使用して変更することもできます。
-このプロパティは、[path()](/ja/docs/Web/CSS/basic-shape/path) または `none` のいずれかをとります。
+`d` はプレゼンテーション属性であるため、 CSS を使用して変更することもできます。
+このプロパティは、 [`path()`](/ja/docs/Web/CSS/basic-shape/path) または `none` のいずれかをとります。
 
-以下の例は、要素の上にマウスを置くと新しいパスを適用する方法を示しています。
+以下の例では、要素の上にマウスを置いた際に、新しいパスを適用する方法を示しています。
 新しいパスは古いパスと同じですが、ハートを横切る線が追加されます。
 
 ```css
@@ -134,7 +77,7 @@ svg {
   height: 100%;
 }
 
-/* このパスはホバー時に表示されます*/
+/* このパスはホバー時に表示されます */
 #svg_css_ex1:hover path {
   d: path(
     "M10,30 A20,20 0,0,1 50,30 A20,20 0,0,1 90,30 Q90,60 50,90 Q10,60 10,30 z M5,5 L90,90"
@@ -158,6 +101,8 @@ svg {
 
 {{EmbedLiveSample('Using d as a CSS Property', '100%', 200)}}
 
+`<path>` のアニメーションの例については、CSS の {{cssxref("d")}} プロパティのリファレンスページの例をご覧ください。
+
 ## パスコマンド
 
 パスコマンドは、描かれるパスの定義を指定します。各コマンドは、コマンド文字とコマンド引数を示す数値で構成されます。
@@ -172,13 +117,13 @@ SVG では、6 種類のパスコマンドを定義しており、全部で 20 �
 - [ClosePath](#closepath): `Z`, `z`
 
 > [!NOTE]
-> コマンドは、大文字小文字を区別します。大文字のコマンドは絶対座標を指定し、これに対して小文字のコマンドは現在位置からの相対座標を指定します。
+> コマンドは、大文字小文字を区別します。大文字のコマンドは絶対座標を指定し、それに対して小文字のコマンドは現在位置からの相対座標を指定します。
 
-コマンドへの引数として負値を指定することは常に可能です。
+コマンドへの引数として負の値を指定することは常に可能です。
 
 - 負の角度は反時計回りとなります。
-- _絶対値_ での負の _x_ と _y_ の値は反転座標と解釈されます。
-- _相対値_ での負の _x_ の値は左へ移動、相対値での負の _y_ の値は上方向へ移動します。
+- 絶対座標での負の _x_ と _y_ の値は反転座標と解釈されます。
+- 相対座標での負の _x_ の値は左方向へ移動、相対値での負の _y_ の値は上方向へ移動します。
 
 ### MoveTo パスコマンド
 
@@ -283,7 +228,7 @@ _LineTo_ は、_現在位置_ (_P<sub>o</sub>_; {_x<sub>o</sub>_, _y<sub>o</sub>
     </tr>
     <tr>
       <th scope="row">L</th>
-      <td>(<code><var>x</var></code>, <code><var>y</var></code>)+</td>
+      <td>(<code>x</code>, <code>y</code>)+</td>
       <td>
         <p>
           <em>現在位置</em> から <code><var>x</var></code>,<code><var>y</var></code> で指定される <em>終了点</em> へ直線を描きます。後続する任意の数の座標の組は、暗黙的に絶対座標での LineTo (<code>L</code>) コマンドと解釈されます。
@@ -578,14 +523,14 @@ svg {
 
   <!-- 曲線の頂点と制御点の明示 -->
   <g id="ControlPoints">
-    <!-- 1つ目の 3 次コマンドへの制御点 -->
+    <!-- 1 つ目の 3 次コマンドへの制御点 -->
     <line x1="10" y1="90" x2="30" y2="90" stroke="lightgrey" />
     <circle cx="30" cy="90" r="1.5" />
 
     <line x1="50" y1="10" x2="25" y2="10" stroke="lightgrey" />
     <circle cx="25" cy="10" r="1.5" />
 
-    <!-- 2つめの円滑化制御点 (1つ目は暗黙的) -->
+    <!-- 2 つ目の円滑化制御点 (1 つ目は暗黙的) -->
     <line
       x1="50"
       y1="10"
@@ -824,7 +769,7 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
         </p>
         <ul>
           <li>
-            <code>rx</code> と <code>ry</code> は楕円の半径です。
+            <code><var>rx</var></code> と <code><var>ry</var></code> は楕円の半径です。
           </li>
           <li>
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です。
@@ -834,7 +779,7 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
             <ul>
               <li>
                 <code><var>large-arc-flag</var></code> では大きい円弧 (<code>1</code>)
-                を描くか、小さい円弧 (<code>0</code>) を描くかを選択し,
+                を描くか、小さい円弧 (<code>0</code>) を描くかを選択し、
               </li>
               <li>
                 <code><var>sweep-flag</var></code> では時計回りの円弧 (<code>1</code>) を描くか、反時計周りの円弧 (<code>0</code>) を描くかを選択します。
@@ -860,7 +805,7 @@ _楕円円弧曲線_ は楕円の一部として定義される曲線です。�
         </p>
         <ul>
           <li>
-            <code>rx</code>と<code>ry</code>は楕円の半径です
+            <code><var>rx</var></code> と <code><var>ry</var></code> は楕円の半径です
           </li>
           <li>
             <code><var>angle</var></code> は X 軸に対する楕円の角度（度単位）です
@@ -998,3 +943,8 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- SVG の {{SVGElement("path")}} 要素
+- CSS の {{cssxref("d")}} プロパティ

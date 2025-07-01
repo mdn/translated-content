@@ -10,7 +10,7 @@ l10n:
 
 [HTTP](/ja/docs/Glossary/HTTP) において**コンテンツネゴシエーション** (content negotiation) は、同じ URI におけるさまざまな{{Glossary("Representation header","表現")}}のリソースを提供するために使用する仕組みであり、ユーザーエージェントはどのリソースがユーザーにもっとも適しているか（例えば文書の言語はどれか、画像形式はどれか、コンテンツエンコーディングはどれか）を指定することができます。
 
-> **メモ:** [WHATWG のウィキページ](https://wiki.whatwg.org/wiki/Why_not_conneg)には、 HTTP コンテンツネゴシエーションの短所がいくつか書かれています。 HTML では、コンテンツネゴシエーションの代替として、例えば [`<source>` 要素](/ja/docs/Web/HTML/Element/source)を提供しています。
+> **メモ:** [WHATWG のウィキページ](https://wiki.whatwg.org/wiki/Why_not_conneg)には、 HTTP コンテンツネゴシエーションの短所がいくつか書かれています。 HTML では、コンテンツネゴシエーションの代替として、例えば [`<source>` 要素](/ja/docs/Web/HTML/Reference/Elements/source)を提供しています。
 
 ### コンテンツネゴシエーションの原理
 

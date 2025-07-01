@@ -19,7 +19,7 @@ l10n:
       <td>{{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい（<code>Sec-</code> 接頭辞）</td>
     </tr>
     <tr>
@@ -63,7 +63,6 @@ Sec-Fetch-User: ?1
 ## 関連情報
 
 - 関連ヘッダー
-
   - {{HTTPHeader("Sec-Fetch-Dest")}}
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}

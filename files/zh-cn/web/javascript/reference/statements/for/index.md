@@ -30,13 +30,11 @@ for (initialization; condition; afterthought)
 ```
 
 - `initialization` {{optional_inline}}
-
   - : 在循环开始前初始化的表达式（包含[赋值表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)）或者变量声明。通常用于初始化计数器变量。该表达式可以选择使用 `var` 或 `let` 关键字声明新的变量，使用 `var` 声明的变量不是该循环的局部变量，而是与 `for` 循环处在同样的作用域中。用 `let` 声明的变量是语句的局部变量。
 
     该表达式的结果会被丢弃。
 
 - `condition` {{optional_inline}}
-
   - : 每次循环迭代之前要判定的表达式。如果该表达式的[判定结果为真](/zh-CN/docs/Glossary/Truthy)，`statement` 将被执行。如果[判定结果为假](/zh-CN/docs/Glossary/Falsy)，那么执行流程将退出循环，并转到 `for` 结构后面的第一条语句。
 
     这个条件测试是可选的。如果省略，该条件总是计算为真。

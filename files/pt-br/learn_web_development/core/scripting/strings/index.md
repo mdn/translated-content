@@ -32,7 +32,7 @@ Muitos dos programas que temos visto até agora no curso está envolvido em algu
 
 ## Strings — O básico
 
-Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) se preferir).
+Em um primeiro relance, strings são tratadas de forma parecida como números, mas quando vamos mais a fundo, você começa a ver algumas diferenças importantes. Vamos começar a entrar em linhas básicas no console para nos familiarizar. Nós fornecemos um abaixo (ou use o [console de desenvolvedor do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) se preferir).
 
 ```html hidden
 <!doctype html>
@@ -283,7 +283,6 @@ Aqui estamos usando uma função {{domxref("Window.prompt()", "Window.prompt()")
    ```
 
 3. Se você tem uma variável numérica que precisa converter em string, mas não mudar completamente, ou uma string e quer converter em número, você pode usar a construção seguinte:
-
    - O objeto {{jsxref("Number")}} converterá qualquer coisa passada em um número, se for possível. Tente o seguinte:
 
      ```js

@@ -9,7 +9,7 @@ slug: Web/Performance/Guides/dns-prefetch
 
 当浏览器从（第三方）服务器请求资源时，必须先将该[跨源](/zh-CN/docs/Web/HTTP/Guides/CORS)域名解析为 IP 地址，然后浏览器才能发出请求。此过程称为 DNS 解析。虽然 DNS 缓存可以帮助减少此延迟，但 DNS 解析可能会给请求增加明显的延迟。对于打开了与许多第三方的连接的网站，此延迟可能会大大降低加载性能。
 
-`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Element/link)通过设置 [`rel` 属性](/zh-CN/docs/Web/HTML/Attributes/rel)值为 `dns-prefetch` 提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Attributes)中指明要[跨源](/zh-CN/docs/Web/HTTP/Guides/CORS)的域名：
+`dns-prefetch` 可帮助开发人员掩盖 DNS 解析延迟。[HTML `<link>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/link)通过设置 [`rel` 属性](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)值为 `dns-prefetch` 提供此功能。然后在 [href 属性](/zh-CN/docs/Web/HTML/Reference/Attributes)中指明要[跨源](/zh-CN/docs/Web/HTTP/Guides/CORS)的域名：
 
 ## 语法
 
@@ -33,7 +33,7 @@ slug: Web/Performance/Guides/dns-prefetch
 </html>
 ```
 
-每当站点引用跨源资源时，都应在 [`<head>` 元素](/zh-CN/docs/Web/HTML/Element/head)中放置 `dns-prefetch` 提示，但是要记住一些注意事项。
+每当站点引用跨源资源时，都应在 [`<head>` 元素](/zh-CN/docs/Web/HTML/Reference/Elements/head)中放置 `dns-prefetch` 提示，但是要记住一些注意事项。
 
 ## 最佳实践
 
@@ -63,9 +63,9 @@ Link: <https://fonts.googleapis.com/>; rel=dns-prefetch
 
 ## 参见
 
-- [\<link>](/zh-CN/docs/Web/HTML/Element/link)
-- [HTML 属性：rel](/zh-CN/docs/Web/HTML/Attributes/rel)
-- [crossorigin](/zh-CN/docs/Web/HTML/Attributes/crossorigin)
+- [\<link>](/zh-CN/docs/Web/HTML/Reference/Elements/link)
+- [HTML 属性：rel](/zh-CN/docs/Web/HTML/Reference/Attributes/rel)
+- [crossorigin](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)
 - [跨源资源共享（CORS）](/zh-CN/docs/Web/HTTP/Guides/CORS)
 - [HTTP 标头](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - [HTTP 标头 Link](/zh-CN/docs/Web/HTTP/Reference/Headers/Link)

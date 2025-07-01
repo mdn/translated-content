@@ -18,8 +18,6 @@ console.log(Intl.Collator.supportedLocalesOf(locales1, options1));
 // (Note: the exact output may be browser-dependent)
 ```
 
-<!-- The source for this interactive example is stored in a GitHub repository. If you'd like to contribute to the interactive examples project, please clone https://github.com/mdn/interactive-examples and send us a pull request. -->
-
 ## 構文
 
 ```js
@@ -32,9 +30,7 @@ Intl.Collator.supportedLocalesOf(locales, options);
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。
 - `options` {{optional_inline}}
-
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの照合アルゴリズムです。指定可能な値は "`lookup`" および "`best fit`" で、既定値は "`best fit`" です。このオプションの詳細は、 {{jsxref("Intl", "Intl", "#ロケールネゴシエーション", 1)}} のページを参照してください。
 

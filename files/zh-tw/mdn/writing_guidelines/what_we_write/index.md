@@ -2,7 +2,7 @@
 title: 我們撰寫的內容
 slug: MDN/Writing_guidelines/What_we_write
 l10n:
-  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
+  sourceCommit: 427efbee9e0da53517f45420af87a66a2a6b6e19
 ---
 
 {{MDNSidebar}}
@@ -20,7 +20,7 @@ MDN Web Docs 上的所有內容必須與其所在技術區塊相關。垃圾內�
 指向商業網站的外部連結（如果與主題相關）將根據具體情況進行判斷。這些連結在協助 Web 開發者方面的價值必須大於為所連結網站帶來的商業利益。
 
 > [!NOTE]
-> 在 MDN 的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節，你會看到指向商業網站的連結，但這些連結使用得很節制，且我們僅連結到受信任的教育合作夥伴。你可以在[學習 Web 開發寫作指南 > 外部連結和嵌入](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#外部連結和嵌入)中閱讀更多關於這方面的內容。
+> 在 MDN 的[學習 Web 開發](/zh-TW/docs/Learn_web_development)章節，你會看到指向商業網站的連結，但這些連結使用得很節制，且我們僅連結到受信任的教育合作夥伴。你可以在[學習 Web 開發寫作指南 > 合作夥伴連結和嵌入](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#合作夥伴連結和嵌入)中閱讀更多關於這方面的內容。
 
 ### 中立性
 
@@ -36,7 +36,7 @@ MDN Web Docs 上的文章必須保持[中立的觀點](https://zh.wikipedia.org/
 
 針對新的參考頁面或指南，請開啟一個[新議題](https://github.com/mdn/mdn/issues/new/choose)，詳細說明你所建議的內容及原因（請盡可能具體）。
 
-若要建議涉及新內容區塊的大型專案，請參考[納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)頁面，其中也說明了申請流程。
+若要建議涉及新內容區塊的大型專案，請參考[納入標準](/zh-TW/docs/MDN/Writing_guidelines/Criteria_for_inclusion)頁面，其中也說明了申請流程。
 
 ## 適合在 MDN Web Docs 上的主題
 
@@ -66,7 +66,7 @@ MDN Web Docs 上的文章必須保持[中立的觀點](https://zh.wikipedia.org/
 
 MDN Web Docs 上的所有內容都必須與其所屬的技術類別相關。貢獻者應遵循這些 [MDN 撰寫指南](/zh-TW/docs/MDN/Writing_guidelines)，以確保在撰寫風格、程式碼範例和其他主題上保持一致性。
 
-關於某項技術是否可以在 MDN Web Docs 上進行紀錄的標準，請參閱[納入標準](/zh-TW/docs/MDN/Writing_guidelines/What_we_write/Criteria_for_inclusion)頁面以了解更多詳情。
+關於某項技術是否可以在 MDN Web Docs 上進行紀錄的標準，請參閱[納入標準](/zh-TW/docs/MDN/Writing_guidelines/Criteria_for_inclusion)頁面以了解更多詳情。
 
 ### 我們何時記錄新技術
 

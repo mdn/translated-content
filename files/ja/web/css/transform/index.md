@@ -50,7 +50,7 @@ transform: scale(0.5) translate(-100%, -100%);
 この場合、その要素はその中に含まれる `position: fixed;` または `position: absolute;` であるすべての要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)として扱われます。
 
 > [!WARNING]
-> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Element/col)、[表の列グループボックス](/ja/docs/Web/HTML/Element/colgroup)を除くすべての要素です。
+> 座標変換可能な要素のみが `transform` の対象になります。つまり、レイアウトが CSS ボックスモデルによって管理される、[置換要素でないインラインボックス](/ja/docs/Glossary/Inline-level_content)、[表の列ボックス](/ja/docs/Web/HTML/Reference/Elements/col)、[表の列グループボックス](/ja/docs/Web/HTML/Reference/Elements/colgroup)を除くすべての要素です。
 
 ## 構文
 

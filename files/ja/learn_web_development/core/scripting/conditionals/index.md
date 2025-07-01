@@ -871,7 +871,7 @@ function insertAtCaret(text) {
 
 ## スキルテスト
 
-この記事の最後まで来ましたが、最も大事な情報を覚えていますか？先に進む前に、この情報を保持しているか検証するテストがあります — [スキルテスト: 条件文](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals) を見てください。
+この記事の最後まで来ましたが、最も大事な情報を覚えていますか？先に進む前に、この情報を保持しているか検証するテストがあります — [スキルテスト: 条件文](/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals) を見てください。
 
 ## まとめ
 

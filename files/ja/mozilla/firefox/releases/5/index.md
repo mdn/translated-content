@@ -13,7 +13,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 
 - すべての HTML 要素が {{ domxref("element.accessKey", "accessKey") }} 属性を持つようになりました。また、{{ domxref("element.blur()", "blur()") }}, {{ domxref("element.click()", "click()") }}, {{ domxref("element.focus()", "focus()") }} メソッドもすべての要素に定義されました。これらの属性やメソッドは {{ domxref("HTMLElement") }} に定義されています。
 - HTML5 仕様への準拠により、[文字エンコーディング](/ja/docs/Character_Sets_Supported_by_Gecko) UTF-7 と UTF-32 のサポートが削除されました。
-- Quirks モードにおいて、空の {{ HTMLElement("map") }} がマッチされず、空でない `<map>` にスキップしてしまう問題が修正されました。詳細は {{ HTMLElement("map") }} 要素のページにある [Gecko の実装に関する注意書き](/ja/docs/Web/HTML/Element/map#gecko_notes) をご覧ください。
+- Quirks モードにおいて、空の {{ HTMLElement("map") }} がマッチされず、空でない `<map>` にスキップしてしまう問題が修正されました。詳細は {{ HTMLElement("map") }} 要素のページにある [Gecko の実装に関する注意書き](/ja/docs/Web/HTML/Reference/Elements/map#gecko_notes) をご覧ください。
 - Android 版 Firefox mobile が {{ cssxref("@font-face") }} で WOFF を利用できるようになりました。
 - セキュリティ対策により、WebGL で [もとのドメイン外からのテクスチャが読み込まれなくなりました](/ja/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL)。将来的に [HTTP access control](/ja/docs/Web/HTTP/Guides/CORS) のサポートが行われ、セキュリティを確保したかたちでクロステクスチャが実現できるでしょう。
 
@@ -95,7 +95,7 @@ Firefox 5 は Gecko 5.0 ベースのブラウザーで、2011 年 6 月 21 日�
 ### インターフェイスの変更点
 
 - `nsIHttpChannelInternal` インターフェイスはチャネルの端点のアドレスとポートの情報にアクセスする新しい属性を持っています。この情報は主にデバッグに用いることができます。
-- {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Element/canvas#width) と [`height`](/ja/docs/Web/HTML/Element/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) をご覧ください）。
+- {{ HTMLElement("canvas") }} エレメントの [`width`](/ja/docs/Web/HTML/Reference/Elements/canvas#width) と [`height`](/ja/docs/Web/HTML/Reference/Elements/canvas#height) 属性は今回から符号付き整数から符合なし整数に変わり、IDL におけるリフレクトを行います（[`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) をご覧ください）。
 - `nsIAppStartup2` と `nsIAppStartup_MOZILLA_2_0` インターフェイスは`nsIAppStartup` インターフェイスに統合されました。
 - `nsIDocShell_MOZILLA_2_0_BRANCH は` `nsIDocShell` インターフェイスに統合されました。
 - `nsIFocusManager_MOZILLA_2_0_BRANCH` インターフェイスは `nsIFocusManager` インターフェイスに統合されました。

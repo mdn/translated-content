@@ -41,19 +41,15 @@ l10n:
 ## ガイド
 
 - [構文](/ja/docs/Web/CSS/CSS_syntax/Syntax)
-
   - : CSS 宣言、宣言ブロック、ルールセット、文などの CSS 構文の概要です。
 
 - [値の定義構文](/ja/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
-
   - : CSS プロパティと関数の有効な値を定義するための正式な文法を、意味づけ制約とともに説明します。 CSS の成分値の型、結合子、乗算子を理解するためのガイドです。
 
 - [CSS 構文のエラー処理](/ja/docs/Web/CSS/CSS_syntax/Error_handling)
-
   - : ユーザーエージェントが不正な CSS を処理する方法の概要です。
 
 - [CSS 第一歩の学習: CSS の構文](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文)
-
   - : CSS の構文入門を含む CSS 入門ガイドです。
 
 ## 関連概念
@@ -93,8 +89,8 @@ l10n:
 
 - {{HTMLElement("style")}} 要素
 - {{HTMLElement("link")}} 要素
-- [`class`](/ja/docs/Web/HTML/Global_attributes/class) 属性
-- [`rel`](/ja/docs/Web/HTML/Attributes/rel#stylesheet) 属性
+- [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性
+- [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel#stylesheet) 属性
 
 ## 仕様書
 

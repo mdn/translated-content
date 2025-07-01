@@ -1,12 +1,9 @@
 ---
 title: r
 slug: Web/SVG/Reference/Attribute/r
-original_slug: Web/SVG/Attribute/r
 l10n:
-  sourceCommit: 64d85b74ce1cce6a24ae8979da4f3f4a01a47229
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`r`** 属性は円の半径を定義します。
 

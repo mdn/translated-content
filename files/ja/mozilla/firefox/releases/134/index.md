@@ -60,7 +60,7 @@ l10n:
 
 - **`Intl.DurationFormat`** (Nightly 版): {{jsxref("Intl.DurationFormat")}} は、期間を言語に依存して表記できます ([Firefox bug 1648139](https://bugzil.la/1648139))。
 - **`autocorrect`**: <code>dom.forms.autocorrect</code>。
-  HTML の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) 属性および {{domxref("HTMLElement.autocorrect")}} プロパティは、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します ([Firefox bug 1725806](https://bugzil.la/1725806))。
+  HTML の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) 属性および {{domxref("HTMLElement.autocorrect")}} プロパティは、編集可能なテキスト要素 (多くのテキスト型 {{htmlelement("input")}} 要素、{{htmlelement("textarea")}} 要素、[`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性を設定した要素) のオートコレクトを許可します ([Firefox bug 1725806](https://bugzil.la/1725806))。
 
 ## 過去のバージョン
 

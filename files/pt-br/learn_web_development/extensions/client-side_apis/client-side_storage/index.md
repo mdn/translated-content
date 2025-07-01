@@ -41,7 +41,7 @@ Os navegadores modernos oferecem suporte a várias maneiras de os sites armazena
 
 ## Armazenamento do lado do cliente?
 
-Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#static_sites) e [sites dinâmicos](/pt-BR/docs/Learn/Server-side/First_steps/Client-Server_overview#dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
+Em outro lugar na área de aprendizagem MDN, falamos sobre a diferença entre [sites estáticos](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#static_sites) e [sites dinâmicos](/pt-BR/docs/Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview#dynamic_sites) . A maioria dos principais sites modernos são dinâmicos - eles armazenam dados no servidor usando algum tipo de banco de dados (armazenamento do lado do servidor) e, em seguida, executam o código do [lado do servidor](/pt-BR/docs/Learn_web_development/Extensions/Server-side) para recuperar os dados necessários, inserem-nos em modelos de página estática e fornecem o HTML resultante para o cliente a ser exibido pelo navegador do usuário.er.
 
 O armazenamento do lado do cliente funciona em princípios semelhantes, mas tem usos diferentes. Consiste em APIs JavaScript que permitem armazenar dados no cliente (ou seja, na máquina do usuário) e recuperá-los quando necessário. Isso tem muitos usos distintos, como:
 
@@ -57,9 +57,9 @@ Freqüentemente, o armazenamento do lado do cliente e do lado do servidor são u
 
 ### Old school: Cookies
 
-The concept of client-side storage has been around for **Nota** : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consultea long time. Since the early days of the web, sites have used [cookies](/pt-BR/docs/Web/HTTP/Cookies) to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
+The concept of client-side storage has been around for **Nota** : Existem limites para a quantidade de dados que você pode armazenar usando APIs de armazenamento do lado do cliente (possivelmente por API individual e cumulativamente); o limite exato varia dependendo do navegador e, possivelmente, com base nas configurações do usuário. Consultea long time. Since the early days of the web, sites have used [cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) to store information to personalize user experience on websites. They're the earliest form of client-side storage commonly used on the web.
 
-These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies) article.
+These days, there are easier mechanisms available for storing client-side data, therefore we won't be teaching you how to use cookies in this article. However, this does not mean cookies are completely useless on the modern-day web — they are still used commonly to store data related to user personalization and state, e.g. session IDs and access tokens. For more information on cookies see our [Using HTTP cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) article.
 
 ### New school: Web Storage and IndexedDB
 
@@ -778,7 +778,7 @@ That's it for now. We hope you've found our rundown of client-side storage techn
 
 - [Web storage API](/pt-BR/docs/Web/API/Web_Storage_API)
 - [IndexedDB API](/pt-BR/docs/Web/API/IndexedDB_API)
-- [Cookies](/pt-BR/docs/Web/HTTP/Cookies)
+- [Cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies)
 - [Service worker API](/pt-BR/docs/Web/API/Service_Worker_API)
 
 {{PreviousMenu("Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}

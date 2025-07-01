@@ -4,7 +4,7 @@ slug: Web/Accessibility/ARIA/Reference/Roles/document_role
 original_slug: Web/Accessibility/ARIA/Roles/document_role
 ---
 
-複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
+複雑な複合[ウィジェット](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/widget_Role)や[アプリケーション](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)で一般的に使用される文書 (`document`) ロールは、コンテキストを読み取りモードに切り替えることを支援技術を知らせることができます。 文書 (`document`) ロールは、読み取りモードまたは閲覧モードを持つ支援技術に、この要素に含まれるコンテンツを文書モードを使用して読み取るように指示します。
 
 ```html
 <div role="dialog">
@@ -66,7 +66,7 @@ original_slug: Web/Accessibility/ARIA/Roles/document_role
 
 ## 関連情報
 
-- [ARIA: widget ロール](/ja/docs/Web/Accessibility/ARIA/Roles/widget_Role)
+- [ARIA: widget ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/widget_Role)
 - [ARIA: application ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

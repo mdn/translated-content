@@ -37,7 +37,7 @@ window.outerHeight; /* 900 */
 
 下面是一些帮助你查询视口大小和其他类似的长度属性的 DOM 属性：
 
-- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Viewport_meta_tag#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
+- 文档的 {{DOMxRef("Element.clientWidth")}} 是指一个文档使用 [CSS pixels](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element#screen_density) 单位表示的内部宽度，包括其 padding（不包括 border、margin 或垂直滚动条）。**这就是视口的宽度**。
 - {{DOMxRef("Window.innerWidth")}} 是用 CSS 像素单位表示的浏览器窗口的视口宽度，包括垂直滚动条。
 - {{DOMxRef("Window.outerWidth")}} 是指包括了浏览器外边框的窗口宽度。
 
@@ -164,4 +164,4 @@ SVG 参照 [viewbox](/zh-CN/docs/Web/SVG/Reference/Attribute/viewBox) 属性，�
 
 - [Visual viewport API](/zh-CN/docs/Web/API/Visual_Viewport_API)
 - {{HTMLElement("meta")}}，特别是 `<meta name="viewport">`
-- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Web/HTML/Viewport_meta_tag)
+- [Using the viewport meta tag to control layout on mobile browsers](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element)

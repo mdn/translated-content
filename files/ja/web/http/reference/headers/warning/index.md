@@ -22,7 +22,7 @@ original_slug: Web/HTTP/Headers/Warning
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>いいえ</td>
     </tr>
@@ -38,9 +38,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## ディレクティブ
 
 - \<warn-code>
-
   - : 3 桁の警告番号です。最初の桁は、検証後にレスポンスを格納する際に `Warning` を削除する必要があるかどうかを示します。
-
     - `1xx` の警告コードは、新鮮さやレスポンスの検証ステータスを表し、キャッシュされる際に削除されます。
     - `2xx` の警告コードは、検証によって修正されない表現のいくつかの側面を説明しており、レスポンス全体が送信されない限り、検証後もキャッシュによって削除されないことを表します。
 

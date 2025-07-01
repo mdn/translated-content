@@ -35,4 +35,4 @@ O resultado de sucesso de um {{HTTPMethod("PUT")}} ou {{HTTPMethod("DELETE")}} g
 
 ## Veja também
 
-- [HTTP request methods](/pt-BR/docs/Web/HTTP/Methods)
+- [HTTP request methods](/pt-BR/docs/Web/HTTP/Reference/Methods)

@@ -190,7 +190,6 @@ Promise.resolve(aThenable); // 一个兑现值为 42 的 Promise
 - {{jsxref("Promise.reject()")}}
   - : 返回一个新的 `Promise` 对象，该对象以给定的原因拒绝。
 - {{jsxref("Promise.resolve()")}}
-
   - : 返回一个新的 `Promise` 对象，该对象以给定的值兑现。如果值是一个 thenable 对象（即具有 `then` 方法），则返回的 Promise 对象会“跟随”该 thenable 对象，采用其最终的状态；否则，返回的 Promise 对象会以该值兑现。
 
     通常，如果你不知道一个值是否是 Promise，那么最好使用 {{jsxref("Promise.resolve", "Promise.resolve(value)")}} 将其转换成 Promise 对象，并将返回值作为 Promise 来处理。
@@ -375,7 +374,7 @@ btn.addEventListener("click", testPromise);
 
 为了更好地说明这一点，我们在这里进一步探讨领域是如何引发问题的。我们可以粗略地认为**领域**是一个全局对象。其独特之处在于，它拥有运行 JavaScript 代码所需的所有信息。这包括像 [`Array`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array) 和 [`Error`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Error) 这样的对象。每一个设置对象都有自己的“副本”，而且它们与副本之间是不共享的。这可能会导致一些与 promise 相关的意外行为。为了解决这个问题，我们需要追踪**现有设置对象**（incumbent settings object）。它表示负责用户某个函数调用工作的特定信息。
 
-我们可以尝试在文档中嵌入 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)，并让其与父级上下文通信。由于所有的 web API 都有现有设置对象，下面的代码能够在所有的浏览器中运行：
+我们可以尝试在文档中嵌入 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)，并让其与父级上下文通信。由于所有的 web API 都有现有设置对象，下面的代码能够在所有的浏览器中运行：
 
 ```html
 <!doctype html> <iframe></iframe>

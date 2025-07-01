@@ -3,7 +3,6 @@ title: 解决常见的 CSS 问题
 slug: Learn_web_development/Howto/Solve_CSS_problems
 ---
 
-{{LearnSidebar}}
 以下链接提供了一些你在使用 CSS 时可能遇到的常见问题的解决方案。
 
 ## 主要使用事项

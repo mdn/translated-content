@@ -41,7 +41,7 @@ hyphens: auto;
 > [!NOTE]
 > 上記のデモでは、 "An extra­ordinarily long English word!" に非表示の `&shy;` （ソフトハイフン）の文字が含まれており、 `An extra&shy;­ordinarily long English word!` のようになっています。この文字は `hyphens: manual;` が指定された場合にハイフンを挿入することができる位置を示しています。
 
-ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性を使用する必要があります。
+ハイフネーションの規則は言語に依存します。 HTML では言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性で特定され、ブラウザーはこの属性が存在し、適切なハイフネーション辞書が利用できる場合にのみハイフネーションを行います。 XML では、[`xml:lang`](/ja/docs/Web/SVG/Reference/Attribute/xml:lang) 属性を使用する必要があります。
 
 > [!NOTE]
 > どのようにハイフネーションを行うかの規則は仕様書で明確に定義されていないため、厳密なハイフネーションの方式はブラウザーにより異なります。
@@ -89,7 +89,7 @@ hyphens: unset;
   - : 不可視の「ソフト」ハイフン ("**s**oft" **hy**phen) です。この文字は表示されませんが、ブラウザーが必要に応じて単語を分割できる位置を示します。 HTML では、 `&shy;` を使用してソフトハイフンを挿入することができます。
 
 > [!NOTE]
-> HTML の [`<wbr>`](/ja/docs/Web/HTML/Element/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
+> HTML の [`<wbr>`](/ja/docs/Web/HTML/Reference/Elements/wbr) 要素によって改行が行われた場合、ハイフンは挿入されません。
 
 ## 公式定義
 

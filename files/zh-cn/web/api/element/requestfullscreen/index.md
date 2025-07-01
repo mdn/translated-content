@@ -42,9 +42,7 @@ requestFullscreen(options)
 _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，而不是抛出一个传统的异常。拒绝处理器接收以下的某一个值：_
 
 - {{jsxref("TypeError")}}
-
   - : 在以下几种情况下，会抛出 `TypeError`：
-
     - 文档中包含的元素未完全激活，也就是说不是当前活动的元素。
     - 元素不在文档之内。
     - 因为[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)配置或其他访问控制特性，元素不被允许使用 `fullscreen` 特性。
@@ -63,7 +61,7 @@ _`requestFullscreen()` 通过拒绝返回的 `Promise`来生成错误条件，�
 
 - 它必须是标准 HTML 元素之一或 {{SVGElement("svg")}} 或 {{MathMLElement("math")}}。
 - 它不是 {{HTMLElement("dialog")}} 元素。
-- 它必须位于顶级文档中或已应用 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen) 属性的 {{HTMLElement("iframe")}} 元素。
+- 它必须位于顶级文档中或已应用 [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen) 属性的 {{HTMLElement("iframe")}} 元素。
 
 此外，任何设置的权限策略都必须允许使用此特性。
 
@@ -148,4 +146,4 @@ try {
 - {{DOMxRef("Document.fullscreen")}}
 - {{DOMxRef("Document.fullscreenElement")}}
 - {{CSSxRef(":fullscreen")}}
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)

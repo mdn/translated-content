@@ -37,11 +37,11 @@ l10n:
 
 ## HTML 属性
 
-- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover)
+- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover)
   - : グローバル属性で、ある要素をポップオーバー要素にします。値としてポップオーバー状態（`"auto"` または `"manual"`）を取ります。
-- [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget)
+- [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)
   - : {{htmlelement("button")}} または {{htmlelement("input")}} 要素をポップオーバー制御ボタンにします。値として、制御するポップオーバー要素の ID を取ります。
-- [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction)
+- [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
   - : 制御ボタン（{{htmlelement("button")}} または {{htmlelement("input")}}）で制御しているポップオーバー要素に対して行う動作（`"hide"`、`"show"`、`"toggle"` の何れか）を指定します。
 
 ## CSS 機能
@@ -61,11 +61,11 @@ l10n:
 ### インスタンスプロパティ
 
 - {{domxref("HTMLElement.popover")}}
-  - : 要素のポップオーバー状態を JavaScript で取得または設定し（`"auto"` または `"manual"`）、機能検出にも使用することができます。HTML のグローバル属性である [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) global を反映します。
+  - : 要素のポップオーバー状態を JavaScript で取得または設定し（`"auto"` または `"manual"`）、機能検出にも使用することができます。HTML のグローバル属性である [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) global を反映します。
 - {{domxref("HTMLButtonElement.popoverTargetElement")}} および {{domxref("HTMLInputElement.popoverTargetElement")}}
-  - : この制御ボタンで制御されるポップオーバー要素を取得または設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Element/button#popovertarget) 属性に相当するものです。
+  - : この制御ボタンで制御されるポップオーバー要素を取得または設定します。JavaScript において HTML の [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget) 属性に相当するものです。
 - {{domxref("HTMLButtonElement.popoverTargetAction")}} および {{domxref("HTMLInputElement.popoverTargetAction")}}
-  - : この制御ボタンが制御するポップオーバー要素に対して行われるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を設定または取得します。HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Element/button#popovertargetaction) 属性を反映します。
+  - : この制御ボタンが制御するポップオーバー要素に対して行われるアクション（`"hide"`、`"show"`、`"toggle"` の何れか）を設定または取得します。HTML の [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction) 属性を反映します。
 
 ### インスタンスメソッド
 

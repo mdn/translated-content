@@ -393,7 +393,7 @@ Porém este, é um exemplo ruim para link:
 ```
 
 > [!NOTE]
-> Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Você também pode ver alguns bons e maus exemplos em [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
+> Você pode encontrar muito mais sobre implementação de link e melhores práticas no artigo [Criando hyperlinks](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links). Você também pode ver alguns bons e maus exemplos em [good-links.html](https://mdn.github.io/learning-area/accessibility/html/good-links.html) e [bad-links.html](https://mdn.github.io/learning-area/accessibility/html/bad-links.html).
 
 Os rótulos de formulário (labels) também são importantes para dar a você uma ideia sobre o que precisa ser preenchido em cada entrada de formulário. O seguinte exemplo aparentemente é bem razoável:
 
@@ -494,7 +494,7 @@ Isso destaca a importância de não apenas usar nomes de arquivos significativos
 Uma coisa a considerar é se as imagens possuem algum significado dentro de seu conteúdo ou se elas são puramente decorativas. Se eles são decorativas, é melhor apenas incluí-las na página como imagens de fundo através de CSS.
 
 > [!NOTE]
-> Leia [Imagens em HTML](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML) e [Imagens Responsivas](/pt-BR/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
+> Leia [Imagens em HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_images) e [Imagens Responsivas](/pt-BR/docs/Web/HTML/Responsive_images) para obter mais informações sobre a implementação de imagens e melhores práticas.
 
 Se você quiser fornecer informações contextuais extras, deverá colocá-las no texto ao redor da imagem ou dentro de um atributo de título (`title`), como mostrado acima. Nesse caso, a maioria dos leitores de tela lerá o texto alternativo, o atributo de título e o nome do arquivo. Além disso, os navegadores exibem o texto do título como dicas de ferramentas quando estão sobre o mouse.
 

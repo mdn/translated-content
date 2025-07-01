@@ -9,10 +9,10 @@ l10n:
 
 このガイドでは、CSS の {{cssxref("writing-mode")}} および {{cssxref("direction")}} プロパティを使用して縦書きのフォームコントロールを作成および構成する方法を説明しています。 これには以下が含まれます。
 
-- [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) のスライダー、{{htmlelement("progress")}} の進捗バー、{{htmlelement("meter")}} 要素。
+- [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダー、{{htmlelement("progress")}} の進捗バー、{{htmlelement("meter")}} 要素。
 - {{htmlelement("select")}} 要素。
-- {{htmlelement("button")}} 要素や [`<input type="button">`](/ja/docs/Web/HTML/Element/input/button)、[`<input type="reset">`](/ja/docs/Web/HTML/Element/input/reset)、[`<input type="submit">`](/ja/docs/Web/HTML/Element/input/submit) のようなボタン入力型。
-- {{htmlelement("textarea")}} 要素や [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text)、[`<input type="datetime-local">`](/ja/docs/Web/HTML/Element/input/datetime-local)、[`<input type="url">`](/ja/docs/Web/HTML/Element/input/url) などのテキストベースの入力型。
+- {{htmlelement("button")}} 要素や [`<input type="button">`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`<input type="reset">`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`<input type="submit">`](/ja/docs/Web/HTML/Reference/Elements/input/submit) のようなボタン入力型。
+- {{htmlelement("textarea")}} 要素や [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text)、[`<input type="datetime-local">`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local)、[`<input type="url">`](/ja/docs/Web/HTML/Reference/Elements/input/url) などのテキストベースの入力型。
 
 ## 一般的なテクニック
 
@@ -47,7 +47,7 @@ l10n:
 
 ### 基本的な例
 
-典型的な視覚的な [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) のスライダー、{{htmlelement("progress")}}、{{htmlelement("meter")}} の一連のコントロールは、次のように作成されます。
+典型的な視覚的な [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダー、{{htmlelement("progress")}}、{{htmlelement("meter")}} の一連のコントロールは、次のように作成されます。
 
 ```html
 <form>
@@ -116,7 +116,7 @@ progress {
 - Safari と Chrome の旧バージョンでは、標準外の [`appearance: slider-vertical`](/ja/docs/Web/CSS/appearance) プロパティを使用することができます。
 - Firefox の旧バージョンでは、標準外の `orient="vertical"` 属性を `<input type="range">` 要素自体に追加することができます。
 
-この例の HTML には、 [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) のスライダーのみがあります。古いバージョンの Firefoxで 垂直方向に表示されるように `orient="vertical"` が追加されています。
+この例の HTML には、 [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダーのみがあります。古いバージョンの Firefoxで 垂直方向に表示されるように `orient="vertical"` が追加されています。
 
 ```html
 <form>
@@ -274,7 +274,7 @@ select {
 
 ## ボタン
 
-この節では、垂直方向の {{htmlelement("button")}} 要素の扱い方を示します。なお、下記の例では `<button>` 要素しか使用していませんが、ボタンを作成する他の要素、たとえば [`<input>`](/ja/docs/Web/HTML/Element/input) の [`button`](/ja/docs/Web/HTML/Element/input/button)、[`reset`](/ja/docs/Web/HTML/Element/input/reset)、[`submit`](/ja/docs/Web/HTML/Element/input/submit)なども動作は同じです。
+この節では、垂直方向の {{htmlelement("button")}} 要素の扱い方を示します。なお、下記の例では `<button>` 要素しか使用していませんが、ボタンを作成する他の要素、たとえば [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) の [`button`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`reset`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`submit`](/ja/docs/Web/HTML/Reference/Elements/input/submit)なども動作は同じです。
 
 ### 基本的なボタンの例
 
@@ -360,7 +360,7 @@ button {
 
 ## テキストベースのフォームコントロール
 
-最後に、垂直方向の {{htmlelement("textarea")}} とテキスト型の `<input>` について見ていきます。なお、下記の例では `<input>` 型として `<input type="text">` 要素のみを記載していますが、他のテキストの [`<input>`](/ja/docs/Web/HTML/Element/input) 型（[`password`](/ja/docs/Web/HTML/Element/input/button)、[`number`](/ja/docs/Web/HTML/Element/input/reset)、[`url`](/ja/docs/Web/HTML/Element/input/submit) など）でも動作は同じです。
+最後に、垂直方向の {{htmlelement("textarea")}} とテキスト型の `<input>` について見ていきます。なお、下記の例では `<input>` 型として `<input type="text">` 要素のみを記載していますが、他のテキストの [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 型（[`password`](/ja/docs/Web/HTML/Reference/Elements/input/button)、[`number`](/ja/docs/Web/HTML/Reference/Elements/input/reset)、[`url`](/ja/docs/Web/HTML/Reference/Elements/input/submit) など）でも動作は同じです。
 
 ### 基本的なテキスト入力フィールドとテキストエリアの例
 
@@ -471,7 +471,7 @@ input[type="text"] {
 
 ## 関連情報
 
-- [`<input>`](/ja/docs/Web/HTML/Element/input) 要素
+- [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) 要素
 - 他の関連要素: {{htmlelement("button")}}, {{htmlelement("meter")}}, {{htmlelement("progress")}}, {{htmlelement("select")}}
 - [様々なテキストの方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
 - [ウェブフォームのスタイル設定](/ja/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)

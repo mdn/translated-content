@@ -1,12 +1,9 @@
 ---
 title: baseline-shift
 slug: Web/SVG/Reference/Attribute/baseline-shift
-original_slug: Web/SVG/Attribute/baseline-shift
 l10n:
-  sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`baseline-shift`** 属性は、親テキストコンテンツ要素の主要ベースラインから相対的に主要ベースラインを再配置することができます。 移動先は、下付きまたは上付き文字である可能性があります。
 
@@ -49,7 +46,6 @@ l10n:
 - `super`
   - : 主要ベースラインは、上付き文字の既定の位置に移動します。
 - `<length-percentage>`
-
   - : 長さの値は、親テキストコンテンツ要素の主要ベースラインを指定した長さ分だけ上下されます（正の値の場合は上昇、負の値の場合は下降）。
 
     パーセント値は、親テキストコンテンツ要素の主要ベースラインを、 {{SVGAttr("line-height")}} の指定したパーセント値分、正の値で上げたり、負の値で下げたりします。

@@ -21,8 +21,6 @@ console.log(multiply(5));
 // Expected output: 5
 ```
 
-La fuente de este ejemplo interactivo se almacena en un repositorio de GitHub. Si deseas contribuir al proyecto de ejemplos interactivos, clona <https://github.com/mdn/interactive-examples> y envíanos una solicitud de extracción.
-
 ## Sintaxis
 
 ```

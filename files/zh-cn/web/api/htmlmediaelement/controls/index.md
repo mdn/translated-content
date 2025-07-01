@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLMediaElement.controls`** 属性反映了 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) HTML 属性，该属性控制是否显示用于播放媒体项的用户界面控件。
+**`HTMLMediaElement.controls`** 属性反映了 [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls) HTML 属性，该属性控制是否显示用于播放媒体项的用户界面控件。
 
 ## 值
 

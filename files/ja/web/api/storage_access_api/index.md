@@ -17,7 +17,7 @@ Storage Access API（ストレージアクセス API）は、埋め込まれた�
 
 Storage Access API は、この問題を解決することを目的としています。 埋め込まれたクロスオリジンのコンテンツは、{{domxref("Document.requestStorageAccess()")}} メソッドを介してサイトごとにファーストパーティストレージへの無制限のアクセスを要求し、{{domxref("Document.hasStorageAccess()")}} メソッドを介して既にアクセス権があるかどうかを確認できます。
 
-さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Element/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
+さらに、セキュリティ上の理由から、サンドボックス化した {{htmlelement("iframe")}} にはデフォルトでストレージアクセスを許可できません。 そのため、API は、`allow-storage-access-by-user-activation` [sandbox トークン](/ja/docs/Web/HTML/Reference/Elements/iframe#attr-sandbox)も追加します。 次のように、埋め込まれたウェブサイトは、これを追加してストレージアクセス要求が成功することを許可するとともに、`allow-scripts` と `allow-same-origin` を使用して API の呼び出しを許可し、クッキーを持つことができるオリジンで実行します。
 
 ```html
 <iframe

@@ -33,7 +33,7 @@ l10n:
 
 ほとんどのコンテンツは、それを直接囲む要素のテキストコンテンツから生成されるアクセシブル名を持っています。アクセシブル名は、特定の属性や関連要素によって作成することもできます。
 
-既定では、ボタンのアクセシブル名は {{HTMLElement('button')}} の開始タグと終了タグの間のコンテンツであり、画像のアクセシブル名はその [`alt`](/ja/docs/Web/HTML/Element/img#alt) 属性のコンテンツであり、フォーム入力のアクセシブル名は関連付けられた {{HTMLElement('label')}} 要素のコンテンツです。
+既定では、ボタンのアクセシブル名は {{HTMLElement('button')}} の開始タグと終了タグの間のコンテンツであり、画像のアクセシブル名はその [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) 属性のコンテンツであり、フォーム入力のアクセシブル名は関連付けられた {{HTMLElement('label')}} 要素のコンテンツです。
 
 これらのオプションが利用できない場合、または既定のアクセシブル名が適切でない場合は、 `aria-label` 属性を使用して要素のアクセシブル名を定義します。
 
@@ -71,21 +71,21 @@ l10n:
 
 `aria-label` に対応して**いない**ものは次の通りです。
 
-- [`code`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
-- [`insertion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/ja/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`insertion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
-- [`strong`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
+- [`strong`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
 - [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
-- [`time`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`time`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
 > **メモ:** `aria-label`属性は対話型要素のみを意図しています。掲載されているような非対話型要素に配置すると、読まれなかったり、対話型要素のように振る舞う非対話型要素としてユーザーを混乱させるかもしれません。
 

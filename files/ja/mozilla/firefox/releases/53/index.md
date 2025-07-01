@@ -105,7 +105,6 @@ Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされまし�
 ### HTTP/ネットワーク
 
 - {{HTTPHeader("Referrer-Policy")}} の既定値をユーザーが設定できる設定項目 `network.http.referer.userControlPolicy` を、Gecko の `about:config` に追加しました ([Firefox バグ 1304623](https://bugzil.la/1304623))。以下の値を使用できます:
-
   - 0 — `no-referrer`
   - 1 — `same-origin`
   - 2 — `strict-origin-when-cross-origin`

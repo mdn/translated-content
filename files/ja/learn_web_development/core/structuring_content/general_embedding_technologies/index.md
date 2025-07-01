@@ -238,13 +238,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/ja/docs/Web/CSS/border)
   - : 使用した場合、`<iframe>` は周囲の境界線なしで表示されます。そうでない場合、既定では、ブラウザーは `<iframe>` を境界線付きで表示します（これは一般的に望ましくありません）。
-- [`allowfullscreen`](/ja/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/ja/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 設定されている場合、`<iframe>` は、[全画面 API](/ja/docs/Web/API/Fullscreen_API) を使用して全画面モードにすることができます（この記事の範囲外です）。
-- [`src`](/ja/docs/Web/HTML/Element/iframe#src)
+- [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src)
   - : この属性は、 {{htmlelement("video")}} や {{htmlelement("img")}} と同様に、埋め込む文書の URL を指すパスを含んでいます。
-- [`width`](/ja/docs/Web/HTML/Element/iframe#width) と [`height`](/ja/docs/Web/HTML/Element/iframe#height)
+- [`width`](/ja/docs/Web/HTML/Reference/Elements/iframe#width) と [`height`](/ja/docs/Web/HTML/Reference/Elements/iframe#height)
   - : これらの属性は、 iframe の幅と高さを指定します。
-- [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox)
+- [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : この属性は、他の `<iframe>` の機能よりも若干現代的なブラウザー(たとえば、IE 10 以上)で機能し、高度なセキュリティ設定を要求します。これについては、次のセクションで詳しく説明します。
 
 > [!NOTE]
@@ -286,7 +286,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 サンドボックス化されていないコンテンツは、JavaScript の実行、フォームの送信、ポップアップウィンドウの起動などを行うことができます。既定では、前の例で示したように、引数なしの `sandbox` 属性を使用して、利用可能なすべての制限を課す必要があります。
 
-絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 [`sandbox`](/ja/docs/Web/HTML/Element/iframe#sandbox) のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
+絶対に必要な場合は、権限を（`sandbox=""` 属性値内に） 1 つずつ追加することができます。使用可能なすべてのオプションについては、 [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) のリファレンスの記事を参照してください。重要な注意点の 1 つは、 `sandbox` 属性に `allow-scripts` と `allow-same-origin` の両方を追加しないことです。この場合、埋め込みコンテンツは、サイトのスクリプトの実行を停止する同一オリジンセキュリティポリシーをバイパスし、 JavaScript を使用してサンドボックスを完全に無効にすることができます。
 
 > [!NOTE]
 > 攻撃者が欺いて悪意のあるコンテンツ（iframe 外にある）を直接訪問させることができれば、サンドボックスは保護を提供しません。特定のコンテンツが悪意のあるコンテンツ（ユーザー生成コンテンツなど）である可能性がある場合は、別の{{glossary("domain","ドメイン")}}からメインサイトへ配信してください。

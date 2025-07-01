@@ -20,7 +20,7 @@ l10n:
 
 ### `intersectionRect` の出力
 
-この例では、 [`elementtiming`](/ja/docs/Web/HTML/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.intersectionRect` を呼び出すと、画像の表示矩形を持つ {{domxref("DOMRectReadOnly")}} オブジェクトが返されます。
+この例では、 [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性を追加して {{HTMLElement("img")}} 要素を監視しています。 {{domxref("PerformanceObserver")}} は `"element"` 型のパフォーマンス項目をすべて取得するために登録され、オブザーバー作成前のデータにアクセスするために `buffered` フラグを用います。 `entry.intersectionRect` を呼び出すと、画像の表示矩形を持つ {{domxref("DOMRectReadOnly")}} オブジェクトが返されます。
 
 ```html
 <img

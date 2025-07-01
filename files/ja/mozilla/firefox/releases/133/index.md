@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Viewport_meta_tag) で [`interactive-widgets`](/ja/docs/Web/HTML/Viewport_meta_tag#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
+- [`<meta>` の `viewport` タグ](/ja/docs/Web/HTML/Guides/Viewport_meta_element) で [`interactive-widgets`](/ja/docs/Web/HTML/Guides/Viewport_meta_element#the_effect_of_interactive_ui_widgets) 属性をサポートしました。これはソフトウェアキーボードのような共通 UI ウィジェットがスクリーンに表示されるときの、ビューポートのサイズに影響を与えます ([Firefox bug 1831649](https://bugzil.la/1831649)、[Firefox bug 1920755](https://bugzil.la/1920755))。
 
 ### CSS
 
@@ -24,7 +24,6 @@ l10n:
 - {{jsxref("Uint8Array")}} で、{{glossary("base64")}} や 16 進数表記でエンコードされた文字列とバイト配列の間の変換を容易にするメソッドをサポートしました ([Firefox bug 1917885](https://bugzil.la/1917885)、[Firefox bug 1862220](https://bugzil.la/1862220))。
 
   新しいメソッドは以下のとおりです:
-
   - {{jsxref("Uint8Array.fromBase64()")}} および {{jsxref("Uint8Array.fromHex()")}} 静的メソッド。それぞれ、base64 や 16 進数表記でエンコードされた文字列から新しい `Uint8Array` オブジェクトを構築します。
   - {{jsxref("Uint8Array.prototype.setFromBase64()")}}、{{jsxref("Uint8Array.prototype.setFromHex()")}} インスタンスメソッド。base64 や 16 進数表記でエンコードされた文字列からバイト値を、既存の `Uint8Array` オブジェクトに追加します。
   - {{jsxref("Uint8Array.prototype.toBase64()")}}、{{jsxref("Uint8Array.prototype.toHex()")}} インスタンスメソッド。`Uint8Array` オブジェクトにあるデータから、base64 や 16 進数表記でエンコードされた文字列を返します。
@@ -76,7 +75,7 @@ l10n:
 
 - **contenteditable の値 plaintext-only:** `dom.element.contenteditable.plaintext-only.enabled`。
 
-  [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
+  [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) グローバル属性の値 `plaintext-only` は、要素が編集可能であるがリッチテキスト形式が無効であり、貼り付けられたテキストの書式が自動的に除去されることを示します ([Firefox bug 1922723](https://bugzil.la/1922723))。
 
 - **:has-slotted CSS 擬似クラス:** `layout.css.has-slotted-selector.enabled`。
 

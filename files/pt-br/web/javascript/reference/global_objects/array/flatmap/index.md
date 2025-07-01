@@ -29,9 +29,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Parâmetros
 
 - `callback`
-
   - : Função que produz um elemento de uma nova Array, pegando três argumentos:
-
     - `currentValue`
       - : O valor atual sendo processo na array.
     - `index`{{optional_inline}}

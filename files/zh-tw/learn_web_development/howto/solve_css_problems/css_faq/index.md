@@ -3,8 +3,6 @@ title: CSS 一般問題
 slug: Learn_web_development/Howto/Solve_CSS_problems/CSS_FAQ
 ---
 
-{{LearnSidebar}}
-
 ## 我的 CSS 合乎規格，但繪出的版面有誤
 
 如果想讓大部分的瀏覽器都能正確繪製標準 HTML/CSS 頁面，便須於 HTML 檔案中放上完整的正確 DOCTYPE。

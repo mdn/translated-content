@@ -1,25 +1,28 @@
 ---
-title: "Feature-Policy: ambient-light-sensor"
+title: "Permissions-Policy: ambient-light-sensor"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/ambient-light-sensor
-original_slug: Web/HTTP/Headers/Permissions-Policy/ambient-light-sensor
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `ambient-light-sensor` ディレクティブは、現在の文書が {{domxref('AmbientLightSensor')}} インターフェイスを通じて端末の周囲の環境における明るさの量に関する情報を収集することを許可するかどうかを制御します。
+HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `ambient-light-sensor` ディレクティブは、現在の文書が {{domxref('AmbientLightSensor')}} インターフェイスを通じて端末の周囲の環境における明るさの量に関する情報を収集することを許可するかどうかを制御します。
+
+仕様上、この機能の使用がブロックされる場合、 {{domxref("AmbientLightSensor.AmbientLightSensor", "AmbientLightSensor()")}} コンストラクターを呼び出すと、 {{domxref("DOMException")}} の `SecurityError` 型が発生します。
 
 ## 構文
 
-```
-Feature-Policy: ambient-light-sensor <allowlist>;
+```http
+Permissions-Policy: ambient-light-sensor=<allowlist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- `<allowlist>`
+  - : この機能を許可するオリジンのリストです。 [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#構文) を参照してください。
 
 ## 既定のポリシー
 
-`ambient-light-sensor` の既定の許可リストは `'self'` です。
+`ambient-light-sensor` の既定の許可リストは `self` です。
 
 ## 仕様書
 
@@ -31,6 +34,5 @@ Feature-Policy: ambient-light-sensor <allowlist>;
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{HTTPHeader("Permissions-Policy")}} ヘッダー
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)

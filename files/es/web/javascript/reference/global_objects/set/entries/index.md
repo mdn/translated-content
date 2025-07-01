@@ -23,8 +23,6 @@ for (const entry of iterator1) {
 }
 ```
 
-El código de este ejemplo interactivo esta almacenado en un repositorio de GitHub. Si quieres contribuir al proyecto de ejemplos interativos, simplemente clona <https://github.com/mdn/interactive-examples> y envíanos una pull request.
-
 ## Sintaxis
 
 ```

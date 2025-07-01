@@ -22,4 +22,4 @@ l10n:
 
 ## 関連情報
 
-- [HTML グローバル属性: accesskey](/ja/docs/Web/HTML/Global_attributes/accesskey)
+- [HTML グローバル属性: accesskey](/ja/docs/Web/HTML/Reference/Global_attributes/accesskey)

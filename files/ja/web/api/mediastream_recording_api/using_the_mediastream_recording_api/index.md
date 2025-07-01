@@ -251,7 +251,7 @@ mediaRecorder.onstop = (e) => {
 </article>
 ```
 
-その後、録音した音声チャンクから結合された {{domxref("Blob")}} を作成し、それを指すオブジェクト URL を `window.URL.createObjectURL(blob)` を使用して作成します。 次に、{{HTMLElement("audio")}} 要素の [`src`](/ja/docs/Web/HTML/Element/audio#src) 属性の値をオブジェクト URL に設定して、音声プレーヤーの再生ボタンが押されたときに `Blob` を再生するようにします。
+その後、録音した音声チャンクから結合された {{domxref("Blob")}} を作成し、それを指すオブジェクト URL を `window.URL.createObjectURL(blob)` を使用して作成します。 次に、{{HTMLElement("audio")}} 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/audio#src) 属性の値をオブジェクト URL に設定して、音声プレーヤーの再生ボタンが押されたときに `Blob` を再生するようにします。
 
 最後に、削除ボタンに `onclick` ハンドラーを設定して、クリップの HTML 構造全体を削除する関数にします。
 

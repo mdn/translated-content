@@ -3,7 +3,7 @@ title: 命令行速成课
 slug: Learn_web_development/Getting_started/Environment_setup/Command_line
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
+{{PreviousMenuNext("Learn_web_development/Getting_started/Environment_setup/Dealing_with_files", "Learn_web_development/Getting_started/Your_first_website", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在你的开发过程中，你无疑需要在终端上运行一些命令 (或者在“命令行”上，它们实际上是相同的)。本文介绍了终端、需要输入的基本命令、如何将命令链接在一起，以及如何添加自己的命令行接口 (CLI) 工具。
 
@@ -103,7 +103,6 @@ macOS 有一个名为 Darwin 的系统，它位于图形用户界面的下方。
 说的够多了，让我们开始看看一些终端命令吧！下面是命令行可以做的一些事情，以及每种情况下相关工具的名称
 
 - 导航计算机的文件系统以及基本级别的任务，如创建、复制、重命名和删除：
-
   - 移动你的目录结构 : `cd`
   - 建立目录：`mkdir`
   - 创建文件（修改他们的原数据）: `touch`

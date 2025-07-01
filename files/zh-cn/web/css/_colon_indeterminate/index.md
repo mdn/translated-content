@@ -5,7 +5,7 @@ slug: Web/CSS/:indeterminate
 
 {{CSSRef}}
 
-**`:indeterminate`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任意的状态不确定的表单元素，例如那些将 HTML [`indeterminate`](/zh-CN/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性设置为 `true` 的复选框，以及属于某个组且该组中所有单选按钮都未选中的单选按钮，还有不确定状态的 {{HTMLElement("progress")}} 元素。
+**`:indeterminate`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任意的状态不确定的表单元素，例如那些将 HTML [`indeterminate`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性设置为 `true` 的复选框，以及属于某个组且该组中所有单选按钮都未选中的单选按钮，还有不确定状态的 {{HTMLElement("progress")}} 元素。
 
 ```css
 /* 选中任意的状态不确定的 <input> */
@@ -16,8 +16,8 @@ input:indeterminate {
 
 此选择器针对的元素是：
 
-- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 元素，其 `indeterminate` 属性被 [JavaScript](/zh-CN/docs/Web/JavaScript) 设置为 `true` 时。
-- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio) 元素，当表单中具有相同`名称`值的所有单选按钮均未被选中时。
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox) 元素，其 `indeterminate` 属性被 [JavaScript](/zh-CN/docs/Web/JavaScript) 设置为 `true` 时。
+- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio) 元素，当表单中具有相同`名称`值的所有单选按钮均未被选中时。
 - 处于不确定状态的 {{HTMLElement("progress")}} 元素
 
 ## 语法
@@ -129,6 +129,6 @@ progress:indeterminate {
 
 - [Web 表单——处理用户数据](/zh-CN/docs/Learn_web_development/Extensions/Forms)
 - [样式化 Web 表单](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)
-- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox) 元素的 [`indeterminate`](/zh-CN/docs/Web/HTML/Element/input/checkbox#indeterminate) 属性
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox) 元素的 [`indeterminate`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性
 - {{HTMLElement("input")}} 和实现它的 {{domxref("HTMLInputElement")}} 接口
 - {{cssxref(":checked")}} CSS 选择器可以让你根据复选框是否被选中来设置样式

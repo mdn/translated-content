@@ -18,9 +18,7 @@ event = new KeyboardEvent(typeArg, KeyboardEventInit);
 - typeArg
   - : Une représentation du nom de l'évènement sous forme de {{domxref("DOMString")}}.
 - KeyboardEventInit{{optional_inline}}
-
   - : Un dictionnaire `KeyboardEventInit` ayant les champs suivants :
-
     - `"key"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.key")}}.
     - `"code"`, optionnel et par défaut `""`, de type {{domxref("DOMString")}}, qui définit la valeur de {{domxref("KeyboardEvent.code")}}.
     - `"location"`, optionnel et par défaut `0`, de type `unsigned long`, qui définit la valeur de {{domxref("KeyboardEvent.location")}}.

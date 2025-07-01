@@ -1,12 +1,9 @@
 ---
 title: dominant-baseline
 slug: Web/SVG/Reference/Attribute/dominant-baseline
-original_slug: Web/SVG/Attribute/dominant-baseline
 l10n:
-  sourceCommit: 892a7fb41030e07dfd8daaa57d874239be1ecc8a
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`dominant-baseline`** 属性は、ボックス内のテキストとインラインレベルのコンテンツを整列させるために使用される主要ベースラインを指定します。また、ボックスの整列コンテキストでベースライン揃えに参加するすべてのボックスの既定の整列ベースラインも示します。
 
@@ -86,7 +83,6 @@ text {
 </table>
 
 - `auto`
-
   - : このプロパティが {{SVGElement("text")}} 要素に存在する場合、計算値は {{SVGAttr("writing-mode")}} 属性の値に依存します。
 
     {{SVGAttr("writing-mode")}} が横書きの場合、主要ベースライン成分の値は `alphabetic` です。 そうではなく、 {{SVGAttr("writing-mode")}} が縦書きの場合、主要ベースライン成分の値は `central` です。

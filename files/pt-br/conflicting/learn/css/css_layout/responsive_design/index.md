@@ -6,7 +6,7 @@ original_slug: Web/Guide/Mobile
 
 Esta página fornece uma visão geral de algumas das principais técnicas necessárias para desenvolver websites que trabalham bem em dispositivos moveis. Se você esta vendo esta informação no projeto Firefox OS da Mozilla, veja a página [Firefox OS](/pt-BR/Mozilla/Firefox_OS). Ou você pode estar interessado em detalhes sobre [Firefox para Android](/pt-BR/Mozilla/Firefox_for_Android).
 
-We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design) for web developers.
+We've organized it into two sections, [designing for mobile devices](#designing_for_mobile_devices) and [cross-browser compatibility](#cross-browser_development). Also see Jason Grlicky's guide to [mobile-friendliness](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Responsive_Design) for web developers.
 
 ## Projetando para dispositivos móveis
 

@@ -75,7 +75,6 @@ HTML のヘッド部は {{htmlelement("head")}} 要素の内容です。 {{htmle
 ### アクティブラーニング: 単純な例を検討する
 
 1. このアクティブラーニングを始めるのに、我々の GitHub リポジトリーに移動して [title-example.html page](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/title-example.html) のコピーをダウンロードしてください。これは次のいずれかでできます。
-
    1. ページのコードをコピー＆ペーストして、コードエディターの新規ファイルに入れて、ふさわしい場所に保存します
    2. ページの "Raw" を押すと、新しいタブに生のコードが出ます。次に、ブラウザーの \[名前を付けて保存...] メニューを選択して、ファイルの保存場所を選んでください。
 
@@ -288,7 +287,7 @@ and HTML Apps." />
 
 ## 文書の主要な言語の設定
 
-最後に、ページの言語を設定することができること（そしてそうすべきこと）に言及する価値があるでしょう。これは、 [lang 属性](/ja/docs/Web/HTML/Global_attributes/lang)を開始 HTML タグに追加することで実現することができます（[meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) に表示され、以下に表示されています）。
+最後に、ページの言語を設定することができること（そしてそうすべきこと）に言及する価値があるでしょう。これは、 [lang 属性](/ja/docs/Web/HTML/Reference/Global_attributes/lang)を開始 HTML タグに追加することで実現することができます（[meta-example.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/the-html-head/meta-example.html) に表示され、以下に表示されています）。
 
 ```html
 <html lang="en-US">

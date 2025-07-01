@@ -20,7 +20,7 @@ JavaScript の厳格モード (Strict mode) は、 JavaScript の自由度を制
 
 ## 厳格モードの呼び出し
 
-厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
+厳格モードは**スクリプト全体**または**個別の関数**に適用できます。中括弧 `{}` で括られる[ブロック構文](/ja/docs/Web/JavaScript/Reference/Statements/block)には適用できません。そのような場所に適用しようとしても何も起きません。[`eval`](/ja/docs/Web/JavaScript/Reference/Global_Objects/eval) のコード、 [`Function`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Function/Function) のコード、[イベントハンドラー](/ja/docs/Web/HTML/Reference/Attributes#event_handler_attributes)属性、[`setTimeout()`](/ja/docs/Web/API/Window/setTimeout) などの関数に渡す文字列は、関数の本体またはスクリプト全体であり、厳格モードを呼び出すと期待どおりに動作します。
 
 ### スクリプトでの厳格モード
 

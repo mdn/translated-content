@@ -3,7 +3,7 @@ title: 发送表单数据
 slug: Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenu("Learn_web_development/Extensions/Forms/Form_validation", "Learn_web_development/Extensions/Forms")}}
 
 本文将讨论当用户提交表单时发生了什么——数据去了哪，以及当它到达时该如何处理？我们还研究了与发送表单数据相关的一些安全问题。
 
@@ -49,7 +49,7 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 
 ### 在客户端：定义如何发送数据
 
-{{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让你配置当用户点击提交按钮时发送的请求。两个最重要的属性是[`action`](/zh-CN/docs/Web/HTML/Element/form#action)和[`method`](/zh-CN/docs/Web/HTML/Element/form#method)。
+{{HTMLElement("form")}}元素定义了如何发送数据。它的所有属性都是为了让你配置当用户点击提交按钮时发送的请求。两个最重要的属性是[`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action)和[`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method)。
 
 #### `action` 属性
 
@@ -73,14 +73,14 @@ web 基于非常基本的客户端/服务器体系结构，可以总结如下：
 <form>…</form>
 ```
 
-许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性都需要该符号。现在，这不再需要了。
+许多较老的页面使用下面的符号表示数据应该被发送到包含表单的相同页面；这是必需的，因为直到 HTML5[`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action)属性都需要该符号。现在，这不再需要了。
 
 ```html
 <form action="#">…</form>
 ```
 
 > [!NOTE]
-> 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当你这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是你指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Element/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
+> 可以指定使用 HTTPS(安全 HTTP) 协议的 URL。当你这样做时，数据将与请求的其余部分一起加密，即使表单本身是托管在使用 HTTP 访问的不安全页面上。另一方面，如果表单是在安全页面上托管的，但是你指定了一个不安全的 HTTP URL，它带有[`action`](/zh-CN/docs/Web/HTML/Reference/Elements/form#action)属性，所有的浏览器都会在每次尝试发送数据时向用户显示一个安全警告，因为数据不会被加密。
 
 #### `method` 属性
 
@@ -133,7 +133,7 @@ Host: foo.com
 
 `POST`方法略有不同。这是浏览器在询问响应时使用与服务器通信的方法，该响应考虑了 HTTP 请求正文中提供的数据:“嘿，服务器，看一下这些数据，然后给我回一个适当的结果。”如果使用该方法发送表单，则将数据追加到 HTTP 请求的主体中。
 
-让我们来看一个例子，这是我们在上面的`GET`部分中所看到的相同的形式，但是使用[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`post`。
+让我们来看一个例子，这是我们在上面的`GET`部分中所看到的相同的形式，但是使用[`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method)属性设置为`post`。
 
 ```html
 <form action="http://foo.com" method="post">
@@ -267,8 +267,8 @@ if __name__ == "__main__":
 
 如果你想要发送文件，你需要额外的三个步骤：
 
-- 将[`method`](/zh-CN/docs/Web/HTML/Element/form#method)属性设置为`POST`，因为文件内容不能放入 URL 参数中。
-- 将[`enctype`](/zh-CN/docs/Web/HTML/Element/form#enctype)的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
+- 将[`method`](/zh-CN/docs/Web/HTML/Reference/Elements/form#method)属性设置为`POST`，因为文件内容不能放入 URL 参数中。
+- 将[`enctype`](/zh-CN/docs/Web/HTML/Reference/Elements/form#enctype)的值设置为`multipart/form-data`，因为数据将被分成多个部分，每个文件单独占用一个部分，表单正文中包含的文本数据（如果文本也输入到表单中）占用一个部分。
 - 包含一个或多个[文件选择器](/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls#文件选择器)微件，允许用户选择将要上传的文件。
 
 例如：
@@ -286,7 +286,7 @@ if __name__ == "__main__":
 ```
 
 > [!NOTE]
-> 一些浏览器支持{{HTMLElement("input")}}的[`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple)属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使你的生活更轻松。
+> 一些浏览器支持{{HTMLElement("input")}}的[`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple)属性，它允许只用一个 `<input>` 元素选择一个以上的文件上传。服务器如何处理这些文件取决于服务器上使用的技术。如前所述，使用框架将使你的生活更轻松。
 
 > [!WARNING]
 > 为了防止滥用，许多服务器配置了文件和 HTTP 请求的大小限制。在发送文件之前，先检查服务器管理员的权限是很重要的。

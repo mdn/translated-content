@@ -1,25 +1,28 @@
 ---
-title: "Feature-Policy: midi"
+title: "Permissions-Policy: midi"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/midi
-original_slug: Web/HTTP/Headers/Permissions-Policy/midi
+l10n:
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}{{SeeCompatTable}}
 
-HTTP の {{HTTPHeader("Feature-Policy")}} ヘッダーにおける `midi` ディレクティブは、現在の文書が [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) を使用することを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("Navigator.requestMIDIAccess()")}} から返却された {{jsxref("Promise")}} が `DOMException` で拒否されます。
+HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `midi` ディレクティブは、現在の文書が [Web MIDI API](/ja/docs/Web/API/Web_MIDI_API) を使用することを許可するかどうかを制御します。
+
+仕様上、定義されたポリシーによりこの機能の使用がブロックされた場合、 {{domxref("Navigator.requestMIDIAccess()")}} を呼び出すと {{jsxref("Promise")}} が返却され、 {{domxref("DOMException")}} の `SecurityError` 型で拒否されます。
 
 ## 構文
 
-```
-Feature-Policy: midi <allowlist>;
+```http
+Permissions-Policy: midi=<allowlist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- `<allowlist>`
+  - : この機能を許可するオリジンのリストです。 [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#構文) を参照してください。
 
 ## 既定のポリシー
 
-許可リストは `'self'` です。
+`midi` の既定の許可リストは `self` です。
 
 ## 仕様書
 
@@ -31,6 +34,5 @@ Feature-Policy: midi <allowlist>;
 
 ## 関連情報
 
-- {{HTTPHeader("Feature-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- {{HTTPHeader("Permissions-Policy")}} ヘッダー
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)

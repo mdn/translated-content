@@ -25,7 +25,7 @@ XMLHttpRequest API の詳細なガイドについては、 [XMLHttpRequest の�
 ## インターフェイス
 
 - {{domxref("FormData")}}
-  - : {{htmlelement("form")}} のフィールドとその値を表すオブジェクトで、 {{domxref("XMLHttpRequest")}} または {{domxref("fetch()")}} を用いてサーバーに送信することができます。
+  - : {{htmlelement("form")}} のフィールドとその値を表すオブジェクトで、 {{domxref("XMLHttpRequest")}} または {{domxref("Window/fetch", "fetch()")}} を用いてサーバーに送信することができます。
 - {{domxref("ProgressEvent")}}
   - : {{domxref("Event")}} のサブクラスで {{domxref("XMLHttpRequest.progress_event", "progress")}} に渡され、リクエストがどれだけ進行したかの情報を格納します。
 - {{domxref("XMLHttpRequest")}}

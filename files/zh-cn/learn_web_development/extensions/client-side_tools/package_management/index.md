@@ -3,7 +3,7 @@ title: 软件包管理基础
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 在本文中，我们将详细介绍软件包管理器，以了解我们如何在自己的项目中使用它们——安装项目工具依赖项，使其保持最新状态等。
 
@@ -32,7 +32,7 @@ slug: Learn_web_development/Extensions/Client-side_tools/Package_management
 
 项目依赖可以是整个 JavaScript 库或框架——例如 React 或者 Vue，也可以是非常小的工具库，比如我们的人类易读日期库，它也可以是一个命令行工具，例如我们之前文章中提到的 Prettier 或 ESLint。
 
-没有现代构建工具，像这样的依赖项可能会使用简单的 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素包含在你的项目中，但这可能无法直接使用，并且当它们在 Web 上发布时，你可能需要一些现代工具来将你的代码和依赖项构建为捆绑包（Bundle）在一起。捆绑包（Bundle）是一个术语，通常用于指代一个单独的文件，它包含了你软件的所有 JavaScript——通常被尽可能压缩以减少下载和在访问者浏览器中显示软件所需的时间。
+没有现代构建工具，像这样的依赖项可能会使用简单的 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素包含在你的项目中，但这可能无法直接使用，并且当它们在 Web 上发布时，你可能需要一些现代工具来将你的代码和依赖项构建为捆绑包（Bundle）在一起。捆绑包（Bundle）是一个术语，通常用于指代一个单独的文件，它包含了你软件的所有 JavaScript——通常被尽可能压缩以减少下载和在访问者浏览器中显示软件所需的时间。
 
 此外，如果你发现一个更好的工具来代替当前工具，或者你想更新依赖的新版本，会发生什么？对于只有几个依赖的项目来说来说，这并不痛苦，但对于具有许多依赖项的大型项目来说，这种事情可能会变得非常具有挑战性。这令使用像 npm 这样的**软件包管理器**更有意义，因为它将确保代码被干净地添加和删除，同时还有许多其他优点。
 
@@ -388,7 +388,7 @@ Parcel 可以使用 `parcel serve filename.html` 命令运行开发服务器，�
 
 因此，让我们在 `package.json` 中创建一个自定义缩写命令——“dev”。
 
-如果你按照之前的教程操作，你应该在 parcel-experiment 目录中有一个 `package.json` 文件。打开它，它的 `sripts` 应该如下所示：
+如果你按照之前的教程操作，你应该在 parcel-experiment 目录中有一个 `package.json` 文件。打开它，它的 `scripts` 应该如下所示：
 
 ```json
 "scripts": {

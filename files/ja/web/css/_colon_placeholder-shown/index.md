@@ -5,7 +5,7 @@ slug: Web/CSS/:placeholder-shown
 
 {{CSSRef}}
 
-**`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Element/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
+**`:placeholder-shown`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、[プレイスホルダー文字列](/ja/docs/Web/HTML/Reference/Elements/input#attr-placeholder)が表示されている {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素を表します。
 
 ```css
 /* プレイスホルダーが有効な要素を選択 */

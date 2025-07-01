@@ -35,8 +35,8 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 
 ### HTML
 
-- [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
-- [`<a>`](/ja/docs/Web/HTML/Element/a) および [`<area>`](/ja/docs/Web/HTML/Element/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
+- [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素の `sandbox` 属性で `allow-top-navigation-by-user-activation` トークンをサポートしました ([Firefox バグ 1359867](https://bugzil.la/1359867))。
+- [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) および [`<area>`](/ja/docs/Web/HTML/Reference/Elements/area) 要素で `target="_blank"` を設定すると、`rel="noopener"` も指定したときと同じ動作を暗黙的に提供するようになりました ([Firefox バグ 1522083](https://bugzil.la/1522083))。
 
 ### CSS
 
@@ -65,13 +65,11 @@ Mozilla hacks の記事「[Firefox 79: The safe return of shared memory, new too
 ### JavaScript
 
 - {{jsxref("SharedArrayBuffer")}} を、post-Spectre-safe な方法で再び有効化しました。クロスオリジン分離のサイトで使用できます ([Firefox バグ 1619649](https://bugzil.la/1619649))。
-
   - サイトをクロスオリジン分離にするには、新たに {{HTTPHeader("Cross-Origin-Embedder-Policy")}} (COEP) および {{HTTPHeader("Cross-Origin-Opener-Policy")}} (COOP) ヘッダーを設定することが必要です。
 
 - {{jsxref("Promise.any()")}} が使用可能になりました ([Firefox バグ 1599769](https://bugzil.la/1599769))。
 - {{jsxref("WeakRef")}} オブジェクトを実装しました ([Firefox バグ 1639246](https://bugzil.la/1639246))。
 - [Logical assignment operators](https://github.com/tc39/proposal-logical-assignment) をサポートしました ([Firefox バグ 1639591](https://bugzil.la/1639591))。
-
   - [Logical nullish assignment (`??=`)](/ja/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment)
   - [Logical AND assignment (`&&=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_AND_assignment)
   - [Logical OR assignment (`||=`)](/ja/docs/Web/JavaScript/Reference/Operators/Logical_OR_assignment)

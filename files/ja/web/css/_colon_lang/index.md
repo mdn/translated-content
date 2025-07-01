@@ -30,7 +30,7 @@ l10n:
 ```
 
 > [!NOTE]
-> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
+> HTML では、言語は [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性と {{HTMLElement("meta")}} 要素、それに、可能であればプロトコルから得られる情報 (HTTP ヘッダーなど) の組み合わせで決められます。他の文書型では、文書の言語を決定する他の方法があるかもしれません。
 
 ## 構文
 
@@ -147,6 +147,6 @@ p {
 ## 関連情報
 
 - {{cssxref(":dir")}} 擬似クラスはテキストの方向で照合します
-- HTML の [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性
-- HTML の [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) 属性
+- HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性
+- HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) 属性
 - {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}

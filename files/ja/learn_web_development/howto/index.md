@@ -18,4 +18,4 @@ l10n:
 
 ## 関連情報
 
-- [HTML 早見表](/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet)
+- [HTML 早見表](/ja/docs/Web/HTML/Guides/Cheatsheet)

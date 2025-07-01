@@ -8,7 +8,7 @@ l10n:
 {{APIRef("DOM")}}
 
 Свойство **`id`** интерфейса {{domxref("Element")}} представляет идентификатор элемента, отражающий глобальный атрибут
-[**`id`**](/ru/docs/Web/HTML/Global_attributes/id).
+[**`id`**](/ru/docs/Web/HTML/Reference/Global_attributes/id).
 
 Если значение `id` не является пустой строкой, то оно должно быть уникальным в документе.
 
@@ -31,4 +31,4 @@ l10n:
 
 ## Смотрите также
 
-- Глобальный атрибут [**id**](/ru/docs/Web/HTML/Global_attributes/id)
+- Глобальный атрибут [**id**](/ru/docs/Web/HTML/Reference/Global_attributes/id)

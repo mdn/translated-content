@@ -24,7 +24,7 @@ l10n:
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>はい</td>
     </tr>
   </tbody>
@@ -39,10 +39,8 @@ Trailer: header-names
 ## ディレクティブ
 
 - `header-names`
-
   - : チャンクされたメッセージのトレーラー部分に存在する HTTP ヘッダーフィールド。
     以下のヘッダーフィールドは**許可されていません**。
-
     - メッセージフレーミングヘッダー（{{HTTPHeader("Transfer-Encoding")}} や
       {{HTTPHeader("Content-Length")}} など）
     - ルーティングヘッダー（{{HTTPHeader("Host")}}）

@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Element/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
+- `data:` および `javascript:` URL が、`<base>` 要素の [`href`](/ja/docs/Web/HTML/Reference/Elements/base#href) 属性で禁止されました ([Firefox bug 1850967](https://bugzil.la/1850967))。
 
 ### CSS
 
@@ -22,7 +22,6 @@ l10n:
 ### JavaScript
 
 - [`Set`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set) の、以下のメソッドをサポートしました ([Firefox bug 1868423](https://bugzil.la/1868423)):
-
   - [`Set.prototype.intersection()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection) — 自身の Set と指定した Set の両方に存在する要素を持つ、新しい Set を返します。
   - [`Set.prototype.union()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/union) — 自身の Set と指定した Set にあるすべての要素を持つ、新しい Set を返します。
   - [`Set.prototype.difference()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Set/difference) — 自身の Set に存在するが指定した Set には存在しない要素を持つ、新しい Set を返します。

@@ -27,9 +27,7 @@ Les événements ont trois fonctions :
 ### Paramètre
 
 - `callback`
-
   - : Fonction qui sera appelée lorsqu'un utilisateur entre dans le raccourci de la commande. La fonction recevra les arguments suivants :
-
     - `name`
       - : `string`. Nom de la commande. Cela correspond au nom donné à la commande dans son [entrée manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
 

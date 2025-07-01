@@ -5,7 +5,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/sandbox
 
 {{HTTPSidebar}}
 
-The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) attribute. It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.
+The HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`sandbox`** directive enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute. It applies restrictions to a page's actions including preventing popups, preventing the execution of plugins and scripts, and enforcing a same-origin policy.
 
 <table class="properties">
   <tbody>
@@ -75,4 +75,4 @@ Content-Security-Policy: sandbox allow-scripts;
 ## See also
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements
+- [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute on {{HTMLElement("iframe")}} elements

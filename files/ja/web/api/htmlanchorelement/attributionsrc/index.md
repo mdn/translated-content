@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("Attribution Reporting API")}}{{securecontext_header}}{{SeeCompatTable}}
 
-**`attributionSrc`** は {{domxref("HTMLAnchorElement")}} インターフェイスのプロパティで、{{htmlelement("a")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Element/a#attributionsrc) 属性をプログラムから取得および設定ます。`attributionsrc` は、ブラウザーに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。サーバー側では、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーを送信し、[ナビゲーションベースの帰属元](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用されます。
+**`attributionSrc`** は {{domxref("HTMLAnchorElement")}} インターフェイスのプロパティで、{{htmlelement("a")}} 要素の [`attributionsrc`](/ja/docs/Web/HTML/Reference/Elements/a#attributionsrc) 属性をプログラムから取得および設定ます。`attributionsrc` は、ブラウザーに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。サーバー側では、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーを送信し、[ナビゲーションベースの帰属元](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用されます。
 
 ブラウザーは、ナビゲーションレスポンスを受信すると、ナビゲーションベースの帰属ソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定されたもの）に関連付けられたソースデータを格納します。
 

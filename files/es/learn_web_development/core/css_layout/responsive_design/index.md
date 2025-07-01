@@ -203,7 +203,7 @@ Las imágenes responsivas, que utilizan el elemento {{htmlelement ("picture")}} 
 
 También puedes usar imágenes _de director artístico_, que proporcionan un recorte o una imagen completamente diferente para diferentes tamaños de pantalla.
 
-Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Responsive_images) en MDN.
+Puedes encontrar una [guía detallada de imágenes responsivas en el artículo sobre Aprender HTML](/es/docs/Web/HTML/Guides/Responsive_images) en MDN.
 
 ## Tipografía responsiva
 

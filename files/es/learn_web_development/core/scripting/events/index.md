@@ -114,7 +114,7 @@ El elemento HTML {{HTMLElement("button")}} lanzará un evento cuando el usuario 
 
 - la cadena `"click"`, para indicar que queremos detectar el evento de clic.
   Los botones pueden lanzar muchos otros eventos, como [`"mouseover"`](/es/docs/Web/API/Element/mouseover_event) cuando el usuario mueve el ratón por encima del botón, o [`"keydown"`](/es/docs/Web/API/Element/keydown_event) cuando el usuario presiona una tecla y el botón está enfocado.
-- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Element/body) a ese color.
+- una función a llamar cuando el evento ocurra. En este caso, la función genera un color RGB aleatorio y establece el [`background-color`](/es/docs/Web/CSS/background-color) de la página [`<body>`](/es/docs/Web/HTML/Reference/Elements/body) a ese color.
 
 Es válido crear una función manejador con su propio nombre, de la siguiente forma:
 
@@ -270,7 +270,7 @@ function bgChange() {
 }
 ```
 
-El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
+El primer método para el registro de manejadores de eventos en la Web, utilizaba [_atributos HTML para manejar eventos_](/es/docs/Web/HTML/Reference/Attributes#event_handler_attributes) (o _manejadores de eventos en línea_) como el que se mostró anteriormente. El valor del atributo es literalmente el código JavaScript que quieres ejecutar cuando el evento ocurra.
 El ejemplo anterior invoca a la función definida dentro de un elemento {{htmlelement("script")}} en la misma página, pero también pueden insertar JavaScript directamente en el atributo, por ejemplo:
 
 ```html
@@ -529,9 +529,7 @@ El HTML se ve así:
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.
@@ -625,9 +623,7 @@ Todo lo que estamos haciendo aquí es llamar al método `stopPropagation()` en e
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       Su navegador no es compatible con video HTML. Aquí hay un
       <a href="rabbit320.mp4">enlace al video</a> en su lugar.

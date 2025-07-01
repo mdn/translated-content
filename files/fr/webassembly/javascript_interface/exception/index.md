@@ -27,7 +27,6 @@ Afin que l'émission des exceptions soit plus rapide, les exceptions levées dep
 ## Méthodes des instansces
 
 - [`Exception.prototype.is()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/is)
-
   - : Teste si une exception correspond à une balise donnée.
 
 - [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/getArg)

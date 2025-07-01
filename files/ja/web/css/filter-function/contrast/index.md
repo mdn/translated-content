@@ -147,7 +147,7 @@ p {
 
 ### url() と SVG の contrast フィルター
 
-SVG の {{SVGElement("filter")}} 要素を使用して、カスタムフィルター効果を定義し、それを [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。 次のものが指定されたとします。
+SVG の {{SVGElement("filter")}} 要素を使用して、カスタムフィルター効果を定義し、それを [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。 次のものが指定されたとします。
 
 ```svg
   <filter id="contrast">

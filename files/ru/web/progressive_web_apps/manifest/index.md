@@ -79,7 +79,7 @@ slug: Web/Progressive_web_apps/Manifest
 
 Расширение `.webmanifest` указывается в разделе спецификации [Media type registration](https://w3c.github.io/manifest/#media-type-registration) section of the specification (ответ файла манифеста должен возвращать `Content-Type: application/manifest+json`). Браузеры обычно поддерживают манифесты с другими соответствующими расширениями, такими как `.json` (`Content-Type: application/json`).
 
-Если для получения манифеста требуются учётные данные, то атрибут [`crossorigin`](/ru/docs/Web/HTML/Attributes/crossorigin) должен иметь значение `"use-credentials"`, даже если файл манифеста находится в том же источнике, что и текущая страница.
+Если для получения манифеста требуются учётные данные, то атрибут [`crossorigin`](/ru/docs/Web/HTML/Reference/Attributes/crossorigin) должен иметь значение `"use-credentials"`, даже если файл манифеста находится в том же источнике, что и текущая страница.
 
 ## Заставки
 

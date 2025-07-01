@@ -18,10 +18,8 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2
 为了更好的理解这种情况，这里列出了层叠上下文的层次结构：
 
 - 根上下文（root stacking context）
-
   - DIV #2 (z-index 2)
   - DIV #3 (z-index 1)
-
     - DIV #4 (z-index 10)
 
 > [!NOTE]

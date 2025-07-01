@@ -40,7 +40,7 @@ Para outro conjunto (sobreposto) de links sobre recursos de aprendizado, consult
 
 #### Intermediário
 
-- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Language_overview) — uma recapitulação da linguagem de programação JavaScript direcionada para desenvolvedores de nível intermediário.
+- [Uma re-introdução ao JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Language_overview) — uma recapitulação da linguagem de programação JavaScript direcionada para desenvolvedores de nível intermediário.
 - [Padrões de design (design patterns) essenciais no JavaScript](https://www.addyosmani.com/resources/essentialjsdesignpatterns/book/) — uma introdução à padrões de design essenciais no JavaScript
 - [Introdução à JavaScript orientado à Objeto](/pt-BR/Introduction_to_Object-Oriented_JavaScript) — aprenda sobre o modelo de objetos do JavaScript.
 - [Boas práticas de Javascript (por Christian Heilmann)](https://dev.opera.com/articles/view/javascript-best-practices/) — aprenda sobre algumas boas práticas óbvias (algumas nem tanto) quando programas em JavaScript.

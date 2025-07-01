@@ -17,7 +17,7 @@ slug: Web/CSS/CSS_grid_layout/Grid_layout_and_accessibility
 
 [CSS 网格布局规范](https://drafts.csswg.org/css-grid/#order-accessibility)包括一个涵盖重新排序和无障碍的部分。该部分详细介绍了当使用网格布局对内容进行可视化重新排序时，规范期望浏览器执行的操作。
 
-> 网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。order 属性和网格定位不影响非可视媒体（例如语音）的排序。同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 [tabindex](/zh-CN/docs/Web/HTML/Global_attributes/tabindex) HTML5）。
+> 网格布局赋予了 web 开发者重新排列文档内容的强大能力，但是，这并不能取代 HTML 源代码中自身的排序。order 属性和网格定位不影响非可视媒体（例如语音）的排序。同样，可视化地重新排列网格项目不会影响顺序导航模式的默认遍历顺序（例如通过 TAB 键循环选取链接，参见 [tabindex](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) HTML5）。
 
 虽然使用网格布局对内容进行了可视化重新排列，但是在通过屏幕阅读器或其他文本到语音的用户代理读取内容时，并不会改变项目的排列方式。另外，重新排序不会改变 tab 键顺序，这意味着使用键盘进行导航的用户，通过按 TAB 键来引导阅读顺序，但由于下一个项目是在源代码的下一行，而这个项目正好被重新排序过，那他就会从网站的顶部一下子跳转到网站的底部。
 

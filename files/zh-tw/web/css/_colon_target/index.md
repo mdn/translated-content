@@ -2,12 +2,12 @@
 title: :target
 slug: Web/CSS/:target
 l10n:
-  sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
 
-**`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段標識符](/zh-TW/docs/Web/URI/Fragment#片段)確定的。
+**`:target`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)選擇*文件中的目標元素*。當文件載入時，目標元素是根據文件的 [URL 片段標識符](/zh-TW/docs/Web/URI/Reference/Fragment#片段)確定的。
 
 ```css
 /* 選擇文件的目標元素 */
@@ -16,7 +16,7 @@ l10n:
 }
 ```
 
-例如，下列 URL 具有一個片段標識符（以 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
+例如，下列 URL 具有一個片段標識符（以 _#_ 符號表示），它標記了具有 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 值 `setup` 的元素作為文件的目標元素：
 
 ```url
 http://www.example.com/help/#setup

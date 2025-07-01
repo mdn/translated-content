@@ -1,16 +1,15 @@
 ---
-title: DocumentFragment.querySelectorAll()
+title: DocumentFragment：querySelectorAll() 方法
 slug: Web/API/DocumentFragment/querySelectorAll
+l10n:
+  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
 ---
 
 {{ApiRef("DOM")}}
 
-DocumentFragment.queryselectorall() 方法返回{{domxref("NodeList")}}中的元素{{domxref("DocumentFragment")}}(使用文档节点的深度优先顺序遍历) 匹配指定的选择器组。
+**`DocumentFragment.querySelectorAll()`** 方法会返回一个 {{domxref("NodeList")}}，其中包含 {{domxref("DocumentFragment")}} 内所有匹配指定选择器组的元素（采用文档节点的深度优先的前序遍历方式）。
 
-如果参数中指定的选择器无效，则会引发一个带 SYNTAX_ERR 值的{{domxref("DOMException")}}。
-
-> [!NOTE]
-> 这个 API 的定义被移动到{{domxref("ParentNode")}}接口。
+如果参数中指定的选择器无效，将抛出值为 `SYNTAX_ERR` 的 {{domxref("DOMException")}} 异常。
 
 ## 语法
 
@@ -20,15 +19,19 @@ querySelectorAll(selectors)
 
 ### 参数
 
-- _selectors_
-  - : 是一个{{domxref("DOMString")}}包含一个或多个用逗号分隔的 CSS 选择器。
+- `selectors`
+  - : 包含一个或多个以逗号分隔的 CSS 选择器的字符串。
+
+### 返回值
+
+一个非动态的 {{domxref("NodeList")}}，包含匹配至少一个指定选择器的每个元素对应的 {{domxref("Element")}} 对象；若无匹配项，则返回一个空的 {{domxref("NodeList")}}。
 
 ## 示例
 
-此示例返回 DocumentFragment 中所有 div 元素的列表，其中包含一个类“note”或“alert”:
+此示例会返回 `DocumentFragment` 中所有带有 `note` 或 `alert` 类的 `div` 元素列表：
 
 ```js
-var matches = documentfrag.querySelectorAll("div.note, div.alert");
+const matches = documentFrag.querySelectorAll("div.note, div.alert");
 ```
 
 ## 规范
@@ -39,6 +42,6 @@ var matches = documentfrag.querySelectorAll("div.note, div.alert");
 
 {{Compat}}
 
-## 参阅
+## 参见
 
-- 它所属的{{domxref("DocumentFragment")}}接口。
+- 所属的 {{domxref("DocumentFragment")}} 的接口。

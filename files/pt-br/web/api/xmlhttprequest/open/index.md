@@ -22,11 +22,10 @@ XMLHttpRequest.open(method, url, async, user, password)
 ### Parâmetros
 
 - `method`
-  - : O [método de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods) para ser usado, como `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorado para URLs não-HTTP(S).
+  - : O [método de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods) para ser usado, como `"GET"`, `"POST"`, `"PUT"`, `"DELETE"`, etc. Ignorado para URLs não-HTTP(S).
 - `url`
   - : Um {{domxref("DOMString")}} representando a URL para enviar a requisição.
 - `async` {{optional_inline}}
-
   - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.
 
     > [!NOTE]

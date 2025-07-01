@@ -30,7 +30,7 @@ CSS のアンカーポジショニングは、アンカーポジショニング�
 
 ## アンカー要素と位置指定要素の関連付け
 
-要素をアンカーに関連付けるには、まず最初の宣言でどの要素がアンカーであるかを指定し、次に、そのアンカーに関連付ける位置指定要素を指定します。これは、CSS で行うか、HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を介して行うことができます。
+要素をアンカーに関連付けるには、まず最初の宣言でどの要素がアンカーであるかを指定し、次に、そのアンカーに関連付ける位置指定要素を指定します。これは、CSS で行うか、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介して行うことができます。
 
 ### CSS のみによる方法
 
@@ -93,7 +93,7 @@ CSS で要素をアンカーとして宣言するには、{{cssxref("anchor-name
 
 ### HTML による方法
 
-HTML で位置指定された要素をアンカーに関連付けるには、[`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を使用することができます。アンカー要素には [`id`](/ja/docs/Web/HTML/Global_attributes/id) を指定する必要があります。そして `anchor` 属性をアンカー位置指定要素に、関連付けたいアンカー要素の `id` と同じ値で設定します。
+HTML で位置指定された要素をアンカーに関連付けるには、[`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を使用することができます。アンカー要素には [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を指定する必要があります。そして `anchor` 属性をアンカー位置指定要素に、関連付けたいアンカー要素の `id` と同じ値で設定します。
 
 これは次の HTML で実現できます。
 
@@ -139,7 +139,7 @@ HTML で位置指定された要素をアンカーに関連付けるには、[`a
 
 {{ EmbedLiveSample("HTML method", "100%", "120") }}
 
-> **メモ:** [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
+> **メモ:** [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性は、CSS のものよりも対応が進んでいません。詳しくは、[`anchor` 属性の互換性表](/ja/docs/Web/HTML/Reference/Global_attributes/anchor#ブラウザーの互換性)をご覧ください。
 
 2 つの要素は関連付けられましたが、まだ結び付けられていません。 それらを結び付けるには、位置指定された要素をアンカーに対して相対的に位置指定する必要があります。これは CSS で行います。
 
@@ -163,16 +163,13 @@ anchor(<anchor-element> <anchor-side>, <fallback>)
 ```
 
 - `<anchor-element>`
-
-  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
+  - : 要素を相対的に配置したいアンカー要素の [`anchor-name`](/ja/docs/Web/CSS/anchor-name) プロパティの値。これは `<dashed-ident>` 値です。省略した場合は、要素の**既定のアンカー**が使用されます。これは、[`position-anchor`](/ja/docs/Web/CSS/position-anchor) プロパティで参照されたアンカー、または、HTML の [`anchor`](/ja/docs/Web/HTML/Reference/Global_attributes/anchor) 属性を介してこの要素に関連付けられたアンカーです。
     > **メモ:** `<anchor-element>` を指定すると、そのアンカーに対する要素の位置が指定されますが、要素の関連付けは指定されません。関連付けは、`position-anchor` プロパティと `anchor` 属性のみで指定できます。同じ要素上の異なる `anchor()` 関数内に[異なる`<anchor-element>` 値](/ja/docs/Web/CSS/anchor#element_positioned_relative_to_multiple_anchors)を指定することで、複数のアンカーに対する要素の位置を指定できますが、位置指定された要素は単一のアンカーと関連付けられます。
 
 - [`<anchor-side>`](/ja/docs/Web/CSS/anchor#anchor-side)
-
   - : アンカーの端に対する相対位置を指定します。有効な値には、アンカーの中心、アンカーの物理的な辺（`top`, `left`, など）、または論理的な辺（`start`, `self-end`, など）、またはインセットプロパティの軸の先頭 (`0%`) と末尾 (`100%`) の間のパーセント値が含まれます。`anchor()` 関数が設定されているインセットプロパティと[互換性](/ja/docs/Web/CSS/anchor#compatibility_of_inset_properties_and_anchor-side_values)のない値が使用された場合、代替値が使用されます。
 
 - `<fallback>`
-
   - : {{cssxref("length-percentage")}} は、要素が絶対位置指定または固定位置指定されていない場合、使用された `<anchor-side>` 値が `anchor()` 関数が設定されたインセットプロパティと互換性がない場合、またはアンカー要素が存在しない場合に、代替値として使用する距離を定義します。
 
 `anchor()` 関数の返値は、アンカーの位置に基づいて計算された長さの値です。アンカー位置指定要素のインセットプロパティに直接長さやパーセント値を設定すると、アンカー要素に結び付けられていないかのように位置指定されます。これは、`<anchor-side>` の値が設定されたインセットプロパティと互換性がなく、代替値が使用された場合と同じ動作です。次の 2 つの宣言は同等です。
@@ -600,7 +597,7 @@ anchor-size(<anchor-element> <anchor-size>, <length-percentage>)
 }
 ```
 
-例えば、HTML と基本 CSS は、フォーカス可能なアンカー要素に [`tabindex="0"`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性が指定されていることを除いて、これまでの例と同じです。情報ボックスは修正された位置指定が指定され、これまでと同様にアンカーに関連付けられています。しかし、今回は `position-area` を使用してアンカーの右側に固定し、アンカーの幅の 5 倍の幅を指定しています。
+例えば、HTML と基本 CSS は、フォーカス可能なアンカー要素に [`tabindex="0"`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性が指定されていることを除いて、これまでの例と同じです。情報ボックスは修正された位置指定が指定され、これまでと同様にアンカーに関連付けられています。しかし、今回は `position-area` を使用してアンカーの右側に固定し、アンカーの幅の 5 倍の幅を指定しています。
 
 ```html hidden
 <p>

@@ -210,5 +210,5 @@ obj[Object(sym)]; // still 1
 
 - [`core-js`의 `Symbol` 폴리필](https://github.com/zloirock/core-js#ecmascript-symbol)
 - {{jsxref("Operators/typeof", "typeof")}}
-- [데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Data_structures)
+- [데이터 타입과 자료구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - [hacks.mozilla.org의 "ES6 In Depth: Symbols"](https://hacks.mozilla.org/2015/06/es6-in-depth-symbols/)

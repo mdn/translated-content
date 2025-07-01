@@ -19,9 +19,7 @@ l10n:
 - {{domxref("USBIsochronousOutTransferPacket.bytesWritten")}} {{ReadOnlyInline}} {{Experimental_Inline}}
   - : このパケットでデバイスに送信されたバイト数を返します。
 - {{domxref("USBIsochronousOutTransferPacket.status")}} {{ReadOnlyInline}} {{Experimental_Inline}}
-
   - : 転送要求の状態を返します。以下のいずれかです。
-
     - `"ok"` — 転送は成功しました。
     - `"stall"` — デバイスはエンドポイントでストール状態を発生させ、エラーを示しました。アイソクロナスエンドポイントでのストールをクリアする必要はありません。
 

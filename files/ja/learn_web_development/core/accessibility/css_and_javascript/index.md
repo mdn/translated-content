@@ -1,11 +1,10 @@
 ---
 title: CSS と JavaScript のアクセシビリティのベストプラクティス
+short-title: アクセシブルな CSS と JS
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
@@ -358,7 +357,7 @@ imgThumb.onblur = hideImg;
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## まとめ
 

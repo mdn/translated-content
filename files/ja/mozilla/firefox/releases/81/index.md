@@ -18,11 +18,11 @@ slug: Mozilla/Firefox/Releases/81
 
 ### HTML
 
-- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Element/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
+- サンドボックス化された [`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) 要素で、自動ダウンロードをブロックするようになりました ([Firefox バグ 1558394](https://bugzil.la/1558394))。
 
 #### 廃止
 
-- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Element/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
+- 非標準の `mozallowfullscreen` 属性を、[`<iframe>`](/ja/docs/Web/HTML/Reference/Elements/iframe) から削除しました。代わりに `allow="fullscreen"` を検討してください ([Firefox バグ 1657599](https://bugzil.la/1657599))。
 
 ### CSS
 

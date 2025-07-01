@@ -1,12 +1,9 @@
 ---
 title: dx
 slug: Web/SVG/Reference/Attribute/dx
-original_slug: Web/SVG/Attribute/dx
 l10n:
-  sourceCommit: 5f7c22deaa74973658257aeaa012ac2ec0be87ae
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 **`dx`** 属性は、要素やそのコンテンツの位置の x 軸方向のオフセットを示します。
 
@@ -64,7 +61,7 @@ line {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -89,7 +86,7 @@ line {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -117,7 +114,7 @@ line {
       <th scope="row">値</th>
       <td>
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Number">&#x3C;number></a></strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#number">&#x3C;number></a></strong
         >
       </td>
     </tr>
@@ -143,14 +140,22 @@ line {
     <tr>
       <th scope="row">値</th>
       <td>
+        (<strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        > のリスト
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >) のリスト
       </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -212,15 +217,22 @@ line {
     <tr>
       <th scope="row">値</th>
       <td>
-        List of
-        <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
+        (<strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
         >
+        |
+        <strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >) のリスト
       </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>
@@ -240,14 +252,22 @@ line {
     <tr>
       <th scope="row">値</th>
       <td>
+        (<strong
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#length"
+            >&#x3C;length></a
+          ></strong
+        >
+        |
         <strong
-          ><a href="/docs/Web/SVG/Content_type#Length">&#x3C;length></a></strong
-        > のリスト
+          ><a href="/ja/docs/Web/SVG/Guides/Content_type#percentage"
+            >&#x3C;percentage></a
+          ></strong
+        >) のリスト
       </td>
     </tr>
     <tr>
       <th scope="row">既定値</th>
-      <td><em>none</em></td>
+      <td><em>なし</em></td>
     </tr>
     <tr>
       <th scope="row">アニメーション</th>

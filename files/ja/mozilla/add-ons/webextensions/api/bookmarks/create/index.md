@@ -21,9 +21,7 @@ browser.bookmarks.create(
 - `bookmark`
   - : {{WebExtAPIRef('bookmarks.CreateDetails')}}
 - `callback`{{optional_inline}}
-
   - : ブックマークが新しく作成された際に呼び出される {{jsxref("function")}} です。この関数は以下の引数を 1 つ受け取ります。
-
     - `result`
       - : 新しく作成されたブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}
 
@@ -52,7 +50,7 @@ chrome.bookmarks.create(
 {{WebExtExamples}}
 
 > [!NOTE]
-> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。Microsoft Edge の実装状況は Microsoft Corporation から提供されたものであり、ここでは Creative Commons Attribution 3.0 United States License に従います。
+> この API は Chromium の [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks#method-create) API に基づいています。また、このドキュメントは [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) における Chromium のコードに基づいています。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,10 +1,9 @@
 ---
 title: <clipPath>
 slug: Web/SVG/Reference/Element/clipPath
-original_slug: Web/SVG/Element/clipPath
+l10n:
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
-
-{{SVGRef}}
 
 **`<clipPath>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGAttr("clip-path")}} プロパティで使用されるクリッピングパスを定義します。
 
@@ -39,7 +38,7 @@ svg {
     Only the portion of the red heart
     inside the clip circle is visible.
   -->
-  <use clip-path="url(#myClip)" xlink:href="#heart" fill="red" />
+  <use clip-path="url(#myClip)" href="#heart" fill="red" />
 </svg>
 ```
 
@@ -63,7 +62,7 @@ svg {
 
 {{EmbedLiveSample('Example', 100, 100)}}
 
-クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素の*レンダリング*に影響を与えますが、要素の*固有のジオメトリー*には影響を与えません。クリッピングされた要素 (`<clipPath>` 要素を {{SVGAttr("clip-path")}} プロパティで参照している要素、または参照している要素の子) のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
+クリッピングパスは、概念的には、参照している要素のカスタムビューポートと同じです。したがって、要素の*レンダリング*に影響を与えますが、要素の*固有の形状*には影響を与えません。クリッピングされた要素（`<clipPath>` 要素を {{SVGAttr("clip-path")}} プロパティで参照している要素、または参照している要素の子）のバウンディングボックスは、クリッピングされていない場合と同じでなければなりません。
 
 既定では、クリップされた領域では {{cssxref("pointer-events")}} が発行されません。例えば、半径 `10` の円が半径 `5` の円でクリッピングされている場合、小さい方の半径の外側では "click" イベントを受け取ることはありません。
 
@@ -71,18 +70,7 @@ svg {
 
 - {{SVGAttr("clipPathUnits")}}
   - : `<clipPath>` 要素の内容物の座標系を定義します。
-    _値の型_: `userSpaceOnUse`|`objectBoundingBox` ; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
-
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- [条件処理属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('requiredExtensions')}}, {{SVGAttr('systemLanguage')}}
-- [プレゼンテーション属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 最重要なもの: {{SVGAttr('clip-path')}}, {{SVGAttr('clip-rule')}}, {{SVGAttr('color')}}, {{SVGAttr('display')}}, {{SVGAttr('fill')}}, {{SVGAttr('fill-opacity')}}, {{SVGAttr('fill-rule')}}, {{SVGAttr('filter')}}, {{SVGAttr('mask')}}, {{SVGAttr('opacity')}}, {{SVGAttr('shape-rendering')}}, {{SVGAttr('stroke')}}, {{SVGAttr('stroke-dasharray')}}, {{SVGAttr('stroke-dashoffset')}}, {{SVGAttr('stroke-linecap')}}, {{SVGAttr('stroke-linejoin')}}, {{SVGAttr('stroke-miterlimit')}}, {{SVGAttr('stroke-opacity')}}, {{SVGAttr('stroke-width')}}, {{SVGAttr("transform")}}, {{SVGAttr('vector-effect')}}, {{SVGAttr('visibility')}}
+    _値の型_: `userSpaceOnUse` | `objectBoundingBox`; _既定値_: `userSpaceOnUse`; _アニメーション_: **可**
 
 ## 利用メモ
 

@@ -11,8 +11,8 @@ Firefox 20 正式版发布于 2013 年 4 月 2 日。
 
 ### HTML
 
-- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Element/a#download)属性 ([Firefox bug 676619](https://bugzil.la/676619)).
-- [全局属性](/zh-CN/docs/Web/HTML/Global_attributes) [`dir`](/zh-CN/docs/Web/HTML/Global_attributes#attr-dir) 的值开始支持 `auto` ([Firefox bug 548206](https://bugzil.la/548206)).
+- 实现了{{HTMLElement("a")}}和{{HTMLElement("area")}}元素上的[`download`](/zh-CN/docs/Web/HTML/Reference/Elements/a#download)属性 ([Firefox bug 676619](https://bugzil.la/676619)).
+- [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#attr-dir) 的值开始支持 `auto` ([Firefox bug 548206](https://bugzil.la/548206)).
 
 ### JavaScript
 

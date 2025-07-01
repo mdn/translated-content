@@ -47,8 +47,6 @@ background-repeat: space repeat;
 }
 ```
 
-La fuente de este ejemplo interactivo es de GitHub. Si estás interesado en contribuir a los ejemplos interactivos, por favor accee a <https://github.com/mdn/interactive-examples> y envíanos una solicitud para colaborar.
-
 ```css
 /* One-value syntax */
 background-repeat: repeat-x;
@@ -79,7 +77,6 @@ Por defecto, las imágenes repetidas son ajustadas al tamaño del elemento, pero
 ### Valores
 
 - `<repeat-style>`
-
   - : Los atributos de valor único son una abreviación de los atributos de doble valor.
 
     | **Valor único** | **Doble valor equivalente** |
@@ -180,7 +177,8 @@ div {
 
 /* Multiple images */
 .seven {
-  background-image: url(star-solid.gif), url(favicon32.png);
+  background-image:
+    url(star-solid.gif), url(/shared-assets/images/examples/favicon32.png);
   background-repeat: repeat-x, repeat-y;
   height: 144px;
 }

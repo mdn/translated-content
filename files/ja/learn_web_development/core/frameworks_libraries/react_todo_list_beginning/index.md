@@ -174,7 +174,7 @@ function App(props) {
 export default App;
 ```
 
-次に `index.html` を開いて、 [`<title>`](/ja/docs/Web/HTML/Element/title) 要素のテキストを `TodoMatic` に変更します。こうすることでアプリ上部の [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) と一致します。
+次に `index.html` を開いて、 [`<title>`](/ja/docs/Web/HTML/Reference/Elements/title) 要素のテキストを `TodoMatic` に変更します。こうすることでアプリ上部の [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) と一致します。
 
 ```html
 <title>TodoMatic</title>
@@ -186,10 +186,10 @@ export default App;
 
 まだ見た目が整っていなくて、機能もしていませんが、一旦問題はありません。すぐにスタイルを設定します。まず現在の JSX と、それがユーザーストーリーにどのように対応しているかを考えてみます。
 
-- [`<form>`](/ja/docs/Web/HTML/Element/form) 要素があり、新しいタスクを書き込むための [`<input type="text">`](/ja/docs/Web/HTML/Element/input/text) 要素と、フォームを送信するためのボタンを備えています。
+- [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form) 要素があり、新しいタスクを書き込むための [`<input type="text">`](/ja/docs/Web/HTML/Reference/Elements/input/text) 要素と、フォームを送信するためのボタンを備えています。
 - タスクの絞り込みに使用するためのボタンが並んでいます。
 - 残っているタスクの数を示す見出しがあります。
-- 3 つのタスクがあり、順序付けられていないリストとして配置されています。それぞれのタスクはリストアイテム（[`<li>`](/ja/docs/Web/HTML/Element/li)）であり、タスクを編集および削除するためのボタンと、完了したことをチェックするためのチェックボックスがあります。
+- 3 つのタスクがあり、順序付けられていないリストとして配置されています。それぞれのタスクはリストアイテム（[`<li>`](/ja/docs/Web/HTML/Reference/Elements/li)）であり、タスクを編集および削除するためのボタンと、完了したことをチェックするためのチェックボックスがあります。
 
 フォームはタスクを作成するためのもので、ボタンはタスクを絞り込みするためのもの、また見出しとリストはタスクを読むためのものです。今のところタスクを編集するための UI は分かりづらいですが、そちらについては後でコードを書き足していきます。
 
@@ -209,7 +209,7 @@ export default App;
 
 `visually-hidden` というクラスについては、CSS を記述していないので、まだ意味はありません。ただし、スタイルを設定すると、このクラスの要素はすべて目の見えるユーザーからは隠され、スクリーンリーダーのユーザーは引き続き使用できるようになります。これらの単語は、目の見えるユーザーには必要ありません。視覚的な文脈を持たないスクリーンリーダーのユーザーに、ボタンが何をするのかという情報を提供するためにあります。
 
-さらに下には、次のような [`<ul>`](/ja/docs/Web/HTML/Element/ul) 要素があります。
+さらに下には、次のような [`<ul>`](/ja/docs/Web/HTML/Reference/Elements/ul) 要素があります。
 
 ```html
 <ul
@@ -243,7 +243,7 @@ export default App;
 
 JSX は JavaScript なので、論理属性には注意すべき点があります。 `defaultChecked="false"` と記述すると、論理値ではなく文字列値として `false` が設定されます。 空文字列以外の文字列は[真値](/ja/docs/Glossary/Truthy)とみなされるため、 React は `defaultChecked` を `true` と見なし、既定ではチェックボックスにチェックが入った状態になります。 これは望む状態ではないため、避けるべきです。
 
-よければ、ページに要素がレンダリングされないようにする、hiddenという別の属性を使って、論理属性を書く練習をしてみましょう。 [`hidden`](/ja/docs/Web/HTML/Global_attributes/hidden) を `<h1>` 要素に追加して何が現れるか確認し、その値を `{false}` に明示的に設定してみてください。 `hidden="false"` と記述すると真値となるため、 `<h1>` は非表示になります。 作業が完了したら、このコードを除去することをお忘れなく。
+よければ、ページに要素がレンダリングされないようにする、hiddenという別の属性を使って、論理属性を書く練習をしてみましょう。 [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) を `<h1>` 要素に追加して何が現れるか確認し、その値を `{false}` に明示的に設定してみてください。 `hidden="false"` と記述すると真値となるため、 `<h1>` は非表示になります。 作業が完了したら、このコードを除去することをお忘れなく。
 
 > [!NOTE]
 > 先ほどのコードスニペットで使用した `aria-pressed` 属性は、`"true"` の値を持っています。 `aria-pressed` は `checked` のような真の論理値属性ではないからです。

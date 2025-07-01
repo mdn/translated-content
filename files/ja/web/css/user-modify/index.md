@@ -21,7 +21,7 @@ user-modify: unset;
 ```
 
 > [!WARNING]
-> このプロパティは [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) 属性に置き換えられました。
+> このプロパティは [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性に置き換えられました。
 
 ## 構文
 

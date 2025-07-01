@@ -160,7 +160,7 @@ CSP позволяет добавить уровень безопасности,
 Следующие действия помогут защититься от атак типа кликджекинг:
 
 - [HTTP X-Frame-Options](/ru/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : Заголовок ответа **`X-Frame-Options`** [HTTP](/ru/docs/Web/HTTP) позволяет указать, разрешено ли браузеру отображать страницу с помощью [`<frame>`](/ru/docs/Web/HTML/Element/frame), [`<iframe>`](/ru/docs/Web/HTML/Element/iframe), [`<embed>`](/ru/docs/Web/HTML/Element/embed) и [`<object>`](/ru/docs/Web/HTML/Element/object). Сайты могут использовать его для предотвращения атак типа [кликджекинг](/ru/docs/Glossary/Clickjacking), гарантируя, что их контент не будет встроен в другие сайты.
+  - : Заголовок ответа **`X-Frame-Options`** [HTTP](/ru/docs/Web/HTTP) позволяет указать, разрешено ли браузеру отображать страницу с помощью [`<frame>`](/ru/docs/Web/HTML/Element/frame), [`<iframe>`](/ru/docs/Web/HTML/Element/iframe), [`<embed>`](/ru/docs/Web/HTML/Reference/Elements/embed) и [`<object>`](/ru/docs/Web/HTML/Element/object). Сайты могут использовать его для предотвращения атак типа [кликджекинг](/ru/docs/Glossary/Clickjacking), гарантируя, что их контент не будет встроен в другие сайты.
 - [CSP: frame-ancestors](/ru/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors)
   - : Директива HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`frame-ancestors`** определяет допустимые родительские элементы, которые могут встраивать содержимое на страницу с использованием {{HTMLElement("frame")}}, {{HTMLElement("iframe")}}, {{HTMLElement("object")}} или {{HTMLElement("embed")}}.
 

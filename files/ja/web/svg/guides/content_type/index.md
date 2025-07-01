@@ -1,19 +1,15 @@
 ---
 title: データ型
 slug: Web/SVG/Guides/Content_type
-original_slug: Web/SVG/Content_type
 l10n:
-  sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
-
-{{SVGRef}}
 
 SVG は多くのデータ型を使用しています。この記事では、これらのデータ型とその構文、使用目的の説明を掲載しています。
 
 ## Angle（角度）
 
 - \<angle>
-
   - : 角度は 2 つの方法のいずれかで指定します。スタイルシートのプロパティの値に使用する際、 \<angle> は次のように定義されています。
 
     ```plain
@@ -37,20 +33,18 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Anything（すべて）
 
 - \<anything>
-
   - : 基本データ型の \<anything> は 0 個以上の文字の並びから構成されます。具体的には次の通りです。
 
     ```plain
     anything ::= Char*
     ```
 
-    ここで [Char](https://www.w3.org/TR/2008/REC-xml-20081126/#NT-Char) は XML 1.0 , section 2.2 で定義されているとおり、文字を反映します。
+    ここで Char は、制御文字以外の有効な Unicode 文字です。
 
 ## Clock-value（時間値）
 
 - \<clock-value>
-
-  - : 時間値は [SMIL アニメーション](https://www.w3.org/TR/2001/REC-smil-animation-20010904/)仕様と同じ構文です。時間値のための文法はここで繰り返されます。
+  - : 時間値は [SMIL アニメーション](https://www.w3.org/TR/smil-animation/#Timing-ClockValueSyntax)仕様と同じ構文です。時間値のための文法はここで繰り返されます。
 
     ```plain
     Clock-val         ::= Full-clock-val | Partial-clock-val
@@ -68,10 +62,9 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     DIGIT             ::= [0-9]
     ```
 
-    `Timecount` 値の既定値は "`s`" (秒) です。時計の値にはホワイトスペースを埋め込むことはできませんが、先頭と末尾のホワイトスペースは無視されます。
+    `Timecount` 値の既定値は `s` (秒) です。時計の値にはホワイトスペースを埋め込むことはできませんが、先頭と末尾のホワイトスペースは無視されます。
 
     正規のクロック値の例は次の通りです。
-
     - 完全な時間値:
       - `02:30:03` = 2 時間 30 分と 3 秒
       - `50:00:10.25` = 50 時間 10 秒と 250 ミリ秒
@@ -91,33 +84,13 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Color（色）
 
 - \<color>
-
   - : 基本型 \<color> は、 sRGB 色空間の色に対する CSS2 互換の仕様です。 \<color> は SVG で {{SVGAttr("color")}} 属性を使用する場合に適用され、オプションで ICC ベースの色指定も用いる {{SVGAttr("fill")}}、{{SVGAttr("stroke")}}、{{SVGAttr("stop-color")}}、{{SVGAttr("flood-color")}}、{{SVGAttr("lighting-color")}} 属性の定義の部品です。
 
-    SVG は、 [CSS2 の構文と基本データ型](https://www.w3.org/TR/2008/REC-CSS2-20080411/syndata.html#value-def-color)で定義されている、そして（実装に依存しますが）将来の [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/) で定義される、 \<color> の構文の選択肢すべてに対応しています。
-
-    \<color> はキーワードまたは数値による RGB の指定です。
-
-    これらの色キーワードに加えて、ユーザーは、ユーザー環境のオブジェクトが使用する色に対応するキーワードを指定することができます。このキーワードの規範的な定義は [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2) にあります。
-
-    16 進数表記の RGB 値の形式は、 "`#`" の直後に 3 文字または 6 文字の 16 進数文字が続くものです。 3 桁の RGB 表記 (`#rgb`) は 0 を足すのではなく、数字を複製することで 6 桁の形式 (`#rrggbb`) に変換されます。例えば `#fb0` は `#ffbb00` に展開されます。これにより、白 (`#ffffff`) を短い表記 (`#fff`) で指定することができるようにし、ディスプレイの色深度への依存を防ぎます。関数記法での RGB 値の形式は、 RGB の開始関数の後に、 3 つの数値（3 つの整数値または 3 つのパーセント値）のカンマ区切りリストが続き、その後に "`)`" が続きます。 RGB 関数は、大文字小文字を区別しない文字列 "`rgb(`" を使います。例えば "`RGB(`" や "`rGb(`" でもかまいません。互換性のために、すべて小文字の "`rgb(`" を推奨します。整数値 `255` は `100%` に対応し、 16 進表記では `F` や `FF` に対応します。すなわち、 `rgb(255 255 255)` = `rgb(100% 100% 100%)` = `#FFF` です。数値の周りにはホワイトスペース文字を入れることができます。RGB 色はすべて sRGB 色空間で指定します。 sRGB を使用することで、曖昧さのない、客観的に測定可能な色の定義を提供し、国際標準と関連付けることができます。
-
-    ```plain
-    color    ::= "#" hexdigit hexdigit hexdigit (hexdigit hexdigit hexdigit)?
-                  | "rgb("integer integer integer")"
-                  | "rgb("integer "%" integer "%" integer "%)"
-                  | color-keyword
-    hexdigit ::= [0-9A-Fa-f]
-    ```
-
-    ここで `color-keyword` は、 [CSS Color Module Level 3](https://www.w3.org/TR/css-color-3/) に掲載されている色キーワードの一つ、または [User preferences for colors](https://www.w3.org/TR/2008/REC-CSS2-20080411/ui.html#system-colors) (CSS2, section 18.2) に掲載されているシステム色キーワードの一つと (大文字と小文字を区別しないで) 一致します。
-
-    対応する SVG DOM インターフェイスは、 CSS で定義されているものを定義しています。 ICC ベースの色を指定する機能を含む SVG の色に対する拡張は、 DOM インターフェイス {{domxref("SVGColor")}} を使用して表します。
+    SVG における \<color> の定義は、CSS の {{cssxref("color_value", "&lt;color&gt;")}} の定義とまったく同じです。
 
 ## Coordinate（座標）
 
 - \<coordinate>
-
   - : \<coordinate> は関連する軸に沿って (X 座標は X 軸に沿って、 Y 座標は Y 軸に沿って) ユーザー座標系の原点から所定の座標までの距離を指定します。その構文は [\<length>](#length) と同一です。
 
     SVG DOM 内では、 \<coordinate> の値は {{domxref("SVGLength")}} もしくは {{domxref("SVGAnimatedLength")}} で表現されます。
@@ -125,9 +98,7 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Frequency（周波数）
 
 - \<frequency>
-
   - : 周波数値は、聴覚プロパティで使用します。 CSS2 での定義では、周波数値は [\<number>](#number) の直後に周波数単位識別子が続くものです。周波数単位識別子は次のとおりです。
-
     - `Hz`: ヘルツ
     - `kHz`: キロヘルツ
 
@@ -136,12 +107,11 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## FuncIRI
 
 - \<FuncIRI>
-  - : 参照するための関数記法。この参照の構文は {{cssxref("url", "CSS URI")}} と同じです。
+  - : 参照するための関数記法。この参照の構文は [CSS URI](/ja/docs/Web/CSS/url_value) と同じです。
 
 ## Integer（整数）
 
 - \<integer>
-
   - : \<integer> は省略可能な符号文字 (`+` または `-`) の後、 1 桁以上の数字 `0` から `9` を指定します。
 
     ```plain
@@ -157,7 +127,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## IRI
 
 - \<IRI>
-
   - : **I**nternationalized **R**esource **I**dentifier （国際化リソース識別子）です。
 
     インターネットでは、リソースは _IRI_ （国際化リソース識別子）を使用して識別されます。例えば、 `http://example.com` にある `someDrawing.svg` と呼ばれる SVG ファイルは以下のような _IRI_ になります。
@@ -166,14 +135,14 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     http://example.com/someDrawing.svg
     ```
 
-    _IRI_ の一部として _IRI_ フラグメント識別子を記載することで、_IRI_ が XML 文書内の具体的な要素を指定することもできます。 _IRI_ フラグメント識別子のある _IRI_ は、オプションで _IRI_ のベースとなる文字が続き、その後に "`#`" 文字が続き、その後に _IRI_ フラグメント識別子が続きます。例えば、ファイル `someDrawing.svg` 内の "`Lamppost`" を ID とする要素を指定するには、次の _IRI_ を使用することができます。
+    _IRI_ の一部として _IRI_ フラグメント識別子を記載することで、_IRI_ が XML 文書内の具体的な要素を指定することもできます。 _IRI_ フラグメント識別子のある _IRI_ は、オプションで _IRI_ のベースとなる文字が続き、その後に `#` 文字が続き、その後に _IRI_ フラグメント識別子が続きます。例えば、ファイル `someDrawing.svg` 内の `Lamppost` を ID とする要素を指定するには、次の _IRI_ を使用することができます。
 
     ```plain
     http://example.com/someDrawing.svg#Lamppost
     ```
 
     _IRI_ は {{SVGAttr("href")}} 属性で使用します。
-    いくつかの属性は、 _IRI_ と文字列の両方をコンテンツとして許します。相対 IRI と文字列が曖昧にならないように、関数記法 \<FuncIRI> を使用します。これは関数記法で区切られた _IRI_ です。メモ: 歴史的な理由から、区切り文字は CSS 仕様との互換性のために "`url(`" と "`)`" です。 _FuncIRI_ 形式は、プレゼンテーション属性で使用します。
+    いくつかの属性は、 _IRI_ と文字列の両方をコンテンツとして許します。相対 IRI と文字列が曖昧にならないように、関数記法 \<FuncIRI> を使用します。これは関数記法で区切られた _IRI_ です。メモ: 歴史的な理由から、区切り文字は CSS 仕様との互換性のために `url(` と `)` です。 _FuncIRI_ 形式は、プレゼンテーション属性で使用します。
 
     SVG は他のオブジェクトへの _IRI_ 参照（絶対参照と相対参照の両方）を多用します。例えば、長方形を線形グラデーションで塗りつぶすには、最初に {{SVGElement("linearGradient")}} 要素を定義し、それに ID を与えます。
 
@@ -188,7 +157,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
     ```
 
     SVG は2種類の _IRI_ 参照に対応しています。
-
     - **ローカル _IRI_ 参照**: _IRI_ 参照は、\<absoluteIRI> または \<relativeIRI> を持たず、フラグメント識別子（`#<elementID>` または `#xpointer(id<elementID>)`）のみを持ちます。
     - **非ローカル _IRI_ 参照**: _IRI_ 参照が \<absoluteIRI> または \<relativeIRI> を持ちます。
 
@@ -197,7 +165,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## length（長さ）
 
 - \<length>
-
   - : 長さは距離の寸法です。数値とともに単位を提供します。
     SVG2 仕様書では、この属性の構文と値について CSS {{cssxref("length")}} のデータ型と単位に合わせています。
     長さの単位識別子を指定されなければならず、長さの単位識別子の値は大文字と小文字を区別しません。
@@ -211,7 +178,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 
     プロパティでない \<length> の定義では、パーセント (`%`) 単位識別子も指定できることに注意し てください。
     長さのパーセント値の意味は、長さのパーセント値が指定された属性によって異なります。よくあるケースは 2 つあります。
-
     - パーセントの長さの値がビューポートの幅または高さの割合を表す場合
     - パーセントの長さの値が、指定されたオブジェクトの外接ボックスの幅または高さの割合を表す場合。
 
@@ -220,7 +186,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## List-of-Ts（T のリスト）
 
 - \<list-of-Ts>
-
   - : （ここで _T_ は何らかの型です。）リストは区切られた一連の値から構成されます。明示的に異なる記述がない限り、 SVG の XML 属性内のリストはカンマ区切り（オプションでカンマの前後にホワイトスペースを含む）かホワイトスペース区切りのどちらかになります。
 
     リスト内のホワイトスペースは、 "space" (`U+0020`), "tab" (`U+0009`), "line feed" (`U+000A`), "carriage return" (`U+000D`), and "form-feed" (`U+000C`) の 1 つ以上の連続した文字で定義します。
@@ -237,7 +202,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Name（名前）
 
 - \<name>
-
   - : 名前。文字列で、構文上意味のあるいくつかの文字が許されません。
 
     ```plain
@@ -247,7 +211,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Number（数値）
 
 - \<number>
-
   - : 実数を指定する方法は 2 つあります。スタイルシートで使用する場合、実数は以下のように定義します。
 
     ```plain
@@ -269,7 +232,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Number-optional-number（数値とオプションの数値）
 
 - \<number-optional-number>
-
   - : 2 つの \<number> の組み合わせで、 2 番目の \<number> は省略可能です。
 
     ```plain
@@ -287,7 +249,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Paint（描画方法）
 
 - \<paint>
-
   - : プロパティ {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} の値は、指定されたグラフィック要素を塗りつぶしたり描画したりするときに使用する入力の型を定義します。
     \<paint> で利用できるオプションと構文は以下の通りです。
 
@@ -297,13 +258,10 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 
     `context-fill` と `context-stroke` の値により、 [marker](/ja/docs/Web/SVG/Reference/Element/marker) と [use](/ja/docs/Web/SVG/Reference/Element/use) 要素の値を継承することができます。
 
-    SVG DOM 内では、 \<paint> vの値は {{domxref("SVGPaint")}} オブジェクトを使用して表します。
-
 ## Percentage（パーセント値）
 
 - \<percentage>
-
-  - : パーセント値は、数字に続く "`%`" 文字で指定します。
+  - : パーセント値は、数字に続く `%` 文字で指定します。
 
     ```plain
     percentage ::= number "%"
@@ -318,16 +276,13 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## Time（時間）
 
 - \<time>
-
   - : 時間は、 \<number> の直後に時刻単位識別子が続きます。時刻単位識別子は次の通りです。
-
     - `ms`: milliseconds
     - `s`: seconds
 
 ## Transform-list（座標変換リスト）
 
 - \<transform-list>
-
   - : \<transform-list> 座標変換のリストを指定するために使用します。 \<transform-list> で利用可能な値の詳細は {{SVGAttr("transform")}} 属性定義で指定されています。
 
     SVG DOM 内では、 \<transform-list> 値は {{domxref("SVGTransformList")}} または {{domxref("SVGAnimatedTransformList")}} オブジェクトを使用して表します。
@@ -335,7 +290,6 @@ SVG は多くのデータ型を使用しています。この記事では、こ�
 ## URL
 
 - URL
-
   - : **U**niform **R**esource **L**ocator （統一リソース指定子）です。
 
     URL は {{Glossary("Unicode")}} 文字の並びで、内部または外部のリソースへのアドレスを構築します。

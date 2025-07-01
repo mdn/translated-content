@@ -43,7 +43,7 @@ No início a Web era somente texto, e era tedioso. Felizmente, não demorou muit
 Para colocar uma única imagem em uma página da web, usamos o elemento {{htmlelement("img")}}. Isso é um elemento vazio (quer dizer que não possui conteúdo de texto ou tag de fechamento) que requer no mínimo um atributo para ser útil — `src` (às vezes pronunciado como seu título completo, _source_). O atributo src contém um caminho apontando para a imagem que você deseja incorporar na página, que pode ser uma URL relativa ou absoluta, da mesma maneira que o valores de atributo `href` no elemento {{htmlelement("a")}}.
 
 > [!NOTE]
-> Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#a_quick_primer_on_urls_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
+> Antes de continuar, você deveria ler [Um guia rápido sobre URLs e caminhos](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links#a_quick_primer_on_urls_and_paths) para refrescar sua memória sobre URL relativo e absoluto.
 
 Por exemplo, se sua imagem for chamada `dinossauro.jpg`, e está no mesmo diretório de sua página HTML, você poderia inserir a imagem assim:
 
@@ -122,7 +122,7 @@ O que exatamente você deve escrever dentro do seu atributo `alt`? Depende do _p
 Essencialmente, a chave é oferecer uma experiência utilizável, mesmo quando as imagens não podem ser vistas. Isso garante que todos os usuários não estejam perdendo nenhum conteúdo. Tente desativar as imagens no seu navegador e veja como as coisas ficam. Você logo perceberá como o texto alternativo é útil se a imagem não puder ser vista.
 
 > [!NOTE]
-> Para mais informações, consulte o nosso guia para [Textos alternativos](/pt-BR/docs/Learn/Accessibility/HTML#alternativas_em_textos).
+> Para mais informações, consulte o nosso guia para [Textos alternativos](/pt-BR/docs/Learn_web_development/Core/Accessibility/HTML#alternativas_em_textos).
 
 ### Largura e altura
 
@@ -146,11 +146,11 @@ Isso não resulta em muita diferença para a tela, em circunstâncias normais. M
 No entanto, você não deve alterar o tamanho das suas imagens usando atributos HTML. Se você definir o tamanho da imagem muito grande, terá imagens granuladas, confusas ou muito pequenas e desperdiçando largura de banda ao fazer o download de uma imagem que não atenda às necessidades do usuário. A imagem também pode ficar distorcida, se você não mantiver a [proporção de tela](<Proporção de tela>). Você deve usar um editor de imagens para colocar sua imagem no tamanho correto antes de colocá-la em sua página da web.
 
 > [!NOTE]
-> Se você precisar alterar o tamanho de uma imagem, use [CSS](/pt-BR/docs/Learn/CSS) então.
+> Se você precisar alterar o tamanho de uma imagem, use [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics) então.
 
 ### Títulos de imagem
 
-Como [nos links](/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
+Como [nos links](/pt-BR/docs/Learn_web_development/Core/Structuring_content/Creating_links), você também pode adicionar o atributo `title` nas images, para fornecer mais informações de suporte, se necessário. No nosso exemplo, poderíamos fazer isso:
 
 ```html
 <img
@@ -372,7 +372,7 @@ A imagem incorporada resultante é sem dúvida mais fácil de posicionar e contr
 Resumindo: se uma imagem tiver significado, em termos de seu conteúdo, você deverá usar uma imagem HTML. Se uma imagem é puramente decorativa, você deve usar imagens de plano de fundo CSS.
 
 > [!NOTE]
-> Você aprenderá muito mais sobre [CSS background images](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) no nosso tópico de [CSS](/pt-BR/docs/Learn/CSS).
+> Você aprenderá muito mais sobre [CSS background images](/pt-BR/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) no nosso tópico de [CSS](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics).
 
 É tudo por agora. Cobrimos imagens e legendas em detalhes. No próximo artigo, avançaremos, analisando como usar HTML para incorporar vídeo e áudio em páginas da web.
 

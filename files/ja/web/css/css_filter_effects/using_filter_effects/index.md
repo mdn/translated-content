@@ -74,7 +74,7 @@ img:focus {
 }
 ```
 
-キーボードユーザーがタブ順序を変更せずにフォーカスできるように、 {{HTMLElement("img")}} 要素では [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) を `0` に設定します。なぜなら、 `<img>` は操作可能な要素ではないからです。
+キーボードユーザーがタブ順序を変更せずにフォーカスできるように、 {{HTMLElement("img")}} 要素では [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) を `0` に設定します。なぜなら、 `<img>` は操作可能な要素ではないからです。
 
 ```css hidden
 img {

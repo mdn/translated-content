@@ -15,8 +15,8 @@ l10n:
 
 ### HTML
 
-- [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性をデフォルトで有効にしました。属性の既定値は `none` ですので、大文字化を行いません ([Firefox bug 1692007](https://bugzil.la/1692007))。
-- [`translate`](/ja/docs/Web/HTML/Global_attributes/translate) グローバル属性をサポートしました ([Firefox bug 1418449](https://bugzil.la/1418449))。
+- [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性をデフォルトで有効にしました。属性の既定値は `none` ですので、大文字化を行いません ([Firefox bug 1692007](https://bugzil.la/1692007))。
+- [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) グローバル属性をサポートしました ([Firefox bug 1418449](https://bugzil.la/1418449))。
 
 #### 廃止
 

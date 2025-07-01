@@ -1,9 +1,8 @@
 ---
 title: 412 Precondition Failed
 slug: Web/HTTP/Reference/Status/412
-original_slug: Web/HTTP/Status/412
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -36,13 +35,13 @@ ETag: W/"0815"
 ETag: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-Wiki ページへの編集を保存する（データを投稿する）際に、 {{HTTPMethod("POST")}} リクエストに {{HTTPHeader("If-Match")}} ヘッダーを含み、その中で新鮮さをチェックするための `ETag` の値を含みます。
+Wiki ページへの変更を保存する（データを投稿する）とき、 {{HTTPMethod("POST")}} リクエストには {{HTTPHeader("If-Match")}} ヘッダーに、クライアントが前回の編集で格納した `ETag` 値を入れ、サーバー上のリソースの更新を確認できるようにします。
 
 ```http
 If-Match: "33a64df551425fcc55e4d42a148795d9f25f89d4"
 ```
 
-ハッシュが一致しない場合、その間で文書が編集されたことを意味するので、 {{HTTPStatus("412")}} `Precondition Failed` エラーを発生させます。
+ハッシュが一致しない場合、その間で文書が編集されたことを意味するので、 `412 Precondition Failed` エラーを発生させます。
 
 ## 仕様書
 

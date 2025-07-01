@@ -3,8 +3,6 @@ title: Express 教學 2：創建一個骨架網站
 slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website", "Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose", "Learn_web_development/Extensions/Server-side/Express_Nodejs")}}
 
 在 [Express 教程](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)的第二篇文章，演示如何創建一個 "骨架" 網站項目，你可以接著在裡面加入網站特定的路由、模板/視圖、和數据庫調用。
@@ -91,7 +89,6 @@ Express Application Generator 允許你配置許多流行的視圖/模板引擎�
 - 風格 — 某些模板引擎使用特定的標記，來指示在 「普通」 HTML 內插入的內容，而其他模板引擎使用不同的語法（例如，使用縮進和區塊名稱）構造 HTML。
 - 性能/渲染時間。
 - 特點 — 你應該考慮你看中的引擎是否具有以下功能：
-
   - 佈局繼承：允許你定義基本模板，然後 「繼承」 它的一部分，使特定頁面可以有不同的呈現。比起通過包含大量必需組件，或每次從頭開始構建模板，這通常是更好的方式。
   - "Include" 支持：允許你通過包含其他模板，來構建模板。
   - 簡潔的變量和循環控制語法。
@@ -171,7 +168,6 @@ express express-locallibrary-tutorial --view=pug
    ```
 
 2. 然後運行該應用程序。
-
    - 在 Windows 上，使用此命令:
 
      ```bash
@@ -344,7 +340,8 @@ npm install --save-dev nodemon
 var app = require("../app");
 ```
 
-> **備註：** `require()` 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 **app.js** 模塊，並省略可選的（**.js**）文件擴展名。
+> [!NOTE]
+> `require()` 是一個全局 node 函數，用於將模塊導入當前文件。這裡我們使用相對路徑指定 **app.js** 模塊，並省略可選的（**.js**）文件擴展名。
 
 此文件中的其餘代碼，將設置一個 node 運行的 HTTP 服務器，並將應用 app 設置為特定的端口（在環境變量中定義，如果變量未定義，則定義為 3000），並開始監聽和報告服務器錯誤和連接。現在你並不需要知道代碼的其他內容（這個文件中的所有內容都是 「樣板文件」 ），但如果你感興趣，可以隨時查看它。
 

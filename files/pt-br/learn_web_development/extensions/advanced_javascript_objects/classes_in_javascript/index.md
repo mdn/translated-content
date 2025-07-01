@@ -431,7 +431,7 @@ Em última análise, os objetos são apenas outra forma de reutilização de có
 
 ## Alternativas para estender a cadeia de protótipos
 
-Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#different_ways_to_create_objects_and_the_resulting_prototype_chain).
+Em JavaScript, existem várias maneiras diferentes de estender o protótipo de um objeto além do que mostramos acima. Para saber mais sobre as outras formas, visite nosso artigo [Herança e a cadeia de protótipos](/pt-BR/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain#different_ways_to_create_objects_and_the_resulting_prototype_chain).
 
 ## Sumário
 

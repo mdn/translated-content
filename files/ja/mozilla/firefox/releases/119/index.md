@@ -15,11 +15,11 @@ l10n:
 
 #### 廃止
 
-- {{HTMLElement('input')}} 要素で、非標準の `mozactionhint` 属性のサポートを廃止しました。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) を使用してください (詳しくは [Firefox bug 1735980](https://bugzil.la/1735980) をご覧ください)。
+- {{HTMLElement('input')}} 要素で、非標準の `mozactionhint` 属性のサポートを廃止しました。代わりに [`enterkeyhint`](/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) を使用してください (詳しくは [Firefox bug 1735980](https://bugzil.la/1735980) をご覧ください)。
 
 ### CSS
 
-- {{cssxref("attr")}} CSS 関数の代替値をサポートしました。これは [グローバル属性](/ja/docs/Web/HTML/Global_attributes) が見つからない場合に、代替値の設定を使用することができます ([Firefox bug 1448248](https://bugzil.la/1448248))。
+- {{cssxref("attr")}} CSS 関数の代替値をサポートしました。これは [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) が見つからない場合に、代替値の設定を使用することができます ([Firefox bug 1448248](https://bugzil.la/1448248))。
 
 ### JavaScript
 

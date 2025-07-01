@@ -128,7 +128,7 @@ console.log(response2.status);
 
 ### ヘッダーの設定
 
-リクエストヘッダーは、リクエストに関する情報をサーバーに与えます。例えば {{httpheader("Content-Type")}} ヘッダーは、リクエスト本体の形式をサーバーに指示します。多くのヘッダーはブラウザーが自動的に設定し、スクリプトでは設定できません。これらは{{glossary("Forbidden header name", "禁止ヘッダー名")}}と呼ばれています。
+リクエストヘッダーは、リクエストに関する情報をサーバーに与えます。例えば {{httpheader("Content-Type")}} ヘッダーは、リクエスト本体の形式をサーバーに指示します。多くのヘッダーはブラウザーが自動的に設定し、スクリプトでは設定できません。これらは{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}と呼ばれています。
 
 リクエストヘッダーを設定するには、`headers` オプションに割り当ててください。
 
@@ -177,7 +177,6 @@ const response = await fetch("https://example.org/post", {
 オリジン間のリクエストができるかどうかは `mode` オプションの値で決まります。これは `cors`、`no-cors`、`same-origin` の 3 つの値のいずれかを取ります。
 
 - 既定では `mode` は `cors` に設定され、リクエストがオリジンをまたぐものであれば、[オリジン間リソース共有 (CORS)](/ja/docs/Web/HTTP/Guides/CORS) の仕組みを使用することを意味しています。これは以下のことを意味しています。
-
   - リクエストが[単純リクエスト](/ja/docs/Web/HTTP/Guides/CORS#simple_requests)の場合、リクエストは常に送信されますが、サーバーは正しい {{httpheader("Access-Control-Allow-Origin")}} ヘッダーで応答しなければなりません。
   - リクエストが単純なリクエストでない場合、ブラウザーは[プリフライトリクエスト](/ja/docs/Web/HTTP/Guides/CORS#preflighted_requests)を送信して、サーバーが CORS を理解し、リクエストを許可しているか調べ、サーバーが適切な CORS ヘッダーでプリフライトリクエストに応答しない限り、実際のリクエストは送信されません。
 

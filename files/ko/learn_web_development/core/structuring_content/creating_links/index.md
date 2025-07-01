@@ -48,7 +48,7 @@ l10n:
 
 ## 링크의 구조
 
-기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
+기본 링크는 텍스트 또는 기타 내용([Block level links](#block_level_links))을 {{htmlelement("a")}} 요소 안에 감싸고 웹 주소를 포함하는 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 속성(**Hypertext Reference** 또는 **target**)을 사용하여 생성됩니다.
 
 ```html
 <p>
@@ -171,7 +171,7 @@ URL은 파일들을 찾기위해 path를 이용합니다. path는 당신이 관�
 
 ### 문서 조각
 
-문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 연결할 수 있습니다. 그러기 위해 먼저 여러분은 연결하고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 속성을 넣어주어야 합니다. 일반적으로는 아래와 같이 특정 헤드라인에 연결하는 것이 타당합니다.
+문서 상단이 아닌 HTML 문서 내부의 특정 부분(Document fragments(문서 조각)에 연결할 수 있습니다. 그러기 위해 먼저 여러분은 연결하고 싶은 태그에 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 속성을 넣어주어야 합니다. 일반적으로는 아래와 같이 특정 헤드라인에 연결하는 것이 타당합니다.
 
 예제
 
@@ -326,7 +326,7 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 이렇게 되면 다음과 같은 링크가 생성됩니다. [아무데나 전자 메일 보내기](mailto:nowhere@mozilla.org).
 
-사실, 이메일 주소는 심지어 선택사항입니다. 그것을 생략하면(즉, 당신의 [`href`](/ko/docs/Web/HTML/Element/a#href) 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용합니다.
+사실, 이메일 주소는 심지어 선택사항입니다. 그것을 생략하면(즉, 당신의 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 아직 목적지 주소가 지정되지 않은 사용자의 메일 클라이언트에 의해 새로운 발신 이메일 창이 열립니다. 이것은 종종 사용자가 선택한 주소로 이메일을 보내기 위해 클릭할 수 있는 "공유" 링크로서 유용합니다.
 
 ### 세부 사항 지정하기
 

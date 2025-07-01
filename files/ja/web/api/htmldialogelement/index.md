@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承したプロパティがあります。_
 
 - {{domxref("HTMLDialogElement.open")}}
-  - : 論理値で、ダイアログが操作可能であることを示す [`open`](/ja/docs/Web/HTML/Element/dialog#open) 属性の値を反映します。
+  - : 論理値で、ダイアログが操作可能であることを示す [`open`](/ja/docs/Web/HTML/Reference/Elements/dialog#open) 属性の値を反映します。
 - {{domxref("HTMLDialogElement.returnValue")}}
   - : 文字列で、ダイアログの返値を設定または返却します。
 
@@ -38,7 +38,7 @@ _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承し
 これらのイベントを {{DOMxRef("EventTarget.addEventListener", "addEventListener()")}} を使用して、またはこのインターフェイスの `onイベント名` プロパティにイベントリスナーを代入することによって待ち受けます。
 
 - {{domxref("HTMLDialogElement/close_event", "close")}}
-  - : エスケープキー、`HTMLDialogElement.close()` メソッド、または [`method="dialog"`](/ja/docs/Web/HTML/Element/form#メソッド) でダイアログ内のフォームを送信することによって、このダイアログが閉じられたときに発行されます。
+  - : エスケープキー、`HTMLDialogElement.close()` メソッド、または [`method="dialog"`](/ja/docs/Web/HTML/Reference/Elements/form#メソッド) でダイアログ内のフォームを送信することによって、このダイアログが閉じられたときに発行されます。
 
 ## 例
 

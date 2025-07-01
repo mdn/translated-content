@@ -29,9 +29,7 @@ Intl.NumberFormat.supportedLocalesOf(locales[, options])
 - `locales`
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列です。 `locales` 引数の一般的な形式については、 {{jsxref("Intl", "Intl のページ", "#ロケールの識別とネゴシエーション", 1)}}を参照してください。
 - `options`
-
   - : 省略可能です。以下のプロパティを持つことがあるオブジェクトです。
-
     - `localeMatcher`
       - : 使用するロケールの一致アルゴリズムです。指定可能な値は `lookup` および `best fit` で、既定値は `best fit` です。このオプションの詳細は、 {{jsxref("Intl", "Intl のページ", "#Locale_negotiation", 1)}}を参照してください。
 

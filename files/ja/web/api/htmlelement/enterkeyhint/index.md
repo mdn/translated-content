@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`enterKeyHint`** プロパティは、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義する列挙型のプロパティです。これは HTML の [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性を反映し、以下の値のみを文字列として受け入れることができる、列挙型のプロパティです。
+**`enterKeyHint`** プロパティは、仮想キーボードの Enter キーに表示するアクションラベル（またはアイコン）を定義する列挙型のプロパティです。これは HTML の [`enterkeyhint`](/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) グローバル属性を反映し、以下の値のみを文字列として受け入れることができる、列挙型のプロパティです。
 
 - `'enter'`: 通常は改行を挿入することを示します。
 - `'done'`: 通常はこれ以上入力するものがなく、インプットメソッドエディター (IME) が閉じることを示します。
@@ -42,4 +42,4 @@ search.enterKeyHint = "search";
 
 ## 関連情報
 
-- HTML の [`enterkeyhint`](/ja/docs/Web/HTML/Global_attributes/enterkeyhint) グローバル属性
+- HTML の [`enterkeyhint`](/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint) グローバル属性

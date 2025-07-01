@@ -17,7 +17,6 @@ slug: Web/CSS/CSS_counter_styles
 ### Règles @
 
 - {{cssxref("@counter-style")}}
-
   - {{cssxref("@counter-style/system","system")}}
   - {{cssxref("@counter-style/additive-symbols", "additive-symbols")}}
   - {{cssxref("@counter-style/negative", "negative")}}

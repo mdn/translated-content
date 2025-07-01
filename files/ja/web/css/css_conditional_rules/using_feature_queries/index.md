@@ -1,113 +1,270 @@
 ---
 title: 機能クエリーの使用
 slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
+l10n:
+  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---
 
 {{CSSRef}}
 
-**機能クエリー**は、 CSS の [@supports](/ja/docs/Web/CSS/@supports) アットルールを使って作成され、ウェブ開発者がある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法として有益です。このガイドでは、機能クエリーを使用してプログレッシブエンハンスメントを実装する方法を学びます。
+**機能クエリー** は、ユーザーエージェントが CSS プロパティやプロパティ値など、1 つ以上の CSS 機能に対応しているかどうかを検査する条件付きグループルールです。機能クエリーは、ウェブ開発者にある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法を提供します。このガイドでは、機能クエリーを使用してプログレッシブエンハンスメントを実装する方法を学びます。
+
+機能クエリーは、 CSS の [`@supports`](/ja/docs/Web/CSS/@supports) アットルール（または [`@import`](/ja/docs/Web/CSS/@import) アットルール内の `supports()` 関数）を使用して作成されます。
 
 ## 構文
 
-CSS の機能クエリーは [CSS 条件付きルールモジュール](https://drafts.csswg.org/css-conditional-3/)の一部で、ここにはメディアクエリーの [@media](/ja/docs/Web/CSS/@media) ルールも含まれてます。機能クエリーを使用すると、メディアクエリーと同様の動作をすることが分かると思います。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
+CSS の機能クエリーは [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュールの一部で、ここにはメディアクエリーの [`@media`](/ja/docs/Web/CSS/@media) アットルールも含まれてます。機能クエリーは、[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)と同様に動作します。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
 
-機能クエリーは `@supports` ルールと、それに続く検査したいプロパティ名と値から構成されます。 `display` のようなプロパティ名だけでは検査できません。ルールにはプロパティ名と値が必要です。
+機能クエリーは、`@supports` アットルールと、その後に続く対応条件、または `@import` アットルール宣言内の `supports()` 関数と宣言引数で構成されます。
 
 ```css
-@supports (property: value) {
-  適用する CSS ルール
+/* `@supports` アットルール */
+@supports <support-condition> {
+  /* 適用する CSS ルール */
+}
+
+/* `supports()` 関数 */
+@import url_to_import supports(<declaration>);
+```
+
+例えば、ユーザーエージェントが CSS の {{cssxref("color")}} プロパティの有効な値として `red` に対応している場合、一連のスタイルを適用したり、スタイルシート全体をインポートしたりすることができます。
+
+```css
+/* `@supports` アットルール */
+@supports (color: red) {
+  /* 適用する CSS ルール */
+}
+
+/* `supports()` 関数 */
+@import "/css/styles.css" supports(color: red);
+```
+
+別の例として、ブラウザーが `row-gap` プロパティに対応しているかどうかを確認したい場合は、次の特性クエリを記述します。多くの場合、どの値を使用しても問題はありません。ブラウザーがこのプロパティに対応しているかどうかを確認したいだけなら、有効な値であればどれでもかまいません。
+
+```html-nolint live-sample___simple
+<div class="box">
+  ブラウザーが row-gap プロパティに対応している場合、境界線は破線になり、テキストは赤になります。
+</div>
+```
+
+```css live-sample___simple
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: red;
+  }
 }
 ```
 
-例えば、あるブラウザーが `row-gap` プロパティに対応しているかどうかを確認したい場合、次のような機能クエリーを記述します。多くの場合は、どの値を使用しても問題ありません。ブラウザーがこのプロパティに対応しているかどうかを確認したいだけであれば、有効な値であればどのような値でもかまいません。
+{{EmbedLiveSample("simple")}}
 
-{{EmbedGHLiveSample("css-examples/feature-queries/simple.html", '100%', 600)}}
+プロパティと値のペアの値の部分は、特定のプロパティの新しい値をテストする場合に重要になります。すべてのブラウザーは `color: red` に対応しています。これは CSS1 にさかのぼります。ただし、CSS では、[相対色](/ja/docs/Web/CSS/CSS_colors/Relative_colors)など、対応していない追加の値がプロパティに追加される場合がよくあります。機能クエリーを使うと、プロパティと値のペアを検査することができます。つまり、値の対応を検出することができるということです。
 
-特定のプロパティの新しい値を検査する場合は、プロパティと値の組の値の部分がより重要になります。良い例は `display` プロパティでしょう。すべてのブラウザーは `display` に対応しており、`display: block` は CSS1 にまでさかのぼります。しかし、 `display: flex` と `display: grid` はもっと新しい値です。 CSS ではプロパティに追加の値を指定することがよくあるので、プロパティと値を検査するということは、これらの値に対応しているかどうかを検出することができることを意味します。
+上記の `color` プロパティの例をさらに発展させて、ブラウザーが `color： AccentColor` 宣言に対応しているかどうかを調べます。
 
-## 対応がないかどうかを検査
+```css
+/* `@supports` アットルール */
+@supports (color: AccentColor) {
+  /* 適用する CSS ルール */
+}
+
+/* `supports()` 関数 */
+@import "/css/styles.css" supports(color: AccentColor);
+```
+
+これらの例では、ユーザーエージェントが CSS プロパティの特定の値に対応しているかどうかを調べるために、括弧内に単一の宣言を記載して機能クエリーを使用しています。複数のプロパティ値やサポートの有無をテストすることができます。
+
+## 対応がないことを検査
 
 ブラウザーが機能に対応しているかどうかを尋ねる場合のほか、 `not` キーワードを追加することで逆の検査を行うことができます。
 
 ```css
+/* `@supports` アットルールに `not` をつけたもの */
 @supports not (property: value) {
-  CSS rules to apply
+  /* 適用する CSS ルール */
 }
 ```
 
 以下の例の機能クエリー内の CSS は、ブラウザーが `row-gap` に対応していない場合に実行されます。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/not.html", '100%', 600)}}
+```html-nolint live-sample___not
+<div class="box">
+  ブラウザーが row-gap に対応していない場合、コンテンツは濃い緑色で、境界線が破線になります。
+</div>
+```
+
+```css live-sample___not
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports not (row-gap: 10px) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("not")}}
 
 ## 複数の機能を検査
 
 機能クエリーで、複数のプロパティに対応していることを検査必要がある場合があります。そのような場合は、`and` キーワードで区切って、検査する機能の一覧を記述します。
 
 ```css
+/* 複数の機能をもつ `@supports` アットルール */
 @supports (property1: value) and (property2: value) {
-  CSS rules to apply
+  /* 適用する CSS ルール */
 }
 ```
 
 例えば、実行したい CSS が、ブラウザーが CSS シェイプと CSS グリッドに対応していることを必要とする場合、この 2 つを検査するルールを作成することができます。次のルールは、ブラウザーが `shape-outside: circle()` と `display: grid` の両方に対応している場合にのみ true を返します。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/and.html", '100%', 600)}}
+```html-nolint live-sample___and
+<div class="box">
+  ブラウザーが <code>display: grid</code> および <code>shape-outside: circle()</code> に対応していた場合、コンテンツは濃い緑色で、境界線が破線になります。
+</div>
+```
 
-`or` を使用することもできます。これは選択したもののうち 1 つが一致した場合に CSS を有効にすることができます。
+```css live-sample___and
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (display: grid) and (shape-outside: circle()) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("and")}}
+
+## 複数の機能の少なくとも 1 つを検査
+
+1 つ以上の宣言が対応している場合にのみ CSS を適用するには、`or` を使用することもできます。
 
 ```css
+/* いずれかの機能の `@supports` アットルール */
 @supports (property1: value) or (property2: value) {
-  CSS rules to apply
+  /* 適用する CSS ルール */
 }
 ```
 
 これは、ある機能がベンダー接頭辞付きである場合に特に有用で、標準のプロパティとベンダー接頭辞を加えたものを検査することができます。
 
-{{EmbedGHLiveSample("css-examples/feature-queries/or.html", '100%', 600)}}
+```html-nolint live-sample___or
+<div class="box">
+  ブラウザーがフォントの平滑化に対応している場合、テキストと境界線は緑色になります。
+</div>
+```
+
+```css live-sample___or
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+.box {
+  border: 4px solid blue;
+  color: blue;
+  padding: 1em;
+}
+@supports (font-smooth: always) or (-webkit-font-smoothing: antialiased) {
+  .box {
+    border: 4px dashed darkgreen;
+    color: darkgreen;
+  }
+}
+```
+
+{{EmbedLiveSample("or")}}
+
+## その他の機能クエリーのオプション
+
+機能クエリーは、プロパティと値のペアに制限されません。機能クエリーに [`font-tech()`](/ja/docs/Web/CSS/@supports#font-tech)、[`font-format()`](/ja/docs/Web/CSS/@supports#font-format)、[`selector()`](/ja/docs/Web/CSS/@supports#function_syntax) 関数を含めることで、それぞれユーザーエージェントが指定したフォント技術、フォント形式、セレクター構文に対応しているかどうかによって、 CSS を選択的に適用することができます。
+
+例えば、`selector()` 関数を使用すると、ベンダー接頭辞が付いた擬似要素に対応するブラウザー用にスタイルシートをインポートすることができます。
+
+```css
+/* `selector()` を `supports()` 関数内で使用 */
+@import `/css/webkitShadowStyles.css`
+  supports(selector(::-webkit-inner-spin-button));
+```
+
+## 例
+
+### ブラウザーの対応検査
+
+この例では、ブラウザーが `AccentColor` {{cssxref("system-color")}} に対応しているかどうかを調べ、対応している場合は `display: none` を使用して、既定の「対応していません」というメッセージを「対応しています」というメッセージに変更します。
+
+#### HTML
+
+```html-nolint
+<p class="accentcolor">
+  Your browser does <span>not</span> support <code>AccentColor</code> as a color
+  value.
+</p>
+```
+
+#### CSS
+
+```css
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+p {
+  padding: 1em;
+}
+@supports (color: AccentColor) {
+  p {
+    color: green;
+    border: 2px solid;
+  }
+  span {
+    display: none;
+  }
+}
+@supports not (color: AccentColor) {
+  p {
+    color: red;
+  }
+}
+```
+
+#### 結果
+
+{{EmbedLiveSample("Browser support test")}}
 
 ## 機能クエリーの制限
 
-`@support` ルールは、ブラウザーが 1 つ以上のプロパティと値の組を解釈できるかどうか、つまり、その機能に対応していると主張するかどうかを確認するために使用します。もしブラウザーがそのプロパティと値のペアを理解できれば、肯定的な応答を返します。したがって、ブラウザーがある機能に正しく、バグなく対応しているかどうかを確認するために、機能クエリーを使用することはできないのです。
-
-さらに、機能クエリーはは「部分的な実装」を検査することもできません。この良い例が `gap` プロパティです。CSS グリッドに対応しているすべてのブラウザーは、 CSS グリッドの `gap` に対応していますが、フレックスボックスの `gap` に対応しているのは Firefox だけです。フレックスボックスで使いたいからと `gap` プロパティを検査「すると、実装されていないにもかかわらず肯定的な回答を得ることになります。
-
-## プログレッシブエンハンスメントのための機能クエリーの使い方
-
-機能クエリーは、サイトを段階的に拡張していく際に非常に有効なツールです。すべてのブラウザーに対して適切なソリューションを提供し、より新しい機能に対応しているブラウザーにはより高度なソリューションを提供することができます。
-
-しかし、機能クエリーに対応していないブラウザーもあれば、使いたい機能に対応していないブラウザーもあります。例えば、 IE11 で対応していない CSS グリッドを使いたいとします。 IE11 は機能クエリーにも対応していないので、未対応のブラウザーをチェックして代替策を作ることはできません。しかし、実際には、プログレッシブエンハンスメントに機能クエリーを使用する場合、これは重要ではありません。ただし、未対応ブラウザー用の CSS を記述し、それを機能クエリー内の CSS で上書きするようにするなど、一定の方法で CSS を構成する必要があります。
-
-それでは、上記のような方法で機能クエリーを使用する、とても簡単な例を見ていきましょう。
-
-例えば、 3 つのボックスが並んだレイアウトを作りたい場合、理想的には[CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)を使いたいところです。しかし、古いブラウザーのためのレイアウトでは、浮動要素を使ったレイアウトにしたいとします。まずはその浮動レイアウトを以下のコードで作成しすると、 3 列にすることができます。
-
-{{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
-
-ブラウザーは CSS のプロパティや値を理解できない場合、それを無視します。そこで、 CSS グリッドを使ってレイアウトを強化することから始めるとよいでしょう。グリッドに対応していないブラウザーは、 `display` プロパティの `grid` の値を無視します。浮動アイテムがグリッドアイテムになると、浮動は取り除かれます。詳細は、[古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)を参照してください。そのため、グリッド版は浮動のものを上書きすればよいのです。
-
-しかし、浮動されたアイテムを 3 列で表示するために使用した `width` プロパティが原因で問題が発生しました。これは、現在、浮動の場合のようにコンテナーの幅ではなく、カラムトラックの幅としてグリッドに解釈されます。
-
-{{EmbedGHLiveSample("css-examples/feature-queries/step2.html", '100%', 900)}}
-
-必要なのは、 `display: grid` に対応している場合に、 width を削除する方法です。これはまさに機能クエリーが解決する状況です。グリッドに対応している場合、 `width` を `auto` に戻すことができます。
-
-{{EmbedGHLiveSample("css-examples/feature-queries/step3.html", '100%', 900)}}
-
-上記のシナリオでは、 IE11 が機能クエリーや CSS グリッドに対応していなくても問題ありません。浮動版はどの場合でも適用され、グリッドに対応しているブラウザーではそれが上書きされm佐生。
-
-上記のコードを記述する別の方法として、以下のようにグリッドのコードをすべて機能クエリーでラップすることができます。
-
-{{EmbedGHLiveSample("css-examples/feature-queries/step4.html", '100%', 900)}}
-
-この場合、コードが少し増えるかもしれませんが、プロパティ名や値名の綴りを故意に間違えることで、代替策をテストできるという利点があります。上記のライブサンプルでは、 `@supports` ルールの `display: grid` を `display: grip` などに変更すると試すことができます。
+`@support` ルールは、ブラウザーが 1 つ以上のプロパティと値の組を解釈できるかどうか、つまり、その機能に対応していると主張するかどうかを確認するために使用します。もしブラウザーがそのプロパティと値のペアを理解できれば、肯定的な応答を返します。したがって、ブラウザーがある機能に正しく、バグなく対応しているかどうかを確認するために、機能クエリーを使用することはできないのです。機能クエリーはは「部分的な実装」を検査することもできません。
 
 ## まとめ
 
-機能クエリーは、古いブラウザーで使用されているサイトの表示をよりシンプルに強化することで、新しい機能の利用を開始するのに役立ちます。対応ブラウザー用の CSS をまとめることができるため、上記のグリッドの例のように、代替表示用のスタイルが漏れてしまうリスクもありません。
+機能クエリーは、サイトを段階的に強化するための便利なツールです。これにより、すべてのブラウザーに良いソリューションを提供し、新しいプロパティや値に対応するブラウザーには強化されたソリューションを提供することができます。
 
-### 関連情報
+新しい CSS 機能を使用するために、機能クエリーを使用する必要はありません。CSS エラー処理により、ブラウザーは認識できない CSS を単に無視するだけです。ただし、機能クエリーは代替宣言の便利な代替手段であり、最終的にはどこでも対応するコードを一度だけ記述することができます。
 
-- [@supports](/ja/docs/Web/CSS/@supports) ルール
-- レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
-- [CSS での機能クエリーの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)
+## 関連情報
+
+- [CSS 条件付きルール](/ja/docs/Web/CSS/CSS_conditional_rules)モジュール
+- [CSS メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
+- [古いブラウザーの対応: 機能クエリー](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers#機能クエリー)
+- [ブラウザーの機能検出: CSS `@supports`](/ja/docs/Learn_web_development/Extensions/Testing/Feature_detection#supports)

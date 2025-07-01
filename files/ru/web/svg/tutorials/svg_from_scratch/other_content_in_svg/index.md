@@ -26,7 +26,7 @@ slug: Web/SVG/Tutorials/SVG_from_scratch/Other_content_in_SVG
     width="128"
     height="146"
     transform="rotate(45)"
-    xlink:href="https://developer.mozilla.org/static/img/favicon144.png" />
+    xlink:href="/shared-assets/images/examples/favicon144.png" />
 </svg>
 ```
 

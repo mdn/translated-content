@@ -19,7 +19,7 @@ l10n:
 
 {{EmbedGHLiveSample("css-examples/modules/colors.html", '100%', 450)}}
 
-作成した色は、 CSS において {{cssxref("color_value", "&lt;color&gt")}} データ型ならどこでも使用することができます。
+作成した色は、 CSS において {{cssxref("color_value", "&lt;color&gt;")}} データ型ならどこでも使用することができます。
 
 ## 関連情報
 

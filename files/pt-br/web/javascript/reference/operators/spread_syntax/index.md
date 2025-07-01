@@ -3,7 +3,25 @@ title: Sintaxe de Espalhamento
 slug: Web/JavaScript/Reference/Operators/Spread_syntax
 ---
 
-{{jsSidebar("Operators")}}**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.{{EmbedInteractiveExample("pages/js/expressions-spreadsyntax.html")}}
+{{jsSidebar("Operators")}}
+
+**Sintaxe de Espalhamento (Spread syntax)** permite que um objeto iterável, como uma expressão de array ou uma string seja expandido para ser usado onde zero ou mais argumentos (para chamadas de funções) ou elementos (para arrays _literais_) são esperados, ou que um objeto seja expandido onde zero ou mais pares _propriedade:valor_ (para objetos _literais_) são esperados.
+
+{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+
+```js interactive-example
+function sum(x, y, z) {
+  return x + y + z;
+}
+
+const numbers = [1, 2, 3];
+
+console.log(sum(...numbers));
+// Expected output: 6
+
+console.log(sum.apply(null, numbers));
+// Expected output: 6
+```
 
 ## Sintaxe
 

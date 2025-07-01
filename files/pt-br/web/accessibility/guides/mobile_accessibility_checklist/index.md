@@ -9,7 +9,6 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 ## Cor
 
 - O constrate de cor **DEVE** seguir os requirementos level AA do [WCAG 2.0](https://www.w3.org/TR/WCAG/):
-
   - Razão de contraste de 4.5:1 para textos normais (com menos de 18 pontos e 14 pontos em negrito.)
   - Razão de contraste de 3:1 para textos grandes (com pelo menos 18 pontos ou 14 pontos em negrito.)
 
@@ -22,14 +21,12 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 
 - Técnicas de esconder conteúdo como zero opacidade, ordem z-index e off-screen placement **NÃO DEVEM** ser exclusivas para visibilidade de manuseio.
 - Tudo que não é visível na tela **DEVE** ser verdadeiramente invisível (especialme relevante para apps de páginas únicas com múltiplos _cards_):
-
   - **USE** o atributo `hidden` ou propriedades de estilo `visibility` ou `display.`
   - A não ser que seja extemamente inevitável, **NÃO USE** o atributo `aria-hidden.`
 
 ## Foco
 
 - Todos os elementos em foco **DEVEM**:
-
   - Estar no padrão como os links, botões, e campo de formulário que são focalizados por padrão.
   - Controles não padrões **DEVEM ter** um [ARIA Role](https://www.w3.org/TR/wai-aria/roles) apropriado para eles, como em `button`, `link`, ou `checkbox`.
 
@@ -38,7 +35,6 @@ Este documento contém uma lista concisa de requisitos para desenvolvedores de a
 ## Textos Equivalentes
 
 - Textos equivalentes **DEVEM** ser declarados para cada elemento dentro do aplicativo que não sejam textos e aos elementos que não são estritamente presentacionais.
-
   - Use _alt_ e _title_ quando apropriado (_veja_ a postagem de Steve Faulkner [Using the HTML title attribute](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/) para uma boa referência.)
   - Se os atributos acima não forem aplicáveis, use os [ARIA Properties](https://www.w3.org/WAI/PF/aria/states_and_properties#global_states_header) apropriados, como `aria-label`, `aria-labelledby`, ou `aria-describedby`.
 

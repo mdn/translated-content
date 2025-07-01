@@ -26,7 +26,7 @@ l10n:
       <td>{{Glossary("Request header", "リクエストヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -47,10 +47,8 @@ Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ## ディレクティブ
 
 - `by` {{optional_inline}}
-
   - : リクエストがプロキシーサーバーに入ってきたインターフェイス。
     識別子は次のいずれかを取ります。
-
     - 難読化された識別子（"hidden" や "secret" など）。
       これは既定値として扱われます。
     - IP アドレス（v4 または v6、オプションでポート番号つき、および ipv6 は引用符と角括弧で囲まれます）

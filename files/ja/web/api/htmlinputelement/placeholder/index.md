@@ -8,7 +8,7 @@ l10n:
 
 {{ APIRef("HTML DOM") }}
 
-**`placeholder`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("input")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Element/input#placeholder) 属性を反映します。
+**`placeholder`** は {{DOMxRef("HTMLInputElement")}} インターフェイスのプロパティで、このコントロールに入力できる内容についてのヒントをユーザーに表示します。これは、{{htmlelement("input")}} 要素の [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/input#placeholder) 属性を反映します。
 
 ## 値
 

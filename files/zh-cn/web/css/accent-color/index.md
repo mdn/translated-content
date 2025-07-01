@@ -53,9 +53,9 @@ accent-color: hsl(250, 100%, 34%);
 
 支持 `accent-color` 属性的浏览器目前将其应用于下列 HTML 元素：
 
-- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Element/input/checkbox)
-- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Element/input/radio)
-- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
+- [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)
+- [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)
 - {{HTMLElement("progress")}}
 
 ## 语法

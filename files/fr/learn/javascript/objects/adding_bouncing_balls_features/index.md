@@ -152,7 +152,6 @@ Pour implémenter le compteur de score, suivez les étapes suivantes:
    ```
 
 3. Dans votre JavaScript, effectuez les modifications suivante :
-
    - Créez une variable qui contiendra la référence vers le paragraphe.
    - Stocker et afficher le nombre de balle présentent à l'écran.
    - Incrémentez le compteur de balle à chaque fois qu'une balle apparait à l'écran.

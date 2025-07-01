@@ -53,7 +53,7 @@ a:visited {
 - 利用できる SVG 属性は {{SVGAttr("fill")}} と {{SVGAttr("stroke")}} です。
 - 利用できるスタイルでもアルファチャンネルは無視されます。要素の `:visited` でない状態のアルファ成分が代わりに使用されます。Firefox でアルファ成分が `0` の場合、`:visited` で設定したスタイルは完全に無視されます。
 - これらのスタイルはエンドユーザーに対する表示色を変更できるようになっていますが、 {{domxref("window.getComputedStyle")}} メソッドは嘘をつき、 `:visited` 状態ではない色の値を返します。
-- [`<link>`](/ja/docs/Web/HTML/Element/link) 要素は `:visited` に一致することはありません。
+- [`<link>`](/ja/docs/Web/HTML/Reference/Elements/link) 要素は `:visited` に一致することはありません。
 
 > [!NOTE]
 > これらの制限とその理由については、[プライバシーと :visited セレクター](/ja/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector)を参照してください。

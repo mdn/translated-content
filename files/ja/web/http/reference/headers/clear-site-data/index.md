@@ -17,7 +17,7 @@ l10n:
       <td>{{Glossary("Response header", "レスポンスヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
   </tbody>
@@ -48,9 +48,7 @@ Clear-Site-Data: "*"
 - `"cookies"`
   - : サーバーが、レスポンス URL のオリジンに関するすべてのクッキーの消去を望んでいることを示します。これは登録されたドメインにサブドメインを含め影響します。ですから、 `https://example.com` と同様に `https://stage.example.com` のクッキーも消去されます。
 - `"storage"`
-
   - : サーバーが、レスポンス URL のオリジンに関するすべての DOM ストレージの消去を望んでいることを示します。これは以下のようなストレージ機構を含みます。
-
     - localStorage （`localStorage.clear` を実行）
     - sessionStorage （`sessionStorage.clear` を実行）
     - IndexedDB （それぞれのデータベースに {{domxref("IDBFactory.deleteDatabase")}} を実行）

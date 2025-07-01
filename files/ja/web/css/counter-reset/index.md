@@ -184,7 +184,7 @@ ol {
 
 {{EmbedLiveSample("Overriding the list-item counter", 140, 300)}}
 
-`counter-reset` を使用して、暗黙的な `list-item` カウンターをすべての `ol` で `3` から数え始めるように設定します。そうすると、最初のアイテムは 4、2 つ目は 5 というように番号が振られます。これは、 HTML で [`<ol start="4">`](/ja/docs/Web/HTML/Element/ol#start) と書くのと同じような効果です。
+`counter-reset` を使用して、暗黙的な `list-item` カウンターをすべての `ol` で `3` から数え始めるように設定します。そうすると、最初のアイテムは 4、2 つ目は 5 というように番号が振られます。これは、 HTML で [`<ol start="4">`](/ja/docs/Web/HTML/Reference/Elements/ol#start) と書くのと同じような効果です。
 
 ### 逆行カウンターの使用
 

@@ -23,7 +23,7 @@ l10n:
   - : 你可以使用 Firefox 3 支持的非标准 API 在 canvas 上绘制文本。
 - [支持画布变换](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Transformations#变形)
   - : Firefox 现在支持 canvas 的 `transform()` 和 `setTransform()` 方法。
-- [使用微格式](/zh-CN/docs/Web/HTML/microformats)
+- [使用微格式](/zh-CN/docs/Web/HTML/Guides/Microformats)
   - : Firefox 现在有一组用于微格式的 API。
 - [拖放事件](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API)
   - : Firefox 3 支持新的拖放事件，当拖放开始和结束时，该事件将会被发送至源节点。

@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Element/input#placeholder)を表します。
+**`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)を表します。
 
 {{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
 
@@ -90,7 +90,7 @@ input::placeholder {
 
 ### ラベル
 
-プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Element/label#for) および [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性の組み合わせを使用し、入力欄とプログラム的に関連付けが行われていないラベルでは、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
+プレイスホルダーは {{htmlelement("label")}} 要素の置き換えではありません。 [`for`](/ja/docs/Web/HTML/Reference/Elements/label#for) および [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性の組み合わせを使用し、入力欄とプログラム的に関連付けが行われていないラベルでは、読み上げソフトのような支援技術が {{htmlelement("input")}} 要素を解釈できなくなります。
 
 - [Placeholders in Form Fields Are Harmful — Nielsen Norman Group](https://www.nngroup.com/articles/form-design-placeholders/)
 

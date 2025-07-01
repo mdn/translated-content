@@ -57,7 +57,6 @@ Authorization: Digest username=<username>,
 ## 指令
 
 - `<auth-scheme>`
-
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)定义了凭据如何编码。一些常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
@@ -68,7 +67,6 @@ Authorization: Digest username=<username>,
 ### Basic
 
 - \<credentials>
-
   - : 凭据，根据指定的方案编码。
 
     > [!NOTE]
@@ -79,7 +77,7 @@ Authorization: Digest username=<username>,
 - \<response>
   - : 证明用户知道该密码，它是该密码的十六进制数字字符串形式。该算法对用户名和密码、realm、cnonce、qop、nc 等进行编码。它在规范中进行了详细描述。
 - `username`
-  - : 带引号的字符串，其中包含指定 `realm` 的用户名，可以是纯文本，也可以是十六进制表示的哈希编码。如果名称包含字段中不允许的字符，则可以使用 `username*` 替换它（而不是“同时包含两者”）。
+  - : 带引号的字符串，其中包含指定 `realm` 的用户名，可以是纯文本，也可以是十六进制表示的散列编码。如果名称包含字段中不允许的字符，则可以使用 `username*` 替换它（而不是“同时包含两者”）。
 - `username*`
   - : 使用 RFC5987 中定义的扩展符号格式化的用户名。只有当名称无法在 `username` 中编码并且 `userhash` 设置为 `"false"` 时，才应使用此字段。
 - `uri`
@@ -99,7 +97,7 @@ Authorization: Digest username=<username>,
 - `nc`
   - : 随机数。客户端发送当前 `cnonce` 值（包括当前请求）的请求的十六进制计数。服务器可以使用重复的 `nc` 值来识别重放请求。
 - `userhash` {{optional_inline}}
-  - : 如果用户名已经被哈希运算，则为 `"true"`。默认情况下是 `"false"`。
+  - : 如果用户名已经被散列运算，则为 `"true"`。默认情况下是 `"false"`。
 
 ## 示例
 
@@ -111,7 +109,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
+> [!WARNING]
+> {{Glossary("Base64")}} 编码很容易被解码，以得到原始的名称和密码，所以 Basic 身份验证是完全不安全的。当时用身份验证时，总是推荐使用 {{Glossary("HTTPS")}}，而在使用 `Basic` 身份验证时，更是如此。
 
 有关如何配置 Apache 或 Nginx 服务器，以通过 HTTP basic 身份验证保护你的网站，请参见 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)。
 

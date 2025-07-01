@@ -1,17 +1,14 @@
 ---
 title: stroke-linecap
 slug: Web/SVG/Reference/Attribute/stroke-linecap
-original_slug: Web/SVG/Attribute/stroke-linecap
 l10n:
-  sourceCommit: a7615ee2f9e22946edff7633962bc1d9eee9e0ad
+  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{SVGRef}}
-
-**`stroke-linecap`** 属性は、開いたサブパスのストローク（線）が描画されるときに、その末端に使用する形状を定義するプレゼンテーション属性です。
+**`stroke-linecap`** 属性は、開いたサブパスの描線（線）が描画されるときに、その末端に使用する形状を定義するプレゼンテーション属性です。
 
 > [!NOTE]
-> プレゼンテーション属性であるため、`stroke-linecap` は CSS プロパティとして使用できます。
+> プレゼンテーション属性であるため、 `stroke-linecap` には対応する CSS プロパティ {{cssxref("stroke-linecap")}} があります。両方が指定された場合、 CSS プロパティが優先されます。
 
 この属性は次の SVG 要素で使用できます。
 
@@ -35,7 +32,7 @@ svg {
 
 ```html
 <svg viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg">
-  <!-- （規定値である） "butt" の値の効果 -->
+  <!-- （既定値である） "butt" の値の効果 -->
   <line x1="1" y1="1" x2="5" y2="1" stroke="black" stroke-linecap="butt" />
 
   <!-- Effect of the "round" value -->
@@ -45,7 +42,7 @@ svg {
   <line x1="1" y1="5" x2="5" y2="5" stroke="black" stroke-linecap="square" />
 
   <!--
-  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  次のピンクの線は、各描線のパスの位置を強調しています。
   -->
   <path d="M1,1 h4 M1,3 h4 M1,5 h4" stroke="pink" stroke-width="0.025" />
 </svg>
@@ -74,7 +71,7 @@ svg {
 
 ### butt
 
-`butt` 値は、各サブパスのストロークがその 2 つの端点を超えないことを示します。長さが 0 のサブパスでは、パスはまったく描画されません。
+`butt` 値は、各サブパスの描線がその 2 つの端点を超えないことを示します。長さが 0 のサブパスでは、パスはまったく描画されません。
 
 #### 例
 
@@ -95,7 +92,7 @@ svg {
   <path d="M3,3 h0" stroke="black" stroke-linecap="butt" />
 
   <!--
-  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  次のピンクの線は、各描線のパスの位置を強調しています。
   -->
   <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
   <circle cx="1" cy="1" r="0.05" fill="pink" />
@@ -108,7 +105,7 @@ svg {
 
 ### round
 
-`round` 値は、各サブパスの終端で、ストローク幅に等しい直径の半円を描くことを示します。長さが 0 のサブパスでは、ストロークはサブパスのこの点を中心とした完全な円となります。
+`round` 値は、各サブパスの終端で、描線幅に等しい直径の半円を描くことを示します。長さが 0 のサブパスでは、描線はサブパスのこの点を中心とした完全な円となります。
 
 #### 例
 
@@ -129,7 +126,7 @@ svg {
   <path d="M3,3 h0" stroke="black" stroke-linecap="round" />
 
   <!--
-  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  次のピンクの線は、各描線のパスの位置を強調しています。
   -->
   <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
   <circle cx="1" cy="1" r="0.05" fill="pink" />
@@ -142,7 +139,7 @@ svg {
 
 ### square
 
-`square` 値は、各サブパスの端において、幅がストロークの幅の半分に等しく、高さがストロークの幅に等しい長方形によってストロークが拡張されることを示します。長さがゼロのサブパスでは、ストロークは、サブパスのこの点を中心として、幅がストロークの幅に等しい正方形となります。
+`square` 値は、各サブパスの端において、幅が描線の幅の半分に等しく、高さが描線の幅に等しい長方形によって描線が拡張されることを示します。長さがゼロのサブパスでは、描線は、サブパスのこの点を中心として、幅が描線の幅に等しい正方形となります。
 
 #### 例
 
@@ -163,7 +160,7 @@ svg {
   <path d="M3,3 h0" stroke="black" stroke-linecap="square" />
 
   <!--
-  次のピンクの線は、各ストロークのパスの位置を強調しています。
+  次のピンクの線は、各描線のパスの位置を強調しています。
   -->
   <path d="M1,1 h4" stroke="pink" stroke-width="0.025" />
   <circle cx="1" cy="1" r="0.05" fill="pink" />
@@ -181,3 +178,7 @@ svg {
 ## ブラウザーの互換性
 
 {{Compat}}
+
+## 関連情報
+
+- CSS の {{cssxref("stroke-linecap")}} プロパティ

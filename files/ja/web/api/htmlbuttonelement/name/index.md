@@ -8,7 +8,7 @@ l10n:
 
 {{ApiRef("HTML DOM")}}
 
-**`name`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、この {{HTMLElement("button")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/Web/HTML/Element/button#name) 属性を反映します。
+**`name`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、この {{HTMLElement("button")}} 要素の名前を示します。これは、この要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/button#name) 属性を反映します。
 
 ## 値
 

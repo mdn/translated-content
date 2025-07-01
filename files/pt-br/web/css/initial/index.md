@@ -5,12 +5,12 @@ slug: Web/CSS/initial
 
 {{CSSRef}}
 
-A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
+A palavra-chave CSS **`initial`** CSS se aplica ao [valor inicial (ou padrão)](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) de uma propriedade para um elemento. Este valor inicial é definido pelo navegador. Este valor pode ser aplicado em qualquer propriedade CSS.
 
 Isto inclui também o atalho CSS {{cssxref("all")}}, no qual o `initial` pode ser utilizado para restaurar todas as propriedades CSS para o seu estado inicial.
 
 > [!NOTE]
-> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
+> Em [propriedades herdadas](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance#propriedades_herdadas), O valor inicial pode ser inesperado. Neste caso, considere o uso dos termos {cssxref("inherit")}}, {{cssxref("unset")}}, ou {{cssxref("revert")}}.
 
 ## Exemplo
 
@@ -49,6 +49,6 @@ em {
 ## Veja também
 
 - Utilize {{cssxref("unset")}} para definir uma propriedade para o seu valor herdado caso haja herança, ou para o seu valor inicial, caso não haja..
-- Utilize {{cssxref("revert")}} para redefinir uma propriedade ao valor estabelecido pela folha de estilo [user-agent](/pt-BR/docs/Web/HTTP/Headers/User-Agent) (ou por seus estilos de usuário, se existir algum).
+- Utilize {{cssxref("revert")}} para redefinir uma propriedade ao valor estabelecido pela folha de estilo [user-agent](/pt-BR/docs/Web/HTTP/Reference/Headers/User-Agent) (ou por seus estilos de usuário, se existir algum).
 - Utilize {{cssxref("inherit")}} para fazer uma propriedade de elemento a mesma de seu elemento pai.
 - A propriedade {{cssxref("all")}} permite que você redefina todas as propriedades para os seus estados initial, inherited, reverted, or unset de uma vez.

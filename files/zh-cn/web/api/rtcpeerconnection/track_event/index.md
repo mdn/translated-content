@@ -28,7 +28,7 @@ pc.ontrack = function (event) {
 };
 ```
 
-在第一行代码中，我们的`ontrack` 事件处理器获取传入的第媒体流数组中的第一个，并赋值给 video 元素的[`srcobject`](/zh-CN/docs/Web/HTML/Element/video#srcobject) 。这样媒体流就和页面中的 video 元素结合起来以便于呈现给用户。第二行代码简单启用了“挂断”按钮，用户可以使用它去断开呼叫。
+在第一行代码中，我们的`ontrack` 事件处理器获取传入的第媒体流数组中的第一个，并赋值给 video 元素的[`srcobject`](/zh-CN/docs/Web/HTML/Reference/Elements/video#srcobject) 。这样媒体流就和页面中的 video 元素结合起来以便于呈现给用户。第二行代码简单启用了“挂断”按钮，用户可以使用它去断开呼叫。
 
 ## 规范
 

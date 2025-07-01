@@ -12,7 +12,7 @@ l10n:
 
 ## 解説
 
-`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
+`aria-describedby` 属性は、オブジェクトを説明する要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を列挙します。これは、ウィジェットやグループとそれらを説明するテキストとの関係を確立するために使用します。
 
 `aria-describedby` 属性はあるフォームコントロールに限ったものではありません。ウィジェットや要素のグループ、見出しのある領域、定義などに静的テキストを関連付けるためにも使用することができます。 `aria-describedby` 属性は、意味づけされた HTML 要素や ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) を持つ要素で使用することができます。
 
@@ -20,9 +20,9 @@ l10n:
 
 `aria-describedby` によってリンクされた要素は表示されている必要はありません。要素が非表示であっても参照することは可能です。例えば、あるフォームコントロールは既定値では非表示の説明を持つことができ、「詳細情報」アイコンのような開示ウィジェットを使用してリクエストに応じて表示されます。視覚ユーザーはアイコンをクリックします。支援技術のユーザーは、 `aria-describedby` で直接そのフォームフィールドから説明を参照します。
 
-`aria-describedby` プロパティは、関連するコンテンツがプレーンテキストとして記述されている場合に適しています。コンテンツが大量のコンテンツ、有益な意味づけを含む場合、またはユーザーナビゲーションを必要とする複雑な構造を持つ場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を使用してください。 `aria-details` は、支援技術のユーザーが関連する構造化されたコンテンツにアクセスできるようにし、構造を理解しやすくしたり、情報を小分けにして使いやすくしたりする、追加のナビゲーションコマンドを提供します。
+`aria-describedby` プロパティは、関連するコンテンツがプレーンテキストとして記述されている場合に適しています。コンテンツが大量のコンテンツ、有益な意味づけを含む場合、またはユーザーナビゲーションを必要とする複雑な構造を持つ場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用してください。 `aria-details` は、支援技術のユーザーが関連する構造化されたコンテンツにアクセスできるようにし、構造を理解しやすくしたり、情報を小分けにして使いやすくしたりする、追加のナビゲーションコマンドを提供します。
 
-> **メモ:** `aria-describedby` のコンテンツは文字列のみであるべきです。コンテンツに重要な意味づけがある場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を使用することを検討してください。
+> **メモ:** `aria-describedby` のコンテンツは文字列のみであるべきです。コンテンツに重要な意味づけがある場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用することを検討してください。
 
 ## 例
 
@@ -51,6 +51,6 @@ l10n:
 
 - {{HTMLElement('label')}}
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-- [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
+- [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
 - [Browser and AT support for `aria-describedby`](https://a11ysupport.io/tech/aria/aria-describedby_attribute)
