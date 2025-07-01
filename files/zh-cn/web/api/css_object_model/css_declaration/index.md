@@ -24,7 +24,7 @@ CSS 声明具有以下相关属性：
 
 ## 基本示例
 
-以下示例展示了一个针对 {{htmlelement("Heading_Elements","&lt;h1&gt;")}} 元素的 CSS 规则，其中包含一个 [CSS 声明块](/zh-cn/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)。CSS 声明块位于大括号之间，包含两个 CSS 声明：一个用于 {{cssxref("font-style")}}，另一个用于 {{cssxref("color")}}。
+以下示例展示了一个针对 {{htmlelement("Heading_Elements","&lt;h1&gt;")}} 元素的 CSS 规则，其中包含一个 [CSS 声明块](/zh-CN/docs/Web/API/CSS_Object_Model/CSS_Declaration_Block)。CSS 声明块位于大括号之间，包含两个 CSS 声明：一个用于 {{cssxref("font-style")}}，另一个用于 {{cssxref("color")}}。
 
 ```css
 h1 {
@@ -36,4 +36,3 @@ h1 {
 ## 规范
 
 {{Specifications}}
-
