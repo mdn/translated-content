@@ -82,12 +82,12 @@ console.log(y); // 'Outer y'
 
 式は同期的に評価されます。初期化子式で（{{jsxref("Operators/await", "await")}} や {{jsxref("Operators/yield", "yield")}}）を使用することはできません。（初期化子式は暗黙に関数に包まれていると考えてください）。
 
-静的ブロックのスコープは、クラス本体の字句スコープの中で入れ子になり、構文エラーを発生させることなく、クラス内で宣言された[プライベート名](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)にアクセスすることができます。
+静的ブロックのスコープは、クラス本体の字句スコープの中で入れ子になり、構文エラーを発生させることなく、クラス内で宣言された[プライベート名](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)にアクセスすることができます。
 
 [静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/static)初期化子と静的初期化ブロックは、 1 つずつ評価されます。フィールド初期化子は、それより上のフィールド値を参照することはできますが、それより下のフィールド値を参照することはできません。静的メソッドはすべて事前に追加され、アクセスすることができますが、初期化されるフィールドより下のフィールドを参照している場合、呼び出すと期待した動作をしないことがあります。
 
 > [!NOTE]
-> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベート静的フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえそのプライベートフィールドが下で宣言されていたとしても、 {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 静的初期化ブロックはデコレーターを持つことができません（クラス自身は持つことができます）。
 

@@ -69,7 +69,7 @@ const Rectangle = class Rectangle2 {
   - : パブリックインスタンスフィールド
 - [`static`](/ja/docs/Web/JavaScript/Reference/Classes/static)
   - : パブリック静的メソッド、ゲッター、セッター、フィールド
-- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
   - : プライベートなものすべて
 
 > [!NOTE]
@@ -206,7 +206,7 @@ class Rectangle {
 
 プライベートフィールドは、フィールド宣言でのみ宣言できます。通常のプロパティのように、後から割り当てることで作成することはできません。
 
-詳細情報については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を参照してください。
+詳細情報については、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を参照してください。
 
 ### 継承
 
