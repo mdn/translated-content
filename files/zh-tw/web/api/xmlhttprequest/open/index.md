@@ -26,7 +26,7 @@ open(method, url, async, user, password)
 - `method`
   - : 要使用的 [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Methods)，例如 `"GET"`、`"POST"`、`"PUT"`、`"DELETE"` 等。對於非 HTTP(S) 的 URL 會被忽略。
 - `url`
-  - : 一個{{Glossary("stringifier", "字串化器")}}（包括 {{domxref("URL")}} 物件）的{{jsxref("String", "字串")}}或任何其他物件，提供要傳送請求的資源 URL。
+一個字串或任何具有{{Glossary("stringifier", "字串化器")}}的其他物件（包括一個 {{domxref("URL")}} 物件）提供了要傳送請求的資源的 URL。
 - `async` {{optional_inline}}
   - : 一個可選的布林參數，預設為 `true`，表示是否要非同步執行操作。如果此值為 `false`，`send()` 方法在收到回應前不會回傳。如果為 `true`，則會使用事件監聽器來提供完成交易的通知。如果 `multipart` 屬性為 `true`，此值*必須*為 `true`，否則將會拋出例外。
 
