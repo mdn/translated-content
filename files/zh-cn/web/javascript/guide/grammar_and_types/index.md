@@ -376,7 +376,8 @@ const myList = [, "home", , "school"];
 const myList = ["home", , "school", ,];
 ```
 
-> **备注：** [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
+> [!NOTE]
+> [尾后逗号](/zh-CN/docs/Web/JavaScript/Reference/Trailing_commas)在多行数组中能保持 git diff 整洁，因为向末尾添加元素只需要添加一行，而不需要修改前面的行。
 >
 > ```diff
 > const myList = [

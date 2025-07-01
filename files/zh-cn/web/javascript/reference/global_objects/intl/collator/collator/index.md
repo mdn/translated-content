@@ -37,7 +37,8 @@ Intl.Collator(locales)
 Intl.Collator(locales, options)
 ```
 
-> **备注：** `Intl.Collator()` 可以在使用或不适用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。两者均能创建一个新的 `Intl.Collator` 实例。
+> [!NOTE]
+> `Intl.Collator()` 可以在使用或不适用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 的情况下调用。两者均能创建一个新的 `Intl.Collator` 实例。
 
 ### 参数
 

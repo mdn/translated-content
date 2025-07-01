@@ -55,7 +55,7 @@ CSS를 사용해 공개 위젯의 스타일을 지정할 수 있으며, [`open`]
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `open`
   - : 이 불리언 특성은 세부 정보, 즉 `<details>` 요소의 내용이 현재 표시되는지 여부를 나타냅니다. 이 특성이 있으면 세부 정보가 표시되고, 없으면 감춰집니다. 기본적으로 이 특성은 표시되지 않으므로 세부 정보가 표시되지 않습니다.

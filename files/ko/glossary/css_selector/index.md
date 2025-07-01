@@ -35,7 +35,7 @@ div.warning {
 }
 ```
 
-이 선택자들은 `"p"` ({{HTMLElement("p")}} 요소 내부 텍스트에 녹색을 적용), `"div.warning"` ([class](/ko/docs/Web/HTML/Global_attributes/class) `"warning"`이 있는 모든 {{HTMLElement("div")}} 요소는 경고 상자처럼 보임) 및 `"#customized"` (ID가 `"customized"`인 요소의 기본 글꼴을 16픽셀 크기의 Lucida Grande 또는 몇 가지 대체 글꼴 중 하나로 설정) 입니다.
+이 선택자들은 `"p"` ({{HTMLElement("p")}} 요소 내부 텍스트에 녹색을 적용), `"div.warning"` ([class](/ko/docs/Web/HTML/Reference/Global_attributes/class) `"warning"`이 있는 모든 {{HTMLElement("div")}} 요소는 경고 상자처럼 보임) 및 `"#customized"` (ID가 `"customized"`인 요소의 기본 글꼴을 16픽셀 크기의 Lucida Grande 또는 몇 가지 대체 글꼴 중 하나로 설정) 입니다.
 
 그런 다음, 이 CSS를 다음과 같은 일부 HTML에 적용할 수 있습니다.
 

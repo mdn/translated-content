@@ -129,7 +129,8 @@ slug: Web/HTML/Reference/Attributes/rel
     > [!NOTE]
     > 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
-    > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
+    > [!NOTE]
+    > `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
 - `license`
   - : 在 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}}、 {{HTMLElement("link")}} 元素上有效，`license` 值表示该超链接指向描述许可信息的文件；当前文件的主要内容被引用文件描述的版权许可所覆盖。如果不在 {{HTMLElement("head")}} 元素内，标准并不区分适用于文档特定部分的超链接还是适用于整个文档的超链接。只有页面上的数据可以表明这一点。

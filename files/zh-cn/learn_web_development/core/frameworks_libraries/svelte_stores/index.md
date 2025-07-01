@@ -418,7 +418,8 @@ svelte 还提供了一种非常直观的将 store 集成到其响应式系统中
    <Todos bind:todos />
    ```
 
-   > **备注：** `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
+   > [!NOTE]
+   > `<Todos bind:todos />` 只是 `<Todos bind:todos={todos} />` 的简写形式。
 
 3. 返回到你的应用程序，尝试添加一些待办事项，然后转到开发者工具的 Web 控制台。你会看到，我们对待办事项进行的每个修改都会通过 `bind` 指令反映在 `App.svelte` 中定义的 `todos` 数组中。
 
@@ -572,6 +573,7 @@ Svelte 不会强制你以特定的方式组织状态管理；它只提供了工�
      };
    };
    ```
+
    - 我们的 `localStore` 是一个函数，当执行时，它会从 Web 存储中读取其内容，并返回带有三个方法的对象：`subscribe()`、`set()` 和 `update()`。
    - 当我们创建新的 `localStore` 时，我们需要指定 Web 存储的键和初始值。然后我们检查该值是否存在于 Web 存储中，如果不存在，则创建它。
    - 我们使用 [`localStorage.getItem(key)`](/zh-CN/docs/Web/API/Storage/getItem) 和 [`localStorage.setItem(key, value)`](/zh-CN/docs/Web/API/Storage/setItem) 方法来读取和写入 Web 存储中的信息，使用 [`toString()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/toString) 和 `toObj()`（使用 [`JSON.parse()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse)）辅助函数来转换值。

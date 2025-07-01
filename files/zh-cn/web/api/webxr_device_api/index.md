@@ -122,7 +122,8 @@ The Mozilla WebXR team has created a [WebXR API Emulator](https://blog.mozvr.com
 
 While somewhat awkward compared to using an actual headset, this makes it possible to experiment with and developer WebXR code on a desktop computer, where WebXR isn't normally available. It also lets you perform some basic testing before taking your code to a real device. Be aware, however, that the emulator does not yet completely emulate all of the WebXR API, so you may run into problems you're not expecting. Again, carefully read the readme file and make sure you're aware of the limitations before you begin.
 
-> **备注：** **Important:** You should _always_ test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are _not_ an adequate substitute for actual testing on physical devices.
+> [!NOTE]
+> **Important:** You should _always_ test your code on actual AR and/or VR hardware before releasing or shipping a product! Emulated, simulated, or polyfilled environments are _not_ an adequate substitute for actual testing on physical devices.
 
 Download the WebXR API Emulator for your supported browser below:
 

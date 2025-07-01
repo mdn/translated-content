@@ -19,7 +19,8 @@ cache.matchAll(request, { options }).then(function (response) {
 
 一个 {{jsxref("Promise")}}，resolve 为 {{domxref("Cache")}} 对象中所有匹配请求的数组。
 
-> **备注：** {{domxref("Cache.match()")}} 基本上与`Cache.matchAll()` 相同，除了它 resolve 为 `response[0]` (即第一个匹配响应) 而不是 `response` (数组中所有匹配的响应)。
+> [!NOTE]
+> {{domxref("Cache.match()")}} 基本上与`Cache.matchAll()` 相同，除了它 resolve 为 `response[0]` (即第一个匹配响应) 而不是 `response` (数组中所有匹配的响应)。
 
 ### 参数
 
