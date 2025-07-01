@@ -127,14 +127,14 @@ original_slug: Web/HTML/Element/article
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
 - 각각의 `<article>`을 식별할 수단이 필요합니다. 주로 제목({{htmlelement('h1')}}-{{htmlelement('h6')}}) 요소를 `<article>`의 자식으로 포함하는 방법을 사용합니다.
 - `<article>` 요소가 중첩되어 있을 때, 안쪽에 있는 요소는 바깥쪽에 있는 요소와 관련된 글을 나타냅니다. 예를 들어 블로그 글의 댓글은, 글을 나타내는 `<article>` 요소 안에 중첩한 `<article>`로 나타낼 수 있습니다.
 - `<article>` 요소의 작성자 정보를 {{HTMLElement("address")}} 요소를 이용하여 제공할 수 있습니다. 그러나 중첩 `<article>`에는 적용되지 않습니다.
-- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 [`datetime`](/ko/docs/Web/HTML/Element/time#datetime) 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 [`pubdate`](/ko/docs/Web/HTML/Element/time#pubdate) 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
+- `<article>` 요소의 작성일자와 시간은 {{HTMLElement("time")}} 요소의 [`datetime`](/ko/docs/Web/HTML/Reference/Elements/time#datetime) 속성을 이용하여 설명할 수 있습니다. 참고로 {{HTMLElement("time")}} 요소의 [`pubdate`](/ko/docs/Web/HTML/Reference/Elements/time#pubdate) 속성은 더 이상 {{glossary("W3C")}} {{glossary("HTML5")}} 표준안에 포함되지 않습니다.
 
 ## 예제
 

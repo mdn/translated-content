@@ -16,7 +16,6 @@ slug: Mozilla/Firefox/Releases/77
 - Firefox Developer Edition のインスペクターで、ページで使用している CSS プロパティをサポートするブラウザーを表示する [互換性パネル](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#compatibility-view) を提供します ([Firefox バグ 1625134](https://bugzil.la/1625134))。
 - デバッガーの [ツールバーに設定メニュー](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#toolbar) を追加しました。メニューの項目は (まだ) **JavaScript を無効化** だけです ([Firefox バグ 1630957](https://bugzil.la/1630957))。
 - [ネットワークモニターのツールバー](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/toolbar/index.html) に、ログデータを管理する **アクション** メニューを追加しました ([Firefox バグ 1459175](https://bugzil.la/1459175))。
-
   - **永続ログ**
   - **HAR ファイルのインポート**
   - **HAR 形式ですべて保存**

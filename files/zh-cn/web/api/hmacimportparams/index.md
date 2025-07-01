@@ -14,7 +14,6 @@ l10n:
 - `name`
   - : 一个字符串，应设置为 `HMAC`。
 - `hash`
-
   - : 表示要使用的[摘要函数](/zh-CN/docs/Web/API/SubtleCrypto/digest#支持的算法)的字符串。可以取值为 `SHA-256`、`SHA-384` 或 `SHA-512`。
 
     > [!WARNING]

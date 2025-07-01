@@ -32,11 +32,8 @@ li {
 该元素的属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `download`
-
   - : 导致浏览器将链接的 URL 视为下载资源。可以使用或不使用 `filename` 值：
-
     - 如果没有指定值，浏览器会从多个来源决定文件名和扩展名：
-
       - {{HTTPHeader("Content-Disposition")}} HTTP 标头。
       - URL [路径](/zh-CN/docs/Web/API/URL/pathname)的最后一段。
       - {{Glossary("MIME_type", "媒体类型")}}。来自 {{HTTPHeader("Content-Type")}} 标头，[`data:` URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的开头，或 [`blob:` URL](/zh-CN/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
@@ -48,14 +45,11 @@ li {
     > - `download` 只在[同源 URL](/zh-CN/docs/Web/Security/Same-origin_policy) 或 `blob:`、`data:` 协议起作用。
     > - 浏览器对待下载的方式因浏览器、用户设置和其他因素而异。在下载开始之前，可能会提示用户，或者自动保存文件，或者自动打开。自动打开要么在外部应用程序中，要么在浏览器本身中。
     > - 如果 `Content-Disposition` 标头的信息与 `download` 属性不同，产生的行为可能不同：
-    >
     >   - 如果文件头指定了一个 `filename`，它将优先于 `download` 属性中指定的文件名。
     >   - 如果标头指定了 `inline` 的处置方式，Chrome 和 Firefox 会优先考虑该属性并将其视为下载资源。旧的 Firefox 浏览器（版本 82 之前）优先考虑该标头，并将内联显示内容。
 
 - `href`
-
   - : 超链接所指向的 URL。链接不限于基于 HTTP 的 URL——它们可以使用浏览器支持的任何 URL 协议：
-
     - 使用文档片段链接到页面的某一段
     - 使用[文本片段](/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments)链接到某一段文字
     - 使用媒体片段链接到某个媒体文件
@@ -68,9 +62,7 @@ li {
 - `ping`
   - : 包含一个以空格分隔的 URL 列表，当跟随超链接时，浏览器会发送带有正文 `PING` 的 {{HTTPMethod("POST")}} 请求。通常用于跟踪。
 - `referrerpolicy`
-
   - : 在跟随链接时，[referrer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 需要发送多少内容：
-
     - `no-referrer`：{{HTTPHeader("Referer")}} 标头将不会被发送。
     - `no-referrer-when-downgrade`：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}），{{HTTPHeader("Referer")}} 头将不会被发送到{{Glossary("origin","源")}}上。
     - `origin`：发送的 referrer 将被限制在其页面的来源：[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
@@ -83,9 +75,7 @@ li {
 - `rel`
   - : 该属性指定了目标对象到链接对象的关系。
 - `target`
-
   - : 该属性指定在何处显示链接的 URL，作为*浏览上下文*的名称（标签、窗口或 {{HTMLElement("iframe")}}）。以下关键词对加载 URL 的位置有特殊含义：
-
     - `_self`：当前页面加载。（默认）
     - `_blank`：通常在新标签页打开，但用户可以通过配置选择在新窗口打开。
     - `_parent`：当前浏览环境的父级浏览上下文。如果没有父级框架，行为与 `_self` 相同。
@@ -100,7 +90,6 @@ li {
 ### 废弃的属性
 
 - `charset` {{Deprecated_Inline}}
-
   - : 此属性定义链接资源的{{Glossary("character encoding","字符编码")}}。
 
     > [!NOTE]
@@ -109,7 +98,6 @@ li {
 - `coords` {{Deprecated_Inline}}
   - : 与 [`shape` 属性](#shape)一同使用，以逗号分隔的坐标列表。
 - `name` {{Deprecated_Inline}}
-
   - : 在定义一个可能的目标位置时曾经是必需的。在 HTML 4.01 规范中，`<a>` 元素可以同时使用 `id` 和 `name`，只要它们有相同的值。
 
     > [!NOTE]
@@ -118,7 +106,6 @@ li {
 - `rev` {{Deprecated_Inline}}
   - : 指定一个反向链接；与 [`rel` 属性](#rel)作用相反。因为非常混乱而被废弃。
 - `shape` {{Deprecated_Inline}}
-
   - : 图像映射（image map）中超链接区域的形状。
 
     > [!NOTE]
@@ -173,7 +160,8 @@ a {
 
 {{EmbedLiveSample('链接到相同页面的元素上')}}
 
-> **备注：** [如 HTML 规范所定义](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)的那样，你可以使用 `href="#top"` 或空片段（`href="#"`）来链接到当前页面的顶部。
+> [!NOTE]
+> [如 HTML 规范所定义](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)的那样，你可以使用 `href="#top"` 或空片段（`href="#"`）来链接到当前页面的顶部。
 
 ### 链接到 email 地址
 

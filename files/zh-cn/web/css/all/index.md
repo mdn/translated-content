@@ -85,9 +85,7 @@ all: revert;
 - {{cssxref("unset")}}
   - : 该关键字代表如果该元素的属性的值是可继承的，则改变该元素或该元素的父元素的所有属性的值为他们父元素的属性值，反之则改变为初始值。
 - {{cssxref("revert")}}
-
   - : 指定依赖于声明所属的样式表来源的行为：
-
     - [用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)
       - : 相当于 `unset`
     - [用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)

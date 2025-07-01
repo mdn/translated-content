@@ -49,7 +49,6 @@ div.menu-bar li:hover > ul {
 ## Селекторы
 
 - Базовые селекторы
-
   - [По тегу](/ru/docs/Web/CSS/Type_selectors) `elementname`
   - [По классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
   - [По ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
@@ -57,14 +56,12 @@ div.menu-bar li:hover > ul {
   - [По атрибутам](/ru/docs/Web/CSS/Attribute_selectors) `[attr=value]`
 
 - Комбинационные
-
   - [смежный селектор](/ru/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - [следующего элемента](/ru/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [дочерних элементов](/ru/docs/Web/CSS/Child_combinator) `A > B`
   - [потомков](/ru/docs/Web/CSS/Descendant_combinator) `A B`
 
 - Псевдоэлементы [(больше информации)](/ru/docs/Web/CSS/Pseudo-elements)
-
   - {{ Cssxref("::after") }}
   - {{ Cssxref("::before") }}
   - {{ Cssxref("::first-letter") }}
@@ -77,7 +74,6 @@ div.menu-bar li:hover > ul {
   - {{ Cssxref("::grammar-error") }} {{experimental_inline}}
 
 - Псевдоклассы [(больше информации)](/ru/docs/Web/CSS/Pseudo-classes)
-
   - {{ Cssxref(":active") }}
   - {{ cssxref(':any')}}
   - {{ Cssxref(":checked") }}

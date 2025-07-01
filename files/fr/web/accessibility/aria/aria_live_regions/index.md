@@ -16,7 +16,6 @@ Le contenu dynamique qui s'actualise sans rechargement de la page est générale
 - aria-live&nbsp;:
   - : L'attribut `aria-live=VALEUR_POLITESSE` est utilisé pour définir la priorité avec laquelle le lecteur d'écran devrait traiter une mise à jour dans une zone «&nbsp;live&nbsp;» – les valeurs possibles sont&nbsp;: `off`/`polite`/`assertive`. La valeur par défaut est `off`. Cet attribut est de loin le plus important.
 - aria-controls&nbsp;:
-
   - : L'attribut `aria-controls=[LISTE_IDs]` est utilisé pour associer un contrôle avec les zones qu'il contrôle. Les zones sont identifiées comme un `ID` dans un élément {{ HTMLElement("div") }}, et plusieurs zones peuvent être associées à un unique contrôle, en séparant les identifiants des zones par un espace, par exemple&nbsp;: `aria-controls="maZoneID1 maZoneID2"`.
 
     > [!WARNING]

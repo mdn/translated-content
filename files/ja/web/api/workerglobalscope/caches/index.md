@@ -3,10 +3,10 @@ title: "WorkerGlobalScope: caches プロパティ"
 short-title: caches
 slug: Web/API/WorkerGlobalScope/caches
 l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+  sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}
+{{APIRef("Service Workers API")}}{{securecontext_header}}{{AvailableInWorkers("worker")}}
 
 **`caches`** は {{domxref("WorkerGlobalScope")}} インターフェイスの読み取り専用プロパティで、現在のコンテキストに関連付けられた {{domxref("CacheStorage")}} オブジェクトを返します。
 このオブジェクトにより、オフラインで利用できるように資産 (assets) を保存したり、リクエストに対するカスタムレスポンスを生成したりするなどの機能を使用できます。

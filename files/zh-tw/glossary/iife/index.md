@@ -68,6 +68,5 @@ Async function 版本，目前主要為了 top level await 而使用：
 
 - [IIFE](https://zh.wikipedia.org/wiki/立即调用函数表达式)（維基百科）
 - [術語表](/zh-TW/docs/Glossary)
-
   - {{Glossary("Function", "函式")}}
   - {{Glossary("Self-Executing Anonymous Function", "自執行匿名函式")}}

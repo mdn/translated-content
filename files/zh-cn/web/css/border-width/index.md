@@ -98,9 +98,7 @@ border-width: unset;
 ### 值
 
 - `<line-width>`
-
   - : 定义边框的宽度，可以是明确的非负数 {{cssxref("&lt;length&gt;")}} 或关键字。如果是关键字，则必须是以下值之一：
-
     - `thin`
     - `medium`
     - `thick`

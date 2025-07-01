@@ -31,9 +31,7 @@ browser.notifications.onShown.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当此事件发生时调用的函数。该函数传入此参数：
-
     - `notificationId`
       - : `string`。已显示的通知的 ID。
 

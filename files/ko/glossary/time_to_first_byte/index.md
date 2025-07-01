@@ -17,6 +17,6 @@ TTFB = responseStart - navigationStart
 
 ## 같이 보기
 
-- [일반적인 HTTP 세션](/ko/docs/Web/HTTP/Session)
+- [일반적인 HTTP 세션](/ko/docs/Web/HTTP/Guides/Session)
 - [PerformanceResourceTiming](/ko/docs/Web/API/PerformanceResourceTiming)
 - [PerformanceTiming](/ko/docs/Web/API/PerformanceTiming)

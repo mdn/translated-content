@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**금지된 응답 헤더 이름**은 프로그래밍 방식으로 수정할 수 없는 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)의 이름(`Set-Cookie`)입니다.
+**금지된 응답 헤더 이름**은 프로그래밍 방식으로 수정할 수 없는 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)의 이름(`Set-Cookie`)입니다.
 
 ## 같이 보기
 

@@ -26,7 +26,6 @@ Dans le dernier exemple, vous pouvez voir que les blocs _DIV #2_ et _DIV #4_ ne 
 Dans le contexte d'empilement, les blocs _DIV #1_ et _DIV #3_ sont simplement assimilés dans l'élément racine, et la hiérarchie résultante est la suivante&nbsp;:
 
 - Contexte d'empilement racine
-
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 

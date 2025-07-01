@@ -37,4 +37,4 @@ HTTP는 **요청 메서드**를 정의하여, 주어진 리소스에 수행하�
 
 ## 같이 보기
 
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)
