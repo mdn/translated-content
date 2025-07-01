@@ -303,6 +303,6 @@ slug: Web/JavaScript/Reference
 ## 추가 참고 페이지
 
 - [어휘 구문](/ko/docs/Web/JavaScript/Reference/Lexical_grammar)
-- [자료형과 자료 구조](/ko/docs/Web/JavaScript/Data_structures)
+- [자료형과 자료 구조](/ko/docs/Web/JavaScript/Guide/Data_structures)
 - [엄격 모드](/ko/docs/Web/JavaScript/Reference/Strict_mode)
 - [사라진 기능](/ko/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features)

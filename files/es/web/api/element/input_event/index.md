@@ -86,7 +86,6 @@ function updateValue(e) {
 - [InputEvent](/es/docs/Web/API/InputEvent)
 - {{domxref("GlobalEventHandlers.oninput")}}
 - Eventos relacionados
-
   - [`beforeinput`](/es/docs/Web/Reference/Events/beforeinput)
   - [`change`](/es/docs/Web/API/HTMLElement/change_event)
   - [`invalid`](/es/docs/Web/API/HTMLInputElement/invalid_event)

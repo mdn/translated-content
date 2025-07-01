@@ -96,7 +96,6 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 及 {{domxref("E
 ### 非標準方法
 
 - {{domxref("XMLHttpRequest.init()")}}
-
   - : 使用 C++ 程式時，用來初始化這個物件。
 
     > [!WARNING]

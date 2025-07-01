@@ -124,25 +124,21 @@ A propriedade `position` é definida com apenas uma palavra-chave da lista abaix
 - `static`
   - : O elemento é posicionado de acordo com o fluxo normal do documento. O {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, e {{cssxref("z-index")}} propriedades _não têm efeito._. Este é o valor padrão.
 - `relative`
-
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado _em relação a si mesmo_ com base nos valores de `top`, `right`, `bottom`, e `left`. O deslocamento não afeta a posição de nenhum outro elemento; assim, o espaço dado para o elemento no layout da página é o mesmo que se a posição fosse `static`.
 
     Este valor cria um novo [stacking context (contexto de empilhamento)](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não for `auto`. Seu efeito em `table-*-group`, `table-row`, `table-column`, `table-cell` e os elementos `table-caption` são indefinidos.
 
 - `absolute`
-
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele é posicionado em relação ao seu ancestral posicionado mais próximo, se houver; caso contrário, ele é colocado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block). Sua posição final é determinada pelos valores de `top`, `right`, `bottom`, e `left`.
 
     Este valor cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) quando o valor de `z-index` não é `auto`. As margens das caixas posicionadas absolutamente não [collapse](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing) com outras margens.
 
 - `fixed`
-
   - : O elemento é removido do fluxo normal de documentos e nenhum espaço é criado para o elemento no layout da página. Ele está posicionado em relação ao inicial [containing block](/pt-BR/docs/Web/CSS/Containing_Block) estabelecido pelo {{glossary("viewport")}}, exceto quando um de seus ancestrais tiver uma propriedade `transform`, `perspective` ou `filter` definida como algo diferente de `none` (see the [CSS Transforms Spec](https://www.w3.org/TR/css-transforms-1/#propdef-transform)), nesse caso, esse ancestral se comporta como o bloco que o contém. (Observe que há inconsistências no navegador com `perspective` e `filter` contribuindo para conter a formação do bloco.) Sua posição final é determinada pelos valores de `top`, `right`, `bottom` e `left`.
 
     Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Em documentos impressos, o elemento é colocado na mesma posição em _todas as páginas_.
 
 - `sticky`
-
   - : O elemento é posicionado de acordo com o fluxo normal do documento e, em seguida, deslocado em relação ao _ancestral de rolagem mais próximo_ e [containing block](/pt-BR/docs/Web/CSS/Containing_Block) (ancestral de nível de bloco mais próximo), incluindo elementos relacionados à tabela, com base nos valores de `top`, `right`, `bottom` e `left`. O deslocamento não afeta a posição de nenhum outro elemento.
 
     Este valor sempre cria um novo [stacking context](/pt-BR/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context). Observe que um elemento sticky "gruda" em seu ancestral mais próximo que possui um "mecanismo de rolagem" (criado quando `overflow` é `hidden`, `scroll`, `auto` ou `overlay`), mesmo que esse ancestral não seja o ancestral de rolagem mais próximo. Isso inibe efetivamente qualquer comportamento "pegajoso" (see the [Github issue on W3C CSSWG](https://github.com/w3c/csswg-drafts/issues/865)).

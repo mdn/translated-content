@@ -33,9 +33,7 @@ const sending = browser.tabs.sendMessage(
 - `message`
   - : `any`。可序列化的对象（参见[数据克隆算法](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#数据克隆算法)）。
 - `options` {{optional_inline}}
-
   - : `object`。
-
     - `frameId` {{optional_inline}}
       - : `integer`。将消息发送到指定的框架（frame），而不是标签页中的所有框架。内容脚本是否在所有框架中执行取决于 `manifest.json` 的 [`content_scripts`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) 部分中的 `all_frames` 设置。
 

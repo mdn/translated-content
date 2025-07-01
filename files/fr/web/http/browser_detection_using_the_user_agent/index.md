@@ -19,7 +19,6 @@ Lorsque vous cherchez à analyser le contenu de la chaîne de caractères de l'e
 - Êtes-vous en train d'essayer de corriger un bogue pour une version spécifique d'un navigateur&nbsp;?
   - : Recherchez ou demandez sur les forums spécialisés&nbsp;: vous n'êtes certainement pas la première ou le premier à rencontrer le problème. Des expertes, experts ou d'autres personnes avec un point de vue différent peuvent vous donner des idées pour contourner le problème. Si le bogue n'est pas fréquent, il peut être utile de vérifier s'il a déjà été signalé à l'éditeur du navigateur dans son système de suivi des bogues ([Mozilla](https://bugzilla.mozilla.org/), [WebKit](https://bugs.webkit.org/), [Opera](https://bugs.opera.com)). Les éditeurs sont attentifs aux bogues signalés, leur analyse du problème peut apporter un éclairage nouveau permettant de le contourner.
 - Cherchez-vous à vérifier l'existence d'une fonctionnalité particulière&nbsp;?
-
   - : Votre site a besoin d'une fonctionnalité qui n'est pas encore prise en charge par certains navigateurs et vous souhaitez servir à leurs utilisateurs une version plus ancienne du site, avec moins de fonctionnalités mais pour lesquelles vous avez la certitude de leur fonctionnement. Il s'agit de la pire raison pour utiliser l'en-tête `User-Agent`, car il y a de grandes chances que ces navigateurs finissent par rattraper leur retard, qu'il n'est pas pratique de tester tous les navigateurs qui existent. Dans ce cas, le mieux est d'éviter d'utiliser l'en-tête `User-Agent` et de détecter les fonctionnalités disponibles.
 
 - Voulez-vous servir un code HTML différent selon le navigateur utilisé&nbsp;?
@@ -93,7 +92,6 @@ Enfin, le code précédent illustre un problème critique avec le développement
 - Dégradation élégante
   - : Il s'agit d'une approche descendante, avec laquelle on construit le site avec toutes les fonctionnalités souhaitées, pour ensuite le faire fonctionner sur des navigateurs plus anciens. Cette technique est plus difficile et moins efficace que l'amélioration progressive mais s'avère utile dans certains cas.
 - Détection des appareils mobiles
-
   - : Un des cas les plus fréquents de mauvaise utilisation de la chaîne `userAgent` porte sur le caractère mobile ou non de l'appareil. La plupart du temps, cette méthode rapide occulte l'information réellement recherchée. L'analyse de la chaîne `userAgent` est utilisée pour déterminer si l'appareil peut être tactile et s'il a un petit écran, afin d'adapter le site web. Bien que cette méthode puisse détecter ces caractéristiques dans certains cas, tous les appareils ne se ressemblent pas&nbsp;: certains appareils mobiles ont des grands écrans, certains ordinateurs de bureau ont un petit écran tactile, d'autres encore sont des télévisions et les gens peuvent changer les dimensions de leur écran en tournant leur tablette sur le côté Heureusement, il existe de bien meilleures alternatives. On pourra utiliser [`Navigator.maxTouchPoints`](/fr/docs/Web/API/Navigator/maxTouchPoints) afin de déterminer si l'appareil possède un écran tactile et ensuite seulement se rabattre sur la vérification de la chaîne `userAgent` dans un bloc _if (!("maxTouchPoints" in navigator)) { /\*Code here\*/}_. En utilisant cette information sur la présence d'un écran tactile, il n'est pas nécessaire de changer toute la disposition du site pour ces appareils&nbsp;: cela ne fera qu'augmenter la charge de maintenance. À la place, vous pouvez ajouter de quoi rendre la navigation tactile plus accessible avec des boutons plus facilement cliquables par exemple (en utilisant CSS pour augmenter la taille de la police). Voici un exemple de code qui augmente le remplissage de #boutonExemple jusqu'à `1em` sur les appareils mobiles.
 
 ```js
@@ -149,7 +147,7 @@ function whenMediaChanges() {
 var listenToMediaQuery = isWebkit
   ? function (mQ, f) {
       if (/height|width/.test(mQ.media)) mqL.push([mQ, f]);
-      mQ.addListener(f), mQ.addListener(whenMediaChanges);
+      (mQ.addListener(f), mQ.addListener(whenMediaChanges));
     }
   : function () {};
 var destroyMediaQuery = isWebkit

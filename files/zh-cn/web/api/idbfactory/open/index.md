@@ -10,7 +10,6 @@ slug: Web/API/IDBFactory/open
 连接数据库在一个单独的线程中进行，包括以下几个步骤：
 
 1. 指定数据库已经存在时：
-
    - 等待 {{domxref("versionchange")}} 操作完成。
    - 如果数据库已计划删除，那等着删除完成。
 

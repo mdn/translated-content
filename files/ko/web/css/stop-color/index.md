@@ -30,7 +30,6 @@ stop-color: unset;
 ### 값
 
 - {{cssxref("color_value", "&lt;color>")}}
-
   - : 채우기 색상입니다. 이는 유효한 모든 CSS {{cssxref("color_value", "&lt;color>")}} 값에 사용될 수 있습니다.
 
 ## 형식 정의

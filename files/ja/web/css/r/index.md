@@ -31,11 +31,9 @@ r: unset;
 円の半径を定義する {{cssxref("length")}} と {{cssxref("percentage")}} の値です。
 
 - {{cssxref("length")}}
-
   - : 絶対的または相対的な長さで、 CSS の {{cssxref("&lt;length&gt;")}} データ型で許可されている任意の単位で表現することができます。負の値は無効です。
 
 - {{cssxref("percentage")}}
-
   - : 現在の SVG ビューポートの、 <math><mfrac><msqrt><mrow><msup><mi>&lt;width&gt;</mi><mn>2</mn></msup><mo>+</mo><msup><mi>&lt;height&gt;</mi><mn>2</mn></msup></mrow></msqrt><msqrt><mn>2</mn></msqrt></mfrac></math> で計算される正規化された対角線を参照するパーセント値です。
 
 ## 公式定義

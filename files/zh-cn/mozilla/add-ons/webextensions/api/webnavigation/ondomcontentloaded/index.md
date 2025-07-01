@@ -34,9 +34,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 ### 参数
 
 - `callback`
-
   - : 为当此事件发生时需要被调用的函数。该函数将传递以下参数：
-
     - `details`
       - : `object`。有关导航事件的详细信息。参见 [details](#details) 一节以获取更多信息。
 

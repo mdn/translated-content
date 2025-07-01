@@ -2,7 +2,7 @@
 title: Document：createTextNode() 方法
 slug: Web/API/Document/createTextNode
 l10n:
-  sourceCommit: f216422c99b6c7014e398803b70600501bce8a48
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{APIRef("DOM")}}
@@ -27,30 +27,28 @@ createTextNode(data)
 ## 範例
 
 ```html
-<!doctype html>
-<html lang="zh-TW">
-  <head>
-    <title>createTextNode 範例</title>
-    <script>
-      function addTextNode(text) {
-        const newText = document.createTextNode(text);
-        const p1 = document.getElementById("p1");
+<button>是！</button>
+<button>否！</button>
+<button>我們可以！</button>
 
-        p1.appendChild(newText);
-      }
-    </script>
-  </head>
+<hr />
 
-  <body>
-    <button onclick="addTextNode('是！');">是！</button>
-    <button onclick="addTextNode('否！');">否！</button>
-    <button onclick="addTextNode('我們可以！');">我們可以！</button>
+<p id="p1">段落的第一行。</p>
+```
 
-    <hr />
+```js
+function addTextNode(text) {
+  const newText = document.createTextNode(text);
+  const p1 = document.getElementById("p1");
 
-    <p id="p1">段落的第一行。</p>
-  </body>
-</html>
+  p1.appendChild(newText);
+}
+
+document.querySelectorAll("button").forEach((button) => {
+  button.addEventListener("click", (event) => {
+    addTextNode(`${event.target.textContent} `);
+  });
+});
 ```
 
 {{EmbedLiveSample('範例')}}

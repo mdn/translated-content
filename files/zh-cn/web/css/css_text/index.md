@@ -40,7 +40,6 @@ l10n:
 ### 指南
 
 - [文本换行与断字](/zh-CN/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
-
   - : 以下是关于如何在 CSS 中管理溢出文本的各种方式的指南。
 
 ## 相关概念

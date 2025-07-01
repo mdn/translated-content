@@ -22,9 +22,7 @@ let gettingIsShown = browser.pageAction.isShown(
 ### 参数
 
 - `details`
-
   - : `object`。包含要检查的 `tabId` 的对象。
-
     - `tabId`
       - : `integer`。要检查的标签页的 ID。
 

@@ -13,16 +13,15 @@ slug: Web/HTML/Reference/Elements/base
 
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-> **警告：** `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
+> [!WARNING]
+> `<base>` 元素必須具有 `href` 屬性、`target` 屬性或兩者都有。如果這些屬性中至少有一個被指定，則 `<base>` 元素**必須**出現在具有 URL 屬性值的其他元素之前，例如 {{HTMLElement("link")}} 的 `href` 屬性。
 
 - `href`
   - : 用於整個文件中相對 URL 的基礎 URL。
     允許絕對和相對 URL。
     不允許 [`data:`](/zh-TW/docs/Web/URI/Reference/Schemes/data) 和 `javascript:` URL。
 - `target`
-
   - : 顯示來自 {{HTMLElement("a")}}、{{HTMLElement("area")}} 或 {{HTMLElement("form")}} 元素的導航結果的**關鍵字**或**作者定義的名稱**的默認{{Glossary("browsing context", "瀏覽上下文")}}。以下關鍵字具有特殊含義：
-
     - `_self`（默認）：在當前瀏覽上下文中顯示結果。
     - `_blank`：在新的、未命名的瀏覽上下文中顯示結果。
     - `_parent`：如果當前頁面位於框架中，則在當前瀏覽上下文的父瀏覽上下文中顯示結果。如果沒有父瀏覽上下文，則與 `_self` 相同。

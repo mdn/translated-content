@@ -22,7 +22,7 @@ Reason: missing token 'xyz' in CORS header 'Access-Control-Allow-Headers' from C
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - 용어 사전: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)

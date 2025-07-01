@@ -10,7 +10,6 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
 ## Dans cet article
 
 - [Lignes directrices de haut niveau](#high-level_guidelines)
-
   - [N'utilisez pas de préprocesseurs](#dont_use_preprocessors)
   - [N'utilisez pas de méthodologies CSS spécifiques](#dont_use_specific_css_methodologies)
   - [Utiliser des unités flexibles/relatives](#use_flexiblerelative_units)
@@ -18,7 +17,6 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
   - [Planifiez votre CSS — évitez les surcharges](#plan_your_css_—_avoid_overriding)
 
 - [Style général de codage CSS](#general_css_coding_style)
-
   - [Utiliser une syntaxe étendue](#use_expanded_syntax)
   - [Privilégiez les règles longues aux règles raccourcies](#favor_longhand_rules_over_terse_shorthand)
   - [Utilisez des guillemets doubles autour des valeurs](#use_double_quotes_around_values)
@@ -27,12 +25,10 @@ Les directives suivantes couvrent la manière d'écrire les CSS pour les exemple
   - [Ne pas utiliser !important](#dont_use_!important)
 
 - [Points de syntaxe CSS spécifiques](#specific_css_syntax_points)
-
   - [Désactiver les bordures et autres propriétés](#turning_off_borders_and_other_properties)
   - [Utilisez des requêtes média "mobile first"](#use_mobile_first_media_queries)
 
 - [Sélecteurs](#selectors)
-
   - [N'utilisez pas de sélecteurs ID](#dont_use_id_selectors)
   - [Mettre les sélecteurs multiples sur des lignes séparées](#put_multiple_selectors_on_separate_lines)
 

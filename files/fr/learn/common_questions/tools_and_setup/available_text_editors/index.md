@@ -431,13 +431,11 @@ L'installation d'un éditeur de texte est généralement simple. La méthode var
 Lorsque vous installez un nouvel éditeur de texte, il est probable que votre système d'exploitation continue à ouvrir les fichiers texte avec l'éditeur par défaut pour chaque format si vous ne changez pas les _associations de fichiers_. Ces instructions vous aideront à modifier les associations sur chaque système d'exploitation. De cette façon, vous pourrez ouvrir les fichiers dans votre éditeur de texte favori en double-cliquant sur les fichiers :
 
 - Windows
-
   - [Windows 8](https://windows.microsoft.com/fr-fr/windows-8/choose-programs-windows-uses-default)
   - [Windows 7](https://windows.microsoft.com/fr-fr/windows/change-default-programs#1TC=windows-7)
 
 - [Mac OS X](http://www.youtips.com/fr/mac/changer-lapplication-par-defaut/)
 - Linux
-
   - [Ubuntu Unity](http://doc.ubuntu-fr.org/changer_l_association_par_defaut_des_fichiers_avec_les_applications)
   - [GNOME](http://www.generation-linux.fr/index.php?post/2008/02/10/59-associations-de-fichier-dans-gnome)
   - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_.C3.A0_la_vol.C3.A9e-)

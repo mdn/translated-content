@@ -21,9 +21,7 @@ Comme tous les autres éléments HTML, cet élément inclut [les attributs unive
 - `type` {{deprecated_inline}}
   - : Cet attribut est uniquement utilisé si l'attribut `valuetype` vaut `"ref"`. Il définit le type MIME des valeurs trouvées à l'URI.
 - `valuetype` {{deprecated_inline}}
-
   - : Cet attribut définit le type de la valeur indiquée par l'attribut `value`. Les valeurs possibles sont :
-
     - `data` : la valeur par défaut. La valeur est passée sous la forme d'une chaîne de caractères.
     - `ref` : la valeur est une URI vers une ressource où sont stockées les valeurs de l'exécution.
     - `object` : l'identifiant d'un autre élément {{HTMLElement("object")}} dans le document.

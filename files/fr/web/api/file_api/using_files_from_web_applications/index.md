@@ -349,7 +349,6 @@ Si l'objet [`FileList`](/fr/docs/Web/API/FileList) passé à `handleFiles()` vau
 1. On crée un nouvel élément de liste non-ordonnée [`<ul>`](/fr/docs/Web/HTML/Element/ul).
 2. Cette nouvelle liste est insérée dans le bloc [`<div>`](/fr/docs/Web/HTML/Element/div) à l'aide de sa méthode [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild).
 3. Pour chaque fichier ([`File`](/fr/docs/Web/API/File)) dans la liste ([`FileList`](/fr/docs/Web/API/FileList)) représentée par `files`&nbsp;:
-
    1. On crée un nouvel élément [`<li>`](/fr/docs/Web/HTML/Element/li) qu'on insère dans la liste.
    2. On crée un nouvel élément [`<img>`](/fr/docs/Web/HTML/Element/img).
    3. On définit la source de l'image afin d'utiliser la nouvelle URL d'objet représentant le fichier grâce à [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).

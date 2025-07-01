@@ -30,7 +30,7 @@ Access-Control-Allow-Origin: null
 ## 지시자
 
 - `*`
-  - : *credential*이 없는 요청들에 와일드카드로써 문자 값 "\*"이 명시될 수 있습니다. 이 값은 브라우저에 리소스에 접근하는 임의의 origin으로부터의 요청 코드를 허용함을 알립니다. 와일드카드를 credential과 함께 사용하려고 하면 [오류가 발생](/ko/docs/Web/HTTP/CORS/Errors/CORSNotSupportingCredentials)합니다.
+  - : *credential*이 없는 요청들에 와일드카드로써 문자 값 "\*"이 명시될 수 있습니다. 이 값은 브라우저에 리소스에 접근하는 임의의 origin으로부터의 요청 코드를 허용함을 알립니다. 와일드카드를 credential과 함께 사용하려고 하면 [오류가 발생](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials)합니다.
 - `<origin>`
   - : origin을 명시합니다. 하나의 origin만 명시될 수 있습니다.
 

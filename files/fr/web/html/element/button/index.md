@@ -59,7 +59,6 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 - `autocomplete` {{non-standard_inline}}
   - : Pour l'élément `<button>`, cet attribut, propre à Firefox, n'est pas standard. Par défaut et à la différence des autres navigateurs, [Firefox conserve l'état de désactivation](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un {{HTMLElement("button")}} au fur et à mesure des chargements d'une page. Utiliser cet attribut avec la valeur `off` (i.e. `autocomplete="off"`) désactive cette fonctionnalité (cf. [bug 654072](https://bugzilla.mozilla.org/show_bug.cgi?id=654072) pour plus d'informations).
 - `disabled`
-
   - : Cet attribut booléen empêche l'utilisateur d'interagir avec le bouton&nbsp;: il ne peut pas être pressé ou ciblé.
 
     Firefox, contrairement aux autres navigateurs, [persiste l'état désactivé dynamique](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) d'un `<bouton>` à travers les chargements de page. Utilisez l'attribut [`autocomplete`](#attr-autocomplete) pour contrôler cette fonctionnalité.
@@ -69,9 +68,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
 - `formaction`
   - : L'URL qui traite les informations soumises par le bouton. Remplace l'attribut [`action`](/fr/docs/Web/HTML/Element/form#attr-action) du formulaire rattaché au bouton. Il ne fait rien s'il n'y a pas de formulaire rattaché.
 - `formenctype`
-
   - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut définit le [type MIME](https://fr.wikipedia.org/wiki/Type_MIME) qui sera utilisée pour encoder les données envoyées au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
-
     - `application/x-www-form-urlencoded`&nbsp;: La valeur par défaut.
     - `multipart/form-data`&nbsp;: Utilisé pour soumettre des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) dont les attributs [`type`](/fr/docs/Web/HTML/Element/input#attr-type) sont définis sur `file`.
     - `text/plain`&nbsp;: Spécifié comme une aide au débogage&nbsp;; ne doit pas être utilisé pour la soumission réelle du formulaire.
@@ -79,9 +76,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
     Si cet attribut est spécifié, il remplace l'attribut [`enctype`](/fr/docs/Web/HTML/Element/form#attr-enctype) du formulaire rattaché au bouton.
 
 - `formmethod`
-
   - : Lorsque l'attribut **`type`** possède la valeur `submit` (explicitement ou comme valeur par défaut), cet attribut définit la [méthode HTTP](/fr/docs/Web/HTTP/Methods) qui sera utilisée pour envoyer les données au serveur. C'est un attribut à valeur contrainte qui peut prendre les valeurs suivantes&nbsp;:
-
     - `post`&nbsp;: Les données du formulaire sont incluses dans le corps de la requête HTTP lorsqu'elles sont envoyées au serveur. À utiliser lorsque le formulaire contient des informations qui ne devraient pas être publiques, comme les identifiants de connexion.
     - `get`&nbsp;: Les données du formulaire sont ajoutées à l'URL `action` du formulaire, avec un `?` comme séparateur, et l'URL résultante est envoyée au serveur. Utilisez cette méthode lorsque le formulaire [n'a pas d'effets secondaires](/fr/docs/Glossary/Idempotent), comme les formulaires de recherche.
     - `dialog`&nbsp;: Cette méthode permet d'indiquer que le bouton ferme [l'élément `<dialog>`](/fr/docs/Web/HTML/Element/dialog) auquel il est associé, et n'envoie pas de données du formulaire.
@@ -89,28 +84,22 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
     S'il est spécifié, cet attribut remplace l'attribut [`method`](/fr/docs/Web/HTML/Element/form#attr-method) du formulaire rattaché au bouton.
 
 - `formnovalidate`
-
   - : Si le bouton est un bouton de soumission (`type` non défini ou défini avec la valeur `"submit"`), cet attribut booléen spécifie que le formulaire ne doit pas être [validé](/fr/docs/Learn/Forms/Form_validation) lorsqu'il est soumis. Si cet attribut est spécifié, il remplace l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#attr-novalidate) du formulaire rattaché au bouton. Cet attribut est également disponible sur les éléments [`<input type="image">`](/fr/docs/Web/HTML/Element/input/image) et [`<input type="submit">`](/fr/docs/Web/HTML/Element/input/submit).
 
 - `formtarget`
-
   - : Lorsque l'attribut **`type`** possède la valeur `submit`, cet attribut indique le contexte de navigation (onglet, fenêtre, frame) associé avec le formulaire, sa cible. Outre un attribut **`id`** valide du document, il peut prendre l'une de ces valeurs particulières:
-
     - `_self`&nbsp;: Charge la réponse dans le même contexte de navigation que le contexte actuel. Il s'agit de la valeur par défaut si l'attribut n'est pas spécifié.
     - `_blank`&nbsp;: Charge la réponse dans un nouveau contexte de navigation sans nom — généralement un nouvel onglet ou une nouvelle fenêtre, selon les paramètres du navigateur de l'utilisateur.
     - `_parent`&nbsp;: Charge la réponse dans le contexte de navigation parent de celui en cours. S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
     - `_top`&nbsp;: Charge la réponse dans le contexte de navigation de niveau supérieur (c'est-à-dire le contexte de navigation qui est un ancêtre du contexte actuel, et qui n'a pas de parent). S'il n'y a pas de parent, cette option se comporte de la même manière que `_self`.
 
 - `name`
-
   - : Le nom du bouton, soumis en tant que paire avec la valeur (`value`) du bouton comme partie des données du formulaire.
 
 - `popovertarget`
-
   - : Transforme un `<button>` en un élément de contrôle d'un <i lang="en">popover</i>&nbsp;; il prend comme valeur l'`id` de l'élément <i lang="en">popover</i> à contrôler. Voir la page sur [l'API Popover](/fr/docs/Web/API/Popover_API) pour plus de détails.
 
 - `popovertargetaction`
-
   - : Définit l'action à effectuer sur l'élément <i lang="en">popover</i> cible lorsqu'un bouton est activé. Les valeurs possibles sont&nbsp;:
     - `"hide"`
       - : Le bouton masquera l'élément <i lang="en">popover</i> cible. Si l'élément <i lang="en">popover</i> cible est déjà masqué, rien ne se passera.
@@ -120,9 +109,7 @@ Cet élément peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_
       - : Le bouton affichera l'élément <i lang="en">popover</i> cible s'il est masqué, ou le masquera s'il est affiché. Si `popovertargetaction` n'est pas défini, le bouton se comportera comme s'il avait la valeur `"toggle"`.
 
 - `type`
-
   - : Le comportement par défaut du bouton. Les valeurs possibles sont&nbsp;:
-
     - `submit`&nbsp;: Le bouton soumet les données du formulaire au serveur. C'est la valeur par défaut si l'attribut n'est pas spécifié pour les boutons associés à un `<form>`, ou si l'attribut est une valeur vide ou invalide.
     - `reset`&nbsp;: Le bouton réinitialise tous les contrôles à leur valeur initiale, comme [`<input type="reset">`](/fr/docs/Web/HTML/Element/input/reset). (Ce comportement a tendance à agacer les utilisateurs).
     - `button`&nbsp;: Le bouton n'a pas de comportement par défaut et ne fait rien lorsqu'il est pressé par défaut. Les scripts côté client peuvent écouter les événements de l'élément, qui sont déclenchés lorsque les événements se produisent.
