@@ -13,4 +13,4 @@ MDN のコンテキストでは、"\<locale>/docs/" に続く URL の部分で�
 
 ## 関連情報
 
-- [スラッグ](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0)
+- [執筆スタイルガイド](/ja/docs/MDN/Writing_guidelines/Writing_style_guide#%E3%82%B9%E3%83%A9%E3%83%83%E3%82%B0)
