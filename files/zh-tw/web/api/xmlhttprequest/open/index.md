@@ -53,4 +53,4 @@ open(method, url, async, user, password)
 ## 參見
 
 - [使用 XMLHttpRequest](/zh-TW/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- 相關的 {{domxref("XMLHttpRequest")}} 方法：{{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}}、{{domxref("XMLHttpRequest.send", "send()")}} 及{{domxref("XMLHttpRequest.abort", "abort()")}}
+- 相關的 {{domxref("XMLHttpRequest")}} 方法：{{domxref("XMLHttpRequest.setRequestHeader","setRequestHeader()")}}、{{domxref("XMLHttpRequest.send", "send()")}} 及 {{domxref("XMLHttpRequest.abort", "abort()")}}
