@@ -2,7 +2,7 @@
 title: 屬性
 slug: Glossary/Attribute
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 636b90011532e3fd2cf9333aaf1754fdc8de7938
 ---
 
 {{GlossarySidebar}}
@@ -15,37 +15,19 @@ l10n:
 
 ## 屬性的反射
 
-屬性可能會被**反射**到一個指定的介面中的屬性，意味著屬性的值可以通過介面屬性來讀取，也能通過設定介面屬性的值來修改屬性的值。
+屬性可能會被*反射*到一個指定的介面中的特定屬性。這意味著屬性的值可以透過對應介面上的屬性，直接在 JavaScript 中讀取或寫入，反之亦然。相較於使用 {{domxref("Element")}} 介面的 {{domxref("Element.getAttribute()","getAttribute()")}} 和 {{domxref("Element.setAttribute()","setAttribute()")}} 方法來取得和設定屬性，反射屬性提供了一種更自然的程式設計方法。
 
-例如，`placeholder` 就被反射到了 {{domxref("HTMLInputElement.placeholder")}}。
-
-考慮如下的 HTML：
-
-```html
-<input placeholder="Original placeholder" />
-```
-
-我們可以檢查 {{domxref("HTMLInputElement.placeholder")}} 與屬性之間的反射：
-
-```js
-const input = document.querySelector("input");
-const attr = input.getAttributeNode("placeholder");
-console.log(attr.value);
-console.log(input.placeholder); // 輸出與 `attr.value` 一樣的結果
-
-// 修改 placeholder 的值也會修改反射的屬性值。
-input.placeholder = "Modified placeholder";
-console.log(attr.value); // 打印 `Modified placeholder`
-```
+更多資訊請參見[屬性反射](/zh-TW/docs/Web/API/Document_Object_Model/Reflected_attributes)。
 
 ## 參見
 
 - [HTML 屬性參考](/zh-TW/docs/Web/HTML/Reference/Attributes)
+- [屬性反射](/zh-TW/docs/Web/API/Document_Object_Model/Reflected_attributes)
 - HTML 的[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)相關資訊。
-- [W3C XML 推薦標準](https://www.w3.org/TR/xml#sec-starttags)中的 XML 開始標籤屬性推薦
+- [W3C XML 推薦標準](https://www.w3.org/TR/xml/#sec-starttags)中的 XML 開始標籤屬性推薦
 - 相關術語：
-  - {{Glossary("Element")}}
-  - {{Glossary("Tag")}}
+  - {{Glossary("Element", "元素")}}
+  - {{Glossary("Tag", "標籤")}}
   - {{Glossary("HTML")}}
   - {{Glossary("XML")}}
   - {{Glossary("Boolean/HTML", "布林屬性")}}

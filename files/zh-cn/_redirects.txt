@@ -2150,6 +2150,7 @@
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading	/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs
 /zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos	/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /zh-CN/docs/Web/API/WebSocket/onclose	/zh-CN/docs/Web/API/WebSocket/close_event
 /zh-CN/docs/Web/API/WebSocket/onerror	/zh-CN/docs/Web/API/WebSocket/error_event
@@ -3434,7 +3435,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
 /zh-CN/docs/Web/JavaScript/Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Web/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 /zh-CN/docs/Web/JavaScript/Reference/Date/getDate	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate

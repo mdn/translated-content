@@ -1,15 +1,18 @@
 ---
-title: 私有属性
-slug: Web/JavaScript/Reference/Classes/Private_properties
+title: 私有元素
+slug: Web/JavaScript/Reference/Classes/Private_elements
 l10n:
   sourceCommit: 3ae834dd1eaba420c78d36c903bf178cdd5fbb7a
 ---
 
 {{JsSidebar("Classes")}}
 
-**私有属性**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有属性通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身强制执行。
+**私有元素**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有元素通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身强制执行。
 
-在这种语法出现之前，JavaScript 语言本身并没有原生支持私有属性。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures#用闭包模拟私有方法)的方式来模拟私有属性的行为，但就易用性而言，它们无法与 `#` 语法相提并论。
+在这种语法出现之前，JavaScript 语言本身并没有原生支持私有元素。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures#用闭包模拟私有方法)的方式来模拟私有元素的行为，但就易用性而言，它们无法与 `#` 语法相提并论。
+
+> [!NOTE]
+> 在 MDN 中，我们避免使用术语“私有属性”。JavaScript 中的[属性](/zh-CN/docs/Glossary/Property/JavaScript)以字符串或符号为键，且具有 `writable`、`enumerable` 和 `configurable` 等特性（attribute），而私有元素则不具有这些特性。虽然私有元素使用熟悉的点表示法来访问，但它们不能被[代理](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)、枚举、删除或使用任何 {{jsxref("Object")}} 方法进行交互。
 
 ## 语法
 
@@ -33,12 +36,12 @@ class ClassWithPrivate {
 
 还有一些额外的语法限制：
 
-- 类中所有声明的私有标识符都必须是唯一的，并且命名空间在静态属性和实例属性之间是共享的。唯一的例外是：两个声明定义了 getter-setter 对。
+- 类中所有声明的私有标识符都必须是唯一的，并且命名空间在静态元素和实例元素之间是共享的。唯一的例外是：两个声明定义了 getter-setter 对。
 - 私有描述符不能是 `#constructor`。
 
 ## 描述
 
-大多数类属性都有其对应的私有项：
+大多数类元素都有其对应的私有项：
 
 - 私有字段
 - 私有方法
@@ -49,11 +52,11 @@ class ClassWithPrivate {
 - 私有静态 getter
 - 私有静态 setter
 
-这些特性统称为*私有属性*。然而，JavaScript 中[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)不能是私有的。为了防止在类之外构造类，你必须使用[私有标志](#模拟私有构造函数)。
+这些特性统称为*私有元素*。然而，JavaScript 中[构造函数](/zh-CN/docs/Web/JavaScript/Reference/Classes/constructor)不能是私有的。为了防止在类之外构造类，你必须使用[私有标志](#模拟私有构造函数)。
 
-私有属性通过“**#名称**”（“#”读作“hash”）来声明，它们是以 `#` 前缀开头的标识符。这个 `#` 前缀是属性名称的固有部分，你可以将其与旧的下划线前缀约定 `_privateField` 进行类比，但它不是普通的字符串属性，因此无法使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)动态访问它。
+私有元素通过“**#名称**”（“#”读作“hash”）来声明，它们是以 `#` 前缀开头的标识符。这个 `#` 前缀是属性名称的固有部分，你可以将其与旧的下划线前缀约定 `_privateField` 进行类比，但它不是普通的字符串属性，因此无法使用[方括号表示法](/zh-CN/docs/Web/JavaScript/Reference/Operators/Property_accessors#方括号表示法)动态访问它。
 
-在类外部引用 `#` 名称、引用未在类内部声明的私有属性，或尝试使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 移除声明的属性都会抛出语法错误。
+在类外部引用 `#` 名称、引用未在类内部声明的私有元素，或尝试使用 [`delete`](/zh-CN/docs/Web/JavaScript/Reference/Operators/delete) 移除声明的元素都会抛出语法错误。
 
 ```js-nolint example-bad
 class ClassWithPrivateField {
@@ -72,9 +75,9 @@ instance.#privateField; // Syntax error
 JavaScript 作为动态语言，能够在编译时检查 `#` 标识符的语法，使其与普通属性的语法不同。
 
 > [!NOTE]
-> Chrome 控制台中运行的代码可以访问类的私有属性。这是 JavaScript 语法限制对开发者工具的一种放宽。
+> Chrome 控制台中运行的代码可以访问类的私有元素。这是 JavaScript 语法限制对开发者工具的一种放宽。
 
-如果你访问对象中不存在的私有属性，会抛出 {{jsxref("TypeError")}} 错误，而不是像普通属性一样返回 `undefined`。
+如果你访问对象中不存在的私有元素，会抛出 {{jsxref("TypeError")}} 错误，而不是像普通属性一样返回 `undefined`。
 
 ```js example-bad
 class C {
@@ -89,9 +92,9 @@ console.log(C.getX(new C())); // undefined
 console.log(C.getX({})); // TypeError: Cannot read private member #x from an object whose class did not declare it
 ```
 
-这个示例也演示了你可以在静态函数中以及在外部定义的类的实例上访问私有属性。
+这个示例也演示了你可以在静态函数中以及在外部定义的类的实例上访问私有元素。
 
-你也可以使用 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 运算符来检查一个外部定义的对象是否拥有一个私有属性。如果对应的私有字段或私有方法存在，则返回 `true`，否则返回 `false`。
+你也可以使用 [`in`](/zh-CN/docs/Web/JavaScript/Reference/Operators/in) 运算符来检查一个外部定义的对象是否拥有一个私有元素。如果对应的私有字段或私有方法存在，则返回 `true`，否则返回 `false`。
 
 ```js example-good
 class C {
@@ -111,9 +114,9 @@ console.log(C.getX(new C(new Date()))); // 当前的日期和时间
 console.log(C.getX({})); // "obj 必须是 C 的实例"
 ```
 
-请注意，私有名称始终需要提前声明并且不可删除：如果你发现一个对象具有当前类的一个私有属性（无论是通过 `try...catch` 还是 `in` 检查），那么它一定具有其他所有的私有属性。通常情况下，一个对象具有一个类的私有属性意味着它是由该类构造的（尽管[并非总是如此](#返回重写对象)）。
+请注意，私有名称始终需要提前声明并且不可删除：如果你发现一个对象具有当前类的一个私有元素（无论是通过 `try...catch` 还是 `in` 检查），那么它一定具有其他所有的私有元素。通常情况下，一个对象具有一个类的私有元素意味着它是由该类构造的（尽管[并非总是如此](#返回重写对象)）。
 
-私有属性不是[原型继承](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有属性名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类本身管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有属性没有影响。
+私有元素不是[原型继承](/zh-CN/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)模型的一部分，因为它们只能在当前类内部被访问，而且不能被子类继承。不同类的私有元素名称之间没有任何交互。它们是附加在每个实例上的外部元数据，由类本身管理。因此，{{jsxref("Object.freeze()")}} 和 {{jsxref("Object.seal()")}} 对私有元素没有影响。
 
 关于如何以及何时初始化私有字段的更多信息，请参阅[公有类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)。
 
@@ -180,7 +183,7 @@ console.log(obj); // 在一些开发工具中会显示：{#stamp: 42}
 console.log(Stamper.getStamp(obj)); // 42
 console.log(obj instanceof Stamper); // false
 
-// 你无法将私有属性附加到同一个对象两次
+// 你无法将私有元素附加到同一个对象两次
 new Stamper(obj); // Error: Initializing an object twice is an error with private fields
 ```
 

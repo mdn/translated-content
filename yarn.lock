@@ -968,10 +968,10 @@ picomatch@^2.3.1:
   resolved "https://registry.yarnpkg.com/picomatch/-/picomatch-2.3.1.tgz#3ba3833733646d9d3e4995946c1365a67fb07a42"
   integrity sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==
 
-prettier@3.6.1:
-  version "3.6.1"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.1.tgz#cc3bce21c09a477b1e987b76ce9663925d86ae44"
-  integrity sha512-5xGWRa90Sp2+x1dQtNpIpeOQpTDBs9cZDmA/qs2vDNN2i18PdapqY7CmBeyLlMuGqXJRIOPaCaVZTLNQRWUH/A==
+prettier@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.2.tgz#ccda02a1003ebbb2bfda6f83a074978f608b9393"
+  integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
 
 punycode.js@^2.3.1:
   version "2.3.1"

@@ -14,60 +14,64 @@ Les attributs ARIA permettent de modifier les états et les propriétés d'un é
 
 Il existe 4 catégories d'états et de propriétés ARIA&nbsp;:
 
-1. ### Attributs de widgets
-   - [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
-   - [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
-   - [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
-   - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
-   - [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
-   - [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-   - [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
-   - [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label)
-   - [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-level)
-   - [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-   - [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
-   - [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
-   - [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
-   - [`aria-placeholder`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
-   - [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
-   - [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
-   - [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
-   - [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-   - [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
-   - [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
-   - [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
-   - [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
-   - [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+### Attributs de widgets
 
-2. ### Attributs de régions dynamiques
-   - [`aria-busy`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
-   - [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
-   - [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
-   - [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+- [`aria-autocomplete`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-autocomplete)
+- [`aria-checked`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-checked)
+- [`aria-disabled`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-disabled)
+- [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-expanded`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-haspopup`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup)
+- [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
+- [`aria-invalid`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-invalid)
+- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label)
+- [`aria-level`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-level)
+- [`aria-modal`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
+- [`aria-multiline`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-multiline)
+- [`aria-multiselectable`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable)
+- [`aria-orientation`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-orientation)
+- [`aria-placeholder`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder)
+- [`aria-pressed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+- [`aria-readonly`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-readonly)
+- [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required)
+- [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-sort`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-sort)
+- [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuenow`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow)
+- [`aria-valuetext`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
 
-3. ### Attributs de glisser-déposer
-   - [`aria-dropeffect`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+### Attributs de régions dynamiques
 
-4. ### Attributs de relation
-   - [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
-   - [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
-   - [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
-   - [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
-   - [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
-   - [`aria-description`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description)
-   - [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-details)
-   - [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
-   - [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
-   - [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
-   - [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
-   - [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-   - [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
-   - [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
-   - [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
-   - [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
+- [`aria-busy`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-busy)
+- [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live)
+- [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+- [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic)
+
+### Attributs de glisser-déposer
+
+- [`aria-dropeffect`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
+- [`aria-grabbed`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-grabbed)
+
+### Attributs de relation
+
+- [`aria-activedescendant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-activedescendant)
+- [`aria-colcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colcount)
+- [`aria-colindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colindex)
+- [`aria-colspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-colspan)
+- [`aria-controls`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-controls)
+- [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby)
+- [`aria-description`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-description)
+- [`aria-details`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-details)
+- [`aria-errormessage`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-errormessage)
+- [`aria-flowto`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-flowto)
+- [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby)
+- [`aria-owns`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-owns)
+- [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
+- [`aria-rowcount`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount)
+- [`aria-rowindex`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex)
+- [`aria-rowspan`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan)
+- [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
 
 ## Attributs ARIA universels
 
@@ -109,11 +113,3 @@ Les pages suivantes sont les pages de référence qui couvrent les états et pro
 ## Voir aussi
 
 - [Utiliser ARIA&nbsp;: rôles, états et propriétés](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques)
-
-<section id="Quick_links">
-
-1. [**Attributs WAI-ARIA**](/fr/docs/Web/Accessibility/ARIA/Attributes)
-
-   {{ListSubpagesForSidebar("/fr/docs/Web/Accessibility/ARIA/Attributes")}}
-
-</section>

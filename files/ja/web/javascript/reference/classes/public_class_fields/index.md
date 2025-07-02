@@ -143,7 +143,7 @@ console.log(instance.b); // undefined
 ```
 
 > [!NOTE]
-> これは[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
+> これは[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)ではより重要です。初期化されていないプライベートフィールドにアクセスすると、たとえプライベートフィールドが下記で宣言されていても {{jsxref("TypeError")}} が発生するからです。（プライベートフィールドが宣言されていない場合は、早期に {{jsxref("SyntaxError")}} となります。）
 
 クラスフィールドは [`[[DefineOwnProperty]]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy/Proxy/defineProperty) の意味づけ（本質的には {{jsxref("Object.defineProperty()")}}）を使用して追加されるため、派生クラスのフィールド宣言は基底クラスのセッターを呼び出すことはありません。この動作は、コンストラクターで `this.field = …` を使用するのとは異なります。
 
