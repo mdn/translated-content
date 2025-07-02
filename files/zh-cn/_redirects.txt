@@ -3743,7 +3743,7 @@
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content	/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 /zh-CN/docs/Web/SVG/Attribute	/zh-CN/docs/Web/SVG/Reference/Attribute
-/zh-CN/docs/Web/SVG/Attribute/From	/zh-CN/docs/Web/SVG/Reference/Attribute/From
+/zh-CN/docs/Web/SVG/Attribute/From	/zh-CN/docs/Web/SVG/Reference/Attribute/from
 /zh-CN/docs/Web/SVG/Attribute/Styling	/zh-CN/docs/Web/SVG/Reference/Attribute
 /zh-CN/docs/Web/SVG/Attribute/accent-height	/zh-CN/docs/Web/SVG/Reference/Attribute
 /zh-CN/docs/Web/SVG/Attribute/accumulate	/zh-CN/docs/Web/SVG/Reference/Attribute/accumulate
