@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSImportRule")}} 接口的只读属性 **`media`**，返回一个 {{domxref("MediaList")}} 对象，
+{{domxref("CSSImportRule")}} 接口的只读属性 **`media`** 返回一个 {{domxref("MediaList")}} 对象，
 该对象包含关联样式表的 `media` 属性的值。
 
 ## 值
