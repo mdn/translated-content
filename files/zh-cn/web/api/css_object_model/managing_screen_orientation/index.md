@@ -176,4 +176,3 @@ screen.orientation.lock();
 - {{domxref("ScreenOrientation")}}
 - {{DOMxRef("ScreenOrientation.change_event", "change")}} 事件的 {{domxref("ScreenOrientation")}}
 - [orientation 媒体查询](/zh-CN/docs/Web/CSS/@media/orientation)
-
