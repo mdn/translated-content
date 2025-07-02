@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-只读的 **`supportsText`** 属性属于 {{domxref("CSSImportRule")}} 接口，返回由 {{cssxref("@import")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 指定的支持条件。
+{{domxref("CSSImportRule")}} 接口的只读属性 **`supportsText`**，返回由 {{cssxref("@import")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 指定的支持条件。
 
 ## 值
 
