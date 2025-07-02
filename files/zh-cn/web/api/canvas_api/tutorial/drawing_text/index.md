@@ -48,7 +48,7 @@ draw();
 function draw() {
   const ctx = document.getElementById("canvas").getContext("2d");
   ctx.font = "48px serif";
-  ctx.strokeText("你好世界 world", 10, 50);
+  ctx.strokeText("你好世界", 10, 50);
 }
 ```
 
