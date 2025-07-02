@@ -44,4 +44,3 @@ console.log(myRules[2].supportsText); // 返回 `null`
 
 - [使用特性查询](/zh-CN/docs/Web/CSS/CSS_conditional_rules/Using_feature_queries)
 - {{cssxref("@import")}} 和 {{cssxref("@supports")}}
-
