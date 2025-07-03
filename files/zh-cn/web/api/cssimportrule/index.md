@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSImportRule`** 接口表示一个 {{cssxref("@import")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
+**`CSSImportRule`** 接口表示一个 {{cssxref("@import")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_继承自其祖先 {{domxref("CSSRule")}} 的属性。_
+_继承其祖先 {{domxref("CSSRule")}} 的属性。_
 
 - {{domxref("CSSImportRule.href")}} {{ReadOnlyInline}}
   - : 返回 {{cssxref("@import")}} 规则中指定的 URL。
@@ -28,7 +28,7 @@ _继承自其祖先 {{domxref("CSSRule")}} 的属性。_
 
 ## 实例方法
 
-_继承自其祖先 {{domxref("CSSRule")}} 的方法。_
+_继承其祖先 {{domxref("CSSRule")}} 的方法。_
 
 ## 示例
 
