@@ -459,6 +459,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
   - : 指针改变任何属性时触发，这些属性不会触发 {{domxref("Element/pointerdown_event", "pointerdown")}} 或 {{domxref("Element/pointerup_event", "pointerup")}} 事件。
 - {{domxref("Element/pointerup_event", "pointerup")}}
   - : 指针不再处于活动状态时触发。
+
 ### 滚动事件
 
 - {{domxref("Element/scroll_event", "scroll")}}
