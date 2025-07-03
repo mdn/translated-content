@@ -3,8 +3,6 @@ title: Firefox 18 for developers
 slug: Mozilla/Firefox/Releases/18
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18 已于 2013 年 1 月 8 日发布。
 
 ## WEB 开发者需要注意的变化
