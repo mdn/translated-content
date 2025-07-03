@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Geolocation")}} 介面的 **`getCurrentPosition()`** 方法用於取得裝置的目前位置。
 
-請注意，除了需要安全上下文之外，此功能可能會被 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` 封鎖，並且還需要使用者明確授予權限。如有需要，呼叫此方法時會提示使用者。可以使用 [Permissions API](/zh-TW/docs/Web/API/Permissions_API) 中的 `geolocation` 使用者權限來查詢權限狀態。
+請注意，除了需要安全上下文之外，此功能可能會被 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` 封鎖，並且還需要使用者明確授予權限。如有需要，呼叫此方法時會提示使用者。可以使用[權限 API](/zh-TW/docs/Web/API/Permissions_API) 中的 `geolocation` 使用者權限來查詢權限狀態。
 
 ## 語法
 
