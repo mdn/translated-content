@@ -179,14 +179,14 @@ _`Element` 接口也包括以下属性。_
 
 #### 从 ARIA 元素引用中反映的实例属性
 
-这些属性反映了相应属性中由 `id` 引用指定的元素，但有一些注意事项。更多信息请参阅*反射属性*指南中的[反射元素指南](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#reflected_element_references)。
+这些属性反映了相应属性中由 `id` 引用指定的元素，但有一些注意事项。更多信息请参阅*反射属性*指南中的[反射元素参考](/zh-CN/docs/Web/API/Document_Object_Model/Reflected_attributes#反射元素参考)。
 
 - {{domxref("Element.ariaActiveDescendantElement")}}
   - : 当焦点位于 [`composite`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) 微件、[`combobox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/group_role) 或 [`application`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/application_role) 时，代表当前活动元素的元素。反射了 [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant) 属性。
 - {{domxref("Element.ariaControlsElements")}}
   - : 一个元素数组，其内容或存在由所应用的元素控制。反射了 [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) 属性。
 - {{domxref("Element.ariaDescribedByElements")}}
-  - : 一个元素数组，包含所应用元素的可访问描述。反射了 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性。
+  - : 一个元素数组，包含所应用元素的无障碍描述。反射了 [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) 属性。
 - {{domxref("Element.ariaDetailsElements")}}
   - : 一个元素数组，提供所应用元素的无障碍详细信息。反射了 [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) 属性。
 - {{domxref("Element.ariaErrorMessageElements")}}
@@ -381,7 +381,7 @@ _`Element` 继承 {{DOMxRef("Node")}} 及其父接口 {{DOMxRef("EventTarget")}}
 ### 全屏事件
 
 - {{domxref("Element/fullscreenchange_event", "fullscreenchange")}}
-  - : 当前 {{domxref("Element")}} 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时，向该 `Element` 发送此事件。
+  - : 当前 `Element` 进入或退出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时，向该 `Element` 发送此事件。
 - {{domxref("Element/fullscreenerror_event", "fullscreenerror")}}
   - : 如果在尝试将当前 `Element` 切换到或切换出[全屏](/zh-CN/docs/Web/API/Fullscreen_API/Guide)模式时发生错误，则向该 `Element` 发送此事件。
 
