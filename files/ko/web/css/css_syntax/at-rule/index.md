@@ -6,7 +6,7 @@ original_slug: Web/CSS/At-rule
 
 {{cssref}}
 
-**@-규칙**은 식별자(identifier)가 뒤따르는 at 기호('`@`' (`U+0040 COMMERCIAL AT`))로 시작하는 [CSS 문](/ko/docs/Web/CSS/Syntax#css_statements)이며 다음 세미콜론('`;`' (`U+003B SEMICOLON`)) 또는 다음 [CSS 블록](/ko/docs/Web/CSS/Syntax#css_declarations_blocks) 중 먼저 오는 쪽까지 모든 것을 포함합니다.
+**@-규칙**은 식별자(identifier)가 뒤따르는 at 기호('`@`' (`U+0040 COMMERCIAL AT`))로 시작하는 [CSS 문](/ko/docs/Web/CSS/CSS_syntax/Syntax#css_statements)이며 다음 세미콜론('`;`' (`U+003B SEMICOLON`)) 또는 다음 [CSS 블록](/ko/docs/Web/CSS/CSS_syntax/Syntax#css_declarations_blocks) 중 먼저 오는 쪽까지 모든 것을 포함합니다.
 
 ```css
 /* General structure */
