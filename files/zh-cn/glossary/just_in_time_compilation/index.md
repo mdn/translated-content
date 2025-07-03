@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-**JIT**（_即时编译_，Just-In-Time Compilation）是一种{{glossary("compile", "编译")}}过程。在 JIT 中，代码会在运行时（而不是执行前）从中间表示或高级语言（如 {{glossary("JavaScript")}}、Java 字节码）翻译为机器码。这种方式结合了解释执行和预先编译（AOT）的优点。
+**JIT**（_即时编译_，Just-In-Time Compilation）是一种{{glossary("compile", "编译")}}过程，代码会在运行时（而不是执行前）从中间表示或高级语言（如 {{glossary("JavaScript")}}、Java 字节码）翻译为机器码。这种方式结合了解释执行和预先编译（AOT）的优点。
 
 JIT 编译器通常会在代码执行时持续分析代码，识别出被频繁执行的部分（热点）。如果加速带来的收益大于编译的开销，JIT 编译器就会将这些部分编译为机器码。编译后的代码由处理器直接执行，从而显著提升性能。
 
