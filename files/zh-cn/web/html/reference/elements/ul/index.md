@@ -39,16 +39,13 @@ li li {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `compact` {{Deprecated_inline}}
-
   - : 此布尔属性提示列表是否需要被渲染为更紧凑的样式。{{glossary("user agent", "用户代理")}}决定如何解释这个属性，且并非所有浏览器都支持它。
 
     > [!WARNING]
     > 请不要使用这个属性，它已经被弃用了：请使用 [CSS](/zh-CN/docs/Web/CSS) 来更改样式。如果想达到与 `compact` 属性相同的效果，将 CSS 属性 {{cssxref("line-height")}} 的值设为 `80%` 即可。
 
 - `type` {{Deprecated_inline}}
-
   - : 用于设置列表的着重号样式，定义于 HTML3.2 和过渡版本 HTML 4.0/4.01 中的可用值有：
-
     - `circle`
     - `disc`
     - `square`
@@ -206,7 +203,6 @@ li li {
 
 - 其他列表相关的 HTML 元素：{{HTMLElement("ol")}}、{{HTMLElement("li")}} 和 {{HTMLElement("menu")}}
 - 可能对 `<ul>` 元素的样式特别有用的 CSS 属性：
-
   - {{CSSxRef("list-style")}} 属性，用于选择显示序数的方法。
   - [CSS 计数器](/zh-CN/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)，用于操作复杂的嵌套列表。
   - {{CSSxRef("line-height")}} 属性，用于模拟过时的 [`compact`](#compact) 属性。

@@ -144,7 +144,6 @@ emsdk_env.bat
    ```
 
    这次使用的选项略有不同：
-
    - 我们使用了 `-o hello2.html`，这意味编译器将仍然输出 js 胶水代码 和 html 文件。
    - 我们还使用了 `--shell-file html_template/shell_minimal.html`，这指定了你要运行的例子使用 HTML 页面模板。
 

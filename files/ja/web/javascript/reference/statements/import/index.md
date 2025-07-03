@@ -93,7 +93,7 @@ export { a as "a-b" };
 import { "a-b" as a } from "/modules/my-module.js";
 ```
 
-> **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を分割代入することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
+> **メモ:** `import { x, y } from "mod"` は、 `import defaultExport from "mod"` して `defaultExport` から `x` と `y` を構造分解することと等価ではありません。名前付きのインポートとデフォルトのインポートは JavaScript のモジュールにおける別種の構文です。
 
 #### デフォルトの import
 

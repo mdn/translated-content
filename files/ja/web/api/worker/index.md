@@ -2,18 +2,18 @@
 title: Worker
 slug: Web/API/Worker
 l10n:
-  sourceCommit: 6fefcdd237a377af5c066dc2734c118feadbbef9
+  sourceCommit: 32305cc3cf274fbfdcc73a296bbd400a26f38296
 ---
 
-{{APIRef("Web Workers API")}}
+{{APIRef("Web Workers API")}}{{AvailableInWorkers("window_and_worker_except_service")}}
 
 **`Worker`** は[ウェブワーカー API](/ja/docs/Web/API/Web_Workers_API) のインターフェイスで、スクリプトで生成することができるバックグラウンドタスクを表し、作成元にメッセージを送り返すことができます。
 
 ワーカーは `Worker("path/to/worker/script")` コンストラクターを呼び出すことで生成されます。
 
-ワーカーは同じ親ページの同一[オリジン](/ja/docs/Web/Security/Same-origin_policy)内でホストされている限り、他の新しいワーカーを生成することができます（メモ: [入れ子になったワーカーは WebKit では未実装です](https://bugs.webkit.org/show_bug.cgi?id=22723)）。
+ワーカーは同じ親ページと同一の[オリジン](/ja/docs/Web/Security/Same-origin_policy)内でホストされている限り、他の新しいワーカーを生成することができます。
 
-[利用可能なすべてのインターフェイスと関数](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)がすべて `Worker` の中で利用できるとは限りません。ワーカーはネットワーク通信のために {{domxref("XMLHttpRequest")}} を使うことができますが、 `responseXML` 属性と `channel` 属性は常に `null` になります。（[`fetch`](/ja/docs/Web/API/Fetch_API) も利用可能であり、このような制限はありません。）
+すべてのインターフェイスと関数がウェブワーカーで利用できるわけではないことにご注意ください。詳細については、[ウェブワーカーで利用可能な関数とクラス](/ja/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers)を参照してください。
 
 {{InheritanceDiagram}}
 
@@ -22,11 +22,11 @@ l10n:
 - {{domxref("Worker.Worker", "Worker()")}}
   - : 指定された URL にあるスクリプトを実行する専用ウェブワーカーのインスタンスを生成します。また、 [Blob URL](/ja/docs/Web/API/Blob) を用いてワーカーを生成することもできます。
 
-## プロパティ
+## インスタンスプロパティ
 
 _親インターフェイスである {{domxref("EventTarget")}} からプロパティを継承しています。_
 
-## メソッド
+## インスタンスメソッド
 
 _親である {{domxref("EventTarget")}} からメソッドを継承しています。_
 
@@ -43,14 +43,10 @@ _親である {{domxref("EventTarget")}} からメソッドを継承していま
   - : ワーカーの親が、そのワーカーからメッセージを受信したときに発行されます。
 - [`messageerror`](/ja/docs/Web/API/Worker/messageerror_event)
   - : `Worker` オブジェクトが [シリアライズ解除](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)できないというメッセージを受け取ったときに発行されます。
-- [`rejectionhandled`](/ja/docs/Web/API/Window/rejectionhandled_event)
-  - : プロミス ({{jsxref("Promise")}}) が拒否されるたびに発行されます。拒否を処理するハンドラーがあるかどうかは問いません。
-- [`unhandledrejection`](/ja/docs/Web/API/Window/unhandledrejection_event)
-  - : 拒否を処理するハンドラーのないプロミス ({{jsxref("Promise")}}) が拒否されたときに発行されます。
 
 ## 例
 
-次のコード例では、 {{domxref("Worker")}} オブジェクトを、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて生成しています。
+次のコード例では、 `Worker` オブジェクトを、 {{domxref("Worker.Worker", "Worker()")}} コンストラクターを用いて生成しています。
 
 ```js
 const myWorker = new Worker("/worker.js");
@@ -59,11 +55,11 @@ const second = document.querySelector("input#number2");
 
 first.onchange = () => {
   myWorker.postMessage([first.value, second.value]);
-  console.log("Message posted to worker");
+  console.log("メッセージがワーカーへ渡されました");
 };
 ```
 
-完全な例は、 [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([専用ワーカーを実行](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker/)) を参照してください。
+完全な例は、 [Basic dedicated worker example](https://github.com/mdn/dom-examples/tree/main/web-workers/simple-web-worker) ([専用ワーカーを実行](https://mdn.github.io/dom-examples/web-workers/simple-web-worker/)) を参照してください。
 
 ## 仕様書
 

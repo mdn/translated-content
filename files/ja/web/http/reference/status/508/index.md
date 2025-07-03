@@ -1,16 +1,15 @@
 ---
 title: 508 Loop Detected
 slug: Web/HTTP/Reference/Status/508
-original_slug: Web/HTTP/Status/508
 l10n:
-  sourceCommit: e626fb706bfef0d496f0a209554f80a2d9313c0c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
 
 HTTP の **`508 Loop Detected`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、 `Depth: infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
 
-このステータスコードは、 Web Distributed Authoring and Versioning (WebDAV) のコンテキストで使用される可能性があります。
+このステータスコードは、 {{Glossary("WebDAV")}} (Web Distributed Authoring and Versioning) のコンテキストで使用される可能性があります。
 これは、 WebDAV クライアントが {{HTTPStatus("208", "208 Already Reported")}} レスポンスに対応していない場合（リクエストに明示的に `DAV` ヘッダーが記載されていない場合）の代替策として導入されました。
 
 ## ステータス

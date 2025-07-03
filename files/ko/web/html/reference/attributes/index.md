@@ -1235,4 +1235,4 @@ IDL attributes can [reflect other types](https://www.whatwg.org/specs/web-apps/c
 
 ## 같이 보기
 
-- [HTML 요소](/ko/docs/Web/HTML/Element)
+- [HTML 요소](/ko/docs/Web/HTML/Reference/Elements)

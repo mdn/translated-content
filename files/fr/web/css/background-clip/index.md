@@ -138,7 +138,6 @@ p {
 
 - {{cssxref("clip-path")}}
 - Les propriétés relatives à l'arrière-plan :
-
   - {{cssxref("background")}}
   - {{cssxref("background-color")}}
   - {{cssxref("background-image")}}

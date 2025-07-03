@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/isPrototypeOf
 
 **`isPrototypeOf()`** 方法用于检查一个对象是否存在于另一个对象的原型链中。
 
-> **备注：** `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 `object instanceof AFunction` 中，会检查 `object` 的原型链是否与 `AFunction.prototype` 匹配，而不是与 `AFunction`本身匹配。
+> [!NOTE]
+> `isPrototypeOf()` 与 {{jsxref("Operators/instanceof", "instanceof")}} 运算符不同。在表达式 `object instanceof AFunction` 中，会检查 `object` 的原型链是否与 `AFunction.prototype` 匹配，而不是与 `AFunction`本身匹配。
 
 {{InteractiveExample("JavaScript Demo: Object.prototype.isPrototypeOf()")}}
 
@@ -88,7 +89,7 @@ if (Foo.prototype.isPrototypeOf(baz)) {
 }
 ```
 
-然而，`Foo.prototype` 存在于 `baz` 的原型链中并不意味着 `baz` 是使用 `Foo` 作为其构造函数创建的。例如，`baz` 可以直接将 `Foo.prototype` 作为其原型。在这种情况下，如果你的代码从 `baz` 中读取 `Foo` 的[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)，它仍然会失败：
+然而，`Foo.prototype` 存在于 `baz` 的原型链中并不意味着 `baz` 是使用 `Foo` 作为其构造函数创建的。例如，`baz` 可以直接将 `Foo.prototype` 作为其原型。在这种情况下，如果你的代码从 `baz` 中读取 `Foo` 的[私有字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)，它仍然会失败：
 
 ```js
 class Foo {

@@ -25,10 +25,8 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
   - : A {{domxref("GLint")}} specifying the number of components per vertex attribute. Must be 1, 2, 3, or 4.
     指定每个顶点属性的组成数量，必须是 1，2，3 或 4。
 - `type`
-
   - : A {{domxref("GLenum")}} specifying the data type of each component in the array. Possible values:
     指定数组中每个元素的数据类型可能是：
-
     - `gl.BYTE`: signed 8-bit integer, with values in \[-128, 127]
       有符号的 8 位整数，范围 \[-128, 127]
     - `gl.SHORT`: signed 16-bit integer, with values in \[-32768, 32767]
@@ -41,15 +39,12 @@ vertexAttribPointer(index, size, type, normalized, stride, offset)
       32 位 IEEE 标准的浮点数
     - When using a {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, the following values are available additionally:
       使用 WebGL2 版本的还可以使用以下值：
-
       - `gl.HALF_FLOAT`: 16-bit IEEE floating point number
         16 位 IEEE 标准的浮点数
 
 - `normalized`
-
   - : A {{domxref("GLboolean")}} specifying whether integer data values should be normalized into a certain range when being casted to a float.
     当转换为浮点数时是否应该将整数数值归一化到特定的范围。
-
     - For types `gl.BYTE` and `gl.SHORT`, normalizes the values to \[-1, 1] if true.
       对于类型`gl.BYTE`和`gl.SHORT`，如果是 true 则将值归一化为 \[-1, 1]
     - For types `gl.UNSIGNED_BYTE` and `gl.UNSIGNED_SHORT`, normalizes the values to \[0, 1] if true.

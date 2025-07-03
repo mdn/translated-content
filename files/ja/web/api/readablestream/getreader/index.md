@@ -21,14 +21,10 @@ getReader(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを持つオブジェクトです。
-
     - `mode` {{optional_inline}}
-
       - : 作成するリーダーの種類を指定するプロパティです。
         値は以下の通り。
-
         - `"byob"`: 読み取り可能なバイトストリーム（内部ストリームバッファーが空のときに、基礎となるバイトソースからリーダーへのゼロコピー転送に対応しているストリーム）を読み取ることができる {{domxref("ReadableStreamBYOBReader")}} を作成します。
         - `undefined` （または指定しない場合、既定値）。 これにより、ストリームから個々のチャンクを読み取ることができる {{domxref("ReadableStreamDefaultReader")}} が作成されます。
 

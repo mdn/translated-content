@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `windowId`
       - : `integer`. ID de la fenêtre fermée.
 

@@ -6,16 +6,13 @@ slug: Mozilla/Firefox/Releases/35
 {{FirefoxSidebar}}
 
 1. Notes de versions pour développeurs
-
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 
 2. Modules complémentaires
-
    1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
    2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
 
 3. Fonctionnement interne de Firefox
-
    1. [Le projet Mozilla](/fr/docs/Mozilla)
    2. [Gecko](/fr/docs/Mozilla/Gecko)
    3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
@@ -30,7 +27,6 @@ slug: Mozilla/Firefox/Releases/35
    12. [XUL](/fr/docs/Mozilla/Tech/XUL)
 
 4. Développer et contribuer
-
    1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
    2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
    3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
@@ -70,17 +66,14 @@ Liens:
 ### JavaScript
 
 - La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée. En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
-
   - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
   - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
 
 - ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
-
   - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
   - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
 
 - Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
-
   - Maintenant un seul membre noté `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
   - Les membres de méthode comme `__proto__() {}` ne réecrivent pas le `[[Prototype]]`.
 

@@ -69,7 +69,7 @@ Content-Location: /my-first-blog-post
 
 ### Indicating the URL of a transaction's result
 
-Digamos que tiene un formulario [`<form>`](/es/docs/Web/HTML/Element/form) para el envío de dinero a otro usuario de un sitio web.
+Digamos que tiene un formulario [`<form>`](/es/docs/Web/HTML/Reference/Elements/form) para el envío de dinero a otro usuario de un sitio web.
 
 ```html
 <form action="/enviar-pago" method="post">

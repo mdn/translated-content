@@ -102,22 +102,18 @@ flex: unset;
 `flex` プロパティは 1 つ、2 つ、3 つの値を取ることができます。
 
 - **値 1 つの構文:** 値は以下のうちの 1 つです。
-
   - {{cssxref("&lt;flex-grow&gt;")}} として有効な値の場合、すべてのブラウザーで、この一括指定は `flex: <flex-grow> 1 0%` と展開されます。ただし、仕様書では `flex: <flex-grow> 1 0` と展開すべきであるとしています。
   - {{cssxref("&lt;flex-basis&gt;")}} として有効な値の場合、一括指定は `flex: 1 1 <flex-basis>` と展開されます。
   - キーワード `none` またはグローバルキーワードのいずれか。
 
 - **値 2 つの構文:**
-
   - 1 つ目は {{cssxref("flex-grow")}} として有効な値でなければなりません。
 
   - 2 つ目は以下のいずれかの値でなければなりません。
-
     - {{cssxref("flex-shrink")}} として有効な値の場合、すべてのブラウザーにおいて、この一括指定は `flex: <flex-grow> <flex-shrink> 0%` と展開されます。
     - {{cssxref("flex-basis")}} として有効な値の場合、この一括指定は `flex: <flex-grow> 1 <flex-basis>` と展開されます。
 
 - **値 3 つの構文:** 値は以下の順序でなければなりません。
-
   1. {{cssxref("flex-grow")}} として有効な値。
   2. {{cssxref("flex-shrink")}} として有効な値。
   3. {{cssxref("flex-basis")}} として有効な値。

@@ -136,7 +136,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("margin-top")}},
   - {{cssxref("margin-right")}},
   - {{cssxref("margin-bottom")}}

@@ -24,9 +24,7 @@ new Exception(tag, payload, options);
 - `payload`
   - : Un tableau contenant un ou plusieurs champs de données qui forment la charge utile de l'exception. Les types des éléments doivent correspondre à ceux décrits par la balise `tag`. Si le nombre de champs ou leurs types ne correspond pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
 - `options` {{optional_inline}}
-
   - : Un objet avec la propriété optionnelle suivante&nbsp;:
-
     - `traceStack` {{optional_inline}}
       - : `true` si l'objet `Exception` peut avoir sa pile d'appels attachée via sa propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack), `false` sinon (qui correspond au comportement par défaut si `options` ou si `options.traceStack` n'est pas fourni).
 

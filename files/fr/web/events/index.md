@@ -791,31 +791,25 @@ Cette rubrique fournit un index des principales _sortes_ d'événements qui peuv
 Cette section répertorie les événements qui ont _leurs propres_ pages de référence sur MDN. Si vous êtes intéressé par un événement qui n'est pas listé ici, essayez de rechercher son nom, son domaine ou les spécifications associées sur le reste de MDN.
 
 - {{DOMxRef("AbortSignal")}}
-
   - [abort](/fr/docs/Web/API/AbortSignal/abort_event)
 
 - {{DOMxRef("AudioScheduledSourceNode")}}
-
   - [ended](/fr/docs/Web/API/AudioScheduledSourceNode/ended_event)
 
 - {{DOMxRef("AudioTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/AudioTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/AudioTrackList/change_event)
   - [removetrack](/fr/docs/Web/API/AudioTrackList/removetrack_event)
 
 - {{DOMxRef("BroadcastChannel")}}
-
   - [messageerror](/fr/docs/Web/API/BroadcastChannel/messageerror_event)
   - [message](/fr/docs/Web/API/BroadcastChannel/message_event)
 
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
-
   - [messageerror](/fr/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - [message](/fr/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
 
 - {{DOMxRef("Document")}}
-
   - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
   - [animationend](/fr/docs/Web/API/Element/animationend_event)
   - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
@@ -864,7 +858,6 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [wheel](/fr/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("Element")}}
-
   - [afterscriptexecute](/fr/docs/Web/API/Element/afterscriptexecute_event)
   - [auxclick](/fr/docs/Web/API/Element/auxclick_event)
   - [beforescriptexecute](/fr/docs/Web/API/Element/beforescriptexecute_event)
@@ -924,13 +917,11 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [wheel](/fr/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("EventSource")}}
-
   - [error](/fr/docs/Web/API/EventSource/error_event)
   - [message](/fr/docs/Web/API/EventSource/message_event)
   - [open](/fr/docs/Web/API/EventSource/open_event)
 
 - {{DOMxRef("FileReader")}}
-
   - [abort](/fr/docs/Web/API/FileReader/abort_event)
   - [error](/fr/docs/Web/API/FileReader/error_event)
   - [loadend](/fr/docs/Web/API/FileReader/loadend_event)
@@ -939,22 +930,18 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [progress](/fr/docs/Web/API/FileReader/progress_event)
 
 - {{DOMxRef("HTMLCanvasElement")}}
-
   - [webglcontextcreationerror](/fr/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - [webglcontextlost](/fr/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
   - [webglcontextrestored](/fr/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
 
 - {{DOMxRef("HTMLDetailsElement")}}
-
   - [toggle](/fr/docs/Web/API/HTMLElement/toggle_event)
 
 - {{DOMxRef("HTMLDialogElement")}}
-
   - [cancel](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
   - [close](/fr/docs/Web/API/HTMLDialogElement/close_event)
 
 - {{DOMxRef("HTMLElement")}}
-
   - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
   - [animationend](/fr/docs/Web/API/Element/animationend_event)
   - [animationiteration](/fr/docs/Web/API/Element/animationiteration_event)
@@ -978,18 +965,15 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [transitionstart](/fr/docs/Web/API/Element/transitionstart_event)
 
 - {{DOMxRef("HTMLFormElement")}}
-
   - [formdata](/fr/docs/Web/API/HTMLFormElement/formdata_event)
   - [reset](/fr/docs/Web/API/HTMLFormElement/reset_event)
   - [submit](/fr/docs/Web/API/HTMLFormElement/submit_event)
 
 - {{DOMxRef("HTMLInputElement")}}
-
   - [invalid](/fr/docs/Web/API/HTMLInputElement/invalid_event)
   - [search](/fr/docs/Web/API/HTMLInputElement/search_event)
 
 - {{DOMxRef("HTMLMediaElement")}}
-
   - [abort](/fr/docs/Web/API/HTMLMediaElement/abort_event)
   - [canplaythrough](/fr/docs/Web/API/HTMLMediaElement/canplaythrough_event)
   - [canplay](/fr/docs/Web/API/HTMLMediaElement/canplay_event)
@@ -1014,90 +998,72 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [waiting](/fr/docs/Web/API/HTMLMediaElement/waiting_event)
 
 - {{DOMxRef("HTMLSlotElement")}}
-
   - [slotchange](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
 
 - {{DOMxRef("HTMLTrackElement")}}
-
   - [cuechange](/fr/docs/Web/API/HTMLTrackElement/cuechange_event)
 
 - {{DOMxRef("HTMLVideoElement")}}
-
   - [enterpictureinpicture](/fr/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
   - [leavepictureinpicture](/fr/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
 
 - {{DOMxRef("IDBDatabase")}}
-
   - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
   - [close](/fr/docs/Web/API/IDBDatabase/close_event)
   - [error](/fr/docs/Web/API/IDBTransaction/error_event)
   - [versionchange](/fr/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
-
   - [blocked](/fr/docs/Web/API/IDBOpenDBRequest/blocked_event)
   - [upgradeneeded](/fr/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
 
 - {{DOMxRef("IDBRequest")}}
-
   - [error](/fr/docs/Web/API/IDBRequest/error_event)
   - [success](/fr/docs/Web/API/IDBRequest/success_event)
 
 - {{DOMxRef("IDBTransaction")}}
-
   - [abort](/fr/docs/Web/API/IDBTransaction/abort_event)
   - [complete](/fr/docs/Web/API/IDBTransaction/complete_event)
   - [error](/fr/docs/Web/API/IDBTransaction/error_event)
 
 - {{DOMxRef("MediaDevices")}}
-
   - [devicechange](/fr/docs/Web/API/MediaDevices/devicechange_event)
 
 - {{DOMxRef("MediaRecorder")}}
-
   - [error](/fr/docs/Web/API/MediaRecorder/error_event)
 
 - {{DOMxRef("MediaStream")}}
-
   - [addtrack](/fr/docs/Web/API/MediaStream/addtrack_event)
   - [removetrack](/fr/docs/Web/API/MediaStream/removetrack_event)
 
 - {{DOMxRef("MediaStreamTrack")}}
-
   - [ended](/fr/docs/Web/API/MediaStreamTrack/ended_event)
   - [mute](/fr/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute](/fr/docs/Web/API/MediaStreamTrack/unmute_event)
 
 - {{DOMxRef("MessagePort")}}
-
   - [messageerror](/fr/docs/Web/API/MessagePort/messageerror_event)
   - [message](/fr/docs/Web/API/MessagePort/message_event)
 
 - {{DOMxRef("OfflineAudioContext")}}
-
   - [complete](/fr/docs/Web/API/OfflineAudioContext/complete_event)
 
 - {{DOMxRef("PaymentRequest")}}
-
   - [merchantvalidation](/fr/docs/Web/API/PaymentRequest/merchantvalidation_event)
   - [paymentmethodchange](/fr/docs/Web/API/PaymentRequest/paymentmethodchange_event)
   - [shippingaddresschange](/fr/docs/Web/API/PaymentRequest/shippingaddresschange_event)
   - [shippingoptionchange](/fr/docs/Web/API/PaymentRequest/shippingoptionchange_event)
 
 - {{DOMxRef("PaymentResponse")}}
-
   - [payerdetailchange](/fr/docs/Web/API/PaymentResponse/payerdetailchange_event)
 
 - {{DOMxRef("Performance")}}
-
   - [resourcetimingbufferfull](/fr/docs/Web/API/Performance/resourcetimingbufferfull_event)
 
 - {{DOMxRef("PictureInPictureWindow")}}
-
   - [resize](/fr/docs/Web/API/PictureInPictureWindow/resize_event)
 
 - {{DOMxRef("RTCDataChannel")}}
-
   - [bufferedamountlow](/fr/docs/Web/API/RTCDataChannel/bufferedamountlow_event)
   - [close](/fr/docs/Web/API/RTCDataChannel/close_event)
   - [closing](/fr/docs/Web/API/RTCDataChannel/closing_event)
@@ -1106,21 +1072,17 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [open](/fr/docs/Web/API/RTCDataChannel/open_event)
 
 - {{DOMxRef("RTCDtlsTransport")}}
-
   - [error](/fr/docs/Web/API/RTCDtlsTransport/error_event)
 
 - {{DOMxRef("RTCDTMFSender")}}
-
   - [tonechange](/fr/docs/Web/API/RTCDTMFSender/tonechange_event)
 
 - {{DOMxRef("RTCIceTransport")}}
-
   - [gatheringstatechange](/fr/docs/Web/API/RTCIceTransport/gatheringstatechange_event)
   - [selectedcandidatepairchange](/fr/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event)
   - [statechange](/fr/docs/Web/API/RTCIceTransport/statechange_event)
 
 - {{DOMxRef("RTCPeerConnection")}}
-
   - [addstream](/fr/docs/Web/API/RTCPeerConnection/addstream_event)
   - [connectionstatechange](/fr/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
   - [datachannel](/fr/docs/Web/API/RTCPeerConnection/datachannel_event)
@@ -1134,15 +1096,12 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [track](/fr/docs/Web/API/RTCPeerConnection/track_event)
 
 - {{DOMxRef("ScriptProcessorNode")}}
-
   - [audioprocess](/fr/docs/Web/API/ScriptProcessorNode/audioprocess_event)
 
 - {{DOMxRef("ServiceWorkerContainer")}}
-
   - [message](/fr/docs/Web/API/ServiceWorkerContainer/message_event)
 
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
-
   - [activate](/fr/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
   - [contentdelete](/fr/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event)
   - [install](/fr/docs/Web/API/ServiceWorkerGlobalScope/install_event)
@@ -1152,11 +1111,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [push](/fr/docs/Web/API/ServiceWorkerGlobalScope/push_event)
 
 - {{DOMxRef("SharedWorkerGlobalScope")}}
-
   - [connect](/fr/docs/Web/API/SharedWorkerGlobalScope/connect_event)
 
 - {{DOMxRef("SpeechRecognition")}}
-
   - [audioend](/fr/docs/Web/API/SpeechRecognition/audioend_event)
   - [audiostart](/fr/docs/Web/API/SpeechRecognition/audiostart_event)
   - [end](/fr/docs/Web/API/SpeechRecognition/end_event)
@@ -1170,11 +1127,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [start](/fr/docs/Web/API/SpeechRecognition/start_event)
 
 - {{DOMxRef("SpeechSynthesis")}}
-
   - [voiceschanged](/fr/docs/Web/API/SpeechSynthesis/voiceschanged_event)
 
 - {{DOMxRef("SpeechSynthesisUtterance")}}
-
   - [boundary](/fr/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
   - [end](/fr/docs/Web/API/SpeechSynthesisUtterance/end_event)
   - [error](/fr/docs/Web/API/SpeechSynthesisUtterance/error_event)
@@ -1184,13 +1139,11 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [start](/fr/docs/Web/API/SpeechSynthesisUtterance/start_event)
 
 - {{DOMxRef("SVGAnimationElement")}}
-
   - [beginEvent](/fr/docs/Web/API/SVGAnimationElement/beginEvent_event)
   - [endEvent](/fr/docs/Web/API/SVGAnimationElement/endEvent_event)
   - [repeatEvent](/fr/docs/Web/API/SVGAnimationElement/repeatEvent_event)
 
 - {{DOMxRef("SVGElement")}}
-
   - [abort](/fr/docs/Web/API/SVGElement/abort_event)
   - [error](/fr/docs/Web/API/SVGElement/error_event)
   - [load](/fr/docs/Web/API/SVGElement/load_event)
@@ -1199,41 +1152,34 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [unload](/fr/docs/Web/API/SVGElement/unload_event)
 
 - {{DOMxRef("SVGGraphicsElement")}}
-
   - [copy](/fr/docs/Web/API/SVGGraphicsElement/copy_event)
   - [cut](/fr/docs/Web/API/SVGGraphicsElement/cut_event)
   - [paste](/fr/docs/Web/API/SVGGraphicsElement/paste_event)
 
 - {{DOMxRef("TextTrack")}}
-
   - [cuechange](/fr/docs/Web/API/TextTrack/cuechange_event)
 
 - {{DOMxRef("TextTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/TextTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/TextTrackList/change_event)
   - [removeTrack](/fr/docs/Web/API/TextTrackList/removeTrack_event)
 
 - {{DOMxRef("VideoTrackList")}}
-
   - [addtrack](/fr/docs/Web/API/VideoTrackList/addtrack_event)
   - [change](/fr/docs/Web/API/VideoTrackList/change_event)
   - [removetrack](/fr/docs/Web/API/VideoTrackList/removetrack_event)
 
 - {{DOMxRef("VisualViewport")}}
-
   - [resize](/fr/docs/Web/API/VisualViewport/resize_event)
   - [scroll](/fr/docs/Web/API/VisualViewport/scroll_event)
 
 - {{DOMxRef("WebSocket")}}
-
   - [close](/fr/docs/Web/API/WebSocket/close_event)
   - [error](/fr/docs/Web/API/WebSocket/error_event)
   - [message](/fr/docs/Web/API/WebSocket/message_event)
   - [open](/fr/docs/Web/API/WebSocket/open_event)
 
 - {{DOMxRef("Window")}}
-
   - [afterprint](/fr/docs/Web/API/Window/afterprint_event)
   - [animationcancel](/fr/docs/Web/API/Element/animationcancel_event)
   - [animationend](/fr/docs/Web/API/Element/animationend_event)
@@ -1284,16 +1230,13 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [vrdisplaypresentchange](/fr/docs/Web/API/Window/vrdisplaypresentchange_event)
 
 - {{DOMxRef("Worker")}}
-
   - [messageerror](/fr/docs/Web/API/Worker/messageerror_event)
   - [message](/fr/docs/Web/API/Worker/message_event)
 
 - {{DOMxRef("WorkerGlobalScope")}}
-
   - [languagechange](/fr/docs/Web/API/WorkerGlobalScope/languagechange_event)
 
 - {{DOMxRef("XMLHttpRequest")}}
-
   - [abort](/fr/docs/Web/API/XMLHttpRequest/abort_event)
   - [error](/fr/docs/Web/API/XMLHttpRequest/error_event)
   - [loadend](/fr/docs/Web/API/XMLHttpRequest/loadend_event)
@@ -1303,11 +1246,9 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [timeout](/fr/docs/Web/API/XMLHttpRequest/timeout_event)
 
 - {{DOMxRef("XRReferenceSpace")}}
-
   - [reset](/fr/docs/Web/API/XRReferenceSpace/reset_event)
 
 - {{DOMxRef("XRSession")}}
-
   - [end](/fr/docs/Web/API/XRSession/end_event)
   - [inputsourceschange](/fr/docs/Web/API/XRSession/inputsourceschange_event)
   - [selectend](/fr/docs/Web/API/XRSession/selectend_event)
@@ -1319,5 +1260,4 @@ Cette section répertorie les événements qui ont _leurs propres_ pages de réf
   - [visibilitychange](/fr/docs/Web/API/XRSession/visibilitychange_event)
 
 - {{DOMxRef("XRSystem")}}
-
   - [devicechange](/fr/docs/Web/API/XRSystem/devicechange_event)

@@ -39,7 +39,6 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `channel`: `nsIChannel`
   - : El canal es usado por el objeto cuando se produce el pedido. Esto da `null` si el canal aún no fue creado. En el caso de un pedido de múltiples partes, este es el canal inicial, no las diferentes partes del pedido múltiple. **Es necesario tener privilegios elevados para acceder; sólo lectura.** {{ Non-standard_inline() }}
 - `mozBackgroundRequest`: `booleano`
-
   - : Indica si el objeto representa o no un pedido de un servicio de fondo. Si es `true`, no se asocia una carga de grupo con el pedido, y los diálogos de seguridad no se muestran al usuario. **Es necesario tener privilegios elevados para acceder.** {{ Non-standard_inline() }}
 
     En los casos en que un diálogo de seguridad debe ser mostrado (como en una autentficación o la notificación de un certificado no válido), el pedido simplemente falla.
@@ -48,7 +47,6 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
   : [`ArrayBuffer`](/es/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)
   - : La respuesta al pedido en la forma de un arreglo de JavaScript. Esto es NULL si el pedido no fue exitoso o si todavía no ha sido enviado. **Sólo lectura.**
 - `multipart`: `booleano`
-
   - : Indica cuando se espera que la respuesta sea o no una serie de mútiples documentos XML. Si se define como `true`, el tipo de contenido de la respuesta inicial debe ser `multipart/x-mixed-replace` u ocurrirá un error. Todos los pedidos deben ser asincrónicos.
 
     Esto permite el uso del push del servidor; para cada documento XML que se escribe para este pedido, se crea un nuevo XMLDOMdocument y se llama al manejador `onload` entre cada documento.
@@ -58,14 +56,12 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 
 - `onreadystatechange`
   : `nsIDOMEventListener`
-
   - : Una función del objeto JavaScript que se llama cuando el atributo `readyState` cambia. El callback se llama desde la interfaz del usuario.
 
     > [!WARNING]
     > Esto no debe ser usado desde código nativo. Tampoco debes usarlo con pedidos sincrónicos.
 
 - `readyState`: `long`
-
   - : El estado del pedido:
 
     | Valor | Estado          | Descripción                                                                |
@@ -79,7 +75,6 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `responseText`: `AString`
   - : La respuesta al pedido como texto, o `null` si el pedido no fue exitoso o todavía no se envió. **Sólo lectura.**
 - `responseXML`: `nsIDOMDocument`
-
   - : La respuesta al pedido como un objeto DOM[`Document`](/es/docs/Web/API/Document), o `null` si el pedido no fue exitoso, aún no fue enviado o no puede ser analizado como XML. La respuesta es analizada como si fuera `text/xml`. **Sólo lectura.**
 
     > [!NOTE]
@@ -92,7 +87,6 @@ Para obtener más información de cómo usar `XMLHttpRequest`, mira [Usar XMLHtt
 - `upload`: `nsIXMLHttpRequestUpload`
   - : El proceso de subida puede ser rastreado al agregar un registro de evento a `upload`.
 - `withCredentials`: `booleano`
-
   - : Indica cuando el pedido de Access-Control entre sitios debe o no ser realizado usando credenciales como cookies o encabezados de autorización.
 
     > [!NOTE]

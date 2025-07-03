@@ -55,7 +55,8 @@ ctx.fillRect(10, 10, 150, 100);
 > [!NOTE]
 > 與 `WebGLRenderingContext` 相關的介面可參考 [WebGL](/zh-TW/docs/Web/API/WebGL_API)。
 
-> **備註：** {{domxref("OffscreenCanvas")}} 也可以在 Web Worker 中使用。
+> [!NOTE]
+> {{domxref("OffscreenCanvas")}} 也可以在 Web Worker 中使用。
 
 {{domxref("CanvasCaptureMediaStreamTrack")}} 是一個相關的介面。
 

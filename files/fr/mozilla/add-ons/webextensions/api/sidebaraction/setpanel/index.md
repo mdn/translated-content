@@ -28,17 +28,13 @@ browser.sidebarAction.setPanel(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `panel`
-
       - : `string` ou `null`. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou `null`, ou une chaîne vide.
 
         Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple `https://example.org/`). Il doit s'agir d'une URL valide.
 
         Si `panel` est `null` ou `""`,alors un panneau précédemment défini sera supprimé, de sorte que :
-
         - Si `tabId` est spécifié, et que l'onglet a un jeu de panneaux spécifiques aux onglets, alors l'onglet héritera du panneau à partir de la fenêtre à laquelle il appartient.
         - Si `windowId` est spécifié, et que la fenêtre a un jeu de panneaux spécifiques à la fenêtre, alors la fenêtre héritera du panneau global.
         - Sinon, le panneau global sera réinitialisé au panneau manifest.

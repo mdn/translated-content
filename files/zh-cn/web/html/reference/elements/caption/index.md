@@ -37,9 +37,7 @@ slug: Web/HTML/Reference/Elements/caption
 本元素包含了所有 [全局特性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `align` {{Deprecated_inline}}
-
   - : 这个可枚举属性表明了 caption 相对于 table 应该如何排列。它可能有以下几个值：
-
     - `left`, 展示在表格左边
     - `top`, 显示在表格前面
     - `right`, 显示在表格右边
@@ -68,7 +66,6 @@ slug: Web/HTML/Reference/Elements/caption
 
 - 其他与 table 相关的 HTML 元素：{{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tfoot")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - 可能对{{HTMLElement("caption")}} 元素有用的 CSS 属性：
-
   - {{cssxref("text-align")}}, {{cssxref("caption-side")}}.
 
 {{HTMLSidebar}}

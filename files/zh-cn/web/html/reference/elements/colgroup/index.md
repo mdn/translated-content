@@ -76,7 +76,6 @@ td {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `span`
-
   - : 指定 `<col>` 元素跨列的连续列数。该值必须是大于 0 的正整数。如果不存在，其默认值为 `1`。
 
     > [!NOTE]
@@ -87,7 +86,6 @@ td {
 以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
 
 - `align` {{deprecated_inline}}
-
   - : 指定每个列组单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/col#align) 属性覆盖该值。使用 {{cssxref("text-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
@@ -98,19 +96,15 @@ td {
     > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : 定义每列单元格的背景颜色。该值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
+  - : 定义每列单元格的背景颜色。该值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
 
 - `char` {{deprecated_inline}}
-
   - : 没有任何作用。其最初目的是指定内容与每列单元格中的一个字符对齐。当试图对齐数字或货币值时，其典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略，但它仍将作为默认值用于属于该列组的 {{HTMLElement("col")}} 元素的 [`align`](/zh-CN/docs/Web/HTML/Reference/Elements/col#align)。
 
 - `charoff` {{deprecated_inline}}
-
   - : 没有任何作用。它最初用于指定列单元格内容从 [`char`](#char) 属性指定的对齐字符偏移的字符数。
 
 - `valign` {{deprecated_inline}}
-
   - : 指定每个列组单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有 `baseline`、`bottom`、`middle` 和 `top`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`valign`](/zh-CN/docs/Web/HTML/Reference/Elements/col#valign) 属性覆盖此值。使用 {{cssxref("vertical-align")}} 和 {{htmlelement("th")}} 元素上的 CSS 属性，因为该属性已被弃用。
 
     > [!NOTE]
@@ -121,7 +115,6 @@ td {
     > 如果表格使用了 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，则可以通过组合适当的 CSS 属性选择器（如 `[colspan=n]`）来达到效果，不过这并非易事。
 
 - `width` {{deprecated_inline}}
-
   - : 该属性为当前列组中的每一列指定默认宽度。除标准像素值和百分比值外，该属性还可以使用特殊形式 `0*`，这意味着组中每一列的宽度应为容纳该列内容所需的最小宽度。也可以使用相对宽度，如 `0.5*`。请注意，后代 {{HTMLElement("col")}} 元素可以使用自己的 [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/col#width) 属性覆盖此值。请使用 {{cssxref("width")}} CSS 属性代替，因为该属性已被弃用。
 
 ## 使用说明

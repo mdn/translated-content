@@ -21,9 +21,7 @@ removeEntry(name, options)
 - `name`
   - : 削除したいエントリーの {{domxref('FileSystemHandle.name')}} を表す文字列です。
 - `options` {{optional_inline}}
-
   - : オプションを持つオブジェクトで、省略可能です。以下のオプションがあります。
-
     - `recursive`
       - : {{jsxref("boolean")}} 値で、デフォルトは `false` です。`true` に設定すると、エントリーが再帰的に削除されます。
 

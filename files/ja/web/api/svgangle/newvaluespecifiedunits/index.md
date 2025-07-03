@@ -19,7 +19,6 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ### 引数
 
 - `unitType`
-
   - : 角度値を変換する単位型を表す定数です。 これは、 {{domxref("SVGAngle.unitType", "unitType")}} プロパティに対して定義された定数値のいずれかでなければならず、 `SVG_ANGLETYPE_UNKNOWN` は例外となります。
     - `SVGAngle.SVG_ANGLETYPE_DEG`: 度に変換
     - `SVGAngle.SVG_ANGLETYPE_RAD`: ラジアンに変換
@@ -38,7 +37,6 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 このメソッドは、次のいずれかの型の {{domxref("DOMException")}} を発生させる可能性があります。
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : `unitType` が `SVG_ANGLETYPE_UNKNOWN` であるか、有効な単位型定数でない場合に発生します。
 
 - `NoModificationAllowedError` {{domxref("DOMException")}}
