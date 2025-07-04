@@ -9,7 +9,7 @@ l10n:
 
 {{domxref("Geolocation")}} 介面的 **`watchPosition()`** 方法用於註冊一個處理函式，該函式會在裝置位置每次變更時自動被呼叫。你也可以選擇性地指定一個錯誤處理回呼函式。
 
-請注意，除了需要安全上下文之外，此功能也可能被 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` 阻擋，並且還需要使用者明確授予權限。如有需要，當呼叫此方法時，將會提示使用者。權限狀態可以使用 [Permissions API](/zh-TW/docs/Web/API/Permissions_API) 中的 `geolocation` 使用者權限來查詢。
+請注意，除了需要安全上下文之外，此功能也可能被 [`geolocation`](/zh-TW/docs/Web/HTTP/Reference/Headers/Permissions-Policy/geolocation) `Permissions-Policy` 阻擋，並且還需要使用者明確授予權限。如有需要，當呼叫此方法時，將會提示使用者。權限狀態可以使用[權限 API](/zh-TW/docs/Web/API/Permissions_API) 中的 `geolocation` 使用者權限來查詢。
 
 ## 語法
 
