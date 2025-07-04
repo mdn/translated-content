@@ -3,8 +3,6 @@ title: 内容协商
 slug: Web/HTTP/Guides/Content_negotiation
 ---
 
-{{HTTPSidebar}}
-
 在 [HTTP](/zh-CN/docs/Glossary/HTTP) 协议中，**_内容协商_**是一种机制，用于为同一 URI 提供资源不同的{{Glossary("Representation header","表示")}}形式，以帮助用户代理指定最适合用户的表示形式（例如，哪种文档语言、哪种图片格式或者哪种内容编码）。
 
 > [!NOTE]
