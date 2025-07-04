@@ -1,14 +1,15 @@
 ---
 title: 测试你的技能：响应式网页设计和媒体查询
+short-title: 响应式网页设计和媒体查询
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
 
 本技能测试用于评估你是否理解[使用媒体查询的方法](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Media_queries)，并通过实际任务让你练习响应式网页设计。完成此任务所需的所有知识都包含在 [CSS 布局模块](/zh-CN/docs/Learn_web_development/Core/CSS_layout)的布局课程中。
 
 > [!NOTE]
-> 因为你需要在多种屏幕尺寸下测试你的设计，所以本页面没有交互式编辑器。请下载代码在本地完成任务，或使用在线编辑器，如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)。
+> 因为你需要在多种屏幕尺寸下测试你的设计，所以本页面没有交互式编辑器。请下载代码在本地完成任务，或使用在线编辑器，如 [CodePen](https://codepen.io/) 或 [JSFiddle](https://jsfiddle.net/)。
 >
 > 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
