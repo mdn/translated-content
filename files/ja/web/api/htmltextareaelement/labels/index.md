@@ -20,9 +20,9 @@ l10n:
 ### HTML
 
 ```html
-<label id="label1" for="test">Label 1</label>
-<textarea id="test">Some text</textarea>
-<label id="label2" for="test">Label 2</label>
+<label id="label1" for="test">ラベル 1</label>
+<textarea id="test">いくらかのテキスト</textarea>
+<label id="label2" for="test">ラベル 2</label>
 ```
 
 ### JavaScript
@@ -31,12 +31,12 @@ l10n:
 window.addEventListener("DOMContentLoaded", () => {
   const textArea = document.getElementById("test");
   for (const label of textArea.labels) {
-    console.log(label.textContent); // "Label 1" and "Label 2"
+    console.log(label.textContent); // "ラベル 1" と "ラベル 2"
   }
 });
 ```
 
-{{EmbedLiveSample("Examples", "100%", 100)}}
+{{EmbedLiveSample("例", "100%", 100)}}
 
 ## 仕様書
 

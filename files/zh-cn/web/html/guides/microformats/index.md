@@ -49,22 +49,18 @@ l10n:
 所有微格式类名使用前缀。前缀是**与词汇表无关的语法**，它们是被独立开发出来的。
 
 - **“h-\*”用于根类名**，例如“h-card”、“h-entry”、“h-feed”等。这些顶级根类通常指示一个类型和相应的预期属性词汇表。例如：
-
   - [h-card](https://microformats.org/wiki/h-card) 描述一个人或组织
   - [h-entry](https://microformats.org/wiki/h-entry) 描述具有时间戳的在线内容，如博客帖子
   - [h-feed](https://microformats.org/wiki/h-feed) 描述帖子的流或源
   - 你可以在 [microformats2 wiki 上找到更多词汇表](https://microformats.org/wiki/microformats2#v2_vocabularies)。
 
 - **“p-\*”用于纯（文本）属性**，例如：“p-name”、“p-summary”
-
   - 通用纯文本解析，一般元素文本。在某些 HTML 元素上，首先使用特殊属性，例如：img/alt、abbr/title。
 
 - **“u-\*”用于 URL 属性**，例如：“u-url”、“u-photo”、“u-logo”
-
   - 特殊解析：元素属性 a/href、img/src、object/data 等优先于元素内容。
 
 - **“dt-\*”用于 datetime 属性**，例如：“dt-start”、“dt-end”、“dt-bday”
-
   - 特殊解析：time 元素 datetime 属性、[value-class-pattern](https://microformats.org/wiki/value-class-pattern) 和单独的日期时间值解析，以提高可读性。
 
 - **“e-\*”用于元素树属性**，其中整个包含的元素层次结构是值，例如“e-content”。“e-”前缀也可以通过“元素树（element tree）”、“嵌入式标记（embedded markup）”或“封装标记（encapsulated markup）”来记忆。

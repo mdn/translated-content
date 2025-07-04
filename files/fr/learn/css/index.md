@@ -35,7 +35,6 @@ Cet article contient les modules suivants, dans l'ordre suggéré pour le parcou
 - [Composer du texte](/fr/docs/Learn/CSS/Styling_text)
   - : Ici, nous examinons les principes fondamentaux pour composer du texte&nbsp;: réglage de la police, graisse et italique, espacement des lignes et des lettres, les ombrage et autres caractéristiques. Nous complétons le module en appliquant des polices personnalisées à la page, ainsi que des listes de styles et des liens.
 - [Mise en page avec les CSS](/fr/docs/Learn/CSS/CSS_layout)
-
   - : À ce stade, ont déjà été examinés les principes fondamentaux des CSS, la façon de composer du texte, de styliser et de manipuler les boîtes où se trouve le contenu. Maintenant, il est temps de voir comment placer les boîtes au bon endroit dans la fenêtre et l'une par rapport à l'autre. Maintenant que sont couvertes les conditions préalables nécessaires, vous pouvez entrer plus avant dans les mises en page avec les CSS, regarder les divers paramètres d'affichage, les méthodes traditionnelles de mise en page y compris flottement et positionnement ainsi que les nouveaux outils de mises en page tape à l'œil, comme flexbox.
 
 ## Résolution de problèmes courants avec les CSS

@@ -69,7 +69,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%)
 - `<shape>`
   - : グラデーションの形状です。 `circle` (グラデーションの形状が一定の半径の円の意味) か `ellipse` (軸に沿った楕円の意味) のいずれかです。指定されなかった場合、既定値は `ellipse` です。
 - `<extent-keyword>`
-
   - : 終端の形状の大きさを指定するキーワードです。利用可能な値は次の通りです。
 
     | キーワード        | 説明                                                                                                                                              |

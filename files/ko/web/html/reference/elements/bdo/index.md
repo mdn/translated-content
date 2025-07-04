@@ -95,12 +95,10 @@ bdo {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `dir`
-
   - : 요소 콘텐츠의 텍스트 쓰기 방향. 가능한 값은 다음과 같습니다.
-
     - `ltr`: 텍스트를 왼쪽에서 오른쪽으로 써야 함을 나타냅니다.
     - `rtl`: 텍스트를 오른쪽에서 왼쪽으로 써야 함을 나타냅니다.
 

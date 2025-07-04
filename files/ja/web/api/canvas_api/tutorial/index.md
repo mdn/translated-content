@@ -2,7 +2,7 @@
 title: キャンバスのチュートリアル
 slug: Web/API/Canvas_API/Tutorial
 l10n:
-  sourceCommit: b280ea1234452ff553caa466bf532a66ba51db01
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{DefaultAPISidebar("Canvas API")}}
@@ -35,7 +35,6 @@ l10n:
 ## 関連情報
 
 - [Canvas トピックのページ](/ja/docs/Web/API/Canvas_API)
-- [HTML5CanvasTutorials](https://www.html5canvastutorials.com/)
 
 ## 貢献者へのメモ
 

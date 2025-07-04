@@ -2096,12 +2096,12 @@
 /ja/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS	/ja/docs/Learn_web_development/Core/Styling_basics/Sizing
 /ja/docs/Learn/CSS/Building_blocks/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
 /ja/docs/Learn/CSS/Building_blocks/Styling_tables	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
-/ja/docs/Learn/CSS/Building_blocks/Tables_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
+/ja/docs/Learn/CSS/Building_blocks/Tables_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
 /ja/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /ja/docs/Learn/CSS/Building_blocks/The_box_model	/ja/docs/Learn_web_development/Core/Styling_basics/Box_model
 /ja/docs/Learn/CSS/Building_blocks/Values_and_units	/ja/docs/Learn_web_development/Core/Styling_basics/Values_and_units
 /ja/docs/Learn/CSS/Building_blocks/Values_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values
-/ja/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
+/ja/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /ja/docs/Learn/CSS/Building_blocks/セレクタ	/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /ja/docs/Learn/CSS/CSS_layout	/ja/docs/Learn_web_development/Core/CSS_layout
 /ja/docs/Learn/CSS/CSS_layout/Flexbox	/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox
@@ -2114,7 +2114,7 @@
 /ja/docs/Learn/CSS/CSS_layout/Introduction	/ja/docs/Learn_web_development/Core/CSS_layout/Introduction
 /ja/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods	/ja/docs/Learn_web_development/Core/CSS_layout/Legacy_Layout_Methods
 /ja/docs/Learn/CSS/CSS_layout/Media_queries	/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries
-/ja/docs/Learn/CSS/CSS_layout/Multicol_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
+/ja/docs/Learn/CSS/CSS_layout/Multicol_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ja/docs/Learn/CSS/CSS_layout/Multiple-column_Layout	/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ja/docs/Learn/CSS/CSS_layout/Normal_Flow	/ja/docs/Learn_web_development/Core/CSS_layout/Introduction
 /ja/docs/Learn/CSS/CSS_layout/Position_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
@@ -2324,7 +2324,7 @@
 /ja/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies	/ja/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies
 /ja/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images	/ja/docs/Web/HTML/Guides/Responsive_images
 /ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /ja/docs/Learn/HTML/Tables	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
 /ja/docs/Learn/HTML/Tables/Advanced	/ja/docs/Learn_web_development/Core/Structuring_content/Table_accessibility
 /ja/docs/Learn/HTML/Tables/Basics	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics
@@ -2470,8 +2470,9 @@
 /ja/docs/Learn_web_development/Core/CSS_layout/Flexbox_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox
 /ja/docs/Learn_web_development/Core/CSS_layout/Floats_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Floats
 /ja/docs/Learn_web_development/Core/CSS_layout/Grid_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
-/ja/docs/Learn_web_development/Core/CSS_layout/Multicol_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn
+/ja/docs/Learn_web_development/Core/CSS_layout/Multicol_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ja/docs/Learn_web_development/Core/CSS_layout/Position_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Position
+/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn	/ja/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout
 /ja/docs/Learn_web_development/Core/CSS_layout/rwd_skills	/ja/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Responsive_design
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Arrays	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Conditionals	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Conditionals
@@ -2484,7 +2485,8 @@
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Strings	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Strings
 /ja/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/ja/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /ja/docs/Learn_web_development/Core/Structuring_content/HTML_images/Test_your_skills:_HTML_images	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Images
-/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding
+/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio/Test_your_skills:_Multimedia_and_embedding	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
+/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Multimedia_and_embedding	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Audio_and_video
 /ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/ja/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
@@ -2494,10 +2496,12 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
 /ja/docs/Learn_web_development/Core/Styling_basics/Overflow_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Overflow
 /ja/docs/Learn_web_development/Core/Styling_basics/Sizing_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Sizing
-/ja/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
+/ja/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
+/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/ja/docs/Learn_web_development/Core/Styling_basics/Tables
+/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /ja/docs/Learn_web_development/Core/Styling_basics/Values_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values
-/ja/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
+/ja/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions
 /ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/ja/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Advanced_styling	/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Advanced_styling
 /ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls	/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
@@ -5326,7 +5330,8 @@
 /ja/docs/Web/JavaScript/Other_JavaScript_tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /ja/docs/Web/JavaScript/Reference/About	/ja/docs/Web/JavaScript/Reference
 /ja/docs/Web/JavaScript/Reference/About/Formatting_Conventions	/ja/docs/MDN/Writing_guidelines/Writing_style_guide
-/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ja/docs/Web/JavaScript/Reference/Classes/Private_properties
+/ja/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ja/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ja/docs/Web/JavaScript/Reference/Classes/Private_properties	/ja/docs/Web/JavaScript/Reference/Classes/Private_elements
 /ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features/The_legacy_Iterator_protocol	/ja/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_octal	/ja/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ja/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ja/docs/Web/JavaScript/Reference/Errors/Bad_return
@@ -5928,6 +5933,7 @@
 /ja/docs/Web/Security/Public_Key_Pinning	/ja/docs/conflicting/Web/Security/Certificate_Transparency
 /ja/docs/Web/Security/Securing_your_site	/ja/docs/Web/Security/Practical_implementation_guides
 /ja/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/ja/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/ja/docs/Web/Security/Types_of_attacks	/ja/docs/Web/Security/Attacks
 /ja/docs/Web/Text_fragments	/ja/docs/Web/URI/Reference/Fragment/Text_fragments
 /ja/docs/Web/Tutorials	/ja/docs/MDN/Tutorials
 /ja/docs/Web/URI/Authority	/ja/docs/Web/URI/Reference/Authority

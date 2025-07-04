@@ -13,7 +13,6 @@ slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 
 - **定义一个浏览器动作 (browser action)，这用来附加一个按钮到 Firefox 的工具栏。**
   对于该按钮，我们将提供：
-
   - 一个文件名为 "beasts-32.png" 的图标
   - 按钮被按下时要打开的弹出窗。该弹出窗将包含 HTML、CSS 和 JavaScript。
 
@@ -85,7 +84,6 @@ cd beastify
 - [icons](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) 也是可选但推荐的，它决定了插件在附加组件中的图标。
 - **`permissions`** 列出了插件所需要的权限。在这里我们仅需要 [activeTab permission](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)。
 - **`browser_action`** 指定了工具栏按钮。我们在这里提供了三个信息片段：
-
   - **`default_icon`** 是必须的，指定了按钮的图标。
   - **`default_title`** 是可选的，用于按钮的提示。
   - **`default_popup`** 在你想要当用户点击按钮时显示出一个弹出窗时使用。而在这里，我们需要，所以我们列入这个键并将其指向扩展中包括的一个 HTML 文件。

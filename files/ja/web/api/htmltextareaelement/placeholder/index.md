@@ -3,7 +3,7 @@ title: "HTMLTextAreaElement: placeholder プロパティ"
 short-title: placeholder
 slug: Web/API/HTMLTextAreaElement/placeholder
 l10n:
-  sourceCommit: 30d0a926fffe7bcf586def53959c12a5e526fa26
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{ APIRef("HTML DOM") }}

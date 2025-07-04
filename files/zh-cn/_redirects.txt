@@ -1064,7 +1064,7 @@
 /zh-CN/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors
 /zh-CN/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Sizing
 /zh-CN/docs/Learn/CSS/Building_blocks/Styling_tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
-/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
+/zh-CN/docs/Learn/CSS/Building_blocks/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn/CSS/Building_blocks/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn/CSS/Building_blocks/The_box_model	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model
 /zh-CN/docs/Learn/CSS/Building_blocks/Values_and_units	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Values_and_units
@@ -1441,7 +1441,8 @@
 /zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills:_variables	/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Variables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Images_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Images
-/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
+/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills:_Object-oriented_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Test_your_skills/Object-oriented_JavaScript
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
@@ -2149,6 +2150,7 @@
 /zh-CN/docs/Web/API/WebGLRenderingContext/多边形偏移(polygonOffset)	/zh-CN/docs/Web/API/WebGLRenderingContext/polygonOffset
 /zh-CN/docs/Web/API/WebGL_API/Adding_2D_content_to_a_WebGL_context	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context
 /zh-CN/docs/Web/API/WebGL_API/Getting_started_with_WebGL	/zh-CN/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL
+/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading	/zh-CN/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs
 /zh-CN/docs/Web/API/WebRTC_API/Taking_still_photos	/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Taking_still_photos
 /zh-CN/docs/Web/API/WebSocket/onclose	/zh-CN/docs/Web/API/WebSocket/close_event
 /zh-CN/docs/Web/API/WebSocket/onerror	/zh-CN/docs/Web/API/WebSocket/error_event
@@ -3433,7 +3435,8 @@
 /zh-CN/docs/Web/JavaScript/Reference/Array/unshift	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
 /zh-CN/docs/Web/JavaScript/Reference/Boolean	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /zh-CN/docs/Web/JavaScript/Reference/Classes/Class_elements	/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
+/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties	/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements
 /zh-CN/docs/Web/JavaScript/Reference/Comments	/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#Comments
 /zh-CN/docs/Web/JavaScript/Reference/Date	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date
 /zh-CN/docs/Web/JavaScript/Reference/Date/getDate	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate
@@ -3740,7 +3743,7 @@
 /zh-CN/docs/Web/Progressive_web_apps/添加到主屏幕	/zh-CN/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable
 /zh-CN/docs/Web/SVG/Applying_SVG_effects_to_HTML_content	/zh-CN/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 /zh-CN/docs/Web/SVG/Attribute	/zh-CN/docs/Web/SVG/Reference/Attribute
-/zh-CN/docs/Web/SVG/Attribute/From	/zh-CN/docs/Web/SVG/Reference/Attribute/From
+/zh-CN/docs/Web/SVG/Attribute/From	/zh-CN/docs/Web/SVG/Reference/Attribute/from
 /zh-CN/docs/Web/SVG/Attribute/Styling	/zh-CN/docs/Web/SVG/Reference/Attribute
 /zh-CN/docs/Web/SVG/Attribute/accent-height	/zh-CN/docs/Web/SVG/Reference/Attribute
 /zh-CN/docs/Web/SVG/Attribute/accumulate	/zh-CN/docs/Web/SVG/Reference/Attribute/accumulate
@@ -3952,6 +3955,7 @@
 /zh-CN/docs/Web/Security/Securing_your_site	/zh-CN/docs/Web/Security/Practical_implementation_guides
 /zh-CN/docs/Web/Security/Securing_your_site/Configuring_server_MIME_types	/zh-CN/docs/Learn_web_development/Extensions/Server-side/Configuring_server_MIME_types
 /zh-CN/docs/Web/Security/Securing_your_site/Turning_off_form_autocompletion	/zh-CN/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion
+/zh-CN/docs/Web/Security/Types_of_attacks	/zh-CN/docs/Web/Security/Attacks
 /zh-CN/docs/Web/Security/传输层安全协议	/zh-CN/docs/Web/Security/Transport_Layer_Security
 /zh-CN/docs/Web/Security/子资源完整性	/zh-CN/docs/Web/Security/Subresource_Integrity
 /zh-CN/docs/Web/Text_fragments	/zh-CN/docs/Web/URI/Reference/Fragment/Text_fragments

@@ -27,9 +27,7 @@ str.normalize([form])
 ### Параметры
 
 - `form`
-
   - : Одно из значений `"NFC"`, `"NFD"`, `"NFKC"` или `"NFKD"`, определяющих форму нормализации Юникода. Если параметр опущен или равен {{jsxref("Global_Objects/undefined", "undefined")}}, будет использоваться значение `"NFC"`.
-
     - `NFC` — форма нормализации канонической композицией (Normalization Form Canonical Composition, 'NFC'), по умолчанию;
     - `NFD` — форма нормализации канонической декомпозицией (Normalization Form Canonical Decomposition, 'NFD');
     - `NFKC` — форма нормализации совместимой композицией (Normalization Form Compatibility Composition, 'NFKC');

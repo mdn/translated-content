@@ -21,7 +21,6 @@ addAll(requests)
 ### 引数
 
 - `requests`
-
   - : キャッシュに追加したいリソースのリクエストの配列です。 {{domxref("Request")}} オブジェクトまたは URL が指定できます。
 
     これらのリクエストは {{domxref("Request.Request()", "Request()")}} コンストラクターの引数として使用されるので、 URL はそのコンストラクターと同じルールに従います。すなわち、URL はベース URL からの相対パスです。ベース URL は、ウィンドウコンテキストでは文書内の {{domxref("Node.baseURI", "baseURI")}}、ワーカーコンテキストでは {{domxref("WorkerGlobalScope.location")}} が該当します。
@@ -33,7 +32,6 @@ addAll(requests)
 ### 例外
 
 - {{jsxref("TypeError")}}
-
   - : URL スキームが `http` でも `https` でもない場合。
 
     レスポンスステータスが 200 番台（つまり、成功レスポンス）ではありません。これはリクエストが成功を返さない場合や、リクエストがオリジン間の CORS ではないリクエスト (_cross-origin no-cors_ request) の場合も発生します（この場合、ステータスが常に 0 と報告されます）。

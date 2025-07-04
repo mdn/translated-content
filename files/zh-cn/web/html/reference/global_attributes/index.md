@@ -20,9 +20,7 @@ slug: Web/HTML/Reference/Global_attributes
 - [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey)
   - : 为当前元素提供一个生成键盘快捷键的提示。该属性由一个空格分隔的字符列表组成。浏览器应该使用计算机键盘布局上存在的第一个字符。
 - [`autocapitalize`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/autocapitalize)
-
   - : 控制用户的文本输入是否和如何自动大写，它可以有以下的值：
-
     - `off` 或 `none`，不应用自动大写（所有字母都默认为小写字母）。
     - `on` 或 `sentences`，每个句子的第一个字母默认为大写字母，所有其他字母都默认为小写字母。
     - `words`，每个单词的第一个字母默认为大写字母，所有其他字母都默认为小写字母。
@@ -33,26 +31,20 @@ slug: Web/HTML/Reference/Global_attributes
 - [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/class)
   - : 一个以空格分隔的元素的类名列表，它允许 CSS 和 Javascript 通过[类选择器](/zh-CN/docs/Web/CSS/Class_selectors)或 DOM 方法 {{DOMxRef("Document.getElementsByClassName()")}} 来选择和访问特定的元素。
 - [`contenteditable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/contenteditable)
-
   - : 一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，表示元素是否可被用户编辑。如果可以，浏览器会调整元素的部件以允许编辑。该属性必须是下列值之一：
-
     - `true` 或者*空字符串*，表明元素是可被编辑的；
     - `false`，表明元素不能被编辑。
 
 - [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : 形成一类属性，称为自定义数据属性，允许在 [HTML](/zh-CN/docs/Web/HTML) 和其 {{glossary("DOM")}} 表示之间交换专有信息，可由脚本使用。所有这些自定义数据属性都可以通过所属元素的 {{DOMxRef("HTMLElement")}} 接口来访问。通过 {{DOMxRef("HTMLElement.dataset")}} 属性可以访问它们。
 - [`dir`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/dir)
-
   - : 一个指示元素中文本方向的枚举属性。它的取值如下：
-
     - `ltr`，指从*左*到*右*，用于那种从左向右书写的语言（比如英语）；
     - `rtl`，指从*右*到*左*，用于那种从右向左书写的语言（比如阿拉伯语）；
     - `auto`，指由用户代理决定方向。它在解析元素中字符时会运用一个基本算法，直到发现一个具有强方向性的字符，然后将这一方向应用于整个元素。
 
 - [`draggable`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/draggable)
-
   - : 一种枚举属性，指示是否可以使用 [Drag and Drop API](/zh-CN/docs/Web/API/HTML_Drag_and_Drop_API) 拖动元素。它可以有以下的值：
-
     - `true`, 这表明元素可被拖动；
     - `false`, 这表明元素不可被拖动。
 
@@ -69,10 +61,10 @@ slug: Web/HTML/Reference/Global_attributes
 - [`inputmode`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/inputmode)
   - : 向浏览器提供有关在编辑此元素或其内容时要使用的虚拟键盘配置类型的提示。主要用于 {{HTMLElement("input")}} 元素，但在 [`contenteditable`](#contenteditable) 模式下可用于任何元素。
 - [`is`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/is)
-
   - : 允许指定标准 HTML 元素的行为如同已注册的自定义内置元素一样（有关更多详细信息，请参阅[使用自定义元素](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)）。
 
-    > **备注：** `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
+    > [!NOTE]
+    > `item*` 属性是 [WHATWG HTML 微数据特性](https://html.spec.whatwg.org/multipage/microdata.html#microdata)的一部分。
 
 - [`itemid`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/itemid)
   - : 项的唯一全局标识符。
@@ -97,18 +89,14 @@ slug: Web/HTML/Reference/Global_attributes
 - [`slot`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/slot)
   - : 将[影子 DOM](/zh-CN/docs/Web/API/Web_components/Shadow_DOM) 影子树中的一个空槽分配给一个元素：具有 `slot` 属性的元素被分配给由 {{HTMLElement("slot")}} 元素创建的空槽，其 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/slot#name) 属性的值与 `slot` 属性的值匹配。
 - [`spellcheck`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/spellcheck)
-
   - : 枚举属性，定义是否可以检查元素是否存在拼写错误。它可能具有以下值：
-
     - `true` 或空字符串，表示如果可能，应检查元素是否存在拼写错误；
     - `false`，表示不应检查元素的拼写错误。
 
 - [`style`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style)
   - : 含有要应用于元素的 [CSS](/zh-CN/docs/Web/CSS) 样式声明。请注意，建议在单独的文件中定义样式。该属性和 {{HTMLElement("style")}} 元素主要用于快速添加样式，例如用于测试目的。
 - [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex)
-
   - : 整数属性，指示元素是否可以获取输入焦点（可聚焦），是否应该参与顺序键盘导航，如果是，则表示哪个位置。它可以接受下列值之一：
-
     - *负值*表示该元素应该是可聚焦的，但不应通过顺序键盘导航到达;
     - `0` 表示元素应通过顺序键盘导航可聚焦和可到达，但其相对顺序由平台约定定义;
     - *正值*意味着元素应该可以通过顺序键盘导航进行聚焦和访问；元素聚焦的顺序是 [**tabindex**](#tabindex) 的增加值。如果多个元素共享相同的 `tabindex`，则它们的相对顺序遵循它们在文档中的相对位置。
@@ -116,16 +104,12 @@ slug: Web/HTML/Reference/Global_attributes
 - [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title)
   - : 包含表示与其所属元素相关信息的文本。这些信息通常可以作为提示呈现给用户，但不是必须的。
 - [`translate`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/translate)
-
   - : 枚举属性，用于指定在页面本地化时是否转换元素的属性值及其 {{domxref("Text")}} 节点子节点的值，或者是否保持它们不变。它可以具有以下值：
-
     - 空字符串和 `yes`，表示元素将被翻译。
     - `no`，表示该元素不会被翻译。
 
 - [`virtualkeyboardpolicy`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/virtualkeyboardpolicy)
-
   - : 一个[枚举](/zh-CN/docs/Glossary/Enumerated)属性，用于控制屏幕上的虚拟键盘行为，如平板电脑、手机或其他设备上的硬件键盘可能无法使用的元素，也使用 [`contenteditable`](#contenteditable) 属性。
-
     - `auto` 或一个*空字符串*，当元素被聚焦或点击时自动显示虚拟键盘。
     - `manual`，它将焦点和元素上的点击与虚拟键盘的状态解耦。
 

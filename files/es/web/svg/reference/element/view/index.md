@@ -16,9 +16,9 @@ Un `view` es una forma definida de ver la imagen, con un nivel de zoom o una vis
 
 ### Atributos globales
 
-- [Atributos Aria](/es/docs/Web/SVG/Attribute#aria_attributes)
-- [Atributos Core](/es/docs/Web/SVG/Attribute#core_attributes)
-- [Atributos de eventos globales](/es/docs/Web/SVG/Attribute#global_event_attributes)
+- [Atributos Aria](/es/docs/Web/SVG/Reference/Attribute#aria_attributes)
+- [Atributos Core](/es/docs/Web/SVG/Reference/Attribute#core_attributes)
+- [Atributos de eventos globales](/es/docs/Web/SVG/Reference/Attribute#global_event_attributes)
 
 ### Atributos específicos
 

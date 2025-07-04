@@ -16,7 +16,6 @@ l10n:
 プロトコルハンドラーオブジェクトには、次の値が含まれている場合があります。
 
 - `protocol` {{experimental_inline}}
-
   - : 必須の文字列で、処理するプロトコルを指定します。例えば、`mailto`、`ms-word`、`web+jngl` です。
 
 - `url` {{experimental_inline}}

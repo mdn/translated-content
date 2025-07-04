@@ -60,7 +60,6 @@ Ces ressources sont créées par des entreprises et des développeuses et dével
 <!---->
 
 - [Blocs de base en CSS](/fr/docs/Learn/CSS/Building_blocks)
-
   - : Ce module poursuit là où [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps) s'est arrêté — maintenant que vous vous êtes familiarisé avec le langage et sa syntaxe, et que vous avez acquis une certaine expérience de base de son utilisation, il est temps de plonger un peu plus profondément. Ce module traite de la cascade et de l'héritage, de tous les types de sélecteurs disponibles, des unités, de la taille, du style des arrière-plans et des bordures, du débogage et de bien d'autres choses encore.
 
     L'objectif ici est de vous fournir une boîte à outils pour écrire un CSS compétent et vous aider à comprendre toute la théorie essentielle, avant de passer à des disciplines plus spécifiques comme [le style de texte](/fr/docs/Learn/CSS/Styling_text) et [la mise en page CSS](/fr/docs/Learn/CSS/CSS_layout).
