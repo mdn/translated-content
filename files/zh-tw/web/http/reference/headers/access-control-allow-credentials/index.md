@@ -2,10 +2,8 @@
 title: Access-Control-Allow-Credentials 標頭
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Credentials
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header", "回應標頭")}}告訴瀏覽器伺服器是否允許在跨來源 HTTP 請求中包含憑證。
 
@@ -13,7 +11,7 @@ HTTP **`Access-Control-Allow-Credentials`** {{Glossary("response header", "回�
 
 用戶端可以透過以下幾種方式要求在跨站點請求中包含憑證：
 
-- 使用 {{domxref("Window/fetch", "fetch()")}}，透過將 [`credentials`](/zh-TW/docs/Web/API/RequestInit#credentials) 選項設定為 `"include"`。
+- 使用 {{domxref("Window/fetch", "fetch()")}}，將 [`credentials`](/zh-TW/docs/Web/API/RequestInit#credentials) 選項設定為 `"include"`。
 - 使用 {{domxref("XMLHttpRequest")}}，將 {{domxref("XMLHttpRequest.withCredentials")}} 屬性設定為 `true`。
 - 使用 {{domxref("EventSource()")}}，將 {{domxref("EventSource.withCredentials")}} 屬性設定為 `true`。
 
