@@ -165,8 +165,8 @@ console.log(Object.hasOwn(foo, "prop")); // true
 - [`core-js`에서 `Object.hasOwn` 폴리필](https://github.com/zloirock/core-js#ecmascript-object)
 - [`Object.hasOwn`의 es-shims 폴리필](https://www.npmjs.com/package/object.hasown)
 - {{jsxref("Object.prototype.hasOwnProperty()")}}
-- [열거성과 속성의 소유권](/en-US/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
+- [열거성과 속성의 소유권](/ko/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Statements/for...in", "for...in")}}
 - {{jsxref("Operators/in", "in")}}
-- [상속과 프로토타입 체인](/en-US/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
+- [상속과 프로토타입 체인](/ko/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)
