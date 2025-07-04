@@ -78,7 +78,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques qui peuvent correspondre à cette propriété logique :
-
   - {{cssxref("border-top")}},
   - {{cssxref("border-right")}},
   - {{cssxref("border-bottom")}},

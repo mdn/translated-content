@@ -31,9 +31,7 @@ browser.alarms.onAlarm.hasListener(listener)
 ### 引数
 
 - `callback`
-
   - : このイベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
-
     - `alarm`
       - : 発火するアラーム {{WebExtAPIRef('alarms.Alarm')}} が入ります。発火したアラームを判別するには `Alarm.name` が利用できます。
 

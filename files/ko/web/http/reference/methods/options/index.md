@@ -68,7 +68,7 @@ Server: EOS (lax004/2813)
 
 ### CORS 사전 요청
 
-[CORS](/ko/docs/Web/HTTP/CORS)에서 [사전 요청](/ko/docs/Glossary/Preflight_request)은 `OPTIONS` 메서드를 통해 전송되므로 요청을 보낼 수 있는 경우라면 서버가 응답할 수 있습니다. 이번 예제에서는 다음 매개변수에 대한 권한을 요청합니다.
+[CORS](/ko/docs/Web/HTTP/Guides/CORS)에서 [사전 요청](/ko/docs/Glossary/Preflight_request)은 `OPTIONS` 메서드를 통해 전송되므로 요청을 보낼 수 있는 경우라면 서버가 응답할 수 있습니다. 이번 예제에서는 다음 매개변수에 대한 권한을 요청합니다.
 
 - 사전 요청에서 전송되는 {{HTTPHeader("Access-Control-Request-Method")}} 헤더는 서버에 실제 요청이 전송될 때 {{HTTPMethod("POST")}} 메서드가 있음을 알려줍니다.
 - {{HTTPHeader("Access-Control-Request-Headers")}} 헤더는 서버에 실제 요청이 전송될 때 `X-PINGOTHER`와 `Content-Type` 헤더가 있음을 알려줍니다.
@@ -90,7 +90,7 @@ Access-Control-Request-Headers: X-PINGOTHER, Content-Type
 - {{HTTPHeader("Access-Control-Allow-Origin")}}
   - : `https://foo.example` 출처는 다음을 통해 `bar.example/resources/post-here/` URL을 요청할 수 있습니다.
 - {{HTTPHeader("Access-Control-Allow-Methods")}}
-  - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}} 그리고 `OPTIONS`는 이 URL에 허용되는 메서드입니다. (이 헤더는 {{HTTPHeader("Allow")}} 헤더와 유사하지만 [CORS](/ko/docs/Web/HTTP/CORS)에만 사용됩니다.)
+  - : {{HTTPMethod("POST")}}, {{HTTPMethod("GET")}} 그리고 `OPTIONS`는 이 URL에 허용되는 메서드입니다. (이 헤더는 {{HTTPHeader("Allow")}} 헤더와 유사하지만 [CORS](/ko/docs/Web/HTTP/Guides/CORS)에만 사용됩니다.)
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : `X-PINGOTHER` 및 `Content-Type`은 URL에 대해 허용되는 요청 헤더입니다.
 - {{HTTPHeader("Access-Control-Max-Age")}}
@@ -124,4 +124,4 @@ Connection: Keep-Alive
 ## 같이 보기
 
 - {{HTTPHeader("Allow")}} 헤더
-- [CORS](/ko/docs/Web/HTTP/CORS)
+- [CORS](/ko/docs/Web/HTTP/Guides/CORS)

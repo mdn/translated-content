@@ -30,9 +30,7 @@ Object.fromEntries(iterable)
 ### 参数
 
 - `iterable`
-
   - : 一个包含对象列表的[可迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)对象，例如 {{jsxref("Array")}} 或者 {{jsxref("Map")}}。每个对象都要有两个属性：
-
     - `0`
       - : 表示属性键的字符串或者 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。
     - `1`

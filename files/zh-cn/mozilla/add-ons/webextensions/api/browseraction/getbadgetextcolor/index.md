@@ -26,9 +26,7 @@ browser.browserAction.getBadgeTextColor(
 ### 参数
 
 - details
-
   - : `object`。
-
     - `tabId` {{optional_inline}}
       - : `integer`。指定从中获取徽章文本颜色的标签页。
     - `windowId` {{optional_inline}}

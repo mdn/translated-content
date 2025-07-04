@@ -51,7 +51,6 @@ progress {
 ## 参见
 
 - The pseudo-elements used by WebKit/Blink to style other parts of a {{HTMLElement("progress")}} element:
-
   - {{ cssxref("::-webkit-progress-value") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

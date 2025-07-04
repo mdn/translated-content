@@ -125,7 +125,6 @@ Sec-Fetch-Site: cross-site
 ## 参见
 
 - 相关的标头
-
   - {{HTTPHeader("Sec-Fetch-Mode")}}
   - {{HTTPHeader("Sec-Fetch-Site")}}
   - {{HTTPHeader("Sec-Fetch-User")}}

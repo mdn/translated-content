@@ -85,7 +85,7 @@ document.createElement("pre");
 // 77.と77.0は同じものとして評価されます
 ```
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
+さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
 
 ### ブラケット記法
 

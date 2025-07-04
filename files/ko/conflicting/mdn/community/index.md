@@ -8,7 +8,7 @@ l10n:
 
 {{MDNSidebar}}
 
-- [시작하기](/ko/docs/MDN/Community/Contributing/Getting_started)
-- [우리의 저장소](/ko/docs/MDN/Community/Contributing/Our_repositories)
-- [Translated content](/ko/docs/MDN/Community/Contributing/Translated_content)
+- [시작하기](/ko/docs/MDN/Community/Getting_started)
+- [우리의 저장소](/ko/docs/orphaned/MDN/Community/Contributing/Our_repositories)
+- [Translated content](/ko/docs/MDN/Community/Translated_content)
 - [보안 취약점 대응](/ko/docs/MDN/Community/Contributing/Security_vulnerability_response)

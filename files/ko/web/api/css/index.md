@@ -23,7 +23,6 @@ _CSS 인터페이스는 유틸리티 인터페이스이며, 이러한 형식의 
 - {{domxref("CSS.registerProperty()")}}
   - : [사용자 지정 CSS 속성](/ko/docs/Web/CSS/--*)을 등록하고 속성 자료형 검사, 기본값, 상속 여부 등을 설정할 수 있습니다.
 - {{domxref("CSS.supports()")}}
-
   - : 매개변수로 주어진 속성-값 쌍 또는 조건의 지원 여부를 나타내는 {{jsxref("Boolean")}}을 반환합니다.
 
 - {{domxref("CSS.escape()")}} {{experimental_inline}}

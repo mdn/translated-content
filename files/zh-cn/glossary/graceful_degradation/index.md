@@ -19,6 +19,5 @@ l10n:
 - [处理常见的 HTML 和 CSS 问题](/zh-CN/docs/Learn_web_development/Extensions/Testing/HTML_and_CSS)
 - [实现特性检测](/zh-CN/docs/Learn_web_development/Extensions/Testing/Feature_detection)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Polyfill")}}
   - {{Glossary("Progressive enhancement", "渐进增强")}}

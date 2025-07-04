@@ -546,7 +546,7 @@ const filledRectangle = new FilledRectangle(5, 10, "blue");
 // filledRectangle ---> FilledRectangle.prototype ---> Rectangle.prototype ---> Object.prototype ---> null
 ```
 
-在定义复杂的继承结构时，类提供了非常高的可读性和可维护性。[私有属性](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)是原型继承中没有简单替代方案的特性。然而，类比传统的构造函数的性能要差，而且不支持旧环境。
+在定义复杂的继承结构时，类提供了非常高的可读性和可维护性。[私有元素](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)是原型继承中没有简单替代方案的特性。然而，类比传统的构造函数的性能要差，而且不支持旧环境。
 
 ### 使用 Object.setPrototypeOf()
 
@@ -565,7 +565,8 @@ Object.setPrototypeOf(obj, anotherObj);
 
 所有对象都继承了 [`Object.prototype.__proto__`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) setter，它可以用来设置现有对象的 `[[Prototype]]`（如果对象的 `__proto__` 属性没有被覆盖）。
 
-> **警告：** `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf`。
+> [!WARNING]
+> `Object.prototype.__proto__` 访问器是**非标准**的，且已被弃用。你应该几乎总是使用 `Object.setPrototypeOf`。
 
 ```js
 const obj = {};

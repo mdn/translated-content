@@ -19,9 +19,7 @@ insertAdjacentElement(position, element)
 ### 引数
 
 - `position`
-
   - : 文字列で、 `targetElement` の相対位置を表します。以下の何れかの文字列と一致する必要があります（大文字小文字の区別なし）。
-
     - `'beforebegin'`: `targetElement` 自体の前。
     - `'afterbegin'`: `targetElement` の直下、最初の子の前。
     - `'beforeend'`: `targetElement` の直下、最後の子の後。

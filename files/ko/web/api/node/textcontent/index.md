@@ -40,7 +40,6 @@ someOtherNode.textContent = string;
 
 - `textContent`는 {{htmlelement("script")}}와 {{htmlelement("style")}} 요소를 포함한 모든 요소의 콘텐츠를 가져옵니다. 반면 `innerText`는 "사람이 읽을 수 있는" 요소만 처리합니다.
 - `textContent`는 노드의 모든 요소를 반환합니다. 그에 비해 `innerText`는 스타일링을 고려하며, "숨겨진" 요소의 텍스트는 반환하지 않습니다.
-
   - 또한, `innerText`의 CSS 고려로 인해, innerText 값을 읽으면 최신 계산값을 반영하기 위해 {{glossary("reflow", "리플로우")}}가 발생합니다. (리플로우 계산은 비싸므로 가능하면 피해야 합니다)
 
 - Internet Explorer 기준, `innerText`를 수정하면 요소의 모든 자식 노드를 제거하고, 모든 자손 텍스트 노드를 영구히 파괴합니다. 이로 인해, 해당 텍스트 노드를 이후에 다른 노드는 물론 같은 노드에 삽입하는 것도 불가능합니다.

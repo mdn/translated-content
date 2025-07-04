@@ -67,7 +67,7 @@ l10n:
 <meta name="viewport" content="width=500, initial-scale=1" />
 ```
 
-그 외 [속성들](/ko/docs/Web/HTML/Element/meta#attributes) 로는 `minimum-scale`, `maximum-scale`, `user-scalable` 이 있습니다. 이러한 속성은 초기 크기와 너비에 영향을 미치고 줌 레벨의 변화를 제한합니다.
+그 외 [속성들](/ko/docs/Web/HTML/Reference/Elements/meta#attributes) 로는 `minimum-scale`, `maximum-scale`, `user-scalable` 이 있습니다. 이러한 속성은 초기 크기와 너비에 영향을 미치고 줌 레벨의 변화를 제한합니다.
 
 ## 대화형 UI 위젯의 효과
 
@@ -82,7 +82,7 @@ l10n:
 - `overlays-content`
   - {{Glossary("viewport")}} 또는 {{Glossary("visual viewport")}}는 대화형 위젯에 의해 크기가 조정되지 않습니다.
 
-{{Glossary("viewport")}} 의 크기가 조정되면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 도 크기가 조정되어 [뷰포트 단위](/ko/docs/Web/CSS/length#viewport-percentage_lengths) 의 계산된 크기에 영향을 미칩니다.
+{{Glossary("viewport")}} 의 크기가 조정되면 초기 [컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 도 크기가 조정되어 [뷰포트 단위](/ko/docs/Web/CSS/length#viewport-percentage_lengths) 의 계산된 크기에 영향을 미칩니다.
 
 ## 모바일 및 태블릿 장치의 일반 뷰포트 크기
 

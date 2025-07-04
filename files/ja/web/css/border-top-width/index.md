@@ -74,9 +74,7 @@ border-top-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

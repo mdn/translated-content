@@ -394,7 +394,6 @@ L'élément [`<label>`](/fr/docs/Web/HTML/Element/label) qui précède l'éléme
 - [`<input type="tel">`](/fr/docs/Web/HTML/Element/input)
 - [`<input type="url">`](/fr/docs/Web/HTML/Element/input/url)
 - Les attributs&nbsp;:
-
   - [`list`](/fr/docs/Web/HTML/Element/input#attr-list)
   - [`minlength`](/fr/docs/Web/HTML/Attributes/minlength)
   - [`maxlength`](/fr/docs/Web/HTML/Attributes/maxlength)

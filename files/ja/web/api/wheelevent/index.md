@@ -32,7 +32,6 @@ _このインターフェイスは、その祖先である {{DOMxRef("MouseEvent
 - {{DOMxRef("WheelEvent.deltaZ")}} {{ReadOnlyInline}}
   - : Z 軸方向のスクロール量を表す `double` を返します。
 - {{DOMxRef("WheelEvent.deltaMode")}} {{ReadOnlyInline}}
-
   - : スクロール量の差分値の単位を表す `unsigned long` を返します。許容値は以下のとおりです:
 
     | 定数              | 値     | 説明                                                                                                                                                           |
@@ -66,5 +65,4 @@ _このインターフェイスではメソッドが定義されていません�
 
 - {{domxref("Element/wheel_event", "wheel")}} イベント
 - 置き換えたインターフェイス:
-
   - Gecko の古いマウスホイールイベントオブジェクト: {{DOMxRef("MouseScrollEvent")}}

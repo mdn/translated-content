@@ -21,9 +21,7 @@ new EventSource(url, options)
 - `url`
   - : 文字列で、イベント/メッセージを処理するリモートリソースの場所を表します。
 - `options` {{optional_inline}}
-
   - : 新しいコネクションを構成するオプションを提供します。可能な項目は次のとおりです。
-
     - `withCredentials` {{optional_inline}}
       - : 論理値で、既定値は `false` であり、 CORS の資格情報を `include` に設定すべきかどうかを示します。
 
