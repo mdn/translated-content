@@ -9,7 +9,7 @@ l10n:
 
 명시된 객체에 자체 속성으로 지정된 속성이 있는 경우 **`Object.hasOwn()`** 정적 메서드는 `true`를 반환합니다. 속성이 상속되었거나 존재하지 않으면 이 메서드는 `false`를 반환합니다.
 
-> [!NOTE]  
+> [!NOTE]
 > `Object.hasOwn()`은 {{jsxref("Object.prototype.hasOwnProperty()")}}를 대체하기 위한 것입니다.
 
 {{InteractiveExample("JavaScript Demo: Object.hasOwn()")}}
