@@ -16,7 +16,6 @@ _Cette interface n'hérite d'aucune propriété._
 - {{domxref("TreeWalker.root")}} {{readonlyInline}}
   - : Renvoie un {{domxref("Node")}} (_noeud_) représentant le noeud racine comme spécifié lors de la création du `TreeWalker`.
 - {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
-
   - : Renvoie un `unsigned long` (_long non signé_), celui-ci étant un masque constitué de constantes décrivant les types de {{domxref("Node")}} qui doivent être présentés. Les noeuds ne correspondants pas sont ignorés, mais leurs enfants peuvent être inclus, le cas échéant. Les valeurs possibles sont :
 
     <table class="standard-table">

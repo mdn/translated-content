@@ -28,9 +28,7 @@ var nouveauTableau = arr.map(callback [, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction qui est utilisée pour créer un élément du nouveau tableau. Elle utilise trois arguments :
-
     - `valeurCourante`
       - : La valeur de l'élément du tableau à traiter.
     - `index`{{optional_inline}}

@@ -21,9 +21,7 @@ browser.bookmarks.getRecent(
 - `numberOfItems`
   - : 取得する要素の最大個数を指定する整数です。最近追加された要素のうち、ここで指定した個数までが戻り値のリストに含まれます。
 - `callback`
-
   - : リストが取得された際に実行される関数です。この関数には以下の引数が渡ります。
-
     - `results`
       - : 各要素が 1 つのブックマークノードを表す {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}} オブジェクトの {{jsxref("array")}}
 

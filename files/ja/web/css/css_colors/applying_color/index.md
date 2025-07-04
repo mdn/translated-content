@@ -26,27 +26,21 @@ l10n:
 要素がレンダリングされるたびに、テキスト、その背景、およびテキストの装飾の色を決定するために以下のプロパティが使用されます。
 
 - {{cssxref("color")}}
-
   - : テキストと[テキスト装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (下線や上線、打ち消し線などを付加するもの) に使用する色です。
 
 - {{cssxref("background-color")}}
-
   - : テキストの背景色です。
 
 - {{cssxref("text-shadow")}}
-
   - : テキストに適用する影の効果を設定します。影の設定には、影のベース色 (他のパラメータに基づいて背景をぼかして混色する色) があります。より詳しくは基本的な[テキストとフォントの装飾](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals)の[テキストのドロップシャドウ](/ja/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows)を参照してください。
 
 - {{cssxref("text-decoration-color")}}
-
   - : テキスト装飾（下線、取り消し線など）の既定の色は [`currentcolor`](/ja/docs/Web/CSS/color_value#currentcolor_キーワード) です。このキーワードは、`color` プロパティの現在の値を表します。ただし、`text-decoration-color` プロパティを使用して、その値を上書きし、異なる色を使用することができます。
 
 - {{cssxref("text-emphasis-color")}}
-
   - : テキスト内の各文字に隣接する強調記号をレンダリングする際に使用する色です。これは主に、東アジア言語のテキストを描画する際に使用します。
 
 - {{cssxref("caret-color")}}
-
   - : 要素の {{Glossary("caret", "キャレット")}} (テキスト入力カーソルとも表現されるもの) の描画に使用する色です。これは編集可能な要素でのみ有用であり、{{HTMLElement("input")}} や {{HTMLElement("textarea")}} または HTML の [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) 属性が `true` に設定された要素に使用されます。
 
 ### ボックス
@@ -54,23 +48,18 @@ l10n:
 すべての要素は中身があるボックスであり、そのボックスの内容に加えて、背景と境界線もあります。
 
 - [境界線](#境界線)
-
   - : ボックスの境界線の色を設定できる CSS プロパティ一覧は、[境界線](#境界線)の節を参照してください。
 
 - {{cssxref("background-color")}}
-
   - : 要素の内容がない領域で使用される背景色です。
 
 - {{cssxref("box-shadow")}}
-
   - : ボックスに挿入する影とドロップシャドウ効果を構成します。それぞれの影のオプションには、影の基本色（これはぼかされ、他の引数に基づいて背景と混合されます）が含まれます。
 
 - {{cssxref("column-rule-color")}}
-
   - : [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)を使用しているときに、テキストの列を区切る線に使う色です。
 
 - {{cssxref("outline-color")}}
-
   - : 要素の外側に輪郭を描画する際に使用する色です。この輪郭は、文書内の補助的な空間を確保しないという点で、ボーダーとは異なります。輪郭は[ボックスモデル](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model)には参加せず、他のコンテンツと重複します。輪郭は一般的にフォーカスインジケーターとして使用され、現在どの要素がフォーカスを持っており、キーボード入力イベントを受信するかを示します。
 
 ### 境界線
@@ -81,19 +70,15 @@ l10n:
 {{cssxref("border")}} 一括指定プロパティを使用することもできます。これは、境界線に関する (色以外の[線幅](/ja/docs/Web/CSS/border-width)、[線種](/ja/docs/Web/CSS/border-style)（実線、破線など) などの特性も含んだ）すべての設定をこれ一つで行えます。
 
 - {{cssxref("border-color")}} 一括指定
-
   - : 要素の境界線の各辺に使用する単一の色を指定します。
 
 - {{cssxref("border-left-color")}}, {{cssxref("border-right-color")}}, {{cssxref("border-top-color")}}, {{cssxref("border-bottom-color")}}
-
   - : 要素の境界線の各辺に対応する色を指定できます。
 
 - {{cssxref("border-block-start-color")}}, {{cssxref("border-block-end-color")}}
-
   - : これらは、境界線が囲むブロックの先頭と末尾に最も近い境界線の描画色を設定することができます。左から右への書き方（英語の書き方など）では、ブロック先頭の境界線は上端、ブロック末尾の境界線は下端になります。これは、インラインの先頭とインラインの末尾である左右の（ボックス内の各行のテキストの先頭と末尾の位置に対応する）端とは異なります。
 
 - {{cssxref("border-inline-start-color")}}, {{cssxref("border-inline-end-color")}}
-
   - : これらは、ボックス内のテキスト行の先頭と末尾に最も近い境界線の縁に色を付けられます。どちら側になるかは {{cssxref("writing-mode")}}、{{cssxref("direction")}}、{{cssxref("text-orientation")}} プロパティによって異なり、ふつうは（ただし常にではなく）表示する言語の書字方向に基づいて調整されます。例えば、ボックスのテキストが右から左に描画される場合、`border-inline-start-color` は境界線の右側に適用されます。
 
 ## スタイルシートで色を値として指定

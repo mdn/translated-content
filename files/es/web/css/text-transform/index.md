@@ -46,7 +46,6 @@ text-transform: unset;
 ### Valores
 
 - `capitalize`
-
   - : Es una palabra clave que fuerza a que la primera _letra_ de cada palabra sea convertida a mayúscula. EL resto de caracteres no es modificado; eso significa que mantienen su tamaño original, como haya sido escrito en el texto del elemento. Una letra es cualquier caracter Unicode que sea parte de la categoría general de Letras o Números {{experimental_inline}}: esto excluye cualquier signo de puntuación o símbolos al principio de la palabra.
 
     > [!NOTE]

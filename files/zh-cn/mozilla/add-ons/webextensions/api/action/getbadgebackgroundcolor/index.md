@@ -25,9 +25,7 @@ browser.action.getBadgeBackgroundColor(
 ### 参数
 
 - `details`
-
   - : 一个拥有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取徽章背景颜色的标签页。
     - `windowId` {{optional_inline}}

@@ -44,7 +44,6 @@ XPath utilise une notation en chemin (à l'instar des URL) pour naviguer dans la
 - **[EXSLT](/fr/docs/Web/EXSLT)**
 - **[XPath](/fr/docs/Web/XPath)**
 - Guides
-
   1. [Comparaison entre XPath et les sélecteurs CSS](/fr/docs/Web/XPath/Comparison_with_CSS_selectors)
   2. [Exemples de fragments XPath](/fr/docs/Web/XPath/Snippets)
 

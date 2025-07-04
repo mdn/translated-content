@@ -21,9 +21,7 @@ l10n:
   - : 文書全体を通して相対 URL に使用される基底 URL です。絶対 URL と相対 URL が使用できます。
     [`data:`](/ja/docs/Web/URI/Reference/Schemes/data) および [`javascript:`](/ja/docs/Web/URI/Reference/Schemes/javascript) の URL は利用できません。
 - `target`
-
   - : **キーワード**または**制作者が定義した名前**で、既定の{{Glossary("browsing context", "閲覧コンテキスト")}}を表し、 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}} のいずれかの要素が明示的に `target` 属性を持たない場合に、移動の結果を表示する先として使用されます。以下のキーワードは特別な意味を持ちます。
-
     - `_self` （既定値）: 現在の閲覧コンテキストに結果を表示します。
     - `_blank`: 新しい無名の閲覧コンテキストに結果を表示します。
     - `_parent`: 現在のコンテキストの親の閲覧コンテキストに結果を表示します。親がない場合、このオプションは `_self` と同じ振る舞いをします。

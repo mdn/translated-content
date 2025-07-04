@@ -36,15 +36,12 @@ onkeypress = (event) => {};
 _このインターフェイスには親である {{domxref("UIEvent")}} や {{domxref("Event")}} から継承したプロパティもあります。_
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Alt</kbd> （macOS の場合は <kbd>Option</kbd> または <kbd>⌥</kbd>）キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : 文字列で、このイベントが表す物理キーのコード値を返します。
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、そのキーイベントが発生した際に <kbd>Ctrl</kbd> キーが押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -54,13 +51,11 @@ _このインターフェイスには親である {{domxref("UIEvent")}} や {{d
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : 数値で、キーボードなどの入力機器上のキーの位置を表す値を返します。位置を特定する定数の一覧は、[キーボード上の位置](/ja/docs/Web/API/KeyboardEvent#キーボード上の位置)にあります。
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Meta</kbd> キー（Mac キーボードでは <kbd>⌘ Command</kbd> キー、 Windows キーボードでは Windows キー (<kbd>⊞</kbd>)）が押されていれば `true` を返します。
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : 論理値で、このキーが押し続けられて自動リピートしている場合に `true` を返します。
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : 論理値で、このキーイベントが発生した際に <kbd>Shift</kbd> キーが押されていれば `true` を返します。
 
 ## 例
@@ -108,7 +103,6 @@ input.onkeypress = logKey;
 
 - 同様にこのイベントのターゲットとなる {{domxref("Document")}} インターフェイス。
 - 関連イベント:
-
   - [`input`](/ja/docs/Web/API/Element/input_event)
   - [`keydown`](/ja/docs/Web/API/Element/keydown_event)
   - [`keyup`](/ja/docs/Web/API/Element/keyup_event)

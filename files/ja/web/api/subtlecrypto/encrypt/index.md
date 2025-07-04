@@ -22,7 +22,6 @@ encrypt(algorithm, key, data)
 ### 引数
 
 - `algorithm`
-
   - : 使用する[アルゴリズム](#対応しているアルゴリズム)と、必要に応じて追加の引数を指定するオブジェクトです。
     - [RSA-OAEP](#rsa-oaep) を使用するには、 {{domxref("RsaOaepParams")}} を渡してください。
     - [AES-CTR](#aes-ctr) を使用するには、 {{domxref("AesCtrParams")}} を渡してください。

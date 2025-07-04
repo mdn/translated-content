@@ -207,7 +207,7 @@ console.log(o.a); // 38
 
 ### クラスコンテキスト
 
-[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は、静的コンテキストとインスタンスコンテキストの 2 つに分けることができます。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)、メソッド、インスタンスフィールド初期化子（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)）はインスタンスコンテキストに属します。[静的](/ja/docs/Web/JavaScript/Reference/Classes/static)メソッド、静的フィールド初期化子、静的初期化ブロックは静的コンテキストに属します。それぞれのコンテキストで、`this` の値が異なります。
+[クラス](/ja/docs/Web/JavaScript/Reference/Classes)は、静的コンテキストとインスタンスコンテキストの 2 つに分けることができます。[コンストラクター](/ja/docs/Web/JavaScript/Reference/Classes/constructor)、メソッド、インスタンスフィールド初期化子（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)）はインスタンスコンテキストに属します。[静的](/ja/docs/Web/JavaScript/Reference/Classes/static)メソッド、静的フィールド初期化子、静的初期化ブロックは静的コンテキストに属します。それぞれのコンテキストで、`this` の値が異なります。
 
 クラスのコンストラクターは常に `new` で呼び出されるため、その動作は[関数コンストラクター](#コンストラクター)と同じです。`this` 値は、作成される新しいインスタンスです。 クラスメソッドは、オブジェクトリテラル内のメソッドと同じように動作します。`this` 値は、メソッドがアクセスされたオブジェクトです。 メソッドが他のオブジェクトに転送されない場合、`this` は通常、クラスのインスタンスです。
 

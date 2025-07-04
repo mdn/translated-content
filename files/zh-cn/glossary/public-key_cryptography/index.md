@@ -22,7 +22,6 @@ l10n:
 - [Web Crypto API](/zh-CN/docs/Web/API/Web_Crypto_API)
 - [SubtleCrypto 支持的算法](/zh-CN/docs/Web/API/SubtleCrypto#支持的算法)
 - 术语
-
   - {{Glossary("Symmetric-key cryptography", "对称密钥密码")}}
 
 - 维基百科上的[公开密钥密码学](https://zh.wikipedia.org/wiki/公开密钥加密)

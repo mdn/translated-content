@@ -152,7 +152,7 @@ setTimeout(function() { ... }, 1000);
 elt.addEventListener("click", function() { ... } , false);
 ```
 
-Las [clausuras o cierres](/es/docs/Web/JavaScript/Closures)(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
+Las [clausuras o cierres](/es/docs/Web/JavaScript/Guide/Closures)(art. en inglés) son muy útiles como forma de crear funciones parametrizadas sin la concatenación de cadenas de caracteres o strings.
 
 ### Analizando JSON (convirtiendo cadenas de caracteres (strings) hacia objetos de JavaScript)
 
@@ -162,7 +162,7 @@ Observe, que ya que la sintaxis de JSON es limitada en comparación con la sinta
 
 ### Pasar datos en lugar de código
 
-Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/Web/XPath) (art. en inglés) en lugar de código JavaScript.
+Por ejemplo, una extensión diseñada para arrastar contenido de páginas web podría tener reglas de arrastre definidas en [XPath](/es/docs/Web/XML/XPath) (art. en inglés) en lugar de código JavaScript.
 
 ### Ejecutar código sin privilegos limitados
 

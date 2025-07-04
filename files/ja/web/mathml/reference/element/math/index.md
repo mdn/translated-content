@@ -18,9 +18,7 @@ l10n:
 この要素の属性には、[グローバル MathML 属性](/ja/docs/Web/MathML/Reference/Global_attributes)の他に以下の属性があります。
 
 - `display`
-
   - : この[列挙](/ja/docs/Glossary/Enumerated)属性は、囲まれた MathML マークアップをレンダリングする方法を指定します。これは、次のいずれかの値を取ることができます。
-
     - `block` は、この要素が現在のテキストのスパンの外にある独自のブロックに表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `normal` に設定されていることを意味します。
     - `inline` は、この要素が現在のテキストのスパンの中に表示され、 [`math-style`](/ja/docs/Web/CSS/math-style) が `compact` に設定されていることを意味します。
 

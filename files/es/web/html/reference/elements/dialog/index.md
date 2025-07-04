@@ -54,7 +54,7 @@ El **elemento** **HTML `<dialog>`** representa una caja de diálogo u otro compo
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes). El atributo `tabindex` no debe utilizarse en el elemento `<dialog>`.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes). El atributo `tabindex` no debe utilizarse en el elemento `<dialog>`.
 
 - `open`
   - : Indica que el diálogo está activo y disponible para interactuar. Cuando el atributo open no está asignado, no debe mostrarse al usuario.

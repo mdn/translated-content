@@ -246,7 +246,7 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 > **Nota:** **Desaprobado. Evita estos métodos.** Son de uso limitado, ya que proporcionan solo un subconjunto de las etiquetas y atributos HTML disponibles.
 
 - {{jsxref("String.prototype.anchor()")}}
-  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Element/a#name) (hipertexto destino)
+  - : [&lt;a name=\"name\"&gt;](/es/docs/Web/HTML/Reference/Elements/a#name) (hipertexto destino)
 - {{jsxref("String.prototype.big()")}}
   - : {{HTMLElement("big")}}
 - {{jsxref("String.prototype.blink()")}}
@@ -256,13 +256,13 @@ Ambos métodos anteriores dan como resultado cadenas idénticas.
 - {{jsxref("String.prototype.fixed()")}}
   - : {{HTMLElement("tt")}}
 - {{jsxref("String.prototype.fontcolor()")}}
-  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Element/font#color)
+  - : [&lt;font color=\"color\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#color)
 - {{jsxref("String.prototype.fontsize()")}}
-  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Element/font#size)
+  - : [&lt;font size=\"size\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#size)
 - {{jsxref("String.prototype.italics()")}}
   - : {{HTMLElement("i")}}
 - {{jsxref("String.prototype.link()")}}
-  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Element/font#size) (enlace a URL)
+  - : [&lt;a href=\"url\"&gt;](/es/docs/Web/HTML/Reference/Elements/font#size) (enlace a URL)
 - {{jsxref("String.prototype.small()")}}
   - : {{HTMLElement("small")}}
 - {{jsxref("String.prototype.strike()")}}
@@ -295,7 +295,7 @@ for (let i = 0, n = inputValues.length; i < n; ++i) {
 
 ## Ve también
 
-- [Formato de texto en la Guía de JavaScript](/es/docs/Web/JavaScript/Guide/Text_formatting)
+- [Formato de texto en la Guía de JavaScript](/es/docs/conflicting/Web/JavaScript/Guide/Numbers_and_strings)
 - {{jsxref("RegExp")}}
 - {{domxref("DOMString")}}
 - [`StringView` — una representación similar a C de cadenas basada en arreglos tipados](/es/docs/Mozilla/Add-ons/Code_snippets/StringView)

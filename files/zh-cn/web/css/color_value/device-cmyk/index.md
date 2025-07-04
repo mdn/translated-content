@@ -22,15 +22,12 @@ device-cmyk(0 81% 81% 30% / .5, rgb(178 34 34));
 函数标记：`device-cmyk(C M Y K[ / A][, color])`
 
 - `C`、`M`、`Y`、`K`
-
   - : {{CSSXref("number")}} 或 {{CSSXref("percentage")}} 值，提供 CMYK 颜色的青色、品红色、黄色和黑色成分。
 
 - `A` {{optional_inline}}
-
   - : {{CSSXref("&lt;alpha-value&gt;")}} 值，其中 `1` 对应 `100%`（完全不透明）。
 
 - `color` {{optional_inline}}
-
   - : 可选的后备 {{CSSXref("&lt;color&gt;")}} 值，当用户代理不知道如何将 CMYK 颜色转换为 RGB 颜色时使用。
 
 ### 形式语法

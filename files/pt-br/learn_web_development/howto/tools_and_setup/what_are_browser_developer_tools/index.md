@@ -18,12 +18,10 @@ O devtools está inserido no navegador em uma janela semelhante a esta:
 Como você acessa? Três modos:
 
 - _**Teclado.**_ _<kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd>_, exceto:
-
   - **Internet Explorer.<kbd> </kbd>**_<kbd>F12</kbd>_
   - **Mac OS X.** _<kbd>⌘</kbd> + <kbd>⌥</kbd> +<kbd> I</kbd>_
 
 - _**Menu bar.**_
-
   - **Firefox.** Menu ![](2014-01-10-13-08-08-f52b8c.png) *➤ ![](screenshot_from_2014-11-26_14-24-56.png) *➤ Web Developer ➤ Toggle Tools,_ or \_Tools ➤_ _Web Developer ➤ Toggle Tools_
   - **Chrome.** _View ➤ Developer ➤ Developer Tools_
   - **Safari.** _Develop ➤ Show Web Inspector._ Se você não consegue ver o _menu Desenvolvedor_ , vá para _Safari ➤ Preferências ➤ Avançado_ e confira o _Show Develop menu no menu bar_ checkbox.

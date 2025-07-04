@@ -31,7 +31,6 @@ label {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `value`
-
   - : 当前数值。如果指定了最小值和最大值（`min` 属性和 `max` 属性），则必须介于这两个值之间。如果未指定或格式错误，则值为 `0`。如果指定的值不在 `min` 属性和 `max` 属性给定的范围内，则该值等于范围的最近端。
 
     > [!NOTE]

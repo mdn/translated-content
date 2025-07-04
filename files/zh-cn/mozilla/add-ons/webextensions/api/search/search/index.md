@@ -24,9 +24,7 @@ browser.search.search(
 ### 参数
 
 - `searchProperties`
-
   - : `object`. 拥有以下属性的对象：
-
     - `query`
       - : `字符串`. 进行查询的内容。
     - `engine`{{optional_inline}}

@@ -157,7 +157,6 @@ button {
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux listes&nbsp;:
-
   - [`<ol>`](/fr/docs/Web/HTML/Element/ol)
   - [`<ul>`](/fr/docs/Web/HTML/Element/ul)
   - [`<li>`](/fr/docs/Web/HTML/Element/li)

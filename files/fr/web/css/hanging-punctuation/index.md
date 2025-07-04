@@ -38,12 +38,10 @@ Cette propriété peut être définie grâce à une, deux ou trois valeurs :
 
 - Avec une valeur : on utilisera l'un des mots-clés de la liste ci-après
 - Avec deux valeurs :
-
   - le mot-clé `first` avec un des mots-clés parmi : `last`, `allow-end` ou `force-end`
   - ou le mot-clé `last` avec un des mots-clés parmi : `last`, `allow-end` ou `force-end`
 
 - Avec trois valeurs :
-
   - `first`, `allow-end` et `last`
   - ou `first`, `force-end` et `last`
 

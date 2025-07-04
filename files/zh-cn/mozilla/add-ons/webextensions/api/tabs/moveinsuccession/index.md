@@ -30,9 +30,7 @@ browser.tabs.moveInSuccession([1, 3, 5, 7, 2, 9], 4, {insert:true})
 - `tabId` {{optional_inline}}
   - : `integer`。将成为 `tabIds` 数组中最后一个标签页的后继的标签页 `ID`。如果此 `ID` 无效或者为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}，则最后一个标签页将没有后继。默认为 {{WebExtAPIRef('tabs.TAB_ID_NONE')}}。
 - `options` {{optional_inline}}
-
   - : `object`。
-
     - `append` {{optional_inline}}
       - : `boolean`。确定是否将 `tabIds` 中的标签页移到 `tabId` 之前或之后。如果为 `false`，标签页将移到 `tabId` 之前；如果为 `true`，标签页将移到 `tabId` 之后。默认为 `false`。
     - `insert` {{optional_inline}}

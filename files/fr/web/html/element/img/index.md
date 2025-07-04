@@ -70,7 +70,6 @@ Si une erreur se produit lors du chargement ou du rendu de l'image et qu'un gest
 On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 - `alt`
-
   - : Définit une description textuelle alternative pour l'image.
 
     > [!NOTE]
@@ -87,7 +86,6 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Cet attribut est également utilisé pour copier/coller l'image vers du texte ou pour enregistrer un marque-page avec l'image associée.
 
 - `attributionsrc` {{experimental_inline}}
-
   - : Indique au navigateur d'envoyer un en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) avec la requête pour l'image.
 
     Côté serveur, cela sert à déclencher l'envoi d'un en-tête [`Attribution-Reporting-Register-Source`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Source) ou [`Attribution-Reporting-Register-Trigger`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger) dans la réponse afin d'enregistrer une [source d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources) ou [un déclencheur d'attribution](/fr/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers). L'en-tête de réponse renvoyé dépend de la valeur de l'en-tête `Attribution-Reporting-Eligible` ayant déclenché l'enregistrement.
@@ -98,7 +96,6 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     > Voir [l'API sur les rapports d'attribution](/fr/docs/Web/API/Attribution_Reporting_API) pour plus de détails.
 
     Il existe deux versions de cet attribut&nbsp;:
-
     - Une forme booléenne (c'est-à-dire l'utilisation du nom `attributionsrc` seul) qui indique qu'on souhaite envoyer l'en-tête [`Attribution-Reporting-Eligible`](/fr/docs/Web/HTTP/Headers/Attribution-Reporting-Eligible) au même serveur que celui vers lequel pointe l'attribut `src`. Cela fonctionne quand la source d'attribution ou le déclencheur d'enregistrement sont gérés sur le même serveur. Lors de l'enregistrement d'un déclencheur d'attribution, cette propriété est optionnelle et une valeur booléenne sera utilisée si elle est absente.
     - Une valeur contenant une ou plusieurs URL, comme&nbsp;:
 
@@ -116,7 +113,6 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     > Indiquer plusieurs URL signifie que plusieurs sources d'attribution peuvent être enregistrées pour la même fonctionnalité. On peut par exemple avoir plusieurs campagnes dont on souhaite mesurer les performances, via différents rapports sur différentes données.
 
 - `crossorigin`
-
   - : Indique que la récupération de l'image doit être effectuée avec une requête CORS. Les données provenant d'une [image chargée via une requête CORS](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans que celui-ci soit considéré comme [corrompu (<i lang="en">tainted</i>)](/fr/docs/Web/HTML/CORS_enabled_image#canevas_corrompu_et_sécurité).
 
     Si l'attribut `crossorigin` _n'est pas_ indiqué, une requête sans CORS sera effectuée (c'est-à-dire sans l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)) et le navigateur marquera la page comme potentiellement corrompue, empêchant d'accéder aux données de l'image et empêchant son utilisation dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
@@ -124,7 +120,6 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Si l'attribut `crossorigin` _est présent_, une requête CORS est envoyée (avec l'en-tête de requête [`Origin`](/fr/docs/Web/HTTP/Headers/Origin))&nbsp;; si le serveur ne gère pas l'accès depuis les origines tierces (c'est-à-dire qu'il n'envoie aucun en-tête de réponse [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin) ou qu'il n'inclut pas l'origine du site dans l'en-tête `Access-Control-Allow-Origin`), le navigateur bloquera le chargement de l'image et affichera une erreur CORS dans la console de développement.
 
     Les valeurs autorisées pour cet attribut sont&nbsp;:
-
     - `anonymous`
       - : Une requête CORS est envoyée sans informations d'authentification (c'est-à-dire sans cookie, [certificat X.509](https://datatracker.ietf.org/doc/html/rfc5280), ou en-tête de requête [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)).
     - `use-credentials`
@@ -133,9 +128,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Si la valeur de l'attribut est invalide, les navigateurs considèrent que la valeur `anonymous` a été utilisée. Voir [les attributs de paramétrage du CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'informations.
 
 - `decoding`
-
   - : Fournit au navigateur une indication pour décoder l'image. Les valeurs autorisées sont&nbsp;:
-
     - `sync`
       - : L'image est décodée de façon synchrone afin d'être présentée de façon atomique avec le reste du contenu.
     - `async`
@@ -144,13 +137,10 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : La valeur par défaut qui indique qu'il n'y a pas de préférence. C'est le navigateur qui décide alors ce qui est le mieux.
 
 - [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming)
-
   - : Indique que l'image doit être observée par l'API [`PerformanceElementTiming`](/fr/docs/Web/API/PerformanceElementTiming). La valeur fournie devient un identifiant pour l'élément observé. Voir aussi la page de l'atttribut [`elementtiming`](/fr/docs/Web/HTML/Attributes/elementtiming).
 
 - `fetchpriority`
-
   - : Fournit une indication de la priorité relative à utiliser pour la récupération de l'image. Les valeurs autorisées sont&nbsp;:
-
     - `high`
       - : L'image est récupérée avec une priorité plus élevée que les autres images.
     - `low`
@@ -161,27 +151,22 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Voir [`HTMLImageElement.fetchPriority`](/fr/docs/Web/API/HTMLImageElement/fetchPriority) pour plus d'informations.
 
 - `height`
-
   - : La hauteur intrinsèque de l'image, exprimée en pixels. Cette valeur doit être un nombre entier, sans unité.
 
     > [!NOTE]
     > Inclure `height` et [`width`](#width) permet au navigateur de calculer les proportions de l'image avant son chargement. Ces proportions sont utilisées pour réserver l'espace nécessaire afin d'afficher l'image et de réduire voire d'empêcher tout décalage à l'affichage, permettant ainsi une navigation plus agréable et de meilleures performances.
 
 - `ismap`
-
   - : Cet attribut booléen indique que l'image fait partie d'une [carte côté serveur](https://en.wikipedia.org/wiki/Image_map#Server-side). Dans ce cas, les coordonnées du clic sur l'image sont envoyés au serveur.
 
     > [!NOTE]
     > Cet attribut est uniquement autorisé lorsque l'élément `<img>` est un descendant d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a) disposant d'un attribut `href` valide. Cela fournit une alternative lorsque la navigation se fait sans dispositif de pointage.
 
 - `loading`
-
   - : Indique comment le navigateur devrait charger l'image&nbsp;:
-
     - `eager`
       - : L'image est chargée immédiatement, que l'image soit située dans la zone d'affichage (<i lang="en">viewport</i>) visible ou non. Il s'agit de la valeur par défaut.
     - `lazy`
-
       - : Le chargement de l'image est retardé jusqu'à ce que celle-ci soit située à une certaine distance, définie par le navigateur, de la zone d'affichage. L'idée est d'éviter de consommer de la bande passante et des ressources réseaux avant d'être relativement certain que l'image est nécessaire. Pour la plupart des cas d'usage, cela permet d'améliorer les performances.
 
       > [!NOTE]
@@ -191,9 +176,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       > Les images avec `loading` qui vaut `lazy` ne seront jamais chargées si elles n'ont pas d'intersection avec une partie visible d'un élément. Fournir les attributs `width` et `height` pour les images chargées à la demande règle ce problème et est [recommandé par la spécification](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element).
 
 - `referrerpolicy`
-
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource&nbsp;:
-
     - `no-referrer`
       - : L'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) n'est pas envoyé.
     - `no-referrer-when-downgrade`
@@ -212,9 +195,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : Le référent inclut l'origine _et_ le chemin (mais pas le [fragment](/fr/docs/Web/API/HTMLAnchorElement/hash), [le mot de passe](/fr/docs/Web/API/HTMLAnchorElement/password) ou [le nom d'utilisateur](/fr/docs/Web/API/HTMLAnchorElement/username)). **Cette valeur n'est pas sécurisée**, car elle diffuse l'origine et les chemins de ressources protégées par TLS vers des origines non-sécurisées.
 
 - `sizes`
-
   - : Une ou plusieurs chaînes de caractères séparées par des virgules et qui indiquent un ensemble de tailles de source possible. Chaque taille de source consiste en&nbsp;:
-
     1. Une [condition de média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Celle-ci doit être absente pour le dernier élément de la liste.
     2. Une valeur de taille de source.
 
@@ -223,16 +204,12 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     Les valeurs pour les tailles de source indiquent la taille d'affichage souhaitée de l'image. Le navigateur utilise la taille de source courante correspondante pour sélectionner une des sources fournies par l'attribut `srcset` lorsque les sources y sont décrites avec un descripteur de largeur (`w`). La taille de source sélectionnée affecte la taille intrinsèque de l'image (c'est-à-dire la taille occupée à l'écran si aucun style CSS n'est appliqué). Si l'attribut `srcset` est absent ou qu'il ne contient pas de valeur avec un descripteur de largeur, l'attribut `sizes` aura aucun effet.
 
 - `src`
-
   - : L'URL de l'image. Cet attribut est obligatoire. Pour les navigateurs qui prennent en charge `srcset`, l'image fourni par `src` est considérée comme une candidate avec un descripteur de densité de pixel à `1x`, sauf si une image avec un tel descripteur est déjà définie dans `srcset`, ou si `srcset` contient des descripteurs `w`.
 
 - `srcset`
-
   - : Une ou plusieurs chaînes de caractères séparées par des virgules, qui indiquent des sources possibles pour l'image que le navigateur pourra utiliser. Chaque chaîne de caractères se compose&nbsp;:
-
     1. D'une URL vers l'image
     2. Éventuellement, d'un espace suivi&nbsp;:
-
        - D'un descripteur de largeur (un entier positif suivi par `w`). Le descripteur de largeur est divisé par la taille de source fournie par l'attribut `sizes` afin de calculer la densité de pixel effective.
        - D'un descripteur de densité de pixel (un nombre décimal positif suivi par `x`).
 
@@ -243,11 +220,9 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
     L'agent utilisateur sélectionne une des sources disponibles comme il l'entend. Cette liberté permet de baser le choix sur d'autres facteurs comme les préférences de l'utilisateur ou les conditions réseau. Voir [le tutoriel sur les images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) pour un exemple.
 
 - `width`
-
   - : La largeur intrinsèque de l'image, exprimée en pixels. La valeur doit être un nombre entier sans unité.
 
 - `usemap`
-
   - : L'URL partielle (commençant par `#`) d'une [carte d'image](/fr/docs/Web/HTML/Element/map) associée à l'élément.
 
     > [!NOTE]
@@ -256,9 +231,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 ### Attributs dépréciés
 
 - `align` {{deprecated_inline}}
-
   - : Aligne l'image au sein de son contexte englobant. À la place de cet attribut, on privilégiera les propriétés CSS [`float`](/fr/docs/Web/CSS/float) et/ou [`vertical-align`](/fr/docs/Web/CSS/vertical-align). Les valeurs autorisées pour cet attribut sont&nbsp;:
-
     - `top`
       - : Équivalent à `vertical-align: top` ou `vertical-align: text-top`
     - `middle`
@@ -271,22 +244,18 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
       - : Équivalent à `float: right`
 
 - `border` {{deprecated_inline}}
-
   - : La largeur de la bordure autour de l'image. La propriété CSS [`border`](/fr/docs/Web/CSS/border) doit être utilisée à la place.
 
 - `hspace` {{deprecated_inline}}
-
   - : Le nombre de pixels d'espace blanc à droite et à gauche de l'image. La propriété [`margin`](/fr/docs/Web/CSS/margin) doit être utilisée à la place.
 
 - `longdesc` {{deprecated_inline}}
-
   - : Un lien vers une description plus détaillée de l'image. Les valeurs pouvaient être une URL ou l'identifiant d'un autre élément.
 
     > [!NOTE]
     > Cet attribut est mentionné dans la spécification [HTML 5.2 du W3C](https://www.w3.org/TR/html52/obsolete.html#element-attrdef-img-longdesc), mais a été retiré [du standard évolutif HTML du WHATWG](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element). Son avenir est incertain et mieux vaut utiliser une alternative WAI-ARIA comme [`aria-describedby`](https://www.w3.org/TR/wai-aria-1.1/#aria-describedby) ou [`aria-details`](https://www.w3.org/TR/wai-aria-1.1/#aria-details).
 
 - `name` {{deprecated_inline}}
-
   - : Un nom pour l'élément, l'attribut universel `id` doit être utilisé à la place.
 
 - `vspace` {{deprecated_inline}}

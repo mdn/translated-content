@@ -17,13 +17,11 @@ pushState(state, unused, url)
 ### 参数
 
 - `state`
-
   - : `state` 对象是一个 JavaScript 对象，其与通过 `pushState()` 创建的新历史条目相关联。每当用户导航到新的 `state`，都会触发 {{domxref("Window/popstate_event", "popstate")}} 事件，并且该事件的 `state` 属性包含历史条目 `state` 对象的副本。
 
     `state` 对象可以是任何可以序列化的对象。因为 Firefox 将 `state` 对象保存到用户的磁盘上，以便用户重启浏览器可以恢复，我们对 `state` 对象序列化的表示施加了 16 MiB 的限制。如果你传递的 `state` 对象的序列化表示超出了 `pushState()` 可接受的大小，该方法将抛出异常。如果你需要更多的空间，建议使用 {{domxref("Window.sessionStorage","sessionStorage")}} 和/或 {{domxref("Window.localStorage", "localStorage")}}。
 
 - `unused`
-
   - : 由于历史原因，该参数存在且不能忽略；传递一个空字符串是安全的，以防将来对该方法进行更改。
 
 - `url` {{optional_inline}}

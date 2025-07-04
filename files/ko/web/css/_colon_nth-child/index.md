@@ -33,9 +33,7 @@ li:nth-child(2) {
 ### 함수형 표기법
 
 - `<An+B>`
-
   - : 사용자 지정 패턴을 만족한 인덱스를 가지는 요소를 나타냅니다. An+B의 형태로 나타내며,
-
     - `A`는 정수 인덱스 증감량,
     - `B`는 정수 오프셋,
     - `n`은 0부터 시작하는 모든 양의 정수를 나타냅니다.
@@ -65,9 +63,9 @@ li:nth-child(2) {
 - `:nth-child(-n+3)`
   - : 앞에서 세 개의 요소를 나타냅니다. \[=-0+3, -1+3, -2+3]
 - `p:nth-child(n)`
-  - : 형제 그룹 내의 모든 `<p>` 요소를 나타냅니다. 단순한 `p` 선택자와 동일하지만 더 높은 [명시도](/ko/docs/Web/CSS/Specificity)를 가집니다.
+  - : 형제 그룹 내의 모든 `<p>` 요소를 나타냅니다. 단순한 `p` 선택자와 동일하지만 더 높은 [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)를 가집니다.
 - `p:nth-child(1)` 또는 `p:nth-child(0n+1)`
-  - : 형제 그룹 내의 모든 첫 번째 `<p>` 요소를 나타냅니다. {{cssxref(":first-child")}} 선택자와 동일하며 같은 [명시도](/ko/docs/Web/CSS/Specificity)를 가집니다.
+  - : 형제 그룹 내의 모든 첫 번째 `<p>` 요소를 나타냅니다. {{cssxref(":first-child")}} 선택자와 동일하며 같은 [명시도](/ko/docs/Web/CSS/CSS_cascade/Specificity)를 가집니다.
 - `p:nth-child(n+8):nth-child(-n+15)`
   - : 형제 그룹 내에서 8번째부터 15번째 까지의 `<p>` 요소를 나타냅니다.
 

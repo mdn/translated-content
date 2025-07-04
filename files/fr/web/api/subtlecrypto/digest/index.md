@@ -18,7 +18,6 @@ const digest = crypto.subtle.digest(algorithm, data);
 ### Paramètres
 
 - _`algorithm`_ est une {{domxref("DOMString")}} indiquant la fonction de condensé à utiliser. Les valeurs possibles sont:
-
   - `SHA-1` (ne pas utiliser pour des applications cryptographiques)
   - `SHA-256`
   - `SHA-384`

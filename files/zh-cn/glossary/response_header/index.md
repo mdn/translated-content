@@ -37,7 +37,6 @@ x-frame-options: DENY
 
 - [所有 HTTP 标头列表](/zh-CN/docs/Web/HTTP/Reference/Headers)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Representation header", "表示标头")}}
   - {{Glossary("HTTP header", "HTTP 标头")}}
   - {{Glossary("Request header", "请求标头")}}

@@ -20,9 +20,7 @@ var gettingTitle = browser.pageAction.getTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. L'ID de l'onglet contenant l'action page dont vous voulez obtenir le titre.
 

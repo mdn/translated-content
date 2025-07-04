@@ -240,7 +240,6 @@ Aquí tenemos:
 
 1. La palabra clave `for`, seguida de algunos paréntesis.
 2. Dentro de los paréntesis tenemos tres ítems, separados por punto y coma:
-
    1. Un **inicializador**: generalmente es una variable establecida en un número, que se incrementa para contar el número de veces que se ha ejecutado el bucle.
       También se denomina a veces **variable de contador**.
    2. Una **condición**: define cuándo el bucle debe dejar de funcionar.
@@ -435,7 +434,6 @@ btn.addEventListener("click", () => {
 3. Almacenamos el valor introducido en la entrada de texto en una variable llamada `searchName`, antes de vaciar la entrada de texto y volver a enfocarla, listos para la siguiente búsqueda.
    Tenga en cuenta que también ejecutamos el método [`toLowerCase()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase) en la cadena, de modo que las búsquedas no distingan entre mayúsculas y minúsculas.
 4. Ahora pasemos a la parte interesante, el bucle `for...of`:
-
    1. Dentro del bucle, primero dividimos el contacto actual en el carácter de dos puntos y almacenamos los dos valores resultantes en un arreglo llamado `splitContact`.
    2. Luego usamos una instrucción condicional para probar si `splitContact [0]` (el nombre del contacto, nuevamente en minúsculas con [`toLowerCase()`](/es/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase)) es igual al `searchName` ingresado.
       Si es así, introducimos una cadena en el párrafo para informar cuál es el número del contacto y usamos `break` para finalizar el bucle.
@@ -593,13 +591,11 @@ En concreto, queremos:
 - Bucle de 10 a 0. Te hemos proporcionado un inicializador: `let i = 10;`.
 - Para cada iteración, cree un nuevo párrafo y añádalo a la salida `<div>`, que hemos seleccionado usando `const output = document.querySelector('.output');`.
   En los comentarios, le proporcionamos tres líneas de código que deben usarse en algún lugar dentro del bucle:
-
   - `const para = document.createElement('p');`: crea un nuevo párrafo.
   - `output.appendChild(para);`: añade el párrafo a la salida `<div>`.
   - `para.textContent =`: hace que el texto dentro del párrafo sea igual a lo que pongas en el lado derecho, después del signo igual.
 
 - Los diferentes números de iteración requieren que se coloque un texto diferente en el párrafo para esa iteración (necesitarás una instrucción condicional y varias líneas de `para.textContent =`):
-
   - Si el número es 10, imprima "Cuenta regresiva 10" en el párrafo.
   - Si el número es 0, imprima "Blast off!" en el párrafo.
   - Para cualquier otro número, imprime solo el número en el párrafo.
@@ -771,7 +767,6 @@ En concreto, queremos:
 
 - Escribe un bucle que itere a través del arreglo `people`.
 - Durante cada iteración de bucle, compruebe si el elemento del arreglo actual es igual a "Phil" o "Lola" utilizando una instrucción condicional:
-
   - Si es así, concatene el elemento del arreglo al final de `textContent` del párrafo `refused`, seguido de una coma y un espacio.
   - Si no es así, concatene el elemento del arreglo hasta el final del `textContent` del párrafo `admitted`, seguido de una coma y un espacio.
 

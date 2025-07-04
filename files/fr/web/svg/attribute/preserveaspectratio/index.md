@@ -228,9 +228,7 @@ preserveAspectRatio="<align> [<meetOrSlice>]"
 La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement et l'option "meet ou slice" (satisfaire ou trancher) comme décrit ci-dessous:
 
 - Alignement
-
   - : L'alignement indique s'il faut forcer une mise à l'échelle uniforme et si oui, comment faire dans le cas où le rapport largeur:hauteur de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) ne correspond pas à celui affiché. Les différentes valeurs possibles sont:
-
     - **none**
       Ne pas forcer la mise à l'échelle uniforme. Étirer le contenu de manière à ce que le contenu remplisse toute la hauteur et toute la largeur affichée. _Notez que si_ `<align>` _vaut_ `none`_, alors la valeur_ `<meetOrSlice>` _est ignorée_.
     - **xMinYMin** - Force la mise à l'échelle uniforme.
@@ -262,11 +260,8 @@ La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement e
       Aligne le côté bas de l'élément en bas de la zone d'affichage.
 
 - Meet ou slice
-
   - : La valeur _meet_ ou _slice_ est optionnelle. Les deux valeurs possibles sont:
-
     - **meet** (_par défaut_) - Mettre à l'échelle l'image tel que:
-
       - les proportions sont préservées
       - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est entièrement visible dans la zone d'affichage
       - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est agrandie autant que possible, tout en respectant les autres critères
@@ -274,7 +269,6 @@ La valeur de l'attribut est constituée d'un ou deux mots clés : l'alignement e
       Autrement dit, si les proportions du contenu ne correspondent pas à la zone d'affichage, la zone d'affichage sera agrandie au-delà de la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) (la zone dans laquelle sera dessinée la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) sera plus petite que la zone d'affichage).
 
     - **slice** - Mettre à l'échelle l'image tel que:
-
       - les proportions sont préservées
       - la zone d'affichage est entièrement remplie par la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox)
       - la [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est réduite autant que possible, tout en respectant les autres critères

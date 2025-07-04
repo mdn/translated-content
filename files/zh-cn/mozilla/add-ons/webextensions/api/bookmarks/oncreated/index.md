@@ -31,9 +31,7 @@ browser.bookmarks.onCreated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。新书签项的 ID。
     - `bookmark`

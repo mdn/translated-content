@@ -20,9 +20,7 @@ var deletingRange = browser.history.deleteRange(
 ### Paramètres
 
 - `range`
-
   - : `object`. Spécification de la plage de temps pour laquelle supprimer des visites.
-
     - `startTime`
       - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de début de la plage.
     - `endTime`

@@ -29,6 +29,5 @@ l10n:
 ## 같이 보기
 
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Accessibility", "접근성")}}
   - {{Glossary("ARIA")}}

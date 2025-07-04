@@ -12,7 +12,6 @@ Existem muitas regras at, criadas por seu identificador, cada um com uma sintaxe
 - {{ cssxref("@import") }}, informando o motor CSS para incluir uma folha de estilos externa.
 - {{ cssxref("@namespace") }}, informando ao motor CSS que todo o conteúdo deve ser considerado prefixado com um namespace XML.
 - Regras at aninhadas, um subconjunto de regras aninhadas que pode ser usado não somente como uma regra de uma folha de estilos, mas também dentro de um grupo de regras condicional:
-
   - {{ cssxref("@media") }}, um grupo de regras condicional que é aplicado ao conteúdo caso o dispositivo de exibição cumpra com a condição de mídia definida.
   - {{ cssxref("@font-face") }}, descrevendo o aspecto de uma fonte externa que deve ser baixada. {{ experimental_inline() }}
   - {{ cssxref("@document") }}, um grupo de regras condicional que é aplicado ao conteúdo caso o documento cumpra com os critério definidos. {{ experimental_inline() }}

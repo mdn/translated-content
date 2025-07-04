@@ -20,9 +20,7 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
 - mathcolor
   - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - mathsize
-
   - : La taille du contenu. Les valeurs possibles sont :
-
     - `small :` La police utilisée sera plus petite que la police courante.
     - `normal :` Équivalent à 100% ou 1em.
     - `big :` La police utilisée sera plus grande que la police courante.
@@ -30,16 +28,13 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
     - ou une valeur sans unité qui multiplie la taille par défaut.
 
 - mathvariant (implémenté en partie : voir [bug Firefox 114365](https://bugzil.la/114365) et [bug Firefox 162405](https://bugzil.la/162405))
-
   - : La classe logique des identifiants, variant selon la typographie. Cela veut dire que, bien que les noms suggèrent une certaine mise en forme, les éléments d'une même classe seront traités de la même manière au sein d'une même expression. Cela peut, ou pas, impliquer un affichage avec la typographie mentionnée. Les valeurs suivantes sont autorisées :
-
     - `normal` (La valeur par défaut pour plus d'un caractère)
     - `bold`
     - `italic` (La valeur par défaut pour un seul caractère)
     - `bold-italic`
 
     <!---->
-
     - `double-struck`
     - `bold-fraktur` (la mise en gras fonctionne)
     - `script`
@@ -47,7 +42,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
     - `fraktur`
 
     <!---->
-
     - `sans-serif`
     - `bold-sans-serif`
     - `sans-serif-italic`
@@ -55,7 +49,6 @@ L'élément MathML `<mi>` indique que le contenu doit être affiché comme un **
     - `monospace`
 
     <!---->
-
     - `initial`
     - `tailed`
     - `looped`

@@ -45,24 +45,18 @@ new Intl.NumberFormat([locales[, options]])
 ### 引数
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
-
     - `nu`
       - : 使用される数値システムです。指定可能な値には "`adlm`", "`ahom`", "`arab`", "`arabext`", "`bali`", "`beng`", "`bhks`", "`brah`", "`cakm`", "`cham`", "`deva`", "`diak`", "`fullwide`", "`gong`", "`gonm`", "`gujr`", "`guru`", "`hanidec`", "`hmng`", "`hmnp`", "`java`", "`kali`", "`khmr`", "`knda`", "`lana`", "`lanatham`", "`laoo`", "`latn`", "`lepc`", "`limb`", "`mathbold`", "`mathdbl`", "`mathmono`", "`mathsanb`", "`mathsans`", "`mlym`", "`modi`", "`mong`", "`mroo`", "`mtei`", "`mymr`", "`mymrshan`", "`mymrtlng`", "`newa`", "`nkoo`", "`olck`", "`orya`", "`osma`", "`rohg`", "`saur`", "`segment`", "`shrd`", "`sind`", "`sinh`", "`sora`", "`sund`", "`takr`", "`talu`", "`tamldec`", "`telu`", "`thai`", "`tibt`", "`tirh`", "`vaii`", "`wara`", "`wcho`" があります。 [標準 Unicode 命数法一覧](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem) を参照してください。
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティのすべてまたは一部を持つオブジェクトです。
-
     - `compactDisplay`
       - : `notation` が "`compact`" の場合のみ使用されます。 "`short`" (既定値) または "`long`" のどちらかを取ります。
     - `currency`
       - : 通貨の書式で使用するための通貨です。使用可能な値は ISO 4217 通貨コードであり、例えば米ドルは "`USD`"、ユーロは "`EUR`"、日本円には "`JPY`" です。 — [Current currency & funds code list](https://www.currency-iso.org/en/home/tables/table-a1.html) を参照してください。既定値はありません。 `style` が "`currency`" である場合、 `currency` プロパティを提供する必要があります。
     - `currencyDisplay`
-
       - : 通貨の書式で通貨を表示する方法です。使用可能な値は次の通りです。
-
         - "`symbol`" はローカライズされた通貨記号、例えば € などを使用します。これが既定値です。
         - "`narrowSymbol`" は短い形式の記号を使用します ("US$100" ではなく "$100")。
         - "`code`" は ISO 通貨コードを使用します。
@@ -73,9 +67,7 @@ new Intl.NumberFormat([locales[, options]])
     - `localeMatcher`
       - : 使用するロケール比較アルゴリズムです。使用可能な値は "`lookup`" および "`best fit`" です。既定値は "`best fit`" です。このオプションについての情報は、 {{jsxref("Global_Objects/Intl", "Intl page", "#Locale_negotiation", 1)}} を参照してください。
     - `notation`
-
       - : 数値を表示するための書式です。既定値は "`standard`" です。
-
         - "`standard`" は、通常の数値の書式です。
         - "`scientific`" は、整形された数値の次数をを返します。
         - "`engineering`" は、3 で割ることができる場合に 10 のべき乗を返します。
@@ -84,18 +76,14 @@ new Intl.NumberFormat([locales[, options]])
     - `numberingSystem`
       - : 数値体系です。使用可能な値には、 "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", " `knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", " `telu`", "`thai`", "`tibt`" があります。
     - `signDisplay`
-
       - : 数値の符号を表示するときです。既定値は "`auto`" です。
-
         - "`auto`" は、負の数のみ符号を表示します。
         - "`never`" は、符号を表示しません。
         - "`always`" は、常に符号を表示します。
         - "`exceptZero`" は正の数と負の数には符号を表示しますが、ゼロには表示しません。
 
     - `style`
-
       - : 使用する整形スタイルで、既定値は "`decimal`" です。
-
         - "`decimal`" は、ふつうの数値の整形に使用します。
         - "`currency`" は、通貨の整形に使用します。
         - "`percent`" は、パーセントの整形に使用します。
@@ -104,9 +92,7 @@ new Intl.NumberFormat([locales[, options]])
     - `unit`
       - : `unit` の整形で使用する単位で、使用可能な値は [UTS #35, Part 2, Section 6](https://unicode.org/reports/tr35/tr35-general.html#Unit_Elements) で定義されているコア単位識別子です。 [全体リスト](https://github.com/unicode-org/cldr/blob/master/common/validity/unit.xml)から単位の[サブセット](https://tc39.es/proposal-unified-intl-numberformat/section6/locales-currencies-tz_proposed_out.html#sec-issanctionedsimpleunitidentifier)が ECMAScript で使用するために選択されました。一組の単純な単位を "`-per-`" で結合し、複合単位を創ることができます。既定値はありません。 `style` が "`unit`" である場合、 `unit` プロパティを指定する必要があります。
     - `unitDisplay`
-
       - : `unit` の整形で使用する単位の整形スタイルで、既定値は "`short`" です。
-
         - "`long`" (例: `16 litres`)
         - "`short`" (例: `16 l`)
         - "`narrow`" (例: `16l`)
@@ -115,7 +101,6 @@ new Intl.NumberFormat([locales[, options]])
       - : グループ化する区切り記号を使用するかどうかです。例えば、 3 桁区切りや 1000/ラク/クレオールの区切り記号など。設定可能な値は true と false で、既定値は true です。
 
     以下のプロパティは 2 つのグループに分類できます。 `minimumIntegerDigits`、`minimumFractionDigits`、`maximumFractionDigits` が一方のグループ、 `minimumSignificantDigits` と `maximumSignificantDigits` が他方のグループに属します。 2 つ目のグループから少なくとも 1 つのプロパティが定義されていれば、 1 つ目のグループは無視されます。
-
     - `minimumIntegerDigits`
       - : 整数部に使用する最小桁数です。使用可能な値は 1 から 21 までです。既定値は 1 です。
     - `minimumFractionDigits`

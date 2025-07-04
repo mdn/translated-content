@@ -24,9 +24,7 @@ speak-as: <counter-style-name>;
 ### 値
 
 - `auto`
-
   - : もし `speak-as` の値が `auto` と指定された場合、`speak-as` の有効値は {{cssxref("@counter-style/system", "system")}} 記述子の値に基づいて決定されます。
-
     - `system` の値が `alphabetic` の場合、 `speak-as` の有効な値は `spell-out` になります。
     - `system` が `cyclic` の場合、 `speak-as` の有効な値は `bullets` です。
     - `system` が `extends` の場合、 `speak-as` の値は拡張スタイルで `speak-as: auto` が指定されている場合と同じになります。

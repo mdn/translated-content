@@ -16,9 +16,7 @@ void gl.bindRenderbuffer(target, renderbuffer);
 ### 参数
 
 - target
-
   - : {{domxref("GLenum")}} 指定绑定点（目标）。可能的值：
-
     - `gl.RENDERBUFFER`: 以可渲染的内部格式对单个图像进行缓冲数据存储。
 
 - renderbuffer

@@ -51,7 +51,6 @@ _从其父接口 {{domxref("HTMLElement")}} 继承属性。_
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
   - : 一个字符串，表示目标资源的字符编码。
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
-
   - : 一个字符串，表示从资源到文档的反向链接关系。
 
     > [!NOTE]

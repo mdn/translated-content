@@ -29,11 +29,9 @@ l10n:
 ## ガイド
 
 - [CSS 擬似要素](/ja/docs/Web/CSS/Pseudo-elements)
-
   - : すべての CSS 仕様書および WebVTT で定義されている擬似要素のアルファベット順のリスト
 
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)
-
   - : 再利用可能なカスタム要素やウェブコンポーネントを作成するためのさまざまな API の概要です。
 
 ## 関連概念

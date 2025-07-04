@@ -9,7 +9,8 @@ slug: Web/CSS/transform-function/translateY
 
 ![](translatey.png)
 
-> **备注：** `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
+> [!NOTE]
+> `translateY(ty)` 对应 `translate(0, ty)` 或`translate3d(0, ty, 0)`。
 
 ## 语法
 

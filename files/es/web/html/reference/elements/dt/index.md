@@ -100,11 +100,11 @@ dd {
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Ejemplo
 
-Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Element/dl#examples).
+Para ver un ejemplo, vea el [proveído por el elemento `<dl>`](/es/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Especificaciones
 

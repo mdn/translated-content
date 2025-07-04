@@ -58,7 +58,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 ## 属性
 
 - `<cookie-name>=<cookie-value>`
-
   - : クッキーの名前とその値を定義します。
     クッキーの定義は、名前と値の組で始まります。
 
@@ -79,7 +78,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > `secure` フラグを設定し、安全なページ (HTTPS) から読み込む必要があり、ドメインを指定することができず、パスが `/` である必要があります。
 
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : クッキーが送信されるホストを定義します。
 
     現在のドメインのみ、またはより上位のドメインを値として設定できます。ただし、パブリック接尾辞の場合はこの限りではありません。ドメインを設定すると、そのドメインだけでなく、そのドメインのすべてのサブドメインでもクッキーが利用できるようになります。
@@ -91,7 +89,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     複数のホスト/ドメイン値は許可されていませんが、ドメインを指定した場合は、サブドメインが常に含まれます。
 
 - `Expires=<date>` {{optional_inline}}
-
   - : クッキーの有効期限を示す、 HTTP の日時タイムスタンプです。
     詳細な書式は {{HTTPHeader("Date")}} を参照してください。
 
@@ -104,48 +101,38 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     有効期限が設定されていた場合、期限はサーバーではなく、クッキーが設定されているクライアントからの相対時刻で設定されます。
 
 - `HttpOnly` {{optional_inline}}
-
   - : JavaScript がクッキーにアクセスできないようにします。例えば、 {{domxref("Document.cookie")}} プロパティを利用できなくします。
     なお、 `HttpOnly` で作成されたクッキーは、JavaScript、例えば {{domxref("XMLHttpRequest.send()")}} や {{domxref("Window/fetch", "fetch()")}} を呼び出すことで開始されたリクエストでも送信されます。
     これにより、クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) に対する攻撃が軽減されます。
 
 - `Max-Age=<number>` {{optional_inline}}
-
   - : クッキーの期限までの秒数を示します。ゼロまたは負の数値の場合は、クッキーは直ちに期限切れになります。 `Expires` および `Max-Age` の両方が設定されていたら、 `Max-Age` が優先されます。
 
 - `Partitioned` {{optional_inline}}
-
   - : 分割ストレージをを使用してクッキーが格納されるべきであることを示します。
     この設定を行う場合は、 [`Secure` ディレクティブ](#secure)も設定する必要があることに注意してください。
     詳細は、[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)を参照してください。
 
 - `Path=<path-value>` {{optional_inline}}
-
   - : リクエストの URL に含む必要があるパスを示します。含まれていないと、ブラウザーは `Cookie` ヘッダーを送信しません。
 
     スラッシュ (`/`) の文字はディレクトリー区切りとして解釈され、サブディレクトリーも同様に一致します。例えば、 `Path=/docs` である場合、
-
     - `/docs`, `/docs/`, `/docs/Web/`, `/docs/Web/HTTP` のリクエストパスはすべて一致します)。
     - `/`, `/docsets`, `/fr/docs` のリクエストパスは一致しません。
 
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - : クロスサイトリクエストでクッキーを送信するかどうかを制御し、クロスサイトリクエストフォージェリ攻撃 ({{Glossary("CSRF")}}) に対するある程度の防御を提供します。
 
     使用可能な属性値は以下の通りです。
-
     - `Strict`
-
       - : ブラウザーが同一サイトのリクエストに対してのみクッキーを送信することを意味します。つまり、クッキーを設定したのと同じサイトから発信されるリクエストのことです。
         リクエストが異なるドメインやスキームから発信された場合（同じドメインであっても）、 `SameSite=Strict` 属性のクッキーは送信されません。
 
     - `Lax`
-
       - : 画像やフレームを読み込むリクエストのようなクロスサイトリクエストではクッキーを送信しませんが、ユーザーが外部サイトから元のサイトに移動するとき（例えば、リンクをたどるとき）には送信されることを意味します。
         これは `SameSite` 属性が指定されていない場合の既定の動作です。
 
     - `None`
-
       - : ブラウザーがクロスサイトと同一サイトの両方のリクエストでクッキーを送信することを意味します。
         この値を設定する際には、 `Secure` 属性も設定する必要があります。 `SameSite=None; Secure` のようにします。 `Secure` 属性がないと、次のエラーが記録されます。
 
@@ -160,7 +147,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
         > **警告:** `SameSite=None; Secure` で、 [`Partitioned`](#partitioned) 属性のないクッキーは、将来のブラウザーバージョンではサイト間をまたがる場合にブロックされる可能性があります。この動作により、ユーザーデータはクロスサイトトラッキングから保護されます。[分割された独立した状態を持つクッキー (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies)と[サードパーティークッキー](/ja/docs/Web/Privacy/Third-party_cookies)を参照してください。
 
 - `Secure` {{optional_inline}}
-
   - : クッキーが、リクエストが SSL と HTTPS プロトコルを使用して行われた場合にのみサーバーに送信されることを示します。ただし HTTP クッキーは、例えば情報が暗号化されないなど、安全ではない仕組みを継承しているので、機密な情報や敏感な情報を転送したり格納したりしないようにしてください。
 
     > [!NOTE]

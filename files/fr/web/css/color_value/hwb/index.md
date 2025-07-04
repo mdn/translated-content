@@ -54,7 +54,6 @@ hwb(194 0% 0% / .5) /* #00c3ff avec 50% d'opacité */
 > La fonction `hwb()` **n'utilise pas** de virgule pour séparer les valeurs des arguments, et la valeur alpha optionnelle doit être précédée d'une barre oblique (`/`) si elle est fournie.
 
 - `hwb(H W B[ / A])`
-
   - : `H` (teinte, <i lang="en">hue</i> en anglais) est un angle (type [`<angle>`](/fr/docs/Web/CSS/angle)) sur le cercle des couleurs. Lorsqu'il est écrit sans unité, il est interprété comme étant exprimé en degré. Par définition, on a `red=0deg=360deg`, et les autres couleurs distribuées sur le cercle avec `green=120deg`, `blue=240deg`, etc. Sa valeur étant un `<angle>`, elle boucle sur elle-même et on a donc `-120deg=240deg`, `480deg=120deg`, `-1turn=1turn`, etc.
 
     `W` (blancheur, <i lang="en">whiteness</i> en anglais) indique la quantité de blanc dans la couleur, indiquée comme un pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), où `0%` indique aucune blancheur et où `100%` indique une blancheur complète.

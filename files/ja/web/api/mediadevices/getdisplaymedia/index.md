@@ -24,9 +24,7 @@ getDisplayMedia(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : オプションのオブジェクトで、返される {{domxref("MediaStream")}} の要件を指定します。 `getDisplayMedia()` のオプションは {{domxref("MediaDevices.getUserMedia()")}} メソッドの [constraints](/ja/docs/Web/API/MediaDevices/getUserMedia#parameters) と同じように動作しますが、ただし `audio` および `video` が指定された場合のみです。`getDisplayMedia()` の利用可能なオプションプロパティの一覧は次の通りです。
-
     - `video` {{optional_inline}}
       - : 論理値または {{domxref("MediaTrackConstraints")}} インスタンスで、既定値は `true` です。このオプションを省略するか、`true` に設定すると、ストリームに映像トラックが格納されます。`true` の値は、返す {{domxref("MediaStream")}} に映像トラックが格納されることを示します。`getDisplayMedia()` は映像トラックを必要とするので、このオプションを `false` に設定すると、プロミスは `TypeError` で拒否されます。
     - `audio` {{optional_inline}}
@@ -34,7 +32,6 @@ getDisplayMedia(options)
     - `controller` {{Experimental_Inline}} {{optional_inline}}
       - : 含まれている場合、キャプチャセッションをさらに操作するために使用できるメソッドを持つ {{domxref("CaptureController")}} オブジェクトのインスタンスです。
     - `monitorTypeSurfaces` {{optional_inline}}
-
       - : 列挙値で、ブラウザーがユーザーに表示する画面キャプチャオプションに、タブやウィンドウオプションと一緒に画面全体を含めるかどうかを指定します。このオプションは、テレビ会議アプリを使用する際に、従業員のミスによる企業機密情報の漏洩を防ぐことを意図しています。 値として指定できるのは、画面オプションを含めるべきであることを示す `include` と、除外すべきであることを示す `exclude` です。 既定値は仕様で規定されていません。個々のブラウザーの既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
         > **メモ:** `monitorTypeSurfaces: "exclude"` を設定するには、[`displaySurface: "monitor"`](/ja/docs/Web/API/MediaTrackConstraints/displaySurface) を同時に設定することはできません。2 つの設定は矛盾しているためです。 矛盾した設定を試みると、`getDisplayMedia()` を呼び出した際に `TypeError` が発生します。

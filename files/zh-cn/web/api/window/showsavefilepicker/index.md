@@ -19,9 +19,7 @@ showSaveFilePicker(options)
 ### 参数
 
 - `options` {{Optional_Inline}}
-
   - : 选项对象，包含以下属性：
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。默认情况下，选择器应包含一个不应用任何文件类型过滤器的选项（通过下面的类型选项启动）。将此选项设置为 `true` 意味着该选项*不*可用。
     - `id` {{Optional_Inline}}
@@ -31,9 +29,7 @@ showSaveFilePicker(options)
     - `suggestedName` {{Optional_Inline}}
       - : 一个{{jsxref('String', '字符串', '', 1)}}。建议的文件名。
     - `types` {{Optional_Inline}}
-
       - : 允许选择的文件类型的{{jsxref('Array', '数组', '', 1)}}。每个项目都是一个具有以下选项的对象：
-
         - `description` {{Optional_Inline}}
           - : 允许的文件类型类别的可选描述。默认为空字符串。
         - `accept`

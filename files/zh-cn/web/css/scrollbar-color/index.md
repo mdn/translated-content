@@ -36,7 +36,6 @@ scrollbar-color: unset;
 ### 值
 
 - `<scrollbar-color>`
-
   - : 定义滚动条的颜色。
 
     <table class="standard-table">
@@ -56,7 +55,8 @@ scrollbar-color: unset;
       </tbody>
     </table>
 
-> **备注：** [`@media (forced-colors: active)`](/zh-CN/docs/Web/CSS/@media/forced-colors) 会将 {{cssxref("scrollbar-color")}} 设置为 `auto`。
+> [!NOTE]
+> [`@media (forced-colors: active)`](/zh-CN/docs/Web/CSS/@media/forced-colors) 会将 {{cssxref("scrollbar-color")}} 设置为 `auto`。
 
 ## 无障碍考虑
 

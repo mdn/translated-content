@@ -98,7 +98,7 @@ h4 {
 
 ## 특성
 
-`<h1>`-`<h6>` 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+`<h1>`-`<h6>` 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ## 사용 일람
 
@@ -173,24 +173,19 @@ h4 {
 하위 구획으로 제목을 중첩해 콘텐츠의 구조를 나타낼 수 있습니다. 대부분의 스크린 리더는 페이지의 제목을 정렬한 목록도 생성해 제공하므로, 사용자가 빠르게 콘텐츠 구조를 파악할 수 있도록 도와줍니다.
 
 1. `h1` Beetles
-
    1. `h2` Etymology
    2. `h2` Distribution and Diversity
    3. `h2` Evolution
-
       1. `h3` Late Paleozoic
       2. `h3` Jurassic
       3. `h3` Cretaceous
       4. `h3` Cenozoic
 
    4. `h2` External Morphology
-
       1. `h3` Head
-
          1. `h4` Mouthparts
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 
@@ -210,9 +205,9 @@ h4 {
 
 ### 구획 콘텐츠 레이블
 
-스크린 리더 사용자가 자주 사용하는 다른 기술은 [콘텐츠 구획](/ko/docs/Web/HTML/Element#콘텐츠_구획)의 목록을 생성한 후, 이를 통해 페이지 레이아웃을 파악하는 것입니다.
+스크린 리더 사용자가 자주 사용하는 다른 기술은 [콘텐츠 구획](/ko/docs/Web/HTML/Reference/Elements#콘텐츠_구획)의 목록을 생성한 후, 이를 통해 페이지 레이아웃을 파악하는 것입니다.
 
-콘텐츠 구획에는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 [`id`](/ko/docs/Web/HTML/Global_attributes#id) 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
+콘텐츠 구획에는 [`aria-labelledby`](/ko/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-labelledby_attribute)와 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes#id) 특성을 함께 사용해 이름, 즉 레이블을 붙일 수 있습니다. 레이블은 현재 구획의 목적을 간결하게 설명해야 합니다. 레이블 기법은 한 페이지에 다수의 구획이 있을 때 유용하게 사용할 수 있습니다.
 
 #### 예제
 

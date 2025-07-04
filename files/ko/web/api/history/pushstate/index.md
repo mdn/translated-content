@@ -21,13 +21,11 @@ pushState(state, unused, url)
 ### 매개변수
 
 - `state`
-
   - : `state` 객체는 `pushState()`에 의해 생성되어 새로운 기록 항목과 관련된 JavaScript 객체입니다. 사용자가 새로운 `state`로 이동할 때마다 {{domxref("Window/popstate_event", "popstate")}} 이벤트가 발생되고 이벤트 `state` 속성은 기록 항목의 `state` 객체 복사본을 포함합니다.
 
     `state` 객체는 직렬화될 수 있는 모든 것일 수 있습니다. Firefox는 사용자가 브라우저를 다시 시작한 후 복원될 수 있도록 사용자의 디스크에 `state` 객체를 저장하기 때문에, `state` 객체의 직렬화된 표현에 16MiB의 크기 제한을 적용합니다. 이보다 더 큰 직렬화된 표현 `state` 객체를 `pushState()`에 전달하면 메서드는 예외를 발생시킵니다. 이보다 더 많은 공간이 필요하다면 {{domxref("Window.sessionStorage", "sessionStorage")}} 혹은 {{domxref("Window.localStorage", "localStorage")}}를 사용하는 것이 좋습니다.
 
 - `unused`
-
   - : 이 매개변수는 역사적인 이유로 존재해서 생략할 수 없습니다. 빈 문자열을 전달하는 것이 나중에 메서드가 변경될 경우에도 안전합니다.
 
 - `url` {{optional_inline}}

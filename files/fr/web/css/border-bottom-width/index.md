@@ -71,9 +71,7 @@ border-bottom-width: unset;
 ### Valeurs
 
 - `<line-width>`
-
   - : Une valeur de longueur ({{cssxref("&lt;length&gt;")}}) positive ou un mot-clé qui indique l'épaisseur de la bordure pour le bas de la boîte. Si la valeur est un mot-clé, ce doit être l'une des valeurs suivantes :
-
     - `thin` (fin)
     - `medium` (intermédiaire)
     - `thick` (épais)
@@ -129,14 +127,12 @@ border-bottom-width: unset;
 ## Voir aussi
 
 - Les autres propriétés liées à la largeur de la bordure :
-
   - {{cssxref("border-left-width")}},
   - {{cssxref("border-right-width")}},
   - {{cssxref("border-top-width")}},
   - {{cssxref("border-width")}}
 
 - Les autres propriétés CSS liées à la bordure du côté haut :
-
   - {{cssxref("border")}},
   - {{cssxref("border-bottom")}},
   - {{cssxref("border-bottom-style")}},

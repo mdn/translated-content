@@ -21,10 +21,8 @@ getKey(name)
 ### 매개변수
 
 - `name`
-
   - : 클라이언트 키를 생성하는 데 사용되는 암호화 방식을 나타내는 문자열.
     값은 다음과 같습니다.
-
     - `p256dh`
       - : P-256 곡선(즉, NIST secp256r1 타원 곡선) 상의
         [타원 곡선 디피-헬만](https://en.wikipedia.org/wiki/Elliptic_curve_Diffie%E2%80%93Hellman) 공개 키.

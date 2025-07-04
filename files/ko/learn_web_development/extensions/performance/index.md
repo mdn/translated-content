@@ -57,7 +57,7 @@ l10n:
 
 - [웹 성능 기초](/ko/docs/Learn_web_development/Extensions/Performance/Web_Performance_Basics)
   - : HTML, CSS, JavaScript, 미디어 파일 등 프론트엔드 구성 요소뿐만 아니라 어플리케이션을 느리게 만들 수 있는 기능들과 주관적, 객관적으로 빠르게 만들 수 있는 기능들이 있습니다. 웹 성능과 관련된 API, 개발자 도구, 모범 사례, 안 좋은 사례를 여럿 소개합니다. 여기에서는 그런 기능들을 기본적인 수준으로 다루면서 각 주제별로 성능을 개선하기 위해 더 깊게 살펴볼 수 있는 링크를 제공합니다.
-- [반응형 이미지](/ko/docs/Web/HTML/Responsive_images)
+- [반응형 이미지](/ko/docs/Web/HTML/Guides/Responsive_images)
   - : 이 문서에서는 반응형 이미지의 개념과 이를 구현하기 위해 HTML에서 제공하는 도구들을 배웁니다. 반응형 이미지란 화면 크기와 해상도, 그 외 여타 기능들에서 제각기 다른 다양한 기기들에서 잘 보여지는 이미지를 말합니다. 이를 통해 다양한 기기에서 웹 성능을 높일 수 있습니다. 반응형 이미지는 앞으로 배울 CSS 주제인 [반응형 디자인](/ko/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)의 한 부분입니다.
 - [MDN 웹 성능 구획](/ko/docs/Web/Performance)
   - : 가장 주요한 웹 성능 구획입니다. 여기에서 웹 성능 API 개괄, 테스트 및 분석 도구, 웹 성능 병목현상 잡아내기 등 웹 성능에 관한 훨씬 더 자세한 내용들을 찾을 수 있습니다.

@@ -14,7 +14,6 @@ l10n:
 此元素仅包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `name`
-
   - : 插槽名称。
 
     **具名插槽**是具有 `name` 属性的 `<slot>` 元素。

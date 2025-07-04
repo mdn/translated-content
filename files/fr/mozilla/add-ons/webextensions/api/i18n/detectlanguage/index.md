@@ -29,9 +29,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 - `isReliable`
   - : `boolean`. Si la langue a été détectée de manière fiable.
 - `languages`
-
   - : `array` d'objets, dont chacun a deux propriétés:
-
     - `language`
       - : {{WebExtAPIRef('i18n.LanguageCode')}}. La langue détectée.
     - `percentage`

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 514d1d2690c6374cd65921193ff6b166677395fd
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox](https://www.mozilla.org/zh-CN/firefox/)（非正式中文名称“火狐”）是 Mozilla 的流行 Web 浏览器，适用于多种平台，包括 Windows、MacOS、Linux 等桌面版，以及所有的 Android 和 iOS 移动设备。得益于对最新的 Web 标准的广泛兼容性和强有力的开发工具，Firefox 是 Web 开发者和终端用户的绝佳选择。
 
 Firefox 是一个开源项目，许多代码都是由庞大的志愿者社区贡献的。在此你可以了解如何为 Firefox 项目做贡献，你也可以找到关于构建 Firefox 附加组件、使用 Firefox 开发者工具以及其他主题的信息的链接。

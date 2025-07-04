@@ -145,7 +145,6 @@ Sec-WebSocket-Accept: hash
 - [웹소켓 API](/ko/docs/Web/API/WebSocket)
 - [HTTP](/ko/docs/Web/HTTP)
 - RFC 명세서:
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

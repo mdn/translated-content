@@ -19,7 +19,7 @@ El elemento HTML example element \<xmp> dibuja texto entre las etiquetas de inic
 
 ## Atributos
 
-Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web/HTML/Global_attributes) comunes a todos los elementos .
+Este elemento no tiene otros atributos que los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes) comunes a todos los elementos .
 
 ## Interfaz DOM
 

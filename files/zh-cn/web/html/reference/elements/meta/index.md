@@ -92,16 +92,15 @@ slug: Web/HTML/Reference/Elements/meta
 
 此元素包括[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **备注：** [`name`](#name) 属性在 `<meta>` 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](#name)、[`http-equiv`](#http-equiv) 或者 [`charset`](#charset) 三者中任何一个属性时，[`itemprop`](#itemprop) 属性不能被使用。
+> [!NOTE]
+> [`name`](#name) 属性在 `<meta>` 元素中具有特殊的语义；另外，当一个 `<meta>` 标签中，有 [`name`](#name)、[`http-equiv`](#http-equiv) 或者 [`charset`](#charset) 三者中任何一个属性时，[`itemprop`](#itemprop) 属性不能被使用。
 
 - `charset`
   - : 该属性声明了文档的字符编码。如果存在该属性，则其值必须是字符串 `"utf-8"` 的不区分 ASCII 大小写的匹配，因为 UTF-8 是 HTML5 文档的唯一有效编码。声明字符编码的 `<meta>` 元素必须完全位于文档的前 1024 个字节内。
 - `content`
   - : 此属性包含 [`http-equiv`](#http-equiv) 或 [`name`](#name) 属性的值，具体取决于所使用的值。
 - `http-equiv`
-
   - : 属性定义了一个编译指示指令。这个属性叫做 `http-equiv(alent)` 是因为所有允许的值都是特定 HTTP 标头的名称，如下：
-
     - `content-security-policy`
       允许页面作者定义当前页面的[内容策略](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)。内容策略常用来指定允许的服务器源和脚本端点，这有助于防止跨站点脚本攻击。
 
@@ -117,7 +116,6 @@ slug: Web/HTML/Reference/Elements/meta
 
     - `refresh`
       这个属性指定：
-
       - 页面重新加载的秒数——仅当 [`content`](#content) 属性包含非负整数时。
       - 页面重定向到指定链接的秒数——仅当 content 属性包含非负整数后跟字符串“`;url=`”和有效的 URL 时。
 

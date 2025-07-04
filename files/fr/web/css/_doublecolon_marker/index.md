@@ -64,7 +64,6 @@ li::marker {
 ## Voir aussi
 
 - Les éléments HTML relatifs aux listes :
-
   - {{htmlelement("ul")}}
   - {{htmlelement("ol")}}
   - {{htmlelement("li")}}

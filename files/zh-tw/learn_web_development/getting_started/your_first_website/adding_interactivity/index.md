@@ -318,7 +318,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **備註：** [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
+> [!NOTE]
+> [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式會要求瀏覽器將 `result`變數回傳，以利後續使用。這是必要的，不然在函式內定義的變數就只能在函式內使用。這個現象叫作變數的有效使用範圍（{{Glossary("Scope", "scoping")}}）（請參閱[這篇文章以了解變數的有效使用範圍](/zh-TW/docs/Web/JavaScript/Guide/Grammar_and_types#變數範圍)）
 
 ### 事件（Events）
 
@@ -378,7 +379,6 @@ myHTML.onclick = function () {};
 
 1. 我們會去取得圖片中 `src` 屬性的數值
 2. 我們用一個條件判斷式，來檢查 `src` 的數值是否跟原始圖片的位址相同：
-
    1. 如果兩者相同，那我們就把 `src` 的數值更改為第二個圖片的位址，也就是在 {{htmlelement("image")}} 元素裡強迫讀取另外一張圖片。
    2. 如果兩者不同（也就是圖片已經被切換過了），我們就把 `src` 的數值更改為原始圖片的位址，圖片就會被切換回原來那張。
 

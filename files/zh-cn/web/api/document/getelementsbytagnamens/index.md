@@ -18,7 +18,6 @@ getElementsByTagNameNS(namespace, name)
 - `namespace`
   - : 所要查询的元素的命名空间 URL（参见 {{domxref("Element.namespaceURI", "element.namespaceURI")}}）。
 - `name`
-
   - : 所要查询的元素的名称或特殊值 `*`（代表所有元素，参见 {{domxref("Element.localName", "element.localName")}}）。
 
     > [!NOTE]

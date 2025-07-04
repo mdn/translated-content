@@ -22,13 +22,10 @@ let highlighting = browser.tabs.highlight(
 ### 参数
 
 - `highlightInfo`
-
   - : `object`。
-
     - `windowId` {{optional_inline}}
       - : `integer`。包含要突出显示标签页的窗口的 ID。
     - `populate` {{optional_inline}}
-
       - : `boolean`。默认为 `true`。如果设置为 `false`，则 {{WebExtAPIRef('windows.Window')}} 对象不会包含 `tabs` 属性，该属性包含表示窗口中打开的标签页的 {{WebExtAPIRef('tabs.Tab')}} 对象列表。
 
         > [!NOTE]

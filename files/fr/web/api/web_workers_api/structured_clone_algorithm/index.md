@@ -23,7 +23,6 @@ Il y a quelques avantages notables à utiliser l'algorithme de clonage structur�
 - Les objets [`Error`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) et [`Function`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) ne peuvent pas être copiés par l'algorithme de clonage structuré&nbsp;; toute tentative de le faire émettra une exception `DATA_CLONE_ERR`.
 - De la même manière, toute tentative de cloner des nœuds DOM émettra une exception `DATA_CLONE_ERR`.
 - Certains paramètres d'objets ne sont pas préservés&nbsp;:
-
   - Le champ `lastIndex` des objets [`RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) n'est pas préservé.
   - Les descripteurs de propriétés, accesseurs et mutateurs (ainsi que les fonctionnalités de métadonnées similaires) ne sont pas copiés. Par exemple, si un objet est marqué en lecture seule _via_ un descripteur de propriété, il sera en lecture et écriture dans le clone, car c'est la condition par défaut.
   - La chaîne de prototypes n'est ni parcourue, ni copiée.

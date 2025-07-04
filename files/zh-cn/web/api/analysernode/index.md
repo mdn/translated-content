@@ -58,7 +58,6 @@ _继承属性自_ _{{domxref("AudioNode")}}。_
 - {{domxref("AnalyserNode.minDecibels")}}
   - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最小阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最小值
 - {{domxref("AnalyserNode.maxDecibels")}}
-
   - : 是一个双精度值，表示 FFT 分析频域数据并转换为无符号字节值时，对输入的功率数据的最大阈值 - 基本上，它限定了调用`getByteFrequencyData()`时结果范围的最大值
 
 - {{domxref("AnalyserNode.smoothingTimeConstant")}}

@@ -27,9 +27,7 @@ var gettingIcon = browser.downloads.getFileIcon(
 - `downloadId`
   - : Un `integer` eprésentant l'ID du téléchargement.
 - `options`{{optional_inline}}
-
   - : Un `object` d'options représentant les préférences pour l'icône à extraire. Il peut prendre les propriétés suivantes :
-
     - `size`{{optional_inline}}
       - : Un `integer` représentant la taille de l'icône. La taille de l'icône retournée sera la taille fournie au carré (en pixels). Si elle est omise, la taille par défaut de l'icône est 32x32 pixels.
 

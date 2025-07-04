@@ -22,18 +22,14 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `hostPermissions`
   - : `ensemble` de `chaîne`. Les [permissions d'hôtes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) de l'extension.
 - `icons`
-
   - : `array` of `object`. les informations sur les icônes des extensions. Un tableau d'objets, un par chaque icône. Chaque objet contient deux propriétés :
-
     - `size`: un entier représentant la largeur et la hauteur de l'icônes en pixels.
     - `url`: une chaîne contenant l'url relative de l'icône, en commençant par la racine de l'extensions.
 
 - `id`
   - : `string`. l'ID de l'extension.
 - `installType`
-
   - : `string`. Une chaîne décriantn comme l'extension a été ajouté. Une des options suivantes :
-
     - "admin": l'extension a été installé en raison d'une politique administrative.
     - "development": l'extension a été installé décompressé sur le disque.
     - "normal": l'extension a été installé normalement à partir du package d'installation.
@@ -53,9 +49,7 @@ Il s'agit d'un objet avec les propriétés suivantes :
 - `shortName`
   - : `string`. Une courte version du nom de l'extension, prise à partir de la clé [short_name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/short_name) du manifest.json.
 - `type`
-
   - : `string`. Chaîne décrivant le type d'extension. Ceci permet de distinguer les extensions des applications et des thèmes. Il peut prendre l'une des valeurs suivantes :
-
     - "extension": le type d'extension la plus courante.
     - "hosted_app"
     - "packaged_app"

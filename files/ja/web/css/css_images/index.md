@@ -40,15 +40,12 @@ l10n:
 ## ガイド
 
 - [CSS グラデーションの使用](/ja/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-
   - : 特殊な CSS 画像型である*グラデーション*と、その作り方や使い方を紹介します。
 
 - [CSS での画像スプライトの実装](/ja/docs/Web/CSS/CSS_images/Implementing_image_sprites_in_CSS)
-
   - : 単一の文書でいくつかの画像をグループ化して、ダウロードリクエストを節約し、ページのスピードを上げることができる共通のテクニックを説明します。
 
 - [アスペクト比の理解](/ja/docs/Web/CSS/CSS_box_sizing/Understanding_aspect-ratio)
-
   - : `aspect-ratio`プロパティについて学び、置き換えられた要素と置き換えられていない要素のアスペクト比について解説し、いくつかの一般的なアスペクト比の用途を検証します。
 
 ## 仕様書

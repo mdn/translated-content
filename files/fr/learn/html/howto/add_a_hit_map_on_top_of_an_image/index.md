@@ -76,9 +76,7 @@ Les éléments `<area>` sont des éléments vides mais qui utilisent quatres att
 - [shape](/fr/docs/Web/HTML/Element/area#shape)
 
   [coords](/fr/docs/Web/HTML/Element/area#coords)
-
   - : `shape` (« forme » en anglais) prend l'une de ces quatre valeurs : `circle` (pour un cercle), `rect` (pour un rectangle), `poly` (pour un polygone) ou `default` (une zone `default` occupera l'image entière à laquelle on aura retiré les autres zones déjà définies). La forme choisie détermine les informations de coordonnées qui seront utiles dans `coords`.
-
     - Pour un cercle (`circle`) : on fournira les coordonnées X/Y du centre, suivies par la longueur du rayon.
     - Pour un rectange (`rect`) : on fournira les coordonnées X/Y des coins haut/gauche et bas/droite.
     - Pour un polygone (`poly`) : on fournira les coordonnées X/Y de chacun des sommets (et donc au moins six valeurs).
@@ -90,7 +88,6 @@ Les éléments `<area>` sont des éléments vides mais qui utilisent quatres att
 - [`href`](/fr/docs/Web/HTML/Element/area#href)
   - : Cet attribut est l'URL de la ressource vers laquelle on crée un lien. Elle peut être laissée vide si on ne souhaite pas créer de lien pour cette région.
 - [`alt`](/fr/docs/Web/HTML/Element/area#alt)
-
   - : Un attribut obligatoire qui indique aux personnes la direction ou le rôle du lien. Ce texte `alt` ne sera affiché que lorsque l'image ne sera pas disponible. Pour plus d'informations, voir [nos conseils pour écrire des hyperliens accessibles.](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks#écrire_des_liens_accessibles)
 
     Vous pouvez écrire `alt=""` si l'attribut `href` est vide _et_ que l'image entière possède déjà un attribut `alt` renseigné.

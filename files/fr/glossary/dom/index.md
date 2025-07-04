@@ -15,7 +15,6 @@ Le DOM est l'une des [API](/fr/docs/Glossary/API) les plus utilisées sur le [We
 2. [La documentation du DOM sur MDN](/fr/docs/Web/API/Document_Object_Model)
 3. [Les références du DOM](https://dom.spec.whatwg.org/)
 4. [Glossaire](/fr/docs/Glossary)
-
    1. [API](/fr/docs/Glossary/API)
    2. [HTML](/fr/docs/Glossary/HTML)
    3. [XML](/fr/docs/Glossary/XML)

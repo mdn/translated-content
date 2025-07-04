@@ -66,7 +66,6 @@ O Internet Explorer 8 e 9 apresentam um bug onde o elemento com a propriedade {{
 Soluções de contorno para este bug:
 
 - Somente para o IE9:
-
   - Defina o `{{cssxref("background-color")}} como: rgba(0,0,0,0)`
   - Defina a `{{cssxref("opacity")}} como: 0` e defina explicitamente {{cssxref("background-color")}} com outro valor diferente de [`transparent`](/pt-BR/docs/Web/CSS/color_value#transparent_keyword)
 

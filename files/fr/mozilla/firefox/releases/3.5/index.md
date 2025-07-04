@@ -49,7 +49,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref("-moz-column-rule-style") }}
 
   {{ cssxref("-moz-column-rule-color") }}
-
   - : La gestion de ces extensions à CSS de Mozilla a été ajoutée dans Firefox 3.5.
 
 - La {{ cssxref("valeur_de_couleur#Extensions_spécifiques_à_Mozilla","-moz-nativehyperlinktext") }}
@@ -73,7 +72,6 @@ Firefox 3.5 introduit un certain nombre de nouvelles fonctionnalités, ainsi qu'
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : Ces sélecteurs sont nouvellement gérés dans Firefox 3.5
 
 #### Nouvelles fonctionnalités DOM

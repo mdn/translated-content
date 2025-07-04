@@ -15,11 +15,11 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 
 ## Contexto de uso
 
-| Contenido permitido            | [Contenido transparente](/es/docs/Web/HTML/Content_categories#transparent_content), que contiene bien un atributo **src**, bien uno o más elementos {{ HTMLElement("source") }}, seguido de [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content) , sin ningún elemento de {{ HTMLElement("video") }} o `<audio>`. |
-| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre.                                                                                                                                                                                                                                                                                                                                   |
-| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](/es/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                                                                                                                 |
-| Documento normativo            | [HTML5, sección 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                               |
+| Contenido permitido            | [Contenido transparente](/es/docs/Web/HTML/Guides/Content_categories#transparent_content), que contiene bien un atributo **src**, bien uno o más elementos {{ HTMLElement("source") }}, seguido de [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content) o [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content) , sin ningún elemento de {{ HTMLElement("video") }} o `<audio>`. |
+| ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de etiquetas           | Ninguna, deben estar presentes tanto las etiquetas de inicio como las de cierre.                                                                                                                                                                                                                                                                                                                                                        |
+| Elementos primarios permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content) o cualquier elemento que acepte [contenido estático](/es/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                                                                                                                                        |
+| Documento normativo            | [HTML5, sección 4.8.7](https://www.w3.org/TR/html5/video.html#audio)                                                                                                                                                                                                                                                                                                                                                                    |
 
 ## Atributos
 
@@ -50,7 +50,7 @@ Si no está configurado, su valor predeterminado está definido por el navegador
 > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.
 
 - src
-  - : La URL del audio que se va a insertar. Está sujeta a los [Controles de acceso HTTP](/en-US/HTTP_access_control). Es opcional; en su lugar puedes usar el elemento [`source`](/es/docs/Web/HTML/Element/source) dentro del bloque de audio para especificar el audio que se va a insertar.
+  - : La URL del audio que se va a insertar. Está sujeta a los [Controles de acceso HTTP](/en-US/HTTP_access_control). Es opcional; en su lugar puedes usar el elemento [`source`](/es/docs/Web/HTML/Reference/Elements/source) dentro del bloque de audio para especificar el audio que se va a insertar.
 
 Las compensaciones de tiempo se especifican como valores float que indican el número de segundos que se va a compensar.
 
@@ -77,6 +77,6 @@ Reproduce el fichero de audio adjunto a este artículo.
 - [Manipulating audio using the enhanced audio API](/en-US/Manipulating_audio_using_the_enhanced_audio_API)
 - [`HTMLAudioElement`](/es/docs/Web/API/HTMLAudioElement)
 - [`nsIDOMHTMLMediaElement`](/en-US/XPCOM_Interface_Reference/NsIDOMHTMLMediaElement)
-- [`video`](/es/docs/Web/HTML/Element/video)
+- [`video`](/es/docs/Web/HTML/Reference/Elements/video)
 - [Usar audio y video en Firefox](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 - [The `audio` element](https://www.whatwg.org/specs/web-apps/current-work/#audio) (HTML 5 specification)

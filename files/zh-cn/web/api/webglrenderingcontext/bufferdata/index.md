@@ -22,13 +22,10 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 ### 参数
 
 - target
-
   - : {{domxref("GLenum")}} 指定 Buffer 绑定点（目标）。可取以下值：
-
     - `gl.ARRAY_BUFFER`: 包含顶点属性的 Buffer，如顶点坐标，纹理坐标数据或顶点颜色数据。
     - `gl.ELEMENT_ARRAY_BUFFER`: 用于元素索引的 Buffer。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-
       - `gl.COPY_READ_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
       - `gl.COPY_WRITE_BUFFER`: 从一个 Buffer 对象复制到另一个 Buffer 对象。
       - `gl.TRANSFORM_FEEDBACK_BUFFER`: 用于转换反馈操作的 Buffer。
@@ -41,14 +38,11 @@ void gl.bufferData(target, ArrayBufferView srcData, usage, srcOffset, length);
 - srcData {{optional_inline}}
   - : 一个{{jsxref("ArrayBuffer")}}，{{jsxref("SharedArrayBuffer")}} 或者 {{domxref("ArrayBufferView")}} 类型的数组对象，将被复制到 Buffer 的数据存储区。如果为`null`，数据存储区仍会被创建，但是不会进行初始化和定义。
 - usage
-
   - : {{domxref("GLenum")}} 指定数据存储区的使用方法。可取以下值：
-
     - `gl.STATIC_DRAW`: 缓冲区的内容可能经常使用，而不会经常更改。内容被写入缓冲区，但不被读取。
     - `gl.DYNAMIC_DRAW`: 缓冲区的内容可能经常被使用，并且经常更改。内容被写入缓冲区，但不被读取。
     - `gl.STREAM_DRAW`: 缓冲区的内容可能不会经常使用。内容被写入缓冲区，但不被读取。
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 时，可以使用以下值：
-
       - `gl.STATIC_READ`: 缓冲区的内容可能经常使用，而不会经常更改。内容从缓冲区读取，但不写入。
       - `gl.DYNAMIC_READ`: 缓冲区的内容可能经常使用，并且经常更改。内容从缓冲区读取，但不写入。
       - `gl.STREAM_READ`: 缓冲区的内容可能不会经常使用。内容从缓冲区读取，但不写入。

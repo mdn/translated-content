@@ -9,7 +9,8 @@ l10n:
 
 {{domxref("FileReader")}} 接口的 **`readAsText()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性更改为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件，并且 {{domxref("FileReader.result","result")}} 属性包含表示文件内容的文本字符串。
 
-> **备注：** {{domxref("Blob.text()")}} 方法是一种较新的基于 Promise 的 API，用于将文件读取为文本。
+> [!NOTE]
+> {{domxref("Blob.text()")}} 方法是一种较新的基于 Promise 的 API，用于将文件读取为文本。
 
 > [!NOTE]
 > 该方法将整个文件的内容加载到内存中，不适合大文件。对于大文件，首选使用 {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}}。

@@ -13,7 +13,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_o
 
 1. Перейдите на панель [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) в консоли Google Cloud Platform и нажмите кнопку «Создать» (_Create_).
 2. Введите название проекта, отредактируйте свой ID проекта и отметьте его. Для этого урока используются следующие значения:
-
    - Project name: _GAE Sample Site_
    - Project ID: _gaesamplesite_
 
@@ -25,7 +24,6 @@ slug: Learn_web_development/Howto/Tools_and_setup/How_do_you_host_your_website_o
 
 1. Нам понадобится образец приложения для публикации. Если у вас его нет, загрузите и распакуйте это [sample app](http://gaesamplesite.appspot.com/downloads.html)..
 2. Посмотрите на структуру образца приложения - папка `website` содержит содержимое вашего сайта, а `app.yaml` - ваш файл конфигурации приложения.
-
    - Ваш веб-сайт должен войти в папку `website`, а его целевую страницу нужно называть `index.html`, но кроме того, она может принимать любую форму.
    - Файл `app.yaml` - это файл конфигурации, который сообщает App Engine, как сопоставлять URL-адреса вашим статическим файлам. Вам не нужно его редактировать.
 

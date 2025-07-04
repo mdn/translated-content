@@ -21,7 +21,7 @@ original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
 
 ## 반복문 1
 
-우리의 첫 반복문 과제에서 우리는 여러분이 제공된 `myArray` 내의 모든 요소를 순회하고, 제공된 `list`에 추가될 리스트 아이템 (예: [`<li>`](/ko/docs/Web/HTML/Element/li) 요소) 내에서 화면에 그것들을 출력하는 간단한 반복문을 만듦으로써 시작하기를 원합니다.
+우리의 첫 반복문 과제에서 우리는 여러분이 제공된 `myArray` 내의 모든 요소를 순회하고, 제공된 `list`에 추가될 리스트 아이템 (예: [`<li>`](/ko/docs/Web/HTML/Reference/Elements/li) 요소) 내에서 화면에 그것들을 출력하는 간단한 반복문을 만듦으로써 시작하기를 원합니다.
 
 > [!NOTE]
 > 여러분의 에디터나 온라인 에디터에서 작업하기 위해서 [이 과제의 시작점을 다운로드](https://github.com/mdn/learning-area/tree/master/javascript/building-blocks/tasks/loops/loops1-download.html)하세요.
@@ -63,7 +63,6 @@ original_slug: Learn_web_development/Core/Scripting/Test_your_skills:_Loops
 
 1. 여러분의 작업을 [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), 또는 [Glitch](https://glitch.com/)와 같은 온라인에서 공유 가능한 에디터에 올리세요. 여러분은 코드를 직접 작성할 수도 있고, 혹은 위 섹션에 링크된 시작 파일을 사용할 수도 있습니다.
 2. [MDN Discourse forum Learning category](https://discourse.mozilla.org/c/mdn/learn) 에 평가 및/또는 도움을 요청하는 글을 작성하세요. 여러분의 글은 다음을 포함해야만 합니다:
-
    - "반복문 1 실력 테스트에 대한 평가 원함"과 같은 서술적인 제목.
    - 여러분이 이미 무엇을 시도해 봤는지, 그리고 우리가 무엇을 하기를 원하는지에 대한 설명. 예를 들자면, 막혀서 도움이 필요하다거나, 평가를 원한다거나 하는 설명을 포함해야 합니다.
    - (위의 단계 1에서 언급된) 온라인에서 공유 가능한 에디터에 있는, 여러분이 평가를 원하거나 도움이 필요한 예제의 링크. 이것은 익숙해지기에 좋은 습관입니다. 코딩 문제가 있는 누군가를 도울 때, 그들의 코드를 보지 못한다면 그들을 돕는 것은 몹시 힘듭니다.

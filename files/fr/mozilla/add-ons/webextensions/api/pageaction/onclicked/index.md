@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tab`
       - : Un objet {{WebExtAPIRef('tabs.Tab')}} représentant l'onglet dont l'action de la page a été cliquée.
 

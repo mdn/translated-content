@@ -53,9 +53,7 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 > Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
 
 - `alternate`
-
   - : Indique une représentation alternative du document actuel. Valable pour [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a), et [`<area>`](/fr/docs/Web/HTML/Element/area), la signification dépend des valeurs des autres attributs.
-
     - Avec le mot clé [`stylesheet`](#stylesheet) sur un `<link>`, il crée une feuille de style alternative.
 
       ```html
@@ -102,7 +100,6 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 - `help`
   - : Concerne les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot clé `help` indique que le contenu lié fournit une aide contextuelle, fournissant des informations pour le parent de l'élément définissant l'hyperlien, et ses enfants. Lorsqu'il est utilisé dans `<link>`, l'aide concerne l'ensemble du document. Lorsqu'elle est incluse avec [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area) et qu'elle est prise en charge, le [`cursor`](/fr/docs/Web/CSS/cursor) par défaut sera `help` au lieu de `pointer`.
 - `icon`
-
   - : Valable avec [`<link>`](/fr/docs/Web/HTML/Element/link), la ressource liée représente l'icône, ressource de représentation de la page dans l'interface utilisateur, pour le document courant.
 
     L'utilisation la plus courante de la valeur `icon` est le favicon :
@@ -121,7 +118,6 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
     > Le type de lien `shortcut` est souvent vu avant `icon`, mais ce type de lien est non conforme, ignoré et **les auteurs web ne doivent plus l'utiliser**.
 
 - `license`
-
   - : Valable sur les éléments [`<a>`](/fr/docs/Web/HTML/Element/a), [`<area>`](/fr/docs/Web/HTML/Element/area), [`<form>`](/fr/docs/Web/HTML/Element/form) et [`<link>`](/fr/docs/Web/HTML/Element/link), la valeur `license` indique que l'hyperlien mène à un document décrivant les informations relatives à la licence ; que le contenu principal du document actuel est couvert par la licence de droit d'auteur décrite par le document référencé. Si elle ne se trouve pas à l'intérieur de l'élément [`<head>`](/fr/docs/Web/HTML/Element/head), la norme ne fait pas de distinction entre un hyperlien s'appliquant à une partie spécifique du document ou au document dans son ensemble. Seules les données de la page peuvent l'indiquer.
 
     ```html
@@ -140,7 +136,6 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 - `nofollow`
   - : Pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), le mot clé `nofollow` indique aux robots des moteurs de recherche d'ignorer la relation de lien. La relation nofollow peut indiquer que le propriétaire du document actuel ne cautionne pas le document référencé. Elle est souvent incluse par les optimiseurs de moteurs de recherche qui prétendent que leurs fermes de liens ne sont pas des pages de spam.
 - `noopener`
-
   - : Cela concerne [`<form>`](/fr/docs/Web/HTML/Element/form), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), elle crée un contexte de navigation de haut niveau qui n'est pas un contexte de navigation auxiliaire si l'hyperlien créait l'un ou l'autre pour commencer (c.-à-d. a une valeur appropriée de l'attribut `target`). En d'autres termes, il fait en sorte que le lien se comporte comme si [`window.opener`](/fr/docs/Web/API/Window/opener) était nul et que `target="_parent"` était défini.
 
     C'est le contraire de [opener](#opener).
@@ -160,20 +155,17 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 - `prerender`
   - : Spécifie que l'agent utilisateur doit récupérer de manière préemptive la ressource cible et la traiter de manière à fournir une réponse plus rapide à l'avenir.
 - `prev`
-
   - : Similaire au mot-clé [next](#next), pertinent pour les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`<area>`](/fr/docs/Web/HTML/Element/area), les valeurs `prev` indiquent que le document actuel fait partie d'une série, et que le lien renvoie à un document précédent de la série est le document référencé.
 
     > [!NOTE]
     > Le synonyme `previous` est incorrect et ne doit pas être utilisé.
 
 - `search`
-
   - : Concerne les éléments [`<form>`](/fr/docs/Web/HTML/Element/form), [`<link>`](/fr/docs/Web/HTML/Element/link), [`<a>`](/fr/docs/Web/HTML/Element/a) et [`< area>`](/fr/docs/Web/HTML/Element/area), les mots-clés `search` indiquent que l'hyperlien fait référence à un document dont l'interface est spécialement conçue pour effectuer des recherches dans le document actuel, le site et les ressources connexes, en fournissant un lien vers une ressource qui peut être utilisée pour effectuer une recherche.
 
     Si l'attribut [`type`](type) est défini à `application/opensearchdescription+xml`, la ressource est un [prolongateur OpenSearch](/fr/docs/Web/OpenSearch) qui peut être facilement ajouté à l'interface de certains navigateurs comme Firefox ou Internet Explorer.
 
 - `stylesheet`
-
   - : Valable pour l'élément [`<link>`](/fr/docs/Web/HTML/Element/link), il importe une ressource externe à utiliser comme feuille de style. L'attribut [`type`](type) n'est pas nécessaire, car il s'agit d'une feuille de style `text/css`, puisque c'est la valeur par défaut. S'il ne s'agit pas d'une feuille de style de type `text/css`, il est préférable de déclarer le type.
 
     Bien que cet attribut définisse le lien comme étant une feuille de style, l'interaction avec d'autres attributs et d'autres termes clés dans la valeur rel ont un impact sur le téléchargement et/ou l'utilisation de la feuille de style.
@@ -190,7 +182,6 @@ S'il existe plusieurs `<link rel="icon">`, le navigateur utilise leur attribut [
 ### Valeurs non standard
 
 - apple-touch-icon-precomposed
-
   - : Exemple d'utilisation
 
     ```html

@@ -41,15 +41,12 @@ RegExp(pattern, flags)
 ### 引数
 
 - `pattern`
-
   - : 正規表現のテキストです。他の `RegExp` オブジェクトであっても構いません。
 
 - `flags` {{optional_inline}}
-
   - : 指定された場合、 `flags` は追加するフラグを含む文字列です。または、`RegExp` オブジェクトが `pattern` に提供された場合は、`flags` の文字列はそのオブジェクトのフラグをすべて置き換えます（そして `lastIndex` は 0 にリセットされます）。
 
     `flags` は以下の値を任意の組み合わせを含んだ文字列を指定することができます。
-
     - [`d` (indices)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices)
       - : 部分文字列の一致にインデックスを生成します。
     - [`g` (global)](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global)

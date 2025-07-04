@@ -37,7 +37,8 @@ value value              /* 每个方向一个值（先水平然后垂直） */
 keyword value keyword value /* 每个值都是其前面的关键字的偏移量 */
 ```
 
-> **备注：** {{cssxref("background-position")}} 属性也接受三值语法。这无法在其他使用 `<position>` 的属性中使用。
+> [!NOTE]
+> {{cssxref("background-position")}} 属性也接受三值语法。这无法在其他使用 `<position>` 的属性中使用。
 
 ## 插值
 

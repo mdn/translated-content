@@ -33,7 +33,6 @@ matchAll(regexp)
 ### 引数
 
 - `regexp`
-
   - : 正規表現オブジェクト、または [`Symbol.matchAll`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/match) を持つ任意のオブジェクトです。
 
     `regexp` が `RegExp` 以外のオブジェクトであった場合、暗黙的に {{jsxref("RegExp")}} への変換が `new RegExp(regexp, 'g')` を使用して行われます。

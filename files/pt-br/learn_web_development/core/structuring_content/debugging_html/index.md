@@ -88,7 +88,6 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
    ```
 
 4. Vamos analisar os erros:
-
    - Os elementos {{htmlelement("p","parágrafo")}} e {{htmlelement("li","item da lista")}} não possuem _tags_ de fechamento. Olhando a imagem acima, isso não parece ter afetado muito a renderização do HTML já que é fácil deduzir onde um elemento deveria terminar e outro, começar.
    - O primeiro elemento {{htmlelement("strong")}} não possui _tag_ de fechamento. Isto é um pouco mais problemático porque não é necessariamente fácil determinar onde um elemento deveria terminar. Assim, todo o resto do texto foi fortemente enfatizado.
    - Essa seção foi aninhada incorretamente: `<strong>negrito <em>negrito sublinhado?</strong> O que é isso?</em>`. Não é fácil dizer como esse trecho foi interpretado por causa do problema anterior.
@@ -97,7 +96,6 @@ O próprio HTML não sofre de erros de sintaxe porque os navegadores o analisam 
 5. Agora vamos dar uma olhada no HTML que o navegador renderizou, comparando-o com o nosso código fonte. Para fazer isso, usaremos as ferramentas de desenvolvimento oferecidas pelo navegador. Se você não está familiarizado com estas ferramentas, dê uma olhadinha nesse tutorial: [O que são as ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools).
 6. No inspetor DOM, você pode ver como o HTML renderizado fica: ![The HTML inspector in Firefox, with our example's paragraph highlighted, showing the text "What causes errors in HTML?" Here you can see that the paragraph element has been closed by the browser.](html-inspector.png)
 7. Utilizando o inspetor DOM, vamos explorar nosso código detalhadamente para ver como o navegador tentou consertar os erros do código HTML (nós fizemos a análise com o Firefox, mas outros navegadores modernos _devem_ apresentar o mesmo resultado):
-
    - As _tags_ de fechamento foram colocadas nos parágrafos e itens da lista.
    - Não está claro onde o primeiro elemento `<strong>` deveria terminar, portanto o navegador envolveu cada bloco subsequente em uma _tag_ _strong_ própria até o fim do documento!
    - O aninhamento incorreto foi corrigido pelo navegador da seguinte maneira:

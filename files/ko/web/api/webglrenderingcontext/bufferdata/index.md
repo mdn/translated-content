@@ -27,17 +27,13 @@ bufferData(target, srcData, usage, srcOffset, length)
 ### 매개 변수
 
 - `target`
-
   - : 바인딩 지점(target)을 지정하는{{domxref("WebGL_API/Types", "GLenum")}}. 가능한 값들은 다음과 같습니다.
-
     - `gl.ARRAY_BUFFER`
       - : 정점 좌표, 텍스처 좌표 데이터 또는 정점 색상 데이터와 같은 정점 속성을 포함하는 버퍼.
     - `gl.ELEMENT_ARRAY_BUFFER`
-
       - : 요소 인덱스를 위한 버퍼.
 
     {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}를 사용하는 경우, 추가적으로 아래 값들이 가능합니다.
-
     - `gl.COPY_READ_BUFFER`
       - : 한 버퍼 객체에서 다른 버퍼 객체로 복사하기 위한 버퍼.
     - `gl.COPY_WRITE_BUFFER`
@@ -56,9 +52,7 @@ bufferData(target, srcData, usage, srcOffset, length)
 - `srcData` {{optional_inline}}
   - : 데이터 저장소로 복사될 {{jsxref("ArrayBuffer")}}, {{jsxref("SharedArrayBuffer")}}, {{jsxref("TypedArray")}} 혹은 {{jsxref("DataView")}}. `null`인 경우, 데이터 저장소는 여전히 생성되지만, 그 내용은 초기화되지 않고 정의되지 않습니다.
 - `usage`
-
   - : 최적화 목적으로 데이터 저장소의 예정된 사용 패턴을 지정하는 {{domxref("WebGL_API/Types", "GLenum")}} 가능한 값들은 다음과 같습니다.
-
     - `gl.STATIC_DRAW`
       - : 콘텐츠는 응용 프로그램에 의해 한 번 지정되며, WebGL 그리기와 이미지 명세 명령의 소스로서 여러 번 사용됩니다.
     - `gl.DYNAMIC_DRAW`
@@ -66,7 +60,6 @@ bufferData(target, srcData, usage, srcOffset, length)
     - `gl.STREAM_DRAW`
       - : 콘텐츠는 응용 프로그램에 의해 한 번 지정되며, WebGL 그리기와 이미지 명세 명령의 소스로서 몇 번 사용됩니다.
     - {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}를 사용할 때 추가적으로 사용할 수 있는 값들은 다음과 같습니다.
-
       - `gl.STATIC_READ`
         - : 콘텐츠는 WebGL에서 데이터를 읽어 한 번 지정되며, 응용 프로그램에 의해 여러 번 조회됩니다.
       - `gl.DYNAMIC_READ`

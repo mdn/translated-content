@@ -9,7 +9,7 @@ l10n:
 {{HTTPSidebar}}
 
 **`Vary`** HTTP 응답 헤더는 요청 메시지의 메서드 및 URL을 제외하고 응답 내용에 영향을 준 부분을 설명합니다.
-대부분 이 헤더는 [콘텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)이 사용 중일 때
+대부분 이 헤더는 [콘텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)이 사용 중일 때
 캐시 키를 생성하는 데 사용됩니다.
 
 {{HTTPStatus("304")}} `Not Modified` 응답과 "기본" 응답을 포함하여 지정된 URL에 대한 모든 응답에
@@ -58,4 +58,4 @@ Vary: <header-name>, <header-name>, ...
 
 - [Understanding The Vary Header - Smashing Magazine](https://www.smashingmagazine.com/2017/11/understanding-vary-header/)
 - [Best Practices for Using the Vary Header – fastly.com](https://www.fastly.com/blog/best-practices-using-vary-header)
-- [컨텐츠 협상](/ko/docs/Web/HTTP/Content_negotiation)
+- [컨텐츠 협상](/ko/docs/Web/HTTP/Guides/Content_negotiation)

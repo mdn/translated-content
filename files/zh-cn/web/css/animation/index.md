@@ -72,7 +72,6 @@ animation:
 每组动画规定的属性如下：
 
 - 以下属性出现 0 次或 1 次：
-
   - {{cssxref("&lt;single-transition-timing-function&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-iteration-count&gt;", "#&lt;single-animation-iteration-count&gt;")}}
   - {{cssxref("animation", "&lt;single-animation-direction&gt;", "#&lt;single-animation-direction&gt;")}}

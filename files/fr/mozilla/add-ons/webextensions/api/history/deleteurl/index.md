@@ -20,9 +20,7 @@ var deletingUrl = browser.history.deleteUrl(
 ### Paramètres
 
 - `details`
-
   - : `object`. Objet contenant l'URL dont les visites doivent être supprimées.
-
     - `url`
       - : `string`. L'URL dont les visites doivent être supprimées.
 

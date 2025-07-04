@@ -85,42 +85,35 @@ video::cue {
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `default`
   - : Este atributo indica que la pista debe habilitarse a menos que las preferencias del usuario indiquen que otra pista es más apropiada. Esto solo se puede usar en un elemento `track` por elemento multimedia.
 - `kind`
-
   - : Cómo debe usarse la pista de texto. Si se omite, el tipo predeterminado es `subtitles`. Si el atributo contiene un valor no válido, utilizará `metadata` (las versiones de Chrome anteriores a la 52 trataron un valor no válido como `subtitles`). Se permiten las siguientes palabras clave:
-
     - `subtitles`
-
       - Los subtítulos proporcionan traducción de contenido que el espectador no puede entender. Por ejemplo, habla o texto que no está en inglés en una película en inglés.
       - Los subtítulos pueden contener contenido adicional, generalmente información de fondo adicional. Por ejemplo, el texto al comienzo de las películas de Star Wars, o la fecha, la hora y la ubicación de una escena.
 
     - `captions`
-
       - Los subtítulos ofrecen una transcripción y posiblemente una traducción del audio.
       - Puede incluir información no verbal importante, como pistas musicales o efectos de sonido. Puede indicar la fuente de la señal (por ejemplo, música, texto, personaje).
       - Adecuado para usuarios sordos o cuando el sonido está silenciado.
 
     - `descriptions`
-
       - Descripción textual del contenido del video.
       - Apto para usuarios ciegos o cuando no se puede ver el vídeo.
 
     - `chapters`
-
       - Los títulos de los capítulos están destinados a ser utilizados cuando el usuario navega por el recurso multimedia.
 
     - `metadata`
-
       - Pistas utilizadas por los _scripts_. No visible para el usuario.
 
 - `label`
   - : Un título legible por el usuario de la pista de texto que utiliza el navegador cuando enumera las pistas de texto disponibles.
 - `src`
-  - : Dirección de la pista (archivo `.vtt`). Debe ser una URL válida. Este atributo debe especificarse y su valor de URL debe tener el mismo origen que el documento, a menos que el elemento principal {{HTMLElement("audio")}} o {{HTMLElement("video")}} del elemento `track` tenga un atributo de [origen cruzado](/es/docs/Web/HTML/Attributes/crossorigin).
+  - : Dirección de la pista (archivo `.vtt`). Debe ser una URL válida. Este atributo debe especificarse y su valor de URL debe tener el mismo origen que el documento, a menos que el elemento principal {{HTMLElement("audio")}} o {{HTMLElement("video")}} del elemento `track` tenga un atributo de [origen cruzado](/es/docs/Web/HTML/Reference/Attributes/crossorigin).
 - `srclang`
   - : Idioma del texto de la pista. Debe ser una etiqueta de idioma [BCP 47](https://r12a.github.io/app-subtags/) válida. Si el atributo `kind` se establece en `subtitles`, se debe definir `srclang`.
 

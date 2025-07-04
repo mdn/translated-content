@@ -28,7 +28,6 @@ En TCP el puerto por defecto, para un servidor HTTP en un computador, es el puer
 Una vez la conexión está establecida, el cliente, puede mandar una petición de datos (normalmente es un navegador, u otra cosa, como una 'araña' ( o 'crawler' en inglés), un sistema de indexación automático de páginas web). La petición de datos de un cliente HTTP, consiste en directivas de texto, separadas mediante CRLF (retorno de carro, y cambio de linea), y se divide en tres partes:
 
 1. La primera parte, consiste en una linea, que contiene un método, seguido de sus parámetros:
-
    - la dirección del documento pedido: por ejemplo su URL completa, sin indicar el protocolo o el nombre del dominio.
    - la versión del protocolo HTTP
 

@@ -52,5 +52,4 @@ input[type="color"]::-moz-color-swatch {
 ## 参见
 
 - 其他浏览器也使用类似的伪元素：
-
   - {{cssxref("::-webkit-color-swatch")}}，WebKit 和 Blink（Safari、Chrome 和 Opera）支持的伪元素

@@ -57,7 +57,6 @@ font-variant-alternates: unset;
 - `swash()`
   - : この関数は、[先端装飾](https://en.wikipedia.org/wiki/Swash_%28typography%29)書体を有効にします。この引数は、フォント固有の名前を数値に対応づけたものです。 OpenType の `swsh` および `cswh` の値に相当します (例: `swsh 2` および `cswh 2`)。
 - `ornaments()`
-
   - : この関数は、[フルーロン](https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%AD%E3%83%B3)およびその他の飾り書体などの装飾を有効にします。 OpenType の `ornm` の値に相当します (例: `ornm 2`)。
 
     > [!NOTE]

@@ -23,7 +23,6 @@ obj.__defineSetter__(prop, fun)
 - `prop`
   - : Uma cadeia de caracteres (_string_) contendo o nome da propriedade que vai ser vinculada a função dada.
 - `fun`
-
   - : A função a ser chamada quando houver uma tentativa de atribuir na propriedade especificada. Esta função toma a forma
 
     ```js

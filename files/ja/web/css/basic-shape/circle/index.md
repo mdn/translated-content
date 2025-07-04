@@ -59,9 +59,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### 値
 
 - `<shape-radius>`
-
   - : {{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
-
     - `closest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。円の場合は、あらゆる軸で最も近い辺となります。
     - `farthest-side`

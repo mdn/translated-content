@@ -55,7 +55,6 @@ new Proxy(target, {
 - `value`
   - : 新属性值。
 - `receiver`
-
   - : 最初接收赋值的对象。通常是 proxy 本身，但 handler 的 set 方法也有可能在原型链上，或以其他方式被间接地调用（因此不一定是 proxy 本身）。
 
     > [!NOTE]

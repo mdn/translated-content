@@ -32,9 +32,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `src`
   - : Cet attribut est obligatoire pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}}. Il définit l'adresse de la ressource. La valeur de cet attribut est ignorée lorsque l'élément `<source>` est à l'intérieur d'un élément{{HTMLElement("picture")}}.
 - `srcset`
-
   - : Une liste d'une ou plusieurs chaînes de caractères, séparées par des virgules. Cette liste indique un ensemble d'images qui peuvent être utilisées comme sources par le navigateur. Chaque chaîne de caractères se compose :
-
     1. D'une URL pointant vers l'image,
     2. D'un descripteur de largeur, c'est un entier positif, directement suivi par `'w'`. La valeur par défaut, si ce descripteur est absent, correspond à l'infini positif.
     3. D'un descripteur de densité de pixel, c'est un nombre décimal positif, directement suivi par `'x'`. La valeur par défaut, si ce descripteur est absent, est `1x`.

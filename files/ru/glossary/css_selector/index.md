@@ -32,7 +32,6 @@ p {
 ### Основные статьи
 
 1. Базовые селекторы
-
    1. [Селекторы по типу](/ru/docs/Web/CSS/Type_selectors) `elementname`
    2. [Селекторы по классу](/ru/docs/Web/CSS/Class_selectors) `.classname`
    3. [Селекторы по ID](/ru/docs/Web/CSS/ID_selectors) `#idname`
@@ -41,17 +40,14 @@ p {
    6. [Селекторы состояния элементов](/ru/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 2. Группирующие селекторы
-
    1. [Список селекторов](/ru/docs/Web/CSS/Selector_list) `A, B`
 
 3. Комбинаторы
-
    1. [Adjacent sibling selectors](/ru/docs/Web/CSS/Next-sibling_combinator) `A + B`
    2. [General sibling selectors](/ru/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
    3. [Child selectors](/ru/docs/Web/CSS/Child_combinator) `A > B`
    4. [Descendant selectors](/ru/docs/Web/CSS/Descendant_combinator) `A B`
 
 4. Псевдо
-
    1. [Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) `:`
    2. [Псевдоэлементы](/ru/docs/Web/CSS/Pseudo-elements) `::`

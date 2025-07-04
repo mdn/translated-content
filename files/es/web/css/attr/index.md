@@ -22,7 +22,6 @@ Sintaxis formal: attr( attribute-name <type-or-unit>? [, <fallback> ]? )
 - `attribute-name`
   - : Es el nombre de un atributo en el elemento HTML al que se hace referencia en el CSS. Soporte para otros atributos a parte de {{ cssxref("content") }} es {{ experimental_inline() }}.
 - `<type-or-unit>`
-
   - : Es una palabra clave que representa o el tipo del valor del atributo, o su unidad, pues en HTML algunos atributos tienen unidades implícitas. Si el uso de `<type-or-unit>` como valor del atributo especificado no es válido, la expresión `attr()` también será no válida. Si se omite, el valor por defecto es string. La lista de valores válidos son:
 
     | Keyword                                                                                                          | Associated type                   | Comment                                                                                                                                                                                                                                                                                                                                                                                                                                       | Default value                                                                                     |

@@ -94,7 +94,8 @@ slug: Web/HTTP/Guides/Permissions_Policy
 ("https://example.com" "https://a.example.com" "https://b.example.com" "https://c.example.com")
 ```
 
-> **备注：** `"https://*.example.com"` 不匹配 `"https://example.com"`。
+> [!NOTE]
+> `"https://*.example.com"` 不匹配 `"https://example.com"`。
 
 允许列表示例：
 

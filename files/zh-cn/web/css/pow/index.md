@@ -23,11 +23,9 @@ width: calc(10px * pow(2, 10)); /* 10px * 1024 = 10240px */
 `pow(base, number)` 函数接受两个以逗号分隔的值作为其参数。
 
 - `base`
-
   - : 解析为 {{CSSXref("&lt;number&gt;")}} 的计算式，表示底数。
 
 - `number`
-
   - : 解析为 {{CSSXref("&lt;number&gt;")}} 的计算式，表示指数。
 
 ### 返回值

@@ -43,7 +43,6 @@ Sauf mention contraire, le type d'affichage intérieur et extérieur sont défin
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

@@ -86,9 +86,7 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
 ### Attributs dépréciés ou obsolètes
 
 - **`align`**{{deprecated_inline}}
-
   - : Une chaîne de caractère qui définit l'alignement horizontal pour le contenu de chaque cellule. C'est un raccourci pour définir l'alignement sur l'ensemble de la ligne plutôt que pour chaque cellule. Les valeurs possibles sont :
-
     - `left`
       - : Le contenu de la cellule est aligné à gauche de la cellule.
     - `center`
@@ -109,30 +107,25 @@ La construction de tableau peut parfois demander un peu de pratique. Au-delà de
     > - Pour réaliser le même effet qu'avec la valeur `char`. Il est possible d'utiliser la valeur de l'attribut [`char`](#attr-char) comme valeur de la propriété [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - **`bgcolor`** {{deprecated_inline}}
-
   - : Une chaîne de caractères qui définit la couleur d'arrière-plan de toutes les cellules de la colonne. Il peut s'agit d'une [notation hexadécimale #RRGGGBB ou #RGB](</fr/docs/Web/CSS/color_value#rgb()>) ou bien d'un [mot-clé](/fr/docs/Web/CSS/color_value#color_keywords) pour une couleur. L'absence de cet attribut (ou sa déclaration à `null` en JavaScript) fera que la couleur des cellules de la ligne sera héritée de la couleur d'arrière-plan de l'élément parent.
 
     > [!NOTE]
     > L'élément `<tr>` doit être mis en forme grâce au [CSS](/fr/docs/Web/CSS). Pour fournir un effet semblable à celui achevé par l'attribut `bgcolor`, il est possible d'utiliser la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
 
 - **`char`**{{deprecated_inline}}
-
   - : Une chaîne de caractère qui définit le caractère sur lequel aligner les cellules d'une colonne. Les valeurs de cet attribut contiennent généralement un point ou une virgule pour aligner des nombres ou des valeurs monétaires. Si l'attribut [`align`](#attr-align) ne vaut pas `char`, l'attribut est ignoré.
 
     > [!NOTE]
     > Cet attribut est obsolète et peu implémenté : il est donc fortement déconseillé de l'utiliser. Pour réaliser le même effet qu'avec [`char`](#attr-char), il faut utiliser la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-align).
 
 - **`charoff`** {{deprecated_inline}}
-
   - : Une chaîne de caractères utilisée pour indiquer le nombre de caractères à afficher après le caractère défini par l'attribut `char`. Cela peut par exemple servir à indiquer qu'on souhaite afficher deux chiffres après la virgule pour les valeurs monétaires afin d'indiquer les centimes.
 
     > [!NOTE]
     > Cet attribut ne doit plus être utilisé, car il est maintenant obsolète et que sa compatibilité n'était pas répandue.
 
 - **`valign`** {{deprecated_inline}}
-
   - : Une chaîne de caractères qui définit l'alignement vertical du texte des cellules de la ligne. Les valeurs possibles de cet attribut sont :
-
     - `baseline`
       - : Aligne le texte à la ligne la plus basse possible en utilisant la [ligne de base](https://fr.wikipedia.org/wiki/Ligne_de_base_%28typographie%29) des caractères. Si les caractères ont tous la même taille, cela aura le même effet que la valeur `bottom`.
     - `bottom`
@@ -665,6 +658,5 @@ Cette règle applique la propriété CSS [`text-align`](/fr/docs/Web/CSS/text-al
 - Les autres éléments HTML relatifs aux tableaux : [`<caption>`](/fr/docs/Web/HTML/Element/caption), [`<col>`](/fr/docs/Web/HTML/Element/col), [`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup), [`<table>`](/fr/docs/Web/HTML/Element/table), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<td>`](/fr/docs/Web/HTML/Element/td), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot), [`<th>`](/fr/docs/Web/HTML/Element/th), [`<thead>`](/fr/docs/Web/HTML/Element/thead).
 - [`HTMLTableRowElement`](/fr/docs/Web/API/HTMLTableRowElement) : l'interface DOM sur laquelle `<tr>` est basé.
 - Les propriétés et pseudo-classes CSS qui sont particulièrement utiles pour mettre en forme l'élément `<tr>` :
-
   - La pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) qui permet de définir l'alignement des cellules dans la colonne ou sur une ligne
   - La propriété [`text-align`](/fr/docs/Web/CSS/text-align) qui permet d'aligner l'ensemble des cellules par rapport au même caractère (comme le point ou la virgule).

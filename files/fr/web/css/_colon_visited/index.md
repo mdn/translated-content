@@ -71,7 +71,6 @@ a:visited {
 
 - [Vie privée et le sélecteur `:visited`](/fr/docs/Web/CSS/Privacy_and_the_:visited_selector)
 - Les pseudo-classes relatives aux liens :
-
   - {{cssxref(":link")}},
   - {{cssxref(":visited")}},
   - {{cssxref(":hover")}},

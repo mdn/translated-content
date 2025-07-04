@@ -24,11 +24,9 @@ TypeError: "x" is not a function
 許多內建函式都需要回呼（callback）的函式。為了讓下面的方法順利運作，你需要為它們提供函式：
 
 - 如果是 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 物件：
-
   - {{jsxref("Array.prototype.every()")}}、{{jsxref("Array.prototype.some()")}}、{{jsxref("Array.prototype.forEach()")}}、{{jsxref("Array.prototype.map()")}}、{{jsxref("Array.prototype.filter()")}}、{{jsxref("Array.prototype.reduce()")}}、{{jsxref("Array.prototype.reduceRight()")}}、{{jsxref("Array.prototype.find()")}}
 
 - 如果是 {{jsxref("Map")}} 與 {{jsxref("Set")}} 物件：
-
   - {{jsxref("Map.prototype.forEach()")}} 與 {{jsxref("Set.prototype.forEach()")}}
 
 ## 實例

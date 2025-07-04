@@ -267,19 +267,16 @@ p {
 CSS fournit quatre propriétés communes pour modifier le poids et l'emphase visuelles du texte :
 
 - {{cssxref("font-style")}} : utilisé pour appliquer ou enlever le style italique. Les valeurs possibles sont les suivantes (vous ne l'utiliserez que rarement, sauf si vous souhaitez désactiver le style italique pour une raison quelconque) :
-
   - `normal` : fige le texte en police normale (suppression du style italique existant).
   - `italic`&nbsp;: met le texte en _version italique de la police_ si elle est disponible ; si elle n'existe pas, le style italique sera émulé avec l'option oblique à la place.
   - `oblique` : force le texte à utiliser une version simulée de fonte italique, créée en _inclinant la version normale_.
 
 - {{cssxref("font-weight")}} : définit la graisse du texte. La propriété peut avoir de nombreuses valeurs s'il y a de nombreuses variantes de polices disponibles (comme _-light_, _-normal_, _-bold_, _-extrabold_, _-black_, etc.), mais en réalité, vous les utiliserez rarement en dehors de `normal` et `bold` (gras):
-
   - `normal`, `bold` : graisse de la police, normale ou **bold**.
   - `lighter`, `bolder` : définit la graisse de l'élément courant de sorte qu'il soit un cran moins gras ou plus gras que son parent.
   - `100–900` : valeurs numériques du taux de graisse ; elles permettent un dosage plus fin que les mots-clés ci-dessus, si nécessaire.
 
 - {{cssxref("text-transform")}} : Vous permet de définir les transformations de votre police. Les valeurs comprennent :
-
   - `none` : aucune transformation.
   - `uppercase` : met tout le texte en majuscules.
   - `lowercase` : met tout le texte en minuscules.
@@ -287,7 +284,6 @@ CSS fournit quatre propriétés communes pour modifier le poids et l'emphase vis
   - `full-width` : force l'écriture de tous les glyphes dans un carré de largeur fixe, similaire à une police à espacement fixe, permettant leur alignement, par ex. caractères latins avec des glyphes de langue asiatique (comme le chinois, le japonais, le coréen.)
 
 - {{cssxref("text-decoration")}} : active ou désactive les décorations de texte sur les polices (vous les utiliserez principalement pour désactiver le soulignement par défaut sur les liens lors de leur création). Les valeurs disponibles sont :
-
   - `none`: désactive les décorations du texte déjà présentes.
   - `underline`: souligne le texte.
   - `overline`: trace une ligne au-dessus du texte.

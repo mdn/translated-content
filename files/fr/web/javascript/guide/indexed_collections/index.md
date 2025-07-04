@@ -296,7 +296,6 @@ L'objet `Array` possède les méthodes suivantes&nbsp;:
   ```
 
   `sort()` peut également utiliser une fonction de rappel (<i lang="en">callback</i>) qui détermine comment les éléments sont comparés. La fonction compare deux arguments et renvoie une valeur selon les règles suivantes&nbsp;:
-
   - Si `a` est inférieur à `b` selon l'ordre, renvoie -1 (ou un autre nombre négatif)
   - Si `a` est supérieur à `b` selon l'ordre, renvoie 1 (ou un autre nombre positif)
   - Si `a` et `b` sont considérés égaux, renvoie 0.

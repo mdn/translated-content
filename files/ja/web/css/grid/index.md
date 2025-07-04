@@ -117,13 +117,11 @@ grid: unset;
 - `<'grid-template'>`
   - : {{cssxref("grid-template")}} を定義し、これには {{cssxref("grid-template-columns")}}, {{cssxref("grid-template-rows")}}, {{cssxref("grid-template-areas")}} が含まれます。
 - `<'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>?`
-
   - : {{cssxref("grid-template-rows")}} プロパティを明示的に設定 (および {{cssxref("grid-template-columns")}} プロパティを `none` に設定) することで行トラックを設定し、 {{cssxref("grid-auto-columns")}} プロパティを設定 (および {{cssxref("grid-auto-rows")}} を `auto` に設定) することで列トラックの自動反復方法を設定します。 `dense` が設定されていれば、 {{cssxref("grid-auto-flow")}} も `column` に設定されます。
 
     ほかの `grid` のサブプロパティはすべて、初期値に初期化されます。
 
 - `[ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>`
-
   - : {{cssxref("grid-template-columns")}} プロパティを明示的に設定 (および {{cssxref("grid-template-rows")}} プロパティを `none` に設定) することで列トラックを設定し、 {{cssxref("grid-auto-rows")}} プロパティを設定 (および {{cssxref("grid-auto-columns")}} を `auto` に設定) することで行トラックの自動反復方法を設定します。 `dense` が設定されていれば、 {{cssxref("grid-auto-flow")}} も `column` に設定されます。
 
     ほかの `grid` のサブプロパティはすべて、初期値に初期化されます。

@@ -105,19 +105,15 @@ CSS は当初、物理的な座標のみで設計されていました。論理�
 ### ガイド
 
 - [論理的プロパティと値の基本概念](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values)
-
   - : フロー関連プロパティと値の概要です。
 
 - [寸法の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Sizing)
-
   - : フロー関連の物理プロパティと論理プロパティ間の対応付け。ページ上の要素のサイズ決定に使用されます。
 
 - [マージン、境界、パディングの論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Margins_borders_padding)
-
   - : さまざまなマージン、境界線、パディングのプロパティとその一括指定に対するフローに関連した割り当て。
 
 - [浮動と位置指定の論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values/Floating_and_positioning)
-
   - : `float`、`clear`、[インセットプロパティ](/ja/docs/Glossary/Inset_properties)、`resize` の物理値と論理値間の詳細な対応付け。
 
 ## 関連概念

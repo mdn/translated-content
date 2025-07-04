@@ -73,9 +73,7 @@ li:nth-child(even) {
 ### Notation fonctionnelle
 
 - `<An+B>`
-
   - : Représente les éléments dont la position numérique au sein de la liste des voisins correspond au motif `An+B`, pour chaque entier positif `n`, où&nbsp;:
-
     - `A` est un incrément entier,
     - `B` est un décalage entier,
     - `n` représente les entiers positifs à partir de 0.

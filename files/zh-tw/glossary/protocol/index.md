@@ -13,6 +13,5 @@ slug: Glossary/Protocol
 - [RFC 官方網路通訊協定標準](https://www.rfc-editor.org/standards)
 - [HTTP 概述](/zh-TW/docs/Web/HTTP/Guides/Overview)
 - 術語表：
-
   - {{glossary("TCP")}}
   - {{glossary("Packet", "封包")}}

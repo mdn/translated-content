@@ -18,13 +18,9 @@ encodingInfo(configuration)
 ### 参数
 
 - `configuration`
-
   - : 具有 `type` 属性以及 `video` _或_ `audio` 属性（包含适当类型的配置）的对象：
-
     - `type`
-
       - : 测试的媒体类型。可取以下两个值之一：
-
         - `record`
           - : 表示用于录制媒体的配置，例如使用 {{domxref("MediaRecorder")}}。
         - `webrtc`
@@ -33,9 +29,7 @@ encodingInfo(configuration)
           - : Firefox 中使用的 `webrtc` 的同义词。
 
     - `video`
-
       - : 用于配置视频媒体源的对象。其具有以下属性：
-
         - `contentType`
           - : 包含有效视频 MIME 类型以及（可选的）[`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)的字符串。
         - `width`
@@ -48,9 +42,7 @@ encodingInfo(configuration)
           - : 构成视频播放的 1 秒内容的帧数。
 
     - `audio`
-
       - : 用于配置音频媒体源的对象。其具有以下属性：
-
         - `contentType`
           - : 包含有效音频 MIME 类型以及（可选的）[`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)的字符串。
         - `channels`

@@ -153,9 +153,7 @@ On peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes)
 ### Attributs obsolètes
 
 - **`align`** {{deprecated_inline}}
-
   - : Cet attribut à valeur contrainte indique l'alignement de la légende du tableau par rapport au tableau lui-même. Il peut valoir :
-
     - `left`
       - : La légende est affichée à gauche du tableau
     - `top`
@@ -232,6 +230,5 @@ td {
 ## Voir aussi
 
 - Les propriétés CSS particulièrement utiles pour styliser l'élément `<caption>` :
-
   - [`text-align`](/fr/docs/Web/CSS/text-align)
   - [`caption-side`](/fr/docs/Web/CSS/caption-side).

@@ -66,7 +66,6 @@ color-scheme: unset;
 - `dark`
   - : オペレーティングシステムのダーク配色を使用して要素をレンダリングできることを示します。
 - `only`
-
   - : ユーザーエージェントが要素の配色を上書きすることを禁じます。
 
     特定の要素または `:root` に `color-scheme: only light;` を適用することで、 Chrome の[自動ダークテーマ](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out)による色上書きを無効にするために使用することができます。

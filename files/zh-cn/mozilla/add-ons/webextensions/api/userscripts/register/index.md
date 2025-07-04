@@ -20,7 +20,6 @@ let registeredUserScript = browser.userScripts.register(
 ### 参数
 
 - `scripts`
-
   - : {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 的数组（`array`）。要注册的用户脚本的详细信息。
 
     每个 {{WebExtAPIRef("userScripts.RegisteredUserScript")}} 对象必须包含非空数组的 `js` 属性，以及非空数组的 `matches` 和 `includeGlobs` 其中之一。

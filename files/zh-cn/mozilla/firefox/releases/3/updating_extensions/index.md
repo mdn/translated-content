@@ -3,8 +3,6 @@ title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 这篇文章为那些想更新其扩展以在 Firefox 3 中正常运行的开发者提供了一些有用的信息。
 
 在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的`maxVersion`信息，并且你的扩展所在的主机是[addons.mozilla.org](https://addons.mozilla.org)，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整`maxVersion`。通过这种方式你可以避免你的扩展被再次审核。
@@ -87,7 +85,6 @@ The [`nsIAutoCompleteController`](/zh-CN/docs/Mozilla/Tech/XPCOM/Reference/Inter
 
 - When a `DOMParser` is instantiated, it inherits the calling code's principal and the `documentURI` and `baseURI` of the window the constructor came from.
 - If the caller has UniversalXPConnect privileges, it can pass parameters to `new DOMParser()`. If fewer than three parameters are passed, the remaining parameters will default to `null`.
-
   - The first parameter is the principal to use; this overrides the default principal normally inherited.
   - The second parameter is the `documentURI` to use.
   - The third parameter is the `baseURI` to use.
@@ -146,7 +143,6 @@ _Add simple changes you had to make while updating your extension to work with F
 - The [`tabbrowser`](/zh-CN/docs/Mozilla/Tech/XUL/tabbrowser) element is no longer part of "toolkit" ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). This means this element is no longer available to XUL applications and extensions. It continues to be used in the main Firefox window (browser.xul).
 - Changes to [nsISupports proxies](/zh-CN/NsISupports_proxies) and possibly to threading-related interfaces need to be documented.
 - If you use XML processing instructions, such as `<?xml-stylesheet ?>` in your XUL files, be aware of the changes made in [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654):
-
   1. XML PIs are now added to a XUL document's DOM. This means [`document.firstChild`](/zh-CN/docs/Web/API/Document/firstChild) is no longer guaranteed to be the root element. If you need to get the root document in your script, use [`document.documentElement`](/zh-CN/docs/Web/API/Document/documentElement) instead.
   2. `<?xml-stylesheet ?>` and `<?xul-overlay ?>` processing instructions now have no effect outside the document prolog.
 

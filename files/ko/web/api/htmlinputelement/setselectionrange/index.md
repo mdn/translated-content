@@ -34,9 +34,7 @@ setSelectionRange(selectionStart, selectionEnd, selectionDirection)
 - `selectionEnd`
   - : 마지막 선택된 문자의 _다음_ 문자의 0부터 시작하는 인덱스입니다. 요소의 값의 길이보다 큰 인덱스는 값의 끝을 가리키는 것으로 간주됩니다.
 - `selectionDirection` {{optional_inline}}
-
   - : 선택이 수행된 방향을 나타내는 문자열입니다. 가능한 값은 다음과 같습니다:
-
     - `"forward"`
     - `"backward"`
     - `"none"` 방향을 알 수 없거나 관련이 없는 경우입니다. 기본 값입니다.

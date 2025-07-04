@@ -31,9 +31,7 @@ Les articles qui composent ce module traitent la majeure partie du langage CSS. 
 - [Cascade and inheritance (Cascade et héritage)](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
   - : Le but de cette leçon est de vous permettre d'acquérir des concepts fondamentaux du CSS : la cascade, la spécificité et l'héritage... et ainsi d'apprendre comment le CSS s'applique au HTML, et comment les conflits se résolvent.
 - [CSS selectors (sélecteurs CSS)](/fr/docs/Learn/CSS/Building_blocks/Selectors)
-
   - : Il y a une large palette de sélecteurs CSS disponibles permettant avec une fine granularité de désigner les éléments auxquels appliquer des styles. Dans cet article, nous verrons avec moult détails comment ces différents types de sélecteurs fonctionnent, au travers de plusieurs parties :
-
     - [Sélecteurs de type, de classe et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
     - [Sélecteurs d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
     - [Pseudo-classes et pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)

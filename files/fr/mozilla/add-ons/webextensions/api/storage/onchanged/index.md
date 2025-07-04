@@ -29,14 +29,11 @@ Les événements ont trois fonctions:
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `changes`
       - : `object`. Objet décrivant le changement. Cela contient une propriété pour chaque clé qui a changé. Le nom de la propriété est le nom de la clé qui a changé, et sa valeur est un objet {{WebExtAPIRef('storage.StorageChange')}} décrivant la modification apportée à cet élément.
 
     <!---->
-
     - `areaName`
       - : `string`. Le nom de la zone de stockage (`"sync"`, `"local"` or `"managed"`) auquel les modifications ont été apportées.
 

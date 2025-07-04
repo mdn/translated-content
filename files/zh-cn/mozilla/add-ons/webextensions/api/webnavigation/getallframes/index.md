@@ -22,9 +22,7 @@ let gettingFrames = browser.webNavigation.getAllFrames(
 ### 参数
 
 - `details`
-
   - : `object`。要获取所有框架的信息的标签页的信息。
-
     - `tabId`
       - : `integer`。标签页的 ID。
 

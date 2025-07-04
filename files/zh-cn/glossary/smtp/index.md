@@ -15,7 +15,6 @@ l10n:
 
 - 维基百科上的 [SMTP](https://zh.wikipedia.org/wiki/SMTP)
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{glossary("NNTP", "网络新闻传输协议")}}
   - {{glossary("POP", "邮局协议")}}
   - {{glossary("protocol", "协议")}}

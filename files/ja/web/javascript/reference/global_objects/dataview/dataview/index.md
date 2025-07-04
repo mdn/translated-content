@@ -46,7 +46,6 @@ new DataView(buffer [, byteOffset [, byteLength]])
 ### 例外
 
 - {{jsxref("RangeError")}}
-
   - : `byteOffset` や `byteLength` 引数の値がバッファーの末尾を超えて広がる結果になる場合に発生します。
 
     例えば、バッファーが 16 バイトの長さで、 `byteOffset` が 8 バイト、 `byteLength` が 10 バイトの場合、バッファーの全長を 2 バイト超えるビューを展開しようとするので、このエラーが発生します。

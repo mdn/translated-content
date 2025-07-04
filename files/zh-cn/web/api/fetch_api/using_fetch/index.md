@@ -26,7 +26,8 @@ fetch("http://example.com/movies.json")
 
 当然它只是一个 HTTP 响应，而不是真的 JSON。为了获取 JSON 的内容，我们需要使用 {{domxref("Response.json()", "json()")}} 方法（该方法返回一个将响应 body 解析成 JSON 的 promise）。
 
-> **备注：** [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
+> [!NOTE]
+> [Body](#body) 还有其他相似的方法，用于获取其他类型的内容。
 
 最好使用符合[内容安全策略 (CSP)](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)的链接而不是使用直接指向资源地址的方式来进行 fetch 的请求。
 
@@ -270,7 +271,8 @@ const anotherRequest = new Request(myRequest, myInit);
 
 这个很有用，因为 request 和 response bodies 只能被使用一次（译者注：这里的意思是因为设计成了 stream 的方式，所以它们只能被读取一次）。创建一个拷贝就可以再次使用 request/response 了，当然也可以使用不同的 `init` 参数。创建拷贝必须在读取 body 之前进行，而且读取拷贝的 body 也会将原始请求的 body 标记为已读。
 
-> **备注：** {{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
+> [!NOTE]
+> {{domxref("Request.clone","clone()")}} 方法也可以用于创建一个拷贝。它和上述方法一样，如果 request 或 response 的 body 已经被读取过，那么将执行失败。区别在于， `clone()` 出的 body 被读取不会导致原 body 被标记为已读取。
 
 ## Headers
 

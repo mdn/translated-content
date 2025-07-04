@@ -1872,12 +1872,6 @@
       "shade0602"
     ]
   },
-  "Learn_web_development/Core/CSS_layout/Test_your_skills/Multicolumn": {
-    "modified": "2020-09-07T06:45:08.142Z",
-    "contributors": [
-      "shade0602"
-    ]
-  },
   "Learn_web_development/Core/CSS_layout/Test_your_skills/Position": {
     "modified": "2020-09-07T06:09:02.193Z",
     "contributors": [
@@ -21884,6 +21878,12 @@
       "mvictorl",
       "nsvintitskiy",
       "SoMuchEffort"
+    ]
+  },
+  "conflicting/Learn_web_development/Core/CSS_layout/Multiple-column_Layout": {
+    "modified": "2020-09-07T06:45:08.142Z",
+    "contributors": [
+      "shade0602"
     ]
   },
   "conflicting/Learn_web_development/Core/Scripting": {

@@ -16,7 +16,6 @@ void gl.enable(fon);
 ### Paramètres
 
 - `fon`
-
   - : Un {{domxref("GLenum")}} indiquant quelle fonctionnalité WebGL activer. Valeurs possibles :
 
     | Constante                     | Description                                                                                                                                                  |

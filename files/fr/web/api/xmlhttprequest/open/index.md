@@ -26,7 +26,6 @@ XMLHttpRequest.open(method, url, async, user, password);
 - `url`
   - : Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.
 - `async` {{optional_inline}}
-
   - : Un booléen optionnel par défaut à `true`, indiquant s'il faut, ou pas, traiter la requête en asynchrone. Si la valeur est à `false`, la méthode `send()` ne retourne rien tant qu'elle n'a pas reçu la réponse. Si la valeur est à `true`, une notification de transaction complétée est fournie en utilisant un gestionnaire d'évènements. Le paramètre doit être sur "true" si l'attribut `multipart` est sur "true" aussi ou une exception sera levée.
 
     > [!NOTE]

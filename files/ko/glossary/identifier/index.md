@@ -17,7 +17,6 @@ l10n:
 
 - 위키피디아의 [식별자](https://ko.wikipedia.org/wiki/%EC%8B%9D%EB%B3%84%EC%9E%90#%EC%BB%B4%ED%93%A8%ED%84%B0_%EA%B3%BC%ED%95%99)
 - [Glossary](/ko/docs/Glossary)
-
   - {{glossary("Identifier")}}
   - {{glossary("Scope")}}
   - {{glossary("string")}}

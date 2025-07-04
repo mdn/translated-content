@@ -74,31 +74,24 @@ video::cue {
 - `default`
   - : Cet attribut booléen indique que c'est cette piste qui doit être activée par défaut, sauf si les réglages de l'utilisatrice ou l'utilisateur indiquent qu'une autre piste est plus appropriée. Pour un élément média donné, il ne peut y avoir qu'une seule piste avec cet attribut.
 - `kind`
-
   - : La façon dont la piste texte doit être utilisée. La valeur par défaut est `subtitles` et si la valeur fournie est incorrecte, l'agent utilisateur doit utiliser la valeur `metadata`. Cet attribut est un attribut à valeur contrainte qui peut prendre l'une des valeurs suivantes&nbsp;:
-
     - `subtitles` (la valeur par défaut)
-
       - Les sous-titres fournissent une traduction du contenu lorsqu'il ne peut pas être compris par l'utilisatrice ou l'utilisateur. La piste peut, par exemple, contenir le texte espagnol d'un film joué en anglais.
       - Les sous-titres peuvent fournir du contenu supplémentaires, généralement des informations de contexte (par exemple, le texte qui défile au début d'un film Star Wars, la date ou le lieu d'une scène, etc.).
 
     - `captions`
-
       - La piste est une retranscription voire une traduction de la partie audio du média.
       - La piste peut contenir des informations non-verbales importantes comme des indications musicales ou des effets sonores. La piste peut également indiquer la source du bruit (musique, personnage, etc.).
       - Ce type de piste est adapté aux personnes malentendantes ou lorsque le son est désactivé.
 
     - `descriptions`
-
       - La piste est une description textuelle du contenu vidéo.
       - Ce type de piste est adapté aux personnes malvoyantes ou lorsque la vidéo ne peut pas être vue.
 
     - `chapters`
-
       - Les titres de chapitre utilisés lorsque l'utilisatrice ou l'utilisateur navigue au sein du média.
 
     - `metadata`
-
       - La piste est utilisée par des scripts, elle n'est pas visible pour l'utilisatrice ou l'utilisateur.
 
 - `label`

@@ -20,13 +20,9 @@ updateUI(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 下記のいずれかを含むオブジェクト。
-
     - `icons` {{optional_inline}}
-
       - : UI で用いるアイコンを含む、 1 枚以上の画像リソースのリストです。画像リソースは下記の情報を持つオブジェクトです。
-
         - `src`
           - : 画像のURL文字列。
         - `sizes` {{optional_inline}}

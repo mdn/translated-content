@@ -67,7 +67,6 @@ opacity: unset;
 ### Valeurs
 
 - `<number>`
-
   - : Une valeur de type {{cssxref("&lt;number&gt;")}} dans l'intervalle \[`0.0`, `1.0]` qui représente l'opacité de l'élément, la valeur de son canal alpha. Les valeurs en dehors de cet intervalle seront considérées comme valides mais ramenées dans cet intervalle (ainsi `6` sera équivalent à `1` et -2 sera équivalent à `0`).
 
     | Valeur                                                                                   | Signification                                                         |

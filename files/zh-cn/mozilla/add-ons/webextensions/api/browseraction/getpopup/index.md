@@ -22,9 +22,7 @@ let gettingPopup = browser.browserAction.getPopup(
 ### 参数
 
 - `details`
-
   - : 包含以下属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。要获取其弹出窗口的标签页。
     - `windowId` {{optional_inline}}

@@ -241,7 +241,8 @@ ReactDOM.render(<App tasks={DATA} />, document.getElementById("root"));
 
 这个数组现在可以在 App 组件中以 `props.tasks` 使用。你可以使用 `console.log()` 去检查它。
 
-> **备注：** `ALL_CAPS` 这个常量名称在 JavaScript 中没有特殊意义；它们是一种惯例，告诉其他开发者“这个数据在这里定义后将永远不会改变”。
+> [!NOTE]
+> `ALL_CAPS` 这个常量名称在 JavaScript 中没有特殊意义；它们是一种惯例，告诉其他开发者“这个数据在这里定义后将永远不会改变”。
 
 ## 使用迭代进行渲染
 

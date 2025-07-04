@@ -83,7 +83,6 @@ text {
 </table>
 
 - `auto`
-
   - : このプロパティが {{SVGElement("text")}} 要素に存在する場合、計算値は {{SVGAttr("writing-mode")}} 属性の値に依存します。
 
     {{SVGAttr("writing-mode")}} が横書きの場合、主要ベースライン成分の値は `alphabetic` です。 そうではなく、 {{SVGAttr("writing-mode")}} が縦書きの場合、主要ベースライン成分の値は `central` です。

@@ -104,7 +104,6 @@ Par exemple, avec TalkBack activé:
 1. Ouvrez votre navigateur web.
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
-
    - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double tapant .
    - Maintenez votre doigt appuyé sur le clavier virtuel jusqu'à obtenir le caractère souhaité, puis relâchez-le pour le saisir. Répétez pour chaque caractère.
    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
@@ -143,7 +142,6 @@ Lorsque VoiceOver est activé, vous disposez d'une fonction de navigation appel�
 
 1. Tournez deux doigts sur l'écran comme si vous tourniez un cadran. Chaque option sera lue à voix haute au fur et à mesure que vous tournez. Vous pouvez aller et venir pour parcourir les options.
 2. Une fois que vous avez trouvé l'option que vous voulez:
-
    - Relâchez vos doigts pour le sélectionner.
    - S'il s'agit d'une option dont vous pouvez parcourir la valeur (telle que le volume ou la vitesse de parole), vous pouvez effectuer un balayage vers le haut ou le bas pour augmenter ou diminuer la valeur de l'élément sélectionné.
 
@@ -156,7 +154,6 @@ Essayons la navigation Web avec VoiceOver:
 1. Ouvrez votre navigateur web.
 2. Activer la barre d'URL.
 3. Entrez une page Web comportant de nombreux en-têtes, telle que la page de couverture de bbc.co.uk. Pour entrer le texte de l'URL:
-
    - Sélectionnez la barre d'URL en glissant gauche / droite jusqu'à ce que vous y arriviez, puis en double-tapant.
    - Pour chaque caractère, maintenez votre doigt appuyé sur le clavier virtuel jusqu'à ce que vous obteniez le caractère souhaité, puis relâchez votre doigt pour le sélectionner. Appuyez deux fois pour le taper.
    - Une fois que vous avez terminé, trouvez la touche Entrée et appuyez dessus.
@@ -164,7 +161,6 @@ Essayons la navigation Web avec VoiceOver:
 4. Balayez vers la gauche et la droite pour vous déplacer entre les éléments de la page. Vous pouvez appuyer deux fois sur un élément pour le sélectionner (par exemple, suivre un lien).
 5. Par défaut, l'option de rotor sélectionnée sera Speaking Rate; vous pouvez actuellement balayer de haut en bas pour augmenter ou diminuer le débit.
 6. Maintenant, tournez deux doigts autour de l'écran comme un cadran pour afficher le rotor et passez d'une option à l'autre. Voici quelques exemples d'options disponibles:
-
    - _Taux de parole_ : Modifiez le taux de parole.
    - _Conteneurs_ : déplacez-vous entre différents conteneurs sémantiques de la page.
    - _En-têtes_ : déplacez-vous entre les en-têtes de la page.

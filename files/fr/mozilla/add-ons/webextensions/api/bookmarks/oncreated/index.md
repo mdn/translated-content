@@ -29,14 +29,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `id`
       - : `string`. L'ID du nouvel élément de favori.
 
     <!---->
-
     - `bookmark`
       - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations sur le nouvel élément de favori.
 

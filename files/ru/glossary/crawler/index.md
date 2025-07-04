@@ -12,5 +12,4 @@ slug: Glossary/Crawler
 - [Поисковый робот](https://ru.wikipedia.org/wiki/Поисковый_робот) в Википедии
 
 1. [MDN Web Docs Glossary](/ru/docs/Glossary)
-
    1. {{Glossary("Search engine")}}

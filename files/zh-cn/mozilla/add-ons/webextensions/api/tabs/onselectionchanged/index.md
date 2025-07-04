@@ -34,9 +34,7 @@ browser.tabs.onSelectionChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `tabId`
       - : `integer`。成为活动标签页的标签页 ID。
     - `selectInfo`

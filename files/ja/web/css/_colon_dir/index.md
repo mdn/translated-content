@@ -1,6 +1,8 @@
 ---
 title: :dir()
 slug: Web/CSS/:dir
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{CSSRef}}
@@ -23,10 +25,12 @@ slug: Web/CSS/:dir
 
 ## 構文
 
-`:dir()` 擬似クラスは1つの引数を取り、対象としたい書字方向を指定します。
+`:dir()` 擬似クラスは 1 つの引数を取り、対象としたい書字方向を指定します。
 
-```
-:dir( [ ltr | rtl ] )
+```css-nolint
+:dir([ltr | rtl]) {
+  /* ... */
+}
 ```
 
 ### 引数
@@ -76,6 +80,6 @@ slug: Web/CSS/:dir
 
 ## 関連情報
 
-- 言語に関連する擬似クラス: {{cssxref(":lang")}}, {{cssxref(":dir")}}
+- 言語に関連する擬似クラス: {{cssxref(":lang")}}
 - HTML の [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性
 - HTML の [`translate`](/ja/docs/Web/HTML/Reference/Global_attributes/translate) 属性

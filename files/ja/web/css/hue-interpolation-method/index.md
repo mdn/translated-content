@@ -34,9 +34,7 @@ decreasing hue
 色相角 `θ1` と `θ2` のペアは範囲 `[0deg, 360deg)` に正規化され、 `θ1` から `θ2` への補間時にどの円弧を使用するかを決定するアルゴリズムが 4 つあります。
 
 - `shorter`
-
   - : 短い方の弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。両方の円弧の長さが同じ場合は次のようになります。
-
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
@@ -45,14 +43,11 @@ decreasing hue
     | ![shorter with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![shorter with θ1 = 135deg and θ2 = 45deg](shorter_decreasing.png) |
 
 - `longer`
-
   - : 長い方の弧を使用します。 2 つの角が一致した場合は次のようになります。
-
     - `θ1 ≤ θ2`の場合、弧は時計回りの方向で全周となります。
     - `θ1 > θ2` の場合、弧は反時計回りの方向で全周となります。
 
     両方の弧の長さが同じである場合は次のようになります。
-
     - `θ1 < θ2` の場合は、時計回りの弧を使用します。
     - `θ1 > θ2` の場合は、反時計回りの弧を使用します。
 
@@ -61,7 +56,6 @@ decreasing hue
     | ![longer with θ1 = 45deg and θ2 = 135deg](longer_decreasing.png) | ![longer with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `increasing`
-
   - : 時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                           | `θ1 = 135deg`, `θ2 = 45deg`                                          |
@@ -69,7 +63,6 @@ decreasing hue
     | ![increasing with θ1 = 45deg and θ2 = 135deg](shorter_increasing.png) | ![increasing with θ1 = 135deg and θ2 = 45deg](longer_increasing.png) |
 
 - `decreasing`
-
   - : 反時計回りの弧を使用します。 2 つの角が一致すると、弧は単一の点に収れんします。
 
     | `θ1 = 45deg`, `θ2 = 135deg`                                          | `θ1 = 135deg`, `θ2 = 45deg`                                           |

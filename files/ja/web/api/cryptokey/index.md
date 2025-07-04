@@ -14,19 +14,15 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("CryptoKey.type")}} {{ReadOnlyInline}}
-
   - : このオブジェクトが表すキーの種類を表します。これは `"secret"`、`"private"`、`"public"` のいずれかの値を取ります。
 
 - {{domxref("CryptoKey.extractable")}} {{ReadOnlyInline}}
-
   - : 論理値で、[`SubtleCrypto.exportKey()`](/ja/docs/Web/API/SubtleCrypto/exportKey) または [`SubtleCrypto.wrapKey()`](/ja/docs/Web/API/SubtleCrypto/wrapKey) を使用してキーを抽出できるかどうかを示します。
 
 - {{domxref("CryptoKey.algorithm")}} {{ReadOnlyInline}}
-
   - : このキーを使用することができるアルゴリズムと、関連する追加の引数を記述したオブジェクトです。
 
 - {{domxref("CryptoKey.usages")}} {{ReadOnlyInline}}
-
   - : 文字列の配列 ({{jsxref("Array")}}) で、このキーで何ができるかを示します。配列の要素に利用可能な値は `"encrypt"`, `"decrypt"`, `"sign"`, `"verify"`, `"deriveKey"`, `"deriveBits"`, `"wrapKey"`, `"unwrapKey"` です。
 
 ## 例

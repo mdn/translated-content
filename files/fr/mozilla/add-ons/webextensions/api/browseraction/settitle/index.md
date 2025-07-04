@@ -18,17 +18,13 @@ browser.browserAction.setTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`. Le nouveau titre et éventuellement l'ID de l'onglet ou de la fenêtre à cibler.
-
     - `title`
-
       - : `string` ou `null`. La chaîne de caractères que l'action du navigateur doit afficher lorsqu'il y a une souris.
 
         Si `title` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("browserAction.getTitle")}} fournira toujours la chaîne vide.
 
         Si `title` est `null`:
-
         - Si `tabId` est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.
         - Si `windowId` est spécifié, et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.
         - Sinon, le titre global sera réinitialisé au titre du manifest.

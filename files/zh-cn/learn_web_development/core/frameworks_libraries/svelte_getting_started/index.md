@@ -148,21 +148,17 @@ moz-todo-svelte
 - `.gitignore`：告诉 git 有哪些文件或文件夹不要纳入项目版本控制——如果你决定将应用程序包含在 git 仓库中，它还蛮实用的！
 - `rollup.config.js`：Svelte 使用 [rollup.js](https://rollupjs.org/) 作为模块打包工具。这个配置文件告诉 rollup 如何编译和构建你的应用程序。假如你偏好使用 [webpack](https://webpack.js.org/)，你可以改为执行 `npx degit sveltejs/template-webpack svelte-app` 来创建你的入门项目。
 - `scripts`：包含所需的设置脚本。现在应该只有 `setupTypeScript.js`。
-
   - `setupTypeScript.js`：此脚本用来支持 Svelte 使用 TypeScript。我们将在之后的文章详细讨论这一点。
 
 - `src`：这个目录主要放置应用程序的源代码——你创建的程序代码基本都会放在这里。
-
   - `App.svelte`：在你的应用程序中它是顶层组件。不过它现在只会渲染信息“Hello World!”。
   - `main.js`：我们应用程序的入口点。它会实例化 `App` 组件并将其绑定至我们 HTML 页面的 body 上。
 
 - `public`：这个目录包含我们会在生产环境中发布的所有文件。
-
   - `favicon.png`：这个是你应用程序的图标。现在应该会是 Svelte 的标志。
   - `index.html`：这个是你应用程序的主页面。最初为一个空的，会载入由 Svelte 产生的 CSS 文件和 js 捆绑包的 HTML 页面。
   - `global.css`：这个文件包含没有作用域限制的样式。这是一个常规的，会被应用到整个应用程序的 CSS 文件。
   - `build`：这个文件夹会包含那些编译生成的 CSS 和 JavaScript 源代码。
-
     - `bundle.css`：Svelte 根据每一个组件所定义的样式生产的 CSS 文件。
     - `bundle.js`：从所有的 JavaScript 源代码编译而来的 JavaScript 文件。
 
@@ -448,7 +444,6 @@ Svelte 的 REPL 功能却不只如此。它是一个在线工具，允许你建�
 - 程序代码上方的栏让你可以创建 `.svelte` 和 `.js` 文件，也能重新排列它们。要在文件夹中创建文件，你只要输入完整的路径名称——`components/MyComponent.svelte`。文件夹将被自动创建。
 - 更上方的栏是 REPL 的标题。点击可以编辑它。
 - 右边有三个标签：
-
   - _Result_ 标签内会显示你应用程序的输出，底下也有提供控制台。
   - _JS output_ 标签内可以让你检查 Svelte 产生的 JavaScript 代码且可以设定编译选项。
   - _CSS output_ 标签内会显示 Svelte 产生的 CSS。

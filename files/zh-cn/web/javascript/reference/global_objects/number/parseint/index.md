@@ -37,7 +37,6 @@ Number.parseInt(string, radix)
 - `string`
   - : 要被解析的值，会被[强制转化为字符串](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String#字符串强制转换)。字符串开头的空白符将会被忽略。
 - `radix` {{optional_inline}}
-
   - : `2` 到 `36` 之间的整数，表示 `string` 的*基数*（数学记数系统中的基）。
 
     如果 `radix` 为 `undefined` 或 `0`，则 `radix` 将被默认设置为 `10`，除非该数字以码元对 `0x` 或 `0X` 开头，在这种情况下，`radix` 将被默认设置为 `16`。

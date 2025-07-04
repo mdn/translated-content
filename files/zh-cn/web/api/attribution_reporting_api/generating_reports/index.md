@@ -116,11 +116,8 @@ l10n:
     - `"version"`
       - : 一个表示生成报告的 API 版本的字符串。
 - `"aggregation_service_payloads"`
-
   - : 一个对象数组，表示汇总服务用来组装报告中数据的直方图贡献的有效负载对象。目前，每个报告只支持一个由浏览器配置的有效负载。将来可能会支持多个可定制的有效负载。每个有效负载对象包含以下属性：
-
     - `"payload"`
-
       - : 一个通过 [HPKE](https://datatracker.ietf.org/doc/rfc9180/) 加密并经过 [base64](/zh-CN/docs/Glossary/Base64) 编码的 [CBOR](https://cbor.io/) 映射，结构如下：
 
         ```js
@@ -223,9 +220,11 @@ l10n:
 }
 ```
 
-> **备注：** `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
+> [!NOTE]
+> `"source_type"` 是在来源的 `"filter_data"` 上自动填充的字段。
 
-> **备注：** `not_filters`，即否定过滤器，也受支持。
+> [!NOTE]
+> `not_filters`，即否定过滤器，也受支持。
 
 在此上下文中，`filters` 可以是对象或对象数组。当指定列表时，只需一个字典匹配即可将触发器视为匹配。
 
@@ -294,7 +293,6 @@ l10n:
    ```
 
 4. 设置适当的端点以接收你希望生成的调试报告。调试报告发送到报告来源中的三个单独端点：
-
    - 事件级成功调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/report-event-attribution`
    - 汇总成功调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/report-aggregate-attribution`
    - 详细调试报告的端点：`<reporting-origin>/.well-known/attribution-reporting/debug/verbose`

@@ -23,15 +23,12 @@ unicode-range: U+0025-00FF, U+4??; /* plusieurs valeurs             */
 Une valeur de type `<unicode-range>` peut se présenter de trois façons différentes&nbsp;:
 
 - Un seul point de code
-
   - : Par exemple `U+26`
 
 - Un intervalle spécifique de points de code
-
   - : Par exemple `U+0025-00FF` indique que l'intervalle contient tous les caractères contenus entre les points de code `U+0025` et `U+00FF`
 
 - Un intervalle de substitution indiqué par `?`
-
   - : Un intervalle de points de code Unicode indiqué par une valeur contenant un point d'interrogation. Ainsi, `U+4??` signifie «&nbsp;tous les caractères contenus dans l'intervalle entre les points de code `U+400` et `U+4FF`&nbsp;».
 
 ## Description

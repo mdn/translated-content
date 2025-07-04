@@ -18,9 +18,7 @@ Object.defineProperties(obj, props)
 - `obj`
   - : O objeto no qual se cria ou modifica suas propriedades.
 - `props`
-
   - : Um objeto do qual propriedades enumeráveis constitui descritores para as propriedades serem definidas ou modificadas. Descritores de propriedade presente nos objetos provém em dois principais tipos: descritores de dados e de acesso (veja {{jsxref("Object.defineProperty()")}} para mais detalhes). Descritores têm as seguintes chaves:
-
     - `configurable`
       - : `true` se e somente se o tipo deste descritor de propriedades pode ser modificada e se a propriedade pode ser apagada do objeto correspondente.
         **Valor padrão é `false`.**

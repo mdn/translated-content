@@ -11,9 +11,7 @@ L'action est définie par l'attribut `actiontype` qui peut prendre plusieurs val
 ## Attributs
 
 - actiontype
-
   - : L'action qui se produit pour cet élément. Les valeurs possibles sont :
-
     - `statusline` : S'il y a un clic sur l'_expression_ ou que le lecteur passe la souris sur celle-ci, le _message_ est envoyé au statut du navigateur (_status line_). La syntaxe est la suivante : `<maction actiontype="statusline"> expression message </maction>.`
     - `toggle` : Quand il y a un clic sur la sous-expression, la mise en forme des sous-expressions sélectionnées change. Ainsi chaque clic augmente la valeur de `selection`.
       La syntaxe est la suivante : `<maction actiontype="toggle" selection="entier-positif" > expression1 expression2 expressionN </maction>`.

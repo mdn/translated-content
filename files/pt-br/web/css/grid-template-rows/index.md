@@ -109,7 +109,6 @@ Esta propriedade pode ser especificada como:
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : Is a functional notation that defines a size range, greater than or equal to _min_, and less than or equal to _max_. If _max_ is smaller than _min_, then _max_ is ignored and the function is treated as _min_. As a maximum, a `<flex>` value sets the track's flex factor. It is invalid as a minimum.
 - `auto`
-
   - : Is a keyword that is identical to maximal content if it's a maximum. As a minimum it represents the largest minimum size (as specified by {{cssxref("min-width")}}/{{cssxref("min-height")}}) of the grid items occupying the grid track.
 
     > **Nota:**: `auto` track sizes (and only `auto` track sizes) can be stretched by the {{cssxref("align-content")}} and {{cssxref("justify-content")}} properties.
@@ -176,7 +175,6 @@ Esta propriedade pode ser especificada como:
 2. [**CSS Reference**](/pt-BR/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/pt-BR/docs/Web/CSS/CSS_grid_layout)
 4. **Guides**
-
    1. [Basics concepts of grid layout](/pt-BR/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relationship to other layout methods](/pt-BR/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Line-based placement](/pt-BR/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -190,7 +188,6 @@ Esta propriedade pode ser especificada como:
    11. [Realizing common layouts using grids](/pt-BR/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Properties**
-
    1. [grid](/pt-BR/docs/Web/CSS/grid)
    2. [grid-area](/pt-BR/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/pt-BR/docs/Web/CSS/grid-auto-columns)
@@ -211,7 +208,6 @@ Esta propriedade pode ser especificada como:
    18. [grid-template-rows](/pt-BR/docs/Web/CSS/grid-template-rows)
 
 6. **Glossary**
-
    1. [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
    2. [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
    3. [Grid cell](/pt-BR/docs/Glossary/Grid_cell)

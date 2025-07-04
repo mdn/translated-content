@@ -105,7 +105,6 @@ Cette propriété peut être définie selon trois formes différentes :
 - Grâce à un mot-clé : `normal`, `auto` ou `stretch`.
 - Relativement à la ligne de base : dans ce cas, on a le mot-clé `baseline` éventuellement suivi de `first` ou de `last`
 - Grâce à un positionnement :
-
   - Un mot-clé parmi : `center`, `start`, `end`, `flex-start`, `flex-end`, `self-start`, `self-end`, `left` ou `right`
   - Puis éventuellement `safe` ou `unsafe`
 
@@ -116,9 +115,7 @@ Cette propriété peut être définie selon trois formes différentes :
 - `auto`
   - : La valeur utilisée est celle de la propriété `justify-items` pour la boîte parente. Si la boîte n'a pas de parent ou est positionnée de façon absolue, `auto` sera synonyme de `normal`.
 - `normal`
-
   - : Ce mot-clé aura un sens différent selon le mode de disposition utilisé :
-
     - Pour une disposition en bloc, `normal` est synonyme de `start`.
     - Pour les dispositions avec un positionnment absolu, ce mot-clé se comporte comme `start` pour les boîtes des éléments remplacés ou comme `stretch` pour les autres boîtes positionnées de façon absolue.
     - Pour les dispositions des cellules de tableaux, ce mot-clé n'a pas de signification car cette propriété est ignorée.

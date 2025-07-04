@@ -85,9 +85,7 @@ Par exemple :
 Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé `edge`, qui possède les propriétés suivantes :
 
 - `browser_action_next_to_addressbar`
-
   - : Propriété booléenne qui contrôle le placement de l'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).
-
     - `true` est équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `navbar`.
     - `false` is équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `menupanel`.
 

@@ -23,11 +23,8 @@ De manera que un menú de tercer nivel va a ser apilado bajo los menus de segund
 Para entender mejor la situación, esta es la jerarquía del contexto de apilamiento:
 
 - contexto de apilamiento raíz
-
   - NIVEL #1
-
     - NIVEL #2 (z-index: 1)
-
       - NIVEL #3
       - ...
       - NIVEL #3

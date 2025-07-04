@@ -24,9 +24,7 @@ Un {{domxref("PeriodicWave")}}.
 - `imag`
   - : Un tableau de termes sinus (traditionnellement les termes B).
 - `contraintes` {{optional_inline}}
-
   - : Un objet dictionnaire spécifiant si la normalisation doit être désactivée (si non spécifié, la normalisation est activée par défaut). Il accepte une propriété :
-
     - `disableNormalization`: si réglé à `true`, la normalisation est désactivée pour l'onde périodique. Sa valeur par défaut est `false`.
 
 > [!NOTE]

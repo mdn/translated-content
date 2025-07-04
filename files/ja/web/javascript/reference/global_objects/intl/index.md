@@ -70,7 +70,6 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl
 BCP 47 拡張シーケンスは、単一の数字または文字 (`"x"` 以外) と、ハイフンで区切られた 1 つ以上の 2 から 8 文字の文字または数字によるサブタグで構成されています。それぞれの数字または文字に対して 1 つのシーケンスのみが許可されていますので、 "`de-a-foo-a-foo`" は無効です。 BCP 47 拡張サブタグは [Unicode CLDR Project](https://github.com/unicode-org/cldr/tree/main/common/bcp47) で定義されています。現在は 2 つの拡張機能の意味のみが定義されています。
 
 - `"u"` (Unicode) 拡張は {{jsxref("Intl.Collator")}}, {{jsxref("Intl.NumberFormat")}}, {{jsxref("Intl.DateTimeFormat")}} の各オブジェクトにおいて、ロケール固有の動作のカスタマイズを要求するために使用することができます。
-
   - "`de-DE-u-co-phonebk`": ドイツ語のソート順の電話帳変化形を使用します。このソート順では、ウムラウト付きの母音を、 ä → ae, ö → oe, ü → ue のように、ウムラウトの付かない母音二文字に展開したものと見なした順で並べ替えします。
   - "`th-TH-u-nu-thai`": 数値書式で、タイの数字 (๐, ๑, ๒, ๓, ๔, ๕, ๖, ๗, ๘, ๙) を使用します。
   - "`ja-JP-u-ca-japanese`": 日時書式で和暦を使用します。すなわち、 2013 年は平成 25 年として表現されます。
@@ -129,7 +128,6 @@ log("de-DE");
 
 - 導入: [The ECMAScript Internationalization API](https://norbertlindenberg.com/2012/12/ecmascript-internationalization-api/index.html)
 - コンストラクター
-
   - {{jsxref("Intl/Collator", "Intl.Collator()")}}
   - {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat()")}}
   - {{jsxref("Intl/ListFormat", "Intl.ListFormat()")}}
@@ -140,7 +138,6 @@ log("de-DE");
   - {{jsxref("Intl/Segmenter", "Intl.Segmenter()")}}
 
 - メソッド
-
   - {{jsxref("String.prototype.localeCompare()")}}
   - {{jsxref("Number.prototype.toLocaleString()")}}
   - {{jsxref("Date.prototype.toLocaleString()")}}

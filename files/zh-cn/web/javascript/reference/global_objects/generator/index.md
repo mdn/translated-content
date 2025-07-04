@@ -54,10 +54,10 @@ console.log(gen.next().value); // 3
 这些属性定义于 `Generator.prototype` 并由所有 `Generator` 实例所共享。
 
 - {{jsxref("Object/constructor", "Generator.prototype.constructor")}}
-
   - : 创建实例对象的构造函数。对于 `Generator` 实例，其初始值是 [`GeneratorFunction.prototype`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)。
 
-    > **备注：** `Generator` 对象不会存储创建它们的生成器函数的引用。
+    > [!NOTE]
+    > `Generator` 对象不会存储创建它们的生成器函数的引用。
 
 - `Generator.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Generator"`。该属性被 {{jsxref("Object.prototype.toString()")}} 使用。

@@ -27,9 +27,7 @@ Les codes de statut de réponse HTTP indiquent si une requête [HTTP](/fr/docs/W
 ## Réponses de succès
 
 - [`200 OK`](/fr/docs/Web/HTTP/Status/200)
-
   - : La requête a réussi. La signification du succès peut varier selon la méthode HTTP&nbsp;:
-
     - `GET`&nbsp;: La ressource a été récupérée et est retransmise dans le corps du message.
     - `HEAD`&nbsp;: Les en-têtes d'entité sont présents dans la réponse et il n'y a pas de corps.
     - `PUT` ou `POST`&nbsp;: La ressource décrivant le résultat de l'action est transmise dans le corps du message.

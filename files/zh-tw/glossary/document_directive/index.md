@@ -22,7 +22,6 @@ slug: Glossary/Document_directive
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - 其他類型的指令:
-
   - {{Glossary("Fetch directive")}}
   - {{Glossary("Navigation directive")}}
   - {{Glossary("Reporting directive")}}

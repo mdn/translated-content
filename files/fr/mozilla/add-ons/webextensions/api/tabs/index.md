@@ -12,7 +12,6 @@ Vous pouvez utiliser cette API pour obtenir une liste des onglets ouverts, filtr
 Vous pouvez utiliser la majeure partie de cette API sans autorisation spéciale. Toutefois&nbsp;:
 
 - Pour accéder à `Tab.url`, `Tab.title` et `Tab.favIconUrl`, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
-
   - Dans Firefox, cela signifie également que vous avez besoin de `"tabs"` pour {{WebExtAPIRef("tabs.query", "requête d'onglet")}} par URL.
 
 - Pour utiliser {{WebExtAPIRef("tabs.executeScript()")}} ou {{WebExtAPIRef("tabs.insertCSS()")}}, vous devez avoir les [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'onglet.
@@ -141,7 +140,6 @@ De nombreuses opérations d'onglet utilisent un identifiant (`id`) d'onglet. Les
 - {{WebExtAPIRef("tabs.onRemoved")}}
   - : Est émis lorsqu'un onglet est fermé.
 - {{WebExtAPIRef("tabs.onReplaced")}}
-
   - : Est émis lorsqu'un onglet est remplacé par un autre onglet en raison d'un
 
     <i lang="en">prerendering</i>

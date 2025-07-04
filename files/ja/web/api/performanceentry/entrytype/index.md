@@ -17,79 +17,66 @@ l10n:
 文字列です。返値は `PerformanceEntry` オブジェクトのサブタイプに依存します。一部のサブタイプには複数の `entryType` があります。
 
 - `element`
-
   - : 要素の読み込み時間を報告します。
 
     項目のインスタンスは {{domxref("PerformanceElementTiming")}} オブジェクトです。
 
 - `event`
-
   - : イベントの待ち時間を報告します。
 
     項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
 
 - `first-input`
-
   - : {{Glossary("first input delay")}} (FID) を報告します。
 
     項目のインスタンスは {{domxref("PerformanceEventTiming")}} オブジェクトです。
 
 - `largest-contentful-paint`
-
   - : 画面で起動された要素の最大の描画を報告します。
 
     項目のインスタンスは {{domxref("LargestContentfulPaint")}} オブジェクトです。
 
 - `layout-shift`
-
   - : ページ上の要素の動きに基づいて、ウェブページのレイアウトの安定性を報告します。
 
     項目のインスタンスは {{domxref("LayoutShift")}} オブジェクトです。
 
 - `longtask`
-
   - : 長いタスクのインスタンスを報告します。
 
     項目のインスタンスは {{domxref("PerformanceLongTaskTiming")}} オブジェクトです。
 
 - `mark`
-
   - : 独自のパフォーマンスマーカーを報告します。
 
     項目のインスタンスは {{domxref("PerformanceMark")}} オブジェクトです。
 
 - `measure`
-
   - : 独自のパフォーマンス指標を報告します。
 
     項目のインスタンスは {{domxref("PerformanceMeasure")}} オブジェクトです。
 
 - `navigation`
-
   - : 文書のナビゲーションタイミングを報告します。
 
     項目のインスタンスは {{domxref("PerformanceNavigationTiming")}} オブジェクトです。
 
 - `paint`
-
   - : ページ読み込み中の文書レンダリングの主要な瞬間（最初の描画、最初のコンテンツ描画）を報告します。
 
     項目のインスタンスは {{domxref("PerformancePaintTiming")}} オブジェクトです。
 
 - `resource`
-
   - : 文書内のリソースのタイミング情報を報告します。
 
     項目のインスタンスは {{domxref("PerformanceResourceTiming")}} オブジェクトです。
 
 - `taskattribution`
-
   - : 長いタスクに大きく貢献した作業タイプを報告します。
 
     項目のインスタンスは {{domxref("TaskAttributionTiming")}} オブジェクトです。
 
 - `visibility-state`
-
   - : タブがフォアグラウンドからバックグラウンドへ、またはその逆へ変化したときなど、ページの表示状態が変化した時刻を報告します。
 
     項目のインスタンスは {{domxref("VisibilityStateEntry")}} オブジェクトです。

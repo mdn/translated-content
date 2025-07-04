@@ -23,15 +23,11 @@ var createContext = browser.contextualIdentities.update(
 - `cookieStoreId`
   - : `string`. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
 - `details`
-
   - : `object`. Un objet contenant de nouvelles valeurs pour les propriétés que vous souhaitez modifier. Cela peut contenir l'une des propriétés suivantes :
-
     - `name` {{optional_inline}}
       - : `string`. Un nouveau nom pour l'identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet dans l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.
     - `color` {{optional_inline}}
-
       - : `string`. Une nouvelle couleur pour l'identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
-
         - "blue"
         - "turquoise"
         - "green"
@@ -43,9 +39,7 @@ var createContext = browser.contextualIdentities.update(
         - "toolbar"
 
     - `icon` {{optional_inline}}
-
       - : `string`. Une nouvelle icône pour l'identité. Vous pouvez fournir l'une des valeurs suivantes ici :
-
         - "fingerprint"
         - "briefcase"
         - "dollar"

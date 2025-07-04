@@ -127,9 +127,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`alt`**
   - : Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut [`href`](#attr-href) est utilisé.
 - **`coords`**
-
   - : L'attribut `coords` détaille les coordonnées de l'attribut [`shape`](#attr-shape) en taille, forme et placement d'un élément `<area>`.
-
     - `rect` : la valeur est `x1,y1,x2,y2`. La valeur spécifie les coordonnées du coin supérieur gauche et inférieur droit du rectangle.
 
       Par exemple : `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` Les coordonnées dans l'exemple ci-dessus spécifient : 0,0 comme le coin supérieur gauche et 253,27 comme le coin inférieur droit du rectangle.
@@ -152,9 +150,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`ping`**
   - : Cet attribut contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST) dont le corps vaut `PING` lors du clic sur le lien. Les requêtes sont envoyées en arrière-plan. Cet attribut est généralement utilisé à des fins de pistage.
 - **`referrerpolicy`** {{experimental_inline}}
-
   - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource :
-
     - « `no-referrer` » indique que l'en-tête `Referer` ne sera pas envoyé.
     - « `no-referrer-when-downgrade` » indique que l'en-tête `Referer` ne sera pas envoyé lorsque l'utilisateur navigue depuis une origine sans TLS/HTTPS. C'est le comportement par défaut de l'agent utilisateur si aucune autre politique n'est spécifiée.
     - « `origin` » indique que le référent sera l'origine de la page (ce qui correspond au schéma utilisé, à l'hôte et au port).
@@ -166,9 +162,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`shape`**
   - : La forme de la zone d'intérêt. Les spécifications HTML5 et HTML4 définissent les valeurs `rect` (zone rectangulaire), `circle` (zone circulaire), `poly` (zone polygonale) et `default` (indiquant toute la zone). Beacuoup de navigateurs, comme Internet Explorer 4 et ultérieur, supportent les valeurs `circ`, `polygon` et `rectangle` pour l'attribut `shape`, mais ces valeurs ne sont pas standard.
 - **`target`**
-
   - : Cet attribut dans quel _contexte de navigation_ afficher la ressource liée. Les mots-clés peuvent avoir les significations suivantes :
-
     - `_self` (valeur par défaut) : Charge la réponse dans le contexte de navigation actuel.
     - `_blank`&nbsp;: Charge la réponse dans un nouveau contexte de navigation (sans nom).
     - `_parent` : Charge la réponse dans le contexte de navigation parent. Si la page courante n'est pas incluse via une _frame_, cette valeur agit comme `_self`.
@@ -184,7 +178,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`name`** {{deprecated_inline}}
   - : Définit un nom pour la zone sur laquelle on peut cliquer afin que cet élément puisse être interprété par les navigateurs plus anciens.
 - **`nohref`** {{deprecated_inline}}
-
   - : Indique une absence d'hyperlien pour la zone d'intérêt. Cet attribut doit être présent si **href** ne l'est pas et _vice versa_.
 
     > [!NOTE]

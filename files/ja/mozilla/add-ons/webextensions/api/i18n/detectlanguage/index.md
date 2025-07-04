@@ -29,9 +29,7 @@ var detectingLanguages = browser.i18n.detectLanguage(
 - `isReliable`
   - : `真偽値`。検出された言語が確かかどうかを示します。
 - `languages`
-
   - : オブジェクトの `配列`。配列の各項目はさらに 2 個のプロパティを持ちます:
-
     - `language`
       - : {{WebExtAPIRef('i18n.LanguageCode')}}。検出された言語です。
     - `percentage`

@@ -16,9 +16,7 @@ new WebAssembly.Tag(type);
 ### Paramètres
 
 - `type`
-
   - : Un objet qui peut contenir la propriété suivante&nbsp;:
-
     - `parameters`
       - : Un tableau de [types de données](/fr/docs/WebAssembly/Understanding_the_text_format#types) (`"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"externref"`, `"anyfunc"`).
 

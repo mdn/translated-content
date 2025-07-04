@@ -19,7 +19,6 @@ const varname1 = value1 [, varname2 = value2 [, varname3 = value3 [, ... [, varn
 ```
 
 - `varnameN`
-
   - : Nombre de la constante. Puede ser un identificador legal.
 
 - `valueN`
@@ -62,7 +61,7 @@ const MY_FAV = 7;
 MY_FAV = 20;
 
 // imprimira 7
-console.log('my favorite number is: ' + MY_FAV);
+console.log("my favorite number is: " + MY_FAV);
 
 // lanzara un error: SyntaxError: tratando de redeclarar una constante. El identificador 'MY_FAV' ya ha sido declarado
 const MY_FAV = 20;
@@ -75,39 +74,39 @@ let MY_FAV = 20;
 
 // es importante tener en cuenta como funciona el alcance de bloque
 if (MY_FAV === 7) {
-    // esto esta bien y crea una variable MY_FAV de alcance/ambito de bloque
-    // (funciona igual de bien con let para declarar un alcance de bloque/ambito de variable no-constante)
-    const MY_FAV = 20;
+  // esto esta bien y crea una variable MY_FAV de alcance/ambito de bloque
+  // (funciona igual de bien con let para declarar un alcance de bloque/ambito de variable no-constante)
+  const MY_FAV = 20;
 
-    // MY_FAV ahora es 20
-    console.log('my favorite number is ' + MY_FAV);
+  // MY_FAV ahora es 20
+  console.log("my favorite number is " + MY_FAV);
 
-    // aquín también lanzara un SyntaxError por la redeclaración
-    var MY_FAV = 20;
+  // aquín también lanzara un SyntaxError por la redeclaración
+  var MY_FAV = 20;
 }
 
 // MY_FAV todavia es 7
-console.log('my favorite number is ' + MY_FAV);
+console.log("my favorite number is " + MY_FAV);
 
 // lanza error, falta el inicializador en la declaracion de const
 const FOO;
 
 // const tambien funciona en objetos
-const MY_OBJECT = {'key': 'value'};
+const MY_OBJECT = { key: "value" };
 
 // Intentando sobrescribir el objeto nos lanza un error
-MY_OBJECT = {'OTHER_KEY': 'value'};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // Sin embargo, los object keys no estan protegidas,
 // por lo que la siguiente sentencia se ejecutara sin problema
-MY_OBJECT.key = 'otherValue'; // Use Object.freeze() para hacer un objeto inmutable
+MY_OBJECT.key = "otherValue"; // Use Object.freeze() para hacer un objeto inmutable
 
 // Lo mismo se aplica a los arrays
 const MY_ARRAY = [];
 // es posible empujar elementos en el array
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 // Sin embargo, asignar un nuevo array a la variable lanza error
-MY_ARRAY = ['B']
+MY_ARRAY = ["B"];
 ```
 
 ## Ver también

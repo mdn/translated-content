@@ -26,7 +26,7 @@ Los tipos de resultados son descritos a continuación.
 
 ## Ejemplo
 
-Este ejemplo representa una función `read()`, que lee un archivo de un [file input](/es/docs/Web/HTML/Element/input/file). Funciona creando un objeto de {{domxref("FileReader")}} y creando un listener para los eventos [load](/es/docs/Web/API/Window/load_event) de tal manera que cuando el archivo es leído, la propiedad `result` es obtenida y pasada a la función callback proporcionada a `read()`.
+Este ejemplo representa una función `read()`, que lee un archivo de un [file input](/es/docs/Web/HTML/Reference/Elements/input/file). Funciona creando un objeto de {{domxref("FileReader")}} y creando un listener para los eventos [load](/es/docs/Web/API/Window/load_event) de tal manera que cuando el archivo es leído, la propiedad `result` es obtenida y pasada a la función callback proporcionada a `read()`.
 
 El contenido es manejado como texto.
 

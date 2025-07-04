@@ -33,9 +33,7 @@ browser.tabs.onReplaced.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `addedTabId`
       - : `integer`。替换标签页的 ID。
     - `removedTabId`

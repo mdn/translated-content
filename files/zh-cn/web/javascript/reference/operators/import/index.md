@@ -40,7 +40,8 @@ import(moduleName, options)
 - 如果 `moduleName` 引用的模块不存在，则以实现定义的错误拒绝（Node 使用通用的 `Error`，而所有浏览器使用 `TypeError`）。
 - 如果引用的模块在求值时抛出错误，则以抛出的错误拒绝。
 
-> **备注：** `import()` 从来不会同步地抛出错误。
+> [!NOTE]
+> `import()` 从来不会同步地抛出错误。
 
 ## 描述
 

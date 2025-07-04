@@ -55,9 +55,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 À l'instar des autres éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - `autocapitalize` {{non-standard_inline}}
-
   - : Cet attribut est non standard, pris en charge par WebKit sur iOS, et contrôle la façon dont le texte saisi doit automatiquement être mis en majuscules. Les valeurs disponibles pour iOS 5 et les versions supérieures sont :
-
     - `none` : la mise en majuscules est complètement désactivée
     - `sentences` : la première lettre des phrases est automatiquement mise en majuscule
     - `words` : la première lettre de chaque mot est automatiquement mise en majuscule
@@ -66,9 +64,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
     - `off` : {{deprecated_inline}} valeur dépréciée depuis iOS 5 et qui permettait de désactiver la mise en majuscule automatique.
 
 - `autocomplete`
-
   - : Cet attribut indique si la valeur saisie doit automatiquement être complétée par le navigateur. Cet attribut à valeur contrainte peut prendre l'une de ces deux valeurs :
-
     - `off` : l'utilisateur doit explicitement saisir une valeur dans ce champ à chaque fois qu'il l'utilise ou le document fournit son propre mécanisme d'auto-complétion. Le navigateur ne complète pas le texte saisi.
     - `on` : le navigateur peut compléter la saisie de l'utilisateur en fonction de ce que l'utilisateur a déjà saisi précédemment sur ce champ.
 
@@ -99,9 +95,7 @@ L'élément `<textarea>` gère plusieurs attributs utilisés par les éléments 
 - `spellcheck`
   - : Lorsque cet attribut vaut `true`, cela indique que la vérification orthographique et grammaticale doit être activée. La valeur `default` indique que l'élément doit suivre le comportement par défaut, éventuellement basé sur la valeur de l'attribut `spellcheck` de l'élément parent. Si cet attribut vaut `false`, le texte de l'élément ne doit pas être contrôlé.
 - `wrap`
-
   - : Cet attribut à valeur contrainte indique la façon dont les retours à la ligne automatiques sont utilisés. Les valeurs possibles pour cet attribut sont :
-
     - `hard` : le navigateur insère automatiquement des sauts de ligne (CR+LF) afin que chaque ligne ne soit pas plus longue que la largeur du contrôle. L'attribut `cols` doit alors être défini.
     - `soft` : le navigateur s'assure que tous les sauts de lignes soient représentés par une paire CR+LF mais il n'ajoute pas de sauts de ligne supplémentaires. C'est la valeur par défaut pour cet attribut.
     - `off` : {{non-standard_inline}}, proche de `soft` mais on a la règle CSS `white-space: pre` et les lignes qui dépassent `cols` ne sont pas ramenées à la ligne. Si elles dépassent, on peut faire défiler la zone d'édition horizontalement.

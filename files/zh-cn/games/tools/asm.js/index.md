@@ -7,7 +7,8 @@ l10n:
 
 {{GamesSidebar}}
 
-> **警告：** [asm.js](http://asmjs.org/) 规范已被视为**弃用**。开发者可以考虑使用 [WebAssembly](/zh-CN/docs/WebAssembly) 作为在浏览器中运行高性能代码的 asm.js 替代方案。
+> [!WARNING]
+> [asm.js](http://asmjs.org/) 规范已被视为**弃用**。开发者可以考虑使用 [WebAssembly](/zh-CN/docs/WebAssembly) 作为在浏览器中运行高性能代码的 asm.js 替代方案。
 
 [Asm.js](http://asmjs.org/) 是一个定义了 JavaScript 子集的高度可优化的规范。本文将介绍 asm.js 子集允许的内容、带来的性能提升、使用场景及更多资源和示例。
 

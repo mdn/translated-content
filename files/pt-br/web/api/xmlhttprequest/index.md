@@ -439,9 +439,7 @@ XMLHttpRequest (
 ##### Parâmetros (não-padrão)
 
 - `objParameters`
-
   - : Há dois sinalizadores que você pode definir:
-
     - `mozAnon`
       - : Boolean: Definir esse sinalizador de true fará com que o navegador para não expor a origem e as [credenciais do usuário](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) ao buscar recursos. Mais importante, isto significa que os cookies não será enviado a menos que explicitamente adicionado usando setRequestHeader.
     - `mozSystem`
@@ -650,14 +648,12 @@ avegadores mais recentes, incluindo o Firefox, também suporta ouvir as XMLHttpR
 ## Veja também
 
 - MDN artigos sobre XMLHttpRequest:
-
   - [AJAX - Getting Started](/pt-BR/docs/conflicting/Web/Guide/AJAX)
   - [Using XMLHttpRequest](/pt-BR/docs/DOM/XMLHttpRequest/Using_XMLHttpRequest)
   - [HTML in XMLHttpRequest](/pt-BR/HTML_in_XMLHttpRequest)
   - [`FormData`](/pt-BR/docs/DOM/XMLHttpRequest/FormData)
 
 - XMLHttpRequest referencias da W3C e navegador fornecedores:
-
   - [W3C: XMLHttpRequest](https://www.w3.org/TR/XMLHttpRequest1/) (base features)
   - [W3C: XMLHttpRequest](https://dvcs.w3.org/hg/xhr/raw-file/tip/Overview.html) (latest editor's draft with extensions to the base functionality, formerly XMLHttpRequest Level 2
   - [Microsoft documentation](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/xmlsdk/html/xmobjxmlhttprequest.asp)

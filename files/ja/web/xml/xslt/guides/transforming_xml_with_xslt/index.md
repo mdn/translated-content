@@ -70,34 +70,28 @@ XSLT の必須名前空間は `"http://www.w3.org/1999/XSL/Transform"` です。
 ### 書籍
 
 - **XSLT: Programmer's Reference, Second Edition**
-
   - **著者**: Michael H. Kay
   - **ページ数**: 992 pages
   - **出版社**: Wrox; 2 edition (May 3, 2001)
   - **ISBN**: 0764543814
-
     - Michael Kay は W3C XSL ワーキンググループのメンバーであり、オープンソース XSLT プロセッサーである Saxon の開発者です。彼はまた、このテーマに関する第 2 版に達した唯一の本の著者でもあります。これは XSLT ストーリーのすべての可能なベースを網羅している非常に大きな本です。うまくレイアウトされています。
 
 <https://www.amazon.com/XSLT-Programmers-Reference-Programmer/dp/0764543814>
 
 - **XSLT**
-
   - **著者**: Doug Tidwell
   - **ページ数**: 473 pages
   - **出版社**: O'Reilly Media; 1 edition (August 15, 2001)
   - **ISBN**: 0596000537
-
     - Doug Tidwell は IBM の上級開発者であり、一般に XML 技術の著名なエバンジェリストです。彼は IBM の幅広い XML 開発者サイトで、XML のさまざまな側面に関するいくつかの記事とチュートリアルの著者です。この本はマイケル・ケイのものよりもいくぶん包括的ではありませんが、基礎をうまくカバーし、興味深い例を提供しています。
 
 <https://www.amazon.com/Xslt-Doug-Tidwell/dp/0596000537>
 
 - **Learning XML, Second Edition**
-
   - **著者**: Erik T. Ray
   - **ページ数**: 432 pages
   - **出版社**: O'Reilly Media; 2 edition (September 22, 2003)
   - **ISBN**: 0596004206
-
     - タイトルが示すように、これは一般的に XML の概要です。第 6 章は特に XSLT に専念しています。
 
 <https://www.amazon.com/gp/product/0596004206>

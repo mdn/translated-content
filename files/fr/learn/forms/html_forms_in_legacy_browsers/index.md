@@ -18,7 +18,6 @@ En fait, lire la documentation sur ces navigateurs est la chose la plus importan
 - Mozilla&nbsp;: vous êtes au bon endroit, explorez juste MDN
 - Microsoft&nbsp;: [Documentation sur la prise en charge de la norme par Internet Explorer](http://msdn.microsoft.com/en-us/library/ff410218%28v=vs.85%29.aspx)
 - WebKit&nbsp;: comme il y a plusieurs versions de ce moteur, les choses se compliquent&nbsp;:
-
   - [le Blog WebKit](https://www.webkit.org/blog/) et [Planet WebKit](http://planet.webkit.org/) rassemblent les meilleurs articles par les déveoppeurs WebKit.
   - [l](https://www.chromestatus.com/features)e site État de la p[lateforme Chrome](https://www.chromestatus.com/features) est aussi importante.
   - ainsi que le [site web Apple](https://developer.apple.com/technologies/safari/).

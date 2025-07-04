@@ -46,18 +46,14 @@ window.alert(selObj);
 - {{domxref("Selection/anchorNode","anchorNode")}}{{ReadOnlyInline}}
   - : 返回该选区起点所在的节点（{{domxref("Node")}}）。
 - {{domxref("Selection/anchorOffset","anchorOffset")}}{{ReadOnlyInline}}
-
   - : 返回一个数字，其表示的是选区起点在 {{domxref("Selection/anchorNode","anchorNode")}} 中的位置偏移量。
-
     1. 如果 `anchorNode` 是文本节点，那么返回的就是从该文字节点的第一个字开始，直到被选中的第一个字之间的字数（如果第一个字就被选中，那么偏移量为零）。
     2. 如果 `anchorNode` 是一个元素，那么返回的就是在选区第一个节点之前的同级节点总数。(这些节点都是 `anchorNode` 的子节点)
 
 - {{domxref("Selection/focusNode","focusNode")}}{{ReadOnlyInline}}
   - : 返回该选区终点所在的节点。
 - {{domxref("Selection/focusOffset","focusOffset")}}{{ReadOnlyInline}}
-
   - : 返回一个数字，其表示的是选区终点在 {{domxref("Selection/focusNode","focusNode")}} 中的位置偏移量。
-
     1. 如果 `focusNode` 是文本节点，那么选区末尾未被选中的第一个字，在该文字节点中是第几个字（从 0 开始计），就返回它。
     2. 如果 `focusNode` 是一个元素，那么返回的就是在选区末尾之后第一个节点之前的同级节点总数。
 

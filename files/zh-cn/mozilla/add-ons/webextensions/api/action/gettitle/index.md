@@ -27,9 +27,7 @@ let gettingTitle = browser.action.getTitle(
 ### 参数
 
 - `details`
-
   - : 一个含有下列属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`，指定要获取标题的标签页。
     - `windowId` {{optional_inline}}

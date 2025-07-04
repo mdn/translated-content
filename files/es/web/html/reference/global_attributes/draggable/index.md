@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/draggable
 
 {{HTMLSidebar("Global_attributes")}}{{SeeCompatTable}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **draggable** es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el {{domxref("HTML_Drag_and_Drop_API","HTML Drag and Drop API")}} . Puede tener los siguientes valores :
+El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **draggable** es un atributo enumerado que indica si el elemento puede ser arrastrado , usando el {{domxref("HTML_Drag_and_Drop_API","HTML Drag and Drop API")}} . Puede tener los siguientes valores :
 
 - `true` , indica que el elemento puede ser arrastrado.
 - `false`, indica que el elemento no puede ser arrastrado .
@@ -27,4 +27,4 @@ Por default , unicamente el texto , las imagenes y los vínculos pueden ser arra
 
 ## Ver también
 
-- [atributos globales](/es/docs/Web/HTML/Global_attributes)
+- [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)

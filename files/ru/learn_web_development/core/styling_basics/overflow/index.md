@@ -94,7 +94,6 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 1. [Каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
 2. [Селекторы CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
    - [Селекторы типа, класса и ID](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
    - [Селекторы атрибута](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
    - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

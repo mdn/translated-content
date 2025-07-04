@@ -90,7 +90,6 @@ background: unset;
 それぞれのレイヤーの構文は以下の通りです。
 
 - それぞれのレイヤーは、以下の値をそれぞれ 0 ～ 1 回含めることができます。
-
   - `<attachment>`
   - `<bg-image>`
   - `<position>`

@@ -31,7 +31,8 @@ label {
 
 要將 `<datalist>` 元素綁定到控制項，我們在 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性中給予它一個唯一標識符，然後在具有相同標識符值的 {{HTMLElement("input")}} 元素中添加 [`list`](/zh-TW/docs/Web/HTML/Reference/Elements/input#list) 屬性。只有某些類型的 {{HTMLElement("input")}} 支援此行為，並且在不同的瀏覽器中可能也會有所不同。
 
-> **備註：** `<option>` 元素可以將值存儲為內部內容和 `value` 和 `label` 屬性。在下拉選單中哪一個將可見取決於瀏覽器，但單擊時，輸入到控制欄中的內容始終來自 `value` 屬性。
+> [!NOTE]
+> `<option>` 元素可以將值存儲為內部內容和 `value` 和 `label` 屬性。在下拉選單中哪一個將可見取決於瀏覽器，但單擊時，輸入到控制欄中的內容始終來自 `value` 屬性。
 
 ## 屬性
 

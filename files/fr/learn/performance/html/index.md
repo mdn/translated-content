@@ -39,7 +39,6 @@ HTML est par défaut rapide et accessible. Il est du devoir de toute personne d�
 - [L'élément `<video>`](/fr/docs/Web/HTML/Element/video)
 - [L'élément `<source>`](/fr/docs/Web/HTML/Element/source)
 - [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Element/img#attributes)
-
   - [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
 
 - [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))

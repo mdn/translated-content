@@ -15,7 +15,6 @@ l10n:
 
 - 维基百科上的[包装函数](https://zh.wikipedia.org/wiki/包裝函式)
 - 相关术语：
-
   - {{Glossary("API")}}
   - {{Glossary("Class", "类")}}
   - {{Glossary("Function", "函数")}}

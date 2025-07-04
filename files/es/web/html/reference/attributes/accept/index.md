@@ -52,7 +52,7 @@ Cuando se configura en un tipo de entrada de archivo, el selector de archivos na
 
 {{EmbedLiveSample('ejemplo_sencillo', '100%', 200)}}
 
-Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple) para obtener más información.
+Ten en cuenta que el último ejemplo te permite seleccionar varias imágenes. Consulta el atributo [`multiple`](/es/docs/Web/HTML/Reference/Attributes/multiple) para obtener más información.
 
 ## Especificadores de tipo de archivo únicos
 
@@ -101,13 +101,13 @@ Esto produce la siguiente salida:
 
 Independientemente del dispositivo o sistema operativo del usuario, el `<input>` de archivo proporciona un botón que abre un cuadro de diálogo selector de archivos que permite al usuario elegir un archivo.
 
-La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Attributes/multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
+La inclusión del atributo [`multiple`](/es/docs/Web/HTML/Reference/Attributes/multiple), como se muestra arriba, especifica que se pueden elegir varios archivos a la vez. El usuario puede elegir varios archivos del selector de archivos de cualquier manera que la plataforma elegida lo permita (por ejemplo, manteniendo presionada la tecla <kbd>Mayús</kbd> o <kbd>Control</kbd> y luego haciendo clic). Si solo deseas que el usuario elija un único archivo por `<input>`, omite el atributo `multiple`.
 
 ### Limitar los tipos de archivo aceptados
 
 A menudo, no querrás que el usuario pueda elegir cualquier tipo de archivo arbitrario; en su lugar, quieres que seleccionen archivos de un tipo o tipos específicos. Por ejemplo, si la entrada de tu archivo permite a los usuarios cargar una imagen de perfil, probablemente desees que seleccionen formatos de imagen compatibles con la web, como {{Glossary("JPEG")}} o {{Glossary("PNG")}}.
 
-Los tipos de archivo aceptables se pueden especificar con el atributo [`accept`](/es/docs/Web/HTML/Element/input/file#accept), que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
+Los tipos de archivo aceptables se pueden especificar con el atributo [`accept`](/es/docs/Web/HTML/Reference/Elements/input/file#accept), que toma una lista separada por comas de extensiones de archivo permitidas o tipos MIME. Algunos ejemplos:
 
 - `accept="image/png"` o `accept=".png"` — Acepta archivos PNG.
 - `accept="image/png, image/jpeg"` o `accept=".png, .jpg, .jpeg"` — Acepta archivos PNG o JPEG.

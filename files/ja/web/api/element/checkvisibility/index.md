@@ -27,10 +27,8 @@ checkVisibility(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 実行する追加チェックを示すオブジェクト。
     可能なオプションは以下の通りです。
-
     - `contentVisibilityAuto`
       - : `true` を指定すると、要素 {{cssxref("content-visibility")}} プロパティに値 [`auto`](/ja/docs/Web/CSS/content-visibility#auto) がある（または継承している）場合に、現在その描画がスキップされているかどうかを調べます。
         既定では `false` です。
@@ -38,7 +36,6 @@ checkVisibility(options)
       - : `true` を指定すると、要素の {{cssxref("opacity")}} プロパティが `0` の値である（または継承している）かどうかを調べます。
         既定では `false` です。
     - `visibilityProperty`
-
       - : `true` を指定すると、{{cssxref("visibility")}} プロパティの値によって要素が不可視になっているかどうかを調べます。
         既定では `false` です。
 

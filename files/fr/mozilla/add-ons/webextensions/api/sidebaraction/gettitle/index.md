@@ -22,9 +22,7 @@ var gettingTitle = browser.sidebarAction.getTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet avec les propriétés suivantes :
-
     - `tabId`{{optional_inline}}
       - : `integer`. Obtenir le titre de la barre latérale spécifique à l'onglet donné.
     - `windowId` {{optional_inline}}

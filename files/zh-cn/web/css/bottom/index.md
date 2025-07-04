@@ -47,9 +47,7 @@ bottom: unset;
 - `<percentage>`
   - : 包含块高度的百分比{{cssxref("&lt;percentage&gt;")}}。
 - `auto`
-
   - : 规定：
-
     - 对于绝对定位元素，元素将忽略此属性而以{{ Cssxref("top") }}属性为准，如果此时设置`height: auto`，将基于内容需要的高度设置宽度；如果`top`也为`auto`的话，元素的垂直位置就是它假如作为静态 (即 static) 元素时该在的位置。
     - 对于相对定位元素，元素相对正常位置的偏移量将基于{{ Cssxref("top") }}属性；如果`top`也为`auto`的话，元素将不会有偏移。
 

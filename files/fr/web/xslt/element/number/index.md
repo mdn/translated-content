@@ -33,11 +33,9 @@ Aucun.
   - : Définit les éléments devant être numérotés de façon séquentielle dans l'arbre source. Il utilise une expression
     XPath.
 - `level`
-
   - : Définit la manière dont les niveaux de l'arbre source doivent pris en compte lors de la génération des
     nombres séquentiels. Les trois valeurs possibles sont&nbsp;: `single`, `multiple` et
     `any`. La valeur par défaut est `single`&nbsp;:
-
     - `single`
       - : Numérote de façon séquentielle les nœuds descendants d'un même parent, à la manière des éléments d'une
         liste. Le processeur va au premier nœud dans l'axe [`ancestor-or-self`](/fr/XPath/Axes/ancestor-or-self) qui correspond à l'attribut
@@ -69,9 +67,7 @@ Aucun.
   - : Applique un format donné à un nombre. C'est un moyen rapide de formater un nombre fourni par l'utilisateur dans
     un des formats standards de `<xsl:number>`.
 - format
-
   - : Définit le format du nombre généré&nbsp;:
-
     - format="1"
       - : `1 2 3 …` (C'est le seul format supporté à ce jour)
     - format="01"

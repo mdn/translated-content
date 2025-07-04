@@ -53,7 +53,6 @@ Authorization: Digest username=<username>,
 ## 指令
 
 - `<auth-scheme>`
-
   - : 定義如何編碼憑證的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Guides/Authentication#基本驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
@@ -64,7 +63,6 @@ Authorization: Digest username=<username>,
 ### 基本驗證
 
 - `<credentials>`
-
   - : 根據指定方案編碼的憑證。
 
     > [!NOTE]
@@ -107,7 +105,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
+> [!WARNING]
+> {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
 
 參閱 [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本驗證來保護你的網站。
 

@@ -16,7 +16,6 @@ l10n:
 - {{jsxref("Function")}} オブジェクトは構造化複製アルゴリズムでは複製されません。複製しようとすると `DataCloneError` 例外が発生します。
 - DOM ノードを複製するときも同様に `DataCloneError` 例外発生します。
 - 一部のオブジェクトのプロパティは保持されません。
-
   - {{jsxref("RegExp")}} オブジェクトの `lastIndex` フィールドは保持されません。
   - プロパティ記述子、セッター、ゲッター（もしくは同様のメタデータ系機能）は複製されません。
     たとえば、あるオブジェクトが[プロパティ記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/getOwnPropertyDescriptor)によって読み取り専用になっている場合でも、複製したものでは既定の条件である読み取り/書き込みに変わります。

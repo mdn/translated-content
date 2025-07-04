@@ -26,9 +26,7 @@ let userSettings = await browser.browserAction.getUserSettings();
 一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现一个包含了用户为浏览器操作指定的设置的对象，具有以下属性：
 
 - `userSettings`
-
   - : 包含用户为浏览器操作指定的设置的对象，具有以下属性：
-
     - `isOnToolbar` {{optional_inline}}
       - : `boolean` 值。用户是否将操作的图标固定到浏览器 UI。这一设置不表示图标是否可见。图标的可见性取决于浏览器窗口的大小和浏览器 UI 的布局。
 

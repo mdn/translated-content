@@ -41,34 +41,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 この API を使うには、アドオンは manifest で "cookies" の [API パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) を指定せねばならず、同様に cookie がアクセスするあらゆるサイトの [host パーミッション](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)も要ります。アドオンは host パーミッションにマッチする URL から読み書きされる cookie を読み書きできます。例えば:
 
 - `http://*.example.com/`
-
   - : この host パーミッションを持つアドオンは下記ができます:
-
     - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
     - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie に書き込む
 
     _下記はできません_:
-
     - `www.example.com` のセキュア型 cookie を読む
 
 - `http://www.example.com/`
-
   - : この host パーミッションを持つアドオンは下記ができます:
-
     - `www.example.com` のあらゆるパスの、非セキュア型 cookie を読む
     - `.example.com`のあらゆるパスの、非セキュア型 cookie を読む
     - セキュア/非セキュア問わず、`www.example.com`のあらゆるパスの cookie に書き込む
     - セキュア/非セキュア問わず、`.example.com`のあらゆるパスの cookie に書き込む
 
     _下記はできません_:
-
     - `foo.example.com` の cookie の読み書き
     - `foo.www.example.com` の cookie の読み書き
 
 - `*://*.example.com/`
-
   - : この host パーミッションを持つアドオンは下記ができます:
-
     - セキュア/非セキュア問わず、`www.example.com` のあらゆるパスの cookie の読み書き
 
 ## ブラウザーの互換性

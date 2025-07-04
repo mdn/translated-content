@@ -34,7 +34,6 @@ Un booléen indiquant si les arguments ont la même valeur.
 - elles sont des chaînes de caractères de la même longueur et avec les mêmes caractères (dans le même ordre)
 - elles sont toutes les deux le même objet
 - elles sont des nombres et
-
   - sont toutes les deux égales à `+0`
   - sont toutes les deux égales à `-0`
   - sont toutes les deux égales à {{jsxref("NaN")}}

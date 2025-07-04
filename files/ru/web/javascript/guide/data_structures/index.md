@@ -22,7 +22,6 @@ foo = true; // foo становится типа Boolean
 Стандарт ECMAScript определяет 8 типов:
 
 - 6 типов данных являющихся примитивами:
-
   - {{Glossary("Undefined")}} (Неопределённый тип) : `typeof instance === "undefined"`
   - {{Glossary("Boolean")}} (Булев, Логический тип) : `typeof instance === "boolean"`
   - {{Glossary("Number")}} (Число) : `typeof instance === "number"`

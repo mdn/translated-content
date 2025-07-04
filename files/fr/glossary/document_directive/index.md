@@ -20,7 +20,6 @@ Ces directives CSP sont des directives de document :
 
 - {{HTTPHeader("Politique de sécurité de contenu")}}
 - Autres types de directives :
-
   - {{Glossary("Fetch directive","Directive de récupération")}}
   - {{Glossary("Navigation directive","Directive de navigation")}}
   - {{Glossary("Reporting directive","Directive de rapport")}}

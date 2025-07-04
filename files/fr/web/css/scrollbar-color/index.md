@@ -63,7 +63,6 @@ scrollbar-color: unset;
 ### Valeurs
 
 - `<scrollbar-face-color>`
-
   - : Une valeur définissant la couleur.
 
     <table class="standard-table">

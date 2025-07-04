@@ -86,14 +86,12 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("top")}}
   - {{cssxref("right")}}
   - {{cssxref("bottom")}}
   - {{cssxref("left")}}
 
 - Les propriétés qui définissent les autres décalages logiques
-
   - {{cssxref("inset-block-end")}}
   - {{cssxref("offset-inline-end")}}
   - {{cssxref("offset-inline-start")}}

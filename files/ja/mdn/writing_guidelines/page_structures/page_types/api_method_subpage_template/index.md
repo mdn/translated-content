@@ -32,7 +32,6 @@ l10n:
 >     書式は `NameOfTheParentInterface: NameOfTheMethod() コンストラクター` です。
 >     例えば、 [IDBIndex](/ja/docs/Web/API/IDBIndex) インターフェイスの [count()](/ja/docs/Web/API/IDBIndex/count) メソッドには `IDBIndex.count()` というタイトルを付けます。
 > - **slug**
->
 >   - : `https://developer.mozilla.org/ja/docs/` の後にくる URL の末尾です。
 >     これは `Web/API/NameOfTheParentInterface/NameOfTheMethod` のような形式になります。
 >

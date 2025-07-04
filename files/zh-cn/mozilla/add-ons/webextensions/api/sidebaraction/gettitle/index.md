@@ -24,9 +24,7 @@ let gettingTitle = browser.sidebarAction.getTitle(
 ### 参数
 
 - `details`
-
   - : `object`。包含以下属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。获取特定于给定标签页的侧边栏的标题。
     - `windowId` {{optional_inline}}

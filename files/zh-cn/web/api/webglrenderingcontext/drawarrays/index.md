@@ -16,9 +16,7 @@ void gl.drawArrays(mode, first, count);
 ### 参数
 
 - `mode`
-
   - : {{domxref("GLenum")}} 类型，指定绘制图元的方式，可能值如下。
-
     - `gl.POINTS`: 绘制一系列点。
     - `gl.LINE_STRIP`: 绘制一个线条。即，绘制一系列线段，上一点连接下一点。
     - `gl.LINE_LOOP`: 绘制一个线圈。即，绘制一系列线段，上一点连接下一点，并且最后一点与第一个点相连。

@@ -14,11 +14,9 @@ l10n:
 ## インスタンスプロパティ
 
 - {{domxref("SVGTransform.type", "type")}}
-
   - : このインターフェイスで定義されている `SVG_TRANSFORM_*` 定数のいずれかで指定された値の型です。
 
 - {{domxref("SVGTransform.angle", "angle")}}
-
   - : 浮動小数点数値としての角度。 `SVG_TRANSFORM_ROTATE`、`SVG_TRANSFORM_SKEWX`、`SVG_TRANSFORM_SKEWY` に対する利便性のための属性。 `SVG_TRANSFORM_MATRIX`、`SVG_TRANSFORM_TRANSLATE`、`SVG_TRANSFORM_SCALE` に対しては、 `angle` はゼロとなります。
 
 - {{domxref("SVGTransform.matrix", "matrix")}}

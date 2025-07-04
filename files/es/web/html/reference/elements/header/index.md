@@ -14,17 +14,17 @@ El _elemento de HTML Header_ (\<header>) representa un grupo de ayudas introduct
 
 ### Contexto de uso
 
-| Contenido permitido         | [Contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content), pero sin un \<header> o {{ HTMLElement("footer") }} descendente                                                                                                                                                                 |
-| --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Omisión de la etiqueta      | No está permitido, tanto la etiqueta de inicio como la de final son obligatorias                                                                                                                                                                                                                         |
-| Elementos padres permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Content_categories#flow_content). Ten en cuenta que un elemento `<header>` no debe ser descendiente de un elemento {{ HTMLElement("address") }}, {{ HTMLElement("footer") }} o cualquier otro elemento {{ HTMLElement("header") }}. |
-| Roles ARIA permitidos       | [`group`](/es/docs/Web/Accessibility/ARIA/Roles/group_role), [`presentation`](/es/docs/Web/Accessibility/ARIA/Roles/presentation_role)                                                                                                                                                                   |
-| Interfaz DOM                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                               |
-| Documento normativo         | [HTML5, sección 4.4.8](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element)                                                                                                                                                                                    |
+| Contenido permitido         | [Contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content), pero sin un \<header> o {{ HTMLElement("footer") }} descendente                                                                                                                                                                 |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Omisión de la etiqueta      | No está permitido, tanto la etiqueta de inicio como la de final son obligatorias                                                                                                                                                                                                                                |
+| Elementos padres permitidos | Cualquier elemento que acepte [contenido dinámico](/es/docs/Web/HTML/Guides/Content_categories#flow_content). Ten en cuenta que un elemento `<header>` no debe ser descendiente de un elemento {{ HTMLElement("address") }}, {{ HTMLElement("footer") }} o cualquier otro elemento {{ HTMLElement("header") }}. |
+| Roles ARIA permitidos       | [`group`](/es/docs/Web/Accessibility/ARIA/Roles/group_role), [`presentation`](/es/docs/Web/Accessibility/ARIA/Roles/presentation_role)                                                                                                                                                                          |
+| Interfaz DOM                | {{domxref("HTMLElement")}}                                                                                                                                                                                                                                                                                      |
+| Documento normativo         | [HTML5, sección 4.4.8](https://www.whatwg.org/specs/web-apps/current-work/multipage/sections.html#the-header-element)                                                                                                                                                                                           |
 
 ### Atributos
 
-Este elemento no tiene otros atributos que no sean los [atributos generales](/es/docs/Web/HTML/Global_attributes), comunes a todos los elementos.
+Este elemento no tiene otros atributos que no sean los [atributos generales](/es/docs/Web/HTML/Reference/Global_attributes), comunes a todos los elementos.
 
 ### Interfaz DOM
 

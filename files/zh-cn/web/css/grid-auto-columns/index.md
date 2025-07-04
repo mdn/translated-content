@@ -128,7 +128,6 @@ grid-auto-columns: unset;
 - `fit-content(argument)`
   - : 相当于公式 `min(max-content, max(auto, argument))`，类似于`auto` 的计算 (即 `minmax(auto, max-content)`)，除了网格轨道大小值是确定下来的，否则该值都大于 `auto` 的最小值。
 - `auto`
-
   - : 如果该网格轨道为最大时，该属性等同于 `<max-content>` ，为最小时，则等同于 `<min-content>`。
 
     Note: `auto` 轨道尺寸 (且只为 `auto` 值时) 才可以被 {{cssxref("align-content")}} 和 {{cssxref("justify-content")}} 属性拉伸。

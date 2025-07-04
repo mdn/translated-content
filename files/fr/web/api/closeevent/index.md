@@ -17,7 +17,6 @@ Un évènement `CloseEvent` est envoyé au client utilisant une [WebSocket](/fr/
 _Cette interface hérite également des propriétés de sa mère, {{domxref("Event")}}._
 
 - {{domxref("CloseEvent.code")}} {{readOnlyInline}}
-
   - : Retourne un `unsigned short` contenant le code de fermeture envoyé par le serveur. Les valeurs possibles sont données ci-dessous.
 
     <table class="standard-table">

@@ -26,7 +26,6 @@ Muitas vezes é conveniente usar a propriedade abreviada {{cssxref("animation")}
 ### Valores
 
 - `{{cssxref("&lt;time&gt;")}}`
-
   - : O deslocamento do tempo, a partir do momento em que a animação é aplicada ao elemento, no qual a animação deve começar. Isso pode ser especificado em segundos (`s`) ou milesegundos or milliseconds (`ms`). A unidade é necessaria.
 
     Um valor positivo indica que a animação deve começar após o período de especificação ter decorrido. O valor de `0s`, que é o padrão, incida que a animação deve começar desde que foi aplicada.

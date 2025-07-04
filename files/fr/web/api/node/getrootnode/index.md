@@ -16,9 +16,7 @@ var root = node.getRootNode(options);
 ### Paramètres
 
 - options {{optional_inline}}
-
   - : Un objet qui définit les options pour obtenir le noeud racine. Les options disponibles sont :
-
     - `composed` : un {{jsxref('Boolean')}} (_booléen_) qui indique si la racine shadow doit être retournée (`false` (_faux_) par défaut) ou un noeud racine au-delà de la racine shadow (`true`).
 
 ### Retourne

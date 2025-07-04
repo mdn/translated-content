@@ -31,9 +31,7 @@ browser.tabs.onActivated.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `activeInfo`
       - : `object`。被激活的标签页的 ID 及其窗口的 ID。详见 [activeInfo](#activeinfo_2) 部分。
 

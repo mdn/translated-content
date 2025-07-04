@@ -32,14 +32,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `id`
       - : `string`. ID de l'article qui a changé.
 
     <!---->
-
     - `changeInfo`
       - : [`object`](#changeinfo). Objet contenant deux propriétés : `title`, une chaîne contenant le titre de l'élément et `url`, une chaîne contenant l'URL de l'élément. Si l'élément est un dossier, l'`url` est omise.
 

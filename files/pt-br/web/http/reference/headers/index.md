@@ -65,13 +65,11 @@ O recurso HTTP [Client hints](/pt-BR/docs/Web/HTTP/Client_hints) ainda está em 
 - {{HTTPHeader("Save-Data")}} {{experimental_inline}}
   - : Um boleano que indica a preferência do agente do usuário pelo uso reduzido de dados.
 - {{HTTPHeader("Viewport-Width")}} {{experimental_inline}}
-
   - : Um número que indica a largura em pixels do viewport do layout em pixels CSS. O valor em pixels disponibilizado é um número arredondado do menor inteiro seguinte. (i.e. valor ceiling).
 
     Se `Viewport-Width` ocorrer em uma mensagem mais de uma vez, o último valor irá sobrescrever todas as ocorrências anteriores.
 
 - {{HTTPHeader("Width")}} {{experimental_inline}}
-
   - : O campo `Width` no cabeçalho da requisição é um número que indica a largura desejada do recurso em pixels físicos (i.e. tamanho intrínseco da imagem). O valor do pixel provido é um número arredondado para o menor inteiro seguinte.
 
     Se a largura do recurso desejada não for conhecida no momento da solicitação ou o recurso não tiver uma largura de exibição, o campo `Width` poderá ser omitido do cabeçalho. Se `Width` ocorrer em uma mensagem mais de uma vez, o último valor irá sobrescrever todas as ocorrências anteriores.

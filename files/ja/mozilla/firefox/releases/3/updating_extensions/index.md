@@ -87,7 +87,6 @@ XUL のポップアップシステムは Firefox 3 で大幅に変更されま�
 
 - `DOMParser` がインスタンス化されると、呼び出したコードのプリンシパルと、コンストラクターが呼び出したウィンドウの `documentURI` と `baseURI` を継承するようになります。
 - 呼び出し元が UniversalXPConnect の権限を持っている場合、`new DOMParser()` に引数を渡すことができます。渡される引数が 3 つ以下の場合、残りの引数は既定で `null` になります。
-
   - 最初の引数は使用するプリンシパルです。これは通常継承されるデフォルトプリンシパルを上書きします。
   - 2 番目の引数には、使用する `documentURI` を指定します。
   - 3 番目の引数は、使用する `baseURI` です。
@@ -159,7 +158,6 @@ _もし、拡張機能を Firefox 3 対応にするために必要な小さい�
 - [`<xul:tabbrowser>`](/ja/docs/Mozilla/Tech/XUL/tabbrowser) 要素は「ツールキット」の一部ではなくなりました ([Firefox バグ 339964](https://bugzil.la/339964))。このため、この要素は今後 XUL アプリケーションや拡張機能の中では利用できません。ただし、Firefox のメインウィンドウ (browser.xul) では今後も使われます。
 - `nsISupports_proxies` の変更と、おそらくスレッド関連インターフェイスへの変更については、ドキュメントを用意する必要があります。
 - XUL ファイル内で `<?xml-stylesheet ?>` などの XML 処理命令を用いている場合、 [Firefox バグ 319654](https://bugzil.la/319654) で行われた以下の変更に注意してください。
-
   1. XML PI が XUL ドキュメントの DOM に追加されました。これは、 {{ Domxref("Node.firstChild", "document.firstChild") }} が必ずしもルート要素を返すとは限らない、ということを意味します。スクリプト内でルートドキュメントを得るには、代わりに {{ Domxref("document.documentElement") }} を用いてください。
   2. `<?xml-stylesheet ?>` と `<?xul-overlay ?>` 処理命令は、ドキュメントの前文以外の場所に書かれた場合、動作しなくなりました。
 

@@ -26,7 +26,6 @@ open(method, url, async, user, password)
 - `url`
   - : 字串或任何其他帶有 {{Glossary("stringifier")}} 的物件──包括 {{domxref("URL")}} 物件──提供要向其發送請求的資源的 URL。
 - `async` {{optional_inline}}
-
   - : 選擇性布林參數，表示是否非同步執行操作，預設為 `true`。如果該值為 `false`，則 `send()` 方法在收到回應之前不會傳回。如果為 `true`，則使用事件監聽器提供交易完成的通知。如果 `multipart` 屬性為 `true`，則該值必須為 `true`，否則將引發例外。
 
     > [!NOTE]

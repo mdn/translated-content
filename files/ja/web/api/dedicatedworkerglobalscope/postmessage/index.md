@@ -28,7 +28,6 @@ postMessage(aMessage, transferList)
   - : メインスレッドに配信するオブジェクト。これは {{domxref("Worker.message_event")}} に配信されるイベント内の data フィールドに格納されます。
     これは、[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)によって処理される任意の値または JavaScript オブジェクトであり、循環参照を含むことができます。
 - `transferList` {{optional_inline}}
-
   - : 所有権を移譲するための、{{Glossary("Transferable objects", "移譲可能オブジェクト")}}の[配列](/ja/docs/Web/JavaScript/Reference/Global_Objects/Array)（オプション）。
     オブジェクトの所有権が移譲された場合、そのオブジェクトは送信元のコンテキストでは使用できなくなり、 送信先のメインスレッドでのみ利用できるようになります。
 

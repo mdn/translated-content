@@ -15,7 +15,6 @@ l10n:
 - {{Glossary("user agent")}} (용어 사전)
 - {{HTTPHeader("User-agent")}} (HTTP Header)
 - 브라우저 다운로드
-
   - [Mozilla Firefox](https://www.mozilla.org/ko/firefox/)
   - [Google Chrome](https://www.google.com/chrome/)
   - [Microsoft Edge](https://www.microsoft.com/ko-kr/edge)

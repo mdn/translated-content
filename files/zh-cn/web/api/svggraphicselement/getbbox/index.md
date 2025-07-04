@@ -9,7 +9,8 @@ slug: Web/API/SVGGraphicsElement/getBBox
 
 Note: `getBBox` must return the actual bounding box at the time the method was called, even in case the element has not yet been rendered. It also neglects any transformation applied on the element or its parents.
 
-> **备注：** `getBBox` returns different values than getBoundingClientRect, as the latter returns value relative to the viewport
+> [!NOTE]
+> `getBBox` returns different values than getBoundingClientRect, as the latter returns value relative to the viewport
 
 ## 语法
 

@@ -114,7 +114,6 @@ Nous nous intéressons ici au second type de feuilles de styles supporté par Ge
 
 - [Livres](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Livres)
 - [En ligne](/fr/Transformations_XML_avec_XSLT/Autres_ressources#En_ligne)
-
   - [Le World Wide Web Consortium](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Le_World_Wide_Web_Consortium)
   - [Portails](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Portails)
   - [Articles](/fr/Transformations_XML_avec_XSLT/Autres_ressources#Articles)

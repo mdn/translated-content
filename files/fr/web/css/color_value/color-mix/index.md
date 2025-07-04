@@ -19,7 +19,6 @@ color-mix(in srgb, #34c9eb 20%, white)
 ### Valeurs
 
 - `color-mix( in <espace-couleur> , [ <couleur> && <proportion>? ]#{2})`
-
   - : `<espace-couleur>` est une valeur parmi `srgb`, `srgb-linear`, `lab`, `oklab`, `xyz`, `xyz-d50`, `xyz-d65`, `hsl`, `hwb`, `lch`, `oklch`. Il n'y a pas de valeur par défaut.
 
     `<couleur>` est n'importe quelle couleur valide (voir [`<color>`](/fr/docs/Web/CSS/color_value)).

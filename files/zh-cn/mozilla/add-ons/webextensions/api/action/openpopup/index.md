@@ -25,9 +25,7 @@ browser.action.openPopup(
 ### 参数
 
 - `details` {{optional_inline}}
-
   - : 一个含有下列属性的对象：
-
     - `windowId` {{optional_inline}}
       - : `integer`，要打开弹窗的那一窗口，默认为当前窗口。
 

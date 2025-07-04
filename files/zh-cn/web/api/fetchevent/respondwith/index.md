@@ -71,7 +71,8 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-> **备注：** {{domxref("CacheStorage.match()", "caches.match()")}} 是一个语法糖。等效于在每个缓存上调用 {{domxref("cache.match()")}}（按照 {{domxref("CacheStorage.keys()", "caches.keys()")}} 的顺序）直到返回 {{domxref("Response")}}。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} 是一个语法糖。等效于在每个缓存上调用 {{domxref("cache.match()")}}（按照 {{domxref("CacheStorage.keys()", "caches.keys()")}} 的顺序）直到返回 {{domxref("Response")}}。
 
 ## 规范
 

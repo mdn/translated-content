@@ -72,13 +72,11 @@ La propiedad `box-sizing` es especificada como una sola palabra clave elegida de
 ### Valores
 
 - `content-box`
-
   - : Este es el valor inicial y por defecto especificado por el estándar CSS. Las propiedades {{Cssxref("width")}} and {{Cssxref("height")}} no incluyen el borde, relleno o margen. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 370 pixeles.
 
     Aquí, las dimensiones de un elemento son calculados como: ancho = ancho del contenido, altura = altura del contenido. (Los bordes y rellenos no son incluídos en el cálculo.)
 
 - `border-box`
-
   - : Las propiedad de {{Cssxref("width")}} y {{Cssxref("height")}} incluyen el contenido, relleno y borde pero no incluyen el margén. Tenga en cuenta que el relleno y borde estarán dentro de la caja. Por ejemplo, `.box {width: 350px; border: 10px solid black;}` despliega una caja con un ancho de 350 pixeles. La caja de contenidos no puede ser negativo y tiene un valor mínimo de 0, haciendo imposible usar el `border-box` para hacer que el elemento desaparezca.
 
     Las dimensiones del elemeno se calculan como: ancho = borde + relleno + ancho del contenido, y altura = borde + relleno + altura del contenido.

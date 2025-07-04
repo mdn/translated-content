@@ -46,5 +46,4 @@ IIFE 的用例包括：
 - 维基百科上的[立即调用函数表达式](https://zh.wikipedia.org/wiki/立即调用函数表达式)
 - [逗号运算符](/zh-CN/docs/Web/JavaScript/Reference/Operators/Comma_operator)
 - 相关术语：
-
   - {{Glossary("Function", "函数")}}

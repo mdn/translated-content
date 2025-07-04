@@ -16,7 +16,6 @@ formatRange(debutIntervalle, finIntervalle);
 ### Paramètres
 
 - `debutIntervalle`
-
   - : Une valeur numérique [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) ou [`BigInt`](/fr/docs/Web/JavaScript/Reference/Global_Objects/BigInt).
 
 - `finIntervalle`

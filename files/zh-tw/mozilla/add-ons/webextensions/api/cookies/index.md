@@ -39,34 +39,26 @@ slug: Mozilla/Add-ons/WebExtensions/API/cookies
 使用此 API 前，擴充套件應於 manifest.json 設定檔中指明需要「cookies」[API 權限](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions)，亦須以 [host 權限宣告](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)指明需要存取 cookies 的網站清單。此後，符合 host 權限宣告的 URL 所能讀寫的任何 cookies，該擴充套件即可讀取。比方說：
 
 - `http://*.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
     - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
     但*不能*：
-
     - 讀取 `www.example.com` 下的安全 cookie。
 
 - `http://www.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀取 `www.example.com` 任何路徑下的非安全 cookie。
     - 讀取 `.example.com` 任何路徑下的非安全 cookie。
     - 寫入 `www.example.com` 任何路徑下的安全或非安全 cookie。
     - 寫入 `.example.com` 任何路徑下的安全或非安全 cookie。
 
     但*不能*：
-
     - 寫入 `foo.example.com` 的 cookie。
     - 寫入 `foo.www.example.com` 的 cookie。
 
 - `*://*.example.com/`
-
   - : 若套件有這樣的 host 權限宣告，即可：
-
     - 讀、寫 `www.example.com` 任何路徑下的安全或非安全 cookie。
 
 ## 瀏覽器相容性

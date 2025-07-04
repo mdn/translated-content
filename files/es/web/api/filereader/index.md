@@ -24,7 +24,6 @@ Mira el artículo _[Using files from web applications](/es/docs/Web/API/File_API
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : Un {{domxref("DOMError")}} que representa el error que ocurrió al momento de leer el archivo.
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : Devuelve un entero que indica el estado de FileReader. Puede ser uno de los siguientes:
 
     | `EMPTY`   | `0` | No ha sido leido ningún dato aún.         |

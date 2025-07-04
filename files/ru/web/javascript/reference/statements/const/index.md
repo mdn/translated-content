@@ -58,15 +58,15 @@ let MY_FAV = 20;
 
 // Важно отметить свойства области видимости уровня блока
 if (MY_FAV === 7) {
-    // Всё нормально. Создать константу или переменную MY_FAV можно.
-    // (работает так же как и let при объявлении в блоке переменных, которые не const)
-    const MY_FAV = 20;
+  // Всё нормально. Создать константу или переменную MY_FAV можно.
+  // (работает так же как и let при объявлении в блоке переменных, которые не const)
+  const MY_FAV = 20;
 
-    // MY_FAV теперь 20
-    console.log("my favorite number is " + MY_FAV);
+  // MY_FAV теперь 20
+  console.log("my favorite number is " + MY_FAV);
 
-    // это попадёт в глобальный контекст и выдаст ошибку
-    var MY_FAV = 20;
+  // это попадёт в глобальный контекст и выдаст ошибку
+  var MY_FAV = 20;
 }
 
 // MY_FAV все ещё имеет значение 7
@@ -76,10 +76,10 @@ console.log("my favorite number is " + MY_FAV);
 const FOO;
 
 // const также работает с объектами
-const MY_OBJECT = {"key": "value"};
+const MY_OBJECT = { key: "value" };
 
 // Попытка переопределить ссылку на объект вызовет исключение - Uncaught TypeError: Assignment to constant variable.
-MY_OBJECT = {"OTHER_KEY": "value"};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // но, свойства объекта (ключи) можно изменять
 MY_OBJECT.key = "otherValue"; // Используйте Object.freeze() для того, чтобы сделать объект неизменяемым
@@ -89,7 +89,7 @@ const MY_ARRAY = [];
 // Например, можно добавлять элементы в массив
 MY_ARRAY.push("A"); // ["A"]
 // Но менять ссылку на объект массива нельзя. Это вызовет исключение - Uncaught TypeError: Assignment to constant variable
-MY_ARRAY = ["B"]
+MY_ARRAY = ["B"];
 ```
 
 ## Спецификации

@@ -189,7 +189,6 @@ JavaScript evalúa la instrucción `switch` anterior de la siguiente manera:
 
 - El programa primero busca una cláusula `case` con una etiqueta que coincida con el valor de expresión y luego transfiere el control a esa cláusula, ejecutando las declaraciones asociadas.
 - Si no se encuentra una etiqueta coincidente, el programa busca la cláusula opcional `default`:
-
   - Si se encuentra una cláusula `default`, el programa transfiere el control a esa cláusula, ejecutando las declaraciones asociadas.
   - Si no se encuentra una cláusula `default`, el programa reanuda la ejecución en la declaración que sigue al final de `switch`.
   - (Por convención, la cláusula `default` está escrita como la última cláusula, pero no es necesario que sea así).

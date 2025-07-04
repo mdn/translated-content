@@ -35,9 +35,7 @@ var sending = browser.runtime.sendMessage(
 - `message`
   - : `any` 型。シリアライズされたクローンに構造化できるオブジェクト。
 - `options`{{optional_inline}}
-
   - : `object` 型。
-
     - `includeTlsChannelId`{{optional_inline}}
       - : `boolean` 型。接続イベントを待つプロセスのための {{WebExtAPIRef('runtime.onMessageExternal')}} に TLS チャンネル ID が渡されるかどうか。
     - `toProxyScript{{optional_inline}}`
@@ -47,9 +45,7 @@ var sending = browser.runtime.sendMessage(
 
 - **引数が一つの場合**、それは送信されるメッセージで、内部的に送信されます。
 - **引数が二つの場合**
-
   - 二番目の引数が次のいずれかである場合、引数は `(message, options)` と解釈され、メッセージは内部的に送信されます。
-
     1. 有効な `options` オブジェクトである (つまり、ブラウザーがサポートする `options` のプロパティのみを持つオブジェクト)
     2. null
     3. undefined

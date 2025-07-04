@@ -94,7 +94,6 @@ Todas las instancias `Number` heredan de {{jsxref("Number.prototype")}}. El obje
 ### Métodos
 
 - {{jsxref("Number.prototype.toExponential()" ,"Number.prototype.toExponential(<var>fractionDigits</var>)")}}
-
   - : Devuelve una cadena que representa el número en notación exponencial.
 
 - {{jsxref("Number.prototype.toFixed()", "Number.prototype.toFixed(<var>digits</var>)")}}

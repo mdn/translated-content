@@ -28,9 +28,7 @@ slug: Glossary/User_agent
 - {{RFC(2616, "14.43")}}: The `User-Agent` header
 
 1. 関連用語:
-
    1. {{Glossary("Browser", "ブラウザー")}}
 
 2. HTTP ヘッダー
-
    1. {{HTTPHeader("User-agent")}}

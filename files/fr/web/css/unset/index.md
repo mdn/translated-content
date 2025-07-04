@@ -81,7 +81,6 @@ p {
 ## Voir aussi
 
 - Les valeurs globales qui peuvent s'appliquer pour toutes les propriétés CSS :
-
   - {{cssxref("initial")}},
   - {{cssxref("inherit")}},
   - {{cssxref("unset")}},

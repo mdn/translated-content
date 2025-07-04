@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 122 中影响开发者的变更信息。Firefox 122 于 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122)发布。
 
 ## 为 Web 开发者带来的变化
@@ -73,7 +71,6 @@ l10n:
   {{htmlelement("template")}} 元素现在支持 `shadowrootmode` 属性，其可以被设置为 `open` 或 `close`，与 {{domxref("Element.attachShadow()", "attachShadow()")}} 方法的 `mode` 选项相同。这允许声明式地创建一棵影子 DOM 子树。（[Firefox bug 1712140](https://bugzil.la/1712140)）
 
 - **影子 DOM 的可克隆选项和属性。**
-
   - {{domxref("Element.attachShadow()")}} 方法现在支持 `clonable` 布尔选项，用于指定创建的影子根是否可以克隆：默认值为 `false`，而当设置为 `true` 时，使用 {{domxref("Node.cloneNode()")}} 或 {{domxref("Document.importNode()")}} 克隆的影子宿主将包括副本中的影子根。
   - {{domxref("ShadowRoot")}} 接口现在支持 {{domxref("ShadowRoot.clonable", "clonable")}} 只读属性。若影子根可克隆，则返回 `true`，否则返回 `false`。对于通过声明式影子 DOM 创建的影子根，它始终返回 `true`。
 

@@ -36,9 +36,7 @@ const request = new XMLHttpRequest(paramsDictionary);
 ### Параметры (нестандартные)
 
 - `objParameters`
-
   - : Существует два флага, которые можно установить:
-
     - `mozAnon`
       - : Boolean: Установка этого флага в значение `true` приведёт к тому, что браузер не будет раскрывать {{Glossary("origin")}} и [учётные данные пользователя](https://www.w3.org/TR/2012/WD-XMLHttpRequest-20120117/#user-credentials) при получении ресурсов. Главным образом это означает, что файлы {{Glossary("Cookie", "cookies")}} не будут отправлены, если они не добавлены явно с использованием setRequestHeader.
     - `mozSystem`

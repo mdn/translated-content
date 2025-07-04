@@ -26,7 +26,6 @@ Antes de iniciar este módulo, você precisará entender o que é programação 
 - [Tutorial Express: O site da Biblioteca Local](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
   - : O primeiro artigo da nossa série de tutoriais práticos explica o que você aprenderá e fornecer uma visão geral do exemplo de site da "biblioteca local", no qual estaremos trabalhando e evoluindo em artigos subsquentes.
 - [Express Tutorial Part 2: Creating a skeleton website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
-
   - : Este artigo mostra como você pode criar um projeto de "esqueleto" de website, no qual você pode popular com as rotas específicas do site, modelos/vizualizações e bancos de dados.
 
 - [Express Tutorial Part 3: Using a Database (with Mongoose)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)

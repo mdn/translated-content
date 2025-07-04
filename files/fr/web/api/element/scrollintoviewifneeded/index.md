@@ -14,9 +14,7 @@ La méthode **`Element.scrollIntoViewIfNeeded()`** fait défiler l'élément en 
 ### Paramètres
 
 - _`opt_center`_
-
   - : Est une valeur {{jsxref("Boolean")}} facultative avec la valeur `true` par défaut :
-
     - Si `true` (_vrai_), l'élément sera aligné sur le centre de la zone visible de l'ancêtre défilable.
     - Si `false` (_faux_), l'élément sera aligné sur le bord le plus proche de la zone visible de l'ancêtre défilable. Selon le bord de la zone visible le plus proche de l'élément, soit le haut de l'élément sera aligné sur le bord supérieur de la zone visible, soit le bord inférieur de l'élément sera aligné sur le bord inférieur de la zone visible .
 

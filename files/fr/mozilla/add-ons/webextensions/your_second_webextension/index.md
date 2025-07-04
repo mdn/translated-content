@@ -12,7 +12,6 @@ L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'uti
 Pour implémenter ce module, il nous faut :
 
 - **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
-
   - d'une icône, nommée "beasts-32.png"
   - d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.
 
@@ -82,7 +81,6 @@ Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire
 - [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle mais recommandée : elle permet de spécifier l'icône du module qui s'affichera dans le gestionnaire d'extension.
 - [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) indique les permissions nécessaires à cette extension. Ici, uniquement [la permission `activeTab`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) est demandée.
 - [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifie le bouton de la barre d'outil. Nous fournissons trois informations :
-
   - `default_icon` est obligatoire et référence l'icône du bouton
   - `default_title` est optionelle et s'affichera dans une bulle d'aide
   - `default_popup` est nécessaire si vous souhaitez qu'une popup s'affiche lorsque l'utilisateur clique sur le bouton. C'est notre cas, nous avons donc défini cette clé et l'avons faite pointer sur un fichier HTML inclus dans le module.

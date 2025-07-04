@@ -42,9 +42,7 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 此元素包含 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes).
 
 - `align` {{Deprecated_inline}}
-
   - : 此枚举属性指定每个单元格内容所使用的水平对齐方式。可选值为：
-
     - `left`，单元格内容左对齐
     - `center`，单元格内容居中对齐
     - `right`，单元格内容右对齐
@@ -58,28 +56,24 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
     > - 为达到与 char 值相同的效果，在 CSS3 中可将 [`char`](#char) 的值用作 {{cssxref("text-align")}} 的属性值。
 
 - `bgcolor` {{Non-standard_inline}}
-
   - : 此属性定义了列内单元格的背景色。定义此属性使用'#'作为前缀，其后是定义于[sRGB](https://www.w3.org/Graphics/Color/sRGB)的 6 位十六进制码。也可使用 16 种预定义的色彩字符串之一。
 
     > [!NOTE]
     > 请勿使用此属性，因为这并非标准，且只有某些特定版本的 Microsoft Internet Explorer（IE 浏览器）支持：{{HTMLElement("tfoot")}}元素应使用[CSS](/zh-CN/docs/Web/CSS)设计。若想得到与**bgcolor**属性相似的效果，可在相关的 {{HTMLElement("td")}}或{{HTMLElement("th")}}元素中使用[CSS](/zh-CN/docs/Web/CSS) {{cssxref("background-color")}}属性。
 
 - `char` {{Deprecated_inline}}
-
   - : 此属性设置单元格对齐的基准字符。当对齐数字或货币值时，一个典型值会带有一个句点 (.)。如果[`align`](#align)未设置为`char`，此属性将被忽略。
 
     > [!NOTE]
     > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。想要达到与[`char`](/zh-CN/docs/Web/HTML/Element/tbtfootody#char)相同的效果，在 CSS3 中，可将{{cssxref("text-align")}}属性设置为[`char`](#char)的属性值。
 
 - `charoff` {{Deprecated_inline}}
-
   - : 此属性用作表明列内数据对于对齐基准字符的偏移字符数，对其基准字符由`char`属性指定。
 
     > [!NOTE]
     > 请勿使用此属性，因为在最新标准中此属性被废弃（且不受支持）。
 
 - `valign` {{Deprecated_inline}}
-
   - : 指定每个表脚单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值有：`baseline`、`bottom`、`middle` 和 `top`。此属性已被弃用，请使用 CSS 属性 {{cssxref("vertical-align")}} 代替。
 
 ## 示例
@@ -98,6 +92,5 @@ HTML 元素 **`<tfoot>`** 定义了一组表格中各列的汇总行。
 
 - 其他 table 相关的 HTML 元素：{{HTMLElement("caption")}}, {{HTMLElement("col")}}, {{HTMLElement("colgroup")}}, {{HTMLElement("table")}}, {{HTMLElement("tbody")}}, {{HTMLElement("td")}}, {{HTMLElement("tbody")}}, {{HTMLElement("th")}}, {{HTMLElement("thead")}}, {{HTMLElement("tr")}};
 - 在设计`<tfoot>`时可能会有特殊效果的 CSS 属性和伪类：
-
   - {{cssxref(":nth-child")}}伪类：设置列内元素的对齐方式；
   - {{cssxref("text-align")}}属性：可设置单元格内容与同一字符对齐，例如'.'。

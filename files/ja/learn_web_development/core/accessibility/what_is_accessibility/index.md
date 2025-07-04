@@ -171,7 +171,6 @@ l10n:
 ## 関連情報
 
 - [WCAG](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [知覚可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [操作可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [理解可能](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)

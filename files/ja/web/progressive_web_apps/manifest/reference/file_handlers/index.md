@@ -20,12 +20,10 @@ l10n:
 オブジェクトの配列。配列内の各オブジェクトには、次の値が含まれている必要があります（`action` と `accept`は必須です）。
 
 - `action`
-
   - : ファイルを処理する際の移動先の URL が入っている文字列。
     この URL は、 PWA が移動できる URL のセットである PWA のナビゲーションスコープ内に設定する必要があります。 PWA のナビゲーションスコープは、 [`start_url`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/start_url) メンバーが既定値ですが、 [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) メンバーを使用して設定することもできます。
 
 - `accept`
-
   - : オブジェクトです。このオブジェクトのそれぞれのキーは次のようなものです。
     - プロパティのキーは MIME タイプです。
     - プロパティ値は、その MIME タイプに関連付けられたファイル拡張子を表す文字列の配列です。

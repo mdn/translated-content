@@ -32,9 +32,7 @@ let gettingTopSites = browser.topSites.get(
 ### 参数
 
 - `options`
-
   - : `object`。用于修改返回页面列表的选项。可以包含如下属性：
-
     - `includeBlocked` {{optional_inline}}
       - : `Boolean`。包含用户已从“新标签”页面中移除的页面。默认为 `false`。
     - `includeFavicon` {{optional_inline}}

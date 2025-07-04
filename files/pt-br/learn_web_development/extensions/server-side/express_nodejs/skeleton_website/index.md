@@ -94,7 +94,6 @@ De um modo geral, você deve selecionar um mecanismo de modelagem que forneça t
 - Style — Alguns mecanismos de modelo usam marcação específica para indicar o conteúdo inserido no HTML "comum", enquanto outros constroem o HTML usando uma sintaxe diferente (por exemplo, usando recuo e nomes de bloco).
 - Performance/rendering time.
 - Features — você deve considerar se os mecanismos que você procura têm os seguintes recursos disponíveis:
-
   - Layout inheritance: Allows you to define a base template and then "inherit" just the parts of it that you want to be different for a particular page. This is typically a better approach than building templates by including a number of required components or building a template from scratch each time.
   - "Include" support: Allows you to build up templates by including other templates.
   - Concise variable and loop control syntax.
@@ -179,7 +178,6 @@ At this point, we have a complete skeleton project. The website doesn't actually
    ```
 
 2. Then run the application.
-
    - On Windows, use this command:
 
      ```bash

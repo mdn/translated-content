@@ -20,9 +20,7 @@ XMLHttpRequest.send(body)
 ### Parâmetros
 
 - `body` {{optional_inline}}
-
   - : Um corpo de dados a ser enviado na solicitação XHR. Isso pode ser:
-
     - Um {{domxref("Document")}}, caso em que é serializado antes de ser enviado.
     - Um `BodyInit`, que [conforme a espeficicação Fetch](https://fetch.spec.whatwg.org/#bodyinit), pode ser um objeto {{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("ReadableStream")}} ou {{domxref("USVString")}}.
 

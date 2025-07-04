@@ -45,16 +45,13 @@ addEventListener(type, listener, useCapture)
 - `listener`
   - : 指定された種類のイベントが発生するときに通知（{{domxref("Event")}} インターフェイスを実装しているオブジェクト）を受け取るオブジェクト。これは `null` であるか、`handleEvent()` メソッドのあるオブジェクトか、JavaScript の[関数](/ja/docs/Web/JavaScript/Guide/Functions)のいずれかでなければなりません。コールバックについて詳しくは、[イベントリスナーのコールバック](#イベントリスナーのコールバック)を参照してください。
 - `options` {{optional_inline}}
-
   - : 対象のイベントリスナーの特性を指定する、オプションのオブジェクトです。
     次のオプションが使用できます。
-
     - `capture` {{optional_inline}}
       - : 論理値で、この型のイベントが DOM ツリーで下に位置する `EventTarget` に配信 (dispatch) される前に、登録された `listener` に配信されることを示します。指定されていない場合は、既定で `false` になります。
     - `once` {{optional_inline}}
       - : 論理値で、 `listener` の呼び出しを一回のみのとしたいかどうかを値で指定します。 `true` を指定すると、 `listener` は一度実行された時に自動的に削除されます。指定されていない場合は、既定で `false` になります。
     - `passive` {{optional_inline}}
-
       - : 論理値で、`true` ならば、 `listener` で指定された関数が {{domxref("Event.preventDefault", "preventDefault()")}} を呼び出さないことを示します。呼び出されたリスナーが `preventDefault()` を呼び出すと、ユーザーエージェントは何もせず、コンソールに警告を出力される可能性があります。
 
       このオプションが指定されていない場合、既定で `false` になります。ただし、Safari 以外のブラウザーでは、{{domxref("Element/wheel_event", "wheel")}}、{{domxref("Element/mousewheel_event", "mousewheel")}}、{{domxref("Element/touchstart_event", "touchstart")}}、{{domxref("Element/touchmove_event", "touchmove")}} の各イベントでは `true` になります。詳細は[パッシブリスナーの使用](#パッシブリスナーの使用)をご覧ください。
@@ -63,7 +60,6 @@ addEventListener(type, listener, useCapture)
       - : {{domxref("AbortSignal")}} です。その `AbortSignal` を持つ {{domxref("AbortController")}} オブジェクトの {{domxref("AbortController/abort()", "abort()")}} メソッドが呼び出された時に、リスナーが削除されます。指定されてなかった場合は、`AbortSignal` がリスナーに関連付けられません。
 
 - `useCapture` {{optional_inline}}
-
   - : 論理値で、この型のイベントが、DOM ツリー内の下の `EventTarget` に配信される*前*に、登録された `listener` に配信されるかどうかを示します。ツリーを上方向にバブリングしているイベントは、キャプチャを使用するように指定されたリスナーを起動しません。イベントのバブリングとキャプチャは、両方の要素がそのイベントのハンドラーを登録している場合に、別の要素内に入れ子になっている要素で発生するイベントを伝播する 2 つの方法です。イベント伝播モードは、要素がイベントを受け取る順番を決定します。詳細な説明は [DOM Level 3 Events](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow) と [JavaScript Event order](https://www.quirksmode.org/js/events_order.html#link4) を参照してください。
     指定されていない場合、 `useCapture` は既定で `false` となります。
 

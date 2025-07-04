@@ -13,7 +13,6 @@ l10n:
 
 - [官方网站](https://www.microsoft.com/edge)
 - [MDN Web 文档术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("Google Chrome")}}
   - {{Glossary("Microsoft Edge")}}
   - {{Glossary("Microsoft Internet Explorer")}}

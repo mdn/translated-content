@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 59a92ab5609f0a021602f11843f3b00b16e67e6d
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 127 中影响开发者的变更信息。Firefox 127 于 [2024 年 6 月 11 日](https://whattrainisitnow.com/release/?version=127)发布。
 
 ## 为 Web 开发者带来的变化
@@ -22,7 +20,6 @@ l10n:
 ### JavaScript
 
 - 现已支持以下 [`Set`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set) 方法（[Firefox bug 1868423](https://bugzil.la/1868423)）：
-
   - [`Set.prototype.intersection()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/intersection)——返回一个含有同时存在于当前集合以及给定集合中的元素的新集合。
   - [`Set.prototype.union()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/union)——返回一个含有当前集合以及给定集合中的所有元素的新集合。
   - [`Set.prototype.difference()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Set/difference)——返回一个含有当前集合中存在而给定集合中不存在的元素的新集合。

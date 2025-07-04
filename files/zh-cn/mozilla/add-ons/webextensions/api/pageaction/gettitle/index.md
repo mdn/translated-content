@@ -22,9 +22,7 @@ let gettingTitle = browser.pageAction.getTitle(
 ### 参数
 
 - `details`
-
   - : `object`。
-
     - `tabId`
       - : `integer`。你希望获取的页面操作标题所在标签页的 ID。
 

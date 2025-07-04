@@ -20,7 +20,6 @@ l10n:
      > アクティブなビュー遷移は、関連する {{domxref("ViewTransition")}} インスタンスを保有しています（例えば、同一文書内 (SPA) の遷移の場合、`startViewTransition()` によって返されます）。`ViewTransition` オブジェクトには、いくつかのプロミスが含まれており、ビュー遷移プロセスのさまざまな段階に到達した際に、それに対応するコードを実行することができます。 詳しくは、[JavaScript によるビュー遷移の制御](#javascript_によるビュー遷移の制御)を参照してください。
 2. 現在の（古いページ）ビューでは、API は {{cssxref("view-transition-name")}} が宣言された要素のスナップショットを取得します。
 3. ビューの変更が発生します。
-
    - 同一文書内 (SPA) の遷移の場合、`startViewTransition()` に渡したコールバックが呼び出され、DOM の変更を行います。
 
      コールバックが正常に実行された場合、{{domxref("ViewTransition.updateCallbackDone")}} プロミスが履行され、DOM の更新に対応できます。
@@ -294,7 +293,6 @@ figcaption {
 
 1. 同一文書内 (SPA) の遷移の場合、{{domxref("Document.startViewTransition()", "document.startViewTransition()")}} メソッドが遷移に関連付けられた `ViewTransition` を返します。
 2. 文書間 (MPA) の遷移の場合は、次のようになります。
-
    - ナビゲーションにより文書がアンロードされようとするときに、{{domxref("Window.pageswap_event", "pageswap")}} イベントが発行されます。イベントオブジェクト ({{domxref("PageSwapEvent")}}) は、`ViewTransition` に{{domxref("PageSwapEvent.viewTransition")}} プロパティからアクセスできるほか、ナビゲーションの種類と現在の文書および移動先文書の履歴項目を含む {{domxref("NavigationActivation")}} にも {{domxref("PageSwapEvent.activation")}} からアクセスできます。
      > [!NOTE]
      > ナビゲーションのリダイレクトチェーンのどこかにオリジンをまたいだ URL がある場合、`activation` プロパティは `null` を返します。

@@ -81,7 +81,6 @@ l10n:
 
 - すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - その他のマイクロデータに関するグローバル属性:
-
   - [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop)
   - [`itemref`](/ja/docs/Web/HTML/Reference/Global_attributes/itemref)
   - [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope)

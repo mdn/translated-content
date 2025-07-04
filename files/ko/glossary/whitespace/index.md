@@ -25,10 +25,8 @@ l10n:
 - [HTML, CSS 및 DOM에서 공백을 처리하는 방법](/ko/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
 - 명세서
-
   - [ASCII 공백 명세](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript 언어 명세서](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
 - [용어 사전](/ko/docs/Glossary)
-
   1. {{Glossary("Character")}}

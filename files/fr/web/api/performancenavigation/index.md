@@ -17,9 +17,7 @@ Un objet de ce type peut être obtenu en appelant l'attribut en lecture seule [`
 _L'interface `PerformanceNavigation` n'hérite d'aucune propriété._
 
 - [`PerformanceNavigation.type`](/fr/docs/Web/API/PerformanceNavigation/type) {{readonlyInline}} {{deprecated_inline}}
-
   - : Une valeur `unsigned short` qui indique comment la navigation vers cette page s'est faite. Les valeurs possibles sont :
-
     - `TYPE_NAVIGATE` (0)
       - : La page a été consultée en suivant un lien, un signet, un formulaire ou un script, ou en tapant l'URL dans la barre d'adresse.
     - `TYPE_RELOAD` (1)

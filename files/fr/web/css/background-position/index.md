@@ -94,35 +94,29 @@ La propriété `background-position` peut être définie grâce à une ou plusie
 ### Valeurs
 
 - `<position>`
-
   - : Une valeur [`<position>`](/fr/docs/Web/CSS/position). Une position définit un couple de coordonnées XY qui permet de placer un objet par rapport aux bords de la boîte d'un élément. Une position peut être définie avec une à quatre valeurs. Si deux valeurs qui ne sont pas des mots-clés sont utilisées, la première représente la position horizontale et la seconde la position verticale. Si une seule valeur est indiquée, la deuxième sera `center` par défaut. Si trois ou quatre valeurs sont utilisées, les valeurs de longueur-pourcentage sont des décalages relatifs au(x) mot(s)-clé(s) précédent(s).
 
     **Définition avec une valeur&nbsp;:** la valeur peut être&nbsp;:
-
     - Le mot-clé `center` qui centre l'image.
     - Un mot-clé parmi `top`, `left`, `bottom`, `right`. Ce mot-clé indique le bord par rapport auquel placer l'élément. Pour l'autre dimension, on utilisera la moitié de la boîte (50%) et l'élément sera placé au milieu de cet axe.
     - Une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Cette valeur définit l'abscisse du point par rapport au bord gauche. L'ordonnée est fixée à 50%.
 
     **Définition avec deux valeurs&nbsp;:** la première valeur définit l'abscisse (la coordonnée horizontale X) et la seconde définit l'ordonnée (la coordonnée verticale Y). Chaque valeur peut être&nbsp;:
-
     - Un des mots-clés parmi `top`, `left`, `bottom`, `right`. Si `left` ou `right` est utilisé, la valeur définit l'abscisse et l'autre définira l'ordonnée. Si `top` ou `bottom` est indiqué, cette valeur définira l'ordonnée et l'autre valeur définira X.
     - Une valeur de longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)). Si l'autre valeur vaut `left` ou `right`, cette valeur définira l'ordonnée par rapport au bord haut. Si l'autre valeur est `top` ou `bottom`, cette valeur définira l'abscisse relativement au bord gauche. Si les deux valeurs sont des longueurs ou des pourcentages, la première définira l'abscisse et la seconde l'ordonnée.
 
     > [!NOTE]
     > Si une valeur est `top` ou `bottom`, la seconde ne peut pas être `top` ou `bottom`. Si une valeur est `left` ou `right`, la seconde ne peut pas être `left` ou `right`. Autrement dit, les combinaisons `top top`, `bottom bottom`, `top bottom`, `bottom top`, `right right`, `left left`, `left right` et `right left` seront considérées comme invalides.
-
     - L'ordre des mots-clés n'est pas important, le navigateur pourra les réarranger si besoin. Ainsi, `top left` et `left top` auront le même effet. En revanche, si on associe une longueur ([`<length>`](/fr/docs/Web/CSS/length)) ou un pourcentage ([`<percentage>`](/fr/docs/Web/CSS/percentage)) avec un mot-clé, l'ordre est important et la valeur définissant l'abscisse doit arriver avant l'ordonnée&nbsp;: `right 20px` ne sera pas équivalent à `20px right` et cette dernière forme sera invalide. Les valeurs `left 20%` ou `20% bottom` sont valides car les abscisses et ordonnées sont bien rangées.
 
     - La valeur par défaut est `left top` ou `0% 0%`.
 
     **Définition avec 3 valeurs&nbsp;:** Deux valeurs sont des mots-clés et la troisième est le décalage appliqué à la valeur qui précède.
-
     - La première valeur est l'un des mots-clés `top`, `left`, `bottom`, `right`, ou `center`. Si `left` ou `right` sont fournis, cela définit la position sur l'axe horizontale et si `top` or `bottom` sont fournis, cela définit la position sur l'axe vertical et l'autre mot-clé définit la position sur l'axe horizontal.
     - La longueur (type [`<length>`](/fr/docs/Web/CSS/length)) ou le pourcentage (type [`<percentage>`](/fr/docs/Web/CSS/percentage)), s'il est utilisé en deuxième valeur, sera considéré comme le décalage à appliquer pour la première valeur. S'il s'agit de la troisième valeur, ce sera le décalage à appliquer à la deuxième valeur.
     - Il n'y a qu'une seule longueur ou qu'un seul pourcentage attendu pour définir le décalage de la valeur précédente. Toute combinaison d'un mot-clé avec deux longueurs ou deux pourcentages sera considérée comme invalide.
 
     **Définition avec 4 valeurs&nbsp;:** La première et la troisième valeur sont des mots-clés pour la position horizontale d'une part et verticale d'autre part. La deuxième et la quatrième valeur sont des décalages pour les valeurs qui les précèdent&nbsp;:
-
     - La première et la troisième valeur utilisent l'un des mots-clés suivant&nbsp;: `top`, `left`, `bottom`, `right`. Si `left` ou `right` sont utilisés, cela définit la position horizontale. Si `top` ou `bottom` sont utilisés, cela définit la position verticale et l'autre mot-clé définit alors la valeur horizontale.
     - La deuxième et la quatrième valeur sont des longueurs ([`<length>`](/fr/docs/Web/CSS/length)) ou des pourcentages ([`<percentage>`](/fr/docs/Web/CSS/percentage)). La deuxième valeur est le décalage pour le premier mot-clé tandis que la quatrième valeur est le décalage correspondant au deuxième mot-clé.
 

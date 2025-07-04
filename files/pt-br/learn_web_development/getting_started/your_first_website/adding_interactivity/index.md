@@ -383,7 +383,6 @@ Isso é o que aconteceu. Você armazenou uma referência ao seu elemento {{htmle
 
 1. O código recupera o valor do atributo `src` da imagem.
 2. O código usa uma condicional para verificar se o valor `src` é igual ao caminho da imagem original:
-
    1. Se for, o código altera o valor `src` para o caminho da segunda imagem, forçando a outra imagem a ser carregada dentro do elemento {{htmlelement("img")}}.
    2. Se não for (o que significa que já deve ter mudado), o valor `src` volta para o caminho da imagem original, para o estado original.
 

@@ -178,19 +178,16 @@ Olhando para o enunciado, a primeira coisa que devemos fazer é quebrá-lo em pe
 4. Após a tentativa ter sido submetida, primeiro gravar em algum lugar para que o usuário possa ver as tentativas anteriores.
 5. Depois, verificar se o palpite está correto.
 6. Se estiver correto:
-
    1. Escrever mensagem de parabéns.
    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
    3. Mostrar controle que permita ao jogador reiniciar o jogo.
 
 7. Se o palpite estiver errado e o jogador ainda tem turnos sobrando:
-
    1. Dizer ao jogador que ele está errado.
    2. Permitir que ele insira outra resposta.
    3. Incrementar o número do turno em 1.
 
 8. Se o jogador está errado mas não tem turnos sobrando:
-
    1. Dizer ao jogador que o jogo acabou.
    2. Impedir que o jogador insira mais respostas (isso pode bugar o jogo).
    3. Mostrar controle que permita ao jogador reiniciar o jogo.
@@ -484,7 +481,6 @@ Isso é bastante código — ufa! Vamos abordar cada seção e explicar o que fa
 
 - A linha 6 acrescenta o valor atual de `palpiteUsuario` ao final do parágrafo `palpites`, mais um espaço em branco para que haja espaçamento entre cada palpite mostrado.
 - O próximo bloco (linhas 8–24 acima) fazem as seguintes conferências:
-
   - O primeiro `if(){ }` confere se o palpite do jogador é igual ao número aleatório (`numeroAleatorio`) definido no topo do nosso JavaScript. Se for, o jogador adivinhou corretamente o número e venceu o jogo. Então mostramos ao jogador uma mensagem de parabenização com uma agradável cor verde, limpamos o conteúdo do parágrado que informa sobre o palpite ser alto ou baixo `<p class="baixoOuAlto"></p>`, e executamos uma função chamada `configFimDeJogo()`, que iremos discutir mais tarde.
   - Agora nós encadeamos outro teste ao final deste anterior usando uma estrutura `else if(){ }`. Este confere se o palpite do jogador é sua última tentativa. Se for, o programa faz o mesmo que no bloco anterior, porém com uma mensagem de fim de jogo ao invés do texto de parabenização.
   - O bloco final encadeado ao final do código (`else { }`) contém código que só é executado se nenhum dos outros dois testes retornar verdadeiro (ou seja, o jogador não acertou o número, porém ainda tem mais tentativas restantes). Neste caso nós dizemos a ele que está errado, e então rodamos outro teste condicional para checar se o palpite foi maior ou menor do que a resposta certa, exibindo então uma mensagem apropriada para informá-lo se foi maior ou menor.
@@ -625,7 +621,6 @@ Vamos brincar um pouco com alguns objetos do navegador.
 1. Primeiro abra seu programa em um navegador.
 2. Em seguida, abra as [ferramentas de desenvolvimento do navegador](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools), e certifique-se de que a aba do console JavaScript esteja aberta.
 3. Digite `campoPalpite` e o console irá lhe mostrar que a variável contém um elemento {{htmlelement("input")}}. Você também irá notar que o console completa automaticamente os nomes de objetos existentes dentro do ambiente de execução, incluindo suas variáveis!
-
    1. Agora digite o seguinte:
 
       ```js

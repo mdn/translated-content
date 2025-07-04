@@ -141,7 +141,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-如果父类构造函数返回一个对象，则在进一步初始化[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)时，该对象将被用作派生类的 `this` 值。这种技巧被称为[“返回覆盖”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties#返回重写对象)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_properties)字段）。
+如果父类构造函数返回一个对象，则在进一步初始化[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)时，该对象将被用作派生类的 `this` 值。这种技巧被称为[“返回覆盖”](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements#返回重写对象)，它允许在无关对象上定义派生类的字段（包括[私有](/zh-CN/docs/Web/JavaScript/Reference/Classes/Private_elements)字段）。
 
 ### 子类化内置类
 

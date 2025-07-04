@@ -18,19 +18,15 @@ void gl.blendEquation(mode);
 ### 参数
 
 - `mode`
-
   - : {{domxref("GLenum")}} 指定源和目标颜色的组合方式。必须是：
-
     - `gl.FUNC_ADD`: 源 + 目的地（默认值），
     - `gl.FUNC_SUBTRACT`: 源 - 目的地，
     - `gl.FUNC_REVERSE_SUBTRACT`: 目的地 - 源
     - 当使用 {{domxref("EXT_blend_minmax")}} 扩展名时：
-
       - `ext.MIN_EXT`: 最小的源和目的地，
       - `ext.MAX_EXT`: 最大源和目的地。
 
     - 当使用 {{domxref("WebGL2RenderingContex","WebGL 2 上下文","",1)}} 时，可以使用以下值：
-
       - `gl.MIN`: 最小的源和目的地，
       - `gl.MAX`: 最大源和目的地。
 

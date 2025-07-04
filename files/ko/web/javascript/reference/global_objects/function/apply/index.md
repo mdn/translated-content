@@ -87,7 +87,7 @@ var max = Math.max.apply(null, numbers);
 var min = Math.min.apply(null, numbers);
 
 // vs. simple loop based algorithm
-(max = -Infinity), (min = +Infinity);
+((max = -Infinity), (min = +Infinity));
 
 for (var i = 0; i < numbers.length; i++) {
   if (numbers[i] > max) {
@@ -144,7 +144,7 @@ Function.prototype.construct = function (aArgs) {
 };
 ```
 
-[클로져](/ko/docs/Web/JavaScript/Closures) 사용:
+[클로져](/ko/docs/Web/JavaScript/Guide/Closures) 사용:
 
 ```JS
 Function.prototype.construct = function(aArgs) {

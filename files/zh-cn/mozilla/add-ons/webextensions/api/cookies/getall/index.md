@@ -22,54 +22,41 @@ let getting = browser.cookies.getAll(
 ### 参数
 
 - `details`
-
   - : 一个 `object`，包含用于匹配要检索的 Cookie 的详细信息。包含的属性如下（有关这些属性的更多信息，请参见 [Cookie 类型](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type)）：
-
     - `domain` {{optional_inline}}
-
       - : 一个 `string`，表示 Cookie 必须关联的域（它们可以与此确切域或其子域之一关联）。
 
     - `firstPartyDomain` {{optional_inline}}
-
       - : 一个 `string`，表示要检索的 Cookie 所关联的第一方域。
 
         如果浏览器启用了第一方隔离，则必须提供此属性。但是，在这种情况下，你可以将这个值设为 `null`。如果这样做，那么结果中将包括 `firstPartyDomain` 值为任意或为空的 Cookie。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 
     - `name` {{optional_inline}}
-
       - : 一个 `string`，表示 Cookie 应该具有的名称。
 
     - `partitionKey` {{optional_inline}}
-
       - : 一个 `object`，定义要从哪个[存储分区](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#存储分区)返回 Cookie：
-
         - 如果省略，则仅返回未分区存储中的 Cookie。
         - 如果提供但未指定 `topLevelSite`，则返回分区和未分区存储中的所有 Cookie。
         - 如果提供并指定了 topLevelSite，则返回指定分区存储中的 Cookie。
 
         此对象包含：
-
         - `topLevelSite` {{optional_inline}}
           - : 一个 `string`，表示包含 Cookie 的顶级站点存储分区的第一方 URL。
 
     - `path` {{optional_inline}}
-
       - : 一个 `string`，表示路径——Cookie 的路径必须与此路径相同。
 
     - `secure` {{optional_inline}}
-
       - : 一个 `boolean`，根据其 `secure` 属性过滤 Cookie，允许你过滤安全 Cookie 和非安全 Cookie。
 
     - `session` {{optional_inline}}
-
       - : 一个 `boolean`，根据其 `session` 属性过滤 Cookie，允许你过滤会话 Cookie 和持久性 Cookie。
 
     - `storeId` {{optional_inline}}
-
       - : 一个 `string`，表示要从中检索 Cookie 的 Cookie 存储。如果省略，将使用当前执行上下文的 Cookie 存储。
 
     - `url` {{optional_inline}}
-
       - : 一个 `string`，表示要检索的 Cookie 必须关联的 URL。
 
 ### 返回值

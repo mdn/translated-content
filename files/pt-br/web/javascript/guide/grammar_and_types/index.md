@@ -218,7 +218,6 @@ function f() {
 O mais recente padrão ECMAScript define sete tipos de dados:
 
 - Seis tipos de dados são os chamados {{Glossary("Primitive", "primitivos")}}:
-
   - {{Glossary("Boolean")}}. `true` e `false`.
   - {{Glossary("null")}}. Uma palavra-chave que indica valor nulo. Devido JavaScript ser case-sensitive, `null` não é o mesmo que `Null`, `NULL`, ou ainda outra variação.
   - {{Glossary("undefined")}}. Uma propriedade superior cujo valor é indefinido.

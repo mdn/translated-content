@@ -341,7 +341,6 @@ Ci-dessous, la liste de tous les attributs disponibles en SVG ainsi que des lien
 ### Attributs génériques
 
 - Attributs principaux
-
   - [`id`](/fr/docs/Web/SVG/Attribute/id)
   - [`class`](/fr/docs/Web/SVG/Attribute/class)
   - [`style`](/fr/docs/Web/SVG/Attribute/style)

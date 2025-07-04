@@ -44,13 +44,11 @@ Django ajuda você a escrever programas que são:
 - Completo
   - : Django segue a filosofia de "baterias incluídas" e fornece quase tudo que desenvolvedores possam querer fazer "fora da caixa". Como tudo o que você precisa é parte de um "produto", tudo funciona perfeitamente junto, seguindo princípios de design consistentes, contando uma extensa e [atualizada documentação](https://docs.djangoproject.com/pt-br/2.1/).
 - Versátil
-
   - : Django pode ser (e tem sido) utilizado para construir quase todo tipo de website - desde sistema de gestão de conteúdo e wikis, passando por redes sociais e sites de notícias. Ele pode trabalhar com qualquer framework do lado do cliente, e pode entregar conteúdo em praticamente qualquer formato (incluindo HTML, feeds RSS, JSON, XML, etc). Esse site que você está lendo agora é baseado em Django.
 
     À medida em que, internamente, fornece opções para quase todo tipo de funcionalidade que você possa querer (por exemplo: vários banco de dados que são populares, motores de template, etc), ele pode também ser extendido para utilizar outros componentes, caso seja necessário.
 
 - Seguro
-
   - : Django ajuda os desenvolvedores a evitar os erros de segurança mais comuns, fornecendo um framework que foi desenhado para "fazer as coisas certas", de modo a proteger o website automaticamente. Por exemplo, Django fornece uma maneira segura de gerenciar as contas dos usuários e suas senhas, evitando erros comuns, tais como colocar informações da sessão em cookies, onde ficam vulneráveis (ao invés disso os cookies contém apenas uma chave e os dados são armazenados no banco de dados), ou armazenar as senhas de forma direta, ao invés de gravar um hash para essas senhas.
 
     _Um hash de senha é um valor fixed-length (tamanho-fixo) criado mandando a senha por uma [cryptographic hash function (função hash criptográfica)](https://pt.wikipedia.org/wiki/Fun%C3%A7%C3%A3o_hash_criptogr%C3%A1fica). Django pode checar se uma senha inserida está correta executando ela pela função hash e comparando a saída com o valor hash armazenado. Porém devido a natureza "one-way" ("um-caminho") da função, mesmo que o valor hash armazenado estiver comprometido, é difcil para uma pessoa comentendo um ataque resolver a senha original._

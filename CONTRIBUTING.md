@@ -93,7 +93,6 @@ To create a new translation for a page that does not yet have one, perform the f
 1. Find the source file in the upstream content repository. (ex. `/path/to/content/files/en-us/mdn/index.md`)
 2. Copy the file to the appropriate locale's folder. (ex. `cp /path/to/content/files/en-us/mdn/index.md files/fr/mdn/index.md`)
 3. Update the front matter of the document.
-
    1. Remove excess front matter properties (see [Translation guidelines][] to see which ones should be kept).
    2. Localize the `title` and `short-title` (if present)
    3. Add a new `l10n.sourceCommit` key, which contains the commit hash of the latest commit that modified the file. You can do this by running `git log <file>`.

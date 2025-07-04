@@ -67,7 +67,6 @@ Dans ce fragment de code HTML, c'est l'élément {{HTMLElement("button")}} avec 
 - [Le guide de l'API Fullscreen](/fr/docs/Web/API/Fullscreen_API/Guide)
 - {{cssxref("::backdrop")}}
 - Les API DOM :
-
   - {{domxref("Element.requestFullscreen()")}},
   - {{domxref("Document.exitFullscreen()")}},
   - {{domxref("Document.fullscreenElement")}}

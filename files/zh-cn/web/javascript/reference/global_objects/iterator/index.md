@@ -134,7 +134,6 @@ const myIterator = Iterator.from({
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : 创建实例对象的构造函数。对于 `Iterator` 实例，其初始值是 {{jsxref("Iterator/Iterator", "Iterator")}} 构造函数。
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值是字符串 `"Iterator"`。该属性在 {{jsxref("Object.prototype.toString()")}} 中使用。
 
     > [!NOTE]

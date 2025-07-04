@@ -1,22 +1,18 @@
 ---
-title: Accept-Post
+title: Accept-Post 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Post
 l10n:
-  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{HTTPSidebar}}
 
-**`Accept-Post`** HTTP 回應標頭用於告知伺服器接受哪些[媒體類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)的 HTTP POST 請求。
+HTTP **`Accept-Post`** {{Glossary("response header", "回應標頭")}}用於告知伺服器在 {{HTTPMethod("POST")}} 請求中接受哪些[媒體類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)。例如，伺服器接收到不支援的媒體類型的 `POST` 請求時，可能會回應 {{HTTPStatus("415", "415 Unsupported Media Type")}} 狀態碼並附上參考一個或多個支援媒體類型的 `Accept-Post` 標頭。
 
-任何方法回應中的 **`Accept-Post`** 都表示在請求的資源上允許 `POST` 操作（標頭中的任何文件／媒體格式進一步指示允許的文件格式）。
-
-例如，伺服器接收到不支援的媒體類型的 `POST` 請求時，可能會回應 {{HTTPStatus("415")}} `Unsupported Media Type` 狀態碼並附上參考一個或多個支援媒體類型的 **`Accept-Post`** 標頭。
+此標頭應出現在對支援 `POST` 方法的資源的 {{HTTPMethod("OPTIONS")}} 請求的回應中。在對任何請求方法的回應中出現 `Accept-Post` 標頭，都隱含地表示允許在請求的目標資源上進行 `POST` 操作。
 
 > [!NOTE]
->
-> - IANA 註冊表維護[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。
-> - `bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下，包括遺留支援時可能會使用。
+> IANA 維護著[官方內容編碼列表](https://www.iana.org/assignments/http-parameters/http-parameters.xhtml#content-coding)。`bzip` 和 `bzip2` 編碼是非標準的，但在某些情況下可能會使用，特別是為了舊版支援。
 
 <table class="properties">
   <tbody>
@@ -25,7 +21,7 @@ l10n:
       <td>{{Glossary("Response header", "回應標頭")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止修改的標頭")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止的請求標頭")}}</th>
       <td>是</td>
     </tr>
   </tbody>
@@ -34,21 +30,30 @@ l10n:
 ## 語法
 
 ```http
-Accept-Post: <MIME_type>/<MIME_subtype>
-Accept-Post: <MIME_type>/*
+Accept-Post: <media-type>/<subtype>
+Accept-Post: <media-type>/*
 Accept-Post: */*
+
+// 以逗號分隔的媒體類型列表
+Accept-Post: <media-type>/<subtype>, <media-type>/<subtype>
 ```
 
-> **備註：** `Accept-Post` 標頭指定的媒體範圍與 {{HTTPHeader("Accept")}} 相同，只是沒有偏好（即沒有 `q` 參數）。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
+> [!NOTE]
+> `Accept-Post` 標頭指定媒體範圍的方式與 {{HTTPHeader("Accept")}} 相同，只是它沒有透過 `q`（{{Glossary("quality values", "品質值")}}）參數來表示偏好。這是因為 `Accept-Post` 是回應標頭，而 `Accept` 是請求標頭。
 
 ## 指令
 
-無。
+- `<media-type>/<subtype>`
+  - : 單一、精確的[媒體類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)，例如 `text/html`。
+- `<media-type>/*`
+  - : 不含子類型的媒體類型。例如，`image/*` 對應 `image/png`、`image/svg`、`image/gif` 及其他圖片類型。
+- `*/*`
+  - : 任何媒體類型。
 
 ## 範例
 
 ```http
-Accept-Post: application/example, text/example
+Accept-Post: application/json, text/plain
 Accept-Post: image/webp
 Accept-Post: */*
 ```
@@ -59,9 +64,9 @@ Accept-Post: */*
 
 ## 瀏覽器相容性
 
-瀏覽器相容性與此標頭無關（標頭由伺服器傳送，且規範未定義用戶端行為）。
+瀏覽器相容性與此標頭無關。此標頭由伺服器傳送，且規範未定義用戶端行為。
 
 ## 參見
 
-- HTTP 方法 {{HTTPMethod("POST")}}
-- HTTP 語義和上下文 {{RFC("7231", "POST", "4.3.3")}}
+- {{HTTPHeader("Accept-Patch")}}
+- {{HTTPMethod("POST")}} 請求方法

@@ -46,16 +46,16 @@ Algún ejemplo de la ejecución de la función paso a paso sería similar a esto
 });
 
 // First call
-(valorPrevio = 4), (valorActual = 3), (indice = 3);
+((valorPrevio = 4), (valorActual = 3), (indice = 3));
 
 // Second call
-(valorPrevio = 7), (valorActual = 2), (indice = 2);
+((valorPrevio = 7), (valorActual = 2), (indice = 2));
 
 // Third call
-(valorPrevio = 9), (valorActual = 1), (indice = 1);
+((valorPrevio = 9), (valorActual = 1), (indice = 1));
 
 // Fourth call
-(valorPrevio = 10), (valorActual = 0), (indice = 0);
+((valorPrevio = 10), (valorActual = 0), (indice = 0));
 
 // el array sobre el que se llama a reduceRight siempre es el objeto [0,1,2,3,4]
 
@@ -70,19 +70,19 @@ Y si proporcionas un `valorInicial`, el resultado sería como este:
 }, 10);
 
 // Primera llamada
-(valorPrevio = 10), (valorActual = 4), (indice = 4);
+((valorPrevio = 10), (valorActual = 4), (indice = 4));
 
 // Segunda llamada
-(valorPrevio = 14), (valorActual = 3), (indice = 3);
+((valorPrevio = 14), (valorActual = 3), (indice = 3));
 
 // Tercera llamada
-(valorPrevio = 17), (valorActual = 2), (indice = 2);
+((valorPrevio = 17), (valorActual = 2), (indice = 2));
 
 // Cuarta llamada
-(valorPrevio = 19), (valorActual = 1), (indice = 1);
+((valorPrevio = 19), (valorActual = 1), (indice = 1));
 
 // Quinta llamada
-(valorPrevio = 20), (valorActual = 0), (indice = 0);
+((valorPrevio = 20), (valorActual = 0), (indice = 0));
 
 // el array sobre el que se llama a reduce siempre es el objeto [0,1,2,3,4]
 

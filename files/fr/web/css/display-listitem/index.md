@@ -46,7 +46,6 @@ Une valeur `list-item` indiquera à l'élément de se comporter comme un éléme
 ## Voir aussi
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

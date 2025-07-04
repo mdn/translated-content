@@ -86,7 +86,6 @@ svg {
 </table>
 
 - \<dasharray>
-
   - : 점선과 간격의 길이를 지정하는 쉼표 혹은 공백은 [`<length>`](/ko/docs/Web/SVG/Content_type#length) 와 [`<percentage>`](/ko/docs/Web/SVG/Content_type#percentage)의 목록입니다.
 
     홀수 개의 값이 제공된다면 값 목록이 짝수 개의 값을 얻기 위해 반복됩니다. 그러므로 `5,3,2` 는 `5,3,2,5,3,2` 과 동일합니다.

@@ -126,7 +126,6 @@ Um {{jsxref('Boolean')}} que tem valor `false` se o comando não é válido ou e
 - `unlink`
   - : Remove o elemento [âncora](/pt-BR/docs/Web/HTML/Element/a) de um hiperlink selecionado.
 - `useCSS` {{Deprecated_inline}}
-
   - : Alterna o uso de tags HTML ou CSS para a marcação gerada. Requer um booleano `true` / `false` como argumento.
 
     NOTA: Este argumento é logicamente reverso (ou seja, use `false` para usar CSS, `true` para usar HTML) e não é suportado pelo Internet Explorer. Isso foi preterido em favor do `styleWithCSS`.

@@ -32,7 +32,6 @@ Se te han proporcionado los archivos necesarios para crear una plantilla de pape
 
 - Aplica el CSS al HTML.
 - Agrega un estilo de fondo a la carta que:
-
   - Fija la imagen superior a la parte superior de la carta
   - Fija la imagen inferior a la parte inferior de la carta
   - Agrega un gradiente semitransparente sobre la parte superior de ambos fondos anteriores que le da a la carta un poco de textura. Hazlo ligeramente oscuro cerca de la parte superior e inferior, pero completamente transparente para una gran parte del centro.

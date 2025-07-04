@@ -31,7 +31,6 @@ Función que acepta un `<length>` o un `<percentage>` como un argumento.
 - {{cssxref("&lt;length&gt;")}}
   - : Una Longitud Absoluta.
 - {{cssxref("&lt;percentage&gt;")}}
-
   - : Un porcentaje relativo al espacio disponible en los ejes dados.
 
     In grid properties it is relative to the inline size of the grid container in column tracks and to the block size of the grid container for row tracks. Otherwise it is relative to the available inline size or block size of the laid out box depending on the writing mode.

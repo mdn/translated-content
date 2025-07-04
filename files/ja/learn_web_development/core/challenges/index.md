@@ -31,7 +31,6 @@ original_slug: Web/Guide/CSS/Getting_started/Challenge_solutions
 - Challenge
   - : Change your stylesheet so that only the red letters are underlined.
 - Solution
-
   - : Move the declaration for underlining from the rule for {{ HTMLElement("p") }} to the one for {{ HTMLElement("strong") }}. The resulting file looks like this:
 
     ```css
@@ -53,7 +52,6 @@ Later sections of this tutorial describe style rules and declarations in greater
 - Challenge
   - : Without changing your HTML file, add a single rule to your CSS file that keeps all the initial letters the same color as they are now, but makes all the other text in the second paragraph blue.
 - Solution
-
   - : Add a rule with an ID selector of `#second` and a declaration `color: blue;`, as shown below:
 
     ```css
@@ -69,7 +67,6 @@ Later sections of this tutorial describe style rules and declarations in greater
 - Challenge
   - : Now change the rule you have just added (without changing anything else), to make the first paragraph blue too.
 - Solution
-
   - : Change the selector of the new rule to be a tag selector using `p`:
 
     ```css
@@ -87,7 +84,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Comment out part of your stylesheet, without changing anything else, to make the very first letter of your document red.
 - Solution
-
   - : One way to do this is to put comment delimiters around the rule for `.carrot`:
 
     ```css
@@ -105,7 +101,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Without changing anything else, make all six initial letters twice the size in the browser's default serif font.
 - Solution
-
   - : Add the following style declaration to the `strong` rule:
 
     ```css
@@ -121,7 +116,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : In your CSS file, change all the color names to 3-digit color codes without affecting the result.
 - Solution
-
   - : The following values are reasonable approximations of the named colors:
 
     ```css
@@ -151,7 +145,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - チャレンジ
   - : 各行の初めに画像を表示するように、スタイルシートに一つルールを追加してください。
 - 解答
-
   - : 次のルールをスタイルシートに追加します:
 
     ```css
@@ -167,7 +160,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - チャレンジ
   - : スタイルシートに一つルールを追加して、リスト項目に i から v のローマ数字で番号をつけてください。
 - 解答
-
   - : `lower-roman` のリストスタイルを使って、リスト項目に一つルールを定義します:
 
     ```css
@@ -181,7 +173,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - チャレンジ
   - : 見出しを括弧内の大文字のアルファベットで識別するように、スタイルシートを変更してください。
 - 解答
-
   - : body 要素（見出しの親要素）にはカウンターをリセットするルールを、見出しにはカウンターを表示し増加させるルールを追加します:
 
     ```css
@@ -202,7 +193,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - チャレンジ
   - : スタイルシートに一つルールを追加して、リスト項目全体を囲むような広い枠を作り、海を連想するような色にしてください。
 - 解答
-
   - : 次のルールでこの効果を出せます:
 
     ```css
@@ -226,7 +216,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - チャレンジ
   - : スタイルシートにルールを追加して、文書の右上に画像を置くようにしてください。
 - 解答
-
   - : 次のルールでできます:
 
     ```
@@ -244,7 +233,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Change the stylesheet to make the table have a green border around only the data cells.
 - Solution
-
   - : The following rule puts borders around only {{ HTMLElement("td") }} elements that are inside the {{ HTMLElement("tbody") }} element of the table with `id=demo-table`:
 
     ```
@@ -260,7 +248,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Move the print-specific style rules to a separate CSS file and import them into your `style4.css` stylesheet.
 - Solution
-
   - : Cut and paste the lines between `/* print only */` and `/* end print only */` into a file named `style4_print.css`. In style4.css, add the following line at the beginning of the file:
 
     ```
@@ -272,7 +259,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Make the headings turn blue when the mouse pointer is over them.
 - Solution
-
   - : The following rule achieves the desired result:
 
     ```
@@ -288,7 +274,6 @@ The rules for the other colors all have more specific selectors, so they overrid
 - Challenge
   - : Change the script so that the square jumps to the right by 20 em when its color changes, and jumps back afterwards.
 - Solution
-
   - : Add lines to modify the `margin-left` property. Be sure to specify it as `marginLeft` in JavaScript. The following script achieves the desired result:
 
     ```css

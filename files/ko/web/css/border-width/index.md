@@ -5,7 +5,7 @@ slug: Web/CSS/border-width
 
 {{CSSRef}}
 
-[CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
+[CSS](/ko/docs/Web/CSS) **`border-width`** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)은 요소 네 면 테두리의 너비를 설정합니다.
 
 {{InteractiveExample("CSS Demo: border-width")}}
 
@@ -94,7 +94,6 @@ border-width: unset;
 ### 값
 
 - `<line-width>`
-
   - : 테두리의 너비입니다. 0 이상의 {{cssxref("&lt;length&gt;")}} 또는 키워드를 사용할 수 있습니다. 키워드는 다음 세 가지 중 하나여야 합니다.
 
     | `thin`   |     | 얇은 테두리 |

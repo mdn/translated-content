@@ -60,16 +60,13 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 ## Attributs
 
 - `<cookie-name>=<cookie-value>`
-
   - : Un cookie commence par une paire nom-valeur:
-
     - Le nom porté par `<cookie-name>` peut-être composé de n'importe quels caractères ASCII, à l'exception des caractères de contrôle, d'espace, de tabulation et des caractères de séparation suivants : `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - La valeur, `<cookie-value>`, peut éventuellement être entourée de guillemets doubles et peut être composée de n'importe quel caractère ASCII à l'exception des caractères de contrôle, des blancs, des guillemets doubles, d'une virgule, d'un point-virgule ou d'une barre oblique inversée (_backslash_). **Encodage** : de nombreuses implémentations encodent les caractères d'URL (_URL-encoding_) bien que ce ne soit pas nécessaire selon la RFC. Une telle transformation facilite tout de même l'utilisation de caractères autorisés.
     - Le préfixe **`__Secure-`** : les cookies commençant par `__Secure-` (le tiret fait partie du préfixe) doivent être définis avec le drapeau `secure` depuis une page sécurisée (HTTPS).
     - Le préfixe **`__Host-`** : Les cookies commençant par `__Host-` doivent être définis avec le drapeau `secure`, depuis une page sécurisée (HTTPS), ne doivent pas avoir de domaine spécifié (et donc pas envoyé à un sous-domaine) et le chemin doit être `/`.
 
 - `Expires=<date>` {{optional_inline}}
-
   - : Le temps de vie maximal d'un cookie sous la forme d'une date HTTP. Voir [`Date`](/fr/docs/Web/HTTP/Headers/Date) pour le format requis.
 
     Si non spécifié, le cookie devient un **cookie de session**. Une session finit quand le client s'arrête, les cookies de sessions sont alors supprimés à ce moment.
@@ -82,9 +79,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Max-Age=<number>` {{optional_inline}}
   - : Le nombre de secondes avant son expiration. Une valeur nulle ou négative fera expirer immédiatement le cookie. Si `Expires` et `Max-Age` sont configurés, `Max-Age` sera prioritaire.
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : Le domaine où le cookie sera envoyé.
-
     - Si omis, la valeur par défaut sera l'hôte de l'URL du document courant. Les sous-domaines ne seront pas inclus.
     - Contrairement aux anciennes spécifications, le point au début dans les noms de domaines (`.example.com`) est ignoré.
     - Plusieurs valeurs de domaine ne sont pas permises. Si un nom de domaine est spécifié, les sous domaines sont toujours inclus.
@@ -92,7 +87,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Path=<path-value>` {{optional_inline}}
   - : Un chemin qui doit exister dans l'URL de la requête ou le navigateur n'enverra pas d'en-tête `Cookie` correspondante par la suite. La barre oblique (`/`) est interprétée comme un séparateur de répertoire. Les sous-répertoires sont inclus, par exemple: pour `Path=/docs` les répertoires `/docs`, `/docs/Web/` et `/docs/Web/HTTP` sont concernés.
 - `Secure` {{optional_inline}}
-
   - : Un cookie sécurisé est envoyé uniquement si la requête est faite en `https:` (sauf pour _localhost_). Cependant des informations confidentielles ne devraient jamais être enregistrées dans un cookie classique, en effet le mécanique est non sécurisé et ne chiffre aucune information.
 
     > [!NOTE]
@@ -101,7 +95,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `HttpOnly` {{optional_inline}}
   - : Empêche JavaScript d'accéder au cookie; par exemple, au travers de la propriété [`Document.cookie`](/fr/docs/Web/API/Document/cookie), de l'API [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) ou de l'API [`Request`](/fr/docs/Web/API/Request). Cela protège des attaques _cross-site scripting_ ([XSS](/fr/docs/Glossary/Cross-site_scripting)).
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - : Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites ([CSRF](/fr/docs/Glossary/CSRF)).
 
     > [!NOTE]
@@ -113,7 +106,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
 
     Les options sont :
-
     - `Strict` : le navigateur envoie le cookie uniquement pour les demandes provenant du même site (c'est-à-dire les demandes provenant du même site qui a défini le cookie). Si la demande provient d'une URL différente de l'URL actuelle, aucun cookie avec l'attribut `SameSite=Strict` n'est envoyé.
     - `Lax` : Le cookie n'est pas envoyé sur les requêtes inter-sites, telles que les appels pour charger des images ou des _iframes_, mais il est envoyé lorsqu'un utilisateur navigue vers le site d'origine à partir d'un site externe (par exemple, s'il suit un lien). C'est le comportement par défaut si l'attribut `SameSite` n'est pas spécifié.
     - `None` : Le navigateur envoie le cookie avec les requêtes inter-sites et les requêtes sur un même site. L'attribut `Secure` doit également être défini lorsque `SameSite=None` !

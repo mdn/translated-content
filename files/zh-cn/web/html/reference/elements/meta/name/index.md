@@ -47,7 +47,6 @@ CSS 颜色调整规范（CSS Color Adjustment specification）定义了以下元
   浏览器将优先采用此元数据的值，然后再使用用户的浏览器或设备设置，来确定页面上的各种默认颜色和元素外观，例如背景色、前景色、窗体控件和滚动条。`<meta name="color-scheme">` 的主要用途是指示当前页面与浅色模式和深色模式的兼容性，以及选用这两种模式时的优先顺序。
 
   `color-scheme` 的 [`content`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#content) 属性的值应当为以下值中的一个：
-
   - `normal`
     - : 该文档未指定（unaware of）配色方案，应当仅使用默认配色进行渲染。
   - \[`light` | `dark`]+

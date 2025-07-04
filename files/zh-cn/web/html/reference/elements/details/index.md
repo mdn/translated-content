@@ -56,7 +56,6 @@ details[open] summary {
 此元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `open`
-
   - : 这个布尔属性表示细节内容——也就是 `<details>` 元素的内容——目前是否可见。默认情况下为 `false`，意味着细节内容是不可见的。
 
     > [!NOTE]

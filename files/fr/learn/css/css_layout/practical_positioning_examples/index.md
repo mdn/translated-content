@@ -246,7 +246,6 @@ Ce code effectue les actions suivantes&nbsp;:
 - Tout d'abord, on garde une référence pour tous les onglets et tous les panneaux dans deux variables intitulées `tabs` et `panels` afin qu'on puisse facilement les manipuler par la suite.
 - Ensuite, on utilise une boucle `for` pour parcourir l'ensemble des onglets et, pour chaque, on exécute une fonction intitulée `setTabHandler()` qui met en place les fonctionnalités à utiliser lors d'un clic. Lorsque cette fonction est exécutée, elle reçoit une référence de l'onglet concerné ainsi qu'un indice `i` qui identifie la position de l'onglet dans le tableau `tabs`.
 - Dans la fonction `setTabHandler()`, l'onglet se voit affecter un gestionnaire d'évènement `onclick`. Ainsi dès qu'on clique sur un onglet, on a&nbsp;:
-
   - Une boucle `for` qui est utilisée afin de parcourir tous les onglets pour retirer les classes qui seraient présentes sur eux.
   - Une classe (`class`) `active` qui est appliquée sur l'onglet sur lequel on a cliqué (nous avons vu plus haut que cette classe était associée à une règle CSS qui définit [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur l'onglet afin que celles-ci correspondent aux couleurs du panneau.
   - Une boucle `for` qui parcourt tous les panneaux afin de retirer toute classe qui serait présente sur eux.

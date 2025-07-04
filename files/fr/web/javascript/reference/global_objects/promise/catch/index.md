@@ -33,9 +33,7 @@ p.catch(function (raison) {
 ### Paramètres
 
 - `siRejetée`
-
   - : Une {{jsxref("Function","fonction","",1)}} à appeler si la `Promise` est rejetée (i.e. n'est pas tenue). Cette fonction possède un argument :
-
     - `raison`
       - : Une chaîne de caractères qui indique pourquoi la promesse n'est pas tenue.
 

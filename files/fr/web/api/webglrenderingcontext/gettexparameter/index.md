@@ -16,18 +16,14 @@ quelconque gl.getTexParameter(cible, nomp);
 ### Paramètres
 
 - cible
-
   - : Un {{domxref("GLenum")}} indiquant le point de liaison (cible). Valeurs possibles :
-
     - `gl.TEXTURE_2D`&nbsp;: une texture bi-dimensionnelle.
     - `gl.TEXTURE_CUBE_MAP`&nbsp;: une texture appliquée à un cube.
     - Lorsqu' un {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} est utilisé, les valeurs suivantes sont en outre disponibles :
-
       - `gl.TEXTURE_3D`&nbsp;: une texture tri-dimensionnelle.
       - `gl.TEXTURE_2D_ARRAY`&nbsp;: une texture bi-dimensionnelle en tableau.
 
 - nomp
-
   - : Un {{domxref("Glenum")}} indiquant l'information à obtenir. Valeurs possibles :
 
     <table class="standard-table">

@@ -85,7 +85,6 @@ cursor: unset;
 - `<x>` `<y>` {{experimental_inline}}
   - : Coordenadas x e y opcionais. Dois números não-negativos, sem unidade e menores que 32.
 - `Keyword`
-
   - : **Mova o mouse sobre os valores para testar:**
 
     <table class="standard-table">

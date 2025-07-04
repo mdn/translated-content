@@ -23,59 +23,49 @@ preserveAspectRatio="<align> [<meet or slice>]"
 配置値は均一な変倍を強制するかどうかを示し、もしそうなら {{ SVGAttr("viewBox") }} のアスペクト比がビューポートのアスペクト比と一致しない場合に使用する配置方法を示します。 `xMidYMid` が既定値です。配置値は以下のキーワード値のいずれかでなければなりません。
 
 - `none`
-
   - : 均等な変倍を強制しません。指定された要素のグラフィックコンテンツを、要素の外接ボックスがビューポートの長方形に正確に一致するように、必要に応じて不均一に変倍します。なお、 `<align>` が `none` の場合、オプションの `<meetOrSlice>` の値は無視されます。
 
 - `xMinYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMidYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMaxYMin`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>` をビューポートの最小 Y 値に配置します。
 
 - `xMinYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
 
 - `xMidYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。 This is the default value.
 
 - `xMaxYMid`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の Y の中央値をビューポートの Y の中央値に配置します。
 
 - `xMinYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>` をビューポートの最小 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
 
 - `xMidYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の X の中央値をビューポートの X の中央値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
 
 - `xMaxYMax`
-
   - : 均等な変倍を強制します。
     要素の {{ SVGAttr("viewBox") }} の `<min-x>+<width>` をビューポートの最大 X 値に配置します。
     要素の {{ SVGAttr("viewBox") }} の `<min-y>+<height>` をビューポートの最大 Y 値に配置します。
@@ -83,9 +73,7 @@ preserveAspectRatio="<align> [<meet or slice>]"
 以下の 2 つのキーワードは、コンテナー境界に対して SVG がどのように変倍すべきかを決定します。`meet` または `slice` 参照を指定することはオプションであり、指定する場合は 2 つのキーワードのうちいずれか 1 つだけでなければなりません。 `meet` が既定値です。
 
 - `meet`
-
   - : 次のようにグラフィックを変倍します。
-
     - アスペクト比を維持します。
     - {{ SVGAttr("viewBox") }} 全体がビューポート内に表示されます。
     - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り拡大します。
@@ -93,9 +81,7 @@ preserveAspectRatio="<align> [<meet or slice>]"
     この場合、グラフィックのアスペクト比がビューポートと一致しないと、ビューポートの一部が {{ SVGAttr("viewBox") }} の境界からはみ出します（つまり、 {{ SVGAttr("viewBox") }} が描画する領域はビューポートより小さくなります）。
 
 - `slice`
-
   - : 次のようにグラフィックを変倍します。
-
     - アスペクト比を維持します。
     - ビューポート全体が {{ SVGAttr("viewBox") }} に応じたものになります。
     - {{ SVGAttr("viewBox") }} は、他にも条件を満たしつつ、可能な限り縮小します。

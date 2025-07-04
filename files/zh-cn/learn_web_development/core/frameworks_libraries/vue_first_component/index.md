@@ -145,12 +145,10 @@ export default {
 2. 在默认导出的 `default {}` 对象中添加一个 `props` 属性，该 props 属性含有一个空对象。
 3. 在这个对象里，添加两个 key 为 `label` 和 `done` 属性。
 4. `label` 的值应该是一个带有两个属性的对象（或者是 **prop**，因为它们被调用在可找到的组件的 context）
-
    1. 第一个 `required` 属性，它的值是 `true`. 这将会告诉 Vue 说，我们希望每个该组件的实例都必须有个 label 字段。如果 `ToDoItem` 组件没有 label 字段的话，Vue 会提示警告。
    2. 第二是添加一个 `type` 属性。这个属性的值设为 JavaScript 的 `String` 类型。这等于告诉 Vue，我们希望 type 属性的值是 String 类型的。
 
 5. 现在转向 `done` prop。
-
    1. 首先添加一个 `default` 属性，它的值是 `false`。这意味着当没有 `done` prop 被传递给 `ToDoItem` 组件时， `done` prop 的值会是 false（注意 default 属性不是必需的————我们只在非必需的 prop 里才需要 `default` ）
    2. 接着，添加一个 `type` 属性，值为 `Boolean`。这将告诉 Vue，我们希望这个 prop 的值是 JavaScript 的 Boolean 类型。
 

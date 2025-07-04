@@ -62,7 +62,8 @@ frame.config = frameConfig;
 > [!NOTE]
 > 在 `<iframe>` 中支持不透明 URN，以便将现有实现轻松迁移到[隐私沙盒](https://developers.google.cn/privacy-sandbox)。这种支持是暂时的，随着采用率的提高，未来将会移除。
 
-> **备注：** `FencedFrameConfig` 有一个 {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} 方法，用于将数据从嵌入文档传递到 `<fencedframe>` 共享存储中。例如，它可以在 {{domxref("Worklet")}} 中通过 `<fencedframe>` 访问，并用于生成报告。参见[共享存储 API](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage) 查看更多信息。
+> [!NOTE]
+> `FencedFrameConfig` 有一个 {{domxref("FencedFrameConfig.setSharedStorageContext", "setSharedStorageContext()")}} 方法，用于将数据从嵌入文档传递到 `<fencedframe>` 共享存储中。例如，它可以在 {{domxref("Worklet")}} 中通过 `<fencedframe>` 访问，并用于生成报告。参见[共享存储 API](https://developers.google.cn/privacy-sandbox/private-advertising/shared-storage) 查看更多信息。
 
 ### 在 `Fence` 对象上访问围栏框架功能
 

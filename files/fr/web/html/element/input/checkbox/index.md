@@ -76,7 +76,6 @@ Si l'attribut `value` n'était pas renseigné, la valeur par défaut serait `on`
 En plus des attributs qui sont partagés par l'ensemble des éléments [`<input>`](/fr/docs/Web/HTML/Element/input), les champs de type `checkbox` prennent aussi en charge les attributs suivants&nbsp;:
 
 - `checked`
-
   - : Un attribut booléen qui indique si la case est cochée par défaut à l'ouverture de la page. Cet attribut n'indique _pas_ si la case est actuellement cochée&nbsp;: si l'état a été modifié, l'attribut dans le document ne reflètera pas cette modification (seul l'attribut IDL `checked` de l'objet [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement) est mis à jour).
     > [!NOTE]
     > À la différence des autres champs, les valeurs des cases à cocher ne sont envoyées au serveur que lorsqu'elles sont cochées. Lorsque c'est le cas, c'est la valeur de l'attribut `value` qui est envoyé (ou la valeur `on` si aucun attribut `value` n'est présent).

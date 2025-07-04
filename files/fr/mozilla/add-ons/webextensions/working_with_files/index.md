@@ -64,7 +64,6 @@ Les principales caractéristiques de la bibliothèque sont les suivantes :
 
 - [getFileStorage](https://rpl.github.io/idb-file-storage/function/index.html#static-function-getFileStorage) qui renvoie une instance IDBFileStorage, créant le stockage nommé s'il n'existe pas.
 - [IDBFileStorage](https://rpl.github.io/idb-file-storage/class/src/idb-file-storage.js~IDBFileStorage.html) qui fournit les méthodes pour sauvegarder et récupérer des fichiers tels que :
-
   - liste pour obtenir une liste de fichiers éventuellement filtrée dans la base de données.
   - mettre un fichier ou un blob dans la base de données.
   - récupérer un fichier ou un blob à partir de la base de données.

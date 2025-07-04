@@ -23,9 +23,7 @@ getAnimations(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 以下のプロパティを含むオプションオブジェクトです。
-
     - `subtree`
       - : 論理値で、`true` の場合、 _Element_ の子孫をターゲットとしたアニメーションも返すようになります。これは、 _Element_ やその子孫に付けられた CSS [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)をターゲットとするアニメーションを含みます。既定値は `false` です。
 

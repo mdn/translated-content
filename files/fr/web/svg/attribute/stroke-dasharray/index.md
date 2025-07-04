@@ -91,7 +91,6 @@ svg {
 </table>
 
 - `<dasharray>`
-
   - : Une liste de valeurs [`<length>`](/fr/docs/Web/SVG/Content_type#length) et [`<percentage>`](/fr/docs/Web/SVG/Content_type#percentage), séparées par des espaces ou des virgules, qui indiquent les longueurs alternées des traits et des espaces.
 
     Si un nombre impair de valeurs est fourni, la liste est répétée afin d'obtenir un nombre pair de valeur. Ainsi, `5,3,2` sera équivalent à `5,3,2,5,3,2`.

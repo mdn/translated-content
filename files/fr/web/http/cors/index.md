@@ -53,20 +53,17 @@ Un aperçu « côté serveur » des fonctionnalités CORS se trouve dans l'artic
 Certaines requêtes ne nécessitent pas de [requête CORS préliminaire](#preflight). Dans le reste de cet article, ce sont ce que nous appellerons des requêtes « simples » (bien que la spécification <i lang="en">Fetch</i> (qui définit le CORS) n'utilise pas ce terme). Une requête simple est une requête qui respecte les conditions suivantes :
 
 - Les seules méthodes autorisées sont :
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - En dehors des en-têtes paramétrés automatiquement par l'agent utilisateur (tels que {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [tout autre en-tête dont le nom fait partie de la spécification Fetch comme « nom d'en-tête interdit »](https://fetch.spec.whatwg.org/#forbidden-header-name)), les seuls en-têtes qui peuvent être paramétrés manuellement sont, selon [la spécification](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) :
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (cf. les contraintes supplémentaires ci-après)
 
 - Les seules valeurs autorisées pour l'en-tête {{HTTPHeader("Content-Type")}} sont :
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -141,7 +138,6 @@ On notera que, dans ce cas, aucun autre domaine que `http://toto.example` (tel q
 Une requête devra être précédée d'une requête préliminaire si **une** des conditions suivantes est respectée :
 
 - La requête utilise une des méthodes suivantes :
-
   - {{HTTPMethod("PUT")}}
   - {{HTTPMethod("DELETE")}}
   - {{HTTPMethod("CONNECT")}}
@@ -150,7 +146,6 @@ Une requête devra être précédée d'une requête préliminaire si **une** des
   - {{HTTPMethod("PATCH")}}
 
 - **Ou si**, en dehors des en-têtes automatiquement paramétrés par l'agent utilisateur (comme {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [tout autre en-tête dont le nom est réservé dans la spécification](https://fetch.spec.whatwg.org/#forbidden-header-name)), la requête inclut [tout autre en-tête que ceux définis sur la liste blanche](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) :
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -162,7 +157,6 @@ Une requête devra être précédée d'une requête préliminaire si **une** des
   - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Ou si** l'en-tête {{HTTPHeader("Content-Type")}} possède une valeur autre que :
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -513,7 +507,6 @@ Voir [ci-avant pour des exemples d'utilisation de cet en-tête](#preflight).
 - [L'API Fetch](/fr/docs/Web/API/Fetch_API)
 - [Utiliser le CORS - HTML5 Rocks (en anglais)](https://www.html5rocks.com/en/tutorials/cors/)
 - [Une réponse Stack Overflow pour répondre aux problèmes fréquemment posés par le CORS (en anglais)](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141) :
-
   - Comment éviter les requêtes préliminaires
   - Comment utiliser un proxy CORS pour contourner _No Access-Control-Allow-Origin header_
   - Comment corriger _Access-Control-Allow-Origin header must not be the wildcard_

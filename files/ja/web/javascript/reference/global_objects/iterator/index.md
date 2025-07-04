@@ -146,7 +146,6 @@ const myIterator = Iterator.from({
 - {{jsxref("Object/constructor", "Iterator.prototype.constructor")}}
   - : インスタンスオブジェクトを作成するコンストラクター関数です。 `Iterator` インスタンスの場合、初期値は {{jsxref("Iterator/Iterator", "Iterator")}} コンストラクターです。
 - `Iterator.prototype[Symbol.toStringTag]`
-
   - : [`[Symbol.toStringTag]`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) プロパティの初期値は文字列 `"Iterator"` です。このプロパティは {{jsxref("Object.prototype.toString()")}} で使用されます。
 
     > [!NOTE]

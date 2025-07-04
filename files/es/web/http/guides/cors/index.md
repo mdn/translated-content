@@ -51,13 +51,11 @@ El motivo de esto es que el elemento {{HTMLElement("form")}} de HTML4 (que es an
 Una petición simple es aquella que cumple todas las siguientes condiciones:
 
 - Uno de los métodos permitidos:
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - Además de las cabeceras establecidas automáticamente por el agente de usuario (por ejemplo {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}), o [las demás cabeceras definidas en la especificación Fetch como _nombre de cabecera prohibido_](https://fetch.spec.whatwg.org/#forbidden-header-name), las únicas cabeceras que se pueden configurar manualmente son [las que la especificación Fetch define como cabecera de solicitud CORS-safelisted](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), las cuales son:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -68,7 +66,6 @@ Una petición simple es aquella que cumple todas las siguientes condiciones:
 > Firefox aún no ha implementado `Range` como una cabecera de solicitud en la lista segura. Véase el [error 1733981 en Firefox](https://bugzil.la/1733981).
 
 - Las únicas combinaciones de tipo/subtipo permitidas para el {{Glossary("MIME type","media type")}} especificado en la cabecera {{HTTPHeader("Content-Type")}} son:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -501,7 +498,6 @@ Puede encontrar ejemplos de este uso [arriba](#solicitudes_verificadas_previamen
 - [Cómo ejecutar el navegador Chrome sin CORS](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [Uso de CORS con todos los navegadores (modernos)](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Respuesta de Stack Overflow con información sobre cómo solucionar problemas comunes](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - Cómo evitar la verificación previa de CORS
   - Cómo utilizar un proxy CORS para evitar la cabecera "No Access-Control-Allow-Origin".
   - Cómo solucionar _"Access-Control-Allow-Origin header must not be the wildcard"_ ("El encabezado Access-Control-Allow-Origin no debe ser el comodín")

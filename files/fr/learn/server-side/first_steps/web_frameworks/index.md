@@ -165,7 +165,6 @@ Certains des facteurs qui peuvent affecter votre décision sont les suivants:
 
 - **Effort d'apprentissage**&nbsp;: L'effort d'apprentissage d'un framework web dépend de votre familiarité avec le langage de programmation sous-jacent, de la cohérence de son API, de la qualité de sa documentation ainsi que de la taille et de l'activité de sa communauté. Si vous avez peu d'eqperience en programmation, pensez à Django (l'un des plus faciles à apprendre en fonction des critères ci-dessus). Si vous faites partie d'une équipe de développement qui possède déjà une expérience significative avec un framework web ou un langage de programmation particulier, il est logique de s'en tenir à cela.
 - **Productivité**&nbsp;: la productivité mesure la rapidité avec laquelle vous pouvez créer de nouvelles fonctionnalités une fois que vous êtes familiarisé avec le framework. Elle inclut à la fois les efforts d'écriture et de maintenance du code (car vous ne pouvez pas écrire de nouvelles fonctionnalités alors que les anciennes sont endommagées). Un grand nombre des facteurs qui affectent la productivité sont similaires à ceux de "Effort d'apprentissage" - par ex. documentation, communauté, expérience en programmation, etc. - les autres facteurs incluent:
-
   - _Objectif / origine du framework_&nbsp;: certains frameworks web ont été créés à l'origine pour résoudre certains types de problèmes, et restent meilleurs pour créer des applications web avec des contraintes similaires. Par exemple, Django a été créé pour soutenir le développement d'un site web de journal. Il est donc bon pour les blogs et les autres sites impliquant la publication d'éléments. En revanche, Flask est un cadre beaucoup plus léger et est idéal pour créer des applications web s'exécutant sur des périphériques intégrés.
   - _Populaire vs Impopulaire_: Un framework populaire est un frameqork dans lequel il est recommandé de "meilleures" manières de résoudre un problème particulier. Les frameworks populaire ont tendance à être plus productifs lorsque vous essayez de résoudre des problèmes courants, car ils vous orientent dans la bonne direction, mais ils sont parfois moins flexibles.
   - _Ressource incluses vs. l'obtenir vous-même_&nbsp;: certains frameworks web incluent des outils / bibliothèques qui traitent tous les problèmes que leurs développeurs peuvent penser "par défaut", tandis que des frameworks plus légers attendent des développeurs web qu'ils choisissent la solution aux problèmes de bibliothèques séparées (Django est un exemple inclue " tout " tandis que Flask est un exemple de framework très léger). Les frameworks qui incluent tout sont souvent plus faciles à démarrer car vous avez déjà tout ce dont vous avez besoin, et il est probable qu'il soit bien intégré et bien documenté. Cependant, si une structure plus petite contient tout ce dont vous avez besoin (le cas échéant), elle peut alors s'exécuter dans des environnements plus restreints et disposer d'un sous-ensemble de choses plus petites et plus faciles à apprendre.
@@ -184,13 +183,10 @@ Si vous débutez en programmation, vous choisirez probablement un framework faci
 > Let's go to the main websites for [Django](https://www.djangoproject.com/) (Python) and [Express](http://expressjs.com/) (Node/JavaScript) and check out their documentation and community.
 >
 > 1. Navigate to the main sites (linked above)
->
 >    - Click on the Documentation menu links (named things like "Documentation, Guide, API Reference, Getting Started".
 >    - Can you see topics showing how to set up URL routing, templates, and databases/models?
 >    - Are the documents clear?
->
 > 2. Navigate to mailing lists for each site (accessible from Community links).
->
 >    - How many questions have been posted in the last few days
 >    - How many have responses?
 >    - Do they have an active community?

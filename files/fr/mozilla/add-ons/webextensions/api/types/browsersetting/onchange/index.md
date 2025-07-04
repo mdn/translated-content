@@ -29,13 +29,9 @@ Les événement ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :
-
     - `details`
-
       - : Un `object` contenant des détails sur le changement survenu. Ses propriété sont les suivantes :
-
         - `value`
           - : La nouvelle valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
         - `levelOfControl`

@@ -2,7 +2,7 @@
 title: Document：createElement() 方法
 slug: Web/API/Document/createElement
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{APIRef("DOM")}}
@@ -110,7 +110,7 @@ let expandingList = document.createElement("ul", { is: "expanding-list" });
 新元素將被賦予一個 [`is`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/is) 屬性，其值為自訂元素的標籤名稱。
 
 > [!NOTE]
-> 為了與先前版本的[自訂元素規範](https://www.w3.org/TR/custom-elements/)相容，一些瀏覽器允許你在此處傳遞字串，而非物件，該字串的值為自訂元素的標籤名稱。
+> 為了向後相容，一些瀏覽器允許你在此處傳遞字串，而非物件，該字串的值為自訂元素的標籤名稱。
 
 ## 規範
 

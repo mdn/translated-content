@@ -14,13 +14,11 @@ Cela permet donc aux utilisateurs d'utiliser des sites web sans charger de nouve
 - [Application web monopage](https://fr.wikipedia.org/wiki/Application_web_monopage) sur Wikipédia
 - [Comprendre les frameworks JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks)
 - [Glossaire](/fr/docs/Glossary)
-
   - [API](/fr/docs/Glossary/API)
   - [AJAX](/fr/docs/Glossary/AJAX)
   - [JavaScript](/fr/docs/Glossary/JavaScript)
 
 - Certains des frameworks SPA les plus populaires incluent:
-
   - [React](https://reactjs.org/)
   - [Angular](https://angular.io/)
   - [Vue.JS](https://vuejs.org/)

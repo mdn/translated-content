@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `window`
       - : Un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre qui a été créée.
 

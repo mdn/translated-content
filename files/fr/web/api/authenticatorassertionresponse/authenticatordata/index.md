@@ -27,7 +27,6 @@ Un objet {{jsxref("ArrayBuffer")}} dont la propriété {{jsxref("ArrayBuffer.byt
 
 - **`rpIdHash`** (32 octets) - Une empreinte SHA256 de l'identifiant de la partie fiable (i.e. - le domaine) tel que vu par le navigateur. Le serveur s'assurera ensuite que cette empreinte correspond à sa propre origine afin d'empêcher les tentatives de hameçonnage (_phishing_) ou d'autres attaques de l'homme du milieu (_man-in-the-middle_).
 - **`flags`** (1 octet) - Une série de bits qui indique les différents attributs validés par l'authenticateur. Les bits sont décrits comme suit (où le bit 0 correspond au bit de poids faible) (tous les bits ne sont pas mentionnés car certains sont réservés pour une utilisation future) :
-
   - Bit 0 : Présence de l'utilisateur (_User Presence_ - UP) : si ce bit est actif, cela signifie que l'authenticateur a validé la présence de l'utilisateur par un test de présence (_Test of User Presence_ - TUP). Cela peut notamment correspondre à l'appui sur un bouton de l'authenticateur.
   - Bit 2 : Vérification de l'utilisateur (_User Verification_ - UV) : si ce bit est actif, cela signifie que l'authenticateur a vérifié l'utilisateur en question via une méthode d'authentification (biométrique, code PIN, autre).
   - Bit 6 : Présence des données d'authentification vérifiées (_Attested Credential Data_ - AT) : si ce bit est actif, le champ `attestedCredentialData` suivra immédiatement après les 37 premiers octets de cet objet.
@@ -35,7 +34,6 @@ Un objet {{jsxref("ArrayBuffer")}} dont la propriété {{jsxref("ArrayBuffer.byt
 
 - **`signCount`** (4 octets) : un compteur de signature provenant de l'authenticateur. Cela permet au serveur de détecter un éventuel clonage de l'authenticateur.
 - **`attestedCredentialData`** (longueur variable) : les informations d'authentification qui ont été créées. Ce champ est uniquement présent lors d'un appel à `navigator.credentials.create()`. Ces informations sont représentées par une séquence d'octets au format suivant :
-
   - **`AAGUID`** (16 octets) - _Authenticator Attestation Globally Unique Identifier_, un identifiant universel unique pour l'attestation de l'authenticateur qui identifie le modèle de l'authenticateur (pas cet exemplaire en particulier) afin qu'une autre partie puisse comprendre les caractéristiques de l'authenticateur en consultant ses méta-données.
   - **`credentialIdLength`** (2 octets) - la longueur, en octets, de l'identifiant d'authentification qui suit ces octets.
   - **`credentialId`** (longueur variable) - un identifiant unique pour ces informations d'authentification et qui pourra être demandé pour de futures authentifications. Cette information mesure `credentialIdLength` octets.

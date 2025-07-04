@@ -23,12 +23,9 @@ var promise = CredentialsContainer.get([options]);
 ### Paramètres
 
 - `options` {{optional_inline}}
-
   - : Un objet de type {{domxref("CredentialRequestOptions")}} qui contient les critères de la requête. et les options d'interaction avec l'utilisateur. Cet objet peut contenir les propriétés suivantes :
-
     - `password` : un booléen ({{jsxref("Boolean")}}) qui indique que l'instance {{domxref("Credential")}} renvoyée devrait contenir les informations sur l'utilisateur (contrairement aux informations d'authentification fédérées).
     - `federated` : un objet {{domxref("FederatedCredentialRequestOptions")}} qui contient les critères que doivent respecter les informations d'authentification fédérées. Les options disponibles sont :
-
       - `providers` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les fournisseurs d'identité potentiels
       - `protocols` : un tableau de chaînes de caractères {{domxref("DOMString")}} listant les protocoles de fédération à rechercher.
 

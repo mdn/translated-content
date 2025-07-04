@@ -36,15 +36,11 @@ browser.action.onClicked.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 该函数将在事件触发时被调用。会为该函数传递以下参数：
-
     - `tab`
       - : {{WebExtAPIRef('tabs.Tab')}}，当图标被点击时的活动标签页。
     - `OnClickData`
-
       - : 包含有关点击的信息的对象。
-
         - `modifiers`
           - : `array`，点击时活动的键盘修饰符，可以是 `Shift`、`Alt`、`Command`、`Ctrl` 或 `MacCtrl` 中的一个或多个。
         - `button`

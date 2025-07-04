@@ -132,7 +132,6 @@ python3 -V
 당신은 [python.org](https://www.python.org/)에서 파이썬3를(pip3 도구도 함께) 쉽게 설치할 수 있습니다:
 
 1. 필요한 설치 파일을 다운로드하세요:
-
    1. <https://www.python.org/downloads/> 로 가세요.
    2. **Download Python 3.7.0** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 
@@ -156,7 +155,6 @@ pip3 list
 윈도우는 파이썬을 기본적으로 포함하고 있지 않지만, [python.org](https://www.python.org/)에서(pip3 도구와 함께) 쉽게 설치할 수 있습니다:
 
 1. 필요한 설치 파일을 다운로드하세요:
-
    1. <https://www.python.org/downloads/> 로 가세요
    2. **Download Python 3.7.1** 버튼을 선택하세요 (정확한 마이너 버전 숫자는 다를 수도 있습니다).
 

@@ -34,7 +34,6 @@ Les erreurs JavaScript contiennent un lien «&nbsp;En savoir plus&nbsp;» qui re
 
 - Utilisez une structure copiée à partir de l'une des pages d'erreur existantes ou commencez à partir de zéro. À vous de choisir&nbsp;!
 - Vous devriez avoir au moins&nbsp;:
-
   - Une boîte de syntaxe contenant le message tel qu'il est généré dans différents navigateurs.
   - Le type d'erreur.
   - Un texte qui explique pourquoi cette erreur s'est produite et quelles sont ses conséquences. Allez au-delà du message généré.

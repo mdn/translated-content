@@ -26,9 +26,7 @@ Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se
 - `status`
   - : Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} — Le résultat de la vérification de mise à jour.
 - `details`{{optional_inline}}
-
   - : `object`. Si le `status` est `update_available`, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :
-
     - `version`
       - : `string`. La version de la mise à jour.
 

@@ -23,7 +23,8 @@ const AsyncIteratorPrototype = Object.getPrototypeOf(
 
 每个异步迭代器都有一个不同的原型对象，它定义了特定异步迭代器使用的 `next()` 方法。所有这些原型对象都继承自 `AsyncIterator.prototype`，它提供了一个 [`[Symbol.asyncIterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/asyncIterator) 方法，该方法返回异步迭代器对象本身，使异步迭代器也[可异步迭代](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#异步迭代器和异步可迭代协议)。
 
-> **备注：** `AsyncIterator.prototype` 并未实现 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)，因此默认情况下，异步迭代器不是[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
+> [!NOTE]
+> `AsyncIterator.prototype` 并未实现 [`[Symbol.iterator]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/iterator)，因此默认情况下，异步迭代器不是[同步可迭代对象](/zh-CN/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代协议)。
 
 ## 实例方法
 

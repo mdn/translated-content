@@ -20,15 +20,12 @@ requestDevice(options)
 ### 参数
 
 - `options`
-
   - : 一个对象，包含要与之配对的可能设备的过滤器对象数组。每个过滤器对象可以具有以下属性：
-
     - `vendorId` {{optional_inline}}
       - : 一个整数，表示请求的 HID 设备的供应商 ID（即：vendorId）
     - `productId` {{optional_inline}}
       - : 一个整数，表示请求的 HID 设备的产品 ID（即：productId）
     - `usagePage` {{optional_inline}}
-
       - : 一个整数，表示请求设备的 HID 用途中的用途页面组件。顶级集合的用途用于识别设备类型。
 
         可以在 [HID 使用表](https://usb.org/document-library/hid-usage-tables-15) 文档中找到标准 HID 用途值。

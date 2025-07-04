@@ -63,7 +63,6 @@ El elemento {{htmlelement("canvas")}} es generado automaticamente por el framewo
 - El método de renderizado. Las otras tres opciones son `AUTO`, `CANVAS` y `WEBGL`. Podemos establecer uno de los dos últimos explícitamente o usar `AUTO` para dejar que Phaser decida cuál usar. Usualmente usa WebGL si está disponible en el navegador, volviendo a Canvas 2D si no es así.
 - El `id` del {{htmlelement("canvas")}} se utilizará para renderizar si ya existe en la pagina (hemos especificado null porque queremos que Phaser cree el suyo propio).
 - Los nombres que se usarán para las tres funciones claves del Phaser que cargan e incian el juego, y actualizan el bucle del juego en cada fotograma; usaremos los mismos nombres para mantenerlo limpio.
-
   - `preload` se encargará de precargar los assets
   - `create` se ejecuta una vez cuando todo está cargado y listo
   - `update` se ejecuta en cada fotograma.

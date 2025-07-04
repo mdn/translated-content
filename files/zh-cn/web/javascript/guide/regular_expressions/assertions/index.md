@@ -114,7 +114,8 @@ console.log(text.match(regexpFoxQuality));
 
 ### 其他断言
 
-> **备注：** `？`字符也可用作量词
+> [!NOTE]
+> `？`字符也可用作量词
 
 <table class="standard-table">
   <thead>

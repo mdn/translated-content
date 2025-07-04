@@ -52,7 +52,6 @@ No es parte de ninguna especificación. Es un pseudo-elemento propietario de Gec
 ## Ver además
 
 - El pseudo-elements que usa Gecko para dar estilo a otras parte de un input con type="range":
-
   - {{cssxref("::-moz-range-thumb")}}
   - {{cssxref("::-moz-range-track")}}
 

@@ -79,19 +79,15 @@ l10n:
 此元素支持所有的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)，此外，还支持以下属性：
 
 - `type`
-
   - : 指定[图像的 MIME 媒体类型](/zh-CN/docs/Web/Media/Guides/Formats/Image_types)或[其他媒体类型](/zh-CN/docs/Web/Media/Guides/Formats/Containers)，可选择包含 [`codecs` 参数](/zh-CN/docs/Web/Media/Guides/Formats/codecs_parameter)。
 
 - `src`
-
   - : 指定媒体资源的 URL。如果 `<source>` 的父节点是 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}}，则必须指定该属性。如果父元素是 {{HTMLElement("picture")}} 则不允许指定该属性。
 
 - `srcset`
-
   - : 指定由逗号分隔的一个或多个图片 URL 及其描述符的列表。如果 `<source>` 的父节点是 {{HTMLElement("picture")}}，则必须指定该属性。如果父节点为 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 则不允许指定该属性。
 
     列表由逗号分隔的字符串组成，表示浏览器可能使用的一组图像。每个字符串由以下内容组成：
-
     - 指定图像位置的 URL。
     - 可选的宽度描述符——直接以 `"w"` 结尾的正整数，如 `300w`。
     - 可选的像素密度描述符——直接以 `"x"` 结尾的正浮点数，如 `2x`。
@@ -99,23 +95,19 @@ l10n:
     列表中的每个字符串必须有一个宽度描述符或一个像素密度描述符才有效。这两个描述符不能同时使用；整个列表中只能统一使用一个描述符。列表中每个描述符的值都必须是唯一的。浏览器会根据这些描述符在给定时间点选择最合适的图像来显示。如果未指定描述符，默认值为 `1x`。如果还存在 `sizes` 属性，则每个字符串都必须包含一个宽度描述符。如果浏览器不支持 `srcset`，则将使用 `src` 作为默认图像源。
 
 - `sizes`
-
   - : 指定描述图片最终呈现宽度的源尺寸列表。如果 `<source>` 的父节点是 {{HTMLElement("picture")}}，则允许指定该属性。如果父元素是 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 则不允许指定该属性。
 
     列表由以逗号分隔的源尺寸组成。每个源尺寸都是媒体条件——长度对。在布局页面之前，浏览器会使用这些信息来确定 [`srcset`](#srcset) 中要显示的图像。请注意，只有在随 `srcset` 提供宽度描述符而不是像素密度描述符的情况下，`sizes` 才会生效（例如，应使用 `200w` 而不是 `2x`）。
 
 - `media`
-
   - : 为资源的预期媒体指定[媒体查询](/zh-CN/docs/Web/CSS/CSS_media_queries)。
 
 - `height`
-
   - : 以像素为单位指定图片的固有高度。如果 `<source>` 的父元素是 {{HTMLElement("picture")}}，则允许指定该属性。如果父元素是 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 则不允许指定该属性。
 
     高度值必须是不含单位的整数。
 
 - `width`
-
   - : 以像素为单位指定图片的固有宽度。如果 `<source>` 的父元素是 {{HTMLElement("picture")}}，则允许指定该属性。如果父元素是 {{HTMLElement("audio")}} 或 {{HTMLElement("video")}} 则不允许指定该属性。
 
     宽度值必须是不含单位的整数。

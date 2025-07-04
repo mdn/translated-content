@@ -11,7 +11,6 @@ original_slug: Web/HTML/Element/big
 **big** de big=grande
 
 - Muestra el texto marcado con un tamaño de fuente más grande. El tamaño de la fuente puede definirse en una escala del 1 al 7, **big** aumenta este valor en un punto.
-
   - : **Sus etiquetas son**: `<big>` y `</big>` (Ambas obligatorias).
 
     **Crea una caja**: En línea.
@@ -271,7 +270,7 @@ Observa el siguiente ejemplo:
 
 ### Notas
 
-- **big** tiene un elemento opuesto, [small](/es/docs/Web/HTML/Element/small). Si **big** aumenta el tamaño de la fuente [small](/es/docs/Web/HTML/Element/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
+- **big** tiene un elemento opuesto, [small](/es/docs/Web/HTML/Reference/Elements/small). Si **big** aumenta el tamaño de la fuente [small](/es/docs/Web/HTML/Reference/Elements/small) lo disminuye. Sin embargo en su funcionamiento son idénticos.
 - El W3C (y nosotros) desaconseja el uso de este elemento, para manejar el tamaño del texto es mejor usar CSS.
 
 ### Referencia

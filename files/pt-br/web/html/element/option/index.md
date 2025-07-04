@@ -20,7 +20,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 - `disabled`
   - : Se este atributo booleano estiver definido, esta opção não é selecionável. Frequentemente navegadores acinzentam este tipo de controle, e ele deixa de receber quaisquer eventos de navegação, como cliques do mouse ou eventos relacionados a foco. Se este atributo não estiver definido, o elemento ainda pode ser desabilitado se um de seus ancestrais é um elemento {{HTMLElement("optgroup")}} desabilitado.
 - `label`
-
   - : Este atributo é o texto para o rótulo indicando o significado da opção. Se o atributo **label** não estiver definido, seu valor é o conteúdo de texto do elemento.
 
     > [!NOTE]
@@ -29,7 +28,6 @@ Este elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Atributos_globa
 - `selected`
   - : Se presente, este atributo booleano indica que a opção está selecionada inicialmente. Se o elemento `<option>` for descendente de um elemento {{HTMLElement("select")}} cujo atributo [`multiple`](/pt-BR/docs/Web/HTML/Element/select#multiple) não está definido, apenas um único `<option>` deste elemento {{HTMLElement("select")}} pode ter o atributo **selected**.
 - `value`
-
   - : O conteúdo textual deste atributo representa o rótulo que explica a opção. Se ele não estiver definido, seu valor padrão é o texto contido no elemento.
 
     > [!NOTE]

@@ -125,25 +125,21 @@ position: unset;
 - `static`
   - : 要素は文書の[通常フロー](/ja/docs/Learn_web_development/Core/CSS_layout/Introduction#通常フロー)に従って配置されます。 {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, {{cssxref("left")}}, {{cssxref("z-index")}} プロパティは効果がありません。これが既定値です。
 - `relative`
-
   - : 要素は文書の通常のフローに従って配置され、 `top`, `right`, `bottom`, `left` の値に基づいて*自分自身からの相対*オフセットで配置されます。オフセットは他の要素の配置には影響を与えません。つまり、ページレイアウト内で要素に与えられる空間は、位置が `static` であった時と同じです。
 
     `z-index` の値が `auto` でない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。 `table-*-group`, `table-row`, `table-column`, `table-cell`, `table-caption` の要素における効果は未定義です。
 
 - `absolute`
-
   - : 要素は文書の通常のフローから除外され、ページレイアウト内にこの要素のための空間が作成されません。この要素に直近の位置指定されている祖先があればそれに対して、そうでなければ、初期の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)に対して相対配置されます。最終的な位置は `top`, `right`, `bottom`, `left` の値によって決定されます。
 
     この値では、 `z-index` の値が `auto` ではない場合、新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。絶対位置指定ボックスのマージンは、他の要素のマージンと[相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)されません。
 
 - `fixed`
-
   - : 要素は文書の通常のフローから除外され、ページレイアウト内に要素のための空間が作成されません。要素は最初の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)（視覚メディア要素の場合はビューポート）から相対的に配置されます。最終的な位置は `top`、`right`、`bottom`、`left` の値によって決まります。
 
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作成します。印刷文書の場合、要素は*各ページ*の同じ位置に配置されます。
 
 - `sticky`
-
   - : 要素は文書の通常のフローに従って配置され、*直近のスクロールする祖先*および[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)（直近のブロックレベル祖先、表関連要素を含む）に対して `top`, `right`, `bottom`, `left` の値に基づいて相対配置されます。このオフセットは他の要素の配置には影響を与えません。
 
     この値は、常に新しい[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を生成します。なお粘着要素は、直近の祖先がスクロールしない場合でも、「スクロールの仕組み」を持つ直近の祖先（`overflow` が `hidden`, `scroll`, `auto`, `overlay` として作成されたもの）に「粘着」します。

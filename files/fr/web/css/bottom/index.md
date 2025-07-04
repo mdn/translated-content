@@ -92,18 +92,14 @@ bottom: unset;
 ### Valeurs
 
 - `<length>`
-
   - : Une longueur (type {{cssxref("&lt;length&gt;")}} qui représente :
-
     - La distance depuis le bord bas du bloc englobant pour les éléments positionnés de façon absolue
     - Le décalage avec lequel l'élément est déplacé au-dessus de sa position normale dans le flux pour pour les éléments positionnés de façon relative.
 
 - `<percentage>`
   - : Une valeur de pourcentage (type {{cssxref("&lt;percentage&gt;")}} exprimée par rapport à la hauteur du bloc englobant.
 - `auto`
-
   - : Indique pour :
-
     - Les éléments positionnés de façon absolue : la position de l'élément se base sur la propriété {{cssxref("top")}} et `height: auto` est traitée comme une hauteur basée sur la taille du contenu
     - Les éléments positionnés de façon relative : le décalage avec lequel l'élément est déplacé est construit à partir de la propriété {{cssxref("top")}} et si celle-ci vaut également `auto`, l'élément n'est pas déplacé verticalement.
 

@@ -45,11 +45,9 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context
 В примере каждый позиционированный элемент создаёт свой контекст наложения, так как имеет свойства position и z-index. Иерархия контекстов наложения выглядит следующим образом:
 
 - Root
-
   - DIV #1
   - DIV #2
   - DIV #3
-
     - DIV #4
     - DIV #5
     - DIV #6

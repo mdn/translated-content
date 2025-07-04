@@ -59,7 +59,6 @@ repeat(4, 10px [col-start] 30% [col-middle] 400px [col-end])
 - `auto-fill`
   - : Si le conteneur de la grille possède une taille définie ou maximale sur cet axe, alors le moteur répètera autant que possible le motif pour ne pas déborder de la grille. Si répéter le motif implique de déborder de la grille, il n'est répété qu'une fois. Sinon, si le conteneur de la grille possède une taille minimale sur cet axe, on utilisera le moins de répétitions possible pour atteindre ce minimum. Sinon, la liste de piste n'est répétée qu'une seule fois.
 - `auto-fit`
-
   - : Cette valeur se comporte comme `auto-fill` mais, une fois que les objets sont placés, toutes les pistes répétées qui sont vides sont repliées. Une piste vide est une piste qui ne contient aucun élément ou sur laquelle aucun élément n'intersecte. Toutes les pistes peuvent être repliées si elles sont toutes vides.
 
     Une piste repliée est traitée comme si elle avait une taille de piste de `0px` (les gouttières sont également repliées de chaque côté).

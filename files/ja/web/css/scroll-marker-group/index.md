@@ -28,15 +28,12 @@ scroll-marker-group: unset;
 ### 値
 
 - `after`
-
   - : {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの子 DOM 要素の兄弟として、それらと、生成された {{cssxref("::scroll-button()")}} 擬似要素の直前に生成されます。コンテナーのタブ順およびレイアウトボックス順（DOM 構造順ではない）の最後に表示されます。
 
 - `before`
-
   - : {{cssxref("::scroll-marker-group")}} 擬似要素は、スクロールコンテナーの子 DOM 要素の兄弟として、それらと、生成された {{cssxref("::scroll-button()")}} 擬似要素の直前に生成されます。コンテナーのタブ順およびレイアウトボックス順（DOM 構造順ではない）の最後に表示されます。
 
 - `none`
-
   - : 要素には `::scroll-marker-group` 擬似要素は生成されません。これが既定値です。
 
 > [!NOTE]

@@ -40,7 +40,6 @@ l10n:
 > - **status**
 >   - : Incluye claves de estado de tecnología (apropiadas): [**experimental**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#experimental), [**obsoleto**](/es/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#deprecated), **no estándar** (si no está en una pista de estándares).
 > - **browser-compat**
->
 >   - : Reemplace el valor del marcador de posición `css.selectors.NameOfTheSelector` con la cadena de consulta para el selector en el [repositorio de datos de compatibilidad con los navegadores](https://github.com/mdn/browser-compat-data).
 >     La cadena de herramientas utiliza automáticamente la clave para rellenar las secciones de compatibilidad con los navegadores y especificaciones (reemplazando las macros `\{{Compat}}` y `\{{Specifications}}` en esas secciones, respectivamente).
 >

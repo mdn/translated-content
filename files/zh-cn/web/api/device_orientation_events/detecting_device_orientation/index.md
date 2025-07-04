@@ -15,7 +15,8 @@ slug: Web/API/Device_orientation_events/Detecting_device_orientation
 
 要接收设备方向变化信息，只需要监听[`deviceorientation`](/zh-CN/docs/Web/API/Window/deviceorientation_event)事件：
 
-> **备注：** [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
+> [!NOTE]
+> [gyronorm.js](https://github.com/dorukeker/gyronorm.js) is a polyfill for normalizing the accelerometer and gyroscope data on mobile devices. This is useful for overcoming some of the differences in device support for device orientation.
 
 ```js
 window.addEventListener("deviceorientation", handleOrientation, true);

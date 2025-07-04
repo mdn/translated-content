@@ -35,7 +35,8 @@ p {
 
 此元素僅包含[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
-> **備註：** `<p>` 標籤上的 `align` 屬性已過時，不應使用。
+> [!NOTE]
+> `<p>` 標籤上的 `align` 屬性已過時，不應使用。
 
 ## 範例
 

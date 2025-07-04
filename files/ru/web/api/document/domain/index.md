@@ -21,9 +21,7 @@ document.domain = string;
 ### Исключения
 
 - `SecurityError`
-
   - : An attempt has been made to set `domain` under one of the following conditions:
-
     - The document is inside a sandboxed {{htmlelement("iframe")}}
     - The document has no browsing context
     - The document's [effective domain](https://html.spec.whatwg.org/multipage/origin.html#concept-origin-effective-domain) is `null`

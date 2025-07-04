@@ -45,7 +45,7 @@ Object.seal(obj)
 
 オブジェクトを封印すると、[拡張を抑止し](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)、既存のすべての[プロパティの記述子](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty#description)を `configurable: false` に変更します。これは、オブジェクトにあるプロパティ一式を固定かつ不変にする効果があります。すべてのプロパティを構成不可にすることで、データプロパティからアクセサプロパティへの変換やその逆を抑制しますが、データプロパティの値の変更は抑制しません。封印されたオブジェクトでプロパティの削除や追加、あるいはデータプロパティからアクセサプロパティへの変換およびその逆をしようとすると、暗黙的に失敗するか、（一般的に{{jsxref("Strict_mode", "厳格モード", "", 1)}}においてですが、それに限らず） {{jsxref("TypeError")}} が発生して失敗します。
 
-[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)にはプロパティ記述子の概念はありません。プライベートプロパティは、オブジェクトが封印されているかどうかに関わらず、オブジェクトに追加したり除去したりすることはできません。
+[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)はプロパティではなく、プロパティ記述子の概念がありません。プライベート要素は、オブジェクトが封印されているかどうかに関わらず、オブジェクトに追加したり除去したりすることはできません。
 
 プロトタイプチェーンには手をつけず、そのままにします。ただし、[拡張の抑止](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/preventExtensions)の影響により、 `[[Prototype]]` は再代入できません。
 

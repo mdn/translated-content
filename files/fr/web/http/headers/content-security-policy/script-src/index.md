@@ -123,7 +123,6 @@ La valeur `'unsafe-eval'` contrôle différents méthodes qui créent du code Ja
 - [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval)
 - [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - En passant une chaine à des méthodes tel que : `window.setTimeout("alert('Coucou le monde');", 500);`
-
   - [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout)
   - [`setInterval()`](/fr/docs/Web/API/Window/setInterval)
   - [`window.setImmediate()`](/fr/docs/Web/API/window/setImmediate)

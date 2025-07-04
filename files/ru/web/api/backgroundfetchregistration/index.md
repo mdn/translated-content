@@ -30,9 +30,7 @@ l10n:
 - {{domxref("BackgroundFetchRegistration.result")}}{{ReadOnlyInline}}
   - : Изначально возвращает пустую строку, а по завершению запросо либо `"success"`, либо `"failure"`.
 - {{domxref("BackgroundFetchRegistration.failureReason")}}{{ReadOnlyInline}}
-
   - : Возвращает одну из следующих строк:
-
     - `""`
       - : Запрос не завершён, либо завершился успешно.
     - `"aborted"`
@@ -63,7 +61,6 @@ l10n:
 Слушайте эти события используя [`addEventListener()`](/ru/docs/Web/API/EventTarget/addEventListener) или назначая слушатель события свойству `oneventname`.
 
 - [`progress`](/ru/docs/Web/API/BackgroundFetchRegistration/progress_event)
-
   - : Срабатывает при изменении любого из следующих свойств:
     {{domxref("BackgroundFetchRegistration.uploaded", "uploaded")}},
     {{domxref("BackgroundFetchRegistration.downloaded", "downloaded")}},

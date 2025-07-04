@@ -160,7 +160,8 @@ function setColorAttribute(gl, buffers, programInfo) {
 }
 ```
 
-> **备注：** `drawScene()` 函数中在调用 `gl.useProgram()` 之前，先调用 `setColorAttribute()`：
+> [!NOTE]
+> `drawScene()` 函数中在调用 `gl.useProgram()` 之前，先调用 `setColorAttribute()`：
 
 ```js
 setColorAttribute(gl, buffers, programInfo);

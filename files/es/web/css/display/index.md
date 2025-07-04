@@ -90,7 +90,6 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
 ### Valores
 
 - \<display-outside>
-
   - : Estas palabras clave especifican el tipo de pantalla externa del elemento, que es esencialmente su función en el diseño de flujo: A continuación se definen:
 
     | Valor                            | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -100,7 +99,6 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
     | `run-in` {{experimental_inline}} | El elemento genera un cuadro de ejecución. Los elementos de ejecución actúan como líneas o bloques, dependiendo de los elementos circundantes. Es decir: Si el cuadro de ejecución contiene un cuadro de bloque, igual que el bloque. Si un cuadro de bloque sigue el cuadro de ejecución, el cuadro de ejecución se convierte en el primer cuadro en línea del cuadro de bloque. Si sigue un cuadro en línea, el cuadro de ejecución se convierte en un cuadro de bloque. |
 
 - \<display-inside>
-
   - : Estas palabras clave especifican el tipo de pantalla interna del elemento, que define el tipo de contexto de formato que establece su contenido (suponiendo que es un elemento no reemplazado). Se definen como sigue:
 
     | Valor                               | Descripción                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -114,13 +112,11 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
     | `ruby` {{experimental_inline}}      | El elemento se comporta como un elemento en línea y establece su contenido de acuerdo con el modelo de formato ruby. Se comporta como los elementos HTML {{HTMLElement ("ruby")}} correspondientes.                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 
 - \<display-listitem>
-
   - : El elemento genera un cuadro de bloque para el contenido y un cuadro en línea de elemento de lista independiente.
 
     Si no se especifica ningún valor `<display-inside>`, el tipo de pantalla interna de la caja principal es el predeterminado `flow`. Si no se especifica ningún valor `<display-outside>`, el tipo de pantalla externa de la caja principal tiene el valor predeterminado `block`.
 
 - \<display-internal>
-
   - : Algunos modelos de disposición, como table y ruby, tienen una estructura interna completa, con varios papeles diferentes que sus hijos y descendientes pueden llenar. Esta sección define los valores de visualización "internos", que sólo tienen significado dentro de ese modo de disposición particular.
 
     A menos que se especifique lo contrario, el tipo de visualización interno y el tipo de visualización exterior de los elementos que utilizan estos valores de visualización se establecen en la palabra clave dada.
@@ -141,7 +137,6 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
     | `ruby-text-container` {{experimental_inline}} | Estos elementos se comportan como elementos {{HTMLElement ("rtc")}}.                               |
 
 - \<display-box>
-
   - : Estos valores se definen si un elemento genera cuadros de visualización en absoluto.
 
     | Valor                              | Descripción                                                                                                                                                                                                                                                                                                                                                       |
@@ -150,7 +145,6 @@ En la actualidad, es mejor especificar `display` utilizando una sola palabra cla
     | `none`                             | Desaparece la visualización de un elemento para que no tenga ningún efecto en el diseño (el documento se representa como si el elemento no existiera). Todos los elementos descendentes también tienen su pantalla apagada.Para que un elemento ocupe el espacio que normalmente tendría, pero sin producir nada, utilice la propiedad {{cssxref("visibility")}}. |
 
 - \<display-legacy>
-
   - : CSS 2 usó una sintaxis de palabra clave única para la propiedad `display`, requiriendo palabras clave separadas para variantes de nivel de bloque e inline del mismo modo de disposición. Se definen como sigue:
 
     | Valor          | Descripción                                                                                                                                                                                                                                                                                               |

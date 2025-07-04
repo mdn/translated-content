@@ -65,5 +65,4 @@ greeting();
 
 - 维基百科上的 [调用栈](https://zh.wikipedia.org/wiki/调用栈)
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("Function", "函数")}}

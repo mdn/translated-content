@@ -21,7 +21,6 @@ slug: Web/API/MouseEvent
 _Данный интерфейс наследует свойства от родителей {{domxref("UIEvent")}} и {{domxref("Event")}}._
 
 - {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
-
   - : Возвращает значение `true,` если клавиша&#x20;
 
     <kbd>alt</kbd>
@@ -37,7 +36,6 @@ _Данный интерфейс наследует свойства от род
 - {{domxref("MouseEvent.clientY")}} {{readonlyinline}}
   - : Отображение Y координат курсора мыши в локальной системе координат (DOM контент).
 - {{domxref("MouseEvent.ctrlKey")}} {{readonlyinline}}
-
   - : Возвращает значение `true,` если клавиша&#x20;
 
     <kbd>control</kbd>
@@ -45,7 +43,6 @@ _Данный интерфейс наследует свойства от род
     &#x20;была нажата во время движения мыши.
 
 - {{domxref("MouseEvent.metaKey")}} {{readonlyinline}}
-
   - : Возвращает значение `true,` если клавиша&#x20;
 
     <kbd>meta</kbd>
@@ -73,7 +70,6 @@ _Данный интерфейс наследует свойства от род
 - {{domxref("MouseEvent.screenY")}} {{readonlyinline}}
   - : Отображает Y координат указателя мыши в пространстве экрана.
 - {{domxref("MouseEvent.shiftKey")}} {{readonlyinline}}
-
   - : Возвращает true если клавиша&#x20;
 
     <kbd>shift</kbd>

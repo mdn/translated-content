@@ -11,7 +11,8 @@ l10n:
 
 如果請求包含 {{HTTPHeader("Access-Control-Request-Headers")}} 標頭，此標頭是必需的。
 
-> **備註：** {{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
+> [!NOTE]
+> {{glossary("CORS-safelisted_request_header", "列入 CORS 白名單的請求標頭")}}總是允許的，通常不會列在 `Access-Control-Allow-Headers` 中（除非有必要繞過安全名單的[附加限制](/zh-TW/docs/Glossary/CORS-safelisted_request_header#附加限制)）。
 
 <table class="properties">
   <tbody>

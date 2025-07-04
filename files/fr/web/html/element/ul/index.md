@@ -39,16 +39,13 @@ li li {
 ### Attributs dépréciés ou obsolètes
 
 - `compact`{{Deprecated_inline}}
-
   - : Cet attribut booléen fournit une indication pour afficher la liste en mode compact. L'interprétation de cet attribut est laissée à la discrétion de l'agent utilisateur et ne fonctionne pas pour tous les navigateurs.
 
     > [!WARNING]
     > Cet attribut a été déprécié et ne doit pas être utilisé. Pour obtenir le même effet, on pourra utiliser la propriété {{cssxref("line-height")}} avec la valeur `80%` pour l'élément `<ul>`.
 
 - `type`{{Deprecated_inline}}
-
   - : Cet attribut permet de définir le style de puce utilisé pour la liste. Les valeurs définies au sein des spécifications pour HTML3.2 et HTML 4.0/4.01 sont :
-
     - `circle`,
     - `disc`,
     - and `square`.
@@ -214,7 +211,6 @@ li li {
 
 - Les autres éléments HTML relatifs aux listes : {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}} (et l'élément obsolète {{HTMLElement("dir")}}).
 - Les propriétés CSS particulièrement utiles pour mettre en forme l'élément `<ul>` :
-
   - La propriété {{cssxref("list-style")}} qui permet de choisir la façon dont l'indicateur ordinal est affiché,
   - [Les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters), qui permettent de gérer des listes imbriquées complexes,
   - La propriété {{cssxref("line-height")}} qui permet de simuler l'attribut [`compact`](#compact) désormais déprécié,

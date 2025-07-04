@@ -134,7 +134,6 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
    ```
 
 3. 当你运行此程序时，应用程序仍会将数据发布到服务器，从而导致刷新。由于我们在客户端上进行所有处理，因此没有服务器来处理回发。我们还会在页面刷新时丢失所有本地状态。为了防止浏览器发布到服务器，我们需要阻止事件的默认操作通过页面冒泡（[`Event .preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)，在原生 JavaScript 中）。Vue 有一个特殊的语法叫做 **event modifiers** 可以在我们的模板中为我们处理这个问题。修饰符被附加到事件的末尾，带有一个点，如下所示：`@event.modifier`。以下是事件修饰符列表：
-
    - `.stop`：停止传播事件。等效于常规 JavaScript 事件中的 [`Event.stopPropagation()`](/zh-CN/docs/Web/API/Event/stopPropagation)。
    - `.prevent`：阻止事件的默认行为。等效于 [`Event.preventDefault()`](/zh-CN/docs/Web/API/Event/preventDefault)。
    - `.self`：仅当事件是从该确切元素分派时触发处理程序。

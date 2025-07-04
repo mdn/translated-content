@@ -16,9 +16,7 @@ new WebAssembly.Global(descriptor, value)
 ### 参数
 
 - `descriptor`
-
   - : 一个对象，包含两个属性：
-
     - `value`: 一个表示全局数据类型的字符串。它可以是下列值之一：
       - `i32`: 一个 32 位的整数。
       - `i64`: 一个 64 位的整数。（在 JavaScript 中，它被表示为一个 {{jsxref("BigInt")}}）

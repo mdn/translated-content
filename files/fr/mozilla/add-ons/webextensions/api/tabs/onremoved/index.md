@@ -29,14 +29,11 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
-
     - `tabId`
       - : `integer`. ID de l'onglet qui s'est fermé.
 
     <!---->
-
     - `removeInfo`
       - : [`object`](#removeinfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
 

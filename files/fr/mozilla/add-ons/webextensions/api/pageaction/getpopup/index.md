@@ -20,9 +20,7 @@ var gettingPopup = browser.pageAction.getPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`
       - : `integer`. ID de l'onglet dont vous souhaitez obtenir la fenêtre contextuelle.
 

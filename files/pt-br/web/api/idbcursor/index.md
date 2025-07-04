@@ -29,7 +29,6 @@ Pode ter um número ilimitado de cursores ao mesmo tempo. Você sempre consegue 
 - {{domxref("IDBCursor.source")}} {{readonlyInline}}
   - : Retorna um {{domxref("IDBObjectStore")}} ou {{domxref("IDBIndex")}} que o cursor é a iteração. Esta função nunca retorna nulo ou gera uma exceção, mesmo se o cursor está actualmente a ser iterativo, tem iterated além de seu fim, ou a sua operação não está ativa.
 - {{domxref("IDBCursor.direction")}} {{readonlyInline}}
-
   - : Retorna a direcção do percurso do cursor. Veja
 
     constantes

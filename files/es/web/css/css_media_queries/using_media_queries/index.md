@@ -25,7 +25,6 @@ Las consultas de medios no distinguen entre mayúsculas y minúsculas.
   El tipo es opcional (se asume que es `all`) excepto cuando se usan los operadores lógicos `not` o `only`.
 
 - Las [características multimedia](/es/docs/Web/CSS/@media#media_features) describen una característica específica del {{glossary("user agent")}}, dispositivo de salida o entorno:
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}

@@ -18,9 +18,7 @@ query(permissionDescriptor)
 ### 引数
 
 - `permissionDescriptor`
-
   - : 名前と値のペアのカンマ区切りリストで構成される、`query` 操作のオプションを設定するオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `name`
       - : 権限を照会したい API の名前です。対応している値の集合はブラウザーごとに異なります。 Firefox の値は[こちら](https://searchfox.org/mozilla-central/source/dom/webidl/Permissions.webidl#10)、 Chromium の値は[こちら](https://chromium.googlesource.com/chromium/src/+/refs/heads/main/third_party/blink/renderer/modules/permissions/permission_descriptor.idl)、 WebKit の値は[こちら](https://github.com/WebKit/WebKit/blob/main/Source/WebCore/Modules/permissions/PermissionName.idl)にあります。
     - `userVisibleOnly`

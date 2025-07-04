@@ -17,19 +17,14 @@ new Request(input, options)
 ### 参数
 
 - _input_
-
   - : 定义你想要 fetch 的资源。可以是下面两者之一：
-
     - 一个直接包含你希望 fetch 的资源的 URL 的 {{domxref("USVString")}}。
     - 一个 {{domxref("Request")}} 对象。请注意以下行为更新，以在保留安全性的同时使构造函数不太可能引发异常：
-
       - 如果此对象存在于构造函数调用的另一个起源上，则将除去{{domxref("Request.referrer")}}。
       - 如果此对象的导航为 {{domxref("Request.mode")}}，则`mode`将转换为`same-origin`。
 
 - _init_ {{optional_inline}}
-
   - : 一个可选对象，包含希望被包括到请求中的各种自定义选项。可用的选项如下：
-
     - `method`: 请求的方法，例如：`GET`, `POST`。
     - `headers`: 任何你想加到请求中的头，其被放在{{domxref("Headers")}}对象或内部值为{{domxref("ByteString")}} 的对象字面量中。
     - `body`: 任何你想加到请求中的 body，可以是{{domxref("Blob")}}, {{domxref("BufferSource")}}, {{domxref("FormData")}}, {{domxref("URLSearchParams")}}, {{domxref("USVString")}}，或{{domxref("ReadableStream")}}对象。注意`GET` 和 `HEAD` 请求没有 body。

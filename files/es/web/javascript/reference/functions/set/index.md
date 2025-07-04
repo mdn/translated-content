@@ -17,7 +17,6 @@ La sintaxis **`set`** asocia la propiedad de un objeto a una función que será 
 ### Parámetros
 
 - _`prop`_
-
   - : El nombre de la propiedad a asociar con la función dada.
 
 - _`val`_

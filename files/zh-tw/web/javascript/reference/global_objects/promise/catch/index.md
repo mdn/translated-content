@@ -20,9 +20,7 @@ p.catch(function (reason) {
 ### 參數
 
 - onRejected
-
   - : 一個 {{jsxref("Function")}} ，在 `Promise` 被拒絕時被呼叫。這個函式有一個引數：
-
     - `reason`
       - : 失敗訊息。
 

@@ -203,7 +203,6 @@ HTML 文書に次のように追加するだけで利用できるようになり
 
 - {{HTMLElement("template")}} には {{HTMLElement("style")}} 要素があり、 {{HTMLElement("template")}} が生成する文書の断片だけを対象とした CSS スタイルの集合を持ちます。
 - {{HTMLElement("template")}} は {{HTMLElement("slot")}} とその [`name`](/ja/docs/Web/HTML/Reference/Elements/slot#name) 属性を用いて、 3 つの[名前付きスロット](/ja/docs/Web/HTML/Reference/Elements/slot#name) を生成しています。
-
   - `<slot name="element-name">`
   - `<slot name="description">`
   - `<slot name="attributes">`

@@ -35,7 +35,6 @@ Le bloc englobant est entièrement déterminé par la valeur de la propriété {
 - Si la propriété `position` vaut **`absolute`**, le bloc englobant est constitué par le bord de la boîte de remplissage (_padding_) de l'ancêtre le plus proche dont la valeur de `position` est différente de `static` (`fixed`, `absolute`, `relative` ou `sticky`).
 - Si la propriété `position` vaut **`fixed`**, le bloc englobant est formé par le {{glossary("viewport")}} (ou la page dans le cas des média paginés).
 - Si la propriété `position` vaut **`absolute`** ou `fixed`, le bloc englobant peut également être constitué par le bord de la boîte de remplissage le plus proche qui a :
-
   1. Une propriété {{cssxref("transform")}} ou {{cssxref("perspective")}} avec une valeur différente de `none`
   2. Une propriété {{cssxref("will-change")}} qui vaut `transform` ou `perspective`
   3. Une propriété {{cssxref("filter")}} différente de `none` ou une propriété `will-change` différente of `filter` (ne fonctionne que pour Firefox).

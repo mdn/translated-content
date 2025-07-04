@@ -25,10 +25,8 @@ l10n:
 - [ホワイトスペースは HTML、CSS、そしてDOM 内でどう扱われるか](/ja/docs/Web/API/Document_Object_Model/Whitespace)
 - {{cssxref("white-space")}}
 - 仕様書
-
   - [ASCII whitespace spec](https://infra.spec.whatwg.org/#ascii-whitespace)
   - [ECMAScript Language Specification](https://tc39.es/ecma262/multipage/ecmascript-language-lexical-grammar.html#sec-white-space)
 
 - 関連用語:
-
   1. {{Glossary("Character", "文字")}}

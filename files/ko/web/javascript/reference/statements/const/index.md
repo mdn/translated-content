@@ -73,39 +73,39 @@ let MY_FAV = 20;
 
 // 블록 범위의 특성을 아는게 중요
 if (MY_FAV === 7) {
-    // 블록 범위로 지정된 MY_FAV 라는 변수를 만드므로 괜찮습니다
-    // (let으로 const 변수가 아닌 블록 범위를 선언하는 것과 똑같이 동작합니다)
-    let MY_FAV = 20;
+  // 블록 범위로 지정된 MY_FAV 라는 변수를 만드므로 괜찮습니다
+  // (let으로 const 변수가 아닌 블록 범위를 선언하는 것과 똑같이 동작합니다)
+  let MY_FAV = 20;
 
-    // MY_FAV는 이제 20입니다
-    console.log('my favorite number is ' + MY_FAV);
+  // MY_FAV는 이제 20입니다
+  console.log("my favorite number is " + MY_FAV);
 
-    // 이 선언은 전역으로 호이스트되고 에러가 발생합니다.
-    var MY_FAV = 20;
+  // 이 선언은 전역으로 호이스트되고 에러가 발생합니다.
+  var MY_FAV = 20;
 }
 
 // MY_FAV는 여전히 7
-console.log('my favorite number is ' + MY_FAV);
+console.log("my favorite number is " + MY_FAV);
 
 // const 선언시에 초기값을 생략해서 오류 발생
 const FOO;
 
 // const는 오브젝트에도 잘 동작합니다
-const MY_OBJECT = {'key': 'value'};
+const MY_OBJECT = { key: "value" };
 
 // 오브젝트를 덮어쓰면 오류가 발생합니다
-MY_OBJECT = {'OTHER_KEY': 'value'};
+MY_OBJECT = { OTHER_KEY: "value" };
 
 // 하지만 오브젝트의 키는 보호되지 않습니다.
 // 그러므로 아래 문장은 문제없이 실행됩니다
-MY_OBJECT.key = 'otherValue'; // 오브젝트를 변경할 수 없게 하려면 Object.freeze() 를 사용해야 합니다
+MY_OBJECT.key = "otherValue"; // 오브젝트를 변경할 수 없게 하려면 Object.freeze() 를 사용해야 합니다
 
 // 배열에도 똑같이 적용됩니다
 const MY_ARRAY = [];
 // 배열에 아이템을 삽입하는 건 가능합니다
-MY_ARRAY.push('A'); // ["A"]
+MY_ARRAY.push("A"); // ["A"]
 // 하지만 변수에 새로운 배열을 배정하면 에러가 발생합니다
-MY_ARRAY = ['B']
+MY_ARRAY = ["B"];
 ```
 
 ## 명세서

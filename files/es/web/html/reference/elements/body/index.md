@@ -82,7 +82,7 @@ El **elemento `<body>` de HTML** representa el contenido de un documento HTML. S
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `alink` {{deprecated_inline}}
   - : Color del texto de los hipervínculos cuando se selecciona. _Este método no es conforme a la especificación, utiliza la propiedad {{CSSxRef("color")}} de CSS junto con la pseudoclase {{CSSxRef(":active")}} en su lugar._

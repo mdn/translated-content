@@ -44,7 +44,6 @@ Cada `@counter-style` se identifica con un nombre y tiene un conjunto de descrip
 - {{cssxref("@counter-style/fallback", "fallback")}}
   - : Especifica un sistema al que recurrir si el sistema especificado no puede construir la representación de un valor de contador o si el valor de contador está fuera del rango especificado. Si el respaldo especificado tampoco representa el valor, entonces se usa el respaldo del estilo de respaldo, si se especifica uno. Si no se describen sistemas de respaldo o si la cadena de sistemas de respaldo no puede representar un valor de contador, finalmente volverá al estilo decimal.
 - {{cssxref("@counter-style/symbols", "symbols")}}
-
   - : Especifica los símbolos que se utilizarán para las representaciones de marcador. Los símbolos pueden contener cadenas, imágenes o identificadores personalizados. La forma en que se utilizan los símbolos para construir la representación del marcador depende del algoritmo especificado en el descriptor del sistema. Por ejemplo, si el sistema especificado es fijo, cada uno de los N símbolos especificados en el descriptor se utilizará para representar los primeros N símbolos de contador. Una vez que se haya agotado el conjunto de símbolos especificado, se utilizará el estilo alternativo para el resto de la lista.
 
     La siguiente regla `@counter-style` utiliza imágenes en lugar de símbolos de caracteres. Los valores de imagen para los símbolos son actualmente una función "en riesgo" y no están implementadas en ningún navegador.

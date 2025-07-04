@@ -23,7 +23,6 @@ new Worker(url, options)
 ### 引数
 
 - `url`
-
   - : 文字列で、ワーカーが実行するスクリプトの URL を表します。同一オリジンポリシーに従っていなければいけません。URL は、現在の HTML ページの場所に対して相対的に解決されます。
 
     > **メモ:** [webpack](https://webpack.js.org/guides/web-workers/)、[Vite](https://vite.dev/guide/features.html#web-workers)、[Parcel](https://parceljs.org/languages/javascript/#web-workers) などのバンドラーでは、 [`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta#url) に対する相対 URL を `Worker()` コンストラクターに渡すことをお勧めします。例えば、次のようにします。
@@ -35,9 +34,7 @@ new Worker(url, options)
     > この方法では、パスは現在の HTML ページではなく現在のスクリプトを基準とするため、バンドラーは、名前の変更などの最適化を安全に行うことができます（そうしないと、`worker.js` URL がバンドラーによって制御されていないファイルを指す可能性があり、何も仮定できなくなるためです）。
 
 - `options` {{optional_inline}}
-
   - : オブジェクトを作成するときに設定できるオプションプロパティを持つオブジェクトです。以下のプロパティが使用できます。
-
     - `type`
       - : 文字列で、作成するワーカーの種類を指定します。使用できる値は `classic` または `module` です。指定しない場合の既定値は `classic` です。
     - `credentials`

@@ -275,7 +275,6 @@ Chaque note a un titre et une description, chacun éditables individuellement. L
 
 1. Tout d'abord, copiez les fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/style.css), et [`index-start.js`](https://github.com/mdn/learning-area/blob/master/javascript/apis/client-side-storage/indexeddb/notes/index-start.js) dans un nouveau répertoire sur votre ordinateur.
 2. Jetez un coup d'oeil aux fichiers.
-
    - Vous verrez que le HTML est assez simple : un site web avec une entête et un pied de page, ainsi qu'une zone de contenu principal contenant un emplacement pour afficher les notes et un formulaire pour en ajouter.
    - Le CSS fournit un style simple pour rendre plus clair ce qu'il se passe.
    - Le fichier JavaScript contient cinq constantes déclarées — des références à l'élément {{htmlelement("ul")}} dans lequel seront affichées les notes, les {{htmlelement("input")}} title et body, le {{htmlelement("form")}} lui-même, et un {{htmlelement("button")}}.
@@ -368,7 +367,6 @@ Voyons maintenant la première chose à faire, mettre en place la base de donné
    ```
 
    C'est ici qu'on définit le schéma (la structure) de notre base de données; c'est à dire l'ensemble des champs (ou colonnes) qu'il contient.
-
    1. On récupère une référence à la base de données existante depuis `e.target.result` (la propriété `result` de la cible de l'événement, c'est à dire l'objet `request`). C'est l'équivalent de la ligne `db = request.result;` du gestionnaire d'événement `onsuccess`, mais on doit le faire de cette manière ici puisque le gestionnaire d'événement `onupgradeneeded` est exécuté avant `onsuccess` — la valeur de `db` n'est pas encore disponible.
    2. Ensuite, on utilise {{domxref("IDBDatabase.createObjectStore()")}} pour créer un object store (un container pour une collection d'objets) à l'intérieur de notre base de données. C'est l'équivalent d'une table dans un système de base de données traditionnel. On lui a donné le nom `notes`, et un champs `id` avec `autoIncrement` — pour chaque nouvelle entrée dans cette table, une valeur auto-incrementée sera attributée au champ `id` sans que le développeur n'ait à le définir. Le champ `id` est la clé de l'object store: il sera utilisé pour identifier de manière unique les entrées, permettant de les mettre à jour ou les supprimer.
    3. On crée deux autres index (champs) en utilisant la méthode {{domxref("IDBObjectStore.createIndex()")}}: `title` (qui contiendra le titre de chaque note), et `body` (qui contiendra la description de chaque note).
@@ -435,14 +433,12 @@ Maintenant, voyons comment ajouter des entrées dans la base de données. On le 
    ```
 
    C'est assez complexe, voyons ça pas à pas :
-
    1. On exécute {{domxref("Event.preventDefault()")}} sur l'objet événement pour empêcher le formulaire d'être véritablement soumis (cela provoquerait une actualisation de la page et gâcherait l'expérience utilisateur).
    2. On crée un objet représentant une entrée à ajouter dans la base de données, en le remplissant avec les valeurs des champs du formulaire. Notez qu'on n'a pas besoin d'inclure explicitement une valeur `id` — comme nous l'avons précédemment expliqué, il est auto-rempli.
    3. On ouvre une transaction en lecture/écritre (`readwrite`) sur l'object store `notes` en utilisant la méthode {{domxref("IDBDatabase.transaction()")}}. Cet object transaction va nous permettre d'accéder à l'object store, pour ajouter une nouvelle entrée par exemple.
    4. On récupère l'object store de la transaction avec la méthode {{domxref("IDBTransaction.objectStore()")}} et on le stocke dans la variable `objectStore`.
    5. On ajoute un nouvel enregistrement à la base de données en utilisant {{domxref("IDBObjectStore.add()")}}. Cela crée une requête, sur le même principe qu'on a déjà vu.
    6. On ajoute des gestionnaires d'événement à `request` et `transaction` pour exécuter du code aux points importants de leur cycle de vie :
-
       - Quand la requête a réussit, on efface les champs du formulaire — pour pouvoir ajouter une nouvelle note
       - Quand la transaction est terminé, on réexécute la fonction `displayData()` — pour mettre à jour l'affichage de notes sur la page.
 

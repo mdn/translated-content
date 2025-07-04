@@ -21,9 +21,7 @@ lock(orientation)
 ### 引数
 
 - `orientation`
-
   - : 向きの固定のタイプです。以下のいずれかです。
-
     - `"any"`
       - : `portrait-primary`、`portrait-secondary`、`landscape-primary`、`landscape-secondary` のいずれかです。
     - `"natural"`
@@ -58,19 +56,15 @@ lock(orientation)
 プロミスが以下の例外により拒否されることがあります。
 
 - `InvalidStateError` {{domxref("DOMException")}}
-
   - : 文書が完全にはアクティブでなかった場合に発生します。
 
 - `SecurityError` {{domxref("DOMException")}}
-
   - : 文書の表示状態が非表示の場合、または文書がその機能の使用を禁止されている場合(例えば、 `iframe` 要素の `sandbox` 属性のキーワード `allow-orientation-lock` を省略した場合)に発生します。
 
 - `NotSupportedError` {{domxref("DOMException")}}
-
   - : ユーザーエージェントが特定の画面の向きに固定できない場合に発生します。
 
 - `AbortError` {{domxref("DOMException")}}
-
   - : 他の `lock()` メソッドが呼び出されている場合に発生します。
 
 ## 例

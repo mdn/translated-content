@@ -62,7 +62,6 @@ PWA 清单文件是一个 JSON 文件，它提供了关于该应用程序的特�
 PWA 的安装后和离线体验的外观由清单文件定义。外观清单成员包括 `start_url` 和 `display`，以及可以用于[自定义应用程序颜色](/zh-CN/docs/Web/Progressive_web_apps/How_to/Customize_your_app_colors)的成员，包括 `theme_color` 和 `background_color`。
 
 - [`start_url`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/start_url)
-
   - : 用户启动 PWA 时的起始页面。
 
 - [`display`](/zh-CN/docs/Web/Progressive_web_apps/Manifest/Reference/display)

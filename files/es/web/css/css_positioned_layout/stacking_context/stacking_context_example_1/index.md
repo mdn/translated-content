@@ -27,7 +27,6 @@ En este último ejemplo puedes ver que el DIV #2 y el DIV #4 no son hermanos, po
 En términos de contextos de apilamiento, el DIV #1 y el DIV #3 son simplemente asimilados dentro del elemento raíz, y la jerarquía resultante es la siguiente:
 
 - contexto de apilamiento raíz
-
   - DIV #2 (z-index 1)
   - DIV #4 (z-index 2)
 

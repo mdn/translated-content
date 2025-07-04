@@ -34,9 +34,7 @@ str.split([separator[, limit]])
 ### Paramètres
 
 - `separator` Facultatif
-
   - : Le motif décrivant où chaque séparation doit se produire. Le `separator` peut être une simple chaîne de caractères ou peut être une [expression régulière](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp).
-
     - Le cas le plus simple est celui où `separator` n'est qu'un seul caractère ; il est utilisé pour diviser une chaîne délimitée. Par exemple, une chaîne contenant des valeurs séparées par des tabulations (TSV) pourrait être analysée en passant un caractère de tabulation comme séparateur, comme ceci : `myString.split("\t")`.
     - Si `separator` contient plusieurs caractères, cette séquence de caractères entière doit être trouvée afin de diviser la chaîne.
     - Si `separator` est omis ou n'apparaît pas dans la chaîne `str`, le tableau retourné contient un élément constitué de la chaîne entière.
@@ -47,9 +45,7 @@ str.split([separator[, limit]])
     > Lorsque une chaîne vide (`""`) est utilisée comme séparateur, la chaîne n'est **pas** divisée par des _caractères perçus par l'utilisateur_ ([grappes de graphèmes](https://unicode.org/reports/tr29/#Grapheme_Cluster_Boundaries)) ou des caractères unicodes (codepoints), mais par des unités de code UTF-16. Cela détruit les [paires de substituts](https://unicode.org/faq/utf_bom.html#utf16-2). Voir [« Comment obtenir une chaîne de caractères vers un tableau de caractères en JavaScript ? » sur StackOverflow](https://stackoverflow.com/a/34717402).
 
 - `limit` Facultatif
-
   - : Un nombre entier non négatif spécifiant une limite sur le nombre de sous-chaînes à inclure dans le tableau. S'il est fourni, il divise la chaîne de caractères à chaque occurrence du `separator` spécifié, mais s'arrête lorsque la `limit` (limite) d'entrées a été atteinte dans le tableau. Tout texte restant n'est pas du tout inclus dans le tableau.
-
     - Le tableau peut contenir moins d'entrées que la `limit` (limite), si la fin de la chaîne de caractères est atteinte avant que la limite ne soit atteinte.
     - Si `limit` est paramétré sur `0`, un tableau vide `[]` est retourné.
 

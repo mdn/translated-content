@@ -15,7 +15,6 @@ l10n:
 - [迁移至 HTTPS：社区指南](https://movingtohttps.com/)
 - [安全上下文](/zh-CN/docs/Web/Security/Secure_Contexts)
 - [MDN Web 文档术语表](/zh-CN/docs/Glossary)
-
   - {{glossary("HTTP")}}
   - {{glossary("SSL")}}
   - {{glossary("TLS")}}

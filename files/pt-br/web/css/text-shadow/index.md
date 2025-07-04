@@ -45,7 +45,6 @@ text-shadow: unset;
 ### Valores
 
 - \<cor>
-
   - : Opcional. Pode ser especificado tanto antes quanto depois dos valores de deslocamento. Se a cor não é especificada, uma cor UA-chosen será usada.
 
     > [!NOTE]

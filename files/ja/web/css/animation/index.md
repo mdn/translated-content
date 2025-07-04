@@ -90,7 +90,6 @@ animation:
 - 0 ～ 2 個の {{cssxref("&lt;time&gt;")}} の値
 
 - 以下の値は 0 ～ 1 回出現します。
-
   - [`<single-easing-function>`](#single-easing-function)
   - [`<single-animation-iteration-count>`](#single-animation-iteration-count)
   - [`<single-animation-direction>`](#single-animation-direction)

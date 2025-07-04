@@ -29,9 +29,7 @@ original_slug: Learn/CSS/Building_blocks
 - [계단식 (cascade) 및 상속 (inheritance)](/ko/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
   - : 이번 수업의 목적은 CSS 가 HTML 에 적용되는 방법과 충돌을 해결하는 방법을 제어하는 CSS 의 가장 기본적인 개념인 — 계단식, 우선 순위 및 상속 — 에 대한 이해를 발전시키는 것입니다.
 - [CSS 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
-
   - : 사용 가능한 다양한 CSS 선택자가 있으며, 스타일을 지정할 요소를 선택할 때 세밀한 정밀도를 허용합니다. 이 기사와 하위 기사에서는 다양한 유형을 자세히 살펴보고 작동 방식을 살펴 보겠습니다. 하위 기사는 다음과 같습니다.
-
     - [Type, class 및 ID 선택자](/ko/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
     - [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
     - [Pseudo-classes 및 pseudo-elements](/ko/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)

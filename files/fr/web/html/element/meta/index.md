@@ -24,7 +24,6 @@ Comme tous les autres éléments, cet élément inclut [les attributs universels
 > Il faut préciser que l'attribut [`name`](#name) possède une signification spécifique pour l'élément `<meta>` et que l'attribut [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop) ne doit pas être utilisé quand l'un de ces attributs suivant est déjà défini&nbsp;: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
 
 - `charset`
-
   - : Cet attribut indique l'encodage des caractères pour le document. Si cet attribut est présent, sa valeur doit correspondre (quelle que soit la casse) à `"utf-8"`. En effet, seul UTF-8 est valide pour encoder des documents HTML depuis HTML5. Les éléments `<meta>` qui déclarent un encodage doivent apparaître complètement au sein des 1024 premiers octets du document.
 
 - `content`

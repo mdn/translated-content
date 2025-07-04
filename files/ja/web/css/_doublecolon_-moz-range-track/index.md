@@ -48,12 +48,10 @@ input[type="range"]::-moz-range-track {
 ## 関連情報
 
 - Gecko で使われる他の range 型の入力の他の部品をスタイル付けする擬似要素:
-
   - {{cssxref("::-moz-range-thumb")}} は溝をスライドするインジケーターを表します。
   - {{cssxref("::-moz-range-progress")}} はトラックの下の部分を表します。
 
 - 他のブラウザーで使われる同様の擬似要素:
-
   - {{cssxref("::-webkit-slider-runnable-track")}} WebKit および Blink (Safari, Chrome, Opera) が対応している擬似要素
   - {{cssxref("::-ms-track")}} Internet Explorer および Edge が対応している擬似要素
 

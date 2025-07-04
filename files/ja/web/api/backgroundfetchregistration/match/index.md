@@ -21,9 +21,7 @@ match(request, options)
 - `request`
   - : 取得したい record の {{domxref("Request")}}。これは {{domxref("Request")}} オブジェクトまたは URL です。
 - `options` {{optional_inline}}
-
   - : `match` 操作のオプションを指定するオブジェクトです。以下が利用可能です。
-
     - `ignoreSearch`
       - : URL 中のクエリー文字列を無視するかどうか指定するbool 値です。例えば `true` のとき、`http://foo.com/?value=bar` の `?value=bar` 部分はマッチ処理で無視されます。デフォルトは `false` です。
     - `ignoreMethod`

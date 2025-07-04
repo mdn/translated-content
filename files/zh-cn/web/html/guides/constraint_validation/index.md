@@ -413,7 +413,6 @@ window.onload = () => {
 以下一些方法可以控制违反约束条件的文本：
 
 - 以下元素上的 `setCustomValidity(message)` 方法：
-
   - {{HTMLElement("fieldset")}}。备注：大多数浏览器中，在 fieldset 元素上设定自定义验证信息不会阻止表单提交。
   - {{HTMLElement("input")}}
   - {{HTMLElement("output")}}

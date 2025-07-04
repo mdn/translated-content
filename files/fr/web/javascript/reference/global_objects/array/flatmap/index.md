@@ -18,9 +18,7 @@ var new_array = arr.flatMap(function callback(currentValue[, index[, array]]) {
 ### Paramètres
 
 - `callback`
-
   - : La fonction qui produit un élément du nouveau tableau et qui prend trois arguments :
-
     - `currentValue`
       - : La valeur du tableau qui est traitée.
     - `index`{{optional_inline}}

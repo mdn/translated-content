@@ -265,13 +265,11 @@ console.log(eval(s2.valueOf())); // 返回数字 4
 - {{jsxref("String.prototype.substring()")}}
   - : 返回一个新字符串，其中包含来自（或之间）指定索引（或多个索引）的调用字符串的字符。
 - {{jsxref("String.prototype.toLocaleLowerCase()")}}
-
   - : 字符串中的字符将转换为小写，同时尊重当前语言环境。
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} 相同的结果。
 
 - {{jsxref("String.prototype.toLocaleUpperCase()", "String.prototype.toLocaleUpperCase( [<var>locale</var>, ...<var>locales</var>])")}}
-
   - : 字符串中的字符将转换为大写，同时尊重当前语言环境。
 
     对于大多数语言，这将返回与 {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} 相同的结果。

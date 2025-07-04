@@ -297,7 +297,6 @@ elem.removeEventListener("mousemove", handleMouseMove);
 - **批量进行 DOM 更改**：对于重要的 DOM 更改，你应该将它们按批次处理，而不是在每个更改发生时单独执行。这可以减少浏览器实际执行的工作量，并改善感知性能。将多个更新一次性完成，而不是不断进行小的更新，可以使界面看起来更流畅。一个有用的技巧是，当你有大量 HTML 代码要添加到页面时，先构建整个片段（通常在 {{domxref("DocumentFragment")}} 内部），然后一次性将其附加到 DOM 中，而不是逐个附加每个项目。
 - **简化 HTML 代码**：DOM 树越简单，使用 JavaScript 进行访问和操作的速度就越快。仔细思考你的用户界面的需求，并删除不必要的冗余代码。
 - **减少循环代码的数量**：循环是很消耗资源的，因此尽可能减少代码中的循环使用量。在不可避免使用循环的情况下：
-
   - 在不必要时避免运行完整的循环，适时使用 {{jsxref("Statements/break", "break")}} 或 {{jsxref("Statements/continue", "continue")}} 语句。例如，如果你正在搜索数组中的特定名称，找到名称后就可以跳出循环；没有必要继续运行循环迭代：
 
     ```js
@@ -325,7 +324,6 @@ elem.removeEventListener("mousemove", handleMouseMove);
     ```
 
 - **将计算任务移到主线程之外**：在前面我们谈到了 JavaScript 通常在主线程上运行任务，长时间的操作可能会阻塞主线程，从而导致 UI 性能很差。我们还展示了如何将长任务分解为较小的任务，以缓解这个问题。处理这类问题的另一种方法是将任务完全移到主线程之外。有几种方法可以实现这一点：
-
   - 使用异步代码：[异步 JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)基本上是指不会阻塞主线程的 JavaScript。异步 API 通常用于处理诸如从网络获取资源、访问本地文件系统上的文件或打开用户网络摄像头流等操作。因为这些操作可能需要很长时间，所以在等待它们完成的过程中阻塞主线程是不好的。相反，浏览器会执行这些函数，继续运行后续代码，这些函数将*在将来某个时间点*返回结果。现代异步 API 基于 Promise，这是一种用于处理异步操作的 JavaScript 语言特性。如果你有功能可以从异步运行中受益，则可以[编写自己的基于 Promise 的函数](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Implementing_a_promise-based_API)。
   - 在 Web Worker 中进行计算：[Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers) 是一种机制，允许你打开一个单独的线程来运行一段 JavaScript 代码，以便不会阻塞主线程。Worker 有一些限制，最大的限制是你不能在 Worker 内部运行 DOM 脚本。你可以执行大多数其他操作，并且 Worker 可以与主线程之间发送和接收消息。Worker 的主要用例是如果你有大量计算需要进行，而不希望它阻塞主线程，那么就需要使用 Worker。在 Worker 中进行计算，等待结果，并在准备好时将结果发送回主线程。
   - **使用 WebGPU**：[WebGPU](/zh-CN/docs/Web/API/WebGPU_API) 是一种浏览器 API，允许 Web 开发人员使用底层系统的 GPU（Graphics Processing Unit，图形处理单元）来进行高性能计算和绘制复杂的图像，这些图像可以在浏览器中呈现。它相对复杂，但可以提供比 Web Worker 更好的性能优势。

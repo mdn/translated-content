@@ -213,13 +213,11 @@ browser.runtime.sendMessage({
 - [`runtime.sendMessage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - `content_scripts` を使用した例:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - `tabs.executeScript()` を使用した例:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)

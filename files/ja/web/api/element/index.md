@@ -54,7 +54,6 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 - {{DOMxRef("Element.localName")}} {{ReadOnlyInline}}
   - : 文字列で、この要素の修飾名のローカル部分を表します。
 - {{DOMxRef("Element.namespaceURI")}} {{ReadOnlyInline}}
-
   - : この要素の名前空間の URI。名前空間がない場合は `null` になります。
 
     > [!NOTE]

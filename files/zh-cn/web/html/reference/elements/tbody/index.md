@@ -130,9 +130,7 @@ td {
 ### 废弃的属性
 
 - `align` {{deprecated_inline}}
-
   - : 该[枚举](/zh-CN/docs/Glossary/Enumerated)属性指定了每个单元格的水平对齐方式。可能的值如下：
-
     - `left`，表格内容左对齐
     - `center`，表格内容居中对齐
     - `right`，表格内容右对齐
@@ -143,10 +141,10 @@ td {
 
     由于该属性已经废弃，请使用 CSS {{cssxref("text-align")}} 属性作为替代。
 
-    > **备注：** `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
+    > [!NOTE]
+    > `text-align` 属性的 `align="char"` 取值尚未在任何浏览器中实现。请参阅 [`text-align` 的浏览器兼容性小节](/zh-CN/docs/Web/CSS/text-align#浏览器兼容性)以获取 `<string>` 的可能取值。
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : 表格的背景颜色。它是一个以 '`#`' 开头的 [6 位数十六进制 RGB 代码](/zh-CN/docs/Web/CSS/color_value#rgb_颜色)。也可以使用任意一个预定义的[颜色关键字](/zh-CN/docs/Web/CSS/color_value#颜色关键字)。
 
     由于该属性已经废弃，请使用 CSS {{cssxref("background-color")}} 属性作为替代。
@@ -156,9 +154,7 @@ td {
 - `charoff` {{deprecated_inline}}
   - : 这个属性用来表示从 `char` 属性指定的对齐字符中偏移列数据的字符数。
 - `valign` {{deprecated_inline}}
-
   - : 该属性指定了每个单元格的垂直对齐方式。可能的值如下：
-
     - `baseline` 将文本尽量放置在单元格底部，但在[基线](https://en.wikipedia.org/wiki/Baseline_%28typography%29)处而不是字符底部对齐。如果字符具有相同大小，则与 `bottom` 效果一致。
     - `bottom` 将文本尽量放置在单元格底部。
     - `middle` 将文本放置在单元格中间。
@@ -378,6 +374,5 @@ tbody > tr > th {
 ## 参见
 
 - 对于 `<tbody>` 元素可能特别有用的 CSS 属性和[伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)：
-
   - {{ cssxref(":nth-child") }} 伪类用于设置单元格的对齐方式；
   - {{ cssxref("text-align") }} 属性用于将所有单元格内容对齐在同一个字符上，如 `.`。

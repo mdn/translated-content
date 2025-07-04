@@ -31,9 +31,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
-
     - `downloadId`
       - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
 

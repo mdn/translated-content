@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/cite
 ### Definición
 
 - **cite** -_cita_ . Marca una referencia a una fuente, o el autor de un texto citado.
-
   - : **Sus etiquetas son**: \<cite> y \</cite> (ambas obligatorias)
 
     **Está definido como**: [Elemento de frase](/es/docs/HTML/Elemento/Tipos_de_elementos#defrase), y por lo tanto [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#enlinea).
@@ -217,7 +216,7 @@ En los navegadores basados en Mozilla (y en otros) el contenido de cite es mostr
 
 ### Notas
 
-- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](/es/docs/Web/HTML/Element/q) (en línea) y [blockquote](/es/docs/Web/HTML/Element/blockquote) (en bloque).
+- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](/es/docs/Web/HTML/Reference/Elements/q) (en línea) y [blockquote](/es/docs/Web/HTML/Reference/Elements/blockquote) (en bloque).
 
 ### Referencia
 

@@ -18,9 +18,7 @@ scan(options)
 ### 参数
 
 - `options` {{optional_inline}}
-
   - : 一个包含以下属性的对象：
-
     - `signal`
       - : 一个 {{DOMxRef("AbortSignal")}}，允许取消此 `scan()` 操作。
 

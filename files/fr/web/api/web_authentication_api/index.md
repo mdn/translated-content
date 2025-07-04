@@ -52,35 +52,28 @@ Pour commencer (l'étape 0 dans le diagramme), l'application effectue la requêt
 Les étapes suivantes sont&nbsp;:
 
 1. **Le serveur envoie le challenge, les informations liées à l'utilisatrice ou à l'utilisateur et les informations relatives au tiers de confiance.**
-
    - Ces informations sont envoyées au programme JavaScript. Le protocole de communication avec le serveur ne fait pas partie de la spécification de l'API Web Authentication. Il s'agit généralement d'une communication via HTTPS en [REST](/fr/docs/Glossary/REST) (et qui utilisera probablement [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)) (en théorie, tout protocole sécurisé peut être utilisé). Les paramètres reçus du serveur seront passés lors de l'appel à [`create()`](/fr/docs/Web/API/CredentialsContainer/create) (généralement avec peu ou pas de modification) qui renverra [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) contenant un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse).
 
    > [!WARNING]
    > Il est absolument nécessaire que le challenge soit un tampon mémoire d'informations aléatoires (d'au moins 16 octets) et qui soit généré sur le serveur afin de garantir la sécurité du processus d'enregistrement.
 
 2. **Le navigateur appelle `authenticatorMakeCredential()` qui sollicite l'authentificateur.**
-
    - Dans ses rouages internes, le navigateur valide les paramètres et utilise des valeurs par défaut pour les paramètres non renseignés. Cela devient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON). Un paramètre majeur est l'origine. Celle-ci est enregistrée au sein de `clientData` afin que l'origine puisse être vérifiée par le serveur ultérieurement. Les paramètres de l'appel à `create()` sont transmis à l'authentificateur avec une empreinte SHA-256 de `clientDataJSON` (seule une empreinte est envoyée, car la communication avec l'authentificateur peut se faire via un canal de communication à faible bande passante comme le NFC ou le Bluetooth), l'authentificateur va signer l'empreinte pour s'assurer qu'elle n'a pas été corrompue.
 
 3. **L'authentificateur crée une nouvelle paire de clés et une attestation.**
-
    - Avant de faire quoi que ce soit, l'authentificateur demandera généralement une vérification de la part de la personne. Cela peut être la saisie d'un code, l'utilisation d'une empreinte digitale ou rétinienne, etc. Il s'agit de prouver que la personne est présente et consent à l'enregistrement. Après cette vérification, l'authentificateur créera une nouvelle paire de clés asymétrique et stockera la clé privée de façon sécurisée afin qu'elle puisse être utilisée à l'avenir. La clé publique devient une composante de l'attestation qui est signée par l'authentificateur à l'aide d'une clé privée qui a été gravée dans l'authentificateur lors de sa fabrication et qui possède une chaîne de certificats qui permet de remonter jusqu'à une autorité de confiance.
 
 4. **L'authentificateur renvoie les données au navigateur.**
-
    - La nouvelle clé publique, un identifiant d'authentification globalement unique ainsi que les autres données de l'attestation sont renvoyées au navigateur et deviennent `attestationObject`.
 
 5. **Le navigateur crée les données finales et l'application envoie la réponse au serveur.**
-
    - La promesse fournie par `create()` est résolue en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential), possédant une propriété [`PublicKeyCredential.rawId`](/fr/docs/Web/API/PublicKeyCredential/rawId) qui correspond à l'identifiant d'authentification globalement unique et une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response) contenant le reste de la réponse sous la forme d'un objet [`AuthenticatorAttestationResponse`](/fr/docs/Web/API/AuthenticatorAttestationResponse) qui contient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON) et [`AuthenticatorAttestationResponse.attestationObject`](/fr/docs/Web/API/AuthenticatorAttestationResponse/attestationObject). Cet objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) est renvoyé au serveur en utilisant le format et le protocole voulu.
 
    > [!NOTE]
    > Les propriétés qui sont des `ArrayBuffer` doivent être encodés en base64 ou d'une autre façon.
 
 6. **Le serveur valide et finalise l'enregistrement.**
-
    1. Pour finir, le serveur réalise une suite de vérification pour s'assurer que l'enregistrement est terminé et qu'il n'y a pas eu de corruption. Parmi ces vérifications, on a&nbsp;:
-
       1. La vérification que le challenge reçu correspond bien au challenge envoyé&nbsp;;
       2. La vérification que l'origine correspond bien à l'origine attendu&nbsp;;
       3. La validation de la signature de l'empreinte des données du client et de l'attestation en utilisant la chaîne de certificats associée au modèle de l'authentificateur.
@@ -108,32 +101,25 @@ Pour commencer (il s'agit de l'étape 0 sur le diagramme), l'application effectu
 On a ensuite ces étapes pour l'authentification&nbsp;:
 
 1. **Le serveur envoie un challenge.**
-
    - Le serveur envoie un challenge au programme JavaScript. Le protocole de communication n'est pas détaillé par la spécification. Généralement, on a une requête HTTPS [REST](/fr/docs/Glossary/REST) (qui utilise [l'API Fetch](/fr/docs/Web/API/Fetch_API) ou encore [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)), mais il peut s'agir, en théorie, de n'importe quel protocole sécurisé. Les paramètres reçus du serveur sont passés à l'appel de la méthode [`get()`](/fr/docs/Web/API/CredentialsContainer/get) avec peu ou pas de modification.
 
    > [!WARNING]
    > Il est crucial que le challenge soit un tampon d'informations aléatoires (au moins 16 octets) et que celui-ci ait été généré sur le serveur pour garantir la sécurité du processus d'authentification.
 
 2. **Le navigateur appelle `authenticatorGetCredential()` qui sollicite l'authentificateur.**
-
    - Dans ses rouages internes, le navigateur valide les paramètres et utilise des valeurs par défaut pour les paramètres non renseignés. Cela devient [`AuthenticatorResponse.clientDataJSON`](/fr/docs/Web/API/AuthenticatorResponse/clientDataJSON). Un des paramètres les plus importants est l'origine, enregistrée dans `clientData` afin qu'elle puisse être vérifiée par le serveur par la suite. Les paramètres passés à `get()` sont transmis à l'authentificateur avec une empreinte SHA-256 de `clientDataJSON` (seule une empreinte est envoyée, car la communication avec l'authentificateur peut se faire via un canal de communication à faible bande passante comme le NFC ou le Bluetooth), l'authentificateur va signer l'empreinte pour s'assurer qu'elle n'a pas été corrompue.
 
 3. **L'authentificateur crée une assertion.**
-
    - L'authentificateur trouve des informations d'authentification associées au service qui correspond à l'identifiant du tiers de confiance et demande à la personne son consentement pour l'authentification. Si ces deux étapes sont réussies, l'authentificateur crée une nouvelle assertion en signant `clientDataHash` et `authenticatorData` avec la clé privée générée pour ce compte pendant l'enregistrement.
 
 4. **L'authentificateur renvoie les données au navigateur.**
-
    - L'authentificateur renvoie `authenticatorData` et la signature de l'assertion au navigateur.
 
 5. **Le navigateur crée les données finales et l'application envoie sa réponse au serveur.**
-
    - Le navigateur résout [la promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) en un objet [`PublicKeyCredential`](/fr/docs/Web/API/PublicKeyCredential) ayant une propriété [`PublicKeyCredential.response`](/fr/docs/Web/API/PublicKeyCredential/response). L'application JavaScript transmet alors ces données au serveur en utilisant le format et le protocole de son choix.
 
 6. **Le serveur valide les données reçues et finalise l'authentification.**
-
    1. À la réception de la réponse à la requête d'authentification, le serveur réalise une validation de la réponse avec différentes étapes comme&nbsp;:
-
       1. Utiliser la clé publique enregistrée lors de la requête d'enregistrement afin de valider la signature de l'authentificateur.
       2. Vérifier que le challenge signé par l'authenticateur correspond à celui généré par le serveur.
       3. Vérifier que l'identifiant du tiers de confiance est celui attendu pour ce service.

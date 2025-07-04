@@ -19,7 +19,6 @@ newValueSpecifiedUnits(unitType, valueInSpecifiedUnits)
 ### 引数
 
 - `unitType`
-
   - : 長さの値を変換する単位型を表す定数です。 これは、 {{domxref("SVGLength.unitType", "unitType")}} プロパティに対して定義された定数値のいずれかでなければならず、 `SVG_LENGTHTYPE_UNKNOWN` は例外となります。
     - `SVGLength.SVG_LENGTHTYPE_NUMBER`: 単位なしの値に変換
     - `SVGLength.SVG_LENGTHTYPE_PERCENTAGE`: パーセント値に変換

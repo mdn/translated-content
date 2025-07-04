@@ -172,7 +172,6 @@ Aqui nós temos:
 
 1. A palavra-chave `for`, seguido por parênteses.
 2. Dentro do parênteses temos três itens, separados por ponto e vírgula:
-
    1. O **inicializador**— geralmente é uma variável configurada para um número, que é incrementado para contar o número de vezes que o loop foi executado. É também por vezes referido como uma **variável de contador**.
    2. A **condição-saída** — como mencionado anteriormente, aqui é definido quando o loop deve parar de executar. Geralmente, essa é uma expressão que apresenta um operador de comparação, um teste para verificar se a condição de saída foi atendida.
    3. A **expressão-final** — isso sempre é avaliado (ou executado) cada vez que o loop passou por uma iteração completa. Geralmente serve para incrementar (ou, em alguns casos, decrementar) a variável do contador, aproximando-a do valor da condição de saída.
@@ -230,7 +229,6 @@ Aqui mostra um loop sendo usado para iterar os itens em uma matriz e fazer algo 
 1. O iterador, `i`, começa em `0` (`var i = 0`).
 2. Foi dito para executar até que não seja menor que o comprimento do array dos gatos. Isso é importante - a condição de saída mostra a condição sob a qual o loop ainda será executado. No caso, enquanto `i < cats.length` for verdadeiro, o loop continuará executando.
 3. Dentro do loop, nós concatenamos o item de loop atual (`cats[i]` é `cats[o nome do item que está iterado no momento]`) junto com uma vírgula e um espaço, no final da variável `info` . Assim:
-
    1. Durante a primeira execução, `i = 0`, então `cats[0] + ', '` será concatenado na variável info ("Bill").
    2. Durante a segunda execução, `i = 1`, so `cats[1] + ', '` será concatenado na variável info ("Jeff, ")
    3. E assim por diante. Após cada execução do loop, 1 será adicionado à `i` (`i++`), então o processo será iniciado novamente.
@@ -362,7 +360,6 @@ btn.addEventListener("click", function () {
 2. Em seguida, anexamos um ouvinte de evento ao botão (`btn`), de modo que quando ele é pressionado, algum código é invocado para executar a pesquisa e retornar os resultados.
 3. Armazenamos o valor que foi inserido no input de texto em uma variável chamada `searchName`, antes de limpar a entrada de texto e focar novamente, deixando o campo pronto para a próxima pesquisa.
 4. Agora, na parte interessante, o loop for:
-
    1. Iniciamos o contador em `0`, executamos o loop até que o contador não seja menor que `contacts.length`, e incrementamos `i` com 1 depois e cada iteração do loop.
    2. Dentro do loop, primeiro dividimos o contato atual (`contacts[i]`) no caractere " : " e armazenamos os dois valores resultantes em uma matriz chamada `splitContact`.
    3. Em seguida, usamos uma instrução condicional para testar se o `splitContact[0]` (nome do contato) é igual ao `searchName`. Se for igual, inserimos uma string no parágrafo para mostrar em tela qual é o número do contato e usamos o `break` para encerrar o loop.
@@ -520,13 +517,11 @@ Nesse exercício, nós queremos que você imprima uma simples contagem regressiv
 
 - Faça um loop de 10 até 0. Fornecemos à você um inicializador — `var i = 10;`.
 - Para cada iteração, crie um novo parágrafo e o anexe à saída `<div>`, que selecionamos usando `var output = document.querySelector('.output');`. Nos comentários, nós providenciamos a você três linhas de código que precisam ser usadas em algum lugar dentro do loop:
-
   - `var para = document.createElement('p');` — cria um novo parágrafo.
   - `output.appendChild(para);` — anexa o parágrafo à saída `<div>`.
   - `para.textContent =` — faz o texto dentro do parágrafo ser igual ao que você coloca do lado direito, depois do sinal de igual.
 
 - Números de iteração diferentes exigem que texto diferente seja inserido no parágrafo para essa iteração (você precisará de uma declaração condicional e várias linhas `para.textContent =` ):
-
   - Se o número é 10, imprima "Contagem regressiva 10" no parágrafo.
   - Se o número é 0, imprima "Lançar!" no parágrafo.
   - Para qualquer outro número, apenas o imprima no parágrafo.
@@ -675,7 +670,6 @@ Especificamente, nós queremos que você:
 
 - Escreva um loop que iterará de 0 até o comprimento do array `people`. Você precisará começar com um inicializador de `var i = 0;`, Mas qual condição de saída você precisa?
 - Durante cada iteração de loop, verifique se o item atual do array é igual a "Phil" ou "Lola" usando uma declaração condicional:
-
   - Se for, concatene o item do array no final do `textContent` do paragrafo `refused`, seguido por uma vírgula e um espaço.
   - Se não for, concatene o item do array no final do `textContent` do paragrafo `admitted`, seguido por uma vírgula e um espaço.
 

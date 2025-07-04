@@ -30,17 +30,13 @@ browser.sidebarAction.setPanel(
 ### 参数
 
 - `details`
-
   - : `object`。包含如下属性的对象：
-
     - `panel`
-
       - : `string` 或 `null`。要加载到侧边栏中的面板，指定为指向 HTML 文档的 URL，或 `null`，或空字符串。
 
         这可以指向扩展内部打包的文件（例如使用 {{WebExtAPIRef("runtime.getURL")}} 创建的文件）或远程文档（例如 `https://example.org/`）。它必须是有效的 URL。
 
         如果 `panel` 是 `null` 或 `""`，则将删除先前设置的面板，同时：
-
         - 如果指定了 `tabId` 并且标签页设置了标签页特定面板，则标签页将从其所属窗口继承面板。
         - 如果指定了 `windowId` 并且窗口设置了窗口特定面板，则窗口将继承全局面板。
         - 否则，全局面板将重置为清单面板。

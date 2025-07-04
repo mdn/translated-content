@@ -20,9 +20,7 @@ var getting = browser.history.getVisits(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `url`
       - : `string`. L'URL pour laquelle récupérer les informations de visite.
 

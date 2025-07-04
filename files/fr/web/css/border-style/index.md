@@ -111,9 +111,7 @@ Chacune des valeurs peut être un des mots-clés parmi la liste suivante.
 ### Valeurs
 
 - `<line-style>`
-
   - : Un mot-clé qui décrit le style utilisé pour la bordure sur les côtés de la boîte. Ce mot-clé peut prendre l'une des valeurs suivantes&nbsp;:
-
     - `none`
       - : L'effet obtenu est le même qu'avec `hidden`&nbsp;: aucune bordure n'est affichée. Dans ce cas, sauf si une image d'arrière-plan est définie (avec [`background-image`](/fr/docs/Web/CSS/background-image)), la valeur calculée de [`border-width`](/fr/docs/Web/CSS/border-width) sera `0`, même si cette dernière indique une autre valeur. Lorsqu'utilisée sur une cellule d'un tableau avec la fusion des bordures, `none` a la priorité la plus _basse_&nbsp;; donc, si une autre bordure est définie et fusionne avec celle-ci, elle sera affichée.
     - `hidden`

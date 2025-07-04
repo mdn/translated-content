@@ -31,9 +31,7 @@ browser.bookmarks.onRemoved.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `id`
       - : `string`。被移除项目的 ID。
     - `removeInfo`

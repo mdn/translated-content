@@ -37,7 +37,6 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
   `fill`,
 
   `markers`
-
   - : 指定一部分或者全部这些属性的渲染顺序
 
 ### 形式语法

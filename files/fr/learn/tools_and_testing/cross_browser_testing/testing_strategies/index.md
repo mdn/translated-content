@@ -233,7 +233,6 @@ Pour utiliser Virtual Box, vous avez besoin de :
 3. Ouvrez l'appli ; vous verrez une vue ressemblant à ceci : ![](virtualbox.png)
 4. Pour créer une nouvelle machine virtuelle, appuyer sur le bouton _Nouveau_ dans le coin en haut à gauche.
 5. Suivez les instructions et remplissez les boîtes de dialogues suivantes comme il se doit. Vous allez :
-
    1. Donner un nom à votre machine virtuelle
    2. Choisir un système d'exploitation et une version que vous allez installer dessus
    3. Préciser combien de RAM doit être allouée (nous vous recommandons quelque chose comme 2048Mo, ou 2Go)

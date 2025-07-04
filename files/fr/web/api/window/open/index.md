@@ -19,21 +19,16 @@ open(url, target, windowFeatures);
 ### Paramètres
 
 - `url` {{optional_inline}}
-
   - : Une chaîne de caractères indiquant l'URL ou le chemin de la ressource à charger. S'il s'agit d'une chaîne de caractères vide (`""`) ou que ce paramètre est absent, une page blanche est chargée dans le contexte de navigation ciblé.
 
 - `target` {{optional_inline}}
-
   - : Une chaîne de caractères sans espace qui indique le nom ([`Window.name`](/fr/docs/Web/API/Window/name)) du contexte de navigation dans lequel la ressource est chargée. Si le nom ne correspond pas à un contexte déjà existant, un nouveau contexte est créé avec ce nom. [Les mots-clés spécifiques pour `target`](/fr/docs/Web/HTML/Element/a#attr-target), `_self`, `_blank`, `_parent`, et `_top`, peuvent également être utilisés.
 
     Le nom pourra être utilisé comme valeur pour l'attribut `target` d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a#attr-target) ou [`<form>`](/fr/docs/Web/HTML/Element/form#attr-target).
 
 - `windowFeatures` {{optional_inline}}
-
   - : Une chaîne de caractères contenant une liste de fonctionnalités de fenêtre, séparées par des virgules, de la forme `nom=valeur`, ou pour les fonctionnalités booléennes `nom` uniquement. Ces fonctionnalités incluent des options comme la taille et le positionnement par défaut de la fenêtre, s'il faut ouvrir une fenêtre popup minimale, etc. Les options suivantes sont prises en charge&nbsp;:
-
     - `popup`
-
       - : Si cette fonctionnalité est activée, il est demandé au navigateur d'ouvrir la fenêtre sous forme d'une popup minimale. Les fonctionnalités offertes par l'interface utilisateur du navigateur seront choisies par ce dernier (on y trouve généralement seulement la barre d'adresse).
 
         Si `popup` n'est pas activée et qu'il n'y a pas d'autres fonctionnalités déclarées avec ce paramètre, le nouveau contexte de navigation sera un onglet.
@@ -48,23 +43,18 @@ open(url, target, windowFeatures);
         > **Note :** [La valeur `true` a été introduite en mars 2022](https://github.com/whatwg/html/pull/7425). Pour une meilleure compatibilité avec les anciens navigateurs, on utilisera une des autres valeurs.
 
     - `width` ou `innerWidth`
-
       - : Indique la largeur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
 
     - `height` ou `innerHeight`
-
       - : Indique la hauteur de la zone de contenu, incluant les barres de défilement. La valeur minimale requise est 100.
 
     - `left` ou `screenX`
-
       - : Indique la distance, exprimée en pixels, depuis le bord gauche de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
 
     - `top` ou `screenY`
-
       - : Indique la distance, exprimée en pixels, depuis le bord haut de la zone de travail définie par le système d'exploitation, à laquelle la fenêtre sera ouverte.
 
     - `noopener`
-
       - : Si cette fonctionnalité est utilisée, la nouvelle fenêtre n'aura pas accès à la fenêtre d'origine avec [`Window.opener`](/fr/docs/Web/API/Window/opener) (qui renverra alors `null`).
 
         Lorsque `noopener` est utilisé, les noms de cibles qui ne sont pas vides et qui ne sont pas `_top`, `_self`, et `_parent`, sont traités comme `_blank` lorsqu'il s'agit de décider s'il faut ouvrir un nouveau contexte de navigation.
@@ -249,7 +239,6 @@ On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour
 ## FAQ
 
 - Comment empêcher le message de confirmation demandant si on veut fermer la fenêtre&nbsp;?
-
   - : Ce n'est pas possible. **Les nouvelles fenêtres qui ne sont pas ouvertes par JavaScript ne peuvent pas être fermées par JavaScript.** Pour Firefox, la console JavaScript affichera le message d'avertissement suivant&nbsp;: `"Scripts may not close windows that were not opened by script."`. Dans le cas contraire, il serait trop facile de manipuler l'historique des sites visités.
 
     Voir la documentation de la méthode [`window.close()`](/fr/docs/Web/API/Window/close) pour en savoir plus.
@@ -261,7 +250,6 @@ On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour
 - Comment désactiver la possibilité de redimensionner la fenêtre ou comment masquer les barres d'outils&nbsp;?
   - : Il n'est pas possible de forcer ce comportement. Ce sont les utilisatrices et utilisateurs du navigateur qui contrôlent ces fonctionnalités. Aussi, il est recommandé de toujours activer (si besoin) la possibilité de redimensionner et la présence des barres de défilement afin de respecter l'accessibilité du contenu et l'utilisabilité des fenêtres, dans l'intérêt de tout le monde.
 - Comment redimensionner une fenêtre afin que sa taille corresponde à celle de son contenu&nbsp;?
-
   - : On ne peut pas être certain que cela fonctionne, car les utilisatrices et utilisateurs peuvent empêcher le redimensionnement de la fenêtre (par exemple dans Firefox, la préférence `dom.disable_window_move_resize` vaut `true` par défaut).
 
 - Comment savoir qu'une fenêtre précédemment ouverte est toujours ouverte&nbsp;?
@@ -271,7 +259,6 @@ On peut aussi n'utiliser qu'une seule fenêtre secondaire et la réutiliser pour
 - Quelle relation JavaScript existe-t-il entre la fenêtre principale et la fenêtre secondaire&nbsp;?
   - : La méthode `window.open()` fournit à la fenêtre principale une référence vers la fenêtre secondaire. La propriété [`opener`](/fr/docs/Web/API/Window/opener) fournit à la fenêtre secondaire une référence vers la fenêtre principale.
 - Impossible d'accéder aux propriétés de la fenêtre secondaire en raison d'une exception JavaScript "Error: uncaught exception: Permission denied to get property blablabla". Pourquoi&nbsp;?
-
   - : Des raisons de sécurité, en l'occurrence la règle de même origine, empêche un script chargé dans une fenêtre depuis une autre origine **d'accéder ou de modifier** les propriétés d'une autre fenêtre ou les propriétés des objets HTML provenant d'une autre origine. Avant d'exécuter un script ciblant une fenêtre secondaire, le navigateur vérifiera depuis la fenêtre principale que la fenêtre secondaire partage bien la même origine.
 
     Pour en savoir plus, voir [la page de documentation quant à la règle de même origine](/fr/docs/Web/Security/Same-origin_policy)

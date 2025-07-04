@@ -174,7 +174,8 @@ new Function (arg1, arg2, ... argN, functionBody)
 
 ### 生成器函数的构造函数
 
-> **备注：** `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
+> [!NOTE]
+> `GeneratorFunction` 不是一个全局对象，但可以从构造函数实例取得。(详情请查阅[生成器函数](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction)).
 
 > [!NOTE]
 > 不推荐使用构造器函数的构造函数 (`GeneratorFunction` constructor) 创建函数，因为它需要的函数体作为字符串可能会阻止一些 JS 引擎优化，也会引起其他问题。

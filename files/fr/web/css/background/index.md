@@ -91,7 +91,6 @@ background: unset;
 La propriété `background` permet de définir une ou plusieurs couches d'arrière-plan, séparées par des virgules. Chacune des couches peut être définie avec&nbsp;:
 
 - Zéro ou une occurrence d'une valeur&nbsp;:
-
   - `<attachment>`
   - `<bg-image>`
   - `<position>`

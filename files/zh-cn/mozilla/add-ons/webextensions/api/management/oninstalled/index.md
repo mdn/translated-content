@@ -33,9 +33,7 @@ browser.management.onInstalled.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 在此事件发生时调用的函数。此函数接收以下参数：
-
     - `info`
       - : [`ExtensionInfo`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo)，关于已安装的附加组件的信息。
 

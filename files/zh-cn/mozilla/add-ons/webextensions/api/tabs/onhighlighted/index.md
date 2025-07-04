@@ -33,9 +33,7 @@ browser.tabs.onHighlighted.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。该函数接收以下参数：
-
     - `highlightInfo`
       - : `object`。被高亮标签页的 ID 及其窗口的 ID。详见 [highlightInfo](#highlightinfo_2) 部分。
 

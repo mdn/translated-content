@@ -18,9 +18,7 @@ var myEME = new ExtendableMessageEvent(type, init);
 - type
   - : Un {{domxref("DOMString")}} qui définie le type de message créé.
 - init {{optional_inline}}
-
   - : Un objet d'initialisation, qui doit contenir les paramètres suivant:
-
     - `data`: Les données de l'évènement — peut être de n'importe quel type.
     - `origin`: Une {{domxref("DOMString")}} qui définie l'origine de l'environnement du service worker correspondant.
     - `lastEventId`: Une {{domxref("DOMString")}} qui définie le dernier l'id du dernier évènement de l'évènement source.

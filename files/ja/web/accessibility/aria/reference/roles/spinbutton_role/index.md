@@ -61,19 +61,15 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 ## 関連するロール、状態、プロパティ
 
 - [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) （必須）
-
   - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、既定値はありません。
 
 - [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
-
   - : 支援技術は `aria-valuenow` の値を通常は数字で表示します。 `aria-valuenow` が正確な値でない場合は、 `aria-valuetext` を使用して、スピンボタンにより分かりやすい値を提供してください。
 
 - [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
-
   - : 最小値を表し、 `aria-valuemax` より小さい実数値を設定します。存在しない場合、既定値はありません。
 
 - [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
-
   - : 最大値を表し、 `aria-valuemin` より大きな実数値に設定します。存在しない場合、既定値はありません。
 
 - [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)

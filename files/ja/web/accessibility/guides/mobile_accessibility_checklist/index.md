@@ -11,7 +11,6 @@ original_slug: Web/Accessibility/Mobile_accessibility_checklist
 ## 色
 
 - カラーコントラストは、[WCAG 2.0](https://www.w3.org/TR/WCAG/)（英語）の AA レベルの要件に準拠**しなければならない**。
-
   - 通常のテキストでは、4.5:1 のコントラスト比（18 ポイント未満または 14 ポイント未満の太字）。
   - 大きなテキストでは、3:1 のコントラスト比（少なくとも 18 ポイントまたは 14 ポイントの太字）。
 
@@ -21,14 +20,12 @@ original_slug: Web/Accessibility/Mobile_accessibility_checklist
 
 - {{cssxref("opacity")}} がゼロ、{{cssxref("z-index")}} 順、画面外配置のようなコンテンツ非表示テクニックは、可視性を扱うためだけに使用**してはいけない**。
 - 現在の表示画面以外のものは、本当に見えないもの**でなければならない**（特に複数のカードを含む単一ページのアプリに関連します）。
-
   - [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性、{{cssxref("visibility")}} スタイルプロパティ、または {{cssxref("display")}} スタイルプロパティを**使用します**。
   - 絶対に避けられない場合を除いて、`aria-hidden` 属性は使用**するべきではない**（SHOULD NOT）。
 
 ## フォーカス
 
 - 全てのアクティブ化可能要素はフォーカス可能**でなければならない**。
-
   - リンク、ボタン、フォームフィールドのような標準コントロールは、デフォルトでフォーカス可能です。
   - 非標準コントロールには、`button`、`link`、`checkbox` のような適切な [ARIA のロール](https://www.w3.org/TR/wai-aria/#roles)（英語）が割り当てられて**いなければならない**。
 
@@ -37,7 +34,6 @@ original_slug: Web/Accessibility/Mobile_accessibility_checklist
 ## 同等のテキスト
 
 - アプリ内の全ての非厳密で提示的な非テキスト要素には、同等のテキストを提供**しなければならない**。
-
   - 必要に応じて [`alt`](/ja/docs/Web/HTML/Reference/Elements/img#alt) と [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) を使用してください（良いガイドについては、[HTML の title 属性の使用](http://blog.paciellogroup.com/2013/01/using-the-html-title-attribute-updated/)（英語）に関する Steve Faulkner の投稿を参照してください）。
   - 上記の属性が適用できない場合は、`aria-label`、`aria-labelledby`、`aria-describedby` のような適切な [ARIA のプロパティ](https://www.w3.org/TR/wai-aria/#global_states)（英語）を使用してください。
 

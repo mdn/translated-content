@@ -35,9 +35,7 @@ Object.defineProperties(obj, props);
 - `obj`
   - : L'objet dont on souhaite modifier ou définir certaines propriétés.
 - `props`
-
   - : Un objet dont les propriétés propres et énumérables sont des descripteurs de propriétés pour les propriétés à définir ou à modifier. Les descripteurs de propriétés peuvent avoir deux formes (voir {{jsxref("Object.defineProperty()")}} pour plus d'informations) : un descripteur de donnée ou un descripteur d'accesseur. Les descripteurs de donnée et d'accesseur peuvent avoir les clés suivantes :
-
     - `configurable`
       - : `true` si et seulement si le type de ce descripteur peut être modifié et si la propriété peut être supprimée de l'objet.
         **Par défaut : `false`.**
@@ -46,7 +44,6 @@ Object.defineProperties(obj, props);
         **Par défaut : `false`.**
 
     Un descripteur de donnée pourra avoir les clés suivantes :
-
     - `value`
       - : La valeur associée à la propriété. Cela peut être n'importe quelle valeur valide en JavaScript (un nombre, un objet, etc.).
         **Par défaut : {{jsxref("undefined")}}.**
@@ -55,7 +52,6 @@ Object.defineProperties(obj, props);
         **Par défaut : `false`.**
 
     Un descripteur d'accesseur pourra avoir les clés suivantes :
-
     - `get`
       - : Une fonction utilisée comme accesseur pour la propriété ou {{jsxref("undefined")}} s'il n'y a pas d'accesseur. La fonction renvoyée sera utilisée comme valeur pour la propriété.
         **Par défaut : {{jsxref("undefined")}}.**

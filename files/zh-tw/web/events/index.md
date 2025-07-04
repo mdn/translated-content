@@ -855,31 +855,25 @@ This article offers a list of events that can be sent; some are standard events 
 ## 事件分類
 
 - {{DOMxRef("AbortSignal")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/AbortSignal/abort_event)
 
 - {{DOMxRef("AudioScheduledSourceNode")}}
-
   - [ended 事件](/zh-TW/docs/Web/API/AudioScheduledSourceNode/ended_event)
 
 - {{DOMxRef("AudioTrackList")}}
-
   - [addtrack 事件](/zh-TW/docs/Web/API/AudioTrackList/addtrack_event)
   - [change 事件](/zh-TW/docs/Web/API/AudioTrackList/change_event)
   - [removetrack 事件](/zh-TW/docs/Web/API/AudioTrackList/removetrack_event)
 
 - {{DOMxRef("BroadcastChannel")}}
-
   - [messageerror 事件](/zh-TW/docs/Web/API/BroadcastChannel/messageerror_event)
   - [message 事件](/zh-TW/docs/Web/API/BroadcastChannel/message_event)
 
 - {{DOMxRef("DedicatedWorkerGlobalScope")}}
-
   - [messageerror 事件](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope/messageerror_event)
   - [message 事件](/zh-TW/docs/Web/API/DedicatedWorkerGlobalScope/message_event)
 
 - {{DOMxRef("Document")}}
-
   - [animationcancel 事件](/zh-TW/docs/Web/API/Element/animationcancel_event)
   - [animationend 事件](/zh-TW/docs/Web/API/Element/animationend_event)
   - [animationiteration 事件](/zh-TW/docs/Web/API/Element/animationiteration_event)
@@ -927,7 +921,6 @@ This article offers a list of events that can be sent; some are standard events 
   - [wheel 事件](/zh-TW/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("Element")}}
-
   - [animationcancel 事件](/zh-TW/docs/Web/API/Element/animationcancel_event)
   - [animationend 事件](/zh-TW/docs/Web/API/Element/animationend_event)
   - [animationiteration 事件](/zh-TW/docs/Web/API/Element/animationiteration_event)
@@ -1003,13 +996,11 @@ This article offers a list of events that can be sent; some are standard events 
   - [wheel 事件](/zh-TW/docs/Web/API/Element/wheel_event)
 
 - {{DOMxRef("EventSource")}}
-
   - [error 事件](/zh-TW/docs/Web/API/EventSource/error_event)
   - [message 事件](/zh-TW/docs/Web/API/EventSource/message_event)
   - [open 事件](/zh-TW/docs/Web/API/EventSource/open_event)
 
 - {{DOMxRef("FileReader")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/FileReader/abort_event)
   - [error 事件](/zh-TW/docs/Web/API/FileReader/error_event)
   - [loadend 事件](/zh-TW/docs/Web/API/FileReader/loadend_event)
@@ -1018,39 +1009,32 @@ This article offers a list of events that can be sent; some are standard events 
   - [progress 事件](/zh-TW/docs/Web/API/FileReader/progress_event)
 
 - {{DOMxRef("HTMLCanvasElement")}}
-
   - [webglcontextcreationerror 事件](/zh-TW/docs/Web/API/HTMLCanvasElement/webglcontextcreationerror_event)
   - [webglcontextlost 事件](/zh-TW/docs/Web/API/HTMLCanvasElement/webglcontextlost_event)
   - [webglcontextrestored 事件](/zh-TW/docs/Web/API/HTMLCanvasElement/webglcontextrestored_event)
 
 - {{DOMxRef("HTMLDetailsElement")}}
-
   - [toggle 事件](/zh-TW/docs/Web/API/HTMLElement/toggle_event)
 
 - {{DOMxRef("HTMLDialogElement")}}
-
   - [cancel 事件](/zh-TW/docs/Web/API/HTMLDialogElement/cancel_event)
   - [close 事件](/zh-TW/docs/Web/API/HTMLDialogElement/close_event)
 
 - {{DOMxRef("HTMLElement")}}
-
   - [beforeinput 事件](/zh-TW/docs/Web/API/Element/beforeinput_event)
   - [change 事件](/zh-TW/docs/Web/API/HTMLElement/change_event)
   - [input 事件](/zh-TW/docs/Web/API/Element/input_event)
 
 - {{DOMxRef("HTMLFormElement")}}
-
   - [formdata 事件](/zh-TW/docs/Web/API/HTMLFormElement/formdata_event)
   - [reset 事件](/zh-TW/docs/Web/API/HTMLFormElement/reset_event)
   - [submit 事件](/zh-TW/docs/Web/API/HTMLFormElement/submit_event)
 
 - {{DOMxRef("HTMLInputElement")}}
-
   - [invalid 事件](/zh-TW/docs/Web/API/HTMLInputElement/invalid_event)
   - [search 事件](/zh-TW/docs/Web/API/HTMLInputElement/search_event)
 
 - {{DOMxRef("HTMLMediaElement")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/HTMLMediaElement/abort_event)
   - [canplaythrough 事件](/zh-TW/docs/Web/API/HTMLMediaElement/canplaythrough_event)
   - [canplay 事件](/zh-TW/docs/Web/API/HTMLMediaElement/canplay_event)
@@ -1075,90 +1059,72 @@ This article offers a list of events that can be sent; some are standard events 
   - [waiting 事件](/zh-TW/docs/Web/API/HTMLMediaElement/waiting_event)
 
 - {{DOMxRef("HTMLSlotElement")}}
-
   - [slotchange 事件](/zh-TW/docs/Web/API/HTMLSlotElement/slotchange_event)
 
 - {{DOMxRef("HTMLTrackElement")}}
-
   - [cuechange 事件](/zh-TW/docs/Web/API/HTMLTrackElement/cuechange_event)
 
 - {{DOMxRef("HTMLVideoElement")}}
-
   - [enterpictureinpicture 事件](/zh-TW/docs/Web/API/HTMLVideoElement/enterpictureinpicture_event)
   - [leavepictureinpicture 事件](/zh-TW/docs/Web/API/HTMLVideoElement/leavepictureinpicture_event)
 
 - {{DOMxRef("IDBDatabase")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/IDBTransaction/abort_event)
   - [close 事件](/zh-TW/docs/Web/API/IDBDatabase/close_event)
   - [error 事件](/zh-TW/docs/Web/API/IDBTransaction/error_event)
   - [versionchange 事件](/zh-TW/docs/Web/API/IDBDatabase/versionchange_event)
 
 - {{DOMxRef("IDBOpenDBRequest")}}
-
   - [blocked 事件](/zh-TW/docs/Web/API/IDBOpenDBRequest/blocked_event)
   - [upgradeneeded 事件](/zh-TW/docs/Web/API/IDBOpenDBRequest/upgradeneeded_event)
 
 - {{DOMxRef("IDBRequest")}}
-
   - [error 事件](/zh-TW/docs/Web/API/IDBRequest/error_event)
   - [success 事件](/zh-TW/docs/Web/API/IDBRequest/success_event)
 
 - {{DOMxRef("IDBTransaction")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/IDBTransaction/abort_event)
   - [complete 事件](/zh-TW/docs/Web/API/IDBTransaction/complete_event)
   - [error 事件](/zh-TW/docs/Web/API/IDBTransaction/error_event)
 
 - {{DOMxRef("MediaDevices")}}
-
   - [devicechange 事件](/zh-TW/docs/Web/API/MediaDevices/devicechange_event)
 
 - {{DOMxRef("MediaRecorder")}}
-
   - [error 事件](/zh-TW/docs/Web/API/MediaRecorder/error_event)
 
 - {{DOMxRef("MediaStream")}}
-
   - [addtrack 事件](/zh-TW/docs/Web/API/MediaStream/addtrack_event)
   - [removetrack 事件](/zh-TW/docs/Web/API/MediaStream/removetrack_event)
 
 - {{DOMxRef("MediaStreamTrack")}}
-
   - [ended 事件](/zh-TW/docs/Web/API/MediaStreamTrack/ended_event)
   - [mute 事件](/zh-TW/docs/Web/API/MediaStreamTrack/mute_event)
   - [unmute 事件](/zh-TW/docs/Web/API/MediaStreamTrack/unmute_event)
 
 - {{DOMxRef("MessagePort")}}
-
   - [messageerror 事件](/zh-TW/docs/Web/API/MessagePort/messageerror_event)
   - [message 事件](/zh-TW/docs/Web/API/MessagePort/message_event)
 
 - {{DOMxRef("OfflineAudioContext")}}
-
   - [complete 事件](/zh-TW/docs/Web/API/OfflineAudioContext/complete_event)
 
 - {{DOMxRef("PaymentRequest")}}
-
   - [merchantvalidation 事件](/zh-TW/docs/Web/API/PaymentRequest/merchantvalidation_event)
   - [paymentmethodchange 事件](/zh-TW/docs/Web/API/PaymentRequest/paymentmethodchange_event)
   - [shippingaddresschange 事件](/zh-TW/docs/Web/API/PaymentRequest/shippingaddresschange_event)
   - [shippingoptionchange 事件](/zh-TW/docs/Web/API/PaymentRequest/shippingoptionchange_event)
 
 - {{DOMxRef("PaymentResponse")}}
-
   - [payerdetailchange 事件](/zh-TW/docs/Web/API/PaymentResponse/payerdetailchange_event)
 
 - {{DOMxRef("Performance")}}
-
   - [resourcetimingbufferfull 事件](/zh-TW/docs/Web/API/Performance/resourcetimingbufferfull_event)
 
 - {{DOMxRef("PictureInPictureWindow")}}
-
   - [resize 事件](/zh-TW/docs/Web/API/PictureInPictureWindow/resize_event)
 
 - {{DOMxRef("RTCDataChannel")}}
-
   - [bufferedamountlow 事件](/zh-TW/docs/Web/API/RTCDataChannel/bufferedamountlow_event)
   - [close 事件](/zh-TW/docs/Web/API/RTCDataChannel/close_event)
   - [closing 事件](/zh-TW/docs/Web/API/RTCDataChannel/closing_event)
@@ -1167,21 +1133,17 @@ This article offers a list of events that can be sent; some are standard events 
   - [open 事件](/zh-TW/docs/Web/API/RTCDataChannel/open_event)
 
 - {{DOMxRef("RTCDtlsTransport")}}
-
   - [error 事件](/zh-TW/docs/Web/API/RTCDtlsTransport/error_event)
 
 - {{DOMxRef("RTCDTMFSender")}}
-
   - [tonechange 事件](/zh-TW/docs/Web/API/RTCDTMFSender/tonechange_event)
 
 - {{DOMxRef("RTCIceTransport")}}
-
   - [gatheringstatechange 事件](/zh-TW/docs/Web/API/RTCIceTransport/gatheringstatechange_event)
   - [selectedcandidatepairchange 事件](/zh-TW/docs/Web/API/RTCIceTransport/selectedcandidatepairchange_event)
   - [statechange 事件](/zh-TW/docs/Web/API/RTCIceTransport/statechange_event)
 
 - {{DOMxRef("RTCPeerConnection")}}
-
   - [addstream 事件](/zh-TW/docs/Web/API/RTCPeerConnection/addstream_event)
   - [connectionstatechange 事件](/zh-TW/docs/Web/API/RTCPeerConnection/connectionstatechange_event)
   - [datachannel 事件](/zh-TW/docs/Web/API/RTCPeerConnection/datachannel_event)
@@ -1195,15 +1157,12 @@ This article offers a list of events that can be sent; some are standard events 
   - [track 事件](/zh-TW/docs/Web/API/RTCPeerConnection/track_event)
 
 - {{DOMxRef("ScriptProcessorNode")}}
-
   - [audioprocess 事件](/zh-TW/docs/Web/API/ScriptProcessorNode/audioprocess_event)
 
 - {{DOMxRef("ServiceWorkerContainer")}}
-
   - [message 事件](/zh-TW/docs/Web/API/ServiceWorkerContainer/message_event)
 
 - {{DOMxRef("ServiceWorkerGlobalScope")}}
-
   - [activate 事件](/zh-TW/docs/Web/API/ServiceWorkerGlobalScope/activate_event)
   - [contentdelete 事件](/zh-TW/docs/Web/API/ServiceWorkerGlobalScope/contentdelete_event)
   - [install 事件](/zh-TW/docs/Web/API/ServiceWorkerGlobalScope/install_event)
@@ -1213,11 +1172,9 @@ This article offers a list of events that can be sent; some are standard events 
   - [push 事件](/zh-TW/docs/Web/API/ServiceWorkerGlobalScope/push_event)
 
 - {{DOMxRef("SharedWorkerGlobalScope")}}
-
   - [connect 事件](/zh-TW/docs/Web/API/SharedWorkerGlobalScope/connect_event)
 
 - {{DOMxRef("SpeechRecognition")}}
-
   - [audioend 事件](/zh-TW/docs/Web/API/SpeechRecognition/audioend_event)
   - [audiostart 事件](/zh-TW/docs/Web/API/SpeechRecognition/audiostart_event)
   - [end 事件](/zh-TW/docs/Web/API/SpeechRecognition/end_event)
@@ -1231,11 +1188,9 @@ This article offers a list of events that can be sent; some are standard events 
   - [start 事件](/zh-TW/docs/Web/API/SpeechRecognition/start_event)
 
 - {{DOMxRef("SpeechSynthesis")}}
-
   - [voiceschanged 事件](/zh-TW/docs/Web/API/SpeechSynthesis/voiceschanged_event)
 
 - {{DOMxRef("SpeechSynthesisUtterance")}}
-
   - [boundary 事件](/zh-TW/docs/Web/API/SpeechSynthesisUtterance/boundary_event)
   - [end 事件](/zh-TW/docs/Web/API/SpeechSynthesisUtterance/end_event)
   - [error 事件](/zh-TW/docs/Web/API/SpeechSynthesisUtterance/error_event)
@@ -1245,13 +1200,11 @@ This article offers a list of events that can be sent; some are standard events 
   - [start 事件](/zh-TW/docs/Web/API/SpeechSynthesisUtterance/start_event)
 
 - {{DOMxRef("SVGAnimationElement")}}
-
   - [beginEvent 事件](/zh-TW/docs/Web/API/SVGAnimationElement/beginEvent_event)
   - [endEvent 事件](/zh-TW/docs/Web/API/SVGAnimationElement/endEvent_event)
   - [repeatEvent 事件](/zh-TW/docs/Web/API/SVGAnimationElement/repeatEvent_event)
 
 - {{DOMxRef("SVGElement")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/SVGElement/abort_event)
   - [error 事件](/zh-TW/docs/Web/API/SVGElement/error_event)
   - [load 事件](/zh-TW/docs/Web/API/SVGElement/load_event)
@@ -1260,41 +1213,34 @@ This article offers a list of events that can be sent; some are standard events 
   - [unload 事件](/zh-TW/docs/Web/API/SVGElement/unload_event)
 
 - {{DOMxRef("SVGGraphicsElement")}}
-
   - [copy 事件](/zh-TW/docs/Web/API/SVGGraphicsElement/copy_event)
   - [cut 事件](/zh-TW/docs/Web/API/SVGGraphicsElement/cut_event)
   - [paste 事件](/zh-TW/docs/Web/API/SVGGraphicsElement/paste_event)
 
 - {{DOMxRef("TextTrack")}}
-
   - [cuechange 事件](/zh-TW/docs/Web/API/TextTrack/cuechange_event)
 
 - {{DOMxRef("TextTrackList")}}
-
   - [addtrack 事件](/zh-TW/docs/Web/API/TextTrackList/addtrack_event)
   - [change 事件](/zh-TW/docs/Web/API/TextTrackList/change_event)
   - [removeTrack 事件](/zh-TW/docs/Web/API/TextTrackList/removeTrack_event)
 
 - {{DOMxRef("VideoTrackList")}}
-
   - [addtrack 事件](/zh-TW/docs/Web/API/VideoTrackList/addtrack_event)
   - [change 事件](/zh-TW/docs/Web/API/VideoTrackList/change_event)
   - [removetrack 事件](/zh-TW/docs/Web/API/VideoTrackList/removetrack_event)
 
 - {{DOMxRef("VisualViewport")}}
-
   - [resize 事件](/zh-TW/docs/Web/API/VisualViewport/resize_event)
   - [scroll 事件](/zh-TW/docs/Web/API/VisualViewport/scroll_event)
 
 - {{DOMxRef("WebSocket")}}
-
   - [close 事件](/zh-TW/docs/Web/API/WebSocket/close_event)
   - [error 事件](/zh-TW/docs/Web/API/WebSocket/error_event)
   - [message 事件](/zh-TW/docs/Web/API/WebSocket/message_event)
   - [open 事件](/zh-TW/docs/Web/API/WebSocket/open_event)
 
 - {{DOMxRef("Window")}}
-
   - [afterprint 事件](/zh-TW/docs/Web/API/Window/afterprint_event)
   - [animationcancel 事件](/zh-TW/docs/Web/API/Element/animationcancel_event)
   - [animationend 事件](/zh-TW/docs/Web/API/Element/animationend_event)
@@ -1344,16 +1290,13 @@ This article offers a list of events that can be sent; some are standard events 
   - [vrdisplaypresentchange 事件](/zh-TW/docs/Web/API/Window/vrdisplaypresentchange_event)
 
 - {{DOMxRef("Worker")}}
-
   - [messageerror 事件](/zh-TW/docs/Web/API/Worker/messageerror_event)
   - [message 事件](/zh-TW/docs/Web/API/Worker/message_event)
 
 - {{DOMxRef("WorkerGlobalScope")}}
-
   - [languagechange 事件](/zh-TW/docs/Web/API/WorkerGlobalScope/languagechange_event)
 
 - {{DOMxRef("XMLHttpRequest")}}
-
   - [abort 事件](/zh-TW/docs/Web/API/XMLHttpRequest/abort_event)
   - [error 事件](/zh-TW/docs/Web/API/XMLHttpRequest/error_event)
   - [loadend 事件](/zh-TW/docs/Web/API/XMLHttpRequest/loadend_event)
@@ -1363,11 +1306,9 @@ This article offers a list of events that can be sent; some are standard events 
   - [timeout 事件](/zh-TW/docs/Web/API/XMLHttpRequest/timeout_event)
 
 - {{DOMxRef("XRReferenceSpace")}}
-
   - [reset 事件](/zh-TW/docs/Web/API/XRReferenceSpace/reset_event)
 
 - {{DOMxRef("XRSession")}}
-
   - [end 事件](/zh-TW/docs/Web/API/XRSession/end_event)
   - [inputsourceschange 事件](/zh-TW/docs/Web/API/XRSession/inputsourceschange_event)
   - [selectend 事件](/zh-TW/docs/Web/API/XRSession/selectend_event)
@@ -1379,7 +1320,6 @@ This article offers a list of events that can be sent; some are standard events 
   - [visibilitychange 事件](/zh-TW/docs/Web/API/XRSession/visibilitychange_event)
 
 - {{DOMxRef("XRSystem")}}
-
   - [devicechange 事件](/zh-TW/docs/Web/API/XRSystem/devicechange_event)
 
 ## 規範

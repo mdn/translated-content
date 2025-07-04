@@ -40,11 +40,11 @@ El elemento de [HTML](/es/docs/Web/HTML) **`<div>`** es el contenedor genérico 
 }
 ```
 
-Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Global_attributes#lang)), y así sucesivamente.
+Como contenedor "puro", el elemento `<div>` no representa nada inherentemente. En cambio, se usa para agrupar contenido de modo que se pueda diseñar fácilmente usando los atributos [`class`](/es/docs/Web/HTML/Reference/Global_attributes#class) o [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id), marcando una sección de un documento como escrita en un idioma diferente (usando el atributo [`lang`](/es/docs/Web/HTML/Reference/Global_attributes#lang)), y así sucesivamente.
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > El atributo `align` está obsoleto; no lo uses más. En su lugar, deberías usar propiedades o técnicas de CSS como [CSS Grid](/es/docs/Web/CSS/CSS_grid_layout) o [CSS Flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox) para alinear y posicionar elementos `<div>` en la página.
@@ -76,7 +76,7 @@ El elemento `<div>` tiene [un rol implícito de `generic`](https://www.w3.org/TR
 
 ### Un ejemplo con estilos
 
-Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
+Este ejemplo crea un cuadro sombreado aplicando un estilo al `<div>` usando CSS. Ten en cuenta que el uso del atributo [`class`](/es/docs/Web/HTML/Reference/Global_attributes#class) en el `<div>` para aplicar el estilo llamado `"shadowbox"` al elemento.
 
 #### HTML
 

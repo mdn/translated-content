@@ -53,7 +53,6 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLLinkElement.charset")}} {{deprecated_inline}}
   - : 文字列で、対象リソースの文字エンコーディングを表します。
 - {{domxref("HTMLLinkElement.rev")}} {{deprecated_inline}}
-
   - : 文字列で、リソースからこの文書に対してリンクされたリソースの逆相の関係を表します。
 
     > [!NOTE]

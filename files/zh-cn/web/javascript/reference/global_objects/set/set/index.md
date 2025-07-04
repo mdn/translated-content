@@ -29,7 +29,8 @@ new Set()
 new Set(iterable)
 ```
 
-> **备注：** `Set()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}}。
+> [!NOTE]
+> `Set()` 只能用 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new) 构建。试图在没有 `new` 的情况下调用它，会抛出 {{jsxref("TypeError")}}。
 
 ### 参数
 

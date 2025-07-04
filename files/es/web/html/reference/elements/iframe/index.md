@@ -87,7 +87,7 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
 
 ## Atributos
 
-Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento admite [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
 - En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
@@ -98,14 +98,12 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
 - `allow`
   - : Especifíca una [política de características](/es/docs/Web/HTTP/Permissions_Policy) para el `<iframe>`. Vea el articulo [Privacy, permissions, and information security](/es/docs/Web/Privacy) para detalles en temas de seguridad y como `<iframe>` funciona con las Politicas de Herramientas para mantener los sistemas seguros.
 - `allowfullscreen`
-
   - : Definido como `true` si el `<iframe>` puede activar el modo a pantalla completa llamando al método {{domxref("Element.requestFullscreen", "requestFullscreen()")}}.
 
     > [!NOTE]
     > Se considera un atributo heredado y se redefine como `allow="fullscreen"`.
 
 - `allowpaymentrequest`
-
   - : Definido como `true` si se debe permitir que un `<iframe>` de origen cruzado pueda invocar el [API de solicitud de pago](/es/docs/Web/API/Payment_Request_API). <
 
     > [!NOTE]
@@ -116,25 +114,19 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
 - `height`
   - : Indica la altura del frame en HTML5 en píxeles CSS, o en HTML4.01 en píxeles o como un porcentaje.
 - `importance` {{experimental_inline}}
-
   - : La prioridad de descarga en el recurso para el atributo `src` del `<iframe>`. Valores permitidos:
-
     - `auto`: (default) Sin preferencia. El buscador utiliza sus propias heurísticas para decidir la prioridad del recurso.
     - `high`: El recurso debe ser descargado antes que otros recursos de baja-prioridad de los recursos de la página.
     - `low`: El recurso debe ser descargado después de otros recursos de alta-prioridad de los recursos de la página.
 
 - `name`
-
   - : Nombre objetivo para el contexto de navegación incrustado. Se puede utilizar:
-
     - En el atributo target de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
     - En el atributo formtarget de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}
     - En el parámetro windowName en el método {{domxref("Window.open()","window.open()")}}.
 
 - `referrerpolicy`
-
   - : Indicates which [referrer](/es/docs/Web/API/Document/referrer) to send when fetching the frame's resource:
-
     - `no-referrer`: The {{HTTPHeader("Referer")}} header will not be sent.
     - `no-referrer-when-downgrade` (default): The {{HTTPHeader("Referer")}} header will not be sent to {{Glossary("origin")}}s without {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`: The sent referrer will be limited to the origin of the referring page: its [scheme](/es/docs/Archive/Mozilla/URIScheme), {{Glossary("host")}}, and {{Glossary("port")}}.
@@ -145,9 +137,7 @@ Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
     - `unsafe-url`: The referrer will include the origin _and_ the path (but not the [fragment](/es/docs/Web/API/HTMLAnchorElement/hash), [password](/es/docs/Web/API/HTMLAnchorElement/password), or [username](/es/docs/Web/API/HTMLAnchorElement/username)). **This value is unsafe**, because it leaks origins and paths from TLS-protected resources to insecure origins.
 
 - `sandbox`
-
   - : Applies extra restrictions to the content in the frame. The value of the attribute can either be empty to apply all restrictions, or space-separated tokens to lift particular restrictions:
-
     - `allow-forms`: Allows the resource to submit forms. If this keyword is not used, form submission is blocked.
     - `allow-modals`: Lets the resource [open modal windows](https://html.spec.whatwg.org/multipage/origin.html#sandboxed-modals-flag).
     - `allow-orientation-lock`: Lets the resource [lock the screen orientation](/es/docs/Web/API/Screen/lockOrientation).
@@ -191,9 +181,7 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 - `marginwidth` {{ deprecated_inline }}
   - : La cantidad de espacio en píxeles entre el contenido del marco y sus márgenes izquierdo y derecho.
 - `scrolling` {{ deprecated_inline }}
-
   - : Indica cuándo el navegador debe proporcionar una barra de desplazamiento para el marco:
-
     - `auto`: Sólo cuando el contenido del marco es mayor que sus dimensiones.
     - `yes`: Muestra siempre una barra de desplazamiento.
     - `no`: No muestr la barra de desplazamiento nunca.
@@ -201,7 +189,6 @@ Estos atributos están obsoletos y es posible que ya no sean compatibles con tod
 ### Atributos no estándar
 
 - `mozbrowser` {{non-standard_inline}}
-
   - : &#x20;
 
     > [!NOTE]

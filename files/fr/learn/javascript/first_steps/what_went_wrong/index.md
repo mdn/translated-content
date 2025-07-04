@@ -59,7 +59,6 @@ Antérieurement dans le cours, nous vous avons demandé de taper quelques comman
 
 1. Allez à l'onglet dans lequel est affiché `number-game-errors.html`, et ouvrez la console JavaScript. Vous devriez voir un message d'erreur dans les lignes qui suivent&nbsp;: ![](not-a-function.png)
 2. C'est une erreur très facile à trouver, et le navigateur vous fournit quelques indices pour vous en sortir (la copie d'écran ci‑dessus provient de Firefox, mais les autres navigateurs donnent des indications semblables). De gauche à droite, nous avons :
-
    - Une croix rouge indiquant que c'est une erreur.
    - Un message d'erreur précisant ce qui ne va pas : "TypeError: guessSubmit.addeventListener is not a function" ("Type d'erreur&nbsp;: guessSubmit.addeventListener n'est pas une fonction")
    - Un lien "Learn More" ("En savoir plus") pointant sur une page MDN explicitant ce que l'erreur signifie avec pléthore de détails.

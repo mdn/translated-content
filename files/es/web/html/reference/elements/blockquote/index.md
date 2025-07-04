@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/blockquote
 ### Definición
 
 - **blockquote** -_cita en bloque_ . Crea citas en bloque, marca las citas a otros autores o documentos.
-
   - : **Sus etiquetas son**: `<blockquote>` y `</blockquote>` (ambas obligatorias).
 
     **Está definido como**: Elemento [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#enbloque).
@@ -230,11 +229,11 @@ original_slug: Web/HTML/Element/blockquote
 </blockquote>
 ```
 
-- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Element/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Element/q) para citas en línea.
+- **blockquote** tiene un hermano menor: [q](/es/docs/Web/HTML/Reference/Elements/q). **blockquote** sirve para citas en bloque y [q](/es/docs/Web/HTML/Reference/Elements/q) para citas en línea.
 
 <!---->
 
-- A diferencia de [q](/es/docs/Web/HTML/Element/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
+- A diferencia de [q](/es/docs/Web/HTML/Reference/Elements/q), **blockquote** no entrecomilla los contenidos, debe hacerlo el autor (con CSS).
 
 ### Referencia
 

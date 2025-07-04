@@ -29,9 +29,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
-
     - `themeName`
       - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName).
 

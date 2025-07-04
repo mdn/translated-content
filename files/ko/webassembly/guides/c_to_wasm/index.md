@@ -93,7 +93,6 @@ Emscripten SDK를 설치하기 위해, 아래 설명을 참고하세요.
    ```
 
    이번 명령어의 옵션은 약간 다릅니다.
-
    - 컴파일러가 여전히 JavaScript 접착제 코드와 `.html`을 출력한다는 것을 의미하는 `-o hello2.html`을 지정했습니다.
    - 코드를 최적화하는 데 사용되는 `-O3`를 지정했습니다. Emcc에는 `-O0` (최적화 없음), `-O1`, `-O2`, `-Os`, `-Oz`, `-Og` 및 `-O3`을 포함해 다른 C 컴파일러와 마찬가지로 최적화 수준이 존재합니다. `-O3`는 릴리스 빌드에 적합한 설정입니다.
    - 또한 `--shell-file html_template/shell_minimal.html`을 지정했습니다.이 예제는 예제를 실행할 HTML을 만드는 데 사용할 HTML 템플릿의 경로를 제공합니다.
@@ -172,4 +171,4 @@ JavaScript에서 C 코드에 정의된 함수를 쓰고 싶은 경우 Emscripten
 - [ccall/cwrap을 사용하여 JavaScript에서 컴파일된 C 함수 호출](https://kripken.github.io/emscripten-site/docs/porting/connecting_cpp_and_javascript/Interacting-with-code.html#calling-compiled-c-functions-from-javascript-using-ccall-cwrap)
 - [JavaScript로 컴파일할 때 C/C++ 소스 코드의 함수가 사라지거나, 처리할 함수가 없다는 메시지가 나타나는 이유는 무엇인가요?](https://kripken.github.io/emscripten-site/docs/getting_started/FAQ.html#why-do-functions-in-my-c-c-source-code-vanish-when-i-compile-to-javascript-and-or-i-get-no-functions-to-process)
 - [Mozilla Research의 WebAssembly](https://research.mozilla.org/webassembly/)
-- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/existing_C_to_Wasm)
+- [기존 C 모듈을 WebAssembly로 컴파일](/ko/docs/WebAssembly/Guides/Existing_C_to_Wasm)

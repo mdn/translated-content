@@ -58,7 +58,6 @@ Authorization: Digest username=<username>,
 ## ディレクティブ
 
 - `<auth-scheme>`
-
   - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で、視覚情報をエンコードする方法を定義します。
     よく使われる方式（大文字小文字の区別なし）には、 [`Basic`](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります。
 
@@ -71,7 +70,6 @@ Authorization: Digest username=<username>,
 ### Basic 認証
 
 - `<credentials>`
-
   - : 資格情報で、指定された方式によってエンコードされています。
 
     > [!NOTE]

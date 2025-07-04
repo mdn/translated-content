@@ -153,7 +153,6 @@ _変更なし。_
 
 - [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) マニフェストキーで、インストール時に自動的にサイドバーを開くか否かを拡張機能で制御するための `open_at_install` プロパティを追加しました ([Firefox バグ 1460910](https://bugzil.la/1460910))。
 - さまざまなマニフェストキーで `browser_style` プロパティを変更しました:
-
   - [`page_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) および [`browser_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) で、既定値が `false` になりました。
   - [`sidebar_action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) および [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) で、既定値が `true` になりました。
 

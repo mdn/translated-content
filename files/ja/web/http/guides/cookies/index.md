@@ -172,14 +172,12 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   ```
 
   `%x2F` ("/") の文字はディレクトリー区切り文字として解釈され、サブディレクトリーにも同様に一致します。例えば、`Path=/docs` を設定すると、以下のリクエストパスに一致します。
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   ただし、これらのリクエストパスには一致しません。
-
   - `/`
   - `/docsets`
   - `/fr/docs`

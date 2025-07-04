@@ -21,7 +21,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
 ### 参数
 
 - `request`
-
   - : 要测试的请求的详细信息。
     - `initiator` {{optional_inline}}
       - : `string`。假设请求的发起者 URL（如果有）。
@@ -35,7 +34,6 @@ let result = await browser.declarativeNetRequest.testMatchOutcome(
       - : `string`。假设请求的 URL。
 
 - `options` {{optional_inline}}
-
   - : 请求选项的详细信息。
     - `includeOtherExtensions` {{optional_inline}}
       - : `boolean`。表示是否在 `matchedRules` 中包含其他扩展的匹配规则。当其他扩展的规则匹配时，生成的 `matchedRule` 将具有 `extensionId` 属性。默认为 `false`。

@@ -70,9 +70,7 @@ slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 `<area>` 元素是空元素，但是需要包含 4 个属性：
 
 - [`shape`](/zh-CN/docs/Web/HTML/Reference/Elements/area#shape) [`coords`](/zh-CN/docs/Web/HTML/Reference/Elements/area#coords)
-
   - : `shape` 有 4 个值：`circle`, `rect`, `poly`, and `default`. ( `default` `<area>` 表示除去你定义的其他热点的剩余空间.) 根据你选择的形状需要在 `coords` 中提供对应的坐标信息。
-
     - 对于 circle, 提供中心的 x、y 坐标，还需要提供半径。
     - 对于 rectangle, 提供左上角和右下角的 x、y 坐标。
     - 对于 polygon, 提供每个角的 x、y 坐标（至少 6 个值）。

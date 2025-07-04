@@ -2,7 +2,7 @@
 title: Document：querySelector() 方法
 slug: Web/API/Document/querySelector
 l10n:
-  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
+  sourceCommit: 941ade970fd7ebad52af692b6ac27cfd96f94100
 ---
 
 {{ApiRef("DOM")}}
@@ -13,7 +13,7 @@ l10n:
 
 如果指定的選擇器匹配了在文件中被錯誤多次使用的 ID，則回傳具有該 ID 的第一個元素。
 
-根據 [Selectors API](https://www.w3.org/TR/selectors-api/#grammar) 規範，[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
+[CSS 偽元素](/zh-TW/docs/Web/CSS/Pseudo-elements)永遠不會回傳任何元素。
 
 ## 語法
 
@@ -24,7 +24,6 @@ querySelector(selectors)
 ### 參數
 
 - `selectors`
-
   - : 包含一個或多個選擇器的字串。此字串必須是有效的 CSS 選擇器字串；如果不是，則會拋出 `SyntaxError` 例外。
 
     注意 HTML 規範並不要求屬性值是有效的 CSS 識別符。如果 [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/class) 或 [`id`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/id) 屬性值不是有效的 CSS 識別符，那麼在選擇器中使用它之前，你必須對其進行轉義，可以通過呼叫 {{domxref("CSS.escape_static", "CSS.escape()")}} 或使用[轉義字元](/zh-TW/docs/Web/CSS/ident#轉義字元)中描述的技術之一進行轉義。參見[轉義屬性值](#轉義屬性值)範例。

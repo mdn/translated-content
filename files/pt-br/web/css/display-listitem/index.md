@@ -49,7 +49,6 @@ Um valor único de `list-item` fará com que o elemento se comporte como um item
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

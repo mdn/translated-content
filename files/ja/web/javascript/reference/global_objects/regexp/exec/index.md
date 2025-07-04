@@ -47,7 +47,6 @@ exec(str)
 - `groups`
   - : 名前付きキャプチャグループを示す [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)で、そのキーが名前となり、値がキャプチャグループ、またはキャプチャグループが定義されていなければ {{jsxref("undefined")}} です。詳しくは[キャプチャグループ](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences)を参照してください。
 - `indices` {{optional_inline}}
-
   - : このプロパティは [`d`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/hasIndices) フラグが設定されている場合にのみ存在します。これは配列で、それぞれの要素は部分文字列の一致した境界を表します。この配列のそれぞれの要素のインデックスは `exec()` が返す配列の中の一致する部分文字列のインデックスに対応します。言い換えれば、最初の `indices` 項目は照合する文字列全体を表し、2 つ目の `indices` 項目は最初のキャプチャグループなどを表します。各項目自身は 2 要素の配列で、最初の数字は一致の開始インデックスを表し、2 つ目の数字はその終了インデックスを表します。
 
     配列 `indices` にはさらに `groups` プロパティがあり、すべての名前付きキャプチャグループの [`null` プロトタイプオブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object#null-prototype_objects)を保持します。キーはキャプチャグループの名前であり、それぞれの値は 2 つ要素の配列で、最初の数字はキャプチャグループの始めるインデックス、 2 つ目の数字は終わりのインデックスです。正規表現に名前付きキャプチャグループが含まれていない場合、 `groups` は `undefined` となります。

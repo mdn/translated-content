@@ -49,10 +49,8 @@ La \<source> peut être une des suivantes :
 > The `frame-ancestors` directive's syntax is similar to a source list of other directives (e.g. {{CSP("default-src")}}), but doesn't allow `'unsafe-eval'` or `'unsafe-inline'` for example. It will also not fall back to a `default-src` setting. Only the sources listed below are allowed:
 
 - \<host-source>
-
   - : Des hôtes Internet par leur nom de domaine ou adresse IP, aussi bien qu'un [protocole](/fr/docs/URIs_and_URLs) et/ou un numéro de port. L'adresse du site peut inclure un caractère de remplacement optionnel (l'astérisque `'*'`), qui ne peut être utilisée que pour indiquer un sous-domaine ou que tous les ports existants sont des sources valides. Vous ne devez pas mettre de guillemets simples.
     Exemples :
-
     - `http://*.example.com`: correspondra à toutes les tentatives d'accès pour tous les sous-domaines de example.com via le protocole `http:`.
     - `mail.example.com:443`: correspondra à toutes les tentatives d'accès sur le port 443 de mail.example.com.
     - `https://store.example.com`: correspondra à toutes les tentatives d'accès à store.example.com via le protocole `https:`.
@@ -61,9 +59,7 @@ La \<source> peut être une des suivantes :
     > Si aucun schéma d'URL n'est spécifié comme `host-source` et que l'{{HTMLElement("iframe")}} est chargée via une URL `https:`, la page chargeant l'iframe doit aussi être chargée en `https:`, selon la spécification du W3C sur [les correspondances de valeurs de sources](https://w3c.github.io/webappsec-csp/2/#match-source-expression).
 
 - \<scheme-source>
-
   - : Un protocole tel que `http:` or `https:`. Les deux-points sont nécessaires et vous ne devez pas mettre de guillemets. Vous pouvez aussi spécifier des schémas de données bien que ce ne soit pas recommandé.
-
     - `data:` Autorise [les URI `data:`](/fr/docs/Web/URI/Schemes/data) à être utilisées comme source de contenu. _Cette pratique manque de sécurité ; une personne malveillante peut aussi injecter des URI data: arbitraires. Utilisez cette valeur avec parcimonie et certainement pas pour des scripts._
     - `mediastream:` permet aux [URI `mediastream:`](/fr/docs/Web/API/Media_Capture_and_Streams_API) d'être utilisées comme source de contenu.
     - `blob:` permet aux [URI `blob:`](/fr/docs/Web/API/Blob) d'être utilisées comme source de contenu.

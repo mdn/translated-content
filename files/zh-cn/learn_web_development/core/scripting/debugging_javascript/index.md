@@ -71,7 +71,8 @@ if (window.XMLHttpRequest) {
 
 - 确保在你试图使用[异步操作](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)返回的值之前，其已经完成。这通常需要了解如何使用 _promise_：适当地使用 [`await`](/zh-CN/docs/Web/JavaScript/Reference/Operators/await) 或在 promise 的 {{jsxref("Promise.then()", "then()")}} 处理器中运行代码来处理异步调用的结果。有关此主题的介绍，请参见[如何使用 promise](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Promises)。
 
-> **备注：** [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
+> [!NOTE]
+> [JavaScript 代码中的 Bug：JavaScript 开发人员的 10 个最常见错误](https://www.toptal.com/javascript/10-most-common-javascript-mistakes)对这些常见错误及更多内容有很好的讨论。
 
 ### Linter
 

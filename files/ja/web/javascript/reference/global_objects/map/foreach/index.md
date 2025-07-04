@@ -51,9 +51,7 @@ forEach(function(value, key, map) { /* … */ }, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : マップのそれぞれの項目に対して実行される関数。以下の引数を取ります。
-
     - `value` {{Optional_Inline}}
       - : それぞれの反復処理における値です。
     - `key` {{Optional_Inline}}

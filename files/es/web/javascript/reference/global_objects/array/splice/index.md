@@ -33,7 +33,6 @@ array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 - `start`
   - : Índice donde se comenzará a cambiar el array (con 0 como origen). Si es mayor que la longitud del array, el punto inicial será la longitud del array. Si es negativo, empezará esa cantidad de elementos contando desde el final.
 - `deleteCount` {{optional_inline}}
-
   - : Un entero indicando el número de elementos a eliminar del array antiguo.
 
     Si `deleteCount` se omite, o si su valor es mayor que `arr.length - start` (esto significa, si es mayor que el número de elementos restantes del array, comenzando desde `start`), entonces todos los elementos desde `start` hasta el final del array serán eliminados.

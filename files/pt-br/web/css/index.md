@@ -45,7 +45,6 @@ Neste ponto nós já vimos os fundamentos do CSS, como estilizar texto e estiliz
 
 - [Referências CSS](/pt-BR/docs/Web/CSS/Reference): Essa extensa referência para desenvolvedores web experientes descreve todas as propriedades e conceitos do CSS.
 - Conceitos chave do CSS:
-
   - A [sintaxe e formas da linguagem](/pt-BR/docs/Web/CSS/CSS_syntax/Syntax)
   - [Especificidade](/pt-BR/docs/Web/CSS/CSS_cascade/Specificity), [herança](/pt-BR/docs/Web/CSS/CSS_cascade/Inheritance) e [cascata](/pt-BR/docs/Web/CSS/Cascade)
   - [Box model](/pt-BR/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model) e [colapso de margem](/pt-BR/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)

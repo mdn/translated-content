@@ -38,13 +38,11 @@ toLocaleString(locales, options)
 在支持 [`Intl.NumberFormat` API](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的实现中，这些参数与 [`Intl.NumberFormat()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat) 构造函数的参数完全对应。而对于不支持 `Intl.NumberFormat` 的实现，则要求函数忽略这两个参数，使得函数使用的区域（locale）以及返回的字符串的格式完全取决于实现。
 
 - `locales` {{optional_inline}}
-
   - : 表示缩写语言代码（BCP 47 language tag）的字符串，或由此类字符串组成的数组。对应于 `Intl.NumberFormat()` 构造函数的 [`locales`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#locales) 参数。
 
     在不支持 `Intl.NumberFormat` 的实现中，该参数会被忽略，并且通常会使用主机的区域设置。
 
 - `options` {{optional_inline}}
-
   - : 一个调整输出格式的对象。对应于 `Intl.NumberFormat()` 构造函数的 [`options`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat#options) 参数。
 
     在不支持 `Intl.NumberFormat` 的实现中，该参数会被忽略。

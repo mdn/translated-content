@@ -16,13 +16,11 @@ SPA 让用户在访问网站时无需加载新的页面，从而获得性能提�
 - 维基百科上的[单页应用](https://zh.wikipedia.org/wiki/单页应用)
 - [理解客户端 JavaScript 框架](/zh-CN/docs/Learn_web_development/Core/Frameworks_libraries)
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{Glossary("API")}}
   - {{Glossary("AJAX")}}
   - {{Glossary("JavaScript")}}
 
 - 著名的单页应用框架：
-
   - [React](https://reactjs.org/)
   - [Angular](https://angular.io/)
   - [Vue.JS](https://vuejs.org/)

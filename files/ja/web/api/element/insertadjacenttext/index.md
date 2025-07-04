@@ -19,9 +19,7 @@ insertAdjacentText(where, data)
 ### 引数
 
 - `where`
-
   - : 文字列で、メソッドを呼び出した要素から見た相対的な位置を表します。以下のいずれかでなければなりません。
-
     - `'beforebegin'`: `element` 本体の前。
     - `'afterbegin'`: `element` のすぐ内側の、最初の子要素の前。
     - `'beforeend'`: `element` のすぐ内側の、最後の子要素の後。

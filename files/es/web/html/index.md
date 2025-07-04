@@ -49,32 +49,32 @@ El [Área de aprendizaje de HTML](/es/docs/Learn_web_development/Core/Structurin
 
 ## Temas avanzados
 
-- [Imagen compatible con CORS](/es/docs/Web/HTML/CORS_enabled_image)
-  - : El atributo [`crossorigin`](/es/docs/Web/HTML/Element/img#crossorigin), en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
-- [Atributos de configuración de CORS](/es/docs/Web/HTML/Attributes/crossorigin)
+- [Imagen compatible con CORS](/es/docs/Web/HTML/How_to/CORS_enabled_image)
+  - : El atributo [`crossorigin`](/es/docs/Web/HTML/Reference/Elements/img#crossorigin), en combinación con un encabezado {{Glossary("CORS")}} apropiado, permite imágenes definidas por el elemento {{HTMLElement("img")}} que se cargarán desde orígenes externos y se utilizarán en un elemento {{HTMLElement("canvas")}} como si se estuvieran cargando desde el origen actual.
+- [Atributos de configuración de CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : Algunos elementos HTML que brindan soporte para [CORS](/es/docs/Web/HTTP/Guides/CORS), como {{HTMLElement("img")}} o {{HTMLElement("video")}}, tienen un atributo `crossorigin` (propiedad `crossOrigin`), que te permite configurar las solicitudes CORS para los datos extraídos del elemento.
 - [Precarga de contenido con rel='preload'](/es/docs/Web/HTML/Attributes/rel/preload)
-  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento [`rel`](/es/docs/Web/HTML/Element/link#rel) te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
+  - : El valor de `preload` del atributo {{HTMLElement("link")}} del elemento [`rel`](/es/docs/Web/HTML/Reference/Elements/link#rel) te permite escribir solicitudes de recuperación declarativas en tu HTML {{HTMLElement("head")}}, que especifican los recursos que tus páginas necesitarán muy pronto después de la carga, que por lo tanto deseas comenzar a precargar al principio del ciclo de vida de la carga de una página, antes de la representación principal del navegador la maquinaria entra en acción. Esto asegura que estén disponibles antes y es menos probable que bloqueen el primer procesamiento de la página, lo que lleva a mejoras de rendimiento. Este artículo proporciona una guía básica sobre cómo funciona `preload`.
 
 ## Referencias
 
 - [Referencia HTML](/es/docs/Web/HTML/Reference)
-  - : HTML consta de **elementos**, cada uno de los cuales se puede modificar por medio de algunos **atributos**. Los documentos HTML están conectados entre sí mediante [enlaces](/es/docs/Web/HTML/Attributes/rel).
-- [Referencia del elemento HTML](/es/docs/Web/HTML/Element)
+  - : HTML consta de **elementos**, cada uno de los cuales se puede modificar por medio de algunos **atributos**. Los documentos HTML están conectados entre sí mediante [enlaces](/es/docs/Web/HTML/Reference/Attributes/rel).
+- [Referencia del elemento HTML](/es/docs/Web/HTML/Reference/Elements)
   - : Examina una lista de todos los {{Glossary("Elemento", "elementos")}} {{Glossary("HTML")}}.
-- [Referencia de atributos HTML](/es/docs/Web/HTML/Attributes)
+- [Referencia de atributos HTML](/es/docs/Web/HTML/Reference/Attributes)
   - : Los elementos en HTML tienen **atributos**. Se trata de valores adicionales que configuran los elementos o ajustan su comportamiento de diversas formas.
-- [Atributos globales](/es/docs/Web/HTML/Global_attributes)
-  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element), _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
+- [Atributos globales](/es/docs/Web/HTML/Reference/Global_attributes)
+  - : Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Reference/Elements), _incluso aquellos no especificados en el estándar_. Esto significa que cualquier elemento no estándar debe permitir esos atributos, aunque esos elementos hagan que el documento no sea compatible con HTML5.
 - [Elementos en línea](/es/docs/orphaned/Web/HTML/Inline_elements) y [Elementos a nivel de bloque](/es/docs/Glossary/Block-level_content)
   - : Los elementos HTML suelen ser elementos "en línea" o "a nivel de bloque". Un elemento en línea ocupa solo el espacio delimitado por las etiquetas que lo definen. Un elemento a nivel de bloque ocupa todo el espacio de su elemento padre (contenedor), creando así un "bloque".
-- [Tipos de enlaces](/es/docs/Web/HTML/Attributes/rel)
+- [Tipos de enlaces](/es/docs/Web/HTML/Reference/Attributes/rel)
   - : En HTML, se pueden usar varios tipos de enlaces para establecer y definir la relación entre dos documentos. Los elementos de enlace en los que se pueden configurar tipos incluyen {{HTMLElement("a")}}, {{HTMLElement("area")}} y {{HTMLElement("link")}}.
 - [Guía de tipos y formatos de medios en la web](/es/docs/Web/Media/Formats)
   - : Los elementos {{HTMLElement("audio")}} y {{HTMLElement("video")}} te permiten reproducir audio y video de forma nativa dentro de tu contenido sin la necesidad de soporte de software externo.
-- [Categorías de contenido HTML](/es/docs/Web/HTML/Content_categories)
+- [Categorías de contenido HTML](/es/docs/Web/HTML/Guides/Content_categories)
   - : HTML se compone de varios tipos de contenido, cada uno de los cuales se puede usar en ciertos contextos y no está permitido en otros. De manera similar, cada uno tiene un conjunto de otras categorías de contenido que pueden recibir y elementos que pueden o no se pueden usar en ellos. Esta es una guía para estas categorías.
-- [Modo Quirks y modo estándar](/es/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)
+- [Modo Quirks y modo estándar](/es/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)
   - : Información histórica sobre el modo peculiar («_Quirks_» en inglés) y el modo estándar.
 
 ## Temas relacionados

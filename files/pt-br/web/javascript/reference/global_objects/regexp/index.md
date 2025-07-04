@@ -26,9 +26,7 @@ RegExp(padrão[, flags])
 - `padrão`
   - : O texto da expressão regular, ou como em ES5, outro objeto RegExp. Os padrões podem incluir caracteres especiais para correspondencia em um intervalo maior de valores do que uma string literal.
 - `flags`
-
   - : Se especificado, <kbd>flags</kbd>indica os marcadores que podem ser adicionados, ou se um objeto é suficiente para o padrão, os valores de flags serão substituidos por qualquer uma das flags de objetos. O valor de <kbd>flags</kbd>é uma string contendo qualquer combinação dos seguintes valores:
-
     - `g`
       - : corresponder globalmente; acha **todas** as correspondências em vez de parar após achar a primeira
     - `i`

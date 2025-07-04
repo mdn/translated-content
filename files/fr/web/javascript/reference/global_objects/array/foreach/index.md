@@ -29,9 +29,7 @@ arr.forEach(callback, thisArg);
 ### Paramètres
 
 - `callback`
-
   - : La fonction à utiliser pour chaque élément du tableau. Elle prend en compte trois arguments :
-
     - `valeurCourante`
       - : La valeur de l'élément du tableau en cours de traitement.
     - `index` {{optional_inline}}

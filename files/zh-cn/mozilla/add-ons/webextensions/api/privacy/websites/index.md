@@ -14,13 +14,10 @@ l10n:
 ## 属性
 
 - `cookieConfig`
-
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是一个对象。
 
     该对象包含两个属性：
-
     - `behavior`：可以取以下值的字符串：
-
       - “allow_all”：接受所有 cookie。
       - “reject_all”: 拒绝所有 cookie。
       - “reject_third_party”：拒绝所有第三方 cookie。
@@ -31,7 +28,6 @@ l10n:
     - `nonPersistentCookies` {{deprecated_inline}}：布尔值，若为 `true`，则所有的 cookie 都将被视作会话 cookie。
 
 - `firstPartyIsolate`
-
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
 
     若为 `true`，则 `firstPartyIsolate` 偏好将浏览器将所有第三方域名的数据（包括 cookie、HSTS 数据、缓存的图像等）与地址栏中的域关联起来。这可以防止第三方跟踪器使用直接存储的信息来识别用户跨不同的网站，但可能会破坏用户使用第三方帐户（如 Facebook 或 Google 帐户）登录的网站。
@@ -45,7 +41,6 @@ l10n:
 - `referrersEnabled`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若启用，浏览器将在你的请求中附送 [referer](/zh-CN/docs/Web/HTTP/Reference/Headers/Referer) 标头。
 - `resistFingerprinting`
-
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。
 
     浏览器指纹识别是一种网站使用 Web API 收集与浏览器或运行在其上的设备相关的状态或配置数据的做法。通过这样做，网站可以对应地建立一个数字指纹，用于识别和跟踪特定用户。
@@ -57,9 +52,7 @@ l10n:
 - `thirdPartyCookiesAllowed`
   - : {{WebExtAPIRef("types.BrowserSetting")}} 对象，其底层值是布尔值。若为 `false`，则浏览器会阻止[第三方 cookie](/zh-CN/docs/Web/Privacy/Guides/Third-party_cookies)。
 - `trackingProtectionMode`
-
   - : 浏览器的“跟踪保护”特性会阻止向已知会跨站点跟踪用户的域名发出的请求。最常见跟踪用户的站点通常是第三方广告和分析站点。该设置是一个 {{WebExtAPIRef("types.BrowserSetting")}} 对象，用于确定浏览器是否应启用跟踪保护。其底层值是一个字符串，可以取如下的三个值之一：
-
     - `"always"`：跟踪保护已启用。
     - `"never"`：跟踪保护已关闭。
     - `"private_browsing"`：仅在隐私浏览窗口中启用跟踪保护。

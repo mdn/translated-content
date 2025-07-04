@@ -5,7 +5,7 @@ slug: Web/CSS/font
 
 {{CSSRef}}
 
-**`font`** CSS 속성은 {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, {{cssxref("font-family")}}의 [단축 속성](/ko/docs/Web/CSS/Shorthand_properties)입니다. 요소의 글꼴을 시스템 폰트로 설정할 수도 있습니다.
+**`font`** CSS 속성은 {{cssxref("font-style")}}, {{cssxref("font-variant")}}, {{cssxref("font-weight")}}, {{cssxref("font-size")}}, {{cssxref("line-height")}}, {{cssxref("font-family")}}의 [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties)입니다. 요소의 글꼴을 시스템 폰트로 설정할 수도 있습니다.
 
 {{InteractiveExample("CSS Demo: font")}}
 
@@ -81,12 +81,10 @@ section {
 `font`를 단축 속성으로 사용하려면,
 
 - 다음 속성의 값을 포함해야 합니다.
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 다음 속성의 값을 포함할 수 있습니다.
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

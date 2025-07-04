@@ -18,9 +18,7 @@ observer.observe(options);
 ### Paramètres
 
 - `options`
-
   - : Un dictionnaire `PerformanceObserverInit` avec les membres possibles suivants :
-
     - `entryTypes` : Un tableau d'objets [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), chacun spécifiant un type d'entrée de performance à observer. Ne peut pas être utilisé avec les options « `type` » ou « `buffered` ».
     - `type` : Une [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) unique spécifiant exactement un type d'entrée de performance à observer. Ne peut pas être utilisé avec l'option `entryTypes`.
     - `buffered` : Un indicateur booléen pour indiquer si les entrées en mémoire tampon doivent être mises en file d'attente dans la mémoire tampon de l'observateur. Ne doit être utilisé qu'avec l'option « `type` ».

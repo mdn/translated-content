@@ -26,7 +26,8 @@ adoptNode(externalNode)
 
 调用此方法后，`importedNode` 和 `externalNode` 是同个对象。
 
-> **备注：** `importedNode` 的 {{domxref("Node.parentNode")}} 为 `null`，因为它尚未插入文档树中！
+> [!NOTE]
+> `importedNode` 的 {{domxref("Node.parentNode")}} 为 `null`，因为它尚未插入文档树中！
 
 ## 示例
 

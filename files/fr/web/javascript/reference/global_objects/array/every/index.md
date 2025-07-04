@@ -30,9 +30,7 @@ arr.every(callback[, thisArg])
 ### Paramètres
 
 - `callback`
-
   - : La fonction sur laquelle on souhaite tester chaque élément du tableau. Elle prend en compte trois arguments :
-
     - `currentValue`
       - : La valeur de l'élément à traiter.
     - `index`{{Optional_inline}}

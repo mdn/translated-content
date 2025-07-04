@@ -20,27 +20,21 @@ browser.browserAction.setTitle(
 ### 参数
 
 - `details`
-
   - : `object`。新标题和可选的目标标签页或窗口 ID。
-
     - `title`
-
       - : `string` 或 `null`。鼠标悬停时浏览器操作应显示的字符串。
 
         如果 `title` 是空字符串，则使用扩展名作为标题，但 {{WebExtAPIRef("browserAction.getTitle")}} 仍会提供空字符串。
 
         如果 `title` 为 `null`：
-
         - 如果指定了 `tabId`，并且该标签页设置了特定的标签页标题，则该标签页将继承其所属窗口的标题。
         - 如果指定了 `windowId`，并且该窗口设置了特定的窗口标题，则该窗口将继承全局标题。
         - 否则，全局标题将重置为清单中的标题。
 
     - `tabId` {{optional_inline}}
-
       - : `integer`。仅为指定的标签页设置标题。
 
     - `windowId` {{optional_inline}}
-
       - : `integer`。仅为指定的窗口设置标题。
 
 <!---->

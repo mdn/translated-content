@@ -19,6 +19,5 @@ l10n:
 
 - 위키피디아의 [Database](https://en.wikipedia.org/wiki/Database)
 - 용어사전
-
   - {{Glossary("IndexedDB")}}
   - {{Glossary("SQL")}}

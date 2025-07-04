@@ -32,7 +32,6 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 화면이 그려지는 과정은 다음과 같습니다.
 
 1. SVG 루트 요소(Element)부터 시작합니다.
-
    - DTD기반의 SVG유효성 검사는 해결할 수 있는 것보다 많은 문제를 야기하기 때문에 (X)HTML로 알려진 Doctype 선언은 사용하지 않습니다.
    - 다른 유형의 유효성 검사를 위해 SVG버전을 식별하려면 항상 version과 baseProfile 속성(Attribute)을 사용해야 합니다.
    - XML 특수언어(dialect)로서 SVG는 (xmlsn 속성에서) 항상 네임 스페이스(namespace)를 올바르게 바인딩 해야합니다. 자세한 내용은[네임 스페이스 충돌 과정](/ko/docs/Web/SVG/Namespaces_Crash_Course) 페이지를 참조하십시오.
@@ -45,7 +44,6 @@ original_slug: Web/SVG/Tutorial/Getting_Started
 
 - 가장 먼저 주목해야 할 것은 요소를 렌더링하는 순서입니다. SVG 파일 전체에서 유효한 규칙은, 내용의 _위에서 부터 아래로_ 렌더링된다는 것입니다. 요소는 아래에 위치할수록 더 잘보이게 됩니다.
 - 웹의 SVG 파일은 브라우저에 직접 표시되거나 HTML파일에 여러가지 방법을 통해 포함될 수 있습니다:
-
   - HTML이 XHTML이고 application/xhtml+xml 유형으로 제공되는 경우 SVG는 XML 소스에 직접 포함될 수 있습니다.
   - HTML이 HTML5이고 브라우저가 HTML5 브라우저를 준수하는 경우 SVG를 직접 삽입 할 수도 있습니다. 그러나 HTML5 사양을 준수하는 데 필요한 구문 변경이 있을 수 있습니다.
   - SVG 파일은 object 요소로 참조 할 수 있습니다:
@@ -63,9 +61,9 @@ original_slug: Web/SVG/Tutorial/Getting_Started
   - 이론적으로, img 요소로 사용될 수 있습니다만 4.0 이전의 Firefox에서는 작동하지 않습니다.
   - 마지막으로 SVG는 JavaScript로 동적으로 생성되어 HTML DOM에 삽입 될 수 있습니다. 이는 SVG를 처리 할 수없는 브라우저에서 대체하여 구현할 수 있다는 장점이 있습니다.
 
-  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Tutorial/SVG_In_HTML_Introduction)를 참조하십시오.
+  이 주제에 대해 깊이있게 다루기 위해 [이 문서](/ko/docs/Web/SVG/Guides/SVG_in_HTML)를 참조하십시오.
 
-- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorial/Positions)에서 설명 할 것입니다.
+- SVG에서 크기와 단위를 처리하는 방법에 대해서는 [다음 페이지](/ko/docs/Web/SVG/Tutorials/SVG_from_scratch/Positions)에서 설명 할 것입니다.
 
 ### SVG 파일 형식
 

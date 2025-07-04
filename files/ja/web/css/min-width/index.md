@@ -81,7 +81,6 @@ min-width: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : `min-width` を包含ブロックの幅に対するパーセント値で定義します。
 - `auto`
-
   - : 既定値です。指定した要素の自動値のソースは、その表示値によって異なります。ブロックボックス、インラインボックス、インラインブロック、および表レイアウトボックスすべてでは、`auto` は `0` に解決されます。
 
     [フレックスアイテム](/ja/docs/Glossary/Flex_Item)およびグリッドアイテムの場合、最小幅の値は、 `width` プロパティの値などの指定された推奨サイズ、または要素にアスペクト比が設定され、高さが確定しているサイズである場合は変換されたサイズ、それ以外は最小コンテンツサイズが使用されます。フレックスアイテムまたはグリッドアイテムが{{glossary("scroll container","スクロールコンテナー")}}である場合、またはグリッドアイテムが複数のフレックスカラムトラックにまたがる場合、自動最小サイズは `0` になります。
@@ -95,7 +94,6 @@ min-width: unset;
 - `fit-content({{cssxref("&lt;length-percentage&gt;")}})`
   - : 利用可能な空白を指定された引数で置き換えた `fit-content` 式を使用します。すなわち、 `min(max-content, max(min-content, 引数))` です。
 - `stretch`
-
   - : 要素の[マージンボックス](/ja/docs/Learn_web_development/Core/Styling_basics/Box_model#ボックスの構成)の最小の幅を、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block#包含ブロックの識別)の幅に制限します。マージンボックスが包含ブロック内で利用できる空間をすべて満たそうとするため、 `100%` と似たような動作をしますが、結果として得られるサイズは [box-sizing](/ja/docs/Web/CSS/box-sizing) で決定されるボックスではなく、マージンボックスに適用されます。
 
     > [!NOTE]

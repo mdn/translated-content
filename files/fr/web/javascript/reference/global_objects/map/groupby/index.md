@@ -31,11 +31,9 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
 ### Paramètres
 
 - `fnRappel`
-
   - : La fonction à exécuter pour chaque élément du tableau.
 
     Elle est appelée avec les arguments suivants&nbsp;:
-
     - `element`
       - : La valeur de l'élément du tableau en cours de traitement.
     - `index`
@@ -46,7 +44,6 @@ groupToMap(function(element, index, array) { /* … */ }, thisArg)
     La valeur (que ce soit un objet ou une valeur primitive) renvoyée par la fonction de rappel indique le groupe de l'élément courant.
 
 - `thisArg` {{optional_inline}}
-
   - : L'objet à utiliser comme valeur pour [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this) pour `fnRappel`.
 
     Cet argument est ignoré pour les fonctions fléchées qui disposent de leur propre portée lexicale, utilisée à la place. Sinon, si `thisArg` n'est pas fourni, c'est la valeur `this` de la portée d'exécution qui est appelée, ou `undefined` si la fonction est appelée en [mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).

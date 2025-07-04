@@ -21,9 +21,7 @@ new MIDIConnectionEvent(type, midiConnectionEventInit)
 - `type`
   - : `"connect"` または `"disconnect"` のいずれかの文字列です。
 - `midiConnectionEventInit` {{optional_inline}}
-
   - : 以下のフィールドを含む辞書です。
-
     - `port`
       - : 接続または切断されたポートを表す {{domxref("MIDIPort")}} のインスタンスです。
     - `bubbles` {{optional_inline}}

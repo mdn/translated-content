@@ -105,7 +105,6 @@ Tal como as tabelas, grid layout permite ao autor alinhar os componentes da pág
 ## Veja também
 
 - Glossário:
-
   - [Grid lines](/pt-BR/docs/Glossary/Grid_lines)
   - [Grid tracks](/pt-BR/docs/Glossary/Grid_tracks)
   - [Grid cell](/pt-BR/docs/Glossary/Grid_cell)

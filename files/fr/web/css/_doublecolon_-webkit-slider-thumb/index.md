@@ -19,7 +19,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 
 - {{cssxref("::-webkit-slider-runnable-track")}}
 - Les pseudo-éléments analogues utilisés par les autres navigateurs :
-
   - {{cssxref("::-moz-range-thumb")}}
   - {{cssxref("::-ms-thumb")}}
 

@@ -82,16 +82,13 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `as`
   - : Cet attribut est uniquement utilisé lorsque `rel="preload"` ou `rel="prefetch"` est utilisé pour l'élément `<link>`. L'attribut indique le type de contenu chargé par l'élément `<link>` et permet au navigateur de déterminer la priorité du contenu, d'identifier les utilisations de la ressource plus bas dans le document, d'appliquer [la bonne politique de sécurité des contenus](/fr/docs/Web/HTTP/CSP) et de définir le bon en-tête de requête {{httpheader("Accept")}}.
 - `crossorigin`
-
   - : Cet attribut à valeur contrainte indique si le CORS doit être utilisé lorsque la ressource liée est récupérée. [Les images avec CORS activé](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisée dans un élément {{HTMLElement("canvas")}} sans qu'il soit corrompu. Les valeurs autorisées sont :
-
     - `"anonymous"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`). Mais aucune information d'identification n'est envoyée (aucun cookie, aucun certificat X.509, aucune authentification simple via HTTP). Si le serveur ne fournit pas d'informations au site d'origine (c'est-à-dire sans utiliser l'en-tête HTTP {{httpheader("Access-Control-Allow-Origin")}}, l'image sera _corrompue_ et son utilisation sera restreinte.
     - `"use-credentials"` : une requête _cross-origine_ est effectuée (avec l'en-tête HTTP `Origin`) avec des informations d'authentification qui sont envoyées (un cookie, un certification et une authentification HTTP simple sont envoyés). Si le serveur ne fournit pas d'information d'authentification au site d'origine via l'en-tête {{httpheader("Access-Control-Allow-Credentials")}}, l'image sera corrompue et son utilisation sera restreinte.
 
     Lorsque l'attribut est absent, la ressource est récupérée sans requête CORS (c'est-à-dire sans envoyer l'en-tête {{httpheader("Origin")}}) ce qui empêche de l'utiliser dans les éléments qui ne doivent pas être corrompus tels que {{HTMLElement('canvas')}}. Si la valeur est invalide, elle est synonyme de `anonymous`. Pour plus d'informations, consulter [l'article sur le contrôle d'origine HTTP (CORS)](/fr/docs/Web/HTML/Attributes/crossorigin).
 
 - `disabled`
-
   - : Cet attribut est uniquement utilisable avec les liens avec `rel="stylesheet"`. L'attribut booléen `disabled` indique si la feuille de style référencée devrait être chargée et appliquée au document. Si l'attribut `disabled` est indiqué dans le document HTML lors de son chargement, la feuille de style ne sera pas chargé au chargement de la page. La feuille de style sera uniquement chargée à la demande si (et lorsque) l'attribut `disabled` est retiré ou passé à `false` via un script.
 
     Toutefois, une fois que la feuille de style a été chargée, toute modification à l'attribut `disabled` n'aura aucun impact, sa valeur ne sera pas liée à la propriété {{domxref("StyleSheet.disabled")}}. Modifier cet attribut ne fait qu'activer/désactiver la capacité de charger et d'appliquer la feuille de style au document.
@@ -103,9 +100,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `hreflang`
   - : Cet attribut, purement indicatif, définit la langue de la ressource liée. La valeur doit être une balise de langue [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt) valide. Cet attribut doit uniquement être utilisé si l'attribut `href` est présent.
 - `importance` {{experimental_inline}}
-
   - : Cet attribut indique l'importance relative de la ressource. Les indications de priorité utilisent ces valeurs :
-
     - `auto`
       - : Aucune préférence n'est indiquée. Le navigateur peut utiliser une heuristique qui lui est propre afin de décider de la priorité de la ressource.
     - `high`
@@ -118,7 +113,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `integrity` {{experimental_inline}}
   - : Cet attribut contient des métadonnées en ligne qui correspondent à l'empreinte cryptographique de la ressource qu'on souhaite récupérer. Cela permet à l'agent utilisateur de contrôler que la ressource récupérée n'a pas été manipulée. Pour plus d'informations, consulter [l'article sur le contrôle des sous-ressources](/fr/docs/Web/Security/Subresource_Integrity).
 - `media`
-
   - : Cet attribut indique le média auquel s'applique la ressource liée. Sa valeur doit être [une requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Cet attribut est principalement utilisé pour permettre à l'agent utilisateur de sélectionner la meilleure feuille de style en fonction de l'appareil de l'utilisateur.
 
     > [!NOTE]
@@ -127,9 +121,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
     > - Les navigateurs qui ne prennent pas en charge [les requêtes média CSS3](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) ne reconnaîtront pas nécessairement les liens adéquats et il faut donc toujours fournir des liens de recours.
 
 - `referrerpolicy` {{experimental_inline}}
-
   - : Une chaîne de caractères qui indique le référent à utiliser lors de la récupération de la ressource :
-
     - `'no-referrer'` : l'en-tête {{HTTPHeader("Referer")}} n'est pas envoyé
     - `'no-referrer-when-downgrade'` signifie qu'aucun en-tête {{HTTPHeader("Referer")}} ne sera envoyé lors de la navigation vers une origine non protégée par TLS (HTTPS). C'est le comportement par défaut de l'agent utilisateur si aucune autre règle n'est indiquée.
     - `'origin'` indique que le référent sera l'origine de la page (ce qui correspond approximativement au schéma, à l'hôte et au port).
@@ -139,9 +131,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `rel`
   - : Cet attribut indique la relation qui existe entre le document et la ressource liée. Cet attribut doit être une liste de [types de lien](/fr/docs/Web/HTML/Attributes/rel), séparés par des espaces. La plupart du temps, cet attribut est utilisé pour caractériser un lien vers une feuille de style et il vaut alors `stylesheet` quand l'attribut `href` reçoit l'URL de la feuille de style à charger. WebTV supporte également la valeur `next` qui permet de précharger la page suivante d'une série de pages.
 - `sizes`
-
   - : Cet attribut définit les dimensions des icônes pour le média contenu dans la ressource. Cet attribut doit uniquement être présent lorsque [`rel`](#rel) contient le type de lien `icon`. Il peut prendre l'une des valeurs suivantes :
-
     - `any` : l'icône peut être redimensionnée à volonté car elle utilise un format vectoriel (par exemple `image/svg+xml`).
     - une liste de tailles, séparées par des espaces, dont chacune est de la forme `<largeur en pixels>x<hauteur en pixels>` ou `<largeur en pixels>X<hauteur en pixels>`. Pour chacune de ces dimensions, il doit exister une image correspondante dans la ressource.
 
@@ -158,7 +148,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 ### Attributs dépréciés, obsolètes ou non-standard
 
 - `charset`{{deprecated_inline}}
-
   - : Cet attribut définit l'encodage de la ressource lié. La valeur de cet attribut est une liste de jeux de caractères (tels que définis dans la RFC {{rfc(2045)}}) séparés par des espaces ou des virgules. La valeur par défaut de cet attribut est `iso-8859-1`.
 
     > [!NOTE]
@@ -169,7 +158,6 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 - `prefetch` {{Non-standard_inline}} {{secureContext_inline}}
   - : Cet attribut permet d'identifier une ressource qui sera nécessaire dans la suite de la navigation et que l'agent utilisateur devrait télécharger. Cela permet à l'agent utilisateur d'avoir un meilleur temps de réponse lorsque la ressource sera nécessaire.
 - `rev`{{deprecated_inline}}
-
   - : La valeur de cet attribut décrit le lien entre le document courant et la ressource liée (définie par l'attribut [`href`](#href)). Cet attribut définit donc la relation réciproque à la relation décrite par l'attribut `rel`. [Les types de lien](/fr/docs/Web/HTML/Attributes/rel) utilisés pour cet attribut sont semblables aux valeurs autorisés par [`rel`](#rel).
 
     > [!NOTE]

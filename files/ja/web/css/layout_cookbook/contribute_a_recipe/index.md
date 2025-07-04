@@ -18,7 +18,6 @@ slug: Web/CSS/Layout_cookbook/Contribute_a_recipe
 1. ライブサンプル（live example）は、[CSS Examples GitHub リポジトリー](https://github.com/mdn/css-examples)に保存します。
 2. その例のダウンロード可能なバージョンも、CSS Examples リポジトリーに保存します。
 3. [CSS レイアウト料理帳](/ja/docs/Web/CSS/Layout_cookbook)内のページの詳細は次のとおりです。
-
    1. 要件 (Requirements)
    2. レシピ (Recipe)
    3. 行った選択 (Choices made)

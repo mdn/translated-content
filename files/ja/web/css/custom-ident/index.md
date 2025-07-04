@@ -50,15 +50,12 @@ CSS では、文字をエスケープする方法がいくつかあります。�
 - {{CSSxRef("counter-reset")}}, {{CSSxRef("counter-increment")}}
   - : グローバル CSS 値 (`unset`, `initial`, `inherit`) を禁止し、 `none` も禁止しています。
 - {{CSSxRef("@counter-style")}}, {{CSSxRef("list-style-type")}}
-
   - : グローバル CSS 値 (`unset`, `initial`, `inherit`) と、次の値を禁止しています。
-
     - `none`
     - `inline`
     - `outside`
 
     また、さまざまなブラウザーで、いくつかの定義済みの値が実装されています。
-
     - `disc`
     - `circle`
     - `square`

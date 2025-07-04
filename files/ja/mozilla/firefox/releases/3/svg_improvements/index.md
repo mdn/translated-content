@@ -13,7 +13,6 @@ Firefox 3 では、以前のバージョンの Firefox よりも改善された 
 - `pattern` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
 - `mask` 要素のサポート ([仕様](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
 - SVG フィルターのサポート ([仕様](https://www.w3.org/TR/SVG11/filters.html))
-
   - `filter`
   - `feDistantLight`
   - `fePointLight`

@@ -82,7 +82,6 @@ ARIA - это набор специальных атрибутов, которы
 - [WAI-ARIA Specification](https://www.w3.org/TR/wai-aria/)
   - : The W3C specification itself, useful as a reference. Note that, at this stage, it is important to test compatibility, as implementations are still inconsistent.
 - [WAI-ARIA Authoring Practices](https://www.w3.org/WAI/PF/aria-practices/)
-
   - : Like the W3C WAI-ARIA specification, the official best practices represents a future ideal — a day when authors can rely on consistent ARIA support across browsers and screen readers. The W3C documents provide an in-depth view of ARIA.
 
     For now, web developers implementing ARIA should maximize compatibility. Use best practices docs and examples based on current implementations.

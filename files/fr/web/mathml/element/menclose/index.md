@@ -18,7 +18,6 @@ L'élément MathML `<menclose>` permet d'afficher son contenu groupé au sein d'
 - mathcolor
   - : La couleur du texte. Il est possible d'utiliser les codes au format `#rgb`, `#rrggbb` et les [noms de couleurs HTML](/fr/docs/Web/CSS/color_value#mots-cl.c3.a9s).
 - notation
-
   - : Une liste de notations à appliquer aux éléments fils, séparées par des blancs. Les symboles sont dessinés indépendamment et peuvent donc parfois se superposer. Les valeurs possibles sont :
 
     | Valeur                        | Affichage                                     | Affichage dans votre navigateur                                                                                                                | Description                                                                                                                  |

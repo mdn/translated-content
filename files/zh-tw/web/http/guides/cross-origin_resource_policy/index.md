@@ -24,7 +24,6 @@ CORP 是超越預設的{{Glossary("same-origin policy", "同源政策")}}的另�
 Web 應用程式通過 {{HTTPHeader("Cross-Origin-Resource-Policy")}} HTTP 回應標頭設置跨來源資源政策，該標頭接受下方三個值之一：
 
 - `same-site`
-
   - : 只有來自同一[_站點_](/zh-TW/docs/Glossary/Site)的請求可以讀取資源。
 
     > [!WARNING]

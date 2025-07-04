@@ -45,7 +45,6 @@ text-decoration-skip: unset;
 - `trailing-spaces`
   - : 末尾の空白のみがスキップされるという点を除いて、 `spaces` と同じです。
 - `edges`
-
   - : テキスト装飾の始点と終点を、装飾ボックスのコンテンツの辺からわずかに (例えば線の太さの半分だけ) 離します。つまり、子孫ボックスには個別に下線が引かれます。 (これは中国語では、区切って下線を引くのに重要です。)
 
     !["text-decoration-skip: edges;" の例です。](decoration-skip-edges.png)

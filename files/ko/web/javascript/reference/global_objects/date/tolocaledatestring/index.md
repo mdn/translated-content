@@ -47,13 +47,11 @@ toLocaleDateString(locales, options)
 [`Intl.DateTimeFormat` API](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)를 지원하는 구현체에서 이러한 매개변수는 [`Intl.DateTimeFormat()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) 생성자 매개변수와 정확히 대응합니다. `Intl.DateTimeFormat`을 지원하지 않는 구현체은 두 매개변수를 모두 무시하도록 요청하므로 사용되는 로케일과 반환되는 문자열의 형식은 전적으로 구현체에 따라 달라집니다.
 
 - `locales` {{optional_inline}}
-
   - : BCP 47 언어 태그가 포함된 문자열 또는 이러한 문자열의 배열입니다. `Intl.DateTimeFormat()` 생성자의 매개변수인 [`locales`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#locales)과 대응됩니다.
 
     `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시하고 일반적으로 호스트의 로케일이 사용됩니다.
 
 - `options` {{optional_inline}}
-
   - : 출력 형식을 조정하는 객체입니다. `Intl.DateTimeFormat()` 생성자의 매개변수 [`options`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat#options)과 대응됩니다. `timeStyle` 옵션이 반드시 정의되지 않아야 하며, 그렇지 않으면 {{jsxref("TypeError")}}가 발생합니다. `weekday`, `year`, `month`, `day`가 모두 정의되지 않은 경우 `year`, `month`, `day`은 `"numeric"`으로 설정됩니다.
 
     `Intl.DateTimeFormat`을 지원하지 않는 구현체에서는 이 매개변수를 무시됩니다.

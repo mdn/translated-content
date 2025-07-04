@@ -43,7 +43,6 @@ console.log(childNodes.length); // "3" が出力される
 ## インスタンスメソッド
 
 - {{domxref("NodeList.item()")}}
-
   - : 指定されたインデックスに対応するリスト内の要素を返します。インデックスが範囲外の場合は `null` を返します。
 
     `nodeList[i]` のアクセスの代替手段です（この場合、`i` が範囲外の時には `undefined` が返ります）。これは JavaScript 以外の言語による DOM の実装で便利です。

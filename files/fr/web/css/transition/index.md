@@ -96,7 +96,6 @@ La propriété `transition` se définit comme une ou plusieurs propriétés de t
 Chacune des propriétés de transition décrit la transition qui devrait être appliquée à une propriété donnée (ou pour les valeurs spéciales `all` et `none`). Une propriété de transition inclut :
 
 - zéro ou une valeur qui représente la propriété à laquelle la transition s'applique. Ça peut être :
-
   - le mot-clé `none`
   - le mot-clé `all`
   - Un identifiant ({{cssxref("&lt;custom-ident&gt;")}}) qui nomme une propriété CSS.

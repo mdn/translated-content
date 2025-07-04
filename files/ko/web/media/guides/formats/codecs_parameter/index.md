@@ -6,7 +6,7 @@ original_slug: Web/Media/Formats/codecs_parameter
 
 {{QuickLinksWithSubpages("/ko/docs/Web/Media")}}
 
-기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
+기본적으로, `video/mp4`, `audio/mpeg` 처럼 {{Glossary("MIME")}} 타입을 통해 미디어 파일 포맷을 명시할 수 있습니다. 하지만 많은 미디어 타입들이-특히 비디오 트랙을 지원하는 경우-가지고 있는 데이터 포맷에 대해 더 상세하고 정확하게 명시할 수 있습니다. 예를들어 [MPEG-4](/ko/docs/Web/Media/Guides/Formats/Containers#mp4) 비디오라고 해서 MIME 타입을 `video/mp4`만 명시한다면 정확히 어떤 미디어를 가지고 있는 지 아무 정보도 알 수 없습니다.
 
 때문에 MIME 타입에 추가로 미디어 콘텐츠를 기술하기 위해 `codecs` 파라미터가 추가되었습니다. 이를 통해 컨테이너 특화된 정보를 제공할 수 있게 되었습니다 이 정보에는 비디오 코덱의 프로파일, 오디오 트랙 타입 등을 추가할 수 있습니다.
 
@@ -17,24 +17,24 @@ original_slug: Web/Media/Formats/codecs_parameter
 기본적인 MIME 미디어 타입 표현은 미디어 타입(`audio`, `video`, 등)으로 시작하며, 슬래쉬 문자 (`/`) 후 미디어를 포함하고 있는 컨테이너 포맷이름으로 이어집니다:
 
 - `audio/mpeg`
-  - : MP3 같은 [MPEG](/ko/docs/Web/Media/Formats/Containers#mpeg) 파일 타입의 오디오 파일입니다.
+  - : MP3 같은 [MPEG](/ko/docs/Web/Media/Guides/Formats/Containers#mpeg) 파일 타입의 오디오 파일입니다.
 - `video/ogg`
-  - [: Ogg](/ko/docs/Web/Media/Formats/Containers#ogg) 파일 타입의 비디오 파일입니다.
+  - [: Ogg](/ko/docs/Web/Media/Guides/Formats/Containers#ogg) 파일 타입의 비디오 파일입니다.
 - `video/mp4`
-  - [: MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 파일 타입을 사용하는 비디오입니다.
+  - [: MPEG-4](/ko/docs/Web/Media/Guides/Formats/Containers#mp4) 파일 타입을 사용하는 비디오입니다.
 - `video/quicktime`
-  - : 애플 [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime) 포맷을 사용하는 비디오입니다. 다른 곳에서 서술되어 있듯이, 한때는 웹에서 널리 쓰여지던 형식이었지만 현재는 플러그인이 필요하여 더 이상 사용하지 않는 타입입니다.
+  - : 애플 [QuickTime](/ko/docs/Web/Media/Guides/Formats/Containers#quicktime) 포맷을 사용하는 비디오입니다. 다른 곳에서 서술되어 있듯이, 한때는 웹에서 널리 쓰여지던 형식이었지만 현재는 플러그인이 필요하여 더 이상 사용하지 않는 타입입니다.
 
 위 MIME 타입은 아직 모호한 표현입니다. 각 파일 타입들은 많은 수의 코덱을 지원하며 코덱은 각기 프로파일, 레벨과 같은 설정 인자들을 가지고 있습니다. 그래서 `codecs` 파라미터를 추가하여 명시할 수 있습니다.
 
 세미콜론 (`;`)을 붙이고 `codecs=` 으로 시작하는 문자열을 덧붙여 콘텐츠의 포맷을 서술할 수 있습니다. 일부 미디어 타입은 사용하는 코덱 이름만 명시 가능할 수 있고 다른 미디어 타입은 코덱에 관한 다양한 인자를 기술할 수 있는 경우도 있습니다. 콤마로 구분하여 여러 코덱을 기술할 수도 있습니다.
 
 - `audio/ogg; codecs=vorbis`
-  - [: Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오 트랙을 포함하는 [Ogg](/ko/docs/Web/Media/Formats/Containers#ogg) 컨테이너 파일입니다.
+  - [: Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오 트랙을 포함하는 [Ogg](/ko/docs/Web/Media/Guides/Formats/Containers#ogg) 컨테이너 파일입니다.
 - `video/webm; codecs="vp8, vorbis"`
-  - [: VP8](/ko/docs/Web/Media/Formats/Video_codecs#vp8) 비디오와 [Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오를 포함하는 [WebM](/ko/docs/Web/Media/Formats/Containers#webm) 컨테이너 파일입니다.
+  - [: VP8](/ko/docs/Web/Media/Guides/Formats/Video_codecs#vp8) 비디오와 [Vorbis](/ko/docs/Web/Media/Formats/Audio_codecs#Vorbis) 오디오를 포함하는 [WebM](/ko/docs/Web/Media/Guides/Formats/Containers#webm) 컨테이너 파일입니다.
 - `video/mp4; codecs="avc1.4d002a"`
-  - [: AVC](</ko/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>) (H.264) 코덱에 Main Profile, Level 4.2을 가지는 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) 컨테이너 파일입니다.
+  - [: AVC](</ko/docs/Web/Media/Guides/Formats/Video_codecs#AVC_(H.264)>) (H.264) 코덱에 Main Profile, Level 4.2을 가지는 [MPEG-4](/ko/docs/Web/Media/Guides/Formats/Containers#mp4) 컨테이너 파일입니다.
 
 코덱의 속성 중 하나라도 퍼센트-인코딩이 필요한 특수문자{{RFC(2231, "MIME Parameter Value and Encoded Word Extensions", 4)}}를 사용하는 경우 MIME 타입을 기술하는 문자열의 `codecs` 파라미터를 `codecs*` (애스터리크(`*`) 추가됨에 유의)로 변경해야 합니다. JavaScript {{jsxref("Global_Objects/encodeURI", "encodeURI()")}} function으로 파라미터 목록을 인코딩할 수 있습니다; 반대로 {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}를 통해 기인코딩된 파라미터 리스트를 디코딩할 수 있습니다.
 
@@ -263,7 +263,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 
 ### ISO Base Media File Format: MP4, QuickTime, and 3GP
 
-모든 미디어 타입은 [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_base_media_file_format) (ISO BMFF)를 기반으로 하며 `codecs` 문법을 공유합니다. 이들 미디어 타입은 [MPEG-4](/ko/docs/Web/Media/Formats/Containers#mp4) (또 사실상 MPEG-4를 기반으로 하고 있으므로 [QuickTime](/ko/docs/Web/Media/Formats/Containers#quicktime)도 포함)과 [3GP](/ko/docs/Web/Media/Formats/Containers#3gp)를 포함합니다. MIME 타입의 `codecs` 파라미터를 통해 아래와 같이 비디오/오디오 트랙 둘 다 기술할 수 있습니다.:
+모든 미디어 타입은 [ISO Base Media File Format](https://en.wikipedia.org/wiki/ISO_base_media_file_format) (ISO BMFF)를 기반으로 하며 `codecs` 문법을 공유합니다. 이들 미디어 타입은 [MPEG-4](/ko/docs/Web/Media/Guides/Formats/Containers#mp4) (또 사실상 MPEG-4를 기반으로 하고 있으므로 [QuickTime](/ko/docs/Web/Media/Guides/Formats/Containers#quicktime)도 포함)과 [3GP](/ko/docs/Web/Media/Guides/Formats/Containers#3gp)를 포함합니다. MIME 타입의 `codecs` 파라미터를 통해 아래와 같이 비디오/오디오 트랙 둘 다 기술할 수 있습니다.:
 
 | MIME 타입         | 설명                                                                                                                |
 | ----------------- | ------------------------------------------------------------------------------------------------------------------- |
@@ -277,7 +277,7 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 
 `codecs` 파라미티에는 간단하게 컨테이너 명(`3gp`, `mp4`, `quicktime`, etc.)만 기술할 수도 있으며 컨테이너 명에 코덱 이름 및 설정 값을 함께 기술할 수도 있습니다. 각 코덱 등은 온점(`.`)으로 구분된 요소를 다수 가질 수 있습니다.
 
-`codecs` 값의 문법은 코덱마다 다릅니다; 하지만 항상 4 글자 코덱 구분자와 온점(`.`)으로 시작하며 데이터 포맷을 기술하기 위핸 Object Type Indication (OTI) 형식의 문자열이 뒤따릅니다. 대부분의 코덱에서 OTI는 두자리 16진수로 되어 있지만 [AVC (H.264)](</ko/docs/Web/Media/Formats/Video_codecs#AVC_(H.264)>)는 6자리 16진수로 구성되어 있습니다.
+`codecs` 값의 문법은 코덱마다 다릅니다; 하지만 항상 4 글자 코덱 구분자와 온점(`.`)으로 시작하며 데이터 포맷을 기술하기 위핸 Object Type Indication (OTI) 형식의 문자열이 뒤따릅니다. 대부분의 코덱에서 OTI는 두자리 16진수로 되어 있지만 [AVC (H.264)](</ko/docs/Web/Media/Guides/Formats/Video_codecs#AVC_(H.264)>)는 6자리 16진수로 구성되어 있습니다.
 
 따라서 지원하는 코덱 문법은 아래와 유사합니다:
 
@@ -288,7 +288,6 @@ av01.P.LLT.DD[.M[.CCC[.cp[.tc[.mc[.F]]]]]]
 - `mp4v.oo[.V]` (MPEG-4 video)
   - : 마찬가지로 `oo` 는 미디어 콘텐츠를 명시하는 OTI 값이며, `V` 는 한자리 숫자 _비디오_ OTI 값입니다.
 - `avc1.oo[.PPCCLL]` (AVC video)
-
   - : `oo` 는 콘텐츠를 명시하는 OTI 값이며, while `PPCCLL` 는 6자리 16진수로써 프로파일 넘버 (`PP`), 제약 플래그 (`CC`), 레벨 (`LL`)을 의미합니다. `PP`로 가능한 값은 [AVC profiles](#avc_profiles)를 참조하세요.
 
     제약 플래그는 1 비트 불리언 값이며, MSB는 flag 0(또는 일부에선 `constraint_set0_flag`)로 취급합니다. 그리고 이어지는 비트는 하나씩 번호가 높게 매겨집니다. 현재로썬 0부터 2번째 비트까지만 사용하며;나머지 5개의 비트는 _반드시_ 0이어야합니다. 각 플래그의 의미는 사용하는 프로파일에 따라 달라집니다.
@@ -756,5 +755,5 @@ cccc.PP.LL.DD.CC[.cp[.tc[.mc[.FF]]]]
 - [Web media technologies](/ko/docs/Web/Media)
 - [Guide to media types and formats on the web](/ko/docs/Web/Media/Formats)
 - [Guide to audio codecs used on the web](/ko/docs/Web/Media/Formats/Audio_codecs)
-- [Guide to video codecs used on the web](/ko/docs/Web/Media/Formats/Video_codecs)
+- [Guide to video codecs used on the web](/ko/docs/Web/Media/Guides/Formats/Video_codecs)
 - [Codecs used by WebRTC](/ko/docs/Web/Media/Formats/WebRTC_codecs)

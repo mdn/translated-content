@@ -31,9 +31,7 @@ browser.permissions.onAdded.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 当事件发生时调用的函数。该函数接收以下参数：
-
     - `permissions`
       - : 包含被授予的权限的 {{WebExtAPIRef("permissions.Permissions")}} 对象。
 

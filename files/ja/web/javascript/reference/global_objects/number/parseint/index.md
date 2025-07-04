@@ -39,7 +39,6 @@ Number.parseInt(string, radix)
 - `string`
   - : 解釈する値で、[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)。先頭の{{glossary("whitespace", "ホワイトスペース")}}は無視されます。
 - `radix` {{optional_inline}}
-
   - : `2` から `36` までの整数で、 `string` の*基数*（数学的記数法の底）を表します。
 
     `radix` が未定義または `0` であった場合、通常は `10` と見なされますが、数値が `0x` または `0X` のコードの組み合わせであった場合は `16` と見なされます。

@@ -21,9 +21,7 @@ l10n:
 - [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
   - : 形成自定义数据属性类别的属性，允许专有信息在 [MathML](/zh-CN/docs/Web/MathML) 及其 {{glossary("DOM")}} 表示之间进行交换，可能会被脚本使用。所有这些自定义数据都可以通过属性设置的元素的 {{DOMxRef("MathMLElement")}} 接口访问。{{DOMxRef("HTMLElement.dataset")}} 属性提供来对这些属性的访问。
 - [`dir`](/zh-CN/docs/Web/MathML/Reference/Global_attributes/dir)
-
   - : 枚举属性，指示 MathML 元素的方向性。它可以具有以下值：
-
     - `ltr`，表示*从左到右*，并用于从左到右呈现数学表达式（例如英语或摩洛哥风格）；
     - `rtl`，表示*从右到左*，并用于从右到左呈现数学表达式（例如 Maghreb 或 Machrek 风格）；
 

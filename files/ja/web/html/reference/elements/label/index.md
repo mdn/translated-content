@@ -64,7 +64,6 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - [`for`](/ja/docs/Web/HTML/Reference/Attributes/for)
-
   - : `for` 属性の値は単一の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) でなければならず、これは `<label>` 要素と同一の文書内にある[ラベル付け可能](/ja/docs/Web/HTML/Guides/Content_categories#ラベル付け可能)なフォーム関連要素のものです。従って、この `label` 要素が関連付けられるのはフォームコントロール 1 つだけです。
 
     > [!NOTE]

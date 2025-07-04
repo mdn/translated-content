@@ -145,7 +145,6 @@ Sec-WebSocket-Accept: hash
 - [WebSocket API](/zh-CN/docs/Web/API/WebSocket)
 - [HTTP](/zh-CN/docs/Web/HTTP)
 - 规范和 RFC：
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

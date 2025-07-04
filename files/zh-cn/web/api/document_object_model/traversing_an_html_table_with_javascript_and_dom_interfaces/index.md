@@ -220,7 +220,8 @@ secondParagraph.appendChild(myTextNode);
 
 ![段落元素中的文本节点作为 DOM 树中的单独子元素](sample2b2.jpg)
 
-> **备注：** `createTextNode()` 和 `appendChild()` 是在 _hello_ 和 _world_ 这两个词之间加入空白的简单方法。另一个重要的注意点是，`appendChild` 方法将在最后一个子节点之后追加子节点，就像 _world_ 这个词已经被添加到 _hello_ 这个词之后一样。因此，如果你想在 _hello_ 和 _world_ 之间追加一个文本节点，你需要使用 `insertBefore` 而不是 `appendChild`。
+> [!NOTE]
+> `createTextNode()` 和 `appendChild()` 是在 _hello_ 和 _world_ 这两个词之间加入空白的简单方法。另一个重要的注意点是，`appendChild` 方法将在最后一个子节点之后追加子节点，就像 _world_ 这个词已经被添加到 _hello_ 这个词之后一样。因此，如果你想在 _hello_ 和 _world_ 之间追加一个文本节点，你需要使用 `insertBefore` 而不是 `appendChild`。
 
 ### 使用文档对象和 createElement(..) 方法创建新的元素
 

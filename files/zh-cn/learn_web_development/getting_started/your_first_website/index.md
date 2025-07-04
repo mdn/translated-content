@@ -16,35 +16,27 @@ l10n:
 通过学习下列的文章，你将从零开始获得第一个在线网页。让我们开始旅程吧！
 
 - [安装基础软件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software)
-
   - : 说到建设网站的工具，有很多可供选择的。如果你初入门径，你可能会被外面一系列的代码编辑器、框架和测试工具所迷惑。在这篇文章中，我们将一步一步地教你如何安装开始基础的 Web 开发所需的软件。
 
 - [你的网站会是什么样子？](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like)
-
   - : 在你开始为你的网站写代码之前，你应该先计划一下。需要展示什么信息？使用什么字体和颜色？我们概述了一个简单的方法，你可以按照这个方法来规划网站的内容和设计。
 
 - [处理文件](/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files)
-
   - : 一个网站由很多文件组成：文本内容、代码、样式表、媒体内容，等等。在建立网站时，你需要将这些文件以合理的结构组合起来，并确保它们能够相互交流。本文将讲解如何为网站建立合理的结构以及相关注意事项。
 
 - [HTML 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content)
-
   - : 超文本标记语言（HTML）是用于构建 Web 内容并赋予内容含义和目的的代码。例如，这个内容是段落还是列表？页面中是否插入图像？是否要有数据表格？在你的接受能力之内，这篇文章将提供足够的信息让你熟悉 HTML。
 
 - [CSS 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content)
-
   - : 层叠样式表（CSS）是用于为网站添加样式的代码。例如，你希望文本是黑色还是红色？内容应该绘制在屏幕的什么地方？应该用什么背景图像和颜色装饰你的网站？在这篇文章中，我们将带你学习入门所需的知识。
 
 - [JavaScript 基础](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity)
-
   - : JavaScript 是用于为网站添加交互特性的编程语言。例如，游戏、按钮按下或在表单中输入数据时会发生的事情、动态的样式效果、动画，等等。在这篇文章中，我们将让你了解这门令人兴奋的语言的潜力，以及如何入门。
 
 - [发布你的网站](/zh-CN/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website)
-
   - : 一旦完成了代码编写和构成网站的文件的组织工作，你就需要把它们全部放在网上，这样人们才能找到它。这篇文章描述如何以最简便的方式将你的简单示例上线至网络。
 
 - [万维网是如何工作的](/zh-CN/docs/Learn_web_development/Getting_started/Web_standards/How_the_web_works)
-
   - : 当你访问最喜欢的网站时，有很多你可能不知道的复杂的事情正在后台发生。本文将概述在电脑上浏览网页时正在发生的事情。
 
 ## 参见

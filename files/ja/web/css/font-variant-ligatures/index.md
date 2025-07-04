@@ -87,30 +87,22 @@ font-variant-ligatures: unset;
 - `none`
   - : 。このキーワードは、一般的なものであっても、すべての合字や文脈書式を無効にします。
 - _`<common-lig-values>`_
-
   - : `fi`, `ffi`, `th` などの、よくある合字を制御します。 OpenType の値 `liga` および `clig` に対応します。2 つの値が指定できます。
-
     - `common-ligatures`: これらの合字を有効にします。なお、キーワード `normal` はこれらの合字を有効にします。
     - `no-common-ligatures`: これらの合字を無効にします。
 
 - _`<discretionary-lig-values>`_
-
   - : フォントに依存し文字デザイナーが定義する特定の合字を制御します。対応する OpenType の値は `dlig` です。2 つの値が指定できます。
-
     - `discretionary-ligatures`: これらの合字を有効にします。
     - `no-discretionary-ligatures`: これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
 
 - _`<historical-lig-values>`_
-
   - : 古い本で歴史的に使用された、ドイツ語の tz を ꜩ と表示するような合字です。対応する OpenType の値は `hlig` です。2 つの値が指定できます。
-
     - `historical-ligatures`: これらの合字を有効にします。
     - `no-historical-ligatures` これらの合字を無効にします。なお、キーワード `normal` はふつう、これらの合字を無効にします。
 
 - _`<contextual-alt-values>`_
-
   - : 字形を文脈に合わせるかどうかを制御します。つまり、字形を周囲の文字に合わせるかどうかです。対応する OpenType の値は `calt` です。2 つの値が指定できます。
-
     - `contextual`: 文脈的な変更を使用するよう指定します。なお、キーワード `normal` はこれらの合字も有効にします。
     - `no-contextual`: 使用を避けます。
 

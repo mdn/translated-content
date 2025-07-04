@@ -144,7 +144,6 @@ Sec-WebSocket-Accept: hash
 - [WebSocket API](/zh-TW/docs/Web/API/WebSocket)
 - [HTTP](/zh-TW/docs/Web/HTTP)
 - Specifications and RFCs:
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

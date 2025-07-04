@@ -102,19 +102,27 @@ console.log(result); // { name: 'cherries', quantity: 5 }
 下面的例子展示了如何从数组中寻找素数（如果找不到素数则返回 {{jsxref("undefined")}}）：
 
 ```js
-function isPrime(element, index, array) {
-  let start = 2;
-  while (start <= Math.sqrt(element)) {
-    if (element % start++ < 1) {
+function isPrime(n) {
+  if (n < 2) {
+    return false;
+  }
+  if (n % 2 === 0) {
+    return n === 2;
+  }
+  for (let factor = 3; factor * factor <= n; factor += 2) {
+    if (n % factor === 0) {
       return false;
     }
   }
-  return element > 1;
+  return true;
 }
 
 console.log([4, 6, 8, 12].find(isPrime)); // undefined，未找到
 console.log([4, 5, 8, 12].find(isPrime)); // 5
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ### 在稀疏数组上使用 find()
 

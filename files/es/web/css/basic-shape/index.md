@@ -14,7 +14,6 @@ El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (s
 Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan notación funcional y son definidos aquí usando la [sintaxis de definición de valor](/es/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax).
 
 - `inset()`
-
   - : &#x20;
 
     ```
@@ -30,7 +29,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     Cuando un par de valores inset en cualquier dimensión suman un valor mayor al límite de la dimensión disponible (como por ejemplo, que los valores inset izquierdo y derecho sean de 75% cada uno), se está definiendo una figura que no encierra ningun área. Para esta especificación, el resultado es un área flotante vacía.
 
 - `polygon()`
-
   - : &#x20;
 
     ```
@@ -42,7 +40,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     Cada elemento par de la lista representa _xi_ y _yi_ - las coordenadas del eje x y el eje y en el vértice _i_ del polígono.
 
 - `circle(`)
-
   - : &#x20;
 
     ```
@@ -54,7 +51,6 @@ Las siguientes figuras son soportadas. Todos los valores `<basic-shape>` usan no
     El argumento {{cssxref("&lt;position&gt;")}} define el centro del círculo. Su valor predeterminado es `center`.
 
 - `ellipse()`
-
   - : &#x20;
 
     ```

@@ -367,9 +367,7 @@ preserveAspectRatio="<align> [<meetOrSlice>]"
 Its value is made of one or two keywords: A required alignment value and an optional "meet or slice" reference as described below:
 
 - Alignment value
-
   - : The alignment value indicates whether to force uniform scaling and, if so, the alignment method to use in case the aspect ratio of the {{ SVGAttr("viewBox") }} doesn't match the aspect ratio of the viewport. The alignment value must be one of the following keywords:
-
     - **none**
       Do not force uniform scaling. Scale the graphic content of the given element non-uniformly if necessary such that the element's bounding box exactly matches the viewport rectangle. _Note that if_ `<align>` _is_ `none`_, then the optional_ `<meetOrSlice>` _value is ignored_.
     - **xMinYMin** - Force uniform scaling.
@@ -401,11 +399,8 @@ Its value is made of one or two keywords: A required alignment value and an opti
       Align the `<min-y>+<height>` of the element's {{ SVGAttr("viewBox") }} with the maximum Y value of the viewport.
 
 - Meet or slice reference
-
   - : The meet or slice reference is optional and, if provided, must be one of the following keywords:
-
     - **meet** (_the default_) - Scale the graphic such that:
-
       - aspect ratio is preserved
       - the entire {{ SVGAttr("viewBox") }} is visible within the viewport
       - the {{ SVGAttr("viewBox") }} is scaled up as much as possible, while still meeting the other criteria
@@ -413,7 +408,6 @@ Its value is made of one or two keywords: A required alignment value and an opti
       In this case, if the aspect ratio of the graphic does not match the viewport, some of the viewport will extend beyond the bounds of the {{ SVGAttr("viewBox") }} (i.e., the area into which the {{ SVGAttr("viewBox") }} will draw will be smaller than the viewport).
 
     - **slice** - Scale the graphic such that:
-
       - aspect ratio is preserved
       - the entire viewport is covered by the {{ SVGAttr("viewBox") }}
       - the {{ SVGAttr("viewBox") }} is scaled down as much as possible, while still meeting the other criteria

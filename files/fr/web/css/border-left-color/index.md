@@ -122,18 +122,15 @@ border-left-color: unset;
 ## Voir aussi
 
 - Les propriétés raccourcies liées aux bordures
-
   - {{cssxref("border")}},
   - {{cssxref("border-left")}},
   - {{cssxref("border-color")}}.
 
 - Les propriétés de couleur pour les autres bordures :
-
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-bottom-color")}},
   - {{cssxref("border-right-color")}}.
 
 - Les autres propriétés liées à la bordure gauche :
-
   - {{cssxref("border-left-style")}},
   - {{cssxref("border-left-width")}}.

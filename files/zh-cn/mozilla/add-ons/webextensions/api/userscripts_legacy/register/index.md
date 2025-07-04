@@ -29,11 +29,9 @@ await registeredUserScript.unregister();
 ### 参数
 
 - `userScriptOptions`
-
   - : `object`，表示要注册的用户脚本。其语法与 {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} 非常相似。
 
     `UserScriptOptions` 对象具有以下属性：
-
     - `scriptMetadata` {{Optional_Inline}}
       - : 包含与注册的用户脚本关联的任意元数据属性的 `JSON` 对象。虽然该对象是任意的，但其必须是可序列化的，因此它与[结构化克隆算法](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)兼容。此元数据用于从脚本传递详细信息到 [API 脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)。例如，提供需要由 [API 脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts)注入的 API 子集的详细信息。本 API 并不会使用到该元数据。
     - `allFrames` {{Optional_Inline}}

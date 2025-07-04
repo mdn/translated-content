@@ -26,9 +26,7 @@ speak-as: <counter-style-name>;
 ### 值
 
 - `auto`
-
   - : 如果 **`speak-as`** 的值是 **`auto`**，那么它的实际值是由 {{cssxref("system")}} 的值决定的：
-
     - 如果 `system` 的值是 `alphabetic`，**`speak-as`** 的值是 `spell-out`**。**
     - 如果 `system` 的值是 `cyclic`，**`speak-as`** 的值是 `bullets`。
     - 如果 `system` 的值是 `extends`，当被继承的样式上也定义了 **`speak-as: auto`**，那么 **`speak-as`** 的值就和被继承样式的值相同。

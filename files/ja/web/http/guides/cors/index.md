@@ -50,13 +50,11 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
 単純リクエストは、**以下のすべての条件を満たす**ものです。
 
 - 許可されているメソッドのうちのいずれかであること。
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - ユーザーエージェントによって自動的に設定されるヘッダー（たとえば {{HTTPHeader("Connection")}} や {{HTTPHeader("User-Agent")}} や{{glossary("Forbidden request header", "禁止リクエストヘッダー")}}）を除いて、 [CORS セーフリストリクエストヘッダー](/ja/docs/Glossary/CORS-safelisted_request_header)だけを手動で設定することができます。
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -64,7 +62,6 @@ CORS は様々なエラーで失敗することがありますが、セキュリ
   - {{HTTPHeader("Range")}} （[単純範囲ヘッダー値](https://fetch.spec.whatwg.org/#simple-range-header-value)、例えば `bytes=256-` や `bytes=127-255` の場合）
 
 - {{HTTPHeader("Content-Type")}} ヘッダーで指定できる{{Glossary("MIME type", "メディア種別")}}に許されるタイプ/サブタイプの組み合わせは、以下のもののみです。
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -500,7 +497,6 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [Chrome ブラウザーを CORS なしで実行する方法](https://alfilatov.com/posts/run-chrome-without-cors/)（英語）
 - [すべての（現代の）ブラウザーで CORS を使用](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)（英語）
 - [Stack Overflow のよくある問題を解決するための "how to" 情報](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141)（英語）:
-
   - CORS のプリフライトを防止する方法
   - CORS プロキシーを使用して「Access-Control-Allow-Origin ヘッダーの欠落」を回避する方法
   - 「Access-Control-Allow-Origin ヘッダーがワイルドカードを扱えない」ことを修正する方法

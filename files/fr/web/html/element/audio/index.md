@@ -32,7 +32,6 @@ Le contenu présent à l'intérieur des balises `<audio></audio>` est affiché c
 Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
 
 - **`autoplay`**
-
   - : Un attribut booléen : s'il est spécifié, l'audio commencera automatiquement la lecture dès qu'il pourra le faire, sans attendre la fin du téléchargement de l'ensemble du fichier audio.
 
     > [!NOTE]
@@ -41,9 +40,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`controls`**
   - : Si l'attribut est présent, le navigateur affichera des contrôles pour que l'utilisateur puisse gérer la lecture, le volume, et le déplacement du curseur de lecture.
 - **`crossorigin`**
-
   - : Cet attribut à valeur contrainte indique comment le CORS doit être utilisé afin de récupérer la ressource. [Les ressources utilisant le CORS](/fr/docs/Web/HTML/CORS_enabled_image) peuvent être réutilisées dans un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) sans corrompre celui-ci. Les valeurs autorisées pour cet attribut sont :
-
     - `anonymous`
       - : Une requête multi-origine est envoyée sans information d'authentification. Autrement dit, l'en-tête HTTP [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) est envoyé sans cookie, certificat X.509 ou sans authentification HTTP. Si le serveur ne fournit pas d'information d'authentification au site d'origine (sans indiquer l'en-tête [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)), la ressource sera corrompue (_tainted_) et son utilisation sera restreinte.
     - `use-credentials`
@@ -52,7 +49,6 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     Lorsque cet attribut n'est pas présent, la ressource est récupérée sans requête CORS et empêche ainsi d'utiliser la ressource dans un [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Si la valeur fournie est invalide, elle sera considérée comme `anonymous`. Voir [Paramétrage des attributs relatifs au CORS](/fr/docs/Web/HTML/Attributes/crossorigin) pour plus d'informations.
 
 - **`disableRemotePlayback`** {{experimental_inline}}
-
   - : Un attribut booléen utilisé pour désactiver la capacité de lecture à distance dans les appareils qui sont connectés à l'aide de câbles (HDMI, DVI, etc.) et sans fil (Miracast, Chromecast, DLNA, AirPlay, etc.). Voir [cette proposition de spécification](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute) pour plus d'informations.
 
     > [!NOTE]
@@ -63,9 +59,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
 - **`muted`**
   - : Un attribut booléen, indiquant si le son de l'élément audio est initialement coupé. Sa valeur par défaut est `false`.
 - **`preload`**
-
   - : Cet attribut indique au navigateur ce que l'auteur du code html pense de l'utilisation optimale de cet élément. Il accepte uniquement les valeurs suivantes :
-
     - `none` : Indique que l'élément audio ne devrait pas être mis en cache
     - `metadata` : Indique que seules les méta-données (comme la durée) sont préchargées
     - `auto` : Indique que tout le fichier peut être téléchargé, même s'il n'est pas certain que l'utilisateur le lira
@@ -362,7 +356,6 @@ Une autre bonne pratique consiste à fournir du contenu comme un lien de téléc
 ## Voir aussi
 
 - [Technologies media Web](/fr/docs/Web/Media)
-
   - [Formats des conteneurs medias (types de fichiers)](/fr/docs/Web/Media/Formats/Containers)
   - [Guide des codecs audio utilisés sur le web](/fr/docs/Web/Media/Formats/Audio_codecs)
 

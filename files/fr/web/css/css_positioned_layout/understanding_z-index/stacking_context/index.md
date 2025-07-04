@@ -21,7 +21,6 @@ Un contexte d'empilement est formé dans le document par n'importe quel élémen
 - Un élément pour lequel [`opacity`](/fr/docs/Web/CSS/opacity) est inférieure à 1 (cf. [la spécification](https://www.w3.org/TR/css3-color/#transparency))
 - Un élément pour lequel [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode) est différente de `normal`
 - Un élément pour lequel n'importe laquelle de ces propriétés est différente de `none` :
-
   - [`transform`](/fr/docs/Web/CSS/transform)
   - [`filter`](/fr/docs/Web/CSS/filter)
   - [`perspective`](/fr/docs/Web/CSS/perspective)
@@ -51,11 +50,9 @@ En bref&nbsp;:
 Dans cet exemple, tous les éléments positionnés créent leur propre contexte d'empilement, du fait de leur positionnement et de leur valeur `z-index`. La hiérarchie des contextes d'empilement est organisée comme suit&nbsp;:
 
 - Racine
-
   - DIV #1
   - DIV #2
   - DIV #3
-
     - DIV #4
     - DIV #5
     - DIV #6
@@ -68,16 +65,12 @@ Il est important de noter que les blocs DIV #4, DIV #5 et DIV #6 sont les enfant
 > - Pour la même raison _DIV #2_ (dont le `z-index` est 2) est rendu sous _DIV#5_ (de `z-index` égal à 1) parce que _DIV #5_ appartient à _DIV #3_, qui possède une valeur de `z-index` plus grande.
 > - Le `z-index` du bloc _DIV #3_ est 4, mais cette valeur est indépendante du `z-index` du bloc _DIV #4_, _DIV #5_ et _DIV #6_, parce qu'il appartient à un contexte d'empilement différent.
 > - Une méthode simple pour déterminer _l'ordre de rendu_ des éléments empilés sur l'axe Z consiste à considérer cette valeur comme un numéro de version où les éléments enfants sont des versions mineures, placées sous les versions majeures portées par leurs parents. Ainsi, on peut voir comment un élément avec une propriété `z-index` à 1 (DIV #5) est placé au-dessus d'un élément avec `z-index` à 2 (DIV #2), et comment un élément avec `z-index` à 6 (DIV #4) est empilé sous un élément avec `z-index` à 5 (DIV #1). Dans notre exemple, en triant selon l'ordre de rendu final, on a&nbsp;:
->
 >   - Racine
->
 >     - DIV #2 - z-index à 2
 >     - DIV #3 - z-index à 4
->
 >       - DIV #5 - z-index à 1, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.1
 >       - DIV #6 - z-index à 3, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.3
 >       - DIV #4 - z-index à 6, empilé sous un élément avec `z-index` à 4, qui aboutit à un ordre de rendu de 4.6
->
 >     - DIV #1 - z-index à 5
 
 ## Exemple

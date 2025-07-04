@@ -96,18 +96,14 @@ top: unset;
 ### 取值
 
 - {{cssxref("&lt;length&gt;")}}
-
   - : 可以是负的、null 或正的 {{cssxref("&lt;length&gt;")}} 值，用于表示：
-
     - 对于**绝对定位的元素**，元素下外边距边界与其包含块下边界之间的偏移。
     - 对于**相对定位定位的元素**，元素的下边界离开其正常位置的偏移。
 
 - {{cssxref("&lt;percentage&gt;")}}
   - : 代表元素包含块的高度的百分比 {{cssxref("&lt;percentage&gt;")}}。
 - `auto`
-
   - : 表示：
-
     - 对于*绝对定位元素*，元素的定位基于 {{Cssxref("bottom")}} 属性，`height: auto` 被视为基于内容的高度；或者，如果 `bottom` 也是 `auto`，则元素将按其作为静态元素时应垂直定位的位置进行定位。
     - 对于*相对定位元素*，元素相对于其正常位置的偏移量基于 {{Cssxref("bottom")}} 属性；如果 `bottom` 也是 `auto`，则元素将不会在垂直方向上移动。
 

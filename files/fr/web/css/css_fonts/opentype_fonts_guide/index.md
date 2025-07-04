@@ -184,7 +184,6 @@ Ainsi, les petites capitales peuvent être activées de différentes façons mai
 ### Démonstrations de caractéristiques OpenType en CSS
 
 - [Démonstration CSS complète des caractéristiques OpenType (en anglais)](https://sparanoid.com/lab/opentype-features/)
-
   - Note : la complétude invoquée dans le titre n'est pas garantie…
 
 ### Outils web d'analyse de polices

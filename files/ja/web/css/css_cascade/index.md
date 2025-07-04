@@ -64,19 +64,15 @@ CSS の基本設計原則の一つに、ルールのカスケードがありま�
 ## ガイド
 
 - [CSS カスケード入門](/ja/docs/Web/CSS/CSS_cascade/Cascade)
-
   - : ユーザーエージェントが異なる元から来たプロパティ値をどのように結合するかを定義するカスケードアルゴリズムのガイドです。
 
 - [CSS の継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)
-
   - : CSS の継承のガイドです。
 
 - [学習: 競合の処理](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
-
   - : CSS の最も基本的な概念であるカスケード、詳細度、継承は、 CSS を HTML に適用する方法や競合を解決する方法を制御します。
 
 - [学習: カスケードレイヤー](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
-
   - : [カスケードレイヤー](/ja/docs/Web/CSS/@layer) の紹介です。 [CSS カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)と [CSS 詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)の基本概念の上に構築された、より高度な機能です。
 
 ## 関連概念

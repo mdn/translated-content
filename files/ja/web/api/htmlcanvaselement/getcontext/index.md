@@ -21,9 +21,7 @@ getContext(contextType, contextAttributes)
 ### 引数
 
 - `contextType`
-
   - : キャンバスに関連する描画コンテキストを定義するコンテキスト識別子が入っている文字列です。利用可能な値は次の通りです。
-
     - `"2d"`: 2 次元の描画コンテキストを表す {{domxref("CanvasRenderingContext2D")}} オブジェクトが作成されます。
     - `"webgl"`（または `"experimental-webgl"`）: 3 次元レンダリングコンテキストを表す {{domxref("WebGLRenderingContext")}} オブジェクトを作成します。このコンテキストは、[WebGL](/ja/docs/Web/API/WebGL_API) version 1 (OpenGL ES 2.0) を実装しているブラウザーでのみ利用可能です。
     - `"webgl2"`: 3 次元レンダリングコンテキストを表す {{domxref("WebGL2RenderingContext")}} オブジェクトを作成します。このコンテキストは、[WebGL](/ja/docs/Web/API/WebGL_API) version 2 (OpenGL ES 3.0) を実装しているブラウザーでのみ利用できます。{{experimental_inline}}
@@ -34,7 +32,6 @@ getContext(contextType, contextAttributes)
     > 識別子 `"experimental-webgl"` は、WebGL の新しい実装で使用されます。これらの実装は、テストスイート適合性に達していないか、プラットフォームのグラフィックドライバーがまだ安定していないかのいずれかです。[Khronos Group](https://www.khronos.org/) が、一定の[適合性ルール](https://www.khronos.org/registry/webgl/sdk/tests/CONFORMANCE_RULES.txt)のもと、WebGL 実装を認証しています。
 
 - `contextAttributes` {{optional_inline}}
-
   - : レンダリングコンテキストを作成する際に、いくつかのコンテキスト属性を使用することができます。例えば、以下のようなものです。
 
     ```js
@@ -45,7 +42,6 @@ getContext(contextType, contextAttributes)
     ```
 
     2 次元のコンテキスト属性:
-
     - `alpha`
       - : キャンバスにアルファチャンネルが含まれているかどうかを示す論理値です。`false` に設定すると、ブラウザーは背景が常に不透明であることを認識するようになり、透過コンテンツや画像の描画を高速化することができます。
     - `colorSpace` {{optional_inline}}
@@ -58,7 +54,6 @@ getContext(contextType, contextAttributes)
       - : 多くのリードバック操作を予定しているかどうかを示す論理値です。これにより、（ハードウェアアクセラレーションではなく）ソフトウェア2Dキャンバスを使用するようになり、{{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} を頻繁に呼び出す際にメモリーを節約することができます。
 
     WebGL コンテキスト属性:
-
     - `alpha`
       - : 論理値で、キャンバスがアルファバッファーを持っているかどうかを示します。
     - `depth`
@@ -72,9 +67,7 @@ getContext(contextType, contextAttributes)
     - `failIfMajorPerformanceCaveat`
       - : 論理値で、システム性能が低い場合やハードウェア GPU が利用できない場合に、コンテキストを作成するかどうかを示します。
     - `powerPreference`
-
       - : どのような GPU 構成が WebGL コンテキストに適しているかを示すユーザーエージェントへのヒントです。使用可能な値は次のとおりです。
-
         - `"default"`
           - : どの GPU 構成が最も適しているかをユーザーエージェントに決定させます。これが既定値です。
         - `"high-performance"`

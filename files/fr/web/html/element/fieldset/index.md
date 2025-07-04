@@ -49,7 +49,6 @@ Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Globa
 - `form`
   - : La valeur de cet attribut correspond à la valeur de l'attribut `id` de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) auquel il est rattaché. La valeur par défaut est l'identifiant du plus proche élément [`<form>`](/fr/docs/Web/HTML/Element/form) dont l'élément `<fieldset>` est le descendant. Attention, cet attribut peut être source de confusion, tout élément `<input>` contenu au sein du `<fieldset>` et qui devra être associé au formulaire devra également avoir l'attribut `form` explicitement défini. En JavaScript, on pourra utiliser la propriété [`HTMLFormElement.elements`](/fr/docs/Web/API/HTMLFormElement/elements) pour vérifier le bon rattachement des éléments au formulaire.
 - `name`
-
   - : Le nom associé au groupe.
 
     > [!NOTE]

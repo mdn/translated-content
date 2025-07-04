@@ -122,7 +122,6 @@ Il est aussi possible de combiner plusieurs requêtes média en une seule règle
 - `and`
   - : Cet opérateur permet de combiner plusieurs tests de caractéristiques afin que le résultat du test vaille `true` si chacun des tests individuels vaut `true`. Il permet également de joindre des tests de caractéristiques média et des tests de type de média.
 - `not`
-
   - : Cet opérateur donne la négation d'une requête média, renvoyant `true` si la requête devait renvoyer `false`. Si cet opérateur est présent dans une liste de requêtes séparées par des virgules, la négation portera uniquement sur la requête sur laquelle l'opérateur est appliqué. Si l'opérateur `not` est utilisé, il _est nécessaire_ d'indiquer un type de média.
 
     > [!NOTE]

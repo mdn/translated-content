@@ -25,7 +25,6 @@ slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 
 - 把 CSS 链接到 HTML 文档里。
 - 给信纸添加这样一个背景：
-
   - 把之前下载的顶部图片固定到信纸顶部。
   - 把之前下载的底部图片固定到信纸底部。
   - 为了给信纸一点纹理，在前面背景的基础上添加一个半透明的渐变，使其在顶部和底部附近稍微变暗，但中间的大部分完全透明。

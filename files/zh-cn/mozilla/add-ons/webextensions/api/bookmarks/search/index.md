@@ -24,25 +24,20 @@ let searching = browser.bookmarks.search(
 ### 参数
 
 - `query`
-
   - : 描述要执行的查询的 {{jsxref("string")}} 或 {{jsxref("object")}}。
 
     如果 `query` 是一个**字符串**，它由零个或多个以空格分隔的搜索项组成。如果搜索项是书签的 URL 或标题的子字符串，则匹配。匹配不区分大小写。要使书签与查询匹配，必须匹配查询的所有搜索条件。
 
     如果 `query` 是一个**对象**，它由三个属性中的零个或多个组成：`query`、`title` 和 `url`，描述如下。要使书签与查询匹配，必须匹配所有属性的项。
-
     - query {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，指定要与之匹配的一个或多个项；其格式与 `query` 参数的字符串形式相同。如果这不是一个字符串，则会引发异常。
 
     - `url` {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，必须与书签的 URL 完全匹配。匹配不区分大小写，尾部斜杠会被忽略。
 
         如果传递了无效的 URL，则函数会引发异常。
 
     - `title` {{optional_inline}}
-
       - : 一个 {{jsxref("string")}}，必须与书签树节点的标题完全匹配。匹配区分大小写。
 
 ### 返回值

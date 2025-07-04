@@ -17,9 +17,7 @@ forEach(callback, thisArg)
 ### 参数
 
 - `callback`
-
   - : 为 `someNodeList`的每一个元素执行函数。它接受以下三个参数：
-
     - `currentValue`
       - : `someNodeList`中的当前元素。
     - `currentIndex` {{Optional_inline}}

@@ -18,7 +18,6 @@ l10n:
 - 维基百科上的[分叉](<https://zh.wikipedia.org/wiki/分叉_(软件开发)>)
 - 在 Git 上下文中：[如何给 GitHub 仓库建立分叉](https://help.github.com/articles/fork-a-repo/)
 - 各种“知名的”分叉
-
   - [Linux 发行版](https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg)
   - [Node.js 和 io.js（最后又被合并回一起）](https://nodejs.org/en/blog/announcements/foundation-v4-announce/)
   - [LibreOffice，OpenOffice 的一个分叉](https://www.libreoffice.org/about-us/who-are-we/)

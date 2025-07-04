@@ -27,9 +27,7 @@ let gettingIsOpen = browser.sidebarAction.isOpen(
 ### 参数
 
 - `details`
-
   - : `object`。一个对象，可选地包含要检查的 `windowId` 属性。
-
     - `windowId` {{optional_inline}}
       - : `integer`。要检查的浏览器窗口的 ID。如果省略，则默认为 {{WebExtAPIRef("windows.WINDOW_ID_CURRENT")}}，它引用最顶层的浏览器窗口。
 

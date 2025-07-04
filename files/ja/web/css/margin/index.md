@@ -116,9 +116,7 @@ margin: unset;
 ### 値
 
 - {{cssxref("length")}}
-
   - : マージンの寸法を固定値で表したものです。
-
     - アンカー位置指定要素の場合、 {{cssxref("anchor-size()")}} 関数は、関連付けられたアンカー要素の幅または高さに対する相対的な {{cssxref("&lt;length&gt;")}} 値に解決されます（[アンカーサイズに基づいて要素のマージンを設定](/ja/docs/Web/CSS/CSS_anchor_positioning/Using#setting_element_margin_based_on_anchor_size)を参照してください）。
 
 - {{cssxref("percentage")}}

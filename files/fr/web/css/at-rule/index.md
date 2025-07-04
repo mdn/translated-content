@@ -22,7 +22,6 @@ Il existe de nombreuses règles @, désignées par leurs identifiants, chacune a
 - {{cssxref("@import")}} qui indique au moteur de rendu d'inclure une feuille de style externe.
 - {{cssxref("@namespace")}} qui indique au moteur de rendu que le contenu doit être pris en compte comme s'il était préfixé pour un espace de noms XML.
 - **_Les règles @ imbriquées_**. Ces règles sont un sous-ensemble des instructions imbriquées qui peuvent être utilisées au plus haut niveau de la feuille de style et aussi à l'intérieur de règles conditionnelles :
-
   - {{cssxref("@media")}} : une règle de groupe conditionnelle qui applique son contenu si l'appareil utilisé respecte les critères définis dans la « requête média » (ou _media query_).
   - {{cssxref("@supports")}} : une règle de groupe conditionnelle qui applique son contenu si le navigateur respecte une condition donnée (par exemple, si le navigateur supporte tel élément de syntaxe).
   - {{cssxref("@document")}} {{experimental_inline}} : une règle de groupe conditionnelle qui applique son contenu si le document sur lequel s'applique la feuille de style respecte une condition donnée _(cette règle a été reportée pour être incluse dans la spécification CSS de niveau 4)_

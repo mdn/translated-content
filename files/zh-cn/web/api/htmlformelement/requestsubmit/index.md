@@ -17,7 +17,6 @@ requestSubmit(submitter)
 ### 参数
 
 - `submitter` {{optional_inline}}
-
   - : 提交按钮，其属性描述了提交表单的方式。可以是 `type` 属性为 `submit` 的 {{HTMLElement("input")}} 或 {{HTMLElement("button")}} 元素。
 
     如果你省略了 `submitter` 参数，表单元素自身会作为 submitter 使用。

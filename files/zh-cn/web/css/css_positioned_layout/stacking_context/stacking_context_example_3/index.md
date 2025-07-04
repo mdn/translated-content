@@ -24,11 +24,8 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3
 为了能更好地理解这种情况，这里列出了层叠上下文的层次结构：
 
 - root stacking context
-
   - LEVEL #1
-
     - LEVEL #2 (z-index: 1)
-
       - LEVEL #3
       - ...
       - LEVEL #3

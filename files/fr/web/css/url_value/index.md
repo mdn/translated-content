@@ -61,11 +61,8 @@ La fonction **`url()`** peut être incluse comme valeur pour les propriétés [`
 ### Valeurs
 
 - `<string>`
-
   - : Une chaîne de caractères indiquant une URL ou l'identifiant d'une forme SVG.
-
     - `<url>`
-
       - : Une URL, relative ou absolue, qui pointe vers une ressource web à inclure ou un URI de données éventuellement encadrée entre quotes ou doubles quotes. Les quotes sont obligatoires si l'URL inclut des parenthèses, espaces, doubles quotes, etc. (sauf si ces caractères sont échappés) ou si l'adresse inclut des caractères de contrôle supérieurs à `0x7e`. Il n'est pas possible d'utiliser des doubles quotes dans une URL encadrée par des doubles quotes à moins de les échapper. De même, on ne peut pas utiliser une simple quote dans une URL délimitée par des simples quotes. Les déclarations suivantes seront équivalentes&nbsp;:
 
         ```css

@@ -55,7 +55,8 @@ cd borderify
 - [进一步了解内容脚本](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [进一步了解模式匹配](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告：** [某些情况下，你需要给你的扩展指定一个 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id)。如果你需要指定一个附加组件 ID，请在 `manifest.json` 中添加 [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键，并设置其 `gecko.id` 属性：
+> [!WARNING]
+> [某些情况下，你需要给你的扩展指定一个 ID](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id)。如果你需要指定一个附加组件 ID，请在 `manifest.json` 中添加 [`browser_specific_settings`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键，并设置其 `gecko.id` 属性：
 >
 > ```json
 > "browser_specific_settings": {

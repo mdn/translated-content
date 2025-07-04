@@ -23,9 +23,7 @@ structuredClone(value, options)
 - `value`
   - : 被克隆的对象。可以是任何[结构化克隆支持的类型](/zh-CN/docs/Web/API/Web_Workers_API/Structured_clone_algorithm#支持的类型)。
 - `options` {{optional_inline}}
-
   - : 一个具有以下属性的对象：
-
     - `transfer`
       - : 一个[可转移对象](/zh-CN/docs/Web/API/Web_Workers_API/Transferable_objects)的数组，里面的对象将被移动而不是克隆到返回的对象上。
 

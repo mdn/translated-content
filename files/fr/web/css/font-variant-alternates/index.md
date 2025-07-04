@@ -53,7 +53,6 @@ Cette propriété peut être définie selon deux formes&nbsp;:
 - `swash()`
   - : Cette fonction active l'affichage des glyphes [pour les lettres ornées](https://fr.wikipedia.org/wiki/Lettre_ornée). Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Elle correspond aux valeurs OpenType `swsh` et `cswh` (par exemple `swsh 2` ou `cswh 2`).
 - `ornaments()`
-
   - : Cette fonction active l'affichage des ornements tels que les [fleurons](<https://fr.wikipedia.org/wiki/Fleuron_(typographie)>) et autres casseaux. Le paramètre passé à la fonction est un nom lié à la fonte auquel est associé un nombre. Cette valeur correspond à la valeur OpenType `ornm` (par exemple `ornm 2`).
 
     > [!NOTE]

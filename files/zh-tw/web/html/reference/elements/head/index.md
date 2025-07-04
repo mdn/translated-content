@@ -7,7 +7,8 @@ slug: Web/HTML/Reference/Elements/head
 
 [HTML](/zh-TW/docs/Web/HTML) 中的 **`<head>`** 元素包含有關文件的機器可讀信息（後設資料），例如 [標題](/zh-TW/docs/Web/HTML/Reference/Elements/title)、[腳本](/zh-TW/docs/Web/HTML/Reference/Elements/script)、[樣式表](/zh-TW/docs/Web/HTML/Reference/Elements/style)。
 
-> **備註：**`<head>` 主要保存用於機器處理的訊息，而不是人類可讀的訊息。對於人類可見的訊息，例如頂級標題和列出的作者，請參見 {{HTMLElement("header")}} 元素。
+> [!NOTE]
+> `<head>` 主要保存用於機器處理的訊息，而不是人類可讀的訊息。對於人類可見的訊息，例如頂級標題和列出的作者，請參見 {{HTMLElement("header")}} 元素。
 
 ## 屬性
 
@@ -84,7 +85,6 @@ slug: Web/HTML/Reference/Elements/head
 ## 參見
 
 - 可以使用在 `<head>` 中的元素：
-
   - {{HTMLElement("title")}}
   - {{HTMLElement("base")}}
   - {{HTMLElement("link")}}

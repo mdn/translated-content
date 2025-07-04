@@ -88,7 +88,6 @@ JavaScript 프레임워크는 최신 프론트엔드 웹 개발의 필수 부분
 - [2. 첫 번째 Vue 컴포넌트 만들기](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_first_component)
   - : 이제 Vue에 대해 자세히 살펴보고 우리만의 커스텀 컴포넌트를 만들겠습니다. Todo list의 각 항목을 나타내는 컴포넌트를 만드는 것으로 시작합니다. 그 과정에서, 다른 컴포넌트 내에서 컴포넌트를 호출하고, props(properties)를 통해 데이터를 전달하고 데이터 상태를 저장하는 등 중요한 개념을 학습합니다.
 - [3. Vue 컴포넌트 리스트 렌더링](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_rendering_lists)
-
   - : 이 시점에서 우리는 충분히 잘 작동하는 컴포넌트를 얻었습니다. 이제 앱에 여러 `ToDoItem` 컴포넌트를 추가할 준비가 되었습니다. 이 글에서는 `App.vue` 컴포넌트에 todo 항목 데이터 셋을 추가하는 방법을 살펴보고, `v-for` 지시문(directive)을 사용하여 `ToDoItem` 컴포넌트를 반복하여 출력합니다.
 
 - [4. 새로운 todo form추가: Vue events, methods, models](/ko/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_methods_events_models)

@@ -15,7 +15,6 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `async`
-
   - : クラシックスクリプトでは、 `async` 属性があった場合、クラシックスクリプトが利用可能になるとすぐに並行して読み込み、解析と評価を行います。
 
     [モジュールスクリプト](/ja/docs/Web/JavaScript/Guide/Modules)では、 `async` 属性があった場合、そのスクリプトとその依存関係は、構文解析と並行して読み込まれ、利用可能になるとすぐに評価されます。
@@ -32,14 +31,12 @@ l10n:
     ブラウザーの対応状況については[ブラウザーの互換性](#ブラウザーの互換性)をご覧ください。 [asm.js 向け非同期スクリプト](/ja/docs/Games/Techniques/Async_scripts)もご覧ください。
 
 - `attributionsrc` {{experimental_inline}}
-
   - : ブラウザーに、スクリプトリソースのリクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。サーバー側では、このヘッダーを使用して、レスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーを送信し、それぞれ JavaScript ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#javascript-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#javascript-based_attribution_triggers)を登録します。どのレスポンスヘッダーを返すかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
 
     > [!NOTE]
     > 他にも、JavaScript ベースの帰属ソースまたはトリガーは、 {{domxref("Window/fetch", "fetch()")}} リクエストに `attributionReporting` オプションを指定するか（`fetch()` 呼び出しに直接設定するか、 {{domxref("Request")}} オブジェクトに設定して `fetch()` 呼び出しに渡す）、リクエストオブジェクトで {{domxref("XMLHttpRequest")}} に {{domxref("XMLHttpRequest.setAttributionReporting", "setAttributionReporting()")}} を呼び出して送信することで登録できます。
 
     この属性には、設定できるバージョンが 2 つあります。
-
     - 論理属性、すなわち `attributionsrc` の名前のみ。これは、 {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを `src` 属性が指し示すのと同じサーバーに送信することを指定します。これは、帰属ソースやトリガーの登録を同じサーバーで処理する場合に適しています。帰属トリガーを登録する際、このプロパティはオプションであり、省略した場合は空文字列値が使用されます。
     - 次のように 1 つ以上の URL を格納する値です。
 
@@ -58,14 +55,12 @@ l10n:
     詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
 - `blocking`
-
   - : この属性は、スクリプトを取得する際に特定の操作をブロックすべきであることを明示的に示します。ブロックされる操作は、下記に掲載されているブロックトークンの空白区切りリストでなければなりません。
     - `render`: 画面へのコンテンツのレンダリングのブロックします。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
   - : 通常の `script` 要素は標準の {{Glossary("CORS")}} チェックに通らないスクリプトに対して、 {{domxref('Window.error_event', 'window.onerror')}} に最小限の情報しか渡しません。別のドメインを使用するサイトに静的メディアへのエラーログ出力ができるようにするためには、この属性を使用してください。有効な値について、詳しくは [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)をご覧ください。
 - `defer`
-
   - : この論理属性は、スクリプトを文書の解析完了後かつ {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前に実行することをブラウザーに示します。
 
     `defer` 属性の付いたスクリプトは、スクリプトが読み込まれて評価が完了するまで、 `DOMContentLoaded` イベントの発生が抑制されます。
@@ -82,10 +77,8 @@ l10n:
     この属性を `async` 属性とともに指定した場合、その要素は `async` 属性のみが指定されている場合と同等に動作します。
 
 - `fetchpriority`
-
   - : 外部スクリプトをフェッチするときに使用する相対的な優先度のヒントを提供されます。
     取りうる値は次の通りです。
-
     - `high`
       - : 外部スクリプトを、他の外部スクリプトと比較して高い優先度で取得します。
     - `low`
@@ -104,9 +97,7 @@ l10n:
 - `nonce`
   - : [script-src コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)内のスクリプトをホワイトリストに入れるための暗号ノンス (ワンタイム番号) です。サーバーはポリシーを送信するたびに一意のノンス値を生成する必要があります。それ以外の方法でリソースのポリシーのバイパスを推測できないノンスを提供することが重要です。
 - `referrerpolicy`
-
   - : スクリプトを読み込んだり、スクリプトがリソースを読み込んだりする際に、どの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
-
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信しません。
     - `no-referrer-when-downgrade` (既定値): {{HTTPHeader("Referer")}} ヘッダーは、{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合には送信しません。
     - `origin`: 送信するリファラーを、参照しているページのオリジン（[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト")}}、{{Glossary("port", "ポート番号")}}）のみに制限します。
@@ -122,10 +113,8 @@ l10n:
 - `src`
   - : この属性は外部スクリプトの URI を指定します。文書に直接スクリプトを埋め込む代わりに使用することができます。
 - [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type)
-
   - : この属性は、表現されるスクリプトの種類を示します。
     この属性の値は、以下のいずれかになります。
-
     - **属性が未設定（既定値）、空文字列、JavaScript の MIME タイプ**
       - : スクリプトが「クラシックスクリプト」であること、JavaScript コードを保持していることを示します。
         このスクリプトが JavaScript コードを参照している場合、MIME タイプを指定するのではなく、この属性を省略することを推奨します。

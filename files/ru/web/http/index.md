@@ -39,9 +39,7 @@ slug: Web/HTTP
 - [HTTP-заголовки (HTTP Headers)](/ru/docs/Web/HTTP/Reference/Headers)
   - : Заголовки HTTP-сообщения используются для точного описания загружаемого ресурса или поведения сервера или клиента. Пользовательские заголовки можно добавить, используя `X-` префикс; другие перечислены в [IANA registry](https://www.iana.org/assignments/message-headers/perm-headers.html), содержание которого в свою очередь определено в [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA так же поддерживает [регистр предложенных новых HTTP-заголовков](https://www.iana.org/assignments/message-headers/prov-headers.html).
 - [Методы HTTP-запроса](/ru/docs/Web/HTTP/Reference/Methods)
-
   - : Различные операции, которые выполняются с HTTP:
-
     - {{HTTPMethod("GET")}}
     - {{HTTPMethod("POST")}}
     - {{HTTPMethod("OPTIONS")}}

@@ -137,9 +137,11 @@ Link: <https://www.example.com/fonts/cicle_fina-webfont.woff2>; rel="preload"
 
 将无法从 `https://aggregator.example/` 访问。
 
-> **备注：** `<link rel="prefetch">` 在功能上等同于一个带有 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}} 调用，但前者通常具有更低的优先级，并且请求上会设置 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Reference/Headers/Sec-Purpose) 标头。
+> [!NOTE]
+> `<link rel="prefetch">` 在功能上等同于一个带有 `priority: "low"` 选项的 {{domxref("Window/fetch", "fetch()")}} 调用，但前者通常具有更低的优先级，并且请求上会设置 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Reference/Headers/Sec-Purpose) 标头。
 
-> **备注：** `prefetch` 操作的获取请求将产生一个包含 HTTP 标头 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Reference/Headers/Sec-Purpose) 的 HTTP 请求。服务器可能会使用此标头更改资源的缓存超时时间或执行其他特殊处理。请求还将包括 {{HTTPHeader("Sec-Fetch-Dest")}} 标头，其值为 `empty`。请求中的 {{HTTPHeader("Accept")}} 标头将与正常导航请求中使用的值匹配。这允许浏览器在导航后找到匹配的缓存资源。如果返回响应，它将与请求一起缓存在 HTTP 缓存中。
+> [!NOTE]
+> `prefetch` 操作的获取请求将产生一个包含 HTTP 标头 [`Sec-Purpose: prefetch`](/zh-CN/docs/Web/HTTP/Reference/Headers/Sec-Purpose) 的 HTTP 请求。服务器可能会使用此标头更改资源的缓存超时时间或执行其他特殊处理。请求还将包括 {{HTTPHeader("Sec-Fetch-Dest")}} 标头，其值为 `empty`。请求中的 {{HTTPHeader("Accept")}} 标头将与正常导航请求中使用的值匹配。这允许浏览器在导航后找到匹配的缓存资源。如果返回响应，它将与请求一起缓存在 HTTP 缓存中。
 
 ### `<link rel="prerender">`
 

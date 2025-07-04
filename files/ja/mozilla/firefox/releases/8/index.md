@@ -118,7 +118,6 @@ ChromeWorkers から XPCOM オブジェクトにアクセスできなくなり�
 ### ビルドシステムの変更
 
 - 以下のビルド設定オプションは削除されました。
-
   - `--enable-timeline`
   - `--disable-storage`
   - `--necko-disk-cache`

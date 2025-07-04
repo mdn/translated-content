@@ -81,14 +81,12 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("padding-top")}},
   - {{cssxref("padding-right")}},
   - {{cssxref("padding-bottom")}},
   - {{cssxref("padding-left")}}
 
 - Les propriétés influençant les propriétés logiques :
-
   - {{cssxref("writing-mode")}},
   - {{cssxref("direction")}},
   - {{cssxref("text-orientation")}}

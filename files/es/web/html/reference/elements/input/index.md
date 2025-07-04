@@ -62,12 +62,10 @@ El elemento HTML `<input>` se usa para crear controles interactivos para formula
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes), y los indicados a continuación.
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes), y los indicados a continuación.
 
 - `type`
-
   - : El tipo de control a mostrar. Su valor predeterminado es `text`, si no se especifica este atributo. Los posibles valores son:
-
     - `button`: Botón sin un comportamiento específico.
     - `checkbox`: Casilla de selección. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado. También se puede usar el atributo **indeterminate** (el cual solo se puede establecer programaticamente) para indicar que la casilla está en un estado indeterminado (en la mayoría de las plataformas, se dibuja una línea horizontal a través de la casilla).
     - `color`: Control para espicificar un color. Una interfaz de selección de color no requiere más funcionalidad que la de aceptar colores simples como texto ([más información](<http://www.w3.org/TR/html5/forms.html#color-state-(type=color)>)).
@@ -83,7 +81,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `password`: Control de línea simple cuyo valor permanece oculto. Se puede usar el atributo **maxlength** para especificar la longitud máxima del valor que se puede introducir.
     - `radio`: Botón radio. Se debe usar el atributo **value** para definir el valor que se enviará por este elemento. Se usa el atributo **checked** para indicar si el elemento está seleccionado de forma predeterminada. Los botones radio que tengan el mismo valor para su atributo **name** están dentro del mismo "grupo de botones radio". Solo un botón radio dentro de un grupo puede ser seleccionado a la vez.
     - `range`: Control para introducir un número cuyo valor exacto no es importante. Este control usa los siguientes valores predeterminados si no se especifica cada atributo:
-
       - `min`: 0
       - `max`: 100
       - `value`: `min` + (`max -` `min`) / 2, o `min` si `max` es menor que `min`
@@ -99,9 +96,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     - `week`: Control para introducir una fecha que consiste en número de semana del año y número de semana sin zona horaria específica.
 
 - `accept`
-
   - : Si el valor del atributo **type** es `file`, este atributo indica los tipos de archivo que el servidor acepta, de otra manera será ignorado. El valor debe ser una lista de tipos de contenido únicos, separados por coma:
-
     - Una extensión de archivo, comenzando por el caracter STOP (U+002E). (Ejemplos: ".jpg,.png,.doc")
     - Un tipo MIME válido sin extensiones
     - `audio/*`, que representa archivos de audio
@@ -113,9 +108,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `mozactionhint` {{non-standard_inline}}
   - : Especifica una "pista de acción" usada para determinar cómo etiquetar la tecla "enter" en dispositivos móviles con teclados virtuales. Los valores soportados son `go`, `done`, `next`, `search`, y `send`. Esto queda automáticamente mapeado al texto apropiado y no son sensibles al uso de mayúsculas.
 - `autocapitalize` {{non-standard_inline}}
-
   - : Atributo no estándar usado por [Chrome](https://developers.google.com/web/updates/2015/04/autocapitalize) e iOS Safari Mobile, el cual controla si se deben cambiar los textos a mayúsculas automáticamente mientras son introducidos/editados por el usuario, y la forma en que esto se hará. Los valores no obsoletos están disponibles en iOS5 y superior. Los valores posibles son:
-
     - `none`: Deshabilita completamente las mayúsculas automáticas.
     - `sentences`: Cambia automáticamente a mayúscula la primera letra de la sentencia.
     - `words`: Cambia automáticamente a mayúscula la primera letra de cada palabra.
@@ -126,10 +119,8 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
     [Documentation sobre `autocapitalize` en la Referencia HTML de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-autocapitalize)
 
 - `autocomplete`
-
   - : Este atributo indica si el valor del control puede ser completado automáticamente por el navegador.
     Los valores posibles son:
-
     - `off`: El usuario debe explícitamente introducir un valor en este campo para cualquier uso, o el documento provee su propio método de auto-completado. El navegador no completa automáticamente lo introducido.
     - `on`: Se permite al navegador completar automáticamente el valor basado en los valores que se han introducido previamente. Sin embargo, `on` no provee mayor información sobre qué clase de datos podría esperar el usuario introducir.
     - `name`: Nombre completo.
@@ -174,16 +165,14 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 
     Véase el [Estándar WHATWG](https://html.spec.whatwg.org/multipage/forms.html#autofill) para információn más detallada.
 
-    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Element/form#autocomplete) en {{HTMLElement("form")}}.
+    Si el atributo **autocomplete** no está especificado en un elemento input, el navegador usa el atributo **autocomplete** del formulario al que pertenece el elemento `<input>`, es decir, el elemento `form` del cual es descendiente el elemento `<input>`, o aquél cuyo **id** está especificado en el atributo **form** del elemento input. Para mayor información, véase el atributo [`autocomplete`](/es/docs/Web/HTML/Reference/Elements/form#autocomplete) en {{HTMLElement("form")}}.
 
     El atributo **autocomplete** también controla si Firefox, a diferencia de otros navegadores, [persistirá el estado deshabilitado dinámico, y (si aplica) la selección dinámica](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` a través de las cargas de la página. La característica de persistencia está habilitada de forma predeterminada. Estableciendo el valor de **autocomplete** como `off` se deshabilita esta característica. Esto funciona aún cuando el atributo **autocomplete** no se aplicaría normalmente al `<input>` en virtud de su atributo **type**. Véase [Error 654072 en Firefox](https://bugzil.la/654072).
 
     Para navegadores más modernos (incluyendo Firefox 38+, Google Chrome 34+, IE 11+), establecer el atributo **autocomplete** _no_ previene que el administrador de contraseñas del navegador le pregunte al usuario si desea guardar la información de inicio de sesión (usuario y contraseña), ni tampoco, de permitirlo el usuario, que se autocompleten estos campos la próxima vez que el usuario visite la página. Véase [El atributo autocomplete y campos de inicio de sesión](/es/docs/Web/Security/Practical_implementation_guides/Turning_off_form_autocompletion#the_autocomplete_attribute_and_login_fields).
 
 - `autocorrect` {{non-standard_inline}}
-
   - : Es un atributo no estándar, soportado por Safari, que es usado para controlar si la autocorrección debe estar habilitada cuando el usuario está introduciendo/editando el texto de un `<input>`. Los valores posibles de este atributo son:
-
     - `on`: Habilita la autocorrección
     - `off`: Deshabilita la autocorrección
 
@@ -194,13 +183,11 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `capture`
   - : Cuando el valor del atributo **type** es `file`, la presencia de este atributo Booleano indica que se le dará preferencia a la captura del medio directamente del ambiente del dispositivo, usando algún [mecanismo de captura de medios](https://www.w3.org/TR/html-media-capture/#dfn-media-capture-mechanism).
 - `checked`
-
   - : Cuando el valor del atributo **type** es `radio` o `checkbox`, la presencia de este atributo Booleano indica que el control está seleccionado de forma predeterminada. De lo contrario, será ignorado.
 
     En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](#autocomplete).
 
 - `disabled`
-
   - : Este atributo Booleano indica que el control no está disponible para interacción. En particular, el evento `click` [no será invocado](https://html.spec.whatwg.org/multipage/forms.html#enabling-and-disabling-form-controls:-the-disabled-attribute) en controles deshabilitados. De igual forma, el valor de un control deshabilitado no es enviado con el formulario.
 
     En Firefox, a diferencia de otros navegadores, de forma predeterminada, [se persiste el estado de selección dinámico](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) en un `<input>` a través de las cargas de la página. Para controlar esta característica se usa el atributo [`autocomplete`](#autocomplete).
@@ -208,32 +195,26 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `form`
   - : El elemento form al que está asociado el elemento (su _formulario propietario_). El valor del atributo debe ser el **id** de un elemento {{HTMLElement("form")}} en el mismo documento. Si el atributo no es especificado, este elemento `<input>` deberá ser descendiente de un elemento {{HTMLElement("form")}}. Este atributo permite poner elementos `<input>` en cualquier parte dentro de un documento, no solamente como descendientes de su formulario. Un input puede ser asociado sólo con un formulario.
 - `formaction`
-  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo [`action`](/es/docs/Web/HTML/Element/form#action) del formulario al que pertenece el elemento.
+  - : El URI de un programa que procesa la información enviada por el elemento input, cuando es un botón de tipo `submit` o `image`. Si se especifica, reemplaza al atributo [`action`](/es/docs/Web/HTML/Reference/Elements/form#action) del formulario al que pertenece el elemento.
 - `formenctype`
-
   - : Si el elemento es de tipo `submit` o `image`, este atributo especifica el tipo de contenido que es usado para enviar el formulario al servidor. Los valores posibles son:
-
     - `application/x-www-form-urlencoded`: El valor predeterminado si el atributo no es especificado.
     - `multipart/form-data`: Se usa este valor cuando se tiene un elemento `<input>` con atributo [`type`](#type) de valor `file`.
     - `text/plain`
 
-    Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Element/form#enctype) del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`enctype`](/es/docs/Web/HTML/Reference/Elements/form#enctype) del formulario al que pertenece el elemento.
 
 - `formmethod`
-
   - : Si el elemento input es un botón de tipo `submit` o `image`, este atributo especifica el método HTTP que el navegador usará para enviar el formulario. Los valores posibles son:
-
     - `post`: Los datos del formulario son incluidos en el cuerpo del formulario, y enviados al servidor.
     - `get`: Los datos del formulario son añadidos al URI del **form** con un símbolo '?' como separador, y el URI resultante es enviado al servidor. Se usa este método cuando el formulario no tiene efectos secundarios y contiene solamente caracteres ASCII.
 
-    Si este atributo está especificado, reemplaza al atributo [`method`](/es/docs/Web/HTML/Element/form#method) del formulario al que pertenece el elemento.
+    Si este atributo está especificado, reemplaza al atributo [`method`](/es/docs/Web/HTML/Reference/Elements/form#method) del formulario al que pertenece el elemento.
 
 - `formnovalidate`
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo [`novalidate`](/es/docs/Web/HTML/Element/form#novalidate) del formulario al que pertenece el elemento.
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo Booleano especifica que el formulario no será validado cuando se envíe. Si este atributo está especificado, reemplaza al atributo [`novalidate`](/es/docs/Web/HTML/Reference/Elements/form#novalidate) del formulario al que pertenece el elemento.
 - `formtarget`
-
-  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo [`target`](/es/docs/Web/HTML/Element/form#target) del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
-
+  - : Si el elemento input es de tipo `submit` o `image`, este atributo es el nombre o palabra clave que indica dónde mostrar la respuesta que se recibe después de enviar el formulario. Este es el nombre, o palabra clave, de un _contexto de navegación_ (por ejemplo, pestaña, ventana o frame incrustado). Si este atributo está especificado, reemplaza al atributo [`target`](/es/docs/Web/HTML/Reference/Elements/form#target) del formulario al que pertenece el elemento. Las siguientes palabras clave tienen significado especial:
     - `_self`: Carga la respuesta en el mismo contexto de navegación actual. Este valor es el predeterminado cuando no se especifica el atributo.
     - `_blank`: Carga la respuesta en un contexto de navegación nuevo.
     - `_parent`: Carga la respuesta en el contexto de navegación padre del actual. Si no hay contexto padre, se comporta de la misma forma que `_self`.
@@ -244,9 +225,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `incremental` {{non-standard_inline}}
   - : Es un atributo no estándar, soportado por WebKit (Safari) y Blink (Chrome), que solo aplica cuando el atributo **type** es `search`. Si el atributo está presente, sin importar su valor, el `<input>` dispara eventos [`search`](/es/docs/Web/API/HTMLInputElement/search_event) conforme el usuario edita el valor. El evento solo es disparado después de que un tiempo definido en implementación haya pasado desde la última vez que se presionó una tecla. Si el atributo está ausente, el evento [`search`](/es/docs/Web/API/HTMLInputElement/search_event) solo se disparará cuando el usuario explícitamente inicie una búsqueda (por ejemplo, presionando la tecla Enter dentro del control). [Documentación de `incremental en la Referencia HTML de Safari`](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariHTMLRef/Articles/Attributes.html#//apple_ref/doc/uid/TP40008058-incremental)
 - `inputmode`
-
   - : Una pista para el navegador sobre qué teclado mostrar. Este atributo aplica cuando el valor del atributo **type** es text, password, email, o url. Los valores posibles son:
-
     - `verbatim`: Alfanumérico, sin contenido con significado, como nombres de usuario o contraseñas.
     - `latin`: Escritura en caracteres de latín, en el lenguaje de elección del usuario, con ayuda de escritura, como predicción de texto. Para comunicación humano-computadora, como en cuadros de búsqueda.
     - `latin-name`: Como _latin_, pero con nombres de personas.
@@ -276,7 +255,6 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `pattern`
   - : Una expresión regular contra la que el valor es evaluado. El patrón debe coincidir con el valor completo, no solo una parte. Se puede usar el atributo **title** para describir el patrón como ayuda al usuario. Este atributo aplica cuando el atributo **type** es `text`, `search`, `tel`, `url`, `email`, o `password`, y en caso contrario es ignorado. El lenguaje de expresión regular es el mismo que el algoritmo {{jsxref("RegExp")}} de JavaScript, con el parámetro `'u'` que permite tratar al patrón como una secuencia de código Unicode. El patrón no va rodeado por diagonales.
 - `placeholder`
-
   - : Una pista para el usuario sobre lo que puede introducir en el control. El texto no debe contener saltos de línea.
 
     > [!NOTE]

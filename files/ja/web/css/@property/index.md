@@ -24,7 +24,6 @@ l10n:
 ### 記述子
 
 - {{cssxref("@property/syntax","syntax")}}
-
   - : プロパティに許容される構文を記述します。 `<length>`, `<number>`, `<percentage>`, `<length-percentage>`, `<color>`, `<image>`, `<url>`, `<integer>`, `<angle>`, `<time>`, `<resolution>`, `<transform-function>`, `<custom-ident>` のいずれか、またはデータ型とキーワード値のリストです。
 
     `+` （スペース区切り）と `#` （カンマ区切り）の量化子は、値のリストが期待されることを示します。例えば、 `<color>#` は `<color>` 値のカンマ区切りのリストが期待される構文であることを意味しています。

@@ -73,19 +73,15 @@ img {
 ## ガイド
 
 - [シェイプの概要](/ja/docs/Web/CSS/CSS_shapes/Overview_of_shapes)
-
   - : `shape-margin` および `clip-path` プロパティで基本的な図形を定義し、基本的なシェイプを開発者ツールでデバッグします。
 
 - [ボックス値からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/From_box_values)
-
   - : `border-radius` の曲率と CSS ボックスモデルの値を使用して図形を作成します。
 
 - [`shape-outside` による基本シェイプ](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes)
-
   - : CSS シェイプ、参照ボックス、 `shape-outside` プロパティを使って矩形、円、楕円、多角形を作成します。
 
 - [画像からのシェイプ](/ja/docs/Web/CSS/CSS_shapes/Shapes_from_images)
-
   - : シェイプを半透過の画像ファイルや CSS グラデーションから作成します。
 
 ## 関連概念

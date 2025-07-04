@@ -20,9 +20,7 @@ var gettingPopup = browser.browserAction.getPopup(
 ### Paramètres
 
 - `details`
-
   - : `object`.
-
     - `tabId`{{optional_inline}}
       - : `integer`. L'onglet dont le menu déroulant reçoit un entier.
     - `windowId`{{optional_inline}}

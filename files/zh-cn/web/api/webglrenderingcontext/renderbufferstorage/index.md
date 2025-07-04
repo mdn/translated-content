@@ -16,16 +16,12 @@ void gl.renderbufferStorage(target, internalFormat, width, height);
 ### 参数
 
 - target
-
   - : {{domxref("Glenum")}} 指定一个渲染缓冲区对象。可能的值：
-
     - `gl.RENDERBUFFER`:单一图像的缓冲数据存储在一个可渲染的内部格式。
       .
 
 - internalFormat
-
   - : {{domxref("Glenum")}} 指定渲染缓冲区的内部格式。可能的值：
-
     - `gl.RGBA4`: 4 red bits, 4 green bits, 4 blue bits 4 alpha bits.
     - `gl.RGB565`: 5 red bits, 6 green bits, 5 blue bits.
     - `gl.RGB5_A1`: 5 red bits, 5 green bits, 5 blue bits, 1 alpha bit.
@@ -33,7 +29,6 @@ void gl.renderbufferStorage(target, internalFormat, width, height);
     - `gl.STENCIL_INDEX8`: 8 stencil bits.
     - `gl.DEPTH_STENCIL`
     - 当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}时，下面的值也是可用的：
-
       - `gl.R8`
       - `gl.R8UI`
       - `gl.R8I`
@@ -65,16 +60,13 @@ void gl.renderbufferStorage(target, internalFormat, width, height);
       - `gl.DEPTH32F_STENCIL8`
 
     - 当使用{domxref("WEBGL_color_buffer_float")}} 扩展：
-
       - `ext.RGBA32F_EXT`: RGBA 32-bit 浮点类型。
       - `ext.RGB32F_EXT`: RGB 32-bit 浮点类型。
 
     - 当使用{domxref("EXT_sRGB")}} 扩展：
-
       - `ext.SRGB8_ALPHA8_EXT`: 8-bit sRGB 和 alpha.
 
     - 当使用{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}} 和 {{domxref("EXT_color_buffer_float")}} 扩展：
-
       - `gl.R16F`
       - `gl.RG16F`
       - `gl.RGBA16F`

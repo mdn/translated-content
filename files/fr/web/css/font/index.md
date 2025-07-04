@@ -112,12 +112,10 @@ Si `font` est définie grâce à un mot-clé, ce mot-clé doit être : [`caption
 Si `font` est définie comme une propriété raccourcie :
 
 - La déclaration devra inclure des valeurs pour :
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - La déclaration pourra éventuellement inclure des valeurs pour :
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}
@@ -147,7 +145,6 @@ Si `font` est définie comme une propriété raccourcie :
 - `<'font-family'>`
   - : Voir la propriété {{cssxref("font-family")}}.
 - Polices système : `caption` `icon` `menu` `message-box` `small-caption` `status-bar`
-
   - : Un mot-clé peut être utilisé pour indiquer une police système spécifique :
 
     <table class="standard-table">

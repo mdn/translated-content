@@ -58,22 +58,18 @@ initMouseEvent(type, canBubble, cancelable, view,
   - : このイベントのクライアント Y 座標です。
     {{domxref("MouseEvent.clientY")}} の値を設定します。
 - `ctrlKey`
-
   - : このイベント中に <kbd>control</kbd> キーが押されていたかどうか。
     {{domxref("MouseEvent.ctrlKey")}} の値を設定します。
 
 - `altKey`
-
   - : このイベント中に <kbd>alt</kbd> キーが押されていたかどうか。
     {{domxref("MouseEvent.altKey")}} の値を設定します。
 
 - `shiftKey`
-
   - : このイベント中に <kbd>shift</kbd> キーが押されていたかどうか。
     {{domxref("MouseEvent.shiftKey")}} の値を設定します。
 
 - `metaKey`
-
   - : このイベント中に <kbd>meta</kbd> キーが押されていたかどうか。
     {{domxref("MouseEvent.metaKey")}} の値を設定します。
 

@@ -31,7 +31,6 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `media`
   - : Ressources chargées par un élément {{HTMLElement("video")}} ou {{HTMLElement("audio")}}.
 - `object`
-
   - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
 
     Les navigateurs qui n'ont pas de type `object_subrequest` dédié (voir compatibilité des navigateurs ci-dessous), étiquettent également les requêtes ultérieures envoyées par le plugin en tant `object`.
@@ -39,7 +38,6 @@ Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles s
 - `object_subrequest`
   - : Requêtes envoyées par plugins.
 - `ping`
-
   - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
 
     Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.

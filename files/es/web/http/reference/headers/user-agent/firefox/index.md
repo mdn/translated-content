@@ -33,7 +33,6 @@ _localización_
 - `Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en-US; rv:1.0.1) Gecko/20020730 AOL/7.0`
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:1.0rc2) Gecko/20020512 Netscape/7.0b1`
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.2) Gecko/20020220 CS 2000 7.0/7.0`
-
   - `Mozilla/5.0 (Windows; U; Win98; en-US; rv:0.9.4.2) Gecko/20020502 CS 2000 7.0/7.0`
 
 - `Mozilla/5.0 (Platform; Security; OS-or-CPU; Localization; rv:0.9.4.1) Gecko/20020508 Netscape6/6.2.3`

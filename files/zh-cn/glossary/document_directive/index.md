@@ -16,14 +16,12 @@ l10n:
 ## 参见
 
 - [术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("CSP", "内容安全策略")}}
   - {{Glossary("Reporting directive", "报告指令")}}
   - {{Glossary("Fetch directive", "Fetch 指令")}}
   - {{Glossary("Navigation directive", "导航指令")}}
 
 - 参考
-
   - <https://www.w3.org/TR/CSP/#directives-document>
   - {{HTTPHeader("Content-Security-Policy/upgrade-insecure-requests", "upgrade-insecure-requests")}}
   - {{HTTPHeader("Content-Security-Policy/block-all-mixed-content", "block-all-mixed-content")}}

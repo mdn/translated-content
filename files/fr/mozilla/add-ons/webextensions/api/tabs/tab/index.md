@@ -12,7 +12,6 @@ Le type **`tabs.Tab`** contient des informations sur un onglet. Cela donne accè
 Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
 
 - `active`
-
   - : `boolean`. Si l'onglet est actif dans sa fenêtre. Ceci peut être vrai même si la fenêtre de l'onglet n'est pas actuellement focalisée.
 
     L'onglet actif est généralement l'onglet sélectionné. Cependant, sur Firefox pour Android, les popups d'extension s'ouvrent dans un nouvel onglet. Lorsque cet onglet popup est sélectionné, l'onglet actif sera plutôt celui dans lequel le popup s'est ouvert.
@@ -34,7 +33,6 @@ Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivant
 - `hidden`
   - : `boolean`. Si l'onglet est caché.
 - `highlighted`
-
   - : `boolean`. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Maj</kbd> ou <kbd>⌘ Commande</kbd>.
 
     Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets et Firefox pour ordinateur nécessite la préférence `browser.tabs.multiselect` (activée par défaut).

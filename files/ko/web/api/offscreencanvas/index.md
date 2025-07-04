@@ -31,11 +31,9 @@ l10n:
 ## 메소드
 
 - {{domxref("OffscreenCanvas.getContext()")}}
-
   - : 렌더링된 캔버스 맥락 객체를 반환합니다.
 
 - {{domxref("OffscreenCanvas.convertToBlob()")}}
-
   - : 캔버스에 들어있는 이미지에 대한 {{domxref("Blob")}} 객체를 생성합니다.
 
 - {{domxref("OffscreenCanvas.transferToImageBitmap()")}}

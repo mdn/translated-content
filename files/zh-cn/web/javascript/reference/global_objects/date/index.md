@@ -49,7 +49,6 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - `value`
   - : 一个 Unix 时间戳（[Unix Time Stamp](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap04.html#tag_04_16)），它是一个整数值，表示自 1970 年 1 月 1 日 00:00:00 UTC（the Unix epoch）以来的毫秒数，忽略了闰秒。请注意大多数 Unix 时间戳功能仅精确到最接近的秒。
 - 时间戳字符串 `dateString`
-
   - : 表示日期的字符串值。该字符串应该能被 {{jsxref("Date.parse()")}} 正确方法识别（即符合 [IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) 或 [version of ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)）。
 
     > [!NOTE]
@@ -106,7 +105,6 @@ new Date(year, monthIndex [, day [, hours [, minutes [, seconds [, milliseconds]
 - {{jsxref("Date.now()")}}
   - : 返回自 1970-1-1 00:00:00 UTC（世界标准时间）至今所经过的毫秒数。
 - {{jsxref("Date.parse()")}}
-
   - : 解析一个表示日期的字符串，并返回从 1970-1-1 00:00:00 所经过的毫秒数。
 
     > [!NOTE]

@@ -20,7 +20,6 @@ requestSubmit(submitter)
 ### 引数
 
 - `submitter` {{optional_inline}}
-
   - : このフォームのメンバーである{{Glossary("submit button", "送信ボタン")}}です。
 
     `submitter` が `form*` 属性を指定している場合、このフォームの送信動作を[上書きします](/ja/docs/Glossary/Submit_button#フォームの動作の上書き)（`formmethod="POST"` など）。

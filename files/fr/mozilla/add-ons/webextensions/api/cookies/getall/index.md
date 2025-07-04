@@ -20,9 +20,7 @@ var getting = browser.cookies.getAll(
 ### Paramètres
 
 - `details`
-
   - : Un `object` contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir [type de cookie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) pour plus d'informations sur celles-ci ) :
-
     - `domain`{{optional_inline}}
       - : Une `chaîne` représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).
     - `firstPartyDomain`{{optional_inline}}

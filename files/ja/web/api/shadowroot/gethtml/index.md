@@ -23,9 +23,7 @@ const html = shadowRoot.getHTML(options)
 ### 引数
 
 - `options` {{optional_inline}}
-
   - : 次のオプションのパラメーターを持つオプションオブジェクトです。
-
     - `serializableShadowRoots`
       - : 論理値で、[シリアライズ可能](/ja/docs/Web/API/ShadowRoot/serializable)なシャドウルートを含めるかどうかを指定します。
         既定値は `false` です。

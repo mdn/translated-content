@@ -31,11 +31,8 @@ browser.declarativeNetRequest.onRuleMatchedDebug.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 此事件发生时调用的函数。函数传递以下参数：
-
     - `request`
-
       - : 一个包含匹配规则的请求信息的对象。
         - `documentId` {{optional_inline}}
           - : `string`。如果此请求是针对框架的，则为框架文档的唯一标识符。

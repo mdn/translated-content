@@ -38,7 +38,6 @@ prop in object
 ### Параметры
 
 - `prop`
-
   - : Строковое или символьное значение, представляющее название свойства (несимвольные значения будут [преобразованы в строки](/ru/docs/Web/JavaScript/Reference/Global_Objects/String#приведение_к_строке)). Также может быть [именем приватного свойства](/ru/docs/Web/JavaScript/Reference/Classes/Private_properties).
 
 - `object`

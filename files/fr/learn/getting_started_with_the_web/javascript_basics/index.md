@@ -399,7 +399,6 @@ Dans cet exemple, nous utilisons une référence vers l'élement {{htmlelement("
 
 1. nous récupèrons la valeur de l'attribut `src` de l'image.
 2. nous utilisons une structure conditionnelle pour voir si la valeur de `src` est égale au chemin de l'image originale :
-
    1. si c'est le cas, nous changeons la valeur de `src` et indiquons le chemin vers la seconde image, forçant le chargement de cette image dans l'élément {{htmlelement("img")}}.
    2. si ce n'est pas le cas (ce qui signifie que l'image a déjà été changée), la valeur de `src` revient à sa valeur initiale.
 

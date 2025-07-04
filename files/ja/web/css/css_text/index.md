@@ -40,7 +40,6 @@ l10n:
 ### ガイド
 
 - [テキストの分割と折り返し](/ja/docs/Web/CSS/CSS_text/Wrapping_breaking_text)
-
   - : あふれたテキストを CSS で管理する、さまざまな方法についてのガイドです。
 
 ## 関連概念

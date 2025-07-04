@@ -27,7 +27,6 @@ l10n:
   種別は省略可能（`all` と見なされる）ですが、 `only` 論理演算子を使用する場合は例外です。
 
 - [メディア特性](/ja/docs/Web/CSS/@media#メディア特性)は、{{glossary("user agent", "ユーザーエージェント")}}、出力機器、環境などの特定の特徴を記述します。
-
   - {{cssxref("@media/any-hover", "any-hover")}}
   - {{cssxref("@media/any-pointer", "any-pointer")}}
   - {{cssxref("@media/aspect-ratio", "aspect-ratio")}}

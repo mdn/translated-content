@@ -27,7 +27,6 @@ new UIEvent(type, options)
   - : 文字列で、このイベントの名前を表します。
     大文字小文字の区別があり、ブラウザーは `load`, `unload`, `abort`, `error`, `select` の何れかに設定します。
 - `options` {{optional_inline}}
-
   - : _{{domxref("Event/Event", "Event()")}} で定義されたプロパティに加え_、以下のプロパティを持つすることができるオブジェクトです。
     - `detail` {{optional_inline}}
       - : 数値で、このイベントに関連付けられたイベント依存の値です。

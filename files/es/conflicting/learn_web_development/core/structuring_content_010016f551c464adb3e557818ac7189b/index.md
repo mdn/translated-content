@@ -24,11 +24,11 @@ Este módulo contiene los siguientes artículos que te enseñarán todo lo funda
 - [Contenido de Audio y Video](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : A continuación, veremos como usar los elementos de HTML5 {{htmlelement("video")}} y {{htmlelement("audio")}}, para insertar video y audio en nuestras páginas, incluyendo conceptos básicos, proporcionando acceso a diferentes formatos de archivo para diferentes navegadores, agregando ilustraciones y subtítulos y cómo resolver inconvenientes en navegadores más antiguos.
 - [De \<object> a \<iframe> - otras tecnologías de inserción](/es/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
-  - : En este punto, nos gustaría dar un paso hacia un lado, mirando algunos de los elementos que te permiten insertar una amplia variedad de tipos de contenido en tus páginas web: los elementos [`<iframe>`](/es/docs/Web/HTML/Element/iframe), [`<embed>`](/es/docs/Web/HTML/Element/embed) y [`<object>`](/es/docs/Web/HTML/Element/object).
+  - : En este punto, nos gustaría dar un paso hacia un lado, mirando algunos de los elementos que te permiten insertar una amplia variedad de tipos de contenido en tus páginas web: los elementos [`<iframe>`](/es/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/es/docs/Web/HTML/Reference/Elements/embed) y [`<object>`](/es/docs/Web/HTML/Reference/Elements/object).
     El elemento &lt;iframe&gt; nos permite incluir otras páginas web, y las otras dos permiten insertar archivos de formato PDF, SVG e incluso Flash -una tecnología que está a punto de desaparecer, pero que todavía puede verse de manera semi-regular-.
 - [Añadiendo graficos vectoriales a la Web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
   - : Los gráficos vectoriales pueden ser muy útiles en ciertas situaciones. A diferencia de los formatos normales como PNG / JPG, estos no se distorsionan/pixelizan cuando se los amplían -pueden permanecer suaves cuando se escalan-. Este artículo te introduce al concepto de gráficos vectoriales y cómo incluir el popular formato {{glossary ("SVG")}} en páginas web.
-- [Imagenes receptivas](/es/docs/Web/HTML/Responsive_images)
+- [Imagenes receptivas](/es/docs/Web/HTML/Guides/Responsive_images)
   - : En este artìculo, aprenderás acerca del concepto de imágenes receptivas -imágenes que pueden adaptarse en dispositivos con grandes diferencias de tamaños de pantalla, resoluciones y otras características-. Esto te ayudará a mejorar el rendimiento en diferentes dispositivos. Las imágenes receptivas son sólo una parte del diseño receptivo, un tópico que a futuro aprenderás en CSS.
 
 ## Evaluaciones

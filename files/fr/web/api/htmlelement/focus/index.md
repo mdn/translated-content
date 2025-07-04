@@ -17,9 +17,7 @@ focus(options);
 ### Paramètres
 
 - `options` {{optional_inline}}
-
   - : Un objet optionnel qui fournit les options permettant de contrôler les aspects du focus. Cet objet peut contenir les propriétés suivantes&nbsp;:
-
     - `preventScroll` {{optional_inline}}
       - : Un booléen qui indique si le navigateur devrait défiler jusqu'à ce que l'élément qui a reçu le focus soit visible. S'il vaut `false` (la valeur par défaut), le navigateur défilera jusqu'à ce que l'élément soit visible après lui avoir donné le focus. Si `preventScroll` vaut `true`, aucun défilement n'aura lieu.
 

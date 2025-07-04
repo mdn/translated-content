@@ -44,9 +44,7 @@ bdo {
 元素属性包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `dir`
-
   - : 文本在此元素内容中渲染的方向。可能的值有：
-
     - `ltr`：指示文本应从左到右绘制。
     - `rtl`：指示文本应从右到左绘制。
 

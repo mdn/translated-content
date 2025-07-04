@@ -35,9 +35,7 @@ Les événements ont trois fonctions :
 ### Paramètres
 
 - `callback`
-
   - : Fonction qui sera appelée quand cet événement se produit. La fonction recevra les arguments suivants :
-
     - `details`
       - : `object`. Contient une seule propriété, une chaîne nommée `version`, qui représente le numéro de version de la mise à jour.
 

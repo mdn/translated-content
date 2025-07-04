@@ -31,9 +31,7 @@ browser.windows.onBoundsChanged.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 事件触发时调用的函数。该函数接收以下参数：
-
     - `window`
       - : 包含有关已调整大小或移动的窗口的详细信息的 {{WebExtAPIRef('windows.Window')}} 对象。
 

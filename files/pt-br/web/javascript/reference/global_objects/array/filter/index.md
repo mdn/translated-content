@@ -27,9 +27,7 @@ var newArray = arr.filter(callback[, thisArg])
 ### Parâmetros
 
 - `callback`
-
   - : Função é um predicado, para testar cada elemento do array. Retorna `true` para manter o elemento, `false` caso contrário, recebendo três argumentos:
-
     - `element`
       - : O elemento que está sendo processado no array.
     - `index`

@@ -33,9 +33,7 @@ browser.commands.onCommand.hasListener(listener)
 ### 参数
 
 - `listener`
-
   - : 用户输入命令的快捷键时调用的函数。该函数接收以下参数：
-
     - `name`
       - : `string`。命令的名称。这与在其 [manifest.json 条目](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands)中给出的名称相匹配。
     - `tab`

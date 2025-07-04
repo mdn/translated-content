@@ -222,35 +222,43 @@ JSON.stringify(BigInt(1));
 
 ## 示例
 
-### Calculating Primes
+### 计算质数
 
 ```js
-function isPrime(p) {
-  for (let i = 2n; i * i <= p; i++) {
-    if (p % i === 0n) return false;
+function isPrime(n) {
+  if (n < 2n) {
+    return false;
+  }
+  if (n % 2n === 0n) {
+    return n === 2n;
+  }
+  for (let factor = 3n; factor * factor <= n; factor += 2n) {
+    if (n % factor === 0n) {
+      return false;
+    }
   }
   return true;
 }
 
-// Takes a BigInt as an argument and returns a BigInt
+// 接收一个 BigInt 值参数，以 BigInt 值返回第 n 个质数值
 function nthPrime(nth) {
   let maybePrime = 2n;
   let prime = 0n;
-
   while (nth >= 0n) {
     if (isPrime(maybePrime)) {
-      nth -= 1n;
+      nth--;
       prime = maybePrime;
     }
-    maybePrime += 1n;
+    maybePrime++;
   }
-
   return prime;
 }
-
 nthPrime(20n);
-// ↪ 73n
+// 73n
 ```
+
+> [!NOTE]
+> `isPrime()` 实现仅供演示。在实际应用中，为了避免重复计算，会使用大量记忆化的算法，例如[埃拉托斯特尼筛法](https://zh.wikipedia.org/wiki/埃拉托斯特尼筛法)。
 
 ## 规范
 

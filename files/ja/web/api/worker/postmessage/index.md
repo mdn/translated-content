@@ -25,7 +25,6 @@ postMessage(message, options)
 ### 引数
 
 - `message`
-
   - : ワーカーに送るオブジェクトです。これは {{domxref("DedicatedWorkerGlobalScope.message_event", "message")}} イベントに配信されるイベントの `data` フィールドに入ります。このデータは任意の値、または[構造化複製アルゴリズム](/ja/docs/Web/API/Web_Workers_API/Structured_clone_algorithm)で扱う JavaScript オブジェクト (循環参照を含んでもよい) が許可されます。
 
     引数 `message` は必須です。ワーカーに渡すデータが重要でない場合は、`null` または `undefined` を明示的に渡す必要があります。

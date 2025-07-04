@@ -26,9 +26,7 @@ get(options)
 または
 
 - `options`
-
   - : オブジェクトは以下のプロパティを含みます。
-
     - `name`
       - : Cookie の名前が入っている文字列です。
     - `url`
@@ -41,29 +39,22 @@ get(options)
 与えられた名前またはオプションに一致する最初の Cookie を含むオブジェクトに解決される {{jsxref("Promise")}} です。このオブジェクトは以下のプロパティを含んでいます。
 
 - `domain`
-
   - : Cookie のドメインを含む文字列です。
 
 - `expires`
-
   - : Cookie の期限が入ったタイムスタンプで、ミリ秒単位の [Unix 時刻](/ja/docs/Glossary/Unix_time)です。
 
 - `name`
-
   - : Cookie の名前を含む文字列です。
 
 - `partitioned`
-
   - : 論理値で、Cookie がパーティション化 Cookie であるか (`true`) そうでないか (`false`) を表します。詳しくは [Cookies Having Independent Partitioned State (CHIPS)](/ja/docs/Web/Privacy/Privacy_sandbox/Partitioned_cookies) を参照してください。
 
 - `path`
-
   - : Cookie のパスを含む文字列です。
 
 - `sameSite`
-
   - : 以下の [`SameSite`](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 値のうちの何れかです。
-
     - `"strict"`
       - : Cookie はファーストパーティのコンテキストにのみ送られ、サードパーティのウェブサイトに対するリクエストには送られません。
     - `"lax"`
@@ -72,7 +63,6 @@ get(options)
       - : Cookie はすべてのコンテキストで、送信されます。
 
 - `secure`
-
   - : 論理値で、この Cookie が保護されたコンテキストでのみ使用されるか (`true`) またはそうではないか (`false`) を示します。
 
 - `value`

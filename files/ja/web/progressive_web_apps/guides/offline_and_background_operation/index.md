@@ -391,11 +391,9 @@ async function registerPeriodicSync() {
 1. 前提条件として、アプリサーバーで{{Glossary("Public-key_cryptography", "公開/秘密鍵ペア")}}を用意しておく必要があります。メッセージへの署名は [VAPID](https://datatracker.ietf.org/doc/html/draft-thomson-webpush-vapid-02) 仕様に従う必要があります。
 
 2. 端末上では、アプリは {{domxref("PushManager.subscribe()")}} メソッドを使用してサーバーからのメッセージを購読します。`subscribe()` メソッドは次のようになります。
-
    - 引数としてアプリサーバーの公開鍵を用います。これは、プッシュサービスがアプリサーバーからのメッセージの署名を検証するために使用するものです。
 
    - {{domxref("PushSubscription")}} オブジェクトで解決する `Promise` を返します。このオブジェクトには以下のものが含まれています。
-
      - プッシュサービスの[エンドポイント](/ja/docs/Web/API/PushSubscription/endpoint): アプリサーバーがプッシュメッセージの送信先を知るためのものです。
      - サーバーがプッシュサービスへのメッセージを暗号化するために使用する[公開鍵](/ja/docs/Web/API/PushSubscription/getKey)。
 

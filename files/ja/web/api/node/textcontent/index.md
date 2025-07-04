@@ -32,7 +32,6 @@ l10n:
 
 - `textContent` は、{{HTMLElement("script")}} と {{HTMLElement("style")}} 要素を含む、*すべて*の要素の中身を取得します。一方、`innerText` は「人間が読める」要素のみを示します。
 - `textContent` はノード内のすべての要素を返します。一方、`innerText` はスタイルを反映し、「非表示」の要素のテキストは返しません。
-
   - もっと言えば、`innerText` は CSS のスタイルを考慮するので、`innerText` の値を読み取ると最新の計算されたスタイルを保証するために{{glossary("reflow", "再フロー")}}を起動します。（再フローは計算が重いので、可能であれば避けるべきです。）
 
 ### innerHTML との違い

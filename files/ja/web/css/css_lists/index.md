@@ -45,7 +45,6 @@ l10n:
 ## ガイド
 
 - [一貫したリストのインデント](/ja/docs/Web/CSS/CSS_lists/Consistent_list_indentation)
-
   - : 異なるブラウザー同士でも一貫したリストのインデントを実現する方法を説明します。
 
 - [CSS カウンターの使用](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
@@ -54,7 +53,6 @@ l10n:
 ## 関連概念
 
 - [CSS カウンタースタイル](/ja/docs/Web/CSS/CSS_counter_styles)
-
   - {{cssxref("@counter-style")}} アットルール
   - [`<counter-style-name>`](/ja/docs/Web/CSS/@counter-style#counter-style-name) データ型
   - [`<symbol>`](/ja/docs/Web/CSS/@counter-style/symbols#値) データ型

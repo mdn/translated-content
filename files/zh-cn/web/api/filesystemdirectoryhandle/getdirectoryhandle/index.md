@@ -21,9 +21,7 @@ getDirectoryHandle(name, options)
 - `name`
   - : 一个字符串，表示你想要获得的子目录的 {{domxref('FileSystemHandle.name')}}。
 - `options` {{optional_inline}}
-
   - : 包含要获得的子目录的选项的可选对象。选项如下：
-
     - `create` {{optional_inline}}
       - : 布尔值，默认为 `false`。当设为 `true` 时，如果没有找到对应的目录，将会创建一个指定名称的目录并将其返回。
 

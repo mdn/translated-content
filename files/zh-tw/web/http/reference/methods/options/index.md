@@ -1,13 +1,13 @@
 ---
-title: OPTIONS
+title: OPTIONS 請求方法
 slug: Web/HTTP/Reference/Methods/OPTIONS
 l10n:
-  sourceCommit: 38fb31b12de1019a538e868a90dd4dd4858e4871
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{HTTPSidebar}}
 
-**HTTP `OPTIONS` 方法**用於請求給定 URL 或伺服器的允許通訊選項。用戶端可以使用此方法指定 URL，或使用星號（`*`）來指代整個伺服器。
+HTTP **`OPTIONS`** 方法用於請求給定 URL 或伺服器的允許通訊選項。此方法可用來測試該請求允許的 HTTP 方法，或用於判斷在進行 CORS 預檢請求時該請求是否會成功。用戶端可以使用此方法指定 URL，或使用星號（`*`）來指代整個伺服器。
 
 <table class="properties">
   <tbody>
@@ -28,7 +28,7 @@ l10n:
       <td>是</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Cacheable", "可緩存")}}</th>
+      <th scope="row">{{Glossary("Cacheable", "可快取")}}</th>
       <td>否</td>
     </tr>
     <tr>
@@ -41,9 +41,17 @@ l10n:
 ## 語法
 
 ```http
-OPTIONS /index.html HTTP/1.1
-OPTIONS * HTTP/1.1
+OPTIONS *|<request-target>["?"<query>] HTTP/1.1
 ```
+
+請求目標可以是「星號形式」（`*`），表示整個伺服器，或者像其他方法一樣是具體的請求目標：
+
+- `*`
+  - : 表示用戶端希望對整個伺服器發出 `OPTIONS` 請求，而非伺服器中某個特定的資源。
+- `<request-target>`
+  - : 配合 {{HTTPHeader("Host")}} 標頭提供的資訊，指出請求的目標資源。對原始伺服器的請求中，此為絕對路徑（例如 `/path/to/file.html`）；對代理伺服器的請求中，則為絕對 URL（例如 `http://www.example.com/path/to/file.html`）。
+- `<query>` {{optional_inline}}
+  - : 可選的查詢組件，以問號 `?` 開頭。通常用來攜帶以 `key=value` 形式的識別資訊。
 
 ## 範例
 
@@ -55,7 +63,16 @@ OPTIONS * HTTP/1.1
 curl -X OPTIONS https://example.org -i
 ```
 
-然後回應中包含一個包含允許方法的 {{HTTPHeader("Allow")}} 標頭：
+這會產生以下的 HTTP 請求：
+
+```http
+OPTIONS / HTTP/2
+Host: example.org
+User-Agent: curl/8.7.1
+Accept: */*
+```
+
+回應中包含一個包含允許方法的 {{HTTPHeader("Allow")}} 標頭：
 
 ```http
 HTTP/1.1 204 No Content
@@ -93,7 +110,7 @@ Access-Control-Request-Headers: content-type,x-pingother
 - {{HTTPHeader("Access-Control-Allow-Headers")}}
   - : `X-PINGOTHER` 和 `Content-Type` 為 URL 的允許請求標頭。
 - {{HTTPHeader("Access-Control-Max-Age")}}
-  - : 上述許可權可以被緩存 86400 秒（1 天）。
+  - : 上述許可權可以被快取 86400 秒（1 天）。
 
 ```http
 HTTP/1.1 200 OK
@@ -108,9 +125,8 @@ Keep-Alive: timeout=2, max=100
 Connection: Keep-Alive
 ```
 
-## 狀態碼
-
-{{HTTPStatus("200")}} OK 和 {{HTTPStatus("204")}} No Content 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
+> [!NOTE]
+> {{HTTPStatus("200", "200 OK")}} 和 {{HTTPStatus("204", "204 No Content")}} 都是[允許的狀態碼](https://fetch.spec.whatwg.org/#ref-for-ok-status)，但一些瀏覽器錯誤地認為 `204 No Content` 應用於資源，並且不會發送後續請求以取得它。
 
 ## 規範
 
@@ -122,5 +138,8 @@ Connection: Keep-Alive
 
 ## 參見
 
+- [HTTP 請求方法](/zh-TW/docs/Web/HTTP/Reference/Methods)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
+- [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Allow")}} 標頭
 - [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS)

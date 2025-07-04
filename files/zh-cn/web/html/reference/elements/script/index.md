@@ -49,7 +49,6 @@ slug: Web/HTML/Reference/Elements/script
 该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
 - `async`
-
   - : 对于普通脚本，如果存在 `async` 属性，那么普通脚本会被并行请求，并尽快解析和执行。
 
     对于[模块脚本](/zh-CN/docs/Web/JavaScript/Guide/Modules)，如果存在 `async` 属性，那么脚本及其所有依赖都会在延缓队列中执行，因此它们会被并行请求，并尽快解析和执行。
@@ -63,7 +62,6 @@ slug: Web/HTML/Reference/Elements/script
 - `crossorigin`
   - : 正常的 `script` 元素将最小的信息传递给 {{domxref('Window.error_event', 'window.onerror')}}，用于那些没有通过标准 {{Glossary("CORS")}} 检查的脚本。要允许对静态媒体使用独立域名的网站进行错误记录，请使用此属性。参见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)，以获得对其有效参数的更多描述性解释。
 - `defer`
-
   - : 这个布尔属性的设置是为了向浏览器表明，该脚本是要在文档被解析后，但在触发 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 事件之前执行的。
 
     包含 `defer` 属性的脚本将阻塞 `DOMContentLoaded` 事件触发，直到脚本完成加载并执行。
@@ -78,9 +76,7 @@ slug: Web/HTML/Reference/Elements/script
     这个属性能够消除**阻塞解析的 JavaScript**，在这种情况下，浏览器必须在继续解析之前加载和执行脚本。`async` 在这种情况下也有类似的效果。
 
 - `fetchpriority` {{Experimental_Inline}}
-
   - : 提供一个指示，说明在获取外部脚本时要使用的相对优先级。允许的值：
-
     - `high`
       - : 获取该脚本的优先级比其他外部脚本的等级要高。
     - `low`
@@ -95,9 +91,7 @@ slug: Web/HTML/Reference/Elements/script
 - `nonce`
   - : 在 [script-src Content-Security-Policy](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src) 中允许脚本的一个一次性加密随机数（nonce）。服务器每次传输策略时都必须生成一个唯一的 nonce 值。提供一个无法猜测的 nonce 是至关重要的，因为绕过一个资源的策略是微不足道的。
 - `referrerpolicy`
-
   - : 表示在获取脚本或脚本获取资源时，要发送哪个 [referrer](/zh-CN/docs/Web/API/Document/referrer)：
-
     - `no-referrer`：不会发送 {{HTTPHeader("Referer")}} 标头。
     - `no-referrer-when-downgrade`（默认）：如果没有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）协议，{{HTTPHeader("Referer")}} 标头将不会被发送到{{Glossary("origin","源")}}上。
     - `origin`：发送的 referrer 将被限制在 referrer 页面的源：其[协议](/zh-CN/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host","主机")}}和{{Glossary("port","端口")}}。
@@ -112,7 +106,6 @@ slug: Web/HTML/Reference/Elements/script
 - `src`
   - : 这个属性定义引用外部脚本的 URI，这可以用来代替直接在文档中嵌入脚本。
 - [**`type`**](/zh-CN/docs/Web/HTML/Reference/Elements/script/type)
-
   - : 该属性表示所代表的脚本类型。该属性的值可能为以下类型：
     - **属性未设置（默认），一个空字符串，或一个 JavaScript MIME 类型**
       - : 代表脚本为包含 JavaScript 代码的“传统的脚本”。如果脚本指的是 JavaScript 代码，我们鼓励作者省略这个属性，而不是指定一个 MIME 类型。所有的 JavaScript MIME 类型都列在 [IANA 的媒体类型规范](/zh-CN/docs/Web/HTTP/Guides/MIME_types#textjavascript)中。

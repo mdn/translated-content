@@ -46,7 +46,6 @@ _生きた_ {{DOMxRef("CSSStyleDeclaration")}} オブジェクトで、要素の
 ### 例外
 
 - {{JSxRef("TypeError")}}
-
   - : 渡されたオブジェクトが {{DOMxRef("Element")}} ではないか、 `pseudoElt` が有効な擬似要素セレクターではないか、 {{CSSxRef("::part", "::part()")}} または {{CSSxRef("::slotted", "::slotted()")}} である場合。
 
     > [!NOTE]

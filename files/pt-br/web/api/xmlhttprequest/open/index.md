@@ -26,7 +26,6 @@ XMLHttpRequest.open(method, url, async, user, password)
 - `url`
   - : Um {{domxref("DOMString")}} representando a URL para enviar a requisição.
 - `async` {{optional_inline}}
-
   - : Parâmetro booleano opcional, valor padrão `true`, indica quando realizar a operação de forma assíncrona. Se este valor for `false`, o método `send()` não retorna nada até que a resposta da requisição seja recebida. Se o valor for `true`, notificação de uma transação concluída é provida usando event listeners. Isso _deve_ ser verdadeiro se o atributo `multipart` é `true`, ou uma exceção será lançada.
 
     > [!NOTE]

@@ -30,7 +30,6 @@ canShare(data)
 ### 引数
 
 - `data` {{optional_inline}}
-
   - : テストする共有データを定義したオブジェクトです。
     通常、この呼び出しが `true` を返す場合、同じプロパティを持つオブジェクトが {{domxref("navigator.share()")}} に渡されます。
 
@@ -38,7 +37,6 @@ canShare(data)
     プロパティはすべて任意ですが、少なくともひとつの既知のデータプロパティを指定しなければ、このメソッドは `false` を返します。
 
     使用可能な値は以下の通りです。
-
     - `url` {{optional_inline}}
       - : 共有される URL を表す文字列。
     - `text` {{optional_inline}}

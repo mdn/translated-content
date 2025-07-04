@@ -47,18 +47,15 @@ onkeydown = (event) => {};
 _Esta interfaz también hereda las propiedades de sus padres, {{domxref("UIEvent")}} y {{domxref("Event")}}._
 
 - {{domxref("KeyboardEvent.altKey")}} {{ReadOnlyInline}}
-
   - : Devuelve un valor booleano que es `true` si la tecla <kbd>Alt</kbd> (<kbd>Opción</kbd> ó <kbd>⌥</kbd> en macOS) estaba activa cuando se generó el evento.
 
 - {{domxref("KeyboardEvent.code")}} {{ReadOnlyInline}}
-
   - : Devuelve una cadena con el valor del código de la tecla física representada por el evento.
 
     > [!WARNING]
     > Esto ignora el diseño del teclado del usuario, de modo que si el usuario presiona la tecla en la posición "Y" en un diseño de teclado QWERTY (cerca del medio de la fila sobre la fila de inicio), esto siempre devolverá "KeyY", incluso si el el usuario tiene un teclado QWERTZ (lo que significaría que el usuario espera una "Z" y todas las demás propiedades indicarían una "Z") o un diseño de teclado Dvorak (donde el usuario esperaría una "F"). Si desea mostrar las pulsaciones de teclas correctas al usuario, puede usar {{domxref("Keyboard.getLayoutMap()")}}.
 
 - {{domxref("KeyboardEvent.ctrlKey")}} {{ReadOnlyInline}}
-
   - : Devuelve un valor booleano que es `true` si la tecla <kbd>Ctrl</kbd> estaba activa cuando se generó el evento.
 
 - {{domxref("KeyboardEvent.isComposing")}} {{ReadOnlyInline}}
@@ -66,7 +63,6 @@ _Esta interfaz también hereda las propiedades de sus padres, {{domxref("UIEvent
 - {{domxref("KeyboardEvent.key")}} {{ReadOnlyInline}}
   - : Devuelve una cadena que representa el valor clave de la tecla representada por el evento.
 - {{domxref("KeyboardEvent.locale")}} {{ReadOnlyInline}}
-
   - : Devuelve una cadena que representa una cadena de configuración regional que indica la configuración regional para la que está configurado el teclado. Esta puede ser la cadena vacía si el navegador o el dispositivo no conocen la configuración regional del teclado.
 
     > [!NOTE]
@@ -75,13 +71,11 @@ _Esta interfaz también hereda las propiedades de sus padres, {{domxref("UIEvent
 - {{domxref("KeyboardEvent.location")}} {{ReadOnlyInline}}
   - : Devuelve un número que representa la ubicación de la tecla en el teclado u otro dispositivo de entrada.
 - {{domxref("KeyboardEvent.metaKey")}} {{ReadOnlyInline}}
-
   - : Devuelve un valor booleano que es `true` si la tecla <kbd>Meta</kbd> (en teclados Mac, la tecla <kbd>⌘ Command</kbd>; en teclados Windows, la tecla Windows (<kbd>⊞</kbd>)) estaba activo cuando se generó el evento.
 
 - {{domxref("KeyboardEvent.repeat")}} {{ReadOnlyInline}}
   - : Devuelve un valor booleano que es `true` si la tecla se mantiene presionada de manera que se repite automáticamente.
 - {{domxref("KeyboardEvent.shiftKey")}} {{ReadOnlyInline}}
-
   - : Devuelve un valor booleano que es `true` si la tecla <kbd>Shift</kbd> estaba activa cuando se generó el evento.
 
 ## Ejemplos

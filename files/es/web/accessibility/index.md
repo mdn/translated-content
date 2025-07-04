@@ -15,24 +15,24 @@ Para muchas personas, la tecnología facilita las cosas. Para las personas con a
 
 ## Tutoriales clave
 
-El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN contiene tutoriales modernos y actualizados que cubren los siguientes aspectos básicos de accesibilidad:
+El [área de aprendizaje de accesibilidad](/es/docs/Learn_web_development/Core/Accessibility) de MDN contiene tutoriales modernos y actualizados que cubren los siguientes aspectos básicos de accesibilidad:
 
-- [¿Qué es la accesibilidad?](/es/docs/Learn/Accessibility/What_is_accessibility)
+- [¿Qué es la accesibilidad?](/es/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : En este artículo se inicia el módulo con una explicación ampliada sobre qué es la accesibilidad. Esta visión general incluye qué grupos de personas necesitamos tener en cuenta y por qué, qué herramientas utilizan estas personas para interactuar con la web y cómo podemos hacer que la accesibilidad sea parte de nuestro flujo de trabajo de desarrollo web.
-- [HTML:Una buena base para la accesibilidad](/es/docs/Learn/Accessibility/HTML)
+- [HTML:Una buena base para la accesibilidad](/es/docs/Learn_web_development/Core/Accessibility/HTML)
   - : Se puede hacer accesible una gran cantidad de contenido web simplemente asegurándose de que los elementos HTML concretos se utilizan para un propósito correcto en todo momento. Este artículo analiza en detalle cómo se puede usar HTML para garantizar la máxima accesibilidad.
-- [Mejores prácticas en accesibilidad en CSS y JavaScript](/es/docs/Learn/Accessibility/CSS_and_JavaScript)
+- [Mejores prácticas en accesibilidad en CSS y JavaScript](/es/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
   - : CSS y JavaScript, cuando se usan correctamente, también tienen el potencial de permitir experiencias web accesibles, pero si se usan mal pueden dañar significativamente la accesibilidad. Este artículo describe algunas de las mejores prácticas de CSS y JavaScript que deben considerarse para garantizar que incluso el contenido complejo sea lo más accesible posible.
 - [WAI-ARIA básico](/es/docs/Learn/Accessibility/WAI-ARIA_basics)
   - : Siguiendo con el artículo anterior, a veces puede ser difícil realizar controles complejos de IU que involucren HTML no semántico y contenido dinámico actualizado con JavaScript. WAI-ARIA es una tecnología que puede ayudar a resolver estos problemas agregando más semántica que los navegadores y las tecnologías de asistencia pueden reconocer y utilizar para que los usuarios sepan lo que está sucediendo. Aquí mostraremos cómo usarlo a un nivel básico para mejorar la accesibilidad.
 - [Multimedia accesible](/es/docs/Learn/Accessibility/Multimedia)
   - : Otra categoría de contenido que puede crear problemas de accesibilidad es multimedia: el contenido de video, audio e imagen debe contar con alternativas textuales adecuadas para que las tecnologías de asistencia y sus usuarios puedan entenderlos. Este artículo muestra cómo.
-- [Accesibilidad móvil](/es/docs/Learn/Accessibility/Mobile)
+- [Accesibilidad móvil](/es/docs/Learn_web_development/Core/Accessibility/Mobile)
   - : Dado que el acceso a la web en dispositivos móviles es tan popular, y que las plataformas populares como iOS y Android tienen herramientas de accesibilidad completas, es importante considerar la accesibilidad de su contenido web en estas plataformas. Este artículo analiza las consideraciones de accesibilidad específicas para dispositivos móviles.
 
 ## Otra documentación
 
-- [Comprensión de las pautas de accesibilidad del contenido web](/es/docs/Web/Accessibility/Understanding_WCAG)
+- [Comprensión de las pautas de accesibilidad del contenido web](/es/docs/Web/Accessibility/Guides/Understanding_WCAG)
   - : Esto es parte de un grupo de artículos que explican rápidamente los pasos necesarios para cumplir con la normativa en las W3C Web Content Accessibility Guidelines 2.0 (WCAG 2.0, o simplemente WCAG, para el fin de este documento).
 - [Introducción al color y la accesibilidad](/es/docs/Web/Accessibility/Understanding_Colors_and_Luminance)
   - : Este artículo analiza nuestra percepción de la luz y el color, proporciona una base para el uso del color en diseños accesibles y demuestra las mejores prácticas para el contenido visual y legible.
@@ -50,4 +50,4 @@ El [área de aprendizaje de accesibilidad](/es/docs/Learn/Accessibility) de MDN 
 ## Véase también
 
 - [Grupo de interés WAI](https://www.w3.org/WAI/about/groups/waiig/)
-- [Guía de Desarrollo Web](/es/docs/Web/Guide)
+- [Guía de Desarrollo Web](/es/docs/MDN/Guides)

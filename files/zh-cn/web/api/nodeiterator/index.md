@@ -20,7 +20,6 @@ _这个接口不继承任何属性。_
 - {{domxref("NodeIterator.root")}} {{readonlyInline}}
   - : 返回一个 {{domxref("Node")}}，它代表创建 NodeIterator 时指定的根节点。
 - {{domxref("NodeIterator.whatToShow")}} {{readonlyInline}}
-
   - : 返回一个无符号长整型，它是一个由描述必须呈现的 {{domxref("Node")}} 类型的常量构成的位掩码。不匹配的节点被跳过，但是如果相关，他们的子节点可能被包括在内。可能的值是：
 
     | Constant                                                 | Numerical value                                 | Description                                                                                                                                                                                                                                                                                                           |

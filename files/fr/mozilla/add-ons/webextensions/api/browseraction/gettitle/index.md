@@ -22,9 +22,7 @@ var gettingTitle = browser.browserAction.getTitle(
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `tabId`{{optional_inline}}
       - : `integer`. Spécifiez l'onglet pour obtenir le titre.
     - `windowId`{{optional_inline}}

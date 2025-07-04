@@ -52,12 +52,10 @@ modules/
 Os dois módulos do diretório modules são descritos abaixo:
 
 - `canvas.js` — contém funções relacionadas à configuração da tela:
-
   - `create()` — cria uma tela com uma largura e altura especificadas dentro de um invólucro [`<div>`](/pt-BR/docs/Web/HTML/Element/div) com um ID especificado, que é anexado dentro de um elemento pai especificado. Retorna um objeto que contém o contexto 2D da tela e o ID do [wrapper](/pt-BR/docs/Glossary/Wrapper).
   - `createReportList()` — cria uma lista não ordenada anexada dentro de um elemento de wrapper especificado, que pode ser usado para gerar dados de relatório. Retorna o ID da lista.
 
 - `square.js` — contém:
-
   - `name` — uma constante contendo a string 'square'.
   - `draw()` — desenha um quadrado em uma tela especificada, com um tamanho, posição e cor especificados. Retorna um objeto que contém o tamanho, a posição e a cor do quadrado.
   - `reportArea()` — grava a área de um quadrado em uma lista de relatórios específica, considerando seu tamanho.

@@ -56,7 +56,6 @@ slug: Learn_web_development/Core/Structuring_content/Webpage_metadata
 ### Активное изучение: разбор простого примера
 
 1. Чтобы приступить к активному изучению, скачайте страницу [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) из нашего GitHub-репозитория. Это можно сделать двумя способами:
-
    1. Скопируйте и вставьте код страницы в новый текстовый файл в своём редакторе кода, затем сохраните его в любом удобном месте.
    2. Нажмите на странице кнопку "Raw", нажмите _Файл > Сохранить Как..._ в меню браузера и выберите папку для сохранения.
 

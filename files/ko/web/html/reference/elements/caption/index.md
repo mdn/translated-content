@@ -130,16 +130,14 @@ tr:nth-child(odd) td {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)만 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)만 포함합니다.
 
 ### Deprecated attributes
 
 The following attributes are deprecated and should not be used. They are documented below for reference when updating existing code and for historical interest only.
 
 - `align` {{deprecated_inline}}
-
   - : This enumerated attribute indicates how the caption must be aligned with respect to the table. It may have one of the following values:
-
     - `left`
       - : The caption is displayed to the left of the table.
     - `top`

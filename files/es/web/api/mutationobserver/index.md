@@ -94,9 +94,7 @@ Returns an Array of [`MutationRecord`s](#mutationrecord).
 `MutationRecord` es el objeto que será pasado a la funcion "callback" del observador. Tiene las siguientes propiedades:
 
 - `type`: `String`
-
   - : Devuelve:
-
     - `attributes`si el cambio fué en un atributo
     - `characterData` si se produjo en un nodo.
     - `childList` si se produjo en los nodos del árbol.
@@ -104,9 +102,7 @@ Returns an Array of [`MutationRecord`s](#mutationrecord).
     <!---->
 
 - `target`: [`Node`](/es/docs/Web/API/Node)
-
   - : Devuelve el **nodo** afectado por el cambio, dependiendo del `type`:
-
     - Para `attributes`, el elemento cuyos atributos han cambiado.
     - Para `characterData`, el nodo `CharacterData`.
     - Para `childList`, El nodo padre cuyos hijos han cambiado.
@@ -124,9 +120,7 @@ Returns an Array of [`MutationRecord`s](#mutationrecord).
 - `attributeNamespace`: `String`
   - : Devuelve espacio de nombres (namespace) del atributo cambiado, o el valor `null`.
 - `oldValue`: `String`
-
   - : El valor devuelto depende del `type`:
-
     - Para `attributes`,el valor anterior del atributo.
     - Para `characterData`,los datos antes del cambio
     - Para `childList`,devuelve `null`.

@@ -20,9 +20,7 @@ var oscillatorNode = new OscillatorNode(context, options)
 - `context`
   - : 指向 {{domxref("AudioContext")}} 的引用。
 - `options` {{optional_inline}}
-
   - : 一个用来给 oscillator node 的属性指定值得对象，该对象中省略的属性都将采用默认值
-
     - `type`
       - : oscillator node 产生的波形的形状。可用的值有 '`sine`', '`square`', '`sawtooth`', '`triangle`' 和 '`custom`'，默认值是'sine'。
     - `detune`

@@ -3,8 +3,6 @@ title: Firefox 24 for developers
 slug: Mozilla/Firefox/Releases/24
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### Developer Tools

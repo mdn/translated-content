@@ -20,9 +20,7 @@ new IIRFilterNode(context, options)
 - `context`
   - : {{domxref("AudioContext")}} への参照です。
 - `options`
-
   - : オプションは次の通りです。
-
     - `feedforward`
       - : フィードフォワードの係数の列です。
     - `feedback`

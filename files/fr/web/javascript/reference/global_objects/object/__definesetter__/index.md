@@ -21,7 +21,6 @@ obj.__defineSetter__(prop, fun);
 - `prop`
   - : Une chaîne de caractères qui contient le nom de la propriété qu'on souhaite lier à la fonction.
 - `fun`
-
   - : Une fonction à appeler pour chaque modification de la propriété. Cette fonction prend la forme suivante :
 
     ```js

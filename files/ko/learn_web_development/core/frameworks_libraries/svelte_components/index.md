@@ -320,7 +320,6 @@ export let onclick = (clicked) => {};
    ```
 
 2. `Todo` 컴포넌트가 발생시킬 이벤트를 결정해야 합니다.
-
    - 상태 토글과 이름 편집에 대해 서로 다른 이벤트를 발생시킬 수 있습니다(예를 들면, `updateTodoStatus`와 `updateTodoName`).
    - 또는 더 일반적인 접근 방식을 취하여 두 작업 모두에 대해 단일 `update` 이벤트를 발생시킬 수 있습니다.
 

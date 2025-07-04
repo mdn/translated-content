@@ -44,7 +44,6 @@ function init() {
 ## 参见
 
 - 相关事件
-
   - [`lostpointercapture`](/zh-CN/docs/Web/API/Element/lostpointercapture_event)
   - [`pointerover`](/zh-CN/docs/Web/API/Element/pointerover_event)
   - [`pointerenter`](/zh-CN/docs/Web/API/Element/pointerenter_event)

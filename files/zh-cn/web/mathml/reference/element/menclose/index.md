@@ -14,7 +14,6 @@ l10n:
 这个元素的属性包括[全局 MathML 属性](/zh-CN/docs/Web/MathML/Reference/Global_attributes)。
 
 - `notation` {{Non-standard_Inline}}
-
   - : 以空格分隔的符号列表，用于应用于子元素。这些符号将分别绘制，好像其他符号不存在一样，因此可能会重叠。可能的值有：
 
     | 值                   | 渲染示例                                                    | 在你的浏览器上的渲染效果                                                                                                                       | 描述                                                                                                       |

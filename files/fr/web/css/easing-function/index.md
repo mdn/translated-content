@@ -38,23 +38,19 @@ step-end
 ### Valeurs
 
 - `linear`
-
   - : Indique que l'évolution a lieu à vitesse constante pendant toute la durée. Ce mot-clé est à la fois équivalent à [`cubic-bezier(0, 0, 1, 1)`](#fonctions_dévolution_en_courbe_de_bézier_cubique) et à [`linear(0, 1)`](#fonctions_dévolution_linéaire).
 
 ![Un graphique avec en abscisses la progression de l'entrée et en ordonnées la progression de la sortie, on voit une ligne droite entre l'origine et le point (1, 1).](linear.svg)
 
 - `<linear-easing-function>`
-
   - : Définit une fonction `linear()` avec un ou plusieurs _arrêts linéaires_, chacun pouvant contenir jusqu'à deux _longueurs d'arrêt_ optionnelles afin de contrôler la progression de l'animation ou de la transition.
 
     La fonction `linear()` prend comme argument une liste d'arrêts linéaires séparés par des virgules qui indiquent les points par lesquels progressent l'animation ou la transition. Chaque point de la liste est indiqué par [un nombre (une valeur de type `<number>`)](/fr/docs/Web/CSS/number) comprise entre `0` et `1` (inclus). Par défaut, chaque arrêt est équidistant des autres, mais on peut aussi préciser un à deux [pourcentages](/fr/docs/Web/CSS/percentage) qui précisent la longueur.
-
     - `<number>`&nbsp;: représente un point dans le temps sur la durée de l'animation ou de la transition. La valeur `0` représente le début de l'itération et `1` la fin. Il est possible d'utiliser des valeurs en dehors de l'intervalle [0,1].
 
     - `<percentage>`&nbsp;: indique la position de l'arrêt linéaire dans la durée. On peut avoir deux coefficients en pourcentages. Si une seule valeur est fournie, elle indique le départ de l'arrêt linéaire correspondant. Si deux valeurs sont fournies, elles définissent la longueur de l'arrêt&nbsp;: la première indiquant le point de départ et le second le point d'arrivée pour ce segment. Si aucun pourcentage n'est fourni (le comportement par défaut), les arrêts sont répartis à équidistance sur la ligne chronologique.
 
 - `<cubic-bezier-easing-function>`
-
   - : Définit [une courbe de Bézier](/fr/docs/Glossary/Bezier_curve) cubique donnant la progression de l'animation ou de la transition dans le temps. En CSS, les courbes de Bézier sont définies par 4 points de contrôle qui décrivent mathématiquement la courbe&nbsp;: un point de départ, un point final, et deux points de contrôles. On peut définir une telle fonction de deux façons&nbsp;: en créant une courbe paramétrée sur mesure avec ces quatre points grâce à la fonction `cubic-bezier()` ou en utilisant un des mots-clés prédéfinis qui correspondent aux paramètres usuels utilisés pour les courbes de Bézier. Les valeurs des mots-clés prédéfinis sont&nbsp;:
 
     `ease`&nbsp;: Ce mot-clé correspond à `cubic-bezier(0.25, 0.1, 0.25, 1)`. Il indique que l'interpolation démarre doucement, accélère vivement, puis ralentit progressivement. Le comportement est semblable à celui obtenu avec le mot-clé `ease-in-out`, mais accélère plus fortement au début.
@@ -68,11 +64,9 @@ step-end
     ![4 graphes avec le temps en abscisses (de 0 à 1) et la progression en ordonnées, qui illustrent les 4 courbes obtenues respectivement avec ease, ease-in, ease-out, ease-in-out.](ease.svg)
 
     `cubic-bezier()`&nbsp;: Cette fonction prend quatre coefficients numériques (type [`<number>`](/fr/docs/Web/CSS/number)) pour construire la courbe.
-
     - [`<number>`](/fr/docs/Web/CSS/number)&nbsp;: Quatre valeurs définissent les coordonnées [des points P1 et P2](#fonction_dévolution_en_courbe_de_bézier_cubique) de la courbe. `<x1>` et `<y1>` sont les coordonnées du point P1, et `<x2>` et `<y2>` celles du point P2. `<x1>` et `<x2>` doivent être comprises entre `0` et `1`.
 
 - `<step-easing-function>`
-
   - : Définit une fonction en escalier qui divise l'animation en plusieurs paliers de même longueur. L'animation passe d'un palier à l'autre plutôt que de transitionner progressivement. Cette valeur sera l'un des deux mots-clés prédéfinis suivants ou une fonction `steps()` paramétrée sur mesure&nbsp;:
 
     `step-start`&nbsp;: Ce mot-clé est équivalent à `steps(1, jump-start)` ou `steps(1, start)`. Il indique que l'interpolation passe immédiatement à l'état final et reste ainsi jusqu'à la fin.
@@ -82,10 +76,8 @@ step-end
     ![Deux graphes, avec le temps en abscisses et la progression de l'animation en ordonnées, illustrant step-start et step-end.](step.svg)
 
     `steps()`&nbsp;: Cette fonction prend en paramètre un [entier](/fr/docs/Web/CSS/integer) et un autre paramètre optionnel qui indique la position du saut.
-
     - `<integer>`&nbsp;: Ce coefficient indique le nombre d'intervalles (ou marches) équidistants. Ce doit être un entier positif, supérieur à `0`, sauf si le deuxième paramètre vaut `jump-none`, auquel cas, le coefficient doit être un entier supérieur à `1`.
     - `<step-position>`&nbsp;: Cet argument optionnel définit [le moment du saut](#fonctions_dévolution_en_escalier) et précise s'il a lieu au début, à la fin, au début et à la fin ou ni à l'un ou l'autre. Les mots-clés qui peuvent être utilisés pour ce paramètre sont&nbsp;:
-
       - `jump-start`&nbsp;: Indique que le premier saut se produit tout au début, au point `0`. Aucun moment de l'animation ne se passe au point `0%`.
       - `jump-end`&nbsp;: Indique que le dernier saut se produit tout à la fin, au point `1`. Aucun moment de l'animation ne se passe au point `100%`. Il s'agit de la valeur par défaut quand aucune valeur `<step-position>` n'est précisée.
       - `jump-none`&nbsp;: Indique qu'aucun saut n'a lieu au début ou à la fin, retirant ainsi un palier sur toute l'évolution. Dans ce cas, la durée de chaque palier est déterminée en divisant la durée totale par le nombre de paliers (1/n).

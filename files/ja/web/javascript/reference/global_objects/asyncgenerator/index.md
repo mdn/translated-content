@@ -58,7 +58,6 @@ asyncGen.next().then((res) => console.log(res.value)); // 3
 これらのプロパティは `AsyncGenerator.prototype` で定義されており、すべての `AsyncGenerator` インスタンスで共有されています。
 
 - {{jsxref("Object/constructor", "AsyncGenerator.prototype.constructor")}}
-
   - : インスタンスオブジェクトを作成したコンストラクター関数。`AsyncGenerator` インスタンスの場合、初期値は [`AsyncGeneratorFunction.prototype`](/ja/docs/Web/JavaScript/Reference/Global_Objects/AsyncGeneratorFunction) です。
 
     > **メモ:** `AsyncGenerator` は生成した非同期ジェネレーター関数を格納しているわけではありません。

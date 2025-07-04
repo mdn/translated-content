@@ -29,7 +29,6 @@ remove(start, end)
 ### 例外
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-
   - : {{domxref("MediaSource.duration")}} プロパティが `NaN` に等しいか、`start` 引数が負であるか {{domxref("MediaSource.duration")}} より大きいか、`end` 引数が `start` 以下または `NaN` に等しい場合に発生します。
 
 - `InvalidStateError` {{domxref("DOMException")}}

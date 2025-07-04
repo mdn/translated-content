@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/hidden
 
 {{HTMLSidebar("Global_attributes")}}
 
-**`hidden`** [전역 특성](/ko/docs/Web/HTML/Global_attributes)은 해당 요소가 아직, 또는 더 이상 관련이 없음을 나타내는 불리언 특성입니다. 브라우저는 `hidden` 속성을 설정한 요소를 렌더링 하지 않습니다.
+**`hidden`** [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)은 해당 요소가 아직, 또는 더 이상 관련이 없음을 나타내는 불리언 특성입니다. 브라우저는 `hidden` 속성을 설정한 요소를 렌더링 하지 않습니다.
 
 {{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
 
@@ -53,4 +53,4 @@ p {
 
 ## 같이 보기
 
-- 모든 [전역 속성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 속성](/ko/docs/Web/HTML/Reference/Global_attributes).

@@ -19,13 +19,10 @@ pipeThrough(transformStream, options)
 ### 参数
 
 - `transformStream`
-
   - : 由一对可读流和可写流组成的 {{domxref("TransformStream")}}（或者结构为 `{writable, readable}` 的对象），它们共同工作以对数据进行转换。`writable` 流写入的数据在某些状态下可以被 `readable` 流读取。例如，向 {{domxref("TextDecoder")}} 写入字节并从中读取字符串，而视频解码器则是写入编码的字节数据，并从中读取解压后的视频帧。
 
 - `options` {{optional_inline}}
-
   - : 传输至 `writable` 流应该被使用的选项。可用选项是：
-
     - `preventClose`
       - : 如果设置为 `true`，源 `ReadableStream` 的关闭将不再导致目标 `WritableStream` 关闭。一旦此过程完成，该方法返回的 promise 将被兑现；除非在关闭目标流时遇到错误，在这种情况下，它将因为该错误被拒绝。
     - `preventAbort`

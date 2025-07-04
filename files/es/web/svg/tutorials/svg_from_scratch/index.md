@@ -12,8 +12,8 @@ Este tutorial intenta explicar SVG a profundidad y esta elaborado con detalles t
 
 ##### Presentando SVG desde cero
 
-- [Introducción](/es/docs/Web/SVG/Tutorial/Introduction)
-- [Comenzando](/es/docs/Web/SVG/Tutorial/Getting_Started)
+- [Introducción](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction)
+- [Comenzando](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started)
 - [Posiciones](/es/docs/Web/SVG/Tutorial/Positions)
 - [Figuras básicas](/es/docs/Web/SVG/Tutorial/Basic_Shapes)
 - [Paths](/es/docs/Web/SVG/Tutorial/Paths)
@@ -27,7 +27,7 @@ Este tutorial intenta explicar SVG a profundidad y esta elaborado con detalles t
 - [Filtros y efectos](/es/docs/Web/SVG/Tutorial/Filter_effects)
 - [Fuentes SVG](/es/docs/Web/SVG/Tutorial/SVG_fonts)
 - [Etiquetas de imágenes SVG](/es/docs/Web/SVG/Tutorial/SVG_Image_Tag)
-- [Herramientas de SVG](/es/docs/Web/SVG/Tutorial/Tools_for_SVG)
+- [Herramientas de SVG](/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Tools_for_SVG)
 - [Otros tutoriales](/es/docs/Web/SVG/Tutorial/Other_content_in_SVG)
 
 Los siguientes temas son más avanzados, por lo tanto deben tener sus propios tutoriales.

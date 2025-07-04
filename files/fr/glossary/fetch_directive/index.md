@@ -28,7 +28,6 @@ Ces directives CSP sont :
 
 - {{HTTPHeader("Content-Security-Policy","Politique de sécurité de contenu")}}
 - Autres types de directives:
-
   - {{Glossary("Document directive","Directives de document")}}
   - {{Glossary("Navigation directive","Directives de navigation")}}
   - {{Glossary("Reporting directive","Directives de rapport")}}

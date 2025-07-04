@@ -23,7 +23,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects.html", '100%', 1200)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
+> [!NOTE]
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects--download.html)
 
 ## 做出选择
 
@@ -43,7 +44,8 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 
 {{EmbedGHLiveSample("css-examples/css-cookbook/media-objects-fallback.html", '100%', 1200)}}
 
-> **备注：** [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
+> [!NOTE]
+> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/media-objects-fallback--download.html)
 
 一旦浮动元素成为网格项，浮动将不再被应用到网格上，因此你不需要做任何特殊的事情来清除浮动。
 

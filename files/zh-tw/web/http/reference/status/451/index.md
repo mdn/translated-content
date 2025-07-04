@@ -21,7 +21,8 @@ HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs
 
 此範例回應來自 IETF RFC（參見下文），並包含對[《萬世魔星》](https://zh.wikipedia.org/wiki/蒙提·派森之布莱恩的一生)的參考。
 
-> **備註：** {{HTTPHeader("Link")}} 標頭也可能包含 `rel="blocked-by"` 關係，識別實施封鎖的實體，而不是強制執行封鎖的任何其他實體。
+> [!NOTE]
+> {{HTTPHeader("Link")}} 標頭也可能包含 `rel="blocked-by"` 關係，識別實施封鎖的實體，而不是強制執行封鎖的任何其他實體。
 
 任何試圖識別最終負責資源不可用的實體的嘗試都應該放在響應主體中，而不是在 `rel="blocked-by"` 連接中。這包括對造成內容被刪除的法律要求的人或組織的名稱。
 

@@ -19,9 +19,7 @@ setSignals(options)
 ### 引数
 
 - `options` {{Optional_Inline}}
-
   - : 以下の値のうち任意のものが入ったオブジェクトです。
-
     - `dataTerminalReady`
       - : オペレーティングシステムにシリアルポートの DTR (データ端末レディ) 信号のアサート (`true` の場合) またはデアサート (`false` の場合) を指示することを表す {{jsxref("boolean")}} 値です。
     - `requestToSend`

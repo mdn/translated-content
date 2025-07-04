@@ -65,7 +65,6 @@ Lorsque cette syntaxe est utilisée pour définir des formes, la boîte de réf�
 Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>` sont créées via une notation fonctionnelle (pour analyser la syntaxe, se référer à [cette page explicative](/fr/docs/Web/CSS/Value_definition_syntax)).
 
 - `inset()`
-
   - : Cette fonction permet de définir un rectangle incrusté (_inset_).
 
     ```
@@ -79,7 +78,6 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     Si on utilise deux valeurs de décalage pour le même axe (par exemple un décalage depuis le bas et un décalage depuis le haut) dont la somme est supérieure à la dimension de la boîte sur cet axe, la forme obtenue ne contiendra aucune zone. On aura alors une zone de flottement vide.
 
 - `polygon()`
-
   - : Définit un polygone.
 
     ```
@@ -91,7 +89,6 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     Ensuite, chaque paire d'arguments dans la liste représente les coordonnées _xi_ et _yi_ du i-ème sommet du polygone.
 
 - `circle(`)
-
   - : Définit un cercle.
 
     ```
@@ -103,7 +100,6 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     L'argument {{cssxref("&lt;position&gt;")}} définit la position pour le centre du cercle. La valeur par défaut est `center`.
 
 - `ellipse()`
-
   - : Définit une ellipse.
 
     ```
@@ -115,7 +111,6 @@ Les formes qui suivent sont prises en charge. Toutes les valeurs `<basic-shape>`
     L'argument {{cssxref("&lt;position&gt;")}} définit l'emplacement du centre de l'ellipse. La valeur par défaut est `center`.
 
 - `path()`
-
   - : Définit un chemin.
 
     ```

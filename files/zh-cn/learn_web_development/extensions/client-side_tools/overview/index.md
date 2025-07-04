@@ -99,12 +99,10 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 通常 web 开发被认为是三种语言：[HTML](/zh-CN/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-CN/docs/Learn_web_development/Core/Scripting)，所有这些语言都有转换工具。转换提供了两个主要好处（还有其他好处）
 
 1. 能够使用最新的语言特性编写代码，并将其转换为可在日常设备上使用的代码。例如，你可能希望使用尖端的新语言特性来编 JavaScript，但是你的最终产品代码仍然可以在不支持这些特性的旧浏览器上工作。例如：
-
    - [Babel](https://babeljs.io/):一个 JavaScript 编译器，允许开发人员使用最前沿的 JavaScript 编写代码，然后 Babel 将其转换为老式的 JavaScript，让更多的浏览器能够理解。开发人员也可以编写和发布[plugins for Babel](https://babeljs.io/docs/en/plugins).
    - [PostCSS](https://postcss.org/):和 Babel 做同样的事情，但是有先进的 CSS 特性。如果没有相同的方法使用旧的 CSS 特性来做一些事情，PostCSS 将安装一个 JavaScript 填充来模拟你想要的 CSS 效果。
 
 2. 选择用一种完全不同的语言编写代码，并将其转换为与 web 兼容的语言。例如：
-
    - [Sass/SCSS](https://sass-lang.com/)：这个 CSS 扩展允许你使用变量、嵌套规则、混合、函数和许多其他特性，其中一些特性在本地 CSS 中是可用的 (比如变量)，而另一些则不是。
    - [TypeScript](https://www.typescriptlang.org/)：TypeScript 是 JavaScript 的一个超集，它提供了一堆额外的特性。TypeScript 编译器在生成产品时将 TypeScript 代码转换为 JavaScript。
    - 框架例如 [React](https://reactjs.org/)、[Ember](https://emberjs.com/) 和 [Vue](https://vuejs.org/)：框架提供了许多免费的功能，并允许你通过构建在普通 JavaScript 之上的自定义语法来使用它们。在后台，框架的 JavaScript 代码努力解释这个定制语法，并将其呈现为最终的 web 应用程序。
@@ -148,7 +146,6 @@ web 应用程序生命周期的这个阶段通常允许你编写“未来代码�
 
 - 有经验的老师、导师、同学或有一定经验的同事以前解决过这类问题，并能提出建议。
 - 一个有用的特定地方搜索。对前端开发人员工具的一般 web 搜索通常是无用的，除非你已经知道你正在搜索的工具的名称。
-
   - 例如，如果你正在使用 npm 包管理器来管理依赖项，那么转到[npm homepage](https://www.npmjs.com/) 并搜索你正在寻找的工具的类型，例如，如果你想要日期格式化实用程序，请尝试搜索“date”，如果你想要搜索通用代码格式化程序，则尝试搜索“formatter”。请注意流行度、质量和维护分数，以及软件包最近更新的时间。还可以点击工具页面，了解每个包每月有多少下载，以及它是否有好的文档，可以用来了解它是否完成了你需要它做的事情。以这些标准为基础[date-fns library](https://www.npmjs.com/package/date-fns) 看起来是一个很好的日期格式化工具。在本模块的第 3 章中，你将看到这个工具的实际应用，并了解更多关于包管理器的信息。
   - 如果你正在寻找将工具功能集成到代码编辑器中的插件，请查看代码编辑器的“插件/扩展名”页面 - 请参阅 [Atom packages](https://atom.io/packages) and [VSCode extensions](https://marketplace.visualstudio.com/VSCode),为例。看一看首页上的特色扩展，然后再次尝试搜索你想要的扩展类型 (或者工具名称，例如在 VSCode 扩展页面上搜索“eslint”)。当你得到结果的时候，看看这个扩展有多少颗星或者下载了多少，作为它质量的一个指标。
 

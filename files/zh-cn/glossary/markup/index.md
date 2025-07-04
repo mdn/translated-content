@@ -23,7 +23,6 @@ l10n:
 ## 参见
 
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("HTML")}}
   - {{Glossary("XHTML")}}
   - {{Glossary("XML")}}

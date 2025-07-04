@@ -336,7 +336,8 @@ const endGame = () => {
 };
 ```
 
-> **备注：** `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
+> [!NOTE]
+> `getAnimations()` and `effect` are not fully supported as of this writing, but the polyfill does support them today.
 
 ## 回调和 promise
 

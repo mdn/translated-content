@@ -37,7 +37,6 @@ l10n:
 - {{cssxref("@font-face/font-style", "font-style")}}
   - : {{cssxref("font-style")}} 値です。 font-face で対応する範囲を指定するために、 `font-style: oblique 20deg 50deg;` のように 2 つの値を受け付けます。
 - {{cssxref("@font-face/font-weight", "font-weight")}}
-
   - : {{cssxref("font-weight")}} 値です。 font-face で対応する範囲を指定するために、 `font-weight: 100 400;` のように 2 つの値を受け付けます。
 
     > [!NOTE]

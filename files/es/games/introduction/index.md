@@ -71,7 +71,7 @@ Para la gente de tecnología, vamos a cavar en las API que la Web aporta a la me
   - : Si desea que sus usuarios puedan usar gamepads u otros controladores de juego para trabajar su juego, necesitará esta API.
 - [HTML](/es/docs/Web/HTML) y [CSS](/es/docs/Web/CSS)
   - : Juntas, estas dos tecnologías le permiten construir, diseñar y diseñar la interfaz de usuario de su juego.Parte de HTML es el elemento {{htmlelement("canvas")}}, que proporciona una forma de hacer gráficos 2D.
-- [Audio HTML](/es/docs/Web/HTML/Element/audio)
+- [Audio HTML](/es/docs/Web/HTML/Reference/Elements/audio)
   - : El elemento {{htmlelement("audio")}} te permite reproducir fácilmente efectos de sonido y música sencillos.Si sus necesidades están más involucradas, echa un vistazo a la [API de audio web](/es/docs/Web/API/Web_Audio_API) para obtener potencia de procesamiento de audio real.
 - [IndexedDB](/es/docs/Web/API/IndexedDB_API)
   - : Una poderosa API de almacenamiento de datos para mantener los datos del usuario en su propio ordenador o dispositivo. Una gran manera de guardar el estado del juego y otra información localmente para que no tenga que ser descargado cada vez que sea necesario. También es útil para ayudar a que su juego sea jugable incluso cuando el usuario no está conectado a la Web (por ejemplo, cuando están atrapados en un avión durante horas y horas ...).

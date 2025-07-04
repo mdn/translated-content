@@ -27,7 +27,7 @@ JSON.rawJSON(string)
 - `rawJSON`
   - : 提供された元の JSON の `string` です。
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
+さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)を持ち、それ自身を生の JSON オブジェクトとしてマークします。これにより、 {{jsxref("JSON.stringify()")}} と {{jsxref("JSON.isRawJSON()")}} で識別できるようになります。
 
 ### 例外
 

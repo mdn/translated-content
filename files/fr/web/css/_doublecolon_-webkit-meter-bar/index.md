@@ -50,7 +50,6 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à WebKit/Blink e
 ## Voir aussi
 
 - Les pseudo-éléments utilisés par WebKit/Blink pour mettre en forme les autres parties d'un élément {{htmlelement("meter")}} :
-
   - {{cssxref("::-webkit-meter-inner-element")}}
   - {{cssxref("::-webkit-meter-even-less-good-value")}}
   - {{cssxref("::-webkit-meter-optimum-value")}}

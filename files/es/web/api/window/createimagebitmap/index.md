@@ -28,9 +28,7 @@ createImageBitmap(image, sx, sy, sw, sh[, options]).then(function(response) { ..
 - `sh`
   - : La altura del rectángulo que será usado para extraer el `ImageBitmap`. El valor podría ser negativo.
 - `options` {{optional_inline}}
-
   - : Un objeto que proporciona opciones para la extracción de la imagen. Las opciones posibles son:
-
     - `imageOrientation`: Especifica si la imagen debe ser extraida tal y como se muestra, o debe ser volteada verticalmente. Las valores posibles: `none` (por defecto) o `flipY`.
     - `premultiplyAlpha`: Especifica si los canales de color del mapa de bits generado deben premultiplicarse por el canal alpha. Uno de: `none`, `premultiply`, o `default` (por defecto).
     - `colorSpaceConversion`: Especifica si la imagen debe ser decodificada usando conversión del espacio de color. Uno de: `none` o `default` (por defecto). El valor `default` indica que se usará la implementación que haya disponible.

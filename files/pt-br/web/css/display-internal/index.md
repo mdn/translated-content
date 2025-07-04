@@ -53,7 +53,6 @@ Salvo indicação em contrário, o tipo de exibição interno e o tipo de exibi�
 ## Veja também
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

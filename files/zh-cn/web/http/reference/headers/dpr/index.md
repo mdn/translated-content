@@ -76,7 +76,6 @@ Content-DPR: 2.0
 
 - [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)（developer.chrome.google.cn）
 - 设备客户端提示
-
   - {{HTTPHeader("Content-DPR")}}
   - {{HTTPHeader("Device-Memory")}}
   - {{HTTPHeader("Viewport-Width")}}

@@ -226,7 +226,6 @@ The code also shows both ways of declaring a field:
 
 - Field _name_ and _type_ as a key-value pair (i.e. as done with fields `name`, `binary` and `living`).
 - Field _name_ followed by an object defining the `type`, and any other _options_ for the field. Options include things like:
-
   - default values.
   - built-in validators (e.g. max/min values) and custom validation functions.
   - Whether the field is required
@@ -243,7 +242,6 @@ The built-in validators include:
 - All [SchemaTypes](http://mongoosejs.com/docs/schematypes.html) have the built-in [required](http://mongoosejs.com/docs/api.html#schematype_SchemaType-required) validator. This is used to specify whether the field must be supplied in order to save a document.
 - [Numbers](http://mongoosejs.com/docs/api.html#schema-number-js) have [min](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-min) and [max](http://mongoosejs.com/docs/api.html#schema_number_SchemaNumber-max) validators.
 - [Strings](http://mongoosejs.com/docs/api.html#schema-string-js) have:
-
   - [enum](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-enum): specifies the set of allowed values for the field.
   - [match](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-match): specifies a regular expression that the string must match.
   - [maxlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-maxlength) and [minlength](http://mongoosejs.com/docs/api.html#schema_string_SchemaString-minlength) for the string.
@@ -517,38 +515,32 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
    ![Create a cluster on MongoDB Atlas.](mongodb_atlas_-_createcluster.jpg)
 2. This will open the _Create New Cluster_ screen.
    ![Choose a cloud provider when using MongoDB Atlas.](mongodb_atlas_-_chooseproviderregion.jpg)
-
    - Select any provider from the _Cloud Provider & Region_ section. Different providers offer different regions.
    - Select any region marked "FREE TIER AVAILABLE".
    - Click the **Create Cluster** button (creation of the cluster will take some minutes).
 
 3. You will return to the _Cluster Overview_ screen.
    ![Setup a collection on MongoDB Atlas.](mongodb_atlas_-_createcollection.jpg)
-
    - Click the **Collections** button.
 
 4. This will open the _Collections_ section.
    ![Create a database on MongoDB Atlas.](mongodb_atlas_-_createdatabase.jpg)
-
    - Click the **Create Database** button.
 
 5. This will open the _Create Database_ screen.
    ![Details during database creation on MongoDB Atlas.](mongodb_atlas_-_databasedetails.jpg)
-
    - Enter the name for the new database as `local_library`.
    - Enter the name of the collection as Collection0.
    - Click the **Create** button to create the database.
 
 6. You will return to the Collection screen with your database created.
    ![Database creation confirmation on MongoDB Atlas.](mongodb_atlas_-_databasecreated.jpg)
-
    - Click the _Overview_ tab to return the cluster overview.
 
 7. From the Cluster0 Overview screen click the **Connect** button.
    ![Configure a connection when after setting up a cluster in MongoDB Atlas.](mongodb_atlas_-_connectbutton.jpg)
 8. This will open the Connect to Cluster screen.
    ![Setup a connection when using MongoDB Atlas.](mongodb_atlas_-_connectcluster.jpg)
-
    - Click the **Add a Different IP Address** button, enter `0.0.0.0/0` for the IP Address and click **Add IP Address** button.
 
      > [!NOTE]
@@ -564,17 +556,14 @@ After logging in, you'll be taken to the [home](https://cloud.mongodb.com/v2) sc
 
 9. This will access the _Choose a connection_ method tab.
    ![Choose a connection type when connecting with MongoDB Atlas.](mongodb_atlas_-_chooseaconnectionmethod.jpg)
-
    - Click the **Connect Your Application** option.
 
 10. This will open the _Connect_ screen.
     ![Choose the Short SRV connection when settinup a connection on MongoDB Atalas.](mongodb_atlas_-_connectforshortsrv.jpg)
-
     - Click the **Short SRV connection string** option to copy the connection string.
 
 11. This will open the connection string URL.
     ![Copy the Short SRV connection string when setting up a connection on MongoDB Atlas](mongodb_atlas_-_copyshortsrv.jpg)
-
     - Choose **Copy** button to copy the string.
     - Save this string somewhere safe.
     - Update the password with your users password.

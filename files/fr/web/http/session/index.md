@@ -27,7 +27,6 @@ Avec TCP, le port par défaut, pour un serveur HTTP sur un ordinateur, est le po
 Une fois la connexion établie, l'agent utilisateur peut envoyer la demande (un agent utilisateur est généralement un navigateur Web, mais peut être autre chose, un robot d'exploration, par exemple). Une demande de client consiste en des directives de texte, séparées par CRLF (retour de chariot, suivi d'une alimentation en ligne), divisé en trois blocs :
 
 1. La première ligne contient une méthode de demande suivie de ses paramètres:
-
    - le chemin d'accès du document, c'est-à-dire une URL absolue sans le protocole ou le nom de domaine
    - la version du protocole HTTP
 

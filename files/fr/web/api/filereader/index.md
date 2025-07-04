@@ -23,7 +23,6 @@ Pour plus d'informations et d'exemples, consulter [utiliser des fichiers depuis 
 - {{domxref("FileReader.error")}} {{readonlyinline}}
   - : Un objet {{domxref("DOMError")}} qui représente l'erreur qui s'est produite lors de la lecture du fichier.
 - {{domxref("FileReader.readyState")}} {{readonlyinline}}
-
   - : Un nombre qui indique l'état du `FileReader`. Cette valeur est l'une des suivantes :
 
     <table class="standard-table">

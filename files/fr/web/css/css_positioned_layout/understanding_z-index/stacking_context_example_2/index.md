@@ -18,10 +18,8 @@ Ce qui peut apparaitre comme étrange, c'est que le bloc _DIV #2_ (z-index&nbsp;
 Pour mieux comprendre la situation, voici la hiérarchie du contexte d'empilement&nbsp;:
 
 - Contexte d'empilement racine
-
   - DIV #2 (z-index 2)
   - DIV #3 (z-index 1)
-
     - DIV #4 (z-index 10)
 
 > [!NOTE]

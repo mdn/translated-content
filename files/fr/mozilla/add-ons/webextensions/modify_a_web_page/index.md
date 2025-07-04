@@ -242,13 +242,11 @@ Si nous voulions envoyer des messages du script de contenu à la page d'arrière
 - [`runtime.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
 - [`runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
 - Examples using `content_scripts`:
-
   - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
   - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
   - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
   - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
 
 - Examples using `tabs.executeScript()`:
-
   - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
   - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)

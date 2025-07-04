@@ -1,11 +1,13 @@
 ---
 title: Clients
 slug: Web/API/Clients
+l10n:
+  sourceCommit: f2dc3d5367203c860cf1a71ce0e972f018523849
 ---
 
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{AvailableInWorkers("service")}}
 
-**`Clients`** インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。
+`Clients` インターフェイスは、{{domxref("Client")}} オブジェクトへのアクセスを提供します。 これは、[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)内で {{domxref("ServiceWorkerGlobalScope", "self")}}`.clients` を介してアクセスします。
 
 ## メソッド
 
@@ -36,7 +38,7 @@ addEventListener("notificationclick", (event) => {
       for (const client of allClients) {
         const url = new URL(client.url);
 
-        if (url.pathname == "/chat/") {
+        if (url.pathname === "/chat/") {
           // よし、使ってみよう！
           client.focus();
           chatClient = client;
@@ -46,9 +48,7 @@ addEventListener("notificationclick", (event) => {
 
       // 既存のチャットウィンドウが見つからなかった場合、
       // 新しいウィンドウを開きます。
-      if (!chatClient) {
-        chatClient = await clients.openWindow("/chat/");
-      }
+      chatClient ??= await clients.openWindow("/chat/");
 
       // クライアントにメッセージを送ります。
       chatClient.postMessage("新しいチャットメッセージ！");
@@ -68,5 +68,3 @@ addEventListener("notificationclick", (event) => {
 ## 関連情報
 
 - [サービスワーカーの使用](/ja/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [サービスワーカーは利用できますか？](https://jakearchibald.github.io/isserviceworkerready/)（英語）
-- {{jsxref("Promise")}}

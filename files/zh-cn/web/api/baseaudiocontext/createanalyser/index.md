@@ -8,7 +8,8 @@ slug: Web/API/BaseAudioContext/createAnalyser
 
 {{domxref("BaseAudioContext")}} 接口的 `createAnalyser()` 方法创建一个{{domxref("AnalyserNode")}}，它可以用来暴露音频时间和频率数据，以及创建数据可视化。
 
-> **备注：** {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} 构造函数是创建 {{domxref("AnalyserNode")}} 的推荐方法；请查看[创建 AudioNode](/zh-CN/docs/Web/API/AudioNode#创建_audionode)。
+> [!NOTE]
+> {{domxref("AnalyserNode.AnalyserNode", "AnalyserNode()")}} 构造函数是创建 {{domxref("AnalyserNode")}} 的推荐方法；请查看[创建 AudioNode](/zh-CN/docs/Web/API/AudioNode#创建_audionode)。
 
 > [!NOTE]
 > 有关使用此节点的更多信息，请查看 {{domxref("AnalyserNode")}} 页面。

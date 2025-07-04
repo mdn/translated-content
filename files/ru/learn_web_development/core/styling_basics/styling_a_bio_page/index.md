@@ -55,7 +55,6 @@ slug: Learn_web_development/Core/Styling_basics/Styling_a_bio_page
 
 1. Загрузите ваш код на [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) или [Glitch](https://glitch.com/).
 2. Напишите пост с просьбой о помощи и / или оценке на [форуме MDN](https://discourse.mozilla.org/c/mdn). Добавьте тег "learning" к вашему посту, чтобы нам легче было его найти. В вашем посте должны быть:
-
    - Заголовок с описанием наподобие "Assessment wanted for CSS First Steps".
    - Описание того, что вам нужно, — к примеру, что вы уже пробовали, что у вас не получается и вам нужна помощь.
    - Ссылка на ваш код в онлайн-редакторе.

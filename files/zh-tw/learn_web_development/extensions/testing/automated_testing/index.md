@@ -173,7 +173,8 @@ gulp.task("default", []);
    npm install --save-dev gulp-htmltidy
    ```
 
-   > **備註：** `--save-dev` 會把此套件加到開發相依設定中。如果去看專案的 `package.json` 檔，你會在 `devDependencies` 屬性看到它被放在裡面。
+   > [!NOTE]
+   > `--save-dev` 會把此套件加到開發相依設定中。如果去看專案的 `package.json` 檔，你會在 `devDependencies` 屬性看到它被放在裡面。
 
 2. 在 `gulpfile.js` 增加這個相依：
 
@@ -297,7 +298,8 @@ gulp.task("watch", function () {
 
 現在來輸入 `gulp watch` 指令。Gulp 會開始監視目錄，並在儲存 HTML、CSS、JavaScript 檔的時候，運行適當的任務。
 
-> **備註：** `*` 是通配字符（wildcard character）－－這裡的意思是「當任何檔案被儲存的時候，執行這些任務」。你也可以在主要任務內使用通配，例如 `gulp.src('src/*.css')` 會抓取所有的 CSS 檔案並執行 piped task。
+> [!NOTE]
+> `*` 是通配字符（wildcard character）－－這裡的意思是「當任何檔案被儲存的時候，執行這些任務」。你也可以在主要任務內使用通配，例如 `gulp.src('src/*.css')` 會抓取所有的 CSS 檔案並執行 piped task。
 
 > [!NOTE]
 > 在我們的 watch 指令有個問題，那就是我們的 CSSLint/Autoprefixer combination throws full-blown errors when a CSS error is encountered, which stops the watch working. You'll have to restart the watch once a CSS error is encountered, or find another way to do this.
@@ -335,7 +337,6 @@ You can then step up a gear, using an API to access functionality programmatical
 3. When you click Start session, a loading screen will then appear, which spins up a virtual machine running the combination you chose.
 4. When loading has finished, you can then start to remotely test the web site running in the chosen browser. ![](sauce-test-running.png)
 5. From here you can see the layout as it would look in the browser you are testing, move the mouse around and try clicking buttons, etc. The top menu allows you to:
-
    - Stop the session
    - Give someone else a URL so they can observe the test remotely.
    - Copy text/notes to a remote clipboard.

@@ -121,7 +121,6 @@ grid-auto-columns: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : グリッドコンテナーのインライン方向の寸法に対する相対値で、負ではない {{cssxref("percentage", "&lt;percentage&gt;")}} です。グリッドコンテナーのインライン方向の寸法が不定の場合は、パーセント値は `auto` のように扱われます。
 - {{cssxref("&lt;flex&gt;")}}
-
   - : `fr` の単位の付いた負の数ではない値で、トラックのフレックス係数を指定します。 `<flex>` の寸法のトラックは、残りの空間をフレックス係数の割合に比例して分け合います。
 
     `minmax()` 表記の外に現れた場合は、最小値が自動として扱われます (つまり `minmax(auto, <flex>)`)。
@@ -135,7 +134,6 @@ grid-auto-columns: unset;
 - {{cssxref("fit-content_function", "fit-content( [ &lt;length&gt; | &lt;percentage&gt; ] )")}}
   - : `min(max-content, max(auto, argument))` という式を表します。この式は、トラックの寸法が `auto` の最小値よりも大きい場合に _argument_ で固定されることを除いて、`auto` と同様 (すなわち `minmax(auto, max-content)`) に計算されます。
 - `auto`
-
   - : 最大値としては、そのトラック内のアイテムの最大の {{cssxref("max-content")}} のサイズを表します。
 
     最小値としては、そのトラック内のアイテムの最大の最小サイズ（アイテムの {{cssxref("min-width")}}/{{cssxref("min-height")}} で指定します）を表します。これは常にではありませんが、 {{cssxref("min-content")}} のサイズであることが多いです。

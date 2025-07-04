@@ -720,19 +720,15 @@ var p = new Person();
 JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
 
 - {{jsxref("Global_Objects/eval", "eval()")}}
-
   - : **`eval()`** 메소드는 문자열로 표현된 JavaScript 코드를 실행합니다.
 
 - {{jsxref("Global_Objects/uneval", "uneval()")}} {{non-standard_inline}}
-
   - : **`uneval()`** 메소드는 {{jsxref("Object")}}의 소스코드를 표현하는 문자열을 만듭니다.
 
 - {{jsxref("Global_Objects/isFinite", "isFinite()")}}
-
   - : 전역 **`isFinite()`** 함수는 전달받은 값이 유한한지 결정합니다. 만약 필요하다면, 매개변수는 첫번째로 숫자로 변환됩니다.
 
 - {{jsxref("Global_Objects/isNaN", "isNaN()")}}
-
   - : **`isNaN()`** 함수는 {{jsxref("Global_Objects/NaN", "NaN")}}인지 아닌지 결정합니다.
     > **참고:** `isNaN` 함수 안의 강제 변환은 [흥미로운](/ko/docs/Web/JavaScript/Reference/Global_Objects/isNaN#description) 규칙을 가지고 있습니다.
     >
@@ -741,31 +737,24 @@ JavaScript에는 몇 가지 최상위 레벨의 내장 함수가 있습니다:
     > ECMAScript6에서 정의된 값이 숫자값이 아닌 경우에는 [`typeof`](/ko/docs/Web/JavaScript/Reference/Operators/typeof)를 사용할 수도 있습니다.
 
 - {{jsxref("Global_Objects/parseFloat", "parseFloat()")}}
-
   - **`parseFloat()`** 함수는 문자열 인수 값을 해석하여 부동소숫점 수를 반환합니다.
 
 - {{jsxref("Global_Objects/parseInt", "parseInt()")}}
-
   - **`parseInt()`** 함수는 문자열 인수 값을 수학적인 수 체계에 따라 해석하여 특정한 진법의 정수를 반환합니다.
 
 - {{jsxref("Global_Objects/decodeURI", "decodeURI()")}}
-
   - **`decodeURI()`** 함수는 사전에 {{jsxref("Global_Objects/encodeURI", "encodeURI")}}을 통해 만들어지거나 비슷한 과정을 통해 만들어진 URI(Uniform Resource Identifier) 를 해독합니다.
 
 - {{jsxref("Global_Objects/decodeURIComponent", "decodeURIComponent()")}}
-
   - **`decodeURIComponent()`** 함수는 인코딩으로 이전에 생성된 URI({{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}})를 디코딩합니다. URI(Uniform Resource Identifier) 또는 유사한 루틴을 사용합니다.
 
 - {{jsxref("Global_Objects/encodeURI", "encodeURI()")}}
-
   - **`encodeURI()`** 메소드는 URI(Uniform Resource Identifier)를 각 인스턴스의 특정한 문자를 한 개, 두 개, 세 개 또는 네 개의 UTF-8인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다. (두 "surrogate"문자로 구성된 문자들은 오직 네 개의 연속된 확장문자 입니다)
 
 - {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent()")}}
-
   - **`encodeURIComponent()`** 메소드는 URI(Uniform Resource Identifier) 컴포넌트를 각 인스턴스의 특정한 문자를 한개, 두 개, 세 개 또는 네 개의 UTF-8 인코딩으로 나타내어지는 연속된 확장문자들과 바꾸는 방법으로 부호화 합니다.(두 "surrogate"문자로 구성된 문자들은 오직 네개의 연속된 확장문자 입니다.)
 
 - {{jsxref("Global_Objects/escape", "escape()")}} {{deprecated_inline}}
-
   - 곧 사라질 **`escape()`** 메소드는 한 문자열에서 특정 문자들이 16진 확장 비트열로 바뀌어진 문자열로 계산합니다. {{jsxref("Global_Objects/encodeURI", "encodeURI")}} 또는 {{jsxref("Global_Objects/encodeURIComponent", "encodeURIComponent")}} 를 사용하세요.
 
 - {{jsxref("Global_Objects/unescape", "unescape()")}} {{deprecated_inline}}

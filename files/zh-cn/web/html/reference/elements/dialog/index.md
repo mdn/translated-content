@@ -66,7 +66,8 @@ slug: Web/HTML/Reference/Elements/dialog
 
 这个元素包含了[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-> **警告：** `tabindex` 属性不能被使用在 `<dialog>` 元素上。
+> [!WARNING]
+> `tabindex` 属性不能被使用在 `<dialog>` 元素上。
 
 - `open`
   - : 指示这个对话框是激活的和能互动的。当没有设置 `open` 属性时，对话框*不应该*显示给用户。推荐使用 `.show()` 或 `.showModal()` 方法来渲染对话框，而不是使用 `open` 属性。

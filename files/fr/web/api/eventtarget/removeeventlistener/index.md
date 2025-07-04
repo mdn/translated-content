@@ -21,9 +21,7 @@ target.removeEventListener(type, listener[, useCapture]);
 - `listener`
   - : La fonction {{domxref("EventListener")}} du gestionnaire d'évènements à retirer de la cible d'évènements.
 - `options` {{optional_inline}}
-
   - : Un objet d'options qui spécifie les caractéristiques de l'écouteur d'évènements. Les options disponibles sont :
-
     - `capture` : un {{jsxref("Boolean")}} indiquant que les évènements de ce type seront envoyés au `listener` enregistré avant d'être distribués à tout `EventTarget` en-dessous dans l'arborescence du DOM.
 
 - `useCapture` {{optional_inline}}

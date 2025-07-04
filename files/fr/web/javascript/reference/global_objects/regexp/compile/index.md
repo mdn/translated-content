@@ -18,9 +18,7 @@ regexObj.compile(motif, flags);
 - `motif`
   - : Le texte de l'expression rationnelle.
 - `flags`
-
   - : S'ils sont utilisés, les drapeaux (_flags_) peuvent être combinés avec les valeurs suivantes :
-
     - `g`
       - : correspondance globale
     - `i`

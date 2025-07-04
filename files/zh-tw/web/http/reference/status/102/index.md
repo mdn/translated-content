@@ -2,17 +2,15 @@
 title: 102 Processing
 slug: Web/HTTP/Reference/Status/102
 l10n:
-  sourceCommit: 3c29ffa78c551ea6a61bbb795a5f97a66c6868c0
+  sourceCommit: 67a409e7944352612272e095a26bf325ecfae822
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
 
-HTTP **`102 Processing`** 資訊回應碼是一個訊息性的狀態碼，表示伺服器已經接收到完整的請求並正在處理它。
-
-只有當伺服器預計請求需要花費大量時間時，才會發送此狀態碼。它告訴用戶端請求尚未失效。
+HTTP **`102 Processing`** [資訊回應](/zh-TW/docs/Web/HTTP/Reference/Status#資訊回應)狀態碼表示伺服器已收到完整請求，且正在處理中。只有當伺服器預期請求需要花費較長時間時，才會傳送此狀態碼。
 
 > [!NOTE]
-> 此狀態碼已被棄用，不應再發送。用戶端可能仍然接受它，但會簡單地忽略它。
+> 一般的 Web 伺服器不會回傳此回應。此狀態碼最初在基於 Web 的分散式編寫和版本控制（{{Glossary("WebDAV")}}）{{RFC("2518")}} 中被引入，但在 {{RFC("4918")}} 中已從 WebDAV 中移除。
 
 ## 狀態
 
@@ -26,9 +24,10 @@ HTTP **`102 Processing`** 資訊回應碼是一個訊息性的狀態碼，表示
 
 ## 瀏覽器相容性
 
-此功能已被棄用，瀏覽器將忽略此回應標頭。
+此功能已被棄用，瀏覽器將忽略此回應狀態碼。
 
 ## 參見
 
-- {{HTTPHeader("Expect")}}
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("100")}}
+- [rfc4918「102 Processing」移除說明](https://www.rfc-editor.org/rfc/rfc4918#section-21.4)

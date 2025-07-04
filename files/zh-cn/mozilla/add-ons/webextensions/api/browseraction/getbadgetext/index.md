@@ -22,9 +22,7 @@ let gettingText = browser.browserAction.getBadgeText(
 ### 参数
 
 - `details`
-
   - : 包含以下属性的对象：
-
     - `tabId` {{optional_inline}}
       - : `integer`。指定从中获取徽章文本的标签页。
     - `windowId` {{optional_inline}}

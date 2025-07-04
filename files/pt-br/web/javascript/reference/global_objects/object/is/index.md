@@ -34,7 +34,6 @@ Um {{jsxref("Boolean")}} indicando se os dois argumentos possuem o mesmo valor o
 - ambos são strings do mesmo comprimento, com os mesmos caracteres
 - ambos são o mesmo objeto
 - ambos são numéricos e
-
   - ambos são `+0`
   - ambos são `-0`
   - ambos são {{jsxref("NaN")}}

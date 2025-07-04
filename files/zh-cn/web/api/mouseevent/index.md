@@ -23,7 +23,6 @@ slug: Web/API/MouseEvent
 _这个接口也继承了{{domxref("UIEvent")}} 和 {{domxref("Event")}}原型上的方法，_
 
 - {{domxref("MouseEvent.altKey")}} {{readonlyinline}}
-
   - : 当鼠标事件触发的时，如果 <kbd>alt</kbd> 键被按下，返回 true;
 
 - {{domxref("MouseEvent.button")}} {{readonlyinline}}

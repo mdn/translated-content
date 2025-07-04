@@ -16,18 +16,14 @@ let observer = new IntersectionObserver(callback[, options]);
 ### Paramètres
 
 - `callback`
-
   - : Une fonction appelée lorsque la proportion de l'élément qui est visible franchit un seuil. La fonction de rappel reçoit en entrée deux paramètres :
-
     - `entries`
       - : Une liste d'objets [`IntersectionObserverEntry`](/fr/docs/Web/API/IntersectionObserverEntry), chacun représentant un seuil franchi, que ce soit en passant au-dessus ou en dessous du pourcentage spécifié par le seuil.
     - `observateur`
       - : L'objet [`IntersectionObserver`](/fr/docs/Web/API/IntersectionObserver) pour lequel la fonction de rappel est invoquée.
 
 - `options` {{optional_inline}}
-
   - : Un objet optionnel qui paramètre l'observateur. Si `options` n'est pas spécifié, l'observateur utilise la fenêtre du document comme racine, sans appliquer de marge, et avec un seuil de 0% (signifiant que le moindre changement d'un pixel suffira à déclencher la fonction de rappel). Les propriétés suivantes peuvent être utilisées pour la configuration :
-
     - `root`
       - : Un objet [`Element`](/fr/docs/Web/API/Element) ou [`Document`](/fr/docs/Web/API/Document) qui est un ancêtre de l'élément observé et dont la boîte englobante sera considérée comme la zone d'affichage (_viewport_). Toute portion de l'élément cible qui n'est pas visible dans la zone couverte par cette zone englobant n'est pas considérée visible.
     - `rootMargin`

@@ -3,8 +3,6 @@ title: Firefox 3 技術文件
 slug: Mozilla/Firefox/Releases/3
 ---
 
-{{FirefoxSidebar}}
-
 ### Firefox 3 網站開發須知
 
 - Web application 需要更新的地方

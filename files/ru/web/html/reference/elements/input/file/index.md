@@ -268,7 +268,6 @@ Whenever the `updateImageDisplay()` function is invoked, we:
 - If files _have_ been selected, we loop through each one, printing information about it into the preview `<div>`. Things to note here:
 - We use the custom `validFileType()` function to check whether the file is of the correct type (e.g. the image types specified in the `accept` attribute).
 - If it is, we:
-
   - Print out its name and file size into a list item inside the previous `<div>` (obtained from `curFiles[i].name` and `curFiles[i].size`). The custom `returnFileSize()` function returns a nicely-formatted version of the size in bytes/KB/MB (by default the browser reports the size in absolute bytes).
   - Generate a thumbnail preview of the image by calling `window.URL.createObjectURL(curFiles[i])` and reducing the image size in the CSS, then insert that image into the list item too.
 

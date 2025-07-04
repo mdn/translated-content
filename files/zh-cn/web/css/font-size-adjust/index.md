@@ -39,7 +39,6 @@ font-size-adjust: inherit;
 - `none`
   - : 仅根据{{ Cssxref("font-size") }}属性决定字体大小。
 - `<number>`
-
   - : 根据使小写字母大小（根据字体的 x-height--西文字体设计中的基线与主线的距离--决定）为该值乘以{{ Cssxref("font-size") }}的结果定义字体。
 
     数字应为{{ Cssxref("font-family") }}的首选字体的尺寸比（x-height 和字体大小的比）。这意味着当首选字体可用时，不论浏览器是否支持 font-size-adjust，都会显示文字为{{ Cssxref("font-size") }}的大小。

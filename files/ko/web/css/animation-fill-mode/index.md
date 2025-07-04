@@ -30,7 +30,6 @@ animation-fill-mode: both, forwards, none;
 - `none`
   - : 애니메이션은 실행되지 않을 때 대상에 스타일을 적용하지 않습니다. 요소는 대신 적용된 다른 CSS 규칙을 사용하여 표시됩니다. 이것은 기본값입니다.
 - `forwards`
-
   - : 대상은 실행 된 애니메이션의 마지막 [keyframe](/ko/docs/Web/CSS/@keyframes)에 의해 설정된 계산 된 값을 유지합니다. 마지막 키 프레임은 {{cssxref("animation-direction")}}및 {{cssxref("animation-iteration-count")}}의 값에 따라 다릅니다.
 
     | `animation-direction` | `animation-iteration-count` | last keyframe encountered |
@@ -43,7 +42,6 @@ animation-fill-mode: both, forwards, none;
     | `alternate-reverse`   | odd                         | `0%` or `from`            |
 
 - `backwards`
-
   - : 애니메이션은 대상에 적용되는 즉시 첫 번째 관련 [keyframe](/ko/docs/Web/CSS/@keyframes) 에 정의 된 값을 적용하고 {{cssxref("animation-delay")}} 기간 동안 이 값을 유지합니다. 첫 번째 관련 키프레임은 {{cssxref("animation-direction")}}의 값에 따라 다릅니다.
 
     | `animation-direction`            | first relevant keyframe |

@@ -26,9 +26,7 @@ X-Content-Type-Options: nosniff
 ## 指令
 
 - `nosniff`
-
   - : 下面两种情况的请求将被阻止：
-
     - 请求类型是"`style`" 但是 MIME 类型不是 "`text/css`"，
     - 请求类型是"`script`" 但是 MIME 类型不是 [JavaScript MIME 类型](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type)。
 

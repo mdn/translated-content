@@ -64,7 +64,6 @@ slug: Web/CSS/:-moz-window-inactive
 
 - [Mozilla CSS 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)
 - 相关的 CSS 选择器：
-
   - [`:active`](/zh-CN/docs/Web/CSS/:active)
 
 - 常规 DOM 的 {{domxref("Document.activeElement")}} 属性和[影子 DOM](/zh-CN/docs/Web/API/Web_components/Using_shadow_DOM) 根的 {{domxref("ShadowRoot.activeElement")}} 属性。

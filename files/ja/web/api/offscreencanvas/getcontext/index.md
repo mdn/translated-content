@@ -19,9 +19,7 @@ getContext(contextType, contextAttributes)
 ### 引数
 
 - `contextType`
-
   - : キャンバスに関連付けられた描画コンテキストを定義するコンテキスト識別子を含む文字列。実現可能な値は次のとおりです。
-
     - `2d`
       - : 2 次元レンダリングコンテキストを表す {{domxref("OffscreenCanvasRenderingContext2D")}} オブジェクトです。
     - `webgl`
@@ -39,7 +37,6 @@ getContext(contextType, contextAttributes)
     > [Khronos Group](https://www.khronos.org/) は、特定の[適合性ルール](https://registry.khronos.org/webgl/sdk/tests/CONFORMANCE_RULES.txt)に基づいて WebGL の実装を認定しています。
 
 - `contextAttributes`
-
   - : レンダリングコンテキストを作成する際に、複数のコンテキスト属性を使用することができます。例えば、次のようにします。
 
     ```js
@@ -47,7 +44,6 @@ getContext(contextType, contextAttributes)
     ```
 
     2d コンテキストの属性は次の通りです。
-
     - `alpha`
       - : 論理値で、キャンバスにアルファチャンネルが含まれているかどうかを示します。 `false` に設定すると、ブラウザーは背景が常に不透明であることを認識し、透明なコンテンツや画像の描画を高速化できます。
     - `willReadFrequently`
@@ -56,7 +52,6 @@ getContext(contextType, contextAttributes)
         Firefox では、このオプションはフラグ `gfx.canvas.willReadFrequently.enable` が `true` に設定されている場合（既定では B2G/Firefox OS の場合のみ）にのみ利用できます。
 
     WebGL コンテキストの属性は次の通りです。
-
     - `alpha`
       - : 論理値で、キャンバスにアルファチャンネルが含まれているかどうかを示します。
     - `depth`

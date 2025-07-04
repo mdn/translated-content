@@ -26,7 +26,6 @@ xhrReq.open(method, url, async, user, password);
 - `url`
   - : 一个 {{domxref("DOMString")}} 表示要向其发送请求的 URL。
 - `async` {{optional_inline}}
-
   - : 一个可选的布尔参数，表示是否异步执行操作，默认为 `true`。如果值为 `false`，`send()` 方法直到收到答复前不会返回。如果 `true`，已完成事务的通知可供事件监听器使用。如果 `multipart` 属性为 `true` 则这个必须为 `true`，否则将引发异常。
 
     > [!NOTE]

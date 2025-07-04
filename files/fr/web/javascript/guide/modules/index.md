@@ -50,12 +50,10 @@ modules/
 Le répertoire dédié aux modules contient deux modules&nbsp;:
 
 - `canvas.js` — responsable de fonctions pour gérer le canevas
-
   - `create()` — crée un canevas avec les dimensions souhaitées (`width` / `height`) à l'intérieur d'un élément {{htmlelement("div")}} doté d'un identifiant et qui est ajouté à l'intérieur d'un élément indiqué. Cette fonction renvoie l'objet contenant le contexte du canevas et l'identifiant du conteneur.
   - `createReportList()` — crée une liste non ordonnée à l'intérieur d'un élément indiqué et dans lequel on affiche des données. Cette fonction renvoie l'identifiant de la liste.
 
 - `square.js`
-
   - `name` — une constante qui est une chaîne de caractères&nbsp;: `"square"`.
   - `draw()` — dessine un carré avec une taille/position/couleur donnée sur le canevas indiqué. Cette fonction renvoie un objet contenant la taille du carré, sa position et sa couleur.
   - `reportArea()` — écrit la surface d'un carré dans une liste donnée en fonction de la longueur de son côté.

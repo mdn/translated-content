@@ -350,11 +350,9 @@ Par exemple, voici un `<dl>`&nbsp;:
 
 ````md
 - terme1
-
   - : Ma description du terme1
 
 - `terme2`
-
   - : Ma description du terme2
 
     Il peut avoir plusieurs paragraphes, et aussi des blocs de code&nbsp;:

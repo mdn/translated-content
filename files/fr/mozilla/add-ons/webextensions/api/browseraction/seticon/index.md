@@ -26,11 +26,8 @@ var settingIcon = browser.browserAction.setIcon(
 ### Paramètres
 
 - `details`
-
   - : `object`. Un objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId` .
-
     - `imageData`{{optional_inline}}
-
       - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
 
         Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
@@ -45,7 +42,6 @@ var settingIcon = browser.browserAction.setIcon(
         Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
 
     - `path`{{optional_inline}}
-
       - : `string` or `object`. Il s'agit du chemin relatif d'un fichier d'icône ou d'un objet de dictionnaire.
 
         Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :

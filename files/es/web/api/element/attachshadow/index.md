@@ -40,13 +40,9 @@ var shadowroot = element.attachShadow(shadowRootInit);
 ### Parámetros
 
 - `shadowRootInit`
-
   - : Un diccionario `ShadowRootInit` , que puede contener los siguientes campos:
-
     - `mode`
-
       - : Una cadena que especifique el _modo de encapsulación_ para el árbol DOM "sombra". Este puede tener uno de los siguientes valores:
-
         - `open`: Los elementos del árbol son accesibles desde fuera del elemento, por ejemplo usando {{domxref("Element.shadowRoot")}}:
 
           ```

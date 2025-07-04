@@ -61,9 +61,7 @@ img {
 - `alt`
   - : 在不顯示圖像的瀏覽器上顯示的文本字符串替代品。文本應該構造成當不顯示替代文本時向用戶呈現與圖像相同類型的選擇。只有在使用 [`href`](#href) 屬性時才需要此屬性。
 - `coords`
-
   - : `coords` 屬性詳細描述了 `<area>` 的 [`shape`](#shape) 屬性的大小、形狀和位置的坐標。如果 `shape` 設置為 `default`，則不能使用此屬性。
-
     - `rect`：值為 `x1,y1,x2,y2`。該值指定了矩形的左上角和右下角的坐標。例如，在 `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` 中，坐標為 `0,0` 和 `253,27`，分別表示矩形的左上角和右下角。
     - `circle`：值為 `x,y,radius`。值指定了圓的中心和半徑的坐標。例如：`<area shape="circle" coords="130,136,60" href="#" target="_blank" alt="MDN">`
     - `poly`：值為 `x1,y1,x2,y2,..,xn,yn`。值指定了多邊形的邊緣的坐標。如果第一對和最後一對坐標不相同，則瀏覽器將添加最後一對坐標以閉合多邊形。
@@ -77,9 +75,7 @@ img {
 - `ping`
   - : 包含一個以空格分隔的 URL 列表，當點擊超連結時，瀏覽器（後台）將發送帶有 `PING` 主體的 {{HTTPMethod("POST")}} 請求到這些 URL。通常用於跟蹤。
 - `referrerpolicy`
-
   - : 指示在提取資源時使用哪個引用網址的字符串：
-
     - `no-referrer`：不會發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不會將 {{HTTPHeader("Referer")}} 標頭發送給沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的 {{Glossary("origin")}}。
     - `origin`：發送的引用網址將被限制為引用頁面的原始位置：其 [scheme](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host")}} 和 {{Glossary("port")}}。
@@ -94,9 +90,7 @@ img {
 - `shape`
   - : 關聯熱點的形狀。 HTML 的規範定義了 `rect`，它定義了矩形區域；`circle`，它定義了圓形區域；`poly`，它定義了多邊形；以及 `default`，它表示任何已定義形狀之外的整個區域。
 - `target`
-
   - : 用於顯示鏈接資源的關鍵字或作者定義的 {{Glossary("browsing context", "瀏覽上下文")}} 名稱。以下關鍵字具有特殊含義：
-
     - `_self`（默認）：在當前的瀏覽上下文中顯示資源。
     - `_blank`：在新的未命名的瀏覽上下文中顯示資源。
     - `_parent`：在當前頁面位於框架內時，在當前瀏覽上下文的父瀏覽上下文中顯示資源。如果沒有父親，則與 `_self` 作用相同。

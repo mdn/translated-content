@@ -24,9 +24,7 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 ### 参数
 
 - `target`
-
   - : {{domxref("GLenum")}} 指定纹理的绑定对象。可能的值：
-
     - `gl.TEXTURE_2D`: 二维纹理贴图。
     - `gl.TEXTURE_CUBE_MAP_POSITIVE_X`:立方体映射纹理的正 X 面。
     - `gl.TEXTURE_CUBE_MAP_NEGATIVE_X`: 立方体映射纹理的负 X 面。
@@ -38,7 +36,6 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 - `level`
   - : {{domxref("GLint")}} 指定详细级别。0 级是基本图像等级，n 级是第 n 个金字塔简化级。
 - `internalformat`
-
   - : {{domxref("GLenum")}} 指定纹理中的颜色组件。在 WebGL1 和 WebGL2 中可能的值：
 
     | Format          | Type                   | Channels | Bytes per pixel |
@@ -107,24 +104,20 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
     | RGBA32UI         | RGBA            | ui32       | ui32       | ui32       | ui32       |                 | ●                    |                        |
 
     在 WebGL2 中，使用`HTMLImageElement`, `HTMLCanvasElement`, `HTMLVideoElement`, `ImageBitmap`, 或 `ImageData`作为`texImage2D` 纹理的版本中，可能的值有：
-
     - `gl.ALPHA`: 抛弃红色、绿色和蓝色组件并读取 alpha 组件。
     - `gl.RGB`:抛弃 alpha 组件，读取红色、绿色和蓝色组件。
     - `gl.RGBA`: 从颜色缓冲区读取红色、绿色、蓝色和 alpha 组件。
     - `gl.LUMINANCE`: E 每个颜色组件是一个亮度组件，alpha 值为 1.0。
     - `gl.LUMINANCE_ALPHA`: 每个组件都是亮度/alpha 组件。
     - 当时用 {{domxref("WEBGL_depth_texture")}} 扩展：
-
       - `gl.DEPTH_COMPONENT`
       - `gl.DEPTH_STENCIL`
 
     - 当时用 {{domxref("EXT_sRGB")}} 扩展：
-
       - `ext.SRGB_EXT`
       - `ext.SRGB_ALPHA_EXT`
 
     - 当时用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}}, 另外还提供以下值：
-
       - `gl.R8`
       - `gl.R16F`
       - `gl.R32F`
@@ -161,29 +154,23 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
 - `format`
   - : {{domxref("GLenum")}} 指定 texel 数据格式。在 WebGL 1 中，它必须与 `internalformat` 相同（查看上面). 在 WebGL 2 中，[这张表](https://www.khronos.org/registry/webgl/specs/latest/2.0/#TEXTURE_TYPES_FORMATS_FROM_DOM_ELEMENTS_TABLE)中列出了这些组合。
 - `type`
-
   - : {{domxref("GLenum")}} 指定 texel 数据的数据类型。可能的值：
-
     - `gl.UNSIGNED_BYTE`: `gl.RGBA`每个通道 8 位
     - `gl.UNSIGNED_SHORT_5_6_5`: 5 bits 红，6 bits 绿，5 bits 蓝
     - `gl.UNSIGNED_SHORT_4_4_4_4`: 4 bits 红，4 bits 绿，4 bits 蓝，4 alpha bits.
     - `gl.UNSIGNED_SHORT_5_5_5_1`: 5 bits 红，5 bits 绿，5 bits 蓝，1 alpha bit.
     - 当使用 {{domxref("WEBGL_depth_texture")}} 扩展：
-
       - `gl.UNSIGNED_SHORT`
       - `gl.UNSIGNED_INT`
       - `ext.UNSIGNED_INT_24_8_WEBGL` (constant provided by the extension)
 
     - 当使用 {{domxref("OES_texture_float")}}扩展 :
-
       - `gl.FLOAT`
 
     - 当使用 {{domxref("OES_texture_half_float")}} 扩展：
-
       - `ext.HALF_FLOAT_OES` (constant provided by the extension)
 
     - 当使用 {{domxref("WebGL2RenderingContext", "WebGL 2 context", "", 1)}},下面的值也是可用的：
-
       - `gl.BYTE`
       - `gl.UNSIGNED_SHORT`
       - `gl.SHORT`
@@ -198,11 +185,8 @@ texImage2D(target, level, internalformat, width, height, border, format, type, s
       - `gl.FLOAT_32_UNSIGNED_INT_24_8_REV` (pixels must be {{jsxref("null")}})
 
 - `pixels`
-
   - : 下列对象之一可以用作纹理的像素源：
-
     - {{domxref("ArrayBufferView")}},
-
       - {{jsxref("Uint8Array")}} 如果 `type` 是 `gl.UNSIGNED_BYTE`则必须使用
       - {{jsxref("Uint16Array")}} 如果 `type` 是 `gl.UNSIGNED_SHORT_5_6_5`, `gl.UNSIGNED_SHORT_4_4_4_4`, `gl.UNSIGNED_SHORT_5_5_5_1`, `gl.UNSIGNED_SHORT` 或`ext.HALF_FLOAT_OES`则必须使用
       - {{jsxref("Uint32Array")}} 如果`type` 是 `gl.UNSIGNED_INT` 或`ext.UNSIGNED_INT_24_8_WEBGL`则必须使用

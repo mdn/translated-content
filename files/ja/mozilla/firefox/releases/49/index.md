@@ -20,7 +20,6 @@ l10n:
 - インスペクターで、`#RRGGBBAA` および `#RGBA` 構文の色の値をサポートしました ([Firefox バグ 1271191](https://bugzil.la/1271191))。
 - HTML のページにおける開発ツールで、自己完結タグ ({{HTMLElement("br")}} や {{HTMLElement("img")}} など) が終了タグを持つかのように表示しないようになりました。XHTML ページではこの動作を変更していません ([Firefox バグ 820926](https://bugzil.la/820926))。
 - アクセシビリティが向上しました。
-
   - ツールボックスで、キーボードフォーカスが見やすくなるように対処しました ([Firefox バグ 1242851](https://bugzil.la/1242851))。
   - アクセシビリティのラベルがついていないコントロールに、ラベルを追加しました ([Firefox バグ 1242715](https://bugzil.la/1242715))。
   - インスペクターのマークアップビューに、適切なツリービューの意味とキーボードナビゲーションを追加しました ([Firefox バグ 1242694](https://bugzil.la/1242694))。
@@ -54,13 +53,11 @@ l10n:
 - {{cssxref("text-align-last")}} プロパティの接頭辞を削除しました ([Firefox バグ 1039541](https://bugzil.la/1039541))。
 - {{cssxref("overflow-wrap")}} をサポートしました。 `word-wrap` を置き換えるものですが、こちらも別名としてサポートを続けます ([Firefox バグ 955857](https://bugzil.la/955857))。
 - [CSS グリッド](/ja/docs/Web/CSS/CSS_grid_layout) の実験的な実装が進展しました。
-
   - {{cssxref("&lt;percentage&gt;")}} を `grid-gap`、`grid-row-gap`、`grid-column-gap` プロパティで対応しました ([Firefox バグ 1266268](https://bugzil.la/1266268))。
   - {{cssxref("align")}}、{{cssxref("justify-self")}}`:baseline`、`last-baseline` ("baseline self-alignment" として知られる) でグリッドレイアウトをサポートしました ([Firefox バグ 1221525](https://bugzil.la/1221525))。
   - グリッドアイテムの Baseline Content Alignment を実装しました ([Firefox バグ 1256429](https://bugzil.la/1256429))。
 
 - [CSS マスク](/ja/docs/Web/CSS/CSS_masking) の実験的な実装が進展しました。
-
   - {{cssxref("mask-origin")}} プロパティの初期値を、仕様書に合わせて `padding-box` から `border-box` に変更しました ([Firefox バグ 1258286](https://bugzil.la/1258286))。
   - {{cssxref("mask-repeat")}} プロパティで値 `space` および `round` をサポートしました ([Firefox バグ 1258626](https://bugzil.la/1258626))。
   - {{cssxref("mask-position")}} 属性でアニメーションを行えない問題を修正しました ([Firefox バグ 1273804](https://bugzil.la/1273804))。
@@ -192,7 +189,6 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 既存のコンテンツとの互換性を高めるために、一部の webkit 接頭辞つきプロパティおよび属性を Firefox で受け入れるようになりました。
 
 - 以下のプロパティは、`-webkit` 接頭辞がついていても動作します。
-
   - `-webkit-align-items`
   - `-webkit-align-content`
   - `-webkit-align-self`
@@ -240,7 +236,6 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
   - `-webkit-user-select`
 
 - 以下のプロパティは、同等の接頭辞つきプロパティに紐づけています:
-
   - `-webkit-box-flex`
   - `-webkit-box-ordinal-group`
   - `-webkit-box-orient`
@@ -248,19 +243,16 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
   - `-webkit-box-pack`
 
 - {{cssxref("&lt;image&gt;")}} の値について:
-
   - `-webkit-linear-gradient()`、`-webkit-radial-gradient()`、`-webkit-repeating-linear-gradient()`、`-webkit-repeating-radial-gradient()` 関数は、接頭辞なしの同等物に紐づけています。
   - 旧式の `-webkit-gradient` をサポートします (また、正規のグラデーションに変換します)。
 
 - 以下の {{cssxref("display")}} の値を変換します:
-
   - `-webkit-box` を `-moz-box` に変換
   - `-webkit-flex` を `flex` に変換
   - `-webkit-inline-box` を `inline-flex` に変換
   - `-webkit-inline-flex` を `-moz-inline-flex` に変換
 
 - 以下のプロパティをサポートします (接頭辞なしの同等物に紐づけません)。
-
   - {{cssxref("-webkit-text-fill-color")}}
   - {{cssxref("-webkit-text-stroke-color")}}
   - {{cssxref("-webkit-text-stroke-width")}}
@@ -268,7 +260,6 @@ Firefox 49 より、サイトが正しく機能するために必要ではない
 
 - `WebKitCSSMatrix` インターフェイスを {{domxref("DOMMatrix")}} の別名にしました。
 - 以下のメディアクエリー特性を実装しました:
-
   - `-webkit-min-device-pixel-ratio` を [`min-resolution`](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#resolution) の別名として、同じ値 (`dppx`) で実装しました。ただし、この機能は [デフォルトで無効](https://bugzilla.mozilla.org/show_bug.cgi?id=1237720) です (about:config の設定 `layout.css.prefixes.device-pixel-ratio-webkit` で制御)。
   - `-webkit-max-device-pixel-ratio` を [`max-resolution`](/ja/docs/Web/CSS/@media/resolution) の別名として、同じ値 (`dppx`) で実装しました。この機能も about:config の同じ設定で、デフォルトで無効にしています。
   - [`-webkit-transform-3d`](/ja/docs/Web/CSS/@media/-webkit-transform-3d) がマッチするようになりました。3D Transform をサポートすることを示します。

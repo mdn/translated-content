@@ -158,24 +158,19 @@ h4 {
 标题可以嵌套其小节，以反映页面的结构。大多数屏幕阅读器可以生成页面上所有标题的列表，从而帮助用户快速确定内容的层次结构：
 
 1. `h1` Beetles
-
    1. `h2` Etymology
    2. `h2` Distribution and Diversity
    3. `h2` Evolution
-
       1. `h3` Late Paleozoic
       2. `h3` Jurassic
       3. `h3` Cretaceous
       4. `h3` Cenozoic
 
    4. `h2` External Morphology
-
       1. `h3` Head
-
          1. `h4` Mouthparts
 
       2. `h3` Thorax
-
          1. `h4` Prothorax
          2. `h4` Pterothorax
 

@@ -48,7 +48,6 @@ dominant-baseline: unset;
 ### 値
 
 - `auto`
-
   - : このプロパティが {{SVGElement("text")}} 要素に適用された場合、計算された値は {{SVGAttr("writing-mode")}} 属性の値に依存します。
 
     {{SVGAttr("writing-mode")}} が横書きの場合、 `dominant-baseline` 成分の値は `alphabetic` です。 そうではなく、 {{SVGAttr("writing-mode")}} が縦書きの場合、 `dominant-baseline` 成分の値は `central` です。

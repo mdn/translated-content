@@ -32,9 +32,7 @@ var inserting = browser.tabs.insertCSS(
 - `tabId` {{optional_inline}}
   - : `integer`. L'ID de l'onglet dans lequel insérer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
 - `details`
-
   - : Un objet décrivant le CSS à insérer. Il contient les propriétés suivantes :
-
     - `allFrames`{{optional_inline}}
       - : `boolean`. Si `true`, le CSS sera injecté dans toutes les images de la page en cours. Si c'est `false`, CSS est seulement injecté dans le cadre supérieur. Par défaut à `false`.
     - `code`{{optional_inline}}

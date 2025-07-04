@@ -31,6 +31,5 @@ sum = Number(value1) + value2;
 
 - 위키백과의 [형 변환](https://en.wikipedia.org/wiki/Type_conversion)
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Type")}}
   - {{Glossary("Type conversion")}}

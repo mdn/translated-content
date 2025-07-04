@@ -171,7 +171,6 @@ d'être passée à la ligne parce que sinon
 - [`String.fromCodePoint(num1 [, ...[,numN]])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint)
   - : Renvoie une chaîne de caractères créée en utilisant la séquence indiquée de points de code.
 - [`String.raw()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/raw)
-
   - : Renvoie une chaîne de caractères créée à partir d'un gabarit de chaîne de caractères brut.
 
 ## Propriétés des instances
@@ -228,13 +227,11 @@ d'être passée à la ligne parce que sinon
 - [`String.prototype.substring(indexStart [, indexEnd])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/substring)
   - : Renvoie une nouvelle chaîne de caractères contenant les caractères de la chaîne courante, situés à partir de l'indice donné ou entre les indices donnés.
 - [`String.prototype.toLocaleLowerCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleLowerCase)
-
   - : Renvoie une conversion en minuscules de la chaîne de caractères courante qui respecte la locale indiquée.
 
     Pour la plupart des langues, cela renverra la même valeur que [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase).
 
 - [`String.prototype.toLocaleUpperCase( [locale, ...locales])`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toLocaleUpperCase)
-
   - : Renvoie une conversion en majuscules de la chaîne de caractères courante qui respecte la locale indiquée.
 
     Pour la plupart des langues, cela renverra la même valeur que [`toUpperCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase).

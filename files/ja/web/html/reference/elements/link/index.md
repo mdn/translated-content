@@ -85,7 +85,6 @@ l10n:
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `as`
-
   - : この属性は、 [`rel="preload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/preload) を `<link>` 要素に設定した場合に必要となり、また [`rel="modulepreload"`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload) を設定した場合はオプションですが、それ以外は使用すべきではありません。
     これは `<link>` によって読み込まれるコンテンツのタイプを指定する属性であり、リクエストの照合、正しい[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)の適用、正しい {{HTTPHeader("Accept")}} リクエストヘッダーの設定のために必要です。
 
@@ -172,15 +171,12 @@ l10n:
     </table>
 
 - `blocking` {{Experimental_Inline}}
-
   - : この属性は、外部リソースの取得時に特定の処理をブロックすることを明示的に示します。これは `rel` 属性に `expect` または `stylesheet` キーワードが格納されている場合にのみ使用しなければなりません。ブロックする演算子は、下記のブロックトークンをスペース区切りで列挙したものでなければなりません。
     - `render`: 画面へのコンテンツの描画がブロックされます。
 
 - `crossorigin`
-
   - : [列挙型](/ja/docs/Glossary/Enumerated)の属性で、関連リソースを取得する際に {{Glossary("CORS")}} を使用しなければならないかを示します。
     [CORS が有効な画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、<em>汚染</em>されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます。
-
     - `anonymous`
       - : オリジン間リクエスト (つまり、 HTTP の {{HTTPHeader("Origin")}} ヘッダーを持つリクエスト) が実行されます。ただし、信用情報は送信されません (Cookie、X.509 証明書、 HTTP ベーシック認証は利用されません)。
         サーバーが元のサイトに信用情報を付与しない (HTTP の {{HTTPHeader("Access-Control-Allow-Origin")}} ヘッダーの設定がない) 場合、リソースが汚染され、その使用も制限されます。
@@ -192,15 +188,12 @@ l10n:
     それ以上の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) を参照してください。
 
 - `disabled`
-
   - : `rel="stylesheet"` の場合のみ、 `disabled` は論理属性であり、指定されたスタイルシートを読み込んで文書に適用するかどうかを示します。 `disabled` が HTML に読み込み時点で指定されていた場合、そのスタイルシートはページ読み込み処理の間に読み込まれません。代わりに、そのスタイルシートは `disabled` 属性が `false` に変更されたか削除された場合にオンデマンドで読み込まれます。
 
     DOM から `disabled` プロパティの値を変更すると、そのスタイルシートを文書の {{domxref("Document.styleSheets")}} の一覧から削除します。
 
 - `fetchpriority`
-
   - : 先読みされたリソースを取得する際に使用する相対的な優先度のヒントを 提供します。使用できる値は次の通りです。
-
     - `high`
       - : 同じ型を持つ他のリソースと比較して、優先度の高い取り込みを示します。
     - `low`
@@ -225,14 +218,11 @@ l10n:
     この属性は、`rel` 属性が `stylesheet`、`preload`、`modulepreload` を指定した場合にのみ指定する必要があります。
     [サブリソース完全性](/ja/docs/Web/Security/Subresource_Integrity)を参照してください。
 - `media`
-
   - : この属性は、リンク先のリソースが適用されるメディアを指定します。この値は[メディアクエリー](/ja/docs/Web/CSS/CSS_media_queries)でなければなりません。
     この属性は主に外部のスタイルシートから、実行中のデバイスに最適なものをユーザーエージェントが選択できるようにリンクするときに役立ちます。
 
 - `referrerpolicy`
-
   - : リソースを読み込む際にどのリファラーを使用するかを示す文字列です。
-
     - `no-referrer` は、{{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade` は、TLS (HTTPS) を使用せずにオリジンへナビゲートする場合は {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。これは他にポリシーが定められていない場合の、ユーザーエージェントの既定の動作です。
     - `origin` は、ページのオリジン (大まかにいえばスキーム、ホスト、ポート) をリファラーとすることを表します。
@@ -242,9 +232,7 @@ l10n:
 - `rel`
   - : この属性は現在の文書に対する、リンクされた文書の関係を示します。属性値は、空白で区切られた[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)のリストでなければなりません。
 - `sizes`
-
   - : この属性は、リソースに含まれる映像メディア向けのアイコンのサイズを定義します。これは、 [`rel`](#rel) の値が `icon` または Apple の `apple-touch-icon` のような標準外の種別が含まれている場合にのみ指定することができます。以下の値を指定できます。
-
     - `any`: `image/svg+xml` のようなベクター画像であるため、どのようなサイズにも調整可能であることを示します。
     - ホワイトスペースで区切られたサイズのリスト。サイズはそれぞれ `<幅のピクセル数>x<高さのピクセル数>` または `<幅のピクセル数>X<高さのピクセル数>` という形式です。それぞれのサイズがリソースに含まれていることが必要です。
 
@@ -273,7 +261,6 @@ l10n:
 ### 廃止された属性
 
 - `charset` {{deprecated_inline}}
-
   - : この属性は、リンク先のリソースの文字エンコーディングを定義します。この値は {{rfc(2045)}} で定義されている文字セットの、スペースまたはカンマで区切られたリストです。
     既定値は `iso-8859-1` です。
 
@@ -281,7 +268,6 @@ l10n:
     > この廃止された属性と同じ効果を生み出すためには、リンク先のリソースで HTTP の {{HTTPHeader("Content-Type")}} ヘッダーを使用してください。
 
 - `rev` {{deprecated_inline}}
-
   - : この属性の値は、[`href`](#href) 属性で定義したリンク先文書に対する、現在の文書の関係を示します。
     従って、この属性は `rel` 属性の値と比べたときに逆向きの関係を定義します。
     この属性向けの[リンク種別の値](/ja/docs/Web/HTML/Reference/Attributes/rel)は、[`rel`](#rel) 向けの値と似ています。

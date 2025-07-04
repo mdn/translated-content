@@ -9,7 +9,6 @@ original_slug: Web/HTML/Element/legend
 ### Definición
 
 - El elemento \<legend> (leyenda) crea un título para un grupos los campos ({{ HTMLElement("fieldset") }}) de un formulario.
-
   - : **Sus etiquetas son**: \<legend> y \</legend> (ambas obligatorias).
 
     **Crea una caja**: [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque)

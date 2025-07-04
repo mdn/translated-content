@@ -18,9 +18,7 @@ regexObj.compile(pattern, flags)
 - `pattern`
   - : É o texto da expressão regular.
 - `flags`
-
   - : Se especificado, as flags podem ter qualquer combinação dos seguintes valores:
-
     - `g`
       - : global.
     - `i`

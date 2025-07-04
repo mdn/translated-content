@@ -80,7 +80,6 @@ flex-basis: unset;
 - `<'width'>`
   - : width 值可以是 {{cssxref("&lt;length&gt;")}}; 该值也可以是一个相对于其父弹性盒容器主轴尺寸的{{cssxref("&lt;percentage&gt;", "百分数")}} 。负值是不被允许的。默认为 `auto`。
 - `content`
-
   - : 基于 flex 的元素的内容自动调整大小。
 
 ### 规范

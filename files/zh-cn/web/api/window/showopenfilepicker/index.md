@@ -19,9 +19,7 @@ showOpenFilePicker(options)
 ### 参数
 
 - `options` {{Optional_Inline}}
-
   - : 选项对象，包含以下属性：
-
     - `excludeAcceptAllOption` {{Optional_Inline}}
       - : 布尔值，默认为 `false`。默认情况下，选择器应包含一个不应用任何文件类型过滤器的选项（通过下面的类型选项启动）。将此选项设置为 `true` 意味着该选项*不*可用。
     - `id` {{Optional_Inline}}

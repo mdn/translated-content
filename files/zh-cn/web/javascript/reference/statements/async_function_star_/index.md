@@ -50,7 +50,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 > [!NOTE]
 > 箭头函数不能用来定义异步生成器函数。
 
-> **备注：** `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。然而，如果 `async` 和 `function` 之间有换行符，则会[自动插入](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)分号，导致 `async` 成为标识符，而其余内容成为 `function*` 声明。
+> [!NOTE]
+> `function` 和 `*` 是两个单独的标记，因此它们可以用[空白或换行符](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#空白符)分隔。然而，如果 `async` 和 `function` 之间有换行符，则会[自动插入](/zh-CN/docs/Web/JavaScript/Reference/Lexical_grammar#自动分号补全)分号，导致 `async` 成为标识符，而其余内容成为 `function*` 声明。
 
 ### 参数
 

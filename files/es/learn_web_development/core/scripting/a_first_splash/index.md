@@ -160,19 +160,16 @@ Al observar este resumen, lo primero que podemos hacer es comenzar a desglosar e
 4. Una vez que se ha introducido el número, registrarlo en alguna parte para que el jugador pueda ver sus intentos previos.
 5. A continuación, comprobar si el número es correcto.
 6. Si es correcto:
-
    1. Mostrar un mensaje de felicitaciones.
    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
    3. Mostrar un control que permita al jugador volver a empezar el juego.
 
 7. Si es incorrecto y al jugador todavía le quedan intentos:
-
    1. Decirle al jugador que ha fallado.
    2. Dejar que el jugador lo intente de nuevo.
    3. Incrementa el número de intentos en 1.
 
 8. Si el jugador falla y no le quedan turnos:
-
    1. Decirle al jugador que el juego se ha terminado.
    2. Hacer que el jugador no pueda introducir más intentos (esto arruinaría el juego).
    3. Mostrar un control que permita al jugador volver a empezar el juego.
@@ -364,7 +361,6 @@ Esto es un montón de código — ¡uf! Repasemos cada sección y expliquemos lo
 
 - La línea 6 agrega el valor actual de `userGuess` al final del párrafo `guesses`, más un espacio en blanco para que haya un espacio entre cada intento mostrado.
 - El siguiente bloque (líneas 8-24 arriba) realiza algunas comprobaciones:
-
   - El primer `if(){ }` verifica si la respuesta del jugador es igual al `randomNumber` establecido al comienzo de nuestro JavaScript. Si es así, el jugador ha adivinado correctamente y ha ganado el juego, por lo tanto mostramos al jugador un mensaje de felicitación con un bonito color verde, borramos el contenido del cuadro de información de intentos _Low/High_ y ejecutamos una función llamada `setGameOver()`, que examinaremos más adelante.
   - Ahora hemos encadenado otra prueba al final de la última usando una estructura `else if(){ }`. Esta comprueba si este intento es el último turno del jugador. Si es así, el programa hace lo mismo que en el bloque anterior, salvo por un mensaje de fin de juego en lugar de un mensaje de felicitación.
   - El bloque final encadenado al final de este código (el `else { }`) contiene código que solo se ejecuta si ninguna de las otras dos pruebas devuelve `true` (es decir, el jugador no acertó, pero todavía le quedan intentos). En este caso le decimos que es incorrecto, luego realizamos otra prueba condicional para verificar si el intento fue más alto o más bajo que la respuesta, mostrando un mensaje adicional según corresponda para decirle si tiene que ir más alto o bajo.

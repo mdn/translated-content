@@ -40,14 +40,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 フェッチディレクティブは、特定のリソース種別を読み込むことができる場所を制御します。
 
 - {{CSP("child-src")}}
-
   - : [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と、{{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素によって読み込まれる入れ子の閲覧コンテキストのための有効なソースを定義します。
     `frame-src` および `worker-src` の[代替](#代替)となります。
 
 - {{CSP("connect-src")}}
   - : スクリプトインターフェイスによって読み込まれる URL を制限します。
 - {{CSP("default-src")}}
-
   - : 別の{{Glossary("Fetch directive", "フェッチディレクティブ")}}に対する代替として提供します。
 
     他のすべてのフェッチディレクティブの[代替](#代替)となります。
@@ -69,7 +67,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 事前にフェッチされるか描画される有効なソースを指定します。
 - {{CSP("script-src")}}
-
   - : JavaScript および WebAssembly のための有効なソースを指定します。
 
     `script-src-elem` および `script-src-attr` の[代替](#代替)となります。
@@ -79,7 +76,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("script-src-attr")}}
   - : JavaScript のインラインイベントハンドラーのための有効なソースを指定します。
 - {{CSP("style-src")}}
-
   - : スタイルシートのための有効なソースを指定します。
 
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
@@ -131,7 +127,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 報告ディレクティブは CSP 違反の報告過程を制御します。 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーも参照してください。
 
 - {{CSP("report-to")}}
-
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
     トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
@@ -157,7 +152,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ### 非推奨のディレクティブ
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : ページが HTTPS を使用して読み込まれた際に、 HTTP を使用して資産を読み込むことを防止します。
 
 - {{CSP("report-uri")}} {{deprecated_inline}}

@@ -10,10 +10,8 @@ slug: Glossary/Scroll_container
 Scroll-контейнер позволяет пользователю с помощью прокрутки достигать участков переполняющего содержимого, которые в ином случае были бы обрезаны и поэтому недоступны для просмотра. Видимая часть scroll-контейнера называется {{glossary("Scrollport", "scrollport")}}.
 
 - [MDN Web Docs Glossary](/ru/docs/Glossary):
-
   - {{glossary("Scroll container")}}
   - {{glossary("Scrollport")}}
 
 - Related CSS Properties:
-
   - {{cssxref("overflow")}}

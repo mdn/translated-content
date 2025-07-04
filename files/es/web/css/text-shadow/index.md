@@ -45,7 +45,6 @@ text-shadow: unset;
 ### Valores
 
 - \<color>
-
   - : Opcional. Puede ser especificado antes o después de los valores de offset. Si el color no es especificado, se usa el predeterminado del agente usuario.
 
     > [!NOTE]
