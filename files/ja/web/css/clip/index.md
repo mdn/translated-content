@@ -1,11 +1,18 @@
 ---
 title: clip
 slug: Web/CSS/clip
+l10n:
+  sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
 ---
 
-{{CSSRef}}
+{{CSSRef}}{{Deprecated_Header}}
+
+> [!WARNING]
+> 作成者は、代わりに {{cssxref("clip-path")}} プロパティを使用することをお勧めします。
 
 **`clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のどの部分が可視であるかを定義します。 `clip` プロパティは絶対配置された要素、つまり {{cssxref("position","position:absolute")}} または {{cssxref("position","position:fixed")}} を持つ要素だけに適用されます。
+
+## 構文
 
 ```css
 /* キーワード値 */
@@ -18,24 +25,22 @@ clip: rect(1px, 10em, 3rem, 2ch);
 clip: inherit;
 clip: initial;
 clip: revert;
+clip: revert-layer;
 clip: unset;
 ```
 
-## 構文
-
-> [!NOTE]
-> 可能であれば、より新しい {{cssxref("clip-path")}} を使うことをお勧めします。
-
 ### 値
 
-- {{cssxref("shape")}}
+- `rect()`
+  - : `rect()` 関数を使用して、 `rect(<top>, <right>, <bottom>, <left>)` の形で定義された長方形。 `<top>` と `<bottom>` は、ボックス境界の上辺からのオフセットを表します。`<right>` と `<left>` は、ボックス境界の左辺からのオフセットを表します。これがボックスの中身となります。
 
-  - : `rect(<top>, <right>, <bottom>, <left>)` 形式の矩形の {{cssxref("&lt;shape&gt;")}} です。 `<top>` と `<bottom>` は、ボックス境界の上辺からのオフセットを表します。`<right>` と `<left>` は、ボックス境界の左辺からのオフセットを表します。これがボックスの中身となります。
+    `<top>`、`<right>`、`<bottom>`、`<left>` の値は {{cssxref("&lt;length&gt;")}} または `auto` のいずれかです。`auto` が指定されると、その辺の境界線の内側で切り取られます。
 
-    `<top>`、`<right>`、`<bottom>`、`<left>` の値は {{cssxref("&lt;length&gt;")}} または `auto` のいずれかです。`auto` が指定されると、その辺の*内部のボックス境界*で切り取られます。
+> [!NOTE]
+> 非推奨の `clip` プロパティで使用される {{cssxref("shape")}} 関数の `rect()` は、 CSS で {{cssxref("basic-shape")}} を定義するために使用する CSS の {{cssxref("basic-shape/rect","rect()")}} 関数とは異なります。
 
 - `auto`
-  - : 要素はクリップされません (既定値)。ボックス境界で切り取る `rect(auto, auto, auto, auto)` とはまったく異なることに注意してください。
+  - : 要素はクリップされません（既定値）。ボックス境界で切り取る `rect(auto, auto, auto, auto)` とはまったく異なることに注意してください。
 
 ## 公式定義
 
@@ -47,16 +52,26 @@ clip: unset;
 
 ## 例
 
-<h3 id="Clipping_an_image">画像の切り抜き</h3>
+### 画像のクリップ
 
-#### CSS
+```html
+<p class="dotted-border">
+  <img src="macarons.png" alt="Original graphic" />
+  <img id="top-left" src="macarons.png" alt="Graphic clipped to upper left" />
+  <img id="middle" src="macarons.png" alt="Graphic clipped towards middle" />
+  <img
+    id="bottom-right"
+    src="macarons.png"
+    alt="Graphic clipped to bottom right" />
+</p>
+```
 
 ```css
 .dotted-border {
   border: dotted;
   position: relative;
-  width: 536px;
-  height: 350px;
+  width: 390px;
+  height: 400px;
 }
 
 #top-left,
@@ -67,38 +82,22 @@ clip: unset;
 }
 
 #top-left {
-  left: 360px;
-  clip: rect(0, 175px, 113px, 0);
+  left: 400px;
+  clip: rect(0, 130px, 90px, 0);
 }
 
 #middle {
-  left: 280px;
-  clip: rect(119px, 255px, 229px, 80px);
+  left: 270px;
+  clip: rect(100px, 260px, 190px, 130px);
 }
 
 #bottom-right {
-  left: 200px;
-  clip: rect(235px, 335px, 345px, 160px);
+  left: 140px;
+  clip: rect(200px, 390px, 290px, 260px);
 }
 ```
 
-#### HTML
-
-```html
-<p class="dotted-border">
-  <img src="hut.jpg" title="Original graphic" />
-  <img id="top-left" src="hut.jpg" title="Graphic clipped to upper left" />
-  <img id="middle" src="hut.jpg" title="Graphic clipped towards middle" />
-  <img
-    id="bottom-right"
-    src="hut.jpg"
-    title="Graphic clipped to bottom right" />
-</p>
-```
-
-#### 結果
-
-{{EmbedLiveSample('Clipping_an_image', '689px', '410px')}}
+{{EmbedLiveSample('clipping_an_image', '', '450px')}}
 
 ## 仕様書
 
@@ -110,5 +109,8 @@ clip: unset;
 
 ## 関連情報
 
-- このプロパティは非推奨です。代わりに {{cssxref("clip-path")}} を使ってください。
-- 関連する CSS プロパティ: {{cssxref("text-overflow")}}, {{cssxref("white-space")}}, {{cssxref("overflow-x")}}, {{cssxref("overflow-y")}}, {{cssxref("overflow")}}, {{cssxref("display")}}, {{cssxref("position")}}
+- {{cssxref("clip-path")}}
+- {{cssxref("position")}}
+- {{cssxref("mask")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("shape-outside")}}

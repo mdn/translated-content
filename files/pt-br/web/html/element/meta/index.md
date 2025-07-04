@@ -67,9 +67,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 > o atributo global [`name`](#name) tem um significado específico para o elemento {{HTMLElement("meta")}}, e o atributo [`itemprop`](#itemprop) não deve ser definido no mesmo elemento`<meta>` que tem algum desses atributos existentes: [`name`](#name), [`http-equiv`](#http-equiv) ou [`charset`](#charset).
 
 - `charset`
-
   - : Este atributo define a codificação de caracteres usada na página. Pode ser substituído localmente usando o atributo _lang_ em qualquer elemento. Esse atributo é literalmente uma amarra e deve ser um dos _MIME names_ preferidos para uma codificação de caracteres como definido pela IANA ([defined by the IANA](https://www.iana.org/assignments/character-sets)). Embora o padrão não solicite uma codificação específica, ele dá algumas sugestões:
-
     - Autores são encorajados a usar UTF-8.
     - Autores não devem usar codificações incompatíveis com ASCII (
       isto é, aqueles que não mapeiam os pontos de código de 8 bits 0x20 a 0x7E para os pontos de código Unicode 0x0020 a 0x007E), pois representam um risco de segurança: navegadores que não os suportam podem interpretar conteúdo maligno como Elementos HTML. Esse é o caso de pelo menos os seguintes caracteres: JIS_C6226-1983, JIS_X0212-1990, HZ-GB-2312, JOHAB, a família ISO-2022 e a família EBCDIC.
@@ -89,11 +87,8 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 - `content`
   - : Esse atributo fornece o valor associado ao atributo [`http-equiv`](#http-equiv) ou [`name`](#name), dependendo do contexto.
 - `http-equiv`
-
   - : Este enumerado atributo define a pragma isso pode alterar o comportamento de servers e user-agents. o valor do pragma é definido usando [`content`](#content) e pode ser um dos seguintes:
-
     - `"content-language"`
-
       - : este pragma define a linguagem default da página
 
         > [!NOTE]
@@ -102,7 +97,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `"Content-Security-Policy"`
       - : Este valor permite os administradores do web site definam uma [política de conteúdo](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) para a página atual. Com algumas exceções, politicas de conteúdo envolvem especificar origens de servidores e endpoints de scripts permitidos, isso ajuda na defesa de cross-server scripting attacks.
     - `"content-type"`
-
       - : Esse atributo define o [MIME type](/pt-BR/docs/MIME) e o conjunto de caracteres do documento. Isso segue a mesma sintaxe como o HTTP `content-type` entity-header field, mas isto esta dentro de um elemento HTML, a maioria dos valores não é possível. Sendo assim a sintaxe válida para este conteúdo é a literal string '`text/html`' eventualmente seguido por estes caracteres com a seguinte sintaxe: '`; charset=`_`IANAcharset`_' onde `IANAcharset` é o _MIME preferido nome para um conjunto de caracteres como_ [definido pela IANA.](https://www.iana.org/assignments/character-sets)
 
         > [!NOTE]
@@ -116,24 +110,19 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `"default-style"`
       - : Este pragma preferencia de stylesheet a ser usado na página. o atributo [`content`](#content) deve conter o **title** de um {{HTMLElement("link")}} elemento de quem [`href`](/pt-BR/docs/Web/HTML/Element/link#href) atributo link um CSS stylesheet, ou um **title** de um elemento {{HTMLElement("style")}} do qual contem um [CSS](/pt-BR/docs/Web/CSS) stylesheet.
     - `"refresh"`
-
       - : este pragma especifica:
-
         - o numero de segundos até a página ser recarregada, se o atributo [`content`](#content) contém apenas um número inteiro não negativo;
         - o número de segundos até a página ser redirecionada para outro lugar, se o atributo [`content`](#content) contém um inteiro não negativo seguido de uma string '`;url=`' e uma URL válida.
 
     - `"set-cookie"`
-
       - : este pragma define um [cookie](/pt-BR/docs/cookie) para a página. este conteúdo deve seguir a sintaxe definida em [IETF HTTP Cookie Specification](https://tools.ietf.org/html/draft-ietf-httpstate-cookie-14).
 
         > [!NOTE]
         > não use este pragma está obsoleto. Use HTTP header set-cookie instead.
 
 - `name`
-
   - : Este atributo define o nome do document-level metadata. Isso não deve ser marcado se um dos atributos [`itemprop`](#itemprop), [`http-equiv`](#http-equiv) ou [`charset`](#charset) já estiver preparado.
     este document-level metadata name é associado a um valor, contido pelo atributo [`content`](#content). os possíveis valores para o elemento name são, com seu valor associado, guardado via [`content`](#content) attribute:
-
     - `application-name`, define o nome da aplicação que esta rodando na página;
 
       > [!NOTE]
@@ -163,7 +152,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       > dinamicamente inseridos `<meta name="referrer">` (por document.write ou appendChild) cria um nao-determinismo quando isso vem para enviar referências ou não. Note também quando muitas politicas conflitantes são definidas, o No-referrer politia é aplicada.
 
     o atributo também pode ter um valor retirado de uma extensa lista definida em [WHATWG Wiki MetaExtensions page](https://wiki.whatwg.org/wiki/MetaExtensions). Embora nenhum tenha sido formalmente aceito ainda, alguns nomes comumente usados estão entre as propostas:
-
     - `creator`, definindo, em um formato livre, o nome do criador do documento. Note que também pode ser o nome de uma instituição. se há mais de uma, vários elementos {{HTMLElement("meta")}} podem ser usados;
     - `googlebot`, é um sinônimo de `robots`, mas só é seguido por Googlebot, o indexador crawler do Google;
     - `publisher`, definido, em um formato livre, o nome do editor do documento. Note que também pode ser o nome de uma instituição;
@@ -194,7 +182,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     - `slurp`, qual é um sinônimo de `robots`, mas somente seguido por Slurp, o indexador crawler para Yahoo Search;
 
     Finalmente, alguns nomes estão em uso comum, embora não estejam sendo padronizados:
-
     - `viewport`, que dá dicas sobre o tamanho inicial do {{glossary ("viewport")}}. Este pragma é usado apenas por vários dispositivos móveis.
 
       | Value           | Possible values                                         | Description                                                                                                                                                               |
@@ -215,7 +202,6 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
       > - Para aprender sobre esse pragma no Firefox para celular, veja [este artigo](/pt-BR/docs/Mobile/Viewport_meta_tag).
 
 - `scheme`
-
   - : Este atributo define o esquema no qual os metadados são descritos. Um esquema é um contexto que leva às interpretações corretas dos [`content`](#content) valores, como um formato.
 
     > [!NOTE]

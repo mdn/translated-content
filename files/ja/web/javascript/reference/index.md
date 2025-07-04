@@ -329,7 +329,7 @@ JavaScript 言語は、ブラウザーやサーバーサイドのスクリプト
 
 - {{jsxref("Classes/Constructor", "constructor")}}
 - {{jsxref("Classes/extends", "extends")}}
-- [プライベートクラス機能](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)
+- [プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)
 - [パブリッククラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)
 - {{jsxref("Classes/static", "static")}}
 - [静的初期化ブロック](/ja/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)

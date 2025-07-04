@@ -29,7 +29,6 @@ La section [CSS - Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modu
 - [Premiers pas en CSS](/fr/docs/Learn/CSS/First_steps)
   - : CSS est utilisé pour mettre en forme et organiser le contenu sur page web, par exemple en modifiant la police, la couleur, la taille, ou l'espacement du contenu. On peut ainsi l'organiser en plusieurs colonnes, ajouter des animations ou d'autres décorations. Ce module est une introduction en douceur à CSS, expliquant les fondamentaux de son fonctionnement, la syntaxe et comment commencer à l'utiliser pour mettre en forme un document HTML.
 - [Les blocs de construction de CSS](/fr/docs/Learn/CSS/Building_blocks)
-
   - : Ce module explore la cascade et l'héritage, les différents types de sélecteurs disponibles, les unités, le dimensionnement, la mise en forme des arrière-plans et des bordures, le débogage et plus encore.
 
     L'objectif est de fournir une boîte à outils pour écrire du CSS correct et vous permettre de comprendre les fondamentaux théoriques avant d'aller plus loin vers [la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text) et [les dispositions CSS](/fr/docs/Learn/CSS/CSS_layout).
@@ -46,9 +45,7 @@ La section [CSS - Apprendre le Web](/fr/docs/Learn/CSS) fournit différents modu
 - [La référence CSS](/fr/docs/Web/CSS/Reference)
   - : Une référence exhaustive, destinée aux développeuses et développeurs web expérimentés. Elle décrit les différentes propriétés et concepts qui composent CSS.
 - Les concepts majeurs de CSS
-
   - : Plusieurs articles de cette section présentent les aspects clés du langage. On y décrit notamment&nbsp;:
-
     - [La syntaxe et les formes du langage](/fr/docs/Web/CSS/Syntax)
     - [La spécificité](/fr/docs/Web/CSS/Specificity) et [l'héritage](/fr/docs/Web/CSS/Inheritance), et [la cascade](/fr/docs/Web/CSS/Cascade)
     - [Les unités et valeurs CSS](/fr/docs/Web/CSS/CSS_Values_and_Units) et [les notations fonctionnelles](/fr/docs/Web/CSS/CSS_Functions)

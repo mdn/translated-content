@@ -7,12 +7,12 @@ l10n:
 
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-**`Headers`** 인터페이스는 [Fetch API](/ko/docs/Web/API/Fetch_API)의 일부로, [HTTP 요청 및 응답 헤더](/ko/docs/Web/HTTP/Headers)에서 다양한 작업을 수행할 수 있도록 합니다. 이러한 작업에는 요청 헤더 목록에서 헤더를 조회, 설정, 추가 및 제거하는 것이 포함됩니다.
+**`Headers`** 인터페이스는 [Fetch API](/ko/docs/Web/API/Fetch_API)의 일부로, [HTTP 요청 및 응답 헤더](/ko/docs/Web/HTTP/Reference/Headers)에서 다양한 작업을 수행할 수 있도록 합니다. 이러한 작업에는 요청 헤더 목록에서 헤더를 조회, 설정, 추가 및 제거하는 것이 포함됩니다.
 
 `Headers` 객체는 {{domxref("Request.headers")}} 및 {{domxref("Response.headers")}} 속성을 통해 조회할 수 있으며, {{domxref("Headers.Headers", "Headers()")}} 생성자를 사용하여 새로 생성할 수 있습니다. 일반 객체를 사용하는 것과 비교하여, `Headers` 객체를 사용하면 입력값에 대해 추가적인 정제 작업이 이루어집니다. 예를 들어, 헤더 이름을 소문자로 정규화하고, 헤더 값의 앞뒤 공백을 제거하며, 특정 헤더가 설정되는 것을 방지합니다.
 
 > [!NOTE]
-> 사용 가능한 헤더에 대해 더 알아보려면 [HTTP 헤더](/ko/docs/Web/HTTP/Headers) 참조 페이지를 읽어보세요.
+> 사용 가능한 헤더에 대해 더 알아보려면 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers) 참조 페이지를 읽어보세요.
 
 ## 설명
 
@@ -103,5 +103,5 @@ myHeaders.get("Content-Type"); // 'text/xml' 반환
 ## 같이 보기
 
 - [Service Worker API](/ko/docs/Web/API/Service_Worker_API)
-- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/CORS)
+- [교차 출처 리소스 공유 (CORS)](/ko/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ko/docs/Web/HTTP)

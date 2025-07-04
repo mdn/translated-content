@@ -96,7 +96,8 @@ label {
 
 [`capture`](/zh-CN/docs/Web/HTML/Reference/Attributes/capture) 属性是一个字符串，如果 [`accept`](/zh-CN/docs/Web/HTML/Reference/Attributes/accept) 属性指出了 input 是图片或者视频类型，则它指定了使用哪个摄像头去获取这些数据。值 `user` 表示应该使用前置摄像头和（或）麦克风。值 `environment` 表示应该使用后置摄像头和（或）麦克风。如果缺少此属性，则{{Glossary("user agent","用户代理")}}可以自由决定做什么。如果请求的前置模式不可用，则用户代理可能退回到其首选的默认模式。
 
-> **备注：** `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
+> [!NOTE]
+> `capture` 以前是一个布尔类型的属性，如果存在，则请求使用设备的媒体捕获设备（如：摄像机），而不是请求一个文件输入。
 
 ### multiple
 
@@ -361,7 +362,6 @@ input.addEventListener("change", updateImageDisplay);
 - 如果*选择*了文件，我们将循环遍历每个文件，并将关于它的信息输出到预览区 `<div>`。注意事项：
 - 我们使用定制的 `validFileType()` 函数来检查文件的类型是否正确（例如，用 `accept` 属性指定的图片类型）。
 - 如果是，我们：
-
   - 将其名称和文件大小输出到预览区 `<div>` 的一个列表项中（从 `file.name` 和 `file.size` 获取这些信息）。定制的 `returnFileSize()` 函数返回一个用 bytes/KB/MB 表示的可读性良好的文件大小（默认情况下，浏览器以绝对字节数报告大小）。
   - 通过调用 {{domxref("URL.createObjectURL", "URL.createObjectURL(curFiles[i])")}} 来生成图片的一张缩略预览图。然后，通过创建一个新的 {{htmlelement("img")}} 来将这张图片也插入到列表项，并且将它的 [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/img#src) 设置为缩略图。
 

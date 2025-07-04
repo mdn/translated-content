@@ -40,7 +40,7 @@ a::before {
 </p>
 ```
 
-> [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/Replaced_element) 에는 적용할 수 없습니다.
+> [!NOTE] > `::before` 와 `::after` 로 생성된 의사 요소들은 마치 해당 요소가 적용된 요소의 직속 자식인 것처럼 생성된 박스입니다. 즉, 원본 요소의 직계 자식이기 때문에 {{htmlelement("img")}} 처럼 콘텐츠가 CSS 서식 모델의 범위를 벗어나는 [대체 요소](/ko/docs/Web/CSS/CSS_images/Replaced_element_properties) 에는 적용할 수 없습니다.
 
 ## 구문
 

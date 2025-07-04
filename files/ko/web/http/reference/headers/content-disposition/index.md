@@ -52,17 +52,14 @@ Content-Disposition: form-data; name="fieldName"; filename="filename.jpg"
 ### Directives (지시자들)
 
 - `name`
-
   - : 이름(`name`) 다음에 오는 문자열에는 이 서브파트가 참조하는 폼의 HTML 필드에서 사용한 그 이름이 들어갑니다. 같은 필드에 여러개의 파일이 있을 경우 (예 : `{{HTMLElement("input","&lt;input type=\"file\"&gt;")}}` 요소의 [`multiple`](/ko/docs/Web/HTML/Element/input#multiple) 속성), 같은 이름으로 여러개의 서브파트들이 존재할 수 있습니다.
 
   `name`의 값이 `'_charset_'`인 것은 그 부분이 HTML필드가 아니라, charset을 명시하지 않고 사용할 수 있는 기본 charset임을 나타냅니다.
 
 - `filename`
-
   - : 파일명(`filename`) 다음에 오는 문자열에는 전송된 해당 파일의 원래 이름이 들어갑니다. 파일명은 언제나 선택사항이지만, 맹목적으로 쓰여서는 안됩니다 : 경로 정보가 공개되어야 하며, 서버 파일 시스템 규칙에 따라 전환되어야 합니다. 이러한 파라미터들은 대부분 지시적 정보(indicative information)를 제공합니다. 파일명이 `Content-Disposition: attachment`과 같이 사용되면 최종적으로 사용자가 "새이름으로저장(Save As)" 창에서 보게 되는 파일명의 기본값으로 사용됩니다.
 
 - `filename*`
-
   - : "filename"과의 유일한 차이점은 "filename*"는 인코딩으로 [RFC 5987](https://tools.ietf.org/html/rfc5987)을 사용한다는 것 뿐입니다. 하나의 헤더 필드에 "filename"과 "filename*"이 둘 다 사용된다면 "filename\*"이 보다 우선됩니다.
 
 ## Examples

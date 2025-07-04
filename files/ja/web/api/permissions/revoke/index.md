@@ -19,9 +19,7 @@ revoke(descriptor)
 ### 引数
 
 - `descriptor`
-
   - : 名前と値のペアのカンマ区切りリストで構成される、操作のオプションを設定する `PermissionDescriptor` 辞書に基づくオブジェクト。 利用可能なオプションは次のとおりです。
-
     - `name`
       - : 権限を照会したい API の名前。 有効な値は、`'geolocation'`、`'midi'`、`'notifications'`、`'push'` です。
     - `userVisibleOnly`

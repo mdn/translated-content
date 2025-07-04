@@ -16,7 +16,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Function/prototype
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **备注：** [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可写的。
+> [!NOTE]
+> [类](/zh-CN/docs/Web/JavaScript/Reference/Classes)的 `prototype` 属性是不可写的。
 
 ## 描述
 

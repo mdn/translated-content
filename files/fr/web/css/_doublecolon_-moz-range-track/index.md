@@ -48,12 +48,10 @@ Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla 
 ## Voir aussi
 
 - Les pseudo-éléments de Gecko qui permettent de mettre en forme les autres parties des éléments [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range`&nbsp;:
-
   - [`::-moz-range-thumb`](/fr/docs/Web/CSS/::-moz-range-thumb) qui représente le curseur qui se déplace le long de la piste.
   - [`::-moz-range-progress`](/fr/docs/Web/CSS/::-moz-range-progress) qui représente la partie inférieure de la piste (ce qui est déjà «&nbsp;couvert&nbsp;»).
 
 - Les pseudo-éléments utilisés par les autres navigateurs&nbsp;:
-
   - [`::-webkit-slider-runnable-track`](/fr/docs/Web/CSS/::-webkit-slider-runnable-track) pour WebKit/Blink (Safari, Chrome et Opera).
   - [`::-ms-track`](/fr/docs/Web/CSS/::-ms-track) pour Internet Explorer/Edge.
 

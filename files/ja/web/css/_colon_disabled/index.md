@@ -1,20 +1,15 @@
 ---
 title: :disabled
 slug: Web/CSS/:disabled
+l10n:
+  sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
 {{CSSRef}}
 
 **`:disabled`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、無効な要素を表します。無効な要素とは、アクティブ化（選択、クリック、入力など）したりフォーカスを得たりすることができないものです。要素には有効な状態、つまりアクティブ化したりフォーカスを得たりすることができる状態もあります。
 
-```css
-/* 無効な <input> を選択 */
-input:disabled {
-  background: #ccc;
-}
-```
-
-{{InteractiveExample("CSS Demo: :disabled", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: :disabled", "tabbed-standard")}}
 
 ```css interactive-example
 label {
@@ -31,27 +26,29 @@ label {
 
 ```html interactive-example
 <form>
-  <label for="name">Name:</label>
+  <label for="name">名前:</label>
   <input id="name" name="name" type="text" />
 
-  <label for="emp">Employed:</label>
+  <label for="emp">雇用中:</label>
   <select id="emp" name="emp" disabled>
     <option>No</option>
     <option>Yes</option>
   </select>
 
-  <label for="empDate">Employment Date:</label>
+  <label for="empDate">雇用日:</label>
   <input id="empDate" name="empDate" type="date" disabled />
 
-  <label for="resume">Resume:</label>
+  <label for="resume">履歴書:</label>
   <input id="resume" name="resume" type="file" />
 </form>
 ```
 
 ## 構文
 
-```
-:disabled
+```css
+:disabled {
+  /* ... */
+}
 ```
 
 ## 例
@@ -91,29 +88,22 @@ input[type="text"]:disabled {
 
 ### JavaScript
 
+チェックボックスがクリックされたときに、無効になっている入力フィールドを切り替えます。
+
 ```js
-// ページの読み込みの終了を待つ
-document.addEventListener(
-  "DOMContentLoaded",
-  function () {
-    // チェックボックスに 'change' イベントリスナーを追加
-    document.getElementById("billing-checkbox").onchange = toggleBilling;
-  },
-  false,
-);
+const checkbox = document.querySelector("#billing-checkbox");
+const billingItems = document.querySelectorAll('#billing input[type="text"]');
 
-function toggleBilling() {
-  // 請求先のテキストフィールドを選択
-  var billingItems = document.querySelectorAll('#billing input[type="text"]');
-
-  // 請求先テキストフィールドを切り替え
-  for (var i = 0; i < billingItems.length; i++) {
-    billingItems[i].disabled = !billingItems[i].disabled;
-  }
-}
+checkbox.addEventListener("change", () => {
+  billingItems.forEach((item) => {
+    item.disabled = !item.disabled;
+  });
+});
 ```
 
 ### 結果
+
+チェックボックスをオンまたはオフにすると、請求先フィールドのスタイル設定を変更できます。
 
 {{EmbedLiveSample('Examples', 300, 250)}}
 

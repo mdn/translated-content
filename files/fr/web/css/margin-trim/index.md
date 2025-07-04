@@ -12,7 +12,6 @@ La propriété **`margin-trim`** permet à un conteneur de rogner les marges de 
 - `none`
   - : Les marges ne sont pas rognées par le conteneur.
 - `in-flow`
-
   - : Pour les boîtes du conteneur et qui sont dans le flux, les marges sur l'axe de bloc et qui sont adjacentes aux bords du conteneur sont tronquées.
 
     Les marges fusionnées avec de telles marges sont également tronquées.

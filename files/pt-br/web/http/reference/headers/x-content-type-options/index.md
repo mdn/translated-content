@@ -38,9 +38,7 @@ X-Content-Type-Options: nosniff
 ## Diretivas
 
 - `nosniff`
-
   - : Bloqueia uma requisição se o tipo for:
-
     - "`style`" e o tipo MIME não é "`text/css`", ou
     - "`script`" e o tipo MIME não é um tipo [JavaScript](https://html.spec.whatwg.org/multipage/scripting.html#javascript-mime-type).
 

@@ -42,7 +42,6 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
 ### Networking
 
 - CSP 実装を CSP 1.0 仕様 (勧告候補になりました) に準拠させるよう更新する作業を続けています:
-
   - 仕様書に準拠した `Content-Security-Policy` HTTP ヘッダーを (実験的な `X-Content-Security-Policy` に加えて) サポートしました ([Firefox バグ 783049](https://bugzil.la/783049)。**注意**: 新たなヘッダーのパッチは Firefox 21 で投入しましたが、ビルド時は無効にしています ([Firefox バグ 842657](https://bugzil.la/842657))。
 
 ### Worker
@@ -55,9 +54,7 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
 - `resource:///modules/` と `resource://gre/modules/` は異なるものになりました ([Firefox バグ 755724](https://bugzil.la/755724))。これは、metro 版の Firefox における作業のために行った変更です。`resource:///modules/` を使用してモジュールを読み込んでいる場合は、そうではなく `resource://gre/modules/` を使用したいのではないかを確認するべきです。また、一部のモジュールが Firefox から Toolkit に移動したことに注意してください ([Firefox バグ 840287](https://bugzil.la/840287) および [Firefox バグ 811548](https://bugzil.la/811548) で、`NewTabUtils.jsm` および thumbnail モジュールがそれぞれ移動しました)。
 - Add-on SDK を Firefox に内蔵しました。([Firefox バグ 731779](https://bugzil.la/731779))
 - 多くの非推奨 API を参照していた古い API を削除しました:
-
   - `mozIAsyncFavicons` で置き換え:
-
     - `nsIFaviconService::setFaviconUrlForPage`
     - `nsIFaviconService::setFaviconData`
     - `nsIFaviconService::getFaviconData`
@@ -67,33 +64,27 @@ Gecko 21 を搭載した Firefox 21 は米国時間 2013 年 5 月 14 日にリ�
     - `nsIFaviconService::getFaviconDataAsDataURL`
 
   - `mozIAsyncLivemarks` で置き換え:
-
     - `nsILivemarkService::*`
     - `PlacesUtils.itemIsLivemark`
     - `PlacesUtils.nodeIsLivemarkContainer`
     - `PlacesUtils.nodeIsLivemarkItem`
 
   - 第 3 引数のみ削除:
-
     - `PlacesUIUtils.showBookmarkDialog`
 
   - Places でこれ以上の実装はありませんので、代わりに `mozIAsyncHistory` を使用してください:
-
     - `nsIGlobalHistory2::addURI`
     - `nsIGlobalHistory2::isVisited`
     - `nsIGlobalHistory2::setPageTitle`
 
   - 不要になりましたので、`onDeleteURI` または `onItemRemoved` を使用してください:
-
     - `nsINavHistoryObserver::OnBeforeDeleteURI`
     - `nsINavBookmarkObserver::OnBeforeItemRemoved`
 
   - 正しく実装されていません:
-
     - `nsINavHistoryFullVisitResultNode`
 
   - 非推奨であり、代わりに `mozIAsyncHistory::updatePlaces` を使用してください:
-
     - `nsINavHistoryService::AddVisit`
 
 - 壊れやすいハックを行うことなく HTTP チャネルのリダイレクトを可能にする、nsIHttpChannel.redirectTo を追加しました。

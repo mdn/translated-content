@@ -31,7 +31,6 @@ WebRTC の主な課題の 1 つが、使用したり開発したりするのが�
 
 1. [セットアップ](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Setup)
 2. [ピアの接続](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers)
-
    1. [マイクの使用権限を取得](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Get_microphone_permission)
    2. [HTML の表示と隠蔽](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Show_hide_html)
    3. [ピアコネクションの作成](/ja/docs/Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/Create_a_peer_connection)

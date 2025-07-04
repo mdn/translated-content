@@ -154,7 +154,6 @@ td {
 Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
 
 - **`span`**
-
   - : Cet attribut contient un nombre entier positif indiquant le nombre de colonnes consécutives que l'élément `<colgroup>` couvre. S'il n'est pas présent, sa valeur par défaut est `1`.
 
     > [!NOTE]
@@ -167,9 +166,7 @@ Comme pour tous les éléments, on peut utiliser [les attributs universels](/fr/
 Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils sont documentés ci-dessous à titre de référence lors de la mise à jour du code existant et uniquement pour des raisons historiques.
 
 - **`align`** {{deprecated_inline}}
-
   - : Cet attribut de type énumératif indique comment l'alignement horizontal du contenu des cellules de chaque colonne sera traité. Les valeurs possibles sont :
-
     - `left`, aligner le contenu à gauche de la cellule
     - `center`, centrer le contenu dans la cellule
     - `right`, aligner le contenu à droite de la cellule
@@ -185,7 +182,6 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
     > - Si le tableau utilise bien un attribut [`colspan`](/fr/docs/Web/HTML/Element/td#attr-colspan), l'effet peut être obtenu en combinant des sélecteurs d'attributs CSS adéquats comme `[colspan=n]`, bien que cela ne soit pas trivial.
 
 - **`bgcolor`** {{deprecated_inline}}
-
   - : La couleur de fond du tableau. Il s'agit d'un [code RVB hexadécimal à 6 chiffres](/fr/docs/Web/CSS/color_value#rgb_colors), préfixé par un «&nbsp;`#`&nbsp;». L'un des [mots-clés de couleur](/fr/docs/Web/CSS/color_value#color_keywords) prédéfinis peut également être utilisé.
 
     Pour obtenir un effet similaire, utilisez la propriété CSS [`background-color`](/fr/docs/Web/CSS/background-color).
@@ -195,9 +191,7 @@ Les attributs suivants sont dépréciés et ne doivent pas être utilisés. Ils 
 - **`charoff`** {{deprecated_inline}}
   - : Cet attribut est utilisé pour indiquer le nombre de caractères pour décaler les données de la colonne par rapport au caractère d'alignement spécifié par l'attribut `char`.
 - **`valign`** {{deprecated_inline}}
-
   - : Cet attribut spécifie l'alignement vertical du texte dans chaque cellule de la colonne. Les valeurs possibles de cet attribut sont les suivantes :
-
     - `baseline`, mettra le texte aussi près du bas de la cellule que possible, mais l'alignera sur la [ligne de base](<https://fr.wikipedia.org/wiki/Ligne_de_base_(typographie)>) des caractères au lieu du bas de ceux-ci. Si les caractères sont tous de la même taille, cela a le même effet que `bottom` ;
     - `bottom`, placera le texte aussi près du bas de la cellule que possible ;
     - `middle`, permet de centrer le texte dans la cellule ;
@@ -224,7 +218,6 @@ Veuillez consulter la page [`<table>`](/fr/docs/Web/HTML/Element/table) pour des
 ## Voir aussi
 
 - Les propriétés et pseudo-classes CSS notamment utiles pour mettre en forme l'élément `<col>` :
-
   - la propriété [`width`](/fr/docs/Web/CSS/width) pour contrôler la largeur de la colonne ;
   - la pseudo-classe [`:nth-child`](/fr/docs/Web/CSS/:nth-child) pour définir l'alignement des cellules de la colonne ;
   - la propriété [`text-align`](/fr/docs/Web/CSS/text-align) pour aligner le contenu de toutes les cellules sur le même caractère, comme « . ».

@@ -40,7 +40,6 @@ slug: Web/CSS/CSS_colors
 ## Voir aussi
 
 - Des propriétés liées aux couleurs mais qui font partie d'autres spécifications :
-
   - {{cssxref("background-color")}},
   - {{cssxref("border-color")}},
   - {{cssxref("outline-color")}},

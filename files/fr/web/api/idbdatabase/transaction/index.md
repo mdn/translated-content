@@ -18,7 +18,6 @@ var transaction = db.transaction(storeNames, mode);
 ## Paramètres
 
 - storeNames
-
   - : un tableau de noms de magasins d'objets entrant dans le cadre de cette transaction. Indique seulement les magasins d'objets dont on a besoin. Si l'on n'a besoin que d'un seul magasin d'objet, on peut simplement passer son nom. Les lignes suivantes sont équivalentes :
 
     ```js
@@ -35,7 +34,6 @@ var transaction = db.transaction(storeNames, mode);
     Passer un tableau vide lèvera une exception.
 
 - mode {{optional_inline}}
-
   - : Le {{domxref("IDBTransactionMode","mode")}} d'{{domxref("IDBObjectStore","accès aux magasins d'objets")}} à la base de données (par default `readonly`):
 
     <table class="standard-table">

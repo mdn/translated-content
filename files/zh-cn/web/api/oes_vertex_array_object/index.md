@@ -9,7 +9,8 @@ slug: Web/API/OES_vertex_array_object
 
 WebGL extensions are available using the {{domxref("WebGLRenderingContext.getExtension()")}} method. 更多详细信息，参见 [Using Extensions](/zh-CN/docs/Web/API/WebGL_API/Using_Extensions) in the [WebGL tutorial](/zh-CN/docs/Web/API/WebGL_API/Tutorial).
 
-> **备注：** **Availability:** 此拓展只在{{domxref("WebGLRenderingContext", "WebGL1", "", 1)}}中有效。在{{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}当中，这些功能可以被直接使用，且去掉了前缀 "`OES`"。
+> [!NOTE]
+> **Availability:** 此拓展只在{{domxref("WebGLRenderingContext", "WebGL1", "", 1)}}中有效。在{{domxref("WebGL2RenderingContext", "WebGL2", "", 1)}}当中，这些功能可以被直接使用，且去掉了前缀 "`OES`"。
 
 ## 常量
 
@@ -57,7 +58,6 @@ oes_vao_ext.bindVertexArrayOES(vao);
 - {{domxref("WebGLRenderingContext.getExtension()")}}
 - {{domxref("WebGLRenderingContext.vertexAttribPointer()")}}
 - WebGL2 equivalent methods:
-
   - {{domxref("WebGL2RenderingContext.createVertexArray()")}}
   - {{domxref("WebGL2RenderingContext.deleteVertexArray()")}}
   - {{domxref("WebGL2RenderingContext.isVertexArray()")}}

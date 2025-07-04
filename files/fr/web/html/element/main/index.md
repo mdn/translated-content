@@ -194,13 +194,11 @@ Les fonctionnalités « mode lecture » d'un navigateur vérifient la présence 
 ## Voir aussi
 
 - Les éléments qui permettent de structurer un document HTML
-
   - {{HTMLElement("html")}}
   - {{HTMLElement("head")}}
   - {{HTMLElement("body")}}
 
 - Les éléments liés au plan d'un document HTML :
-
   - {{HTMLElement("article")}}
   - {{HTMLElement("aside")}}
   - {{HTMLElement("footer")}}

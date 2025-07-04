@@ -52,7 +52,6 @@ Remplir des formulaires web doit être aussi facile que possible. Alors pourquoi
 Vous rencontrerez différents types de validation de formulaires sur le Web :
 
 - La validation côté client est la validation qui est effectuée dans le navigateur, avant que les données n'aient été soumises au serveur. Cette méthode est plus conviviale que la validation côté serveur car elle donne une réponse instantanée. Il est possible de la subdiviser encore avec :
-
   - la validation JavaScript, codée en JavaScript, entièrement personnalisable.
   - la validation de formulaire intégrée avec les fonctions de validation de formulaire HTML5. Elle ne nécessite généralement pas de JavaScript, a de meilleures performances, mais elle n'est pas aussi personnalisable.
 
@@ -568,9 +567,7 @@ Pour valider un formulaire, vous devez vous poser un certain nombre de questions
 - Que dois-je faire si le formulaire n'est pas valide&nbsp;?
   - : C'est clairement une affaire d'interface utilisateur. Vous devez décider comment le formulaire doit se comporter : enverra-t-il quand même les données ? Devriez-vous mettre en évidence les champs qui sont en erreur ? Devriez-vous afficher des messages d'erreur ?
 - Comment puis-je aider l'utilisateur à corriger ses données invalides?
-
   - : Pour limiter la frustration de l'utilisateur, il est très important de fournir autant d'information d'aide que nécessaire pour le guider dans la correction de sa saisie. Vous devriez afficher des suggestions en amont pour que l'utilisateur sache ce qui est attendu, ainsi que des messages d'erreur clairs. Si vous souhaitez vous plonger dans les exigences d'interface utilsateur pour la validation de formulaires, voici quelques articles (en anglais) utiles que vous devriez lire :
-
     - SmashingMagazine : [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine : [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Six Revision : [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
@@ -754,11 +751,9 @@ Voici le résultat:
 Comme vous avez pu le voir, il n'est pas si difficile de créer par soi-même un système de validation. La difficulté consiste à rendre le tout assez générique pour l'utiliser à la fois sur toutes les plateformes et pour chaque formulaire que vous pourriez créer. Il existe de nombreuses bibliothèques permettant ce genre de validation de formulaire ; n'hésitez pas à les utiliser. En voici quelques exemples :
 
 - Bibliothèques indépendantes :
-
   - [Validate.js](http://rickharrison.github.com/validate.js/)
 
 - Greffons jQuery :
-
   - [Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
 
 #### Validation à distance

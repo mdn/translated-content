@@ -30,7 +30,6 @@ l10n:
 - `position: fixed;` が、常に新たな重ね合わせコンテキストを生成するようになりました ([Firefox bug 1179288](https://bugzil.la/1179288))。
 - {{cssxref('@font-face/unicode-range', 'unicode-range')}} の対応を、既定で有効にしました ([Firefox bug 1119062](https://bugzil.la/1119062))。
 - CSS 書字方向の実験的な実装を更新して、最新の仕様を反映しました。
-
   - {{cssxref("text-orientation")}} プロパティの値 `sideways` を実装して、`sideways-right` をこの値の別名にしました ([Firefox bug 1193488](https://bugzil.la/1193488))。
   - `sideways-rl` および `sideways-lr` の値を{{cssxref("writing-mode")}} プロパティに実装しました ([Firefox bug 1193488](https://bugzil.la/1193488) および [Firefox bug 1193519](https://bugzil.la/1193519))。
 
@@ -39,7 +38,6 @@ l10n:
 - 未対応であるにもかかわらず {{cssxref("@page/marks")}}、{{cssxref("orphans")}}、{{cssxref("page")}}、{{cssxref("size")}}、{{cssxref("widows")}} の各プロパティがパースされ、{{cssxref("@supports")}} で誤って対応済みであると報告していました。この問題を修正してパースしないように、また対応済みとしないようになりました ([Firefox bug 1215702](https://bugzil.la/1215702))。
 - 内部で使用する値 `-moz-mac-unified-toolbar` を、{{cssxref("appearance")}} プロパティで使用できる値から外しました ([Firefox bug 1206468](https://bugzil.la/1206468))。
 - いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブ互換性のために対応しました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です ([Firefox bug 837211](https://bugzil.la/837211))。
-
   - `-webkit-animation`
   - `-webkit-animation-delay`
   - `-webkit-animation-direction`
@@ -113,7 +111,6 @@ l10n:
 #### Canvas
 
 - {{domxref("OffscreenCanvas")}} API の実験的な実装を追加し、レンダリングコンテキスト ([WebGL](/ja/docs/Web/API/WebGL_API) など) が[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)内で実行することができるようになりました。この実験的な API を使用するには、about:config で `gfx.offscreencanvas.enabled` を `true` に設定してください ([Firefox bug 709490](https://bugzil.la/709490))。この API に含まれるものは以下のとおりです。
-
   - {{domxref("OffscreenCanvas")}} インターフェイス
   - {{domxref("HTMLCanvasElement.transferControlToOffscreen()")}}
   - {{domxref("WebGLRenderingContext.commit()")}}
@@ -144,7 +141,6 @@ l10n:
 #### WebRTC
 
 - WebRTC インターフェイスの*接頭辞が外されました* ([Firefox bug 1155923](https://bugzil.la/1155923))。具体的には、
-
   - `mozRTCPeerConnection` が {{domxref("RTCPeerConnection")}} になりました。
   - `mozRTCIceCandidate` が {{domxref("RTCIceCandidate")}} になりました。
   - `mozRTCSessionDescription` が {{domxref("RTCSessionDescription")}} になりました。

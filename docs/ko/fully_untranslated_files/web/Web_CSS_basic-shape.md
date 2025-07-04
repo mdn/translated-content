@@ -69,7 +69,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 다음의 형태를 지원합니다. 모든 `<basic-shape>` 값은 함수형 표기법을 사용하고, 여기서는 [값 정의 구문](/ko/docs/Web/CSS/Value_definition_syntax)을 통해 정의합니다.
 
 - `inset()`
-
   - :
 
     ```
@@ -85,7 +84,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     좌우 인셋 각각 75%처럼, 한 축의 인셋 쌍 값의 합이 요소가 차지하는 크기보다 큰 경우 면적 없는 형태를 정의합니다. For this specification, this results in an empty float area.
 
 - `circle()`
-
   - :
 
     ```
@@ -97,7 +95,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     {{cssxref("&lt;position&gt;")}} 매개변수는 원의 중심을 지정합니다. 생략할 경우 중앙을 기본값으로 사용합니다.
 
 - `ellipse()`
-
   - :
 
     ```
@@ -109,7 +106,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     {{cssxref("&lt;position&gt;")}} 매개변수는 타원의 중심을 지정합니다. 생략할 경우 중앙을 기본값으로 사용합니다.
 
 - `polygon()`
-
   - :
 
     ```
@@ -121,7 +117,6 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
     Each pair argument in the list represents _xi_ and _yi_ - the x and y axis coordinates of the ith vertex of the polygon.
 
 - `path()`
-
   - :
 
     ```

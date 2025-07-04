@@ -35,22 +35,18 @@ Tous les microformats se composent d'une racine et d'un ensemble de propriétés
 Tous les noms de classe des microformats utilisent des préfixes. La syntaxe des préfixes **est indépendante de celle des vocabulaires** (développées séparément).
 
 - **"h-\*" pour les racines** (ex. "h-card", "h-entry", "h-feed"…). Ces racines indiquent un type ciblant un vocabulaire de propriétés donné. Ainsi :
-
   - [h-card](http://microformats.org/wiki/h-card) décrit une personne ou une organisation
   - [h-entry](http://microformats.org/wiki/h-entry) décrit un contenu en ligne épisodique ou daté (tel qu'un billet de blog)
   - [h-feed](http://microformats.org/wiki/h-feed) décrit un flux (médias, billets, etc)
   - D'autres exemples sont décrits [sur le wiki microformats2.](http://microformats.org/wiki/microformats2#v2_vocabularies)
 
 - **"p-\*" pour les propriétés textuelles** (ex. "p-name", "p-summary")
-
   - Un contenu texte. Pour certains éléments HTML, certains attributs spécifiques seront utilisés (ex. [`alt`](/fr/docs/Web/HTML/Element/img#attr-alt) pour [`<img>`](/fr/docs/Web/HTML/Element/img), [`title`](/fr/docs/Web/HTML/Element/abbr#attr-title) pour [`<abbr>`](/fr/docs/Web/HTML/Element/abbr)).
 
 - **"u-\*" pour les propriétés qui sont des URL** (ex. "u-url", "u-photo", "u-logo")
-
   - Analyse spéciale : attributs d'éléments [`<a>`](/fr/docs/Web/HTML/Element/a)/[`href`](/fr/docs/Web/HTML/Element/a#attr-href), [`<img>`](/fr/docs/Web/HTML/Element/img)/[`src`](/fr/docs/Web/HTML/Element/img#attr-src), [`<object>`](/fr/docs/Web/HTML/Element/object)/[`data`](/fr/docs/Web/HTML/Element/object#attr-data) etc. attributs sur le contenu des éléments.
 
 - **"dt-\*" pour les propriétés temporelles (date/heure)** (ex. "dt-start", "dt-end", "dt-bday")
-
   - Analyse syntaxique spéciale : attribut [`datetime`](/fr/docs/Web/HTML/Element/time#attr-datetime) de l'élément [`<time>`](/fr/docs/Web/HTML/Element/time), [value-class-pattern](https://microformats.org/wiki/value-class-pattern) et analyse séparée de la valeur date-heure pour plus de lisibilité.
 
 - **"e-\*" pour les arborescences** où l'intégralité de la hiérarchie de l'élément est la valeur à récupérer (ex. "e-content"). Le préfixe "e-" peut être retenu en anglais comme "**e**lement tree", "**e**mbedded markup" ou "**e**ncapsulated markup".
