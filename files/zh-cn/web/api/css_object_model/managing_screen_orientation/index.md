@@ -7,11 +7,11 @@ l10n:
 
 {{DefaultAPISidebar("Screen Orientation API")}}
 
-术语 _屏幕方向_ 指的是浏览器[视口](/zh-CN/docs/Glossary/Viewport)是处于横向模式（即视口的宽度大于其高度），还是纵向模式（视口的高度大于其宽度）。
+术语*屏幕方向*指的是浏览器[视口](/zh-CN/docs/Glossary/Viewport)是处于横向模式（即视口的宽度大于其高度），还是纵向模式（视口的高度大于其宽度）。
 
 CSS 提供了 [`orientation`](/zh-CN/docs/Web/CSS/@media/orientation) 媒体特性，允许根据屏幕方向调整布局。
 
-[屏幕方向 API](/zh-CN/docs/Web/API/Screen_Orientation_API)提供了一个用于处理屏幕方向的 JavaScript 编程接口——包括将视口锁定到特定方向的能力。
+[屏幕方向 API](/zh-CN/docs/Web/API/Screen_Orientation_API) 提供了一个用于处理屏幕方向的 JavaScript 编程接口——包括将视口锁定到特定方向的能力。
 
 ## 根据方向调整布局
 
@@ -122,12 +122,12 @@ li {
     <tr>
       <td>
         <div>
-          {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 180, 350) }}
+          {{ EmbedLiveSample('根据方向调整布局', 180, 350) }}
         </div>
       </td>
       <td>
         <div>
-          {{ EmbedLiveSample('Adjusting_layout_based_on_the_orientation', 350, 180) }}
+          {{ EmbedLiveSample('根据方向调整布局', 350, 180) }}
         </div>
       </td>
     </tr>
@@ -163,7 +163,7 @@ screen.orientation.addEventListener("change", () => {
 screen.orientation.lock();
 ```
 
-它返回一个 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在锁定成功后解析。
+它返回一个 [Promise](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，在锁定成功后兑现。
 
 > [!NOTE]
 > 屏幕锁定是 Web 应用程序相关的。如果应用程序 A 锁定为 `landscape`，而应用程序 B 锁定为 `portrait`，从应用程序 A 切换到 B 或从 B 切换到 A 不会触发 `ScreenOrientation` 上的 `change` 事件，因为两个应用程序都会保持它们的方向。
