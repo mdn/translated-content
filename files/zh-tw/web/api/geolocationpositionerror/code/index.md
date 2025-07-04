@@ -7,7 +7,7 @@ l10n:
 
 {{securecontext_header}}{{APIRef("Geolocation API")}}
 
-{{domxref("GeolocationPositionError")}} 介面的 **`code`** 唯讀屬性是一個 `unsigned short`，表示錯誤碼。
+{{domxref("GeolocationPositionError")}} 介面的 **`code`** 唯讀屬性是一個表示錯誤碼的 `unsigned short`。
 
 可能的值如下：
 
