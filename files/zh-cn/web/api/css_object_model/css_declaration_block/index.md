@@ -22,7 +22,7 @@ l10n:
 - 更新标志
   - : 当 CSS 声明块正在更新所属节点的 [`style`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/style) 属性时设置此标志。
 
-当 [CSS 对象模型 (CSSOM)](/zh-CN/docs/Web/API/CSS_Object_Model) 接口返回 {{domxref("CSSStyleDeclaration")}} 时，这些属性会根据规范设置为适当的值。
+当 [CSS 对象模型（CSSOM）](/zh-CN/docs/Web/API/CSS_Object_Model)接口返回 {{domxref("CSSStyleDeclaration")}} 时，这些属性会根据规范设置为适当的值。
 
 ## 基本示例
 
@@ -41,8 +41,8 @@ h1 {
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-let rule = myRules[0]; // 一个 CSSStyleRule
-console.log(rule.style); // 一个 CSSStyleDeclaration 对象
+let rule = myRules[0]; // CSSStyleRule
+console.log(rule.style); // CSSStyleDeclaration 对象
 ```
 
 ## 规范
