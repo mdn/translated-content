@@ -7,7 +7,7 @@ l10n:
 
 {{GlossarySidebar}}
 
-在 Web 开发中，**可替换元素**是指其内容由外部资源或文档结构外部定义的内容替换的 HTML 元素，并且在 CSS 渲染模型中不被视为常规内容。它们是外部对象，其表现独立于 CSS 格式化模型。
+在 Web 开发中，**可替换元素**（replaced element）是指其内容由外部资源或文档结构外部定义的内容替换的 HTML 元素，并且在 CSS 渲染模型中不被视为常规内容。它们是外部对象，其表现独立于 CSS 格式化模型。
 
 以下元素通常为可替换元素：
 
@@ -22,7 +22,7 @@ l10n:
 - {{HTMLElement("audio")}}
 - {{HTMLElement("canvas")}}
 - {{HTMLElement("object")}}
-- {{HTMLElement("input")}}（仅 `image` 类型）
+- {{HTMLElement("input")}}（仅 `image` 输入类型）
 
 可替换元素通常具有{{glossary("intrinsic size", "固有尺寸")}}和{{glossary("aspect ratio", "固有比例")}}。例如，`<img>` 元素的内容通常由其 `src` 属性指定的图片替换。该图片具有以绝对单位指定的固有宽度和高度，从而决定其宽高比。
 
