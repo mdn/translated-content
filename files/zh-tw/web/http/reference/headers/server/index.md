@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Server`** {{Glossary("response header", "回應標頭")}}描述了處理請求並產生回應的原始伺服器所使用的軟體。
 
 透過此標頭宣告伺服器類型與版本的好處在於，它有助於分析以及識別特定互通性問題的普及程度。從歷史上看，用戶端曾利用伺服器版本資訊來避開已知的限制，例如某些軟體版本對[範圍請求](/zh-TW/docs/Web/HTTP/Guides/Range_requests)的支援不一致。
