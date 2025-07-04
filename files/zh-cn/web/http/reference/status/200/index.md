@@ -3,8 +3,6 @@ title: 200 OK
 slug: Web/HTTP/Reference/Status/200
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`200 OK`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成功响应)状态码表明请求已经成功。默认情况下 `200 OK` 的响应可以被缓存。
 
 根据 HTTP 请求方法的不同，`200 OK` 响应的含义和格式也有所不同。以下是不同请求方法的具体区别：

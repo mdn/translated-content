@@ -3,8 +3,6 @@ title: Retry-After
 slug: Web/HTTP/Reference/Headers/Retry-After
 ---
 
-{{HTTPSidebar}}
-
 在 HTTP 协议中，响应首部 **`Retry-After`** 表示用户代理需要等待多长时间之后才能继续发送请求。这个首部主要应用于以下两种场景：
 
 - 当与 {{HTTPStatus(503)}} (Service Unavailable，当前服务不存在) 响应一起发送的时候，表示服务下线的预期时长。
