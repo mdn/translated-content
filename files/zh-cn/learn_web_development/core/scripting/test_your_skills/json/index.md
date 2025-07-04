@@ -2,13 +2,13 @@
 title: 测试你的技能：JSON
 slug: Learn_web_development/Core/Scripting/Test_your_skills/JSON
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
 
 本技能测试用于评估你是否理解我们的[使用 JSON](/zh-CN/docs/Learn_web_development/Core/Scripting/JSON) 一文。
 
 > [!NOTE]
-> 你可以通过下载代码并于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中加载代码来尝试找到解决方案。如果有错误，错误将记录在页面的结果面板中或浏览器的 JavaScript 控制台之中，以期帮助你完成调试。
+> 你可以通过下载代码并于在线编辑器（如 [CodePen](https://codepen.io/) 或 [JSFiddle](https://jsfiddle.net/)）中加载代码来尝试找到解决方案。如果有错误，错误将记录在页面的结果面板中或浏览器的 JavaScript 控制台之中，以期帮助你完成调试。
 >
 > 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
