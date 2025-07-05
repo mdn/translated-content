@@ -2,7 +2,7 @@
 title: X-Robots-Tag 標頭
 slug: Web/HTTP/Reference/Headers/X-Robots-Tag
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
 {{HTTPSidebar}}

@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}

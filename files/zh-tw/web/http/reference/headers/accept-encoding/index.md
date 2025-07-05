@@ -61,9 +61,9 @@ Accept-Encoding: deflate, gzip;q=1.0, *;q=0.5
   - : 使用 [Brotli](https://zh.wikipedia.org/wiki/Brotli) 演算法的壓縮格式。
 - `zstd`
   - : 使用 [Zstandard](https://zh.wikipedia.org/wiki/Zstandard) 演算法的壓縮格式。
-- `dcb` {{experimental\_inline}}
+- `dcb` {{experimental_inline}}
   - : 使用 [Dictionary-Compressed Brotli](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-brotl) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
-- `dcz` {{experimental\_inline}}
+- `dcz` {{experimental_inline}}
   - : 使用 [Dictionary-Compressed Zstandard](https://datatracker.ietf.org/doc/html/draft-ietf-httpbis-compression-dictionary#name-dictionary-compressed-zstan) 演算法的壓縮格式。參見[壓縮字典傳輸指南](/zh-TW/docs/Web/HTTP/Guides/Compression_dictionary_transport)。
 - `identity`
   - : 表示恆等函數（即無修改或壓縮）。即使省略，此值始終被視為可接受的。

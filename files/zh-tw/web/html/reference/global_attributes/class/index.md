@@ -45,7 +45,7 @@ l10n:
 
 因此，建議開發人員為 class 屬性選擇不需要跳脫的有效 CSS 標識符作為值。
 
-### 描述
+## 描述
 
 類別允許 CSS 和 JavaScript 通過[類別選擇器](/zh-TW/docs/Web/CSS/Class_selectors)或 {{domxref("document.getElementsByClassName()")}} 等函數來選擇和訪問特定元素。
 
