@@ -51,7 +51,7 @@ let utterance = new SpeechSynthesisUtterance("你好世界！");
 speechSynthesis.speak(utterance);
 ```
 
-现在，我们来看一个更完整的示例。在外面的[语音合成器演示](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis)中，我们首先使用 `window.speechSynthesis` 获取了语音合成控制器的引用。在定义了一些必要的变量后，我们使用 {{domxref("SpeechSynthesis.getVoices()")}} 获取了可用声音的列表，并用它们填充了一个选择菜单，以便用户可以选择他们想要的声音。
+现在，我们来看一个更完整的示例。在我们的[语音合成器演示](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis)中，我们首先使用 `window.speechSynthesis` 获取了语音合成控制器的引用。在定义了一些必要的变量后，我们使用 {{domxref("SpeechSynthesis.getVoices()")}} 获取了可用声音的列表，并用它们填充了一个选择菜单，以便用户可以选择他们想要的声音。
 
 在 `inputForm.onsubmit` 的处理器中，我们用 [preventDefault()](/zh-CN/docs/Web/API/Event/preventDefault) 阻止表单提交，创建了一个新的 {{domxref("SpeechSynthesisUtterance")}} 实例，其中包含了从文本 {{htmlelement("input")}} 获取的文本，将语音设置为在 {{htmlelement("select")}} 元素中选择的声音，并通过 {{domxref("SpeechSynthesis.speak()")}} 方法开始语音播放。
 
