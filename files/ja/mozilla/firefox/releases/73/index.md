@@ -3,8 +3,6 @@ title: Firefox 73 for developers
 slug: Mozilla/Firefox/Releases/73
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 73 は、米国時間 2020 年 2 月 11 日にリリースされました。このページでは、開発者に影響する Firefox 73 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

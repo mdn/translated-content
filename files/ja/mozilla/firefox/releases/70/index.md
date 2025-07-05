@@ -3,8 +3,6 @@ title: Firefox 70 for developers
 slug: Mozilla/Firefox/Releases/70
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 70 は、米国時間 2019 年 10 月 22 日 にリリースされました。このページでは、開発者に影響する Firefox 70 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

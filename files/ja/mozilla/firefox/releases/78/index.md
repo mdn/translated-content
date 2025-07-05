@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 78 の変更点をまとめています。Firefox 78 は、 2020 年 6 月 30 日にリリースされました。
 
 Mozilla hacks の記事「[New in Firefox 78: DevTools improvements, new regex engine, and abundant web platform updates](https://hacks.mozilla.org/2020/06/new-in-firefox-78/)」もご覧ください。

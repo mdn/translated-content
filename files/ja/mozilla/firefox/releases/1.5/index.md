@@ -3,8 +3,6 @@ title: Firefox 1.5 for developers
 slug: Mozilla/Firefox/Releases/1.5
 ---
 
-{{FirefoxSidebar}}
-
 Gecko 1.8 エンジンに基づいて、Firefox 1.5 はクラス最高の標準サポートを改善し、次世代のウェブアプリケーションを可能にする新しい機能を提供しました。Firefox 1.5 では、CSS2 と CSS3、SVG 1.1 と \<canvas>、XForms と XML イベント、さらに多くの DHTML、JavaScript、DOM 拡張を介したスクリプト可能でプログラム可能な 2D グラフィックスの API のサポートが強化されています。
 
 ## 開発ツール

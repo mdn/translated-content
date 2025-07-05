@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d27be65a297aa82a1eceb024be325b1385a498e5
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 131 の変更点をまとめています。Firefox 131 は、米国時間 [2024 年 10 月 1 日](https://whattrainisitnow.com/release/?version=129) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
