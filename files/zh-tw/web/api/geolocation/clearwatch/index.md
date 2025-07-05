@@ -18,7 +18,7 @@ clearWatch(id)
 ### 參數
 
 - `id`
-  - : 你想移除的處理器，其 ID 編號是由 {{domxref("Geolocation.watchPosition()")}} 方法在安裝時所回傳的。
+  - : 你想移除的處理器的 ID 編號，其是由 {{domxref("Geolocation.watchPosition()")}} 方法在安裝時所回傳的。
 
 ### 回傳值
 
