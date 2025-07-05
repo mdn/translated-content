@@ -31,9 +31,9 @@ _`SpeechSynthesis` 也从其父接口 {{domxref("EventTarget")}} 继承方法。
 - {{domxref("SpeechSynthesis.pause()")}}
   - : 将 `SpeechSynthesis` 对象置为暂停状态。
 - {{domxref("SpeechSynthesis.resume()")}}
-  - : 将 `SpeechSynthesis` 对象置为一个非暂停状态：如果已经暂停了则恢复播放。
+  - : 将 `SpeechSynthesis` 对象置为非暂停状态：如果已经暂停了则恢复播放。
 - {{domxref("SpeechSynthesis.speak()")}}
-  - : 将一个{{domxref("SpeechSynthesisUtterance", "语音", "", 1)}}添加到语音队列，它将会在其他语音播放完之后播放。
+  - : 将{{domxref("SpeechSynthesisUtterance", "语音", "", 1)}}添加到语音队列，它将会在其他语音播放完之后播放。
 
 ## 事件
 
@@ -53,9 +53,7 @@ speechSynthesis.speak(utterance);
 
 现在，我们来看一个更完整的示例。在外面的[语音合成器演示](https://github.com/mdn/dom-examples/tree/main/web-speech-api/speak-easy-synthesis)中，我们首先使用 `window.speechSynthesis` 获取了语音合成控制器的引用。在定义了一些必要的变量后，我们使用 {{domxref("SpeechSynthesis.getVoices()")}} 获取了可用声音的列表，并用它们填充了一个选择菜单，以便用户可以选择他们想要的声音。
 
-Inside the `inputForm.onsubmit` handler, we stop the form submitting with [preventDefault()](/zh-CN/docs/Web/API/Event/preventDefault), create a new {{domxref("SpeechSynthesisUtterance")}} instance containing the text from the text {{htmlelement("input")}}, set the utterance's voice to the voice selected in the {{htmlelement("select")}} element, and start the utterance speaking via the {{domxref("SpeechSynthesis.speak()")}} method.
-
-`inputForm.onsubmit` 的处理器中，我们用 [preventDefault()](/zh-CN/docs/Web/API/Event/preventDefault) 阻止表单提交，创建了一个新的 {{domxref("SpeechSynthesisUtterance")}} 实例，其中包含了从文本 {{htmlelement("input")}} 获取的文本，将语音设置为在 {{htmlelement("select")}} 元素中选择的声音，并通过 {{domxref("SpeechSynthesis.speak()")}} 方法开始语音播放。
+在 `inputForm.onsubmit` 的处理器中，我们用 [preventDefault()](/zh-CN/docs/Web/API/Event/preventDefault) 阻止表单提交，创建了一个新的 {{domxref("SpeechSynthesisUtterance")}} 实例，其中包含了从文本 {{htmlelement("input")}} 获取的文本，将语音设置为在 {{htmlelement("select")}} 元素中选择的声音，并通过 {{domxref("SpeechSynthesis.speak()")}} 方法开始语音播放。
 
 ```js
 const synth = window.speechSynthesis;
