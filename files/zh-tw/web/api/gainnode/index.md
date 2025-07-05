@@ -7,7 +7,7 @@ l10n:
 
 {{ APIRef("Web Audio API") }}
 
-`GainNode` 介面表示音量的改變。它是一個 {{domxref("AudioNode")}} 音訊處理模組，會將指定的增益應用於輸入資料，然後再傳播到輸出。一個 `GainNode` 總是只有一個輸入和一個輸出，兩者都有相同數量的聲道。
+`GainNode` 介面表示音量的改變。它是一個 {{domxref("AudioNode")}} 音訊處理模組，會將指定的增益應用於輸入資料，然後再傳播到輸出。`GainNode` 總是只有一個輸入和一個輸出，兩者都有相同數量的聲道。
 
 增益是一個無單位的數值，會隨時間變化，並與所有輸入聲道的每個對應取樣相乘。如果修改了增益，新的增益會立即套用，導致在最終的音訊中產生不悅耳的「喀嚓聲」。為了避免這種情況發生，切勿直接改變數值，而應使用 {{domxref("AudioParam")}} 介面上的指數內插法。
 
@@ -27,15 +27,15 @@ l10n:
     </tr>
     <tr>
       <th scope="row">聲道計數模式</th>
-      <td><code>「max」</code></td>
+      <td><code>"max"</code></td>
     </tr>
     <tr>
       <th scope="row">聲道計數</th>
-      <td><code>2</code> （在預設計數模式下未使用）</td>
+      <td><code>2</code>（在預設計數模式下未使用）</td>
     </tr>
     <tr>
       <th scope="row">聲道詮釋</th>
-      <td><code>「speakers」</code></td>
+      <td><code>"speakers"</code></td>
     </tr>
   </tbody>
 </table>
@@ -43,7 +43,7 @@ l10n:
 ## 建構子
 
 - {{domxref("GainNode.GainNode", "GainNode()")}}
-  - : 建立並回傳一個新的 `GainNode` 物件。或者你也可以使用 {{domxref("BaseAudioContext.createGain()")}} 工廠方法；參見[建立 AudioNode](/zh-TW/docs/Web/API/AudioNode#建立_AudioNode)。
+  - : 建立並回傳一個新的 `GainNode` 物件。或者你也可以使用 {{domxref("BaseAudioContext.createGain()")}} 工廠方法；參見[建立 AudioNode](/zh-TW/docs/Web/API/AudioNode#建立_audionode)。
 
 ## 實體屬性
 
