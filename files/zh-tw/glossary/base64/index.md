@@ -2,26 +2,33 @@
 title: Base64
 slug: Glossary/Base64
 l10n:
-  sourceCommit: fc2667784c84ccc3798c1c5d74bb63c7176a228f
+  sourceCommit: b75355e41772e6cae6543000d3c9fed21593b4d7
 ---
 
 {{GlossarySidebar}}
 
-**Base64** 是一組相似的[二進位到文字編碼](https://en.wikipedia.org/wiki/Binary-to-text_encoding)系統，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
+**Base64** 是一組相似的[二進位到文字編碼](https://en.wikipedia.org/wiki/Binary-to-text_encoding)方案，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
 
-當「Base64」單獨用於指代特定的{{glossary("algorithm", "演算法")}}時，通常指的是 [RFC 4648](https://datatracker.ietf.org/doc/html/rfc4648) 第 4 節中描述的 Base64 版本，它使用以下字母表來表示基數為 64 的數字，並使用 `=` 作為填充字元：
+Base64 編碼方案常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
+
+- 透過 [MIME](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展) 發送電子郵件
+- 在 [XML](/zh-TW/docs/Web/XML) 中儲存複雜資料
+- 將二進位資料編碼後納入 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 中
+
+## Base64 字元
+
+當「Base64」單獨用於指代特定的{{glossary("algorithm", "演算法")}}時，通常指的是 {{rfc("4648", "", 4)}} 中描述的 Base64 版本，它使用以下字母表來表示基數為 64 的數字，並使用 `=` 作為填充字元：
 
 ```plain
 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/
 ```
 
-一種常見的變體是「Base64 URL 安全編碼」，它省略了填充，並將 `+/` 替換為 `-_`，以避免在 {{glossary("URL")}} 路徑段或查詢參數中可能引起問題的字元。如果資料不會放置在路徑段或查詢參數中，例如 [data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 就沒有這些限制，因此可以使用標準的 Base64 編碼。
+## URL 及檔名安全的 Base64
 
-Base64 編碼系統常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
+此定義的一個常見變體只允許在檔名和 {{glossary("URL")}} 值中安全使用的字元。
+這個版本定義於 {{rfc("4648", "", 5)}}，省略了填充並將 `+` 和 `/` 替換為 `-` 和 `_`。
 
-- 透過 [MIME](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展) 發送電子郵件
-- 在 [XML](/zh-TW/docs/Web/XML) 中儲存複雜資料
-- 將二進位資料編碼後納入 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 中
+如果你不是將資料放在路徑段或查詢參數中，則不需要這種編碼——例如，[data URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 兩者皆無，可以使用標準的 Base64 編碼。
 
 ## 編碼後的大小增長
 
