@@ -68,14 +68,12 @@ _Herda propriedades de seus pais, {{domxref("EventTarget")}}_.\[1]
 ### Propriedades obsoletas
 
 - {{domxref("Node.localName")}}{{readonlyInline}}
-
   - : Retorna um {{domxref("DOMString")}} representando a parte local do nome qualificado de um elemento.
 
     > [!NOTE]
     > No Firefox 3.5 e nas versões anteriores, a propriedade coloca em caixa alta o nome local de elementos HTML (mas não elementos XHTML). Em versões posteriores, isso não acontece, então a propriedade está em caixa baixa para ambos HTML e XHTML.
 
 - {{domxref("Node.namespaceURI")}}{{readonlyInline}}
-
   - : O espaço de nomes URI desse nó, ou `null` se não estiver no espaço de nomes.
 
     > [!NOTE]

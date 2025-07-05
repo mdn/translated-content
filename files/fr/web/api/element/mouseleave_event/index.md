@@ -123,7 +123,6 @@ function addListItem(text) {
 
 - [Une introduction aux évènements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
 - D'autres évènements connexes
-
   - [`mousedown`](/fr/docs/Web/API/Element/mousedown_event)
   - [`mouseup`](/fr/docs/Web/API/Element/mouseup_event)
   - [`mousemove`](/fr/docs/Web/API/Element/mousemove_event)

@@ -130,36 +130,30 @@ CSS 生成コンテンツモジュールでは、まだ実装されていない 
 ## ガイド
 
 - [生成コンテンツの「手引」ガイド](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Generated_content)
-
   - : {{cssxref("content")}} プロパティを使用して、文書にテキストや画像コンテンツを追加する方法を学びます。
 
 - [生成コンテンツによる装飾的なボックスの作成](/ja/docs/Learn_web_development/Howto/Solve_CSS_problems/Create_fancy_boxes)
-
   - : 視覚効果のための生成コンテンツのスタイル設定の例です。
 
 ## 関連概念
 
 - [CSS 擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)モジュール
-
   - {{cssxref("::before")}} 擬似要素
   - {{cssxref("::after")}} 擬似要素
   - {{cssxref("::marker")}} 擬似要素
 
 - [CSS リストとカウンター](/ja/docs/Web/CSS/CSS_lists)モジュール
-
   - {{cssxref("counter", "counter()")}} 関数
   - {{cssxref("counters", "counters()")}} 関数
   - {{cssxref("counter-increment")}} プロパティ
   - {{cssxref("counter-reset")}} プロパティ
 
 - [CSS オーバーフロー](/ja/docs/Web/CSS/CSS_overflow)モジュール
-
   - {{cssxref("::scroll-button()")}} 擬似要素
   - {{cssxref("::scroll-marker")}} 擬似要素
   - {{cssxref(":target-current")}} 擬似クラス
 
 - [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール
-
   - {{cssxref("attr", "attr()")}} 関数
   - {{cssxref("string")}} データ型
   - {{cssxref("image")}} データ型

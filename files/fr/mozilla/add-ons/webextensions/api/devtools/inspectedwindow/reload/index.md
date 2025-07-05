@@ -18,9 +18,7 @@ browser.devtools.inspectedWindow.reload(
 ### Paramètres
 
 - `reloadOptions`{{optional_inline}}
-
   - : `object`. Options pour la fonction, comme suit
-
     - `ignoreCache`{{optional_inline}}
       - : `boolean`. S'il est vrai, cela fait que le rechargement ignore le cache du navigateur (comme si l'utilisateur avait appuyé sur Shift+Ctrl+R).
     - `userAgent`{{optional_inline}}

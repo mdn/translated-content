@@ -43,9 +43,7 @@ p {
 - `value`
   - : これは整数値の属性で、{{HTMLElement("ol")}} 要素で定義されたリストアイテムの序数値を示します。リストがローマ数字や文字で表示される場合であっても、この属性は数値のみが指定できます。続くリストアイテムは、その番号から続いて採番されます。この属性は順序なしリスト ({{HTMLElement("ul")}}) やメニュー ({{HTMLElement("menu")}}) では意味を持ちません。
 - `type` {{Deprecated_inline}}
-
   - : 文字の属性で、表示するリストマーカーの種類を指定します。
-
     - `a`: 小文字
     - `A`: 大文字
     - `i`: 小文字のローマ数字
@@ -176,7 +174,6 @@ p {
 
 - 他のリスト関連 HTML 要素: {{HTMLElement("ul")}}, {{HTMLElement("ol")}}, {{HTMLElement("menu")}} および廃止された {{HTMLElement("dir")}}
 - `<li>` の整形に便利な CSS プロパティ:
-
   - 箇条書き記号の表示を選択するための {{cssxref("list-style")}}
   - 複雑な入れ子状リストを処理するのに使用できる [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
   - リストアイテムのインデントの調整に用いることができる {{cssxref("margin")}}

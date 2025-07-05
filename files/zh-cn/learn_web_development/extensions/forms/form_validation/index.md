@@ -56,7 +56,6 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 在 Web 中，你可能会遇见各种不同的表单校验：
 
 - **客户端校验**发生在浏览器端，表单数据被提交到服务器之前，这种方式相较于服务器端校验来说，用户体验更好，它能实时的反馈用户的输入校验结果，这种类型的校验可以进一步细分成下面这些方式：
-
   - **JavaScript** 校验，这是可以完全自定义的实现方式；
   - HTML5 **内置校验**，这不需要 JavaScript，而且性能更好，但是不能像 JavaScript 那样可自定义。
 
@@ -246,7 +245,8 @@ div {
 
 {{EmbedLiveSample("限制输入的长度", "100%", 70)}}
 
-> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
+> [!NOTE]
+> `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
 
 ### 完整的例子
 
@@ -596,9 +596,7 @@ form.addEventListener(
 - 如果表单校验失败，我该怎么办？
   - : 这显然是一个 UI 问题。你必须决定表单的行为方式：表单是否发送数据？是否突出显示错误的字段？是否显示错误消息？
 - 如何帮助用户纠正无效数据？
-
   - : 为了减少用户的挫折感，提供尽可能多的有用的信息是非常重要的，以便引导他们纠正他们的输入。你应该提供前期建议，以便他们知道预期的输入是什么以及明确的错误消息。如果你想深入了解表单校验用户界面要求，那么你应该阅读一些有用的文章：
-
     - SmashingMagazine: [Form-Field Validation: The Errors-Only Approach](http://uxdesign.smashingmagazine.com/2012/06/27/form-field-validation-errors-only-approach/)
     - SmashingMagazine: [Web Form Validation: Best Practices and Tutorials](http://www.smashingmagazine.com/2009/07/07/web-form-validation-best-practices-and-tutorials/)
     - Six Revision: [Best Practices for Hints and Validation in Web Forms](http://sixrevisions.com/user-interface/best-practices-for-hints-and-validation-in-web-forms/)
@@ -775,11 +773,9 @@ addEvent(form, "submit", function () {
 正如你所看到的，建立自己的校验系统并不难。困难的部分是使其足够通用，以跨平台和任何形式使用它可以创建。有许多库可用于执行表单校验; 你应该毫不犹豫地使用它们。这里有一些例子：
 
 - 独立的库（原生 Javascript 实现）：
-
   - [Validate.js](http://rickharrison.github.com/validate.js/)
 
 - jQuery 插件：
-
   - [Validation](http://bassistance.de/jquery-plugins/jquery-plugin-validation/)
   - [Valid8](http://unwrongest.com/projects/valid8/)
 

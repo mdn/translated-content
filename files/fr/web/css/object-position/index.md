@@ -125,7 +125,6 @@ La première image est positionnée avec son bord gauche situé à 10 pixels du 
 ## Voir aussi
 
 - Les autres propriétés CSS liées aux images&nbsp;:
-
   - [`object-fit`](/fr/docs/Web/CSS/object-fit)
   - [`image-orientation`](/fr/docs/Web/CSS/image-orientation)
   - [`image-rendering`](/fr/docs/Web/CSS/image-rendering)

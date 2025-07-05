@@ -32,11 +32,8 @@ li {
 此元素的屬性包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `download`
-
   - : 導致瀏覽器將連結的 URL 視為下載。可與或不與 `filename` 值一起使用：
-
     - 沒有值時，瀏覽器將從各種來源生成的文件名/擴展名提供建議：
-
       - {{HTTPHeader("Content-Disposition")}} HTTP 標頭
       - URL [路徑](/zh-TW/docs/Web/API/URL/pathname)中的最終段落
       - {{HTTPHeader("Content-Type")}} 標頭中的{{Glossary("MIME_type", "媒體類型")}}，以及 [`data:` URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的開頭，或是 [`blob:` URL](/zh-TW/docs/Web/API/URL/createObjectURL_static) 的 {{domxref("Blob.type")}}。
@@ -48,14 +45,11 @@ li {
     > - `download` 只適用於[同源 URL](/zh-TW/docs/Web/Security/Same-origin_policy)，或者 `blob:` 和 `data:` 方案。
     > - 瀏覽器如何處理下載因瀏覽器、用戶設置和其他因素而異。用戶在下載開始之前可能會收到提示，文件可能會自動保存，或者它可能會自動打開，無論是在外部應用程序中還是在瀏覽器本身中。
     > - 如果 `Content-Disposition` 標頭與 `download` 屬性的信息不同，則結果行為可能不同：
-    >
     >   - 如果標頭指定了 `filename`，則優先於 `download` 屬性中指定的文件名。
     >   - 如果標頭指定了 `inline` 的配置，Chrome 和 Firefox 會將屬性視為下載並優先處理它。舊版 Firefox（82 版之前）會優先處理標頭並在內聯中顯示內容。
 
 - `href`
-
   - : 超連結指向的 URL。連結不限於基於 HTTP 的 URL——它們可以使用瀏覽器支持的任何 URL 方案：
-
     - 具有文件片段的頁面部分
     - 具有[文字片段](/zh-TW/docs/Web/URI/Reference/Fragment/Text_fragments)的特定文本部分
     - 具有媒體片段的媒體文件部分
@@ -69,9 +63,7 @@ li {
 - `ping`
   - : URL 的空格分隔列表。當點擊連結時，瀏覽器將向這些 URL 發送 {{HTTPMethod("POST")}} 請求，內容為 `PING`。通常用於跟蹤。
 - `referrerpolicy`
-
   - : 跟隨連結時發送的[引用者](/zh-TW/docs/Web/HTTP/Reference/Headers/Referer)的程度。
-
     - `no-referrer`：不發送 {{HTTPHeader("Referer")}} 標頭。
     - `no-referrer-when-downgrade`：不發送 {{HTTPHeader("Referer")}} 標頭至沒有 {{Glossary("TLS")}}（{{Glossary("HTTPS")}}）的[來源](/zh-TW/docs/Web/Security/Same-origin_policy)。
     - `origin`：發送的引用者將僅限於引用頁面的來源：其[協定](/zh-TW/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "主機")}}和{{Glossary("port", "通訊埠")}}。
@@ -84,9 +76,7 @@ li {
 - `rel`
   - : 連結 URL 的關係，作為空格分隔的連結類型。
 - `target`
-
   - : 要在何處顯示連結 URL，作為*瀏覽上下文*（一個選項卡、窗口或 {{HTMLElement("iframe")}}）的名稱。以下關鍵字對於加載 URL 的位置具有特殊意義：
-
     - `_self`：當前瀏覽上下文。（默認）
     - `_blank`：通常是一個新選項卡，但用戶可以配置瀏覽器以打開新窗口。
     - `_parent`：當前瀏覽上下文的父級。如果沒有父級，則與 `_self` 行為相同。
@@ -102,7 +92,6 @@ li {
 ### 已棄用的屬性
 
 - `charset` {{Deprecated_Inline}}
-
   - : 指示連結 URL 的 {{Glossary("character encoding")}}。
 
     > [!NOTE]
@@ -111,7 +100,6 @@ li {
 - `coords` {{Deprecated_Inline}}
   - : 與 [`shape` 屬性](#shape)一起使用。逗號分隔的座標列表。
 - `name` {{Deprecated_Inline}}
-
   - : 用於在頁面中定義可能的目標位置。在 HTML 4.01 中，`id` 和 `name` 都可以在 `<a>` 上使用，只要它們具有相同的值。
 
     > [!NOTE]
@@ -120,7 +108,6 @@ li {
 - `rev` {{Deprecated_Inline}}
   - : 指定反向連結；與[形狀屬性](#rel)相反。由於非常混亂而被棄用。
 - `shape` {{Deprecated_Inline}}
-
   - : 圖像地圖中超連結區域的形狀。
 
     > [!NOTE]

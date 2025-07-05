@@ -86,23 +86,18 @@ caption {
 以下属性已被弃用，不应再使用。下文记录了这些属性，仅供更新现有代码时参考。
 
 - `align` {{deprecated_inline}}
-
   - : 指定每行单元格的水平对齐方式。可能的{{Glossary("enumerated", "枚举")}}值包括 `left`、`center`、`right`、`justify` 和 `char`。如果支持，`char` 值将根据 [`char`](#char) 属性中定义的字符和 [`charoff`](#charoff) 属性定义的偏移量对文本内容进行对齐。请使用 {{cssxref("text-align")}} CSS 属性代替，因为该属性已被弃用。
 
 - `bgcolor` {{deprecated_inline}}
-
   - : 定义每行单元格的背景颜色。值是 HTML 颜色；可以是以“`#`”为前缀的 [6 位十六进制 RGB 代码](/zh-CN/docs/Web/CSS/hex-color)，也可以是[颜色关键字](/zh-CN/docs/Web/CSS/named-color)。不支持其他 CSS {{cssxref("color_value", "&lt;color&gt;")}} 值。请使用 {{cssxref("background-color")}} CSS 属性代替，因为该属性已被弃用。
 
 - `char` {{deprecated_inline}}
-
   - : 指定内容与每行单元格中一个字符的对齐方式。当尝试对齐数字或货币值时，典型值包括句号（`.`）。如果 [`align`](#align) 未设置为 `char`，该属性将被忽略。
 
 - `charoff` {{deprecated_inline}}
-
   - : 指定由 [`char`](#char) 属性指定的对齐字符偏移行单元格内容的字符数。
 
 - `valign` {{deprecated_inline}}
-
   - : 指定每行单元格的垂直对齐方式。可能的{{Glossary("enumerated", "枚举")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。请使用 {{cssxref("vertical-align")}} CSS 属性代替，因为该属性已被弃用。
 
 ## 使用说明

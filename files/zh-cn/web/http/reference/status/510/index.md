@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`510 Not Extended`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#服务端错误响应)状态码在客户端请求声明了应使用 HTTP 扩展（{{RFC("2774")}}）来处理请求，但服务器不支持该扩展时发送。
 
 ## 状态

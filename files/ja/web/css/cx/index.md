@@ -32,11 +32,9 @@ cx: unset;
 {{cssxref("length")}} および {{cssxref("percentage")}} 値で、円または楕円の水平方向の中心を記述します。
 
 - {{cssxref("length")}}
-
   - : 絶対長または相対長として、 CSS の {{cssxref("&lt;length&gt;")}} データ型で許可されている任意の単位で表現できます。負の値は無効です。
 
 - {{cssxref("percentage")}}
-
   - : パーセント値は、現在の SVG ビューポートの幅を参照します。
 
 ## 公式定義

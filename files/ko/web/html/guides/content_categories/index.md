@@ -36,9 +36,9 @@ original_slug: Web/HTML/Content_categories
 특정 조건을 만족하는 경우 플로우 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("area")}}는 {{HTMLElement("map")}} 요소의 자손인 경우.
-- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우..
-- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 특성을 가지고 있는 경우.
-- {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Element/style#scoped) 특성을 가지고 있는 경우.
+- {{HTMLElement("link")}}가 [`itemprop`](/ko/docs/Web/HTML/Reference/Global_attributes#itemprop) 특성을 가지고 있는 경우..
+- {{HTMLElement("meta")}}가 [`itemprop`](/ko/docs/Web/HTML/Reference/Global_attributes#itemprop) 특성을 가지고 있는 경우.
+- {{HTMLElement("style")}}이 [`scoped`](/ko/docs/Web/HTML/Reference/Elements/style#scoped) 특성을 가지고 있는 경우.
 
 ### 구획 콘텐츠
 
@@ -71,9 +71,9 @@ original_slug: Web/HTML/Content_categories
 - {{HTMLElement("area")}}, {{HTMLElement("map")}}의 자손인 경우.
 - {{HTMLElement("del")}}, 구문 콘텐츠만 포함하는 경우.
 - {{HTMLElement("ins")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("link")}}, [`itemprop`](/ko/docs/Web/HTML/Reference/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 - {{HTMLElement("map")}}, 구문 콘텐츠만 포함하는 경우.
-- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Global_attributes#itemprop) 속성을 가지고 있는 경우.
+- {{HTMLElement("meta")}}, [`itemprop`](/ko/docs/Web/HTML/Reference/Global_attributes#itemprop) 속성을 가지고 있는 경우.
 
 ### 내장 콘텐츠
 
@@ -90,11 +90,11 @@ original_slug: Web/HTML/Content_categories
 특정 조건을 만족하는 경우 대화형 콘텐츠에 속하는 요소도 있습니다.
 
 - {{HTMLElement("audio")}}, [`controls`](/ko/docs/Web/HTML/Element/audio#controls) 속성을 가진 경우.
-- {{HTMLElement("img")}}, [`usemap`](/ko/docs/Web/HTML/Element/img#usemap) 속성을 가진 경우.
+- {{HTMLElement("img")}}, [`usemap`](/ko/docs/Web/HTML/Reference/Elements/img#usemap) 속성을 가진 경우.
 - {{HTMLElement("input")}}, [`type`](/ko/docs/Web/HTML/Element/input#type) 속성이 `hidden`이 아닌경우.
-- {{HTMLElement("menu")}}, [`type`](/ko/docs/Web/HTML/Element/menu#type) 속성이 `toolbar`인 경우.
-- {{HTMLElement("object")}}, [`usemap`](/ko/docs/Web/HTML/Element/object#usemap) 속성을 가진 경우.
-- {{HTMLElement("video")}}, [`controls`](/ko/docs/Web/HTML/Element/video#controls) 속성을 가진 경우.
+- {{HTMLElement("menu")}}, [`type`](/ko/docs/Web/HTML/Reference/Elements/menu#type) 속성이 `toolbar`인 경우.
+- {{HTMLElement("object")}}, [`usemap`](/ko/docs/Web/HTML/Reference/Elements/object#usemap) 속성을 가진 경우.
+- {{HTMLElement("video")}}, [`controls`](/ko/docs/Web/HTML/Reference/Elements/video#controls) 속성을 가진 경우.
 
 ### 뚜렷한 콘텐츠
 

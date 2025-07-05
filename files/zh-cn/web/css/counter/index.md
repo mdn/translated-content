@@ -17,7 +17,8 @@ counter(countername, upper-roman)
 
 一个[计数器](/zh-CN/docs/Web/CSS/CSS_lists/Using_CSS_counters)本身没有可见的效果，而是通过`counter()`函数（和[`counters()`](/zh-CN/docs/Web/CSS/counters)函数）返回开发人员定义的字符串（或图像）从而使计数器拥有很棒的作用。
 
-> **备注：** `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
+> [!NOTE]
+> `counter()`函数可以与任何 CSS 属性一起使用，但是对[`"content"`](/zh-CN/docs/Web/CSS/content)以外的属性的支持是试验性的，对 type-or-unit 参数的支持很少。
 >
 > 在使用此功能之前，请仔细检查[浏览器兼容性表](#browser_compatibility)。
 

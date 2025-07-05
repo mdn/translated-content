@@ -474,7 +474,8 @@ Firefox 在版本 78 之前只支持带前缀的伪类，从这个版本以后�
 
 {{EmbedGHLiveSample("learning-area/html/forms/pseudo-classes/readonly-confirmation.html", '100%', 660)}}
 
-> **备注：** `:enabled` 和 `:read-write` 是另外两个可能很少使用的伪类，它们描述了输入元素的默认状态。
+> [!NOTE]
+> `:enabled` 和 `:read-write` 是另外两个可能很少使用的伪类，它们描述了输入元素的默认状态。
 
 ## 单选和复选按钮状态——选中、默认和中间状态
 

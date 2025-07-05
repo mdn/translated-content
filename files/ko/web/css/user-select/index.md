@@ -24,7 +24,6 @@ user-select: unset;
 ## 구문
 
 - `none`
-
   - : 이 요소와 아래 요소의 텍스트를 선택하지 못하도록 막습니다. 단 {{domxref("Selection")}} 객체는 `none`인 요소(와 그 아래)를 포함할 수 있습니다.
 
 - `auto`
