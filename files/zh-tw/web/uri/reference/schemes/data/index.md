@@ -2,27 +2,28 @@
 title: data：URL
 slug: Web/URI/Reference/Schemes/data
 l10n:
-  sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
 
 **Data URL**，即以 `data:` 為前綴的 URL，允許內容創作者將小型檔案內嵌於文件中。它們先前被稱為「資料 URI」，但該名稱已被 WHATWG 廢除。
 
 > [!NOTE]
-> 現代瀏覽器將 Data URI 視為獨立的不透明來源，而非繼承導致導航的設定物件的來源。
+> 現代瀏覽器將 Data URL 視為獨立的不透明來源，而非繼承導致導航的設定物件的來源。
 
 ## 語法
 
-Data URL 由四個部分組成：前綴（`data:`）、表示資料類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)、可選的 `base64` 標記（若為非文字內容），以及資料本身：
-
-```plain
+```url
 data:[<media-type>][;base64],<data>
 ```
 
-`media-type` 是 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)字串，例如 JPEG 圖檔的 `'image/jpeg'`。若省略，則預設為 `text/plain;charset=US-ASCII`。
-
-如果資料包含 [RFC 3986 中定義為保留字元的字元](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)，或者包含空白字元、換行字元或其他不可打印字元，這些字元必須進行{{Glossary("Percent-encoding", "百分比編碼")}}。
-
-如果資料是文字，你可以直接內嵌該文字（根據包裹文件的類型，使用適當的實體或轉義字符）。否則，你可以指定 `base64` 來內嵌以 base64 編碼的二進位資料。你可以在[這裡](/zh-TW/docs/Web/HTTP/Guides/MIME_types)和[這裡](/zh-TW/docs/Web/HTTP/Guides/MIME_types/Common_types)找到更多有關 MIME 類型的資訊。
+- `data:`
+  - : URL 的方案。
+- `<media-type>` {{optional_inline}}
+  - : 表示資料類型的 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)，例如 JPEG 圖檔的 `image/jpeg`。若省略，則預設為 `text/plain;charset=US-ASCII`。你可以在 [MIME 類型的完整剖析](/zh-TW/docs/Web/HTTP/Guides/MIME_types)中找到其結構，並在 [Web 上常見的 MIME 類型表](/zh-TW/docs/Web/HTTP/Guides/MIME_types/Common_types)中找到常見類型。
+- `;base64` {{optional_inline}}
+  - : 表示資料應進行 base64 解碼；參見[將資料編碼為 base64 格式](#將資料編碼為_base64_格式)。
+- `<data>`
+  - : 資料本身。如果資料包含 [RFC 3986 中定義為保留字元的字元](https://datatracker.ietf.org/doc/html/rfc3986#section-2.2)，或包含空格、換行符或其他非列印字元，則這些字元必須經過{{Glossary("Percent-encoding", "百分比編碼")}}。如果資料是文字，你可以嵌入文字（根據封裝文件的類型使用適當的實體或跳脫字元）。否則，你可以指定 `base64` 來嵌入 base64 編碼的二進位資料。
 
 一些範例：
 

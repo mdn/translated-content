@@ -2,7 +2,7 @@
 title: background-attachment
 slug: Web/CSS/background-attachment
 l10n:
-  sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
+  sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---
 
 {{CSSRef}}
@@ -34,16 +34,12 @@ background-attachment: scroll, local;
 ```html interactive-example
 <section id="default-example">
   <div id="example-element">
-    London. Michaelmas term lately over, and the Lord Chancellor sitting in
-    Lincoln's Inn Hall. Implacable November weather. As much mud in the streets
-    as if the waters had but newly retired from the face of the earth, and it
-    would not be wonderful to meet a Megalosaurus, forty feet long or so,
-    waddling like an elephantine lizard up Holborn Hill. London. Michaelmas term
-    lately over, and the Lord Chancellor sitting in Lincoln's Inn Hall.
-    Implacable November weather. As much mud in the streets as if the waters had
-    but newly retired from the face of the earth, and it would not be wonderful
-    to meet a Megalosaurus, forty feet long or so, waddling like an elephantine
-    lizard up Holborn Hill.
+    倫敦。麥可彌撒學期剛結束，大法官正坐鎮於林肯茲印大廳。
+    無情的十一月天氣。街道上滿是泥濘，彷彿洪水剛剛退去一般，
+    若在霍爾本山看到一隻約四十英尺長、像大象般蹣跚行走的巨蜥——甲龍獸，也不足為奇。
+    倫敦。麥可彌撒學期剛結束，大法官正坐鎮於林肯茲印大廳。無情的十一月天氣。
+    街道上滿是泥濘，彷彿洪水剛剛退去一般，
+    若在霍爾本山看到一隻約四十英尺長、像大象般蹣跚行走的巨蜥——甲龍獸，也不足為奇。
   </div>
 </section>
 ```
@@ -112,7 +108,7 @@ background-attachment: unset;
 
 ## 範例
 
-### 簡單範例
+### 基本範例
 
 #### HTML
 
@@ -133,7 +129,7 @@ p {
 
 #### 結果
 
-{{EmbedLiveSample("簡單範例")}}
+{{EmbedLiveSample("基本範例")}}
 
 ### 多重背景圖片
 
