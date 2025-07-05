@@ -2,13 +2,13 @@
 title: 测试你的技能：高级 HTML 文本
 slug: Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 l10n:
-  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
+  sourceCommit: 73a73bc44e12181c778910f3b7d73962e0dd9a29
 ---
 
 本技能测试用于评估你是否理解[如何使用较少为人知的 HTML 元素来标记高级语义特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)。
 
 > [!NOTE]
-> 你可以在此页面的交互式编辑器中或于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/) 或 [Glitch](https://glitch.com/)）中尝试解决方案。
+> 你可以在此页面的交互式编辑器中或于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)）中尝试解决方案。
 >
 > 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
