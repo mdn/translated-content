@@ -91,7 +91,8 @@ yarn content move <from-slug> <to-slug> [locale]
 
 5. 建立你的拉取請求。
 
-> **備註：** `yarn content move` 指令會在 `_redirects.txt` 檔案中新增必要的重新導向，讓舊位置會重新導向到新位置。請勿手動編輯 `_redirects.txt` 檔案！這樣很容易產生錯誤。如果需要新增重新導向但不移動檔案，請在 [MDN Web Docs 溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與 MDN Web Docs 團隊討論。
+> [!NOTE]
+> `yarn content move` 指令會在 `_redirects.txt` 檔案中新增必要的重新導向，讓舊位置會重新導向到新位置。請勿手動編輯 `_redirects.txt` 檔案！這樣很容易產生錯誤。如果需要新增重新導向但不移動檔案，請在 [MDN Web Docs 溝通管道](/zh-TW/docs/MDN/Community/Communication_channels)中與 MDN Web Docs 團隊討論。
 
 ## 刪除頁面
 

@@ -3,8 +3,6 @@ title: Expect
 slug: Web/HTTP/Reference/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 **`Expect`** 是一个请求消息头，包含一个期望条件，表示服务器只有在满足此期望条件的情况下才能妥善地处理请求。
 
 规范中只规定了一个期望条件，即 `Expect: 100-continue`, 对此服务器可以做出如下回应：

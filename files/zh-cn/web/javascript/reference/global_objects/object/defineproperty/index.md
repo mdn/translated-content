@@ -52,9 +52,7 @@ Object.defineProperty(obj, prop, descriptor)
 数据描述符和访问器描述符都是对象。它们共享以下可选键（请注意：在使用 `Object.defineProperty()` 定义属性的情况下，下述所有键都是**默认值**）：
 
 - `configurable`
-
   - : 当设置为 `false` 时，
-
     - 该属性的类型不能在数据属性和访问器属性之间更改，且
     - 该属性不可被删除，且
     - 其描述符的其他属性也不能被更改（但是，如果它是一个可写的数据描述符，则 `value` 可以被更改，`writable` 可以更改为 `false`）。

@@ -27,7 +27,6 @@ La page devtools n'a pas de DOM visible, mais peut inclure des sources JavaScrip
 - Les API DOM normales accessibles via l'objet [`window`](/fr/docs/Web/API/Window) globale
 - Les mêmes [API WebExtension que dans les Scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)
 - Les APIs devtools :
-
   - [`devtools.inspectedWindow`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
   - [`devtools.network`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
   - [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)

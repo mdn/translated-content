@@ -70,7 +70,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques qui peuvent correspondre à cette propriété :
-
   - {{cssxref("border-top-color")}},
   - {{cssxref("border-right-color")}},
   - {{cssxref("border-bottom-color")}},

@@ -3,8 +3,6 @@ title: Firefox 26 for developers
 slug: Mozilla/Firefox/Releases/26
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### CSS

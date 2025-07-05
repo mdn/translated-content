@@ -83,7 +83,6 @@ linear-gradient(45deg, red 0 50%, blue 50% 100%)
 ### Valores
 
 - `<lado-o-esquina>`
-
   - : La posición del punto de inicio de la línea de gradiente. Si se especifica, consiste en la palabra `to` y hasta dos palabras clave: una indica el lado horizontal (`left` o `right`), y la otra el lado vertical (`top` o `bottom`). El orden de las palabras clave de los lados no importa. Si no se especifica, se asume `to bottom`.
 
     Los valores `to top`, `to bottom`, `to left`, y `to right` son equivalentes a los ángulos `0deg`, `180deg`, `270deg`, y `90deg`, respectivamente. Los otros valores se traducen en un ángulo.

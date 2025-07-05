@@ -106,7 +106,6 @@ Si une fonte avec la graisse demandée n'est pas disponible, le moteur suit la m
 - Si un niveau supérieur à `500` est utilisé, c'est la graisse la plus sombre et la plus proche qui sera utilisée (la plus proche s'il n'y a pas de graisse plus forte)
 - Si un niveau inférieur à `400` est utilisé, c'est la graisse la plus claire la plus proche qui est utilisée (la plus proche s'il n'y a pas de graisse plus claire)
 - Si c'est un niveau entre `400` et `500` (inclus) qui est utilisé&nbsp;:
-
   - On cherche les niveaux les plus proches entre la cible et `500`, dans l'ordre croissant.
   - Si aucune correspondance n'est trouvée, on cherche les niveaux inférieurs, dans l'ordre décroissant.
   - Si aucune correspondance n'est trouvée, on cherche les niveaux supérieurs à `500`, dans l'ordre croissant.

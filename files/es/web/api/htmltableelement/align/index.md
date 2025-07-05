@@ -17,9 +17,7 @@ varalignment =HTMLTableElement.align;
 ### Parámetros
 
 - `alignment` {{deprecated_inline}}
-
   - : `alignment` es una cadena con uno de los siguientes valores:
-
     - left
     - center
     - right

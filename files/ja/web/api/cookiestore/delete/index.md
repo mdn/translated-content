@@ -26,9 +26,7 @@ delete(options)
 または
 
 - `options`
-
   - : オブジェクトは以下のプロパティを含みます。
-
     - `name`
       - : Cookie の名前が入っている文字列です。
     - `partitioned` {{Optional_Inline}}

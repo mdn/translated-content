@@ -56,10 +56,9 @@ X-Cache-Info: cached
 
 ## 같이 보기
 
-- [모든 HTTP headers 목록](/ko/docs/Web/HTTP/Headers)
+- [모든 HTTP headers 목록](/ko/docs/Web/HTTP/Reference/Headers)
 - HTTP 명세의 [headers](https://tools.ietf.org/html/rfc7230#section-3.2) 구문
 - [용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("HTTP header")}}
   - {{Glossary("Request header")}}
   - {{Glossary("Response header")}}

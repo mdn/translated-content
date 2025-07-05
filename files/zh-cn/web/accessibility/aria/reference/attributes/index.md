@@ -14,64 +14,64 @@ ARIA 属性用于修改无障碍树中定义的元素的状态和属性。
 
 ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
-1. ### 小部件（widget）特性
+### 微件（widget）特性
 
-   - [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
-   - [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
-   - [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-   - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-   - [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
-   - [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
-   - [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
-   - [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
-   - [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-   - [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
-   - [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
-   - [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
-   - [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
-   - [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
-   - [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
-   - [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
-   - [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
-   - [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
-   - [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
-   - [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)
-   - [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
-   - [`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
-   - [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
-   - [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
+- [`aria-autocomplete`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete)
+- [`aria-checked`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-checked)
+- [`aria-disabled`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
+- [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
+- [`aria-expanded`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
+- [`aria-haspopup`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup)
+- [`aria-hidden`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden)
+- [`aria-invalid`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-invalid)
+- [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [`aria-level`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-level)
+- [`aria-modal`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-multiline`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline)
+- [`aria-multiselectable`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable)
+- [`aria-orientation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation)
+- [`aria-placeholder`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder)
+- [`aria-pressed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
+- [`aria-readonly`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly)
+- [`aria-required`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required)
+- [`aria-selected`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
+- [`aria-sort`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort)
+- [`aria-valuemax`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
+- [`aria-valuemin`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
+- [`aria-valuenow`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow)
+- [`aria-valuetext`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
-2. ### 活动区域特性
+### 活动区域特性
 
-   - [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
-   - [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-   - [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
-   - [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
+- [`aria-busy`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
+- [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
+- [`aria-relevant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
+- [`aria-atomic`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
 
-3. ### 拖放特性
+### 拖放特性
 
-   - [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
-   - [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
+- [`aria-dropeffect`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
+- [`aria-grabbed`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-grabbed)
 
-4. ### 关系特性
+### 关系特性
 
-   - [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
-   - [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
-   - [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
-   - [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
-   - [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
-   - [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
-   - [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
-   - [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
-   - [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
-   - [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
-   - [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
-   - [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
-   - [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
-   - [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
-   - [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
-   - [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
-   - [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
+- [`aria-activedescendant`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-activedescendant)
+- [`aria-colcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colcount)
+- [`aria-colindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex)
+- [`aria-colspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colspan)
+- [`aria-controls`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls)
+- [`aria-describedby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby)
+- [`aria-description`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description)
+- [`aria-details`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details)
+- [`aria-errormessage`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-errormessage)
+- [`aria-flowto`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-flowto)
+- [`aria-labelledby`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby)
+- [`aria-owns`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns)
+- [`aria-posinset`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset)
+- [`aria-rowcount`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount)
+- [`aria-rowindex`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex)
+- [`aria-rowspan`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan)
+- [`aria-setsize`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize)
 
 ## 全局 ARIA 特性
 
@@ -106,7 +106,7 @@ ARIA 的状态和属性（合称为“特性”）共有 4 类：
 
 ## MDN 上介绍的状态和属性
 
-以下是 <abbr title="Mozilla Developer Network">MDN</abbr> 上介绍的 WAI-ARIA 状态和属性。
+以下是 <abbr>MDN</abbr> 上介绍的 <abbr>WAI-ARIA</abbr> 状态和属性。
 
 {{SubpagesWithSummaries}}
 

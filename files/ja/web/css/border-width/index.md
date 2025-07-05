@@ -9,7 +9,7 @@ l10n:
 
 **`border-width`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-width")}}
+{{InteractiveExample("CSS デモ: border-width")}}
 
 ```css interactive-example-choice
 border-width: thick;
@@ -98,9 +98,7 @@ border-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合は、以下の値の何れかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

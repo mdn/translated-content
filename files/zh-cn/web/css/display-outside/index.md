@@ -53,7 +53,6 @@ span {
 ## 参见
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}
   - {{CSSxRef("&lt;display-internal&gt;")}}

@@ -82,7 +82,6 @@ https://maps.google.com/maps/api/js?key=AIzaSyDDuGt0E5IEGkcE6ZfrKfUtE9Ko_de66pA
 
 1. Чтобы начать этот раздел, сделайте себе копию [исходного файла Карт Google](https://github.com/mdn/learning-area/blob/master/javascript/apis/third-party-apis/google-maps/maps_start.html), в новой папке. Если вы уже [клонировали репозиторий примеров](/ru/docs/Learn_web_development#getting_our_code_examples), у вас уже есть копия этого файла, которую вы можете найти в папке the _javascript/apis/third-party-apis/google-maps_.
 2. Затем получите свой собственный ключ разработчика, выполнив следующие шаги:
-
    1. Перейдите в [панель управления API-интерфейсом Google Cloud Platform](https://console.cloud.google.com/apis/dashboard).
    2. Создайте новый проект, если у вас его ещё нет.
    3. Нажмите кнопку _Enable API_.
@@ -375,7 +374,6 @@ There's a lot of code here; let's explain it step by step:
 - The first [`if()`](/ru/docs/Web/JavaScript/Reference/Statements/if...else) block checks to see if 10 articles are returned (the API returns up to 10 articles at a time.) If so, we display the {{htmlelement("nav")}} that contains the _Previous 10_/_Next 10_ pagination buttons. If less than 10 articles are returned, they will all fit on one page, so we don't need to show the pagination buttons. We will wire up the pagination functionality in the next section.
 - The next `if()` block checks to see if no articles are returned. If so, we don't try to display any — we just create a {{htmlelement("p")}} containing the text "No results returned." and insert it into the `<section>`.
 - If some articles are returned, we, first of all, create all the elements that we want to use to display each news story, insert the right contents into each one, and then insert them into the DOM at the appropriate places. To work out which properties in the article objects contained the right data to show, we consulted the [Article Search API reference](https://developer.nytimes.com/article_search_v2.json). Most of these operations are fairly obvious, but a few are worth calling out:
-
   - We used a [for loop](/ru/docs/Web/JavaScript/Reference/Statements/for) (`for(var j = 0; j < current.keywords.length; j++) { ... }` ) to loop through all the keywords associated with each article, and insert each one inside its own {{htmlelement("span")}}, inside a `<p>`. This was done to make it easy to style each one.
   - We used an `if()` block (`if(current.multimedia.length > 0) { ... }`) to check whether each article actually has any images associated with it (some stories don't.) We display the first image only if it actually exists (otherwise an error would be thrown).
   - We gave our \<div> element a class of "clearfix", so we can easily apply clearing to it (this technique is needed at the time of writing to stop floated layouts from breaking.)
