@@ -2,7 +2,7 @@
 title: MediaQueryList
 slug: Web/API/MediaQueryList
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
 {{APIRef("CSSOM")}}
@@ -31,14 +31,14 @@ _`MediaQueryList` 介面繼承其父介面 {{DOMxRef("EventTarget")}} 的方法�
 - {{DOMxRef("MediaQueryList.addListener", "addListener()")}} {{deprecated_inline}}
   - : 新增一個回呼函式到 `MediaQueryList`，每當媒體查詢狀態——也就是文件是否符合列表中的媒體查詢——改變時，該回呼函式就會被調用。這個方法主要是為了向後相容而存在；如果可能，你應該改用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 來監聽 {{domxref("MediaQueryList.change_event", "change")}} 事件。
 - {{DOMxRef("MediaQueryList.removeListener", "removeListener()")}} {{deprecated_inline}}
-  - : 從 `MediaQueryList` 的媒體查詢狀態改變時要調用的回呼函式中，移除指定的監聽器回呼函式。狀態改變發生在文件在符合與不符合 `MediaQueryList` 中所列媒體查詢之間切換的任何時候。這個方法是為了向後相容而保留的；如果可能，你通常應該使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 來移除變更通知的回呼函式（這些回呼函式應該是先前使用 `addEventListener()` 新增的）。
+  - : 從 `MediaQueryList` 的媒體查詢狀態改變（狀態改變發生在文件在符合與不符合 `MediaQueryList` 中所列媒體查詢之間切換的任何時候）時要調用的回呼函式中，移除指定的監聽器回呼函式。這個方法是為了向後相容而保留的；如果可能，你通常應該使用 {{domxref("EventTarget.removeEventListener", "removeEventListener()")}} 來移除變更通知的回呼函式（這些回呼函式應該是先前使用 `addEventListener()` 新增的）。
 
 ## 事件
 
 _下列事件會傳遞至 `MediaQueryList` 物件：_
 
 - {{DOMxRef("MediaQueryList.change_event", "change")}}
-  - : 當對文件執行媒體查詢的結果改變時，會傳送至 `MediaQueryList`。例如，如果媒體查詢是 `(min-width: 400px)`，那麼每當文件{{Glossary("viewport", "視區")}}的寬度改變，以致其寬度向任一方向跨越 400px 的邊界時，`change` 事件就會被觸發。
+  - : 當對文件執行媒體查詢的結果改變時，會傳送至 `MediaQueryList`。例如，如果媒體查詢是 `(width >= 400px)`，那麼每當文件{{Glossary("viewport", "視區")}}的寬度改變，以致其寬度向任一方向跨越 400px 的邊界時，`change` 事件就會被觸發。
 
 ## 範例
 
@@ -46,16 +46,16 @@ _下列事件會傳遞至 `MediaQueryList` 物件：_
 
 ```js
 const para = document.querySelector("p");
-const mql = window.matchMedia("(max-width: 600px)");
+const mql = window.matchMedia("(width <= 400px)");
 
 function screenTest(e) {
   if (e.matches) {
     /* 視區寬度為 600 像素或更小 */
-    para.textContent = "這是一個窄螢幕—寬度小於 600px。";
+    para.textContent = "這是一個窄螢幕——寬度小於 600px。";
     document.body.style.backgroundColor = "red";
   } else {
     /* 視區寬度大於 600 像素 */
-    para.textContent = "這是一個寬螢幕—寬度大於 600px。";
+    para.textContent = "這是一個寬螢幕——寬度大於 600px。";
     document.body.style.backgroundColor = "blue";
   }
 }
