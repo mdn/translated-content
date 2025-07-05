@@ -1,13 +1,6 @@
 ---
 title: "Document: метод elementsFromPoint()"
 slug: Web/API/Document/elementsFromPoint
-tags:
-  - API
-  - DOM
-  - Document
-  - Method
-  - elementsFromPoint
-browser-compat: api.Document.elementsFromPoint
 ---
 
 Метод **`elementsFromPoint()`** интерфейса {{domxref("Document")}} возвращает массив всех элементов, находящихся по указанным координатам (относительно области просмотра). Элементы упорядочены от самого верхнего до самого нижнего в области просмотра.
