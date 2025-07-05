@@ -10,7 +10,7 @@ slug: Web/API/Document/elementsFromPoint
 ## Синтаксис
 
 ```js
-elementsFromPoint(x, y)
+elementsFromPoint(x, y);
 ```
 
 ### Параметры
