@@ -2,7 +2,7 @@
 title: HTML class 全域屬性
 slug: Web/HTML/Reference/Global_attributes/class
 l10n:
-  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -12,13 +12,13 @@ l10n:
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Narrator: This is the beginning of the play.</p>
+<p>旁白：戲劇開始了。</p>
 
-<p class="note editorial">Above point sounds a bit obvious. Remove/rewrite?</p>
+<p class="note editorial">上面這點聽起來有點太明顯了。要刪除或重寫嗎？</p>
 
-<p>Narrator: I must warn you now folks that this beginning is very exciting.</p>
+<p>旁白：各位，我現在必須警告你們，這個開頭非常刺激。</p>
 
-<p class="note">[Lights go up and wind blows; Caspian enters stage right]</p>
+<p class="note">[燈光亮起，風吹起；卡斯比恩從舞台右側進入]</p>
 ```
 
 ```css interactive-example
@@ -28,11 +28,11 @@ l10n:
 }
 
 .editorial {
-  background: rgb(255, 0, 0, 0.25);
+  background: rgb(255 0 0 / 0.25);
   padding: 10px;
 }
 
-.editorial:before {
+.editorial::before {
   content: "Editor: ";
 }
 ```
