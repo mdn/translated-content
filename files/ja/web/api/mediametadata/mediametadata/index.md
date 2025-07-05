@@ -20,9 +20,7 @@ new MediaMetadata(metadata)
 ### 引数
 
 - `metadata` {{optional_inline}}
-
   - : メタデータ引数は次の通りです。
-
     - `title` {{optional_inline}}
       - : 再生されるメディアのタイトル。既定では空文字列 (`""`) です。
     - `artist` {{optional_inline}}

@@ -379,7 +379,6 @@ bold smaller#
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
@@ -390,7 +389,6 @@ bold smaller#
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)

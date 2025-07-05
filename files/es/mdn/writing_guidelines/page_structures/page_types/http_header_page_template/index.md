@@ -39,7 +39,6 @@ l10n:
 > - **status**
 >   - : Banderas que describen el estado de esta característica. Puede contener uno o más de los siguiente valores: `experimental`, `deprecated`, `non-standard` Este valor no debe configurarse manualmente: se configura automáticamente en función de los valores de los datos de compatibilidad del navegador para la característica. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses).
 > - **browser-compat**
->
 >   - : Reemplaza el valor de marcador de posición `path.to.feature.NameOfTheHeader` con la cadena de consulta para el elemento en el [repositorio de datos de compatibilidad con navegadores](https://github.com/mdn/browser-compat-data).
 >     La herramienta utiliza automáticamente la clave para completar la sección de compatibilidad (reemplazando la macro `\{{Compat}}`).
 >

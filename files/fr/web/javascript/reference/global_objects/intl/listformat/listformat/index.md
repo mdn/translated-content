@@ -44,9 +44,7 @@ new Intl.ListFormat(locales, options);
 - `locales` {{optional_inline}}
   - : Une chaîne de caractères représentant une balise de langue BCP 47 ou un tableau de telles balises. Pour la forme générale et l'interprétation de cet argument, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#identification_et_choix_de_la_locale).
 - `options` {{optional_inline}}
-
   - : Un objet avec une ou plusieurs des propriétés suivantes&nbsp;:
-
     - `localeMatcher`
       - : L'algorithme de correspondance des locales à utiliser. Les valeurs possibles sont "`lookup`" et "`best fit`"&nbsp;; la valeur par défaut est "`best fit`". Pour plus d'information, voir la page [`Intl`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Intl#négociation_de_la_locale).
     - `type`

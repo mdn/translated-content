@@ -33,9 +33,7 @@ arr.reduce(callback, valeurInitiale);
 ### Paramètres
 
 - `callback`
-
   - : La fonction à exécuter sur chaque valeur de la liste (sauf le premier si aucune `valeurInitiale` n'est fournie), elle prend quatre arguments en entrée :
-
     - `accumulateur`
       - : La valeur précédemment retournée par le dernier appel du callback, ou `valeurInitiale`, si elle est fournie (voir ci-après) (c'est la valeur « accumulée » au fur et à mesure des appels
     - `valeurCourante`

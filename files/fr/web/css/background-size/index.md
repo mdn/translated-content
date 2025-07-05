@@ -120,7 +120,6 @@ Selon le caractère intrinsèque ou non des dimensions et des proportions, la ta
 - **Si les deux composants de `background-size` sont définis et qu'aucun ne vaut `auto`&nbsp;:** L'image utilise la taille définie.
 - **Si `background-size` vaut `contain` ou `cover`&nbsp;:** L'image est affichée et ses proportions sont conservées pour que l'image soit contenue dans la zone ou la recouvre complètement. Si l'image ne possède pas de proportions intrinsèques&nbsp;; elle est affichée avec la taille de la zone de positionnement de l'arrière-plan.
 - **Si `background-size` vaut `auto` ou `auto auto`&nbsp;:**
-
   - Si l'image possède deux dimensions intrinsèques, c'est cette taille qui est utilisée.
   - Si elle ne possède pas de dimension intrinsèque ni de proportion intrinsèque, elle est affichée avec la taille de la zone dédiée à l'arrière-plan.
   - Si elle n'a aucune dimension mais possède une proportion, elle sera affichée comme si la valeur `contain` avait été utilisée.
@@ -131,7 +130,6 @@ Selon le caractère intrinsèque ou non des dimensions et des proportions, la ta
   > Les images SVG peuvent contenir un attribut [`preserveAspectRatio`](/fr/docs/Web/SVG/Attribute/preserveAspectRatio) pour lequel la valeur par défaut est équivalente à `contain`. Une valeur explicite pour `background-size` permet d'ignorer `preserveAspectRatio`.
 
 - **Si `background-size` possède une composante `auto` et que l'autre composante est différente de `auto`&nbsp;:**
-
   - Si l'image possède une proportion intrinsèque, elle sera affichée avec la dimension indiquée et la deuxième sera calculée grâce à la proportion.
   - Si l'image ne possède aucune proportion intrinsèque, la dimension indiquée sera utilisée pour la dimension concernée et on utilisera la dimension intrinsèque de l'image pour l'autre axe si elle existe. Sinon, on prendra la dimension de la zone de l'arrière-plan pour cet axe.
 

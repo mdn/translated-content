@@ -31,9 +31,7 @@ Les événement ont trois fonctions :
 ### Paramètres
 
 - `function`
-
   - : Fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction passera par l'argument suivant :
-
     - `info`
       - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations de l'extension qui a été désinstallé.
 

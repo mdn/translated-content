@@ -153,7 +153,8 @@ npm run dev                                       # 以开发模式启动应用�
 > [!NOTE]
 > 如果在 `import` 语句中使用 `.ts` 文件扩展名，TypeScript 会抛出错误，因此如果你有名为 `./foo.ts` 的文件，你必须将其导入为 `"./foo"`。更多信息请参阅 TypeScript 手册中的[捆绑程序、TypeScript 运行时和 Node.js 加载器的模块解析](https://www.typescriptlang.org/docs/handbook/modules/theory.html#module-resolution-for-bundlers-typescript-runtimes-and-nodejs-loaders)部分。
 
-> **备注：** [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
+> [!NOTE]
+> [目前尚不支持](https://github.com/sveltejs/svelte/issues/4701)在组件标记部分使用 TypeScript。你需要在标记中使用 JavaScript，并在 `<script lang='ts'>` 部分中使用 TypeScript。
 
 ## 使用 TypeScript 改进开发者体验
 
