@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/Learn/Forms#constraint_validation). Toutefois, à la différence de [`:valid`](/fr/docs/Web/CSS/:valid), cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) CSS **`:user-valid`** représente tout élément de formulaire validé donc la valeur respecte [la validation des contraintes](/fr/docs/conflicting/Learn_web_development/Extensions/Forms#constraint_validation). Toutefois, à la différence de [`:valid`](/fr/docs/Web/CSS/:valid), cette pseudo-classe ne cible l'élément qu'après que la personne a interagi avec.
 
 > [!NOTE]
 > Cette pseudo-classe se comporte de la même façon que la pseudo-classe non-standard `:-moz-ui-valid`.

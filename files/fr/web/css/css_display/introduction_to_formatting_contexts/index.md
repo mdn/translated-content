@@ -35,7 +35,7 @@ Au delà de l'élément racine du document (ici l'élément `html`), un nouveau 
 
 Prenons quelques exemples afin de voir les conséquences de la création d'un nouveau contexte de formatage de bloc.
 
-Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
+Dans le prochain exemple, on a un élément flottant à l'intérieur d'un élément `<div>` où une bordure est appliquée. Le contenu de cet élément `div` flotte avec l'élément flottant. Le contenu de l'élément flottant étant plus grand que le contenu environnant, la bordure du `div` passe sous le contenu flottant. Comme expliqué dans [le guide sur les éléments appartenant ou non au flux](/fr/docs/Web/CSS/CSS_display/In_flow_and_out_of_flow), l'élément flottant a été retiré du flux afin que l'arrière-plan et la bordure du `div` ne contiennent que le contenu et pas l'élément flottant.
 
 {{EmbedGHLiveSample("css-examples/flow/formatting-contexts/float.html", '100%', 720)}}
 
@@ -71,12 +71,12 @@ Ce guide porte sur la disposition de flux et n'aborde pas tous les contextes de 
 
 ## Résumé
 
-Dans ce guide, nous avons approfondi les notions relatives aux contextes de formatage en ligne et de bloc. Dans le prochain guide, nous verrons [les interactions entre le flux normal et les différents modes d'écriture](/fr/docs/Web/CSS/CSS_flow_layout/Flow_layout_and_writing_modes).
+Dans ce guide, nous avons approfondi les notions relatives aux contextes de formatage en ligne et de bloc. Dans le prochain guide, nous verrons [les interactions entre le flux normal et les différents modes d'écriture](/fr/docs/Web/CSS/CSS_display/Flow_layout_and_writing_modes).
 
 ## Voir aussi
 
 - [Contexte de formatage de bloc (ou _Block Formatting Context_ (BFC) en anglais)](/fr/docs/Web/CSS/CSS_display/Block_formatting_context)
-- [Modèle de formatage visuel](/fr/docs/Web/CSS/Visual_formatting_model)
+- [Modèle de formatage visuel](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)
 - [Modèle de boîte CSS](/fr/docs/Web/CSS/CSS_box_model)
 
 {{QuickLinksWithSubpages("/fr/docs/Web/CSS/CSS_Flow_Layout/")}}

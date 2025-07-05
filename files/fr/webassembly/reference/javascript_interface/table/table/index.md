@@ -34,7 +34,7 @@ new WebAssembly.Table(descripteurTable);
 
 ### Créer une nouvelle instance d'une Table WebAssembly
 
-Dans l'exemple suivant (voir [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et [la démo live](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) correspondants), on crée une nouvelle instance d'une table WebAssembly avec une taille initiale de 2 éléments. On affiche alors la longueur de la table et son contenu (grâce à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) pour montrer que la longueur vaut 2 et que les deux éléments sont [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
+Dans l'exemple suivant (voir [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et [la démo live](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) correspondants), on crée une nouvelle instance d'une table WebAssembly avec une taille initiale de 2 éléments. On affiche alors la longueur de la table et son contenu (grâce à [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get) pour montrer que la longueur vaut 2 et que les deux éléments sont [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
 
 ```js
 var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
@@ -53,7 +53,7 @@ var importObj = {
 };
 ```
 
-Enfin, on charge et on instancie un module WASM (table2.wasm) en utilisant la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static). Le module table2.wasm contient deux fonctions (une qui renvoie 42 et l'autre qui renvoie 83) et on stocke ces deux fonctions dans les éléments 0 et 1 de la table importée (voir [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Ainsi, après l'instanciation, la table a toujours une longueur qui vaut 2 et les éléments contiennent désormais [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qu'on peut appeler depuis le code JavaScript.
+Enfin, on charge et on instancie un module WASM (table2.wasm) en utilisant la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static). Le module table2.wasm contient deux fonctions (une qui renvoie 42 et l'autre qui renvoie 83) et on stocke ces deux fonctions dans les éléments 0 et 1 de la table importée (voir [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Ainsi, après l'instanciation, la table a toujours une longueur qui vaut 2 et les éléments contiennent désormais [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Guides/Exported_functions) qu'on peut appeler depuis le code JavaScript.
 
 ```js
 WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
@@ -80,5 +80,5 @@ Dans cet exemple, on illustre la création et l'accès à la table depuis du cod
 ## Voir aussi
 
 - La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Concepts WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

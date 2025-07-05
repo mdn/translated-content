@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy
 
 L'en-tête de réponse HTTP **`Content-Security-Policy`** permet aux administrateurs d'un site web de contrôler les ressources que l'agent utilisateur est autorisé à charger pour une page donnée. Bien qu'il y ait quelques exceptions, ces règles impliquent la plupart du temps de définir les origines du serveur et les points d'accès pour les scripts. Cet en-tête aide à se protéger contre les attaques de _cross-site scripting_ ({{Glossary("XSS")}}).
 
-Pour plus d'informations, voir cet article sur [_Content Security Policy_ (CSP)](/fr/docs/Web/HTTP/CSP).
+Pour plus d'informations, voir cet article sur [_Content Security Policy_ (CSP)](/fr/docs/Web/HTTP/Guides/CSP).
 
 <table class="properties">
   <tbody>
@@ -87,7 +87,7 @@ Les directives de document permettent de paramétrer les propriétés d'un docum
 - {{CSP("plugin-types")}}
   - : Restreint le type de plugin qui peut être intégré dans un document en limitant le type de ressource qui peut être chargé.
 - {{CSP("sandbox")}}
-  - : Active un bac-à-sable (_sandbox_) pour la ressource visée. Cela fonctionne de façon analogue à l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de {{HTMLElement("iframe")}}.
+  - : Active un bac-à-sable (_sandbox_) pour la ressource visée. Cela fonctionne de façon analogue à l'attribut [`sandbox`](/fr/docs/Web/HTML/Reference/Elements/iframe#sandbox) de {{HTMLElement("iframe")}}.
 
 ### Directives de navigation
 
@@ -108,13 +108,13 @@ Les directives de rapport permettent de contrôler ce qui se passe lorsqu'une r�
   - : Indique à l'agent utilisateur de rapporter les tentatives d'enfreintes du CSP. Un rapport d'enfreinte est un ensemble de documents JSON envoyés via une requête HTTP `POST` à l'URI indiquée.
 
 > [!WARNING]
-> Bien que la directive [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) est prévue remplacer la directive **`report-uri`** maintenant dépréciée, [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to) n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), vous pouvez spécifier les deux directives **`report-uri`** et [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to):
+> Bien que la directive [`report-to`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) est prévue remplacer la directive **`report-uri`** maintenant dépréciée, [`report-to`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to) n'est pas encore supportée par la plupart des navigateurs modernes. Par rétrocompatibilité avec les navigateurs courants et tout en prévoyant une compatibilité future quand les navigateurs supporteront [`report-to`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to), vous pouvez spécifier les deux directives **`report-uri`** et [`report-to`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to):
 >
 > ```
 > Content-Security-Policy: ...; report-uri https://endpoint.com; report-to groupname
 > ```
 >
-> Dans les navigateurs qui supportent [`report-to`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/report-to), la directive **`report-uri`** sera ignorée.
+> Dans les navigateurs qui supportent [`report-to`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-to), la directive **`report-uri`** sera ignorée.
 
 - {{CSP("report-to")}}{{experimental_inline}}
   - : Déclenche un évènement `SecurityPolicyViolationEvent`.

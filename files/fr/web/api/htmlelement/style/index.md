@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/style
 
 {{APIRef("CSSOM")}}
 
-La propriété en lecture seule **`style`** renvoie le style _en incise_ d'un élément sous la forme d'un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) contenant une liste de l'ensemble des propriétés de style pour cet élément dont les valeurs sont celles des attributs défini par [l'attribut HTML `style`](/fr/docs/Web/HTML/Global_attributes/style).
+La propriété en lecture seule **`style`** renvoie le style _en incise_ d'un élément sous la forme d'un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) contenant une liste de l'ensemble des propriétés de style pour cet élément dont les valeurs sont celles des attributs défini par [l'attribut HTML `style`](/fr/docs/Web/HTML/Reference/Global_attributes/style).
 
 > [!NOTE]
 > Voir [la référence des propriétés CSS](/fr/docs/Web/CSS/Reference#index_des_mots-clés) pour une liste des propriétés CSS accessibles `style`. La propriété `style` possède la même priorité (la plus haute) dans la cascade que les déclarations de mise en forme effectuées en incise avec l'attribut `style`.
@@ -31,7 +31,7 @@ Une déclaration de style est réinitialisée lorsqu'on lui affecte `null` ou la
 
 ### Obtenir les informations de style
 
-La propriété `style` n'est pas utile pour tout savoir des styles appliqués à l'élément, car elle ne représente que les déclarations CSS appliquées à l'élément via l'attribut HTML `style` et pas celles provenant d'autres sources (comme [`<head>`](/fr/docs/Web/HTML/Element/head) ou surtout les feuilles de styles externes). Pour obtenir l'ensemble des propriétés CSS d'un élément, il faudra plutôt utiliser [`Window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle).
+La propriété `style` n'est pas utile pour tout savoir des styles appliqués à l'élément, car elle ne représente que les déclarations CSS appliquées à l'élément via l'attribut HTML `style` et pas celles provenant d'autres sources (comme [`<head>`](/fr/docs/Web/HTML/Reference/Elements/head) ou surtout les feuilles de styles externes). Pour obtenir l'ensemble des propriétés CSS d'un élément, il faudra plutôt utiliser [`Window.getComputedStyle()`](/fr/docs/Web/API/Window/getComputedStyle).
 
 Le fragment de code qui suit illustre la différence entre les valeurs obtenues avec la propriété `style` et celles obtenues avec la méthode `getComputedStyle()`&nbsp;:
 

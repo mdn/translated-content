@@ -5,7 +5,7 @@ slug: MDN/Community/Learn_forum
 
 {{MDNSidebar}}
 
-Nos pages [Apprendre le développement web](/fr/docs/Learn) obtiennent plus d'un million de vues par mois, et ont [des forums actifs](https://discourse.mozilla.org/c/mdn/learn/250) où les utilisateurs vont pour demander une aide générale, ou demander que leurs évaluations soient notées. Nous aimerions avoir de l'aide pour répondre aux messages et développer notre communauté d'apprentissage.
+Nos pages [Apprendre le développement web](/fr/docs/Learn_web_development) obtiennent plus d'un million de vues par mois, et ont [des forums actifs](https://discourse.mozilla.org/c/mdn/learn/250) où les utilisateurs vont pour demander une aide générale, ou demander que leurs évaluations soient notées. Nous aimerions avoir de l'aide pour répondre aux messages et développer notre communauté d'apprentissage.
 
 ## De quoi avons-nous besoin ?
 
@@ -27,9 +27,9 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Comment aider
 
-1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Community/Contributing/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
+1. Tout d'abord, [créez-vous un compte MDN](/fr/docs/MDN/Community/Getting_started#step_1_create_an_account_on_mdn), si vous n'en avez pas déjà un. Vous n'avez pas nécessairement besoin de le faire pour contribuer à l'espace d'apprentissage, mais cela vous sera utile à long terme.
 2. Inscrivez-vous également à [Mozilla Discourse](https://discourse.mozilla.org/), si ce n'est pas déjà fait.
-3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
+3. Jetez un coup d'œil à la section [Apprendre le développement web](/fr/docs/Learn_web_development) et acquérez un niveau de familiarité de base avec ce qui s'y trouve, si ce n'est pas déjà fait (voir la section [Structure de l'espace d'apprentissage MDN](Structure_of_the_MDN_Learning_Area) ci-dessous pour vous aider).
 
 ### Une fois que vous êtes prêt
 
@@ -59,12 +59,12 @@ Dans le [forum d'apprentissage du MDN](https://discourse.mozilla.org/c/mdn/learn
 
 ## Structure de l'espace d'apprentissage MDN
 
-Lorsque vous aidez à répondre aux questions liées à la section [Apprendre le développement web](/fr/docs/Learn) de MDN, il est bon d'y jeter un coup d'œil et d'acquérir un niveau de familiarité de base avec ce qui s'y trouve.
+Lorsque vous aidez à répondre aux questions liées à la section [Apprendre le développement web](/fr/docs/Learn_web_development) de MDN, il est bon d'y jeter un coup d'œil et d'acquérir un niveau de familiarité de base avec ce qui s'y trouve.
 
 1. Examinez la structure de la page en général.
 2. Regardez en particulier les types d'évaluations disponibles,
-   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#test_your_skills!))
-   - Aux évaluations plus approfondies à la fin de certains modules (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+   - À partir des nombreux articles "testez vos compétences" disponibles (voir par exemple [/fr/docs/Learn/JavaScript/Building_blocks/conditionals#Test_your_skills!](/fr/docs/Learn_web_development/Core/Scripting/Conditionals#test_your_skills!))
+   - Aux évaluations plus approfondies à la fin de certains modules (voir par exemple [/fr/docs/Learn_web_development/Core/Scripting/Image_gallery](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery))
 
 3. Jetez un œil aux dépôts GitHub associés à la zone d'apprentissage (la plupart des fichiers sont disponibles dans <https://github.com/mdn/learning-area/>, certains sont dans <https://github.com/mdn/css-examples/tree/master/learn>). La plupart des exemples sur lesquels les apprenants voudront de l'aide sont contenus ici.
 4. Chaque évaluation/épreuve de compétence est associée à un guide de notation et à une solution recommandée pour vous aider à évaluer leur travail.

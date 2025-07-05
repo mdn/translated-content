@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/area
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Element/map).
+L'élément HTML **`<area>`** définit une zone particulière d'une image et peut lui associer un [lien hypertexte](/fr/docs/Glossary/Hyperlink). Cet élément n'est utilisé qu'au sein d'un élément [`<map>`](/fr/docs/Web/HTML/Reference/Elements/map).
 
 {{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
 
@@ -123,7 +123,7 @@ img {
 
 ## Attributs
 
-Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - **`alt`**
   - : Une chaîne de texte alternative à afficher sur les navigateurs qui n'affichent pas les images. Le texte doit être formulé de manière à offrir à l'utilisateur le même type de choix que l'image lorsqu'elle est affichée sans le texte alternatif. Cet attribut est requis uniquement si l'attribut [`href`](#attr-href) est utilisé.
@@ -143,13 +143,13 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     Les valeurs sont exprimées en nombre de pixels CSS.
 
 - **`download`**
-  - : Cet attribut, s'il est présent, indique que l'auteur souhaite que l'hyperlien soit utilisé pour télécharger une ressource. Voir [`<a>`](/fr/docs/Web/HTML/Element/a) pour une description complète de l'attribut [`download`](/fr/docs/Web/HTML/Element/a#attr-download).
+  - : Cet attribut, s'il est présent, indique que l'auteur souhaite que l'hyperlien soit utilisé pour télécharger une ressource. Voir [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) pour une description complète de l'attribut [`download`](/fr/docs/Web/HTML/Reference/Elements/a#attr-download).
 - **`href`**
   - : Le lien hypertexte porté par la zone d'intérêt. Ce doit être une URL valide. Cet attribut peut être absent et dans ce cas, la zone d'intérêt ne représente pas de lien hypertexte.
 - **`hreflang`**
   - : Cet attribut indique la langue du contenu vers lequel le lien renvoie. Les valeurs autorisées pour cet attribut sont définies par [BCP47](https://www.ietf.org/rfc/bcp/bcp47.txt). Cet attribut doit uniquement être utilisé lorsque `href` est présent.
 - **`ping`**
-  - : Cet attribut contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes HTTP [`POST`](/fr/docs/Web/HTTP/Methods/POST) dont le corps vaut `PING` lors du clic sur le lien. Les requêtes sont envoyées en arrière-plan. Cet attribut est généralement utilisé à des fins de pistage.
+  - : Cet attribut contient une liste d'URL séparées par des espaces vers lesquelles sont envoyées des requêtes HTTP [`POST`](/fr/docs/Web/HTTP/Reference/Methods/POST) dont le corps vaut `PING` lors du clic sur le lien. Les requêtes sont envoyées en arrière-plan. Cet attribut est généralement utilisé à des fins de pistage.
 - **`referrerpolicy`** {{experimental_inline}}
   - : Une chaîne de caractères qui indique le référent (_referrer_) à utiliser lors de la récupération de la ressource :
     - « `no-referrer` » indique que l'en-tête `Referer` ne sera pas envoyé.
@@ -159,7 +159,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     - « `unsafe-url` » indique que le référent envoyé inclura l'origine et le chemin (mais pas le fragment, le mot de passe ou le nom d'utilisateur). Ce cas n'est pas considéré comme sûr, car il peut laisser fuiter des origines et des chemins de ressources protégées par TLS vers des origines non-sécurisées.
 
 - **`rel`**
-  - : Pour les ancres contenant l'attribut **`href`**, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des [différentes relations](/fr/docs/Web/HTML/Attributes/rel) dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
+  - : Pour les ancres contenant l'attribut **`href`**, cet attribut définit la relation entre l'objet ciblé et l'objet lié. La valeur est une liste des [différentes relations](/fr/docs/Web/HTML/Reference/Attributes/rel) dont les valeurs sont séparées par des espaces. Les valeurs et leurs significations peuvent être enregistrées par une autorité jugée utile par l'auteur du document. La valeur par défaut est la relation vide. Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
 - **`shape`**
   - : La forme de la zone d'intérêt. Les spécifications HTML5 et HTML4 définissent les valeurs `rect` (zone rectangulaire), `circle` (zone circulaire), `poly` (zone polygonale) et `default` (indiquant toute la zone). Beacuoup de navigateurs, comme Internet Explorer 4 et ultérieur, supportent les valeurs `circ`, `polygon` et `rectangle` pour l'attribut `shape`, mais ces valeurs ne sont pas standard.
 - **`target`**
@@ -172,7 +172,7 @@ Cet élément inclut les [attributs universels](/fr/docs/Web/HTML/Global_attribu
     Cet attribut doit uniquement être utilisé si l'attribut [`href`](#attr-href) est présent.
 
     > [!NOTE]
-    > La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
+    > La définition de `target="_blank"` sur les éléments `<area>` fournit implicitement le même comportement `rel` que la définition de [`rel="noopener"`](/fr/docs/Web/HTML/Reference/Attributes/rel/noopener) qui ne définit pas `window.opener`. Voir la [compatibilité des navigateurs](#browser_compatibility) pour les informations sur son support.
 
 ### Attributs dépréciés ou obsolètes
 

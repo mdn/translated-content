@@ -28,6 +28,6 @@ Lorsqu'ils rencontrent cette erreur, les navigateurs abandonnent généralement 
 
 ## Voir aussi
 
-- [`206 Partial Content`](/fr/docs/Web/HTTP/Status/206)
+- [`206 Partial Content`](/fr/docs/Web/HTTP/Reference/Status/206)
 - [`Content-Range`](/fr/docs/Web/HTTP/Headers/Content-Range)
 - [`Range`](/fr/docs/Web/HTTP/Headers/Range)

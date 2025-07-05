@@ -14,7 +14,7 @@ Ce guide donne un aperçu des types de fichiers médias, {{Glossary("codec", "co
 
 ### Images
 
-- [Guide des types et formats de fichiers d'images](/fr/docs/Web/Media/Formats/Image_types)
+- [Guide des types et formats de fichiers d'images](/fr/docs/Web/Media/Guides/Formats/Image_types)
   - : Couvre la prise en charge des types de fichiers d'images et des formats de contenu dans les principaux navigateurs web, et fournit des informations de base sur chaque type : avantages, limites et cas d'utilisation intéressant les concepteurs et les développeurs web.
 - [Types de fichiers d'images pour les concepteurs de sites web](/fr/docs/Web/Media/Formats/Images_for_web_designers)
   - : Des informations fondamentales sur les différents types de fichiers d'images qui peuvent être utiles aux concepteurs de sites web, y compris les meilleures pratiques et les cas d'utilisation pour chaque type, et des lignes directrices pour choisir le bon format de fichier d'image pour des types de contenu spécifiques.
@@ -43,9 +43,9 @@ Ce guide donne un aperçu des types de fichiers médias, {{Glossary("codec", "co
 
 ### Tutoriels et modes d'emploi
 
-- [Apprendre : Contenu vidéo et audio](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Apprendre : Contenu vidéo et audio](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
   - : Ce tutoriel présente et détaille l'utilisation des médias sur le web.
-- [Traiter les questions de soutien aux médias dans le contenu web](/fr/docs/Web/Media/Formats/Support_issues)
+- [Traiter les questions de soutien aux médias dans le contenu web](/fr/docs/Web/Media/Guides/Formats/Support_issues)
   - : Dans ce guide, nous examinons comment construire un contenu web qui maximise la qualité ou les performances tout en offrant la compatibilité la plus large possible, en choisissant judicieusement les formats des médias et en proposant des solutions de repli et des formats alternatifs là où cela serait utile.
 
 ## Autres sujets

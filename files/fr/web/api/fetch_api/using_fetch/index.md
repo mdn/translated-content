@@ -9,7 +9,7 @@ l10n:
 
 [L'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (en anglais, le verbe <i lang="en">fetch</i> signifie récupérer) fournit une interface JavaScript pour accéder et manipuler certaines parties du [protocole](/fr/docs/Glossary/Protocol), comme les requêtes et les réponses. Elle fournit également une méthode globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui permet un accès pratique aux ressources récupérées de façon asynchrone sur le réseau.
 
-À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/CORS) et d'autres extensions de HTTP.
+À la différence de [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) qui fonctionne à l'aide de fonctions de rappel (<i lang="en">callbacks</i>), l'API <i lang="en">Fetch</i> utilise les promesses et fournit une meilleure alternative, qui peut être utilisée dans [les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API). L'API <i lang="en">Fetch</i> intègre également des concepts HTTP avancés tels que [le CORS](/fr/docs/Web/HTTP/Guides/CORS) et d'autres extensions de HTTP.
 
 Une requête de récupération ressemblera à ceci&nbsp;:
 
@@ -28,7 +28,7 @@ L'objet [`Response`](/fr/docs/Web/API/Response) ne contient pas directement le c
 > [!NOTE]
 > Voir la section [corps](#corps) pour d'autres méthodes permettant d'extraire d'autres types de contenu du corps de la réponse.
 
-Les requêtes de récupération sont contrôlées par la directive `connect-src` de [la politique de sécurité du contenu (<i lang="en">Content Security Policy</i> ou CSP)](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qu'elles récupèrent.
+Les requêtes de récupération sont contrôlées par la directive `connect-src` de [la politique de sécurité du contenu (<i lang="en">Content Security Policy</i> ou CSP)](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) plutôt que par la directive de la ressource qu'elles récupèrent.
 
 ## Fournir des options à la requête
 
@@ -109,7 +109,7 @@ fetch("https://example.com", {
 > On ne pourra pas utiliser `Access-Control-Allow-Origin: *` pour les requêtes avec `credentials: 'include'`. Pour ces cas-là, il faut fournir l'origine exacte. Même si une extension de débridage du CORS est utilisée, la requête échouera.
 
 > [!NOTE]
-> Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/CORS#requêtes_avec_informations_dauthentification).
+> Les navigateurs ne devraient pas envoyer d'informations d'authentification dans les _requêtes préparatoires_ (<i lang="en">preflight requests</i>), quelle que soit la valeur de cette option. Pour plus d'informations, voir [la section de la page CORS sur les requêtes avec informations d'authentification](/fr/docs/Web/HTTP/Guides/CORS#requêtes_avec_informations_dauthentification).
 
 Si on souhaite uniquement envoyer les informations d'authentification lorsque l'URL de la requête se situe sur la même origine que le script appelant, on utilisera `credentials: 'same-origin'`.
 
@@ -157,7 +157,7 @@ postJSON(donnees);
 
 ## Téléverser un fichier
 
-Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Element/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
+Les fichiers peuvent être envoyés à l'aide d'un élément HTML [`<input type="file" />`](/fr/docs/Web/HTML/Reference/Elements/input/file), de [`FormData`](/fr/docs/Web/API/FormData/FormData), et de [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function upload(donneesFormulaires) {
@@ -184,7 +184,7 @@ upload(donneesFormulaires);
 
 ## Téléverser plusieurs fichiers
 
-On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Element/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
+On peut envoyer plusieurs fichiers en utilisant un élément HTML [`<input type="file" multiple />`](/fr/docs/Web/HTML/Reference/Elements/input/file), [`FormData`](/fr/docs/Web/API/FormData/FormData), et [`fetch()`](/fr/docs/Web/API/Window/fetch).
 
 ```js
 async function uploadMultiple(donneesFormulaires) {
@@ -501,7 +501,7 @@ La spécification de `fetch()` diffère de `jQuery.ajax()`&nbsp;:
 ## Voir aussi
 
 - [L'API <i lang="en">Service Worker</i>](/fr/docs/Web/API/Service_Worker_API)
-- [La politique HTTP d'accès aux ressources entre origines (CORS)](/fr/docs/Web/HTTP/CORS)
+- [La politique HTTP d'accès aux ressources entre origines (CORS)](/fr/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/fr/docs/Web/HTTP)
 - [Une prothèse d'émulation (<i lang="en">polyfill</i>) pour `fetch()`](https://github.com/JakeChampion/fetch)
 - [D'autres exemples (en anglais) sur d'utilisation de <i lang="en">Fetch</i> sur GitHub](https://github.com/mdn/dom-examples/tree/main/fetch)
