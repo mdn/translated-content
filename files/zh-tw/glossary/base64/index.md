@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**Base64** 是一組相似的[二進位到文字編碼](https://en.wikipedia.org/wiki/Binary-to-text_encoding)系統，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#內容傳輸編碼)。
+**Base64** 是一組相似的[二進位到文字編碼](https://en.wikipedia.org/wiki/Binary-to-text_encoding)方案，透過將二進位資料轉換為底數為 64，使結果表示為 {{glossary("ASCII")}} 字串格式。_Base64_ 這個術語源自於一種特定的 [MIME 內容傳送編碼](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展#内容传输编码)。
 
-Base64 編碼系統常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
+Base64 編碼方案常用於將二進位資料進行編碼，以便在只能處理 ASCII 文字（或某種超集但仍無法接受任意二進位資料）的媒體上儲存或傳輸。這可確保資料在傳輸過程中保持完整且未被修改。Base64 的常見應用包括：
 
 - 透過 [MIME](https://zh.wikipedia.org/wiki/多用途互聯網郵件擴展) 發送電子郵件
 - 在 [XML](/zh-TW/docs/Web/XML) 中儲存複雜資料
