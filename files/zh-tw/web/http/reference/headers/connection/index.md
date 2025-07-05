@@ -3,8 +3,6 @@ title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
 ---
 
-{{HTTPSidebar}}
-
 **`Connection`** 標頭用來控制在本次事務（transaction）後，連線是否要繼續開著。如果設定為 `keep-alive` ，
 則連線繼續開著，讓接下來送往同一伺服器的請求利用。
 

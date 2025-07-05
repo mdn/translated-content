@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`303 See Other`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示瀏覽器應該根據 {{HTTPHeader("Location")}} 標頭中的 URL 進行重新導向，而不是連結到所請求的資源本身。
 
 這個回應碼通常作為 {{HTTPMethod("PUT")}} 或 {{HTTPMethod("POST")}} 方法的結果發送回來，讓用戶端可以取得確認頁面，或查看真實世界物件的表示（參見 [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)）。用於取得重新導向資源的方法總是 {{HTTPMethod("GET")}}。

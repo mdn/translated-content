@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Authorization`** {{Glossary("request header", "請求標頭")}}可以用來提供憑證，以便用戶代理與伺服器進行驗證，從而訪問受保護的資源。
 
 `Authorization` 標頭通常（但不總是）在用戶代理第一次嘗試在沒有憑證的情況下請求受保護的資源後發送。伺服器會返回一個 {{HTTPStatus("401", "401 Unauthorized")}} 訊息，其中包含至少一個 {{HTTPHeader("WWW-Authenticate")}} 標頭。這個標頭指出可以使用哪些驗證方案來訪問資源以及用戶端使用這些方案所需的任何附加訊息。用戶代理應從提供的方案中選擇其支持的最安全的驗證方案，提示用戶輸入憑證，然後重新請求資源（在 `Authorization` 標頭中包含編碼的憑證）。

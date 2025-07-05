@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`203 Non-Authoritative Information`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求成功，但*轉換*[_代理伺服器_](/zh-TW/docs/Glossary/Proxy_server)修改了原始伺服器 {{HTTPStatus("200")}}（`OK`）回應的標頭或附加內容。
 
 此狀態碼的目的是允許轉換代理伺服器在對成功回應套用變更時通知用戶端，因為這可能會影響後續對內容的決策。對訊息的轉換可能意味著修改標頭以表示資源來自鏡像或備份，但也可能意味著以推測對用戶端有利的方式修改內容。這些修改可能包含惡意軟體過濾、格式轉碼、隱私過濾，或為用戶端提供關於未來請求的其他提示。

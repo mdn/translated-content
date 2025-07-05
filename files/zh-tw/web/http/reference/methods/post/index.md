@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `POST` 方法**將數據發送到服務器。請求主體的類型由 {{HTTPHeader("Content-Type")}} 標頭指示。
 
 {{HTTPMethod("PUT")}} 和 `POST` 之間的區別在於 `PUT` 是幂等的：調用一次或多次連續調用具有相同效果（即沒有*副*作用），而連續相同的 `POST` 可能會產生額外的效果，例如多次提交訂單。

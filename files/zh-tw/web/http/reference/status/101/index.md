@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`101 Switching Protocols`** [資訊回應](/zh-TW/docs/Web/HTTP/Reference/Status#資訊回應)狀態碼表示伺服器已切換到的協定。協定是從用戶端接收到的 {{HTTPHeader("Upgrade")}} 請求標頭中指定的。
 
 伺服器在此回應中包含一個 {{HTTPHeader("Upgrade")}} 回應標頭，以指示它同意切換到的協定。該過程在[協定升級機制](/zh-TW/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)指南中有詳細描述。

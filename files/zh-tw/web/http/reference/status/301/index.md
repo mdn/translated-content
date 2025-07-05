@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`301 Moved Permanently`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示所請求的資源已被永久地移動到 {{HTTPHeader("Location")}} 標頭中的 URL。
 
 收到此狀態的瀏覽器會自動請求 `Location` 標頭中 URL 的資源，將使用者重新導向到新頁面。收到此回應的搜尋引擎會將原始 URL 的連結歸屬於重新導向的資源，並將 {{Glossary("SEO")}} 排名傳遞給新的 URL。

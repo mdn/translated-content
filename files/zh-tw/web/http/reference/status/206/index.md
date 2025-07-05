@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`206 Partial Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼是為了回應[範圍請求](/zh-TW/docs/Web/HTTP/Guides/Range_requests)而發送的。回應主體包含請求的 {{HTTPHeader("Range")}} 標頭中所指定的資料範圍。
 
 回應的格式取決於請求的範圍數量。如果只請求了一個範圍，則整個回應的 {{HTTPHeader("Content-Type")}} 會設為文件的類型，並提供一個 {{HTTPHeader("Content-Range")}}。如果請求了多個範圍，則 {{HTTPHeader("Content-Type")}} 會設為 `multipart/byteranges`，且每個片段都涵蓋一個範圍，並帶有其各自的 {{HTTPHeader("Content-Range")}} 和 {{HTTPHeader("Content-Type")}} 標頭來描述它。

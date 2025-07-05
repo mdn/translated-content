@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 **`X-Robots-Tag`** {{Glossary("response header", "回應標頭")}}定義了{{glossary("Crawler", "爬蟲")}}應如何索引 URL。雖然未屬於任何正式規範，但它是一種事實上的標準方法，用於與搜尋機器人、網路爬蟲及類似的使用者代理進行溝通。搜尋相關的爬蟲會根據 `X-Robots-Tag` 標頭中的規則調整如何在搜尋結果中呈現網頁或其他資源。
 
 透過 `<meta name="robots">` 元素及 `X-Robots-Tag` 標頭定義的索引規則，會在 URL 被爬取時被發現。

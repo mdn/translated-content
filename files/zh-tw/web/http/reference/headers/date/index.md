@@ -3,8 +3,6 @@ title: Date
 slug: Web/HTTP/Reference/Headers/Date
 ---
 
-{{HTTPSidebar}}
-
 **`Date`** 標頭的值是傳送當下的日期與時間。
 
 > [!WARNING]

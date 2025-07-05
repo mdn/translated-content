@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 7e52ccf8751ee9f4b3dd4a466979418af48c1fbe
 ---
 
-{{HTTPSidebar}}
-
 本主題列出了最常見的 MIME 類型及其對應的文件類型，並按其常見的副檔名排序。
 
 以下兩種重要的 MIME 類型是預設類型：

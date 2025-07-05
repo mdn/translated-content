@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`307 Temporary Redirect`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示所請求的資源已暫時移至由 {{HTTPHeader("Location")}} 標頭指定的 URL。
 
 當瀏覽器收到此狀態碼時，會自動請求 `Location` 標頭提供的 URL 所在的資源，將使用者重新導向到新的頁面。搜尋引擎在收到此回應時，不會將指向原始 URL 的連結歸屬於新資源，這表示 SEO 值不會轉移到新的 URL。

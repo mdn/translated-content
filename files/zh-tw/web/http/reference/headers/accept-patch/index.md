@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 48d9e84c6473101112582296ee4c6e3d960a2f79
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Patch`** HTTP 回應標頭用來宣告伺服器在 PATCH 請求中能夠理解哪些媒體類型。
 
 當伺服器回應任何方法時，**`Accept-Patch`** 表示在由請求 URI 所標示的資源上允許使用 PATCH。以下兩種常見情況會導致這種情況：

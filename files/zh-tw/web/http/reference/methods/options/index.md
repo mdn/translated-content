@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`OPTIONS`** 方法用於請求給定 URL 或伺服器的允許通訊選項。此方法可用來測試該請求允許的 HTTP 方法，或用於判斷在進行 CORS 預檢請求時該請求是否會成功。用戶端可以使用此方法指定 URL，或使用星號（`*`）來指代整個伺服器。
 
 <table class="properties">

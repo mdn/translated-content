@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`428 Precondition Required`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器要求請求是[有條件的](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)。
 
 通常 428 回應意味著必要的先決條件標頭（例如 {{HTTPHeader("If-Match")}}）的**缺失**。當先決條件標頭與伺服器端狀態**不匹配**時，回應應為 {{HTTPStatus("412", "412 Precondition Failed")}}。
