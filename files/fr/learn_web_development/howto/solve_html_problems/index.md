@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Howto
 
 {{LearnSidebar}}
 
-Une fois [les bases acquises](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics), il n'existe pas de voie idéale pour apprendre {{Glossary("HTML")}}. Vous pouvez ensuite progresser à votre rythme, en utilisant les balises qui vous sont utiles. HTML n'est qu'un ensemble de balises que vous pouvez utiliser pour structurer votre document et lui ajouter des fonctionnalités supplémentaires. Dans les articles suivants, nous travaillerons sur différents exemples illustrant comment utiliser HTML pour résoudre des problèmes fréquents qu'on rencontre lorsqu'on développe pour le Web. Si vous avez besoin d'explications détaillées sur une balise HTML donnée, n'hésitez pas à consulter [notre référence HTML](/fr/docs/Web/HTML/Reference).
+Une fois [les bases acquises](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content), il n'existe pas de voie idéale pour apprendre {{Glossary("HTML")}}. Vous pouvez ensuite progresser à votre rythme, en utilisant les balises qui vous sont utiles. HTML n'est qu'un ensemble de balises que vous pouvez utiliser pour structurer votre document et lui ajouter des fonctionnalités supplémentaires. Dans les articles suivants, nous travaillerons sur différents exemples illustrant comment utiliser HTML pour résoudre des problèmes fréquents qu'on rencontre lorsqu'on développe pour le Web. Si vous avez besoin d'explications détaillées sur une balise HTML donnée, n'hésitez pas à consulter [notre référence HTML](/fr/docs/Web/HTML/Reference).
 
 ## Cas d'utilisation fréquents
 
@@ -16,48 +16,48 @@ HTML permet de résoudre de nombreux problèmes qui se posent lors de la concept
 
 En HTML, tout commence par la structure du document. Si vous débutez avec HTML, vous devriez démarrer avec :
 
-- [Comment créer un document HTML simple](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [Comment diviser une page web en sections logiques](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-- [Comment organiser une hiérarchie de titres](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
+- [Comment créer un document HTML simple](/fr/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax)
+- [Comment diviser une page web en sections logiques](/fr/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)
+- [Comment organiser une hiérarchie de titres](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)
 
 ### Sémantique de base pour le texte
 
 Le but de HTML est de fournir des informations sémantiques (c'est-à-dire sur le sens) d'un document et de ce qui le compose. HTML permettra donc de répondre à de nombreuses questions sur le sens du texte qu'on veut utiliser dans un document.
 
-- [Comment créer une liste d'éléments en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)
-- [Comment faire pour accentuer un contenu](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [Comment indiquer qu'un texte est important](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Emphasis_and_importance)
-- [Comment afficher du code informatique avec HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Representing_computer_code)
+- [Comment créer une liste d'éléments en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists)
+- [Comment faire pour accentuer un contenu](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance)
+- [Comment indiquer qu'un texte est important](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Emphasis_and_importance)
+- [Comment afficher du code informatique avec HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Representing_computer_code)
 - [Comment indiquer une notation exponentielle avec HTML](/fr/docs/Learn/HTML/Howto/Indicate_exponential_notation_with_HTML)
 - [Comment fournir des informations de contact dans une page web](/fr/docs/Learn/HTML/Howto/Provide_contact_information_within_a_webpage)
-- [Comment annoter des images et des graphiques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#Annotating_images_with_figures_and_figure_captions)
-- [Comment marquer des abréviations et les rendre compréhensibles](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Abbreviations)
-- [Comment ajouter des citations à une page web](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting#Quotations)
-- [Comment définir des termes en HTML](/fr/docs/Learn/HTML/Howto/Define_terms_with_HTML)
+- [Comment annoter des images et des graphiques](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images#Annotating_images_with_figures_and_figure_captions)
+- [Comment marquer des abréviations et les rendre compréhensibles](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Abbreviations)
+- [Comment ajouter des citations à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#Quotations)
+- [Comment définir des termes en HTML](/fr/docs/Web/HTML/How_to/Define_terms_with_HTML)
 
 ### Les hyperliens
 
 Les {{Glossary("hyperlien", "hyperliens")}} rendent la navigation très simple sur le web, ils peuvent être utilisés de différentes façons :
 
-- [Comment créer un hyperlien](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-- [Comment créer une table des matières en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#Lists)
+- [Comment créer un hyperlien](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links)
+- [Comment créer une table des matières en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#Lists)
 
 ### Images et multimédia
 
-- [Comment ajouter des images à une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML#How_do_we_put_an_image_on_a_webpage)
-- [Comment ajouter une vidéo à une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
-- [Comment ajouter un contenu audio à une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)
+- [Comment ajouter des images à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images#How_do_we_put_an_image_on_a_webpage)
+- [Comment ajouter une vidéo à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
+- [Comment ajouter un contenu audio à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)
 
 ### Script et mise en forme
 
 HTML ne permet que de gérer la structure et le contenu d'un document. Pour régler les aspects de styles, on utilisera du {{glossary("CSS")}}, pour l'aspect interactif et script, on utilisera {{glossary("JavaScript")}}.
 
 - [Comment utiliser CSS dans une page web](/fr/docs/Learn/HTML/Howto/Use_CSS_within_a_webpage)
-- [Comment utiliser JavaScript dans une page web](/fr/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage)
+- [Comment utiliser JavaScript dans une page web](/fr/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
 
 ### Intégrer du contenu
 
-- [Comment intégrer une page web dans une autre page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies)
+- [Comment intégrer une page web dans une autre page web](/fr/docs/Learn_web_development/Core/Structuring_content/General_embedding_technologies)
 - [Comment ajouter du contenu Flash dans une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies#The_<embed>_and_<object>_elements)
 
 ## Problèmes avancés ou rares
@@ -66,10 +66,10 @@ Au-delà des briques de bases qu'on peut assembler dans les exemples précédent
 
 ### Les formulaires
 
-Les formulaires correspondent à une structure HTML complexe qui permet d'envoyer des données d'une page web vers un serveur web. Nous vous invitons à suivre [le guide dédié aux formulaires](/fr/docs/Learn/Forms). Vous pouvez commencer ici :
+Les formulaires correspondent à une structure HTML complexe qui permet d'envoyer des données d'une page web vers un serveur web. Nous vous invitons à suivre [le guide dédié aux formulaires](/fr/docs/conflicting/Learn_web_development/Extensions/Forms). Vous pouvez commencer ici :
 
-- [Comment créer un formulaire web simple](/fr/docs/Learn/Forms/Your_first_form)
-- [Comment organiser un formulaire web](/fr/docs/Learn/Forms/How_to_structure_a_web_form)
+- [Comment créer un formulaire web simple](/fr/docs/Learn_web_development/Extensions/Forms/Your_first_form)
+- [Comment organiser un formulaire web](/fr/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form)
 
 ### Les informations tabulaires
 
@@ -97,9 +97,9 @@ Certaines informations doivent être organisées en tableaux, sur des colonnes e
 
 ### Images et multimédia avancés
 
-- [Comment ajouter une image adaptative (_responsive_) à une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Comment ajouter une image vectorielle à une page web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web)
-- [Comment ajouter une cartes de zones cliquables sur une image](/fr/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
+- [Comment ajouter une image adaptative (_responsive_) à une page web](/fr/docs/Web/HTML/Guides/Responsive_images)
+- [Comment ajouter une image vectorielle à une page web](/fr/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
+- [Comment ajouter une cartes de zones cliquables sur une image](/fr/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
 - [Comment créer des images dynamiques et interactives](/fr/docs/Learn/HTML/Howto/Create_dynamic_and_interactive_images)
 
 ### L'internationalisation

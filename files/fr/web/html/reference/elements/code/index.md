@@ -99,7 +99,7 @@ code {
 
 ## Attributs
 
-Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend uniquement en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Exemples
 
@@ -118,7 +118,7 @@ Un paragraphe de texte qui contient `<code>` :
 
 ## Notes
 
-Pour représenter plusieurs lignes de code, enveloppez l'élément `<code>` dans un élément [`<pre>`](/fr/docs/Web/HTML/Element/pre). L'élément `<code>` en lui-même ne représente qu'une seule phrase de code ou ligne de code.
+Pour représenter plusieurs lignes de code, enveloppez l'élément `<code>` dans un élément [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre). L'élément `<code>` en lui-même ne représente qu'une seule phrase de code ou ligne de code.
 
 Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer la fonte par défaut du navigateur. Les préférences définies par l'utilisateur peuvent avoir la priorité sur la règle CSS spécifiée.
 
@@ -132,7 +132,7 @@ Une règle CSS peut être définie pour le sélecteur `code` afin de remplacer l
 
 ## Voir aussi
 
-- L'élément [`<samp>`](/fr/docs/Web/HTML/Element/samp)
-- L'élément [`<kbd>`](/fr/docs/Web/HTML/Element/kbd)
-- L'élément [`<var>`](/fr/docs/Web/HTML/Element/var)
-- L'élément [`<pre>`](/fr/docs/Web/HTML/Element/pre)
+- L'élément [`<samp>`](/fr/docs/Web/HTML/Reference/Elements/samp)
+- L'élément [`<kbd>`](/fr/docs/Web/HTML/Reference/Elements/kbd)
+- L'élément [`<var>`](/fr/docs/Web/HTML/Reference/Elements/var)
+- L'élément [`<pre>`](/fr/docs/Web/HTML/Reference/Elements/pre)

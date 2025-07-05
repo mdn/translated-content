@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("File API")}}
 
-Grâce à l'API <i lang="en">File</i>, une application ou un site web peut demander à la personne de choisir des fichiers locaux et en lire les contenus. La sélection peut être effectuée à l'aide d'un élément [`<input type="file">`](/fr/docs/Web/HTML/Element/input/file) ou à l'aide d'un glisser-déposer.
+Grâce à l'API <i lang="en">File</i>, une application ou un site web peut demander à la personne de choisir des fichiers locaux et en lire les contenus. La sélection peut être effectuée à l'aide d'un élément [`<input type="file">`](/fr/docs/Web/HTML/Reference/Elements/input/file) ou à l'aide d'un glisser-déposer.
 
 ## Accéder aux fichiers sélectionnés
 
@@ -112,7 +112,7 @@ uploadInput.addEventListener(
 
 ## Masquer l'élément `<input>` et utiliser la méthode `click()`
 
-Il est possible de masquer l'élément [`<input>`](/fr/docs/Web/HTML/Element/input) et de présenter sa propre interface pour l'ouverture du sélecteur de fichiers et d'afficher par ailleurs la sélection de fichier. Pour obtenir ce résultat, on pourra mettre en forme le champ `<input>` avec `display:none` et appeler la méthode [`click()`](/fr/docs/Web/API/HTMLElement/click) sur l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
+Il est possible de masquer l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et de présenter sa propre interface pour l'ouverture du sélecteur de fichiers et d'afficher par ailleurs la sélection de fichier. Pour obtenir ce résultat, on pourra mettre en forme le champ `<input>` avec `display:none` et appeler la méthode [`click()`](/fr/docs/Web/API/HTMLElement/click) sur l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input).
 
 Prenons ce fragment de code HTML&nbsp;:
 
@@ -143,11 +143,11 @@ fileSelect.addEventListener(
 );
 ```
 
-Vous pouvez mettre en forme [`<button>`](/fr/docs/Web/HTML/Element/button) comme bon vous semble.
+Vous pouvez mettre en forme [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) comme bon vous semble.
 
 ## Utiliser un élément `<label>` pour déclencher un champ `<input type="file">` caché
 
-Afin d'ouvrir le sélecteur de fichier sans utiliser de JavaScript (c'est-à-dire sans la méthode `click()`), on pourra utiliser un élément [`<label>`](/fr/docs/Web/HTML/Element/label) à la place. Cependant, il faut ici que l'élément `<input>` ne soit pas masqué à l'aide de `display: none` (ni à l'aide de `visibility: hidden`), car le libellé ne serait alors pas accessible au clavier. Il faut utiliser [la technique `visually-hidden`](https://www.a11yproject.com/posts/how-to-hide-content/) à la place.
+Afin d'ouvrir le sélecteur de fichier sans utiliser de JavaScript (c'est-à-dire sans la méthode `click()`), on pourra utiliser un élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) à la place. Cependant, il faut ici que l'élément `<input>` ne soit pas masqué à l'aide de `display: none` (ni à l'aide de `visibility: hidden`), car le libellé ne serait alors pas accessible au clavier. Il faut utiliser [la technique `visually-hidden`](https://www.a11yproject.com/posts/how-to-hide-content/) à la place.
 
 Prenons ce fragment de code HTML&nbsp;:
 
@@ -294,7 +294,7 @@ Voici le fragment de HTML pour l'interface utilisateur&nbsp;:
 </div>
 ```
 
-Cela nous donne notre élément [`<input>`](/fr/docs/Web/HTML/Element/input) ainsi qu'un lien pour ouvrir le sélecteur de fichier (en effet, le champ de saisie est masqué, voir la section [Masquer l'élément `<input>` et utiliser la méthode `click()`](#using_hidden_file_input_elements_using_the_click_method) pour plus de détails).
+Cela nous donne notre élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) ainsi qu'un lien pour ouvrir le sélecteur de fichier (en effet, le champ de saisie est masqué, voir la section [Masquer l'élément `<input>` et utiliser la méthode `click()`](#using_hidden_file_input_elements_using_the_click_method) pour plus de détails).
 
 La méthode `handleFiles()` utilisée ici est la suivante&nbsp;:
 
@@ -342,15 +342,15 @@ function handleFiles() {
 }
 ```
 
-Pour commencer, on récupère l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui a l'identifiant `fileList`. Il s'agit du bloc dans lequel on placera notre liste de fichier ainsi que nos vignettes.
+Pour commencer, on récupère l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) qui a l'identifiant `fileList`. Il s'agit du bloc dans lequel on placera notre liste de fichier ainsi que nos vignettes.
 
 Si l'objet [`FileList`](/fr/docs/Web/API/FileList) passé à `handleFiles()` vaut `null`, on met à jour le code HTML du bloc pour afficher «&nbsp;Aucun fichier sélectionné !&nbsp;». Sinon, on construit la liste de fichier comme suit&nbsp;:
 
-1. On crée un nouvel élément de liste non-ordonnée [`<ul>`](/fr/docs/Web/HTML/Element/ul).
-2. Cette nouvelle liste est insérée dans le bloc [`<div>`](/fr/docs/Web/HTML/Element/div) à l'aide de sa méthode [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild).
+1. On crée un nouvel élément de liste non-ordonnée [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul).
+2. Cette nouvelle liste est insérée dans le bloc [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) à l'aide de sa méthode [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild).
 3. Pour chaque fichier ([`File`](/fr/docs/Web/API/File)) dans la liste ([`FileList`](/fr/docs/Web/API/FileList)) représentée par `files`&nbsp;:
-   1. On crée un nouvel élément [`<li>`](/fr/docs/Web/HTML/Element/li) qu'on insère dans la liste.
-   2. On crée un nouvel élément [`<img>`](/fr/docs/Web/HTML/Element/img).
+   1. On crée un nouvel élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li) qu'on insère dans la liste.
+   2. On crée un nouvel élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img).
    3. On définit la source de l'image afin d'utiliser la nouvelle URL d'objet représentant le fichier grâce à [`URL.createObjectURL()`](/fr/docs/Web/API/URL/createObjectURL_static).
    4. On définit la hauteur de l'image à 60.
    5. On fait le nécessaire pour que le gestionnaire d'évènement pour `load` libère l'URL d'objet qui ne sera plus nécessaire puisque l'image aura été chargée. Pour cela, on appelle la méthode [`URL.revokeObjectURL()`](/fr/docs/Web/API/URL/revokeObjectURL_static) à laquelle on passe la chaîne de caractères qu'est l'URL d'objet que contient `img.src`.

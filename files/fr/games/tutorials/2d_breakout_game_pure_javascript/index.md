@@ -11,7 +11,7 @@ Dans ce tutoriel, nous allons créer pas à pas un jeu de casse-briques MDN, cr�
 
 Chaque étape est modifiable en direct, et disponible en test pour que vous puissiez voir ce à quoi les étapes intermédiaires devraient ressembler. Vous apprendrez les bases d'utilisations de l'élément {{htmlelement("canvas")}} pour implémenter des mécaniques de base du jeu vidéo, comme charger et déplacer des images, les détections de collisions, les mécanismes de contrôle, et les conditions de victoire/défaite.
 
-Pour comprendre la plupart des articles de ce tutoriel, vous devez déjà avoir un niveau basique ou intermédiaire en [JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). À la fin de ce tutoriel, vous serez capable de créer vos propres jeux Web.
+Pour comprendre la plupart des articles de ce tutoriel, vous devez déjà avoir un niveau basique ou intermédiaire en [JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity). À la fin de ce tutoriel, vous serez capable de créer vos propres jeux Web.
 
 ![](mdn-breakout-gameplay.png)
 

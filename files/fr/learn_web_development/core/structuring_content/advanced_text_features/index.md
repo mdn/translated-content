@@ -6,7 +6,7 @@ original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
 
 {{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}
 
-Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
+Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs). Les éléments abordés ici sont moins connus mais tout aussi utiles (et ce n'est aucunement une liste complète). Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
 
 <table class="standard-table">
   <tbody>
@@ -37,7 +37,7 @@ Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'on
 
 ## Listes descriptives
 
-Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser [des listes simples en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists), mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — **les listes descriptives**. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :
+Dans les bases du texte en HTML, nous avons exposé comment on pouvait baliser [des listes simples en HTML](/fr/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#lists), mais sans mentionner le troisième type de liste que vous rencontrerez à l'occasion — **les listes descriptives**. L'objectif de ces listes est de marquer une série d'éléments et leurs descriptions associées, comme termes et définition, ou bien questions et réponse. Voici l'exemple d'un ensemble de termes et leur définitions :
 
 ```
 soliloque
@@ -248,7 +248,7 @@ Le HTML possède également des fonctionnalités pour marquer les citations. Le 
 
 ### Blocs de citation
 
-Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#cite). Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>`&nbsp;:
+Si une section ou un contenu de niveau bloc (que ce soit un paragraphe, de multiples paragraphes, une liste, etc.) est cité depuis une autre origine, vous pouvez le signaler en le mettant dans un élément {{htmlelement("blockquote")}} et en incluant une URL qui pointe vers la source de la citation dans un attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#cite). Par exemple, le balisage suivant provient de la page MDN pour l'élément `<blockquote>`&nbsp;:
 
 ```html
 <p>
@@ -297,7 +297,7 @@ Le navigateur l'affichera par défaut comme du texte normal entre guillemets pou
 
 ### Citations
 
-Le contenu de l'attribut [`cite`](/fr/docs/Web/HTML/Element/blockquote#cite) semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un `cite` sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre :
+Le contenu de l'attribut [`cite`](/fr/docs/Web/HTML/Reference/Elements/blockquote#cite) semble utile, malheureusement les navigateurs, lecteurs d'écran, etc. n'en font pas grand chose. Il n'y a pas possibilité de faire afficher différemment au navigateur le contenu d'un `cite` sans utiliser votre propre JavaScript ou style CSS. Si vous souhaitez rendre disponible la source de la citation sur votre page, la meilleure façon de le faire est d'inclure l'élément {{htmlelement("cite")}} à coté de l'élément citation. Cet élément est vraiment destiné à contenir le nom de la source de la citation — c'est-à-dire le nom du livre ou de la personne auteur de la citation — mais il n'y a aucune raison pour laquelle vous n'avez pas pu lier le texte à l'intérieur de `<cite>` à la source de la citation d'une manière ou d'une autre :
 
 ```html
 <p>Selon la <a href="/fr/docs/Web/HTML/Element/blockquote">
@@ -463,7 +463,7 @@ textarea.onkeyup = function () {
 
 ## Abréviations
 
-Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Global_attributes#title)). Voyons quelques exemples :
+Un autre élément assez commun rencontré en se promenant dans le Web est l'élément {{htmlelement("abbr")}}. Il s'utilise pour entourer une abréviation ou un acronyme et donner le développement complet du terme (inclus dans un attribut [`title`](/fr/docs/Web/HTML/Reference/Global_attributes#title)). Voyons quelques exemples :
 
 ```html
 <p>
@@ -750,6 +750,6 @@ L'exemple de base ci-dessus ne fournit qu'une simple date lisible par machine, m
 
 ## Résumé
 
-Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre [Référence des éléments HTML](/fr/docs/Web/HTML/Element) (la section [sémantique de texte en ligne](/fr/docs/Web/HTML/Element#inline_text_semantics) serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.
+Nous voici arrivés à la fin de notre étude de la sémantique des textes en HTML. N'oubliez pas que ce qui précède ne constitue pas la liste exhaustive des éléments texte en HTML — nous avons essayé de couvrir essentiellement les plus courants dans la nature ou du moins ceux que nous avons pensé intéressants. Pour en voir plus, jetez un coup d'oeil à notre [Référence des éléments HTML](/fr/docs/Web/HTML/Reference/Elements) (la section [sémantique de texte en ligne](/fr/docs/Web/HTML/Reference/Elements#inline_text_semantics) serait un bon point de départ.) Dans l'article suivant, nous examinerons les éléments HTML à utiliser pour structurer les diverses parties d'un document HTML.
 
 {{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Creating_hyperlinks", "Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure", "Apprendre/HTML/Introduction_à_HTML")}}

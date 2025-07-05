@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/is
 
 {{JSRef}}
 
-La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness).
+La méthode **`Object.is()`** permet de déterminer si deux valeurs sont [les mêmes](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness).
 
 ## Syntaxe
 
@@ -26,7 +26,7 @@ Un booléen indiquant si les arguments ont la même valeur.
 
 ## Description
 
-`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
+`Object.is()` permet de déterminer si deux valeurs sont [identiques](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness). Deux valeurs sont considérées identiques si :
 
 - elles sont toutes les deux {{jsxref("undefined")}}
 - elles sont toutes les deux {{jsxref("null")}}
@@ -93,5 +93,5 @@ if (!Object.is) {
 
 ## Voir aussi
 
-- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
+- [Guide JavaScript : L'égalité en JavaScript](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) qui illustre les trois manières de comparer en JavaScript
 - {{jsxref("Opérateurs/Opérateurs_de_comparaison","Les opérateurs de comparaison","",1)}}

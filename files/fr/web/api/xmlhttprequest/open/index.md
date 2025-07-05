@@ -22,7 +22,7 @@ XMLHttpRequest.open(method, url, async, user, password);
 ### Paramètres
 
 - `method`
-  - : La méthode [de requête HTTP](/fr/docs/Web/HTTP/Methods) à utiliser telles que `GET`, `POST`, `PUT`, `DELETE`, etc. Ignorée pour les URL non-HTTP(S).
+  - : La méthode [de requête HTTP](/fr/docs/Web/HTTP/Reference/Methods) à utiliser telles que `GET`, `POST`, `PUT`, `DELETE`, etc. Ignorée pour les URL non-HTTP(S).
 - `url`
   - : Une {{domxref("DOMString")}} représentant l'URL à laquelle envoyer la requête.
 - `async` {{optional_inline}}
