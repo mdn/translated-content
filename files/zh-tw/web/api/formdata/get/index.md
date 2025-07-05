@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers}}
 
-`FormData` 介面的 **`get()`** 方法會從 `FormData` 物件中，回傳與給定鍵相關聯的第一個值。如果你預期有多個值且想要取得全部的值，請改用 {{domxref("FormData.getAll()","getAll()")}} 方法。
+`FormData` 介面的 **`get()`** 方法會回傳 `FormData` 物件中與給定鍵相關聯的第一個值。如果你預期有多個值且想要取得全部的值，請改用 {{domxref("FormData.getAll()","getAll()")}} 方法。
 
 ## 語法
 
