@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-當[物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤時，會發生 JavaScript 的例外「missing } after property list」。這可能真的是少了個大括號，但也可能是少了個逗號。
+當[物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤時，會發生 JavaScript 的「missing } after property list」例外。這可能真的是少了個大括號，但也可能是少了個逗號。
 
 ## 訊息
 
