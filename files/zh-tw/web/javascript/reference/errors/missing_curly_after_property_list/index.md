@@ -20,7 +20,7 @@ SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (
 
 {{jsxref("SyntaxError")}}
 
-## 發生了什麼問題？
+## 哪裡出錯了？
 
 [物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤。舉例來說，這可能真的是少了個大括號，但也可能是少了個逗號。也請檢查所有的大括號或括號是否以正確的順序閉合。將程式碼縮排或格式化得更整齊，或許也能幫助你釐清問題。
 
