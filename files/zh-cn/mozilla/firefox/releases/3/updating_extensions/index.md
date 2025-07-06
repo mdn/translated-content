@@ -3,8 +3,6 @@ title: 为 Firefox 3 升级扩展
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 这篇文章为那些想更新其扩展以在 Firefox 3 中正常运行的开发者提供了一些有用的信息。
 
 在进入主题之前，首先要提示一下：如果你的扩展所需要的唯一改变只是安装文件中的`maxVersion`信息，并且你的扩展所在的主机是[addons.mozilla.org](https://addons.mozilla.org)，事实上你不需要上传你的新的版本的扩展！只需要在 AMO 中使用开发者控制面板调整`maxVersion`。通过这种方式你可以避免你的扩展被再次审核。

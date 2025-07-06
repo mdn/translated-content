@@ -3,8 +3,6 @@ title: Expect-CT
 slug: Web/HTTP/Reference/Headers/Expect-CT
 ---
 
-{{HTTPSidebar}}
-
 `Expect-CT` 标头允许站点选择性地报告和/或执行[证书透明度（Certificate Transparency）](/zh-CN/docs/Web/Security/Certificate_Transparency)要求，来防止错误签发的网站证书的使用不被察觉。
 
 证书透明的要求可以通过以下任意一种方式来满足：

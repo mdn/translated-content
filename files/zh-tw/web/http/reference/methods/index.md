@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP 定義了一組**請求方法**，用於指示請求的目的，以及當請求成功時預期的結果。儘管它們也可以是名詞，這些請求方法有時被稱為 _HTTP 動詞_。每個請求方法都有其獨特的語義，但多個方法共享一些共同特徵：具體來說，請求方法可以是{{glossary("Safe/HTTP", "安全")}}、{{glossary("idempotent", "冪等")}}或{{glossary("cacheable", "可快取")}}的。
 
 - {{HTTPMethod("GET")}}

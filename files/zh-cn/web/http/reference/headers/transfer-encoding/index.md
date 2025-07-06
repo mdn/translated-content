@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Transfer-Encoding`** 标头指明了将{{Glossary("Payload body","有效负载体")}}安全传输给用户所采用的编码形式。
 
 > [!NOTE]

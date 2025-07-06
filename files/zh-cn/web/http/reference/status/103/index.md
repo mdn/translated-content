@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`103 Early Hints`** [信息响应](/zh-CN/docs/Web/HTTP/Reference/Status#信息响应)可能会在服务器仍在准备响应数据的时候发送，提供有关服务器预期的最终响应将连接到的站点和资源的提示。这允许浏览器在服务器准备并发送最终响应之前[预连接](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)到站点或开始[预加载](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload)资源。一旦接收到早期提示，客户端就会立即获取这些提示所指的预加载资源。
 
 早期提示响应主要用于 {{HTTPHeader("Link")}} 标头，指示要加载的资源。它还可以包含在处理早期提示时强制执行的 `Content-Security-Policy` 标头。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 65 中影响开发者的变更信息。Firefox 65 于 2019 年 1 月 29 日发布。
 
 ## 为 Web 开发者带来的变化

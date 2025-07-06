@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`404 Not Found`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器找不到所請求的資源。導致 404 頁面的連結通常稱為無效或死連結，可能會受到[失效連結](https://zh.wikipedia.org/wiki/失效連結)的影響。
 
 404 狀態碼僅表示資源遺失，但不指明這是暫時的還是永久的。如果資源永久刪除，伺服器應傳送 {{HTTPStatus("410", "410 Gone")}} 狀態。

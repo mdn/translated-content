@@ -3,8 +3,6 @@ title: Firefox 31 for developers
 slug: Mozilla/Firefox/Releases/31
 ---
 
-{{FirefoxSidebar}}
-
 Web 开发者需要关注的变化
 
 ### Developer Tools

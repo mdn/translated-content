@@ -1,6 +1,8 @@
 ---
 title: mask-border-source
 slug: Web/CSS/mask-border-source
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
@@ -23,6 +25,7 @@ mask-border-source: linear-gradient(to top, red, yellow);
 mask-border-source: inherit;
 mask-border-source: initial;
 mask-border-source: revert;
+mask-border-source: revert-layer;
 mask-border-source: unset;
 ```
 

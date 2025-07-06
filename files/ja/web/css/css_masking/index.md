@@ -77,7 +77,6 @@ CSS でのクリップとマスクは、SVG と同じ方法で動作します。
 - {{cssxref("&lt;url&gt;")}}
 
 - [CSS 背景と境界](/ja/docs/Web/CSS/CSS_backgrounds_and_borders)モジュール
-
   - {{cssxref("background")}} 一括指定
   - {{cssxref("background-origin")}}
   - {{cssxref("background-position")}}

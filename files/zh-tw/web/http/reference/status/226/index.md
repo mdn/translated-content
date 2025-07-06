@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 975650c2f6ea843d6f7cbc721aee5dbc1db907b2
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`226 IM Used`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示伺服器正在回傳一個{{Glossary("delta", "增量")}}以回應 {{HTTPMethod("GET")}} 請求。它用於*HTTP 增量編碼*的上下文中。
 
 IM 代表*實例操作*，指的是產生*增量*的演算法。在增量編碼中，用戶端會發送一個帶有兩個標頭的 {{HTTPMethod("GET")}} 請求：`A-IM:`，表示對差異演算法的偏好；以及 {{HTTPHeader("If-None-Match")}}，指定其擁有的資源版本。伺服器會以相對於給定基礎文件的差異來回應，而不是回傳完整的文件。此回應使用 `226` 狀態碼、一個描述所用差異演算法的 `IM:` 標頭，並可能包含一個 `Delta-Base:` 標頭，其 {{HTTPHeader("ETag")}} 與增量關聯的基礎文件相符。

@@ -3,8 +3,6 @@ title: 203 Non-Authoritative Information
 slug: Web/HTTP/Reference/Status/203
 ---
 
-{{HTTPSidebar}}
-
 在 HTTP 协议中，响应状态码 **`203 Non-Authoritative Information`** 表示请求已经成功被响应，但是获得的负载与源头服务器的状态码为 {{HTTPStatus("200")}}（`OK`）的响应相比，经过了拥有*转换功能的*[_代理_](/zh-CN/docs/Glossary/Proxy_server)的修改。
 
 此状态代码的目的是允许转换代理更改了成功响应时通知客户端，因为这可能会影响后续内容的决策。对消息的转换可能意味着修改标头，以表明资源来自镜像或备份，但也可能意味着以客户端期望的方式修改内容。这些修改可能包括恶意软件过滤、格式转码、隐私过滤，或向客户端提供有关未来请求的其他提示。

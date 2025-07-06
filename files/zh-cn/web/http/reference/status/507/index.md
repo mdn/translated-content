@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f584f1b27f9f3b78c95122c560f5135866a87eb0
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`507 Insufficient Storage`** [服务端错误响应](/zh-CN/docs/Web/HTTP/Reference/Status#server_error_responses)状态码表示由于服务器没有足够的可用存储空间来成功完成请求，因此无法执行操作。
 
 此状态码最初用于基于 Web 的分布式编写与版本控制（{{Glossary("WebDAV")}}）的上下文中，但后来被推广到其他用例，用于描述服务器资源耗尽的情况。此错误的常见原因可能包括服务器目录可用空间不足、操作所需的可用内存（RAM）不足，或达到内部限制（例如应用程序特定的内存限制等）。导致此错误的请求不一定需要包含内容，因为该请求可能是在成功时会在服务器上创建资源的请求。

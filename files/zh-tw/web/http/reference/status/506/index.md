@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`506 Variant Also Negotiates`** [伺服器錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#伺服器錯誤回應)狀態碼於在內容協商中出現選擇資源的過程中出現遞迴循環時回傳。
 
 [代理驅動內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation#代理驅動內容協商)使用戶端與伺服器在伺服器具有多個變體時，能夠協同決定最適合的資源變體。伺服器因組態錯誤而在建立回應時產生循環參考，故送出 `506` 狀態碼。

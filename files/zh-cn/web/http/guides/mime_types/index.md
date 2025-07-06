@@ -3,8 +3,6 @@ title: MIME 类型（IANA 媒体类型）
 slug: Web/HTTP/Guides/MIME_types
 ---
 
-{{HTTPSidebar}}
-
 **媒体类型**（也通常称为**多用途互联网邮件扩展**或 **MIME** 类型）是一种标准，用来表示文档、文件或一组数据的性质和格式。它在 IETF 的 {{RFC(6838)}} 中进行了定义和标准化。
 
 [互联网号码分配局（IANA）](https://www.iana.org/)负责跟踪所有官方 MIME 类型，你可以在[媒体类型](https://www.iana.org/assignments/media-types/media-types.xhtml)页面中找到最新的完整列表。

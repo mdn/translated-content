@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 217e25f9d2c39d2031ecf50f891c27e7f5b96e06
 ---
 
-{{HTTPSidebar}}
-
 **HTTP 标头**（header）允许客户端和服务器通过 HTTP 请求（request）或者响应（response）传递附加信息。在 HTTP/1.X，一个标头包括它的名称（不区分大小写），一个冒号（`:`），可选且会被忽略的空格，最后是它的值（例如 `Allow: POST`）。在 HTTP/2 或更高的版本中，标头在开发者工具中展示为小写（`accept: */*`），对于特殊的[伪标头](/zh-CN/docs/Web/HTTP/Guides/Messages#伪标头)组则会以冒号作为前缀（`:status: 200`）。你可以在 [HTTP 消息](/zh-CN/docs/Web/HTTP/Guides/Messages)页面找到每个协议版本的有关信息和语法。
 
 自定义专用的标头之前可以与 `X-` 前缀一起使用，但是这种用法在 2012 年被弃用，因为当非标准字段在 [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) 中成为标准时，它会带来很多不便；其他的标头在 [IANA HTTP 字段名注册表](https://www.iana.org/assignments/http-fields/http-fields.xhtml)中列出，其原始内容在 [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) 中定义。IANA 注册表列出了标头及其[状态信息](https://github.com/protocol-registries/http-fields?tab=readme-ov-file#choosing-the-right-status)。

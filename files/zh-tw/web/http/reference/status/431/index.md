@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`431 Request Header Fields Too Large`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器拒絕處理請求，因為請求的 [HTTP 標頭](/zh-TW/docs/Web/HTTP/Reference/Headers)過長。可以在減小請求標頭的大小後重新提交請求。
 
 431 可以在請求標頭的總大小過大時使用，或者單個標頭字段過大時使用。為了幫助遇到此錯誤的用戶，請在回應主體中指示是哪一種問題——最好說出哪些標頭過大。這讓用戶可以嘗試解決問題，例如清除 cookie。

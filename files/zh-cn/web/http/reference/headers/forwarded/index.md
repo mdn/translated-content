@@ -3,8 +3,6 @@ title: Forwarded
 slug: Web/HTTP/Reference/Headers/Forwarded
 ---
 
-{{HTTPSidebar}}
-
 **`Forwarded`** 首部中包含了代理服务器的客户端的信息，即由于代理服务器在请求路径中的介入而被修改或丢失的信息。
 
 其他可用来替换的，已经成为既成标准的首部是 {{HTTPHeader("X-Forwarded-For")}} 、 {{HTTPHeader("X-Forwarded-Host")}} 以及{{HTTPHeader("X-Forwarded-Proto")}} 。

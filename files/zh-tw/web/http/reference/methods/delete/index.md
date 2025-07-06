@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`DELETE`** 方法要求伺服器刪除指定的資源。
 
 `DELETE` 方法對訊息主體沒有定義語意，因此主體應為空。

@@ -3,8 +3,6 @@ title: Connection
 slug: Web/HTTP/Reference/Headers/Connection
 ---
 
-{{HTTPSidebar}}
-
 **`Connection`** 通用标头控制网络连接在当前会话完成后是否仍然保持打开状态。如果发送的值是 `keep-alive`，则连接是持久的，不会关闭，允许对同一服务器进行后续请求。
 
 > [!WARNING]

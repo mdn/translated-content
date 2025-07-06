@@ -3,8 +3,6 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Origin`** 响应标头指定了该响应的资源是否被允许与给定的{{glossary("origin", "来源（origin）")}}共享。
 
 <table class="properties">

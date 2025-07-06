@@ -2,7 +2,7 @@
 title: rect()
 slug: Web/CSS/basic-shape/rect
 l10n:
-  sourceCommit: 9fbbc6e777afd1291919d2231c42e43ab17fd484
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{CSSRef}}
@@ -28,6 +28,10 @@ clip-path: rect(50px 70px 80% 20%);
 
 - `round <'border-radius'>`
   - : CSS は [`border-radius`](/ja/docs/Web/CSS/border-radius) の一括指定プロパティと同じ構文を用いて、矩形の角の丸みの半径を指定します。この引数はオプションです。
+
+## 形式文法
+
+{{CSSSyntax}}
 
 ## 例
 
@@ -109,8 +113,8 @@ clip-path: rect(50px 70px 80% 20%);
 
 ## 関連情報
 
-- [`inset()`](/ja/docs/Web/CSS/basic-shape#inset) 関数
-- [`xywh()`](/ja/docs/Web/CSS/basic-shape#xywh) 関数
+- {{cssxref("basic-shape/inset","inset()")}} 関数
+- {{cssxref("basic-shape/xywh","xywh()")}} 関数
 - {{cssxref("clip-path")}} プロパティ
 - {{cssxref("offset-path")}} プロパティ
 - {{cssxref("&lt;basic-shape&gt;")}} データ型

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`302 Found`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示所請求的資源已暫時移動到 {{HTTPHeader("Location")}} 標頭中的 URL。
 
 收到此狀態的瀏覽器會自動請求 `Location` 標頭中的 URL 資源，將使用者重新導向到新的頁面。收到此回應的搜尋引擎不會將原始 URL 的連結歸屬到新的資源，這意味著沒有 {{Glossary("SEO")}} 價值會轉移到新的 URL。

@@ -2,7 +2,7 @@
 title: 遊戲開發
 slug: Games
 l10n:
-  sourceCommit: d9e11f88996e97a259d2ec47f47a660062c12c4f
+  sourceCommit: f9e87cf7d09830e097a2aadb5e507eb12c9a4514
 ---
 
 {{GamesSidebar}}
@@ -38,7 +38,7 @@ l10n:
   - : 每週五發送的 HTML 遊戲開發週報，包含最新的文章、教學、工具和資源。
 - [HTML5 Game Engine](https://html5gameengine.com/)
   - : 最受歡迎的 HTML 遊戲框架列表，包含評分、功能及範例。
-- [Tuts+ Game Development](https://gamedevelopment.tutsplus.com/)
+- [Tuts+ Game Development](https://code.tutsplus.com/c/game-development)
   - : 一般遊戲開發的教學和文章。
 - [HTML5 Gamedev Starter](https://html5devstarter.enclavegames.com/)
   - : 對新遊戲開發者的入門指南，收錄了網上各種實用資源的精選連結。

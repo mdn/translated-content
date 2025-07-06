@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 165f04fc4a77b053850bf6c5243831e1b17a2433
 ---
 
-{{HTTPSidebar}}
-
 **User-Agent** {{Glossary("request header", "请求标头")}}是一个特征字符串，使得服务器和对等网络能够识别发出请求的{{Glossary("user agent", "用户代理")}}的应用程序、操作系统、供应商或版本信息。
 
 > [!WARNING]

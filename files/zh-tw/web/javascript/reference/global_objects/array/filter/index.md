@@ -2,7 +2,7 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
 {{JSRef}}
@@ -148,7 +148,7 @@ console.log(filterItems(fruits, "an")); // ['banana', 'mango', 'orange']
 ```js
 const names = ["JC63", "Bob132", "Ursula89", "Ben96"];
 const greatIDs = names
-  .map((name) => parseInt(name.match(/[0-9]+/)[0], 10))
+  .map((name) => parseInt(name.match(/\d+/)[0], 10))
   .filter((id, idx, arr) => {
     // 若沒有 arr 引數，無法輕鬆存取中間陣列，除非將其儲存到變數中。
     if (idx > 0 && id <= arr[idx - 1]) return false;

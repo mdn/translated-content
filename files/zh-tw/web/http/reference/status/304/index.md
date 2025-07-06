@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`304 Not Modified`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示不需要重新傳送請求的資源。
 
 此狀態碼會在請求為帶有 {{HTTPHeader("If-None-Match")}} 或 {{HTTPHeader("If-Modified-Since")}} 標頭的 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} [條件](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)請求，且條件判斷為「false」時傳送。這代表用戶端快取的資源仍然有效，如果條件為「true」則伺服器會回傳 {{HTTPStatus("200", "200 OK")}} 回應與資源。請參考 [HTTP 快取](/zh-TW/docs/Web/HTTP/Guides/Caching)以取得更多資訊。

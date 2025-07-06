@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 369b8ec2c87b6c5b01d1527fddb6810ded3be782
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Credentials`** 响应标头告诉浏览器服务器是否允许 HTTP 跨源请求携带凭据。
 
 凭据包括 cookie、{{glossary("TLS")}} 客户端证书，或包含用户名和密码的认证标头。默认情况下，这些凭据不会在跨源请求中发送，因为这样做可能会使站点容易受到{{glossary("CSRF", "跨站请求伪造")}}攻击。

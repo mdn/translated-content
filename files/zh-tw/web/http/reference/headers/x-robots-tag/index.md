@@ -1,19 +1,16 @@
 ---
-title: X-Robots-Tag
+title: X-Robots-Tag 標頭
 slug: Web/HTTP/Reference/Headers/X-Robots-Tag
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: 466ca1db767535c1aa9984b4e6c0db41b3a53475
 ---
-
-{{HTTPSidebar}}
 
 **`X-Robots-Tag`** {{Glossary("response header", "回應標頭")}}定義了{{glossary("Crawler", "爬蟲")}}應如何索引 URL。雖然未屬於任何正式規範，但它是一種事實上的標準方法，用於與搜尋機器人、網路爬蟲及類似的使用者代理進行溝通。搜尋相關的爬蟲會根據 `X-Robots-Tag` 標頭中的規則調整如何在搜尋結果中呈現網頁或其他資源。
 
-透過 `<meta name="robots">` 元素及 `X-Robots-Tag` 標頭定義的索引規則，會在 URL 被爬取時被發現。
-在 HTTP 標頭中指定索引規則對於非 HTML 文件（如圖片、PDF 或其他媒體）特別有用。
+索引規則會在 `X-Robots-Tag` 標頭或 [`<meta name="robots">`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML 元素標籤（通常稱為「robots 標籤」中定義，並會在網址被爬蟲時被發現。在 HTTP 標頭中指定索引規則對於非 HTML 文件（如圖片、PDF 或其他媒體）特別有用。
 
 > [!NOTE]
-> 僅有合作的機器人會遵循這些規則，而爬蟲仍需訪問資源以讀取標頭和 meta 元素（請參見[與 robots.txt 的互動](#與_robots.txt_的互動)）。如果你希望減少爬蟲的頻寬消耗，限制性 {{Glossary("robots.txt")}} 文件比索引規則更有效，因為它能完全阻止資源被爬取。
+> 僅有合作的機器人會遵循這些規則，而爬蟲需先訪問資源以讀取標頭和 meta 元素（請參見[與 robots.txt 的互動](#與_robots.txt_的互動)）。如果你希望減少爬蟲的頻寬消耗，限制性 {{Glossary("robots.txt")}} 文件比索引規則更有效，因為它能阻止資源被爬取。
 
 <table class="properties">
   <tbody>
@@ -154,7 +151,9 @@ X-Robots-Tag: googlebot: noindex
 
 ## 參見
 
-- {{Glossary("Robots.txt")}}
+- {{Glossary("robots.txt")}}
 - {{Glossary("Search engine", "搜尋引擎")}}
+- [`<meta name="robots">`](/zh-TW/docs/Web/HTML/Reference/Elements/meta/name/robots) HTML 元素（「robots 標籤」）
+- [robots.txt 組態](/zh-TW/docs/Web/Security/Practical_implementation_guides/Robots_txt)安全指南
 - {{RFC("9309", "機器人排除協議")}}
 - [使用 X-Robots-Tag HTTP 標頭](https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag#xrobotstag)（developers.google.com）

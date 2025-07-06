@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50a5ce565b2fa0b988b3f5ff90ea4b24b13e4b9d
 ---
 
-{{HTTPSidebar}}
-
 > [!NOTE]
 > *锁定*资源的能力仅限于某些 {{Glossary("WebDAV")}} 服务器。访问网页的浏览器永远不会遇到这种状态代码；在发生错误的情况下，浏览器会将其作为通用的 `400` 状态代码处理。
 

@@ -3,8 +3,6 @@ title: Sec-Fetch-User
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-User
 ---
 
-{{HTTPSidebar}}
-
 **`Sec-Fetch-User`** 获取元数据标头表明了一个导航请求是否由用户激活触发。
 
 | Header type                                    | {{Glossary("Fetch Metadata Request Header")}}                                            |

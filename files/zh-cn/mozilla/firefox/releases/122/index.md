@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6f56b2dbc0229d381a5e63cf763a77883ee23906
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 122 中影响开发者的变更信息。Firefox 122 于 [2024 年 1 月 23 日](https://whattrainisitnow.com/release/?version=122)发布。
 
 ## 为 Web 开发者带来的变化

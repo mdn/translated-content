@@ -3,8 +3,6 @@ title: WWW-Authenticate
 slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
 
 > [!NOTE]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`204 No Content`** [成功回應](/zh-TW/docs/Web/HTTP/Reference/Status#成功回應)狀態碼表示請求已成功，但用戶端不需要離開當前頁面。`204` 回應預設是可快取的，在這種情況下會包含 {{HTTPHeader("ETag")}} 標頭。
 
 對這些請求方法的回應 `204 No Content` 具有以下意義和結果：

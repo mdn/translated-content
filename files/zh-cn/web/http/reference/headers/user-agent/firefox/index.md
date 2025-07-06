@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3a0b2df4396eac14f3439c1e517707a2f442c7ee
 ---
 
-{{HTTPSidebar}}
-
 本文档介绍了 Firefox 4 及更高版本和基于 Gecko 2.0 及更高版本的应用程序中使用的用户代理字符串。有关 Gecko 2.0 中字符串变化的细目，请参阅 [Firefox 4 的最终用户代理字符串](https://hacks.mozilla.org/2010/09/final-user-agent-string-for-firefox-4/)博文。另请参阅本文档中的[用户代理嗅探](/zh-CN/docs/Web/HTTP/Guides/Browser_detection_using_the_user_agent)和这篇 [Hacks 博文](https://hacks.mozilla.org/2013/09/user-agent-detection-history-and-checklist/)。
 
 ## 一般形式

@@ -3,8 +3,6 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
-{{FirefoxSidebar}}
-
 ## Web 开发者需要注意的变化
 
 ### 开发者工具

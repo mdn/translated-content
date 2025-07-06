@@ -3,8 +3,6 @@ title: HTTP/1.x 的连接管理
 slug: Web/HTTP/Guides/Connection_management_in_HTTP_1.x
 ---
 
-{{HTTPSidebar}}
-
 连接管理是一个 HTTP 的关键话题：打开和保持连接在很大程度上影响着网站和 Web 应用程序的性能。在 HTTP/1.x 里有多种模型：_短连接_、*长连接*和 _HTTP 流水线_。
 
 HTTP 的传输协议主要依赖于 TCP 来提供从客户端到服务器端之间的连接。在早期，HTTP 使用一个简单的模型来处理这样的连接。这些连接的生命周期是短暂的：每发起一个请求时都会创建一个新的连接，并在收到应答时立即关闭。

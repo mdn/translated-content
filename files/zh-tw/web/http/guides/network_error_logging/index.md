@@ -1,11 +1,12 @@
 ---
-title: 網路錯誤記錄
+title: 網路錯誤記錄（NEL）
+short-title: 網路錯誤記錄
 slug: Web/HTTP/Guides/Network_Error_Logging
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: c65a961090cf305a88fd496d1383a6931280cb37
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 網路錯誤記錄（Network Error Logging, NEL）是一種可以透過 {{HTTPHeader("NEL")}} HTTP [_回應標頭_](/zh-TW/docs/Glossary/Response_header)配置的機制。此實驗性標頭允許網站和應用程式選擇接收來自支援瀏覽器的失敗（和成功，如果需要）網路抓取報告。
 

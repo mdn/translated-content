@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`414 URI Too Long`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示用戶端請求的 URI 長度超過伺服器願意解析的範圍。
 
 此錯誤可能發生於以下幾種罕見情況：

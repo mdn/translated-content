@@ -254,8 +254,7 @@ slug: Web/JavaScript/Guide/Regular_expressions
         Соответствует 'x' но не запоминает соответствие. Это называется
         не-захватывающие скобки. Сопоставленная строка не может быть получена из
         элементов результирующего массива
-        <code style="font-size: 14px; color: rgb(51, 51, 51)">[1]</code>, ...,
-        <code style="font-size: 14px; color: rgb(51, 51, 51)">[n]</code>.
+        <code>[1]</code>, ..., <code>[n]</code>.
       </td>
     </tr>
     <tr>
