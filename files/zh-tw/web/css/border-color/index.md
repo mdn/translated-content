@@ -56,7 +56,7 @@ border-color: red yellow green transparent;
 
 ## 組成屬性
 
-此屬性是以下 CSS 屬性的速記：
+此屬性是以下 CSS 屬性的簡寫：
 
 - [`border-bottom-color`](/zh-TW/docs/Web/CSS/border-bottom-color)
 - [`border-left-color`](/zh-TW/docs/Web/CSS/border-left-color)
