@@ -9,7 +9,7 @@ l10n:
 
 **`Number.isSafeInteger()`** は静的メソッドで、指定された値が*安全な整数*であるかどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Number.isSafeInteger()")}}
+{{InteractiveExample("JavaScript デモ: Number.isSafeInteger()")}}
 
 ```js interactive-example
 function warn(x) {

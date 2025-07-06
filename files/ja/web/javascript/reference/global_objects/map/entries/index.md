@@ -9,7 +9,7 @@ l10n:
 
 **`entries()`** は {{jsxref("Map")}} インスタンスのメソッドで、挿入順でこの `Map` オブジェクトのそれぞれの要素に対する `[key, value]` のペアを含む新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.entries()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.entries()")}}
 
 ```js interactive-example
 const map1 = new Map();

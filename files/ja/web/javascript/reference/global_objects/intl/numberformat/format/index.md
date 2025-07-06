@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/format
 
 **`Intl.NumberFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.NumberFormat")}} オブジェクトのロケールと整形オプションに従って数値を整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.format", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat.prototype.format", "taller")}}
 
 ```js interactive-example
 const amount = 654321.987;

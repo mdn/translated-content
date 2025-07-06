@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat
 
 **`Intl.NumberFormat`** オブジェクトは、言語に依存した数値書式を可能にするオブジェクトのコンストラクターです。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat")}}
 
 ```js interactive-example
 const number = 123456.789;

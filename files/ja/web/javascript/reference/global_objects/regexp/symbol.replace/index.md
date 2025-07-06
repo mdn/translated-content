@@ -9,7 +9,7 @@ l10n:
 
 **`[Symbol.replace]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、正規表現がパターンとして渡されたときに [`String.prototype.replace()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replace) および[`String.prototype.replaceAll()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/replaceAll) がどのように動作するかを指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[SYmbol.replace]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[SYmbol.replace]()")}}
 
 ```js interactive-example
 class RegExp1 extends RegExp {

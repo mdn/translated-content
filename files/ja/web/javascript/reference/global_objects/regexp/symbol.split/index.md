@@ -9,7 +9,7 @@ l10n:
 
 **`[Symbol.split]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.split`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/split) にセパレーターとして正規表現が渡されたときにどのように動作するのかを指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.split]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.split]()")}}
 
 ```js interactive-example
 class RegExp1 extends RegExp {
