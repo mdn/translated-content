@@ -2,7 +2,7 @@
 title: Accept-Patch 標頭
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`Accept-Patch`** {{Glossary("response header", "回應標頭")}}用來宣告伺服器在 {{HTTPMethod("PATCH")}} 請求中能夠理解哪些[媒體類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)。例如，收到帶有不支援媒體類型的 `PATCH` 請求的伺服器，可以回覆 {{HTTPStatus("415", "415 Unsupported Media Type")}} 並帶有 `Accept-Patch` 標頭，以引用一或多個支援的媒體類型。
