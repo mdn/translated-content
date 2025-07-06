@@ -160,9 +160,9 @@ animation-fill-mode: unset;
   - : 動畫一旦應用到目標上，就會立即套用第一個相關 [keyframe](/zh-TW/docs/Web/CSS/@keyframes) 中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的 keyframe 取決於 {{cssxref("animation-direction")}} 的值：
 
     | `animation-direction`            | 第一個相關的 keyframe |
-    | -------------------------------- | ----------------------- |
-    | `normal` 或 `alternate`          | `0%` 或 `from`          |
-    | `reverse` 或 `alternate-reverse` | `100%` 或 `to`          |
+    | -------------------------------- | --------------------- |
+    | `normal` 或 `alternate`          | `0%` 或 `from`        |
+    | `reverse` 或 `alternate-reverse` | `100%` 或 `to`        |
 
 - `both`
   - : 動畫將同時遵循 `forwards` 和 `backwards` 的規則，從而將動畫屬性在兩個方向上延伸。
