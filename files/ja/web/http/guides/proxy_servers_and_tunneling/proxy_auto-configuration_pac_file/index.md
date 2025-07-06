@@ -94,7 +94,6 @@ application/x-ns-proxy-autoconfig
 PAC ファイルを作成するために、以下の関数を使用できます。
 
 - ホスト名に基づく条件
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -102,28 +101,23 @@ PAC ファイルを作成するために、以下の関数を使用できます�
   - [`isInNet()`](#isinnet)
 
 - 関連するユーティリティー関数
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - URL/ホスト名に基づく条件
-
   - [`shExpMatch()`](#shexpmatch)
 
 - 時刻に基づく条件
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - ログ用ユーティリティ
-
   - [`alert()`](#alert)
 
 - 以前は JavaScript コードが自分自身で定義することができなかったため、定義済みの連想配列 (オブジェクト) が一つ用意されていました。
-
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
 > [!NOTE]

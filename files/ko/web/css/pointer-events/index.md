@@ -99,7 +99,6 @@ pointer-events: unset;
 - `auto`
   - : 요소는 `pointer-events` 속성이 정의되지 않은 것처럼 동작합니다. SVG 콘텐츠에서는 이 값과 `visiblePainted` 값이 동일한 효과를 가집니다.
 - `none`
-
   - : 이 요소 자체는 절대 포인트 이벤트의 [타겟](/ko/docs/Web/API/Event/target)이 되지 않습니다. 그러나 `pointer-events` 를 다른 값으로 설정하여 요소의 하위 트리를 여전히 타겟으로 유지할 수 있습니다. 이러한 상황에서는 포인터 이벤트는 이벤트가 포착되거나 [버블](/ko/docs/Web/API/Event/bubbles) 단계 동안 하위 요소로 전달되거나 전달해오는 과정에서 적절하게 부모 요소의 이벤트 리스터를 발생시킵니다.
 
     > [!NOTE] > `pointerenter` 와 `pointerleave` 이벤트는 포인터 장치가 어느 요소 혹은 그것의 자식 요소로 이동될 때 발생합니다. 따라서, `pointer-events: none` 가 자식이 아닌 부모에 설정되어 있더라도 이벤트는 자식에서 포인터가 이동하면서 발생하게 됩니다.

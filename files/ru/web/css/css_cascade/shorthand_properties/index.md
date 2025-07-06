@@ -24,7 +24,6 @@ Even if they are very convenient to use, there are a few edge cases to keep in m
 
 2. Only the individual properties values can inherit. As missing values are replaced by their initial value, it is impossible to allow inheritance of individual properties by omitting them. The keyword `inherit` can be applied to a property, but only as a whole, not as a keyword for one value or another. That means that the only way to make some specific value to be inherited is to use the longhand property with the keyword `inherit`.
 3. Shorthand properties try not to force a specific order for the values of the properties they replace. This works well when these properties use values of different types, as the order has no importance, but this does not work as easily when several properties can have identical values. Handling of these cases are grouped in several categories:
-
    1. Shorthands handling properties related to edges of a box, like {{cssxref("border-style")}}, {{cssxref("margin")}} or {{cssxref("padding")}}, always use a consistent 1-to-4-value syntax representing those edges:
 
       | ![border1.png](/files/3646/border1.png) | _The 1-value syntax_: `border-width: 1em` — The unique value represents all edges                                                                                                                                                                                                                               |

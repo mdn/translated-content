@@ -35,9 +35,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## Diretivas
 
 - \<warn-code>
-
   - : Um número de aviso de três dígitos. O primeiro dígito indica se é necessário o `Warning` ser deletado de uma resposta guardada depois da validação.
-
     - Códigos de aviso `1xx` descrevem o frescor ou status de validação da resposta e será deletado por um cache depois da deleção.
     - Códigos de aviso `2xx` descrevem algum aspecto da representação que não é retificada por uma validação e não será deletado por uma cache depois da validação a não que a resposta completa seja enviada.
 

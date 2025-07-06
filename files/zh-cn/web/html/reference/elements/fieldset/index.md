@@ -49,7 +49,6 @@ input {
 - `form`
   - : 将该值设为一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 属性值以将 `<fieldset>` 设置成这个 {{HTMLElement("form")}} 的一部分。
 - `name`
-
   - : 元素分组的名称
 
     > [!NOTE]

@@ -22,13 +22,9 @@ browser.browserAction.setBadgeBackgroundColor(
 ### Paramètres
 
 - `details`
-
   - : `object`
-
     - `color`
-
       - : La couleur, spécifiée comme l'un des suivants :
-
         - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/color_value) , par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.
         - Un objet `{{WebExtAPIRef('browserAction.ColorArray')}}`.
         - `null`. Si un `tabId` est spécifié, il supprime la couleur d'arrière-plan du badge spécifique à l'onglet pour que l'onglet hérite de la couleur d'arrière-plan du badge global. Sinon, la couleur d'arrière-plan du badge global revient à la valeur par défaut.

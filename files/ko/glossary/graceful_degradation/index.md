@@ -19,7 +19,6 @@ JavaScript {{Glossary("Polyfill","폴리필")}}을 이용하면 누락되는 기
 - [흔한 HTML 및 CSS 문제 다루기](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS)
 - [기능 탐지 구현](/ko/docs/Learn/Tools_and_testing/Cross_browser_testing/Feature_detection)
 - [MDN Web Docs 용어 사전](/ko/docs/Glossary)
-
   - {{Glossary("Graceful degradation")}}
   - {{Glossary("Polyfill")}}
   - {{Glossary("Progressive enhancement")}}

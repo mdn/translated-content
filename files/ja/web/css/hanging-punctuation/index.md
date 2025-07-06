@@ -41,9 +41,7 @@ hanging-punctuation: unset;
 - `none`
   - : 文字のぶら下げを行いません。
 - `first`
-
   - : 要素の最初の書式設定された行頭にある、開き括弧または引用符をぶら下げます。次のものが適用されます。
-
     - Unicode の [Ps](https://unicodeplus.com/category/Ps)、[Pf](https://unicodeplus.com/category/Pf)、[Pi](https://unicodeplus.com/category/Pi) カテゴリーに含まれるすべての文字
     - 引用符 `U+0027` APOSTROPHE (`'`) 及び `U+0022` QUOTATION MARK (`"`)。
 

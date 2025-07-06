@@ -29,7 +29,6 @@ A URL da página a se requisitar contém o nome do domínio e o número da porta
 Depois que a conexão é estabelecida, o _user-agent_ pode enviar a solicitação (um _user-agent_ normalmente é um navegador Web, podendo ser também qualquer outra coisa, como um _crawler_, por exemplo). Uma solicitação de cliente consiste em diretivas de texto, separadas por quebras de linhas (CRLF), divididas em três blocos:
 
 1. A primeira linha contém um método de requisição seguido por seus parâmetros:
-
    - o caminho do documento, ou seja, uma URL absoluta sem o protocolo ou nome de domínio
    - a versão do protocolo HTTP
 

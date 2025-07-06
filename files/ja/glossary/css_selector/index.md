@@ -63,7 +63,6 @@ div.warning {
 
 - CSS 入門内の [CSS セレクターについての詳細](/ja/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 - 基本的なセレクター
-
   - [要素型セレクター](/ja/docs/Web/CSS/Type_selectors) `elementname`
   - [クラスセレクター](/ja/docs/Web/CSS/Class_selectors) `.classname`
   - [ID セレクター](/ja/docs/Web/CSS/ID_selectors) `#idname`
@@ -72,17 +71,14 @@ div.warning {
   - [状態セレクター](/ja/docs/Web/CSS/Pseudo-classes) `a:active, a:visited`
 
 - グループ化セレクター
-
   - [セレクターリスト](/ja/docs/Web/CSS/Selector_list) `A, B`
 
 - 結合子
-
   - [次兄弟結合子](/ja/docs/Web/CSS/Next-sibling_combinator) `A + B`
   - [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator) `A ~ B`
   - [子セレクター](/ja/docs/Web/CSS/Child_combinator) `A > B`
   - [子孫セレクター](/ja/docs/Web/CSS/Descendant_combinator) `A B`
 
 - 擬似クラス・要素
-
   - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes) `:`
   - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`

@@ -12,7 +12,6 @@ L'interface **`GeolocationPositionError`** représente la raison de l'erreur app
 _L'interface `GeolocationPositionError` n'hérite d'aucune propriété._
 
 - {{domxref("GeolocationPositionError.code")}} {{readonlyInline}} {{securecontext_inline}}
-
   - : Retourne un `unsigned short` représentant un code d'erreur. Les valeurs possibles sont:
 
     | Valeur | Constante associée     | Description                                                                                                                                |

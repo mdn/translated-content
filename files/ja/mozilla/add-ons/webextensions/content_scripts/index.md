@@ -336,7 +336,6 @@ function notify(message) {
 
 - 片方で [`runtime.onConnect`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) にてコネクションを待ち受けする。
 - もう片方で次を呼び出す。
-
   - [`tabs.connect()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (コンテンツスクリプトに接続する場合)
   - [`runtime.connect()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (バックグラウンドスクリプトに接続する場合)
 
@@ -376,7 +375,6 @@ document.body.addEventListener("click", () => {
 
 - コンテンツスクリプトからの通信試行を待ち受けする
 - 通信試行を受け取ったとき、
-
   - `portFromCS` という名前の変数にポートを格納する
   - そのポートを使ってコンテンツスクリプトにメッセージを送る
   - ポートに届いたメッセージを待ち受けしてログに出す
@@ -507,7 +505,6 @@ window.addEventListener("message", (event) => {
 - Chrome では
   - : {{jsxref("Global_Objects/eval", "eval")}} は常にページコンテキストではなくて**コンテンツスクリプト**のコンテキストで動作します。
 - Firefox では
-
   - : `eval()` を呼ぶ場合、**コンテンツスクリプト**のコンテキストで動作します。
 
     `window.eval()` を呼ぶ場合、**ページ**のコンテキストで動作します。

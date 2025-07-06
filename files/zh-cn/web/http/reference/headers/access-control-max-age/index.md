@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Max-Age`** 响应标头指示了{{glossary("preflight request", "预检请求")}}（即包含在 {{HTTPHeader("Access-Control-Allow-Methods")}} 和 {{HTTPHeader("Access-Control-Allow-Headers")}} 标头中的信息）的结果能够被缓存多久。
 
 <table class="properties">

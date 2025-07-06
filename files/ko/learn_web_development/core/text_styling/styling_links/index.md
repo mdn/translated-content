@@ -379,7 +379,7 @@ a[href^="http"] {
 
 마지막으로, 배경 이미지가 텍스트와 겹치지 않도록 링크에 {{cssxref("padding-right")}}을 설정하여 배경 이미지가 표시될 공간을 확보했습니다.
 
-마지막으로 외부 링크만 어떻게 선택했나요? [HTML 링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)를 올바르게 작성했다면 외부 링크에는 절대 URL만 사용해야 하며, 내 사이트의 다른 부분으로 연결할 때는 상대 링크를 사용하는 것이 더 효율적입니다(첫 번째 링크와 마찬가지로). 따라서 "http" 텍스트는 두 번째 및 세 번째 링크와 같이 외부 링크에만 표시되어야 하며, [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors)를 사용하여 이를 선택할 수 있습니다. `a[href^="http"]`는 {{htmlelement("a")}} 요소를 선택하지만 값이 "http"로 시작하는 [`href`](/ko/docs/Web/HTML/Element/a#href) 속성이 있는 경우에만 선택됩니다.
+마지막으로 외부 링크만 어떻게 선택했나요? [HTML 링크](/ko/docs/Learn_web_development/Core/Structuring_content/Creating_links)를 올바르게 작성했다면 외부 링크에는 절대 URL만 사용해야 하며, 내 사이트의 다른 부분으로 연결할 때는 상대 링크를 사용하는 것이 더 효율적입니다(첫 번째 링크와 마찬가지로). 따라서 "http" 텍스트는 두 번째 및 세 번째 링크와 같이 외부 링크에만 표시되어야 하며, [속성 선택자](/ko/docs/Learn_web_development/Core/Styling_basics/Basic_selectors#attribute_selectors)를 사용하여 이를 선택할 수 있습니다. `a[href^="http"]`는 {{htmlelement("a")}} 요소를 선택하지만 값이 "http"로 시작하는 [`href`](/ko/docs/Web/HTML/Reference/Elements/a#href) 속성이 있는 경우에만 선택됩니다.
 
 여기까지입니다. 위의 능동적 학습 섹션을 다시 한 번 살펴보고 이 새로운 기법을 사용해 보세요!
 

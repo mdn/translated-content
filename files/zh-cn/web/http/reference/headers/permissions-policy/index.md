@@ -3,7 +3,7 @@ title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`Permissions-Policy`** 响应标头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 
@@ -20,9 +20,7 @@ Permissions-Policy: <directive> <allowlist>
 ```
 
 - `<allowlist>`
-
   - : 一个来源列表，在括号中包含的以下一个或多个值，并用空格分隔：
-
     - `*`: 允许在当前文档和所有包含的内容（比如 iframes）中使用本特性。
     - `'self'`: 允许在当前文档中使用本特性，但在包含的内容（比如 iframes）仍使用原值。
     - `'src'`: (只在 iframe 中允许) 只要在{{HTMLElement('iframe','src','#Attributes')}} 中的 URL 和加载 iframe 用的 URL 相同，则本特性在 iframe 中允许，
