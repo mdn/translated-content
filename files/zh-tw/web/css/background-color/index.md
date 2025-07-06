@@ -88,7 +88,7 @@ background-color: unset;
 
 ### 值
 
-- {{cssxref("<color>")}}
+- {{cssxref("&lt;color&gt;")}}
   - : 背景的單一顏色。它會被算繪在任何指定的 {{cssxref("background-image")}} 後方，但顏色仍然會透過圖片中的任何透明部分顯示出來。
 
 ## 無障礙
