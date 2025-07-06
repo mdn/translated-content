@@ -1,8 +1,8 @@
 ---
-title: Accept-CH
+title: Accept-CH 標頭
 slug: Web/HTTP/Reference/Headers/Accept-CH
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
 {{securecontext_header}}
