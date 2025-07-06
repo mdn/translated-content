@@ -7,7 +7,7 @@ l10n:
 
 {{jsSidebar("Errors")}}
 
-當 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時，會發生 JavaScript 的「return not in function」例外錯誤。
+當 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時，會發生 JavaScript 的「return not in function」例外。
 
 ## 訊息
 
