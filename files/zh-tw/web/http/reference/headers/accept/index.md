@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Accept`** {{Glossary("request header", "請求標頭")}}和{{Glossary("response header", "回應標頭")}}表示發送者能夠理解的內容類型，以 [MIME 類型](/zh-TW/docs/Web/HTTP/Guides/MIME_types)表示。在請求中，伺服器使用[內容協商](/zh-TW/docs/Web/HTTP/Guides/Content_negotiation)選擇其中一個提案，並使用 {{HTTPHeader("Content-Type")}} 回應標頭通知用戶選擇的內容類型。在回應中，它提供伺服器能夠理解的內容類型訊息，以便在後續對資源的請求中使用該內容類型。
 
 瀏覽器根據請求的上下文設置此標頭的必要值。例如，瀏覽器在請求 CSS 樣式表、圖片、視訊或腳本時使用不同的值。

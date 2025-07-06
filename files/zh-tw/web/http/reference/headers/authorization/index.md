@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Authorization`** {{Glossary("request header", "請求標頭")}}可以用來提供憑證，以便用戶代理與伺服器進行驗證，從而訪問受保護的資源。
 
 `Authorization` 標頭通常（但不總是）在用戶代理第一次嘗試在沒有憑證的情況下請求受保護的資源後發送。伺服器會返回一個 {{HTTPStatus("401", "401 Unauthorized")}} 訊息，其中包含至少一個 {{HTTPHeader("WWW-Authenticate")}} 標頭。這個標頭指出可以使用哪些驗證方案來訪問資源以及用戶端使用這些方案所需的任何附加訊息。用戶代理應從提供的方案中選擇其支持的最安全的驗證方案，提示用戶輸入憑證，然後重新請求資源（在 `Authorization` 標頭中包含編碼的憑證）。
@@ -53,7 +51,6 @@ Authorization: Digest username=<username>,
 ## 指令
 
 - `<auth-scheme>`
-
   - : 定義如何編碼憑證的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)。一些更常見的類型（不區分大小寫）包括：[`Basic`](/zh-TW/docs/Web/HTTP/Guides/Authentication#基本驗證方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]
@@ -64,7 +61,6 @@ Authorization: Digest username=<username>,
 ### 基本驗證
 
 - `<credentials>`
-
   - : 根據指定方案編碼的憑證。
 
     > [!NOTE]
@@ -107,7 +103,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告：** {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
+> [!WARNING]
+> {{Glossary("Base64")}} 編碼可以很容易地反轉以獲取原始名稱和密碼，因此 `Basic` 驗證不提供任何密碼學安全性。使用 {{Glossary("HTTPS")}} 是被推薦的，尤其是在使用 `Basic` 驗證時。
 
 參閱 [HTTP 驗證](/zh-TW/docs/Web/HTTP/Guides/Authentication)，瞭解如何配置 Apache 或 Nginx 伺服器以使用 HTTP 基本驗證來保護你的網站。
 

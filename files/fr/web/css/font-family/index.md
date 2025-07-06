@@ -101,9 +101,7 @@ font-family:
 - `<family-name>`
   - : Le nom d'une famille de polices ; par exemple « Times » ou « Helvetica » sont des noms de famille de polices. Les noms de familles qui comportent des blancs doivent être encadrées par des doubles quotes (").
 - `<generic-name>`
-
   - : Les noms de famille génériques sont utilisés comme mécanisme de secours pour conserver l'intention de mise en forme de l'auteur lorsqu'aucune des polices indiquées n'est disponible. Les noms de famille génériques sont des mots-clés et ne doivent pas être encadrés par des doubles quotes. Un nom de famille générique devrait être utilisé comme dernier élément de la liste des noms. Les mots-clés suivants sont définis :
-
     - `serif`
       - : Les caractères possèdent des [empattements](<https://fr.wikipedia.org/wiki/Empattement_(typographie)>).
         Voici des exemples de polices avec empattement : Lucida Bright, Lucida Fax, Palatino, "Palatino Linotype", Palladio, "URW Palladio", serif.

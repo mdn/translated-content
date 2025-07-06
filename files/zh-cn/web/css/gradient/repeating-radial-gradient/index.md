@@ -67,7 +67,6 @@ repeating-radial-gradient(farthest-corner at 20% 20%, red 0, green, red 20%);
 - `<shape>`
   - : 渐变的结束形状。值可以是 `circle`（圆形，渐变的形状是一个半径不变的正圆）或 `ellipse`（椭圆，形状为轴对称椭圆）。如果没有指定，默认为 `ellipse`。
 - `<extent-keyword>`
-
   - : 关键字，描述结束形状应该有多大。可能的值包括：
 
     | 关键字            | 描述                                                                                                               |

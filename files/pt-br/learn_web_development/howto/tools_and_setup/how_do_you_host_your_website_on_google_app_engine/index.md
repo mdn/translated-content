@@ -13,7 +13,6 @@ Para usar as ferramentas do Google em seu próprio site ou aplicativo, você pre
 1. Vá para o [App Engine dashboard](https://console.cloud.google.com/projectselector/appengine) no Google Cloud Platform e apert o botão _Create_ (Criar).
 2. Se você não criou um projeto antes, precisará selecionar se deseja receber atualizações por email ou não, concordar com os Termos de Serviço e, em seguida, poderá continuar.
 3. Digite um nome para o projeto, edite a ID do seu projeto e anote-a. Para este tutorial, os seguintes valores são usados
-
    - Nome do projeto: _GAE Sample Site_
    - ID do Projeto: _gaesamplesite_
 
@@ -25,7 +24,6 @@ Cada projeto do Cloud Platform pode conter um aplicativo do App Engine. Vamos pr
 
 1. Precisamos de um aplicativo de amostra para publicar. Se você não tiver um para usar, faça o download e descompacte este [aplicativo de exemplo](http://gaesamplesite.appspot.com/downloads.html).
 2. Dê uma olhada na estrutura da aplicação padrão — A pasta `website` contem o conteúdo do seu website e `app.yaml` é o seu arquivo de configuração da aplicação.
-
    - O conteúdo do seu website deve ser posto dentro da pasta `website`, e sua página de destino deve ser denominada `index.html`, mas fora isso ela pode conter qualquer coisa que você desejar.
    - O arquivo `app.yaml` é um arquivo de configuração que fala ao App Engine como mapear URLs para os seus arquivos estáticos. Você não precisa editá-lo.
 

@@ -42,7 +42,6 @@ arr.slice(début, fin);
 ### Paramètres
 
 - `début` {{optional_inline}}
-
   - : Indice (à partir de zéro) depuis lequel commencer l'extraction. S'il s'agit d'un indice négatif, `début` indique un décalage depuis la fin de la séquence. Par exemple, `slice(-2)` extrait les avant-dernier et dernier éléments dans la séquence.
 
     Si `début` est absent, `slice()` commencera depuis 0. Si `début` est supérieur à la taille du tableau, c'est un tableau vide qui sera renvoyé.

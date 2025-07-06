@@ -20,7 +20,6 @@ let count = browser.declarativeNetRequest.isRegexSupported(
 ### 参数
 
 - `regexOptions`
-
   - : 一个包含要检查的正则表达式的对象。
     - `isCaseSensitive` {{optional_inline}}
       - : `boolean`。正则表达式是否区分大小写。默认值为 `true`。

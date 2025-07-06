@@ -11,7 +11,7 @@ l10n:
 
 File API를 사용하면 웹 애플리케이션이 파일과 그 콘텐츠에 접근할 수 있습니다.
 
-웹 애플리케이션은 사용자가 [파일 `<input>` 요소](/ko/docs/Web/HTML/Element/input/file)를 사용하거나 [드래그 앤드 드롭](/ko/docs/Web/API/DataTransfer/files)을 통해 파일을 사용할 수 있도록 설정하면 파일에 접근할 수 있습니다.
+웹 애플리케이션은 사용자가 [파일 `<input>` 요소](/ko/docs/Web/HTML/Reference/Elements/input/file)를 사용하거나 [드래그 앤드 드롭](/ko/docs/Web/API/DataTransfer/files)을 통해 파일을 사용할 수 있도록 설정하면 파일에 접근할 수 있습니다.
 
 이러한 방식으로 제공되는 파일 세트는 웹 애플리케이션에서 개별 {{domxref("File")}} 객체를 검색할 수 있는 {{domxref("FileList")}} 객체로 표시됩니다. {{domxref("File")}} 객체는 파일의 이름, 크기, 유형, 마지막 수정 날짜 등의 메타데이터에 대한 접근을 제공합니다.
 
@@ -41,7 +41,7 @@ File API를 사용하면 웹 애플리케이션이 파일과 그 콘텐츠에 �
 
 ### 파일 읽기
 
-이 예제에서는 [파일 `<input>` 요소](/ko/docs/Web/HTML/Element/input/file)를 제공하고, 사용자가 파일을 선택하면 선택한 첫 번째 파일의 내용을 텍스트로 읽고 그 결과를 {{HTMLElement("div")}}에 표시합니다.
+이 예제에서는 [파일 `<input>` 요소](/ko/docs/Web/HTML/Reference/Elements/input/file)를 제공하고, 사용자가 파일을 선택하면 선택한 첫 번째 파일의 내용을 텍스트로 읽고 그 결과를 {{HTMLElement("div")}}에 표시합니다.
 
 #### HTML
 
@@ -85,6 +85,6 @@ fileInput.addEventListener("change", async () => {
 
 ## 같이 보기
 
-- [`<input type="file">`](/ko/docs/Web/HTML/Element/input/file): 파일 input 요소
+- [`<input type="file">`](/ko/docs/Web/HTML/Reference/Elements/input/file): 파일 input 요소
 - [`text() method`](/ko/docs/Web/API/Blob/text): .text()
 - {{domxref("DataTransfer")}} 인터페이스

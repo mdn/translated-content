@@ -18,7 +18,6 @@ clearImmediate(immediateID)
 ### Параметры
 
 - `immediateID`
-
   - : ID, возвращаемый {{DOMxRef("window.setImmediate")}}.
 
 ### Возвращаемое значение

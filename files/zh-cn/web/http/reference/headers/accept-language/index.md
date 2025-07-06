@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9cf66d1b65a11aff2e158fc090dd62a0862aeec8
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Language`** 请求 HTTP 标头表示客户端所偏好的自然语言和区域设置。服务器利用[内容协商](/zh-CN/docs/Web/HTTP/Guides/Content_negotiation)机制从这些提议中选出一项，并通过 {{HTTPHeader("Content-Language")}} 响应标头将这一选择告知客户端。浏览器会根据其当前活跃的用户界面语言为该标头设定所需的值。用户很少更改此设置，而且也不建议这样做，因为这可能导致[指纹识别](/zh-CN/docs/Glossary/Fingerprinting)。
 
 当服务器无法通过其他方式（比如使用依赖于用户明确决定的特定 URL）确定目标内容语言时，这个标头可作为提示使用。服务器绝不应覆盖用户的明确语言选择。`Accept-Language` 的内容常常超出用户的控制范围（例如在旅行时）。用户也可能希望访问使用的语言与用户界面并不相同的页面。

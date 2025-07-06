@@ -122,7 +122,6 @@ La propriété `inline-size` peut prendre les mêmes valeurs que les propriété
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
 

@@ -24,30 +24,22 @@ let removing = browser.cookies.remove(
 ### 参数
 
 - `details`
-
   - : 一个 `object`，包含识别要删除的 cookie 的信息。它包含以下属性：
-
     - `firstPartyDomain` {{optional_inline}}
-
       - : 一个 `string`，表示与要删除的 cookie 关联的第一方域。如果浏览器启用了第一方隔离，则必须提供此属性。请参见[第一方隔离](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/cookies#第一方隔离)。
 
     - `name`
-
       - : 一个 `string`，表示要删除的 cookie 的名称。
 
     - `partitionKey` {{optional_inline}}
-
       - : 一个 `object`，表示包含该 cookie 的存储分区。包括此对象以从分区存储中删除 cookie。此对象包含：
-
         - `topLevelSite` {{optional_inline}}
           - : 一个 `string`，表示包含该 cookie 的顶级站点存储分区的第一方 URL。
 
     - `storeId` {{optional_inline}}
-
       - : 一个 `string`，表示查找 cookie 的 cookie 存储的 ID。如果未指定，默认情况下将在当前执行上下文的 cookie 存储中查找 cookie。
 
     - `url`
-
       - : 一个 `string`，表示与该 cookie 关联的 URL。如果扩展程序没有此 URL 的[主机权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#主机权限)，则 API 调用将失败。
 
 ### 返回值

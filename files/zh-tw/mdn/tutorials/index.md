@@ -85,7 +85,6 @@ slug: MDN/Tutorials
 ### 初級
 
 - [JavaScript first steps](/zh-TW/docs/Learn_web_development/Core/Scripting)
-
   - : In our first JavaScript module, we first answer some fundamental questions such as "what is JavaScript?", "what does it look like?", and "what can it do?", before moving on to taking you through your first practical experience of writing JavaScript. After that, we discuss some key JavaScript features in detail, such as variables, strings, numbers and arrays.
 
 - [JavaScript building blocks](/zh-TW/docs/Learn_web_development/Core/Scripting)

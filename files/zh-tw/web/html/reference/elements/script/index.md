@@ -20,14 +20,12 @@ slug: Web/HTML/Reference/Elements/script
 此元素包含了[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `async`
-
   - : 這個布林屬性告訴瀏覽器說：如果可以，就以非同步的方法執行腳本。
 
     > [!WARNING]
     > 如果沒有 `src` 屬性的話，就不能用這個屬性（例如行內腳本）：在這種情況下，它將失去作用。
 
 - `async`
-
   - : 在 HTML 解析時，瀏覽器通常會假定最壞的情況，並同步地載入腳本（例如 `async=false`）。
 
     動態插入的腳本（例如 `document.createElement`）一般來說是非同步執行的。因此，如果設定同步的話（腳本按照被插入的順序執行），會被設為 `async=false`。
@@ -37,7 +35,6 @@ slug: Web/HTML/Reference/Elements/script
 - `crossorigin`
   - : 針對沒有通過標準 [CORS](/zh-TW/docs/Web/HTTP/Guides/CORS) 的一般 `script` 元素，會把最少的資訊傳給 {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}}。若要允許另一個域名站點的靜態內容，列出錯誤訊息，請使用此屬性。請參見 [CORS settings attributes](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) 以以取得對其有效參數的，更具描述性的解釋。
 - `defer`
-
   - : 設置此 Boolean attribute 是為了指示瀏覽器，腳本應在 document 解析後，但在觸發 [`DOMContentLoaded`](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event) 之前被執行。具有 `defer` 屬性的腳本將阻止觸發 `DOMContentLoaded` 事件，直到腳本 load 完成並且 finished evaluating。
 
     > [!WARNING]
@@ -52,7 +49,6 @@ slug: Web/HTML/Reference/Elements/script
 - `nonce`
   - : A cryptographic nonce (number used once) to whitelist inline scripts in a [script-src Content-Security-Policy](/zh-TW/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src). The server must generate a unique nonce value each time it transmits a policy. It is critical to provide a nonce that cannot be guessed as bypassing a resource's policy is otherwise trivial.
 - `src`
-
   - : 此屬性指定外部程式的 URI，可以用來取代直接在文件內中嵌入腳本。
 
     > [!WARNING]
@@ -61,9 +57,7 @@ slug: Web/HTML/Reference/Elements/script
 - `text`
   - : Like the `textContent` attribute, this attribute sets the text content of the element. Unlike the `textContent` attribute, however, this attribute is evaluated as executable code after the node is inserted into the DOM.
 - `type`
-
   - : 此屬性指定程式碼應該表示的類型。此屬性的值會屬於以下類別之一：**省略或 JavaScript MIME 類型**：針對相容 HTML5 的瀏覽器來說，元素內會執行 JavaScript。HTML5 規範敦促作者省略此屬性，不需要寫冗長的 MIME 類型。在早期的瀏覽器中，這確定了嵌入或引入（透過 `src` 屬性）腳本的語言。JavaScript MIME 類型[有列在規範內](/zh-TW/docs/Web/HTTP/Guides/MIME_types)。
-
     - **`module`**：針對相容 HTML5 的瀏覽器來說，這段程式碼會當成 JavaScript 模組（module）。腳本內容的處理不受 `charset` 與 `defer` 屬性影響。針對 `module` 的資訊，請參閱 [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/)。在使用 `module` 關鍵字時，程式碼的行為會有所不同。
     - **其他值**：嵌入的內容會被當成一段不給瀏覽器執行的資料塊（data block）。開發者應當使用非 JavaScript 的有效 MIME 類型，以標明資料塊。`src` 屬性也將被忽略。
 

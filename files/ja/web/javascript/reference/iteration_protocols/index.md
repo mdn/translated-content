@@ -39,7 +39,6 @@ l10n:
 イテレータープロトコルのすべてのメソッド（`next()`、`return()`、`throw()`）は、`IteratorResult` インターフェイスを実装したオブジェクトを返すことが期待されています。このオブジェクトは以下のプロパティを持つ必要があります。
 
 - `done` {{optional_inline}}
-
   - : イテレーターがシーケンス内の次の値を生成できるとき `false` の値になります。（これは `done` プロパティが指定されていない場合も同じです。）
 
     イテレーターが反復シーケンスを終了した場合、`true` の値になります。この場合、`value` は任意でイテレーターの返値を指定します。
@@ -413,7 +412,7 @@ console.log(it.next().value); // 2
 
 ### クラスで反復可能プロトコルを定義
 
-状態のカプセル化は、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)でも行うことができます。
+状態のカプセル化は、[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)でも行うことができます。
 
 ```js
 class SimpleClass {

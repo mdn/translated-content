@@ -80,27 +80,21 @@ l10n:
 ## ガイド
 
 - [メディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries)
-
   - : メディアクエリーと、その構文や演算子、メディアクエリー式を構築するために使用するメディア機能を紹介します。
 
 - [学習: メディアクエリーの基本](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries)
-
   - : メディアクエリーと、それを使用してレスポンシブデザインを作成するための手法の概要です。
 
 - [プログラムからのメディアクエリーのテスト](/ja/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-
   - : JavaScript の中でメディアクエリーを使用して端末の状態を特定する方法、メディアクエリーの結果が変化したとき（ユーザーが画面を回転させたり、ブラウザーの大きさを変更したりしたとき）にコードに通知されるよう、リスナーを設定する方法を説明します。
 
 - [アクセシビリティのためのメディアクエリーの使用](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries_for_accessibility)
-
   - : ユーザーがウェブサイトをより理解できるように、メディアクエリーが支援できることを学びます。
 
 - [印刷](/ja/docs/Web/CSS/CSS_media_queries/Printing)
-
   - : ウェブコンテンツの印刷出力を改善するためのヒントとテクニック。
 
 - [レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)
-
   - : `sizes` を使用してメディアクエリーを使用し、ウェブサイトのレスポンシブ画像のソリューションを実装する方法を学びます。
 
 ## 関連概念

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a19e6ab98874804411266067ccdb9898b2afa7bf
 ---
 
-{{HTTPSidebar}}
-
 **跨源资源共享**（{{Glossary("CORS")}}，或通俗地译为跨域资源共享）是一种基于 {{Glossary("HTTP")}} 头的机制，该机制通过允许服务器标示除了它自己以外的其他{{glossary("origin","源")}}（域、协议或端口），使得浏览器允许这些源访问加载自己的资源。跨源资源共享还通过一种机制来检查服务器是否会允许要发送的真实请求，该机制通过浏览器发起一个到服务器托管的跨源资源的“预检”请求。在预检中，浏览器发送的头中标示有 HTTP 方法和真实请求中会用到的头。
 
 跨源 HTTP 请求的一个例子：运行在 `https://domain-a.com` 的 JavaScript 代码使用 {{domxref("XMLHttpRequest")}} 来发起一个到 `https://domain-b.com/data.json` 的请求。
@@ -50,13 +48,11 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
 若请求**满足所有下述条件**，则该请求可视为*简单请求*：
 
 - 使用下列方法之一：
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - 除了被用户代理自动设置的标头字段（例如 {{HTTPHeader("Connection")}}、{{HTTPHeader("User-Agent")}} 或其他在 Fetch 规范中定义为[禁用标头名称](https://fetch.spec.whatwg.org/#forbidden-header-name)的标头），允许人为设置的字段为 Fetch 规范定义的[对 CORS 安全的标头字段集合](https://fetch.spec.whatwg.org/#cors-safelisted-request-header)。该集合为：
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -64,7 +60,6 @@ CORS 请求失败会产生错误，但是为了安全，在 JavaScript 代码层
   - {{HTTPHeader("Range")}}（只允许[简单的范围标头值](https://fetch.spec.whatwg.org/#simple-range-header-value) 如 `bytes=256-` 或 `bytes=127-255`）
 
 - {{HTTPHeader("Content-Type")}} 标头所指定的{{Glossary("MIME type","媒体类型")}}的值仅限于下列三者之一：
-
   - `text/plain`
   - `multipart/form-data`
   - `application/x-www-form-urlencoded`
@@ -458,7 +453,8 @@ Origin: <origin>
 
 origin 参数的值为源站 URL。它不包含任何路径信息，只是服务器名称。
 
-> **备注：** `origin` 的值可以为 `null`。
+> [!NOTE]
+> `origin` 的值可以为 `null`。
 
 注意，在所有访问控制请求中，{{HTTPHeader("Origin")}} 标头字段**总是**被发送。
 
@@ -500,7 +496,6 @@ Access-Control-Request-Headers: <field-name>[, <field-name>]*
 - [如何不带 CORS 的运行 Chrome 浏览器](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [在所有（现代）浏览器中使用 CORS](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [Stack Overflow 面对常见问题的解答](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - 如何避免 CORS 预检请求
   - 如何利用 CORS 代理避免“_No Access-Control-Allow-Origin header_”
   - 如何修复“_Access-Control-Allow-Origin header must not be the wildcard_”
