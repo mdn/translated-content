@@ -29,7 +29,6 @@ CSS マスクは、すべての HTML 要素およびほとんどの SVG 要素�
 
 `mask` 一括指定宣言は、すべての `mask-*` プロパティの値を設定します。レイヤー内で宣言されていない要素は、すべて初期値に設定されます。`mask` プロパティは、すべての `mask-border-*` プロパティも初期値にリセットします。`mask-image` 値のみを含む `mask` 宣言は、暗黙的に以下を設定します。
 
-
 ```css
 mask-mode: match-source;
 mask-position: 0% 0%;
