@@ -9,7 +9,7 @@ l10n:
 
 **`toFixed()`** メソッドは、数を固定小数点表記を用いて整形します。
 
-{{InteractiveExample("JavaScript Demo: Number.toFixed()")}}
+{{InteractiveExample("JavaScript デモ: Number.toFixed()")}}
 
 ```js interactive-example
 function financial(x) {
