@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-color`** [CSS](/zh-TW/docs/Web/CSS) [速記](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)屬性可以設定元素邊框的顏色。
+**`border-color`** [CSS](/zh-TW/docs/Web/CSS) [簡寫](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)屬性可以設定元素邊框的顏色。
 
 {{InteractiveExample("CSS Demo: border-color")}}
 
