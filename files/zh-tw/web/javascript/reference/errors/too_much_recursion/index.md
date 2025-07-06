@@ -1,7 +1,8 @@
 ---
 title: "InternalError: too much recursion"
 slug: Web/JavaScript/Reference/Errors/Too_much_recursion
-page-type: javascript-error
+l10n:
+  sourceCommit: 6d606174faaedaa5dee7b7ebd87602cd51e5dd7e
 ---
 
 {{jsSidebar("Errors")}}
