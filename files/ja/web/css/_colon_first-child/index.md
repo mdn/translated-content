@@ -9,7 +9,7 @@ l10n:
 
 **`:first-child`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中で最初の要素を表します。
 
-{{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :first-child", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

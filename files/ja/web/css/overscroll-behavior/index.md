@@ -9,7 +9,7 @@ l10n:
 
 **`overscroll-behavior`** は CSS のプロパティで、スクロール領域の境界に達したときにブラウザーが何をするかを設定します。これは {{cssxref("overscroll-behavior-x")}} および {{cssxref("overscroll-behavior-y")}} の一括指定です。
 
-{{InteractiveExample("CSS Demo: overscroll-behavior")}}
+{{InteractiveExample("CSS デモ: overscroll-behavior")}}
 
 ```css interactive-example-choice
 overscroll-behavior: auto;

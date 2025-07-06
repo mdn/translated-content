@@ -27,7 +27,7 @@ page-break-after: revert;
 page-break-after: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-after")}}
+{{InteractiveExample("CSS デモ: page-break-after")}}
 
 ```css interactive-example-choice
 page-break-after: auto;
