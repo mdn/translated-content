@@ -169,7 +169,6 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ## Смотрите также
 
 - [Понимание WCAG](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Воспринимаемость](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Работоспособность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Понятность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
