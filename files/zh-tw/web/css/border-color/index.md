@@ -1,8 +1,8 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
-page-type: css-shorthand-property
-browser-compat: css.properties.border-color
+l10n:
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
 {{CSSRef}}
