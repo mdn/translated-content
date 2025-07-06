@@ -8,7 +8,7 @@ l10n:
 本技能测试用于评估你是否理解[如何使用较少为人知的 HTML 元素来标记高级语义特性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)。
 
 > [!NOTE]
-> 你可以在 MDN Playground 中中或于在线编辑器（如 [CodePen](https://codepen.io/)、[JSFiddle](https://jsfiddle.net/)）中尝试解决方案。
+> 你可以在 MDN 代码演练场或在线编辑器（如 [CodePen](https://codepen.io/) 或 [JSFiddle](https://jsfiddle.net/)）中尝试解决方案。
 >
 > 如果你遇到困难，可以通过我们的[沟通渠道](/zh-CN/docs/MDN/Community/Communication_channels)联系我们。
 
