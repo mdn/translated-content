@@ -9,7 +9,7 @@ l10n:
 
 **`padding-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロック方向の論理的な末尾側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{InteractiveExample("CSS Demo: padding-block-end")}}
+{{InteractiveExample("CSS デモ: padding-block-end")}}
 
 ```css interactive-example-choice
 padding-block-end: 20px;

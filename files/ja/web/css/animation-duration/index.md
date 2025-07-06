@@ -9,7 +9,7 @@ l10n:
 
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
-{{InteractiveExample("CSS Demo: animation-duration")}}
+{{InteractiveExample("CSS デモ: animation-duration")}}
 
 ```css interactive-example-choice
 animation-duration: 750ms;

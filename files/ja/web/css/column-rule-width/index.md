@@ -9,7 +9,7 @@ l10n:
 
 **`column-rule-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで段間に引かれる線（段間罫）の太さを設定します。
 
-{{InteractiveExample("CSS Demo: column-rule-width")}}
+{{InteractiveExample("CSS デモ: column-rule-width")}}
 
 ```css interactive-example-choice
 column-rule-width: thin;

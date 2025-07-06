@@ -9,7 +9,7 @@ l10n:
 
 **`text-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロック要素または表のセルボックス内におけるインラインレベルコンテンツの水平方向の配置を設定します。つまり、 {{cssxref("vertical-align")}} と同じように機能しますが、水平方向に機能します。
 
-{{InteractiveExample("CSS Demo: text-align")}}
+{{InteractiveExample("CSS デモ: text-align")}}
 
 ```css interactive-example-choice
 text-align: start;
