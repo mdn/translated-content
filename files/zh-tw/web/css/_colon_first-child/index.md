@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`:first-child`** [CSS](/zh-TW/docs/Web/CSS) [偽類別](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中的第一個元素。
+**`:first-child`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中的第一個元素。
 
 {{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}
 
