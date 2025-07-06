@@ -84,7 +84,7 @@ tony.name = "Tonisha"; // InternalError: too much recursion
 
 當一個值被指派給 name 屬性（this.name = name;）時，JavaScript 需要設定該屬性。當這種情況發生時，就會觸發 setter 函式。
 
-在此範例中，當 setter 被觸發時，它被告知要再次做同樣的事情：*設定它本應處理的同一個屬性*。這會導致函式不斷地呼叫自己，從而造成無限遞迴。
+在此範例中，當 setter 被觸發時，它被告知要再次做同樣的事情：_設定它本應處理的同一個屬性_。這會導致函式不斷地呼叫自己，從而造成無限遞迴。
 
 如果在 getter 中使用相同的變數，也會出現此問題。
 
