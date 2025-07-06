@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **User-Agent** {{Glossary("request header", "請求標頭")}}是一個讓伺服器和網路對等端識別發起請求的{{Glossary("user agent", "使用者代理")}}的應用程式、操作系統、供應商和/或版本的特徵字串。
 
 > [!WARNING]
