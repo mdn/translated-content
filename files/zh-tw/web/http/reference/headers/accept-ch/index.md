@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}
+{{securecontext_header}}
 
 HTTP **`Accept-CH`** {{Glossary("response header", "回應標頭")}}可以由伺服器設定，以指定用戶在後續請求中應包含哪些[用戶端提示](/zh-TW/docs/Web/HTTP/Guides/Client_hints)標頭。為了確保用戶端提示能夠可靠地傳送，應該對所有安全請求持久化 `Accept-CH` 標頭。
 

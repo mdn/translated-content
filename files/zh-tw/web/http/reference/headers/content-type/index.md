@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Content-Type`** {{Glossary("representation header", "表示標頭")}}用於指示資源在套用任何內容編碼之前的原始{{Glossary("MIME type", "媒體類型")}}。
 
 在回應中，`Content-Type` 標頭會告知用戶端回傳資料的媒體類型。在請求中（例如 {{HTTPMethod("POST")}} 或 {{HTTPMethod("PUT")}}），用戶端使用 `Content-Type` 標頭來指定傳送給伺服器的內容類型。如果伺服器的實作或組態對內容類型處理很嚴格，可能會回傳 {{HTTPStatus("415")}} 用戶端錯誤回應。
