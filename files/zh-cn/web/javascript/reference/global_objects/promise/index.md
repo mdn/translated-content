@@ -61,7 +61,7 @@ myPromise
   .then(handleFulfilledC, handleRejectedC);
 ```
 
-我们将使用以下术语：_初始 Promise_ 是调用 `then` 的 Promise；_新 Promise_ 是 `then` 返回的 Promise。传递给 `then` 的两个回调分别称为_兑现处理器_和_拒绝处理器_。
+我们将使用以下术语：_初始 Promise_ 是调用 `then` 的 Promise；_新 Promise_ 是 `then` 返回的 Promise。传递给 `then` 的两个回调分别称为*兑现处理器*和*拒绝处理器*。
 
 初始 Promise 的敲定状态决定了要执行哪个处理器。
 
