@@ -2,7 +2,7 @@
 title: Content-Type 標頭
 slug: Web/HTTP/Reference/Headers/Content-Type
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP **`Content-Type`** {{Glossary("representation header", "表示標頭")}}用於指示資源在套用任何內容編碼之前的原始{{Glossary("MIME type", "媒體類型")}}。
@@ -138,7 +138,7 @@ Content-Type: text/plain
 POST /submit HTTP/1.1
 Host: example.com
 Content-Type: application/x-www-form-urlencoded
-Content-Length: 15
+Content-Length: 17
 
 comment=你好！
 ```
