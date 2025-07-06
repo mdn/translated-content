@@ -27,10 +27,7 @@ CSS 提供了 [`orientation`](/zh-CN/docs/Web/CSS/@media/orientation) 媒体特�
 </ul>
 
 <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacinia nisi nec
-  sem viverra vitae fringilla nulla ultricies. In ac est dolor, quis tincidunt
-  leo. Cras commodo quam non tortor consectetur eget rutrum dolor ultricies. Ut
-  interdum tristique dapibus. Nullam quis malesuada est.
+  照顾病人、跟随病人很重要，但会发生在这样的时候，有很多工作和痛苦。细究起来，任何人都不应该从事任何一种工作，除非他能从中得到一些好处。不要在愤怒中在痛苦中在斥责中在快乐中他想要成为一根头发，从痛苦中希望没有滋生。除非被情欲蒙蔽，否则他们就没有过错；那些放弃职责、软化灵魂的人，即劳动者。
 </p>
 ```
 
