@@ -25,7 +25,7 @@ TypeError: Right side of assignment cannot be destructured (Safari)
 
 {{jsxref("TypeError")}}。
 
-## 發生了什麼問題？
+## 哪裡出錯了？
 
 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 和 {{jsxref("undefined")}} 都沒有可以存取的屬性。因此，你不能對它們使用[屬性存取器](/zh-TW/docs/Web/JavaScript/Reference/Operators/Property_accessors)，也不能[解構](/zh-TW/docs/Web/JavaScript/Reference/Operators/Destructuring)它們。
 
