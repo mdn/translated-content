@@ -2,10 +2,8 @@
 title: URL とは何か
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_URL
 l10n:
-  sourceCommit: 7505786a447886f6940cef629208457e21f8f2a1
+  sourceCommit: 9f935510a1add5dd4c1d8696e770ea7e6ef2f597
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では URL (Uniform Resource Locator) について説明し、その内容と構造を説明します。
 
@@ -36,7 +34,7 @@ URL の例を次に示します
 
 ```plain
 https://developer.mozilla.org
-https://developer.mozilla.org/ja/docs/Learn/
+https://developer.mozilla.org/ja/docs/Learn_web_development/
 https://developer.mozilla.org/ja/search?q=URL
 ```
 
@@ -110,77 +108,39 @@ URL の最初の部分は**スキーム**で、ブラウザーがリソースを
 
 上記で見たものは**絶対 URL** と呼ばれていますが、**相対 URL** と呼ばれるものもあります。 [URL 標準](https://url.spec.whatwg.org/#absolute-url-string)では両方が定義されています。 — ここでは[_絶対 URL 文字列_](https://url.spec.whatwg.org/#absolute-url-string)および[_相対 URL 文字列_](https://url.spec.whatwg.org/#relative-url-string)という言葉が使われています。これは [URL オブジェクト](https://url.spec.whatwg.org/#url)（URL のメモリー内の表現）と区別するためです。
 
-URL のコンテキストで*絶対*と*相対*の意味の違いを確認してみましょう。
+URL のコンテキストで「絶対」と「相対」の意味の違いを確認してみましょう。
 
 URL の必須部分は、その URL が使用されているコンテキストによって大きく異なります。ブラウザーのアドレスバーでは、 URL にはコンテキストがありません。そのため、上で見たように、完全（または**絶対**） URL を指定する必要があります。プロトコル（ブラウザーは既定で HTTP を使用します）やポート番号（対象となるウェブサーバーが通常以外のポートを使用している場合にのみ必要）を含める必要はありませんが、 URL の他の部分はすべて必要です。
 
-HTML ページ内など、文書内で URL が使用されている場合は状況が少し異なります。ブラウザーはすでに文書自身の URL を持っているので、この情報を文書内で利用される URL の欠けている部分を補うために利用することができます。**絶対 URL** と**相対 URL** は、 URL の**パス**の部分を見るだけで区別することができます。 URL のパスの部分が "`/`" の文字で始まっていれば、ブラウザーは現在の文書で指定されているコンテキストを参照せずに、サーバーの最上位のルートからそのリソースを取得します。
+HTML ページなどの文書内で URL が使用される場合、状況は少し異なります。ブラウザーはすでに文書自身の URL を持っているので、この情報を文書内で利用される URL の欠けている部分を補うために利用することができます。**絶対 URL** と**相対 URL** は、 URL の**パス**の部分を見るだけで区別することができます。 URL のパスの部分が `/` の文字で始まっていれば、ブラウザーは現在の文書で指定されているコンテキストを参照せずに、サーバーの最上位のルートからそのリソースを取得します。
 
-これを明確にするためにいくつかの例を見てみましょう。
+これをより明確にするために、いくつかの例を見てみましょう。URL は、 `https://developer.mozilla.org/ja/docs/Learn_web_development` の URL にある文書内で定義されていると想定しましょう。
 
-### 絶対 URL の例
+`https://developer.mozilla.org/ja/docs/Learn_web_development` 自体は絶対 URL です。この URL には、それが指すリソースを見つけるために必要なすべての部分が含まれています。
 
-<table>
-  <tbody>
-    <tr>
-      <td>完全 URL (以前に使用したものと同じ)</td>
-      <td><pre>https://developer.mozilla.org/ja/docs/Learn</pre></td>
-    </tr>
-    <tr>
-      <td>暗黙のプロトコル</td>
-      <td>
-        <pre>//developer.mozilla.org/ja/docs/Learn</pre>
-        <p>
-          この場合、ブラウザーはその URL をホストしている文書を読み込むために使用されたものと同じプロトコルで、その URL を呼び出します。
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>暗黙のドメイン名</td>
-      <td>
-        <pre>/ja/docs/Learn</pre>
-        <p>
-          これは、 HTML 文書内の絶対 URL の最も一般的な使用例です。ブラウザーは、その URL をホストしている文書を読み込むために使用されたものと同じプロトコルおよび同じドメイン名を使用します。
-          <strong>メモ:</strong>
-          <em>
-            プロトコルを省略せずにドメイン名だけ省略することはできません。
-          </em>
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+次の URL はすべて相対 URL です。
 
-### 相対 URL の例
+- スキーム相対 URL: `//developer.mozilla.org/ja/docs/Learn_web_development` — プロトコルのみがありません。ブラウザーは、その URL をホスティングする文書を読み込む際に使用したプロトコルと同じプロトコルを使用します。
+- ドメイン相対 URL: `/ja/docs/Learn_web_development` — プロトコルとドメイン名の両方がありません。ブラウザーは、その URL をホスティングする文書を読み込むために使用されているものと同じプロトコルおよびドメイン名を使用します。
+- サブリソース: `Howto/Web_mechanics/What_is_a_URL` — プロトコルとドメイン名がなく、パスが `/` で始まっていません。ブラウザーは、現在のリソースを含むサブディレクトリ内で文書を探します。この場合、実際に到達したい URL は `https://developer.mozilla.org/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL` です。
+- ディレクトリーツリーを戻る: `../CSS/display` — プロトコルとドメイン名がなく、パスは `..` で始まっています。これは UNIX ファイルシステムの世界から継承されたもので、1 レベル上に移動することをブラウザーに指示します。ここでは、 `https://developer.mozilla.org/ja/docs/Learn_web_development/../Web/CSS/display`　の URL に到達したいとしますが、これは `https://developer.mozilla.org/ja/docs/Web/CSS/display` のように簡略化できます。
+- アンカーのみ: `#semantic_urls` - アンカー以外の部分がすべてありません。ブラウザーは、現在の文書の URL を使用し、アンカー部分を置き換えたり追加したりします。これは、現在の文書の特定の部分にリンクしたい場合に便利です。
 
-次の例をよく理解するために、これらの URL が `https://developer.mozilla.org/ja/docs/Learn` という URL にある文書内から呼び出されると仮定しましょう。
+## URL のユーザー名とパスワード
 
-<table>
-  <tbody>
-    <tr>
-      <td>サブリソース</td>
-      <td>
-        <pre>Skills/Infrastructure/Understanding_URLs</pre>
-        <p>
-          URL が `/` で始まっていないので、ブラウザーは現在のリソースを含んでいるディレクトリーのサブディレクトリーでその文書を見つけようとします。そのため、この例では本当に達したい URL である次の URL に達します。<br>
-          https://developer.mozilla.org/ja/docs/Learn/Skills/Infrastructure/Understanding_URLs.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td>ディレクトリーツリー内をさかのぼる</td>
-      <td>
-        <pre>../CSS/display</pre>
-        <p>
-          この場合、 UNIX ファイルシステムの世界から継承された <code>../</code> の表記規則を使用して、ブラウザーにあるディレクトリーの上に移動したいことを伝えます。つまり、次の URL にアクセスしようとします。<br>
-          https://developer.mozilla.org/ja/docs/Learn/../CSS/display<br>
-          これは、次のように単純化することができます。<br>
-          https://developer.mozilla.org/ja/docs/CSS/display
-        </p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+上記で説明した URL の部分よりもあまり一般的ではありませんが、URL にユーザー名とパスワードが含まれている場合があります。
+
+例を示します。
+
+```plain
+https://username:password@www.example.com:80/
+```
+
+含める場合、ユーザー名とパスワードは `://` 文字で囲み、その間に権限を記載し、その間にコロン、最後にアットマーク (`@`) を付けます。
+
+[HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)セキュリティ機構を使用しているウェブサイトにアクセスする際に、ユーザー名とパスワードを URL に含めることができます。これにより、ウェブサイトに即座にログインし、資格情報を入力するためのユーザー名/パスワードダイアログボックスをバイパスすることができます。
+
+このメカニズムは、まだ実際に使用されているものを見かけるかもしれませんが、セキュリティ上の観点から非推奨とされており、現行のウェブサイトでは、認証には他のメカニズムが使用される傾向があります。詳細については、[URL 内の資格情報を使用してアクセスする](/ja/docs/Web/HTTP/Guides/Authentication#url_内の認証情報を使用したアクセス)をご覧ください。
 
 ### セマンティック URL
 
