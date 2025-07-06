@@ -146,13 +146,13 @@ animation-fill-mode: unset;
   - : 目標將保留執行期間遇到的最後一個 [keyframe](/zh-TW/docs/Web/CSS/@keyframes) 所設定的計算值。最後一個 keyframe 取決於 {{cssxref("animation-direction")}} 和 {{cssxref("animation-iteration-count")}} 的值：
 
     | `animation-direction` | `animation-iteration-count` | 遇到的最後一個 keyframe |
-    | --------------------- | --------------------------- | ------------------------- |
-    | `normal`              | 偶數或奇數                  | `100%` 或 `to`            |
-    | `reverse`             | 偶數或奇數                  | `0%` 或 `from`            |
-    | `alternate`           | 偶數                        | `0%` 或 `from`            |
-    | `alternate`           | 奇數                        | `100%` 或 `to`            |
-    | `alternate-reverse`   | 偶數                        | `100%` 或 `to`            |
-    | `alternate-reverse`   | 奇數                        | `0%` 或 `from`            |
+    | --------------------- | --------------------------- | ----------------------- |
+    | `normal`              | 偶數或奇數                  | `100%` 或 `to`          |
+    | `reverse`             | 偶數或奇數                  | `0%` 或 `from`          |
+    | `alternate`           | 偶數                        | `0%` 或 `from`          |
+    | `alternate`           | 奇數                        | `100%` 或 `to`          |
+    | `alternate-reverse`   | 偶數                        | `100%` 或 `to`          |
+    | `alternate-reverse`   | 奇數                        | `0%` 或 `from`          |
 
     動畫屬性的行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 
@@ -160,9 +160,9 @@ animation-fill-mode: unset;
   - : 動畫一旦應用到目標上，就會立即套用第一個相關 [keyframe](/zh-TW/docs/Web/CSS/@keyframes) 中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的 keyframe 取決於 {{cssxref("animation-direction")}} 的值：
 
     | `animation-direction`            | 第一個相關的 keyframe |
-    | -------------------------------- | --------------------- |
-    | `normal` 或 `alternate`          | `0%` 或 `from`        |
-    | `reverse` 或 `alternate-reverse` | `100%` 或 `to`        |
+    | -------------------------------- | ----------------------- |
+    | `normal` 或 `alternate`          | `0%` 或 `from`          |
+    | `reverse` 或 `alternate-reverse` | `100%` 或 `to`          |
 
 - `both`
   - : 動畫將同時遵循 `forwards` 和 `backwards` 的規則，從而將動畫屬性在兩個方向上延伸。
