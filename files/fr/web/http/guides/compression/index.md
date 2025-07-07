@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Compression
 original_slug: Web/HTTP/Compression
 ---
 
-{{HTTPSidebar}}
-
 La compression est une méthode importante pour accroitre les performances d'un site web. Pour certaines pages, la réduction de la taille des éléments économise jusqu'à 70 % de la bande passante. Les algorithmes de compression s'améliorent d'années en années, les nouveaux algorithmes étant supportés à la fois par les serveurs et les clients.
 
 En réalité, les développeurs web n'ont pas besoin d'implémenter des mécanismes de compression puisqu'ils sont déjà intégrés à la fois aux navigateurs et dans les serveurs. Il convient néanmoins de s'assurer de la configuration correcte du serveur web. La compression s'effectue à trois niveaux différents :

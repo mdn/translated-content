@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{non-standard_header}}
+{{SeeCompatTable}}{{non-standard_header}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `browsing-topics` ディレクティブは、[トピック API](/ja/docs/Web/API/Topics_API) へのアクセスを制御します。
 
