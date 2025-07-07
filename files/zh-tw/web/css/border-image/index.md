@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`border-image`** [CSS](/zh-TW/docs/Web/CSS) 屬性會在給定元素的周圍繪製一個圖片。它會取代元素的一般 [border](/zh-TW/docs/Web/CSS/border)。
+**`border-image`** [CSS](/zh-TW/docs/Web/CSS) 屬性會在給定元素的周圍繪製一個圖片。它會取代元素的一般[邊框](/zh-TW/docs/Web/CSS/border)。
 
 {{InteractiveExample("CSS Demo: border-image")}}
 
