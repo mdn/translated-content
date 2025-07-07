@@ -2,7 +2,7 @@
 title: 建立與觸發事件
 slug: Web/Events/Creating_and_triggering_events
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: d0ed4906719465102739e604bdb35213fb19f251
 ---
 
 本文將示範如何建立與分派 DOM 事件。這類事件通常被稱為**合成事件**，以區別於瀏覽器本身觸發的事件。
@@ -29,8 +29,6 @@ elem.dispatchEvent(event);
 
 上述程式碼範例使用了 [EventTarget.dispatchEvent()](/zh-TW/docs/Web/API/EventTarget/dispatchEvent) 方法。
 
-大多數現代瀏覽器都支援此建構子。若想了解更詳細的方法，請參見下方的[舊式方法](#舊式方法)。
-
 ### 新增自訂資料——CustomEvent()
 
 若要為事件物件新增更多資料，可以使用 [CustomEvent](/zh-TW/docs/Web/API/CustomEvent) 介面，並透過 **detail** 屬性傳遞自訂資料。例如，可以像這樣建立事件：
@@ -47,28 +45,39 @@ function eventHandler(e) {
 }
 ```
 
-### 舊式方法
+### 新增自訂資料——子類別化 Event
 
-建立事件的舊式方法使用了受 Java 啟發的 API。以下是使用 {{domxref("document.createEvent()")}} 的範例：
+[`Event`](/zh-TW/docs/Web/API/Event) 介面也可以被子類別化。這對於重用、處理更複雜的自訂資料，甚至為事件新增方法特別有用。
 
 ```js
-// 建立事件。
-const event = document.createEvent("Event");
+class BuildEvent extends Event {
+  #buildTime;
 
-// 定義事件名稱為「build」。
-event.initEvent("build");
+  constructor(buildTime) {
+    super("build");
+    this.#buildTime = buildTime;
+  }
 
-// 監聽此事件。
-elem.addEventListener(
-  "build",
-  (e) => {
-    // e.target 對應 elem
-  },
-  false,
-);
+  get buildTime() {
+    return this.#buildTime;
+  }
+}
+```
 
-// target 可以是任何 Element 或其他 EventTarget。
-elem.dispatchEvent(event);
+上述程式碼範例定義了一個 `BuildEvent` 類別，它具有一個唯讀屬性與一個固定的事件類型。
+
+可以像這樣建立事件：
+
+```js
+const event = new BuildEvent(elem.dataset.time);
+```
+
+可以在事件監聽器中使用自訂屬性來存取額外的資料：
+
+```js
+function eventHandler(e) {
+  console.log(`時間是：${e.buildTime}`);
+}
 ```
 
 ### 事件氣泡
@@ -161,7 +170,8 @@ function simulateClick() {
 <section id="Quick_links">
   <ol>
     <li><a href="/zh-TW/docs/Learn_web_development/Core/Scripting/Events">事件簡介</a></li>
-    <li><a href="/zh-TW/docs/Web/Events/Event_handlers">事件處理常式（概覽）</a></li>
     <li><a href="/zh-TW/docs/Web/Events">事件參考</a></li>
+    <li><a href="/zh-TW/docs/Web/Events/Creating_and_triggering_events">建立與觸發事件</a></li>
+    <li><a href="/zh-TW/docs/Web/Events/Event_handlers">事件處理（概覽）</a></li>
   </ol>
 </section>
