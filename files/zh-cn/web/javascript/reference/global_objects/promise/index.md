@@ -120,7 +120,7 @@ const promiseC = promiseA.then(handleFulfilled2, handleRejected2);
 const promiseA = new Promise((resolve, reject) => {
   resolve(777);
 });
-// 此时，"promiseA"已经敲定了
+// 此时，“promiseA”已经敲定了
 promiseA.then((val) => console.log("异步日志记录有值：", val));
 console.log("立即记录");
 
