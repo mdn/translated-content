@@ -1,11 +1,9 @@
 ---
-title: Authorization
+title: Authorization 標頭
 slug: Web/HTTP/Reference/Headers/Authorization
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
-
-{{HTTPSidebar}}
 
 HTTP **`Authorization`** {{Glossary("request header", "請求標頭")}}可以用來提供憑證，以便用戶代理與伺服器進行驗證，從而訪問受保護的資源。
 
