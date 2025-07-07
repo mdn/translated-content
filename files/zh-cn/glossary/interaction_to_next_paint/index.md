@@ -14,7 +14,7 @@ INP 由 Google 设计，是[核心 Web 指标](https://web.developers.google.cn/
 - FID 只测量首次用户交互，而 INP 会考虑所有用户交互。
 - FID 只测量交互的输入延迟，而 INP 测量的时间更长：从输入延迟开始，接着是事件处理程序的处理时间，直到浏览器绘制下一个帧的展示时间。
 
-INP 测量用户在网页上交互后，处理完该交互并展示下一个帧之间的最长耗时（去除部分异常值），单位为毫秒。滚动和缩放不计入该指标。INP 通过[事件计时 API](/zh-CN/docs/Web/API/PerformanceEventTiming) 计算。异步操作（如网络请求或文件读取）通常不会延迟 INP，因为绘制可以在这些操作处理期间进行。
+INP 测量用户在网页上交互后，处理完该交互并展示下一个帧之间的最长耗时（去除部分异常值），单位为毫秒。滚动和缩放不计入该指标。INP 通过[事件计时 API](/zh-CN/docs/Web/API/PerformanceEventTiming) 计算。异步操作（如 Web 请求或文件读取）通常不会延迟 INP，因为绘制可以在这些操作处理期间进行。
 
 页面生命周期内所有合格的交互都会被考虑。对于交互频繁（50 次及以上）的页面，采用第 98 百分位以排除极端异常值。
 
@@ -26,4 +26,4 @@ INP 测量用户在网页上交互后，处理完该交互并展示下一个帧�
 - [PerformanceEventTiming](/zh-CN/docs/Web/API/PerformanceEventTiming)
 - web.developer.google.cn 上的 [INP](https://web.developers.google.cn/articles/inp)（2023）
 - web.developer.google.cn 上的 [优化交互至下一次绘制](https://web.developers.google.cn/articles/optimize-inp)（2023）
-- web.developer.google.cn 上的 [INP 正式成为核心网络指标](https://web.developers.google.cn/blog/inp-cwv-launch)（2024）
+- web.developer.google.cn 上的 [INP 正式成为核心 Web 指标](https://web.developers.google.cn/blog/inp-cwv-launch)（2024）
