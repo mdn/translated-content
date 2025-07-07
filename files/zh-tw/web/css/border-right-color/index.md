@@ -93,7 +93,9 @@ border-right-color: unset;
 ```html
 <div class="my-box">
   <p>
-    這是一個周圍有邊框的方塊。請注意方塊的哪一側是<span class="red-text">紅色</span>的。
+    這是一個周圍有邊框的方塊。請注意方塊的哪一側是<span class="red-text"
+      >紅色</span
+    >的。
   </p>
 </div>
 ```
