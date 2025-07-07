@@ -15,7 +15,7 @@ http://example.com:80<path>
 urn:<path>
 ```
 
-路径几乎可以包含所有字符，但`?`和`#`（分别以[查询](/zh-CN/docs/Web/URI/Reference/Query)和[片段](/zh-CN/docs/Web/URI/Reference/Fragment)开头）以及 URI 方案保留的其他字符除外。有些方案（称为*层次方案*）将路径进一步解析为由斜线（`/`）字符分隔的段序列；其他方案则将路径视为单个不透明字符串。
+路径几乎可以包含所有字符，但 `?` 和 `#`（分别以[查询](/zh-CN/docs/Web/URI/Reference/Query)和[片段](/zh-CN/docs/Web/URI/Reference/Fragment)开头）以及 URI 方案保留的其他字符除外。有些方案（称为*层次方案*）将路径进一步解析为由斜线（`/`）字符分隔的段序列；其他方案则将路径视为单个不透明字符串。
 
 ## 描述
 
