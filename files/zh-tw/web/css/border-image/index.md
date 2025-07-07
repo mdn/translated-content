@@ -137,9 +137,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="bitmap">
-  這個元素被一個基於點陣圖的邊框圖片包圍！
-</div>
+<div id="bitmap">這個元素被一個基於點陣圖的邊框圖片包圍！</div>
 ```
 
 #### CSS
@@ -168,9 +166,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="gradient">
-  這個元素被一個基於漸層的邊框圖片包圍！
-</div>
+<div id="gradient">這個元素被一個基於漸層的邊框圖片包圍！</div>
 ```
 
 #### CSS
@@ -195,9 +191,7 @@ border-image: unset;
 #### HTML
 
 ```html
-<div id="rounded">
-  這個元素被一個帶有圓角的邊框圖片包圍！
-</div>
+<div id="rounded">這個元素被一個帶有圓角的邊框圖片包圍！</div>
 ```
 
 #### CSS
