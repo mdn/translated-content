@@ -6,7 +6,7 @@ l10n:
   sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
-URI 的**路径**是位于[管辖范围](/zh-CN/docs/Web/URI/Reference/Authority)之后的部分。它包含通常以分层形式组织的数据，用于标识 URI 的[方案](/zh-CN/docs/Web/URI/Reference/Schemes)和命名管辖范围内的资源。
+URI 的**路径**是位于[权威](/zh-CN/docs/Web/URI/Reference/Authority)之后的部分。它包含通常以分层形式组织的数据，用于标识 URI 的[方案](/zh-CN/docs/Web/URI/Reference/Schemes)和命名管辖范围内的资源。
 
 ## 语法
 
@@ -19,7 +19,7 @@ urn:<path>
 
 ## 描述
 
-路径跟随管辖范围，以第一个问号（`?`）、井号（`#`）或 URI 的结尾结束。在以下两个 URI 中：
+路径跟随权威，以第一个问号（`?`）、井号（`#`）或 URI 的结尾结束。在以下两个 URI 中：
 
 ```url
 urn:nbn:de:bvb:19-epub-5359-3
