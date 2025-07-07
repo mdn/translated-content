@@ -131,4 +131,4 @@ border-left-color: unset;
 - 與邊框相關的 CSS 簡寫屬性：{{Cssxref("border")}}、{{Cssxref("border-left")}} 與 {{Cssxref("border-color")}}。
 - 其他邊框的顏色相關 CSS 屬性：{{Cssxref("border-right-color")}}、{{Cssxref("border-bottom-color")}} 與 {{Cssxref("border-top-color")}}。
 - 適用於相同邊框的其他邊框相關 CSS 屬性：{{cssxref("border-left-style")}} 與 {{cssxref("border-left-width")}}。
-- 預設的 [`currentcolor`](/zh-TW/docs/Web/CSS/color_value#currentcolor_keyword) 顏色值。
+- 預設的 [`currentcolor`](/zh-TW/docs/Web/CSS/color_value#currentcolor_關鍵字) 顏色值。
