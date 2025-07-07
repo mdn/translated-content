@@ -1,5 +1,5 @@
 ---
-title: 交互响应时间（INP）
+title: 交互至下一次绘制（INP）
 slug: Glossary/Interaction_to_next_paint
 l10n:
   sourceCommit: 673746e15e5052c4fe39944f3d93d2e2d3227b3f
@@ -7,9 +7,9 @@ l10n:
 
 {{GlossarySidebar}}
 
-**交互响应时间**（INP，Interaction to Next Paint）衡量网站对用户交互（例如点击链接、点击按钮或使用自定义 JavaScript 控件）的响应速度。
+**交互至下一次绘制**（INP，Interaction to Next Paint）衡量网站对用户交互（例如点击链接、点击按钮或使用自定义 JavaScript 控件）的响应速度。
 
-INP 由 Google 设计，是[核心网络指标](https://web.developers.google.cn/articles/vitals)（Core Web Vitals）之一，并于 2024 年 5 月取代了{{Glossary("First Input Delay", "首次输入延迟（FID）")}}。INP 与 FID 有两个关键区别，使其成为更可靠的页面响应性衡量标准：
+INP 由 Google 设计，是[核心 Web 指标](https://web.developers.google.cn/articles/vitals)（Core Web Vitals）之一，并于 2024 年 5 月取代了{{Glossary("First Input Delay", "首次输入延迟（FID）")}}。INP 与 FID 有两个关键区别，使其成为更可靠的页面响应性衡量标准：
 
 - FID 只测量首次用户交互，而 INP 会考虑所有用户交互。
 - FID 只测量交互的输入延迟，而 INP 测量的时间更长：从输入延迟开始，接着是事件处理程序的处理时间，直到浏览器绘制下一个帧的展示时间。
@@ -25,5 +25,5 @@ INP 测量用户在网页上交互后，处理完该交互并展示下一个帧�
 - [长动画帧计时](/zh-CN/docs/Web/API/Performance_API/Long_animation_frame_timing)
 - [PerformanceEventTiming](/zh-CN/docs/Web/API/PerformanceEventTiming)
 - web.developer.google.cn 上的 [INP](https://web.developers.google.cn/articles/inp)（2023）
-- web.developer.google.cn 上的 [优化交互响应时间](https://web.developers.google.cn/articles/optimize-inp)（2023）
+- web.developer.google.cn 上的 [优化交互至下一次绘制](https://web.developers.google.cn/articles/optimize-inp)（2023）
 - web.developer.google.cn 上的 [INP 正式成为核心网络指标](https://web.developers.google.cn/blog/inp-cwv-launch)（2024）
