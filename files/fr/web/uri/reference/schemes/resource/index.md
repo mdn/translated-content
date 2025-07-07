@@ -4,8 +4,6 @@ slug: Web/URI/Reference/Schemes/resource
 original_slug: Web/URI/Schemes/resource
 ---
 
-{{HTTPSidebar}}
-
 Les URLs de type ressource sont les URLs préfixées à l'aide du schéma `resource:`. Elles sont utilisées par Firefox ainsi que les modules complémentaires pour charger des ressources de manière interne, néanmoins, certaines informations associées sont disponibles pour les sites auxquels le navigateur accède.
 
 ## Syntaxe

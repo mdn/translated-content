@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CSP
 original_slug: Web/HTTP/CSP
 ---
 
-{{HTTPSidebar}}
-
 **Une _Content Security Policy ({{Glossary("CSP")}})_ ou stratégie de sécurité du contenu** permet d'améliorer la sécurité des sites web en permettant de détecter et réduire certains types d'attaques, dont les attaques {{Glossary("XSS")}} (_Cross Site Scripting_) et les injections de contenu. Ces attaques peuvent être utilisées dans divers buts, comme le vol de données, le défacement de site ou la diffusion de _malware_.
 
 CSP a été conçu pour être complètement rétro-compatible (à l'exception de la version 2 dans laquelle existent des incompatibilités décrites explicitement comme telles ; pour plus d'informations, se référer à [la documentation du w3c (en anglais)](https://www.w3.org/TR/CSP2)). D'une part : les navigateurs qui ne prennent pas en charge le CSP fonctionnent parfaitement avec les serveurs qui l'implémentent et inversement. D'autre part, lorsque les sites ne fournissent pas les en-têtes correspondant, les navigateurs utilisent la règle de même origine (_same-origin policy_) pour les contenus.
