@@ -38,7 +38,6 @@ slug: Mozilla/Firefox/Releases/32
 ### JavaScript
 
 - Реализованы новые встроенные методы ECMAScript 6:
-
   - {{jsxref("Array.from()")}} ([Firefox bug 904723](https://bugzil.la/904723))
   - {{jsxref("Array.prototype.copyWithin()")}}
   - {{jsxref("Number.isSafeInteger()")}}

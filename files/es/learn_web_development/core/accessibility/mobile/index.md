@@ -104,7 +104,6 @@ Por ejemplo, con TalkBack activado:
 1. Abra su navegador web.
 2. Activar la barra de URL.
 3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
-
    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
    - Mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para escribirlo. Repita para cada personaje.
    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
@@ -144,7 +143,6 @@ Cuando VoiceOver está activado, tiene una función de navegación llamada Rotor
 
 1. Gira dos dedos alrededor de la pantalla como si estuvieras girando un dial. Cada opción se leerá en voz alta a medida que gire más. Puede ir hacia adelante y hacia atrás para recorrer las opciones.
 2. Una vez que hayas encontrado la opción que
-
    - Suelte los dedos para seleccionarlo.
    - Si es una opción que puede repetir el valor de (como Volumen o Velocidad de voz), puede deslizar hacia arriba o hacia abajo para aumentar o disminuir el valor del elemento seleccionado.
 
@@ -157,7 +155,6 @@ Vamos a hacer una prueba a navegar con VoiceOver:
 1. Abra su navegador web.
 2. Activar la barra de URL.
 3. Ingrese una página web que tenga muchos encabezados, como la página principal de bbc.co.uk. Para ingresar el texto de la URL:
-
    - Seleccione la barra de URL deslizando hacia la izquierda / derecha hasta que llegue a ella, y luego toque dos veces.
    - Para cada personaje, mantenga presionado el teclado virtual hasta que obtenga el carácter que desea y luego suelte el dedo para seleccionarlo. Pulse dos veces para escribirlo.
    - Una vez que hayas terminado, encuentra la tecla Intro y presiónala.
@@ -165,7 +162,6 @@ Vamos a hacer una prueba a navegar con VoiceOver:
 4. Desliza el dedo hacia la izquierda y hacia la derecha para moverte entre los elementos de la página. Puede tocar dos veces un elemento para seleccionarlo (por ejemplo, siga un enlace).
 5. Por defecto, la opción de Rotor seleccionada será Speaking Rate; actualmente puede deslizar hacia arriba y hacia abajo para aumentar o disminuir la frecuencia de habla.
 6. Ahora gire dos dedos alrededor de la pantalla como un cuadrante para mostrar el rotor y muévase entre sus opciones. Aquí hay algunos ejemplos de las opciones disponibles:
-
    - Tasa de habla: Cambia la tasa de habla.
    - Contenedores: muévete entre los diferentes contenedores semánticos de la página.
    - Encabezados: muévete entre los encabezados de la página.
@@ -223,7 +219,7 @@ Hemos proporcionado un ejemplo sencillo que muestra cómo usar el mouse y los ev
 En particular, los problemas más comunes que deben abordarse para dispositivos móviles son:
 
 - Adecuación de diseños para dispositivos móviles. Un diseño de varias columnas no funcionará tan bien en una pantalla estrecha, por ejemplo, y es posible que deba aumentar el tamaño del texto para que sea legible. Dichos problemas se pueden resolver creando un diseño sensible utilizando tecnologías tales como [consultas de medios](/es/docs/Web/CSS/CSS_media_queries), [vista](/es/docs/Mozilla/Mobile/Viewport_meta_tag) y [flexbox](/es/docs/Learn_web_development/Core/CSS_layout/Flexbox). .
-- Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Web/HTML/Responsive_images).
+- Conservando tamaños de imagen descargados. En general, los dispositivos de pantalla pequeña no necesitarán imágenes tan grandes como sus contrapartes de escritorio, y es más probable que estén en conexiones de red lentas. Por lo tanto, es aconsejable servir imágenes más pequeñas para dispositivos de pantalla estrecha, según corresponda. Puede manejar esto [técnicas de imagenes de respuesta](/es/docs/Web/HTML/Guides/Responsive_images).
 - Pensando en altas resoluciones. Muchos dispositivos móviles tienen pantallas de alta resolución y, por lo tanto, necesitan imágenes de mayor resolución para que la pantalla pueda seguir luciendo nítida y nítida. Nuevamente, puede servir imágenes según corresponda utilizando técnicas de imágenes sensibles. Además, muchos requisitos de imagen se pueden cumplir con el formato de imágenes vectoriales SVG, que es compatible con todos los navegadores actuales. SVG tiene un tamaño de archivo pequeño y se mantendrá nítido independientemente del tamaño que se muestre (consulte [Agregar gráficos vectoriales a la web](/es/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML) para obtener más detalles).
 
 > [!NOTE]

@@ -20,4 +20,4 @@ console.log(`x's value is ${x}`); // "x's value is undefined" 출력
 ## 같이 보기
 
 - 위키백과의 [Undefined 값](https://en.wikipedia.org/wiki/Undefined_value)
-- [JavaScript 자료형과 자료 구조](/ko/docs/Web/JavaScript/Data_structures)
+- [JavaScript 자료형과 자료 구조](/ko/docs/Web/JavaScript/Guide/Data_structures)

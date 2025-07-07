@@ -9,7 +9,7 @@ l10n:
 
 **`border-left-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-left-width")}}
+{{InteractiveExample("CSS デモ: border-left-width")}}
 
 ```css interactive-example-choice
 border-left-width: thick;
@@ -74,9 +74,7 @@ border-left-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

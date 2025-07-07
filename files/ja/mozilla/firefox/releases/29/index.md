@@ -45,15 +45,12 @@ _詳細および他の小規模な変更点については [Mozilla Hacks ブロ
 
 - ECMAScript 6 の String の新たなメソッドである {{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.prototype.fromCodePoint()")}} を実装しました ([Firefox バグ 918879](https://bugzil.la/918879))。
 - [ECMAScript Internationalization API (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) を実装しました。また、デスクトップ版 Firefox ではデフォルトで有効にしました ([Firefox バグ 853301](https://bugzil.la/853301)):
-
   - {{jsxref("Intl")}} オブジェクトネームスペースの新たなオブジェクト:
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - 以下の {{jsxref("String")}}、{{jsxref("Number")}}、{{jsxref("Date")}} のメソッドを、ECMA-402 により引数 `locales` および `options` を持つように更新しました:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}

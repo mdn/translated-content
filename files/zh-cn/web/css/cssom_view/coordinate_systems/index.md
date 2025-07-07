@@ -130,14 +130,12 @@ HTML 中包含一个 `"log"` 类的 `<p>` 元素，用于显示鼠标事件的�
 
 - [使用 CSS 变换](/zh-CN/docs/Web/CSS/CSS_transforms/Using_CSS_transforms)：如何改变坐标系
 - {{domxref("MouseEvent", "鼠标事件", "", 1)}}的坐标：
-
   - {{domxref("MouseEvent.offsetX")}} 和 {{domxref("MouseEvent.offsetY")}}
   - {{domxref("MouseEvent.clientX")}} 和 {{domxref("MouseEvent.clientY")}}
   - {{domxref("MouseEvent.pageX")}} 和 {{domxref("MouseEvent.pageY")}}
   - {{domxref("MouseEvent.screenX")}} 和 {{domxref("MouseEvent.screenY")}}
 
 - {{domxref("Touch", "触摸事件", "", 1)}}的坐标：
-
   - {{domxref("Touch.clientX")}} 和 {{domxref("Touch.clientY")}}
   - {{domxref("Touch.pageX")}} 和 {{domxref("Touch.pageY")}}
   - {{domxref("Touch.screenX")}} 和 {{domxref("Touch.screenY")}}

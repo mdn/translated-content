@@ -16,19 +16,16 @@ l10n:
 ## 参见
 
 - [MDN Web 文档术语](/zh-CN/docs/Glossary)
-
   - {{Glossary("locale", "区域设置")}}
   - {{Glossary("Localization", "本地化")}}
   - {{Glossary("LTR", "LTR（从左到右）")}}
   - {{Glossary("RTL", "RTL（从右到左）")}}
 
 - [HTML 全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)
-
   - [dir](/zh-CN/docs/Web/HTML/Reference/Global_attributes#dir)
   - [lang](/zh-CN/docs/Web/HTML/Reference/Global_attributes#lang)
 
 - [CSS](/zh-CN/docs/Web/CSS)
-
   - {{cssxref(":dir")}}
   - {{cssxref("direction")}}
   - {{cssxref("unicode-bidi")}}

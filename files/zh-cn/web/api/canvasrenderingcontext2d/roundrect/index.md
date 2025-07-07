@@ -30,9 +30,7 @@ roundRect(x, y, width, height, radii)
 - `height`
   - : 矩形的高度。正值向下，负值向上。
 - `radii`
-
   - : 指定用于矩形角的圆弧半径的数字或列表。其数量和顺序与 `width` 和 `height` 为正值时的 [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) CSS 属性相同：
-
     - `all-corners`
     - `[all-corners]`
     - `[top-left-and-bottom-right, top-right-and-bottom-left]`

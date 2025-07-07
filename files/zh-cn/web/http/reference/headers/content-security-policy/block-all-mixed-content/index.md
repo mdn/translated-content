@@ -3,8 +3,6 @@ title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
 ---
 
-{{HTTPSidebar}}
-
 HTTP 协议首部字段 {{HTTPHeader("Content-Security-Policy")}} (CSP) 中的 **`block-all-mixed-content`** 指令在当前页面为通过 HTTPS 协议加载的情况下禁止通过 HTTP 渠道加载任何资源。
 
 任何[混合类型](/zh-CN/docs/Web/Security/Mixed_content)的资源请求都是被禁止的，包括混合活动内容和混合被动内容。这一条也适用于 {{HTMLElement("iframe")}} 中的文档，确保整体页面都不包含混合内容。

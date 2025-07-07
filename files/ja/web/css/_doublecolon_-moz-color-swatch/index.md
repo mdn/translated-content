@@ -45,5 +45,4 @@ input[type="color"]::-moz-color-swatch {
 ## 関連情報
 
 - 他のブラウザーで使用される似た擬似要素
-
   - {{cssxref("::-webkit-color-swatch")}} WebKit および Blink (Safari, Chrome, Opera) で対応している擬似要素

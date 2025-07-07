@@ -15,4 +15,4 @@ slug: Web/API/HTMLElement/accessKey
 
 ## 함께 보기
 
-- [HTML 전역 속성: accesskey](/ko/docs/Web/HTML/Global_attributes/accesskey)
+- [HTML 전역 속성: accesskey](/ko/docs/Web/HTML/Reference/Global_attributes/accesskey)

@@ -35,7 +35,6 @@ zoom: unset;
 - `normal`
   - : L'élément est affiché avec sa taille normale.
 - `reset` {{non-standard_inline}}
-
   - : Do not (de)magnify this element if the user applies non-pinch-based zooming (e.g. by pressing
 
     <kbd>Ctrl</kbd>
