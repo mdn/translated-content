@@ -233,4 +233,4 @@ border-image: unset;
 - {{cssxref("background-image")}}
 - {{cssxref("url_value", "&lt;url&gt;")}} 型別
 - 漸層函式：{{CSSxRef("gradient/conic-gradient", "conic-gradient()")}}、{{CSSxRef("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}}、{{CSSxRef("gradient/linear-gradient", "linear-gradient()")}}、{{CSSxRef("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}、{{CSSxRef("gradient/radial-gradient", "radial-gradient()")}}、{{CSSxRef("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}
-- [CSS 中的邊框圖片：Interop 2023 的一個關鍵焦點領域](/zh-TW/blog/border-images-interop-2023/) on MDN blog (2023)
+- [CSS 中的邊框圖片：Interop 2023 的一個關鍵焦點領域](/zh-TW/blog/border-images-interop-2023/)（MDN 部落格（2023））
