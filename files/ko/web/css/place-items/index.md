@@ -219,7 +219,7 @@ values.addEventListener("change", (evt) => {
 }
 ```
 
-#### 결과ㄴ
+#### 결과
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 
