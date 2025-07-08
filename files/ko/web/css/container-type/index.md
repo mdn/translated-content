@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**`container-type`** [CSS](/ko/docs/Web/CSS) 속성을 사용하면 요소를 쿼리 컨테이너로 설정할 수 있습니다. `container-type`은 컨테이너 쿼리에서 사용할 컨테이너 컨텍스트의 유형을 정의하는 데 사용됩니다. 사용할 수 있는 컨테이너 컨텍스트는 다음과 같습니다.
+**`container-type`** [CSS](/ko/docs/Web/CSS) 속성을 사용하면 요소를 쿼리 컨테이너로 설정할 수 있습니다. `container-type`은 컨테이너 쿼리에서 사용할 컨테이너 맥락의 유형을 정의하는 데 사용됩니다. 사용할 수 있는 컨테이너 맥락은 다음과 같습니다.
 
 - [크기](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 컨테이너의 최대/최소 크기, 가로세로 비율, 방향 등과 같은 일반적인 크기나 인라인 크기 조건에 따라 자식 요소에 CSS 규칙을 선택적으로 적용할 수 있습니다.
 - [스크롤 상태](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries): 컨테이너가 일부 스크롤되어 있거나, 스크롤 스냅 컨테이너에 맞춰진 [스냅 타겟](/ko/docs/Glossary/Scroll_snap#snap_target)인 경우 등 스크롤 상태에 따라 컨테이너의 자식 요소에 CSS 규칙을 선택적으로 적용할 수 있습니다.
@@ -117,8 +117,8 @@ container-type: unset;
 </div>
 ```
 
-컨테이너 컨텍스트를 생성하려면 요소에 `container-type` 속성을 추가하면 됩니다.
-아래 예시는 `inline-size` 값을 사용하여 컨테이너의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions)에 대한 컨테인먼트 컨텍스트를 생성하는 방법을 보여줍니다.
+컨테이너 맥락을 생성하려면 요소에 `container-type` 속성을 추가하면 됩니다.
+아래 예시는 `inline-size` 값을 사용하여 컨테이너의 [인라인 축](/ko/docs/Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values#block_and_inline_dimensions)에 대한 컨테인먼트 맥락을 생성하는 방법을 보여줍니다.
 
 ```css
 .container {

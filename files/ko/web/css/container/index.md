@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**container** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 해당 요소를 쿼리 컨테이너로 설정하고, [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 사용되는 [컨테인먼트 컨텍스트](/ko/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)의 이름과 유형을 지정합니다.
+**container** [단축 속성](/ko/docs/Web/CSS/CSS_cascade/Shorthand_properties) [CSS](/ko/docs/Web/CSS) 속성은 해당 요소를 쿼리 컨테이너로 설정하고, [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 사용되는 [컨테인먼트 맥락](/ko/docs/Web/CSS/CSS_containment/Container_queries#naming_containment_contexts)의 이름과 유형을 지정합니다.
 
 ## 구성 속성
 
@@ -36,10 +36,10 @@ container: unset;
 ### 값
 
 - `<container-name>`
-  - : 컨테인먼트 컨텍스트에 사용되는 대소문자를 구분하는 이름입니다.
+  - : 컨테인먼트 맥락에 사용되는 대소문자를 구분하는 이름입니다.
     구문에 대한 자세한 내용은 {{cssxref("container-name")}} 속성 페이지에서 확인할 수 있습니다.
 - `<container-type>`
-  - : 컨테인먼트 컨텍스트의 유형입니다.
+  - : 컨테인먼트 맥락의 유형입니다.
     구문에 대한 자세한 내용은 {{cssxref("container-type")}} 속성 페이지에서 확인할 수 있습니다.
 
 ## 형식 정의
@@ -65,7 +65,7 @@ container: unset;
 </div>
 ```
 
-명시적으로 컨테이너 컨텍스트를 생성하려면, `container-type`을 선언하고 필요에 따라 `container-name`을 함께 지정하면 됩니다.
+명시적으로 컨테이너 맥락을 생성하려면, `container-type`을 선언하고 필요에 따라 `container-name`을 함께 지정하면 됩니다.
 
 ```css
 .post {
