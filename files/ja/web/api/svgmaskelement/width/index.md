@@ -10,7 +10,6 @@ l10n:
 
 **`width`** は {{domxref("SVGMaskElement")}} インターフェイスの読み取り専用プロパティで、 {{domxref("SVGAnimatedLength")}} オブジェクトとして {{SVGElement("mask")}} 要素の {{SVGattr("width")}} 属性の値を返します。
 
-
 > [!NOTE]
 > このプロパティは読み取り専用ですが、変更可能な 2 つの値、 {{domxref("SVGAnimatedLength.baseVal", "baseVal")}} および {{domxref("SVGAnimatedLength.animVal", "animVal")}} を格納する単なるコンテナーです。
 
