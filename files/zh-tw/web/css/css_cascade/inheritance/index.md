@@ -109,6 +109,6 @@ em {
 - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)指南
 - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax)模組
 - [At 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
-- [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)、[應用值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)和[實際值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)
+- [初始](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)、[計算](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)、[應用](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)和[實際](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)值
 - [值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
 - [CSS 巢狀模組](/zh-TW/docs/Web/CSS/CSS_nesting)
