@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setBigUint64
 
 **`setBigUint64()`** メソッドは、符号なし 64 ビット整数 (unsigned long long) を {{jsxref("DataView")}} の先頭からのバイト単位の指定されたオフセット位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setBigUint64()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setBigUint64()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

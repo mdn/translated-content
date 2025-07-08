@@ -3,8 +3,6 @@ title: If-Modified-Since
 slug: Web/HTTP/Reference/Headers/If-Modified-Since
 ---
 
-{{HTTPSidebar}}
-
 Заголовок HTTP запроса **`If-Modified-Since`** делает запрос условным: сервер отправит обратно запрошенный ресурс с статусом {{HTTPStatus("200")}}, только если он был изменён после указанной даты. Если запрос не был изменён после указанной даты, ответ будет {{HTTPStatus("304")}} без какого-либо тела; заголовок {{HTTPHeader("Last-Modified")}} при этом будет содержать дату последней модификации. В отличие от {{HTTPHeader("If-Unmodified-Since")}}, `If-Modified-Since` может использоваться только с {{HTTPMethod("GET")}} или {{HTTPMethod("HEAD")}}.
 
 При использовании в сочетании с {{HTTPHeader("If-None-Match")}} заголовок `If-Modified-Since` игнорируется, кроме тех случаев, когда сервер не поддерживает If-None-Match.

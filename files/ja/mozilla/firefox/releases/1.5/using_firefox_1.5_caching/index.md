@@ -3,8 +3,6 @@ title: Using Firefox 1.5 caching
 slug: Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching
 ---
 
-{{FirefoxSidebar}}
-
 ## はじめに
 
 [Firefox 1.5](/ja/Firefox_1.5_for_developers) ではウェブページ全体をその JavaScript の状態も含めてメモリー内にキャッシュし、1 つのブラウザーセッションとして使用します。訪問したページ間の戻る、進むという動作にページのロードが不要になり、JavaScript の状態も保存されます。この機能によってページナビゲーションが非常に高速化します。この機能は **bfcache**（"Back-Forward Cache" のこと）と呼ばれることもあります。このキャッシュ状態はユーザーがブラウザーを閉じるまで保存されます。

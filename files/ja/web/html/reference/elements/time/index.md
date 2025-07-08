@@ -16,7 +16,7 @@ l10n:
 - [グレゴリオ暦](https://ja.wikipedia.org/wiki/グレゴリオ暦)の正確な日付 (時刻やタイムゾーンを伴うことも可能)
 - [有効な期間](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-duration-string)
 
-{{InteractiveExample("HTML Demo: &lt;time&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;time&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`301 Moved Permanently`** は[リダイレクトレスポンス](/ja/docs/Web/HTTP/Reference/Status#リダイレクトメッセージ)ステータスコードで、リクエストされたリソースが {{HTTPHeader("Location")}} ヘッダーで示された URL へ永久に移動したことを示します。
 
 このステータスを受け取ったブラウザーは、 `Location` ヘッダーの URL のリソースを自動的にリクエストし、ユーザーを新しいページにリダイレクトします。

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/NEL
 original_slug: Web/HTTP/Headers/NEL
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`NEL`** レスポンスヘッダーは、ネットワークリクエストログ記録を構成するために使用されます。
 
 <table class="properties">

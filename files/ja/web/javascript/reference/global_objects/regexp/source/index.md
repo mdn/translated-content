@@ -9,7 +9,7 @@ l10n:
 
 **`source`** は {{jsxref("RegExp")}} のアクセサープロパティで、正規表現オブジェクトのソーステキストの入った文字列を返します。これには、両端の 2 つのスラッシュやフラグは含まれません。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.source")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.source")}}
 
 ```js interactive-example
 const regex1 = /fooBar/gi;

@@ -13,7 +13,7 @@ l10n:
 
 `AsyncGenerator` は隠しクラスの {{jsxref("AsyncIterator")}} のサブクラスです。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Async Function Asterisk", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Async Function Asterisk", "taller")}}
 
 ```js interactive-example
 async function* foo() {

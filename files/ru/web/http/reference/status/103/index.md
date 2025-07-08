@@ -3,8 +3,6 @@ title: 103 Early Hints
 slug: Web/HTTP/Reference/Status/103
 ---
 
-{{HTTPSidebar}}
-
 HTTP код **`103 Early Hints`** в первую очередь предназначен для использования с заголовком {{HTTPHeader("Link")}}, чтобы клиент мог начать предварительную загрузку пока сервер готовит ответ.
 
 ## Синтаксис

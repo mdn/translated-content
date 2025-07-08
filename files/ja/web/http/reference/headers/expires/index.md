@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expires
 original_slug: Web/HTTP/Headers/Expires
 ---
 
-{{HTTPSidebar}}
-
 **`Expires`** ヘッダーには、レスポンスが古くなると見なされる日時が入ります。
 
 値 0 のような無効な日付は過去の日付を表し、リソースがすでに有効期限切れであることを意味します。

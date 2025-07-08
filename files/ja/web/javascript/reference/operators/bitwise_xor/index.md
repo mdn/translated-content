@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_XOR
 
 ビット排他的論理和演算子 (`^`) は、両方のオペランドの対応するビットの一方だけが `1` である位置のビットで `1` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise XOR")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Bitwise XOR")}}
 
 ```js interactive-example
 const a = 5; // 00000000000000000000000000000101

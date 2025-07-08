@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-None-Match
 original_slug: Web/HTTP/Headers/If-None-Match
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`If-None-Match`** リクエストヘッダーは、リクエストを条件付きにします。 {{HTTPMethod("GET")}} および {{HTTPMethod("HEAD")}} メソッドの場合、指定されたものの中に要求されたリソースの {{HTTPHeader("ETag")}} に一致するものがない場合のみ、サーバーはリソースを {{HTTPStatus("200")}} ステータスで返します。その他のメソッドの場合、最終的に存在するリソースの {{HTTPHeader("ETag")}} が列挙されたいずれの値とも一致しない場合にのみ処理します。
 
 {{HTTPMethod("GET")}} および {{HTTPMethod("HEAD")}} メソッドの場合、条件が満たされなかったら、サーバーは HTTP ステータスコード 304 (Not Modified) を返さなければなりません。サーバー側の変更を適用するメソッドの場合、ステータスコード 412 (Precondition Failed) が使用されます。なお、 304 レスポンスを生成するサーバーは、 Cache-Control, Content-Location, Date, ETag, Expires, Vary の各ヘッダーフィールドについて、同じリクエストに対して 200 (OK) レスポンスで送信されるものを生成しなければなりません。

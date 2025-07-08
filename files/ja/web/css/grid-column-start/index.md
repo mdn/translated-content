@@ -9,7 +9,7 @@ l10n:
 
 **`grid-column-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド列内のグリッドアイテムの先頭位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の先頭側の端を指定します。
 
-{{InteractiveExample("CSS Demo: grid-column-start")}}
+{{InteractiveExample("CSS デモ: grid-column-start")}}
 
 ```css interactive-example-choice
 grid-column-start: auto;

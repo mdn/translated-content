@@ -3,8 +3,6 @@ title: Firefox 3 para desarrolladores
 slug: Mozilla/Firefox/Releases/3
 ---
 
-{{FirefoxSidebar}}
-
 Si eres un desarrollador que intenta ponerse al día con todas las nuevas características de Firefox 3, este es el lugar perfecto para empezar. Este artículo proporciona una lista de nuevos artículos que tratan sobre las características añadidas a Firefox 3. Aunque no cubre necesariamente todos los pequeños cambios, te ayudará a conocer mejor las mejoras más importantes.
 
 ### Características nuevas para desarrolladores en Firefox 3

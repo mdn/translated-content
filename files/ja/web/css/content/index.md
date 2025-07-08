@@ -11,7 +11,7 @@ l10n:
 
 `content` プロパティを使用して挿入されたオブジェクトは、 **無名の{{ glossary("replaced elements", "置換要素")}}** になります。
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: content", "tabbed-shorter")}}
 
 ```css interactive-example
 .topic-games::before {

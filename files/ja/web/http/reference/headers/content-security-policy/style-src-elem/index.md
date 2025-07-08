@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-src-elem`** ディレクティブは、スタイルシート {{HTMLElement("style")}} 要素と `rel="stylesheet"` を持つ {{HTMLElement("link")}} 要素の有効なソースを指定します。
 
 これらは {{CSP("style-src-attr")}} を使用して設定されます（また、すべてのスタイルの有効なソースは {{CSP("style-src")}} で設定することができます）。

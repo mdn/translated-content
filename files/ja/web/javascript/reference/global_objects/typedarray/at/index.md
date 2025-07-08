@@ -9,7 +9,7 @@ l10n:
 
 **`at()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで整数値を受け取り、そのインデックスにある項目を返します。整数値には正の整数と負の整数が使用できます。負の整数の場合は、この型付き配列の末尾の項目から前に数えます。このメソッドは {{jsxref("Array.prototype.at()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.at()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.at()")}}
 
 ```js interactive-example
 const int8 = new Int8Array([0, 10, -10, 20, -30, 40, -50]);

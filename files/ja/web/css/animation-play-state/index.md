@@ -9,7 +9,7 @@ l10n:
 
 **`animation-play-state`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションが実行中か停止中かを設定します。
 
-{{InteractiveExample("CSS Demo: animation-play-state")}}
+{{InteractiveExample("CSS デモ: animation-play-state")}}
 
 ```css interactive-example-choice
 animation-play-state: paused;

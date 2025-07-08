@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/add
 
 静的な **`Atomics.add()`** メソッドは、配列内の指定した位置の値に加算して、その位置の古い値を返します。これは不可分操作で、修正された値が書き戻されるまで、他の書き込みが起こらないことを保証します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.add()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.add()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

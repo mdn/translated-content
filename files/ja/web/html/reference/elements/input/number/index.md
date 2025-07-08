@@ -11,7 +11,7 @@ l10n:
 
 ブラウザーによっては、マウスや指先のタップを使用して、値をユーザーが値を増減させるための矢印を提供していることもあります。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;number&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="tentacles">Number of tentacles (10-100):</label>

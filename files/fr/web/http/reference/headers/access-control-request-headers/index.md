@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de requête **`Access-Control-Request-Headers`** est utilisé lors de l'émission d'[une requête de pré-vérification](/fr/docs/Glossary/Preflight_request) pour indiquer au serveur quels sont les [en-têtes HTTP](/fr/docs/Web/HTTP/Headers) que le client pourrait envoyer lors de la requête effective (comme avec [`setRequestHeader()`](/fr/docs/Web/API/XMLHttpRequest/setRequestHeader)). L'en-tête correspondant côté serveur, indiquant en retour au client les en-têtes pouvant être utilisés pour la requête effective, est [`Access-Control-Allow-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Headers).
 
 <table class="properties">

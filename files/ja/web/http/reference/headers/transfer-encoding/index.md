@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{HTTPSidebar}}
-
 **`Transfer-Encoding`** ヘッダーは、ネットワーク上のノード間でメッセージを転送する際に使用するエンコード方式を指定します。
 
 > [!WARNING]

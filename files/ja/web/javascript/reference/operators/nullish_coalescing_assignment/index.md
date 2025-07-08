@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 
 Null 合体代入 (`x ??= y`) 演算子は、`x` が {{Glossary("nullish")}} (`null` または `undefined`) である場合にのみ代入を行います。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Nullish coalescing assignment")}}
 
 ```js interactive-example
 const a = { duration: 50 };

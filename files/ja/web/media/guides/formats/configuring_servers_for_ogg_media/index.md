@@ -4,8 +4,6 @@ slug: Web/Media/Guides/Formats/Configuring_servers_for_Ogg_media
 original_slug: Web/Media/Formats/Configuring_servers_for_Ogg_media
 ---
 
-{{HTTPSidebar}}
-
 HTML {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を使用すると、ユーザーはプラグインやその他のソフトウェアをインストールする必要なくメディアを表示できます。サーバーが Ogg メディアを正しく配信するためには、いくつか設定が必要な場合があります。
 
 ## 正しい MIME タイプの Ogg メディアを提供する

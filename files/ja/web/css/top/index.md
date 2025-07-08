@@ -9,7 +9,7 @@ l10n:
 
 **`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の決定に関与します。位置指定されていない要素には効果はありません。
 
-{{InteractiveExample("CSS Demo: top")}}
+{{InteractiveExample("CSS デモ: top")}}
 
 ```css interactive-example-choice
 top: 0;

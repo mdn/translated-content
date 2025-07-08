@@ -7,7 +7,7 @@ slug: Web/CSS/order
 
 **`order`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナーやグリッドコンテナーの中で、アイテムを並べる順序を設定します。コンテナー内のアイテムは `order` の値の昇順に配置され、さらにソースコード内の順序で配置されます。
 
-{{InteractiveExample("CSS Demo: order")}}
+{{InteractiveExample("CSS デモ: order")}}
 
 ```css interactive-example-choice
 order: 0;

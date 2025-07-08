@@ -9,7 +9,7 @@ l10n:
 
 **`values()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、配列内の各インデックスに対する値を持つ新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.values()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.values()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.values()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

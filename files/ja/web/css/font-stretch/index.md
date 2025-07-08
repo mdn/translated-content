@@ -12,7 +12,7 @@ l10n:
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。
 
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{InteractiveExample("CSS デモ: font-stretch")}}
 
 ```css interactive-example-choice
 font-stretch: condensed;

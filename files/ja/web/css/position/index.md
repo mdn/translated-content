@@ -9,7 +9,7 @@ l10n:
 
 **`position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文書内で要素がどのように配置されるかを設定します。 {{Cssxref("top")}}, {{Cssxref("right")}}, {{Cssxref("bottom")}}, {{Cssxref("left")}} の各プロパティが、配置された要素の最終的な位置を決めます。
 
-{{InteractiveExample("CSS Demo: position")}}
+{{InteractiveExample("CSS デモ: position")}}
 
 ```css interactive-example-choice
 position: static;

@@ -11,7 +11,7 @@ l10n:
 
 いくつかの[関数](#関数)、例えば `blur()` や `contrast()` などが利用でき、あらかじめ定義された効果を実現するのに役立てることができます。
 
-{{InteractiveExample("CSS Demo: filter")}}
+{{InteractiveExample("CSS デモ: filter")}}
 
 ```css interactive-example-choice
 filter: url("/shared-assets/images/examples/shadow.svg#element-id");

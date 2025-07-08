@@ -10,7 +10,7 @@ l10n:
 
 **`<q>`** は [HTML](/ja/docs/Web/HTML) の要素で、中に含まれるテキストが短いインラインの引用であることを示します。最近の多くのブラウザーでは、文字列を引用符で囲むように実装しています。この要素は、段落区切りをまたがない短い引用のためのものです。長文の引用には、 {{HTMLElement("blockquote")}} 要素を使用してください。
 
-{{InteractiveExample("HTML Demo: &lt;q&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;q&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

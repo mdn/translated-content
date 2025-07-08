@@ -4,8 +4,6 @@ slug: Web/URI/Reference/Schemes/data
 original_slug: Web/URI/Schemes/data
 ---
 
-{{HTTPSidebar}}
-
 **Les URLs de données**, les URLs préfixées par le schéma `data:`, permettent aux créateurs de contenu d'intégrer de petits fichiers dans des documents.
 
 > [!NOTE]

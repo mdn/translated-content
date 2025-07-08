@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/CONNECT
 original_slug: Web/HTTP/Methods/CONNECT
 ---
 
-{{HTTPSidebar}}
-
 **HTTP の `CONNECT` メソッド**は、リクエストしたリソースを用いて双方向の通信を開始します。これはトンネリングを開始するときに使用されます。
 
 例えば、 `CONNECT` メソッドは {{Glossary("SSL")}} ({{Glossary("HTTPS")}}) を使用したウェブサイトにアクセスする際に使用されます。クライアントは HTTP の{{Glossary("Proxy server", "プロキシーサーバー")}}に希望する宛先への [TCP](/ja/docs/Glossary/TCP) コネクションをトンネリングするように依頼します。その場合、プロキシーサーバーはクライアントに代わってコネクションの作成を継続します。一度コネクションがサーバーによって確立されると、{{Glossary("Proxy server", "プロキシーサーバー")}}はクライアント宛て/クライアント発の TCP ストリームのプロキシーを継続します。

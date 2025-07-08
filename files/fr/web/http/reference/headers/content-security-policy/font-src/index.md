@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/font-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/font-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`font-src`** spécifie les sources valides pour les polices de caractères chargées avec [`@font-face`](/fr/docs/Web/CSS/@font-face).
 
 <table class="properties">

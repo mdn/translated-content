@@ -11,7 +11,7 @@ l10n:
 
 この要素は {{HTMLElement("map")}} 要素内だけで使用します。
 
-{{InteractiveExample("HTML Demo: &lt;area&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;area&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <map name="infographic">

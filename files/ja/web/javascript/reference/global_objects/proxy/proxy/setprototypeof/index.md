@@ -9,7 +9,7 @@ l10n:
 
 **`handler.setPrototypeOf()`** メソッドは、オブジェクトの `[[SetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.setPrototypeOf()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.setPrototypeOf()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.setPrototypeOf()", "taller")}}
 
 ```js interactive-example
 const handler1 = {

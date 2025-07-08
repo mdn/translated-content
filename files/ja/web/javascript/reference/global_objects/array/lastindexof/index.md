@@ -9,7 +9,7 @@ l10n:
 
 **`lastIndexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列中で与えられた要素が見つかった最後の添字を返します。もし存在しなければ -1 を返します。配列は `fromIndex` から逆向きに検索されます。
 
-{{InteractiveExample("JavaScript Demo: Array.lastIndexOf()")}}
+{{InteractiveExample("JavaScript デモ: Array.lastIndexOf()")}}
 
 ```js interactive-example
 const animals = ["Dodo", "Tiger", "Penguin", "Dodo"];

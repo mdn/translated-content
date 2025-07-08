@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
-{{InteractiveExample("CSS Demo: transition-delay")}}
+{{InteractiveExample("CSS デモ: transition-delay")}}
 
 ```css interactive-example-choice
 transition-delay: 250ms;

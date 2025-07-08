@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Methods`** 헤더는 {{glossary("preflight request", "사전 요청")}}에 대한 응답으로 리소스에 접근할 때 허용되는 메서드를 지정합니다.
 
 <table class="properties">

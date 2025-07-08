@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Permissions-Policy/accelerometer
 original_slug: Web/HTTP/Headers/Permissions-Policy/accelerometer
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La directive `accelerometer` de l'en-tête HTTP [`Feature-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy) contrôle la possibilité pour le document courant de recueillir des informations à propos de l'accélération de l'appareil au moyen de l'interface [`Accelerometer`](/fr/docs/Web/API/Accelerometer).
 

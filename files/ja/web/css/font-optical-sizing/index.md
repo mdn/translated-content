@@ -9,7 +9,7 @@ l10n:
 
 **`font-optical-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストの描画をそれぞれの大きさでの表示に最適化して表示するかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: font-optical-sizing")}}
+{{InteractiveExample("CSS デモ: font-optical-sizing")}}
 
 ```css interactive-example-choice
 font-optical-sizing: auto;

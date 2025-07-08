@@ -9,7 +9,7 @@ l10n:
 
 **`grid-column-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド列内のグリッドアイテムの末尾位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のブロック方向の末尾側の端を指定します。
 
-{{InteractiveExample("CSS Demo: grid-column-end")}}
+{{InteractiveExample("CSS デモ: grid-column-end")}}
 
 ```css interactive-example-choice
 grid-column-end: auto;

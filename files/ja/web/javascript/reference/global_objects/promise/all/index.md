@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.all()`** は静的メソッドで、入力としてプロミスの集合の反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返却されたプロミスは、入力されたプロミスがすべて履行されたとき（空のイテレーターが渡されたときを含む）、その履行された値の配列で、履行されます。入力されたプロミスのいずれかが拒否されると、その最初の拒否理由とともに拒否されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.all()")}}
+{{InteractiveExample("JavaScript デモ: Promise.all()")}}
 
 ```js interactive-example
 const promise1 = Promise.resolve(3);

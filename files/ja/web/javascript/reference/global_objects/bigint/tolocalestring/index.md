@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toLocaleString
 
 **`toLocaleString()`** メソッドは、この BigInt 値の言語に合わせた表現の文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.toLocaleString()")}}
+{{InteractiveExample("JavaScript デモ: BigInt.toLocaleString()")}}
 
 ```js interactive-example
 const bigint = 123456789123456789n;

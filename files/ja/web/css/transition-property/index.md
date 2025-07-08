@@ -9,7 +9,7 @@ l10n:
 
 **`transition-property`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)を適用する CSS プロパティを指定します。
 
-{{InteractiveExample("CSS Demo: transition-property")}}
+{{InteractiveExample("CSS デモ: transition-property")}}
 
 ```css interactive-example-choice
 transition-property: margin-right;

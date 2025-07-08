@@ -9,7 +9,7 @@ l10n:
 
 **`backface-visibility`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がユーザーに対して裏側を向いたときに、裏面を可視にするかどうかを設定します。
 
-{{InteractiveExample("CSS Demo: backface-visibility")}}
+{{InteractiveExample("CSS デモ: backface-visibility")}}
 
 ```css interactive-example-choice
 backface-visibility: visible;

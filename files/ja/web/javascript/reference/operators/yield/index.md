@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/yield
 
 `yield` キーワードは、ジェネレーター関数 ({{jsxref("Statements/function*", "function*")}} または[古いジェネレーター関数](/ja/docs/Archive/Web/JavaScript/Legacy_generator_function_statement)) を一時停止したり再開したりするために使用します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - yield", "taller")}}
 
 ```js interactive-example
 function* foo(index) {

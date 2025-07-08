@@ -11,7 +11,7 @@ l10n:
 
 Web 主控台中顯示的錯誤可能會包含一個連結，指向下方的對應頁面，以幫助你快速理解程式碼中的問題。
 
-關於修復 JavaScript 錯誤的入門教學，請參見[出了什麼問題？JavaScript 疑難排解](/zh-TW/docs/Learn/JavaScript/First_steps/What_went_wrong)。
+關於修復 JavaScript 錯誤的入門教學，請參見[出了什麼問題？JavaScript 疑難排解](/zh-TW/docs/Learn_web_development/Core/Scripting/What_went_wrong)。
 
 ## 錯誤列表
 

@@ -11,7 +11,7 @@ l10n:
 
 一方の端からのみホワイトスペースを取り除いた新しい文字列を返したい場合は、{{jsxref("String/trimStart", "trimStart()")}} または {{jsxref("String/trimEnd", "trimEnd()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: String.trim()")}}
+{{InteractiveExample("JavaScript デモ: String.trim()")}}
 
 ```js interactive-example
 const greeting = "   Hello world!   ";

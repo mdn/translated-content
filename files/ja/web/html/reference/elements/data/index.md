@@ -10,7 +10,7 @@ l10n:
 
 **`<data>`** は [HTML](/ja/docs/Web/HTML) の要素で、与えられたコンテンツの断片を機械可読な翻訳にリンクします。コンテンツが時刻または日付に関連するものであれば、{{HTMLElement("time")}} 要素を使用する必要があります。
 
-{{InteractiveExample("HTML Demo: &lt;data&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;data&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>New Products:</p>

@@ -9,7 +9,7 @@ l10n:
 
 **`background-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景配置領域を境界の開始位置、境界の内部、パディングの内部から設定します。
 
-{{InteractiveExample("CSS Demo: background-origin")}}
+{{InteractiveExample("CSS デモ: background-origin")}}
 
 ```css interactive-example-choice
 background-origin: border-box;

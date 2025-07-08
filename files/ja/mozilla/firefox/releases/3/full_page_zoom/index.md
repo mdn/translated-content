@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 フルページズーム (あるいは単にフルズーム) は [Firefox 3](/ja/docs/Mozilla/Firefox/Releases/3) の新機能です。
 
 ### 例 (XUL:browser)

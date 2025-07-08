@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Increment
 
 インクリメント演算子 (`++`) は、オペランドをインクリメント (1 を加算) して値を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Increment operator")}}
 
 ```js interactive-example
 let x = 3;

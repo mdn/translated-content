@@ -44,7 +44,7 @@ const monthNames = ["January", "February", "March" /* , … */];
 console.log(monthNames[month]); // "February"
 ```
 
-ただし、国際化のためには、代わりに {{jsxref("Intl.DateTimeFormat")}} を `options` 引きお数付きで使用することをお勧めします。
+ただし、国際化のためには、代わりに {{jsxref("Intl.DateTimeFormat")}} を `options` 引数付きで使用することをお勧めします。
 
 ```js
 const options = { month: "long" };

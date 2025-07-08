@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/compare
 
 **`Intl.Collator.prototype.compare()`** メソッドは、 2 つの文字列をこの {{jsxref("Intl.Collator")}} オブジェクトのソート順に従って比較します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.prototype.compare")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.prototype.compare")}}
 
 ```js interactive-example
 const enCollator = new Intl.Collator("en");

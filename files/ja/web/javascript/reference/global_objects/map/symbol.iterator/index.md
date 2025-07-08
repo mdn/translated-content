@@ -11,7 +11,7 @@ l10n:
 
 初期値は、 {{jsxref("Map.prototype.entries")}} メソッドの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const map1 = new Map();

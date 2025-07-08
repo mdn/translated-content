@@ -9,7 +9,7 @@ l10n:
 
 **`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{InteractiveExample("CSS デモ: animation-delay")}}
 
 ```css interactive-example-choice
 animation-delay: 250ms;

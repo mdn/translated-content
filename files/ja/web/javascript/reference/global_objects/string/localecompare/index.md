@@ -11,7 +11,7 @@ l10n:
 
 大量の文字列を比較する場合、例えば巨大な配列を並べ替えしている時は、{{jsxref("Intl.Collator")}} オブジェクトを生成してそれが提供する {{jsxref("Intl/Collator/compare", "compare()")}} メソッドを使用したほうがいいでしょう。
 
-{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+{{InteractiveExample("JavaScript デモ: String.localeCompare()")}}
 
 ```js interactive-example
 const a = "réservé"; // With accents, lowercase

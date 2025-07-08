@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッダー")}}を使用すると、ユーザーエージェントをサーバーで認証する資格情報を指定し、保護されたリソースにアクセスすることができます。
 
 `Authorization`ヘッダーは通常、ユーザーエージェントが最初の資格情報を使用しない保護されたリソースのリクエストを試みた後に送信されますが、常に送信されるわけではありません。

@@ -14,7 +14,7 @@ l10n:
 
 このメソッドは主に、あるオブジェクトに関連する要素をグループ化するときに便利で、特にそのオブジェクトが時間の経過とともに変化する可能性がある場合に便利です。オブジェクトが不変である場合は、代わりに文字列を使用してそれを表現し、{{jsxref("Object.groupBy()")}} で要素をグループ化することができます。
 
-{{InteractiveExample("JavaScript Demo: Map.groupBy()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Map.groupBy()", "taller")}}
 
 ```js interactive-example
 const inventory = [

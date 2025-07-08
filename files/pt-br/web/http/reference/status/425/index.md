@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Status/425
 original_slug: Web/HTTP/Status/425
 ---
 
-{{SeeCompatTable}}{{HTTPSidebar}}
+{{SeeCompatTable}}
 
 O status HTTP **`425 Too Early`** indica que o servidor não quer correr o risco de processar uma requisição que pode ser repetida, o que cria um potencial risco para ataques de repetição.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5849bd1313be60afdf4126aacd587c52bace335
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 135 の変更点をまとめています。Firefox 135 は、米国時間 [2025 年 2 月 4 日](https://whattrainisitnow.com/release/?version=135) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

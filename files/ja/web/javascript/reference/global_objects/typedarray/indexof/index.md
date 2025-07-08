@@ -9,7 +9,7 @@ l10n:
 
 **`indexOf()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された要素が型付き配列内で見つかった最初のインデックスを返し、存在しなければ -1 を返します。このメソッドは {{jsxref("Array.prototype.indexOf()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.indexOf()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.indexOf()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

@@ -9,7 +9,7 @@ l10n:
 
 **`font-variation-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、変更したい特性の 4 文字の軸名と特性の値を指定することにより、[可変フォント](/ja/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)に対する低水準の制御できるようにします。
 
-{{InteractiveExample("CSS Demo: font-variation-settings")}}
+{{InteractiveExample("CSS デモ: font-variation-settings")}}
 
 ```css interactive-example-choice
 font-variation-settings: "wght" 50;

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/408
 original_slug: Web/HTTP/Status/408
 ---
 
-{{HTTPSidebar}}
-
 Le code de statut de réponse HTTP **`408 Request Timeout`** indique que le serveur souhaiterait clôturer cette connexion inutilisée. Pour certains serveurs, ce code est parfois envoyé sur une connexion inactive sans qu'il y ait nécessairement eu de requête de la part du client.
 
 Un serveur doit envoyer l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection) avec la valeur `close` en réponse, puisque `408` implique que le serveur a décidé de fermer la connexion plutôt que de continuer à attendre.

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 original_slug: Web/HTTP/Headers/Content-Security-Policy
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Content-Security-Policy`** permite aos administradores do site, ter controle sobre os recursos que o agente de usuário é permitido carregar para uma certa página. Com algumas pequenas exceções, políticas majoritariamente envolvem especificar as origens do servidor e pontos de acessos dos _scripts_. Isso ajuda contra ataques de _scripting_ entre sites ({{Glossary("XSS")}}).
 
 Para mais informações, veja o artigo introdutório em [Política de Segurança de Conteúdo (_Content Security Policy_)(CSP)](/pt-BR/docs/Web/HTTP/Guides/CSP).

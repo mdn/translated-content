@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 86 の変更点をまとめています。Firefox 86 は、米国時間 2021 年 2 月 23 日にリリースされました。
 
 > [!NOTE]

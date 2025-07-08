@@ -8,7 +8,7 @@ original_slug: Web/CSS/path
 
 **`path()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 SVG のパス文字列を受け取り、 [CSS シェイプ](/ja/docs/Web/CSS/CSS_shapes)や CSS モーションパスで描画される形状を有効にするために使用します。
 
-{{InteractiveExample("CSS Demo: path()")}}
+{{InteractiveExample("CSS デモ: path()")}}
 
 ```css interactive-example-choice
 clip-path: path(

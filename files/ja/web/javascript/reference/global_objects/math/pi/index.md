@@ -9,7 +9,7 @@ l10n:
 
 **`Math.PI`** プロパティは、円周と直径の比率、およそ 3.14159 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.PI")}}
+{{InteractiveExample("JavaScript デモ: Math.PI")}}
 
 ```js interactive-example
 function calculateCircumference(radius) {

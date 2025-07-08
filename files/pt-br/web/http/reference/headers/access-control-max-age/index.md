@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Max-Age
 original_slug: Web/HTTP/Headers/Access-Control-Max-Age
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Max-Age`** indica por quanto tempo os resultados de uma {{glossary("preflight request")}} (que é a informação contida nos cabeçalhos {{HTTPHeader("Access-Control-Allow-Methods")}} e {{HTTPHeader("Access-Control-Allow-Headers")}}) pode ser cacheada (mantida).
 
 <table class="properties">

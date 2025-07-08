@@ -9,7 +9,7 @@ l10n:
 
 **`while`** 文は、テスト条件が真と評価されている間、指定された文を実行するループを作成します。条件はその文を実行する前に評価されます。
 
-{{InteractiveExample("JavaScript Demo: Statement - While")}}
+{{InteractiveExample("JavaScript デモ: Statement - While")}}
 
 ```js interactive-example
 let n = 0;

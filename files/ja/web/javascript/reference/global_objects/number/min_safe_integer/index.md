@@ -11,7 +11,7 @@ l10n:
 
 これよりも小さな整数値を表す場合は、 {{jsxref("BigInt")}} を使用することを検討してください。
 
-{{InteractiveExample("JavaScript Demo: Number.MIN_SAFE_INTEGER")}}
+{{InteractiveExample("JavaScript デモ: Number.MIN_SAFE_INTEGER")}}
 
 ```js interactive-example
 const x = Number.MIN_SAFE_INTEGER - 1;

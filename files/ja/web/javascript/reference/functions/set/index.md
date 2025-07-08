@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/set
 
 **`set`** 構文は、あるオブジェクトプロパティを、プロパティに設定しようとしたときに呼び出される関数に結びつけます。
 
-{{InteractiveExample("JavaScript Demo: Functions Setter")}}
+{{InteractiveExample("JavaScript デモ: Functions Setter")}}
 
 ```js interactive-example
 const language = {

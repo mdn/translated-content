@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`break-before`** プロパティは、生成されたボックスの前で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
-{{InteractiveExample("CSS Demo: break-before")}}
+{{InteractiveExample("CSS デモ: break-before")}}
 
 ```css interactive-example-choice
 break-before: auto;

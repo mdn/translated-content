@@ -14,7 +14,7 @@ slug: Web/CSS/::cue
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::cue", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::cue", "tabbed-shorter")}}
 
 ```css interactive-example
 video {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14c50bd73f6fee50b35b95b9fbb52387ff443321
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 113 の変更点をまとめています。Firefox 113 は、米国時間 2023 年 5 月 9 日にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

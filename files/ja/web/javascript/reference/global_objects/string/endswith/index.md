@@ -9,7 +9,7 @@ l10n:
 
 **`endsWith()`** メソッドは文字列が引数で指定された文字列で終わるかを判定して `true` か `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: String.endsWith()")}}
+{{InteractiveExample("JavaScript デモ: String.endsWith()")}}
 
 ```js interactive-example
 const str1 = "Cats are the best!";

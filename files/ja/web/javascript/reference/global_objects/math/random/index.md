@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** `Math.random()` の提供する乱数は、暗号に使用可能な安全性を備えていません。セキュリティに関連する目的では使用しないでください。代わりにウェブ暗号 API (より具体的には {{domxref("Crypto.getRandomValues()")}} メソッド) を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Math.random()")}}
+{{InteractiveExample("JavaScript デモ: Math.random()")}}
 
 ```js interactive-example
 function getRandomInt(max) {

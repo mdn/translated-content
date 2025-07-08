@@ -10,7 +10,7 @@ l10n:
 
 **`dir`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素のテキストの書字方向を示します。
 
-{{InteractiveExample("HTML Demo: dir", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: dir", "tabbed-standard")}}
 
 ```html interactive-example
 <p dir="rtl">

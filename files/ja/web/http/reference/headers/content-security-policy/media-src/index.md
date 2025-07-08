@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`media-src`** ディレクティブは、 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素を使用して読み込むメディアの有効なソースを指定します。
 
 <table class="properties">

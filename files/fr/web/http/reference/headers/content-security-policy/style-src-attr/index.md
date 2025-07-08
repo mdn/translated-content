@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-attr
 original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-attr
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src-attr`** spécifie les sources valides pour des feuilles de styles appliquées à des éléments individuels du DOM par l'attribut `style`.
 
 <table class="properties">

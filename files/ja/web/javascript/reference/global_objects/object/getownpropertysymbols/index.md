@@ -9,7 +9,7 @@ l10n:
 
 **`Object.getOwnPropertySymbols()`** 静的メソッドは、与えられたオブジェクト上で直接見つかるシンボルプロパティすべての配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertySymbols()")}}
+{{InteractiveExample("JavaScript デモ: Object.getOwnPropertySymbols()")}}
 
 ```js interactive-example
 const object1 = {};

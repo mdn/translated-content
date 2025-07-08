@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Authorization
 original_slug: Web/HTTP/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Authorization`** contém as credenciais para autenticar o agente de usuário com o servidor, geralmente o servidor responderá com um status {{HTTPStatus("401")}} `Unauthorized` se não for possível fazer a autenticação, e com o cabeçalho {{HTTPHeader("WWW-Authenticate")}}.
 
 <table class="properties">

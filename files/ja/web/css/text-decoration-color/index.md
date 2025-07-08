@@ -11,7 +11,7 @@ l10n:
 
 色はプロパティ値のスコープにある装飾、すなわち下線、上線、打消し線、それにスペルミスに印をつけるために使われるような波線などに適用されます。
 
-{{InteractiveExample("CSS Demo: text-decoration-color")}}
+{{InteractiveExample("CSS デモ: text-decoration-color")}}
 
 ```css interactive-example-choice
 text-decoration-color: red;

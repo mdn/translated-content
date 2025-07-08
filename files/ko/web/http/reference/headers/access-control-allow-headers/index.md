@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Headers`** 는 {{HTTPHeader("Access-Control-Request-Headers")}}를 포함하는 {{glossary("preflight request")}}의 응답에 사용되는 헤더로, 실제 요청때 사용할 수 있는 HTTP 헤더의 목록을 나열합니다.
 
 요청에 {{HTTPHeader("Access-Control-Request-Headers")}} 헤더가 포함되어 있을 경우, 이 헤더를 포함하여야 합니다.

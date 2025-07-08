@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/WeakSet/add
 
 **`add()`** メソッドは、新しい要素を `WeakSet` オブジェクトの最後に追加します。
 
-{{InteractiveExample("JavaScript Demo: WeakSet.Prototype.add()", "taller")}}
+{{InteractiveExample("JavaScript デモ: WeakSet.Prototype.add()", "taller")}}
 
 ```js interactive-example
 const weakset1 = new WeakSet();

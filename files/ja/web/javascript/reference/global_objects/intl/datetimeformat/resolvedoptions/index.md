@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/resolvedOption
 
 **`Intl.DateTimeFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("Intl/DateTimeFormat")}} オブジェクトの初期化時に計算されたロケールや日付と時刻の整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.resolvedOptions")}}
 
 ```js interactive-example
 const region1 = new Intl.DateTimeFormat("zh-CN", { timeZone: "UTC" });

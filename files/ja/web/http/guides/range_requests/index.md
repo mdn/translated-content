@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Range_requests
 original_slug: Web/HTTP/Range_requests
 ---
 
-{{HTTPSidebar}}
-
 HTTP 範囲リクエストでは、サーバーからクライアントに HTTP メッセージの一部のみを送信できます。部分リクエストは、たとえば、大きなメディアや、一時停止や再開機能を持つファイルのダウンロードに役立ちます。
 
 ## サーバーが部分リクエストに対応しているかどうかの確認

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/supportedLocales
 
 **`Intl.ListFormat.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替する必要なく数値の書式で対応されているものを含む配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat.supportedLocalesOf", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 HTTP のようなクライアントサーバープロトコルでは、セッションが 3 つの段階で構成されます。
 
 1. クライアントは TCP コネクション (トランスポート層が TCP ではない場合は、他の適切なコネクション) を確立します。

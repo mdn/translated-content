@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/xor
 
 **`Atomics.xor()`** は静的メソッドで、配列内の指定した位置にある指定された値とのビット単位の XOR を計算し、その位置にあった古い値を返します。これは不可分操作であり、変更された値が書き戻されるまで他の書き込みが行われないことが保証されます。
 
-{{InteractiveExample("JavaScript Demo: Atomics.xor()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.xor()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

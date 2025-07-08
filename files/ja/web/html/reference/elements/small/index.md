@@ -10,7 +10,7 @@ l10n:
 
 **`<small>`** は [HTML](/ja/docs/Web/HTML) の要素で、スタイルの表現とは独立して、著作権表示や法的表記のような、注釈や小さく表示される文を表します。既定では、 `small` から `x-small` のように、一段階小さいフォントでテキストが表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;small&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors
 original_slug: Web/HTTP/CORS/Errors
 ---
 
-{{HTTPSidebar}}
-
 [Cross-Origin Resource Sharing](/fr/docs/Web/HTTP/CORS) ({{Glossary("CORS")}}) est une norme qui permet à un serveur d'assouplir la [politique de même origine](/fr/docs/Web/Security/Same-origin_policy).
 
 Celle-ci est utilisée pour autoriser explicitement certaines requêtes provenant d'autres sources tout en en rejetant d'autres. Par exemple, si un site offre un service intégrable, il peut être nécessaire d'assouplir certaines restrictions. La configuration d'une telle configuration CORS n'est pas nécessairement facile et peut présenter certains défis. Dans ces pages, nous examinerons quelques messages d'erreur CORS courants et comment les résoudre.

@@ -9,7 +9,7 @@ l10n:
 
 **`Object.entries()`** は静的メソッドで、与えられたオブジェクトが所有する、文字列をキーとした列挙可能なプロパティのキーと値の組の配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.entries()")}}
+{{InteractiveExample("JavaScript デモ: Object.entries()")}}
 
 ```js interactive-example
 const object1 = {

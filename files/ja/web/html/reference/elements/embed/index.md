@@ -10,7 +10,7 @@ l10n:
 
 **`<embed>`** は [HTML](/ja/docs/Web/HTML) の要素で、外部のコンテンツを文書中の指定された場所に埋め込みます。コンテンツは外部アプリケーションや、対話型コンテンツの他の出所（ブラウザーのプラグインなど）によって提供されます。
 
-{{InteractiveExample("HTML Demo: &lt;embed&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;embed&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <embed

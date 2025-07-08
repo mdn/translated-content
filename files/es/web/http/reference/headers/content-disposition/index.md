@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 En una respuesta HTTP regular, el encabezado **`Content-Disposition`** indica si el contenido se espera que se muestre en línea en el navegador, esto es, como una o como parte de una página web, o como un archivo adjunto, que se puede descargar y guardar localmente.
 
 En un cuerpo `multipart/form-data`, el encabezado general **`Content-Disposition`** puede ser utilizado en la subparte de un cuerpo multipartes para dar información acerca del campo al que aplica. La subparte es delimitada por el _boundary_ (límite) definido en el encabezado {{HTTPHeader("Content-Type")}}. Cuando se utiliza en el propio cuerpo, `Content-Disposition` no tiene efecto.

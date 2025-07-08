@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/RelativeTimeFormat
 
 **`Intl.RelativeTimeFormat`** オブジェクトは言語に依存の相対時間の書式化を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.RelativeTimeFormat")}}
+{{InteractiveExample("JavaScript デモ: Intl.RelativeTimeFormat")}}
 
 ```js interactive-example
 const rtf1 = new Intl.RelativeTimeFormat("en", { style: "short" });

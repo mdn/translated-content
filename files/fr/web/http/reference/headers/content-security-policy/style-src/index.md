@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src`** spécifie les sources valides pour les feuilles de style.
 
 <table class="properties">

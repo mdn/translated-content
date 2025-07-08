@@ -9,7 +9,7 @@ l10n:
 
 **`Object.isExtensible()`** メソッドは、オブジェクトが拡張可能であるか（新しいプロパティを追加することができるかどうか）を判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.isExtensible()")}}
+{{InteractiveExample("JavaScript デモ: Object.isExtensible()")}}
 
 ```js interactive-example
 const object1 = {};

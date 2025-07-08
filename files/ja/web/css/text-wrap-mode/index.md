@@ -14,7 +14,7 @@ l10n:
 > [!NOTE]
 > このプロパティの名前は、 CSSWG がより良い名前を探すまでのプレースホルダーです。
 
-{{InteractiveExample("CSS Demo: text-wrap-mode")}}
+{{InteractiveExample("CSS デモ: text-wrap-mode")}}
 
 ```css interactive-example-choice
 text-wrap-mode: wrap;

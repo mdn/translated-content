@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Forwarded-For
 original_slug: Web/HTTP/Headers/X-Forwarded-For
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`X-Forwarded-For`** (XFF) é de fato um cabeçalho padrão para identificar o endereço de IP original de um cliente conectando a um servidor web através de um proxy HTTP ou um balenceador de carga. Quando tráfego específico é interceptado entre clientes e servidores, _logs_ de acesso do servidor contém o endereço IP do proxy ou balanceador de carga somente. Para ver o endereço IP original do cliente, o cabeçalho de requisição `X-Forwarded-For` é utilizado.
 
 Este cabeçalho é utilizado para depuração, estatísticas, e gerar conteúdo dependente localmente e por design ele expõe informações privadas sensíveis, como o endereço IP do cliente. Então a privacidade do usuário deve estar em mente quando utilizando este cabeçalho.

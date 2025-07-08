@@ -9,7 +9,7 @@ l10n:
 
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)を表します。
 
-{{InteractiveExample("CSS Demo: ::placeholder", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::placeholder", "tabbed-shorter")}}
 
 ```css interactive-example
 input {

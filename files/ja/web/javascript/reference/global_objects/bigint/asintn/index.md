@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/asIntN
 
 **`BigInt.asIntN`** は静的メソッドで、 BigInt 値を符号付き整数値に丸め、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.asIntN()", "taller")}}
+{{InteractiveExample("JavaScript デモ: BigInt.asIntN()", "taller")}}
 
 ```js interactive-example
 const I64_CEIL = 2n ** 63n;

@@ -9,7 +9,7 @@ l10n:
 
 **`padding-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における下側の高さを設定します。
 
-{{InteractiveExample("CSS Demo: padding-bottom")}}
+{{InteractiveExample("CSS デモ: padding-bottom")}}
 
 ```css interactive-example-choice
 padding-bottom: 1em;

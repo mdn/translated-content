@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/object-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/object-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`object-src`** spécifie les sources valides pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet).
 
 Pour définir des types autorisés pour les éléments [`<object>`](/fr/docs/Web/HTML/Element/object), [`<embed>`](/fr/docs/Web/HTML/Element/embed) et [`<applet>`](/fr/docs/Web/HTML/Element/applet), voir la directive [`plugin-types`](/fr/docs/orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types).

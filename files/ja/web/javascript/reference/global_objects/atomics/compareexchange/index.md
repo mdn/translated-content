@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/compareExchange
 
 静的な **`Atomics.compareExchange()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。これは、その位置での古い値が、期待された値と同じであったかどうかを返すものです。これは不可分操作で、変更された値が書き戻されるまで、他の書き込みが行われないことが保証されます。
 
-{{InteractiveExample("JavaScript Demo: Atomics.compareExchange()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.compareExchange()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

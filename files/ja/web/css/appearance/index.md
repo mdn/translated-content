@@ -9,7 +9,7 @@ l10n:
 
 **`appearance`** は CSS のプロパティで、オペレーティングシステムのテーマに基づいた、プラットフォーム固有のスタイル設定で UI 要素を表示するために使用します。
 
-{{InteractiveExample("CSS Demo: appearance")}}
+{{InteractiveExample("CSS デモ: appearance")}}
 
 ```css interactive-example-choice
 appearance: none;

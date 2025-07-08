@@ -10,7 +10,7 @@ l10n:
 
 **`<h1>`** ～ **`<h6>`** は [HTML](/ja/docs/Web/HTML) の要素で、セクションの見出しを 6 段階で表します。`<h1>` が最上位で、`<h6>` が最下位です。既定では、すべての見出し要素は[ブロックレベル](/ja/docs/Glossary/Block-level_content)ボックスを作成し、改行して始まり、その包含ブロックの中で利用できる幅いっぱいに広がります。
 
-{{InteractiveExample("HTML Demo: &lt;h1-h6&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;h1-h6&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Beetles</h1>

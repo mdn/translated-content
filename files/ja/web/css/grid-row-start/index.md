@@ -9,7 +9,7 @@ l10n:
 
 **`grid-row-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド行の中におけるグリッドアイテムの先頭の位置を指定します。グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}のインライン方向の先頭の端を指定します。
 
-{{InteractiveExample("CSS Demo: grid-row-start")}}
+{{InteractiveExample("CSS デモ: grid-row-start")}}
 
 ```css interactive-example-choice
 grid-row-start: auto;

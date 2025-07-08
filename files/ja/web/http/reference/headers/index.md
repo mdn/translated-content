@@ -7,8 +7,6 @@ l10n:
   sourceCommit: a8f881645d776d1303a0a25bd884f95e1b2805e1
 ---
 
-{{HTTPSidebar}}
-
 **HTTP ヘッダー**により、 HTTP リクエストやレスポンスでクライアントやサーバーが追加情報を渡すことができます。 HTTP ヘッダーは、大文字小文字を区別しないヘッダー名とそれに続くコロン (`:`)、 値で構成されます。値の前にある{{Glossary("Whitespace", "ホワイトスペース")}}は無視されます。
 
 私的な独自のヘッダーは、以前は `X-` 接頭辞を使用していましたが、この慣習は、標準外のフィールドが標準になったときに不便が発生するため、2012 年 6 月の [RFC 6648](https://datatracker.ietf.org/doc/html/rfc6648) で非推奨になりました。それ以外のヘッダーは [IANA HTTP フィールド名レジストリー](https://www.iana.org/assignments/http-fields/http-fields.xhtml)に収録されており、その基になったものは [RFC 4229](https://datatracker.ietf.org/doc/html/rfc4229) で定義されていました。

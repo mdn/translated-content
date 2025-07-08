@@ -12,7 +12,7 @@ l10n:
 - 組版の改善、例えば見出しの行の長さのバランスの改善。
 - テキストの折り返しを完全にオフにする方法。
 
-{{InteractiveExample("CSS Demo: text-wrap")}}
+{{InteractiveExample("CSS デモ: text-wrap")}}
 
 ```css interactive-example-choice
 text-wrap: wrap;

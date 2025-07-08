@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 El encabezado de solicitud **`Host`** especifica el nombre de dominio del servidor (para hosting virtual), y (opcionalmente) el número de puerto TCP en el que el servidor esta escuchando.
 
 Si no se provee un puerto, se usará el puerto por defecto para el servicio solicitado (e.j.: "80" para una URL HTTP).

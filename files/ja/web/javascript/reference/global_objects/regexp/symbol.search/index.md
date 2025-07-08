@@ -9,7 +9,7 @@ l10n:
 
 **`[Symbol.search]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.search`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/search) がどのように動作するのかを指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.search]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.search]()")}}
 
 ```js interactive-example
 class RegExp1 extends RegExp {

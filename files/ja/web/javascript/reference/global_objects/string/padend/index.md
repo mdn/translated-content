@@ -9,7 +9,7 @@ l10n:
 
 **`padEnd()`** メソッドは、結果の文字列が指定した長さになるように、現在の文字列を他の文字列で（必要に応じて繰り返して）延長します。延長は、現在の文字列の末尾から適用されます。
 
-{{InteractiveExample("JavaScript Demo: String.padEnd()")}}
+{{InteractiveExample("JavaScript デモ: String.padEnd()")}}
 
 ```js interactive-example
 const str1 = "Breaded Mushrooms";

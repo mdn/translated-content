@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Transfer-Encoding`** especifica la forma de codificación utilizada para transferir de forma segura el {{Glossary("Payload body", "cuerpo de carga útil")}} al usuario.
 
 > **Nota:** [HTTP/2](https://es.wikipedia.org/wiki/HTTP/2) prohíbe todos los usos de la cabecera _Transfer-Encoding_ que no sean los específicos de HTTP/2: `"trailers"`. HTTP 2 proporciona sus propios mecanismos más eficientes para la transmisión de datos que la transferencia fragmentada y prohíbe el uso de la cabecera. El uso de la cabecera en HTTP/2 puede dar como resultado un `error de protocolo` específico, ya que el protocolo HTTP/2 prohíbe su uso.

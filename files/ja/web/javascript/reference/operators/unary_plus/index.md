@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_plus
 
 <p>単項プラス演算子 (`+`) は、オペランドの前に置かれ、そのオペランドを評価し、それが数値以外の場合は数値に変換します。</p>
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary plus operator", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Unary plus operator", "taller")}}
 
 ```js interactive-example
 const x = 1;

@@ -9,7 +9,7 @@ l10n:
 
 **`animation-direction`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーション再生の向きを順方向、逆方向、前後反転のいずれにするかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-direction")}}
+{{InteractiveExample("CSS デモ: animation-direction")}}
 
 ```css interactive-example-choice
 animation-direction: normal;

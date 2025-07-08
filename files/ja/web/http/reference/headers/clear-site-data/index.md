@@ -6,7 +6,7 @@ l10n:
   sourceCommit: cbfee97866847077a5c7feb3b337ed7d4f3d3424
 ---
 
-{{securecontext_header}}{{HTTPSidebar}}
+{{securecontext_header}}
 
 **`Clear-Site-Data`** ヘッダーは、リクエストしているウェブサイトに関連付けられた閲覧用データ（クッキー、ストレージ、キャッシュ）を消去します。ウェブ開発者がそのオリジンのためにブラウザーがローカルに保存したデータをより制御できます。
 

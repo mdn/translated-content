@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`align-items`** プロパティは、すべての直接の子要素に集合として {{cssxref("align-self")}} の値を設定します。フレックスボックスでは{{glossary("cross axis", "交差軸")}}方向のアイテムの配置を制御します。グリッドレイアウトでは、{{glossary("grid areas", "グリッド領域")}}におけるアイテムのブロック軸方向の配置を制御します。
 
-{{InteractiveExample("CSS Demo: align-items")}}
+{{InteractiveExample("CSS デモ: align-items")}}
 
 ```css interactive-example-choice
 align-items: stretch;

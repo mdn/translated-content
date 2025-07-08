@@ -9,7 +9,7 @@ l10n:
 
 **`Promise`** コンストラクターは、主にまだプロミスに対応していない関数をラップするために使用します。
 
-{{InteractiveExample("JavaScript Demo: Promise Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise Constructor", "taller")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {

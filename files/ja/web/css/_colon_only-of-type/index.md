@@ -14,7 +14,7 @@ p:only-of-type {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :only-of-type", "tabbed-shorter")}}
 
 ```css interactive-example
 a:only-of-type {

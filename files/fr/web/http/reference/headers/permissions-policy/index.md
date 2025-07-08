@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Permissions-Policy
 original_slug: Web/HTTP/Headers/Permissions-Policy
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > [!WARNING]
 > Cet en-tête a maintenant été renommé `Permissions-Policy` dans la spécification, et cet article sera mis à jour pour refléter ce changement.

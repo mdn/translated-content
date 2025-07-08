@@ -29,7 +29,7 @@ page-break-before: revert;
 page-break-before: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-before")}}
+{{InteractiveExample("CSS デモ: page-break-before")}}
 
 ```css interactive-example-choice
 page-break-before: auto;

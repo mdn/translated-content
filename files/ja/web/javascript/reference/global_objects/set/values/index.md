@@ -9,7 +9,7 @@ l10n:
 
 **`values()`** は {{jsxref("Set")}} インターフェイスのメソッドで、集合の新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。これはこの集合のそれぞれの要素をの値を挿入順に返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.values")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.values")}}
 
 ```js interactive-example
 const set1 = new Set();

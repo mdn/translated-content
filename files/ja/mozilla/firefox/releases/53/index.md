@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f68449a8d7d8c04b1cdc90b22e780b202c4a1ff4
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 53 は、米国時間 2017 年 4 月 19 日にリリースされました。この記事では、ウェブ開発者だけでなく、Firefox や Gecko の開発者、アドオン開発者にとっても有益な変更点を掲載しています。
 
 ## ウェブ開発者向けの変更

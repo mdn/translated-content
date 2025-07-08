@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Retry-After
 original_slug: Web/HTTP/Headers/Retry-After
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Retry-After`** indica quanto tempo o agente de usuário deve aguardar antes de fazer outro pedido de acompanhamento. Existem dois casos principais em que este cabeçalho é usado:
 
 - Quando enviado com uma resposta {{HTTPStatus(503)}} (Service Unavailable), indica quanto tempo o serviço deve ficar indisponível.

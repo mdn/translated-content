@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status
 original_slug: Web/HTTP/Status
 ---
 
-{{HTTPSidebar}}
-
 Los códigos de estado de respuesta HTTP indican si se ha completado satisfactoriamente una solicitud HTTP específica. Las respuestas se agrupan en cinco clases:
 
 1. Respuestas informativas (`100`–`199`),

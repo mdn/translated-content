@@ -11,7 +11,7 @@ l10n:
 
 仕様書の初期バージョンでは、このプロパティは `grid-row-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-row-gap` を `row-gap` の別名として受け入れます。
 
-{{InteractiveExample("CSS Demo: row-gap")}}
+{{InteractiveExample("CSS デモ: row-gap")}}
 
 ```css interactive-example-choice
 row-gap: 0;

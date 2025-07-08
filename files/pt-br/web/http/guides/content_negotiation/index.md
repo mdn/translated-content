@@ -4,7 +4,7 @@ slug: Web/HTTP/Guides/Content_negotiation
 original_slug: Web/HTTP/Content_negotiation
 ---
 
-{{HTTPSidebar}}No [HTTP](/pt-BR/docs/Glossary/HTTP), **_negociação de conteúdo_** é o mecanismo que é usado para servir diferentesrepresentações de um recurso no mesmo URI, de forma que o agente do usuáriopossa especificar qual é a melhor representação adequada ao usuário(por exemplo, qual idioma de um documento, qual formato de imagem ouqual codificação de conteúdo)
+No [HTTP](/pt-BR/docs/Glossary/HTTP), **_negociação de conteúdo_** é o mecanismo que é usado para servir diferentesrepresentações de um recurso no mesmo URI, de forma que o agente do usuáriopossa especificar qual é a melhor representação adequada ao usuário(por exemplo, qual idioma de um documento, qual formato de imagem ouqual codificação de conteúdo)
 
 ## Princípios da negociação do conteúdo
 

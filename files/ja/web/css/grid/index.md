@@ -11,7 +11,7 @@ l10n:
 
 `grid` を使用すると、一方の軸を {{cssxref("grid-template-rows")}} または {{cssxref("grid-template-columns")}} を使用して設定し、もう一方の軸でどのように内容物を自動反復させるかを、暗黙のグリッドプロパティである {{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, {{cssxref("grid-auto-flow")}} で設定します。
 
-{{InteractiveExample("CSS Demo: grid")}}
+{{InteractiveExample("CSS デモ: grid")}}
 
 ```css interactive-example-choice
 grid: auto-flow / 1fr 1fr 1fr;

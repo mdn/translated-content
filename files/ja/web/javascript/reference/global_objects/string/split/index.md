@@ -9,7 +9,7 @@ l10n:
 
 **`split()`** は {{jsxref("String")}} 値のメソッドで、パターンを受け取り、この文字列をパターン検索によって部分文字列の順序付きリストに分割し、これらの部分文字列を配列に入れ、その配列を返します。
 
-{{InteractiveExample("JavaScript Demo: String.split()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.split()", "taller")}}
 
 ```js interactive-example
 const str = "The quick brown fox jumps over the lazy dog.";

@@ -9,7 +9,7 @@ l10n:
 
 **`transform-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の座標変換 (transform) における原点を設定します。
 
-{{InteractiveExample("CSS Demo: transform-origin")}}
+{{InteractiveExample("CSS デモ: transform-origin")}}
 
 ```css interactive-example-choice
 transform-origin: center;

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/format
 
 The **`Intl.DateTimeFormat.prototype.format()`** メソッドは、この {{jsxref("Intl.DateTimeFormat")}} オブジェクトのロケールと整形オプションに従って日付や時刻を整形します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.format", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.format", "taller")}}
 
 ```js interactive-example
 const options1 = {

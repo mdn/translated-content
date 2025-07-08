@@ -9,7 +9,7 @@ l10n:
 
 **`margin-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の左側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{InteractiveExample("CSS Demo: margin-left")}}
+{{InteractiveExample("CSS デモ: margin-left")}}
 
 ```css interactive-example-choice
 margin-left: 1em;

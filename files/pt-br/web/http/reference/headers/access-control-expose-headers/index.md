@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Expose-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Expose-Headers
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **`Access-Control-Expose-Headers`** indica quais cabeçalhos podem ser expostos como parte da resposta listando os seus nomes.
 
 Por padrão, somente os 6 {{Glossary("CORS-safelisted response header", "CORS-safelisted response headers")}} são expostos:

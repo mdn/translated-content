@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.asin()")}}
+{{InteractiveExample("JavaScript デモ: Math.asin()")}}
 
 ```js interactive-example
 // Calculates angle of a right-angle triangle in radians

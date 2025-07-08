@@ -10,7 +10,7 @@ l10n:
 
 **`<optgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("select")}} 要素内の選択肢のグループを作成します。
 
-{{InteractiveExample("HTML Demo: &lt;optgroup&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;optgroup&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="dino-select">Choose a dinosaur:</label>

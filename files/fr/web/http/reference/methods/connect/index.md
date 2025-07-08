@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/CONNECT
 original_slug: Web/HTTP/Methods/CONNECT
 ---
 
-{{HTTPSidebar}}
-
 La **méthode HTTP `CONNECT`** crée une communication bidirectionnelle avec la ressource demandée. Elle peut être utilisée pour ouvrir un tunnel.
 
 Par exemple, la méthode `CONNECT` peut être utilisée pour accéder à des sites web qui utilisent {{Glossary("SSL")}} ({{Glossary("HTTPS")}}). Le client demande à un serveur Proxy HTTP de créer un tunnel TCP vers la destination désirée. Le serveur poursuit alors afin d'établir la connexion pour le compte du client. Une fois que la connexion a été établie par le serveur, le serveur Proxy continue de gérer le flux TCP à destination et en provenance du client.

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-{{HTTPSidebar}}
-
 Le protocole [HTTP/1.1](/fr/docs/Web/HTTP) dispose d'un mécanisme spécifique pour basculer une connexion déjà établie sur un autre protocole, en utilisant l'en-tête [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade).
 
 Ce mécanisme est indicatif et la bascule sur un autre protocole ne peut être forcée. Il appartient aux implémentations de choisir si elles veulent ou non basculer sur un nouveau protocole (et ce même si elles prennent en charge le protocole demandé). En pratique, ce mécanisme est généralement utilisé pour mettre en place une connexion WebSocket.

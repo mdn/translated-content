@@ -14,7 +14,7 @@ a::before {
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::before", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: ::before", "tabbed-standard")}}
 
 ```css interactive-example
 a {

@@ -9,7 +9,7 @@ l10n:
 
 **`entries()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列の各インデックスのキーと値を含む新しい[配列のイテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。このメソッドは {{jsxref("Array.prototype.entries()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.entries()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.entries()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

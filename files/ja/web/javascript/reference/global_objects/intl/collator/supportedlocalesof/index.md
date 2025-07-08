@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/supportedLocalesOf
 
 **`Intl.Collator.supportedLocalesOf()`** メソッドは、ランタイムの既定のロケールで代替しなくても照合で対応するロケールを含む配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator.supportedLocalesOf", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator.supportedLocalesOf", "shorter")}}
 
 ```js interactive-example
 const locales1 = ["ban", "id-u-co-pinyin", "de-ID"];

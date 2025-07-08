@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid_row", "グリッド行")}}の線名とトラックのサイズ変更機能を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template-rows")}}
+{{InteractiveExample("CSS デモ: grid-template-rows")}}
 
 ```css interactive-example-choice
 grid-template-rows: auto;

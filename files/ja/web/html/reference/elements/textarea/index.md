@@ -10,7 +10,7 @@ l10n:
 
 **`<textarea>`** は [HTML](/ja/docs/Web/HTML) の要素で、複数行のプレーンテキスト編集コントロールを表し、レビューのコメントやお問い合わせフォーム等のように、ユーザーが大量の自由記述テキストを入力できるようにするときに便利です。
 
-{{InteractiveExample("HTML Demo: &lt;textarea&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;textarea&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="story">Tell us your story:</label>

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 original_slug: Web/HTTP/Guides/Cross-Origin_Resource_Policy
 ---
 
-{{HTTPSidebar}}
-
 **クロスオリジンリソースポリシー**は {{HTTPHeader("Cross-Origin-Resource-Policy")}} ヘッダーによって設定されるポリシーで、ウェブサイトやアプリケーションが他のオリジンから (`<script>` や `<img>` などの要素を使用して発行された) 特定のリクエストに対する保護をオプトインすることで、 [Spectre](https://ja.wikipedia.org/wiki/Spectre) のような投機的なサイドチャネル攻撃や、クロスサイトスクリプトインクルージョン攻撃を緩和することができます。
 
 CORP は既定で {{Glossary("same-origin policy")}} を超えた保護の追加レイヤーです。クロスオリジンリソースポリシーは、既定でクロスオリジンの読み込みを保護するメカニズムである、 [クロスオリジンリードブロッキング](https://fetch.spec.whatwg.org/#corb) (CORB)を補完します。

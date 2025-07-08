@@ -11,7 +11,7 @@ l10n:
 
 コントロールのユーザーインターフェイスはブラウザーとオペレーティングシステムに基づいて現れますが、機能は同じです。 UI の入力形式に関わらず、値は常にゼロが先行する 24 時間表記の `HH:mm` または `HH:mm:ss` に書式化された時刻です。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;time&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="appointment">ミーティングの時間を選択してください:</label>

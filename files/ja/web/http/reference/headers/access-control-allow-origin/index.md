@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Origin`** は{{Glossary("response header", "レスポンスヘッダー")}}で、指定された{{Glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。
 
 <table class="properties">

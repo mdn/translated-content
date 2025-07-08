@@ -9,7 +9,7 @@ l10n:
 
 **`length`** は {{jsxref("Array")}} インスタンスのデータプロパティで、配列の要素の数を表します。値は符号なし 32 ビット整数で、常に配列の最も大きなインデックスよりも数値的に大きくなります。
 
-{{InteractiveExample("JavaScript Demo: Array.length", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.length", "shorter")}}
 
 ```js interactive-example
 const clothing = ["shoes", "shirts", "socks", "sweaters"];

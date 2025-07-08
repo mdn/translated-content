@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e0de864abf4c85888c0a790058e0d6f46462ca3a
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/)Firefox 51 は、米国時間 2017 年 1 月 24 日にリリースされました。このページでは、開発者に影響する Firefox 51 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

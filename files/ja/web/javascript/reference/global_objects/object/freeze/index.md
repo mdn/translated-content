@@ -11,7 +11,7 @@ l10n:
 
 オブジェクトの凍結は JavaScript が提供する最も高い完全性レベルです。
 
-{{InteractiveExample("JavaScript Demo: Object.freeze()")}}
+{{InteractiveExample("JavaScript デモ: Object.freeze()")}}
 
 ```js interactive-example
 const obj = {

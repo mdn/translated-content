@@ -10,7 +10,7 @@ l10n:
 
 **`<em>`** は [HTML](/ja/docs/Web/HTML) の要素で、強調されたテキストを示します。`<em>` 要素は入れ子にすることができ、入れ子の段階に応じてより強い程度の強調を表すことができます。
 
-{{InteractiveExample("HTML Demo: &lt;em&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;em&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>Get out of bed <em>now</em>!</p>

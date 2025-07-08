@@ -9,7 +9,7 @@ l10n:
 
 **`find()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、型付き配列のある要素の値が与えられたテスト関数を満たした場合、その値を返します。そうでなければ {{jsxref("undefined")}} を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.find()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.find()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.find()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

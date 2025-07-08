@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/formatToParts
 
 **`Intl.Numberformat.prototype.formatToParts()`** メソッドは `NumberFormat` フォーマッターによって生成された文字列のロケールに応じた書式設定を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.formatToParts")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat.prototype.formatToParts")}}
 
 ```js interactive-example
 const amount = 654321.987;

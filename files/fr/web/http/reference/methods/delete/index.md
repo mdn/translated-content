@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 803a7a460338dab4900fd44cf7ab569e3bf5799a
 ---
 
-{{HTTPSidebar}}
-
 La méthode HTTP **`DELETE`** demande au serveur de supprimer une ressource donnée.
 
 La méthode `DELETE` n'a pas de sémantique définie pour le corps du message, qui devrait donc être vide.

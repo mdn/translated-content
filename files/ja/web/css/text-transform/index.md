@@ -9,7 +9,7 @@ l10n:
 
 **`text-transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
 
-{{InteractiveExample("CSS Demo: text-transform")}}
+{{InteractiveExample("CSS デモ: text-transform")}}
 
 ```css interactive-example-choice
 text-transform: capitalize;

@@ -9,7 +9,7 @@ l10n:
 
 **`font-kerning`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントに存在するカーニング情報の使用を制御します。
 
-{{InteractiveExample("CSS Demo: font-kerning")}}
+{{InteractiveExample("CSS デモ: font-kerning")}}
 
 ```css interactive-example-choice
 font-kerning: auto;

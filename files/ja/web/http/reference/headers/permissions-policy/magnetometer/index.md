@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `magnetometer` ディレクティブは、現在の文書が端末の方向についての情報を {{domxref("Magnetometer")}} インターフェイスで収集することを許可するかどうかを制御します。
 

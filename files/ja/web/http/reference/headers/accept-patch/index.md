@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 36001a269f4d7b2b3ac6de79e942a5f849bb87d8
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Patch`** は HTTP のレスポンスヘッダーで、サーバーが認識できるメディアタイプを伝えます。
 
 何らかのメソッドに対するレスポンスの **`Accept-Patch`** は、 Request-URI で特定されるリソースに対して PATCH が受け入れられることを意味しています。 2 つのよくあるケースがこれをもたらします。

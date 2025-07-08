@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/img-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/img-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`img-src`** spécifie les sources valides d'images et d'icônes.
 
 <table class="properties">

@@ -9,7 +9,7 @@ l10n:
 
 **`indexOf()`** は {{jsxref("Array")}} インスタンスのメソッドで、引数に与えられた内容と同じ内容を持つ最初の配列要素の添字を返します。存在しない場合は -1 を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.indexOf()")}}
+{{InteractiveExample("JavaScript デモ: Array.indexOf()")}}
 
 ```js interactive-example
 const beasts = ["ant", "bison", "camel", "duck", "bison"];

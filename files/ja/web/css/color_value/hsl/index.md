@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 古い `hsla()` 構文は `hsl()` の別名です。同じ引数を受け付け、同じように動作します。
 
-{{InteractiveExample("CSS Demo: hsl()")}}
+{{InteractiveExample("CSS デモ: hsl()")}}
 
 ```css interactive-example-choice
 background: hsl(50 80% 40%);

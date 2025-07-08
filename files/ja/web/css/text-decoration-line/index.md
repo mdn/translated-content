@@ -9,7 +9,7 @@ l10n:
 
 **`text-decoration-line`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。
 
-{{InteractiveExample("CSS Demo: text-decoration-line")}}
+{{InteractiveExample("CSS デモ: text-decoration-line")}}
 
 ```css interactive-example-choice
 text-decoration-line: none;

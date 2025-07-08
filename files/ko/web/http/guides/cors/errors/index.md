@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors
 original_slug: Web/HTTP/CORS/Errors
 ---
 
-{{HTTPSidebar}}
-
 [교차 출처 자원 공유](/ko/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}})는 서버가 same
 origin 정책([same-origin policy](/ko/docs/Web/Security/Same-origin_policy))을 완화할 수 있게 해 주는 표준입니다. 이는 일부
 교차 출처 요청은 명시적으로 허용하고 다른 요청은 거부하는 데 사용됩니다. 예를 들어서, 어떤 사이트가 embeddable service를 제공하는 경우, 특정 제한을

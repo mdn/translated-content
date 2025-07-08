@@ -9,7 +9,7 @@ l10n:
 
 **オプショナルチェーン (`?.`)** (optional chaining) 演算子は、オブジェクトのプロパティにアクセスしたり、関数を呼び出したりします。この演算子を使用してアクセスするオブジェクトまたは呼び出される関数が {{jsxref("undefined")}} または [`null`](/ja/docs/Web/JavaScript/Reference/Operators/null) の場合、エラーが発生することなく、式が途中で終了し、{{jsxref("undefined")}} と評価されます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Optional chaining operator", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Optional chaining operator", "taller")}}
 
 ```js interactive-example
 const adventurer = {

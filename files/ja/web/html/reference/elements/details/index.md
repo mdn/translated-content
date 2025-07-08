@@ -11,7 +11,7 @@ l10n:
 
 折りたたみウィジェットはふつう、回転して開閉状態を示す小さな三角形を使用し、その隣のラベルと共に画面上に表現されます。 `<summary>` 要素のコンテンツは、折りたたみウィジェットのラベルとして使用されます。 `<details>` のコンテンツは、 `<summary>` の{{glossary("accessible description", "アクセシブル説明")}}を提供します。
 
-{{InteractiveExample("HTML Demo: &lt;details&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;details&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <details>

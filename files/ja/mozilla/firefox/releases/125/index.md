@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 125 の変更点をまとめています。Firefox 125 は、米国時間 [2024 年 4 月 16 日](https://whattrainisitnow.com/release/?version=125) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

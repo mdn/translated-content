@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Host
 original_slug: Web/HTTP/Headers/Host
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de solicitação de **`Host`** especifica o nome de domínio do servidor (para hospedagem virtual), e (opcionalmente) o número da porta TCP no qual o servidor está escutando.
 
 Se nenhuma porta for fornecida a porta padrão para o serviço solicitado (por exemplo, "80" para um HTTP URL) está implícita.

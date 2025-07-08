@@ -9,7 +9,7 @@ l10n:
 
 **`propertyIsEnumerable()`** メソッドは、指定されたプロパティが[列挙可能で、かつオブジェクト自身の](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)プロパティであるかどうかを示す論理値を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.propertyIsEnumerable()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.propertyIsEnumerable()", "taller")}}
 
 ```js interactive-example
 const object1 = {};

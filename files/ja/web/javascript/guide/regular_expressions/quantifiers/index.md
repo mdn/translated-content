@@ -9,7 +9,7 @@ l10n:
 
 数量子は、一致させる文字や式の数を示します。
 
-{{InteractiveExample("JavaScript Demo: RegExp quantifiers", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp quantifiers", "taller")}}
 
 ```js interactive-example
 const ghostSpeak = "booh boooooooh";

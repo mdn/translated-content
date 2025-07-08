@@ -9,7 +9,7 @@ l10n:
 
 **`values()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素の値を挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.values")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.values")}}
 
 ```js interactive-example
 const map1 = new Map();

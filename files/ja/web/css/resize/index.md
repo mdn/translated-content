@@ -9,7 +9,7 @@ l10n:
 
 **`resize`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の寸法を変更できるかどうか、もしそうなら、どの方向に変更できるかを設定します。
 
-{{InteractiveExample("CSS Demo: resize")}}
+{{InteractiveExample("CSS デモ: resize")}}
 
 ```css interactive-example-choice
 resize: both;

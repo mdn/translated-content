@@ -9,7 +9,7 @@ l10n:
 
 **`Math.E`** プロパティはオイラー定数である、自然対数の底 (e)、約 2.718 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.E")}}
+{{InteractiveExample("JavaScript デモ: Math.E")}}
 
 ```js interactive-example
 function compoundOneYear(interestRate, currentVal) {

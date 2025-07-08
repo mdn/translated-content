@@ -9,7 +9,7 @@ l10n:
 
 **`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
 
-{{InteractiveExample("CSS Demo: outline")}}
+{{InteractiveExample("CSS デモ: outline")}}
 
 ```css interactive-example-choice
 outline: solid;

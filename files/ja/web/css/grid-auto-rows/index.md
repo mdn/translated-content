@@ -9,7 +9,7 @@ l10n:
 
 **`grid-auto-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの行{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
 
-{{InteractiveExample("CSS Demo: grid-auto-rows")}}
+{{InteractiveExample("CSS デモ: grid-auto-rows")}}
 
 ```css interactive-example-choice
 grid-auto-rows: auto;

@@ -59,17 +59,13 @@ l10n:
 >   Si no lo está, puedes eliminar la llamada a la macro.
 > - `\{{Non-standard_Header}}` — esto genera un banner de no estándar que indica que la función no forma parte de ninguna especificación.
 >
->   Debe actualizar o eliminar las siguientes macros de acuerdo con los siguientes consejos:
->
-> - `\{{httpsidebar}}` — esto genera el menú lateral de HTTP que debe aparecer en cada página de referencia HTTP. Recuerde eliminar la macro {{MDNSidebar}} cuando copie esta página.
->
 >   No proporcione macros de encabezado de estado manualmente. Consulte ["Cómo agregar o actualizar estados de funciones"](/es/docs/MDN/Writing_guidelines/Page_structures/Feature_status#how_to_add_or_update_feature_statuses). para agregar estos estados a la página.
 >
 > Se muestran muestras de los banners **Experimental** y **Obsoleto** justo después de este bloque de nota.
 >
 > _Recuerda eliminar toda esta nota explicativa antes de publicar_
 
-{{httpsidebar}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 Comienza el contenido en la página con un párrafo introductorio — comienza nombrando la cabecera http y diciendo qué hace.
 Idealmente, esto debería ser una o dos oraciones cortas.

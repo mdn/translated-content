@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/403
 original_slug: Web/HTTP/Status/403
 ---
 
-{{HTTPSidebar}}
-
 El error 403 o **`403 Forbidden`** es un código de respuesta HTTP el cual indica que el servidor ha recibido y ha entendido la petición, pero rechaza enviar una respuesta.
 
 Hay similitudes entre el status {{HTTPStatus("401")}} y el **`error 403`**, la diferencia es que este último no se soluciona con una re-autenticación. El acceso está permanentemente prohibido y ligado a la lógica de la aplicación, como el no tener los permisos necesarios para acceder al recurso.

@@ -9,7 +9,7 @@ l10n:
 
 **`JSON.stringify()`** メソッドは、ある JavaScript のオブジェクトや値を JSON 文字列に変換します。置き換え関数を指定して値を置き換えたり、置き換え配列を指定して指定されたプロパティのみを含むようにしたりすることもできます。
 
-{{InteractiveExample("JavaScript Demo: JSON.stringify()", "taller")}}
+{{InteractiveExample("JavaScript デモ: JSON.stringify()", "taller")}}
 
 ```js interactive-example
 console.log(JSON.stringify({ x: 5, y: 6 }));

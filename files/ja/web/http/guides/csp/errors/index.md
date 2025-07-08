@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 このページは CSP のエラーと警告に関する記事を参照する親となり、概要を示したり、可能であれば問題解決の一般的な助言をしたりします。
 
 - [The page's settings blocked the loading of a resource: %1$S](/ja/docs/Web/HTTP/Guides/CSP/Errors/CSPViolation)

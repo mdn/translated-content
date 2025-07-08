@@ -9,7 +9,7 @@ l10n:
 
 **`toString()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、は正規表現を表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.toString()", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.toString()", "taller")}}
 
 ```js interactive-example
 console.log(new RegExp("a+b+c"));

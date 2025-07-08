@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/POST
 original_slug: Web/HTTP/Methods/POST
 ---
 
-{{HTTPSidebar}}
-
 La **méthode HTTP `POST`** envoie des données au serveur. Le type du corps de la requête est indiqué par l'en-tête {{HTTPHeader("Content-Type")}}.
 
 La différence entre `PUT` et {{HTTPMethod("POST")}} tient au fait que `PUT` est une méthode idempotente. Une requête `PUT`, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet de bord). À l'inverse, des requêtes `POST` successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.

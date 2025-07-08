@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Trailer
 original_slug: Web/HTTP/Headers/Trailer
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta **Trailer** permite o remetente incluir campos adicionais ao final de mensagens fragmentadas visando prover metadados que podem ser dinamicamente gerados enquanto o corpo da mensagem é enviado, como a mensagem de checagem de integridade, assinatura digital, ou status de pós-processamento.
 
 > [!NOTE]

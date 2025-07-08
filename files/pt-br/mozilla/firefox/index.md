@@ -3,8 +3,6 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
 O [Firefox](https://www.mozilla.org/pt-br/docs/firefox/new/) é um popular navegador de internet da Mozilla, disponível para várias plataformas como Windows, Mac OS X e Linux no desktop, bem como Android e iOS nos dispositivos móveis. Sendo altamente compatível com as últimas tecnologias web e poderosas [ferramentas de desenvolvimento](https://firefox-source-docs.mozilla.org/devtools-user/index.html), o Firefox é um excelente navegador tanto para usuários comuns quanto desenvolvedores web.
 
 Firefox é um projeto de código aberto; muito do seu código vem de contribuições de uma gigantesca comunidade de voluntários. Aqui você irá aprender sobre como contribuir com o projeto Firefox, além de encontrar links para documentação sobre construção de add-ons do Firefox, uso de ferramentas do Firefox para desenvolvedores, entre outros.

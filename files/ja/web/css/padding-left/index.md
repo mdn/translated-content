@@ -9,7 +9,7 @@ l10n:
 
 **`padding-left`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における左側の幅を設定します。
 
-{{InteractiveExample("CSS Demo: padding-left")}}
+{{InteractiveExample("CSS デモ: padding-left")}}
 
 ```css interactive-example-choice
 padding-left: 1.5em;

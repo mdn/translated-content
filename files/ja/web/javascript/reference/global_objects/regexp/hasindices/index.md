@@ -9,7 +9,7 @@ l10n:
 
 **`hasIndices`** は {{jsxref("RegExp")}} インスタンスのプロパティで、その正規表現で `d` フラグが使用されたかどうかを示します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.hasIndices")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.hasIndices")}}
 
 ```js interactive-example
 const regex1 = new RegExp("foo", "d");

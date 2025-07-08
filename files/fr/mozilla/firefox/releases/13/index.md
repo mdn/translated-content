@@ -3,8 +3,6 @@ title: Firefox 13 pour les développeurs
 slug: Mozilla/Firefox/Releases/13
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web

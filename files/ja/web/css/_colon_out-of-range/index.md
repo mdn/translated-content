@@ -15,7 +15,7 @@ input:out-of-range {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :out-of-range", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :out-of-range", "tabbed-shorter")}}
 
 ```css interactive-example
 label {

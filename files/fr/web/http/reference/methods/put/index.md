@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PUT
 original_slug: Web/HTTP/Methods/PUT
 ---
 
-{{HTTPSidebar}}
-
 La **méthode HTTP PUT** crée une nouvelle ressource ou remplace une représentation de la ressource ciblée par le contenu de la requête.
 
 La différence entre `PUT` et [`POST`](/fr/docs/Web/HTTP/Methods/POST) tient au fait que `PUT` est une méthode idempotente. Une requête PUT, envoyée une ou plusieurs fois avec succès, aura toujours le même effet (il n'y a pas d'effet _de bord_). À l'inverse, des requêtes POST successives et identiques peuvent avoir des effets additionnels, ce qui peut revenir par exemple à passer plusieurs fois une commande.

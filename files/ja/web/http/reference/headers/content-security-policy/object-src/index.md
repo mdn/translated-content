@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`object-src`** ディレクティブは、 {{HTMLElement("object")}} や {{HTMLElement("embed")}} 要素の有効なソースを指定します。
 
 > **メモ:** `object-src` で制御される要素は、おそらく偶然にも古い HTML 要素と見なされており、新しい標準機能が搭載されていません（`<iframe>` の `sandbox` や `allow` などのセキュリティ属性など）。したがって、このフェッチディレクティブで制限することを[推奨します](https://csp.withgoogle.com/docs/strict-csp.html) （例えば、可能であれば明示的に `object-src 'none'` を設定するなど）。

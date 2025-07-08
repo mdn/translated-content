@@ -9,7 +9,7 @@ l10n:
 
 **`pop()`** メソッドは、配列から**最後**の要素を取り除き、その要素を返します。このメソッドは配列の長さを変化させます。
 
-{{InteractiveExample("JavaScript Demo: Array.pop()")}}
+{{InteractiveExample("JavaScript デモ: Array.pop()")}}
 
 ```js interactive-example
 const plants = ["broccoli", "cauliflower", "cabbage", "kale", "tomato"];

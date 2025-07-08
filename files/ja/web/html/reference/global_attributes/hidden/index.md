@@ -11,7 +11,7 @@ l10n:
 **`hidden`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は {{Glossary("enumerated", "列挙型")}}属性であり、ブラウザーがその要素の中身を表示すべきではないことを示します。例えば、
 要素がまだ、あるいはもはや*関連性*がないことを示す論理型属性です。例えば、ログイン処理が完了するまで使用できないページの要素を非表示にするために使用することができます。
 
-{{InteractiveExample("HTML Demo: hidden", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: hidden", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

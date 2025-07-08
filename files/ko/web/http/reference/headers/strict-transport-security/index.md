@@ -6,8 +6,6 @@ l10n:
   sourceCommit: c44653e3f3502fbda86ba392ed8058e1e3a0a0de
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Strict-Transport-Security`** 응답 헤더(종종 {{Glossary("HSTS")}}로 축약됨)는 사이트가 HTTPS를 통해서만 접근되어야 하며 향후 HTTP를 사용하여 사이트에 접근하려는 모든 시도는 자동으로 HTTPS로 변환되어야 함을 브라우저에 알립니다.
 
 > [!NOTE]

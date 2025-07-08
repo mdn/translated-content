@@ -9,7 +9,7 @@ l10n:
 
 **`byteLength`** アクセサープロパティは、{{jsxref("ArrayBuffer")}} の長さをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.byteLength")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.byteLength")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

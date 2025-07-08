@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 Dans les protocoles client-serveur, comme HTTP, les sessions se composent de trois phases :
 
 1. Le client établit une connexion TCP (ou la connexion appropriée si la couche de transport n'est pas TCP).

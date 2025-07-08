@@ -14,7 +14,7 @@ a::after {
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: ::after", "tabbed-standard")}}
 
 ```css interactive-example
 a::after {

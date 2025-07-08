@@ -9,7 +9,7 @@ l10n:
 
 **`translateX()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を二次元平面上の水平方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: translateX()")}}
+{{InteractiveExample("CSS デモ: translateX()")}}
 
 ```css interactive-example-choice
 transform: translateX(0);

@@ -13,7 +13,7 @@ l10n:
 > [!WARNING]
 > この要素は古いバージョンの HTML で "Underline" (下線) 要素と呼ばれる傾向があり、現在でもそのように誤用されることがあります。テキストに下線を引くのであれば、代わりに CSS の {{cssxref("text-decoration")}} プロパティを `underline` に設定したスタイルを適用してください。
 
-{{InteractiveExample("HTML Demo: &lt;u&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;u&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

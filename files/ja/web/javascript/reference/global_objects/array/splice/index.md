@@ -11,7 +11,7 @@ l10n:
 
 元の配列を変更せずに、ある部分を除去したり置き換えたりした新しい配列を作成するには {{jsxref("Array/toSpliced", "toSpliced()")}} を使用してください。配列を変更せずに配列の一部にアクセスするには {{jsxref("Array/slice", "slice()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{InteractiveExample("JavaScript デモ: Array.splice()")}}
 
 ```js interactive-example
 const months = ["Jan", "March", "April", "June"];

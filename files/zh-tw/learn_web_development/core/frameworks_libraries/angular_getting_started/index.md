@@ -1,30 +1,32 @@
 ---
-title: Angular 新手入門
+title: Angular 入門
 slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
+l10n:
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}
 
-現在該看一下 Google 的 Angular 框架了，這是另一個你經常會遇到的前端框架。在本文中，我們將會探索 Angular 所提供的功能、安裝必備工具、建立範例應用程式，並進一步瞭解 Angular 的基本架構。
+現在我們來看看 Google 的 Angular 框架，這是另一個你會經常遇到的熱門選擇。在本文中，我們將探討 Angular 提供了什麼、安裝先備條件並設定一個範例應用程式，並檢視 Angular 的基本架構。
+
+> [!NOTE]
+> 本教學的目標是 [Angular 18 版](https://angular.dev/overview)，最後修訂於 2024 年 8 月（`Angular CLI: 18.2.1`）。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">預備知識：</th>
+      <th scope="row">先備知識：</th>
       <td>
-        熟悉基本的<a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、
-        <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a>、以及
-        <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a>程式語言，具備
-        <a
+        熟悉核心的 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS</a> 與 <a href="/zh-TW/docs/Learn_web_development/Core/Scripting">JavaScript</a> 語言，並了解<a
           href="/zh-TW/docs/Learn_web_development/Getting_started/Environment_setup/Command_line"
-          >終端機/命令列環境</a
-        >的基本知識。
+          >終端機／命令列</a
+        >。
       </td>
     </tr>
     <tr>
-      <th scope="row">學習目標：</th>
+      <th scope="row">目標：</th>
       <td>
-        設立本機的Angular開發環境，建立初始應用程式，瞭解Angular基本運作方式。
+        設定本地的 Angular 開發環境、建立一個入門應用程式，並了解其基本運作方式。
       </td>
     </tr>
   </tbody>
@@ -32,247 +34,250 @@ slug: Learn_web_development/Core/Frameworks_libraries/Angular_getting_started
 
 ## 什麼是 Angular？
 
-Angular 是一個基於[TypeScript](https://www.typescriptlang.org/)的開發平台。身為一個平台，Angular 包含：
+Angular 是一個基於 [TypeScript](https://www.typescriptlang.org/) 建構的框架與開發平台。它用於建立一頁式 Web 應用程式。作為一個平台，Angular 包含：
 
-- 一個元件化的框架，用來建構可延展的 Web 應用程式。
-- 一整套經深思熟慮而整合出來的函式庫，包含各種不同的功能，包含路由機制、表單管理、Client/Server 通訊，以及更多。
-- 一組完善的開發工具，幫助你開發、建置、測試、更新你的程式碼。
+- 一個用於建構可擴展 Web 應用程式的組件式框架
+- 一系列整合良好的函式庫，涵蓋了各種功能，包括路由、表單管理、用戶端-伺服器通訊等
+- 一套開發者工具，幫助你開發、建置、測試和更新你的程式碼
 
-你能使用 Angular 去開發多種不同規模的專案，小至單人應用式專案，大至大型企業級專案。Angular 的設計宗旨是讓後續更新升級十分容易，因此你能輕鬆的使用最新版本進行開發。最棒的是，Angular 的開發生態圈龐大，有超過一百七十萬的使用者、套件開發者以及內容創作者。
+當你使用 Angular 建構應用程式時，你正在利用一個可以從單一開發者專案擴展到企業級應用程式的平台。Angular 的設計旨在讓更新盡可能地簡單，因此你可以用最少的力氣利用最新的開發成果。最棒的是，Angular 生態系由超過 170 萬名開發者、函式庫作者和內容創作者組成的多元社群所構成。
 
-在開始探索 Angular 之前，你要先瞭解 Angular CLI。Angular CLI 是一種快速、簡單、備受推崇的 Angular 程式開發方式。Angular CLI 能讓許多任務變得更容易，以下是一些範例：
+在你開始探索 Angular 平台之前，你應該先了解 Angular CLI。Angular CLI 是開發 Angular 應用程式最快、最簡單且推薦的方式。Angular CLI 讓許多任務變得簡單。以下是一些你會經常使用的範例命令：
 
-<table class="standard-table">
-  <tbody>
-    <tr>
-      <td>
-        <code><a href="https://angular.io/cli/build">ng build</a></code>
-      </td>
-      <td>編譯Angular開發的程式到輸出目錄</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="https://angular.io/cli/serve">ng serve</a></code>
-      </td>
-      <td>建構應用程式並啟動開發伺服器，當檔案變化時重新建構</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="https://angular.io/cli/generate">ng generate</a></code>
-      </td>
-      <td>根據原理圖去生成或修改檔案</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="https://angular.io/cli/test">ng test</a></code>
-      </td>
-      <td>對指定專案進行單元測試</td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="https://angular.io/cli/e2e">ng e2e</a></code>
-      </td>
-      <td>編譯並啟動Angular程式，並執行端到端測試</td>
-    </tr>
-  </tbody>
-</table>
+| 命令                                              | 描述                                                  |
+| ------------------------------------------------- | ----------------------------------------------------- |
+| [`ng build`](https://angular.dev/cli/build)       | 編譯一個 Angular 應用程式到一個輸出目錄。             |
+| [`ng serve`](https://angular.dev/cli/serve)       | 建置並提供你的應用程式，檔案變更時會重新建置。        |
+| [`ng generate`](https://angular.dev/cli/generate) | 根據一個 schematic 產生或修改檔案。                   |
+| [`ng test`](https://angular.dev/cli/test)         | 在指定的專案上執行單元測試。                          |
+| [`ng e2e`](https://angular.dev/cli/e2e)           | 建置並提供一個 Angular 應用程式，然後執行端對端測試。 |
 
-在建造應用程式時，你會發現 Angular CLI 是很實用的工具。
+你會發現 Angular CLI 是建構應用程式時一個很有價值的工具。
 
-## 你會建立的專案
+## 你將建構什麼
 
-這一系列的教學會帶領你建立一個待辦事項程式。透過這個程式，你會學到如何使用 Angular 管理、編輯、增加、刪除和篩選項目。
+本教學系列將引導你建構一個待辦事項清單應用程式。透過這個應用程式，你將學習如何使用 Angular 來管理、編輯、新增、刪除和篩選項目。
 
-## 前置工作
+## 先備知識
 
-想在本地端安裝 Angular，你必須安裝：
+要在你的本地系統上安裝 Angular，你需要以下項目：
 
 - **Node.js**
 
-  Angular 需要使用 Node.js 的[當前版、活躍 LTS 版或是長期維護 LTS 版](https://nodejs.org/about/releases)若需特定版本的資訊，可以參閱在[package.json](https://unpkg.com/@angular/cli/package.json)檔案之中的`engines`關鍵字。
+  Angular 需要 [active LTS 或 maintenance LTS](https://nodejs.org/en/about/previous-releases) 版本的 Node.js。關於特定版本需求的資訊，請參見[版本相容性](https://angular.dev/reference/versions)頁面。
 
-  若想更了解如何安裝 Node.js，可參閱[nodejs.org](https://nodejs.org)。若你不確定你目前使用的 Node.js 版本號，請在終端機輸入`node -v`查閱。
+  關於安裝 Node.js 的更多資訊，請參見 [nodejs.org](https://nodejs.org/en/download)。如果你不確定系統上執行的 Node.js 版本，請在終端機視窗中執行 `node -v`。
 
 - **npm 套件管理器**
 
-  Angular、Angular CLI 以及 Angular 應用程式都依賴 [npm 套件](https://docs.npmjs.com/getting-started/what-is-npm) 來實現許多特性與功能。想下載並安裝 npm 套件，你需要使用 npm 套件管理器。本教學使用[npm 客戶端](https://docs.npmjs.com/cli/install)命令列介面，該介面預設安裝在`Node.js`。欲檢查你是否安裝了 npm 客戶端，請在終端視窗中執行`npm -v`。
+  Angular、Angular CLI 和 Angular 應用程式依賴 [npm 套件](https://docs.npmjs.com/getting-started/what-is-npm/)來實現許多特性和功能。要下載和安裝 npm 套件，你需要一個 npm 套件管理器。本指南使用 [npm client](https://docs.npmjs.com/cli/install/) 命令列介面，它預設會與 `Node.js` 一起安裝。要檢查你是否已安裝 npm client，請在終端機視窗中執行 `npm -v`。
 
-## 設置你的應用程式
+## 建立一個 Angular 應用程式
 
-你可以在終端機裡透過使用 Angular 命令列介面（CLI）來產生、建置、測試和佈署 Angular 應用程式。請在終端機裡執行以下指令來安裝 Angular 命令列介面：
+你可以使用 Angular CLI 在終端機中執行命令，以產生、建置、測試和部署 Angular 應用程式。要全域安裝 Angular CLI，請在終端機中執行以下命令：
 
-```js
+```bash
 npm install -g @angular/cli
 ```
 
-Angular CLI 的指令開頭均為`ng`，接著是你希望 CLI 進行的事項。在桌面目錄中，使用 `ng new`指令創建一個名為`todo`的專案：
+Angular CLI 的命令都以 `ng` 開頭，後面接著你希望 CLI 執行的動作。建立一個你想要建置應用程式的新目錄，並在終端機中切換到該目錄。然後使用以下的 [`ng new`](https://angular.dev/cli/new) 命令來建立一個名為 `todo` 的新應用程式：
 
-```js
-ng new todo --routing=false --style=css
+```bash
+ng new todo --routing=false --style=css --ssr=false
 ```
 
-使用`ng new`指令會在桌面創建一個小型入門 Angular 的專案。其他的標籤，`--routing`和`--style`，則是定義專案中的導航與樣式。本教學導覽會在後續篇章詳細解釋這些特性。
+`ng new` 命令會建立一個最小的入門 Angular 應用程式。額外的旗標 `--routing`、`--style` 和 `--ssr` 定義了如何在應用程式中處理導航和樣式，並組態伺服器端算繪。本教學稍後會更詳細地描述這些功能。
 
-如果被詢問是否使用嚴格型別檢查模式，可以回覆「同意」。
+第一次執行 `ng` 時，系統可能會詢問你是否要啟用終端機的[自動完成](https://angular.dev/cli/completion)和分析功能。自動完成很方便，因為在輸入 `ng` 命令時按下 <kbd>TAB</kbd> 鍵會顯示可能的選項並自動完成引數。
 
-輸入`cd`指令切換到你新開的專案：
+你也可以決定是否允許將關於 CLI 使用情況的分析資料傳送給 Google 的 Angular 維護者。要了解更多關於分析的資訊，請參見 [Angular `ng analytics` CLI 文件](https://angular.dev/cli/analytics)。
 
-```js
+要執行你的 `todo` 應用程式，請使用 `cd` 命令導覽到你的新專案，然後執行 `ng serve`：
+
+```bash
 cd todo
-```
-
-想執行你的`todo`專案，請使用`ng serve`：
-
-```js
 ng serve
 ```
 
-當 CLI 詢問是否使用情況分析，回覆`no`。
+在瀏覽器中，導覽到 `http://localhost:4200/` 來查看你的新入門應用程式。如果你變更任何原始碼檔案，應用程式會自動重新載入。
 
-在瀏覽器中，導至<http://localhost:4200/>來查看你新建的專案。如果你更改任何原始資料夾，應用程式會自動加載更新。
+在 `ng serve` 執行期間，開啟第二個終端機分頁或終端機視窗來執行命令，而不用停止伺服器。如果你在任何時候想要停止提供你的應用程式，請在執行 `ng serve` 命令的終端機中按下 `Ctrl+c`。
 
-當`ng serve`運行時，你或許會想開啟第二個終端機視窗來運行其他指令。如果你想中斷應用程式運行，請在終端機內按下`Ctrl+c`。
+## 熟悉你的 Angular 應用程式
 
-## 熟悉你的 Angular 程式
+本教學關注的應用程式原始碼檔案位於 `src/app` 中：
 
-本教學導覽主要是用的程式原始檔在`src/app`資料夾內。由 CLI 自動產生的主要檔案如下：
+```plain
+src/app
+├── app.component.css
+├── app.component.html
+├── app.component.spec.ts
+├── app.component.ts
+└── app.config.ts
+```
 
-1. `app.module.ts`：列出此專案使用的所有檔案。此檔案在專案中扮演中央樞紐的角色。
-2. `app.component.ts`：又被稱為元件類別（Class），內含此專案主要頁面的相關邏輯
-3. `app.component.html`：內含`AppComponent`所使用的網頁 html。這個檔案的內容也被視為元件模板（Template），此模板定義你在瀏覽器中看到的畫面。
-4. `app.component.css`：內含`AppComponent`裡面的樣式。當你想定義某些樣式給特定模組使用，卻不希望影響到整體程式時，便可使用此檔案進行設定。
+CLI 自動產生的關鍵檔案如下：
 
-一個 Angular 的元件由三部份構成，分別是：模板、樣式、類別。舉例來說，`app.component.ts`、`app.component.html`、以及`app.component.css`一同構成`AppComponent`。此結構會將邏輯、畫面、樣式分開，如此一來便能讓程式更易於維護與擴張。
+1. `app.component.ts`：也稱為類別，包含應用程式主頁面的邏輯。
+2. `app.component.html`：包含 `AppComponent` 的 HTML。此檔案的內容也稱為範本。範本決定了視圖，也就是你在瀏覽器中看到的內容。
+3. `app.component.css`：包含 `AppComponent` 的樣式。當你想要定義只適用於特定組件而非整個應用程式的樣式時，會使用此檔案。
 
-如此一來，你就能在一開始便依循最佳的實作慣例。
+在 Angular 中，一個組件由三個主要部分組成——範本、樣式和類別。例如，`app.component.ts`、`app.component.html` 和 `app.component.css` 共同構成了 `AppComponent`。這種結構將邏輯、視圖和樣式分開，使應用程式更易於維護和擴展。透過這種方式，你從一開始就採用了最佳實踐。
 
-Angular CLI 也能產生`app.component.spec.ts`的元件測試檔案，但本次教學導覽不會深入探討測試的部分，所以你可以忽略這個檔案。
+Angular CLI 也會產生一個名為 `app.component.spec.ts` 的組件測試檔案，但本教學不涉及測試，所以你可以忽略該檔案。每當你產生一個組件時，CLI 都會在你指定的名稱的目錄中建立這些檔案，我們稍後會看到一個範例。
 
-一旦你建立一個元件，CLI 就會按照你的命名在目錄中建立此四個檔案。
+要了解更多關於測試的資訊，請參見 [Angular 測試指南](https://angular.dev/guide/testing)。
 
-## Angular 的專案結構
+## Angular 應用程式的結構
 
-Angular 基本上是用 TypeScript 作為主要開發的語言。
-簡單來說，TypeScript 是 JavaScript 的超集合，也就是說在 JavaScript 中使用的語法也同樣適用於 TypeScript。
-而 TypeScript 比純 JavaScript 更加強化型別的規範、寫法也更簡潔，因此使用 TypeScript 可以寫出更好維護的程式碼，並減少報錯的機率。
+Angular 是用 TypeScript 建構的。TypeScript 是 JavaScript 的超集合，這意味著任何有效的 JavaScript 都是有效的 TypeScript。TypeScript 提供了型別和比純 JavaScript 更簡潔的語法，這給你一個工具來建立更易於維護的程式碼並減少錯誤。
 
-在 Angular 框架裡，主要是由許多元件（Components）來組成。
-一個元件包含 HTML 頁面架構、樣式以及帶有元件裝飾器`@Component()`的 TypeScript 類別（class）。
+組件是 Angular 應用程式的建構區塊。一個組件包含一個帶有 `@Component()` 裝飾器的 TypeScript 類別。
+
+### 裝飾器
+
+你使用 `@Component()` 裝飾器來指定關於一個類別的後設資料（HTML 範本和樣式）。
 
 ### 類別
 
-類別(class)裡會放這個元件的邏輯、規則，
-舉例來說像是函式、事件監聽、屬性和參考等等。
-類別會放在一個像是`feature.component.ts`的檔案裡，而`feature`就是你的元件名稱。
-所以你可以建立一些檔案，並且命名為像是`header.component.ts`、`signup.component.ts`或是`feed.component.ts`。
-當你建立一個元件，它會帶有`@Component()` 這樣的裝飾器，裡面會有檔案的路徑指向，告訴 Angular 要去哪裡找 HTML 和 CSS 檔案。
-一個基本的元件寫法如下：
+類別是你放置組件所需任何邏輯的地方。這些程式碼可以包含函式、事件監聽器、屬性以及對服務的參考等等。類別位於一個名為 `feature.component.ts` 的檔案中，其中 `feature` 是你組件的名稱。因此，你可能會有名為 `header.component.ts`、`signup.component.ts` 或 `feed.component.ts` 的檔案。你使用帶有後設資料的 `@Component()` 裝飾器來建立一個組件，這些後設資料告訴 Angular 在哪裡找到 HTML 和 CSS。一個典型的組件如下：
 
-```js
+```ts
 import { Component } from "@angular/core";
 
 @Component({
   selector: "app-item",
-  // 接下來的檔案路徑會指出其它檔案在什麼位置
+  standalone: true,
+  imports: [],
+  // 以下的後設資料指定了組件其他部分的位置
   templateUrl: "./item.component.html",
-  styleUrls: ["./item.component.css"],
+  styleUrl: "./item.component.css",
 })
 export class ItemComponent {
   // 程式碼寫在這裡
 }
 ```
 
-這個元件會被稱為`ItemComponent`，它的選擇器是`app-item`。
-這個選擇器就像 HTML 的標籤，你可以把它放在其它的模版裡。
-當瀏覽器渲染到選擇器的時候，就會把這個元件的模版給渲染出來。
-這份教學文件會指引你建立兩個元件，並把其中一個放到另一個元件裡。
+這個組件稱為 `ItemComponent`，其選擇器是 `app-item`。你可以像使用常規 HTML 標籤一樣使用選擇器，將其放置在其他範本中，即 `<app-item></app-item>`。當範本中存在選擇器時，每當遇到該選擇器的實例，瀏覽器就會算繪該組件的範本。本教學將引導你建立兩個組件，並在其中一個中使用另一個。
 
-Angular 的元件模組具備高度封裝性，讓專案結構看起來更直覺。
-而 Angular 的元件也讓專案更易於做單元測試、讓程式碼更易於解讀。
+> [!NOTE]
+> 上面組件的名稱是 `ItemComponent`，這也是類別的名稱。名稱相同僅僅是因為組件不過是一個由 TypeScript 裝飾器補充的類別。
 
-### HTML 模版
+Angular 的組件模型提供了強大的封裝和直觀的應用程式結構。組件也讓你的應用程式更容易進行單元測試，並可以提高程式碼的整體可讀性。
 
-每個元件都會有 HTML 模版去告訴瀏覽器要如何渲染頁面。HTML 可以直接內嵌寫在類別（Class）的檔案內，或是用檔案路徑去指明其位置。
+### HTML 範本
 
-而要去指明位在他處的 HTML 檔案，就要使用`templateUrl`這個屬性，範例如下：
+每個組件都有一個 HTML 範本，用來宣告該組件如何算繪。你可以行內定義此範本，也可以透過檔案路徑定義。
 
-```js
+要參考外部 HTML 檔案，請使用 `templateUrl` 屬性：
+
+```ts
 @Component({
   selector: "app-root",
   templateUrl: "./app.component.html",
 })
-export class AppComponent {}
+export class AppComponent {
+  // 程式碼寫在這裡
+}
 ```
 
-當你把 HTML 內嵌寫在類別（Class）的檔案內時，要使用`template`這個屬性，並用反引號把 HTML 包起來，範例如下：
+要編寫行內 HTML，請使用 `template` 屬性並在反引號內編寫你的 HTML：
 
-```js
+```ts
 @Component({
   selector: "app-root",
-  template: `<h1>Hi!</h1>`,
+  template: `<h1>待辦事項應用程式</h1>`,
 })
-export class AppComponent {}
+export class AppComponent {
+  // 程式碼寫在這裡
+}
 ```
 
-Angular 還擴充了 HTML 的語法，讓你可以在元件中使用動態插值。
-當你的元件狀態改變時，Angular 會自動重新渲染該節點。
-下面的例子中會使用插值去插入一段文字來示範這個功能。
+Angular 擴展了 HTML，提供了額外的語法，讓你可以從組件中插入動態值。當你的組件狀態改變時，Angular 會自動更新算繪後的 DOM。此功能的一個用途是插入動態文本，如下例所示。
 
 ```html
 <h1>\{{ title }}</h1>
 ```
 
-雙花括號的地方就是告訴 Angular 插值顯示的地方。
-`title`的值就是從元件的類別來的：
+雙大括號指示 Angular 內插其中的內容。`title` 的值來自組件類別：
 
-```js
+```ts
 import { Component } from "@angular/core";
 
 @Component({
   selector: "app-root",
-  templateUrl: "./app.component.html",
-  styleUrls: ["./app.component.css"],
+  standalone: true,
+  imports: [],
+  template: "<h1>\{{ title }}</h1>",
+  styleUrl: "./app.component.css",
 })
 export class AppComponent {
-  title = "To do application";
+  title = "待辦事項應用程式";
 }
 ```
 
-當載入完元件和它的模版時，會在瀏覽器看到如下的呈現：
+當應用程式載入組件及其範本時，瀏覽器會看到以下內容：
 
 ```html
-<h1>To do application</h1>
+<h1>待辦事項應用程式</h1>
 ```
 
-### Styles
+### 樣式
 
-每個專案裡會有個全域性的樣式設定檔案`styles.css`，所有的元件都可以繼承它，並且再各自增加或覆寫它的樣式設定。
-你可以直接在裝飾器`@Component()`裡寫出這個元件特有的樣式，或是用路徑指明它的 CSS 檔案位置。
+一個組件可以從應用程式的 `styles.css` 檔案繼承全域樣式，並用自己的樣式來增強或覆蓋它們。你可以直接在 `@Component()` 裝飾器中編寫組件特定的樣式，或指定 CSS 檔案的路徑。
 
-要直接在元件裝飾器內設定樣式，就要使用`styles`這個屬性，範例如下：
+要將樣式直接包含在組件裝飾器中，請使用 `styles` 屬性：
 
-```js
+```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styles: ['h1 { color: red; }']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styles: ["h1 { color: red; }"],
 })
+export class AppComponent {
+  // …
+}
 ```
 
-但基本上，元件通常會把樣式另外寫在一個檔案，並用`styleUrls`去指明它的檔案路徑，如下：
+通常，組件會在一個單獨的檔案中使用樣式。你可以使用 `styleUrl` 屬性，其值為 CSS 檔案路徑的字串；如果有多個 CSS 樣式表要包含，則可以使用 `styleUrls`，其值為字串陣列：
 
-```js
+```ts
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
 })
+export class AppComponent {
+  // …
+}
 ```
 
-以此去寫出這個元件特定的樣式，讓你更容易去維護你的 CSS 檔案。
+透過組件特定的樣式，你可以組織你的 CSS，使其易於維護和移植。
+
+### 獨立組件
+
+除非專案已經使用 [NgModules](https://angular.dev/guide/ngmodules)（Angular 模組）來組織程式碼，否則建議[讓組件成為獨立組件](https://angular.dev/guide/components/importing#standalone-components)。本教學使用[獨立組件](https://angular.dev/guide/components/importing#standalone-components)，這更容易上手。
+
+通常會匯入 [`CommonModule`](https://angular.dev/api/common/CommonModule)，這樣你的組件就可以使用常見的[命令](https://angular.dev/guide/directives)和[管道](https://angular.dev/guide/pipes)。
+
+```ts
+import { Component } from "@angular/core";
+import { CommonModule } from "@angular/common";
+
+@Component({
+  standalone: true,
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrl: "./app.component.css",
+  imports: [CommonModule],
+})
+export class AppComponent {
+  // …
+}
+```
 
 ## 總結
 
-以上這些就是關於 Angular 的簡介。這時候的你，應該已經對 Angular 的運作有基本的了解，並準備建立一個 Angular 的專案。在下一篇文章裡，我們會更深入的應用這些知識，並且試著用 Angular 去寫一個「待辦清單」。
+以上就是你對 Angular 的初步介紹。至此，你應該已經設定好並準備好建構一個 Angular 應用程式，並且對 Angular 的運作方式有了基本的了解。在下一篇文章中，我們將深化這些知識，並開始建構我們的待辦事項清單應用程式的結構。
 
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Angular_todo_list_beginning", "Learn_web_development/Core/Frameworks_libraries")}}

@@ -9,7 +9,7 @@ l10n:
 
 **`handler.has()`** は、オブジェクトの `[[HasProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/in", "in")}} 演算子などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.has()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.has()", "taller")}}
 
 ```js interactive-example
 const handler1 = {

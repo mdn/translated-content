@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept-Ranges
 original_slug: Web/HTTP/Headers/Accept-Ranges
 ---
 
-{{HTTPSidebar}}
-
 **`Accept-Ranges`** 응답 HTTP 헤더는 부분 요청의 지원을 알리기 위해 서버에 의해 사용되는 표식입니다. 이 필드의 값은 범위를 정의하기 위해 사용될 수 있는 단위를 가리킵니다.
 
 `Accept-Ranges` 헤더가 존재하면, 브라우저는 처음부터 다시 다운로드를 시작하지 않고, 중단된 다운로드를 *재개*하려고 할 것입니다.

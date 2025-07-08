@@ -9,7 +9,7 @@ l10n:
 
 **`<blockquote>`** は [HTML](/ja/docs/Web/HTML) 要素で、内包する要素のテキストが引用文であることを示します。通常、字下げして表示されます（整形方法については[注意](#使用上の注意)の項を参照してください）。引用元の URL は `cite` 属性により与えることができ、引用元のテキスト表現は {{HTMLElement("cite")}} 要素を用いて与えることができます。
 
-{{InteractiveExample("HTML Demo: &lt;blockquote&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;blockquote&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <div>

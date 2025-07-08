@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/arguments
 
 **`arguments`** は配列風 (`Array`-like) オブジェクトであり、[関数](/ja/docs/Web/JavaScript/Guide/Functions)に渡された引数の値を含んでおり、関数内からアクセスすることができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Arguments")}}
+{{InteractiveExample("JavaScript デモ: Functions Arguments")}}
 
 ```js interactive-example
 function func1(a, b, c) {

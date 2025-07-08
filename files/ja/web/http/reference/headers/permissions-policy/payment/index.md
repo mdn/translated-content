@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーフィールドにおける `payment` ディレクティブは、現在の文書が[決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) を使用することを許可するかどうかを制御します。
 

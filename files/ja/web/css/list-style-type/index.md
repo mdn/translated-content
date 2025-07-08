@@ -9,7 +9,7 @@ l10n:
 
 **`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
-{{InteractiveExample("CSS Demo: list-style-type")}}
+{{InteractiveExample("CSS デモ: list-style-type")}}
 
 ```css interactive-example-choice
 list-style-type: space-counter;

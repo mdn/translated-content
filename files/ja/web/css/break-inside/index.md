@@ -9,7 +9,7 @@ l10n:
 
 **`break-inside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、生成されたボックスの途中で、ページ、段、領域をどのように区切るかを設定します。ボックスが生成されない場合は、このプロパティは無視されます。
 
-{{InteractiveExample("CSS Demo: break-inside")}}
+{{InteractiveExample("CSS デモ: break-inside")}}
 
 ```css interactive-example-choice
 break-inside: auto;

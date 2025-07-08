@@ -10,7 +10,7 @@ l10n:
 **`matrix3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 4x4 の 3D 同次変換行列を定義します。
 結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: matrix3d()")}}
+{{InteractiveExample("CSS デモ: matrix3d()")}}
 
 ```css interactive-example-choice
 transform: matrix3d(

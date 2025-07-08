@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1ee49b729dc4cd02b862d910f279861f4b30e704
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18 は米国時間 2013 年 1 月 8 日にリリースされました。このページでは、開発者に影響する Firefox 18 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

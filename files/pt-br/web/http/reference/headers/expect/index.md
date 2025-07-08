@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect
 original_slug: Web/HTTP/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Expect`** indica expectativas que precisão ser cumpridas pelo servidor para lidar com a requisição apropriadamente.
 
 A única expectativa definida na especificação é `Expect: 100-continue`, para qual o servidor deve responder com:

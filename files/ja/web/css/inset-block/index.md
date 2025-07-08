@@ -11,7 +11,7 @@ l10n:
 
 この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
-{{InteractiveExample("CSS Demo: inset-block")}}
+{{InteractiveExample("CSS デモ: inset-block")}}
 
 ```css interactive-example-choice
 inset-block: 10px 20px;

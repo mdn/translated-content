@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/502
 original_slug: Web/HTTP/Status/502
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse HTTP d'erreur serveur **`502 Bad Gateway`** indique que le serveur, agissant comme une passerelle ou un proxy, a reçu une réponse invalide depuis le serveur en amont.
 
 > [!NOTE]

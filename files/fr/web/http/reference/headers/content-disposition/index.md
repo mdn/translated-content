@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 Dans une réponse HTTP régulière, l'en-tête de réponse `Content-Disposition` est un en-tête indiquant si le contenu devrait être affiché en ligne dans le navigateur, c'est-à-dire en tant que page Web, dans une page Web ou en pièce jointe qui sera téléchargé et enregistré localement.
 
 Dans un corps `multipart / form-data`, l'en-tête général HTTP Content-Disposition est un en-tête qui peut être utilisé sur la sous-partie d'un corps multipart pour donner des informations sur le champ auquel il s'applique. La sous-partie est délimitée par la limite `boundary` définie dans l'en-tête {{HTTPHeader ("Content-Type")}}. Utilisé sur le corps même, `Content-Disposition` n'a aucun effet.

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString
 
 **`Intl.Locale.prototype.toString()`** は、このロケールの完全な[ロケール識別子文字列](https://www.unicode.org/reports/tr35/#Unicode_locale_identifier)を返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Locale.prototype.toString()")}}
+{{InteractiveExample("JavaScript デモ: Intl.Locale.prototype.toString()")}}
 
 ```js interactive-example
 const french = new Intl.Locale("fr-Latn-FR", {

@@ -11,7 +11,7 @@ l10n:
 
 このプロパティの初期値は、{{jsxref("Set.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const set1 = new Set();

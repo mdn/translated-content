@@ -9,7 +9,7 @@ l10n:
 
 **`valueOf()`** メソッドは、{{jsxref("String")}} オブジェクトのプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: String.valueOf()")}}
+{{InteractiveExample("JavaScript デモ: String.valueOf()")}}
 
 ```js interactive-example
 const stringObj = new String("foo");

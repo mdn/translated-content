@@ -11,7 +11,7 @@ l10n:
 このアットルールを使用することは、一般に*機能クエリー*と呼ばれます。
 ルールはコードの最上位または他の条件付きグループアットルールの中に配置しなければなりません。
 
-{{InteractiveExample("CSS Demo: @supports", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @supports", "tabbed-standard")}}
 
 ```css interactive-example
 .flex-container > * {

@@ -14,7 +14,7 @@ input:enabled {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: :enabled", "tabbed-standard")}}
 
 ```css interactive-example
 label {

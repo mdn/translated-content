@@ -3,8 +3,6 @@ title: Firefox 14 for developers
 slug: Mozilla/Firefox/Releases/14
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 14 は 米国時間 2012 年 7 月 17 日にリリースされました。この記事では、ウェブ開発者が知っておくべくことについてだけでなく、アドオン開発者および Firefox と Gecko 開発者にも役立つ主な変更点を一覧にしています。
 
 ## ウェブ開発者向けの変更点一覧

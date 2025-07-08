@@ -11,7 +11,7 @@ l10n:
 
 この{{glossary("inset properties", "インセットプロパティ")}}は、 `inset` を含め、位置指定されていない要素には効果がありません。
 
-{{InteractiveExample("CSS Demo: inset")}}
+{{InteractiveExample("CSS デモ: inset")}}
 
 ```css interactive-example-choice
 inset: 1em;

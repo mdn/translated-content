@@ -9,7 +9,7 @@ l10n:
 
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
 
-{{InteractiveExample("CSS Demo: pointer-events")}}
+{{InteractiveExample("CSS デモ: pointer-events")}}
 
 ```css interactive-example-choice
 pointer-events: auto;

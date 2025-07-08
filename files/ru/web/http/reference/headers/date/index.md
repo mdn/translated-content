@@ -3,8 +3,6 @@ title: Date
 slug: Web/HTTP/Reference/Headers/Date
 ---
 
-{{HTTPSidebar}}
-
 **`Date`** основной HTTP заголовок содержащий дату и время, в которое сообщение было создано.
 
 <table class="properties">

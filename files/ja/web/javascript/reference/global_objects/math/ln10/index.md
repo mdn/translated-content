@@ -9,7 +9,7 @@ l10n:
 
 **`Math.LN10`** は静的データプロパティで、 10 の自然対数、およそ 2.302 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.LN10", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.LN10", "shorter")}}
 
 ```js interactive-example
 function getNatLog10() {

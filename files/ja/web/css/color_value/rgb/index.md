@@ -9,7 +9,7 @@ l10n:
 
 **`rgb()`** 関数記法は、赤、緑、青の成分によって色を表現します。オプションのアルファ成分は、色の透明度を表します。
 
-{{InteractiveExample("CSS Demo: rgb()")}}
+{{InteractiveExample("CSS デモ: rgb()")}}
 
 ```css interactive-example-choice
 background: rgb(31 120 50);

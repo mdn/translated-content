@@ -9,7 +9,7 @@ l10n:
 
 **`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
 
-{{InteractiveExample("CSS Demo: bottom")}}
+{{InteractiveExample("CSS デモ: bottom")}}
 
 ```css interactive-example-choice
 bottom: 0;

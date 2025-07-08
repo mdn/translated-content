@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`type="file"`** 型は、ユーザーが一つまたは複数のファイルを端末のストレージから選択することができるようにします。選択されると、ファイルは[フォーム投稿](/ja/docs/Learn_web_development/Extensions/Forms)を使用してサーバーにアップロードしたり、JavaScript コードと[ファイル API](/ja/docs/Web/API/File_API/Using_files_from_web_applications) を使用して操作したりすることができます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;file&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="avatar">Choose a profile picture:</label>

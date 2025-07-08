@@ -11,7 +11,7 @@ l10n:
 
 ジェネレーター関数は {{jsxref("GeneratorFunction")}} コンストラクターや、関数式の構文を使用して定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Function*")}}
+{{InteractiveExample("JavaScript デモ: Statement - Function*")}}
 
 ```js interactive-example
 function* generator(i) {

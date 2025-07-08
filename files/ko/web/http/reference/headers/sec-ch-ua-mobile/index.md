@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{SeeCompatTable}}{{SecureContext_Header}}
 
 **`Sec-CH-UA-Mobile`** [사용자 에이전트 클라이언트 힌트](/ko/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) 요청 헤더는 모바일 디바이스의 브라우저인지 아닌지를 나타냅니다.
 이는 모바일 사용자 경험을 참고하기 위해 데스크톱 브라우저에서도 사용될 수 있습니다.

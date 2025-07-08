@@ -13,7 +13,7 @@ l10n:
 
 `counters()` 関数には `counters(<name>, <string>)` と `counters(<name>, <string>, <style>)` の 2 つの形があります。生成されるテキストは、 `<name>` で指定された名前のすべてのカウンターの値を、最も外側から内側に向けて並べ、指定された `<string>` で区切ったものです。カウンターは指定された `<style>` でレンダリングされ、`<style>` が指定されていない場合は `decimal` が既定値となります。
 
-{{InteractiveExample("CSS Demo: counters()", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: counters()", "tabbed-standard")}}
 
 ```css interactive-example
 ol {

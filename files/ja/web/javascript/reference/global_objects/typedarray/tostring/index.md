@@ -9,7 +9,7 @@ l10n:
 
 **`toString()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された配列とその要素を表す文字列を返します。このメソッドは {{jsxref("Array.prototype.toString()")}} と同じアルゴリズムです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.toString()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.toString()", "shorter")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30, 40, 50]);

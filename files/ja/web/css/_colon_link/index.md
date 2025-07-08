@@ -9,7 +9,7 @@ l10n:
 
 **`:link`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、まだ訪問されていない要素を表します。 {{HTMLElement("a")}} または {{HTMLElement("area")}} など、 `href` 属性を持つ未訪問のすべての要素を選択します。
 
-{{InteractiveExample("CSS Demo: :link", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :link", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

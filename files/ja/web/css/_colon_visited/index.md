@@ -9,7 +9,7 @@ l10n:
 
 **`:visited`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーが訪問したことがあるリンクに適用されます。プライバシー上の理由から、このセレクターを使用して変更できるスタイルはとても限定されています。 `:visited` 擬似クラスは `href` 属性を持つ {{htmlelement("a")}} と {{htmlelement("area")}} 要素にのみ適用されます。
 
-{{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :visited", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

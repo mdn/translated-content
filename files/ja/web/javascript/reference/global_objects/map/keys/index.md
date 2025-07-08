@@ -9,7 +9,7 @@ l10n:
 
 **`keys()`** は {{jsxref("Map")}} インスタンスのメソッドで、この `Map` オブジェクトに挿入された要素のキーを挿入順に列挙する新しい[イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.keys()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.keys()")}}
 
 ```js interactive-example
 const map1 = new Map();

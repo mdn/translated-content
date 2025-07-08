@@ -9,7 +9,7 @@ l10n:
 
 **`Object.defineProperties()`** メソッドは、オブジェクトに直接新しいプロパティを定義し、あるいは既存のプロパティを変更して、そのオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.defineProperties()")}}
+{{InteractiveExample("JavaScript デモ: Object.defineProperties()")}}
 
 ```js interactive-example
 const object1 = {};

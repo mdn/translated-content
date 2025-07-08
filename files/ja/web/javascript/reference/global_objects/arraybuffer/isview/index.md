@@ -9,7 +9,7 @@ l10n:
 
 **`ArrayBuffer.isView()`** メソッドは、渡された値が `ArrayBuffer` のビューのうちの一つ、例えば[型付き配列オブジェクト](/ja/docs/Web/JavaScript/Reference/Global_Objects/TypedArray)や {{jsxref("DataView")}} であるかどうかを判断します。
 
-{{InteractiveExample("JavaScript Demo: ArrayBuffer.isView()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: ArrayBuffer.isView()", "shorter")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

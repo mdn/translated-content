@@ -9,7 +9,7 @@ l10n:
 
 **`toLocaleString()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトを表す文字列を返します。このメソッドは、ロケール固有の目的のために派生オブジェクトによってオーバーライドするためのものです。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.tolocalestring()")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.tolocalestring()")}}
 
 ```js interactive-example
 const date1 = new Date(Date.UTC(2012, 11, 20, 3, 0, 0));

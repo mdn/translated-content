@@ -12,7 +12,7 @@ l10n:
 
 **`eval()`** 関数は、文字列として表現された JavaScript コードを評価します。ソースはスクリプトとして解釈されます。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - eval()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - eval()")}}
 
 ```js interactive-example
 console.log(eval("2 + 2"));

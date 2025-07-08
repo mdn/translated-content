@@ -10,7 +10,7 @@ l10n:
 
 **`<nav>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在の文書内の他の部分や他の文書へのナビゲーションリンクを提供するためのセクションを表します。ナビゲーションセクションの一般的な例としてメニュー、目次、索引などがあります。
 
-{{InteractiveExample("HTML Demo: &lt;nav&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;nav&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <nav class="crumbs">

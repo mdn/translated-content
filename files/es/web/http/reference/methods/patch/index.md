@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/PATCH
 original_slug: Web/HTTP/Methods/PATCH
 ---
 
-{{HTTPSidebar}}
-
 El **método HTTP PATCH** aplica modificaciones parciales a un recurso.
 
 El método HTTP PUT únicamente permite reemplazar completamente un documento. A diferencia de `PUT`, el método `PATCH` no es idempotente, esto quiere decir que peticiones identicas sucesivas _pueden_ tener efectos diferentes. Sin embargo, es posible emitir peticiones `PATCH` de tal forma que sean idempotentes.

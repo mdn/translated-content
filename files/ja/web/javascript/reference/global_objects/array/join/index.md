@@ -9,7 +9,7 @@ l10n:
 
 **`join()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の全要素を順に連結した新しい文字列を返します。区切り文字はカンマ、または指定された文字列です。配列にアイテムが一つしかない場合は、区切り文字を使用せずにアイテムが返されます。
 
-{{InteractiveExample("JavaScript Demo: Array.join()")}}
+{{InteractiveExample("JavaScript デモ: Array.join()")}}
 
 ```js interactive-example
 const elements = ["Fire", "Air", "Water"];

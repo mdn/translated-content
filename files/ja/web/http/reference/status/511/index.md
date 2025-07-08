@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`511 Network Authentication Required`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、コードは、クライアントがネットワークにアクセスするには認証が必要であることを示します。
 このステータスは元のサーバーによって生成されるのではなく、ネットワークへのアクセスを制御する{{Glossary("Proxy_server", "プロキシー")}}によって生成されます。
 

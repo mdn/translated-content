@@ -10,7 +10,7 @@ l10n:
 **`@namespace`** は[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、
 [CSS](/ja/docs/Glossary/CSS) [スタイルシート](/ja/docs/Web/API/StyleSheet) で使用する [XML 名前空間](/ja/docs/Glossary/Namespace)を定義します。
 
-{{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: @namespace", "tabbed-shorter")}}
 
 ```css interactive-example
 @namespace svg url("http://www.w3.org/2000/svg");

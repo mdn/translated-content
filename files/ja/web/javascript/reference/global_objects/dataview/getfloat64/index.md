@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getFloat64
 
 **`getFloat64()`** メソッドは、符号付き 64 ビット浮動小数点数 (double) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getFloat64()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getFloat64()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

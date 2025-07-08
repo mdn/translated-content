@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/NumberFormat
 
 **`Intl.NumberFormat()`** コンストラクターは、言語に依存した数値の整形ができる {{jsxref("NumberFormat", "Intl.NumberFormat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat")}}
 
 ```js interactive-example
 const number = 123456.789;

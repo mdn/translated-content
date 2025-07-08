@@ -3,8 +3,6 @@ title: Firefox 20 pour les développeurs
 slug: Mozilla/Firefox/Releases/20
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web

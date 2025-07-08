@@ -9,7 +9,7 @@ l10n:
 
 **`offset-rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
 
-{{InteractiveExample("CSS Demo: offset-rotate")}}
+{{InteractiveExample("CSS デモ: offset-rotate")}}
 
 ```css interactive-example-choice
 offset-rotate: auto;

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 original_slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
 
-{{HTTPSidebar}}
-
 ## 원인
 
 ```plain

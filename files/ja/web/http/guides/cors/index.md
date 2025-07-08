@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
 ---
 
-{{HTTPSidebar}}
-
 オリジン間リソース共有 (Cross-Origin Resource Sharing, {{Glossary("CORS")}}) は、 {{Glossary("HTTP")}} ヘッダーベースの仕組みを使用して、ある{{glossary("Origin", "オリジン")}}で動作しているウェブアプリケーションに、異なるオリジンにある選択されたリソースへのアクセス権を与えるようブラウザーに指示するための仕組みです。ウェブアプリケーションは、自分とは異なるオリジン (ドメイン、プロトコル、ポート番号) にあるリソースをリクエストするとき、オリジン間 HTTP リクエストを実行します。
 
 オリジン間リクエストとは、例えば `https://domain-a.com` で提供されているウェブアプリケーションのフロントエンド JavaScript コードが {{domxref("Window/fetch", "fetch()")}} を使用して `https://domain-b.com/data.json` へリクエストを行うようなものです。

@@ -9,7 +9,7 @@ l10n:
 
 **`findIndex()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定されたテスト関数を満たす型付き配列の最初の要素のインデックスを返します。テスト関数を満たす要素がない場合、 -1 を返します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.findIndex()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.findIndex()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.findIndex()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

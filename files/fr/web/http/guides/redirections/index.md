@@ -4,7 +4,7 @@ slug: Web/HTTP/Guides/Redirections
 original_slug: Web/HTTP/Redirections
 ---
 
-{{HTTPSidebar}}La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
+La redirection d'URL est une technique pour donner à une page, un formulaire ou une application Web entière, plus d'une adresse. HTTP fournit un type particulier de réponses, les **_redirections HTTP_**, pour effectuer cette opération utilisée pour de nombreux objectifs : redirection temporaire pendant la maintenance du site, redirection permanente pour que les liens externes continuent de fonctionner après un changement d'architecture du site, pages de progression lors du téléchargement d'un fichier, etc.
 
 ## Principe
 

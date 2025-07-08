@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP (HyperText Transfer Protocol) **`If-Unmodified-Since`** 요청 헤더는 리소스 요청을 조건부로 설정합니다.
 서버는 이 HTTP 헤더에 지정된 날짜 이후에 리소스가 수정되지 않은 경우에만 요청된 리소스를 보내거나 {{HTTPMethod("POST")}} 또는 기타 non-{{Glossary("Safe/HTTP", "safe")}} 메서드에 대한 요청을 승인합니다.
 리소스가 지정된 날짜 이후에 수정된 경우 서버의 응답은 '{{HTTPStatus("412", "412 Precondition Failed")}} 오류가 됩니다.

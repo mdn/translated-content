@@ -9,7 +9,7 @@ l10n:
 
 **`search()`** は {{jsxref("String")}} 値のメソッドで、正規表現とこの文字列の一致する箇所を検索し、文字列内の最初に一致する箇所の位置を返します。
 
-{{InteractiveExample("JavaScript Demo: String.search()")}}
+{{InteractiveExample("JavaScript デモ: String.search()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";

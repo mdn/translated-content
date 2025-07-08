@@ -9,7 +9,7 @@ l10n:
 
 **`<summary>`** は [HTML](/ja/docs/Web/HTML) の要素で、 {{HTMLElement("details")}} 要素の折りたたみボックスの要約、キャプション、説明、凡例を表します。 `<summary>` 要素をクリックすると、親の `<details>` 要素の開閉状態を切り替えることができます。
 
-{{InteractiveExample("HTML Demo: &lt;summary&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;summary&gt;", "tabbed-shorter")}}
 
 ```html-nolint interactive-example
 <details>

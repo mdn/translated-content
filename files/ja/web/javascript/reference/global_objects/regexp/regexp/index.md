@@ -11,7 +11,7 @@ l10n:
 
 正規表現について詳しく知りたい方は [JavaScript ガイド](/ja/docs/Web/JavaScript/Guide) の [正規表現](/ja/docs/Web/JavaScript/Guide/Regular_expressions) を参照してください。
 
-{{InteractiveExample("JavaScript Demo: RegExp Constructor")}}
+{{InteractiveExample("JavaScript デモ: RegExp Constructor")}}
 
 ```js interactive-example
 const regex1 = /\w+/;

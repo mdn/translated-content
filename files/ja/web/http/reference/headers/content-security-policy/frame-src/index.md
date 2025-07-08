@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`frame-src`** ディレクティブは、 {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素を使用して埋め込まれた閲覧コンテキストの読み込みに有効なソースを指定します。
 
 > **メモ:** **`frame-src`** は、ページ内の iframe がどこから読み込まれるかを指定することができます。

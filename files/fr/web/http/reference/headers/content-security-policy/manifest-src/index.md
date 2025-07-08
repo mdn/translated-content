@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/manifest-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/manifest-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`manifest-src`** spécifie [le manifeste](/fr/docs/Web/Manifest) qui peut être appliqué à la ressource.
 
 <table class="properties">

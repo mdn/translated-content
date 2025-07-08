@@ -9,7 +9,7 @@ l10n:
 
 **`handler.apply()`** メソッドは、オブジェクトの `[[Call]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。関数呼び出しなどの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.apply()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.apply()", "taller")}}
 
 ```js interactive-example
 function sum(a, b) {

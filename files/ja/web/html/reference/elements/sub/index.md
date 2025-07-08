@@ -10,7 +10,7 @@ l10n:
 
 **`<sub>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で下付き文字として表示するべきインラインテキストを示します。下付き文字は普通、小さめのテキストを使用してベースラインよりも低く表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;sub&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;sub&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

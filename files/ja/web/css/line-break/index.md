@@ -9,7 +9,7 @@ l10n:
 
 **`line-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語、日本語、韓国語 (CJK) のテキストにおいて、句読点や記号を用いた場合の改行規則（禁則）を設定します。
 
-{{InteractiveExample("CSS Demo: line-break")}}
+{{InteractiveExample("CSS デモ: line-break")}}
 
 ```css interactive-example-choice
 line-break: auto;

@@ -14,7 +14,7 @@ l10n:
 > [!NOTE]
 > クラスの文脈において、 MDN Web Docs のコンテンツではプロパティと[フィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)という用語を同等のものとして使用しています。
 
-{{InteractiveExample("JavaScript Demo: Classes Static", "taller")}}
+{{InteractiveExample("JavaScript デモ: Classes Static", "taller")}}
 
 ```js interactive-example
 class ClassWithStaticMethod {

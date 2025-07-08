@@ -9,7 +9,7 @@ l10n:
 
 **`has()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値をもつ要素がこの集合内に存在するかどうかを示す論理値を返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.has()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.has()")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);

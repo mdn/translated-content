@@ -14,7 +14,7 @@ input:optional {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :optional", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: :optional", "tabbed-standard")}}
 
 ```css interactive-example
 label {

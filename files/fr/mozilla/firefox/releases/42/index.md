@@ -3,8 +3,6 @@ title: Firefox 42 for developers
 slug: Mozilla/Firefox/Releases/42
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Outils de développement

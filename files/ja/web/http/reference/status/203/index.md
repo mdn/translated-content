@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`203 Non-Authoritative Information`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、変換{{Glossary("Proxy server", "プロキシー")}}によって元のサーバーの {{HTTPStatus("200")}} (`OK`) レスポンスからヘッダーやコンテンツが変更されたことを表します。
 
 このステータスコードの目的は、変換プロキシーが、成功したレスポンスに変更が適用された際にクライアントに通知できるようにすることです。これは、コンテンツに関する後々の決定に影響を与える可能性があるためです。

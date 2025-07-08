@@ -9,7 +9,7 @@ l10n:
 
 **`lastIndex`** は {{jsxref("RegExp")}} インスタンスのデータプロパティで、次の照合を開始する位置を指定します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.lastIndex")}}
+{{InteractiveExample("JavaScript デモ: RegExp.lastIndex")}}
 
 ```js interactive-example
 const regex1 = new RegExp("foo", "g");

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/MIME_types/Common_types
 original_slug: Web/HTTP/MIME_types/Common_types
 ---
 
-{{HTTPSidebar}}
-
 これは文書の種類に関連付けられている MIME タイプの一覧であり、一般的な拡張子の昇順に並べています。
 
 2 つの主要な MIME タイプは、既定のタイプの役割として重要です。

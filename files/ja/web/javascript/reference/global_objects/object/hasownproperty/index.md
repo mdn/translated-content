@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.hasOwnProperty()")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.hasOwnProperty()")}}
 
 ```js interactive-example
 const object1 = {};

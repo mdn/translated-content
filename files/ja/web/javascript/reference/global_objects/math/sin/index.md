@@ -9,7 +9,7 @@ l10n:
 
 **`Math.sin()`** 静的メソッドは、ラジアンの数値の正弦 (サイン) を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.sin()")}}
+{{InteractiveExample("JavaScript デモ: Math.sin()")}}
 
 ```js interactive-example
 function getCircleY(radians, radius) {

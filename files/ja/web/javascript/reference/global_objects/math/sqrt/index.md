@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.sqrt()")}}
+{{InteractiveExample("JavaScript デモ: Math.sqrt()")}}
 
 ```js interactive-example
 function calcHypotenuse(a, b) {

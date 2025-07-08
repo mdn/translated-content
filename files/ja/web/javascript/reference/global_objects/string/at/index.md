@@ -9,7 +9,7 @@ l10n:
 
 **`at()`** メソッドは整数値を受け取り、指定したオフセットに位置する 1 つの UTF-16 コード単位からなる新しい文字列を返します。このメソッドでは、正と負の整数を扱うことができます。負の整数の場合は、文字列の最後の文字から前へ数えます。
 
-{{InteractiveExample("JavaScript Demo: String.at()")}}
+{{InteractiveExample("JavaScript デモ: String.at()")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

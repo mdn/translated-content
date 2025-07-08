@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > これはシャドウ DOM の外で使われたときには効果がありません。
 
-{{InteractiveExample("CSS Demo: :host", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :host", "tabbed-shorter")}}
 
 ```css interactive-example
 /* This CSS is being applied inside the shadow DOM. */

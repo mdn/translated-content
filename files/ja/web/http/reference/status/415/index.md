@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`415 Unsupported Media Type`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、メッセージの{{Glossary("HTTP Content", "コンテンツ")}}が対応していない形式であるため、サーバーがリクエストの受け入れを拒否することを示します。
 
 形式で問題が発生するのは、リクエストの {{HTTPHeader("Content-Type")}} または {{HTTPHeader("Content-Encoding")}} で示されたものであったり、リクエストメッセージのコンテンツを処理した結果であることであったりします。

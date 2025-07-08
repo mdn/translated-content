@@ -11,7 +11,7 @@ l10n:
 
 これは、日本語の縦中横、中国語の <i lang="zh-CN">直書橫向</i> として知られる効果をもたらすために使用されます。
 
-{{InteractiveExample("CSS Demo: text-combine-upright")}}
+{{InteractiveExample("CSS デモ: text-combine-upright")}}
 
 ```css interactive-example-choice
 text-combine-upright: none;

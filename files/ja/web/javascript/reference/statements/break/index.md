@@ -9,7 +9,7 @@ l10n:
 
 **`break`** 文は現在のループや {{jsxref("Statements/switch", "switch")}} 文を終了し、プログラムの制御を終了した文の次の文に移します。[ラベル付きの文](/ja/docs/Web/JavaScript/Reference/Statements/label)の中で使用された場合は、ラベル付きの文を飛び越えるためにも使われます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Break")}}
+{{InteractiveExample("JavaScript デモ: Statement - Break")}}
 
 ```js interactive-example
 let i = 0;

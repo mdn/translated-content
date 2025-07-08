@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`504 Gateway Timeout`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、サーバーがゲートウェイまたは{{Glossary("Proxy_server", "プロキシー")}}として動作している際に、リクエストを完了するために上流のサーバーからタイムリーにレスポンスを受け取れなかったことを示します。
 これは {{HTTPStatus("502", "502 Bad Gateway")}} と似ていますが、`504` ステータスの場合、プロキシーまたはゲートウェイが一定時間内に元のサーバーから HTTP レスポンスを受け取れなかったという点が異なります。
 

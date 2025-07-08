@@ -9,7 +9,7 @@ l10n:
 
 **`white-space`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}をどのように扱うかを設定します。
 
-{{InteractiveExample("CSS Demo: white-space")}}
+{{InteractiveExample("CSS デモ: white-space")}}
 
 ```css interactive-example-choice
 white-space: normal;

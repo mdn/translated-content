@@ -9,7 +9,7 @@ l10n:
 
 **`for await...of`** 文は、[非同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#非同期イテレーターと非同期反復可能プロトコル)を、[同期反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Iteration_protocols#反復可能プロトコル)と同様に反復処理するループを作成します。この文は [`await`](/ja/docs/Web/JavaScript/Reference/Operators/await) が使用できるコンテキスト、例えば[非同期関数](/ja/docs/Web/JavaScript/Reference/Statements/async_function)の本体や[モジュール](/ja/docs/Web/JavaScript/Guide/Modules)内などでのみ使用できます。
 
-{{InteractiveExample("JavaScript Demo: Statement - For Await...Of", "taller")}}
+{{InteractiveExample("JavaScript デモ: Statement - For Await...Of", "taller")}}
 
 ```js interactive-example
 async function* foo() {

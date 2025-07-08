@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/414
 original_slug: Web/HTTP/Status/414
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`414 URI Too Long`** 응답 코드는 클라이언트가 요청한 URI가 서버가 해석가능한 URI보다 더 길다는 것을 나타냅니다.
 
 이 문제가 발생할 수 있는 몇 가지 보기 드문 상황이 있습니다.

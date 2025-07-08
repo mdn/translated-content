@@ -9,7 +9,7 @@ l10n:
 
 **`Object.fromEntries()`** 静的メソッドは、キーと値の組み合わせのリストをオブジェクトに変換します。
 
-{{InteractiveExample("JavaScript Demo: Object.fromEntries()")}}
+{{InteractiveExample("JavaScript デモ: Object.fromEntries()")}}
 
 ```js interactive-example
 const entries = new Map([

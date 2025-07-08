@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Bitwise_OR_assignment
 
 ビット論理和代入演算子 (`|=`) は、両方のオペランドの二進表現を使用し、それらに対してビット単位の OR 演算を実行して、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Bitwise OR assignment")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Bitwise OR assignment")}}
 
 ```js interactive-example
 let a = 5; // 00000000000000000000000000000101

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
-
 HTTP 1.1 전용 `Upgrade` 헤더는 이미 설정된 클라이언트/서버 연결을 다른 프로토콜로 업그레이드하는데 사용할 수 있습니다. 예를 들어서 클라이언트가 HTTP 1.1에서 HTTP 2.0으로 업그레이드하는데 사용하거나, HTTP 또는 HTTPS 연결을 웹소켓으로 업그레이드하는데 사용할 수 있습니다.
 
 > [!WARNING]

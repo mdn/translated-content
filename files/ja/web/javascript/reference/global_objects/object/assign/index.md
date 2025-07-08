@@ -9,7 +9,7 @@ l10n:
 
 **`Object.assign()`** 静的メソッドは、すべての{{jsxref("Object/propertyIsEnumerable", "列挙可能", "", 1)}}な{{jsxref("Object/hasOwn", "自身のプロパティ", "", 1)}}の値を、 1 つ以上の*コピー元オブジェクト*から*コピー先オブジェクト*にコピーするために使用されます。変更されたコピー先オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Object.assign()")}}
+{{InteractiveExample("JavaScript デモ: Object.assign()")}}
 
 ```js interactive-example
 const target = { a: 1, b: 2 };

@@ -3,8 +3,6 @@ title: Actualizar extensiones para Firefox 3
 slug: Mozilla/Firefox/Releases/3/Updating_extensions
 ---
 
-{{FirefoxSidebar}}
-
 Este artículo ofrece información que será de utilidad para desarrolladores que deseen actualizar sus extensiones, para que éstas funcionen correctamente con Firefox 3.
 
 Antes de continuar, queremos sugerirte algo: si el único cambio que requiere tu extensión es modificar el campo maxVersion en el manifiesto de instalación, la extensión está disponible en el servidor [addons.mozilla.org](https://addons.mozilla.org/es-ES/firefox/) y ¡no necesitarás actualizar tu extensión a una nueva versión! Simplemente usa el Panel de Control para desarrolladores en AMO para modificar `maxVersion`. De esta manera, puedes evitar el trabajo de tener que volver a revisar tu extensión.

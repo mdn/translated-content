@@ -10,7 +10,7 @@ l10n:
 
 **`title`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に関するアドバイザリー情報を表すテキストを含みます。
 
-{{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: title", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

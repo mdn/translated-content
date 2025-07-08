@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Methods/GET
 original_slug: Web/HTTP/Methods/GET
 ---
 
-{{HTTPSidebar}}O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
+O **método HTTP GET** solicita uma representação do recurso especificado. Solicitações usando GET só devem recuperar dados.
 
 <table class="properties">
   <tbody>

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Browser_detection_using_the_user_agent
 original_slug: Web/HTTP/Browser_detection_using_the_user_agent
 ---
 
-{{HTTPSidebar}}
-
 Afficher des pages web ou des services en fonction du navigateur est généralement une mauvaise idée. Le Web se doit d'être accessible à tout le monde, sans prendre en compte le navigateur ou l'appareil utilisé. Il existe différentes façons de développer votre site web afin de l'améliorer progressivement en se basant sur des fonctionnalités standard plutôt qu'en traitant chaque navigateur de manière spécifique.
 
 Les navigateurs et les standards ne sont cependant pas parfaits, il reste certains cas limites pour lesquels connaître le navigateur utilisé peut s'avérer utile. Utiliser la chaîne de caractères fournie par l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) et disponible en JavaScript via la propriété [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) dans ce but paraît simple, mais le faire de manière fiable est en réalité très difficile. Ce document va vous guider pour le faire aussi correctement que possible.

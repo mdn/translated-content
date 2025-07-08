@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-{{HTTPSidebar}}
-
 Les **en-têtes HTTP** permettent au client et au serveur de transmettre des informations supplémentaires avec la requête ou la réponse. Un en-tête est constitué de son nom (insensible à la casse) suivi d'un deux-points `:`, puis de sa valeur. Les espaces avant la valeur sont ignorés.
 
 Des en-têtes propriétaires personnalisés peuvent être ajoutés en utilisant le préfixe `X-`, mais cette convention a été dépréciée en juin 2012, en raison des inconvénients qu'elle a présentés lorsque des champs non standard sont devenus standard dans [RFC 6648](https://tools.ietf.org/html/rfc6648)&nbsp;; les autres en-têtes possibles sont listés dans une [liste IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml) et ont été définis dans la [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA maintient également une [liste des propositions de nouveaux en-têtes HTTP](https://www.iana.org/assignments/message-headers/message-headers.xhtml).

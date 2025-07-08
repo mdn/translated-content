@@ -11,7 +11,7 @@ l10n:
 
 スプレッド構文は、残余構文とまったく同じように見えますが、ある意味では、スプレッド構文は残余構文の反対です。スプレッド構文は配列を要素に「展開」しますが、リスト構文は複数の要素を集合し、単一の要素に「圧縮」します。[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)と[残余プロパティ](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#rest_property)を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Spread syntax")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Spread syntax")}}
 
 ```js interactive-example
 function sum(x, y, z) {

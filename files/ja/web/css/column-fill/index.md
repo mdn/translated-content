@@ -9,7 +9,7 @@ l10n:
 
 **`column-fill`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで要素のコンテンツが複数の段に分割されるとき、どのようにバランスを取るのかを制御します。
 
-{{InteractiveExample("CSS Demo: column-fill")}}
+{{InteractiveExample("CSS デモ: column-fill")}}
 
 ```css interactive-example-choice
 column-fill: auto;

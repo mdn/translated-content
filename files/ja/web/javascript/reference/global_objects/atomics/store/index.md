@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/store
 
 静的な **`Atomics.store()`** メソッドは、指定された値を配列内の指定した位置に格納し、その値を返します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.store()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.store()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

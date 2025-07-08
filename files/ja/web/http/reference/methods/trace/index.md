@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/TRACE
 original_slug: Web/HTTP/Methods/TRACE
 ---
 
-{{HTTPSidebar}}
-
 **HTTP の `TRACE` メソッド**は、対象リソースまでのパスに沿ってメッセージのループバックテストを行い、便利なデバッグの仕組みを提供します。
 
 リクエストの最終受信者は受信したメッセージを、以下に示すいくつかのフィールドを除いて、クライアントに {{HTTPStatus("200")}} (`OK`) レスポンスを {{HTTPHeader("Content-Type")}} を `message/http` に設定した本文として返送します。最終受信者はオリジンのサーバーか、リクエストで {{HTTPHeader("Max-Forwards")}} の値が 0 で受け取った最初のサーバーのどちらかです。

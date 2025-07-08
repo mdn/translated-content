@@ -9,7 +9,7 @@ l10n:
 
 **`Object.getPrototypeOf()`** メソッドは、指定されたオブジェクトのプロトタイプ (つまり、内部プロパティ `[[Prototype]]` の値) を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getPrototypeOf()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Object.getPrototypeOf()", "shorter")}}
 
 ```js interactive-example
 const prototype1 = {};

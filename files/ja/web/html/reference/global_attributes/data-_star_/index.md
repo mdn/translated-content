@@ -10,7 +10,7 @@ l10n:
 
 **`data-*`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) は**カスタムデータ属性**と呼ばれる属性の組を作り、[HTML](/ja/docs/Web/HTML) と、スクリプトによる [DOM](/ja/docs/Web/API/Document_Object_Model) 表現との間で、固有の情報を交換できるようにします。
 
-{{InteractiveExample("HTML Demo: data-*", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: data-*", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Secret agents</h1>

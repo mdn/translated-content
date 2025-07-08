@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Disposition
 original_slug: Web/HTTP/Headers/Content-Disposition
 ---
 
-{{HTTPSidebar}}
-
 通常の HTTP レスポンスにおける **`Content-Disposition`** レスポンスヘッダーは、コンテンツがブラウザーで*インライン*で表示されることを求められているか、つまり、ウェブページとして表示するか、ウェブページの一部として表示するか、ダウンロードしてローカルに保存する*添付ファイル*とするかを示します。
 
 本文が `multipart/form-data` である場合、 **`Content-Disposition`** ヘッダーは、マルチパートを構成する各サブパートに付与され、そのフィールドに関する情報を示します。サブパートは{{HTTPHeader("Content-Type")}} ヘッダーで定義された _boundary_ によって区切られます。マルチパートの本文自体に付与した場合、 `Content-Disposition` は何の意味も持ちません。

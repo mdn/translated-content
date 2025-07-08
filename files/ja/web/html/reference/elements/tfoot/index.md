@@ -10,7 +10,7 @@ l10n:
 
 **`<tfoot>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の列を総括する行のセットを定義します。
 
-{{InteractiveExample("HTML Demo: &lt;tfoot&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;tfoot&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

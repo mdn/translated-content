@@ -9,7 +9,7 @@ l10n:
 
 **`toString()`** メソッドは、指定された {{jsxref("Symbol")}} オブジェクトを表す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.prototype.toString()")}}
+{{InteractiveExample("JavaScript デモ: Symbol.prototype.toString()")}}
 
 ```js interactive-example
 console.log(Symbol("desc").toString());

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
 ---
 
-{{HTTPSidebar}}
-
 **メディア種別** (別名 **Multipurpose Internet Mail Extensions または MIME タイプ**) は、文書、ファイル、またはバイト列の性質や形式を示します。
 MIME タイプは IETF の {{RFC(6838)}} で定義され、標準化されています。
 

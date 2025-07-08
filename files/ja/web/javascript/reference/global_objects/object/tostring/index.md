@@ -9,7 +9,7 @@ l10n:
 
 **`toString()`** は {{jsxref("Object")}} インスタンスのオブジェクトで、このオブジェクトを表す文字列を返します。このメソッドは、独自の[型変換](/ja/docs/Web/JavaScript/Guide/Data_structures#型変換)ロジックのために派生オブジェクトがオーバーライドするためのものです。
 
-{{InteractiveExample("JavaScript Demo: Object.prototype.toString()")}}
+{{InteractiveExample("JavaScript デモ: Object.prototype.toString()")}}
 
 ```js interactive-example
 function Dog(name) {

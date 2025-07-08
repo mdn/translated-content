@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint8
 
 **`getUint8()`** メソッドは、符号なし 8 ビット整数 (unsigned byte) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getUint8()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getUint8()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

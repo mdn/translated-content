@@ -9,7 +9,7 @@ l10n:
 
 **`for...in` 文**は、キーが文字列であるオブジェクトの[列挙可能プロパティ](/ja/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)すべてに対して、継承された列挙可能プロパティも含めて反復処理を行います ([Symbol](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol) がキーになったものは無視します)。
 
-{{InteractiveExample("JavaScript Demo: Statement - For...In")}}
+{{InteractiveExample("JavaScript デモ: Statement - For...In")}}
 
 ```js interactive-example
 const object = { a: 1, b: 2, c: 3 };

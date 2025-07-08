@@ -9,7 +9,7 @@ l10n:
 
 **`Intl.Segmenter`** オブジェクトは、ロケールに応じたテキストのセグメンテーションを可能にし、文字列から意味のある項目（書記素、単語、文）を取得することができます。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });

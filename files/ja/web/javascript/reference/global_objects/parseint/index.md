@@ -9,7 +9,7 @@ l10n:
 
 **`parseInt()`** 関数は、文字列の引数を解釈し、指定された[基数](https://ja.wikipedia.org/wiki/%E5%9F%BA%E6%95%B0) （数学的記数法の底）の整数値を返します。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseInt()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - parseInt()")}}
 
 ```js interactive-example
 console.log(parseInt("123"));

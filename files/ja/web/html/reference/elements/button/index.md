@@ -11,7 +11,7 @@ l10n:
 
 既定では、HTML のボタンは{{Glossary("user agent", "ユーザーエージェント")}}が実行されているホストのプラットフォームのスタイルと似ていますが、 [CSS](/ja/docs/Web/CSS) を使用してボタンの外見を変更することができます。
 
-{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;button&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <button class="favorite styled" type="button">お気に入りに追加</button>

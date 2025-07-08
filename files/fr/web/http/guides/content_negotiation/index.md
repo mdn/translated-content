@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 8c4e47ca0a8d95ef49ea3b39f5eec454a3d15ae9
 ---
 
-{{HTTPSidebar}}
-
 En [HTTP](/fr/docs/Glossary/HTTP), **la négociation de contenu** est le mécanisme utilisé pour servir différentes [représentations](/fr/docs/Glossary/Representation_header) d'une ressource à partir du même URI pour aider l'agent utilisateur à indiquer la représentation la plus adaptée à l'utilisatrice ou à l'utilisateur (par exemple, la langue du document, le format d'image ou l'encodage à utiliser pour le contenu).
 
 > **Note :** [Le wiki du WHATWG](https://wiki.whatwg.org/wiki/Why_not_conneg) explique certains inconvénients liés à la négociation de contenu HTTP. Sachez que HTML fournit des méthodes complémentaires pour la négociation de contenu, par exemple avec [l'élément `<source>`](/fr/docs/Web/HTML/Element/source).

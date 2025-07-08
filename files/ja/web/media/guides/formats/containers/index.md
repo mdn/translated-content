@@ -1103,7 +1103,7 @@ MP3 の幅広い互換性と、使用する際に支払うべきロイヤリテ�
 
 ここに示す例では、動画が 2 つの形式でブラウザーに提供されています。 WebM と MP4 です。
 
-{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;source&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <video controls width="250" height="200" muted>

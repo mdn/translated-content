@@ -11,7 +11,7 @@ l10n:
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;a&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>You can reach Michael at:</p>

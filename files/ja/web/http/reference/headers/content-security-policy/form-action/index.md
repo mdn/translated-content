@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`form-action`** ディレクティブは、指定のコンテキストからフォームの送信先として使用される URL を制限します。
 
 > **警告:** `form-action` がフォーム送信後のリダイレクトをブロックするかどうかは [議論の最中](https://github.com/w3c/webappsec-csp/issues/8) であり、この点に関する実装はブラウザーによって異なります（例えば、 Firefox 57 はリダイレクトをブロックしませんが、 Chrome 63 はリダイレクトをブロックします。）

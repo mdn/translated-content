@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.hypot()")}}
+{{InteractiveExample("JavaScript デモ: Math.hypot()")}}
 
 ```js interactive-example
 console.log(Math.hypot(3, 4));

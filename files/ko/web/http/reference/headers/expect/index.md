@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect
 original_slug: Web/HTTP/Headers/Expect
 ---
 
-{{HTTPSidebar}}
-
 **`Expect`** HTTP 요청 헤더는 요청을 적절하게 처리하기 위해 서버가 반환할 기대값을 나타냅니다.
 
 명세에 정의된 유일한 기대값인 `Expect: 100-continue`에 대해, 서버는 다음과 같이 응답합니다:

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Encoding
 original_slug: Web/HTTP/Headers/Content-Encoding
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête **`Content-Encoding`** indique la compression utilisée sur le média contenu dans le corps de la requête. Il permet au client de savoir comment décoder le contenu afin d'obtenir le type de média référencé par l'entête `Content-Type`.
 
 Il est recommandé de compresser les données autant que possible et donc d'utiliser cet en-tête. Toutefois, certains types de fichiers, comme les images jpeg, sont déjà compressés. Parfois, l'utilisation d'une compression supplémentaire ne réduit pas la taille de la charge utile et peut même la rendre plus longue.

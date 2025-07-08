@@ -9,7 +9,7 @@ l10n:
 
 **`Number.parseInt()`** は静的メソッドで、文字列の引数を解釈し、指定された基数の整数値を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.parseInt()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Number.parseInt()", "taller")}}
 
 ```js interactive-example
 function roughScale(x, base) {

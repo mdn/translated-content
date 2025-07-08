@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/408
 original_slug: Web/HTTP/Status/408
 ---
 
-{{HTTPSidebar}}
-
 `A resposta 408 Request Timeout` significa que o servidor irá encerrar essa conexão em desuso. É enviado a uma conexão parada por alguns servidores, _mesmo sem nenhuma requisição feita anteriormente pelo cliente_.
 
 O servidor deve enviar no cabeçalho de resposta "close" {{HTTPHeader("Connection")}} já que `408` implica que o servidor decidiu encerrar a conexão ao invés de continuar aguardando.

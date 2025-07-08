@@ -9,7 +9,7 @@ l10n:
 
 **`replaceAll()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{InteractiveExample("JavaScript デモ: String.replaceAll()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";

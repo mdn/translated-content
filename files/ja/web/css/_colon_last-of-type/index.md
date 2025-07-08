@@ -9,7 +9,7 @@ l10n:
 
 **`:last-of-type`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中でその種類の最後の要素を表します。
 
-{{InteractiveExample("CSS Demo: :last-of-type", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :last-of-type", "tabbed-shorter")}}
 
 ```css interactive-example
 dt {

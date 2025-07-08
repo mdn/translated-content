@@ -10,7 +10,7 @@ l10n:
 **`transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、与えられた要素を回転、拡大縮小、傾斜、移動することできます。
 これは、 CSS の[視覚整形モデル](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model)の座標空間を変更します。
 
-{{InteractiveExample("CSS Demo: transform")}}
+{{InteractiveExample("CSS デモ: transform")}}
 
 ```css interactive-example-choice
 transform: matrix(1, 2, 3, 4, 5, 6);

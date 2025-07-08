@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Session
 original_slug: Web/HTTP/Session
 ---
 
-{{HTTPSidebar}}
-
 HTTP와 같은 클라이언트-서버 프로토콜에서, 세션은 다음의 세 가지 과정으로 이루어집니다.
 
 1. 클라이언트가 TCP 연결을 수립합니다(또는 전송 계층이 TCP가 아닌 다른 적당한 연결로).

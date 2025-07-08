@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
 
 ## Cambios para desarrolladores web

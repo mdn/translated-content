@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Tk
 original_slug: Web/HTTP/Headers/Tk
 ---
 
-{{HTTPSidebar}}
-
 L'entête de réponse `Tk` indique le statut de suivi (tracking) qui s'applique à la demande correspondante.
 
 <table class="properties">

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/451
 original_slug: Web/HTTP/Status/451
 ---
 
-{{HTTPSidebar}}
-
 O código de erro HTTP para o cliente **`451 Unavailable For Legal Reasons`** indica que o recurso solicitado pelo usuário não está disponível por motivos legais, como em uma página web para a qual foi emitida uma ação legal.
 
 ## Status

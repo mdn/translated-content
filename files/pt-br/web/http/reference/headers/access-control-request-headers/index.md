@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Request-Headers
 original_slug: Web/HTTP/Headers/Access-Control-Request-Headers
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho da solicitação **`Access-Control-Request-Headers`** é usado ao emitir um {{glossary("preflight request")}} para permitir que o servidor saiba quais cabeçalhos HTTP serão usados quando a solicitação real for feita.
 
 <table class="properties">

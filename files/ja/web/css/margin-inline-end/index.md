@@ -9,7 +9,7 @@ l10n:
 
 **`margin-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。これは {{cssxref("margin-top")}}, {{cssxref("margin-right")}}, {{cssxref("margin-bottom")}}, {{cssxref("margin-left")}} の何れかのプロパティに対応し、どれに対応するかは {{cssxref("writing-mode")}}, {{cssxref("direction")}}, {{cssxref("text-orientation")}} で定義された値によって決まります。
 
-{{InteractiveExample("CSS Demo: margin-inline-end")}}
+{{InteractiveExample("CSS デモ: margin-inline-end")}}
 
 ```css interactive-example-choice
 margin-inline-end: 20px;

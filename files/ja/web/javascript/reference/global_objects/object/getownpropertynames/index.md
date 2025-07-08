@@ -9,7 +9,7 @@ l10n:
 
 **`Object.getOwnPropertyNames()`** 静的メソッドは、与えられたオブジェクトで発見されたすべての直接のプロパティを含む配列を（シンボルを使用したものを除き、列挙不可能なプロパティを含んで）返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyNames()")}}
+{{InteractiveExample("JavaScript デモ: Object.getOwnPropertyNames()")}}
 
 ```js interactive-example
 const object1 = {

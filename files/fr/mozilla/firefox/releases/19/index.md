@@ -3,8 +3,6 @@ title: Firefox 19 pour les développeurs
 slug: Mozilla/Firefox/Releases/19
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
 
 Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont besoin de rédaction](http://beta.elchi3.de/doctracker/#list=fx&version=19.0) et lancez-vous !

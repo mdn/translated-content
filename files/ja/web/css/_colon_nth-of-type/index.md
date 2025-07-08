@@ -15,7 +15,7 @@ p:nth-of-type(4n) {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :nth-of-type", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :nth-of-type", "tabbed-shorter")}}
 
 ```css interactive-example
 dt {

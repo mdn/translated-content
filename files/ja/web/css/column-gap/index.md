@@ -13,7 +13,7 @@ l10n:
 
 仕様書の初期バージョンでは、このプロパティは `grid-column-gap` と呼ばれていました。古いウェブサイトとの互換性を維持するため、ブラウザーは `grid-column-gap` を `column-gap` の別名として受け入れます。
 
-{{InteractiveExample("CSS Demo: column-gap")}}
+{{InteractiveExample("CSS デモ: column-gap")}}
 
 ```css interactive-example-choice
 column-gap: 0;

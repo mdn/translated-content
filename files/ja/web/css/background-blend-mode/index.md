@@ -9,7 +9,7 @@ l10n:
 
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。
 
-{{InteractiveExample("CSS Demo: background-blend-mode")}}
+{{InteractiveExample("CSS デモ: background-blend-mode")}}
 
 ```css interactive-example-choice
 background-blend-mode: normal;

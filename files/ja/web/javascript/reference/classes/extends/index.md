@@ -9,7 +9,7 @@ l10n:
 
 **`extends`** キーワードは、[クラス宣言](/ja/docs/Web/JavaScript/Reference/Statements/class)や[クラス式](/ja/docs/Web/JavaScript/Reference/Operators/class)の中で、他のクラスの子であるクラスを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: Classes Extends", "taller")}}
+{{InteractiveExample("JavaScript デモ: Classes Extends", "taller")}}
 
 ```js interactive-example
 class DateFormatter extends Date {

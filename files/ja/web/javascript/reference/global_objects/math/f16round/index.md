@@ -9,7 +9,7 @@ l10n:
 
 **`Math.f16round()`** は静的メソッドで、数値に最も近い [16 ビット半精度](https://ja.wikipedia.org/wiki/半精度浮動小数点数)浮動小数点表現を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.f16round()")}}
+{{InteractiveExample("JavaScript デモ: Math.f16round()")}}
 
 ```js interactive-example
 console.log(Math.f16round(5.5));

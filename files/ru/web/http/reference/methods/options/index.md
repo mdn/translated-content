@@ -3,8 +3,6 @@ title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
 ---
 
-{{HTTPSidebar}}
-
 **HTTP-метод** `OPTIONS` используется для описания параметров соединения с целевым ресурсом. Клиент может указать особый URL для обработки метода OPTIONS, или \* (звёздочку) чтобы указать весь сервер целиком.
 
 <table class="properties">

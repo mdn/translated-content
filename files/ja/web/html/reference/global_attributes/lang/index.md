@@ -12,7 +12,7 @@ l10n:
 
 > **メモ:** `lang` の既定値は `unknown` であるため、この属性には常に適切な値を指定することが推奨されます。
 
-{{InteractiveExample("HTML Demo: lang", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: lang", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>This paragraph is English, but the language is not specifically defined.</p>

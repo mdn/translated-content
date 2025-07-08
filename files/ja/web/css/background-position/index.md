@@ -9,7 +9,7 @@ l10n:
 
 **`background-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、それぞれの背景画像の初期位置を設定します。位置は {{cssxref("background-origin")}} で設定された位置レイヤーからの相対です。
 
-{{InteractiveExample("CSS Demo: background-position")}}
+{{InteractiveExample("CSS デモ: background-position")}}
 
 ```css interactive-example-choice
 background-position: top;

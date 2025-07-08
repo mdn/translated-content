@@ -9,7 +9,7 @@ l10n:
 
 **`TypedArray.BYTES_PER_ELEMENT`** プロパティは、型付き配列内の各要素の大きさをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.BYTES_PER_ELEMENT", "shorter")}}
 
 ```js interactive-example
 console.log(Float64Array.BYTES_PER_ELEMENT);

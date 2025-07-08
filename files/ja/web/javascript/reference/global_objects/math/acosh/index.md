@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.acosh()")}}
+{{InteractiveExample("JavaScript デモ: Math.acosh()")}}
 
 ```js interactive-example
 console.log(Math.acosh(0.999999999999));

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/426
 original_slug: Web/HTTP/Status/426
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`426 Upgrade Required`** 클라이언트 에러 응답 코드는 서버가 현재 프로토콜을 사용하여 요청을 처리하는 것은
 거부하지만 클라이언트가 다른 프로토콜로 업그레이드한 후에는 요청을 수행할 의향이 있음을 나타냅니다.
 

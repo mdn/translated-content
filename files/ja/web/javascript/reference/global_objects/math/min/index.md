@@ -9,7 +9,7 @@ l10n:
 
 **`Math.min()`** は静的メソッドで、引数で渡されたもののうち最小の値を返します。引数がない場合は {{jsxref("Infinity")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.min()")}}
+{{InteractiveExample("JavaScript デモ: Math.min()")}}
 
 ```js interactive-example
 console.log(Math.min(2, 3, 1));

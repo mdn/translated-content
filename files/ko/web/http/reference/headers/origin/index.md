@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Origin
 original_slug: Web/HTTP/Headers/Origin
 ---
 
-{{HTTPSidebar}}
-
 **`Origin`** request 헤더는 fetch가 시작되는 위치입니다. 경로 정보는 포함하지 않고 서버 이름만 포함합니다. {{HTTPMethod("POST")}} requests에 포함되는 것처럼, {{Glossary("CORS")}} requests 와 함께 전송합니다. {{HTTPHeader("Referer")}} 헤더와 비슷하지만, origin 헤더는 전체 경로를 공개하지 않습니다.
 
 > **참고:** **주의**: {{HTTPMethod("HEAD")}} 와 {{HTTPMethod("GET")}} 메서드를 통해 {{domxref("fetch()")}}를 사용할 때 {{httpheader("Origin")}} 헤더가 설정되지 않았습니다. (이 문제는 Firefox 65에서 수정되었습니다 — [Firefox bug 1508661](https://bugzil.la/1508661)참조).

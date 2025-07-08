@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DisplayNames
 
 **`Intl.DisplayNames`** オブジェクトは、言語、地域、文字体系の表示名の一貫した翻訳を可能にします。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
 
 ```js interactive-example
 const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });

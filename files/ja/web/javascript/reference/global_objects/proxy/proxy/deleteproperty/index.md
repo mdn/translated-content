@@ -9,7 +9,7 @@ l10n:
 
 **`handler.deleteProperty()`** メソッドは、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Operators/delete", "delete")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.deleteProperty()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.deleteProperty()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

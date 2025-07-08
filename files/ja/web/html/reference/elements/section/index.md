@@ -10,7 +10,7 @@ l10n:
 
 **`<section>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書の自立した一般的なセクション（区間）を表します。そのセクションを表現するより意味的に具体的な要素がない場合に使用します。少数の例外を除いて、セクションには見出しを置いてください。
 
-{{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;section&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>Choosing an Apple</h1>

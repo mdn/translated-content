@@ -11,7 +11,7 @@ l10n:
 
 ふつうは一括指定の {{ cssxref("list-style") }} を使ったほうが便利です。
 
-{{InteractiveExample("CSS Demo: list-style-image")}}
+{{InteractiveExample("CSS デモ: list-style-image")}}
 
 ```css interactive-example-choice
 list-style-image: url("/shared-assets/images/examples/rocket.svg");

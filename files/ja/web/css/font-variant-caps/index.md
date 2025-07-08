@@ -9,7 +9,7 @@ l10n:
 
 **`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャップやタイトルに使われる代替グリフの使用を制御します。
 
-{{InteractiveExample("CSS Demo: font-variant-caps")}}
+{{InteractiveExample("CSS デモ: font-variant-caps")}}
 
 ```css interactive-example-choice
 font-variant-caps: normal;

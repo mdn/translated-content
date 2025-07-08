@@ -10,7 +10,7 @@ l10n:
 
 **`<map>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("area")}} 要素とともにイメージマップ（クリック可能なリンク領域）を定義するために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;map&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;map&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <map name="infographic">

@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`justify-items`** プロパティは、ボックスのすべてのアイテムに既定の {{CSSxRef("justify-self")}} を定義し、それぞれのボックスの調整を適切な軸に沿って、既定の方法で行ないます。
 
-{{InteractiveExample("CSS Demo: justify-items")}}
+{{InteractiveExample("CSS デモ: justify-items")}}
 
 ```css interactive-example-choice
 justify-items: stretch;

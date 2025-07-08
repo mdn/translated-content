@@ -10,7 +10,7 @@ l10n:
 
 **`<sup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表記上の理由で上付き文字として表示するべきインラインテキストを指定します。上付き文字は普通、小さめのテキストを使用して高いベースラインで表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;sup&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

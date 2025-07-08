@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template")}}
+{{InteractiveExample("CSS デモ: grid-template")}}
 
 ```css interactive-example-choice
 grid-template:

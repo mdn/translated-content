@@ -11,7 +11,7 @@ l10n:
 
 このプロパティの初期値は {{jsxref("TypedArray.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const uint8 = new Uint8Array([10, 20, 30]);

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `picture-in-picture` ディレクティブは、現在の文書で動画を{{domxref("Picture-in-Picture API", "ピクチャインピクチャ", "", "nocode")}}モードで再生することを許可するかどうかを制御します。
 

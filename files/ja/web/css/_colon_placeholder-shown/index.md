@@ -14,7 +14,7 @@ slug: Web/CSS/:placeholder-shown
 }
 ```
 
-{{InteractiveExample("CSS Demo: :placeholder-shown", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :placeholder-shown", "tabbed-shorter")}}
 
 ```css interactive-example
 label {

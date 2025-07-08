@@ -3,8 +3,6 @@ title: Access-Control-Allow-Headers
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Headers
 ---
 
-{{HTTPSidebar}}
-
 Заголовок ответа **`Access-Control-Allow-Headers`** используется в ответ на {{glossary("preflight request")}}, чтобы указать, какие заголовки HTTP могут использоваться во время фактического запроса.
 
 The {{glossary("simple header", "simple headers")}}, {{HTTPHeader("Accept")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Content-Language")}}, {{HTTPHeader("Content-Type")}} (но только с MIME-типом, найденным в этом значении (исключая параметры), либо `application/x-www-form-urlencoded`, `multipart/form-data` или `text/plain`), всегда доступны и не должны быть перечислены в этом заголовке.

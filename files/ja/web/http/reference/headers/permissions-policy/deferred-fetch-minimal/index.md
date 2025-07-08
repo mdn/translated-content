@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5fad0829b5070d04993a57af8c276f5e35da3ed2
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`deferred-fetch-minimal`** は {{HTTPHeader("Permissions-Policy")}} のディレクティブで、 [`fetchLater()` API](/ja/docs/Web/API/fetchLater_API) の一部です。
 

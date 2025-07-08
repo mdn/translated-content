@@ -10,7 +10,7 @@ l10n:
 
 **`style`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
 
-{{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: style", "tabbed-shorter")}}
 
 ```html interactive-example
 <div style="background: #ffe7e8; border: 2px solid #e66465">

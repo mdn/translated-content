@@ -9,7 +9,7 @@ l10n:
 
 **`Intl.DisplayNames()`** コンストラクターは、 {{jsxref("Intl.DisplayNames")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DisplayNames")}}
+{{InteractiveExample("JavaScript デモ: Intl.DisplayNames")}}
 
 ```js interactive-example
 const regionNamesInEnglish = new Intl.DisplayNames(["en"], { type: "region" });

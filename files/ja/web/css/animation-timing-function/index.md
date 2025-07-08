@@ -9,7 +9,7 @@ l10n:
 
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-timing-function")}}
+{{InteractiveExample("CSS デモ: animation-timing-function")}}
 
 ```css interactive-example-choice
 animation-timing-function: linear;

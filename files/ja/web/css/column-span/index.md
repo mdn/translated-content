@@ -9,7 +9,7 @@ l10n:
 
 **`column-span`** は [CSS](/ja/docs/Web/CSS) のプロパティで、値に `all` を設定した場合、段組みレイアウトで要素をすべての段にまたがらせることができます。
 
-{{InteractiveExample("CSS Demo: column-span")}}
+{{InteractiveExample("CSS デモ: column-span")}}
 
 ```css interactive-example-choice
 column-span: none;

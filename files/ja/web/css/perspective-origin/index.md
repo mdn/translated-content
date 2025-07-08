@@ -9,7 +9,7 @@ l10n:
 
 **`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
 
-{{InteractiveExample("CSS Demo: perspective-origin")}}
+{{InteractiveExample("CSS デモ: perspective-origin")}}
 
 ```css interactive-example-choice
 perspective-origin: center;

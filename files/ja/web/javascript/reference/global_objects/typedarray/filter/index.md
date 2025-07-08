@@ -9,7 +9,7 @@ l10n:
 
 **`filter()`** は {{jsxref("TypedArray")}} インスタンスのメソッドで、指定された関数で実装されているテストに合格した要素だけにフィルタリングされた、指定された型付き配列の一部のコピーを作成します。このメソッドのアルゴリズムは {{jsxref("Array.prototype.filter()")}} と同じです。
 
-{{InteractiveExample("JavaScript Demo: TypedArray.filter()")}}
+{{InteractiveExample("JavaScript デモ: TypedArray.filter()")}}
 
 ```js interactive-example
 function isNegative(element, index, array) {

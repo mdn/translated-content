@@ -9,7 +9,7 @@ slug: Web/CSS/clamp
 
 `clamp(MIN, VAL, MAX)` は `{{CSSxRef("max()")}}(MIN, {{CSSxRef("min()")}}(VAL, MAX))` と同等です。
 
-{{InteractiveExample("CSS Demo: clamp()")}}
+{{InteractiveExample("CSS デモ: clamp()")}}
 
 ```css interactive-example-choice
 font-size: clamp(1rem, 2.5vw, 2rem);

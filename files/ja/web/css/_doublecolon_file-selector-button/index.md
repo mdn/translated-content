@@ -9,7 +9,7 @@ l10n:
 
 **`::file-selector-button`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{HTMLElement("input") }} 要素の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) のボタンを表します。
 
-{{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::file-selector-button", "tabbed-shorter")}}
 
 ```css interactive-example
 input {

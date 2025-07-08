@@ -12,7 +12,7 @@ l10n:
 
 {{jsxref("Array/findLast", "findLast()")}} メソッドも参照してください。こちらはテスト関数を満たす最後の要素の（位置ではなく）値を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.findLastIndex()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.findLastIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 50, 130, 44];

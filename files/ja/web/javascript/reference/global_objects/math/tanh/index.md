@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.tanh()")}}
+{{InteractiveExample("JavaScript デモ: Math.tanh()")}}
 
 ```js interactive-example
 console.log(Math.tanh(-1));

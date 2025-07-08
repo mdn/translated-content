@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Range
 original_slug: Web/HTTP/Headers/Content-Range
 ---
 
-{{HTTPSidebar}}
-
 **`Content-Range`** レスポンスの HTTP ヘッダーは、全体のメッセージのどこにメッセージが含まれているかを示します。
 
 <table class="properties">

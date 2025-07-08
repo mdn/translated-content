@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`place-items`** は[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムをブロック方向とインライン方向の両方に一度に配置します。これは {{CSSxRef("align-items")}} および {{CSSxRef("justify-items")}} プロパティの値を設定します。 2 つ目の値が設定されていない場合、1 つ目の値が使用されます。
 
-{{InteractiveExample("CSS Demo: place-items")}}
+{{InteractiveExample("CSS デモ: place-items")}}
 
 ```css interactive-example-choice
 place-items: center stretch;

@@ -11,7 +11,7 @@ l10n:
 
 CSS Level 2 (Revision 1) で定義されたにおける `font-variant` の `<font-variant-css2>` 値（つまり、 `normal` や `small-caps`）は、一括指定の [`font`](/ja/docs/Web/CSS/font) を用いて設定することもできます。
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{InteractiveExample("CSS デモ: font-variant")}}
 
 ```css interactive-example-choice
 font-variant: normal;

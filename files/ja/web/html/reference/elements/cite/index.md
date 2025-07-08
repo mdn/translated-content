@@ -10,7 +10,7 @@ l10n:
 
 **`<cite>`** は [HTML](/ja/docs/Web/HTML) の要素で、引用された創作物のタイトルをマークアップするために使用します。この参照は、引用メタデータに関する利用場面に合わせた慣習に応じて省略形が用いられることがあります。
 
-{{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;cite&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <figure>

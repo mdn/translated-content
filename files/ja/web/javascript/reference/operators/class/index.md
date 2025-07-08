@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Operators/class
 
 JavaScript のクラスはプロトタイプベースの継承が使われます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - class expression")}}
+{{InteractiveExample("JavaScript デモ: Expressions - class expression")}}
 
 ```js interactive-example
 const Rectangle = class {

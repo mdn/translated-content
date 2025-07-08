@@ -11,7 +11,7 @@ l10n:
 
 `charAt()` は常に文字列を [UTF-16 コード単位](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#utf-16_文字、unicode_コードポイント、書記素クラスター)の並びとして索引付けます。そのため、孤立したサロゲートを返す可能性があります。指定されたインデックスの完全な Unicode コードポイントを取得するには、{{jsxref("String.prototype.codePointAt()")}} および {{jsxref("String.fromCodePoint()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: String.charAt()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.charAt()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";

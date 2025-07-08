@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`301 Moved Permanently`** 리디렉션 상태 응답 코드는 요청한 리소스가
 {{HTTPHeader("Location")}} 헤더에 주어진 URL로 완전히 옮겨졌다는 것을 나타냅니다. 브라우저는 이 페이지로
 리디렉트하고, 검색 엔진은 해당 리소스로 연결되는 링크를 갱신합니다.

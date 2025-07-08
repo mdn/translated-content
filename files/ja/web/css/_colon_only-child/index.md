@@ -14,7 +14,7 @@ p:only-child {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :only-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :only-child", "tabbed-shorter")}}
 
 ```css interactive-example
 li:only-child {

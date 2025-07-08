@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Methods/DELETE
 original_slug: Web/HTTP/Methods/DELETE
 ---
 
-{{HTTPSidebar}}O **método de requisição HTTP DELETE** remove o recurso especificado.
+O **método de requisição HTTP DELETE** remove o recurso especificado.
 
 <table class="properties">
   <tbody>

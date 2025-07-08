@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/get
 
 **`get`** 構文は、オブジェクトのプロパティを関数に結びつけ、プロパティが参照された時に関数が呼び出されるようにします。
 
-{{InteractiveExample("JavaScript Demo: Functions Getter")}}
+{{InteractiveExample("JavaScript デモ: Functions Getter")}}
 
 ```js interactive-example
 const obj = {

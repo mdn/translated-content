@@ -9,7 +9,7 @@ l10n:
 
 **`Number.MIN_VALUE`** 静的データプロパティは、 JavaScript において表すことが可能な最小の正の数値を表します。
 
-{{InteractiveExample("JavaScript Demo: Number.MIN_VALUE")}}
+{{InteractiveExample("JavaScript デモ: Number.MIN_VALUE")}}
 
 ```js interactive-example
 function divide(x, y) {

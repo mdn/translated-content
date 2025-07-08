@@ -11,7 +11,7 @@ l10n:
 
 もっと大きな整数には、 {{jsxref("BigInt")}} を使用することを検討してください。
 
-{{InteractiveExample("JavaScript Demo: Number.MAX_SAFE_INTEGER")}}
+{{InteractiveExample("JavaScript デモ: Number.MAX_SAFE_INTEGER")}}
 
 ```js interactive-example
 const x = Number.MAX_SAFE_INTEGER + 1;

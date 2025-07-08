@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`206 Partial Content`** 는 {{HTTPHeader("Range")}} 헤더에 기술된 데이터 범위에 대한 요청이 성공적으로 응답되어 본문에 해당되는 데이터를 담고 있다는 것을 알려줍니다.
 
 만약 단일 범위 요청을 한 경우엔, 전체 응답의 {{HTTPHeader("Content-Type")}}은 문서 타입으로 설정되며, {{HTTPHeader("Content-Range")}}가 제공됩니다.

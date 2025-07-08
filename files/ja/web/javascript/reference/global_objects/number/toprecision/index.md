@@ -9,7 +9,7 @@ l10n:
 
 **`toPrecision()`** メソッドは {{jsxref("Number")}} オブジェクトを指定された精度で表した文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.toPrecision()")}}
+{{InteractiveExample("JavaScript デモ: Number.toPrecision()")}}
 
 ```js interactive-example
 function precise(x) {

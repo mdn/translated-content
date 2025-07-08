@@ -9,7 +9,7 @@ l10n:
 
 **`conic-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 (中心から広がるのではなく) 中心点の周りを回りながら色が変化する画像を生成します。扇型グラデーションの例としては、円グラフや{{glossary("color wheel", "色相環")}}などがあります。 `conic-gradient()` 関数の結果は {{CSSxRef("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{CSSxRef("&lt;image&gt;")}} の特殊型です。
 
-{{InteractiveExample("CSS Demo: conic-gradient()")}}
+{{InteractiveExample("CSS デモ: conic-gradient()")}}
 
 ```css interactive-example-choice
 background: conic-gradient(red, orange, yellow, green, blue);

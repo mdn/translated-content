@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Link
 original_slug: Web/HTTP/Headers/Link
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Link`** エンティティヘッダーフィールドは、 HTTP ヘッダー内の 1 つ以上のリンクをシリアル化する手段を提供します。意味的には、 HTML の {{HTMLElement("link")}} 要素と同等です。</p>
 
 ## 構文

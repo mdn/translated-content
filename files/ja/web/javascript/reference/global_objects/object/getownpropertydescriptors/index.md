@@ -9,7 +9,7 @@ l10n:
 
 **`Object.getOwnPropertyDescriptors()`** 静的メソッドは、指定したオブジェクトのすべてのプロパティ記述子を返します。
 
-{{InteractiveExample("JavaScript Demo: Object.getOwnPropertyDescriptors()")}}
+{{InteractiveExample("JavaScript デモ: Object.getOwnPropertyDescriptors()")}}
 
 ```js interactive-example
 const object1 = {

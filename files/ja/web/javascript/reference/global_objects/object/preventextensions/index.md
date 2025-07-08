@@ -9,7 +9,7 @@ l10n:
 
 **`Object.preventExtensions()`** 静的メソッドは、すでにプロパティが追加されたオブジェクトで、新しいプロパティを抑制します (すなわち、オブジェクトのさらなる拡張を抑制します)。また、このオブジェクトのプロトタイプが再代入されることを防ぎます。
 
-{{InteractiveExample("JavaScript Demo: Object.preventExtensions()")}}
+{{InteractiveExample("JavaScript デモ: Object.preventExtensions()")}}
 
 ```js interactive-example
 const object1 = {};

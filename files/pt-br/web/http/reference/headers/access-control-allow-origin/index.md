@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 O **`Access-Control-Allow-Origin`** cabeçalho de resposta indica se os recursos da resposta podem ser compartilhados com a {{glossary("origin")}} dada.
 
 <table class="properties">

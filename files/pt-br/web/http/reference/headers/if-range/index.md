@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-Range
 original_slug: Web/HTTP/Headers/If-Range
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`If-Range`** faz uma requisição de intervalo condicional: se a condição é realizada, a requisição de intervalo será enviada e o servidor mandará de volta como resposta um {{HTTPStatus("206")}} `Partial Content` com o corpo apropriado. Se a condição não é realizada, a recurso inteiro é enviado de volta, com um código de status {{HTTPStatus("200")}} `OK`.
 
 Este cabeçalho pode ser usado ou com um validador {{HTTPHeader("Last-Modified")}}, ou com um {{HTTPHeader("ETag")}}, mas não com ambos.

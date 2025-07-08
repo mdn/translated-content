@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`TE`** リクエストヘッダーは、ユーザーエージェントが受け入れる転送エンコーディング方式を指定します。（非公式に `Accept-Transfer-Encoding` と呼ばれることもあり、その方がより直感的でしょう。）
 
 > **メモ:** [HTTP/2](https://httpwg.org/specs/rfc9113.html#ConnectionSpecific) と

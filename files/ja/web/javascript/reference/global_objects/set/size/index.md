@@ -9,7 +9,7 @@ l10n:
 
 **`size`** は {{jsxref("Set")}} インスタンスのアクセサープロパティで、この集合内の（固有の）要素の数を返します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.size")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.size")}}
 
 ```js interactive-example
 const set1 = new Set();

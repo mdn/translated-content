@@ -10,7 +10,7 @@ l10n:
 **`scale3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 3D 空間において要素を変倍する座標変換を定義します。
 変倍量はベクトルで定義されるため、それぞれの次元ごとに異なる倍率で変倍することができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: scale3d()")}}
+{{InteractiveExample("CSS デモ: scale3d()")}}
 
 ```css interactive-example-choice
 transform: scale3d(1, 1, 1);

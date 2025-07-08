@@ -9,7 +9,7 @@ l10n:
 
 **`Array.isArray()`** 静的メソッドは、渡された値が {{jsxref("Array")}} かどうかを判断します。
 
-{{InteractiveExample("JavaScript Demo: Array.isArray()")}}
+{{InteractiveExample("JavaScript デモ: Array.isArray()")}}
 
 ```js interactive-example
 console.log(Array.isArray([1, 3, 5]));

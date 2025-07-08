@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/valueOf
 
 **`valueOf()`** メソッドは、{{jsxref("Boolean")}} オブジェクトのプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Boolean.valueOf()")}}
+{{InteractiveExample("JavaScript デモ: Boolean.valueOf()")}}
 
 ```js interactive-example
 const x = new Boolean();

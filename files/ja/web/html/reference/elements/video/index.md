@@ -10,7 +10,7 @@ l10n:
 
 **`<video>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書中に動画再生に対応するメディアプレイヤーを埋め込みます。 `<video>` を音声コンテンツのために使用することもできますが、 {{HTMLElement("audio")}} 要素の方がユーザーにとって使い勝手が良いかもしれません。
 
-{{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;video&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <video controls width="250">

@@ -1,44 +1,53 @@
 ---
-title: 控制 HTML 表單中的拼字檢查功能
+title: HTML spellcheck 全域屬性
 slug: Web/HTML/Reference/Global_attributes/spellcheck
+l10n:
+  sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
 
 {{HTMLSidebar("Global_attributes")}}
 
-Firefox 2 新增了網頁表單文字輸入區的即時拼字檢查功能，使用者可以修改 about:config 來調整是否使用拼字檢查、是否同時檢查文字輸入**欄**等設定。預設值狀態下，Firefox 會檢查文字輸入區（text area）及 `designMode` 的文件，而不檢查文字輸入欄（text field）的拼字。
+**`spellcheck`** [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)是一個[列舉](/zh-TW/docs/Glossary/Enumerated)屬性，用來定義元素是否可以被檢查拼字錯誤。
 
-不過，總是會有些不見得適合預設值的情況，例如在某些用來編寫 HTML 等程式碼的輸入區中拼字檢查就變得煩人，或者有些網站也希望建議 Firefox 檢查某些特定文字輸入欄的拼字等等。
+> [!NOTE]
+> 這個屬性僅僅是對瀏覽器的一個提示：瀏覽器並非必須檢查拼字錯誤。通常，即使 `spellcheck` 屬性設定為 `true` 且瀏覽器支援拼字檢查，不可編輯的元素也不會被檢查拼字錯誤。
 
-若網站對某特定 `<input>` 元素中的拼字檢查執行與否有所建議，則可使用 `spellcheck` 屬性。將此屬性設為 `true` 表建議檢查拼字，而設為 `false` 則相反。
+{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
 
-若使用者將 `layout.spellcheckDefault` 直接設為 0 以關閉拼字檢查功能，那麼網站的建議就無效；若設為其他值，則會將網站建議列入考量。
+<!-- cSpell:ignore exampull checkd spellung -->
 
-舉例來說，你可以撰寫如下的 HTML 碼，建議 Firefox 檢查此文字輸入欄（`<input>` 元素）中的拼字：
+```html interactive-example
+<textarea spellcheck="true">
+This exampull will be checkd fur spellung when you try to edit it.</textarea
+>
 
-```plain
-<input type="text" size="50" spellcheck="true">
+<textarea spellcheck="false">
+This exampull will nut be checkd fur spellung when you try to edit it.</textarea
+>
 ```
 
-也可以撰寫這樣的 HTML 碼，建議 Firefox 不要檢查文字輸入區的拼字：
+它可以有以下幾個值：
 
-```plain
-<textarea spellcheck="false"></textarea>
-```
+- 空字串或 `true`，表示如果可能的話，該元素應該被檢查拼字錯誤；
+- `false`，表示該元素不應該被檢查拼字錯誤。
 
-而 `designMode`（通常用於 HTML 所見即所得編輯）則可以在文件的 `<body>` 標籤中設定 `spellcheck` 屬性來控制拼字檢查。
+如果沒有設定此屬性，其預設值由元素類型和瀏覽器定義。這個預設值也可能是*繼承的*，這意味著只有當其最近的祖先元素的 _spellcheck_ 狀態為 `true` 時，該元素的內容才會被檢查拼字錯誤。
 
-`spellcheck` 屬性也可以放在 `<span>` 或 `<div>` 等其他標籤中，這麼一來在此元素下所有未另行設定 `spellcheck` 屬性的 `<input>` 元素將繼承此設定；而若皆未設定則使用者的決定將優先採行。
+## 安全性與隱私權考量
 
-舉例而言：
+使用拼字檢查可能會對使用者的安全性與隱私權造成影響。規範並未規定拼字檢查的*執行方式*，元素的內容可能會被傳送給第三方以取得拼字檢查結果（參見[增強的拼字檢查與「拼字劫持」](https://www.comparitech.com/blog/information-security/what-is-spell-jacking/)）。
 
-```plain
-<div spellcheck="true">
-  <label>輸入英文句子： </label><input type="text" size="50">
-  <br />
-  <label>再打一句： </label><input type="text" size="50">
-</div>
-<br />
-<label>最後一句： </label><input type="text" size="50">
-```
+對於可能包含敏感資訊的元素，你應該考慮將 `spellcheck` 設定為 `false`。
 
-在這段 HTML 程式碼中，頭兩個文字輸入區域將檢查拼字，第三個則不會。
+## 規範
+
+{{Specifications}}
+
+## 瀏覽器相容性
+
+{{Compat}}
+
+## 參見
+
+- 所有[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
+- [`autocorrect`](/zh-TW/docs/Web/HTML/Reference/Global_attributes/autocorrect)。

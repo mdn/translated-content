@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Proxy-Authenticate
 original_slug: Web/HTTP/Headers/Proxy-Authenticate
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Proxy-Authenticate`** define o método de autenticação que deve ser utilizado para conseguir acesso ao recurso por trás de um {{Glossary("proxy server")}}. Ele autentica a requisição ao servidor proxy, permitindo que transmita a requisição em frente.
 
 O cabeçalho `Proxy-Authenticate` é enviado junto com um {{HTTPStatus("407")}} `Proxy Authentication Required`.

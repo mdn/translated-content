@@ -9,7 +9,7 @@ l10n:
 
 **`const`** 宣言はブロックスコープのローカル変数（定数）を宣言します。定数の値は[代入演算子](/ja/docs/Web/JavaScript/Reference/Operators/Assignment)を使用して再代入することができませんが、定数が[オブジェクト](/ja/docs/Web/JavaScript/Guide/Data_structures#オブジェクト)であった場合、そのプロパティを追加したり、更新したり、削除したりすることができます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Const")}}
+{{InteractiveExample("JavaScript デモ: Statement - Const")}}
 
 ```js interactive-example
 const number = 42;

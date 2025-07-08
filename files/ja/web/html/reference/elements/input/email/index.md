@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`email`** 型は、ユーザーに一つのメールアドレス、または、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性が設定されていた場合は、メールアドレスのリストを入力および編集させるために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;email&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="email">Enter your example.com email:</label>

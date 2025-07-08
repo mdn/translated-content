@@ -11,7 +11,7 @@ l10n:
 
 左から右へ適用する場合は {{jsxref("Array.prototype.reduce()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Array.reduceRight()")}}
+{{InteractiveExample("JavaScript デモ: Array.reduceRight()")}}
 
 ```js interactive-example
 const array1 = [

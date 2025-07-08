@@ -9,7 +9,7 @@ l10n:
 
 **`Set()`** コンストラクターは {{jsxref("Set")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype Constructor")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);

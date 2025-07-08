@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Remainder_assignment
 
 剰余代入演算子 (`%=`) は、変数を右辺のオペランドの値で除算し、剰余を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Remainder assignment operator")}}
 
 ```js interactive-example
 let a = 3;

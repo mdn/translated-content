@@ -9,7 +9,7 @@ l10n:
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Property accessors", "taller")}}
 
 ```js interactive-example
 const person1 = {};

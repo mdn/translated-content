@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/POST
 original_slug: Web/HTTP/Methods/POST
 ---
 
-{{HTTPSidebar}}
-
 **HTTP の `POST` メソッド**は、サーバーにデータを送信します。リクエストの本文の型は {{HTTPHeader("Content-Type")}} ヘッダーで示されます。
 
 {{HTTPMethod("PUT")}} と `POST` との違いは、 `PUT` がべき等であることです。一度呼び出しても複数回呼び出しても成功すれば同じ効果になる（*副*作用がない）のに対して、同じ `POST` に成功すると、複数回の注文を行うような、追加の効果が出ます。

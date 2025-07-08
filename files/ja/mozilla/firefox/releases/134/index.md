@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f65bc685391ad06b6d1fbef84b217459002f073f
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 134 の変更点をまとめています。Firefox 134 は、米国時間 [2025 年 1 月 7 日](https://whattrainisitnow.com/release/?version=134) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧

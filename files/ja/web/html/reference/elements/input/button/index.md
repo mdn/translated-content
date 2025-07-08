@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <input class="styled" type="button" value="Add to favorites" />

@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** {{domxref("element/contentvisibilityautostatechange_event", "contentvisibilityautostatechange")}} イベントは、 `content-visibility: auto` が設定されている要素で、そのレンダリング作業が始まるか、またはスキップされなくなったときに発行されます。これは、アプリのコードがレンダリング処理（例えば {{htmlelement("canvas")}} に描画する）を不要なときに開始または停止する便利な方法を提供し、処理能力を節約します。
 
-{{InteractiveExample("CSS Demo: content-visibility")}}
+{{InteractiveExample("CSS デモ: content-visibility")}}
 
 ```css interactive-example-choice
 content-visibility: visible;

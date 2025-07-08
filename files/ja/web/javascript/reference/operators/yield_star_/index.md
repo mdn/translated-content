@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/yield*
 
 **`yield*` 式**は別の{{jsxref("Statements/function*", "ジェネレーター", "", 1)}}や反復可能なオブジェクトに委任するために使用されます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - yield*")}}
+{{InteractiveExample("JavaScript デモ: Expressions - yield*")}}
 
 ```js interactive-example
 function* func1() {

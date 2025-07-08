@@ -9,7 +9,7 @@ l10n:
 
 **`handler.getOwnPropertyDescriptor()`** は、オブジェクトの `[[GetOwnProperty]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.getOwnPropertyDescriptor()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.getOwnPropertyDescriptor()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.getOwnPropertyDescriptor()", "taller")}}
 
 ```js interactive-example
 const monster1 = {
