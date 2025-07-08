@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS
 original_slug: Web/HTTP/CORS
 ---
 
-{{HTTPSidebar}}
-
 {{Glossary("CORS")}} - Cross-Origin Resource Sharing (Compartilhamento de recursos com origens diferentes) é um mecanismo que usa cabeçalhos adicionais {{Glossary("HTTP")}} para informar a um navegador que permita que um aplicativo Web seja executado em uma origem (domínio) com permissão para acessar recursos selecionados de um servidor em uma origem distinta. Um aplicativo Web executa uma **requisição _cross-origin_ HTTP** ao solicitar um recurso que tenha uma origem diferente (domínio, protocolo e porta) da sua própria origem.
 
 Um exemplo de requisição _cross-origin_: o código JavaScript _frontend_ de um aplicativo web disponível em `http://domain-a.com` usa {{domxref ("XMLHttpRequest")}} para fazer uma requisição para `http://api.domain-b.com/data.json`.
@@ -54,20 +52,17 @@ Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do 
 Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
 
 - Os únicos métodos permitidos são:
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - Além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}} ou [qualquer um dos outros cabeçalhos com nomes definidos na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), os únicos cabeçalhos que podem ser definidos manualmente são [aqueles cujo a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (porém observe os requisitos adicionais abaixo)
 
 - Os únicos valores permitidos para o {{HTTPHeader("Content-Type")}} do cabeçalho são:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -142,7 +137,6 @@ Ao contrário de ["requisições simples" (discutido acima)](/pt-BR/docs/Web/HTT
 Em particular, uma requisição tem um pré-envio **se qualquer das seguintes condições** for verdadeira:
 
 - **Se** a requisição usa algum dos seguintes métodos:
-
   - {{HTTPMethod("PUT")}}
   - {{HTTPMethod("DELETE")}}
   - {{HTTPMethod("CONNECT")}}
@@ -151,7 +145,6 @@ Em particular, uma requisição tem um pré-envio **se qualquer das seguintes co
   - {{HTTPMethod("PATCH")}}
 
 - **Ou se**, além dos cabeçalhos definidos automaticamente pelo agente do usuário (por exemplo, {{HTTPHeader("Connection")}}, {HTTPHeader("User-Agent")}} ou [qualquer **OUTRO** cabeçalho com um nome definido na especificação Fetch como "_forbidden header name_"](https://fetch.spec.whatwg.org/#forbidden-header-name)), a requisição inclui quaisquer cabeçalhos **além** [daqueles que a especificação Fetch define como sendo um "_CORS-safelisted request-header_"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), que são:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -163,7 +156,6 @@ Em particular, uma requisição tem um pré-envio **se qualquer das seguintes co
   - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Ou se** o {{HTTPHeader("Content-Type")}} do cabeçalho **tem** **outro** valor que:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -520,7 +512,6 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
 - [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
   - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

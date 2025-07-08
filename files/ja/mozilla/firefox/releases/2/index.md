@@ -3,8 +3,6 @@ title: Firefox 2 for developers
 slug: Mozilla/Firefox/Releases/2
 ---
 
-{{FirefoxSidebar}}
-
 ## 開発者のための Firefox 2 の新機能
 
 Firefox 2 ではたくさんの新機能と能力を導入します。この記事は新機能を取り上げている記事へのリンクを提供します。
@@ -55,7 +53,6 @@ Firefox 2 ではたくさんの新機能と能力を導入します。この記�
 - [Firefox 2 のテーマ変更](/ja/docs/Theme_changes_in_Firefox_2)
   - : 既存のテーマを更新して Firefox 2 で動作させるために必要な変更についての説明。
 - Textbox の改良 (Firefox 2.0.0.1 以降のみ)
-
   - : `<textbox>` に、テキストボックスの値を既定値にリセットする `reset()` メソッドが追加されました。テキストボックスの既定値を取得および変更するには `defaultValue` プロパティを使用してください ([Firefox バグ 312867](https://bugzil.la/312867))。
 
     テキストフィールド内部の [nsIEditor](/ja/docs/NsIEditor) を取得するための `editor` プロパティがサポートされました ([Firefox バグ 312867](https://bugzil.la/312867))。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6bed868c7b75c4c3ca3721fa8ed6c6ad2f41262b
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/ja/firefox/developer/)Firefox 50 は、米国時間 2016 年 11 月 15 日にリリースされました。このページでは、開発者に影響する Firefox 50 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -128,10 +126,8 @@ l10n:
 ### ファイルとディレクトリー
 
 - 以前は Google Chrome との互換性しか有していなかったサイトとの互換性を向上するため、[ファイルとディレクトリー項目 API](/ja/docs/Web/API/File_and_Directory_Entries_API) のサブセットを実装しました ([Firefox バグ 1265767](https://bugzil.la/1265767))。
-
   - 非同期 API インターフェイスを実装しましたが、ファイルの読み取りしかサポートしませんので注意してください。例えば {{domxref("FileSystemFileEntry.createWriter()")}} メソッドは何も行いません。
   - 以下のインターフェイスを実装しました:
-
     - {{domxref("FileSystem")}}
     - {{domxref("FileSystemEntry")}} (プロパティのみ。メソッドは未実装)
     - {{domxref("FileSystemFileEntry")}} ({{domxref("FileSystemFileEntry.createWriter", "createWriter()")}} を除く)

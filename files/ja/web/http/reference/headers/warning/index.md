@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Warning
 original_slug: Web/HTTP/Headers/Warning
 ---
 
-{{HTTPSidebar}}
-
 > **メモ:** `Warning` ヘッダーはまもなく非推奨になる予定です。詳しくは [Warning (https://github.com/httpwg/http-core/issues/139)](https://github.com/httpwg/http-core/issues/139) や [Warning: header & stale-while-revalidate (https://github.com/whatwg/fetch/issues/913)](https://github.com/whatwg/fetch/issues/913) をご覧ください。
 
 **`Warning`** は HTTP の一般ヘッダーで、可能性のある問題についてメッセージのステータスによる情報を含みます。一つのレスポンスに複数の `Warning` ヘッダーが含まれる可能性があります。
@@ -38,9 +36,7 @@ Warning: <warn-code> <warn-agent> <warn-text> [<warn-date>]
 ## ディレクティブ
 
 - \<warn-code>
-
   - : 3 桁の警告番号です。最初の桁は、検証後にレスポンスを格納する際に `Warning` を削除する必要があるかどうかを示します。
-
     - `1xx` の警告コードは、新鮮さやレスポンスの検証ステータスを表し、キャッシュされる際に削除されます。
     - `2xx` の警告コードは、検証によって修正されない表現のいくつかの側面を説明しており、レスポンス全体が送信されない限り、検証後もキャッシュによって削除されないことを表します。
 

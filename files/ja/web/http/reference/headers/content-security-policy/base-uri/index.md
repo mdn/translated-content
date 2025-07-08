@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレクティブは、文書の {{HTMLElement("base")}} 要素で使用することができる URL を制限します。この値が存在しない場合は、任意の URI が許可されます。このディレクティブが存在しない場合、ユーザーエージェントは {{HTMLElement("base")}} 要素の値を使用します。
 
 <table class="properties">
@@ -38,9 +36,7 @@ Content-Security-Policy: base-uri <source-expression-list>;
 - `'none'`
   - : `<base>` 要素を使用してベース URI を設定することはできません。 単一引用符は必須です。
 - `<source-expression-list>`
-
   - : ソース表現の値を空白で区切ったリストです。 `<base>` 要素は、その値が指定されたソース表現のいずれかと一致した場合、ベース URI を設定します。このディレクティブでは、以下のソース表現の値が適用できます。
-
     - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
     - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
     - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)

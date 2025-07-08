@@ -18,9 +18,7 @@ queryPermission(fileSystemHandlePermissionDescriptor)
 ### 引数
 
 - FileSystemHandlePermissionDescriptor {{optional_inline}}
-
   - : 取得する対象の許可モードを指定するオブジェクトです。以下の設定ができます。
-
     - `'mode'`: `'read'` または `'readwrite'` の値を取りえます。
 
 ### 返値

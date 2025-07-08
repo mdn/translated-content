@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: 759102220c07fb140b3e06971cd5981d8f0f134f
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -21,11 +21,9 @@ l10n:
 該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
-
   - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
 - `height` {{experimental_inline}}
-
   - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
 
 - `width` {{experimental_inline}}
@@ -60,7 +58,8 @@ l10n:
 
 作為{{glossary("replaced elements", "可置換元素")}}，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
-> **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
+> [!NOTE]
+> {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
 
 嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 物件的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
 
@@ -139,7 +138,7 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >沒有相對應的角色</a
         >
       </td>

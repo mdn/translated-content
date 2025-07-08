@@ -3,8 +3,6 @@ title: Firefox 50 para desarrolladores
 slug: Mozilla/Firefox/Releases/50
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 50 was released on November 15, 2016. This article lists key changes that are useful not only for web developers, but also Firefox and Gecko developers as well as add-on developers.
 
 ## Cambios para desarrolladores Web
@@ -124,10 +122,8 @@ Firefox 50 was released on November 15, 2016. This article lists key changes tha
 ### Archivos y directorios
 
 - A subset of the [File and Directory Entries API](/es/docs/Web/API/File_and_Directory_Entries_API) has been implemented, to improve compatibility with sites that were previously only compatible with Google Chrome ([Error 1265767 en Firefox](https://bugzil.la/1265767)).
-
   - The asynchronous API interfaces have been implemented, with the caveat that only reading of files is supported; for example, the {{domxref("FileSystemFileEntry.createWriter()")}} method is a no-op.
   - These interfaces have been implemented:
-
     - {{domxref("FileSystem")}}
     - {{domxref("FileSystemEntry")}} (properties only; the methods have not been implemented)
     - {{domxref("FileSystemFileEntry")}} (except for {{domxref("FileSystemFileEntry.createWriter", "createWriter()")}})

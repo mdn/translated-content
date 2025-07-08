@@ -118,7 +118,6 @@ div {
 ## Voir aussi
 
 - Les propriétés physiques correspondantes :
-
   - {{cssxref("border-top-style")}},
   - {{cssxref("border-right-style")}},
   - {{cssxref("border-bottom-style")}},

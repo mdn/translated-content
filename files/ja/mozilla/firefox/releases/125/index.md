@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 08ef601955d7fc92a9a4c6d6c047854b5aef723d
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 125 の変更点をまとめています。Firefox 125 は、米国時間 [2024 年 4 月 16 日](https://whattrainisitnow.com/release/?version=125) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -33,18 +31,15 @@ l10n:
   ポップオーバーやそれを起動するボタンおよび入力は、HTML 属性や JavaScript を使用して作成、および CSS を使用してスタイル設定できます。
 
   以下の Web API を実装しました:
-
   - [`HTMLButtonElement`](/ja/docs/Web/API/HTMLButtonElement) の [`popoverTargetElement`](/ja/docs/Web/API/HTMLButtonElement/popoverTargetElement) および [`popoverTargetAction`](/ja/docs/Web/API/HTMLButtonElement/popoverTargetAction) プロパティ。
   - [`HTMLInputElement`](/ja/docs/Web/API/HTMLInputElement) の [`popoverTargetElement`](/ja/docs/Web/API/HTMLInputElement/popoverTargetElement) および [`popoverTargetAction`](/ja/docs/Web/API/HTMLInputElement/popoverTargetAction) プロパティ。
   - [`HTMLElement`](/ja/docs/Web/API/HTMLElement) の [`popover`](/ja/docs/Web/API/HTMLElement/popover) プロパティ、および [`hidePopover()`](/ja/docs/Web/API/HTMLElement/hidePopover)、[`showPopover()`](/ja/docs/Web/API/HTMLElement/showPopover)、[`togglePopover()`](/ja/docs/Web/API/HTMLElement/togglePopover) メソッド、および ([`ToggleEvent`](/ja/docs/Web/API/ToggleEvent) 型の) [`beforetoggle`](/ja/docs/Web/API/HTMLElement/beforetoggle_event)、[`toggle_event`](/ja/docs/Web/API/HTMLElement/toggle_event) イベント。
 
   ポップオーバーと共に使用する、以下の CSS 擬似クラスをサポートしました:
-
   - [`:popover-open`](/ja/docs/Web/CSS/:popover-open)
   - [`::backdrop`](/ja/docs/Web/CSS/::backdrop) を、ポップオーバーをサポートするように拡張しました
 
   以下の HTML グローバル属性をサポートしました:
-
   - [`popovertarget`](/ja/docs/Web/HTML/Reference/Elements/button#popovertarget)
   - [`popovertargetaction`](/ja/docs/Web/HTML/Reference/Elements/button#popovertargetaction)
 
@@ -57,7 +52,6 @@ l10n:
 
 - キャンバスが一時的に自身の 2D コンテキストを失ったとき、ウェブアプリケーションが体裁よく回復できるようになりました。これはキャンバスが GPU でハードウェアアクセラレーションされていて、GPU のドライバーがクラッシュしたときに発生する可能性があります ([Firefox bug 1887729](https://bugzil.la/1887729))。
   以下は、キャンバスのコンテキストが失われたり回復したりするときのイベントの詳細情報です:
-
   - アプリケーションで [`contextlost`](/ja/docs/Web/API/HTMLCanvasElement/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/HTMLCanvasElement/contextrestored_event) イベントを監視できます。これらはそれぞれ、コンテキストが失われたり回復したりしたときに [`HTMLCanvasElement`](/ja/docs/Web/API/HTMLCanvasElement) で発生します。また、[`CanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/CanvasRenderingContext2D/isContextLost) を使用してコンテキストを確認することもできます。
   - `contentlost` が発生した後、ブラウザーはデフォルトで失われたコンテキストの再開を試みますが、コードでイベントをキャンセルするとこの動作を抑止できます。
   - オフスクリーンキャンバスも同じ方法で監視できますが、[`OffScreenCanvas`](/ja/docs/Web/API/OffscreenCanvas) の [`contextlost`](/ja/docs/Web/API/OffscreenCanvas/contextlost_event) および [`contextrestored`](/ja/docs/Web/API/OffscreenCanvas/contextrestored_event) イベントを [`OffscreenCanvasRenderingContext2D.isContextLost()`](/ja/docs/Web/API/OffscreenCanvasRenderingContext2D#context) とともに使用します。

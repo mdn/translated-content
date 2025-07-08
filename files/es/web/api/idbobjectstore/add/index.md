@@ -30,9 +30,7 @@ Este método puede generar un {{domxref("DOMException")}} con un {{domxref("DOME
 - `TransactionInactiveError`
   - : Esta transacción de [`IDBObjectStore`](/es/docs/Web/API/IDBObjectStore)'s está inactiva.
 - `DataError`
-
   - : Cualquiera de los siguientes condiciones aplica:
-
     - El almacén de objetos usa llaves en línea o tiene un generador de llaves, y una argumento llave fue proporcionado.
     - El almacén de objetos usa llaves fuera de línea y no tiene un generador de llaves, y un argumento llave fue proporcionado.
     - El almacén de objetos usa llaves en línea pero no un generador de llaves, y la ruta de la llave del almacén de objetos no da una llave válida.

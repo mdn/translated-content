@@ -3,8 +3,6 @@ title: Sec-Fetch-Site
 slug: Web/HTTP/Reference/Headers/Sec-Fetch-Site
 ---
 
-{{HTTPSidebar}}
-
 **`Sec-Fetch-Site`** 获取元数据标头表明了一个请求发起者的来源与目标资源来源之间的关系。
 
 | Header type                                     | {{Glossary("Fetch Metadata Request Header")}}                                            |

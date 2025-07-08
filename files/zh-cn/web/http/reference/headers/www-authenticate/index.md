@@ -3,8 +3,6 @@ title: WWW-Authenticate
 slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`WWW-Authenticate`** 响应标头定义了 [HTTP 身份验证](/zh-CN/docs/Web/HTTP/Guides/Authentication)的方法（“质询”），它用于获取特定资源的访问权限。
 
 > [!NOTE]
@@ -68,7 +66,6 @@ WWW-Authenticate: Basic realm=<realm>, charset="UTF-8"
 ## 指令
 
 - `<auth-scheme>`
-
   - : [身份验证方案](/zh-CN/docs/Web/HTTP/Guides/Authentication#身份验证方案)。一些更常见的类型是（不区分大小写）：[`Basic`](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_验证方案)、`Digest`、`Negotiate` 和 `AWS4-HMAC-SHA256`。
 
     > [!NOTE]

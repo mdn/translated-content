@@ -13,7 +13,6 @@ Para implementar esto, haremos lo siguiente:
 
 - **Definir una [acción del navegador](/es/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), que será el botón añadido a la barra de herramientas de Firefox**.
   Para el botón vamos a proporcionar:
-
   - un icono, llamado "beasts-32.png"
   - una ventana emergente para abrir cuando el botón sea presionado. La ventana emergente incluye HTML, CSS y JavaScript.
 
@@ -85,7 +84,6 @@ Ahora crea un archivo llamado "manifest.json", y agrega el siguiente contenido:
 - [`icons`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) es opcional, pero recomedada: permite la especificación de un ícono para la extensión, que será mostrada en el Administrador de Complementos.
 - [`permissions`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) lista los permisos que la extensión necesita. Aquí solo se pide el permiso de [`activeTab` permission](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
 - [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) especifica el botón de la barra de herramientas. Nosotros proveemos tres piezas de información aquí:
-
   - `default_icon` es obligatorio y enlaza al icono para el botón
   - `default_title` es opcional y será mostrado como descripción
   - `default_popup` es usado su tu quieres una ventana emergente que será mostrada cuando el usuario de clic en el botón. Lo hacemos y hemos incluido esta llave que apunta a un archivo HTML de la extensión.

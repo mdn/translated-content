@@ -31,7 +31,6 @@ _Herada métodos de la interfaz padre,_ _{{domxref("HTMLElement")}}._
 - {{domxref("HTMLCanvasElement.toBlob()")}}
   - : Crea un objeto {{domxref("Blob")}} representando la imagen contenida en el canvas; este archivo puede ser cacheado en disco o bien almacenado en memoria, lo cual dependerá del "user-agent"(especificación del navegador).
 - {{domxref("HTMLCanvasElement.mozGetAsFile()")}} {{non-standard_inline}} {{deprecated_inline}}
-
   - : Retorna un objeto {{domxref("File")}} representando una imagen contenida en el canvas; este archivo es del tipo memory-based, con su nombre especificado. Si el tipo no se especifica, el tipo usado por defecto es `image/png`.
 
     > [!NOTE]

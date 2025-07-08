@@ -66,10 +66,8 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
     El texto debe ser redactado de modo que el usuario tenga el mismo tipo de elección a si la imagen fuese mostrada sin el texto alternativo.
     Este atributo solo es requerido si se usa el atributo [`href`](#href).
 - `coords`
-
   - : El atributo `coords` detalla las coordenadas del atributo [`shape`](#shape) en tamaño, forma, y posicionamiento del `<area>`.
     Este atributo debe ser usado si el atributo `shape` está establecido en `default`.
-
     - `rect`: el valor es `x1,y1,x2,y2`.
       El valor especifica las coordenadas de la esquina superior izquierda y de la esquina inferior derecha del rectangulo.
       Por ejemplo, en `<area shape="rect" coords="0,0,253,27" href="#" target="_blank" alt="Mozilla">` las coordinadas son `0,0` y `253,27`, indicando las esquinas superior izquierda e inferior derecha del rectángulo, respectivamente.
@@ -90,9 +88,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
   - : Contiene una lista de URLs separada por espacios a las que, cuando se sigue el hipervínculo, el navegador enviará solicitudes {{HTTPMethod("POST")}} con el cuerpo `PING` (en segundo plano).
     Típicamente utlizado para el rastreo.
 - `referrerpolicy`
-
   - : Indica que referente será utilizado cuando se recoja el recurso:
-
     - `no-referrer`: La cabecera {{HTTPHeader("Referer")}} no sera enviada.
     - `no-referrer-when-downgrade`: La cabecera {{HTTPHeader("Referer")}} no sera enviada a {{Glossary("origin")}} sin {{Glossary("TLS")}} ({{Glossary("HTTPS")}}).
     - `origin`: El referente enviado será limitado al origen de la página de referencia: su [esquema](/es/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), {{Glossary("host")}}, y {{Glossary("port", "puerto")}}.
@@ -110,9 +106,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 - `shape`
   - : Es la forma asociada al area del mapa. Las especificaciones para HTML definen los valores `rect`, define una región en forma rectangular; `circle`, define la región como una forma circular; `poly`, la define como un polígono; y `default`, la cual indica toda la región sin ninguna forma específica.
 - `target`
-
   - : Palabra clave o nombre definido por el autor del {{Glossary("browsing context","contexto de exploración")}} para mostrar el recurso vinculado. Las siguientes palabras clave tienen significados especiales:
-
     - `_self` (predeterminado): Muestra el recurso en el contexto de navegación actual.
     - `_blank`: Muestra el recurso en un contexto de navegación nuevo y sin nombrar.
     - `_parent`: Muestra el recurso en el contexto de navegación padre del actual.

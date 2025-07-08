@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 > **警告:** {{CSP("report-to")}} ディレクティブは、 `report-uri` ディレクティブを置き換えるためのものであり、 `report-to` に対応するブラウザーでは、 `report-uri` ディレクティブは無視されます。
 >
@@ -73,7 +73,6 @@ Content-Security-Policy: report-uri <uri> <uri>;
 - `referrer` {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 違反が発生した文書のリファラーです。
 - `script-sample`
-
   - : 違反が発生したインラインスクリプト、イベントハンドラー、スタイル設定の最初の 40 文字。
     外部ファイルに起因する違反はレポートに含まれません。
 

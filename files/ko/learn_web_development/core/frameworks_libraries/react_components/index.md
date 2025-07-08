@@ -65,7 +65,7 @@ function Todo() {
 export default Todo;
 ```
 
-지금까지는 괜찮지만, 우리의 컴포넌트는 무언가를 반환해야 합니다! `src/App.js`로 돌아가서, 정렬되지 않은 목록 안에 있는 첫 번째 [`<li>`](/ko/docs/Web/HTML/Element/li)를 복사하고, `Todo.js`에 붙여넣어서 다음과 같이 만드세요.
+지금까지는 괜찮지만, 우리의 컴포넌트는 무언가를 반환해야 합니다! `src/App.js`로 돌아가서, 정렬되지 않은 목록 안에 있는 첫 번째 [`<li>`](/ko/docs/Web/HTML/Reference/Elements/li)를 복사하고, `Todo.js`에 붙여넣어서 다음과 같이 만드세요.
 
 ```jsx
 export default function Todo() {
@@ -195,7 +195,7 @@ export default Todo;
 
 ### `id`를 부여해주세요
 
-지금은 `<Todo />` 컴포넌트가 모든 할 일에 `id` 속성을 `todo-0`으로 부여합니다. 이것은 [`id` 속성](/ko/docs/Web/HTML/Global_attributes/id)은 고유해야 한다는 점에서 나쁜 HTML입니다. (CSS, JavaScript 등에서 문서 조각을 식별하는 데 사용됩니다.) 이것은 각 `Todo`에 대해 고유한 값을 취하는 `id` prop을 컴포넌트에 부여해야 한다는 것을 의미합니다.
+지금은 `<Todo />` 컴포넌트가 모든 할 일에 `id` 속성을 `todo-0`으로 부여합니다. 이것은 [`id` 속성](/ko/docs/Web/HTML/Reference/Global_attributes/id)은 고유해야 한다는 점에서 나쁜 HTML입니다. (CSS, JavaScript 등에서 문서 조각을 식별하는 데 사용됩니다.) 이것은 각 `Todo`에 대해 고유한 값을 취하는 `id` prop을 컴포넌트에 부여해야 한다는 것을 의미합니다.
 
 우리가 처음에 사용한 패턴을 따라서, `<Todo />` 컴포넌트의 각 인스턴스에 `todo-i` 형식의 ID를 부여해보겠습니다. 여기서 `i`는 매번 1씩 증가합니다.
 

@@ -9,7 +9,7 @@ l10n:
 
 **`border-bottom-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックスの下の境界の幅を設定します。
 
-{{InteractiveExample("CSS Demo: border-bottom-width")}}
+{{InteractiveExample("CSS デモ: border-bottom-width")}}
 
 ```css interactive-example-choice
 border-bottom-width: thick;
@@ -74,9 +74,7 @@ border-bottom-width: unset;
 ### 値
 
 - `<line-width>`
-
   - : 境界の幅を、明示的な非負の {{cssxref("&lt;length&gt;")}} またはキーワードで定義します。キーワードの場合、以下の値のいずれかでなければなりません。
-
     - `thin`
     - `medium`
     - `thick`

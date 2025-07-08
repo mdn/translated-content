@@ -43,7 +43,6 @@ _还从其父接口 {{domxref("HTMLElement")}} 继承方法。_
 - {{domxref("HTMLOutputElement.checkValidity()")}}
   - : 检查元素的有效性，返回一个保存检查结果的布尔值。
 - {{domxref("HTMLOutputElement.reportValidity()")}}
-
   - : 此方法报告元素约束的问题，如果有的话，报给用户。如果有问题，在当前元素上触发 {{domxref("HTMLInputElement/invalid_event", "invalid")}} 事件，且返回 `false`；如果没有问题，则返回 `true`。
 
     当报告问题时，用户代理可以聚焦元素并更改文档的滚动位置，或执行一些其它动作来引起用户的注意。如果此元素同时出现多个问题，用户代理可能报告多个约束违规。如果元素没有渲染，则用户代理可能报告正在允许的脚本错误，而不是通知用户。

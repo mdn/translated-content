@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Caching
 original_slug: Web/HTTP/Caching
 ---
 
-{{HTTPSidebar}}
-
 ## Visão geral
 
 O cache HTTP armazena uma resposta associada a uma solicitação e reutiliza a resposta armazenada para solicitações subsequentes.

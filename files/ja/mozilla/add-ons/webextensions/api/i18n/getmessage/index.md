@@ -19,9 +19,7 @@ browser.i18n.getMessage(
 ### 引数
 
 - `messageName`
-
   - : `文字列`。messages.json で指定されたメッセージ名です。messages.json 内にメッセージを見つけられない場合は:
-
     - Firefox は "" を返し、エラーログを出力します。
     - Chrome は "" を返し、エラーログを出力しません。
 

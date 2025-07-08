@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
 original_slug: Web/HTTP/Protocol_upgrade_mechanism
 ---
 
-{{HTTPSidebar}}
-
 El protocolo [HTTP](/en-US/HTTP) posee un mecanismo especifico para permitir que una conexión de comunicación ya establecida, pueda actualizar su protocolo a un nuevo protocolo, incluso si es incompatible. Este documento muestra este mecanismo y presenta ejemplos de posibles escenarios en los que se puede usar.
 
 Este mecanismo, siempre es iniciado por el cliente (con la única excepción de que el servidor use: [requerida actualización a TLS](#server-initiated_upgrade_to_tls)), y el servidor puede aceptar o rechazar el cambio al nuevo protocolo. Esto hace posible comenzar una conexión usando un protocolo de uso común, como puede ser HTTP/1.1, y posteriormente pedir un cambio de protocolo a HTTP/2.0 o incluso WebSockets.
@@ -250,7 +248,6 @@ If the client receiving the `"426 Upgrade Required"` response is willing and abl
 - [WebSocket API](/es/docs/Web/API/WebSocket)
 - [HTTP](/es/docs/Web/HTTP)
 - Especificaciones y RFCs:
-
   - {{RFC(2616)}}
   - {{RFC(6455)}}
   - {{RFC(2817)}}

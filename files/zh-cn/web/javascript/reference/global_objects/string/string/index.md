@@ -14,7 +14,8 @@ new String(thing)
 String(thing)
 ```
 
-> **备注：** `String()` 被调用时可以带或不带 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但会有不同的效果。请参见[返回值](#返回值)。
+> [!NOTE]
+> `String()` 被调用时可以带或不带 [`new`](/zh-CN/docs/Web/JavaScript/Reference/Operators/new)，但会有不同的效果。请参见[返回值](#返回值)。
 
 ### 参数
 

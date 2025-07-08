@@ -4,9 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src
 ---
 
-{{HTTPSidebar}}
-
-HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 JavaScript에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XSLT) 가 포함됩니다.
+HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`script-src`** 는 JavaScript에 대한 검증된 출처를 지정합니다. 여기에는 {{HTMLElement("script")}} 요소에서 직접 호출한 URL뿐만 아니라, 인라인 스크립트 이벤트 핸들러(`onclick`) 및 스크립트를 실행할 수 있는 [XSLT stylesheets](/ko/docs/Web/XML/XSLT) 가 포함됩니다.
 
 <table class="properties">
   <tbody>
@@ -126,7 +124,6 @@ Content-Security-Policy: script-src 'sha256-B2yPHKaXnvFWtRChIbabYmUBFZdVfKKXHbWt
 - [`Function()`](/ko/docs/Web/JavaScript/Reference/Global_Objects/Function)
 - 아래와 같이 문자열 리터럴을 전달할 때 :
   `window.setTimeout("alert(\"Hello World!\");", 500);`
-
   - {{domxref("window.setTimeout")}}
   - {{domxref("window.setInterval")}}
   - {{domxref("window.setImmediate")}}

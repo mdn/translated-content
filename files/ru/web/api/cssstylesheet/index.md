@@ -16,7 +16,6 @@ slug: Web/API/CSSStyleSheet
 _Inherits properties from its parent, {{domxref("StyleSheet")}}._
 
 - {{domxref("CSSStyleSheet.cssRules")}}
-
   - : Returns a live {{domxref("CSSRuleList")}}, listing the {{domxref("CSSRule")}} objects in the style sheet.
     This is normally used to access individual rules like this:
 

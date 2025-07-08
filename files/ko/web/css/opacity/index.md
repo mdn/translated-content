@@ -43,7 +43,7 @@ opacity: 1;
 
 `opacity`는 요소의 내용을 포함해 모든 곳에 영향을 주지만 자식 요소가 상속하지는 않습니다. 따라서 요소와 자식의 투명도가 서로 다르더라도 배경에 대해서는 상대적으로 같은 투명도를 갖습니다.
 
-`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context)에 배치합니다.
+`opacity` 값이 `1`이 아니면 요소를 새로운 [쌓임 맥락](/ko/docs/Web/CSS/CSS_positioned_layout/Stacking_context)에 배치합니다.
 
 자식 요소는 불투명하게 유지하고 싶다면 {{cssxref("background")}} 속성을 대신 사용하세요.
 
@@ -56,7 +56,6 @@ background: rgba(0, 0, 0, 0.4);
 ### 값
 
 - `<alpha-value>`
-
   - : 채널의 불투명도(알파 채널의 값)를 나타내는 `0.0` 이상 `1.0` 이하의 {{cssxref("number")}}, 또는 0% 이상 100% 이하의 {{cssxref("percentage")}}. 범위 밖의 숫자는 구문 상 유효하지만, 실제 적용 시에는 범위에 맞춰 나머지 값은 버려집니다.
 
     | 값                               | 뜻                                      |

@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_f
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 ---
 
-{{HTTPSidebar}}
-
 **プロキシー自動設定 (Proxy Auto-Configuration, PAC)** ファイルは、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシーサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。
 
 ```js
@@ -94,7 +92,6 @@ application/x-ns-proxy-autoconfig
 PAC ファイルを作成するために、以下の関数を使用できます。
 
 - ホスト名に基づく条件
-
   - [`isPlainHostName()`](#isplainhostname)
   - [`dnsDomainIs()`](#dnsdomainis)
   - [`localHostOrDomainIs()`](#localhostordomainis)
@@ -102,28 +99,23 @@ PAC ファイルを作成するために、以下の関数を使用できます�
   - [`isInNet()`](#isinnet)
 
 - 関連するユーティリティー関数
-
   - [`dnsResolve()`](#dnsresolve)
   - [`convert_addr()`](#convert_addr)
   - [`myIpAddress()`](#myipaddress)
   - [`dnsDomainLevels()`](#dnsdomainlevels)
 
 - URL/ホスト名に基づく条件
-
   - [`shExpMatch()`](#shexpmatch)
 
 - 時刻に基づく条件
-
   - [`weekdayRange()`](#weekdayrange)
   - [`dateRange()`](#daterange)
   - [`timeRange()`](#timerange)
 
 - ログ用ユーティリティ
-
   - [`alert()`](#alert)
 
 - 以前は JavaScript コードが自分自身で定義することができなかったため、定義済みの連想配列 (オブジェクト) が一つ用意されていました。
-
   - `ProxyConfig.bindings` {{deprecated_inline}}
 
 > [!NOTE]

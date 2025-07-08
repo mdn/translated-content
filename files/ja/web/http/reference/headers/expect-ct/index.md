@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expect-CT
 original_slug: Web/HTTP/Headers/Expect-CT
 ---
 
-{{HTTPSidebar}}
-
 `Expect-CT` ヘッダーは、サイトが[証明書の透明性](/ja/docs/Web/Security/Certificate_Transparency)の要件の報告や強制に参加して、サイトの不正な認証情報の使用が通知されない状態を防ぐことができます。
 
 CT の要件は、以下のいずれかの仕組みで満たすことができます。
@@ -50,19 +48,16 @@ Expect-CT: report-uri="<uri>",
 ## ディレクティブ
 
 - `max-age`
-
   - : `Expect-CT` ヘッダーフィールドを受信した後で、ユーザーエージェントがメッセージを受信したホストを、既知の Expect-CT ホストと見なすべき時間を秒数で指定します。
 
     キャッシュが表現可能な値よりも大きな値を受信した場合や、計算でオーバーフローが発生した場合、キャッシュは値を 2,147,483,648 (2^31) または使用している表現方法で最も大きな整数値とみなします。
 
 - `report-uri="<uri>"` {{optional_inline}}
-
   - : ユーザーエージェントが `Expect-CT` の失敗を報告する URI を指定します。
 
     `enforce` ディレクティブと `report-uri` ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに証明書の透明性ポリシーに従い、違反を報告することを指示します。
 
 - `enforce` {{optional_inline}}
-
   - : ユーザーエージェントに (報告するだけでなく) 証明書の透明性ポリシーに従い、ユーザーエージェントが証明書の透明性ポリシーに違反するコネクションを拒否するよう指示します。
 
     `enforce` ディレクティブと `report-uri` ディレクティブが両方ともある場合、設定は "enforce-and-report" の設定と呼ばれ、ユーザーエージェントに証明書の透明性ポリシーに従い、違反を報告することを指示します。

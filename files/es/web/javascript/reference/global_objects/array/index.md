@@ -418,7 +418,6 @@ da como resultado:
 ## Ver también
 
 - En la Guía de JavaScript:
-
   - ["Propiedades indexadas de un objeto"](/es/docs/Web/JavaScript/Guide/Working_with_objects#indexing_object_properties)
   - ["Colecciones con índice: objeto Array"](/es/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 

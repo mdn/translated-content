@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Retry-After
 original_slug: Web/HTTP/Headers/Retry-After
 ---
 
-{{HTTPSidebar}}
-
 **`Retry-After`** レスポンス HTTP ヘッダーは、ユーザーエージェントがフォローアップリクエストを行う前にどれくらい待つべきかを示します。このヘッダーが使用される主なケースは 3 つあります。
 
 - {{HTTPStatus(503)}} (Service Unavailable) レスポンスで送信された場合、これはサービスが利用できないと予想される期間を示します。

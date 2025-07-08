@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSNotSupportingCredentials
 original_slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 ---
 
-{{HTTPSidebar}}
-
 ## 원인
 
 ```plain
@@ -26,6 +24,6 @@ original_slug: Web/HTTP/CORS/Errors/CORSNotSupportingCredentials
 
 ## 같이 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)

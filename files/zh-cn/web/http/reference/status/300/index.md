@@ -3,8 +3,6 @@ title: 300 Multiple Choices
 slug: Web/HTTP/Reference/Status/300
 ---
 
-{{HTTPSidebar}}
-
 **`300 Multiple Choices`** 是一个用来表示重定向的响应状态码，表示该请求拥有多种可能的响应。用户代理或者用户自身应该从中选择一个。由于没有如何进行选择的标准方法，这个状态码极少使用。
 
 假如服务器可以提供一个优先选择，那么它应该生成一个 {{HTTPHeader("Location")}} 首部。
