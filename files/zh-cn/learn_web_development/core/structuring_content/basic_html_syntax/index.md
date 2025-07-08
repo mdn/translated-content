@@ -282,11 +282,11 @@ This is my text.
 
 1. `<!doctype html>`：文档类型声明（doctype）。在 HTML 早期（1991-1992 年），doctypes 旨在作为一套规则的链接，HTML 页面必须遵循这些规则才能被认为是好的 HTML。过去的 Doctypes 看起来像这样：
 
-    ```html
-    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-    ```
+   ```html
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+   ```
 
-    最近，doctype 成为了一个历史遗留物，为了让其他一切正常工作而必须包含它。`<!doctype html>` 是算作有效 doctype 的最短字符序列。你只需要知道这些！
+   最近，doctype 成为了一个历史遗留物，为了让其他一切正常工作而必须包含它。`<!doctype html>` 是算作有效 doctype 的最短字符序列。你只需要知道这些！
 
 2. `<html></html>`：{{htmlelement("html")}} 元素。这个元素包裹了页面上的所有内容。它有时被称为根元素。
 3. `<head></head>`：{{htmlelement("head")}} 元素。这个元素充当一个容器，用于存放你想包含在 HTML 页面中但**不向**页面浏览者显示的内容。这包括会出现在搜索结果中的关键字和页面描述、用于样式化内容的 CSS、字符集声明等等。你将在本系列的下一篇文章中学到更多相关内容。
