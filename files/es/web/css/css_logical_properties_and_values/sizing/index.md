@@ -54,4 +54,5 @@ El valor de la palabra clave de `both` para la propiedad de cambio de tamaño fu
 
 {{EmbedGHLiveSample("css-examples/logical/size-resize.html", "100%", 700)}}
 
-> **Advertencia:** **Nota:** Tenga en cuenta que actualmente los valores lógicos para el cambio de tamaño solo son compatibles con Firefox.
+> [!WARNING]
+> Tenga en cuenta que actualmente los valores lógicos para el cambio de tamaño solo son compatibles con Firefox.
