@@ -39,7 +39,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("E
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
   - : 回傳請求的 [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
-  - : 回傳一個字串，其中包含 HTTP 伺服器回傳的回應字串。與 {{domxref("XMLHttpRequest.status")}} 不同，這包含回應訊息的完整文字（例如 `「OK」`）。
+  - : 回傳一個字串，其中包含 HTTP 伺服器回傳的回應字串。與 {{domxref("XMLHttpRequest.status")}} 不同，這包含回應訊息的完整文字（例如 `"OK"`）。
 
     > [!NOTE]
     > 根據 HTTP/2 規範 {{RFC(7540, "Response Pseudo-Header Fields", "8.1.2.4")}}，HTTP/2 並未定義一種方法來攜帶 HTTP/1.1 狀態行中包含的版本或原因短語。
