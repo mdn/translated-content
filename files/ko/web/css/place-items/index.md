@@ -2,7 +2,7 @@
 title: place-items
 slug: Web/CSS/place-items
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
 {{CSSRef}}
