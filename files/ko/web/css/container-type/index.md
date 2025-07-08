@@ -1,8 +1,6 @@
 ---
 title: container-type
 slug: Web/CSS/container-type
-page-type: css-property
-browser-compat: css.properties.container-type
 ---
 
 {{CSSRef}}
