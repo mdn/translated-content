@@ -25,5 +25,5 @@ INP 测量用户在网页上交互后，处理完该交互并展示下一个帧�
 - [长动画帧计时](/zh-CN/docs/Web/API/Performance_API/Long_animation_frame_timing)
 - [PerformanceEventTiming](/zh-CN/docs/Web/API/PerformanceEventTiming)
 - web.developer.google.cn 上的 [INP](https://web.developers.google.cn/articles/inp)（2023）
-- web.developer.google.cn 上的 [优化交互至下一次绘制](https://web.developers.google.cn/articles/optimize-inp)（2023）
+- web.developer.google.cn 上的[优化交互至下一次绘制](https://web.developers.google.cn/articles/optimize-inp)（2023）
 - web.developer.google.cn 上的 [INP 正式成为核心 Web 指标](https://web.developers.google.cn/blog/inp-cwv-launch)（2024）
