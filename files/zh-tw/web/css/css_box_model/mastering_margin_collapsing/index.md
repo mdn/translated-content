@@ -14,7 +14,7 @@ l10n:
 - 相鄰的同層級元素
   - : 相鄰同層級元素的外距會摺疊（除非後面的同層級元素需要[清除](/zh-TW/docs/Web/CSS/clear)浮動）。
 - 沒有內容分隔父元素和後代元素
-  - : 如果沒有邊框、內距、行內部分、建立的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)或[*清除*](/zh-TW/docs/Web/CSS/clear)來分隔區塊的 {{cssxref("margin-top")}} 與其一個或多個後代區塊的 {{cssxref("margin-top")}}；或者沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔區塊的 {{cssxref("margin-bottom")}} 與其一個或多個後代區塊的 {{cssxref("margin-bottom")}}，那麼這些外距就會摺疊。摺疊後的外距最終會跑到父元素外面。
+  - : 如果沒有邊框、內距、行內部分、建立的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)或[_清除_](/zh-TW/docs/Web/CSS/clear)來分隔區塊的 {{cssxref("margin-top")}} 與其一個或多個後代區塊的 {{cssxref("margin-top")}}；或者沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔區塊的 {{cssxref("margin-bottom")}} 與其一個或多個後代區塊的 {{cssxref("margin-bottom")}}，那麼這些外距就會摺疊。摺疊後的外距最終會跑到父元素外面。
 - 空區塊
   - : 如果沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔一個區塊的 {{cssxref("margin-top")}} 和其 {{cssxref("margin-bottom")}}，那麼它的上外距和下外距就會摺疊。
 
@@ -33,18 +33,12 @@ l10n:
 
 ```html
 <p>此段落的下外距被摺疊…</p>
-<p>
-  …與此段落的上外距一起，產生了 <code>1.2rem</code> 的間距。
-</p>
+<p>…與此段落的上外距一起，產生了 <code>1.2rem</code> 的間距。</p>
 
 <div>
   這個父元素包含兩個段落！
-  <p>
-    此段落與上方文字之間有 <code>.4rem</code> 的外距。
-  </p>
-  <p>
-    我的下外距與父元素摺疊，產生了 <code>2rem</code> 的下外距。
-  </p>
+  <p>此段落與上方文字之間有 <code>.4rem</code> 的外距。</p>
+  <p>我的下外距與父元素摺疊，產生了 <code>2rem</code> 的下外距。</p>
 </div>
 
 <p>我在上方元素的下方 <code>2rem</code> 處。</p>
