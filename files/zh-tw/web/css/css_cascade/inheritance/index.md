@@ -14,7 +14,7 @@ CSS 屬性可以分為兩種類型：
 - **繼承屬性**，預設會設定為其父元素的[計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)。
 - **非繼承屬性**，預設會設定為該屬性的[初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)。
 
-請參閱[任何 CSS 屬性](/zh-TW/docs/Web/CSS/Reference#index)的定義，以查看特定屬性預設是否繼承（「Inherited: yes」）或不繼承（「Inherited: no」）。
+請參閱[任何 CSS 屬性](/zh-TW/docs/Web/CSS/Reference#索引)的定義，以查看特定屬性預設是否繼承（「Inherited: yes」）或不繼承（「Inherited: no」）。
 
 ## 繼承屬性
 
