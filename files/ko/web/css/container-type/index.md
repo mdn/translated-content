@@ -1,6 +1,8 @@
 ---
 title: container-type
 slug: Web/CSS/container-type
+l10n:
+  sourceCommit: 63cbf204323f117a2a80c7aa6273e50253ab9d07
 ---
 
 {{CSSRef}}
