@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}
 
-**_簡寫屬性_**是能讓你同時設定多個其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，你可以撰寫更簡潔（且通常更具可讀性）的樣式表，節省時間和精力。
+***簡寫屬性***是能讓你同時設定多個其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，你可以撰寫更簡潔（且通常更具可讀性）的樣式表，節省時間和精力。
 
 CSS 規範定義了簡寫屬性，以將作用於相同主題的通用屬性定義分組。例如，CSS 的 {{cssxref("background")}} 屬性是一個簡寫屬性，能夠定義 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 的值。同樣地，最常見的字型相關屬性可以使用簡寫屬性 {{cssxref("font")}} 來定義，而盒周圍的不同外距則可以使用 {{cssxref("margin")}} 簡寫屬性來定義。
 
