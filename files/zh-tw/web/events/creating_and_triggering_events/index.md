@@ -80,7 +80,7 @@ function eventHandler(e) {
 }
 ```
 
-### 事件氣泡
+### 事件冒泡
 
 我們通常會希望從子元素觸發事件，並讓祖先元素捕捉它；也可以選擇性地傳遞資料：
 
@@ -94,7 +94,7 @@ function eventHandler(e) {
 const form = document.querySelector("form");
 const textarea = document.querySelector("textarea");
 
-// 建立一個新事件，允許氣泡傳遞，並提供任何你想傳遞到「detail」屬性的資料
+// 建立一個新事件，允許冒泡傳遞，並提供任何你想傳遞到「detail」屬性的資料
 const eventAwesome = new CustomEvent("awesome", {
   bubbles: true,
   detail: { text: () => textarea.value },
