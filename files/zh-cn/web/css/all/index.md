@@ -36,7 +36,8 @@ all: revert;
   <div class="example-container-bg">
     <div class="example-container">
       <p id="example-element">
-        该段的字体大小为 1.5rem，颜色为金色。用户代理还为其设置了 1rem 的垂直边距。段落的父级是一个蓝色虚线边框的 &lt;div&gt;。
+        该段的字体大小为 1.5rem，颜色为金色。用户代理还为其设置了 1rem
+        的垂直边距。段落的父级是一个蓝色虚线边框的 &lt;div&gt;。
       </p>
     </div>
   </div>
@@ -89,7 +90,7 @@ all: revert-layer;
   - : 如果是默认继承值，则指定元素的所有属性更改为继承值；如果不是默认继承值，则指定元素的所有属性更改为初始值。
 - {{cssxref("revert")}}
   - : 指定依赖于声明所属的样式表来源的行为：
-    - 如果规则属于[作者来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#作者样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户级别、 以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为该元素指定作者级别的规则一样。就“还原”而言，作者来源包括覆盖来源和动画来源。
+    - 如果规则属于[作者来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#作者样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户级别，以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为该元素指定作者级别的规则一样。就“还原”而言，作者来源包括覆盖来源和动画来源。
     - 如果规则属于[用户来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户样式表)，则 `revert` 值会将[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)回滚到用户代理级别，以便计算[指定值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#指定值)，就像没有为元素指定作者级或用户级规则一样。
     - 如果规则属于[用户代理来源](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade#用户代理样式表)，则 `revert` 值的作用类似于 `unset`。
 - {{cssxref("revert-layer")}}
@@ -262,7 +263,7 @@ blockquote {
 
 {{EmbedLiveSample("e._all_revert", "200", "125")}}
 
-当 `blockquote` 规则中的 `all` 属性设置为 `revert` 时，`blockquote` 规则将被视为不存在，其样式属性值将继承应用于父元素 `<body>` 的属性值。因此，`<blockquote>` 元素会被样式化为*块级*元素，并具有 {{cssxref("background-color")}} `#F0F0F0、{{cssxref("font-size")}} `small` 和 {{cssxref("color")}} `blue`——所有值均继承自 `body` 规则。
+当 `blockquote` 规则中的 `all` 属性设置为 `revert` 时，`blockquote` 规则将被视为不存在，其样式属性值将继承应用于父元素 `<body>` 的属性值。因此，`<blockquote>` 元素会被样式化为*块级*元素，并具有 {{cssxref("background-color")}} `#F0F0F0`、{{cssxref("font-size")}} `small` 和 {{cssxref("color")}} `blue`——所有值均继承自 `body` 规则。
 
 #### F. `all: revert-layer`
 
