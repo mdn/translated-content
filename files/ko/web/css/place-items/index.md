@@ -65,11 +65,9 @@ place-items: end center;
 ## 구문
 
 ```css
-/* 키워드 값 */
+/* 위치 정렬 */
 place-items: center;
 place-items: normal start;
-
-/* 위치 정렬 */
 place-items: center normal;
 place-items: start legacy;
 place-items: end normal;
