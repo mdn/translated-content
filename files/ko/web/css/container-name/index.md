@@ -7,25 +7,25 @@ browser-compat: css.properties.container-name
 
 {{CSSRef}}
 
-The **container-name** [CSS](/ko/docs/Web/CSS) property specifies a list of query container names used by the [@container](/ko/docs/Web/CSS/@container) at-rule in a [container query](/ko/docs/Web/CSS/CSS_containment/Container_queries).
-A container query will apply styles to elements based on the [size](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries) or [scroll-state](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries) of the nearest ancestor with a containment context.
-When a containment context is given a name, it can be specifically targeted using the {{Cssxref("@container")}} at-rule instead of the nearest ancestor with containment.
+**container-name** [CSS](/ko/docs/Web/CSS) 속성은 [컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)에서 [@container](/ko/docs/Web/CSS/@container) @-규칙에 사용되는 쿼리 컨테이너 이름의 목록을 지정합니다.
+컨테이너 쿼리는 가장 가까운 컨테인먼트 컨텍스트 조상 요소의 [크기](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries#container_size_queries)나 [스크롤 상태](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)에 따라 요소에 스타일을 적용합니다.
+컨테인먼트 컨텍스트에 이름을 지정하면, 단순히 가장 가까운 조상 대신 해당 이름을 사용해 {{Cssxref("@container")}} @-규칙으로 구체적으로 타겟팅할 수 있습니다.
 
 > [!NOTE]
-> When using the {{cssxref("container-type")}} and `container-name` properties, the `style` and `layout` values of the {{cssxref("contain")}} property are automatically applied.
+> {{cssxref("container-type")}}과 `container-name` 속성을 사용할 때는 {{cssxref("contain")}} 속성의 `style`과 `layout` 값이 자동으로 적용됩니다.
 
-## Syntax
+## 구문
 
 ```css
 container-name: none;
 
-/* A single name */
+/* 하나의 이름 */
 container-name: myLayout;
 
-/* Multiple names */
+/* 여러 개의 이름 */
 container-name: myPageLayout myComponentLibrary;
 
-/* Global Values */
+/* 전역 값 */
 container-name: inherit;
 container-name: initial;
 container-name: revert;
@@ -33,32 +33,32 @@ container-name: revert-layer;
 container-name: unset;
 ```
 
-### Values
+### 값
 
 - `none`
-  - : Default value. The query container has no name.
+  - : 기본값입니다. 쿼리 컨테이너에 이름이 지정되지 않습니다.
 
 - {{cssxref("custom-ident")}}
-  - : A case-sensitive string that is used to identify the container.
-    The following conditions apply:
-    - The name must not equal `or`, `and`, `not`, or `default`.
-    - The name value must not be in quotes.
-    - The dashed ident intended to denote author-defined identifiers (e.g., `--container-name`) is permitted.
-    - A list of multiple names separated by a space is allowed.
+  - : 컨테이너를 식별하는 데 사용되는 대소문자를 구분하는 문자열입니다.
+    다음과 같은 조건이 적용됩니다.
+    - 이름은 `or`, `and`, `not`, `default`와 같아서는 안 됩니다.
+    - 이름 값은 따옴표로 감싸면 안 됩니다.
+    - 대시(-)가 포함된 식별자(작성자가 정의한 식별자)는 사용할 수 있습니다. (예시: `--container-name`)
+    - 공백으로 구분된 여러 개의 이름을 나열할 수 있습니다.
 
-## Formal definition
+## 형식 정의
 
 {{CSSInfo}}
 
-## Formal syntax
+## 형식 구문
 
 {{CSSSyntax}}
 
-## Examples
+## 예제
 
-### Using a container name
+### 컨테이너 이름 사용하기
 
-Given the following HTML example which is a card component with a title and some text:
+다음은 제목과 텍스트로 구성된 카드 컴포넌트의 HTML 예시입니다.
 
 ```html
 <div class="card">
@@ -74,11 +74,11 @@ Given the following HTML example which is a card component with a title and some
 </div>
 ```
 
-To create a containment context, add the `container-type` property to an element in CSS.
-The following example creates two containment contexts, one for the card meta information and one for the post excerpt:
+컨테인먼트 컨텍스트를 생성하려면 CSS에서 요소에 `container-type` 속성을 추가하면 됩니다.
+아래 예시는 카드의 메타 정보와 게시글 요약 두 부분에 각각 컨테인먼트 컨텍스트를 생성하는 방법을 보여줍니다.
 
 > [!NOTE]
-> A shorthand syntax for these declarations are described in the {{cssxref("container")}} page.
+> 이러한 선언을 위한 축약형 문법은 {{cssxref("container")}} 페이지에서 설명되어 있습니다.
 
 ```css
 .post-meta {
@@ -91,8 +91,8 @@ The following example creates two containment contexts, one for the card meta in
 }
 ```
 
-Writing a container query via the {{Cssxref("@container")}} at-rule will apply styles to the elements of the container when the query evaluates to true.
-The following example has two container queries, one that will apply only to the contents of the `.post-excerpt` element and one that will apply to both the `.post-meta` and `.post-excerpt` contents:
+{{Cssxref("@container")}} @-규칙을 사용해 컨테이너 쿼리를 작성하면, 쿼리의 조건이 참일 때 해당 컨테이너의 요소에 스타일이 적용됩니다.
+아래 예시는 두 개의 컨테이너 쿼리를 보여주는데, 하나는 `.post-excerpt` 요소의 내용에만 적용되고, 다른 하나는 `.post-meta`와 `.post-excerpt`의 내용 모두에 적용됩니다.
 
 ```css
 @container excerpt (width >= 400px) {
@@ -108,11 +108,11 @@ The following example has two container queries, one that will apply only to the
 }
 ```
 
-For more information on writing container queries, see the [CSS Container Queries](/ko/docs/Web/CSS/CSS_containment/Container_queries) page.
+컨테이너 쿼리 작성에 대한 더 자세한 내용은 [CSS 컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries) 페이지를 참고하세요.
 
-### Using multiple container names
+### 여러 개의 컨테이너 이름 사용하기
 
-You can also provide multiple names to a container context separated by a space:
+컨테이너 컨텍스트에 여러 개의 이름을 공백으로 구분하여 지정할 수도 있습니다.
 
 ```css
 .post-meta {
@@ -121,8 +121,8 @@ You can also provide multiple names to a container context separated by a space:
 }
 ```
 
-This will allow you to target the container using either name in the {{cssxref("@container")}} at-rule.
-This is useful if you want to target the same container with multiple container queries where either condition could be true:
+이렇게 하면 {{cssxref("@container")}} @-규칙에서 두 이름 중 어느 것이든 사용해 컨테이너를 선택할 수 있습니다.
+이는 여러 컨테이너 쿼리에서 각각 다른 조건으로 같은 컨테이너를 타겟팅하고 싶을 때 유용합니다.
 
 ```css
 @container meta (width <= 500px) {
@@ -138,20 +138,20 @@ This is useful if you want to target the same container with multiple container 
 }
 ```
 
-## Specifications
+## 명세서
 
 {{Specifications}}
 
-## Browser compatibility
+## 브라우저 호환성
 
 {{Compat}}
 
-## See also
+## 같이 보기
 
-- [CSS container queries](/ko/docs/Web/CSS/CSS_containment/Container_queries)
-- [Using container size and style queries](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
-- [Using container scroll-state queries](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
-- {{Cssxref("@container")}} at-rule
-- CSS {{Cssxref("container")}} shorthand property
-- CSS {{Cssxref("container-type")}} property
-- CSS {{cssxref("content-visibility")}} property
+- [CSS 컨테이너 쿼리](/ko/docs/Web/CSS/CSS_containment/Container_queries)
+- [컨테이너 크기 및 스타일 쿼리 사용하기](/ko/docs/Web/CSS/CSS_containment/Container_size_and_style_queries)
+- [컨테이너 스크롤 상태 쿼리 사용하기](/ko/docs/Web/CSS/CSS_conditional_rules/Container_scroll-state_queries)
+- {{Cssxref("@container")}} @-규칙
+- CSS {{Cssxref("container")}} 축약형 속성
+- CSS {{Cssxref("container-type")}} 속성
+- CSS {{cssxref("content-visibility")}} 속성
