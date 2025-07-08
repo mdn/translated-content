@@ -32,7 +32,6 @@ l10n:
   </tbody>
 </table>
 
-
 ## 什么是 HTML？
 
 {{glossary("HTML")}}（HyperText Markup Language，超文本标记语言）是一种*标记语言*，它告诉 Web 浏览器如何组织你访问的网页。它可以像 Web 开发者希望的那样复杂或简单。HTML 由一系列的{{glossary("Element", "元素")}}组成，你使用这些元素来包围、包装或*标记*内容的不同部分，使其以某种方式显示或运作。闭合的{{glossary("Tag", "标签")}}可以使内容成为一个连接到其他页面的超链接、将文字变为斜体等等。例如，考虑下面这行文本：
@@ -75,9 +74,9 @@ HTML 存在于扩展名为 `.html` 的文本文件中，这种文件被称为 **
 
 让我们来练习编写你自己的 HTML 元素：
 
-1.  点击下面代码块中的**“Play”**在 MDN Playground 中编辑示例。
-2.  用 `<em>` 和 `</em>` 标签包裹这行文本。要*打开元素*，请将开始标签 `<em>` 放在行的开头。要*关闭元素*，请将结束标签 `</em>` 放在行的末尾。这样做应该会使输出面板中渲染的文本变为斜体格式。
-3.  如果你想挑战一下，可以尝试查找更多 HTML 元素并将其应用于文本示例。
+1. 点击下面代码块中的**“Play”**在 MDN Playground 中编辑示例。
+2. 用 `<em>` 和 `</em>` 标签包裹这行文本。要*打开元素*，请将开始标签 `<em>` 放在行的开头。要*关闭元素*，请将结束标签 `</em>` 放在行的末尾。这样做应该会使输出面板中渲染的文本变为斜体格式。
+3. 如果你想挑战一下，可以尝试查找更多 HTML 元素并将其应用于文本示例。
 
 如果你犯了错误，可以使用 MDN Playground 中的*“Reset”*按钮清除你的工作。如果你实在卡住了，可以查看代码块下方的解决方案。
 
@@ -143,26 +142,26 @@ This is my text.
 
 一个属性应该有：
 
--   一个在它和元素名之间的空格。（对于拥有多个属性的元素，属性之间也应该用空格分隔。）
--   属性名，后跟一个等号。
--   一个属性值，用开始和结束的引号包裹。
+- 一个在它和元素名之间的空格。（对于拥有多个属性的元素，属性之间也应该用空格分隔。）
+- 属性名，后跟一个等号。
+- 一个属性值，用开始和结束的引号包裹。
 
 ### 为元素添加属性
 
 现在又轮到你了。在这一节中，我们将让你向 `<img>` 元素添加属性，以便在页面上显示一张图片。`<img>` 元素可以接受多个属性，包括：
 
--   `src`：一个**必需**的属性，指定图像的位置。例如：`src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`。
--   `alt`：图像的文本描述。例如：`alt="Firefox 图标"`。
--   `width`：图像的宽度，单位为像素。例如：`width="300"`。
--   `height`：图像的高度，单位为像素。例如：`height="300"`。
+- `src`：一个**必需**的属性，指定图像的位置。例如：`src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`。
+- `alt`：图像的文本描述。例如：`alt="Firefox 图标"`。
+- `width`：图像的宽度，单位为像素。例如：`width="300"`。
+- `height`：图像的高度，单位为像素。例如：`height="300"`。
 
 按照以下步骤完成任务：
 
-1.  点击下面代码块中的**“Play”**在 MDN Playground 中编辑示例。
-2.  在网上找到你最喜欢的图片，右键单击它，然后按*复制图片链接/地址*。
-3.  回到 MDN Playground，将 `src` 属性添加到 `<img>` 元素，并将其值设置为第 2 步中的链接。
-4.  将 `alt` 属性设置为对图片的适当描述。
-5.  将 `width` 属性设置为一个值，比如 `300`，这样你可以在输出面板中更好地看到图片。如果需要可以进行调整。
+1. 点击下面代码块中的**“Play”**在 MDN Playground 中编辑示例。
+2. 在网上找到你最喜欢的图片，右键单击它，然后按*复制图片链接/地址*。
+3. 回到 MDN Playground，将 `src` 属性添加到 `<img>` 元素，并将其值设置为第 2 步中的链接。
+4. 将 `alt` 属性设置为对图片的适当描述。
+5. 将 `width` 属性设置为一个值，比如 `300`，这样你可以在输出面板中更好地看到图片。如果需要可以进行调整。
 
 如果你犯了错误，可以使用 MDN Playground 中的*“Reset”*按钮清除你的工作。如果你实在卡住了，可以查看代码块下方的解决方案。
 
@@ -265,6 +264,7 @@ This is my text.
 ## 剖析一个 HTML 文档
 
 单个的 HTML 元素本身并不是很有用。接下来，让我们看看单个元素如何组合成一个完整的 HTML 页面：
+
 ```html
 <!doctype html>
 <html lang="zh-CN">
@@ -280,7 +280,7 @@ This is my text.
 
 这里我们有：
 
-1.  `<!doctype html>`：文档类型声明（doctype）。在 HTML 早期（1991-1992 年），doctypes 旨在作为一套规则的链接，HTML 页面必须遵循这些规则才能被认为是好的 HTML。过去的 Doctypes 看起来像这样：
+1. `<!doctype html>`：文档类型声明（doctype）。在 HTML 早期（1991-1992 年），doctypes 旨在作为一套规则的链接，HTML 页面必须遵循这些规则才能被认为是好的 HTML。过去的 Doctypes 看起来像这样：
 
     ```html
     <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -288,25 +288,26 @@ This is my text.
 
     最近，doctype 成为了一个历史遗留物，为了让其他一切正常工作而必须包含它。`<!doctype html>` 是算作有效 doctype 的最短字符序列。你只需要知道这些！
 
-2.  `<html></html>`：{{htmlelement("html")}} 元素。这个元素包裹了页面上的所有内容。它有时被称为根元素。
-3.  `<head></head>`：{{htmlelement("head")}} 元素。这个元素充当一个容器，用于存放你想包含在 HTML 页面中但**不向**页面浏览者显示的内容。这包括会出现在搜索结果中的关键字和页面描述、用于样式化内容的 CSS、字符集声明等等。你将在本系列的下一篇文章中学到更多相关内容。
-4.  `<meta charset="utf-8">`：{{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素（如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}）表示的元数据。[`charset`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset) 属性将你的文档的字符编码指定为 UTF-8，它包含了绝大多数人类书面语言的字符。通过这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不设置它，而且它可以帮助避免以后的一些问题。
-5.  `<title></title>`：{{htmlelement("title")}} 元素。它设置了页面的标题，这个标题会出现在加载该页面的浏览器标签页中。当页面被收藏为书签时，页面标题也用于描述该页面。
-6.  `<body></body>`：{{htmlelement("body")}} 元素。它包含了在页面上显示的*所有*内容，包括文本、图像、视频、游戏、可播放的音轨或其他任何东西。
+2. `<html></html>`：{{htmlelement("html")}} 元素。这个元素包裹了页面上的所有内容。它有时被称为根元素。
+3. `<head></head>`：{{htmlelement("head")}} 元素。这个元素充当一个容器，用于存放你想包含在 HTML 页面中但**不向**页面浏览者显示的内容。这包括会出现在搜索结果中的关键字和页面描述、用于样式化内容的 CSS、字符集声明等等。你将在本系列的下一篇文章中学到更多相关内容。
+4. `<meta charset="utf-8">`：{{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素（如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}）表示的元数据。[`charset`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset) 属性将你的文档的字符编码指定为 UTF-8，它包含了绝大多数人类书面语言的字符。通过这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不设置它，而且它可以帮助避免以后的一些问题。
+5. `<title></title>`：{{htmlelement("title")}} 元素。它设置了页面的标题，这个标题会出现在加载该页面的浏览器标签页中。当页面被收藏为书签时，页面标题也用于描述该页面。
+6. `<body></body>`：{{htmlelement("body")}} 元素。它包含了在页面上显示的*所有*内容，包括文本、图像、视频、游戏、可播放的音轨或其他任何东西。
 
 ### 为 HTML 文档添加一些功能
 
 此时，我们希望你练习编写一些稍微丰富一点的 HTML 内容。要做到这一点，你有两个选择——你可以在本地计算机上创建 HTML，或者像前面的例子一样使用 MDN Playground。
 
--   在本地计算机上操作：
-    1.  复制上一节中列出的 HTML 页面示例，并将其粘贴到你的代码编辑器的新文件中。
-    2.  按照下面的说明对页面进行更改。
-    3.  将文件另存为 `index.html`，然后在新的浏览器标签页中加载它以查看结果。
+- 在本地计算机上操作：
+  1. 复制上一节中列出的 HTML 页面示例，并将其粘贴到你的代码编辑器的新文件中。
+  2. 按照下面的说明对页面进行更改。
+  3. 将文件另存为 `index.html`，然后在新的浏览器标签页中加载它以查看结果。
 
-    > [!NOTE]
-    > 你也可以在我们的 GitHub 仓库中找到这个[基础 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)。你可以复制这个文件，而不是自己创建。
+  > [!NOTE]
+  > 你也可以在我们的 GitHub 仓库中找到这个[基础 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)。你可以复制这个文件，而不是自己创建。
 
--   在 MDN Playground 中操作，点击下面的输出面板中的**“Play”**来编辑示例，然后按照以下说明操作。如果你犯了错误，可以使用 MDN Playground 中的*“Reset”*按钮清除你的工作。
+- 在 MDN Playground 中操作，点击下面的输出面板中的**“Play”**来编辑示例，然后按照以下说明操作。如果你犯了错误，可以使用 MDN Playground 中的*“Reset”*按钮清除你的工作。
+
 ```html hidden live-sample___basic_html_3
 <!doctype html>
 <html lang="zh-CN">
@@ -324,18 +325,21 @@ This is my text.
 
 以下是要遵循的说明：
 
-1.  在 {{htmlelement("body")}} 元素的开始标签正下方，为文档添加一个主标题。这应该被包裹在 `<h1>` 开始标签和 `</h1>` 结束标签内。
-2.  编辑段落内容，使其包含一些你感兴趣的话题的文本。
-3.  通过将重要的词语包裹在 {{htmlelement("strong")}} 元素内，使其以粗体突出显示。
-4.  在你的段落中添加两个链接。这是通过使用 {{htmlelement("a")}} 元素实现的。
-5.  在你的文档中添加一张图片，如[本文前面所述](#为元素添加属性)。将其放在段落下方。如果图片太大看不清，可以给它添加一个 `width` 属性来缩小它。
+1. 在 {{htmlelement("body")}} 元素的开始标签正下方，为文档添加一个主标题。这应该被包裹在 `<h1>` 开始标签和 `</h1>` 结束标签内。
+2. 编辑段落内容，使其包含一些你感兴趣的话题的文本。
+3. 通过将重要的词语包裹在 {{htmlelement("strong")}} 元素内，使其以粗体突出显示。
+4. 在你的段落中添加两个链接。这是通过使用 {{htmlelement("a")}} 元素实现的。
+5. 在你的文档中添加一张图片，如[本文前面所述](#为元素添加属性)。将其放在段落下方。如果图片太大看不清，可以给它添加一个 `width` 属性来缩小它。
 
 如果你实在卡住了，可以在这里查看解决方案：
 
 <details>
 <summary>点击这里显示解决方案</summary>
 
-你完成的 HTML 元素 body 的内容应该看起来像这样：html
+你完成的 HTML 元素 body 的内容应该看起来像这样：
+
+```html
+
 <h1>一些音乐</h1>
 <p>
   我非常喜欢<strong>打鼓</strong>。我最喜欢的鼓手之一是 Neal Peart，他曾在
@@ -349,16 +353,17 @@ This is my text.
   width="300" />
 
 </details>
+```
 
 ### HTML 中的空白
 
 在上面的例子中，你可能注意到代码中包含了很多空白。这是可选的。这两个代码片段是等效的：html-nolint
+
 <p id="noWhitespace">狗狗很傻。</p>
 
 <p id="whitespace">狗狗
     很
         傻。</p>
-
 
 无论你在 HTML 元素内容中使用了多少空白（可以包括一个或多个空格字符，也包括换行），HTML 解析器在渲染代码时都会将每个空白序列减少为单个空格。那么为什么要使用这么多空白呢？答案是可读性。
 
@@ -371,16 +376,15 @@ This is my text.
 > [!NOTE]
 > 从 JavaScript 访问元素的 [innerHTML](/zh-CN/docs/Web/API/Element/innerHTML) 将保留所有空白。
 > 如果浏览器修剪了空白，这可能会返回意想不到的结果。js
-const noWhitespace = document.getElementById("noWhitespace").innerHTML;
-console.log(noWhitespace);
-// "狗狗很傻。"
+> const noWhitespace = document.getElementById("noWhitespace").innerHTML;
+> console.log(noWhitespace);
+> // "狗狗很傻。"
 
 const whitespace = document.getElementById("whitespace").innerHTML;
 console.log(whitespace);
 // "狗狗
-//    很
-//        傻。"
-
+// 很
+// 傻。"
 
 ## 字符引用：在 HTML 中包含特殊字符
 
@@ -389,20 +393,20 @@ console.log(whitespace);
 你需要使用{{glossary("character reference", "字符引用")}}。这些是代表字符的特殊代码，用于在这些确切的情况下使用。每个字符引用都以一个与号（&）开始，并以一个分号（;）结束。
 
 | 字面字符 | 字符引用等价物 |
-| ----------------- | ------------------------------ |
-| <                 | &lt;                         |
-| >                 | &gt;                         |
-| "                 | &quot;                       |
-| '                 | &apos;                       |
-| &                 | &amp;                        |
+| -------- | -------------- |
+| <        | &lt;           |
+| >        | &gt;           |
+| "        | &quot;         |
+| '        | &apos;         |
+| &        | &amp;          |
 
 字符引用的等价物可以很容易记住，因为它使用的文本可以看作是 `less than` 对应 `&lt;`，`quotation` 对应 `&quot;`，其他类似。要查找更多关于实体引用的信息，请参见[维基百科的 XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML%E4%B8%8EHTML%E5%AD%97%E7%AC%A6%E5%AE%9E%E4%BD%93%E5%BC%95%E7%94%A8%E5%88%97%E8%A1%A8)。
 
 在下面的例子中，有两个段落：html-nolint
+
 <p>在 HTML 中，你使用 <p> 元素来定义一个段落。</p>
 
 <p>在 HTML 中，你使用 &lt;p&gt; 元素来定义一个段落。</p>
-
 
 在下面的实时输出中，你可以看到第一段出错了。浏览器将第二个 `<p>` 实例解释为开始一个新段落。第二段看起来很好，因为它用字符引用替换了角括号。
 
