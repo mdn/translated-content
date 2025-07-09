@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Location
 original_slug: Web/HTTP/Headers/Location
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de réponse `Location` indique l'URL vers laquelle rediriger une page. Il a un sens seulement lorsqu'il est servi avec une réponse d'état `3xx` (redirection) ou `201` (créé).
 
 En cas de redirection, la méthode HTTP utilisée pour la nouvelle requête de récupération de la page pointée par `Location` dépend la méthode d'origine et du type de redirection :

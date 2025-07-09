@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 8e1f45b8c0a3671f6e3de43c0764ad610aa345dd
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 HTTP の **`X-XSS-Protection`** レスポンスヘッダーは Internet Explorer, Chrome, Safari の機能で、反射型クロスサイトスクリプティング ({{Glossary("Cross-site_scripting", "XSS")}}) 攻撃を検出したときに、ページの読み込みを停止するためのものです。サイトが強力な {{HTTPHeader("Content-Security-Policy")}} を実装しており、インライン JavaScript (`'unsafe-inline'`) の使用を無効にしている場合、これらの保護は現代のブラウザーではほとんど不要となります。
 

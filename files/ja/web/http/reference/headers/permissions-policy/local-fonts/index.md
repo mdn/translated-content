@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `local-fonts` ディレクティブは、現在の文書が {{DOMxRef("Window.queryLocalFonts()")}} メソッドを介してユーザーのローカルにインストールされているフォントに関するデータを収集することを許可するかどうかを制御します。
 
