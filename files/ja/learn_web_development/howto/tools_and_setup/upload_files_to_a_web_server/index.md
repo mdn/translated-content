@@ -2,10 +2,8 @@
 title: ウェブサーバーにファイルをアップロードするには
 slug: Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server
 l10n:
-  sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
+  sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
 ---
-
-{{QuicklinksWithSubPages("/ja/Learn/Common_questions")}}
 
 この記事では、ファイル転送ツールを使用してオンラインでサイトを公開する方法を説明します。
 
@@ -20,7 +18,7 @@ l10n:
           >ドメイン名の仕組み</a
         >を知っている必要があります。<a href="/ja/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server"
           >基本的な環境設定方法</a
-          >と<a href="/ja/docs/Learn/Getting_started_with_the_web"
+          >と<a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >簡単なウェブページの作成方法</a
         >も理解しておく必要があります。
     </tr>
@@ -46,7 +44,7 @@ SFTP クライアントには、いくつもの選択肢があります。ここ
 
 FileZilla アプリケーションを開きます。次のようなものが表示されます。
 
-![Filezilla FTP アプリケーションのユーザーインターフェイスのスクリーンショット。ホスト入力にフォーカスがあります。](filezilla-ui.png)
+![FileZilla FTP アプリケーションのユーザーインターフェイスのスクリーンショット。ホスト入力にフォーカスがあります。](filezilla-ui.png)
 
 ### ログイン
 

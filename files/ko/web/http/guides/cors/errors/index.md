@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors
 original_slug: Web/HTTP/CORS/Errors
 ---
 
-{{HTTPSidebar}}
-
 [교차 출처 자원 공유](/ko/docs/Web/HTTP/Guides/CORS) ({{Glossary("CORS")}})는 서버가 same
 origin 정책([same-origin policy](/ko/docs/Web/Security/Same-origin_policy))을 완화할 수 있게 해 주는 표준입니다. 이는 일부
 교차 출처 요청은 명시적으로 허용하고 다른 요청은 거부하는 데 사용됩니다. 예를 들어서, 어떤 사이트가 embeddable service를 제공하는 경우, 특정 제한을
@@ -48,7 +46,7 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
   added](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSOriginHeaderNotAdded)
 - [Reason: CORS request external redirect
   not allowed](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSExternalRedirectNotAllowed)
-- [Reason: CORS request not http](/ko/docs/Web/HTTP/CORS/Errors/CORSRequestNotHttp)
+- [Reason: CORS request not http](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp)
 - [Reason: CORS header
   'Access-Control-Allow-Origin' missing](/ko/docs/Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin)
 - [Reason: CORS header
@@ -73,8 +71,8 @@ Firefox 콘솔은 CORS에 의해 요청이 실패했을 때 메시지를 출력�
 ## 더보기
 
 - Glossary: {{Glossary("CORS")}}
-- [CORS introduction](/ko/docs/Web/HTTP/CORS)
+- [CORS introduction](/ko/docs/Web/HTTP/Guides/CORS)
 - [Server-side CORS settings](/ko/docs/Web/HTTP/Guides/CORS)
-- [CORS enabled image](/ko/docs/Web/HTML/CORS_enabled_image)
-- [CORS settings attributes](/ko/docs/Web/HTML/Attributes/crossorigin)
+- [CORS enabled image](/ko/docs/Web/HTML/How_to/CORS_enabled_image)
+- [CORS settings attributes](/ko/docs/Web/HTML/Reference/Attributes/crossorigin)
 - <https://www.test-cors.org> – page to test CORS requests

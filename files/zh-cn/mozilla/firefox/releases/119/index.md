@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7c6b02283df15120126fd174f91519c9a76d81c9
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 119 中影响开发者的变更信息。Firefox 119 于 2023 年 10 月 24 日发布。
 
 ## 为 Web 开发者带来的变化

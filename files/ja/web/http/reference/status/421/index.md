@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a52689c74c6c89f45c54447bb148e54ed320db62
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`421 Misdirected Request`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストがレスポンスを生成できないサーバーに送られたことを示します。
 これは、リクエスト URI に含まれない[スキーム](/ja/docs/Web/URI/Reference/Schemes)と[オーソリティ](/ja/docs/Web/URI/Reference/Authority)の組み合わせに対するレスポンスを生成するように構成されていないサーバーから送信される可能性があります。
 
