@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 86fa532a00024e7c85a4c0d6339adce8b1bd9f61
 ---
 
-{{HTTPSidebar}}
-
 **cookie**（也稱為 Web Cookie 或瀏覽器 Cookie）是伺服器傳送給使用者網頁瀏覽器的一小段資料。瀏覽器可以儲存 Cookie、建立新的 Cookie、修改現有的 Cookie，並在之後的請求中將它們傳回給同一個伺服器。Cookie 讓網頁應用程式能夠儲存有限的資料並記住狀態訊息；根據預設，HTTP 協定是[無狀態的](/zh-TW/docs/Web/HTTP/Guides/Overview#http_無狀態，但並非無會話)。
 
 在本文中，我們將探討 Cookie 的主要用途、解釋使用 Cookie 的最佳實踐，並檢視其隱私和安全方面的影響。

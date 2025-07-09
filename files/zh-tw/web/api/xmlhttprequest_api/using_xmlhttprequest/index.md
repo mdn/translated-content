@@ -17,7 +17,7 @@ l10n:
 2. 開啟一個 URL
 3. 發送請求。
 
-在交易完成後，`XMLHttpRequest` 物件將包含有用的訊息，例如回應主體和結果的 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Status)。
+在交易完成後，`XMLHttpRequest` 物件將包含有用的訊息，例如回應主體和結果的 [HTTP 狀態](/zh-TW/docs/Web/HTTP/Reference/Status)。
 
 ```js
 function reqListener() {
@@ -234,7 +234,7 @@ ifHasChanged("your-page.html", function (modified, visit) {
 
 ## 跨站 XMLHttpRequest
 
-現代瀏覽器透過實作[跨來源資源共享](/zh-TW/docs/Web/HTTP/CORS)（CORS）標準來支援跨站請求。只要伺服器組態為允許來自你的 Web 應用程式來源的請求，`XMLHttpRequest` 就能運作。否則，會拋出一個 `INVALID_ACCESS_ERR` 例外。
+現代瀏覽器透過實作[跨來源資源共享](/zh-TW/docs/Web/HTTP/Guides/CORS)（CORS）標準來支援跨站請求。只要伺服器組態為允許來自你的 Web 應用程式來源的請求，`XMLHttpRequest` 就能運作。否則，會拋出一個 `INVALID_ACCESS_ERR` 例外。
 
 ## 繞過快取
 
@@ -276,6 +276,6 @@ req.send(null);
 
 - [使用 Fetch API](/zh-TW/docs/Web/API/Fetch_API/Using_Fetch)
 - [XMLHttpRequest 中的 HTML](/zh-TW/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)
-- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/CORS)
+- [HTTP 存取控制](/zh-TW/docs/Web/HTTP/Guides/CORS)
 - [XMLHttpRequest——REST 與豐富使用者體驗](https://www.peej.co.uk/articles/rich-user-experience.html)
 - [`XMLHttpRequest` 物件：WHATWG 規範](https://xhr.spec.whatwg.org/)

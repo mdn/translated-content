@@ -3,8 +3,6 @@ title: HTTP 消息
 slug: Web/HTTP/Guides/Messages
 ---
 
-{{HTTPSidebar}}
-
 HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息：_请求_（request）——由客户端发送用来触发一个服务器上的动作；_响应_（response）——来自服务器的应答。
 
 HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。

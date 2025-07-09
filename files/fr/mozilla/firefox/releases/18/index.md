@@ -3,8 +3,6 @@ title: Firefox 18 pour les développeurs
 slug: Mozilla/Firefox/Releases/18
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.
 
 ## Changements pour les développeurs Web

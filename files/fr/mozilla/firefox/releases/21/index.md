@@ -3,8 +3,6 @@ title: Firefox 21 pour les développeurs
 slug: Mozilla/Firefox/Releases/21
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changements dans Firefox 21 qui sont utiles aux développeurs, que vous soyez développeur web, développeur Firefox et Gecko, ou développeur d'add-ons.
 
 ## Changement pour les développeurs Web
