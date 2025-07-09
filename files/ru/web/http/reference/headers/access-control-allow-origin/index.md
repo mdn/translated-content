@@ -3,8 +3,6 @@ title: Access-Control-Allow-Origin
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Origin
 ---
 
-{{HTTPSidebar}}
-
 Заголовок ответа **`Access-Control-Allow-Origin`** показывает, может ли ответ сервера быть доступен коду, отправляющему запрос с данного источника {{glossary("origin")}}.
 
 <table class="properties">

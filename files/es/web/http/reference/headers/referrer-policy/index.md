@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Referrer-Policy
 original_slug: Web/HTTP/Headers/Referrer-Policy
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Referrer-Policy`** de HTTP determina qué datos de referente, de entre los que se envían con la cabecera {{HTTPHeader("Referer")}}, deben incluirse con las solicitudes realizadas.
 
 <table class="properties">

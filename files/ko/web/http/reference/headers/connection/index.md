@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Connection
 original_slug: Web/HTTP/Headers/Connection
 ---
 
-{{HTTPSidebar}}
-
 **`Connection`** 일반 헤더는 현재의 전송이 완료된 후 네트워크 접속을 유지할지 말지를 제어합니다. 만약 전송된 값이 `keep-alive`면, 연결은 지속되고 끊기지 않으며, 동일한 서버에 대한 후속 요청을 수행할 수 있습니다.
 
 > **경고:** {{HTTPHeader("Connection")}} 와 {{HTTPHeader("Keep-Alive")}} 같은 연결-지정(Connection-specific) 헤더 필드들은 [HTTP/2.에서 금지되었습니다](https://tools.ietf.org/html/rfc7540#section-8.1.2.2). 크롬과 Firefox는 HTTP/2 응답에서 그들을 무시하지만, Safari는 HTTP/2 규격 요건에 따라 해당 필드가 포함된 응답은 처리하지 않습니다.

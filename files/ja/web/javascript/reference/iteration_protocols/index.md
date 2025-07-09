@@ -412,7 +412,7 @@ console.log(it.next().value); // 2
 
 ### クラスで反復可能プロトコルを定義
 
-状態のカプセル化は、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)でも行うことができます。
+状態のカプセル化は、[プライベートフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)でも行うことができます。
 
 ```js
 class SimpleClass {

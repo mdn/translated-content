@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`404 Not Found`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーがリクエストされたリソースを見つけることができないことを示します。
 404 ページにつながるリンクは、壊れたリンクまたは死んだリンクと呼ばれ、[リンク切れ](https://ja.wikipedia.org/wiki/リンク切れ)の対象となることがあります。
 

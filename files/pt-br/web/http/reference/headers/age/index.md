@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Age
 original_slug: Web/HTTP/Headers/Age
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Age`** contém o tempo, em segundos, em que o objeto já está no _cache_ de um proxy.
 
 O cabeçalho `Age` é normalmente perto de zero. Se `Age: 0`, é provável que ele tenha acabado de ser obtido do servidor de origem; senão, é normalmente calculado como a diferença entre a data corrente do proxy e o cabeçalho genérico {{HTTPHeader("Date")}} incluído na resposta HTTP.
