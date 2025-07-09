@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Server
 original_slug: Web/HTTP/Headers/Server
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Server`** contem informação sobre o software usado pelo servidor de origem para manipular a solicitação.
 
 Valores excessivamente longos e detalhados do Servidor devem ser evitados, já que eles potencialmente revelam detalhes internos de implementação que podem tornar (um pouco) mais fácil para os invasores encontrarem e explorarem falhas de segurança conhecidas.

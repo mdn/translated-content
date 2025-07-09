@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`423 Locked`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示某個資源已被**鎖定**，意味著無法存取。其回應主體應包含以 {{glossary("WebDAV")}} 的 XML 格式的相關資訊。
 
 > [!NOTE]

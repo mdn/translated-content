@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`child-src`** ディレクティブは、[ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} などの要素を使用して読み込んだ、埋め込まれた閲覧コンテキストに対して有効なソースを定義しています。ワーカーでは、準拠しないリクエストは、ユーザーエージェントによって致命的なネットワークエラーとして扱われます。
 
 <table class="properties">

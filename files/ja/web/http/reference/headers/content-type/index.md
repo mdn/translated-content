@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッダー")}}で、コンテンツへのエンコードが適用される前の、リソースの元の{{Glossary("MIME type","メディア種別")}}を示すために使用します。
 
 レスポンスにおいては、 `Content-Type` ヘッダーはクライアントに返されたコンテンツの実際の種類を伝えます。

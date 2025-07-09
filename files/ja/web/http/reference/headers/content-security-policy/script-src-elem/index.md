@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-src-elem`** ディレクティブは、 JavaScript の {{HTMLElement("script")}} 要素の有効なソースを指定します。
 
 このディレクティブは `<script>` 要素（スクリプトリクエストとブロックの両方）の中で有効なソースのみを指定します。
