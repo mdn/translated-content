@@ -4,8 +4,6 @@ slug: Web/URI/Reference/Schemes/data
 original_slug: Web/URI/Schemes/data
 ---
 
-{{HTTPSidebar}}
-
 **Datos URIs**, URLs prefijados con los datos`:` esquema, permiten a los creadores de contenido incorporar pequeños archivos en linea en los documentos.
 
 ## Sintaxis

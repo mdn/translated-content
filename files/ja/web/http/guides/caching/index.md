@@ -1,14 +1,9 @@
 ---
 title: HTTP キャッシュ
 slug: Web/HTTP/Guides/Caching
-original_slug: Web/HTTP/Guides/Caching
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
 ---
-
-{{HTTPSidebar}}
-
-## 概要
 
 HTTP キャッシュは、リクエストに関連付けられたレスポンスを格納し、格納されたレスポンスを後続のリクエストのために再利用します。
 
@@ -35,8 +30,6 @@ Cache-Control: private
 ```
 
 パーソナライズされたコンテンツは通常クッキーによって制御されますが、クッキーの存在が常にプライベートであることを示すとは限らないため、クッキーだけでレスポンスがプライベートになるわけではありません。
-
-レスポンスに `Authorization` ヘッダーがある場合、プライベートキャッシュには格納されない（`public` を指定しない限り、共有キャッシュに格納される）ことに注意してください。
 
 ### 共有キャッシュ
 
@@ -76,7 +69,7 @@ Cache-Control: no-store
 
 なお、CDNによっては、そのCDNに対してのみ有効なヘッダーを自分自身で提供しているものもあります（`Surrogate-Control` など）。現在、これらを標準化するために [`CDN-Cache-Control`](https://httpwg.org/specs/rfc9213.html) ヘッダーを定義する作業が進められています。
 
-![キャッシュの種類](/shared-assets/images/diagrams/http/cache/type-of-cache.svg)
+![キャッシュの種類には、ブラウザーのプライベートキャッシュ、共有（プロキシー）キャッシュ、リバースプロキシキャッシュ、CDN の共有（マネージド）キャッシュなどがあり、これらは元のサーバーのキャッシュにつながります。](type-of-cache.svg)
 
 ## ヒューリスティックキャッシュ
 
@@ -127,7 +120,7 @@ Cache-Control: max-age=604800
 
 格納されたレスポンスが新鮮である限り、クライアントのリクエストを履行するために使用されます。
 
-レスポンスが共有キャッシュに格納されるとき、クライアントにレスポンスの age を通知する必要があります。例えば、共有キャッシュがレスポンスを 1 日間格納された場合は、次の例のようになります。
+レスポンスが共有キャッシュに格納される時、レスポンスの年齢をクライアントに指示することが可能です。例を続けると、共有キャッシュが 1 日間レスポンスを格納した場合、共有キャッシュは、その後のクライアントのリクエストに対して次のレスポンスを送信します。
 
 ```http
 HTTP/1.1 200 OK
@@ -161,21 +154,30 @@ Expires: Tue, 28 Feb 2022 22:22:22 GMT
 
 レスポンスを判別する方法は、基本的に URL に基づいています。
 
-![keyed with url](/shared-assets/images/diagrams/http/cache/keyed-with-url.svg)
+| URL                              | レスポンス本体           |
+| -------------------------------- | ------------------------ |
+| `https://example.com/index.html` | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `body { ...`             |
+| `https://example.com/script.js`  | `function main () { ...` |
 
 しかし、同じ URL を持っていてもレスポンスのコンテンツが常に同じとは限りません。特にコンテンツネゴシエーションが行われた場合、サーバーからのレスポンスは `Accept`、`Accept-Language`、`Accept-Encoding` リクエストヘッダーの値によって変わる可能性があります。
 
-例えば、`Accept-Language: en` ヘッダーで返されてキャッシュされた英語のコンテンツに対して、`Accept-Language: ja` リクエストヘッダーがあるリクエストに対してキャッシュされたレスポンスを再利用することは望ましくありません。この場合、"`Accept-Language`" を `Vary` ヘッダーの値に追加することで、レスポンスが言語に基づいて別個にキャッシュされるようにすることができます。
+例えば、`Accept-Language: en` ヘッダーで返されてキャッシュされた英語のコンテンツに対して、`Accept-Language: ja` リクエストヘッダーがあるリクエストに対してキャッシュされたレスポンスを再利用することは望ましくありません。この場合、`Accept-Language` を `Vary` ヘッダーの値に追加することで、レスポンスが言語に基づいて別個にキャッシュされるようにすることができます。
 
 ```http
 Vary: Accept-Language
 ```
 
-これにより、キャッシュはレスポンス URL と `Accept-Language` リクエストヘッダーの合成に基づいて生成されます。
+これによりキャッシュは、レスポンス URL だけではなく、レスポンス URL と `Accept-Language` リクエストヘッダーの合成に基づいてキー付けされるようになります。
 
-![URL と言語がキーになる例](/shared-assets/images/diagrams/http/cache/keyed-with-url-and-language.svg)
+| URL                              | `Accept-Language` | レスポンス本体           |
+| -------------------------------- | ----------------- | ------------------------ |
+| `https://example.com/index.html` | `ja-JP`           | `<!doctype html>...`     |
+| `https://example.com/index.html` | `en-US`           | `<!doctype html>...`     |
+| `https://example.com/style.css`  | `ja-JP`           | `body { ...`             |
+| `https://example.com/script.js`  | `ja-JP`           | `function main () { ...` |
 
-また、（例えばレスポンシブデザインのために）ユーザーエージェントに基づいてコンテンツの最適化を提供している場合、 `Vary` ヘッダーの値に "`User-Agent`" を含めることができます。しかし、一般的に `User-Agent` リクエストヘッダーには非常に多くのバリエーションがあり、キャッシュが再利用される可能性を大幅に縮小します。そのため、可能であれば `User-Agent` リクエストヘッダーに基づくのではなく、機能検出に基づいて動作を変化させる方法を検討してください。
+また、（例えばレスポンシブデザインのために）ユーザーエージェントに基づいてコンテンツの最適化を提供している場合、 `Vary` ヘッダーの値に `User-Agent` を含めることができます。しかし、一般的に `User-Agent` リクエストヘッダーには非常に多くのバリエーションがあり、キャッシュが再利用される可能性を大幅に縮小します。そのため、可能であれば `User-Agent` リクエストヘッダーに基づくのではなく、機能検出に基づいて動作を変化させる方法を検討してください。
 
 キャッシュされたパーソナライズされたコンテンツが他に再利用されるのを防ぐために、クッキーを使用するアプリケーションでは、`Vary`にクッキーを指定する代わりに `Cache-Control: private` を指定する必要があります。
 
@@ -278,7 +280,7 @@ Content-Type: text/html
 Content-Length: 1024
 Date: Tue, 22 Feb 2022 22:22:22 GMT
 Last-Modified: Tue, 22 Feb 2022 22:00:00 GMT
-ETag: deadbeef
+ETag: "deadbeef"
 Cache-Control: no-cache
 
 <!doctype html>
@@ -442,7 +444,7 @@ Cache-Control: max-age=31536000, immutable
 
 ## 格納されたレスポンスの削除
 
-長い `max-age` で格納されているレスポンスを削除する方法は基本的にありません。
+長い `max-age` で格納されたレスポンスを、中間サーバーから削除する方法はありません。
 
 例えば、以下のように `https://example.com/` からのレスポンスが格納されていたとします。
 
@@ -458,11 +460,10 @@ Cache-Control: max-age=31536000
 
 サーバー上で有効期限が切れたレスポンスを上書きしたいと思うかもしれませんが、レスポンスが格納されると、キャッシュによりそれ以上のリクエストがサーバーに到達しないため、サーバー側でできることはまだありません。
 
-詳細仕様で言及されているメソッドのひとつに、 `POST` のような安全でないメソッドで同じ URL のリクエストを送るというものがありますが、通常多くのクライアントにとって意図的に行うことは困難です。
+仕様で言及されている方法の 1 つは、`POST` などの安全でないメソッドを使用して同じ URL へのリクエストを送信することですが、多くのクライアントではこれは困難です。
 
-`Clear-Site-Data:cache` ヘッダーと値の仕様もありますが、[すべてのブラウザーが対応しているわけではありません](https://groups.google.com/a/mozilla.org/g/dev-platform/c/I939w1yrTp4)。また、使用されている場合でも、ブラウザーのキャッシュにのみ影響し、中間キャッシュには影響を及ぼしません。
-
-したがって、格納されるレスポンスはユーザーが手動で再読み込み、強制再読み込み、履歴クリアの操作を行わない限り、その `max-age` 期間は残るものとみなされます。
+[`Clear-Site-Data: cache`](/ja/docs/Web/HTTP/Reference/Headers/Clear-Site-Data#cache) ヘッダーおよびディレクティブ値は、ブラウザーのキャッシュをクリアするために使用できますが、中間キャッシュには効果はありません。
+それ以外の場合、ユーザーが手動で再読み込み、強制再読み込み、または履歴のクリア操作を行わない限り、レスポンスは `max-age` の有効期限が切れるまでブラウザーのキャッシュに残ります。
 
 キャッシュはサーバーへのアクセスを削減し、サーバーがその URL の制御を失うことを意味しています。サーバーが URL の制御を失いたくない場合、例えばリソースが頻繁に更新されるような場合、 `no-cache` を追加して、サーバーが常にリクエストを受け取り、意図するレスポンスを送信できるようにする必要があります。
 
@@ -476,7 +477,7 @@ Cache-Control: max-age=31536000
 
 レスポンスが具体的なユーザーにパーソナライズされていて、折りたたみ時に共有されたくない場合は `private` ディレクティブを追加してください。
 
-![リクエストの折りたたみ](/shared-assets/images/diagrams/http/cache/request-collapse.svg)
+![リクエストの折りたたみは、複数のクライアントが GET リクエストを送信し、キャッシュがそれらを 1 つの GET に統合して元のサーバーに送信するものとして表示されます。元のサーバーは 200 OK で応答し、キャッシュはそれをすべてのクライアントに返します。](request-collapse.svg)
 
 ## 良くあるキャッシュパターン
 
@@ -595,7 +596,7 @@ Cache-Control: max-age=2592000
 ```http
 # bundle.v123.js へのレスポンス
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+ETag: "YsAIAAAA-QG4G6kCMAMBAAAAAAAoK"
 ```
 
 さらに、 `immutable` を追加することで、再読み込み時の検証を防ぐことができます。
@@ -605,11 +606,11 @@ ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
 ```http
 # bundle.v123.js
 HTTP/1.1 200 OK
-Content-Type: application/javascript
+Content-Type: text/javascript
 Content-Length: 1024
 Cache-Control: public, max-age=31536000, immutable
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: YsAIAAAA-QG4G6kCMAMBAAAAAAAoK
+ETag: "YsAIAAAA-QG4G6kCMAMBAAAAAAAoK"
 ```
 
 **キャッシュ破棄**は、コンテンツが変更されたときに URL を変更することで、長期間にわたってレスポンスをキャッシュ可能にするテクニックです。このテクニックは、画像などのすべてのサブリソースに適用できます。
@@ -646,7 +647,7 @@ Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 ```
 
 この設定はパーソナライズされていない HTML には適切ですが、例えばログイン後など、クッキーを使用してパーソナライズされるレスポンスには `private` を指定することを忘れないでください。
@@ -657,7 +658,7 @@ Content-Type: text/html
 Content-Length: 1024
 Cache-Control: no-cache, private
 Last-Modified: Tue, 22 Feb 2022 20:20:20 GMT
-ETag: AAPuIbAOdvAGEETbgAAAAAAABAAE
+ETag: "AAPuIbAOdvAGEETbgAAAAAAABAAE"
 Set-Cookie: __Host-SID=AHNtAyt3fvJrUL5g5tnGwER; Secure; Path=/; HttpOnly
 ```
 

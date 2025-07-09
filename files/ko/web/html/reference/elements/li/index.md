@@ -85,7 +85,7 @@ p {
 
 ## 특성
 
-이 요소는 [전역 특성](/ko/docs/Web/HTML/Global_attributes)을 포함합니다.
+이 요소는 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes)을 포함합니다.
 
 - `value`
   - : {{HTMLElement("ol")}} 요소 내부에서 항목의 현재 서수 값을 나타내는 정수. 리스트가 로마 숫자나 문자로 표시되더라도 이 특성에는 숫자만 넣을수 있습니다. `value`를 지정한 항목을 뒤따르는 다른 항목은 이 값에서부터 번호를 매깁니다. `value` 속성은 비정렬 목록({{HTMLElement("ul")}})과 메뉴({{HTMLElement("menu")}})에서는 아무 의미가 없습니다.

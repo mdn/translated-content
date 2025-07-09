@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`451 Unavailable For Legal Reasons`** [用戶端回應錯誤](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端回應錯誤)狀態碼表示用戶請求的資源由於法律原因而無法提供，例如遭受法律訴訟的網頁。
 
 ## 狀態

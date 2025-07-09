@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edefa50f18613599b92e2eb3e9556fbde220b360
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Keep-Alive`** {{Glossary("request header", "响应标头")}}和{{Glossary("response header", "请求标头")}}允许消息发送者提示连接的状态，还可以用来设置超时时长和最大请求数。
 
 > [!NOTE]

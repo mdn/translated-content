@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Max-Age`** 응답 헤더는 {{glossary("preflight request")}}의 결과(즉, {{HTTPHeader("Access-Control-Allow-Methods")}} 및 {{HTTPHeader("Access-Control-Allow-Headers")}} 헤더에 포함된 정보)를 얼마나 오래 캐시할 수 있는지를 나타냅니다.
 
 <table class="properties">

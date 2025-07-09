@@ -14,7 +14,7 @@ l10n:
 ```js interactive-example
 const moonLanding = new Date("July 20, 69 20:17:40 GMT+00:00");
 
-// Jan 1, 1970, 00:00:00.000 GMT あｋらの経過秒数
+// Jan 1, 1970, 00:00:00.000 GMT からの経過秒数
 console.log(moonLanding.getTime());
 // 予想される結果: -14182940000
 ```

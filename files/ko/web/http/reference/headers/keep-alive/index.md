@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Keep-Alive
 original_slug: Web/HTTP/Headers/Keep-Alive
 ---
 
-{{HTTPSidebar}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`Keep-Alive`** 일반 헤더는 송신자가 연결에 대한 타임아웃과 요청 최대 개수를 어떻게 정했는지에 대해 알려줍니다.
 
@@ -64,4 +64,4 @@ Server: Apache
 ## 함께 참고할 내용
 
 - {{HTTPHeader("Connection")}}
-- [Connection management in HTTP/1.x](/ko/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Connection management in HTTP/1.x](/ko/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)

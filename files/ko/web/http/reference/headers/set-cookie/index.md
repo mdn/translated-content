@@ -6,14 +6,12 @@ l10n:
   sourceCommit: a86c551ce8f5c6936b14640357eaa4da71a857d7
 ---
 
-{{HTTPSidebar}}
-
 **`Set-Cookie`** HTTP 응답 헤더는 서버에서 사용자 에이전트로 쿠키를 보내는데 사용되며, 사용자 에이전트가 나중에 서버로 쿠키를 보낼 수 있습니다.
 여러 개의 쿠키를 보내기 위해서는 같은 응답에 여러 개의 **`Set-Cookie`** 헤더를 보내야 합니다.
 
 > **경고:** `Set-Cookie`는 프론트엔드 코드에 노출된 모든 응답으로부터 [필터링해야 하는](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) [금지된 응답 헤더 이름](https://fetch.spec.whatwg.org/#forbidden-response-header-name)에 정의된 Fetch 명세의 요구에 따라, 브라우저는 `Set-Cookie` 헤더에 접근하는 프론트엔드 JavaScript 코드를 차단합니다.
 
-더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies) 안내서를 참고하세요.
+더 많은 정보는 [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies) 안내서를 참고하세요.
 
 <table class="properties">
   <tbody>
@@ -234,7 +232,7 @@ Set-Cookie: __Host-example=34d8g; SameSite=None; Secure; Path=/; Partitioned;
 
 ## 같이 보기
 
-- [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)
+- [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)
 - {{HTTPHeader("Cookie")}}
 - {{domxref("Document.cookie")}}
 - [Samesite cookies 설명](https://web.dev/articles/samesite-cookies-explained) (web.dev blog)

@@ -3,8 +3,6 @@ title: OPTIONS
 slug: Web/HTTP/Reference/Methods/OPTIONS
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `OPTIONS` 方法**请求给定的 URL 或服务器的允许通信选项。客户端可以用这个方法指定一个 URL，或者用星号（`*`）来指代整个服务器。
 
 <table class="properties">
