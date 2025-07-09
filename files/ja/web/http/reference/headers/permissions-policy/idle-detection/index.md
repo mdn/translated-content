@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーの `idle-detection` ディレクティブは、現在の文書が{{domxref("Idle Detection API", "アイドル検出 API", "", "nocode")}} を使用して、ユーザーが端末を操作しているかどうかを検出することを許可するかどうかを制御します。例えば、チャットアプリケーションで「利用可能」/「離席中」のステータスを報告する場合などです。
 

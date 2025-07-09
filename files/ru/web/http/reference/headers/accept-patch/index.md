@@ -3,8 +3,6 @@ title: Accept-Patch
 slug: Web/HTTP/Reference/Headers/Accept-Patch
 ---
 
-{{HTTPSidebar}}
-
 HTTP-заголовок запроса **`Accept-Patch`** показывает, какой медиа-тип понимает сервер внутри запроса `PATCH`.
 
 Наличие **`Accept-Patch`** в ответе к любому методу означает, что сервер принимает `PATCH`-запросы. Как правило, из этого вытекает следующее:

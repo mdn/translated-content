@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Accept-CH
 original_slug: Web/HTTP/Headers/Accept-CH
 ---
 
-{{HTTPSidebar}}{{securecontext_header}}{{SeeCompatTable}}
+{{securecontext_header}}{{SeeCompatTable}}
 
 **`Accept-CH`** ヘッダーはサーバーによって設定され、クライアントが後続のリクエストに含める{{glossary("Client Hints", "クライアントヒント")}}ヘッダーを指定します。
 

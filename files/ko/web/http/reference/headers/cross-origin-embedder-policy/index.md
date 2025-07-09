@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Cross-Origin-Embedder-Policy`** (COEP) 응답 헤더는 문서에 교차 출처 리소스를 포함하도록 구성합니다.
 
 <table class="properties">

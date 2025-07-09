@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP는 확장 가능한 프로토콜로 리소스 및 URI(Uniform Resource Identifier), 간단한 메시지 구조, 클라이언트-서버 통신 흐름과 같은 개념에 의존합니다. 이러한 기본 개념을 토대로, 새로운 HTTP 메서드나 헤더의 생성을 통해 새로운 기능과 새로운 의미를 더하는 수많은 확장들이 수년간 생겨났습니다.
 
 ## 글 목록
