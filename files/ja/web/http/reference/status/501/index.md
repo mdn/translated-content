@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`501 Not Implemented`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)ステータスコードで、サーバーがリクエストを履行するのに必要な機能に対応していないことを示します。
 
 このステータスは、指定された時点が経過した後であればリクエストを再試行できることを指示するために、 {{HTTPHeader("Retry-After")}} ヘッダーを送信することもできます。

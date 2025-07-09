@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d1a9b34e50b4b9e84b51f8fadc585ae1afe75069
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 121 の変更点をまとめています。Firefox 121 は、米国時間 [2023 年 12 月 19 日](https://whattrainisitnow.com/release/?version=121) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
