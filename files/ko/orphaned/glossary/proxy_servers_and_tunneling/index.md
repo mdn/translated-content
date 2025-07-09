@@ -1,6 +1,7 @@
 ---
 title: 프록시 서버 및 터널링
-slug: Glossary/Proxy_servers_and_tunneling
+slug: orphaned/Glossary/Proxy_servers_and_tunneling
+original_slug: Glossary/Proxy_servers_and_tunneling
 l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
