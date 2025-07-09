@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `serial` ディレクティブは、現在の文書が、シリアルポートに直接接続されたシリアル機器、またはシリアルポートをエミュレートする USB または Bluetooth 機器と通信するために{{domxref("Web Serial API", "ウェブシリアル API", "", "nocode")}} を使用できるかどうかを制御します。
 

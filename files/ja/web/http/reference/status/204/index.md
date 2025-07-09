@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 74ab26a101ef2e4d5e5f25962033bc1042102677
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`204 No Content`** は[成功レスポンス](/ja/docs/Web/HTTP/Reference/Status#成功レスポンス)ステータスコードで、リクエストが成功したものの、クライアントが現在のページから移動する必要がないことを示します。
 `204`のレスポンスは既定ではキャッシュ可能であり、そのような場合は {{HTTPHeader("ETag")}} ヘッダーが含まれます。
 

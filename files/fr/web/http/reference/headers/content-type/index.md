@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Type
 original_slug: Web/HTTP/Headers/Content-Type
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête **`Content-Type`** sert à indiquer le type MIME de la ressource.
 
 Dans les réponses, un en-tête `Content-Type` indique au client le type de contenu réellement renvoyé. Il peut arriver que les navigateurs cherchent à détecter le type MIME du contenu en l'inspectant plutôt qu'en respectant la valeur de cet en-tête. Pour empêcher ce comportement, on peut paramétrer l'en-tête {{HTTPHeader("X-Content-Type-Options")}} avec la valeur `nosniff`.

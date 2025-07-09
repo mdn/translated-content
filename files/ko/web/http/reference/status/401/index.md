@@ -6,8 +6,6 @@ l10n:
   sourceCommit: cab15d3616b63a8699e6c0cee0631a48edcec979
 ---
 
-{{HTTPSidebar}}
-
 HTTP(하이퍼텍스트 전송 프로토콜) **`401 Unauthorized`** 응답 상태 코드는 요청된 리소스에 대한
 유효한 인증 자격 증명이 없기 때문에 클라이언트 요청이 완료되지 않았음을 나타냅니다.
 

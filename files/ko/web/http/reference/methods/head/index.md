@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/HEAD
 original_slug: Web/HTTP/Methods/HEAD
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `HEAD` 메서드**는 특정 리소스를 {{httpmethod("GET")}} 메서드로 요청했을 때 돌아올 헤더를 요청합니다.
 
 `HEAD` 메서드에 대한 응답은 본문을 가져선 안되며, 본문이 존재하더라도 무시해야 합니다. 그러나, {{httpheader("Content-Length")}}처럼 본문 콘텐츠를 설명하는 {{glossary("entity header", "개체 헤더")}}는 포함할 수 있습니다. 이 때, 개체 헤더는 비어있어야 하는 `HEAD`의 본문과는 관련이 없고, 대신 {{httpmethod("GET")}} 메서드로 동일한 리소스를 요청했을 때의 본문을 설명합니다.

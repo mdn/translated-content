@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Evolution_of_HTTP
 original_slug: Web/HTTP/Evolution_of_HTTP
 ---
 
-{{HTTPSidebar}}
-
 **Le protocole HTTP** (HyperText Transfer Protocol) est le protocole qui sous-tend le World Wide Web. Conçu par Tim Berners-Lee et son équipe entre 1989 et 1991, HTTP a vécu de nombreux changements tout en conservant sa simplicité, étendant ainsi sa flexibilité. HTTP a évolué à partir d'un protocole sommaire d'échange de fichiers sur un réseau de confiance au sein d'un laboratoire jusqu'à devenir le labyrinthe moderne d'Internet permettant désormais le transport d'images, de vidéos en haute résolution et en 3D.
 
 ## L'invention du World Wide Web

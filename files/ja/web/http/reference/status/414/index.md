@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`414 URI Too Long`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、クライアントがリクエストした URI が、サーバーが解釈しようとするものよりも長いことを示します。
 
 これが発生する可能性がある条件はわずかです。

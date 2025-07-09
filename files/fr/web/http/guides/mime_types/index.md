@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/MIME_types
 original_slug: Web/HTTP/MIME_types
 ---
 
-{{HTTPSidebar}}
-
 Le **type Multipurpose Internet Mail Extensions (type MIME)** est un standard permettant d'indiquer la nature et le format d'un document. Il est défini au sein de la [RFC 6838](https://tools.ietf.org/html/rfc6838). L'[Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) est l'organisme officiel responsable du suivi de l'ensemble des types MIME officiels existants. Une liste exhaustive et maintenue est consultable sur la [page Media Types de l'IANA](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 Les navigateurs utilisent le plus souvent le type MIME et non l'extension d'un fichier pour déterminer la façon dont ils vont traiter ou afficher un document. Il est donc important que les serveurs puissent correctement attacher le type MIME dans l'en-tête de la réponse qu'ils renvoient.

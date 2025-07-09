@@ -3,8 +3,6 @@ title: Fonctionnalités expérimentales dans Firefox
 slug: Mozilla/Firefox/Experimental_features
 ---
 
-{{FirefoxSidebar}}
-
 Cette page détaille les fonctionnalités expérimentales ou partiellement implémentées présentes dans Firefox. Cela inclut les fonctionnalités concernées par les standards web très récents ou en cours de construction. Les informations de cette page permettent de savoir quelles versions contiennent ces fonctionnalités, si elles sont activées par défaut et la _préférence_ qui peut être utilisée pour les activer ou les désactiver. Cela vous permet de tester les fonctionnalités avant leur sortie « générale ».
 
 Les nouvelles fonctionnalités sont d'abord introduites dans [Firefox Nightly](https://nightly.mozilla.org/) où elles sont activées par défaut la plupart du temps. Elles passent ensuite sur la version [Firefox Developer Edition](https://www.mozilla.org/fr/firefox/developer/) puis enfin dans la version finale (_release_). Lorsqu'une fonctionnalité est activée par défaut dans une version _release_, elle n'est plus considérée comme expérimentale et devrait être retiré de cette liste.

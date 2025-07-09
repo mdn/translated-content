@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/451
 original_slug: Web/HTTP/Status/451
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse d'erreur HTTP **`451 Unavailable For Legal Reasons`** indique que le client a demandé une ressource qui n'est pas disponible pour des raisons légales (par exemple, une page web sous le coup d'une action en justice).
 
 ## Statut

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`508 Loop Detected`** は[サーバーエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#サーバーエラーレスポンス)のステータスコードで、 `Depth: infinity`のリクエストを処理中に無限ループに遭遇したため、操作全体が失敗したことを示しています。
 
 このステータスコードは、 {{Glossary("WebDAV")}} (Web Distributed Authoring and Versioning) のコンテキストで使用される可能性があります。
