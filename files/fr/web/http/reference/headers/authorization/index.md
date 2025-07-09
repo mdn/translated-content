@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Authorization
 original_slug: Web/HTTP/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de requête HTTP **`Authorization`** contient les identifiants permettant l'authentification d'un utilisateur auprès d'un serveur, habituellement après que le serveur ait répondu avec un statut {{HTTPStatus("401")}} `Unauthorized` et l'en-tête {{HTTPHeader("WWW-Authenticate")}}
 
 <table class="properties">

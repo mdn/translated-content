@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `bluetooth` ディレクティブは、現在の文書で [Web Bluetooth API](/ja/docs/Web/API/Web_Bluetooth_API) の使用を許可するかどうかを制御します。
 

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Connection
 original_slug: Web/HTTP/Headers/Connection
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Connection`** controla se a conexão se mantém aberta ou não após o término da transação atual. Se o valor for `keep-alive`, a conexão é persistente e não fecha, permitindo que requisições futuras ao mesmo servidor sejam feitas.
 
 > **Nota:** [Campos de cabeçalho de conexão específica como Connection não devem ser usados com HTTP/2.](https://tools.ietf.org/html/rfc7540#section-8.1.2.2)

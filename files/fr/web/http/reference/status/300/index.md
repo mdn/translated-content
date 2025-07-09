@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/300
 original_slug: Web/HTTP/Status/300
 ---
 
-{{HTTPSidebar}}
-
 Le code de statut de réponse **`300 Multiple Choices`** indique qu'il existe plusieurs réponses possibles pour la requête. L'agent utilisateur ou l'utilisateur doit alors choisir l'une d'elles. Il n'y a pas de méthode standard pour choisir une des réponses disponibles et ce code de réponse est donc rarement utilisé.
 
 Si le serveur à une préférence, il doit générer un en-tête [`Location`](/fr/docs/Web/HTTP/Headers/Location).
