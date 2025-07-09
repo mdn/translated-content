@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept-Encoding
 original_slug: Web/HTTP/Headers/Accept-Encoding
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête HTTP **`Accept-Encoding`** permet de définir quel sera l'encodage du contenu. Il s'agit généralement de l'algorithme de compression utilisé par le serveur. Le client peut alors décoder le corps de la requête correctement. Utilisant [la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation), le serveur choisit l'une des propositions d'encodage que le client prend en charge. Le serveur l'utilise et le notifie au client à l'aide de l'en-tête de réponse [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding).
 
 Même si le client et le serveur supportent deux algorithmes de compressions communs, le serveur peut choisir de ne pas compresser le corps de la réponse si l'encodage `identity` (aucune compression) est accepté par le client. Deux exemples de cas communs peuvent conduire à la non-compression du corps de la réponse :

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Expires
 original_slug: Web/HTTP/Headers/Expires
 ---
 
-{{HTTPSidebar}}
-
 **`Expires`** 헤더는 응답이 더 이상 신선하지 않다고 판단할 날짜/시간을 포함합니다.
 
 0과 같은, 유효하지 않은 날짜는 과거의 시간을 나타내어 리소스가 이미 만료되었음을 의미합니다.

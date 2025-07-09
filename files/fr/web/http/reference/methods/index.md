@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods
 original_slug: Web/HTTP/Methods
 ---
 
-{{HTTPSidebar}}
-
 HTTP définit un ensemble de **méthodes de requête** qui indiquent l'action que l'on souhaite réaliser sur la ressource indiquée. Bien qu'on rencontre également des noms (en anglais), ces méthodes sont souvent appelées _verbes HTTP_. Chacun d'eux implémente une sémantique différente mais certaines fonctionnalités courantes peuvent être partagées par différentes méthodes (e.g. une méthode de requête peut être sûre (_safe_), idempotente ou être mise en cache (_cacheable_)).
 
 - [`GET`](/fr/docs/Web/HTTP/Methods/GET)
