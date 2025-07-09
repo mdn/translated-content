@@ -41,7 +41,7 @@ jobs:
         if: steps.filter.outputs.required_files == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
           cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 

@@ -60,7 +60,7 @@ jobs:
         if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
           cache: yarn
           cache-dependency-path: mdn/content/yarn.lock
 
