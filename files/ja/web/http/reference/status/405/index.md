@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`405 Method Not Allowed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、リクエストメソッドをサーバー側で認識しているが、対象のリソースでは対応していないことを示します。
 サーバーは、対象のリソースで現在対応しているメソッドの一覧を含む {{HTTPHeader("Allow")}} ヘッダーフィールドを、 405 レスポンスの中で生成しなければなりません。
 

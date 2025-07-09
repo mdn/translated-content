@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem
 original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`style-src-elem`** indique les sources valides pour les feuilles de styles embarquées avec les éléments [`<style>`](/fr/docs/Web/HTML/Element/style) et avec les éléments [`<link>`](/fr/docs/Web/HTML/Element/link) portant l'attribut `rel="stylesheet"`.
 
 <table class="properties">
