@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Caching
 original_slug: Web/HTTP/Caching
 ---
 
-{{HTTPSidebar}}
-
 Les performances des sites et applications web peuvent être significativement améliorées en réutilisant les ressources déjà collectées précédemment. Les caches web réduisent la latence et le trafic du réseau, et ainsi diminuent le temps nécessaire à l'affichage de la représentation d'une ressource. En utilisant la mise en cache HTTP, les sites web deviennent plus réactifs.
 
 ## Différents types de caches
