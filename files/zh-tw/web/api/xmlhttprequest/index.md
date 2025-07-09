@@ -37,7 +37,7 @@ _此介面也繼承了 {{domxref("XMLHttpRequestEventTarget")}} 和 {{domxref("E
 - {{domxref("XMLHttpRequest.responseXML")}} {{ReadOnlyInline}}
   - : 回傳一個包含請求回應的 {{domxref("Document")}}，如果請求不成功、尚未發送或無法解析為 XML 或 HTML，則回傳 `null`。在 [Web Worker](/zh-TW/docs/Web/API/Web_Workers_API) 中不可用。
 - {{domxref("XMLHttpRequest.status")}} {{ReadOnlyInline}}
-  - : 回傳請求的 [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Status)。
+  - : 回傳請求的 [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)。
 - {{domxref("XMLHttpRequest.statusText")}} {{ReadOnlyInline}}
   - : 回傳一個字串，其中包含 HTTP 伺服器回傳的回應字串。與 {{domxref("XMLHttpRequest.status")}} 不同，這包含回應訊息的完整文字（例如 `"OK"`）。
 
