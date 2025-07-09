@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/406
 original_slug: Web/HTTP/Status/406
 ---
 
-{{HTTPSidebar}}
-
 O código de resposta do erro de cliente **`406 Not Acceptable`** indica que o servidor não pode produzir uma resposta que combine com a lista de valores aceitáveis definidas nos cabeçalhos de negociação de conteúdo da requisição proativa, e o servidor é incapaz de produzir uma representação padrão.
 
 Negociação de conteúdo proativa incluem:

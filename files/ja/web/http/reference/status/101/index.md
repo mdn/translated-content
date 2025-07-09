@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`101 Switching Protocols`** は[情報レスポンス](/ja/docs/Web/HTTP/Reference/Status#情報レスポンス)ステータスコードで、サーバーが切り替えようとしているプロトコルを示します。
 プロトコルはクライアントから受信した {{HTTPHeader("Upgrade")}} リクエストヘッダーで指定されます。
 

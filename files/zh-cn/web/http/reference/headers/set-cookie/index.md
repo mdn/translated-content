@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 835d6632d59993861a0458510402787f8a2c3cb3
 ---
 
-{{HTTPSidebar}}
-
 **`Set-Cookie`** HTTP 响应标头用于将 cookie 由服务器发送到用户代理，以便用户代理在后续的请求中可以将其发送回服务器。要发送多个 cookie，则应在同一响应中发送多个 **`Set-Cookie`** 标头。
 
 > [!WARNING]

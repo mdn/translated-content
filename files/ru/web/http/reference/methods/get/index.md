@@ -3,8 +3,6 @@ title: GET
 slug: Web/HTTP/Reference/Methods/GET
 ---
 
-{{HTTPSidebar}}
-
 **HTTP-метод `GET`** запрашивает представление указанного ресурса. `GET`-запросы должны только получать данные.
 
 <table class="properties">
