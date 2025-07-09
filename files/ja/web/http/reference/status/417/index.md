@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`417 Expectation Failed`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)のステータスコードで、リクエストの {{HTTPHeader("Expect")}} ヘッダーに期待された値が設定されていなかったことを示します。
 417 のレスポンスを受け取った後、クライアントは `Expect` リクエストヘッダーを付けずにリクエストを繰り返し、 {{HTTPStatus("100")}} レスポンスを待たずにリクエスト本体にファイルを含める必要があります。
 詳細は {{HTTPHeader("Expect")}} ヘッダーを参照してください。
