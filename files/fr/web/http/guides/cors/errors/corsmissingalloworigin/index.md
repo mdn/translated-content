@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSMissingAllowOrigin
 original_slug: Web/HTTP/CORS/Errors/CORSMissingAllowOrigin
 ---
 
-{{HTTPSidebar}}
-
 ## Message
 
 ```http
