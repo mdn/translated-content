@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 2efdf13735ef976b441b7f32e50058bc5419c1c3
 ---
 
-{{HTTPSidebar}}
-
 Une requête d'intervalle HTTP (ou requête partielle) demande au serveur d'envoyer une partie de la ressource au client. Les requêtes d'intervalle sont utiles pour différents clients, comme les lecteurs média qui permettent d'aller à un instant donné de l'audio ou de la vidéo, les outils d'édition qui ont uniquement besoin d'une fraction d'un grand fichier pour le manipuler, les gestionnaires de téléchargement qui permettent de suspendre puis de reprendre un téléchargement.
 
 ## Vérifier si un serveur prend en charge les requêtes partielles

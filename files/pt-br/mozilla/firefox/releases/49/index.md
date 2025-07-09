@@ -3,8 +3,6 @@ title: Firefox 49 para desenvolvedores
 slug: Mozilla/Firefox/Releases/49
 ---
 
-{{FirefoxSidebar}}
-
 [Para testar estes novos recursos do Firefox,
 Instale Firefox Developer Edition](https://www.mozilla.org/firefox/developer/) Firefox 49 foi lançado em 20 de Setembro de 2016. Este artigo faz uma lista das principais alterações não só para desenvolvedores web, mas também desenvolvedores Firefox e Gecko e de extensões.
 

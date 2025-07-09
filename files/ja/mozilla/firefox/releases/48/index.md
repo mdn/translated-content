@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 48 は、米国時間 2016 年 8 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 48 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧

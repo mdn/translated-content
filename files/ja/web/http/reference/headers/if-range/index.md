@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/If-Range
 original_slug: Web/HTTP/Headers/If-Range
 ---
 
-{{HTTPSidebar}}
-
 **`If-Range`** HTTP リクエストヘッダーはレンジリクエストを条件付きにします：条件が満たされれば、レンジリクエストが発行され、サーバーは適切なボディを持つ {{HTTPStatus("206")}} `Partial Content` 回答を返します。条件が満たされていない場合、 {{HTTPStatus("200")}} の状態でリソース全体が返送されます。
 
 このヘッダーは {{HTTPHeader("Last-Modified")}} バリデータ、または {{HTTPHeader("ETag")}} のいずれかで使用できますが、両方では使用できません。

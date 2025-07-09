@@ -3,8 +3,6 @@ title: Firefox 68 for developers
 slug: Mozilla/Firefox/Releases/68
 ---
 
-{{FirefoxSidebar}}
-
 Эта статья содержит информацию об изменениях в Firefox 68, которые касаются разработчиков. Firefox 68 был выпущен 9 июля 2019.
 
 ## Изменения для веб разработчиков
