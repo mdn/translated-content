@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 하이퍼텍스트 전송 프로토콜 (HTTP) **`308 Permanent Redirect`** 리디렉션 상태 응답 코드는 요청된 리소스가
 {{HTTPHeader("Location")}} 헤더에 지정된 URL로 확실히 이동되었음을 나타냅니다. 브라우저가 이 페이지로 리디렉션되고 검색엔진은 리소스에 대한 링크를 업데이트합니다('SEO-speak'에서는 'link-juice'가 새 URL로 전송됩니다).
 

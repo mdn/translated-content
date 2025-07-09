@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `otp-credentials` ディレクティブは、現在の文書が [WebOTP API](/ja/docs/Web/API/WebOTP_API) を使用して、アプリのサーバーから送信された特別な形式の SMS メッセージからワンタイムパスワード (OTP) をリクエストすること、すなわち {{domxref("CredentialsContainer.get", "navigator.credentials.get({otp: ..., ...})")}} を許可するかどうかを制御します。
 

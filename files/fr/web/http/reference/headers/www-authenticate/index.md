@@ -4,7 +4,6 @@ slug: Web/HTTP/Reference/Headers/WWW-Authenticate
 original_slug: Web/HTTP/Headers/WWW-Authenticate
 ---
 
-{{HTTPSidebar}}
 L'entête HTTP de réponse **`WWW-Authenticate`** définit la méthode d'authentification qui doit être utilisé pour obtenir l'accès à une ressource.
 
 L'entête `WWW-Authenticate` est envoyée en même temps qu'une réponse {{HTTPStatus("401")}} `Unauthorized`.

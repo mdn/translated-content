@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSRequestNotHttp
 original_slug: Web/HTTP/CORS/Errors/CORSRequestNotHttp
 ---
 
-{{HTTPSidebar}}
-
 ## Razão
 
 ```
