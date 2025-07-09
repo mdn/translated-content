@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Overview
 original_slug: Web/HTTP/Overview
 ---
 
-{{HTTPSidebar}}
-
 **HTTP** é um {{glossary("protocol", "protocolo")}} que permite a obtenção de recursos, como documentos HTML. É a base de qualquer troca de dados na Web e um protocolo cliente-servidor, o que significa que as requisições são iniciadas pelo destinatário, geralmente um navegador da Web. Um documento completo é reconstruído a partir dos diferentes sub-documentos obtidos, como por exemplo texto, descrição do layout, imagens, vídeos, scripts e muito mais.
 
 ![A single Web document composed from multiple resources from different servers.](https://mdn.github.io/shared-assets/images/diagrams/http/overview/fetching-a-page.svg)

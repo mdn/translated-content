@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`406 Not Acceptable`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、リクエストの[積極的コンテンツネゴシエーション](/ja/docs/Web/HTTP/Guides/Content_negotiation#サーバー駆動型コンテンツネゴシエーション)のヘッダーで定義された受付可能な値に一致するレスポンスを、サーバーが生成できず、かつ、サーバーが既定の表現方法で提供することを望まないことを表します。
 
 積極的コンテンツネゴシエーションヘッダーには次のものがあります。

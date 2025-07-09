@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
-
 **미디어 타입** (**Multipurpose Internet Mail Extensions 또는 MIME type**로도 알려져 있음)이란 문서, 파일 또는 바이트 집합의 성격과 형식을 나타냅니다. MIME 타입은 IETF의 {{RFC(6838)}}에 정의 및 표준화되어 있습니다.
 
 [인터넷 할당 번호 관리 기관(IANA)](https://www.iana.org/)은 모든 공식 MIME 타입을 담당하며 [미디어 타입](https://www.iana.org/assignments/media-types/media-types.xhtml)에서 가장 최신의 전체 목록을 찾을 수 있습니다.

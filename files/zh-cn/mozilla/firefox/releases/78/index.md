@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e088b8a1e80e78da560675a4b05e91737d85a4cf
 ---
 
-{{FirefoxSidebar}}
-
 本文提供了有关 Firefox 78 中影响开发者的变更信息。Firefox 78 于 2020 年 6 月 30 日发布。
 
 参见 Mozilla hacks 上的 [Firefox 78 中的新增功能：DevTools 的改进，新的正则表达式引擎以及大量的 Web 平台更新](https://hacks.mozilla.org/2020/06/new-in-firefox-78/)。

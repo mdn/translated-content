@@ -3,8 +3,6 @@ title: 205 Reset Content
 slug: Web/HTTP/Reference/Status/205
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`205 Reset Content`** [成功响应](/zh-CN/docs/Web/HTTP/Reference/Status#成功响应)状态码表示请求已成功处理，客户端应重置文档视图。
 
 此响应旨在支持以下用例：用户接收支持数据输入的内容、在请求中提交用户编辑的数据，并且需要重置内容以供下次输入。“重置内容”指令可以表示清除表单内容、重置画布状态或刷新 UI；具体实现取决于客户端。

@@ -9,7 +9,7 @@ l10n:
 
 **`border-top`** は[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)の [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[境界](/ja/docs/Web/CSS/border)のプロパティをすべて設定します。</span>
 
-{{InteractiveExample("CSS Demo: border-top")}}
+{{InteractiveExample("CSS デモ: border-top")}}
 
 ```css interactive-example-choice
 border-top: solid;
