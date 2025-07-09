@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/302
 original_slug: Web/HTTP/Status/302
 ---
 
-{{HTTPSidebar}}
-
 HTTP(HyperText Transfer Protocol) **`302 Found`** 리디렉션 상태 응답 코드는 요청한 리소스가
 {{HTTPHeader("Location")}} 헤더에 지정된 URL로 일시적으로 이동되었음을 나타냅니다. 브라우저는 이 페이지로
 리디렉션되지만 검색 엔진은 리소스에 대한 링크를 업데이트하지 않습니다('SEO-speak'에서는 'link-juice'가 새

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`431 Request Header Fields Too Large`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、リクエストの [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)が長すぎるためにサーバーがリクエストの処理を拒否したことを示します。
 ヘッダーフィールドを縮小した上で、リクエストを再送信することができます。
 
