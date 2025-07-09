@@ -27,9 +27,11 @@ jobs:
           - zh-cn
           - zh-tw
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@v4
         with:
           repository: mdn/content
           path: mdn/content

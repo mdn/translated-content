@@ -62,7 +62,8 @@ jobs:
           git add .
           git commit -m "Code from PR head"
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@v4
         if: steps.check.outputs.DIFF_DOCUMENTS
         with:
           repository: mdn/content
