@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 31ba9f6da2dd1175250ece8d8d467d523e79b447
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の **`Permissions-Policy`** {{Glossary("response header", "レスポンスヘッダー")}}は、文書または文書内の {{HTMLElement("iframe")}} 要素で、ブラウザーの機能を使用することを許可または拒否する仕組みを提供します。
 

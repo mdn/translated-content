@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/504
 original_slug: Web/HTTP/Status/504
 ---
 
-{{HTTPSidebar}}
-
 Le code de réponse HTTP d'erreur serveur **`504 Gateway Timeout`** indique que le serveur, agissant comme passerelle ou proxy, n'a pas obtenu de réponse à temps de la part d'un serveur situé en amont pour la complétion de la requête.
 
 > [!NOTE]

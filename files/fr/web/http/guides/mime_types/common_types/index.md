@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/MIME_types/Common_types
 original_slug: Web/HTTP/MIME_types/Common_types
 ---
 
-{{HTTPSidebar}}
-
 Voici une liste de types MIME, associés par type et ordonnée par extension.
 
 Il existe deux types MIME principaux qui jouent un rôle important en terme de types par défaut :

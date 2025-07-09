@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`451 Unavailable For Legal Reasons`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、法的理由により利用できないリソースをユーザーがリクエストしたことを示します。例えば、訴訟が提起されたウェブページなどです。
 
 ## ステータス

@@ -3,8 +3,6 @@ title: X-XSS-Protection
 slug: Web/HTTP/Reference/Headers/X-XSS-Protection
 ---
 
-{{HTTPSidebar}}
-
 Заголовок ответа HTTP **`X-XSS-Protection`** это особенность Internet Explorer, Chrome и Safari, которая останавливает загрузку страниц при обнаружении ({{Glossary("XSS")}}) атаки. Хотя эти меры защиты не требуются в большинстве случаев для современных браузеров, когда сайты внедряют сильную политику безопасности контента {{HTTPHeader("Content-Security-Policy")}}, которая отключает использование встроенного JavaScript (`'unsafe-inline'`), они могут обеспечить защиту для пользователей, использующих устаревшие версии браузеров, не поддерживающих {{Glossary("CSP")}}.
 
 <table class="properties">

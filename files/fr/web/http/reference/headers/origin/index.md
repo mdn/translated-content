@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 7fa992e30717e0b46b87385f16e174bcc36f45e3
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de requête **`Origin`** indique [l'origine](/fr/docs/Glossary/Origin) (c'est-à-dire le schéma, le nom d'hôte et le port) qui a _déclenché_ la requête.
 Ainsi, si un agent utilisateur doit demander les ressources incluses dans une page ou récupérer les scripts exécutés sur cette page, l'origine de la page courante peut alors être incluse dans la requête.
 
