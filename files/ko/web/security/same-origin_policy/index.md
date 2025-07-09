@@ -66,7 +66,7 @@ document.domain = "company.com";
 
 동일 출처 정책은 {{domxref("XMLHttpRequest")}}이나 {{htmlelement("img")}} 요소를 사용하는 경우와 같이 서로 다른 두 출처 간의 상호 작용을 제어합니다. 이러한 상호 작용은 일반적으로 세 가지 범주로 분류됩니다.
 
-- 교차 출처 쓰기는 보통 허용합니다. 예시로는 링크, 리다이렉트, 그리고 양식 제출 등이 있습니다. 일부 HTTP 요청은 [프리플라이트](/ko/docs/Web/HTTP/CORS#preflighted_requests)를 요구합니다.
+- 교차 출처 쓰기는 보통 허용합니다. 예시로는 링크, 리다이렉트, 그리고 양식 제출 등이 있습니다. 일부 HTTP 요청은 [프리플라이트](/ko/docs/Web/HTTP/Guides/CORS#preflighted_requests)를 요구합니다.
 - 교차 출처 삽입은 보통 허용합니다. (예시는 아래에 있습니다.)
 - 교차 출처 읽기는 보통 허용하지 않지만, 종종 교차 출처 삽입 과정에서 읽기 권한이 누출됩니다. 예를 들어 삽입된 이미지의 크기, 삽입된 스크립트의 작업, 또는 [삽입된 리소스의 가용성](https://bugzil.la/629094)을 읽을 수 있습니다.
 
@@ -82,7 +82,7 @@ document.domain = "company.com";
 
 ### 교차 출처 접근을 허용하는 방법
 
-[CORS](/ko/docs/Web/HTTP/CORS)를 사용하여 교차 출처의 접근를 허용합니다. CORS는 서버가 브라우저에 콘텐츠 로드를 허용하는 다른 호스트를 지정할 수 있도록 하는 {{Glossary("HTTP")}}의 일부입니다.
+[CORS](/ko/docs/Web/HTTP/Guides/CORS)를 사용하여 교차 출처의 접근를 허용합니다. CORS는 서버가 브라우저에 콘텐츠 로드를 허용하는 다른 호스트를 지정할 수 있도록 하는 {{Glossary("HTTP")}}의 일부입니다.
 
 ### 교차 출처 접근을 막는 방법
 

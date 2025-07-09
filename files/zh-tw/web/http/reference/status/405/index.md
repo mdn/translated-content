@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`405 Method Not Allowed`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Reference/Status#用戶端錯誤回應)狀態碼表示伺服器理解請求方法，但目標資源不支援此方法。伺服器**必須**在 405 回應中產生一個 {{HTTPHeader("Allow")}} 標頭，列出目標資源目前支援的方法。
 
 檔案或目錄的伺服器端權限設定不當可能會導致 405 回應，即使該請求在正常情況下應該成功。

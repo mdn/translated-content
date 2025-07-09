@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ed041385cf874deec203e820fd415bdcd6f98a19
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Authorization`** {{Glossary("request header", "リクエストヘッダー")}}を使用すると、ユーザーエージェントをサーバーで認証する資格情報を指定し、保護されたリソースにアクセスすることができます。
 
 `Authorization`ヘッダーは通常、ユーザーエージェントが最初の資格情報を使用しない保護されたリソースのリクエストを試みた後に送信されますが、常に送信されるわけではありません。
@@ -58,7 +56,6 @@ Authorization: Digest username=<username>,
 ## ディレクティブ
 
 - `<auth-scheme>`
-
   - : [認証方式](/ja/docs/Web/HTTP/Guides/Authentication#認証方式)で、視覚情報をエンコードする方法を定義します。
     よく使われる方式（大文字小文字の区別なし）には、 [`Basic`](/ja/docs/Web/HTTP/Guides/Authentication#basic_認証方式)、`Digest`、`Negotiate`、`AWS4-HMAC-SHA256` などがあります。
 
@@ -71,7 +68,6 @@ Authorization: Digest username=<username>,
 ### Basic 認証
 
 - `<credentials>`
-
   - : 資格情報で、指定された方式によってエンコードされています。
 
     > [!NOTE]

@@ -300,7 +300,6 @@ log("Main program exiting");
 - [In depth: Microtasks and the JavaScript runtime environment](/zh-CN/docs/Web/API/HTML_DOM_API/Microtask_guide/In_depth)
 - {{domxref("Window.queueMicrotask()", "queueMicrotask()")}}
 - [Asynchronous JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)
-
   - [General asynchronous programming concepts](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - [Introducing asynchronous JavaScript](/zh-CN/docs/Learn_web_development/Extensions/Async_JS/Introducing)
   - [Cooperative asynchronous JavaScript: Timeouts and intervals](/zh-CN/docs/Learn_web_development/Extensions/Async_JS)

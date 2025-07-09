@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/CORS/Errors/CORSDisabled
 original_slug: Web/HTTP/CORS/Errors/CORSDisabled
 ---
 
-{{HTTPSidebar}}
-
 ## 원인
 
 ```plain
@@ -21,6 +19,6 @@ Firefox에서 CORS를 비활성화하는 기본 설정은 `content.cors.disable`
 
 ## 더 보기
 
-- [CORS 에러](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS 에러](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - Glossary: {{Glossary("CORS")}}
-- [CORS 소개](/ko/docs/Web/HTTP/CORS)
+- [CORS 소개](/ko/docs/Web/HTTP/Guides/CORS)

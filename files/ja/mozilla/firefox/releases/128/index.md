@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 95beef16ce880c41315c2e8b9d3e54c17c660124
 ---
 
-{{FirefoxSidebar}}
-
 このページでは、開発者に影響する Firefox 128 の変更点をまとめています。Firefox 128 は、米国時間 [2024 年 7 月 9 日](https://whattrainisitnow.com/release/?version=128) にリリースされました。
 
 ## ウェブ開発者向けの変更点一覧
@@ -28,7 +26,6 @@ l10n:
 
 - サイズ変更可能な {{jsxref("ArrayBuffer")}} と拡張可能な {{jsxref("SharedArrayBuffer")}} をサポートしました。新しいバッファーを割り当ててデータをコピーする必要なく、バッファーのサイズを変更できます ([Firefox bug 1884150](https://bugzil.la/1884150))。
   関連するメソッドやプロパティは以下のとおりです:
-
   - {{jsxref("SharedArrayBuffer.prototype.grow()")}} メソッドを使用して {{jsxref("SharedArrayBuffer")}} を拡張します。
     バッファーで許可される最大サイズは、[`SharedArrayBuffer()` コンストラクター](/ja/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer/SharedArrayBuffer#maxbytelength) の `options.maxByteLength` 引数で設定します。
     {{jsxref("SharedArrayBuffer.prototype.growable")}} および {{jsxref("SharedArrayBuffer.prototype.maxByteLength")}} プロパティはそれぞれバッファーが拡張可能であるか、および許可される最大サイズを表します。
@@ -96,7 +93,6 @@ l10n:
 以下の機能は Firefox 128 で新たに導入しましたが、デフォルトで無効です。これらを実験するには、`about:config` ページで適切な設定項目を検索して `true` に設定してください。[実験的機能](/ja/docs/Mozilla/Firefox/Experimental_features) のページで、さらに多くの機能を確認できます。
 
 - **既定および画像のリクエストで `image/jxl` MIME タイプを Accept ヘッダーに追加:** `image.jxl.enabled`.
-
   - [既定のリクエストと画像のリクエスト](/ja/docs/Web/HTTP/Guides/Content_negotiation/List_of_default_Accept_values) で、HTTP [`Accept`](/ja/docs/Web/HTTP/Reference/Headers/Accept) ヘッダーで `image/jxl` MIME タイプのサポートを示すように設定できます ([Firefox bug 1711622](https://bugzil.la/1711622))。
 
 - **Cookies Having Independent Partitioned State (CHIPS):** `network.cookie.CHIPS.enabled`。

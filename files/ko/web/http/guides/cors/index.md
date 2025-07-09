@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 84ae777ed4409ab3b3992382c445fb0add55a934
 ---
 
-{{HTTPSidebar}}
-
 **교차 출처 리소스 공유**(Cross-Origin Resource Sharing, {{Glossary("CORS")}})는 브라우저가 자신의 출처가 아닌 다른 어떤 {{glossary("origin", "출처")}}(도메인, 스킴 혹은 포트)로부터 자원을 로딩하는 것을 허용하도록 서버가 허가 해주는 {{Glossary("HTTP")}} 헤더 기반 메커니즘입니다. 또한 CORS 는 교차 출처 리소스를 호스팅하는 서버가 실제 요청을 허가할 것인지 확인하기 위해 브라우저가 보내는 "사전 요청(프리플라이트, Preflight)" 메커니즘에 의존합니다. 이 사전 요청에서 브라우저는 실제 요청에서 사용할 HTTP 메서드와 헤더들에 대한 정보가 표시된 헤더에 담아 보냅니다.
 
 교차 출처 요청의 예시: `https://domain-a.com` 에서 제공되는 프론트엔드 JavaScript 코드가 {{domxref("Window/fetch", "fetch()")}}를 사용하여 `https://domain-b.com/data.json` 에 요청하는 경우.
@@ -32,7 +30,7 @@ CORS 메커니즘은 브라우저와 서버 간의 안전한 교차 출처 요�
 
 ## 기능적 개요
 
-교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "사전 전달(프리플라이트)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
+교차 출처 리소스 공유 표준은 서버가 웹 브라우저에서 해당 정보를 읽는 것이 허용된 출처를 설명할 수 있도록 새로운 [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)를 추가함으로써 동작합니다. 추가적으로, 서버 데이터에 부수 효과(side effect)를 일으킬 수 있는 HTTP 요청 방법(특히 {{HTTPMethod("GET")}} 이외의 HTTP 메서드 또는 특정 [MIME 타입](/ko/docs/Web/HTTP/Guides/MIME_types)을 사용하는 {{HTTPMethod("POST")}})에 대해서, CORS 명세는 브라우저가 HTTP {{HTTPMethod("OPTIONS")}} 메서드로 서버에서 지원하는 메서드들을 요구하는 요청을 "사전 전달(프리플라이트)"한 다음, 서버로부터 "승인"을 받은 후 실제 요청을 보내도록 지시합니다. 또한 서버는 요청과 함께 "자격 증명"(예를 들어 [쿠키](/ko/docs/Web/HTTP/Guides/Cookies) 및 [HTTP 인증](/ko/docs/Web/HTTP/Guides/Authentication))을 전송해야 하는지 여부를 클라이언트에게 알릴 수 있습니다.
 
 CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 대한 세부 사항은 JavaScript에 제공되지 않습니다. 코드가 알 수 있는 것은 오류가 발생했다는 것뿐입니다. 무엇이 구체적으로 잘못되었는지를 확인하려면 브라우저의 콘솔에서 세부 사항을 살펴봐야 합니다.
 
@@ -51,13 +49,11 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
 단순 요청은 다음 조건을 모두 충족하는 요청입니다.
 
 - 다음 중 하나의 메서드
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - 사용자 에이전트가 자동으로 설정한 헤더(예를 들어, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, [Fetch 명세에서 "forbidden header name"으로 정의한 헤더](https://fetch.spec.whatwg.org/#forbidden-header-name)) 외에, 수동으로 설정할 수 있는 헤더는 오직 [Fetch 명세에서 "CORS-safelisted request-header"로 정의한 헤더](https://fetch.spec.whatwg.org/#cors-safelisted-request-header) 뿐입니다.
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -65,7 +61,6 @@ CORS 실패는 오류를 발생시키지만, 보안상의 이유로 오류에 �
   - {{HTTPHeader("Range")}} (오직 [단순 범위 헤더 값](https://fetch.spec.whatwg.org/#simple-range-header-value), 예를 들어 `bytes=256-` 혹은 `bytes=127-255`)
 
 - {{HTTPHeader("Content-Type")}} 헤더에 지정된 {{Glossary("MIME type","미디어 타입")}}에 대해 허용된 타입/서브타입 조합은 다음과 같습니다.
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -219,7 +214,7 @@ Access-Control-Max-Age: 86400
 
 서버는 또한 `Access-Control-Allow-Headers` 헤더에 "`X-PINGOTHER, Content-Type`" 값을 설정하여 보내 이 헤더들이 실제 요청에 사용할 수 있는 허용된 헤더임을 확인해 줍니다. `Access-Control-Allow-Methods` 와 마찬가지로 `Access-Control-Allow-Headers` 는 허용 가능한 헤더의 쉼표로 구분합니다.
 
-마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 사전 요청을 보내지 않도록 사전 요청에 대한 응답을 얼마나 오랫동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Headers/Access-Control-Max-Age)을 가집니다.
+마지막으로, {{HTTPHeader("Access-Control-Max-Age")}} 는 또 다른 사전 요청을 보내지 않도록 사전 요청에 대한 응답을 얼마나 오랫동안 캐시할 수 있는지 초 단위 시간 값을 제공합니다. 기본 값은 5초입니다. 현재 최대 캐시 시간은 86400초(= 24시간)입니다. 각 브라우저는 `Access-Control-Max-Age` 가 이를 초과할 때 우선되는 [최대 내부 값](/ko/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age)을 가집니다.
 
 사전 요청이 한번 완료되면 실제 요청이 전송됩니다.
 
@@ -281,7 +276,7 @@ CORS 프로토콜은 원래 그러한 동작(리다이렉트)을 필요했지만
 > [!NOTE]
 > 다른 도메인으로 자격 증명 요청을 할 때, 서드파티 쿠키 정책이 여전히 적용됩니다. 이 정책은 서버와 클라이언트에서 설명된 모든 설정과 관계없이 항상 적용됩니다.
 
-{{domxref("Window/fetch", "fetch()")}} 혹은 {{domxref("XMLHttpRequest")}} 와 CORS 을 통해 제공된 가장 흥미로운 기능은 [HTTP 쿠키](/ko/docs/Web/HTTP/Cookies)와 HTTP 인증 정보를 인식하는 "자격 증명이 포함된" 요청을 할 수 있다는 것입니다. 기본적으로 교차 출처 `fetch()` 또는 `XMLHttpRequest` 호출에서는 브라우저가 자격 증명을 전송하지 **않습니다.**
+{{domxref("Window/fetch", "fetch()")}} 혹은 {{domxref("XMLHttpRequest")}} 와 CORS 을 통해 제공된 가장 흥미로운 기능은 [HTTP 쿠키](/ko/docs/Web/HTTP/Guides/Cookies)와 HTTP 인증 정보를 인식하는 "자격 증명이 포함된" 요청을 할 수 있다는 것입니다. 기본적으로 교차 출처 `fetch()` 또는 `XMLHttpRequest` 호출에서는 브라우저가 자격 증명을 전송하지 **않습니다.**
 
 `fetch()` 요청에 자격 증명을 포함하려면, [`credentials`](/ko/docs/Web/API/RequestInit#credentials) 옵션을 `"include"` 로 설정하십시오.
 
@@ -369,7 +364,7 @@ CORS 응답에 설정된 쿠키는 일반적인 서드 파티(third-party) 쿠�
 
 요청의 쿠키도 일반적인 서드-파티 쿠키 정책에 따라 억제될 수 있습니다. 따라서 강제된 쿠키 정책은 이 장에서 설명된 기능을 무효화 할 수 있으며, 자격 증명이 포함된 요청을 전혀 수행할 수 없게 만들 수 있습니다.
 
-[SameSite](/ko/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) 속성에 대한 쿠키 정책이 적용됩니다.
+[SameSite](/ko/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) 속성에 대한 쿠키 정책이 적용됩니다.
 
 ## HTTP 응답 헤더
 
@@ -496,7 +491,7 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 
 ## 같이 보기
 
-- [CORS errors](/ko/docs/Web/HTTP/CORS/Errors)
+- [CORS errors](/ko/docs/Web/HTTP/Guides/CORS/Errors)
 - [CORS 활성화: 내 서버에 CORS 지원을 추가하고 싶다](https://enable-cors.org/server.html)
 - {{domxref("XMLHttpRequest")}}
 - [Fetch API](/ko/docs/Web/API/Fetch_API)
@@ -504,7 +499,6 @@ Access-Control-Request-Headers: <field-name>[,<field-name>]*
 - [모든(현대) 브라우저에서 CORS 사용하기](https://www.telerik.com/blogs/using-cors-with-all-modern-browsers)
 - [CORS 없이 Chrome 브라우저를 실행하는 방법](https://alfilatov.com/posts/run-chrome-without-cors/)
 - [일반적인 문제를 다루기 위한 방법에 대한 스택 오버플로우 답변](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
   - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

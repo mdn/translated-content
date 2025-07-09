@@ -6,8 +6,6 @@ l10n:
   sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
 ---
 
-{{HTTPSidebar}}
-
 [HTTP/1.1 プロトコル](/ja/docs/Web/HTTP)は、{{HTTPHeader("Upgrade")}}ヘッダーフィールドを使用して、既に確立された接続を別のプロトコルにアップグレードするために使用することができる特別な仕組みを提供します。
 
 この仕組みはオプションであり、プロトコルの変更を主張するために使用することはできません。実装は新しいプロトコルに対応していても、アップグレードを利用しないことを選ぶことができますし、実際には、この仕組みは主に WebSocket 接続の起動に使用されます。
@@ -148,7 +146,6 @@ Sec-WebSocket-Accept: hash
 - [WebSocket API](/ja/docs/Web/API/WebSocket)
 - [HTTP](/ja/docs/Web/HTTP)
 - 仕様書と RFC:
-
   - {{RFC(7230)}}
   - {{RFC(6455)}}
   - {{RFC(7540)}}

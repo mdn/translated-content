@@ -127,7 +127,6 @@ La función `minmax()` puede ser usada dentro de:
 2. [**Referencia CSS**](/es/docs/Web/CSS/Reference)
 3. [CSS Grid Layout](/es/docs/Web/CSS/CSS_grid_layout)
 4. **Guías**
-
    1. [Conceptos básicos del diseño con rejillas](/es/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)
    2. [Relación a otros métodos de diseño](/es/docs/Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods)
    3. [Posicionamiento basado en líneas](/es/docs/Web/CSS/CSS_grid_layout/Grid_layout_using_line-based_placement)
@@ -141,7 +140,6 @@ La función `minmax()` puede ser usada dentro de:
    11. [Elaborando diseños comunes utilizando rejillas](/es/docs/Web/CSS/CSS_grid_layout/Realizing_common_layouts_using_grids)
 
 5. **Propiedades**
-
    1. [grid](/es/docs/Web/CSS/grid)
    2. [grid-area](/es/docs/Web/CSS/grid-area)
    3. [grid-auto-columns](/es/docs/Web/CSS/grid-auto-columns)
@@ -162,7 +160,6 @@ La función `minmax()` puede ser usada dentro de:
    18. [grid-template-rows](/es/docs/Web/CSS/grid-template-rows)
 
 6. **Glosario**
-
    1. [Rejilla](/es/docs/Glossary/Grid)
    2. [Líneas de rejilla](/es/docs/Glossary/Grid_Lines)
    3. [Bandas de rejilla](/es/docs/Glossary/Grid_tracks)

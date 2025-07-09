@@ -3,8 +3,6 @@ title: Proxy-Authorization
 slug: Web/HTTP/Reference/Headers/Proxy-Authorization
 ---
 
-{{HTTPSidebar}}
-
 **`Proxy-Authorization`** 是一个请求首部，其中包含了用户代理提供给代理服务器的用于身份验证的凭证。这个首部通常是在服务器返回了 {{HTTPStatus("407")}} `Proxy Authentication Required` 响应状态码及 {{HTTPHeader("Proxy-Authenticate")}} 首部后发送的。
 
 | Header type                           | {{Glossary("Request header")}} |
@@ -22,9 +20,7 @@ Proxy-Authorization: <type> <credentials>
 - \<type>
   - : [身份验证类型](/zh-CN/docs/Web/HTTP/Guides/Authentication#authentication_schemes)。一个常见的类型是 ["基本验证"。](/zh-CN/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme)IANA 机构维护了 [一系列的身份验证机制](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)。
 - \<credentials>
-
   - : 凭证的构成方式如下：
-
     - 将用户名和密码用冒号拼接（aladdin:opensesame）。
     - 将拼接生成的字符串使用 [base64](/zh-CN/docs/Glossary/Base64) 编码方式进行编码（YWxhZGRpbjpvcGVuc2VzYW1l）。
 

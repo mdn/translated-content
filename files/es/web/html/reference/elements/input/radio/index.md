@@ -155,13 +155,11 @@ Prueba este ejemplo y observa cómo nunca hay más de un resultado para el grupo
 Además de los atributos comunes compartidos por todos los elementos {{HTMLElement("input")}}, los inputs `radio` admiten los siguientes atributos:
 
 - `checked`
-
   - : Un atributo booleano que, si está presente, indica que este botón de radio es el predeterminado seleccionado en el grupo.
 
     A diferencia de otros navegadores, Firefox por defecto [persiste el estado dinámico seleccionado](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing) de un `<input>` entre cargas de página. Usa el atributo [`autocomplete`](/es/docs/Web/HTML/Reference/Elements/input#autocomplete) para controlar esta función.
 
 - `value`
-
   - : El atributo `value` es compartido por todos los {{HTMLElement("input")}}; sin embargo, tiene un propósito especial para inputs de tipo `radio`: cuando se envía un formulario, solo se envían al servidor los botones de radio que están actualmente seleccionados, y el valor informado es el valor del atributo `value`. Si no se especifica un `value`, su valor predeterminado es la cadena `on`. Esto se demuestra en la sección [Valor](#value) anterior.
 
 - [`required`](/es/docs/Web/HTML/Attributes/required)

@@ -47,9 +47,7 @@ slug: Web/HTML/Reference/Attributes/rel
 ## 值
 
 - `alternate`
-
   - : 表示当前文档的另一种方式。对 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 有效，其含义取决于其他属性的值。
-
     - 在 `<link>` 上使用 [`stylesheet`](#stylesheet) 关键字，会创建一个[替代样式表](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/alternate_stylesheet)。
 
       ```html
@@ -74,7 +72,6 @@ slug: Web/HTML/Reference/Attributes/rel
       ```
 
     - 否则，它将创建一个超链接，引用当前文档的另一种表述，其性质由 [`hreflang`](/zh-CN/docs/Web/HTML/Reference/Elements/link#hreflang) 和 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/link#type) 属性赋予。
-
       - 如果一起给出 `hreflang` 和 `alternate`，并且 `hreflang` 的值与当前文档的语言不同，则表明引用的文档是一个翻译。
       - 如果一起给出 `type` 和 `alternate`，它表示被引用的文件是一种替代格式（如 PDF）。
       - `hreflang` 和 `type` 属性可以与 `alternate` 一同给出。
@@ -96,7 +93,6 @@ slug: Web/HTML/Reference/Attributes/rel
       ```
 
 - `author`
-
   - : 表示被引用的文档提供了关于当前文档或文章作者的进一步信息。与 {{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素有关。
 
     {{htmlelement('a')}} 和 {{htmlelement('area')}} 元素表示链接的文档（或 `mailto:`）提供了最近的祖先 {{htmlelement('article')}} 元素的作者信息，如果无 article 元素就是整个文档的作者信息。
@@ -117,7 +113,6 @@ slug: Web/HTML/Reference/Attributes/rel
 - `help`
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和{{htmlelement('area')}} 元素相关，`help` 关键字表示链接到的内容提供上下文敏感的帮助，为定义超链接的元素的父元素及其子元素提供信息。当在 `<link>` 中使用时，针对整个文档。当与 {{htmlelement('a')}} 和 {{htmlelement('area')}} 一起包含并支持这种使用方法时，默认的 {{cssxref('cursor')}} 将是 `help` 而不是 `pointer`。
 - `icon`
-
   - : 对 {{htmlelement('link')}} 元素有效，链接的资源代表了当前文档的图标，这是一种在用户界面上代表页面资源的方法。
 
     `icon` 值最常见的用途是网站图标：
@@ -134,10 +129,10 @@ slug: Web/HTML/Reference/Attributes/rel
     > [!NOTE]
     > 苹果的 iOS 系统不使用这种链接类型，也不像其他移动浏览器那样使用 [`sizes`](/zh-CN/docs/Web/HTML/Reference/Elements/link#sizes) 属性，来选择网页夹或启动占位符的网页图标。相反，它分别使用非标准的 [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) 和 [`apple-touch-starttup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6)。
 
-    > **备注：** `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
+    > [!NOTE]
+    > `shortcut` 链接类型经常出现在 `icon` 之前，但这种链接类型是不符合规定的，该类型会被忽略，且**网站作者不得再使用它**。
 
 - `license`
-
   - : 在 {{HTMLElement("a")}}、{{HTMLElement("area")}}、{{HTMLElement("form")}}、 {{HTMLElement("link")}} 元素上有效，`license` 值表示该超链接指向描述许可信息的文件；当前文件的主要内容被引用文件描述的版权许可所覆盖。如果不在 {{HTMLElement("head")}} 元素内，标准并不区分适用于文档特定部分的超链接还是适用于整个文档的超链接。只有页面上的数据可以表明这一点。
 
     ```html
@@ -156,7 +151,6 @@ slug: Web/HTML/Reference/Attributes/rel
 - `nofollow`
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关， `nofollow` 关键字告诉搜索引擎蜘蛛忽略链接关系。nofollow 关系可能表明当前文档的所有者并不认可被引用的文档。它经常被搜索引擎优化者包括在内，假装他们的链接农场不是垃圾页面。
 - `noopener`
-
   - : 与 {{htmlelement('form')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，如果超链接一开始就会创建其中之一（即有一个适当的 `target` 属性值），则会创建一个顶级浏览环境，而不是一个辅助浏览环境。换句话说，它使链接的行为如同 [`window.opener`](/zh-CN/docs/Web/API/Window/opener)是空的，并且 `target="_parent"` 被设置。
 
     这与 [`opener`](#opener) 具有的含义相反。
@@ -176,19 +170,16 @@ slug: Web/HTML/Reference/Attributes/rel
 - `prerender`
   - : 指定用户代理应抢先获取目标资源，并以有助于在未来提供更快的响应的方式对其进行处理，例如，获取其子资源或执行一些渲染。
 - `prev`
-
   - : 与 [`next`](#next) 关键字类似，与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`prev` 值表示当前文档是一个系列的一部分，而链接引用该系列中的一个先前文档就是被引用的文档。
 
     备注：同义词 `previous` 并不正确，不应被使用。
 
 - `search`
-
   - : 与 {{htmlelement('form')}}、{{htmlelement('link')}}、{{htmlelement('a')}} 和 {{htmlelement('area')}} 元素相关，`search` 关键字表示该超链接引用一个文档，其界面是专门为在当前文档、站点和相关资源中搜索而设计的，提供一个可以用来搜索的资源链接。
 
     如果 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/link#type) 属性被设置为 `application/opensearchdescription+xml`，则该资源是一个 [OpenSearch](/zh-CN/docs/Web/XML/Guides/OpenSearch) 插件，可以很容易地添加到一些浏览器（如 Firefox 或 Internet Explorer）的界面中。
 
 - `stylesheet`
-
   - : 对 {{htmlelement('link')}} 元素有效，它导入一个外部资源作为样式表使用。`text/css` 的样式表不需要 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/link#type) 属性，因为这是该属性的默认值。如果它不是 `text/css` 类型的样式表，最好是声明这个类型。
 
     虽然这个属性将链接定义为一个样式表，但与其他属性的交互以及 rel 值中的其他关键术语会影响样式表是否被下载和/或使用。

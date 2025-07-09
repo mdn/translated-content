@@ -34,26 +34,21 @@ l10n:
 你可以修改下面的事件中的一部分的请求。具体而言，包括：
 
 - 取消请求：
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 - 重定向请求：
-
   - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 修改请求标头：
-
   - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
 
 - 修改响应标头：
-
   - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
 
 - 提供认证凭据：
-
   - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
 
 要做到这一点，你需要在事件的 `addListener()` 中的 `extraInfoSpec` 参数中传递一个值为 `"blocking"` 的选项。这将让监听器变为同步的。

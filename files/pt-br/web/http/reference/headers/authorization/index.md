@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Authorization
 original_slug: Web/HTTP/Headers/Authorization
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de requisição HTTP **`Authorization`** contém as credenciais para autenticar o agente de usuário com o servidor, geralmente o servidor responderá com um status {{HTTPStatus("401")}} `Unauthorized` se não for possível fazer a autenticação, e com o cabeçalho {{HTTPHeader("WWW-Authenticate")}}.
 
 <table class="properties">
@@ -30,16 +28,12 @@ Authorization: <tipo> <credenciais>
 ## Directives
 
 - \<tipo>
-
   - : [Tipo de autenticação](/pt-BR/docs/Web/HTTP/Guides/Authentication#authentication_schemes). Um tipo comum é o ["Basic"](/pt-BR/docs/Web/HTTP/Guides/Authentication#basic_authentication_scheme). Outros tipos:
-
     - [Registro do IANA dos esquemas de Autenticação](https://www.iana.org/assignments/http-authschemes/http-authschemes.xhtml)
     - [Autenticação para servidores AWS (`AWS4-HMAC-SHA256`)](https://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html)
 
 - \<credenciais>
-
   - : Se a autenticação "Basic" é utilizada, as credenciais construção são parecidas com isto:
-
     - O nome de usuário com a senha combinados por dois pontos (`aladdin:opensesame`).
     - A cadeia de caracteres resultante é uma codificação [base64](/pt-BR/docs/Glossary/Base64) (`YWxhZGRpbjpvcGVuc2VzYW1l`).
 

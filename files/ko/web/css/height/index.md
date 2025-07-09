@@ -69,7 +69,7 @@ height: unset;
 - {{cssxref("&lt;length&gt;")}}
   - : 높이의 절대값.
 - {{cssxref("&lt;percentage&gt;")}}
-  - [: 컨테이닝 블록](/ko/docs/Web/CSS/Containing_block) 높이의 백분율.
+  - [: 컨테이닝 블록](/ko/docs/Web/CSS/CSS_display/Containing_block) 높이의 백분율.
 - `border-box` {{experimental_inline}}
   - : 앞선 {{cssxref("&lt;length&gt;")}} 또는 {{cssxref("&lt;percentage&gt;")}}가 요소의 보더 박스에 적용.
 - `content-box` {{experimental_inline}}
@@ -85,9 +85,7 @@ height: unset;
 - `available` {{experimental_inline}}
   - : 컨테이닝 블록 높이에서 수평 여백, 테두리, 패딩을 제외한 값.
 - `fit-content` {{experimental_inline}}
-
   - : 다음 중 더 큰 값.
-
     - 본질적인 최소 높이
     - 본질적인 선호 높이와 사용 가능한 높이 중 작은 값
 

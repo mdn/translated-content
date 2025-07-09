@@ -17,9 +17,9 @@ slug: Web/Progressive_web_apps/Tutorials/CycleTracker/HTML_and_CSS
 
 在接下来的章节中，我们将设置一个[本地开发环境](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Secure_connection)，然后在添加 [JavaScript 功能](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/JavaScript_functionality)来将本节中创建的静态内容转换为功能性的 Web 应用程序之前，我们会看看我们的进展。一旦我们有了一个功能性的应用，我们就会有可以渐进增强为可安装的、离线工作的 PWA 的东西。
 
-## 静态网页内容
+## 静态 Web 内容
 
-我们的静态站点 HTML，用 {{HTMLElement("link")}} 和 {{HTMLElement("script")}} 元素作为尚未创建的外部 CSS 和 JavaScript 文件的占位符，如下：
+我们的静态站点的 HTML 使用了 {{HTMLElement("link")}} 和 {{HTMLElement("script")}} 元素占位符服务于尚未创建的外部 CSS 和 JavaScript 文件，如下：
 
 ```html
 <!doctype html>

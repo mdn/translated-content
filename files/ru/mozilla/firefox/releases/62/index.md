@@ -3,8 +3,6 @@ title: Firefox 62 для разработчиков
 slug: Mozilla/Firefox/Releases/62
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 62 был выпущен 5 сентября 2018 года.
 
 ## Изменения для веб-разработчиков
@@ -161,7 +159,6 @@ _Без изменений._
 
 - Новое свойство `open_at_install` ключа [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) манифеста позволяет дополнениям при установке автоматически открывать или не открывать боковые панели ([Firefox bug 1460910](https://bugzil.la/1460910)).
 - Изменено свойство `browser_style` различных ключей манифеста:
-
   - У [`page_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) и [`browser_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) оно по умолчанию стало `false`.
   - У [`sidebar_action`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action) и [`options_ui`](/ru/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) оно по умолчанию стало `true`.
 

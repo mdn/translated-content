@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox の最新の開発者向け機能を試すには、Firefox Developer Edition をインストールしてください。](https://www.mozilla.org/firefox/developer/) Firefox 48 は、米国時間 2016 年 8 月 2 日にリリースされました。このページでは、開発者に影響する Firefox 48 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -25,7 +23,6 @@ l10n:
 ### HTML
 
 - {{HTMLElement("details")}} および {{HTMLElement("summary")}} 要素を、Nightly および Aurora (DevTools) でデフォルトで有効にしました。Beta および Release では無効です:
-
   - これらの要素のデフォルトのスタイルが、仕様書に合致するようになりました ([Firefox バグ 1258657](https://bugzil.la/1258657))。
   - {{domxref("HTMLDetailsElement/toggle_event", "toggle")}} イベントが、{{HTMLElement("details")}} 要素を開いたり閉じたりしたときに送られるようになりました ([Firefox バグ 1225412](https://bugzil.la/1225412))。
 
@@ -34,12 +31,10 @@ l10n:
 ### CSS
 
 - 仕様書に準拠するよう、{{cssxref("calc", "calc()")}} を改良しました。
-
   - {{cssxref("line-height")}} プロパティで {{cssxref("calc", "calc()")}} をサポートしました ([Firefox バグ 594933](https://bugzil.la/594933))。
   - CSS {{cssxref("calc", "calc()")}} の入れ子をサポートしました ([Firefox バグ 968761](https://bugzil.la/968761))。
 
 - CSS グリッドの実験的な実装を更新しました。
-
   - グリッドレイアウトでフラグメンテーションを実装しました ([Firefox バグ 1144096](https://bugzil.la/1144096))。
   - \[css-grid] グリッドコンテナーのサイズが不定である場合は、パーセンテージ指定されたトラックのサイズを `auto` として扱うようになりました ([Firefox バグ 1264607](https://bugzil.la/1264607))。
   - {{HTMLElement("fieldset")}} で grid および flex レイアウトをサポートしました ([Firefox バグ 1230207](https://bugzil.la/1230207))。
@@ -50,7 +45,6 @@ l10n:
 - 画像や背景の印刷をページから許可できるようにするための {{cssxref("color-adjust")}} プロパティを実験的にサポートしました ([Firefox バグ 1209273](https://bugzil.la/1209273))。
 - {{cssxref("::first-letter")}} 擬似要素が、実際の先頭文字の前または直後にあるタイプ Pd の句読点にも一致するようになりました。これは CSS Pseudo-element module level 4 の新たな要求です ([Firefox バグ 1260366](https://bugzil.la/1260366))。
 - いくつかの `-webkit` 接頭辞付きプロパティおよび値を、ウェブの互換性のためにサポートしました。設定項目 `layout.css.prefixes.webkit` で制御しており、既定値は `false` です:
-
   - {{cssxref("-webkit-text-fill-color")}} ([Firefox バグ 1247777](https://bugzil.la/1247777))
   - {{cssxref("-webkit-text-stroke")}}, {{cssxref("-webkit-text-stroke-color")}}, {{cssxref("-webkit-text-stroke-width")}} ([Firefox バグ 1248708](https://bugzil.la/1248708))
   - `-webkit-background-clip` (background-clip として) の値 text ([Firefox バグ 759568](https://bugzil.la/759568)).
@@ -94,7 +88,6 @@ l10n:
 - {{domxref("Document.scrollingElement")}} をデフォルトで有効にしました ([Firefox バグ 1265032](https://bugzil.la/1265032))。
 - `Node.localName`、`Node.namespaceURI`、`Node.prefix` を {{domxref("Element")}} および {{domxref("Attr")}} API に移動しました ([Firefox バグ 1055776](https://bugzil.la/1055776))。
 - 最新の仕様書に従って、以下のキーについて {{domxref("KeyboardEvent.code")}} が返す値を変更しました ([Firefox バグ 1264150](https://bugzil.la/1264150) を参照):
-
   - `"OSLeft"` および `"OSRight"` が `"MetaLeft"` および `"MetaRight"` になりました。
   - `"VolumeDown"`、`"VolumeUp"`、`"VolumeMute"` が `"AudioVolumeDown"`、`"AudioVolumeUp"`、`"AudoVolumeMute"` になりました。
   - `"IntlHash"` を削除しました。

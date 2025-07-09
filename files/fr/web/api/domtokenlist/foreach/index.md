@@ -17,9 +17,7 @@ tokenList.forEach(callback, argument);
 ### Paramètres
 
 - `callback`
-
   - : Fonction à exécuter pour chaque élément, prenant éventuellement 3 arguments :
-
     - _`currentValue`_
       - : L'élément en cours de traitement dans le tableau.
     - `currentIndex`

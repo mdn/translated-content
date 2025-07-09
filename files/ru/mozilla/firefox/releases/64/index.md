@@ -3,8 +3,6 @@ title: Firefox 64 для разработчиков
 slug: Mozilla/Firefox/Releases/64
 ---
 
-{{FirefoxSidebar}}
-
 В этой статье перечислены ключевые изменения, которые касаются разработчиков. Firefox 64 был выпущен 11 декабря 2018 года.
 
 ## Изменения для веб-разработчиков
@@ -15,13 +13,11 @@ slug: Mozilla/Firefox/Releases/64
 - Выбор устройства в [режиме адаптивного дизайна](https://firefox-source-docs.mozilla.org/devtools-user/responsive_design_mode/index.html) запоминается и сохраняется между сеансами ([Firefox bug 1248619](https://bugzil.la/1248619)).
 - [Сетевой монитор](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) теперь выделяет ресурсы, на которые потенциально может повлиять [защита от отслеживания](/ru/docs/Web/Privacy/Firefox_tracking_protection) ([Firefox bug 1333994](https://bugzil.la/1333994)).
 - [Веб-консоль](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) получила усовершенствования, связанные с вводом и оценкой кода:
-
   - Регистронезависимое [автодополнение](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#autocomplete) выражений ([Firefox bug 672733](https://bugzil.la/672733)).
   - Возможность просмотреть [историю выражений консоли](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html#command_history) с помощью bash-подобного обратного поиска ([Firefox bug 1024913](https://bugzil.la/1024913)).
   - Подсветка [оценённого кода](https://firefox-source-docs.mozilla.org/devtools-user/web_console/the_command_line_interpreter/index.html) и при вводе, и при выводе ([Firefox bug 1463669](https://bugzil.la/1463669)).
 
 - Пошаговое выполнение кода в [отладчике JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html) также было улучшено:
-
   - Отладчик сохраняет [развёрнутые переменные](https://firefox-source-docs.mozilla.org/devtools-user/debugger/ui_tour/index.html#scopes) при пошаговом выполнении кода ([Firefox bug 1491471](https://bugzil.la/1491471)).
   - [Выход из функции](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/step_through_code/index.html) пропускает возвращаемое значение ([Firefox bug 923975](https://bugzil.la/923975)).
 
@@ -68,7 +64,6 @@ _Без изменений._
 #### DOM
 
 - Ряд изменений {{domxref("Fullscreen_API", "API Fullscreen", "", "1")}}:
-
   - API лишился префикса ([Firefox bug 1269276](https://bugzil.la/1269276)).
   - Методы {{domxref("Element.requestFullscreen()")}} и {{domxref("Document.exitFullscreen()")}} отныне возвращают {{jsxref("Promise")}}, который исполняется, когда завершено изменение режима ([Firefox bug 1188256](https://bugzil.la/1188256) и [Firefox bug 1491212](https://bugzil.la/1491212)).
   - События {{domxref("fullscreenchange")}} и {{domxref("fullscreenerror")}} сначала отправлялись в {{domxref("Document")}}, а затем в {{domxref("Element")}}. Теперь всё стало наоборот. Это поведение отражено в спецификации и совпадает с поведением Chrome ([Firefox bug 1375319](https://bugzil.la/1375319)).
@@ -79,7 +74,6 @@ _Без изменений._
 - Устаревший интерфейс `HTMLAllCollection` обновлён в соответствии с последними изменениями [спецификации](https://html.spec.whatwg.org/multipage/common-dom-interfaces.html#htmlallcollection) ([Firefox bug 1398354](https://bugzil.la/1398354)).
 - В целях конфиденциальности {{domxref("Navigator.buildID")}} будет возвращать фиксированную метку времени ([Firefox bug 583181](https://bugzil.la/583181)).
 - По умолчанию отключены следующие возможности {{domxref("Document.execCommand()")}} ([Firefox bug 1490641](https://bugzil.la/1490641)):
-
   - `enableObjectResizing`
   - `enableInlineTableEditing`
   - `enableAbsolutePositionEditor`
@@ -130,7 +124,6 @@ _Без изменений._
 #### Меню
 
 - Добавлен новый API `browser.menus.overrideContext()`, который может быть вызван из события DOM `contextmenu` и позволяет скрыть все пункты меню по умолчанию, чтобы создать собственное контекстное меню на страницах, относящихся к дополнению. Это контекстное меню может состоять из нескольких пунктов меню верхнего уровня дополнения и может включать элементы контекстного меню вкладок или закладок из других дополнений. См. [блог](https://blog.mozilla.org/addons/2018/11/08/extensions-in-firefox-64/#cm) для получения подробных сведений.
-
   - Реализован `browser.menus.overrideContext()` (([Firefox bug 1280347](https://bugzil.la/1280347)).
   - Реализована опция `showDefaults: false`, позволяющая скрывать из контекстного меню пункты по умолчанию ([Firefox bug 1367160](https://bugzil.la/1367160)).
   - `documentURLPatterns` теперь может соответствовать адресу `moz-extension://`, даже если используется `browser.menus.overrideContext()`. Таким образом, он может надёжно ограничивать пользовательские пункты меню для определённых документов ([Firefox bug 1498896](https://bugzil.la/1498896)).

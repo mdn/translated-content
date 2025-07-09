@@ -95,10 +95,8 @@ Una forma típica de navegación que utilizan las personas no videntes es movers
 Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros documentos. Esto beneficia la organización de la información y también ayuda a los usuarios de lectores de pantalla a conocer mejor la jerarquía de los contenidos.
 
 1. `h1` Harry Potter
-
    1. `h2` Sinopsis
    2. `h2` Novelas
-
       1. `h3` Harry Potter y la Piedra Filosofal
       2. `h3` Harry Potter y la Cámara de los Secretos
       3. `h3` Harry Potter y el Prisionero de Azkaban
@@ -108,7 +106,6 @@ Las etiquetas de cabecera pueden anidarse para generar sub-secciones en nuestros
       7. `h3` Harry Potter y las Reliquias de la Muerte
 
    3. `h2` Películas
-
       1. `h3` Harry Potter y la Piedra Filosofal
       2. `h3` Harry Potter y la Cámara de los Secretos
       3. `h3` Harry Potter y el Prisionero de Azkaban
