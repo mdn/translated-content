@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 53b19adf7936b1830f407813c3252b35c5eb925e
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête HTTP **`Upgrade`**, réservé à HTTP/1.1, peut être utilisé pour basculer une connexion client/serveur déjà établie sur un autre protocole (en conservant le même protocole de transport). Un client pourra par exemple utiliser cet en-tête pour demander la mise à niveau de la connexion HTTP/1.1 en HTTP/2 ou le passage d'une connexion HTTP ou HTTPS à une connexion WebSocket.
 
 > [!WARNING]

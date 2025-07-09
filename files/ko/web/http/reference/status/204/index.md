@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`204 No Content`** 성공 상태 응답 코드는 요청이 성공했으나 클라이언트가
 현재 페이지에서 벗어나지 않아도 된다는 것을 나타냅니다.
 
