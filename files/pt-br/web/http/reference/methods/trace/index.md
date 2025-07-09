@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/TRACE
 original_slug: Web/HTTP/Methods/TRACE
 ---
 
-{{HTTPSidebar}}
-
 O **método** **HTTP `TRACE` **realiza um teste de loopback enviando uma mensagem por todo o caminho até o recurso alvo no qual foi destinado, provendo um mecanismo útil para debug.
 
 O destinatário final deve responder a mensagem recebida, excluindo alguns campos descritos abaixo, de volta para o client com um status code 200 (OK) e um cabeçalho {{httpheader("Content-Type")}}. O destinatário final pode ser o servidor de origem ou o primeiro servidor a receber a requisição com o cabeçalho {{httpheader("Max-Forwards")}} com valor 0.

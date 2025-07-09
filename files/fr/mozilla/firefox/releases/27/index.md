@@ -3,8 +3,6 @@ title: Firefox 27 for developers
 slug: Mozilla/Firefox/Releases/27
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modofications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
 ## Changements pour les développeurs Web

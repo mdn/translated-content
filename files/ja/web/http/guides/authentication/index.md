@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
 ---
 
-{{HTTPSidebar}}
-
 HTTP はアクセス制御と認証の基本的な枠組みを提供しています。
 このページでは、 HTTP の認証の枠組みを紹介し、サーバーで HTTP の "Basic" 認証を使用してアクセスを制限する方法を紹介します。
 
