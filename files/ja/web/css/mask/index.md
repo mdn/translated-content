@@ -2,7 +2,7 @@
 title: mask
 slug: Web/CSS/mask
 l10n:
-  sourceCommit: 1860b6eac3518adb24f505536e4fa34c5299bc41
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{CSSRef}}
@@ -192,4 +192,4 @@ div {
 - {{CSSxRef("filter")}}
 - [CSS マスク](/ja/docs/Web/CSS/CSS_masking)モジュール
 - SVG の {{SVGAttr("mask")}} 属性
-- [HTML コンテンツへ SVG 効果を適用する](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
+- [SVG 効果の HTML コンテンツへの適用](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

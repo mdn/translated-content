@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Location
 original_slug: Web/HTTP/Headers/Content-Location
 ---
 
-{{HTTPSidebar}}
-
 La cabecera **`Content-Location`** indica una ubicación alternativa para los datos devueltos. Su principal uso es indicar la URL de un recurso transmitido y que ha resultado de una [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation).
 
 Las cabeceras {{HTTPHeader("Location")}} y `Content-Location` son diferentes. `Location` indica la URL de una redirección, mientras que `Content-Location` indica la URL directa a ser utilizada para acceder al recurso, sin necesidad de realizar [negociación de contenido](/es/docs/Web/HTTP/Content_negotiation) en el futuro. Mientras que `Location` es una cabecera asociada con la respuesta, `Content-Location` está asociada con los datos devueltos. Esta distinción puede parecer abstracta sin ver algunos [ejemplos](#examples).
