@@ -39,7 +39,7 @@ slug: Web/Accessibility/Guides/Keyboard-navigable_JavaScript_widgets
     <tr>
       <td>Отрицательный (<code>tabindex="-1"</code>)</td>
       <td>Возможен</td>
-      <td>Невозможен. Разработчик должен сделать элемент фокусируемым с помощью  <a href="/ru/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> при нажатии курсорных стрелок и других клавиш клавиатуры.</td>
+      <td>Невозможен. Разработчик должен сделать элемент фокусируемым с помощью <a href="/ru/docs/Web/API/HTMLElement/focus"><code>focus()</code></a> при нажатии курсорных стрелок и других клавиш клавиатуры.</td>
     </tr>
     <tr>
       <td>Ноль (<code>tabindex="0"</code>)</td>
