@@ -3,8 +3,6 @@ title: Firefox
 slug: Mozilla/Firefox
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox](https://www.mozilla.org/ja/firefox/) は Mozilla のポピュラーなウェブブラウザーで、デスクトップ上の Windows、OS X、Linux、そしてすべての Android および iOS モバイルデバイスを含む複数のプラットフォームで利用できます。幅広い互換性、最新のウェブ技術、強力な開発ツールにより、Firefox はウェブ開発者とエンドユーザーの両方にとって最適な選択肢です。
 
 Firefox はオープンソースのプロジェクトです。コードの多くは私達の巨大なボランティアのコミュニティの貢献によるものです。ここでは、Firefox プロジェクトにどのように貢献するかについて学ぶことができ、Firefox アドオンの構築、Firefox の開発者ツールの使い方、その他のトピックへのリンクもあります。

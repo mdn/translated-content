@@ -1,6 +1,8 @@
 ---
 title: mask-border-slice
 slug: Web/CSS/mask-border-slice
+l10n:
+  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
 {{CSSRef}}
@@ -13,10 +15,10 @@ slug: Web/CSS/mask-border-slice
 /* すべての辺 */
 mask-border-slice: 30%;
 
-/* 垂直 | 水平 */
+/* 上下 | 左右 */
 mask-border-slice: 10% 30%;
 
-/* 上 | 水平 | 下 */
+/* 上 | 左右 | 下 */
 mask-border-slice: 30 30% 45;
 
 /* 上 | 右 | 下 | 左 */
@@ -29,6 +31,7 @@ mask-border-slice: 10% fill 7 12;
 mask-border-slice: inherit;
 mask-border-slice: initial;
 mask-border-slice: revert;
+mask-border-slice: revert-layer;
 mask-border-slice: unset;
 ```
 
@@ -54,7 +57,7 @@ mask-border-slice: unset;
 
 分割する過程で、4 つの角、4 つの辺、それに中央領域の計 9 つの領域を作成します。それぞれの辺からの距離で設定される 4 本の分割線が、領域の寸法を制御します。
 
-[![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)](border-image-slice.png)
+![border-image または border-image-slice プロパティで定義された 9 つの領域](border-image-slice.png)
 
 上の図は、それぞれの領域の位置を説明しています。
 
@@ -76,7 +79,7 @@ mask-border-slice: unset;
 
 ### 基本的な使用
 
-このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、ソース画像から取られるスライスの大きさを定義する役割を果たし、境界マスクを生成するために使用されるようになります。
+`mask-border-slice` は、ソース画像から抽出するスライスのサイズを定義し、境界マスクを作成するために使用されます。
 
 ```css
 mask-border-slice: 30 fill;
@@ -109,4 +112,4 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 - {{cssxref("mask-border-repeat")}}
 - {{cssxref("mask-border-source")}}
 - {{cssxref("mask-border-width")}}
-- [値 1 ～ 4 つの構文の説明](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties#tricky_edge_cases)
+- [値 1 ～ 4 つの構文の説明](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties#注意するべき場合)

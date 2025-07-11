@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol()`** 関数は、シンボル型のプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Symbol - Constructor", "taller")}}
+{{InteractiveExample("JavaScript デモ: Symbol - Constructor", "taller")}}
 
 ```js interactive-example
 const symbol1 = Symbol();

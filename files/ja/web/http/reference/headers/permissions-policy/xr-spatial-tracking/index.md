@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `xr-spatial-tracking` ディレクティブは、現在の文書が [WebXR 機器 API](/ja/docs/Web/API/WebXR_Device_API) を使用することを許可するかどうかを制御します。
 

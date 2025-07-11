@@ -3,8 +3,6 @@ title: Firefox 40 pour développeurs
 slug: Mozilla/Firefox/Releases/40
 ---
 
-{{FirefoxSidebar}}
-
 ## Changements pour les développeurs Web
 
 ### Outils pour Développeurs

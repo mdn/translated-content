@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
-{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @media", "tabbed-standard")}}
 
 ```css interactive-example
 abbr {

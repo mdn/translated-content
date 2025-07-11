@@ -17,7 +17,7 @@ const AsyncGeneratorFunction = async function* () {}.constructor;
 
 `AsyncGeneratorFunction` は {{jsxref("Function")}} のサブクラスです。
 
-{{InteractiveExample("JavaScript Demo: AsyncGeneratorFunction()", "taller")}}
+{{InteractiveExample("JavaScript デモ: AsyncGeneratorFunction()", "taller")}}
 
 ```js interactive-example
 const AsyncGeneratorFunction = async function* () {}.constructor;

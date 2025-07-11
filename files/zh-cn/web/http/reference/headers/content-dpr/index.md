@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
+{{deprecated_header}}{{securecontext_header}}{{Non-standard_header}}
 
 HTTP **`Content-DPR`** {{Glossary("response header", "响应标头")}}用于在使用屏幕 {{HTTPHeader("DPR")}} 客户端提示来选择图像资源的请求中确认*图像*的设备像素比率（DPR）。
 
