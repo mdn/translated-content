@@ -1,6 +1,7 @@
 ---
 title: Private class fields
-slug: Web/JavaScript/Reference/Classes/Private_properties
+slug: Web/JavaScript/Reference/Classes/Private_elements
+original_slug: Web/JavaScript/Reference/Classes/Private_properties
 ---
 
 {{JsSidebar("Classes")}}

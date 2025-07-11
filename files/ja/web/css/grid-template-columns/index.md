@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template-columns`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid column", "グリッド列")}}の線名とトラックのサイズ変更機能を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template-columns")}}
+{{InteractiveExample("CSS デモ: grid-template-columns")}}
 
 ```css interactive-example-choice
 grid-template-columns: 60px 60px;

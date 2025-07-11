@@ -13,7 +13,7 @@ l10n:
 
 元の配列を変更せずに配列内の要素をソートするには、 {{jsxref("Array/toSorted", "toSorted()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Array.sort()")}}
+{{InteractiveExample("JavaScript デモ: Array.sort()")}}
 
 ```js interactive-example
 const months = ["March", "Jan", "Feb", "Dec"];

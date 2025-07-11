@@ -11,7 +11,7 @@ l10n:
 
 **`SharedArrayBuffer()` コンストラクター**は {{jsxref("SharedArrayBuffer")}} オブジェクトを生成し、これは {{jsxref("ArrayBuffer")}} オブジェクトと似た、汎用的な、固定長の生のバイナリーデータバッファーを表します。
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer() constructor", "shorter")}}
+{{InteractiveExample("JavaScript デモ: SharedArrayBuffer() constructor", "shorter")}}
 
 ```js interactive-example
 // SharedArrayBuffer をバイト単位のサイズで作成

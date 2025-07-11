@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Right_shift_assignment
 
 右シフト代入演算子 (`>>=`) は、指定された数だけビットを右に移動し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Right shift assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Right shift assignment operator")}}
 
 ```js interactive-example
 let a = 5; //  00000000000000000000000000000101

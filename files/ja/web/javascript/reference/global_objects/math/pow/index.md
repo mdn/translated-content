@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.pow()")}}
+{{InteractiveExample("JavaScript デモ: Math.pow()")}}
 
 ```js interactive-example
 console.log(Math.pow(7, 3));
