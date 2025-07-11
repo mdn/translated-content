@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Division
 
 除算演算子 (`/`) は、左のオペランドを被除数とし、右のオペランドを除数としたオペランド同士の除算結果を生成します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Division operator")}}
 
 ```js interactive-example
 console.log(12 / 2);

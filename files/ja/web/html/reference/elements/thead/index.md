@@ -10,7 +10,7 @@ l10n:
 
 **`<thead>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の列の見出しを定義する行のセットを定義します。
 
-{{InteractiveExample("HTML Demo: &lt;thead&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;thead&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

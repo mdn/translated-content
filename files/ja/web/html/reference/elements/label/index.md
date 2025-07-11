@@ -10,7 +10,7 @@ l10n:
 
 **`<label>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーインターフェイスの項目のキャプションを表します。
 
-{{InteractiveExample("HTML Demo: &lt;label&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;label&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div class="preference">

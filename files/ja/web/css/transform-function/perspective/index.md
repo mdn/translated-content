@@ -9,7 +9,7 @@ l10n:
 
 **`perspective()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、ユーザーと z=0 平面との間の距離を定義し、閲覧者からの視点は二次元のインターフェイスが三次元であったかのようになります。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: perspective()")}}
+{{InteractiveExample("CSS デモ: perspective()")}}
 
 ```css interactive-example-choice
 transform: perspective(0);

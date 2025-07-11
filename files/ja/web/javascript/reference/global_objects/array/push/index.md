@@ -9,7 +9,7 @@ l10n:
 
 **`push()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の末尾に指定された要素を追加します。また返値として配列の新しい長さを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.push()")}}
+{{InteractiveExample("JavaScript デモ: Array.push()")}}
 
 ```js interactive-example
 const animals = ["pigs", "goats", "sheep"];

@@ -3,7 +3,7 @@ title: Permissions-Policy
 slug: Web/HTTP/Reference/Headers/Permissions-Policy
 ---
 
-{{HTTPSidebar}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`Permissions-Policy`** 响应标头提供了一种可以在本页面或包含的 iframe 上启用或禁止浏览器特性的机制。
 

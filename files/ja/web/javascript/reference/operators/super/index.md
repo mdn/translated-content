@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Operators/super
 
 `super.prop` および `super[expr]` 式は、[class](/ja/docs/Web/JavaScript/Reference/Classes) と[オブジェクトリテラル](/ja/docs/Web/JavaScript/Reference/Operators/Object_initializer)の両方におけるあらゆる[メソッド定義](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)で有効です。
 
-{{InteractiveExample("JavaScript Demo: Expressions - super", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - super", "taller")}}
 
 ```js interactive-example
 class Foo {
