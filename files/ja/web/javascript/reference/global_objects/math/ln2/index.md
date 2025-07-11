@@ -9,7 +9,7 @@ l10n:
 
 **`Math.LN2`** は静的データプロパティで、 2 の自然対数、およそ 0.693 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.LN2", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.LN2", "shorter")}}
 
 ```js interactive-example
 function getNatLog2() {

@@ -10,7 +10,7 @@ l10n:
 
 **`<form>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブサーバーに情報を送信するための対話型コントロールを含む文書の区間を表します。
 
-{{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;form&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <form action="" method="get" class="form-example">

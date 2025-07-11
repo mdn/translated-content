@@ -11,7 +11,7 @@ l10n:
 
 置換要素のオブジェクトの内在サイズ（すなわち、自然なサイズ）を、その要素のボックス内に合わせる方法を調整するために、{{cssxref("object-fit")}} プロパティを使用することができます。
 
-{{InteractiveExample("CSS Demo: object-position")}}
+{{InteractiveExample("CSS デモ: object-position")}}
 
 ```css interactive-example-choice
 object-position: 50% 50%;

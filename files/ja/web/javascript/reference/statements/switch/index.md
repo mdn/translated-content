@@ -9,7 +9,7 @@ l10n:
 
 **`switch`** 文は[式](/ja/docs/Web/JavaScript/Guide/Expressions_and_operators)を評価して、一連の `case` 節に対してその式の値を照合し、最初に値が一致した `case` 節の後の[文](/ja/docs/Web/JavaScript/Reference/Statements)を、`break` 文に出会うまで実行します。一致した `case` の後にある文も同様に実行します。`switch` 文の `default` 節には、 `case` が式の値と一致しない場合にジャンプします。
 
-{{InteractiveExample("JavaScript Demo: Statement - Switch", "taller")}}
+{{InteractiveExample("JavaScript デモ: Statement - Switch", "taller")}}
 
 ```js interactive-example
 const expr = "Papayas";

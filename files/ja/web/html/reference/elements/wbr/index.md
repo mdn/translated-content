@@ -10,7 +10,7 @@ l10n:
 
 **`<wbr>`** は [HTML](/ja/docs/Web/HTML) の要素で、改行可能位置 — テキスト内でブラウザーが任意で改行してよい位置を表しますが、この改行規則は必要のない場合は改行を行いません。
 
-{{InteractiveExample("HTML Demo: &lt;wbr&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;wbr&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <div id="example-paragraphs">

@@ -9,7 +9,7 @@ l10n:
 
 **`Math.SQRT2`** プロパティは、 2 の平方根、約 1.414 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.SQRT2", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.SQRT2", "shorter")}}
 
 ```js interactive-example
 function getRoot2() {

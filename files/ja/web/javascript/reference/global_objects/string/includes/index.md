@@ -9,7 +9,7 @@ l10n:
 
 **`includes()`** メソッドは、1 つの文字列を別の文字列の中に見出すことができるかどうかを判断し、必要に応じて `true` か `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: String.includes()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.includes()", "shorter")}}
 
 ```js interactive-example
 const sentence = "The quick brown fox jumps over the lazy dog.";
