@@ -291,7 +291,7 @@
 /fr/docs/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS/-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
@@ -678,7 +678,7 @@
 /fr/docs/CSS:-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS:-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS:-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS:-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS:-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS:-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS:-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/CSS:-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -4522,6 +4522,7 @@
 /fr/docs/Web/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
+/fr/docs/Web/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/Web/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
