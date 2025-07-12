@@ -1,7 +1,6 @@
 ---
 title: stroke-linejoin
 slug: Web/SVG/Reference/Attribute/stroke-linejoin
-page-type: svg-attribute
 l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
