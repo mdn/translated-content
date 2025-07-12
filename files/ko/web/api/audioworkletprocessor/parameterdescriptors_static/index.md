@@ -1,6 +1,7 @@
 ---
 title: AudioWorkletProcessor.parameterDescriptors (static getter)
-slug: Web/API/AudioWorkletProcessor/parameterDescriptors
+slug: Web/API/AudioWorkletProcessor/parameterDescriptors_static
+original_slug: Web/API/AudioWorkletProcessor/parameterDescriptors
 ---
 
 {{APIRef("Web Audio API")}}{{SeeCompatTable}}
