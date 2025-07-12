@@ -21,7 +21,8 @@ foo();
 
 Asignamos una **Función Anónima** a una {{glossary("Variable")}}, la cual utilizamos para invocar la función añadiendo paréntesis `()` al final.
 
-> **Nota:** **Aunque la función no sea anónima (función nombrada),** se puede utilizar la variable para invocarla. Nombrar las funciones puede ser útil cuando estamos depurando el código. _Pero no afectará como invocamos a la función._
+> [!NOTE]
+> **Aunque la función no sea anónima (función nombrada),** se puede utilizar la variable para invocarla. Nombrar las funciones puede ser útil cuando estamos depurando el código. _Pero no afectará como invocamos a la función._
 
 ## Ejemplo | Pasar la función como argumento
 

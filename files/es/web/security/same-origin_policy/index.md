@@ -28,7 +28,8 @@ Los scripts ejecutados desde páginas con una URL `about:blank` o `javascript:` 
 > [!NOTE]
 > Por ejemplo, `about:blank` a menudo se usa como URL de nuevas ventanas popup en las que el script padre escribe contenido (por ejemplo mediante el mecanismo {{domxref("Window.open()")}}). Si este popup además contiene JavaScript, ese escript heredará el mismo origen que el script que lo ha creado.
 
-> **Advertencia:** `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
+> [!WARNING]
+> `data:` URLs obtienen un nuevo, vacío, contexto de seguridad.
 
 ### Excepciones en Internet Explorer
 

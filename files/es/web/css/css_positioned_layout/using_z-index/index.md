@@ -14,7 +14,8 @@ El primer ejemplo, [Apilando sin z-index](/es/docs/Web/CSS/CSS_positioned_layout
 
 Esta propiedad es asignada con un valor entero (positivo o negativo), el cuál representa la posición del elemento en el eje-Z. Si no estás familiarizado con el eje-Z, imagina que la página tiene muchas capas una encima de la otra. Cada capa es numerada. Una capa con un número mayor es renderizada encima de las capas con números menores.
 
-> **Advertencia:** `z-index` solo tiene efecto si un elemento es [posicionado](/es/docs/Web/CSS/position).
+> [!WARNING]
+> `z-index` solo tiene efecto si un elemento es [posicionado](/es/docs/Web/CSS/position).
 
 - _bottom: el más lejano al observador_
 - ...

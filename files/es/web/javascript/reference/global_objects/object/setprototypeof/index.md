@@ -7,7 +7,8 @@ slug: Web/JavaScript/Reference/Global_Objects/Object/setPrototypeOf
 
 El método **`Object.setPrototypeOf()`** establece el prototipo (p.e., la propiedad interna `[[Prototype]]`) de un objeto especificado a otro objeto o sino establece {{jsxref("null")}}.
 
-> **Advertencia:** **Adverdencia:** Cambiar la propiedad `[[Prototype]]` de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo **_todo_** navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia `obj.__proto___ = ...`, but may extend to **_any_** code that has access to **_any_** object whose `[[Prototype]]` has been altered. If you care about performance you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
+> [!WARNING]
+> **Adverdencia:** Cambiar la propiedad `[[Prototype]]` de un objeto, debido a la naturaleza de la optimización del acceso a propiedades de los motores modernos de JavaScript, es una operación bastante lenta, en todo **_todo_** navegador y motor de JavaScript. Los efectos sobre el rendimiento al alterar la herencia son sutiles y vastos., y no están limitados a simplemente el tiempo gastado en la sentencia `obj.__proto___ = ...`, but may extend to **_any_** code that has access to **_any_** object whose `[[Prototype]]` has been altered. If you care about performance you should avoid setting the `[[Prototype]]` of an object. Instead, create a new object with the desired `[[Prototype]]` using {{jsxref("Object.create()")}}.
 
 ## Sintaxis
 

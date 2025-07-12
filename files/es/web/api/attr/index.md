@@ -9,7 +9,8 @@ Este tipo representa un atributo de un elemento DOM como un objeto. En muchos m�
 
 {{InheritanceDiagram}}
 
-> **Advertencia:** **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
+> [!WARNING]
+> **Advertencia:En el DOM Core 1, 2 y 3**, `Attr` se hereda del {{domxref("Node")}}. Este ya no es el caso en [DOM4](https://www.w3.org/TR/dom/).Para llevar la implementación de Attr a la especifiación, se esta trabajando para cambiarlo y dejar de heredar de{{domxref("Node")}}. No debe de utilizar ninguna propiedad o método de nodo en los objetos `Attr`. A partir de Gecko 7.0 (Firefox 7.0 / Thunderbird 7.0 / SeaMonkey 2.4), los que se eliminarán enviarán mensajes de advertencia a la consola. Debe revisar su código en consecuencia. Consulte Propiedades y métodos en desuso para obtener una lista completa.
 
 ## Propiedades
 

@@ -210,7 +210,8 @@ Puedes definir varios callbacks dentro de la definición de la clase de un eleme
 
 - `connectedCallback`: Se invoca cada vez que se añade un elemento personalizado a un documento. Esto ocurrirá cada vez que el nodo se mueva, y puede suceder antes de que todo el contenido se haya parseado.
 
-  > **Nota:** `connectedCallback` puede llamarse cuando el elemento ya no esté conectado. Para asegurarse usar {{domxref("Node.isConnected")}}.
+  > [!NOTE]
+  > `connectedCallback` puede llamarse cuando el elemento ya no esté conectado. Para asegurarse usar {{domxref("Node.isConnected")}}.
 
 - `disconnectedCallback`: Se invoca cada vez que el elemento se desconecta del DOM del documento.
 - `adoptedCallback`: Se invoca cada vez que el elemento se mueve a un nuevo documento.

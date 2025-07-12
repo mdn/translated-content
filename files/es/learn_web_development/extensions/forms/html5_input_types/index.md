@@ -198,7 +198,8 @@ price.addEventListener("input", function () {
 
 Here we store references to the `range` input and the `output` in two variables. Then we immediately set the `output`'s [`textContent`](/es/docs/Web/API/Node/textContent) to the current `value` of the input. Finally, an event listener is set to ensure that whenever the range slider is moved, the `output`'s `textContent` is updated to the new value.
 
-> **Nota:** `range` inputs are not supported in versions of Internet Explorer below 10.
+> [!NOTE]
+> `range` inputs are not supported in versions of Internet Explorer below 10.
 
 ## Date and time pickers
 
@@ -287,7 +288,8 @@ And here is a live example for you to try out:
 
 The value returned is always a lowercase 6-value hexidecimal color.
 
-> **Nota:** `color` inputs are not supported in Internet Explorer.
+> [!NOTE]
+> `color` inputs are not supported in Internet Explorer.
 
 ## Summary
 

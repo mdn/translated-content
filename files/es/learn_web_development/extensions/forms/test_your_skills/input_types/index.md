@@ -26,7 +26,8 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Controles HTML5 2
 
@@ -40,7 +41,8 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

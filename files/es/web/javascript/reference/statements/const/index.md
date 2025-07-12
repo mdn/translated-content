@@ -34,7 +34,8 @@ Una constante **no puede compartir su nombre** con una función o variable en el
 
 Todas las consideraciones acerca de la " [zona muerta temporal](/es/docs/Web/JavaScript/Reference/Statements/let#muerta) " se aplican tanto a [`let`](/es/docs/Web/JavaScript/Reference/Statements/let) y `const`.
 
-> **Advertencia:** `const` ~~es~~ **fue** una **extensión especifica de Mozilla**, no ~~es~~ **era** soportado en IE, pero ~~tiene~~ **tenia** soporte parcial por Opera desde la versión 9.0 y por Safari.
+> [!WARNING]
+> `const` ~~es~~ **fue** una **extensión especifica de Mozilla**, no ~~es~~ **era** soportado en IE, pero ~~tiene~~ **tenia** soporte parcial por Opera desde la versión 9.0 y por Safari.
 
 ## Ejemplos
 

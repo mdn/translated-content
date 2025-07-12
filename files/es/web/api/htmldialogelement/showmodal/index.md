@@ -8,7 +8,8 @@ original_slug: Web/API/Window/showModalDialog
 
 El método **`Window.showModalDialog()`** crea y visualiza una caja de diálogo modal, conteniendo el documento HTML especificado.
 
-> **Nota:** **Esta prestación va a desaparecer. Por favor ajuste sus sitios Web y aplicaciones.**
+> [!NOTE]
+> **Esta prestación va a desaparecer. Por favor ajuste sus sitios Web y aplicaciones.**
 >
 > El soporte ha sido eliminado en [Chrome 37](https://blog.chromium.org/2014/07/disabling-showmodaldialog.html). Pero se añadió temporalmente un [ajuste de Política Coporativa para rehabilitar showModalDialog](https://www.chromium.org/administrators/policy-list-3#EnableDeprecatedWebPlatformFeatures). Este método showModalDialog() fue eliminado definitivamente en Chrome 43.
 >

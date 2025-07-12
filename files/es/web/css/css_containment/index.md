@@ -98,7 +98,8 @@ Despite the name, style containment does not provide scoped styles such as you w
 
 Using `contain: style` would ensure that the {{cssxref("counter-increment")}} and {{cssxref("counter-set")}} properties created new counters scoped to that subtree only.
 
-> **Nota:** `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
+> [!NOTE]
+> `style` containment is "at-risk" in the spec and may not be supported everywhere (it's not currently supported in Firefox).
 
 ### Special values
 

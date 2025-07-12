@@ -150,7 +150,8 @@ Una cadena que contiene el texto de un encabezado específico, o `null` tanto si
 
 Inicializa el objeto para que sea usado desde código C++.
 
-> **Advertencia:** **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
+> [!WARNING]
+> **Aviso:** Este método _no_ debe ser llamado desde JavaScript.
 
 ```
 [noscript] void init(
