@@ -3,8 +3,6 @@ title: Fin de partie
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field")}}
 
 Voici la **5ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source comme il devrait être après avoir terminé cette leçon sur [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).

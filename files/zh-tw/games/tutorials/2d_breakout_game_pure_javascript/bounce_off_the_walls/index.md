@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14acf1aa7885157debdf1b6111f4bd10c064ec60
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
 
 這是 [Gamedev Canvas 教程](/zh-TW/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)的**第 3 步**（共 10 步）。你可以在 [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson03.html) 找到課後完整的原始碼。

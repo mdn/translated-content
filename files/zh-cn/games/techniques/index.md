@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 这个页面为想要使用开放的 web 技术来开发游戏的人列举出了必要的核心技术。
 
 - [使用 asm.js 中的异步脚本](/zh-CN/docs/Games/Techniques/Async_scripts)

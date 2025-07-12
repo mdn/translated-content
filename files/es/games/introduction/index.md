@@ -3,8 +3,6 @@ title: Introduccion para desarrollo de juegos para la Web
 slug: Games/Introduction
 ---
 
-{{GamesSidebar}}
-
 La Web rapidamente se ha convertido en una plataforma viable no solo para crear impresionantes juegos de alta calidad, sino también para distruibuirlos.El rango de juegos que pueden ser creados está a la par tanto de los juegos de escritorio como de SO nativos (Android, iOS). Con tecnologias Web modernas y un navegador reciente es totalmente posible hacer juegos de primera categoria para la Web. Y no estamos hablando sobre simples juegos de cartas o juegos sociales multijugadores que en tiempos anteriores se podian hacer con Flash®. Estamos hablando sobre juegos 3D _shooters_ de accion, RPGs, y más. Gracias a las masivas mejoras de rendimiento en [JavaScript](/es/docs/Web/JavaScript) con tecnologia de compilación _just-in-time_ y nuevas APIs, se pueden construir juegos que pueden correr en el navegador (o en dispositivos [HTML5](/es/docs/HTML/HTML5) como [Firefox OS](/es/docs/Mozilla/Firefox_OS)) sin problemas.
 
 ## La plataforma de juegos HTML5

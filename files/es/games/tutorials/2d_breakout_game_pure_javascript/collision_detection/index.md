@@ -3,8 +3,6 @@ title: Detección de colisiones
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win")}}
 
 Este es el **séptimo** paso de los 10 del juego ["Gamedev Canvas tutorial"](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código como deberá quedar después de completar la leción en [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).

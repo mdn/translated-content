@@ -3,8 +3,6 @@ title: 基本の 3D 理論の解説
 slug: Games/Techniques/3D_on_the_web/Basic_theory
 ---
 
-{{GamesSidebar}}
-
 この記事では、これから 3D を始める際に知っておくと便利な基礎理論をすべて解説しています。
 
 ## 座標系

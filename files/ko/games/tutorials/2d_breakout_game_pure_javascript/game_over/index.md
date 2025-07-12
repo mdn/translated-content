@@ -3,8 +3,6 @@ title: 게임 오버
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Paddle_and_keyboard_controls", "Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/Build_the_brick_field")}}
 
 이것은 [Gamedev Canvas tutorial](/ko/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) 의 다섯 번째 학습입니다. 이 학습을 통해 완성된 코드는 [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html) 에서 확인할 수 있습니다.

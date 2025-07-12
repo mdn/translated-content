@@ -3,8 +3,6 @@ title: 2D breakout game using Phaser
 slug: Games/Tutorials/2D_breakout_game_Phaser
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Tutorials/순수한_자바스크립트를_이용한_2D_벽돌깨기_게임/캔버스_생성과_그리기")}}
 
 이 튜토리얼을 차례차례 진행하면서 우리는 HTML5 {{htmlelement("canvas")}} 로 렌더되는 순수한 JavaScript로 쓰여진 간단한 MDN 벽돌깨기 게임을 만들 것입니다.

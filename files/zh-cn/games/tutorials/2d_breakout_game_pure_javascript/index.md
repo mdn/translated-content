@@ -3,8 +3,6 @@ title: 2D breakout game using pure JavaScript
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 在这里我们将完全使用 JavaScript 语言基于 HTML5 的 canvas 标签，一步一步的绘制一个简单的 MDN 消除游戏。

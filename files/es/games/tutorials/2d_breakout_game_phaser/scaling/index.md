@@ -3,8 +3,6 @@ title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Workflows/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
 Este es el **2do paso** de los 16 del tutorial [Gamedev Phaser tutorial](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puede encontrar el código fuente como debería verse luego de completar esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson02.html).

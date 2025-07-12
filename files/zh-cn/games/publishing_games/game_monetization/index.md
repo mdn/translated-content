@@ -3,8 +3,6 @@ title: 游戏货币化
 slug: Games/Publishing_games/Game_monetization
 ---
 
-{{GamesSidebar}}
-
 当你花时间创造一个游戏的时候，从[发布](/zh-CN/docs/Games/Publishing_games/Game_distribution)和[促销](/zh-CN/docs/Games/Publishing_games/Game_promotion)中赚钱是你应该考虑的事。如果你正做出大量努力去成为一个能够以此为生的独立游戏开发者，接下去，看看你有哪些选择。技术手段已经足够成熟; 接下来只是选择正确的方法。
 
 ## 付费游戏

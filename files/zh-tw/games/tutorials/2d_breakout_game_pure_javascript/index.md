@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it")}}
 
 在這個逐步教學中，我們將創建一個完全使用純 JavaScript 編寫並在 HTML {{htmlelement("canvas")}} 上渲染的 **MDN 打磚塊**遊戲。

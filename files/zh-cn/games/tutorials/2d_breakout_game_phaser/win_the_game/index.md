@@ -3,8 +3,6 @@ title: Win the game
 slug: Games/Tutorials/2D_breakout_game_Phaser/Win_the_game
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/The_score", "Games/Workflows/2D_Breakout_game_Phaser/Extra_lives")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 12 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson12.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson12.html)完成本课程后找到源代码。

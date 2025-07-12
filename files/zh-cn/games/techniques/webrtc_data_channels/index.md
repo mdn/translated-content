@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1807880849aac9898e04e78605f31b29c6f4da21
 ---
 
-{{GamesSidebar}}
-
 [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)（Web 实时通信）API 主要以其对音频和视频通信的支持而闻名；然而，它也提供了点对点的数据通道。本文将对此进行详细说明，并展示如何利用库在你的游戏中实现数据通道。
 
 ## 什么是数据通道？
