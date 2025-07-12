@@ -4068,7 +4068,6 @@
 /ja/docs/Web/CSS/-moz-column-width	/ja/docs/Web/CSS/column-width
 /ja/docs/Web/CSS/-moz-context-menu	/ja/docs/Web/CSS/cursor
 /ja/docs/Web/CSS/-moz-copy	/ja/docs/Web/CSS/cursor
-/ja/docs/Web/CSS/-moz-image-region	/ja/docs/conflicting/Web/CSS/clip
 /ja/docs/Web/CSS/-moz-outline	/ja/docs/Web/CSS/outline
 /ja/docs/Web/CSS/-moz-outline-color	/ja/docs/Web/CSS/outline-color
 /ja/docs/Web/CSS/-moz-outline-offset	/ja/docs/Web/CSS/outline-offset
