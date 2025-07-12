@@ -46,7 +46,7 @@ new Promise((resolveOuter) => {
 
 ### Promise 的链式调用
 
-{{jsxref("Promise.prototype.then()")}}、{{jsxref("Promise.prototype.catch()")}} 和 {{jsxref("Promise.prototype.finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。`.then()` 方法最多接受两个参数；第一个参数是 Promise 兑现时的回调函数，第二个参数是 Promise 拒绝时的回调函数。`.catch()` 和 `.finally()` 方法在内部调用 `.then()`，使错误处理更加简洁。例如，`.catch()` 实际上就是一个没有传递兑现处理器的 `.then()`。由于这些方法返回 Promise，因此它们可以被链式调用。例如：
+{{jsxref("Promise/then", "then()")}}、{{jsxref("Promise/catch", "catch()")}} 和 {{jsxref("Promise/finally", "finally()")}} 方法用于将进一步的操作与已敲定的 Promise 相关联。`.then()` 方法最多接受两个参数；第一个参数是 Promise 兑现时的回调函数，第二个参数是 Promise 拒绝时的回调函数。`.catch()` 和 `.finally()` 方法在内部调用 `.then()`，使错误处理更加简洁。例如，`.catch()` 实际上就是一个没有传递兑现处理器的 `.then()`。由于这些方法返回 Promise，因此它们可以被链式调用。例如：
 
 ```js
 const myPromise = new Promise((resolve, reject) => {
@@ -368,11 +368,10 @@ btn.addEventListener("click", testPromise);
 
 ### 使用 XHR 加载图像
 
-另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载图像的示例如下所示。
-每一步都有注释，可以让你详细了解 Promise 和 XHR 架构。
+另一个使用 `Promise` 和 {{domxref("XMLHttpRequest")}} 加载图像的示例如下所示。每一步都有注释，可以让你详细了解 Promise 和 XHR 架构。
 
 ```html hidden live-sample___promises
-<h1>Promise example</h1>
+<h1>Promise 示例</h1>
 ```
 
 ```js live-sample___promises
@@ -511,4 +510,4 @@ imgLoad(imgUrl).then(
 - [使用 promise](/zh-CN/docs/Web/JavaScript/Guide/Using_promises)
 - [Promises/A+ 规范](https://promisesaplus.com/)
 - [JavaScript Promise：简介](https://web.developers.google.cn/articles/promises)
-- [回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
+- Domenic Denicola 的幻灯片演示（2011）：[回调、Promise 和协程——JavaScript 中的异步编程模式](https://www.slideshare.net/domenicdenicola/callbacks-promises-and-coroutines-oh-my-the-evolution-of-asynchronicity-in-javascript)
