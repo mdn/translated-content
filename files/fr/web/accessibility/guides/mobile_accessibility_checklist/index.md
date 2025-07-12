@@ -39,7 +39,7 @@ Ce document fournit une liste concise des points à vérifier par les développe
 
 - Les images de texte **DOIVENT** être évitées.
 - Tous les composants de l'interface utilisateur ayant un texte visible (ou une image de texte) comme étiquette **DOIVENT** avoir le même texte disponible dans le [nom](https://www.w3.org/TR/WCAG21/#dfn-name) programmatique du composant. [WCAG 2.1 : Étiquette dans le nom.](https://www.w3.org/WAI/WCAG21/Understanding/label-in-name.html)
-- Tous les contrôles de formulaire **DOIVENT** avoir des étiquettes (éléments [`<label>`](/fr/docs/Web/HTML/Element/label)) pour le bénéfice des utilisateurs de lecteurs d'écran.
+- Tous les contrôles de formulaire **DOIVENT** avoir des étiquettes (éléments [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)) pour le bénéfice des utilisateurs de lecteurs d'écran.
 
 ## La gestion des états
 

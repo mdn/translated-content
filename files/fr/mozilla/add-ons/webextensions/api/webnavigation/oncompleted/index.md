@@ -50,7 +50,7 @@ Les événements ont trois fonctions :
 - `processId`
   - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
 - `frameId`
-  - : `integer`. Cadre dans lequel la navigation s'est produite. 0 indique que la navigation s'est déroulée dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. Une valeur positive indique que la navigation s'est déroulée dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
+  - : `integer`. Cadre dans lequel la navigation s'est produite. 0 indique que la navigation s'est déroulée dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Reference/Elements/iframe) imbriqué. Une valeur positive indique que la navigation s'est déroulée dans un iframe imbriqué. Les ID de cadre sont uniques pour un onglet et un processus donnés.
 - `timeStamp`
   - : `number`. L'heure à laquelle la page a terminé le chargement, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
 

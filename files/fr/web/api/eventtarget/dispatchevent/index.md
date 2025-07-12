@@ -26,7 +26,7 @@ La méthode `dispatchEvent` lance une exception `UNSPECIFIED_EVENT_TYPE_ERR` si 
 
 ## Notes
 
-Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Event_loop), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
+Contrairement aux événements "natifs", qui sont déclenchés par le DOM et invoquent les gestionnaires d'événements de manière asynchrone via la [boucle des événements](/fr/docs/Web/JavaScript/Reference/Execution_model), `dispatchEvent` appelle les gestionnaires d'événements de manière synchrone. Tous les gestionnaires d'événements applicables s'exécuteront et retourneront avant que le code ne continue après l'appel à `dispatchEvent`.
 
 Comme montré dans l'exemple qui précède, `dispatchEvent` est la dernière étape du processus création-initialisation-envoi, qui est utilisé pour envoyer des évènements dans le modèle de l'implémentation des évènements. Ceux-ci peuvent être créés en utilisant le [constructeur d'évènements](/fr/docs/Web/API/Event/Event).
 

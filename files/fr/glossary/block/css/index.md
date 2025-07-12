@@ -13,4 +13,4 @@ En utilisant la propriété CSS {{cssxref("display")}}, il est possible de défi
 
 ### Connaissances générales
 
-- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/Visual_formatting_model)
+- [Modèle de mise en forme visuelle](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model)

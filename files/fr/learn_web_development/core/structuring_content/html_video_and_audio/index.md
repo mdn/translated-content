@@ -66,9 +66,9 @@ L'élément {{htmlelement("video")}} vous permet d'intégrer de la vidéo très 
 
 Les fonctionnalités de ce code sont :
 
-- [`src`](/fr/docs/Web/HTML/Element/video#src)
+- [`src`](/fr/docs/Web/HTML/Reference/Elements/video#src)
   - : De la même manière que pour l'élément {{htmlelement("img")}}, l'attribut `src` (source) contient le chemin vers la vidéo que vous voulez intégrer. Cela fonctionne de la même manière.
-- [`controls`](/fr/docs/Web/HTML/Element/video#controls)
+- [`controls`](/fr/docs/Web/HTML/Reference/Elements/video#controls)
   - : Les utilisateurs doivent avoir un contrôle sur la lecture de la vidéo ou de l'audio. (c'est particulièrement crucial pour les gens ayant de l'[épilepsie](https://fr.wikipedia.org/wiki/Épilepsie).) Vous devez vous servir de l'attribut `controls` pour appeler l'interface de contrôle du navigateur ou construire votre propre interface en utilisant l'[API JavaScript](/fr/docs/Web/API/HTMLMediaElement) adéquat. Au minimum, l'interface doit avoir un contrôle de démarrage et d'arrêt (start/stop) du média et un pour ajuster le volume.
 - Le paragraphe dans la balise `<video>`
   - : Cela peut s'appeler solution de repli ou contenu de secours (fallback content) — si le navigateur accédant à la page ne supporte pas l'élément `<video>`, cela offre un texte alternatif qui peut être ce que vous voulez&nbsp;; dans ce cas nous avons mis un lien direct au fichier vidéo, afin que l'utilisateur puisse au moins y accéder sans avoir à se soucier du navigateur qu'il utilise.
@@ -94,7 +94,7 @@ Les pistes audio et vidéo sont aussi de différents formats, par exemple :
 Un lecteur audio peut jouer directement une piste audio, par ex. un fichier MP3 ou Ogg. Elles ne nécessitent pas de conteneur.
 
 > [!NOTE]
-> Ce n'est pas si simple, comme vous pouvez le voir dans le [tableau de compatibilité des codecs audio-vidéo](/fr/docs/Web/Media/Formats#browser_compatibility). En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.
+> Ce n'est pas si simple, comme vous pouvez le voir dans le [tableau de compatibilité des codecs audio-vidéo](/fr/docs/Web/Media/Guides/Formats#browser_compatibility). En outre, de nombreux navigateurs de plateforme mobile peuvent lire un format non pris en charge en le transférant au lecteur multimédia du système sous-jacent. Mais pour l'instant nous nous contenterons de ce qui précède.
 
 Les formats ci-dessus ont été créés pour compresser la vidéo et l'audio dans des fichiers gérables (les fichiers vidéo et audio bruts sont très volumineux). Les navigateurs contiennent différents {{Glossary("Codec","Codecs")}}, comme Vorbis ou H.264, utilisés pour convertir le son et la vidéo compressés en binaire et inversement. Comme indiqué ci-dessus, les navigateurs ne supportent malheureusement pas tous les mêmes codecs, vous devrez donc fournir plusieurs fichiers pour chaque production de média. S'il vous manque le bon codec pour décoder le média, il ne pourra pas être lu.
 
@@ -119,7 +119,7 @@ Ici, nous avons retiré l'attribut `src` de la balise \<video> et inclus des él
 Chaque élément \<source> possède également un attribut de type. C'est facultatif, mais il est conseillé de les inclure — ils contiennent le type {{glossary("MIME type","MIME")}} des fichiers vidéo, et les navigateurs peuvent le lire et sauter immédiatement les vidéos qu'ils ne comprennent pas. Si le type n'est pas indiqué, le navigateur va charger et essayer de lire chaque fichier jusqu'à ce qu'il en trouve un qu'il prenne en charge, ce qui demande du temps et des ressources.
 
 > [!NOTE]
-> L'[article sur les formats média pris en charge](/fr/docs/Web/Media/Formats) contient quelques types {{glossary("MIME type","MIME")}} courants.
+> L'[article sur les formats média pris en charge](/fr/docs/Web/Media/Guides/Formats) contient quelques types {{glossary("MIME type","MIME")}} courants.
 
 ### Autres fonctionnalités de \<video>
 
@@ -149,17 +149,17 @@ Cela produit une sortie du type suivant&nbsp;:
 
 Voici les nouvelles fonctionnalités&nbsp;:
 
-- [`width`](/fr/docs/Web/HTML/Element/video#width) et [height](/fr/docs/Web/HTML/Element/video#height)
+- [`width`](/fr/docs/Web/HTML/Reference/Elements/video#width) et [height](/fr/docs/Web/HTML/Reference/Elements/video#height)
   - : Il est possible de contrôler la taille de la vidéo soit avec ces attributs, soit avec le {{Glossary("CSS")}}. Dans les deux cas, les vidéos conservent le rapport largeur‑hauteur natif — désigné sous le vocable **rapport de proportions**. Si ce dernier ne correspond pas aux tailles indiquées, la vidéo occupera tout l'espace horizontal et l'espace non rempli sera de la couleur d'arrière plan unie par défaut.
-- [`autoplay`](/fr/docs/Web/HTML/Element/video#autoplay)
+- [`autoplay`](/fr/docs/Web/HTML/Reference/Elements/video#autoplay)
   - : Cet attribut permet de lancer immédiatement la lecture de l'audio ou de la vidéo pendant que le reste de la page se charge. Nous vous déconseillons d'utiliser la lecture automatique de vidéos (ou audio) sur vos sites, car les utilisateurs peuvent trouver cela vraiment ennuyeux.
-- [`loop`](/fr/docs/Web/HTML/Element/video#loop)
+- [`loop`](/fr/docs/Web/HTML/Reference/Elements/video#loop)
   - : Cet attribut permet de relancer en boucle la lecture de la vidéo (ou de l'audio). Cette façon de procéder pouvant être mal perçue, ne l'utilisez que si c'est vraiment nécessaire.
-- [`muted`](/fr/docs/Web/HTML/Element/video#muted)
+- [`muted`](/fr/docs/Web/HTML/Reference/Elements/video#muted)
   - : Cet attribut coupe le son de la vidéo par défaut.
-- [`poster`](/fr/docs/Web/HTML/Element/video#poster)
+- [`poster`](/fr/docs/Web/HTML/Reference/Elements/video#poster)
   - : Cet attribut prend comme valeur l'URL d'une image affichée avant la lecture de la vidéo. Il s'utilise en tant que logo de démarrage ou de publicité.
-- [`preload`](/fr/docs/Web/HTML/Element/video#preload)
+- [`preload`](/fr/docs/Web/HTML/Reference/Elements/video#preload)
   - : Cet attribut s'utilise pour mettre en tampon les gros fichiers. Il peut prendre 3 valeurs&nbsp;:
     - `"none"`&nbsp;: ne pas mettre le fichier dans un tampon
     - `"auto"`&nbsp;: mettre le fichier média dans un tampon
@@ -237,7 +237,7 @@ Ceci est le deuxième.
 Pour qu'il soit affiché avec la diffusion du média HTML, il faut&nbsp;:
 
 1. Enregistrer le fichier avec l'extension `.vtt` dans un endroit sensé.
-2. Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour préciser si les marqueurs sont `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut [`srclang`](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
+2. Lier le fichier `.vtt` avec l'élément {{htmlelement("track")}}. `<track>` doit être placé entre les balises `<audio>` ou `<video>`, mais après tous les éléments `<source>`. Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Reference/Elements/track#kind) pour préciser si les marqueurs sont `subtitles`, `captions` ou `descriptions`. Plus loin, utilisez l'attribut [`srclang`](/fr/docs/Web/HTML/Reference/Elements/track#srclang) pour indiquer au navigateur la langue dans laquelle sont écrit les sous‑titres.
 
 Voici un exemple&nbsp;:
 
@@ -285,8 +285,8 @@ Emballez, c'est pesé ! Nous espérons que vous avez pris plaisir avec ces pages
 - {{htmlelement("source")}}
 - {{htmlelement("track")}}
 - [Ajouter des légendes et sous-titres aux vidéos HTML5](/fr/docs/Web/Apps/Build/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)
-- [Intégration Audio et Vidéo](/fr/docs/Web/Media/Audio_and_video_delivery)&nbsp;: de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.
-- [Manipuler l'Audio et la Vidéo](/fr/docs/Web/Media/Audio_and_video_manipulation): de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).
+- [Intégration Audio et Vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_delivery)&nbsp;: de nombreux détails sur la manière de mettre de la vidéo et audio sur le web avec HTML et JavaScript.
+- [Manipuler l'Audio et la Vidéo](/fr/docs/Web/Media/Guides/Audio_and_video_manipulation): de nombreux détails pour manipuler l'audio et la vidéo avec JavaScript (par ex. en ajoutant des filtres).
 - Options automatisées pour la [traduction multimédia](http://www.inwhatlanguage.com/blog/translate-video-audio/).
 
 {{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Images_in_HTML", "Learn/HTML/Multimedia_and_embedding/Other_embedding_technologies", "Learn/HTML/Multimedia_and_embedding")}}

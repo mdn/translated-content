@@ -452,7 +452,7 @@ Dans le second tableau, on utilise la syntaxe `of` afin de cibler uniquement les
 
 ### Mettre en forme une colonne de tableau
 
-Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Element/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Element/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
+Pour mettre en forme une colonne de tableau, on ne peut pas cibler l'élément [`<col>`](/fr/docs/Web/HTML/Reference/Elements/col), car les cellules du tableau n'en sont pas des enfants (alors que les cellules sont bien des enfants des lignes [`<tr>`](/fr/docs/Web/HTML/Reference/Elements/tr)). Les pseudo-classes comme `:nth-child()` s'avèrent alors particulièrement utiles pour sélectionner les cellules d'une colonne.
 
 Dans cet exemple, on applique différents styles pour chaque colonne.
 

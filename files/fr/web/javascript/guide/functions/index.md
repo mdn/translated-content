@@ -333,7 +333,7 @@ En résumé :
 - La fonction imbriquée forme une fermeture : elle peut utiliser les arguments et les variables de la fonction parente. En revanche, la fonction parente ne peut pas utiliser les arguments et les variables de la fonction fille.
 
 > [!NOTE]
-> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Closures).
+> Sur les fermetures, voir également [l'article à ce sujet](/fr/docs/Web/JavaScript/Guide/Closures).
 
 L'exemple qui suit illustre l'imbrication de fonctions :
 
