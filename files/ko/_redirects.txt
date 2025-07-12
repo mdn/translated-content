@@ -607,6 +607,7 @@
 /ko/docs/Using_URL_values_for_the_cursor_property-redirect-1	/ko/docs/Web/CSS/cursor
 /ko/docs/Using_the_Mozilla_JavaScript_interface_to_XSL_Transformations	/ko/docs/Web/API/XSLTProcessor
 /ko/docs/Web/API/AudioWorkletNode/onprocessorerror	/ko/docs/Web/API/AudioWorkletNode/processorerror_event
+/ko/docs/Web/API/AudioWorkletProcessor/parameterDescriptors	/ko/docs/Web/API/AudioWorkletProcessor/parameterDescriptors_static
 /ko/docs/Web/API/Boolean	/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 /ko/docs/Web/API/CSSOMString	/ko/docs/Web/JavaScript/Reference/Global_Objects/String
 /ko/docs/Web/API/CSS_Counter_Styles	/ko/docs/conflicting/Web/CSS/CSS_counter_styles
@@ -743,6 +744,7 @@
 /ko/docs/Web/Accessibility/ARIA/forms	/ko/docs/Web/Accessibility/ARIA
 /ko/docs/Web/Accessibility/Mobile_accessibility_checklist	/ko/docs/Web/Accessibility/Guides/Mobile_accessibility_checklist
 /ko/docs/Web/Accessibility/Understanding_WCAG	/ko/docs/Web/Accessibility/Guides/Understanding_WCAG
+/ko/docs/Web/CSS/-moz-image-region	/ko/docs/Web/CSS/clip
 /ko/docs/Web/CSS/-webkit-line-clamp	/ko/docs/Web/CSS/line-clamp
 /ko/docs/Web/CSS/-webkit-overflow-scrolling	/ko/docs/orphaned/Web/CSS/-webkit-overflow-scrolling
 /ko/docs/Web/CSS/@viewport	/ko/docs/Web/CSS
