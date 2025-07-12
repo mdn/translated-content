@@ -81,19 +81,18 @@ label {
 
 ## 属性
 
-和其他的 HTML 元素一样，该元素具有[全局属性](/zh-CN/docs/HTML/Global_attributes).
+该元素包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。
 
-- `max`
-  - : 该属性描述了这个`progress`元素所表示的任务一共需要完成多少工作。
+- [`max`](/zh-CN/docs/Web/HTML/Reference/Attributes/max)
+  - : 该属性描述了这个 `progress` 元素所表示的任务一共需要完成多少工作。如果 `max` 属性存在，值必须大于 `0` 且为有效浮点数。默认值为 `1`。
 - `value`
-  - : 该属性用来指定该进度条已完成的工作量。如果没有`value 属性`,则该进度条的进度为"不确定",也就是说，进度条不会显示任何进度，你无法估计当前的工作会在何时完成 (比如在下载一个未知大小的文件时，下载对话框中的进度条就是这样的).
+  - : 该属性用来指定该进度条已完成的工作量，其值必须是从 `0` 到 `max`（如果省略了 `max` 值，则为从 `0` 到 `1`）之间的有效浮点数。如果没有 `value` 属性，则为“不确定”进度条；这意味着一项活动正在进行，但没有说明预计需要多长时间。
 
 > [!NOTE]
-> 你可以使用{{ cssxref("orient") }}属性来指定该进度条的显示方向是横向 (默认) 还是纵向.CSS 伪类{{ cssxref(":indeterminate") }}可以用来匹配那些不确定的进度条。
+> 与 {{htmlelement("meter")}} 元素不同，`<progress>` 元素的最小值总是 0，且不允许指定 `min` 属性。
 
-## DOM 接口
-
-该元素实现了[`HTMLProgressElement`](/zh-CN/docs/DOM/HTMLProgressElement)接口。
+> [!NOTE]
+> {{cssxref(":indeterminate")}} 伪类可用于匹配不确定的进度条。要在为进度条赋值后将其改为不确定进度条，必须使用 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} 删除 value 属性。
 
 ## 示例
 

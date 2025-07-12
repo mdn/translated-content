@@ -27,9 +27,11 @@ jobs:
           - zh-cn
           - zh-tw
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@v4
         with:
           repository: mdn/content
           path: mdn/content
@@ -37,7 +39,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
 
       - name: Install all yarn packages
         run: |

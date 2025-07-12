@@ -27,7 +27,8 @@ jobs:
       BUILD_OUT_ROOT: /tmp/build
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Get changed files
         id: check
@@ -48,7 +49,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@v4
         if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         with:
           repository: mdn/content
@@ -58,7 +60,7 @@ jobs:
         if: steps.check.outputs.GIT_DIFF_CONTENT || steps.check.outputs.GIT_DIFF_FILES
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
           cache: yarn
           cache-dependency-path: mdn/content/yarn.lock
 

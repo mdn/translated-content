@@ -1,21 +1,20 @@
 ---
 title: アプリのデプロイ
 slug: Learn_web_development/Extensions/Client-side_tools/Deployment
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Deployment
 l10n:
-  sourceCommit: 13c2df5af92c04e57a2e882e92306fcf6949b239
+  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
-シリーズの最後の記事では、前の記事で構築したサンプルツールチェーンを取り上げ、サンプルアプリをデプロイできるようにそれに追加します。 コードを GitHub にプッシュし、Netlify を使用してデプロイし、プロセスに簡単なテストを追加する方法も示します。
+シリーズの最後の記事では、前の記事で構築したサンプルツールチェーンを取り上げ、サンプルアプリをデプロイできるようにそれに追加します。 コードを GitHub にプッシュし、 GitHub Pages を使用してデプロイし、プロセスに簡単なテストを追加する方法も示します。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件：</th>
       <td>
-        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
+        主要な <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、と <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
@@ -37,17 +36,19 @@ l10n:
 - テストの実行: テストの範囲は、「このコードは適切にフォーマットされていますか?」などです。「これは期待どおりの動作をするか?」ということを確認し、テストが失敗することを確認すると展開が妨げられます。
 - 更新されたコードを実際にライブデプロイした URL: または、最初に確認できるようにステージング URL にデプロイすることもできます。
 
-> **メモ：** キャッシュ無効化は、このモジュールではこれまでに見たことのない新しい用語です。これはブラウザー自体のキャッシュメカニズムを破壊する戦略であり、ブラウザーにコードの新しいコピーを強制的にダウンロードさせます。 Parcel (そして実際には他の多くのツール) は、新しいビルドごとに一意のファイル名を生成します。この一意のファイル名はブラウザーのキャッシュを「破棄」し、デプロイされたコードが更新されるたびにブラウザーが新しいコードをダウンロードするようにします。
+> **メモ：** キャッシュ無効化は、このモジュールではこれまでに見たことのない新しい用語です。これはブラウザー自体のキャッシュメカニズムを破壊する戦略であり、ブラウザーにコードの新しいコピーを強制的にダウンロードさせます。 Vite （そして実際には他の多くのツール）は、新しいビルドごとに一意のファイル名を生成します。この一意のファイル名はブラウザーのキャッシュを「破棄」し、デプロイされたコードが更新されるたびにブラウザーが新しいコードをダウンロードするようにします。
 
 上記のタスクはさらに別のタスクに分割されます。ほとんどのウェブ開発チームは、開発後のフェーズの少なくとも一部について独自の条件とプロセスを持っていることに注意してください。
 
-このプロジェクトでは、 [Netlify](https://www.netlify.com/) の素晴らしい静的ホスティングサービスを使用してプロジェクトをホストします。 Netlify は、プロジェクトをオンラインで表示し、友人、家族、同僚と共有するためのホスティング、つまり URL を提供します。
+このプロジェクトでは、 [GitHub Pages](https://pages.github.com/) の素晴らしい静的ホスティングサービスを使用してプロジェクトをホストします。これは、インターネット上でウェブサイトを提供しているだけでなく、ウェブサイトへの URL も与えてくれます。これは素晴らしいことです。MDN の例示用ウェブサイトの多くは GitHub Pages でホストされています。
 
-ホスティングへのデプロイはプロジェクトのライフサイクルの最後になる傾向がありますが、 Netlify などのサービスを使用すると、デプロイのコスト(金銭面と実際のデプロイに必要な時間の両方)が削減され、開発中にデプロイすることが可能になります。進行中の作業を共有するか、他の目的でプレリリースするかのいずれかです。
+ホスティングへのデプロイはプロジェクトのライフサイクルの最後になる傾向がありますが、 GitHub Pages などのサービスを使用すると、デプロイのコスト(金銭面と実際のデプロイに必要な時間の両方)が削減され、開発中にデプロイすることが可能になります。進行中の作業を共有するか、他の目的でプレリリースするかのいずれかです。
 
-Netlify では、特に、デプロイ前のタスクを実行することもできます。これは、この場合、すべての実稼働コードのビルドプロセスを Netlify 内で実行でき、ビルドが成功すると、ウェブサイトの変更がデプロイされることを意味します。
+GitHub は、新しいコードを実際のウェブサイトに変換するためのスムーズなワークフローを提供しています。
 
-Netlify は [ドラッグアンドドロップデプロイメントサービス](https://app.netlify.com/drop)を提供していますが、 GitHub リポジトリーにプッシュするたびに Netlify への新しいデプロイメントをトリガーする予定です。
+- コードを GitHub にプッシュします。
+- メインブランチに新しいプッシュがあったときに発生する [GitHub Action](https://docs.github.com/en/actions) を定義し、コードをビルドして特定の場所に配置します。
+- GitHub Pages は、そのコードを特定の URL で提供します。
 
 独自のビルドツールチェーンを決定する際に探すことをお勧めするのは、まさにこの種の接続されたサービスです。コードをコミットして GitHub にプッシュすると、更新されたコードによってビルドルーチン全体が自動的にトリガーされます。すべて問題がなければ、ライブ変更が自動的にデプロイされます。実行する必要があるアクションは、最初の「プッシュ」だけです。
 
@@ -55,51 +56,13 @@ Netlify は [ドラッグアンドドロップデプロイメントサービス]
 
 ## ビルドプロセス
 
-繰り返しになりますが、開発には Parcel を使用しているため、ビルドオプションの追加は非常に簡単です。 `npx parcel src/index.html` を使用してサーバーを実行する代わりに、 `npx parcel build src/index.html` を使用してサーバーを実行することができます。これにより、 Parcel は、単に開発やテストの目的で実行するのではなく、本番環境に備えたすべてのものを構築します。これには、コードの縮小とツリーシェイクの実行、およびファイル名のキャッシュ無効化が含まれます。
+繰り返しになりますが、開発には Vite を使用しているため、ビルドオプションの追加は非常に簡単です。前述のように、開発や検査の目的で実行するだけでなく、Vite が本番用にすべての準備を行う独自の `npm run build` スクリプトがすでに指定されています。これには、コードの[ミニフィケーション](/ja/docs/Glossary/Minification)および[ツリーシェイク](/ja/docs/Glossary/Tree_shaking)、ファイル名のキャッシュ破棄が含まれます。
+
+プロジェクトでは常に `build` スクリプトを定義しておくことがベストプラクティスです。そうすることで、それぞれのプロジェクトに固有のビルドコマンドの引数を覚えておく必要がなく、`npm run build` を実行するだけで、常に完全なビルド段階を実行することができます。
 
 新しく作成された実稼働コードは、 `dist` という新しいディレクトリーに配置されます。このディレクトリーには、ウェブサイトを実行するために必要なすべてのファイルが含まれており、すぐにサーバーにアップロードできます。
 
 ただし、このステップを手動で実行することが最終的な目的ではありません。私たちが望んでいるのは、ビルドが自動的に行われ、 `dist` ディレクトリーの結果がウェブサイトにライブでデプロイされることです。
-
-GitHub のコードリポジトリーを更新するたびに、 Netlify がその変更を自動的に拾い上げ、ビルドタスクを実行し、最終的に新しいアップデートをリリースします。
-
-ビルドコマンドを npm スクリプトとして `package.json` ファイルに追加して、コマンド `npm run build` がビルドプロセスをトリガーするようにします。このステップは必須ではありませんが、セットアップの習慣を身につけるのは良いベストプラクティスです。すべてのプロジェクトにわたって、 `npm run build` を利用して、覚えておく必要なく常に完全なビルドステップを実行できます。各プロジェクトの特定のビルドコマンド引数。
-
-1. プロジェクトのルートディレクトリーにある `package.json` ファイルを開き、 `scripts` プロパティを見つけます。
-2. コードをビルドするために実行できる `build` コマンドを追加します。次の行をプロジェクトに追加します。
-
-   ```json
-   "scripts": {
-     // …
-     "build": "parcel build src/index.html"
-   }
-   ```
-
-   > **メモ：** `scripts` プロパティ内にすでにコマンドが含まれている場合は、コマンドの末尾にカンマを入れます。 JSON を有効なままにしておきます。
-
-3. これで、プロジェクトディレクトリーのルートで次のコマンドを実行して実稼働ビルドステップを実行できるようになります。(必要に応じて、まず最初に <kbd>Ctrl</kbd> + <kbd>C</kbd> を押して実行中のプロセスを終了します)
-
-   ```bash
-   npm run build
-   ```
-
-   これにより次のような出力が得られ作成された実稼働ファイル、そのサイズ、およびビルドにかかった時間が示されます。
-
-   ```bash
-   dist/src.99d8a31a.js.map       446.15 KB     63ms
-   dist/src.99d8a31a.js           172.51 KB    5.55s
-   dist/stars.7f1dd035.svg          6.31 KB    145ms
-   dist/asteroid2.3ead4904.svg      3.51 KB    155ms
-   dist/asteroid1.698d75e9.svg       2.9 KB    153ms
-   dist/src.84f2edd1.css.map        2.57 KB      3ms
-   dist/src.84f2edd1.css            1.25 KB    1.53s
-   dist/bg.084d3fd3.svg               795 B    147ms
-   dist/index.html                    354 B    944ms
-   ```
-
-   やってみましょう！
-
-このプロジェクトの独自のインスタンスを作成するには、このプロジェクトのコードを独自の git リポジトリーでホストする必要があります。次のステップは、プロジェクトを GitHub にプッシュすることです。
 
 ## GitHub への変更のコミット
 
@@ -137,85 +100,63 @@ git status
    > コミットメッセージには自由に何を書き込んでも構いませんが、適切なコミットメッセージに関する役立つヒントがウェブ上にいくつかあります。変更の内容を明確に説明できるように、短く簡潔に説明するようにしてください。
 
 3. 最後にコードを GitHub でホストされているリポジトリーにプッシュする必要があります。今すぐそうしましょう。
+
    GitHub で <https://github.com/new> にアクセスし、このコードをホストする独自のリポジトリーを作成します。
 
 4. リポジトリーにスペースを含まない短くて覚えやすい名前 (単語を区切るにはハイフンを使用します) と説明を付けて、ページの下部にある _Create repository_ をクリックします。
 
    これで、新しい GitHub リポジトリーを指す「リモート」 URL が作成されたはずです。
 
-   ![GitHub screenshot showing remote URLs you can use to deploy code to a GitHub repo](github-quick-setup.png)
+   ![GitHub リポジトリーにコードを展開するために使用できるリモート URL を表示する GitHub 画面ショット](github-quick-setup.png)
 
-5. これで、コードを GitHub にプッシュする準備が整いました。 今すぐ次のコマンドを実行します。
+5. 5. このリモートロケーションは、そこにプッシュする前に、ローカル git リポジトリーに追加する必要があります。そうしないと、そのロケーションを見つけることができません。次の構造を持つコマンドを実行する必要があります (ここでは、特に GitHub を初めて使用する場合は、SSH オプションではなく、指定された HTTPS オプションを使用してください)。
 
    ```bash
-   git remote add github https://github.com/yourname/repo-name.git
+   git remote add origin https://github.com/your-name/repo-name.git
    ```
 
    したがって、上のスクリーンショットのように、「リモート」 URL が `https://github.com/remy/super-website.git` の場合、コマンドは次のようになります。
 
    ```bash
-   git remote add github https://github.com/remy/super-website.git
+   git remote add origin https://github.com/remy/super-website.git
    ```
 
    URL を独自のリポジトリーに変更し、今すぐ実行します。
 
+   > [!NOTE]
+   > リポジトリーの名前を選んだ後、[前章](/ja/docs/Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain#javascript_transformation)で述べたように、`vite.config.js` の `base` オプションがこの名前を反映していることを確認してください。そうしないと、JavaScript および CSS 資産が正しくリンクされません。
+
 6. これで、コードを GitHub にプッシュする準備が整いました。今すぐ次のコマンドを実行します。
 
    ```bash
-   git push github main
+   git push origin main
    ```
 
-   この時点で、 Git がプッシュの送信を許可する前に、ユーザー名とパスワードの入力を求められます。これは、前のスクリーンショットに見られるように、 SSH オプションではなく HTTPS オプションを使用したためです。このためには、 GitHub ユーザー名が必要です。次に、 2 要素認証 (2FA) が有効になっていない場合は、 GitHub パスワードが必要です。可能であれば 2FA を使用することを常にお勧めしますが、その場合は「個人アクセストークン」も使用する必要があることに注意してください。 GitHub のヘルプページには、[その入手方法を説明する優れた簡単なチュートリアル](https://docs.github.com/en/authentication/keeper-your-account-and-data-secure/creating-a-personal-access)が記載されています。
+   この時点で、 Git がプッシュの送信を許可する前に、ユーザー名とパスワードの入力を求められます。これは、前のスクリーンショットに見られるように、 SSH オプションではなく HTTPS オプションを使用したためです。このためには、 GitHub ユーザー名が必要です。次に、 2 要素認証 (2FA) が有効になっていない場合は、 GitHub パスワードが必要です。可能であれば 2FA を使用することを常にお勧めしますが、その場合は「個人アクセストークン」も使用する必要があることに注意してください。 GitHub のヘルプページには、[その入手方法を説明する優れた簡単なチュートリアル](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens)が記載されています。
 
 > [!NOTE]
-> SSH オプションを使用して、GitHub にプッシュするたびにユーザー名とパスワードを入力する必要をなくすことに興味がある場合は、 [このチュートリアルでその方法を説明します](https://docs.github.com/en/authentication/) 。
+> SSH オプションを使用して、GitHub にプッシュするたびにユーザー名とパスワードを入力する必要をなくすことに興味がある場合は、 [このチュートリアルでその方法を説明します](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) 。
 
-この最後のコマンドは、ブランチ `main` を使用して、 `github` と呼ばれる「リモート」の場所（github.com でホストされているリポジトリーです。好きな名前にすることができます）にコードをプッシュする（別名パブリッシュする）ように git に指示します。ブランチにはまったく遭遇しませんでしたが、 `main` ブランチが作業のデフォルトの場所であり、git がそこから開始されます。これは Netlify が検索するデフォルトのブランチでもあり、便利です。
-
-> [!NOTE]
-> 2020 年 10 月まで、GitHub のデフォルト ブランチは `master` でしたが、さまざまな社会的理由により `main` に切り替えられました。この古いデフォルトブランチは、遭遇するさまざまなプロジェクトに表示される可能性があることに注意してください。ただし、独自のプロジェクトには `main` を使用することをお勧めします。
-
-プロジェクトを Git でコミットし、GitHub リポジトリーにプッシュしたら、ツールチェーンの次のステップは、GitHub を Netlify に接続して、プロジェクトをウェブ上でライブデプロイできるようにすることです。
-
-## デプロイに Netlify を使用する
-
-GitHub から Netlify へのデプロイは、手順さえわかれば、特にこのプロジェクトのような「静的ウェブサイト」の場合、驚くほど簡単です。
+この最後のコマンドは、git に、ブランチ `main` を使用して、`origin` と名付けた「リモート」の場所にコードをプッシュするように指示します (これは github.com でホストされているリポジトリーです。好きな名前に名付けることもできます)。これまでブランチについてはまったく触れていませんが、 "main" ブランチは、私たちの作業のための既定の場所であり、git が起動する場所でもあります。ウェブサイトを構築するためにトリガーされる措置を定義するとき、その措置が "main" ブランチの変更を監視するようにします。
 
 > [!NOTE]
-> 開発ワークフローの改善に役立つ [Netlify のガイドとチュートリアル](https://www.netlify.com/blog/tutorials/)も多数あります。
+> 2020 年 10 月まで、GitHub のデフォルトブランチは `master` でしたが、さまざまな社会的理由により `main` に変更されました。この古いデフォルトブランチは、遭遇するさまざまなプロジェクトで現れる可能性があることに注意してください。ただし、独自のプロジェクトには `main` を使用することをお勧めします。
 
-これをやってみましょう。
+プロジェクトを Git でコミットし、GitHub リポジトリーにプッシュしたら、ツールチェーンの次のステップは、プロジェクトをライブでウェブ上にデプロイできるようにすることです。
 
-1. <https://app.netlify.com/start> に移動します。
-2. _Continuous Deploymen(継続的デプロイメント)_ という見出しの下にある GitHub ボタンを押します。 _Continuous Deployment(継続的デプロイメント)_ とは、コードリポジトリーが変更されるたびに、 Netlify がコードのデプロイメントを試みる(つまり _continuous(継続的)_ である)ことを意味します。
+## デプロイに GitHub Actions を使用する
 
-   ![netlify deployment options, as described in the surrounding text](netlify-deploy.png)
+GitHub Actions は、ESLint の設定と同様に、掘り下げるべき深い分野です。最初の試みで適切な設定を行うことは容易ではありませんが、「静的ウェブサイトを構築し、 GitHub Pages に展開」といった一般的な課題については、コピーして貼り付けることができる例がたくさんあります。[独自の GitHub Actions ワークフローによる公開](https://docs.github.com/ja/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)の手順に従ってください。動作例については、 [GitHub Action ファイル](https://github.com/mdn/client-toolchain-example/blob/main/.github/workflows/github-pages.yml) を調べるとよいでしょう。(ファイル名は任意です。)
 
-3. 以前に Netlify を認証したかどうかに応じて、GitHub で Netlify を認証し、それを認証するアカウントを選択する必要がある場合があります(複数の GitHub アカウントまたは組織がある場合)。プロジェクトをプッシュしたものを選択します。
-4. Netlify は、検索できる GitHub リポジトリーのリストを表示します。プロジェクトリポジトリーを選択し、次のステップに進みます。
-5. Netlify を GitHub アカウントに接続し、プロジェクトリポジトリーをデプロイするためのアクセス権を付与したため、 Netlify はプロジェクトのデプロイメントを _どのように_ 準備するか、 _何を_ デプロイするかを尋ねます。
+このファイルをメインブランチにコミットした後、コミットタイトルの横に小さな緑色のチェックマークが表示されます。
 
-   _Build コマンド_ としてコマンド `npm run build` を入力し、 _Publish ディレクトリー_ として `dist` ディレクトリーを指定する必要があります。これには公開したいコードが含まれています。
+![コミットタイトルの横に緑色のチェックマークが表示された GitHub のスクリーンショット](build-action-pass.png)
 
-6. 最後に、 _サイトのデプロイ_ をクリックします。
+黄色のドットが表示されている場合は、そのアクションが実行中であることを意味し、赤い十字が表示されている場合は、そのアクションが失敗したことを意味します。アイコンをクリックすると、ご自身で実行したビルド作業（この例では "Deploy build" という名前付き）のステータスとログを確認できます。
 
-   ![netlify distribution options, as described in the surrounding text](netlify-dist.png)
+さらに数分待った後、 GitHub Pages の URL にアクセスして、自分のウェブサイトがウェブ上で公開されていることを確認できます。リンクは `https://<your-name>.github.io/<repo-name>` のようになります。この例では、 <https://mdn.github.io/client-toolchain-example/> です。
 
-7. デプロイメントが行われるまで少し待った後、公開されたサイトを表示するためにアクセスできる URL を取得します。試してみてください。
-8. さらに良いことに変更を加えてリモート git リポジトリー (GitHub 上) にその変更を _プッシュ_ するたびに、 Netlify への通知がトリガーされ、指定されたビルドタスクが実行され、結果として得られる `dist` ディレクトリーが公開されたディレクトリーにデプロイされます。
-   今すぐ試してください。アプリに小さな変更を加えてから、次のコマンドを使用して GitHub にプッシュします。
-
-   ```bash
-   git add .
-   git commit -m 'simple netlify test'
-   git push github main
-   ```
-
-   公開されたサイトが変更に応じて更新されるはずです。公開には数分かかる場合があるので、少しお待ちください。
-
-Netlify については以上です。 必要に応じて、Netlify プロジェクトの名前を変更したり、独自のドメイン名を使用するように指定したりできます。 Netlify では、[優れたドキュメント](https://docs.netlify.com/)を提供しています。
-
-ここで、ツールチェーンの最後のリンクとして、コードが機能することを確認するテストを説明します。
+これで、ツールチェーンの最後のリンク、コードが動作することを確認するテストに移ります。
 
 ## テスト
 
@@ -230,72 +171,91 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 また、テストは JavaScript に限定されないことにも注意してください。テストはレンダリングされた DOM 、ユーザーインタラクション、 CSS 、さらにはページの外観に対して実行できます。
 
-ただし、このプロジェクトではサードパーティの NASA データフィードをチェックし、それが正しい形式であることを確認する小さなテストを作成します。そうでない場合、テストは失敗し、プロジェクトは稼働できなくなります。それ以外のことを行うことは、このモジュールの範囲を超えます。テストは実際には独自の別個のモジュールを必要とする巨大な主題です。私たちは、このセクションが少なくともテストの必要性を認識してもらい、テストに行ってもっと学びたいという動機を与える種を植えることを願っています。
+しかし、このプロジェクトでは、 GitHub API データが正しい書式化されているかどうかを調べる小さな検査を作成します。そうでない場合、検査は失敗し、プロジェクトは公開されません。それ以上のことは、このモジュールの範囲を超えます。検査は実に巨大なテーマであり、それ自体で別個のモジュールを必要とします。この章では、少なくともテストの必要性を認識し、さらに詳しく学びたいと思うきっかけとなるような選択されていることを期待しています。
 
-このプロジェクトのテストにはテストフレームワークは含まれていませんが、フロントエンド開発の世界のすべてのものと同様に、多数の[フレームワークオプション](https://www.npmjs.com/search?q=keywords%3Atesting)があります。
+大切なのはテストそのものではありません。重要なのは、独自のビルドアクションをすでに記述しているので、テストを実行する段階をビルドの前に追加することができます。テストが失敗すると、ビルドは失敗し、デプロイは現れません。
 
-大切なのはテストそのものではありません。重要なのは、失敗または成功をどのように処理するかです。一部の展開プラットフォームには、パイプラインの一部としてテストのための特定の方法が含まれています。 GitHub、GitLab などの製品はすべて、個々のコミットに対するテストの実行をサポートしています。
-
-このプロジェクトは Netlify にデプロイされており、 Netlify はビルドコマンドについてのみ尋ねるため、テストをビルドの一部にする必要があります。テストが失敗すると、ビルドは失敗し、 Netlify はデプロイされません。
+良いニュースは、Vite を使用しているため、Vite にはすでにテスト用の優れた統合ツール、[Vitest](https://vitest.dev/guide/) が用意されていることです。
 
 始めましょう。
 
-1. あなたの `package.json` を開いてください。
-2. `scripts` を確認し、次のテストコマンドとビルドコマンドが含まれるように更新します。
+1. Vitest をインストールします。
+
+   ```bash
+   npm install --save-dev vitest
+   ```
+
+2. package.json で `scripts` メンバーを探し、次のテストおよびビルドコマンドが含まれるように更新します。
 
    ```json
    "scripts": {
-     …
-     "test": "node tests/*.js",
-     "build": "npm run test && parcel build src/index.html"
+     // …
+     "test": "vitest"
    }
    ```
 
-3. もちろん、コードベースにテストを追加する必要があります。ルートディレクトリーに test という名前の新しいディレクトリーを作成します。
+   > [!NOTE]
+   > Vitest と Vite を一緒に使用することの利点は、他のテストフレームワークを使用する場合、テストファイルの変換方法を記述した別の設定を追加する必要がありますが、Vitest は Vite の設定を自動的に使用します。
 
-   ```bash
-   mkdir tests
-   ```
+3. これで、コードベースにテストを追加する必要があります。通常、`App.jsx` というファイルの機能をテストする場合、その隣に `App.test.jsx` というファイルを追加します。この例では、データをテストするだけなので、テストを保存するための別のディレクトリーを作成しましょう。前回の章でダウンロードしたサンプルリポジトリーを開き、`tests` フォルダーをコピーしてください。
 
-4. 新しいディレクトリー内にテストファイルを作成します。
-
-   ```bash
-   cd tests
-   touch nasa-feed.test.js
-   ```
-
-5. このファイルを開き、 [nasa-feed.test.js](https://raw.githubusercontent.com/remy/mdn-will-it-miss/master/tests/nasa-feed.test.js) の内容を追加します。
-6. このテストでは、axios パッケージを使用して、テストするデータフィードを取得します。この依存関係をインストールするには、次のコマンドを実行します。
-
-   ```bash
-   npm install --save-dev axios
-   ```
-
-   Parcel ではこの依存関係を解決できないため、 axios を手動でインストールする必要があります。私たちのテストは、 Parcel のシステムの範囲外にあります。 Parcel はテストコードをまったく参照したり実行したりしないため、依存関係を自分でインストールする必要があります。
-
-7. ここでテストを手動で実行するには、コマンドラインから次のコマンドを実行します。
+4. これで手動でテストを実行できます。コマンドラインから、次のように実行します。
 
    ```bash
    npm run test
    ```
 
-   成功した場合、結果は…何もありません。これは成功とみなされます。一般に、テストにノイズが多くなるのは、何か問題がある場合のみです。テストはまた、コマンドラインに成功を伝える特別な信号 (終了信号 0) で終了しました。失敗した場合、テストは終了コード 1 で失敗します。これは、「何かが失敗しました」というシステムレベルの値です。
+   次のような出力が表示されます。
 
-   `npm run test` コマンドは、node を使用して、tests ディレクトリー内の `.js` で終わるすべてのファイルを実行します。
+   ```plain
+   > client-toolchain-example@1.0.0 test
+   > vitest
 
-   ビルド スクリプトでは、 `npm run test` が呼び出され、文字列 `&&` が表示されます。 — これは、「左側の処理が成功した場合 (ゼロで終了)、右側の処理を実行する」ことを意味します。 つまり、これは、テストに合格したら、コードをビルドするということになります。
 
-8. 以前に使用したものと同様のコマンドを使用して、新しいコードを GitHub にアップロードする必要があります。
+   DEV  v1.6.0 /Users/joshcena/Desktop/work/Tech/projects/mdn/client-toolchain-example
+
+   ✓ tests/api.test.js (1) 896ms
+     ✓ GitHub API returns the right response 896ms
+
+   Test Files  1 passed (1)
+        Tests  1 passed (1)
+     Start at  23:12:25
+     Duration  1.03s (transform 15ms, setup 0ms, collect 5ms, tests 896ms, environment 0ms, prepare 38ms)
+
+
+   PASS  Waiting for file changes...
+         press h to show help, press q to quit
+   ```
+
+   これは、テストに合格したことを意味します。 Vite と同様、ファイルが保存されると変更を監視し、検査を再実行します。 <kbd>q</kbd> を押すと終了できます。
+
+5. テストをビルドアクションに配線して、テストが失敗した場合にビルドをブロックする必要があります。 `.github/workflows/github-pages.yml` ファイル（またはビルドアクションに付けたファイル名）を開き、 `npm run build` を実行するステップの直前に、次のステップを追加します。
+
+   ```yaml
+   - name: Install deps
+     run: npm ci
+
+   # Add this
+   - name: Run tests
+     run: npm run test
+
+   - name: Build
+     run: npm run build
+   ```
+
+   これにより、ビルド段階の前にテストが実行されます。テストに失敗した場合、ビルドは失敗となり、デプロイは現れません。
+
+6. 以前に使用したものと同様のコマンドを使用して、新しいコードを GitHub にアップロードする必要があります。
 
    ```bash
    git add .
    git commit -m 'adding test'
-   git push github main
+   git push origin main
    ```
 
-   場合によっては、ビルドされたコードの結果をテストしたい場合があります(これは、私たちが作成したオリジナルのコードとは異なるため)。そのため、ビルド コマンドの後にテストを実行する必要があるかもしれません。独自のプロジェクトに取り組んでいるときは、これらすべての個別の側面を考慮する必要があります。
+   場合によっては、ビルドされたコードの結果をテストしたい場合があります（これは、私たちが作成したオリジナルのコードとは異なるため）。そのため、ビルドコマンドの後にテストを実行する必要があるかもしれません。独自のプロジェクトに取り組んでいるときは、これらすべての個別の側面を考慮する必要があります。
 
-さて、最後に、プッシュ後 1 分ほどで、 Netlify はプロジェクトの更新をデプロイします。ただし、導入されたテストに合格した場合に限ります。
+最後に、プッシュしてから 1 分ほど後、GitHub Pages がプロジェクトの更新を展開します。ただし、導入したテストに合格した場合に限ります。
 
 ## まとめ
 
@@ -303,17 +263,18 @@ Netlify については以上です。 必要に応じて、Netlify プロジェ
 
 ツールチェーンのすべての部分を要約してみましょう。
 
-- コードの品質とメンテナンスは ESLint と Prettier によって実行されます。 これらのツールは、 `npm install --dev eslint prettier eslint-plugin-react` を介して `devDependencies` としてプロジェクトに追加されます（この特定のプロジェクトは React を使用しているため、 ESLint プラグインが必要です）。
-- コード品質ツールが読み取る 2 つの構成ファイル: `.eslintrc` と `.prettierrc` です。
-- 開発中、依存関係を処理するために Parcel を使用します。 `parcel src/index.html` はバックグラウンドで実行され、変更を監視し、ソースを自動的に構築します。
-- デプロイメントは、変更を GitHub (「main」ブランチ上) にプッシュすることで処理されます。これにより、 Netlify でのビルドとデプロイメントがトリガーされ、プロジェクトが公開されます。この例の場合、この URL は [near-misses.netlify.com](https://near-misses.netlify.app/) です。独自の一意の URL が作成されます。
-- NASA API フィードが正しいデータ形式を提供しない場合、サイトの構築と展開をブロックする簡単なテストもあります。
+- コードの品質と保守は、 ESLint と Prettier によって実施されます。これらのツールは、`npm install --dev eslint prettier eslint-plugin-react ...` によって、`devDependencies` として自分のプロジェクトに追加されます（この具体的なプロジェクトでは React を使用しているため、ESLint プラグインが必要です）。
+- コード品質ツールが読み取る構成ファイルが 2 つあります。 `eslint.config.js` と `.prettierrc` です。
+- 開発中は、npm を使用して依存関係を追加し続けます。Vite 開発サーバーはバックグラウンドで実行され、変更を監視し、ソースを自動的にビルドします。
+- デプロイは、GitHub （"main" ブランチ）に変更をプッシュすることで処理されます。これにより、GitHub Actions によるビルドと展開が開始され、プロジェクトが公開されます。この例では、 URL は <https://mdn.github.io/client-toolchain-example/> ですが、皆様は自分の固有の URL になるでしょう。
+- また、GitHub API フィードから正しいデータ形式のデータが渡されなかった場合に、サイトのビルドと展開をブロックする単純な検査も実施しています。
 
-挑戦したい方は、このツールチェーンの一部を最適化できないか検討してください。自問すべきいくつかの質問
+挑戦したい方は、このツールチェーンの一部を最適化できるかどうか考えてみてください。自問すべき質問は以下の通りです。
 
-- ビルドステップ中に[画像を圧縮](https://github.com/ralscha/parcel-plugin-compress)できますか?
+- 必要な plotly.js の機能だけを取り出すことはできますか？そうすることで、JavaScript バンドルのサイズを縮小することができます。
+- 型チェック用の TypeScript や CSS リンティング用の stylelint、その他のツールを追加したくなるかもしれません。
 - React を [もっと小さいもの](https://preactjs.com/) に置き換えることはできますか?
-- [パフォーマンス監査](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring) など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
+- [パフォーマンス監査](https://developer.chrome.com/docs/lighthouse/performance/performance-scoring)など、不正なビルドのデプロイを防ぐためのテストをさらに追加していただけますか?
 - 新しいデプロイが成功したか失敗したかを知らせる通知を設定していただけますか?
 
-{{PreviousMenu("Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenu("Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
