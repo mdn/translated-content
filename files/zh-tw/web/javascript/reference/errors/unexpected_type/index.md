@@ -1,51 +1,79 @@
 ---
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
+l10n:
+  sourceCommit: 269244244653b3df2690adb14083a20ab0139f34
 ---
 
 {{jsSidebar("Errors")}}
 
-## 錯誤類型
+當出現非預期的型別時，會發生 JavaScript 的「_x_ is (not) _y_」例外。這通常是非預期的 {{jsxref("undefined")}} 或 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 值。
 
-{{jsxref("TypeError")}}
+## 訊息
 
-## 哪裡錯了？
+```plain
+TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
+TypeError: "x" is undefined (Firefox)
+TypeError: "undefined" is not an object (Firefox)
+TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
 
-有一個意想不到的類型。這與 {{jsxref("undefined")}} 或 {{jsxref("null")}} 值經常發生。
-
-另外，某些方法，如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}} 要求特定類型，即必須提供。
-
-## 實例
-
-### 無效的情況下
-
-```js example-bad
-// undefined 和 null 的情況下在其上的子方法不起作用
-var foo = undefined;
-foo.substring(1); // TypeError: foo is undefined
-
-var foo = null;
-foo.substring(1); // TypeError: foo is null
-
-// 某些方法可能要求特定類型
-var foo = {};
-Symbol.keyFor(foo); // TypeError: foo is not a symbol
-
-var foo = "bar";
-Object.create(foo); // TypeError: "foo" is not an object or null
+TypeError: "x" is not a symbol (V8-based & Firefox)
+TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
 ```
 
-### 修復問題
+## 錯誤類型
 
-為了解決空指針 `undefined` 或 `null` 值，可以使用 [typeof](/zh-TW/docs/Web/JavaScript/Reference/Operators/typeof) 運算符，例如。 operator, for example.
+{{jsxref("TypeError")}}。
 
-```js
-if (typeof foo !== "undefined") {
-  // 現在我們知道foo被定義，我們可以繼續進行。
+## 哪裡出錯了？
+
+出現了非預期的型別。這通常發生在 {{jsxref("undefined")}} 或 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 值的情況。
+
+此外，某些方法（例如 {{jsxref("Object.create()")}} 或 {{jsxref("Symbol.keyFor()")}}）需要提供特定的型別。
+
+## 範例
+
+### 無效的案例
+
+你不能在 `undefined` 或 `null` 的變數上呼叫方法。
+
+```js example-bad
+const foo = undefined;
+foo.substring(1); // TypeError: foo is undefined
+
+const foo2 = null;
+foo2.substring(1); // TypeError: foo2 is null
+```
+
+某些方法可能需要特定的型別。
+
+```js example-bad
+const foo = {};
+Symbol.keyFor(foo); // TypeError: foo is not a symbol
+
+const foo2 = "bar";
+Object.create(foo2); // TypeError: "foo2" is not an object or null
+```
+
+### 修正問題
+
+為了修正對 `undefined` 或 `null` 值進行存取的問題，你可以先測試該值是否為 `undefined` 或 `null`。
+
+```js example-good
+if (foo !== undefined && foo !== null) {
+  // 現在我們知道 foo 已被定義，可以繼續執行。
+}
+```
+
+或者，如果你確定 `foo` 不會是其他[假值](/zh-TW/docs/Glossary/Falsy)（例如 `""` 或 `0`），或者過濾掉這些情況不成問題，你可以直接測試其真假值。
+
+```js example-good
+if (foo) {
+  // 現在我們知道 foo 是真值，所以它必定不是 null/undefined。
 }
 ```
 
 ## 參見
 
 - {{jsxref("undefined")}}
-- {{jsxref("null")}}
+- [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null)
