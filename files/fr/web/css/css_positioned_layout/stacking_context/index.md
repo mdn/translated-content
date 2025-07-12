@@ -10,7 +10,7 @@ Le **contexte d'empilement** est une conceptualisation en trois dimensions de la
 
 ## Le contexte d'empilement
 
-Dans l'exemple précédent, [Ajout de z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index), l'ordre de rendu de certains éléments était influencé par la valeur de la propriété `z-index`. Cela se produit parce que ces éléments ont des propriétés spéciales qui entraînent la formation d'un _contexte d'empilement_.
+Dans l'exemple précédent, [Ajout de z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Using_z-index), l'ordre de rendu de certains éléments était influencé par la valeur de la propriété `z-index`. Cela se produit parce que ces éléments ont des propriétés spéciales qui entraînent la formation d'un _contexte d'empilement_.
 
 Un contexte d'empilement est formé dans le document par n'importe quel élément qui répond à l'un de ces critères&nbsp;:
 
@@ -207,9 +207,9 @@ h1 {
 
 ## Voir aussi
 
-- [L'empilement sans propriété z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index)&nbsp;: Les règles d'empilement à l'œuvre lorsque `z-index` n'est pas utilisée.
-- [L'empilement de blocs flottants](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements)&nbsp;: La gestion de l'empilement avec les éléments flottants.
-- [Utiliser z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Using_z-index)&nbsp;: Comment utiliser `z-index` afin de modifier l'empilement par défaut.
-- [Exemple de contexte d'empilement 1](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_1)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur le dernier niveau.
-- [Exemple de contexte d'empilement 2](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_2)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur tous les niveaux.
-- [Exemple de contexte d'empilement 3](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context_example_3)&nbsp;: Hiérarchie HTML à trois niveaux avec `z-index` sur le deuxième niveau.
+- [L'empilement sans propriété z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)&nbsp;: Les règles d'empilement à l'œuvre lorsque `z-index` n'est pas utilisée.
+- [L'empilement de blocs flottants](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)&nbsp;: La gestion de l'empilement avec les éléments flottants.
+- [Utiliser z-index](/fr/docs/Web/CSS/CSS_positioned_layout/Using_z-index)&nbsp;: Comment utiliser `z-index` afin de modifier l'empilement par défaut.
+- [Exemple de contexte d'empilement 1](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur le dernier niveau.
+- [Exemple de contexte d'empilement 2](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_2)&nbsp;: Hiérarchie HTML à deux niveaux avec `z-index` sur tous les niveaux.
+- [Exemple de contexte d'empilement 3](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_3)&nbsp;: Hiérarchie HTML à trois niveaux avec `z-index` sur le deuxième niveau.

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Forms
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
 
-Dans cette formation, nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs.
+Dans cette formation, nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web [LocalLibrary](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs.
 
 <table class="standard-table">
   <tbody>
@@ -27,9 +27,9 @@ Dans cette formation, nous allons vous montrer comment travailler avec les formu
 
 ## Vue d'ensemble
 
-Un [formulaire HTML](/fr/docs/Learn/Forms) regroupe au moins un champ remplissable et des composants élémentaires d'interface web. Il peut être utilisé pour réunir des saisies de la part des utilisateurs avant envoi vers un serveur. Les formulaires sont souples : ils s'adaptent à plusieurs modes de saisie. En effet, il existe des composants élémentaires d'interface graphique pour des modes de saisie non contrainte avec une zone de saisie de texte, ou restreinte au type `date` avec un sélecteur de date (<i lang="en">date picker</i>), la saisie d'un variable optionnelle via une boîte à cocher, d'un choix à faire parmi plusieurs valeurs possibles avec les boutons radio, etc. Les formulaires permettent de partager des informations avec le serveur de manière relativement sécurisée, car ils permettent d'envoyer des requêtes de type `POST` avec une protection contre la falsification des requêtes inter-site.
+Un [formulaire HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms) regroupe au moins un champ remplissable et des composants élémentaires d'interface web. Il peut être utilisé pour réunir des saisies de la part des utilisateurs avant envoi vers un serveur. Les formulaires sont souples : ils s'adaptent à plusieurs modes de saisie. En effet, il existe des composants élémentaires d'interface graphique pour des modes de saisie non contrainte avec une zone de saisie de texte, ou restreinte au type `date` avec un sélecteur de date (<i lang="en">date picker</i>), la saisie d'un variable optionnelle via une boîte à cocher, d'un choix à faire parmi plusieurs valeurs possibles avec les boutons radio, etc. Les formulaires permettent de partager des informations avec le serveur de manière relativement sécurisée, car ils permettent d'envoyer des requêtes de type `POST` avec une protection contre la falsification des requêtes inter-site.
 
-Bien que nous n'ayons pas encore créé de formulaire au cours de cette formation, nous en avons déjà rencontré sur l'interface d'administration Django Admin — par exemple, la capture d'écran ci-dessous montre un formulaire d'édition de l'un de nos modèles de [Book](/fr/docs/Learn/Server-side/Django/Models) (livre), comprenant des composants élémentaires d'interface graphique de choix de valeur parmi une liste proposée, et des zones de saisie de texte.
+Bien que nous n'ayons pas encore créé de formulaire au cours de cette formation, nous en avons déjà rencontré sur l'interface d'administration Django Admin — par exemple, la capture d'écran ci-dessous montre un formulaire d'édition de l'un de nos modèles de [Book](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Models) (livre), comprenant des composants élémentaires d'interface graphique de choix de valeur parmi une liste proposée, et des zones de saisie de texte.
 
 ![Écran d'administration du site - Ajout d'un livre](admin_book_add.png)
 
@@ -39,7 +39,7 @@ Dans cette formation, nous allons vous montrer quelques-unes des manières de cr
 
 ## Formulaires HTML
 
-D'abord, un premier aperçu des [formulaires HTML](/fr/docs/Learn/Forms). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte, présent pour y entrer le nom d'une «&nbsp;équipe&nbsp;» quelconque et sa description dans l'étiquette associée&nbsp;:
+D'abord, un premier aperçu des [formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte, présent pour y entrer le nom d'une «&nbsp;équipe&nbsp;» quelconque et sa description dans l'étiquette associée&nbsp;:
 
 ![Champ textuel simple d'un formulaire HTML pour saisir un nom](form_example_name_field.png)
 
@@ -63,7 +63,6 @@ La balise `<input>` dont l'attribut `type` vaut `submit` sera affichée (par dé
 
 - `action`&nbsp;: Il s'agit de la destination (ressource ou URL) où sont envoyées les données lorsque le formulaire est soumis. Si la valeur de cet attribut n'est pas initialisée (ou la chaîne vide est affectée à cet attribut), alors le formulaire sera renvoyé à l'URL de la page courante.
 - `method`&nbsp;: La méthode HTTP utilisée pour envoyer les données&nbsp;: _post_ ou _get_.
-
   - La méthode `POST` devrait toujours être utilisée si l'envoi de la donnée va provoquer un changement dans la base de données du serveur, car il peut être rendu plus résistant aux attaques par falsification de requête inter-site (CSRF).
   - La méthode `GET` ne devrait être utilisée que pour les formulaires ne changeant pas les données utilisateur (par exemple, un formulaire de recherche). Elle est recommandée lorsque vous souhaitez pouvoir partager l'URL ou la conserver dans vos favoris.
 
@@ -82,16 +81,13 @@ Voici ci-dessous un diagramme représentant les étapes de gestion d'un formulai
 En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont s'acquitte Django à l'occasion de la gestion d'un formulaire sont&nbsp;:
 
 1. Afficher le formulaire sous sa forme par défaut la première fois où il est demandé par l'utilisateur.
-
    - Le formulaire peut contenir des champs vides (par exemple, si vous créez un nouvel enregistrement), ou il peut être prérempli de valeurs initiales (par exemple, si vous modifiez les valeurs d'un enregistrement existant, ou que ces champs ont des valeurs initiales utiles).
    - Le formulaire est qualifié à cette étape de _formulaire libre_, parce qu'il n'est associé à aucune donnée entrée par l'utilisateur (bien qu'il puisse avoir des valeurs initiales).
 
 2. Recevoir des données d'une requête d'envoi de données et les lier au formulaire.
-
    - Lier les données au formulaire signifie que les données entrées par l'utilisateur, ainsi que les erreurs éventuelles, sont accessibles lorsque nous avons besoin de réafficher le formulaire.
 
 3. Nettoyer et valider les données.
-
    - Le nettoyage de données consiste à désinfecter la saisie (par exemple, en supprimant les caractères non valides, et qui pourraient être utilisés pour envoyer du contenu malveillant au serveur) et à convertir ces données en types Python cohérents.
    - La validation vérifie que les valeurs envoyées sont appropriées au champ (par exemple, dans le bon intervalle de dates, ni trop long ni trop court, etc.)
 
@@ -197,7 +193,7 @@ urlpatterns += [
 ]
 ```
 
-La configuration d'URL va rediriger les URLs ayant le format **/catalog/book/_\<bookinstance\_id>_/renew/** vers la fonction appelée `renew_book_librarian()` dans **views.py**, et envoyer l'`id` de `BookInstance` comme paramètre sous le nom `pk`. Le motif ne fonctionnera que si `pk` est un `uuid` correctement formaté.
+La configuration d'URL va rediriger les URLs ayant le format **/catalog/book/_\<bookinstance_id>_/renew/** vers la fonction appelée `renew_book_librarian()` dans **views.py**, et envoyer l'`id` de `BookInstance` comme paramètre sous le nom `pk`. Le motif ne fonctionnera que si `pk` est un `uuid` correctement formaté.
 
 > [!NOTE]
 > Nous pouvons appeler comme bon nous semble la donnée d'URL "`pk`" que nous avons capturée, car nous contrôlons complètement la fonction de notre vue (nous n'utilisons pas une vue générique "détail", laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci `pk`, pour "primary key", est une convention qu'il est raisonnable d'utiliser&nbsp;!

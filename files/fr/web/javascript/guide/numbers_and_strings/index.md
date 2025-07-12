@@ -16,7 +16,7 @@ Le format IEEE-754 permet de représenter des valeurs entre ±2^−1022 et ±2^+
 
 Le type {{jsxref("BigInt")}} est une addition récente à JavaScript qui permet de représenter de grands entiers. Toutefois, il n'est pas possible de mélanger les `BigInt` et les nombres ({{jsxref("Number")}}) dans les mêmes opérations et on ne peut pas utiliser l'objet {{jsxref("Math")}} avec les valeurs `BigInt`.
 
-Voir également [les types de données et structures JavaScript](/fr/docs/Web/JavaScript/Data_structures) pour l'articulation des types primitifs en JavaScript.
+Voir également [les types de données et structures JavaScript](/fr/docs/Web/JavaScript/Guide/Data_structures) pour l'articulation des types primitifs en JavaScript.
 
 Il est possible d'utiliser quatre types de littéraux numériques : décimal, binaire, octal et hexadécimal.
 

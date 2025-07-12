@@ -17,10 +17,10 @@ Le contenu mixte passif est du contenu servi avec HTTP et inclus dans une page w
 
 Voici les éléments qui sont considérées comme du contenu passif lorsqu'ils sont servis par des requêtes HTTP&nbsp;:
 
-- [`<img>`](/fr/docs/Web/HTML/Element/img) (l'attribut `src`)
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio) (l'attribut `src`)
-- [`<video>`](/fr/docs/Web/HTML/Element/video) (l'attribut `src`)
-- Les sous-ressources d'un élément [`<object>`](/fr/docs/Web/HTML/Element/object) (lorsqu'un tel élément effectue des requêtes HTTP)
+- [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img) (l'attribut `src`)
+- [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) (l'attribut `src`)
+- [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) (l'attribut `src`)
+- Les sous-ressources d'un élément [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object) (lorsqu'un tel élément effectue des requêtes HTTP)
 
 ### Contenu mixte actif
 
@@ -34,13 +34,13 @@ Le risque induit par le contenu mixte dépend du type de site web que la personn
 
 Cette section liste certains des objets ou méthodes qui sont considérés comme du contenu actif&nbsp;:
 
-- [`<script>`](/fr/docs/Web/HTML/Element/script) (l'attribut `src`)
-- [`<link>`](/fr/docs/Web/HTML/Element/link) (l'attribut `href`) (cela inclut les feuilles de style CSS)
-- [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) (l'attribut `src`)
+- [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) (l'attribut `src`)
+- [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link) (l'attribut `href`) (cela inclut les feuilles de style CSS)
+- [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) (l'attribut `src`)
 - Les requêtes [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
 - Les requêtes [`fetch()`](/fr/docs/Web/API/Window/fetch)
 - En CSS, les endroits où une valeur [`url()`](/fr/docs/Web/CSS/url_value) peut être utilisée ([`@font-face`](/fr/docs/Web/CSS/@font-face), [`cursor`](/fr/docs/Web/CSS/cursor), [`background-image`](/fr/docs/Web/CSS/background-image), etc.).
-- [`<object>`](/fr/docs/Web/HTML/Element/object) (l'attribut `data`)
+- [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object) (l'attribut `data`)
 - [`Navigator.sendBeacon`](/fr/docs/Web/API/Navigator/sendBeacon) (l'attribut `url`)
 
 D'autres types de ressources comme les polices de caractères ou les <i lang="en">web workers</i> peuvent être considérés comme du contenu mixte actif (comme dans Chrome).
@@ -74,7 +74,7 @@ Les outils de développement de Firefox affichent un message d'avertissement dan
 
 ![Une capture d'écran de la console avec un message d'avertissement sur le contenu mixte.](mixed_content_-_net_pane.png)
 
-En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
+En complément de ces alertes dans la console web, vous pouvez également utiliser [<i lang="en">Content Security Policy (CSP)</i>](/fr/docs/Web/HTTP/Guides/CSP) pour rapporter de tels problèmes. Vous pouvez aussi utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/) ou [Missing Padlock](https://www.missingpadlock.com/) qui vérifiera votre site de façon récursive pour trouver des liens vers du contenu non-sécurisé.
 
 À partir de Firefox 23, le contenu mixte actif est bloqué par défaut (et le contenu mixte passif peut être bloqué via une préférence). Pour que la détection de telles requêtes soit plus simple, elles sont affichées dans l'onglet Sécurité de la console&nbsp;:
 

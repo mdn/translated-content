@@ -69,9 +69,9 @@ React utilise bon nombre des fonctionnalités modernes de JavaScript. Sa plus gr
 const heading = <h1>Mozilla Developer Network</h1>;
 ```
 
-Cette constante d'en-tête est connue sous le nom d'**expression JSX**. React peut l'utiliser pour afficher la balise [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) dans notre application.
+Cette constante d'en-tête est connue sous le nom d'**expression JSX**. React peut l'utiliser pour afficher la balise [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) dans notre application.
 
-Supposons que nous souhaitions envelopper notre titre dans une balise [`<header>`](/fr/docs/Web/HTML/Element/header), pour des raisons sémantiques. L'approche JSX nous permet d'imbriquer nos éléments les uns dans les autres, tout comme nous le faisons avec HTML&nbsp;:
+Supposons que nous souhaitions envelopper notre titre dans une balise [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header), pour des raisons sémantiques. L'approche JSX nous permet d'imbriquer nos éléments les uns dans les autres, tout comme nous le faisons avec HTML&nbsp;:
 
 ```js
 const header = (
@@ -92,7 +92,7 @@ const header = (
 > );
 > ```
 >
-> Cependant, cela semble un peu gênant, car la balise [`<header>`](/fr/docs/Web/HTML/Element/header) qui commence l'expression n'est pas indentée à la même position que sa balise de fermeture correspondante.
+> Cependant, cela semble un peu gênant, car la balise [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) qui commence l'expression n'est pas indentée à la même position que sa balise de fermeture correspondante.
 
 Bien sûr, votre navigateur ne peut pas lire JSX de manière native. Une fois compilée (à l'aide d'un outil comme [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), notre expression d'en-tête ressemblerait à ceci&nbsp;:
 
@@ -114,7 +114,7 @@ Pour en savoir plus sur JSX, consultez l'article [JSX dans le détail](https://f
 
 Il existe de nombreuses manières d'utiliser React, mais nous allons ici utiliser l'outil en ligne de commande create-react-app, mentionné précédemment et qui accélère le processus de développement d'une application React en installant certains packages et en créant certains fichiers automatiquement (c'est l'outillage dont nous parlions avant).
 
-Il est possible d'[ajouter React à un site Web sans create-react-app](https://fr.reactjs.org/docs/add-react-to-a-website.html), en copiant certains [`<script>`](/fr/docs/Web/HTML/Element/script) dans un fichier HTML, mais l'outil create-react-app est généralement utilisé pour initialiser des applications React. Son utilisation vous permettra de passer plus de temps à créer votre application et moins de temps à vous occuper de la configuration.
+Il est possible d'[ajouter React à un site Web sans create-react-app](https://fr.reactjs.org/docs/add-react-to-a-website.html), en copiant certains [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) dans un fichier HTML, mais l'outil create-react-app est généralement utilisé pour initialiser des applications React. Son utilisation vous permettra de passer plus de temps à créer votre application et moins de temps à vous occuper de la configuration.
 
 ### Préparation
 
@@ -122,7 +122,7 @@ Afin d'utiliser create-react-app, vous devez avoir installé [Node.js](https://n
 
 Vous pouvez également utiliser le gestionnaire de paquets Yarn comme alternative, mais pour la suite de ces didacticiels, nous supposerons que c'est npm qui est utilisé. Voir [Bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) pour plus d'informations sur npm et Yarn.
 
-Si vous utilisez Windows, vous devrez installer un logiciel terminal de type Unix/macOS afin d'utiliser les lignes de commande mentionnées dans ce tutoriel. **Git BASH** (qui fait partie de [l'ensemble d'outils Git pour Windows](https://gitforwindows.org/)) ou [<i lang="en">Windows Subsystem for Linux</i>](https://docs.microsoft.com/en-us/windows/wsl/about) (**WSL**) conviennent tous les deux. Voir [Cours express sur la ligne de commande](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) pour plus d'information à ce sujet, et sur les commandes du terminal en général.
+Si vous utilisez Windows, vous devrez installer un logiciel terminal de type Unix/macOS afin d'utiliser les lignes de commande mentionnées dans ce tutoriel. **Git BASH** (qui fait partie de [l'ensemble d'outils Git pour Windows](https://gitforwindows.org/)) ou [<i lang="en">Windows Subsystem for Linux</i>](https://docs.microsoft.com/en-us/windows/wsl/about) (**WSL**) conviennent tous les deux. Voir [Cours express sur la ligne de commande](/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line) pour plus d'information à ce sujet, et sur les commandes du terminal en général.
 
 Gardez également à l'esprit que React et ReactDOM produisent des applications qui ne fonctionnent que sur un ensemble de navigateurs assez modernes (à partir de IE9+ grâce à l'aide de certains <i lang="en">polyfills</i>). Il est recommandé d'utiliser un navigateur moderne comme Firefox, Safari ou Chrome pour suivre ces didacticiels.
 
@@ -191,7 +191,7 @@ moz-todo-react
 
 Le répertoire **`src`** est l'endroit où nous passerons la plupart de notre temps, car c'est là que réside le code source de notre application.
 
-Le répertoire **`public`** contient des fichiers qui seront lus par votre navigateur pendant que vous développez l'application&nbsp;; le plus important d'entre eux est `index.html`. React injecte votre code dans ce fichier afin que votre navigateur puisse l'exécuter. Il y a d'autres balises qui aident la fonction create-react-app, alors veillez à ne pas modifier ce fichier à moins de savoir ce que vous faites. Par contre, vous devriez changer le texte à l'intérieur de l'élément [`<title>`](/fr/docs/Web/HTML/Element/title) pour refléter le titre de votre application. Des titres de pages précis participent à l'accessibilité&nbsp;!
+Le répertoire **`public`** contient des fichiers qui seront lus par votre navigateur pendant que vous développez l'application&nbsp;; le plus important d'entre eux est `index.html`. React injecte votre code dans ce fichier afin que votre navigateur puisse l'exécuter. Il y a d'autres balises qui aident la fonction create-react-app, alors veillez à ne pas modifier ce fichier à moins de savoir ce que vous faites. Par contre, vous devriez changer le texte à l'intérieur de l'élément [`<title>`](/fr/docs/Web/HTML/Reference/Elements/title) pour refléter le titre de votre application. Des titres de pages précis participent à l'accessibilité&nbsp;!
 
 Le répertoire `public` sera également déployé lorsque vous créerez une version de production pour votre application. Nous n'aborderons pas le déploiement dans ce tutoriel, mais vous devriez pouvoir utiliser une solution similaire à celle décrite dans notre tutoriel [Déployer notre application](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
 
@@ -280,9 +280,9 @@ function App() {
 
 La fonction `App` renvoie une expression JSX. Cette expression définit ce que votre navigateur restitue finalement au DOM.
 
-Certains éléments de l'expression ont des attributs, écrits sous forme HTML, d'après le modèle `attribute="value"`. À la ligne 3, la balise d'ouverture [`<div>`](/fr/docs/Web/HTML/Element/div) possède un attribut `className`. Il est similaire à l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes/class) en HTML, mais comme JSX est un sous-ensemble de JavaScript, nous ne pouvons pas utiliser le mot réservé `class`, car JavaScript l'utilise déjà dans un but précis et cela causerait des problèmes dans notre code. D'autres attributs HTML n'utilisent pas la même syntaxe en JSX qu'en HTML pour le même type de raison. Nous en parlerons au fur et à mesure que nous les rencontrerons.
+Certains éléments de l'expression ont des attributs, écrits sous forme HTML, d'après le modèle `attribute="value"`. À la ligne 3, la balise d'ouverture [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) possède un attribut `className`. Il est similaire à l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes/class) en HTML, mais comme JSX est un sous-ensemble de JavaScript, nous ne pouvons pas utiliser le mot réservé `class`, car JavaScript l'utilise déjà dans un but précis et cela causerait des problèmes dans notre code. D'autres attributs HTML n'utilisent pas la même syntaxe en JSX qu'en HTML pour le même type de raison. Nous en parlerons au fur et à mesure que nous les rencontrerons.
 
-Prenez un moment pour modifier la balise [`<p>`](/fr/docs/Web/HTML/Element/p) à la ligne 6 afin qu'elle indique "Hello, world!", puis enregistrez votre fichier. Vous remarquerez que cette modification est immédiatement rendue par le serveur exécutant `http://localhost:3000` dans votre navigateur. Supprimez maintenant la balise [`<a>`](/fr/docs/Web/HTML/Element/a) et enregistrez; le lien "Learn React" disparaîtra.
+Prenez un moment pour modifier la balise [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) à la ligne 6 afin qu'elle indique "Hello, world!", puis enregistrez votre fichier. Vous remarquerez que cette modification est immédiatement rendue par le serveur exécutant `http://localhost:3000` dans votre navigateur. Supprimez maintenant la balise [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) et enregistrez; le lien "Learn React" disparaîtra.
 
 Votre composant `App` devrait maintenant ressembler à cela&nbsp;:
 

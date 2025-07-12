@@ -12,8 +12,8 @@ Firefox 7, basé sur Gecko 7.0, est sorti le 27 september 2011. Cet article four
 - La propriété `profile` de {{domxref("HTMLHeadElement")}} a été supprimée, cette propriété est obsolète depuis Gecko 2.0.
 - Les propriétés `x` et `y` de {{domxref("HTMLImageElement")}} ont été supprimées.
 - Le paramètre `before` de la méthode `add()` de {{domxref("HTMLSelectElement")}} est désormais optionnel.
-- L'attribut [`background`](/fr/docs/Web/HTML/Element/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
-- L'attribut [`label`](/fr/docs/Web/HTML/Element/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
+- L'attribut [`background`](/fr/docs/Web/HTML/Reference/Elements/body#background) de l'élément {{HTMLElement("body")}} n'est plus résolu en tant qu'URI, ce qui est conforme à la spécification HTML courante.
+- L'attribut [`label`](/fr/docs/Web/HTML/Reference/Elements/option#label) de l'élément {{HTMLElement("option")}} reflète désormais la valeur du contenu texte de l'élément si l'attribut n'est pas spécifié.
 
 #### Canvas
 

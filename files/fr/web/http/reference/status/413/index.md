@@ -22,5 +22,5 @@ Le code de statut de réponse **`413 Payload Too Large`** indique que la taille 
 
 ## Voir aussi
 
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
+- [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection)
 - [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)

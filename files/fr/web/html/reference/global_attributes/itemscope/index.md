@@ -6,7 +6,7 @@ original_slug: Web/HTML/Global_attributes/itemscope
 
 {{HTMLSidebar("Global_attributes")}}
 
-L'[attribut universel](/fr/docs/Web/HTML/Global_attributes) **`itemscope`** fonctionne généralement avec l'attribut `itemtype` afin d'indiquer qu'un bloc HTML contient un objet donné. `itemscope` crée l'objet et définit la portée de l'`itemtype` associé. Il est possible d'associer un attribut `itemscope` à n'importe quel élément HTML.
+L'[attribut universel](/fr/docs/Web/HTML/Reference/Global_attributes) **`itemscope`** fonctionne généralement avec l'attribut `itemtype` afin d'indiquer qu'un bloc HTML contient un objet donné. `itemscope` crée l'objet et définit la portée de l'`itemtype` associé. Il est possible d'associer un attribut `itemscope` à n'importe quel élément HTML.
 
 ### Les identifiants rattachés à `itemscope`
 
@@ -191,9 +191,9 @@ Directions: <br>
 
 ## Voir aussi
 
-- [Les différents attributs universels](/fr/docs/Web/HTML/Global_attributes)
+- [Les différents attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes)
 - Les autres attributs universels relatifs aux microdonnées :
-  - [`itemid`](/fr/docs/Web/HTML/Global_attributes#itemid)
-  - [`itemprop`](/fr/docs/Web/HTML/Global_attributes#itemprop)
-  - [`itemref`](/fr/docs/Web/HTML/Global_attributes#itemref)
-  - [`itemtype`](/fr/docs/Web/HTML/Global_attributes#itemtype)
+  - [`itemid`](/fr/docs/Web/HTML/Reference/Global_attributes#itemid)
+  - [`itemprop`](/fr/docs/Web/HTML/Reference/Global_attributes#itemprop)
+  - [`itemref`](/fr/docs/Web/HTML/Reference/Global_attributes#itemref)
+  - [`itemtype`](/fr/docs/Web/HTML/Reference/Global_attributes#itemtype)

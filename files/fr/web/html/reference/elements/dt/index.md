@@ -6,7 +6,7 @@ original_slug: Web/HTML/Element/dt
 
 {{HTMLSidebar}}
 
-L'élément HTML **`<dt>`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Element/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Element/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Element/dd).
+L'élément HTML **`<dt>`** identifie un terme dans une liste de définitions ou de descriptions. Cet élément n'apparaît qu'en tant qu'élément enfant d'un élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl) et est généralement suivi d'un élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd). Plusieurs éléments `<dt>` qui se suivent indiqueront qu'ils partagent la définition/description fournie par le prochain élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd).
 
 {{InteractiveExample("HTML Demo: &lt;dt&gt;", "tabbed-standard")}}
 
@@ -117,11 +117,11 @@ dd {
 
 ## Attributs
 
-On peut employer [les attributs universels](/fr/docs/Web/HTML/Global_attributes) sur cet élément.
+On peut employer [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes) sur cet élément.
 
 ## Exemples
 
-Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Element/dl#examples).
+Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl#examples).
 
 ## Spécifications
 
@@ -133,5 +133,5 @@ Pour des exemples, voir les [exemples fournis pour l'élément `<dl>`](/fr/docs/
 
 ## Voir aussi
 
-- L'élément [`<dd>`](/fr/docs/Web/HTML/Element/dd)
-- L'élément [`<dl>`](/fr/docs/Web/HTML/Element/dl)
+- L'élément [`<dd>`](/fr/docs/Web/HTML/Reference/Elements/dd)
+- L'élément [`<dl>`](/fr/docs/Web/HTML/Reference/Elements/dl)

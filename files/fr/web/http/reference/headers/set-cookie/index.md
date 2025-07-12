@@ -9,7 +9,7 @@ L'en-tête de réponse HTTP **`Set-Cookie`** est utilisé pour envoyer un cookie
 > [!WARNING]
 > Les navigateurs empêchent le code JavaScript _front-end_ d'accéder à l'en-tête `Set-Cookie`, comme l'exige la spécification Fetch, qui définit `Set-Cookie` comme un [nom d'en-tête de réponse interdit](https://fetch.spec.whatwg.org/#forbidden-response-header-name) qui [doit être filtré](https://fetch.spec.whatwg.org/#ref-for-forbidden-response-header-name%E2%91%A0) de toute réponse exposée au code _front-end_.
 
-Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/Cookies).
+Pour plus d'information, voir le [guide sur les cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies).
 
 <table class="properties">
   <tbody>
@@ -66,7 +66,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
     - Le préfixe **`__Host-`** : Les cookies commençant par `__Host-` doivent être définis avec le drapeau `secure`, depuis une page sécurisée (HTTPS), ne doivent pas avoir de domaine spécifié (et donc pas envoyé à un sous-domaine) et le chemin doit être `/`.
 
 - `Expires=<date>` {{optional_inline}}
-  - : Le temps de vie maximal d'un cookie sous la forme d'une date HTTP. Voir [`Date`](/fr/docs/Web/HTTP/Headers/Date) pour le format requis.
+  - : Le temps de vie maximal d'un cookie sous la forme d'une date HTTP. Voir [`Date`](/fr/docs/Web/HTTP/Reference/Headers/Date) pour le format requis.
 
     Si non spécifié, le cookie devient un **cookie de session**. Une session finit quand le client s'arrête, les cookies de sessions sont alors supprimés à ce moment.
 
@@ -97,12 +97,12 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Contrôle si un cookie est envoyé avec les requêtes d'origine croisée, offrant ainsi une certaine protection contre les attaques de falsification de requêtes inter-sites ([CSRF](/fr/docs/Glossary/CSRF)).
 
     > [!NOTE]
-    > Les normes relatives aux [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value) ont récemment changé de telle sorte que :
+    > Les normes relatives aux [Cookies SameSite](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value) ont récemment changé de telle sorte que :
     >
     > 1. Le comportement d'envoi des cookies si `SameSite` n'est pas spécifié est `SameSite=Lax`. Auparavant, le comportement par défaut était que les cookies étaient envoyés pour toutes les requêtes.
     > 2. Les cookies avec `SameSite=None` doivent désormais également spécifier l'attribut `Secure` (c'est-à-dire qu'ils nécessitent un contexte sécurisé).
     >
-    > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
+    > Les options ci-dessous couvrent le nouveau comportement. Voir le tableau [Compatibilité des navigateurs](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value#browser_compatibility) pour des informations sur la mise en œuvre spécifique des navigateurs (lignes : « `SameSite` : Defaults to `Lax` » et « `SameSite` : Secure context required »).
 
     Les options sont :
     - `Strict` : le navigateur envoie le cookie uniquement pour les demandes provenant du même site (c'est-à-dire les demandes provenant du même site qui a défini le cookie). Si la demande provient d'une URL différente de l'URL actuelle, aucun cookie avec l'attribut `SameSite=Strict` n'est envoyé.
@@ -183,7 +183,7 @@ Set-Cookie: __Host-id=1; Secure; Path=/; domain=example.com
 
 ## Voir aussi
 
-- [Cookies HTTP](/fr/docs/Web/HTTP/Cookies)
+- [Cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies)
 - [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
 - [`Document.cookie`](/fr/docs/Web/API/Document/cookie)
-- [Cookies SameSite](/fr/docs/Web/HTTP/Headers/Set-Cookie#samesitesamesite-value)
+- [Cookies SameSite](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie#samesitesamesite-value)

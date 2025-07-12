@@ -10,7 +10,7 @@ L'élément HTML **`<html>`** représente la racine d'un document HTML ou XHTML.
 
 ## Attributs
 
-Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `version`{{deprecated_inline}}
   - : Définit la version du document HTML _Document Type Definition_ qui s'applique pour le document courant. Cet attribut n'est pas nécessaire car il est redondant avec l'information de version se trouvant dans la déclaration de type du document (_doctype_).
@@ -39,7 +39,7 @@ Puisque l'élément `<html>` est le premier élément dans un document, autre qu
 
 ## Accessibilité
 
-L'utilisation d'un attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#lang) [valide (au sens de l'IETF)](https://www.ietf.org/rfc/bcp/bcp47.txt) pour l'élément HTML permettra aux lecteurs d'écran de déterminer la langue à utiliser pour l'énonciation. La balise de langage utilisée doit correspondre à celle utilisée pour la majorité du contenu de la page. Sans cet attribut, les lecteurs d'écran utiliseront la lange paramétrée par le système d'exploitation, ce qui pourra entraîner des défauts de prononciations.
+L'utilisation d'un attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#lang) [valide (au sens de l'IETF)](https://www.ietf.org/rfc/bcp/bcp47.txt) pour l'élément HTML permettra aux lecteurs d'écran de déterminer la langue à utiliser pour l'énonciation. La balise de langage utilisée doit correspondre à celle utilisée pour la majorité du contenu de la page. Sans cet attribut, les lecteurs d'écran utiliseront la lange paramétrée par le système d'exploitation, ce qui pourra entraîner des défauts de prononciations.
 
 Ajouter un attribut `lang` valide au sein de l'élément HTML permet également de s'assurer que les métadonnées importantes contenue dans l'élément {{HTMLElement("head")}}, telle que le titre de la page (cf. {{HTMLElement("title")}}) sont énoncées correctement.
 

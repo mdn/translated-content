@@ -6,7 +6,7 @@ original_slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
 
 {{learnsidebar}}
 
-L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn/JavaScript/First_steps/Arrays).
+L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn_web_development/Core/Scripting/Arrays).
 
 > [!NOTE]
 > Vous pouvez essayer vos solutions dans les éditeurs interactifs qui suivent. Toutefois, il peut aussi être utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) afin de travailler sur ces tâches.

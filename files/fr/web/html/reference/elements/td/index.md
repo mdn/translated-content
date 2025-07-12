@@ -119,16 +119,16 @@ caption {
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 - `colspan`
   - : Cet attribut contient un entier positif indiquant le nombre de colonnes sur lesquelles s'étend la cellule. La valeur par défaut est 1. Des valeurs supérieures à 1000 peuvent être considérées comme incorrectes et seront interprétées comme valant la valeur par défaut (1).
 
 - `headers`
-  - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément [`<th>`](/fr/docs/Web/HTML/Element/th) qui s'applique à la cellule courante.
+  - : Cet attribut est une liste de chaînes de caractères séparées par des espaces. Chacune correspond à l'attribut `id` de l'élément [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th) qui s'applique à la cellule courante.
 
 - `rowspan`
-  - : Cet attribut contient un entier positif indiquant sur combien de lignes s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin de la section ([`<thead>`](/fr/docs/Web/HTML/Element/thead), [`<tbody>`](/fr/docs/Web/HTML/Element/tbody), [`<tfoot>`](/fr/docs/Web/HTML/Element/tfoot) du tableau à laquelle appartient la cellule même si cette section est définie implicitement). Les valeurs supérieures à 65534 sont ramenées à 65534.
+  - : Cet attribut contient un entier positif indiquant sur combien de lignes s'étend la cellule. La valeur par défaut est 1. Si cet attribut vaut 0, la cellule s'étend jusqu'à la fin de la section ([`<thead>`](/fr/docs/Web/HTML/Reference/Elements/thead), [`<tbody>`](/fr/docs/Web/HTML/Reference/Elements/tbody), [`<tfoot>`](/fr/docs/Web/HTML/Reference/Elements/tfoot) du tableau à laquelle appartient la cellule même si cette section est définie implicitement). Les valeurs supérieures à 65534 sont ramenées à 65534.
 
 ### Attributs dépréciés
 
@@ -136,7 +136,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut contient une description courte et abrégée du contenu de la cellule. Certains outils utilisateurs, comme la synthèse vocale, peuvent décrire cette information avant le contenu lui-même.
 
     > [!NOTE]
-    > Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Element/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
+    > Cet attribut est obsolète dans le dernier standard et ne doit donc plus être utilisé. Il faut dans ces cas introduire la description au sein de la cellule comme un élément [`<abbr>`](/fr/docs/Web/HTML/Reference/Elements/abbr) indépendant ou utiliser l'attribut `title` de la cellule pour représenter le contenu et la cellule elle-même pour représenter le contenu abrégé.
 
 - `align` {{deprecated_inline}}
   - : Cet attribut à valeurs définit l'alignement horizontal pour le contenu de chaque cellule de la colonne. Les valeurs possibles sont&nbsp;:
@@ -177,7 +177,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
   - : Cet attribut définit une hauteur de cellule recommandée. On utilisera plutôt la propriété CSS [`height`](/fr/docs/Web/CSS/height).
 
 - `scope` {{deprecated_inline}}
-  - : Cet attribut à valeurs énumérées définit les cellules qui sont liées à l'en-tête défini par l'élément [`<th>`](/fr/docs/Web/HTML/Element/th). À utiliser uniquement avec l'élément `<th>` pour définir la ligne ou la colonne pour laquelle il est son en-tête.
+  - : Cet attribut à valeurs énumérées définit les cellules qui sont liées à l'en-tête défini par l'élément [`<th>`](/fr/docs/Web/HTML/Reference/Elements/th). À utiliser uniquement avec l'élément `<th>` pour définir la ligne ou la colonne pour laquelle il est son en-tête.
 
 - `valign` {{deprecated_inline}}
   - : Cet attribut définit l'alignement vertical du texte des cellules de la colonne. Les valeurs possibles de cet attribut sont&nbsp;:
@@ -197,7 +197,7 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Exemples
 
-Voir [la page sur l'élément `<table>`](/fr/docs/Web/HTML/Element/table) pour des exemples d'utilisation de `<td>`.
+Voir [la page sur l'élément `<table>`](/fr/docs/Web/HTML/Reference/Elements/table) pour des exemples d'utilisation de `<td>`.
 
 ## Spécifications
 
