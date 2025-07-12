@@ -1,25 +1,25 @@
 ---
 title: パッケージ管理の基本
+short-title: パッケージ管理
 slug: Learn_web_development/Extensions/Client-side_tools/Package_management
-original_slug: Learn/Tools_and_testing/Understanding_client-side_tools/Package_management
 l10n:
-  sourceCommit: 8906ca75f60f205a6dd18fe3c824bbee228802b2
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
 
 この記事では、パッケージマネージャーを詳細に見て、プロジェクトツールの依存関係をインストールし、それらを最新の状態に保つなど、独自のプロジェクトでパッケージマネージャーを使用する方法を理解します。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">前提条件：</th>
+      <th scope="row">前提条件:</th>
       <td>
-        主要な <a href="/ja/docs/Learn/HTML">HTML</a>、<a href="/ja/docs/Learn/CSS">CSS</a>、と <a href="/ja/docs/Learn/JavaScript">JavaScript</a> 言語
+        主要な <a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a>、と <a href="/ja/docs/Learn_web_development/Core/Scripting">JavaScript</a> 言語
       </td>
     </tr>
     <tr>
-      <th scope="row">目的：</th>
+      <th scope="row">目標:</th>
       <td>
         パッケージマネージャーとパッケージリポジトリーとは何か、必要な理由や使用方法の基本を理解する。
       </td>
@@ -58,7 +58,7 @@ l10n:
 
 npm (と JavaScript と Node ベースのパッケージマネージャー) の場合、依存関係をインストールする場所には 2 つのオプションがあります。前回の記事で触れたように、依存関係はプロジェクトにグローバルまたはローカルにインストールできます。グローバルにインストールする方がメリットが多い傾向にありますが、コードの移植性やバージョンのロックなど、ローカルにインストールする方がより重要です。
 
-たとえば、プロジェクトが特定の構成の Webpack に依存している場合、そのプロジェクトを別のマシンにインストールしたり、後でそのプロジェクトに戻ったりした場合でも、構成が引き続き機能することを確認する必要があります。異なるバージョンの Webpack がインストールされている場合、互換性がない可能性があります。これを軽減するために、依存関係がプロジェクトにローカルにインストールされます。
+たとえば、プロジェクトが特定の構成の webpack に依存している場合、そのプロジェクトを別のマシンにインストールしたり、後でそのプロジェクトに戻ったりした場合でも、構成が引き続き機能することを確認する必要があります。異なるバージョンの webpack がインストールされている場合、互換性がない可能性があります。これを軽減するために、依存関係がプロジェクトにローカルにインストールされます。
 
 ローカルの依存関係が本当に輝いていることを確認するには、既存のプロジェクトをダウンロードして実行するだけです。ーそれが機能し、すべての依存関係が箱から出してすぐに機能する場合、コードが移植可能であるという事実に感謝するローカル依存関係があります。
 
@@ -69,7 +69,7 @@ npm (と JavaScript と Node ベースのパッケージマネージャー) の�
 
 パッケージマネージャーが機能するには、どこからパッケージをインストールするかを知る必要があり、これはパッケージレジストリーの形式で提供されます。レジストリーは、パッケージが公開され、そこからインストールできる中心的な場所です。npm は、パッケージマネージャーであるだけでなく、JavaScript パッケージで最も一般的に使用されるパッケージ レジストリーの名前でもあります。npm レジストリーは [npmjs.com](https://www.npmjs.com/) にあります。
 
-npm だけが選択肢ではありません。独自のパッケージ レジストリーを管理できます。[Microsoft Azure](https://azure.microsoft.com/) などの製品を使用すると、npm レジストリーへのプロキシーを作成できます (特定のパッケージをオーバーライドまたはロックできます)。[GitHub もパッケージレジストリーサービス提供しています。](https://github.com/features/packages) であり、時間が経つにつれてより多くのオプションが表示される可能性があります。
+npm だけが選択肢ではありません。独自のパッケージ レジストリーを管理できます。[Microsoft Azure](https://azure.microsoft.com/) などの製品を使用すると、npm レジストリーへのプロキシーを作成できます (特定のパッケージをオーバーライドまたはロックできます)。[GitHub もパッケージレジストリーサービス提供しています。](https://docs.github.com/en/packages) であり、時間が経つにつれてより多くのオプションが表示される可能性があります。
 
 重要なのは、自分に最適なレジストリーを選択したことを確認することです。多くのプロジェクトで npm が使用されるため、モジュールの残りの例ではこれに関係します。
 
@@ -77,238 +77,220 @@ npm だけが選択肢ではありません。独自のパッケージ レジス
 
 パッケージマネージャーとレジストリーを使用してコマンドラインユーティリティをインストールするための例を見てみましょう。
 
-[Parcel](https://parceljs.org/) は、開発者が開発プロセスでよく使用する別のツールです。Parcel は、依存関係の呼び出しについてコードの内容を監視し、コードが必要とするすべての依存関係を自動的にインストールするという点で賢いです。また、コードを自動的にビルドすることもできます。
+[Vite](https://vite.dev/) を使用して、空白のウェブサイトを作成します。次の記事では、ツールチェーンを展開してより多くのツールを含め、サイトの展開方法について示します。
+
+Vite は、実際のプロジェクトをすばやく始めるために、必要なすべての依存関係と構成を含むいくつかの [init テンプレート](https://vite.dev/guide/#scaffolding-your-first-vite-project) を提供しています。デモでは、[React テンプレート](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react) を参照して、 1 つをゼロから構成します。
 
 ### アプリを npm パッケージとしてセットアップする
 
-まず、実験的なアプリを保存するための新しいディレクトリーを作成します。これを parcel-experiment と呼びますが、好きなように呼ぶことができます。
+まず、実験的なアプリを保存するための新しいディレクトリーを作成します。これを `npm-experiment` と呼びますが、好きなように呼ぶことができます。
 
 ```bash
-mkdir parcel-experiment
-cd parcel-experiment
+mkdir npm-experiment
+cd npm-experiment
 ```
 
-次に、構成ファイルを作成する npm パッケージとしてアプリを初期化しましょう — `package.json` — これにより、後でこの環境を再作成したり、パッケージを npm レジストリーに公開したりする場合に備えて、構成の詳細を保存できます (ただし、これはこの記事の範囲を超えています)。
+次に、構成ファイル、`package.json` を作成する npm パッケージとしてアプリを初期化しましょう。これにより、後でこの環境を再作成したり、パッケージを npm レジストリーに公開したりする場合に備えて、構成の詳細を保存できます（ただし、この記事では、再利用可能なライブラリーではなくアプリケーションを開発しているため、これは関係ありません）。
 
-`parcel-experiment` ディレクトリー内で、次のコマンドを入力します。
+`npm-experiment` ディレクトリー内で、次のコマンドを入力します。
 
 ```bash
 npm init
 ```
 
-ここで、いくつか質問されます。npm は、回答に基づいてデフォルトの `package.json` ファイルを作成します。
+これで、いくつかの質問が表示されます。 npm は、その回答に基づいて、既定の `package.json` ファイルを作成します。なお、これらはパッケージをレジストリーに公開し、他のユーザーがそれをインストールおよびインポートする場合にのみ使用されるため、今回の目的には関係ありません。
 
-- `name`: アプリを識別するための名前。
-
-  <kbd>Return</kbd> を入力するとデフォルトの `parcel-experiment` がアプリ名になります。
-
-- `version`: アプリの開始バージョン番号。
-
-  再度 <kbd>Return</kbd> を入力するとデフォルトの `1.0.0` がアプリの開始バージョン番号になります。
-
-- `description`: アプリの目的の簡単な説明。
-
-  「npm の使い方を学ぶための簡単な npm パッケージ」など、非常に簡単なことを入力してから、 <kbd>Return</kbd> を入力します。
-
-- `entry point`: これは、アプリの最上位の JavaScript ファイルになります。
-
-  今のところデフォルトの `index.js` で問題ないので <kbd>Return</kbd> を入力します。
-
-- `test command`, `git repository`, と `keywords` :
-
-  それぞれを入力する時は、空白のままにして <kbd>Return</kbd> を入力します。
-
-- `author`: プロジェクトの作成者。
-
-  自分の名前を入力し、<kbd>Return</kbd> を入力します。
-
-- `license`: パッケージを公開するためのライセンス。
-
-  ここではデフォルトを設定するので <kbd>Return</kbd> を入力します。
+- `name`: アプリを識別するための名前です。既定の `npm-experiment` を受け入れるには、<kbd>Return</kbd> を押してください。
+- `version`: アプリの開始バージョン番号です。ここでも、既定の `1.0.0` を受け入れるには、<kbd>Return</kbd> を押してください。
+- `description`: アプリの目的を簡単に説明します。ここでは省略しますが、同様に何らかの説明を入力することもできます。<kbd>Return</kbd> を押します。
+- `entry point`: 他のユーザーがパッケージをインポートしたときに実行される JavaScript ファイルです。ここでは使用しないので、<kbd>Return</kbd> を押します。
+- `test command`、`git repository`、`keywords`: ここでは、それぞれを空白のままにして、<kbd>Return</kbd> を押してください。
+- `author`: プロジェクトの作成者。自分の名前を入力し、<kbd>Return</kbd> を押してください。
+- `license`: パッケージを公開するライセンス。ここでは、<kbd>Return</kbd> を押して既定のものをそのまま受け入れてください。
 
 これらの設定を受け入れるためにもう一度 <kbd>Return</kbd> を入力します。
 
-`parcel-experiment` ディレクトリーに移動すると、package.json ファイルが作成されていることがわかります。それを開くと、次のようになります。
+`npm-experiment` ディレクトリーに移動すると、package.json ファイルが作成されていることがわかります。それを開くと、次のようになります。
 
 ```json
 {
-  "name": "parcel-experiment",
+  "name": "npm-experiment",
   "version": "1.0.0",
-  "description": "A simple npm package to learn about using npm",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Chris Mills",
+  "author": "Your name",
   "license": "ISC"
 }
 ```
 
-したがって、これはパッケージを定義する構成ファイルです。今はこれでいいので、先に進みます。
+package.json に 2 行を追加します。
 
-### Parcel のインストール
+- `"type": "module"` は、Node がすべての `.js` ファイルを、従来の CommonJS モジュールではなく [ES モジュール](/ja/docs/Web/JavaScript/Guide/Modules) として解釈するようにします。これは、一般的に良く知られた習慣です。
+- `"private": true` は、パッケージを誤って npm レジストリーの公開すべきでないパッケージとして公開することを防ぎます。
 
-次のコマンドを実行して、Parcel をローカルにインストールします。
-
-```bash
-npm install parcel-bundler
-```
-
-上記コマンドが全て完了すると、「最新のクライアント側開発」の準備が整います (これは、ビルドツールを使用して、開発者のエクスペリエンスを少し簡単にすることを意味します)。ただし、まず最初に、package.json ファイルをもう一度見てください。npm が新しいフィールドの依存関係を追加したことがわかります。
+`"name"` のすぐ下に、以下の行を追加してください。
 
 ```json
-"dependencies": {
-  "parcel-bundler": "^1.12.4"
+"name": "npm-experiment",
+"type": "module",
+"private": true,
+```
+
+これで、パッケージを定義する設定ファイルができました。これで、これで良いので、次に移りましょう。
+
+### Vite のインストール
+
+まず、ウェブサイト用のビルドツールである Vite をインストールします。これは、HTML、CSS、JavaScript ファイルを、ブラウザー用に最適化されたバンドルにまとめる役割を担います。
+
+```bash
+npm install --save-dev vite
+```
+
+それが完了したら、package.json ファイルを見てみましょう。npm が新しいフィールド `devDependencies` を追加したことがわかります。
+
+```json
+"devDependencies": {
+  "vite": "^5.2.13"
 }
 ```
 
-これは npm マジックの一部です。将来、コードベースを別の場所、別のマシンに移動した場合、コマンドを実行して同じセットアップを再作成できます。`npm install` を実行すると npm が依存関係を調べてインストールします。
+これは npm マジックの一部です。将来、コードベースを別の場所、別のマシンに移動した場合、コマンドを実行して同じセットアップを再作成できます。 `npm install` を実行すると npm が依存関係を調べてインストールします。
 
-欠点の 1 つは、Parcel が `parcel-experiment` アプリ内でしか利用できないことです。別のディレクトリーで実行することはできません。しかし、利点は欠点を上回ります。
+1 つの欠点は、 Vite は `npm-experiment` アプリ内でのみ利用できることです。別のディレクトリーでは実行できません。しかし、その利点は欠点よりもはるかに大きいです。
+
+`vite` を開発依存関係としてインストールすることを選んだことに注意してください。この違いはアプリケーションではほとんど問題になりませんが、ライブラリーの場合、他の人があなたのパッケージをインストールしても、Vite が暗黙的にインストールされないことを意味します。通常、アプリケーションでは、ソースコードでインポートされるパッケージはすべて実際の依存関係であり、開発に使用されるパッケージ（通常はコマンドラインツール）は開発依存関係となります。 `--save-dev` フラグを除去して、実際の依存関係をインストールしてください。
+
+また、新しいファイルがいくつか作成されていることがわかります。
+
+- `node_modules`: Vite を実行するために必要な依存関係ファイル。npm は、これらのファイルをすべてダウンロードしています。
+- `package-lock.json`: `node_modules` ディレクトリを再現するために必要な正確な情報を格納するロックファイル。これにより、ロックファイルが変更されない限り、`node_modules` ディレクトリーは異なるマシンでも同じになります。
+
+これらのファイルは npm によって管理されるため、気にする必要はありません。Git を使用している場合は、`node_modules` を `.gitignore` ファイルに追加してください。ただし、前述のように `package-lock.json` は、異なるマシン間で `node_modules` の状態を同期するために使用されるため、通常は残しておく必要があります。
 
 ### サンプルアプリのセットアップ
 
 とにかく、セットアップを続けます。
 
-Parcel は `index.html` と `index.js` ファイルが動作することを期待していますが、それ以外の場合、プロジェクトをどのように構築するかについて非常に意見がありません。他のツールは非常に異なる場合がありますが、少なくとも Parcel は最初の実験を容易にします。
-
-そのため、 `index.html` ファイルを作業ディレクトリーに追加する必要があります。テストディレクトリーに `index.html` を作成し、次の内容を指定します。
+Vite では、`index.html` ファイルが最前面に配置されます。このファイルはアプリの開始点を定義し、Vite はこのファイルを使用して、アプリを構築するために必要な他のファイルを探します。 `index.html` ファイルを `npm-experiment` ディレクトリーに作成し、次のコンテンツを記入してください。
 
 ```html
 <!doctype html>
-<html lang="en-US">
+<html lang="ja">
   <head>
-    <meta charset="utf-8" />
-    <title>My test page</title>
+    <meta charset="UTF-8" />
+    <title>テストページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <script src="./index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
 ```
 
-次に、 `index.html` と同じディレクトリーに `index.js` ファイルを追加する必要があります。今のところ、 `index.js` は空で構いません。存在する必要があるだけです。これを今すぐ作成します。
-
-### Parcel を楽しむ
-
-次に、新しくインストールした Parcel ツールを実行します。端末で、次のコマンドを実行します。
-
-```bash
- npx parcel index.html
-```
-
-端末に次のような出力が表示されるはずです。
-
-```bash
-Server running at http://localhost:1234
-✨  Built in 193ms.
-```
+`<script>` 要素は、アプリの JavaScript ロジックのエントリーポイントを宣言する `src/main.jsx` というファイルへの依存関係を作成することに注意してください。 `src` フォルダーを作成し、このフォルダー内に `main.jsx` を作成しますが、これについては、ここでは空白のままにしておきます。
 
 > [!NOTE]
-> 「command not found」エラーを端末が返す場合は、上記のコマンドを `npx` ユーティリティ、つまり `npx parcel index.html`で実行してみてください。
+> 属性 [`type="module"`](/ja/docs/Web/HTML/Reference/Elements/script/type) が重要です。これは、スクリプトを ES モジュールとして扱うようブラウザーに指示し、 `import` および `export` 構文を JavaScript コードで使用できるようにします。ファイル拡張子は `.jsx` です。これは、次の記事で React JSX 構文を追加するためです。ブラウザーは JSX を理解しませんが、Vite はそれを、ブラウザーが理解できる通常の JavaScript に変換します。
 
-これで、完全な JavaScript パッケージ エコシステムを活用する準備が整いました。まず、 `http://localhost:1234` で実行されているローカルウェブサーバーがあります。ここにアクセスすると、今のところ何も表示されませんが、すばらしいのは、アプリに変更を加えると、Parcel がアプリを再構築してサーバーを自動的に更新するため、更新の効果をすぐに確認できることです。
+### Vite を楽しむ
 
-次に、いくつかのページ コンテンツについて説明します。「2時間前」、「4日前」など、人間が読める相対的な日付を表示したいとしましょう。[`date-fns`](https://date-fns.org/) パッケージの `formatDistanceToNow()` メソッドは役立ちます (同じことを行う他のパッケージもあります)。
+これで、新しくインストールした Vite ツールを実行できます。端末で、次のコマンドを実行してください。
 
-`index.js` ファイルに次のコードを追加して保存します。
+```bash
+npx vite
+```
+
+端末に、次のような内容が表示されます。
+
+```plain
+VITE v5.2.13  ready in 326 ms
+
+➜  Local:   http://localhost:5173/
+➜  Network: use --host to expose
+➜  press h + enter to show help
+```
+
+これで、 JavaScript パッケージのエコシステムをフルに活用できる準備が整いました。まず、 `http://localhost:5173` でローカルウェブサーバーが実行されています。今のところ何も表示されませんが、このサーバーの優れた点は、アプリに変更を加えると、 Vite がアプリを再構築してサーバーを自動的に更新するため、更新の効果を即座に確認できることです。
+開発サーバーは、 <kbd>Ctrl</kbd> + <kbd>C</kbd> でいつでも停止でき、同じコマンドで再び開始できます。サーバーを実行したままにしておく場合は、新しい端末ウィンドウを開いて、それ以外のコマンドを実行できます。
+
+それでは、ページコンテンツを作成しましょう。デモとして、ページにグラフを追加してみましょう。データ視覚化ライブラリーである [plotly.js](https://www.npmjs.com/package/plotly.js) パッケージを使用します。次のコマンドを実行してインストールしてください。
+
+```bash
+npm install plotly.js-dist-min
+```
+
+`--save-dev` フラグを使用せずにインストールしていることに注意してください。前述のように、これは、このパッケージをコマンドラインツールとしてだけでなく、ソースコードでも実際に使用するためです。このコマンドにより、新しい `"dependencies"` オブジェクトが `package.json` ファイルに追加され、その中に `plotly.js-dist-min` が含まれます。
+
+> [!NOTE]
+> ここでは、この課題を行うために必要なパッケージを選べます。自分自身でコードを書く場合は、依存関係を探してインストールする際に、次の質問について考えてみてください。
+>
+> - 依存関係はまったく必要ですか？組み込み機能で対応可能ですか、それとも自分で書くほど単純なものですか？
+> - 具体的に何をする必要があるのでしょうか？詳細を記載するほど、必要な機能を正確に果たすパッケージを見つけやすくなります。npm または Google でキーワードを検索してください。また、大きなパッケージはインストールや実行時にパフォーマンスの問題が発生する可能性があるため、小さなパッケージを優先してください。
+> - 依存関係は信頼でき、よく保守されていますか？最後のバージョンが公開された時期、作成者、パッケージの 1 週間のダウンロード数を調べます。パッケージの信頼性を判断するには、パッケージの更新の必要性や、そのパッケージを必要とするユーザーの数など、さまざまな要素を考慮する必要があるため、使い勝手による経験が重要です。
+
+`src/main.jsx` ファイルに次のコードを追加して保存します。
 
 ```js
-import { formatDistanceToNow } from "date-fns";
+import Plotly from "plotly.js-dist-min";
 
-const date = "1996-09-13 10:00:00";
-document.body.textContent = `${formatDistanceToNow(new Date(date))} ago`;
+const root = document.getElementById("root");
+Plotly.newPlot(
+  root,
+  [
+    {
+      x: [1, 2, 3, 4, 5],
+      y: [1, 2, 4, 8, 16],
+    },
+  ],
+  {
+    margin: { t: 0 },
+  },
+);
 ```
 
-`http://localhost:1234` に戻ると、作者が 18 歳になってからどれくらい経ったかがわかります。
+`http://localhost:5173` に戻ると、ページにグラフが表示されます。さまざまな数値を変更すると、ファイルを保存するたびにグラフが更新されます。
 
-上記のコードで特に特別なのは、インストールしていない `date-fns` パッケージの `formatDistanceToNow()` 関数を使用していることです! Parcel は、モジュールが必要であることを発見し、 `npmjs.com` パッケージ レジストリーで検索して、自動的にローカルにインストールしました。これは、 `package.json` ファイルをもう一度見ることで証明できます — `dependencies` フィールドが更新されていることがわかります。
+### 本番用コードの構築
 
-```json
-"dependencies": {
-  "date-fns": "^2.12.0",
-  "parcel-bundler": "^1.12.4"
-}
-```
+しかし、このコードは本番環境にはまだ使用できません。 Vite を含むほとんどのビルドツールシステムには、「開発モード」と「本番モード」があります。重要な違いは、開発で使用する便利な機能の多くは、最終的なサイトでは必要ないため、本番環境では削除されることです。例えば、「ホットモジュール置換」、「ライブリロード」、「圧縮されていないコメント付きのソースコード」などです。これらは、すべてではありませんが、開発段階ではとても役立つが、本番環境ではあまり有用ではない、一般的なウェブ開発機能の一部です。本番環境では、これらの機能はサイトを肥大化させるだけになります。
 
-Parcel は、他の誰かがこのプロジェクトを取得し、使用した依存関係をインストールするために必要なファイルも追加しました。`parcel` コマンドを実行したディレクトリーを調べると、多数の新しいファイルが見つかります。最も興味深いものは次のとおりです。
+これで、<kbd>Ctrl</kbd> + <kbd>C</kbd> を使用して、実行中の Vite dev サーバーを停止します。
 
-- `node_modules`: Parcel と date-fns の依存ファイル。
-- `dist`: 配布ディレクトリー — これらは、自動的にパッケージ化され、Parcel がビルドして縮小したファイルであり、 `localhost:1234` で提供されているファイルです。これらは、サイトを公開してオンラインで公開するときにウェブサーバーにアップロードするファイルです。
-
-パッケージ名を知っている限り、コードでそれを使用でき、Parcel はパッケージをローカルディレクトリー (`node_modules` の下) に取り出し、フェッチし、インストール (実際には「コピー」) します。
-
-### 本番用のコードの構築
-
-ただし、このコードは本番用の準備ができていません。ほとんどのビルドツール システムには、「開発モード」と「プロダクションモード」があります。重要な違いは、開発で使用する便利な機能の多く、たとえば「hot module replacement」、「live reloading」、「uncompressed and commented source code」が最終サイトでは必要ないため、本番環境では取り除かれることです。すべてを網羅しているわけではありませんが、これらは一般的なウェブ開発機能の一部であり、開発段階では非常に役立ちますが、本番環境ではあまり役に立ちません。本番環境では、サイトが肥大化するだけです。
-
-<kbd>Ctrl</kbd> + <kbd>C</kbd> を使用して、前の Parcel コマンドを停止します。
-
-これで、架空の展開用に最小限のサンプルサイトを準備できます。Parcel は、発行に適したファイルを生成する追加のコマンドを提供し、build オプションでバンドル (前述) を作成します。
+これで、架空の展開用の基本的なサイト例を準備することができます。 Vite には、公開に適したファイルを生成するための追加の `build` コマンドが用意されています。
 
 次のコマンドを実行します。
 
 ```bash
-npx parcel build index.html
+npx vite build
 ```
 
-次のような出力が表示されるはずです。
+次のような出力が表示されます。
 
-```bash
-✨  Built in 9.35s.
+```plain
+vite v5.2.13 building for production...
+✓ 6 modules transformed.
+dist/index.html                    0.32 kB │ gzip:     0.24 kB
+dist/assets/index-BlYAJQFz.js  3,723.18 kB │ gzip: 1,167.74 kB
 
-dist/my-project.fb76efcf.js.map    648.58 KB     64ms
-dist/my-project.fb76efcf.js        195.74 KB    8.43s
-dist/index.html                        288 B    806ms
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 4.36s
 ```
 
-繰り返しますが、本番ファイルのディレクトリーは、 `dist` です。
-
-### アプリのファイルサイズを縮小する
-
-ただし、開発者を「助ける」すべてのツールと同様に多くの場合、トレードオフがあります。この特定のケースでは、それはファイルサイズです。JavaScript バンドル my-project.fb76efcf.js はなんと 195K にもなり、1 行のテキストを出力するだけなので非常に大きいです。確かに多少の計算は行いますが、これを行うために 195K 相当の JavaScript は絶対に必要ありません!
-
-開発ツールを使用するときは、それが正しいことを行っているかどうかを検討する価値があります。この場合、使用している関数だけでなく、実際には `date-fns` ライブラリー全体が含まれているため、バンドルはほぼ 200K になります。
-
-開発ツールを一切使用せず、 `<script src="">` 要素を `date-fns` のホストされたバージョンに向けていた場合、ほぼ同じことが起こっていたでしょう — サンプルページのときにすべてのライブラリーがダウンロードされます。ブラウザーに読み込まれます。
-
-ただし、ここで開発ツールが活躍する可能性があります。ツールがマシン上にある間、ソフトウェアにコードの使用を検査し、本番環境で実際に使用している関数のみを含めるように依頼できます。これは「ツリーシェーキング」と呼ばれるプロセスです。
-
-これは、ファイルサイズを小さくしてアプリの読み込みをできるだけ速くしたいため、非常に理にかなっています。さまざまなツールを使用すると、さまざまな方法でツリーを振ることができます。
-
-リストは月ごとに増えていきますが、ソース コードからバンドルを生成するツールには、Webpack、[Rollup](https://rollupjs.org/guide/en/)、および Parcel の 3 つの主なオファリングがあります。これ以外にも利用できるようになりますが、これらは人気のあるものです。
-
-- RollUp ツールは、そのコア機能としてツリーシェイキングとコード分割を提供します。
-- Webpack にはいくつかの構成が必要です (「一部」という表現は、一部の開発者の Webpack 構成の複雑さを過小評価している可能性があります)。
-- (Parcel version 2 より前の) Parcel の場合、特別なフラグが必要です — `--experimental-scope-hoisting` — ビルド中にツリーシェークが発生します。
-
-すでにインストールされていることを考えると、今のところ Parcel に固執しましょう。次のコマンドを実行してみてください。
-
-```bash
-npx parcel build index.html --experimental-scope-hoisting
-```
-
-これにより大きな違いが生じることがわかります。
-
-```bash
-✨  Built in 7.87s.
-
-dist/my-project.86f8a5fc.js    10.34 KB    7.17s
-dist/index.html                   288 B    753ms
-```
-
-現在バンドルは約 10K です。かなり良くなりました。
-
-このプロジェクトをサーバーにリリースする場合、`dist` フォルダー内のファイルのみをリリースします。Parcel は、すべてのファイル名の変更を自動的に処理してくれました。Parcel が自動的に実行した変更を確認できるように、 `dist/index.html` のソースコードを確認することをお勧めします。
+Vite は `dist` というディレクトリーを作成します。その中を見ると、ルートディレクトリーとよく似た `index.html` ファイルがあります。ただし、`script` のソースが `assets` フォルダーへのパスに置き換えられています。`assets` フォルダーには、変換された JavaScript 出力が格納されています。この出力は、縮約され、実運用用に最適化されています。
 
 > [!NOTE]
-> 執筆時点では、Parcel 2 はリリースされていませんでした。ただし、Parcel の作成者はツールに少し異なる名前を付けることに良識があったため、これらのコマンドはすべて引き続き機能します。Parcel 1.x をインストールするには、 `parcel-bundler` をインストールする必要がありますが、parcel 2.x は `parcel` をインストールします。
-
-利用可能なツールはたくさんあり、JavaScript パッケージのエコシステムは前例のない速度で成長していますが、これには長所と短所があります。常に改善が行われており、良くも悪くも選択肢が増え続けています。圧倒的なツールの選択に直面した場合、おそらく最も重要な教訓は、選択したツールで何ができるかを学ぶことです。
+> 大きすぎる塊がある、という警告が表示されて心配になるかもしれません。これは、裏で多くのことを行うライブラリーを読み込んでいるためです（同じグラフを描画するためのコードをすべて自分で書くことを想像してみてください）。今のところ、これについて心配する必要はありません。
 
 ## パッケージマネージャークライアントの大まかなガイド
 
-このチュートリアルでは npm を使用して Parcel パッケージをインストールしましたが、前述のようにいくつかの代替手段があります。少なくともそれらが存在することを知って、ツール間で共通のコマンドについて漠然とした考えを持つことは価値があります。すでにいくつかの動作を見てきましたが、他のものを見てみましょう。
+このチュートリアルでは npm を使用して Vite パッケージをインストールしましたが、前述のようにいくつかの代替手段があります。少なくともそれらが存在することを知って、ツール間で共通のコマンドについて漠然とした考えを持つことは価値があります。すでにいくつかの動作を見てきましたが、他のものを見てみましょう。
 
 リストは時間の経過とともに増加しますが、執筆時点では、次の主要なパッケージマネージャーが利用可能です。
 
@@ -323,9 +305,7 @@ npm と pnpm は、コマンド ラインの観点からは似ています。実
 多くの場合、インストールプロセスに関しては、yarn は npm よりも高速であると考えられています(マイレージは異なる場合があります)。依存関係のインストール(およびコンピューターへのコピー)を待つためにかなりの時間が浪費される可能性があるため、これは開発者にとって重要です。
 
 > [!NOTE]
-> npm パッケージマネージャーは、同じ名前を共有していても、npm レジストリーからパッケージをインストールする必要は**ありません**。pnpm と Yarn は、npm と同じ `package.json` 形式を使用でき、npm およびその他のパッケージレジストリーから任意のパッケージをインストールできます。
-
-パッケージマネージャーで実行する一般的なアクションを確認しましょう。
+> npm コマンドと Yarn コマンドの両方を紹介します。これらは同じプロジェクトで実行することを意図したものではありません。 npm または Yarn のいずれかでプロジェクトを設定し、そのパッケージマネージャーのコマンドを一貫して使用してください。
 
 ### 新しいプロジェクトを初期化する
 
@@ -339,13 +319,13 @@ yarn init
 ### 依存関係のインストール
 
 ```bash
-npm install date-fns
-yarn add date-fns
+npm install vite
+yarn add vite
 ```
 
-上記の動作で `install` も見ました。これにより、 `date-fns` パッケージが、 `date-fns` 自体の依存関係とともに、 `node_modules` と呼ばれるサブディレクトリー内の作業ディレクトリーに直接追加されます。
+上記の動作で `install` も見ました。これにより、 `vite` パッケージが、 `vite` 自体の依存関係とともに、 `node_modules` と呼ばれるサブディレクトリー内の作業ディレクトリーに直接追加されます。
 
-デフォルトでは、このコマンドは「date-fns」の最新バージョンをインストールしますが、これも制御できます。`date-fns@1` を要求すると、最新の 1.x バージョン (1.30.1) が得られます。または、`date-fns@^2.3.0` を試すこともできます。これは、2.3.0 以降 (執筆時点では 2.8.1) の最新バージョンを意味します。
+デフォルトでは、このコマンドは `vite` の最新バージョンをインストールしますが、これも制御できます。`vites@4` を要求すると、最新の 4.x バージョン (4.5.3) が得られます。または、`vite@^4.0.0` を試すこともできます。これは、4.0.0 以降の最新バージョンを意味します。
 
 ### 依存関係の更新
 
@@ -358,31 +338,9 @@ yarn upgrade
 
 範囲は、 `package.json` の依存関係のバージョンで指定され、 `date-fns@^2.0.1` — この場合、キャレット文字 `^` 2.0.1 以降、3.0.0 を除くすべてのマイナーおよびパッチリリースを意味します。
 
-これは [semver](https://semver.org/) と呼ばれるシステムを使用して決定されます。このシステムはドキュメントから見ると少し複雑に見えるかもしれませんが、要約情報とバージョンが `MAJOR.MINOR.PATCH` 、たとえば 2.0.1 はメジャーバージョン 2 でパッチバージョン 1 です。semver 値を試す優れた方法は、[semver Calculator](https://semver.npmjs.com/) を使用することです。
+これは [semver](https://semver.org/) と呼ばれるシステムを使用して決定されます。このシステムはドキュメントから見ると少し複雑に見えるかもしれませんが、要約情報とバージョンが `MAJOR.MINOR.PATCH` 、たとえば 2.0.1 はメジャーバージョン 2 でパッチバージョン 1 です。semver 値を試す優れた方法は、[semver calculator](https://semver.npmjs.com/) を使用することです。
 
 `npm update` は依存関係を `package.json` で定義された範囲を超えてアップグレードしないことを覚えておくことが重要です — これを行うには、そのバージョンを具体的にインストールする必要があります。
-
-### 脆弱性の監査
-
-```bash
-npm audit
-yarn audit
-```
-
-これにより、プロジェクトのすべての依存関係ツリーがチェックされ、使用している特定のバージョンが脆弱性データベースに対して実行され、プロジェクトに潜在的な脆弱なパッケージがあるかどうかが通知されます。
-
-脆弱性について学習するための出発点として 、JavaScript パッケージと他のプログラミング言語の両方をカバーする [Snyk プロジェクト](https://snyk.io/) をお勧めします。
-
-### 依存関係のチェック
-
-```bash
-npm ls date-fns
-yarn why date-fns
-```
-
-このコマンドは、インストールされている依存関係のバージョンと、それがどのようにプロジェクトに含まれるようになったかを示します。別の最上位パッケージが `date-fns` を取り込んだ可能性があります。プロジェクトに複数のバージョンのパッケージが存在する可能性も同様にあり得ます(そして理想的ではありません)(これは非常に便利な [lodash](https://lodash.com/) パッケージで何度も見られます)。
-
-パッケージマネージャーはパッケージの重複を排除するために最善を尽くしますが、インストールされているバージョンを正確に調査することをお勧めします。
 
 ### その他のコマンド
 
@@ -390,7 +348,7 @@ yarn why date-fns
 
 ## 独自のコマンドを作成する
 
-パッケージマネージャーは、独自のコマンドの作成とコマンドラインからの実行もサポートしています。たとえば、次のコマンドを作成できます。
+パッケージマネージャーは、コマンドラインから自分自身でコマンドを作成して実行することも対応しています。たとえば、前回は `npx` に対応するコマンド `vite` を呼び出して Vite 開発サーバーを始めました。次のようなコマンドを作成することができます。
 
 ```bash
 npm run dev
@@ -399,13 +357,7 @@ npm run dev
 
 これにより、プロジェクトを「開発モード」で開始するためのカスタム スクリプトが実行されます。実際、ローカルでの開発セットアップは本番環境での実行方法とは若干異なる傾向があるため、すべてのプロジェクトにこれを定期的に含めています。
 
-以前の Parcel テストプロジェクトでこれを実行しようとすると、(おそらく) 「dev script is missing」 と表示されます。これは、npm、Yarn (など) が `package.json` ファイルの `scripts` プロパティで dev というプロパティを探しているためです。
-
-Parcel はコマンド `parcel serve filename.html` を使用して開発サーバーを実行できます。これを開発中に頻繁に使用したいと考えています。
-
-それでは、`package.json` にカスタムの省略形コマンド「dev」を作成しましょう。
-
-前のチュートリアルに従った場合は、パーセル実験ディレクトリー内に `package.json` ファイルがあるはずです。それを開くと、その `scripts` メンバーは次のようになります。
+以前のテストプロジェクトでこれを実行しようとすると、「dev スクリプトが見つかりません」というメッセージが表示されるでしょう。これは、npm、Yarn （および同様のもの）が、 `package.json` ファイルの `scripts` プロパティで `dev` というプロパティを探しているためです。そこで、 `package.json` に独自の短縮コマンド「dev」を作成しましょう。先のチュートリアルに従った場合、npm-experiment ディレクトリー内に `package.json` ファイルが存在しているはずです。このファイルを開くと、 `scripts` メンバーは次のように見えるはずです。
 
 ```json
 "scripts": {
@@ -417,37 +369,40 @@ Parcel はコマンド `parcel serve filename.html` を使用して開発サー�
 
 ```json
 "scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1",
-  "dev": "parcel serve index.html"
+  "dev": "vite"
 },
 ```
 
 カスタム `dev` コマンドを npm スクリプトとして追加しました。
 
-端末で次のコマンドを実行してみてください。`parcel-experiment` ディレクトリー内にいることを確認してください。
+端末で次のコマンドを実行してみてください。`npm-experiment` ディレクトリー内にいることを確認してください。
 
 ```bash
- npm run dev
+npm run dev
 ```
 
-これにより前に見たように、Parcel が起動し、ローカルの開発サーバーで `index.html` が提供されます。
+これで Vite が起動し、先ほどと同じローカル開発サーバーが起動するはずです。
+ここで定義したスクリプトは、`npx` という接頭辞が不要になったことに注意してください。これは、npm （および yarn）コマンドが、従来の方法 (通常、コンピューターがソフトウェアを格納し、検索できるようにする場所) でコマンドラインツールを検索する前に、プロジェクトにローカルにインストールされているコマンドラインツールを検索するという賢い仕組みになっているためです。 [`run` コマンドの技術的な複雑さについて詳しく学ぶ](https://docs.npmjs.com/cli/run-script/)ことができますが、ほとんどの場合、ご自身で作成したスクリプトは問題なく実行されます。
 
-```bash
-Server running at http://localhost:1234
-✨  Built in 5.48s.
+この具体的なものは不必要に見えるかもしれません — `npm run dev` は `npx vite` よりも入力する文字数が多いですが、これは一種の抽象化です。これにより、将来、環境変数の設定、一時ファイルの生成など、コマンドを複雑にすることなく、`dev` コマンドに作業を追加することができます。
+
+`scripts` プロパティには、作業に役立つあらゆることを追加することができます。例えば、Vite がテンプレートで推奨しているものは次のとおりです。
+
+```json
+"scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+},
 ```
-
-さらに、npm (および yarn) コマンドは、プロジェクトにローカルにインストールされているコマンド ライン ツールを検索してから、従来の方法(コンピューターが通常ソフトウェアを格納して検索できるようにする場所)で検索するという点で優れています。[`run` コマンドの技術的な複雑さについて詳しく知る](https://docs.npmjs.com/cli/run-script/)ことができますが、ほとんどの場合、独自のスクリプトは問題なく実行されます。
-
-仕事をするのに役立つあらゆる種類のものを `scripts` プロパティに追加できます。私たちは確かに持っていますし、[他も持っています](https://github.com/facebook/create-react-app/blob/c5b96c2853671baa3f1f297ec3b36d7358898304/package.json#L6)。
 
 ## まとめ
 
 これで、パッケージマネージャーのツアーは終了です。次のステップは、これまでに学んだことをすべて実践して、ツールチェーンのサンプルを構築することです。
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Command_line","Learn/Tools_and_testing/Understanding_client-side_tools/Introducing_complete_toolchain", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
-
 ## 関連情報
 
 - [npm スクリプト リファレンス](https://docs.npmjs.com/cli/v8/using-npm/scripts/)
 - [package.json リファレンス](https://docs.npmjs.com/cli/v8/configuring-npm/package-json/)
+
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_tools/Overview","Learn_web_development/Extensions/Client-side_tools/Introducing_complete_toolchain", "Learn_web_development/Extensions/Client-side_tools")}}
