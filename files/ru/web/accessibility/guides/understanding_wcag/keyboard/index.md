@@ -1,5 +1,5 @@
 ---
-title: Доступный для управления с клавиатуры
+title: Доступность для управления с клавиатуры
 slug: Web/Accessibility/Guides/Understanding_WCAG/Keyboard
 ---
 
