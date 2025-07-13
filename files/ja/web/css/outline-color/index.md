@@ -9,7 +9,7 @@ l10n:
 
 **`outline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線の色を設定します。
 
-{{InteractiveExample("CSS Demo: outline-color")}}
+{{InteractiveExample("CSS デモ: outline-color")}}
 
 ```css interactive-example-choice
 outline-color: red;

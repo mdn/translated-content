@@ -9,7 +9,7 @@ l10n:
 
 **`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{InteractiveExample("CSS デモ: circle()")}}
 
 ```css interactive-example-choice
 clip-path: circle(50px);
@@ -59,9 +59,7 @@ clip-path: circle(6rem at 12rem 8rem);
 ### 値
 
 - `<shape-radius>`
-
   - : {{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
-
     - `closest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。円の場合は、あらゆる軸で最も近い辺となります。
     - `farthest-side`

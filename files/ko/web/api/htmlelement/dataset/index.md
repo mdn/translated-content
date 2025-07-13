@@ -33,15 +33,13 @@ HTML `data-*` 특성과 이에 대응하는 DOM
 HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션에서 더 자세하게 다루고 있습니다.
 
 하단 정보에와 더불어, HTML 데이터 특성을 사용하는 방법에 대한
-[데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 안내서를 확인할 수 있습니다.
+[데이터 특성 사용하기](/ko/docs/Web/HTML/How_to/Use_data_attributes) 안내서를 확인할 수 있습니다.
 
 ### 이름 변환
 
 - `dash-style`에서 `camelCase`로 변환
-
   - : 사용자 정의 데이터 특성명은 다음과 과정을 따라
     {{domxref("DOMStringMap") }} 키로 전환됩니다.
-
     1. 모든 ASCII 대문자 (`A`-
        `Z`)를 소문자로 변환합니다;
     2. `data-` 접두사를 제거하며, 붙임표도 삭제합니다;
@@ -50,10 +48,8 @@ HTML과 JavaScript 형식 간 변환의 세부사항과 예제는 다음 섹션�
     4. 붙임표를 포함해서 그외 문자는 변경하지 않고 그대로 유지합니다.
 
 - `camelCase`에서 `dash-style`로 변환
-
   - : 키를 속성명으로 변환하는 반대 과정은
     다음과 같은 과정을 따릅니다.
-
     1. **제한:** 변환 전에, 붙임표는
        바로 뒤에 ASCII 소문자(`a`-
        `z`)가 올 수 없습니다;
@@ -131,5 +127,5 @@ if (el.dataset.someDataAttr === undefined) {
 
 - HTML [`data-*`](/ko/docs/Web/HTML/Reference/Global_attributes/data-*) 클래스
   전역 특성
-- [데이터 특성 사용하기](/ko/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [데이터 특성 사용하기](/ko/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} and {{DOMxRef("Element.setAttribute()")}}

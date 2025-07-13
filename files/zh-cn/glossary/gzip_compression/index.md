@@ -12,7 +12,6 @@ gzip 是一种用于文件压缩与解压缩的文件格式。它基于 [Deflate
 ## 参见
 
 - [术语表](/zh-CN/docs/Glossary)
-
   - {{glossary("Lossless compression", "无损压缩")}}
   - {{glossary("Lossy compression", "有损压缩")}}
 

@@ -12,7 +12,7 @@ original_slug: Web/HTML/Attributes/autocomplete
 
 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 요소에 `autocomplete` 특성을 지정하지 않은 경우, 브라우저는 요소의 양식 소유자, 즉 조상 {{HTMLElement("form")}} 요소 또는 [`form`](/ko/docs/Web/HTML/Element/input#form) 특성의 값을 `id` 특성으로 사용하는 `<form>` 요소의 `autocomplete` 특성을 사용합니다.
 
-더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Element/form#autocomplete) 특성을 참고하세요.
+더 많은 정보는 {{HTMLElement("form")}} 요소의 [`autocomplete`](/ko/docs/Web/HTML/Reference/Elements/form#autocomplete) 특성을 참고하세요.
 
 > **참고:** `<input>`/`<select>`/`<textarea>` 요소가 다음 조건을 만족해야 사용자 에이전트가 자동완성을 제공할 수도 있습니다.
 >
@@ -23,7 +23,6 @@ original_slug: Web/HTML/Attributes/autocomplete
 ## 값
 
 - `off`
-
   - : 브라우저가 이 필드에 값을 자동으로 넣는 것을 금지합니다. 문서나 애플리케이션이 자신만의 자동완성 기능을 구현하거나, 보안상 문제로 자동완성을 사용하지 않아야 할 경우 지정할 수 있습니다.
 
     > [!NOTE]
@@ -32,9 +31,7 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `on`
   - : 브라우저의 자동완성을 허용합니다. 아무런 안내 정보도 제공하지 않으므로, 브라우저가 스스로의 판단 하에 값을 결정합니다.
 - `name`
-
   - : 사람의 전체 이름. 사람 이름 구조의 복잡함과 다양성으로 인해 보통 개별 이름 구성요소보다 `name`을 사용하는 것을 선호하지만, 하나씩 받아야 한다면 다음 `autocomplete` 값도 사용할 수 있습니다.
-
     - `honorific-prefix`
       - : 호칭. "Mrs.", "Mr.", "Miss", "Ms.", "Dr.", "Mlle." 등.
     - `family-name`
@@ -117,9 +114,7 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `sex`
   - : 성별. "남성", "여성", "안드로진" 등 줄바꿈 없는 자유형식 텍스트입니다.
 - `tel`
-
   - : 국가 코드를 포함한 전체 전화번호. 개별 전화번호 구성요소가 필요한 경우 다음 값을 사용할 수 있습니다.
-
     - `tel-country-code`
       - : 국가 코드. 1(북미), 82(대한민국) 등.
     - `tel-national`
@@ -171,7 +166,6 @@ original_slug: Web/HTML/Attributes/autocomplete
 - 경기도 수원시 팔달구 효원로 1
 - 충청남도 홍성군 홍북읍 충남대로 21
 - `address-level1`
-
   - : &#x20;
 
     시/도: "서울특별시", "경기도", "충청남도"
@@ -179,7 +173,6 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `address-level2`
   - : 시/군/구: "수원시", "홍성군", "종로구"
 - `address-level3`
-
   - : 구/읍/면: "팔달구", "홍북읍"
 
     > [!NOTE]
@@ -188,7 +181,6 @@ original_slug: Web/HTML/Attributes/autocomplete
 - `address-line1`
   - : 도로명, 건물번호: "세종로 1", "효원로 1", "충남대로 21"
 - `address-line2`
-
   - : 상세주소. 아파트의 경우 동/호를 작성합니다.
 
     > **참고:** `street-address`를 사용하는 경우 도로명, 건물번호와 상세주소를 같이 작성합니다.
@@ -223,4 +215,4 @@ Exampleville CA 95555
 - {{htmlelement("textarea")}} 요소.
 - {{htmlelement("form")}} 요소.
 - [HTML 양식](/ko/docs/Learn_web_development/Extensions/Forms)
-- 모든 [전역 특성](/ko/docs/Web/HTML/Global_attributes).
+- 모든 [전역 특성](/ko/docs/Web/HTML/Reference/Global_attributes).

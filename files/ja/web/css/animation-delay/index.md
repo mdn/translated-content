@@ -9,7 +9,7 @@ l10n:
 
 **`animation-delay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションをいつ開始するかを指定します。アニメーションは未来のある時点から、直ちに最初から、または直ちにアニメーション周期の途中から始めることができます。
 
-{{InteractiveExample("CSS Demo: animation-delay")}}
+{{InteractiveExample("CSS デモ: animation-delay")}}
 
 ```css interactive-example-choice
 animation-delay: 250ms;
@@ -134,7 +134,6 @@ animation-delay: unset;
 ### 値
 
 - {{cssxref("&lt;time&gt;")}}
-
   - : アニメーションが要素に適用され、アニメーションが始まる瞬間からのオフセット時間。これは秒 (`s`) またはミリ秒 (`ms`) のどちらかで指定できます。単位は必須です。
 
     正の値を指定すると、指定した時刻が経過した後にアニメーションを始めることを示します。既定値である `0s` は、アニメーションが適用されるとすぐに始めることを示します。

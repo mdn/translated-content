@@ -3,8 +3,6 @@ title: DNT
 slug: Web/HTTP/Reference/Headers/DNT
 ---
 
-{{HTTPSidebar}}
-
 请求首部 **`DNT`** (**D**o **N**ot **T**rack) 表明了用户对于网站追踪的偏好。它允许用户指定自己是否更注重个人隐私还是定制化内容。
 
 | Header type                           | {{Glossary("Request header")}} |
@@ -51,6 +49,5 @@ navigator.doNotTrack; // "0" or "1"
 - ["Do Not Track"中的"Track"指什么？– EFF](https://www.eff.org/deeplinks/2011/02/what-does-track-do-not-track-mean)
 - [donottrack.us](http://donottrack.us/)
 - DNT 浏览器设置帮助：
-
   - [Firefox](https://www.mozilla.org/en-US/firefox/dnt/)
   - [Chrome](https://support.google.com/chrome/answer/2790761)

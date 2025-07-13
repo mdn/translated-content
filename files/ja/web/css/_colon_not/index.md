@@ -9,7 +9,7 @@ l10n:
 
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
 
-{{InteractiveExample("CSS Demo: :not", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :not", "tabbed-shorter")}}
 
 ```css interactive-example
 p:not(.irrelevant) {
@@ -181,7 +181,6 @@ div:not(:is(.foo, .bar)) {
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)
 - [学習: 擬似クラスと擬似要素](/ja/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
 - 関連する CSS 擬似クラス:
-
   - {{cssxref(":has", ":has()")}}
   - {{cssxref(":is", ":is()")}}
   - {{cssxref(":where", ":where()")}}

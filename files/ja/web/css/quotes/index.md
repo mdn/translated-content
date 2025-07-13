@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
 
-{{InteractiveExample("CSS Demo: quotes")}}
+{{InteractiveExample("CSS デモ: quotes")}}
 
 ```css interactive-example-choice
 quotes: none;
@@ -74,7 +74,6 @@ quotes: unset;
 - `auto`
   - : 選択された要素に設定された言語の値（すなわち、 [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性）で使用される適切な引用符が使用されます。
 - {{cssxref("&lt;string&gt;")}}
-
   - : 引用符の開始と終了の引用符の値のペアを 1 つ以上定義します。各ペアでは、各ペアの最初の引用符は `open-quote` の値として使用され、2 つ目の引用符は `close-quote` となります。
 
     最初のペアは引用符の外側のレベルを表します。 2 つ目のペアが存在する場合、それは最初の内側レベルを表します。次のペアは 2 つ目の内側レベルに使用される、といった具合に続きます。引用符の入れ子の深さがペアの数よりも大きい場合、 `quotes` 値の最後のペアが繰り返されます。

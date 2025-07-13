@@ -9,7 +9,7 @@ l10n:
 
 **`forEach()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された関数をこの集合のそれぞれの値に対して一回ずつ、挿入順で実行します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.forEach()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.forEach()")}}
 
 ```js interactive-example
 function logSetElements(value1, value2, set) {
@@ -33,9 +33,7 @@ forEach(callbackFn, thisArg)
 ### 引数
 
 - `callback`
-
   - : この集合のそれぞれの項目に対して実行する関数です。この関数は次の引数で呼び出されます。
-
     - `value`
       - : それぞれの反復処理の値です。
     - `key`

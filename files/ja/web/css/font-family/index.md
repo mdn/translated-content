@@ -9,7 +9,7 @@ l10n:
 
 **`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
 
-{{InteractiveExample("CSS Demo: font-family")}}
+{{InteractiveExample("CSS デモ: font-family")}}
 
 ```css interactive-example-choice
 font-family: Georgia, serif;
@@ -102,7 +102,6 @@ font-family: "Gill Sans Extrabold", sans-serif;
 ### 値
 
 - `<family-name>`
-
   - : フォントファミリの名前。これは単一の {{cssxref("string")}} 値か、空白で区切られた一連の {{cssxref("custom-ident")}} 値でなければなりません。文字列値は引用符で囲む必要がありますが、 Unicode 文字を格納することができます。カスタム識別子は引用符で囲む必要はありませんが、特定の文字はエスケープする必要があります。
 
     空白文字や数字、ハイフン以外の句読点を含むフォントファミリの名前は引用するのがよい習慣です。
@@ -110,35 +109,28 @@ font-family: "Gill Sans Extrabold", sans-serif;
     [有効なファミリ名](#有効なファミリ名)も参照してください。
 
 - `<generic-name>`
-
   - : 総称フォントファミリーは代替の仕組みです。この仕組みによって、指定されたフォントがどれも利用できなかった場合、スタイルシート製作者の意図を多少なりとも保つことができます。総称ファミリー名はキーワードであり、引用符で囲んではいけません。総称フォントファミリーは、フォントファミリー名リストの最終選択肢である必要があります。以下のキーワードが定義されています。
-
     - `serif`
-
       - : 終わりが止めや払い、または実際の活字のセリフの形をした角を持つ字形です。
 
         例: Lucida Bright, Lucida Fax, Palatino, Palatino Linotype, Palladio, URW Palladio, serif
 
     - `sans-serif`
-
       - : 平たい角の端を持つ字形です。
 
         例: Open Sans, Fira Sans, Lucida Sans, Lucida Sans Unicode, Trebuchet MS, Liberation Sans, Nimbus Sans L, sans-serif.
 
     - `monospace`
-
       - : すべての字が同じ幅を持つ字形です。
 
         例: Fira Mono, DejaVu Sans Mono, Menlo, Consolas, Liberation Mono, Monaco, Lucida Console, monospace
 
     - `cursive`
-
       - : 筆記体フォントの字形には、一般に、続け書き、もしくは、イタリック体の特性以上に、その他の筆記体の特性があります。字形は、部分的に、あるいは完全につながっていて、仕上がりは、印刷された活字というよりは、手書きのペンまたは毛筆で書かれたように見えます。
 
         例: Brush Script MT, Brush Script Std, Lucida Calligraphy, Lucida Handwriting, Apple Chancery, cursive
 
     - `fantasy`
-
       - : fantasy フォントは、遊び心に溢れた文字表現を含む、主として装飾的なフォントです。
 
         例: Papyrus, Herculanum, Party LET, Curlz MT, Harrington, fantasy

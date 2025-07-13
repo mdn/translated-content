@@ -9,7 +9,7 @@ l10n:
 
 **`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
 
-{{InteractiveExample("CSS Demo: hwb()")}}
+{{InteractiveExample("CSS デモ: hwb()")}}
 
 ```css interactive-example-choice
 background: hwb(12 50% 0%);
@@ -53,17 +53,14 @@ hwb(194 0% 0% / .5) /* #00c3ff with 50% opacity */
 - 関数記法: `hwb(H W B[ / A])`
 
 - `H`
-
   - : 色相角を表す {{CSSXref("&lt;number&gt;")}} または {{CSSXref("&lt;angle&gt;")}}、またはキーワード `none`。この型の詳細は {{CSSXref("&lt;hue&gt;")}} のリファレンスにあります。
 
 - `W`, `B`
-
   - : {{CSSXref("&lt;percentage&gt;")}} またはキーワード `none` であり、それぞれ白色度と黒色度を表します。これらは白と黒が混合される量を、 `0%` （白色度または黒色度なし）から `100%` （白色度または黒色度が最高）で指定します。
 
     `W + B = 100%` グレーの濃淡を定義します。 `W + B > 100%` である場合、 `W` および `B` はそれぞれ `W / (W + B)` および `B / (W + B)` で正規化されます。
 
 - `A` {{optional_inline}}
-
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
 > [!NOTE]

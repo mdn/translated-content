@@ -30,7 +30,6 @@ clip: inherit
 ### Valores
 
 - `<shape>`
-
   - : Una forma rectangular del formulario
 
     ```

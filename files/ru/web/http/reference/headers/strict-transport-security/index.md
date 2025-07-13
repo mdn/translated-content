@@ -3,8 +3,6 @@ title: Strict-Transport-Security
 slug: Web/HTTP/Reference/Headers/Strict-Transport-Security
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `Strict-Transport-Security`** - заголовок ответа (часто используется аббревиатура {{Glossary("HSTS")}}), позволяющий web-сайтам уведомить браузер о том, что доступ к ним должен быть осуществлён только посредством HTTPS вместо HTTP.
 
 <table class="properties">

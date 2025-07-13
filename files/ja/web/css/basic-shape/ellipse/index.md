@@ -9,7 +9,7 @@ l10n:
 
 **`ellipse()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。
 
-{{InteractiveExample("CSS Demo: ellipse()")}}
+{{InteractiveExample("CSS デモ: ellipse()")}}
 
 ```css interactive-example-choice
 clip-path: ellipse(20px 50px);
@@ -57,9 +57,7 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ### 値
 
 - `<shape-radius>`
-
   - : 2 つの半径で、x および y をその順で指定します。{{cssxref("length")}}、{{cssxref("percentage")}}、または `closest-side` および `farthest-side` の値の何れかです。
-
     - `closest-side`
       - : シェイプの中心から参照ボックスの最も近い辺までの長さを使用します。楕円の場合は、半径の軸で最も近い辺となります。
     - `farthest-side`

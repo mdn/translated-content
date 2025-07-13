@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 減算代入演算子 (`-=`) は、変数から右辺のオペランドの値を減算し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Subtraction assignment operator")}}
 
 ```js interactive-example
 let a = 2;

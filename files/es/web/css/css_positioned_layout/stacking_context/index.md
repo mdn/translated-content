@@ -46,11 +46,9 @@ En resumen:
 En este ejemplo cada elemento posicionado crea su propio contexto de apilamiento, debido a sus valores de posicionamiento y z-index. La jerarquía de contextos de apilamiento es organizada de la siguiente manera:
 
 - Raíz
-
   - DIV #1
   - DIV #2
   - DIV #3
-
     - DIV #4
     - DIV #5
     - DIV #6
@@ -63,16 +61,12 @@ Es importante notar que el DIV #4, DIV #5 y el DIV #6 son hijos del DIV #3, así
 > - Por la misma razón DIV #2 (z-index 2) es renderizado bajo DIV#5 (z-index 1) porque DIV #5 pertenece a DIV #3, que tiene un valor z-index mayor.
 > - El valor z-index de DIV #3 es 4, pero este valor es independiente del z-index de DIV #4, DIV #5 and DIV #6, porque pertenece a un contexto de apilamiento diferente.
 > - Una forma fácil de descubrir el _orden de renderizado_ de los elementos apilados en el eje Z es pensar en esto como un tipo de "número de versión", donde los elementos hijos son números de versión menores bajo los números de versión mayores de sus padres. De esta manera podemos ver fácilmente cómo un elemento con un valor z-index de 1 (DIV #5) es apilado encima de un elemento con un valor z-index de 2 (DIV #2), y cómo un elemento con un valor z-index de 6 (DIV #4) es apilado debajo de un elemento con un valor z-index de 5 (DIV #1). En nuestro ejemplo (ordenado de acuerdo al orden de renderizado final):
->
 >   - Raíz
->
 >     - El valor z-index de DIV #2 es 2
 >     - El valor z-index de DIV #3 es 4
->
 >       - El valor z-index de DIV #5 es 1, apilado bajo un elemento con un valor z-index de 4, que resulta en un orden de renderizado de 4.1
 >       - El valor z-index de DIV #6 es 3, apilado debajo de un elemento con un valor z-index de 4, que resulta en un orden de renderizado de 4.3
 >       - El valor z-index de DIV #4 es 6, apilado bajo un elemento con valor z-index de 4, que resulta en un orden de renderizado de 4.6
->
 >     - El valor z-index de DIV #1 es 5
 
 ## Ejemplo

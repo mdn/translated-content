@@ -9,7 +9,7 @@ l10n:
 
 **Unicode 文字クラスエスケープ**は[文字クラスエスケープ](/ja/docs/Web/JavaScript/Reference/Regular_expressions/Character_class_escape)の一種で、Unicode プロパティで指定された一連の文字に一致します。これは [Unicode 対応モード](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicode#unicode-aware_mode)でのみ対応しています。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) フラグが有効である場合、有限長の文字列と照合するために使用することもできます。
 
-{{InteractiveExample("JavaScript Demo: RegExp Unicode property escapes", "taller")}}
+{{InteractiveExample("JavaScript デモ: RegExp Unicode property escapes", "taller")}}
 
 ```js interactive-example
 const sentence = "A ticket to 大阪 costs ¥2000 👌.";
@@ -40,7 +40,6 @@ console.log(sentence.match(regexpCurrencyOrPunctuation));
 ### 引数
 
 - `loneProperty`
-
   - : 単独の Unicode プロパティ名または値で、`value` と同じ構文に従います。`General_Category` プロパティの値、または[バイナリープロパティ名](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties)を指定します。[`v`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/unicodeSets) モードでは、[文字列のバイナリー Unicode プロパティ](https://tc39.es/ecma262/multipage/text-processing.html#table-binary-unicode-properties-of-strings)にもなります。
 
     > **メモ:** [ICU](https://unicode-org.github.io/icu/userguide/strings/unicodeset.html#property-values) 構文では `Script` プロパティ名も同様に省略することができますが、JavaScript では `Script` よりも `Script_Extensions` の方が有益な場合が多いため、対応していません。

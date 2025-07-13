@@ -9,7 +9,7 @@ l10n:
 
 **オブジェクト初期化子** (object initializer) は、オブジェクトのプロパティ名と関連する値の 0 個以上のペアを中括弧 (`{}`) で囲んだカンマ区切りのリストです。オブジェクトは [`Object.create()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Object/create) や [`new`](/ja/docs/Web/JavaScript/Guide/Working_with_objects#using_a_constructor_function) 演算子で[コンストラクター関数を呼び出して](/ja/docs/Web/JavaScript/Reference/Operators/new)使用することもできます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Object initializer", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Object initializer", "taller")}}
 
 ```js interactive-example
 const object1 = { a: "foo", b: 42, c: {} };
@@ -152,7 +152,7 @@ const a = { x: 1, x: 2 };
 console.log(a); // {x: 2}
 ```
 
-ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)だけは例外で、クラス本体で固有のプロパティでなければなりません。
+ES2015 以降、[厳格モード](/ja/docs/Web/JavaScript/Reference/Strict_mode#プロパティ名の重複)を含むあらゆる場所でプロパティ名の重複が許されるようになりました。また、[クラス](/ja/docs/Web/JavaScript/Reference/Classes)内でプロパティ名の重複を保有することもできます。ただし、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)だけは例外で、クラス本体で固有のプロパティでなければなりません。
 
 ### メソッドの定義
 

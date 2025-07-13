@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 78ef1310a76394c4e0bdce456982abc3856790c0
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされました。このページでは、開発者に影響する Firefox 66 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -30,7 +28,6 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 - [スクロールアンカリング](https://drafts.csswg.org/css-scroll-anchoring/)を、デスクトップ版 Firefox に実装しました (モバイル版は未実装です)。{{cssxref("overflow-anchor")}} プロパティを含みます ([Firefox バグ 1305957](https://bugzil.la/1305957))。
 - [属性セレクター](/ja/docs/Web/CSS/Attribute_selectors) で、大文字・小文字の区別に関する修飾子 `s` をサポートしました ([Firefox バグ 1512386](https://bugzil.la/1512386))。
 - いくつかの [論理的プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values) ショートハンドと、フローに関係する border radius プロパティを実装しました:
-
   - {{cssxref("padding-block")}} および {{cssxref("padding-inline")}} ([Firefox バグ 1519847](https://bugzil.la/1519847))。
   - {{cssxref("margin-block")}} および {{cssxref("margin-inline")}} ([Firefox バグ 1519944](https://bugzil.la/1519944))。
   - {{cssxref("inset")}}、{{cssxref("inset-block")}}、{{cssxref("inset-inline")}} ([Firefox バグ 1520229](https://bugzil.la/1520229))。
@@ -42,7 +39,6 @@ Firefox 66 は、米国時間 2019 年 3 月 19 日 にリリースされまし�
 - 仕様書で公表された規則に従って、{{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} のアニメーションを実装しました ([Firefox バグ 1348519](https://bugzil.la/1348519))。
 - テーブルのセルや列の幅で、パーセンテージを使用した {{cssxref("calc")}} をサポートしました ([Firefox バグ 957915](https://bugzil.la/957915))。
 - `min-content` および `max-content` キーワードが、接頭辞なしで使用可能になりました ([Firefox バグ 1322780](https://bugzil.la/1322780))。これらは以下のプロパティに設定できます:
-
   - {{cssxref("width")}}
   - {{cssxref("height")}}
   - {{cssxref("flex-basis")}}
@@ -117,7 +113,6 @@ _変更なし。_
 - 新しい閲覧コンテキストを開く操作をサポートするため `WebDriver:NewWindow` を追加しました。ウィンドウまたはタブのいずれかを開くことができます ([Firefox バグ 1504756](https://bugzil.la/1504756))。
 - 指定した要素が現在の閲覧コンテキストに含まれていない場合に、`WebDriver:SwitchToFrame` で `no such element` エラーが発生するようになりました ([Firefox バグ 1517196](https://bugzil.la/1517196))。
 - `WebDriver:ExecuteScript` および `WebDriver:ExecuteAsyncScript` が、仕様書に準拠しない `scriptTimeout` 引数をサポートしないようになりました。代わりに `WebDriver:SetTimeout` または `timeouts` 機能を使用してください ([Firefox バグ 1510929](https://bugzil.la/1510929))。
-
   - さらに、不定のスクリプトタイムアウトをサポートしました ([Firefox バグ 1128997](https://bugzil.la/1128997))。
 
 - `WebDriver:SetWindowRect` が、応答でウィンドウの状態を返さないようになりました ([Firefox バグ 1517587](https://bugzil.la/1517587))。

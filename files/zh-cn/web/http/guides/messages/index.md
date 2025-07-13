@@ -3,8 +3,6 @@ title: HTTP 消息
 slug: Web/HTTP/Guides/Messages
 ---
 
-{{HTTPSidebar}}
-
 HTTP 消息是服务器和客户端之间交换数据的方式。有两种类型的消息：_请求_（request）——由客户端发送用来触发一个服务器上的动作；_响应_（response）——来自服务器的应答。
 
 HTTP 消息由采用 ASCII 编码的多行文本构成。在 HTTP/1.1 及早期版本中，这些消息通过连接公开地发送。在 HTTP/2 中，为了优化和性能方面的改进，曾经可人工阅读的消息被分到多个 HTTP 帧中。
@@ -34,7 +32,6 @@ HTTP 请求是由客户端发出的消息，用来使服务器执行动作。_�
 
 1. 一个 _[HTTP 方法](/zh-CN/docs/Web/HTTP/Reference/Methods)_，一个动词（像 {{HTTPMethod("GET")}}、{{HTTPMethod("PUT")}} 或者 {{HTTPMethod("POST")}}）或者一个名词（像 {{HTTPMethod("HEAD")}} 或者 {{HTTPMethod("OPTIONS")}}），描述要执行的动作。例如，`GET` 表示要获取资源，`POST` 表示向服务器推送数据（创建或修改资源，或者产生要返回的临时文件）。
 2. _请求目标_（request target），通常是一个 {{glossary("URL")}}，或者是协议、端口和域名的绝对路径，通常以请求的环境为特征。请求的格式因不同的 HTTP 方法而异。它可以是：
-
    - 一个绝对路径，末尾跟上一个 `'?'` 和查询字符串。这是最常见的形式，称为*原始形式*（origin form），被 `GET`、`POST`、`HEAD` 和 `OPTIONS` 方法所使用。
      - `POST / HTTP/1.1`
      - `GET /background.png HTTP/1.0`

@@ -81,7 +81,6 @@ td {
 以下屬性已棄用，不應使用。在更新現有代碼時和僅出於歷史興趣，以下是這些屬性的文檔。
 
 - `align` {{deprecated_inline}}
-
   - : 指定每個欄單元格的水平對齊方式。可能的 {{Glossary("enumerated")}} 值包括 `left`、`center`、`right`、`justify` 和 `char`。當支持時，`char` 值將文本內容對齊到 [`char`](#char) 屬性中定義的字符，並在 [`charoff`](#charoff) 屬性定義的偏移量上進行對齊。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`align`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#align)。請改用 {{cssxref("text-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
     > [!NOTE]
@@ -98,7 +97,6 @@ td {
 - `charoff` {{deprecated_inline}}
   - : 指定欄單元格內容從由 [`char`](#char) 屬性指定的對齊字符的偏移量的字符數。
 - `valign` {{deprecated_inline}}
-
   - : 指定每個欄單元格的垂直對齊方式。可能的{{Glossary("enumerated", "列舉")}}值包括 `baseline`、`bottom`、`middle` 和 `top`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`valign`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#valign)。請改用 {{cssxref("vertical-align")}} CSS 屬性應用於 {{htmlelement("td")}} 和 {{htmlelement("th")}} 元素上，因為此屬性已棄用。
 
     > [!NOTE]
@@ -109,7 +107,6 @@ td {
     > 如果表格使用了 [`colspan`](/zh-TW/docs/Web/HTML/Reference/Elements/td#colspan) 屬性，則可以通過組合適當的 CSS 屬性選擇器，如 `[colspan=n]` 來達到效果，雖然這不是一個簡單的過程。
 
 - `width` {{deprecated_inline}}
-
   - : 為每個欄指定默認寬度。除了標準像素和百分比值外，此屬性還可以採用特殊形式 `0*`，表示每個跨度的欄的寬度應該是足以容納欄內容的最小寬度。也可以使用相對寬度，如 `5*`。請注意，此屬性會覆蓋其 {{HTMLElement("colgroup")}} 父元素的指定 [`width`](/zh-TW/docs/Web/HTML/Reference/Elements/colgroup#width)。請改用 {{cssxref("width")}} CSS 屬性，因為此屬性已棄用。
 
 ## 使用注意事項

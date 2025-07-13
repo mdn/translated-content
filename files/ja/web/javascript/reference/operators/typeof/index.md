@@ -9,7 +9,7 @@ l10n:
 
 **`typeof`** 演算子は、オペランドの値の型を示す文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - typeof")}}
+{{InteractiveExample("JavaScript デモ: Expressions - typeof")}}
 
 ```js interactive-example
 console.log(typeof 42);

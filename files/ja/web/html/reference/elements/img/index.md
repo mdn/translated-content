@@ -10,7 +10,7 @@ l10n:
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
-{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;img&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <img
@@ -72,7 +72,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - [`alt`](/ja/docs/Web/API/HTMLImageElement/alt#usage_notes)
-
   - : ページ内の画像を置き換えることができるテキストを定義します。
 
     > [!NOTE]
@@ -89,7 +88,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     この属性は画像をテキストにコピー＆ペーストした場合や、リンクされた画像をブックマークに保存したときにも使用されます。
 
 - `attributionsrc` {{experimental_inline}}
-
   - : ブラウザーに画像リクエストとともに {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信するように指定します。
 
     サーバー側では、この機能を使用して、{{httpheader("Attribution-Reporting-Register-Source")}} または {{httpheader("Attribution-Reporting-Register-Trigger")}} ヘッダーをレスポンスで送信し、それぞれ画像ベースの[帰属ソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#html-based_event_sources)または[帰属トリガー](/ja/docs/Web/API/Attribution_Reporting_API/Registering_triggers#html-based_attribution_triggers)を登録します。どのレスポンスヘッダーを送り返すべきかは、登録をトリガーした `Attribution-Reporting-Eligible` ヘッダーの値によって異なります。
@@ -100,7 +98,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     > 詳しくは[帰属レポート API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には、設定できるバージョンが 2 つあります。
-
     - 論理属性、すなわち `attributionsrc` 名のみ。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーが `src` 属性が指し示すのと同じサーバーに送信されることを指定します。これは、帰属元やトリガー登録を同じサーバーで処理する場合に適しています。帰属トリガーを登録する場合、このプロパティは任意であり、省略した場合は論理値が使用されます。
     - 1 つ以上の URL を含む値、例えば次のようなものです。
 
@@ -118,7 +115,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     > 複数の URL を指定すると、同じ機能に複数の帰属元を登録することができます。例えば、成功を測定しようとしている異なるキャンペーンがあり、異なるデータについて異なるレポートを生成する必要がある場合などです。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : 画像を取得する際に {{glossary("CORS")}} を使用しなければならないかどうかを示します。 CORS リクエストから返された[CORS が有効な画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)は、 {{HTMLElement("canvas")}} 要素で「[汚染](/ja/docs/Web/HTML/How_to/CORS_enabled_image#セキュリティと汚染されたキャンバス)」されることなく再利用することができます。
 
     `crossorigin` 属性が指定されて*いない*場合は、 ({{httpheader("Origin")}} リクエストヘッダーがない) CORS 以外のリクエストが送信され、ブラウザーは画像が汚染されたものとしてマークし、その画像データへのアクセスを制限して、 {{HTMLElement("canvas")}} 要素での使用を防ぎます。
@@ -126,7 +122,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     `crossorigin` 属性が指定されて*いる*場合は、({{httpheader("Origin")}} リクエストヘッダーを伴う) CORS リクエストが送信されます。しかし、サーバーがオリジンのサイトによる画像データへのオリジン間アクセスを許可することをオプトインしない場合 ({{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーが一切送信されていないか、送信された {{httpheader("Access-Control-Allow-Origin")}} レスポンスヘッダーにサイトのオリジンが含まれていない場合)、ブラウザーは画像を読み込むことをブロックし、開発ツールのコンソールに CORS エラーを記録します。
 
     許可されている値:
-
     - `anonymous`
       - : CORS リクエストは、資格情報を省略して (つまり、{{glossary("cookie", "クッキー")}}、[X.509 証明書](https://datatracker.ietf.org/doc/html/rfc5280)、 {{httpheader("Authorization")}} リクエストヘッダーなしで) 送信されます。
     - `use-credentials`
@@ -135,7 +130,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     この属性の値が無効である場合は、列挙型のキーワードに `anonymous` が指定されたものとして扱われます。詳しくは[CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `decoding`
-
   - : この属性は、ブラウザーが画像のデコードを他の DOM コンテンツのレンダリングと一緒に行い、より「正しく」見えるようにするのか (`sync`)、それとも他の DOM コンテンツを先にレンダリングして表示し、画像をデコードして後で表示するのか (`async`) のヒントを提供します。実際には、`async` は次の描画が画像のデコードを待たないことを意味します。
 
     静的な `<img>` 要素に `decoding` を使用した場合、顕著な効果を認識することは困難です。画像ファイルが（ネットワークやキャッシュから）取得される間、最初は空の画像としてレンダリングされ、その後は独立して処理されるため、コンテンツの更新の「同期」はあまり意識されません。しかし、デコード中にレンダリングがブロックされることは、非常に小さいことが多いものの、計測可能です。より詳細な分析については、[画像デコード属性は実際に何をしているのか](https://www.tunetheweb.com/blog/what-does-the-image-decoding-attribute-actually-do/) を参照してください (tunetheweb.com, 2023)。
@@ -143,7 +137,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     異なる `decoding` タイプを使用すると、 JavaScript を使って動的に `<img>` 要素を DOM に挿入する際に、より顕著な違いが生じます - 詳しくは {{domxref("HTMLImageElement.decoding")}} を参照してください。
 
     許可されている値は次の通りです。
-
     - `sync`
       - : 他の DOM コンテンツのレンダリングと同期して画像をデコードし、すべてを一緒に表示します。
     - `async`
@@ -152,13 +145,10 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
       - : デコードモードの優先順位はありません。ブラウザーがユーザーにとって最適なものを決定します。これは既定値です。
 
 - [`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming)
-
   - : {{domxref("PerformanceElementTiming")}} API による監視のために画像をマークします。指定された値は、監視される画像要素の識別子になります。[`elementtiming`](/ja/docs/Web/HTML/Reference/Attributes/elementtiming) 属性のページも参照してください。
 
 - `fetchpriority`
-
   - : 画像を取得する際に使用する相対的な優先順位のヒントを提供します。許可されている値は次の通りです。
-
     - `high`
       - : 他の画像と比較して高い優先度で読み取ります。
     - `low`
@@ -171,26 +161,21 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     詳しくは {{domxref("HTMLImageElement.fetchPriority")}} を参照してください。
 
 - `height`
-
   - : 画像固有の高さをピクセル値で指定します。単位のない整数でなければなりません。
 
     > **メモ:** `height` と [`width`](#width) を記載することで、画像を読み込む前にブラウザーが画像の{{glossary("aspect ratio", "アスペクト比")}}を計算することができるようになります。このアスペクト比は、画像を表示するために必要な空間を確保するために使用され、画像をダウンロードして画面に表示したときのレイアウトのずれを縮小したり、防止したりすることができます。レイアウトのずれを縮小することは、良い使い勝手とウェブパフォーマンスの主要な構成要素です。
 
 - `ismap`
-
   - : 論理属性で、この画像が[サーバーサイドマップ](https://en.wikipedia.org/wiki/Image_map#Server-side)の一部であるかを示します。そうである場合は、クリック位置の正確な座標をサーバーに送信します。
 
     > [!NOTE]
     > この属性は `<img>` 要素が、有効な [`href`](/ja/docs/Web/HTML/Reference/Elements/a#href) 属性を持つ {{htmlelement("a")}} 要素の子孫である場合に限り許可されます。これにより、ポインティングデバイスを持たないユーザーのフォールバック先を提供します。
 
 - `loading`
-
   - : ブラウザーがどのように画像を読み込むかを示します。
-
     - `eager`
       - : 画像が現在可視ビューポートに入っているかどうかにかかわらず、直ちに画像を読み込みます (これが既定値です)。
     - `lazy`
-
       - : 画像がブラウザーで定義されたビューポートからの距離に達するまで、画像の読み込みを遅延させます。これは、画像が必要とされるのが合理的に確実になるまで、処理に必要なネットワークやストレージの帯域幅を使用しないようにするためです。これは一般的に、ほとんどの典型的な使用法において、コンテンツの性能を向上させることができます。
 
     > [!NOTE]
@@ -200,9 +185,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     > 画像の `loading` が `lazy` に設定されていると、たとえ読み込みによって表示が変更されるとしても、可視要素と交差しない場合は決して読み込まれません。未読み込みの画像は `width` および `height` が `0` であるためです。遅延読み込みの画像に `width` および `height` を設定すると、この問題が解決され、[仕様で推奨](https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element)されているベストプラクティスとなります。また、レイアウトのずれを防ぐことにも役立ちます。
 
 - `referrerpolicy`
-
   - : リソースを読み込む際に、どのリファラーを使用するかを示す文字列です。
-
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `no-referrer-when-downgrade`: ある{{glossary("origin", "オリジン")}}へ{{glossary("TLS")}} ({{glossary("HTTPS")}}) を使用せずに移動した場合に、 {{HTTPHeader("Referer")}} ヘッダーを送信しないことを表します。
     - `origin`: 送られるリファラーは、参照しているページページのオリジン、すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{glossary("host", "ホスト名")}}、{{glossary("port", "ポート番号")}}のみとなります。
@@ -213,9 +196,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
     - `unsafe-url`: リファラーにはオリジンとパスを含めることを表します（ただし、フラグメント、パスワード、ユーザー名は含めません）。**この値は安全ではありません**。オリジンやパスの情報が TLS で保護されたリソースから安全でないオリジンへ漏えいするからです。
 
 - `sizes`
-
   - : ソースのサイズのセットを示す、カンマ区切りの文字列を1個以上並べたリストです。それぞれのソースサイズの構成は以下のとおりです。
-
     1. [メディア条件](/ja/docs/Web/CSS/CSS_media_queries/Using_media_queries#構文)。リスト内の最後のアイテムでは省略しなければなりません。
     2. ソースサイズ値。
 
@@ -226,12 +207,9 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `src`
   - : 画像の {{glossary("URL")}} です。 `<img>` 要素に必須です。 `srcset` に対応する{{glossary("Browser", "ブラウザー")}}では `src` を、画素密度記述子 `1x` の候補画像であるように扱います。ただし、この画素密度記述子が `srcset` で定義済みである、または `srcset` に '`w`' 記述子が含まれている場合を除きます。
 - `srcset`
-
   - : {{glossary("user agent", "ユーザーエージェント")}}が使用可能なソース画像のセットを示す、カンマ区切りで文字列を 1 個以上並べたリストです。各々の文字列の構成は以下のとおりです。
-
     1. 画像の {{glossary("URL")}}
     2. 任意で、ホワイトスペースの後に以下のいずれかを記述します。
-
        - 幅記述子（正の整数の直後に `w` を付加したもの）。幅記述子は実際の画素密度を計算するために、`sizes` 属性で与えられたソースサイズで割られます。
        - 画素密度記述子（正の浮動小数点数の直後に `x` を付加したもの）。
 
@@ -246,7 +224,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `width`
   - : 画像固有の幅をピクセル値で指定します。単位のない整数でなければなりません。
 - `usemap`
-
   - : 要素に関連づけられた[イメージマップ](/ja/docs/Web/HTML/Reference/Elements/map)の部分的な {{glossary("URL")}} ('`#`' で始まる) です。
 
     > [!NOTE]
@@ -255,9 +232,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 ### 非推奨の属性
 
 - `align` {{deprecated_inline}}
-
   - : 周囲のコンテキストに対する画像の配置を指定します。代わりに {{glossary("CSS")}} の {{cssxref('float')}} プロパティや {{cssxref('vertical-align')}} プロパティを使用してください。使用できる値は次の通りです。
-
     - `top`
       - : `vertical-align: top;` または `vertical-align: text-top;` と等価です。
     - `middle`
@@ -274,7 +249,6 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
 - `hspace` {{deprecated_inline}}
   - : 画像の左右に挿入する空間の幅をピクセル単位で指定します。代わりに CSS の {{cssxref('margin')}} プロパティを使用してください。
 - `longdesc` {{deprecated_inline}}
-
   - : 画像の詳細な説明へのリンクです。有効な値は、 {{glossary("URL")}} または要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) です。
 
     > [!NOTE]

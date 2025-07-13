@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.allSettled()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のすべてのプロミスが決定したとき（空の反復可能オブジェクトが渡された場合を含む）に履行され、各プロミスの結果を記述するオブジェクトの配列が返されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.allSettled()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise.allSettled()", "taller")}}
 
 ```js interactive-example
 const promise1 = Promise.resolve(3);
@@ -44,7 +44,6 @@ Promise.allSettled(iterable)
 
 - *反復可能*オブジェクトが空であった場合は、**履行済み**になります。
 - 渡された*反復可能*オブジェクトのすべてのプロミスが（履行または拒否に）決定したとき、**非同期に履行されます**。履行されたプロミスの値はオブジェクトの配列で、それぞれが反復可能なオブジェクトの中の一つのプロミスの結果を記述しています。それぞれの成果オブジェクトには、以下のようなプロパティがあります。
-
   - `status`
     - : 文字列で、 `"fulfilled"` （履行）または `"rejected"` （拒否）をとり、そのプロミスの最終的な状態を示します。
   - `value`

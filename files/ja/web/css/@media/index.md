@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > JavaScript では、 `@media` を使用して作成されたルールは、 CSS オブジェクトモデルの {{domxref("CSSMediaRule")}} インターフェイスによってアクセスすることができます。
 
-{{InteractiveExample("CSS Demo: @media", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: @media", "tabbed-standard")}}
 
 ```css interactive-example
 abbr {
@@ -191,7 +191,6 @@ _論理演算子_ `not`, `and`, `only`, `or` を使うと、複雑なメディ�
   - : 複数のメディア特性を 1 つのメディアクエリーに結合する際に使用されます。クエリーが `true` になるためには、結合させた各機能が `true` を返すことが必要です。
     また、メディア特性とメディア種別を結合する際にも使用されます。
 - `not`
-
   - : メディアクエリーを反転するために使用され、クエリーが `false` を返す場合に `true` を返します。
     カンマで区切られたクエリーのリストの中にある場合は、適用された特定のクエリーのみを反転します。
 

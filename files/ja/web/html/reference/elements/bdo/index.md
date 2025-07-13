@@ -9,7 +9,7 @@ l10n:
 
 **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 
-{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;bdo&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <h1>有名な海辺の歌</h1>
@@ -44,9 +44,7 @@ bdo {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `dir`
-
   - : この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
-
     - `ltr`: テキストを左から右へ (left-to-right) 向かわせることを意味する指定。
     - `rtl`: テキストを右から左へ (right-to-left) 向かわせることを意味する指定。
 

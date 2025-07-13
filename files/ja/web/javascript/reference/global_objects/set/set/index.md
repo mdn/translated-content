@@ -9,7 +9,7 @@ l10n:
 
 **`Set()`** コンストラクターは {{jsxref("Set")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype Constructor")}}
 
 ```js interactive-example
 const set1 = new Set([1, 2, 3, 4, 5]);
@@ -36,7 +36,6 @@ new Set(iterable)
 ### 引数
 
 - `iterable` {{optional_inline}}
-
   - : [反復可能オブジェクト](/ja/docs/Web/JavaScript/Reference/Statements/for...of)が渡された場合は、そのすべての要素が新しい `Set` に加えられます。
 
     この引数を指定しなかった場合、または値が `null` だった場合、新しい `Set` は空になります。

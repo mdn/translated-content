@@ -11,7 +11,7 @@ l10n:
 
 元の配列を変更せずに、ある部分を除去したり置き換えたりした新しい配列を作成するには {{jsxref("Array/toSpliced", "toSpliced()")}} を使用してください。配列を変更せずに配列の一部にアクセスするには {{jsxref("Array/slice", "slice()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Array.splice()")}}
+{{InteractiveExample("JavaScript デモ: Array.splice()")}}
 
 ```js interactive-example
 const months = ["Jan", "March", "April", "June"];
@@ -39,7 +39,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
 ### 引数
 
 - `start`
-
   - : 配列の変更を始める位置のゼロから始まるインデックスで、[整数に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)。
     - インデックスが負の場合、配列の末尾からさかのぼって数えます。 `start < 0` の場合、 `start + array.length` が使用されます。
     - `start < -array.length` の場合は `0` が使用されます。
@@ -47,7 +46,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
     - `start` が省略された場合（そして `splice()` が引数なしで呼び出された場合）、何も削除されません。これは `undefined` を渡すと `0` に変換されるのとは異なります。
 
 - `deleteCount` {{optional_inline}}
-
   - : 配列の `start` の位置から取り除く古い要素の個数を示す整数です。
 
     `deleteCount` が省略された場合、または `deleteCount` の値が `start` で指定した位置より後の要素数以上の場合、 `start` から配列の末尾までのすべての要素が削除されます。ただし、任意の `itemN` 引数を渡したい場合は、 `start` より後の要素をすべて削除するために `deleteCount` として `Infinity` を渡す必要があります。明示的に `undefined` を渡すと、[変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/Number#整数への変換)されて `0` になるからです。
@@ -55,7 +53,6 @@ splice(start, deleteCount, item1, item2, /* …, */ itemN)
     `deleteCount` が `0` または負の数の場合、どの要素も取り除かれません。この場合、少なくとも 1 つの新しい要素を指定する必要があります（以下参照）。
 
 - `item1`, …, `itemN` {{optional_inline}}
-
   - : 配列に追加する要素で、`start` から始まります。
 
     要素を指定しなかった場合、`splice()` は単に配列から要素を取り除きます。

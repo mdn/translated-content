@@ -9,7 +9,7 @@ l10n:
 
 **`<audio>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書内に音声コンテンツを埋め込むために使用します。この要素は、1 つまたは複数の音源を含むことができます。音源は `src` 属性または {{HTMLElement("source")}} 要素を使用して表し、ブラウザーがもっとも適切な音源を選択します。また、 {{domxref("MediaStream")}} を使用してストリーミングメディアを指し示すこともできます。
 
-{{InteractiveExample("HTML Demo: &lt;audio&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;audio&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <figure>
@@ -34,26 +34,21 @@ figure {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `autoplay`
-
   - : 論理属性。指定された場合、音声ファイル全体のダウンロードの完了を待たずに、再生可能な状態になった時点で即座にコンテンツの再生が始まります。
 
     > [!NOTE]
     > 自動的に音声（あるいは音声トラックを含む動画）を再生するサイトはユーザーにとって不快な体験になる可能性がありますので、可能な限り避けるべきです。自動再生機能が必須である場合は、オプトイン（ユーザーが明示的に有効化することを求める）にするべきです。ただし、ユーザーの制御下で後からソースを設定するメディア要素を作成するときは、この方法が役に立つでしょう。[自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay)には autoplay の正しい使い方についての追加情報があります。
 
 - `controls`
-
   - : この属性が指定された場合、ブラウザーは再生・一時停止、音量、シークの各機能を制御するコントロールを表示します。
 
 - `controlslist`
-
   - : [`controlslist`](https://wicg.github.io/controls-list/explainer.html) 属性は、指定された場合、ブラウザーが自分自身で一連のコントロールを表示するとき（つまり、 `controls` 属性が指定されたとき）、 `audio` 要素にどのようなコントロールを表示するかを選択するのを支援します。
 
     取ることができる値は `nodownload`、`nofullscreen`、`noremoteplayback` です。
 
 - [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-
   - : この列挙型の属性は、関連する音声ファイルを取得する際に CORS を使用するかを示します。[CORS が有効なリソース](/ja/docs/Web/HTML/How_to/CORS_enabled_image) は、*汚染*されることなく {{HTMLElement("canvas")}} 要素で再利用できます。次の値が使用できます:
-
     - `anonymous`
       - : 資格情報を伴わずにオリジン間リクエストを実行します。すなわち、 Cookie や X.509 証明書がない `Origin:` HTTP ヘッダーを送信したり、 HTTP ベーシック認証を行ったりしません。サーバーが元のサイトに信用情報を付与しない場合 (`Access-Control-Allow-Origin:` HTTP ヘッダーの設定なし)、画像が*汚染*され、その使用も制限されます。
     - `use-credentials`
@@ -62,7 +57,6 @@ figure {
     この属性が存在しない場合、リソースは CORS リクエストなしで (すなわち、 `Origin:` HTTP ヘッダーなしで) 取得され、 {{HTMLElement('canvas')}} 要素での汚染されない使用が妨げられます。これが無効な場合、列挙型のキーワードに **anonymous** が指定されたものとして扱われます。追加の情報は [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 - `disableremoteplayback`
-
   - : 論理属性で、有線 (HDMI, DVI, など) や無線技術 (Miracast, Chromecast, DLNA, AirPlay, など) で接続された機器のリモート再生機能を無効にするために使用します。詳しくは[この提案中の仕様書](https://www.w3.org/TR/remote-playback/#the-disableremoteplayback-attribute)をご覧ください。
 
     Safari では、代替として [`x-webkit-airplay="deny"`](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/AirPlayGuide/OptingInorOutofAirPlay/OptingInorOutofAirPlay.html) を使用することができます。
@@ -72,9 +66,7 @@ figure {
 - `muted`
   - : 論理型の属性で、音声の既定の設定を示します。この属性を設定すると、初期状態が消音になります。既定値は `false` です。
 - `preload`
-
   - : {{Glossary("enumerated","列挙型")}}の属性で、ユーザーに取って最良の結果をもたらすと作者が考えていることのヒントをブラウザーに伝えるためのものです。以下の値のうちひとつを持つことができます。
-
     - `none`: 音声を事前に読み込むべきではないことを示します。
     - `metadata`: 音声のメタデータ (例えば、長さ) を読み込みます。
     - `auto`: ユーザーが音声ファイルを使用しないと思われる場合でも、ファイル全体をダウンロードしてよいことを示します。
@@ -473,7 +465,6 @@ elem.audioTrackList.onremovetrack = (event) => {
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-
   - [メディアコンテナー形式 (ファイル形式)](/ja/docs/Web/Media/Guides/Formats/Containers)
   - [ウェブで使用される音声コーデックのガイド](/ja/docs/Web/Media/Guides/Formats/Audio_codecs)
 

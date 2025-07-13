@@ -9,7 +9,7 @@ l10n:
 
 **`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
-{{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
+{{InteractiveExample("CSS デモ: text-decoration-skip-ink")}}
 
 ```css interactive-example-choice
 text-decoration-skip-ink: auto;
@@ -61,7 +61,6 @@ text-decoration-skip-ink: unset;
 - `auto`
   - : 既定値です。 — ブラウザーは、下線と上線が文字に触れたり近づいたりしないよう、中断を行う*可能性があります*。つまり、線が文字を横切ろうとするところで中断されます。
 - `all`
-
   - : ブラウザーは、下線や上線が文字に触れたり近づいたりしないように*必ず*中断を行います。これは、 `auto` の動作が中断を発生させない可能性がある中国語、日本語、韓国語の特定のフォントで有用です。
 
     !["text-decoration-skip-ink" の例](decoration-skip-ink.png)

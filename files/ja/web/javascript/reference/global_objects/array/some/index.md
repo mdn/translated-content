@@ -9,7 +9,7 @@ l10n:
 
 **`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。配列は変更しません。
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{InteractiveExample("JavaScript デモ: Array.some()")}}
 
 ```js interactive-example
 const array = [1, 2, 3, 4, 5];
@@ -31,7 +31,6 @@ some(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数です。この関数は、要素がテストに合格したことを示すには[真値](/ja/docs/Glossary/Truthy)を、そうでない場合は[偽値](/ja/docs/Glossary/Falsy)を返します。この関数は以下の引数で呼び出されます。
     - `element`
       - : 配列内で処理中の現在の要素です。

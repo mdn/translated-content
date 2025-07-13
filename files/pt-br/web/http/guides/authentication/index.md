@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Authentication
 original_slug: Web/HTTP/Authentication
 ---
 
-{{HTTPSidebar}}
-
 O HTTP fornece uma estrutura geral para controle de acesso e autenticação. A autenticação HTTP mais comum é fundamentada no esquema "Basic". Esta página introduz a estrutura HTTP para autenticação e mostra como restringir acesso ao seu servidor usando o esquema "Basic".
 
 ## A estrutura geral de autenticação HTTP

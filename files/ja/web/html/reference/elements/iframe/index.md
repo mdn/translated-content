@@ -10,7 +10,7 @@ l10n:
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
-{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;iframe&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <iframe
@@ -39,7 +39,6 @@ iframe {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `allow`
-
   - : [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)を `<iframe>` に指定します。このポリシーは、 `<iframe>` が利用可能な機能（例：マイク、カメラ、バッテリー、ウェブ共有 API へのアクセスなど）をリクエストのオリジンに基づいて定義します。
 
     その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
@@ -47,41 +46,33 @@ iframe {
     > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
 
 - `allowfullscreen`
-
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
 
     > [!NOTE]
     > この属性は古い属性とみなされており、 `allow="fullscreen"` として再定義されました。
 
 - `allowpaymentrequest` {{deprecated_inline}} {{non-standard_inline}}
-
   - : 異なるオリジンの `<iframe>` で [決済リクエスト API](/ja/docs/Web/API/Payment_Request_API) の実行を許可する場合は `true` に設定します。
 
     > [!NOTE]
     > この属性は古い属性とみなされており、 `allow="payment"` として再定義されました。
 
 - `browsingtopics` {{Experimental_Inline}} {{non-standard_inline}}
-
   - : 論理属性で、表示されている場合、現在のユーザーの選択されたトピックを `<iframe>` のソースのリクエストと共に送信することを指定します。詳細は、[トピック API の使用](/ja/docs/Web/API/Topics_API/Using)を参照してください。
 
 - `credentialless` {{Experimental_Inline}}
-
   - : `true` に設定すると `<iframe>` を無信頼であることを示します。 つまり、そのコンテンツは新しい、一時的なコンテキストで読み込まれることになります。これはそのオリジンに関連するネットワーク、クッキー、ストレージデータへのアクセス権がありません。最上位の文書の存続期間に依存する新しいコンテキストを使用します。その代わりに {{httpheader("Cross-Origin-Embedder-Policy")}} (COEP) 埋め込みルールは解除され、COEP を設定した文書はそうでない第三者の文書を埋め込むことができるようになります。詳しくは[無信頼の iframe](/ja/docs/Web/Security/IFrame_credentialless) を参照してください。
 
 - `csp` {{experimental_inline}}
-
   - : 埋め込みリソースを制限する[コンテンツセキュリティポリシー](/ja/docs/Web/HTTP/Guides/CSP)です。詳しくは {{domxref("HTMLIFrameElement.csp")}} をご覧ください。
 
 - `height`
   - : フレームの高さを CSS ピクセル数で示します。既定値は `150` です。
 - `loading`
-
   - : ブラウザーが iframe をどのように読み込むかを示します。
-
     - `eager`
       - : 可視ビューポートの外にあるかどうかに関わらず、 iframe を直ちにロードします（これが既定値です）。
     - `lazy`
-
       - : ブラウザーで定義された{{glossary("visual viewport", "ビューポート")}}からの計算された距離に達するまで iframe の読み込みを延期します。
         その目的は、ブラウザーがフレームを使用すると合理的に確信できるまで、フレームの取得に必要なネットワークとストレージの帯域幅を使用しないようにすることです。
         これにより、ほとんどの典型的な使用用途において、特に初期ページの読み込み時点が縮小され、パフォーマンスとコストが改善されます。
@@ -93,9 +84,7 @@ iframe {
 - `name`
   - : 埋め込み閲覧コンテキストのターゲットの名前です。 {{HTMLElement("a")}}, {{HTMLElement("form")}}, {{HTMLElement("base")}} 要素における `target` 属性の値、 {{HTMLElement("input")}} や {{HTMLElement("button")}} 要素における `formtarget` 属性の値、 {{domxref("Window.open()","window.open()")}} メソッドの `windowName` 引数の値として使用することができます。
 - `referrerpolicy`
-
   - : フレームのリソースにアクセスする際にどの[リファラー](/ja/docs/Web/API/Document/referrer)を送信するかを示します。
-
     - `no-referrer`
       - : {{HTTPHeader("Referer")}} ヘッダーを送信しません。
     - `no-referrer-when-downgrade`
@@ -114,9 +103,7 @@ iframe {
       - : リファラーにオリジン*および*パスを含めます（ただし、[フラグメント](/ja/docs/Web/API/HTMLAnchorElement/hash)、[パスワード](/ja/docs/Web/API/HTMLAnchorElement/password)、[ユーザー名](/ja/docs/Web/API/HTMLAnchorElement/username)は含めません）。オリジンやパスの情報が TLS で保護されたリソースから安全性の劣るオリジンへ漏えいしますので、**これは安全ではありません**。
 
 - `sandbox`
-
   - : `<iframe>` に埋め込まれたコンテンツに適用される制限を制御します。フレーム内のコンテンツに追加の制約を適用します。この属性の値は、空にするとすべての制約を適用し、空白区切りのトークンにすると特定の制約を外します。
-
     - `allow-downloads`
       - : [download](/ja/docs/Web/HTML/Reference/Elements/a#download) 属性を持つ {{HTMLElement("a")}} または {{HTMLElement("area")}} 要素を通して、またファイルのダウンロードにつながるナビゲーションを通してファイルのダウンロードを可能にします。これは、ユーザーがリンクをクリックしたか、JS コードがユーザーとの対話なしに開始したかに関係なく、動作します。
     - `allow-forms`
@@ -155,13 +142,11 @@ iframe {
     > ユーザーをリダイレクトするとき、ポップアップウィンドウを開くとき、または `sandbox` 属性を持つ `<iframe>` 内に埋め込まれたページから新しいタブを開くとき、新しい閲覧コンテキストは同じ `sandbox` の制限に従います。例えば、`sandbox="allow-forms"`または`sandbox="allow-popups-to-escape-sandbox"` 属性が設定されていない`<iframe>`内に埋め込まれたページが別個のタブで新しいサイトを開いた場合、その新しい閲覧コンテキストでのフォーム送信は静かに失敗します。
 
 - `src`
-
   - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
 
     > **メモ:** `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `srcdoc`
-
   - : 埋め込むインライン HTML で、 `src` 属性を上書きします。そのコンテンツは完全な HTML 文書の構文に従う必要があります。この構文には doctype ディレクティブ、`<html>`、`<body>` タグなどが含まれますが、そのほとんどは省略して body のコンテンツだけにすることができます。この文書は位置が `about:srcdoc` となります。ブラウザーが `srcdoc` 属性に対応していない場合は、 `src` 属性の URL で代替されます。
 
     > **メモ:** `about:srcdoc` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
@@ -184,9 +169,7 @@ iframe {
 - `marginwidth` {{deprecated_inline}}
   - : フレームの内容と左右の境界との間における、ピクセル単位の余白の量です。
 - `scrolling` {{deprecated_inline}}
-
   - : ブラウザーがフレームにスクロールバーを表示することを示します。
-
     - `auto`
       - : フレームの内容が、フレームの寸法よりも大きい場合のみ。
     - `yes`

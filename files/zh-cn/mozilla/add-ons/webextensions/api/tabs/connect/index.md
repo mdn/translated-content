@@ -25,9 +25,7 @@ browser.tabs.connect(
 - `tabId`
   - : `integer`。要连接到其内容脚本的标签页的 ID。
 - `connectInfo` {{optional_inline}}
-
   - : 包含以下属性的对象：
-
     - `name` {{optional_inline}}
       - : `string`。将传递给属于此扩展并在指定标签页中运行的内容脚本的 {{WebExtAPIRef("runtime.onConnect")}} 事件监听器。
     - `frameId` {{optional_inline}}

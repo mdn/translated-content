@@ -2,7 +2,7 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
+  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
 {{JSRef}}
@@ -138,6 +138,7 @@ const array = [0, 1, , , , 5, 6];
 // 顯示所有索引，包括未賦值的
 array.find((value, index) => {
   console.log("訪問索引", index, "，值為", value);
+  return false;
 });
 // 訪問索引 0 ，值為 0
 // 訪問索引 1 ，值為 1
@@ -156,6 +157,7 @@ array.find((value, index) => {
   }
   // 即使已刪除，索引 5 仍會被訪問
   console.log("訪問索引", index, "，值為", value);
+  return false;
 });
 // 刪除 array[5]，值為 5
 // 訪問索引 0 ，值為 0

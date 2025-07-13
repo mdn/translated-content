@@ -11,7 +11,7 @@ l10n:
 
 オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/CSS_colors)の使用値が含まれます。
 
-{{InteractiveExample("CSS Demo: color-scheme")}}
+{{InteractiveExample("CSS デモ: color-scheme")}}
 
 ```css interactive-example-choice
 color-scheme: normal;
@@ -66,7 +66,6 @@ color-scheme: unset;
 - `dark`
   - : オペレーティングシステムのダーク配色を使用して要素をレンダリングできることを示します。
 - `only`
-
   - : ユーザーエージェントが要素の配色を上書きすることを禁じます。
 
     特定の要素または `:root` に `color-scheme: only light;` を適用することで、 Chrome の[自動ダークテーマ](https://developer.chrome.com/blog/auto-dark-theme/#per-element-opt-out)による色上書きを無効にするために使用することができます。

@@ -11,7 +11,7 @@ l10n:
 
 `offset-path` プロパティは、{{cssxref("offset-distance")}}、{{cssxref("offset-rotate")}}、{{cssxref("offset-anchor")}} プロパティと組み合わせて使用し、パスに沿った要素の位置と方向を制御します。
 
-{{InteractiveExample("CSS Demo: offset-path")}}
+{{InteractiveExample("CSS デモ: offset-path")}}
 
 ```css interactive-example-choice
 offset-path: path("M-70,-40 C-70,70 70,70 70,-40");
@@ -124,27 +124,20 @@ offset-path: unset;
 `offset-path` プロパティは、 `<offset-path>` 値、 [`<coord-box>`](/ja/docs/Web/CSS/box-edge#値) 値、またはその両方、あるいは `none` キーワードを値として導きます。 `<offset-path>` 値は {{cssxref("ray","ray()")}} 関数、 {{cssxref("url_value", "&lt;url&gt;")}} 値、または [`<basic-shape>`](/ja/docs/Web/CSS/basic-shape) 値です。
 
 - `none`
-
   - : 要素がオフセットパスをたどらないことを指定します。値 `none` は、要素が[オフセット変換](/ja/docs/Web/CSS/offset)を持たないことと同じです。この場合、要素の動きは、オフセットパスではなく、 {{cssxref("top")}} や {{cssxref("left")}} などの既定の位置プロパティによって決まります。これは既定値です。
 
 - `<offset-path>`
-
   - : `ray()` 関数、 `<url>` 値、または `<basic-shape>` 値で、幾何学的オフセットのパスを指定します。省略した場合、 `<coord-box>` 値のパス形状は `inset(0 round X)` となります。ここで `X` は、[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)を確立する要素の {{cssxref("border-radius")}} の値です。
-
     - {{cssxref("ray","ray()")}}
-
       - : 指定した位置から、指定した長さで、指定した角度で伸びる線を定義します。 `ray()` 関数は、最大 4 つの引数（{{CSSxRef("angle")}}、オプションのサイズ値、オプションのキーワード `contain`、およびオプションの `at <position>`）を受け取ります。
 
     - {{cssxref("url_value", "&lt;url&gt;")}}
-
       - : [SVG 図形要素](/ja/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes)の ID を指定します。パスは、 `url()` 関数で `id` によって参照される SVG {{SVGElement("circle")}}, {{SVGElement("ellipse")}}, {{SVGElement("line")}}, {{SVGElement("path")}}, {{SVGElement("polygon")}}, {{SVGElement("polyline")}}, {{SVGElement("rect")}} のいずれかの要素の形状です。 URL が図形要素を参照していない場合、または無効な場合、オフセットパスの解決値は `path("M0,0")` （これは有効な `<basic-shape>` 値です）になります。
 
     - {{cssxref("basic-shape")}}
-
       - : オフセットパスを、 [CSS 基本図形関数](/ja/docs/Web/CSS/basic-shape)（ {{cssxref("basic-shape/circle","circle()")}}, {{cssxref("basic-shape/ellipse","ellipse()")}}, {{cssxref("basic-shape/inset","inset()")}}, {{cssxref("basic-shape/path","path()")}}, {{cssxref("basic-shape/polygon","polygon()")}}, {{cssxref("basic-shape/rect","rect()")}}, {{cssxref("basic-shape/xywh","xywh()")}} など）と同等のパスとして指定します。例えば、 `<basic_shape>` が `ellipse()` 関数である場合、パスは、楕円の右端の点から時計回りに 1 回転した楕円の概要になります。 `at <position>` 引数を受け入れる `ellipse()` および `circle()` では、 `<position>` が省略された場合、要素に {{cssxref("offset-position")}} が指定されていない限り、位置は既定で `center` になります。この場合、 `offset-position` の値が `at <position>` 引数に使用されます。より複雑な形状は、 {{cssxref("basic-shape/shape","shape()")}} 関数を使用して定義することができます。
 
 - [`<coord-box>`](/ja/docs/Web/CSS/box-edge#値)
-
   - : パスを含む[参照ボックス](/ja/docs/Web/CSS/CSS_shapes/Basic_shapes#参照ボックス)のサイズ情報を指定します。参照ボックスは、この要素の包含ブロックを確立する要素から派生します。このパラメータはオプションです。指定しない場合、CSS コンテキストでは既定値は `border-box` です。 SVG のコンテキストでは、この値は `view-box` として扱われます。 `ray()` または `<basic-shape>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、それぞれ、ray または `<basic-shape>` の参照ボックスを提供します。 `<url>` を使用してオフセットパスを定義する場合、 `<coord-box>` の値は、図形要素のビューポートおよびユーザー座標系を提供し、原点 (`0 0`) は左上隅、サイズは `1px` となります。
 
 ## 解説

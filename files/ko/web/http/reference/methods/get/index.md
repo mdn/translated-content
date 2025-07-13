@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Methods/GET
 original_slug: Web/HTTP/Methods/GET
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `GET` 메서드**는 특정한 리소스를 가져오도록 요청합니다. `GET` 요청은 데이터를 가져올 때만 사용해야 합니다.
 
 > [!NOTE]
@@ -59,6 +57,6 @@ GET /index.html
 
 ## 같이 보기
 
-- [HTTP 헤더](/ko/docs/Web/HTTP/Headers)
+- [HTTP 헤더](/ko/docs/Web/HTTP/Reference/Headers)
 - {{HTTPHeader("Range")}}
 - {{httpmethod("POST")}}

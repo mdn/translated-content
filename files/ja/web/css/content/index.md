@@ -11,7 +11,7 @@ l10n:
 
 `content` プロパティを使用して挿入されたオブジェクトは、 **無名の{{ glossary("replaced elements", "置換要素")}}** になります。
 
-{{InteractiveExample("CSS Demo: content", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: content", "tabbed-shorter")}}
 
 ```css interactive-example
 .topic-games::before {
@@ -96,24 +96,19 @@ content: unset;
 上記で挙げたキーワードとデータ型については、下記でさらに詳しく説明します。
 
 - `none`
-
   - : 擬似要素に適用された場合は、その擬似要素は生成されません。
     要素に適用された場合は、この値は効果がありません。
 
 - `normal`
-
   - : 既定値です。 {{cssxref("::before")}} および {{cssxref("::after")}} 擬似要素では `none` として計算されます。それ以外の擬似要素では、 {{cssxref("::marker")}}、{{cssxref("::placeholder")}}、{{cssxref("::file-selector-button")}} において、コンテンツは初期（または通常）コンテンツが期待されます。通常の要素またはページマージンボックスの場合、これは要素の子孫に計算されます。
 
 - {{cssxref("&lt;string&gt;")}}
-
   - : 一致する単一引用符または二重引用符で囲まれた文字の並び。複数の文字列値は連結されます（CSS には連結演算子はありません）。
 
 - {{cssxref("&lt;image&gt;")}}
-
   - : {{cssxref("&lt;image&gt;")}} で、表示する画像を表します。 {{cssxref("url_value", "&lt;url&gt;")}}、{{cssxref("image/image-set", "image-set()")}}、{{cssxref("&lt;gradient&gt;")}} のデータ型、または {{cssxref("element", "element()")}} 関数で定義されるウェブページ自身の一部です。
 
 - `<counter>`
-
   - : `<counter>` の値は [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)の値で、通常は {{cssxref("&lt;counter-reset&gt;")}} および {{cssxref("&lt;counter-increment&gt;")}} プロパティで定義され、計算によって生み出される数値です。 {{cssxref("counter", "counter()")}} または {{cssxref("counters", "counters()")}} 関数を使用して表示することができます。
     - {{cssxref("counter", "counter()")}}
       - : {{cssxref("counter", "counter()")}} 関数には、 'counter(_名前_)' または 'counter(_名前_, スタイル)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前の最も内側のカウンターです。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
@@ -121,7 +116,6 @@ content: unset;
       - : {{cssxref("counters", "counters()")}} 関数も、 'counters(_名前_, _文字列_)' または 'counters(_名前_, _文字列_, _スタイル_)' の二つの形式があります。生成されるテキストは、その擬似要素のスコープにおけるその名前のすべてのカウンターの値であり、外側から内側に向けて、指定された文字列で区切られます。 {{cssxref("&lt;list-style-type&gt;")}} で指定されたスタイルで整形されます（`decimal` が既定値です）。
 
 - `<quote>`
-
   - : `<quote>` データ型には、言語または位置に依存したキーワードです。
     - `open-quote` および `close-quote`
       - : これらの値は、適切な {{cssxref("quotes")}} プロパティで指定された適切な文字列に置き換えられます。
@@ -129,15 +123,12 @@ content: unset;
       - : コンテンツには何も挿入されませんが、引用符の入れ子レベルが増加（減少）します。
 
 - `<target>`
-
   - : `<target>` データ型には、リンクのターゲット側から取得した相互参照を作成する 3 つのターゲット関数、`<target-counter()>`、`<target-counters()>`、`<target-text()>` が含まれます。[形式文法](#形式文法)を参照してください。
 
 - `<leader()>`
-
   - : `<leader()>` データ型には、リーダー関数として `leader( <leader-type> )` が含まれます。この関数は、キーワード値 `dotted`、`solid`、または `space` （それぞれ `leader(".")`、`leader("_")`、`leader(" ")` に相当）、または `<string>` を引数として受け入れます。対応していて、`content` の値として使用された場合、指定されたリーダーの種類は繰り返しパターンとして挿入され、水平線上のコンテンツを視覚的に接続します。
 
 - `attr(x)`
-
   - : CSS 関数 `attr(x)` は、選択された要素、または擬似要素の元となる要素の属性値を取得します。要素の属性 `x` の値は、属性名を表す解釈前の文字列です。属性 `x` が存在しない場合は、空文字列が返値として返されます。 属性名引数の大文字小文字の区別は、文書内の言語に依存します。
 
 - 代替テキスト: `/ <string> | <counter>`

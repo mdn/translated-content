@@ -9,7 +9,7 @@ l10n:
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{InteractiveExample("CSS デモ: animation-fill-mode")}}
 
 ```css interactive-example-choice
 animation-fill-mode: none;
@@ -143,7 +143,6 @@ animation-fill-mode: unset;
 - `none`
   - : アニメーションが実行されていない時は、対象にスタイルを適用しません。要素は適用されているその他の CSS 規則を使用して表示されます。これが既定値です。
 - `forwards`
-
   - : 対象は実行の最後の[キーフレーム](/ja/docs/Web/CSS/@keyframes)で設定された計算値を保持します。最後のキーフレームは {{cssxref("animation-direction")}} と {{cssxref("animation-iteration-count")}} の値によって変わります。
 
     | `animation-direction` | `animation-iteration-count` | 最後のキーフレーム |
@@ -158,7 +157,6 @@ animation-fill-mode: unset;
     アニメーションするプロパティは、設定された [`will-change`](/ja/docs/Web/CSS/will-change) プロパティの値に含められたかのように動作します。アニメーション中に新しい重ね合わせコンテキストが作成された場合、アニメーションが完了した後も、対象要素は重ね合わせコンテキストを保持します。
 
 - `backwards`
-
   - : アニメーションは最初の適切な[キーフレーム](/ja/docs/Web/CSS/@keyframes)で定義された値を対象に適用されると同時に適用し、 {{cssxref("animation-delay")}} の期間これを保持します。最初の適切なキーフレームは、 {{cssxref("animation-direction")}} の値によって変わります。
 
     | `animation-direction`                | 最初の適切なキーフレーム |

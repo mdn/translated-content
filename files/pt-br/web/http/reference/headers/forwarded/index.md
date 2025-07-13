@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Forwarded
 original_slug: Web/HTTP/Headers/Forwarded
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Forwarded`** contém informação dos [servidores de proxy reverso](/pt-BR/docs/Web/HTTP/Proxy_servers_and_tunneling) que é alterada ou perdida quando um proxy está envolvido no caminho da requisição.
 
 A versão alternativa e de fato padrão deste cabeçalho são os cabeçalhos {{HTTPHeader("X-Forwarded-For")}}, {{HTTPHeader("X-Forwarded-Host")}} e {{HTTPHeader("X-Forwarded-Proto")}}.
@@ -34,9 +32,7 @@ Forwarded: by=<identifier>;for=<identifier>;host=<host>;proto=<http|https>
 ## Diretivas
 
 - \<identifier>
-
   - : Um identificador divulgando a informação que é alterada ou perdida usando um proxy. Ela pode ser tanto:
-
     - um endereço IP (v4 ou v6, opicionalmente com a porta, e IPv6 encapsulado por colchetes e aspas),
     - um identificador ofuscado (como um "\_hidden" ou "\_secret"),
     - ou "unknown" (desconhecido) quando a entidade precedente não é conhecida (e você ainda quer indicar que aquela repassagem da requisição foi feita).

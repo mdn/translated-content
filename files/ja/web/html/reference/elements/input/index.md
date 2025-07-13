@@ -9,7 +9,7 @@ l10n:
 
 **`<input>`** は [HTML](/ja/docs/Web/HTML) の要素で、ユーザーからデータを受け取るための、ウェブベースのフォーム用の操作可能なコントロールを作成するために使用します。端末と{{Glossary("User agent", "ユーザーエージェント")}}によりますが、広範に渡る種類のデータ入力やコントロールウィジェットが利用できます。`<input>` 要素は入力型と属性の組み合わせの数が非常に多いため、HTML の中で最も強力かつ最も複雑な要素の一つです。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="name">Name (4 to 8 characters):</label>
@@ -367,19 +367,15 @@ label {
 ### 個々の属性
 
 - [`accept`](/ja/docs/Web/HTML/Reference/Attributes/accept)
-
   - : `file` 入力型に対してのみ有効です。`accept` 属性は `file` アップロードコントロールの中でどのファイル形式が選択可能であるかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
 - `alt`
-
   - : `image` ボタンに対してのみ有効です。`alt` 属性は画像の代替テキストを提供します。[`src`](#src) の画像が存在しないか、または読み込みに失敗した場合にこの属性の値を表示します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 - `autocapitalize`
-
   - : 入力されたテキストを自動的に大文字にするかどうか、大文字にする場合はその方法を制御します。詳しい情報はグローバル属性 [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) のページを参照してください。
 
 - [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)
-
   - : （論理属性では**ありません**!） [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) 属性は空白区切りの文字列の値を取り、指定された場合は、入力欄が提供する自動補完機能の種類を示します。自動補完のよくある実装は、以前同じ入力欄に入力された値を単に再呼び出しするものですが、もっと複雑な自動補完もあり得ます。例えば、ブラウザーが端末の連絡先リストと連携して、`email` 入力欄でメールアドレスを自動補完したりする可能性もあります。許可されている値は [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete#values) を参照してください。
 
     `autocomplete` 属性は `hidden`, `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color`, `password` で有効です。この属性は数値またはテキストデータを返さない入力型では効果がなく、`checkbox`, `radio`, `file` とすべてのボタン型を除いたすべての入力型で有効になります。
@@ -387,7 +383,6 @@ label {
     詳しい情報については [`autocomplete` 属性](/ja/docs/Web/HTML/Reference/Attributes/autocomplete)を参照してください。パスワードセキュリティに関する情報や、`autocomplete` が `hidden` に対して他の入力型とどう異なるのかについての情報があります。
 
 - `autofocus`
-
   - : 論理属性で、指定された場合は、ページの読み込みが完了したとき（またはその要素を含む {{HTMLElement("dialog")}} が表示されたとき）に、自動的にその入力欄がフォーカスを持つことを示します。
 
     > **メモ:** `autofocus` 属性がついた要素は、{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} イベントが発生する前にフォーカスを得ることがあります。
@@ -404,7 +399,6 @@ label {
 - [`capture`](/ja/docs/Web/HTML/Reference/Attributes/capture)
   - : HTML Media Capture 仕様書で導入され、`file` 入力型に対してのみ有効です。`capture` 属性は、どのメディア (マイク、ビデオ、カメラ) を使用して新しいファイルをキャプチャし、対応するシナリオで `file` アップロードコントロールを使用してアップロードするかを定義します。{{HTMLElement("input/file", "file")}} 入力型を参照してください。
 - `checked`
-
   - : `radio` 型と `checkbox` 型の両方で有効で、`checked` は論理属性です。`radio` 型に存在した場合、そのラジオボタンが同じ名前のラジオボタンのグループの中で現在選択されているものであることを示します。`checkbox` 型に存在した場合、(ページが読み込まれたとき) 既定でチェックボックスがチェックされていることを示します。このチェックボックスが現在チェックされているかどうかを示すものでは<em>ありません</em>。チェックボックスの状態が変更された場合でも、このコンテンツ属性はその変更を反映しません。（[`HTMLInputElement` の `checked` IDL 属性](/ja/docs/Web/API/HTMLInputElement)のみが更新されます。）
 
     > [!NOTE]
@@ -413,7 +407,6 @@ label {
     > 例えば、`name` が `fruit` で、`value` が `cherry` であるチェックボックスがチェックされていると、送信されるフォームデータには `fruit=cherry` が含まれます。チェックボックスがチェックされていない場合、フォームデータには全く含まれません。チェックボックスやラジオボタンの既定の `value` は `on` です。
 
 - [`dirname`](/ja/docs/Web/HTML/Reference/Attributes/dirname)
-
   - : `hidden`, `text`, `search`, `url`, `tel`, `email` 入力型について有効で、`dirname` 属性によって要素の書字方向を送信することができます。これが含まれていると、フォームコントロールは 2 組の名前と値を送信します。1 組目は [`name`](#name) と [`value`](#value) であり、2 組目は名前が `dirname` 属性の値で、値に `ltr` または `rtl` がブラウザーによって設定されます。
 
     ```html
@@ -431,7 +424,6 @@ label {
     詳しくは、 [`dirname` attribute](/ja/docs/Web/HTML/Reference/Attributes/dirname) を参照してください。
 
 - [`disabled`](/ja/docs/Web/HTML/Reference/Attributes/disabled)
-
   - : 論理属性で、存在する場合、ユーザーが入力欄を操作できないことを示します。無効な入力欄は、ふつうより薄い色や、その他のフィールドが使用できないことを示す形で表示されます。
 
     特に、無効になった入力欄は {{domxref("Element/click_event", "click")}} イベントを受け取らず、フォームと共に送信されることもありません。
@@ -440,7 +432,6 @@ label {
     > 仕様書で要件とはされていませんが、Firefox は既定で、ページを再読み込みしても `<input>` を [動的に無効化した状態を維持します](https://stackoverflow.com/questions/5985839/bug-with-firefox-disabled-attribute-of-input-not-resetting-when-refreshing)。この機能は [`autocomplete`](#autocomplete) 属性で制御することができます。
 
 - `form`
-
   - : 文字列で、入力欄が関連づけられた {{HTMLElement("form")}} 要素（つまり、**フォームオーナー**）を指定します。存在する場合、この文字列値は同一文書内の `<form>` 要素の [`id`](#id) と一致している必要があります。この属性が指定されない場合は、`<input>` 要素は直近の内包するフォームに（もしあれば）関連付けられます。
 
     `form` 属性によって、入力欄を文書内のどこに置いても、文書内の他の場所にあるフォームと関連付けることができます。
@@ -465,7 +456,6 @@ label {
 - `inputmode`
   - : すべての要素で有効なグローバル属性です、この要素やその内容を編集する際に使用される仮想キーボード設定の種類をブラウザーに示すヒントを提供します。値としては `none`, `text`, `tel`, `url`, `email`, `numeric`, `decimal`, `search` があります。
 - `list`
-
   - : `list` 属性で与えられる値は、同じ文書内にある {{HTMLElement("datalist")}} 要素の {{domxref("Element.id", "id")}} としてください。`<datalist>` は、この入力欄でユーザーに提案する事前定義された値のリストを提供します。リストに [`type`](#type) と互換性のない値が含まれていた場合は、提案の選択肢には含まれません。この値は提案として使用されるものであり、要件ではありません。ユーザーはこの定義済みリストから選択することもできるし、別な値を提供することもできます。
 
     これは `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range`, `color` で有効です。
@@ -477,19 +467,16 @@ label {
     {{htmlelement('datalist')}} 要素を参照してください。
 
 - [`max`](/ja/docs/Web/HTML/Reference/Attributes/max)
-
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最大値を定義します。要素に入力された [`value`](#value) がこれを超えた場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`max` 属性の値が数値でない場合は、要素に最大値は設定されません。
 
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後10時から午前4時までの自国の範囲を指定することができます。
 
 - [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength)
-
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最大文字列長（UTF-16 コード単位で計測）を定義します。これは `0` 以上の整数値でなければなりません。 `maxlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最大長が設定されません。この値は `minlength` の値以上である必要もあります。
 
     欄に入力されたテキストの文字数が UTF-16 コード単位で `maxlength` よりも多いと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。既定では、ブラウザーはユーザーが `maxlength` 属性で許可された文字数以上を入力するのを防ぎます。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
-
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効であり、許可される値の範囲の最も低い値を定義します。要素に入力された [`value`](#value) がこれを下回った場合、要素は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。`min` 属性の値が数値でない場合は、要素に最小値は設定されません。
 
     この値は `max` 属性の値以下である必要があります。`min` 属性が存在するものの、指定されていなかったり無効であったりした場合は、`min` の値は適用されません。`min` 属性が有効であり、値が空ではなく `min` 属性で許可された最小値よりも小さかった場合、制約の検証によりフォームの送信が行われません。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
@@ -497,23 +484,19 @@ label {
     特殊な場合があります。データ型が期間を表す場合（日付や時刻など）、`max` の値は `min` の値よりも小さくなる場合があり、これは範囲が折り返す可能性があることを表します。例えば、これによって午後 10 時から午前 4 時までの自国の範囲を指定することができます。
 
 - [`minlength`](/ja/docs/Web/HTML/Reference/Attributes/minlength)
-
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効であり、ユーザーがフィールドに入力することができる最小文字列長 (UTF-16 コード単位で計測) を定義します。これは負数ではなく、`maxlength` で指定された値以下の整数値でなければなりません。`minlength` が指定されなかった場合、または無効な値が指定された場合は、その入力欄には最小文字数が設定されません。
 
     欄に入力されたテキストの文字数が UTF-16 コード単位で `minlength` よりも少ないと、この入力欄は[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)に不合格になります。制約検証は、ユーザーによって値が変更された場合にのみ適用されます。詳しくは[クライアント側検証](#クライアント側検証)を参照してください。
 
 - [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple)
-
   - : 論理属性の `multiple` は、設定されている場合、email 入力欄ではユーザーがウィジェット内でカンマ区切りで複数のメールアドレスを入力できること、また `file` 入力欄では複数のファイルを選択することができることを意味します。{{HTMLElement("input/email", "email")}} および {{HTMLElement("input/file", "file")}} 入力型を参照してください。
 
 - `name`
-
   - : 入力コントロールの名前を指定する文字列です。この名前はフォームデータが送信される時に、コントロールの値と共に送信されます。
 
     `name` は（厳密にはそうではありませんが）必須の属性と考えてください。入力欄に `name` が指定されていなかった場合や `name` が空欄だった場合、その入力欄の値はフォームと一緒に送信されません。（無効なコントロール、チェックされていないラジオボタン、チェックされていないチェックボックス、リセットボタンも送信されません。）
 
     特殊な場合が 2 つあります。
-
     1. `_charset_` : `<input>` 要素の {{HTMLElement("input/hidden", "hidden")}} 型として使用された場合、入力欄の `value` には自動的に、フォームを送信するのに使用される文字エンコーディングが{{Glossary("User agent", "ユーザーエージェント")}}によって設定されます。
     2. `isindex`: 歴史的な理由で、[`isindex`](https://html.spec.whatwg.org/multipage/form-control-infrastructure.html#attr-fe-name) という名前は許可されていません。
 
@@ -540,9 +523,7 @@ label {
     > フォームの組み込みプロパティに対応する `name` をフォーム要素に与えないようにしてください。そうすると、対応する入力欄に参照するとき、定義済みのプロパティやメソッドを上書きしてしまうからです。
 
 - [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern)
-
   - : `text`, `search`, `url`, `tel`, `email`, `password` で有効です。`pattern` 属性は、指定された場合、入力の [`value`](#value) が一致すれば値が[制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)を通過したとみなされる正規表現をコンパイルするのに使われます。これは {{jsxref("RegExp")}} 型で使用される有効な JavaScript の正規表現でなければならず、これは[正規表現のガイド](/ja/docs/Web/JavaScript/Guide/Regular_expressions)で説明されている通りです。パターンのテキストの周囲にスラッシュを指定しないでください。正規表現がコンパイルするときには、次のようになります。
-
     1. パターンは暗黙的に `^(?:` と `)$` で囲まれ、入力値全体と一致することが要求されます。すなわち、 `^(?:<パターン>)$` となります。
     2. `'v'` フラグを指定すると、パターンは {{Glossary("ASCII")}} ではなく、Unicode コードポイントの並びとして扱われます。
 
@@ -553,22 +534,17 @@ label {
 詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
 - [`placeholder`](/ja/docs/Web/HTML/Reference/Attributes/placeholder)
-
   - : `text`, `search`, `url`, `tel`, `email`, `password`, `number` で有効です。`placeholder` 属性は、フィールドでどのような情報が期待されているかについて、ユーザーに簡単なヒントを与える文字列です。説明やプロンプトではなく、期待されるデータのタイプのヒントとなる単語や短いフレーズである必要があります。テキストには、改行を含めては*いけません*。例えば、ユーザーの名前を入力するフィールドで、そのラベルが "First Name" の場合、適切なプレースホルダーは "e.g. Mustafa" となります。
 
     > **メモ:** `placeholder` 属性は、フォームを説明するためには他の方法ほど意味的に有用ではなく、コンテンツに予期せぬ技術的な問題を引き起こす可能性があります。詳細は[ラベル](#ラベル)を参照してください。
 
 - `popovertarget`
-
   - : `<input type="button">` をポップオーバー制御ボタンにします。制御するポップオーバー要素の ID を値として取ります。詳細は{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。 `popovertarget` 属性を使用してポップオーバーとその呼び出しボタンを関連付けると、さらに 2 つの有益な効果があります。
-
     - ブラウザーは、ポップオーバーと呼び出し元の間に、暗黙的な [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を生成し、ポップオーバーを表示させる際には、キーボードフォーカスナビゲーションの論理的な位置にポップオーバーを配置します。これにより、キーボードや支援技術 (AT) のユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)も参照してください）。
     - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)を参照してください。
 
 - `popovertargetaction`
-
   - : 制御用の `<input type="button">` で制御されるポップオーバー要素で行われる動作を指定します。取りうる値は次の通りです。
-
     - `"hide"`
       - : このボタンは、表示されているポップオーバーを非表示にします。非表示になっているポップオーバーを非表示にしようとした場合は、何もしません。
     - `"show"`
@@ -577,31 +553,25 @@ label {
       - : このボタンは、ポップオーバーの表示と非表示を切り替えます。ポップオーバーが非表示の場合、表示させます。ポップオーバーが表示されている場合、非表示になります。`popovertargetaction` が省略された場合は、`"toggle"` が制御ボタンで実行される既定のアクションです。
 
 - [`readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly)
-
   - : 論理属性で、存在すれば、ユーザーが入力欄の値を編集できないことを示します。`readonly` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password` の各入力型が対応しています。
 
     詳しくは [HTML 属性: `readonly`](/ja/docs/Web/HTML/Reference/Attributes/readonly) を参照してください。
 
 - [`required`](/ja/docs/Web/HTML/Reference/Attributes/required)
-
   - : `required` は論理属性であり、所有するフォームが送信される前に、ユーザーが入力欄の値を指定しなければならないことを示します。`required` 属性は `text`, `search`, `url`, `tel`, `email`, `date`, `month`, `week`, `time`, `datetime-local`, `number`, `password`, `checkbox`, `radio`, `file` の各入力型で対応しています。
 
     詳しくは[クライアント側の検証](#クライアント側の検証)および [HTML 属性: `required`](/ja/docs/Web/HTML/Reference/Attributes/required) を参照してください。
 
 - [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)
-
   - : `email`, `password`, `tel`, `text` の `input` 型でのみ有効です。入力内容をどれだけ表示するかを指定します。基本的には、CSS の [`width`](/ja/docs/Web/CSS/width) プロパティを設定するのと同じ効果が得られますが、いくつかの特徴があります。値の実際の単位は、入力型によって異なります。`password` や `text` の場合は文字数（または `em` 単位）で既定値は `20`、それ以外の場合はピクセルとなります。CSS の `width` は `size` 属性よりも優先されます。
 
 - `src`
-
   - : `image` 入力ボタンにのみ有効で、`src` は、グラフィカルな送信ボタンを表現するために表示する画像ファイルの URL を指定する文字列です。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
-
   - : `date`, `month`, `week`, `time`, `datetime-local`, `number`, `range` で有効です。[`step`](/ja/docs/Web/HTML/Reference/Attributes/step) 属性は、値が準拠すべき粒度を指定する数値です。
 
     明示的に指定しない場合は次のようになります。
-
     - `step` の既定値は、`number` と `range` の場合は 1 です。
     - 日付や時刻の入力型では、型ごとにふさわしい `step` の既定値があります。[`date`](/ja/docs/Web/HTML/Reference/Elements/input/date#step)、[`datetime-local`](/ja/docs/Web/HTML/Reference/Elements/input/datetime-local#step)、[`month`](/ja/docs/Web/HTML/Reference/Elements/input/month#step)、[`time`](/ja/docs/Web/HTML/Reference/Elements/input/time#step)、[`week`](/ja/docs/Web/HTML/Reference/Elements/input/week#step) の個別のページを参照してください。
 
@@ -617,25 +587,20 @@ label {
     詳しくは[クライアント側の検証](#クライアント側の検証)を参照してください。
 
 - `tabindex`
-
   - : すべての要素、すべての入力型で有効なグローバル属性で、要素が入力フォーカスを受けられる (フォーカス可能) かどうかを示す整数属性であり、順次キーボードナビゲーションに加わるべきかどうかを示します。hidden 型の入力を除くすべての入力型がフォーカス可能であるため、この属性はフォームコントロールに使用すべきではありません。そうすると文書内のすべての要素のフォーカス順序を管理しなければならず、間違って行うとユーザビリティやアクセシビリティを損なう危険性があるからです。
 
 - `title`
-
   - : すべての要素、すべての入力型で有効なグローバル属性で、所属する要素に関連するアドバイス情報を表すテキストを指定します。このような情報は、ふつうツールチップとしてユーザーに提示されますが、必ずそうとは限りません。title は、フォームコントロールの目的の主たる説明として使用してはいけません。代わりに {{htmlelement('label')}} 要素を使用し、その `for` 属性でフォームコントロールの [`id`](#id) 属性を指すようにしてください。下記の[ラベル](#ラベル)を参照してください。
 
 - `type`
-
   - : 文字列で、表示するコントロールの型を指定します。例えば、チェックボックスを生成するには、`checkbox` の値が使用されます。省略された場合（または不明な値が指定された場合）は、入力型に `text` が使用され、テキストの入力欄が生成されます。
 
     許可されている値は [input の型](#input_の型)にあります。
 
 - `value`
-
   - : 入力コントロールの値です。HTML の中で指定されると、これは初期値となり、その後で JavaScript を使用してそれぞれの {{domxref("HTMLInputElement")}} オブジェクトの `value` プロパティにアクセスすることで、いつでも変更したり受け取ったりすることができます。`value` 属性は常に省略可ですが、`checkbox`, `radio`, `hidden` においては必須だと考えてください。
 
 - `width`
-
   - : `image` 入力ボタンにのみ有効で、`width` にはグラフィックの送信ボタンを表現するために表示する画像ファイルの幅を指定します。{{HTMLElement("input/image", "image")}} 入力型を参照してください。
 
 ### 標準外の属性
@@ -686,7 +651,6 @@ label {
 </table>
 
 - `incremental` {{non-standard_inline}}
-
   - : 論理属性 `incremental` は WebKit および Blink 拡張で（そのため Safari, Opera, Chrome, などが対応）、もし存在すれば、{{Glossary("User agent", "ユーザーエージェント")}}に入力をライブ検索として処理します。ユーザーがフィールドの値を編集すると、ユーザーエージェントは {{domxref("HTMLInputElement/search_event", "search")}} イベントを検索ボックスを表す {{domxref("HTMLInputElement")}} オブジェクトへ送信します。これにより、ユーザーが検索を編集するたびに、コードからリアルタイムに検索結果を更新することができます。
 
     `incremental` が指定されていない場合、{{domxref("HTMLInputElement/search_event", "search")}} イベントはユーザーが明示的に検索を実行した時のみ（フィールドを編集中に <kbd>Enter</kbd> または <kbd>Return</kbd> キーを押すなど) 送信されます。
@@ -694,17 +658,14 @@ label {
     `search` イベントは発生頻度が制限されているため、実装により定義された間隔よりも頻繁に送信されることはありません。
 
 - `orient` {{non-standard_inline}}
-
   - : CSS の標準外の -moz-orient non-standard プロパティと同様に {{htmlelement('progress')}} および {{htmlelement('meter')}} 要素に影響を与える `orient` 属性は、範囲スライダーの向きを定義する定義します。値は `horizontal` が範囲を水平方向に描画することを、`vertical` が範囲を垂直に描画することを意味します。垂直フォームコントロールを作成する現行の手法については、[垂直フォームコントロールの作成](/ja/docs/Web/CSS/CSS_writing_modes/Vertical_controls)を参照してください。
 
 - `results` {{non-standard_inline}}
-
   - : `results` 属性は Safari のみが対応しており、 `<input>` 要素のネイティブな検索クエリーのドロップダウンメニューに表示する項目の最大数を上書きすることができる数値です。
 
     この値は、負でない 10 進数でなければならなりません。指定しない場合、または無効な値を指定した場合は、ブラウザーの既定の最大項目数が使用されます。
 
 - `webkitdirectory` {{non-standard_inline}}
-
   - : 論理属性の `webkitdirectory` は、もし存在する場合は、ファイル選択インターフェイスでユーザーがディレクトリーのみを選択することができることを示します。詳しい解説と例については {{domxref("HTMLInputElement.webkitdirectory")}} を参照してください。
 
     `webkitdirectory` はもともと WebKit ベースのブラウザー向けのみに実装されたものですが、Microsoft Edge や Firefox 50 以降でも使用できます。しかし、比較的広く対応されていますが、まだ標準になっておらず、代替手段がない限りは使用するべきではありません。

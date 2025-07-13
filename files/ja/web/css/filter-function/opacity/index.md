@@ -9,7 +9,7 @@ l10n:
 
 **`opacity()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像のサンプルに透過性を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: opacity()")}}
+{{InteractiveExample("CSS デモ: opacity()")}}
 
 ```css interactive-example-choice
 filter: opacity(1);

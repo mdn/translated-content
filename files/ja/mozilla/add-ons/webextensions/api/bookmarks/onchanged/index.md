@@ -35,14 +35,11 @@ browser.bookmarks.onChanged.hasListener(listener)
 ### 引数
 
 - `callback`
-
   - : イベントが発火した際に呼び出される関数を指定します。この関数には以下の引数が渡ります。
-
     - `id`
       - : 変更を受けた要素の ID を表す {{jsxref("string")}}
 
     <!---->
-
     - `changeInfo`
       - : 変更に関する詳細を含んだ {{jsxref("object")}}
 

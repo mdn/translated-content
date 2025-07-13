@@ -9,7 +9,7 @@ l10n:
 
 **`normalize()`** メソッドは、文字列の Unicode 正規化形式を返します。
 
-{{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.normalize()", "taller")}}
 
 ```js interactive-example
 const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";
@@ -43,11 +43,9 @@ normalize(form)
 ### 引数
 
 - `form` {{optional_inline}}
-
   - : Unicode 正規化形式を示す `"NFC"`, `"NFD"`, `"NFKC"`, `"NFKD"` のうちの一つです。省略されたり {{jsxref("undefined")}} であったりした場合は `"NFC"` が使われます。
 
     これらの値には以下の意味があります。
-
     - `"NFC"`
       - : 正規化形式 C。正準等価性によって分解され、再度合成される。
     - `"NFD"`

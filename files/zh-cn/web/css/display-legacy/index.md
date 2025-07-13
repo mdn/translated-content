@@ -12,25 +12,21 @@ CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式
 有效的 `<display-legacy>` 值：
 
 - `inline-block`
-
   - : 元素将生成块级元素盒，将被视为单个行级盒（表现为替换元素）与周围内容构成内容流。
 
     等同于 `inline flow-root`。
 
 - `inline-table`
-
   - : `inline-table` 在 HTML 中没有直接的对应关系。此值表现为 HTML {{HTMLElement("table")}} 元素，但是为行级盒而非块级盒。表格盒内部为块级上下文。
 
     等同于 `inline table`。
 
 - `inline-flex`
-
   - : 元素表现为行级元素，并按弹性盒模型对其内容进行布局。
 
     等同于 `inline flex`。
 
 - `inline-grid`
-
   - : 元素表现为行级元素，并按网格模型对其内容进行布局。
 
     等同于 `inline grid`。
@@ -81,7 +77,6 @@ CSS 2 为 `display` 属性使用单关键字的语法，对于相同布局模式
 ## 参见
 
 - {{CSSxRef("display")}}
-
   - {{CSSxRef("&lt;display-outside&gt;")}}
   - {{CSSxRef("&lt;display-inside&gt;")}}
   - {{CSSxRef("&lt;display-listitem&gt;")}}

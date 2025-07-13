@@ -9,7 +9,7 @@ l10n:
 
 **`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
 
-{{InteractiveExample("CSS Demo: word-break")}}
+{{InteractiveExample("CSS デモ: word-break")}}
 
 ```css interactive-example-choice
 word-break: normal;

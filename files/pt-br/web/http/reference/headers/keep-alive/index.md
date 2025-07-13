@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Keep-Alive
 original_slug: Web/HTTP/Headers/Keep-Alive
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho **`Keep-Alive`** permite que o remetente indique como a conexão deve ser usada, para definir um tempo limite e um máximo de requisições.
 
 > [!NOTE]
@@ -33,9 +31,7 @@ Keep-Alive: parametros
 ## Diretivas
 
 - _parâmetros_
-
   - : Uma vírgula separa a lista de parâmetros, Cada consiste de um identificador e um valor separado pelo sinal de igualdade (`'='`). São possíveis os seguintes identificadores:
-
     - `timeout`: indicando a quantidade mínima de tempo que uma conexão deve ser mantida aberta (em segundos). Observe que os tempos limite maiores que o tempo limite do TCP podem ser ignorados se nenhuma mensagem TCP keep-alive estiver definida na camada de transporte.
     - `max`: indicando o número máximo de pedidos que podem ser enviados nesta conexão antes de fechá-lo. Menor que `0`, este valor será ignorado por conexões non-pipelined, pois outra requisição será enviada na próxima resposta. Um HTTP pipeline pode usar isso para limitar o pipelining.
 

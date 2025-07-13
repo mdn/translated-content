@@ -10,7 +10,7 @@ l10n:
 
 **`<ul>`** は [HTML](/ja/docs/Web/HTML) の要素で、項目の順序なしリストを表します。一般的に、行頭記号を伴うリストとして描画されます。
 
-{{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;ul&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <ul>
@@ -40,16 +40,13 @@ li li {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `compact` {{Deprecated_inline}}
-
   - : この論理属性は、コンパクトなスタイルでリストを描画するようブラウザーに指示するものです。この属性の解釈は{{glossary("user agent", "ユーザーエージェント")}}に委ねられ、またすべてのブラウザーで動作するものでもありません。
 
     > [!WARNING]
     > この属性は非推奨になっているため、使用しないでください。代わりに [CSS](/ja/docs/Web/CSS) を使用してください。 `compact` 属性と同様の効果を得るには、 CSS の {{cssxref("line-height")}} プロパティを用い、その値として `80%` を指定します。
 
 - `type` {{Deprecated_inline}}
-
   - : リストの行頭記号の形状を指定するために用います。 HTML3.2 および HTML 4.0/4.01 tranditional で定義されていた値は以下の通りです。
-
     - `circle`
     - `disc`
     - `square`
@@ -219,7 +216,6 @@ li li {
 
 - その他のリスト関連要素: {{HTMLElement("ol")}}, {{HTMLElement("li")}}, {{HTMLElement("menu")}}
 - `<ul>` 要素の整形に有益な CSS プロパティ:
-
   - {{CSSxRef("list-style")}} プロパティ: 行頭記号の表示方法の変更
   - [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters): 複雑に入れ子になったリストの扱い
   - {{CSSxRef("line-height")}} プロパティ: 非推奨の [`compact`](#compact) 属性のシミュレート
