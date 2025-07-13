@@ -52,7 +52,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 
 ### Люди с нарушениями зрения
 
-К людям с нарушениями зрения относятся незрячие, слабовидящие и дальтоники. Многие из них пользуются экранными лупами, которые представляют собой либо физические лупы (видеоувеличители), либо программное обеспечение с возможностью масштабирования. Большинство браузеров и операционных систем в наши дни имеют возможность масштабирования. Некоторые пользователи, в частности незрячие люди, используют программы экранного доступа (скринридеры), которые читают цифровой текст вслух или выводит его на брайлевский дисплей. Некоторые примеры программ экранного доступа:
+К людям с нарушениями зрения относятся слепые (незрячие), слабовидящие и дальтоники. Многие слабовидящие люди пользуются экранными лупами, которые представляют собой либо физические лупы (видеоувеличители), либо программное обеспечение с возможностью масштабирования. Большинство браузеров и операционных систем в наши дни имеют возможность масштабирования. Некоторые пользователи, в частности незрячие люди, используют программы экранного доступа (скринридеры), которые читают цифровой текст вслух или выводит его на брайлевский дисплей. Некоторые примеры программ экранного доступа:
 
 - Платные коммерческие продукты, такие как [JAWS](https://www.freedomscientific.com/Products/software/JAWS/) (Windows) и [Dolphin Screen Reader](https://yourdolphin.com/ScreenReader) (Windows).
 - Бесплатные продукты, такие как [NVDA](https://www.nvaccess.org/) (Windows), [ChromeVox](https://support.google.com/chromebook/answer/7031755) (Chrome) и [Orca](https://wiki.gnome.org/Projects/Orca) (Linux).
@@ -66,7 +66,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 
 ### Люди с нарушениями слуха
 
-[Глухие и слабослышащие люди имеют различные степени потери слуха — от лёгкой до глубокой. Хотя некоторые из них используют вспомогательные технологии (см. [Вспомогательные устройства для людей с нарушениями слуха, голоса, речи или языка](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders)), они не получили широкого распространения.
+[Глухие и слабослышащие](https://www.nad.org/resources/american-sign-language/community-and-culture-frequently-asked-questions/) люди имеют различные степени потери слуха — от лёгкой до глубокой. Хотя некоторые из них используют вспомогательные технологии (см. [Вспомогательные устройства для людей с нарушениями слуха, голоса, речи или языка](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders)), они не получили широкого распространения.
 
 Чтобы обеспечить доступ к контенту, необходимо предоставить текстовые альтернативы. Видеоматериалы должны быть снабжены ручными субтитрами, а аудиоматериалы — транскриптами (расшифровками). Кроме того, из-за высокого уровня [языковой депривации](https://epicspecialeducationstaffing.com/language-deprivation/#:~:text=Language%20deprivation%20is%20the%20term,therefore%20not%20exposed%20to%20language.) в группах людей с нарушениями слуха следует рассмотреть возможность [упрощения текста](https://circlcenter.org/collaborative-research-automatic-text-simplification-and-reading-assistance-to-support-self-directed-learning-by-deaf-and-hard-of-hearing-computing-workers/).
 
@@ -105,8 +105,8 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 - Целевая группа W3C [Cognitive and Learning Disabilities Accessibility Task Force](https://www.w3.org/WAI/GL/task-forces/coga/) разрабатывает рекомендации по доступности веб-сайтов для людей с когнитивными нарушениями.
 - На сайте WebAIM есть страница [Cognitive page](https://webaim.org/articles/cognitive/) с соответствующей информацией и ресурсами.
 - По оценкам Центра по контролю заболеваний США, по состоянию на 2018 год каждый четвёртый житель США имеет инвалидность, и среди них [когнитивные нарушения наиболее распространены среди молодых людей](https://archive.cdc.gov/www_cdc_gov/media/releases/2018/p0816-disability.html).
-- В США некоторые виды умственной отсталости исторически назывались «умственной отсталостью». Сейчас многие считают этот термин уничижительным, поэтому его использования следует избегать.
-- В Великобритании некоторые виды умственной отсталости называются «неспособностью к обучению» или «трудностями в обучении».
+- В США некоторые виды ментальных нарушений исторически назывались «умственной отсталостью» («mental retardation»). Сейчас многие считают этот термин уничижительным, поэтому его использования следует избегать.
+- В Великобритании некоторые виды ментальных нарушений называются «неспособностью к обучению» («learning disabilities»)или «трудности в обучении» («learning difficulties»).
 
 ## Внедрение доступности в проект
 
@@ -169,7 +169,6 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
 ## Смотрите также
 
 - [Понимание WCAG](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG)
-
   - [Воспринимаемость](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable)
   - [Работоспособность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable)
   - [Понятность](/ru/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable)
