@@ -11,7 +11,7 @@ l10n:
 
 グループ内でラジオボタンは一つしか同時に選択することができません。ラジオボタンはふつう、小さな円で描かれ、選択されたら塗りつぶされたりや強調表示されたりします。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;radio&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>

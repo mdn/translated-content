@@ -3,8 +3,6 @@ title: Améliorations XUL dans Firefox 3
 slug: Mozilla/Firefox/Releases/3/XUL_improvements_in_Firefox_3
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 3 fournit un certain nombre de nouveaux éléments [XUL](/fr/XUL), ainsi que des améliorations sur des éléments existants. Bien que ces éléments soient documentés ailleurs, cet article offre une liste pratique des améliorations ainsi que des liens vers la documentation détaillée.
 
 ### Nouveaux éléments

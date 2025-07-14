@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Status/429
 original_slug: Web/HTTP/Status/429
 ---
 
-{{HTTPSidebar}}
-
 Le code de statut de réponse HTTP **`429 Too Many Requests`** indique que l'utilisateur a envoyé trop de requêtes en un temps donné.
 
 Un en-tête [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After) peut être inclus dans cette réponse afin d'indiquer le temps à attendre pour effectuer une nouvelle requête.

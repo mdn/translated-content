@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/set
 
 静的な **`Reflect.set()`** メソッドは、オブジェクトにプロパティを設定するかのように動作します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.set()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.set()")}}
 
 ```js interactive-example
 const object1 = {};

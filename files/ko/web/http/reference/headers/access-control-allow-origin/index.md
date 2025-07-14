@@ -124,5 +124,3 @@ public void destroy() {
 - {{HTTPHeader("Origin")}}
 - {{HTTPHeader("Vary")}}
 - [CORS 문제를 어떻게 해결하나요?](https://gist.github.com/wildoctopus/3730b5c60f9d5224f6c2418d07708e21)
-
-{{HTTPSidebar}}

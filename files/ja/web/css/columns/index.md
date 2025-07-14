@@ -9,7 +9,7 @@ l10n:
 
 **`columns`** は [CSS](/ja/docs/Web/CSS) 一括指定プロパティで、要素の内容物を描画する際に使用する段数や段の幅を設定します。
 
-{{InteractiveExample("CSS Demo: columns")}}
+{{InteractiveExample("CSS デモ: columns")}}
 
 ```css interactive-example-choice
 columns: 2;

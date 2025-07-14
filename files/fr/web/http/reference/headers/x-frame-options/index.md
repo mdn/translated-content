@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/X-Frame-Options
 original_slug: Web/HTTP/Headers/X-Frame-Options
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de réponse [HTTP](/fr/docs/Web/HTTP) **`X-Frame-Options`** peut être utilisé afin d'indiquer si un navigateur devrait être autorisé à afficher une page au sein d'un élément [`<frame>`](/fr/docs/Web/HTML/Element/frame), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<embed>`](/fr/docs/Web/HTML/Element/embed) ou [`<object>`](/fr/docs/Web/HTML/Element/object). Les sites peuvent utiliser cet en-tête afin d'éviter les attaques de _[clickjacking](https://fr.wikipedia.org/wiki/Clickjacking)_ (ou «&nbsp;détournement de clic&nbsp;») pour s'assurer que leur contenu ne soit pas embarqué dans d'autres sites.
 
 Ce complément de sécurité est uniquement valable lorsque l'utilisateur final visite le document avec un navigateur prenant en charge `X-Frame-Options`.

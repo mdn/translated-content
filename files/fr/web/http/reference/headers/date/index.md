@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Date
 original_slug: Web/HTTP/Headers/Date
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête général HTTP **`Date`** contient la date et l'heure d'origine du message.
 
 <table class="properties">

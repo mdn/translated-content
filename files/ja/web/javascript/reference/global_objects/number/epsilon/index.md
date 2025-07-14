@@ -9,7 +9,7 @@ l10n:
 
 **`Number.EPSILON`** プロパティは、1 と 1 より大きな最小の浮動小数点数の差を表します。
 
-{{InteractiveExample("JavaScript Demo: Number.EPSILON")}}
+{{InteractiveExample("JavaScript デモ: Number.EPSILON")}}
 
 ```js interactive-example
 const result = Math.abs(0.2 - 0.3 + 0.1);

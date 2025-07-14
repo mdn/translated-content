@@ -10,7 +10,7 @@ l10n:
 
 **`<dfn>`** は [HTML](/ja/docs/Web/HTML) の要素で、定義句や文の文脈の中で定義している用語を示すために用いられます。祖先である {{HTMLElement("p")}} 要素、{{HTMLElement("dt")}}/{{HTMLElement("dd")}} の組み合わせ、または直近の {{HTMLElement("section")}} 要素が用語の定義とみなされます。
 
-{{InteractiveExample("HTML Demo: &lt;dfn&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;dfn&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>

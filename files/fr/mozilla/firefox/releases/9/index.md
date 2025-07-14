@@ -3,8 +3,6 @@ title: Firefox 9 pour les développeurs
 slug: Mozilla/Firefox/Releases/9
 ---
 
-{{FirefoxSidebar}}
-
 1. Notes de versions pour développeurs
    1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
 

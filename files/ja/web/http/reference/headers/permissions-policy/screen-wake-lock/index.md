@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{HTTPSidebar}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける **`screen-wake-lock`** ディレクティブは、現在の文書が[画面起動ロック API](/ja/docs/Web/API/Screen_Wake_Lock_API) を使用して、端末が画面を暗くしたりオフにしたりしないよう指示することを許可するかどうか制御します。
 
