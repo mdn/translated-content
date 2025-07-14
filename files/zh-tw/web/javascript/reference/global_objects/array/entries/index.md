@@ -2,10 +2,8 @@
 title: Array.prototype.entries()
 slug: Web/JavaScript/Reference/Global_Objects/Array/entries
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`entries()`** 方法會回傳一個新的[_陣列迭代器_](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Iterator)物件，其中包含陣列中每個索引的鍵／值對。
 
