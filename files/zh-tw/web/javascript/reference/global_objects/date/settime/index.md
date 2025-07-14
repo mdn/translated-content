@@ -3,8 +3,6 @@ title: Date.prototype.setTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setTime
 ---
 
-{{JSRef}}
-
 **`setTime()`** 方法將從 1970 年 01 月 01 日 00:00:00 UTC 起所經過的毫秒數設置為 {{jsxref("Date")}} 物件的值。
 
 {{InteractiveExample("JavaScript Demo: Date.setTime()", "taller")}}
