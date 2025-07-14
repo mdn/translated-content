@@ -12,7 +12,7 @@ l10n:
 
 ## 属性值
 
-每个 CSS 属性的值都来自具有最大 {{cssxref("specificity")}} 的声明。如果两个或两个以上具有相同特异性的声明为同一元素提供了不同的属性值，则会应用选择器具有最大算法权重的声明值。
+每个 CSS 属性的值都来自具有最大 {{cssxref("specificity")}} 的声明。如果两个或两个以上具有相同优先级的声明为同一元素提供了不同的属性值，则会应用选择器具有最大算法权重的声明值。
 
 每个属性值都来自一个属性值对；每个属性都应用了一个值。即使值是一个逗号分隔的值列表，该值列表也是来自一个单一的声明。
 
@@ -20,7 +20,7 @@ l10n:
 
 某些属性会继承父元素的值，除非明确覆写。当元素上的特定属性没有样式信息时，就会出现[继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)。如果属性被继承，其值将被设置为父元素的[计算值](#计算值)。如果属性没有被继承，其值将被设置为该元素的[初始值](#初始值)。
 
-[级联](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)决定了当多个相互冲突的样式针对同一元素时该应用哪个值。级联算法定义了用户代理如何组合来自不同来源、作用域和/或层的属性值。当选择器与元素匹配时，即使优先级较低的来源或层的选择器具有更大的 {{cssxref("specificity")}}，也会应用优先级最高的来源的属性[指定值](#指定值)。
+[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)决定了当多个相互冲突的样式针对同一元素时该应用哪个值。级联算法定义了用户代理如何组合来自不同来源、作用域和/或层的属性值。当选择器与元素匹配时，即使优先级较低的来源或层的选择器具有更大的 {{cssxref("specificity")}}，也会应用优先级最高的来源的属性[指定值](#指定值)。
 
 在逐步应用层叠规则和解析值后，浏览器会确保视觉呈现与处理过的 CSS 相匹配。
 
@@ -39,8 +39,8 @@ l10n:
 
 属性的**初始值**（initial value）是其默认值，如其定义表中所列。初始值的使用取决于属性是否被继承：
 
-- 对于[继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#继承属性)，只要没有提供[指定值](#指定值)，初始值只能被用于没有指定值的**根元素**上。
-- 对于[非继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#非继承属性)，只要没有提供[指定值](#指定值)，初始值可以被用于**任意**没有指定值的元素上。
+- 对于[继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#继承属性)，只要没有提供[指定值](#指定值)，初始值*只能*被用于没有指定值的*根元素*上。
+- 对于[非继承属性](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#非继承属性)，只要没有提供[指定值](#指定值)，初始值可以被用于*任意*没有指定值的元素上。
 
 你可以使用 {{cssxref("initial")}} 关键字明确指定初始值。
 
@@ -76,7 +76,7 @@ l10n:
 
 属性的**应用值**（used value）是在对[计算值](#计算值)进行了所有计算，并根据布局的具体细节（例如，将百分比解析为实际像素值）对其进行细化后的属性值。
 
-每个 CSS 属性都有一个应用值。尺寸（如 {{cssxref("width")}} 或 {{cssxref("line-height")}}）的使用值以像素为单位。速记属性（如 {{cssxref("background")}}）的使用值与其组件属性（如 {{cssxref("background-color")}} 或 {{cssxref("background-size")}}）以及 {{cssxref("position")}} 和 {{cssxref("float")}} 的应用值一致。
+每个 CSS 属性都有一个应用值。尺寸（如 {{cssxref("width")}} 或 {{cssxref("line-height")}}）的使用值以像素为单位。简写属性（如 {{cssxref("background")}}）的使用值与其组件属性（如 {{cssxref("background-color")}} 或 {{cssxref("background-size")}}）以及 {{cssxref("position")}} 和 {{cssxref("float")}} 的应用值一致。
 
 元素的 {{cssxref("width")}} 或 {{cssxref("inline-size")}} 的应用值是像素值，即使属性的指定值是用百分比或关键字值设置的。
 
@@ -124,7 +124,7 @@ function updateUsedWidth(id) {
   const div = document.getElementById(id);
   const par = div.querySelector(".show-used-width");
   const wid = window.getComputedStyle(div)["width"];
-  par.textContent = `Used width: ${wid}.`;
+  par.textContent = `应用宽度：${wid}。`;
 }
 
 function updateAllUsedWidths() {
@@ -137,7 +137,7 @@ updateAllUsedWidths();
 window.addEventListener("resize", updateAllUsedWidths);
 ```
 
-虽然三个指定值 `auto`、`50%` 和 `inherit` 都是关键字和 {{cssxref("percentage")}}} 值，但使用 `window.getComputedStyle(el)[‘width’];` 获取 `width` 时，返回的是[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位) `px` 值：
+虽然三个指定值 `auto`、`50%` 和 `inherit` 都是关键字和 {{cssxref("percentage")}} 值，但使用 `window.getComputedStyle(el)[‘width’];` 获取 `width` 时，返回的是[绝对长度](/zh-CN/docs/Web/CSS/length#绝对长度单位) `px` 值：
 
 {{ EmbedLiveSample('示例', '80%', 372) }}
 
