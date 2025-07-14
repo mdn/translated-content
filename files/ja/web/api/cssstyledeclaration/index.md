@@ -28,7 +28,7 @@ l10n:
 
 - {{DOMxRef("CSSStyleDeclaration.cssFloat", "CSSStyleDeclaration.cssFloat")}}
   - : CSS の {{CSSxRef("float")}} プロパティの特殊な別名です。
-- <code>CSSStyleDeclaration</code> の名前付きプロパティ
+- `CSSStyleDeclaration` の名前付きプロパティ
   - : 対応するすべての CSS プロパティを、ダッシュおよびキャメルケースにした属性です。
 
 ## メソッド
