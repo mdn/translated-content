@@ -3,8 +3,6 @@ title: Rebotar en las paredes
 slug: Games/Tutorials/2D_breakout_game_Phaser/Bounce_off_the_walls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Physics", "Games/Workflows/2D_Breakout_game_Phaser/Player_paddle_and_controls")}}
 
 Este es el **paso 6** de 16 del [tutorial de Gamedev Phaser](/es/docs/Games/Tutorials/2D_breakout_game_Phaser). Puedes encontrar el código fuente como debería verse después de completar esta lección en [Gamedev-Phaser-Content-Kit/demos/lesson06.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson06.html).
