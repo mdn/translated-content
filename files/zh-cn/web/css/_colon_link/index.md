@@ -3,8 +3,6 @@ title: :link
 slug: Web/CSS/:link
 ---
 
-{{CSSRef}}
-
 **`:link`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示尚未被访问的元素，匹配每个具有 `href` 属性的未访问的 {{HTMLElement("a")}} 或 {{HTMLElement("area")}} 元素。
 
 {{InteractiveExample("CSS Demo: :link", "tabbed-shorter")}}
