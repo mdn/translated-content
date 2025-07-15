@@ -9,7 +9,7 @@ l10n:
 
 **`caret-color`** は CSS のプロパティで、次に入力された文字が挿入される位置を示す可視マーカーである**入力キャレット**の色を設定します。これは**テキスト入力カーソル**と呼ばれることもあります。キャレットは {{HTMLElement("input")}} または [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable)ML/Global_attributes#contenteditable) 属性のついた要素などの中に現れます。ふつうキャレットは細い垂直線で、気づきやすくなるように点滅します。既定では黒ですが、このプロパティで色を変更することができます。
 
-{{InteractiveExample("CSS Demo: caret-color")}}
+{{InteractiveExample("CSS デモ: caret-color")}}
 
 ```css interactive-example-choice
 caret-color: red;

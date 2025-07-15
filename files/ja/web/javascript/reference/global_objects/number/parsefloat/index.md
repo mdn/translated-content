@@ -9,7 +9,7 @@ l10n:
 
 **`Number.parseFloat()`** は静的メソッドで、引数を解釈して浮動小数点値を返します。引数の数値が解釈できない場合は、 {{jsxref("NaN")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.parseFloat()")}}
+{{InteractiveExample("JavaScript デモ: Number.parseFloat()")}}
 
 ```js interactive-example
 function circumference(r) {

@@ -9,7 +9,7 @@ l10n:
 
 **`font-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの太さ（あるいは重み）を指定します。実際に表示されるフォントの太さは、現在設定されている {{cssxref("font-family")}} に依存する場合があります。
 
-{{InteractiveExample("CSS Demo: font-weight")}}
+{{InteractiveExample("CSS デモ: font-weight")}}
 
 ```css interactive-example-choice
 font-weight: normal;

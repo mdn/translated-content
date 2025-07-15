@@ -9,7 +9,7 @@ l10n:
 
 **_TypedArray_** オブジェクトは、背後にある[バイナリーデータバッファー](/ja/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer)の、配列風のビューを表します。 `TypedArray` という名称のグローバルプロパティがあるわけではなく、また直接 `TypedArray` コンストラクターが見えるわけではありません。代わりに、さまざまなグローバルプロパティがあり、それらの値は後述するように特定の要素の型における型付き配列のコンストラクターになります。下記のページで、それぞれの要素を持つ片引き配列で使用できる共通のプロパティやメソッドを確認できます。
 
-{{InteractiveExample("JavaScript Demo: TypedArray Constructor")}}
+{{InteractiveExample("JavaScript デモ: TypedArray Constructor")}}
 
 ```js interactive-example
 // Create a TypedArray with a size in bytes

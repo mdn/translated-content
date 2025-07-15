@@ -3,8 +3,6 @@ title: Date.prototype.setUTCHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setUTCHours
 ---
 
-{{JSRef}}
-
 **`setUTCHours()`** 方法根據世界時設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 UTC 至更新的 {{jsxref("Date")}} 實例所表示的時間為止，經過的毫秒數。
 
 {{InteractiveExample("JavaScript Demo: Date.setUTCHours()")}}

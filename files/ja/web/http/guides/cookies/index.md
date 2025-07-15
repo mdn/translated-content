@@ -225,7 +225,7 @@ Cookie の仕組みの設計上、サーバーは、Cookie が安全なオリジ
 > [!NOTE]
 > アプリケーションサーバー上では、ウェブアプリケーションは接頭辞を含む完全な Cookie 名をチェック*しなければなりません*。ユーザーエージェントは、リクエストの {{HTTPHeader("Cookie")}} ヘッダーを送信する前に Cookie から接頭辞を削除しません。
 
-Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie# Cookie の接頭辞)を参照してください。
+Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#クッキーの接頭辞)を参照してください。
 
 ## プライバシーとトラッキング
 

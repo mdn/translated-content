@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/valueOf
 
 **`valueOf()`** メソッドは、 {{jsxref("BigInt")}} オブジェクトにラップされたプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: BigInt.valueOf()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: BigInt.valueOf()", "shorter")}}
 
 ```js interactive-example
 console.log(typeof Object(1n));

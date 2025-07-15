@@ -12,7 +12,7 @@ l10n:
 この要素はプレーンテキストの 1 行編集コントロールとして表示され、そのテキストは読み取られることがないように、1 つ 1 つの文字がアスタリスク ("\*") やドット ("•") のような記号に置き換えられ、隠されます。
 この文字は{{Glossary("User agent", "ユーザーエージェント")}}やオペレーティングシステムによって変わります。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;password&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <div>

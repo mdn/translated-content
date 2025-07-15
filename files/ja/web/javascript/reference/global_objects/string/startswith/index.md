@@ -9,7 +9,7 @@ l10n:
 
 **`startsWith()`** メソッドは文字列が引数で指定された文字列で始まるかを判定して `true` か `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: String.startsWith()")}}
+{{InteractiveExample("JavaScript デモ: String.startsWith()")}}
 
 ```js interactive-example
 const str1 = "Saturday night plans";
