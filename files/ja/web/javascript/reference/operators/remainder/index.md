@@ -9,7 +9,7 @@ l10n:
 
 剰余演算子 (`%`) は、1 つ目のオペランドが 2 つ目のオペランドで除算されたときの余りである剰余を返します。これは常に被除数の符号を取ります。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Remainder operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Remainder operator")}}
 
 ```js interactive-example
 console.log(13 % 5);

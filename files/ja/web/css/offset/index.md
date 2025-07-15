@@ -14,7 +14,7 @@ l10n:
 > [!NOTE]
 > 仕様書の早期の版では、このプロパティを `motion` と呼んでいました。
 
-{{InteractiveExample("CSS Demo: offset")}}
+{{InteractiveExample("CSS デモ: offset")}}
 
 ```css interactive-example-choice
 offset: path("M 20 60 L 120 60 L 70 10 L 20 60") 0% auto 90deg;

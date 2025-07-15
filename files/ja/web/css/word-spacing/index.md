@@ -9,7 +9,7 @@ l10n:
 
 **`word-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、タグや単語の間隔に関する挙動を指定します。
 
-{{InteractiveExample("CSS Demo: word-spacing")}}
+{{InteractiveExample("CSS デモ: word-spacing")}}
 
 ```css interactive-example-choice
 word-spacing: normal;

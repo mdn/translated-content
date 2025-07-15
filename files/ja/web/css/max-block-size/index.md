@@ -15,7 +15,7 @@ l10n:
 
 ふつう `max-height` または `max-width` を使用する場面でいつでも、代わりに `max-block-size` をコンテンツの最大の「高さ」を設定するために使用し (これは垂直の値ではない可能性がありますが)、 `max-inline-size`をコンテンツの最大の「幅」を設定するために使用してください (これが横書きではなく縦書きである場合であっても)。様々な書字方向を表す [`writing-mode` の例](/ja/docs/Web/CSS/writing-mode#例)を参照してください。
 
-{{InteractiveExample("CSS Demo: max-block-size")}}
+{{InteractiveExample("CSS デモ: max-block-size")}}
 
 ```css interactive-example-choice
 max-block-size: 150px;

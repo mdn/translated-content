@@ -10,7 +10,7 @@ l10n:
 
 **`<tbody>`** は [HTML](/ja/docs/Web/HTML) の要素で、表の一連の行（{{HTMLElement("tr")}} 要素）を内包し、その部分が表（{{HTMLELement("table")}}）の本体部分を構成することを表します。
 
-{{InteractiveExample("HTML Demo: &lt;tbody&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;tbody&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

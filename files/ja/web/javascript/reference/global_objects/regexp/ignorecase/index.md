@@ -9,7 +9,7 @@ l10n:
 
 **`ignoreCase`** プロパティは、"`i`" フラグが正規表現で使われているかどうかを示します。`ignoreCase` は、正規表現インスタンスごとの読み取り専用プロパティです。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype.ignoreCase")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype.ignoreCase")}}
 
 ```js interactive-example
 const regex1 = new RegExp("foo");

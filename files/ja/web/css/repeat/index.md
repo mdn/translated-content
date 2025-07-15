@@ -9,7 +9,7 @@ l10n:
 
 **`repeat()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、[トラックリスト](/ja/docs/Web/CSS/CSS_grid_layout/Basic_concepts_of_grid_layout)内での部分的な繰り返しを表し、繰り返しパターンを示す多数の列や行を、よりコンパクトな形式で記述することができます。
 
-{{InteractiveExample("CSS Demo: repeat()")}}
+{{InteractiveExample("CSS デモ: repeat()")}}
 
 ```css interactive-example-choice
 grid-template-columns: repeat(2, 60px);
