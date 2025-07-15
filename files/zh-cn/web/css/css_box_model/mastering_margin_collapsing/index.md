@@ -3,8 +3,6 @@ title: 掌握外边距折叠
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 ---
 
-{{CSSRef}}
-
 区块的[上](/zh-CN/docs/Web/CSS/margin-top)[下](/zh-CN/docs/Web/CSS/margin-bottom)外边距有时会合并（折叠）为单个边距，其大小为两个边距中的最大值（或如果它们相等，则仅为其中一个），这种行为称为**外边距折叠**。注意：有设定[浮动](/zh-CN/docs/Web/CSS/float)和[绝对定位](/zh-CN/docs/Web/CSS/position#定位类型)的元素不会发生外边距折叠。
 
 有三种情况会形成外边距折叠：

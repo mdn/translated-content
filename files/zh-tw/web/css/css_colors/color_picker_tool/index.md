@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cf05afdfff38fb460f7cae5b9523405c842ac6
 ---
 
-{{CSSRef}}
-
 這個工具讓你可以在 sRGB {{glossary("color space", "色彩空間")}}中選擇一個顏色，並在各種 CSS [顏色格式](/zh-TW/docs/Web/CSS/color_value)之間進行轉換，幫助你了解以下 sRGB 顏色標記法的語法：
 
 - {{cssxref("hex-color")}}，一種 [sRGB](/zh-TW/docs/Glossary/RGB) 顏色的*十六進位顏色表示法*，使用其主要顏色元件（紅、綠、藍）以及其透明度，以十六進位數字書寫。
