@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 当没有在任何元素上指定 {{cssxref("z-index")}} 属性时，元素的堆叠顺序如下（从下到上）：
 
 1. 根元素的背景和边框。
