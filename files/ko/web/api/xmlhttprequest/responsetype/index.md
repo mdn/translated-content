@@ -43,7 +43,6 @@ l10n:
 ### 예외
 
 - `InvalidAccessError` {{domxref("DOMException")}}
-
   - : {{domxref("Worker")}}가 아닌
     동기적 모드의 `XMLHttpRequest`에서
     `responseType` 값을 변경하려는 시도가 있었습니다. 자세한 내용은 아래의
