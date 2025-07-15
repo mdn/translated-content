@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d5e2c11f4b8cc32e54d2527d9576ed26ced9458
 ---
 
-{{CSSRef}}
-
 **`<alpha-value>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 表示可为 {{CSSXref("&lt;number&gt;")}} 或 {{CSSXref("&lt;percentage&gt;")}} 的值，指定了颜色的 [**alpha 通道**](/zh-CN/docs/Glossary/Alpha)或**透明度**。
 
 ## 语法
