@@ -1,5 +1,6 @@
 ---
 title: 如何为文本添加阴影
+short-title: 为文本添加阴影
 slug: Learn_web_development/Howto/Solve_CSS_problems/Add_a_text_shadow
 l10n:
   sourceCommit: 479ea4c8bff4b900a7968413287c77dde2b0c20f
