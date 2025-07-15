@@ -2,10 +2,8 @@
 title: all
 slug: Web/CSS/all
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 [CSS](/zh-CN/docs/Web/CSS) [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`all`** 将除了 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 与 [CSS 自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)之外的所有属性重设。它可以将属性设置为初始值或继承值，也可以设置为其他层叠层或样式表来源中指定的值。
 
@@ -65,7 +63,7 @@ all: revert;
 
 ## 组成属性
 
-该属性是除 {{cssxref("unicode-bidi")}}, {{cssxref("direction")}} 和[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)以外的所有 CSS 属性的简称。
+该属性是除 {{cssxref("unicode-bidi")}}、{{cssxref("direction")}} 和[自定义属性](/zh-CN/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)以外的所有 CSS 属性的简写。
 
 ## 语法
 
