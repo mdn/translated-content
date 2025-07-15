@@ -9,7 +9,7 @@ l10n:
 
 **`Object.is()`** は静的メソッドで、 2 つの値が[同一値](/ja/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness#object.is_を使用した同値等価性)であるかどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.is()")}}
+{{InteractiveExample("JavaScript デモ: Object.is()")}}
 
 ```js interactive-example
 console.log(Object.is("1", 1));

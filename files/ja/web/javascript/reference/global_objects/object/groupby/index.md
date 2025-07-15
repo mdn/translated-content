@@ -14,7 +14,7 @@ l10n:
 
 このメソッドは、グループ名が文字列で表現できる場合に使用します。任意の値をキーとして要素をグループ化する必要がある場合は、代わりに {{jsxref("Map.groupBy()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Object.groupBy()", "taller")}}
 
 ```js interactive-example
 const inventory = [

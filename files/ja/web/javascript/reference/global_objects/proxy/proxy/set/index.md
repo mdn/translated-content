@@ -9,7 +9,7 @@ l10n:
 
 **`handler.set()`** は、オブジェクトの `[[Set]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。プロパティの値を設定することに対するトラップです。
 
-{{InteractiveExample("JavaScript Demo: handler.set()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.set()", "taller")}}
 
 ```js interactive-example
 const monster1 = { eyeCount: 4 };

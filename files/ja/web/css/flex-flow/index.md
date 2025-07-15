@@ -9,7 +9,7 @@ l10n:
 
 **`flex-flow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、フレックスコンテナーの向きと折り返しの動作を同時に指定します。
 
-{{InteractiveExample("CSS Demo: flex-flow")}}
+{{InteractiveExample("CSS デモ: flex-flow")}}
 
 ```css interactive-example-choice
 flex-flow: row wrap;

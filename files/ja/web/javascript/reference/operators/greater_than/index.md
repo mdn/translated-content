@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Greater_than
 
 大なり演算子 (`>`) は、左辺のオペランドが右辺のオペランドより大きい場合は `true` を返し、それ以外の場合は `false` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Greater than operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Greater than operator")}}
 
 ```js interactive-example
 console.log(5 > 3);

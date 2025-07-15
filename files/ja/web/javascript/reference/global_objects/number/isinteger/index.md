@@ -9,7 +9,7 @@ l10n:
 
 **`Number.isInteger()`** は静的メソッドで、渡された値が整数かどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Number.isInteger()")}}
+{{InteractiveExample("JavaScript デモ: Number.isInteger()")}}
 
 ```js interactive-example
 function fits(x, y) {

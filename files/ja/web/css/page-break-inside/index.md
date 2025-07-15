@@ -22,7 +22,7 @@ page-break-inside: revert;
 page-break-inside: unset;
 ```
 
-{{InteractiveExample("CSS Demo: page-break-inside")}}
+{{InteractiveExample("CSS デモ: page-break-inside")}}
 
 ```css interactive-example-choice
 page-break-inside: auto;

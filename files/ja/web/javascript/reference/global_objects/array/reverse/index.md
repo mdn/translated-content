@@ -11,7 +11,7 @@ l10n:
 
 元の配列を変更せずに配列の要素を反転させるには {{jsxref("Array/toReversed", "toReversed()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Array.reverse()")}}
+{{InteractiveExample("JavaScript デモ: Array.reverse()")}}
 
 ```js interactive-example
 const array1 = ["one", "two", "three"];

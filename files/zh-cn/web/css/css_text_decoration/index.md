@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cb8f4ede62e0cc821eef8820f2c9eaea514111e2
 ---
 
-{{CSSRef}}
-
 **CSS 文本装饰**（text decoration）模块定义了与文本装饰相关的特性，如下划线、文本阴影和强调标记等。
 
 ## 参考

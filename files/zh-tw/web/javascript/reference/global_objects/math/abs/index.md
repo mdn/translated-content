@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Math.abs()`** 靜態方法會回傳一個數字的絕對值。
 
 {{InteractiveExample("JavaScript Demo: Math.abs()")}}
