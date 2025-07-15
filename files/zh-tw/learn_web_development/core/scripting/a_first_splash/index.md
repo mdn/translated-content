@@ -3,7 +3,7 @@ title: 初探 JavaScript
 short-title: JavaScript 導覽
 slug: Learn_web_development/Core/Scripting/A_first_splash
 l10n:
-  sourceCommit: abe8cffb30e5153747bb027cb0b4e532981a093c
+  sourceCommit: 693106d7bc9aa28f22a3f234455f5496efd728c4
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
@@ -46,8 +46,8 @@ l10n:
 </p>
 
 <div class="form">
-  <label for="guessField">輸入你的猜測：</label>
-  <input
+  <label for="guessField">輸入你的猜測：</label
+  ><input
     type="number"
     min="1"
     max="100"
@@ -102,7 +102,7 @@ function checkGuess() {
     guesses.textContent = "先前的猜測：";
   }
 
-  guesses.textContent = `${guesses.textContent} ${userGuess}`;
+  guesses.textContent = `${guesses.textContent}${userGuess}`;
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "恭喜你！你猜對了！";
@@ -203,8 +203,8 @@ function resetGame() {
 要開始本教學，我們希望你使用你的程式碼編輯器，在一個新的 HTML 檔案中建立以下程式碼的本地副本。
 
 ```html
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
 
@@ -242,8 +242,8 @@ function resetGame() {
     </p>
 
     <div class="form">
-      <label for="guessField">輸入你的猜測：</label>
-      <input
+      <label for="guessField">輸入你的猜測：</label
+      ><input
         type="number"
         min="1"
         max="100"
@@ -318,8 +318,8 @@ let resetButton;
 - 接下來的兩個常數儲存了對表單文字輸入框和提交按鈕的參照，並用於稍後處理猜測的提交。
 
   ```html
-  <label for="guessField">輸入你的猜測：</label>
-  <input type="number" id="guessField" class="guessField" />
+  <label for="guessField">輸入你的猜測：</label
+  ><input type="number" id="guessField" class="guessField" />
   <input type="submit" value="送出猜測" class="guessSubmit" />
   ```
 
@@ -383,7 +383,7 @@ function checkGuess() {
   if (guessCount === 1) {
     guesses.textContent = "先前的猜測：";
   }
-  guesses.textContent = `${guesses.textContent} ${userGuess}`;
+  guesses.textContent = `${guesses.textContent}${userGuess}`;
 
   if (userGuess === randomNumber) {
     lastResult.textContent = "恭喜你！你猜對了！";
@@ -512,7 +512,7 @@ for (const fruit of fruits) {
 }
 ```
 
-發生了什麼事？字串 `'蘋果', '香蕉', '櫻桃'` 被印在你的主控台上了。
+發生了什麼事？字串 `'蘋果'、'香蕉'、'櫻桃'` 被印在你的主控台上了。
 
 這是因為迴圈的關係。`const fruits = ['蘋果', '香蕉', '櫻桃'];` 這一行建立了一個陣列，它是一個值的集合（在這個例子中是字串）。
 
