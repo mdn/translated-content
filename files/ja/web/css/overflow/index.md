@@ -9,7 +9,7 @@ l10n:
 
 **`overflow`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、コンテンツが要素のパディングボックスに収まらない（はみ出す）場合に、水平方向および垂直方向の望ましい動作を設定します。
 
-{{InteractiveExample("CSS Demo: overflow")}}
+{{InteractiveExample("CSS デモ: overflow")}}
 
 ```css interactive-example-choice
 overflow: visible;

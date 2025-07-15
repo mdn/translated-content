@@ -9,7 +9,7 @@ l10n:
 
 **`delete()`** は {{jsxref("Set")}} インターフェイスのメソッドで、指定された値がこの集合にあれば、取り除きます。
 
-{{InteractiveExample("JavaScript Demo: Set.prototype.delete()")}}
+{{InteractiveExample("JavaScript デモ: Set.prototype.delete()")}}
 
 ```js interactive-example
 const set1 = new Set();

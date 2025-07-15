@@ -10,7 +10,7 @@ l10n:
 
 **`<figure>`** は [HTML](/ja/docs/Web/HTML) の要素で、図表などの自己完結型のコンテンツを表し、任意で {{HTMLElement("figcaption")}} 要素を使用して表されるキャプションを付けることができます。図、すなわちキャプションとその中身は一単位として参照されます。
 
-{{InteractiveExample("HTML Demo: &lt;figure&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;figure&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <figure>

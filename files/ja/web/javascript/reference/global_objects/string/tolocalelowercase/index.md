@@ -9,7 +9,7 @@ l10n:
 
 **`toLocaleLowerCase()`** メソッドは、呼び出した文字列の値を、ロケールに依存した対応付けに基づいて小文字に変換して返します。
 
-{{InteractiveExample("JavaScript Demo: String.toLocaleLowerCase()")}}
+{{InteractiveExample("JavaScript デモ: String.toLocaleLowerCase()")}}
 
 ```js interactive-example
 const dotted = "İstanbul";

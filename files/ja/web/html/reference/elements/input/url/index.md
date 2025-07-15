@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`url`** 型は、ユーザーに URL を入力および編集させるために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <form>

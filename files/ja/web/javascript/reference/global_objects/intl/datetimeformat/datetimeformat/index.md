@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする
 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));

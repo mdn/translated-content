@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template-areas`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド内でセルを確立し、名前を割り当てることにより、名前付きの {{glossary("grid areas", "グリッド領域")}} を指定します。
 
-{{InteractiveExample("CSS Demo: grid-template-areas")}}
+{{InteractiveExample("CSS デモ: grid-template-areas")}}
 
 ```css interactive-example-choice
 grid-template-areas:

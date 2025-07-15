@@ -9,7 +9,7 @@ l10n:
 
 **`repeating-radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、原点から広がり反復するグラデーションから成る画像を生成します。 {{cssxref("gradient/radial-gradient", "radial-gradient()")}} と似ており、同じ引数を取りますが、 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}} と同様にすべての方向に色経由点を無限に繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
 
-{{InteractiveExample("CSS Demo: repeating-radial-gradient()")}}
+{{InteractiveExample("CSS デモ: repeating-radial-gradient()")}}
 
 ```css interactive-example-choice
 background: repeating-radial-gradient(#e66465, #9198e5 20%);

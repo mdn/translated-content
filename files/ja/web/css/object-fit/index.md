@@ -11,7 +11,7 @@ l10n:
 
 要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxref("object-position")}} プロパティを使用することができます。
 
-{{InteractiveExample("CSS Demo: object-fit")}}
+{{InteractiveExample("CSS デモ: object-fit")}}
 
 ```css interactive-example-choice
 object-fit: fill;

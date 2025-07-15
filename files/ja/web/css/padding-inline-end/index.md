@@ -9,7 +9,7 @@ l10n:
 
 **`padding-inline-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のパディングを定義し、それが要素の書字方向やテキストの方向に応じて物理的なパディングに対応づけられます。
 
-{{InteractiveExample("CSS Demo: padding-inline-end")}}
+{{InteractiveExample("CSS デモ: padding-inline-end")}}
 
 ```css interactive-example-choice
 padding-inline-end: 20px;

@@ -3,8 +3,6 @@ title: 多列布局的样式
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
 ---
 
-{{CSSRef}}
-
 由于在多列（_multicol_）容器中创建的列盒子是匿名盒子，我们可以对其进行的样式设置非常有限。然而，我们还是有一些可以做的事情。本指南解释了如何更改列之间的间距和样式规则。
 
 ## 为列盒子设置样式

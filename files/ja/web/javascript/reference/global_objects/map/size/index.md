@@ -9,7 +9,7 @@ l10n:
 
 **`size`** は {{jsxref("Map")}} インスタンスのアクセサープロパティで、このマップにある要素の数を返します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.size")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.size")}}
 
 ```js interactive-example
 const map1 = new Map();

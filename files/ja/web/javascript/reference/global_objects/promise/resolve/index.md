@@ -11,7 +11,7 @@ l10n:
 
 この関数は複数階層のプロミス風オブジェクト (例えば、何かで解決するプロミスで解決するプロミス) を単一の階層に平坦化します。
 
-{{InteractiveExample("JavaScript Demo: Promise.resolve()")}}
+{{InteractiveExample("JavaScript デモ: Promise.resolve()")}}
 
 ```js interactive-example
 const promise1 = Promise.resolve(123);
