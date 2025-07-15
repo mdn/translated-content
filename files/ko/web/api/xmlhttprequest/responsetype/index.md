@@ -2,7 +2,7 @@
 title: "XMLHttpRequest: responseType 속성"
 slug: Web/API/XMLHttpRequest/responseType
 l10n:
-  sourseCommit: e561fa67af347b9770b359ba93e8579d2a540682
+  sourceCommit: e561fa67af347b9770b359ba93e8579d2a540682
 ---
 
 {{APIRef("XMLHttpRequest API")}} {{AvailableInWorkers("window_and_worker_except_service")}}
