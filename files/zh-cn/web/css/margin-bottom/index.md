@@ -3,8 +3,6 @@ title: margin-bottom
 slug: Web/CSS/margin-bottom
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 ![The effect of the CSS margin-bottom property on the element box](margin-bottom_explained.svg)

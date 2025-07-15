@@ -3,8 +3,6 @@ title: column-rule
 slug: Web/CSS/column-rule
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) `column-rule` [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)可以在多列布局中设定分割线的宽度、样式和颜色。
 
 {{InteractiveExample("CSS Demo: column-rule")}}

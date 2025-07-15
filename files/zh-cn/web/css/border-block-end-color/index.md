@@ -3,8 +3,6 @@ title: border-block-end-color
 slug: Web/CSS/border-block-end-color
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-end-color`** 定义了元素的逻辑块末的边框颜色，并根据元素的书写模式、行内方向和文本朝向对应至实体边框颜色。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-color")}}、{{CSSXref("border-right-color")}}、{{CSSXref("border-bottom-color")}} 或 {{CSSXref("border-left-color")}} 属性。
 
 {{InteractiveExample("CSS Demo: border-block-end-color")}}
