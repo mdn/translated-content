@@ -3,8 +3,6 @@ title: Construye el muro de ladrillos
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Fin_del_juego", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Deteccion_colisiones")}}
 
 Este es el **sexto** paso de 10 del [Tutorial del Lienzo (Canvas) para desarrollar juegos (Gamedev Canvas Tutorial)](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código fuente como debería quedar tras completar esta lección en [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).

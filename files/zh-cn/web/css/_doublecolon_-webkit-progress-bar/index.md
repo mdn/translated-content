@@ -3,7 +3,7 @@ title: ::-webkit-progress-bar
 slug: Web/CSS/::-webkit-progress-bar
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## 概述
 

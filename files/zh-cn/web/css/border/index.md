@@ -3,8 +3,6 @@ title: border
 slug: Web/CSS/border
 ---
 
-{{CSSRef}}
-
 ## 概览
 
 [CSS](/zh-CN/docs/Web/CSS) 的 **`border`** 属性是一个用于设置各种单独的边界属性的[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。`border` 可以用于设置一个或多个以下属性的值：{{Cssxref("border-width")}}、{{Cssxref("border-style")}}、{{Cssxref("border-color")}}。

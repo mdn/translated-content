@@ -3,8 +3,6 @@ title: background-color
 slug: Web/CSS/background-color
 ---
 
-{{CSSRef}}
-
 **`background-color`** [CSS](/zh-TW/docs/Web/CSS) property 是用來設定 HTML 元素的背景顏色，值可以是顏色亦可以是特定關鍵字－－ `transparent`.
 
 ## 語法

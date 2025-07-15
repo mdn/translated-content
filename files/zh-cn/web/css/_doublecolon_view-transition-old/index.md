@@ -3,7 +3,7 @@ title: ::view-transition-old
 slug: Web/CSS/::view-transition-old
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-old`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的旧视图状态——即过渡前旧视图的静态屏幕截图。
 

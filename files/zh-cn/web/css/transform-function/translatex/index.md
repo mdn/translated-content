@@ -3,8 +3,6 @@ title: translateX()
 slug: Web/CSS/transform-function/translateX
 ---
 
-{{CSSRef}}
-
 translateX() 函数表示在二维平面上水平方向移动元素。其结果的数据类型是{{cssxref("&lt;transform-function&gt;")}}。
 
 ![](transform-functions-translatex_2.png)

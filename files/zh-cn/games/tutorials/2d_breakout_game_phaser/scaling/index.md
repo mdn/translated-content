@@ -3,8 +3,6 @@ title: Scaling
 slug: Games/Tutorials/2D_breakout_game_Phaser/Scaling
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_Phaser/Initialize_the_framework", "Games/Tutorials/2D_Breakout_game_Phaser/Load_the_assets_and_print_them_on_screen")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser)系列的第二课。在课程完成之后，你可以在[Gamedev-Phaser-Content-Kit/demos/lesson02.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson01.html)找到源码。

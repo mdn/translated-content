@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`box-sizing`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定如何計算元素的總寬度與高度。
 
 {{InteractiveExample("CSS Demo: box-sizing")}}

@@ -3,8 +3,6 @@ title: Date.prototype.getTime()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getTime
 ---
 
-{{JSRef}}
-
 **`getTime()`** 方法回傳自 1970 年 1 月 1 日 00:00:00 UTC 起經過的毫秒數。
 
 你可以透過此方法指派一日期與時間至另一 {{jsxref("Date")}} 物件。這個方法在功能上與 {{jsxref("Date/valueof", "valueOf()")}} 相同。

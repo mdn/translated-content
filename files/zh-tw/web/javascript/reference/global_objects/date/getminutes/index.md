@@ -3,8 +3,6 @@ title: Date.prototype.getMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getMinutes
 ---
 
-{{JSRef}}
-
 **`getMinutes()`** 方法基於本地時區回傳指定日期的分鐘數。
 
 {{InteractiveExample("JavaScript Demo: Date.getMinutes()", "shorter")}}

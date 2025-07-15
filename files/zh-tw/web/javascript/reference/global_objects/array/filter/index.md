@@ -2,10 +2,8 @@
 title: Array.prototype.filter()
 slug: Web/JavaScript/Reference/Global_Objects/Array/filter
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`filter()`** 方法會建立一個給定陣列部分的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，過濾掉未通過所提供函式所實作測試的給定陣列元素。
 

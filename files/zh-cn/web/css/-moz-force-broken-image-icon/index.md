@@ -5,7 +5,7 @@ l10n:
   sourceCommit: db9ccd6c2746b3f34b0951d8e59ea1c581312d9d
 ---
 
-{{Non-standard_header}}{{CSSRef}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 **`-moz-force-broken-image-icon`** 扩展 CSS 属性可用于强制显示损坏图像图标，即使损坏的图像具有 `alt` 属性。
 

@@ -3,8 +3,6 @@ title: 使用 CSS 变换
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
-{{CSSRef}}
-
 通过改变坐标空间，**CSS 变换**（CSS transform）可以在不影响正常文档流的情况下改变作用内容的位置。这篇指南提供了有关使用 CSS 变换的介绍。
 
 CSS 变换通过一系列 CSS 属性实现，通过使用这些属性，可以对 HTML 元素进行线性仿射变换（affine linear transformation）。可以进行的变换包括旋转、倾斜、缩放以及位移，这些变换同时适用于平面与三维空间。

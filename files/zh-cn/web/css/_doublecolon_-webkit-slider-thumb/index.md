@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::-webkit-slider-thumb`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 `type="range"` 的 {{HTMLElement("input")}} 元素的滑块按钮，用户可以拖动按钮来改变其数值。
 

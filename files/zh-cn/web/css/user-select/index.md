@@ -3,8 +3,6 @@ title: user-select
 slug: Web/CSS/user-select
 ---
 
-{{CSSRef}}
-
 **`user-select`** [CSS](/zh-CN/docs/Web/CSS) 属性用于控制用户是否可以选择文本。这不会对作为浏览器用户界面（即 {{Glossary("Chrome", "chrome")}}）的一部分的内容加载产生任何影响，除非是在文本框中。
 
 {{InteractiveExample("CSS Demo: user-select")}}

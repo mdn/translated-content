@@ -3,8 +3,6 @@ title: background-position-y
 slug: Web/CSS/background-position-y
 ---
 
-{{CSSRef}}
-
 ## 摘要
 
 **`background-position-y`** 属性用于设置初始状态时背景图片在垂直方向上的位置，这个位置相对于通过 {{cssxref("background-origin")}} 定义的背景层的原点进行定位。需要获得更多的信息可以查看{{cssxref("background-position")}} 属性，这个属性已经得到了长久且广泛的支持。

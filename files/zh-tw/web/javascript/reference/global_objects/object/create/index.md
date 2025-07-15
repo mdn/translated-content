@@ -3,8 +3,6 @@ title: Object.create()
 slug: Web/JavaScript/Reference/Global_Objects/Object/create
 ---
 
-{{JSRef}}
-
 **`Object.create()`** 指定其原型物件與屬性，創建一個新物件。
 
 ## 語法

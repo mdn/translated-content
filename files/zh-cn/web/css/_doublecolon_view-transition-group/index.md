@@ -3,7 +3,7 @@ title: ::view-transition-group
 slug: Web/CSS/::view-transition-group
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-group`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示单个视图过渡组。
 

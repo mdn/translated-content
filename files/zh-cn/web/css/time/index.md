@@ -3,8 +3,6 @@ title: <time>
 slug: Web/CSS/time
 ---
 
-{{CSSRef}}
-
 **`<time>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) 表达了以秒（s）或毫秒（ms）为单位的时间的值。于{{cssxref("animation")}}、{{cssxref("transition")}}及相关属性中使用。
 
 ## 语法

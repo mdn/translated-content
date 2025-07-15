@@ -3,8 +3,6 @@ title: :empty
 slug: Web/CSS/:empty
 ---
 
-{{CSSRef}}
-
 **`:empty`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)用于选择不包含任何子元素的元素。子元素可以是元素节点或文本（包括空格）。但是注释、处理指令和 CSS {{cssxref("content")}} 不会影响元素是否被认定为空。
 
 {{InteractiveExample("CSS Demo: :empty", "tabbed-shorter")}}

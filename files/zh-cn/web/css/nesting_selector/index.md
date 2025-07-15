@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6b772b874485e67bb8cf8eff8c1874deb2e66c3
 ---
 
-{{CSSRef}}
-
 CSS **`&` 嵌套选择器**明确指示在使用 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)时，父规则和子规则的关系。它使得内嵌子规则的选择器*相对于其父元素*。若没有 `&` 嵌套选择器，则子规则将选择子元素。子选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)和它们被包含在 {{cssxref(":is", ":is()")}} 伪类内的情况一样。
 
 > [!NOTE]

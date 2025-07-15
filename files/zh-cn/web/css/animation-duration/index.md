@@ -3,8 +3,6 @@ title: animation-duration
 slug: Web/CSS/animation-duration
 ---
 
-{{CSSRef}}
-
 **`animation-duration`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画完成一个动画周期所需的时间。
 
 {{InteractiveExample("CSS Demo: animation-duration")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5a0e89bad2e2bbbd32ce22b0c2bb419ae3b7c962
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-style`** 设置强调标记的样式。这个值也可以使用简写属性 {{cssxref("text-emphasis")}} 来设置。
 
 {{InteractiveExample("CSS Demo: text-emphasis-style")}}

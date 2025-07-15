@@ -3,8 +3,6 @@ title: direction
 slug: Web/CSS/direction
 ---
 
-{{CSSRef}}
-
 **`direction`** CSS 属性用于设置文本、表格列和水平溢出的方向。对于从右到左书写的语言（如希伯来语或阿拉伯语），应将该属性设置为 `rtl`；对于从左到右书写的语言（如英语和大多数其他语言），则应将该属性设置为 `ltr`。
 
 {{InteractiveExample("CSS Demo: direction")}}

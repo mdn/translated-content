@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Object.entries()`** 靜態方法回傳給定之物件自己的可枚舉字串以字串為鍵的屬性之鍵值對陣列。
 
 {{InteractiveExample("JavaScript Demo: Object.entries()")}}

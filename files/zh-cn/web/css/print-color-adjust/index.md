@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
-
 **`print-color-adjust`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置{{Glossary("user agent", "用户代理")}}在输出设备上优化元素外观时可以采取的措施。默认情况下，浏览器可根据输出设备的类型和功能，对元素的外观进行必要和谨慎的调整。
 
 ## 语法

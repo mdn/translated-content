@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f28085e76dfe4ef1987473b101db1338b41ed27f
 ---
 
-{{CSSRef}}
-
 **`@scope`** [CSS](/zh-CN/docs/Web/CSS) [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)能够让你选中特定的 DOM 子树中的元素，无需编写过于具体的难以覆盖的选择器就能准确地定位元素，也不用将选择器与 DOM 结构紧密地耦合。
 
 在 JavaScript 中，可以通过 CSS 对象模型接口 {{DOMxRef("CSSScopeRule")}} 访问 `@scope`。

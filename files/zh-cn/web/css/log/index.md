@@ -3,8 +3,6 @@ title: log()
 slug: Web/CSS/log
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) **`log()`** 为指数型函数，返回某数的对数。
 
 [对数](https://zh.wikipedia.org/wiki/对数)为指数的逆运算。固定底数的此数次方将产生传入的第一个参数。

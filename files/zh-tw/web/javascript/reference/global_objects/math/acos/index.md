@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Math.acos()`** 靜態方法會回傳一個數值的反餘弦值（以弧度表示）。也就是說，
 
 <math display="block">

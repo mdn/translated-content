@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 73091fbe590d96857d743eaeec5aee4a8101994f
 ---
 
-{{CSSRef}}
-
 **`isolation`** [CSS](/zh-CN/docs/Web/CSS) 属性决定了元素是否必须创建一个新的{{glossary("stacking context", "层叠上下文")}}。
 
 {{InteractiveExample("CSS Demo: isolation")}}

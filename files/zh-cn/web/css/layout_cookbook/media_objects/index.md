@@ -3,8 +3,6 @@ title: 指南：媒体对象
 slug: Web/CSS/Layout_cookbook/Media_objects
 ---
 
-{{CSSRef}}
-
 媒体对象是 web 上随处可见的一种模式。它由[Nicole Sullivan](http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/)命名，表示一种一侧是图片并且另一侧是描述性的文字的两列盒子，比如一篇 facebook 帖子或者 tweet。
 
 ![](media-object.png)

@@ -3,8 +3,6 @@ title: ゲーム開発テクニック
 slug: Games/Techniques
 ---
 
-{{GamesSidebar}}
-
 このページでは、オープンウェブ技術を使用してゲームを開発したい人のために、必要不可欠なコア技術をリストアップしています。
 
 - [asm.js 用の非同期スクリプトの使用](/ja/docs/Games/Techniques/Async_scripts)

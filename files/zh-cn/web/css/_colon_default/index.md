@@ -3,8 +3,6 @@ title: :default
 slug: Web/CSS/:default
 ---
 
-{{CSSRef}}
-
 **`:default`** [CSS](/zh-CN/docs/Web/CSS) [pseudo-class](/zh-CN/docs/Web/CSS/Pseudo-classes) 表示一组相关元素中的默认表单元素。
 
 该选择器可以在 {{htmlelement("button")}}, [`<input type="checkbox">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox), [`<input type="radio">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio), 以及 {{htmlelement("option")}} 上使用。

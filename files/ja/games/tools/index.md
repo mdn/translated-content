@@ -3,8 +3,6 @@ title: ゲーム開発のためのツール
 slug: Games/Tools
 ---
 
-{{GamesSidebar}}
-
 このページにはゲーム開発ツールに関する記事へのリンクがまとまっています。ゆくゆくはフレームワークやコンパイラー、デバッグ用ツールもカバーすることを目指しています。
 
 - [asm.js](/ja/docs/Games/Tools/asm.js)

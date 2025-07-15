@@ -3,8 +3,6 @@ title: appearance
 slug: Web/CSS/appearance
 ---
 
-{{CSSRef}}
-
 **`appearance`** CSS 属性用于控制 UI 控件的基于操作系统主题的原生外观。
 
 {{InteractiveExample("CSS Demo: appearance")}}

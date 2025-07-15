@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Math.atan2()`** 靜態方法返回平面上由 (0, 0) 到點 (x, y) 的射線與正 x 軸之間的角度（以弧度表示），即 `Math.atan2(y, x)`。
 
 {{InteractiveExample("JavaScript Demo: Math.atan2()")}}

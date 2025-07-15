@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc4592258b952f452e8715b67b14ce3534ccfa69
 ---
 
-{{CSSRef}}
-
 **`outline-offset`** CSS 属性设置[轮廓](/zh-CN/docs/Web/CSS/outline)与元素边缘或边框之间的间距。
 
 {{InteractiveExample("CSS Demo: outline-offset")}}

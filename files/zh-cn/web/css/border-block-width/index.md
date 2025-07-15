@@ -3,8 +3,6 @@ title: border-block-width
 slug: Web/CSS/border-block-width
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block-width`** 定义了元素的逻辑块向的边框宽度，并根据元素的书写模式、行内方向和文本朝向对应至实体边框宽度。根据 {{CSSXref("writing-mode")}}、{{CSSXref("direction")}} 和 {{CSSXref("text-orientation")}} 所定义的值，此属性对应于 {{CSSXref("border-top-width")}} 和 {{CSSXref("border-bottom-width")}}，或者 {{CSSXref("border-left-width")}} 和 {{CSSXref("border-right-width")}} 属性。
 
 {{InteractiveExample("CSS Demo: border-block-width")}}

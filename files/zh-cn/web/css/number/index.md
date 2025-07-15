@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-{{CSSRef}}
-
 **`<number>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示整数或者是带有小数部分的数字。
 
 ## 语法

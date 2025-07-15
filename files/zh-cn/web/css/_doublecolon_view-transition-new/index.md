@@ -3,7 +3,7 @@ title: ::view-transition-new
 slug: Web/CSS/::view-transition-new
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-new`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)表示视图过渡的新视图状态——即过渡后新视图的实时表示。
 

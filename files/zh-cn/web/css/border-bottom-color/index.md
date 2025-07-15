@@ -3,8 +3,6 @@ title: border-bottom-color
 slug: Web/CSS/border-bottom-color
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`border-bottom-color`** 属性设置一个元素底部边框的颜色。应当指出，在多数情况下，CSS 简写属性 {{cssxref("border-color")}} 或 {{cssxref("border-bottom")}} 更方便实用。

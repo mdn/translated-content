@@ -3,8 +3,6 @@ title: 撞击处理
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
 
 本篇为[Gamedev Canvas tutorial](/zh-CN/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)10 节教程中的**第 7 节。**在你完成这篇课程之后，你可以在[Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).找到我们的源代码。

@@ -3,8 +3,6 @@ title: Finitions
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
 ---
 
-{{GamesSidebar}}
-
 {{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
 
 C'est la dernière étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).

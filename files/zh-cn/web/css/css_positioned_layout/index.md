@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ec0ac22d16171cb72b7391f4727d43c4ffcbee5b
 ---
 
-{{CSSRef}}
-
 **CSS 定位布局**模块定义了如何在网页上定位元素。
 
 ## 参考

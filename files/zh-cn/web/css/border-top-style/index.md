@@ -3,8 +3,6 @@ title: border-top-style
 slug: Web/CSS/border-top-style
 ---
 
-{{CSSRef}}
-
 **`border-top-style`** [CSS](/zh-CN/docs/Web/CSS) 设置元素上边框的 {{cssxref("border")}}.
 
 {{InteractiveExample("CSS Demo: border-top-style")}}

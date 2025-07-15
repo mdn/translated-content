@@ -3,8 +3,6 @@ title: word-spacing
 slug: Web/CSS/word-spacing
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`word-spacing`** 设置标签、单词之间的空格长度。
 
 {{InteractiveExample("CSS Demo: word-spacing")}}

@@ -3,8 +3,6 @@ title: outline-color
 slug: Web/CSS/outline-color
 ---
 
-{{CSSRef}}
-
 **`outline-color`** CSS 属性 被用于设置一个元素轮廓的颜色。
 
 {{InteractiveExample("CSS Demo: outline-color")}}

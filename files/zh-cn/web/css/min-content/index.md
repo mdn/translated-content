@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
-
 `min-content` 尺寸关键字表示内容的最小{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容而言，这意味着内容会利用所有软换行的机会，变得尽可能的小。
 
 可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `min-content` 开始或结束的动画。

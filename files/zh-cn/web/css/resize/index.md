@@ -3,8 +3,6 @@ title: resize
 slug: Web/CSS/resize
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`resize`** 用于设置元素是否可调整尺寸，以及可调整的方向。
 
 {{InteractiveExample("CSS Demo: resize")}}

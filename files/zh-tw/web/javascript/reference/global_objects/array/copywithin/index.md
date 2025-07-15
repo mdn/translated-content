@@ -2,10 +2,8 @@
 title: Array.prototype.copyWithin()
 slug: Web/JavaScript/Reference/Global_Objects/Array/copyWithin
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實體的 **`copyWithin()`** 方法會將陣列中的部分元素進行淺複製，並將其放置於陣列內的另一個位置，同時返回該陣列，但不改變其長度。
 

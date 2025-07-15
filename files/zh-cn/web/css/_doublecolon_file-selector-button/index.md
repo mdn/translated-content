@@ -3,8 +3,6 @@ title: ::file-selector-button
 slug: Web/CSS/::file-selector-button
 ---
 
-{{CSSRef}}
-
 **`::file-selector-button`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)代表 [`type="file"`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file) 的 {{HTMLElement("input") }} 的按钮。
 
 {{InteractiveExample("CSS Demo: ::file-selector-button", "tabbed-shorter")}}

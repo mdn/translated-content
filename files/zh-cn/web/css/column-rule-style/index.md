@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 489dbd4d8e2e099733d3bb04ad3f97678c54ac8e
 ---
 
-{{CSSRef}}
-
 **`column-rule-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置多列布局中列之间绘制的线条的样式。
 
 {{InteractiveExample("CSS Demo: column-rule-style")}}

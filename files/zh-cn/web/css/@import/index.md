@@ -3,8 +3,6 @@ title: "@import"
 slug: Web/CSS/@import
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`@import`** [CSS](/zh-CN/docs/Web/CSS) [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)用于从其他样式表导入样式规则。这些规则必须先于所有其他类型的规则，{{cssxref("@charset")}} 规则除外；因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#nested_statements)，@import 不能在[条件组的规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#conditional_group_rules)中使用。

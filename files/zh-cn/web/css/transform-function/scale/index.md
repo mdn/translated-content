@@ -3,8 +3,6 @@ title: scale()
 slug: Web/CSS/transform-function/scale
 ---
 
-{{CSSRef}}
-
 CSS 函数 `scale()` 用于修改元素的大小。可以通过向量形式定义的缩放值来放大或缩小元素，同时可以在不同的方向设置不同的缩放值。
 
 {{InteractiveExample("CSS Demo: scale()")}}

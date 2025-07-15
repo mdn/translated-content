@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---
 
-{{CSSRef}}
-
 **`break-inside`** [CSS](/zh-CN/docs/Web/CSS) 属性设置生成的盒子内部的页面、栏或区域应有的中断行为。如果没有生成盒子，则该属性将被忽略。
 
 {{InteractiveExample("CSS Demo: break-inside")}}

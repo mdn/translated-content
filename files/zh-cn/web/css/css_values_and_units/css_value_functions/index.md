@@ -3,8 +3,6 @@ title: CSS 值函数
 slug: Web/CSS/CSS_Values_and_Units/CSS_Value_Functions
 ---
 
-{{CSSRef}}
-
 **CSS 值函数**是调用特殊数据处理或计算的语句，以返回一个 CSS 属性的 [CSS](/zh-CN/docs/Web/CSS) [值](/zh-CN/docs/Web/CSS/CSS_Values_and_Units)。CSS 值函数代表更复杂的[数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)，它们可能需要一些输入参数来计算返回值。
 
 ## 语法

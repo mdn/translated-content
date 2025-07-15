@@ -3,8 +3,6 @@ title: Date.prototype.getUTCMinutes()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getUTCMinutes
 ---
 
-{{JSRef}}
-
 **`getUTCMinutes()`** 方法根據世界時回傳指定日期的分鐘數。
 
 {{InteractiveExample("JavaScript Demo: Date.getUTCMinutes()")}}

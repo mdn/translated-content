@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
-
 **`outline-width`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素轮廓的粗细。轮廓是绘制在元素周围的线，位于 {{cssxref("border")}} 之外。
 
 {{InteractiveExample("CSS Demo: outline-width")}}

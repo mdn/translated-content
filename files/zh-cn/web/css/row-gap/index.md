@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 353711e2f11b92232b532c82b10de2afca75f648
 ---
 
-{{CSSRef}}
-
 **`row-gap`** 该 [CSS](/zh-CN/docs/Web/CSS) 属性用来设置行元素之间的间隙（{{glossary("gutters","gutter")}}）大小。
 
 规范的早期版本将此属性命名为 `grid-row-gap`，为了保持与旧网站的兼容性，浏览器仍然会将 `grid-row-gap` 视为 `row-gap` 的别名。

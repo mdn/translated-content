@@ -3,8 +3,6 @@ title: Physics
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
 这是[Gamedev Phaser 教程](/zh-CN/docs/Games/Tutorials/2D_breakout_game_Phaser) 16 的**第 5 步**。你可以在[Gamedev-Phaser-Content-Kit / demos / lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html)完成本课程后找到源代码

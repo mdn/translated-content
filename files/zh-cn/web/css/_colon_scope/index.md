@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
 ---
 
-{{CSSRef}}
-
 **`:scope`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示作为选择器要匹配的作为参考点或作用域的元素。
 
 ```css

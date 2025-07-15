@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 33a12980eb49cc795a41f15ec7a0181270ad3048
 ---
 
-{{CSSRef}}
-
 **`:first-child`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中的第一個元素。
 
 {{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}

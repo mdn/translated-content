@@ -3,8 +3,6 @@ title: 逻辑属性与逻辑值的基本概念
 slug: Web/CSS/CSS_logical_properties_and_values/Basic_concepts_of_logical_properties_and_values
 ---
 
-{{CSSRef}}
-
 逻辑属性与逻辑值规范为 CSS 中的许多属性和值引入了相对于流的对应关系。本文介绍此规范，并解释相对于流的属性与值。
 
 ## 为什么我们需要逻辑属性？

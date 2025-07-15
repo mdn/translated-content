@@ -1,6 +1,7 @@
 ---
 title: -moz-image-region
-slug: Web/CSS/-moz-image-region
+slug: Web/CSS/clip
+original_slug: Web/CSS/-moz-image-region
 ---
 
 {{CSSRef}}{{Non-standard_header}}

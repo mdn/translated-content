@@ -3,8 +3,6 @@ title: orientation
 slug: Web/CSS/@media/orientation
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) [媒体属性](/zh-CN/docs/Web/CSS/CSS_media_queries/Using_media_queries#media_features)**屏幕方向**（**`orientation`**）可用于测试视口 {{glossary("viewport")}}（或者对于[分页媒体](/zh-CN/docs/Web/CSS/CSS_paged_media)而言的页面框盒）的横纵方向。
 
 > [!NOTE]

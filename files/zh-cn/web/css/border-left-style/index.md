@@ -3,8 +3,6 @@ title: border-left-style
 slug: Web/CSS/border-left-style
 ---
 
-{{CSSRef}}
-
 The **`border-left-style`** [CSS](/zh-CN/docs/Web/CSS) property sets the line style of an element's left {{cssxref("border")}}.
 
 {{InteractiveExample("CSS Demo: border-left-style")}}

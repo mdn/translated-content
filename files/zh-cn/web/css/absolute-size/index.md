@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
-{{CSSRef}}
-
 **`<absolute-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)描述了绝对大小关键字。此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
 字体大小关键字映射到已弃用的 HTML `size` 属性，请参阅下面的 [HTML size 属性](#html_size_属性)部分。

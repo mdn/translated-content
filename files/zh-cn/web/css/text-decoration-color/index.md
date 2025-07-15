@@ -3,8 +3,6 @@ title: text-decoration-color
 slug: Web/CSS/text-decoration-color
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-color`** 用于设置文本修饰线的颜色，文本修饰线是通过 {{ cssxref("text-decoration-line") }} 属性指定的。
 
 修饰线包括下划线、上划线、删除线和波浪线，波浪线的典型用途是标明内容拼写错误（仅举例）。被指定的颜色会作用到该属性值有效范围内的所有修饰线上。

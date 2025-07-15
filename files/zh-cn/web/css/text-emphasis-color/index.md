@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-emphasis-color`** 设置强调色。这个值也可以使用简写属性 {{cssxref("text-emphasis")}} 来设置。
 
 {{InteractiveExample("CSS Demo: text-emphasis-color")}}

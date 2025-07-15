@@ -3,8 +3,6 @@ title: 网格布局和其他布局方法的联系
 slug: Web/CSS/CSS_grid_layout/Relationship_of_grid_layout_with_other_layout_methods
 ---
 
-{{CSSRef}}
-
 CSS 网格布局作为实现布局的一个完整系统，其设计使之和 CSS 其他部分能协同合作。在这个指南中，我会向你解释网格布局是如何与你正在使用的其他技巧协同合作的。
 
 ## 网格和弹性盒

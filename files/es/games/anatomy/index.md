@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4b9fefebc6d21e003c8f31b40d98136a7a4b5a95
 ---
 
-{{GamesSidebar}}
-
 Este artículo examina la anatomía y el flujo de trabajo de un videojuego promedio desde un punto de vista técnico, en términos de cómo debe ejecutarse el bucle principal. Ayuda a los principiantes en el desarrollo de videojuegos modernos a entender qué se necesita para crear un juego y cómo los estándares web como JavaScript se prestan a ser herramientas. Los programadores de juegos experimentados que son nuevos en el desarrollo web también podrían beneficiarse.
 
 ## Presentar, aceptar, interpretar, calcular, repetir

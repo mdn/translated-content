@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7e1956dbec8369ae5533be89e21cbce2d5a2ae1c
 ---
 
-{{CSSRef}}
-
 `&` 嵌套选择器的[优先级](/zh-CN/docs/Web/CSS/CSS_cascade/Specificity)由它所关联的选择器列表当中优先级最高的选择器决定。这与 {{cssxref(':is',':is()')}} 函数的优先级计算方式一致。
 
 ```html

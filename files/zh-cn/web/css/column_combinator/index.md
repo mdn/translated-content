@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7fa9b134e7a886b47bd8c6e3135ba329ee0ddf09
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **列组合器**（`||`）可置于两个 CSS 选择器之间。只有那些由第二个选择器匹配到的元素，且属于第一个选择器匹配到的列元素，才会被匹配。
 

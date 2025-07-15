@@ -3,8 +3,6 @@ title: overflow-wrap
 slug: Web/CSS/overflow-wrap
 ---
 
-{{CSSRef}}
-
 {{InteractiveExample("CSS Demo: overflow-wrap")}}
 
 ```css interactive-example-choice

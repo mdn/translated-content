@@ -3,8 +3,6 @@ title: CSS 属性值处理
 slug: Web/CSS/CSS_cascade/Value_processing
 ---
 
-{{CSSRef}}
-
 ## 处理阶段
 
 ### 初始值

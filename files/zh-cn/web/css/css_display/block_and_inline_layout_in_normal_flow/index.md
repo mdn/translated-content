@@ -3,8 +3,6 @@ title: 常规流中的块和内联布局
 slug: Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow
 ---
 
-{{CSSRef}}
-
 在这篇指南中，我们会探讨块级元素和内联元素在常规流中是怎样工作的。
 
 在 CSS 2.1 规范中我们定义了[常规流（Normal Flow）](https://www.w3.org/TR/CSS2/visuren.html#normal-flow)。常规流中的任何一个盒子总是某个*格式区域*（_formatting context_）中的一部分。块级盒子是在*块格式区域*（_block formatting context_）中工作的盒子，而内联盒子是在*内联格式区域*（_inline formatting context_）中工作的盒子。任何一个盒子总是块级盒子或内联盒子中的一种。

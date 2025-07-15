@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7b029638cf0f82b3e70a3e7c242db001d198c047
 ---
 
-{{CSSRef}}
-
 **`font-stretch`** [CSS](/zh-CN/docs/Web/CSS) 属性可从字体中选择正常、压缩或扩展的字体外观。
 
 {{InteractiveExample("CSS Demo: font-stretch")}}

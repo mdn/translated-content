@@ -3,8 +3,6 @@ title: cursor
 slug: Web/CSS/cursor
 ---
 
-{{CSSRef}}
-
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
 
 {{InteractiveExample("CSS Demo: cursor")}}

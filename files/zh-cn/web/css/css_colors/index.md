@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 30a5a8d5c29feab27ec268c272a945702282994e
 ---
 
-{{CSSRef}}
-
 **CSS 颜色**模块定义了颜色、颜色类型、颜色混合、不透明度，以及如何将这些颜色和效果应用到 HTML 内容中。
 
 虽然此模块仅包含两个 CSS 属性，即 {{cssxref("color")}} 和 {{cssxref("opacity")}}，但有超过 20 个 CSS 和 SVG 属性、CSS 图像、At 规则以及 @media 规则依赖于这两个属性。

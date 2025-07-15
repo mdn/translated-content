@@ -3,8 +3,6 @@ title: translate3d()
 slug: Web/CSS/transform-function/translate3d
 ---
 
-{{CSSRef}}
-
 **`translate3d()`** [CSS](/zh-TW/docs/Web/CSS) 函式以 3D 場境的方式定位元素。其結果為 {{cssxref("&lt;transform-function&gt;")}} 資料型別。
 
 {{InteractiveExample("CSS Demo: translate3d()")}}

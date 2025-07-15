@@ -3,8 +3,6 @@ title: 动画性 CSS 属性
 slug: Web/CSS/CSS_animated_properties
 ---
 
-{{CSSRef}}
-
 [CSS 动画](/zh-CN/docs/Web/CSS/CSS_animations)和[过渡](/zh-CN/docs/Web/CSS/CSS_transitions)依赖于**动画性**属性这一概念，且所有 CSS 属性除非另有规定否则均有动画性。每个属性的*动画类型*决定了此属性的值如何[结合](https://drafts.csswg.org/css-values/#combining-values)——插值、相加或累积。过渡仅涉及插值，而动画可能使用所有三种结合方法。
 
 > [!NOTE]

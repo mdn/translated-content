@@ -3,8 +3,6 @@ title: lab()
 slug: Web/CSS/color_value/lab
 ---
 
-{{CSSRef}}
-
 函数记号 **`lab()`** 在 CIE L\*a\*b\* 颜色空间中表示指定颜色。Lab 表示人可见的全部颜色的范围。
 
 ## 语法

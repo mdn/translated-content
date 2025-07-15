@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9760ffbbd1720d09b7d36853edd421fe5447dbc4
 ---
 
-{{CSSRef}}
-
 **`polygon()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。它用于通过提供一个或多个坐标对（每一个坐标代表形状的一个顶点）来绘制[多边形](https://zh.wikipedia.org/wiki/多边形)。
 
 {{InteractiveExample("CSS Demo: polygon()")}}

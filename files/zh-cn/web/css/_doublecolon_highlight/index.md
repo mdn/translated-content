@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
 
-{{CSSRef}}
-
 **`::highlight()`** CSS [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)用于设置自定义高亮样式。
 
 自定义高亮是一组 {{domxref("Range")}} 对象，并且通过 {{domxref("HighlightRegistry")}} 在网页上注册。

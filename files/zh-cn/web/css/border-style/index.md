@@ -5,8 +5,6 @@ slug: Web/CSS/border-style
 
 ## 概述
 
-{{CSSRef}}
-
 `border-style` 是一个 [CSS](/zh-CN/docs/Web/CSS) 简写属性，用来设定元素所有边框的样式。
 
 > [!NOTE]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Math.asinh()`** 靜態方法回傳數字的反雙曲正弦值。也就是說，
 
 <math display="block">

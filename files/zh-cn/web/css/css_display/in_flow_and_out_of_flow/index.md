@@ -3,8 +3,6 @@ title: 应用或脱离流式布局
 slug: Web/CSS/CSS_display/In_flow_and_out_of_flow
 ---
 
-{{CSSRef}}
-
 在之前的[文档](/zh-CN/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow)中我解释了常规流中块（block）和行（inline）布局，常规流中的所有元素都会以这种布局方式运作。
 
 在下面的例子中，我新建了一个标题（h1 元素），一个段落（p 元素），一个无序列表（ul 元素）和一个包含 strong 元素的段落（p 元素），标题和段落都是块级（block level），strong 元素为行级（inline）。列表中的项通过弹性盒布局排成一行，但是列表本身仍然处于块和内联布局中 - 他的 display 属性为 block。

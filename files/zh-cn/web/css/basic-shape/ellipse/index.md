@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
 
 {{InteractiveExample("CSS Demo: ellipse()")}}

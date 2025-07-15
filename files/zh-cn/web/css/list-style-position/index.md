@@ -3,8 +3,6 @@ title: list-style-position
 slug: Web/CSS/list-style-position
 ---
 
-{{CSSRef}}
-
 **`list-style-position`** 属性指定标记框在主体块框中的位置。
 
 使用助记符{{cssxref("list-style")}}更方便。

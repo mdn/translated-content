@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2b214f76937f16327c4338ae4a541f54bcf4bf63
 ---
 
-{{CSSRef}}
-
 本文主要介绍 HTML 中使用 CSS 颜色的各种方法。
 
 色彩的运用是人类表达的一种基本形式。小孩子在学会绘画前就开始尝试色彩的运用。也许这就是为什么颜色是人们在学习开发网站时最想尝试的东西之一。借助 [CSS](/zh-CN/docs/Web/CSS)，有很多方法可以为 [HTML](/zh-CN/docs/Web/HTML) [元素](/zh-CN/docs/Web/HTML/Reference/Elements)添加颜色，以创建所需的外观。

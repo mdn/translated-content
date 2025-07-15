@@ -3,8 +3,6 @@ title: scroll-padding-inline-start
 slug: Web/CSS/scroll-padding-inline-start
 ---
 
-{{CSSRef}}
-
 **`scroll-padding-inline-start`** 属性定义了滚动口的*最优视区*——用于在用户视野中放置内容的目标区域——的行首内边距。作者由此得以排除滚动口被其他内容（如固定定位的工具栏或侧边栏）所遮挡的区域，或在目标元素与滚动口的边之间留出更多余地。
 
 {{InteractiveExample("CSS Demo: scroll-padding-inline-start")}}

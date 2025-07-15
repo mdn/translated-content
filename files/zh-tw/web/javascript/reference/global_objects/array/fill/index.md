@@ -2,10 +2,8 @@
 title: Array.prototype.fill()
 slug: Web/JavaScript/Reference/Global_Objects/Array/fill
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`fill()`** 方法會將陣列中某個範圍內的所有元素更改為靜態值，並回傳修改後的陣列。
 

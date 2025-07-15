@@ -3,8 +3,6 @@ title: CSS 计数器样式
 slug: Web/CSS/CSS_counter_styles
 ---
 
-{{CSSRef}}
-
 **CSS 计数器样式**是一个让你自定义计数器样式的 CSS 模块。
 
 ## 参考

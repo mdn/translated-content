@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 [CSS 嵌套](/zh-CN/docs/Web/CSS/CSS_nesting)模块允许你将你的样式表写的更加容易阅读、更加模块化，而且更加容易维护。因为你不再需要重复选择器，文件同样也可以被压缩。
 
 CSS 嵌套不同于如 [Sass](https://sass-lang.com/) 等的 CSS 预处理器的一点是，它是被浏览器直接解析的，而不是先经由 CSS 预处理器的预编译。而且在 CSS 嵌套中，[`&` 嵌套选择器的优先级](/zh-CN/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)类似于 {{cssxref(':is',':is()')}} 函数；它的优先级由它所关联的选择器列表当中优先级最高的选择器决定。

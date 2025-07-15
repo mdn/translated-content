@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 255a29f9e5bae99fd3bd98f6af1204a98be634bb
 ---
 
-{{CSSRef}}
-
 **`<box-edge>`** 值类型表示一个[盒子边界](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)关键字，例如 [`content-box`](#content-box) 和 [`border-box`](#border-box)。盒子边界关键字用于定义元素盒模型的不同方向，以及元素在屏幕上的定位和呈现方式。
 
 盒子边界关键字是构成数据类型（但不限于） `<visual-box>`、`<layout-box>`、`<paint-box>`、`<coord-box>` 和 `<geometry-box>` 的组成部分。这些类型被应用于诸如 {{cssxref("transform-box")}} 和 {{cssxref("background-clip")}} 属性。

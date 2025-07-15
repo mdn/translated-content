@@ -3,8 +3,6 @@ title: "@charset"
 slug: Web/CSS/@charset
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`@charset`** [CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)指定样式表中使用的字符编码。它必须是样式表中的第一个元素，而前面不得有任何字符。因为它不是一个[嵌套语句](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax#css_语句)，所以不能在[@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)[条件组](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule#条件规则组)中使用。如果有多个 **`@charset`** [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)被声明，只有第一个会被使用，而且不能在 HTML 元素或 HTML 页面的字符集相关 {{ HTMLElement("style") }} 元素内的样式属性内使用。

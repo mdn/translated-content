@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`rgb()`** 函数标记根据 {{glossary("RGB", "sRGB")}} {{glossary("color space", "色彩空间")}}中颜色的红色、绿色和蓝色分量来表达颜色。可选的 alpha 分量代表了颜色的透明度。
 
 {{InteractiveExample("CSS Demo: rgb()")}}

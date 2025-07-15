@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
-{{CSSRef}}
-
 **`border-image`** [CSS](/zh-CN/docs/Web/CSS) 属性在给定元素的周围绘制图像，取代元素的常规[边框](/zh-CN/docs/Web/CSS/border)。
 
 {{InteractiveExample("CSS Demo: border-image")}}

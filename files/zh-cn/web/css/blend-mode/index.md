@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 245715b48674c1729cb63417e4a27628e30ae28c
 ---
 
-{{CSSRef}}
-
 **`<blend-mode>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)描述当元素重叠时，颜色应当如何呈现。它被用于 {{cssxref("background-blend-mode")}} 和 {{cssxref("mix-blend-mode")}} 属性。
 
 ## 语法

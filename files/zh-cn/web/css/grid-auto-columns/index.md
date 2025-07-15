@@ -3,8 +3,6 @@ title: grid-auto-columns
 slug: Web/CSS/grid-auto-columns
 ---
 
-{{CSSRef}}
-
 CSS 属性 **`grid-auto-columns`** 指定了隐式创建的网格纵向轨道（{{glossary("grid tracks", "track")}}）的宽度。
 
 {{InteractiveExample("CSS Demo: grid-auto-columns")}}

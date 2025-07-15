@@ -3,8 +3,6 @@ title: CSS 的简写属性
 slug: Web/CSS/CSS_cascade/Shorthand_properties
 ---
 
-{{CSSRef}}
-
 **简写属性**是可以让你同时设置好几个 CSS 属性值的 CSS 属性。使用简写属性，Web 开发人员可以编写更简洁、更具可读性的样式表，节省时间和精力。
 
 CSS 规范定义简写属性的目的在于将那些关于同一主题的常见属性的定义集中在一起。比如 CSS 的 {{cssxref("background")}} 属性就是一个简写属性，它可以定义 {{cssxref("background-color")}}、{{cssxref("background-image")}}、{{cssxref("background-repeat")}} 和 {{cssxref("background-position")}} 的值。类似地，最常见的字体相关的属性可以使用 {{cssxref("font")}} 的简写，盒子（box）各方向的外边距（margin）可以使用 {{cssxref("margin")}} 这个简写。

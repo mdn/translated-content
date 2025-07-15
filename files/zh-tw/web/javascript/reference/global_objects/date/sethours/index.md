@@ -3,8 +3,6 @@ title: Date.prototype.setHours()
 slug: Web/JavaScript/Reference/Global_Objects/Date/setHours
 ---
 
-{{JSRef}}
-
 **`setHours()`** 方法基於本地時區設置指定日期的小時，並回傳自 1970 年 1 月 1 日 00:00:00 UTC 起至更新的 {{jsxref("Date")}} 實例所表示的時間為止，共經過的毫秒數。
 
 {{InteractiveExample("JavaScript Demo: Date.setHours()")}}

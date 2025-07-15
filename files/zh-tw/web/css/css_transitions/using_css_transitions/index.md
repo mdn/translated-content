@@ -3,8 +3,6 @@ title: CSS 轉場
 slug: Web/CSS/CSS_transitions/Using_CSS_transitions
 ---
 
-{{CSSRef}}
-
 CSS transitions 是 CSS3 specification 草案的一部分，他可以用來調整 CSS animation 變動的速度。舉例來說，倘若你設計了一個 element 會由白轉紅，你可以透過 CSS transitions 來控制轉變的時間及變化曲線。
 
 > [!NOTE]

@@ -7006,14 +7006,6 @@
       "Channy"
     ]
   },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2020-10-15T21:37:53.434Z",
-    "contributors": [
-      "alattalatta",
-      "teoli",
-      "wjsskanyo"
-    ]
-  },
   "Web/CSS/::after": {
     "modified": "2020-10-15T21:37:38.967Z",
     "contributors": [
@@ -8369,6 +8361,14 @@
     "contributors": [
       "alattalatta",
       "Netaras"
+    ]
+  },
+  "Web/CSS/clip": {
+    "modified": "2020-10-15T21:37:53.434Z",
+    "contributors": [
+      "alattalatta",
+      "teoli",
+      "wjsskanyo"
     ]
   },
   "Web/CSS/clip-path": {

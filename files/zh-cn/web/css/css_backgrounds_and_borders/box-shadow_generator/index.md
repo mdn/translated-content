@@ -3,8 +3,6 @@ title: Box-shadow 生成器
 slug: Web/CSS/CSS_backgrounds_and_borders/Box-shadow_generator
 ---
 
-{{CSSRef}}
-
 这个可视化工具可以帮助你生成一个元素的 CSS {{cssxref("box-shadow")}} 相关代码，添加 box shadow 效果到你的 CSS 对象上。
 
 {{EmbedGHLiveSample("css-examples/tools/box-shadow-generator/", '100%', 900)}}

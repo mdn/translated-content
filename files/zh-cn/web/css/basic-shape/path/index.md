@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8cd08162e592c1baf5d888f4c5a08a58360344b5
 ---
 
-{{CSSRef}}
-
 `path()` [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)接受 [SVG 路径](/zh-CN/docs/Web/SVG/Reference/Element/path)字符串作为参数，用于 [CSS 形状](/zh-CN/docs/Web/CSS/CSS_shapes)和[运动路径](/zh-CN/docs/Web/CSS/CSS_motion_path)模块中绘制形状。`path()` 函数是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型的值。它可以用于 CSS 的 [`offset-path`](/zh-CN/docs/Web/CSS/offset-path) 和 [`clip-path`](/zh-CN/docs/Web/CSS/clip-path) 属性，以及 SVG 的 [`d`](/zh-CN/docs/Web/SVG/Reference/Attribute/d) 属性。
 
 {{InteractiveExample("CSS Demo: path()")}}

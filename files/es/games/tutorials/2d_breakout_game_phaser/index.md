@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e4783c03e39807e0060a2f4df3bf3962d25d8388
 ---
 
-{{GamesSidebar}}
-
 {{Next("Games/Workflows/2D_Breakout_game_Phaser/Initialize_the_framework")}}
 
 En este tutorial paso a paso, creamos un sencillo juego móvil: **MDN Breakout**, escrito en JavaScript, utilizando el framework [Phaser](https://phaser.io/).

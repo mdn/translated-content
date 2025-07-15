@@ -3,8 +3,6 @@ title: Controles del ratón
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Track_the_score_and_win", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Terminando")}}
 
 Este es el noveno paso de 10 del [tutorial Canvas para el desarrollo de juegos](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes encontrar el código y pegarle un vistazo después de completar esta lección [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).

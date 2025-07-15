@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 56db19e6b8d19932c1b6150bc42e752e12a2b21f
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Collision_detection", "Games/Workflows/2D_Breakout_game_Phaser/Win_the_game")}}
 
 이것은 [Gamedev Phaser tutorial](/ko/docs/Games/Tutorials/2D_breakout_game_Phaser)의 16단계중 11번째 과정입니다. 이 과정의 소스코드를 얻고자 한다면 이 강좌를 수강한 후 [Gamedev-Phaser-Content-Kit/demos/lesson11.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson11.html)를 통해 얻으세요.

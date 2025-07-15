@@ -3,8 +3,6 @@ title: -webkit-device-pixel-ratio
 slug: Web/CSS/@media/-webkit-device-pixel-ratio
 ---
 
-{{CSSRef}}
-
 {{ Non-standard_header() }}
 
 **`-webkit-device-pixel-ratio`** 是一个非标准的布尔类型 CSS 媒体类型，是标准 [`resolution`](/zh-CN/docs/Web/CSS/@media/resolution) 媒体类型的一个替代方案。

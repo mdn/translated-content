@@ -3,8 +3,6 @@ title: color-mix()
 slug: Web/CSS/color_value/color-mix
 ---
 
-{{CSSRef}}
-
 **`color-mix()`** 函数标记接收两个 {{cssxref("&lt;color&gt;")}} 值，并返回在指定颜色空间、指定数量混合后的颜色。
 
 ## 语法

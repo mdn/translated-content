@@ -3,8 +3,6 @@ title: accent-color
 slug: Web/CSS/accent-color
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`accent-color`** 为某些元素所生成的用户界面控件设置了{{Glossary("accent", "强调色")}}。
 
 {{InteractiveExample("CSS Demo: accent-color")}}

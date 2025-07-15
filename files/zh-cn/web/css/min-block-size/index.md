@@ -3,8 +3,6 @@ title: min-block-size
 slug: Web/CSS/min-block-size
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`min-block-size`** 根据元素的书写模式定义了元素区块的横向或纵向最小尺寸。根据 {{CSSXref("writing-mode")}} 的值，此属性对应于 {{CSSXref("min-width")}} 或 {{CSSXref("min-height")}} 属性。
 
 若为纵向书写模式，则 `min-block-size` 的值对应于元素的最小宽度；否则对应于元素的最小高度。与此相关的属性为 {{CSSXref("min-inline-size")}}，此属性定义了元素另一方向的尺度。

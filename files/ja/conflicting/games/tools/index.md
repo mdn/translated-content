@@ -4,8 +4,6 @@ slug: conflicting/Games/Tools
 original_slug: Games/Introduction_to_HTML5_Game_Development
 ---
 
-{{GamesSidebar}}
-
 ## 長所
 
 1. HTML5 で作られたゲームはスマートフォン、タブレット、PC、スマート TV で動作します。

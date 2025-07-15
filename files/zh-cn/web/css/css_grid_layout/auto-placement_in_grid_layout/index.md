@@ -3,8 +3,6 @@ title: CSS 网格布局中的自动定位
 slug: Web/CSS/CSS_grid_layout/Auto-placement_in_grid_layout
 ---
 
-{{CSSRef}}
-
 为了精确地把项目摆放到网格中，CSS 网格布局规范还包含另外一组规则，用来约定当部分或全部子项目没有被明确指定位置时该如何处理。你会发现针对含有数个项目的网格，实际上最简单的方式就是使用自动定位。
 
 ## 默认定位

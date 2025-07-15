@@ -3,8 +3,6 @@ title: box-decoration-break
 slug: Web/CSS/box-decoration-break
 ---
 
-{{CSSRef}}
-
 **`box-decoration-break`** 属性用来定义当元素跨多行、多列或多页时，元素的片段应如何呈现。
 
 {{InteractiveExample("CSS Demo: box-decoration-break")}}

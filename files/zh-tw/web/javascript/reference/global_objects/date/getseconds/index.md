@@ -3,8 +3,6 @@ title: Date.prototype.getSeconds()
 slug: Web/JavaScript/Reference/Global_Objects/Date/getSeconds
 ---
 
-{{JSRef}}
-
 **`getSeconds()`** 方法基於本地時區回傳指定日期的秒數。
 
 {{InteractiveExample("JavaScript Demo: Date.getSeconds()", "shorter")}}

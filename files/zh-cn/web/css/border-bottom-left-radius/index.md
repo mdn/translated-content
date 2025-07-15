@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-bottom-left-radius`** [CSS](/zh-CN/docs/Web/CSS) 属性通过指定定义元素左下角曲率的椭圆的半径（或半长轴和半短轴的半径），对元素的左下角进行圆角处理。
 
 {{InteractiveExample("CSS Demo: border-bottom-left-radius")}}

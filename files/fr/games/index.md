@@ -3,8 +3,6 @@ title: Développement de jeux vidéo
 slug: Games
 ---
 
-{{GamesSidebar}}
-
 Les jeux vidéo sont parmi les activités numériques les plus populaires. L'arrivée continue de nouvelles technologies permet de développer encore des jeux de meilleure qualité et plus performants qui peuvent fonctionner dans n'importe quel navigateur respectant les standards du web.
 
 {{EmbedGHLiveSample("web-tech-games/index.html", '100%', 820)}}

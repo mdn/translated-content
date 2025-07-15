@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`inset()`** [CSS](/zh-CN/docs/Web/CSS) 函数定义了一个矩形，其位于参考框的每一边内侧的指定的距离处。它是用于定义 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一的基本形状函数。
 
 {{InteractiveExample("CSS Demo: inset()")}}

@@ -3,8 +3,6 @@ title: animation-direction
 slug: Web/CSS/animation-direction
 ---
 
-{{CSSRef}}
-
 **`animation-direction`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是应正向播放、反向播放还是在正向和反向之间交替播放。
 
 {{InteractiveExample("CSS Demo: animation-direction")}}

@@ -3,8 +3,6 @@ title: 面包屑导航
 slug: Web/CSS/Layout_cookbook/Breadcrumb_Navigation
 ---
 
-{{CSSRef}}
-
 面包屑导航通过提供返回起始页面的面包屑轨迹，帮助用户了解他们在网站中所处的位置。
 
 ![与分隔符一同显示的链接](breadcrumb-navigation.png)

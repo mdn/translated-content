@@ -3,8 +3,6 @@ title: animation-iteration-count
 slug: Web/CSS/animation-iteration-count
 ---
 
-{{CSSRef}}
-
 **`animation-iteration-count`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画序列在停止前应播放的次数
 
 {{InteractiveExample("CSS Demo: animation-iteration-count")}}

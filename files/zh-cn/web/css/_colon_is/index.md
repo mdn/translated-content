@@ -3,8 +3,6 @@ title: :is()
 slug: Web/CSS/:is
 ---
 
-{{CSSRef}}
-
 **`:is()`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)函数以选择器列表作为参数，并选择该列表中任意一个选择器可以选择的元素。这对于以更紧凑的形式编写大型选择器非常有用。
 
 > [!NOTE]

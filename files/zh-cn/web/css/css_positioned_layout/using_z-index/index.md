@@ -3,8 +3,6 @@ title: 使用 z-index
 slug: Web/CSS/CSS_positioned_layout/Using_z-index
 ---
 
-{{CSSRef}}
-
 ### 使用 {{ cssxref("z-index") }}
 
 在第一个例子 [Stacking without z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)中，我们描述了默认的摆放顺序。当你需要指定不同的排列顺序时，只要给元素指定一个 z-index 的数值就可以了。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4b6b77bc36496c88dcbe477ec46da678a85d8e6e
 ---
 
-{{CSSRef}}
-
 使用 CSS 嵌套可以将任何包含样式规则的 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)嵌入到另一个规则中。嵌套在 at 规则中的规则从距离它们最近的祖先规则中获得选择器定义。属性可以直接被包含到一个嵌套的 at 规则中，就像被一个 `& {...}` 块所包含的那样。
 
 ## 可以被嵌套的 at 规则

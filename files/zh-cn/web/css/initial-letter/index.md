@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
 ---
 
-{{CSSRef}}
-
 `initial-letter` CSS 属性用于设置首字符的样式，包括嵌入、凸起和下沉。这个属性适用于 {{cssxref("::first-letter")}} 伪元素以及区块容器内的首个行内级子元素。
 
 ## 语法

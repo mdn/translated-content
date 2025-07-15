@@ -3,8 +3,6 @@ title: animation-play-state
 slug: Web/CSS/animation-play-state
 ---
 
-{{CSSRef}}
-
 **`animation-play-state`** [CSS](/zh-CN/docs/Web/CSS) 属性设置动画是运行还是暂停。
 
 {{InteractiveExample("CSS Demo: animation-play-state")}}

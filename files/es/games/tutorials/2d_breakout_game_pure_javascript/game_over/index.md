@@ -3,8 +3,6 @@ title: Fin del juego
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Control_pala_y_teclado", "Games/Workflows/Famoso_juego_2D_usando_JavaScript_puro/Construye_grupo_bloques")}}
 
 Este es el quinto paso de 10 del [Gamedev Canvas tutorial](/es/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Puedes ver como debería quedar el código fuente después de completar esta lección en [Gamedev-Canvas-workshop/lesson5.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson05.html).

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 802978f38824a4132b4f9b3d3c23fb6970beba74
 ---
 
-{{CSSRef}}
-
 **`matrix3d()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)以 4x4 齐次矩阵的形式定义一个 3D 变换。其结果是一个 {{cssxref("&lt;transform-function&gt;")}} 数据类型。
 
 {{InteractiveExample("CSS Demo: matrix3d()")}}

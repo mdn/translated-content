@@ -3,7 +3,7 @@ title: "@layer"
 slug: Web/CSS/@layer
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 [CSS](/zh-CN/docs/Web/CSS) [@规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 中的 `@layer` 声明了一个*层叠层*，同一层内的规则将级联在一起，这给予了开发者对层叠机制的更多控制。
 
