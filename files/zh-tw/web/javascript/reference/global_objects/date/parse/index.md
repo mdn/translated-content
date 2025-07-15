@@ -3,8 +3,6 @@ title: Date.parse()
 slug: Web/JavaScript/Reference/Global_Objects/Date/parse
 ---
 
-{{JSRef}}
-
 **`Date.parse()`** 方法解析一表示日期的字串，並回傳自 1970 年 01 月 01 日 00:00:00 UTC 起至該日期共經過的毫秒數；如果字串無法辨識或包含無效值（如：2015-02-31），則回傳 `NaN`。
 
 只有 [ISO 8601 格式](https://tc39.es/ecma262/#sec-date-time-string-format)（ `YYYY-MM-DDTHH:mm:ss.sssZ`）為明確指定支援的格式。其餘格式因實作方式而異，不一定跨瀏覽器通用。若需要涵蓋多種格式，可以引入函式庫協助。
