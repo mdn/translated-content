@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
-
 **`-webkit-text-stroke-width`** [CSS](/zh-CN/docs/Web/CSS) 属性指定了文本的笔触宽度。
 
 ## 语法

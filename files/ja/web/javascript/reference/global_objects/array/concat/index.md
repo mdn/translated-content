@@ -10,7 +10,7 @@ l10n:
 **`concat()`** は {{jsxref("Array")}} インスタンスのメソッドで、2 つ以上の配列を結合するために使用します。
 このメソッドは既存の配列を変更せず、新しい配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.concat()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.concat()", "shorter")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

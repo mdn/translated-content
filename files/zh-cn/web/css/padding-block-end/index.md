@@ -3,8 +3,6 @@ title: padding-block-end
 slug: Web/CSS/padding-block-end
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`padding-block-end`** 定义了元素的逻辑块末内边距，并根据元素的书写模式、行内方向和文本朝向对应至实体内边距。
 
 {{InteractiveExample("CSS Demo: padding-block-end")}}

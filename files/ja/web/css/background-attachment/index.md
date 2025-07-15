@@ -9,7 +9,7 @@ l10n:
 
 **`background-attachment`** は [CSS](/ja/docs/Web/CSS) のプロパティで、背景画像の位置を{{glossary("viewport", "ビューポート")}}の中で固定するか、包含ブロックと一緒にスクロールするかを設定します。
 
-{{InteractiveExample("CSS Demo: background-attachment")}}
+{{InteractiveExample("CSS デモ: background-attachment")}}
 
 ```css interactive-example-choice
 background-attachment: scroll;

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---
 
-{{CSSRef}}
-
 **`background-attachment`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定背景圖片的位置是否固定在{{glossary("viewport", "視區")}}內，或者跟隨其包含區塊一起滑動。
 
 {{InteractiveExample("CSS Demo: background-attachment")}}

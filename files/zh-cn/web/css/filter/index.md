@@ -3,8 +3,6 @@ title: filter
 slug: Web/CSS/filter
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`filter`** 属性将模糊或颜色偏移等图形效果应用于元素。滤镜通常用于调整图像、背景和边框的渲染。
 
 有几个[函数](#函数)（例如 `blur()` 和 `contrast()`）可以帮助你实现预定义的效果。

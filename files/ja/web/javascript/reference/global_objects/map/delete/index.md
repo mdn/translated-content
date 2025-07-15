@@ -9,7 +9,7 @@ l10n:
 
 **`delete()`** メソッドは `Map` オブジェクトから特定の要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.delete()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.delete()")}}
 
 ```js interactive-example
 const map1 = new Map();

@@ -9,7 +9,7 @@ l10n:
 
 **`margin-block-end`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の末尾側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
-{{InteractiveExample("CSS Demo: margin-block-end")}}
+{{InteractiveExample("CSS デモ: margin-block-end")}}
 
 ```css interactive-example-choice
 margin-block-end: 20px;

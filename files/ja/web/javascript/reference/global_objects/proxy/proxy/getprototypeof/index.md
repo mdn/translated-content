@@ -9,7 +9,7 @@ l10n:
 
 **`handler.getPrototypeOf()`** メソッドは、オブジェクトの `[[GetPrototypeOf]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.getPrototypeOf()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.getPrototypeOf()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.getPrototypeOf()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

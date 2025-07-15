@@ -10,7 +10,7 @@ l10n:
 
 **`accesskey`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、現在の要素のショートカットキーを生成するためのヒントを与えます。この属性は空白で区切った表示可能な文字（キーボードから生成できるアクセント付き文字やその他の文字を含む）から成ります。
 
-{{InteractiveExample("HTML Demo: accesskey", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: accesskey", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>If you need to relax, press the <b>S</b>tress reliever!</p>

@@ -11,7 +11,7 @@ l10n:
 
 `counter()` 関数は、ふつうは[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)の中の {{cssxref("content")}} で用いることが多いものの、理論的には [`<string>`](/ja/docs/Web/CSS/string) に対応するすべての箇所で用いることができます。
 
-{{InteractiveExample("CSS Demo: counter()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: counter()", "tabbed-shorter")}}
 
 ```css interactive-example
 .double-list {
