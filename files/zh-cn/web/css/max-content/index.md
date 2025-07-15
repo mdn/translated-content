@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
-
 `max-content` 尺寸关键字表示内容的最大{{glossary("intrinsic size", "固有尺寸")}}。对于文本内容，这意味着即使内容会导致溢出，它也不会换行。
 
 可以使用 {{cssxref("interpolate-size")}} 属性和 {{cssxref("calc-size()")}} 函数来启用由 `max-content` 开始或结束的动画。

@@ -3,8 +3,6 @@ title: font-size-adjust
 slug: Web/CSS/font-size-adjust
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 `font-size-adjust` CSS 属性定义字体大小应取决于小写字母，而不是大写字母。在字体较小时，字体的可读性主要由小写字母的大小决定，通过此选项即可进行调整。
