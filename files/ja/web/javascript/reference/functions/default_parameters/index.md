@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Functions/Default_parameters
 
 **関数のデフォルト引数**は、関数に値が渡されない場合や `undefined` が渡された場合に、デフォルト値で初期化される形式上の引数を指定することができます。
 
-{{InteractiveExample("JavaScript Demo: Functions Default")}}
+{{InteractiveExample("JavaScript デモ: Functions Default")}}
 
 ```js interactive-example
 function multiply(a, b = 1) {

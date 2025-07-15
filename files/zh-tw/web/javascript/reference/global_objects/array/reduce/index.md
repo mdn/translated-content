@@ -3,8 +3,6 @@ title: Array.prototype.reduce()
 slug: Web/JavaScript/Reference/Global_Objects/Array/reduce
 ---
 
-{{JSRef}}
-
 **`reduce()`** 方法將一個累加器及陣列中每項元素（由左至右）傳入回呼函式，將陣列化為單一值。
 
 {{InteractiveExample("JavaScript Demo: Array.reduce()")}}

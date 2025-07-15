@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/getUint16
 
 **`getUint16()`** メソッドは、符号なし 16 ビット整数 (unsigned short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置から読み取ります。
 
-{{InteractiveExample("JavaScript Demo: DataView.getUint16()")}}
+{{InteractiveExample("JavaScript デモ: DataView.getUint16()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

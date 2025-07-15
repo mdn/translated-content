@@ -9,7 +9,7 @@ l10n:
 
 **`entries()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列内の各要素に対するキー/値のペアを含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.entries()")}}
+{{InteractiveExample("JavaScript デモ: Array.entries()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

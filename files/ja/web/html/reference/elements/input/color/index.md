@@ -13,7 +13,7 @@ CSS の色表現には他にも色名、関数表記、アルファ値つきの 
 
 この要素の外見は、ブラウザーやプラットフォームによって大きく異なります。基本的なテキストの入力欄で、入力された色情報が文字列の検証のみを行う入力欄であったり、プラットフォームの標準カラーピッカーや、独自のピッカーウィンドウを表示するなど、ブラウザーやプラットフォームにより大きく異なることがあります。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;color&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Choose your monster's colors:</p>

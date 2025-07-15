@@ -11,7 +11,7 @@ l10n:
 
 この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
-{{InteractiveExample("CSS Demo: inset-inline")}}
+{{InteractiveExample("CSS デモ: inset-inline")}}
 
 ```css interactive-example-choice
 inset-inline: 5% 10%;

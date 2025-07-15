@@ -9,7 +9,7 @@ l10n:
 
 **`Math.LOG10E`** は静的データプロパティで、 10 を底とした [e](/ja/docs/Web/JavaScript/Reference/Global_Objects/Math/E) の対数、約 0.434 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.log10e()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.log10e()", "shorter")}}
 
 ```js interactive-example
 function getLog10e() {

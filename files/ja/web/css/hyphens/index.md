@@ -9,7 +9,7 @@ l10n:
 
 **`hyphens`** は [CSS](/ja/docs/Web/CSS) のプロパティで、文字列を複数行にわたって折り返す際に、単語のハイフネーションを行う方法を指定します。ハイフネーションをまったく行わなかったり、手動で指定された位置で文字列のハイフネーションを行ったり、ブラウザーに適切な位置にハイフンを挿入させたりすることができます。
 
-{{InteractiveExample("CSS Demo: hyphens")}}
+{{InteractiveExample("CSS デモ: hyphens")}}
 
 ```css interactive-example-choice
 hyphens: none;

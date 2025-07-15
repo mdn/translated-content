@@ -9,7 +9,7 @@ l10n:
 
 **`concat()`** メソッドは、文字列引数を呼び出し文字列に連結して、新しい文字列を返します。
 
-{{InteractiveExample("JavaScript Demo: String.concat()")}}
+{{InteractiveExample("JavaScript デモ: String.concat()")}}
 
 ```js interactive-example
 const str1 = "Hello";

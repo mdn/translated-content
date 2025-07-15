@@ -11,7 +11,7 @@ l10n:
 
 自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。
 
-{{InteractiveExample("CSS Demo: hyphenate-character")}}
+{{InteractiveExample("CSS デモ: hyphenate-character")}}
 
 ```css interactive-example-choice
 hyphenate-character: auto;

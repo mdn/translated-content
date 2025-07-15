@@ -11,7 +11,7 @@ l10n:
 
 非同期関数は [`async function` 式](/ja/docs/Web/JavaScript/Reference/Operators/async_function)を使用して定義することもできます。
 
-{{InteractiveExample("JavaScript Demo: Statement - Async", "taller")}}
+{{InteractiveExample("JavaScript デモ: Statement - Async", "taller")}}
 
 ```js interactive-example
 function resolveAfter2Seconds() {

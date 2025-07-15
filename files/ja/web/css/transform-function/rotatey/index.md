@@ -9,7 +9,7 @@ l10n:
 
 **`rotateY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素の形を変化させずに縦座標 (垂直軸) の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: rotateY()")}}
+{{InteractiveExample("CSS デモ: rotateY()")}}
 
 ```css interactive-example-choice
 transform: rotateY(0);

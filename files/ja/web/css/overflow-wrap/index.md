@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > このプロパティはもともと、標準外かつ接頭辞のない `word-wrap` と呼ばれる Microsoft 拡張であり、多くのブラウザーはこの名前で実装していました。 `overflow-wrap` に改名されたため、 `word-wrap` は別名になりました。
 
-{{InteractiveExample("CSS Demo: overflow-wrap")}}
+{{InteractiveExample("CSS デモ: overflow-wrap")}}
 
 ```css interactive-example-choice
 overflow-wrap: normal;
