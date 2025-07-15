@@ -25,7 +25,7 @@ l10n:
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].styleSheet); // 一个 CSSStyleSheet 对象
+console.log(myRules[0].styleSheet); // CSSStyleSheet 对象
 ```
 
 ## 规范
