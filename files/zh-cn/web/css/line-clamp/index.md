@@ -3,8 +3,6 @@ title: line-clamp
 slug: Web/CSS/line-clamp
 ---
 
-{{CSSRef}}
-
 **`line-clamp`** [CSS](/zh-CN/docs/Web/CSS) 属性可以把{{Glossary("Block", "块容器")}}中的内容限制为指定的行数。
 
 > [!NOTE]

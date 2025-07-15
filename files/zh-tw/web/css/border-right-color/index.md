@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
-{{CSSRef}}
-
 **`border-right-color`** [CSS](/zh-TW/docs/Web/CSS) 屬性設定元素右[邊框](/zh-TW/docs/Web/CSS/border)的顏色。它也可以透過簡寫 CSS 屬性 {{cssxref("border-color")}} 或 {{cssxref("border-right")}} 來設定。
 
 {{InteractiveExample("CSS Demo: border-right-color")}}
