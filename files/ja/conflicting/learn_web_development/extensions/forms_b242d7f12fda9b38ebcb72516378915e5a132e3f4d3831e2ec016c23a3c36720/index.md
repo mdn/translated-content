@@ -1,7 +1,7 @@
 ---
 title: "スキルテスト: 基本的なコントロール"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
-original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Basic_controls
+slug: conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

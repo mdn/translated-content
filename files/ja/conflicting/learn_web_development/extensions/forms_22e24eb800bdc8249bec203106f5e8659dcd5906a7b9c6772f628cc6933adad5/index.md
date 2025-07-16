@@ -1,7 +1,7 @@
 ---
 title: "スキルテスト: フォーム検証"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation
-original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Form_validation
+slug: conflicting/Learn_web_development/Extensions/Forms_22e24eb800bdc8249bec203106f5e8659dcd5906a7b9c6772f628cc6933adad5
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills/Form_validation
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---

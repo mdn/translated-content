@@ -1,7 +1,7 @@
 ---
 title: "スキルテスト: その他のコントロール"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
-original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
+slug: conflicting/Learn_web_development/Extensions/Forms_58a11e1e730bbd563fe9276c2a39fa58fbf081a1a43e03680bd843ab74d2b47e
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
