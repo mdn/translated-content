@@ -1,430 +1,196 @@
 ---
-title: 开始学习 HTML
+title: HTML 基础语法
 slug: Learn_web_development/Core/Structuring_content/Basic_HTML_syntax
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{NextMenu("Learn_web_development/Core/Structuring_content/Webpage_metadata", "Learn_web_development/Core/Structuring_content")}}
 
-本文将从 HTML 最基础的部分讲起，对元素（Element）、属性（Attribute）以及可能涉及的一些重要术语进行介绍，并明确它们在 HTML 文档中所处的位置。本文还会讲解 HTML 元素和页面的组织方式，以及其他一些重要的基本语言特性。学习的过程中，我们也会使用 HTML 做一些好玩的事情。
+在本文中，我们将介绍最基础的 HTML 知识。为了让你快速入门，本文将定义元素、属性以及你可能听过的所有其他重要术语，并解释它们在 HTML 中的作用。你将学习 HTML 元素的结构、一个典型 HTML 页面的结构，以及其他重要的基本语言特性。在此过程中，你也将有机会动手玩转 HTML！
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        具备计算机基础知识，安装了<a
-          href="/zh-CN/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >基础软件环境</a
-        >，了解基本的<a
-          href="/zh-CN/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >文件组织方法</a
-        >。
+        安装<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software">基础软件</a>，并掌握<a href="/zh-CN/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files">处理文件的基本知识</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">学习目标：</th>
-      <td>熟悉 HTML 语言的基础知识，掌握几个 HTML 元素的基本用法。</td>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>HTML 元素的剖析：元素、开始标签、内容、结束标签、属性。</li>
+          <li>HTML body 及其作为页面内容容器的用途。</li>
+          <li>辨识<a href="/zh-CN/docs/Glossary/Void_element">空元素</a>，以及其与其他元素的区别。</li>
+          <li>明白为何需要在 HTML 文档顶部声明 doctype。了解其历史缘由，但现在它在某种程度上已成为历史遗留。</li>
+          <li>掌握 HTML 标签正确嵌套的规则。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
-## 什么是 HTML?
+## 什么是 HTML？
 
-{{glossary("HTML")}}（HyperText Markup Language，超文本标记语言）是一种用来告知浏览器如何组织页面的*标记语言*。HTML 可复杂、可简单，一切取决于 web 开发者。HTML 由一系列的{{Glossary("Element", "元素")}}组成，这些元素可以用来包围或*标记*不同部分的内容，使其以某种方式呈现或者工作。两端的{{glossary("Tag", "标签")}}可以使内容变成超链接，以连接到另一个页面；使字体表现为斜体等。例如，考虑如下内容：
+{{glossary("HTML")}}（HyperText Markup Language，超文本标记语言）是一种*标记语言*，它告诉 Web 浏览器如何组织你访问的网页。它可以像 Web 开发者希望的那样复杂或简单。HTML 由一系列的{{glossary("Element", "元素")}}组成，你使用这些元素来包围、包装或*标记*内容的不同部分，使其以某种方式显示或运作。闭合的{{glossary("Tag", "标签")}}可以使内容成为一个连接到其他页面的超链接、将文字变为斜体等等。例如，考虑下面这行文本：
 
 ```plain
 My cat is very grumpy
 ```
 
-如果我们想要将这行文字单独呈现，可以将这行文字封装成一个段落（Paragraph）{{htmlelement("p")}} 元素：
+如果我们想让这段文本独立成段，我们可以用段落（{{htmlelement("p")}}）元素来包裹它：
 
 ```html
 <p>My cat is very grumpy</p>
 ```
 
+HTML 存在于扩展名为 `.html` 的文本文件中，这种文件被称为 **HTML 文档**，或简称**文档**。在我们之前谈论网页的地方，一个 HTML 文档包含了网页的内容并指定了其结构。
+
+你将遇到的最常见的 HTML 文件是 `index.html`，它通常用于包含网站主页的内容。同样常见的是看到带有各自 `index.html` 的子文件夹，因此一个网站可以在不同的位置有多个索引文件。
+
 > [!NOTE]
-> HTML 标签不区分大小写。也就是说，输入标签时既可以使用大写字母也可以使用小写字母。例如，标签 {{htmlelement("title")}} 可以写作 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 等，也都可以正常工作。不过，从一致性、可读性来说，最好仅使用小写字母。
+> HTML 中的标签不区分大小写。这意味着它们可以用大写或小写书写。例如，{{htmlelement("title")}} 标签可以写成 `<title>`、`<TITLE>`、`<Title>`、`<TiTlE>` 等，并且都能正常工作。但是，为了保持一致性和可读性，最佳实践是所有标签都用小写书写。
 
 ## 剖析一个 HTML 元素
 
-让我们进一步探讨我们的前述的段落元素：
+让我们进一步探讨一下上一节中的段落元素：
 
-![一个示范性的代码片断，展示了 html 元素 <p> My cat is very grumpy </p> 的结构。](grumpy-cat-small.png)
+![一个示例代码片段，展示了 HTML 元素的结构。<p>My cat is very grumpy</p>。](grumpy-cat-small.png)
 
-这个元素的主要部分有：
+我们元素的结构是：
 
-- **开始标签**（Opening tag）：包含元素的名称（本例为 _p_），被左、右角括号所包围。开头标签标志着元素开始或开始生效的地方。在这个示例中，它在段落文本的开始之前。
-- **内容**（Content）：元素的内容，本例中就是段落的文本。
-- **结束标签**（Closing tag）：与开始标签相似，只是其在元素名之前包含了一个斜杠。这标志着该元素的结束。没有包含关闭标签是一个常见的初学者错误，它可能会产生奇特的结果。
+- **开始标签**（opening tag）：由元素的名称（本例中为段落的 _p_）包裹在开、闭角括号中组成。这个开始标签标志着元素开始或生效的位置。在此示例中，它位于段落文本的开始之前。
+- **内容**（content）：这是元素的内容。在此示例中，就是段落的文本。
+- **结束标签**（closing tag）：这与开始标签相同，只是在元素名称前包含一个正斜杠。这标志着元素的结束。忘记包含结束标签是一个常见的初学者错误，可能会产生奇特的结果。
 
-整个元素即指开始标签、内容、结束标签三部分组成的整体。
+元素是开始标签、内容和结束标签的总和。
 
-### 主动学习：创建第一个 HTML 元素
+> [!NOTE]
+> 可以前往我们的学习伙伴 Scrimba 的 [HTML 标签](https://scrimba.com/learn-html-and-css-c0p/~02?via=mdn) <sup>[_MDN 学习伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> 资料，获取关于 HTML 标签的交互式解释。
 
-在下方可编辑代码区域编辑文本，使用标签 `<em>` 和 `</em>` 来包裹它。在前面放置 `<em>` 以*打开元素*，在后面放置 `</em>` 以*关闭元素*。这样编辑使得行内容变成斜体强调！你可以在*实时输出*区域中查看更新。
+### 创建你的第一个 HTML 元素
 
-如果写错了，可随时按*重置*按钮重新开始，如果实在想不出来，可按*显示答案*按钮查看答案。
+让我们来练习编写你自己的 HTML 元素：
 
-```html hidden
-<h2>实时输出</h2>
-<div class="output" style="min-height: 50px;"></div>
+1. 点击下面代码块中的“**Play**”在 MDN 代码演练场中编辑示例。
+2. 用 `<em>` 和 `</em>` 标签包裹这行文本。要*打开元素*，请将开始标签 `<em>` 放在行的开头。要*关闭元素*，请将结束标签 `</em>` 放在行的末尾。这样做应该会使输出面板中渲染的文本变为斜体格式。
+3. 如果你想挑战一下，可以尝试查找更多 HTML 元素并将其应用于文本示例。
 
-<h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
+如果你犯了错误，可以使用 MDN 代码演练场中的“_Reset_”按钮清除你的工作。如果你实在卡住了，可以查看代码块下方的解决方案。
 
-<textarea id="code" class="playable-code" style="min-height: 100px;width: 95%">
-  刀枪剑戟 斧钺钩叉
-</textarea>
-
-<div class="controls">
-  <input id="reset" type="button" value="重置" />
-  <input id="solution" type="button" value="显示答案" />
-</div>
+```html live-sample___basic_html_1
+这是我的文本。
 ```
 
-```css hidden
-html {
-  font-family: "Open Sans Light", Helvetica, Arial, sans-serif;
-}
+{{ EmbedLiveSample('basic_html_1', "100%", 60) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>点击这里显示解决方案</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+你完成后的 HTML 行应该像这样：
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<em>这是我的文本。</em>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution = "<em>刀枪剑戟 斧钺钩叉</em>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "显示答案";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "显示答案") {
-    textarea.value = solutionEntry;
-    solution.value = "隐藏答案";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "显示答案";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "显示答案") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('主动学习：创建第一个 HTML 元素', 700, 400) }}
+</details>
 
 ### 嵌套元素
 
-你也可以把元素放到其他元素之中——这被称作*嵌套*。如果我们想要表明我们的小猫脾气**很**暴躁，可以将 _very_ 一词嵌套在 {{htmlelement("strong")}} 元素中，意味着这个单词被着重强调：
+元素可以放置在其他元素内部。这被称为*嵌套*。如果我们想要表明我们的小猫脾气**很**暴躁，我们可以将*很*这个词用 {{htmlelement("strong")}} 元素包裹起来，这意味着这个词将以粗体的文本格式显示：
 
 ```html
-<p>My cat is <strong>very</strong> grumpy.</p>
+<p>我们的小猫脾气<strong>很</strong>暴躁。</p>
 ```
 
-你需要确保元素被正确的嵌套：在上面的例子中我们先打开 `p` 元素，然后才打开 `strong` 元素，因此必须先将 `strong` 元素关闭，然后再去关闭 `p` 元素。下面的例子是错误的：
+嵌套有正确和错误的方式。在上面的例子中，我们先打开了 `p` 元素，然后打开了 `strong` 元素。为了正确嵌套，我们应该先关闭 `strong` 元素，然后再关闭 `p` 元素。
+
+以下是*错误*嵌套方式的示例：
 
 ```html-nolint example-bad
-<p>My cat is <strong>very grumpy.</p></strong>
+<p>我们的小猫脾气<strong>很暴躁。</p></strong>
 ```
 
-**所有的元素都需要正确的打开和关闭，这样才能按你所想的方式展现**。由于上述示例中的那种重叠，浏览器不得不猜测你的意图。这种猜测可能会导致意想不到的结果。
-
-### 块级元素和内联元素
-
-在 HTML 中有两种你需要知道的重要元素类别，块级元素和内联元素。
-
-- 块级元素在页面中以块的形式展现。一个块级元素出现在它前面的内容之后的新行上。任何跟在块级元素后面的内容也会出现在新的行上。块级元素通常是页面上的结构元素。例如，一个块级元素可能代表标题、段落、列表、导航菜单或页脚。一个块级元素不会嵌套在一个内联元素里面，但它可能嵌套在另一个块级元素里面。
-- 内联元素通常出现在块级元素中并环绕文档内容的一小部分，而不是一整个段落或者一组内容。内联元素不会导致文本换行。它通常与文本一起使用，例如，{{htmlelement("a")}} 元素创建一个超链接，{{htmlelement("em")}} 和 {{htmlelement("strong")}} 等元素创建强调。
-
-考虑如下示例：
-
-```html
-<em>第一</em><em>第二</em><em>第三</em>
-
-<p>第四</p>
-<p>第五</p>
-<p>第六</p>
-```
-
-{{htmlelement("em")}} 是一个内联元素，所以就像你在下方可以看到的，第一行代码中的三个元素都没有间隙的展示在了同一行。而 {{htmlelement("p")}} 是一个块级元素，所以第二行代码中的每个 _p_ 元素分别都另起了新的一行展现，并且每个段落间都有一些间隔（这是因为默认的浏览器有着展示 {{htmlelement("p")}} 元素的默认 [CSS 样式](/zh-CN/docs/Learn_web_development/Core/Styling_basics)）。
-
-{{ EmbedLiveSample('块级元素和内联元素', 700, 200) }}
-
-> [!NOTE]
-> HTML5 重新定义了元素的类别：见[元素内容分类](https://html.spec.whatwg.org/multipage/indices.html#element-content-categories)。尽管这些新的定义更精确，但却比上述的“块级元素”和“内联元素”更难理解，因此在之后的讨论中仍使用旧的定义。
-
-> [!NOTE]
-> 在这篇文章中提到的“块”和“内联”，不应该与 [CSS 盒子的类型](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Box_model#块级盒子（block_box）_和_内联盒子（inline_box）)中的同名术语相混淆。尽管它们默认是相关的，但改变 CSS 显示类型并不会改变元素的分类，也不会影响它可以包含和被包含于哪些元素。防止这种混淆也是 HTML5 摒弃这些术语的原因之一。
-
-> [!NOTE]
-> 你可以查阅包含了块级元素和内联元素列表的参考页面。参见[块级元素](/zh-CN/docs/Glossary/Block-level_content)和[内联元素](/zh-CN/docs/Glossary/Inline-level_content)页面。
+**标签必须以它们相互嵌套或分离的方式打开和关闭**。如果像上面的例子那样重叠，浏览器就必须猜测你的意图。这种猜测可能会导致意想不到的结果。
 
 ### 空元素
 
-不是所有元素都拥有开始标签、内容和结束标签。一些元素只有一个标签，通常用来在此元素所在位置插入/嵌入一些东西。这些元素被称为{{glossary("void element", "空元素")}}。例如：元素 {{htmlelement("img")}} 是用来在页面插入一张指定的图片。
+并非所有元素都遵循开始标签、内容和结束标签的模式。有些元素只包含一个标签，通常用于在文档中插入/嵌入某些东西。这类元素被称为{{glossary("void element", "空元素")}}。例如，{{htmlelement("img")}} 元素可以在页面上嵌入一个图像文件：
 
 ```html
 <img
-  src="https://roy-tian.github.io/learning-area/extras/getting-started-web/beginner-html-site/images/firefox-icon.png"
+  src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"
   alt="Firefox 图标" />
 ```
 
-显示如下：
+这将输出以下内容：
 
-{{ EmbedLiveSample('空元素', 700, 300, "", "") }}
+{{ EmbedLiveSample('空元素', 700, 300) }}
 
 > [!NOTE]
-> HTML 中，无需在一个空元素的标签末尾添加 `/`，例如 `<img src="images/cat.jpg" alt="cat" />`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，这么做也没问题。
+> 在 HTML 中，没有要求在空元素的标签末尾添加 `/`，例如：`<img src="images/cat.jpg" alt="猫">`。然而，这也是一种有效的语法，当你希望你的 HTML 是有效的 XML 时，可以这样做。
 
 ## 属性
 
-元素也可以拥有属性，属性看起来像这样：
+元素也可以有属性。属性看起来是这样的：
 
-![含有‘class="editor-note"’属性的段落标签](grumpy-cat-attribute-small.png)
+![带有“class="editor-note"”属性的段落标签](grumpy-cat-attribute-small.png)
 
-属性包含元素的额外信息，这些信息不会出现在实际的内容中。在上述例子中，这个 **`class`** 属性是一个识别名称，以后为元素设置样式信息时更加方便。
+属性包含关于元素的额外信息，这些信息不会出现在内容中。在这个例子中，**`class`** 属性是一个标识名称，用于通过样式信息来定位元素。
 
-属性必须包含：
+一个属性应该有：
 
-- 一个空格，它在属性和元素名称之间。如果一个元素具有多个属性，则每个属性之间必须由空格分隔。
-- 属性名称，后面跟着一个等于号。
-- 一个属性值，由一对引号（""）引起来。
+- 一个在它和元素名之间的空格。（对于拥有多个属性的元素，属性之间也应该用空格分隔。）
+- 属性名，后跟一个等号。
+- 一个属性值，用开始和结束的引号包裹。
 
-### 主动学习：为元素添加属性
+### 为元素添加属性
 
-另一个例子是关于元素 {{htmlelement("a")}} 的——元素 {{htmlelement("a")}} 是*锚*，它使被标签包裹的内容成为一个超链接。锚元素可以添加多种属性，部分如下：
+现在又轮到你了。在这一节中，我们将让你向 `<img>` 元素添加属性，以便在页面上显示一张图片。`<img>` 元素可以接受多个属性，包括：
 
-- `href`
-  - : 这个属性声明超链接的 web 地址。例如 `href="https://www.mozilla.org/"`。
-- `title`
-  - : `title` 属性为超链接声明额外的信息，比如你将链接至的那个页面。例如 `title="The Mozilla homepage"`。当鼠标悬停在超链接上面时，这部分信息将以工具提示的形式显示。
-- `target`
-  - : `target` 属性用于指定链接如何呈现出来。例如，`target="_blank"` 将在新标签页中显示链接。如果你希望在当前标签页显示链接，忽略这个属性即可。
+- `src`：一个**必需**的属性，指定图像的位置。例如：`src="https://raw.githubusercontent.com/mdn/beginner-html-site/gh-pages/images/firefox-icon.png"`。
+- `alt`：图像的文本描述。例如：`alt="Firefox 图标"`。
+- `width`：图像的宽度，单位为像素。例如：`width="300"`。
+- `height`：图像的高度，单位为像素。例如：`height="300"`。
 
-编辑下面的文本框中的内容，使之变成指向任一个你喜欢的 web 地址的链接。
+按照以下步骤完成任务：
 
-1. 添加 `<a>` 元素。
-2. 添加 `href` 属性和 `title` 属性。
-3. 指定 `target` 属性，使得点击链接时在新标签页打开。
+1. 点击下面代码块中的“**Play**”在 MDN 代码演练场中编辑示例。
+2. 在网上找到你最喜欢的图片，右键单击它，然后按*复制图片链接/地址*。
+3. 回到 MDN 代码演练场，将 `src` 属性添加到 `<img>` 元素，并将其值设置为第 2 步中的链接。
+4. 将 `alt` 属性设置为对图片的适当描述。
+5. 将 `width` 属性设置为一个值，比如 `300`，这样你可以在输出面板中更好地看到图片。如果需要可以进行调整。
 
-你可以在*实时输出*区域看到你修改的内容。你应该可以看到一个链接，当鼠标移上此链接时会显示 `title` 属性值，当点击此链接时会跳转到 `href` 属性指定的 web 地址。记住：在元素名和属性名之间以及两个属性之间要有一个空格。
+如果你犯了错误，可以使用 MDN 代码演练场中的“_Reset_”按钮清除你的工作。如果你实在卡住了，可以查看代码块下方的解决方案。
 
-如果写错了，可随时按*重置*按钮重新开始，如果实在想不出来，可按*显示答案*按钮查看答案。
-
-```html hidden
-<h2>实时输出</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
-
-<textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;A link to my favorite website.&lt;/p&gt;
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="重置" />
-  <input id="solution" type="button" value="显示答案" />
-</div>
+```html live-sample___basic_html_2
+<img />
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('basic_html_2', "100%", 60) }}
 
-h2 {
-  font-size: 16px;
-}
+<details>
+<summary>点击这里显示解决方案</summary>
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+你完成后的 HTML 元素应该像这样：
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
+```html
+<img src="<URL-OF-IMAGE>" alt="图像的描述" width="300" />
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  '<p>A link to my <a href="https://www.mozilla.org/" title="The Mozilla homepage" target="_blank">favorite website</a>.</p>';
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "显示答案";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "显示答案") {
-    textarea.value = solutionEntry;
-    solution.value = "隐藏答案";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "显示答案";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "显示答案") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('主动学习：为元素添加属性', 700, 400) }}
+</details>
 
 ### 布尔属性
 
-有时你会看到没有值的属性，这也是完全可以接受的。这些属性被称为布尔属性。布尔属性只能有一个值，这个值一般与属性名称相同。例如，考虑 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/input#disabled) 属性，你可以将其分配给表单输入元素。用它来禁用表单输入元素，这样用户就不能输入了。被禁用的元素通常有一个灰色的外观。示例如下：
+有时你会看到没有值的属性。这是完全可以接受的。这些被称为[布尔属性](/zh-CN/docs/Glossary/Boolean/HTML)。当一个布尔属性没有值，或有任何值（甚至像 `"false"`）时，该布尔属性总是被设置为 true。否则，如果该属性没有写在 HTML 标签中，该属性就被设置为 false。规范要求该属性的值要么是空字符串（包括属性没有明确指定值时），要么与属性的名称相同，但其他值的作用也一样。例如，考虑 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/input#disabled) 属性，你可以把它赋给表单输入元素。（你可以用它来*禁用*表单输入元素，这样用户就不能输入内容了。被禁用的元素通常呈现为灰色。）例如：
 
 ```html
 <input type="text" disabled="disabled" />
 ```
 
-方便起见，我们完全可以将其写成以下形式：
+作为简写，可以这样写：
 
 ```html
 <!-- 使用 disabled 属性来防止终端用户输入文本到输入框中 -->
@@ -434,74 +200,76 @@ textarea.onkeyup = () => {
 <input type="text" />
 ```
 
-作为参考，上面的例子还包括一个非禁用的表单输入元素。上面两段 HTML 代码产生的效果如下：
+作为参考，上面的例子还包括一个非禁用的表单输入元素。上面的 HTML 会产生以下结果：
 
-{{ EmbedLiveSample('布尔属性', 700, 100, "", "") }}
+{{ EmbedLiveSample('布尔属性', 700, 100) }}
 
-### 省略包围属性值的引号
+### 省略属性值周围的引号
 
-如果你看了很多其他网站的代码，你可能会遇到一些奇怪的标记风格，包括没有引号的属性值。在某些情况下它是被允许的，但是其他情况下会破坏你的标记。例如，针对之前的链接示例，我们可以像这样写一个只拥有一个 `href` 属性的版本：
+如果你查看许多其他网站的代码，你可能会遇到一些奇怪的标记样式，包括没有引号的属性值。这在某些情况下是允许的，但在其他情况下也可能破坏你的标记。下面代码片段中的 `<a>` 元素被称为锚点。锚点包裹文本，并将其变成链接。`href` 属性指定了链接指向的网址。你可以只用 `href` 属性写出这个基本版本，像这样：
 
 ```html
-<a href=https://www.mozilla.org/>favorite website</a>
+<a href=https://www.mozilla.org/>最喜欢的网站</a>
 ```
 
-然而，当我们再添加一个 `title` 属性时，就会出现问题：
+锚点也可以有一个 `title` 属性，用来描述链接的页面。然而，一旦我们像 `href` 属性一样添加 `title`，问题就来了：
 
 ```html-nolint example-bad
-<a href=https://www.mozilla.org/ title=The Mozilla homepage>favorite website</a>
+<a href=https://www.mozilla.org/ title=The Mozilla homepage>最喜欢的网站</a>
 ```
 
-此时浏览器会误解你的标记，它会把 `title` 属性理解为三个属性——title 的属性值为 `The`，另外还有两个布尔属性 `Mozilla` 和 `homepage`，很明显不是我们所期望的！并且在这个编码里面它会报错或者出现异常行为。试一试把鼠标移动到链接上，看会显示什么 title 文字！
+如上所示，浏览器会误解标记，将 `title` 属性误认为三个属性：一个值为 `The` 的 `title` 属性，以及两个布尔属性 `Mozilla` 和 `homepage`。显然，这不是我们想要的！它会导致错误或意想不到的行为，正如你在下面的实时示例中看到的那样。试着将鼠标悬停在链接上查看标题文本！
 
-{{ EmbedLiveSample('省略包围属性值的引号', 700, 100, "", "") }}
+{{ EmbedLiveSample('省略属性值周围的引号', 700, 100) }}
 
-我们建议始终添加引号——这样可以避免很多问题，并且使代码更易读。
+始终包含属性引号。这样可以避免此类问题，并使代码更具可读性。
 
-### 使用单引号还是双引号？
+### 单引号还是双引号？
 
-在目前为止，本章内容所有的属性都是由双引号来包裹。然而，你也许在一些 HTML 中也见过单引号。这只是风格的问题，你可以从中选择一个你喜欢的。以下两种情况都可以：
+在本文中，你会注意到属性都是用双引号包裹的。然而，你可能在某些 HTML 代码中看到单引号。这是一个风格问题。你可以随意选择你喜欢的一种。下面这两行是等效的：
 
 ```html-nolint
-<a href='https://www.example.com'>示例站点链接</a>
+<a href='https://www.example.com'>一个指向示例的链接。</a>
 
-<a href="https://www.example.com">示例站点链接</a>
+<a href="https://www.example.com">一个指向示例的链接。</a>
 ```
 
-但应该注意单引号和双引号不能在一个属性值里面混用。下面的语法是错误的：
+确保不要混合使用单引号和双引号。下面的例子显示了一种会出错的引号混合使用方式：
 
 ```html-nolint example-bad
-<a href="https://www.example.com'>示例站点链接</a>
+<a href="https://www.example.com'>一个指向示例的链接。</a>
 ```
 
-在一个 HTML 中已使用一种引号，你可以在此引号*中*嵌套另外一种引号：
+但是，如果你使用一种类型的引号，你可以在属性值*内部*包含另一种类型的引号：
 
 ```html
-<a href="https://www.example.com" title="你觉得'好玩吗'？">示例站点链接</a>
+<a href="https://www.example.com" title="你觉得'好玩吗'？">
+  一个指向示例的链接。
+</a>
 ```
 
-如果你想将英文引号（单引号或双引号）当作文本显示在 html 中，你就必须使用 [HTML 实体引用](#实体引用：在_html_中包含特殊字符)。像这样的代码就会破坏显示：
+要在相同类型的引号内使用引号（单引号或双引号），请使用{{glossary("character reference", "字符引用")}}。例如，这样做会出错：
 
 ```html-nolint example-bad
-<a href='https://www.example.com' title='Isn't this fun?'>示例站点链接</a>
+<a href="https://www.example.com" title="一个"有趣"的引用">一个指向示例的链接。</a>
 ```
 
-要这样做：
+相反，你应该这样做：
 
-```html
-<a href="https://www.example.com" title="Isn't this fun?">示例站点链接</a>
+```html-nolint
+<a href="https://www.example.com" title="一个&quot;有趣&quot;的引用">一个指向示例的链接。</a>
 ```
 
 ## 剖析 HTML 文档
 
-单独的 HTML 元素本身并不十分有用。接下来，我们来看看单个元素是如何组合成整个 HTML 页面的：
+单个 HTML 元素本身并不是很有用。接下来，让我们看看单个元素如何组合成一个完整的 HTML 页面：
 
 ```html
 <!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8" />
-    <title>我的测试站点</title>
+    <title>我的测试页面</title>
   </head>
   <body>
     <p>这是我的页面</p>
@@ -511,214 +279,134 @@ textarea.onkeyup = () => {
 
 这里我们有：
 
-1. `<!DOCTYPE html>`: 声明文档类型。早期的 HTML（大约 1991-1992 年）文档类型声明类似于链接，规定了 HTML 页面必须遵从的良好规则，能自动检测错误和其他有用的东西。文档类型使用类似于这样：
+1. `<!doctype html>`：文档类型声明（doctype）。在 HTML 早期（1991-1992 年），doctype 旨在作为一套规则的链接，HTML 页面必须遵循这些规则才能被认为是好的 HTML。过去的 doctype 看起来像这样：
 
    ```html
    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
    ```
 
-   文档类型是一个历史遗留问题，需要包含它才能使其他东西正常工作。现在，只需要知道 `<!DOCTYPE html>` 是最短的有效文档声明！
+   最近，doctype 成为了一个历史遗留物，为了让其他一切正常工作而必须包含它。`<!doctype html>` 是算作有效 doctype 的最短字符序列。你只需要知道这些！
 
-2. `<html></html>`: {{htmlelement("html")}} 元素。这个元素包裹了页面中所有的内容，有时被称为根元素。
-3. `<head></head>`: {{htmlelement("head")}} 元素。这个元素是一个容器，它包含了所有你想包含在 HTML 页面中但**不在 HTML 页面中显示**的内容。这些内容包括你想在搜索结果中出现的关键字和页面描述、CSS 样式、字符集声明等等。以后的章节中会学到更多相关的内容。
-4. `<meta charset="utf-8">`: {{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素表示的元数据，比如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}。[`charset`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset) 属性将你的文档的字符集设置为 UTF-8，其中包括绝大多数人类书面语言的大多数字符。有了这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不对它进行设置，它可以帮助避免以后的一些问题。
-5. `<title></title>`: {{htmlelement("title")}} 元素。这设置了页面的标题，也就是出现在该页面加载的浏览器标签中的内容。当页面被加入书签时，页面标题也被用来描述该页面。
-6. `<body></body>`: {{htmlelement("body")}} 元素。包含了你访问页面时*所有*显示在页面上的内容，包含文本、图片、视频、游戏、可播放音频轨道等等。
+2. `<html></html>`：{{htmlelement("html")}} 元素。这个元素包裹了页面上的所有内容。它有时被称为根元素。
+3. `<head></head>`：{{htmlelement("head")}} 元素。这个元素充当一个容器，用于存放你想包含在 HTML 页面中但**不向**页面浏览者显示的内容。这包括会出现在搜索结果中的关键字和页面描述、用于样式化内容的 CSS、字符集声明等等。你将在本系列的下一篇文章中学到更多相关内容。
+4. `<meta charset="utf-8">`：{{htmlelement("meta")}} 元素。这个元素代表了不能由其他 HTML 元相关元素（如 {{htmlelement("base")}}、{{htmlelement("link")}}、{{htmlelement("script")}}、{{htmlelement("style")}} 或 {{htmlelement("title")}}）表示的元数据。[`charset`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#charset) 属性将你的文档的字符编码指定为 UTF-8，它包含了绝大多数人类书面语言的字符。通过这个设置，页面现在可以处理它可能包含的任何文本内容。没有理由不设置它，而且它可以帮助避免以后的一些问题。
+5. `<title></title>`：{{htmlelement("title")}} 元素。它设置了页面的标题，这个标题会出现在加载该页面的浏览器标签页中。当页面被收藏为书签时，页面标题也用于描述该页面。
+6. `<body></body>`：{{htmlelement("body")}} 元素。它包含了在页面上显示的*所有*内容，包括文本、图像、视频、游戏、可播放的音轨或其他任何东西。
 
-### 主动学习：为 HTML 文档添加一些特征
+### 为 HTML 文档添加一些特性
 
-如果你想在你的本地练习写一些 HTML 页面，你可以这样做：
+此时，我们希望你练习编写一些稍微丰富一点的 HTML 内容。要做到这一点，你有两个选择——你可以在本地计算机上创建 HTML，或者像前面的例子一样使用 MDN 代码演练场。
 
-1. 复制上面的 HTML 页面例子。
-2. 在文字编辑器创建一个新文件。
-3. 粘贴代码到这个文件。
-4. 保存为 `index.html`。
+- 在本地计算机上操作：
+  1. 复制上一节中列出的 HTML 页面示例，并将其粘贴到你的代码编辑器的新文件中。
+  2. 按照下面的说明对页面进行更改。
+  3. 将文件另存为 `index.html`，然后在新的浏览器标签页中加载它以查看结果。
 
-> [!NOTE]
-> 可在 [MDN 学习区代码仓库](https://github.com/roy-tian/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) 上查看该示例。
+  > [!NOTE]
+  > 你也可以在我们的 GitHub 仓库中找到这个[基础 HTML 模板](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/getting-started/index.html)。你可以复制这个文件，而不是自己创建。
 
-你可以打开浏览器看看这段代码的效果是什么样的，然后改变代码刷新浏览器看看新的结果。最开始的代码是这样的效果：
+- 在 MDN 代码演练场中操作，点击下面的输出面板中的“**Play**”来编辑示例，然后按照以下说明操作。如果你犯了错误，可以使用 MDN 代码演练场中的“_Reset_”按钮清除你的工作。
 
-![一个简单的 HTML 页面，内容为 This is my page](template-screenshot.png)在这个练习中，你可以在电脑上本地编辑代码，如前所述，也可以在下面的样本窗口中编辑（在这种情况下，可编辑的样本窗口只代表 {{htmlelement("body")}} 元素的内容）。通过执行以下任务来磨练你的技能：
-
-- 就在 {{htmlelement("body")}} 元素开始标签下方，为这个文档添加一个主标题。这个主标题应该被包含在 `<h1>` 开始标签和 `</h1>` 结束标签之间。
-- 编辑这个段落以包含一些你感兴趣的文本。
-- 把重要的字词包含在开始标记 `<strong>` 和结束标记 `</strong>` 之间可以使他们以粗体显示。
-- 在你的文档中添加一个超文本链接，[如前所述](#主动学习：为元素添加属性)。
-- 在段落下方向你的文档添加一张图片，[如前所述](#空元素)。如果你尝试对不同的图片（在你的本地电脑或是在 Web 的其他位置上）添加链接，那你就更棒了。
-
-如果写错了，可随时按*重置*按钮重新开始，如果实在想不出来，可按*显示答案*按钮查看答案。
-
-```html hidden
-<h2>实时输出</h2>
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
-<textarea id="code" class="input" style="min-height: 100px;width: 95%">
-  &lt;p&gt;相思无用，惟别而已。别期若有定，千般煎熬又何如？莫道黯然销魂，何处柳暗花明？&lt;/p&gt;
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="重置" />
-  <input id="solution" type="button" value="显示答案" />
-</div>
+```html hidden live-sample___basic_html_3
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>我的测试页面</title>
+  </head>
+  <body>
+    <p>这是我的页面</p>
+  </body>
+</html>
 ```
 
-```css hidden
-html {
-  font-family: sans-serif;
-}
+{{ EmbedLiveSample('basic_html_3', "100%", 60) }}
 
-h1 {
-  color: blue;
-}
+以下是要遵循的说明：
 
-h2 {
-  font-size: 16px;
-}
+1. 在 {{htmlelement("body")}} 元素的开始标签正下方，为文档添加一个主标题。这应该被包裹在 `<h1>` 开始标签和 `</h1>` 结束标签内。
+2. 编辑段落内容，使其包含一些你感兴趣的话题的文本。
+3. 通过将重要的词语包裹在 {{htmlelement("strong")}} 元素内，使其以粗体突出显示。
+4. 在你的段落中添加两个链接。这是通过使用 {{htmlelement("a")}} 元素实现的。
+5. 在你的文档中添加一张图片，如[本文前面所述](#为元素添加属性)。将其放在段落下方。如果图片太大看不清，可以给它添加一个 `width` 属性来缩小它。
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
+如果你真的卡住了，可以在这里查看解决方案：
 
-img {
-  max-width: 100%;
-}
+<details>
+<summary>点击这里显示解决方案</summary>
 
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
+你完成的 HTML 元素 body 的内容应该看起来像这样：
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution = `<h1>经典回忆</h1>
+```html
+<h1>一些音乐</h1>
 <p>
- 相思无用，惟别而已。别期若有定，千般煎熬又何如？莫道黯然销魂，何处<strong>柳暗花明</strong>？<br>
- ——《<a href="https://zh.wikipedia.org/zh-hans/神鵰俠侶">神雕侠侣</a>》
+  我非常喜欢<strong>打鼓</strong>。我最喜欢的鼓手之一是 Neal Peart，他曾在<a
+    href="https://zh.wikipedia.org/wiki/匆促樂團"
+    >匆促乐团</a
+  >中演奏。我最喜欢的匆促乐团专辑目前是
+  <a href="https://www.deezer.com/album/942295">Moving Pictures</a>。
 </p>
-<img src="https://roy-tian.github.io/learning-area/extras/tools/playable-code/images/sdxl.jfif" alt="《神雕侠侣》作品图片">`;
-
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "Show solution";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "显示答案") {
-    textarea.value = solutionEntry;
-    solution.value = "隐藏答案";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "显示答案";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.keyCode === 27) {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "显示答案") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
+<img
+  src="https://www.cygnus-x1.net/links/rush/images/albums/sectors/sector2-movingpictures-cover-s.jpg"
+  alt="匆促乐团 Moving Pictures 专辑封面"
+  width="300" />
 ```
 
-{{ EmbedLiveSample('主动学习：为 HTML 文档添加一些特征', 700, 1075)}}
+</details>
 
 ### HTML 中的空白
 
-在上面的例子中，你可能已经注意到了在代码中包含了很多的空格——这是没有必要的；下面的两个代码片段是等价的：
+在上面的例子中，你可能注意到代码中包含了很多空白。这是可选的。这两个代码片段是等效的：
 
 ```html-nolint
-<p>狗 狗 很 呆 萌。</p>
+<p id="noWhitespace">狗狗很 呆 萌。</p>
 
-<p>狗 狗        很
-         呆 萌。</p>
+<p id="whitespace">狗狗很
+    呆
+        萌。</p>
 ```
 
-无论你在 HTML 元素的内容中使用多少空格（包括一个或多个空白字符或换行），当渲染这些代码的时候，HTML 解释器会将连续出现的空白字符减少为一个单独的空格符。
+无论你在 HTML 元素内容中使用了多少空白（可以包括一个或多个空格字符，也包括换行），HTML 解析器在渲染代码时都会将每个空白序列减少为单个空格。那么为什么要使用这么多空白呢？答案是可读性。
 
-如果你的代码有很好的格式化，就会更容易理解你的代码中发生了什么。在我们的 HTML 中，每个嵌套元素都比它所在的元素多缩进了两个空格。你可以选择格式化的风格（例如，每一级缩进多少个空格），但你至少应该考虑格式化。
+如果你的代码格式整齐，就更容易理解代码中发生了什么。在我们的 HTML 中，每个嵌套的元素都比它所在的元素多缩进两个空格。选择什么样的格式化风格（例如，每个缩进级别使用多少空格）由你决定，但你应该考虑格式化它。
 
-## 实体引用：在 HTML 中包含特殊字符
+让我们看看浏览器如何渲染上面带有和不带空白的两个段落：
 
-在 HTML 中，字符 `<`、`>`、`"`、`'` 和 `&` 是特殊字符。它们是 HTML 语法自身的一部分，那么你如何将这些字符包含进你的文本中呢，比如说如果你真的想要在文本中使用符号 `&` 或者小于号，而不想让它们被浏览器视为代码并被解释？
+{{ EmbedLiveSample('HTML 中的空白', 700, 100) }}
 
-我们必须使用字符引用——表示字符的特殊编码，它们可以在那些情况下使用。每个字符引用以符号 & 开始，以分号（;）结束。
+> [!NOTE]
+> 从 JavaScript 访问元素的 [innerHTML](/zh-CN/docs/Web/API/Element/innerHTML) 将保留所有空白。
+> 如果浏览器修剪了空白，这可能会返回意想不到的结果。
 
-| 原义字符 | 等价字符引用 |
-| -------- | ------------ |
-| <        | `&lt;`       |
-| >        | `&gt;`       |
-| "        | `&quot;`     |
-| '        | `&apos;`     |
-| &        | `&amp;`      |
+```js
+const noWhitespace = document.getElementById("noWhitespace").innerHTML;
+console.log(noWhitespace);
+// "狗狗很 呆 萌。"
 
-等价字符引用可以很容易记住，因为它使用的文本可以被看作是小于“\&lt;”，引号是“\&quot;”，其他的也是如此。要找到更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
+const whitespace = document.getElementById("whitespace").innerHTML;
+console.log(whitespace);
+// "狗狗很
+//     呆
+//         萌。"
+```
 
-在下面的示例中，有两个自然段：
+## 字符引用：在 HTML 中包含特殊字符
+
+在 HTML 中，字符 `<`、`>`、`"`、`'` 和 `&` 是特殊字符。它们是 HTML 语法本身的一部分。那么你如何在文本中包含这些特殊字符之一呢？例如，如果你想使用一个与号或小于号，而不是让它被解释为代码。
+
+你需要使用{{glossary("character reference", "字符引用")}}。这些是代表字符的特殊代码，用于在这些确切的情况下使用。每个字符引用都以一个与号（&）开始，并以一个分号（;）结束。
+
+| 字面字符 | 字符引用等效项 |
+| -------- | -------------- |
+| <        | `&lt;`         |
+| >        | `&gt;`         |
+| "        | `&quot;`       |
+| '        | `&apos;`       |
+| &        | `&amp;`        |
+
+字符引用的等效项可以很容易记住，因为它使用的文本可以看作是 `&lt;` 对应“less than（小于）”，`&quot;` 对应“quotation（引语）”，其他类似。要查找更多关于实体引用的信息，请参见 [XML 和 HTML 字符实体引用列表](https://zh.wikipedia.org/wiki/XML与HTML字符实体引用列表)（维基百科）。
+
+在下面的示例中，有两个段落：
 
 ```html-nolint
 <p>HTML 中用 <p> 来定义段落元素。</p>
@@ -726,37 +414,36 @@ textarea.onkeyup = () => {
 <p>HTML 中用 &lt;p&gt; 来定义段落元素</p>
 ```
 
-在下面的实时输出中，你会看到第一段是错误的，因为浏览器会认为第二个 `<p>` 是开始一个新的段落！第二段是正确的，因为我们用字符引用来代替了角括号（`<` 和 `>` 符号）。
+在下面的实时输出中，你可以看到第一段出错了。浏览器将第二个 `<p>` 实例解释为开始一个新段落。第二段看起来很好，因为它用字符引用替换了尖括号。
 
-{{ EmbedLiveSample('实体引用：在 HTML 中包含特殊字符', 700, 200) }}
+{{ EmbedLiveSample('字符引用：在 HTML 中包含特殊字符', 700, 200) }}
 
 > [!NOTE]
-> 不需要为任何其他符号使用实体引用，因为只要你的 HTML 的[字符编码设置为 UTF-8](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#指定文档中的字符编码)，现代浏览器就能很好地处理实际符号。
+> 你不需要为任何其他符号使用实体引用，只要你的 HTML [字符编码设置为 UTF-8](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata#指定文档中的字符编码)，现代浏览器就能很好地处理实际的符号。
 
 ## HTML 注释
 
-HTML 拥有在代码中写注释的机制。浏览器会忽略注释，有效地使注释对用户来说不可见。注释的目的是让你在代码中加入注释，以解释你的逻辑或编码。如果你在离开很久后回到一个代码库，以至于你不能完全记住它，这就非常有用。同样，当不同的人在进行修改和更新时，注释也是非常宝贵的。
+HTML 有一种在代码中写注释的机制。浏览器会忽略注释，实际上使用户看不到注释。注释的目的是让你在代码中包含注释，以解释你的逻辑或编码。如果你在离开很长时间后回到一个代码库，以至于你不能完全记住它，这就非常有用。同样，当不同的人在进行修改和更新时，注释也是非常宝贵的。
 
-为了将一段 HTML 中的内容置为注释，你需要将其用特殊的记号 `<!--` 和 `-->` 包裹起来，比如：
+要编写 HTML 注释，请将其包裹在特殊标记 `<!--` 和 `-->` 中。例如：
 
 ```html
-<p>我在注释外！</p>
+<p>我不在注释里</p>
 
-<!-- <p>我在注释内！</p> -->
+<!-- <p>但我在注释里</p> -->
 ```
 
-正如你下面所见的那样，第一段出现在了实时输出中，但是第二段却没有。
+如下所示，只有第一个段落显示在实时输出中。
 
 {{ EmbedLiveSample('HTML 注释', 700, 100) }}
 
 ## 总结
 
-你已经来到了这篇文章的结尾——希望你享受基础的 HTML 学习的旅程。
+你已经读完了整篇文章！我们希望你喜欢这次 HTML 基础知识之旅。
 
-在这里你应该可以理解 HTML 语言的全貌和基本的工作原理。你应该还学会了一些元素和属性的使用。在这个模块的后续文章中，我们会深入一些你已经见过的东西的细节，并且展示语言的一些其他概念。
+此时，你应该理解了 HTML 是什么样子的，以及它在基本层面上的工作原理。你也应该能够编写一些元素和属性。本模块的后续文章将更深入地探讨这里介绍的一些主题，并介绍该语言的其他概念。
 
-> [!NOTE]
-> 当你开始学习更多的 HTML 知识时，可能也想了解一些层叠样式列表（[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics)）的基础知识。CSS 是一种用来设计网页样式的语言（比如，用它改变字体、颜色或页面布局等）。你很快就会发现，HTML 和 CSS 能很好地协调配合。
+- 当你开始学习更多关于 HTML 的知识时，可以考虑学习 CSS（层叠样式表）的基础知识。[CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics) 是用于设置网页样式的语言，例如更改字体、颜色或改变页面布局。HTML 和 CSS 配合得很好，你很快就会发现。
 
 ## 参见
 
