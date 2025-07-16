@@ -9,7 +9,7 @@ l10n:
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。
 
-{{InteractiveExample("CSS Demo: box-sizing")}}
+{{InteractiveExample("CSS デモ: box-sizing")}}
 
 ```css interactive-example-choice
 box-sizing: content-box;
@@ -91,13 +91,11 @@ box-sizing: unset;
 ### 値
 
 - `content-box`
-
   - : これは、 CSS 標準で規定されている初期値および既定値です。 {{Cssxref("width")}} および {{Cssxref("height")}} プロパティの寸法は、コンテンツ領域のみを含むものとなり、パディング、境界、マージン領域は含みません。例えば `.box {width: 350px; border: 10px solid black;}` とすると 370px の幅のボックスを描画します。
 
     この場合、それぞれの要素の寸法は、_幅 = コンテンツの幅_、*高さ = コンテンツの高さ*として計算されます。 (境界やパディングは計算に含まれません。)
 
 - `border-box`
-
   - : {{Cssxref("width")}} および {{Cssxref("height")}} プロパティは、コンテンツ、パディング、境界の各領域を含みますが、マージンは含みません。なお、パディングと境界はボックスの内側に置かれることに注意してください。例えば `.box {width: 350px; border: 10px solid black;}` とすると、ボックスの幅が 350px、コンテンツ領域の幅が 330px として描画されます。コンテンツボックスは負の値にできず 0 に丸められますので、`border-box` を使用して要素を非表示にすることはできません。
 
     この場合、それぞれの要素の寸法は、_幅 = 境界 + パディング + コンテンツの幅_、*高さ = 境界 + パディング + コンテンツの高さ*として計算されます。

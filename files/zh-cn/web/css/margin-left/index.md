@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 27977f96015d1b74e743fa3762672894e087bd3d
 ---
 
-{{CSSRef}}
-
 **`margin-left`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素左侧的[外边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#外边距区域)。正值使其远离相邻元素，负值使其更加靠近。
 
 {{InteractiveExample("CSS Demo: margin-left")}}
@@ -91,7 +89,6 @@ margin-left: unset;
 - {{cssxref("&lt;percentage&gt;")}}
   - : 外边距的大小为相对于[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的行级尺寸（由 {{cssxref("writing-mode")}} 定义的水平文字的*宽度*）的百分比。
 - `auto`
-
   - : 左边距接收未使用的水平空间中的一部分（这主要由所使用的布局模式确定）。如果 `margin-left` 和 `margin-right` 的值都是 `auto`，则最后计算的空间是均匀分布的。下表总结了不同的情况：
 
     <table class="standard-table">

@@ -9,7 +9,7 @@ l10n:
 
 **`font`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素のフォントの様々なプロパティをすべて設定します。また、要素のフォントにシステムフォントを設定することもできます。
 
-{{InteractiveExample("CSS Demo: font")}}
+{{InteractiveExample("CSS デモ: font")}}
 
 ```css interactive-example-choice
 font:
@@ -112,12 +112,10 @@ font: caption;
 `font` を様々なフォント関連プロパティの一括指定とする場合は、次のようになります。
 
 - 次の値を含めなければなりません。
-
   - {{cssxref("&lt;font-size&gt;")}}
   - {{cssxref("&lt;font-family&gt;")}}
 
 - 次の値は任意で含めることができます。
-
   - {{cssxref("&lt;font-style&gt;")}}
   - {{cssxref("&lt;font-variant&gt;")}}
   - {{cssxref("&lt;font-weight&gt;")}}

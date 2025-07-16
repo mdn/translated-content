@@ -9,7 +9,7 @@ l10n:
 
 **`replaceAll()`** は {{jsxref("String")}} 値のメソッドで、`pattern` に一致したすべての文字列を `replacement` で置き換えた新しい文字列を返します。`pattern` には文字列または {{jsxref("RegExp")}} を指定することができ、`replacement` は文字列または各一致に対して呼び出される関数を指定することができます。元の文字列は変更されません。
 
-{{InteractiveExample("JavaScript Demo: String.replaceAll()")}}
+{{InteractiveExample("JavaScript デモ: String.replaceAll()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
@@ -32,7 +32,6 @@ replaceAll(pattern, replacement)
 ### 引数
 
 - `pattern`
-
   - : 文字列または [`Symbol.replace`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/replace) メソッドを持つオブジェクトを置くことができます。典型的な例は[正規表現](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp)です。`Symbol.replace` メソッドを持たない値は文字列に変換されます。
 
     `regexp` が[正規表現である](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp#special_handling_for_regexes)場合、グローバルフラグ (`g`) が設定されます。そうでなければ {{jsxref("TypeError")}} が発生します。

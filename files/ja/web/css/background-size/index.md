@@ -10,7 +10,7 @@ l10n:
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。
 画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
 
-{{InteractiveExample("CSS Demo: background-size")}}
+{{InteractiveExample("CSS デモ: background-size")}}
 
 ```css interactive-example-choice
 background-size: contain;
@@ -128,7 +128,6 @@ background-size: unset;
 - **`background-size` が `contain` または `cover` の場合:** 内在的な比率を維持するため、画像は背景配置領域の中に収まるか、背景配置領域を覆うように描画されます。
   画像が内在的な比率を持たない場合は、背景配置領域の寸法で描画されます。
 - **`background-size` が `auto` または `auto auto` の場合:**
-
   - 画像に水平および垂直の内在的な寸法がある場合は、その寸法で描画されます。
   - 画像に内在的な寸法も内在的な比率もない場合は、背景配置領域の寸法で描画されます。
   - 画像に内在的な寸法はない物の内在的な比率がある場合は、 `contain` が指定された場合のように描画されます。
@@ -139,7 +138,6 @@ background-size: unset;
   > SVG 画像には [`preserveAspectRatio`](/ja/docs/Web/SVG/Reference/Attribute/preserveAspectRatio) 属性があり、既定では `contain` と同等です。明示的に `background-size` が設定されると `preserveAspectRatio` が無視されます。
 
 - **`background-size` の一方が `auto` でもう一方が `auto` ではない場合:**
-
   - 画像に内在的な比率がある場合は、指定された寸法まで変倍されます。指定されていない方の寸法は指定された寸法と内在的な比率を使用して計算されます。
   - 画像に内在的な比率がない場合は、指定された寸法まで変倍されます。指定されていない方の寸法は、画像の指定された寸法を使用して計算されます。そのような内在的な寸法がない場合、背景配置領域の適切な寸法になります。
 

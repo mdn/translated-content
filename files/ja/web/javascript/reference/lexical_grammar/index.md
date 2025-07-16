@@ -151,7 +151,7 @@ function fn() {} // 関数宣言
 const obj = { key: "value" }; // オブジェクトキー
 // クラス宣言
 class C {
-  #priv = "value"; // プライベートプロパティ
+  #priv = "value"; // プライベートフィールド
 }
 lbl: console.log(1); // ラベル
 ```
@@ -177,7 +177,7 @@ console.log(\u4f60\u597d); // Hello
 function import() {} // 違反: import は予約語です。
 ```
 
-最も注目すべきは、プライベートプロパティとオブジェクトプロパティは、予約語を許可していることです。
+最も注目すべきは、プライベート要素とオブジェクトプロパティは、予約語を許可していることです。
 
 ```js
 const obj = { import: "value" }; // `import` は予約語だが有効
@@ -564,7 +564,7 @@ tag`string text ${expression} string text`;
 - [`do...while`](/ja/docs/Web/JavaScript/Reference/Statements/do...while)
 - [`continue`](/ja/docs/Web/JavaScript/Reference/Statements/continue), [`break`](/ja/docs/Web/JavaScript/Reference/Statements/break), [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return), [`throw`](/ja/docs/Web/JavaScript/Reference/Statements/throw)
 - [`debugger`](/ja/docs/Web/JavaScript/Reference/Statements/debugger)
-- クラスフィールド宣言（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)）
+- クラスフィールド宣言（[パブリック](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)または[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)）
 - [`import`](/ja/docs/Web/JavaScript/Reference/Statements/import), [`export`](/ja/docs/Web/JavaScript/Reference/Statements/export)
 
 しかし、JavaScriptはこの言語をより手軽で便利なものにするために、トークンストリームを処理する際にセミコロンを自動的に挿入することがあり、不正なトークン列を有効な構文に「修正」することができます。この手順は、プログラムテキストが字句文法に従ってトークンに解釈された後に行われます。セミコロンが自動的に挿入されるケースは 3 つあります。

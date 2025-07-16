@@ -9,7 +9,7 @@ l10n:
 
 **`repeating-linear-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、反復線形グラデーションによる画像を生成します。 {{cssxref("gradient/linear-gradient", "linear-gradient()")}} と似ており、同じ引数を取りますが、両方向に無限に色経由点を繰り返してコンテナー全体を埋めます。関数の返値は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊型です。
 
-{{InteractiveExample("CSS Demo: repeating-linear-gradient()")}}
+{{InteractiveExample("CSS デモ: repeating-linear-gradient()")}}
 
 ```css interactive-example-choice
 background: repeating-linear-gradient(
@@ -82,7 +82,6 @@ repeating-linear-gradient(in hsl longer hue, blue, red 50px)
 ### 値
 
 - `<side-or-corner>`
-
   - : グラデーション線の開始点の位置。指定する場合は、 `to` に続けて 2 つ以下のキーワードを指定します。一つは水平方向の辺 (`left` または `right`)、もう一方は垂直方向の辺 (`top` または `bottom`) です。辺を表すキーワードは順不同です。指定しない場合は、 `to bottom` が既定になります。
 
     `to top`, `to bottom`, `to left`, `to right` の値は、 `0deg`, `180deg`, `270deg`, `90deg` の角度にそれぞれ対応します。他の値は角度に変換されます。

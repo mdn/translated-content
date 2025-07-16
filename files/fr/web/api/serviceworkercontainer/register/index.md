@@ -23,9 +23,7 @@ serviceWorkerContainer.register(scriptURL, options)
 - `scriptURL`
   - : L' URL du script contenant le `ServiceWorker`. Le fichier qui a enregistré le `ServiceWorker` doit avoir un [JavaScript MIME type](/fr/docs/Web/HTTP/MIME_types#javascript_types) valide.
 - `options` {{optional_inline}}
-
   - : Un objet contenant les options d'enregistrement. Les options sont:
-
     - `scope`: Un {{domxref("USVString")}} représentant une URL qui définit la portée d'enregistrement d'un `ServiceWorker`; c'est-à-dire quelle plage d'URL un `ServiceWorker` peut contrôler. Il s'agit généralement d'une URL relative. Elle est relative à l'URL de base de l'application. Par défaut, la valeur de la portée de l'enregistrement d'un `ServiceWorker` est limité au répertoire qui contient le script du `ServiceWorker`. Consultez la section [Exemples](#exemples) pour plus d'informations sur son fonctionnement.
     - {{non-standard_inline}} `type`: Un {{domxref("WorkerType")}}, il prend les valeurs "classic" ou "module". Par défaut, la valeur est fixé à "classic".
     - {{non-standard_inline}} `updateViaCache`: Un {{domxref("ServiceWorkerUpdateViaCache")}}, il prend les valeurs "imports" ou "all" ou "none". Par défaut, la valeur est fixé à "imports".

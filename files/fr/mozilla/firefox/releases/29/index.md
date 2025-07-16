@@ -3,8 +3,6 @@ title: Firefox 29 pour les développeurs
 slug: Mozilla/Firefox/Releases/29
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 29 est sorti le 29 Avril, 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour es développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
 
 ## Changements pour les développeurs Web
@@ -45,15 +43,12 @@ _Consultez l'[article du blog Mozilla Hacks](https://hacks.mozilla.org/2014/02/c
 
 - Nouvelles méthodes de chaîne ECMAScript 6 : {{jsxref("String.prototype.codePointAt()")}} et {{jsxref("String.prototype.fromCodePoint()")}} ont été implémentées ([bug Firefox 918879](https://bugzil.la/918879)).
 - L'[API d'internationalisation ECMAScript (ECMA-402)](https://www.ecma-international.org/ecma-402/1.0/) a été implémentée et est désormais activée par défaut dans Firefox Desktop ([bug Firefox 853301](https://bugzil.la/853301)):
-
   - Nouveaux objets dans le nouvel espace de noms d'objet {{jsxref("Intl")}} :
-
     - {{jsxref("Collator", "Intl.Collator")}}
     - {{jsxref("DateTimeFormat", "Intl.DateTimeFormat")}}
     - {{jsxref("NumberFormat", "Intl.NumberFormat")}}
 
   - Les méthodes suivantes de {{jsxref("String")}}, {{jsxref("Number")}} et {{jsxref("Date")}} ont été mises à jour pour inclure les arguments `locales` et `options` selon ECMA-402:
-
     - {{jsxref("String.prototype.localeCompare()")}}
     - {{jsxref("Number.prototype.toLocaleString()")}}
     - {{jsxref("Date.prototype.toLocaleString()")}}

@@ -9,7 +9,7 @@ l10n:
 
 **`align-self`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッドやフレックスのアイテムの {{cssxref("align-items")}} の値を上書きします。グリッドでは、アイテムは{{glossary("Grid Areas", "グリッド領域")}}内で配置されます。フレックスボックスでは、アイテムは{{glossary("cross axis", "交差軸")}}上で配置されます。
 
-{{InteractiveExample("CSS Demo: align-self")}}
+{{InteractiveExample("CSS デモ: align-self")}}
 
 ```css interactive-example-choice
 align-self: stretch;
@@ -96,9 +96,7 @@ align-self: unset;
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
 - `normal`
-
   - : このキーワードの効果は、現在のレイアウトモードに依存します。
-
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。
     - フレックスアイテムでは、このキーワードは `stretch` と同様に動作します。

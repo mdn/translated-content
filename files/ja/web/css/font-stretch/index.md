@@ -12,7 +12,7 @@ l10n:
 
 **`font-stretch`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントの normal, condensed, expanded のフェイスを選択します。
 
-{{InteractiveExample("CSS Demo: font-stretch")}}
+{{InteractiveExample("CSS デモ: font-stretch")}}
 
 ```css interactive-example-choice
 font-stretch: condensed;
@@ -103,7 +103,6 @@ font-stretch: unset;
 - `semi-expanded`, `expanded`, `extra-expanded`, `ultra-expanded`
   - : 通常より幅の広い (expanded) フォントフェイスを指定します。最も幅の広いフェイスは ultra-expanded です。
 - `<percentage>`
-
   - : {{cssxref("&lt;percentage&gt;")}} 値です。このプロパティでは負の数は許可されていません。
 
 ### キーワードと数値の対応

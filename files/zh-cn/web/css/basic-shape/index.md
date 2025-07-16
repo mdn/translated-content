@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f430d277573ba0b06b1ac33ae8017fd90f170bef
 ---
 
-{{CSSRef}}
-
 **`<basic-shape>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)表示一种用于 {{cssxref("clip-path")}}、{{cssxref("shape-outside")}} 和 {{cssxref("offset-path")}} 属性的形状。
 
 {{InteractiveExample("CSS Demo: &lt;basic-shape&gt;")}}
@@ -69,21 +67,17 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 一些基本形状函数的语法中公共的参数包括：
 
 - `round <'border-radius'>`
-
   - : 为[通过容器 inset 定义的矩形](#通过容器_inset_定义矩形的语法)、[通过距离定义的矩形](#通过距离定义矩形的语法)以及[具有尺寸的矩形](#具有尺寸的矩形语法)定义圆角，使用与 CSS [`border-radius`](/zh-CN/docs/Web/CSS/border-radius) 缩写属性相同的语法。
 
 - `<shape-radius>`
-
   - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的半径。有效值包括 {{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（默认值）和 `farthest-side`。负值无效。
 
     `closest-side` 关键字值使用从形状中心到参考框最近边的长度来创建半径长度。`farthest-side` 关键字值使用从形状中心到参考框最远边的长度。
 
 - `<position>`
-
   - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的中心 [`<position>`](/zh-CN/docs/Web/CSS/position_value)。如果省略，则默认为 `center`。
 
 - `<fill-rule>`
-
   - : 设置 {{SVGAttr("fill-rule")}} 用于确定由基本形状[多边形](#多边形语法)、[路径](#路径语法)和[形状](#形状语法)定义的形状内部应如何填充。可能的值为 `nonzero`（默认值）和 `evenodd`。
 
     > [!NOTE]
@@ -199,7 +193,6 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 - **两个形状均为 `path()` 类型**：如果两个形状中的路径字符串匹配[路径数据命令](/zh-CN/docs/Web/SVG/Reference/Attribute/d#path_commands)的数量、类型和顺序，则将每个参数作为 {{cssxref("&lt;number&gt;")}} 应用插值。
 
 - **两个形状均为 `shape()` 类型**：如果它们具有相同的命令关键字并且使用相同的 `<by-to>` 关键字，则对每个相应的值应用插值。如果 `shape()` 用于 {{cssxref("clip-path")}} 属性，则当它们还具有相同的 `<fill-rule>` 时，对这两个形状进行插值。
-
   - 如果它们使用 `<curve-command>` 或 `<smooth-command>`，则控制点的数量必须匹配才能进行插值。
   - 如果它们使用不同 `<arc-sweep>` 方向的 `<arc-command>`，则插值结果按顺时针方向（`cw`）进行。如果它们使用不同的 `<arc-size>` 关键字，则使用 `large` 值对大小进行插值。
 

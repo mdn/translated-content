@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 75d6ce4e2e752b8577012aea96abc766659ed3e2
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre de 2011 se lanzó la versión 9.0.1 para Mac y Linux, que corrigió un error de bloqueo descubierto en el último minuto.
 
 ## Cambios para desarrolladores web
@@ -15,17 +13,17 @@ Firefox 9 se lanzó para Windows el 20 de diciembre de 2011. El 21 de diciembre 
 
 - El atributo `value` de {{ HTMLElement("li") }} ahora puede ser negativo. Los valores negativos anteriores se convertian a 0.
 - Ahora puede [especificar la hora de inicio y finalización de los medios](/es/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio#specifying_playback_range) en la URI de los medios cuando usa los elementos {{ HTMLElement("audio") }} y {{ HTMLElement("video") }}.
-- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
+- Los elementos {{ HTMLElement("input") }} y {{ HTMLElement("textarea") }} [ahora respetan el valor del atributo `lang`](/es/docs/Web/HTML/Reference/Global_attributes/spellcheck#controlling_the_spellchecker_language) al invocar el corrector ortográfico.
 - Firefox en Android ahora permite a los usuarios tomar fotos con la cámara de su teléfono sin salir del navegador cuando se usa el elemento {{ HTMLElement("input") }} con `type="file"` y `accept="image/*"` .
 - Las imágenes PNG ICO de estilo Windows Vista ahora son compatibles.
-- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
-- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Element/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
+- Dibujar imagenes que usan el atributo [`crossorigin`](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para solicitar acceso CORS ya no [contaminan el lienzo](/es/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f) cuando se otorga CORS.
+- El valor del atributo [`rowspan`](/es/docs/Web/HTML/Reference/Elements/td#rowspan) ahora puede ser tan grande como 65 534, en lugar de 8190.
 
 ### CSS
 
 - La propiedad {{ cssxref("font-stretch") }} ahora es compatible.
 - La propiedad {{ cssxref("columns") }} ahora es compatible, con el prefijo `-moz`. Esta es una forma abreviada de las siguientes propiedades: {{ cssxref("column-width") }} y {{ cssxref("column-count") }}.
-- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Element/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
+- Cuando una hoja de estilo incluida usando el elemento {{ HTMLElement("link") }} ha sido completamente cargada y analizada (pero aún no aplicada al documento), un [evento `load`](/es/docs/Web/HTML/Reference/Elements/link#stylesheet_load_events) ahora se activa. Además, si se produce un error al procesar una hoja de estilo, se activa un evento de `error`.
 - Ahora puede especificar configuraciones de desbordamiento para los bordes izquierdo y derecho del contenido usando una nueva sintaxis de dos valores para {{ cssxref("text-overflow") }}.
 
 ### JavaScript

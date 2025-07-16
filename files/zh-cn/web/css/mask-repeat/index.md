@@ -3,8 +3,6 @@ title: mask-repeat
 slug: Web/CSS/mask-repeat
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 的 **`mask-repeat`** 属性定义了遮罩图片是否重复显示多个副本，以及如何重复。一个遮罩图片可以水平重复、垂直重复或双向重复，也可以不重复。
 
 ```css
@@ -48,7 +46,6 @@ One or more `<repeat-style>` values, separated by commas.
 ### 取值
 
 - `<repeat-style>`
-
   - : 单值语法可将两个值简写为一个：
 
     | **单值**    | **与之等效的双值**    |

@@ -2,7 +2,7 @@
 title: <fencedframe>：圍欄頁框元素
 slug: Web/HTML/Reference/Elements/fencedframe
 l10n:
-  sourceCommit: 8964db8251cf2825fa81270309a45a475184aab1
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{HTMLSidebar}}{{SeeCompatTable}}
@@ -21,11 +21,9 @@ l10n:
 該元素包括[全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes)。
 
 - `allow` {{experimental_inline}}
-
   - : 為 `<fencedframe>` 指定一個[權限策略](/zh-TW/docs/Web/HTTP/Guides/Permissions_Policy)，該策略基於請求的原始位置定義了哪些功能對 `<fencedframe>` 可用。有關可以通過設置在圍欄頁框上的策略來控制哪些功能的更多詳細信息，請參見[可用於圍欄頁框權限策略](#可用於圍欄頁框權限策略)。
 
 - `height` {{experimental_inline}}
-
   - : 一個無單位的整數，表示圍欄頁框的高度，以 CSS 像素為單位。默認值為 `150`。
 
 - `width` {{experimental_inline}}
@@ -37,7 +35,7 @@ l10n:
 
 可以通過策略在圍欄頁框內啟用的唯一功能是專為在圍欄頁框內使用而設計的特定功能：
 
-- [受保護的受眾 API](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)
+- [受保護的受眾 API](https://privacysandbox.google.com/private-advertising/protected-audience)
   - `attribution-reporting`
   - `private-aggregation`
   - `shared-storage`
@@ -60,7 +58,8 @@ l10n:
 
 作為{{glossary("replaced elements", "可置換元素")}}，`<fencedframe>` 允許使用 {{cssxref("object-position")}} 屬性調整嵌入文件在其框內的位置。
 
-> **備註：** {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
+> [!NOTE]
+> {{cssxref("object-fit")}} 屬性對 `<fencedframe>` 元素沒有影響。
 
 嵌入內容的大小可以由 `<fencedframe>` 的 {{domxref("HTMLFencedFrameElement.config", "config")}} 物件的內部 `contentWidth` 和 `contentHeight` 屬性設置。在這種情況下，改變 `<fencedframe>` 的 `width` 或 `height` 將改變頁面上嵌入容器的大小，但容器內部的文件將被視覺縮放以適應。嵌入文件的報告寬度和高度（即 {{domxref("Window.innerWidth")}} 和 {{domxref("Window.innerHeight")}}）將保持不變。
 
@@ -79,7 +78,7 @@ l10n:
 
 ## 範例
 
-要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://developers.google.com/privacy-sandbox/private-advertising/protected-audience)或[共享存儲](https://developers.google.com/privacy-sandbox/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
+要設置 `<fencedframe>` 中顯示的內容，需要使用 API（例如[受保護的受眾](https://privacysandbox.google.com/private-advertising/protected-audience)或[共享存儲](https://privacysandbox.google.com/private-advertising/shared-storage)）生成一個 {{domxref("FencedFrameConfig")}} 物件，然後將其設置為 `<fencedframe>` 的 `config` 屬性的值。
 
 以下範例從受保護的受眾 API 的廣告拍賣中獲取了一個 `FencedFrameConfig`，然後將其用於在 `<fencedframe>` 中顯示獲勝的廣告：
 
@@ -89,7 +88,7 @@ l10n:
 
 ```js
 const frameConfig = await navigator.runAdAuction({
-  // ...auction configuration
+  // ……auction 配置
   resolveToConfig: true,
 });
 
@@ -139,7 +138,7 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">隱含的 ARIA 角色</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
+        <a href="https://w3c.github.io/html-aria/#dfn-no-corresponding-role"
           >沒有相對應的角色</a
         >
       </td>
@@ -147,9 +146,7 @@ frame.config = frameConfig;
     <tr>
       <th scope="row">允許的 ARIA 角色</th>
       <td>
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、
-        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
+        <a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/document_role"><code>document</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"><code>img</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>、<a href="/zh-TW/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
       </td>
     </tr>
     <tr>
@@ -170,5 +167,5 @@ frame.config = frameConfig;
 ## 參見
 
 - [圍欄頁框 API](/zh-TW/docs/Web/API/Fenced_frame_API)
-- [在 developers.google.com 上的圍欄頁框](https://developers.google.com/privacy-sandbox/private-advertising/fenced-frame)
-- 在 developers.google.com 上的[隱私沙箱](https://developers.google.com/privacy-sandbox)
+- [在 privacysandbox.google.com 上的圍欄頁框](https://privacysandbox.google.com/private-advertising/fenced-frame)
+- 在 privacysandbox.google.com 上的[隱私沙箱](https://privacysandbox.google.com/)

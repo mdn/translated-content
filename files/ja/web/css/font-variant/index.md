@@ -11,7 +11,7 @@ l10n:
 
 CSS Level 2 (Revision 1) で定義されたにおける `font-variant` の `<font-variant-css2>` 値（つまり、 `normal` や `small-caps`）は、一括指定の [`font`](/ja/docs/Web/CSS/font) を用いて設定することもできます。
 
-{{InteractiveExample("CSS Demo: font-variant")}}
+{{InteractiveExample("CSS デモ: font-variant")}}
 
 ```css interactive-example-choice
 font-variant: normal;
@@ -103,35 +103,27 @@ font-variant: unset;
 ### 値
 
 - `normal`
-
   - : 通常のフォントフェイスを定義します。それぞれの個別指定プロパティは `normal` の初期値になります。
 
 - `none`
-
   - : [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) を `none` に、その他の個別指定プロパティを `normal` に、それぞれの初期値を設定します。
 
 - `<common-lig-values>`, `<discretionary-lig-values>`, `<historical-lig-values>`, `<contextual-alt-values>`
-
   - : 個別指定の [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) プロパティに関するキーワードを指定します。指定可能な値は、 `common-ligatures`, `no-common-ligatures`, `discretionary-ligatures`, `no-discretionary-ligatures`, `historical-ligatures`, `no-historical-ligatures`, `contextual`, `no-contextual` です。
 
 - `stylistic()`, `historical-forms`, `styleset()`, `character-variant()`, `swash()`, `ornaments()`, `annotation()`
-
   - : 個別指定の [`font-variant-ligatures`](/ja/docs/Web/CSS/font-variant-ligatures) プロパティに関するキーワードや特性を指定します。
 
 - `small-caps`, `all-small-caps`, `petite-caps`, `all-petite-caps`, `unicase`, `titling-caps`
-
   - : 個別指定の [`font-variant-caps`](/ja/docs/Web/CSS/font-variant-caps) プロパティに関するキーワードや特性を指定します。 `small-caps` の値は、 {{cssxref("font")}} 一括指定プロパティ内で有効な唯一の `normal` 以外のフォントバリアントです。
 
 - `<numeric-figure-values>`, `<numeric-spacing-values>`, `<numeric-fraction-values>`, `ordinal`, `slashed-zero`
-
   - : 個別指定の [`font-variant-numeric`](/ja/docs/Web/CSS/font-variant-numeric) プロパティに関するキーワードを指定します。指定可能な値は、 `lining-nums`, `oldstyle-nums`, `proportional-nums`, `tabular-nums`, `diagonal-fractions`, `stacked-fractions`, `ordinal`, `slashed-zero` です。
 
 - `<east-asian-variant-values>`, `<east-asian-width-values>`, `ruby`
-
   - : 個別指定の [`font-variant-east-asian`](/ja/docs/Web/CSS/font-variant-east-asian) プロパティに関するキーワードを指定します。指定可能な値は、 `jis78`, `jis83`, `jis90`, `jis04`, `simplified`, `traditional`, `full-width`, `proportional-width`, `ruby` です。
 
 - `sub`, `super`
-
   - : 個別指定の [`font-variant-position`](/ja/docs/Web/CSS/font-variant-position) プロパティに関するキーワードや特性を指定します。
 
 - `text`, `emoji`, `unicode`

@@ -3,8 +3,6 @@ title: transition
 slug: Web/CSS/transition
 ---
 
-{{CSSRef}}
-
 **`transition`** [CSS](/zh-CN/docs/Web/CSS) 属性是 {{ cssxref("transition-property") }}、{{ cssxref("transition-duration") }}、{{ cssxref("transition-timing-function") }} 和 {{ cssxref("transition-delay") }} 的一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)。
 
 {{InteractiveExample("CSS Demo: transition")}}
@@ -96,7 +94,6 @@ transition: unset;
 每个单属性转换都描述了应该应用于单个属性的转换（或特殊值`all`和`none`）。这包括：
 
 - 零或一个值，表示转换应适用的属性。这可能是以下任何一种：
-
   - 关键字`none`
   - 关键字`all`
   - 命名 CSS 属性的 {{cssxref("&lt;custom-ident&gt;")}} 。

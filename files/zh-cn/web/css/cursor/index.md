@@ -3,8 +3,6 @@ title: cursor
 slug: Web/CSS/cursor
 ---
 
-{{CSSRef}}
-
 **`cursor`** [CSS](/zh-CN/docs/Web/CSS) 属性设置光标的类型（如果有），在鼠标指针悬停在元素上时显示相应样式。
 
 {{InteractiveExample("CSS Demo: cursor")}}
@@ -99,7 +97,6 @@ cursor:
 - `<x>` `<y>` {{experimental_inline}}
   - : 可选 x，y 坐标。两个小于 32 的无单位非负数。
 - 关键字值
-
   - : 鼠标悬浮于值上可实时演示
 
     <table class="standard-table">

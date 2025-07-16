@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) ***伪类***是添加到选择器的关键字，用于指定所选元素的特定状态。例如，{{CSSxRef(":hover")}} 伪类可用于在用户指针悬停在按钮上时选择该按钮，然后对选定的按钮进行样式设计。
 
 ```css

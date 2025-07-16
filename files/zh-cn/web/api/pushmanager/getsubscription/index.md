@@ -1,18 +1,20 @@
 ---
-title: PushManager.getSubscription()
+title: PushManager：getSubscription() 方法
 slug: Web/API/PushManager/getSubscription
+l10n:
+  sourceCommit: 3a91caa0ebbc5131ed75afe0e5168cd5bffc0976
 ---
 
-{{SeeCompatTable}}{{ApiRef("Push API")}}
+{{ApiRef("Push API")}}{{SecureContext_Header}}{{AvailableInWorkers}}
 
-{{domxref("PushManager")}} 接口的方法**`PushManager.getSubscription()`** 尝试获取已有的推送订阅。
+{{domxref("PushManager")}} 接口的 **`PushManager.getSubscription()`** 方法尝试获取已有的推送订阅。
 
-它返回一个 {{jsxref("Promise")}} 用来 resolve 出一个包含现有订阅的详细信息的{{domxref("PushSubscription")}} 对象。如果不存在已有的推送订阅，返回 null。
+它返回一个 {{jsxref("Promise")}}，其会兑现包含现有订阅的详细信息的 {{domxref("PushSubscription")}} 对象。如果不存在已有的推送订阅，则兑现 `null` 值。
 
 ## 语法
 
-```js
-PushManager.getSubscription().then(function(pushSubscription) { ... } );
+```js-nolint
+getSubscription()
 ```
 
 ### 参数
@@ -21,42 +23,39 @@ PushManager.getSubscription().then(function(pushSubscription) { ... } );
 
 ### 返回值
 
-A {{jsxref("Promise")}} that resolves to a {{domxref("PushSubscription")}} object or `null`.
+一个会兑现为 {{domxref("PushSubscription")}} 对象或 `null` 的 {{jsxref("Promise")}}。
 
-## 例子
+## 示例
 
-这个代码片段来自 [push messaging and notification sample](https://github.com/GoogleChrome/samples/blob/gh-pages/push-messaging-and-notifications). (没有能直接运行的例子.)
+这个代码片段来自[推送消息和通知示例](https://github.com/GoogleChrome/samples/tree/gh-pages/push-messaging-and-notifications)。（没有可用的在线演示。）
 
 ```js
-// We need the service worker registration to check for a subscription
-navigator.serviceWorker.ready.then(function (serviceWorkerRegistration) {
-  // Do we already have a push message subscription?
+// 我们需要 service worker 注册才能检查订阅
+navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+  // 我们已经有推送消息订阅了吗？
   serviceWorkerRegistration.pushManager
     .getSubscription()
-    .then(function (subscription) {
-      // Enable any UI which subscribes / unsubscribes from
-      // push messages.
-      var pushButton = document.querySelector(".js-push-button");
+    .then((subscription) => {
+      // 启用订阅/取消订阅推送消息的 UI
+      const pushButton = document.querySelector(".js-push-button");
       pushButton.disabled = false;
 
       if (!subscription) {
-        // We aren’t subscribed to push, so set UI
-        // to allow the user to enable push
+        // 我们没有订阅推送，因此设置 UI 以允许用户启用推送
         return;
       }
 
-      // Keep your server in sync with the latest subscriptionId
+      // 与服务器保持最新的订阅 ID 的同步
       sendSubscriptionToServer(subscription);
 
       showCurlCommand(subscription);
 
-      // Set your UI to show they have subscribed for
-      // push messages
-      pushButton.textContent = "Disable Push Messages";
+      // 设置 UI 以显示他们已订阅推送消息
+      pushButton.textContent = "禁用消息推送";
       isPushEnabled = true;
     })
-    .catch(function (err) {
-      window.Demo.debug.log("Error during getSubscription()", err);
+    .catch((err) => {
+      console.error(`在 getSubscription() 期间遇到错误：${err}`);
     });
 });
 ```

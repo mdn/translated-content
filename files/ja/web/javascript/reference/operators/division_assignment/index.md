@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Division_assignment
 
 除算代入演算子 (`/=`) は変数を右オペランドの値で除算し、結果をその変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Division assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Division assignment operator")}}
 
 ```js interactive-example
 let a = 3;

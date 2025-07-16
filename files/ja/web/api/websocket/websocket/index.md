@@ -20,13 +20,11 @@ new WebSocket(url, protocols)
 ### 引数
 
 - `url`
-
   - : 接続対象とする WebSocket サーバーの URL です。
     URL のスキームには、`ws`、`wss`、`http`、`https` のいずれかを使用する必要があります。 [URLフラグメント](/ja/docs/Web/URI/Reference/Fragment)を含めることはできません。
     相対 URL が指定された場合、それは呼び出し元のスクリプトのベース URL に対する相対 URL となります。
 
 - `protocols` {{optional_inline}}
-
   - : クライアントが使用したい[サブプロトコル](/ja/docs/Web/API/WebSockets_API/Writing_WebSocket_servers#サブプロトコル)を表す単一の文字列または文字列の配列を、設定の優先順に指定します。
     省略した場合は、既定では空の配列、すなわち `[]` が使用されます。
 
@@ -42,9 +40,7 @@ new WebSocket(url, protocols)
 ### 例外
 
 - `SyntaxError` {{domxref("DOMException")}}
-
   - : 次のような場合に発生します。
-
     - [`url`](#url) の解釈に失敗した場合
     - [`url`](#url) のスキームが `ws` または `wss` 以外であった場合
     - [`url`](#url) に[フラグメント](/ja/docs/Web/URI#フラグメント)があった場合

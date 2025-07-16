@@ -3,8 +3,6 @@ title: border-image
 slug: Web/CSS/border-image
 ---
 
-{{CSSRef}}
-
 CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓呈現看似很複雜的一個網頁的小單元簡單很多，它可以省最多九個元素。
 
 > [!WARNING]
@@ -40,11 +38,9 @@ border-image: unset;
 - none
   - : 不顯示圖片，使用邊框樣式。
 - \<圖片>（必填）
-
   - : 圖片值是一個 {{cssxref("&lt;uri&gt;")}}，例：`url(http://example.org/image.png)`。
 
 - \<數> | \<百分比>（必填）
-
   - : 一個、兩個、三個、四個分別代表從頂邊、右邊、底邊、左邊從圖片外圍到切圖線的距離，將圖片切為九塊：四個角、四個邊跟一個中間部份。
 
     一個值的話，該值用於圖片的全部四個邊。
@@ -60,7 +56,6 @@ border-image: unset;
 - \<邊框寬度> （選擇性）
   - : 如果斜線 **/** 出現在屬性值的話，一個、兩個、三個或是四個在它之後的取值會被當成是 {{ cssxref("border-width") }} 的取值使用。取值的順序如同 {{ cssxref("border-width") }} 。
 - stretch | round | repeat （選擇性）
-
   - : 一個或兩個關鍵字，指定邊上的圖片跟中間部份要如何縮放及鋪擺。
 
     **`stretch`**（預設值）縮放該圖片，使其與配置大小相等。

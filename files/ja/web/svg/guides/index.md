@@ -3,10 +3,10 @@ title: SVG ガイド
 short-title: ガイド
 slug: Web/SVG/Guides
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: be9ba40fbef7f96beae73e5dd6d48a3ca875826f
 ---
 
-このページでは SVG のガイド記事を紹介しています。
+このページには、埋め込み、MIME （メディア） タイプ、スクリプトの処理、アニメーション、フィルターなど、SVG に関するガイドを掲載しています。
 
 {{SubPagesWithSummaries}}
 

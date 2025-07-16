@@ -9,7 +9,7 @@ l10n:
 
 **`set()`** メソッドは、指定されたキーと値を持つ要素を `Map` オブジェクトに追加したり、更新したりします。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.set()")}}
 
 ```js interactive-example
 const map1 = new Map();

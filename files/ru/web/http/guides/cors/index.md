@@ -3,8 +3,6 @@ title: Cross-Origin Resource Sharing (CORS)
 slug: Web/HTTP/Guides/CORS
 ---
 
-{{HTTPSidebar}}
-
 Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, использующий дополнительные {{Glossary("HTTP")}}-заголовки, чтобы дать возможность {{Glossary("user agent","агенту пользователя")}} получать разрешения на доступ к выбранным ресурсам с сервера на источнике (домене), отличном от того, что сайт использует в данный момент. Говорят, что агент пользователя делает запрос с другого источника **(cross-origin HTTP request),** если источник текущего документа отличается от запрашиваемого ресурса доменом, протоколом или портом.
 
 Пример cross-origin запроса: HTML страница, обслуживаемая сервером с `http://domain-a.com`, запрашивает [`<img> src`](/ru/docs/Web/HTML/Reference/Elements/img#attributes) по адресу `http://domain-b.com/image.jpg`. Сегодня многие страницы загружают ресурсы вроде CSS-стилей, изображений и скриптов с разных доменов, соответствующих разным сетям доставки контента (Content delivery networks, CDNs).
@@ -55,20 +53,17 @@ Cross-Origin Resource Sharing ({{Glossary("CORS")}}) — механизм, ис�
 «Простой запрос» — это запрос, удовлетворяющий следующим условиям:
 
 - Допустимые методы для запроса:
-
   - {{HTTPMethod("GET")}}
   - {{HTTPMethod("HEAD")}}
   - {{HTTPMethod("POST")}}
 
 - Кроме заголовков, которые автоматически проставляются user-agent'ом (например, {{HTTPHeader("Connection")}}, {{HTTPHeader("User-Agent")}}, или [любой другой заголовок с именем, определённым в спецификации метода Fetch в секции "Запрещённые имена заголовков (которые нельзя изменить программно)"](https://fetch.spec.whatwg.org/#forbidden-header-name)), допустимыми заголовками, которые могут быть проставлены вручную, являются [те заголовки, которые определены спецификацией метода Fetch как "CORS-безопасные заголовки запроса"](https://fetch.spec.whatwg.org/#cors-safelisted-request-header), такие как:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
   - {{HTTPHeader("Content-Type")}} (но учитывайте примечание ниже)
 
 - Допустимыми значениями заголовка {{HTTPHeader("Content-Type")}} являются:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -138,7 +133,6 @@ Content-Type: application/xml
 В частности, запрос предварительно просматривается, если выполняется **любое из следующих условий:**
 
 - **Если** в запросе используется любой из следующих методов:
-
   - {{HTTPMethod("PUT")}}
   - {{HTTPMethod("DELETE")}}
   - {{HTTPMethod("CONNECT")}}
@@ -147,7 +141,6 @@ Content-Type: application/xml
   - {{HTTPMethod("PATCH")}}
 
 - **Или если**, кроме заголовков, автоматически устанавливаемых пользовательским агентом (например, {{HTTPHeader ("Connection")}}, {{HTTPHeader ("User-Agent")}}, [или любым другим заголовком с именем, определённым в спецификации Fetch как "имя запрещённого заголовка"](https://fetch.spec.whatwg.org/#forbidden-header-name)), запрос включает любые заголовки, отличные от [тех, которые спецификация Fetch определяет как "заголовок запроса CORS-безопасный заголовок запроса"](https://fetch.spec.whatwg.org/#forbidden-header-name), а именно:
-
   - {{HTTPHeader("Accept")}}
   - {{HTTPHeader("Accept-Language")}}
   - {{HTTPHeader("Content-Language")}}
@@ -159,7 +152,6 @@ Content-Type: application/xml
   - [`Width`](https://httpwg.org/http-extensions/client-hints.html#width)
 
 - **Или если** заголовок {{HTTPHeader("Content-Type")}} содержит значение, отличное от следующих:
-
   - `application/x-www-form-urlencoded`
   - `multipart/form-data`
   - `text/plain`
@@ -507,7 +499,6 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Using CORS with All (Modern) Browsers](http://www.kendoui.com/blogs/teamblog/posts/11-10-03/using_cors_with_all_modern_browsers.aspx)
 - [Using CORS - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/cors/)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
-
   - How to avoid the CORS preflight
   - How to use a CORS proxy to get around _"No Access-Control-Allow-Origin header"_
   - How to fix _"Access-Control-Allow-Origin header must not be the wildcard"_

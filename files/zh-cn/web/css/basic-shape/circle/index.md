@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`circle()`** CSS [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)定义了一个圆形，使用半径和位置来描述。它是 {{cssxref("&lt;basic-shape&gt;")}} 数据类型之一。
 
 {{InteractiveExample("CSS Demo: circle()")}}
@@ -59,16 +57,13 @@ clip-path: circle(6rem at 12rem 8rem);
 ## 值
 
 - `<shape-radius>`
-
   - : 这可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是 `closest-side` 和 `farthest-side` 关键字值。
-
     - `closest-side`
       - : 使用从形状中心到参照盒子的最近边缘的长度。对于圆形来说，这是任何维度中最近的边缘。
     - `farthest-side`
       - : 使用从形状中心到参照盒子的最远边缘的长度。对于圆形来说，这是任何维度中最远的边缘。
 
 - `<position>`
-
   - : 移动圆的中心。可以是一个 {{cssxref("length")}} 值，或者是一个 {{cssxref("percentage")}} 值，或者是类似 `left` 的值。如果省略了 `<position>` 值，则默认为中心。
 
 ## 形式语法

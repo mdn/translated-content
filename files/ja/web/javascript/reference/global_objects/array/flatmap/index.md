@@ -9,7 +9,7 @@ l10n:
 
 **`flatMap()`** は {{jsxref("Array")}} インスタンスのメソッドで、最初にマッピング関数を使用してそれぞれの要素をマップした後、結果を新しい配列内に平坦化します。これは、 {{jsxref("Array/map", "map()")}} の後に深さ 1 の {{jsxref("Array/flat","flat()")}} を行うのと同じですが (`arr.map(...args).flat()`)、これら 2 つのメソッドを別々に呼び出すよりもわずかに効率的です。
 
-{{InteractiveExample("JavaScript Demo: Array.flatMap()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.flatMap()", "shorter")}}
 
 ```js interactive-example
 const arr1 = [1, 2, 1];
@@ -30,7 +30,6 @@ flatMap(callbackFn, thisArg)
 ### 引数
 
 - `callbackFn`
-
   - : 配列のそれぞれの要素に対して実行する関数。この関数は、新しい配列の要素を格納した配列を返すか、新しい配列に追加する 1 つの配列以外の値を返します。この関数は、以下の引数で呼び出されます。
     - `element`
       - : 配列で現在処理中の要素です。

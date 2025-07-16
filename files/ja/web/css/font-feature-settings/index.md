@@ -9,7 +9,7 @@ l10n:
 
 **`font-feature-settings`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 OpenType フォントの拡張書体の特性を制御します。
 
-{{InteractiveExample("CSS Demo: font-feature-settings")}}
+{{InteractiveExample("CSS デモ: font-feature-settings")}}
 
 ```css interactive-example-choice
 font-feature-settings: normal;
@@ -105,7 +105,6 @@ font-feature-settings: unset;
 - `normal`
   - : テキストを既定のフォント設定でレイアウトすることを示します。これが既定値です。
 - `<feature-tag-value>`
-
   - : タグ名とオプション値からなる、空白区切りのデータ列を表します。
 
     タグ名は {{cssxref("&lt;string&gt;")}} で、常に 4 つの {{Glossary("ASCII")}} 文字からなります。タグ名の文字数が多かったり少なかったり、 `U+20` – `U+7E` コードポイント範囲外の文字を格納している場合、記述子は無効になります。

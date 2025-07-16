@@ -9,7 +9,7 @@ l10n:
 
 **`user-select`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーがテキストを範囲選択できるかどうかを制御します。これは、テキストボックスを除いて、{{Glossary("Chrome", "クローム")}}として読み込まれたコンテンツには影響を与えません。
 
-{{InteractiveExample("CSS Demo: user-select")}}
+{{InteractiveExample("CSS デモ: user-select")}}
 
 ```css interactive-example-choice
 user-select: none;
@@ -59,9 +59,7 @@ user-select: unset;
 - `none`
   - : 対象要素とその子孫要素の文章は範囲選択できません。 {{domxref("Selection")}} オブジェクトはこれらの要素も含むことができることに注意してください。
 - `auto`
-
   - : `auto` の使用値は下記のように決められます。
-
     - `::before` と `::after` の擬似要素では、使用値は `none` になります。
     - この要素の親要素の `user-select` の使用値が `none` の場合、使用値は `none` になります。
     - 上記以外で、親要素の `user-select` の使用値が `all` の場合、使用値は `all` になります。

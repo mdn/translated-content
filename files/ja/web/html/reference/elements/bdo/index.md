@@ -1,29 +1,28 @@
 ---
 title: "<bdo>: 双方向文字列上書き要素"
 slug: Web/HTML/Reference/Elements/bdo
-original_slug: Web/HTML/Element/bdo
 l10n:
-  sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
 **`<bdo>`** は [HTML](/ja/docs/Web/HTML) の要素で、現在のテキストの書字方向を上書きし、中のテキストが異なる書字方向で描画されるようにします。
 
-{{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;bdo&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<h1>Famous seaside songs</h1>
+<h1>有名な海辺の歌</h1>
 
-<p>The English song "Oh I do like to be beside the seaside"</p>
+<p>英語の歌 "Oh I do like to be beside the seaside"</p>
 
 <p>
-  Looks like this in Hebrew:
+  ヘブライ語では次のように見えます。
   <span dir="rtl">אה, אני אוהב להיות ליד חוף הים</span>
 </p>
 
 <p>
-  In the computer's memory, this is stored as
+  コンピューターのメモリーには、これは次のように格納されます。
   <bdo dir="ltr">אה, אני אוהב להיות ליד חוף הים</bdo>
 </p>
 ```
@@ -33,8 +32,8 @@ html {
   font-family: sans-serif;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 bdo {
+  /* ここにスタイルを追加 */
 }
 ```
 
@@ -45,9 +44,7 @@ bdo {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `dir`
-
   - : この要素の内容において、テキストが描画される方向です。以下の値が指定可能です。
-
     - `ltr`: テキストを左から右へ (left-to-right) 向かわせることを意味する指定。
     - `rtl`: テキストを右から左へ (right-to-left) 向かわせることを意味する指定。
 
@@ -73,15 +70,15 @@ HTML 4 の仕様では、この要素にイベントが指定されていませ�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >,
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >, 知覚可能コンテンツ
       </td>
@@ -89,7 +86,7 @@ HTML 4 の仕様では、この要素にイベントが指定されていませ�
     <tr>
       <th scope="row">許可されている内容</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >
       </td>
@@ -101,7 +98,7 @@ HTML 4 の仕様では、この要素にイベントが指定されていませ�
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >を受け入れるすべての要素
       </td>
@@ -109,8 +106,10 @@ HTML 4 の仕様では、この要素にイベントが指定されていませ�
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role"
-          >対応するロールなし</a
+        <code
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"
+            >generic</a
+          ></code
         >
       </td>
     </tr>

@@ -2,7 +2,7 @@
 title: 安裝基本軟體
 slug: Learn_web_development/Getting_started/Environment_setup/Installing_software
 l10n:
-  sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
@@ -46,11 +46,11 @@ l10n:
 目前，你應該安裝幾款桌面以及行動／其他裝置的瀏覽器，以便測試你的程式碼。你最常會在桌面、筆記型電腦和行動裝置上接觸到 Web 瀏覽器，但也可能在平板電腦、手錶和電視等其他裝置上接觸到 Web 瀏覽器。如果可能，請確保每個渲染引擎系列中至少安裝一款瀏覽器（這樣你就不會只在多個基於相同渲染引擎的瀏覽器中進行測試）：
 
 - 桌面瀏覽器：
-  - Chromium：[Google Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge)、[Vivaldi](https://vivaldi.com/zh-hant)。
+  - Chromium：[Google Chrome](https://www.google.com/chrome/)、[Opera](https://www.opera.com/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge)、[Vivaldi](https://vivaldi.com/zh-hant)。
   - Gecko：[Mozilla Firefox](https://www.mozilla.org/zh-TW/firefox/new/)。
   - WebKit：[Apple Safari](https://www.apple.com/safari/)。
 - 行動／其他裝置瀏覽器：
-  - Chromium（Android）：[Google Chrome](https://www.google.com/chrome/go-mobile/)、[Opera](https://www.opera.com/browsers/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge/mobile)、[Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet)、[Vivaldi](https://vivaldi.com/zh-hant/android/)。
+  - Chromium（Android）：[Google Chrome](https://www.google.com/chrome/go-mobile/)、[Opera](https://www.opera.com/opera)、[Brave](https://brave.com/download/)、[Microsoft Edge](https://www.microsoft.com/zh-tw/edge/mobile)、[Samsung Internet](https://www.samsung.com/us/support/owners/app/samsung-internet)、[Vivaldi](https://vivaldi.com/zh-hant/android/)。
   - Gecko（Android）：[Mozilla Firefox](https://www.mozilla.org/zh-TW/firefox/browsers/mobile/android/)。
   - WebKit（iOS）：[Apple Safari](https://www.apple.com/safari/)。
     > [!NOTE]
@@ -86,7 +86,7 @@ MDN 的學習文章均不要求你自行建立圖形，但部分文章可能要�
 - 內建於 Windows 的[相片應用程式](https://support.microsoft.com/zh-tw/windows/使用-microsoft相片-應用程式管理相片和影片-c0c6422f-d4cb-2e3d-eb65-7069071b2f9b)具備許多類似功能。
 - [tinypng](https://tinypng.com/) 網站提供免費服務，讓你壓縮 PNG、JPEG 等檔案。這是在準備網站資產時你常需執行的任務。
 
-若你有更進階的圖形編輯／建立需求，你會需要一套完整的圖形軟體套件。就商業產品而言，[Adobe Photoshop](https://www.adobe.com/products/photoshop.html) 長期以來一直是業界標準，而其他熱門產品還包括 [Figma](https://www.figma.com/)、[Sketch](https://www.sketch.com/) 以及 [Canva](https://www.canva.com/)。
+若你有更進階的圖形編輯／建立需求，你會需要一套完整的圖形軟體套件。就商業產品而言，[Adobe Photoshop](https://www.adobe.com/products/photoshop.html) 長期以來一直是業界標準，特別適合進行照片編輯，而像 [Sketch](https://www.sketch.com/) 這類程式則更適合用於圖示與使用者介面設計。另有一些近年來頗受歡迎的新興工具，如 [Figma](https://www.figma.com/)、[Affinity 套裝軟體](https://affinity.serif.com/)以及 [Canva](https://www.canva.com/)。
 
 如果你的預算有限，以上大部分應用程式皆提供試用或免費模式，值得你一試。也有一些備受推崇的免費應用程式，例如 [GIMP](https://www.gimp.org/)、[Adobe Express](https://www.adobe.com/express/) 以及 [Paint.NET](https://www.getpaint.net/)。
 

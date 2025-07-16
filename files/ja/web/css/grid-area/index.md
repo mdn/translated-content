@@ -9,7 +9,7 @@ l10n:
 
 **`grid-area`** は CSS の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、グリッドアイテムの寸法と{{glossary("grid", "グリッド")}}内での位置を指定し、線、スパン、指定するために、グリッド配置に線や区間を指定したり、何も指定しなかったり（自動）することで、{{glossary("grid areas", "グリッド領域")}}の端を指定します。
 
-{{InteractiveExample("CSS Demo: grid-area")}}
+{{InteractiveExample("CSS デモ: grid-area")}}
 
 ```css interactive-example-choice
 grid-area: a;
@@ -114,7 +114,6 @@ grid-area: unset;
 - `auto`
   - : このプロパティがグリッドアイテムの配置に何も寄与しないことを示すキーワードで、自動配置または既定のスパン `1` を示します。
 - `<custom-ident>`
-
   - : `<custom-ident>-start` または `<custom-ident>-end` という名前の付いた線がある場合、そのような最初の線グリッドのアイテムの配置に関与します。
 
     > [!NOTE]
@@ -123,7 +122,6 @@ grid-area: unset;
     そうでなければ、これは `<custom-ident>` に沿って整数の `1` が指定されたものとして扱われます。
 
 - `<integer> && <custom-ident>?`
-
   - : n 番目のグリッド線をグリッドアイテムの配置に使用します。負の整数が指定された場合は、逆方向にカウントし、明示的なグリッドの末尾の端から始めます。
 
     名前が {{cssxref("&lt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前がある線の数が十分にない場合は、この位置を探す目的においては、すべての暗黙のグリッド線がその名前を持つと仮定されます。
@@ -131,7 +129,6 @@ grid-area: unset;
     `0` の {{cssxref("&lt;integer&gt;")}} 値は無効です。
 
 - `span && [ <integer> || <custom-ident> ]`
-
   - : グリッドアイテムのグリッド領域の列側の先頭の端が末尾の端から _n_ 行になるように、グリッドアイテムの配置にグリッドスパンを設定します。
 
     名前が {{cssxref("&lt;custom-ident&gt;")}} として与えられた場合、その名前の付いた線のみがカウントされます。その名前を持つ線の数が十分にない場合は、検索方向に対応する明示的グリッドの側にあるすべての暗黙的グリッド線が、この区間をカウントする目的でその名前を持つと仮定されます。

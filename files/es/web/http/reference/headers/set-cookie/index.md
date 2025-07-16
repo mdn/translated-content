@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Set-Cookie
 original_slug: Web/HTTP/Headers/Set-Cookie
 ---
 
-{{HTTPSidebar}}La cabecera de respuesta HTTP **Set-Cookie** se usa para enviar cookies desde el servidor al agente de usuario, así el agente de usuario puede enviarlos de vuelta al servidor.Para más información, visite la [guía para cookies HTTP](/es/docs/Web/HTTP/Guides/Cookies).
+La cabecera de respuesta HTTP **Set-Cookie** se usa para enviar cookies desde el servidor al agente de usuario, así el agente de usuario puede enviarlos de vuelta al servidor.Para más información, visite la [guía para cookies HTTP](/es/docs/Web/HTTP/Guides/Cookies).
 
 <table class="properties">
   <tbody>
@@ -57,16 +57,13 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 <!---->
 
 - `<cookie-name>=<cookie-value>`
-
   - : Una cookie comienza con un par nombre-valor:
-
     - Un `<cookie-name>` puede ser cualquier cosa excepto caracteres de control (CTLs) o espacios y tabulaciones. Tampoco debe contener caracteres de separación como los siguientes: `( ) < > @ , ; : \ " / [ ] ? = { }`.
     - Un `<cookie-value>` opcionalmente puede ser establecido dentro de comillas dobles y se permite usar cualquier caracter US-ASCII excluyendo CTLs, espacios en blanco, comillas dobles, comas, punto y coma y la barra invertida. **Codificación:** Muchas implementaciones realizan codificación de URL sobre los valores de la cookie, aunque esto no es requerido por la especificación RFC. Esto ayuda a satisfacer los requerimientos sobre los caracteres permitidos para \<cookie-value>.
     - **`Prefijo __Secure-`**: Las cookies cuyo nombre comience por `__Secure-` (los guiones forman parte del prefijo) deben ser establecidas con la bandera `secure` y deben provenir de una página segura (HTTPS).
     - **`Prefijo __Host-`**: Las cookies cuyo nombre comience por `__Host-` deben ser establecidas con la bandera `secure`, provenir de una página segura (HTTPS), no deben tener especificado un dominio (y por tanto no son enviadas a subdominios) y la ruta debe ser "/".
 
 - Expires=\<date> {{optional_inline}}
-
   - : El tiempo de vida máximo útil de una cookie como marca HTTP-date timestamp. Ver {{HTTPHeader("Date")}} para el detalle del formato.
 
     Si no está especificado, la cookie tendrá el tiempo de vida de una **session cookie.** Una sesión finaliza cuando el cliente lo culmina, esto quiere decir que la sesión será removida en ese punto.
@@ -79,9 +76,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `Max-Age=<non-zero-digit>` {{optional_inline}}
   - : Número de segundos hasta que la cookie expire. Un cero o un número negativo hace expirar la cookie inmediatamente. Los navegadores antiguos (ie6, ie7, and ie8) no soportan max-age. Para otros navegadores, si ambos estan definidos (`Expires` y `Max-Age`), `Max-Age` tendrá mayor importancia.
 - `Domain=<domain-value>` {{optional_inline}}
-
   - : Anfitriones donde la cookie será enviada.
-
     - Si se omite, por defecto el huésped es la URL del documento actual, sin incluir subdominios.
     - Contraria a anteriores especificaciones, los puntos principales en nombres de dominio (`.example.com`) son ignorados.
     - Si un dominio _es_ especificado, los subdominios son siempre incluídos.
@@ -90,7 +85,6 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
   - : Una ruta que debe existir en la URL solicitada, o el navegador no enviará el encabezado `Cookie`.
     El caracter diagonal (`/`) es interpretado como un separador de directorios y subdirectorios que serán también comparados: para `Path=/docs`, `/docs`, `/docs/Web/`, y `/docs/Web/HTTP` todos tendrán que coincidir.
 - `Secure` {{optional_inline}}
-
   - : Una cookie segura es sólo enviada al servidor cuando una petición es enviada con el esquema `https:`. (Sin embargo, información confidencial nunca debería ser almacenada en Cookies HTTP, como todo el mecanismo es However, confidential information should never be stored in HTTP Cookies, ya que todo el mecanismo es inherentemente inseguro y no encripta ninguna información.)
 
     > [!NOTE]
@@ -99,9 +93,7 @@ Set-Cookie: <cookie-name>=<cookie-value>; Domain=<domain-value>; Secure; HttpOnl
 - `HttpOnly` {{optional_inline}}
   - : Impide que el código JavaScript acceda a la cookie. Por ejemplo, a través de la propiedad {{domxref("Document.cookie")}}, y la API {{domxref("XMLHttpRequest")}}, o la API {{domxref("Request")}}. Esto mitiga los ataques contra scripts cross-site ({{Glossary("XSS")}}).
 - `SameSite=<samesite-value>` {{optional_inline}}
-
   - : &#x20;
-
     - `Strict`
     - `Lax`
     - `None`

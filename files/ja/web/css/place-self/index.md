@@ -9,7 +9,7 @@ l10n:
 
 **`place-self`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、アイテムのブロック軸およびインライン軸に沿ったアイテムの配置 (すなわち {{cssxref("align-self")}} および {{cssxref("justify-self")}} プロパティ) を一度に指定することができます。このプロパティは、ブロックレベルのボックス、絶対位置指定のボックス、グリッドアイテムに適用されます。 2 番目の値が設定されていない場合、最初の値がそちらにも使用されます。
 
-{{InteractiveExample("CSS Demo: place-self")}}
+{{InteractiveExample("CSS デモ: place-self")}}
 
 ```css interactive-example-choice
 place-self: stretch center;
@@ -94,7 +94,6 @@ place-self: unset;
 - `auto`
   - : 親の {{cssxref("align-items")}} の値で計算します。
 - `normal`
-
   - : このキーワードの効果は、現在のレイアウトモードに依存します。
     - 絶対位置のレイアウトでは、このキーワードは*置換*の絶対位置ボックスには `start` のように動作し、*その他*の絶対位置ボックスには `stretch` のように動作します。
     - 絶対位置指定レイアウトの固定位置指定時は、このキーワードは `stretch` と同様に動作します。

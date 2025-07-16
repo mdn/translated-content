@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Multiplication_assignment
 
 乗算代入演算子 (`*=`) は、変数に右のオペランドの値を乗算し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Multiplication assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Multiplication assignment operator")}}
 
 ```js interactive-example
 let a = 2;

@@ -10,7 +10,7 @@ l10n:
 
 **`<col>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内の列を定義して、すべての一般セルに共通の意味を定義するために使用します。この要素は通常、{{HTMLElement("colgroup")}} 要素内にみられます。
 
-{{InteractiveExample("HTML Demo: &lt;col&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;col&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -86,9 +86,7 @@ td {
 以下の属性は非推奨であり、使用すべきではありません。これらの属性は、既存のコードを更新する際の参考として、また歴史的な興味のためだけに、以下に文書化されています。
 
 - `align` {{deprecated_inline}}
-
   - : この[列挙型](/ja/docs/Glossary/Enumerated)属性は、各列の内容物の水平方向の配置方法を制御します。以下の値が指定可能です。
-
     - `left` : 内容物をセルの左側に揃えます。
     - `center` : 内容物をセル内で中央揃えにします。
     - `right` : 内容物をセルの右側に揃えます。
@@ -103,7 +101,6 @@ td {
     > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用している場合は、`[colspan=n]` のような、十分な CSS 属性セレクターの組み合わせで実現できますが、容易ではありません。
 
 - `bgcolor` {{Deprecated_inline}}
-
   - : 表の背景色です。この属性は、列の各セルの背景色を定義します。 [6 桁の 16 進数の RGB コード](/ja/docs/Web/CSS/hex-color)の前に '`#`' が付いた形です。定義済みの[色キーワード](/ja/docs/Web/CSS/color_value#named_colors)のうちの一つも使用できます。
 
     同様の効果を得るには、 CSS の {{cssxref("background-color")}} プロパティを使用してください。
@@ -113,9 +110,7 @@ td {
 - `charoff` {{deprecated_inline}}
   - : この属性は、 `char` 属性で指定された揃え文字からその列のデータをオフセットする文字数を示します。
 - `valign` {{deprecated_inline}}
-
   - : この属性は、その列のそれぞれのセルの中にある内容物の垂直方向の配置方法を指定します。以下の値が指定可能です。
-
     - `baseline` : テキストを可能な限りセルの下端に近づけますが、下端ではなく文字の[ベースライン](https://en.wikipedia.org/wiki/Baseline_%28typography%29)に揃えます。文字がサイズ全体に渡る場合は、 `bottom` と同じ効果になります。
     - `bottom` : テキストを可能な限りセルの下端に近づけて配置します。
     - `middle` : テキストをセルの中央部に置きます。
@@ -191,7 +186,6 @@ td {
 ## 関連情報
 
 - `<col>` 要素のスタイル設定に特に役立つであろう CSS プロパティと擬似クラス:
-
   - 列の幅を制御するための {{cssxref("width")}} プロパティ
   - 列内のセルの配置を設定するための {{cssxref(":nth-child")}} 擬似クラス
   - すべてのセル内コンテンツを '.' などの同一文字で揃えるための {{cssxref("text-align")}} プロパティ

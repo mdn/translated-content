@@ -15,7 +15,7 @@ l10n:
 - 配列内に値が**存在する**かどうかを調べる必要がある場合は、 {{jsxref("Array/includes", "includes()")}} を使用してください。
 - 指定したテスト関数を満たす要素があるかどうかを調べる必要がある場合は、 {{jsxref("Array/some", "some()")}} を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Array.find()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.find()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];
@@ -87,7 +87,7 @@ console.log(inventory.find(isCherries));
 // { name: 'cherries', quantity: 5 }
 ```
 
-#### アロー関数と分割代入の使用
+#### アロー関数と構造分解の使用
 
 ```js
 const inventory = [

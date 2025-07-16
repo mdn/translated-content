@@ -3,8 +3,6 @@ title: paint-order
 slug: Web/CSS/paint-order
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) **`paint-order`** 属性可以让你控制文本区域和图形绘制的填充和绘制（和 markers）的顺序
 
 ## 语法
@@ -37,7 +35,6 @@ paint-order: markers stroke fill; /* 先 markers, 然后 stroke, 然后 fill */
   `fill`,
 
   `markers`
-
   - : 指定一部分或者全部这些属性的渲染顺序
 
 ### 形式语法

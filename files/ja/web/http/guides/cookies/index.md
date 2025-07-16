@@ -6,8 +6,6 @@ l10n:
   sourceCommit: cb132bc83b660e51be8959de5336c00b08030104
 ---
 
-{{HTTPSidebar}}
-
 **Cookie**（ウェブ Cookie、ブラウザー Cookie とも呼ぶ）は、サーバーがユーザーのウェブブラウザーに送信する小さなデータです。ブラウザーは Cookie を保存したり、新しい Cookie を作成したり、既存の Cookie を変更したり、後でリクエストされたときに同じサーバーにそれらを送り返したりすることができます。 Cookie により、ウェブアプリケーションは限られた量のデータを格納し、状態についての情報を記憶することができます。HTTP プロトコルは既定では[ステートレス](/ja/docs/Web/HTTP/Guides/Overview#http_はステートレスであるがセッションレスではない)だからです。
 
 この記事では、Cookie の主な用途を調べ、使用する際の最善の手法を説明し、プライバシーとセキュリティへの影響を見ていきます。
@@ -145,7 +143,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 - `Secure` 属性がついた Cookie は、HTTPS プロトコル上の暗号化されたリクエストでのみサーバーに送信されます。安全でない HTTP では決して送信されないため、{{Glossary("MitM", "中間者攻撃の")}}攻撃者が簡単にアクセスすることはできません。（URL に `http:` のついた）安全でないサイトは、 `Secure` 属性を使用して Cookie を設定することができません。ただし、`Secure` によって Cookie 内の機密情報へのアクセスをすべて防げると思ってはいけません。例えば、クライアントのハードディスクへアクセスすることで（また、`HttpOnly` 属性が設定されていない場合は JavaScript から）読み取られる可能性があります。
 
-- `HttpOnly` 属性を持つ Cookie は、 JavaScript の {{domxref("Document.cookie")}} API にはアクセスできません。サーバーに送信されるだけです。例えば、サーバー側のセッションを持続させる Cookie は JavaScript が利用する必要はないので、`HttpOnly` 属性をつけるべきです。この予防策は、クロスサイトスクリプティング（[XSS](/ja/docs/Web/Security/Types_of_attacks#クロスサイトスクリプティング_xss)）攻撃を緩和するのに役立ちます。
+- `HttpOnly` 属性を持つ Cookie は、 JavaScript の {{domxref("Document.cookie")}} API にはアクセスできません。サーバーに送信されるだけです。例えば、サーバー側のセッションを持続させる Cookie は JavaScript が利用する必要はないので、`HttpOnly` 属性をつけるべきです。この予防策は、クロスサイトスクリプティング（[XSS](/ja/docs/Web/Security/Attacks#クロスサイトスクリプティング_xss)）攻撃を緩和するのに役立ちます。
 
 > [!NOTE]
 > アプリケーションによっては、機密情報を直接 Cookie に格納するのではなく、サーバーが照合する不透明な識別子を使用したり、[JSON Web Tokens](https://jwt.io/) などの代替の認証/機密性メカニズムを調べたりしたほうがいいかもしれません。
@@ -172,14 +170,12 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
   ```
 
   `%x2F` ("/") の文字はディレクトリー区切り文字として解釈され、サブディレクトリーにも同様に一致します。例えば、`Path=/docs` を設定すると、以下のリクエストパスに一致します。
-
   - `/docs`
   - `/docs/`
   - `/docs/Web/`
   - `/docs/Web/HTTP`
 
   ただし、これらのリクエストパスには一致しません。
-
   - `/`
   - `/docsets`
   - `/fr/docs`
@@ -217,7 +213,7 @@ Set-Cookie: id=a3fWa; Expires=Thu, 21 Oct 2021 07:28:00 GMT; Secure; HttpOnly
 
 Cookie の仕組みの設計上、サーバーは、Cookie が安全なオリジンから設定されたことを確認することはできず、Cookie が元々どこで設定されたのかを見分けることさえできません。
 
-サブドメイン上にある脆弱性のあるアプリケーションが `Domain` 属性を使用して Cookie を設定すると、ほかのすべてのサブドメインで Cookie にアクセスできるようにすることができます。この仕組みは「セッション固定攻撃」で悪用される可能性があります。主な対策方法は[セッション固定化](/ja/docs/Web/Security/Types_of_attacks#セッションの固定)を参照してください。
+サブドメイン上にある脆弱性のあるアプリケーションが `Domain` 属性を使用して Cookie を設定すると、ほかのすべてのサブドメインで Cookie にアクセスできるようにすることができます。この仕組みは「セッション固定攻撃」で悪用される可能性があります。主な対策方法は[セッション固定化](/ja/docs/Web/Security/Attacks#セッションの固定)を参照してください。
 
 [多層防御](<https://ja.wikipedia.org/wiki/%E5%A4%9A%E5%B1%A4%E9%98%B2%E5%BE%A1_(%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3)>)として、Cookie の接頭辞を使用することで、Cookie に関する特定の事実を主張することが可能です。以下の 2 つの接頭辞が利用可能です。
 
@@ -229,7 +225,7 @@ Cookie の仕組みの設計上、サーバーは、Cookie が安全なオリジ
 > [!NOTE]
 > アプリケーションサーバー上では、ウェブアプリケーションは接頭辞を含む完全な Cookie 名をチェック*しなければなりません*。ユーザーエージェントは、リクエストの {{HTTPHeader("Cookie")}} ヘッダーを送信する前に Cookie から接頭辞を削除しません。
 
-Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie# Cookie の接頭辞)を参照してください。
+Cookie の接頭辞とブラウザー対応の現在の状態については、 [Set-Cookie リファレンス記事の接頭辞の節](/ja/docs/Web/HTTP/Reference/Headers/Set-Cookie#クッキーの接頭辞)を参照してください。
 
 ## プライバシーとトラッキング
 

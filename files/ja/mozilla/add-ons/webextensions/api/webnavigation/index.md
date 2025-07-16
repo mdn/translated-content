@@ -14,14 +14,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 ![](we-flow.png)
 
 - 主なフローは次の通り:
-
   - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
   - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
   - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
   - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
 
 - 追加のものは次の通り:
-
   - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` は、ブラウザーがナビゲーション用にタブやウィンドウを作成する必要がある場合 (例えば、ユーザーがリンクを新しいタブで開いたために)、`onBeforeNavigate` の前に発火します。
   - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} はページが [history API](http://diveintohtml5.info/history.html) を使ってブラウザーのロケーションバーに表示された URL を更新する場合に発火します。
   - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} はページの [fragment identifier](https://en.wikipedia.org/wiki/Fragment_identifier) が変更された場合に発火します。
@@ -77,7 +75,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
 {{WebExtExamples("h2")}}
 
 > [!NOTE]
-> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> This API is based on Chromium's [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation) API. This documentation is derived from [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) in the Chromium code.
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 92b03e46cef6be37de60799363e3e33e3415b491
 ---
 
-{{HTTPSidebar}}
-
 **`Access-Control-Allow-Origin`** は{{Glossary("response header", "レスポンスヘッダー")}}で、指定された{{Glossary("origin", "オリジン")}}からのリクエストを行うコードでレスポンスが共有できるかどうかを示します。
 
 <table class="properties">
@@ -40,7 +38,6 @@ Access-Control-Allow-Origin: null
 - `<origin>`
   - : 単一のオリジンを指定します。サーバーが複数のオリジンからのクライアントに対応している場合、リクエストを行った特定のクライアントのオリジンを返さなければなりません。
 - `null`
-
   - : オリジンを "null" に指定します。
 
     > **メモ:** `null` は使用しないでください。 `Access-Control-Allow-Origin: "null"` を返すと安全であるように見えますが、リソースのオリジンが階層的ではないスキーム (例えば `data:` や `file:`) を使用しており、サンドボックス化された文書はすべて `null` となるように定義されています。

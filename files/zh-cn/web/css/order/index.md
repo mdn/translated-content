@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4630ec673ad963bfa36a02a2c5d3f1d21c27a5d0
 ---
 
-{{CSSRef}}
-
 **`order`** [CSS](/zh-CN/docs/Web/CSS) 属性用于设置弹性或网格容器中项的布局顺序。容器中的项按 `order` 值升序排列，然后按它们的源代码顺序排列。未明确指定 `order` 值的项会被赋予默认值 `0`。
 
 {{InteractiveExample("CSS Demo: order")}}

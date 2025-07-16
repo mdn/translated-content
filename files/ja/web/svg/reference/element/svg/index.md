@@ -1,14 +1,11 @@
 ---
 title: <svg>
 slug: Web/SVG/Reference/Element/svg
-original_slug: Web/SVG/Element/svg
 l10n:
-  sourceCommit: 4d4e7617f5d573bbf8f51333b959c73b10262d52
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-`svg` 要素は、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Reference/Attribute/viewBox)を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG フラグメントを埋め込むためにも使用できます。
+**`<svg>`** は [SVG](/ja/docs/Web/SVG) の要素で、新しい座標系と[ビューポート](/ja/docs/Web/SVG/Reference/Attribute/viewBox)を定義するコンテナーです。これは SVG 文書の最も外側の要素として使用されますが、SVG または HTML 文書の中に SVG の断片を埋め込むためにも使用できます。
 
 > **メモ:** `xmlns` 属性は *SVG 文書*の最も外側の `svg` 要素、または XML シリアライズによる HTML 文書内にのみ必要です。内部の `svg` 要素や HTML シリアライズによる HTML 文書の内部には不要です。
 
@@ -55,7 +52,7 @@ svg {
 ```
 
 ```html-nolint
-<svg viewbox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='60vmin' width='60vmin'>
+<svg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg' height='60vmin' width='60vmin'>
   <rect x='0' y='0' width='50%' height='50%' fill='tomato' opacity='0.75' />
   <rect x='25%' y='25%' width='50%' height='50%' fill='slategrey' opacity='0.75' />
   <rect x='50%' y='50%' width='50%' height='50%' fill='olive' opacity='0.75' />
@@ -100,12 +97,12 @@ iframe の寸法を変更するには、右下の赤い点線の枠のサイズ�
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `auto`、_アニメーション_: **可**
 - {{SVGAttr("preserveAspectRatio")}}
   - : `svg` フラグメントが、異なる{{glossary("aspect ratio", "アスペクト比")}}での表示時にどう変形されるか。
-    _値の型_: (`none`| `xMinYMin`| `xMidYMin`| `xMaxYMin`| `xMinYMid`| `xMidYMid`| `xMaxYMid`| `xMinYMax`| `xMidYMax`| `xMaxYMax`) (`meet`|`slice`)?、_既定値_: `xMidYMid meet`、_アニメーション_: **可**
+    _値の型_: (`none` | `xMinYMin` | `xMidYMin` | `xMaxYMin` | `xMinYMid` | `xMidYMid` | `xMaxYMid` | `xMinYMax` | `xMidYMax` | `xMaxYMax`) (`meet`|`slice`)?、_既定値_: `xMidYMid meet`、_アニメーション_: **可**
 - {{SVGAttr("version")}} {{deprecated_inline}}
   - : 要素の内部の内容にどのバージョンの SVG が用いられるか。
     _値の型_: **[\<number>](/ja/docs/Web/SVG/Guides/Content_type#number)**、_既定値_: none、_アニメーション_: **不可**
 - {{SVGAttr("viewBox")}}
-  - : The SVG viewport coordinates for the current SVG fragment.
+  - : 現在の SVG の断片の SVG ビューポート座標。
     _値の型_: **[\<list-of-numbers>](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts)。**、_既定値_: none、_アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : 矩形ビューポートで表示される幅。（それ自身の座標系の幅ではありません。）
@@ -115,10 +112,10 @@ iframe の寸法を変更するには、右下の赤い点線の枠のサイズ�
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `0`、_アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : SVG コンテナーが表示される y 座標。最も外側の `svg` 要素では効果ありません。
-    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `0`; _Animatable_: **yes**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length)|[**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)、_既定値_: `0`; _アニメーション_: **可**
 
 > [!NOTE]
-> SVG2 から、`x`, `y`, `width`, `height` は、 *幾何プロパティ*です。これは、これらの属性が CSS プロパティとして用いられることを意味します。
+> SVG2 から、`x`, `y`, `width`, `height` は、幾何プロパティです。すなわち、これらの属性は CSS プロパティとしても用いることができます。
 
 ## 使用コンテキスト
 

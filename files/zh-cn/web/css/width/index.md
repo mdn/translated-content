@@ -3,8 +3,6 @@ title: width
 slug: Web/CSS/width
 ---
 
-{{CSSRef}}
-
 **`width`** 属性用于设置元素的宽度。`width` 默认设置[内容区域](/zh-CN/docs/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content-area)的宽度，但如果 {{cssxref("box-sizing")}} 属性被设置为 `border-box`，就转而设置[边框区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#border-area)的宽度。
 
 {{InteractiveExample("CSS Demo: width")}}
@@ -86,9 +84,7 @@ width: unset;
 - `min-content` {{ experimental_inline }}
   - : 元素内容固有的最小宽度。
 - `fit-content` {{ experimental_inline }}
-
   - : 取以下两种值中的较大值：
-
     - 固有的最小宽度
     - 固有首选宽度（max-content）和可用宽度（available）两者中的较小值
 

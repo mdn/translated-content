@@ -56,7 +56,7 @@ A algunos elementos se les puede dar estilo con pocos o ningún problema indepen
 
 Algunos elementos son más díficiles de estilizar, llegando a necesitar CSS complejo o trucos muy específicos:
 
-- Casillas de verificación ([checkbox](/es/docs/Web/HTML/Element/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Element/input/radio)).
+- Casillas de verificación ([checkbox](/es/docs/Web/HTML/Reference/Elements/input/checkbox)) y botones de opción ([radio](/es/docs/Web/HTML/Reference/Elements/input/radio)).
 - [`<input type="search">`](/es/docs/Web/HTML/Element/input/search)
 
 Veremos como trabajar con estos casos específicos en el artículo [Estilizado avanzado para formularios HTML](/es/docs/Learn/Forms/Advanced_form_styling).
@@ -65,10 +65,10 @@ Veremos como trabajar con estos casos específicos en el artículo [Estilizado a
 
 En algunos elementos, simplemente no se puede utilizar CSS. Incluyendo a:
 
-- [`<input type="color">`](/es/docs/Web/HTML/Element/input/color)
-- Controles relacionados al tiempo como [`<input type="datetime-local">`](/es/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/es/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/es/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/es/docs/Web/HTML/Reference/Elements/input/color)
+- Controles relacionados al tiempo como [`<input type="datetime-local">`](/es/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/es/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/es/docs/Web/HTML/Reference/Elements/input/file)
 - Elementos involucrados en la creación de controles de selección como {{HTMLElement("select")}}, {{HTMLElement("option")}}, {{HTMLElement("optgroup")}} y {{HTMLElement("datalist")}}.
 - {{HTMLElement("progress")}} y {{HTMLElement("meter")}}
 

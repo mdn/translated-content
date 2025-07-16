@@ -3,8 +3,6 @@ title: Firefox 3.5 開発者向け情報
 slug: Mozilla/Firefox/Releases/3.5
 ---
 
-{{FirefoxSidebar}}
-
 [Firefox 3.5](https://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/3.5/releasenotes/) (_2009 年 7 月 30 日にリリース_) では数多くの新機能が導入され、また、幅広い種類のウェブ標準に対するサポートが追加および改善されます。この記事は主な変更点をカバーする記事へのリンクを伴う広範囲に及ぶ一覧を提供します。
 
 ## Firefox 3.5 の開発者向け新機能
@@ -49,7 +47,6 @@ slug: Mozilla/Firefox/Releases/3.5
   `-moz-column-rule-style`
 
   `-moz-column-rule-color`
-
   - : Firefox 3.5 ではこれらの CSS への Mozilla 拡張に対するサポートが追加されます。
 
 - {{ cssxref("color_value#Mozilla_Extensions","-moz-nativehyperlinktext") }} カラー値
@@ -73,7 +70,6 @@ slug: Mozilla/Firefox/Releases/3.5
   {{ cssxref(":last-of-type") }}
 
   {{ cssxref(":only-of-type") }}
-
   - : これらのセレクターがすべて Firefox 3.5 で新たにサポートされます。
 
 #### 新しい DOM の機能

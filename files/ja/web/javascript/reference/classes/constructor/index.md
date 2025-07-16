@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{InteractiveExample("JavaScript デモ: Classes Constructor")}}
 
 ```js interactive-example
 class Polygon {
@@ -178,7 +178,7 @@ class ChildClass extends ParentClass {
 console.log(new ChildClass()); // TypeError: Derived constructors may only return object or undefined
 ```
 
-親クラスのコンストラクターがオブジェクトを返した場合、そのオブジェクトは派生クラスの[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を定義する際の値として使用します。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)なものも含む）を無関係なオブジェクトに定義することができます。
+親クラスのコンストラクターがオブジェクトを返した場合、そのオブジェクトは派生クラスの[クラスフィールド](/ja/docs/Web/JavaScript/Reference/Classes/Public_class_fields)を定義する際の値として使用します。このトリックは[「返値の上書き」](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements#オーバーライドしたオブジェクトの返却)と呼ばれ、派生クラスのフィールド（[プライベート](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)なものも含む）を無関係なオブジェクトに定義することができます。
 
 `constructor` は通常の[メソッド](/ja/docs/Web/JavaScript/Reference/Functions/Method_definitions)構文に従うので、[デフォルト引数](/ja/docs/Web/JavaScript/Reference/Functions/Default_parameters)や[残余引数](/ja/docs/Web/JavaScript/Reference/Functions/rest_parameters)などをすべて使用することができます。
 

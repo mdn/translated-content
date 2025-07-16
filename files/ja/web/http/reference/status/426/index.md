@@ -1,12 +1,9 @@
 ---
 title: 426 Upgrade Required
 slug: Web/HTTP/Reference/Status/426
-original_slug: Web/HTTP/Status/426
 l10n:
-  sourceCommit: ba53fe04589c36a2210d7549c003f3016093ef8e
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
-
-{{HTTPSidebar}}
 
 HTTP の **`426 Upgrade Required`** は[クライアントエラーレスポンス](/ja/docs/Web/HTTP/Reference/Status#クライアントエラーレスポンス)ステータスコードで、サーバーが現在のプロトコルを使用してリクエストを実行することを拒否していることを示しますが、クライアントが別のプロトコルにアップグレードした後に発生する可能性があります。
 
@@ -33,7 +30,7 @@ Host: example.com
 
 ```http
 HTTP/1.1 426 Upgrade Required
-Upgrade: HTTP/2.0
+Upgrade: HTTP/3.0
 Connection: Upgrade
 Content-Length: 53
 Content-Type: text/plain

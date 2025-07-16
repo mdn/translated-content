@@ -9,7 +9,7 @@ l10n:
 
 **`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
 
-{{InteractiveExample("CSS Demo: radial-gradient()")}}
+{{InteractiveExample("CSS デモ: radial-gradient()")}}
 
 ```css interactive-example-choice
 background: radial-gradient(#e66465, #9198e5);
@@ -61,7 +61,6 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 - `<ending-shape>`
   - : グラデーションの末端図形です。値は `circle` (つまり、グラデーションの形状が一定の半径の円) か `ellipse` (つまり、軸に沿った楕円) のいずれかです。指定されなかった場合、既定値は `ellipse` です。
 - `<size>`
-
   - : グラデーションの末端図形の大きさを決定します。省略した場合の既定値は farthest-corner です。これは明示的に指定することも、キーワードで指定することもできます。ここでのキーワード定義では、グラデーションボックスのエッジは有限の線分ではなく、両方向に無限に伸びているものと考えてください。
 
     グラデーションが円でも楕円でも `<size>` に以下のキーワードを使用することができます。

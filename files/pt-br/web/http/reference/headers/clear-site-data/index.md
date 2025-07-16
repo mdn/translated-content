@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Clear-Site-Data
 original_slug: Web/HTTP/Headers/Clear-Site-Data
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho HTTP **`Clear-Site-Data`** limpa os dados de navegação (_cookies_, armazenamento, _cache_) associados com o site requisitado. Ele permite desenvolvedores web terem maior controle sobre os dados armazenados localmente pelo navegador para suas origens.
 
 <table class="properties">
@@ -46,9 +44,7 @@ Clear-Site-Data: "*"
 - `"cookies"`
   - : Indica que o servidor quer remover todos os _cookies_ da URL de origem da resposta. Credenciais de autenticação HTTP também são limpas. Isso afeta o registro inteiro do domínio, incluindo subdomínios. Então, `https://example.com` também como `https://stage.example.com`, terão seus _cookies_ limpos.
 - `"storage"`
-
   - : Indica que o servidor quer remover todo o armezenamento DOM para a URL de origem da resposta. Isso incluí mecanismos de armazenamento como:
-
     - localStorage (executa `localStorage.clear`),
     - sessionStorage (executa `sessionStorage.clear`),
     - IndexedDB (para cada banco de dados, executa {{domxref("IDBFactory.deleteDatabase")}}),

@@ -58,7 +58,6 @@ progress {
 ## 関連情報
 
 - WebKit/Blink が {{HTMLElement("progress")}} 要素のその他の部分を整形するために使用する擬似要素:
-
   - {{ cssxref("::-webkit-progress-bar") }}
   - {{ cssxref("::-webkit-progress-inner-element") }}
 

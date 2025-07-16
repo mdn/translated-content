@@ -9,7 +9,7 @@ l10n:
 
 **`text-transform`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のテキストを大文字表記する方法を指定します。テキストをすべて大文字にしたり、すべて小文字にしたり、各単語の先頭を大文字にしたりすることを指定します。フリガナの読みやすさを向上するのにも役立ちます。
 
-{{InteractiveExample("CSS Demo: text-transform")}}
+{{InteractiveExample("CSS デモ: text-transform")}}
 
 ```css interactive-example-choice
 text-transform: capitalize;
@@ -96,7 +96,6 @@ text-transform: unset;
 ```
 
 - `capitalize`
-
   - : それぞれの単語の最初の*文字*を強制的に大文字に変換させるキーワードです。ほかの文字は変更しません。すなわち、要素のテキストで記載した元の表記を維持します。文字とは、文字または数字の一般カテゴリーの一部である任意の Unicode 文字です。単語の先頭にある句読点や記号は無視されます。
 
     > **メモ:** `capitalize` が言語固有の先頭文字を大文字にする慣習 (英語で冠詞を除外するなど) に従うと期待するべきではありません。

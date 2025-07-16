@@ -3,8 +3,6 @@ title: 布局和包含块
 slug: Web/CSS/CSS_display/Containing_block
 ---
 
-{{CSSRef}}
-
 一个元素的尺寸和位置经常受其**包含块**（containing block）的影响。大多数情况下，包含块就是这个元素最近的祖先[块元素](/zh-CN/docs/Glossary/Block-level_content)的[内容区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内容区域)，但也不是总是这样。在本文中，我们来过一遍确定包含块的所有因素。
 
 当一个客户端代理（比如说浏览器）展示一个文档的时候，对于每一个元素，它都产生了一个盒子。每一个盒子都被划分为四个区域：
@@ -32,7 +30,6 @@ slug: Web/CSS/CSS_display/Containing_block
 2. 如果 position 属性为 **`absolute`** ，包含块就是由它的最近的 position 的值不是 `static` （也就是值为`fixed`, `absolute`, `relative` 或 `sticky`）的祖先元素的内边距区的边缘组成。
 3. 如果 position 属性是 **`fixed`**，在连续媒体的情况下 (continuous media) 包含块是 {{glossary("viewport")}} ,在分页媒体 (paged media) 下的情况下包含块是分页区域 (page area)。
 4. 如果 position 属性是 **`absolute`** 或 **`fixed`**，包含块也可能是由满足以下条件的最近父级元素的内边距区的边缘组成的：
-
    1. {{cssxref("transform")}} 或 {{cssxref("perspective")}} 的值不是 `none`
    2. {{cssxref("will-change")}} 的值是 `transform` 或 `perspective`
    3. {{cssxref("filter")}} 的值不是 `none` 或 `will-change` 的值是 `filter`（只在 Firefox 下生效）。
@@ -42,7 +39,8 @@ slug: Web/CSS/CSS_display/Containing_block
 > [!NOTE]
 > 根元素（{{HTMLElement("html")}}）所在的包含块是一个被称为**初始包含块**的矩形。它具有视口（对于连续媒体）或页面区域（对于分页媒体）的尺寸。
 
-> **备注：** `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
+> [!NOTE]
+> `perspective` 和 `filter` 属性对形成包含块的作用存在浏览器之间的不一致性。
 
 ## 根据包含块计算百分值
 
@@ -251,7 +249,6 @@ p {
 ## 参见
 
 - CSS 重要概念：
-
   - [CSS 语法](/zh-CN/docs/Web/CSS/CSS_syntax/Syntax)
   - [@ 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)
   - [注释](/zh-CN/docs/Web/CSS/CSS_syntax/Comments)
@@ -262,7 +259,6 @@ p {
   - [视觉格式化模型](/zh-CN/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - [外边距合并](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
   - 值
-
     - [初始值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
     - [计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)
     - [解析值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#解析值)

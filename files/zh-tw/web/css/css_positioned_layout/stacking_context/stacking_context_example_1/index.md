@@ -3,8 +3,6 @@ title: Stacking context example 1
 slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 ---
 
-{{CSSRef}}
-
 ### 堆疊環境範例 1
 
 讓我們先從一個基本的例子。根堆疊情況下，我們有兩個 div（DIV＃1 和＃DIV 3），兩種相對定位的，但是如果沒有的 z-index 屬性。裡面 DIV＃1 有一個絕對定位的 div＃2，而在 DIV＃3 有一個絕對定位的 div＃4，雙方沒有的 z-index 屬性。
@@ -26,7 +24,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_context/Stacking_context_example_1
 在堆疊上下文而言，DIV＃1 和 DIV＃3 簡單地同化到根元素，將得到的層次結構如下：
 
 - 根堆疊環境
-
   - DIV＃2（Z-指數 1）
   - DIV＃4（Z-指數 2）
 

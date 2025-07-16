@@ -3,8 +3,6 @@ title: caret-color
 slug: Web/CSS/caret-color
 ---
 
-{{CSSRef}}
-
 **`caret-color`** 属性用来定义**插入光标**（caret）的颜色，这里说的插入光标，就是那个在网页的可编辑器区域内，用来指示用户的输入具体会插入到哪里的那个一闪一闪的形似竖杠 `|` 的东西。
 
 {{InteractiveExample("CSS Demo: caret-color")}}
@@ -56,10 +54,10 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ### 值
 
 - `auto`
-
   - : 默认颜色，此时浏览器应该用 `currentcolor` 来作为插入光标的颜色，但浏览器可能还会根据当前的背景色、阴影色等来对该颜色进行适当的调整以确保该插入光标具有良好的可见性。
 
-    > **备注：** **auto** 属性值在 CSS transitions/animations 中是不支持颜色插补（interpolated）的
+    > [!NOTE]
+    > **auto** 属性值在 CSS transitions/animations 中是不支持颜色插补（interpolated）的
 
 - {{cssxref("&lt;color&gt;")}}
   - : 所指定的插入光标的颜色值。

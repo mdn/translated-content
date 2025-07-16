@@ -3,8 +3,6 @@ title: 替代样式表
 slug: Web/HTML/Reference/Attributes/rel/alternate_stylesheet
 ---
 
-{{CSSRef}}
-
 Specifying **alternative style sheets** in a web page provides a way for users to see multiple versions of a page, based on their needs or preferences.
 
 在网页中指定可替代样式表允许用户为网页选择他们喜欢的样式。

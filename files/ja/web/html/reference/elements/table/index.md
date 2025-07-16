@@ -10,7 +10,7 @@ l10n:
 
 **`<table>`** は [HTML](/ja/docs/Web/HTML) の要素で、表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
 
-{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;table&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>
@@ -107,39 +107,30 @@ tfoot td {
 以下の属性は非推奨であり、使用すべきではありません。 以下の文書は、既存のコードを更新する際の参考情報として、また歴史的な関心のみを目的として記載されています。
 
 - `align` {{deprecated_inline}}
-
   - : 親要素内のテーブルの水平方向の配置を指定します。 {{Glossary("enumerated","列挙")}}値として、`left`、`center`、`right` があります。 この属性は非推奨であるため、代わりに CSS の {{cssxref("margin-inline-start")}} および {{cssxref("margin-inline-end")}} プロパティを使用してください。
 
 - `bgcolor` {{deprecated_inline}}
-
-  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("color_value", "&lt;color&gt")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
+  - : 表の背景色を定義します。値は HTML 色です。値は [6 桁の 16 進 RGB コード](/ja/docs/Web/CSS/hex-color)で、その前に `#` が付きます。定義済みの[色キーワード](/ja/docs/Web/CSS/named-color)のうちの 1 つを使用することもできます。それ以外の CSS の {{cssxref("color_value", "&lt;color&gt;")}} 値には対応していません。この属性は非推奨であるため、代わりに CSS の {{cssxref("background-color")}} プロパティを使用してください。
 
 - `border` {{deprecated_inline}}
-
   - : 表を囲む枠のサイズを非負の整数（ピクセル単位）で定義します。`0` に設定すると、[`frame`](#frame)属性は無効になります。この属性は非推奨であるため、代わりに CSS の プロパティの {{cssxref("border")}} を使用してください。
 
 - `cellpadding` {{deprecated_inline}}
-
   - : この属性は、セルの内容と境界線の間の空間を定義します。この属性は廃止されているので、これを使用する代わりに、CSS の {{cssxref("padding")}} プロパティを {{HTMLElement("th")}} および {{HTMLElement("td")}} 要素に使用してください。
 
 - `cellspacing` {{deprecated_inline}}
-
   - : 2 つのセルの間の空間の寸法を定義します。この属性は廃止されているので、これを使用する代わりに、CSS の {{cssxref("border-spacing")}} プロパティを `<table>` 要素に適用してください。なお、`<table>` 要素の {{cssxref("border-collapse")}} が `collapse` に設定されていると何の効果もありません。
 
 - `frame` {{deprecated_inline}}
-
   - : 表を囲む枠線のどの方向を表示する必要があるかを定義します。{{Glossary("enumerated","列挙値")}}で、有効な値は `void`、`above`、`below`、`hsides`、`vsides`、`lhs`、`rhs`、`box`、`border` です。この属性は非推奨であるため、代わりに {{cssxref("border-style")}} および {{cssxref("border-width")}} プロパティを使用してください。
 
 - `rules` {{deprecated_inline}}
-
   - : 表の罫線（境界線）のどれを表示するかを定義します。{{Glossary("enumerated","列挙値")}}で、有効な値は `none`（既定値）、`groups`（<thead>、<tbody>、<tfoot> 要素）、`rows`（水平線）、`cols`（垂直線）、`all`（すべてのセルの境界線）です。この属性は非推奨となっているため、代わりに適切な表関連要素、および `<table>` 自体に CSS の {{cssxref("border")}} プロパティを使用してください。
 
 - `summary` {{deprecated_inline}}
-
   - : この属性は、表の内容の概要を示す代替テキストを定義します。代わりに {{htmlelement("caption")}} 要素を使用してください。
 
 - `width` {{deprecated_inline}}
-
   - : この属性は表の幅を定義します。代わりに CSS の {{cssxref("width")}} プロパティを使用してください。
 
     > [!NOTE]

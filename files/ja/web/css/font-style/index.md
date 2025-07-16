@@ -9,7 +9,7 @@ l10n:
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
 
-{{InteractiveExample("CSS Demo: font-style")}}
+{{InteractiveExample("CSS デモ: font-style")}}
 
 ```css interactive-example-choice
 font-style: normal;
@@ -81,7 +81,6 @@ font-style: unset;
 - `oblique`
   - : `oblique` として分類されているフォントを選択します。 oblique フェイスが使用できない場合は、代わりに `italic` に分類されているフォントを選択します。どちらも利用できない場合は、スタイルは人工的にシミュレートされます。
 - `oblique` [`<angle>`](/ja/docs/Web/CSS/angle)
-
   - : `oblique` として分類されているフォントを選択し、加えてテキストの傾きの角度を指定します。選択されたフォントファミリで１つまたは複数の oblique フェイスが利用できる場合、指定した角度に最も近いものが選択されます。 oblique フェイスが利用できない場合、ブラウザーは通常のフェイスを指定した大きさだけ傾けることで、 oblique バージョンを作成します。有効な値は-90以上90以下の角度の値です。角度が指定されない場合、14度の角度が使用されます。正の数では行末に向けて傾け、負の数では行頭に向けて傾けます。
 
     一般に、要求された角度が14度以上の場合、大きな角度が推奨されます。その他の場合は、より小さい角度が推奨されます (アルゴリズムの詳細は、仕様書の [font matching section](https://drafts.csswg.org/css-fonts-4/#font-matching-algorithm) を参照してください)。

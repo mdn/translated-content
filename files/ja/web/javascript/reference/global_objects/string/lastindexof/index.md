@@ -9,7 +9,7 @@ l10n:
 
 **`lastIndexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最後に出現するインデックスを返します。オプションで開始位置を取り、指定した数値以下のインデックスにおいて、指定した部分文字列が最後にに出現するインデックスを返します。
 
-{{InteractiveExample("JavaScript Demo: String.lastIndexOf()")}}
+{{InteractiveExample("JavaScript デモ: String.lastIndexOf()")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";
@@ -32,13 +32,10 @@ lastIndexOf(searchString, position)
 ### 引数
 
 - `searchString`
-
   - : 検索する値を表す文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`lastIndexOf()` は `"undefined"` という文字列を検索します。これはおそらく望むところではないでしょう。
 
 - `position` {{optional_inline}}
-
   - : このメソッドは、`position`（既定値は `+Infinity`）以下の位置で、指定した部分文字列が最後に現れるインデックスを返します。`position` が呼び出された文字列の長さよりも大きい場合、このメソッドは呼び出される文字列全体を検索します。`position` が `0` 未満の場合、このメソッドは `0` の場合と同じように動作します。すなわち、このメソッドは指定された文字列をインデックス `0` でのみ検索します。
-
     - `'hello world hello'.lastIndexOf('world', 4)` は `-1` を返します。部分文字列 `world` が現れるのは `6` のインデックスですが、その位置は `4` 以下ではないからです。
 
     - `'hello world hello'.lastIndexOf('hello', 99)` は `12` を返します。部分文字列 `hello` が最後に現れる位置が、`99` 以下である `12` の位置だからです。

@@ -11,7 +11,7 @@ l10n:
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
-{{InteractiveExample("CSS Demo: align-content")}}
+{{InteractiveExample("CSS デモ: align-content")}}
 
 ```css interactive-example-choice
 align-content: start;
@@ -113,7 +113,6 @@ align-content: unset;
   - : 各アイテムは、フレックスコンテナーに依存して、交差軸の末尾側である配置コンテナーの端に向けて互いに寄せて配置されます。
     これはフレックスレイアウトのアイテムのみに適用されます。フレックスコンテナーの子ではないアイテムでは、この値は `end` のように扱われます。
 - `baseline`, `first baseline`, `last baseline`
-
   - : first-baseline 配置または last-baseline 配置への関与を指定します。ボックスの最初または最後のベースラインセットの配置ベースラインを、ベースライン共有グループ内のすべてのボックスで共有される最初または最後のベースラインセットで対応するベースラインに揃えます。
 
     ![ベースラインは、ほとんどの文字がその上に「配置」される線で、ディセンダーがその下に伸びる線です。](410px-typography_line_terms.svg.png)

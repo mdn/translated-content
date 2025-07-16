@@ -11,7 +11,7 @@ l10n:
 
 大量の文字列を比較する場合、例えば巨大な配列を並べ替えしている時は、{{jsxref("Intl.Collator")}} オブジェクトを生成してそれが提供する {{jsxref("Intl/Collator/compare", "compare()")}} メソッドを使用したほうがいいでしょう。
 
-{{InteractiveExample("JavaScript Demo: String.localeCompare()")}}
+{{InteractiveExample("JavaScript デモ: String.localeCompare()")}}
 
 ```js interactive-example
 const a = "réservé"; // With accents, lowercase
@@ -40,13 +40,11 @@ localeCompare(compareString, locales, options)
 - `compareString`
   - : この文字列と比較される文字列です。すべての値は[文字列に変換されます](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)ので、省略したり `undefined` を渡したりすると、`localeCompare()` は `"undefined"` という文字列と比較を行います。これはおそらく望むところではないでしょう。
 - `locales` {{optional_inline}}
-
   - : BCP 47 言語タグの文字列、またはそのような文字列の配列です。`Intl.Collator()` コンストラクターの [`locales`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#locales) 引数に対応します。
 
     `Intl.Collator` の対応がない実装では、この引数は無視され、普通はホストのロケールが使用されます。
 
 - `options` {{optional_inline}}
-
   - : 出力形式を調整するオブジェクトです。`Intl.Collator()` コンストラクターの [`options`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator#options) 引数に対応します。
 
     `Intl.Collator` の対応がない実装では、この引数は無視されます。

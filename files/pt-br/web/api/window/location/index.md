@@ -448,7 +448,7 @@ var showBookmark = (function () {
         nTop += oNode.offsetTop,
         oNode = oNode.offsetParent
     );
-    (_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1);
+    ((_nodeX = nLeft), (_nodeY = nTop), (_itFrame = 1));
     if (_scrollId === -1) {
       _scrollId = setInterval(_next, Math.round(nDuration / nFrames));
     }

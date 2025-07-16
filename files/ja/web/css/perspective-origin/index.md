@@ -9,7 +9,7 @@ l10n:
 
 **`perspective-origin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、閲覧者の視点の位置を決めます。これは {{cssxref("perspective")}} プロパティによって*消点*として使われます。
 
-{{InteractiveExample("CSS Demo: perspective-origin")}}
+{{InteractiveExample("CSS デモ: perspective-origin")}}
 
 ```css interactive-example-choice
 perspective-origin: center;
@@ -126,18 +126,14 @@ perspective-origin: unset;
 ### 値
 
 - _x-position_
-
   - : *消失点*の横座標上の位置を示します。次のいずれかの値です。
-
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の幅に対する相対値で位置を示します。負の数も使えます。
     - `left` キーワードは、length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。
     - `right` キーワードは、パーセント値 `100%` を示すショートカットです。
 
 - _y-position_
-
   - : *消失点*の縦座標上の位置を示します。次のいずれかの値です。
-
     - {{cssxref("&lt;length-percentage&gt;")}} は、絶対的な length 値、または要素の高さに対する相対値で位置を示します。負の数も使えます。
     - `top` キーワードは、 length 値 `0` を示すショートカットです。
     - `center` キーワードは、パーセント値 `50%` を示すショートカットです。

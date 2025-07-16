@@ -16,9 +16,7 @@ var myMemory = new WebAssembly.Memory(memoryDescriptor);
 ### 参数
 
 - _memoryDescriptor_
-
   - : 一个可包含以下成员的对象：
-
     - _initial_
       - : WebAssembly 内存的初始大小，以 WebAssembly 页面为单位。
     - _maximum {{optional_inline}}_

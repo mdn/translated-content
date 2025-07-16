@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template-areas`** は [CSS](/ja/docs/Web/CSS) のプロパティで、グリッド内でセルを確立し、名前を割り当てることにより、名前付きの {{glossary("grid areas", "グリッド領域")}} を指定します。
 
-{{InteractiveExample("CSS Demo: grid-template-areas")}}
+{{InteractiveExample("CSS デモ: grid-template-areas")}}
 
 ```css interactive-example-choice
 grid-template-areas:
@@ -100,7 +100,6 @@ grid-template-areas: unset;
 - `none`
   - : グリッドコンテナーは名前付きのグリッド領域を定義しません。
 - `{{cssxref("&lt;string&gt;")}}+`
-
   - : リストのすべての文字列ごとに行が生成され、文字列内の各セルごとに列が生成されます。行の中や行をまたがって同じ名前のセルトークンが複数あると、対応するグリッドセルにまたがる単一の名前付きグリッド領域を生成します。これらのセルが長方形にならないと、宣言は無効になります。
 
     グリッド内のすべての無名の領域は、ヌルセルトークンを使用して参照することができます。ヌルセルトークンは、 1 つ以上の `.` (U+002E FULL STOP) 文字の並び、例えば、`.`、`...`、`.....` などです。ヌルセルトークンは、グリッド内に空欄を作成するために使用することができます。

@@ -9,7 +9,7 @@ l10n:
 
 **`drop-shadow()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像にドロップシャドウ効果を適用します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{InteractiveExample("CSS Demo: drop-shadow()")}}
+{{InteractiveExample("CSS デモ: drop-shadow()")}}
 
 ```css interactive-example-choice
 filter: drop-shadow(30px 10px 4px #4444dd);
@@ -67,7 +67,6 @@ drop-shadow(#e23 0.5rem 0.5rem 1rem)
 ### 引数
 
 - `<color>` {{optional_inline}}
-
   - : 影の色で、 {{cssxref("&lt;color&gt;")}} で指定します。指定されなかった場合は、 {{cssxref("color")}} プロパティの値が使用されます。
 
 - `<length>`

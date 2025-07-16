@@ -9,7 +9,7 @@ l10n:
 
 **`transition-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)の影響を受ける CSS プロパティにおいて、中間状態の値を算出する方法を設定するために使用されます。
 
-{{InteractiveExample("CSS Demo: transition-timing-function")}}
+{{InteractiveExample("CSS デモ: transition-timing-function")}}
 
 ```css interactive-example-choice
 transition-timing-function: linear;
@@ -95,11 +95,9 @@ transition-timing-function: unset;
 ### 値
 
 - `<easing-function>`
-
   - : 各々の {{cssxref("&lt;easing-function&gt;")}} は {{ cssxref("transition-property") }} で指定された、トランジションを行うプロパティに対応するイージング関数を表します。
 
     段階のないキーワード値 (ease、linear、ease-in-out、など) はそれぞれ 4 つの固定点による三次ベジェ曲線を表しており、 cubic-bezier() 関数の値は定義済みの値以外を使用することができます。段階のあるイージング関数は、入力の時間を時間的に等しい間隔で指定された数に分割します。これは、ステップ数とステップ位置によって定義されます。
-
     - `ease`
       - : `cubic-bezier(0.25, 0.1, 0.25, 1.0)` と同等であり、既定値です。トランジションの半ばまで変化量が増加し、最後にはまた遅くなります。
     - `linear`
@@ -113,9 +111,7 @@ transition-timing-function: unset;
     - `cubic-bezier(p1, p2, p3, p4)`
       - : 作者が定義する三次ベジェ曲線です。p1 と p3 の値は 0 から 1 の範囲でなければなりません。
     - `steps(n, <jump-term>)`
-
       - : トランジションは _n_ 個の停止点を辿って表示され、それぞれの停止点の表示時間は均等な長さになります。例えば、_n_ が 5 の場合、5 つのステップがあることになります。一時的に停止する点が 0%, 20%, 40%, 60%, 80% であるのか、20%, 40%, 60%, 80%, 100% であるのか、トランジションに沿って 0% と 100% の中間で 5 回停止するのか、それとも 0% と 100% の位置を含めて 5 回 (0%, 25%, 50%, 75%, 100%) 停止するのかについては、以下のジャンプ用語のどれを使うかで決まります。
-
         - `jump-start`
           - : 左連続関数を表します。すなわち、トランジションの開始時に最初のジャンプが発生します。
         - `jump-end`

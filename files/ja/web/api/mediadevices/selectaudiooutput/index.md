@@ -24,11 +24,8 @@ selectAudioOutput(options)
 ### 引数
 
 - `options` {{Optional_Inline}}
-
   - : ユーザーへの問い合わせで提供される機器を構成するオブジェクトです。
-
     - `deviceId` {{Optional_Inline}}
-
       - : 以前に公開された/許可された単一の機器の ID を 表す文字列です。
         設定しない場合は、利用できるオーディオ出力機器がすべて表示されます。
 

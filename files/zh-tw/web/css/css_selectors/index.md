@@ -3,8 +3,6 @@ title: CSS Selectors
 slug: Web/CSS/CSS_selectors
 ---
 
-{{CSSRef}}
-
 **選擇器**可以定義某組 CSS 樣式要套用到哪些元素上。
 
 ## 基本選擇器
@@ -40,7 +38,6 @@ slug: Web/CSS/CSS_selectors
 ## 組合選擇器
 
 - [後代選擇器](/zh-TW/docs/Web/CSS/Descendant_combinator)（[Descendant combinator](/zh-TW/docs/Web/CSS/Descendant_combinator)）
-
   - : " " (空格) 用以選擇某個元素後代的元素。 **語法:** `A B`**範例:** `div span` 套用所有 [`<div>`](/zh-TW/docs/Web/HTML/Reference/Elements/div) 元素內部的所有 [`<span>`](/zh-TW/docs/Web/HTML/Reference/Elements/span) 元素。
 
 - [子代選擇器](/zh-TW/docs/Web/CSS/Child_combinator)（[Child combinator](/zh-TW/docs/Web/CSS/Child_combinator)）

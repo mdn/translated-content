@@ -9,7 +9,7 @@ l10n:
 
 **プロパティアクセサー**はオブジェクトのプロパティへのアクセスを提供するもので、ドット記法またはブラケット記法を使用します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Property accessors", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Property accessors", "taller")}}
 
 ```js interactive-example
 const person1 = {};
@@ -85,7 +85,7 @@ document.createElement("pre");
 // 77.と77.0は同じものとして評価されます
 ```
 
-さらに、[プライベートプロパティ](/ja/docs/Web/JavaScript/Reference/Classes/Private_properties)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
+さらに、[プライベート要素](/ja/docs/Web/JavaScript/Reference/Classes/Private_elements)は、それを定義するクラス内でドット記法を使用してのみアクセスすることができます。
 
 ### ブラケット記法
 

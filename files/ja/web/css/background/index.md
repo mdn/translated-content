@@ -9,7 +9,7 @@ l10n:
 
 **`background`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、色、画像、原点と寸法、反復方法など、背景に関するすべてのスタイルプロパティを一括で設定します。 `background` 一括指定プロパティの値宣言で設定されていない成分のプロパティは、既定値に設定されます。
 
-{{InteractiveExample("CSS Demo: background")}}
+{{InteractiveExample("CSS デモ: background")}}
 
 ```css interactive-example-choice
 background: green;
@@ -90,7 +90,6 @@ background: unset;
 それぞれのレイヤーの構文は以下の通りです。
 
 - それぞれのレイヤーは、以下の値をそれぞれ 0 ～ 1 回含めることができます。
-
   - `<attachment>`
   - `<bg-image>`
   - `<position>`

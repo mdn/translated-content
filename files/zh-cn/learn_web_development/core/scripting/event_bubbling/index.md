@@ -106,9 +106,7 @@ HTML 代码看起来像这样：
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
         >替代链接</a
@@ -201,9 +199,7 @@ box.addEventListener("click", () => box.classList.add("hidden"));
 
 <div class="hidden">
   <video>
-    <source
-      src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.webm"
-      type="video/webm" />
+    <source src="/shared-assets/videos/flower.webm" type="video/webm" />
     <p>
       你的浏览器不支持 HTML 视频，这里有视频的<a href="rabbit320.mp4"
         >替代链接</a

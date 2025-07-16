@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat/resolvedOptions
 
 **`Intl.NumberFormat.prototype.resolvedOptions()`** メソッドは、この {{jsxref("NumberFormat")}} オブジェクトの初期化時に計算されたロケールと数値整形オプションを反映したプロパティを持つ新しいオブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Intl.NumberFormat.prototype.resolvedOptions")}}
+{{InteractiveExample("JavaScript デモ: Intl.NumberFormat.prototype.resolvedOptions")}}
 
 ```js interactive-example
 const numberFormat1 = new Intl.NumberFormat("de-DE");
@@ -45,7 +45,6 @@ numberFormat.resolvedOptions()
 - `notation`
   - : `options` 引数でこのプロパティに指定された値、または既定として設定される `standard` です。
 - `compactDisplay`
-
   - : `options` 引数でこのプロパティに指定された値、または既定として設定される `short` です。
 
     このプロパティは `notation` が "compact" に設定されている場合のみ存在します。
@@ -60,7 +59,6 @@ numberFormat.resolvedOptions()
 次の２つのプロパティのグループのうちどちらかのみが含まれています。:
 
 - `minimumIntegerDigits`, `minimumFractionDigits`, `maximumFractionDigits`
-
   - : `options` 引数でプロパティに対して提供されるか既定で設定される値。 `minimumSignificantDigits` または `maximumSignificantDigits` が `options` 引数で提供されなかった場合のみ、これらのプロパティは存在しています。
 
 - `minimumSignificantDigits`, `maximumSignificantDigits`

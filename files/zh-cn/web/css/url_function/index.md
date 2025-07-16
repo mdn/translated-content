@@ -5,11 +5,10 @@ l10n:
   sourceCommit: b6f6c10c9c3a73e8a1f1c7bc643b44b2521cb234
 ---
 
-{{CSSRef}}
-
 **`url()`** [CSS](/zh-CN/docs/Web/CSS) [函数](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)用于包含文件。参数可以是绝对 URL、相对 URL、blob URL 或数据 URL。**`url()`** 函数可以作为其他 CSS 函数的参数传递，如 {{cssxref("attr")}} 函数。根据属性值的不同，所查找的资源可以是图像、字体或样式表。`url()` 函数标记表示 `<url>` 数据类型的值。
 
-> **备注：** {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
+> [!NOTE]
+> {{Glossary("URI")}} 和 {{Glossary("URL")}} 是不同的。URI 用于标识资源。URL 是 URI 的一种类型，用于描述资源的*位置*。URI 可以是 URL，也可以是资源的名称（{{Glossary("URN")}}）。
 >
 > 在 CSS 第 1 版中，`url()` 函数标记只表示真正的 URL。在 CSS 第 2 版中，`url()` 的定义扩展到可描述任何 URI，无论是 URL 还是 URN。令人困惑的是，这意味着 `url()` 可以用来创建 `<uri>` CSS 数据类型。这种更改不仅笨拙，而且毫无必要，因为 URN 几乎从未在实际 CSS 中使用过。为了减少混淆，CSS 第 3 版又回到了狭义的初始定义。现在，`url()` 只表示真正的 `<url>`。
 
@@ -61,11 +60,8 @@ content: url(star.svg) url(star.svg) url(star.svg) url(star.svg) url(star.svg);
 ### 值
 
 - `<string>`
-
   - : 可以指定一个 URL 或 SVG 形状的 ID 的字符串。
-
     - url
-
       - : 为相对地址、绝对地址的 URL，或指向所包含的 web 资源的指针，或数据 URL，可选择使用单引号或双引号。如果 URL 包含括号、空白字符或引号（除非这些字符已转义），或者地址包含高于 0x7e 的控制字符，则需要使用引号。除非经过转义，否则双引号不能出现在双引号内，单引号不能出现在单引号内。以下内容均有效且等效：
 
         ```css

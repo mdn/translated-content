@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`ellipse()`** [CSS](/zh-CN/docs/Web/CSS) 函数是 {{cssxref("&lt;basic-shape&gt;")}} [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)之一。
 
 {{InteractiveExample("CSS Demo: ellipse()")}}
@@ -57,16 +55,13 @@ shape-outside: ellipse(closest-side farthest-side at 30%);
 ### 值
 
 - `<shape-radius>`
-
   - : 两个半径，按顺序是 x 和 y。可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或值 `closest-side` 和 `farthest-side`。
-
     - `closest-side`
       - : 使用形状中心到参考框最近边缘的长度。对于椭圆来说，这是半径维度中最近的边缘。
     - `farthest-side`
       - : 使用形状中心到参考框最远边缘的长度。对于椭圆来说，这是半径维度中最远的边缘。
 
 - `<position>`
-
   - : 移动椭圆的中心。可以是 {{cssxref("length")}}、 {{cssxref("percentage")}}，或者类似于 `left` 这样的值。如果省略 `<position>` 值，则默认为中心。
 
 ## 形式语法

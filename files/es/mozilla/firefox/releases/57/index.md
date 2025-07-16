@@ -3,8 +3,6 @@ title: Firefox Quantum 57 para programadores
 slug: Mozilla/Firefox/Releases/57
 ---
 
-{{FirefoxSidebar}}
-
 Este artículo proporciona información sobre los cambios incluidos en Firefox 57 (también conocido como Firefox Quantum) que conciernen a los desarrolladores. Firefox 57 se disponibilizó al público el [14 de noviembre de 2017](https://wiki.mozilla.org/RapidRelease/Calendar#Future_branch_dates).
 
 ## Firefox 57 === Firefox Quantum
@@ -24,7 +22,7 @@ _No hay ningún cambio._
 
 ### HTML
 
-- Los tipos [«date»](/es/docs/Web/HTML/Element/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
+- Los tipos [«date»](/es/docs/Web/HTML/Reference/Elements/input/date) y [«time»](/es/docs/Web/HTML/Element/input/time) de {{htmlelement("input")}} ya están activados en todas las compilaciones ([Error 1399036 en Firefox](https://bugzil.la/1399036)).
 
 ### CSS
 
@@ -129,69 +127,55 @@ _No hay ningún cambio._
 Se añadieron o ampliaron las API siguientes:
 
 - [`bookmarks`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks)
-
   - compatibilidad con separadores mediante [`bookmarks.BookmarkTreeNodeType`](/es/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeType)
 
 - [`browser_action`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-
   - propiedad `theme_icons` para iconos claros u oscuros en función del tema
 
 - [`browserAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction)
-
   - [`browserAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup)
 
 - [`browserSettings`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings)
-
   - [`allowPopupsForUserEvents`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents)
   - [`homepageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride)
   - [`imageAnimationBehavior`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior)
   - [`newTabPageOverride`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride)
 
 - [`browsingData`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData)
-
   - [`browsingData.removeLocalStorage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage)
 
 - [`clipboard`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard)
-
   - [`setImageData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData)
 
 - [`contextualIdentities`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities)
-
   - [`onCreated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated)
   - [`onRemoved`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onRemoved)
   - [`onUpdated`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onUpdated)
   - `colorCode` y `iconUrl` en [`contextualIdentitities.ContextualIdentity`](/es/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity)
 
 - [`devtools.panels`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
-
   - [`devtools.panels.ElementsPanel.createSidebarPane()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane)
 
 - [`downloads`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads)
-
   - opción `incognito` en [`downloads.download()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download)
   - propiedad `estimatedEndTime` en [`downloads.DownloadItem`](/es/docs/Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem)
 
 - [`find`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find)
-
   - [`find()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/find)
   - [`highlightResults()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/highlightResults)
   - [`removeHighlighting()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting)
 
 - [`pageAction.openPopup()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/openPopup)
 - [`privacy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
-
   - [`websites.trackingProtectionMode`](/es/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)
 
 - [`proxy`](/es/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
-
   - `FindProxyForURL()` puede devolver un objeto ahora
 
 - [`runtime`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime)
-
   - [`runtime.openOptionsPage()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) funciona en Android
 
 - [`sessions`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions)
-
   - [`setTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/setTabValue)
   - [`getTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue)
   - [`removeTabValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue)
@@ -200,38 +184,31 @@ Se añadieron o ampliaron las API siguientes:
   - [`removeWindowValue()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue)
 
 - [`sidebarAction`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction)
-
   - [`sidebarAction.open()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/sidebarAction/open)
 
 - [`storage`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage)
-
   - [`storage.managed`](/es/docs/Mozilla/Add-ons/WebExtensions/API/storage/managed)
 
 - [`tabs`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs)
-
   - opción `loadReplace` en [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
   - propiedad `discarded` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.onUpdated`](/es/docs/Web) y [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query)
   - [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create) puede abrir URL con «view-source:»
   - propiedad `openerTabId` en [`tabs.Tab`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab), [`tabs.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/create), [`tabs.query()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) y [`tabs.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/tabs/update)
 
 - [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme)
-
   - `colors.toolbar`
   - `colors.toolbar_field`
   - `colors.toolbar_field_text`
   - `colors.toolbar_text`
 
 - [`theme`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme)
-
   - opción `windowId` para [`theme.update()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
 
 - [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
-
   - [`filterResponseData()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData)
   - propiedad `proxyInfo` en sucesos [`webRequest`](/es/docs/Mozilla/Add-ons/WebExtensions/API/webRequest)
 
 - [`windows`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows)
-
   - opción `allowScriptsToClose` en [`windows.create()`](/es/docs/Mozilla/Add-ons/WebExtensions/API/windows/create)
 
 ## Versiones anteriores

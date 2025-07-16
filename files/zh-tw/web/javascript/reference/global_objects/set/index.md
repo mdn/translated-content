@@ -3,8 +3,6 @@ title: Set
 slug: Web/JavaScript/Reference/Global_Objects/Set
 ---
 
-{{JSRef}}
-
 **`Set`** 物件可讓你儲存任何類型的唯一值（unique），不論是{{Glossary("Primitive", "基本型別（primitive）值")}}或物件參考（references）。
 
 {{InteractiveExample("JavaScript Demo: Set.prototype Constructor")}}
@@ -82,7 +80,6 @@ All `Set` instances inherit from {{jsxref("Set.prototype")}}.
 - {{jsxref("Set.prototype.keys()")}}
   - : An alias for {{jsxref("Set.prototype.values()")}}.
 - {{jsxref("Set.prototype.entries()")}}
-
   - : Returns a new iterator object that contains **an array of `[value, value]`** for each element in the `Set` object, in insertion order.
 
     This is similar to the {{jsxref("Map")}} object, so that each entry's _key_ is the same as its _value_ for a `Set`.

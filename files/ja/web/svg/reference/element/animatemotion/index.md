@@ -1,15 +1,16 @@
 ---
-title: animateMotion
+title: <animateMotion>
 slug: Web/SVG/Reference/Element/animateMotion
-original_slug: Web/SVG/Element/animateMotion
+l10n:
+  sourceCommit: 34c204f8f6c3f7ac60ebb23fca9798680aee9956
 ---
 
-{{SVGRef}}
-
-SVG の **`<animateMotion>`** 要素は、ある要素がモーションパスに沿って移動する方法を定義します。
+**`<animateMotion>`** は [SVG](/ja/docs/Web/SVG) の要素で、ある要素がモーションパスに沿って移動する方法を定義します。
 
 > [!NOTE]
 > 既存のパスを再利用するには、 `<animateMotion>` 要素内の {{SVGElement("mpath")}} 要素を {{SVGAttr("path")}} 属性の代わりに使用する必要があります。
+
+## 例
 
 ```css hidden
 html,
@@ -38,9 +39,9 @@ svg {
 </svg>
 ```
 
-{{EmbedLiveSample('Exemple', 150, '100%')}}
+{{EmbedLiveSample('Example', 150, '100%')}}
 
-## 使用場面
+## 使用コンテキスト
 
 {{svginfo}}
 
@@ -48,13 +49,13 @@ svg {
 
 - {{SVGAttr("keyPoints")}}
   - : この属性は \[0,1] の範囲で、それぞれの {{SVGAttr("keyTimes")}} に関連付けられた値に対して、パスに沿ってオブジェクトがどのくらいの距離にあるかを示します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)\*; _Default value_: none; _Animatable_: **no**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)\*; _既定値_: none; _アニメーション_: **不可**
 - {{SVGAttr("path")}}
   - : この属性は、 {{SVGAttr('d')}} 属性と同じ構文を使用して、モーションパスを定義します。
-    _値の型_: **\<string>**; _Default value_: none; _Animatable_: **no**
+    _値の型_: **\<string>**; _既定値_: none; _アニメーション_: **不可**
 - {{SVGAttr("rotate")}}
   - : この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。
-    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number)|`auto`|`auto-reverse`; _Default value_: `0`; _Animatable_: **no**
+    _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) | `auto` | `auto-reverse`; _既定値_: `0`; _アニメーション_: **不可**
 
 > **メモ:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
 
@@ -67,16 +68,7 @@ svg {
 - [他のアニメーション属性](/ja/docs/Web/SVG/Reference/Attribute#animation_attributes)
   - : 特に重要なもの: {{SVGAttr("attributeName")}}, {{SVGAttr("additive")}}, {{SVGAttr("accumulate")}}
 - [アニメーションイベント属性](/ja/docs/Web/SVG/Reference/Attribute#アニメーションイベント属性)
-  - : 特に重要なもの: {{SVGAttr("onbegin")}}, {{SVGAttr("onend")}}, {{SVGAttr("onrepeat")}}
-
-### グローバル属性
-
-- [コア属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : 特に重要なもの: {{SVGAttr('id')}}
-- [スタイル付け属性](/ja/docs/Web/SVG/Reference/Attribute)
-  - : {{SVGAttr('class')}}, {{SVGAttr('style')}}
-- イベント属性
-  - : [グローバルイベント属性](/ja/docs/Web/SVG/Reference/Attribute#グローバルイベント属性), [文書要素イベント属性](/ja/docs/Web/SVG/Reference/Attribute#文書要素イベント属性)
+  - : 特に重要なもの: `onbegin`, `onend`, `onrepeat`
 
 ## 使用上の注意
 

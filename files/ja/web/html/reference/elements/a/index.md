@@ -1,9 +1,8 @@
 ---
 title: "<a>: アンカー要素"
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -12,7 +11,7 @@ l10n:
 
 `<a>` の内容は、リンク先を示すもの**であるべきです**。`href` 属性が存在する場合、`<a>` 要素にフォーカスがある状態で Enter キーを押すと起動します。
 
-{{InteractiveExample("HTML Demo: &lt;a&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;a&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>You can reach Michael at:</p>
@@ -35,13 +34,11 @@ li {
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
 - `attributionsrc` {{experimental_inline}}
-
   - : ブラウザーが {{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを送信することを指定します。サーバー側では、これはレスポンスで {{httpheader("Attribution-Reporting-Register-Source")}} ヘッダーの送信を開始し、[ナビゲーションベースのアトリビューションソース](/ja/docs/Web/API/Attribution_Reporting_API/Registering_sources#navigation-based_attribution_sources)を登録するために使用します。
 
     ブラウザーは、ユーザーがリンクをクリックすると、ナビゲーションベースのアトリビューションソース（{{httpheader("Attribution-Reporting-Register-Source")}} レスポンスヘッダーで指定された）に関連付けられたソースデータを格納されます。詳細は[アトリビューション報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
     この属性には設定することができる 2 つのバージョンがあります：
-
     - 論理値、つまり `attributionsrc` の名前だけです。これは、{{httpheader("Attribution-Reporting-Eligible")}} ヘッダーを、`href` 属性がこの点を指すのと同じサーバーに送ることを指定します。同じサーバーでアトリビューションソースの登録を処理している場合は、これで問題ありません。
     - 1 つ以上の URL を格納する値。例えば、以下のようなものです。
 
@@ -58,11 +55,8 @@ li {
     `<a>` 要素はアトリビューショントリガーとして使用することはできず、ソースとしてのみです。
 
 - `download`
-
   - : ブラウザーがリンクされた URL をダウンロードとして扱うようにします。`filename` 値があってもなくても構いません。
-
     - 値がない場合は、ブラウザーは様々なソースから生成されたファイル名/拡張子を提案します。
-
       - HTTP の {{HTTPHeader("Content-Disposition")}} ヘッダー
       - URL の[パス](/ja/docs/Web/API/URL/pathname)の最後の部分
       - {{Glossary("MIME_type", "メディア種別")}}（{{HTTPHeader("Content-Type")}} ヘッダー、 [`data:` URL](/ja/docs/Web/URI/Reference/Schemes/data) の先頭、 [`blob:` URL](/ja/docs/Web/API/URL/createObjectURL_static) の {{domxref("Blob.type")}} から）
@@ -78,9 +72,7 @@ li {
     >   - ヘッダーが `inline` の処分を指定している場合、 Chrome や Firefox 82 以降のバージョンでは、属性を優先してダウンロードとして扱います。Firefox の（82 以前の）古い版では、ヘッダーが優先され、コンテンツがインラインで表示されます。
 
 - `href`
-
   - : ハイパーリンクが指す先の URL です。リンクは HTTP ベースの URL に限定されません。ブラウザーが対応するあらゆるプロトコルを使用することができます。
-
     - 電話番号を示す `tel:` URL
     - メールアドレスを示す `mailto:` URL
     - SMS テキストメッセージを示す `sms:` URL
@@ -88,7 +80,6 @@ li {
     - ウェブブラウザーがその他の URL スキームに対応していない可能性がある場合、ウェブサイトは [`registerProtocolHandler()`](/ja/docs/Web/API/Navigator/registerProtocolHandler) を使用することができます。
 
     他にも、次のようにして URL 機能でリソースの特定の部分を記載することができます。
-
     - ページの節を示すフラグメント URL
     - [テキストフラグメント](/ja/docs/Web/URI/Reference/Fragment/Text_fragments)で指定されたテキストの部分
     - メディアファイルの一部を示すメディアフラグメント
@@ -98,9 +89,7 @@ li {
 - `ping`
   - : 空白で区切られた URL のリストです。リンクをたどるとき、ブラウザーは {{HTTPMethod("POST")}} リクエストを指定された URL に、 `PING` を本文として送信します。通常、トラッキングに使用されます。
 - `referrerpolicy`
-
   - : リンクをたどるときにどれだけの[リファラー](/ja/docs/Web/HTTP/Reference/Headers/Referer)を送信するかです。
-
     - `no-referrer`: {{HTTPHeader("Referer")}} ヘッダーは送信されません。
     - `no-referrer-when-downgrade`: {{HTTPHeader("Referer")}} ヘッダーは{{Glossary("origin", "オリジン")}}に {{Glossary("TLS")}} ({{Glossary("HTTPS")}}) がない場合は送信されません。
     - `origin`: 送信されるリファラーは、参照元ページのオリジンのみに限定されます。すなわち[スキーム](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL)、{{Glossary("host", "ホスト名")}}、{{Glossary("port", "ポート番号")}}です。
@@ -113,9 +102,7 @@ li {
 - [`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel)
   - : リンク先の URL との関係を示す、空白で区切られたリンク種別のリストです。
 - `target`
-
   - : リンク先の URL を表示する場所、_閲覧コンテキスト_（タブ、ウィンドウ、{{HTMLElement("iframe")}}）の名前で指定します。以下のキーワードは URL の読み込み先について特別な意味を持ちます。
-
     - `_self`: 現在の閲覧コンテキストです。（既定値）
     - `_blank`: ふつうは新しいタブですが、新しいウィンドウを使用するようにブラウザーを設定できます。
     - `_parent`: 現在の親の閲覧コンテキストです。親がない場合は、 `_self` と同じ振る舞いをします。
@@ -130,7 +117,6 @@ li {
 ### 非推奨の属性
 
 - `charset` {{Deprecated_Inline}}
-
   - : リンク先 URL の{{Glossary("character encoding", "文字エンコーディング")}}のヒントでした。
 
     > [!NOTE]
@@ -139,7 +125,6 @@ li {
 - `coords` {{Deprecated_Inline}}
   - : [`shape` 属性](#shape)とともに使用されます。カンマ区切りの座標のリストです。
 - `name` {{Deprecated_Inline}}
-
   - : ページ内のリンク先の場所を定義するアンカーで必要でした。 HTML 4.01 では、値がまったく同じであれば `id` 属性と `name` 属性を `<a>` 要素内で同時に使用できました。
 
     > [!NOTE]
@@ -148,7 +133,6 @@ li {
 - `rev` {{Deprecated_Inline}}
   - : この属性は、逆方向のリンクを指定します。 [`rel` 属性](#rel)と逆の関係を定義していました。これはとても紛らわしいため、非推奨になりました。
 - `shape` {{Deprecated_Inline}}
-
   - : イメージマップ内のハイパーリンクの領域の形状です。
 
     > [!NOTE]
@@ -214,22 +198,31 @@ li {
 
 #### HTML 以外のリソースへのリンク
 
-```html
-<a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
-```
-
-リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を確実に入れてください。
+リンクの動作を示すためにアイコンを使用する場合は、 [`alt` テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を確実に入れてください。アイコンがない場合でも、 `alt` 属性のコンテンツによってリンクの動作が伝わりまます。
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(新しいタブで開く)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 年次レポート
-  <img alt="(PowerPoint ファイル)" src="ppt-icon.svg" />
-</a>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(新しいタブで開く)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="powerpoint.svg" width="14" alt="(PowerPoint ファイル)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="missing-icon.svg" width="14" alt="(新しいタブで開く)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="missing-icon.svg" width="14" alt="(PowerPoint ファイル)" />
+  </a>
+</p>
 ```
 
 ##### 結果
@@ -277,7 +270,7 @@ li {
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN WCAG を理解する、ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.4_—_ナビゲート可能_ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する)
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 大きさと近接性
@@ -321,7 +314,9 @@ li {
 ```html
 <a href="//example.com">スキーム相対 URL</a>
 <a href="/ja/docs/Web/HTML">オリジン相対 URL</a>
+<a href="p">ディレクトリー相対 URL</a>
 <a href="./p">ディレクトリー相対 URL</a>
+<a href="../p">親ディレクトリー相対 URL</a>
 ```
 
 ```css hidden
@@ -349,21 +344,21 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
 
 ### メールアドレスへのリンク
 
 メールプログラムを開いて新しいメッセージを送るようにするリンクを作成するには、 `mailto:` スキームを使用してください。
 
 ```html
-<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+<a href="mailto:nowhere@mozilla.org">nowhere へメールを送信</a>
 ```
 
 #### 結果
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-件名や本文を含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#メールのリンク)または {{RFC(6068)}} をご覧ください。
+件名や本文を含めるなど、`mailto:` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 
@@ -379,7 +374,7 @@ a {
 `tel:` リンクは端末の能力によって様々な動作をします。
 
 - 携帯電話ではその番号に自動ダイヤルします。
-- 多くのオペレーティングシステムには、Skype や FaceTime のように電話をかけるプログラムがあります。
+- 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
 - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
 - 他にも、連絡先の電話番号を保存したり、他の端末へ電話番号を送信したりする動作があります。
 
@@ -467,19 +462,19 @@ document
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、
         <a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >、知覚可能コンテンツ。
       </td>
@@ -488,16 +483,16 @@ document
       <th scope="row">許可されている内容</th>
       <td>
         <a
-          href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
           >、ただし子孫に
         <a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         > または
         <code>&lt;a&gt;</code> 要素がないもの、および
         <a
-          href="/ja/docs/Web/HTML/Global_attributes/tabindex"
+          href="/ja/docs/Web/HTML/Reference/Global_attributes/tabindex"
           >tabindex</a
         > 属性が指定された子孫がないもの。
       </td>
@@ -509,7 +504,7 @@ document
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素、ただし他の <code>&lt;a&gt;</code> 要素でないもの。
       </td>

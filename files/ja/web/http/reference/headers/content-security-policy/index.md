@@ -6,8 +6,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTTPSidebar}}
-
 HTTP の **`Content-Security-Policy`** レスポンスヘッダーは、ウェブサイト管理者が、あるページにユーザーエージェントが読み込みを許可されたリソースを管理できるようにします。いくつかの例外を除いて、大半のポリシーにはサーバーオリジンとスクリプトエンドポイントの指定を含んでいます。これは{{Glossary("cross-site scripting", "クロスサイトスクリプティング")}}攻撃を防ぐのに役立ちます。
 
 [コンテンツセキュリティポリシー (CSP)](/ja/docs/Web/HTTP/Guides/CSP) がブラウザーにどのように配信されるか、また、その外観や、用途、展開戦略など、詳細については、ガイドをご覧ください。
@@ -40,14 +38,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 フェッチディレクティブは、特定のリソース種別を読み込むことができる場所を制御します。
 
 - {{CSP("child-src")}}
-
   - : [ウェブワーカー](/ja/docs/Web/API/Web_Workers_API)と、{{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素によって読み込まれる入れ子の閲覧コンテキストのための有効なソースを定義します。
     `frame-src` および `worker-src` の[代替](#代替)となります。
 
 - {{CSP("connect-src")}}
   - : スクリプトインターフェイスによって読み込まれる URL を制限します。
 - {{CSP("default-src")}}
-
   - : 別の{{Glossary("Fetch directive", "フェッチディレクティブ")}}に対する代替として提供します。
 
     他のすべてのフェッチディレクティブの[代替](#代替)となります。
@@ -69,7 +65,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("prefetch-src")}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 事前にフェッチされるか描画される有効なソースを指定します。
 - {{CSP("script-src")}}
-
   - : JavaScript および WebAssembly のための有効なソースを指定します。
 
     `script-src-elem` および `script-src-attr` の[代替](#代替)となります。
@@ -79,13 +74,12 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("script-src-attr")}}
   - : JavaScript のインラインイベントハンドラーのための有効なソースを指定します。
 - {{CSP("style-src")}}
-
   - : スタイルシートのための有効なソースを指定します。
 
     `style-src-elem` および `style-src-attr` の[代替](#代替)となります。
 
 - {{CSP("style-src-elem")}}
-  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたものののための有効なソースを指定します。
+  - : スタイルシートの {{HTMLElement("style")}} および {{HTMLElement("link")}} 要素に `rel="stylesheet"` がついたもののための有効なソースを指定します。
 - {{CSP("style-src-attr")}}
   - : 個々の DOM 要素に適用されるインラインスタイルの有効なソースを指定します。
 - {{CSP("worker-src")}}
@@ -115,7 +109,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 - {{CSP("base-uri")}}
   - : 文書の {{HTMLElement("base")}} 要素で使用される URL を制限します。
 - {{CSP("sandbox")}}
-  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされあtリソースに対してサンドボックスを有効にします。
+  - : {{HTMLElement("iframe")}} と [`sandbox`](/ja/docs/Web/HTML/Reference/Elements/iframe#sandbox) 属性に類似した、リクエストされたリソースに対してサンドボックスを有効にします。
 
 ### ナビゲーションディレクティブ
 
@@ -131,9 +125,8 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 報告ディレクティブは CSP 違反の報告過程を制御します。 {{HTTPHeader("Content-Security-Policy-Report-Only")}} ヘッダーも参照してください。
 
 - {{CSP("report-to")}}
-
   - : CSP 違反情報を送信するための報告エンドポイントまたはエンドポイントグループを識別するトークンをブラウザーに提供します。
-    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーでで指定されている場合があります。
+    トークンが表すエンドポイントは、他にも {{HTTPHeader("Reporting-Endpoints")}} などの HTTP ヘッダーで指定されている場合があります。
 
     > [!WARNING]
     > このディレクティブは [`report-uri`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/report-uri) を置き換えることを意図しています。 `report-to` に対応したブラウザーでは、 `report-uri` ディレクティブは無視されます。
@@ -157,7 +150,6 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 ### 非推奨のディレクティブ
 
 - {{CSP("block-all-mixed-content")}} {{deprecated_inline}}
-
   - : ページが HTTPS を使用して読み込まれた際に、 HTTP を使用して資産を読み込むことを防止します。
 
 - {{CSP("report-uri")}} {{deprecated_inline}}
@@ -283,7 +275,7 @@ Content-Security-Policy: <policy-directive>; <policy-directive>
 既定では、 CSP に `default-src` または `script-src` ディレクティブが含まれている場合、インライン JavaScript の実行は許可されません。これには以下が含まれます。
 
 - インラインの `<script>` タグ
-- インタ印のイベントハンドラー属性
+- インラインのイベントハンドラー属性
 - `javascript:` URL
 
 同様に、 CSP で `default-src` または `style-src` ディレクティブを記載している場合、インライン CSS は読み込まれません。

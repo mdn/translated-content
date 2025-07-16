@@ -357,7 +357,7 @@ imgThumb.onblur = hideImg;
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript/Test_your_skills:_CSS_and_JavaScript_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: CSS と JavaScript のアクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/CSS_and_JavaScript) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## まとめ
 

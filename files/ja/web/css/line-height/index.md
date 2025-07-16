@@ -2,14 +2,14 @@
 title: line-height
 slug: Web/CSS/line-height
 l10n:
-  sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
+  sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---
 
 {{CSSRef}}
 
-**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
+**`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Glossary/Replaced_elements)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
 
-{{InteractiveExample("CSS Demo: line-height")}}
+{{InteractiveExample("CSS デモ: line-height")}}
 
 ```css interactive-example-choice
 line-height: normal;
@@ -85,7 +85,7 @@ line-height: unset;
 - `<number>` (単位なし)
   - : 使用値は、この単位のない {{cssxref("&lt;number&gt;")}} に要素のフォントサイズを掛けたものになります。計算値は、指定された `<number>` と同じです。ほとんどの場合、継承時の予期しない結果を避けるために、これが `line-height` を設定する**好ましい方法です**。
 - `<length>`
-  - : 行ボックスの高さの計算に、指定した {{cssxref("&lt;length&gt;")}} が使われます。**em** の単位で値が与えられると予期しない結果をになることがあります (下記の例を参照してください)。
+  - : 行ボックスの高さの計算に、指定した {{cssxref("&lt;length&gt;")}} が使われます。**em** の単位で値が与えられると予期しない結果になることがあります (下記の例を参照してください)。
 - `<percentage>`
   - : 要素自身のフォントサイズに対する相対値です。計算値はこの {{cssxref("&lt;percentage&gt;")}} に要素のフォントサイズの計算値を掛けたものです。**パーセント値**は予期しない結果を生む可能性があります (下記の第 2 の例を参照してください)。
 
@@ -239,3 +239,4 @@ h1 {
 ## 関連情報
 
 - {{Cssxref("font")}}, {{Cssxref("font-size")}}
+- {{glossary("Leading", "行送り")}}

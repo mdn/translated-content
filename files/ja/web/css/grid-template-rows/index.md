@@ -9,7 +9,7 @@ l10n:
 
 **`grid-template-rows`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("grid_row", "グリッド行")}}の線名とトラックのサイズ変更機能を定義します。
 
-{{InteractiveExample("CSS Demo: grid-template-rows")}}
+{{InteractiveExample("CSS デモ: grid-template-rows")}}
 
 ```css interactive-example-choice
 grid-template-rows: auto;
@@ -118,7 +118,6 @@ grid-template-rows: unset;
 - {{cssxref("minmax", "minmax(min, max)")}}
   - : _min_ 以上、 _max_ 以下の寸法の範囲を定義する関数表記法です。 _max_ が _min_ より小さい場合、 _max_ は無視され、関数は _min_ として扱われます。最大値として、 `<flex>` 値はトラックのフレックス係数を設定します。最小値としては無効です。
 - `auto`
-
   - : 最大値であれば max-content と同一のキーワードです。
 
     最小値の場合は、グリッドトラックを占めるグリッドアイテムの最大の最小寸法 ({{cssxref("min-width")}}/{{cssxref("min-height")}} で指定されたもの) を表します。ふつうは {{cssxref("min-content")}} ですが、必ずそうとは限りません。

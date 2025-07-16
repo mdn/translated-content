@@ -3,8 +3,6 @@ title: Firefox 54 for developers
 slug: Mozilla/Firefox/Releases/54
 ---
 
-{{FirefoxSidebar}}
-
 Firefox 54 は、米国時間 2017 年 6 月 13 日にリリースされました。このページでは、開発者に影響する Firefox 54 の変更点をまとめています。
 
 ## ウェブ開発者向けの変更点一覧
@@ -49,7 +47,6 @@ Firefox 54 は、米国時間 2017 年 6 月 13 日にリリースされまし�
 - {{domxref("Client.type")}} プロパティを実装しました ([Firefox バグ 1339844](https://bugzil.la/1339844))。
 - {{domxref("Clients.matchAll()")}} が {{domxref("Client")}} オブジェクトを、直近に注視した順序で返すようになりました ([Firefox バグ 1266747](https://bugzil.la/1266747))。
 - 新しいインスタンスを生成するために {{domxref("Request.Request","Request()")}} へ既存の {{domxref("Request")}} オブジェクトが渡されたときに見られる動作を、若干変更しました。以下の新たな動作は例外を発生しにくくするとともに、セキュリティを維持するように設計しました:
-
   - コンストラクターを呼び出すオリジンとは別のオリジンにこのオブジェクトが存在する場合は、{{domxref("Request.referrer")}} を削除します。
   - このオブジェクトの {{domxref("Request.mode")}} が `navigate` である場合は、`mode` の値を `same-origin` に変換します。
 
