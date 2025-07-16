@@ -2,12 +2,10 @@
 title: radial-gradient()
 slug: Web/CSS/gradient/radial-gradient
 l10n:
-  sourceCommit: 695fd71c2c147dc2df123be0bfcf20bb687d76ba
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
+**`radial-gradient()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 2 つ以上の色の連続的な推移が原点から放射状に広がる画像を生成します。形状は円形または楕円形になります。関数の結果は {{cssxref("&lt;gradient&gt;")}} データ型のオブジェクトであり、これは {{cssxref("&lt;image&gt;")}} の特殊形です。
 
 {{InteractiveExample("CSS デモ: radial-gradient()")}}
 
@@ -44,6 +42,9 @@ background:
 ## 構文
 
 ```css
+/* 赤の単一色によるグラデーション */
+radial-gradient(red)
+
 /* コンテナーの中央にあるグラデーション、
    赤で始まり、青へ変わり、緑で終わる */
 radial-gradient(circle at center, red 0, blue, green 100%)
@@ -52,7 +53,7 @@ radial-gradient(circle at center, red 0, blue, green 100%)
 radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 ```
 
-放射グラデーションは、グラデーションの中心（0％ の楕円の位置）と、_末端図形_ （100％ の楕円）の大きさと形状を示すことで指定します。
+放射グラデーションは、グラデーションの中心（0% の楕円の位置）と、末端図形（100% の楕円）の大きさと形状を示すことで指定します。
 
 ## 値
 
@@ -107,41 +108,41 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 
 ## 例
 
-### シンプルなグラデーション
+### 基本的なグラデーション
 
-```html hidden live-sample___simple_gradient
+```html hidden
 <div class="radial-gradient"></div>
 ```
 
-```css hidden live-sample___simple_gradient
+```css hidden
 .radial-gradient {
   width: 240px;
   height: 120px;
 }
 ```
 
-```css live-sample___simple_gradient
+```css
 .radial-gradient {
   background-image: radial-gradient(cyan 0%, transparent 20%, salmon 40%);
 }
 ```
 
-{{EmbedLiveSample('Simple_gradient', 120, 120)}}
+{{EmbedLiveSample('基本的なグラデーション', 120, 120)}}
 
 ### 中央がずれたグラデーション
 
-```html hidden live-sample___non-centered_gradient
+```html hidden
 <div class="radial-gradient"></div>
 ```
 
-```css hidden live-sample___non-centered_gradient
+```css hidden
 .radial-gradient {
   width: 240px;
   height: 120px;
 }
 ```
 
-```css live-sample___non-centered_gradient
+```css
 .radial-gradient {
   background-image: radial-gradient(
     farthest-corner at 40px 40px,
@@ -151,16 +152,16 @@ radial-gradient(circle at center in hsl longer hue, red 0, blue, green 100%)
 }
 ```
 
-{{EmbedLiveSample('Non-centered_gradient', 240, 120)}}
+{{EmbedLiveSample('中央がずれたグラデーション', 240, 120)}}
 
 ### 色相の補間
 
-```html hidden live-sample___interpolating_with_hue
+```html hidden
 <div class="shorter"></div>
 <div class="longer"></div>
 ```
 
-```css hidden live-sample___interpolating_with_hue
+```css hidden
 div {
   display: inline-block;
   margin-top: 1rem;
@@ -183,7 +184,7 @@ div {
 
 この補間処理の例では、 [hsl](/ja/docs/Web/CSS/color_value/hsl) 色系を使用して、[色相](/ja/docs/Web/CSS/hue)を補間しています。
 
-```css live-sample___interpolating_with_hue
+```css
 .shorter {
   background-image: radial-gradient(
     circle at center in hsl shorter hue,
@@ -203,7 +204,7 @@ div {
 
 左のボックスは、 [shorter の補間](/ja/docs/Web/CSS/hue-interpolation-method#shorter)を使用しており、[色相環](/ja/docs/Glossary/Color_wheel)の短い方の弧を使用して、色が赤から青に直接変化しているということになります。右のボックスは、 [longer の補間](/ja/docs/Web/CSS/hue-interpolation-method#longer)を使用しており、色が赤から青に変化する際に、緑、黄、オレンジを通って変化しているということになります。
 
-{{EmbedLiveSample("Interpolating with hue", 240, 200)}}
+{{EmbedLiveSample("色相の補間", 240, 200)}}
 
 ### 他の radial-gradient の例
 
