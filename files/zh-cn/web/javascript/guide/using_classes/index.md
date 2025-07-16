@@ -3,7 +3,7 @@ title: 使用类
 slug: Web/JavaScript/Guide/Using_classes
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
+{{PreviousNext("Web/JavaScript/Guide/Working_with_objects", "Web/JavaScript/Guide/Using_promises")}}
 
 JavaScript 是一个基于原型的语言——一个对象的行为取决于它自身的属性及其原型的属性。对[类](/zh-CN/docs/Web/JavaScript/Reference/Classes)来说，相较于与其他面向对象的语言，譬如 Java，创建对象的多层级结构及其属性的继承关系需要更多的代码行。本节，我们将展示如何利用类创建实例。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb85334ffa4a2c88d209b1074909bee0e0abd57a
 ---
 
-{{jsSidebar("Statements")}}
-
 **`if...else`** 语句会在指定的条件为{{Glossary("truthy", "真")}}时执行一个语句。如果条件为{{Glossary("falsy", "假")}}，则会执行可选的 `else` 子句中的另一个语句。
 
 {{InteractiveExample("JavaScript Demo: Statement - If...Else")}}

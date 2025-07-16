@@ -3,8 +3,6 @@ title: 解構
 slug: Web/JavaScript/Reference/Operators/Destructuring
 ---
 
-{{jsSidebar("Operators")}}
-
 **解構**（destructuring）語法是一種 JavaScript 運算式，可以把陣列或物件中的資料解開擷取成為獨立變數。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Destructuring", "taller")}}

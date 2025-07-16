@@ -3,8 +3,6 @@ title: 函数表达式
 slug: Web/JavaScript/Reference/Operators/function
 ---
 
-{{jsSidebar("Operators")}}
-
 **`function`** 关键字可以用来在一个表达式中定义一个函数。
 
 你也可以使用 [`Function`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Function) 构造函数和一个[函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/function)来定义函数。

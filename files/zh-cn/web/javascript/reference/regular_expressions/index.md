@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar}}
-
 **正则表达式**（简称 _regex_）允许开发人员根据模式匹配字符串、提取子匹配信息，或简单地测试字符串是否符合该模式。正则表达式在许多编程语言中都有使用，JavaScript 的语法受 [Perl](https://www.perl.org/) 的启发。
 
 我们建议你阅读[正则表达式指南](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions)，以全面了解可用的正则表达式语法及其工作原理。

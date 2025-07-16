@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 145e8c316fcdd8f67f3595fc52b0bbfacf7b949d
 ---
 
-{{jsSidebar("Operators")}}
+
 
 **幂赋值**（**`**=`**）对两个操作数执行[幂运算](/zh-CN/docs/Web/JavaScript/Reference/Operators/Exponentiation)，并将结果赋给左操作数。
 

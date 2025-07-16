@@ -84,10 +84,3 @@ btn.addEventListener(
 ```js
 controller.abort(); // 移除与此控制器关联的任何/所有事件处理器
 ```
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
-    <li><a href="/zh-CN/docs/Web/Events">事件参考</a></li>
-  </ol>
-</section>

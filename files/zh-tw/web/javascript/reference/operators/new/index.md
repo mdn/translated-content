@@ -3,8 +3,6 @@ title: 建構子函數的使用
 slug: Web/JavaScript/Reference/Operators/new
 ---
 
-{{jsSidebar("Operators")}}
-
 還有一個選擇，你可以按照這兩個步驟來建立物件︰
 
 1. 編寫建構子函數以完成物件類型的定義。

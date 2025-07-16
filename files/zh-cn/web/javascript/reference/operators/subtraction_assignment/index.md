@@ -3,8 +3,6 @@ title: 减法赋值（-=）
 slug: Web/JavaScript/Reference/Operators/Subtraction_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 **减法赋值**（**`-=`**）运算符从变量中减去右操作数的值，并将结果赋值给该变量。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Subtraction assignment operator")}}

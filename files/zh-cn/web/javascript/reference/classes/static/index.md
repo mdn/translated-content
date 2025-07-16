@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 41cddfdaeed4a73fb8234c332150df8e54df31e9
 ---
 
-{{jsSidebar("Classes")}}
-
 **`static`** 关键字定义了[静态方法或字段](/zh-CN/docs/Web/JavaScript/Reference/Classes#静态方法和字段)，或[静态初始化块](/zh-CN/docs/Web/JavaScript/Reference/Classes/Static_initialization_blocks)（有关这种用法的更多信息，请参阅链接）。静态属性不能在类的实例上直接访问。相反，它们是在类本身上被访问的。
 
 静态方法通常是实用函数，如创建或克隆对象的函数，而静态属性则适用于缓存、固定配置或其他不需要跨实例复制的数据。

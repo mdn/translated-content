@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eb7cf694c19b31ee8826f22eaac6c12e808b1e50
 ---
 
-{{jsSidebar("Operators")}}
-
 **`import()`** 语法（通常被称为*动态导入*）是一种允许异步和动态地将 ECMAScript 模块加载到一个潜在的非模块环境中的类函数表达式。
 
 跟[与之对应的声明式风格](/zh-CN/docs/Web/JavaScript/Reference/Statements/import)不同，动态导入只有在被需要时才会求值，并提供了更强大的语法灵活性。

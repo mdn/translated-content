@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
 ---
 
-{{jsSidebar("Errors")}}
-
 当 [`return`](/zh-CN/docs/Web/JavaScript/Reference/Statements/return) 语句在[函数](/zh-CN/docs/Web/JavaScript/Guide/Functions)外部被调用时，JavaScript 会抛出“return not in function”异常。
 
 ## 错误信息

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3ae834dd1eaba420c78d36c903bf178cdd5fbb7a
 ---
 
-{{JsSidebar("Classes")}}
-
 **私有元素**是常规的类的公有属性（包括[类字段](/zh-CN/docs/Web/JavaScript/Reference/Classes/Public_class_fields)、类方法等）的对应。私有元素通过添加 `#` 前缀来创建，在类的外部无法合法地引用。这些类属性的私有封装由 JavaScript 本身强制执行。
 
 在这种语法出现之前，JavaScript 语言本身并没有原生支持私有元素。在原型继承中，可以通过使用 [`WeakMap`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/WeakMap#模拟私有成员) 对象或者[闭包](/zh-CN/docs/Web/JavaScript/Guide/Closures#用闭包模拟私有方法)的方式来模拟私有元素的行为，但就易用性而言，它们无法与 `#` 语法相提并论。

@@ -3,8 +3,6 @@ title: for 語法
 slug: Web/JavaScript/Reference/Statements/for
 ---
 
-{{jsSidebar("Statements")}}
-
 `for` 循環反覆執行直到指定的條件的求值為 false 為止。JavaScript 的 for 循環和 Java 和 C 的 for 循環很類似。`for` 語法如下︰
 
 ```js

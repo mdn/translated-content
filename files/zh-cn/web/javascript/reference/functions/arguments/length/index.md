@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Functions")}}
-
 **`arguments.length`** 数据属性包含传递给函数的参数数量。
 
 ## 值

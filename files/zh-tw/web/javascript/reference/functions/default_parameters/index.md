@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
-{{jsSidebar("Functions")}}
-
 **函式預設參數**允許沒有傳入值或是傳入值為 `undefined` 的情況下，參數能以指定的預設值初始化。
 
 {{InteractiveExample("JavaScript Demo: Default parameters")}}

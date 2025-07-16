@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`async function*`** 声明创建一个{{Glossary("binding", "绑定")}}到给定名称的新异步生成器函数。
 
 你也可以使用 [`async function*` 表达式](/zh-CN/docs/Web/JavaScript/Reference/Operators/async_function*)来定义异步生成器函数。

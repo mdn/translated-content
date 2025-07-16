@@ -3,8 +3,6 @@ title: export
 slug: Web/JavaScript/Reference/Statements/export
 ---
 
-{{jsSidebar("Statements")}}
-
 用 **export** 可以指派函式、物件或變數，透過 {{jsxref("Statements/import", "import")}} 宣告給外部檔案引用。
 
 導出的模塊都會處於{{jsxref("Strict_mode","嚴謹模式")}}，無論是否有所宣告。導出宣告無法使用嵌入式腳本（embedded script）。

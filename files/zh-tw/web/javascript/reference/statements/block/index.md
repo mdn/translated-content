@@ -3,8 +3,6 @@ title: 區塊
 slug: Web/JavaScript/Reference/Statements/block
 ---
 
-{{jsSidebar("Statements")}}
-
 ## 總覽
 
 區塊陳述用來組合零個或多個陳述。我們使用一對大括號 { } 以界定區塊。

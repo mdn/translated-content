@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d71da812ee94c20658cb1916a123a42254ea545c
 ---
 
-{{jsSidebar("JavaScript Guide")}} {{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
+{{PreviousNext("Web/JavaScript/Guide", "Web/JavaScript/Guide/Grammar_and_types")}}
 
 本章介绍了 JavaScript，并且讨论了它的一些基本概念。
 

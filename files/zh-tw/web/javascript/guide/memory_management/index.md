@@ -3,8 +3,6 @@ title: 記憶體管理
 slug: Web/JavaScript/Guide/Memory_management
 ---
 
-{{JsSidebar("Advanced")}}
-
 ## 介紹
 
 像 C 語言一樣低階的語言，都有著如 malloc() 跟 free() 的低階函式記憶體控管權限。另一方面，當 JavaScript 建立事物(如物件、字串等)時會分配空間給值且自動釋放不再使用的值。後者的流程稱作為回收機制。這個自動化的回收流程是一個混亂的根源，它會使 JavaScript 的開發者 (或者其他高階語言的開發者) 產生可以不須理會「記憶體管理」的錯誤認知。

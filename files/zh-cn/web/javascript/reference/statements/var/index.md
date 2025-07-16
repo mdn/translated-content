@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4f86aad2b0b66c0d2041354ec81400c574ab56ca
 ---
 
-{{jsSidebar("Statements")}}
-
 **`var` 语句**用于声明一个函数作用域或全局作用域的变量，并且可以选择将其初始化为一个值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Var")}}

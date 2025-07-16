@@ -3,8 +3,6 @@ title: 小于（<）
 slug: Web/JavaScript/Reference/Operators/Less_than
 ---
 
-{{jsSidebar("Operators")}}
-
 **小于**（`<`）运算符在左操作数比右操作数小时返回 `true`，否则返回 `false`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Less than operator")}}

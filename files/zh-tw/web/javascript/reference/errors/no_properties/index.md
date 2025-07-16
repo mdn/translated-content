@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8cf6d8c10adf3ce5370f8a3f180bec11112d4d44
 ---
 
-{{jsSidebar("Errors")}}
-
 當你嘗試存取 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 和 {{jsxref("undefined")}} 的屬性時，會發生 JavaScript 的「null (or undefined) has no properties」例外，因為它們沒有任何屬性。
 
 ## 訊息

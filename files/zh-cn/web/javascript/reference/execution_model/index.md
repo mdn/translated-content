@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b4e6d1156e8471d38deeea1567c35ef412c5f42
 ---
 
-{{JsSidebar("Advanced")}}
-
 JavaScript 有一个基于**事件循环**的运行时模型，事件循环负责执行代码、收集和处理事件以及执行队列中的子任务。这个模型与其他语言中的模型截然不同，比如 C 和 Java。
 
 ## 运行时概念

@@ -5,10 +5,6 @@ l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
-
 开放的 Web 为开发者提供了巨大的机遇，为了充分利用这些技术，你需要知道如何使用它们。在下方你可以找到这些 Web 技术文档的链接。
 
 ## 面向 Web 开发者的文档

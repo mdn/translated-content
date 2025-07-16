@@ -3,8 +3,6 @@ title: 不相等（!=）
 slug: Web/JavaScript/Reference/Operators/Inequality
 ---
 
-{{jsSidebar("Operators")}}
-
 不相等运算符（`!=`）检查其两个操作数是否不相等，并返回布尔结果。与[严格不相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_inequality)运算符不同，它会转换并比较不同类型的操作数。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Inequality operator")}}
