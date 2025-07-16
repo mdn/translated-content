@@ -3,8 +3,6 @@ title: 'Error: Permission denied to access property "x"'
 slug: Web/JavaScript/Reference/Errors/Property_access_denied
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 消息
 
 ```plain
