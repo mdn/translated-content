@@ -3,7 +3,7 @@ title: :-moz-drag-over
 slug: Web/CSS/:-moz-drag-over
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`:-moz-drag-over`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)是一个 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)，用于在调用 {{domxref("HTMLElement/dragover_event", "dragover")}} 事件时匹配一个元素。
 

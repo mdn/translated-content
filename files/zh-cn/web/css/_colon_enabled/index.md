@@ -3,8 +3,6 @@ title: :enabled
 slug: Web/CSS/:enabled
 ---
 
-{{CSSRef}}
-
 **`:enabled`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任何已启用的元素。如果元素可以被激活（例如被选择、单击、输入文本等），或者能够获得焦点，那么它就是启用的。该元素还有一个被禁用的状态，在此状态下它无法被激活或接受焦点。
 
 {{InteractiveExample("CSS Demo: :enabled", "tabbed-standard")}}

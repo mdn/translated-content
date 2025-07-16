@@ -3,8 +3,6 @@ title: :indeterminate
 slug: Web/CSS/:indeterminate
 ---
 
-{{CSSRef}}
-
 **`:indeterminate`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示任意的状态不确定的表单元素，例如那些将 HTML [`indeterminate`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate) 属性设置为 `true` 的复选框，以及属于某个组且该组中所有单选按钮都未选中的单选按钮，还有不确定状态的 {{HTMLElement("progress")}} 元素。
 
 ```css
