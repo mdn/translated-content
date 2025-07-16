@@ -1,6 +1,8 @@
 ---
 title: mask-border-width
 slug: Web/CSS/mask-border-width
+l10n:
+  sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
 {{CSSRef}}
@@ -35,6 +37,7 @@ mask-border-width: 5% 2em 10% auto;
 mask-border-width: inherit;
 mask-border-width: initial;
 mask-border-width: revert;
+mask-border-width: revert-layer;
 mask-border-width: unset;
 ```
 
@@ -66,10 +69,12 @@ mask-border-width: unset;
 
 ### 基本的な使用
 
-このプロパティは、まだどこでも対応されていないようです。このプロパティが対応されるようになれば、境界マスクの幅を定義することになります。このプロパティを [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
+`mask-border-width` は、境界マスクの幅を定義します。このプロパティを [`mask-border-slice`](/ja/docs/Web/CSS/mask-border-slice) と異なる値に設定すると、スライスは境界マスクに合わせて拡大縮小されます。
 
 ```css
-mask-border-width: 30 fill;
+/* 最終的なマスクは幅 20px に縮小 */
+mask-border-slice: 30 fill;
+mask-border-width: 20px;
 ```
 
 Chromium ベースのブラウザーは、このプロパティの古い版 — `mask-box-image-width` — に接頭辞つきで対応しています。
@@ -78,7 +83,7 @@ Chromium ベースのブラウザーは、このプロパティの古い版 — 
 -webkit-mask-box-image-width: 20px;
 ```
 
-> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を (Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して) 挙げていますので、効果について分かるでしょう。
+> **メモ:** [`mask-border`](/ja/docs/Web/CSS/mask-border) ページでは動作する例を（Chromium で対応している古い接頭辞つきの境界マスクプロパティを使用して）挙げていますので、効果について分かるでしょう。
 
 ## 仕様書
 

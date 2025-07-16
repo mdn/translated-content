@@ -3,10 +3,8 @@ title: CSS 属性值处理
 short-title: 属性值处理
 slug: Web/CSS/CSS_cascade/Value_processing
 l10n:
-  sourceCommit: 0b8f00bb9ece33c6964eea886b2f7db8711d7b62
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 对于文档树中的每个元素，浏览器都会为适用于该元素的每个 CSS 属性赋值。特定元素或盒子的每个 CSS 属性的表现值都是基于样式表定义、继承、[层叠](/zh-CN/docs/Web/CSS/CSS_cascade/Cascade)、依赖关系、单位转换和显示环境的计算结果。本指南通过探讨指定值、计算值、应用值和实际值等关键概念，概述了用于定义每个 CSS 值最终如何表现的处理步骤。
 

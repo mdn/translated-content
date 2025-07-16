@@ -9,7 +9,7 @@ l10n:
 
 **`transition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("transition-property") }}、 {{ cssxref("transition-duration") }}、 {{ cssxref("transition-timing-function") }}、 {{ cssxref("transition-delay") }}、 {{ cssxref("transition-behavior") }} の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)です。
 
-{{InteractiveExample("CSS Demo: transition")}}
+{{InteractiveExample("CSS デモ: transition")}}
 
 ```css interactive-example-choice
 transition: margin-right 2s;

@@ -3,8 +3,6 @@ title: Set-Cookie
 slug: Web/HTTP/Headers/Set-Cookie
 ---
 
-{{HTTPSidebar}}
-
 **`Set-Cookie`** HTTP 응답 헤더는 서버에서 사용자 브라우저에 쿠키를 전송하기 위해 사용됩니다.
 
 자세한 정보를 보려면 [HTTP cookies](/ko/docs/Web/HTTP/Cookies)에 수록된 가이드를 읽으세요.

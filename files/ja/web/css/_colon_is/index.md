@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
 
-{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :is", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {

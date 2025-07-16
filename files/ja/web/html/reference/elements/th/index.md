@@ -10,7 +10,7 @@ l10n:
 
 **`<th>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のセルのグループ用の見出しであるセルを定義します。このグループの正確な性質は、[`scope`](#scope) 属性と [`headers`](#headers) 属性で定義します。
 
-{{InteractiveExample("HTML Demo: &lt;th&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;th&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

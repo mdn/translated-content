@@ -11,7 +11,7 @@ l10n:
 
 数多くの数値を書式化する場合は、 {{jsxref("Intl.NumberFormat")}} オブジェクトを作成して {{jsxref("Intl/NumberFormat/format", "format()")}} メソッドで提供される機能を使用してください。
 
-{{InteractiveExample("JavaScript Demo: Number.toLocaleString()")}}
+{{InteractiveExample("JavaScript デモ: Number.toLocaleString()")}}
 
 ```js interactive-example
 function eArabic(x) {
@@ -106,7 +106,7 @@ console.log(number.toLocaleString("ar-EG"));
 console.log(number.toLocaleString("en-IN"));
 // → 1,23,456.789
 
-// nu 拡張キーでは、漢数字などの計数法をリクエストする
+// nu 拡張キーでは、漢数字などの記数法をリクエストする
 console.log(number.toLocaleString("zh-Hans-CN-u-nu-hanidec"));
 // → 一二三,四五六.七八九
 

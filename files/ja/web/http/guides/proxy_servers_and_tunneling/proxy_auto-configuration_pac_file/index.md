@@ -4,8 +4,6 @@ slug: Web/HTTP/Guides/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_f
 original_slug: Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_PAC_file
 ---
 
-{{HTTPSidebar}}
-
 **プロキシー自動設定 (Proxy Auto-Configuration, PAC)** ファイルは、ウェブブラウザーのリクエスト (HTTP, HTTPS, FTP 等) を直接宛先に送るか、ウェブプロキシーサーバーに転送するか決める JavaScript の関数です。次の JavaScript 関数を PAC ファイル内に記述します。
 
 ```js

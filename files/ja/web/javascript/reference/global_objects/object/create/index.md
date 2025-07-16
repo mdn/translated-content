@@ -9,7 +9,7 @@ l10n:
 
 **`Object.create()`** 静的メソッドは、既存のオブジェクトを新しく生成されるオブジェクトのプロトタイプとして使用して、新しいオブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Object.create()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Object.create()", "taller")}}
 
 ```js interactive-example
 const person = {

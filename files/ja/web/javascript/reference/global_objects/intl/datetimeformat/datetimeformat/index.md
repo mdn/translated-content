@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat
 **`Intl.DateTimeFormat()`** コンストラクターは、言語に応じた日付と時刻の書式化を可能にする
 {{jsxref("Intl/DateTimeFormat", "Intl.DateTimeFormat")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat", "taller")}}
 
 ```js interactive-example
 const date = new Date(Date.UTC(2020, 11, 20, 3, 23, 16, 738));
@@ -83,7 +83,7 @@ new Intl.DateTimeFormat(locales, options);
         > - 多くのロケールでは幅の指定を無視して同じ文字列を使用します。
 
     - `numberingSystem`
-      - : 命数法です。有効な値は、 "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", " `knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", " `telu`", "`thai`", "`tibt`" です。
+      - : 記数法です。有効な値は、 "`arab`", "`arabext`", " `bali`", "`beng`", "`deva`", "`fullwide`", " `gujr`", "`guru`", "`hanidec`", "`khmr`", " `knda`", "`laoo`", "`latn`", "`limb`", "`mlym`", " `mong`", "`mymr`", "`orya`", "`tamldec`", " `telu`", "`thai`", "`tibt`" です。
     - `localeMatcher`
       - : 使用するロケール照合アルゴリズム。利用可能な値は "`lookup`" と "`best fit`" です。既定値は "`best fit`" です。このオプションについての詳細は、 {{jsxref("Global_Objects/Intl", "Intl", "#Locale_negotiation", 1)}} のページをご覧ください。
     - `timeZone`

@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Accept-Patch
 original_slug: Web/HTTP/Headers/Accept-Patch
 ---
 
-{{HTTPSidebar}}
-
 O cabeçalho de resposta HTTP **`Accept-Patch`** indica qual tipo de mídia o servidor está apto a entender.
 
 **`Accept-Patch`** na resposta de qualquer método significa que o PATCH é permitido no recurso identificado pela Request-URI. Dois casos comuns que levam a isso:

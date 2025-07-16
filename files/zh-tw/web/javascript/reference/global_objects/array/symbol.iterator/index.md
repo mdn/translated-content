@@ -3,8 +3,6 @@ title: Array.prototype[Symbol.iterator]()
 slug: Web/JavaScript/Reference/Global_Objects/Array/Symbol.iterator
 ---
 
-{{JSRef}}
-
 **`Symbol.iterator`** 屬性的初始值與 {{jsxref("Array.prototype.values()", "values()")}} 屬性的初始值為相同的的函式物件。
 
 ## 語法

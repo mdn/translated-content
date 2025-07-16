@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`101 Switching Protocols`** 응답 코드는 서버가 전환되는 프로토콜을 가리킵니다. 프로토콜은
 클라이언트로부터 받은 {{HTTPHeader("Upgrade")}} 헤더에 명시되어 있습니다.
 
