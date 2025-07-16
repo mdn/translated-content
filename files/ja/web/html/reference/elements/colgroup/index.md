@@ -10,7 +10,7 @@ l10n:
 
 **`<colgroup>`** は [HTML](/ja/docs/Web/HTML) の要素で、表内の列のグループを定義します。
 
-{{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;colgroup&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

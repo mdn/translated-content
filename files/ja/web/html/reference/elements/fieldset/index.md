@@ -10,7 +10,7 @@ l10n:
 
 **`<fieldset>`** は [HTML](/ja/docs/Web/HTML) の要素で、ウェブフォーム内のラベル ({{HTMLElement("label")}}) などのようにいくつかのコントロールをグループ化するために使用します。
 
-{{InteractiveExample("HTML Demo: &lt;fieldset&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;fieldset&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <form>

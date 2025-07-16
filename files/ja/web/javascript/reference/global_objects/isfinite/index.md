@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/isFinite
 
 グローバル関数 **`isFinite()`** は渡された値が有限数かどうかを判定します。必要に応じて、引数はまず数値へと変換されます。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - isFinite()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - isFinite()")}}
 
 ```js interactive-example
 function div(x) {

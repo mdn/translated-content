@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 16d3095f33bd0655b01098ce662e3014510fdef6
 ---
 
-{{GamesSidebar}}
-
 Une scène 3D dans un jeu, même la plus simple qui soit, contient des éléments standard comme des formes situées dans un système de coordonnées, une caméra pour les voir, des lumières et des matériaux pour améliorer son esthétique, des animations pour la rendre vivante, etc. **Three.js**, comme avec toute autre bibliothèque 3D, fournit des fonctions d'assistance intégrées pour vous aider à implémenter plus rapidement les fonctionnalités 3D courantes. Dans cet article, nous vous expliquerons les bases de l'utilisation de Three.js, notamment la configuration d'un environnement de développement, la structure du code HTML nécessaire, les objets fondamentaux de ThreeJS et la manière de créer une démonstration de base.
 
 > [!NOTE]

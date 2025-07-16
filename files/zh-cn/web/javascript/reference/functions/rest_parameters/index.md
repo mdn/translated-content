@@ -3,8 +3,6 @@ title: 剩余参数
 slug: Web/JavaScript/Reference/Functions/rest_parameters
 ---
 
-{{jsSidebar("Functions")}}
-
 **剩余参数**语法允许我们将一个不定数量的参数表示为一个数组。
 
 {{InteractiveExample("JavaScript Demo: Functions Rest Parameters")}}

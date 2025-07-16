@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/parseFloat
 
 **`parseFloat()`** 関数は、引数を (必要に応じてまず文字列に変換してから) 解釈し、浮動小数点値を返します。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - parseFloat()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - parseFloat()")}}
 
 ```js interactive-example
 function circumference(r) {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 21ed195dd72d2f11c0c7e0fdd0ed0aaf31068de1
 ---
 
-{{CSSRef}}
-
 [CSS 网格布局](/zh-CN/docs/Web/CSS/CSS_grid_layout)引入了二维网格布局系统，可用于布局页面主要的区域或小型用户界面元素。本文介绍了 CSS 网格布局与 CSS 网格布局规范第 1 版中的新术语。这篇简介中所展示的每种特性，将在本指南的其余部分中详细介绍。
 
 ## 什么是网格？

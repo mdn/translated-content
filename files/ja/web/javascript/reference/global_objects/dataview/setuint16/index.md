@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/DataView/setUint16
 
 **`setUint16()`** メソッドは、符号なし 16 ビット整数 (unsigned short) 値を {{jsxref("DataView")}} の指定されたバイト単位のオフセットの位置に格納します。
 
-{{InteractiveExample("JavaScript Demo: DataView.setUint16()")}}
+{{InteractiveExample("JavaScript デモ: DataView.setUint16()")}}
 
 ```js interactive-example
 // Create an ArrayBuffer with a size in bytes

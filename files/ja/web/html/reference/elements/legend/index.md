@@ -10,7 +10,7 @@ l10n:
 
 **`<legend>`** は [HTML](/ja/docs/Web/HTML) の要素で、その親要素である {{HTMLElement("fieldset")}} の内容のキャプションを表します。
 
-{{InteractiveExample("HTML Demo: &lt;legend&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;legend&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <fieldset>

@@ -9,7 +9,7 @@ l10n:
 
 **`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。
 
-{{InteractiveExample("CSS Demo: background-clip")}}
+{{InteractiveExample("CSS デモ: background-clip")}}
 
 ```css interactive-example-choice
 background-clip: border-box;

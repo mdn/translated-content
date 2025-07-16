@@ -15,7 +15,7 @@ slug: Web/CSS/:nth-last-child
 }
 ```
 
-{{InteractiveExample("CSS Demo: :nth-last-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :nth-last-child", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

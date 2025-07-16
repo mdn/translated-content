@@ -3,8 +3,6 @@ title: inset
 slug: Web/CSS/inset
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`inset`** 为简写属性，对应于 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}} 和 {{cssxref("left")}} 属性。其与 {{cssxref("margin")}} 简写属性具有相同的多值语法。
 
 {{InteractiveExample("CSS Demo: inset")}}

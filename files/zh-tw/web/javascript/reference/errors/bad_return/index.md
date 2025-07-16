@@ -2,10 +2,8 @@
 title: "SyntaxError: return not in function"
 slug: Web/JavaScript/Reference/Errors/Bad_return
 l10n:
-  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
-
-{{jsSidebar("Errors")}}
 
 當 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時，會發生 JavaScript 的「return not in function」例外。
 

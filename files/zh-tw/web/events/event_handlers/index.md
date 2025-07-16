@@ -2,7 +2,7 @@
 title: 事件處理（概覽）
 slug: Web/Events/Event_handlers
 l10n:
-  sourceCommit: d0ed4906719465102739e604bdb35213fb19f251
+  sourceCommit: 95e0fbb78a16450188753d0b53ca02a9fbd2a641
 ---
 
 事件是在瀏覽器視窗內觸發的信號，用以通知瀏覽器或作業系統環境的變化。程式設計師可以建立*事件處理器*程式碼，當事件觸發時執行，讓網頁能對變化做出適當的回應。
@@ -86,12 +86,3 @@ btn.addEventListener(
 ```js
 controller.abort(); // 移除與此控制器相關的任何／所有事件處理器
 ```
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-TW/docs/Learn_web_development/Core/Scripting/Events">事件簡介</a></li>
-    <li><a href="/zh-TW/docs/Web/Events">事件參考</a></li>
-    <li><a href="/zh-TW/docs/Web/Events/Creating_and_triggering_events">建立和觸發事件</a></li>
-    <li><a href="/zh-TW/docs/Web/Events/Event_handlers">事件處理（概覽）</a></li>
-  </ol>
-</section>
