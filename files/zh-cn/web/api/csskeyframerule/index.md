@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframeRule`** 接口表示给定关键帧的样式集的对象。它对应一个 {{cssxref("@keyframes")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的单个关键帧的内容。
+**`CSSKeyframeRule`** 接口表示给定关键帧的样式集的对象。它对应一个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的单个关键帧的内容。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_继承 {{domxref("CSSRule")}} 属性。_
+_继承其祖先 {{domxref("CSSRule")}} 属性。_
 
 - {{domxref("CSSKeyframeRule.keyText")}}
   - : 表示关键帧的键，例如 `'10%'`、`'75%'`。`from` 关键字映射到 `'0%'`，`to` 关键字映射到 `'100%'`。
@@ -22,7 +22,7 @@ _继承 {{domxref("CSSRule")}} 属性。_
 
 ## 实例方法
 
-_没有特定方法；继承 {{domxref("CSSRule")}} 方法。_
+_没有特定方法，继承其祖先 {{domxref("CSSRule")}} 方法。_
 
 ## 示例
 
@@ -43,7 +43,7 @@ _没有特定方法；继承 {{domxref("CSSRule")}} 方法。_
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // 一个 CSSKeyframesRule
+let keyframes = myRules[0]; // CSSKeyframesRule
 console.log(keyframes[0]); // 表示单个关键帧的 CSSKeyframeRule。
 ```
 
