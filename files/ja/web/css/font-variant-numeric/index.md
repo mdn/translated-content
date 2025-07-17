@@ -9,7 +9,7 @@ l10n:
 
 **`font-variant-numeric`** は [CSS](/ja/docs/Web/CSS) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
 
-{{InteractiveExample("CSS Demo: font-variant-numeric")}}
+{{InteractiveExample("CSS デモ: font-variant-numeric")}}
 
 ```css interactive-example-choice
 font-variant-numeric: normal;

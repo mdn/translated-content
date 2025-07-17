@@ -9,7 +9,7 @@ l10n:
 
 **`background-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に 1 つ以上の背景画像を設定します。
 
-{{InteractiveExample("CSS Demo: background-image")}}
+{{InteractiveExample("CSS デモ: background-image")}}
 
 ```css interactive-example-choice
 background-image: url("/shared-assets/images/examples/lizard.png");

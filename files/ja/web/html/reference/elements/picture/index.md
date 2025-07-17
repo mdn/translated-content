@@ -12,7 +12,7 @@ l10n:
 
 ブラウザーは複数の `<source>` 子要素を検討し、その中から最も適切なものを選択します。適切なものがない場合や、ブラウザーが `<picture>` 要素に対応してない場合、 `<img>` 要素の [`src`](/ja/docs/Web/HTML/Reference/Elements/img#src) 属性で指定された URL が選択されます。選択された画像は `<img>` 要素が占有する領域に表示されます。
 
-{{InteractiveExample("HTML Demo: &lt;picture&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;picture&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <!--Change the browser window width to see the image change.-->

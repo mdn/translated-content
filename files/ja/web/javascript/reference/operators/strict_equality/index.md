@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Strict_equality
 
 厳密等価演算子 (`===`) は、二つのオペランドが等しいことを検査し、論理値で結果を返します。[等価](/ja/docs/Web/JavaScript/Reference/Operators/Equality)演算子とは異なり、厳密等価演算子はオペランドの型が異なる場合、常に異なるものと判断します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Strict equality operator")}}
 
 ```js interactive-example
 console.log(1 === 1);

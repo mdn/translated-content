@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
       # This is a "required" workflow so path filtering can not be used:
       # https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/collaborating-on-repositories-with-code-quality-features/troubleshooting-required-status-checks#handling-skipped-but-required-checks
@@ -29,7 +30,8 @@ jobs:
               - "files/**"
               - ".github/workflows/pr-check_redirects.yml"
 
-      - uses: actions/checkout@v4
+      - name: Checkout (content)
+        uses: actions/checkout@v4
         if: steps.filter.outputs.required_files == 'true'
         with:
           repository: mdn/content
@@ -39,7 +41,7 @@ jobs:
         if: steps.filter.outputs.required_files == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: mdn/content/.nvmrc
           cache: "yarn"
           cache-dependency-path: mdn/content/yarn.lock
 

@@ -3,8 +3,6 @@ title: skew()
 slug: Web/CSS/transform-function/skew
 ---
 
-{{CSSRef}}
-
 **`skew()`** 函数定义了一个元素在二维平面上的倾斜转换。它的结果是一个{{cssxref("&lt;transform-function&gt;")}} 数据类型
 
 {{InteractiveExample("CSS Demo: skew()")}}

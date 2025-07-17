@@ -9,7 +9,7 @@ l10n:
 
 **`byteLength`** アクセサープロパティは、{{jsxref("SharedArrayBuffer")}} の長さをバイト単位で表します。
 
-{{InteractiveExample("JavaScript Demo: SharedArrayBuffer.prototype.byteLength", "shorter")}}
+{{InteractiveExample("JavaScript デモ: SharedArrayBuffer.prototype.byteLength", "shorter")}}
 
 ```js interactive-example
 // バイト単位でサイズを指定して SharedArrayBuffer を作成

@@ -2,23 +2,21 @@
 title: 'TypeError: "x" is (not) "y"'
 slug: Web/JavaScript/Reference/Errors/Unexpected_type
 l10n:
-  sourceCommit: 269244244653b3df2690adb14083a20ab0139f34
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-當出現非預期的型別時，會發生 JavaScript 的「_x_ is (not) _y_」例外。這通常是非預期的 {{jsxref("undefined")}} 或 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 值。
+JavaScript 的「_x_ is (not) _y_」例外會在出現非預期的型別時發生。這通常是非預期的 {{jsxref("undefined")}} 或 [`null`](/zh-TW/docs/Web/JavaScript/Reference/Operators/null) 值。
 
 ## 訊息
 
 ```plain
-TypeError: Cannot read properties of undefined (reading 'x') (V8-based)
-TypeError: "x" is undefined (Firefox)
-TypeError: "undefined" is not an object (Firefox)
-TypeError: undefined is not an object (evaluating 'obj.x') (Safari)
+TypeError: Cannot read properties of undefined (reading 'x')（基於 V8）
+TypeError: "x" is undefined（Firefox）
+TypeError: "undefined" is not an object（Firefox）
+TypeError: undefined is not an object (evaluating 'obj.x')（Safari）
 
-TypeError: "x" is not a symbol (V8-based & Firefox)
-TypeError: Symbol.keyFor requires that the first argument be a symbol (Safari)
+TypeError: "x" is not a symbol（基於 V8 & Firefox）
+TypeError: Symbol.keyFor requires that the first argument be a symbol（Safari）
 ```
 
 ## 錯誤類型

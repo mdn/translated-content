@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
 ---
 
-{{JSRef}}
-
 **`Math.atanh()`** 靜態方法回傳一個數字的反雙曲正切值，也就是說，
 
 <!-- prettier-ignore-start -->

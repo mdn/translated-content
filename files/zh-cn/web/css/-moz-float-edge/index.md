@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4767ebffd07b627275ae9cac6863b153e3e6746d
 ---
 
-{{CSSRef}}{{Non-standard_header}}{{Deprecated_Header}}
+{{Non-standard_header}}{{Deprecated_Header}}
 
 非标准的 **`-moz-float-edge`** [CSS](/zh-CN/docs/Web/CSS) 属性指定了元素的高度和宽度是否包括外边距、边框或内边距。
 

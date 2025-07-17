@@ -3,8 +3,6 @@ title: border-image
 slug: Web/CSS/border-image
 ---
 
-{{CSSRef}}
-
 CSS 屬性 `border-image` 可以讓你在元素的邊框上擺上圖片。這讓呈現看似很複雜的一個網頁的小單元簡單很多，它可以省最多九個元素。
 
 > [!WARNING]

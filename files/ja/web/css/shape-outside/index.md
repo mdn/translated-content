@@ -7,7 +7,7 @@ slug: Web/CSS/shape-outside
 
 **`shape-outside`** は [CSS](/ja/docs/Web/CSS) のプロパティで、隣接するインラインコンテンツが回り込むシェイプ (形状) を — 矩形でない場合もありますが — 定義します。既定では、インラインコンテンツはマージンボックスを回り込みます。`shape-outside` によって、この回り込みをカスタマイズし、テキストが単純なボックスではなく複雑なオブジェクトの周りを回り込めるようにします。
 
-{{InteractiveExample("CSS Demo: shape-outside")}}
+{{InteractiveExample("CSS デモ: shape-outside")}}
 
 ```css interactive-example-choice
 shape-outside: circle(50%);

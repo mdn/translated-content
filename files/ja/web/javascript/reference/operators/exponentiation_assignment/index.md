@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation_assignment
 
 べき乗代入演算子 (`**=`) は、変数の値を右オペランドでべき乗します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Exponentiation assignment operator")}}
 
 ```js interactive-example
 let a = 3;

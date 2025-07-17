@@ -14,7 +14,7 @@ input:invalid {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :invalid", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :invalid", "tabbed-shorter")}}
 
 ```css interactive-example
 label {
