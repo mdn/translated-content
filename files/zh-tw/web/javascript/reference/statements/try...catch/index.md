@@ -3,8 +3,6 @@ title: try...catch 語法
 slug: Web/JavaScript/Reference/Statements/try...catch
 ---
 
-{{jsSidebar("Statements")}}
-
 `try...catch` 語法標記出一整塊需要測試的語句，並指定一個以上的回應方法，萬一有例外拋出時，`try...catch` 語句就會捕捉。
 
 `try...catch` 語法由 `try` 區塊所組成，其中內含一個以上的語句，和零個以上的 `catch` 區塊，其中內含語句用來指明當例外在 try 區塊裡拋出時要做些什麼。也就是當你希望 `try` 區塊成功，但如果他不成功時，你會想要把控制權移交給 `catch` 區塊。如果任何在 `try` 區塊內部裡的語句（或者在 `try` 區塊內部呼叫的函數裡）拋出例外，控制權將立即轉移給 `catch` 區塊。如果沒有例外從 `try` 區塊裡拋出，就會跳過 `catch` 區塊。`finally` 區塊會在 `try` 或 `catch` 區塊執行之後才執行，但會在 `try...catch` 語法後面的語句之前執行。

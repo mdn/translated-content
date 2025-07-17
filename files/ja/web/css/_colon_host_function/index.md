@@ -14,7 +14,7 @@ l10n:
 > [!NOTE]
 > 他にも、 {{CSSxRef(":is", ":is()")}} や {{CSSxRef(":not", ":not()")}} のような関数型擬似クラスは、引数として複合セレクターのリストを受け入れますが、 `:host()` は単一の複合セレクターを受け入れます。さらに、 `:is()` と `:not()` が引数の詳細度しか考慮しないのに対して、 `:host()` の詳細度は擬似クラスの詳細度**および**引数の詳細度の両方です。
 
-{{InteractiveExample("CSS Demo: :host()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :host()", "tabbed-shorter")}}
 
 ```css interactive-example
 /* Following CSS is being applied inside the shadow DOM. */

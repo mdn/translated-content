@@ -9,7 +9,7 @@ l10n:
 
 **`String.raw()`** 静的メソッドは、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)のためのタグ関数です。この関数は Python の文字列リテラルの `r` 接頭辞や C# の文字列リテラルの `@` 接頭辞に似ています。この関数は、テンプレートリテラルの生の文字列形式を取得するために使用されます。つまり、置換（`${foo}` など）は行われますが、エスケープ（`\n` など）は実行されません。
 
-{{InteractiveExample("JavaScript Demo: String.raw()")}}
+{{InteractiveExample("JavaScript デモ: String.raw()")}}
 
 ```js interactive-example
 // Create a variable that uses a Windows

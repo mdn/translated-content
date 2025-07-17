@@ -9,7 +9,7 @@ l10n:
 
 **`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
-{{InteractiveExample("CSS Demo: font-variant-ligatures")}}
+{{InteractiveExample("CSS デモ: font-variant-ligatures")}}
 
 ```css interactive-example-choice
 font-variant-ligatures: normal;

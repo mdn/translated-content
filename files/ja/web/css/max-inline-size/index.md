@@ -11,7 +11,7 @@ l10n:
 
 書字方向が垂直方向であった場合、 `max-inline-size` の値は要素の最大の高さに対応します。そうでなければ、要素の最大幅に対応します。関連プロパティとして、 {{cssxref("max-block-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: max-inline-size")}}
+{{InteractiveExample("CSS デモ: max-inline-size")}}
 
 ```css interactive-example-choice
 max-inline-size: 150px;

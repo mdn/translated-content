@@ -9,7 +9,7 @@ l10n:
 
 **`clear()`** メソッドは `Map` オブジェクトからすべての要素を削除します。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.clear()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.clear()")}}
 
 ```js interactive-example
 const map1 = new Map();

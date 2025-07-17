@@ -2,10 +2,8 @@
 title: :first-of-type
 slug: Web/CSS/:first-of-type
 l10n:
-  sourceCommit: 82e1a3964631e478c0a8349cc6d7abd4a3eee8be
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:first-of-type`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中，其類型（標籤名稱）的第一個元素。
 

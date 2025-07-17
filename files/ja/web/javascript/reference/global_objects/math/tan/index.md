@@ -9,7 +9,7 @@ l10n:
 
 **`Math.tan()`** 静的メソッドは、数値の正接（タンジェント）を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.tan()")}}
+{{InteractiveExample("JavaScript デモ: Math.tan()")}}
 
 ```js interactive-example
 function getTanFromDegrees(degrees) {

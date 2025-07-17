@@ -9,7 +9,7 @@ l10n:
 
 **`:where()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、セレクターリストを引数として取り、列挙されたセレクターのうちの何れかに当てはまるすべての要素を選択します。
 
-{{InteractiveExample("CSS Demo: :where", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :where", "tabbed-shorter")}}
 
 ```css interactive-example
 ol {

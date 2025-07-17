@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/load
 
 静的な **`Atomics.load()`** メソッドは、配列内の指定された位置の値を返します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.load()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.load()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

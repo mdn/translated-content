@@ -3,8 +3,6 @@ title: Date.prototype.valueOf()
 slug: Web/JavaScript/Reference/Global_Objects/Date/valueOf
 ---
 
-{{JSRef}}
-
 **`valueOf()`** 方法回傳 {{jsxref("Date")}} 物件的原始值。
 
 {{InteractiveExample("JavaScript Demo: Date.valueOf()")}}

@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.keyFor()`** 静的メソッドは、指定されたシンボルについて、共有シンボルキーをグローバルシンボルレジストリーから受け取ります。
 
-{{InteractiveExample("JavaScript Demo: Symbol.keyFor()")}}
+{{InteractiveExample("JavaScript デモ: Symbol.keyFor()")}}
 
 ```js interactive-example
 const globalSym = Symbol.for("foo"); // Global symbol

@@ -9,7 +9,7 @@ l10n:
 
 **`Math.cos()`** は静的メソッドで、ラジアンの数値の余弦（コサイン）を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.cos()")}}
+{{InteractiveExample("JavaScript デモ: Math.cos()")}}
 
 ```js interactive-example
 function getCircleX(radians, radius) {
