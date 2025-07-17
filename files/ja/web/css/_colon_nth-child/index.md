@@ -2,10 +2,8 @@
 title: :nth-child()
 slug: Web/CSS/:nth-child
 l10n:
-  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:nth-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。つまり `:nth-child()` セレクターは、親要素内のすべての兄弟要素同士の位置に従って子要素を選択します。
 
@@ -27,7 +25,7 @@ li:nth-child(even) {
 ```
 
 ```html interactive-example
-<p>Track &amp; field champions:</p>
+<p>陸上競技のチャンピオン:</p>
 <ul>
   <li>Adhemar da Silva</li>
   <li>Wang Junxia</li>
@@ -54,22 +52,24 @@ li:nth-child(even) {
 
 ## 構文
 
-`:nth-child()` 擬似クラスは、引数を 1 つ指定し、リストの子要素を要素の位置で選択するためのパターンを記述します。要素の位置は 1 から始まります。
-
 ```css-nolint
-:nth-child(<nth> [of <complex-selector-list>]?) {
+:nth-child([ <An+B> | even | odd ] [of <complex-selector-list>]?) {
   /* ... */
 }
 ```
 
-### キーワード値
+### 引数
+
+`:nth-child()` は単一の引数をとり、兄弟要素のリスト内における要素のインデックスと照合するためのパターンを記述します。要素のインデックスは 1 から始まります。
+
+#### キーワード値
 
 - `odd`
-  - : 一連の兄弟要素の中で奇数番目の要素 (1, 3, 5, など) を表します。
+  - : 一連の兄弟要素の中で奇数番目の要素（1, 3, 5, など）を表します。
 - `even`
-  - : 一連の兄弟要素の中で偶数番目の要素 (2, 4, 6, など) を表します。
+  - : 一連の兄弟要素の中で偶数番目の要素（2, 4, 6, など）を表します。
 
-### 関数記法
+#### 関数記法
 
 - `<An+B>`
   - : 兄弟要素の並びにおける、数値で指定した位置がパターン `An+B` と一致する要素を表します。`n` の値が正の整数またはゼロの場合、次のようになります。
@@ -79,7 +79,7 @@ li:nth-child(even) {
 
     リスト中の `An+B` 番目の要素として読むことができます。`A` と `B` はどちらも {{cssxref("&lt;integer&gt;")}} の値が示されている必要があります。
 
-### `of <selector>` 構文
+#### `of <selector>` 構文
 
 セレクター引数を渡すことで、そのセレクターに一致する **n 番目**の要素を選択することができます。例えば、次のセレクターは `class="important"` を持つ最初の 3 つのリストアイテムに一致します。
 
@@ -127,10 +127,9 @@ li.important:nth-child(-n + 3) {
 
 #### HTML
 
-```html
+```html-nolint
 <h3>
-  <code>span:nth-child(2n+1)</code> で、子要素の間に
-  <code>&lt;em&gt;</code> がない場合
+  <code>span:nth-child(2n+1)</code> で、子要素の間に <code>&lt;em&gt;</code> がない場合
 </h3>
 <p>子要素 1, 3, 5, 7 が選択されます。</p>
 <div class="first">
@@ -146,8 +145,7 @@ li.important:nth-child(-n + 3) {
 <br />
 
 <h3>
-  <code>span:nth-child(2n+1)</code> で、子要素の間に
-  <code>&lt;em&gt;</code> がある場合
+  <code>span:nth-child(2n+1)</code> で、子要素の間に <code>&lt;em&gt;</code> がある場合
 </h3>
 <p>
   子要素 1, 5, 7 が選択されます。<br />
@@ -168,8 +166,7 @@ li.important:nth-child(-n + 3) {
 <br />
 
 <h3>
-  <code>span:nth-of-type(2n+1)</code> で、子要素の間に
-  <code>&lt;em&gt;</code> がある場合
+  <code>span:nth-of-type(2n+1)</code> で、子要素の間に <code>&lt;em&gt;</code> がある場合
 </h3>
 <p>
   子要素 1, 4, 6, 8 が選択されます。<br />
@@ -278,7 +275,7 @@ li {
 }
 ```
 
-次のCSSでは、`class="noted"` が指定された**偶数番目**のリストアイテムを対象としています。
+次の CSS では、 `class="noted"` が指定された**偶数番目**のリストアイテムを対象としています。
 
 ```css
 li:nth-child(even of .noted) {
@@ -377,18 +374,14 @@ ul.two > li.noted:nth-child(-n + 3) {
 
 ### of セレクターを使用して表の縞模様を修正
 
-表でよく使用される方法として、行の背景色を明るい色と暗い色で交互に変える「縞模様」があります。これにより、表が読みやすくなり、アクセシビリティも向上します。行が非表示になっている場合、縞模様は統合されて表示され、意図した効果が得られなくなります。この例では、行が非表示 (`hidden`) になっている表が 2 つ表示されています。2 つ目の表では、`of:not([hidden])` を使用して非表示の行を処理しています。
+表でよく使用される方法として、行の背景色を明るい色と暗い色で交互に変える「縞模様」があります。これにより、表が読みやすくなり、アクセシビリティも向上します。行が非表示になっている場合、縞模様は統合されて表示され、意図した効果が得られなくなります。この例では、行が非表示 (`hidden`) になっている表が 2 つ表示されています。 2 つ目の表では、 `of:not([hidden])` を使用して非表示の行を処理しています。
 
 #### HTML
-
-```html-nolint hidden
-<div class="wrapper">
-```
 
 ```html-nolint
 <table class="broken">
   <thead>
-    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+    <tr><th>名前</th><th>年齢</th><th>国籍</th></tr>
   </thead>
   <tbody>
     <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
@@ -401,7 +394,7 @@ ul.two > li.noted:nth-child(-n + 3) {
 </table>
 <table class="fixed">
   <thead>
-    <tr><th>Name</th><th>Age</th><th>Country</th></tr>
+    <tr><th>名前</th><th>年齢</th><th>国籍</th></tr>
   </thead>
   <tbody>
     <tr><td>Mamitiana</td><td>23</td><td>Madagascar</td></tr>
@@ -414,14 +407,10 @@ ul.two > li.noted:nth-child(-n + 3) {
 </table>
 ```
 
-```html hidden
-</div>
-```
-
 #### CSS
 
 ```css hidden
-.wrapper {
+body {
   display: flex;
   justify-content: space-around;
 }
@@ -450,7 +439,7 @@ td {
 
 {{EmbedLiveSample('Using_of_selector_to_fix_striped_tables', 550, 180)}}
 
-### 表の列のスタイル付け
+### 表の列のスタイル設定
 
 表の列にスタイル設定を行う場合、{{HTMLElement("col")}} 要素にスタイルを設定することはできません。表のセルは、この要素の子ではないためです（行要素である {{HTMLElement("tr")}} では可能です）。列のセルを選択するには、`:nth-child()` のような擬似クラスが便利です。
 
