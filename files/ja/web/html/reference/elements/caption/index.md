@@ -10,7 +10,7 @@ l10n:
 
 **`<caption>`** は [HTML](/ja/docs/Web/HTML) の要素で、表のキャプション（またはタイトル）を指定します。
 
-{{InteractiveExample("HTML Demo: &lt;caption&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;caption&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

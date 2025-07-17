@@ -11,7 +11,7 @@ l10n:
 
 これは[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) 内に配置された CSS の中で使われた時のみ機能します。なお、このセレクターはスロット内に配置されたテキストノードは選択しません。実際の要素のみを対象にします。
 
-{{InteractiveExample("CSS Demo: ::slotted()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::slotted()", "tabbed-shorter")}}
 
 ```css interactive-example
 /* This CSS is being applied inside the shadow DOM. */

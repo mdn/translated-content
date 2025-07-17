@@ -9,7 +9,7 @@ l10n:
 
 **`Array.of()`** 静的メソッドは、引数の数や型にかかわらず、可変長引数から、新しい `Array` インスタンスを生成します。
 
-{{InteractiveExample("JavaScript Demo: Array.of()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.of()", "shorter")}}
 
 ```js interactive-example
 console.log(Array.of("foo", 2, "bar", true));

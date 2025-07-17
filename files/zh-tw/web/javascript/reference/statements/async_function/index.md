@@ -3,8 +3,6 @@ title: async function
 slug: Web/JavaScript/Reference/Statements/async_function
 ---
 
-{{jsSidebar("Statements")}}
-
 **`async function`** 宣告被定義為一個回傳 {{jsxref("Global_Objects/AsyncFunction","AsyncFunction")}} 物件的*非同步函式* 。
 
 你也可以使用 {{jsxref("Operators/async_function", "async function expression", "", 1)}} 來定義一個*非同步函式*。

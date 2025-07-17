@@ -9,7 +9,7 @@ l10n:
 
 **`text-underline-offset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 ({{cssxref("text-decoration")}} を使用して適用された) 下線のテキスト装飾線の本来の位置からのオフセット距離を設定します。
 
-{{InteractiveExample("CSS Demo: text-underline-offset")}}
+{{InteractiveExample("CSS デモ: text-underline-offset")}}
 
 ```css interactive-example-choice
 text-underline-offset: auto;

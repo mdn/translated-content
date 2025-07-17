@@ -3,8 +3,6 @@ title: 严格相等（===）
 slug: Web/JavaScript/Reference/Operators/Strict_equality
 ---
 
-{{jsSidebar("Operators")}}
-
 严格相等运算符（`===`）会检查它的两个操作数是否相等，并且返回一个布尔值结果。与[相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Equality)运算符不同，严格相等运算符总是认为不同类型的操作数是不同的。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Strict equality operator")}}

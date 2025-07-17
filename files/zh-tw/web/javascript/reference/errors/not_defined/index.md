@@ -3,8 +3,6 @@ title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 訊息
 
 ```plain

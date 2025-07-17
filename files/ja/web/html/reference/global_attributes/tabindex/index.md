@@ -10,7 +10,7 @@ l10n:
 
 **`tabindex`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、開発者が HTML要素をフォーカス可能にし、（ふつうは名前の由来である <kbd>Tab</kbd> キーによる）順番にフォーカスすることを許可または防止し、順番にフォーカスするための相対順序を決定することができるようにします。
 
-{{InteractiveExample("HTML Demo: tabindex", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: tabindex", "tabbed-standard")}}
 
 ```html interactive-example
 <p>Click anywhere in this pane, then try tabbing through the elements.</p>

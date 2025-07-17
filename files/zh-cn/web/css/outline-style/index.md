@@ -3,8 +3,6 @@ title: outline-style
 slug: Web/CSS/outline-style
 ---
 
-{{CSSRef}}
-
 ## 概要
 
 **`outline-style`** CSS 属性被用于设置一个元素轮廓的样式。

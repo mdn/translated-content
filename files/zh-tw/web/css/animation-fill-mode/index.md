@@ -2,10 +2,8 @@
 title: animation-fill-mode
 slug: Web/CSS/animation-fill-mode
 l10n:
-  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`animation-fill-mode`** [CSS](/zh-TW/docs/Web/CSS) 屬性用於設定 CSS 動畫在執行前後，如何將樣式應用至其目標。
 
