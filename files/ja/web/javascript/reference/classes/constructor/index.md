@@ -12,7 +12,7 @@ l10n:
 > [!NOTE]
 > このページでは `constructor` の構文を紹介します。すべてのオブジェクトに存在する `constructor` プロパティについては、 {{jsxref("Object.prototype.constructor")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Classes Constructor")}}
+{{InteractiveExample("JavaScript デモ: Classes Constructor")}}
 
 ```js interactive-example
 class Polygon {

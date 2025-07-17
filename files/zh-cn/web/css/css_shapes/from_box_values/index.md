@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e1b6d7d2d02a07f7e86268c81678713fad4d9a5d
 ---
 
-{{CSSRef}}
-
 创建形状的一个简单方法是使用 CSS 盒模型中的值。本文将解释如何执行此操作
 
 允许作为形状值的 [box 值](https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values)为：

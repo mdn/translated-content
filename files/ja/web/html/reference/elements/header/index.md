@@ -10,7 +10,7 @@ l10n:
 
 **`<header>`** は [HTML](/ja/docs/Web/HTML) の要素で、導入的なコンテンツ、ふつうは導入部やナビゲーション補助のグループを表します。見出し要素だけでなく、ロゴ、検索フォーム、著者名、その他の要素を含むこともできます。
 
-{{InteractiveExample("HTML Demo: &lt;header&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;header&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <header>

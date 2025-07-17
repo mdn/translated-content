@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
 
-{{InteractiveExample("CSS Demo: flex-basis")}}
+{{InteractiveExample("CSS デモ: flex-basis")}}
 
 ```css interactive-example-choice
 flex-basis: auto;

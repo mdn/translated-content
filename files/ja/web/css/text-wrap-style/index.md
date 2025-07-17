@@ -9,7 +9,7 @@ l10n:
 
 **`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
-{{InteractiveExample("CSS Demo: text-wrap-style")}}
+{{InteractiveExample("CSS デモ: text-wrap-style")}}
 
 ```css interactive-example-choice
 text-wrap-style: auto;

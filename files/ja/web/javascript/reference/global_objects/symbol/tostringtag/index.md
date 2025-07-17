@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.toStringTag`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.toStringTag` を表します。{{jsxref("Object.prototype.toString()")}} は `this` に対して、このオブジェクトの型を表す文字列を持つプロパティを、このシンボルで探します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.toStringTag")}}
+{{InteractiveExample("JavaScript デモ: Symbol.toStringTag")}}
 
 ```js interactive-example
 class ValidatorClass {

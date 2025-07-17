@@ -9,7 +9,7 @@ l10n:
 
 **`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの再生時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
 
-{{InteractiveExample("CSS Demo: transition-duration")}}
+{{InteractiveExample("CSS デモ: transition-duration")}}
 
 ```css interactive-example-choice
 transition-duration: 500ms;

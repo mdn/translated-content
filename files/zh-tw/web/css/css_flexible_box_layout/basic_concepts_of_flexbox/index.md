@@ -3,10 +3,8 @@ title: Flexbox 的基本概念
 short-title: 基本概念
 slug: Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 l10n:
-  sourceCommit: 0dcad86763896bba7f8e1ddc30c6dfd2aa664c6b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 [彈性盒子版面配置](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout)模組（通常稱為 flexbox）是一種一維的版面配置模型，用於在項目之間分配空間，並包含多種對齊功能。本文概述了 flexbox 的主要特性，我們將在後續的指南中更詳細地探討這些特性。
 

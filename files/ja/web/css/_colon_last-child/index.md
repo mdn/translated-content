@@ -15,7 +15,7 @@ p:last-child {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :last-child", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :last-child", "tabbed-shorter")}}
 
 ```css interactive-example
 p {

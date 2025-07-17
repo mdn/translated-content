@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/encodeURI
 
 **`encodeURI()`** 関数は、{{glossary("URI")}} (Uniform Resource Identifier; 統一資源識別子) をエンコードし、各文字のインスタンスをそれぞれ {{glossary("UTF-8")}} 符号の文字を表す 1 個から 4 個のエスケープシーケンスに置き換えます (サロゲート文字のペアのみ 4 個のエスケープシーケンスになります)。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURI()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - encodeURI()")}}
 
 ```js interactive-example
 const uri = "https://mozilla.org/?x=шеллы";

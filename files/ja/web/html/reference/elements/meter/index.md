@@ -10,7 +10,7 @@ l10n:
 
 **`<meter>`** は [HTML](/ja/docs/Web/HTML) の要素で、既知の範囲内のスカラー値、または小数値を表します。
 
-{{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;meter&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="fuel">Fuel level:</label>

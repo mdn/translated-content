@@ -3,8 +3,6 @@ title: scroll-padding-block
 slug: Web/CSS/scroll-padding-block
 ---
 
-{{CSSRef}}
-
 [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) **`scroll-padding-block`** 设置了元素的块向滚动内边距。
 
 {{InteractiveExample("CSS Demo: scroll-padding-block")}}

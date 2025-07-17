@@ -9,7 +9,7 @@ l10n:
 
 文字クラスは、文字や数字の区別など、文字の種類を区別します。
 
-{{InteractiveExample("JavaScript Demo: RegExp Character classes")}}
+{{InteractiveExample("JavaScript デモ: RegExp Character classes")}}
 
 ```js interactive-example
 const chessStory = "He played the King in a8 and she moved her Queen in c2.";
