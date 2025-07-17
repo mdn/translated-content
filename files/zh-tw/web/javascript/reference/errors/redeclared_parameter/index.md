@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
- JavaScript 的「redeclaration of formal parameter」例外會在函式參數中出現了相同的變數名稱，且函式主體中又再次使用 {{jsxref("Statements/let", "let")}} 賦值來重複宣告它時發生。
+JavaScript 的「redeclaration of formal parameter」例外會在函式參數中出現了相同的變數名稱，且函式主體中又再次使用 {{jsxref("Statements/let", "let")}} 賦值來重複宣告它時發生。
 
 ## 訊息
 
