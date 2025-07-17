@@ -3,8 +3,6 @@ title: 物理演算
 slug: Games/Tutorials/2D_breakout_game_Phaser/Physics
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Workflows/2D_Breakout_game_Phaser/Move_the_ball", "Games/Workflows/2D_Breakout_game_Phaser/Bounce_off_the_walls")}}
 
 これは、[Gamedev Phaser チュートリアル](/ja/docs/Games/Tutorials/2D_breakout_game_Phaser)の 16 ステップ中、 **5 ステップ目**になります。このレッスンを終えた後のソースコードは [Gamedev-Phaser-Content-Kit/demos/lesson05.html](https://github.com/end3r/Gamedev-Phaser-Content-Kit/blob/gh-pages/demos/lesson05.html) で見ることができます。

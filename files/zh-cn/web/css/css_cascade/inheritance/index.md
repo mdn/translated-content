@@ -3,8 +3,6 @@ title: 继承
 slug: Web/CSS/CSS_cascade/Inheritance
 ---
 
-{{CSSRef}}
-
 在 css 中，每个 [CSS 属性定义](/zh-CN/docs/Web/CSS/Reference)的概述都指出了这个属性是默认继承的 ("Inherited: Yes") 还是默认不继承的 ("Inherited: no")。这决定了当你没有为元素的属性指定值时该如何计算值。
 
 ## 继承属性

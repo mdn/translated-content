@@ -9,7 +9,7 @@ l10n:
 
 **`Math.floor()`** は静的メソッドで、与えられた数値以下の最大の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.floor()")}}
+{{InteractiveExample("JavaScript デモ: Math.floor()")}}
 
 ```js interactive-example
 console.log(Math.floor(5.95));

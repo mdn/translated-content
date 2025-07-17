@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d73dd4355247934e6b3f7081d3c1189089ecdc1e
 ---
 
-{{CSSRef}}
-
 **`border-bottom-style`** [CSS](/zh-CN/docs/Web/CSS) 属性设置元素底部 {{cssxref("border")}} 的线条样式。
 
 {{InteractiveExample("CSS Demo: border-bottom-style")}}

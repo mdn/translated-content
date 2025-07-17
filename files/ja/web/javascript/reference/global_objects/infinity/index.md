@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Infinity
 
 {{js_property_attributes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - infinity")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - infinity")}}
 
 ```js interactive-example
 const maxNumber = Math.pow(10, 1000); // Max positive number

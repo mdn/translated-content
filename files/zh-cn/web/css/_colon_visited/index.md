@@ -3,8 +3,6 @@ title: :visited
 slug: Web/CSS/:visited
 ---
 
-{{CSSRef}}
-
 **`:visited`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)会在用户访问链接后生效，出于隐私保护的原因，使用该选择器可以修改的样式非常有限。`:visited` 伪类仅适用于带有 `href` 属性的 {{htmlelement("a")}} 和 {{htmlelement("area")}} 元素。
 
 {{InteractiveExample("CSS Demo: :visited", "tabbed-shorter")}}
