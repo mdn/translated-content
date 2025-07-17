@@ -9,7 +9,7 @@ l10n:
 
 **`block-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じた要素ブロックの水平または垂直方向の寸法を定義します。これは {{cssxref("width")}} または {{cssxref("height")}} プロパティに相当し、 {{cssxref("writing-mode")}} の値によって変わります。書字方向が垂直方向であった場合、 `block-size` の値は要素の幅に対応し、水平方向であった場合は要素の高さに対応します。関連プロパティの {{cssxref("inline-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: block-size")}}
+{{InteractiveExample("CSS デモ: block-size")}}
 
 ```css interactive-example-choice
 block-size: 150px;

@@ -10,7 +10,7 @@ l10n:
 
 **`<source>`** は [HTML](/ja/docs/Web/HTML) の要素で、{{HTMLElement("picture")}}、{{HTMLElement("audio")}}、{{HTMLElement("video")}} の各要素に対し、複数のメディアリソースを指定します。この要素は{{glossary("void element", "空要素")}}であり、すなわち中身も閉じタグもありません。[画像ファイル形式](/ja/docs/Web/Media/Guides/Formats/Image_types)や[メディアファイル形式](/ja/docs/Web/Media/Guides/Formats)の対応状況が様々であるブラウザーの幅広い互換性を確保するために、同じメディアコンテンツを複数のファイル形式で提供することはよくあることです。
 
-{{InteractiveExample("HTML Demo: &lt;source&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;source&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <video controls width="250" height="200" muted>

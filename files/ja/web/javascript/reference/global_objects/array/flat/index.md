@@ -9,7 +9,7 @@ l10n:
 
 **`flat()`** は {{jsxref("Array")}} インスタンスのメソッドで、すべてのサブ配列の要素を指定した深さで再帰的に結合した新しい配列を生成します。
 
-{{InteractiveExample("JavaScript Demo: Array.flat()")}}
+{{InteractiveExample("JavaScript デモ: Array.flat()")}}
 
 ```js interactive-example
 const arr1 = [0, 1, 2, [3, 4]];

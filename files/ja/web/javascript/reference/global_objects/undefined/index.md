@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/undefined
 
 {{js_property_attributes(0,0,0)}}
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - undefined")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - undefined")}}
 
 ```js interactive-example
 function test(t) {

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 418b3ebf6464716649125199385c39d86c944973
 ---
 
-{{CSSRef}}
-
 **`font-variation-settings`** CSS 属性为[可变字体](/zh-CN/docs/Web/CSS/CSS_fonts/Variable_fonts_guide)特性提供了底层控制，让你可以指定要改变的特性的四字母轴名称及其值。
 
 {{InteractiveExample("CSS Demo: font-variation-settings")}}

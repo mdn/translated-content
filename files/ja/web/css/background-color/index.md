@@ -9,7 +9,7 @@ l10n:
 
 **`background-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景色を設定します。
 
-{{InteractiveExample("CSS Demo: background-color")}}
+{{InteractiveExample("CSS デモ: background-color")}}
 
 ```css interactive-example-choice
 background-color: brown;

@@ -2,10 +2,8 @@
 title: :lang()
 slug: Web/CSS/:lang
 l10n:
-  sourceCommit: ffff697fbd3004c3da50323ef4d868b3ad47e4d0
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`:lang()`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)會根據元素被判定的語言來匹配元素。
 

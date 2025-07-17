@@ -26,7 +26,7 @@ attr(data-width px, inherit);
 attr(data-something, "default");
 ```
 
-{{InteractiveExample("CSS Demo: attr()", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: attr()", "tabbed-shorter")}}
 
 ```css interactive-example
 blockquote {

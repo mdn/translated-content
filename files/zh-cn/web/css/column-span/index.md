@@ -3,8 +3,6 @@ title: column-span
 slug: Web/CSS/column-span
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`column-span`** 的值被设置为 `all` 时，可以让一个元素跨越所有的列。
 
 {{InteractiveExample("CSS Demo: column-span")}}

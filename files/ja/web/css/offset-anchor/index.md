@@ -9,7 +9,7 @@ l10n:
 
 **`offset-anchor`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("offset-path")}} に沿って実際に移動している要素のボックス内の点を指定します。
 
-{{InteractiveExample("CSS Demo: offset-anchor")}}
+{{InteractiveExample("CSS デモ: offset-anchor")}}
 
 ```css interactive-example-choice
 offset-anchor: auto;

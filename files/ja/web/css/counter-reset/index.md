@@ -9,7 +9,7 @@ l10n:
 
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
 
-{{InteractiveExample("CSS Demo: counter-reset")}}
+{{InteractiveExample("CSS デモ: counter-reset")}}
 
 ```css interactive-example-choice
 counter-reset: none;

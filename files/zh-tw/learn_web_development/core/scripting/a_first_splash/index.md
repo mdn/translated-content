@@ -1,54 +1,215 @@
 ---
-title: 初次接觸Javascript
+title: 初探 JavaScript
+short-title: JavaScript 導覽
 slug: Learn_web_development/Core/Scripting/A_first_splash
+l10n:
+  sourceCommit: 693106d7bc9aa28f22a3f234455f5496efd728c4
 ---
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}
 
-目前你已經學會了一些 JavaScript 的理論，以及你能用它做些什麼。我們現在要透過一個完整的實際範例給你一個 JavaScript 基本功能的速成班。你將能一步一步地做出一個簡單的"猜數字"遊戲
+現在你已經學了一些關於 JavaScript 的理論以及它能做什麼，我們將透過一個實作教學，讓你了解建立一個簡單 JavaScript 程式的過程。在這裡，你將一步步地建立一個簡單的「猜數字」遊戲。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">先備知識:</th>
-      <td>
-        基礎的電腦知識 , 有基礎的 HTML 跟 CSS 知識 ,<br />還有知道 JavaScript
-        是甚麼 .
-      </td>
+      <th scope="row">先備知識：</th>
+      <td>了解 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 與 <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS 的基礎</a>。</td>
     </tr>
     <tr>
-      <th scope="row">目標:</th>
+      <th scope="row">學習成果：</th>
       <td>
-        獲得第一次寫 JavaScript 的經驗 ,<br />還有知道最基礎的 JavaScript
-        程式該怎麼寫 .
+        <ul>
+          <li>像個程式設計師一樣思考。</li>
+          <li>體驗撰寫 JavaScript 的感覺。</li>
+        </ul>
       </td>
     </tr>
   </tbody>
 </table>
 
-並不會要求你馬上就能仔細地了解所有程式碼 — 目前我們只是想介紹一些概觀，並向你介紹一些關於 JavaScript(以及其他程式語言)如何運作的知識。在接下來的章節你將會更仔細地瞭解這些功能！
+我們想在這裡設定非常明確的期望：我們不期望你在讀完這篇文章後就學會 JavaScript，甚至不期望你理解我們要求你寫的所有程式碼。相反地，我們想讓你了解 JavaScript 的功能是如何協同運作的，以及撰寫 JavaScript 是什麼感覺。在後續的文章中，你將會更詳細地重新檢視這裡展示的所有功能，所以如果你沒有馬上全部理解，也請不要擔心！
 
 > [!NOTE]
-> 你會在 JavaScript 看到許多跟其他程式語言一樣的特徵 — functions , loops 之類的 ，雖然程式語法看起來有差 ，但概念大部分都差不多 .
+> 你在 JavaScript 中看到的許多程式碼功能，與其他程式設計語言中的功能是相同的函式、迴圈等等。程式碼語法看起來不同，但概念基本上是相同的。
 
-## 像程式工程師一樣思考
+## 介紹我們的「猜數字遊戲」範例
 
-寫程式中最困難的事情之一，不是你需要學習的語法，而是如何應用它來解決現實世界中的問題。 你需要開始像個程式設計師一樣思考 — 這通常與檢視程式目標的說明有關，並確定實現這些功能所需的程式碼，以及如何使它們協同工作。
+在本文中，我們將向你展示如何建立你可以在下面看到的遊戲：
 
-這需要辛勤工作，程式語法經驗和練習 — 以及一點創造力。 你寫了越多程式碼，你就會越熟練。 我們不能保證你會在 5 分鐘內開發出「程式設計師的大腦」，但我們會給你很多機會在整個課程中練習「像程式設計師一樣思考」。
+```html hidden live-sample___guess-the-number
+<h1>猜數字遊戲</h1>
 
-考慮到這一點，讓我們看一下我們將在本文中構建的範例，並審視將其分解為具體任務的大致流程。
+<p>
+  我們已經選好一個 1 到 100 之間的隨機數字。看看你是否能在 10
+  次或更少的回合內猜中。我們會告訴你猜的數字是太高還是太低。
+</p>
 
-## 範例 — 猜數字遊戲
+<div class="form">
+  <label for="guessField">輸入你的猜測：</label
+  ><input
+    type="number"
+    min="1"
+    max="100"
+    required
+    id="guessField"
+    class="guessField" />
+  <input type="submit" value="送出猜測" class="guessSubmit" />
+</div>
 
-在本文中，我們將向你展示如何構建你可以在下面看到的簡單遊戲：
+<div class="resultParas">
+  <p class="guesses"></p>
+  <p class="lastResult"></p>
+  <p class="lowOrHi"></p>
+</div>
+```
 
-```html hidden
+```css hidden live-sample___guess-the-number
+html {
+  font-family: sans-serif;
+}
+
+body {
+  width: 50%;
+  max-width: 800px;
+  min-width: 480px;
+  margin: 0 auto;
+}
+
+.form input[type="number"] {
+  width: 200px;
+}
+
+.lastResult {
+  color: white;
+  padding: 3px;
+}
+```
+
+```js hidden live-sample___guess-the-number
+let randomNumber = Math.floor(Math.random() * 100) + 1;
+const guesses = document.querySelector(".guesses");
+const lastResult = document.querySelector(".lastResult");
+const lowOrHi = document.querySelector(".lowOrHi");
+const guessSubmit = document.querySelector(".guessSubmit");
+const guessField = document.querySelector(".guessField");
+let guessCount = 1;
+let resetButton;
+
+function checkGuess() {
+  const userGuess = Number(guessField.value);
+  if (guessCount === 1) {
+    guesses.textContent = "先前的猜測：";
+  }
+
+  guesses.textContent = `${guesses.textContent}${userGuess}`;
+
+  if (userGuess === randomNumber) {
+    lastResult.textContent = "恭喜你！你猜對了！";
+    lastResult.style.backgroundColor = "green";
+    lowOrHi.textContent = "";
+    setGameOver();
+  } else if (guessCount === 10) {
+    lastResult.textContent = "！！！遊戲結束！！！";
+    lowOrHi.textContent = "";
+    setGameOver();
+  } else {
+    lastResult.textContent = "錯了！";
+    lastResult.style.backgroundColor = "red";
+    if (userGuess < randomNumber) {
+      lowOrHi.textContent = "上次猜的數字太低了！";
+    } else if (userGuess > randomNumber) {
+      lowOrHi.textContent = "上次猜的數字太高了！";
+    }
+  }
+
+  guessCount++;
+  guessField.value = "";
+  guessField.focus();
+}
+
+guessSubmit.addEventListener("click", checkGuess);
+
+function setGameOver() {
+  guessField.disabled = true;
+  guessSubmit.disabled = true;
+  resetButton = document.createElement("button");
+  resetButton.textContent = "開始新遊戲";
+  document.body.appendChild(resetButton);
+  resetButton.addEventListener("click", resetGame);
+}
+
+function resetGame() {
+  guessCount = 1;
+  const resetParas = document.querySelectorAll(".resultParas p");
+  for (const resetPara of resetParas) {
+    resetPara.textContent = "";
+  }
+
+  resetButton.parentNode.removeChild(resetButton);
+  guessField.disabled = false;
+  guessSubmit.disabled = false;
+  guessField.value = "";
+  guessField.focus();
+  lastResult.style.backgroundColor = "white";
+  randomNumber = Math.floor(Math.random() * 100) + 1;
+}
+```
+
+{{EmbedLiveSample("guess-the-number", "100%", 300)}}
+
+試著玩玩看，在繼續之前先熟悉一下這個遊戲。
+
+## 像個程式設計師一樣思考
+
+在程式設計中，最難學的不是你需要學習的語法，而是如何應用它來解決現實世界的問題。你需要開始像個程式設計師一樣思考——這通常包括查看你的程式需要做什麼的描述，找出需要哪些程式碼功能來實現這些事情，以及如何讓它們協同運作。
+
+這需要努力、程式設計語法經驗和練習的結合，再加上一點創造力。你寫的程式碼越多，你就會變得越好。我們不能保證你能在五分鐘內養成「程式設計師的腦袋」，但我們將在這裡以及課程的其餘部分為你提供大量練習像程式設計師一樣思考的機會。
+
+## 最初的設計簡報
+
+讓我們想像一下，你的老闆給了你以下建立這個遊戲的簡報：
+
+> 我希望你建立一個簡單的「猜數字」遊戲。它應該在 1 到 100 之間選擇一個隨機數字，然後挑戰玩家在 10 回合內猜出這個數字。每回合結束後，應該告訴玩家他們猜對了還是猜錯了，如果猜錯了，還要告訴他們猜的數字是太低還是太高。它還應該告訴玩家他們之前猜過的數字。一旦玩家猜對，或者回合數用完，遊戲就結束。遊戲結束時，應該給玩家一個重新開始玩的選項。
+
+在看了這份簡報後，我們首先可以做的是，盡可能地用程式設計師的心態，將它分解成簡單可行的任務：
+
+1. 產生一個 1 到 100 之間的隨機數字。
+2. 記錄玩家目前的回合數。從 1 開始。
+3. 提供玩家一種猜測數字的方式。
+4. 一旦提交了猜測，首先將其記錄在某處，以便使用者可以看到他們之前的猜測。
+5. 接下來，檢查它是否是正確的數字。
+6. 如果猜對了：
+   1. 顯示恭喜訊息。
+   2. 阻止玩家輸入更多猜測（這會搞亂遊戲）。
+   3. 顯示允許玩家重新開始遊戲的控制項。
+
+7. 如果猜錯了且玩家還有回合數：
+   1. 告訴玩家他們錯了，以及他們的猜測是太高還是太低。
+   2. 允許他們輸入另一個猜測。
+   3. 將回合數加 1。
+
+8. 如果猜錯了且玩家沒有回合數了：
+   1. 告訴玩家遊戲結束。
+   2. 阻止玩家輸入更多猜測（這會搞亂遊戲）。
+   3. 顯示允許玩家重新開始遊戲的控制項。
+
+9. 一旦遊戲重新開始，確保遊戲邏輯和使用者介面完全重置，然後回到步驟 1。
+
+現在讓我們繼續前進，看看如何將這些步驟轉化為程式碼，逐步建立範例，並在此過程中探索 JavaScript 的功能。
+
+## 初始設定
+
+要開始本教學，我們希望你使用你的程式碼編輯器，在一個新的 HTML 檔案中建立以下程式碼的本地副本。
+
+```html
 <!doctype html>
-<html>
+<html lang="zh-TW">
   <head>
     <meta charset="utf-8" />
-    <title>Number guessing game</title>
+
+    <title>猜數字遊戲</title>
+
     <style>
       html {
         font-family: sans-serif;
@@ -61,6 +222,10 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
         margin: 0 auto;
       }
 
+      .form input[type="number"] {
+        width: 200px;
+      }
+
       .lastResult {
         color: white;
         padding: 3px;
@@ -69,17 +234,25 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
   </head>
 
   <body>
-    <h1>Number guessing game</h1>
+    <h1>猜數字遊戲</h1>
+
     <p>
-      We have selected a random number between 1 and 100. See if you can guess
-      it in 10 turns or fewer. We'll tell you if your guess was too high or too
-      low.
+      我們已經選好一個 1 到 100 之間的隨機數字。看看你是否能在 10
+      次或更少的回合內猜中。我們會告訴你猜的數字是太高還是太低。
     </p>
+
     <div class="form">
-      <label for="guessField">Enter a guess: </label
-      ><input type="text" id="guessField" class="guessField" />
-      <input type="submit" value="Submit guess" class="guessSubmit" />
+      <label for="guessField">輸入你的猜測：</label
+      ><input
+        type="number"
+        min="1"
+        max="100"
+        required
+        id="guessField"
+        class="guessField" />
+      <input type="submit" value="送出猜測" class="guessSubmit" />
     </div>
+
     <div class="resultParas">
       <p class="guesses"></p>
       <p class="lastResult"></p>
@@ -87,132 +260,25 @@ slug: Learn_web_development/Core/Scripting/A_first_splash
     </div>
 
     <script>
-      // Your JavaScript goes here
-      let randomNumber = Math.floor(Math.random() * 100) + 1;
-      const guesses = document.querySelector(".guesses");
-      const lastResult = document.querySelector(".lastResult");
-      const lowOrHi = document.querySelector(".lowOrHi");
-      const guessSubmit = document.querySelector(".guessSubmit");
-      const guessField = document.querySelector(".guessField");
-      let guessCount = 1;
-      let resetButton;
-
-      function checkGuess() {
-        let userGuess = Number(guessField.value);
-        if (guessCount === 1) {
-          guesses.textContent = "Previous guesses: ";
-        }
-
-        guesses.textContent += userGuess + " ";
-
-        if (userGuess === randomNumber) {
-          lastResult.textContent = "Congratulations! You got it right!";
-          lastResult.style.backgroundColor = "green";
-          lowOrHi.textContent = "";
-          setGameOver();
-        } else if (guessCount === 10) {
-          lastResult.textContent = "!!!GAME OVER!!!";
-          lowOrHi.textContent = "";
-          setGameOver();
-        } else {
-          lastResult.textContent = "Wrong!";
-          lastResult.style.backgroundColor = "red";
-          if (userGuess < randomNumber) {
-            lowOrHi.textContent = "Last guess was too low!";
-          } else if (userGuess > randomNumber) {
-            lowOrHi.textContent = "Last guess was too high!";
-          }
-        }
-
-        guessCount++;
-        guessField.value = "";
-      }
-
-      guessSubmit.addEventListener("click", checkGuess);
-
-      function setGameOver() {
-        guessField.disabled = true;
-        guessSubmit.disabled = true;
-        resetButton = document.createElement("button");
-        resetButton.textContent = "Start new game";
-        document.body.appendChild(resetButton);
-        resetButton.addEventListener("click", resetGame);
-      }
-
-      function resetGame() {
-        guessCount = 1;
-        const resetParas = document.querySelectorAll(".resultParas p");
-        for (let i = 0; i < resetParas.length; i++) {
-          resetParas[i].textContent = "";
-        }
-
-        resetButton.parentNode.removeChild(resetButton);
-        guessField.disabled = false;
-        guessSubmit.disabled = false;
-        guessField.value = "";
-        guessField.focus();
-        lastResult.style.backgroundColor = "white";
-        randomNumber = Math.floor(Math.random() * 100) + 1;
-      }
+      // 你的 JavaScript 寫在這裡
     </script>
   </body>
 </html>
 ```
 
-{{ EmbedLiveSample('範例 — 猜數字遊戲', '100%', 320) }}
+在你的文字編輯器中保持開啟，同時也在你的網頁瀏覽器中開啟它。目前你會看到一個簡單的標題、一段說明文字和一個用於輸入猜測的表單，但這個表單目前還沒有任何作用。
 
-好好玩一下遊戲再繼續吧 —— 在繼續前先與這個遊戲熟悉起來。
-
-讓我們假設你的老闆給了你以下關於創建這個遊戲的簡介：
-
-> 我要你幫我做一個很簡單的猜數字遊戲 .
-> 玩家要在 10 回合內猜中一個 1 到 100 之間的隨機數字 ,
-> 每回合結束時都要告訴玩家他們猜對還是猜錯 ,
-> 然後要是他們猜錯 , 要告訴他們數字猜的太小還是太大 ,
-> 這個遊戲會在玩家猜對 , 或是猜超過 10 次時結束 ,
-> 且遊戲結束時 , 要提供一個選項讓玩家可以再玩一次 .
-
-當看到上面的介紹後，我們可以做的第一件事就是開始拆解，盡可能的像個程式設計師，將它拆解為簡單可執行的任務：
-
-1. 產生一個 1 到 100 間的隨機數字。
-2. 從一開始，紀錄玩家目前回合數。
-3. 提供玩家猜數字的方向(太大還是太小)。
-4. 當玩家送出第一個猜測後，將猜測記錄下來，讓玩家可以看到他們之前的猜測。
-5. 接著檢查數字是否猜中。
-6. 如果數字猜對：
-   1. 顯示恭喜訊息。
-   2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
-   3. 顯示控制鈕讓玩家可以重新開始遊戲。
-
-7. 如果數字猜錯而且玩家有剩餘回合數：
-   1. 告訴玩家他猜錯了。
-   2. 讓玩家輸入其他的猜測
-   3. 回合數增加 1。
-
-8. 如果數字猜錯而且玩家沒有剩餘回合數：
-   1. 告訴玩家遊戲結束。
-   2. 使玩家不能再輸入更多猜測(避免把遊戲玩壞)。
-   3. 顯示控制鈕讓玩家可以重新開始遊戲。
-
-9. 當遊戲重新開始，確保遊戲邏輯和畫面(UI，使用這介面)全面重設，然後回到第一步。
-
-現在，讓我們繼續向前，一路上我們檢視如何將這些步驟轉化為程式碼、建構出上面的範例與探索 JavaScript 的功能。
-
-### 初步設定
-
-在課程開始前，我們希望你可以複製一份[number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)到自己的電腦中([see it live here](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html))。用瀏覽器與文字編輯器將檔案打開時，你會看到簡單的標題、說明段落還有輸入猜測的表單，然而表單目前還不會做任何事情。
-
-所有的程式碼都會放入置於 HTML 底部的{{htmlelement("script")}}元素裡：
+你將在 HTML 底部的 {{htmlelement("script")}} 元素內加入你所有的 JavaScript 程式碼：
 
 ```html
 <script>
-  // Your JavaScript goes here
+  // 你的 JavaScript 寫在這裡
 </script>
 ```
 
-### 加入變數儲存我們的資料
+## 加入變數來儲存我們的資料
 
-我們一起開始吧。首先，在你的{{htmlelement("script")}} 元素裡加入以下幾行：
+讓我們開始吧。首先，在你的 {{htmlelement("script")}} 元素內加入以下幾行：
 
 ```js
 let randomNumber = Math.floor(Math.random() * 100) + 1;
@@ -228,14 +294,18 @@ let guessCount = 1;
 let resetButton;
 ```
 
-這一區塊的程式碼設定我們的程式中用來儲存資料的變數。簡單的來說，「變數」是「值」的容器(值可以是數字、一串文字或是其他東西)。你可以用「關鍵字」(keyword) `let`(或是`var`)後面加上變數的名字來建立變數(在[之後的文章](/zh-TW/docs/Learn_web_development/Core/Scripting/Variables#the_difference_between_var_and_let)你會看到兩者的差別)。利用關鍵字 `const` 建立常數，常數(Constant)是用來儲存你不會更改的值。我們用常數儲存使用者介面的參照，使用者介面中的文字可能會改變，但是參照所指的 HTML 元素的不會改變。
+這段程式碼設定了我們需要的變數（和常數）來儲存我們程式將使用的資料。
 
-藉由等於符號(`=`)後面加上一個值，你可以指定變數或是常數的值。
+變數基本上是值的名稱（例如數字或文字字串）。你可以使用關鍵字 `let` 後面跟著變數名稱來建立一個變數。
+
+常數也用於命名值，但與變數不同，一旦設定就不能改變其值。在這種情況下，我們使用常數來儲存對我們使用者介面部分的參照。這些元素中的文字可能會改變，但每個常數總是參照它被初始化時的同一個 HTML 元素。你可以使用關鍵字 `const` 後面跟著常數名稱來建立一個常數。
+
+你可以用等號（`=`）後面跟著你想賦予的值，來為變數或常數賦值。
 
 在我們的範例中：
 
-- 第一個變數 — `randomNumber` — 被指定成一個由數學運算的 1 到 100 間的隨機數字
-- 接著的三個常數，分別儲存 HTML 中結果段落的參照，在後面的程式碼中，參照被用來插入一些數值 (注意他們都位於一個{{htmlelement("div")}}元素裡，後者在之後我們重置遊戲時會被用來選取所有三個{{htmlelement("p")}}元素)：
+- 第一個變數（`randomNumber`）被賦予一個 1 到 100 之間的隨機數字，這是透過一個數學演算法計算出來的。
+- 前三個常數各自儲存了對我們 HTML 中結果段落的參照，並用於稍後在程式碼中將值插入段落中（注意它們如何位於一個 `<div>` 元素內，這個元素本身在我們重新開始遊戲時，用於稍後選取這三個段落進行重置）：
 
   ```html
   <div class="resultParas">
@@ -245,229 +315,92 @@ let resetButton;
   </div>
   ```
 
-- 接著的兩個常數，分別儲存表單中的文字輸入和送出按鈕，之後會用來控制送出玩家猜測的數字。
+- 接下來的兩個常數儲存了對表單文字輸入框和提交按鈕的參照，並用於稍後處理猜測的提交。
 
   ```html
-  <label for="guessField">Enter a guess: </label
-  ><input type="text" id="guessField" class="guessField" />
-  <input type="submit" value="Submit guess" class="guessSubmit" />
+  <label for="guessField">輸入你的猜測：</label
+  ><input type="number" id="guessField" class="guessField" />
+  <input type="submit" value="送出猜測" class="guessSubmit" />
   ```
 
-- 最後兩個變數，一個儲存回合數 1，另一個儲存指向重新開始按鈕的參照 (按鈕現在還不存在，之後會加上的)。
+- 我們最後兩個變數儲存了猜測次數 1（用於追蹤玩家已經猜了多少次），以及一個對尚不存在（但稍後會存在）的重置按鈕的參照。
 
-> [!NOTE]
-> 從[下一篇文章](/zh-TW/docs/user:chrisdavidmills/variables)開始，你會學到更多有關變數的事。
+## 函式
 
-### 函式
-
-下一步，將下面這段添加到之前寫的那段程式碼：
+接下來，在你之前的 JavaScript 下方加入以下內容：
 
 ```js
 function checkGuess() {
-  alert("I am a placeholder");
+  console.log("我是一個佔位符");
 }
 ```
 
-函式是一段可重複利用的程式碼塊。建立一個函式便可以反複運行並避免撰寫重複的程式碼。定義函式有很多方法，在此我們先專注在一種簡單的方式。這裡我們以關鍵字 `function` 、自訂的函式名、一對括號以及一對花括號（`{ }`）建立函式。花括號中的程式碼便是我們調用函式時所要實際執行的程式碼。
+函式是可重複使用的程式碼區塊，你可以只寫一次，然後一次又一次地執行，從而省去不斷重複撰寫程式碼的麻煩。定義函式有幾種方法，但現在我們將專注於一種簡單的類型。在這裡，我們使用關鍵字 `function`，後面跟著一個名稱和一對括號來定義一個函式。之後，我們放上兩個大括號（`{ }`）。在大括號內是我們每次呼叫函式時想要執行的所有程式碼。
 
-輸入函式名稱與括號便可以執行函式。
+當我們想要執行程式碼時，我們輸入函式的名稱，後面跟著括號。
 
-讓我們來試試吧。儲存你的程式碼並重新整理瀏覽器畫面。進入 [開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，並輸入下面這行：
+現在讓我們試試看。儲存你的程式碼並在瀏覽器中重新整理頁面。然後進入[開發者工具的 JavaScript 主控台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，並輸入以下這行：
 
 ```js
 checkGuess();
 ```
 
-當按下 <kbd>Return</kbd>/<kbd>Enter</kbd> 時，你會看到一個警告跳窗顯示「I am a placeholder」。我們已經在程式中定義好一個函式，只要我們調用這個函式，函式便會彈出一個警告視窗。
+按下 <kbd>Return</kbd>／<kbd>Enter</kbd> 後，你應該會看到 `我是一個佔位符` 被記錄到主控台；我們在程式碼中定義了一個函式，每當我們呼叫它時，它就會輸出一個佔位符訊息。
 
-> [!NOTE]
-> 你會在後續的課程中學習到更多關於函式的事。
+## 文字字串
 
-### 運算子
-
-JavaScript 運算子可以讓我們執行比較、數學運算、連接字符串等。
-
-儲存我們的程式碼並重整頁面，開啟[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。接下來你可以試著輸入以下的範例 —— 輸入跟每個「範例」欄位中一樣的內容，每輸入一個就按下<kbd>Return</kbd> / <kbd>Enter</kbd>， 接著看看回傳的結果。
-
-如果你不能快速打開瀏覽器開發工具， 你可以使用内嵌的應用程式中輸入以下範例：
-
-```html hidden
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
-      }
-
-      body {
-        max-width: 700px;
-      }
-
-      p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
-      }
-
-      .input p {
-        margin-right: 1%;
-      }
-
-      .output p {
-        width: 100%;
-      }
-
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0c323d;
-        color: #809089;
-      }
-
-      div {
-        clear: both;
-      }
-    </style>
-  </head>
-  <body></body>
-
-  <script>
-    var geval = eval;
-
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
-
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-      inputDiv.focus();
-
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
-      }
-
-      inputForm.addEventListener("change", executeCode);
-    }
-
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch (e) {
-        var result = "error — " + e.message;
-      }
-
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
-
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
-
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
-
-      createInput();
-    }
-
-    createInput();
-  </script>
-</html>
-```
-
-{{ EmbedLiveSample('運算子', '100%', 300) }}
-
-首先讓我們看看以下的算數運算子：
-
-| 運算子 | 名稱 | 範例      |
-| ------ | ---- | --------- |
-| `+`    | 加法 | `6 + 9`   |
-| `-`    | 減法 | `20 - 15` |
-| `*`    | 乘法 | `3 * 7`   |
-| `/`    | 除法 | `10 / 5`  |
-
-你也可以使用 `+` 來連接字串 (在程式設計中，這稱爲**連接**)。試著輸入以下幾行程式，每次一行：
-
-```js
-var name = "Bingo";
-name;
-var hello = " says hello!";
-hello;
-var greeting = name + hello;
-greeting;
-```
-
-你也可以使用一些捷徑，這些被稱爲增量賦值運算子。如果你只是簡單想將兩個字串加在一起，你可以這樣做：
-
-```js
-name += " says hello!";
-```
-
-相當於
-
-```js
-name = name + " says hello!";
-```
-
-當我們進行真假值測試時 (例如[下面](#條件))，我們可以使用比較運算子，如：
-
-| 運算子 | 名稱                     | 範例                       |
-| ------ | ------------------------ | -------------------------- |
-| `===`  | 嚴格等於 (是否完全一樣?) | `5 === 2 + 4`              |
-| `!==`  | 不等於 (是否不一樣?)     | `'Chris' !== 'Ch' + 'ris'` |
-| `<`    | 小於                     | `10 < 6`                   |
-| `>`    | 大於                     | `10 > 20`                  |
-
-### 條件
-
-回到 `checkGuess()` 函式，我們希望的結果當然不只是彈出簡單訊息而已。我們更想要知道這個函式將如何檢查玩家的猜測是否準確，並回傳正確的結果。
-
-所以現在將 `checkGuess()` 函式替換成下面這個版本：
+字串用於表示文字。我們已經看過一個字串變數：在下面的程式碼中，`"我是一個佔位符"` 就是一個字串：
 
 ```js
 function checkGuess() {
-  var userGuess = Number(guessField.value);
+  console.log("我是一個佔位符");
+}
+```
+
+你可以使用雙引號（`"`）或單引號（`'`）來宣告字串，但對於單一字串宣告的開始和結束必須使用相同的形式：你不能寫成 `"我是一個佔位符'`。
+
+你也可以使用反引號（`` ` ``）來宣告字串。這樣宣告的字串稱為*樣板字面值*，並具有一些特殊屬性。特別的是，你可以在其中嵌入其他變數甚至運算式：
+
+```js
+const name = "Mahalia";
+
+const greeting = `Hello ${name}`;
+```
+
+這提供了一種將字串連接在一起的機制。
+
+## 條件式
+
+**條件式**程式碼區塊允許你根據某個條件是否為真來選擇性地執行程式碼。它們看起來有點像函式，但它們是不同的。讓我們透過在我們的範例中加入內容來探索條件式。
+
+我想可以肯定地說，我們不希望我們的 `checkGuess()` 函式只是吐出一個佔位符訊息。我們希望它能檢查玩家的猜測是否正確，並做出適當的回應。
+
+此時，請將你目前的 `checkGuess()` 函式替換為這個版本：
+
+```js
+function checkGuess() {
+  const userGuess = Number(guessField.value);
   if (guessCount === 1) {
-    guesses.textContent = "Previous guesses: ";
+    guesses.textContent = "先前的猜測：";
   }
-  guesses.textContent += userGuess + " ";
+  guesses.textContent = `${guesses.textContent}${userGuess}`;
 
   if (userGuess === randomNumber) {
-    lastResult.textContent = "Congratulations! You got it right!";
+    lastResult.textContent = "恭喜你！你猜對了！";
     lastResult.style.backgroundColor = "green";
     lowOrHi.textContent = "";
     setGameOver();
   } else if (guessCount === 10) {
-    lastResult.textContent = "!!!GAME OVER!!!";
+    lastResult.textContent = "！！！遊戲結束！！！";
+    lowOrHi.textContent = "";
     setGameOver();
   } else {
-    lastResult.textContent = "Wrong!";
+    lastResult.textContent = "錯了！";
     lastResult.style.backgroundColor = "red";
     if (userGuess < randomNumber) {
-      lowOrHi.textContent = "Last guess was too low!";
+      lowOrHi.textContent = "上次猜的數字太低了！";
     } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = "Last guess was too high!";
+      lowOrHi.textContent = "上次猜的數字太高了！";
     }
   }
 
@@ -477,67 +410,65 @@ function checkGuess() {
 }
 ```
 
-哇，突然出現了很多程式碼！我們來完整地看一遍這些程式並介紹它們是如何運行的。
+這是一大段程式碼，讓我們逐一檢視每個部分並解釋它的作用。
 
-- 第一行（上面的第 2 行）宣告一個名為 `userGuess` 的變數，並將其值設置為在表單中文字輸入格內的當前值。我們還通過內建的 `Number()` 方法運行此值，以確保該值絕對是一個數字。
-- 接下來，我們遇到第一個條件程式碼區塊（上面的第 3-5 行）。條件程式碼區塊允許你能基於某個條件是否為真來選擇性地執行程式碼。它看起來有點像函式，但其實並非如此。最簡單的條件區塊格式從 `if` 關鍵字開始，然後是一些括號，然後是一些花括號。在括號內包含一個比較測試。如果括號內的比較測試回傳 `true`，花括號內的程式碼則會被執行；否則不會執行，而會繼續執行接下來的程式碼。在這個情況下，我們的比較測試是檢查 `guessCount` 變數是否等於 `1`（即，這是否為玩家的第一次嘗試）：
+- 第一行宣告了一個名為 `userGuess` 的常數，並將其值設定為文字欄位中目前輸入的值。我們還將這個值透過內建的 `Number()` 建構子處理，以確保該值絕對是一個數字。
+- 接下來，我們遇到了第一個條件式程式碼區塊。最簡單的條件式區塊以關鍵字 `if` 開始，然後是一些括號，再是一些大括號。在括號內，我們包含一個測試。如果測試回傳 `true`，我們就執行大括號內的程式碼。如果不是，我們就不執行，並繼續執行下一段程式碼。在這種情況下，我們測試 `guessCount` 變數是否等於 `1`（也就是說，這是否是玩家的第一次嘗試）：
 
-  ```plain
-  guessCount === 1
+  ```js
+  guessCount === 1;
   ```
 
-  如果是，我們將 `guesses` 段落的文字內容設為 「Previous guesses: 」。
+- 如果是，我們就將猜測段落的文字內容設為 `先前的猜測：`。如果不是，我們就不做任何事。
+- 接下來，我們使用樣板字面值將目前的 `userGuess` 值附加到 `guesses` 段落的末尾，並在兩者之間加上一個空格。
+- 下一個區塊做了一些檢查：
+  - 第一個 `if (){ }` 檢查使用者的猜測是否等於我們 JavaScript 頂部設定的 `randomNumber`。如果是，玩家就猜對了，遊戲獲勝，所以我們向玩家顯示一條帶有漂亮綠色的恭喜訊息，清除高／低猜測訊息框的內容，並執行一個名為 `setGameOver()` 的函式，我們稍後會討論這個函式。
+  - 現在我們使用 `else if (){ }` 結構在最後一個測試的末尾鏈接了另一個測試。這個測試檢查這回合是否是使用者的最後一回合。如果是，程式會做與前一個區塊相同的事情，只是用遊戲結束訊息代替恭喜訊息。
+  - 鏈接在這段程式碼末尾的最後一個區塊（`else { }`）包含的程式碼只有在其他兩個測試都沒有回傳 `true` 的情況下才會執行（玩家沒有猜對，但他們還有剩餘的猜測次數）。在這種情況下，我們告訴他們他們錯了，然後我們執行另一個條件測試來檢查猜測是高於還是低於答案，並適當地顯示進一步的訊息告訴他們是高了還是低了。
+- 函式中的最後三行讓我們為下一次提交猜測做好準備。我們將 `guessCount` 變數加 1，這樣玩家就用掉了一次機會（`++` 是一個遞增運算——增加 1），並清空表單文字欄位的值並再次聚焦它，準備好輸入下一個猜測。
 
-- 第 6 行將當前 `userGuess` 的值附加到 `guesses` 段落的尾端，並加上一個空格，讓顯示的每次猜測紀錄之間都有一個空格。
-- 下一個條件區塊（上面第 8-24 行）做了一些檢查：
-  - 第一個 `if(){ }` 檢查用戶的猜測是否等於`我們`JavaScript 頂部設置的 `randomNumber`。如果是，代表玩家猜對了，贏了遊戲，所以我們向玩家顯示一個漂亮的綠色祝賀訊息，清除 `lowOrHigh` 段落的內容，並運行一個叫做 `setGameOver()` 的函式，這個函式我們稍後再討論。
-  - 現在我們使用 `else if(){ }` 區塊將另一個測試連接到上一個測試的後面。這個測試檢查本次猜測是否為玩家的最後一次猜測機會。如果是，則執行與上一個條件區塊相同的操作，只是這次是遊戲結束訊息，漂亮的綠色祝賀訊息。
-  - 連接到此條件區塊後面的最後一個區塊（`else { }`）只會在其他兩個測試都沒有返回 `true` 時執行（即，玩家沒有猜對，但他們還有更多的猜測機會）。在這種情況下，我們告訴他們猜錯了，然後我們執行另一個條件測試以檢查猜測是高於還是低於正確答案 `randomNumber`，並顯示進一步的訊息來告訴他們要猜得更高或更低。
+## 事件
 
-- 函式中的最後三行（上面的第 26-28 行）讓玩家可以提交下一個猜測。我們將`guessCount`變數加 1，來增加玩家已使用的猜測次數（`++`是遞增操作 - 遞增 1），並將表單中文字輸入格內的文字清空並給予其焦點（顯示文字輸入游標），準備好讓玩家輸入下一個猜測。
+至此，我們已經有了一個實作得很好的 `checkGuess()` 函式，但它不會做任何事，因為我們還沒有呼叫它。理想情況下，我們希望在按下「送出猜測」按鈕時呼叫它，為此我們需要使用**事件**。事件是在瀏覽器中發生的事情——按鈕被點擊、頁面載入、視訊播放等等——我們可以執行程式碼區塊來回應這些事件。**事件監聽器**觀察特定的事件並呼叫**事件處理函式**，這些函式會在事件觸發時執行。
 
-### 事件
-
-現在我們有了一個很好的 `checkGuess()` 函式，但它並不會做任何事情，因為我們還沒有呼叫它。我們想在按下 「Submit guess」 按鈕時呼叫它，為此，我們需要使用**事件**。事件是在瀏覽器中發生的操作，例如單擊按鈕，加載頁面或播放影片，以讓我們可以在這些操作發生時執行程式碼。偵聽事件發生的構造稱為**事件偵聽器**，偵聽事件而觸發執行的程式碼稱為**事件處理器**。
-
-在 `checkGuess()` 函式下面添加下行（不是指函式內部的後面，而是函式外）：
+在你的 `checkGuess()` 函式下方加入以下這行：
 
 ```js
 guessSubmit.addEventListener("click", checkGuess);
 ```
 
-這裡我們為 `guessSubmit` 按鈕添加一個事件偵聽器。這是一個函式，它接受兩個輸入值（稱為*參數*） - 我們正在監聽的事件類型字串（本例中的 `click`），以及我們想要在事件發生時運行的程式碼（在這種情況下是`checkGuess()`函式） — 請注意，在編寫 [`addEventListener()`](/zh-TW/docs/Web/API/EventTarget/addEventListener) 內部時我們不需要為函式加上括號。
+在這裡，我們正在為 `guessSubmit` 按鈕加入一個事件監聽器。這是一個需要兩個輸入值（稱為*引數*）的方法——我們正在監聽的事件類型（在此例中為 `click`）作為一個字串，以及事件發生時我們想要執行的函式（在此例中為 `checkGuess()`）。請注意，在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 中撰寫時，我們不需要指定括號。
 
-現在保存並重整頁面，現在你的範例應該可以正常執行了。現在唯一的問題是，如果你猜對了正確的答案或用完了猜測機會，那麼遊戲就會出錯，因為我們還沒有定義 `setGameOver()` — 遊戲結束後應該執行的函式。現在讓我們加上缺少的程式碼並完成範例功能。
+現在試著儲存並重新整理你的程式碼，你的範例應該可以運作了——在某種程度上。現在唯一的問題是，如果你猜對了答案或用完了猜測次數，遊戲將會中斷，因為我們還沒有定義遊戲結束時應該執行的 `setGameOver()` 函式。現在讓我們加入我們缺少的程式碼並完成範例的功能。
 
-### 完成遊戲功能
+## 完成遊戲功能
 
-讓我們加入 `setGameOver()` 這個函式到我們程式碼的底部並演練它。 現在，在你的 JavaScript 尾端加上這些：
+讓我們將 `setGameOver()` 函式加到我們程式碼的底部，然後逐一檢視它。現在將它加到你其餘 JavaScript 的下方：
 
 ```js
 function setGameOver() {
   guessField.disabled = true;
   guessSubmit.disabled = true;
   resetButton = document.createElement("button");
-  resetButton.textContent = "Start new game";
-  document.body.appendChild(resetButton);
+  resetButton.textContent = "開始新遊戲";
+  document.body.append(resetButton);
   resetButton.addEventListener("click", resetGame);
 }
 ```
 
-- 函數中的前兩行透過將表單的文字輸入和按鈕的 `disabled` 屬性設為 `true` 來將兩者無效化。這很重要，因為如果沒有這麼做，使用者可能會在遊戲結束後繼續送出更多猜測值，這也許會把東西弄得一團糟。
-- 接下來的三行會生成一個新的 {{htmlelement("button")}} 元素，將它的文字標籤設為「Start new game」後，添加到我們的 HTML 的最尾端。
-- 最後一行則會在我們的新按鈕上設置一個事件偵聽器，來讓使用者按下按鈕時執行一個叫 `resetGame()` 的函數。
+- 前兩行透過將表單文字輸入框和按鈕的 `disabled` 屬性設定為 `true` 來停用它們。這是必要的，因為如果我們不這樣做，使用者在遊戲結束後還可以提交更多的猜測，這會搞亂一切。
+- 接下來的三行會產生一個新的 {{htmlelement("button")}} 元素，將其文字標籤設定為「開始新遊戲」，並將其加到我們現有 HTML 的底部。
+- 最後一行在我們的新按鈕上設定了一個事件監聽器，這樣當它被點擊時，就會執行一個名為 `resetGame()` 的函式。
 
-現在讓我們來定義 `resetGame()`！再次將下面這些程式碼加進你的 JavaScript 的最下方。
+現在我們也需要定義 `resetGame()`！再次將以下程式碼加到你 JavaScript 的底部：
 
 ```js
 function resetGame() {
   guessCount = 1;
 
-  var resetParas = document.querySelectorAll(".resultParas p");
-  for (var i = 0; i < resetParas.length; i++) {
-    resetParas[i].textContent = "";
+  const resetParas = document.querySelectorAll(".resultParas p");
+  for (const resetPara of resetParas) {
+    resetPara.textContent = "";
   }
 
   resetButton.parentNode.removeChild(resetButton);
@@ -553,135 +484,61 @@ function resetGame() {
 }
 ```
 
-這段相對較常的程式碼會完全將所有東西重置到遊戲的初始狀態，讓玩家可以再玩一次。這段程式碼做了下面這些事：
+這個相當長的程式碼區塊將所有東西完全重置回遊戲開始時的狀態，這樣玩家就可以再玩一次。
+
+具體來說，它：
 
 - 將 `guessCount` 設回 1。
-- 清除所有訊息段落。
-- 將重置按鈕移除。
-- 將表單元素有效化，清空文字輸入並給予其焦點，準備好讓玩家能夠進行新一輪的猜測。
-- `將lastResult` 段落的背景顏色設回白色。
-- 生成一個新的隨機數值，才不會讓玩家又猜一次重複的答案！
+- 清空所有訊息段落中的文字。我們使用 `<div class="resultParas"></div>` 選取其中的所有段落，然後遍歷每一個段落，將其 `textContent` 設定為 `""`（一個空字串）。
+- 從我們的程式碼中移除重置按鈕。
+- 重新啟用表單元素，並清空和聚焦文字欄位，準備好輸入新的猜測。
+- 移除 `lastResult` 段落的背景顏色。
+- 產生一個新的隨機數字，這樣你就不會只是再次猜測同一個數字了！
 
-**現在，你應該有了一個完整且能正常執行的簡單遊戲了 — 恭喜你啦！**
+**至此，你應該已經有了一個基本功能齊全的遊戲——恭喜你！**
 
-接下來這篇文章的工作只剩下來談談其他幾個很重要的程式功能，你應該已經看過了，只是還沒察覺罷了。
+在本文中，我們剩下要做的就是討論一些你已經見過但可能沒有意識到的其他重要程式碼功能。
 
-### 迴圈
+## 迴圈
 
-上面的程式碼中，一個我們需要仔細看看的部份是 [for](/zh-TW/docs/Web/JavaScript/Reference/Statements/for) 迴圈。迴圈在程式設計中是一個非常重要的內容，可以讓你在滿足條件前反覆執行同一段程式碼。
+上面，我們提到了**迴圈**，這是程式設計中一個非常重要的概念，它允許你不斷地重複執行一段程式碼，直到滿足某個條件為止。
 
-開始吧，打開你的[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，然後輸入下面這行：
+讓我們探索一個基本的範例來向你展示這是什麼意思。再次前往你的[瀏覽器開發者工具 JavaScript 主控台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)，將以下程式碼貼入其中，然後按下 <kbd>Enter</kbd>／<kbd>Return</kbd>：
 
 ```js
-for (var i = 1; i < 21; i++) {
-  console.log(i);
+const fruits = ["蘋果", "香蕉", "櫻桃"];
+for (const fruit of fruits) {
+  console.log(fruit);
 }
 ```
 
-看見了嗎？在你的主控台內印出了數字 1 到 20。這就是迴圈的效果。一個 for 迴圈需要三個參數：
+發生了什麼事？字串 `'蘋果'、'香蕉'、'櫻桃'` 被印在你的主控台上了。
 
-1. **起始動作：**這個例子中我們從 1 開始累加，這個起始數值可以是任何你想要的值。你也可以不要使用 `i` 這個變數名稱，但習慣上我們會使用 `i` ，因為它簡單好記。
-2. **離開條件：**這裡我們指定了 `i < 21` — 這個迴圈會一直執行直到 `i` 不再小於 21。當 `i` 達到 21，這個迴圈就會停止執行。
-3. **增加動作：**我們指定了 `i++`，「將 `i` 的值加 1」。這個迴圈會對每個 `i` 的值執行一次，直到 `i` 達到 21（如上一條所述）。這個例子中，我們簡單的透過 {{domxref("Console.log", "console.log()")}} 將每次迴圈中 `i` 的值輸出到主控台中。
+這是因為迴圈的關係。`const fruits = ['蘋果', '香蕉', '櫻桃'];` 這一行建立了一個陣列，它是一個值的集合（在這個例子中是字串）。
 
-現在我們來看看在猜謎遊戲中的迴圈 — 這可以在 `resetGame()` 函式中找到：
+然後我們使用 [`for...of`](/zh-TW/docs/Web/JavaScript/Reference/Statements/for...of) 迴圈來取得陣列中的每個項目並對其執行一些 JavaScript。`for (const fruit of fruits)` 這一行表示：
+
+1. 取得 `fruits` 中的第一個值並將其儲存在名為 `fruit` 的變數中。
+2. 執行 `{}` 大括號之間的程式碼（在這種情況下，是將 `fruit` 的值記錄到主控台）。
+3. 將下一個陣列值儲存在 `fruit` 中，並重複步驟 2，直到你到達 `fruits` 陣列的末尾。
+
+現在讓我們看看我們猜數字遊戲中的迴圈——以下內容可以在 `resetGame()` 函式中找到：
 
 ```js
-var resetParas = document.querySelectorAll(".resultParas p");
-for (var i = 0; i < resetParas.length; i++) {
-  resetParas[i].textContent = "";
+const resetParas = document.querySelectorAll(".resultParas p");
+for (const resetPara of resetParas) {
+  resetPara.textContent = "";
 }
 ```
 
-這段程式碼透過呼叫 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} 創建一個變數並存著一個在 `<div class="resultParas">` 中的所有段落清單，然後使用迴圈來遍歷每個段落元素，並移除其內容。
+這段程式碼使用 {{domxref("Document.querySelectorAll", "querySelectorAll()")}} 方法建立一個變數，其中包含 `<div class="resultParas">` 內所有段落的列表，然後它會遍歷每一個段落，移除每個段落的文字內容。
 
-### 稍微討論一下物件
+請注意，即使 `resetPara` 是一個常數，我們仍然可以改變它的內部屬性，例如 `textContent`。
 
-在開始討論這個段落的話題前，先來做點小小修改。在你的 JavaScript 接近頂部的 `var resetButton` 下一行加上：
+## 總結
 
-```js
-guessField.focus();
-```
+那麼，建立這個範例就到此為止了。你已經完成了——做得好！試試你最終的程式碼，或者[在這裡玩我們完成的版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你的範例版本無法運作，請對照[原始碼](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)進行檢查。
 
-，然後存檔。
-
-這一行呼叫了 {{domxref("HTMLElement.focus", "focus()")}} 方法來在頁面讀取時，將輸入游標自動放進 {{htmlelement("input")}} 文字欄裡面，這意味著使用者在開啟頁面後就可以直接使用鍵盤來在文字欄內輸入文字，而不用先點選文字欄。這只是個小修改，可是大大的提升了使用體驗，也給了使用者清楚的提示 — 提示他們要做些什麼來遊玩這個遊戲。
-
-讓我們來分析一下究竟發生了什麼事。在 JavaScript 中，所有東西都是一個**物件**。物件是一個集合，由許多相關的功能打包成一體。你可以創建一個你自己的物件，不過這比較進階，我們現在並不會涵蓋這個內容，這些會在課程的後期提到。現在，我們只會簡要的提到一些你的瀏覽器內建的物件，他們能夠讓你做到許多有用的事。
-
-在這個例子中，我們首先創建了一個 `guessField` 變數，儲存著一個指向 HTML 表單中文字輸入欄的參照 — 這可以在我們定義變數的區塊中找到：
-
-```js
-var guessField = document.querySelector(".guessField");
-```
-
-我們使用了 {{domxref("document.querySelector", "querySelector()")}} 來取得這個參照，前者是 {{domxref("document")}} 物件的方法。`querySelector()` 接受一個參數——一個 [CSS 選擇器](/zh-TW/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)，會回傳你想要的元素參照。
-
-因為現在 `guessField` 中存著一個指向 {{htmlelement("input")}} 元素的參照，它現在可以存取這個元素的屬性（基本上就是存在物件中的變數，其中有一些可能會是常數）和方法（基本上就是存在物件中的函式）了。文字輸入欄的其中一個方法便是 `focus()`，我們便可以透過呼叫這個方法來給予其焦點：
-
-```js
-guessField.focus();
-```
-
-沒有存著表單元素參照的變數就不會有 `focus()` 方法能使用。
-例如存著一個 {{htmlelement("p")}} 元素的 `guesses` 和存著一個數值的 `guessCount`。
-
-### 來玩玩瀏覽器物件
-
-讓我們來稍微玩一點瀏覽器內建的物件吧。
-
-1. 首先在瀏覽器中開啟你的程式。
-2. 接下來，打開你的[開發者工具 JavaScript console](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)。
-3. 輸入 `guessField`，可以看到主控台顯示這個變數儲存著一個 {{htmlelement("input")}} 元素。你還可以發現主控台會自動幫你完成已存在的物件名稱！
-4. 接下來輸入：
-
-   ```js
-   guessField.value = "Hello";
-   ```
-
-   `value` 屬性儲存著現在文字輸入欄內的內容參照。現在按下
-
-   <kbd>Enter</kbd>
-
-   ，看看文字欄內的內容是不是變了？
-
-5. 試著輸入 `guesses` 然後按下
-
-   <kbd>Enter</kbd>
-
-   ，主控台會顯示這個變數儲存著一個 {{htmlelement("p")}} 元素。
-
-6. 現在輸入：
-
-   ```js
-   guesses.value;
-   ```
-
-   瀏覽器會回傳 `undefined`，因為 `value` 不存在在段落元素裡面。
-
-7. 要更改段落元素中的文字，你需要的是 {{domxref("Node.textContent", "textContent")}} 屬性。試試這個：
-
-   ```js
-   guesses.textContent = "Where is my paragraph?";
-   ```
-
-8. 現在來做些好玩的事。一行一行輸入並
-
-   <kbd>Enter</kbd>
-
-   ：
-
-   ```js
-   guesses.style.backgroundColor = "yellow";
-   guesses.style.fontSize = "200%";
-   guesses.style.padding = "10px";
-   guesses.style.boxShadow = "3px 3px 6px black";
-   ```
-
-   每個在頁面上的元素都有一個 `style` 屬性，其本身又是另一個物件，包含著許多該元素的行內 CSS 屬性。這讓我們能透過 JavaScript 來動態的為元素設置 CSS 屬性。
-
-## 差不多就到這了
-
-這就是我們的範例 — 你順利地來到結尾了，做得不錯！試試你的最終成品，或試試[我們的版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。如果你仍然有困難沒有解決，再看看[我們的原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)。
+下一課可能也會有所幫助——在其中，我們將討論撰寫 JavaScript 程式碼時可能出現的問題，並在此過程中回顧「猜數字」遊戲。
 
 {{PreviousMenuNext("Learn_web_development/Core/Scripting/What_is_JavaScript", "Learn_web_development/Core/Scripting/What_went_wrong", "Learn_web_development/Core/Scripting")}}

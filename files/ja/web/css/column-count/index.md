@@ -9,7 +9,7 @@ l10n:
 
 **`column-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のコンテンツを指定された段数の段組みに分割します。
 
-{{InteractiveExample("CSS Demo: column-count")}}
+{{InteractiveExample("CSS デモ: column-count")}}
 
 ```css interactive-example-choice
 column-count: 2;

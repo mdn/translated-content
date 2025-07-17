@@ -3,8 +3,6 @@ title: place-items
 slug: Web/CSS/place-items
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 中的 **`place-items`** 是一个[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) ，它允许你在相关的布局（如[网格](/zh-CN/docs/Web/CSS/CSS_grid_layout)或[弹性盒子](/zh-CN/docs/Web/CSS/CSS_flexible_box_layout)）中可以同时沿着块级和内联方向对齐元素（例如：{{CSSxRef("align-items")}} 和 {{CSSxRef("justify-items")}} 属性）。如果未提供第二个值，则第一个值作为第二个值的默认值。
 
 {{InteractiveExample("CSS Demo: place-items")}}

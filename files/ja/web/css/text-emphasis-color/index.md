@@ -9,7 +9,7 @@ l10n:
 
 **`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。
 
-{{InteractiveExample("CSS Demo: text-emphasis-color")}}
+{{InteractiveExample("CSS デモ: text-emphasis-color")}}
 
 ```css interactive-example-choice
 text-emphasis-color: currentColor;

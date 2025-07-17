@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.sinh()")}}
+{{InteractiveExample("JavaScript デモ: Math.sinh()")}}
 
 ```js interactive-example
 console.log(Math.sinh(0));

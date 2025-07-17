@@ -9,7 +9,7 @@ l10n:
 
 **`copyWithin()`** は {{jsxref("Array")}} インスタンスのメソッドで、この配列の一部を配列内の他の場所にシャローコピーし、この配列を長さを変更せずに返します。
 
-{{InteractiveExample("JavaScript Demo: Array.copyWithin()")}}
+{{InteractiveExample("JavaScript デモ: Array.copyWithin()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c", "d", "e"];
