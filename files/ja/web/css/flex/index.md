@@ -9,7 +9,7 @@ l10n:
 
 **`flex`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、{{glossary("flex item","フレックスアイテム")}}をフレックスコンテナーの領域に収めるために、どのように伸長・収縮させるかを指定します。
 
-{{InteractiveExample("CSS Demo: flex")}}
+{{InteractiveExample("CSS デモ: flex")}}
 
 ```css interactive-example-choice
 flex: 1;

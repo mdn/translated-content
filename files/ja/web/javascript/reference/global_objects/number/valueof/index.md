@@ -9,7 +9,7 @@ l10n:
 
 **`valueOf()`** メソッドは {{jsxref("Number")}} オブジェクトがラップしているプリミティブ値を返します。
 
-{{InteractiveExample("JavaScript Demo: Number.valueOf()")}}
+{{InteractiveExample("JavaScript デモ: Number.valueOf()")}}
 
 ```js interactive-example
 const numObj = new Number(42);

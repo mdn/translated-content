@@ -3,8 +3,6 @@ title: font-variant-position
 slug: Web/CSS/font-variant-position
 ---
 
-{{CSSRef}}
-
 The **`font-variant-position`** CSS property controls the use of alternate, smaller glyphs that are positioned as superscript or subscript.
 
 The glyphs are positioned relative to the baseline of the font, which remains unchanged. These glyphs are typically used in {{HTMLElement("sub")}} and {{HTMLElement("sup")}} elements.

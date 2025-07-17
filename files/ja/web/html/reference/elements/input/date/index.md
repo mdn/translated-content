@@ -11,7 +11,7 @@ l10n:
 
 結果の値には年、月、日が含まれますが、時刻は含まれません。 {{HTMLElement("input/time", "time")}} および {{HTMLElement("input/datetime-local", "datetime-local")}} 入力型は時刻や日付と時刻の入力に対応しています。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;date&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="start">Start date:</label>

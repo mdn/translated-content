@@ -10,7 +10,7 @@ l10n:
 
 **`spellcheck`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素でスペルミスのチェックを行うかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 
-{{InteractiveExample("HTML Demo: spellcheck", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: spellcheck", "tabbed-shorter")}}
 
 ```html interactive-example
 <textarea spellcheck="true">

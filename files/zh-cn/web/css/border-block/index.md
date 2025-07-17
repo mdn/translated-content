@@ -3,8 +3,6 @@ title: border-block
 slug: Web/CSS/border-block
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`border-block`** 为[简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用于在样式表中的某处同时设置逻辑块向边框的各属性值。
 
 {{InteractiveExample("CSS Demo: border-block")}}

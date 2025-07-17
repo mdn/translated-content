@@ -3,8 +3,6 @@ title: 异步函数（async function）表达式
 slug: Web/JavaScript/Reference/Operators/async_function
 ---
 
-{{jsSidebar("Operators")}}
-
 **`async function`** 关键字可用于定义表达式中的异步函数。
 
 你还可以使用[异步函数声明](/zh-CN/docs/Web/JavaScript/Reference/Statements/async_function)。

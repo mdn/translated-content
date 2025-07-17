@@ -9,7 +9,7 @@ l10n:
 
 **`Object.keys()`** 静的メソッドは、指定されたオブジェクトが持つプロパティの**名前**の配列を、通常のループで取得するのと同じ順序で返します。
 
-{{InteractiveExample("JavaScript Demo: Object.keys()")}}
+{{InteractiveExample("JavaScript デモ: Object.keys()")}}
 
 ```js interactive-example
 const object1 = {

@@ -10,7 +10,7 @@ l10n:
 
 **`<table>`** は [HTML](/ja/docs/Web/HTML) の要素で、表形式のデータ、つまり、行と列の組み合わせによるセルに含まれたデータによる二次元の表で表現される情報です。
 
-{{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-taller")}}
+{{InteractiveExample("HTML デモ: &lt;table&gt;", "tabbed-taller")}}
 
 ```html interactive-example
 <table>

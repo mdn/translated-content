@@ -249,7 +249,7 @@ console.log(someString); // 期待される値: 'Data' （'Data Again' とはな
 ### メモリーの問題
 
 ```js
-const elts = document.getElementsByTagName("*");
+const elems = document.getElementsByTagName("*");
 
 // ケース 1
 for (const elem of elems) {

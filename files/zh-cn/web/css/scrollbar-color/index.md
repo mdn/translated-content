@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2a472faa513c29e43c014c76803fbb042c0a86b
 ---
 
-{{CSSRef}}
-
 **`scrollbar-color`** [CSS](/zh-CN/docs/Web/CSS) 属性设置滚动条轨道（track）和滑块（thumb）的颜色。
 
 **轨道**是指滚动条的背景，其一般是固定且与滚动位置无关的。

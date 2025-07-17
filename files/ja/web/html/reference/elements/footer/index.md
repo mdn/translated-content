@@ -10,7 +10,7 @@ l10n:
 
 **`<footer>`** は [HTML](/ja/docs/Web/HTML) の要素で、直近の[区分コンテンツ](/ja/docs/Web/HTML/Guides/Content_categories#区分コンテンツ)または[区分化ルート](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements#区分コンテンツのラベル付け)要素のフッターを表します。フッターには通常、そのセクションの著者に関する情報、関連文書へのリンク、著作権情報等を含めます。
 
-{{InteractiveExample("HTML Demo: &lt;footer&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;footer&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <article>

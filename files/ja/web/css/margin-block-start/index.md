@@ -9,7 +9,7 @@ l10n:
 
 **`margin-block-start`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の論理的なインライン方向の先頭側のマージンを定義し、それが要素の書字方向やテキストの方向に応じて物理的なマージンに対応づけられます。
 
-{{InteractiveExample("CSS Demo: margin-block-start")}}
+{{InteractiveExample("CSS デモ: margin-block-start")}}
 
 ```css interactive-example-choice
 margin-block-start: 20px;

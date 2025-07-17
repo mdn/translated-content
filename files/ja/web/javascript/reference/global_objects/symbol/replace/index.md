@@ -11,7 +11,7 @@ l10n:
 
 詳しくは、[`RegExp.prototype[Symbol.replace]()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/RegExp/Symbol.replace)、{{jsxref("String.prototype.replace()")}}、{{jsxref("String.prototype.replaceAll()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.replace")}}
+{{InteractiveExample("JavaScript デモ: Symbol.replace")}}
 
 ```js interactive-example
 class Replace1 {

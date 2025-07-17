@@ -9,7 +9,7 @@ l10n:
 
 **`codePointAt()`** は {{jsxref("String")}} のメソッドで、指定されたインデックスから始まる文字の Unicode コードポイント値である非負の整数を返します。インデックスは Unicode コードポイントではなく、UTF-16 コード単位に基づくことに注意してください。
 
-{{InteractiveExample("JavaScript Demo: String.codePointAt()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.codePointAt()", "shorter")}}
 
 ```js interactive-example
 const icons = "☃★♲";
