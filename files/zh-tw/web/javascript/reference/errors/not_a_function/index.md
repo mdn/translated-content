@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
- JavaScript 的「is not a function」例外會在試圖將一個值當作函式呼叫，但該值實際上並非函式時發生。
+JavaScript 的「is not a function」例外會在試圖將一個值當作函式呼叫，但該值實際上並非函式時發生。
 
 ## 訊息
 
@@ -26,10 +26,7 @@ TypeError: "x" is not a function.（基於 V8 & Firefox & Safari）
 有許多內建函式需要一個（回呼）函式。你必須提供一個函式，才能讓這些方法正常運作：
 
 - 當使用 {{jsxref("Array")}} 或 {{jsxref("TypedArray")}} 物件時：
-  - {{jsxref("Array.prototype.every()")}}、{{jsxref("Array.prototype.some()")}}、
-    {{jsxref("Array.prototype.forEach()")}}、{{jsxref("Array.prototype.map()")}}、
-    {{jsxref("Array.prototype.filter()")}}、{{jsxref("Array.prototype.reduce()")}}、
-    {{jsxref("Array.prototype.reduceRight()")}}、{{jsxref("Array.prototype.find()")}}
+  - {{jsxref("Array.prototype.every()")}}、{{jsxref("Array.prototype.some()")}}、{{jsxref("Array.prototype.forEach()")}}、{{jsxref("Array.prototype.map()")}}、{{jsxref("Array.prototype.filter()")}}、{{jsxref("Array.prototype.reduce()")}}、{{jsxref("Array.prototype.reduceRight()")}}、{{jsxref("Array.prototype.find()")}}
 
 - 當使用 {{jsxref("Map")}} 和 {{jsxref("Set")}} 物件時：
   - {{jsxref("Map.prototype.forEach()")}} 和 {{jsxref("Set.prototype.forEach()")}}
