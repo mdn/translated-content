@@ -5,10 +5,6 @@ l10n:
   sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
 ---
 
-<section id="Quick_links">
-  {{ListSubpages("", 1, 0, 1)}}
-</section>
-
 全球資訊網的開放性提供了開發人員非常棒的機會。要充分發揮 Web 潛能，你需要知道如何使用它們。你可以從以下連結找到各種 Web 技術說明。
 
 ## Web 開發者說明文件
