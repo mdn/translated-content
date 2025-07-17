@@ -3,10 +3,8 @@ title: Web 開放字型格式（WOFF）
 short-title: WOFF
 slug: Web/CSS/CSS_fonts/WOFF
 l10n:
-  sourceCommit: 0dcad86763896bba7f8e1ddc30c6dfd2aa664c6b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **WOFF**（**Web 開放字型格式**）是一種由 Mozilla 與 Type Supply、LettError 及其他組織共同開發的 Web 字型格式。它使用與 TrueType、OpenType 和 Open Font Format 相同的表格式 `sfnt` 結構的壓縮版本，但增加了後設資料和私用資料結構，包括允許字型公司和供應商在需要時提供授權訊息的預定義欄位。
 
