@@ -10,7 +10,7 @@ l10n:
 ## 訊息
 
 ```plain
-SyntaxError: Illegal return statement (V8-based)
+SyntaxError: Illegal return statement（基於 V8）
 SyntaxError: return not in function (Firefox)
 SyntaxError: Return statements are only valid inside functions. (Safari)
 ```
