@@ -14,7 +14,7 @@ input:valid {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :valid", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :valid", "tabbed-shorter")}}
 
 ```css interactive-example
 label {

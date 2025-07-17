@@ -3,8 +3,6 @@ title: brightness()
 slug: Web/CSS/filter-function/brightness
 ---
 
-{{CSSRef}}
-
 **`brightness()`** [CSS](/zh-CN/docs/Web/CSS)函数将线性乘数应用于输入图像，使其看起来更亮或更暗。结果是一个{{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: brightness()")}}

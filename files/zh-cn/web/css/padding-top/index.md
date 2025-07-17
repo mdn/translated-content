@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`padding-top`** [CSS](/zh-CN/docs/Web/CSS) 属性设置了元素顶部[内边距区域](/zh-CN/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#内边距区域)的高度。
 
 {{InteractiveExample("CSS Demo: padding-top")}}

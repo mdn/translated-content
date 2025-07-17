@@ -9,7 +9,7 @@ l10n:
 
 **`padding-inline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なインライン方向の先頭と末尾のパディングを設定します。これは要素の書字方向やテキストの向きに応じて物理的なパディングに変換されます。
 
-{{InteractiveExample("CSS Demo: padding-inline")}}
+{{InteractiveExample("CSS デモ: padding-inline")}}
 
 ```css interactive-example-choice
 padding-inline: 5% 10%;

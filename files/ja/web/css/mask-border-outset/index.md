@@ -1,6 +1,8 @@
 ---
 title: mask-border-outset
 slug: Web/CSS/mask-border-outset
+l10n:
+  sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
 {{CSSRef}}
@@ -29,6 +31,7 @@ mask-border-outset: 7px 12px 14px 5px;
 mask-border-outset: inherit;
 mask-border-outset: initial;
 mask-border-outset: revert;
+mask-border-outset: revert-layer;
 mask-border-outset: unset;
 ```
 

@@ -8,7 +8,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/Collator/Collator
 **`Intl.Collator()`** コンストラクターは、言語を考慮した文字列の比較を可能にする
 {{jsxref("Intl/Collator", "Intl.Collator")}} オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Collator")}}
+{{InteractiveExample("JavaScript デモ: Intl.Collator")}}
 
 ```js interactive-example
 console.log(["Z", "a", "z", "ä"].sort(new Intl.Collator("de").compare));

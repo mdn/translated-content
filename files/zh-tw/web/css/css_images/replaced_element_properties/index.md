@@ -2,10 +2,8 @@
 title: 為替換元素設定樣式
 slug: Web/CSS/CSS_images/Replaced_element_properties
 l10n:
-  sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 有些 [CSS](/zh-TW/docs/Web/CSS) 屬性適用於所有元素，有些只適用於網格和 flex 容器，還有一些只適用於可變形元素。本指南介紹只適用於*替換元素*的屬性。
 
