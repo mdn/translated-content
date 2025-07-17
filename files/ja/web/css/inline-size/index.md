@@ -9,7 +9,7 @@ l10n:
 
 **`inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のブロックにおける[インライン軸](/ja/docs/Glossary/Grid_Axis)方向の寸法を定義します。書字方向 ({{cssxref("writing-mode")}}) が横書きである場合、これは {{cssxref("width")}} に対応します。書字方向が縦書きである場合、 {{cssxref("height")}} プロパティに対応します。関連するプロパティは {{cssxref("block-size")}} であり、これは要素のもう一方の軸を定義します。
 
-{{InteractiveExample("CSS Demo: inline-size")}}
+{{InteractiveExample("CSS デモ: inline-size")}}
 
 ```css interactive-example-choice
 inline-size: 150px;

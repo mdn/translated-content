@@ -3,8 +3,6 @@ title: font-language-override
 slug: Web/CSS/font-language-override
 ---
 
-{{CSSRef}}
-
 **font-language-override** CSS 属性控制在指定的语言中使用特定的字形。
 
 ```css

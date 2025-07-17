@@ -9,7 +9,7 @@ l10n:
 
 **`margin-bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の下側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
-{{InteractiveExample("CSS Demo: margin-bottom")}}
+{{InteractiveExample("CSS デモ: margin-bottom")}}
 
 ```css interactive-example-choice
 margin-bottom: 1em;

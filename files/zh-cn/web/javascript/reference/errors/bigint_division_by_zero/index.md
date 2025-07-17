@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
 ---
 
-{{jsSidebar("Errors")}}
-
 当一个 {{jsxref("BigInt")}} 被 `0n` 除时，会产生 JavaScript 异常“BigInt division by zero”。
 
 ## 错误信息

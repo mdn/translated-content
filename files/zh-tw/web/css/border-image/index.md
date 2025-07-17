@@ -2,10 +2,8 @@
 title: border-image
 slug: Web/CSS/border-image
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`border-image`** [CSS](/zh-TW/docs/Web/CSS) 屬性會在給定元素的周圍繪製一個圖片。它會取代元素的一般[邊框](/zh-TW/docs/Web/CSS/border)。
 

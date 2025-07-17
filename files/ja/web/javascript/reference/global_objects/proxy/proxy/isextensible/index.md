@@ -9,7 +9,7 @@ l10n:
 
 **`handler.isExtensible()`** は、オブジェクトの `[[IsExtensible]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。{{jsxref("Object.isExtensible()")}} などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.isExtensible()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.isExtensible()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/formatRangeToP
 
 **`Intl.DateTimeFormat.prototype.formatRangeToParts()`** メソッドは、 {{jsxref("Intl.DateTimeFormat")}} フォーマッターで生成される期間の各部品を表すロケール特有のトークンを提供します。
 
-{{InteractiveExample("JavaScript Demo: Intl.DateTimeFormat.prototype.formatRangeToParts()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Intl.DateTimeFormat.prototype.formatRangeToParts()", "taller")}}
 
 ```js interactive-example
 const startDate = new Date(Date.UTC(2007, 0, 10, 10, 0, 0)); // > 'Wed, 10 Jan 2007 10:00:00 GMT'

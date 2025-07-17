@@ -3,8 +3,6 @@ title: 乘法（*）
 slug: Web/JavaScript/Reference/Operators/Multiplication
 ---
 
-{{jsSidebar("Operators")}}
-
 **乘法**（**`*`**）运算符计算操作数的乘积。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Multiplication operator")}}

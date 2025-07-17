@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/globalThis
 
 **`globalThis`** はグローバルプロパティで、グローバルオブジェクトと同等であるグローバルな `this` が格納されています。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - globalThis", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - globalThis", "shorter")}}
 
 ```js interactive-example
 function canMakeHTTPRequest() {

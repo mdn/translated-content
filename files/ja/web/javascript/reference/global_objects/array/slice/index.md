@@ -10,7 +10,7 @@ l10n:
 **`slice()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の一部を `start` から `end` （`end` は含まれない）までの範囲で、選択した新しい配列オブジェクトに[シャローコピー](/ja/docs/Glossary/Shallow_copy)して返します。
 ここで `start` と `end` はその配列に含まれる項目のインデックスを表します。元の配列は変更されません。
 
-{{InteractiveExample("JavaScript Demo: Array.slice()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Array.slice()", "taller")}}
 
 ```js interactive-example
 const animals = ["ant", "bison", "camel", "duck", "elephant"];
