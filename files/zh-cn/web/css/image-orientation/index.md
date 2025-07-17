@@ -3,8 +3,6 @@ title: image-orientation
 slug: Web/CSS/image-orientation
 ---
 
-{{CSSRef}}
-
 CSS 属性 **`image-orientation`** 用来修正某些图片的预设方向。
 
 > [!NOTE]

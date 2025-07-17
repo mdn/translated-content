@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`search`** 型は、ユーザーが検索クエリーを入力するために設計されたテキスト入力欄です。 [`text`](/ja/docs/Web/HTML/Reference/Elements/input/text) 入力欄と機能的には同じですが、{{Glossary("User agent", "ユーザーエージェント")}}は別なスタイルを適用するかもしれません。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;search&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="site-search">Search the site:</label>

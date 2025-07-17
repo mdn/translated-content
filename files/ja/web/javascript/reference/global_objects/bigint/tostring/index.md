@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/BigInt/toString
 
 **`toString()`** メソッドは、指定した {{jsxref("BigInt")}} オブジェクトを表す文字列を返します。末尾の "n" は文字列の一部にはなりません。
 
-{{InteractiveExample("JavaScript Demo: BigInt.toString()")}}
+{{InteractiveExample("JavaScript デモ: BigInt.toString()")}}
 
 ```js interactive-example
 console.log(1024n.toString());

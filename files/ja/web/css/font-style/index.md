@@ -9,7 +9,7 @@ l10n:
 
 **`font-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("font-family")}} の中で通常体 (normal)、筆記体 (italic)、斜体 (oblique) のどのスタイルにするか設定します。
 
-{{InteractiveExample("CSS Demo: font-style")}}
+{{InteractiveExample("CSS デモ: font-style")}}
 
 ```css interactive-example-choice
 font-style: normal;

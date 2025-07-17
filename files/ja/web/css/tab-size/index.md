@@ -9,7 +9,7 @@ l10n:
 
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
 
-{{InteractiveExample("CSS Demo: tab-size")}}
+{{InteractiveExample("CSS デモ: tab-size")}}
 
 ```css interactive-example-choice
 tab-size: 10px;

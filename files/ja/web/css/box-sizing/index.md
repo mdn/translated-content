@@ -9,7 +9,7 @@ l10n:
 
 **`box-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の全体の幅と高さをどのように計算するのかを設定します。
 
-{{InteractiveExample("CSS Demo: box-sizing")}}
+{{InteractiveExample("CSS デモ: box-sizing")}}
 
 ```css interactive-example-choice
 box-sizing: content-box;

@@ -3,8 +3,6 @@ title: 逻辑或赋值（||=）
 slug: Web/JavaScript/Reference/Operators/Logical_OR_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 逻辑或赋值（`x ||= y`）运算仅在 `x` 为{{Glossary("falsy", "假")}}值时为其赋值。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Logical OR assignment")}}

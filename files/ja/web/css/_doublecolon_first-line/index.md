@@ -14,7 +14,7 @@ p::first-line {
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::first-line", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::first-line", "tabbed-shorter")}}
 
 ```css interactive-example
 p::first-line {

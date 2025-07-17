@@ -10,7 +10,7 @@ l10n:
 
 **`<img>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に画像を埋め込みます。
 
-{{InteractiveExample("HTML Demo: &lt;img&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;img&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <img

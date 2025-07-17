@@ -13,7 +13,7 @@ l10n:
 
 リストに含まれている名前付きカウンターに値が設定されていない場合、そのカウンターの値は `0` に設定されます。
 
-{{InteractiveExample("CSS Demo: counter-set")}}
+{{InteractiveExample("CSS デモ: counter-set")}}
 
 ```css interactive-example-choice
 counter-set: none;

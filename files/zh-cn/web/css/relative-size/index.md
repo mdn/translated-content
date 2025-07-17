@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e97c79b17d685c08bef41ffc0b6c2f9e5ddc42f4
 ---
 
-{{CSSRef}}
-
 **`<relative-size>`** [CSS](/zh-CN/docs/Web/CSS) [数据类型](/zh-CN/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)描述了相对尺寸关键字。`<relative-size>` 关键字定义相对于父元素计算尺寸的大小，此数据类型用于 {{cssxref("font")}} 简写属性和 {{cssxref("font-size")}} 属性。
 
 ## 语法

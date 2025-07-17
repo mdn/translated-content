@@ -2,10 +2,8 @@
 title: border-color
 slug: Web/CSS/border-color
 l10n:
-  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`border-color`** [CSS](/zh-TW/docs/Web/CSS) [簡寫](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)屬性可以設定元素邊框的顏色。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f616cb604af851f77f8cd59368e94ee3e43a8838
 ---
 
-{{jsSidebar("Operators")}}
-
 **相等**（**`==`**）运算符检查其两个操作数是否相等，返回一个布尔值结果。与[严格相等](/zh-CN/docs/Web/JavaScript/Reference/Operators/Strict_equality)运算符不同，它会尝试转换不同类型的操作数，并进行比较。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Equality operator")}}
