@@ -3,8 +3,6 @@ title: 逻辑空赋值（??=）
 slug: Web/JavaScript/Reference/Operators/Nullish_coalescing_assignment
 ---
 
-{{jsSidebar("Operators")}}
-
 逻辑空赋值运算符（`x ??= y`）仅在 `x` 是{{Glossary("nullish", "空值")}}（`null` 或 `undefined`）时对其赋值。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Nullish coalescing assignment")}}

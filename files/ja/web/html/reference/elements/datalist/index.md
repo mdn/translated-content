@@ -10,7 +10,7 @@ l10n:
 
 **`<datalist>`** は [HTML](/ja/docs/Web/HTML) の要素で、この要素には {{HTMLElement("option")}} 要素の集合が含まれ、他のコントロール内で選択できる許容または推奨オプションを表します。
 
-{{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;datalist&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="ice-cream-choice">Choose a flavor:</label>

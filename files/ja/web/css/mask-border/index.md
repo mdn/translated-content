@@ -1,6 +1,8 @@
 ---
 title: mask-border
 slug: Web/CSS/mask-border
+l10n:
+  sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
 ---
 
 {{CSSRef}}
@@ -37,6 +39,7 @@ mask-border: url("border-mask.png") 25 / 35px / 12px space alpha;
 mask-border: inherit;
 mask-border: initial;
 mask-border: revert;
+mask-border: revert-layer;
 mask-border: unset;
 ```
 
@@ -69,11 +72,40 @@ mask-border: unset;
 
 この例では、要素の境界を菱形の模様でマスクします。このマスクのソースは ".png" ファイルで、 90 x 90 ピクセルであり、3つの菱形が垂直・水平に並んでいます。
 
-![](mask-border-diamonds.png)
+<img src="https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png" alt="このページのマスクの例に使用されている画像です。マスクは、3つのダイヤモンドが3列に並んだ、透明な正方形です。ダイヤモンドは、とても薄い、ほぼ白に近いグレーです。ダイヤモンドの間の中央部分も、単色のグレーです。ダイヤモンドの外側と画像の端の間は透明です。" loading="lazy" style="background-color: black;">
 
 一つの菱形の寸法に合わせるため、 90 を 3 で割った値、すなわち '30' を使用して、画像を角と辺の領域に分割します。 repeat の値は `round` であり、マスクのスライスが均等に、すなわち切り取られたり隙間ができたりすることなく合わせられます。
 
-{{EmbedGHLiveSample("css-examples/masking/mask-border.html", '100%', 800)}}
+```html live-sample___mask-border-example
+<div class="masked">
+  This element is surrounded by a bitmap-based mask border! Pretty neat, isn't
+  it?
+</div>
+```
+
+```css-nolint live-sample___mask-border-example
+.masked {
+  width: 200px;
+  background-color: lavender;
+  border: 18px solid salmon;
+  padding: 10px;
+
+  -webkit-mask-box-image: url("https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png")
+    30 fill /          /* slice */
+    20px /             /* width */
+    1px                /* outset */
+    round;             /* repeat */
+
+  mask-border:
+    url("https://mdn.github.io/shared-assets/images/examples/mask-border-diamonds.png")
+    30 fill /        /* slice */
+    20px /           /* width */
+    1px              /* outset */
+    round;           /* repeat */
+}
+```
+
+{{EmbedLiveSample("mask-border-example", "", "170px")}}
 
 ## 仕様書
 

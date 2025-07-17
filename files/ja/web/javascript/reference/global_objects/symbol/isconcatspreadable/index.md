@@ -9,7 +9,7 @@ l10n:
 
 **`Symbol.isConcatSpreadable`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.isConcatSpreadable` を表します。{{jsxref("Array.prototype.concat()")}} メソッドは、連結される各オブジェクトに対してこのシンボルを探し、配列風オブジェクトとして扱って配列要素を平坦化すべきかどうかを判断します。
 
-{{InteractiveExample("JavaScript Demo: Symbol.isConcatSpreadable")}}
+{{InteractiveExample("JavaScript デモ: Symbol.isConcatSpreadable")}}
 
 ```js interactive-example
 const alpha = ["a", "b", "c"];

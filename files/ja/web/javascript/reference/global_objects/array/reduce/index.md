@@ -15,7 +15,7 @@ l10n:
 
 `reduce()` で一番わかりやすいのは、配列のすべての要素の和を返す場合でしょう。
 
-{{InteractiveExample("JavaScript Demo: Array.reduce()")}}
+{{InteractiveExample("JavaScript デモ: Array.reduce()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];

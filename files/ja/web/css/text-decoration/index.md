@@ -9,7 +9,7 @@ l10n:
 
 **`text-decoration`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、テキストの装飾的な線の表示を設定します。これは {{cssxref("text-decoration-line")}}、{{cssxref("text-decoration-color")}}、{{cssxref("text-decoration-style")}} およびさらに新しい {{cssxref("text-decoration-thickness")}} プロパティの一括指定です。
 
-{{InteractiveExample("CSS Demo: text-decoration")}}
+{{InteractiveExample("CSS デモ: text-decoration")}}
 
 ```css interactive-example-choice
 text-decoration: underline;

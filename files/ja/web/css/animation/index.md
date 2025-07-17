@@ -9,7 +9,7 @@ l10n:
 
 **`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
 
-{{InteractiveExample("CSS Demo: animation")}}
+{{InteractiveExample("CSS デモ: animation")}}
 
 ```css interactive-example-choice
 animation: 3s ease-in 1s infinite reverse both running slide-in;

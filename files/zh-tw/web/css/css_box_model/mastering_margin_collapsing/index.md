@@ -2,10 +2,8 @@
 title: 精通外距摺疊
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
 ---
-
-{{CSSRef}}
 
 區塊的[上](/zh-TW/docs/Web/CSS/margin-top)外距和[下](/zh-TW/docs/Web/CSS/margin-bottom)外距有時會合併（摺疊）成一個單一外距，其大小為個別外距中最大的那個（如果相等，則為其中一個的大小），這種行為稱為**外距摺疊**。請注意，[浮動](/zh-TW/docs/Web/CSS/float)和[絕對定位](/zh-TW/docs/Web/CSS/position#絕對定位)元素的外距永不摺疊。
 
@@ -14,7 +12,9 @@ l10n:
 - 相鄰的同層級元素
   - : 相鄰同層級元素的外距會摺疊（除非後面的同層級元素需要[清除](/zh-TW/docs/Web/CSS/clear)浮動）。
 - 沒有內容分隔父元素和後代元素
-  - : 如果沒有邊框、內距、行內部分、建立的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)或[_清除_](/zh-TW/docs/Web/CSS/clear)來分隔區塊的 {{cssxref("margin-top")}} 與其一個或多個後代區塊的 {{cssxref("margin-top")}}；或者沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔區塊的 {{cssxref("margin-bottom")}} 與其一個或多個後代區塊的 {{cssxref("margin-bottom")}}，那麼這些外距就會摺疊。摺疊後的外距最終會跑到父元素外面。
+  - : 父區塊與其後代元素之間的垂直外距可以摺疊。當它們之間沒有任何內容分隔時，就會發生這種情況。具體來說，這發生在兩種主要情況下：
+    - 父元素的 {{cssxref("margin-top")}} 會與其第一個在流中的後代元素的 {{cssxref("margin-top")}} 摺疊，除非父元素有 {{cssxref("border-top")}}、{{cssxref("padding-top")}}、包含任何行內內容（例如文字），或已套用 [_clearance_](/zh-TW/docs/Web/CSS/clear)。
+    - 父元素的 {{cssxref("margin-bottom")}} 會與其最後一個在流中的後代元素的 {{cssxref("margin-bottom")}} 摺疊，除非父元素有已定義的 {{cssxref("height")}} 或 {{cssxref("min-height")}}、{{cssxref("border-bottom")}} 或 {{cssxref("padding-bottom")}}。在這兩種情況下，在父元素上建立一個新的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)也會防止其外距與其子元素的外距摺疊。
 - 空區塊
   - : 如果沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔一個區塊的 {{cssxref("margin-top")}} 和其 {{cssxref("margin-bottom")}}，那麼它的上外距和下外距就會摺疊。
 
