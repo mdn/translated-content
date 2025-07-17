@@ -7,7 +7,7 @@ l10n:
 
 有些 [CSS](/zh-TW/docs/Web/CSS) 屬性適用於所有元素，有些只適用於網格和 flex 容器，還有一些只適用於可變形元素。本指南介紹只適用於*替換元素*的屬性。
 
-**{{glossary("replaced elements", "替換元素")}}**是一種其表示方式超出 CSS 範圍的元素；它們是表示方式獨立於 CSS 格式化模型的外部物件。一些替換元素，例如 {{HTMLElement("iframe")}} 元素，可能有自己的樣式表，但它們不會繼承父文件的樣式。
+[**替換元素**](/zh-TW/docs/Glossary/Replaced_elements)是一種其表示方式超出 CSS 範圍的元素；它們是表示方式獨立於 CSS 格式化模型的外部物件。一些替換元素，例如 {{HTMLElement("iframe")}} 元素，可能有自己的樣式表，但它們不會繼承父文件的樣式。
 
 ## 使用 CSS 處理替換元素
 
