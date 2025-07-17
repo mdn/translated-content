@@ -3,8 +3,6 @@ title: 字符类
 slug: Web/JavaScript/Guide/Regular_expressions/Character_classes
 ---
 
-{{JSSidebar("JavaScript Guide")}}
-
 字符类可以区分各种字符，例如区分字母和数字。
 
 {{InteractiveExample("JavaScript Demo: RegExp Character classes")}}

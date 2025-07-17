@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`text`** 型は、基本的な単一行のテキスト入力欄を生成します。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;text&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="name">Name (4 to 8 characters):</label>

@@ -18,7 +18,7 @@ p:read-write {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :read-write", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :read-write", "tabbed-shorter")}}
 
 ```css interactive-example
 label,

@@ -9,7 +9,7 @@ l10n:
 
 **`[Symbol.match]()`** は {{jsxref("RegExp")}} インスタンスのメソッドで、 [`String.prototype.match()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/String/match) がどのように動作するのかを指定します。さらに、これが存在するかどうかが、そのオブジェクトが正規表現とみなされるかどうかにも影響します。
 
-{{InteractiveExample("JavaScript Demo: RegExp.prototype[Symbol.match]()")}}
+{{InteractiveExample("JavaScript デモ: RegExp.prototype[Symbol.match]()")}}
 
 ```js interactive-example
 class RegExp1 extends RegExp {

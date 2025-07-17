@@ -9,7 +9,7 @@ l10n:
 
 **`text-align-last`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
 
-{{InteractiveExample("CSS Demo: text-align-last")}}
+{{InteractiveExample("CSS デモ: text-align-last")}}
 
 ```css interactive-example-choice
 text-align-last: right;

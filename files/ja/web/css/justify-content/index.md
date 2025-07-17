@@ -11,7 +11,7 @@ l10n:
 
 下記のインタラクティブな例では、グリッドレイアウトを使用して `justify-content` の値を示しています。
 
-{{InteractiveExample("CSS Demo: justify-content")}}
+{{InteractiveExample("CSS デモ: justify-content")}}
 
 ```css interactive-example-choice
 justify-content: start;

@@ -9,7 +9,7 @@ l10n:
 
 **`translate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を水平方向や垂直方向で再配置します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: translate()")}}
+{{InteractiveExample("CSS デモ: translate()")}}
 
 ```css interactive-example-choice
 transform: translate(0);

@@ -10,7 +10,7 @@ l10n:
 **`contain`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素とそのコンテンツが文書ツリーの残りの部分から可能な限り独立していることを示します。
 拘束によって DOM のサブセクションを分離することができ、レイアウト、スタイル、描画、サイズ、または任意の組み合わせの計算をページ全体ではなく DOM サブツリーに制限することによって、性能上で有利になります。拘束は、CSS カウンターや引用のスコープにも使用することができます。
 
-{{InteractiveExample("CSS Demo: contain")}}
+{{InteractiveExample("CSS デモ: contain")}}
 
 ```css interactive-example-choice
 contain: none;

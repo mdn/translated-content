@@ -12,7 +12,7 @@ l10n:
 
 {{jsxref("Array/find", "find()")}} メソッドも参照してください。こちらのメソッドは、配列内で見つかった要素の位置ではなく、値を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.findIndex()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Array.findIndex()", "shorter")}}
 
 ```js interactive-example
 const array1 = [5, 12, 8, 130, 44];

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 **`-webkit-border-before`** [CSS](/zh-CN/docs/Web/CSS) 属性是一个用于在样式表中统一设置逻辑块起始边框各属性值的简写属性。
 

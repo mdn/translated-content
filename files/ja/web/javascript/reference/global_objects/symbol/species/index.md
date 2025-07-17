@@ -11,7 +11,7 @@ l10n:
 
 > **警告:** `[Symbol.species]` が存在することで、任意のコードの実行を可能にし、セキュリティの脆弱性を生み出す可能性があります。また、一部の最適化がとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能への依存は避けてください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.species")}}
+{{InteractiveExample("JavaScript デモ: Symbol.species")}}
 
 ```js interactive-example
 class Array1 extends Array {
