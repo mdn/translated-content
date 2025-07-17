@@ -9,7 +9,7 @@ l10n:
 
 **`min-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最小の寸法を定義します。これは {{cssxref("min-width")}} または {{cssxref("min-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
 
-{{InteractiveExample("CSS Demo: min-inline-size")}}
+{{InteractiveExample("CSS デモ: min-inline-size")}}
 
 ```css interactive-example-choice
 min-inline-size: 200px;

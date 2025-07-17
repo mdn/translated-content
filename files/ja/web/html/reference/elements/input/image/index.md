@@ -9,7 +9,7 @@ l10n:
 
 {{HTMLElement("input")}} 要素の **`image`** 型は、テキストではなく画像の形をとる送信ボタン、すなわちテキストではなく画像の形をとる送信ボタンを作成するために使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <p>アカウントにログインしてください:</p>

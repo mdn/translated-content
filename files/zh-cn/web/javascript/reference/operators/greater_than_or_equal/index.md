@@ -3,8 +3,6 @@ title: 大于等于（>=）
 slug: Web/JavaScript/Reference/Operators/Greater_than_or_equal
 ---
 
-{{jsSidebar("Operators")}}
-
 大于等于运算符（`>=`）在左操作数大于等于右操作数时返回 `true`，否则返回 `false`。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Greater than or equal operator")}}

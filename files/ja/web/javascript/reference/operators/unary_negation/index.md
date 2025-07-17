@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Unary_negation
 
 単項マイナス演算子 (`-`) はオペランドの前に置かれ、符号を反転します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unary negation operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Unary negation operator")}}
 
 ```js interactive-example
 const x = 4;

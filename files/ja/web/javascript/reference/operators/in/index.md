@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/in
 
 **`in` 演算子**は、指定されたプロパティが指定されたオブジェクトにある場合に `true` を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - in operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - in operator")}}
 
 ```js interactive-example
 const car = { make: "Honda", model: "Accord", year: 1998 };

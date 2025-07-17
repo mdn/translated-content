@@ -2,10 +2,8 @@
 title: 簡寫屬性
 slug: Web/CSS/CSS_cascade/Shorthand_properties
 l10n:
-  sourceCommit: 6cffcbc7e7bdb3ac43d03e8bbc5a73c868274b05
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **_簡寫屬性_**是能讓你同時設定多個其他 CSS 屬性值的 CSS 屬性。使用簡寫屬性，你可以撰寫更簡潔（且通常更具可讀性）的樣式表，節省時間和精力。
 

@@ -18,7 +18,7 @@ p:read-only {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :read-only", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :read-only", "tabbed-shorter")}}
 
 ```css interactive-example
 label,

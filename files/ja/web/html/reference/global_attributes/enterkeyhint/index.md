@@ -10,7 +10,7 @@ l10n:
 
 **`enterkeyhint`** は[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、属性であり、仮想キーボードの \[Enter] キーにどのようなアクションラベル（またはアイコン）を表示するかを定義する[列挙型](/ja/docs/Glossary/Enumerated)属性です。
 
-{{InteractiveExample("HTML Demo: enterkeyhint", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: enterkeyhint", "tabbed-shorter")}}
 
 ```html interactive-example
 <input enterkeyhint="go" />

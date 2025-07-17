@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2c762771070a207d410a963166adf32213bc3a45
 ---
 
-{{JsSidebar("More")}}
-
 JavaScript 对象中的每个属性能根据三个因素进行分类：
 
 - 可枚举或不可枚举；

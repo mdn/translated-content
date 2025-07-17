@@ -9,7 +9,7 @@ l10n:
 
 **`Math.abs()`** は静的メソッドで、数値の絶対値を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.abs()")}}
+{{InteractiveExample("JavaScript デモ: Math.abs()")}}
 
 ```js interactive-example
 function difference(a, b) {

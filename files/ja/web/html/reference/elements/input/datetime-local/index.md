@@ -9,7 +9,7 @@ l10n:
 
 {{htmlelement("input")}} 要素の **`datetime-local`** 型は、ユーザーが簡単に日付と時刻、つまり年、月、日と時、分を入力することができる入力コントロールを生成します。ユーザーのローカルタイムゾーンが使用されます。
 
-{{InteractiveExample("HTML Demo: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;input type=&quot;datetime-local&quot;&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <label for="meeting-time">Choose a time for your appointment:</label>
