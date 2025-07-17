@@ -2,19 +2,17 @@
 title: 'SyntaxError: redeclaration of formal parameter "x"'
 slug: Web/JavaScript/Reference/Errors/Redeclared_parameter
 l10n:
-  sourceCommit: c6f0f106b9083984dbf597678def6561729bb459
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-當函式參數中出現了相同的變數名稱，且函式主體中又再次使用 {{jsxref("Statements/let", "let")}} 賦值來重複宣告它時，會發生 JavaScript 的「redeclaration of formal parameter」例外。
+ JavaScript 的「redeclaration of formal parameter」例外會在函式參數中出現了相同的變數名稱，且函式主體中又再次使用 {{jsxref("Statements/let", "let")}} 賦值來重複宣告它時發生。
 
 ## 訊息
 
 ```plain
-SyntaxError: Identifier "x" has already been declared (V8-based)
-SyntaxError: redeclaration of formal parameter "x" (Firefox)
-SyntaxError: Cannot declare a let variable twice: 'x'. (Safari)
+SyntaxError: Identifier "x" has already been declared（基於 V8）
+SyntaxError: redeclaration of formal parameter "x"（Firefox）
+SyntaxError: Cannot declare a let variable twice: 'x'.（Safari）
 ```
 
 ## 錯誤類型

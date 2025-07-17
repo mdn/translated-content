@@ -9,7 +9,7 @@ l10n:
 
 **`matrix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二次元同次変換行列を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
-{{InteractiveExample("CSS Demo: matrix()")}}
+{{InteractiveExample("CSS デモ: matrix()")}}
 
 ```css interactive-example-choice
 transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);

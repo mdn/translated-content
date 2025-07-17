@@ -9,7 +9,7 @@ l10n:
 
 **`Object.isSealed()`** メソッドは、オブジェクトが封印されているかどうかを判定します。
 
-{{InteractiveExample("JavaScript Demo: Object.isSealed()")}}
+{{InteractiveExample("JavaScript デモ: Object.isSealed()")}}
 
 ```js interactive-example
 const object1 = {

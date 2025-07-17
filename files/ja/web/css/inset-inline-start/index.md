@@ -11,7 +11,7 @@ l10n:
 
 この{{glossary("inset properties", "インセットプロパティ")}}は、位置指定されていない要素には効果がありません。
 
-{{InteractiveExample("CSS Demo: inset-inline-start")}}
+{{InteractiveExample("CSS デモ: inset-inline-start")}}
 
 ```css interactive-example-choice
 writing-mode: horizontal-tb;

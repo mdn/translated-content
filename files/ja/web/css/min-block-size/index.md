@@ -11,7 +11,7 @@ l10n:
 
 書字方向が垂直方向であった場合、 `min-block-size` の値は要素の最小幅に対応します。そうでなければ、要素の最小の高さに対応します。関連プロパティの {{cssxref("min-inline-size")}} が要素のもう一方の寸法を定義します。
 
-{{InteractiveExample("CSS Demo: min-block-size")}}
+{{InteractiveExample("CSS デモ: min-block-size")}}
 
 ```css interactive-example-choice
 min-block-size: 150px;

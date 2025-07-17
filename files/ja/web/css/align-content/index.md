@@ -11,7 +11,7 @@ l10n:
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
 
-{{InteractiveExample("CSS Demo: align-content")}}
+{{InteractiveExample("CSS デモ: align-content")}}
 
 ```css interactive-example-choice
 align-content: start;

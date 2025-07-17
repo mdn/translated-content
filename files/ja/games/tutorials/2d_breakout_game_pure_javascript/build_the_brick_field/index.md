@@ -3,8 +3,6 @@ title: ブロックのかたまりを作る
 slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
 ---
 
-{{GamesSidebar}}
-
 {{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection")}}
 
 これは、[ゲーム開発キャンバスチュートリアル](/ja/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) の 10 ステップ中 **6 ステップ目**になります。このレッスンを終えた後のソースコードは、[Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html)で見ることができます。

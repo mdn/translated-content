@@ -10,7 +10,7 @@ l10n:
 
 **`<iframe>`** は [HTML](/ja/docs/Web/HTML) の要素で、入れ子になった{{Glossary("browsing context", "閲覧コンテキスト")}}を表現し、現在の HTML ページに他のページを埋め込むことができます。
 
-{{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;iframe&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <iframe

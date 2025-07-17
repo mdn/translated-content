@@ -734,9 +734,3 @@ l10n:
 ## 规范
 
 {{Specifications}}
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-CN/docs/Learn_web_development/Core/Scripting/Events">事件介绍</a></li>
-  </ol>{{ListSubpages}}
-</section>

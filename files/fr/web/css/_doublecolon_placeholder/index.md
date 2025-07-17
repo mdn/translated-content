@@ -72,7 +72,7 @@ Autres ressources :
 
 #### Utilisabilité
 
-Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur. De plus, les textes de substituion disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
+Les textes de substitution avec un contraste suffisamment élevé peuvent être pris pour des textes saisis par l'utilisateur. De plus, les textes de substitution disparaissent lorsqu'une personne saisit du contenu dans l'élément {{htmlelement("input")}}. Pour ces deux raisons, les textes de subsitution peuvent gêner la complétion du formulaire, notamment pour les personnes souffrant de troubles cognitifs.
 
 Une autre méthode consiste à fournir cette information en l'incluant à proximité du champ mais en dehors et d'utiliser l'attribut [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-describedby_attribute) afin de relier l'élément {{HTMLElement("input")}} à l'indication associée.
 

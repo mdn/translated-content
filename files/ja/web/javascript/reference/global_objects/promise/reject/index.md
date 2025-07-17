@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.reject()`** は静的メソッドで、引数で与えられた理由で拒否された `Promise` オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Promise.reject()")}}
+{{InteractiveExample("JavaScript デモ: Promise.reject()")}}
 
 ```js interactive-example
 function resolved(result) {
