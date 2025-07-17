@@ -9,7 +9,7 @@ l10n:
 
 **`Math.SQRT2`** プロパティは、 1/2 の平方根、約 0.707 を表します。
 
-{{InteractiveExample("JavaScript Demo: Math.SQRT1_2", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Math.SQRT1_2", "shorter")}}
 
 ```js interactive-example
 function getRoot1Over2() {

@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.allSettled()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを受け取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のすべてのプロミスが決定したとき（空の反復可能オブジェクトが渡された場合を含む）に履行され、各プロミスの結果を記述するオブジェクトの配列が返されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.allSettled()", "taller")}}
+{{InteractiveExample("JavaScript デモ: Promise.allSettled()", "taller")}}
 
 ```js interactive-example
 const promise1 = Promise.resolve(3);

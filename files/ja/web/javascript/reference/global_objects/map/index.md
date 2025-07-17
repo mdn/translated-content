@@ -10,7 +10,7 @@ l10n:
 **`Map`** オブジェクトはキーと値のペアを保持し、キーが最初に挿入された順序を覚えています。
 キーや値には任意の値（オブジェクトと{{Glossary("Primitive", "プリミティブ値")}}）を使用することができます。
 
-{{InteractiveExample("JavaScript Demo: Map", "taller")}}
+{{InteractiveExample("JavaScript デモ: Map", "taller")}}
 
 ```js interactive-example
 const map1 = new Map();

@@ -3,8 +3,6 @@ title: return
 slug: Web/JavaScript/Reference/Statements/return
 ---
 
-{{jsSidebar("Statements")}}
-
 **`return` 表達式**會終止函式執行，並指明函式呼叫器（function caller）要回傳的數值。
 
 {{InteractiveExample("JavaScript Demo: Statement - Return")}}

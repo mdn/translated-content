@@ -11,7 +11,7 @@ l10n:
 
 > **メモ:** `saturate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。
 
-{{InteractiveExample("CSS Demo: saturate()")}}
+{{InteractiveExample("CSS デモ: saturate()")}}
 
 ```css interactive-example-choice
 filter: saturate(1);

@@ -9,7 +9,7 @@ l10n:
 
 **`fill()`** は {{jsxref("Array")}} インスタンスのメソッドで、インデックスの範囲内にある配列のすべての要素を一定の値に変更します。これは変更した配列を返します。
 
-{{InteractiveExample("JavaScript Demo: Array.fill()")}}
+{{InteractiveExample("JavaScript デモ: Array.fill()")}}
 
 ```js interactive-example
 const array1 = [1, 2, 3, 4];

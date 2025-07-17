@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b0d4232c133f19213742db2286d2c293ce71f674
 ---
 
-{{GamesSidebar}}
-
 > [!WARNING]
 > [asm.js](http://asmjs.org/) 规范已被视为**弃用**。开发者可以考虑使用 [WebAssembly](/zh-CN/docs/WebAssembly) 作为在浏览器中运行高性能代码的 asm.js 替代方案。
 

@@ -9,7 +9,7 @@ l10n:
 
 **`animation-fill-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 CSS アニメーションの実行の前後にどう対象にスタイルを適用するかを設定します。
 
-{{InteractiveExample("CSS Demo: animation-fill-mode")}}
+{{InteractiveExample("CSS デモ: animation-fill-mode")}}
 
 ```css interactive-example-choice
 animation-fill-mode: none;

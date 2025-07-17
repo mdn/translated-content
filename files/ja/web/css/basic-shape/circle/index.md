@@ -9,7 +9,7 @@ l10n:
 
 **`circle()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。
 
-{{InteractiveExample("CSS Demo: circle()")}}
+{{InteractiveExample("CSS デモ: circle()")}}
 
 ```css interactive-example-choice
 clip-path: circle(50px);

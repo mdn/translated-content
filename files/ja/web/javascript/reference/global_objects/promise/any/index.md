@@ -9,7 +9,7 @@ l10n:
 
 **`Promise.any()`** は静的メソッドで、入力としてプロミスの反復可能オブジェクトを取り、単一の {{jsxref("Promise")}} を返します。この返されたプロミスは、入力のプロミスのいずれかが履行されたときに、この最初の履行値で履行されます。入力のプロミスがすべて拒否された場合（空の反復可能オブジェクトが渡された場合を含む）、拒否理由の配列を格納した {{jsxref("AggregateError")}} で、拒否されます。
 
-{{InteractiveExample("JavaScript Demo: Promise.any()")}}
+{{InteractiveExample("JavaScript デモ: Promise.any()")}}
 
 ```js interactive-example
 const promise1 = Promise.reject(0);

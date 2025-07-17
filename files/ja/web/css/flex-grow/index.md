@@ -11,7 +11,7 @@ l10n:
 
 フレックスコンテナーの主軸長が、そのフレックスアイテムの主軸長を結合した長さよりも長い場合、この正の余白はフレックスアイテム間で分配され、各フレックスアイテムが伸長する大きさは、コンテナーのすべてのアイテムのフレックス伸長係数の合計の割合で按分した値になります。
 
-{{InteractiveExample("CSS Demo: flex-grow")}}
+{{InteractiveExample("CSS デモ: flex-grow")}}
 
 ```css interactive-example-choice
 flex-grow: 1;

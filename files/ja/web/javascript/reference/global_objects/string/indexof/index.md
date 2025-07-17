@@ -9,7 +9,7 @@ l10n:
 
 **`indexOf()`** は {{jsxref("String")}} 値のメソッドで、この文字列を検索し、指定した部分文字列が最初に出現するインデックスを返します。 オプションで開始位置を取り、指定した数値以上のインデックスで指定した部分文字列が最初に出現するインデックスを返します。
 
-{{InteractiveExample("JavaScript Demo: String.indexOf()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.indexOf()", "taller")}}
 
 ```js interactive-example
 const paragraph = "I think Ruth's dog is cuter than your dog!";

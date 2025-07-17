@@ -10,7 +10,7 @@ l10n:
 **`background-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像の寸法を設定します。
 画像は自然な寸法になったり、引き伸ばされたり、利用可能な領域に収まるように縮小されたりします。
 
-{{InteractiveExample("CSS Demo: background-size")}}
+{{InteractiveExample("CSS デモ: background-size")}}
 
 ```css interactive-example-choice
 background-size: contain;

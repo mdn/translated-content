@@ -9,7 +9,7 @@ l10n:
 
 **`Number.POSITIVE_INFINITY`** プロパティは正の無限大を表す値です。
 
-{{InteractiveExample("JavaScript Demo: Number.POSITIVE_INFINITY")}}
+{{InteractiveExample("JavaScript デモ: Number.POSITIVE_INFINITY")}}
 
 ```js interactive-example
 function checkNumber(bigNumber) {
