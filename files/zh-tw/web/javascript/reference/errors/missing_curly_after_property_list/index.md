@@ -5,7 +5,6 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-
 JavaScript 的「missing } after property list」例外會在[物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤時發生。這可能真的是少了個大括號，但也可能是少了個逗號。
 
 ## 訊息
