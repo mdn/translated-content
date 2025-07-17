@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-當 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時，會發生 JavaScript 的「return not in function」例外。
+JavaScript 的「return not in function」例外會在 [`return`](/zh-TW/docs/Web/JavaScript/Reference/Statements/return) 陳述式在[函式](/zh-TW/docs/Web/JavaScript/Guide/Functions)之外被呼叫時發生。
 
 ## 訊息
 
