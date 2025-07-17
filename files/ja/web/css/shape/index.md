@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 69f92b8a249a9da025a5b12d98aafd84d417c8d9
 ---
 
-{{CSSRef}}{{deprecated_header}}
+{{deprecated_header}}
 
 **`<shape>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、ある領域の具体的な形状を表します。この領域は、{{cssxref("clip")}} プロパティが適用される要素の一部を表します。
 

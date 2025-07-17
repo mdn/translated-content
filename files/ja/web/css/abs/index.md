@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5332af37c3d94913bf15b6aed87aaed2693f19d5
 ---
 
-{{CSSRef}}
-
 **`abs()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は、引数の絶対値を同じ型で返します。
 
 ## 構文

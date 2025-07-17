@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6dbc4ff96451887b908b46c8e70bcfec1c2c48c
 ---
 
-{{CSSRef}}
-
 **`:hover`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーがポインティングデバイスで要素に反応したものの、アクティブ化する必要がないものを選択します。普通はユーザーがカーソル（マウスポインター）を要素の上にかざしたときにそうなります。
 
 {{InteractiveExample("CSS デモ: :hover", "tabbed-shorter")}}

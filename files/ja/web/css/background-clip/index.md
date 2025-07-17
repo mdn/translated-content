@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7cee2a2b7ce3a968bc09f2d9cc3b012befa146c6
 ---
 
-{{CSSRef}}
-
 **`background-clip`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景を境界ボックス、パディングボックス、コンテンツボックスのどれまで拡張するかを設定します。
 
 {{InteractiveExample("CSS デモ: background-clip")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e1608631832f2608632569d0bd4061372adc5199
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 > **メモ:** [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 {{CSSxRef(":empty")}} セレクターが `:-moz-only-whitespace` のように動作するよう変更されましたが、まだこれに対応しているブラウザーはありません。
 

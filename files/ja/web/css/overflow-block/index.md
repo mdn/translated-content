@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 737125e41bb99b0cf1c733aac13f79f806f7f296
 ---
 
-{{CSSRef}}
-
 **`overflow-block`** は [CSS](/ja/docs/Web/CSS) プロパティで、コンテンツがブロックの先頭およびブロックの末尾の端をあふれた時にどのように表示するかを設定します。これは表示なし、スクロールバー付き、コンテンツをはみ出させる、のいずれかになります。
 
 > **メモ:** `overflow-block` プロパティは、文書の書字方向に応じて、 {{Cssxref("overflow-y")}} または {{Cssxref("overflow-x")}} に対応します。
