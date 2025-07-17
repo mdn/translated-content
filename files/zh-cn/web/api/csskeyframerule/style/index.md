@@ -24,8 +24,7 @@ l10n:
 
 ## 示例
 
-以下 CSS 包含一个 {{cssxref("@keyframes")}} 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。
-`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象，其中包含每个关键帧的 {{domxref("CSSKeyFrameRule")}} 对象。
+以下 CSS 包含一个 {{cssxref("@keyframes")}} 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象，其中包含每个关键帧的 {{domxref("CSSKeyFrameRule")}} 对象。
 
 ```css
 @keyframes slide-in {
@@ -41,8 +40,8 @@ l10n:
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // 一个 CSSKeyframesRule
-console.log(keyframes[0].style); // 一个 CSSStyleDeclaration
+let keyframes = myRules[0]; // CSSKeyframesRule
+console.log(keyframes[0].style); // CSSStyleDeclaration
 ```
 
 ## 规范
