@@ -9,7 +9,7 @@ l10n:
 
 **`padding-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における右側の幅を設定します。
 
-{{InteractiveExample("CSS Demo: padding-right")}}
+{{InteractiveExample("CSS デモ: padding-right")}}
 
 ```css interactive-example-choice
 padding-right: 1.5em;

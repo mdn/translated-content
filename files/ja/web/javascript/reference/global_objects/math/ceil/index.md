@@ -9,7 +9,7 @@ l10n:
 
 **`Math.ceil()`** は静的メソッドで、常に切り上げを行い、与えられた数以上の最小の整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Math.ceil()")}}
+{{InteractiveExample("JavaScript デモ: Math.ceil()")}}
 
 ```js interactive-example
 console.log(Math.ceil(0.95));

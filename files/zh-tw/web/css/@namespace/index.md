@@ -2,10 +2,8 @@
 title: "@namespace"
 slug: Web/CSS/@namespace
 l10n:
-  sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`@namespace`** 是一個 [at 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)，用於定義要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespace)。
 

@@ -13,7 +13,7 @@ slug: Web/CSS/::selection
 }
 ```
 
-{{InteractiveExample("CSS Demo: ::selection", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: ::selection", "tabbed-shorter")}}
 
 ```css interactive-example
 p::selection {

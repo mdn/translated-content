@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURI
 
 **`decodeURI()`** 関数は、{{jsxref("encodeURI", "encodeURI()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) をデコードします。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURI()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - decodeURI()")}}
 
 ```js interactive-example
 const uri = "https://mozilla.org/?x=шеллы";

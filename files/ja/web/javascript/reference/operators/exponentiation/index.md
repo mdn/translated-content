@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Exponentiation
 
 べき乗演算子 (`**`) は、1 つ目のオペランドを2 つ目オペランドの累乗にした結果を返します。これは `Math.pow` と同等ですが、オペランドとして BigInt も受け入れます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Exponentiation operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Exponentiation operator")}}
 
 ```js interactive-example
 console.log(3 ** 4);

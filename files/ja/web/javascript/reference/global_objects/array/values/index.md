@@ -9,7 +9,7 @@ l10n:
 
 **`values()`** は {{jsxref("Array")}} インスタンスのメソッドで、配列の各要素の値を含む新しい[配列イテレーター](/ja/docs/Web/JavaScript/Reference/Global_Objects/Iterator)オブジェクトを返します。
 
-{{InteractiveExample("JavaScript Demo: Array.values()")}}
+{{InteractiveExample("JavaScript デモ: Array.values()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

@@ -2,10 +2,8 @@
 title: Array.prototype.find()
 slug: Web/JavaScript/Reference/Global_Objects/Array/find
 l10n:
-  sourceCommit: b6cab42cf7baf925f2ef6a2c98db0778d9c2ec46
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 {{jsxref("Array")}} 實例的 **`find()`** 方法會回傳在提供的陣列中第一個通過所提供測試函式的元素。如果沒有任何值通過測試函式，則回傳 {{jsxref("undefined")}}。
 

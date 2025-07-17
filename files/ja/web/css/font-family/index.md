@@ -9,7 +9,7 @@ l10n:
 
 **`font-family`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択した要素に対して、フォントファミリー名や総称ファミリー名の優先順位リストを指定することができます。
 
-{{InteractiveExample("CSS Demo: font-family")}}
+{{InteractiveExample("CSS デモ: font-family")}}
 
 ```css interactive-example-choice
 font-family: Georgia, serif;
