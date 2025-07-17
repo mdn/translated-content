@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Boolean/Boolean
 
 **`Boolean()`** コンストラクターは {{jsxref("Boolean")}} オブジェクトを生成するために使用します。
 
-{{InteractiveExample("JavaScript Demo: Boolean Constructor", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Boolean Constructor", "shorter")}}
 
 ```js interactive-example
 const flag = new Boolean();

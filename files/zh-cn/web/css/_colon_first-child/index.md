@@ -3,8 +3,6 @@ title: :first-child
 slug: Web/CSS/:first-child
 ---
 
-{{CSSRef}}
-
 **`:first-child`** [CSS](/zh-CN/docs/Web/CSS) [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)表示在一组兄弟元素中的第一个元素。
 
 {{InteractiveExample("CSS Demo: :first-child", "tabbed-shorter")}}

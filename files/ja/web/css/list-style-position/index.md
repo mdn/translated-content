@@ -9,7 +9,7 @@ l10n:
 
 **`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。
 
-{{InteractiveExample("CSS Demo: list-style-position")}}
+{{InteractiveExample("CSS デモ: list-style-position")}}
 
 ```css interactive-example-choice
 list-style-position: inside;

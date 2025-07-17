@@ -9,7 +9,7 @@ l10n:
 
 **`image-orientation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像の向きのレイアウトに依存しない修正を指定します。
 
-{{InteractiveExample("CSS Demo: image-orientation")}}
+{{InteractiveExample("CSS デモ: image-orientation")}}
 
 ```css interactive-example-choice
 image-orientation: none;

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Unsigned_right_shift
 
 **符号なし右シフト演算子 (`>>>`)** (ゼロ埋め右シフト) は、1つ目のオペランドを指定されたビット数だけ右にずらします。右にずらしてあふれたビットは廃棄されます。0 のビットが左からずれて入ります。符号ビットは `0` になりますので、結果は負の数にはなりません。他のビット毎演算子とは異なり、ゼロ埋め右シフトは符号なし 32 ビット整数を返します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Unsigned right shift operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Unsigned right shift operator")}}
 
 ```js interactive-example
 const a = 5; //  00000000000000000000000000000101

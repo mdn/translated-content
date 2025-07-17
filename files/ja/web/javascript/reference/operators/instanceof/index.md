@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 **`instanceof` 演算子**は、あるコンストラクターの `prototype` プロパティが、あるオブジェクトのプロトタイプチェーンの中のどこかに現れるかどうかを検査します。返値は論理値です。
 
-{{InteractiveExample("JavaScript Demo: Expressions - instanceof")}}
+{{InteractiveExample("JavaScript デモ: Expressions - instanceof")}}
 
 ```js interactive-example
 function Car(make, model, year) {

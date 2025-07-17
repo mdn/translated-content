@@ -13,7 +13,7 @@ l10n:
 
 カウンターの値は CSS の {{cssxref("counter-reset")}} プロパティを使用して任意の値にリセットすることができます。
 
-{{InteractiveExample("CSS Demo: counter-increment")}}
+{{InteractiveExample("CSS デモ: counter-increment")}}
 
 ```css interactive-example-choice
 counter-increment: example-counter;

@@ -2,18 +2,17 @@
 title: "SyntaxError: missing } after property list"
 slug: Web/JavaScript/Reference/Errors/Missing_curly_after_property_list
 l10n:
-  sourceCommit: e3faa375b0179de77a5eff00074e3d168a0a904c
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
 
-當[物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤時，會發生 JavaScript 的「missing } after property list」例外。這可能真的是少了個大括號，但也可能是少了個逗號。
+JavaScript 的「missing } after property list」例外會在[物件初始化](/zh-TW/docs/Web/JavaScript/Reference/Operators/Object_initializer)語法某處有誤時發生。這可能真的是少了個大括號，但也可能是少了個逗號。
 
 ## 訊息
 
 ```plain
-SyntaxError: missing } after property list (Firefox)
-SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal. (Safari)
+SyntaxError: missing } after property list（Firefox）
+SyntaxError: Unexpected identifier 'c'. Expected '}' to end an object literal.（Safari）
 ```
 
 ## 錯誤類型
