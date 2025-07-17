@@ -2,18 +2,16 @@
 title: 'ReferenceError: "x" is not defined'
 slug: Web/JavaScript/Reference/Errors/Not_defined
 l10n:
-  sourceCommit: 8f10db5cabb50ee778f781f96adadc8cff98761a
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-當某處參考了一個不存在的變數時，就會發生 JavaScript 的「_variable_ is not defined」例外。
+JavaScript 的「_variable_ is not defined」例外會在某處參考了一個不存在的變數時發生 。
 
 ## 訊息
 
 ```plain
-ReferenceError: "x" is not defined (V8-based & Firefox)
-ReferenceError: Can't find variable: x (Safari)
+ReferenceError: "x" is not defined（基於 V8 & Firefox）
+ReferenceError: Can't find variable: x（Safari）
 ```
 
 ## 錯誤類型

@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Left_shift_assignment
 
 左シフト代入演算子 (`<<=`) は、指定された数だけビットを左に移動し、結果を変数に代入します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Left shift assignment operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Left shift assignment operator")}}
 
 ```js interactive-example
 let a = 5; // 00000000000000000000000000000101

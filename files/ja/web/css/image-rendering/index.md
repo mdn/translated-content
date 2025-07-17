@@ -9,7 +9,7 @@ l10n:
 
 **`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
-{{InteractiveExample("CSS Demo: image-rendering")}}
+{{InteractiveExample("CSS デモ: image-rendering")}}
 
 ```css interactive-example-choice
 image-rendering: auto;

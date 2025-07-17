@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Atomics/sub
 
 静的な **`Atomics.sub()`** メソッドは、配列内の指定した位置の値から減算して、その場所にあった古い値を返します。この不可分操作は、修正された値が書き戻されるまで、ほかの書き込みが発生しないことを保証します。
 
-{{InteractiveExample("JavaScript Demo: Atomics.sub()")}}
+{{InteractiveExample("JavaScript デモ: Atomics.sub()")}}
 
 ```js interactive-example
 // Create a SharedArrayBuffer with a size in bytes

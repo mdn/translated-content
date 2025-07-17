@@ -9,7 +9,7 @@ l10n:
 
 **`repeat()`** メソッドは、呼び出し元の文字列を指定した数だけコピーして結合した新しい文字列を構築して返します。
 
-{{InteractiveExample("JavaScript Demo: String.repeat()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: String.repeat()", "shorter")}}
 
 ```js interactive-example
 const mood = "Happy! ";

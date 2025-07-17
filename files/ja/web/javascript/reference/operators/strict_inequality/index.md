@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Strict_inequality
 
 厳密不等価演算子 (`!==`) は、2 つのオペランドが等しくないことを検査し、論理値で結果を返します。[不等価](/ja/docs/Web/JavaScript/Reference/Operators/Inequality)演算子とは異なり、厳密不等価演算子はオペランドの型が異なる場合、常に異なると判断します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Strict inequality operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Strict inequality operator")}}
 
 ```js interactive-example
 console.log(1 !== 1);

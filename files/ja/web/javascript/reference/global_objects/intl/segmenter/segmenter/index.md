@@ -9,7 +9,7 @@ l10n:
 
 **`Intl.Segmenter()`** コンストラクターは、ロケールに依存したテキスト分割を可能にする [`Intl.Segmenter`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Segmenter) オブジェクトを生成します。
 
-{{InteractiveExample("JavaScript Demo: Intl.Segmenter")}}
+{{InteractiveExample("JavaScript デモ: Intl.Segmenter")}}
 
 ```js interactive-example
 const segmenterFr = new Intl.Segmenter("fr", { granularity: "word" });

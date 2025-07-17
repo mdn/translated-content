@@ -1325,9 +1325,3 @@ This article offers a list of events that can be sent; some are standard events 
 ## 規範
 
 {{Specifications}}
-
-<section id="Quick_links">
-  <ol>
-    <li><a href="/zh-TW/docs/Learn_web_development/Core/Scripting/Events">事件介紹</a></li>
-  </ol>{{ListSubpages}}
-</section>
