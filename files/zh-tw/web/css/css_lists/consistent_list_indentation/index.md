@@ -3,7 +3,7 @@ title: 一致的清單縮排
 short-title: 縮排清單
 slug: Web/CSS/CSS_lists/Consistent_list_indentation
 l10n:
-  sourceCommit: 0dcad86763896bba7f8e1ddc30c6dfd2aa664c6b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 對清單最常見的樣式變更之一是改變縮排距離——也就是清單項目向右推移的距離。本文將幫助你了解如何縮排清單項目，以確保清單項目標記可見。
@@ -126,7 +126,7 @@ ul {
 </ul>
 ```
 
-{{EmbedLiveSample("繼承 `list-style-type`", "100%", 220)}}
+{{EmbedLiveSample("預設項目符號位置", "100%", 220)}}
 
 視覺上，標記位於 `<ul>` 內容區域的*外部*，但這不是這裡的重點。關鍵在於標記被放置在 `<li>` 元素「主方塊」的外部，而不是 `<ul>` 的外部。它們有點像清單項目的附加物，懸掛在 `<li>` 內容區域的外部，但仍然附屬於 `<li>`。
 
