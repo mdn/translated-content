@@ -3,7 +3,7 @@ title: font-smooth
 slug: Web/CSS/font-smooth
 ---
 
-{{CSSRef}} {{ Non-standard_header }}
+{{ Non-standard_header }}
 
 **`font-smooth`** [CSS](/zh-CN/docs/Web/CSS) 属性控制字体渲染时应用的抗锯齿效果。
 

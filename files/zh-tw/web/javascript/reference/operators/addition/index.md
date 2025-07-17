@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b7dbf06b84237832fc9108e1531542fd6a21a5b
 ---
 
-{{jsSidebar("Operators")}}
-
 **加法**（**`+`**）運算子會產生數值運算元的總和或字串串接的結果。
 
 {{InteractiveExample("JavaScript Demo: Addition (+) operator")}}

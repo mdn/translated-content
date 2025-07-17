@@ -2,10 +2,8 @@
 title: box-shadow
 slug: Web/CSS/box-shadow
 l10n:
-  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **`box-shadow`** [CSS](/zh-TW/docs/Web/CSS) 屬性在元素的框架周圍添加陰影效果。你可以設定多個以逗號分隔的效果。盒狀陰影由相對於元素的 X 和 Y 偏移量、模糊和擴散半徑以及顏色來描述。
 

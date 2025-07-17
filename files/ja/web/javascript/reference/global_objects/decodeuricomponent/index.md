@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/decodeURIComponent
 
 **`decodeURIComponent()`** 関数は、{{jsxref("encodeURIComponent", "encodeURIComponent()")}} 関数あるいは同様のルーチンによって事前に作成された URI (Uniform Resource Identifier; 統一資源識別子) の構成要素をデコードします。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - decodeURIComponent()")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - decodeURIComponent()")}}
 
 ```js interactive-example
 function containsEncodedComponents(x) {

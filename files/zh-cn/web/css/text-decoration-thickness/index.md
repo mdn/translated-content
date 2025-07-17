@@ -3,8 +3,6 @@ title: 文本装饰线厚度 (粗细)
 slug: Web/CSS/text-decoration-thickness
 ---
 
-{{CSSRef}}
-
 [CSS](/zh-CN/docs/Web/CSS) 属性 **`text-decoration-thickness`** 用于设置元素中文本所使用的装饰线（如 line-through、underline 或 overline）的笔触厚度。
 
 ## 语法

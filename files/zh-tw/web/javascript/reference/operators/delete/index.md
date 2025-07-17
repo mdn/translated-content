@@ -3,8 +3,6 @@ title: 屬性的刪除
 slug: Web/JavaScript/Reference/Operators/delete
 ---
 
-{{jsSidebar("Operators")}}
-
 你可以使用 `delete` 運算子移除屬性。下面的代碼示範如何移除屬性︰
 
 ```js

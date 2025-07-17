@@ -14,7 +14,7 @@ input:required {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :required", "tabbed-standard")}}
+{{InteractiveExample("CSS デモ: :required", "tabbed-standard")}}
 
 ```css interactive-example
 label {

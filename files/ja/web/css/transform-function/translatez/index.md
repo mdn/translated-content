@@ -9,7 +9,7 @@ l10n:
 
 **`translateZ()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、三次元空間の z 軸に沿って、すなわち閲覧者に近づいたり遠ざかったりするように要素を移動させます。その結果は {{cssxref("&lt;transform-function&gt;")}} データ型となります。
 
-{{InteractiveExample("CSS Demo: translateZ()")}}
+{{InteractiveExample("CSS デモ: translateZ()")}}
 
 ```css interactive-example-choice
 transform: translateZ(0);

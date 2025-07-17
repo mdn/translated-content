@@ -10,7 +10,7 @@ l10n:
 
 **`id`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、文書全体で一意でなければならない識別子 (ID) を定義します。この属性の用途は、リンク（[フラグメント識別子](/ja/docs/Web/URI#フラグメント)を使用）、スクリプト、スタイル（{{glossary("CSS")}} を使用）で要素を特定することです。
 
-{{InteractiveExample("HTML Demo: id", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: id", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>A normal, boring paragraph. Try not to fall asleep.</p>

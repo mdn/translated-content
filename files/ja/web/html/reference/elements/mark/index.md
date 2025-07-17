@@ -10,7 +10,7 @@ l10n:
 
 **`<mark>`** は [HTML](/ja/docs/Web/HTML) の要素で、周囲の文脈での関連性によって参照したり表記したりする目的でマーク付けされたり強調表示されたりするテキストを表します。
 
-{{InteractiveExample("HTML Demo: &lt;mark&gt;", "tabbed-shorter")}}
+{{InteractiveExample("HTML デモ: &lt;mark&gt;", "tabbed-shorter")}}
 
 ```html interactive-example
 <p>Search results for "salamander":</p>

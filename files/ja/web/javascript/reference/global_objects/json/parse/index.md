@@ -9,7 +9,7 @@ l10n:
 
 **`JSON.parse()`** 静的メソッドは、文字列を JSON として解析し、文字列によって記述されている JavaScript の値やオブジェクトを構築します。オプションの**リバイバー**関数で、生成されたオブジェクトが返される前に変換を実行することができます。
 
-{{InteractiveExample("JavaScript Demo: JSON.parse()")}}
+{{InteractiveExample("JavaScript デモ: JSON.parse()")}}
 
 ```js interactive-example
 const json = '{"result":true, "count":42}';

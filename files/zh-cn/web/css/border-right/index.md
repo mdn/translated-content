@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`border-right`** [CSS](/zh-CN/docs/Web/CSS) [简写](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties)属性用于设置元素右[边框](/zh-CN/docs/Web/CSS/border)的所有属性。
 
 {{InteractiveExample("CSS Demo: border-right")}}
