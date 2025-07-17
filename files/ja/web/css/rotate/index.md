@@ -9,7 +9,7 @@ l10n:
 
 **`rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{CSSxRef("transform")}} とは個別に独立して回転変換を指定することができます。これは一般のユーザーインターフェイスの利用においてはより適しており、 `transform` の値で座標変換関数を指定する実際の順序を覚えておく手間を軽減します。
 
-{{InteractiveExample("CSS Demo: rotate")}}
+{{InteractiveExample("CSS デモ: rotate")}}
 
 ```css interactive-example-choice
 rotate: none;
@@ -130,7 +130,7 @@ rotate: revert-layer;
 rotate: unset;
 ```
 
-{{InteractiveExample("CSS Demo: rotate")}}
+{{InteractiveExample("CSS デモ: rotate")}}
 
 ```css interactive-example-choice
 rotate: none;

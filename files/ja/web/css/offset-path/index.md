@@ -11,7 +11,7 @@ l10n:
 
 `offset-path` プロパティは、{{cssxref("offset-distance")}}、{{cssxref("offset-rotate")}}、{{cssxref("offset-anchor")}} プロパティと組み合わせて使用し、パスに沿った要素の位置と方向を制御します。
 
-{{InteractiveExample("CSS Demo: offset-path")}}
+{{InteractiveExample("CSS デモ: offset-path")}}
 
 ```css interactive-example-choice
 offset-path: path("M-70,-40 C-70,70 70,70 70,-40");

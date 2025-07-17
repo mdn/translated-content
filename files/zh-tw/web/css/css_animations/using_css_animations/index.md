@@ -3,10 +3,8 @@ title: 使用 CSS 動畫
 short-title: 使用動畫
 slug: Web/CSS/CSS_animations/Using_CSS_animations
 l10n:
-  sourceCommit: 0dcad86763896bba7f8e1ddc30c6dfd2aa664c6b
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 **CSS 動畫**能夠將 CSS 樣式組態從一個狀態轉場至另一個狀態。動畫由兩個組件組成：一個描述 CSS 動畫的樣式，以及一組指示動畫樣式開始與結束狀態的關鍵影格，其中也可能包含中間的途經點。
 

@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.cbrt()")}}
+{{InteractiveExample("JavaScript デモ: Math.cbrt()")}}
 
 ```js interactive-example
 console.log(Math.cbrt(-1));

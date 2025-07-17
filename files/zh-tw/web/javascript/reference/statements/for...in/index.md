@@ -3,8 +3,6 @@ title: for...in
 slug: Web/JavaScript/Reference/Statements/for...in
 ---
 
-{{jsSidebar("Statements")}}
-
 迭代物件的可列舉屬性。對每個相異屬性，執行陳述式。
 
 <table>

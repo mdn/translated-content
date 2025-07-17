@@ -9,7 +9,7 @@ l10n:
 
 **`some()`** は {{jsxref("Array")}} インスタンスのメソッドで、指定された関数で実装されているテストに、配列の中の少なくとも 1 つの要素が合格するかどうかを判定します。配列の中で指定された関数が true を返す要素を見つけた場合は true を返し、そうでない場合は false を返します。配列は変更しません。
 
-{{InteractiveExample("JavaScript Demo: Array.some()")}}
+{{InteractiveExample("JavaScript デモ: Array.some()")}}
 
 ```js interactive-example
 const array = [1, 2, 3, 4, 5];

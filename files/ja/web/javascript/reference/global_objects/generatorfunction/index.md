@@ -13,7 +13,7 @@ slug: Web/JavaScript/Reference/Global_Objects/GeneratorFunction
 Object.getPrototypeOf(function* () {}).constructor;
 ```
 
-{{InteractiveExample("JavaScript Demo: GeneratorFunction()", "taller")}}
+{{InteractiveExample("JavaScript デモ: GeneratorFunction()", "taller")}}
 
 ```js interactive-example
 const GeneratorFunction = function* () {}.constructor;

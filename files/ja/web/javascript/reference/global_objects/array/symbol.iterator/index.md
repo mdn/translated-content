@@ -11,7 +11,7 @@ l10n:
 
 このプロパティの初期値は {{jsxref("Array.prototype.values")}} プロパティの初期値と同じ関数オブジェクトです。
 
-{{InteractiveExample("JavaScript Demo: Array.prototype[Symbol.iterator]()")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype[Symbol.iterator]()")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];

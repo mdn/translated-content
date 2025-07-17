@@ -9,7 +9,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Symbol/split
 
 詳しくは、 {{jsxref("RegExp.@@split", "RegExp.prototype[Symbol.split]()")}} と {{jsxref("String.prototype.split()")}} を参照してください。
 
-{{InteractiveExample("JavaScript Demo: Symbol.split")}}
+{{InteractiveExample("JavaScript デモ: Symbol.split")}}
 
 ```js interactive-example
 class Split1 {

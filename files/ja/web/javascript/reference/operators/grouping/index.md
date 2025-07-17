@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/Grouping
 
 グループ化演算子 `( )` は、式での評価の優先順位を制御します。
 
-{{InteractiveExample("JavaScript Demo: Expressions - Grouping operator")}}
+{{InteractiveExample("JavaScript デモ: Expressions - Grouping operator")}}
 
 ```js interactive-example
 console.log(1 + 2 * 3); // 1 + 6

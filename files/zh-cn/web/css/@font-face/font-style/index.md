@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 418b3ebf6464716649125199385c39d86c944973
 ---
 
-{{CSSRef}}
-
 **`font-style`** CSS 描述符允许作者为 {{cssxref("@font-face")}} @ 规则中指定的字体指定字体样式。
 
 对于特定字体家族，作者可以下载与同一字体家族的不同风格相对应的各种字体，然后使用 `font-style` 描述符明确指定字体的风格。该 CSS 描述符的值与相应的 {{cssxref("font-style")}} 属性的值相同。

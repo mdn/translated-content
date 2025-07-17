@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Operators/function*
 
 **`function*`** キーワードは、式の中でジェネレーター関数を定義するために使用することができます。
 
-{{InteractiveExample("JavaScript Demo: Expressions - function* expression", "taller")}}
+{{InteractiveExample("JavaScript デモ: Expressions - function* expression", "taller")}}
 
 ```js interactive-example
 const foo = function* () {

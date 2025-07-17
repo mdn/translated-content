@@ -9,7 +9,7 @@ l10n:
 
 **`handler.get()`** は、オブジェクトの `[[Get]]` [内部メソッド](/ja/docs/Web/JavaScript/Reference/Global_Objects/Proxy#オブジェクト内部メソッド)に対するトラップです。[プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)などの操作で使用されます。
 
-{{InteractiveExample("JavaScript Demo: handler.get()", "taller")}}
+{{InteractiveExample("JavaScript デモ: handler.get()", "taller")}}
 
 ```js interactive-example
 const monster1 = {

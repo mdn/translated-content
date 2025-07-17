@@ -3,8 +3,6 @@ title: 自增（++）
 slug: Web/JavaScript/Reference/Operators/Increment
 ---
 
-{{jsSidebar("Operators")}}
-
 **自增**（**`++`**）运算符对其操作数进行自增（加一），并根据运算符的位置返回自增之前或之后的值。
 
 {{InteractiveExample("JavaScript Demo: Expressions - Increment operator")}}

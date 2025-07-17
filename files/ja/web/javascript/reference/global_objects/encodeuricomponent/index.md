@@ -9,7 +9,7 @@ l10n:
 
 **`encodeURIComponent()`** 関数は {{Glossary("URI")}} を、特定の文字の各インスタンスを、その文字の {{Glossary("UTF-8")}} エンコード方式を表す 1 つから 4 つのエスケープシーケンスで置き換えることでエンコードします (2 つのサロゲート文字で構成される文字の場合は 4 つのエスケープシーケンスになります)。 {{jsxref("encodeURI()")}} と比較すると、この関数は URI 構文の一部を含むより多くの文字をエンコードします。
 
-{{InteractiveExample("JavaScript Demo: Standard built-in objects - encodeURIComponent()", "shorter")}}
+{{InteractiveExample("JavaScript デモ: Standard built-in objects - encodeURIComponent()", "shorter")}}
 
 ```js interactive-example
 // Encodes characters such as ?,=,/,&,:

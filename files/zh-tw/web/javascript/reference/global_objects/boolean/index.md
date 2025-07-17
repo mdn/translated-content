@@ -3,8 +3,6 @@ title: Boolean
 slug: Web/JavaScript/Reference/Global_Objects/Boolean
 ---
 
-{{JSRef}}
-
 **`Boolean`** 是布林值的包覆器。
 
 ## 語法

@@ -9,7 +9,7 @@ l10n:
 
 **`text-underline-position`** は [CSS](/ja/docs/Web/CSS) のプロパティであり、{{cssxref("text-decoration")}} プロパティの `underline` の値で設定される下線 (傍線) の位置を指定します。
 
-{{InteractiveExample("CSS Demo: text-underline-position")}}
+{{InteractiveExample("CSS デモ: text-underline-position")}}
 
 ```css interactive-example-choice
 text-underline-position: auto;
