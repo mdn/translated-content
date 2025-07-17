@@ -15,7 +15,7 @@ input:in-range {
 }
 ```
 
-{{InteractiveExample("CSS Demo: :in-range", "tabbed-shorter")}}
+{{InteractiveExample("CSS デモ: :in-range", "tabbed-shorter")}}
 
 ```css interactive-example
 label {

@@ -3,8 +3,6 @@ title: :only-of-type
 slug: Web/CSS/:only-of-type
 ---
 
-{{CSSRef}}
-
 **`:only-of-type`** CSS [伪类](/zh-CN/docs/Web/CSS/Pseudo-classes)代表了任意一个元素，这个元素没有其他相同类型的兄弟元素。
 
 {{InteractiveExample("CSS Demo: :only-of-type", "tabbed-shorter")}}

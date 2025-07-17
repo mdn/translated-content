@@ -2,10 +2,8 @@
 title: 使用多重背景
 slug: Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 l10n:
-  sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
-
-{{CSSRef}}
 
 你可以為元素套用**多重背景**。這些背景會層層相疊，你提供的第一個背景在最上層，而最後列出的背景在最底層。只有最後一個背景可以包含背景顏色。
 

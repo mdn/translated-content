@@ -3,8 +3,6 @@ title: "@namespace"
 slug: Web/CSS/@namespace
 ---
 
-{{CSSRef}}
-
 ## 概述
 
 **`@namespace`** 是用来定义使用在 CSS 样式表中的 XML 命名空间的 @规则。定义的命名空间可以把通配、元素和属性选择器限制在指定命名空间里的元素。**@namespace**规则通常在处理包含多个 namespaces 的文档时才有用，比如 HTML5 里内联的 SVG、MathML 或者混合多个词汇表的 XML。

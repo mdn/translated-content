@@ -10,7 +10,7 @@ l10n:
 
 **`<select>`** は [HTML](/ja/docs/Web/HTML) の要素で、選択式のメニューを提供するコントロールを表します。
 
-{{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}
+{{InteractiveExample("HTML デモ: &lt;select&gt;", "tabbed-standard")}}
 
 ```html interactive-example
 <label for="pet-select">Choose a pet:</label>

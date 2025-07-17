@@ -3,8 +3,6 @@ title: JavaScript 技術概觀
 slug: Web/JavaScript/Reference/JavaScript_technologies_overview
 ---
 
-{{JsSidebar("Introductory")}}
-
 ## 簡介
 
 在網頁中，HTML 存放網頁的內容與格式，CSS 註記內容的呈現樣式；而 JavaScript 則用來產生豐富的效果或網頁應用程式。然而，在網頁瀏覽器中通稱的「JavaScript」是由眾多截然不同的要素所構成。其中之一是核心語言（ECMAScript），另一個則是 DOM（文件物件模型，Document Object Model）。

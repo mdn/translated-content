@@ -7,7 +7,7 @@ slug: Web/CSS/shape-margin
 
 **`shape-margin`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("shape-outside")}} を使用して作成された CSS シェイプのマージンを設定します。
 
-{{InteractiveExample("CSS Demo: shape-margin")}}
+{{InteractiveExample("CSS デモ: shape-margin")}}
 
 ```css interactive-example-choice
 shape-margin: 0;

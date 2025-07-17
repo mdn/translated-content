@@ -9,7 +9,7 @@ l10n:
 
 **`text-decoration-skip-ink`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上線や下線が文字のアセンダーやディセンダーを通過するときにどのように引くのかを指定します。
 
-{{InteractiveExample("CSS Demo: text-decoration-skip-ink")}}
+{{InteractiveExample("CSS デモ: text-decoration-skip-ink")}}
 
 ```css interactive-example-choice
 text-decoration-skip-ink: auto;

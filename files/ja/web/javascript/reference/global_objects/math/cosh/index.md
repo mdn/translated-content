@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.cosh()")}}
+{{InteractiveExample("JavaScript デモ: Math.cosh()")}}
 
 ```js interactive-example
 console.log(Math.cosh(0));

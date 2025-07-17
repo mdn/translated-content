@@ -9,7 +9,7 @@ l10n:
 
 **`normalize()`** メソッドは、文字列の Unicode 正規化形式を返します。
 
-{{InteractiveExample("JavaScript Demo: String.normalize()", "taller")}}
+{{InteractiveExample("JavaScript デモ: String.normalize()", "taller")}}
 
 ```js interactive-example
 const name1 = "\u0041\u006d\u00e9\u006c\u0069\u0065";

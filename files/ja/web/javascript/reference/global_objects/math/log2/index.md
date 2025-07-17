@@ -15,7 +15,7 @@ l10n:
 </math>
 <!-- prettier-ignore-end -->
 
-{{InteractiveExample("JavaScript Demo: Math.log2()")}}
+{{InteractiveExample("JavaScript デモ: Math.log2()")}}
 
 ```js interactive-example
 console.log(Math.log2(3));

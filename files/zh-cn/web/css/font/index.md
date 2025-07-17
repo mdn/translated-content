@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3fd4e2ff8c4da3b4ff7be34eeda4dd0cbbfc1a15
 ---
 
-{{CSSRef}}
-
 CSS [简写属性](/zh-CN/docs/Web/CSS/CSS_cascade/Shorthand_properties) `font` 可设置某元素字体的不同属性，或将元素的字体设置为系统字体。
 
 {{InteractiveExample("CSS Demo: font")}}

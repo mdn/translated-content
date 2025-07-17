@@ -9,7 +9,7 @@ l10n:
 
 **`catch()`** は {{jsxref("Promise")}} オブジェクトのメソッドで、プロミスが拒否されたときに呼び出される関数をスケジュールします。これは即座に同等の {{jsxref("Promise")}} オブジェクトを返すので、他のプロミスのメソッドを[連鎖](/ja/docs/Web/JavaScript/Guide/Using_promises#chaining) して呼び出すことができます。これは {{jsxref("Promise/then", "Promise.prototype.then(undefined, onRejected)")}} の省略形です。
 
-{{InteractiveExample("JavaScript Demo: Promise.catch()")}}
+{{InteractiveExample("JavaScript デモ: Promise.catch()")}}
 
 ```js interactive-example
 const promise1 = new Promise((resolve, reject) => {
