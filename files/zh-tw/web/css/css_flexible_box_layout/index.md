@@ -2,7 +2,7 @@
 title: CSS 彈性盒排版
 slug: Web/CSS/CSS_flexible_box_layout
 l10n:
-  sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **CSS 彈性盒排版**模組定義了一個為使用者介面設計最佳化的 CSS 盒模型，以及在單一維度上排版項目的方法。在彈性排版模型中，彈性容器的子元素可以朝任何方向排版，並且可以「彈性」調整其尺寸，可以擴展以填滿未使用的空間，或縮小以避免溢出父元素。子元素的水平和垂直對齊都可以輕鬆地操作。
