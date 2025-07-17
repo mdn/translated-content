@@ -9,7 +9,7 @@ l10n:
 
 [CSS](/ja/docs/Web/CSS) の **`quotes`** プロパティは、HTML の {{HTMLElement("q")}} 要素に自動的に追加される引用符、または CSS の [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` または `close-quotes` 値を使用して追加される引用符（`no-open-quote` および `no-close-quote` を使用して省略される場合もあります）を、ブラウザーがどのようにレンダリングするかを設定します。
 
-{{InteractiveExample("CSS Demo: quotes")}}
+{{InteractiveExample("CSS デモ: quotes")}}
 
 ```css interactive-example-choice
 quotes: none;

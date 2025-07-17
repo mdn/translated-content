@@ -9,7 +9,7 @@ l10n:
 
 **`perspective`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 z=0 の平面とユーザーとの間の距離を定めて 3D に配置された要素に遠近感を与えます。
 
-{{InteractiveExample("CSS Demo: perspective")}}
+{{InteractiveExample("CSS デモ: perspective")}}
 
 ```css interactive-example-choice
 perspective: none;

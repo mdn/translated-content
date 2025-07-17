@@ -5,7 +5,7 @@ l10n:
   sourceCommit: f2175c4c2cf9de232ec9b2e1c395903d53ea24a0
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::-moz-focus-inner`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是用于表示 {{HTMLElement("button")}} 元素以及 {{HTMLElement("input/button","button")}}、{{HTMLElement("input/submit","submit")}}、{{HTMLElement("input/reset","reset")}} 和 {{HTMLElement("input/color","color")}} 类型的 {{HTMLElement("input")}} 元素的 [Mozilla 扩展](/zh-CN/docs/Web/CSS/Mozilla_Extensions)。
 

@@ -9,7 +9,7 @@ l10n:
 
 **`text-overflow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、あふれたコンテンツが非表示になる場合、それをどのようにユーザーに示すのかを設定します。切り取られるか、省略記号 (`…`) を表示するか、独自の文字列を表示するかです。
 
-{{InteractiveExample("CSS Demo: text-overflow")}}
+{{InteractiveExample("CSS デモ: text-overflow")}}
 
 ```css interactive-example-choice
 text-overflow: clip;

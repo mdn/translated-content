@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 `-webkit-touch-callout` [CSS](/zh-CN/docs/Web/CSS) 属性控制触摸并按住触摸目标时显示的默认标注。
 

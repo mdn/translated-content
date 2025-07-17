@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 5e8fc110cc2fd247cc8ec7c6c06503367d50e86f
 ---
 
-{{HTTPSidebar}}
-
 **HTTP `OPTIONS` 메서드**는 주어진 URL 또는 서버에 대해 허용된 통신 옵션을 요청합니다. 클라이언트는 이 방법으로 URL을 지정하거나 별표(`*`)를 지정하여 전체 서버를 참조할 수 있습니다.
 
 <table class="properties">

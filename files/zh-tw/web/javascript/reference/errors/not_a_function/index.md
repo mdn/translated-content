@@ -2,17 +2,15 @@
 title: 'TypeError: "x" is not a function'
 slug: Web/JavaScript/Reference/Errors/Not_a_function
 l10n:
-  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
+  sourceCommit: fad67be4431d8e6c2a89ac880735233aa76c41d4
 ---
 
-{{jsSidebar("Errors")}}
-
-當試圖將一個值當作函式呼叫，但該值實際上並非函式時，會發生 JavaScript 的「is not a function」例外。
+ JavaScript 的「is not a function」例外會在試圖將一個值當作函式呼叫，但該值實際上並非函式時發生。
 
 ## 訊息
 
 ```plain
-TypeError: "x" is not a function. (V8-based & Firefox & Safari)
+TypeError: "x" is not a function.（基於 V8 & Firefox & Safari）
 ```
 
 ## 錯誤類型

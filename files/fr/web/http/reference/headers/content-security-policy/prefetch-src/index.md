@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/prefetch-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/prefetch-src
 ---
 
-{{HTTPSidebar}}
-
 La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`prefetch-src`** spécifie les ressources pouvant être préchargées ou préaffichées.
 
 <table class="properties">

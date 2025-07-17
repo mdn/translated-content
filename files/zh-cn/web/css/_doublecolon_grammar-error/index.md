@@ -3,7 +3,7 @@ title: ::grammar-error
 slug: Web/CSS/::grammar-error
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `::grammar-error 伪元素应用于浏览器标识为语法错误的文本段`
 

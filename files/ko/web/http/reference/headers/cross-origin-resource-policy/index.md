@@ -6,8 +6,6 @@ l10n:
   sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
 ---
 
-{{HTTPSidebar}}
-
 HTTP **`Cross-Origin-Resource-Policy`** 응답 헤더는 브라우저가 지정된 리소스에 대한 no-cors 교차 출처/사이트 간 요청을 차단하기를 원한다는 뜻을 전달합니다.
 
 <table class="properties">

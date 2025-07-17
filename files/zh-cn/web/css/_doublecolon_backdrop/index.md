@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7dae0a08ea89d28b9360c666291a3d86a593da37
 ---
 
-{{CSSRef}}
-
 **`::backdrop`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)是一个与{{Glossary("viewport", "视口")}}大小相同的盒子，它会被渲染在任何{{Glossary("top layer", "顶层")}}展示元素的下方。
 
 {{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}

@@ -9,7 +9,7 @@ l10n:
 
 **`get()`** メソッドは、指定された要素を `Map` オブジェクトから返します。指定されたキーに関連付けられた値がオブジェクトである場合は、そのオブジェクトの参照を受け取ることになり、そのオブジェクトに対して変更を行った場合は、 `Map` オブジェクトの中にあるものに変更が行われます。
 
-{{InteractiveExample("JavaScript Demo: Map.prototype.get()")}}
+{{InteractiveExample("JavaScript デモ: Map.prototype.get()")}}
 
 ```js interactive-example
 const map1 = new Map();

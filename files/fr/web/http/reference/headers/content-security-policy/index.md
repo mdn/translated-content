@@ -4,8 +4,6 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy
 original_slug: Web/HTTP/Headers/Content-Security-Policy
 ---
 
-{{HTTPSidebar}}
-
 L'en-tête de réponse HTTP **`Content-Security-Policy`** permet aux administrateurs d'un site web de contrôler les ressources que l'agent utilisateur est autorisé à charger pour une page donnée. Bien qu'il y ait quelques exceptions, ces règles impliquent la plupart du temps de définir les origines du serveur et les points d'accès pour les scripts. Cet en-tête aide à se protéger contre les attaques de _cross-site scripting_ ({{Glossary("XSS")}}).
 
 Pour plus d'informations, voir cet article sur [_Content Security Policy_ (CSP)](/fr/docs/Web/HTTP/CSP).

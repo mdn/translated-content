@@ -7,7 +7,7 @@ slug: Web/JavaScript/Reference/Global_Objects/Reflect/getOwnPropertyDescriptor
 
 静的な **`Reflect.getOwnPropertyDescriptor()`** メソッドは {{jsxref("Object.getOwnPropertyDescriptor()")}} と似ています。オブジェクトにプロパティが存在する場合は、指定されたプロパティのプロパティ記述子を返します。一方、プロパティが存在しない場合は {{jsxref("undefined")}} を返します。
 
-{{InteractiveExample("JavaScript Demo: Reflect.getOwnPropertyDescriptor()")}}
+{{InteractiveExample("JavaScript デモ: Reflect.getOwnPropertyDescriptor()")}}
 
 ```js interactive-example
 const object1 = {

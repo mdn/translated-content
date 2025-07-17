@@ -1,103 +1,88 @@
 ---
-title: DOM on-event 處理器
+title: 事件處理（概覽）
 slug: Web/Events/Event_handlers
+l10n:
+  sourceCommit: 95e0fbb78a16450188753d0b53ca02a9fbd2a641
 ---
 
-Web 平台提供了多種獲得 [DOM 事件](/zh-TW/docs/Web/Events)通知的方式。兩種常見的風格為：通用的 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 及一組特定的 _**on-event**_ 處理器。本頁聚焦在後者如何運作的細節。
+事件是在瀏覽器視窗內觸發的信號，用以通知瀏覽器或作業系統環境的變化。程式設計師可以建立*事件處理器*程式碼，當事件觸發時執行，讓網頁能對變化做出適當的回應。
 
-### 註冊 _on-event_ 處理器
+本頁面提供了一個關於如何使用事件和事件處理器的非常簡短的「提醒」。新開發者應改為閱讀[事件簡介](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)。
 
-_**on-event**_ 處理器為一群由 DOM 元素提供的屬性（{{Glossary("property")}}），用來協助管理元素要如何應對事件。元素可以是具互動性的（如：links、buttons、images、forms）或非互動性的（如頁面基礎 document）。事件為一個操作，像是點擊（clicked）、偵測按下按鍵（pressed keys）、取得焦點（focus）等。on-event 處理器通常是根據它被設計來應對的事件，例如 `onclick`、`onkeypress`、`onfocus` 等等。
+## 有哪些可用的事件？
 
-你可以使用兩種不同的方式來為一個物件的特定事件（例如：[`click`](/zh-TW/docs/Web/API/Element/click_event)）指定一個 `on<...>` 事件處理器：
+事件記載於發出它們的 JavaScript 物件頁面中，或其下方。例如，要查找在瀏覽器視窗或當前文件上觸發的事件，請參閱 [`Window`](/zh-TW/docs/Web/API/Window#事件) 和 [`Document`](/zh-TW/docs/Web/API/Document#事件) 中的事件章節。
 
-- 在元素上使用一個名稱為 `on{eventtype}` 的 HTML 標籤屬性（{{Glossary("attribute")}}），例如：`<button onclick="return handleClick(event);">`，
-- 或藉由設定相對應的 JavaScript 屬性（{{Glossary("property/JavaScript", "property")}}），例如：`document.getElementById("mybutton").onclick = function(event) { ... }`.
+你可以使用[事件參考](/zh-TW/docs/Web/Events#event_index)來查找哪些 JavaScript 物件會為特定的 API（例如動畫、媒體等）觸發事件。
 
-Note that each object can have **only one** _on-event_ handler for a given event (though that handler could call multiple sub-handlers). This is why {{domxref("EventTarget.addEventListener", "addEventListener()")}} is often the better way to get notified of events, especially when wishing to apply various event handlers independently from each other, even for the same event and/or to the same element.
+## 註冊事件處理器
 
-Also note that _on-event_ handlers are called automatically, not at the programmer's will (although you can, like `mybutton.onclick(myevent); )` since they serve more as placeholders to which a real handler function can be **assigned**.
+有兩種推薦的註冊處理器的方法。可以透過將事件處理器程式碼指派給目標元素對應的 _onevent_ 屬性，或使用 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 方法將處理器註冊為元素的監聽器，來讓事件處理器程式碼在事件觸發時執行。無論哪種情況，處理器都會收到一個符合 [`Event` 介面](/zh-TW/docs/Web/API/Event)（或[衍生介面](/zh-TW/docs/Web/API/Event#interfaces_based_on_event)）的物件。主要區別在於，使用事件監聽器方法可以新增（或移除）多個事件處理器。
 
-### 非元素物件
+> [!WARNING]
+> 不建議使用第三種方法：HTML onevent 屬性來設定事件處理器！它們會使標記膨脹，降低可讀性，並增加除錯難度。更多資訊請參閱[行內事件處理器](/zh-TW/docs/Learn_web_development/Core/Scripting/Events#行內事件處理器——不要使用)。
 
-Event handlers can also be set using properties on many non-element objects that generate events, including {{ domxref("window") }}, {{ domxref("document") }}, {{ domxref("XMLHttpRequest") }}, and others, for example:
+### 使用 onevent 屬性
 
-```js
-xhr.onprogress = function() { ... }
-```
+按照慣例，觸發事件的 JavaScript 物件都有一個對應的「onevent」屬性（以事件名稱加上「on」前綴命名）。當事件觸發時，會呼叫這些屬性以執行相關的處理器程式碼，你也可以在自己的程式碼中直接呼叫它們。
 
-## 細節
+要設定事件處理器程式碼，你只需將其指派給適當的 onevent 屬性即可。每個元素的每個事件只能指派一個事件處理器。如有需要，可以透過將另一個函式指派給同一個屬性來替換處理器。
 
-### HTML 的 on\<...> 屬性值及對應的 JavaScript 屬性
-
-A handler registered via an `on<...>` attribute will be available via the corresponding `on<...>` property, but not the other way around:
-
-```html
-<div id="a" onclick="alert('old')">
-  Open the Developer Tools Console to see the output.
-</div>
-
-<script>
-  window.onload = function () {
-    var div = document.getElementById("a");
-    console.log("Attribute reflected as a property: ", div.onclick.toString());
-    // Prints: function onclick(event) { alert('old') }
-    div.onclick = function () {
-      alert("new");
-    };
-    console.log("Changed property to: ", div.onclick.toString());
-    // Prints: function () { alert('new') }
-    console.log("Attribute value is unchanged: ", div.getAttribute("onclick"));
-    // Prints: alert('old')
-  };
-</script>
-```
-
-For historical reasons, some attributes/properties on the {{HTMLElement("body")}} and {{HTMLElement("frameset")}} elements actually set event handlers on their parent {{domxref("Window")}} object. (The HTML specification names these: `onblur`, `onerror`, `onfocus`, `onload`, `onscroll`.)
-
-### 事件處理器的參數、`this` 綁定及回傳值
-
-當一個事件處理被定義成為一個 **HTML** 的屬性時，給定的程式碼會被包成一個具有下列參數的函式：
-
-- `event` - 除了{{domxref("GlobalEventHandlers.onerror", "onerror")}}的事件以外，其他所有的事件都會有此參數。
-- `event`, `source`, `lineno`, `colno`, 還有專為 {{domxref("GlobalEventHandlers.onerror", "onerror")}} 事件處理的 `error` 。請注意： `event` 參數實際上擁有以字串形式呈現的錯誤訊息。
-
-當事件處理函式被觸發時，處理函式中的關鍵字： `this` 被設定成為註冊這個事件處理函式的 DOM 元件。 請參閱 [this 關鍵字說明](/zh-TW/docs/Web/JavaScript/Reference/Operators/this#In_an_in%E2%80%93line_event_handler) 獲得更多細節。
-
-The return value from the handler determines if the event is canceled. The specific handling of the return value depends on the kind of event, for details see ["The event handler processing algorithm" in the HTML specification](https://html.spec.whatwg.org/multipage/webappapis.html#the-event-handler-processing-algorithm).
-
-### 當事件處理器被調用
-
-TBD (non-capturing listener)
-
-### 術語
-
-The term **event handler** may be used to refer to:
-
-- any function or object registered to be notified of events,
-- or, more specifically, to the mechanism of registering event listeners via `on...` attributes in HTML or properties in web APIs, such as `<button onclick="alert(this)">` or `window.onload = function() { /* ... */ }`.
-
-When discussing the various methods of listening to events,
-
-- **event listener** refers to a function or object registered via {{domxref("EventTarget.addEventListener()")}},
-- whereas **event handler** refers to a function registered via `on...` attributes or properties.
-
-### Event handler changes in Firefox 9
-
-In order to better match the specifications, and improve cross-browser compatibility, the way event handlers were implemented at a fundamental level changed in Gecko 9.0.
-
-Specifically, in the past, event handlers were not correctly implemented as standard IDL attributes. In Gecko 9.0, this was changed. Because of this, certain behaviors of event handlers in Gecko have changed. In particular, they now behave in all the ways standard IDL attributes behave. In most cases, this shouldn't affect web or add-on content at all; however, there are a few specific things to watch out for.
-
-#### Detecting the presence of event handler properties
-
-You can now detect the presence of an event handler property (that is, for example, `onload`), using the JavaScript [`in`](/zh-TW/docs/Web/JavaScript/Reference/Operators/in) operator. For example:
+下面我們展示如何使用 `onclick` 屬性為 `click` 事件設定一個 `greet()` 函式。
 
 ```js
-if ("onsomenewfeature" in window) {
-  /* do something amazing */
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("打招呼：", event);
 }
+
+btn.onclick = greet;
 ```
 
-#### Event handlers and prototypes
+請注意，代表事件的物件會作為第一個引數傳遞給事件處理器。這個事件物件實作了 {{domxref("Event")}} 介面，或是由其衍生而來。
 
-You can't set or access the values of any IDL-defined attributes on DOM prototype objects; that means you can't, for example, change `Window.prototype.onload` anymore. In the past, event handlers (`onload`, etc.) weren't implemented as IDL attributes in Gecko, so you were able to do this for those. Now you can't. This improves compatibility.
+### EventTarget.addEventListener
+
+在元素上設定事件處理器最靈活的方法是使用 {{domxref("EventTarget.addEventListener")}} 方法。這種方法允許為一個元素指派多個監聽器，並在需要時*移除*監聽器（使用 {{domxref("EventTarget.removeEventListener")}}）。
+
+> [!NOTE]
+> 新增和移除事件處理器的能力，讓你可以（舉例來說）讓同一個按鈕在不同情況下執行不同的動作。此外，在更複雜的程式中，清理舊的／未使用的事件處理器可以提高效率。
+
+下面我們展示如何將 `greet()` 函式設定為 `click` 事件的監聽器／事件處理器（如果你願意，也可以使用匿名函式表達式來代替具名函式）。再次注意，事件會作為第一個引數傳遞給事件處理器。
+
+```js
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("打招呼：", event);
+}
+
+btn.addEventListener("click", greet);
+```
+
+此方法還可以接受額外的引數／選項，以控制事件捕獲和移除的方式。更多資訊可以在 {{domxref("EventTarget.addEventListener")}} 參考頁面中找到。
+
+#### 使用中止信號
+
+一個值得注意的事件監聽器特性是能夠使用中止信號同時清理多個事件處理器。
+
+做法是將同一個 {{domxref("AbortSignal")}} 傳遞給你想要能夠一起移除的所有事件處理器的 {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 呼叫中。然後你可以在擁有該 `AbortSignal` 的控制器上呼叫 {{domxref("AbortController/abort()", "abort()")}}，這將會移除所有用該信號新增的事件處理器。例如，要新增一個可以用 `AbortSignal` 移除的事件處理器：
+
+```js
+const controller = new AbortController();
+
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("打招呼：", event);
+  },
+  { signal: controller.signal },
+); // 將一個 AbortSignal 傳遞給此處理器
+```
+
+然後，由上述程式碼建立的事件處理器可以像這樣移除：
+
+```js
+controller.abort(); // 移除與此控制器相關的任何／所有事件處理器
+```
