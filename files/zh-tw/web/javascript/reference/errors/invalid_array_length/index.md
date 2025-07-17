@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
-{{jsSidebar("Errors")}}
-
 當你指定一個負數、浮點數，或超過平台支援最大值的陣列長度時，會發生 JavaScript 的「Invalid array length」例外（例如：在建立 {{jsxref("Array")}} 或 {{jsxref("ArrayBuffer")}} 時，或在設定 {{jsxref("Array/length", "length")}} 屬性時）。
 
 允許的最大陣列長度取決於平台、瀏覽器和瀏覽器版本。對於 {{jsxref("Array")}}，最大長度為 2<sup>32</sup>-1。對於 {{jsxref("ArrayBuffer")}}，在 32 位元系統上，最大長度為 2<sup>31</sup>-1（2GiB-1）。從 Firefox 89 版開始，在 64 位元系統上，{{jsxref("ArrayBuffer")}} 的最大值為 2<sup>33</sup>（8GiB）。

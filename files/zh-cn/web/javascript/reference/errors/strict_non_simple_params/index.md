@@ -3,8 +3,6 @@ title: 'SyntaxError: "use strict" not allowed in function with non-simple parame
 slug: Web/JavaScript/Reference/Errors/Strict_non_simple_params
 ---
 
-{{jsSidebar("Errors")}}
-
 ## 信息
 
 ```plain
