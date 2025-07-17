@@ -80,7 +80,3 @@ button.addEventListener("click", () => {
 ## 浏览器兼容性
 
 {{Compat}}
-
-## 参见
-
-- [http://www.w3.org/TR/DOM-Level-3-Cor...amespacePrefix](https://www.w3.org/TR/DOM-Level-3-Core/core.html#Node3-lookupNamespacePrefix)
