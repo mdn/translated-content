@@ -46,7 +46,7 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 - `learn-topic`: トピックの概要、つまり [_CSS_](/ja/docs/Learn_web_development/Core/Styling_basics) のようなモジュールの集合です。
 - `learn-module` [_HTML によるコンテンツの構造化_](/ja/docs/Learn_web_development/Core/Structuring_content)のように、モジュールの概要、つまり、順番に並んだガイドの集合です。
 - `learn-module-chapter` [_モバイルアクセシビリティ_](/ja/docs/Learn_web_development/Core/Accessibility/Mobile)のように、モジュールの一部であるガイド。
-- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
+- `learn-module-assessment` [_スキルテスト: 基本的なコントロール_](/ja/docs/Learn_web_development/Extensions/Forms)のように、モジュールまたはその一部の理解度を評価するためのアクティビティを含む特別なガイドです。
 - `learn-faq`: [_ドメイン名とは何ですか?_](/ja/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_domain_name)のように、ウェブ開発に関する固有の質問に対する答えです。
 
 ### アクセシビリティのページ型
