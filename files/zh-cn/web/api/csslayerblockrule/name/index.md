@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSLayerBlockRule")}} 接口的只读属性 **`name`** 属性表示关联的层叠层的名称。
+{{domxref("CSSLayerBlockRule")}} 接口的只读属性 **`name`** 表示关联的层叠层的名称。
 
 ## 值
 
@@ -50,8 +50,8 @@ const rules = document.styleSheets[1].cssRules;
 // 注意，样式表 #1 是与此嵌入示例相关联的样式表，
 // 而样式表 #0 是与整个 MDN 页面相关联的样式表
 
-const layer = rules[1]; // 一个 CSSLayerBlockRule
-const anonymous = rules[2]; // 一个匿名的 CSSLayerBlockRule
+const layer = rules[1]; // CSSLayerBlockRule
+const anonymous = rules[2]; // 匿名的 CSSLayerBlockRule
 
 item1.textContent = `第一个 CSSLayerBlockRule 定义了“${layer.name}”层。`;
 item2.textContent = `第二个 CSSLayerBlockRule 定义了一个层，其名称为：“${anonymous.name}”。`;
