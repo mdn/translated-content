@@ -2,7 +2,7 @@
 title: CSSLayerBlockRule
 slug: Web/API/CSSLayerBlockRule
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 91830b19375f5cc2416302f044d37c58d241de5d
 ---
 
 {{APIRef("CSSOM")}}
