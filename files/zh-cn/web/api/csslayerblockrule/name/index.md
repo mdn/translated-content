@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-{{domxref("CSSLayerBlockRule")}} 接口的只读属性 **`name`** 属性表示关联的级联层的名称。
+{{domxref("CSSLayerBlockRule")}} 接口的只读属性 **`name`** 属性表示关联的层叠层的名称。
 
 ## 值
 
@@ -53,13 +53,13 @@ const rules = document.styleSheets[1].cssRules;
 const layer = rules[1]; // 一个 CSSLayerBlockRule
 const anonymous = rules[2]; // 一个匿名的 CSSLayerBlockRule
 
-item1.textContent = `第一个 CSSLayerBlockRule 定义了 "${layer.name}" 层。`;
-item2.textContent = `第二个 CSSLayerBlockRule 定义了一个层，其名称为: "${anonymous.name}"。`;
+item1.textContent = `第一个 CSSLayerBlockRule 定义了“${layer.name}”层。`;
+item2.textContent = `第二个 CSSLayerBlockRule 定义了一个层，其名称为：“${anonymous.name}”。`;
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -72,4 +72,4 @@ item2.textContent = `第二个 CSSLayerBlockRule 定义了一个层，其名称�
 ## 参见
 
 - {{cssxref("@layer")}} 的声明语句由 {{domxref("CSSLayerStatementRule")}} 表示。
-- 如何在 CSS 中[创建命名级联层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#creating_cascade_layers)。
+- 如何在 CSS 中[创建具名层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers#创建层叠层)。
