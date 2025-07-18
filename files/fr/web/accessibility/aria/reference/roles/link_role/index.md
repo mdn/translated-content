@@ -98,5 +98,5 @@ Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Element
 
 - L'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)
 - L'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
-- [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
-- [Bonnes pratiques ARIA - Rôle `link`](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
+- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [Bonnes pratiques ARIA - Rôle `link` (en anglais)](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
