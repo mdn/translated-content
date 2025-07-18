@@ -102,10 +102,10 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Our team</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">主页</a></li>
+        <li><a href="#">我们的团队</a></li>
+        <li><a href="#">项目</a></li>
+        <li><a href="#">联系方式</a></li>
       </ul>
 
       <!-- 搜索栏是站点内导航的一个非线性的方式。 -->
