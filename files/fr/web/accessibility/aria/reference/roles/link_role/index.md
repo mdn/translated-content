@@ -64,7 +64,6 @@ function navigateLink(evt) {
 </body>
 ```
 
-
 ### Notes
 
 Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](https://www.w3.org/TR/wai-aria-1.1/#button) au lieu du rôle `link`.
