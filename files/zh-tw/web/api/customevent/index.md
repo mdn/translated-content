@@ -2,12 +2,14 @@
 title: CustomEvent
 slug: Web/API/CustomEvent
 l10n:
-  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
+  sourceCommit: 67e109a23d67c4138e36bd03abe7f9a6500eb5c3
 ---
 
 {{APIRef("DOM")}}{{AvailableInWorkers}}
 
-**`CustomEvent`** 介面表示由應用程式為任何目的初始化的事件。
+**`CustomEvent`** 介面可用來將自訂資料附加到應用程式產生的事件上。
+
+作為 `CustomEvent` 的替代方案，你可以[子類別化 `Event` 介面](/zh-TW/docs/Web/Events/Creating_and_triggering_events#新增自訂資料——子類別化_event)來新增自訂資料和行為。
 
 > [!NOTE]
 > 如果嘗試在網頁擴充功能內容腳本與網頁腳本之間進行通訊，非字串的 `detail` 屬性會在 Firefox 中拋出「Permission denied to access property」的錯誤。為避免此問題，請複製該物件。詳情請參見[與頁面腳本共享物件](/zh-TW/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts)。
