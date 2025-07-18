@@ -5,11 +5,11 @@ l10n:
   sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-**`writingsuggestions`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个{{glossary("enumerated", "枚举")}}属性，代表是否需要在此元素范围内启用浏览器提供的写作建议。
+**`writingsuggestions`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一个代表是否需要在此元素范围内启用浏览器提供的写作建议的{{glossary("enumerated", "枚举")}}属性。
 
 有些浏览器会在用户输入可编辑字段时向其提供写作建议。建议通常以灰色文本的形式出现，位于文本光标之后，完成用户的句子。虽然这对用户很有帮助，但在某些情况下，例如在提供特定网站的写作建议时，开发人员可能希望关闭写作建议。
 
-`writingsuggestions` 属性可以在像 {{htmlelement('input')}} 和 {{htmlelement('textarea')}} 元素这样的可编辑字段上、或其他 HTML 元素上设置，以控制浏览器对页面部分或整个页面的建议行为。
+`writingsuggestions` 属性可以在像 {{htmlelement('input')}} 和 {{htmlelement('textarea')}} 元素这样的可编辑字段上，或其他 HTML 元素上设置，以控制浏览器对页面部分或整个页面的建议行为。
 
 ## 语法
 
@@ -21,7 +21,7 @@ l10n:
 <input type="text" writingsuggestions="false" />
 ```
 
-为了启用写作建议：
+要启用写作建议：
 
 ```html
 <input type="text" />
