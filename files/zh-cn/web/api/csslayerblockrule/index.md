@@ -13,14 +13,14 @@ l10n:
 
 ## 实例属性
 
-_继承 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
+_继承其祖先 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
 
 - {{DOMxRef("CSSLayerBlockRule.name")}} {{ReadOnlyInline}}
-  - 包含关联级联层名称的字符串。
+  - : 包含关联级联层名称的字符串。
 
 ## 实例方法
 
-_继承 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
+_继承其祖先 {{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
 
 ## 示例
 
@@ -50,12 +50,12 @@ const rules = document.styleSheets[1].cssRules;
 
 const layer = rules[0]; // CSSLayerBlockRule 对象
 
-item.textContent = `CSSLayerBlockRule 是用于 "${layer.name}" 层的规则`;
+item.textContent = `CSSLayerBlockRule 是用于“${layer.name}”层的规则`;
 ```
 
 ### 结果
 
-{{EmbedLiveSample("Examples")}}
+{{EmbedLiveSample("示例")}}
 
 ## 规范
 
@@ -69,4 +69,4 @@ item.textContent = `CSSLayerBlockRule 是用于 "${layer.name}" 层的规则`;
 
 - {{cssxref("@layer")}}
 - {{DOMxRef("CSSLayerStatementRule")}}
-- [学习 CSS 级联层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
+- [学习 CSS 层叠层](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Cascade_layers)
