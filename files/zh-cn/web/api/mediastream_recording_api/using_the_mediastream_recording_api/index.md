@@ -14,6 +14,7 @@ slug: Web/API/MediaStream_Recording_API/Using_the_MediaStream_Recording_API
 为了验证 MediaRecorder API 的基础用法，我们做了一个基于 web 的录音机。它允许你录制音频片段并播放它。通过使用这个 web 音频 API，它甚至给你提供了一个设备音频输入信息的可视化波浪图。我们在本文中专注于录制和回放功能的实现。
 
 您可在线查看[实例演示](https://mdn.github.io/dom-examples/media/web-dictaphone/)，或在GitHub上获取[源码](https://github.com/mdn/dom-examples/tree/main/media/web-dictaphone)。
+
 ## CSS goodies
 
 在这个 app 应用中的网页是相当简单的，所以我们不会在这里大费周章；但有几个有点意思的 CSS 样式还是有必要提一下，所以接下来我们会讨论一下。如果你对 CSS 没有半毛钱兴趣并且想对 JavaSdcript 单刀直入，请跳转到下面的[应用基础设置](#Basic_app_setup)章节。
