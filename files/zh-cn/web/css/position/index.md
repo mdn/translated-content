@@ -42,8 +42,8 @@ top: 20px;
       <code>position: sticky</code> 选项并滚动此容器。
     </p>
     <p>
-       元素将随着容器滚动，直到位于容器顶部（或达到
-       <code>top</code> 中指定的偏移量），然后停止滚动，保持可见。
+      元素将随着容器滚动，直到位于容器顶部（或达到
+      <code>top</code> 中指定的偏移量），然后停止滚动，保持可见。
     </p>
     <p>剩下的文字只是为了确保容器溢出，以便滚动容器查看效果。</p>
     <hr />
@@ -112,8 +112,8 @@ position: unset;
   - : 该关键字指定元素使用正常的布局行为，即元素在文档[正常布局流](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction#正常布局流)中当前的布局位置。此时 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} 和 {{cssxref("z-index")}} 属性*无效*。这是默认值。
 - `relative`
   - : 元素根据文档的正常流程定位，然后根据 `top`、`right`、`bottom` 和 `left` 的值相对于自身偏移。偏移量不会影响任何其他元素的位置；因此，在页面布局中为该元素提供的空间与位置为 `static` 时相同。
- 
     当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。它对 `table-*-group`、`table-row`、`table-column`、`table-cell` 和 `table-caption` 元素的影响未定义。
+
 - `absolute`
   - : 该元素将从正常文档流程中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
     当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。绝对定位盒子的边距不会与其他边距[折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
@@ -448,7 +448,8 @@ dd + dd {
 <div>
   <p>
     用灯泡（<span class="bulb">💡</span
-    >）来代表一个想法是一个常用的比喻，象征着灵感迸发或新想法诞生的时刻。灯泡与创意之间的联系可以追溯到 19 世纪末托马斯-爱迪生发明的白炽灯泡（<span class="bulb">💡</span
+    >）来代表一个想法是一个常用的比喻，象征着灵感迸发或新想法诞生的时刻。灯泡与创意之间的联系可以追溯到
+    19 世纪末托马斯 - 爱迪生发明的白炽灯泡（<span class="bulb">💡</span
     >）。灯泡是一个强有力的象征，因为它代表着照明、清晰和思想或理解的突然明亮。当一个人有了一个想法时，通常会被描述为他脑海中的灯泡亮了起来，象征着洞察力或创造力的迸发。灯泡的形象也暗示了能量、力量以及成长和发展潜力的概念。
   </p>
 </div>
