@@ -1,412 +1,374 @@
 ---
-title: JavaScript 是什麼?
+title: 什麼是 JavaScript？
 slug: Learn_web_development/Core/Scripting/What_is_JavaScript
+l10n:
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
 
-歡迎來到 MDN 的 JavaScript 初學者課程！我們將在這個章節綜觀 JavaScript ，回答一些像是「它什麼？」和「可以使用它作什麼？」之的問題，並確保你了解 JavaScript 的特性。
+歡迎來到 MDN 的 JavaScript 新手課程！在本文中，我們將從高層次的角度探討 JavaScript，回答諸如「它是什麼？」和「你能用它做什麼？」等問題，並確保你清楚了解 JavaScript 的用途。
 
 <table>
   <tbody>
     <tr>
-      <th scope="row">先備條件：</th>
-      <td>基本的電腦知識，基本了解 HTML 和 CSS 技術。</td>
+      <th scope="row">先備知識：</th>
+      <td>了解 <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-TW/docs/Learn_web_development/Core/Styling_basics">CSS 基礎</a>。</td>
     </tr>
     <tr>
       <th scope="row">學習目標：</th>
-      <td>了解 JavaScript 的本質、功能、以及它如何構成網站的一部分</td>
+      <td>
+        <ul>
+          <li>什麼是 JavaScript，以及它如何融入網站。</li>
+          <li>你可以用 JavaScript 做什麼。</li>
+          <li>將 JavaScript 加入網頁。</li>
+          <li>在 JavaScript 中撰寫註解。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
-## 高層次的定義
+## 高層次定義
 
-JavaScript 是一種腳本，也能稱它為程式語言，可以讓你在網頁中實現出複雜的功能。當網頁不只呈現靜態的內容，另外提供了像是：內容即時更新、地圖交動、繪製 2D/3D 圖形，影片播放控制……等，你就可以大膽地認為 JavaScript 已經參與其中。它是標準網頁技術蛋糕的第三層，而其他兩層（[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)）我們在其他學習單元中有更多詳細的介紹。
+JavaScript 是一種腳本或程式設計語言，可讓你實作網頁的複雜功能——每當網頁不只是靜靜地顯示靜態訊息供你觀看，而是顯示即時的內容更新、互動式地圖、動畫 2D/3D 圖形、滾動的影片點唱機等時——你幾乎可以肯定 JavaScript 參與其中。它是標準 Web 技術三層蛋糕中的第三層，其中兩層（[HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 和 [CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)）我們已在學習區的其他部分更詳細地介紹過。
 
-![](cake.png)
+![標準 Web 技術的三層；HTML、CSS 和 JavaScript](cake.png)
 
-- {{glossary("HTML")}} 是一種標記語言，我們使用它組織網頁裡的內容並給予定義， 例如：定義段落、標題、資料表格，或是在頁面嵌入圖片和影片。
-- {{glossary("CSS")}} 是一種樣式規則的語言，用來幫我們的 HTML 內容上套用樣式，例如：設置背景顏色、字型，或讓內容以多欄的方式呈現。
-- {{glossary("JavaScript")}} 是一種腳本語言，它使你能夠動態的更新內容、控制多媒體、動畫……幾乎所有事。（好吧，不是所有事情，但神奇的是你可以通過短短幾行 JavaScript 程式碼實現。）
+- {{glossary("HTML")}} 是我們用來結構化和賦予 Web 內容意義的標記語言，例如定義段落、標題和資料表，或在頁面中嵌入圖片和影片。
+- {{glossary("CSS")}} 是一種樣式規則語言，我們用它來為 HTML 內容套用樣式，例如設定背景顏色和字體，以及將內容排版成多欄。
+- {{glossary("JavaScript")}} 是一種腳本語言，可讓你建立動態更新的內容、控制多媒體、製作圖像動畫，以及幾乎所有其他事情。（好吧，不是所有事情，但用幾行 JavaScript 程式碼就能達成的效果令人驚嘆。）
 
-這三層很好的構建在一起。讓我們以一個簡單的文字為例。我們可以使用 HTML 標記來表示它的結構和意圖：
+這三層完美地相輔相成。讓我們以一個按鈕為例。我們可以用 HTML 來標記它，賦予其結構和目的：
 
-```html
-<p>Player 1: Chris</p>
+```html live-sample___string-concat-name
+<button type="button">玩家 1：Chris</button>
 ```
 
-![](just-html.png)
+![顯示「玩家 1：Chris」但沒有樣式的按鈕](just-html.png)
 
-然後我們可以加一些 CSS ，讓它看起來更好：
+然後我們可以加入一些 CSS 來讓它看起來更美觀：
 
-```css
-p {
+```css live-sample___string-concat-name
+button {
   font-family: "helvetica neue", helvetica, sans-serif;
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgba(0, 0, 200, 0.6);
-  background: rgba(0, 0, 200, 0.3);
-  color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
   border-radius: 10px;
   padding: 3px 10px;
-  display: inline-block;
   cursor: pointer;
 }
 ```
 
-![](html-and-css.png)
+![顯示「玩家 1：Chris」且有樣式的按鈕](html-and-css.png)
 
-最後，我們可以加一些 JavaScript 來作出互動的行為：
+最後，我們可以加入一些 JavaScript 來實作動態行為：
 
-```js
-const para = document.querySelector("p");
-
-para.addEventListener("click", updateName);
-
+```js live-sample___string-concat-name
 function updateName() {
-  let name = prompt("輸入新的名字");
-  para.textContent = "Player 1: " + name;
+  const name = prompt("請輸入新名稱");
+  button.textContent = `玩家 1：${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-{{ EmbedLiveSample('高層次的定義', '100%', 80, "", "", "hide-codepen-jsfiddle") }}
+你可以點擊「Play」在 MDN Playground 中查看和編輯範例。試著點擊文字標籤看看會發生什麼事。
 
-試試點擊這最後版本的文字，看看會發生什麼事情（你同樣也可以在 GitHub 找到這個範例，來查看[原始碼](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html)或[在線上執行](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html)）！
+{{EmbedLiveSample('string-concat-name', , '80', , , , , 'allow-modals')}}
 
-JavaScript 能做到更多，讓我們更深入地探索。
-
-## 它究竟可以做什麼呢?
-
-JavaScript 語言的核心包含了很多常用的程式功能供你使用，如：
-
-- 將有用的值存儲在變數中。例如上述例子，我們要求輸入一個新名字，然後將該名字存在名為`name`的變數裡。
-- 對文本片段的操作（在程式裡稱作"字串"）。在上述例子中，我們拿了字串 "Player 1: " 並將其與 `name` 變數連接來創造完整文本標籤，如：''Player 1: Chris"。
-- 執行程式碼，回應網頁上發生的某些事件。在上述例子中，我們使用 [`click`](/zh-TW/docs/Web/API/Element/click_event) 事件，當按鈕被點擊時，便執行更新文本標籤的程式碼。
-- 以及其他更多更多的功能！
-
-然而，更令人興奮的是那些基於用戶端的 JavaScript 語言構建的功能。也就是所謂的 **應用程式介面**（**API**），提供 JavaScript 程式額外的超能力。
-
-API 是預先製作完成的程式模組，支援開發者實現困難或無法實現的功能。在程式設計中就如同在建築房子的時候使用系統傢俱，拿預先裁好的板子用螺絲鎖上來組合成書架，相比從頭自己設計，找合適木材，切成正確的形狀和尺寸，再找到合適的螺絲最後組裝書架而言更簡單。
-
-他們通常分為兩類。
-
-![](browser.png)
-
-**瀏覽器 API**（Browser API）內建在你的瀏覽器中，能夠依本地的電腦環境輸出資料或實現複雜的功能。舉例而言：
-
-- {{domxref("Document_Object_Model","DOM （文件物件模型） API")}} 讓你能操作 HTML 和 CSS，像是建立、移除或改變 HTML 元素，或動態地將新樣式套用到頁面…等等。每當你看到彈出視窗，或有新的內容出現在畫面上（就像上面的範例所展示的），那就是 DOM 在動作。
-- {{domxref("Geolocation","Geolocations（地理位置） API")}} 可以取得位置資訊。這就是 [Google Maps](https://www.google.com/maps) 取得你的位置並標示在地圖上所透過的方式。
-- {{domxref("Canvas_API","Canvas")}} 和 {{domxref("WebGL_API","WebGL")}} API 可以讓你在網頁創造 2D 動畫及 3D 圖像。人們正使用這些技術來作一些令人驚奇的事，參見 [Chrome Experiments](https://www.chromeexperiments.com/) 及 [webglsamples](https://webglsamples.org/).
-- [Audio 和 Video API](/zh-TW/docs/Web/Media/Guides/Audio_and_video_delivery) 像 {{domxref("HTMLMediaElement")}} 和 {{domxref("WebRTC API", "WebRTC")}} 一樣讓你可以使用多媒體做真正有趣的事情，例如在網頁中播放音樂或影片，或由網路攝影機頡取你的影像顯示在另一個人電腦裡（試試我們的[簡單例子](https://chrisdavidmills.github.io/snapshot/)來了解）。
+JavaScript 能做的遠不止於此——讓我們更詳細地探討一下。
 
 > [!NOTE]
-> 上面的許多範例無法在舊版的瀏覽器上運作。使用現代的瀏覽器像是 Firefox、Chrome、Edge 或 Opera 來嘗試執行你的程式總是比較好的。當你接近要交付作為產品的程式（也就是實際的用戶將要使用的時候)，就需要思考關於[跨瀏覽器測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)的事情。
+> 在繼續之前，何不在這個早期階段就透過 Scrimba 的挑戰來親自動手試試看呢？請查看 [Render a welcome message](https://scrimba.com/learn-javascript-c0v/~0n?via=mdn) <sup>[_MDN 學習夥伴_](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup>。如果你不知道如何撰寫這段程式碼，完全不用擔心；你可以試著在網路上搜尋答案，或在 scrim 的最後查看解答。
 
-**第三方 API** 預設不內建在瀏覽器裡，你通常由網路上取得他們的程式碼與資訊。例如：
+## 所以它到底能做什麼？
 
-- [Twitter API](https://dev.twitter.com/overview/documentation) 能讓你做很多事，像是顯示最新的 Twitter 貼文在你的網站上。
-- [Google Maps API](https://developers.google.com/maps/) 能讓你在自己的網站中嵌入訂製的地圖或其他相關功能。
+核心的用戶端 JavaScript 語言包含一些常見的程式設計功能，可讓你做以下事情：
+
+- 將有用的值儲存在變數中。例如，在上面的範例中，我們要求輸入一個新名稱，然後將該名稱儲存在名為 `name` 的變數中。
+- 對文字片段（在程式設計中稱為「字串」）進行操作。在上面的範例中，我們將字串「玩家 1：」與 `name` 變數連接起來，以建立完整的文字標籤，例如「玩家 1：Chris」。
+- 回應網頁上發生的特定事件來執行程式碼。我們在上面的範例中使用了 {{domxref("Element/click_event", "click")}} 事件來偵測標籤何時被點擊，然後執行更新文字標籤的程式碼。
+- 還有更多！
+
+然而，更令人興奮的是建立在用戶端 JavaScript 語言之上的功能。所謂的**應用程式介面**（**API**）為你的 JavaScript 程式碼提供了額外的超能力。
+
+API 是現成的程式碼建構區塊集合，讓開發者能夠實作原本很難或不可能實作的程式。它們對程式設計的作用，就像現成的家具套件對居家建築的作用一樣——拿現成的裁切好的板子用螺絲組裝成書架，遠比自己設計、尋找合適的木材、將所有板子裁切成正確的尺寸和形狀、找到合適尺寸的螺絲，*然後*再把它們組裝成書架要容易得多。
+
+它們通常分為兩類。
+
+![兩種類型的 API；第三方 API 顯示在瀏覽器旁邊，而瀏覽器 API 則在瀏覽器內部](browser.png)
+
+**瀏覽器 API** 內建於你的 Web 瀏覽器中，能夠揭露周圍電腦環境的資料，或執行有用的複雜操作。例如：
+
+- [DOM（文件物件模型）API](/zh-TW/docs/Web/API/Document_Object_Model) 允許你操作 HTML 和 CSS，建立、移除和變更 HTML，動態地為你的頁面套用新樣式等。每當你在頁面上看到彈出視窗，或顯示一些新內容（如我們在上面的簡單示範中所見），那就是 DOM 在作用。
+- [地理位置 API](/zh-TW/docs/Web/API/Geolocation_API) 可擷取地理訊息。這就是 [Google 地圖](https://www.google.com/maps) 如何能夠找到你的位置並在地圖上標示出來的方式。
+- [Canvas](/zh-TW/docs/Web/API/Canvas_API) 和 [WebGL](/zh-TW/docs/Web/API/WebGL_API) API 允許你建立動畫 2D 和 3D 圖形。人們正在使用這些 Web 技術做一些令人驚嘆的事情——請參見 [Chrome Experiments](https://experiments.withgoogle.com/collection/chrome) 和 [webglsamples](https://webglsamples.org/)。
+- [音訊和影片 API](/zh-TW/docs/Web/Media/Guides/Audio_and_video_delivery) 如 {{domxref("HTMLMediaElement")}} 和 [WebRTC](/zh-TW/docs/Web/API/WebRTC_API) 允許你對多媒體做一些非常有趣的事情，例如直接在網頁中播放音訊和影片，或從你的網路攝影機擷取影片並顯示在別人的電腦上（試試我們簡單的 [Snapshot 示範](https://chrisdavidmills.github.io/snapshot/) 來了解一下）。
+
+**第三方 API** 預設並未內建於瀏覽器中，你通常需要從網路上的某處取得它們的程式碼和訊息。例如：
+
+- [Bluesky API](https://docs.bsky.app/) 允許你做一些事情，例如在你的網站上顯示你最新的貼文。
+- [Google Maps API](https://developers.google.com/maps/) 和 [OpenStreetMap API](https://wiki.openstreetmap.org/wiki/API) 允許你在你的網站中嵌入自訂地圖，以及其他類似的功能。
 
 > [!NOTE]
-> 我們不會在此涵蓋這些進階的 APIs。你可以在我們的 [客戶端網頁 API 單元](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs)找到更多資訊。
+> 這些 API 比較進階，我們不會在本模組中涵蓋任何這些內容。你可以在我們的[用戶端 Web API 模組](/zh-TW/docs/Learn_web_development/Extensions/Client-side_APIs)中找到更多相關資訊。
 
-那裡也有很多的東西。然而不要一頭熱陷進去。你不會在學習 JavaScript 24 小時後，就能開發出下一個 Facebook、Google 地圖或 Instagram 之類的產品出來。有許多的基礎的東西得先了解，這也是你在這裡的原因，讓我們繼續吧！
+還有更多可用的 API！不過，先別太興奮。學習 JavaScript 24 小時後，你還無法建立下一個 Facebook、Google 地圖或 Instagram——還有很多基礎知識需要先學習。這就是你來這裡的原因——讓我們繼續吧！
 
-## JavaScript 在你的頁面做了些什麼？
+## JavaScript 在你的頁面上做什麼？
 
-這裡我們開始看一些程式碼，探索當 JavaScript 在你的頁面上執行時，發生了哪些事情。
+在這裡，我們將實際開始看一些程式碼，並在過程中探討當你在頁面中執行一些 JavaScript 時，實際上發生了什麼。
 
-簡單回顧一下當瀏覽器載入一個網站時會發生的事情（第一次是在我們的[CSS 如何工作](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_does_css_actually_work)章節中提到）。當瀏覽器載入一個網頁，就是在執行環境（瀏覽器分頁）中執行程式碼（HTML，CSS 和 JavaScript）。就像是工廠收集原料（程式碼）並且產出商品（網頁呈現的結果）。
+讓我們簡要回顧一下在瀏覽器中載入網頁時會發生什麼（這在我們的[什麼是 CSS？](/zh-TW/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#how_is_css_applied_to_html)文章中首次討論）。當你在瀏覽器中載入網頁時，你正在一個執行環境（瀏覽器分頁）中執行你的程式碼（HTML、CSS 和 JavaScript）。這就像一個工廠，接收原料（程式碼）並產出產品（網頁）。
 
-![](execution.png)
+![HTML、CSS 和 JavaScript 程式碼在頁面載入時共同在瀏覽器分頁中建立內容](execution.png)
 
-透過 DOM API （上面提到的）動態調整 HTML 與 CSS 進行改變網頁呈現，在 JavaScript 是很常見的使用方式。要注意的是，檔案中的程式碼通常會以出現在頁面上的順序來執行。如果 JavaScript 比準備操作的 HTML 、 CSS 更早被載入，就可能會發生錯誤。你將會在這個章節的後段學到一些解決問題的方法，它在[腳本載入策略](#腳本載入策略)的部分。
+JavaScript 一個非常常見的用途是透過文件物件模型 API（如上所述）動態修改 HTML 和 CSS 來更新使用者介面。
 
 ### 瀏覽器安全性
 
-瀏覽器的每個分頁有獨立的空間來執行程式碼（技術上稱「執行環境 excution environments」），這表示在絕大部分的情形之下，每個分頁的程式碼是獨立運行的，不能直接影響其它分頁（或網站）裡的程式。這是一個好的安全措施，少了它，有心人會開始寫程式來偷取網站的資料，或是作其它不好的事情。
+每個瀏覽器分頁都有自己獨立的程式碼執行空間（在技術術語中稱為「執行環境」）——這意味著在大多數情況下，每個分頁中的程式碼是完全分開執行的，一個分頁中的程式碼不能直接影響另一個分頁中的程式碼——或另一個網站上的程式碼。這是一個很好的安全措施——如果不是這樣，那麼駭客就可以開始撰寫程式碼來竊取其他網站的訊息，以及其他諸如此類的壞事。
 
 > [!NOTE]
-> 是有一些安全的方式能在不同的網頁、分頁之間傳遞程式和資料，不過這些進階的技術不會在涵蓋在這個單元中。
+> 有一些方法可以安全地在不同網站／分頁之間傳送程式碼和資料，但這些是進階技術，我們不會在本課程中涵蓋。
 
-### JavaScript 的執行順序
+### JavaScript 執行順序
 
-當瀏覽器遇到一段 JavaScript 程式碼，通常會由上到下執行。這意味著你需要注意東西擺放的順序。為了說明，讓我們回到我們曾看過的第一個範例：
+當瀏覽器遇到一個 JavaScript 區塊時，它通常會按順序從上到下執行。這意味著你需要注意放置事物的順序。例如，讓我們回到我們在第一個範例中看到的 JavaScript 區塊：
 
 ```js
-const para = document.querySelector("p");
-
-para.addEventListener("click", updateName);
-
 function updateName() {
-  let name = prompt("輸入新的名字");
-  para.textContent = "Player 1: " + name;
+  const name = prompt("請輸入新名稱");
+  button.textContent = `玩家 1：${name}`;
 }
+
+const button = document.querySelector("button");
+
+button.addEventListener("click", updateName);
 ```
 
-這裡我們選擇了一個文字段落（第 1 行），然後加上事件偵聽器，所以當段落被點擊的時候，`updateName()` 程式區塊（5 到 8 行 ）會被執行。`updateName()` 程式區塊（這種可以重複使用的程式區塊被稱為「函數 function」）會向使用者要一個新的名字，然後將插到段落中，更新顯示的內容。
+在這裡，我們首先定義一個名為 `updateName()` 的程式碼區塊（這類可重複使用的程式碼區塊稱為**函式**），它會詢問使用者一個新名稱，並將該名稱插入按鈕的文字中。然後我們使用 `document.querySelector` 儲存一個按鈕的參考，並使用 `addEventListener` 為其附加一個事件監聽器，這樣當按鈕被點擊時，就會執行 `updateName()` 函式。
 
-如果你交換前兩行的程式碼，它將不再正常運作。取而代之的，[瀏覽器開發主控台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)會回報一個錯誤訊息：「`TypeError: para is undefined`」，意思是 `para` 物件尚不存在，所以我們在它上頭增加事件偵聽器。
+如果你交換 `const button = ...` 和 `button.addEventListener(...)` 這兩行的順序，程式碼將無法運作——相反地，你會在[瀏覽器開發者主控台](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools)中得到一個錯誤——`Uncaught ReferenceError: Cannot access 'button' before initialization`。這意味著 `button` 物件尚未初始化，所以我們無法為它新增事件監聽器。
 
 > [!NOTE]
-> 這是一個很常見的錯誤，在你嘗試對物件進行操作之前，你需要注意它們已經存在。
+> 由於像[提升（hoisting）](/zh-TW/docs/Glossary/Hoisting)這樣的行為，JavaScript 並不總是完全從上到下依序執行，但目前請記住，通常項目需要先被定義才能使用。這是一個常見的錯誤來源。
 
-### 直譯式與編譯式程式語言
+### 直譯式與編譯式程式碼
 
-你可能在程式相關的文章中看過**直譯式** (**interpreted** )與**編譯式 (compiled)**這兩個詞。在直譯式程式語言中，程式碼由上到下執行，而且執行的結果是立即回應得到的。在瀏覽器執行前，你不需要將程式轉換為其它的形式。程式碼的內容是以對程式人員友善的形式並直接能夠運作。
+在程式設計的語境中，你可能會聽到**直譯**和**編譯**這兩個術語。在直譯語言中，程式碼從上到下執行，執行的結果會立即回傳。在瀏覽器執行程式碼之前，你不需要將程式碼轉換成另一種形式。程式碼以其對程式設計師友善的文字形式被接收，並直接從該形式進行處理。
 
-另一方面，編譯式程式語言需要在電腦執行之前轉換（編譯）成另一種形式。例如： C/C++ 在被電腦執行之前要編譯為組合語言。被執行的程式是一種二進位的格式，由程式原始碼產生出來。
+另一方面，編譯語言在被電腦執行之前會被轉換（編譯）成另一種形式。例如，C/C++ 被編譯成機器碼，然後由電腦執行。程式是從一個二進位格式執行的，該格式是從原始程式碼產生的。
 
-JavaScript 是一個輕量的直接程式語言。網頁瀏覽器收到文字格式的 JavaScript 程式碼，並直接執行。以技術的角度來看，大多數現代的 JavaScript 直譯器實際上會使用一種稱為**即時編譯（just-in-time compiling）**的技術來提升執行表現。 JavaScript 被使用時，原始程式會被編譯成更快的二進位格式，讓它們能更有效率的運行。然而， JavaScript 仍然被認為是一種直譯式的程式語言，因為編譯動作是在程式運作時，而不是事先完成。
+JavaScript 是一種輕量級的直譯式程式設計語言。Web 瀏覽器以其原始文字形式接收 JavaScript 程式碼，並從該形式執行腳本。從技術角度來看，大多數現代 JavaScript 直譯器實際上使用一種稱為**即時編譯**（just-in-time compiling）的技術來提高效能；JavaScript 原始碼在使用腳本時會被編譯成更快的二進位格式，以便能盡快執行。然而，JavaScript 仍被視為一種直譯語言，因為編譯是在執行時處理，而不是提前處理。
 
-兩種語言都有各自的優點，但是我們不在此時討論這個議題。
+兩種語言都有其優點，但我們現在不討論它們。
 
-### 伺服器端與用戶端程式
+### 伺服器端與用戶端程式碼
 
-你也有可能聽過**伺服器端**與**客戶端**程式，尤其在網站開發的領域。客戶端程式在使用者的電腦中運作，當瀏覽網頁的時候，頁面中的客戶端程式被下載，接著被瀏覽器執行與顯示結果。在這個單元中，我們只談論**客戶端 JavaScript**。
+在 Web 開發的語境中，你可能也會聽到**伺服器端**和**用戶端**程式碼這兩個術語。用戶端程式碼是在使用者電腦上執行的程式碼——當瀏覽網頁時，頁面的用戶端程式碼會被下載，然後由瀏覽器執行並顯示。在本模組中，我們明確地討論**用戶端 JavaScript**。
 
-另一方面，伺服器端的程式在伺服器上執行，接著產出的結果被瀏覽器下載後顯示。受歡迎的伺服器端網頁語言，包括 PHP、Python、Ruby 和 ASP.NET 以及… JavaScript！JavaScript 也能夠作為伺服器端程式語言，流行的 Node.js 環境就是一例。你可以在我們的[動態網站—伺服器端網站程式設計](/zh-TW/docs/Learn_web_development/Extensions/Server-side)主題中找到更多資訊。
+另一方面，伺服器端程式碼在伺服器上執行，然後其結果被下載並顯示在瀏覽器中。流行的伺服器端 Web 語言範例包括 PHP、Python、Ruby、C#，甚至還有 JavaScript！JavaScript 也可以作為伺服器端語言使用，例如在流行的 Node.js 環境中——你可以在我們的[動態網站——伺服器端程式設計](/zh-TW/docs/Learn_web_development/Extensions/Server-side)主題中了解更多關於伺服器端 JavaScript 的資訊。
 
-### 動態與靜態程式
+### 動態與靜態程式碼
 
-**動態**一詞被用於描述用戶端 JavaScript 和伺服器端程的式語言，用來描述具有在不同的狀況下更新網頁／網頁應用程式來顯示不同東西，依需要來產生新內容的能力。是根據要求生成新內容的能力。伺服器端程式在伺服器上動態產生的新內容，可能是來自資料庫中取出的數據，而用戶端 JavaScript 在收到由伺服器端要回來的資料，在瀏覽器內動態產生新的內容（如 HTML 表格）後加入頁面中呈現出來。在兩個情境中詞義稍微不同，但是相關的，兩種方法（伺服器端和用戶端）通常可以協同工作。
+**動態**這個詞用來描述用戶端 JavaScript 和伺服器端語言——它指的是在不同情況下更新網頁／應用程式顯示內容的能力，根據需要產生新內容。伺服器端程式碼在伺服器上動態產生新內容，例如從資料庫中提取資料；而用戶端 JavaScript 則在用戶端的瀏覽器內部動態產生新內容，例如建立一個新的 HTML 表格，用從伺服器請求的資料填充它，然後在顯示給使用者的網頁中顯示該表格。這兩個語境中的含義略有不同，但相關，且兩種方法（伺服器端和用戶端）通常會協同工作。
 
-一個沒有動態更新內容能力的網頁被稱為**靜態**，它在任何時候都只顯示一樣的內容。
+沒有動態更新內容的網頁被稱為**靜態**——它總是顯示相同的內容。
 
-## 如何在網頁中增加 JavaScript？
+## 如何將 JavaScript 加入你的頁面？
 
-在 HTML 頁面中使用 JavaScript 與 CSS 的方法類似。在 HTML 中 CSS 藉著{{htmlelement("link")}} 元素引入外部樣式（stylesheets）以及 {{htmlelement("style")}} 元素定義內部樣式。JavaScript 在 HTML 中只需要一個朋友 — {{htmlelement("script")}} 元素。讓我們了解它是如何運作。
+JavaScript 套用到你的 HTML 頁面的方式與 CSS 類似。CSS 使用 {{htmlelement("link")}} 元素來套用外部樣式表，並使用 {{htmlelement("style")}} 元素來套用內部樣式表到 HTML，而 JavaScript 在 HTML 世界中只需要一個朋友——{{htmlelement("script")}} 元素。讓我們來學習它是如何運作的。
 
-### 內部的 JavaScript
+> [!NOTE]
+> Scrimba 的 [Setting up our JavaScript file](https://scrimba.com/learn-javascript-c0v/~03?via=mdn) <sup>[_MDN 學習夥伴_](/zh-TW/docs/MDN/Writing_guidelines/Learning_content#partner_links_and_embeds)</sup> 互動式教學將引導你了解幾種將 JavaScript 加入 HTML 的不同方法。
 
-1. 首先，下載一份 [apply-javascript.html 範例](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html)儲存在自己的電腦上合適的目錄裡。
-2. 用瀏覽器與文字編輯器打開範例。你會看到 HTML 建立了一個簡單的網頁，包含一個可點擊的按鈕。
-3. 接著，切換到文字編輯器，在標頭區加入下面的文字，就放在 `</head>` 結尾標籤前：
+### 內部 JavaScript
+
+1. 首先，建立我們的範例檔案 [apply-javascript.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript.html) 的本地副本。將它儲存在一個合適的目錄中。
+2. 在你的 Web 瀏覽器和文字編輯器中打開該檔案。你會看到 HTML 建立了一個包含可點擊按鈕的簡單網頁。
+3. 接下來，到你的文字編輯器中，在 body 的底部——就在 `</body>` 結束標籤之前——加入以下內容：
 
    ```html
    <script>
-     // JavaScript 將放在這裡
+     // JavaScript 程式碼寫在這裡
    </script>
    ```
 
-4. 現在，我們將在我們的 {{htmlelement("script")}} 元素中加入一些 JavaScript 程式，讓網頁能做些有趣的事，接者在「// JavaScript 將放在這裡」那行後面：
+   請注意，你的 Web 文件中的程式碼通常是按照它在頁面上出現的順序載入和執行的。將 JavaScript 放在底部，我們可以確保所有 HTML 元素都已載入。（另請參見下文的[腳本載入策略](#腳本載入策略)）。
 
-   ```js
-   document.addEventListener("DOMContentLoaded", function () {
-     function createParagraph() {
-       let para = document.createElement("p");
-       para.textContent = "You clicked the button!";
-       document.body.appendChild(para);
-     }
-
-     const buttons = document.querySelectorAll("button");
-
-     for (let i = 0; i < buttons.length; i++) {
-       buttons[i].addEventListener("click", createParagraph);
-     }
-   });
-   ```
-
-5. 儲存你的檔案並且重新整理網頁，現在你會發現每次點擊按鈕，都會在下方產生一個新的文字段落。
-
-> [!NOTE]
-> 如果你的版本不能正常運作，重新按照步驟再操作一次，檢查每一步都正確。你下載的範例是 `.html` 結尾的檔名？你加入的 {{htmlelement("script")}} 元素在 `</head>` 標籤的前面？你輸入的 JavaScript 與上面提供的一模一樣？**JavaScript 程式大小寫，而且很挑剔，所以你輸入的語法要一模一樣，不然可能會無法運作。**
-
-> [!NOTE]
-> GitHub 上有完整版本的範例在 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
-
-### 外部的 JavaScript
-
-內部 JavaScript 目前運作得很好，但如果我們想把 JavaScript 放在外部檔案，應該怎麼做？讓我們現在來探索。
-
-1. 首先，建立一個新的檔案，和 HTML 檔案放在相同的目錄下，命名為 `script.js` ，確定這個檔案是以 .js 為副檔名， 因為這就是它被識別為 JavaScript 的原因。
-2. 將 {{htmlelement("script")}} 元素（包含裡面的程式）換成下面的樣子：
-
-   ```html
-   <script src="script.js" async></script>
-   ```
-
-3. 在 `script.js` 中，加入下面的程式碼：
+4. 現在我們將在 {{htmlelement("script")}} 元素內加入一些 JavaScript，讓頁面做一些更有趣的事情——在「// JavaScript 程式碼寫在這裡」這行下面加入以下程式碼：
 
    ```js
    function createParagraph() {
-     let para = document.createElement("p");
-     para.textContent = "You clicked the button!";
+     const para = document.createElement("p");
+     para.textContent = "你點擊了按鈕！";
      document.body.appendChild(para);
    }
 
    const buttons = document.querySelectorAll("button");
 
-   for (let i = 0; i < buttons.length; i++) {
-     buttons[i].addEventListener("click", createParagraph);
+   for (const button of buttons) {
+     button.addEventListener("click", createParagraph);
    }
    ```
 
-4. 儲存檔案並在你的瀏覽器執行重新整理，你應該會看到一樣的結果！雖然是一樣的結果，但現在我們是由外部的檔案來引入 JavaScript 程式。就組織程式碼，讓程式可以在多個 HTML 間重複被使用而言，這通常是好的作法。另外，因為少了一大堆程式碼在裡頭，也能夠讓 HTML 檔案更容易被閱讀。
+5. 儲存你的檔案並重新整理瀏覽器——現在你應該會看到，當你點擊按鈕時，會產生一個新的段落並放置在下方。
 
 > [!NOTE]
-> 你可以在 GitHub 上找到這個版本的 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 與 [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) （[看線上版本](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
+> 如果你的範例似乎無法運作，請重新執行這些步驟並檢查你是否都做對了。你是否將起始程式碼的本地副本儲存為 `.html` 檔案？你是否在 `</body>` 標籤之前加入了 {{htmlelement("script")}} 元素？你是否完全按照顯示的樣子輸入了 JavaScript？**JavaScript 是區分大小寫的，而且非常挑剔，所以你需要完全按照顯示的語法輸入，否則可能無法運作。**
 
-### 行內的 JavaScript
+> [!NOTE]
+> 你可以在 GitHub 上看到這個版本 [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)（[也可以看即時範例](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)）。
 
-注意，有時候你會遇到一些 JavaScript 程式混在 HTML 語法之中。它可能會看起來像這樣：
+### 外部 JavaScript
+
+這運作得很好，但如果我們想把 JavaScript 放在一個外部檔案中呢？現在就來探討一下。
+
+1. 首先，在與你的範例 HTML 檔案相同的目錄中建立一個新檔案。將其命名為 `script.js`——確保它有 .js 副檔名，因為這是它被辨識為 JavaScript 的方式。
+2. 移除你目前在 `</body>` 底部的 {{htmlelement("script")}} 元素，並在 `</head>` 結束標籤之前加入以下內容（這樣瀏覽器就可以比在底部時更早開始載入檔案）：
+
+   ```html
+   <script type="module" src="script.js"></script>
+   ```
+
+3. 在 `script.js` 中，加入以下腳本：
+
+   ```js
+   function createParagraph() {
+     const para = document.createElement("p");
+     para.textContent = "你點擊了按鈕！";
+     document.body.appendChild(para);
+   }
+
+   const buttons = document.querySelectorAll("button");
+
+   for (const button of buttons) {
+     button.addEventListener("click", createParagraph);
+   }
+   ```
+
+4. 儲存並重新整理你的瀏覽器。你會發現點擊按鈕沒有任何效果，如果你檢查瀏覽器的主控台，你會看到類似 `Cross-origin request blocked` 的錯誤。這是因為像許多外部資源一樣，JavaScript 模組需要從與 HTML [同源](/zh-TW/docs/Web/Security/Same-origin_policy)的地方載入，而 `file://` URL 不符合資格。有兩種解決方案可以解決這個問題：
+   - 我們推薦的解決方案是[設定一個本地測試伺服器](/zh-TW/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server)。在伺服器程式執行並在 `8000` 埠提供 `apply-javascript-external.html` 和 `script.js` 檔案的情況下，打開你的瀏覽器並前往 `http://localhost:8000`。
+   - 如果你無法執行本地伺服器，你也可以使用 `<script defer src="script.js"></script>` 來代替 `<script type="module" src="script.js"></script>`。更多資訊請參見下文的[腳本載入策略](#腳本載入策略)。但請注意，我們在教學其他部分使用的功能可能無論如何都需要本地 HTTP 伺服器。
+5. 現在網站的運作方式和以前完全一樣，但現在我們的 JavaScript 在一個外部檔案中。這在組織程式碼和使其可在多個 HTML 檔案中重複使用方面通常是件好事。此外，沒有大塊腳本塞在裡面，HTML 也更容易閱讀。
+
+> [!NOTE]
+> 你可以在 GitHub 上看到這個版本 [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) 和 [script.js](https://github.com/mdn/learning-area/blob/main/javascript/introduction-to-js-1/what-is-js/script.js)（[也可以看即時範例](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)）。
+
+### 內聯 JavaScript 處理器
+
+請注意，有時你會遇到一些實際的 JavaScript 程式碼存在於 HTML 中。它可能看起來像這樣：
 
 ```js example-bad
 function createParagraph() {
-  var para = document.createElement("p");
-  para.textContent = "You clicked the button!";
+  const para = document.createElement("p");
+  para.textContent = "你點擊了按鈕！";
   document.body.appendChild(para);
 }
 ```
 
 ```html example-bad
-<button onclick="createParagraph()">Click me!</button>
+<button onclick="createParagraph()">點我！</button>
 ```
 
-你可以在底下試試這個段程式的作用。
+你可以在下面嘗試這個版本的示範。
 
-{{ EmbedLiveSample('行內的_JavaScript', '100%', 150, "", "", "hide-codepen-jsfiddle") }}
+{{ EmbedLiveSample('內聯 JavaScript 處理器', '100%', 150) }}
 
-這個範例與前面兩個有完全相同的功能，除了 {{htmlelement("button")}} 元素中包含了一個行內 `onclick` 處理程序，當按鈕按下時執行。
+這個示範的功能與前兩節完全相同，只是 {{htmlelement("button")}} 元素包含一個內聯的 `onclick` 處理器，以便在按下按鈕時執行該函式。
 
-**然而，請不要這樣做。**用 JavaScript 汙染你的 HTML 是一種不好的作法，而且沒有效率，因為你必須在每個你希望 JavaScript 作用的地方加入 `onclick="createParagraph()"` 屬性。
+**然而，請不要這樣做。** 用 JavaScript 污染你的 HTML 是一種不好的做法，而且效率低下——你必須在你想要套用 JavaScript 的每個按鈕上都包含 `onclick="createParagraph()"` 屬性。
 
-使用單純 JavaScript 的結構，讓你可以用一個指令選擇所有的按鈕。在我們前面的範例中，使用下面的程式碼達到這個目的：
+### 改用 addEventListener
 
-```plain
-var buttons = document.querySelectorAll('button');
+不要在你的 HTML 中包含 JavaScript，而是使用純 JavaScript 的結構。`querySelectorAll()` 函式允許你選取頁面上的所有按鈕。然後你可以遍歷這些按鈕，使用 `addEventListener()` 為每個按鈕指派一個處理器。相關程式碼如下所示：
 
-for (var i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
+```js
+const buttons = document.querySelectorAll("button");
+
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
 }
 ```
 
-這或許看起來比 `onclick` 屬性還長一點，但是能套用在全部的按鈕上，無論頁面上有多少按鈕，也不管未來新增或移除多少個（按鈕）。這段 JavaScript 程式都不需要改變。
+這可能比 `onclick` 屬性長一點，但它對所有按鈕都有效——無論頁面上有多少個按鈕，也不管新增或移除了多少個。JavaScript 不需要更改。
 
 > [!NOTE]
-> 試著編輯你自己版本的 `apply-javascript.html` ，在裡面多添加一點按鈕。當你重新載入網頁，你應該會發現所有按鈕，按下去的時候都會建立一的段落。很簡潔吧！
+> 試著編輯你的 `apply-javascript.html` 版本，並在檔案中加入更多按鈕。當你重新載入時，你應該會發現所有按鈕在點擊時都會建立一個段落。很酷吧？
 
 ### 腳本載入策略
 
-在正確的時機載入腳本涉及一些要注意的東西。並不如它看起來的簡單！其中一個常見的問題是，所有的 HTML 是根據出現順序載入。假如你使用 JavaScript 操作頁面中的元素（精確地來說是 [DOM 元素](/zh-TW/docs/Learn_web_development/Core/Scripting/DOM_scripting#The_document_object_model)），如果 JavaScript 在這些 HTML 操作對象前被讀取及解析，你的程式將無法運作。
+頁面上的所有 HTML 都按照其出現的順序載入。如果你使用 JavaScript 來操作頁面上的元素（或更準確地說，是[文件物件模型](/zh-TW/docs/Learn_web_development/Core/Scripting/DOM_scripting#the_document_object_model)），如果 JavaScript 在你試圖操作的 HTML 之前被載入和解析，你的程式碼將無法運作。
 
-上面的範例中，內部和外部 JavaScript 範例裡的程式碼都放在 HTML 的 head 區域，在 body 區被載入前就先被解析。這樣會造成一些問題，所以我們載入與執行在文件(HTML 檔)的開頭，是 HTML `body` 還沒解析之前。這可能會產生錯誤，所以我們使用一些模式來處理它。
+有幾種不同的策略可以確保你的 JavaScript 僅在 HTML 解析後才執行：
 
-在內部程式的範例中，你可以看到以下這樣結構的程式碼：
+- 在上面的內部 JavaScript 範例中，script 元素被放置在文件 body 的底部，因此只有在 HTML body 的其餘部分被解析後才會執行。
+- 在上面的外部 JavaScript 範例中，script 元素被放置在文件的 head 中，在 HTML body 被解析之前。但因為我們使用 `<script type="module">`，程式碼被視為一個[模組](/zh-TW/docs/Web/JavaScript/Guide/Modules)，瀏覽器會等待所有 HTML 都處理完畢後才執行 JavaScript 模組。（你也可以將外部腳本放在 body 的底部。但如果 HTML 很多且網路很慢，瀏覽器可能需要很長時間才能開始擷取和載入腳本，所以將外部腳本放在 head 中通常更好。）
+- 如果你仍然想在文件 head 中使用非模組腳本，這可能會阻止整個頁面的顯示，並可能因為它在 HTML 解析前執行而導致錯誤：
+  - 對於外部腳本，你應該在 {{htmlelement("script")}} 元素上加入 `defer`（或者如果你不需要 HTML 準備好，則加入 `async`）屬性。
+  - 對於內部腳本，你應該將程式碼包裹在一個 [`DOMContentLoaded` 事件監聽器](/zh-TW/docs/Web/API/Document/DOMContentLoaded_event)中。
 
-```js
-document.addEventListener("DOMContentLoaded", function() {
-  ...
-});
-```
-
-這是一個事件偵聽器，它偵聽瀏覽器的「DOMContentLoaded」事件，它是在 HTML body 部分已經完全載入與解析發出。區塊內（... 的部分）的 JavaScript 直到事件被發出後才會執行，這樣子問題就被避開了。（你將會在這個課程中[學習到什麼是事件](/zh-TW/docs/Learn_web_development/Core/Scripting/Events)）
-
-在外部程式的範例中，我們使用比較現代的 JavaScript 特性來解決這個問題，`defer` 屬性，它告訴瀏覽器碰到這種 `<script>` 標籤時，繼續下載後面其他的 HTML 內容。
-
-```js
-<script src="script.js" defer></script>
-```
-
-在這個例子中，腳本（JavaScript 程式）與 HTML 會同時載入，所以程式將正確地執行。
-
-> [!NOTE]
-> 在外部程式的範例裡，我們不需要使用 `DOMContentLoaded` 事件因為 `defer` 為我們解決問題了。而在內部程式的範例裡我們沒用 `defer` 屬性，是因為 `defer` 屬性只能用於外部的腳本。
-
-這個問題有另一個舊式的解決方法，就是將 `script` 元素放在 `body` 元素的底部（剛好在 `</body>` 的前面），如此它就會在所有 HTML 被解析完之後才被載入。這個方法的問題在於腳本的載入與解析工作會被完成擋住，一直到所有 HTML 載入完成。在擁有許多 JavaScript 的大型網站中，這樣會導致嚴重的效能問題，拖慢你的網站。
-
-#### async 和 defer
-
-實際上，有兩個方法可以閃過上述腳本被擋到的問題：`async` 與 `defer`（前面看到的）。來看看兩者的區別。
-
-使用 `async` 屬性（如下所示）所載入的腳本，在下載的同時不會讓網頁的渲染被阻塞（停住），並且在下載完成後馬上執行。它並不保證腳本會按照任何特定的順序執行，只保證不去妨礙網頁中其他部分顯示工作。`async` 的最佳使用情境，是當網頁中的腳本間彼此獨立，因而不依賴彼此運行的狀況下。
-
-例如你有以下的 `script` 元素
-
-```html
-<script async src="js/vendor/jquery.js"></script>
-
-<script async src="js/script2.js"></script>
-
-<script async src="js/script3.js"></script>
-```
-
-你不能將元素的順序視為腳本載入順序。 `jquery.js` 可能會在 `script2.js` 與 `script3.js` 的之前或之後載入，在這個情況下，在腳本中依賴 `jquery` 的函數將會發生錯誤，因為被執行到的時候 `jquery` 還沒被定義（載入且解析完畢）。
-
-當有許多非立即要使用的腳本，而你只希望它們能盡快被載入完畢，就應該使用 `async` 。例如：你有一些遊戲內容的檔案需要載入，它將在遊戲開始後被用到。但是現在你只是需要顯示遊戲介紹、一些選單以及遊戲大廳，不希望等到所有內容都下載完成之後才顯示。
-
-使用 `defer` 屬性（如下所示）所載入的腳本，會在腳本與內容都下載完成後，依照出現順序被執行。
-
-```html
-<script defer src="js/vendor/jquery.js"></script>
-
-<script defer src="js/script2.js"></script>
-
-<script defer src="js/script3.js"></script>
-```
-
-全部具有 `defer` 屬性的腳本會依據出現的順序載入。因此在第二個範例中，我們可以肯定 `jquery.js` 會在 `script2.js` 與 `script3.js` 之前被載入， `script2.js` 會在 `script3.js` 之前載入。在網頁的所有內容被載入完成之前，它是不會被執行的。當你的程式依賴著某些元素存在時（如：要調整頁面上一到多個元素），這個屬性很有用。
-
-總結一下：
-
-- `async` 和 `defer` 屬性都是用來告訴瀏覽器使用獨立線程（行程）來下載腳本，同一時間頁面的其它部分（如 DOM 元件之類）也在下載，因此頁面的載入不會因為腳本被影響。
-- 如果你的腳本應該立即被執行，而且不依賴其它腳本先被載入，就用 `async` 。
-- 如果你的腳本依賴其他腳本先被解析或 DOM 已經存在，就用 `defer` 來載入它們，並根據你想要瀏覽器執行的順序安排 `<script>` 元素的次序。
+  這超出了本教學目前的範圍，但除非你需要支援非常舊的瀏覽器，否則你不需要這樣做，可以直接使用 `<script type="module">`。
 
 ## 註解
 
-如同 HTML 和 CSS，在 JavaScript 的程式碼中也可以撰寫註解，它會被瀏覽器忽略，僅用來提供你的開發伙伴，說明程式是如何運作（或是自己，當六個月後回來看程式碼，忘記曾經做過了什麼）。註解非常有用，你應該常常使用它，尤其是在大型應用程式裡。註解有兩種形式：
+與 HTML 和 CSS 一樣，你可以在 JavaScript 程式碼中撰寫註解，這些註解會被瀏覽器忽略，其存在是為了向你的開發夥伴提供關於程式碼如何運作的說明（也包括你自己，如果你在六個月後回來看程式碼，卻想不起來你做了什麼）。註解非常有用，你應該經常使用它們，特別是對於較大的應用程式。註解有兩種類型：
 
-- 單行註解，寫在兩個（正）斜線「//」之後，例如：
+- 單行註解寫在兩個正斜線（`//`）之後，例如：
 
   ```js
   // 我是一個註解
   ```
 
-- 多行註解，寫在 /\* 和 \*/ 之間的文字，例如：
+- 多行註解寫在 `/*` 和 `*/` 字串之間，例如：
 
   ```js
   /*
-    我也是
-    一個註解
+     我也是
+     一個註解
   */
   ```
 
-舉例來說，我們可以在前面範例的 JavaScript 裡加入註解，像是：
+所以，舉例來說，我們可以像這樣用註解來註釋我們最後一個示範的 JavaScript：
 
 ```js
-// 函數：建立一個段落元素並加到 HTML body 的尾端
+// 函式：建立一個新段落並將其附加到 HTML body 的底部。
 
 function createParagraph() {
-  var para = document.createElement("p");
-  para.textContent = "You clicked the button!";
+  const para = document.createElement("p");
+  para.textContent = "你點擊了按鈕！";
   document.body.appendChild(para);
 }
 
 /*
-  1. 找出頁面上所有按鈕，並把它們放到陣列中
-  2. 使用迴圈，對每個按鈕偵聽 click 事件
+  1. 以陣列格式取得頁面上所有按鈕的參考。
+  2. 遍歷所有按鈕，並為每個按鈕新增一個點擊事件監聽器。
 
-  當任何按鈕被按下，執行 createParagraph() 函數
+  當任何按鈕被按下時，將會執行 createParagraph() 函式。
 */
 
-var buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll("button");
 
-for (var i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", createParagraph);
+for (const button of buttons) {
+  button.addEventListener("click", createParagraph);
 }
 ```
 
 > [!NOTE]
-> 一般而言，多寫註解比少寫來得好。但是要注意，如果你發現加了許多註解在說明變數的用途（那麼你的變數命名可能需要更直觀，更帶有意義），或是解釋非常簡單的操作（也許你的程式碼太過於複雜）。
+> 一般來說，註解多通常比少好，但如果你發現自己為了說明變數是什麼（你的變數名稱或許應該更直觀），或為了說明非常簡單的操作而加入大量註解，你就應該小心了（也許你的程式碼過於複雜）。
 
 ## 總結
 
-所以你已經踏出在 JavaScript 世界中的第一步。我們從理論開始，逐漸熟悉使用 JavaScript 的原因，以及你可以用它做些什麼。過程中你看到了一些程式碼範例，學到如何將 JavaScript 與你網站的其它東西放在一起。
+好了，這就是你踏入 JavaScript 世界的第一步。我們從理論開始，讓你開始熟悉為什麼要使用 JavaScript 以及你可以用它做些什麼。在此過程中，你看到了一些程式碼範例，並學習了 JavaScript 如何與你網站上的其他程式碼相結合，以及其他一些事情。
 
-JavaScript 目前可能看起來有一點嚇人，然而不用擔心，在本課程我們會透過簡單的步驟，帶著你建立觀念並繼續向前。 在下一章節，我們將會[投入更實用的知識](/zh-TW/docs/Learn_web_development/Core/Scripting/A_first_splash)，帶你直接入門並建立你自己的 JavaScript 作品。
+JavaScript 現在可能看起來有點嚇人，但別擔心——在本課程中，我們將透過簡單的步驟帶你學習，讓你循序漸進。在下一篇文章中，我們將直接進入實作，讓你直接動手建立自己的 JavaScript 範例。
 
 {{NextMenu("Learn_web_development/Core/Scripting/A_first_splash", "Learn_web_development/Core/Scripting")}}
