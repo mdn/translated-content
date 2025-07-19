@@ -90,7 +90,7 @@ Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Element
 > [!NOTE]
 > Il n'est pas nécessaire d'inclure `role="lien"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
 
-## Specifications
+## Spécifications
 
 {{Specifications}}
 
