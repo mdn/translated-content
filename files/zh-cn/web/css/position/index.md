@@ -119,17 +119,14 @@ position: unset;
 
 - `absolute`
   - : 该元素将从正常文档流程中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
- 
     当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。绝对定位盒子的边距不会与其他边距[折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
 - `fixed`
   - : 元素会被移出正常文档流，并不为元素预留空间。元素的位置是相对于其初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)，也就是视觉媒体的视口。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
- 
     该值总会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。在打印的文档中，该元素在*每一页*上的位置都是相同的。
 
 - `sticky`
   - : 元素根据正常文档流进行定位，然后相对它的*最近滚动祖先*和[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)（最近块级祖先），包括表格相关元素，基于 `top`、`right`、`bottom` 和 `left` 的值进行偏移。偏移值不会影响任何其他元素的位置。
-  
     该值总是创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。注意，一个 sticky 元素会“固定”在离它最近的一个拥有“滚动机制”的祖先上（当该祖先的 `overflow` 是 `hidden`、`scroll`、`auto` 或 `overlay` 时），即便这个祖先不是最近的真实可滚动祖先。
 
     > [!NOTE]
