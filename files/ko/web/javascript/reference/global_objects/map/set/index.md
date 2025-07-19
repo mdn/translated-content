@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Map")}} 인스턴스의 **`set()`** 메서드는 이 Map에서 명시진 키와 값을 추가하거나 갱신합니다.
+{{jsxref("Map")}} 인스턴스의 **`set()`** 메서드는 이 Map에서 명시된 키와 값을 추가하거나 갱신합니다.
 
 {{InteractiveExample("JavaScript Demo: Map.prototype.set()")}}
 
