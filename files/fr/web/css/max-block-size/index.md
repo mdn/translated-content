@@ -130,7 +130,7 @@ Excepté cette différence sur le mode d'écriture, les boîtes sont identiques,
 
 #### HTML
 
-Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Element/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
+Le fragment HTML se compose de deux blocs [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) dont le mode d'écriture sera défini avec la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) selon que la classe HTML utilisée vaut `horizontal` ou `vertical`. Les deux boîtes utilisent la classe `standard-box`, qui fournit la coloration, le remplissage et les valeurs pour `max-block-size`.
 
 ```html
 <p>Writing mode <code>horizontal-tb</code> (the default):</p>

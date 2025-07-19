@@ -5,7 +5,7 @@ slug: Web/CSS/grid-template
 
 {{CSSRef}}
 
-La propriété **`grid-template`** est une [propriété raccourcie](/fr/docs/Web/CSS/Shorthand_properties) permettant de définir les colonnes, grilles et zones d'une grille.
+La propriété **`grid-template`** est une [propriété raccourcie](/fr/docs/Web/CSS/CSS_cascade/Shorthand_properties) permettant de définir les colonnes, grilles et zones d'une grille.
 
 {{InteractiveExample("CSS Demo: grid-template")}}
 

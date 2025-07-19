@@ -7,7 +7,7 @@ l10n:
 
 {{CSSRef}}{{SeeCompatTable}}
 
-La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-within`** représente un élément ciblé ou qui _contient_ un élément ciblé. Un élément ciblé est un élément unique disposant d'un [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id) correspondant au fragment de l'URL. En d'autres termes, il représente un élément qui correspond lui-même à la pseudo-classe [`:target`](/fr/docs/Web/CSS/:target) ou qui a un descendant correspondant à `:target` (cela inclut les descendants des [arbres fantômes](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
+La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:target-within`** représente un élément ciblé ou qui _contient_ un élément ciblé. Un élément ciblé est un élément unique disposant d'un [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id) correspondant au fragment de l'URL. En d'autres termes, il représente un élément qui correspond lui-même à la pseudo-classe [`:target`](/fr/docs/Web/CSS/:target) ou qui a un descendant correspondant à `:target` (cela inclut les descendants des [arbres fantômes](/fr/docs/Web/API/Web_components/Using_shadow_DOM)).
 
 ```css
 /* Sélectionne une <div> lorsqu'un de ses descendants est une cible */

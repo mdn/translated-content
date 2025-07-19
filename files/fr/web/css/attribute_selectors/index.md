@@ -169,7 +169,7 @@ div[data-lang="zh-TW"] {
 
 {{SeeCompatTable}}
 
-La spécification HTML indique que l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec [`type`](/fr/docs/Web/HTML/Element/ol#type) d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
+La spécification HTML indique que l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) doit être testé sans sensibilité à la casse car il est généralement utilisé avec l'élément {{HTMLElement("input")}}. Si on souhaite utiliser un sélecteur d'attribut avec [`type`](/fr/docs/Web/HTML/Reference/Elements/ol#type) d'une liste ordonnée ({{HTMLElement("ol")}}), cela ne fonctionnera pas sans le modificateur de sensibilité à la casse.
 
 #### CSS
 

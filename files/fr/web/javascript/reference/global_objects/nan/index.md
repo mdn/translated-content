@@ -42,7 +42,7 @@ Il est rare d'utiliser expressément `NaN` dans un programme. On récupère gén
 
 ### Tester `NaN`
 
-Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
+Les [opérateurs d'égalité](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness) (`==` et `===`) ne peuvent pas être utilisé pour tester une valeur par rapport à `NaN`. Il faut utiliser {{jsxref("Number.isNaN()")}} ou {{jsxref("isNaN", "isNaN()")}} à la place.
 
 ```js
 NaN === NaN; // false
@@ -71,4 +71,4 @@ Number.isNaN("coucou monde"); // renvoie false
 - {{jsxref("Number.NaN")}}
 - {{jsxref("Number.isNaN()")}}
 - {{jsxref("isNaN", "isNaN()")}}
-- [L'égalité en JavaScript](/fr/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- [L'égalité en JavaScript](/fr/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness)

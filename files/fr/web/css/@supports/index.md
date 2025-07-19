@@ -25,7 +25,7 @@ La règle **`@supports`** permet de définir des déclarations qui dépendent de
 
 `@supports` permet ainsi au moteur de rendu de tester la présence d'une fonctionnalité (on parle de _feature query_).
 
-La règle @ `@supports` peut être utilisée au niveau le plus haut de la feuille de style et également à l'intérieur d'[un groupe de règle conditionnel](/fr/docs/Web/CSS/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Cette règle @ peut être manipulée via le modèle d'objets CSS et JavaScript, notamment via l'interface {{domxref("CSSSupportsRule")}}.
+La règle @ `@supports` peut être utilisée au niveau le plus haut de la feuille de style et également à l'intérieur d'[un groupe de règle conditionnel](/fr/docs/Web/CSS/CSS_syntax/At-rule#r.c3.a8gles_conditionnelles_de_groupe). Cette règle @ peut être manipulée via le modèle d'objets CSS et JavaScript, notamment via l'interface {{domxref("CSSSupportsRule")}}.
 
 ## Syntaxe
 

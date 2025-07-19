@@ -16,7 +16,7 @@ Le [pseudo-élément](/fr/docs/Web/CSS/Pseudo-elements) **`::first-line`** appli
 }
 ```
 
-Une première ligne n'a de sens que dans une [boîte de type bloc](/fr/docs/Web/CSS/Visual_formatting_model#block-level_elements_and_block_boxes), et ainsi le pseudo-élément `::first-line` n'a d'effet que sur les éléments dont {{cssxref("display")}} à une valeur de `block`, `inline-block`, `table-cell` ou `table-caption`. Dans tous les autres cas, `::first-line` n'a pas d'effet.
+Une première ligne n'a de sens que dans une [boîte de type bloc](/fr/docs/Web/CSS/CSS_display/Visual_formatting_model#block-level_elements_and_block_boxes), et ainsi le pseudo-élément `::first-line` n'a d'effet que sur les éléments dont {{cssxref("display")}} à une valeur de `block`, `inline-block`, `table-cell` ou `table-caption`. Dans tous les autres cas, `::first-line` n'a pas d'effet.
 
 ## Propriétés utilisables
 

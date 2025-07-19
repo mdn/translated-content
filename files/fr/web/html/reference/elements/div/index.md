@@ -38,7 +38,7 @@ L'élément HTML **`<div>`** (ou division) est le conteneur générique du conte
 }
 ```
 
-En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) ou [`id`](/fr/docs/Web/HTML/Global_attributes#attr-id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Global_attributes#attr-lang)), etc.
+En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) ou [`id`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-id), pour marquer une section d'un document comme étant écrite dans une langue différente (à l'aide de l'attribut [`lang`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-lang)), etc.
 
 <table class="properties">
   <tbody>
@@ -119,14 +119,14 @@ En tant que conteneur « pur », l'élément `<div>` ne représente rien en soi.
 
 ## Attributs
 
-Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les autres éléments HTML, cet élément accepte [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
 > L'attribut **`align`** est désormais obsolète et ne doit plus être appliqué pour un `<div>`. On privilégiera l'utilisation des propriétés et outils CSS (tels que [la grille CSS](/fr/docs/Web/CSS/CSS_grid_layout) ou [les boîtes flexibles (flexbox)](/fr/docs/Glossary/Flexbox)) pour aligner et positionner des éléments `<div>`.
 
 ## Notes d'utilisation
 
-- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple [`<article>`](/fr/docs/Web/HTML/Element/article) ou [`<nav>`](/fr/docs/Web/HTML/Element/nav)).
+- L'élément `<div>` doit uniquement être utilisé lorsqu'il n'existe aucun autre élément dont la sémantique permet de représenter le contenu (par exemple [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) ou [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav)).
 
 ## Exemples
 
@@ -147,7 +147,7 @@ Comme tous les autres éléments HTML, cet élément accepte [les attributs univ
 
 ### Un exemple mis en forme
 
-Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes#attr-class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
+Cet exemple crée une boîte avec une ombre en appliquant la mise en forme via du CSS sur l'élément `<div>`. On notera l'utilisation de l'attribut [`class`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-class) sur l'élément `<div>` afin d'appliquer la règle `"shadowbox"`.
 
 #### HTML
 
@@ -189,5 +189,5 @@ L'élément `<div>` possède un rôle ARIA implicite [`generic`](https://www.w3.
 
 ## Voir aussi
 
-- Les éléments de sectionnement sémantique : [`<section>`](/fr/docs/Web/HTML/Element/section), [`<article>`](/fr/docs/Web/HTML/Element/article), [`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<header>`](/fr/docs/Web/HTML/Element/header), [`<footer>`](/fr/docs/Web/HTML/Element/footer)
-- L'élément [`<span>`](/fr/docs/Web/HTML/Element/span) pour la mise en forme du contenu du phrasé
+- Les éléments de sectionnement sémantique : [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section), [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), [`<nav>`](/fr/docs/Web/HTML/Reference/Elements/nav), [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header), [`<footer>`](/fr/docs/Web/HTML/Reference/Elements/footer)
+- L'élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) pour la mise en forme du contenu du phrasé

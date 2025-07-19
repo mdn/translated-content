@@ -17,8 +17,8 @@ input:indeterminate {
 
 Cela inclut :
 
-- un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Element/input/checkbox) dont la propriété du DOM `indeterminate` est fixée à `true` via du code JavaScript
-- des éléments [`<input type="radio">`](/fr/docs/Web/HTML/Element/input/radio) dont tous les boutons radio du groupe sont décochés
+- un élément [`<input type="checkbox">`](/fr/docs/Web/HTML/Reference/Elements/input/checkbox) dont la propriété du DOM `indeterminate` est fixée à `true` via du code JavaScript
+- des éléments [`<input type="radio">`](/fr/docs/Web/HTML/Reference/Elements/input/radio) dont tous les boutons radio du groupe sont décochés
 - des éléments {{HTMLElement("progress")}} dans un état indéterminé.
 
 ## Syntaxe

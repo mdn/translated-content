@@ -59,7 +59,7 @@ Prenons un exemple&nbsp;:
 Chaque image, `![]` et `<img>`, doit inclure un texte alternatif. Les attributs `alt` doivent être courts et fournir toutes les informations pertinentes que l'image transmet. Lorsque vous écrivez la description de l'image, réfléchissez aux informations précieuses de l'image et à la façon dont vous les transmettriez à quelqu'un qui peut lire le contenu de la page mais ne peut pas charger les images.
 
 > [!NOTE]
-> Voir [la documentation sur l'attribut `alt` de `<img>` et notamment la façon d'écrire des textes alternatifs pertinents](/fr/docs/Web/HTML/Element/img#écrire_des_descriptions_alternatives_significatives).
+> Voir [la documentation sur l'attribut `alt` de `<img>` et notamment la façon d'écrire des textes alternatifs pertinents](/fr/docs/Web/HTML/Reference/Elements/img#écrire_des_descriptions_alternatives_significatives).
 
 Soyez sûr que le texte alternatif de l'image est basé sur son contexte. Si la photo de Fluffy le chien est un avatar à côté d'un avis pour la nourriture pour chien Yuckymeat, `alt="Fluffy"` est approprié. Si la même photo fait partie de la page d'adoption de Fluffy, les informations transmises dans l'image sont pertinentes pour les futurs parents de chiens, telles que `alt="Fluffy, un terrier tricolore à poil très court, avec une balle de tennis dans la bouche."`. Le texte environnant indique probablement la taille et la race de Fluffy, il serait donc redondant de l'inclure. Évitez de décrire l'image avec trop de détails&nbsp;: le futur parent n'a pas besoin de savoir si le chien est à l'intérieur ou à l'extérieur, ou s'il a un collier rouge et une laisse bleue.
 

@@ -11,7 +11,7 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 
 - Tous les éléments HTML ont maintenant l'attribut {{domxref("element.accessKey", "accessKey")}}, ainsi que les méthodes {{domxref("element.blur()", "blur()")}}, {{domxref("element.click()", "click()")}} et {{domxref("element.focus()", "focus()")}}. Elles sont spécifiées dans l'interface {{domxref("HTMLElement")}}.
 - Afin d'être conforme à la spécification HTML5, le support des [jeux de caractères](/fr/docs/Character_Sets_Supported_by_Gecko) UTF-7 et UTF-32 a été retiré.
-- Lorsque l'on est en mode quirks, les {{HTMLElement("map")}} vides ne sont plus ignorées en faveur des non-vides quand elles correspondent. Pour plus de détails, voir [les notes de Gecko](/fr/docs/Web/HTML/Element/map#gecko_notes) sur l'élément {{HTMLElement("map")}}.
+- Lorsque l'on est en mode quirks, les {{HTMLElement("map")}} vides ne sont plus ignorées en faveur des non-vides quand elles correspondent. Pour plus de détails, voir [les notes de Gecko](/fr/docs/Web/HTML/Reference/Elements/map#gecko_notes) sur l'élément {{HTMLElement("map")}}.
 - Firefox mobile pour Android supporte désormais les polices WOFF pour {{cssxref("@font-face")}}.
 - WebGL [ne charge plus les textures provenant d'autres domaines que celui d'origine](/fr/docs/Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL#Cross-domain_textures), par mesure de sécurité. Le support [du contrôle d'accès d'HTTP](/fr/HTTP_access_control) devrait arriver dans le futur pour que le chargement des textures se fasse en toute sécurité.
 
@@ -43,7 +43,7 @@ Firefox 5, basé sur Gecko 5.0, est sorti le 21 juin 2011. Cet article fournit d
 - De même, la méthode {{domxref("window.setInterval()")}} ne serre pas plus d'un intervalle par seconde dans les onglets inactifs.
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) supporte maintenant [l'évènement `loadend`](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#detecting_any_load_end_condition). C'est envoyé après qu'un transfert soit terminé (c'est-à-dire après l'évènement `abort`, `error` ou `load`). Vous pouvez utiliser cette fonction pour gérer les tâches qui doivent être exécutées indépendamment de la réussite ou l'échec d'un transfert.
 - {{domxref("Blob")}} et, par extension, les objets de {{domxref("File")}} de la méthode `slice()` ont été supprimés et remplacés par une nouvelle, avec une syntaxe qui la rend mieux compatible avec les méthodes [`Array.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) et [`String.slice()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/slice) dans JavaScript. Cette méthode s'appelle pour l'instant [`mozSlice()`](</fr/docs/DOM/Blob#mozSlice()>).
-- La valeur de {{domxref("window.navigator.language")}} est maintenant déterminée en examinant la valeur de [l'en-tête HTTP](/fr/docs/Web/HTTP/Headers) `Accept-Language`.
+- La valeur de {{domxref("window.navigator.language")}} est maintenant déterminée en examinant la valeur de [l'en-tête HTTP](/fr/docs/Web/HTTP/Reference/Headers) `Accept-Language`.
 - La propriété {{domxref("Node.prefix")}} est maintenant en lecture seule, comme l'exige la spécification DOM.
 - {{domxref("HTMLVideoElement")}} supporte maintenant des propriétés expérimentales qui permettent d'obtenir des informations sur les statistiques des vidéos comme le nombres d'images par seconde.
 
@@ -94,7 +94,7 @@ Pour des conseils utiles sur la mise à jour des extensions pour Firefox 5, voir
 ### Changements dans les interfaces
 
 - L'interface `nsIHttpChannelInternal` a maintenant de nouveaux attributs donnant accès à des informations sur les points finaux des canaux des adresses et des ports. Ces informations sont fournies principalement à des fins de débogage.
-- Les attributs [`width`](/fr/docs/Web/HTML/Element/canvas#width) et [`height`](/fr/docs/Web/HTML/Element/canvas#height) de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)).
+- Les attributs [`width`](/fr/docs/Web/HTML/Reference/Elements/canvas#width) et [`height`](/fr/docs/Web/HTML/Reference/Elements/canvas#height) de l'élément {{HTMLElement("canvas")}} sont désormais inclus dans IDL comme des entiers non signés au lieu d'être signés (voir [`HTMLCanvasElement`](/fr/docs/Web/API/HTMLCanvasElement)).
 - Les interfaces `nsIAppStartup2` et `nsIAppStartup_MOZILLA_2_0` ont été fusionnées avec l'interface `nsIAppStartup`.
 - L'interface `nsIDocShell_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIDocShell`.
 - L'interface `nsIFocusManager_MOZILLA_2_0_BRANCH` a été fusionnée avec l'interface `nsIFocusManager`.
