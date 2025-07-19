@@ -1,5 +1,5 @@
 ---
-title: SCTP
+title: SCTP （ストリーム制御伝送プロトコル ）
 slug: Glossary/SCTP
 page-type: glossary-definition
 sidebar: glossarysidebar
