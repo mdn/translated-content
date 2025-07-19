@@ -20173,17 +20173,6 @@
       "pixoux"
     ]
   },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2020-10-15T21:18:05.925Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "gudoy",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
   "Web/CSS/-moz-orient": {
     "modified": "2020-10-15T21:28:10.504Z",
     "contributors": [
@@ -38966,6 +38955,17 @@
     "contributors": [
       "SphinxKnight",
       "alexr"
+    ]
+  },
+  "conflicting/Web/CSS/clip": {
+    "modified": "2020-10-15T21:18:05.925Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "gudoy",
+      "FredB",
+      "Fredchat",
+      "Kyodev"
     ]
   },
   "conflicting/Web/HTML/Element": {

@@ -291,7 +291,7 @@
 /fr/docs/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS/-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
@@ -678,7 +678,7 @@
 /fr/docs/CSS:-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS:-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS:-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS:-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS:-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS:-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS:-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/CSS:-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -3115,7 +3115,7 @@
 /fr/docs/Learn/Forms/Sending_and_retrieving_form_data	/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /fr/docs/Learn/Forms/Sending_forms_through_JavaScript	/fr/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /fr/docs/Learn/Forms/Styling_web_forms	/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
-/fr/docs/Learn/Forms/Test_your_skills:_Basic_controls	/fr/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
+/fr/docs/Learn/Forms/Test_your_skills:_Basic_controls	/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720
 /fr/docs/Learn/Forms/UI_pseudo-classes	/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes
 /fr/docs/Learn/Forms/User_input_methods	/fr/docs/Learn_web_development/Extensions/Forms/User_input_methods
 /fr/docs/Learn/Forms/Your_first_form	/fr/docs/Learn_web_development/Extensions/Forms/Your_first_form
@@ -3270,6 +3270,7 @@
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /fr/docs/Learn/tutorial	/fr/docs/Learn_web_development
+/fr/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls	/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720
 /fr/docs/Littéraux_gabarits	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Localisation	/fr/docs/Glossary/Localization
 /fr/docs/Localization	/fr/docs/Glossary/Localization
@@ -4522,6 +4523,7 @@
 /fr/docs/Web/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
+/fr/docs/Web/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/Web/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
