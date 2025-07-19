@@ -39,7 +39,7 @@ Uint8Array.fromHex(string)
 
 ### 16 進文字列のデコード
 
-この例では、　16 進文字列を `Uint8Array` にデコードしています。
+この例では、16 進文字列を `Uint8Array` にデコードしています。
 
 ```js
 const hexString = "cafed00d";
