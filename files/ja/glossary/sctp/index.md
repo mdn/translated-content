@@ -1,8 +1,6 @@
 ---
 title: SCTP （ストリーム制御伝送プロトコル ）
 slug: Glossary/SCTP
-page-type: glossary-definition
-sidebar: glossarysidebar
 l10n:
   sourceCommit: 2547f622337d6cbf8c3794776b17ed377d6aad57
 ---
