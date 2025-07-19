@@ -33,7 +33,7 @@ original_slug: Learn/CSS/CSS_layout/Flexbox
 
 ## Pourquoi Flexbox&nbsp;?
 
-Pendant longtemps, les seuls outils de mise en page CSS fiables et compatibles avec les navigateurs, étaient les propriétés concernant les [flotteurs (boîtes flottantes)](/fr/docs/Learn/CSS/CSS_layout/Floats) et le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning). Ces outils sont bien et fonctionnent, mais restent à certains égards plutôt limitatifs et frustrants.
+Pendant longtemps, les seuls outils de mise en page CSS fiables et compatibles avec les navigateurs, étaient les propriétés concernant les [flotteurs (boîtes flottantes)](/fr/docs/Learn_web_development/Core/CSS_layout/Floats) et le [positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning). Ces outils sont bien et fonctionnent, mais restent à certains égards plutôt limitatifs et frustrants.
 
 Les simples exigences de mise en page suivantes sont difficiles sinon impossibles à réaliser de manière pratique et souple avec ces outils&nbsp;:
 
@@ -49,11 +49,11 @@ Dans cet article, nous allons commencer une série d'exercices pour vous facilit
 
 ![Une image montrant le point de départ de ce didacticiel sur Flexbox](bih741v.png)
 
-Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Element/header) avec un en‑tête de haut niveau à l'intérieur, et un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
+Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Reference/Elements/header) avec un en‑tête de haut niveau à l'intérieur, et un élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article). Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
 
 ## Détermination des éléments à disposer en boîtes flexibles
 
-Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Element/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) (qui devient un conteneur flex)&nbsp;:
+Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) (qui devient un conteneur flex)&nbsp;:
 
 ```css
 section {
@@ -77,8 +77,8 @@ Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés l
 
 - L'**axe principal (_main axis_)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (_main start_)** et la **fin principale (_main end_)**.
 - L'**axe croisé (_cross axis_)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (_cross start_)** et la **fin (_cross end_)** de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (_flex container_)**.
-- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (_flex items_)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
+- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) dans notre exemple) est appelé le **conteneur flex (_flex container_)**.
+- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (_flex items_)** (les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) dans notre exemple).
 
 Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
 
@@ -86,7 +86,7 @@ Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouv
 
 Flexbox dispose de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
 
-Ajoutez la déclaration suivante dans la règle CSS pour l'élément [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
+Ajoutez la déclaration suivante dans la règle CSS pour l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)&nbsp;:
 
 ```css
 flex-direction: column;
@@ -103,13 +103,13 @@ Problème&nbsp;: quand votre structure est de largeur ou hauteur fixe, il arrive
 
 ![Débordement des éléments modulables](flexbox-example3.png)
 
-Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
+Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)&nbsp;:
 
 ```css
 flex-wrap: wrap;
 ```
 
-Ajoutez aussi la déclaration suivante à votre règle pour [`<article>`](/fr/docs/Web/HTML/Element/article)&nbsp;:
+Ajoutez aussi la déclaration suivante à votre règle pour [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article)&nbsp;:
 
 ```css
 flex: 200px;
@@ -148,7 +148,7 @@ article {
 }
 ```
 
-Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément [`<article>`](/fr/docs/Web/HTML/Element/article) une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
+Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
 
 Maintenant ajoutons cette règle en dessous de la précédente&nbsp;:
 
@@ -158,7 +158,7 @@ article:nth-of-type(3) {
 }
 ```
 
-Maintenant, lorsque vous actualisez, vous voyez que le troisième [`<article>`](/fr/docs/Web/HTML/Element/article) occupe deux fois plus de largeur disponible que chacun des deux autres — il y a maintenant quatre unités de division disponibles au total (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). Les deux premiers éléments flexibles en occupent chacun un, soit 1/4 de l'espace disponible pour chacun. Le troisième remplit deux unités, soit 2/4 (la moitié) de l'espace disponible.
+Maintenant, lorsque vous actualisez, vous voyez que le troisième [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) occupe deux fois plus de largeur disponible que chacun des deux autres — il y a maintenant quatre unités de division disponibles au total (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). Les deux premiers éléments flexibles en occupent chacun un, soit 1/4 de l'espace disponible pour chacun. Le troisième remplit deux unités, soit 2/4 (la moitié) de l'espace disponible.
 
 Vous pouvez également définir une valeur minimale de taille dans la valeur `flex`. Modifiez comme suit vos règles `article` existantes&nbsp;:
 
@@ -176,7 +176,7 @@ En gros, cela dit&nbsp;: «&nbsp;Chaque élément flex reçoit d'abord 200px de 
 
 ![Modulation de la largeur](flexbox-example1.png)
 
-Le véritable intérêt de Flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément [`<article>`](/fr/docs/Web/HTML/Element/article), la mise en page continue de fonctionner correctement.
+Le véritable intérêt de Flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), la mise en page continue de fonctionner correctement.
 
 ## flex&nbsp;: forme abrégée vs forme longue
 
@@ -271,7 +271,7 @@ Il est possible de créer des mises en page joliment complexes avec Flexbox. Il 
 
 ![Imbrications avec flexbox](flexbox-example7.png)
 
-Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Element/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Element/button)&nbsp;:
+Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)&nbsp;:
 
 ```
 section - article
@@ -285,7 +285,7 @@ section - article
 
 Regardez le code utilisé pour cette disposition.
 
-Primo, nous déterminons que les enfants de l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) seront des boîtes flexibles.
+Primo, nous déterminons que les enfants de l'élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) seront des boîtes flexibles.
 
 ```css
 section {
@@ -293,7 +293,7 @@ section {
 }
 ```
 
-Secundo, nous définissons des valeurs flex pour les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) eux‑mêmes. Remarquez en particulier ici la deuxième règle — nous paramétrons le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) pour que ses enfants soient eux-mêmes disposés en tant qu'éléments flex, mais cette fois‑ci en colonne.
+Secundo, nous définissons des valeurs flex pour les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) eux‑mêmes. Remarquez en particulier ici la deuxième règle — nous paramétrons le troisième élément [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) pour que ses enfants soient eux-mêmes disposés en tant qu'éléments flex, mais cette fois‑ci en colonne.
 
 ```css
 article {
@@ -307,7 +307,7 @@ article:nth-of-type(3) {
 }
 ```
 
-Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Element/button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
+Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
 
 ```css
 article:nth-of-type(3) div:first-child {
@@ -338,11 +338,11 @@ Pour l'apprentissage et l'expérimentation, cela n'a pas trop d'importance. Mais
 
 Flexbox est une fonctionnalité plus complexe que les règles CSS courantes. Par exemple, une absence de prise en charge des ombres portées dans les CSS laissera le site utilisable. Mais la non prise en charge des fonctionnalités Flexbox risque de casser totalement la mise en page et de rendre le site inutilisable.
 
-Les stratégies pour contourner les problèmes de compatibilité des navigateurs sont discutées dans le module [Tests croisés sur navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing).
+Les stratégies pour contourner les problèmes de compatibilité des navigateurs sont discutées dans le module [Tests croisés sur navigateurs](/fr/docs/conflicting/Learn_web_development/Extensions/Testing).
 
 ## Testez vos compétences&nbsp;!
 
-Nous avons abordé de nombreux points dans cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox_skills).
+Nous avons abordé de nombreux points dans cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Flexbox](/fr/docs/Learn_web_development/Core/CSS_layout/Test_your_skills/Flexbox).
 
 ## Résumé
 

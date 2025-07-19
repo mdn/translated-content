@@ -5,7 +5,7 @@ slug: Web/CSS/CSS_colors/Applying_color
 
 {{HTMLSidebar}}
 
-La couleur fait partie intégrante des moyens d'expressions. Lorsqu'on écrit un site web, il est naturel d'y ajouter des couleurs dans la mise en forme. Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur aux [éléments](/fr/docs/Web/HTML/Element) [HTML](/fr/docs/Web/HTML) afin d'obtenir le résultat souhaité. Cet article est une introduction détaillée aux différentes méthodes permettant d'appliquer des couleurs CSS en HTML.
+La couleur fait partie intégrante des moyens d'expressions. Lorsqu'on écrit un site web, il est naturel d'y ajouter des couleurs dans la mise en forme. Avec [CSS](/fr/docs/Web/CSS), il existe de nombreuses façons d'ajouter de la couleur aux [éléments](/fr/docs/Web/HTML/Reference/Elements) [HTML](/fr/docs/Web/HTML) afin d'obtenir le résultat souhaité. Cet article est une introduction détaillée aux différentes méthodes permettant d'appliquer des couleurs CSS en HTML.
 
 L'ajout de couleur à un document HTML s'avère assez simple et permet de colorer presque tous les éléments.
 
@@ -24,17 +24,17 @@ De façon générale, la propriété [`color`](/fr/docs/Web/CSS/color) permet de
 Lorsqu'un élément est affiché à l'écran, les propriétés suivantes déterminent la couleur du texte, celle de son arrière-plan et celle des décorations.
 
 - [`color`](/fr/docs/Web/CSS/color)
-  - : Cette propriété correspondra à la couleur utilisée pour dessiner le texte ainsi que [ses décorations](/fr/docs/Learn/CSS/Styling_text/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (tels que le soulignement, le surlignement, les rayures, etc.).
+  - : Cette propriété correspondra à la couleur utilisée pour dessiner le texte ainsi que [ses décorations](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#font_style_font_weight_text_transform_and_text_decoration) (tels que le soulignement, le surlignement, les rayures, etc.).
 - [`background-color`](/fr/docs/Web/CSS/background-color)
   - : Cette propriété correspondra à la couleur utilisée en arrière-plan du texte.
 - [`text-shadow`](/fr/docs/Web/CSS/text-shadow)
-  - : Cette propriété permet d'ajouter un effet d'ombre au texte. Parmi les options de cette ombre, on a la couleur de base de l'ombre (qui participe au flou et qui est fusionnée avec l'arrière-plan selon les autres paramètres. Voir [ce paragraphe](/fr/docs/Learn/CSS/Styling_text/Fundamentals#text_drop_shadows) pour en savoir plus.
+  - : Cette propriété permet d'ajouter un effet d'ombre au texte. Parmi les options de cette ombre, on a la couleur de base de l'ombre (qui participe au flou et qui est fusionnée avec l'arrière-plan selon les autres paramètres. Voir [ce paragraphe](/fr/docs/Learn_web_development/Core/Text_styling/Fundamentals#text_drop_shadows) pour en savoir plus.
 - [`text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
   - : Par défaut, les décorations du texte (le soulignement, les rayures, etc.) utilise la propriété `color` pour leurs couleurs. Il est cependant possible de passer outre cette valeur et de fournir une couleur différente avec la propriété `text-decoration-color`.
 - [`text-emphasis-color`](/fr/docs/Web/CSS/text-emphasis-color)
   - : Cette propriété correspondra à la couleur utilisée pour dessiner les symboles d'emphase utilisés à côté des caractères du texte. Ces symboles sont principalement utilisés dans des textes écrits dans des langues d'Asie orientale.
 - [`caret-color`](/fr/docs/Web/CSS/caret-color)
-  - : Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple [`<input>`](/fr/docs/Web/HTML/Element/input) et [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) ou les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable) est activé).
+  - : Cette propriété correspondra à la couleur utilisée pour dessiner le curseur de saisie de texte dans l'élément. Cette propriété est uniquement pertinente pour les éléments qui sont éditables (par exemple [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) ou les éléments dont l'attribut [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-contenteditable) est activé).
 
 ### Boîtes
 
@@ -51,7 +51,7 @@ Chaque élément est une boîte avec du contenu. Cette boîte possède un arriè
 
 ### Bordures
 
-Tout élément possède une [bordure](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) dessinée autour. Une bordure simple est représentée par une ligne dessinant un rectangle autour du contenu de l'élément. Vous pouvez lire [la mise en forme des bordures grâce à CSS](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders) afin d'approfondir ce sujet.
+Tout élément possède une [bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) dessinée autour. Une bordure simple est représentée par une ligne dessinant un rectangle autour du contenu de l'élément. Vous pouvez lire [la mise en forme des bordures grâce à CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders) afin d'approfondir ce sujet.
 
 Il est possible d'utiliser la propriété raccourcie [`border`](/fr/docs/Web/CSS/border) qui permet de configurer l'ensemble des caractéristiques d'une bordure en une seule règle (y compris les caractéristiques qui ne sont pas liées aux couleurs comme [la largeur](/fr/docs/Web/CSS/border-width), [le style](/fr/docs/Web/CSS/border-style) (ligne pleine, pointillés, etc.) et ainsi de suite).
 
@@ -69,9 +69,9 @@ Il est possible d'utiliser la propriété raccourcie [`border`](/fr/docs/Web/CSS
 CSS n'est pas la seule technologie web qui gère des couleurs. Voici les autres technologies qui permettent d'apporter de la couleur sur une page web.
 
 - [L'API Canvas](/fr/docs/Web/API/Canvas_API)
-  - : Cette API permet de dessiner des graphiques matriciels en deux dimensions à l'intérieur d'un élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Vous pouvez lire [le tutoriel sur l'API Canvas](/fr/docs/Web/API/Canvas_API/Tutorial) pour en savoir plus.
+  - : Cette API permet de dessiner des graphiques matriciels en deux dimensions à l'intérieur d'un élément [`<canvas>`](/fr/docs/Web/HTML/Reference/Elements/canvas). Vous pouvez lire [le tutoriel sur l'API Canvas](/fr/docs/Web/API/Canvas_API/Tutorial) pour en savoir plus.
 - [SVG](/fr/docs/Web/SVG) (_Scalable Vector Graphics_)
-  - : Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément [`<img>`](/fr/docs/Web/HTML/Element/img).
+  - : Ce format permet de dessiner des images en indiquant des commandes pour dessiner des formes, des motifs et des lignes afin de composer une image. Les commandes SVG sont construites dans un fichier XML et peuvent être embarquées dans une page web grâce à un élément [`<img>`](/fr/docs/Web/HTML/Reference/Elements/img).
 - [WebGL](/fr/docs/Web/API/WebGL_API)
   - : L'API Web Graphics Library est une API basée sur OpenGL ES qui permet de dessiner en deux ou trois dimensions sur le Web. Voir [le tutoriel WebGL](/fr/docs/Web/API/WebGL_API/Tutorial) afin d'en savoir plus.
 
@@ -238,7 +238,7 @@ Voici le fragment de code HTML utilisé pour cet exemple :
 </div>
 ```
 
-Ce fragment est plutôt simple : on utilise un élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui enveloppe le contenu, constitué de deux `<div>`, chacun avec une classe différente et contenant chacun un paragraphe (c'est-à-dire un élément [`<p>`](/fr/docs/Web/HTML/Element/p)).
+Ce fragment est plutôt simple : on utilise un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) qui enveloppe le contenu, constitué de deux `<div>`, chacun avec une classe différente et contenant chacun un paragraphe (c'est-à-dire un élément [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)).
 
 Voyons ensuite la feuille de style CSS appliquée au bloc HTML précédent.
 
@@ -256,7 +256,7 @@ Nous allons ici étudier la feuille de style en la décomposant, partie par part
 }
 ```
 
-Le sélecteur de classe `.conteneur` permet d'appliquer des styles à l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) qui enveloppe le reste du contenu. Pour ce style, on indique une largeur avec la propriété [`width`](/fr/docs/Web/CSS/width) et une hauteur avec la propriété [`height`](/fr/docs/Web/CSS/height), on définit aussi une marge et une zone de remplissage avec [`margin`](/fr/docs/Web/CSS/margin) et [`padding`](/fr/docs/Web/CSS/padding).
+Le sélecteur de classe `.conteneur` permet d'appliquer des styles à l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) qui enveloppe le reste du contenu. Pour ce style, on indique une largeur avec la propriété [`width`](/fr/docs/Web/CSS/width) et une hauteur avec la propriété [`height`](/fr/docs/Web/CSS/height), on définit aussi une marge et une zone de remplissage avec [`margin`](/fr/docs/Web/CSS/margin) et [`padding`](/fr/docs/Web/CSS/padding).
 
 La règle la plus intéressante est celle où on manipule la propriété [`border`](/fr/docs/Web/CSS/border) afin de dessiner une bordure sur l'extérieur de l'élément. Cette bordure sera une ligne pleine de 6 pixels avec la couleur `mediumturquoise`.
 
@@ -315,7 +315,7 @@ Enfin, la classe `.boiteDroite` décrit les propriétés de la boîte dessinée 
 
 ## Permettre à l'utilisateur de choisir une couleur
 
-Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fût nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais aux navigateurs une façon homogène de le faire avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Element/input#attr-type) vaut `"color"`.
+Il existe différentes situations où l'on peut/doit permettre à l'utilisateur de sélectionner une couleur. Il peut s'agir d'une interface personnalisable, d'une application de dessin, d'une application d'édition où on peut choisir la couleur du texte, etc. Bien que, par le passé, il fût nécessaire d'implémenter son propre sélecteur de couleur, HTML fournit désormais aux navigateurs une façon homogène de le faire avec un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) dont l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#attr-type) vaut `"color"`.
 
 Lorsqu'on choisit une couleur via un élément `<input>`, la valeur stockée dans le document et envoyée via le formulaire est représentée avec une chaîne de caractères hexadécimale.
 
@@ -330,7 +330,7 @@ Prenons un exemple simple où l'utilisateur choisit une couleur qui est immédia
 
 #### HTML
 
-Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément [`<label>`](/fr/docs/Web/HTML/Element/label)) ainsi qu'un paragraphe ([`<p>`](/fr/docs/Web/HTML/Element/p)) vide dans lequel nous placerons plus tard du texte avec JavaScript.
+Voici le fragment HTML qui permet de créer une boîte qui contient un sélecteur de couleur avec un libellé associé (l'élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label)) ainsi qu'un paragraphe ([`<p>`](/fr/docs/Web/HTML/Reference/Elements/p)) vide dans lequel nous placerons plus tard du texte avec JavaScript.
 
 ```html
 <div id="box">
@@ -360,7 +360,7 @@ La feuille CSS détermine la taille de la boîte et une mise en forme simple. La
 
 #### JavaScript
 
-Le script est utilisé pour mettre à jour la couleur de la bordure afin que celle-ci corresponde à la valeur courante du sélecteur. On ajoute ensuite deux gestionnaires d'évènements pour « écouter » ce qui se passe avec l'élément [`<input type="color">`](/fr/docs/Web/HTML/Element/input/color).
+Le script est utilisé pour mettre à jour la couleur de la bordure afin que celle-ci corresponde à la valeur courante du sélecteur. On ajoute ensuite deux gestionnaires d'évènements pour « écouter » ce qui se passe avec l'élément [`<input type="color">`](/fr/docs/Web/HTML/Reference/Elements/input/color).
 
 ```js
 let colorPicker = document.getElementById("colorPicker");
@@ -494,6 +494,6 @@ Par défaut, la propriété `color-adjust` vaut `economy` et indique au navigate
 
 ## Voir aussi
 
-- [Dessiner des graphiques](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics)
-- [Le graphisme sur le Web](/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML)
+- [Dessiner des graphiques](/fr/docs/Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics)
+- [Le graphisme sur le Web](/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images)
 - [Un outil de sélection de couleur sur MDN](/fr/docs/Web/CSS/CSS_Colors/Color_picker_tool)

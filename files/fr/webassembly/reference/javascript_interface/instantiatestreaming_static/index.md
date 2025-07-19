@@ -11,7 +11,7 @@ l10n:
 La méthode statique **`WebAssembly.instantiateStreaming()`** permet de compiler et d'instancier un module WebAssembly depuis un flux source. C'est la méthode la plus efficace, et la plus optimisée, permettant de charger du code WebAssembly.
 
 > [!NOTE]
-> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/Guides/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src).
 
 ## Syntaxe
 
@@ -24,21 +24,21 @@ WebAssembly.instantiateStreaming(source, importObject)
 - `source`
   - : Un objet [`Response`](/fr/docs/Web/API/Response) ou une promesse qui sera tenue avec une valeur [`Response`](/fr/docs/Web/API/Response) qui représente la source du module .wasm dont on souhaite récupérer le flux, la compiler puis l'instancier.
 - `importObject` {{optional_inline}}
-  - : Un objet qui contient les valeurs qui doivent être importées dans le nouvel objet `Instance` résultant. Cela peut être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il est nécessaire qu'il y ait une propriété correspondante pour chaque import déclaré dans le module compilé, sinon, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
+  - : Un objet qui contient les valeurs qui doivent être importées dans le nouvel objet `Instance` résultant. Cela peut être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Memory). Il est nécessaire qu'il y ait une propriété correspondante pour chaque import déclaré dans le module compilé, sinon, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/LinkError) sera levée.
 
 ### Valeur de retour
 
 Un objet `Promise` dont la valeur de résolution est un objet `ResultObject` contenant deux champs&nbsp;:
 
 - `module`
-  - : Un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module WebAssembly compilé. Ce module pourra être instancié à nouveau, partagé avec [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+  - : Un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Module) qui représente le module WebAssembly compilé. Ce module pourra être instancié à nouveau, partagé avec [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
 - `instance`
-  - : Un objet [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance) qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions).
+  - : Un objet [`WebAssembly.Instance`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance) qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Guides/Exported_functions).
 
 ### Exceptions
 
 - Si l'un des paramètres n'est pas du bon type ou ne possède pas la bonne structure, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) est déclenchée.
-- Si l'opération échoue, la promesse lève une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError), ou [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/JavaScript_interface/RuntimeError)selon la cause de l'échec.
+- Si l'opération échoue, la promesse lève une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/LinkError), ou [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/Reference/JavaScript_interface/RuntimeError)selon la cause de l'échec.
 
 ## Examples
 
@@ -68,5 +68,5 @@ Ensuite, on accède au champ `instance` de l'objet `ResultObject` afin de pouvoi
 ## Voir aussi
 
 - [La page d'aperçu de WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript de WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript de WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

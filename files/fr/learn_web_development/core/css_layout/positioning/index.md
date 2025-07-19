@@ -35,7 +35,7 @@ Il y a différents types de positionnement que vous pouvez appliquer à des él�
 
 Le positionnement statique est celui reçu par défaut par chaque élément. Cela veut tout simplement dire «&nbsp;positionner l'élément selon le flux normal, rien de spécial à voir ici&nbsp;».
 
-Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Element/p) dans le HTML&nbsp;:
+Pour illustrer ce positionnement (et disposer d'exemple qui nous servira pour les prochaines sections), ajoutez tout d'abord une classe `positioned` pour le deuxième [`<p>`](/fr/docs/Web/HTML/Reference/Elements/p) dans le HTML&nbsp;:
 
 ```html
 <p class="positioned">…</p>
@@ -75,7 +75,7 @@ left: 30px;
 ```
 
 > [!NOTE]
-> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn/CSS/Building_blocks/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
+> Les valeurs de ces propriétés peuvent prendre n'importe quelle [unité](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units) logiquement attendue ici&nbsp;: pixels, mm, rem, %, etc.
 
 Si vous enregistrez et actualisez maintenant, vous verrez ce résultat&nbsp;:
 
@@ -235,11 +235,11 @@ Ensuite, notez que la position de l'élément a changé. [`top`](/fr/docs/Web/CS
 
 ### Contextes de positionnement
 
-Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/Containing_block#identifier_le_bloc_englobant)).
+Quel élément est «&nbsp;le conteneur&nbsp;» d'un élément positionné de manière absolue&nbsp;? Cela dépend en grande partie de la propriété `position` des éléments qui sont les ancêtres de l'élément positionné (voir [Identifier le bloc englobant](/fr/docs/Web/CSS/CSS_display/Containing_block#identifier_le_bloc_englobant)).
 
-Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément [`<html>`](/fr/docs/Web/HTML/Element/html). Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) et positionné relativement à la zone d'affichage.
+Si aucun élément ancêtre ne voit sa propriété `position` explicitement définie, par défaut, tous les éléments ancêtres auront une position statique et par conséquent, l'élément positionné de façon absolue sera contenu dans **le bloc englobant initial**. Ce bloc englobant initial a les dimensions de la zone d'affichage (<i lang="en">viewport</i>) et est aussi le bloc qui contient l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html). Autrement dit, l'élément positionné de façon absolue sera affiché en dehors de l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) et positionné relativement à la zone d'affichage.
 
-Dans la structure HTML, l'élément positionné est imbriqué dans l'élément [`<body>`](/fr/docs/Web/HTML/Element/body), mais pour la disposition finale, il est situé à 30px du bord haut et du bord gauche de la page. Vous pouvez modifier **le contexte de positionnement**, c'est-à-dire l'élément par rapport auquel l'élément est positionné de façon absolue. Pour cela, on définira le positionnement d'un des éléments ancêtres. Pour voir cet effet, ajoutez la déclaration suivante dans la règle ciblant `body`&nbsp;:
+Dans la structure HTML, l'élément positionné est imbriqué dans l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body), mais pour la disposition finale, il est situé à 30px du bord haut et du bord gauche de la page. Vous pouvez modifier **le contexte de positionnement**, c'est-à-dire l'élément par rapport auquel l'élément est positionné de façon absolue. Pour cela, on définira le positionnement d'un des éléments ancêtres. Pour voir cet effet, ajoutez la déclaration suivante dans la règle ciblant `body`&nbsp;:
 
 ```css
 position: relative;
@@ -310,7 +310,7 @@ span {
 
 {{EmbedLiveSample('','100%', 420)}}
 
-À présent, l'élément a été positionné par rapport à l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
+À présent, l'élément a été positionné par rapport à l'élément [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 
 > [!NOTE]
 > À ce stade, vous pouvez voir cet exemple ici [`4_positioning-context.html`](https://mdn.github.io/learning-area/css/css-layout/positioning/4_positioning-context.html) ([voir le code source](https://github.com/mdn/learning-area/blob/main/css/css-layout/positioning/4_positioning-context.html)).
@@ -422,7 +422,7 @@ Notez que `z-index` n'accepte que des valeurs d'index sans unité&nbsp;; vous ne
 
 ## Positionnement fixe
 
-Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle&nbsp;: alors que le positionnement absolu fixe un élément en place par rapport à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html) ou son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
+Voyons maintenant le positionnement fixe. Cela fonctionne exactement de la même manière que le positionnement absolu, avec une différence essentielle&nbsp;: alors que le positionnement absolu fixe un élément en place par rapport à l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html) ou son parent positionné le plus proche, le positionnement fixe fige un élément en place par rapport à la vue par la fenêtre du navigateur elle-même. Cela signifie que vous pouvez créer des éléments d'interface utilisateur utiles qui sont fixés en place, comme des menus de navigation persistants.
 
 Voici un exemple simple pour montrer ce que nous voulons dire. D'abord, supprimez la règle de `p:nth-of-type(1)` et `.positioned` de la CSS.
 
@@ -436,7 +436,7 @@ body {
 }
 ```
 
-Maintenant, donnez la position `fixed` à l'élément [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS&nbsp;:
+Maintenant, donnez la position `fixed` à l'élément [`<h1>`](/fr/docs/Web/HTML/Reference/Elements/Heading_Elements) et centrez‑le en haut de la fenêtre. Ajoutez la règle suivante à la CSS&nbsp;:
 
 ```css
 h1 {
@@ -636,7 +636,7 @@ Une utilisation courante et pleine d'intérêt de `position: sticky` consiste à
 </dl>
 ```
 
-Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Element/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Element/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
+Le CSS pourrait ressembler à ce qui suit. Dans le flux normal, les éléments [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) défilent avec le contenu. Quand on ajoute `position: sticky` à l'élément [`<dt>`](/fr/docs/Web/HTML/Reference/Elements/dt) avec une valeur [`top`](/fr/docs/Web/CSS/top) de 0, les navigateurs prenant en charge ce positionnement colleront les titres au sommet de la vue de la fenêtre au fur et à mesure qu'ils atteignent cette position. Chaque en-tête suivant remplacera l'en-tête précédent au fur et à mesure que le contenu défile.
 
 ```css
 dt {
@@ -676,6 +676,6 @@ On espère que vous vous êtes amusé⋅e à jouer avec le positionnement de bas
 ## Voir aussi
 
 - Référence de la propriété [`position`](/fr/docs/Web/CSS/position).
-- [Exemples pratiques de positionnement](/fr/docs/Learn/CSS/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
+- [Exemples pratiques de positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples), pour quelques idées utiles supplémentaires.
 
 {{PreviousMenuNext("Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout")}}

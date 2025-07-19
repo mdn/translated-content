@@ -46,7 +46,7 @@ Quand vous voulez appliquer un style à plusieurs blocs ou éléments dans la m�
 
 Les feuilles de style avec le moins de règles sont les plus performantes. Par conséquent, il est recommandé d'utiliser le plus possible les classes et de réserver les id à des usages spécifiques - comme connecter des éléments de type `label` et `form` ou pour décorer des éléments qui doivent être sémantiquement uniques.
 
-Voire [Les sélecteurs CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors).
+Voire [Les sélecteurs CSS](/fr/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors).
 
 ## Comment revenir à la valeur par défaut d'un propriété ?
 
@@ -210,7 +210,7 @@ Le sélecteur `*` doit être utilisé aussi peu que possible car il s'agit d'un 
 
 ### La spécificité en CSS
 
-Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
+Lorsque plusieurs règles s'applique à un même élément. La règle choisie dépend de la [spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts). Les styles _inline_ (ceux déclarés via l'attribut HTML `style`) sont pris en compte en priorité, suivis par ceux manipulés avec les sélecteurs d'identifiant, suivis ceux associés aux sélecteurs de classe et éventuellement par ceux associés aux sélecteurs de nom.
 
 ```css
 div {
@@ -232,7 +232,7 @@ div {
 </div>
 ```
 
-Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance).
+Les règles exactes sont plus complexes lorsque le sélecteur contient plusieurs composants. Pour plus de détails sur la façon dont la spécificité d'un sélecteur est calculé, on pourra lire [le chapitre de la spécification CSS 2.1](https://www.w3.org/TR/CSS21/cascade.html#specificity) ou [le chapitre correspondant de la section Apprendre](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts).
 
 ## Quid des propriétés -moz-\*, -ms-\*, -webkit-\*, -o-\* et -khtml-\* ?
 

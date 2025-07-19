@@ -13,4 +13,4 @@ slug: Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs
 
 ## Voir aussi
 
-- [Compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [Compatibilité du navigateur pour manifest.json](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json)

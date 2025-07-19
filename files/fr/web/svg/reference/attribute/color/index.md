@@ -65,8 +65,8 @@ L'attribut `color` est utilisé pour définir indirectement une valeur potentiel
 
 Les éléments suivants peuvent utiliser l'attribut `color`:
 
-- [Éléments de contenu textuel](/fr/docs/Web/SVG/Element#éléments_de_contenu_textuel) »
-- [Éléments de formes](/fr/docs/Web/SVG/Element#éléments_de_formes) »
+- [Éléments de contenu textuel](/fr/docs/Web/SVG/Reference/Element#éléments_de_contenu_textuel) »
+- [Éléments de formes](/fr/docs/Web/SVG/Reference/Element#éléments_de_formes) »
 - {{ SVGElement("stop") }}
 - {{ SVGElement("feFlood") }}
 - {{ SVGElement("feDiffuseLighting") }}

@@ -53,6 +53,6 @@ Pour chaque objet contenu dans ce tableau, il y aura une propriété `status` qu
 ## Voir aussi
 
 - [Guide - Utiliser les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises)
-- [Programmation asynchrone à l'aide des promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Programmation asynchrone à l'aide des promesses](/fr/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

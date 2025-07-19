@@ -15,14 +15,14 @@ Les composants web (<i lang="en">Web Components</i> en anglais) visent à résou
 
 - **Les éléments personnalisés (<i lang="en">custom elements</i>)**&nbsp;: un ensemble d'API JavaScript qui permettent de définir des éléments personnalisés ainsi que leur comportement.
 - **Le <i lang="en">Shadow DOM</i>**&nbsp;: un ensemble d'API JavaScript qui permettent d'attacher un DOM «&nbsp;sombre&nbsp;» encapsulé à un élément, qui est rendu séparément du DOM du document principal et de contrôler les fonctionnalités associées. Ainsi, les fonctionnalités d'un élément peuvent être gardées privées pour que la mise en forme et le script puissent être appliqués sans risque de collision avec les autres parties du document.
-- **Les gabarits HTML**&nbsp;: les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot) permettent d'écrire des gabarits de balisage qui ne sont pas affichés sur la page et qui peuvent être réutilisés comme base de la structure d'un élément personnalisé.
+- **Les gabarits HTML**&nbsp;: les éléments [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) et [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot) permettent d'écrire des gabarits de balisage qui ne sont pas affichés sur la page et qui peuvent être réutilisés comme base de la structure d'un élément personnalisé.
 
 L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 1. La création d'une classe pour définir les fonctionnalités du composant web (par exemple avec l'utilisation de la syntaxe de [classe ECMAScript 2015](/fr/docs/Web/JavaScript/Reference/Classes)).
 2. L'enregistrement du nouvel élément personnalisé avec la méthode [`CustomElementRegistry.define()`](/fr/docs/Web/API/CustomElementRegistry/define), à laquelle on passe le nom de l'élément à définir, la classe ou la fonction contenant les fonctionnalités et, optionnellement, l'élément duquel il hérite.
 3. Si c'est nécessaire, l'attache d'un DOM sombre à l'élément personnalisé avec la méthode [`Element.attachShadow()`](/fr/docs/Web/API/Element/attachShadow). L'ajout d'éléments fils, de gestionnaires d'évènement, etc. au DOM sombre à l'aide des méthodes usuelles pour le DOM.
-4. Si c'est nécessaire, la définition d'un gabarit HTML avec [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot). Là encore, on utilisera des méthodes DOM usuelles pour cloner le gabarit et l'attacher au DOM sombre.
+4. Si c'est nécessaire, la définition d'un gabarit HTML avec [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) et [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot). Là encore, on utilisera des méthodes DOM usuelles pour cloner le gabarit et l'attacher au DOM sombre.
 5. L'utilisation de l'élément personnalisé où on veut sur la page, comme pour tout autre élément HTML.
 
 ## Tutoriels
@@ -32,7 +32,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 - [Utiliser le DOM sombre (<i lang="en">shadow DOM</i>)](/fr/docs/Web/API/Web_components/Using_shadow_DOM)
   - : Un guide abordant les fondamentaux du <i lang="en">shadow DOM</i>, illustrant comment attacher un DOM sombre à un élément, l'ajouter à l'arbre DOM, le mettre en forme, etc.
 - [Utiliser les gabarits et emplacements](/fr/docs/Web/API/Web_components/Using_templates_and_slots)
-  - : Un guide illustrant comment définir une structure HTML réutilisable avec les éléments [`<template>`](/fr/docs/Web/HTML/Element/template) et [`<slot>`](/fr/docs/Web/HTML/Element/slot), avant d'utiliser cette structure à l'intérieur des composants web.
+  - : Un guide illustrant comment définir une structure HTML réutilisable avec les éléments [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template) et [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot), avant d'utiliser cette structure à l'intérieur des composants web.
 
 ## Référence
 
@@ -51,7 +51,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 - Des extensions pour créer des éléments personnalisés de façon native&nbsp;:
   - : Les extensions suivantes sont définies&nbsp;:
-    - L'attribut universel HTML [`is`](/fr/docs/Web/HTML/Global_attributes/is) qui permet d'indiquer qu'un élément HTML standard devrait se comporter à la manière d'un élément personnalisé enregistré.
+    - L'attribut universel HTML [`is`](/fr/docs/Web/HTML/Reference/Global_attributes/is) qui permet d'indiquer qu'un élément HTML standard devrait se comporter à la manière d'un élément personnalisé enregistré.
     - L'option "is" de la méthode [`Document.createElement()`](/fr/docs/Web/API/Document/createElement) qui permet de créer une instance d'un élément HTML standard qui se comporte comme un élément personnalisé enregistré.
 
 - Des pseudo-classes CSS&nbsp;:
@@ -63,7 +63,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 - Des pseudo-éléments CSS&nbsp;:
   - : Un pseudo-élément CSS est spécifiquement lié aux éléments personnalisés&nbsp;:
-    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Global_attributes/part) correspondant.
+    - [`::part`](/fr/docs/Web/CSS/::part) représente tout élément au sein [d'un arbre sombre](/fr/docs/Web/API/Web_components/Using_shadow_DOM) qui possède un attribut [`part`](/fr/docs/Web/HTML/Reference/Global_attributes/part) correspondant.
 
 ### Le DOM sombre (<i lang="en">Shadow DOM</i>)
 
@@ -86,16 +86,16 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
 
 ### Les gabarits HTML
 
-- [`<template>`](/fr/docs/Web/HTML/Element/template)
+- [`<template>`](/fr/docs/Web/HTML/Reference/Elements/template)
   - : Cet élément contient un fragment HTML qui n'est pas affiché lors du chargement initial du document qui le contient mais qui peut être affiché lors de l'exécution à l'aide de JavaScript. Il est principalement utilisé pour la structure des éléments personnalisés. L'interface DOM correspondante est [`HTMLTemplateElement`](/fr/docs/Web/API/HTMLTemplateElement).
-- [`<slot>`](/fr/docs/Web/HTML/Element/slot)
+- [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot)
   - : Un emplacement à l'intérieur du composant web qui peut être utilisé pour votre balisage et qui permet de créer des arbres DOM séparés. L'interface DOM correspondante est [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement).
-- L'attribut HTML universel [`slot`](/fr/docs/Web/HTML/Global_attributes/slot)
+- L'attribut HTML universel [`slot`](/fr/docs/Web/HTML/Reference/Global_attributes/slot)
   - : Il permet d'affecter un emplacement (<i lang="en">slot</i>) d'un arbre d'un DOM sombre à un élément.
 - [`Element.assignedSlot`](/fr/docs/Web/API/Element/assignedSlot)
-  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein duquel l'élément courant est inséré.
+  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot) au sein duquel l'élément courant est inséré.
 - [`Text.assignedSlot`](/fr/docs/Web/API/Text/assignedSlot)
-  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Element/slot) au sein duquel le nœud texte est inséré.
+  - : Un attribut en lecture seule qui renvoie une référence à l'élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot) au sein duquel le nœud texte est inséré.
 - Les extensions à [`Element`](/fr/docs/Web/API/Element)
   - : Les extensions à l'interface `Element` sont&nbsp;:
     - [`Element.slot`](/fr/docs/Web/API/Element/slot) qui renvoie le nom de l'emplacement de DOM sombre associé à l'élément.
@@ -105,7 +105,7 @@ L'approche pour implémenter un composant web ressemble généralement à&nbsp;:
     - [`::slotted`](/fr/docs/Web/CSS/::slotted) qui cible le contenu inséré dans un emplacement.
 
 - L'évènement [`slotchange`](/fr/docs/Web/API/HTMLSlotElement/slotchange_event)
-  - : Celui-ci est déclenché sur une instance de [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) (qui représente un élément [`<slot>`](/fr/docs/Web/HTML/Element/slot)) lorsque les nœuds contenus dans cet emplacement changent.
+  - : Celui-ci est déclenché sur une instance de [`HTMLSlotElement`](/fr/docs/Web/API/HTMLSlotElement) (qui représente un élément [`<slot>`](/fr/docs/Web/HTML/Reference/Elements/slot)) lorsque les nœuds contenus dans cet emplacement changent.
 
 ## Exemples
 
