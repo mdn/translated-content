@@ -16,12 +16,11 @@ l10n:
 ### 异常
 
 - {{jsxref("SyntaxError")}}
-  - : 如果 `keyText` 被更新为无效的关键帧选择器，则会抛出此异常，此时 `keyText` 保持不变。
+  - : 如果 `keyText` 被更新为无效的关键帧选择器，则会抛出此异常，这种情况下 `keyText` 将保持不变。
 
 ## 示例
 
-以下 CSS 包含一个关键帧规则。该代码将返回 `document.styleSheets[0].cssRules` 的第一个 {{domxref("CSSRule")}}。
-`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象，其中包含每个关键帧的 {{domxref("CSSKeyFrameRule")}} 对象。
+以下 CSS 包含一个关键帧规则。其会是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象，其中包含每个关键帧的 {{domxref("CSSKeyFrameRule")}} 对象。
 
 ```css
 @keyframes slide-in {
@@ -37,7 +36,7 @@ l10n:
 
 ```js
 let myRules = document.styleSheets[0].cssRules;
-let keyframes = myRules[0]; // 一个 CSSKeyframesRule
+let keyframes = myRules[0]; // CSSKeyframesRule
 console.log(keyframes[0].keyText); // 包含 0% 的字符串
 ```
 
