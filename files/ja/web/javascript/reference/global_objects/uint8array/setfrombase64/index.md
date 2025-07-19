@@ -6,7 +6,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`setFromBase64()`** は {{jsxref("Uint8Array")}} インすtナスのメソッドで、この `Uint8Array` オブジェクトに [base64](/ja/docs/Glossary/Base64) エンコードされた文字列のバイト列を格納し、読み込んだバイト数と書き込んだバイト数を示すオブジェクトを返します。
+**`setFromBase64()`** は {{jsxref("Uint8Array")}} インスタンスのメソッドで、この `Uint8Array` オブジェクトに [base64](/ja/docs/Glossary/Base64) エンコードされた文字列のバイト列を格納し、読み込んだバイト数と書き込んだバイト数を示すオブジェクトを返します。
 
 このメソッドは、事前に割り当てられた配列バッファーにデータを格納するのに最適です。base64 エンコードされた文字列から新しい `Uint8Array` オブジェクトを作成したい場合は、代わりに静的メソッド {{jsxref("Uint8Array.fromBase64()")}} を使用してください。
 
@@ -84,7 +84,7 @@ console.log(uint8Array);
 // Uint8Array(16) [0, 0, 60, 98, 62, 77, 68, 78, 60, 47, 98, 62, 0, 0, 0, 0]
 ```
 
-### ストリームでコード
+### ストリームデコード
 
 この例は、[元の提案](https://github.com/tc39/proposal-arraybuffer-base64/blob/main/stream.mjs)を改変したものです。これは、`stream` オプションに対応する {{domxref("TextDecoder")}} API を模倣しています。不完全な塊を処理するために `lastChunkHandling: "stop-before-partial"` を使用していることに注意してください。
 
