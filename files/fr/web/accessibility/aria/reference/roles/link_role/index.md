@@ -11,7 +11,7 @@ Un rôle ARIA `link` fournit une référence interactive à une ressource. La re
 > [!NOTE]
 > Dans la mesure du possible, il est recommandé d'utiliser un élément natif [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
 
-### Description
+## Description
 
 Le rôle `link` est utilisé pour identifier un élément qui crée un lien hypertexte vers une ressource qui se trouve dans ou en dehors de l'application.
 
@@ -22,7 +22,7 @@ Utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/t
 > [!WARNING]
 > Appliquer le rôle `link` à un élément n'amènera pas les navigateurs à améliorer l'élément avec l'apparence ou les comportements standards des liens, comme le soulignement, les anneaux de ciblage, la navigation vers la cible du lien, ou les actions du menu contextuel. C'est à la responsabilité du développeur.
 
-### Exemple
+## Exemple
 
 Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
 
@@ -77,7 +77,7 @@ Si l'élément avec `role="link"` reçoit un événement du clavier <kbd>ENTREZ<
 
 Facultativement, <kbd>SHIFT</kbd> + <kbd>F10</kbd> ouvre un menu contextuel pour le lien.
 
-### Bonnes pratiques
+## Bonnes pratiques
 
 Les différents rôles sont utilisés pour définir des modèles interactifs communs. Semblable aux rôles document-structure, certains de ces rôles, y compris le rôle `link`, dupliquent la sémantique des éléments HTML natifs qui sont bien pris en charge et ne doivent pas être utilisés.
 
@@ -94,7 +94,7 @@ Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Element
 
 {{Specifications}}
 
-### Voir aussi
+## Voir aussi
 
 - L'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)
 - L'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
