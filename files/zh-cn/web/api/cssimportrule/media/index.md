@@ -20,8 +20,7 @@ l10n:
 
 ### 获取媒体属性
 
-以下样式表包含一个 {{cssxref("@import")}} 规则。因此，CSS 规则列表中的第一个项目将是一个 `CSSImportRule`。
-`media` 属性返回一个 {{domxref("MediaList")}} 对象，其中包括 `mediaText` 属性，其值为 `screen`。
+以下样式表包含一个 {{cssxref("@import")}} 规则。因此，CSS 规则列表中的第一个项目将是一个 `CSSImportRule`。`media` 属性返回一个 {{domxref("MediaList")}} 对象，其中包括 `mediaText` 属性，其值为 `screen`。
 
 ```css
 @import url("style.css") screen;
@@ -29,7 +28,7 @@ l10n:
 
 ```js
 const myRules = document.styleSheets[0].cssRules;
-console.log(myRules[0].media); // 一个 MediaList 对象
+console.log(myRules[0].media); // MediaList 对象
 ```
 
 ### 设置媒体属性
