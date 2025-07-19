@@ -44,7 +44,8 @@ Puedes usar las características API de audio mejoradas - que son específicas d
 
 Si no está configurado, su valor predeterminado está definido por el navegador (es decir, cada navegador puede elegir su propio valor predeterminado), aunque la especificación aconseje que se establezca a `metadatos`.
 
-> **Nota:** **Observaciones sobre uso:**
+> [!NOTE]
+> **Observaciones sobre uso:**
 >
 > - El atributo **autoplay** tiene prioridad sobre éste puesto que si se desea reproducir automáticamente un video, el navegador obviamente tendrá que descargarlo. La especificación permite establecer los atributos **autoplay** y **preload**.
 > - La especificación no fuerza al navegador a seguir el valor de este atributo; es tan sólo una sugerencia.

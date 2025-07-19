@@ -50,7 +50,8 @@ Si alguna cabecera no se entiende o posee un valor incorrecto, el servidor debe 
 > [!NOTE]
 > The request-uri (`/chat` here) has no defined meaning in the spec. So many people cleverly use it to let one server handle multiple WebSocket applications. For example, `example.com/chat` could invoke a multiuser chat app, while `/game` on the same server might invoke a multiplayer game.
 
-> **Nota:** [Regular HTTP status codes](/es/docs/Web/HTTP/Reference/Status) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
+> [!NOTE]
+> [Regular HTTP status codes](/es/docs/Web/HTTP/Reference/Status) can only be used before the handshake. After the handshake succeeds, you have to use a different set of codes (defined in section 7.4 of the spec).
 
 ### Respuesta de Handshake del servidor
 
@@ -176,7 +177,8 @@ WebSocket extensions and subprotocols are negotiated via headers during [the han
 
 ### Extensions
 
-> **Nota:** **This section needs expansion. Please edit if you are equipped to do so.**
+> [!NOTE]
+> **This section needs expansion. Please edit if you are equipped to do so.**
 
 Think of an extension as compressing a file before e-mailing it to someone. Whatever you do, you're sending the _same_ data in different forms. The recipient will eventually be able to get the same data as your local copy, but it is sent differently. That's what an extension does. WebSockets defines a protocol and a simple way to send data, but an extension such as compression could allow sending the same data but in a shorter format.
 

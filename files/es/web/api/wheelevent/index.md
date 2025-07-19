@@ -7,7 +7,8 @@ slug: Web/API/WheelEvent
 
 El interface **`WheelEvent`** retrata los eventos que ocurren cuando el usuario mueve la rueda del ratón o de un dispositivo similar.
 
-> **Nota:** **Esta es la forma estándar de usar el evento wheel.**
+> [!NOTE]
+> **Esta es la forma estándar de usar el evento wheel.**
 >
 > Antiguas versiones de navegadores implementaron dos formas no-estándar y no-compatibles-entre-navegadores, los interfaces {{ domxref("MouseWheelEvent") }} y {{domxref("MouseScrollEvent")}}. Utilice este interfaz y evite los dos últimos.
 

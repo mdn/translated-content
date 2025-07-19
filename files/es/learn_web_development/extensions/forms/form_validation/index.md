@@ -276,7 +276,8 @@ Aquí está el ejemplo que se ejecuta en vivo:
 > [!NOTE]
 > Puedes encontrar este ejemplo en vivo en GitHub como [fruit-length.html](https://mdn.github.io/learning-area/html/forms/form-validation/fruit-length.html) (consulta también su [código fuente](https://github.com/mdn/learning-area/blob/master/html/forms/form-validation/fruit-length.html)).
 
-> **Nota:** `<input type="number">` (y otros tipos, como `range` y `date`) también pueden tomar un atributo [`step`](/es/docs/Web/HTML/Attributes/step), que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo `step`, por lo que el valor predeterminado es `1`. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.
+> [!NOTE]
+> `<input type="number">` (y otros tipos, como `range` y `date`) también pueden tomar un atributo [`step`](/es/docs/Web/HTML/Attributes/step), que especifica en qué incremento aumenta o disminuye el valor cuando se utilizan los controles de entrada (como el botones numéricos arriba y abajo). En el ejemplo anterior no hemos incluido un atributo `step`, por lo que el valor predeterminado es `1`. Esto significa que los valores de coma flotante, como 3.2, también se mostrarán como no válidos.
 
 ### Ejemplo completo
 

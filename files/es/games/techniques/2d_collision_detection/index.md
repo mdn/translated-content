@@ -51,7 +51,8 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Hitbox_alineado_con_el_eje', '700', '300') }}
 
-> **Nota:** [Aquí hay otro ejemplo sin Canvas o bibliotecas externas](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> [!NOTE]
+> [Aquí hay otro ejemplo sin Canvas o bibliotecas externas](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## Colisión circular
 
@@ -133,7 +134,8 @@ circle2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Colisión_circular', '700', '300') }}
 
-> **Nota:** [Aquí hay otro ejemplo sin Canvas o bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE]
+> [Aquí hay otro ejemplo sin Canvas o bibliotecas externas.](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## Teorema del eje de separación
 

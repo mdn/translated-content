@@ -161,7 +161,8 @@ Por último, también puedes usar una sintaxis de 4 valores para indicar una dis
 
 {{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 800)}}
 
-> **Nota:** `background-position` es una propiedad abreviada de {{cssxref("background-position-x")}} y {{cssxref("background-position-y")}}, que te permiten configurar los diferentes valores de posición del eje por separado.
+> [!NOTE]
+> `background-position` es una propiedad abreviada de {{cssxref("background-position-x")}} y {{cssxref("background-position-y")}}, que te permiten configurar los diferentes valores de posición del eje por separado.
 
 ### Degradados de fondo
 

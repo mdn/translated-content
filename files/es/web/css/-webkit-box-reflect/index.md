@@ -9,7 +9,8 @@ slug: Web/CSS/-webkit-box-reflect
 
 `La propiedad` [CSS](/es/docs/Web/CSS) `-webkit-box-reflect` permite reflejar el contenido del elemento en una dirección específica.
 
-> **Advertencia:** **Nota:** Esta característica **no está pensada para ser usada en páginas Web** .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .
+> [!WARNING]
+> Esta característica **no está pensada para ser usada en páginas Web** .Para conseguir reflexión en la Web, la forma estándar es usando la función CSS {{cssxref("element", "element()")}} .
 
 {{cssinfo}}
 

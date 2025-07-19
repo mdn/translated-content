@@ -16,7 +16,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **Nota:** `Map()` sólo puede ser construido con la palabra clave [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamaro sin la palabra clave `new` arroja un {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Map()` sólo puede ser construido con la palabra clave [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamaro sin la palabra clave `new` arroja un {{jsxref("TypeError")}}.
 
 ### Parametros
 

@@ -7,7 +7,8 @@ slug: Web/API/DeviceMotionEvent
 
 El evento `DeviceMotionEvent` proporciona a los desarrolladores información acerca de la velocidad de los cambios en la posición y orientación del dispositivo.
 
-> **Advertencia:** **Aviso:** Acualmente, Firefox and Chrome no manejan las corrdenadas de la misma forma. Tenga en cuenta esto cuando lo use.
+> [!WARNING]
+> **Aviso:** Acualmente, Firefox and Chrome no manejan las corrdenadas de la misma forma. Tenga en cuenta esto cuando lo use.
 
 ## Constructor
 
