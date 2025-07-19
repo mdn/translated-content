@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
-{{CSSRef}}
-
 **`descent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのディセンダーの寸法を定義します。ディセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの下の高さです。
 
 ## 構文

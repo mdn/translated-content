@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 28368ab728eed206d9069f5ba5b889e990ff810c
 ---
 
-{{CSSRef}}
-
 **`font-synthesis-weight`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォントファミリーに太字書体がない場合に、ブラウザーが合成するかどうかを指定します。
 
 すべての書体合成値を制御するために、多くの場合は一括指定プロパティ {{cssxref("font-synthesis")}} を使用した方が便利です。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}
-
 **`zoom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の拡大レベルを制御するために使用できます。
 このプロパティの代わりに、{{cssxref("transform-function/scale", "transform: scale()")}} を使用することもできます。
 

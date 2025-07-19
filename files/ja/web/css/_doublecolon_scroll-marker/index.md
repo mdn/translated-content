@@ -5,7 +5,7 @@ l10n:
   sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::scroll-marker`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、任意の要素内に生成でき、そのスクロールマーカーを表します。すべての要素が `::scroll-marker` 擬似要素を持つことができ、これは最も近い{{glossary("scroll container", "スクロールコンテナー")}}である祖先の {{cssxref("::scroll-marker-group")}} 内に配置されます。スクロールマーカーは、スクロールターゲットがマーカーの元の要素であるアンカー（{{htmlelement("a")}} 要素）のように動作し、アクティブになると、その要素までスクロールコンテナをスクロールします。
 

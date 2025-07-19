@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ce1dfc470d18fa6ba694a5b8bd5c657914e57cc3
 ---
 
-{{CSSRef}}
-
 **`mask-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{svgElement("mask")}} 要素に適用されます。これは、マスクの輝度（明度）またはアルファ (透過率) のどちらのコンテンツを使用するかを定義します。このプロパティは、{{cssxref("mask-mode")}} プロパティによって上書きされる場合があります。 `mask-type` プロパティは、画像マスクやグラデーションマスクには効果はありません。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5affe908f506ccbb79429e40afdbaaac3f2ed575
 ---
 
-{{CSSRef}}
-
 **CSS 構文**モジュールは、一般的な用語として、カスケーディングスタイルシート (CSS) の構造と構文について記述しています。 CSS は、ウェブや他の場所での構造化文書（HTML や XML など）のレンダリングを記述するための言語として定義されています。
 
 このモジュールはプロパティ、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を定義していません。むしろ、これらの機能すべてがどのように定義されるべきか、そしてユーザーエージェントがどのように CSS を構文解析すべきかを詳しく説明しています。

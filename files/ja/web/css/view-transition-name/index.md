@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1a27ade8c981c8a98c8fac9881b362e881a4d236
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view-transition-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、選択された要素に識別名 ({{cssxref("custom-ident")}}) を与え、ルートビュー遷移とは別の[ビュー遷移](/ja/docs/Web/API/View_Transition_API)に参加させます。 `none` の値が指定された場合はビュー遷移を行いません。
 

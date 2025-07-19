@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **CSS グラデーション**は {{cssxref("&lt;gradient&gt;")}} データ型で表現され、 2 つ以上の色の間の連続的な変化から成る {{cssxref("&lt;image&gt;")}} の特殊型です。グラデーションは 3 種類から選択することができます。線形 (_linear_) ({{cssxref("gradient/linear-gradient", "linear-gradient()")}} 関数によって生成)、放射 (_radial_) ({{cssxref("gradient/radial-gradient", "radial-gradient()")}} 関数によって生成)、扇形 (_conic_) ({{cssxref("gradient/conic-gradient", "conic-gradient()")}} 関数によって生成) の 3 種類です。 {{cssxref("gradient/repeating-linear-gradient", "repeating-linear-gradient()")}}, {{cssxref("gradient/repeating-radial-gradient", "repeating-radial-gradient()")}}, {{cssxref("gradient/repeating-conic-gradient", "repeating-conic-gradient()")}} の各関数によって、反復グラデーションを生成することもできます。
 
 グラデーションは、例えば背景など、`<image>` が使えるところならば、どこでも利用できます。グラデーションは動的に生成されるため、従来は同様の効果を実現するために使用されていたラスタ画像ファイルを必要としません。加えて、グラデーションはブラウザーによって生成されるため、拡大した際に見栄えがより良く、その場で大きさを変更することもできます。

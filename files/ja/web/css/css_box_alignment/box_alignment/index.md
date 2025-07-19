@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f3d3298130d8e22fb89ba123a0648ad3cb7b3655
 ---
 
-{{CSSRef}}
-
 [CSS ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールは、さまざまな CSS ボックスレイアウトモデルにおけるボックスの配置に関連する CSS 機能を指定します。このモジュールは、 CSS 全体で一貫した整列方法を作成することを目的としています。 CSS ボックス配置プロパティは、完全な水平方向と垂直方向の配置機能を提供します。
 
 このガイドでは、このモジュールにある一般的な概念について詳しく説明します。その他のガイドでは、[フレックスボックス](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)、[グリッドレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_grid_layout)、[段組みレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_multi-column_layout)、[ブロック、絶対配置、テーブルレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables)でのボックスの配置について詳しく説明します。テキストの配置については、 [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールと [CSS インラインレイアウト](/ja/docs/Web/CSS/CSS_inline_layout)モジュールで扱っています。

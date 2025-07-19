@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 19c64b411b90f999565db9fdb815463ba66c9714
 ---
 
-{{CSSRef}}
-
 **`line-height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[書字方向](/ja/docs/Web/CSS/writing-mode#vertical-rl)が水平の場合は、行ボックスの高さを設定します。書字方向が垂直の場合は、行ボックスの幅を設定します。これは主にテキストの行間を設定するために使用します。書字方向が水平のブロックレベル要素では、要素に含まれる行ボックスの推奨される高さを指定し、非[置換](/ja/docs/Glossary/Replaced_elements)インライン要素では、行ボックスの高さの計算に使われる高さを指定します。
 
 {{InteractiveExample("CSS デモ: line-height")}}

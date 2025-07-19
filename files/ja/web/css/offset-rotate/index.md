@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`offset-rotate`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素が {{cssxref("offset-path")}} に沿って配置された場合の向き/方向を定義します。
 
 {{InteractiveExample("CSS デモ: offset-rotate")}}

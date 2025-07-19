@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ec64bbd66dab1ce079768708b5da8c50abc4a957
 ---
 
-{{CSSRef}}
-
 **`font-synthesis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したフォントファミリに太字、斜体、小文字、添字、上付き文字がない場合に、ブラウザーが合成するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: font-synthesis")}}

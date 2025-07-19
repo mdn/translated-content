@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4809e8217288dc7e1372d5c74140ca6661673206
 ---
 
-{{CSSRef}}
-
 **`text-wrap-mode`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストを折り返すかどうかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定または {{CSSXRef("white-space")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
 > **メモ:** {{CSSxRef("white-space-collapse")}} および `text-wrap-mode` プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを使用して同時に宣言できます。

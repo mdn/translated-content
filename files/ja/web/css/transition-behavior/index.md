@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0fe8f4d7e9cd5b1b6a39e9fa047468206d3c3ca2
 ---
 
-{{CSSRef}}
-
 **`transition-behavior`** は [CSS](/ja/docs/Web/CSS) のプロパティで、プロパティは、アニメーションの動作が[離散](/ja/docs/Web/CSS/CSS_animated_properties#離散)であるプロパティにトランジションを始めるかどうかを指定します。
 
 ## 構文

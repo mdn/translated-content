@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fe427ad725f3cf1add1299de3cadfbb2bb05ed14
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`anchor()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、**アンカー位置指定**要素の[インセットプロパティ](#properties_that_accept_anchor_function_values)値内で使用することができ、関連付けられたアンカー要素の端の位置に対する長さの値を返します。
 

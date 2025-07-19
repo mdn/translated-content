@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
 ---
 
-{{CSSRef}}
-
 **`any-hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、要素の上で停止することができる入力メカニズムが*何らか*利用できるかどうかを検査するために使用することができます。
 
 ## 構文

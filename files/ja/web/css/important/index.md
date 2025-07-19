@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a29769d6d10261f771321eb60f3990029c160924
 ---
 
-{{CSSRef}}
-
 区切り文字 `!` に続く `important` キーワードは、その宣言が重要であることを示します。 `important` フラグは[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)内の宣言を選択するルールを変更します。 _important_ ではない宣言は _normal_ と呼ばれます。
 
 宣言を重要なものにするには、宣言の値の後に _important フラグ_ (`!important`) を追加します。区切り文字とキーワードの間には空白を入れることができますが、一般的にフラグは空白を入れずに `!important` と書きます。

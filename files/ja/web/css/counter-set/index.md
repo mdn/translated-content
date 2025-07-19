@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
 ---
 
-{{CSSRef}}
-
 **`counter-set`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値に設定します。
 
 そのカウンターが存在しない場合、`counter-set`プロパティは、空白で区切られたカウンターと値のペアのリストに名前付きカウンターが含まれている場合、新しいカウンターを作成します。しかし、新しいカウンターを作成するには、 {{cssxref("counter-reset")}} プロパティを使用することをお勧めします。

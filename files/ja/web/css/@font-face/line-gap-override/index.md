@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 **`line-gap-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、そのフォントの line-gap の寸法を定義します。 line-gap の寸法は、フォントが推奨する line-gap または external leading です。
 
 ## 構文

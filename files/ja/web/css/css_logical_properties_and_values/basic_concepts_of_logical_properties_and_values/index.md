@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}
-
 [CSS 論理的プロパティと値モジュール](/ja/docs/Web/CSS/CSS_logical_properties_and_values#プロパティ)は、CSS の数多くの{{glossary("physical properties", "物理的プロパティ")}}と、値のフローに関連した対応付けを定義しています。この記事では、このモジュールについて説明し、{{glossary("flow relative values", "フロー関連値")}}とプロパティについて解説します。
 
 ## なぜ論理的プロパティが必要なのか

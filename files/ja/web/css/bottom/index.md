@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-{{CSSRef}}
-
 **`bottom`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の設定に関与します。位置指定されていない要素には効果はありません。
 
 {{InteractiveExample("CSS デモ: bottom")}}

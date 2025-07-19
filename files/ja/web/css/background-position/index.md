@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 86e8a3060c6f2cb59dd669675a0113356191566e
 ---
 
-{{CSSRef}}
-
 **`background-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、それぞれの背景画像の初期位置を設定します。位置は {{cssxref("background-origin")}} で設定された位置レイヤーからの相対です。
 
 {{InteractiveExample("CSS デモ: background-position")}}

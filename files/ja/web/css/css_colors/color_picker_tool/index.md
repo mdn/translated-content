@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 このツールは、 sRGB {{glossary("color space","色空間")}}で色を選択し、それをさまざまな CSS [色形式](/ja/docs/Web/CSS/color_value)に変換することで、次の sRGB 色記法の構文を理解するのに役立ちます。
 
 - {{cssxref("hex-color")}} は [sRGB](/ja/docs/Glossary/RGB) 色の 16 進色表現であり、三原色（赤、緑、青）と透明度を 16 進数で記述します。

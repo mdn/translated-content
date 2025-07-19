@@ -3,7 +3,7 @@ title: -moz-image-rect
 slug: Web/CSS/-moz-image-rect
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 **`-moz-image-rect`** は [CSS](/ja/docs/Web/CSS) の {{CSSxRef("background-image")}} に対する値で、大きな画像の一部を背景として使用することができます。
 

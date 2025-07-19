@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`:current`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、現在表示されている要素またはその要素の祖先を表す、時間軸の擬似クラスです。例えば、この擬似クラスを使用すると、 [WebVTT](/ja/docs/Web/API/WebVTT_API) によってキャプション付きで表示されている映像を表すことができます。
 

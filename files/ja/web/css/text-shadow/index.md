@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 919d97a4bda8004f63f655d3f9576c27a82c8a2a
 ---
 
-{{CSSRef}}
-
 **`text-shadow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、テキストに影を追加します。文字列およびその装飾 ([`decoration`](/ja/docs/Web/CSS/text-decoration)) に適用される影のリストをカンマで区切ったリストで受け付けます。それぞれの影は、要素からの X および Y オフセット、影の明るさ、影の色のうちいくつかの組み合わせで記述します。
 
 {{InteractiveExample("CSS デモ: text-shadow")}}

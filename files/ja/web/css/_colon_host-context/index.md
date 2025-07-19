@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}
-
 **`:host-context()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)関数で、その中で使用される CSS を含む[シャドウ DOM](/ja/docs/Web/API/Web_components/Using_shadow_DOM) のシャドウホストを選択します。（そのシャドウ DOM の中からカスタム要素を選択することができます）。ただし、関数の引数として指定されたセレクターが DOM 階層の中にあるシャドウホストの祖先に一致する場合に限ります。
 
 言い換えれば、これはカスタム要素、またはそのカスタム要素のシャドウ DOM 内の何らかの要素が、外部 DOM 内の位置、または祖先要素に適用されるクラス/属性に基づいて異なるスタイルが適用できるようにします。

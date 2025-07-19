@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 29e0d867283aedbc7ab674218761f5f609fcdda9
 ---
 
-{{CSSRef}}
-
 CSS の **`&` 入れ子セレクター**は、 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting)を使用する場合に、親子ルールの関係を明示的に示します。このセレクターは、入れ子になっている子ルールのセレクターを親要素に対して相対的なものにします。入れ子セレクター `&` がない場合、子ルールセレクターは子要素を選択します。子ルールセレクターは {{cssxref(":is", ":is()")}} 内にあるのと同じ[詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)の重みを持ちます。
 
 > [!NOTE]

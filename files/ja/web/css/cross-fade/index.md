@@ -5,8 +5,6 @@ l10n:
   sourceCommit: def614b0d1e298c5942205468c78b9d0ff798f46
 ---
 
-{{CSSRef}}
-
 **`cross-fade()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、2 枚以上の画像を所定の透過度で合成するために使用することができます。
 これは単色で色を薄めたり、放射状グラデーションとの組み合わせでページの特定の領域を強調させたりするような、数多くの単純な画像加工に使用することができます。
 

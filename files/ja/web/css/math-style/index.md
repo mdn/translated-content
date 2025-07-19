@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 18a07f5d474f44cdc6b343a5439e8792c6ce8d62
 ---
 
-{{CSSRef}}
-
 `math-style` プロパティは、 MathML の数式を通常の高さで表示するか、コンパクトな高さで表示するかを指定します。
 
 ## 構文

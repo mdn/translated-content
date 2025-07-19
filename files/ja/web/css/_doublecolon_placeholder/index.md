@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 59ef5b046557b45a515b654458667e6da6d0f4aa
 ---
 
-{{CSSRef}}
-
 **`::placeholder`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 {{HTMLElement("input")}} または {{HTMLElement("textarea")}} 要素の[プレイスホルダーテキスト](/ja/docs/Web/HTML/Reference/Elements/input#placeholder)を表します。
 
 {{InteractiveExample("CSS デモ: ::placeholder", "tabbed-shorter")}}

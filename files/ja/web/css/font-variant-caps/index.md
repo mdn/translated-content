@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3928d2b1004e2435e063ef4b037e06e1906d62f3
 ---
 
-{{CSSRef}}
-
 **`font-variant-caps`** は [CSS](/ja/docs/Web/CSS) のプロパティで、スモールキャップやタイトルに使われる代替グリフの使用を制御します。
 
 {{InteractiveExample("CSS デモ: font-variant-caps")}}

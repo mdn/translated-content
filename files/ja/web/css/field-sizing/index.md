@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c88c96a09084aadc20ac2cabae2e19609b4a30d8
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`field-sizing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フォームコントロール要素のような、既定の推奨サイズが指定された要素のサイズ設定を制御することができます。このプロパティを使用すると、既定のサイズ設定を上書きすることができ、あるフォームコントロールがそのコンテンツに合わせてサイズを調整できるようになります。
 

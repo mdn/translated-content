@@ -3,8 +3,6 @@ title: :required
 slug: Web/CSS/:required
 ---
 
-{{ CSSRef }}
-
 **`:required`** は [CSS](/ja/docs/Web/CSS) の [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("input")}}, {{HTMLElement("select")}}, {{HTMLElement("textarea")}} 要素のうち [`required`](/ja/docs/Web/HTML/Reference/Elements/input#required) 属性が設定されているものを表します。
 
 ```css

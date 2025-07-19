@@ -3,8 +3,6 @@ title: ボックス値からのシェイプ
 slug: Web/CSS/CSS_shapes/From_box_values
 ---
 
-{{CSSRef}}
-
 シェイプを作るのに直接的な方法が、 CSS ボックスモデルの値を使用することです。この記事では、これを行う方法を説明します。
 
 シェイプの値として許可されている[ボックス値](https://drafts.csswg.org/css-shapes-1/#shapes-from-box-values)は次の通りです。

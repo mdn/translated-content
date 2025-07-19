@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`prefers-reduced-transparency`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが端末で使用される透明または半透明のレイヤー効果を縮小する設定を有効にしているかどうかを検出するために使用されます。この設定をオンにすると、一部のユーザーのコントラストや読みやすさを改善することができます。
 

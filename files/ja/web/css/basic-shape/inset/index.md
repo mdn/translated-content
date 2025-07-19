@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a073e360dac285c502d509830b5f9fad245f5f2
 ---
 
-{{CSSRef}}
-
 **`inset()`** は [CSS](/ja/docs/Web/CSS) の関数は、参照ボックスの各辺から指定された内側への距離に矩形を定義します。これは、 {{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つを定義するために使用される基本図形関数です。
 
 {{InteractiveExample("CSS デモ: inset()")}}

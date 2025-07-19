@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c8ff2398fa61950fe46f2d9155a105c125bfea83
 ---
 
-{{CSSRef}}
-
 **`vertical-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、インラインボックス、インラインブロック、表セルボックスの垂直方向の配置を設定します。
 
 {{InteractiveExample("CSS デモ: vertical-align")}}

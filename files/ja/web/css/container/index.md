@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
 ---
 
-{{CSSRef}}
-
 **container** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、この要素をクエリーコンテナーとして確立し、[コンテナークエリー](/ja/docs/Web/CSS/CSS_containment/Container_queries)で使用される[コンテナーコンテキスト](/ja/docs/Web/CSS/CSS_containment/Container_queries#コンテナーコンテキストの命名)の名前を指定します。
 
 ## 構成要素のプロパティ

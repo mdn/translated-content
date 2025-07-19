@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 46a2eda1ce316d5c2c789104c28bc4fdaee5ab8b
 ---
 
-{{CSSRef}}
-
 **`ascent-override`** は CSS の {{cssxref("@font-face")}} アットルールの記述子で、フォントのアセンダーの寸法を定義します。アセンダーの寸法は CSS がインライン整形コンテキストで行ボックスをレイアウトするために使用するベースラインの上の高さです。
 
 ## 構文

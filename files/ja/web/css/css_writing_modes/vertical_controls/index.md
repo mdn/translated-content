@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0f4b28bdc51e89cd25d132b9db12e3e903a9c5aa
 ---
 
-{{CSSRef}}
-
 このガイドでは、CSS の {{cssxref("writing-mode")}} および {{cssxref("direction")}} プロパティを使用して縦書きのフォームコントロールを作成および構成する方法を説明しています。 これには以下が含まれます。
 
 - [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) のスライダー、{{htmlelement("progress")}} の進捗バー、{{htmlelement("meter")}} 要素。

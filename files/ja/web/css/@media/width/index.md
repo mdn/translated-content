@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 421deed53984505909884b3b290002b228d29e7b
 ---
 
-{{CSSRef}}
-
 **`width`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の幅（または[ページメディア](/ja/docs/Web/CSS/CSS_paged_media)のページボックスの幅）を検査するために使用することができます。
 
 ## 構文

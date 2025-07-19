@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fe36fe6e46bc87566759c0f167f315b3779d2ed6
 ---
 
-{{CSSRef}}
-
 **`:focus-visible`** 擬似クラスは、要素が {{CSSxRef(":focus")}} 擬似クラスに一致している時で、{{glossary("User Agent", "ユーザーエージェント")}}が要素にフォーカスを明示するべきであると推測的に判断した場合に適用されます (多くのブラウザーではこの場合、既定で「フォーカスリング」を表示します)。
 
 {{InteractiveExample("CSS デモ: :focus-visible", "tabbed-shorter")}}

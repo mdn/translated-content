@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b90786a572bd01af9063ac5e515850c6bb5ddb89
 ---
 
-{{CSSRef}}
-
 **`background-position-y`** は [CSS](/ja/docs/Web/CSS) のプロパティで、各背景画像における垂直の初期位置を設定します。位置は {{cssxref("background-origin")}} によって設定された位置レイヤーに対する相対位置です。
 
 {{InteractiveExample("CSS デモ: background-position-y")}}

@@ -3,8 +3,6 @@ title: text-rendering
 slug: Web/CSS/text-rendering
 ---
 
-{{CSSRef}}
-
 **`text-rendering`** は CSS のプロパティで、テキストを描画するときの最適化方法に関する情報をレンダリングエンジンに提供します。
 
 ブラウザーは速さ、読みやすさ、位置の正確さをトレードオフにします。

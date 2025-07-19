@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1608a85abb1d05dadc63f27c93fc3e4b7e630db0
 ---
 
-{{CSSRef}}
-
 **`transition-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、トランジションによるアニメーションが完了するまでの再生時間を秒数またはミリ秒数で指定します。既定値は `0s` であり、これはアニメーションを実行しないことを示します。
 
 {{InteractiveExample("CSS デモ: transition-duration")}}

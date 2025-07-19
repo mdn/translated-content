@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`empty-cells`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table", "表")}}のセルが目に見えるコンテンツを持たない場合に、周囲の境界と背景を描画するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: empty-cells")}}

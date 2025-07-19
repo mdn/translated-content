@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 **`forced-color-adjust`** は CSS のプロパティで、特定の要素を強制カラーモードから除外することができます。これにより、これらの値の制御が CSS に戻されます。
 
 ## 構文

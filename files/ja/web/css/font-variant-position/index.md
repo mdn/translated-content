@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
-
 **`font-variant-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、上付き文字または下付き文字として配置された小さな代替文字の使用を制御します。
 
 文字は変更されないまま、フォントのベースラインから相対的に配置されます。これらの文字はふつう、 {{HTMLElement("sub")}} と {{HTMLElement("sup")}} 要素で使用されます。

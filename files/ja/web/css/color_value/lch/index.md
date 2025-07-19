@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`lch()`** 関数記法は、指定された色を LCH 色空間で表現するものです。これは {{cssxref("color_value/lab","lab()")}} と同じ L 軸を持っていますが、極座標系の C （彩度）と H （色相）を使用します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-{{CSSRef}}
-
 **`@supports`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、ブラウザーが CSS 機能に対応しているかによって、 CSS 宣言を指定することができます。
 このアットルールを使用することは、一般に*機能クエリー*と呼ばれます。
 ルールはコードの最上位または他の条件付きグループアットルールの中に配置しなければなりません。

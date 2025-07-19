@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9231a7046973685f4600e1891fa644ecce41ef3b
 ---
 
-{{CSSRef}}
-
 [@font-palette-values](/ja/docs/Web/CSS/@font-palette-values) の[記述子](/ja/docs/Glossary/CSS_Descriptor)である **`font-family`** は、どのフォントファミリーのパレット値を適用するかを指定するために使用します。これは、 CSS の [font-family](/ja/docs/Web/CSS/font-family)を設定するときに使用する値と正確に一致する必要があります。
 
 ## 構文

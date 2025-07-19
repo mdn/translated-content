@@ -67,7 +67,7 @@ l10n:
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
-{{CSSRef}}{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{SeeCompatTable}}{{Deprecated_Header}}{{Non-standard_Header}}
 
 概要段落 - 始めに、セレクターの名前とそれが何をするのかを説明してください。これはできれば 1 つか 2 つの短い文章にしてください。
 

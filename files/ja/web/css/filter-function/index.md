@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b17ca921175c0a92d21c6c4effbc7fa3dc348a8e
 ---
 
-{{CSSRef}}
-
 **`<filter-function>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、入力された画像の表示方法を変更することができるグラフィカル効果を表します。これは {{cssxref("filter")}} および {{cssxref("backdrop-filter")}} プロパティで使用します。
 
 ## 構文
