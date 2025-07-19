@@ -140,7 +140,7 @@ position: unset;
 ### 定位类型
 
 - **定位元素**（positioned element）是其[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `relative`、`absolute`、`fixed` 或 `sticky` 的一个元素（换句话说，除 `static` 以外的任何东西）。
-- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `relative` 的元素。{Cssxref("top")}} 和 {{Cssxref("bottom")}} 属性指定了与正常位置的垂直偏移；{{Cssxref("left")}} 和 {{Cssxref("right")}} 指定了水平偏移。
+- **相对定位元素**（relatively positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `relative` 的元素。{{Cssxref("top")}} 和 {{Cssxref("bottom")}} 属性指定了与正常位置的垂直偏移；{{Cssxref("left")}} 和 {{Cssxref("right")}} 指定了水平偏移。
 - **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `absolute` 或 `fixed` 的元素。{{Cssxref("top")}}、{{Cssxref("right")}}、{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性指定了从元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)边缘的偏移量。(包含块是相对于该元素定位的祖先块）。如果元素有边距，则边距会添加到偏移量中。该元素将为其内容建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC）。
 - **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `sticky` 的元素。在其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)在其流根（或其滚动的容器）内越过指定临界值（例如将 {{Cssxref("top")}} 设置为 auto 以外的值）之前，它被视为相对定位，此时它被视为“卡住”，直到遇到其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的对边。
 
