@@ -2,10 +2,10 @@
 title: file_handlers
 slug: Web/Progressive_web_apps/Manifest/Reference/file_handlers
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 26f9fbee05fb92b584d44fba4359e86796484aa6
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `file_handlers` メンバーは、インストールされた[プログレッシブウェブアプリ (PWA)](/ja/docs/Web/Progressive_web_apps) が処理できるファイルの型を表すオブジェクトの配列を指定します。
 
@@ -89,5 +89,5 @@ if ("launchQueue" in window) {
 
 ## 関連情報
 
-- [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/ja/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files)
+- [Handle files in Progressive Web Apps on learn.microsoft.com](https://learn.microsoft.com/ja/microsoft-edge/progressive-web-apps/how-to/handle-files)
 - [Let installed web applications be file handlers on developer.chrome.com](https://developer.chrome.com/docs/capabilities/web-apis/file-handling)
