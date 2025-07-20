@@ -21,7 +21,7 @@ Atomics.notify(typedArray, index, count)
 ### 引数
 
 - `typedArray`
-  - :  {{jsxref("SharedArrayBuffer")}} のビューである {{jsxref("Int32Array")}} または {{jsxref("BigInt64Array")}}。
+  - : {{jsxref("SharedArrayBuffer")}} のビューである {{jsxref("Int32Array")}} または {{jsxref("BigInt64Array")}}。
 - `index`
   - : 起動する対象となる `typedArray` 中の位置。
 - `count` {{optional_inline}}
