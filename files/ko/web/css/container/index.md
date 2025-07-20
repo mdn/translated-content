@@ -93,7 +93,6 @@ container: unset;
 ## 명세서
 
 {{Specifications}}
-₩
 
 ## 브라우저 호환성
 
