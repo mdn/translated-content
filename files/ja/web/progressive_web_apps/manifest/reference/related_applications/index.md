@@ -2,10 +2,10 @@
 title: related_applications
 slug: Web/Progressive_web_apps/Manifest/Reference/related_applications
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `related_applications` はマニフェストメンバーで、ウェブアプリケーションに関連する 1 つまたは複数のネイティブアプリケーションを指定するために使用します。
 関連のネイティブアプリケーションまたはウェブアプリケーションのどちらかをインストールする環境設定を示す、 [`prefer_related_applications`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/prefer_related_applications) マニフェストメンバーと一緒に使用することができます。

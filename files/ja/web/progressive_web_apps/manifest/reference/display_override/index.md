@@ -2,10 +2,10 @@
 title: display_override
 slug: Web/Progressive_web_apps/Manifest/Reference/display_override
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 [`display`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/display) メンバーは、開発者が推奨するウェブサイトの表示モードを決定するために使用されます。これは、要求された表示モードに対応していない場合に、ブラウザーが次善の表示モードに代替するプロセスに従います。高度な用途では、この代替プロセスでは十分でない場合があります。
 

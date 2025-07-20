@@ -2,10 +2,10 @@
 title: note_taking
 slug: Web/Progressive_web_apps/Manifest/Reference/note_taking
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `note_taking` メンバーは、ウェブアプリをメモアプリとして識別し、新しいメモを作成するための機能を示す URL などの関連情報を定義します。これにより、オペレーティングシステムは、アプリのメモ作成機能を統合できるようになります。例えば、アプリのコンテキストメニューに「新しいメモ」オプションを記載したり、他にもアプリでメモを作成するためのオプションとしてアプリを提供したりすることができます。
 

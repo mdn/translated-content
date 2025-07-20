@@ -2,10 +2,10 @@
 title: serviceworker
 slug: Web/Progressive_web_apps/Manifest/Reference/serviceworker
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}{{SeeCompatTable}}{{Non-standard_header}}
+{{SeeCompatTable}}{{Non-standard_header}}
 
 `serviceworker` メンバーは、商業ウェブサイトで指定された決済方法の決済メカニズムを提供するウェブベースの決済アプリケーションを実行するために、ジャストインタイム (JIT) でインストールされ、登録されたサービスワーカーを指定します。詳細は、{{domxref("Payment Handler API", "決済ハンドラー API", "", "nocode")}} を参照してください。
 

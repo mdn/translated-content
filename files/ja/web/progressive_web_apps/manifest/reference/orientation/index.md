@@ -2,10 +2,8 @@
 title: orientation
 slug: Web/Progressive_web_apps/Manifest/Reference/orientation
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `orientation` はマニフェストのメンバーで、ウェブアプリケーションの既定の方向を指定します。
 アプリが起動時および使用中にどのように表示されるべきかを、端末の画面の向きに関連して定義します。特に、複数の方向に対応している端末で具体的な内容が定義されます。

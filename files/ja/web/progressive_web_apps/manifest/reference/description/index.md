@@ -2,10 +2,8 @@
 title: description
 slug: Web/Progressive_web_apps/Manifest/Reference/description
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 628b29f53d15f203c4a6b33c1d0303f864f6af63
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `description` はマニフェストのメンバーで、このウェブアプリケーションの主な特性や機能を説明するために使用します。
 このテキストは、アプリストアでアプリを表示した際に、ユーザーがアプリの目的を理解する手助けとなります。
