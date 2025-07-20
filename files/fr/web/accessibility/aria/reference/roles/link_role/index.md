@@ -1,86 +1,102 @@
 ---
-title: Utiliser le rôle link
+title: "ARIA : le rôle link"
 slug: Web/Accessibility/ARIA/Reference/Roles/link_role
 original_slug: Web/Accessibility/ARIA/Roles/link_role
 ---
 
 {{AccessibilitySidebar}}
 
-### Description
-
-Cette technique présente l'utilisation du rôle [link](https://www.w3.org/TR/wai-aria/roles#link) et décrit les effets produits sur les navigateurs et les technologies d'assistance.
-
-Le rôle `link` est utilisé pour identifier un élément qui crée un hyperlien vers une ressource qui peut être dans l'application ou à l'extérieur. Lorsque ce rôle est ajouté à un élément, la tabulation peut être utilisée pour donner le focus au lien et la barre d'espace ou la touche Entrée peuvent exécuter le lien.
-
-L'attribut [`tabindex`](https://www.w3.org/TR/wai-aria-practices/#focus_tabindex) peut éventuellement être utilisé avec ce rôle pour spécifier directement la position de l'élément dans l'ordre de tabulation.
-
-### Effets possibles sur les agents utilisateurs et les technologies d'assistance
-
-Lorsque le rôle `link` est ajouté à un élément, ou qu'un élément possédant ce rôle devient visible, l'agent utilisateur devrait suivre les étapes suivantes&nbsp;:
-
-- Présenter l'élément comme un lien à l'API accessibilité du système d'exploitation.
-- Déclencher un événement lien accessible à l'aide de l'API d'accessibilité du système d'exploitation si elle le prend en charge.
-
-Les technologies d'assistance devraient être à l'écoute de tels événements et les notifier à l'utilisateur en conséquence&nbsp;:
-
-- Les lecteurs d'écran devraient annoncer le texte du lien ou son label lorsque l'élément avec le rôle `link` reçoit le focus, en plus du fait ce que c'est un lien. Les liens ARIA devraient être intégré dans la fonction « lister les liens » (_List Links_) des lecteurs d'écran de la même façon que les liens ordinaires, et les actions dans cette liste de dialogue, tels que « Activer le lien » ou « Déplacer le lien », devraient se comporter de la meme façon qu'avec des liens ordinaires.
-- Les loupes d'écran devraient agrandir le lien.
+Un rôle ARIA `link` fournit une référence interactive à une ressource. La ressource cible peut être externe ou locale, c'est-à-dire à l'intérieur ou à l'extérieur de la page ou de l'application active.
 
 > [!NOTE]
-> Il existe plusieurs points de vue sur la façon dont les technologies d'assistance devraient traiter cette technique. L'information fournie ci-dessus est l'une de ces opinions et n'est pas normative.
+> Dans la mesure du possible, il est recommandé d'utiliser un élément natif [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) plutôt que le rôle `link`, car les éléments natifs sont plus largement pris en charge par les agents utilisateurs et les technologies d'assistance. Les éléments natifs [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) prennent également en charge par défaut les exigences relatives au clavier et au ciblage, sans qu'il soit nécessaire de les personnaliser.
 
-### Exemples
+## Description
 
-#### Exemple 1&nbsp;: Ajoute le rôle dans le code HTML
+Le rôle `link` est utilisé pour identifier un élément qui crée un lien hypertexte vers une ressource qui se trouve dans ou en dehors de l'application.
 
-L'extrait de code ci-dessous montre comment le rôle `link` est ajouté dans le code source HTML.
+Lorsque le HTML sémantique n'est pas utilisé dans le but prévu, les fonctions interactives doivent être réimplémentées. Par exemple, lorsque `role="link"` est ajouté à un élément, la touche <kbd>TAB</kbd> doit permettre de cibler le lien et la touche <kbd>ENTRER</kbd> doit exécuter le lien lorsqu'il est ciblé.
+
+Utilisez l'attribut [`tabindex`](/fr/docs/Web/HTML/Reference/Global_attributes/tabindex) avec une valeur à `0` pour vous assurer que le lien est dans l'ordre correct de ciblage avec la tabulation.
+
+> [!WARNING]
+> Appliquer le rôle `link` à un élément n'amènera pas les navigateurs à améliorer l'élément avec l'apparence ou les comportements standards des liens, comme le soulignement, les anneaux de ciblage, la navigation vers la cible du lien, ou les actions du menu contextuel. C'est à la responsabilité du développeur.
+
+## Exemple
+
+Pour recréer un lien accessible en utilisant le rôle `link` sur un élément qui n'est pas un [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a), vous devez vous assurer que le lien reçoit la mise au point dans le bon ordre d'onglet, que l'élément ressemble à un lien, et que le «&nbsp;lien&nbsp;» se comporte comme un lien.
 
 ```html
-<div role="link">Un lien</div>
+<span data-href="https://mozilla.org" tabindex="0" role="link">
+  Un faux lien, accessible, dans un span
+</span>
 ```
 
-#### Exemple 2&nbsp;: Lien accessible créé depuis une application à l'aide d'un \<span>
+### CSS
 
-```html
-<script type="text/javascript">
-sap = {ui:{keycodes:{SPACE:32, ENTER:13 }}};
-//gère les clics et les événement clavier sur le lien
-function navigateLink(evt) {
-    if (evt.type=="click" ||
-        evt.keyCode == sap.ui.keycodes.SPACE ||
-        evt.keyCode == sap.ui.keycodes.ENTER) {
-        var ref = evt.target != null ? evt.target : evt.srcElement;
-        if (ref) window.open(ref.getAttribute("href"),"_blank");
-    }
+```css
+span[role="link"] {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
 }
-</script>
+span[role="link"]:hover,
+span[role="link"]:active,
+span[role="link"]:focus {
+  color: purple;
+}
 
-<body role="application">
-
-    <h3>Lien simple créé avec un <span></h3>
-    <span href="http://www.w3c.org" onkeydown="navigateLink(event)" onclick="navigateLink(event)" tabindex="0" id="link1" role="link" class="link">
-      Activez ce lien en appuyant sur la barre d’espace ou la touche Entrée
-    </span>
-</body>
+span[role="link"]:focus {
+  background-color: palegoldenrod;
+  outline: 1px dotted;
+}
 ```
 
-#### Exemples concrets
+### JavaScript
 
-- <http://codetalks.org/source/widgets/link/link.html>
-- <http://codetalks.org/source/widgets/link/link.sample.html>
+```js
+const fauxLiens = document.querySelectorAll('[role="link"]');
 
-### Notes
+for (const lien of fauxLiens) {
+  lien.addEventListener("click", navigateLink);
+  lien.addEventListener("keydown", navigateLink);
+}
 
-Si l'activation du lien déclenche une action mais ne déplace pas le focus du navigateur ou que cela ouvre une nouvelle page, vous devriez considérer l'utilisation du rôle [button](https://www.w3.org/TR/wai-aria/roles#button) au lieu du rôle `link`.
+// prend en charge les événements de clic et de clavier sur le lien
+function navigateLink(e) {
+  if (e.type === "click" || e.key === "Enter") {
+    const ref = e.target ?? e.srcElement;
+    if (ref) {
+      window.open(ref.getAttribute("data-href"), "_blank");
+    }
+  }
+}
+```
 
-### Attributs ARIA utilisés
+Si l'élément avec `role="link"` reçoit un événement du clavier <kbd>ENTREZ</kbd>, cela exécute le lien, en allant à la page liée ou en déplaçant la vue vers la zone cible de la page.
 
-- [`link`](https://www.w3.org/TR/wai-aria/roles#link)
+Facultativement, <kbd>SHIFT</kbd> + <kbd>F10</kbd> ouvre un menu contextuel pour le lien.
 
-### Techniques ARIA connexes
+## Bonnes pratiques
 
-- Rôle [button](https://www.w3.org/TR/wai-aria/roles#button).
+Les différents rôles sont utilisés pour définir des modèles interactifs communs. Semblable aux rôles document-structure, certains de ces rôles, y compris le rôle `link`, dupliquent la sémantique des éléments HTML natifs qui sont bien pris en charge et ne doivent pas être utilisés.
 
-### Autres ressources
+Évitez d'utiliser `link`, que nous avons inclus par souci d'exhaustivité. L'équivalent sémantique [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) a une interactivité accessible qui est disponible et pris en charge.
 
-- Bonnes pratiques ARIA - Rôle `Link`&nbsp;: [#link](https://www.w3.org/TR/wai-aria-practices/#link)
+### Utilisez le HTML
+
+Utilisez de préférence l'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a).
+
+> [!NOTE]
+> Il n'est pas nécessaire d'inclure `role="lien"` sur un lien HTML, car l'élément `<a>`, a ce rôle par défaut.
+
+## Spécifications
+
+{{Specifications}}
+
+## Voir aussi
+
+- L'élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a)
+- L'élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button)
+- [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label)
+- [Bonnes pratiques ARIA - Rôle `link` (en anglais)](https://www.w3.org/WAI/ARIA/apg/patterns/link/)
