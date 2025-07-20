@@ -40,7 +40,7 @@ _固有のメソッドはありません。親である {{domxref("HTMLElement")
 
 ### ページの description のメタデータを設定
 
-次の例では、新しい `<meta>` 要素を作成し、`name` 属性に [`description`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている標準メタデータ名) を設定しています。`content` 属性には文書の説明が設定し、それを文書の `<head>` に追加します。
+次の例では、新しい `<meta>` 要素を作成し、`name` 属性に [`description`](/ja/docs/Web/HTML/Reference/Elements/meta/name#html_仕様書で定義されている_meta_name) を設定しています。`content` 属性には文書の説明が設定し、それを文書の `<head>` に追加します。
 
 ```js
 let meta = document.createElement("meta");
@@ -52,7 +52,7 @@ document.head.appendChild(meta);
 
 ### viewport メタデータの設定
 
-次の例では、新しい `<meta>` 要素を作成して `name` 属性に [`viewport`](/ja/docs/Web/HTML/Reference/Elements/meta/name#他の仕様書で定義されている標準メタデータ) を設定する方法を紹介しています。
+次の例では、新しい `<meta>` 要素を作成して `name` 属性に [`viewport`](/ja/docs/Web/HTML/Reference/Elements/meta/name/viewport) を設定する方法を紹介しています。
 `content` 属性はビューポートサイズを設定し、文書の `<head>` に追加されます。
 
 ```js
