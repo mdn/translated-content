@@ -20,7 +20,7 @@ l10n:
 
 ## 値
 
-### HTML 仕様書で定義されているメタデータ名
+### HTML 仕様書で定義されている meta name
 
 HTML 仕様書では、次の一連の標準メタデータ名を定義しています。
 
@@ -55,7 +55,7 @@ HTML 仕様書では、次の一連の標準メタデータ名を定義してい
     [`content`](/ja/docs/Web/HTML/Reference/Attributes/content) 属性は、有効な CSS の {{cssxref("&lt;color&gt;")}} を含んでいます。
     [`media`](/ja/docs/Web/HTML/Reference/Elements/meta#media) 属性で有効なメディアクエリーのリストを記載することで、テーマカラーメタデータが適用されるメディアを設定することができます。
 
-### 他の仕様書で定義されているメタデータ名
+### 他の仕様書で定義されている meta name
 
 CSS 端末適応仕様書では、以下のメタデータ名を定義しています。
 
