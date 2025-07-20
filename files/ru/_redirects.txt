@@ -1267,8 +1267,9 @@
 /ru/docs/Web/JavaScript/Language_overview	/ru/docs/Web/JavaScript/Guide/Language_overview
 /ru/docs/Web/JavaScript/Memory_management	/ru/docs/Web/JavaScript/Guide/Memory_management
 /ru/docs/Web/JavaScript/Reference/Classes/Class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Public_class_fields
-/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
-/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_properties
+/ru/docs/Web/JavaScript/Reference/Classes/Private_class_fields	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Private_properties	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
+/ru/docs/Web/JavaScript/Reference/Classes/Приватные_поля_класса	/ru/docs/Web/JavaScript/Reference/Classes/Private_elements
 /ru/docs/Web/JavaScript/Reference/Errors/Bad_return_or_yield	/ru/docs/Web/JavaScript/Reference/Errors/Bad_return
 /ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal	/ru/docs/Web/JavaScript/Reference/Errors/Deprecated_octal_literal
 /ru/docs/Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement	/ru/docs/Web/JavaScript/Reference/Errors/Unexpected_token

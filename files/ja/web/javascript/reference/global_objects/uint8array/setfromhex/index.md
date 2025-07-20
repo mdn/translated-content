@@ -28,7 +28,7 @@ setFromHex(string)
 
 ### 返値
 
-An object containing the following properties:
+次のプロパティが含まれているオブジェクトです。
 
 - `read`
   - : 入力文字列から読み込まれた 16 進文字の数。デコードされたデータが配列に収まる場合、これは入力文字列の長さです。そうでない場合、これは配列に収まる完全な 16 進文字の数です。
