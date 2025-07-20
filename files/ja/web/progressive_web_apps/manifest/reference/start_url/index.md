@@ -2,10 +2,8 @@
 title: start_url
 slug: Web/Progressive_web_apps/Manifest/Reference/start_url
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `start_url` はマニフェストメンバーで、ユーザーがウェブアプリケーションを起動した際に開くための URL を指定するために使用します。例えば、端末のホーム画面にあるアプリケーションのアイコンをタップしたり、アプリケーションの一覧に掲載されているアプリケーションを起動したりした際などです。
 
@@ -31,6 +29,10 @@ l10n:
     値が相対の場合は、マニフェストファイルの URL に対して解決されます。
 
     `start_url` が指定されていない場合、または値が不正な場合（文字列でない、無効なURLである、マニフェストにリンクしているページと{{glossary("Origin", "同一オリジン")}}でないなど）、マニフェストにリンクしているページの URL が使用されます。
+
+    > [!NOTE]
+    > 一部のブラウザーでは、 [PWA をインストール可能にする](/ja/docs/Web/Progressive_web_apps/Guides/Making_PWAs_installable#インストール可能性)ために、`start_url` を指定する必要があります（下記の互換性の節を参照してください）。
+    > すべてのブラウザーで既定の動作を使用するには、 `"start_url": "./"` に設定します。
 
     > [!NOTE]
     > マニフェストで [`scope`](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/scope) を指定しなかった場合、 `start_url` （値が undefined または不正な場合は効果的な `start_url`）から推測されます。
