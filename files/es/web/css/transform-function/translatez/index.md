@@ -99,7 +99,8 @@ Esta transformación es definida por una {{cssxref("&lt;length&gt;")}} la cual e
 
 En los ejemplos interacticos anteriores, [`perspective: 550px;`](/es/docs/Web/CSS/perspective) (para crear un espacio 3D) y [`transform-style: preserve-3d;`](/es/docs/Web/CSS/transform-style) (los elementos hijos, los 6 lados del cubo, estan también posicionados en el espacio 3D), es decir, han sido establecidos en el cubo.
 
-> **Nota:** `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
+> [!NOTE]
+> `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
 
 ## Syntax
 

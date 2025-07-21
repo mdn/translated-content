@@ -9,7 +9,8 @@ slug: Web/CSS/::-webkit-scrollbar
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) [CSS](/es/docs/Web/CSS) ::-webkit-scrollbar afecta el estilo de la barra de desplazamiento asociada a un elemento.
 
-> **Nota:** `::-webkit-scrollbar` sólo está disponible en navegadores basados en [WebKit](https://webkit.org) (p.e., Google Chrome).
+> [!NOTE]
+> `::-webkit-scrollbar` sólo está disponible en navegadores basados en [WebKit](https://webkit.org) (p.e., Google Chrome).
 
 ## Ejemplo
 

@@ -133,7 +133,8 @@ Debido a que éstas tienen formatos de estructura variados, revise la sección [
 - {{ Cssxref("::selection") }}
 - {{ Cssxref("::spelling-error") }} {{experimental_inline}}
 
-> **Nota:** **Ver también:** Una [lista completa de selectores](https://www.w3.org/TR/selectors/#selectors) en la especificación de Nivel 3 de Selectores.
+> [!NOTE]
+> **Ver también:** Una [lista completa de selectores](https://www.w3.org/TR/selectors/#selectors) en la especificación de Nivel 3 de Selectores.
 
 ## Conceptos
 

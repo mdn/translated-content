@@ -37,7 +37,8 @@ resize: unset;
 - `vertical`
   - : El elemento efrece un mecanismo que permite al usuario cambiar el tamaño del elemento sólo verticalmente.
 
-> **Nota:** `resize` no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como `visible`.
+> [!NOTE]
+> `resize` no aplica abloques en los cuales la propiedad {{cssxref("overflow")}} es configurada como `visible`.
 
 ### Sintaxis formal
 
