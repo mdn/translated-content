@@ -5,7 +5,7 @@ l10n:
   sourceCommit: af550427ce6ddc8b22dae1f6c8a109ed4a5fbd91
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::column`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、 [CSS 段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)によってコンテナーのコンテンツを複数の段で表示するように設定した場合に生成される、個々の段を表します。 `::column` 擬似要素を使用すると、レイアウトに影響を与えないスタイルを、これらの生成された断片に適用することができます。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9a3940b0231838338f65ae1c37d5b874439a3d43
 ---
 
-{{CSSRef}}
-
 **`height`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の高さを指定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)の高さを定義します。{{cssxref("box-sizing")}} が `border-box` に設定されていた場合は、 [境界領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#境界領域)の高さを定義します。
 
 {{InteractiveExample("CSS デモ: height")}}

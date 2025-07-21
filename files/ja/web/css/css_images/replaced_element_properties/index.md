@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_images/Replaced_element_properties
 original_slug: Web/CSS/Replaced_element
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) において、**置換要素**は CSS のスコープの外で表現される要素です。 CSS の整形モデルとは独立して表現される外部オブジェクトです。
 
 もっと簡単な言葉で言い換えれば、コンテンツが現在の文書のスタイルに影響されない要素です。置換要素の位置は CSS を使用して変更することができますが、置換要素自身のコンテンツは違います。 {{HTMLElement("iframe")}} のような一部の置換要素では、独自のスタイルシートを持つことができますが、親文書のスタイルは継承されません。

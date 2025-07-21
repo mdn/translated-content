@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7ab2f95b22919d8b897754e8a66981d0b9a4e2c4
 ---
 
-{{CSSRef}}
-
 **`override-colors`** は CSS の[記述子](/ja/docs/Glossary/CSS_Descriptor)で、選ばれた[ベースパレット](/ja/docs/Web/CSS/@font-palette-values/base-palette)の色をカラーフォントに上書きするために使用します。
 
 ## 構文

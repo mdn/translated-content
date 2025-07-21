@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 2b26cc6e576d23f68fdf992767da81de9707965e
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`text-spacing-trim`** は [CSS](/ja/docs/Web/CSS) のプロパティで、中国語/日本語/韓国語 (CJK) の約物文字（句読点や括弧など）について、隣接する文字との間、およびテキスト行の先頭または末尾に設定する内部空間（カーニング）を制御します。
 

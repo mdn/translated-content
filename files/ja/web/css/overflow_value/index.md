@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`<overflow>`** {{glossary("enumerated", "列挙")}}値型は、{{cssxref("overflow-block")}}、{{cssxref("overflow-inline")}}、{{cssxref("overflow-x")}}、{{cssxref("overflow-y")}} の個別指定プロパティと {{cssxref("overflow")}} 一括指定プロパティのキーワード値を表します。これらのプロパティは、ブロックコンテナー、フレックスコンテナー、グリッドコンテナーに適用されます。
 
 ## 構文

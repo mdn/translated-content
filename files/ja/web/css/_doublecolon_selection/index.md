@@ -3,8 +3,6 @@ title: ::selection
 slug: Web/CSS/::selection
 ---
 
-{{CSSRef}}
-
 **`::selection`** は CSS の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ユーザーが (テキストをマウスでクリックやドラッグすることで) 選択した文書の一部にスタイルを適用します。
 
 ```css

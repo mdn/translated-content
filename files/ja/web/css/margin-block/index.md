@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 The **`margin-block`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、論理的なブロックの先頭と末尾のマージンを設定します。これは要素の書字方向やテキストの向きに応じて物理的なマージンに変換されます。
 
 {{InteractiveExample("CSS デモ: margin-block")}}

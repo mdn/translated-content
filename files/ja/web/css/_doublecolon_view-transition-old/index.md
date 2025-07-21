@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c9cc38c3c3c342e2e952c1acd57f55e104c5bb06
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-old`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、ビュー遷移の「古い」ビュー状態、すなわちトランジション前の古いビューの静的なスクリーンショットを表します。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`margin-top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の上側の[マージン領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#マージン領域)を設定します。正の数を指定すると、隣との間が遠くなるように配置され、負の数を指定すると、近くなるように配置します。
 
 {{InteractiveExample("CSS デモ: margin-top")}}

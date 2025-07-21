@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`scroll-marker-group`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{glossary("scroll container", "スクロールコンテナー")}}に {{cssxref("::scroll-marker-group")}} 擬似要素を生成するかどうか、生成する場合、既定の視覚的およびタブ順でコンテナーのコンテンツの直前 (`before`) に配置するか、直後 (`after`) に配置するかを制御します。
 

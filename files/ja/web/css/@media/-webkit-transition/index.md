@@ -5,7 +5,7 @@ l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-{{CSSRef}} {{deprecated_header}} {{ Non-standard_header }}
+{{deprecated_header}} {{ Non-standard_header }}
 
 > [!NOTE]
 > すべてのブラウザーが、ベンダー接頭辞なしの [`transition`](/ja/docs/Web/CSS/transition#ブラウザーの互換性) プロパティに対応しています。Chromium ベースのブラウザーではなく、 WebKit (Safari) だけが `-webkit-transition` メディア特性に対応しています。メディアクエリーとして接頭辞なしの `transition` に対応しているブラウザーはありません（ただし、一部のブラウザーは {{cssxref("@media/-webkit-transform-3d", "-webkit-transform-3d")}} には対応しています）。代わりに、 [`@supports (transition)`](/ja/docs/Web/CSS/@supports) 機能クエリーを使用してください。

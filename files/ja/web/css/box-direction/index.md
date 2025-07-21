@@ -3,7 +3,7 @@ title: box-direction
 slug: Web/CSS/box-direction
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 > [!WARNING]
 > これはもともと CSS Flexible Box Layout Module の草稿のプロパティでしたが、より新しい標準に置き換えられました。以前の標準であった `box-direction` は `flex-direction` に置き換えられたので、 `-moz-box-direction` は XUL でのみ使用されます。現在の標準についての情報は[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)を参照してください。

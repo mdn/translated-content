@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`:not()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、列挙されたセレクターに一致しない要素を表します。特定の項目が選択されることを防ぐため、否定擬似クラス (_negation pseudo-class_) と呼ばれています。
 
 {{InteractiveExample("CSS デモ: :not", "tabbed-shorter")}}

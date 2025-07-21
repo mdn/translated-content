@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`transition-delay`** プロパティは、値が変更されたときにプロパティの[トランジション効果](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions)が始まるまでの待ち時間を指定します。
 
 {{InteractiveExample("CSS デモ: transition-delay")}}

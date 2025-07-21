@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb3ef3857ca1d77cc720deba0c12d7a3313b85b4
 ---
 
-{{CSSRef}}
-
 **`border-image-outset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[境界画像](/ja/docs/Web/CSS/border-image)が境界ボックスからはみ出す幅を設定します。
 
 境界画像のうち、 `border-image-outset` によって要素の境界ボックスの外に表示された部分は、はみ出した際にスクロールバーを表示させたり、マウスイベントを受け取ったりすることはありません。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8b4e6b773d03959d5a5b2d02200243c4714079b9
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 729754108952e0bac9fb6268fcdf24a63b3cbbf3
 ---
 
-{{CSSRef}}
-
 **`saturate()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像の彩度を上げたり下げたりします。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 > **メモ:** `saturate()` は RGB 色に対する行列演算として定義されています。これは実際には色を HSL モデルに変換するものではなく、非線形操作です。そのため、特に彩度の高い色の場合、元の色の彩度や明度が維持されない場合があります。

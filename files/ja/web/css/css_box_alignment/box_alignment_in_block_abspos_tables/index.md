@@ -90,5 +90,3 @@ l10n:
 - [配置対象物](/ja/docs/Glossary/Alignment_Subject)
 - [配置コンテナー](/ja/docs/Glossary/Alignment_Container)
 - [代替配置](/ja/docs/Glossary/Fallback_Alignment)
-
-{{CSSRef}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2adfb8760ac42c80966080e2e84211b14e43b589
 ---
 
-{{CSSRef}}
-
 **`clear`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素をその前にある[浮動](/ja/docs/Web/CSS/float)要素の下に移動 (clear) する必要があるかどうかを設定します。`clear` プロパティは、浮動要素と非浮動要素のどちらにも適用されます。
 
 {{InteractiveExample("CSS デモ: clear")}}

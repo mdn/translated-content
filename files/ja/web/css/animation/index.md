@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 32142cbf6ab60da6987aee2e11f59c5ee916ea49
 ---
 
-{{CSSRef}}
-
 **`animation`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、スタイルの間のアニメーションを適用します。これは {{cssxref("animation-name")}}, {{cssxref("animation-duration")}}, {{cssxref("animation-timing-function")}}, {{cssxref("animation-delay")}}, {{cssxref("animation-iteration-count")}}, {{cssxref("animation-direction")}}, {{cssxref("animation-fill-mode")}}, {{cssxref("animation-play-state")}} の一括指定です。
 
 {{InteractiveExample("CSS デモ: animation")}}

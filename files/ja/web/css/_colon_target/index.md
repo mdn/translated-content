@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
 ---
 
-{{CSSRef}}
-
 **`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を持つ固有の要素（_ターゲット要素_）を表します。
 
 ```css

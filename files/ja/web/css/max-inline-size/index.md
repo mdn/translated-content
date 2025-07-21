@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`max-inline-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、書字方向に応じて要素ブロックの水平または垂直方向の最大の寸法を定義します。これは {{cssxref("max-width")}} または {{cssxref("max-height")}} のどちらかのプロパティと、 {{cssxref("writing-mode")}} の値に応じて対応します。
 
 書字方向が垂直方向であった場合、 `max-inline-size` の値は要素の最大の高さに対応します。そうでなければ、要素の最大幅に対応します。関連プロパティとして、 {{cssxref("max-block-size")}} が要素のもう一方の寸法を定義します。

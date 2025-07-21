@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`image-rendering`** は [CSS](/ja/docs/Web/CSS) のプロパティで、画像を拡大縮小するアルゴリズムを設定します。このプロパティは要素自身に適用され、他のプロパティで設定されるあらゆる画像、子孫要素に適用されます。
 
 {{InteractiveExample("CSS デモ: image-rendering")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88930816e169c5b51afdfcd22c3b2c54383a22b7
 ---
 
-{{CSSRef}}
-
 **`:scope`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、セレクターが選択する対象の参照点である要素を表します。
 
 ```css

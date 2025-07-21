@@ -5,8 +5,6 @@ l10n:
   sourceCommit: be1922d62a0d31e4e3441db0e943aed8df736481
 ---
 
-{{CSSRef}}
-
 **`@import`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、スタイルルールを他の有効なスタイルシートからインポートするために使用します。
 `@import` ルールはスタイルシートの最上位で、他のアットルール（[@charset](/ja/docs/Web/CSS/@charset) や [@layer](/ja/docs/Web/CSS/@layer)）やスタイル宣言の前に定義する必要があり、そうしなければ無視されます。
 

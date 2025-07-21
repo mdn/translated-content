@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 **`ruby-align`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ベースに対するさまざまなルビ要素の配分を定義します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`rgb()`** 関数記法は、赤、緑、青の成分によって色を表現します。オプションのアルファ成分は、色の透明度を表します。
 
 {{InteractiveExample("CSS デモ: rgb()")}}

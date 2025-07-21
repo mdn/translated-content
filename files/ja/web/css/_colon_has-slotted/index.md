@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e13b6ffe7c9cb05c6a89fcb3c8fcbc987eb05211
 ---
 
-{{CSSRef}}
-
 **`:has-slotted`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 {{HTMLElement("slot")}} 要素のコンテンツが空ではないか、または既定値を使用していない場合に一致します（詳細については、[テンプレートとスロットの使用](/ja/docs/Web/API/Web_components/Using_templates_and_slots)を参照してください）。
 
 > [!NOTE]

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 879e0a9c9d60831afcc7f66ea1b5f43ea0cd4361
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`palette-mix()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、新しい {{cssxref("font-palette")}} 値を、指定したパーセント値と色混合方式によって 2 個の `font-palette` 値を混ぜ合わせることによって生成することができます。
 

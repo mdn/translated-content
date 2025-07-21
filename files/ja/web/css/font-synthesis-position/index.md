@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a6cac9db700637ac004a3608a7b5003c1c0ef8f8
 ---
 
-{{CSSRef}}
-
 **`font-synthesis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下付き文字と上付き文字の「位置」の書体がフォントファミリーになく、 {{cssxref("font-variant-position")}} を使用して位置を設定する場合に、ブラウザーが合成するかどうかを指定することができます。
 
 **`font-synthesis-position`** プロパティは {{htmlelement("sup")}} および {{htmlelement("sub")}} 要素を使用しているときには効果がありません。

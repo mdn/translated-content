@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
-
 **`scale()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、二次元平面上における拡縮する座標変換を定義します。変倍の量がベクトルで定義されるため、水平方向と垂直方向に対して異なる変倍で大きさを変えることができます。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: scale()")}}

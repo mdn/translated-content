@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a850ca867a8b380a53320bab6870fb7335f22d52
 ---
 
-{{CSSRef}}
-
 **`:right`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で使われ、印刷文書の右側のページすべてを表します。
 
 ```css

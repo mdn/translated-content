@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`column-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、段組みレイアウトで理想的な段の幅を設定します。コンテナーは `column-width` の値よりも狭い段がないように、できるだけ多くの段を配置します。コンテナーの幅が指定された値よりも狭い場合、指定された幅よりも狭い単一の段になることがあります。
 
 {{InteractiveExample("CSS デモ: column-width")}}

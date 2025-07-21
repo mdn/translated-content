@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`appearance`** は CSS のプロパティで、オペレーティングシステムのテーマに基づいた、プラットフォーム固有のスタイル設定で UI 要素を表示するために使用します。
 
 {{InteractiveExample("CSS デモ: appearance")}}

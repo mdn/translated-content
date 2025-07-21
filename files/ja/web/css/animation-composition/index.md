@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0c8ed7f82f3aee5ee177f8c8e33879460b82ad6b
 ---
 
-{{CSSRef}}
-
 **`animation-composition`** は [CSS](/ja/docs/Web/CSS) のプロパティで、複数のアニメーションが同じプロパティに同時に影響する場合に使用する{{Glossary("composite operation", "合成演算")}}を指定します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-{{CSSRef}}
-
 **`font-variant-numeric`** は [CSS](/ja/docs/Web/CSS) のプロパティで、数字、分数、序数記号の表記を制御するために使用します。
 
 {{InteractiveExample("CSS デモ: font-variant-numeric")}}

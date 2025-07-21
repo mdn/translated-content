@@ -3,8 +3,6 @@ title: クラスセレクター
 slug: Web/CSS/Class_selectors
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の**クラスセレクター** (class selector) は、 [`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class) 属性の内容に基づいて要素を選択します。
 
 ```css

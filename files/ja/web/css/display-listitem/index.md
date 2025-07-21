@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
-
 `list-item` キーワードは、要素に {{CSSxRef("list-style")}} プロパティで指定された内容 (例えば見出し記号) を含む `::marker` 擬似要素と共に、自身の内容物のために指定された種類の基本的なボックスを生成します。
 
 ## 構文

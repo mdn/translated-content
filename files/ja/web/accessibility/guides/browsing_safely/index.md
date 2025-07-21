@@ -1,12 +1,10 @@
 ---
-title: アクセシビリティ： より安全に閲覧するためにユーザーができること
+title: "アクセシビリティ: より安全に閲覧するためにユーザーができること"
+short-title: 安全な閲覧に役立つ個人設定
 slug: Web/Accessibility/Guides/Browsing_safely
-original_slug: Web/Accessibility/Accessibility:_What_users_can_to_to_browse_safely
 l10n:
-  sourceCommit: 019ca5c9ce641bfa02825e1ba0444f35dfb646cc
+  sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
-
-{{AccessibilitySidebar}}
 
 この記事では、オペレーティングシステムに組み込まれている個人設定やアクセシビリティ設定を活用することで、前庭障害のある人やそれを支援する人がウェブコンテンツにアクセスしやすくすることについて説明します。個人設定を活用することで、発作や他にも身体的な反応につながるコンテンツへの接触を防ぐことができます。
 
@@ -24,9 +22,9 @@ l10n:
 
 現行のブラウザーは CSS メディア特性 [`prefers-reduced-motion`](/ja/docs/Web/CSS/@media/prefers-reduced-motion) に対応しています。ブラウザーはユーザーが縮小モーションの操作をリクエストされたかどうかを検出することができます。ユーザーは下記のようなアクセシビリティインターフェイスからアクセスします。
 
-![Windows 10でアニメーションをオフにする方法を示す画面。](android-remove-animations.png)
+![Windows 10 でアニメーションをオフにする方法を示す画面。](android-remove-animations.png)
 
-CSSのトランジションイベントに対応しています。例えば、次のようなものがあります。
+CSS のトランジションイベントに対応しています。例えば、次のようなものがあります。
 
 - `transitionrun`
 - `transitionstart`
@@ -56,8 +54,8 @@ Apple の OS アクセシビリティ設定で「動きを縮小するオプシ�
 
 #### ブラウザー拡張機能の使用
 
-- [Gif Blocker](https://chrome.google.com/webstore/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl?hl=en) Chrome の場合、 GIF Blocker はウェブストアで利用できる拡張機能です。
-- [Gif Scrubber](https://chrome.google.com/webstore/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber は gif を動画プレイヤーのように制御する Chrome 拡張機能です。 GitHub のリポジトリーが **<https://github.com/0ui/gif-scrubber>** にあります。
+- [Gif Blocker](https://chromewebstore.google.com/detail/gif-blocker/ahkidgegbmbnggcnmejhobepkaphkfhl?hl=en) Chrome の場合、 GIF Blocker はウェブストアで利用できる拡張機能です。
+- [Gif Scrubber](https://chromewebstore.google.com/detail/gif-scrubber/gbdacbnhlfdlllckelpdkgeklfjfgcmp?hl=en) Gif Scrubber は GIF を動画プレイヤーのように制御する Chrome 拡張機能です。 GitHub のリポジトリーが **<https://github.com/0ui/gif-scrubber>** にあります。
 - [Beeline Reader](https://www.beelinereader.com/) Beeline Reader にはブラウザー拡張機能があり、グレースケールや Dyslexi フォントなどを設定することができます。
 
 ![ユーザーがブラウザーで調整できる Beeline Reader のモードを示すスクリーンショット。](beelinereader.png)
@@ -74,7 +72,7 @@ Windows 10 オペレーティングシステムでは、ユーザーはアニメ
 
 #### グレースケール
 
-外傷性脳損傷 (TBI) を負った人は、色に対して非常に敏感であることがあります。色に対して非常に大きな「認知エネルギーの投資」を要求されることがあり、他の日常課題のためのエネルギーがなくなります。コンテンツのグレースケール表示を説明しています。他にも障碍を持つユーザーを支援するかもしれません。グレースケールを使用することの好ましいことに関するユーザーによる興味深い議論は、ディスカッションスレッド「[アクセシビリティオプションの「グレースケール」設定とは](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)」で得ることができます。具体的な関心事は、光刺激性てんかんのあるユーザーで、「発作的」と感じたときに使用しています。
+外傷性脳損傷 (TBI) を負った人は、色に対して非常に敏感であることがあります。色に対して非常に大きな「認知エネルギーの投資」を要求されることがあり、他の日常課題のためのエネルギーがなくなります。コンテンツのグレースケール表示を説明しています。他にも障碍を持つユーザーを支援するかもしれません。グレースケールを使用することの好ましいことに関するユーザーによる興味深い議論は、議論スレッド "[What is the "grayscale" setting for in accessibility options?](https://ask.metafilter.com/312049/What-is-the-grayscale-setting-for-in-accessibility-options)" で得ることができます。具体的な関心事は、光刺激性てんかんのあるユーザーで、「発作的」と感じたときに使用しています。
 
 ほとんどのオペレーティングシステムには、ユーザーがワークステーション上で調整できる方法があります。下記のスクリーンショットでは、 Windows 10 のアクセシビリティ設定で色フィルターを設定する例を示しています。色フィルターボタンを「オン」に切り替えると、グレースケールが有効になります。
 

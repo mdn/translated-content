@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{CSSRef}}
-
 **`mask-size`** は [CSS](/ja/docs/Web/CSS) のプロパティで、指定したマスク画像のサイズを指定します。マスク画像のサイズは、その{{glossary("aspect ratio", "アスペクト比")}}を維持するために、完全にまたは部分的に制約することができます。
 
 ## 構文

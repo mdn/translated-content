@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c5613708408042af5889be39cfb203799879175b
 ---
 
-{{CSSRef}}
-
 **`polygon()`** は [CSS](/ja/docs/Web/CSS) の関数で、{{cssxref("&lt;basic-shape&gt;")}} [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の一つです。[多角形](https://ja.wikipedia.org/wiki/多角形)を描画するために使用します。 1 つ以上の座標のペアを指定し、それぞれが形状の頂点を表します。
 
 {{InteractiveExample("CSS デモ: polygon()")}}

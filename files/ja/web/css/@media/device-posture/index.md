@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 01e8b5077df6d79e52f2521dfbe734e0923d1fc4
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`device-posture`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、端末の[現在の状態](/ja/docs/Web/API/Device_Posture_API)、つまり、ビューポートが平ら (`continuous`) 状態か、折り曲げられた (`folded`) 状態かを検出することができます。
 

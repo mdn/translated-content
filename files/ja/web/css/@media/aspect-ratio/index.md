@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9e7260485703694d47aa360e2db97aae2ea5ae42
 ---
 
-{{CSSRef}}
-
 **`aspect-ratio`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("viewport", "ビューポート")}}の{{glossary("aspect ratio", "アスペクト比")}}を調べるために使用します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-{{CSSRef}}
-
 **`contain-intrinsic-block-size`** は [CSS](/ja/docs/Web/CSS) の[論理プロパティ](/ja/docs/Web/CSS/CSS_logical_properties_and_values)で、要素が[サイズ拘束](/ja/docs/Web/CSS/CSS_containment/Using_CSS_containment#サイズ拘束)の対象となっている場合に、ブラウザーがレイアウトに使用することができる要素のブロックサイズを定義します。
 
 ブロックサイズとは、行内のテキストの流れに対して垂直方向の要素のサイズのことです。標準的な英語のような横書きの[書字方向](/ja/docs/Web/CSS/writing-mode)では、ブロックサイズは垂直方向（高さ）です。縦書きの場合、ブロックサイズは水平方向です。

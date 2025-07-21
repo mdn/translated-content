@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb7e3c7303746408072ddf4cc646e28d7e14214a
 ---
 
-{{CSSRef}}
-
 **`overscroll-behavior-inline`** は CSS のプロパティで、スクロール領域のインライン方向の境界に達したときのブラウザーの挙動を設定します。
 
 全体的な説明は {{cssxref("overscroll-behavior")}} を参照してください。

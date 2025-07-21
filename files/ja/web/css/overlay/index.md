@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1c4eb0bfb5f72a26fcc21a83fac91aa3e66c2fb8
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`overlay`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[最上位レイヤー](/ja/docs/Glossary/Top_layer)に現れる要素（例えば、表示された[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) 要素）が実際に最上位レイヤーにレンダリングされるかどうかを指定します。このプロパティは {{cssxref("transition-property")}} 値のリストの中で、 `allow-discrete` が {{cssxref("transition-behavior")}} として設定されている場合にのみ意味を持ちます。
 

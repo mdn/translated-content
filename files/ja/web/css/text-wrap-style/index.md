@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2a3911def06e1850e2b76907b3a42c688ee7a2bc
 ---
 
-{{CSSRef}}
-
 **`text-wrap-style`** は [CSS](/ja/docs/Web/CSS) プロパティで、要素内のテキストをどのように折り返すかを制御します。様々な値で、ブロック要素のコンテンツを折り返す代替方法を提供します。また、{{CSSXRef("text-wrap")}} の一括指定を使って設定したり、リセットしたりすることができます。
 
 {{InteractiveExample("CSS デモ: text-wrap-style")}}

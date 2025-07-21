@@ -3,8 +3,6 @@ title: prefix
 slug: Web/CSS/@counter-style/prefix
 ---
 
-{{CSSRef}}
-
 **`prefix`** は {{cssxref('@counter-style')}} ルールの記述子で、マーカーに先立って表示される内容を指定します。指定されていない場合、既定値は `""` (空文字列) になります。
 
 ## 構文

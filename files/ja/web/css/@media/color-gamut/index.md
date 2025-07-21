@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b9f8e62afc890f2f00d6f9043f3ce0ff2ac4dfb
 ---
 
-{{CSSRef}}
-
 **`color-gamut`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、{{glossary("user agent", "ユーザーエージェント")}}および出力機器が対応している{{glossary("gamut", "色域")}}のおおよその範囲に基づいて CSS スタイルを適用するために使用されます。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b60bc79c7ad36c56dddf6760d2fd4dbb642d2023
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`justify-self`** プロパティは、配置コンテナーの適切な軸に沿って内部でボックスの位置合わせをする方法を設定します。
 
 {{InteractiveExample("CSS デモ: justify-self")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`outline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、輪郭線 (outline) に関する大部分のプロパティを単一の宣言で設定します。
 
 {{InteractiveExample("CSS デモ: outline")}}

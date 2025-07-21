@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view-timeline-inset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ビュー進行タイムラインのアニメーションの主体要素が可視であるとみなされるスクロールポート（詳細は{{glossary("Scroll container", "スクロールコンテナー")}}を参照）の位置の調整を表す 1 つまたは 2 つの値を指定するために使用します。別の言い方をすると、これはタイムラインの位置をオフセットする開始値や終了値のインセット（またはアウトセット）を指定することができます。
 

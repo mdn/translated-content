@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 62c5c3f5655002f230bf0153fbdf8a883611014a
 ---
 
-{{CSSRef}}
-
 **`::file-selector-button`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、{{HTMLElement("input") }} 要素の [`type="file"`](/ja/docs/Web/HTML/Reference/Elements/input/file) のボタンを表します。
 
 {{InteractiveExample("CSS デモ: ::file-selector-button", "tabbed-shorter")}}

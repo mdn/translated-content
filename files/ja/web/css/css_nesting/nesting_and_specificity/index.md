@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 13746bf1d5d8e5c7c7bce5e1281e6eeee77b3d44
 ---
 
-{{CSSRef}}
-
 `&` 入れ子セレクターの{{cssxref('specificity', "詳細度")}}は、関連するセレクターリストの中で最大の詳細度を使用して計算されます。これは、 {{cssxref(':is',':is()')}} 関数を使用した場合の詳細度の計算方法と同じです。
 
 ```html

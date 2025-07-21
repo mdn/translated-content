@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}} {{deprecated_header}}
+{{deprecated_header}}
 
 > [!NOTE]
 > ビューポートの幅を問い合わせる場合、開発者は代わりに [`width`](/ja/docs/Web/CSS/@media/width) メディア特性を使用してください。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`font-family`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールで指定されたフォントのフォントファミリーを指定することができます。
 
 この値は、 [`font-family`](/ja/docs/Web/CSS/font-family) プロパティを用いて要素をスタイル設定する際に、特定の `@font-face` に対して名前を照合するために用いられます。

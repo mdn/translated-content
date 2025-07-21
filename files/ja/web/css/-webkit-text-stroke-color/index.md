@@ -3,8 +3,6 @@ title: -webkit-text-stroke-color
 slug: Web/CSS/-webkit-text-stroke-color
 ---
 
-{{CSSRef}}
-
 **`-webkit-text-stroke-color`** は CSS のプロパティで、テキストの文字の線の[色](/ja/docs/Web/CSS/color_value)を示します。このプロパティが設定されない場合、 {{cssxref("color")}} プロパティの値が使用されます。
 
 ## 構文

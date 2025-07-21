@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad6eb6b52b4b3082397e8e011bd59a6d88a8f5f3
 ---
 
-{{CSSRef}}
-
 **`@font-face`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、テキストを表示するための独自フォントを指定します。フォントはリモートサーバーまたはユーザー自身のコンピューターにローカルにインストールされたフォントのどちらかから読み込むことができます。
 
 ## 構文

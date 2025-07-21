@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`border-spacing`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{htmlelement("table")}} における隣り合うセルの境界同士の間隔を定めます。このプロパティは {{cssxref("border-collapse")}} が `separate` のときのみ適用されます。
 
 {{InteractiveExample("CSS デモ: border-spacing")}}

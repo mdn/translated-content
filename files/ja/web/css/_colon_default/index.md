@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **`:default`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、関連する要素のグループ内で既定となっているフォーム上の要素を選択します。
 
 {{InteractiveExample("CSS デモ: :default", "tabbed-shorter")}}

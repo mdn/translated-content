@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0121647f4ef17c1e9cf31e9f27535f0c29f3c84f
 ---
 
-{{CSSRef}}
-
 **`hwb()`** 関数記法は、指定された色を色相、白色度、黒色度による {{glossary("RGB", "sRGB")}} 色によって表現します。オプションのアルファ成分は、その色の透明度を表します。
 
 {{InteractiveExample("CSS デモ: hwb()")}}

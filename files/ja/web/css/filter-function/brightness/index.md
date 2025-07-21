@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 92447fec056cc89b7f28445851bea0c981fcbc12
 ---
 
-{{CSSRef}}
-
 **`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: brightness()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`r`** は [CSS](/ja/docs/Web/CSS) のプロパティで、円の半径を定義します。これは SVG の {{SVGElement("circle")}} 要素でのみ使用されます。存在する場合、その円の {{SVGAttr("r")}} 属性を上書きします。
 
 > **メモ:** `r` プロパティは、 {{SVGElement("svg")}} の中にある {{SVGElement("circle")}} 要素にのみ適用されます。その他の SVG 要素、 HTML 要素、擬似要素には適用されません。

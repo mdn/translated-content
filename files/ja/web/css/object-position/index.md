@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
-
 **`object-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ボックス内における[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)の中身の配置を指定します。ボックスの領域内で置換要素のオブジェクトに覆われていない部分は、要素の背景が表示されます。
 
 置換要素のオブジェクトの内在サイズ（すなわち、自然なサイズ）を、その要素のボックス内に合わせる方法を調整するために、{{cssxref("object-fit")}} プロパティを使用することができます。

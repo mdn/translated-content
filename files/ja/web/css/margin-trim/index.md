@@ -5,7 +5,7 @@ l10n:
   sourceCommit: de76d381cb79a61813378963b66d98f68e74381c
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 `margin-trim` プロパティにより、コンテナーの辺に隣接する子のマージンを切り取ることができます。
 

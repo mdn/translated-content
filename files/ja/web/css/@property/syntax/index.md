@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3b39e41fb9393a13b16aaf58ba25174a62205041
 ---
 
-{{CSSRef}}
-
 **`syntax`** は [CSS](/ja/docs/Web/CSS) の記述子で、 {{cssxref("@property")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)を使用する上で必要であり、そのプロパティで許可される構文を記述します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 42c1bb8c259f3f57de9f38600776cf273e3addda
 ---
 
-{{CSSRef}}
-
 **`background-blend-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背景画像が相互にどのように混合されるか、また要素の背景色とどのように混合されるかを設定します。
 
 {{InteractiveExample("CSS デモ: background-blend-mode")}}

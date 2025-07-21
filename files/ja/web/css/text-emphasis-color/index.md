@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`text-emphasis-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点の色を設定します。この値は一括指定の {{cssxref("text-emphasis")}} を使用して設定することもできます。
 
 {{InteractiveExample("CSS デモ: text-emphasis-color")}}

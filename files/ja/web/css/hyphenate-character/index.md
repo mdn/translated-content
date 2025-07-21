@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5bd9fe2b25c6eee2a14d0406ce7116998fa48c13
 ---
 
-{{CSSRef}}
-
 **`hyphenate-character`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ハイフンによる改行の前で行末に使用される文字（または文字列）を設定します。
 
 自動ハイフネーション、ソフトハイフネーションのどちらでも、指定された hyphenate-character の値に従って表示されます。

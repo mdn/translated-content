@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`word-break`** は [CSS](/ja/docs/Web/CSS) のプロパティで、改行しなければテキストがコンテンツボックスからあふれる場合に、ブラウザーが改行を挿入するかどうかを指定します。
 
 {{InteractiveExample("CSS デモ: word-break")}}

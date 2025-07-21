@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`animation-duration`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 1 回のアニメーション周期が完了するまでの再生時間を設定します。
 
 {{InteractiveExample("CSS デモ: animation-duration")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 874ad29df9150037acb8a4a3e7550a302c90a080
 ---
 
-{{CSSRef}}
-
 **`ray()`** は [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、アニメーションする要素がたどることができる [`offset-path`](/ja/docs/Web/CSS/offset-path) の線分を定義します。この線分は「光線」と呼ばれます。光線は {{cssxref("offset-position")}} から始まり、指定された角度の方向に伸びます。光線の長さは、サイズを指定し、 `contain` キーワードを使用することで制約することができます。
 
 ## 構文

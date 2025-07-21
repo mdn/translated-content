@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d8f3f44b498aef7b8cf2729d5656f96d2ff6ae5
 ---
 
-{{CSSRef}}
-
 **`font-variant-ligatures`** は [CSS](/ja/docs/Web/CSS) のプロパティで、適用される用途の文字コンテンツで使われる{{Glossary("ligature", "合字")}}および{{Glossary("contextual forms", "文脈に合わせた字形")}}を制御します。これにより、結果のテキストでより調和した形を利用することができます。
 
 {{InteractiveExample("CSS デモ: font-variant-ligatures")}}

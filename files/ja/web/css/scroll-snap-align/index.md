@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 `scroll-snap-align` プロパティは、ボックスのスナップ位置を、そのスナップコンテナーのスナップポート（つまり{{glossary("alignment container", "配置コンテナー")}}）の中における[スナップ領域](/ja/docs/Glossary/Scroll_snap#スナップ領域)（つまり {{glossary("alignment subject", "配置対象物")}}）の配置として指定します。
 
 {{InteractiveExample("CSS デモ: scroll-snap-align")}}

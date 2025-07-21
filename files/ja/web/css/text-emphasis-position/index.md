@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a7482281c4570bb7f932dce381f510d87ddf9924
 ---
 
-{{CSSRef}}
-
 **`text-emphasis-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、圏点が描かれる位置を設定します。 [`<ruby>`](/ja/docs/Web/HTML/Reference/Elements/ruby) 要素で描画されたテキストと同様、圏点のために十分な空間がない場合は、行の高さが広げられます。
 
 {{InteractiveExample("CSS デモ: text-emphasis-position")}}

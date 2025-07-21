@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 66944f622b6b51bc9c24bebbbea242138d910600
 ---
 
-{{CSSRef}}
-
 **`sepia()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、入力画像をセピア色に、より暖かい、より黄色/茶色がかったの表現に変換します。結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: sepia()")}}

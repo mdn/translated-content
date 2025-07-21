@@ -5,8 +5,6 @@ l10n:
   sourceCommit: edb16c0a662d7e719efe67561389a7a087c1ace9
 ---
 
-{{CSSRef}}
-
 **`:open`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、開閉の状態を持つ要素のうち、現在開いている状態にある要素を表します。
 
 ## 構文

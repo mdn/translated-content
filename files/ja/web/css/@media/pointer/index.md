@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
-{{CSSRef}}
-
 **`pointer`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーが（マウスなどの）ポインティングデバイスを持っているか、もしそうならば、*主要な*ポインティングデバイスにどれだけの正確性があるかを調べます。
 
 > **メモ:** すべてのポインティングデバイスの正確性を調べたい場合は、代わりに [`any-pointer`](/ja/docs/Web/CSS/@media/any-pointer) を使用してください。

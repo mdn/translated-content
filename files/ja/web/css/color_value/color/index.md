@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f13cbe7517ce96deeb521d4c8e6923266a22913
 ---
 
-{{CSSRef}}
-
 **`color()`** 関数記法により、他のほとんどの色関数が暗黙に処理する sRGB {{glossary("color space", "色空間")}}ではなく、特定の指定した色空間で色を指定することができます。
 
 特定の色空間に対応しているかどうかは、CSS メディア特性の [`color-gamut`](/ja/docs/Web/CSS/@media/color-gamut) で検出することができます。

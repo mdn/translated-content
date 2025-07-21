@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8f45350a203be9e6e83c6fcb83c93576d8d5d9c
 ---
 
-{{CSSRef}}
-
 [CSS 表示方法モジュール](/ja/docs/Web/CSS/CSS_display)は、 CSS の [`display`](/ja/docs/Web/CSS/display) プロパティの複数キーワード構文を定義しています。このガイドでは、複数キーワード構文を解説します。
 
 > [!NOTE]

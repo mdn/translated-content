@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2077d0702d038c9ccc743a53d8ad1c0c21fef5be
 ---
 
-{{CSSRef}}
-
 **`<absolute-size>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、絶対サイズキーワードを記述します。このデータ型は {{cssxref("font")}} の一括指定と {{cssxref("font-size")}} プロパティで使用します。
 
 フォントサイズのキーワードは、 HTML の非推奨の `size` 属性に対応します。下記の [HTML size 属性](#html_の_size_属性)の節を参照してください。

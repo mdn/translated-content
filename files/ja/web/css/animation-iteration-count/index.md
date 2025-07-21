@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`animation-iteration-count`** は [CSS](/ja/docs/Web/CSS) のプロパティで、停止するまでにアニメーション周期が再生される回数を指定します。
 
 {{InteractiveExample("CSS デモ: animation-iteration-count")}}

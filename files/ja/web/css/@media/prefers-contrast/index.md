@@ -5,8 +5,6 @@ l10n:
   sourceCommit: eb20a5272772231852864ddc71b9710de0fa1d4f
 ---
 
-{{CSSRef}}
-
 **`prefers-contrast`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、ユーザーがウェブコンテンツをより高い（またはより低い）コントラストで表示するように要求したかどうかを検出するために使用します。
 
 ## 構文

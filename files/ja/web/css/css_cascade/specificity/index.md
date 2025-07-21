@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **詳細度** (Specificity) は、ある要素に最も関連性の高い [CSS 宣言](/ja/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#css_の構文の基本)を決定するためにブラウザーが使用するアルゴリズムで、これによって、その要素に使用するプロパティ値が決定されます。詳細度のアルゴリズムは、[CSS セレクター](/ja/docs/Web/CSS/Reference#セレクター)の重みを計算し、競合する CSS 宣言の中からどのルールを要素に適用するかを決定します。
 
 > [!NOTE]

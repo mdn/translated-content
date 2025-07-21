@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7c0cd9f9b667fe9be0887e8902d09f0013290930
 ---
 
-{{CSSRef}}
-
 この **CSS リファレンス** は、すべての標準 [CSS](/ja/docs/Web/CSS) プロパティ、[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)、[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)、[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)、[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)、[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule) の[アルファベット順の索引](#索引)として利用できます。また、すべての CSS [種類別セレクター](#セレクター) の一覧および [重要な CSS の概念](#概念) の一覧もあります。また、簡単な [DOM-CSS / CSSOM リファレンス](#dom-css_cssom) も含まれています。
 
 ## 基本的なルールと構文

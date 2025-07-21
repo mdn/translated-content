@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7a9f9baa25d9a7313bd6c62ef5ef585b28459c58
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`object-fit`** プロパティは、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)、例えば {{HTMLElement("img")}} や {{HTMLElement("video")}} などの中身を、コンテナーにどのようにはめ込むかを設定します。
 
 要素のボックス内における置換要素の中身のオブジェクトの配置を変更するには、 {{cssxref("object-position")}} プロパティを使用することができます。

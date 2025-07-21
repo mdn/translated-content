@@ -3,7 +3,7 @@ title: -webkit-mask-repeat-x
 slug: Web/CSS/-webkit-mask-repeat-x
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 `-webkit-mask-repeat-x` プロパティは、マスク画像を水平方向に反復 (タイル) するかどうか、どのように反復するかを指定します。
 

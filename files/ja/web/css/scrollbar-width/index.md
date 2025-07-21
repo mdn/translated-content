@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **`scrollbar-width`** プロパティは、要素のスクロールバーが表示される時の最大の太さを設定することができます。
 
 ## 構文

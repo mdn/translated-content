@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
-
 **`translate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素を三次元空間内で再配置します。返値は {{cssxref("&lt;transform-function&gt;")}} データ型です。
 
 {{InteractiveExample("CSS デモ: translate3d()")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 33cd63a518c57caded1b43ff9fff071230a2397a
 ---
 
-{{CSSRef}}
-
 `initial-letter` は CSS のプロパティで、ドロップ、レイズ、サンクンされた最初の文字のサイズとシンクを設定します。このプロパティは、 {{cssxref("::first-letter")}} 擬似要素およびブロックコンテナーのインラインレベル最初の子供要素に適用されます。
 
 ## 構文

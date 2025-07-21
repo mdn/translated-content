@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ced6d0b9636a1b904474d1546674b305346daa0
 ---
 
-{{CSSRef}}
-
 **`grid-auto-flow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、自動配置のアルゴリズムの動作を制御し、自動配置されたアイテムがどのようにグリッドに流れ込むかを正確に指定するものです。
 
 {{InteractiveExample("CSS デモ: grid-auto-flow")}}

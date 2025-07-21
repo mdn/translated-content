@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`gap`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、行や列の間のすき間（{{glossary("gutters", "溝")}}）を設定します。このプロパティは[段組み](/ja/docs/Web/CSS/CSS_multicol_layout)、[フレックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)、[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)コンテナーに適用します。
 
 {{InteractiveExample("CSS デモ: gap")}}

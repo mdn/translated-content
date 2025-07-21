@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9428e6f9ac2fd4166b5cf245fb674123209787ff
 ---
 
-{{CSSRef}}
-
 **`<string>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、一連の文字列を表します。文字列は {{CSSxRef("content")}}, {{CSSxRef("font-family")}}, {{CSSxRef("quotes")}} など、数々の CSS プロパティで使用されます。
 
 ## 構文

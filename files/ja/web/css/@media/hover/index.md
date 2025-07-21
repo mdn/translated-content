@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c51e0599ea09c0e6d035c635db9f48ad1f241490
 ---
 
-{{CSSRef}}
-
 **`hover`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、*第一の*入力機構で要素の上でホバーする（かざす）ことができるかどうかを検査するために使用することができます。
 
 ## 構文

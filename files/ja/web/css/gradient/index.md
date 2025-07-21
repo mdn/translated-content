@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 745950224a21606bb2d953e149b1385b9ea6a3f8
 ---
 
-{{CSSRef}}
-
 **`<gradient>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 2 色以上の連続的な色の変化で構成される特殊な型の {{cssxref("&lt;image&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: &lt;gradient&gt;")}}

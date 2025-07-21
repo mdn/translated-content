@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 997a0ec66e1514b7269076195b2419db334e876e
 ---
 
-{{CSSRef}}
-
 **`font-variation-settings`** は CSS の記述子で、 {{cssxref("@font-face")}} アットルールの中で OpenType または TrueType の低水準のフォントバリエーションを指定することができます。この記述子の値は、グローバルキーワード値を除いて {{cssxref("font-variation-settings")}} と同じです。
 
 この記述子は、要素全体ではなく `@font-face` アットルールのフォントオブジェクトにバリエーション値を設定するので、要素内の一部の字体だけがこの記述子を使用して描画されるかもしれません。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d50c6b04f0e0cb20eca8a5f0e643e435ee8ac6ff
 ---
 
-{{CSSRef}}
-
 **アットルール**は [CSS の文](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_statements)のうち、CSS の動作を規定するものです。アットルールはアットマーク、`@` (U+0040 COMMERCIAL AT) で始まり、識別子が続きます。次のセミコロン、 `;` (U+003B SEMICOLON) もしくは次の [CSS ブロック](/ja/docs/Web/CSS/CSS_syntax/Syntax#css_の宣言ブロック)のどちらかが現れるまでの部分からなります。
 
 アットルールは、スタイルルールや他のアットルールをグループ化して構造化したり、選択したコンテンツに直接関連付けられていないスタイル情報を宣言したり、インポートや名前空間キーワードの割り当てなどの構文構造を管理したりするために使用されます。

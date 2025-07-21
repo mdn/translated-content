@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 429d45679a29f386af0ddfcf2a64498843c3e1e5
 ---
 
-{{CSSRef}}
-
 **`scroll-snap-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("scroll container", "スクロールコンテナー")}}に設定され、[スナップポート](/ja/docs/Glossary/Scroll_snap#スナップポート)内のスナップポイントの強制の方向と厳格さを設定することで、スクロールスナップを有効にします。
 
 {{InteractiveExample("CSS デモ: scroll-snap-type")}}

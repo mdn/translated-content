@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の幅を設定します。既定では、このプロパティは[コンテンツ領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#コンテンツ領域)の幅を設定しますが、 {{cssxref("box-sizing")}} を `border-box` に設定すると、[境界領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#境界領域)の幅を設定します。
 
 {{InteractiveExample("CSS デモ: width")}}

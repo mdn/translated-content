@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c9f96f06d4fbd265808f298eb9b2773f739860c5
 ---
 
-{{CSSRef}}
-
 **`sqrt()`** [CSS](/ja/docs/Web/CSS) [関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions) は指数関数で、数値の[平方根](https://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)を返します。
 
 `sqrt(x)` は `pow(x, 0.5)` と同等です。

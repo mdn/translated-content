@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
-{{CSSRef}}
-
 **`all`** は [CSS](/ja/docs/Web/CSS) の[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティで、要素のすべてのプロパティを ({{cssxref("unicode-bidi")}}、{{cssxref("direction")}}、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)を除いて) 初期化します。プロパティは初期値または継承値、または他のカスケードレイヤーまたはスタイルシートに由来して指定した値に設定される可能性があります。
 
 {{InteractiveExample("CSS デモ: all")}}

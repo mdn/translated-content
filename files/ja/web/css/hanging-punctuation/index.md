@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2ef352178529c5b7c7f58819cf7f8baa1aa6b55
 ---
 
-{{CSSRef}}
-
 **`hanging-punctuation`** は [CSS](/ja/docs/Web/CSS) のプロパティで、区切り記号をテキストの行頭や行末にぶら下げるべきかどうかを指定します。ぶら下げられる区切り記号は行ボックスの外側に配置されれることがあります。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 75326725db2daa924618e58ae31a43345c7a16dc
 ---
 
-{{CSSRef}}
-
 **`text-decoration-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{ cssxref("text-decoration-line") }} で指定された線の種類を設定します。線の種類はすべての線に適用され `text-decoration-line` で定義された線ごとに異なる種類を定義する方法はありません。
 
 {{InteractiveExample("CSS デモ: text-decoration-style")}}

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: b03632b84049c5110d9ee466307f7e2d28959be5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`animation-range`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、タイムラインに沿ったアニメーションの適用範囲の先頭と末尾を設定します。つまり、タイムラインのどこでアニメーションが始まり、どこで終わるかを設定するために使用します。
 

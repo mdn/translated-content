@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
-{{CSSRef}}
-
 **`mask-border-width`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の幅を設定します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 14924a9cc3dddbce37565d152cbb30134d314308
 ---
 
-{{CSSRef}}
-
 パンくず (Breadcrumb) ナビゲーションは、来た道をたどって開始ページまで戻ることができる{{glossary("breadcrumb", "パンくずリスト")}}を提供することによって、ユーザーがウェブサイト内の自分の位置を理解するのに役立ちます。
 
 ![リンクを区切り文字を付けてインラインで表示](breadcrumb-navigation.png)

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{CSSRef}}
-
 **`mask`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、画像の指定した領域をマスクまたはクリップして、要素を（部分的にまたは完全に）非表示にします。これは、すべての `mask-*` プロパティの一括指定です。このプロパティは、カンマで区切られた 1 つ以上の値を受け入れ、各値は `<mask-layer>` に対応します。
 
 ## 構成要素のプロパティ

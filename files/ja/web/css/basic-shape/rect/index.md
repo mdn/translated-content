@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{CSSRef}}
-
 **`rect()`** は [CSS](/ja/docs/Web/CSS) 関数で、包含ブロックの上端と左端から指定した距離に矩形を作成します。これは {{cssxref("&lt;basic-shape&gt;")}} の基本図形関数です。[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)の基本図形関数です。 `rect()` 関数を {{cssxref("offset-path")}} のような CSS プロパティで使用し、要素が移動する矩形のパスを作成したり、 {{cssxref("clip-path")}} でクリッピング領域の図形を定義したりすることができます。
 
 ## 構文

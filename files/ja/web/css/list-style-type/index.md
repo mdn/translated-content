@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3b080cf77c3f906b5b965961412b6c51b5871e08
 ---
 
-{{CSSRef}}
-
 **`list-style-type`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リスト項目要素のマーカーを設定します (円、文字、独自のカウンタースタイルなど)。
 
 {{InteractiveExample("CSS デモ: list-style-type")}}

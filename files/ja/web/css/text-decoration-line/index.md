@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 69f98c69898886886f3267a4fa5f450f32133ca1
 ---
 
-{{CSSRef}}
-
 **`text-decoration-line`** は [CSS](/ja/docs/Web/CSS) のプロパティで、下線や上線など、要素内の文字列に使われる装飾の種類を設定します。
 
 {{InteractiveExample("CSS デモ: text-decoration-line")}}

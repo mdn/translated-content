@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 188dfae7d6173b0fad6fd4f8656d96f02cd2eb5d
 ---
 
-{{CSSRef}}
-
 **`mask-composite`** は [CSS](/ja/docs/Web/CSS) のプロパティで、現在のマスクレイヤーとその下のマスクレイヤーとの間で使われる合成操作を表します。
 
 ## 構文

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 50c8e290f11b061bbf2267e1a3279f28180a5fcb
 ---
 
-{{CSSRef}}
-
 **`backdrop-filter`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の背後の領域に、ぼかしや色変化のようなグラフィック効果を適用することができます。要素の背後にあるすべてに適用されるため、要素またはその背景が透明または部分的に透明である必要があります。
 
 {{InteractiveExample("CSS デモ: backdrop-filter()")}}

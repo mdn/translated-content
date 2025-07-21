@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{CSSRef}}
-
 **`:lang()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、指定された言語に基づいて要素を照合します。
 
 {{InteractiveExample("CSS デモ: :lang()", "tabbed-shorter")}}

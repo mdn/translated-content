@@ -5,7 +5,7 @@ l10n:
   sourceCommit: d585bcffcda6ed5a1555c65ab62670567925679f
 ---
 
-{{CSSRef}}{{Deprecated_header}}{{Non-standard_header}}
+{{Deprecated_header}}{{Non-standard_header}}
 
 **`@document`** は [CSS](/ja/docs/Web/CSS) の[アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で、文書の URL に基づいて、その中に含まれるスタイルルールを制約します。これは主にユーザー定義スタイルシート用に設計されていますが、独自定義のスタイルシートにも使うことができます。
 

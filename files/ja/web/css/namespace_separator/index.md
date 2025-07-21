@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fc1cc5684c98d19816d5cc81702d70f2a0debbad
 ---
 
-{{CSSRef}}
-
 **名前空間区切り文字** (`|`) は、セレクターと名前空間を区切り、要素型セレクターの{{glossary("namespace", "名前空間")}}を識別したり、存在しないこと識別したりします。
 
 ```css

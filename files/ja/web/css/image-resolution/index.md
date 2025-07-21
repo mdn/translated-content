@@ -5,7 +5,7 @@ l10n:
   sourceCommit: fb2af1f15456199685a9f4fbaf8c9d003a2bf91f
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`image-resolution`** は [CSS](/ja/docs/Web/CSS) のプロパティで、この要素で使用されているすべてのラスター画像の内在解像度を指定します。これは置換要素や生成コンテンツ、`background-image` のような装飾画像などのコンテンツ画像に作用します。
 

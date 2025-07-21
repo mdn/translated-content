@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ab279632b84d201ae9ddd3db3981bf0b01573371
 ---
 
-{{CSSRef}}
-
 **`mask-border-slice`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("mask-border-source")}} で設定された画像を複数の領域に分割します。これらの領域は要素の[マスク境界](/ja/docs/Web/CSS/mask-border)の部品を構成するために使用されます。
 
 ## 構文

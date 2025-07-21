@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f65f7f6e4fda2cb1bd0e7db17777e2cb20be7d27
 ---
 
-{{CSSRef}}
-
 **`<image>`** は [CSS](/ja/docs/Web/CSS) の [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、二次元の画像を表現します。
 
 ## 構文

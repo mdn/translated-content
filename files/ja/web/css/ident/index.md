@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bd74b8a8222517dead9def675a499dcf1dc30328
 ---
 
-{{CSSRef}}
-
 **`<ident>`** [CSS](/ja/docs/Web/CSS) [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types) は、{{glossary("identifier", "識別子")}}として使用される任意の文字列を意味します。
 
 ## 構文

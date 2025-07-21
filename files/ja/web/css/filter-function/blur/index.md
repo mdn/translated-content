@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c0f1aecaed48d75652c6dd97f30c7febd07e5cde
 ---
 
-{{CSSRef}}
-
 **`blur()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に[ガウシアンぼかし](https://ja.wikipedia.org/wiki/%E3%82%AC%E3%82%A6%E3%82%B7%E3%82%A2%E3%83%B3%E3%81%BC%E3%81%8B%E3%81%97)を適用します。返値は {{cssxref("&lt;filter-function&gt;")}} です。
 
 {{InteractiveExample("CSS デモ: blur()")}}

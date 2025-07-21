@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fb409b8972e7c03d7eb284466433a28efb850ef5
 ---
 
-{{CSSRef}}
-
 **`grid-auto-columns`** は [CSS](/ja/docs/Web/CSS) のプロパティで、暗黙的に生成されたグリッドの列{{glossary("grid tracks", "トラック")}}またはトラックのパターンの大きさを指定します。
 
 {{InteractiveExample("CSS デモ: grid-auto-columns")}}
