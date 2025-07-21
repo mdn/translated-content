@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 63e23080dd90d7802be807ac9beca286f6f31f7f
 ---
 
-{{CSSRef}}
-
 **`white-space-collapse`** は CSS プロパティで、要素内の{{Glossary("whitespace", "ホワイトスペース")}}を統合する方法を制御します。
 
 > **メモ:** `white-space-collapse` および {{CSSxRef("text-wrap")}} プロパティは、 {{CSSxRef("white-space")}} 一括指定プロパティを用いて一緒に宣言することができます。

@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`view-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）内の要素（主体要素として呼ばれる）の可視性の変化に基づいて進行する名前付きビュー進行タイムラインを定義するために使用します。 `view-timeline` は主体要素に設定します。
 

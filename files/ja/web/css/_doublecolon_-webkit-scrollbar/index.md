@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}{{Non-standard_Header}}
+{{Non-standard_Header}}
 
 `::-webkit-scrollbar` は CSS の擬似要素で、スクロール可能なオーバーフローを持つ要素のスクロールバーのスタイルに影響を与えます。
 

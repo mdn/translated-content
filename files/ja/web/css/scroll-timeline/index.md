@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 7eaac8008ebe00417314379fab2285df23322e73
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`scroll-timeline`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、スクロール可能な要素（_スクローラー_）を上下（または左右）にスクロールすることで進行する名前付きスクロール進行タイムラインを定義するために使用します。 `scroll-timeline` はタイムラインを提供するスクローラーに設定します。スクロール開始位置は 0% の進行を表し、スクロール終了位置は 100% の進行を表します。 0% の位置と 100% の位置が一致する場合（つまり、スクロールコンテナーがスクロールするオーバーフローがない場合）、タイムラインは非アクティブになります。
 

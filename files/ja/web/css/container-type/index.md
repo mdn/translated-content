@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a69f9903e7444d42adcf2432eaa511c05761c757
 ---
 
-{{CSSRef}}
-
 要素はクエリーコンテナーを確立するのに、 **`container-type`** という [CSS](/ja/docs/Web/CSS) プロパティを使用することができます。 `container-type` は、コンテナークエリーで使用されるコンテナーコンテキストの種類を定義するために使用されます。利用できるコンテナーコンテキストは次のとおりです。
 
 - [サイズ](/ja/docs/Web/CSS/CSS_containment/Container_size_and_style_queries): 最大または最小サイズ、アスペクト比、方向などの一般的なサイズまたはインラインサイズの条件に基づいて、コンテナーの子に CSS ルールを選択的に適用できるようにします。

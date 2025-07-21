@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 62ebcab471aceef4d843e57e310dae4ab1eda94a
 ---
 
-{{CSSRef}}
-
 **`<calc-keyword>`** は [CSS](/ja/docs/Web/CSS) の[データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)で、 `e` や `pi` のようなよく定義された定数を表します。これらの数学定数を何桁も手作業で入力したり、計算したりする必要はなく、利便性のために CSS によって直接提供されています。
 
 ## 構文

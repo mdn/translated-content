@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
 
-{{CSSRef}}
-
 [CSS 入れ子](/ja/docs/Web/CSS/CSS_nesting) モジュールにより、スタイルシートをより読みやすく、よりモジュール化しやすく、より保守しやすく書くことができます。常にセレクターを繰り返すわけではないので、ファイルサイズも縮小することができます。
 
 CSS 入れ子は、 CSS プリプロセッサーで事前にコンパイルされるのではなく、ブラウザーで解釈できるという点で、 [Sass](https://sass-lang.com/) のような CSS プリプロセッサーとは異なります。また、 CSS 入れ子において、 [`&` 入れ子セレクターの詳細度](/ja/docs/Web/CSS/CSS_nesting/Nesting_and_specificity)は {{cssxref(':is',':is()')}} 関数に似ており、関連するセレクターリストの中で最も高い詳細度を使用して計算されます。

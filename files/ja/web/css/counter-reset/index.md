@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cdc0015b727804fa293bb33e5abcefce688729ab
 ---
 
-{{CSSRef}}
-
 **`counter-reset`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [CSS カウンター](/ja/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)を指定された値で初期化します。要素の数値から 1 までカウントアップするカウンター、および要素の数値から 1 までカウントダウンするカウンターを作成することができます。
 
 {{InteractiveExample("CSS デモ: counter-reset")}}

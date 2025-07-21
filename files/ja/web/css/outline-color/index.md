@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
-
 **`outline-color`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線の色を設定します。
 
 {{InteractiveExample("CSS デモ: outline-color")}}

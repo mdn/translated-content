@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b5d025c25b6dd3f7ed0b82c4abed0b25f6462a5e
 ---
 
-{{CSSRef}}
-
 **`top`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[位置指定要素](/ja/docs/Web/CSS/position)の垂直位置の決定に関与します。位置指定されていない要素には効果はありません。
 
 {{InteractiveExample("CSS デモ: top")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`image()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 {{CSSxRef("&lt;image&gt;")}} を {{CSSxRef("url_function", "url()")}} 関数に似た様式で定義しますが、画像の書字方向を指定したり、メディアフラグメントで定義された画像の一部だけを表示したり、指定された画像がどれも描画できなかった場合の予備として単色を指定するなどの機能が追加されています。
 
 > [!NOTE]
