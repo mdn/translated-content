@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c6e02b5aa7c12f9e64f80a62f75ede8f5cb5ec21
 ---
 
-{{CSSRef}}
-
 CSS グリッドレイアウトのレベル 2 は、 `subgrid` の値を {{cssxref("grid-template-columns")}} および {{cssxref("grid-template-rows")}} に追加しています。このガイドでは、サブグリッドでできること、いくつかの使用例と、この機能で解決されるデザインパターンを詳述します。
 
 ## サブグリッドの導入

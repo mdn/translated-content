@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c2fd97474834e061404b992c8397d4ccc4439a71
 ---
 
-{{CSSRef}}
-
 **`d`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 SVG の {{SVGElement("path")}} 要素が描画するパスを定義します。存在すれば、要素の {{SVGAttr("d")}} 属性よりも優先されます。
 
 > **メモ:** `d` プロパティは、 {{SVGElement("svg")}} 内にある {{SVGElement("path")}} 要素にのみ適用されます。その他の SVG 要素や HTML 要素、擬似要素には適用されません。

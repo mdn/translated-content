@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`scroll()`** は [CSS 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、 {{cssxref("animation-timeline")}} と共に使用することができます。 {{cssxref("animation-timeline")}} はスクロール可能な要素 (_scroller_) とスクロールバーの軸を示し、現在の要素をアニメーションさせるための無名スクロール進行タイムラインを提供します。スクロール進行タイムラインは、スクローラーを上下（または左右）にスクロールすることで進行します。スクロール範囲内の位置は進行のパーセント値に変換されます。先頭は 0% で、末尾は 100% です。
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7526c9b4f29818bdca7505de41a4883f4ada2707
 ---
 
-{{CSSRef}}
-
 **`mask-border`** は [CSS](/ja/docs/Web/CSS) の[一括指定プロパティ](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)で、要素の境界の縁に沿ったマスクを生成することができます。
 
 ## 構成要素のプロパティ

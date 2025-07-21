@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 30bf998d2d87c97c2865d713ad5afc9c476264a0
 ---
 
-{{CSSRef}}
-
 **`animation-timing-function`** は [CSS](/ja/docs/Web/CSS) のプロパティで、アニメーションがそれぞれの周期の中でどのように進行するかを設定します。
 
 {{InteractiveExample("CSS デモ: animation-timing-function")}}

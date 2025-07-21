@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4d51a212bfda5ce9978d162caf5532d155f7eb0a
 ---
 
-{{CSSRef}}
-
 **`:future`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)セレクターで、 {{cssxref(":current")}} に一致する要素の後に完全に現れる要素と一致する、時間軸の擬似クラスです。例えば、 [WebVTT](/ja/docs/Web/API/WebVTT_API) によって表示されているキャプションに対応する動画などです。
 
 ```css

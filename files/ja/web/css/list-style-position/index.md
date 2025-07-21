@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`list-style-position`** は [CSS](/ja/docs/Web/CSS) のプロパティで、リストアイテムに対する {{cssxref("::marker")}} の位置を指定します。
 
 {{InteractiveExample("CSS デモ: list-style-position")}}

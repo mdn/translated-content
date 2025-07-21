@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 6de7472d2f9ff0a78a0098721df1d5473d51b953
 ---
 
-{{CSSRef}}
-
 > **メモ:** `font-stretch` プロパティは仕様書において [`font-width` に名前が変更されました](https://drafts.csswg.org/css-fonts/#font-stretch-desc)。 `font-stretch` は `font-width` プロパティの別名として維持されることになりました。
 > 新しい `font-width` という名前には、まだどのブラウザーでも対応していません。
 

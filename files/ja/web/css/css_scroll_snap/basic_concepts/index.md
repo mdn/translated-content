@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5f76b99045f87349ed030bbd6a3c2e43badb3c22
 ---
 
-{{CSSRef}}
-
 [CSS スクロールスナップ](/ja/docs/Web/CSS/CSS_scroll_snap)モジュールにあるプロパティを使用すると、ユーザーが文書をスクロールする際に、スクロールが特定の位置にスナップする方法を定義することができます。
 
 [スクロールスナップ](/ja/docs/Glossary/Scroll_snap)機能を使用すると、スクロール操作が完了した後に[スクロールコンテナー](/ja/docs/Glossary/Scroll_container)のスクロールポートが停止または「スナップ」するスナップ位置を定義できます。

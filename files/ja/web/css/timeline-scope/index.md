@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-{{CSSRef}}{{seecompattable}}
+{{seecompattable}}
 
 **`timeline-scope`** は [CSS](/ja/docs/Web/CSS) のプロパティで、名前付きアニメーションタイムラインのスコープを変更します。
 

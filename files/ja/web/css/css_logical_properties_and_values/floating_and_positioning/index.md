@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
 ---
 
-{{CSSRef}}
-
 [CSS 論理的プロパティと値](/ja/docs/Web/CSS/CSS_logical_properties_and_values)モジュールには、 {{cssxref("float")}} および {{cssxref("clear")}} の物理的な値の論理的な対応付けと、[位置指定レイアウト](/ja/docs/Web/CSS/CSS_positioned_layout)で使用する位置指定プロパティがあります。このガイドはこれらの使い方を見てみます。
 
 ## 対応付けされるプロパティと値

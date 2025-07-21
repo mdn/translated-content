@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 > **メモ:** `:blank` セレクターは、CSSWG が変更を続けているため、リスクがあるとみなされています。
 >

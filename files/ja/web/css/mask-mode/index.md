@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{CSSRef}}
-
 **`mask-mode`** は [CSS](/ja/docs/Web/CSS) のプロパティで、マスクされる要素に設定します。 {{cssxref("mask-image")}} で定義されたマスクを、輝度とアルファマスクのどちらで扱うかを設定します。
 
 ## 構文
