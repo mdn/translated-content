@@ -3,7 +3,7 @@ title: Access-Control-Allow-Methods
 slug: Web/HTTP/Reference/Headers/Access-Control-Allow-Methods
 original_slug: Web/HTTP/Headers/Access-Control-Allow-Methods
 l10n:
-   sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 **`Access-Control-Allow-Methods`** レスポンスヘッダーは、{{glossary("preflight request", "プリフライトリクエスト")}}のレスポンスの中で、リソースにアクセスするときに利用できる 1 つまたは複数のメソッドを指定します。
