@@ -22,7 +22,8 @@ _親である {{domxref("HTMLElement")}} から継承したプロパティがあ
 - {{domxref("HTMLSourceElement.src")}}
   - : 文字列で、HTML の [`src`](/ja/docs/Web/HTML/Reference/Elements/source#src) 属性を反映し、メディアリソースの URL が保持します。{{domxref("HTMLSourceElement.src")}} プロパティは関連する {{HTMLElement("source")}} 要素が {{htmlelement("video")}} や {{htmlelement("audio")}} 要素などのメディア要素の中で入れ子になった場合のみ意味を持ちます。 {{HTMLElement("picture")}} 要素の中で入れ子になったときは意味を持たず、無視されます。
 
-    > **メモ:** `src` プロパティが（兄弟要素によって）更新された場合、親の {{domxref("HTMLMediaElement")}} の `load` メソッドが完了時に呼び出されます。`<source>` 要素は自動的には再読み込みされないからです。
+    > [!NOTE]
+    > `src` プロパティが（兄弟要素によって）更新された場合、親の {{domxref("HTMLMediaElement")}} の `load` メソッドが完了時に呼び出されます。`<source>` 要素は自動的には再読み込みされないからです。
 
 - {{domxref("HTMLSourceElement.srcset")}}
   - : 文字列で、HTML の [`srcset`](/ja/docs/Web/HTML/Reference/Elements/source#srcset) 属性を反映し、カンマ (`',', U+002C COMMA`) で区切られた画像の候補のリストが入ります。画像の候補は URL の後に `'w'` に続いて画像の幅、または `'x'` に続いてピクセルの密度を指定します。

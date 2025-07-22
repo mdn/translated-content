@@ -34,7 +34,8 @@ importNode(externalNode, deep)
 
 インポートする側の文書のスコープにコピーされた `importedNode` です。
 
-> **メモ:** `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
+> [!NOTE]
+> `importedNode` の {{domxref("Node.parentNode")}} は `null` になります。まだ文書ツリーに挿入されていないからです。
 
 ## 例
 
