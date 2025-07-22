@@ -116,7 +116,8 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn_web_develo
 
 これは、テキスト形式のファイルの既定です。実際には「未知のテキスト形式」のファイルを表すものではありますが、ブラウザーは表示可能であると推測します。
 
-> **メモ:** `text/plain` は「任意のテキスト形式データ」を表すものではありませんので注意してください。特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。 CSS の MIME タイプである `text/css` を使用しなければなりません。
+> [!NOTE]
+> `text/plain` は「任意のテキスト形式データ」を表すものではありませんので注意してください。特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。 CSS の MIME タイプである `text/css` を使用しなければなりません。
 
 ### text/css
 
@@ -126,7 +127,8 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn_web_develo
 
 すべての HTML コンテンツは、このタイプで提供するべきです。 XHTML 向けの新たな MIME タイプ (`application/xhtml+xml` など) は、現在ではほぼ無用です。
 
-> **メモ:** `application/xml` や `application/xhtml+xml` は、 XML の厳密な解釈ルールや、 [`<![CDATA[…]]>`](/ja/docs/Web/API/CDATASection) セクション、 HTML/SVG/MathML の名前空間に含まれない要素を使用したい場合に使用してください。
+> [!NOTE]
+> `application/xml` や `application/xhtml+xml` は、 XML の厳密な解釈ルールや、 [`<![CDATA[…]]>`](/ja/docs/Web/API/CDATASection) セクション、 HTML/SVG/MathML の名前空間に含まれない要素を使用したい場合に使用してください。
 
 ### text/javascript
 

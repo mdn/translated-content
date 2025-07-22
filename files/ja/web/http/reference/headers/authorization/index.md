@@ -118,7 +118,8 @@ Authorization: Digest username=<username>,
 Authorization: Basic YWxhZGRpbjpvcGVuc2VzYW1l
 ```
 
-> **警告:** {{Glossary("Base64")}} エンコードは簡単に元に戻すことができ、元の名前とパスワードを取得することができます。そのため、 `Basic` 認証には暗号化セキュリティがありません。
+> [!WARNING]
+> {{Glossary("Base64")}} エンコードは簡単に元に戻すことができ、元の名前とパスワードを取得することができます。そのため、 `Basic` 認証には暗号化セキュリティがありません。
 > 認証を使用する際には常に {{Glossary("HTTPS")}} の使用をお勧めしますが、 `Basic` 認証を使用する場合は特にその必要性が強くなります。
 
 HTTP の Basic 認証を使用してサイトをパスワードで保護するために、 Apache または Nginx サーバーを構成する方法の例については、 [HTTP 認証](/ja/docs/Web/HTTP/Guides/Authentication)もご覧ください。

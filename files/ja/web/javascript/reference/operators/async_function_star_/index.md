@@ -53,7 +53,8 @@ async function* name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)との曖昧さを避けるために、キーワード `async function` で始めることはできません。 `async function` キーワードは、文を受け付けないコンテキストに現れたときのみ、式を開始します。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement) は、 [`async function*` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/async_function*)との曖昧さを避けるために、キーワード `async function` で始めることはできません。 `async function` キーワードは、文を受け付けないコンテキストに現れたときのみ、式を開始します。
 
 ### 引数
 
