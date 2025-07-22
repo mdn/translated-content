@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`pointer-events`** は [CSS](/ja/docs/Web/CSS) のプロパティで、特定のグラフィック要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になる可能性のある環境（存在する場合）を設定します。
 
 {{InteractiveExample("CSS デモ: pointer-events")}}
@@ -101,7 +99,8 @@ pointer-events: unset;
 - `none`
   - : 要素がポインターイベントの[対象](/ja/docs/Web/API/Event/target)になることはありません。しかし、子孫要素が `pointer-events` の別の値をセットされていた場合は、その子孫要素自体はポインターイベントのターゲットとなりえます。その場合、ポインターイベントはイベントキャプチャ/[バブリング](/ja/docs/Web/API/Event/bubbles)の過程で必要に応じて親要素のイベントリスナーをトリガーします。
 
-    > **メモ:** `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
+    > [!NOTE]
+    > `pointerenter` イベントと `pointerleave` イベントは、ポインティングデバイスが要素またはその子孫の 1 つに移動されたときに発行されます。そのため、 `pointer-events: none` が親要素に設定され、子要素に設定されていない場合でも、ポインターが子要素に移動したり、子要素から離れたりすると、親要素でイベントが発生します。
 
 #### SVG のみ（HTML では実験的）
 

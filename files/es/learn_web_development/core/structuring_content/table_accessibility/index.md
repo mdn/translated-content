@@ -73,7 +73,8 @@ Para utilizarlos:
 - El elemento `<tfoot>` delimita la parte de la tabla correspondiente al pie de página; esta podría ser una fila final con elementos en las filas anteriores. Puedes incluir el pie de página de la tabla justo en la parte inferior de la tabla, donde esperarías que esté, o justo debajo del encabezado (y el navegador lo mostrará aun así en la parte inferior de la tabla).
 - El elemento `<tbody>` delimita las otras partes del contenido de la tabla que no están en el encabezado o en el pie de página de la tabla. Aparecerá debajo del encabezado de la tabla o, a veces, en el pie de página, según cómo hayas decidido estructurarlo.
 
-> **Nota:** `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
+> [!NOTE]
+> `<tbody>` se incluye siempre en todas las tablas de forma implícita si no lo especificas en tu código. Para comprobarlo, abre uno de tus ejemplos anteriores que no incluya `<tbody>` y mira el código HTML en las [herramientas de desarrollo de tu navegador](/es/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools); verás que el navegador ha añadido esta etiqueta. Quizás te preguntes por qué deberías molestarte en incluirlo. Debes hacerlo para tener más control sobre la estructura y el estilo de la tabla.
 
 ### Aprendizaje activo: Añadir estructura a la tabla
 

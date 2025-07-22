@@ -92,7 +92,8 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
+> [!NOTE]
+> [`name`](#name) 属性は `<meta>` 要素において特別な意味を持ちます。また、[`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、`<meta>` 要素にすでに [`name`](#name), [`http-equiv`](#http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
 
 - `charset`
   - : この属性は、文書の文字エンコーディングを宣言します。この属性が存在する場合、その値は大文字小文字の区別なく "`utf-8`" という ASCII 文字列と一致する必要があります。UTF-8 が HTML5 文書で唯一の有効なエンコーディングだからです。文字エンコーディングを宣言する `<meta>` 要素は、文書の最初の 1024 バイトの中に完全に収まっている必要があります。

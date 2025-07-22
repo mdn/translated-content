@@ -126,7 +126,8 @@ if (elem.requestFullscreen) {
 - ドラッグ可能にしたい要素の [`draggable`](/ja/docs/Web/HTML/Reference/Global_attributes/draggable) 属性を `true` にセットします。
 - [`dragstart`](/ja/docs/Web/API/HTMLElement/dragstart_event) イベントのためのリスナーを追加し、このリスナーの中にドラッグデータをセットします。
 
-> **メモ:** [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
+> [!NOTE]
+> [MDN のドラッグ＆ドロップドキュメント](/ja/docs/Web/API/HTML_Drag_and_Drop_API)でもっと多くの情報を確認することができます。
 
 ### contentEditable
 

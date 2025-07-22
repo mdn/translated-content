@@ -38,7 +38,8 @@ open(url, target, windowFeatures)
 
         詳しくは[帰属報告 API](/ja/docs/Web/API/Attribution_Reporting_API) を参照してください。
 
-        > **メモ:** `open()` の呼び出しは、帰属トリガーの登録のために使用することはできません。
+        > [!NOTE]
+        > `open()` の呼び出しは、帰属トリガーの登録のために使用することはできません。
 
     - `popup`
       - : 既定では、`window.open` は新しいタブでページを開きます。 `popup` を true に設定すると、最小限のポップアップウィンドウを使用するように要求されます。ポップアップウィンドウに含まれる UI 機能はブラウザーが自動的に決定し、一般的にはアドレスバーのみを含みます。 `popup` が存在し、false に設定されている場合でも、新しいタブは開かれます。
@@ -171,7 +172,8 @@ link.addEventListener(
 
 上記のコードは、リンクがポップアップを開くことに関連するいくつかのユーザビリティの問題を解決しています。コード中の `event.preventDefault()` の目的は、リンクの既定値のアクションを取り消すことです。`click` のイベントリスナーが実行されれば、リンクの既定値のアクションを実行する必要はありません。しかし、ユーザーのブラウザーで JavaScript のサポートが無効または存在しない場合、 `click` のイベントリスナーは無視され、ブラウザーは `"WikipediaWindowName"` という名前を持つターゲットフレームまたはウィンドウに参照されたリソースを読み込む。フレームやウィンドウに `"WikipediaWindowName"` という名前がない場合、ブラウザーは新しいウィンドウを作成して `"WikipediaWindowName"` という名前を付けます。
 
-> **メモ:** `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) または [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) を参照してください。
+> [!NOTE]
+> `target` 属性についての詳細は、 [`<a>`](/ja/docs/Web/HTML/Reference/Elements/a#target) または [`<form>`](/ja/docs/Web/HTML/Reference/Elements/form#target) を参照してください。
 
 ### 既存のウィンドウを再利用して `target="_blank"` を防止する
 

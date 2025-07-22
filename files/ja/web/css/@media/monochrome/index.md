@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 0fd3414a0e35e6e30a2cd34977de607a23000bef
 ---
 
-{{CSSRef}}
-
 **`monochrome`** は [CSS](/ja/docs/Web/CSS) の[メディア特性](/ja/docs/Web/CSS/@media#メディア特性)で、出力機器のモノクロフレームバッファのピクセルあたりのビット数を調べるために使用することができます。
 
 ## 構文

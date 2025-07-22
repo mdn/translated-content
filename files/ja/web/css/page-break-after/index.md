@@ -3,8 +3,6 @@ title: page-break-after
 slug: Web/CSS/page-break-after
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > このプロパティは {{cssxref("break-after")}} プロパティで置き換えられました。
 

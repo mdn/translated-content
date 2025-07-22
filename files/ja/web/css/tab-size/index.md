@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 82877d5cf5a35e0a4d02b7c54aea0ce7d771d5cb
 ---
 
-{{CSSRef}}
-
 CSS の **`tab-size`** プロパティは、タブ文字 (U+0009) の表示幅の指定に用います。
 
 {{InteractiveExample("CSS デモ: tab-size")}}

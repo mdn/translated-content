@@ -25,7 +25,8 @@ Array(element1, element2, /* …, */ elementN)
 Array(arrayLength)
 ```
 
-> **メモ:** `Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出せます。どちらも新しい `Array` のインスタンスを生成します。
+> [!NOTE]
+> `Array()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてもつけなくても呼び出せます。どちらも新しい `Array` のインスタンスを生成します。
 
 ### 引数
 

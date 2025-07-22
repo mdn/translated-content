@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5fea7c9593f5e4b4ef13ec65064acf1eabf01e4e
 ---
 
-{{CSSRef}}
-
 **`::first-letter`** は [CSS](/ja/docs/Web/CSS) の[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)で、[ブロックコンテナー](/ja/docs/Web/CSS/CSS_display/Visual_formatting_model#ブロックコンテナー)の最初の行の最初の文字にスタイルを適用します。ただし、最初の文字より前に他のコンテンツ（画像やインラインテーブルなど）がないときに限ります。
 
 {{InteractiveExample("CSS デモ: ::first-letter", "tabbed-shorter")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{CSSRef}}
-
 **`mask-image`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素のマスクレイヤーとして使用する画像を設定し、マスク画像のアルファチャンネルと、 {{cssxref("mask-mode")}} プロパティの値に応じて、マスク画像の色の輝度に基づいて、マスク画像が設定されている要素の領域を非表示にします。
 
 ## 構文

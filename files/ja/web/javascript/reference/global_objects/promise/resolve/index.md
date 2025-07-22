@@ -41,7 +41,8 @@ Promise.resolve(value)
 
 `Promise.resolve()` はプロミスを _解決_ します。これはプロミスを履行したり拒否したりすることとは異なります。用語の定義については、[プロミスの説明](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise#description)を参照してください。簡単に言うと、 `Promise.resolve()` は、最終的な状態が他のプロミス、 Thenable オブジェクト、または他の値に依存しているプロミスを返します。
 
-> **メモ:** `value` 式の評価で同期的にエラーが発生する可能性がある場合、このエラーは捕捉されず、`Promise.resolve()` によって拒否されたプロミスにラップされます。この用途には {{jsxref("Promise/try", "Promise.try(() => value)")}} を使用することを検討してください。
+> [!NOTE]
+> `value` 式の評価で同期的にエラーが発生する可能性がある場合、このエラーは捕捉されず、`Promise.resolve()` によって拒否されたプロミスにラップされます。この用途には {{jsxref("Promise/try", "Promise.try(() => value)")}} を使用することを検討してください。
 
 `Promise.resolve()` は汎用で、サブクラス化に対応しています。つまり、`Promise` のサブクラスで呼び出すことができ、その結果はサブクラス型のプロミスになります。これを行うには、サブクラスのコンストラクターは [`Promise()`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise) コンストラクターと同じ定義で実装する必要があります。引数として `resolve` と `reject` コールバックで呼び出すことができる単一の `executor` 関数を受け入れることができます。
 

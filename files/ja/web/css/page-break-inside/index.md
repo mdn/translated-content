@@ -3,8 +3,6 @@ title: page-break-inside
 slug: Web/CSS/page-break-inside
 ---
 
-{{CSSRef}}
-
 > [!WARNING]
 > このプロパティは {{cssxref("break-inside")}} プロパティによって置き換えられました。
 

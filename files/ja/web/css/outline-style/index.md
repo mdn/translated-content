@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa714bb37625b21b0f40db1f1ea557e773456fa2
 ---
 
-{{CSSRef}}
-
 **`outline-style`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の輪郭線のスタイルを設定します。輪郭線とは要素の周りに描かれる線のことで、 {{cssxref("border")}} よりも外側です。
 
 {{InteractiveExample("CSS デモ: outline-style")}}

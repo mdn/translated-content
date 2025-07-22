@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8b4e6b773d03959d5a5b2d02200243c4714079b9
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`align-content`** プロパティは、[フレックスボックス](/ja/docs/Web/CSS/CSS_flexible_box_layout)の交差軸または[グリッド](/ja/docs/Web/CSS/CSS_grid_layout)のブロック軸方向の内部のアイテムの間または周囲の空間の配分方法を設定します。
 
 下記のインタラクティブデモでは、グリッドレイアウトを使用してこのプロパティの値のいくつかを説明しています。
@@ -132,7 +130,8 @@ align-content: unset;
 - `unsafe`
   - : 配置キーワードと共に使用します。アイテムの寸法と配置コンテナーとの関係、あふれることによってデータの損失が発生するかどうかにかかわらず、指定された値を尊重します。
 
-> **メモ:** `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
+> [!NOTE]
+> `<content-distribution>` 値 (`space-between`, `space-around`, `space-evenly`, `stretch`) は[ブロックレイアウト](/ja/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_block_abspos_tables#align-content_and_justify-content)では効果がありません。そのブロック内のすべてのコンテンツが単一の[配置対象物](/ja/docs/Glossary/Alignment_Subject)として扱われるためです。
 
 ## 公式定義
 

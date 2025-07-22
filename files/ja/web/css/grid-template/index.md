@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b2833ddfd45cae1bb5e050d24637865e9327408d
 ---
 
-{{CSSRef}}
-
 **`grid-template`** は [CSS](/ja/docs/Web/CSS) のプロパティで、[一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties)プロパティとして {{glossary("grid column", "グリッド列")}}、{{glossary("grid_row", "グリッド行")}}、{{glossary("grid areas", "グリッド領域")}} を定義します。
 
 {{InteractiveExample("CSS デモ: grid-template")}}
@@ -123,7 +121,8 @@ grid-template: unset;
     > [!NOTE]
     > これらのトラックリストに {{cssxref("repeat", "repeat()")}} 関数を使うことはできません。トラックは「ASCII アート」内の行列と一対一の関係で視覚的に並んでいるためです。
 
-> **メモ:** {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`grid-template` ではなく） `grid` を使用してください。
+> [!NOTE]
+> {{cssxref("grid")}} 一括指定プロパティは同じ構文を受け入れますが、暗黙的なグリッドプロパティをその初期値にリセットしてしまいます。これらの値が別々にカスケードされないようにするには、（`grid-template` ではなく） `grid` を使用してください。
 
 ## 公式定義
 

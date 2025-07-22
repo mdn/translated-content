@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c0daf1f038fdbdb62d71bfdeaf3a0a083660792c
 ---
 
-{{CSSRef}}
-
 **`fit-content`** キーワードは {{cssxref("fit-content_function", "fit-content(stretch)")}} と同等です。実際には、ボックスは利用可能な空間を使用しますが、　{{cssxref("max-content")}} 以上にはならないことを意味します。
 
 {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("min-width")}}, {{cssxref("min-height")}}, {{cssxref("max-width")}}, {{cssxref("max-height")}} のレイアウトされたボックスの大きさとして使用される場合、最大寸法と最小寸法は、コンテンツの寸法を参照します。

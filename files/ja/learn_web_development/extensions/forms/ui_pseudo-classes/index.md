@@ -587,7 +587,8 @@ input[type="radio"]:indeterminate {
 > [!NOTE]
 > この例は GitHub の [radios-checked-indeterminate.html](https://mdn.github.io/learning-area/html/forms/pseudo-classes/radios-checked-indeterminate.html) でライブで見ることもできます（[ソースコード](https://github.com/mdn/learning-area/blob/main/html/forms/pseudo-classes/radios-checked-indeterminate.html) も参照してください）。
 
-> **メモ:** [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
+> [!NOTE]
+> [`indeterminate` 状態を含む興味深い例](/ja/docs/Web/HTML/Reference/Elements/input/checkbox#indeterminate_state_checkboxes) が [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox) リファレンスページに掲載されていますので、参考にしてください。
 
 ## その他の擬似クラス
 

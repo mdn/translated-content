@@ -60,7 +60,8 @@ Notification.requestPermission((result) => {
 
 コールバック版はオプションで、ユーザーが表示を許可する要求に答えた時に呼び出されるコールバック関数を受け入れます。
 
-> **メモ:** `Notification.requestPermission` がプロミスベース版に対応しているかどうかを、確実に機能テストする方法はありません。古いブラウザーの対応が必要な場合は、コールバック版を使用してください。非推奨ではありますが、新しいブラウザーでも動作します。詳しくは、[ブラウザー互換性表](/ja/docs/Web/API/Notification/requestPermission_static#ブラウザーの互換性)を参照してください。
+> [!NOTE]
+> `Notification.requestPermission` がプロミスベース版に対応しているかどうかを、確実に機能テストする方法はありません。古いブラウザーの対応が必要な場合は、コールバック版を使用してください。非推奨ではありますが、新しいブラウザーでも動作します。詳しくは、[ブラウザー互換性表](/ja/docs/Web/API/Notification/requestPermission_static#ブラウザーの互換性)を参照してください。
 
 ### 例
 

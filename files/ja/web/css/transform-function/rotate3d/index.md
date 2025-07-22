@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 48813be4b5187c6a17e744e7f9ba37a146302847
 ---
 
-{{CSSRef}}
-
 **`rotate3d()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)は、要素を 3D 空間内の固定した軸を中心に、形を崩さずに回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: rotate3d()")}}

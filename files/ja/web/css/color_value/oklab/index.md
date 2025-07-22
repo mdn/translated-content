@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f0737728c3b26504f1d2d759b8daf88a2ed496af
 ---
 
-{{CSSRef}}
-
 **`oklab()`** 関数記法は、指定された色を、人間の目による色の知覚方法を模倣しようとする Oklab 色空間で表現する。この `oklab()` は Oklab 色空間上の同次座標系、 a 軸と b 軸で動作します。極座標系、彩度、色相が必要な場合は、 {{cssxref("color_value/oklch", "oklch()")}} を使用してください。
 
 Oklab は知覚的色空間で、次のような場合に使用されます。
@@ -38,7 +36,8 @@ oklab(59.69% 0.1007 0.1191 / 0.5);
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> [!NOTE]
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 
