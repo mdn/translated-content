@@ -3,8 +3,6 @@ title: flex
 slug: Web/CSS/flex
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS flex es una propiedad resumida que indica la capacidad de un elemento flexible para alterar sus dimensiones y llenar el espacio disponible. Los elementos flexibles pueden ser estirados para utilizar el espacio disponible proporcional a su factor de crecimiento flexible o su factor de contracción flexible para evitar desbordamiento.

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 856b52f634b889084869d2ee0b8bb62c084be04d
 ---
 
-{{CSSRef}}
-
 La propiedad **`filter`** de [CSS](/es/docs/Web/CSS) aplica efectos gráficos como desenfoque o cambio de color a un elemento. Los filtros se usan comúnmente para ajustar la representación de imágenes, fondos y bordes.
 
 Varias [funciones](#funciones), como `blur()` y `contrast()`, están disponibles para ayudarte a lograr efectos predefinidos.
