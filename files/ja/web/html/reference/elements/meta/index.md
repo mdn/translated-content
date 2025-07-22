@@ -18,7 +18,8 @@ l10n:
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **メモ:** [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性は `<meta>` 要素において特別な意味を持ちます。
+> [!NOTE]
+> [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name) 属性は `<meta>` 要素において特別な意味を持ちます。
 > [`itemprop`](/ja/docs/Web/HTML/Reference/Global_attributes/itemprop) 属性は、 `<meta>` 要素にすでに [`name`](/ja/docs/Web/HTML/Reference/Elements/meta/name), [`http-equiv`](/ja/docs/Web/HTML/Reference/Elements/meta/http-equiv), [`charset`](#charset) のいずれかがある場合は設定してはいけません。
 
 - `charset`

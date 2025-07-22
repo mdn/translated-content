@@ -5,8 +5,6 @@ l10n:
   sourceCommit: dfd18cb9ee7c6195d07cd937d206b53246f7507e
 ---
 
-{{CSSRef}}
-
 **`animation-name`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素に適用されるアニメーションを記述する 1 つまたは複数の {{cssxref("@keyframes")}} アットルールの名前を指定します。複数の `@keyframes` アットルールをカンマ区切りの文字列で指定します。指定した名前がどの `@keyframes` アットルールにも一致しない場合、プロパティはアニメーションしません。
 
 {{InteractiveExample("CSS デモ: animation-name")}}
@@ -109,7 +107,8 @@ animation-name: unset;
 - {{cssxref("&lt;string&gt;")}}
   - : 上記で記述されているカスタム識別子と同じ規則に従う一連の文字で、二重引用符 (") または単一引用符 (') で囲まれている点が異なります。 `animation-name` と対応する {{cssxref("@keyframes")}} アットルールの名前の両方に引用符で囲まれた文字列を使用する場合、`none`、グローバルキーワード、アンダースコアまたは二重ダッシュで始まる名前は有効ですが、使用は推奨されません。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 `animation-name` に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 `animation-name` に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
 ## 公式定義
 

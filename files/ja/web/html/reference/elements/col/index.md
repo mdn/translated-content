@@ -94,7 +94,8 @@ td {
 
     この属性が設定されていない場合、その値は `<col>` 要素が属する {{HTMLElement("colgroup")}} 要素の [`align`](/ja/docs/Web/HTML/Reference/Elements/colgroup#align) 属性から継承します。それも存在しない場合は、`left` 値であるものとします。
 
-    > **メモ:** `left`、`center`、`right`、`justify` の値と同じ効果を実現するために、{{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > [!NOTE]
+    > `left`、`center`、`right`、`justify` の値と同じ効果を実現するために、{{cssxref("text-align")}} プロパティを `<col>` 要素を与えたセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
     > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用していない場合は、CSS の `td:nth-child(an+b)` セレクターを使用してください。`a` を 0 に、`b` を表内の列の位置を示す序数にします。例えば `td:nth-child(2) { text-align: right; }` は、2 列目を右揃えにします。
     >
@@ -116,7 +117,8 @@ td {
     - `middle` : テキストをセルの中央部に置きます。
     - and `top` : テキストを可能な限りセルの上端に近づけて配置します。
 
-    > **メモ:** {{cssxref("vertical-align")}} プロパティを `<col>` 要素を指定したセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
+    > [!NOTE]
+    > {{cssxref("vertical-align")}} プロパティを `<col>` 要素を指定したセレクターに設定しようとしないでください。{{HTMLElement("td")}} 要素は `<col>` 要素の子孫ではないため、プロパティを継承しません。
     >
     > 表で [`colspan`](/ja/docs/Web/HTML/Reference/Elements/td#colspan) 属性を使用していない場合は、 CSS の `td:nth-child(an+b)` セレクターを使用してください。a は表内の列数、b は表内の列の位置を示す序数です。このセレクターの後でのみ `vertical-align` プロパティを使用することができます。
     >

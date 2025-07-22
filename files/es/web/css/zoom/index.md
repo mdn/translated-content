@@ -3,7 +3,7 @@ title: zoom
 slug: Web/CSS/zoom
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 La propiedad no estándar de [CSS](/es/docs/Web/CSS) **`zoom`** se puede usar para controlar el aumento de escala de un elemento. Si es posible, se debe usar {{cssxref("transform-function/scale", "transform: scale()")}} en lugar de esta propiedad. Sin embargo, a diferencia de los CSS Transforms, `zoom` afecta el tamaño del diseño del elemento.
 

@@ -43,7 +43,8 @@ iframe {
 
     その例は、`Permissions-Policy` のトピックの [iframes](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#iframes) を参照してください。
 
-    > **メモ:** `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
+    > [!NOTE]
+    > `allow` 属性で指定された権限ポリシーは {{httpheader("Permissions-Policy")}} ヘッダーで指定されたポリシーの上に、さらに制限を実装するものです。それはそれを置き換えるものではありません。
 
 - `allowfullscreen`
   - : この `<iframe>` が {{domxref("Element.requestFullscreen", "requestFullscreen()")}} を呼び出して全画面モードにすることができる場合は、 `true` に設定します。
@@ -144,12 +145,14 @@ iframe {
 - `src`
   - : 埋め込むページの URL です。[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy#オリジンの継承)に従う空白ページを埋め込む場合は、 `about:blank` の値を使用してください。また、プログラムから `<iframe>` の src 属性を削除すると (例えば {{domxref("Element.removeAttribute()")}} などで)、 Firefox (バージョン 65 以降)、 Chromium ベースのブラウザー、 Safari/iOS では `about:blank` が読み込まれます。
 
-    > **メモ:** `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
+    > [!NOTE]
+    > `about:blank` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `srcdoc`
   - : 埋め込むインライン HTML で、 `src` 属性を上書きします。そのコンテンツは完全な HTML 文書の構文に従う必要があります。この構文には doctype ディレクティブ、`<html>`、`<body>` タグなどが含まれますが、そのほとんどは省略して body のコンテンツだけにすることができます。この文書は位置が `about:srcdoc` となります。ブラウザーが `srcdoc` 属性に対応していない場合は、 `src` 属性の URL で代替されます。
 
-    > **メモ:** `about:srcdoc` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
+    > [!NOTE]
+    > `about:srcdoc` ページは、アンカーリンクなどの相対 URL を解決するときに、埋め込み文書の URL をベース URL として使用します。
 
 - `width`
   - : フレームの幅を CSS ピクセル数で示します。既定値は `300` です。
@@ -191,7 +194,8 @@ DOM の {{domxref("HTMLIFrameElement")}} オブジェクトでは、スクリプ
 
 [置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)なので、 `<iframe>` 要素のボックス内における埋め込み文書の位置は、 {{cssxref("object-position")}} プロパティで設定することができます。
 
-> **メモ:** {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
+> [!NOTE]
+> {{cssxref("object-fit")}} プロパティは、`<iframe>` 要素には効果がありません。
 
 ## `error` および `load` イベントの動作
 
