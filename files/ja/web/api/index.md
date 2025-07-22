@@ -14,6 +14,7 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 ### ア
 
 - [位置情報 API](/ja/docs/Web/API/Geolocation_API)
+- [インク API](/ja/docs/Web/API/Ink_API)
 - [IndexedDB](/ja/docs/Web/API/IndexedDB_API)
 - [ウィンドウ制御 API](/ja/docs/Web/API/Window_Management_API)
 - [ウィンドウ制御オーバーレイ API](/ja/docs/Web/API/Window_Controls_Overlay_API)
