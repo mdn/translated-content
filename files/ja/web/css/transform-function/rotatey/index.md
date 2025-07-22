@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 88e01e6f934ea5f2413cecfab1b5112cf819ba09
 ---
 
-{{CSSRef}}
-
 **`rotateY()`** は [CSS](/ja/docs/Web/CSS) の[関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)で、要素の形を変化させずに縦座標 (垂直軸) の周りを回転させる座標変換を定義します。結果は {{cssxref("&lt;transform-function&gt;")}} データ型になります。
 
 {{InteractiveExample("CSS デモ: rotateY()")}}
@@ -39,7 +37,8 @@ transform: rotateY(3.142rad);
 
 回転軸は、CSS の {{ cssxref("transform-origin") }} プロパティで定義される原点を通ります。
 
-> **メモ:** `rotateY(a)` は `rotate3d(0, 1, 0, a)` と等価です。
+> [!NOTE]
+> `rotateY(a)` は `rotate3d(0, 1, 0, a)` と等価です。
 
 > [!NOTE]
 > 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。

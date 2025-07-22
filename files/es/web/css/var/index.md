@@ -3,7 +3,7 @@ title: var()
 slug: Web/CSS/var
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La función **`var()`** puede ser utilizada como valor en cualquier propiedad de un elemento. La función var() no puede ser usada como nombre de una propiedad, selector o cualquier cosa que no sea un valor de propiedad. (Hacerlo provoca normalmente una sintaxis erronea o bien un valor que no tiene conexión con la variable).
 

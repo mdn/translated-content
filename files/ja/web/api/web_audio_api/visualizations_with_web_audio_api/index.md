@@ -33,7 +33,8 @@ distortion.connect(audioCtx.destination);
 
 アナライザノードは、{{domxref("AnalyserNode.fftSize")}}プロパティ値（指定されていない場合は、デフォルトは 2048 です）として指定する内容に応じて、特定の周波数ドメインで高速フーリエ変換（fft）を使用してオーディオデータをキャプチャします。
 
-> **メモ:** {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
+> [!NOTE]
+> {{domxref("AnalyserNode.minDecibels")}}と{{domxref("AnalyserNode.maxDecibels")}}を使用して、fft データスケーリング範囲の最小値と最大値を指定することもできます。{{domxref("AnalyserNode.smoothingTimeConstant")}}。それらの使い方の詳細については、それらのページをお読みください。
 
 データを取得するには、周波数データを取得するために{{domxref("AnalyserNode.getFloatFrequencyData()")}}および{{domxref("AnalyserNode.getByteFrequencyData()")}}メソッドを使用する必要があります。{{domxref("AnalyserNode.getByteTimeDomainData()")}}と{{domxref(" AnalyserNode.getFloatTimeDomainData()")}}を使用して波形データを取得します。
 

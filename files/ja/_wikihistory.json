@@ -24119,13 +24119,6 @@
       "mfuji09"
     ]
   },
-  "Web/CSS/@media/aural": {
-    "modified": "2019-03-23T23:33:39.943Z",
-    "contributors": [
-      "mfuji09",
-      "ethertank"
-    ]
-  },
   "Web/CSS/@media/color": {
     "modified": "2020-10-15T22:05:50.804Z",
     "contributors": [
@@ -44215,6 +44208,13 @@
     "contributors": [
       "mfuji09",
       "teoli"
+    ]
+  },
+  "conflicting/Web/CSS/@media": {
+    "modified": "2019-03-23T23:33:39.943Z",
+    "contributors": [
+      "mfuji09",
+      "ethertank"
     ]
   },
   "conflicting/Web/CSS/Reference": {

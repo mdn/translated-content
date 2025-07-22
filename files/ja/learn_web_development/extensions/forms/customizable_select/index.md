@@ -101,11 +101,13 @@ l10n:
 
 - `<button><selectedcontent></selectedcontent></button>` 構造がセレクトの {{htmlelement("button")}} を表します。
   {{htmlelement("selectedcontent")}} 要素を追加することで、ブラウザーは現在選択されている {{htmlelement("option")}} の内容をボタン内に複製し、[カスタムスタイルを適用](#セレクトボタン内の選択されているオプション内容のスタイリング調整) できます。この構造をマークアップに含めない場合、ブラウザーはデフォルトボタン内に選択されているオプションのテキストを表示し、スタイリングが難しくなります。
-  > **メモ:** `<button>` 内に任意のコンテンツを含めて、閉じている `<select>` 内に好きなものを表示できますが、アクセシブル名に影響するため注意が必要です。
+  > [!NOTE]
+  > `<button>` 内に任意のコンテンツを含めて、閉じている `<select>` 内に好きなものを表示できますが、アクセシブル名に影響するため注意が必要です。
 - `<select>` の残りの内容はドロップダウンピッカーを表し、通常はピッカー内の異なる選択肢を表す `<option>` 要素のみです。他のコンテンツも含められますが、推奨されません。
 - 従来、`<option>` 要素にはテキストしか含められませんでしたが、カスタマイズ可能な選択要素では画像や他の対話可能でないテキストレベルのセマンティック要素など、他のマークアップ構造も含められます。{{cssxref("::before")}} や {{cssxref("::after")}} 擬似要素も使えますが、これらは送信値には含まれません。例では、各 `<option>` にアイコンとテキストラベルを含む 2 つの {{htmlelement("span")}} 要素があり、それぞれ独立してスタイリングや配置ができます。
 
-  > **メモ:** `<option>` の内容はテキストノードだけでなく多階層の DOM サブツリーも含められるため、[現在の `<select>` の値](/ja/docs/Web/API/HTMLSelectElement/value) を JavaScript で取得する際のルールがあります。選択された `<option>` の {{domxref("Node.textContent", "textContent")}} プロパティ値を取得し、{{jsxref("String.prototype.trim", "trim()")}} を実行した結果が `<select>` の値になります。
+  > [!NOTE]
+  > `<option>` の内容はテキストノードだけでなく多階層の DOM サブツリーも含められるため、[現在の `<select>` の値](/ja/docs/Web/API/HTMLSelectElement/value) を JavaScript で取得する際のルールがあります。選択された `<option>` の {{domxref("Node.textContent", "textContent")}} プロパティ値を取得し、{{jsxref("String.prototype.trim", "trim()")}} を実行した結果が `<select>` の値になります。
 
 この設計により、非対応ブラウザーではクラシックな `<select>` にフォールバックします。`<button><selectedcontent></selectedcontent></button>` 構造は完全に無視され、非テキストの `<option>` 内容はテキストノードだけに変換されますが、機能は維持されます。
 
@@ -312,7 +314,8 @@ option::checkmark {
 }
 ```
 
-> **メモ:** `::checkmark` と `::picker-icon` 擬似要素はアクセシビリティツリーに含まれないため、生成された {{cssxref("content")}} は支援技術で読み上げられません。新しいアイコンを設定する場合は、視覚的な意味が通じるようにしてください。
+> [!NOTE]
+> `::checkmark` と `::picker-icon` 擬似要素はアクセシビリティツリーに含まれないため、生成された {{cssxref("content")}} は支援技術で読み上げられません。新しいアイコンを設定する場合は、視覚的な意味が通じるようにしてください。
 
 ここまでの状態を確認しましょう。以下は最後の 3 セクションを反映した状態です。
 
@@ -340,7 +343,8 @@ option::checkmark {
 - {{cssxref("overlay")}}
   - : ポップオーバーが非表示から表示に変わるとき、`overlay` の値が `none` から `auto` に変わり、トップレイヤーに昇格し、非表示になったときに再び戻って削除されます。これはトランジションが完了するまでトップレイヤーからのポップオーバーの削除が延期され、トランジションが確実に見えるように、アニメーションする必要があります。
 
-> **メモ:** [`allow-discrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
+> [!NOTE]
+> [`allow-discrete`](/ja/docs/Web/CSS/transition-behavior#allow-discrete) 値は離散プロパティのアニメーションを有効にするために必要です。
 
 次に、`::picker(select):popover-open` で表示状態のピッカーを選択し、`opacity` を `1` にします。これがトランジションの終了状態です。
 

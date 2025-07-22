@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascade/Shorthand_properties
 original_slug: Web/CSS/Shorthand_properties
 ---
 
-{{CSSRef}}
-
 Las **_propiedades abreviadas_** son propiedades CSS que le permiten establecer los valores de varias otras propiedades CSS simultáneamente. Usando una propiedad abreviada, puede escribir hojas de estilo más concisas (y a menudo más legibles), ahorrando tiempo y energía.
 
 La especificación CSS define propiedades abreviadas para agrupar la definición de propiedades comunes que actúan sobre el mismo tema. Por ejemplo, la propiedad CSS {{cssxref("background")}} es una propiedad abreviada que puede definir los valores de {{cssxref("background-color")}}, {{cssxref("background-image") }}, {{cssxref("background-repeat")}} y {{cssxref("background-position")}}. Del mismo modo, las propiedades más comunes relacionadas con la tipografía se pueden definir usando la abreviatura {{cssxref("font")}}, y los diferentes márgenes alrededor de una caja se pueden definir usando la abreviatura {{cssxref("margin")}}.

@@ -35,7 +35,8 @@ HTML 仕様書は、以下の一連の標準メタデータ名を定義してい
   | `strict-origin-when-cross-origin` | 同一オリジンへのリクエストでは、 URL 全体 (引数を除く) を送信します。現在のページと安全性が同等であると見られる宛先 (HTTP(S)→HTTPS) にはオリジンを送信します。それ以外は、リファラーを送信しません。 |
   | `unsafe-URL`                      | 同一オリジンまたはオリジン間リクエストで、 URL 全体 (引数を除く) を送信します。                                                                                                                      |
 
-  > **メモ:** `<meta name="referrer">` を ({{domxref("Document.write", "document.write()")}} または {{domxref("Node.appendChild", "appendChild()")}} で) 動的に挿入すると、リファラーの動作が予測不能になります。
+  > [!NOTE]
+  > `<meta name="referrer">` を ({{domxref("Document.write", "document.write()")}} または {{domxref("Node.appendChild", "appendChild()")}} で) 動的に挿入すると、リファラーの動作が予測不能になります。
   >
   > - 相反する複数のポリシーが定義されている場合は、 `no-referrer` ポリシーが適用されます。
 

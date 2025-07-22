@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{CSSRef}}
-
 **`border`** は [一括指定](/ja/docs/Web/CSS/CSS_cascade/Shorthand_properties) の [CSS](/ja/docs/Web/CSS) プロパティで、要素の境界を設定します。これは {{Cssxref("border-width")}}, {{Cssxref("border-style")}}, {{Cssxref("border-color")}} の値を設定します。
 
 {{InteractiveExample("CSS デモ: border")}}

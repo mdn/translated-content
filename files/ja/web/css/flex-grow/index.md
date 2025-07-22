@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a9280d06d6e78ec8fc35d3a7a0f7f98d921370e0
 ---
 
-{{CSSRef}}
-
 **`flex-grow`** は [CSS](/ja/docs/Web/CSS) のプロパティで、フレックスコンテナー内の[**正の余白**](/ja/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)のうち、フレックスアイテムの[主軸長](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox#フレックスモデル)に割り当てる量を指定するフレックス成長率を設定します。
 
 フレックスコンテナーの主軸長が、そのフレックスアイテムの主軸長を結合した長さよりも長い場合、この正の余白はフレックスアイテム間で分配され、各フレックスアイテムが伸長する大きさは、コンテナーのすべてのアイテムのフレックス伸長係数の合計の割合で按分した値になります。

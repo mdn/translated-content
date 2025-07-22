@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 883b021c97375f872d0702f0d0747b1373155cef
 ---
 
-{{CSSRef}}
-
 このツールを使用して、 CSS の {{cssxref("border-image")}} の値を作成できます。
 
 {{EmbedGHLiveSample("css-examples/tools/border-image-generator/", '100%', 1200)}}

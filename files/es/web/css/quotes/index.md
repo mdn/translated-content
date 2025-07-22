@@ -3,8 +3,6 @@ title: quotes
 slug: Web/CSS/quotes
 ---
 
-{{CSSRef}}
-
 ## Sumario
 
 La propiedad [CSS](/es/docs/Web/CSS) `quotes` indica cómo debe renderizar las citas el navegador.

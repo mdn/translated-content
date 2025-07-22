@@ -16,7 +16,8 @@ new Map()
 new Map(iterable)
 ```
 
-> **メモ:** `Map()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。`new` を省略して呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Map()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でしか作成できません。`new` を省略して呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
