@@ -2,7 +2,6 @@
 title: "DelegatedInkTrailPresenter: expectedImprovement プロパティ"
 short-title: expectedImprovement
 slug: Web/API/DelegatedInkTrailPresenter/expectedImprovement
-page-type: web-api-instance-property
 l10n:
   sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
