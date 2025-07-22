@@ -223,7 +223,8 @@ secondParagraph.appendChild(myTextNode);
 
 ![段落要素内のテキストノードを DOM ツリー内の個々の兄弟として。](sample2b2.jpg)
 
-> **メモ:** `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
+> [!NOTE]
+> `createTextNode()` と `appendChild` は、hello と world という単語の間にホワイトスペースを入れる簡単な方法です。もう 1 つの重要な注意点は、hello の後に world という単語が追加されたように、`appendChild` メソッドは最後の子の後に子を追加するということです。ですから、hello と world の間にテキストノードを追加したい場合は、 `insertBefore` を `appendChild` の代わりに使用する必要があります。
 
 ### 文書オブジェクトと createElement(..) メソッドによる新しい要素の生成
 
@@ -270,7 +271,8 @@ sample1.html における基本的な表の生成の手順は次の通りです�
 - すべての要素を生成します。
 - 最後に、各子要素を（上の図のように）表構造に従って付加していきます。以下のソースコードは sample1.html のコメント付き版になります。
 
-> **メモ:** `start` 関数の最後には新たなコードがあります。 DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute()` メソッドを用いて任意の要素の任意の属性を設定することができます。
+> [!NOTE]
+> `start` 関数の最後には新たなコードがあります。 DOM のメソッド `setAttribute()` を用いて表のの `border` プロパティが設定されており、`setAttribute()` は属性名と属性値という 2 つの引数を取ります。`setAttribute()` メソッドを用いて任意の要素の任意の属性を設定することができます。
 
 ```html
 <html lang="ja">

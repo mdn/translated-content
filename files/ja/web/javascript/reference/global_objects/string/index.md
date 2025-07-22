@@ -116,7 +116,8 @@ console.log(typeof strPrim3); // "string"
 console.log(typeof strObj); // "object"
 ```
 
-> **警告:** `String` をコンストラクターとして使用することはほとんどないでしょう。
+> [!WARNING]
+> `String` をコンストラクターとして使用することはほとんどないでしょう。
 
 プリミティブの文字列と `String` オブジェクトは {{jsxref("Global_Objects/eval", "eval()")}} を使用すると異なる結果となります。 `eval` に渡されたプリミティブは、ソースコードとして扱われます。 `String` オブジェクトは他のオブジェクトと同様に、オブジェクトとしてそのままの文字列を返します。
 

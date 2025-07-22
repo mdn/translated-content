@@ -28,7 +28,8 @@ Functional notation: `oklch(L C H[ / A])`
 - `A` {{optional_inline}}
   - : {{CSSXref("&lt;alpha-value&gt;")}} またはキーワード `none` です。 `1` は `100%` （完全に不透明）に対応します。
 
-> **メモ:** `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
+> [!NOTE]
+> `none` の効果については[色成分の欠落](/ja/docs/Web/CSS/color_value#色成分の欠落)を参照してください。
 
 ### 形式文法
 

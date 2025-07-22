@@ -65,7 +65,8 @@ l10n:
 - `style`: CSS スタイルシート。
 - `track`: WebVTT ファイル。
 
-> **メモ:** `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
+> [!NOTE]
+> `font` および `fetch` の事前読み込みには、 `crossorigin` 属性を設定する必要があります。下記の [CORS を使用したフェッチ](#cors_を使用したフェッチ)を参照してください。
 
 > [!NOTE]
 > 使用されると予想されるこれらの値やウェブ機能について、もっと詳細のことは、 HTML の仕様書、 [Link type "preload"](https://html.spec.whatwg.org/#match-preload-type) を参照してください。また、フェッチの仕様書で管理されている `as` 属性の値の完全な一覧は、 [request destinations](https://fetch.spec.whatwg.org/#concept-request-destination) を参照してください。
@@ -183,7 +184,8 @@ l10n:
 
 ## スクリプトと事前読み込み
 
-> **メモ:** [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)を扱う場合は、代わりに [`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload)を使用してください。
+> [!NOTE]
+> [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)を扱う場合は、代わりに [`<link rel="modulepreload">`](/ja/docs/Web/HTML/Reference/Attributes/rel/modulepreload)を使用してください。
 
 これらの事前読み込みに関するもう一つの良い点として、スクリプトを使って実行できることが挙げられます。
 例えば、ここでは {{domxref("HTMLLinkElement")}} インスタンスを作成し、それを DOM に取り付けています。
