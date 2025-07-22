@@ -1,7 +1,6 @@
 ---
 title: インク API
 slug: Web/API/Ink_API
-page-type: web-api-overview
 l10n:
   sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
