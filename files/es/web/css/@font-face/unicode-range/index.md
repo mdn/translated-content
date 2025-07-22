@@ -3,8 +3,6 @@ title: unicode-range
 slug: Web/CSS/@font-face/unicode-range
 ---
 
-{{cssref}}
-
 La regla CSS **`unicode-range`** especifica un rango específico de caracteres a ser usados por una fuente definida {{cssxref("@font-face")}} y hacerla disponible para su uso en la página actual. Si la página no usa algún caracter en ese rango, la fuente no es descargada; si usa al menos uno de ellos, la fuente es descargada.
 
 El propósito de esta regla es permitir a las fuente ser segmentados, así el navegador solo necesita descargar la fuente necesitada para el contexto de texto en una página en particular. Por ejemplo, un sitio con muchas localizaciones podría proveer fuentes separadas para el inglés, griego y japonés. Para los usuarios que ven la versión en inglés de la página, las fuentes para el griego y el japonés no son necesarias, y por lo tanto no se descargan, ahorrando ancho de banda.

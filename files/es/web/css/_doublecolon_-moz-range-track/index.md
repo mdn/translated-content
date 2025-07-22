@@ -3,7 +3,7 @@ title: ::-moz-range-track
 slug: Web/CSS/::-moz-range-track
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

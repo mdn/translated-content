@@ -3,7 +3,7 @@ title: ::-webkit-progress-value
 slug: Web/CSS/::-webkit-progress-value
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

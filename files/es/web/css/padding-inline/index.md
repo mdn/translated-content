@@ -3,7 +3,7 @@ title: padding-inline
 slug: Web/CSS/padding-inline
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`padding-inline`** define el relleno en línea lógico de inicio y final de un elemento, que asigna las propiedades de relleno físicas dependiendo del modo de escritura del elemento, direccionalidad, y orientación del texto.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 84d5320ca6c8d0925995083de66abacb98922ced
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`backdrop-filter`** le permite aplicar efectos gráficos como desenfoque o cambio de color al área detrás de un elemento. Debido a que se aplica a todo lo que hay detrás del elemento, para ver el efecto debe hacer que el elemento o su fondo sean al menos parcialmente transparentes.
 
 {{InteractiveExample("CSS Demo: backdrop-filter()")}}

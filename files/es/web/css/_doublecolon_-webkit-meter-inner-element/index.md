@@ -3,7 +3,7 @@ title: ::-webkit-meter-inner-element
 slug: Web/CSS/::-webkit-meter-inner-element
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

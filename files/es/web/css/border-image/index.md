@@ -3,8 +3,6 @@ title: border-image
 slug: Web/CSS/border-image
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad de CSS `border-image` permite utilizar una imágen para definir los bordes de los elementos. Esto hace que dibujarlos sea más simple y elimina la necesidad de utilizar muchas cajas en algunos casos.

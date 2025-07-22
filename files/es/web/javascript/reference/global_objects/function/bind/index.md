@@ -98,7 +98,8 @@ LateBloomer.prototype.declare = function () {
 
 ### Ejemplo: Funciones ligadas usadas como constructores
 
-> **Advertencia:** **Advetencia:** Esta sección demuestra las capacidades de JavaScript y documenta algunos usos extremos del método `bind()`. Los métodos mostrados a continuación no son la mejor forma de hacer las cosas y probablemente no deberían ser utilizados en ningún ambiente productivo.
+> [!WARNING]
+> **Advetencia:** Esta sección demuestra las capacidades de JavaScript y documenta algunos usos extremos del método `bind()`. Los métodos mostrados a continuación no son la mejor forma de hacer las cosas y probablemente no deberían ser utilizados en ningún ambiente productivo.
 
 Las funciones ligadas son automáticamente adecuadas para usarse con el operador {{jsxref("Operators/new", "new")}} para construir nuevas instancias creadas por la función objetivo. Cuando una función ligada es utilizada para construir un valor, el parámetro enviado para reemplazar la referencia `this` es ignorado. De cualquier forma, los argumentos iniciales sí son tomados en consideración y antecederán a los parámetros que se envíen al constructor:
 

@@ -4,8 +4,6 @@ slug: conflicting/Web/CSS/CSS_cascade/Value_processing
 original_slug: Web/CSS/CSS_cascade/actual_value
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El **valor real** (**actual value**) de una propiedad CSS es el valor usado una vez que se aplican todas las aproximaciones. Por ejemplo, tal vez un agente usuario solo puede renderizar bordes con un valor de píxel entero, y se vería forzado a calcular la aproximación de la anchura del borde.

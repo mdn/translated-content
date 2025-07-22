@@ -3,8 +3,6 @@ title: Media queries
 slug: Web/CSS/CSS_media_queries
 ---
 
-{{CSSRef}}
-
 Las **consultas de medios** le permiten adaptar su sitio o aplicación dependiendo de la presencia o el valor de varias características y parámetros del dispositivo.
 
 Son un componente clave del [responsive design](/es/docs/Learn_web_development/Core/CSS_layout/Responsive_Design). Por ejemplo, una consulta de medios puede reducir el tamaño de la fuente en dispositivos pequeños, aumentar el relleno entre párrafos cuando se ve una página en modo vertical, o aumentar el tamaño de los botones en las pantallas táctiles.

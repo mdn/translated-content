@@ -25,7 +25,8 @@ console.log(Math.random());
 // Expected output: a number from 0 to <1
 ```
 
-> **Nota:** `Math.random()` no proporciona números aleatorios criptográficamente seguros, por lo que no debe ser usado para cualquier cosa relacionada con seguridad.
+> [!NOTE]
+> `Math.random()` no proporciona números aleatorios criptográficamente seguros, por lo que no debe ser usado para cualquier cosa relacionada con seguridad.
 > En su lugar, puede hacer uso de la API web _Crypto_. Concretamente, puede utilizar el método {{domxref("Crypto.getRandomValues", "window.crypto.getRandomValues()")}}.
 
 ## Sintaxis

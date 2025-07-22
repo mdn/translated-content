@@ -3,8 +3,6 @@ title: background
 slug: Web/CSS/background
 ---
 
-{{CSSRef}}
-
 La propiedad `background` es un atajo para definir los valores individuales del fondo en una única regla CSS. Se puede usar `background` para definir los valores de una o de todas las propiedades siguientes: {{ Cssxref("background-attachment") }}, {{ Cssxref("background-color", "color") }}, {{ Cssxref("background-image", "image") }}, {{ Cssxref("background-position", "position") }}, {{ Cssxref("background-repeat", "repeat") }}.
 
 - {{ Cssxref("initial", "Valor inicial") }}: ver propiedades individuales

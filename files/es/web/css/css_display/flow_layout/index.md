@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_display/Flow_layout
 original_slug: Web/CSS/CSS_flow_layout
 ---
 
-{{CSSRef}}
-
 El _Flujo Normal_, o también Flow Layout, es la forma en que los elementos de línea y de bloque son presentados en una página sin que haya cambios en su diseño. El flujo es esencialmente un grupo de elementos que se perciben entre sí e interactúan entre ellos en nuestro diseño. Cuando uno de ellos se encuentra _fuera del flujo_, éste se comporta de manera independiente.
 
 In normal flow, **inline** elements display in the inline direction, that is in the direction words are displayed in a sentence according to the [Writing Mode](/es/docs/Web/CSS/CSS_writing_modes) of the document. **Block** elements display one after the other, as paragraphs do in the Writing Mode of that document. In English therefore, inline elements display one after the other, starting on the left, and block elements start at the top and move down the page.

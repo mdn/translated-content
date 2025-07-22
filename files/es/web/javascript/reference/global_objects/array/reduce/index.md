@@ -118,7 +118,8 @@ Y si proporcionas un `valorInicial`, el resultado sería como este:
 
 ## Polyfill
 
-> **Nota:** **Polyfill** se refiere a unas líneas de código o un plugin que permite "tener" (en realidad se simulan de alguna otra manera) las nuevas funcionalidades de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.
+> [!NOTE]
+> **Polyfill** se refiere a unas líneas de código o un plugin que permite "tener" (en realidad se simulan de alguna otra manera) las nuevas funcionalidades de HTML5 en aquellos navegadores que nativamente no lo soportan. Consigue que, en adelante, el código sea transparente para el programador, como si el navegador soportase la funcionalidad nativamente.
 
 `reduce` es una extensión de JavaScript al estándar ECMA-262; como tal puede que no esté presente en otras implementaciones del estándar. Puedes trabajar con ésto insertando el siguiente código al comienzo de tus scripts, permitiendo el uso de `reduce` en implementaciones de ECMA-262 que no lo implementan de modo nativo. Este algoritmo es exactamente el mismo usando en Firefox y SpiderMonkey.
 

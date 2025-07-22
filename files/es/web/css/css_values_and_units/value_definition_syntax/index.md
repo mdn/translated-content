@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_Values_and_Units/Value_definition_syntax
 original_slug: Web/CSS/Value_definition_syntax
 ---
 
-{{CSSRef}}
-
 **La sintaxis de definición de valores CSS**, una gramática formal, se utiliza para definir el conjunto de valores válidos para una propiedad o función CSS. Además de esta sintaxis, el conjunto de valores válidos puede restringirse aún más mediante restricciones semánticas (por ejemplo, para que un número sea estrictamente positivo).
 
 La sintaxis de definición describe qué valores están permitidos y las interacciones entre ellos. Un componente puede ser una _palabra clave_, algunos caracteres _literales_, ó un valor de tipo de dato de CSS o propiedad CSS.

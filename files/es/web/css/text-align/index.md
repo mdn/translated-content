@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b82ff59aab7883b7bb2222cf9f9f9b6eed818e08
 ---
 
-{{CSSRef}}
-
 La propiedad **`text-align`** de [CSS](/es/docs/Web/CSS) establece la alineación horizontal del contenido a nivel de línea dentro de un elemento de bloque o caja de celda-tabla. Esto significa que funciona como {{cssxref("vertical-align")}} pero en dirección horizontal.
 
 {{InteractiveExample("CSS Demo: text-align")}}

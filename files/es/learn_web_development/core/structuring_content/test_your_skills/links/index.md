@@ -29,7 +29,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Enlaces 2
 
@@ -47,7 +48,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Enlaces 3
 
@@ -63,7 +65,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/links/links3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 642f2385b7cf791b3a40a81a17752f5b0c3208ea
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`background-image`** establece una o más imágenes de fondo para un elemento.
 
 {{InteractiveExample("CSS Demo: background-image")}}

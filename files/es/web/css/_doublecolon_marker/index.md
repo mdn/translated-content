@@ -3,7 +3,7 @@ title: ::marker
 slug: Web/CSS/::marker
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 El [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) **`::marker`** en [CSS](/es/docs/Web/CSS) selecciona la caja de marcadores de un elemento de la lista, que normalmente contiene una viñeta o un número. Funciona en cualquier elemento o pseudo-elemento configurado para [`display: list-item`](/es/docs/Web/CSS/display), como el elemento {{HTMLElement("li")}} y {{HTMLElement("summary")}}.
 

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9a39cf29e4d40513b19c79abfe10b6338dde8dd
 ---
 
-{{CSSRef}}
-
 La propiedad **`bottom`** de [CSS](/es/docs/Web/CSS) establece la posición vertical de un [elemento posicionado](/es/docs/Web/CSS/position). No tiene efecto en elementos no posicionados.
 
 {{InteractiveExample("CSS Demo: bottom")}}

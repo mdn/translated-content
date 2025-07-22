@@ -3,8 +3,6 @@ title: border-bottom-right-radius
 slug: Web/CSS/border-bottom-right-radius
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`border-bottom-right-radius`** establece el redondeo de la esquina inferior derecha del elemento. El redondeo puede ser un círculo o una elipse, o si uno de los valores es `0`, no se redondeará la esquina, dejándola cuadrada.

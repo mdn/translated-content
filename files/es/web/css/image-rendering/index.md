@@ -3,7 +3,7 @@ title: image-rendering
 slug: Web/CSS/image-rendering
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad [CSS](/es/docs/Web/CSS) **`image-rendering`** provee una sugerencia al navegador acerca del algoritmo que debe usar para escalar imágenes.
 

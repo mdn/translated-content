@@ -2770,18 +2770,6 @@
       "cizquierdof"
     ]
   },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Input_types": {
-    "modified": "2020-07-16T22:22:11.445Z",
-    "contributors": [
-      "Enesimus"
-    ]
-  },
-  "Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls": {
-    "modified": "2020-07-16T22:22:12.140Z",
-    "contributors": [
-      "Enesimus"
-    ]
-  },
   "Learn_web_development/Extensions/Forms/Your_first_form": {
     "modified": "2020-09-15T05:57:07.460Z",
     "contributors": [
@@ -8382,12 +8370,6 @@
   },
   "Web/CSS/-moz-image-rect": {
     "modified": "2019-03-23T22:35:59.460Z",
-    "contributors": [
-      "pekechis"
-    ]
-  },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2019-03-23T22:35:58.872Z",
     "contributors": [
       "pekechis"
     ]
@@ -19365,6 +19347,18 @@
       "RaulHernandez"
     ]
   },
+  "conflicting/Learn_web_development/Extensions/Forms": {
+    "modified": "2020-07-16T22:22:12.140Z",
+    "contributors": [
+      "Enesimus"
+    ]
+  },
+  "conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771": {
+    "modified": "2020-07-16T22:22:11.445Z",
+    "contributors": [
+      "Enesimus"
+    ]
+  },
   "conflicting/Learn_web_development/Extensions/Testing": {
     "modified": "2020-07-16T22:38:54.378Z",
     "contributors": [
@@ -19865,6 +19859,12 @@
       "Mgjbot",
       "Firewordy",
       "HenryGR"
+    ]
+  },
+  "conflicting/Web/CSS/clip": {
+    "modified": "2019-03-23T22:35:58.872Z",
+    "contributors": [
+      "pekechis"
     ]
   },
   "conflicting/Web/CSS/cursor": {

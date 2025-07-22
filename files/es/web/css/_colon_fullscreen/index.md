@@ -3,7 +3,7 @@ title: :fullscreen
 slug: Web/CSS/:fullscreen
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:fullscreen`** de [CSS](/es/docs/Web/CSS) representa un elemento que se muestra cuando el navegador está en modo de [pantalla completa](/es/docs/Web/API/Fullscreen_API).
 

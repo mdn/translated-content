@@ -3,8 +3,6 @@ title: background-color
 slug: Web/CSS/background-color
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 `Background-color` es un propiedad de CSS que define el color de fondo de un elemento, puede ser el valor de un color o la palabra clave `transparent`.

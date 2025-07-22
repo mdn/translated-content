@@ -5,8 +5,6 @@ l10n:
   sourceCommit: c77cfcd17e85db6c1b93160c70668f2ff6c2809c
 ---
 
-{{CSSRef}}
-
 La propiedad CSS **`font-language-override`** controla el uso de glifos específicos del idioma en un tipo de letra (tipografía).
 
 De forma predeterminada, el atributo `lang` de HTML le dice a los navegadores que muestren glifos diseñados específicamente para ese idioma. Por ejemplo, muchas tipografías tienen un carácter especial para el dígrafo `fi` que fusiona el punto de la "i" con la "f". Sin embargo, si el idioma está configurado en turco, es probable que el tipo de letra sepa que no debe usar el glifo fusionado; El turco tiene dos versiones de la "i", una con un punto (`i`) y otra sin (`ı`), y usar la ligadura transformaría incorrectamente una "i" con punto en una "i" sin punto.

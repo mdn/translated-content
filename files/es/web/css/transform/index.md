@@ -3,8 +3,6 @@ title: transform
 slug: Web/CSS/transform
 ---
 
-{{CSSRef}}
-
 La propiedad CSS `transform` te permite modificar el espacio de coordenadas del modelo de formato visual CSS. Usándola, los elementos pueden ser trasladados, rotados, escalados o sesgados de acuerdo a los valores establecidos.
 
 {{InteractiveExample("CSS Demo: transform")}}

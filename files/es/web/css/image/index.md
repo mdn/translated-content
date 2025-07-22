@@ -3,8 +3,6 @@ title: <image>
 slug: Web/CSS/image
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo de dato [CSS](/es/docs/Web/CSS) `<image>` representa una imagen 2D. Hay dos tipos de imágenes en CSS: imágenes planas estáticas, generalmente referenciadas usando una URL, e imágenes dinámicamente generadas, como degradados o representaciones de partes del árbol.

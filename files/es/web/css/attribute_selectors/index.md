@@ -3,8 +3,6 @@ title: Selectores de atributo
 slug: Web/CSS/Attribute_selectors
 ---
 
-{{CSSRef}}
-
 El **selector de atributos** CSS coincide con los elementos en función de la presencia o el valor de un atributo determinado.
 
 ```css

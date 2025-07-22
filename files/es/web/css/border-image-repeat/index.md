@@ -3,8 +3,6 @@ title: border-image-repeat
 slug: Web/CSS/border-image-repeat
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad CSS **`border-image-repeat`** define cómo se manejará la parte media de una imagen de borde para que coincida con el tamaño del borde. Tiene sintaxis de un valor, el cual describe el comportamiento de todos los lados, y otra sintaxis de dos valores, que establece diferentes valores para el comportamiento horizontal y vertical.

@@ -3,8 +3,6 @@ title: :valid
 slug: Web/CSS/:valid
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:valid`** de [CSS](/es/docs/Web/CSS) representa cualquier elemento {{HTMLElement("input")}} u otro elemento {{HTMLElement("form")}} cuyo contenido se [valide](/es/docs/Web/HTML/Constraint_validation) satisfactoriamente. Esto permite que los campos válidos adopten fácilmente una apariencia que ayuda al usuario a confirmar que sus datos están formateados correctamente.
 
 ```css

@@ -3,8 +3,6 @@ title: :lang
 slug: Web/CSS/:lang
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:lang()`** de [CSS](/es/docs/Web/CSS) es utilizada para modificar elementos en función del idioma en el que se determina que están.
 
 ```css

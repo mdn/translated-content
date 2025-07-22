@@ -3,8 +3,6 @@ title: "@page"
 slug: Web/CSS/@page
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La regla @page es usada para modificar algunas propiedades CSS cuando se va a imprimir una página web. No se pueden cambiar todas las propiedades CSS con `@page`, solo los márgenes, las líneas viudas, huérfanas y los saltos de página. Cualquier intento de cambiar otra propiedad será ignorada.

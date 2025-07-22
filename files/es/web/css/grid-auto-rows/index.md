@@ -3,8 +3,6 @@ title: grid-auto-rows
 slug: Web/CSS/grid-auto-rows
 ---
 
-{{CSSRef}}
-
 La propiedad **`grid-auto-rows`** de CSS especifíca el tamaño de una nueva fila creada de forma implícita.
 
 ```css

@@ -3,8 +3,6 @@ title: left
 slug: Web/CSS/left
 ---
 
-{{CSSRef}}
-
 La propiedad `left` especifica parte de la posición de un elemento (posicionado - es decir, con una posición determinada por código).
 
 Para los elementos con una posición absoluta (aquellos que tienen la propiedad {{ Cssxref("position") }}`: absolute` ó `position: fixed`), la propiedad left determina la distancia entre el margen izquierdo del elemento y el borde izquierdo de su bloque contenedor.

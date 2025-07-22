@@ -3,8 +3,6 @@ title: max-block-size
 slug: Web/CSS/max-block-size
 ---
 
-{{CSSRef}}
-
 La propiedad **`max-block-size`** [CSS](/es/docs/Web/CSS) especifica el tamaño máximo de un elemento en la dirección opuesta a la escritura dirigida como se especifica por {{cssxref("writing-mode")}}. Es decir, si la dirección de escritura es horizontal, entonces `max-block-size` es equivalente a {{cssxref("max-height")}}; si la dirección de escritura es vertical, `max-block-size` es el mismo que {{cssxref("max-width")}}.
 
 El tamaño máximo de la otra dimensión se especifica usando la propiedad {{cssxref("max-inline-size")}}.

@@ -3,7 +3,7 @@ title: inset-inline-start
 slug: Web/CSS/inset-inline-start
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 La propiedad de [CSS](/es/docs/Web/CSS) **`inset-inline-start`** define la inserción de inicio en línea lógica de un elemento, que se asigna a un desplazamiento físico en función del modo de escritura, la direccionalidad y la orientación del texto del elemento. Corresponde a la propiedad {{cssxref("top")}}, {{cssxref("right")}}, {{cssxref("bottom")}}, o {{cssxref("left")}} dependiendo de la propiedad en los valores definidos para {{cssxref("writing-mode")}}, {{cssxref("direction")}}, y {{cssxref("text-orientation")}}.
 

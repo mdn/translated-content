@@ -3,8 +3,6 @@ title: font-style
 slug: Web/CSS/@font-face/font-style
 ---
 
-{{CSSRef}}
-
 ## Summary
 
 La propiedad CSS "font-style" permite a los autores esepcificar estilos de fuente para las fuentes especificadas en la regla "`@font-face`".

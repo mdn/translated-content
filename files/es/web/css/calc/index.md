@@ -3,7 +3,7 @@ title: calc
 slug: Web/CSS/calc
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Sumario
 

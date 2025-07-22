@@ -3,8 +3,6 @@ title: blur()
 slug: Web/CSS/filter-function/blur
 ---
 
-{{cssref}}
-
 La función CSS **`blur()`** aplica un [desenfoque Gaussiano](https://en.wikipedia.org/wiki/Gaussian_blur) a la imagen de entrada. El resultado es un {{cssxref("&lt;filter-function&gt;")}}.
 
 {{InteractiveExample("CSS Demo: blur()")}}

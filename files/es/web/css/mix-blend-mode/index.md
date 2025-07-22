@@ -3,8 +3,6 @@ title: mix-blend-mode
 slug: Web/CSS/mix-blend-mode
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`mix-blend-mode`** describe cómo el contenido de un elemento debe mezclarse con el contenido del elemento que está tras él y con el fondo del elemento.
 
 {{InteractiveExample("CSS Demo: mix-blend-mode")}}

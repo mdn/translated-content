@@ -3,8 +3,6 @@ title: Selectores CSS
 slug: Web/CSS/CSS_selectors
 ---
 
-{{CSSRef}}
-
 Los **selectores** definen sobre qué elementos se aplicará un conjunto de reglas CSS.
 
 ## Selectores básicos

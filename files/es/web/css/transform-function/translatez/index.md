@@ -3,8 +3,6 @@ title: translateZ()
 slug: Web/CSS/transform-function/translateZ
 ---
 
-{{CSSRef}}
-
 La función **`translateZ()`** [CSS](/es/docs/Web/CSS) reposiciona un elemento a lo largo del eje-z (z-axis) en el espacio 3D, es decir, más cerca o mas lejos del espectador. Su resultado es un {{cssxref("&lt;transform-function&gt;")}} tipo de dato.
 
 {{InteractiveExample("CSS Demo: translateZ()")}}
@@ -99,7 +97,8 @@ Esta transformación es definida por una {{cssxref("&lt;length&gt;")}} la cual e
 
 En los ejemplos interacticos anteriores, [`perspective: 550px;`](/es/docs/Web/CSS/perspective) (para crear un espacio 3D) y [`transform-style: preserve-3d;`](/es/docs/Web/CSS/transform-style) (los elementos hijos, los 6 lados del cubo, estan también posicionados en el espacio 3D), es decir, han sido establecidos en el cubo.
 
-> **Nota:** `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
+> [!NOTE]
+> `translateZ(tz)` es equivalente a `translate3d(0, 0, tz)`.
 
 ## Syntax
 

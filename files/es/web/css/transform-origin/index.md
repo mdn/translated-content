@@ -3,7 +3,7 @@ title: transform-origin
 slug: Web/CSS/transform-origin
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ SeeCompatTable() }}
 
 ## Resumen
 

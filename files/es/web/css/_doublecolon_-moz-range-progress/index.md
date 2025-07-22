@@ -3,7 +3,7 @@ title: ::-moz-range-progress
 slug: Web/CSS/::-moz-range-progress
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{Non-standard_header}}
 
 ## Resumen
 

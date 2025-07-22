@@ -25,7 +25,8 @@ Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Texto básico HTML 2
 
@@ -39,7 +40,8 @@ Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Texto básico HTML 3
 
@@ -53,7 +55,8 @@ Intenta actualizando el código más abajo para recrear el ejemplo terminado:
 
 {{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/basic-text/basic-text3.html", '100%', 700)}}
 
-> **Nota:** [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el punto de inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/tasks/basic-text/basic-text3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

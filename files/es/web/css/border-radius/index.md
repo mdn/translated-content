@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
 ---
 
-{{CSSRef}}
-
 La propiedad **`border-radius`** [CSS](/es/docs/Web/CSS) redondea las esquinas del borde exterior de un elemento. Puedes establecer un único radio para crear esquinas circulares o dos radios para crear esquinas elípticas.
 
 {{InteractiveExample("CSS Demo: border-radius")}}

@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_syntax/Syntax
 original_slug: Web/CSS/Syntax
 ---
 
-{{cssref}}
-
 La meta básica del lenguaje Cascading Stylesheet (CSS) es permitir al motor del navegador pintar elementos de la página con características específicas, como colores, posición o decoración. La sintaxis CSS refleja estas metas y estos son los bloques básicos de construcción.
 
 - La **propiedad** que es un identificador, un _nombre_ leíble por humanos, que define qué característica es considerada.

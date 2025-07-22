@@ -3,8 +3,6 @@ title: font-display
 slug: Web/CSS/@font-face/font-display
 ---
 
-{{CSSRef}}
-
 El descriptor `font-display` determina cómo se muestra una fuente basándose en cuándo está descargada y lista para usarse.
 
 ## La visualización de las fuentes

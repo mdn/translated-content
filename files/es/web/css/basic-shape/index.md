@@ -3,8 +3,6 @@ title: <basic-shape>
 slug: Web/CSS/basic-shape
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 El tipo **`<basic-shape>`** puede ser especificado usando funciones de figura (shape) básicas. Al usar esta sintaxis para definir figuras, la caja de referencia es definida por cada propiedad que usa valores `<basic-shape>`. El sistema de coordenadas para la figura tiene su origen en la esquina superior izquierda de la caja de referencia, con el eje x corriendo hacia la derecha y el eje y, hacia abajo. Todas las longitudes expresadas en porcentajes son resueltas con base en las dimensiones de la caja de referencia.

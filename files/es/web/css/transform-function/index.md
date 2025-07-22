@@ -3,8 +3,6 @@ title: transform-function
 slug: Web/CSS/transform-function
 ---
 
-{{CSSRef}}
-
 El tipo de dato CSS `<transform-function>` denota una función por aplicar a la representación de un elemento para modificarlo. Generalmente, dicha transformación puede ser expresada por matrices, y la imagen resultante puede ser determinada usando multiplicación de matrices en cada punto.
 
 ## Coordenadas para graficos 2D

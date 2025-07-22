@@ -4,8 +4,6 @@ slug: Web/CSS/url_value
 original_slug: Web/CSS/url
 ---
 
-{{cssref}}
-
 La función de [CSS](/es/docs/Web/CSS) **`url()`** usa un [filtro SVG](/es/docs/Web/SVG/Element/filter) para cambiar la apariencia en la imagen de entrada.
 
 ## Sintaxis

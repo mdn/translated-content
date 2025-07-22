@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_without_z-index
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_without_z-index
 ---
 
-{{CSSRef}}
-
 « [CSS](/es/docs/Web/CSS) « [ENTENDIENDO LA PROPIEDAD CSS Z-INDEX](/es/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 Cuando ningún elemento tiene z-index, los elementos son apilados en este orden (de abajo hacia arriba):

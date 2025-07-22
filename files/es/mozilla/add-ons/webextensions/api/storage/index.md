@@ -52,7 +52,8 @@ El almacenamiento tiene tres propiedades, que representan los diferentes tipos d
 
 {{WebExtExamples("h2")}}
 
-> **Nota:** **Agradecimientos**
+> [!NOTE]
+> **Agradecimientos**
 >
 > Esta API se basa en la API [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage) de Chromium. Esta documentación se deriva de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) en el código de Chromium.
 

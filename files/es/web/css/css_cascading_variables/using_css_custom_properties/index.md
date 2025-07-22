@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 original_slug: Web/CSS/Using_CSS_custom_properties
 ---
 
-{{cssref}}
-
 En CSS, las **propiedades personalizadas** (también conocidas como **variables**) son entidades definidas por autores de CSS que contienen valores específicos que se pueden volver a utilizar en un documento. Se establecen mediante la notación de propiedades personalizadas (por ejemplo, **`--main-color: black;`**) y se acceden mediante la función {{cssxref("var", "var()")}} (por ejemplo, color: **`var (--main-color);`**).
 
 Sitios web complejos tienen cantidades muy grandes de CSS, a menudo con una gran cantidad de valores repetidos. Por ejemplo, el mismo color se puede utilizar en cientos de lugares diferentes, lo cual requiere buscar y reemplazar globalmente si necesitamos cambiar ese color. Las variables CSS permiten que un valor se almacene en un lugar y luego se haga referencia en varios otros lugares. Un beneficio adicional son los identificadores semánticos. Por ejemplo **`--main-text-color`** es más fácil de entender que **`#00ff00`**, especialmente si este mismo color también se utiliza en otro contexto.
@@ -180,7 +178,8 @@ Tenga en cuenta que éstas son propiedades personalizadas, no variables reales c
 
 Utilizando [`var()`](/es/docs/Web/CSS/var) podemos definir múltiples **valores de sustitución (fallback)** que se usarán cuando la variable dada no está definida aún; esto puede ser útil cuando se trabaja con [Custom Elements](/es/docs/Web/API/Web_components/Using_custom_elements) y [Shadow DOM](/es/docs/Web/API/Web_components/Using_shadow_DOM).
 
-> **Nota:** **Los valores de sustitución (fallback) no se usan para arreglar problemas de compatibilidad del navegador.** Si el navegador no tiene soporte para Propiedades Personalizadas de CSS, el valor de fallback no es de ayuda. **Es simplemente un respaldo para que aquellos navegadores que sí soportan Propiedades Personalizadas de CSS** puedan elegir un valor diferente en caso de que la variable no se haya definido o contenga un valor no válido.
+> [!NOTE]
+> **Los valores de sustitución (fallback) no se usan para arreglar problemas de compatibilidad del navegador.** Si el navegador no tiene soporte para Propiedades Personalizadas de CSS, el valor de fallback no es de ayuda. **Es simplemente un respaldo para que aquellos navegadores que sí soportan Propiedades Personalizadas de CSS** puedan elegir un valor diferente en caso de que la variable no se haya definido o contenga un valor no válido.
 
 El primer argumento a la función es el nombre de la [propiedad personalizada](https://www.w3.org/TR/css-variables/#custom-property)que se va a sustituir. El segundo argumento a la función, si se proporciona, es un valor de reserva, que se utiliza como valor de sustitución cuando la [propiedad personalizada](https://www.w3.org/TR/css-variables/#custom-property)referenciada no es válida. La función solo acepta dos parámetros, asignando todo lo que después de la primera coma como el segundo parámetro. Si ese segundo parámetro es inválido, por ejemplo una lista de valores separados por comas, el fallback fallará. Por ejemplo:
 

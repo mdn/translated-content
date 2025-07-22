@@ -3,8 +3,6 @@ title: :target
 slug: Web/CSS/:target
 ---
 
-{{CSSRef}}
-
 La [pseudo-clase](/es/docs/Web/CSS/Pseudo-classes) **`:target`** de [CSS](/es/docs/Web/CSS) representa un elemento único (el _elemento objetivo_) con un [`id`](/es/docs/Web/HTML/Reference/Global_attributes#id) que coincide con el fragmento de la URL.
 
 ```css

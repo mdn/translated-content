@@ -346,7 +346,8 @@ El archivo **/bin/www** es el punto de entrada de la aplicación. Lo primero que
 var app = require("../app");
 ```
 
-> **Nota:** `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
+> [!NOTE]
+> `require()` es una función de node global que se usa para importar módulos en el archivo actual. Aquí especificamos el módulo app.js utilizando una ruta relativa y omitiendo la extensión de archivo opcional (.js).
 
 El resto del código en este archivo configura un servidor HTTP de node con la aplicación configurada en un puerto específico (definido en una variable de entorno o 3000 si la variable no está definida), y comienza a escuchar e informar errores y conexiones del servidor. Por ahora no necesita saber nada más sobre el código (todo en este archivo es "repetitivo"), pero siéntase libre de revisarlo si está interesado.
 

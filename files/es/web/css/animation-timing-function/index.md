@@ -3,7 +3,7 @@ title: animation-timing-function
 slug: Web/CSS/animation-timing-function
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 ## Resumen
 

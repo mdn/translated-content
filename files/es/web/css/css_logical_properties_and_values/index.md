@@ -3,8 +3,6 @@ title: Propiedades y Valores Lógicos de CSS
 slug: Web/CSS/CSS_logical_properties_and_values
 ---
 
-{{CSSRef}}
-
 **CSS Logical Properties** (las propiedades lógicas en CSS) son un módulo de [CSS](/es/docs/Web/CSS) que introduce propiedades y valores lógicos, proporcionando la capacidad de controlar el diseño de forma lógica en vez de la asignación de dimensiones físicas de dirección y dimensión.
 
 Este módulo también define propiedades y valores lógicos para propiedades previamente definidas en CSS 2.1. Las propiedades lógicas definen una equivalencia a sus propiedades físicas correspondientes.

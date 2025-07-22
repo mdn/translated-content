@@ -3,8 +3,6 @@ title: color
 slug: Web/CSS/color
 ---
 
-{{CSSRef}}
-
 La propiedad de CSS **`color`** selecciona el [valor de color](/es/docs/Web/CSS/color_value) de primer plano del contenido de elemento de texto y [decoraciones de texto](/es/docs/Web/CSS/text-decoration). Tambien establece el valor {{cssxref("currentcolor")}} que se puede usar como un valor indirecto en otras propiedades, y es el valor predeterminado para otras propiedades de color, como {{cssxref("border-color")}}.
 
 Para obtener una descripción general del uso del color en HTML, consulte [Aplicando color a los elementos HTML mediante CSS](/es/docs/Web/CSS/CSS_colors/Applying_color).

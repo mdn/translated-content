@@ -1225,8 +1225,8 @@
 /es/docs/Learn/Forms/How_to_structure_a_web_form	/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /es/docs/Learn/Forms/Sending_and_retrieving_form_data	/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /es/docs/Learn/Forms/Styling_web_forms	/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
-/es/docs/Learn/Forms/Test_your_skills:_HTML5_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
-/es/docs/Learn/Forms/Test_your_skills:_Other_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+/es/docs/Learn/Forms/Test_your_skills:_HTML5_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn/Forms/Test_your_skills:_Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
 /es/docs/Learn/Forms/Your_first_form	/es/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /es/docs/Learn/Front-end_web_developer	/es/docs/orphaned/Learn/Front-end_web_developer
 /es/docs/Learn/Getting_started_with_the_web	/es/docs/Learn_web_development/Getting_started/Your_first_website
@@ -1246,8 +1246,8 @@
 /es/docs/Learn/HTML	/es/docs/Learn_web_development/Core/Structuring_content
 /es/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form	/es/docs/Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
 /es/docs/Learn/HTML/Forms/My_first_HTML_form	/es/docs/Learn_web_development/Extensions/Forms/Your_first_form
-/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
-/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
+/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_Otros_controles	/es/docs/conflicting/Learn_web_development/Extensions/Forms
+/es/docs/Learn/HTML/Forms/Prueba_tus_habilidades:_controles_HTML5	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
 /es/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data	/es/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /es/docs/Learn/HTML/Forms/Styling_HTML_forms	/es/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
 /es/docs/Learn/HTML/Forms/The_native_form_widgets	/es/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls
@@ -1404,8 +1404,10 @@
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Advanced_HTML_text	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Advanced_HTML_text
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_HTML_text_basics	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/HTML_text_basics
 /es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills:_Links	/es/docs/Learn_web_development/Core/Structuring_content/Test_your_skills/Links
-/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
-/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Input_types	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+/es/docs/Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls	/es/docs/conflicting/Learn_web_development/Extensions/Forms
 /es/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/es/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
 /es/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/es/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /es/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/es/docs/Web/HTML/How_to/Use_data_attributes
@@ -2029,6 +2031,7 @@
 /es/docs/Web/CSS/-moz-box-pack	/es/docs/Web/CSS/box-pack
 /es/docs/Web/CSS/-moz-context-properties	/es/docs/orphaned/Web/CSS/-moz-context-properties
 /es/docs/Web/CSS/-moz-font-language-override	/es/docs/Web/CSS/font-language-override
+/es/docs/Web/CSS/-moz-image-region	/es/docs/conflicting/Web/CSS/clip
 /es/docs/Web/CSS/-moz-outline-radius	/es/docs/Web/CSS/outline
 /es/docs/Web/CSS/-moz-outline-radius-bottomleft	/es/docs/conflicting/Web/CSS/outline_114f9fa8b3569c03001b69bd5bf197b2
 /es/docs/Web/CSS/-moz-outline-radius-bottomright	/es/docs/conflicting/Web/CSS/outline_59c3f549fecef9ba8337c3b924fa8ae9
