@@ -7,7 +7,8 @@ l10n:
 
 **`flex-basis`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{glossary("flex item","フレックスアイテム")}}の主要部分の初期の寸法を設定します。 {{Cssxref("box-sizing")}} で設定していない限り、このプロパティはコンテンツボックスの寸法を定義します。
 
-> **メモ:** {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
+> [!NOTE]
+> {{cssxref("flex")}} 一括指定を使用する方が、個別に `flex-grow`、`flex-shrink`、`flex-basis` の宣言を使用するよりも推奨されます。この文書では、一括指定成分の一つである `flex-basis` プロパティについて説明していますので、ここではこれらを別個のものとしています。
 
 {{InteractiveExample("CSS デモ: flex-basis")}}
 

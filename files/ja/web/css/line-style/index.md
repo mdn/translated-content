@@ -51,7 +51,8 @@ l10n:
 - `outset`
   - : 要素がエンボス加工されて現れるように境界線を表示します。この値は `inset` の反対です。 {{cssxref("border-collapse")}} を `collapsed` に設定した表セルに適用すると、この値は `ridge` のように動作します。
 
-> **メモ:** `<outline-style>` は {{cssxref("outline")}} および {{cssxref("outline-style")}} プロパティの値の型として使用されます。 `<line-style>` と似ていますが、 `hidden` に対応しておらず、 `auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<line-style>` の値が使用されます。
+> [!NOTE]
+> `<outline-style>` は {{cssxref("outline")}} および {{cssxref("outline-style")}} プロパティの値の型として使用されます。 `<line-style>` と似ていますが、 `hidden` に対応しておらず、 `auto` 値を使用しません。 `auto` を設定すると、ユーザーエージェントが定義した `<line-style>` の値が使用されます。
 
 ## 例
 

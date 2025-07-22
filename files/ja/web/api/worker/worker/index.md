@@ -25,7 +25,8 @@ new Worker(url, options)
 - `url`
   - : 文字列で、ワーカーが実行するスクリプトの URL を表します。同一オリジンポリシーに従っていなければいけません。URL は、現在の HTML ページの場所に対して相対的に解決されます。
 
-    > **メモ:** [webpack](https://webpack.js.org/guides/web-workers/)、[Vite](https://vite.dev/guide/features.html#web-workers)、[Parcel](https://parceljs.org/languages/javascript/#web-workers) などのバンドラーでは、 [`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta#url) に対する相対 URL を `Worker()` コンストラクターに渡すことをお勧めします。例えば、次のようにします。
+    > [!NOTE]
+    > [webpack](https://webpack.js.org/guides/web-workers/)、[Vite](https://vite.dev/guide/features.html#web-workers)、[Parcel](https://parceljs.org/languages/javascript/#web-workers) などのバンドラーでは、 [`import.meta.url`](/ja/docs/Web/JavaScript/Reference/Operators/import.meta#url) に対する相対 URL を `Worker()` コンストラクターに渡すことをお勧めします。例えば、次のようにします。
     >
     > ```js
     > const myWorker = new Worker(new URL("worker.js", import.meta.url));

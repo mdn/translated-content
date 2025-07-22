@@ -27,7 +27,8 @@ div:empty {
 <div><p></p></div>
 ```
 
-> **メモ:** [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
+> [!NOTE]
+> [Selectors Level 4](https://drafts.csswg.org/selectors-4/#the-empty-pseudo) では、 `:empty` 擬似クラスは {{CSSxRef(":-moz-only-whitespace")}} のような動作に変更されましたが、現在これに対応しているブラウザーはありません。
 
 ## 構文
 

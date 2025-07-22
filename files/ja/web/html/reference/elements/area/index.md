@@ -118,7 +118,8 @@ img {
 
     この属性は [`href`](#href) 属性が存在する場合にのみ使用してください。
 
-    > **メモ:** `target="_blank"` を `<area>` 要素に設定すると、暗黙に `rel` に [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) を設定し、`window.opener` が設定されていないのと同じように動作します。対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
+    > [!NOTE]
+    > `target="_blank"` を `<area>` 要素に設定すると、暗黙に `rel` に [`rel="noopener"`](/ja/docs/Web/HTML/Reference/Attributes/rel/noopener) を設定し、`window.opener` が設定されていないのと同じように動作します。対応状況は[ブラウザーの互換性](#ブラウザーの互換性)を参照してください。
 
 ## 例
 

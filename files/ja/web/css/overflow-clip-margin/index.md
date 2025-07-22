@@ -27,7 +27,8 @@ overflow-clip-margin: unset;
 
 `<visual-box>` 値（既定値は `padding-box`）は、オーバーフロークリップ枠の原点として使用するボックス枠を指定します。 `overflow-clip-margin` で指定する {{cssxref("&lt;length&gt;")}} の値は負の値であってはなりません。
 
-> **メモ:** `overflow: clip` を持たない要素では、このプロパティは無視されます。
+> [!NOTE]
+> `overflow: clip` を持たない要素では、このプロパティは無視されます。
 
 ## 公式定義
 

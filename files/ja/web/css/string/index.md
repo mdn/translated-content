@@ -19,7 +19,8 @@ l10n:
 
 ただし、改行を行うためには、{{cssxref("white-space")}} プロパティに適切な値を設定する必要があります。
 
-> **メモ:** [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
+> [!NOTE]
+> [HTML エンティティ](/ja/docs/Glossary/Entity) (`&nbsp;` や `&#8212;` など) は、 CSS の `<string>` の中で使用することはできません。
 
 ## 例
 
