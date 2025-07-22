@@ -50,7 +50,8 @@ user-select: revert-layer;
 user-select: unset;
 ```
 
-> **メモ:** `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装して*おり*、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
+> [!NOTE]
+> `user-select` は継承されるプロパティではありませんが、多くの場合、初期値の `auto` は継承されているように見えます。 WebKit/Chromium ベースのブラウザーは、仕様書に書かれている動作に従わず、このプロパティを継承するように実装して*おり*、いくつかの問題を発生させています。現在までに、 Chromium は[この問題を修正し](https://chromium.googlesource.com/chromium/src/+/b01af0b296ecb855aac95c4ed335d188e6eac2de)、最終的な動作が仕様書に合うようにすることを選択しています。
 
 ### 値
 
@@ -68,7 +69,8 @@ user-select: unset;
 - `all`
   - : この要素の内容は不可分的に選択されます。選択範囲が要素の一部を含んだ場合、選択範囲はすべての子孫要素を含む要素全体が含まれなければなりません。子孫要素でダブルクリックや右クリックを行うと、この値が付けられている最も上位の先祖要素が範囲選択されます。
 
-> **メモ:** [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)モジュールでは、 `contain` 値を `user-select` プロパティに定義して、要素の境界で囲まれた要素内で選択を開始できるようにしていますが、これはどのブラウザーも対応していません。
+> [!NOTE]
+> [CSS 基本ユーザーインターフェイス](/ja/docs/Web/CSS/CSS_basic_user_interface)モジュールでは、 `contain` 値を `user-select` プロパティに定義して、要素の境界で囲まれた要素内で選択を開始できるようにしていますが、これはどのブラウザーも対応していません。
 
 ## 公式定義
 

@@ -67,7 +67,8 @@ l10n:
 メディア種別（指定されている場合）が文書を表示する端末と照合され、かつ、すべてのメディア機能式が `true` と計算されると、メディアクエリーは true と計算されます。
 未知のメディア種別を含むクエリーは常に false となります。
 
-> **メモ:** {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
+> [!NOTE]
+> {{HTMLElement("link")}} タグにメディアクエリーがついていた場合、スタイルシートはクエリーが `false` を返したとしても[ダウンロードされます](https://scottjehl.github.io/CSS-Download-Tests/)が、ダウンロードの優先度ははるかに低くなります。
 > ただし、その内容は、クエリーの結果が `true` にならない限り適用されません。
 > なぜこのようになるかは、 Tomayac 氏のブログ [Why Browser Download Stylesheet with Non-Matching Media Queries](https://medium.com/@tomayac/why-browsers-download-stylesheets-with-non-matching-media-queries-eb61b91b85a2) に書かれています。
 

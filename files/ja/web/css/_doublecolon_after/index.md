@@ -47,7 +47,8 @@ a::after {
 </p>
 ```
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
+> [!NOTE]
+> `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
 
 ## 構文
 

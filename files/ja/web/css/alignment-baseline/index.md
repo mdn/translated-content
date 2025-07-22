@@ -7,7 +7,8 @@ l10n:
 
 **`alignment-baseline`** は [CSS](/ja/docs/Web/CSS) のプロパティは、ボックスのテキストおよびインラインレベルのコンテンツの配置に使用する特定の[ベースライン](/ja/docs/Glossary/Baseline/Typography)を指定します。**ベースライン配置**とは、配置コンテキスト内の複数の配置対象物のベースライン間の関係です。ベースライン配置を実行する場合、 `alignment-baseline` プロパティの値は、ボックスのどのベースラインが、その配置コンテキストの対応するベースラインに配置されるかを指定します。
 
-> **メモ:** `alignment-baseline` プロパティは、インラインレベルボックス、フレックスアイテム、グリッドアイテム、表セル、および SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}} 要素にのみ効果があります。存在する場合、シェイプの {{SVGAttr("alignment-baseline")}} 属性を上書きします。
+> [!NOTE]
+> `alignment-baseline` プロパティは、インラインレベルボックス、フレックスアイテム、グリッドアイテム、表セル、および SVG の {{SVGElement("text")}}、{{SVGElement("textPath")}}、{{SVGElement("tspan")}} 要素にのみ効果があります。存在する場合、シェイプの {{SVGAttr("alignment-baseline")}} 属性を上書きします。
 
 インライン整形コンテキストでは、インラインレベルのボックスフラグメントおよびグリフは、その親インラインボックスフラグメントによってそのインライン軸に沿って確立された配置コンテキストを共有します。SVG テキストレイアウトでは、これらの値は、代わりに SVG の現在のテキスト位置に整列されるベースラインを指定します。
 

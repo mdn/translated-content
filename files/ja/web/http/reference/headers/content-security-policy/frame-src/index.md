@@ -7,7 +7,8 @@ l10n:
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`frame-src`** ディレクティブは、 {{HTMLElement("frame")}} や {{HTMLElement("iframe")}} のような要素を使用して埋め込まれた閲覧コンテキストの読み込みに有効なソースを指定します。
 
-> **メモ:** **`frame-src`** は、ページ内の iframe がどこから読み込まれるかを指定することができます。
+> [!NOTE]
+> **`frame-src`** は、ページ内の iframe がどこから読み込まれるかを指定することができます。
 > これは、ページを埋め込むことができる親ソースを指定することができる **`frame-ancestors`** とは異なります。
 
 <table class="properties">

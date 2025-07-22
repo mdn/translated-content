@@ -15,7 +15,8 @@ El constructor **`Proxy()`** crea objetos {{jsxref("Proxy")}}.
 new Proxy(target, handler)
 ```
 
-> **Nota:** `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
+> [!NOTE]
+> `Proxy()` solo se puede construir con [`new`](/es/docs/Web/JavaScript/Reference/Operators/new). Intentar llamarlo sin `new` arroja un {{jsxref("TypeError")}}.
 
 ### Parameters
 

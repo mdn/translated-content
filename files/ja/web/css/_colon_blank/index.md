@@ -7,7 +7,8 @@ l10n:
 
 {{SeeCompatTable}}
 
-> **メモ:** `:blank` セレクターは、CSSWG が変更を続けているため、リスクがあるとみなされています。
+> [!NOTE]
+> `:blank` セレクターは、CSSWG が変更を続けているため、リスクがあるとみなされています。
 >
 > [CSSWG issue #1967](https://github.com/w3c/csswg-drafts/issues/1967) を参照してください。
 
