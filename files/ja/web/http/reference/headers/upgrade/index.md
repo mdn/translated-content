@@ -38,7 +38,8 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-> **メモ:** `Connection: upgrade` は `Upgrade` を送る際に設定する必要があります。
+> [!NOTE]
+> `Connection: upgrade` は `Upgrade` を送る際に設定する必要があります。
 
 サーバーはどのような理由であろうと、無視することができます。その場合、サーバーは `Upgrade` ヘッダーが送信されていないかのように応答する必要があります（たとえば {{HTTPStatus(200, "200 OK")}}）。
 

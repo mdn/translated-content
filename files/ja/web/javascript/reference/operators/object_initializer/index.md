@@ -249,7 +249,8 @@ const mergedObj = { ...obj1, ...obj2 };
 // { foo: "baz", x: 42, y: 13 }
 ```
 
-> **警告:** {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
+> [!WARNING]
+> {{jsxref("Object.assign()")}} は[セッター](/ja/docs/Web/JavaScript/Reference/Functions/set)を起動しますが、スプレッド構文は起動しません。
 
 ### プロトタイプセッター
 

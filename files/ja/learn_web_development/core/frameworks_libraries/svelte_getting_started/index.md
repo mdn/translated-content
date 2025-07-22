@@ -289,7 +289,8 @@ Svelte ではコンポーネントの `<style>` ブロック内の CSS は、そ
 
 アプリをコンパイルする際、Svelte は `h1` のスタイル定義を `h1.svelte-1tky8bj` に変更します。そしてコンポーネント内全ての `<h1>` 要素を `<h1 class="svelte-1tky8bj">` に置き換え、そのコンポーネントが必要とするスタイルを取得できるようにします。
 
-> **メモ:** `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` のドキュメント](https://svelte.jp/docs/svelte-components#style) を参照してください)。
+> [!NOTE]
+> `:global()` 修飾子を使用することでこの動作をオーバーライドし、スタイルをグローバルなセレクターに適用できます (詳細については [Svelte `<style>` のドキュメント](https://svelte.jp/docs/svelte-components#style) を参照してください)。
 
 ## 少しだけ変更を加える
 

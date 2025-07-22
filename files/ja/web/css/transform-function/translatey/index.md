@@ -51,7 +51,8 @@ transform: translateY(3ch);
 }
 ```
 
-> **メモ:** `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
+> [!NOTE]
+> `translateY(ty)` は `translate(0, ty)` または `translate3d(0, ty, 0)` と等価です。
 
 ## 構文
 

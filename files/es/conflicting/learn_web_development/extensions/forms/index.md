@@ -1,7 +1,7 @@
 ---
 title: "Prueba tus habilidades: Otros controles"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
-original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_Other_controls
+slug: conflicting/Learn_web_development/Extensions/Forms
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills/Other_controls
 ---
 
 {{learnsidebar}}
@@ -26,7 +26,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Otros controles 2
 
@@ -40,7 +41,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Otros controles 3
 
@@ -54,7 +56,8 @@ Intenta actualizar el código en vivo más abajo para mostrar el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/other-controls/other-controls3.html", '100%', 700)}}
 
-> **Nota:** [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls3-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el inicio de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/other-controls/other-controls3-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

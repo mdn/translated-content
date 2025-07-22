@@ -70,4 +70,5 @@ l10n:
 
 - タッチターゲットは、ユーザーが対話するのに十分な大きさでなければならない（有用なタッチターゲットサイズのガイドラインについては、[BBC モバイルアクセシビリティ・ガイドライン](https://www.bbc.co.uk/accessibility/forproducts/guides/mobile/target-touch-size)（英語）を参照してください）。
 
-> **メモ:** [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](https://yzen.github.io/) が執筆しました。
+> [!NOTE]
+> [この文書のオリジナル版](http://yzen.github.io/firefoxos/2014/04/30/mobile-accessibility-checklist.html)（英語）は、[Yura Zenevich](https://yzen.github.io/) が執筆しました。

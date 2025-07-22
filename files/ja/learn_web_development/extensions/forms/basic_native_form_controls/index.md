@@ -51,7 +51,8 @@ l10n:
 - [`size`](/ja/docs/Web/HTML/Reference/Attributes/size) （ボックスの物理的な大きさ）や [`maxlength`](/ja/docs/Web/HTML/Reference/Attributes/maxlength) （ボックスに入力できる最大文字数）による制限が可能です。
 - ブラウザーが対応していれば、スペルチェックの便宜を図ることができます ([`spellcheck`](/ja/docs/Web/HTML/Reference/Global_attributes/spellcheck)属性を用いて)。
 
-> **メモ:** {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
+> [!NOTE]
+> {{htmlelement("input")}} 要素は [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性によってさまざまな形になるため、 HTML 要素の中でも独特です。単一行のテキストフィールド、時間と日付のコントロール、チェックボックス、ラジオボタン、カラーピッカー、ボタンのようなテキスト入力のないコントロールなど、ほとんどの種類のフォームウィジェットの作成に使用されます。
 
 ### 単一行のテキストフィールド
 
@@ -249,7 +250,8 @@ input {
 
 {{ EmbedLiveSample('Actual_buttons', '500', '250') }}
 
-> **メモ:** `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。
+> [!NOTE]
+> `image` 入力型もボタンとしてレンダリングされます。それについては後で触れます。
 
 > [!NOTE]
 > この節の例は [button-examples.html](https://github.com/mdn/learning-area/blob/main/html/forms/native-form-widgets/button-examples.html) として GitHub にあります（[ライブで確認できます](https://mdn.github.io/learning-area/html/forms/native-form-widgets/button-examples.html)）。
