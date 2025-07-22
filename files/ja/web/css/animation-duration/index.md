@@ -124,9 +124,11 @@ animation-duration: unset;
 > [!NOTE]
 > 負の数は無効であり、宣言が無視されます。一部、初期の接頭辞付きの実装は `0s` と等価に解釈するかもしれません。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、`animation-duration` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、Firefox がアニメーションを正常に適用するには `animation-duration` の設定が要求されます。そのため、Firefoxでアニメーションが動作するように `animation-duration` を `1ms` に設定することをお勧めします。
+> [!NOTE]
+> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成するとき、`animation-duration` の値を秒やミリ秒で指定することは実際には意味がありません。テストしたところ、スクロール進行タイムラインアニメーションには効果がないように見えましたが、ビュー進行タイムラインアニメーションでは、アニメーションがタイムラインの終わりに近づいて起こるようになるようでした。しかし、Firefox がアニメーションを正常に適用するには `animation-duration` の設定が要求されます。そのため、Firefoxでアニメーションが動作するように `animation-duration` を `1ms` に設定することをお勧めします。
 
 ## 公式定義
 

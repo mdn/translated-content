@@ -39,7 +39,8 @@ l10n:
   (min-resolution: 192dpi); /* dppx のフォールバック */
 ```
 
-> **メモ:** `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
+> [!NOTE]
+> `resolution` および `dppx` に関わる互換性の良い習慣については、 [CSSWG の記事](https://www.w3.org/blog/CSS/2012/06/14/unprefix-webkit-device-pixel-ratio/)を参照してください。
 
 ## 仕様書
 

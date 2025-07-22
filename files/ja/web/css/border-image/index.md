@@ -93,7 +93,8 @@ border-image: unset;
 
 `border-image` プロパティは以下に挙げた 1 つから 5 つの値で指定します。
 
-> **メモ:** {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
+> [!NOTE]
+> {{cssxref("border-image-source")}} の [計算値](/ja/docs/Web/CSS/CSS_cascade/Value_processing#計算値) が `none` であったり、画像が表示できなかったりした場合は、 {{cssxref("border-style")}} が代わりに表示されます。
 
 ### 値
 

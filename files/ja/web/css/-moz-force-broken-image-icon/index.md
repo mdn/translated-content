@@ -51,7 +51,8 @@ img {
 
 {{EmbedLiveSample('Examples','125','125')}}
 
-> **メモ:** `-moz-force-broken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `alt` 属性も非表示になります。
+> [!NOTE]
+> `-moz-force-broken-image-icon` の値に `1` を指定した場合、その画像に width と height を明示的に指定しない限り、壊れた画像アイコンは表示されず、 `alt` 属性も非表示になります。
 
 ## メモ
 

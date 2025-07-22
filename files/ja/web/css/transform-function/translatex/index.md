@@ -51,7 +51,8 @@ transform: translateX(3ch);
 }
 ```
 
-> **メモ:** `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
+> [!NOTE]
+> `translateX(tx)` は `translate(tx, 0)` または `translate3d(tx, 0, 0)` と等価です。
 
 ## 構文
 
