@@ -111,11 +111,11 @@ position: unset;
 - `static`
   - : 该关键字指定元素使用正常的布局行为，即元素在文档[正常布局流](/zh-CN/docs/Learn_web_development/Core/CSS_layout/Introduction#正常布局流)中当前的布局位置。此时 {{cssxref("top")}}、{{cssxref("right")}}、{{cssxref("bottom")}}、{{cssxref("left")}} 和 {{cssxref("z-index")}} 属性*无效*。这是默认值。
 - `relative`
-  - : 元素根据文档的正常流程定位，然后根据 `top`、`right`、`bottom` 和 `left` 的值相对于自身偏移。偏移量不会影响任何其他元素的位置；因此，在页面布局中为该元素提供的空间与位置为 `static` 时相同。
+  - : 元素根据文档的正常流程定位，然后根据 `top`、`right`、`bottom` 和 `left` 的值*相对*于*自身*偏移。偏移量不会影响任何其他元素的位置；因此，在页面布局中为该元素提供的空间与位置为 `static` 时相同。
     当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。它对 `table-*-group`、`table-row`、`table-column`、`table-cell` 和 `table-caption` 元素的影响未定义。
 
 - `absolute`
-  - : 该元素将从正常文档流程中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
+  - : 该元素将从正常文档流中移除，页面布局中不会为该元素创建任何空间。元素的位置是相对于其位置最近的祖先（如果有）或初始[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block#确定包含块)。其最终位置由 `top`、`right`、`bottom` 和 `left` 的值决定。
     当 `z-index` 的值不是 `auto` 时，该值会创建一个新的[层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)。绝对定位盒子的边距不会与其他边距[折叠](/zh-CN/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)。
 
 - `fixed`
@@ -138,7 +138,7 @@ position: unset;
 - **绝对定位元素**（absolutely positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `absolute` 或 `fixed` 的元素。{{Cssxref("top")}}、{{Cssxref("right")}}、{{Cssxref("bottom")}} 和 {{Cssxref("left")}} 属性指定了从元素[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)边缘的偏移量。(包含块是相对于该元素定位的祖先块）。如果元素有边距，则边距会添加到偏移量中。该元素将为其内容建立一个新的[区块格式化上下文](/zh-CN/docs/Web/CSS/CSS_display/Block_formatting_context)（BFC）。
 - **粘性定位元素**（stickily positioned element）是[计算后](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值) `position` 属性为 `sticky` 的元素。在其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)在其流根（或其滚动的容器）内越过指定临界值（例如将 {{Cssxref("top")}} 设置为 auto 以外的值）之前，它被视为相对定位，此时它被视为“卡住”，直到遇到其[包含块](/zh-CN/docs/Web/CSS/CSS_display/Containing_block)的对边。
 
-大多数情况下，{{Cssxref("height")}}和{{Cssxref("width")}} 被设定为 `auto` 的绝对定位元素，按其内容大小调整尺寸。但是，非[替换的](/zh-CN/docs/Glossary/Replaced_elements)绝对定位元素可以通过指定 {{Cssxref("top")}} 和{{Cssxref("bottom")}}，保留{{Cssxref("height")}} 未指定（即 `auto`），来填充可用的垂直空间。它们同样可以通过指定 {{Cssxref("left")}} 和 {{Cssxref("right")}} 并将 {{Cssxref("width")}} 指定为 `auto` 来填充可用的水平空间。
+大多数情况下，{{Cssxref("height")}} 和 {{Cssxref("width")}} 被设定为 `auto` 的绝对定位元素，按其内容大小调整尺寸。但是，非[可替换](/zh-CN/docs/Glossary/Replaced_elements)绝对定位元素可以通过指定 {{Cssxref("top")}} 和 {{Cssxref("bottom")}}，保留 {{Cssxref("height")}} 未指定（即 `auto`），来填充可用的垂直空间。它们同样可以通过指定 {{Cssxref("left")}} 和 {{Cssxref("right")}} 并将 {{Cssxref("width")}} 指定为 `auto` 来填充可用的水平空间。
 
 除了刚刚描述的情况（绝对定位元素填充可用空间）：
 
@@ -449,7 +449,7 @@ dd + dd {
   <p>
     用灯泡（<span class="bulb">💡</span
     >）来代表一个想法是一个常用的比喻，象征着灵感迸发或新想法诞生的时刻。灯泡与创意之间的联系可以追溯到
-    19 世纪末托马斯 - 爱迪生发明的白炽灯泡（<span class="bulb">💡</span
+    19 世纪末托马斯·爱迪生发明的白炽灯泡（<span class="bulb">💡</span
     >）。灯泡是一个强有力的象征，因为它代表着照明、清晰和思想或理解的突然明亮。当一个人有了一个想法时，通常会被描述为他脑海中的灯泡亮了起来，象征着洞察力或创造力的迸发。灯泡的形象也暗示了能量、力量以及成长和发展潜力的概念。
   </p>
 </div>
