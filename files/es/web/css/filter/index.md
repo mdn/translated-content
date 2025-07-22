@@ -280,4 +280,4 @@ Los filtros se aplican en orden. Esta es la razón por la cual las sombras paral
 - Módulo de [composición y combinación](/es/docs/Web/CSS/CSS_compositing_and_blending) de CSS, incluidas las propiedades CSS {{cssxref("background-blend-mode")}} y {{cssxref("mix-blend-mode")}}.
 - La propiedad CSS {{cssxref("mask")}}
 - [SVG](/es/docs/Web/SVG), incluido el elemento SVG {{SVGElement("filter")}} y el atributo SVG {{SVGAttr("filter")}}.
-- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Aplicación de efectos SVG al contenido HTML](/es/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
