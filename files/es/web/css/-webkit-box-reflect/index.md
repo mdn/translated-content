@@ -3,7 +3,7 @@ title: -webkit-box-reflect
 slug: Web/CSS/-webkit-box-reflect
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

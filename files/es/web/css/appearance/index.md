@@ -3,7 +3,7 @@ title: -moz-appearance (-webkit-appearance)
 slug: Web/CSS/appearance
 ---
 
-{{non-standard_header}}{{CSSRef}}
+{{non-standard_header}}
 
 La propiedad CSS `-moz-appearance` se utiliza en Gecko (Firefox) para visualizar un elemento utilizando una plataforma nativa basada en el estilo del tema del sistema operativo.
 

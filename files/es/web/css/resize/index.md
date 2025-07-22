@@ -3,8 +3,6 @@ title: resize
 slug: Web/CSS/resize
 ---
 
-{{CSSRef}}
-
 ## Resumen
 
 La propiedad resize de CSS permite controlar la capacidad de cambio de tamaño de un elemento.

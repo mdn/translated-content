@@ -73,7 +73,7 @@ l10n:
 >
 > _Recuerde eliminar este bloque de nota antes de publicar._
 
-{{SeeCompatTable}}{{deprecated_header}}{{CSSRef}}
+{{SeeCompatTable}}{{deprecated_header}}
 
 Comienza el contenido de la página con un párrafo introductorio que nombre la propiedad y diga qué hace. Idealmente, esto debería ser una o dos frases cortas.
 
