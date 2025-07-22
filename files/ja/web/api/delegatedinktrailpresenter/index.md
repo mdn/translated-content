@@ -1,7 +1,6 @@
 ---
 title: DelegatedInkTrailPresenter
 slug: Web/API/DelegatedInkTrailPresenter
-page-type: web-api-interface
 l10n:
   sourceCommit: bcc977bc3e79a87edd64cd9ef977b515f63daa2c
 ---
