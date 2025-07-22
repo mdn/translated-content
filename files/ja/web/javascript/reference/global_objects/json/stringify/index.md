@@ -99,7 +99,8 @@ JSON.stringify(value, replacer, space)
 - 関数 ({{jsxref("Function")}})、シンボル ({{jsxref("Symbol")}})、{{jsxref("undefined")}} を返すと、出力にはそのプロパティが含まれなくなります。
 - それ以外のオブジェクトを返した場合、そのオブジェクトのそれぞれのプロパティに `replacer` 関数を呼び出して再帰的に文字列化します。
 
-> **メモ:** `replacer` 関数を用いて生成した JSON を解釈する際は、逆変換のために引数 [`reviver`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#reviver_%E5%BC%95%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8) を用いたくなる可能性が高いでしょう。
+> [!NOTE]
+> `replacer` 関数を用いて生成した JSON を解釈する際は、逆変換のために引数 [`reviver`](/ja/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#reviver_%E5%BC%95%E6%95%B0%E3%81%AE%E4%BD%BF%E7%94%A8) を用いたくなる可能性が高いでしょう。
 
 通常、配列の要素の添字はずれません（要素が関数などの無効な値である場合も、省略されるのではなく `null` になります）。`replacer` 関数を用いると、別の配列を返すことで、配列の要素の順番を制御できます。
 

@@ -16,7 +16,8 @@ new String(thing)
 String(thing)
 ```
 
-> **メモ:** `String()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
+> [!NOTE]
+> `String()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せますが、効果は異なります。[返値](#返値)を参照してください。
 
 ### 引数
 
@@ -29,7 +30,8 @@ String(thing)
 
 `String` が関数として呼び出された場合、引数を文字列プリミティブに変換します。[シンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol)値は例外を発生させず、`"Symbol(description)"` の形に変換され、この `description` はそのシンボルの [description](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol/description) となります。
 
-> **警告:** `String` をコンストラクターとして使用する場面はほとんど見つからないでしょう。
+> [!WARNING]
+> `String` をコンストラクターとして使用する場面はほとんど見つからないでしょう。
 
 ## 例
 

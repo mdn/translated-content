@@ -14,7 +14,8 @@ l10n:
 
 あらゆる HTML 要素に `itemscope` 属性を設定することができます。 `itemscope` 要素が `itemtype` を持たない場合は、関連付けられた `itemref` を持つ必要があります。
 
-> **メモ:** `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
+> [!NOTE]
+> `itemtype` 属性についての詳細は、 <https://schema.org/Thing> をご覧ください
 
 ### itemscope の id 属性
 
