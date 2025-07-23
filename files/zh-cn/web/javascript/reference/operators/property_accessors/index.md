@@ -122,7 +122,7 @@ Obj[getKey()]; // 求值为 Obj["name"]，并返回“张三”
 
 ### 属性名称
 
-属性名称必须是字符串或 [Symbol](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。任何其他值，包括数值，都会被强制转换为字符串。由于 `1` 被强制转换为 `'1'`，因此以下示例会输出 `'值'`。
+属性名称必须是字符串或 [Symbol](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol)。任何其他值，包括数值，都会被强制转换为字符串。由于 `1` 被强制转换为 `'1'`，因此以下示例会输出 `'值'`。
 
 ```js
 const object = {};
