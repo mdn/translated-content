@@ -10,7 +10,8 @@ l10n:
 
 **`ByteLengthQueuingStrategy.highWaterMark`** は読み取り専用プロパティで、[背圧](/ja/docs/Web/API/Streams_API/Concepts#背圧)が適用される前に内部キューに格納することができる総バイト数を返します。
 
-> **メモ:** [`CountQueuingStrategy()`](/ja/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) では `highWaterMark` 引数に単純な塊の数を指定しますが、 `ByteLengthQueuingStrategy()` では、 `highWaterMark` 引数はバイト数を指定します。具体的には、チャンクのストリームが指定された場合に、背圧が適用される前に内部キューに何バイト分のチャンクを格納することができるか（チャンクの数ではありません）を指定します。
+> [!NOTE]
+> [`CountQueuingStrategy()`](/ja/docs/Web/API/CountQueuingStrategy/CountQueuingStrategy) では `highWaterMark` 引数に単純な塊の数を指定しますが、 `ByteLengthQueuingStrategy()` では、 `highWaterMark` 引数はバイト数を指定します。具体的には、チャンクのストリームが指定された場合に、背圧が適用される前に内部キューに何バイト分のチャンクを格納することができるか（チャンクの数ではありません）を指定します。
 
 ## 値
 

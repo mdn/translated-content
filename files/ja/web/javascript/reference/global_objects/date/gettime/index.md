@@ -66,7 +66,8 @@ end = new Date();
 console.log(`Operation took ${end.getTime() - start.getTime()} msec`);
 ```
 
-> **メモ:** {{domxref("Performance API", "パフォーマンス API", "", "nocode")}} の高解像度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} を使用すると、 {{jsxref("Date.now()")}} よりも信頼性が高く正確な経過時間を測定できます。
+> [!NOTE]
+> {{domxref("Performance API", "パフォーマンス API", "", "nocode")}} の高解像度時刻機能に対応しているブラウザーでは、 {{domxref("Performance.now()")}} を使用すると、 {{jsxref("Date.now()")}} よりも信頼性が高く正確な経過時間を測定できます。
 
 ## 仕様書
 

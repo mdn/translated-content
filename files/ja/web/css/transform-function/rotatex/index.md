@@ -37,7 +37,8 @@ transform: rotateX(3.142rad);
 
 回転軸は、CSS の {{ cssxref("transform-origin") }} プロパティで定義される原点を通ります。
 
-> **メモ:** `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
+> [!NOTE]
+> `rotateX(a)` は `rotate3d(1, 0, 0, a)` と等価です。
 
 > [!NOTE]
 > 2D 平面での回転とは異なり、 3D での回転はふつう交換可能ではありません。言い換えれば、回転の順番が結果に影響を与えます。

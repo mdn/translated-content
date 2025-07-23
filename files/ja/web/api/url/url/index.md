@@ -47,7 +47,8 @@ new URL(url, base)
 
 コンストラクターを使用する例をいくつか示します。
 
-> **メモ:** [相対参照の URL への解決](/ja/docs/Web/API/URL_API/Resolving_relative_references)では、さまざまな `url` と `base` 値が最終的な絶対 URL に解決される方法を説明するさらなる例が提供されています。
+> [!NOTE]
+> [相対参照の URL への解決](/ja/docs/Web/API/URL_API/Resolving_relative_references)では、さまざまな `url` と `base` 値が最終的な絶対 URL に解決される方法を説明するさらなる例が提供されています。
 
 ```js-nolint
 // ベース URL:

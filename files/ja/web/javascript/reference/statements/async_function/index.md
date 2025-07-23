@@ -69,7 +69,8 @@ async function name(param0, param1, /* …, */ paramN) {
 >
 > `await` は [JavaScript モジュール](/ja/docs/Web/JavaScript/Guide/Modules)では単独で使用することができます。
 
-> **メモ:** `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
+> [!NOTE]
+> `async`/`await` の目的は、プロミスベースの API を利用するのに必要な構文を簡素化することです。 `async`/`await` の動作は、[ジェネレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)とプロミスの組み合わせに似ています。
 
 非同期関数は常にプロミスを返します。非同期関数の返値が明示的にプロミスでない場合は、暗黙的にプロミスでラップされます。
 

@@ -142,7 +142,8 @@ JavaScript では、正規表現はオブジェクトでもあります。これ
   </tbody>
 </table>
 
-> **メモ:** [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
+> [!NOTE]
+> [もっと大きな早見表もあります](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Cheatsheet) （個別の記事の一部を集約しただけです）。
 
 ### エスケープ
 

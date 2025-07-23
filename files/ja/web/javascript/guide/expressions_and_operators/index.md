@@ -397,7 +397,8 @@ const var2 = 4;
   </tbody>
 </table>
 
-> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を表す記法です。
+> [!NOTE]
+> `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)を表す記法です。
 
 ## 算術演算子
 

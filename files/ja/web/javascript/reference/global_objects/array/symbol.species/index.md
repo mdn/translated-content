@@ -9,7 +9,8 @@ l10n:
 
 **`Array[Symbol.species]`** 静的アクセサープロパティは、配列のメソッドからの返値を構築するのに使われたコンストラクターを返します。
 
-> **警告:** `[Symbol.species]` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `[Symbol.species]` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
+> [!WARNING]
+> `[Symbol.species]` が存在することで、任意のコードを実行でき、セキュリティの脆弱性を生み出す可能性があります。また、ある種の最適化が非常に難しくなります。エンジンの実装者は[この機能を除去するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。使用可能であれば、この機能に頼ることは避けてください。 {{jsxref("Array/toReversed", "toReversed()")}} のような現代の配列メソッドは `[Symbol.species]` を使用せず、常に新しい `Array` 基本クラスのインスタンスを返します。
 
 ## 構文
 

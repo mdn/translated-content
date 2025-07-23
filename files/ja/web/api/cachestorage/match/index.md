@@ -14,7 +14,8 @@ l10n:
 
 `Cache` オブジェクトは作成順に検索されます。
 
-> **メモ:** {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。
 > 各キャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} によって返される順序で）、{{domxref("Response")}} が返されるまで {{domxref("cache.match()")}} を呼び出すのと同等の機能です。
 
 ## 構文

@@ -18,7 +18,8 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 この要素には[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)があります。
 
-> **警告:** `tabindex` 属性を `<dialog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
+> [!WARNING]
+> `tabindex` 属性を `<dialog>` 要素で使用してはいけません。詳しく[使用上の注意](#使用上の注意)を参照してください。
 
 - `open`
   - : ダイアログボックスがアクティブであり、操作できる状態であることを示します。 `open` が設定されていない場合、ダイアログボックスはユーザーに表示されません。
@@ -280,7 +281,8 @@ jsCloseBtn.addEventListener("click", (e) => {
 - `display` を `none` から `block`（あるいは他の可視の `display` 値）にアニメーションする場合、アニメーション再生時間の `0%` で値が `block` に切り替わり、常に表示されます。
 - `display` の `block`（または他の可視の `display` 値）から `none` へのアニメーションでは、アニメーション再生時間の `100%` の時点で値が `none` に切り替わるため、全体を通して表示されます。
 
-> **メモ:** [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
+> [!NOTE]
+> [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。[CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションを行う場合、この動作は既定では利用でき、同等の手順は必要ありません。
 
 #### dialog 要素のトランジション
 
@@ -394,7 +396,8 @@ closeBtn.addEventListener("click", () => {
 
 {{ EmbedLiveSample("dialog 要素のトランジション", "100%", "200") }}
 
-> **メモ:** `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog[open]` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog[open]` 状態から既定の `dialog` 状態にトランジションします。
+> [!NOTE]
+> `<dialog>`は、表示される時点では常に `display: none` から `display: block` に変更されるため、項目遷移が発生するたびに、`<dialog>` は `@starting-style` スタイルから `dialog[open]` スタイルにトランジションします。 `<dialog>` が閉じられると、`dialog[open]` 状態から既定の `dialog` 状態にトランジションします。
 >
 > このような場合、項目への入力時と出力時のスタイル設定のトランジションが異なることが可能です。この例については、「[開始スタイルを使用する場合のデモ](/ja/docs/Web/CSS/@starting-style#demonstration_of_when_starting_styles_are_used)」をご覧ください。
 

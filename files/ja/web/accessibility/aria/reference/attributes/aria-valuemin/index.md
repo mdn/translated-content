@@ -17,7 +17,8 @@ l10n:
 
 最大値は [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) で定義されます。
 
-> **警告:** [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemin` 属性は、`range` ロールの全てのサブタイプで使用されます。
+> [!WARNING]
+> [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemin` 属性は、`range` ロールの全てのサブタイプで使用されます。
 
 ## 値
 

@@ -9,7 +9,8 @@ l10n:
 
 **`NodeList`** オブジェクトは[ノード](/ja/docs/Web/API/Node)の集合であり、 {{domxref("Node.childNodes")}} などのプロパティや {{domxref("document.querySelectorAll()")}} などのメソッドの返値として用いられます。
 
-> **メモ:** `NodeList` は `Array` とは異なりますが、`forEach()` メソッドで処理を反復適用することは可能です。{{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
+> [!NOTE]
+> `NodeList` は `Array` とは異なりますが、`forEach()` メソッドで処理を反復適用することは可能です。{{jsxref("Array.from()")}} を使うことで `Array` に変換することができます。
 
 ## 生きた NodeList と静的な NodeList
 

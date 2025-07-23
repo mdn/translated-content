@@ -32,7 +32,8 @@ Function(arg1, arg2, functionBody)
 Function(arg1, arg2, /* …, */ argN, functionBody)
 ```
 
-> **メモ:** `Function()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `Function` インスタンスを作成します。
+> [!NOTE]
+> `Function()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `Function` インスタンスを作成します。
 
 ### 引数
 

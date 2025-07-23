@@ -59,7 +59,8 @@ grid-auto-flow: row dense;
 }
 ```
 
-> **メモ:** `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
+> [!NOTE]
+> `masonry-auto-flow` プロパティは、CSS の[メイソンリーレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout)にありましたが、 `grid-auto-flow` に取って代わられ、廃止されました。
 > 詳細は [csswg-drafts #10231](https://github.com/w3c/csswg-drafts/issues/10231) をご覧ください。
 
 ## 構文

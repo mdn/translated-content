@@ -129,7 +129,8 @@ JavaScript での基本的なキーワードと一般的な式です。これら
 - {{jsxref("Operators/in", "in")}}
   - : `in` 演算子は、与えられたプロパティをオブジェクトが持っているかどうかを判別します。
 
-> **メモ:** `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
+> [!NOTE]
+> `=>` は演算子ではなく、[アロー関数](/ja/docs/Web/JavaScript/Reference/Functions/Arrow_functions)のための記法です。
 
 ### 等値演算子
 

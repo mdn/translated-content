@@ -79,9 +79,11 @@ label {
 - `value`
   - : この属性は、タスクの進捗状況を設定します。値は `0` から `max` までの間、または `max` を省略する場合は `0` から `1` までの間の、有効な浮動小数点数値であることが必要です。`value` 属性がない場合は、プログレスバーは不定、タスクは処理中であるものの完了までが予想できない状態になります。
 
-> **メモ:** {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
+> [!NOTE]
+> {{htmlelement("meter")}} 要素とは異なり、最小値は常に 0 で、`min` 属性は `<progress>` 要素では許可されていません。
 
-> **メモ:** {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーに一致します。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} で value 属性を削除しなければなりません。
+> [!NOTE]
+> {{cssxref(":indeterminate")}} 擬似クラスは、不定状態のプログレスバーに一致します。プログレスバーを値がある状態から不定の状態に変更するには、 {{domxref("Element.removeAttribute", "element.removeAttribute('value')")}} で value 属性を削除しなければなりません。
 
 ## 例
 

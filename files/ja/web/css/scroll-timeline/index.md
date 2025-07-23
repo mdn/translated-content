@@ -43,7 +43,8 @@ scroll-timeline: --custom_name_for_timeline;
 
 `scroll-timeline` 一括指定プロパティは `<scroll-timeline-name>` と `<scroll-timeline-axis>` の値の組み合わせとしてコンテナー要素に適用することができます。少なくともどちらか一方の値を指定しなければなりません。両方の値を指定する場合は、`<scroll-timeline-name>` 値の後に `<scroll-timeline-axis>` 値が続くようにしなければなりません。
 
-> **メモ:** `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
+> [!NOTE]
+> `<scroll-timeline-name>` は [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値でなければなりません。すなわち、 `--` で始めなければなりません。これは標準 CSS キーワードとの名前の衝突を避けるのに役立ちます。
 
 ### 値
 

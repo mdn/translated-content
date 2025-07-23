@@ -22,7 +22,8 @@ l10n:
 
 `aria-describedby` プロパティは、関連するコンテンツがプレーンテキストとして記述されている場合に適しています。コンテンツが大量のコンテンツ、有益な意味づけを含む場合、またはユーザーナビゲーションを必要とする複雑な構造を持つ場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用してください。 `aria-details` は、支援技術のユーザーが関連する構造化されたコンテンツにアクセスできるようにし、構造を理解しやすくしたり、情報を小分けにして使いやすくしたりする、追加のナビゲーションコマンドを提供します。
 
-> **メモ:** `aria-describedby` のコンテンツは文字列のみであるべきです。コンテンツに重要な意味づけがある場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用することを検討してください。
+> [!NOTE]
+> `aria-describedby` のコンテンツは文字列のみであるべきです。コンテンツに重要な意味づけがある場合は、 [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を使用することを検討してください。
 
 ## 例
 
@@ -32,7 +33,8 @@ l10n:
 <p id="trash-desc">ゴミ箱にあるものは 30 日後に永久に削除されます。</p>
 ```
 
-> **メモ:** `aria-describedby` 属性は外部リソースの記述を参照するようには設計されていません。その値は一つ以上の `id` であり（複数の場合はスペースで区切られます）、同じ DOM 文書内の要素を参照しなければなりません。
+> [!NOTE]
+> `aria-describedby` 属性は外部リソースの記述を参照するようには設計されていません。その値は一つ以上の `id` であり（複数の場合はスペースで区切られます）、同じ DOM 文書内の要素を参照しなければなりません。
 
 ## 値
 

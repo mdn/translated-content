@@ -15,7 +15,8 @@ l10n:
 
 最小値と最大値を宣言すると、支援技術が範囲のサイズをユーザーに伝えることができます。最小値は [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) で定義されます。
 
-> **警告:** [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemax` 属性は、`range` ロールの全てのサブタイプで使用されます。
+> [!WARNING]
+> [`range`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/range_role) ロール自体は [「抽象ロール」](/ja/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象ロール) であるため、**使用しないで**ください。`aria-valuemax` 属性は、`range` ロールの全てのサブタイプで使用されます。
 
 ## 例
 

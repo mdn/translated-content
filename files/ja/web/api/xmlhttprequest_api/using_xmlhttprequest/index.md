@@ -50,7 +50,8 @@ req.send();
 3. {{domxref("XMLSerializer")}} を使って **DOM ツリーを文字列やファイルに**シリアライズする。
 4. 事前に XML 文書の中身が常に分かっている場合は {{jsxref("RegExp")}} を使うこともできます。改行を `RegExp` でスキャンする場合に、改行を除去した方がよく見えることもありますが、 XML コードが少しでも変更されると、メソッドは失敗しがちなため、このメソッドは「最後の手段」です。
 
-> **メモ:** `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)についての記事をお読みください。
+> [!NOTE]
+> `XMLHttpRequest` は {{domxref("XMLHttpRequest.responseXML", "responseXML")}} プロパティを使用することによって、 HTML を解釈できるようになりました。この方法について学ぶには、 [XMLHttpRequest における HTML の扱い](/ja/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest)についての記事をお読みください。
 
 ### HTML 文書を含む responseText プロパティの処理
 

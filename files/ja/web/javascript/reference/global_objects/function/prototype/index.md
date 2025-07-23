@@ -18,7 +18,8 @@ l10n:
 
 {{js_property_attributes(1, 0, 0)}}
 
-> **メモ:** [クラス](/ja/docs/Web/JavaScript/Reference/Classes)は関数の一種なので、ここで説明するほとんどの内容はクラスの `prototype` プロパティにも当てはまります。唯一の顕著な違いは、クラスの `prototype` プロパティは書き込み不可であるということです。
+> [!NOTE]
+> [クラス](/ja/docs/Web/JavaScript/Reference/Classes)は関数の一種なので、ここで説明するほとんどの内容はクラスの `prototype` プロパティにも当てはまります。唯一の顕著な違いは、クラスの `prototype` プロパティは書き込み不可であるということです。
 
 ## 解説
 

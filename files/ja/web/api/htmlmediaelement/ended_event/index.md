@@ -14,7 +14,8 @@ l10n:
 
 このイベントはキャンセル不可で、バブリングしません。
 
-> **メモ:** `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
+> [!NOTE]
+> `ended` イベントは [`loop`](/ja/docs/Web/API/HTMLMediaElement/loop) プロパティが `true` で [`playbackRate`](/ja/docs/Web/API/HTMLMediaElement/playbackRate) が負の数ではない場合には発生しません。
 
 ## 構文
 

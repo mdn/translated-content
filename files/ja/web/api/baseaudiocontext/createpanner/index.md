@@ -12,7 +12,8 @@ l10n:
 
 パナーノードは AudioContext の {{domxref("AudioListener") }} （{{domxref("BaseAudioContext/listener", "AudioContext.listener") }} 属性によって定義）に関連して空間化され、音声を聞く人の位置と向きを表現します。
 
-> **メモ:** {{domxref("PannerNode.PannerNode", "PannerNode()")}} コンストラクターは {{domxref("PannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
+> [!NOTE]
+> {{domxref("PannerNode.PannerNode", "PannerNode()")}} コンストラクターは {{domxref("PannerNode")}} を作成するための推奨される方法です。 [AudioNode の作成](/ja/docs/Web/API/AudioNode#audionode_の生成)を参照してください。
 
 ## 構文
 

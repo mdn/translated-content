@@ -36,7 +36,8 @@ Symbol()
 Symbol(description)
 ```
 
-> **メモ:** `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Symbol()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きで呼び出すことができません。`new` を付けて構築しようとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

@@ -19,7 +19,8 @@ l10n:
   - 名前付きビュー進行タイムラインは、 {{cssxref("view-timeline-name")}} プロパティ（または {{cssxref("view-timeline")}} の一括指定プロパティ）を用いて主題の名前を明示的に指定するものです。そして、その名前を要素の `animation-timeline` プロパティの値として指定することで、アニメーションさせる要素にリンクします。これは重要な点です。名前付きビュー進行タイムラインでは、アニメーションさせる要素は被写体と同じである必要はありません。
   - 無名ビュー進行タイムラインとは、 {{cssxref("animation-timeline/view", "view()")}} 関数を `animation-timeline` 値として指定され、最も近い親スクローラー内の位置に基づいてアニメーションが発生させられるものです。
 
-> **メモ:** `animation-timeline` はリセット専用の値として {{cssxref("animation")}} 一括指定に含められています。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
+> [!NOTE]
+> `animation-timeline` はリセット専用の値として {{cssxref("animation")}} 一括指定に含められています。これは、 `animation` を記載することで、前回宣言した `animation-timeline` の値を `auto` にリセットすることは意味していますが、 `animation` によって固有の値を設定することはできません。[CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations)を作成する際には、 `animation` の一括指定を宣言した後に、 `animation-timeline` を宣言しなければ、その値が有効になりません。
 
 <!-- {{EmbedInteractiveExample("pages/css/animation-name.html")}} -->
 
@@ -76,7 +77,8 @@ animation-timeline: unset;
     > [!NOTE]
     > 2 つ以上のタイムラインが同じ名前を持っている場合、カスケード内で最後に宣言されたものが使用されます。また、指定された名前に一致するタイムラインが見つからない場合、アニメーションはタイムラインに関連付けられません。
 
-    > **メモ:** [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値は `--` で始まる必要があります。これにより、標準 CSS キーワードとの名前の衝突を避けることができます。
+    > [!NOTE]
+    > [`<dashed-ident>`](/ja/docs/Web/CSS/dashed-ident) 値は `--` で始まる必要があります。これにより、標準 CSS キーワードとの名前の衝突を避けることができます。
 
 ## 公式定義
 

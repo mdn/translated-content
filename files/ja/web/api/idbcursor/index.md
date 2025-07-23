@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("IndexedDB")}} {{AvailableInWorkers}}
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} と混同しないでください。これは **`IDBCursor`** インターフェイスに **`value`** プロパティを追加しただけのものです。
 
 **`IDBCursor`** は [IndexedDB API](/ja/docs/Web/API/IndexedDB_API) のインターフェイスで、複数レコードを走査したり繰り返し処理をしたりするための[カーソル](/ja/docs/Web/API/IndexedDB_API/Basic_Terminology#%E3%82%AB%E3%83%BC%E3%82%BD%E3%83%AB)です。
 
@@ -17,7 +18,8 @@ l10n:
 
 ## インスタンスプロパティ
 
-> **メモ:** {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
+> [!NOTE]
+> {{domxref("IDBCursorWithValue")}} は **`IDBCursor`** インターフェイスに **`value`** プロパティを追加したものです。
 
 - {{domxref("IDBCursor.source")}} {{ReadOnlyInline}}
   - : カーソルが繰り返している{{domxref("IDBObjectStore")}} か {{domxref("IDBIndex")}} を返します。この関数は、カーソルが現在繰り返されていたり、繰り返しが終わりを過ぎたり、トランザクションがアクティブでなくても、`null` や例外を返しません。

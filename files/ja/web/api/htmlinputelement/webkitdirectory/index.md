@@ -46,7 +46,8 @@ l10n:
 
 ユーザーが `PhotoAlbums` を選択すると、 files によって報告されるリストは上記のすべてのファイルに対する {{domxref("File")}} オブジェクトを含みます。 — しかし、ディレクトリーは含みません。 `PIC2343.jpg` の項目では `webkitRelativePath` が `PhotoAlbums/Birthdays/Don's 40th birthday/PIC2343.jpg` となります。これによって {{domxref("FileList")}} が平坦でも階層構造を知ることができます。
 
-> **メモ:** `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
+> [!NOTE]
+> `webkitRelativePath` の挙動は *Chromium 72 より前*では異なります。詳しくは[このバグ](https://crbug.com/124187)を参照してください。
 
 ## 例
 

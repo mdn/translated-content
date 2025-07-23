@@ -178,7 +178,8 @@ console.log(splits);
 // [ "Hello ", "1", " word. Sentence number ", "2", "." ]
 ```
 
-> **メモ:** `\d` は数字 0 から 9 までの[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)に一致します。
+> [!NOTE]
+> `\d` は数字 0 から 9 までの[文字クラス](/ja/docs/Web/JavaScript/Guide/Regular_expressions/Character_classes)に一致します。
 
 ### 独自のスプリッターの使用
 

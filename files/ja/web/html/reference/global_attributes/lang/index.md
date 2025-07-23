@@ -10,7 +10,8 @@ l10n:
 
 **`lang`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に言語を定義するのに役立ちます。 編集不可能な要素の場合は書かれている言語、または編集可能な要素の場合はユーザーが書くべき言語です。この属性は、{{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}で定義されている形式で、単一の「言語タグ」を格納しています。
 
-> **メモ:** `lang` の既定値は `unknown` であるため、この属性には常に適切な値を指定することが推奨されます。
+> [!NOTE]
+> `lang` の既定値は `unknown` であるため、この属性には常に適切な値を指定することが推奨されます。
 
 {{InteractiveExample("HTML デモ: lang", "tabbed-shorter")}}
 

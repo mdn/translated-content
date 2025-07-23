@@ -56,7 +56,8 @@ padding-bottom: 0;
 
 ![CSS の padding-bottom プロパティの要素ボックスへの影響](padding-bottom.svg)
 
-> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> [!NOTE]
+> {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 

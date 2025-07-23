@@ -47,7 +47,8 @@ overflow-wrap: break-word;
 }
 ```
 
-> **メモ:** {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
+> [!NOTE]
+> {{cssxref("word-break")}} とは対照的に、 `overflow-wrap` は単語全体があふれずに行内に配置できない場合にのみ、改行を生成します。
 
 ## 構文
 

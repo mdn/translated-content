@@ -141,7 +141,8 @@ Express は特定の HTTP 述語 (`GET`, `POST`, `SET` など) と URL パター
 
 最初に、標準の Express の [Hello World](https://expressjs.com/ja/starter/hello-world.html) の例を考えてみましょう (これについては、以下の各セクションで説明します)。
 
-> **メモ:** **Tip:** Node と Express がすでにインストールされている場合 (または[次の記事](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)のようにインストールする場合) は、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行できます。
+> [!NOTE]
+> **Tip:** Node と Express がすでにインストールされている場合 (または[次の記事](/ja/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)のようにインストールする場合) は、このコードを **app.js** というテキストファイルに保存し、bash コマンドプロンプトで次のように呼び出して実行できます。
 >
 > **`node ./app.js`**
 
@@ -216,7 +217,8 @@ module.exports = {
 };
 ```
 
-> **メモ:** `exports` を与えられたモジュール内の `module.exports` への[ショートカット](https://nodejs.org/api/modules.html#modules_exports_shortcut)として考えることができます。実際、`exports` は、モジュールが評価される前に `module.exports` の値に初期化される単なる変数です。 その値はオブジェクト (この場合は空のオブジェクト) への参照です。これは、`exports` が `module.exports` によって参照されるのと同じオブジェクトへの参照を保持することを意味します。また、エクスポートに別の値を代入することで、`module.exports` にバインドされなくなることも意味します。
+> [!NOTE]
+> `exports` を与えられたモジュール内の `module.exports` への[ショートカット](https://nodejs.org/api/modules.html#modules_exports_shortcut)として考えることができます。実際、`exports` は、モジュールが評価される前に `module.exports` の値に初期化される単なる変数です。 その値はオブジェクト (この場合は空のオブジェクト) への参照です。これは、`exports` が `module.exports` によって参照されるのと同じオブジェクトへの参照を保持することを意味します。また、エクスポートに別の値を代入することで、`module.exports` にバインドされなくなることも意味します。
 
 モジュールの詳細については、[モジュール](https://nodejs.org/api/modules.html#modules_modules) (Node API のドキュメント) を参照してください。
 
@@ -260,7 +262,8 @@ app.get("/", function (req, res) {
 
 コールバック関数はリクエストとレスポンスオブジェクトを引数として取ります。 この場合、メソッドは単にレスポンスに対して [`send()`](https://expressjs.com/en/4x/api.html#res.send) を呼び出して、文字列 "Hello World!" を返します。リクエスト/レスポンスサイクルを終了するための[レスポンスメソッドは他にも多数](https://expressjs.com/ja/guide/routing.html#response-methods)あります。たとえば、JSON レスポンスを送信するために [`res.json()`](https://expressjs.com/en/4x/api.html#res.json) を呼び出し、ファイルを送信するために [`res.sendFile()`](https://expressjs.com/en/4x/api.html#res.sendFile) を呼び出すことができます。
 
-> **メモ:** **JavaScript tip:** コールバック関数で好きな引数名を使うことができます。 コールバックが呼び出されると、最初の引数は常にリクエストになり、2 番目の引数は常にレスポンスになります。 コールバックの本体で作業しているオブジェクトを識別できるようにそれらの名前を付けることは意味があります。
+> [!NOTE]
+> **JavaScript tip:** コールバック関数で好きな引数名を使うことができます。 コールバックが呼び出されると、最初の引数は常にリクエストになり、2 番目の引数は常にレスポンスになります。 コールバックの本体で作業しているオブジェクトを識別できるようにそれらの名前を付けることは意味があります。
 
 Express アプリケーションオブジェクトには、他のすべての HTTP 述語のルートハンドラーを定義するためのメソッドもあります。これらのメソッドはほとんど同じ方法で使用されます。
 
@@ -298,7 +301,8 @@ router.get("/about", function (req, res) {
 module.exports = router;
 ```
 
-> **メモ:** `Router` オブジェクトにルートを追加することは、(前述のように) `app` オブジェクトにルートを追加するのと同じです。
+> [!NOTE]
+> `Router` オブジェクトにルートを追加することは、(前述のように) `app` オブジェクトにルートを追加するのと同じです。
 
 メインアプリケーションファイルでルーターを使用するには、ルートモジュール (**wiki.js**) を `require()` してから、Express アプリケーションで `use()` を呼び出してミドルウェア処理パスにルーターを追加します。 2 つの経路は `/wiki/` と `/wiki/about/` からアクセス可能になります。
 

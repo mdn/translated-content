@@ -46,7 +46,8 @@ function name(param0, param1, /* …, */ paramN) {
 }
 ```
 
-> **メモ:** [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
+> [!NOTE]
+> [式文](/ja/docs/Web/JavaScript/Reference/Statements/Expression_statement)はキーワード `function` から始めることができません。 [`function` 宣言](/ja/docs/Web/JavaScript/Reference/Statements/function)との曖昧さをさけるためです。 `function` キーワードは文を受け入れることができない文脈で現れた時だけ式を開始します。
 
 ### 引数
 

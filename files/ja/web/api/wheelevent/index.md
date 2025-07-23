@@ -12,7 +12,8 @@ l10n:
 > [!NOTE]
 > これは標準のホイールイベントインターフェイスです。古いバージョンのブラウザーは、標準外でブラウザー間の互換性のない `MouseWheelEvent` および {{DOMxRef("MouseScrollEvent")}} インターフェイスを実装していました。これらを避けて、このインターフェイスを使用してください。
 
-> **メモ:** {{domxref("Element/wheel_event", "wheel")}} イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものです。したがって、 `wheel` イベントは必ずしも `scroll` イベントを発行するわけではありません。その場合でも、 `wheel` イベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{DOMxRef("Element.scrollLeft", "scrollLeft")}} や {{DOMxRef("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
+> [!NOTE]
+> {{domxref("Element/wheel_event", "wheel")}} イベントと {{domxref("Element/scroll_event", "scroll")}} イベントを混同しないでください。 `wheel` イベントの既定のアクションは実装固有のものです。したがって、 `wheel` イベントは必ずしも `scroll` イベントを発行するわけではありません。その場合でも、 `wheel` イベントの `delta*` 値は必ずしもコンテンツのスクロール方向を反映しているとは限りません。したがって、スクロールの方向を取得するために、 `wheel` イベントの `delta*` プロパティに頼らないようにしてください。代わりに、 `scroll` イベント内のターゲットの {{DOMxRef("Element.scrollLeft", "scrollLeft")}} や {{DOMxRef("Element.scrollTop", "scrollTop")}} の値の変化を検出するようにしてください。
 
 {{InheritanceDiagram}}
 
@@ -47,7 +48,8 @@ _このインターフェイスは、その祖先である {{DOMxRef("MouseEvent
 - {{DOMxRef("WheelEvent.wheelDeltaY")}} {{ReadOnlyInline}} {{Deprecated_Inline}} {{Non-standard_Inline}}
   - : 垂直スクロール量を表す整数を返します。
 
-> **メモ:** [Element: mousewheel イベント](/ja/docs/Web/API/Element/mousewheel_event)には、非推奨の `wheelDelta`、`wheelDeltaX`、`wheelDeltaY` プロパティについての追加の文書があります。
+> [!NOTE]
+> [Element: mousewheel イベント](/ja/docs/Web/API/Element/mousewheel_event)には、非推奨の `wheelDelta`、`wheelDeltaX`、`wheelDeltaY` プロパティについての追加の文書があります。
 
 ## メソッド
 

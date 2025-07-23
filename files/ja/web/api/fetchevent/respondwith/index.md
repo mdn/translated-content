@@ -73,7 +73,8 @@ addEventListener("fetch", (event) => {
 });
 ```
 
-> **メモ:** {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。同等の機能は、{{domxref("cache.match()")}} をそれぞれのキャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} が返す順に）{{domxref("Response")}} が返ってくるまで呼び出すことです。
+> [!NOTE]
+> {{domxref("CacheStorage.match()", "caches.match()")}} は便利なメソッドです。同等の機能は、{{domxref("cache.match()")}} をそれぞれのキャッシュに対して（{{domxref("CacheStorage.keys()", "caches.keys()")}} が返す順に）{{domxref("Response")}} が返ってくるまで呼び出すことです。
 
 ## 仕様書
 

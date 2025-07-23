@@ -234,7 +234,8 @@ console.log(C.staticField === C); // true
 this = new Base();
 ```
 
-> **警告:** `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
+> [!WARNING]
+> `this` を `super()` の呼び出しの前に参照すると、エラーが発生します。
 
 派生クラスはでは `super()` を呼び出す前に return をしてはいけません。ただし、オブジェクトを返す場合やコンストラクターがない場合を除きます。
 
@@ -261,7 +262,8 @@ new Bad(); // ReferenceError: Must call super constructor in derived class befor
 
 スクリプトの最上位レベルでは、`this` 値は厳格モードであるかどうかに関わらず、`globalThis` を参照します。これは一般的にグローバルオブジェクトと同じです。例えば、ソースが HTML の [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素内に置かれ、スクリプトとして実行された場合、`this === window` となります。
 
-> **メモ:** `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
+> [!NOTE]
+> `globalThis` は一般的にグローバルオブジェクトと同じ概念です(つまり、`globalThis` にプロパティを追加するとグローバル変数になります)。これはブラウザーとノードの場合です。しかし、ホストはグローバルオブジェクトとは関係のない値を `globalThis` に指定することができます。
 
 ```js
 // ウェブブラウザーでは window オブジェクトもグローバルオブジェクトです。

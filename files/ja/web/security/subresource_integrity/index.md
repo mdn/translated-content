@@ -30,7 +30,8 @@ l10n:
 
 `integrity` 属性の値は、ハッシュアルゴリズムを示す接頭辞 (現在利用できる接頭辞は `sha256`, `sha384`, `sha512` です) と、 base64 でエンコードされたハッシュ値をダッシュで繋いだ文字列です。
 
-> **メモ:** `integrity` 属性値には、ホワイトスペースで区切って複数のハッシュ値を含めることができます。リソースはこれらのハッシュ値のいずれかに一致した場合に読み込まれます。
+> [!NOTE]
+> `integrity` 属性値には、ホワイトスペースで区切って複数のハッシュ値を含めることができます。リソースはこれらのハッシュ値のいずれかに一致した場合に読み込まれます。
 
 base64 でエンコードされた sha384 ハッシュを含む `integrity` 文字列の例
 
@@ -113,7 +114,8 @@ Access-Control-Allow-Origin: *
   crossorigin="anonymous"></script>
 ```
 
-> **メモ:** `crossorigin` 属性については [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
+> [!NOTE]
+> `crossorigin` 属性については [CORS 設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)を参照してください。
 
 ## サブリソース完全性のブラウザーでの扱い
 

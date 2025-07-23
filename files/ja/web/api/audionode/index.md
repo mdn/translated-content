@@ -18,7 +18,8 @@ l10n:
 
 {{InheritanceDiagram}}
 
-> **メモ:** `AudioNode` はイベントのターゲットになることがあり、そのため {{domxref("EventTarget")}} インターフェイスを実装しています。
+> [!NOTE]
+> `AudioNode` はイベントのターゲットになることがあり、そのため {{domxref("EventTarget")}} インターフェイスを実装しています。
 
 ## インスタンスプロパティ
 

@@ -35,7 +35,8 @@ l10n:
 - `symmetric`
   - : [`<boolean>`](/ja/docs/Web/MathML/Reference/Values#mathml-specific_types) で、伸縮する演算子が仮想数式軸（中央の分数線）を中心に上下対称であるべきであるかどうかを示します。
 
-> **メモ:** `lspace`、`maxsize`、`minsize`、`rspace` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
+> [!NOTE]
+> `lspace`、`maxsize`、`minsize`、`rspace` 属性については、一部のブラウザーは[古い MathML における長さ](/ja/docs/Web/MathML/Reference/Values#古い_mathml_における長さ)も受け入れることがあります。
 
 ## 例
 

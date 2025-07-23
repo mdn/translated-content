@@ -34,7 +34,8 @@ http://www.example.com/index.html#section2
 }
 ```
 
-> **メモ:** [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
+> [!NOTE]
+> [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
 
 ## 例
 
@@ -92,7 +93,8 @@ p:target i {
 
 `:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
 
-> **メモ:** `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
+> [!NOTE]
+> `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
 
 #### HTML
 

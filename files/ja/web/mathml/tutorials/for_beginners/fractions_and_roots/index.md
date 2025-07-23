@@ -300,7 +300,8 @@ checkboxes.forEach((checkbox) => {
 
 {{ EmbedLiveSample('Fraction_without_bar', 700, 200, "", "") }}
 
-> **メモ:** `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
+> [!NOTE]
+> `linethickness` 属性を使用して任意の太さを指定することができますが、数学フォントで指定する引数から計算される既定値のままにしておく方がよいでしょう。
 
 ## まとめ
 

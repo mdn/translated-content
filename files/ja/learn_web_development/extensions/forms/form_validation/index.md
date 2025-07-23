@@ -227,7 +227,8 @@ input:valid {
 
 {{HTMLElement("input")}} 要素の型によっては、検証のために [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性が必要ないことがあります。例えば `email` 型を指定すると、入力された文字列を、妥当な形式のメールアドレスまたは、 [`multiple`](/ja/docs/Web/HTML/Reference/Attributes/multiple) 属性がある場合はカンマで区切られたメールアドレスのリストであることを確認する正規表現で検証します。
 
-> **メモ:** {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性に対応していません。
+> [!NOTE]
+> {{HTMLElement("textarea")}} 要素は [`pattern`](/ja/docs/Web/HTML/Reference/Attributes/pattern) 属性に対応していません。
 
 ### 入力欄の長さの制約
 

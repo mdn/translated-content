@@ -18,7 +18,8 @@ l10n:
 - {{domxref("Element.querySelectorAll", "querySelectorAll()")}}
   - : ノードのサブツリー内で一致するすべての `Element` ノードを含む {{domxref("NodeList")}} を返すか、一致するものが見つからなかった場合は空の `NodeList` を返します。
 
-> **メモ:** {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリーメソッドがライブのノードリストを返すのと異なります。
+> [!NOTE]
+> {{domxref("Element.querySelectorAll()", "querySelectorAll()")}} が返す {{domxref("NodeList")}} はライブではありません。すなわち、 DOM で行われた変更がコレクションに反映されません。これは他の DOM クエリーメソッドがライブのノードリストを返すのと異なります。
 
 例や詳細については、 {{domxref("Element.querySelector()")}} および {{domxref("Element.querySelectorAll()")}} メソッドの記事を参照してください。
 

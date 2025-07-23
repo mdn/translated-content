@@ -191,7 +191,8 @@ def youngest(request):
 
 プログラミングの完全な初心者であるならば、おそらく「学びやすさ」に基づいてフレームワークを選ぶでしょう。言語自体の「使いやすさ」に加えて、高品質のドキュメント/チュートリアル、および新しいユーザーを支援する活発なコミュニティが最も貴重なリソースです。コースの後半で例を書くために [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) を選択しました。これは主にそれらが習得が容易で優れたサポートがあるためです。
 
-> **メモ:** [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
+> [!NOTE]
+> [Django](https://www.djangoproject.com/) (Python) と [Express](http://expressjs.com/) (Node/JavaScript) のメインウェブサイトに行き、それらのドキュメントとコミュニティを調べてみましょう。
 >
 > 1. メインサイトに移動する (上記のリンク先)
 >    - Documentation メニューのリンク (Documentation、Guide、API Reference、Getting Started など) をクリックします。

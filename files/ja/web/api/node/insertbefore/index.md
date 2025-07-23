@@ -13,7 +13,8 @@ l10n:
 
 これは、 1 つのノードが文書中に同時に 2 か所に存在できないことを意味します。
 
-> **メモ:** {{domxref("Node.cloneNode()")}} を使用すると、ノードを新しい親の下に追加する前に複製を作成することができます。なお、 `cloneNode()` で作成された複製は自動的には同期されません。
+> [!NOTE]
+> {{domxref("Node.cloneNode()")}} を使用すると、ノードを新しい親の下に追加する前に複製を作成することができます。なお、 `cloneNode()` で作成された複製は自動的には同期されません。
 
 指定された子が {{domxref("DocumentFragment")}} である場合、 `DocumentFragment` の内容全体が指定された親ノードの子リストに移動されます。
 
@@ -29,7 +30,8 @@ insertBefore(newNode, referenceNode)
   - : 挿入するノードです。
 - `referenceNode`
   - : `newNode` が挿入される位置の前にあるノードです。このノードが `null` である場合は、 `newNode` はこのノードの子ノードの末尾に挿入されます。
-    > **メモ:** `referenceNode` は省略可能な引数では**ありません**。
+    > [!NOTE]
+    > `referenceNode` は省略可能な引数では**ありません**。
     > 明示的に {{domxref("Node")}} または `null` を渡す必要があります。
     > 渡さなかった場合や無効な値を渡した場合の[動作](https://crbug.com/419780)は、ブラウザーのバージョンによって[異なる](https://bugzil.la/119489)可能性があります。
 
@@ -95,7 +97,8 @@ insertBefore(newNode, referenceNode)
 </script>
 ```
 
-> **メモ:** `insertAfter()` メソッドはありません。
+> [!NOTE]
+> `insertAfter()` メソッドはありません。
 > これは `insertBefore` メソッドと {{domxref("Node.nextSibling")}} の組み合わせでエミュレートできます。
 >
 > 前の例では、 `sp1` は以下のようにして `sp2` の後に挿入することができます。

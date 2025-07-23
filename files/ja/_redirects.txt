@@ -324,7 +324,7 @@
 /ja/docs/CSS/animation-play-state	/ja/docs/Web/CSS/animation-play-state
 /ja/docs/CSS/animation-timing-function	/ja/docs/Web/CSS/animation-timing-function
 /ja/docs/CSS/attr	/ja/docs/Web/CSS/attr
-/ja/docs/CSS/aural	/ja/docs/Web/CSS/@media/aural
+/ja/docs/CSS/aural	/ja/docs/Web/CSS/@media
 /ja/docs/CSS/auto	/ja/docs/Web/CSS/width
 /ja/docs/CSS/backface-visibility	/ja/docs/Web/CSS/backface-visibility
 /ja/docs/CSS/background-attachment	/ja/docs/Web/CSS/background-attachment
@@ -4104,6 +4104,7 @@
 /ja/docs/Web/CSS/:host()	/ja/docs/Web/CSS/:host_function
 /ja/docs/Web/CSS/:matches	/ja/docs/Web/CSS/:is
 /ja/docs/Web/CSS/@font-face/font-variant	/ja/docs/Web/CSS/@font-face
+/ja/docs/Web/CSS/@media/aural	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/@media/update-frequency	/ja/docs/Web/CSS/@media/update
 /ja/docs/Web/CSS/@scroll-timeline	/ja/docs/Web/CSS/scroll-timeline
 /ja/docs/Web/CSS/@viewport	/ja/docs/Web/CSS
@@ -4293,7 +4294,7 @@
 /ja/docs/Web/CSS/actual_value	/ja/docs/Web/CSS/CSS_cascade/Value_processing#実効値
 /ja/docs/Web/CSS/align-tracks	/ja/docs/Web/CSS/CSS_grid_layout/Masonry_layout
 /ja/docs/Web/CSS/attr()	/ja/docs/Web/CSS/attr
-/ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media/aural
+/ja/docs/Web/CSS/aural	/ja/docs/Web/CSS/@media
 /ja/docs/Web/CSS/auto	/ja/docs/Web/CSS/width
 /ja/docs/Web/CSS/basic-shape/circle()	/ja/docs/Web/CSS/basic-shape/circle
 /ja/docs/Web/CSS/basic-shape/ellipse()	/ja/docs/Web/CSS/basic-shape/ellipse

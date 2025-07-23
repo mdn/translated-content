@@ -7,7 +7,8 @@ l10n:
 
 {{deprecated_header}}
 
-> **警告:** {{CSP("report-to")}} ディレクティブは、 `report-uri` ディレクティブを置き換えるためのものであり、 `report-to` に対応するブラウザーでは、 `report-uri` ディレクティブは無視されます。
+> [!WARNING]
+> {{CSP("report-to")}} ディレクティブは、 `report-uri` ディレクティブを置き換えるためのものであり、 `report-to` に対応するブラウザーでは、 `report-uri` ディレクティブは無視されます。
 >
 > しかし、 `report-to` の対応が進むまでは、次のように両方のヘッダー指定することができます。
 >

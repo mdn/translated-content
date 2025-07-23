@@ -138,13 +138,15 @@ l10n:
 
     複数の `<link rel="icon">` があった場合、ブラウザーはそれぞれの [`media`](/ja/docs/Web/HTML/Reference/Elements/link#media) 属性、[`type`](/ja/docs/Web/HTML/Reference/Elements/link#type) 属性、[`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を使って、最も適切なアイコンを選択します。複数のアイコンが同じように適切である場合は、最後のアイコンが使用されます。最も適切なアイコンが、対応していないファイル形式を使用しているなどの理由で不適切であることが後に判明した場合、ブラウザーは次に適切なアイコンを選択します。
 
-    > **メモ:** [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
+    > [!NOTE]
+    > [`crossorigin`](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) 属性は `rel="icon"` においては Chromium ベースのブラウザーは対応していません。[公開 Chromium issue](https://crbug.com/1121645) を参照してください。
 
     > [!NOTE]
     > Apple の iOS では、他のモバイルブラウザーのように、ウェブクリップやスタートアップのプレースホルダー用のウェブページのアイコンを選択するために、このリンク種別や [`sizes`](/ja/docs/Web/HTML/Reference/Elements/link#sizes) 属性を使用していません。
     > 代わりに、標準外の [`apple-touch-icon`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4) および [`apple-touch-startup-image`](https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW6) をそれぞれ使用しています。
 
-    > **メモ:** `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
+    > [!NOTE]
+    > `shortcut` リンク種別が `icon` の前に見られることが良くありますが、このリンク種別は適合するものではなく、無視されるので**使用しないでください**。
 
 - `license`
   - : {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("form")}}, {{HTMLElement("link")}} の各要素で有効である `license` の値は、ハイパーリンクがライセンス情報を記述した文書につながること、現在の文書のメインコンテンツが、参照された文書で記述された著作権ライセンスによってカバーされていることを示します。 {{HTMLElement("head")}} 要素内にない場合、規格では、文書の特定の部分に適用されるハイパーリンクか、文書全体に適用されるハイパーリンクかを区別していません。ページ上のデータのみがこれを示すことができます。

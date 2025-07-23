@@ -57,7 +57,8 @@ svg {
   - : この属性は、パスに沿ってアニメーションされた要素に適用される回転を定義します。
     _値の型_: [**\<number>**](/ja/docs/Web/SVG/Guides/Content_type#number) | `auto` | `auto-reverse`; _既定値_: `0`; _アニメーション_: **不可**
 
-> **メモ:** `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
+> [!NOTE]
+> `<animateMotion>` においては、 {{SVGAttr("calcMode")}} 属性の既定値は `paced` です。
 
 ### アニメーション属性
 

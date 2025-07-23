@@ -48,7 +48,8 @@ l10n:
       └─ ::view-transition-new(root)
 ```
 
-> **メモ:** {{cssxref("::view-transition-group")}} のサブツリーは、キャプチャされたそれぞれの `view-transition-name` ごとに作成されます。
+> [!NOTE]
+> {{cssxref("::view-transition-group")}} のサブツリーは、キャプチャされたそれぞれの `view-transition-name` ごとに作成されます。
 
 同一文書内 (SPA) の遷移の場合、擬似要素ツリーは文書内で利用できます。異なる文書間 (MPA) の遷移の場合、擬似要素ツリーは出力先文書でのみ利用できます。
 
@@ -215,7 +216,8 @@ figcaption {
 
 2 つ目の疑似要素を設定することで、`<figcaption>` だけに別個のビュー遷移スタイル設定を適用することができます。 異なる古いビューと新しいビューは、それぞれ別個に処理されます。
 
-> **メモ:** `view-transition-name` の値は、`none` を除いて何らかの値にすることができます。`none` の値は、特定の要素がビュー遷移に参加しないということを意味しています。
+> [!NOTE]
+> `view-transition-name` の値は、`none` を除いて何らかの値にすることができます。`none` の値は、特定の要素がビュー遷移に参加しないということを意味しています。
 >
 > `view-transition-name` の値も固有のものでなければなりません。 レンダリングされた要素が同時に同じ `view-transition-name` を保有している場合、{{domxref("ViewTransition.ready")}} が拒否され、遷移がスキップされます。
 
@@ -283,7 +285,8 @@ figcaption {
 
 これはうまく動作します。既定では、`::view-transition-group` が、古いビューと新しいビューの間でスムーズに変倍しながら、`width` と `height` を移行させるからです。どちらの状態でも `height` を固定して設定するだけで、うまくいくようになりました。
 
-> **メモ:** [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
+> [!NOTE]
+> [Smooth and simple transitions with the View Transitions API](https://developer.chrome.com/docs/web-platform/view-transitions/) には、他にもいくつかのカスタマイズ例があります。
 
 ## JavaScript によるビュー遷移の制御
 
@@ -422,7 +425,8 @@ window.addEventListener("pageswap", async (e) => {
 });
 ```
 
-> **メモ:** `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
+> [!NOTE]
+> `view-transition-name` の値は、それぞれの場合でスナップショットが取得された後に除去します。 設定したままにしておくと、ナビゲーションの際に [bfcache](/ja/docs/Glossary/bfcache) に保存されるページの状態に保存されてしまいます。 その後、戻るボタンが押されると、ナビゲーション前のページの `pagereveal` イベントハンドラーが、異なる要素に対して同じ `view-transition-name` の値を設定しようと試みます。 複数の要素に同じ `view-transition-name` 設定されている場合、ビュー遷移はスキップされます。
 
 {{domxref("Window.pagereveal_event", "pagereveal")}} イベントのリスナーは、以下のようにします。これは、`pageswap` イベントリスナーと似た方法で動作しますが、新しいページのページ要素に対して "to" アニメーションをカスタマイズしていることに留意してください。
 

@@ -11,7 +11,8 @@ l10n:
 
 ## コンストラクター
 
-> **メモ:** `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。派生クラスのコンストラクターはオプションオブジェクトとともに呼ばれるため、独自の初期化処理を行うことができます。詳しくはコンストラクターのページを参照してください。
+> [!NOTE]
+> `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。派生クラスのコンストラクターはオプションオブジェクトとともに呼ばれるため、独自の初期化処理を行うことができます。詳しくはコンストラクターのページを参照してください。
 
 - {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
   - : 新しい `AudioWorkletProcessor` オブジェクトのインスタンスを生成します。

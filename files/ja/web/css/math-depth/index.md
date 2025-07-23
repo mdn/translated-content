@@ -7,7 +7,8 @@ l10n:
 
 **`math-depth`** プロパティは、数式の各要素について、その数式の最上位コンテナーに対する _深さ_ の概念を記述します。これは、 `font-size: math` が適用されたとき、要素の [font-size](/ja/docs/Web/CSS/font-size) の計算値を調整するために使用されます。
 
-> **メモ:** `font-size: math` は MathML Core の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathml-core/#user-agent-stylesheet)における `<math>` 要素の既定値ですので、明示的に指定する必要はありません。
+> [!NOTE]
+> `font-size: math` は MathML Core の[ユーザーエージェントスタイルシート](https://w3c.github.io/mathml-core/#user-agent-stylesheet)における `<math>` 要素の既定値ですので、明示的に指定する必要はありません。
 
 ## 構文
 

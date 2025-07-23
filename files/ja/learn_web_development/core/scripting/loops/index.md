@@ -441,7 +441,8 @@ btn.addEventListener("click", () => {
 
 5. ループの後、連絡先が設定されたかどうかをチェックし、設定されていない場合は段落テキストを「連絡先が見つかりません。」に設定しています。
 
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
+> [!NOTE]
+> [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) で見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)もあります）。
 
 ## continue で繰り返しをスキップ
 
@@ -489,7 +490,8 @@ btn.addEventListener("click", () => {
 3. もし、平方根と切り捨てた数値が等しくないのなら (`!==`)、平方根は整数ではないことを示しています。整数以外には興味がありませんので、`continue` 文を用いて、その数値をどこにも保持することなく、次のループの繰り返しまでスキップします。
 4. もし、その平方根が整数値であるならば、if ブロックは飛ばされるので、`continue` 文は実行されません。代わりに、現在の `i` の値を段落の内容の後ろにスペースと一緒に結合します。
 
-> **メモ:** [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) でも見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります）。
+> [!NOTE]
+> [すべてのソースは GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) でも見ることができます（[動いているデモ](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)もあります）。
 
 ## while と do...while
 

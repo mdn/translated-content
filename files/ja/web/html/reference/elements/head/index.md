@@ -10,7 +10,8 @@ l10n:
 
 **`<head>`** は [HTML](/ja/docs/Web/HTML) の要素で、文書に関する機械可読な情報（{{glossary("metadata", "メタデータ")}}）、たとえば[題名](/ja/docs/Web/HTML/Reference/Elements/title)、[スクリプト](/ja/docs/Web/HTML/Reference/Elements/script)、[スタイルシート](/ja/docs/Web/HTML/Reference/Elements/style)などを含みます。
 
-> **メモ:** `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{HTMLElement("header")}} 要素を参照してください。
+> [!NOTE]
+> `<head>` は主に人間が読むためのものではなく、機械処理のための情報を保持するためのものです。人間が読むための情報、例えば最上位の見出しや著者の掲載のためのものは、 {{HTMLElement("header")}} 要素を参照してください。
 
 ## 属性
 

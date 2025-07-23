@@ -33,7 +33,8 @@ match(request, options)
 
 最初に request にマッチした {{domxref("BackgroundFetchRecord")}} か、または何もマッチしなかった場合には {{jsxref("undefined")}} で解決される {{jsxref("Promise")}} を返します。
 
-> **メモ:** `BackgroundFetchRegistration.match()` は、基本的には {{domxref("BackgroundFetchRegistration.matchAll()")}} と同じですが、マッチする全ての record を配列で返すのではなく、最初にマッチした record のみで解決するという違いがあります。
+> [!NOTE]
+> `BackgroundFetchRegistration.match()` は、基本的には {{domxref("BackgroundFetchRegistration.matchAll()")}} と同じですが、マッチする全ての record を配列で返すのではなく、最初にマッチした record のみで解決するという違いがあります。
 
 ### 例外
 

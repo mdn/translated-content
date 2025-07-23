@@ -379,7 +379,8 @@ trackEls.forEach((el, i) => {
 });
 ```
 
-> **メモ:** [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
+> [!NOTE]
+> [デモの実際の動きを見る](https://mdn.github.io/webaudio-examples/multi-track/)ことや、[ソースコードを見る](https://github.com/mdn/webaudio-examples/tree/main/multi-track)ことができます。
 
 ゲーム世界の文脈では、異なる状況で使用されるループやサンプルがあるかもしれません。よりシームレスな体験のために、他のトラックと同期させることができると便利です。
 

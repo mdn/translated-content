@@ -29,7 +29,8 @@ l10n:
 - `"text"`
   - : `response` は文字列に入ったテキストです。
 
-> **メモ:** `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
+> [!NOTE]
+> `responseType` を特定の値に設定する場合は、サーバーが実際にその形式と互換性のあるレスポンスを送信していることを確認してください。サーバーが `responseType` に設定された値と互換性のないデータを返した場合、{{domxref("XMLHttpRequest.response", "response")}} の値は `null` になります。
 
 ### 例外
 

@@ -34,7 +34,8 @@ match(request, options)
 
 リクエストに一致した最初の {{domxref("Response")}} に解決し、一致するものが見つからない場合は {{jsxref("undefined")}} に解決する {{jsxref("Promise")}} です。
 
-> **メモ:** `Cache.match()` は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致したレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に {{domxref("Cache.matchAll()")}} と同じです。
+> [!NOTE]
+> `Cache.match()` は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致したレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に {{domxref("Cache.matchAll()")}} と同じです。
 
 ## 例
 

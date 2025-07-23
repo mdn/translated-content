@@ -337,7 +337,8 @@ multiply(20, 20);
 multiply(0.5, 3);
 ```
 
-> **メモ:** [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
+> [!NOTE]
+> [`return`](/ja/docs/Web/JavaScript/Reference/Statements/return) 文は `result` の値を関数内から関数の外に戻すことをブラウザーに指示し、それを利用できるようにします。これが必要な理由は、関数内で定義された変数が、その関数内でしか利用できないためです。これは変数の{{Glossary("Scope", "スコープ")}}と呼ばれています([変数のスコープのより詳しい説明](/ja/docs/Web/JavaScript/Guide/Grammar_and_types#変数のスコープ)をお読みください)。
 
 ### イベント
 

@@ -9,7 +9,8 @@ l10n:
 
 **`hasOwnProperty()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクト自身が（継承されていない）指定されたプロパティを持っているかどうかを示す論理値を返します。
 
-> **メモ:** {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
+> [!NOTE]
+> {{jsxref("Object.hasOwn()")}} は `hasOwnProperty()` よりもブラウザーの対応状況の面で推奨されます。
 
 {{InteractiveExample("JavaScript デモ: Object.prototype.hasOwnProperty()")}}
 

@@ -111,7 +111,8 @@ caption {
 - `bgcolor` {{deprecated_inline}}
   - : 文字列で、行の各セルの背景色を定義します。値は [16 進 `#RRGGBB` または `#RGB` 値](/ja/docs/Web/CSS/color_value/rgb)、あるいは[色キーワード](/ja/docs/Web/CSS/named-color)を使用できます。属性を省略するか JavaScript で `null` を設定すると、行のセルは親要素の背景色を継承します。
 
-    > **メモ:** {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、CSS の {{CSSxRef("background-color")}} プロパティを使用してください。
+    > [!NOTE]
+    > {{HTMLElement("tr")}} 要素は [CSS](/ja/docs/Web/CSS) を使用してスタイルを設定するべきです。 `bgcolor` 属性と同様の効果を与えるには、CSS の {{CSSxRef("background-color")}} プロパティを使用してください。
 
 - `char` {{deprecated_inline}}
   - : 文字列で、行のそれぞれの列のセルで揃える文字を設定します（同一の文字を使用して、それぞれの行の中心がほかの行と揃えられます）。典型的な値に、数値や金額を揃えようとするときのピリオド (`"."`) やカンマ (`","`) があります。 [`align`](#align) 属性が `char` ではない場合は、この属性は無視されます。
@@ -136,7 +137,8 @@ caption {
     - `top`
       - : 各セルのテキストは、含まれるセルの上端に可能な限り沿って描画されます。
 
-    > **メモ:** `valign` 属性は廃止されたため、使用しないでください。代わりに CSS の {{CSSxRef("vertical-align")}} プロパティを使用してください。
+    > [!NOTE]
+    > `valign` 属性は廃止されたため、使用しないでください。代わりに CSS の {{CSSxRef("vertical-align")}} プロパティを使用してください。
 
 ## 例
 

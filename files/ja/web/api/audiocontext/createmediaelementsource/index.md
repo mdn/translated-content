@@ -31,7 +31,8 @@ createMediaElementSource(myMediaElement)
 
 以下の例では、 `createMediaElementSource()` を使用して {{htmlelement("audio") }} から音源を作成します。再生される音源は {{ domxref("GainNode") }} を介し {{ domxref("AudioDestinationNode") }} に渡されます。マウスポインターが動くと `updatePage()` 関数が呼ばれ、マウスポインターの Y 座標の値をウィンドウの高さで割った比率を元に現在のゲインを計算します。また、マウスポインターを上下に動かすことで、再生している音楽の音量を上げ下げできます。
 
-> **メモ:** [ライブで実行する例](https://mdn.github.io/webaudio-examples/media-source-buffer/)と、[ソース](https://github.com/mdn/media-source-buffer)を見ることができます。
+> [!NOTE]
+> [ライブで実行する例](https://mdn.github.io/webaudio-examples/media-source-buffer/)と、[ソース](https://github.com/mdn/media-source-buffer)を見ることができます。
 
 ```js
 const audioCtx = new AudioContext();
@@ -65,7 +66,8 @@ source.connect(gainNode);
 gainNode.connect(audioCtx.destination);
 ```
 
-> **メモ:** `createMediaElementSource()`を呼び出した結果、 {{domxref("HTMLMediaElement")}} からの音声再生は AudioContext の処理グラフに再ルーティングされます。そのため、メディアの再生/一時停止は、メディア要素 API とプレーヤコントロールを通して行うことができます。
+> [!NOTE]
+> `createMediaElementSource()`を呼び出した結果、 {{domxref("HTMLMediaElement")}} からの音声再生は AudioContext の処理グラフに再ルーティングされます。そのため、メディアの再生/一時停止は、メディア要素 API とプレーヤコントロールを通して行うことができます。
 
 ## 仕様書
 

@@ -31,7 +31,8 @@ AsyncGeneratorFunction(arg0, arg1, functionBody)
 AsyncGeneratorFunction(arg0, arg1, /* …, */ argN, functionBody)
 ```
 
-> **メモ:** `AsyncGeneratorFunction()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `AsyncGeneratorFunction` インスタンスを生成します。
+> [!NOTE]
+> `AsyncGeneratorFunction()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `AsyncGeneratorFunction` インスタンスを生成します。
 
 ### 引数
 

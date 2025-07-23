@@ -99,7 +99,8 @@ transform: scaleZ(-1.4);
 
 上記のデモでは、[`perspective: 550px;`](/ja/docs/Web/CSS/perspective) (三次元空間を作るため) と [`transform-style: preserve-3d;`](/ja/docs/Web/CSS/transform-style) (立方体の 6 つの面である子を三次元空間に配置) を立方体に設定しました。
 
-> **メモ:** `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
+> [!NOTE]
+> `scaleZ(sz)` は `scale3d(1, 1, sz)` と等価です。
 
 ## 構文
 

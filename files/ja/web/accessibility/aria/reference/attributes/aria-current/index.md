@@ -22,7 +22,8 @@ l10n:
 
 [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role) 内の [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) など、現在のものではなく何かが選択されている場合は、現在表示されているタブパネルを示すために [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) を使用してください。
 
-> **メモ:** [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) の代わりとして `aria-current` を使用しないでください。
+> [!NOTE]
+> [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role)、[`option`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)、[`row`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/row_role) および [`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role) の [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) の代わりとして `aria-current` を使用しないでください。
 
 ## 例
 

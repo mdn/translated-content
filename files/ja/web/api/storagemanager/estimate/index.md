@@ -23,7 +23,8 @@ const estimatePromise = StorageManager.estimate();
 
 {{jsxref('Promise')}} で、これは {{domxref('StorageEstimate')}} 辞書に準拠したオブジェクトに解決します。この辞書には、このオリジンで利用可能なおよその大きさが {{domxref("StorageEstimate.quota")}} に、現在使用されているおよその量が {{domxref("StorageEstimate.usage")}} に入ります。
 
-> **メモ:** **これらは正確な数値ではありません。**圧縮、重複排除セキュリティ上の理由による難読化などが行われるため、正確な値にはなりません。
+> [!NOTE]
+> **これらは正確な数値ではありません。**圧縮、重複排除セキュリティ上の理由による難読化などが行われるため、正確な値にはなりません。
 
 `quota` はオリジンごとに異なることに気づくかもしれません。この違いは次のような要因に基づきます。
 

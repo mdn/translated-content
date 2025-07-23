@@ -15,7 +15,8 @@ slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
 
 これは、[`Promise`](/ja/docs/Web/JavaScript/Reference/Global_Objects/Promise) を返す非同期関数です。
 
-> **メモ:** [コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)を使うこともできます。
+> [!NOTE]
+> [コネクションベースのメッセージ](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging)を使うこともできます。
 
 ## 構文
 

@@ -212,7 +212,8 @@ panel.ontouchend = stopMove;
 
 マウスイベントとタッチイベントを一緒に使用する方法を示す簡単な例を示しました — [multi-control-box-drag.html](https://github.com/mdn/learning-area/blob/main/accessibility/mobile/multi-control-box-drag.html) を参照してください（[この例もライブで見てください](https://mdn.github.io/learning-area/accessibility/mobile/multi-control-box-drag.html)）。
 
-> **メモ:** [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
+> [!NOTE]
+> [ゲーム制御機構の実装](/ja/docs/Games/Techniques/Control_mechanisms)では、さまざまな制御機構を実装する方法を示す完全に機能する例も見ることができます。
 
 ## レスポンシブデザイン
 

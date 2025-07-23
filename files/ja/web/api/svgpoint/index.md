@@ -7,7 +7,8 @@ l10n:
 
 {{APIRef("SVG")}}{{Deprecated_Header}}
 
-> **警告:** `SVGPoint` は非推奨です。
+> [!WARNING]
+> `SVGPoint` は非推奨です。
 > 代わりに {{domxref("DOMPoint")}} または {{domxref("DOMPointReadOnly")}} を使用してください。
 
 `SVGPoint` は SVG 座標系における二次元または三次元の点を表します。

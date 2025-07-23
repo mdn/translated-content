@@ -79,7 +79,8 @@ browser.runtime.onMessage.hasListener(listener)
 
     リスナー関数は、論理値または {{jsxref("Promise")}} のいずれかを返します。
 
-    > **メモ:** `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
+    > [!NOTE]
+    > `addListener()` に非同期関数を渡すと、リスナーはメッセージを受け取るたびにプロミスを返すため、他のリスナーが応答できなくなります。
     >
     > ```js example-bad
     > // このようにしないでください

@@ -88,7 +88,8 @@ Vary: Sec-CH-Prefers-Reduced-Motion
 Critical-CH: Sec-CH-Prefers-Reduced-Motion
 ```
 
-> **メモ:** `Sec-CH-Prefers-Reduced-Motion` も {{httpheader("Vary")}} ヘッダーに指定することで、ブラウザーに対して、 URL は同じであってもこのヘッダー値に基づいて提供するコンテンツが異なるので、ブラウザーはキャッシュされた既存のレスポンスをそのまま使用せず、このレスポンスを別途キャッシュすべきなのだと示しています。 `Critical-CH` ヘッダーに掲載されている各ヘッダーは `Accept-CH` ヘッダーと `Vary` ヘッダーにも存在しなければなりません。
+> [!NOTE]
+> `Sec-CH-Prefers-Reduced-Motion` も {{httpheader("Vary")}} ヘッダーに指定することで、ブラウザーに対して、 URL は同じであってもこのヘッダー値に基づいて提供するコンテンツが異なるので、ブラウザーはキャッシュされた既存のレスポンスをそのまま使用せず、このレスポンスを別途キャッシュすべきなのだと示しています。 `Critical-CH` ヘッダーに掲載されている各ヘッダーは `Accept-CH` ヘッダーと `Vary` ヘッダーにも存在しなければなりません。
 
 `Sec-CH-Prefers-Reduced-Motion` は元のリクエストにはなかった重要なヒントなので、クライアントは自動的にリクエストを再試行します。今度は `Sec-CH-Prefers-Reduced-Motion` を通じて、動きの少ないアニメーションを好むユーザーであることをサーバーに指示します。
 

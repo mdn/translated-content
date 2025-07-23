@@ -145,7 +145,8 @@ function updateTexture(gl, texture, video) {
 
 次に、これらの新しい関数を `main()` 関数から呼び出す必要があります。
 
-> **メモ:** `main()` 関数で、 `loadTexture()` の呼び出しを次のコードに置き換えましょう。
+> [!NOTE]
+> `main()` 関数で、 `loadTexture()` の呼び出しを次のコードに置き換えましょう。
 
 ```js
 const texture = initTexture(gl);
@@ -155,7 +156,8 @@ const video = setupVideo("Firefox.mp4");
 > [!NOTE]
 > また、[Firefox.mp4](https://github.com/mdn/dom-examples/blob/main/webgl-examples/tutorial/sample8/Firefox.mp4) ファイルを JavaScript ファイルと同じローカルディレクトリーにダウンロードする必要があります。
 
-> **メモ:** `main()` 関数で、 `render()` 関数をこのように置き換えましょう。
+> [!NOTE]
+> `main()` 関数で、 `render()` 関数をこのように置き換えましょう。
 
 ```js
 // シーンを反復して描画

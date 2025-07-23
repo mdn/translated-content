@@ -46,7 +46,8 @@ rect2.bind("EnterFrame", function () {
 
 {{ EmbedLiveSample('Axis-Aligned_Bounding_Box', '700', '300') }}
 
-> **メモ:** [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
+> [!NOTE]
+> [キャンバスや外部ライブラリーを使用しない別の例](https://jsfiddle.net/jlr7245/217jrozd/3/).
 
 ## 円形衝突
 
@@ -125,7 +126,8 @@ circle2.bind("EnterFrame", () => {
 
 {{ EmbedLiveSample('Circle_Collision', '700', '300') }}
 
-> **メモ:** [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
+> [!NOTE]
+> [キャンバスや 外部ライブラリーを使わない例はこちらです。](https://jsfiddle.net/jlr7245/teb4znk0/20/)
 
 ## 分割軸定理
 

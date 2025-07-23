@@ -10,7 +10,8 @@ l10n:
 
 これは MathML 要素のアルファベット順リストです。これらはすべて {{domxref("MathMLElement")}} クラスを実装しています。
 
-> **メモ:** [MathML](/ja/docs/Web/MathML) のメインページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [MathML 4](https://w3c.github.io/mathml/)には、これらの機能やその他の機能の詳細が記載されています。
+> [!NOTE]
+> [MathML](/ja/docs/Web/MathML) のメインページで説明されているように、 MDN は [MathML Core](https://w3c.github.io/mathml-core/) を参照仕様として使用しています。しかし、一部のブラウザーでまだ実装されている古い機能も文書化しています。 [MathML 4](https://w3c.github.io/mathml/)には、これらの機能やその他の機能の詳細が記載されています。
 
 ## MathML 要素（アルファベット順）
 

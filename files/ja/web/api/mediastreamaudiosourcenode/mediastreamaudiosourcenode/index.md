@@ -10,7 +10,8 @@ l10n:
 
 [ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の **`MediaStreamAudioSourceNode()`** コンストラクターは、指定された {{domxref("MediaStream")}} の最初の音声トラックを音源として用いる新しい {{domxref("MediaStreamAudioSourceNode")}} オブジェクトを作成して返します。
 
-> **メモ:** `MediaStreamAudioSourceNode` を作成するもう一つの方法は、音声の取得元のストリームを指定して {{domxref("AudioContext.createMediaStreamSource()")}} メソッドを呼ぶことです。
+> [!NOTE]
+> `MediaStreamAudioSourceNode` を作成するもう一つの方法は、音声の取得元のストリームを指定して {{domxref("AudioContext.createMediaStreamSource()")}} メソッドを呼ぶことです。
 
 ## 構文
 

@@ -35,7 +35,8 @@ transform: matrix(0.1, 1, -0.3, 1, 0, 0);
 </section>
 ```
 
-> **メモ:** `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
+> [!NOTE]
+> `matrix(a, b, c, d, tx, ty)` は `matrix3d(a, b, 0, 0, c, d, 0, 0, 0, 0, 1, 0, tx, ty, 0, 1)` の短縮形です。
 
 ## 構文
 

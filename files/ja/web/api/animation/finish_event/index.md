@@ -10,7 +10,8 @@ l10n:
 
 **`finish`** は {{domxref("Animation")}} インターフェイスのイベントで、アニメーションの再生が完了したとき、または {{domxref("Animation.finish()")}} メソッドが呼び出されてアニメーションが即座に終了させられたときに発生します。
 
-> **メモ:** `"paused"`の再生状態は`finished"`の再生状態に優先します。
+> [!NOTE]
+> `"paused"`の再生状態は`finished"`の再生状態に優先します。
 > アニメーションが一時停止と完了の両方の状態の場合、 `"paused"` の状態が報告されます。
 > {{domxref("Animation.startTime", "startTime")}}を `document.timeline.currentTime - (Animation.currentTime * Animation.playbackRate)` に設定するには、アニメーションを強制的に `"finished"` 状態にすることができます。
 

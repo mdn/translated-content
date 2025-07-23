@@ -33,7 +33,8 @@ console.log(promise1);
 new Promise(executor)
 ```
 
-> **メモ:** `Promise()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Promise()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) 付きでないと構築できません。`new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

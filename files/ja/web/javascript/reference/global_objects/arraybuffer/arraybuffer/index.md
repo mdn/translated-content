@@ -26,7 +26,8 @@ new ArrayBuffer(length)
 new ArrayBuffer(length, options)
 ```
 
-> **メモ:** `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `ArrayBuffer()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) でのみ構築することができます。`new` 無しで呼び出そうとすると、{{jsxref("TypeError")}} が発生します。
 
 ### 引数
 
@@ -69,7 +70,8 @@ const buffer = new ArrayBuffer(8, { maxByteLength: 16 });
 buffer.resize(12);
 ```
 
-> **メモ:** `maxByteLength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1GB) を超えないようにする必要があります。
+> [!NOTE]
+> `maxByteLength` は使用する用途に応じて使用可能な最小値に設定することが推奨されます。メモリ不足になる危険を縮小するために、`1073741824` (1GB) を超えないようにする必要があります。
 
 ## 仕様書
 

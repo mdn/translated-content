@@ -9,7 +9,8 @@ l10n:
 
 **`isPrototypeOf()`** は {{jsxref("Object")}} インスタンスのメソッドで、オブジェクトが別のオブジェクトのプロトタイプチェーンに存在するかどうかを判定します。
 
-> **メモ:** `isPrototypeOf()` は、 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子とは異なります。 `object instanceof AFunction` という式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
+> [!NOTE]
+> `isPrototypeOf()` は、 [`instanceof`](/ja/docs/Web/JavaScript/Reference/Operators/instanceof) 演算子とは異なります。 `object instanceof AFunction` という式では、`object` のプロトタイプチェーンは `AFunction` 自身ではなく、`AFunction.prototype` に対して判定されます。
 
 {{InteractiveExample("JavaScript デモ: Object.prototype.isPrototypeOf()")}}
 

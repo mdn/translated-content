@@ -14,7 +14,8 @@ l10n:
 
 `placeholder` 属性は、入力の種類 `{{HTMLElement("input/text", "text")}}`、`{{HTMLElement("input/search", "search")}}`、`{{HTMLElement("input/url", "url")}}`、`{{HTMLElement("input/tel", "tel")}}`、`{{HTMLElement("input/email", "email")}}`、`{{HTMLElement("input/password", "password")}}` で用いることができます。`{{HTMLElement("textarea")}}` 要素でも用いることができます。以下の[例](#例)では、入力フィールドで期待する形式を示すために `placeholder` 属性を用いています。
 
-> **メモ:** `placeholder` 属性にはラインフィード (LF) やキャリッジリターン (CR) を含めることはできません。これらが含まれる場合は、プレースホルダーテキストはクリップされます。
+> [!NOTE]
+> `placeholder` 属性にはラインフィード (LF) やキャリッジリターン (CR) を含めることはできません。これらが含まれる場合は、プレースホルダーテキストはクリップされます。
 
 ## アクセシビリティの懸念
 

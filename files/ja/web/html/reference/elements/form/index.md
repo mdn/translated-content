@@ -57,7 +57,8 @@ CSS の {{cssxref(':valid')}} および {{cssxref(':invalid')}} [擬似クラス
 - `accept` {{deprecated_inline}}
   - : サーバーが受け付ける[コンテンツ型](/ja/docs/Web/SVG/Guides/Content_type)のカンマ区切りリストです。
 
-    > **メモ:** **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性を使用してください。
+    > [!NOTE]
+    > **この属性は非推奨であり、使用すべきではありません。** 代わりに `<input type=file>` 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性を使用してください。
 
 - `accept-charset`
   - : サーバーが受け付ける空白区切りの{{Glossary("character encoding", "文字エンコーディング")}}です。ブラウザーは、列挙されたされた順に使用します。既定値は、[ページと同じエンコーディング](/ja/docs/Web/HTTP/Reference/Headers/Content-Encoding)を意味します。

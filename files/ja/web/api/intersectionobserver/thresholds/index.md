@@ -18,7 +18,8 @@ l10n:
 
 `threshold` オプションを指定せずに `IntersectionObserver()` でオブザーバーをインスタンス化した場合、 `thresholds` の値は `[0]` となります。
 
-> **メモ:** {{domxref("IntersectionObserver")}} を作成するときに指定することができる `options` オブジェクトには `threshold` というフィールドがありますが、このプロパティは `thresholds` と呼ばれています。紛らわしい？そうです。
+> [!NOTE]
+> {{domxref("IntersectionObserver")}} を作成するときに指定することができる `options` オブジェクトには `threshold` というフィールドがありますが、このプロパティは `thresholds` と呼ばれています。紛らわしい？そうです。
 > もし `options` のフィールド名として誤って `thresholds` を使用してしまうと、 `thresholds` の配列は `[0.0]` になってしまい、おそらく期待したものとは異なるものになってしまいます。デバッグは大混乱に陥るかもしれません。
 
 ## 仕様書

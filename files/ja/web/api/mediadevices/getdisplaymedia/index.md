@@ -34,7 +34,8 @@ getDisplayMedia(options)
     - `monitorTypeSurfaces` {{optional_inline}}
       - : 列挙値で、ブラウザーがユーザーに表示する画面キャプチャオプションに、タブやウィンドウオプションと一緒に画面全体を含めるかどうかを指定します。このオプションは、テレビ会議アプリを使用する際に、従業員のミスによる企業機密情報の漏洩を防ぐことを意図しています。 値として指定できるのは、画面オプションを含めるべきであることを示す `include` と、除外すべきであることを示す `exclude` です。 既定値は仕様で規定されていません。個々のブラウザーの既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-        > **メモ:** `monitorTypeSurfaces: "exclude"` を設定するには、[`displaySurface: "monitor"`](/ja/docs/Web/API/MediaTrackConstraints/displaySurface) を同時に設定することはできません。2 つの設定は矛盾しているためです。 矛盾した設定を試みると、`getDisplayMedia()` を呼び出した際に `TypeError` が発生します。
+        > [!NOTE]
+        > `monitorTypeSurfaces: "exclude"` を設定するには、[`displaySurface: "monitor"`](/ja/docs/Web/API/MediaTrackConstraints/displaySurface) を同時に設定することはできません。2 つの設定は矛盾しているためです。 矛盾した設定を試みると、`getDisplayMedia()` を呼び出した際に `TypeError` が発生します。
 
     - `preferCurrentTab` {{non-standard_inline}} {{Experimental_Inline}} {{optional_inline}}
       - : 論理値です。`true` とすると、ブラウザーが現在のタブを最も推奨するキャプチャソースとして提供するように指示します。つまり、ユーザーに表示される「共有するものを選んでください」オプションの中に、別個の「このタブ」オプションとして表示されます。これは、一般的に多くの種類のアプリが現在のタブを共有したいだけなので有益なことです。例えば、スライドデッキアプリは、ユーザーが仮想会議にプレゼンテーションを格納する現在のタブをストリーミングできるようにすることができます。既定値は仕様書では定められていません。ブラウザー別の既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
@@ -47,7 +48,8 @@ getDisplayMedia(options)
     - `monitorTypeSurfaces` {{Experimental_Inline}} {{optional_inline}}
       - : 列挙値で、アプリケーションがユーザーエージェントに、モニター型である表示面の選択オプションをユーザーに提供するかどうかを指定します。 可能な値は、モニター型である表示面を含めるようブラウザーに指示する `include` と、含まれないよう指示する `exclude` です。既定値は仕様書では定められていません。ブラウザー別の既定値については、[ブラウザーの互換性](#ブラウザーの互換性)の節を参照してください。
 
-> **メモ:** [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
+> [!NOTE]
+> [能力と制約と設定](/ja/docs/Web/API/Media_Capture_and_Streams_API/Constraints)の記事を見ると、これらのオプションがどのように動作するかのもっと詳細があります。
 
 ### 返値
 
@@ -117,7 +119,8 @@ async function startCapture(displayMediaOptions) {
 
 これは {{jsxref("Operators/await", "await")}} を使用して、 `getDisplayMedia()` が {{domxref("MediaStream")}} で解決するのを非同期に待ち、指定したオプションで要求された表示コンテンツを含むストリームを生成します。ストリームは、ストリームからビデオトラックを追加するために {{domxref("RTCPeerConnection.addTrack()")}} を使用して WebRTC 呼び出しに追加するために使用する呼び出し側に返されます。
 
-> **メモ:** [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
+> [!NOTE]
+> [画面共有コントロール](https://screen-sharing-controls.glitch.me/)のデモでは、完全に実装されたものを提供しており、`getDisplayMedia()` の制約とオプションを自由に選択して画面キャプチャを作成することができます。
 
 ## 仕様書
 

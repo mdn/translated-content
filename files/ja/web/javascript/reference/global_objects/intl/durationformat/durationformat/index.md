@@ -17,7 +17,8 @@ new Intl.DurationFormat(locales)
 new Intl.DurationFormat(locales, options)
 ```
 
-> **メモ:** `Intl.DurationFormat()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけた場合のみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Intl.DurationFormat()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) をつけた場合のみ構築できます。 `new` なしで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

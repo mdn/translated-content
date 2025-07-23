@@ -18,7 +18,8 @@ l10n:
 - CSS の {{cssxref("touch-action")}} プロパティが、入力の継続を防止している場合。
 - ユーザーが同時に多くのポインターを操作すると、ブラウザーは既存のすべてのポインターに対してこのイベントを発生させる可能性があります（ユーザーがまだ画面に触れている場合でも）。
 
-> **メモ:** `pointercancel` イベントの発生後、ブラウザーは {{domxref("Element/pointerout_event", "pointerout")}} イベントと、続いて {{domxref("Element/pointerleave_event", "pointerleave")}} イベントを送信します。
+> [!NOTE]
+> `pointercancel` イベントの発生後、ブラウザーは {{domxref("Element/pointerout_event", "pointerout")}} イベントと、続いて {{domxref("Element/pointerleave_event", "pointerleave")}} イベントを送信します。
 
 ## 構文
 

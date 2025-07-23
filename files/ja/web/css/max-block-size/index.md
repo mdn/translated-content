@@ -109,7 +109,8 @@ max-block-size: unset;
 | `horizontal-tb`, `lr`, `lr-tb`, `rl`, `rb`, `rb-rl`                       | {{cssxref("max-height")}}         |
 | `vertical-rl`, `vertical-lr`, `sideways-rl`, `sideways-lr`, `tb`, `tb-rl` | {{cssxref("max-width")}}          |
 
-> **メモ:** `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
+> [!NOTE]
+> `writing-mode` の値のうち `sideways-lr` および `sideways-rl` は設計プロセスの後期に CSS 書字方向s Level 3 仕様書から削除されました。これらは Level 4 で復活する可能性があります。
 
 > [!NOTE]
 > 書字方向の `lr`, `lr-tb`, `rl`, `rb`, `rb-tl` は {{Glossary("HTML")}} のコンテキストでは許可されなくなりました。 {{Glossary("SVG")}} 1.x コンテキストでのみ利用できる可能性があります。

@@ -70,7 +70,8 @@ article {
 - レイアウトのコンテナーは `absolute`/`fixed` で位置指定された子孫要素の[包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)になります。
 - この包含ボックスは[重ね合わせコンテキスト](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)を作ります。従って {{cssxref("z-index")}} を使用することができます。
 
-> **メモ:** `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
+> [!NOTE]
+> `contain` の `style` および `layout` の値は、 {{cssxref("container-type")}} および {{cssxref("container-name")}} プロパティを使用すると自動的に適用されます。
 
 #### 描画抑制
 
@@ -184,7 +185,8 @@ article {
 
 これは上記のどちらの場合でも起こりますが、 `content-visibility: auto` の場合、コンテンツは検索でき、フォーカスを受け取ることができ、関連性のないものから関連性のあるものへと移行することができます。これは `content-visibility: hidden` では起こりません。
 
-> **メモ:** `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#display_と_content-visibility_のトランジション) を参照してください。
+> [!NOTE]
+> `content-visibility: hidden` から visible 値へのアニメーションには {{cssxref("transition-behavior", "transition-behavior:&nbsp;allow-discrete")}} と {{cssxref("@starting-style")}} スタイルを設定する必要があります。詳しくは、 [`display` および `content-visibility` のトランジション](/ja/docs/Web/CSS/CSS_transitions/Using_CSS_transitions#display_と_content-visibility_のトランジション) を参照してください。
 
 ## 関連情報
 

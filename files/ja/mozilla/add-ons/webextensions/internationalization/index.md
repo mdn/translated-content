@@ -83,7 +83,8 @@ l10n:
 
 このファイルは標準の JSON — メンバーがそれぞれに `message` と `description`. を含む名前付きオブジェクトです。すべての項目が文字列です; `$URL$` はプレースホルダーで、拡張機能から呼ばれる `notificationContent` メンバーに置き換えられます。[マニフェスト内のローカライズ済み文字列を取得する](#マニフェスト内のローカライズ済み文字列を取得する)の節でその方法を学びます。
 
-> **メモ:** `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
+> [!NOTE]
+> `messages.json` ファイルの中身についての詳しい情報は[ロケール固有のメッセージリファレンス](/ja/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)にあります。
 
 ## manifest.json を国際化する
 

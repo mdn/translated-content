@@ -31,7 +31,8 @@ new Set()
 new Set(iterable)
 ```
 
-> **メモ:** `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
+> [!NOTE]
+> `Set()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) を付けてのみ構築することができ案す。 `new` 無しで呼び出そうとすると {{jsxref("TypeError")}} が発生します。
 
 ### 引数
 

@@ -35,7 +35,8 @@ matchAll(request, options)
 
 {{domxref("Cache")}} オブジェクト内のすべての一致するレスポンスの配列に解決される {{jsxref("Promise")}}。
 
-> **メモ:** {{domxref("Cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に `Cache.matchAll()` と同じです。
+> [!NOTE]
+> {{domxref("Cache.match()")}} は、一致するすべてのレスポンスの配列で解決するのではなく、最初に一致するレスポンスのみ（つまり、`response[0]`）で解決することを除いて、基本的に `Cache.matchAll()` と同じです。
 
 ## 例
 

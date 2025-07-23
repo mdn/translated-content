@@ -1,9 +1,11 @@
 ---
 title: border-color
 slug: Web/CSS/border-color
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`border-color`** 是一種[CSS](/zh-TW/docs/Web/CSS) [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)，用來綜合設定元件四邊框線的顏色。
+**`border-color`** [CSS](/zh-TW/docs/Web/CSS) [簡寫](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)屬性可以設定元素邊框的顏色。
 
 {{InteractiveExample("CSS Demo: border-color")}}
 
@@ -16,11 +18,11 @@ border-color: red #32a1ce;
 ```
 
 ```css interactive-example-choice
-border-color: red rgba(170, 50, 220, 0.6) green;
+border-color: red rgb(170 50 220 / 0.6) green;
 ```
 
 ```css interactive-example-choice
-border-color: red yellow green hsla(60, 90%, 50%, 0.8);
+border-color: red yellow green hsl(60 90% 50% / 0.8);
 ```
 
 ```css interactive-example-choice
@@ -30,7 +32,7 @@ border-color: red yellow green transparent;
 ```html interactive-example
 <section class="default-example" id="default-example">
   <div class="transition-all" id="example-element">
-    This is a box with a border around it.
+    這是一個周圍有邊框的方塊。
   </div>
 </section>
 ```
@@ -46,13 +48,13 @@ border-color: red yellow green transparent;
 }
 ```
 
-border-color 雖可一次設定四邊框線色彩，但每個邊框亦可用以下屬性分別指定：{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}；能因應文字書寫方向改變框線相對位置（the writing mode-aware）的屬性如：{{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}}、{{CSSxRef("border-inline-end-color")}}，也可達成分別指定的功能。
+每個邊都可以使用 {{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}} 和 {{CSSxRef("border-left-color")}} 單獨設定；或使用感知書寫模式的 {{CSSxRef("border-block-start-color")}}、{{CSSxRef("border-block-end-color")}}、{{CSSxRef("border-inline-start-color")}} 和 {{CSSxRef("border-inline-end-color")}}。
 
-關於更多邊框色彩的設定說明，請見 [CSS 顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color#borders_2)。
+你可以在[使用 CSS 為 HTML 元素上色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color#邊框)中找到更多關於邊框顏色的資訊。
 
-## Constituent properties 屬性組成
+## 組成屬性
 
-border-color 簡寫的屬性值內容由以下 CSS 的屬性值構成。
+此屬性是以下 CSS 屬性的簡寫：
 
 - [`border-bottom-color`](/zh-TW/docs/Web/CSS/border-bottom-color)
 - [`border-left-color`](/zh-TW/docs/Web/CSS/border-left-color)
@@ -62,19 +64,19 @@ border-color 簡寫的屬性值內容由以下 CSS 的屬性值構成。
 ## 語法
 
 ```css
-/* <color> values */
+/* <color> 值 */
 border-color: red;
 
-/* top and bottom | left and right */
+/* 上下 | 左右 */
 border-color: red #f015ca;
 
-/* top | left and right | bottom */
-border-color: red rgb(240, 30, 50, 0.7) green;
+/* 上 | 左右 | 下 */
+border-color: red rgb(240 30 50 / 70%) green;
 
-/* top | right | bottom | left */
+/* 上 | 右 | 下 | 左 */
 border-color: red yellow green blue;
 
-/* Global values */
+/* 全域值 */
 border-color: inherit;
 border-color: initial;
 border-color: revert;
@@ -82,35 +84,35 @@ border-color: revert-layer;
 border-color: unset;
 ```
 
-`border-color` 屬性值可設定一到四個輸入值。
+`border-color` 屬性可使用一、二、三或四個值來指定。
 
-- 一個值：將單一顏色指定給**全部四個邊**。
-- 兩個值：依顏色排列順序分別指定給：**上下邊**、**左右邊**。
-- 三個值：依顏色排列順序分別指定給：**上邊框**、**左右邊**、**下邊框**。
-- 四個值：依顏色排列順序，沿邊框順時鐘方向，分別指定給：**上邊框**、**右邊框**、**下邊框**、**左邊框**。
+- 當指定**一個**值時，它會將相同的顏色應用於**全部四個邊**。
+- 當指定**兩個**值時，第一個顏色應用於**上下**，第二個應用於**左右**。
+- 當指定**三個**值時，第一個顏色應用於**上**，第二個應用於**左右**，第三個應用於**下**。
+- 當指定**四個**值時，顏色會依序（順時針）應用於**上**、**右**、**下**和**左**。
 
-### 屬性值
+### 值
 
 - {{CSSxRef("&lt;color&gt;")}}
-  - : 定義框線的顏色。
+  - : 定義邊框的顏色。
 
-## Formal definition 語法定義
+## 形式定義
 
 {{CSSInfo}}
 
-## Formal syntax 語法規則
+## 形式語法
 
 {{csssyntax}}
 
 ## 範例
 
-### 完整的 border-color 簡寫使用
+### border-color 的完整用法
 
 #### HTML
 
 ```html
 <div id="justone">
-  <p><code>border-color: red;</code> is equivalent to</p>
+  <p><code>border-color: red;</code> 等同於</p>
   <ul>
     <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: red;</code></li>
@@ -119,7 +121,7 @@ border-color: unset;
   </ul>
 </div>
 <div id="horzvert">
-  <p><code>border-color: gold red;</code> is equivalent to</p>
+  <p><code>border-color: gold red;</code> 等同於</p>
   <ul>
     <li><code>border-top-color: gold;</code></li>
     <li><code>border-right-color: red;</code></li>
@@ -128,7 +130,7 @@ border-color: unset;
   </ul>
 </div>
 <div id="topvertbott">
-  <p><code>border-color: red cyan gold;</code> is equivalent to</p>
+  <p><code>border-color: red cyan gold;</code> 等同於</p>
   <ul>
     <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
@@ -137,7 +139,7 @@ border-color: unset;
   </ul>
 </div>
 <div id="trbl">
-  <p><code>border-color: red cyan black gold;</code> is equivalent to</p>
+  <p><code>border-color: red cyan black gold;</code> 等同於</p>
   <ul>
     <li><code>border-top-color: red;</code></li>
     <li><code>border-right-color: cyan;</code></li>
@@ -166,8 +168,7 @@ border-color: unset;
   border-color: red cyan black gold;
 }
 
-/* 設定每個div的邊框與樣式 */
-/* Set width and style for all divs */
+/* 為所有 div 設定寬度和樣式 */
 div {
   border: solid 0.3em;
   width: auto;
@@ -181,9 +182,9 @@ ul {
 }
 ```
 
-#### 成果
+#### 結果
 
-{{EmbedLiveSample("完整的border-color簡寫使用", 600, 700)}}
+{{EmbedLiveSample("border-color_的完整用法", 600, 700)}}
 
 ## 規範
 
@@ -195,8 +196,8 @@ ul {
 
 ## 參見
 
-- 與 border-color 相關的 CSS 屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、 {{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}。
-- 其他框線屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
-- 資料型態 {{CSSxRef("&lt;color&gt;")}}
-- 其他顏色相關屬性：{{CSSxRef("color")}}、{{CSSxRef("background-color")}}、{{CSSxRef("outline-color")}}、{{CSSxRef("text-decoration-color")}}、{{CSSxRef("text-emphasis-color")}}、{{CSSxRef("text-shadow")}}、{{CSSxRef("caret-color")}}、{{CSSxRef("column-rule-color")}}
-- [以 CSS 指定 HTML 元件的顏色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)
+- 邊框顏色相關的 CSS 屬性：{{CSSxRef("border")}}、{{CSSxRef("border-top-color")}}、{{CSSxRef("border-right-color")}}、{{CSSxRef("border-bottom-color")}}、{{CSSxRef("border-left-color")}}
+- 其他邊框相關的 CSS 屬性：{{CSSxRef("border-width")}}、{{CSSxRef("border-style")}}
+- {{CSSxRef("&lt;color&gt;")}} 資料型別
+- 其他顏色相關的屬性：{{CSSxRef("color")}}、{{CSSxRef("background-color")}}、{{CSSxRef("outline-color")}}、{{CSSxRef("text-decoration-color")}}、{{CSSxRef("text-emphasis-color")}}、{{CSSxRef("text-shadow")}}、{{CSSxRef("caret-color")}} 和 {{CSSxRef("column-rule-color")}}
+- [使用 CSS 為 HTML 元素上色](/zh-TW/docs/Web/CSS/CSS_colors/Applying_color)

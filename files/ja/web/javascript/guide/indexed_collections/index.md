@@ -104,7 +104,8 @@ const myArray = ["Wind", "Rain", "Fire"];
 
 要素のインデックスは 0 から始まるので、配列の 1 番目の要素を `myArray[0]`、2 番目の要素を `myArray[1]` と呼ぶことができます。
 
-> **メモ:** [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
+> [!NOTE]
+> [プロパティアクセサー](/ja/docs/Web/JavaScript/Reference/Operators/Property_accessors)を使用して、オブジェクトのように配列の他のプロパティにアクセスすることもできます。
 >
 > ```js
 > const arr = ["one", "two", "three"];

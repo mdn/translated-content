@@ -53,7 +53,8 @@ requestVideoFrameCallback(callback)
         - `receiveTime`: プラットフォームがエンコードされたフレームを受信した時刻を表す {{domxref("DOMHighResTimeStamp")}} です。これはリモートソースからの映像フレームに適用されます。具体的には、このフレームに属する最後のパケットがネットワーク経由で受信された時刻に対応します。
         - `rtpTimestamp`: この映像フレームに付随する RTP タイムスタンプを表す数値です。
 
-> **メモ:** `width` と `height` は、場合によっては {{domxref("HTMLVideoElement.videoWidth")}} および {{domxref("HTMLVideoElement.videoHeight")}} と異なる場合があります（例えば、アナモフィック動画は長方形のピクセルを持つことがあります）。
+> [!NOTE]
+> `width` と `height` は、場合によっては {{domxref("HTMLVideoElement.videoWidth")}} および {{domxref("HTMLVideoElement.videoHeight")}} と異なる場合があります（例えば、アナモフィック動画は長方形のピクセルを持つことがあります）。
 
 ### 返値
 

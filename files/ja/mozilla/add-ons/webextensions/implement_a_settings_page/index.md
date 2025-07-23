@@ -13,7 +13,8 @@ WebExtension API では一般に、設定は [`storage`](/ja/docs/Mozilla/Add-on
 - HTML からインクルードされる、ストレージから設定ページに投入し、ユーザーが変更した時に保存された設定を更新するスクリプトを書く。
 - HTML ファイルのパスを manifest.json の [`options_ui`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) キーに設定する。これにより、HTML 文書が、拡張機能の名前や説明と共に、文書ブラウザーのアドオンマネージャーに表示される。
 
-> **メモ:** [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
+> [!NOTE]
+> [`runtime.openOptionsPage()`](/ja/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage) 関数を使ってプログラム的に開くこともできます。
 
 ## 簡単な拡張機能
 

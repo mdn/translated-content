@@ -43,7 +43,8 @@ function handleOrientation(event) {
 }
 ```
 
-> **メモ:** [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーとジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向に対する対応の違いを克服するのに有益です。
+> [!NOTE]
+> [parallax](https://github.com/wagerfield/parallax) は、モバイル端末の加速度センサーとジャイロスコープのデータを正規化するためのポリフィルです。これは、端末の方向に対する対応の違いを克服するのに有益です。
 
 ### 方向の値の解説
 

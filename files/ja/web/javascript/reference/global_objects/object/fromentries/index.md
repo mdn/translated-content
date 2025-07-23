@@ -50,7 +50,8 @@ Object.fromEntries(iterable)
 
 `Object.fromEntries()` は {{jsxref("Object.entries()")}} の逆の動作をしますが、 `Object.entries()` は文字列キーのプロパティしか返さないのに対し、 `Object.fromEntries()` はシンボルキーのプロパティも作成することができます。
 
-> **メモ:** {{jsxref("Array.from()")}} と異なり、 `Object.fromEntries()` は `this` の値を使用しないので、他のコンストラクターで呼び出してもその型のオブジェクトは作成されません。
+> [!NOTE]
+> {{jsxref("Array.from()")}} と異なり、 `Object.fromEntries()` は `this` の値を使用しないので、他のコンストラクターで呼び出してもその型のオブジェクトは作成されません。
 
 ## 例
 

@@ -7,7 +7,8 @@ l10n:
 
 グローバルな `aria-description` 属性は、現在の要素を説明または注釈する文字列値を定義します。
 
-> **メモ:** `aria-description` は、まだ ARIA 1.3 の W3C エディターズドラフトにあります。当面は、ARIA 1.1 からサポートされている `aria-describedby` を引き続き使用してください。
+> [!NOTE]
+> `aria-description` は、まだ ARIA 1.3 の W3C エディターズドラフトにあります。当面は、ARIA 1.1 からサポートされている `aria-describedby` を引き続き使用してください。
 
 ## 解説
 

@@ -13,7 +13,8 @@ l10n:
 
 このドキュメントでは、私達の WebSocket のドキュメント（この記事へのリンクは追加予定で、まだ存在しません。）の中で作られた [WebSocket チャット](https://webrtc-from-chat-v1-4.glitch.me/) を、ユーザ間の双方向ビデオ通話をサポートするように改良していきます。もしコードを実際に動かしてみたい場合は、[Glitch の例](https://webrtc-from-chat-v1-4.glitch.me/) や、[remix の例](https://glitch.com/edit/#!/remix/webrtc-from-chat-v1-4) を試すことが出来ます。また Github で[プロジェクト全体](https://github.com/mdn/samples-server/tree/master/s/webrtc-from-chat)も公開されています。
 
-> **メモ:** Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
+> [!NOTE]
+> Glitch の例を試す場合、コードの小さな更新でも接続がリセットされることになります。加えて、Glitch インスタンスは手軽な試行とテストのためにあるので、タイムアウト期間が短く設定されています。
 
 ## シグナリングサーバー
 

@@ -71,7 +71,8 @@ _親である {{domxref("AudioScheduledSourceNode")}} のメソッドを継承�
 
 次の例は、2 秒間のバッファーをー生成し、ホワイトノイズを書き込み、 `AudioBufferSourceNode` で再生します。コメントは何をしているかを簡単に説明しています。
 
-> **メモ:** [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースコードを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)したりすることもできます。
+> [!NOTE]
+> [コードをライブで実行](https://mdn.github.io/webaudio-examples/audio-buffer/)したり、[ソースコードを閲覧](https://github.com/mdn/webaudio-examples/blob/main/audio-buffer/index.html)したりすることもできます。
 
 ```js
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
@@ -107,7 +108,8 @@ source.connect(audioCtx.destination);
 source.start();
 ```
 
-> **メモ:** `decodeAudioData()` の例は、{{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} のページを参照してください。
+> [!NOTE]
+> `decodeAudioData()` の例は、{{domxref("BaseAudioContext/decodeAudioData", "AudioContext.decodeAudioData()")}} のページを参照してください。
 
 ## 仕様書
 

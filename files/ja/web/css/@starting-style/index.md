@@ -37,7 +37,8 @@ l10n:
 
 `@starting-style` は、{{glossary("top layer","最上位レイヤー")}}に表示される要素（[ポップオーバー](/ja/docs/Web/API/Popover_API)やモーダルダイアログ ({{htmlelement("dialog")}}) など）、 `display: none` に変更される要素、 DOM に追加されたり除去されたりする要素の出現・消滅トランジションを作成する場合に特に有益です。
 
-> **メモ:** `@starting-style` は CSS トランジションにのみ関係します。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用してそのような効果を実装する場合、 `@starting-style` は必要ありません。例については [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
+> [!NOTE]
+> `@starting-style` は CSS トランジションにのみ関係します。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)を使用してそのような効果を実装する場合、 `@starting-style` は必要ありません。例については [CSS アニメーションの使用](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations)を参照してください。
 
 `@starting-style` を使用するには、単独のルールとして使用する方法と、ルールセットの中に入れ子にして使用する方法とがあります。
 
@@ -61,7 +62,8 @@ l10n:
 }
 ```
 
-> **メモ:** `@starting-style` アットルールと「元ルール」の{{cssxref("specificity", "詳細度")}}は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
+> [!NOTE]
+> `@starting-style` アットルールと「元ルール」の{{cssxref("specificity", "詳細度")}}は同じになります。確実にスタイル設定が反映されるようにするには、 `@starting-style` アットルールを「元ルール」の後に記載してください。もし `@starting-style` アットルールを「元ルール」の前に指定すると、元のスタイル設定が開始時のスタイル設定を上書きします。
 
 入れ子方式を使用してポップオーバーの開始スタイルを指定するには、 `@starting-style` ブロックを「元ルール」の中に入れます。
 
@@ -301,7 +303,8 @@ html {
 > [!NOTE]
 > ポップオーバーは表示されるたびに `display: none` から `display: block` に変化するので、表示トランジションが発生するたびに `@starting-style` スタイルから `[popover]:popover-open` スタイルに遷移します。ポップオーバーが閉じられたとき、その `[popover]:popover-open` 状態から既定の `[popover]` 状態に遷移します。
 
-> **メモ:** {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)で探すことができます。
+> [!NOTE]
+> {{htmlelement("dialog")}} 要素とその背景の表示・非表示を遷移させる例は、 `<dialog>` リファレンスページの[ダイアログ要素の遷移](/ja/docs/Web/HTML/Reference/Elements/dialog#transitioning_dialog_elements)で探すことができます。
 
 ### DOM に追加・除去される要素のトランジション
 

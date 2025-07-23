@@ -27,7 +27,8 @@ l10n:
 > [!NOTE]
 > API の機能を使う際に投げられる可能性がある例外は、仕様書での定義に沿って関連するページに一覧が載っています。しかし、 API と下層のオペレーティングシステムの相互作用により、状況はより複雑になります。[仕様書でエラーの対応関係を一覧にする](https://github.com/whatwg/fs/issues/57)ための提案がなされており、ここに有用な関連情報があります。
 
-> **メモ:** {{domxref("FileSystemHandle")}} をベースとするオブジェクトは、{{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} のデータベースのインスタンスにシリアライズしたり、{{domxref("window.postMessage", "postMessage()")}} を介して転送したりできます。
+> [!NOTE]
+> {{domxref("FileSystemHandle")}} をベースとするオブジェクトは、{{domxref("IndexedDB API", "IndexedDB", "", "nocode")}} のデータベースのインスタンスにシリアライズしたり、{{domxref("window.postMessage", "postMessage()")}} を介して転送したりできます。
 
 ### オリジンプライベートファイルシステム
 

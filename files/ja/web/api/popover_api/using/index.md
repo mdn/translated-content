@@ -43,7 +43,8 @@ l10n:
 
 [基本的な宣言的ポップオーバーの例](https://mdn.github.io/dom-examples/popover-api/basic-declarative/)（[ソース](https://github.com/mdn/dom-examples/tree/main/popover-api/basic-declarative)）で、上記のコード片がどのように見えるかを確認できます。
 
-> **メモ:** `popovertargetaction` 属性が省略されると、制御ボタンで実行される既定のアクションは `"toggle"` になります。
+> [!NOTE]
+> `popovertargetaction` 属性が省略されると、制御ボタンで実行される既定のアクションは `"toggle"` になります。
 
 ポップオーバーが表示されると、`display: none`が削除されて{{glossary("top layer", "最上位レイヤー")}}に配置され、他のすべてのページのコンテンツの上に置かれるようになります。
 
@@ -55,7 +56,8 @@ l10n:
 - ポップオーバーは、 <kbd>Esc</kbd> キーを押すなど、ブラウザー依存の仕組みを使って閉じることもできます。
 - 通常、一度に表示できるポップオーバーは 1 つだけです。すでに 1 つのポップオーバーが表示されているとき に 2 つ目を表示すると、最初のポップオーバーが閉じてしまいます。このルールの例外は、入れ子のオートポップオーバーがある場合です。詳しくは、[入れ子のポップオーバー](#入れ子のポップオーバー)の節を参照してください。
 
-> **メモ:** `popover="auto"` ポップオーバーは、文書内の他の要素で {{domxref("HTMLDialogElement.showModal()")}} や {{domxref("Element.requestFullscreen()")}} の呼び出しが成功した場合にも閉じます。しかし、これらのメソッドを表示されているポップオーバーに対して呼び出すと失敗することに留意してください。しかし、現在表示されていない `popover` 属性を持つ要素に対してこれらのメソッドを呼び出すことはできます。
+> [!NOTE]
+> `popover="auto"` ポップオーバーは、文書内の他の要素で {{domxref("HTMLDialogElement.showModal()")}} や {{domxref("Element.requestFullscreen()")}} の呼び出しが成功した場合にも閉じます。しかし、これらのメソッドを表示されているポップオーバーに対して呼び出すと失敗することに留意してください。しかし、現在表示されていない `popover` 属性を持つ要素に対してこれらのメソッドを呼び出すことはできます。
 
 自動状態は、一度に単一のポップオーバーだけを示したい場合に有益な機能です。表示したいチュートリアルの UI メッセージが複数あるが、表示が乱雑になって混乱するのを避けたい場合や、新しい状態が前回の状態を上書きするようなステータスメッセージを表示する場合などに利用できます。
 
@@ -309,7 +311,8 @@ function moveToastsUp() {
 - `display` を `none` から `block` （または他の表示可能な `display` 値）にアニメーションさせる場合、値はアニメーション時間の `0%` で `block` に切り替わり、ずっと表示されます。
 - `display` を `block` （または他の表示可能な `display` 値）から `none` にアニメーションさせる場合、値はアニメーション時間の `100%` で `none` に切り替わり、ずっと表示されます。
 
-> **メモ:** [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
+> [!NOTE]
+> [CSS トランジション](/ja/docs/Web/CSS/CSS_transitions)を使用してアニメーションを行う場合、上記の動作を有効にするには [`transition-behavior: allow-discrete`](/ja/docs/Web/CSS/transition-behavior) を設定する必要があります。 [CSS アニメーション](/ja/docs/Web/CSS/CSS_animations)でアニメーションさせる場合、既定では上記の動作が利用できます。
 
 ### ポップオーバーのトランジション
 

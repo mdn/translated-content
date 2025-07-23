@@ -11,7 +11,8 @@ l10n:
 
 ## 構文
 
-> **メモ:** `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。
+> [!NOTE]
+> `AudioWorkletProcessor` とその派生クラスは、ユーザーのコードから直接生成することはできません。これらは対応する {{domxref("AudioWorkletNode")}} の生成に伴って内部でのみ生成されます。
 
 ```js-nolint
 new AudioWorkletProcessor(options)

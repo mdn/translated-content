@@ -34,7 +34,8 @@ l10n:
 
 方法 (3) では、拡張機能と一緒にパッケージされたページのスクリプトも読み込みできますが、"`about:debugging`" や "`about:addons`"のような権限つきページにはスクリプトを読み込めません。
 
-> **メモ:** [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは[Firefox バグ 1536094](https://bugzil.la/1536094)を参照してください。
+> [!NOTE]
+> [ダイナミック JS モジュールインポート](/ja/docs/Web/JavaScript/Guide/Modules#dynamic_module_loading)がコンテンツスクリプトで動作するようになりました。詳しくは[Firefox バグ 1536094](https://bugzil.la/1536094)を参照してください。
 > _moz-extension_ スキームを持つ URL のみが許可され、データ URL は除外されます ([Firefox バグ 1587336](https://bugzil.la/1587336))。
 
 ## 権限、制約、制限
@@ -478,7 +479,8 @@ window.addEventListener("message", (event) => {
 
 これの完全な動作サンプルは、[GitHub のデモページに行って](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html)指示に従ってください。
 
-> **警告:** **この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です**！
+> [!WARNING]
+> **この方法で信頼できないウェブコンテンツと相互作用するには細心の注意が必要です**！
 > 拡張機能は強力な力を持つコードの権限があり、敵意のあるウェブページは簡単にこの力にアクセスします。
 >
 > 細かい例を作るには、メッセージを受け取ったコンテンツスクリプトがこのようなことを行うと仮定してください:
@@ -500,7 +502,8 @@ window.addEventListener("message", (event) => {
 
 ## コンテンツスクリプト内で eval() を使う
 
-> **メモ:** `eval()` はマニフェスト V3 では利用できません。
+> [!NOTE]
+> `eval()` はマニフェスト V3 では利用できません。
 
 - Chrome では
   - : {{jsxref("Global_Objects/eval", "eval")}} は常にページコンテキストではなくて**コンテンツスクリプト**のコンテキストで動作します。

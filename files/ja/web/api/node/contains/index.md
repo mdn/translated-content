@@ -22,7 +22,8 @@ contains(otherNode)
 
 - `otherNode`
   - : 検査する {{domxref("Node")}} です。
-    > **メモ:** `otherNode` は省略できませんが、 `null` に設定することはできます。
+    > [!NOTE]
+    > `otherNode` は省略できませんが、 `null` に設定することはできます。
 
 ### 返値
 

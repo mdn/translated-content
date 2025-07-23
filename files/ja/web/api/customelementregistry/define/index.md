@@ -41,7 +41,8 @@ customElements.define(name, constructor, options);
 - `TypeError` {{domxref("DOMException")}}
   - : 参照されたコンストラクターがコンストラクターではなかった場合に発生します。
 
-> **メモ:** `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
+> [!NOTE]
+> `NotSupportedError` 例外が多く発生する場合、 `define()` が失敗しているように思えるかもしれませんが、多くの場合は {{domxref("Element.attachShadow()")}} に問題があります。
 
 ## 例
 

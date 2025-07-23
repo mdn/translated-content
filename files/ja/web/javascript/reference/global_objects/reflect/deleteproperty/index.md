@@ -50,7 +50,8 @@ Reflect.defineProperty(target, propertyKey, attributes)
 
 `Reflect.defineProperty` メソッドは、オブジェクトのプロパティの正確な追加や修正を行います。詳細は、類似メソッドの {{jsxref("Object.defineProperty")}} を参照してください。
 
-> **メモ:** `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
+> [!NOTE]
+> `Object.defineProperty` はプロパティの定義が成功しなかった場合、オブジェクトを返すか {{jsxref("TypeError")}} を発生させます。しかし、`Reflect.defineProperty` は単純に、プロパティの定義が成功したかどうかを示す {{jsxref("Boolean")}} を返します。
 
 ## 例
 

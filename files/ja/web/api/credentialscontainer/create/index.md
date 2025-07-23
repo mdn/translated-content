@@ -122,7 +122,8 @@ navigator.credentials
 
 [ウェブ認証 API](/ja/docs/Web/API/Web_Authentication_API) は、公開鍵暗号方式による強力な認証を可能にし、パスワードレス認証や SMS を使わない安全な多要素認証 (MFA) を実現します。詳細な使用情報については、リンク先の API ランディングページを確認してください。
 
-> **メモ:** `create()` を `publicKey` 引数付きで使用すると、サーバーに {{HTTPHeader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が設定されている場合、ブロックされることがあります。
+> [!NOTE]
+> `create()` を `publicKey` 引数付きで使用すると、サーバーに {{HTTPHeader("Permissions-Policy/publickey-credentials-create", "publickey-credentials-create")}} [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)が設定されている場合、ブロックされることがあります。
 
 ### `publicKey` オブジェクトの構造
 

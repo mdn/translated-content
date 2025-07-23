@@ -63,7 +63,8 @@ promiseInstance.finally(onFinally)
   - `Promise.resolve(2).then(() => 77, () => {})` が最終的に `77` の値で履行されるプロミスを返すのとは異なり、`Promise.resolve(2).finally(() => 77)` は最終的に `2` の値で履行されるプロミスを返します。
   - 同様に、`Promise.reject(3).then(() => {}, () => 88)` が最終的に `88` の値で履行されるプロミスを返すのとは異なり、`Promise.reject(3).finally(() => 88)` は最終的に `3` の値で拒否されるプロミスを返します。
 
-> **メモ:** `finally` コールバックの中で `throw` （あるいは拒否されたプロミスを返すこと）しても、返されたプロミスは拒否されます。例えば、 `Promise.reject(3).finally(() => { throw 99; })` と `Promise.reject(3).finally(() => Promise.reject(99))` はどちらも `99` という理由をつけて、返ってきたプロミスを拒否することになります。
+> [!NOTE]
+> `finally` コールバックの中で `throw` （あるいは拒否されたプロミスを返すこと）しても、返されたプロミスは拒否されます。例えば、 `Promise.reject(3).finally(() => { throw 99; })` と `Promise.reject(3).finally(() => Promise.reject(99))` はどちらも `99` という理由をつけて、返ってきたプロミスを拒否することになります。
 
 {{jsxref("Promise/catch", "catch()")}} と同様に、 `finally()` は内部的に呼び出されたオブジェクトの `then` メソッドを呼び出します。もし `onFinally` が関数でない場合、 `then()` は `onFinally` を両方の引数として呼び出されます。これは {{jsxref("Promise.prototype.then()")}} にとって、有益なハンドラーが添付されないということを意味します。そうでなければ、`then()` は内部で作成された 2 つの関数で呼び出され、以下のような振る舞いをします。
 

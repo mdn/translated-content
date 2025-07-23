@@ -118,7 +118,8 @@ console.log(superMan.speak());
 
 以下の例でもクラスを使用していますが、 `SuperHero` は `extends` を使用せずに、代わりに `setPrototypeOf()` を使用して `Human` を継承しています。
 
-> **警告:** `extends` の代わりに `setPrototypeOf()` を使うことは、パフォーマンスや可読性の点からお勧めできません。
+> [!WARNING]
+> `extends` の代わりに `setPrototypeOf()` を使うことは、パフォーマンスや可読性の点からお勧めできません。
 
 ```js
 class Human {}

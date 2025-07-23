@@ -39,7 +39,8 @@ text-spacing-trim: unset;
     - `trim-start`
       - : `normal` と同様に動作しますが、 CJK 全角の開始用約物文字が各行の先頭に来た場合には半角幅で設定します。
 
-    > **メモ:** [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
+    > [!NOTE]
+    > [CSS テキスト](/ja/docs/Web/CSS/CSS_text)モジュールは、 `trim-both`, `trim-all`, `auto` の値も定義しています。しかし、今のところどのブラウザーでも実装されていません。.
 
 ## 解説
 

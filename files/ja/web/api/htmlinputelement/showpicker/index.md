@@ -59,7 +59,8 @@ if ("showPicker" in HTMLInputElement.prototype) {
 
 この例は、この機能を `color` と `file` の入力ピッカーに使用する方法を示しています。
 
-> **メモ:** `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
+> [!NOTE]
+> `date`、`datetime-local`、`month`、`time`、`week` のピッカーも同じように起動します。
 > ライブ例がオリジン間フレームで実行され、[`SecurityError`](#securityerror)を発生させてしまうため、ここでは示せません。
 
 #### HTML

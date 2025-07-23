@@ -54,7 +54,8 @@ cd borderify
 - [コンテンツスクリプト関する詳細](/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)
 - [マッチパターンに関する詳細](/ja/docs/Mozilla/Add-ons/WebExtensions/Match_patterns)
 
-> **警告:** [時折、あなたの拡張機能用に ID を指定する必要があります](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id)。アドオンの ID が必要なとき、`manifest.json` 内に [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを入れて `gecko.id` プロパティをセットします:
+> [!WARNING]
+> [時折、あなたの拡張機能用に ID を指定する必要があります](/ja/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#when_do_you_need_an_add-on_id)。アドオンの ID が必要なとき、`manifest.json` 内に [`applications`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) キーを入れて `gecko.id` プロパティをセットします:
 >
 > ```json
 > "applications": {

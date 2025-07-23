@@ -2,12 +2,19 @@
 title: color-scheme
 slug: Web/CSS/color-scheme
 l10n:
-  sourceCommit: 3dcde591689009d0da8e6d44444150826cb4fe42
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`color-scheme`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。
+**`color-scheme`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素がどのような配色で快適に表示されるかを示すことができます。ユーザーエージェントは、使用されている配色に合わせて、 UI クロームの次の側面を変更します。
 
-オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/CSS_colors)の使用値が含まれます。
+- キャンバス表面の色。
+- スクロールバーやその他の操作 UI の既定の色。
+- フォームコントロールの既定の色。
+- その他のブラウザーで指定された UI の既定の色（たとえば、「スペルチェック」のアンダーラインなど）。
+
+要素の作成者は、[`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディア特性を使用して、残りの要素の色構成に対応する必要があります。
+
+オペレーティングシステムの配色の一般的な選択肢は、「ライト」と「ダーク」、または「昼モード」と「夜モード」です。ユーザーがこれらの配色のいずれかを選択すると、 OS はユーザーインターフェイスを調整します。これには、[フォームコントロール](/ja/docs/Learn_web_development/Extensions/Forms)、[スクロールバー](/ja/docs/Web/CSS/CSS_scrollbars_styling)、および [CSS システムカラー](/ja/docs/Web/CSS/system-color)の使用値が含まれます。
 
 {{InteractiveExample("CSS デモ: color-scheme")}}
 
@@ -58,11 +65,11 @@ color-scheme: unset;
 ### 値
 
 - `normal`
-  - : この要素がどの配色も認識しないため、ブラウザーの既定の配色でレンダリングするべきであることを示します。
+  - : 要素が、ページの[配色](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme)を使用して描画できることを示します。ページに配色が設定されていない場合、要素はページの既定の配色を使用して描画されます。
 - `light`
-  - : オペレーティングシステムのライト配色を使用して要素をレンダリングできることを示します。
+  - : オペレーティングシステムのライト配色を使用して要素を描画できることを示します。
 - `dark`
-  - : オペレーティングシステムのダーク配色を使用して要素をレンダリングできることを示します。
+  - : オペレーティングシステムのダーク配色を使用して要素を描画できることを示します。
 - `only`
   - : ユーザーエージェントが要素の配色を上書きすることを禁じます。
 
@@ -102,6 +109,8 @@ footer {
 }
 ```
 
+上記の CSS とともに、 HTML の [`<meta name="color-scheme">`](/ja/docs/Web/HTML/Reference/Elements/meta/name/color-scheme) {{HTMLElement("meta")}} タグを、 {{htmlelement("head")}} 内のすべての CSS スタイル情報の前に記載し、ユーザーエージェントに好みの配色を知らせて、ページ読み込み時に画面が不要に点滅するのを防いでください。
+
 ### 配色設定に基づいたスタイル設定
 
 配色の好みに基づいて要素をスタイル設定するには、 [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーを用います。下記の例では、`color-scheme` プロパティによってページ全体でオペレーティングシステムの明るい配色と暗い配色の両方を使用することを選択し、 `prefers-color-scheme` を使用して個々の要素にそれらの配色で望ましい前景色と背景色を指定しています。
@@ -126,7 +135,7 @@ footer {
 }
 ```
 
-また、実験的な [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
+また、 [`light-dark()`](/ja/docs/Web/CSS/color_value/light-dark) [`<color>` 関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#color_functions) を使用して、よりコンパクトなコード構造で異なる配色の前景色と背景色を設定することもできます。
 
 ```css
 :root {
@@ -151,7 +160,7 @@ footer {
 
 - [`prefers-color-scheme`](/ja/docs/Web/CSS/@media/prefers-color-scheme) メディアクエリーで、配色設定のユーザー設定を検出することができます。
 - {{CSSXref("color_value/light-dark", "light-dark()")}} カラー関数で、ライトとダークの配色設定の両方に色を設定することができます。
-- [CSS を使った HTML の要素への色の適用](/ja/docs/Web/CSS/CSS_colors/Applying_color)
 - その他の色に関するプロパティ: {{cssxref("color")}}, {{cssxref("accent-color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}}, {{cssxref("column-rule-color")}}
 - {{cssxref("background-image")}}
 - {{cssxref("print-color-adjust")}}
+- [相対色の使用](/ja/docs/Web/CSS/CSS_colors/Relative_colors)

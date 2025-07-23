@@ -9,7 +9,8 @@ l10n:
 
 **`Symbol.species`** は静的データプロパティで、[ウェルノウンシンボル](/ja/docs/Web/JavaScript/Reference/Global_Objects/Symbol#ウェルノウンシンボル)である `Symbol.species` を表します。オブジェクトのコピーを作成するメソッドは、このシンボルで、コピーを作成するときに使用するコンストラクター関数を探すことがあります。
 
-> **警告:** `[Symbol.species]` が存在することで、任意のコードの実行を可能にし、セキュリティの脆弱性を生み出す可能性があります。また、一部の最適化がとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能への依存は避けてください。
+> [!WARNING]
+> `[Symbol.species]` が存在することで、任意のコードの実行を可能にし、セキュリティの脆弱性を生み出す可能性があります。また、一部の最適化がとても難しくなります。エンジンの実装者は[この機能を削除するかどうかを調査しています](https://github.com/tc39/proposal-rm-builtin-subclassing)。可能であれば、この機能への依存は避けてください。
 
 {{InteractiveExample("JavaScript デモ: Symbol.species")}}
 

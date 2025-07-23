@@ -236,7 +236,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` および `VIRTUALENVWRAPPER_VIRTUALENV_ARGS` 変数は、Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指します。テスト時に virtualenv が動作しない場合は、Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > システムでの正しい場所は、`which virtualenvwrapper.sh` と `which python3` というコマンドを使って見つけることができます。
 
@@ -279,7 +280,8 @@ export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 ```
 
-> **メモ:** `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
+> [!NOTE]
+> `VIRTUALENVWRAPPER_PYTHON` 変数は Python 3 の通常のインストール場所を指し、`source /usr/local/bin/virtualenvwrapper.sh` は `virtualenvwrapper.sh` スクリプトの通常の場所を指しています。テスト時に virtualenv が動作しない場合は、 Python とスクリプトが予想される場所にあることを確認してから、起動ファイルを適切に変更してください。
 >
 > たとえば、macOS での 1 つのインストールテストでは、スタートアップファイルに次の行が必要になりました:
 >

@@ -25,7 +25,8 @@ Error(message, fileName)
 Error(message, fileName, lineNumber)
 ```
 
-> **メモ:** `Error()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せます。どちらも新しい `Error` のインスタンス を生成します。
+> [!NOTE]
+> `Error()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出せます。どちらも新しい `Error` のインスタンス を生成します。
 
 ### 引数
 
