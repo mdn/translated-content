@@ -163,7 +163,8 @@ l10n:
 > [!NOTE]
 > 複数選択可能な選択ボックスの場合、選択ボックスはドロップダウンコンテンツとして値を表示しないことに気づくでしょう。代わりに、すべての値がリストに一度に表示され、選択肢の [`size`](/ja/docs/Web/HTML/Reference/Attributes/size)属性はウィジェットの高さを決定します。
 
-> **メモ:** {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性にも対応しています。
+> [!NOTE]
+> {{HTMLElement("select")}} 要素に対応しているすべてのブラウザーは、 [`multiple`](/ja/docs/Web/HTML/Reference/Elements/select#multiple) 属性にも対応しています。
 
 ### 自動補完のボックス
 

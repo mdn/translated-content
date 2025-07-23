@@ -14,7 +14,8 @@ l10n:
 > [!NOTE]
 > 示された軸がスクロールバーを持たない場合、アニメーションタイムラインは非アクティブになります（進行がゼロになります）。
 
-> **メモ:** `view()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ViewTimeline")}} の固有のインスタンスが対応付けられます。
+> [!NOTE]
+> `view()` を使用するたびに、[ウェブアニメーション API](/ja/docs/Web/API/Web_Animations_API) に {{domxref("ViewTimeline")}} の固有のインスタンスが対応付けられます。
 
 ## 構文
 

@@ -10,7 +10,8 @@ l10n:
 
 **`XMLHttpRequest.responseXML`** は読み取り専用のプロパティで、リクエストによって受け取った HTML または XML を含む {{domxref("Document")}}、またはリクエストが成功しなかった場合、まだ送信されていない場合、データが XML または HTML として解釈できない場合は `null` を返します。
 
-> **メモ:** `responseXML` という名前はこのプロパティの歴史の遺物です。これは HTML および XML の両方で動作します。
+> [!NOTE]
+> `responseXML` という名前はこのプロパティの歴史の遺物です。これは HTML および XML の両方で動作します。
 
 ふつう、レスポンスは `"text/xml"` として解釈されます。 {{domxref("XMLHttpRequest.responseType", "responseType")}} が `"document"` に設定され、リクエストが非同期に行われた場合、レスポンスは代わりに `"text/html"` として解釈されます。他の型のデータでは、 [`data:` の URL](/ja/docs/Web/URI/Reference/Schemes/data) の場合と同様、 `responseXML` は `null` になります。
 

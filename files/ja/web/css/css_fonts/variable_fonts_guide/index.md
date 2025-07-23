@@ -693,7 +693,8 @@ angle.addEventListener("input", (e) => {
 > [!NOTE]
 > すべてのブラウザーがフォント指定形式の完全な構文を実装しているわけではないので、慎重にテストしてください。可変フォントに対応しているブラウザーはすべて、形式を format-variations ではなく、ファイル形式だけに設定してもレンダリングされますが (例：`woff2-variations` ではなく `woff2`)、可能であれば適切な構文を使用することをお勧めします。
 
-> **メモ:** `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
+> [!NOTE]
+> `font-weight`, `font-stretch`, `font-style` に値の範囲を指定した場合は、適切な属性 (すなわち `font-weight` や `font-stretch`) を使用していると、ブラウザーがその範囲外の軸をレンダリングしようとしないようにしますが、`font-variation-settings` で無効な値を指定した場合には、それを阻止することはできませんので注意して使用してください。
 
 ## 古いブラウザーでの作業
 

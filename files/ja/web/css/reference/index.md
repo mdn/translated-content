@@ -100,7 +100,8 @@ div.menu-bar li:hover > ul {
 - [擬似要素](/ja/docs/Web/CSS/Pseudo-elements) `::`
   - : HTML に含まれていないエンティティを表します。
 
-> **注目:** [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
+> [!CALLOUT]
+> [Selectors Level 4 仕様書におけるセレクター](https://www.w3.org/TR/selectors/#overview)および[擬似要素の仕様書](https://drafts.csswg.org/css-pseudo/)も参照してください。
 
 ## 概念
 

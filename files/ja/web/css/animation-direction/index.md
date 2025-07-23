@@ -124,9 +124,11 @@ animation-direction: unset;
 - `alternate-reverse`
   - : アニメーションを毎回反転させ、初回は<em>逆方向</em>になります。周期が偶数か奇数かを特定する回数は1から始まります。
 
-> **メモ:** `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
+> [!NOTE]
+> `animation-*` プロパティにカンマ区切りで複数の値を指定した場合、 {{cssxref("animation-name")}} に現れる順にアニメーションに適用されます。アニメーションの数と `animation-*` プロパティの値が一致しない場合は、[複数のアニメーションプロパティ値の設定](/ja/docs/Web/CSS/CSS_animations/Using_CSS_animations#複数のアニメーションプロパティ値の設定) を参照してください。
 
-> **メモ:** [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、 `reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。 `alternate` の値（{{cssxref("animation-iteration-count")}} との組み合わせ）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
+> [!NOTE]
+> [CSS スクロール駆動アニメーション](/ja/docs/Web/CSS/CSS_scroll-driven_animations) を作成するとき、 `animation-direction` を指定すると期待通りに動作します。例えば、 `reverse` を指定すると、タイムラインの進行の過程でアニメーションが逆に実行されます。 `alternate` の値（{{cssxref("animation-iteration-count")}} との組み合わせ）を指定すると、タイムラインの進行に合わせてアニメーションを前後に実行させます。
 
 ## 公式定義
 
