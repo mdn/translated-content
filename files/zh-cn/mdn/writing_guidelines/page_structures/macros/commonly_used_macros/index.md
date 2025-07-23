@@ -174,7 +174,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 - [`Non-standard_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：`\{{Non-standard_Header}}` {{Non-standard_Header}}
 - [`SeeCompatTable`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs) 应该用于记录[实验性特性](/zh-CN/docs/MDN/Writing_guidelines/Experimental_deprecated_obsolete#实验性)的页面。示例：`\{{SeeCompatTable}}` {{SeeCompatTable}}
-- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs): `\{{Deprecated_Header}}` {{Deprecated_Header}}
+- [`Deprecated_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：`\{{Deprecated_Header}}` {{Deprecated_Header}}
 - [`SecureContext_Header`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/banners.rs)：应该用于接口页面、API 概览页面和 API 入口点（例如 `navigator.xyz`）等主要页面，但通常不在方法和属性页面等子页面上使用。示例：`\{{SecureContext_Header}}` {{SecureContext_Header}}
 
 ### 表明某个特性在 Web Worker 中可用的指示器
