@@ -14,15 +14,15 @@ l10n:
     <tr>
       <th scope="row">前提：</th>
       <td>
-        基本了解<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >HTML 语法</a
-        >、<a
+        熟悉<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
+          >基本 HTML 语法</a
+        >，了解文本级语义，如<a
           href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
           >标题和段落</a
         >和<a
           href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Lists"
           >列表</a
-        >中涵盖的基础 HTML 知识。
+        >。
       </td>
     </tr>
     <tr>
@@ -213,11 +213,10 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 {{HTMLElement("span")}} 是一个行级无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：
 
 ```html
-<p>
-  国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span
+<p>国王喝得酩酊大醉，在凌晨 1 点时才回到自己的房间，踉跄地走过门口。<span
     class="editor-note"
     >[编辑批注：此刻舞台灯光应变暗]</span
-  >.
+  >。
 </p>
 ```
 
@@ -246,6 +245,9 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
 
 > [!WARNING]
 > div 元素非常便利但容易被滥用。由于它们不携带语义值，会使 HTML 代码变得混乱。要小心使用，只有在没有更好的语义方案时才选择它，而且要尽可能少用，否则文档的升级和维护工作会非常困难。
+
+> [!NOTE]
+> Scrimba 的[语义 HTML](https://scrimba.com/learn-accessible-web-design-c031/~0b?via=mdn) <sup>[_MDN学习伙伴_](/zh-CN/docs/MDN/Writing_guidelines/Learning_content#伙伴链接和嵌入)</sup>交互式教程对语义标记进行了有用的回顾，并说明了为什么要使用语义标记，此外还提供了一个挑战，测试使用语义元素改进 HTML 代码库的能力。
 
 ### 换行与水平分割线
 
