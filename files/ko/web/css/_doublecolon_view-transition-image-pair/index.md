@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 722311032dbf520bf6aeba3d1f432aca38779ffd
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{SeeCompatTable}}
 
 **`::view-transition-image-pair`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 컨테이너의 [뷰 전환](/ko/docs/Web/API/View_Transition_API)의 오래된 뷰 상태와 새로운 뷰 상태, 전환의 전후를 나타냅니다.
 

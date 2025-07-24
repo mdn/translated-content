@@ -3,8 +3,6 @@ title: isolation
 slug: Web/CSS/isolation
 ---
 
-{{CSSRef}}
-
 **`isolation`** [CSS](/ko/docs/Web/CSS) 속성은 요소가 새로운 {{glossary("stacking context", "쌓임 맥락")}}을 생성해야 하는지 지정합니다.
 
 {{InteractiveExample("CSS Demo: isolation")}}
