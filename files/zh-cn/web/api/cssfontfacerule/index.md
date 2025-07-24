@@ -7,20 +7,20 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSFontFaceRule`** 接口表示 {{cssxref("@font-face")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
+**`CSSFontFaceRule`** 接口表示 {{cssxref("@font-face")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_继承 {{domxref("CSSRule")}} 的属性。_
+_继承其祖先 {{domxref("CSSRule")}} 的属性。_
 
 - {{domxref("CSSFontFaceRule.style")}} {{ReadOnlyInline}}
   - : 返回一个 {{domxref("CSSStyleDeclaration")}}。
 
 ## 实例方法
 
-_继承 {{domxref("CSSRule")}} 的方法。_
+_继承其祖先 {{domxref("CSSRule")}} 的方法。_
 
 ## 示例
 
