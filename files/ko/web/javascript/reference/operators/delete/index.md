@@ -63,7 +63,7 @@ delete identifier;
 delete object.#privateProperty;
 ```
 
-[클래스](/ko/docs/Web/JavaScript/Reference/Classes)는 자동으로 엄격 모드로 작동하며, [private 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties)은 클래스 본문 내에서만 참조될 수 있기 때문에 private 속성은 절대 삭제될 수 없습니다. `delete identifier`는 식별자가 전역 객체의 구성 가능한 속성을 참조한다면 [작동할 수 있지만](#deleting_global_properties), 이 형식을 피하고 [`gloablThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)를 접두사로 사용해야 합니다.
+[클래스](/ko/docs/Web/JavaScript/Reference/Classes)는 자동으로 엄격 모드로 작동하며, [private 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements)은 클래스 본문 내에서만 참조될 수 있기 때문에 private 속성은 절대 삭제될 수 없습니다. `delete identifier`는 식별자가 전역 객체의 구성 가능한 속성을 참조한다면 [작동할 수 있지만](#deleting_global_properties), 이 형식을 피하고 [`gloablThis`](/ko/docs/Web/JavaScript/Reference/Global_Objects/globalThis)를 접두사로 사용해야 합니다.
 
 다른 표현식들도 허용되지만, 이 예시는 의미 있는 동작을 유발하지 않습니다.
 
