@@ -71,7 +71,7 @@ for (let i = "start" in window ? window.start : 0; i < 9; i++) {
 
 ```js example-good
 // Все выражение инициализации переменной взято в скобки
-for (let i = ("start" in window) ? window.start : 0; i < 9; i++) {
+for (let i = ("start" in window ? window.start : 0); i < 9; i++) {
   console.log(i);
 }
 
