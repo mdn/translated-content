@@ -55,7 +55,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/htmlxref.rs">HTMLElement</a></code>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements">HTML 元素参考</a>（/Web/HTML/Element）</td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements">HTML 元素参考</a>（/Web/HTML/Reference/Elements）</td>
       <td><code>\{{HTMLElement("select")}}</code> 会生成 {{HTMLElement("select")}}。</td>
     </tr>
     <tr>
@@ -69,33 +69,33 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgattr.rs">SVGAttr</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/SVG/Reference/Attribute">SVG 属性参考</a>（/Web/SVG/Attribute）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Attribute">SVG 属性参考</a>（/Web/SVG/Reference/Attribute）</td>
       <td><code>\{{SVGAttr("d")}}</code> 会生成 {{SVGAttr("d")}}。</td>
     </tr>
     <tr>
       <td><a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/svgxref.rs">SVGElement</a></td>
-      <td><a href="/zh-CN/docs/Web/SVG/Reference/Element">SVG 元素参考</a>（/Web/SVG/Element）</td>
+      <td><a href="/zh-CN/docs/Web/SVG/Reference/Element">SVG 元素参考</a>（/Web/SVG/Reference/Element）</td>
       <td><code>\{{SVGElement("view")}}</code> 会生成 {{SVGElement("view")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPHeader</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Headers">HTTP 标头</a>（/Web/HTTP/Headers）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Headers">HTTP 标头</a>（/Web/HTTP/Reference/Headers）</td>
       <td><code>\{{HTTPHeader("ACCEPT")}}</code> 会生成 {{HTTPHeader("ACCEPT")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPMethod</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Methods">HTTP 请求方法</a>（/Web/HTTP/Methods）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Methods">HTTP 请求方法</a>（/Web/HTTP/Reference/Methods）</td>
       <td><code>\{{HTTPMethod("HEAD")}}</code> 会生成 {{HTTPMethod("HEAD")}}。</td>
     </tr>
     <tr>
       <td>
         <a href="https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/links/http.rs">HTTPStatus</a>
       </td>
-      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Status">HTTP 响应状态码</a>（/Web/HTTP/Status）</td>
+      <td><a href="/zh-CN/docs/Web/HTTP/Reference/Status">HTTP 响应状态码</a>（/Web/HTTP/Reference/Status）</td>
       <td><code>\{{HTTPStatus("404")}}</code> 会生成 {{HTTPStatus("404")}}。</td>
     </tr>
   </tbody>
@@ -111,7 +111,7 @@ MDN 提供了许多链接宏，用于简化参考页、术语表条目和其他�
 
 - [`EmbedLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_live_sample.rs) 可以在当前页面中嵌入一个代码示例的实际展示效果（使用方法参见[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)）。
 - [`LiveSampleLink`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/live_sample_link.rs) 创建指向包含页面上代码示例输出的页面的链接，如[运行实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Live_samples)中所述。
-- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) 提供了一种新的运行实例编写和使用方式，你可以在 [Github 在线实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_在线实例)中了解更多信息。
+- [`EmbedGHLiveSample`](https://github.com/mdn/rari/blob/main/crates/rari-doc/src/templ/templs/embeds/embed_gh_live_sample.rs) 允许从 GitHub Pages 中嵌入运行实例，你可以在 [Github 在线实例](/zh-CN/docs/MDN/Writing_guidelines/Page_structures/Code_examples#github_在线实例)中了解更多信息。
 
 ## 通用格式化
 
