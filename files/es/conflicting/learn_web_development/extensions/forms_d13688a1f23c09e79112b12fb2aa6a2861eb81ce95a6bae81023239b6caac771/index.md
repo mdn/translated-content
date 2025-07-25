@@ -1,7 +1,7 @@
 ---
 title: "Prueba tus habilidades: controles HTML5"
-slug: Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
-original_slug: Learn_web_development/Extensions/Forms/Test_your_skills:_HTML5_controls
+slug: conflicting/Learn_web_development/Extensions/Forms_d13688a1f23c09e79112b12fb2aa6a2861eb81ce95a6bae81023239b6caac771
+original_slug: Learn_web_development/Extensions/Forms/Test_your_skills/Input_types
 ---
 
 {{learnsidebar}}
@@ -26,7 +26,8 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls1.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls1-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Controles HTML5 2
 
@@ -40,7 +41,8 @@ Intenta actualizar el código en vivo más abajo para retrear el ejemplo termina
 
 {{EmbedGHLiveSample("learning-area/html/forms/tasks/html5-controls/html5-controls2.html", '100%', 700)}}
 
-> **Nota:** [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
+> [!NOTE]
+> [Descarga el código inicial de esta tarea](https://github.com/mdn/learning-area/blob/master/html/forms/tasks/html5-controls/html5-controls2-download.html) para trabajar en tu propio editor o en un editor en línea.
 
 ## Evaluación o ayuda adicional
 

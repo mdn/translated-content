@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-{{CSSRef}}
-
 [CSS](/ja/docs/Web/CSS) の **`<number>`** [データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)は、整数または小数部分のある数値を表します。
 
 ## 構文

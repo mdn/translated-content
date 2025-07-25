@@ -65,7 +65,8 @@ l10n:
 
 なぜならビジュアルがすべてを伝えるわけではないからです。私たちはナビゲーションメニューや関連リンクなど、コンテンツの最も有用な部分に目の見えるユーザーの注意を引くために、色とフォントサイズを使用します。しかし、例えば「ピンク」や「大きいフォント」のような概念があまり有用ではないと思われる視覚障碍者についてはどうでしょうか。
 
-> **メモ:** [およそ 8% の男性と 0.5% の女性](http://www.color-blindness.com/)が色覚障碍者です。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2015 年には[全世界で 9 億 4,000 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 75 億人](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)でした）。
+> [!NOTE]
+> [およそ 8% の男性と 0.5% の女性](http://www.color-blindness.com/)が色覚障碍者です。言い換えれば、男性 12 人に 1 人、女性 200 人に 1 人の割合です。視覚障碍のある人々は世界の人口の約 4〜5 ％を占めています（2015 年には[全世界で 9 億 4,000 万人](https://en.wikipedia.org/wiki/Visual_impairment)の人々がいましたが、総人口は[約 75 億人](https://en.wikipedia.org/wiki/World_human_population#/media/File:World_population_history.svg)でした）。
 
 HTML コードでは、それらの*機能*に基づいてコンテンツのセクションをマークアップすることができます — スクリーンリーダーのような支援技術はそれらの要素を認識し、「メインナビゲーションを見つける」や「メインコンテンツを見つける」といった作業を手助けすることができます。
 コースの前半で述べたように、[適切な役割に適切な要素構造とセマンティクスを使用しないことによる影響](/ja/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#なぜ構造が必要なのか)は多くあります。

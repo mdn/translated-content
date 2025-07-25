@@ -1,19 +1,11 @@
 ---
 title: :nth-last-child()
 slug: Web/CSS/:nth-last-child
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-{{CSSRef}}
-
-**`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループの中での位置に基づいて選択します。
-
-```css
-/* 兄弟要素の中で、後ろから数えて
-   3 つおきに要素を選択 */
-:nth-last-child(4n) {
-  color: lime;
-}
-```
+**`:nth-last-child()`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、兄弟要素のグループにおける末尾からの位置に基づいて選択します。
 
 {{InteractiveExample("CSS デモ: :nth-last-child", "tabbed-shorter")}}
 
@@ -33,7 +25,7 @@ li:nth-last-child(even) {
 ```
 
 ```html interactive-example
-<p>Eight deadliest wildfires:</p>
+<p>史上最悪の 8 つの山火事:</p>
 <ol reversed>
   <li>Matheson Fire</li>
   <li>Miramichi Fire</li>
@@ -46,28 +38,52 @@ li:nth-last-child(even) {
 </ol>
 ```
 
-> [!NOTE]
-> この擬似クラスは、最初から後に向けてではなく*最後*から前に向けて数えるという点を除けば、本質的に {{Cssxref(":nth-child")}} と同じです。
-
 ## 構文
 
-`nth-last-child` 擬似クラスは、要素を選択する最後から数えるパターンを表す引数を 1 つ取ります。
+```css-nolint
+:nth-last-child(<nth> [of <complex-selector-list>]?) {
+  /* ... */
+}
+```
 
-```
-:nth-last-child( <nth> [ of <complex-selector-list> ]? )
-```
+### 引数
+
+`:nth-last-child()` 擬似クラスは、単一の引数を取り、要素と照合する末尾から数えたパターンを指定します。
 
 ### キーワード値
 
 - `odd`
-  - : 一連の兄弟要素の中で、最後から奇数番目の要素 (1, 3, 5, など) を表します。
+  - : 一連の兄弟要素の中で、最後から奇数番目の要素（1, 3, 5, など）を表します。
 - `even`
-  - : 一連の兄弟要素の中で、最後から偶数番目の要素 (2, 4, 6, など) を表します。
+  - : 一連の兄弟要素の中で、最後から偶数番目の要素（2, 4, 6, など）を表します。
 
-### 関数記法
+#### 関数記法
 
 - `<An+B>`
-  - : 一連の兄弟要素の中で、 `n` に正の整数か0が入るとき、 `An+B` のパターンに一致する位置の要素を表します。後ろから数えた最初の要素の番号は `1` です。 `A` と `B` の値は両方とも {{cssxref("&lt;integer&gt;")}} です。
+  - : 一連の兄弟要素の中で、位置がパターン `An+B` と一致する要素を表します。ここで、`n` は正の整数または 0 の値であり、
+    - `A` は整数で増分の大きさ、
+    - `B` は整数でオフセット、
+    - `n` は 0 から始まる、すべて非負の整数です。
+
+    これは、リストの `An+B` 番目の要素とみなすことができます。末尾から数えた最初の要素の番号は `1` です。 `A` と `B` の値は両方とも {{cssxref("&lt;integer&gt;")}} の値です。
+
+#### `of <selector>` 構文
+
+セレクター引数を渡すことで、そのセレクターに一致する**末尾から n 番目**の要素を選択することができます。例えば、次のセレクターは `class="important"` を持つ最後の 3 つのリストアイテムに一致します。
+
+```css
+:nth-last-child(-n + 3 of li.important) {
+}
+```
+
+これは、セレクターを関数の外に移動させた場合とは異なります。例えば、
+
+```css
+li.important:nth-last-child(-n + 3) {
+}
+```
+
+このセレクターは、リストアイテムが最後の 3 つの子のいずれかに含まれている場合にも、そのスタイルを適用します。
 
 ## 例
 
@@ -84,13 +100,13 @@ li:nth-last-child(even) {
 - `:nth-last-child(3n+4)`
   - : 最後から数えて 4, 7, 10, 13 番目などの要素を表します。
 - `:nth-last-child(-n+3)`
-  - : 兄弟要素のグループの中で最後の3つの要素を表します。
+  - : 兄弟要素のグループの中で最後の 3 つの要素を表します。
 - `p:nth-last-child(n)` または `p:nth-last-child(n+1)`
-  - : 兄弟要素のグループの中ですべての `<p>` 要素を表します。これは単純な `p` セレクターと同じです。 (`n` はゼロから始まるので、最後の要素が1で始まり、 `n` および `n+1` が共に同じ要素を選択します。)
+  - : 兄弟要素のグループの中ですべての `<p>` 要素を表します。これは単純な `p` セレクターと同じです。（`n` はゼロから始まるので、最後の要素が 1 で始まり、 `n` および `n+1` が共に同じ要素を選択します。）
 - `p:nth-last-child(1)` または `p:nth-last-child(0n+1)`
   - : 兄弟要素のグループの中で最初の `<p>` 要素すべてを表します。これは {{cssxref(":last-child")}} セレクターと同じです。
 
-### 詳細な例
+### 表の例
 
 #### HTML
 
@@ -98,19 +114,19 @@ li:nth-last-child(even) {
 <table>
   <tbody>
     <tr>
-      <td>First line</td>
+      <td>1 行目</td>
     </tr>
     <tr>
-      <td>Second line</td>
+      <td>2 行目</td>
     </tr>
     <tr>
-      <td>Third line</td>
+      <td>3 行目</td>
     </tr>
     <tr>
-      <td>Fourth line</td>
+      <td>4 行目</td>
     </tr>
     <tr>
-      <td>Fifth line</td>
+      <td>5 行目</td>
     </tr>
   </tbody>
 </table>
@@ -141,11 +157,11 @@ tr:nth-last-child(2) {
 
 #### 結果
 
-{{EmbedLiveSample('Table_example', 300, 150)}}
+{{EmbedLiveSample('表の例', 300, 150)}}
 
 ### 数量クエリー
 
-*数量クエリー*は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)の機能を組み合わせることで実現できます。
+「数量クエリー」は、要素が存在する数に応じてスタイル付けします。この例では、リストの中に項目が3つ以上ある場合にリスト項目が赤に変わります。これは `nth-last-child` 擬似クラスと [後続兄弟結合子](/ja/docs/Web/CSS/Subsequent-sibling_combinator)の機能を組み合わせることで実現できます。
 
 #### HTML
 
@@ -178,7 +194,79 @@ li:nth-last-child(3) ~ li {
 
 #### 結果
 
-{{EmbedLiveSample('Quantity_query', '100%', 270)}}
+{{EmbedLiveSample('数量クエリー', '100%', 270)}}
+
+### `of <selector>` 構文の例
+
+この例では、名前の順序なしリストがあります。一部のアイテムには `noted` クラスが適用されており、下部に太い境界線で強調表示されています。
+
+#### HTML
+
+```html
+<ul>
+  <li class="noted">Diego</li>
+  <li>Shilpa</li>
+  <li class="noted">Caterina</li>
+  <li>Jayla</li>
+  <li>Tyrone</li>
+  <li>Ricardo</li>
+  <li class="noted">Gila</li>
+  <li>Sienna</li>
+  <li>Titilayo</li>
+  <li class="noted">Lexi</li>
+  <li>Aylin</li>
+  <li>Leo</li>
+  <li>Leyla</li>
+  <li class="noted">Bruce</li>
+  <li>Aisha</li>
+  <li>Veronica</li>
+  <li class="noted">Kyouko</li>
+  <li>Shireen</li>
+  <li>Tanya</li>
+  <li class="noted">Marlene</li>
+</ul>
+```
+
+#### CSS
+
+```css
+* {
+  font-family: sans-serif;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  font-size: 1.2rem;
+  padding-left: 0;
+}
+
+li {
+  margin: 0.125rem;
+  padding: 0.25rem;
+  border: 1px solid tomato;
+}
+
+.noted {
+  border-bottom: 5px solid tomato;
+}
+```
+
+以下の CSS では、`class="noted"` でマークされた**奇数**のリストアイテムを対象としています。
+
+```css
+li:nth-last-child(odd of .noted) {
+  background-color: tomato;
+  border-bottom-color: seagreen;
+}
+```
+
+#### 結果
+
+`class="noted"` に対応するアイテムには、下部に太い境界線があり、アイテム 1、7、14、20 は、 `class="noted"` を持つ奇数リストアイテムであるため、背景が塗りつぶされています。
+
+{{EmbedLiveSample('of_selector_構文の例', 550, 120)}}
 
 ## 仕様書
 
@@ -190,5 +278,6 @@ li:nth-last-child(3) ~ li {
 
 ## 関連情報
 
-- {{Cssxref(":nth-child")}}, {{Cssxref(":nth-last-of-type")}}
-- [CSS の数量クエリー](https://alistapart.com/article/quantity-queries-for-css)
+- {{Cssxref(":nth-child")}}
+- {{Cssxref(":nth-last-of-type")}}
+- [CSS の数量クエリー](https://alistapart.com/article/quantity-queries-for-css/)

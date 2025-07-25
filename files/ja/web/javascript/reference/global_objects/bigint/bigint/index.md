@@ -18,7 +18,8 @@ BigInt(value);
 - `value`
   - : 作成しようとしているオブジェクトの数値。文字列または整数にすることができます。
 
-> **メモ:** `BigInt()` は {{JSxRef("Operators/new", "new")}} 演算子と共には使用されません。
+> [!NOTE]
+> `BigInt()` は {{JSxRef("Operators/new", "new")}} 演算子と共には使用されません。
 
 ## 例
 

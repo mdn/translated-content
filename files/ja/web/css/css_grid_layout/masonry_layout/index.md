@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c6e02b5aa7c12f9e64f80a62f75ede8f5cb5ec21
 ---
 
-{{CSSRef}} {{SeeCompatTable}}
+{{SeeCompatTable}}
 
 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)仕様書のレベル 3 では、 `masonry` の値が {{cssxref("grid-template-columns")}} と {{cssxref("grid-template-rows")}} に含まれています。このガイドでは、メイソンリー（組積）レイアウトとは何か、どのように使用するかについて詳しく説明します。
 

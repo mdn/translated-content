@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 62ad79f3ece9fa7199b3420f38e8bdd05b54073f
 ---
 
-{{CSSRef}}
-
 **`page`** は [CSS](/ja/docs/Web/CSS) のプロパティで、{{cssxref("@page")}} [アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)で定義された、名前付きページ、つまり特定の種類のページを指定するために使用します。
 
 名前付きページを連続して使用しているセレクターが複数ある場合は、 [`break-after`](/ja/docs/Web/CSS/break-after) を使用して強制的にページを分割する必要があるかもしれません。

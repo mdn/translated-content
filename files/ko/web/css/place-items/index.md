@@ -2,7 +2,7 @@
 title: place-items
 slug: Web/CSS/place-items
 l10n:
-  sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
+  sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
 {{CSSRef}}
@@ -65,11 +65,9 @@ place-items: end center;
 ## 구문
 
 ```css
-/* 키워드 값 */
+/* 위치 정렬 */
 place-items: center;
 place-items: normal start;
-
-/* 위치 정렬 */
 place-items: center normal;
 place-items: start legacy;
 place-items: end normal;
@@ -219,7 +217,7 @@ values.addEventListener("change", (evt) => {
 }
 ```
 
-#### 결과ㄴ
+#### 결과
 
 {{EmbedLiveSample("Placing_items_in_a_flex_container", 260, 290)}}
 
