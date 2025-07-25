@@ -79,11 +79,11 @@ p:first-of-type {
 ```html
 <article>
   <div>這個 `div` 是第一個！</div>
-  <div>這個 <span>巢狀的 `span` 是第一個</span>！</div>
+  <div>這個<span>巢狀的 `span` 是第一個</span>！</div>
   <div>
-    這個 <em>巢狀的 `em` 是第一個</em>，但這個 <em>巢狀的 `em` 是最後一個</em>！
+    這個<em>巢狀的 `em` 是第一個</em>，但這個 <em>巢狀的 `em` 是最後一個</em>！
   </div>
-  <div>這個 <span>巢狀的 `span` 會被設定樣式</span>！</div>
+  <div>這個<span>巢狀的 `span` 會被設定樣式</span>！</div>
   <p>這個 `p` 符合條件！</p>
   <div>這是最後一個 `div`。</div>
 </article>
