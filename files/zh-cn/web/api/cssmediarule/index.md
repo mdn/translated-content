@@ -13,14 +13,14 @@ l10n:
 
 ## 实例属性
 
-_继承自其父类 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
+_继承其父接口 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的属性。_
 
 - {{domxref("CSSMediaRule.media")}} {{ReadOnlyInline}}
-  - : 返回一个 {{domxref("MediaList")}} 对象，表示样式信息所针对的目标媒介。
+  - : 返回一个表示样式信息所针对的目标媒介的 {{domxref("MediaList")}} 对象。
 
 ## 实例方法
 
-_没有特定的方法；它继承自 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 方法。_
+_没有特定的方法；它继承其父接口 {{domxref("CSSConditionRule")}}、{{domxref("CSSGroupingRule")}} 和 {{domxref("CSSRule")}} 的方法。_
 
 ## 示例
 
