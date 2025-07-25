@@ -147,7 +147,6 @@ Intl.NumberFormat(locales, options)
 
 - `roundingMode`
   - : 小数点以下の桁数を丸める方法。使用可能な値は次のとおりです。
-
     - `"ceil"`
       - : +∞ 方向に丸められます。正の値は切り上げます。負の値は「正の値の方」に丸めます。
     - `"floor"`
