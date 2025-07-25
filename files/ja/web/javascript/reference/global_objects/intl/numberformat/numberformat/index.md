@@ -171,7 +171,6 @@ Intl.NumberFormat(locales, options)
 
 - `trailingZeroDisplay`
   - : 整数の末尾の 0 の表示方法に関する方針です。使用可能な値は次のとおりです。
-
     - `"auto"` （既定値）
       - : `minimumFractionDigits` と `minimumSignificantDigits` に応じて、末尾のゼロを保持します。
     - `"stripIfInteger"`
