@@ -7,13 +7,13 @@ l10n:
 
 {{APIRef("CSSOM")}}
 
-**`CSSKeyframesRule`** 接口表示 CSS 动画的完整关键帧集合的对象。它对应于整个 {{cssxref("@keyframes")}} [At 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 的内容。
+**`CSSKeyframesRule`** 接口表示 CSS 动画的完整关键帧集合的对象。它对应于整个 {{cssxref("@keyframes")}} [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule)的内容。
 
 {{InheritanceDiagram}}
 
 ## 实例属性
 
-_继承自其祖先 {{domxref("CSSRule")}} 的属性。_
+_继承其祖先 {{domxref("CSSRule")}} 的属性。_
 
 - {{domxref("CSSKeyframesRule.name")}}
   - : 表示关键帧的名称，被用于 {{cssxref("animation-name")}} 属性。
@@ -24,10 +24,10 @@ _继承自其祖先 {{domxref("CSSRule")}} 的属性。_
 
 ## 实例方法
 
-_继承自其祖先 {{domxref("CSSRule")}} 的方法。_
+_继承其祖先 {{domxref("CSSRule")}} 的方法。_
 
 - {{domxref("CSSKeyframesRule.appendRule()")}}
-  - : 将新的关键帧规则插入到当前 CSSKeyframesRule 中。参数是一个字符串，包含与 {{cssxref("@keyframes")}} At 规则条目格式相同的关键帧。如果包含多个关键帧规则，则会抛出带有 `SYNTAX_ERR` 的 {{domxref("DOMException")}}。
+  - : 将新的关键帧规则插入到当前 CSSKeyframesRule 中。参数是一个字符串，包含与 {{cssxref("@keyframes")}} at 规则条目格式相同的关键帧。如果包含多个关键帧规则，则会抛出带有 `SYNTAX_ERR` 的 {{domxref("DOMException")}}。
 - {{domxref("CSSKeyframesRule.deleteRule()")}}
   - : 从当前 CSSKeyframesRule 中删除关键帧规则。参数是要删除的关键帧的索引，表示为解析为 `0%` 到 `100%` 之间数字的字符串。
 - {{domxref("CSSKeyframesRule.findRule()")}}
@@ -37,8 +37,7 @@ _继承自其祖先 {{domxref("CSSRule")}} 的方法。_
 
 ### 使用 CSSKeyframesRule
 
-CSS 包含一个关键帧 At 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。
-`myRules[0]` 返回一个 `CSSKeyframesRule` 对象。
+CSS 包含一个关键帧 at 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。`myRules[0]` 返回一个 `CSSKeyframesRule` 对象。
 
 ```css
 @keyframes slide-in {
