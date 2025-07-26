@@ -1,9 +1,8 @@
 ---
 title: HTTP 認証
 slug: Web/HTTP/Guides/Authentication
-original_slug: Web/HTTP/Guides/Authentication
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: c182f3c8fc8e76f7c7d90eaeb1439c47a524e950
 ---
 
 HTTP はアクセス制御と認証の基本的な枠組みを提供しています。
@@ -30,12 +29,12 @@ HTTP はアクセス制御と認証の基本的な枠組みを提供していま
 
 ### プロキシー認証
 
-*プロキシー認証*にも同じチャレンジとレスポンスのメカニズムを使用することができます。
+プロキシー認証にも同じチャレンジとレスポンスの仕組みを使用することができます。
 リソース認証とプロキシー認証の両方が共存できるように、別なヘッダーとステータスコードのセットが必要です。プロキシーの場合、チャレンジのステータスコードは {{HTTPStatus("407")}} (Proxy Authentication Required) であり、 {{HTTPHeader("Proxy-Authenticate")}} レスポンスヘッダーにプロキシーで受け付けるためのチャレンジを 1 つ以上設定します。プロキシーサーバーに資格情報を伝えるには、 {{HTTPHeader("Proxy-Authorization")}} リクエストヘッダーが使用されます。
 
 ### アクセスの不許可
 
-（プロキシー）サーバーが*無効な*資格情報を受け取った場合、 {{HTTPStatus("401")}} `Unauthorized` または {{HTTPStatus("407")}} `Proxy Authentication Required` で応答する必要があり、ユーザーは新しいリクエストを送ったり、 {{HTTPHeader("Authorization")}} ヘッダーフィールドを置き換えたりすることができます。
+（プロキシー）サーバーが無効な資格情報を受け取った場合、 {{HTTPStatus("401")}} `Unauthorized` または {{HTTPStatus("407")}} `Proxy Authentication Required` で応答する必要があり、ユーザーは新しいリクエストを送ったり、 {{HTTPHeader("Authorization")}} ヘッダーフィールドを置き換えたりすることができます。
 
 （プロキシー）サーバーが、有効であるが指定されたリソースにアクセスする要件を満たさない資格情報を受け取った場合、サーバーは {{HTTPStatus("403")}} `Forbidden` ステータスコードを返す必要があります。 {{HTTPStatus("401")}} `Unauthorized` または {{HTTPStatus("407")}} `Proxy Authentication Required` とは異なり、このユーザーとブラウザーは再試行することができません。
 
@@ -147,14 +146,13 @@ location /status {
 
 ### URL 内の認証情報を使用したアクセス
 
-多くのクライアントでは次のように、ユーザー名とパスワードを含むエンコードされた URL を使用してログインプロンプトを回避できます。
+過去には、ユーザー名とパスワードを含むエンコードされた URL を使用してログインできるサイトもありました。
 
 ```plain example-bad
 https://username:password@www.example.com/
 ```
 
-**これらの URL の使用は推奨されていません。**
-Chrome ではセキュリティ上の理由から、URL の `username:password@` 部分が[削除されます](https://crbug.com/82250#c7)。 Firefox ではサイトが実際に認証を要求するかどうかをチェックし、そうでない場合 Firefox はユーザーに「`www.example.com` というサイトに `username` というユーザー名でログインしようとしていますが、このウェブサイトは認証を必要としません。これはあなたを騙そうとしている可能性があります。」と警告します。
+この構文は、最近のブラウザーでは使用できなくなりました。リクエストは送信される前に、ユーザー名とパスワードが削除されます。
 
 ## 関連情報
 
