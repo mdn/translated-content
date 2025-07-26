@@ -20173,17 +20173,6 @@
       "pixoux"
     ]
   },
-  "Web/CSS/-moz-image-region": {
-    "modified": "2020-10-15T21:18:05.925Z",
-    "contributors": [
-      "SphinxKnight",
-      "teoli",
-      "gudoy",
-      "FredB",
-      "Fredchat",
-      "Kyodev"
-    ]
-  },
   "Web/CSS/-moz-orient": {
     "modified": "2020-10-15T21:28:10.504Z",
     "contributors": [
@@ -21504,13 +21493,6 @@
     "modified": "2020-10-15T21:47:21.069Z",
     "contributors": [
       "SphinxKnight"
-    ]
-  },
-  "Web/CSS/@media/aural": {
-    "modified": "2019-04-06T12:01:18.819Z",
-    "contributors": [
-      "SphinxKnight",
-      "xdelatour"
     ]
   },
   "Web/CSS/@media/color": {
@@ -38914,6 +38896,13 @@
       "Barbrousse"
     ]
   },
+  "conflicting/Web/CSS/@media": {
+    "modified": "2019-04-06T12:01:18.819Z",
+    "contributors": [
+      "SphinxKnight",
+      "xdelatour"
+    ]
+  },
   "conflicting/Web/CSS/CSS_cascade/Value_processing": {
     "modified": "2019-04-06T12:16:17.195Z",
     "contributors": [
@@ -38966,6 +38955,17 @@
     "contributors": [
       "SphinxKnight",
       "alexr"
+    ]
+  },
+  "conflicting/Web/CSS/clip": {
+    "modified": "2020-10-15T21:18:05.925Z",
+    "contributors": [
+      "SphinxKnight",
+      "teoli",
+      "gudoy",
+      "FredB",
+      "Fredchat",
+      "Kyodev"
     ]
   },
   "conflicting/Web/HTML/Element": {
