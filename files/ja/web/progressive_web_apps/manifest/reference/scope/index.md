@@ -2,10 +2,8 @@
 title: scope
 slug: Web/Progressive_web_apps/Manifest/Reference/scope
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/en-US/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `scope` はマニフェストメンバーで、ウェブアプリケーションのページとサブディレクトリーを格納する最上位の URL パスを指定するために使用します。
 ユーザーがウェブアプリをインストールして使用すると、スコープ内のページがアプリのようなインターフェイスを提供します。
@@ -49,7 +47,7 @@ URL が「スコープ内」とみなされるのは、その URL のパスが `
 
 > [!NOTE]
 > `scope` メンバーは、ユーザーが定義したスコープ外のアプリページに移動することを妨げるものではありません。
-> スコープ外のナビゲーションはブラウザーによってブロックされず、新しい最上位の閲覧コンテキストで開かれることもありません。
+> スコープ外のナビゲーションはブラウザーによってブロックされず、新しい最上位の閲覧コンテキストで開くことができます。
 
 次のディレクトリー構造をもつ、ハイキングコースを探索するためのウェブアプリを想定してみましょう。
 

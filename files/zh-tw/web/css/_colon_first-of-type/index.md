@@ -1,80 +1,107 @@
 ---
 title: :first-of-type
 slug: Web/CSS/:first-of-type
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-在 CSS 虛擬類別（pseudo-class）中，**`:first-of-type`** 代表本節點為兄弟節點中第一個此類型節點。
+**`:first-of-type`** [CSS](/zh-TW/docs/Web/CSS) [偽類](/zh-TW/docs/Web/CSS/Pseudo-classes)代表一群兄弟元素中，其類型（標籤名稱）的第一個元素。
 
-```css
-/* 選取第一個出現在父節點下的<p>，不考慮其在所有子節點中的位置。 */
-p:first-of-type {
-  color: red;
+{{InteractiveExample("CSS Demo: :first-of-type", "tabbed-shorter")}}
+
+```css interactive-example
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 3px;
+}
+
+dd:first-of-type {
+  border: 2px solid orange;
 }
 ```
 
-> [!NOTE]
-> 在初始定義中，被選取的節點必須擁有父節點。從選取器層級 4（Selectors Level 4）開始已經不再有這個限制了。
+```html interactive-example
+<dl>
+  <dt>蔬菜：</dt>
+  <dd>1. 番茄</dd>
+  <dd>2. 小黃瓜</dd>
+  <dd>3. 蘑菇</dd>
+  <dt>水果：</dt>
+  <dd>4. 蘋果</dd>
+  <dd>5. 芒果</dd>
+  <dd>6. 梨子</dd>
+  <dd>7. 柳橙</dd>
+</dl>
+```
 
 ## 語法
 
-{{csssyntax}}
+```css
+:first-of-type {
+  /* ... */
+}
+```
 
 ## 範例
 
-### 例一：選取第一段文章
+### 為第一個段落設定樣式
 
-來考慮以下 HTML:
+#### HTML
 
 ```html
-<h2>Heading</h2>
-
-<p>Paragraph</p>
-
-<p>Paragraph</p>
+<h2>標題</h2>
+<p>段落 1</p>
+<p>段落 2</p>
 ```
 
-及 CSS:
+#### CSS
 
 ```css
 p:first-of-type {
   color: red;
+  font-style: italic;
 }
 ```
 
-會有這樣的效果 － 只有第一段文章變為紅色，因為它是 body 中第一個文章節點：
+#### 結果
 
-{{EmbedLiveSample('例一：選取第一段文章')}}
+{{EmbedLiveSample('為第一個段落設定樣式')}}
 
-### 例二：預定通用選擇器（Assumed universal selector）
+### 巢狀元素
 
-這個範例展示了當沒有指定一般選擇器（simple selector）時，通用選擇器是如何被預判。
+此範例展示了如何選取巢狀元素。請注意，當沒有撰寫類型選擇器時，會隱含[通用選擇器](/zh-TW/docs/Web/CSS/Universal_selectors)（`*`）。
 
-首先來看 HTML：
+#### HTML
 
 ```html
-<div>
-  <span>This `span` is first!</span>
-  <span>But this `span` isn't.</span>
-  <span>This <em>nested `em` is</em>!</span>
-  <span>And so is this <span>nested `span`</span>!</span>
-  <b>This `b` qualifies!</b>
-  <span>This final `span` does not.</span>
-</div>
+<article>
+  <div>這個 `div` 是第一個！</div>
+  <div>這個<span>巢狀的 `span` 是第一個</span>！</div>
+  <div>
+    這個<em>巢狀的 `em` 是第一個</em>，但這個 <em>巢狀的 `em` 是最後一個</em>！
+  </div>
+  <div>這個<span>巢狀的 `span` 會被設定樣式</span>！</div>
+  <p>這個 `p` 符合條件！</p>
+  <div>這是最後一個 `div`。</div>
+</article>
 ```
 
-接著是 CSS：
+#### CSS
 
 ```css
-div :first-of-type {
-  background-color: lime;
+article :first-of-type {
+  background-color: pink;
 }
 ```
 
-會有這樣的效果:
+#### 結果
 
-{{EmbedLiveSample('例二：預定通用選擇器（Assumed universal selector）','100%', '120')}}
+{{EmbedLiveSample('巢狀元素', 500)}}
 
-## 特定規格
+## 規範
 
 {{Specifications}}
 
@@ -84,6 +111,4 @@ div :first-of-type {
 
 ## 參見
 
-- {{Cssxref(":first-child")}}
-- {{Cssxref(":last-of-type")}}
-- {{Cssxref(":nth-of-type")}}
+- {{Cssxref(":first-child")}}、{{Cssxref(":last-of-type")}}、{{Cssxref(":nth-of-type")}}
