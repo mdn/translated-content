@@ -90,7 +90,7 @@ HTTP/1.x リクエストの先頭行（上記の例では `POST /users HTTP/1.1`
    ```
 
 3. オーソリティ形式は、権限とポートをコロン (`:`) で区切ったものです。
-    これは、 {{HTTPMethod("CONNECT")}} メソッドに用いて HTTP トンネルを設定する際にのみ使用されます。
+   これは、 {{HTTPMethod("CONNECT")}} メソッドに用いて HTTP トンネルを設定する際にのみ使用されます。
 
    ```http
    CONNECT developer.mozilla.org:443 HTTP/1.1
