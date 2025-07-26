@@ -208,7 +208,6 @@ Location: http://example.com/users/123
 
 ![HTTP レスポンスヘッダーの例](http_response_headers2.png)
 
-
 ### レスポンスヘッダー
 
 レスポンスヘッダーは、レスポンスとともに送信されるメタデータです。
