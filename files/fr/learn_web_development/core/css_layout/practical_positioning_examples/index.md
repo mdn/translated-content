@@ -91,13 +91,13 @@ Pour commencer, effectuez une copie locale du fichier HTML de départ — [info-
 </section>
 ```
 
-Nous avons un élément [`<section>`](/fr/docs/Web/HTML/Element/section) avec une `class` `info-box`, qui contient un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) et un élément [`<div>`](/fr/docs/Web/HTML/Element/div). La liste non ordonnée contient trois éléments de liste avec des liens à l'intérieur, qui deviendront les véritables onglets sur lesquels il faudra cliquer pour afficher nos panneaux de contenu. L'élément `div` contient trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article), qui constitueront les panneaux de contenu correspondant à chaque onglet. Chaque panneau contient un échantillon de contenu.
+Nous avons un élément [`<section>`](/fr/docs/Web/HTML/Reference/Elements/section) avec une `class` `info-box`, qui contient un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) et un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). La liste non ordonnée contient trois éléments de liste avec des liens à l'intérieur, qui deviendront les véritables onglets sur lesquels il faudra cliquer pour afficher nos panneaux de contenu. L'élément `div` contient trois éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article), qui constitueront les panneaux de contenu correspondant à chaque onglet. Chaque panneau contient un échantillon de contenu.
 
-L'idée ici est que nous allons donner aux onglets l'aspect d'un menu de navigation horizontal standard, et que nous allons donner aux panneaux l'aspect d'être superposés en utilisant un positionnement absolu. Nous vous donnerons également un peu de JavaScript à inclure dans votre page pour afficher le panneau correspondant lorsqu'on clique sur un des onglets, et nous donnerons un style à l'onglet lui-même. Vous n'aurez pas besoin de comprendre le JavaScript lui-même à ce stade, mais vous devriez penser à apprendre [quelques bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics) dès que possible - plus les fonctionnalités de votre interface utilisateur deviendront complexes, plus il est probable que vous aurez besoin de JavaScript pour implémenter les fonctionnalités souhaitées.
+L'idée ici est que nous allons donner aux onglets l'aspect d'un menu de navigation horizontal standard, et que nous allons donner aux panneaux l'aspect d'être superposés en utilisant un positionnement absolu. Nous vous donnerons également un peu de JavaScript à inclure dans votre page pour afficher le panneau correspondant lorsqu'on clique sur un des onglets, et nous donnerons un style à l'onglet lui-même. Vous n'aurez pas besoin de comprendre le JavaScript lui-même à ce stade, mais vous devriez penser à apprendre [quelques bases de JavaScript](/fr/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity) dès que possible - plus les fonctionnalités de votre interface utilisateur deviendront complexes, plus il est probable que vous aurez besoin de JavaScript pour implémenter les fonctionnalités souhaitées.
 
 ### Configuration générale
 
-Pour commencer, ajoutez ce qui suit entre les balises ouvrantes et fermantes [`<style>`](/fr/docs/Web/HTML/Element/style) :
+Pour commencer, ajoutez ce qui suit entre les balises ouvrantes et fermantes [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style) :
 
 ```css
 html {
@@ -113,7 +113,7 @@ body {
 }
 ```
 
-Il s'agit uniquement d'une configuration générale pour définir une police sans serif sur notre page, utiliser le modèle `border-box` [`box-sizing`](/fr/docs/Web/CSS/box-sizing), pour surcharger la marge par défaut de [`<body>`](/fr/docs/Web/HTML/Element/body).
+Il s'agit uniquement d'une configuration générale pour définir une police sans serif sur notre page, utiliser le modèle `border-box` [`box-sizing`](/fr/docs/Web/CSS/box-sizing), pour surcharger la marge par défaut de [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body).
 
 Ensuite, ajoutez ce qui suit en dessous de votre CSS précédent :
 
@@ -141,7 +141,7 @@ On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut a
 > [!NOTE]
 > On utilise ici un sélecteur de descendants avec `.info-box` au début du sélecteur et pour tout cet exemple afin qu'on puisse insérer cette fonctionnalité dans une page possédant déjà un autre contenu, sans risquer de causer des interférences avec le style déjà existant.
 
-Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Element/a) ont [`display`](/fr/docs/Web/CSS/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
+Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) ont [`display`](/fr/docs/Web/CSS/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
 
 Ajoutez le fragment de CSS qui suit&nbsp;:
 
@@ -182,7 +182,7 @@ Pour finir avec cette section, mettons en forme les liens selon leur état. Tout
 
 La suite consiste à mettre en forme les panneaux de contenu. Allons-y&nbsp;!
 
-Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panels` [`<div>`](/fr/docs/Web/HTML/Element/div). Ici, on définit une hauteur fixe avec [`height`](/fr/docs/Web/CSS/height) afin de s'assurer que les panneaux s'inscriront correctement dans la boîte d'informations. On définit [`position`](/fr/docs/Web/CSS/position) `relative` sur l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) comme contexte de positionnement afin que les éléments enfants y soient relatifs (plutôt que relatifs à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html)) pour la mise en forme. Enfin, on utilise [`clear`](/fr/docs/Web/CSS/clear) pour annuler le flottement défini plus haut afin qu'il n'y ait pas d'interférence avec le reste de la disposition.
+Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panels` [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div). Ici, on définit une hauteur fixe avec [`height`](/fr/docs/Web/CSS/height) afin de s'assurer que les panneaux s'inscriront correctement dans la boîte d'informations. On définit [`position`](/fr/docs/Web/CSS/position) `relative` sur l'élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) comme contexte de positionnement afin que les éléments enfants y soient relatifs (plutôt que relatifs à l'élément [`<html>`](/fr/docs/Web/HTML/Reference/Elements/html)) pour la mise en forme. Enfin, on utilise [`clear`](/fr/docs/Web/CSS/clear) pour annuler le flottement défini plus haut afin qu'il n'y ait pas d'interférence avec le reste de la disposition.
 
 ```css
 .info-box .panels {
@@ -192,7 +192,7 @@ Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panel
 }
 ```
 
-Dans cette section, nous allons mettre en forme les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) qui forment les panneaux. La première règle va fixer [`position`](/fr/docs/Web/CSS/position) absolue pour les panneaux avant de les placer dans le coin supérieur gauche de leur conteneur [`<div>`](/fr/docs/Web/HTML/Element/div) avec [`top`](/fr/docs/Web/CSS/top) et [`left`](/fr/docs/Web/CSS/left). C'est la clé de cette disposition&nbsp;: ainsi, les panneaux sont superposés les uns sur les autres. Cette règle fournit également la même hauteur que le conteneur et ajoute un peu de remplissage autour du contenu, une couleur pour le texte ([`color`](/fr/docs/Web/CSS/color)), ainsi qu'une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)).
+Dans cette section, nous allons mettre en forme les éléments [`<article>`](/fr/docs/Web/HTML/Reference/Elements/article) qui forment les panneaux. La première règle va fixer [`position`](/fr/docs/Web/CSS/position) absolue pour les panneaux avant de les placer dans le coin supérieur gauche de leur conteneur [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) avec [`top`](/fr/docs/Web/CSS/top) et [`left`](/fr/docs/Web/CSS/left). C'est la clé de cette disposition&nbsp;: ainsi, les panneaux sont superposés les uns sur les autres. Cette règle fournit également la même hauteur que le conteneur et ajoute un peu de remplissage autour du contenu, une couleur pour le texte ([`color`](/fr/docs/Web/CSS/color)), ainsi qu'une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)).
 
 La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) valant `active-panel` aura une valeur de [`z-index`](/fr/docs/Web/CSS/z-index) à 1&nbsp;: il sera alors placé par-dessus les autres panneaux (par défaut les éléments positionnés ont un `z-index` qui vaut 0, ce qui les place en dessous). Là aussi, nous ajouterons cette classe au document à l'aide de JavaScript.
 
@@ -214,7 +214,7 @@ La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) val
 
 ### Ajouter notre JavaScript
 
-La dernière étape permettant d'avoir un résultat fonctionnel consiste à ajouter du JavaScript. Placez les lignes suivantes (sans modification) entre les balises ouvrantes et fermantes [`<script>`](/fr/docs/Web/HTML/Element/script) (elles se situent après le contenu HTML)&nbsp;:
+La dernière étape permettant d'avoir un résultat fonctionnel consiste à ajouter du JavaScript. Placez les lignes suivantes (sans modification) entre les balises ouvrantes et fermantes [`<script>`](/fr/docs/Web/HTML/Reference/Elements/script) (elles se situent après le contenu HTML)&nbsp;:
 
 ```js
 let tabs = document.querySelectorAll(".info-box li a");
@@ -267,7 +267,7 @@ Comme point de départ, vous pouvez utiliser l'exemple construit dans la premiè
 
 ### Ajouts au HTML
 
-Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu principal du site web. Ajoutez la section ([`<section>`](/fr/docs/Web/HTML/Element/section)) suivante juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Element/body) et avant la section existante&nbsp;:
+Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu principal du site web. Ajoutez la section ([`<section>`](/fr/docs/Web/HTML/Reference/Elements/section)) suivante juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Reference/Elements/body) et avant la section existante&nbsp;:
 
 ```html
 <section class="fake-content">
@@ -362,18 +362,18 @@ Pour commencer, enregistrez le fichier [hidden-info-panel-start.html](https://gi
 <aside>...</aside>
 ```
 
-Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
+Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Reference/Elements/label) et un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
 
 > [!NOTE]
 > Nous avons utilisé un point d'interrogation dans notre HTML afin que celui-ci serve d'icône pour accéder à l'information&nbsp;: il représente le bouton qu'on utilisera pour afficher/masquer le panneau.
 
-Ici, nous allons utiliser ces éléments pour un but légèrement différent. Un effet de bord sympathique des éléments `<label>` est que lorsqu'on clique sur eux, cela permet de cocher la case à cocher correspondante (comme si on avait cliqué sur la case en question). Cela a ainsi permis la fameuse [bidouille de la case à cocher](https://css-tricks.com/the-checkbox-hack/) qui permet, sans utiliser JavaScript, de contrôler un élément en activant un bouton. L'élément que nous contrôlerons ici est l'élément [`<aside>`](/fr/docs/Web/HTML/Element/aside) qui suit les deux autres (nous avons laissé son contenu de côté pour des raisons de concision).
+Ici, nous allons utiliser ces éléments pour un but légèrement différent. Un effet de bord sympathique des éléments `<label>` est que lorsqu'on clique sur eux, cela permet de cocher la case à cocher correspondante (comme si on avait cliqué sur la case en question). Cela a ainsi permis la fameuse [bidouille de la case à cocher](https://css-tricks.com/the-checkbox-hack/) qui permet, sans utiliser JavaScript, de contrôler un élément en activant un bouton. L'élément que nous contrôlerons ici est l'élément [`<aside>`](/fr/docs/Web/HTML/Reference/Elements/aside) qui suit les deux autres (nous avons laissé son contenu de côté pour des raisons de concision).
 
 Dans les sections qui suivent, nous expliquerons comment cela fonctionne.
 
 ### Mettre en forme les éléments de formulaire
 
-Commençons par les éléments de formulaire&nbsp;: ajoutez le CSS qui suit entre les balises [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+Commençons par les éléments de formulaire&nbsp;: ajoutez le CSS qui suit entre les balises [`<style>`](/fr/docs/Web/HTML/Reference/Elements/style)&nbsp;:
 
 ```css
 label[for="toggle"] {

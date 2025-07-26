@@ -157,9 +157,9 @@ Le premier nombre spécifie la distance du trait et le second la distance de l'e
 
 Il existe d'autres propriétés disponibles:
 
-- [`fill-rule`](/fr/docs/Web/SVG/Attribute/fill-rule), spécifie la règle de remplissage pour les formes où des chemins se chevauchent.
-- [`stroke-miterlimit`](/fr/docs/Web/SVG/Attribute/stroke-miterlimit), détermine à partir de quel angle une liaison de segment de type `miter` sera affichée en `bevel`.
-- [`stroke-dashoffset`](/fr/docs/Web/SVG/Attribute/stroke-dashoffset), définit à partir d'où commencer les pointilliés sur la ligne.
+- [`fill-rule`](/fr/docs/Web/SVG/Reference/Attribute/fill-rule), spécifie la règle de remplissage pour les formes où des chemins se chevauchent.
+- [`stroke-miterlimit`](/fr/docs/Web/SVG/Reference/Attribute/stroke-miterlimit), détermine à partir de quel angle une liaison de segment de type `miter` sera affichée en `bevel`.
+- [`stroke-dashoffset`](/fr/docs/Web/SVG/Reference/Attribute/stroke-dashoffset), définit à partir d'où commencer les pointilliés sur la ligne.
 
 ## Utiliser CSS
 

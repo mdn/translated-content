@@ -8,7 +8,7 @@ l10n:
 
 {{MDNSidebar}}
 
-- [Commencer à contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)
-- [Les dépôts Git de MDN](/fr/docs/MDN/Community/Contributing/Our_repositories)
-- [La traduction du contenu](/fr/docs/MDN/Community/Contributing/Translated_content)
+- [Commencer à contribuer](/fr/docs/MDN/Community/Getting_started)
+- [Les dépôts Git de MDN](/fr/docs/orphaned/MDN/Community/Contributing/Our_repositories)
+- [La traduction du contenu](/fr/docs/MDN/Community/Translated_content)
 - [Gestion des vulnérabilités de sécurité](/fr/docs/MDN/Community/Contributing/Security_vulnerability_response)

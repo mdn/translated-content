@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
 original_slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`form-action`** restreint les URL pouvant être utilisées comme cibles d'envoi de formulaire depuis un contexte donné.
 
 > [!WARNING]
 > La question de savoir si `form-action` doit bloquer les redirections après une soumission de formulaire est encore [débattue](https://github.com/w3c/webappsec-csp/issues/8) et les implémentations des navigateurs sur cet aspect sont hétérogènes (par exemple Firefox 57 ne les bloque pas, contrairement à Chrome 63).
@@ -37,9 +37,9 @@ Content-Security-Policy: form-action <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -65,7 +65,7 @@ add_header Content-Security-Policy "form-action 'none';"
 
 ### Cas de violation
 
-Utiliser un élément [`<form>`](/fr/docs/Web/HTML/Element/form) avec un attribut `action` contenant un script JavaScript résultera dans ce cas en une violation de CSP&nbsp;:
+Utiliser un élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) avec un attribut `action` contenant un script JavaScript résultera dans ce cas en une violation de CSP&nbsp;:
 
 ```html example-bad
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
@@ -91,5 +91,5 @@ Content Security Policy directive: "form-action 'none'".
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<form>`](/fr/docs/Web/HTML/Element/form)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)

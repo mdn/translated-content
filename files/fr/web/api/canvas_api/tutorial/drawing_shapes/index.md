@@ -500,7 +500,7 @@ Nous reviendrons sur `fillStyle` plus en détail plus loin dans ce tutoriel. Pou
 Comme nous l'avons vu dans le dernier exemple, il peut y avoir une série de trajets et d'instructions de dessin pour dessiner des objets sur votre canevas. Pour simplifier le code et améliorer les performances, l'objet [`Path2D`](/fr/docs/Web/API/Path2D), disponible dans les versions récentes des navigateurs, vous permet de mettre en cache ou d'enregistrer ces instructions de dessin. Vous pourrez alors rejouer vos trajets rapidement. Voyons comment nous pouvons construire un objet `Path2D`&nbsp;:
 
 - {{domxref("Path2D.Path2D", "Path2D()")}}
-  - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr/docs/Web/SVG/Tutorial/Paths).
+  - : Le constructor **`Path2D()`** retourne un objet `Path2D` nouvellement instancié, optionellement avec un autre trajet comme argument (crée une copie), ou optionellement avec une chaîne constituée de données de [trajet SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths).
 
 ```js
 new Path2D(); // objet trajet vide
@@ -550,7 +550,7 @@ function draw() {
 
 ### Utilisation de trajets SVG
 
-Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr/docs/Web/SVG/Tutorial/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
+Une autre fonctionnalité puissante de la nouvelle API `Path2D` de canevas est l'utilisation de [données de trajet SVG](/fr/docs/Web/SVG/Tutorials/SVG_from_scratch/Paths) pour initialiser des trajets sur votre canevas. Cela peut vous permettre de faire circuler des données de trajet et les réutiliser, à la fois en SVG et dans un canevas.
 
 Le trajet se déplacera au point (`M10 10`) et se déplacera alors de 80 points horizontalement vers la droite (`h 80`), ensuite de 80 points vers le bas (`v 80`), puis de 80 points vers la gauche (`h -80`), et reviendra alors au départ (`z`). Vous pouvez voir cet exemple sur la page du [constructeur `Path2D`](/fr/docs/Web/API/Path2D/Path2D#using_svg_paths).
 

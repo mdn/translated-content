@@ -43,7 +43,7 @@ Pour celles et ceux qui souhaitent plonger dans la technique, voici la liste des
   - : Si vous souhaitez que vos joueurs puissent utiliser des manettes ou d'autres contrôleurs pour votre jeu, vous aurez besoin de cette API.
 - [HTML](/fr/docs/Web/HTML) et [CSS](/fr/docs/Web/CSS)
   - : Combinées ensembles, ces deux technologies vous permettent de construire et de mettre en forme l'interface utilisateur de votre jeu. L'élément HTML {{HTMLElement("canvas")}} permet de gérer des graphismes en deux dimensions.
-- [HTML audio](/fr/docs/Web/HTML/Element/audio)
+- [HTML audio](/fr/docs/Web/HTML/Reference/Elements/audio)
   - : L'élément HTML {{HTMLElement("audio")}} vous permet de jouer de la musique et des sons. Si vous souhaitez aller plus loin, l'API [Web Audio](/fr/docs/Web/API/Web_Audio_API) vous offre plus de possibilités de traitement !
 - [IndexedDB](/fr/docs/Web/API/IndexedDB_API)
   - : Une API puissante, permettant de maintenir les données de l'utilsateur stockées sur son ordinateur ou son appareil. Une bonne façon de sauvegarder l'état d'un jeu ou autre information localement de telle sorte qu'elle ne sera pas téléchargée à chaque fois qu'on aura besoin d'elle. Aussi utile pour rendre le jeu utilisable même quand le joueur n'est pas connecté à internet (comme durant un long vol en avion...).

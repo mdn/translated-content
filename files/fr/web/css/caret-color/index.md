@@ -105,8 +105,8 @@ caret-color: hsla(228, 4%, 24%, 0.8);
 ## Voir aussi
 
 - {{HTMLElement("input")}}
-- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#contenteditable) qui rend le texte d'un élément éditable
-- [Rendre du contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
+- L'attribut HTML [`contenteditable`](/fr/docs/Web/HTML/Reference/Global_attributes#contenteditable) qui rend le texte d'un élément éditable
+- [Rendre du contenu éditable](/fr/docs/Web/HTML/Reference/Global_attributes/contenteditable)
 - [Appliquer des couleurs sur des éléments HTML grâce à CSS](/fr/docs/Web/CSS/CSS_colors/Applying_color)
 - Le type de données {{cssxref("&lt;color&gt;")}}
 - Les autres propriétés relatives aux couleurs : {{cssxref("color")}}, {{cssxref("background-color")}}, {{cssxref("border-color")}}, {{cssxref("outline-color")}}, {{cssxref("text-decoration-color")}}, {{cssxref("text-emphasis-color")}}, {{cssxref("text-shadow")}}, {{cssxref("caret-color")}} et {{cssxref("column-rule-color")}}.

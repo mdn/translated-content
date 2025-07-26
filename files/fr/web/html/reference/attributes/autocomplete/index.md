@@ -6,20 +6,20 @@ original_slug: Web/HTML/Attributes/autocomplete
 
 {{HTMLSidebar}}
 
-L'attribut `autocomplete` est disponible sur les éléments [`<input>`](/fr/docs/Web/HTML/Element/input) qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments [`<textarea>`](/fr/docs/Web/HTML/Element/textarea), [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<form>`](/fr/docs/Web/HTML/Element/form). `autocomplete` permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'[agent utilisateur](/fr/docs/Glossary/User_agent), de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.
+L'attribut `autocomplete` est disponible sur les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) qui prennent une valeur textuelle ou numérique en entrée, mais aussi pour les éléments [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) et [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form). `autocomplete` permet aux développeuses et développeurs web de spécifier quelle est l'autorisation éventuelle, pour l'[agent utilisateur](/fr/docs/Glossary/User_agent), de fournir une assistance automatisée afin de remplir les valeurs des champs de formulaire, ainsi que des indications au navigateur quant au type d'informations attendues dans le champ.
 
 La source fournissant les valeurs suggérées pour l'autocomplétion dépend du navigateur. Généralement, celle-ci est constituée des valeurs saisies précédemment par l'utilisateur. Des valeurs préconfigurées peuvent aussi être utilisées. Ainsi, un navigateur pourra permettre à un utilisateur d'enregistrer son nom, son adresse, son numéro de téléphone et des adresses électroniques pour l'aider lors de l'autocomplétion. Le navigateur pourrait également fournir le stockage chiffré des informations de cartes bancaires et déclencher une procédure d'authentification lorsque ces informations doivent être récupérées pour être utilisées.
 
-Si les éléments [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select) ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) ne possèdent pas d'attribut `autocomplete`, le navigateur utilisera l'attribut `autocomplete` du formulaire associé (c-à-d. l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) qui est l'ancêtre de l'élément `<input>` ou l'élément `<form>` dont la valeur de l'attribut `id` correspond à celle indiquée, dans l'attribut [`form`](/fr/docs/Web/HTML/Element/input#attr-form) de l'élément `<input>`).
+Si les éléments [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) ne possèdent pas d'attribut `autocomplete`, le navigateur utilisera l'attribut `autocomplete` du formulaire associé (c-à-d. l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) qui est l'ancêtre de l'élément `<input>` ou l'élément `<form>` dont la valeur de l'attribut `id` correspond à celle indiquée, dans l'attribut [`form`](/fr/docs/Web/HTML/Reference/Elements/input#attr-form) de l'élément `<input>`).
 
-Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Element/form#attr-autocomplete) pour l'élément [`<form>`](/fr/docs/Web/HTML/Element/form).
+Pour plus d'informations, voir la documentation de l'attribut [`autocomplete`](/fr/docs/Web/HTML/Reference/Elements/form#attr-autocomplete) pour l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form).
 
 > [!NOTE]
 > Afin de fournir des fonctionnalités d'autocomplétion, un agent utilisateur pourra utiliser les prérequis suivants quant aux éléments `<input>`/`<select>`/`<textarea>`:
 >
 > 1. Que ceux-ci aient un attribut `name` et/ou `id`
 > 2. Que ceux-ci descendent d'un élément `<form>`
-> 3. Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Element/input/submit)
+> 3. Que le formulaire associé ait un bouton [submit](/fr/docs/Web/HTML/Reference/Elements/input/submit)
 
 ## Valeurs
 
@@ -222,9 +222,9 @@ Une adresse au Japon est généralement **écrite sur une ligne**, dans un ordre
 
 ## Voir aussi
 
-- L'élément HTML [`<input>`](/fr/docs/Web/HTML/Element/input)
-- L'élément HTML [`<select>`](/fr/docs/Web/HTML/Element/select)
-- L'élément HTML [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
-- L'élément HTML [`<form>`](/fr/docs/Web/HTML/Element/form)
-- [Les formulaires HTML](/fr/docs/Learn/Forms)
-- [Les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+- L'élément HTML [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+- L'élément HTML [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)
+- L'élément HTML [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
+- L'élément HTML [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)
+- [Les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)
+- [Les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).

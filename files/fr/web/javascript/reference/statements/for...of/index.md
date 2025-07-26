@@ -238,7 +238,7 @@ console.log("fini !");
 
 Les deux instructions `for...in` et `for...of` permettent de parcourir un ensemble. Mais elles ne parcourent pas le même ensemble.
 
-L'instruction {{jsxref("Instructions/for...in", "for...in")}} permet de parcourir [les propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) d'un objet dans un ordre arbitraire.
+L'instruction {{jsxref("Instructions/for...in", "for...in")}} permet de parcourir [les propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) d'un objet dans un ordre arbitraire.
 
 L'instruction `for...of` permet quant à elle de parcourir les données contenues dans l'[objet itérable](/fr/docs/Web/JavaScript/Guide/Iterators_and_generators#itérables) visé.
 
@@ -267,7 +267,7 @@ for (let i of iterable) {
 }
 ```
 
-Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object.prototype")}} et {{jsxref("Array.prototype")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+Chaque objet héritera de la propriété `objCustom` et chaque objet qui est un tableau ({{jsxref("Array")}}) héritera de la propriété `arrCustom` car on les ajoute aux prototypes {{jsxref("Object.prototype")}} et {{jsxref("Array.prototype")}}. L'objet `iterable` hérite donc des propriétés `objCustom` et `arrCustom` grâce [à l'héritage et à la chaîne de prototypes](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain).
 
 ```js
 for (let i in iterable) {
@@ -276,7 +276,7 @@ for (let i in iterable) {
 }
 ```
 
-Cette boucle ne parcourt que les [propriétés énumérables](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties) de l'objet `iterable` dans un ordre arbitraire. Les éléments du tableau `3`, `5`, `7` ou `hello` ne sont pas affichés car ce ne sont pas des propriétés (et encore moins des propriétés énumérables). En revanche, on retrouve bien les indices du tableau et les propriétés `arrCustom` et `objCustom`. Pour décrire plus précisément ce comportement, vous pouvez consulter {{jsxref("Instructions/for...in", "for...in", "#/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau")}}.
+Cette boucle ne parcourt que les [propriétés énumérables](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties) de l'objet `iterable` dans un ordre arbitraire. Les éléments du tableau `3`, `5`, `7` ou `hello` ne sont pas affichés car ce ne sont pas des propriétés (et encore moins des propriétés énumérables). En revanche, on retrouve bien les indices du tableau et les propriétés `arrCustom` et `objCustom`. Pour décrire plus précisément ce comportement, vous pouvez consulter {{jsxref("Instructions/for...in", "for...in", "#/fr/docs/Web/JavaScript/Reference/Instructions/for...in#Utiliser_for...in_et_parcourir_un_tableau")}}.
 
 ```js
 for (let i in iterable) {
