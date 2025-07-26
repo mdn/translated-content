@@ -1,12 +1,12 @@
 ---
 title: MIME タイプ（IANA メディア種別）
+short-title: メディア種別
 slug: Web/HTTP/Guides/MIME_types
-original_slug: Web/HTTP/MIME_types
 l10n:
-  sourceCommit: f75b2c86ae4168e59416aed4c7121f222afc201d
+  sourceCommit: 29ed753ae6cb88cf05a5f712605de06ec25c1f15
 ---
 
-**メディア種別** (別名 **Multipurpose Internet Mail Extensions または MIME タイプ**) は、文書、ファイル、またはバイト列の性質や形式を示します。
+**メディア種別**（以前は **Multipurpose Internet Mail Extensions または MIME タイプ**と呼ばれていました）は、文書、ファイル、またはバイト列の性質や形式を示します。
 MIME タイプは IETF の {{RFC(6838)}} で定義され、標準化されています。
 
 [Internet Assigned Numbers Authority (IANA)](https://www.iana.org/) はすべての公式の MIME タイプを管理しており、[Media Types](https://www.iana.org/assignments/media-types/media-types.xhtml) ページで最新の完全な一覧を見ることができます。
@@ -117,7 +117,10 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn_web_develo
 これは、テキスト形式のファイルの既定です。実際には「未知のテキスト形式」のファイルを表すものではありますが、ブラウザーは表示可能であると推測します。
 
 > [!NOTE]
-> `text/plain` は「任意のテキスト形式データ」を表すものではありませんので注意してください。特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。 CSS の MIME タイプである `text/css` を使用しなければなりません。
+> `text/plain` は「任意のテキスト形式データ」を表すものではありません。
+> 特定の種類のテキスト形式のデータを想定している場合は、おそらくそのとおりに判断されないでしょう。
+> 特に、CSS ファイルを宣言する {{HTMLElement("link")}} 要素から `text/plain` 形式のファイルをダウンロードすると、 `text/plain` で示されたファイルは正しい CSS ファイルであると認識されません。
+> CSS の MIME タイプである `text/css` を使用する必要があります。
 
 ### text/css
 
@@ -132,10 +135,15 @@ HTTP は `multipart/form-data` が [HTML フォーム](/ja/docs/Learn_web_develo
 
 ### text/javascript
 
-[IANA メディア種別レジストリー](https://www.iana.org/assignments/media-types/media-types.xhtml#text)、[RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html)、 [HTML 仕様書](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript)によれば、 JavaScript コンテンツは MIME タイプとして常に `text/javascript` を使用することになっています。他の MIME タイプは JavaScript において妥当であると見なされず、 `text/javascript` 以外の MIME タイプを使用すると、スクリプトが読み込まれなかったり、実行されなかったりする結果になる可能性があります。
+JavaScript コンテンツは、常に MIME タイプ `text/javascript` で提供する必要があります。
+歴史的な理由により、ブラウザーは以下に掲載されている一部の[古い JavaScript のタイプ](#javascript_の歴史的な_mime_タイプ)に対応している場合がありますが、`text/javascript` 以外の MIME タイプで提供されたスクリプトは、常に読み込まれたり実行されたりすると見なすべきではありません。
 
-JavaScript のコンテンツの中には、 `charset` 引数を MIME タイプの一部として使用し、スクリプトコンテンツの文字セットを設定しようとしている不適切なものを見かけることがあります。
-この `charset` パラメータは JavaScript のコンテンツには有効ではなく、ほとんどの場合スクリプトを読み込むのに失敗します。
+HTML では、{{htmlelement("script")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/script/type) 属性には、**JavaScript MIME タイプの本質**である `text/javascript` しか含まれていないことに注意してください。
+`charset=utf-8` などの引数を記載しても、`type` を他の MIME タイプに設定した場合と同じになります。スクリプトのコンテンツはデータブロックとして扱われ、JavaScript として実行されません。
+（`type` を JavaScript の MIME タイプに設定することは、それ自体が非推奨の機能であることに注意してください。この場合は `type` を省略してください。）
+対照的に、HTTP の {{httpheader("Content-Type")}} ヘッダーを使用する場合は、必要に応じて、通常どおり `charset` 引数を指定することができます。
+
+詳しい情報は、 [IANA メディア種別レジストリー](https://www.iana.org/assignments/media-types/media-types.xhtml#text)（英語）、[RFC 9239](https://www.rfc-editor.org/rfc/rfc9239.html)、 [HTML 仕様書](https://html.spec.whatwg.org/multipage/scripting.html#scriptingLanguages:text/javascript)（英語）を参照してください。
 
 #### JavaScript の歴史的な MIME タイプ
 
@@ -160,6 +168,11 @@ JavaScript のコンテンツの中には、 `charset` 引数を MIME タイプ�
 > [!NOTE]
 > ある{{Glossary("user agent", "ユーザーエージェント")}}がこれらのいずれか、またはすべてに対応していても、 `text/javascript` だけを使用するようにしてください。
 > このタイプは、現在および将来にわたって動作が保証されている唯一の MIME タイプです。
+
+### application/json
+
+{{glossary("JSON","JavaScript Object Notation (JSON)")}} は、JavaScript のオブジェクト構文に基づいて構造化されたデータを表すための、標準的なテキストベースの形式です。
+これは、ウェブアプリケーションでのデータの送信に一般的に使用されています。
 
 ### 画像タイプ
 
