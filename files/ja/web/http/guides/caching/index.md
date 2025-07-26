@@ -2,7 +2,7 @@
 title: HTTP キャッシュ
 slug: Web/HTTP/Guides/Caching
 l10n:
-  sourceCommit: e4e57ab3ccb5f93319f8fe13848d4895d3e1e771
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 HTTP キャッシュは、リクエストに関連付けられたレスポンスを格納し、格納されたレスポンスを後続のリクエストのために再利用します。

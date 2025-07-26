@@ -1,22 +1,21 @@
 ---
 title: プロトコルのアップグレードの仕組み
 slug: Web/HTTP/Guides/Protocol_upgrade_mechanism
-original_slug: Web/HTTP/Protocol_upgrade_mechanism
 l10n:
-  sourceCommit: ef46a4ac6bfec3e33c9209244e7cb1a9206165d6
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-[HTTP/1.1 プロトコル](/ja/docs/Web/HTTP)は、{{HTTPHeader("Upgrade")}}ヘッダーフィールドを使用して、既に確立された接続を別のプロトコルにアップグレードするために使用することができる特別な仕組みを提供します。
+[HTTP/1.1 プロトコル](/ja/docs/Web/HTTP)は、 {{HTTPHeader("Upgrade")}} ヘッダーフィールドを使用して、既に確立された接続を別のプロトコルにアップグレードするために使用することができる特別な仕組みを提供します。
 
 この仕組みはオプションであり、プロトコルの変更を主張するために使用することはできません。実装は新しいプロトコルに対応していても、アップグレードを利用しないことを選ぶことができますし、実際には、この仕組みは主に WebSocket 接続の起動に使用されます。
 
-また、HTTP/2 はこの仕組みを使用することを明確に禁止しています。HTTP/1.1 に固有の仕様であることにも注意してください。
+また、 HTTP/2 はこの仕組みを使用することを明確に禁止しています。 HTTP/1.1 に固有の仕様であることにも注意してください。
 
 ## HTTP/1.1 接続のアップグレード
 
 {{HTTPHeader("Upgrade")}} ヘッダーフィールドは、クライアントがサーバーに対して、列挙しているプロトコルのいずれかに切り替えるよう、優先順位の高い順に促すために使用します。
 
-`Upgrade` はホップバイホップヘッダーなので、{{HTTPHeader("Connection")}} ヘッダーフィールドにも掲載されている必要があります。ということは、Upgrade を記載した典型的なリクエストは次のようになります。
+`Upgrade` はホップバイホップヘッダーなので、{{HTTPHeader("Connection")}} ヘッダーフィールドにも掲載されている必要があります。ということは、 Upgrade を記載した典型的なリクエストは次のようになります。
 
 ```http
 GET /index.html HTTP/1.1
@@ -25,7 +24,7 @@ Connection: upgrade
 Upgrade: example/1, foo/2
 ```
 
-リクエストされたプロトコルによっては、他にもヘッダーが必要になるかもしれません。例えば、[WebSocket](/ja/docs/Web/API/WebSocket) へのアップグレードでは、WebSocket 接続の詳細や、接続を開くための安全性に関するヘッダーを追加することができます。詳しくは [WebSocket 接続へのアップグレード](#websocket_接続へのアップグレード) を参照してください。
+リクエストされたプロトコルによっては、他にもヘッダーが必要になるかもしれません。例えば、 [WebSocket](/ja/docs/Web/API/WebSocket) へのアップグレードでは、 WebSocket 接続の詳細や、接続を開くための安全性に関するヘッダーを追加することができます。詳しくは [WebSocket 接続へのアップグレード](#websocket_接続へのアップグレード) を参照してください。
 
 サーバーが接続のアップグレードを決定した場合、{{HTTPStatus(101, "101 Switching Protocols")}} レスポンスステータスを、切り替えるプロトコルを指定する Upgrade ヘッダーとともに送り返します。接続をアップグレードしない（できない）場合は、 `Upgrade` ヘッダーを無視して通常のレスポンス（例えば {{HTTPStatus(200, "200 OK")}}）を返します。
 
@@ -37,7 +36,7 @@ Upgrade: example/1, foo/2
 
 ### WebSocket 接続へのアップグレード
 
-HTTP 接続をアップグレードする最も一般的な用途は WebSocket を使用することで、常に HTTP または HTTPS 接続をアップグレードして実装します。[WebSocket API](/ja/docs/Web/API/WebSocket) や WebSocket を使用するライブラリーを使用して新しい接続を開く場合は、これが行う必要があるほとんどまたはすべてのことです。例えば、WebSocket 接続を開くための操作はシンプルです。
+HTTP 接続をアップグレードする最も一般的な用途は WebSocket を使用することで、常に HTTP または HTTPS 接続をアップグレードして実装します。[WebSocket API](/ja/docs/Web/API/WebSocket) や WebSocket を使用するライブラリーを使用して新しい接続を開く場合は、これが行う必要があるほとんどまたはすべてのことです。例えば、WebSocket 接続を開くための操作は単一のメソッドです。
 
 ```js
 webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
@@ -48,7 +47,7 @@ webSocket = new WebSocket("ws://destination.server.ext", "optionalProtocol");
 > [!NOTE]
 > 安全な WebSocket 接続を開くための `"wss://"` URL スキームを使用することもできます。
 
-cWebSocket 接続を最初から作成する必要がある場合は、ハンドシェイク処理を自分で処理する必要があります。最初の HTTP/1.1 セッションを作成した後、以下のように {{HTTPHeader("Upgrade")}} と {{HTTPHeader("Connection")}} ヘッダーを標準リクエストに追加して、アップグレードをリクエストする必要があります。
+WebSocket 接続を最初から作成する必要がある場合は、ハンドシェイク処理を自分で処理する必要があります。最初の HTTP/1.1 セッションを作成した後、以下のように {{HTTPHeader("Upgrade")}} と {{HTTPHeader("Connection")}} ヘッダーを標準リクエストに追加して、アップグレードをリクエストする必要があります。
 
 ```http
 Connection: Upgrade
@@ -70,7 +69,7 @@ Sec-WebSocket-Extensions: extensions
 - `extensions`
   - : リクエストする （または対応することに同意する）拡張機能のカンマ区切りのリスト。これらは [IANA WebSocket Extension Name Registry](https://www.iana.org/assignments/websocket/websocket.xml#extension-name) から選択する必要があります。引数を用いる拡張はセミコロン区切りで使用します。
 
-例えば、次のようにします。
+例えば、このヘッダーは 2 つの独自の拡張機能、`superspeed` および `colormode`（さらに引数 `depth=16` を保有）を示しています。
 
 ```http
 Sec-WebSocket-Extensions: superspeed, colormode; depth=16
@@ -141,11 +140,15 @@ Sec-WebSocket-Accept: hash
 - `hash`
   - : {{HTTPHeader("Sec-WebSocket-Key")}} ヘッダーが指定された場合、このヘッダーの値は、キーの値を取り、文字列 "258EAFA5-E914-47DA-95CA-C5AB0DC85B11" を何かに連結し、その連結した文字列の [SHA-1](https://en.wikipedia.org/wiki/SHA-1) ハッシュを取り、20 バイトの値を得ることによって計算されます。その値を [base64](/ja/docs/Glossary/Base64) エンコードして、このプロパティの値を得ます。
 
-## 参考資料
+## 仕様書
+
+{{specifications}}
+
+## 関連情報
 
 - [WebSocket API](/ja/docs/Web/API/WebSocket)
 - [HTTP](/ja/docs/Web/HTTP)
-- 仕様書と RFC:
-  - {{RFC(7230)}}
-  - {{RFC(6455)}}
-  - {{RFC(7540)}}
+- 用語集:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
