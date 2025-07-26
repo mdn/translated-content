@@ -4,7 +4,7 @@ slug: Learn_web_development/Extensions/Server-side/Django/Generic_views
 original_slug: Learn/Server-side/Django/Generic_views
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}Ce tutoriel améliore notre site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs. Ici nous allons apprendre les vues génériques basées sur des classes, et montrer comment elles peuvent réduire le volume de code à écrire pour les cas ordinaires. Nous allons aussi entrer plus en détail dans la gestion des URLs, en montrant comment réaliser des recherches de patterns simples.
+{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Home_page", "Learn/Server-side/Django/Sessions", "Learn/Server-side/Django")}}Ce tutoriel améliore notre site web [LocalLibrary](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs. Ici nous allons apprendre les vues génériques basées sur des classes, et montrer comment elles peuvent réduire le volume de code à écrire pour les cas ordinaires. Nous allons aussi entrer plus en détail dans la gestion des URLs, en montrant comment réaliser des recherches de patterns simples.
 
 <table class="standard-table">
   <tbody>
@@ -34,7 +34,7 @@ original_slug: Learn/Server-side/Django/Generic_views
 
 ## Aperçu
 
-Dans ce tutoriel, nous allons terminer la première version du site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs (ou pour être plus précis, nous allons vous montrer comment implémenter les pages concernant les livres, et vous faire créer vous-mêmes les pages concernant les auteurs !).
+Dans ce tutoriel, nous allons terminer la première version du site web [LocalLibrary](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), en ajoutant des pages de listes et de détails pour les livres et les auteurs (ou pour être plus précis, nous allons vous montrer comment implémenter les pages concernant les livres, et vous faire créer vous-mêmes les pages concernant les auteurs !).
 
 Le processus est semblable à celui utilisé pour créer la page d'index, processus que nous avons montré dans le tutoriel précédent. Nous allons avoir de nouveau besoin de créer des mappages d'URLs, des vues et des templates. La principale différence est que, pour la page des détails, nous allons avoir le défi supplémentaire d'extraire de l'URL des informations que nous transmettrons à la vue. Pour ces pages, nous allons montrer comment utiliser un type de vue complètement différent : des vues "listes" et "détails" génériques et basées sur des classes. Cela peut réduire significativement la somme de code nécessaire, les rendant ainsi faciles à écrire et à maintenir.
 

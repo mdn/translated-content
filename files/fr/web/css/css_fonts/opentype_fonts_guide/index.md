@@ -133,7 +133,7 @@ La propriété raccourcie `font-variant` permet de définir l'ensemble des carac
 
 ## Utiliser `font-feature-settings`
 
-La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser [des propriétés CSS personnalisées](/fr/docs/Web/CSS/Using_CSS_custom_properties) afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.
+La propriété {{cssxref("font-feature-settings")}} permet d'utiliser une syntaxe « bas niveau » qui permet un accès explicite à chaque caractéristique OpenType disponible. On dispose ainsi d'un contrôle accru mais on perd l'héritage et il faut tout redéclarer à chaque fois qu'on souhaite modifier une caractéristique (sauf à utiliser [des propriétés CSS personnalisées](/fr/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties) afin de définir les valeurs). Aussi, mieux vaut utiliser les propriétés standards lorsque c'est possible.
 
 Il existe une myriade de caractéristiques possibles. Vous pouvez en voir quelques exemples ici et il existe plusieurs ressources pour en exploiter d'autres.
 

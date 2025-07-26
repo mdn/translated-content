@@ -43,7 +43,7 @@ Si vous placez une image dans une page sans modifier sa hauteur ni sa largeur (q
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}
 
-Un élément [`<div>`](/fr/docs/Web/HTML/Element/div) vide en revanche, n'a pas de taille en soi. Si vous ajouter une [`<div>`](/fr/docs/Web/HTML/Element/div) à votre HTML sans aucun contenu à l'intérieur, et que vous lui ajouter une bordure comme nous l'avons fait avec l'image ci-dessus, vous verrez une ligne s'afficher sur la page. Cette ligne résulte de la juxtaposition des bordures horizontales, car il n'y a aucun contenu entre les deux. De plus les bordures s'étendent sur toute la largeur disponible du conteneur, car il s'agit d'un élément de bloc. Un comportement avec lequel vous devriez déjà être familiarisé. Cet élément n'a pas de hauteur (ou plutôt pas de taille dans l'axe de bloc), car il n'y a pas de contenu à l'intérieur de celui-ci.
+Un élément [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) vide en revanche, n'a pas de taille en soi. Si vous ajouter une [`<div>`](/fr/docs/Web/HTML/Reference/Elements/div) à votre HTML sans aucun contenu à l'intérieur, et que vous lui ajouter une bordure comme nous l'avons fait avec l'image ci-dessus, vous verrez une ligne s'afficher sur la page. Cette ligne résulte de la juxtaposition des bordures horizontales, car il n'y a aucun contenu entre les deux. De plus les bordures s'étendent sur toute la largeur disponible du conteneur, car il s'agit d'un élément de bloc. Un comportement avec lequel vous devriez déjà être familiarisé. Cet élément n'a pas de hauteur (ou plutôt pas de taille dans l'axe de bloc), car il n'y a pas de contenu à l'intérieur de celui-ci.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}
 
@@ -51,7 +51,7 @@ Dans l'exemple ci-dessus; essayez d'ajouter du texte à l'intérieur de l'élém
 
 ## Spécifier une taille
 
-Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
+Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn_web_development/Core/Styling_basics/Overflow) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
 
@@ -59,7 +59,7 @@ Du fait de ce comportement parfois inattendu, fixer la hauteur d'un élément av
 
 ### Avec les pourcentages
 
-De bien des manières, les pourcentages agissent de la même manière que les unités de longueur, et comme nous l'avons vu dans [la leçon sur les valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units), ils peuvent souvent être utilisés de manière interchangeable avec les unités de longueur. Lorsque vous utilisez les pourcentages vous devez seulement être conscient de la valeur à laquelle se réfère le pourcentage. Si vous donnez à un bloc enfant une largeur définie en pourcentage, celui-ci correspond à un pourcentage de la largeur du conteneur parent.
+De bien des manières, les pourcentages agissent de la même manière que les unités de longueur, et comme nous l'avons vu dans [la leçon sur les valeurs et unités en CSS](/fr/docs/Learn_web_development/Core/Styling_basics/Values_and_units), ils peuvent souvent être utilisés de manière interchangeable avec les unités de longueur. Lorsque vous utilisez les pourcentages vous devez seulement être conscient de la valeur à laquelle se réfère le pourcentage. Si vous donnez à un bloc enfant une largeur définie en pourcentage, celui-ci correspond à un pourcentage de la largeur du conteneur parent.
 
 {{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
 
@@ -98,7 +98,7 @@ Dans l'exemple ci-dessous, nous avons utilisé trois fois la même image. La pre
 Cette technique est utilisée pour rendre les images _responsive_, de sorte que lorsqu'elles sont visualisées sur un appareil plus petit, elles sont réduites de manière appropriée. Vous ne devez cependant pas utiliser cette technique pour charger des images vraiment grandes et les réduire ensuite dans le navigateur. Les images doivent être correctement dimensionnées pour ne pas être plus grandes qu'elles ne doivent l'être pour la plus grande taille à laquelle elles sont affichées dans la conception. Le téléchargement d'images trop grandes ralentira votre site et peut coûter plus cher aux utilisateurs s'ils disposent d'une connexion limitée.
 
 > [!NOTE]
-> En savoir plus sur [les techniques d'images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+> En savoir plus sur [les techniques d'images responsives](/fr/docs/Web/HTML/Guides/Responsive_images).
 
 ## Unités de la fenêtre d'affichage
 
@@ -118,6 +118,6 @@ Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous so
 
 ## Résumé
 
-Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn/CSS/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
+Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn_web_development/Core/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
 
 {{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}

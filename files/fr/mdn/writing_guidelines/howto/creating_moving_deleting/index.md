@@ -73,4 +73,4 @@ Entrez le titre dans la barre de recherche pour la trouver facilement. La page p
 
 ### Joindre des fichiers
 
-Pour joindre un fichier à votre article, il vous suffit de l'inclure dans le même répertoire que le fichier `index.md` de l'article. Incluez le fichier dans votre page, généralement via un élément [`<a>`](/fr/docs/Web/HTML/Element/a). Pour la traduction française, il est uniquement nécessaire de le faire si le fichier doit être traduit (exemple pour les images)&nbsp;; les fichiers qui n'ont pas à être traduits sont automatiquement récupérés depuis le dépôt anglais.
+Pour joindre un fichier à votre article, il vous suffit de l'inclure dans le même répertoire que le fichier `index.md` de l'article. Incluez le fichier dans votre page, généralement via un élément [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a). Pour la traduction française, il est uniquement nécessaire de le faire si le fichier doit être traduit (exemple pour les images)&nbsp;; les fichiers qui n'ont pas à être traduits sont automatiquement récupérés depuis le dépôt anglais.

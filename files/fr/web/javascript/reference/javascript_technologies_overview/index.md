@@ -14,7 +14,7 @@ Cependant, le terme « JavaScript » au sens large regroupe divers éléments tr
 
 ## JavaScript, le langage (ECMAScript)
 
-Le langage JavaScript (au sens strict) est standardisé par le comité ECMA TC39 sous la forme d'un langage intitulé [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview).
+Le langage JavaScript (au sens strict) est standardisé par le comité ECMA TC39 sous la forme d'un langage intitulé [ECMAScript](/fr/docs/Web/JavaScript/Reference/JavaScript_technologies_overview).
 
 Ce langage est aussi utilisé dans des environnements différents des navigateurs web, comme par exemple dans [node.js](https://nodejs.org/).
 
@@ -26,7 +26,7 @@ Entre autres choses, ECMAScript définit :
 - Le mécanisme de traitement d'erreurs ({{jsxref("Instructions/throw","throw")}}, {{jsxref("Instructions/try...catch","try...catch")}} capacité qu'a l'utilisateur de créer des types d'erreurs personnalisés)
 - Les types de variables (booléen, nombre, chaîne de caractères, fonction, objet...)
 - L'objet global. Dans l'environnement d'un navigateur, cet objet global est l'objet {{domxref("Window","window")}}. ECMAScript ne définit ici que les API accessibles depuis l'objet global (peu importe l'environnement qui peut être différent d'un navigateur) (par exemple {{jsxref("parseInt","parseInt()")}}, {{jsxref("parseFloat","parseFloat()")}}, {{jsxref("decodeURI","decodeURI()")}}, {{jsxref("encodeURI","encodeURI()")}}...)
-- [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
+- [Le mécanisme d'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain) basé sur le concept de prototype
 - Les objets et fonctions natifs ({{jsxref("JSON")}}, {{jsxref("Math")}}, méthodes de {{jsxref("Array.prototype")}}, méthodes d'introspection d'`Object`...)
 - [Le mode strict](/fr/docs/Web/JavaScript/Reference/Strict_mode).
 
@@ -62,7 +62,7 @@ Du point de vue d'ECMAScript, les objets définis dans la spécification DOM son
 
 [HTML](/fr/docs/Web/HTML), le langage de balisage du Web, est spécifié en termes de DOM. Comme une couche au-dessus des concepts abstraits définis dans DOM Core, HTML définit également la _signification_ des éléments. Le DOM HTML inclut des choses telles que la propriété `className` sur des éléments HTML, ou des API telles que {{domxref("document.body")}}.
 
-La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) (une liste non-ordonnée) soient des éléments [`<li>`](/fr/docs/Web/HTML/Element/li), puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
+La spécification HTML définit aussi les restrictions sur les documents ; par exemple, elle requiert que tous les enfants d'un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) (une liste non-ordonnée) soient des éléments [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li), puisqu'ils représentent les éléments d'une liste. En général, cela interdit aussi l'utilisation d'éléments et d'attributs qui ne sont pas définis dans un certain standard.
 
 Si vous cherchez la documentation sur l'objet {{domxref("Document")}}, l'objet {{domxref("Window")}} ou sur les autres éléments du DOM, vous pouvez lire [la documentation relative au DOM](/fr/docs/Web/API/Document_Object_Model).
 

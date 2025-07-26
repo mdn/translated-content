@@ -15,12 +15,12 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) de négation, **`:not()`**, 
 }
 ```
 
-La [spécificité](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) de la pseudo-classe `:not` est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.
+La [spécificité](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) de la pseudo-classe `:not` est la spécificité de son argument. La pseudo-classe de négation n'ajoute pas de spécificité, contrairement aux autres pseudo-classes.
 
 > [!NOTE]
 >
 > - Attention à ne pas écrire de sélecteurs inutiles à l'aide de cette pseudo-classe. Ainsi, `:not(*)` va exclure tous les éléments et ne sera jamais appliqué.
-> - À l'inverse, il est possible d'augmenter la [spécificitié](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) d'un sélecteur. Ainsi. `toto:not(truc)` ciblera les mêmes éléments que `toto`, mais avec une spécificité plus forte.
+> - À l'inverse, il est possible d'augmenter la [spécificitié](/fr/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts) d'un sélecteur. Ainsi. `toto:not(truc)` ciblera les mêmes éléments que `toto`, mais avec une spécificité plus forte.
 > - `:not(toto){}` ciblera tout élément qui n'est pas `toto`, **notamment {{HTMLElement("html")}} et {{HTMLElement("body")}}**.
 > - Ce sélecteur ne s'applique qu'à un seul élément. Il ne peut pas être utilisé afin d'exclure tous les ancêtres. Ainsi, `body :not(table) a` s'appliquera aux liens contenus dans un tableau car {{HTMLElement("tr")}} ne sera pas ciblé par la partie `:not()` du sélecteur.
 

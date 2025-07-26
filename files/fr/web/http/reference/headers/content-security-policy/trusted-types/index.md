@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Content-Security-Policy/trusted-types
 
 La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`trusted-types`** {{experimental_inline}} informe l'agent utilisateur qu'il faut restreindre la création de règles Trusted Types (fonctions qui créent des valeurs typées non falsifiables, dans le but de les passer au puits XSS du DOM au lieu de chaines de caractères).
 
-Conjointement à la directive [`require-trusted-types-for`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/require-trusted-types-for), cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture. Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec `TrustedTypes.createPolicy` à partir de l'API Trusted Types.
+Conjointement à la directive [`require-trusted-types-for`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/require-trusted-types-for), cette directive permet aux auteurs de définir des règles empêchant d'injecter des données dans le DOM et donc de réduire la fenêtre de tir pour les attaques XSS sur le DOM à quelques pans isolés de la base de code d'une application, facilitant donc son contrôle et sa relecture. Cette directive déclare une liste de permissions de noms de règles de Trusted Types créée avec `TrustedTypes.createPolicy` à partir de l'API Trusted Types.
 
 ## Syntaxe
 

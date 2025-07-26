@@ -17,7 +17,7 @@ Les en-têtes peuvent être groupés selon leur contexte&nbsp;:
 - [Les en-têtes de réponse](/fr/docs/Glossary/Response_header)
   - : Contiennent des informations supplémentaires au sujet de la réponse (par exemple son emplacement), ou au sujet du serveur qui la fournit.
 - [Les en-têtes de représentation](/fr/docs/Glossary/Representation_header)
-  - : Contiennent des informations à propos du corps de la ressource, comme son [type MIME](/fr/docs/Web/HTTP/MIME_types), ou le type de compression ou d'encodage appliqué.
+  - : Contiennent des informations à propos du corps de la ressource, comme son [type MIME](/fr/docs/Web/HTTP/Guides/MIME_types), ou le type de compression ou d'encodage appliqué.
 - [Les en-têtes de charge utile (<i lang="en">payload headers</i>)](/fr/docs/Glossary/Payload_header)
   - : Contiennent des informations indépendantes de la représentation sur la charge utile, comme la longueur du contenu ou l'encodage utilisé pour le transport.
 
@@ -26,13 +26,13 @@ Les en-têtes peuvent aussi être groupés selon comment ils sont traités par [
 - En-têtes de bout en bout (<i lang="en">end-to-end headers</i>)
   - : Ces en-têtes doivent être transmis au destinataire final du message&nbsp;; c'est-à-dire le serveur dans le cas d'une requête ou le client dans le cas d'une réponse. Les serveurs mandataires intermédiaires doivent retransmettre les en-têtes de bout en bout sans modification et doivent les mettre en cache.
 - En-têtes de point à point (<i lang="en">hop-by-hop headers</i>)
-  - : Ces en-têtes n'ont de sens que pour une unique connexion de la [couche transport](https://fr.wikipedia.org/wiki/Couche_transport) et ne doivent pas être retransmis par des serveurs mandataires ou mis en cache. Seuls des en-têtes point à point peuvent être définis avec l'en-tête [`Connection`](/fr/docs/Web/HTTP/Headers/Connection).
+  - : Ces en-têtes n'ont de sens que pour une unique connexion de la [couche transport](https://fr.wikipedia.org/wiki/Couche_transport) et ne doivent pas être retransmis par des serveurs mandataires ou mis en cache. Seuls des en-têtes point à point peuvent être définis avec l'en-tête [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection).
 
 ## Authentification
 
-- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Headers/WWW-Authenticate)
+- [`WWW-Authenticate`](/fr/docs/Web/HTTP/Reference/Headers/WWW-Authenticate)
   - : Définit la méthode d'authentification qui doit être utilisée pour obtenir l'accès à la ressource.
-- [`Authorization`](/fr/docs/Web/HTTP/Headers/Authorization)
+- [`Authorization`](/fr/docs/Web/HTTP/Reference/Headers/Authorization)
   - : Contient les informations d'authentification pour authentifier un agent utilisateur avec un serveur.
 - [`Proxy-Authenticate`](/fr/docs/Web/HTTP/Headers/Proxy-Authenticate)
   - : Définit la méthode d'authentification qui doit être utilisée pour obtenir la ressource derrière un serveur mandataire.
@@ -41,48 +41,48 @@ Les en-têtes peuvent aussi être groupés selon comment ils sont traités par [
 
 ## Mise en cache
 
-- [`Age`](/fr/docs/Web/HTTP/Headers/Age)
+- [`Age`](/fr/docs/Web/HTTP/Reference/Headers/Age)
   - : La durée en secondes pendant laquelle un objet a été dans le cache d'un serveur mandataire.
-- [`Cache-Control`](/fr/docs/Web/HTTP/Headers/Cache-Control)
+- [`Cache-Control`](/fr/docs/Web/HTTP/Reference/Headers/Cache-Control)
   - : Spécifie des directives pour les mécanismes de mise en cache dans les requêtes et les réponses.
 - [`Clear-Site-Data`](/fr/docs/Web/HTTP/Headers/Clear-Site-Data)
   - : Nettoie les données de navigation (par exemple, les cookies, le stockage local et le cache) associé au site qui envoie la réponse.
-- [`Expires`](/fr/docs/Web/HTTP/Headers/Expires)
+- [`Expires`](/fr/docs/Web/HTTP/Reference/Headers/Expires)
   - : La date et l'heure après lesquelles la réponse est considérée comme périmée.
 
 ## En-têtes conditionnels
 
-- [`Last-Modified`](/fr/docs/Web/HTTP/Headers/Last-Modified)
-  - : La date à laquelle la ressource a été modifiée pour la dernière fois. Cette date est utilisée pour comparer plusieurs versions d'une même ressource. Moins précise qu'[`ETag`](/fr/docs/Web/HTTP/Headers/ETag), elle est plus simple à calculer dans certains environnements. Les requêtes conditionnelles avec [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since) et [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) utilisent cette valeur pour modifier le comportement de la requête.
-- [`ETag`](/fr/docs/Web/HTTP/Headers/ETag)
-  - : Une chaîne de caractères unique qui identifie la version de la ressource. Les requêtes conditionnelles avec [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) et [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match) utilisent cette valeur pour modifier le comportement de la requête.
+- [`Last-Modified`](/fr/docs/Web/HTTP/Reference/Headers/Last-Modified)
+  - : La date à laquelle la ressource a été modifiée pour la dernière fois. Cette date est utilisée pour comparer plusieurs versions d'une même ressource. Moins précise qu'[`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag), elle est plus simple à calculer dans certains environnements. Les requêtes conditionnelles avec [`If-Modified-Since`](/fr/docs/Web/HTTP/Reference/Headers/If-Modified-Since) et [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since) utilisent cette valeur pour modifier le comportement de la requête.
+- [`ETag`](/fr/docs/Web/HTTP/Reference/Headers/ETag)
+  - : Une chaîne de caractères unique qui identifie la version de la ressource. Les requêtes conditionnelles avec [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match) et [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match) utilisent cette valeur pour modifier le comportement de la requête.
 - [`If-Match`](/fr/docs/Web/HTTP/Headers/If-Match)
   - : Rend la requête conditionnelle et applique la méthode uniquement si la ressource enregistrée correspond à l'un des ETag donnés.
-- [`If-None-Match`](/fr/docs/Web/HTTP/Headers/If-None-Match)
+- [`If-None-Match`](/fr/docs/Web/HTTP/Reference/Headers/If-None-Match)
   - : Rend la requête conditionnelle et applique la méthode uniquement si la ressource enregistrée _ne correspond pas_ à l'un des ETag donnés. Cet en-tête est utilisé afin de mettre à jour les caches (pour les requêtes sûres) ou pour empêcher de téléverser une nouvelle ressource lorsqu'une équivalente existe déjà.
-- [`If-Modified-Since`](/fr/docs/Web/HTTP/Headers/If-Modified-Since)
+- [`If-Modified-Since`](/fr/docs/Web/HTTP/Reference/Headers/If-Modified-Since)
   - : Rend la requête conditionnelle pour que la ressource ne soit transmise que si elle a été modifiée après une date donnée. Cet en-tête est utilisé pour transmettre des données uniquement lorsque le cache est périmé.
 - [`If-Unmodified-Since`](/fr/docs/Web/HTTP/Headers/If-Unmodified-Since)
   - : Rend la requête conditionnelle pour que la ressource ne soit transmise que si elle n'a pas été modifiée après une date donnée. Cela permet de s'assurer de la cohérence d'un nouveau fragment d'un intervalle donné avec les anciens fragments, ou d'implémenter un système de contrôle concurrent optimiste pour la mise à jour de documents existants.
-- [`Vary`](/fr/docs/Web/HTTP/Headers/Vary)
+- [`Vary`](/fr/docs/Web/HTTP/Reference/Headers/Vary)
   - : Indique les en-têtes de requêtes qui ont influencé la fourniture de la réponse (entre une éventuelle version en cache et une version fraîche).
 
 ## Gestion de la connexion
 
-- [`Connection`](/fr/docs/Web/HTTP/Headers/Connection)
+- [`Connection`](/fr/docs/Web/HTTP/Reference/Headers/Connection)
   - : Contrôle si la connexion réseau reste ouverte après que la transaction actuelle a fini.
 - [`Keep-Alive`](/fr/docs/Web/HTTP/Headers/Keep-Alive)
   - : Contrôle la durée pendant laquelle une connexion persistente devrait rester ouverte.
 
 ## Négociation de contenu
 
-Pour plus d'informations à ce sujet, voir [l'article sur la négociation de contenu](/fr/docs/Web/HTTP/Content_negotiation).
+Pour plus d'informations à ce sujet, voir [l'article sur la négociation de contenu](/fr/docs/Web/HTTP/Guides/Content_negotiation).
 
-- [`Accept`](/fr/docs/Web/HTTP/Headers/Accept)
+- [`Accept`](/fr/docs/Web/HTTP/Reference/Headers/Accept)
   - : Indique au serveur [les types MIME](/fr/docs/Glossary/MIME_type) qui peuvent être renvoyés pour le type de contenu de la réponse.
-- [`Accept-Encoding`](/fr/docs/Web/HTTP/Headers/Accept-Encoding)
-  - : L'algorithme d'encodage, généralement [un algorithme de compression](/fr/docs/Web/HTTP/Compression), qui peut être utilisé pour la ressource renvoyée.
-- [`Accept-Language`](/fr/docs/Web/HTTP/Headers/Accept-Language)
+- [`Accept-Encoding`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Encoding)
+  - : L'algorithme d'encodage, généralement [un algorithme de compression](/fr/docs/Web/HTTP/Guides/Compression), qui peut être utilisé pour la ressource renvoyée.
+- [`Accept-Language`](/fr/docs/Web/HTTP/Reference/Headers/Accept-Language)
   - : Indique au serveur la ou les langues dans lesquelles la ressource peut être renvoyée. Il s'agit d'une indication et cette valeur n'est pas nécessairement choisie par la personne. Il appartient au serveur de veiller à ne pas outrepasser des choix de locale explicites effectués par ailleurs (par exemple le choix d'une langue dans une liste déroulante).
 
 ## Contrôles
@@ -90,54 +90,54 @@ Pour plus d'informations à ce sujet, voir [l'article sur la négociation de con
 - [`Expect`](/fr/docs/Web/HTTP/Headers/Expect)
   - : Indique les conditions à respecter par le serveur pour gérer correctement la requête.
 - [`Max-Forwards`](/fr/docs/Web/HTTP/Headers/Max-Forwards)
-  - : Lorsque la méthode [`TRACE`](/fr/docs/Web/HTTP/Methods/TRACE) est utilisée, cet en-tête indique le nombre maximal de sauts que la requête peut effectuer avant de revenir à l'émetteur.
+  - : Lorsque la méthode [`TRACE`](/fr/docs/Web/HTTP/Reference/Methods/TRACE) est utilisée, cet en-tête indique le nombre maximal de sauts que la requête peut effectuer avant de revenir à l'émetteur.
 
 ## Cookies
 
 - [`Cookie`](/fr/docs/Web/HTTP/Headers/Cookie)
-  - : Contient les [cookies HTTP](/fr/docs/Web/HTTP/Cookies) enregistrés, précédemment envoyés par le serveur avec l'en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie).
-- [`Set-Cookie`](/fr/docs/Web/HTTP/Headers/Set-Cookie)
+  - : Contient les [cookies HTTP](/fr/docs/Web/HTTP/Guides/Cookies) enregistrés, précédemment envoyés par le serveur avec l'en-tête [`Set-Cookie`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie).
+- [`Set-Cookie`](/fr/docs/Web/HTTP/Reference/Headers/Set-Cookie)
   - : Envoie des cookies de la part du serveur vers l'agent utilisateur.
 
 ## CORS
 
-Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/CORS).
+Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/Guides/CORS).
 
 - [`Access-Control-Allow-Credentials`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Credentials)
   - : Indique si les informations d'authentification peuvent être exposées lors d'une requête vers une autre origine.
 - [`Access-Control-Allow-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Headers)
   - : Utilisé dans une réponse à [une requête préparatoire (<i lang="en">preflight request</i>)](/fr/docs/Glossary/Preflight_request) pour indiquer les en-têtes HTTP qui peuvent être utilisés lors de la requête réelle.
-- [`Access-Control-Allow-Methods`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Methods)
+- [`Access-Control-Allow-Methods`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Methods)
   - : Utilisé dans une réponse à [une requête préparatoire (<i lang="en">preflight request</i>)](/fr/docs/Glossary/Preflight_request) pour indiquer les méthodes HTTP qui peuvent être utilisés lors de la requête réelle.
-- [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Access-Control-Allow-Origin)
+- [`Access-Control-Allow-Origin`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Allow-Origin)
   - : Indique si la réponse peut être partagée.
 - [`Access-Control-Expose-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Expose-Headers)
   - : Indique la liste des en-têtes qui peuvent être exposés dans la réponse.
 - [`Access-Control-Max-Age`](/fr/docs/Web/HTTP/Headers/Access-Control-Max-Age)
   - : Indique la durée pendant laquelle le résultat d'une requête préparatoire peut être mis en cache.
-- [`Access-Control-Request-Headers`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Headers)
+- [`Access-Control-Request-Headers`](/fr/docs/Web/HTTP/Reference/Headers/Access-Control-Request-Headers)
   - : Utilisé lors de l'émission d'une requête préparatoire pour indiquer au serveur les en-têtes HTTP qui seront utilisés lors de la requête réelle.
 - [`Access-Control-Request-Method`](/fr/docs/Web/HTTP/Headers/Access-Control-Request-Method)
-  - : Utilisé lors de l'émission d'une requête préparatoire pour indiquer au serveur [la méthode HTTP](/fr/docs/Web/HTTP/Methods) qui sera utilisée lors de la requête réelle.
-- [`Origin`](/fr/docs/Web/HTTP/Headers/Origin)
+  - : Utilisé lors de l'émission d'une requête préparatoire pour indiquer au serveur [la méthode HTTP](/fr/docs/Web/HTTP/Reference/Methods) qui sera utilisée lors de la requête réelle.
+- [`Origin`](/fr/docs/Web/HTTP/Reference/Headers/Origin)
   - : Indique l'origine de la requête.
 - [`Timing-Allow-Origin`](/fr/docs/Web/HTTP/Headers/Timing-Allow-Origin)
   - : Indique les origines autorisées à consulter les valeurs des attributs récupérés grâce à [l'API <i lang="en">Resource Timing</i>](/fr/docs/Web/API/Performance_API/Resource_timing) (au lieu que 0 soit fourni comme valeur par défaut en raison des restrictions entre les origines).
 
 ## Téléchargement
 
-- [`Content-Disposition`](/fr/docs/Web/HTTP/Headers/Content-Disposition)
+- [`Content-Disposition`](/fr/docs/Web/HTTP/Reference/Headers/Content-Disposition)
   - : Indique si la ressource transmise devrait être affichée dans le navigateur (le comportement par défaut en l'absence de l'en-tête), ou si elle devrait être gérée comme un téléchargement (auquel cas le navigateur affichera une boîte de dialogue pertinente).
 
 ## Informations sur le corps
 
-- [`Content-Length`](/fr/docs/Web/HTTP/Headers/Content-Length)
+- [`Content-Length`](/fr/docs/Web/HTTP/Reference/Headers/Content-Length)
   - : La taille de la ressource, exprimée en octets (sur une base décimale).
-- [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type)
+- [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type)
   - : Le type de média de la ressource.
-- [`Content-Encoding`](/fr/docs/Web/HTTP/Headers/Content-Encoding)
+- [`Content-Encoding`](/fr/docs/Web/HTTP/Reference/Headers/Content-Encoding)
   - : L'algorithme de compression utilisé.
-- [`Content-Language`](/fr/docs/Web/HTTP/Headers/Content-Language)
+- [`Content-Language`](/fr/docs/Web/HTTP/Reference/Headers/Content-Language)
   - : La langue humaine cible pour le public, qui permet à une personne de recevoir une ressource adaptée à sa locale.
 - [`Content-Location`](/fr/docs/Web/HTTP/Headers/Content-Location)
   - : Indique un emplacement alternatif pour les données renvoyées.
@@ -151,29 +151,29 @@ Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/CORS).
 
 ## Redirection
 
-- [`Location`](/fr/docs/Web/HTTP/Headers/Location)
+- [`Location`](/fr/docs/Web/HTTP/Reference/Headers/Location)
   - : Indique l'URL vers laquelle rediriger la requête.
 - [`Refresh`](/fr/docs/Web/HTTP/Headers/Refresh)
-  - : Indique au navigateur de rafraîchir la page ou de rediriger vers une autre. Cet en-tête prend la même valeur qu'[un élément `<meta>` avec `http-equiv="refresh"`](/fr/docs/Web/HTML/Element/meta#http-equiv).
+  - : Indique au navigateur de rafraîchir la page ou de rediriger vers une autre. Cet en-tête prend la même valeur qu'[un élément `<meta>` avec `http-equiv="refresh"`](/fr/docs/Web/HTML/Reference/Elements/meta#http-equiv).
 
 ## Contexte de la requête
 
 - [`From`](/fr/docs/Web/HTTP/Headers/From)
   - : Contient une adresse électronique qui permet de s'adresser à la personne qui contrôle l'agent utilisateur qui a émis la requête.
-- [`Host`](/fr/docs/Web/HTTP/Headers/Host)
+- [`Host`](/fr/docs/Web/HTTP/Reference/Headers/Host)
   - : Indique le nom de domaine du serveur (pour l'hébergement virtuel) et l'éventuel numéro de port TCP sur lequel le serveur écoute.
-- [`Referer`](/fr/docs/Web/HTTP/Headers/Referer)
+- [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer)
   - : L'adresse de la page web précédente dont le lien a mené à la page actuellement demandée.
-- [`Referrer-Policy`](/fr/docs/Web/HTTP/Headers/Referrer-Policy)
-  - : Gère les informations qui doivent être envoyées via l'en-tête [`Referer`](/fr/docs/Web/HTTP/Headers/Referer).
+- [`Referrer-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Referrer-Policy)
+  - : Gère les informations qui doivent être envoyées via l'en-tête [`Referer`](/fr/docs/Web/HTTP/Reference/Headers/Referer).
 - [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent)
   - : Contient une chaîne de caractères spécifique qui permet aux pairs de protocole réseau d'identifier le type d'application, le système d'exploitation, l'éditeur ou la version du logiciel utilisé par l'agent utilisateur.
 
 ## Contexte de la réponse
 
-- [`Allow`](/fr/docs/Web/HTTP/Headers/Allow)
+- [`Allow`](/fr/docs/Web/HTTP/Reference/Headers/Allow)
   - : Indique l'ensemble des méthodes HTTP prises en charge par la ressource.
-- [`Server`](/fr/docs/Web/HTTP/Headers/Server)
+- [`Server`](/fr/docs/Web/HTTP/Reference/Headers/Server)
   - : Contient des informations à propos du logiciel utilisé par le serveur d'origine gérant la requête.
 
 ## Requêtes d'intervalle
@@ -195,20 +195,20 @@ Pour plus d'informations, voir [la documentation CORS](/fr/docs/Web/HTTP/CORS).
   - : Empêche l'ouverture/le contrôle d'une fenêtre par d'autres domaines.
 - [`Cross-Origin-Resource-Policy`](/fr/docs/Web/HTTP/Headers/Cross-Origin-Resource-Policy)
   - : Empêche d'autres domaines de lire la réponse pour les ressources auxquelles cet en-tête est appliqué. Voir aussi [la page d'explication sur](/fr/docs/Web/HTTP/Cross-Origin_Resource_Policy).
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) ([CSP](/fr/docs/Glossary/CSP))
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ([CSP](/fr/docs/Glossary/CSP))
   - : Contrôle les ressources qu'un agent utilisateur est autorisé à charger pour une page donnée.
-- [`Content-Security-Policy-Report-Only`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy-Report-Only)
+- [`Content-Security-Policy-Report-Only`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy-Report-Only)
   - : Permet de surveiller les résultats de règles CSP sans pour autant les mettre en place. Les rapports émis en cas de violation sont des documents [JSON](/fr/docs/Glossary/JSON) envoyés par une requête HTTP `POST` à l'URI indiquée dans l'en-tête.
-- [`Permissions-Policy`](/fr/docs/Web/HTTP/Headers/Permissions-Policy)
-  - : Fournit un mécanisme pour autoriser ou interdire l'utilisation de certaines fonctionnalités dans le cadre de la page et dans les éventuels [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) qu'elle embarque.
+- [`Permissions-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Permissions-Policy)
+  - : Fournit un mécanisme pour autoriser ou interdire l'utilisation de certaines fonctionnalités dans le cadre de la page et dans les éventuels [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe) qu'elle embarque.
 - [`Strict-Transport-Security`](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security) ([HSTS](/fr/docs/Glossary/HSTS))
   - : Force la communication à passer par HTTPS plutôt que par HTTP.
 - [`Upgrade-Insecure-Requests`](/fr/docs/Web/HTTP/Headers/Upgrade-Insecure-Requests)
-  - : Envoie un signal au serveur indiquant la préférence du client pour une réponse chiffrée et authentifiée, afin qu'il puisse correctement gérer la directive CSP [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests).
-- [`X-Content-Type-Options`](/fr/docs/Web/HTTP/Headers/X-Content-Type-Options)
-  - : Désactive le choix heuristique du type MIME et force le navigateur à utiliser le type fourni via l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Headers/Content-Type).
-- [`X-Frame-Options`](/fr/docs/Web/HTTP/Headers/X-Frame-Options)
-  - : Indique si un navigateur est autorisé à afficher une page dans un élément [`<frame>`](/fr/docs/Web/HTML/Element/frame), [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), [`<embed>`](/fr/docs/Web/HTML/Element/embed), ou [`<object>`](/fr/docs/Web/HTML/Element/object).
+  - : Envoie un signal au serveur indiquant la préférence du client pour une réponse chiffrée et authentifiée, afin qu'il puisse correctement gérer la directive CSP [`upgrade-insecure-requests`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/upgrade-insecure-requests).
+- [`X-Content-Type-Options`](/fr/docs/Web/HTTP/Reference/Headers/X-Content-Type-Options)
+  - : Désactive le choix heuristique du type MIME et force le navigateur à utiliser le type fourni via l'en-tête [`Content-Type`](/fr/docs/Web/HTTP/Reference/Headers/Content-Type).
+- [`X-Frame-Options`](/fr/docs/Web/HTTP/Reference/Headers/X-Frame-Options)
+  - : Indique si un navigateur est autorisé à afficher une page dans un élément [`<frame>`](/fr/docs/Web/HTML/Reference/Elements/frame), [`<iframe>`](/fr/docs/Web/HTML/Reference/Elements/iframe), [`<embed>`](/fr/docs/Web/HTML/Reference/Elements/embed), ou [`<object>`](/fr/docs/Web/HTML/Reference/Elements/object).
 - [`X-Permitted-Cross-Domain-Policies`](/fr/docs/Web/HTTP/Headers/X-Permitted-Cross-Domain-Policies)
   - : Indique si un fichier de règles entre domaines (`crossdomain.xml`) est autorisé. Le fichier pourra définir des règles pour permettre aux clients comme Adobe Acrobat, ou Apache Flex de gérer des données entre différents domaines alors que cela aurait été interdit par [la politique d'origine unique](/fr/docs/Web/Security/Same-origin_policy). Voir [le fichier PDF de spécification sur le site d'Adobe](https://www.adobe.com/devnet-docs/acrobatetk/tools/AppSec/CrossDomain_PolicyFile_Specification.pdf) pour plus d'informations.
 - [`X-Powered-By`](/fr/docs/Web/HTTP/Headers/X-Powered-By)
@@ -245,7 +245,7 @@ Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-
   - : Définit la forme d'encodage à utiliser pour transférer de façon sûre le corps de la requête au client.
 - [`TE`](/fr/docs/Web/HTTP/Headers/TE)
   - : Indique les encodages de transfert acceptables pour l'agent utilisateur.
-- [`Trailer`](/fr/docs/Web/HTTP/Headers/Trailer)
+- [`Trailer`](/fr/docs/Web/HTTP/Reference/Headers/Trailer)
   - : Permet à l'émetteur d'inclure des champs complémentaires à la fin du message morcelé.
 
 ## Autres
@@ -254,10 +254,10 @@ Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-
   - : Utilisé pour lister les méthodes alternatives pour accéder au service.
 - [`Alt-Used`](/fr/docs/Web/HTTP/Headers/Alt-Used)
   - : Utilisé pour identifier le service alternatif utilisé.
-- [`Date`](/fr/docs/Web/HTTP/Headers/Date)
+- [`Date`](/fr/docs/Web/HTTP/Reference/Headers/Date)
   - : Contient la date et l'heure à laquelle le message a été émis.
-- [`Link`](/fr/docs/Web/HTTP/Headers/Link)
-  - : Cet en-tête permet de sérialiser un ou plusieurs liens dans des en-têtes HTTP. Il est sémantiquement équivalent à l'élément HTML [`<link>`](/fr/docs/Web/HTML/Element/link).
+- [`Link`](/fr/docs/Web/HTTP/Reference/Headers/Link)
+  - : Cet en-tête permet de sérialiser un ou plusieurs liens dans des en-têtes HTTP. Il est sémantiquement équivalent à l'élément HTML [`<link>`](/fr/docs/Web/HTML/Reference/Elements/link).
 - [`Retry-After`](/fr/docs/Web/HTTP/Headers/Retry-After)
   - : Indique la durée pendant laquelle l'agent utilisateur devrait attendre avant d'envoyer une requête suivante.
 - [`Server-Timing`](/fr/docs/Web/HTTP/Headers/Server-Timing)
@@ -266,27 +266,27 @@ Les en-têtes de requêtes qui suivent ne sont pas à strictement parler des en-
   - : Utilisé afin de supprimer [la contrainte sur le chemin](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers#pourquoi_est-ce_lenregistrement_de_mon_service_worker_échoue_) lorsqu'il est inclus dans la réponse fournissant le script du <i lang="en">service worker</i> (voir [le paragraphe correspondant dans la spécification](https://w3c.github.io/ServiceWorker/#service-worker-script-response)).
 - [`SourceMap`](/fr/docs/Web/HTTP/Headers/SourceMap)
   - : Pointe vers une [<i lang="en">source map</i>](https://firefox-source-docs.mozilla.org/devtools-user/debugger/how_to/use_a_source_map/index.html) pour la ressource demandée.
-- [`Upgrade`](/fr/docs/Web/HTTP/Headers/Upgrade)
+- [`Upgrade`](/fr/docs/Web/HTTP/Reference/Headers/Upgrade)
   - : Cet en-tête, valable uniquement pour HTTP/1.1, permet de basculer une connexion déjà établie sur un protocole différent (en conservant le même protocole de transport). Ainsi, un client pourra l'utiliser pour demander que la connexion bascule de HTTP/1.1 vers HTTP/2 ou pour passer d'une connexion HTTPS à une connexion WebSocket.
 
 ## En-têtes expérimentaux
 
 ### Indications fournies par le client (<i lang="en">client hints</i>)
 
-Les [indications client (ou <i lang="en">client hints</i> en anglais)](/fr/docs/Web/HTTP/Client_hints) sont des en-têtes de requêtes qui fournissent des informations à propos du client comme le type d'appareil ou les conditions réseau et qui permettent aux serveurs d'optimiser ce qui peut alors être servi dans ces conditions.
+Les [indications client (ou <i lang="en">client hints</i> en anglais)](/fr/docs/Web/HTTP/Guides/Client_hints) sont des en-têtes de requêtes qui fournissent des informations à propos du client comme le type d'appareil ou les conditions réseau et qui permettent aux serveurs d'optimiser ce qui peut alors être servi dans ces conditions.
 
 C'est aux serveurs de demander aux clients les indications qui les intéressent à l'aide de l'en-tête [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH). Le client pourra alors choisir d'inclure les en-têtes demandés dans les requêtes à venir.
 
 - [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH) {{experimental_inline}}
-  - : Les serveurs peuvent indiquer leur prise en charge des indications client à l'aide de l'en-tête `Accept-CH` ou d'un élément `<meta>` équivalent doté de l'attribut [`http-equiv`](/fr/docs/Web/HTML/Element/meta#http-equiv).
+  - : Les serveurs peuvent indiquer leur prise en charge des indications client à l'aide de l'en-tête `Accept-CH` ou d'un élément `<meta>` équivalent doté de l'attribut [`http-equiv`](/fr/docs/Web/HTML/Reference/Elements/meta#http-equiv).
 - [`Critical-CH`](/fr/docs/Web/HTTP/Headers/Critical-CH) {{experimental_inline}}
-  - : Utilisé avec [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH), `Critical-CH` est utilisé pour indiquer que les indications client acceptées sont [des indications client critiques](/fr/docs/Web/HTTP/Client_hints#indications_client_critiques).
+  - : Utilisé avec [`Accept-CH`](/fr/docs/Web/HTTP/Headers/Accept-CH), `Critical-CH` est utilisé pour indiquer que les indications client acceptées sont [des indications client critiques](/fr/docs/Web/HTTP/Guides/Client_hints#indications_client_critiques).
 
 Les différentes catégories d'indication client sont listées ci-après.
 
 #### Indications client pour l'agent utilisateur
 
-Les [indications client pour l'agent utilisateur](/fr/docs/Web/HTTP/Client_hints#user-agent_client_hints) sont des en-têtes de requête qui fournissent des informations à propos de l'agent utilisateur, de la plateforme et architecture sur lesquelles il est exécuté et à propos des préférences définies au niveau de l'agent utilisateur ou de la plateforme&nbsp;:
+Les [indications client pour l'agent utilisateur](/fr/docs/Web/HTTP/Guides/Client_hints#user-agent_client_hints) sont des en-têtes de requête qui fournissent des informations à propos de l'agent utilisateur, de la plateforme et architecture sur lesquelles il est exécuté et à propos des préférences définies au niveau de l'agent utilisateur ou de la plateforme&nbsp;:
 
 - [`Sec-CH-UA`](/fr/docs/Web/HTTP/Headers/Sec-CH-UA) {{experimental_inline}}
   - : La marque et la version de l'agent utilisateur.
