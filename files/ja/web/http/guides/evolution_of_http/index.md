@@ -1,9 +1,8 @@
 ---
 title: HTTP の進化
 slug: Web/HTTP/Guides/Evolution_of_HTTP
-original_slug: Web/HTTP/Guides/Evolution_of_HTTP
 l10n:
-  sourceCommit: 783ffd9c1cf35421242e028a1b8743cf2b1918dd
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
 **HTTP** (HyperText Transfer Protocol) は World Wide Web を支えるプロトコルです。1989 年から 1991 年にかけてティム・バーナーズ＝リーとそのチームによって開発された HTTP は、その柔軟性を形成しながら分かりやすさを維持するために、多くの変化を遂げてきました。HTTP が、実験室でファイルを交換するためのプロトコルから、高解像度や 3D の画像や動画を伝送する現代のインターネットの迷宮へと進化していった経緯をご紹介します。
@@ -13,7 +12,7 @@ l10n:
 1989 年、CERN で働いていたティム・バーナーズ＝リーは、インターネット上のハイパーテキストシステムを構築するための提案書を執筆しました。当初 _Mesh_ と呼ばれていたそのシステムは、1990 年に実装されている間に _World Wide Web_ へ改名されました。 World Wide Web は既存の TCP および IP プロトコル上に構築され、4 つの要素から構成されました。
 
 - ハイパーテキスト文書を表現するテキスト形式である _[HyperText Markup Language](/ja/docs/Web/HTML)_ (HTML)。
-- それらの文書を交換するシンプルなプロトコルである _HyperText Transfer Protocol_ (HTTP)。
+- それらの文書を交換するプロトコルである _HyperText Transfer Protocol_ (HTTP)。
 - それらの文書を表示（および編集）するクライアントである、_WorldWideWeb_ と呼ばれた最初のウェブブラウザー。
 - 文書へのアクセス機能を提供するサーバーである、_httpd_ の初期バージョン。
 
@@ -33,7 +32,7 @@ GET /my-page.html
 
 ```html
 <html>
-  A very simple HTML page
+  テキストのみのウェブページ
 </html>
 ```
 
@@ -92,51 +91,65 @@ HTTP/1.1 では、曖昧な点が明確にされ、多くの改良が加えら�
 - コンテンツネゴシエーション（言語、エンコーダー、種類を含む）が導入されました。これで、クライアントとサーバーは、どのコンテンツを交換するかについて合意できるようになりました。
 - {{HTTPHeader("Host")}} ヘッダーのおかげで、同じIPアドレスから異なるドメインをホスティングできるようになり、サーバーのコロケーションが可能になりました。
 
-すべて単一の接続で行われる典型的なリクエストの流れは、次のようなものになりました。
+次の例は、単一の永続的な TCP 接続を介して送信される HTTP/1.1 リクエストの典型的な一連の流れを、クライアントが接続を再利用してリソースをより効率的に読み込む方法を示しています。
+最初のリクエストはウェブページを取得し、サーバーは HTML 文書で応答します。
+その後、クライアントは HTML 内で CSS および JavaScript リソースを検出すると、追加のリクエストを順番に送信します。
 
 ```http
-GET /ja/docs/Glossary/CORS-safelisted_request_header HTTP/1.1
+GET /en-US/docs/ HTTP/1.1
 Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
 Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/ja/docs/Glossary/CORS-safelisted_request_header
-
-HTTP/1.1 200 OK
-Connection: Keep-Alive
-Content-Encoding: gzip
-Content-Type: text/html; charset=utf-8
-Date: Wed, 20 Jul 2016 10:55:30 GMT
-Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
-Keep-Alive: timeout=5, max=1000
-Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
-Server: Apache
-Transfer-Encoding: chunked
-Vary: Cookie, Accept-Encoding
-
-(コンテンツ)
-
-GET /static/img/header-background.png HTTP/1.1
-Host: developer.mozilla.org
-User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
-Accept: */*
-Accept-Language: en-US,en;q=0.5
-Accept-Encoding: gzip, deflate, br
-Referer: https://developer.mozilla.org/ja/docs/Glossary/CORS-safelisted_request_header
-
-HTTP/1.1 200 OK
-Age: 9578461
-Cache-Control: public, max-age=315360000
+Accept-Encoding: gzip, deflate, br, zstd
 Connection: keep-alive
-Content-Length: 3077
-Content-Type: image/png
-Date: Thu, 31 Mar 2016 13:34:46 GMT
-Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
-Server: Apache
 
-(3077 バイトの画像コンテンツ)
+HTTP/1.1 200 OK
+accept-ranges: none
+content-encoding: br
+date: Tue, 01 Jul 2025 08:32:50 GMT
+expires: Tue, 01 Jul 2025 09:26:50 GMT
+cache-control: public, max-age=3600
+age: 1926
+last-modified: Sat, 28 Jun 2025 00:47:12 GMT
+etag: W/"b55394ed2f274eea5d528cf6c91e1dcf"
+content-type: text/html
+vary: Accept-Encoding
+content-length: 26178
+
+[26178 バイトの HTML]
+
+GET /static/css/main.9e7d1ce5.css HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:141.0) Gecko/20100101 Firefox/141.0
+Accept: text/css,*/*;q=0.1
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br, zstd
+
+HTTP/1.1 200 OK
+content-encoding: br
+content-length: 43694
+date: Mon, 30 Jun 2025 21:13:12 GMT
+expires: Mon, 30 Jun 2025 21:47:29 GMT
+cache-control: public, max-age=31536000
+age: 42704
+last-modified: Mon, 30 Jun 2025 00:33:45 GMT
+etag: W/"d4f4d0955482844ad842986a9bcb7e8a"
+content-type: text/css
+vary: Accept-Encoding
+
+[43694 バイトの CSS]
+
+GET /static/js/main.a918a4e7.js HTTP/1.1
+Host: developer.mozilla.org
+…
 ```
+
+TCP 接続の設定は、クライアントとサーバー間の通信においてコストのかかる部分です。{{glossary("TCP slow start")}} とは、接続の持続時間が長いほど、新しく作成された接続よりも高速になることを意味しています。
+HTTP/1.1 では、複数のリクエストとレスポンスで TCP 接続を再利用することができるため、リクエストごとに新しい接続を作成する必要がなくなります。
+しかし、クライアントは、次のリソースをリクエストする前に、それぞれのリソースのダウンロードが完了するまで待つ必要がありました ({{glossary("Head_of_line_blocking", "Head-of-line blocking")}})。
+この問題を回避するため、ほとんどのブラウザーでは、1 つのウェブサイト（または{{glossary("origin", "オリジン")}}）につき最大 6 つの TCP 接続を許可しています。
+6 つの並列接続により、ブラウザーは HTTP/1.1 モデルを使用して複数のリソースを同時に読み取ることができ、パフォーマンスが大幅に向上しました。
 
 HTTP/1.1 は、1997 年 1 月に {{rfc(2068)}} として初版が発行されました。
 
@@ -176,7 +189,6 @@ HTTP/2 プロトコルには、HTTP/1.1 との大きな違いがいくつかあ�
 - テキスト形式ではなく、バイナリー形式のプロトコルです。このハードルにより内容を読んだり手作業で作成したりすることができなくなりましたが、改良された最適化技術が実装できるようになりました。
 - 多重化されたプロトコルです。同じ接続でリクエストを並行して扱うことができ、HTTP/1.x プロトコルの制約を排除しています。
 - ヘッダーを圧縮します。一連のリクエスト内で似たものが存在することが多いため、これはデータ転送の重複やオーバーヘッドを削減します。
-- サーバープッシュと呼ばれる仕組みによって、リクエストより先にサーバーがクライアントのキャッシュにデータを加えることができます。
 
 2015 年 5 月に正式に標準化された HTTP/2 の使用は、2022 年 1 月にピークを迎え、すべてのウェブサイトの 46.9% に達しました（[こちらの統計情報](https://w3techs.com/technologies/details/ce-http2)をご参照ください）。トラフィックの多いウェブサイトは、データ転送のオーバーヘッドとその後の経費を節約するために、最も急速に普及しました。
 
@@ -197,3 +209,16 @@ HTTP の次のメジャーバージョンである HTTP/3 は、以前のバー�
 QUIC は、HTTP 接続の待ち時間を大幅に短縮することを目的に設計されています。HTTP/2 と同様に多重化されたプロトコルですが、HTTP/2 は単一の TCP 接続上で実行するため、TCP 層で処理するパケットロス検出と再送信によってすべてのストリームをブロックする可能性があります。QUIC は {{Glossary("UDP")}} 上で複数のストリームを実行し、ストリームごとに独立してパケットロス検出と再送を実装するために、エラーが発生した場合、そのパケット内のデータがあるストリームだけがブロックされます。
 
 {{RFC("9114")}} を定義し、Chromium（およびその亜種である Chrome や Edge）や Firefox を含む[ほとんどの主要ブラウザーが HTTP/3 に対応](https://caniuse.com/http3)しています。
+
+## 関連情報
+
+- [HTTP/1.x のコネクション管理](/ja/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
+- [プロトコルのアップグレードの仕組み](/ja/docs/Web/HTTP/Guides/Protocol_upgrade_mechanism)
+- [HTTP のリソースと仕様書](/ja/docs/Web/HTTP/Reference/Resources_and_specifications)
+- 用語集:
+  - {{glossary('HTTP')}}
+  - {{glossary('HTTP_2', 'HTTP/2')}}
+  - {{glossary('QUIC')}}
+  - {{glossary('Round Trip Time', 'ラウンドトリップタイム (RTT)')}}
+  - {{glossary('TCP slow start')}}
+  - {{glossary('TCP')}}
