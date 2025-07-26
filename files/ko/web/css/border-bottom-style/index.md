@@ -3,8 +3,6 @@ title: border-bottom-style
 slug: Web/CSS/border-bottom-style
 ---
 
-{{CSSRef}}
-
 **`border-bottom-style`** [CSS](/ko/docs/Web/CSS) 속성은 요소 테두리의 아래쪽 스타일을 지정합니다.
 
 {{InteractiveExample("CSS Demo: border-bottom-style")}}

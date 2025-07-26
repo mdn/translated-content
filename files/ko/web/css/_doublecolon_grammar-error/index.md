@@ -5,8 +5,6 @@ l10n:
   sourceCommit: d6defd737678e99d62bf838ad12eba532567fba5
 ---
 
-{{CSSRef}}
-
 **`::grammar-error`** [CSS](/ko/docs/Web/CSS) [의사 요소](/ko/docs/Web/CSS/Pseudo-elements)는 {{glossary("user agent", "사용자 에이전트")}} 가 문법적으로 옳지 않다고 표시한 텍스트 부분을 나타냅니다.
 
 ## 허용되는 속성

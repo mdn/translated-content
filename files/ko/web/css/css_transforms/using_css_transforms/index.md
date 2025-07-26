@@ -3,8 +3,6 @@ title: CSS 변형 사용하기
 slug: Web/CSS/CSS_transforms/Using_CSS_transforms
 ---
 
-{{CSSRef}}
-
 **CSS 변형**(transform)은 좌표공간을 변형함으로써 일반적인 문서 흐름을 방해하지 않고 콘텐츠의 형태와 위치를 바꿉니다. 본 가이드는 변형 사용법의 기초를 제시합니다.
 
 CSS 변형은 HTML 요소에 선형 아핀 변형(affine linear transformation)을 적용하는 여러 개의 CSS 속성을 조합해 구현합니다. 변형은 평면과 3D 공간에서의 회전, 확대, 이동, 비틀기를 포함합니다.

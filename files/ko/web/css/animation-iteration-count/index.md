@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 34bc6ac7c5d03e5891bf94b0d4ebeccb0e7a29e5
 ---
 
-{{CSSRef}}
-
 **`animation-iteration-count`** [CSS](/ko/docs/Web/CSS) 속성은 애니메이션 시퀀스가 끝나기 전에 재생되는 횟수를 설정합니다.
 
 {{InteractiveExample("CSS Demo: animation-iteration-count")}}

@@ -4,8 +4,6 @@ slug: Glossary/Layout_mode
 original_slug: Web/CSS/Layout_mode
 ---
 
-{{cssref}}
-
 [CSS](/ko/docs/Web/CSS) **레이아웃 모드**, 줄여서 **레이아웃**은 형제(sibling) 및 조상(ancestor) 박스와 상호 작용하는 방식을 기반으로 박스의 위치와 크기를 결정하는 알고리즘입니다. 그 중 몇 가지입니다:
 
 - 블록 레이아웃(_block layout_), 문서 배치를 위해 설계됨. 블록 레이아웃은 요소(element)를 [_float_](/ko/docs/Web/CSS/float) 하거나 여러 단([_multiple columns_](/ko/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts))에 걸쳐 배치하는 기술 같은 문서 중심 기능을 포함합니다.
