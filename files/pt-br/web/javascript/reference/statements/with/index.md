@@ -20,14 +20,14 @@ with (expressão)
 - `expressão`
   - : Adiciona a dada expressão à cadeia de escopo quando estiver avaliando a declaração. O parênteses em volta da expressão é obrigatório.
 - `declaração`
-  - : Qualquer declaração. Para executação multiplas declarações, utilize a declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agrupar estas declarações.
+  - : Qualquer declaração. Para a execução de multiplas declarações, utilize a declaração em [bloco](/pt-BR/docs/Web/JavaScript/Reference/Statements/block) ({ ... }) para agrupar estas declarações.
 
 ## Descrição
 
-JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frenet dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
+JavaScript procura por um nome não qualificado procurando uma cadeia de escopo associada à execução do contexto do script ou função contendo um nome não qualificado. A declaração 'with' adiciona o dado objeto à frente dessa cadeia de escopo durante a validação desse corpo de declarações. Se um nome não qualificado usado no corpo for igual ao de uma propriedade na cadeia de escopo, então o nome ficará ligado à propriedade e ao objeto contendo a propriedade. Senão, um {{jsxref("ReferenceError")}} será invocado.
 
 > [!NOTE]
-> Usar `with` não é recomendado, e está probido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
+> Usar `with` não é recomendado, e está proibido no [strict mode](/pt-BR/docs/Web/JavaScript/Reference/Strict_mode) do ECMAScript 5. A alternativa recomendada é atribuir o objeto cujas propriedades você quer acessar a uma variável temporária.
 
 ### Pros & contras de perfomance
 
@@ -37,7 +37,7 @@ JavaScript procura por um nome não qualificado procurando uma cadeia de escopo 
 
 ### Contra de ambiguidade
 
-**Contra:** A declaração `with` faz ser difícil para um leitor humano ou compilador JavaScript decidir se um nome não qualificado var se encontrado em uma cadeia de escopo, e também, em qual objeto. Dado o exemplo seguinte:
+**Contra:** A declaração `with` faz ser difícil para um leitor humano ou compilador JavaScript decidir se um nome não qualificado vai ser encontrado em uma cadeia de escopo, e também, em qual objeto. Dado o exemplo seguinte:
 
 ```js
 function f(x, o) {
@@ -47,7 +47,7 @@ function f(x, o) {
 }
 ```
 
-Apenas quando `f` é chamado é `x` ou encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro — apenas resultados inesperados.
+Apenas quando `f` é chamado `x` é encontrado ou não, e se for encontrado, ou em `o` ou (se nenhuma propriedade existir) no objeto de ativação de `f`, onde o nome de `x` é o primeiro argumento formal. Se você esquecer de definir `x` no objeto que você passou como segundo argumento, ou se há algum bug similar ou confusão, você não vai receber um erro — apenas resultados inesperados.
 
 **Contra:** Código utilizando `with` talvez não seja compatível posteriormente, especialmente quando usado com algo que não seja um objeto simples. Considere esse exemplo:
 
