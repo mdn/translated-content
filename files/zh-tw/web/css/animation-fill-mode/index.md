@@ -31,7 +31,7 @@ animation-delay: 1s;
 
 ```html interactive-example
 <section class="flex-column" id="default-example">
-  <div>動畫 <span id="play-status"></span></div>
+  <div>動畫<span id="play-status"></span></div>
   <div id="example-element">選擇一個模式以開始！</div>
 </section>
 ```
@@ -141,9 +141,9 @@ animation-fill-mode: unset;
 - `none`
   - : 動畫在未執行時，不會對目標應用任何樣式。元素將改為使用任何其他應用於其上的 CSS 規則來顯示。這是預設值。
 - `forwards`
-  - : 目標將保留執行期間遇到的最後一個 [keyframe](/zh-TW/docs/Web/CSS/@keyframes) 所設定的計算值。最後一個 keyframe 取決於 {{cssxref("animation-direction")}} 和 {{cssxref("animation-iteration-count")}} 的值：
+  - : 目標將保留執行期間遇到的最後一個[關鍵格](/zh-TW/docs/Web/CSS/@keyframes)所設定的計算值。最後一個關鍵格取決於 {{cssxref("animation-direction")}} 和 {{cssxref("animation-iteration-count")}} 的值：
 
-    | `animation-direction` | `animation-iteration-count` | 遇到的最後一個 keyframe |
+    | `animation-direction` | `animation-iteration-count` | 遇到的最後一個關鍵格 |
     | --------------------- | --------------------------- | ----------------------- |
     | `normal`              | 偶數或奇數                  | `100%` 或 `to`          |
     | `reverse`             | 偶數或奇數                  | `0%` 或 `from`          |
@@ -155,9 +155,9 @@ animation-fill-mode: unset;
     動畫屬性的行為就像被包含在一個設定好的 [`will-change`](/zh-TW/docs/Web/CSS/will-change) 屬性值中。如果在動畫期間建立了新的堆疊上下文，目標元素在動畫結束後會保留該堆疊上下文。
 
 - `backwards`
-  - : 動畫一旦應用到目標上，就會立即套用第一個相關 [keyframe](/zh-TW/docs/Web/CSS/@keyframes) 中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的 keyframe 取決於 {{cssxref("animation-direction")}} 的值：
+  - : 動畫一旦應用到目標上，就會立即套用第一個相關[關鍵格](/zh-TW/docs/Web/CSS/@keyframes)中定義的值，並在 {{cssxref("animation-delay")}} 期間保留此狀態。第一個相關的關鍵格取決於 {{cssxref("animation-direction")}} 的值：
 
-    | `animation-direction`            | 第一個相關的 keyframe |
+    | `animation-direction`            | 第一個相關的關鍵格 |
     | -------------------------------- | --------------------- |
     | `normal` 或 `alternate`          | `0%` 或 `from`        |
     | `reverse` 或 `alternate-reverse` | `100%` 或 `to`        |
