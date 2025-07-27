@@ -16,7 +16,7 @@ l10n:
 ```
 
 ```html interactive-example
-<p lang="zh_Hant">
+<p lang="zh-Hant">
   在公路旅行和長途通勤時聽音樂不是問題，但在開車時戴耳機並不是最好的選擇。
 </p>
 
