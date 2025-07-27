@@ -1,8 +1,8 @@
 ---
-title: ホワイトスペースは HTML、 CSS、そして DOM 内でどう扱われるか
+title: ホワイトスペースは HTML、CSS、そして DOM 内でどう扱われるか
 slug: Web/API/Document_Object_Model/Whitespace
 l10n:
-  sourceCommit: afaf3aeeffa8408cf0a8a46c3d8fb0d347aad9f5
+  sourceCommit: a84b606ffd77c40a7306be6c932a74ab9ce6ab96
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -62,7 +62,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 
 ### CSS はホワイトスペースをどのように処理するのか
 
-ほとんどのホワイトスペースは無視されますが、すべてが無視されるわけではありません。先ほどの例では、"Hello" と "World!" の間のホワイトスペースの一つは、ブラウザーでページがレンダリングされたときにまだ存在しています。ブラウザーエンジンには、どのホワイトスペースが有用でどれが不要かを決定する規則があります — これらは、少なくとも [CSS テキストモジュールレベル 3](https://www.w3.org/TR/css-text-3/)、特に [CSS の white-space プロパティ](https://www.w3.org/TR/css-text-3/#white-space-property)と[ホワイトスペースの処理の詳細](https://www.w3.org/TR/css-text-3/#white-space-processing)についての部分で規定されていますが、以下ではより簡単な説明を提供します。
+ほとんどのホワイトスペースは無視されますが、すべてが無視されるわけではありません。先ほどの例では、"Hello" と "World!" の間のホワイトスペースの一つは、ブラウザーでページがレンダリングされたときにまだ存在しています。ブラウザーエンジンには、どのホワイトスペースが有用でどれが不要かを決定する規則があります — これらは、少なくとも [CSS テキストモジュールレベル 3](https://drafts.csswg.org/css-text-3/)、特に [CSS の white-space プロパティ](https://drafts.csswg.org/css-text-3/#white-space-property)と[ホワイトスペースの処理の詳細](https://drafts.csswg.org/css-text-3/#white-space-processing)についての部分で規定されていますが、以下ではより簡単な説明を提供します。
 
 #### 例
 
@@ -92,7 +92,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
 - 1 つのインライン要素（`<span>` で、中に空白と "World!" という語を含む）
 - もう 1 つのテキストノード（タブと空白のみから成る）
 
-このため、[インライン整形コンテキスト](/ja/docs/Web/CSS/Inline_formatting_context)と呼ばれるものを確立します。これは、ブラウザーエンジンが作業を行う存在する可能性のあるレイアウトレンダリングコンテキストの一つです。
+このため、[インライン整形コンテキスト](/ja/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)と呼ばれるものを確立します。これは、ブラウザーエンジンが作業を行う存在する可能性のあるレイアウトレンダリングコンテキストの一つです。
 
 このコンテキストの中では、ホワイトスペース文字の処理は次のように要約されます。
 
@@ -191,7 +191,7 @@ DOM でホワイトスペースを保存することは多くの点で便利で�
    ```html
    <block>⏎⇥</block>
    <block>◦◦Hello◦◦</block>
-   <block>⏎◦◦◦</block>
+   <block>⏎⏎◦◦◦</block>
    <block>◦◦World!◦◦</block>
    <block>◦◦⏎</block>
    ```
@@ -280,7 +280,7 @@ Firefox DevTools の HTML インスペクターではテキストノードを強
 
 この問題を回避する方法は何通りかあります。
 
-水平方向の項目のリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
+水平方向のアイテムのリストを生成するのに、 `inline-block` による解決法よりも[フレックスボックス](/ja/docs/Learn_web_development/Core/CSS_layout/Flexbox)を使用します。これは、あなたに代わってすべてを処理するもので、間違いなく望ましい解決策です。
 
 ```css
 ul {
@@ -307,7 +307,7 @@ li {
 }
 ```
 
-または、リスト項目に負のマージンを設定する方法もあります。
+または、リストアイテムに負のマージンを設定する方法もあります。
 
 ```css
 li {
@@ -318,7 +318,7 @@ li {
 }
 ```
 
-また、この問題は、リスト項目をすべてソースの同じ行に配置し、空白のノードが最初に作成されないようにすることで解決することもできます。
+また、この問題は、リストアイテムをすべてソースの同じ行に配置し、空白のノードが最初に作成されないようにすることで解決することもできます。
 
 ```html-nolint
 <li></li><li></li><li></li><li></li><li></li>
@@ -349,46 +349,44 @@ li {
 /**
  * ノードのテキスト内容が完全に空白であるか判断
  *
- * @param nod  CharacterData インターフェイスを実装したノード
- *             (例: Text, Comment, CDATASection ノード)
- * @return     nod のテキスト内容がすべてホワイトスペースであれば true
- *             それ以外は false
+ * @param nod  `CharacterData` インターフェイスを実装したノード
+ *             （すなわち `Text`, `Comment`, `CDATASection` ノード）
+ * @return     `nod` のテキスト内容がすべてホワイトスペースであれば `true`
+ *             それ以外は `false`
  */
-function is_all_ws(nod) {
+function isAllWs(nod) {
   return !/[^\t\n\r ]/.test(nod.textContent);
 }
 
 /**
  * 反復処理関数がノードを無視するべきかどうか判断
  *
- * @param nod  DOM1 の Node インターフェイスを実装したノード
- * @return     ノードが次のいずれかであれば true:
- *                1) すべてホワイトスペースである Text ノード
- *                2) Comment ノード
- *             それ以外は false
+ * @param nod  DOM1 の `Node` インターフェイスを実装したノード
+ * @return     ノードが次のいずれかであれば `true`
+ *                1) すべてホワイトスペースである `Text` ノード
+ *                2) `Comment` ノード
+ *             それ以外は `false`
  */
-
-function is_ignorable(nod) {
+function isIgnorable(nod) {
   return (
     nod.nodeType === 8 || // コメントノード
-    (nod.nodeType === 3 && is_all_ws(nod))
+    (nod.nodeType === 3 && isAllWs(nod))
   ); // 全てホワイトスペースのテキストノード
 }
 
 /**
- * 完全に空白あるいはコメントのノードを無視するようにした previousSibling
- * (通常 previousSibling はすべての DOM ノードが持つプロパティのことで、親が
+ * 完全に空白あるいはコメントのノードを無視するようにした `previousSibling`
+ * (通常 `previousSibling` はすべての DOM ノードが持つプロパティのことで、親が
  * 同じで参照ノードの直前にある兄弟ノードを表します)
  *
  * @param sib  参照ノード
- * @return     次のいずれか:
- *               1) is_ignorable 検査で無視できないと判断された sib に
- *                  最も近い前方の兄弟ノード、あるいは
- *               2) 該当するノードがなければ null
+ * @return     `sib` に最も近い前の兄弟ノードで、
+ *             `isIgnorable` 検査で無視できないと判断されたもの、
+ *             または該当するノードがなければ `null`
  */
-function node_before(sib) {
+function nodeBefore(sib) {
   while ((sib = sib.previousSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -396,17 +394,16 @@ function node_before(sib) {
 }
 
 /**
- * 完全に空白あるいはコメントのノードを無視するようにした nextSibling
+ * 完全に空白あるいはコメントのノードを無視するようにした `nextSibling`
  *
  * @param sib  参照ノード
- * @return     次のいずれか:
- *               1) is_ignorable 検査で無視できないと判断された sib に
- *                  最も近い後方の兄弟ノード、あるいは
- *               2) 該当するノードがなければ null
+ * @return     `sib` に最も近い次の兄弟ノードで、
+ *             `isIgnorable` 検査で無視できないと判断されたもの、
+ *             または該当するノードがなければ `null`
  */
-function node_after(sib) {
+function nodeAfter(sib) {
   while ((sib = sib.nextSibling)) {
-    if (!is_ignorable(sib)) {
+    if (!isIgnorable(sib)) {
       return sib;
     }
   }
@@ -419,15 +416,14 @@ function node_after(sib) {
  * 直接含まれる最後のノードを表します)
  *
  * @param sib  参照ノード
- * @return     次のいずれか:
- *               1) is_ignorable 検査で無視できないと判断された sib の
- *                  最後の子供ノード、あるいは
- *               2) 該当するノードがなければ null
+ * @return     `sib` の最後の子ノードで、
+ *             `isIgnorable` 検査で無視できないと判断されたもの、
+ *             または該当するノードがなければ `null`
  */
-function last_child(par) {
+function lastChild(par) {
   let res = par.lastChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.previousSibling;
@@ -436,18 +432,17 @@ function last_child(par) {
 }
 
 /**
- * 完全に空白あるいはコメントのノードを無視するようにした firstChild
+ * 完全に空白あるいはコメントのノードを無視するようにした `firstChild`
  *
  * @param sib  参照ノード
- * @return     次のいずれか:
- *               1) is_ignorable 検査で無視できないと判断された sib の
- *                  最初の子供ノード、あるいは
- *               2) 該当するノードがなければ null
+ * @return     `sib` の最初の子ノードで、
+ *             `isIgnorable` 検査で無視できないと判断されたもの、
+ *             または該当するノードがなければ `null`
  */
-function first_child(par) {
+function firstChild(par) {
   let res = par.firstChild;
   while (res) {
-    if (!is_ignorable(res)) {
+    if (!isIgnorable(res)) {
       return res;
     }
     res = res.nextSibling;
@@ -456,15 +451,14 @@ function first_child(par) {
 }
 
 /**
- * 最初と最後にホワイトスペースを含まず、すべてのホワイトスペースを単一スペースに正規化する
- * ようにした data
- * (通常 data はテキストノードが持つプロパティのことで、ノードのテキストを
- * 表します)
+ * 先頭と末尾に空白を含まず、すべての空白を単一の空白に正規化した
+ * `data` のバージョン。（通常、`data` は、ノードのテキストを付与する
+ * テキストノードのプロパティです。）
  *
  * @param txt  data が返されるべきテキストノード
  * @return     当該テキストノードの内容が与えるホワイトスペースを纏めた文字列
  */
-function data_of(txt) {
+function dataOf(txt) {
   let data = txt.textContent;
   data = data.replace(/[\t\n\r ]+/g, " ");
   if (data[0] === " ") {
@@ -477,17 +471,17 @@ function data_of(txt) {
 }
 ```
 
-## 例
+### 例
 
-次のコードは、上記の関数の使い方を示したものです。これは、ある要素の子（その子はすべて要素）を繰り返し、テキストが `"This is the third paragraph"` であるものを見つけ、 class 属性とその段落の内容を変更するものです。
+次のコードは、上記の関数の使い方を示したものです。これは、ある要素の子（その子はすべて要素）を繰り返し、テキストが `"これは 3 番目の段落です。` であるものを見つけ、 class 属性とその段落の内容を変更するものです。
 
 ```js
-let cur = first_child(document.getElementById("test"));
+let cur = firstChild(document.getElementById("test"));
 while (cur) {
-  if (data_of(cur.firstChild) === "This is the third paragraph.") {
+  if (dataOf(cur.firstChild) === "これは 3 番目の段落です。") {
     cur.className = "magic";
-    cur.firstChild.textContent = "This is the magic paragraph.";
+    cur.firstChild.textContent = "これは magic の段落です。";
   }
-  cur = node_after(cur);
+  cur = nodeAfter(cur);
 }
 ```
