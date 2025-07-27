@@ -1,9 +1,6 @@
 ---
 title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
-page-type: webextension-api
-browser-compat: webextensions.api.action
-sidebar: addonsidebar
 ---
 
 ブラウザツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
