@@ -4,12 +4,12 @@ slug: Mozilla/Add-ons/WebExtensions/API/action
 ---
 
 ブラウザツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
-manifest.jsonの [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
+manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
 
 > [!NOTE]
 > このAPIはManifest V3あるいは以降のバージョンで利用可能です。Manifest V2の {{WebExtAPIRef("browserAction")}} やChromeやSafariでの{{WebExtAPIRef("pageAction")}}APIの代替です。
 
-[browser action](/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) はブラウザツールバーのボタンを指します。
+[browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) はブラウザツールバーのボタンを指します。
 
 ボタンとポップアップの関連付けができます。ウェブページのようにポップアップをHTMLやCSS、JavaScriptで記述できます。ポップアップ内部で動くJavascriptはバックグランドスクリプトと同じWebExtension APIへのアクセスを持ちますが、グローバルコンテキストは現在ブラウザ上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
 ウェブページに作用させたい場合、[messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) を通した操作する必要があります。
@@ -18,7 +18,7 @@ manifest.jsonの [`action`](/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.j
 ポップアップを明示しない場合には、ユーザーがアイコンをクリックしたときに拡張機能に対してイベントが発火されます。
 
 ボタンはコンテキストメニューも持ちます。このメニューには `action` {{WebExtAPIRef("menus.ContextType")}} を利用する {{WebExtAPIRef("menus")}} APIを用いてアイテムの追加が可能です。
- 
+
 `action` APIでは、次のことが可能です。
 
 - {{WebExtAPIRef("action.onClicked")}}を使って、アイコンのクリックをリッスンします。
