@@ -243,7 +243,8 @@ class MyWeakMap {
 
 ### WeakRefs と FinalizationRegistry
 
-> **メモ:** `WeakRef` と `FinalizationRegistry` は、ガベージコレクション機構に直接触れる機会を提供します。実行時の意味づけが完全に保証されていないため、[可能な限り使用しないでください](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#可能な限り避ける)。
+> [!NOTE]
+> `WeakRef` と `FinalizationRegistry` は、ガベージコレクション機構に直接触れる機会を提供します。実行時の意味づけが完全に保証されていないため、[可能な限り使用しないでください](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef#可能な限り避ける)。
 
 オブジェクトを値とする変数はすべて、そのオブジェクトを参照しています。しかし、このような参照は _強い_ ものであり、その存在によってガベージコレクタがそのオブジェクトを収集対象としてマークすることができなくなります。[`WeakRef`](/ja/docs/Web/JavaScript/Reference/Global_Objects/WeakRef) は、オブジェクトへの弱い参照で、オブジェクトをガベージコレクションすることができ、かつオブジェクトが生きている間にそのコンテンツを読むことができるようにします。
 

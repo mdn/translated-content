@@ -5,11 +5,10 @@ l10n:
   sourceCommit: 14515827c44f3cb814261a1c6bd487ae8bfcde1b
 ---
 
-{{CSSRef}}
-
 **`font-palette`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ユーザーエージェントがフォントに使用できる[カラーフォント](https://www.colorfonts.wtf/)に含まれる多くのパレットの一つを指定できます。ユーザーは、 [`@font-palette-values`](/ja/docs/Web/CSS/@font-palette-values) アットルールを使って、パレットの値を上書きしたり、新しいパレットを作成したりすることもできます。
 
-> **メモ:** `font-palette` はフォントに色を付けるときに優先されます。 {{cssxref("color")}} プロパティは、たとえ {{cssxref("important", "!important")}} が指定されていても、フォントパレットを上書きすることはありません。
+> [!NOTE]
+> `font-palette` はフォントに色を付けるときに優先されます。 {{cssxref("color")}} プロパティは、たとえ {{cssxref("important", "!important")}} が指定されていても、フォントパレットを上書きすることはありません。
 
 ## 構文
 

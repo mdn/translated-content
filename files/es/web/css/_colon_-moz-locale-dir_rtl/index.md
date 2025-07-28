@@ -3,7 +3,7 @@ title: :-moz-locale-dir(rtl)
 slug: Web/CSS/:-moz-locale-dir_rtl
 ---
 
-{{Non-standard_header}}{{CSSRef}}
+{{Non-standard_header}}
 
 ## Resumen
 

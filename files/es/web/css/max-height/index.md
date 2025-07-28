@@ -3,8 +3,6 @@ title: max-height
 slug: Web/CSS/max-height
 ---
 
-{{CSSRef}}
-
 ### Resumen
 
 La propiedad `max-height` se utiliza para definir la altura máxima de un elemento dado. Impide que el valor de la {{ Cssxref("height", "altura") }} pueda llegar a ser más grande que la de `max-height`.

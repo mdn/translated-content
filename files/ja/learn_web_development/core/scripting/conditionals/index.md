@@ -106,7 +106,8 @@ if (shoppingDone === true) {
 
 このコードは常に `shoppingDone` 変数が `false` なので、かわいそうな子供は追加のお小遣いを受け取れません。両親が子供がお使いを完了した場合に `shoppingDone` 変数を `true` にセットしてあげるかどうかはプログラム次第です（つまり私たち次第です。）
 
-> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)が公開されています。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。）
+> [!NOTE]
+> [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/allowance-updater.html)が公開されています。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/allowance-updater.html)でも確認できます。）
 
 ### else if
 
@@ -161,7 +162,8 @@ function setWeather() {
 3. この関数が実行されると、まずは `choice` という変数に、`<select>` 要素の現在選択されている値を入れます。そして、条件文を使い、 `choice` の値に応じた文字列が段落に設定されます。最初の `if () { }` のブロックを除いて、どのように `else if () { }` のブロックで判定しているか注目してください。
 4. 一番下の `else { }` 選択肢は、「最後の手段」となるオプションで、この中のコードは、どの条件にも一致しなかった場合（`true` とならなかった場合）に実行されます。今回の場合選択されていない場合に、段落を空にしています。何も選択されていない場合というのは、ユーザーが再度最初に表示されていた「--選択してください--」というオプションを選んだ場合です。
 
-> **メモ:** [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html)が公開されています。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。）
+> [!NOTE]
+> [GitHub で上記のコードの完全なバージョン](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-else-if.html)が公開されています。（[ライブ実行](https://mdn.github.io/learning-area/javascript/building-blocks/simple-else-if.html)でも確認できます。）
 
 ### 比較演算子に関するメモ
 
@@ -366,7 +368,8 @@ function setWeather() {
 
 {{ EmbedLiveSample('A_switch_example', '100%', 100, "", "") }}
 
-> **メモ:** [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html)ことができます。（[実行可能なデモ](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。）
+> [!NOTE]
+> [このサンプルを GitHub で見る](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/simple-switch.html)ことができます。（[実行可能なデモ](https://mdn.github.io/learning-area/javascript/building-blocks/simple-switch.html)もあります。）
 
 ## 三項演算子
 

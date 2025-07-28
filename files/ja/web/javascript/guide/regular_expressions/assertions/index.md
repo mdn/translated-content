@@ -108,7 +108,8 @@ console.log(text.match(regexpFoxQuality));
 
 ### その他のアサーション
 
-> **メモ:** `?` の文字は数量子としても使用されます。
+> [!NOTE]
+> `?` の文字は数量子としても使用されます。
 
 <table class="standard-table">
   <thead>

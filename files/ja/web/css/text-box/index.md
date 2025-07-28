@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 95b3a7c3d7c854feddb769922818f9d5a3abd500
 ---
 
-{{CSSRef}}
-
 **`text-box`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 {{cssxref("text-box-trim")}} および {{cssxref("text-box-edge")}} プロパティに対応する一括指定プロパティで、テキスト要素のブロックコンテナーのブロック先頭端とブロック末尾端から切り取る空間の大きさを指定します。
 
 ## 構成要素のプロパティ

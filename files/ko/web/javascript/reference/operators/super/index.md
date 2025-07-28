@@ -309,7 +309,7 @@ class Extended extends Base {
 Extended.getName(); // "Extended" 로그
 ```
 
-이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_properties#private_static_fields)과 상호 작용할 때 특히 중요합니다.
+이는 [정적 프라이빗 속성](/ko/docs/Web/JavaScript/Reference/Classes/Private_elements#private_static_fields)과 상호 작용할 때 특히 중요합니다.
 
 ### super.prop을 설정하면 this 속성이 대신 설정됩니다
 

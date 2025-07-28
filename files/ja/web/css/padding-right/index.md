@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fab1f9cef824066b3ce6a5b25f6c6db539f5d042
 ---
 
-{{CSSRef}}
-
 **`padding-right`** は [CSS](/ja/docs/Web/CSS) のプロパティで、要素の[パディング領域](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#パディング領域)における右側の幅を設定します。
 
 {{InteractiveExample("CSS デモ: padding-right")}}
@@ -56,7 +54,8 @@ padding-right: 0;
 
 要素のパディング領域とは、コンテンツと境界との間の空間のことです。
 
-> **メモ:** {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
+> [!NOTE]
+> {{cssxref("padding")}} プロパティは、単一の宣言で要素の四方のパディングをすべて設定することができます。
 
 ## 構文
 

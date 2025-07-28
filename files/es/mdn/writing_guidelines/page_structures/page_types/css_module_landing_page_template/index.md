@@ -7,7 +7,8 @@ l10n:
 
 {{MDNSidebar}}
 
-> **Nota:** _Recuerde eliminar este bloque de notas antes de publicar._
+> [!NOTE]
+> _Recuerde eliminar este bloque de notas antes de publicar._
 >
 > ---
 >

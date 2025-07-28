@@ -3,8 +3,6 @@ title: width
 slug: Web/CSS/width
 ---
 
-{{CSSRef}}
-
 La propiedad [CSS](/es/docs/Web/CSS) **`width`** establece el ancho de un elemento.
 Por defecto, establece el ancho del [área de contenido](/es/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model#content_area),
 pero si el {{cssxref("box-sizing")}} se establece en `border-box`,

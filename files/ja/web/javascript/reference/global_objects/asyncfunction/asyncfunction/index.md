@@ -31,7 +31,8 @@ AsyncFunction(arg0, arg1, functionBody)
 AsyncFunction(arg0, arg1, /* … ,*/ argN, functionBody)
 ```
 
-> **メモ:** `AsyncFunction()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `AsyncFunction` インスタンスを生成します。
+> [!NOTE]
+> `AsyncFunction()` は [`new`](/ja/docs/Web/JavaScript/Reference/Operators/new) があってもなくても呼び出すことができます。どちらも新しい `AsyncFunction` インスタンスを生成します。
 
 ### 引数
 

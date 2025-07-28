@@ -2,10 +2,8 @@
 title: background_color
 slug: Web/Progressive_web_apps/Manifest/Reference/background_color
 l10n:
-  sourceCommit: 05187b0fecf39b9176d4a101623589309cf44dd0
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
-
-{{QuickLinksWithSubpages("/ja/docs/Web/Progressive_web_apps/Manifest/Reference")}}
 
 `background_color` メンバーは、スタイルシートが読み込まれる前に表示するアプリケーションページの背景色を定義します。
 この色は、スタイルシートが読み込まれる前にマニフェストが利用可能な場合、ショートカットの背景色を描画するために、ユーザーエージェントが使用します。

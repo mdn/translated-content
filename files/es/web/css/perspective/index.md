@@ -3,7 +3,7 @@ title: perspective
 slug: Web/CSS/perspective
 ---
 
-{{ CSSRef("CSS Transforms") }} {{ SeeCompatTable() }}
+{{ SeeCompatTable() }}
 
 ## Resumen
 

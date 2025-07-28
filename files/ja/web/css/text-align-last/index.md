@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aac4966bd12c77281f9374bbfaf4e17e2680ac3b
 ---
 
-{{CSSRef}}
-
 **`text-align-last`** は [CSS](/ja/docs/Web/CSS) のプロパティで、ブロックの最後の行、あるいは強制的な改行の直前の行をどのように配置するかを設定します。
 
 {{InteractiveExample("CSS デモ: text-align-last")}}

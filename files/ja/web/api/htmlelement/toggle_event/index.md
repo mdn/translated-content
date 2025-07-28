@@ -12,7 +12,8 @@ l10n:
 - そのポップオーバー要素が非表示状態から表示状態に遷移した場合、`event.oldState` プロパティは `closed` に、`event.newState` プロパティは `open` にそれぞれ設定されます。
 - そのポップオーバー要素が表示状態から非表示状態に遷移した場合、 `event.oldState` は `open` に、 `event.newState` は `closed` になります。
 
-> **メモ:** `toggle` イベントは {{htmlelement("details")}} 要素で発行された場合、異なる形で動作します。この場合、ポップオーバーとは関連しておらず、`<details>` 要素の `open`/`closed` 状態が切り替わったときに発行されます。詳しくは `HTMLDetailsElement` の {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} イベントのページを参照してください。
+> [!NOTE]
+> `toggle` イベントは {{htmlelement("details")}} 要素で発行された場合、異なる形で動作します。この場合、ポップオーバーとは関連しておらず、`<details>` 要素の `open`/`closed` 状態が切り替わったときに発行されます。詳しくは `HTMLDetailsElement` の {{domxref("HTMLDetailsElement.toggle_event", "toggle")}} イベントのページを参照してください。
 
 ## 構文
 
