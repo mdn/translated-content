@@ -85,7 +85,6 @@ caption {
   - : 包含空格分隔的字符串列表，每个字符串与为该表格单元格提供标题的 {{HTMLElement("th")}} 元素的 `id` 属性相对应。
 - `rowspan`
   - : 包含一个非负整数值，表示数据单元格跨越或延伸了多少行。默认值为 `1`；如果设置为 `0`，则单元格将一直延伸到表格分组部分（{{HTMLElement("thead")}}、{{HTMLElement("tbody")}}、{{HTMLElement("tfoot")}}，即使是隐式定义）的末尾。高于 `65534` 的值会被截断为 `65534`。
- 
 ### 已弃用属性
 
 以下属性已被弃用，不应再使用。下文记录了这些属性，供更新现有代码时参考，也仅供参考。
@@ -119,7 +118,6 @@ caption {
 
 - `width` {{deprecated_inline}}
   - : 定义推荐的数据单元格宽度。由于该属性已被弃用，请使用 {{cssxref("width")}} CSS 属性代替。
- 
 ## 使用说明
 
 - `<td>` 只可在 {{HTMLElement("tr")}} 元素中使用。
@@ -293,7 +291,7 @@ table {
 
 #### HTML
 
-为了改善[上一示例](#行列扩展)的{{Glossary("accessibility", "无障碍")}}效果，并使屏幕阅读器等能够说出与每个数据单元格相关的标题，可以引入 [`headers`](#headers) 属性和 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。与“ABC”数据单元格（即字母 “A”、“B”和“C”）相关的每个行标题单元格（{{HTMLElement("th")}} 元素）都有一个唯一的标识符，即 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。然后，“ABC”数据单元格（`<td>` 元素）在 [`headers`](#headers) 属性的空格分隔列表中使用这些 `id` 值。
+为了改善[上一示例](#行列扩展)的{{Glossary("accessibility", "无障碍")}}效果，并使屏幕阅读器等能够说出与每个数据单元格相关的标题，可以引入 [`headers`](#headers) 属性和 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。与“ABC”数据单元格（即字母“A”、“B”和“C”）相关的每个行标题单元格（{{HTMLElement("th")}} 元素）都有一个唯一的标识符，即 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性。然后，“ABC”数据单元格（`<td>` 元素）在 [`headers`](#headers) 属性的空格分隔列表中使用这些 `id` 值。
 
 > [!NOTE]
 > 建议为 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性使用更具描述性和更有用的值。文档中的每个 `id` 都必须是唯一的。在本例中，`id` 值为单字符，以保持对 [`headers`](#headers) 属性概念的关注。
