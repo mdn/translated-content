@@ -62,9 +62,9 @@ original_slug: Web/HTML/Global_attributes
 - [`itemtype`](/ko/docs/Web/HTML/Global_attributes/itemtype)
   - : 데이터 구조에서 `itemprop`s (item properties)을 정의하는 데 사용할 단어의 URL을 지정합니다. [`itemscope`](/ko/docs/Web/HTML/Reference/Global_attributes/itemscope)은 데이터 구조 내에서 `itemtype`에 의해 설정된 어휘가 활성화되는 범위를 설정하는 데 사용됩니다.
 - [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang)
-  - : 요소의 언어를 정의하는데 도움을 줍니다: 편집할 수 없는 요소가 있는 언어 또는 사용자가 요소를 편집할 수 있는 언어를 정의하는 데 도움이 됩니다(the language that non-editable elements are in, or the language that editable elements should be written in by the user). 이 특성은 언어 식별 태그([_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt))에 정의된 형식의 하나의 "언어 태그"(하이픈으로 구분된 "언어 하위 태그(language subtags)"로 구성된)를 포함합니다. `xml:lang` 은 이보다 우선합니다.
+  - : 요소의 언어를 정의하는데 도움을 줍니다: 편집할 수 없는 요소가 있는 언어 또는 사용자가 요소를 편집할 수 있는 언어를 정의하는 데 도움이 됩니다. 이 특성은 언어 식별 태그([_Tags for Identifying Languages (BCP47)_](https://www.ietf.org/rfc/bcp/bcp47.txt))에 정의된 형식의 하나의 "언어 태그"(하이픈으로 구분된 "언어 하위 태그(language subtags)"로 구성된)를 포함합니다. `xml:lang` 은 이보다 우선합니다.
 - [`part`](/ko/docs/Web/HTML/Reference/Global_attributes/part)
-  - : A space-separated list of the part names of the element. Part names allows CSS to select and style specific elements in a shadow tree via the {{CSSxRef("::part")}} pseudo-element.
+  - : 요소의 부분(part) 이름 목록(공백으로 구분됨). 부분 이름은 CSS가 그림자 트리 내에서 특정 요소를 선택하고 스타일링하기 위해 [::part](/ko/docs/Web/CSS/::part) 가상 요소를 통해 사용할 수 있습니다..
 - [`slot`](/ko/docs/Web/HTML/Reference/Global_attributes/slot)
   - : 요소에 [shadow DOM](/ko/docs/Web/API/Web_components/Using_shadow_DOM)의 shadow tree에 있는 슬롯을 할당합니다: `slot` 특성을 가진 요소는 [`name`](/ko/docs/Web/HTML/Reference/Elements/slot#name) 특성의 값이 해당 `slot` 특성의 값과 일치하는 {HTMLElement("slot")}} 요소가 생성한 슬롯에 할당됩니다.
 - [`spellcheck`](/ko/docs/Web/HTML/Reference/Global_attributes/spellcheck)
@@ -72,11 +72,10 @@ original_slug: Web/HTML/Global_attributes
 - [`style`](/ko/docs/Web/HTML/Reference/Global_attributes/style)
   - : 요소에 적용할 [CSS](/ko/docs/Web/CSS) 스타일 선언을 담습니다. 단, 스타일은 별도 파일에 정의하는 것이 추천하는 방식임을 유의하세요. 이 특성과 {{HTMLElement("style")}} 요소는 테스트 등을 위한 빠른 스타일링이 주 용도입니다.
 - [`tabindex`](/ko/docs/Web/HTML/Reference/Global_attributes/tabindex)
-  - : An integer attribute indicating if the element can take input focus (is _focusable_), if it should participate to sequential keyboard navigation, and if so, at what position. It can takes several values:
-    - a _negative value_ means that the element should be focusable, but should not be reachable via sequential keyboard navigation;
-    - `0` means that the element should be focusable and reachable via sequential keyboard navigation, but its relative order is defined by the platform convention;
-    - a _positive value_ means that the element should be focusable and reachable via sequential keyboard navigation; the order in which the elements are focused is the increasing value of the [**tabindex**](#tabindex). If several elements share the same tabindex, their relative order follows their relative positions in the document.
-
+  - : 정수형 속성으로, 해당 요소가 입력 포커스를 받을 수 있는지(_포커스 가능 여부_), 순차적 키보드 탐색에 참여해야 하는지, 그리고 참여한다면 어떤 위치에서 참여해야 하는지를 나타냅니다. 이 속성은 여러 값을 가질 수 있습니다.
+    - _부정값(negative value)_: 요소는 포커스를 받을 수 있지만, 순차적 키보드 네비게이션으로는 접근할 수 없습니다.
+    - `0`: 요소는 포커스를 받을 수 있으며, 순차적인 키보드 네비게이션을 통해 접근 가능합니다. 이 순서는 플랫폼의 관습에 따라 정의됩니다.
+    - _양수값(positive value)_: 요소는 포커스를 받을 수 있으며, 순차적인 키보드 네비게이션을 통해 접근 가능함을 나타냅니다. 그 상대적 순서는 속성의 값으로 정의되며, [**tabindex**](#tabindex)의 숫자 순서대로 포커스를 이동합니다. 여러 요소가 동일한 tabindex 값을 가질 경우, 문서 내에서의 요소의 상대적 위치에 따라 결정됩니다.
 - [`title`](/ko/docs/Web/HTML/Reference/Global_attributes/title)
   - : 요소에 대한 추가 정보를 제공하는 텍스트입니다. 사용자에게는 보통 툴팁으로서 보여집니다.
 - [`translate`](/ko/docs/Web/HTML/Reference/Global_attributes/translate) {{experimental_inline}}
