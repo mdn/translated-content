@@ -3,10 +3,10 @@ title: "DOMRect: fromRect() 静的メソッド"
 short-title: fromRect()
 slug: Web/API/DOMRect/fromRect_static
 l10n:
-  sourceCommit: a0f6bf6f7d148f368f6965255058df1ed1f43839
+  sourceCommit: 3e543cdfe8dddfb4774a64bf3decdcbab42a4111
 ---
 
-{{APIRef("Geometry Interfaces")}}
+{{APIRef("Geometry Interfaces")}}{{AvailableInWorkers}}
 
 **`fromRect()`** は {{domxref("DOMRect")}} オブジェクトの静的メソッドで、新しい `DOMRect` オブジェクトを指定した位置と寸法で作成します。
 
