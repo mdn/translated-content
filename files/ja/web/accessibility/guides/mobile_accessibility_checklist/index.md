@@ -26,7 +26,7 @@ l10n:
 
 - 全てのアクティブ化可能要素はフォーカス可能でなければなりません。
   - リンク、ボタン、フォームフィールドのような標準コントロールは、既定でフォーカス可能です。
-  - 標準外のコントロールには適切な [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、例えば、`button`、`link`、`checkbox` などが割り当てられていなければなりません。。
+  - 標準外のコントロールには適切な [ARIA ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)、例えば、`button`、`link`、`checkbox` などが割り当てられていなければなりません。
 
 - フォーカスは、論理的な順序と一貫した方法で扱われるべきです。
 

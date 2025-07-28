@@ -1,106 +1,83 @@
 ---
-title: 理解邊界重疊的原因
+title: 精通外距摺疊
 slug: Web/CSS/CSS_box_model/Mastering_margin_collapsing
+l10n:
+  sourceCommit: c9fc9aa7a65c5109e64c0f7b6d9e732dd812973f
 ---
 
-當一個 Block 的 [下邊界範圍](/zh-TW/docs/Web/CSS/margin-bottom) ( margin-bottom ) 和一個 Block 的 [上邊界範圍](/zh-TW/docs/Web/CSS/margin-top) ( margin-top ) 都有設定時只會留下最大那個，這種情況我們稱為**邊界重疊** ( margin collapsing )。請留意設定了 float 或[絕對定位](/zh-TW/docs/Web/CSS/position#absolute)的元件並不會產生邊界重疊。
+區塊的[上](/zh-TW/docs/Web/CSS/margin-top)外距和[下](/zh-TW/docs/Web/CSS/margin-bottom)外距有時會合併（摺疊）成一個單一外距，其大小為個別外距中最大的那個（如果相等，則為其中一個的大小），這種行為稱為**外距摺疊**。請注意，[浮動](/zh-TW/docs/Web/CSS/float)和[絕對定位](/zh-TW/docs/Web/CSS/position#絕對定位)元素的外距永不摺疊。
 
-有三個標準情況會形成邊界重疊：
+外距摺疊發生在三種基本情況下：
 
-- 同一層的相鄰
-  - : 兩個相鄰的元素邊界就會發生重疊，除非後者有加上 clear-fix。例如
+- 相鄰的同層級元素
+  - : 相鄰同層級元素的外距會摺疊（除非後面的同層級元素需要[清除](/zh-TW/docs/Web/CSS/clear)浮動）。
+- 沒有內容分隔父元素和後代元素
+  - : 父區塊與其後代元素之間的垂直外距可以摺疊。當它們之間沒有任何內容分隔時，就會發生這種情況。具體來說，這發生在兩種主要情況下：
+    - 父元素的 {{cssxref("margin-top")}} 會與其第一個在流中的後代元素的 {{cssxref("margin-top")}} 摺疊，除非父元素有 {{cssxref("border-top")}}、{{cssxref("padding-top")}}、包含任何行內內容（例如文字），或已套用 [_clearance_](/zh-TW/docs/Web/CSS/clear)。
+    - 父元素的 {{cssxref("margin-bottom")}} 會與其最後一個在流中的後代元素的 {{cssxref("margin-bottom")}} 摺疊，除非父元素有已定義的 {{cssxref("height")}} 或 {{cssxref("min-height")}}、{{cssxref("border-bottom")}} 或 {{cssxref("padding-bottom")}}。在這兩種情況下，在父元素上建立一個新的[區塊格式化上下文](/zh-TW/docs/Web/CSS/CSS_display/Block_formatting_context)也會防止其外距與其子元素的外距摺疊。
+- 空區塊
+  - : 如果沒有邊框、內距、行內內容、{{cssxref("height")}} 或 {{cssxref("min-height")}} 來分隔一個區塊的 {{cssxref("margin-top")}} 和其 {{cssxref("margin-bottom")}}，那麼它的上外距和下外距就會摺疊。
 
-    ```html
-    <style>
-      p:nth-child(1) {
-        margin-bottom: 13px;
-      }
-      p:nth-child(2) {
-        margin-top: 87px;
-      }
-    </style>
+一些注意事項：
 
-    <p>下邊界範圍會...</p>
-    <p>...跟這個元素的上邊界範圍重疊。</p>
-    ```
+- 當上述情況結合時，會發生更複雜的外距摺疊（超過兩個外距）。
+- 這些規則也適用於零外距，所以無論父元素的外距是否為零，後代元素的外距最終都會根據上述規則跑到父元素外面。
+- 當涉及負外距時，摺疊後的外距大小是最大的正外距和最小的（最負的）負外距的總和。
+- 當所有外距都是負值時，摺疊後的外距大小是最小的（最負的）那個外距。這適用於相鄰元素和巢狀元素。
+- 外距摺疊只與垂直方向有關。
+- 在 `display` 設定為 `flex` 或 `grid` 的容器中，外距不會摺疊。
 
-    如果邊界會合併的的話，理所當然會認為上例中的上下兩個元素會合成一個 100px 的邊界範圍。
+## 範例
 
-    但其實會發生重疊，而且只會留下最大的邊界範圍，以此例子來說，邊界範圍就是 87px。
+### HTML
 
-- 父元素與第一個/最後一個子元素
-  - : 如果第一個子元素跟父元素的上邊界範圍 ( margin-top ) 貼在一起，也會發生邊界重疊的情況。除非父元素有設定邊框 ( border ) 、 內距 ( padding )、內容設定為 inline 或是有加上 clear-fix，這些都會隔開子元素和父元素的屬性。
+```html
+<p>此段落的下外距被摺疊…</p>
+<p>…與此段落的上外距一起，產生了 <code>1.2rem</code> 的間距。</p>
 
-    最後一個子元素也是，但是與父元素的下邊界範圍 ( margin-bottom ) 更容易被隔開，因為父元素可以設定這些屬性。例如：
+<div>
+  這個父元素包含兩個段落！
+  <p>此段落與上方文字之間有 <code>.4rem</code> 的外距。</p>
+  <p>我的下外距與父元素摺疊，產生了 <code>2rem</code> 的下外距。</p>
+</div>
 
-    ```html
-    <style type="text/css">
-      section {
-        margin-top: 13px;
-        margin-bottom: 87px;
-      }
+<p>我在上方元素的下方 <code>2rem</code> 處。</p>
+```
 
-      header {
-        margin-top: 87px;
-      }
+### CSS
 
-      footer {
-        margin-bottom: 13px;
-      }
-    </style>
+```css
+div {
+  margin: 2rem 0;
+  background: lavender;
+}
 
-    <section>
-      <header>上邊界重疊是 87</header>
-      <footer>下邊界重疊還是 87 不能再高了</footer>
-    </section>
-    ```
+p {
+  margin: 0.4rem 0 1.2rem 0;
+  background: yellow;
+}
+```
 
-- 空的元素
-  - : 當同一個元素上邊界範圍可以直接貼到下邊界範圍時，也會發生邊界重疊。這種情況會發生在一個元素完全沒有設定邊框 ( border ) 、 內距 ( padding )、高度 ( height ) 、最小高度 ( min-height ) 、最大高度 ( max-height ) 、內容設定為 inline 或是加上 clear-fix 的時候。例如：
+### 結果
 
-    ```html
-    <style>
-      p {
-        margin: 0px;
-      }
-      div {
-        margin-top: 13px;
-        margin-bottom: 87px;
-      }
-    </style>
-
-    <p>下邊界範圍是 87</p>
-    <div></div>
-    <p>...上邊界範圍也是 87。</p>
-    ```
-
-上面這些情況是會同時發生的，那時邊界重疊的原因又更複雜了。
-
-比較特別的是，當計算的時候某些邊界範圍是負數，邊界重疊的結果會取最大值和最小值相加。舉例來說如果 -13px、8px 和 100px 疊在一起，邊界範圍的計算方法會是 100px - 13px 也就是 87px。
-
-以上這些內容都是發生在 Block-Level 的元素，設定 floating 和 absolutely positioned 的元素完全不用擔心邊界重疊的計算。
+{{EmbedLiveSample('範例', 'auto', 350)}}
 
 ## 參見
 
-- [CSS Reference](/zh-TW/docs/Web/CSS/Reference)
-- CSS 重要概念：
+- CSS 關鍵概念：
   - [CSS 語法](/zh-TW/docs/Web/CSS/CSS_syntax/Syntax)
-  - [@ 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
-  - [註釋](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
-  - [優先級](/zh-TW/docs/Web/CSS/Specificity)
+  - [At 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)
+  - [註解](/zh-TW/docs/Web/CSS/CSS_syntax/Comments)
+  - [權重](/zh-TW/docs/Web/CSS/CSS_cascade/Specificity)
   - [繼承](/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance)
   - [盒模型](/zh-TW/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)
-  - [佈局模式](/zh-TW/docs/Web/CSS/Layout_mode)
-  - [視覺格式化模型](/zh-TW/docs/Web/CSS/Visual_formatting_model)
-  - [外邊距合併](/zh-TW/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
+  - [排版模式](/zh-TW/docs/Glossary/Layout_mode)
+  - [視覺化格式模型](/zh-TW/docs/Web/CSS/CSS_display/Visual_formatting_model)
   - 值
-    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/initial_value)
-    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/computed_value)
-    - [解析值](/zh-TW/docs/Web/CSS/resolved_value)
-    - [指定值](/zh-TW/docs/Web/CSS/CSS_cascade/specified_value)
-    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/used_value)
-    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/actual_value)
-
-  - [特性值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
+    - [初始值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#初始值)
+    - [計算值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#計算值)
+    - [應用值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#應用值)
+    - [實際值](/zh-TW/docs/Web/CSS/CSS_cascade/Value_processing#實際值)
+  - [值定義語法](/zh-TW/docs/Web/CSS/CSS_Values_and_Units/Value_definition_syntax)
   - [簡寫屬性](/zh-TW/docs/Web/CSS/CSS_cascade/Shorthand_properties)
-  - {{glossary("replaced elements", "可置換元素")}}
+  - {{glossary("Replaced elements", "替換元素")}}
