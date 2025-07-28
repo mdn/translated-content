@@ -4,7 +4,7 @@ slug: Mozilla/Add-ons/WebExtensions/API/action
 ---
 
 ブラウザツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
-manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
+manifest.json の [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
 
 > [!NOTE]
 > このAPIはManifest V3あるいは以降のバージョンで利用可能です。Manifest V2の {{WebExtAPIRef("browserAction")}} やChromeやSafariでの{{WebExtAPIRef("pageAction")}}APIの代替です。
