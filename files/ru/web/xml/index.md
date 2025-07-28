@@ -1,5 +1,5 @@
 ---
-title: "XML: Extensible Markup Language"
+title: "XML: Расширяемый язык разметки"
 short-title: XML
 slug: Web/XML
 ---
