@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`@namespace`** 是一個 [at 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)，用於定義要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespace)。
+**`@namespace`** 是一個用於定義要在 [CSS](/zh-TW/docs/Glossary/CSS) [樣式表](/zh-TW/docs/Web/API/StyleSheet)中使用的 XML [命名空間](/zh-TW/docs/Glossary/Namespace)的 [at 規則](/zh-TW/docs/Web/CSS/CSS_syntax/At-rule)。
 
 {{InteractiveExample("CSS Demo: @namespace", "tabbed-shorter")}}
 
@@ -62,7 +62,7 @@ svg|a {
 在 HTML 中，已知的[外部元素](https://html.spec.whatwg.org/multipage/syntax.html#foreign-elements)會被自動分配命名空間。這意味著即使文件中沒有任何 `xmlns` 屬性，HTML 元素的行為也會像它們在 XHTML 命名空間（`http://www.w3.org/1999/xhtml`）中一樣，而 [`<svg>`](/zh-TW/docs/Web/SVG/Reference/Element/svg) 和 [`<math>`](/zh-TW/docs/Web/MathML/Reference/Element/math) 元素將被分配到它們各自的命名空間（分別為 `http://www.w3.org/2000/svg` 和 `http://www.w3.org/1998/Math/MathML`）。
 
 > [!NOTE]
-> 在 XML 中，除非直接在屬性上定義了前綴（例如 `xlink:href`），否則該屬性沒有命名空間。換句話說，屬性不會繼承其所在元素的命名空間。為了匹配這種行為，CSS 中的預設命名空間不適用於屬性選擇器。
+> 在 XML 中，除非直接在屬性上定義了前綴（_例如_ `xlink:href`），否則該屬性沒有命名空間。換句話說，屬性不會繼承其所在元素的命名空間。為了匹配這種行為，CSS 中的預設命名空間不適用於屬性選擇器。
 
 ## 形式語法
 
