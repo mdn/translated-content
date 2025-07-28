@@ -280,30 +280,10 @@ span {
 ```html
 <div class="outer">
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    但我得向你解释，所有这些谴责快乐和颂扬痛苦的错误观念是如何产生的。为此，我会向你一五一十地说明这一体系，并阐述伟大的真理探索者、人类幸福的杰出建设者的真实教义。没有人因为快乐是快乐而拒绝、厌恶或回避快乐本身，而是因为不知道如何理性地追求快乐的人会遭遇极其痛苦的后果。也没有人因痛苦是痛苦而喜欢或追求或渴望获得痛苦本身，但也偶有辛劳和痛苦能带来极大的快乐的情景。举个微不足道的例子，若不是从中获得好处，我们当中有谁会进行艰苦的体育锻炼？但是，倘若没有恼人的后果，谁有权利指责选择享受快乐的人呢？或者倘若得不到相应快乐，谁能谴责选择避免痛苦的人呢？
   </p>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam congue tortor
-    eget pulvinar lobortis. Vestibulum ante ipsum primis in faucibus orci luctus
-    et ultrices posuere cubilia Curae; Nam ac dolor augue. Pellentesque mi mi,
-    laoreet et dolor sit amet, ultrices varius risus. Nam vitae iaculis elit.
-    Aliquam mollis interdum libero. Sed sodales placerat egestas. Vestibulum ut
-    arcu aliquam purus viverra dictum vel sit amet mi. Duis nisl mauris, aliquam
-    sit amet luctus eget, dapibus in enim. Sed velit augue, pretium a sem
-    aliquam, congue porttitor tortor. Sed tempor nisl a lorem consequat, id
-    maximus erat aliquet. Sed sagittis porta libero sed condimentum. Aliquam
-    finibus lectus nec ante congue rutrum. Curabitur quam quam, accumsan id
-    ultrices ultrices, tempor et tellus.
+    另一方面，我们以正义的愤慨谴责并厌恶那些被及时行乐迷惑得萎靡不振，被欲望蒙蔽得看不见大难临头的人；因意志软弱而不能履行职责的人，也应受到同样的谴责，这无异于在辛劳和痛苦前退缩。这些情况非常简单且容易区分。闲暇时，当我们的选择权不受限制，当没有什么可以阻止我们做自己最喜欢的事情时，任何快乐都应该受到欢迎，任何痛苦都应该避免。但是在某些情况下，由于责任或商业义务的要求，不时会有不得不拒绝享乐而接受烦恼的情况。因此，智者在这些事情上总是坚持选择的原则：拒绝快乐以获得更大的快乐，或者忍受痛苦以避免更重的痛苦。
   </p>
   <div class="box" id="one">一</div>
 </div>
@@ -365,31 +345,33 @@ span {
 <dl>
   <div>
     <dt>A</dt>
-    <dd>Andrew W.K.</dd>
-    <dd>Apparat</dd>
-    <dd>Arcade Fire</dd>
-    <dd>At The Drive-In</dd>
-    <dd>Aziz Ansari</dd>
+    <dd>a</dd>
+    <dd>ai</dd>
+    <dd>an</dd>
+    <dd>ang</dd>
+    <dd>ao</dd>
   </div>
   <div>
     <dt>C</dt>
-    <dd>Chromeo</dd>
-    <dd>Common</dd>
-    <dd>Converge</dd>
-    <dd>Crystal Castles</dd>
-    <dd>Cursive</dd>
+    <dd>ca</dd>
+    <dd>cai</dd>
+    <dd>can</dd>
+    <dd>cao</dd>
+    <dd>ce</dd>
   </div>
   <div>
     <dt>E</dt>
-    <dd>Explosions In The Sky</dd>
+    <dd>ei</dd>
+    <dd>en</dd>
+    <dd>er</dd>
   </div>
   <div>
     <dt>T</dt>
-    <dd>Ted Leo &amp; The Pharmacists</dd>
-    <dd>T-Pain</dd>
-    <dd>Thrice</dd>
-    <dd>TV On The Radio</dd>
-    <dd>Two Gallants</dd>
+    <dd>ta</dd>
+    <dd>tai</dd>
+    <dd>tan</dd>
+    <dd>tang</dd>
+    <dd>tao</dd>
   </div>
 </dl>
 ```
