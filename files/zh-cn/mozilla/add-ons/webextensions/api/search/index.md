@@ -2,10 +2,8 @@
 title: search
 slug: Mozilla/Add-ons/WebExtensions/API/search
 l10n:
-  sourceCommit: d6856a051d0ba078ec1d24b80908b1ca174917db
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 使用 search API 检索已安装的搜索引擎并执行搜索。
 
