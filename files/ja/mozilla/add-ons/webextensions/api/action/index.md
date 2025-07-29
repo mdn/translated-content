@@ -3,7 +3,7 @@ title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
 ---
 
-ブラウザツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
+ブラウザーツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
 manifest.json の [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
 
 > [!NOTE]
