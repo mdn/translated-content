@@ -7,29 +7,29 @@ slug: Mozilla/Add-ons/WebExtensions/API/action
 manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
 
 > [!NOTE]
-> このAPIはManifest V3あるいは以降のバージョンで利用可能です。Manifest V2の {{WebExtAPIRef("browserAction")}} やChromeやSafariでの{{WebExtAPIRef("pageAction")}}APIの代替です。
+> この API は Manifest V3 あるいは以降のバージョンで利用可能です。Manifest V2 の {{WebExtAPIRef("browserAction")}} や Chrome や Safari での {{WebExtAPIRef("pageAction")}} APIの代替です。
 
-[browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) はブラウザーツールバーのボタンを指します。
+[browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button)はブラウザーツールバーのボタンを指します。
 
-ボタンとポップアップの関連付けができます。ウェブページのようにポップアップをHTMLやCSS、JavaScriptで記述できます。ポップアップ内部で動くJavascriptはバックグランドスクリプトと同じWebExtension APIへのアクセスを持ちますが、グローバルコンテキストは現在ブラウザー上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
-ウェブページに作用させたい場合、[messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) を通した操作する必要があります。
+ボタンとポップアップの関連付けができます。ウェブページのようにポップアップを HTML や CSS, JavaScript で記述できます。ポップアップ内部で動く Javascript はバックグランドスクリプトと同じ WebExtension API へのアクセスを持ちますが、グローバルコンテキストは現在ブラウザー上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
+ウェブページに作用させたい場合、 [messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) を通した操作する必要があります。
 
 ポップアップを明示した場合、ユーザーがクリックした際にポップアップが出現しコンテンツが読み込まれます。
 ポップアップを明示しない場合には、ユーザーがアイコンをクリックしたときに拡張機能に対してイベントが発火されます。
 
-ボタンはコンテキストメニューも持ちます。このメニューには `action` {{WebExtAPIRef("menus.ContextType")}} を利用する {{WebExtAPIRef("menus")}} APIを用いてアイテムの追加が可能です。
+ボタンはコンテキストメニューも持ちます。このメニューには `action` {{WebExtAPIRef("menus.ContextType")}} を利用する {{WebExtAPIRef("menus")}} API を用いてアイテムの追加が可能です。
 
-`action` APIでは、次のことが可能です。
+`action` API では、次のことが可能です。
 
-- {{WebExtAPIRef("action.onClicked")}}を使って、アイコンのクリックをリッスンします。
-- アイコンやタイトル、ポップなどのアイコンのプロパティを読み書きする。タブ間で共通の変更を加えることができます。あるいは追加の引数としてタブIDを渡すことで個別のタブへの設定も可能です。
+- {{WebExtAPIRef("action.onClicked")}} を使って、アイコンのクリックをリッスンします。
+- アイコンやタイトル、ポップなどのアイコンのプロパティを読み書きする。タブ間で共通の変更を加えることができます。あるいは追加の引数としてタブ ID を渡すことで個別のタブへの設定も可能です。
 
 ## 型情報
 
 - {{WebExtAPIRef("action.ColorArray")}}
-  - : RGBAで定義される0から255までの4つの整数を含む配列です。
+  - : RGBA で定義される 0 から 255 までの 4 つの整数を含む配列です。
 - {{WebExtAPIRef("action.ImageDataType")}}
-  - : 画像のピクセルデータ。[`ImageData`](/ja/docs/Web/API/ImageData) のオブジェクトである必要があります。（例：{{htmlelement("canvas")}}からの要素）
+  - : 画像のピクセルデータ。 [`ImageData`](/ja/docs/Web/API/ImageData) のオブジェクトである必要があります。（例： {{htmlelement("canvas")}} からの要素）
 
 ## 関数
 
@@ -40,9 +40,9 @@ manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 - {{WebExtAPIRef("action.setIcon()")}}
   - : ブラウザーアクションのアイコンを取得します。
 - {{WebExtAPIRef("action.setPopup()")}}
-  - : ユーザーがブラウザーアクションのアイコンをクリックした時に、ポップアップとして表示されるHTMLドキュメントを設定します。
+  - : ユーザーがブラウザーアクションのアイコンをクリックした時に、ポップアップとして表示される HTML ドキュメントを設定します。
 - {{WebExtAPIRef("action.getPopup()")}}
-  - : ブラウザーアクションのポップアップのHTMLドキュメントを取得します。
+  - : ブラウザーアクションのポップアップの HTML ドキュメントを取得します。
 - {{WebExtAPIRef("action.openPopup()")}}
   - : ブラウザーアクションのポップアップを表示します。
 - {{WebExtAPIRef("action.setBadgeText()")}}
@@ -78,8 +78,8 @@ manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 {{Compat}}
 
 > [!NOTE]
-> このAPIはChromiumの [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API に基づいています。
-> この文書はChromiumプログラムの [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) に派生します。
+> この API は Chromium の [`chrome.action`](https://developer.chrome.com/docs/extensions/reference/api/action) API に基づいています。
+> この文書は Chromium プログラムの [`action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/action.json) に派生します。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.
