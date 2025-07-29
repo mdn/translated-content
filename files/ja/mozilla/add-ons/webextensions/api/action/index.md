@@ -29,7 +29,7 @@ manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 - {{WebExtAPIRef("action.ColorArray")}}
   - : RGBAで定義される0から255までの4つの整数を含む配列です。
 - {{WebExtAPIRef("action.ImageDataType")}}
-  - : 画像のピクセルデータ。[`ImageData`](/ja/docs/Web/API/ImageData) のオブジェクである必要があります。（例：{{htmlelement("canvas")}}からの要素）
+  - : 画像のピクセルデータ。[`ImageData`](/ja/docs/Web/API/ImageData) のオブジェクトである必要があります。（例：{{htmlelement("canvas")}}からの要素）
 
 ## 関数
 
