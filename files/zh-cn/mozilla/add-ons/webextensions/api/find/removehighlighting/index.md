@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-{{AddonSidebar}}
-
 移除先前调用 {{WebExtAPIRef("find.highlightResults()")}} 或浏览器原生 UI 执行所产生的搜索高亮。
 
 ## 语法
