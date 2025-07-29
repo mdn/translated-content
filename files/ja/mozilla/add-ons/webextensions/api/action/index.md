@@ -3,15 +3,15 @@ title: action
 slug: Mozilla/Add-ons/WebExtensions/API/action
 ---
 
-ブラウザツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
+ブラウザーツールバーのボタンクリックをリッスンしたり、属性の取得や改変を行ったりします。
 manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json/action) キーで設定されます。
 
 > [!NOTE]
 > このAPIはManifest V3あるいは以降のバージョンで利用可能です。Manifest V2の {{WebExtAPIRef("browserAction")}} やChromeやSafariでの{{WebExtAPIRef("pageAction")}}APIの代替です。
 
-[browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) はブラウザツールバーのボタンを指します。
+[browser action](/ja/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) はブラウザーツールバーのボタンを指します。
 
-ボタンとポップアップの関連付けができます。ウェブページのようにポップアップをHTMLやCSS、JavaScriptで記述できます。ポップアップ内部で動くJavascriptはバックグランドスクリプトと同じWebExtension APIへのアクセスを持ちますが、グローバルコンテキストは現在ブラウザ上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
+ボタンとポップアップの関連付けができます。ウェブページのようにポップアップをHTMLやCSS、JavaScriptで記述できます。ポップアップ内部で動くJavascriptはバックグランドスクリプトと同じWebExtension APIへのアクセスを持ちますが、グローバルコンテキストは現在ブラウザー上で表示されているウェブページのではなく、ポップアップのコンテキストになります。
 ウェブページに作用させたい場合、[messages](/ja/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging) を通した操作する必要があります。
 
 ポップアップを明示した場合、ユーザーがクリックした際にポップアップが出現しコンテンツが読み込まれます。
@@ -34,21 +34,21 @@ manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 ## 関数
 
 - {{WebExtAPIRef("action.setTitle()")}}
-  - : ブラウザアクションにタイトルを追加します。ツールチップ上に表示されます。
+  - : ブラウザーアクションにタイトルを追加します。ツールチップ上に表示されます。
 - {{WebExtAPIRef("action.getTitle()")}}
-  - : ブラウザアクションのタイトルを取得します。
+  - : ブラウザーアクションのタイトルを取得します。
 - {{WebExtAPIRef("action.setIcon()")}}
-  - : ブラウザアクションのアイコンを取得します。
+  - : ブラウザーアクションのアイコンを取得します。
 - {{WebExtAPIRef("action.setPopup()")}}
-  - : ユーザーがブラウザアクションのアイコンをクリックした時に、ポップアップとして表示されるHTMLドキュメントを設定します。
+  - : ユーザーがブラウザーアクションのアイコンをクリックした時に、ポップアップとして表示されるHTMLドキュメントを設定します。
 - {{WebExtAPIRef("action.getPopup()")}}
-  - : ブラウザアクションのポップアップのHTMLドキュメントを取得します。
+  - : ブラウザーアクションのポップアップのHTMLドキュメントを取得します。
 - {{WebExtAPIRef("action.openPopup()")}}
-  - : ブラウザアクションのポップアップを表示します。
+  - : ブラウザーアクションのポップアップを表示します。
 - {{WebExtAPIRef("action.setBadgeText()")}}
-  - : ブラウザアクションのバッジ文字列を設定します。バッジはアイコンの上部に表示されます。
+  - : ブラウザーアクションのバッジ文字列を設定します。バッジはアイコンの上部に表示されます。
 - {{WebExtAPIRef("action.getBadgeText()")}}
-  - : ブラウザアクションのバッジ文字列を取得します。
+  - : ブラウザーアクションのバッジ文字列を取得します。
 - {{WebExtAPIRef("action.setBadgeBackgroundColor()")}}
   - : バッジの背景色を設定します。
 - {{WebExtAPIRef("action.getBadgeBackgroundColor()")}}
@@ -58,18 +58,18 @@ manifest.jsonの [`action`](/ja/docs/Mozilla/Add-ons/WebExtensions/manifest.json
 - {{WebExtAPIRef("action.getBadgeTextColor()")}}
   - : バッジの文字色を取得します。
 - {{WebExtAPIRef("action.getUserSettings()")}}
-  - : ブラウザアクションへのユーザー指定設定を取得します。
+  - : ブラウザーアクションへのユーザー指定設定を取得します。
 - {{WebExtAPIRef("action.enable()")}}
-  - : タブへのブラウザアクションを有効化します。初期設定では全てのタブに対してブラウザアクションが有効化されています。
+  - : タブへのブラウザーアクションを有効化します。初期設定では全てのタブに対してブラウザーアクションが有効化されています。
 - {{WebExtAPIRef("action.disable()")}}
-  - : タブのブラウザアクションを無効化します。これはタブがアクティブでもクリックできないことを意味します。
+  - : タブのブラウザーアクションを無効化します。これはタブがアクティブでもクリックできないことを意味します。
 - {{WebExtAPIRef("action.isEnabled()")}}
-  - : ブラウザアクションが有効かどうかを検証しその値を返します。
+  - : ブラウザーアクションが有効かどうかを検証しその値を返します。
 
 ## イベント
 
 - {{WebExtAPIRef("action.onClicked")}}
-  - : ブラウザアクションのアイコンがクリックされると発火します。このイベントはブラウザアクションがポップアップを持っている場合発火しません。
+  - : ブラウザーアクションのアイコンがクリックされると発火します。このイベントはブラウザーアクションがポップアップを持っている場合発火しません。
 
 {{WebExtExamples("h2")}}
 
