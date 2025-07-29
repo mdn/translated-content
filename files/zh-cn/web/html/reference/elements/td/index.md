@@ -172,7 +172,7 @@ caption {
 
 #### CSS
 
-表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors) 和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
+表格及其单元格的样式使用了一些基本的 CSS。CSS [属性选择器](/zh-CN/docs/Web/CSS/Attribute_selectors)和 {{cssxref(":nth-of-type")}} 伪类用于替换单元格的外观，使表格中的信息更易于理解和识别。
 
 ```css
 td,
@@ -331,7 +331,7 @@ table {
 
 #### 结果
 
-虽然[视觉结果](#result_2)与[上一个示例表格](#行和列扩展)相比没有变化，但每个数据单元格（`<td>`）现在都与其行标题单元格（`<th>`）明确关联。
+虽然[视觉结果](#结果_2)与[上一个示例表格](#行和列扩展)相比没有变化，但每个数据单元格（`<td>`）现在都与其行标题单元格（`<th>`）明确关联。
 
 ## 技术概要
 
@@ -367,14 +367,15 @@ table {
     <tr>
       <th scope="row">隐含的 ARIA 角色</th>
       <td>
-        <code
-          > 如果是 {{HTMLElement("table")}} 元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role"
+        如果是 {{HTMLElement("table")}} 元素的后代，则为
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role"
             >cell</a
           ></code
-        >；如果是具有 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role"
+        >；如果是具有 <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role"
             >grid</a
           ></code
-        > 角色的元素的后代，则为 <a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role"
+        > 角色的元素的后代，则为
+        <code><a href="/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role"
             >gridcell</a
           ></code
         >
