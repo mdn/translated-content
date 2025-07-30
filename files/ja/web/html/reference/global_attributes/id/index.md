@@ -10,7 +10,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: id", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>通常の、退屈な段落です。眠くならないように気をつけてください。</p>
 
 <p id="exciting">このページの中で最も期待に満ちた段落です。他に類を見ない、唯一無二の存在です。</p>
