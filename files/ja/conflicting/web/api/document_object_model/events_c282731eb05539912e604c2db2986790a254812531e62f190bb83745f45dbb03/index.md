@@ -1,6 +1,7 @@
 ---
 title: イベントリファレンス
-slug: Web/Events
+slug: conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03
+original_slug: Web/Events
 l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---

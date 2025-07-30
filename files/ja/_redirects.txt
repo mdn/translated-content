@@ -699,7 +699,7 @@
 /ja/docs/DOM/console.log	/ja/docs/Web/API/console/log_static
 /ja/docs/DOM/console.time	/ja/docs/Web/API/console/time_static
 /ja/docs/DOM/console.timeEnd	/ja/docs/Web/API/console/timeEnd_static
-/ja/docs/DOM/dispatchEvent_example	/ja/docs/Web/Events/Creating_and_triggering_events
+/ja/docs/DOM/dispatchEvent_example	/ja/docs/conflicting/Web/API/Document_Object_Model/Events
 /ja/docs/DOM/document	/ja/docs/Web/API/Document
 /ja/docs/DOM/document.URL	/ja/docs/Web/API/Document/URL
 /ja/docs/DOM/document.activeElement	/ja/docs/Web/API/Document/activeElement
@@ -3122,7 +3122,6 @@
 /ja/docs/Web/API/DocumentOrShadowRoot/getSelection	/ja/docs/Web/API/Document/getSelection
 /ja/docs/Web/API/DocumentOrShadowRoot/pointerLockElement	/ja/docs/Web/API/Document/pointerLockElement
 /ja/docs/Web/API/DocumentOrShadowRoot/styleSheets	/ja/docs/Web/API/Document/styleSheets
-/ja/docs/Web/API/Document_Object_Model/Events	/ja/docs/Learn_web_development/Core/Scripting/Events
 /ja/docs/Web/API/Document_Object_Model/How_to_create_a_DOM_tree	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Preface	/ja/docs/Web/API/Document_Object_Model
 /ja/docs/Web/API/Document_Object_Model/Using_the_W3C_DOM_Level_1_Core	/ja/docs/Web/API/Document_Object_Model/Using_the_Document_Object_Model
@@ -3147,7 +3146,7 @@
 /ja/docs/Web/API/Event/Comparison_of_Event_Targets	/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling
 /ja/docs/Web/API/Event/button	/ja/docs/Web/API/MouseEvent/button
 /ja/docs/Web/API/Event/createEvent	/ja/docs/Web/API/Document/createEvent
-/ja/docs/Web/API/EventHandler	/ja/docs/Web/Events/Event_handlers
+/ja/docs/Web/API/EventHandler	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/API/EventListener	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventListener/handleEvent	/ja/docs/Web/API/EventTarget/addEventListener
 /ja/docs/Web/API/EventSource/onerror	/ja/docs/Web/API/EventSource/error_event
@@ -4434,9 +4433,12 @@
 /ja/docs/Web/EXSLT/math	/ja/docs/Web/XML/EXSLT/Reference/math
 /ja/docs/Web/EXSLT/math/highest	/ja/docs/Web/XML/EXSLT/Reference/math/highest
 /ja/docs/Web/EXSLT/math/lowest	/ja/docs/Web/XML/EXSLT/Reference/math/lowest
+/ja/docs/Web/Events	/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
+/ja/docs/Web/Events/Creating_and_triggering_events	/ja/docs/conflicting/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Events/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+/ja/docs/Web/Events/Event_handlers	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Events/abort	/ja/docs/Web/API/HTMLMediaElement/abort_event
 /ja/docs/Web/Events/abort_(ProgressEvent)	/ja/docs/Web/API/XMLHttpRequest/abort_event
@@ -4547,7 +4549,7 @@
 /ja/docs/Web/Guide/DOM/Manipulating_the_browser_history/Working_with_the_History_API	/ja/docs/Web/API/History_API/Working_with_the_History_API
 /ja/docs/Web/Guide/DOM/Using_full_screen_mode	/ja/docs/Web/API/Fullscreen_API
 /ja/docs/Web/Guide/DOM/Whitespace_in_the_DOM	/ja/docs/Web/API/Document_Object_Model/Whitespace
-/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/Events/Event_handlers
+/ja/docs/Web/Guide/Events/Event_handlers	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/ja/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /ja/docs/Web/Guide/Graphics	/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /ja/docs/Web/Guide/Graphics/Drawing_graphics_with_canvas	/ja/docs/Web/API/Canvas_API/Tutorial
@@ -5755,7 +5757,7 @@
 /ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
-/ja/docs/Web/Reference/Events	/ja/docs/Web/Events
+/ja/docs/Web/Reference/Events	/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03
 /ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Reference/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
 /ja/docs/Web/Reference/Events/beforeunload	/ja/docs/Web/API/Window/beforeunload_event
