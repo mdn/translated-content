@@ -4433,9 +4433,9 @@
 /ja/docs/Web/EXSLT/math	/ja/docs/Web/XML/EXSLT/Reference/math
 /ja/docs/Web/EXSLT/math/highest	/ja/docs/Web/XML/EXSLT/Reference/math/highest
 /ja/docs/Web/EXSLT/math/lowest	/ja/docs/Web/XML/EXSLT/Reference/math/lowest
-/ja/docs/Web/Events	/ja/docsWeb/API/Document_Object_Model/Events
+/ja/docs/Web/Events	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Events/Activate	/ja/docs/Web/API/Element/DOMActivate_event
-/ja/docs/Web/Events/Creating_and_triggering_events	/ja/docsWeb/API/Document_Object_Model/Events
+/ja/docs/Web/Events/Creating_and_triggering_events	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Events/Detecting_device_orientation	/ja/docs/Web/API/Device_orientation_events/Detecting_device_orientation
 /ja/docs/Web/Events/Event_handlers	/ja/docs/Web/API/Document_Object_Model/Events
@@ -5757,7 +5757,7 @@
 /ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/ja/docs/Web/Progressive_web_apps/Tutorials/js13kGames
 /ja/docs/Web/Reference	/ja/docs/Web
 /ja/docs/Web/Reference/API	/ja/docs/Web/API
-/ja/docs/Web/Reference/Events	/ja/docsWeb/API/Document_Object_Model/Events
+/ja/docs/Web/Reference/Events	/ja/docs/Web/API/Document_Object_Model/Events
 /ja/docs/Web/Reference/Events/DOMContentLoaded	/ja/docs/Web/API/Document/DOMContentLoaded_event
 /ja/docs/Web/Reference/Events/audiostart	/ja/docs/Web/API/SpeechRecognition/audiostart_event
 /ja/docs/Web/Reference/Events/beforeunload	/ja/docs/Web/API/Window/beforeunload_event
