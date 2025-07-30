@@ -1,6 +1,7 @@
 ---
 title: イベントの扱い (概要)
-slug: Web/Events/Event_handlers
+slug: Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Event_handlers
 l10n:
   sourceCommit: 857c6f9e7f1a847e7d3466b0d047159f7b345991
 ---

@@ -1,6 +1,7 @@
 ---
 title: イベントの作成と起動
-slug: Web/Events/Creating_and_triggering_events
+slug: conflicting/Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Creating_and_triggering_events
 l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
