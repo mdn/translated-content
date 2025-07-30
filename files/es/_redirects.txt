@@ -2238,6 +2238,7 @@
 /es/docs/Web/EXSLT/str/concat	/es/docs/Web/XML/EXSLT/Reference/str/concat
 /es/docs/Web/EXSLT/str/split	/es/docs/Web/XML/EXSLT/Reference/str/split
 /es/docs/Web/EXSLT/str/tokenize	/es/docs/Web/XML/EXSLT/Reference/str/tokenize
+/es/docs/Web/Events	/es/docs/Web/API/Document_Object_Model/Events
 /es/docs/Web/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Events/blur	/es/docs/Web/API/Element/blur_event
@@ -3358,7 +3359,7 @@
 /es/docs/Web/Progressive_web_apps/Re-engageable_Notifications_Push	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Re-engageable_Notifications_Push
 /es/docs/Web/Progressive_web_apps/Responsive/Media_types	/es/docs/Web/CSS/CSS_media_queries/Using_media_queries
 /es/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Introduction	/es/docs/Web/Progressive_web_apps/Tutorials/js13kGames
-/es/docs/Web/Reference/Events	/es/docs/Web/Events
+/es/docs/Web/Reference/Events	/es/docs/Web/API/Document_Object_Model/Events
 /es/docs/Web/Reference/Events/animationend	/es/docs/Web/API/Element/animationend_event
 /es/docs/Web/Reference/Events/beforeunload	/es/docs/Web/API/Window/beforeunload_event
 /es/docs/Web/Reference/Events/blur	/es/docs/Web/API/Element/blur_event

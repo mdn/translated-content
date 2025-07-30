@@ -29541,24 +29541,6 @@
       "mpcjazz"
     ]
   },
-  "Web/Events": {
-    "modified": "2020-10-16T22:39:39.169Z",
-    "contributors": [
-      "mpcjazz",
-      "companymickey",
-      "neeg2",
-      "FujiHaruka",
-      "u-sho",
-      "mfuji09",
-      "wbamberg",
-      "silverskyvicto",
-      "WhiteHawk-taka",
-      "Marsf",
-      "ssw",
-      "ethertank",
-      "Sheppy"
-    ]
-  },
   "Web/Guide/API": {
     "modified": "2019-11-24T06:54:13.469Z",
     "contributors": [
@@ -43955,6 +43937,24 @@
     "modified": "2020-10-15T22:12:31.952Z",
     "contributors": [
       "mfuji09"
+    ]
+  },
+  "conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03": {
+    "modified": "2020-10-16T22:39:39.169Z",
+    "contributors": [
+      "mpcjazz",
+      "companymickey",
+      "neeg2",
+      "FujiHaruka",
+      "u-sho",
+      "mfuji09",
+      "wbamberg",
+      "silverskyvicto",
+      "WhiteHawk-taka",
+      "Marsf",
+      "ssw",
+      "ethertank",
+      "Sheppy"
     ]
   },
   "conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT": {

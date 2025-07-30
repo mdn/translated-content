@@ -5028,6 +5028,14 @@
       "Nathymig"
     ]
   },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T23:21:27.399Z",
+    "contributors": [
+      "ExE-Boss",
+      "wbamberg",
+      "gabo8611"
+    ]
+  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-03-23T23:51:24.173Z",
     "contributors": [
@@ -11879,14 +11887,6 @@
       "carloque",
       "Sebastianz",
       "pekechis"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2019-03-23T23:21:27.399Z",
-    "contributors": [
-      "ExE-Boss",
-      "wbamberg",
-      "gabo8611"
     ]
   },
   "Web/HTML": {

@@ -1,18 +1,18 @@
 ---
-title: イベントリファレンス
-slug: Web/Events
+title: DOM イベント
+short-title: イベントの扱い
+slug: Web/API/Document_Object_Model/Events
 l10n:
-  sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
+  sourceCommit: f4c0e822eb6a1ea438c7342f43a3e4809adbd56a
 ---
 
-[イベント](/ja/docs/Learn_web_development/Core/Scripting/Events)は、コードの実行に影響を与える可能性のある「興味深い変化」をコードに通知するために発行されます。これは、マウス操作やウィンドウのサイズ変更などのユーザー操作や、環境の変化 (バッテリー残量の低下や OS のメディアイベントなど)、その他の原因によって発行されます。
+{{DefaultAPISidebar("DOM")}}
 
-それぞれのイベントは、 {{domxref("Event")}} インターフェイスに基づいたオブジェクトで表現され、何が起こったかについての情報を提供するために、追加のカスタムフィールドや関数を持つことがあります。各イベントのドキュメントには、関連するイベントインターフェイスへのリンクや、その他の関連情報を含む表が (上部付近に) あります。イベントの種類の一覧は、[イベント > Event を基にしたインターフェイス](/ja/docs/Web/API/Event#introduction)にあります。
+[イベント](/ja/docs/Learn_web_development/Core/Scripting/Events)は、コードの実行に影響を与える可能性のある「興味深い変化」をコードに通知するために発行されます。これは、マウス操作やウィンドウのサイズ変更などのユーザー操作や、環境の変化（バッテリー残量の低下や OS のメディアイベントなど）、その他の原因によって発行されます。
 
-この記事では、興味のありそうな*主な*イベントの種類 (アニメーション、クリップボード、ワーカーなど) と、それらの種類のイベントを実装する主なクラスの索引を提供します。最後には、ドキュメント化されたすべてのイベントの一覧を掲載しています。
+それぞれのイベントは、 {{domxref("Event")}} インターフェイスに基づいたオブジェクトで表現され、何が起こったかについての情報を提供するために、追加のカスタムフィールドや関数を持つことがあります。各イベントのドキュメントには、関連するイベントインターフェイスへのリンクや、その他の関連情報を含む表が (上部付近に) あります。イベントの種類の一覧は、[イベント > Event を基にしたインターフェイス](/ja/docs/Web/API/Event#event_を基にしたインターフェイス)にあります。
 
-> [!NOTE]
-> このページでは、ウェブ上で遭遇する最も一般的なイベントの多くをリストアップしています。ここに掲載されていないイベントを探している場合は、 MDN の他の部分でその名前、トピック領域、関連する仕様書を検索してみてください。
+この記事では、興味のありそうな主なイベントの種類 (アニメーション、クリップボード、ワーカーなど) と、それらの種類のイベントを実装する主なクラスの索引を提供します。最後には、文書化されているすべてのイベントの一覧を掲載しています。
 
 ## イベント索引
 
@@ -97,7 +97,7 @@ l10n:
       </td>
       <td>
         イベントは
-        <a href="/ja/docs/Web/API/Element#構成イベント"
+        <a href="/ja/docs/Web/API/Element#変換イベント"
           ><code>Element</code></a
         > で発行される。
       </td>
@@ -158,7 +158,7 @@ l10n:
         <div class="notecard warning">
           <p>
             <strong>警告:</strong>
-            <a href="/ja/docs/Web/API/MutationEvent">Mutation イベント</a>は非推奨です。
+            <a href="/ja/docs/Web/API/MutationEvent">変化イベント</a>は非推奨です。
             代わりに <a href="/ja/docs/Web/API/MutationObserver"
               >Mutation Observer</a
             >
@@ -435,8 +435,8 @@ l10n:
         <a href="/ja/docs/Web/API/TextTrackList#イベント"
           ><code>TextTrackList</code></a
         >,
-        <a href="/ja/docs/Web/HTML/Element/audio#イベント">Element/audio</a>,
-        <a href="/ja/docs/Web/HTML/Element/video#イベント">Element/video</a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/audio#イベント">Element/audio</a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/video#イベント">Element/video</a>
         で発行される。
       </td>
     </tr>
@@ -767,12 +767,240 @@ l10n:
   </tbody>
 </table>
 
+## イベントの作成と配信
+
+組み込みインターフェイスによって発行されるイベントに加えて、DOM イベントを自分で作成して配信することができます。このようなイベントは、ブラウザーによって発行されるイベントとは対照的に、一般に「合成イベント」と呼ばれます。
+
+## カスタムイベントの作成
+
+イベントは、次のように [`Event`](/ja/docs/Web/API/Event) コンストラクターを使用して作成できます。
+
+```js
+const event = new Event("build");
+
+// イベントを待ち受けする
+elem.addEventListener(
+  "build",
+  (e) => {
+    /* … */
+  },
+  false,
+);
+
+// イベントを配信する
+elem.dispatchEvent(event);
+```
+
+上記のコード例は [EventTarget.dispatchEvent()](/ja/docs/Web/API/EventTarget/dispatchEvent) メソッドを使用します。
+
+### カスタムデータの追加 – CustomEvent()
+
+イベントオブジェクトにデータを追加するには、[CustomEvent](/ja/docs/Web/API/CustomEvent) インターフェイスが存在し、**detail** プロパティを使用してカスタムデータを渡すことができます。
+たとえば、イベントは次のようにして作成することができます。
+
+```js
+const event = new CustomEvent("build", { detail: elem.dataset.time });
+```
+
+これにより、イベントリスナー内の追加データにアクセスすることができます。
+
+```js
+function eventHandler(e) {
+  console.log(`The time is: ${e.detail}`);
+}
+```
+
+### カスタムデータの追加 - Event のサブクラス化
+
+[`Event`](/ja/docs/Web/API/Event) インターフェイスもサブクラス化することができます。これは、再利用や、より複雑な独自のデータ、あるいはイベントにメソッドを追加する場合などに特に有益です。
+
+```js
+class BuildEvent extends Event {
+  #buildTime;
+
+  constructor(buildTime) {
+    super("build");
+    this.#buildTime = buildTime;
+  }
+
+  get buildTime() {
+    return this.#buildTime;
+  }
+}
+```
+
+このサンプルコードは、読み取り専用のプロパティと固定イベント型を持つ `BuildEvent` クラスを定義しています。
+
+このイベントは、次のように作成できます。
+
+```js
+const event = new BuildEvent(elem.dataset.time);
+```
+
+追加のデータは、独自のプロパティを使用して、イベントリスナーでアクセスすることができます。
+
+```js
+function eventHandler(e) {
+  console.log(`時刻: ${e.buildTime}`);
+}
+```
+
+### イベントのバブリング
+
+子要素からイベントを起動させ、祖先要素がそれを、任意でデータも、受け取りたい場合がよくあります。
+
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
+
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+
+// 新しいイベントを生成し、バブリングを許可し、 "detail" プロパティに渡したいデータを設定する
+const eventAwesome = new CustomEvent("awesome", {
+  bubbles: true,
+  detail: { text: () => textarea.value },
+});
+
+// フォームイベントが "awesome" カスタムイベントを待ち受けし、渡されたものの text() メソッドをコンソールに出力する
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+
+// ユーザー型の場合、 form 内の textarea は発生させるイベントを起動・処理し、それを開始点として使用する
+textarea.addEventListener("input", (e) => e.target.dispatchEvent(eventAwesome));
+```
+
+### イベントの動的な生成と処理
+
+要素はまだ作成されていないイベントを待ち受けすることができます。
+
+```html
+<form>
+  <textarea></textarea>
+</form>
+```
+
+```js
+const form = document.querySelector("form");
+const textarea = document.querySelector("textarea");
+
+form.addEventListener("awesome", (e) => console.log(e.detail.text()));
+
+textarea.addEventListener("input", function () {
+  // イベントをその場で作成、配信/起動する
+  // メモ: オプションとして、「アロー関数式」の代わりに「関数式」を活用して、 "this" が要素を表すようにしています。
+  this.dispatchEvent(
+    new CustomEvent("awesome", {
+      bubbles: true,
+      detail: { text: () => textarea.value },
+    }),
+  );
+});
+```
+
+### 組み込みイベントの起動
+
+この例では、 DOM メソッドを使用してチェックボックスでクリック (プログラムでクリックイベントを生成する) をシミュレートする方法を示します。[デモを見る](https://mdn.dev/archives/media/samples/domref/dispatchEvent.html)。
+
+```js
+function simulateClick() {
+  const event = new MouseEvent("click", {
+    view: window,
+    bubbles: true,
+    cancelable: true,
+  });
+  const cb = document.getElementById("checkbox");
+  const cancelled = !cb.dispatchEvent(event);
+
+  if (cancelled) {
+    // preventDefault というハンドラーが呼び出されます。
+    alert("キャンセルされました");
+  } else {
+    // 呼び出されたハンドラーはどれも preventDefault を呼び出していません。
+    alert("キャンセルされていません");
+  }
+}
+```
+
+## イベントハンドラーの登録
+
+ハンドラーの登録には、推奨される方法が 2 つあります。イベントハンドラーのコードは、ターゲットとなる要素の対応する _onイベント名_ プロパティに代入して、イベントが起動されたときに実行されるようにするか、 {{domxref("EventTarget.addEventListener", "addEventListener()")}} メソッドを使用して、ハンドラーを要素のリスナーとして登録するかすることができます。いずれの場合も、ハンドラーは [`Event` インターフェイス](/ja/docs/Web/API/Event) (または[派生インターフェイス](/ja/docs/Web/API/Event#event_を基にしたインターフェイス)) に準拠したオブジェクトを受け取ります。主な違いは、イベントリスナーのメソッドを使うと、複数のイベントハンドラーを追加 (または削除) できることです。
+
+> [!WARNING]
+> 第 3 の方法として、 HTML の onイベント名 属性を使ってイベントハンドラーを設定する方法がありますが、お勧めしません。これはマークアップを膨張させ、可読性を低下させ、デバッグを困難にします。詳しくは、[インラインイベントハンドラー](/ja/docs/Learn_web_development/Core/Scripting/Events#インラインイベントハンドラー_—_使用しないでください)を参照してください。
+
+### onevent プロパティの使用
+
+慣習上、イベントを発行する JavaScript オブジェクトには、それに対応する "onevent" プロパティ (イベント名の前に "on" を付けて命名) があります。これらのプロパティは、イベントが発行されたときに、関連するハンドラーコードを実行するために呼び出されます。
+
+イベントハンドラーのコードを設定するには、適切な onevent プロパティに代入してください。 1 つの要素のそれぞれのイベントに対して、割り当てることができるイベントハンドラーは 1 つだけです。必要に応じて、同じプロパティに別の関数を代入することで、ハンドラーを置き換えることができます。
+
+以下の例では、 `greet()` 関数を `click` イベントに割り当てるために `onclick` プロパティを使用しています。
+
+```js
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("greet:", event);
+}
+
+btn.onclick = greet;
+```
+
+なお、イベントハンドラーの第一引数には、イベントを表すオブジェクトが渡されます。このイベントオブジェクトは、 {{domxref("Event")}} インターフェイスを実装しているか、またはそれを継承しています。
+
+### EventTarget.addEventListener
+
+要素にイベントハンドラーを設定する最も柔軟な方法は、 {{domxref("EventTarget.addEventListener")}} メソッドを使用することです。この方法では、複数のリスナーを 1 つの要素に割り当てることができ、必要に応じて ({{domxref("EventTarget.removeEventListener")}} を使用して) リスナーを削除することができます。
+
+> [!NOTE]
+> イベントハンドラーの追加と削除ができることで、例えば、同じボタンで状況によって異なるアクションを実行することができます。また、より複雑なプログラムでは、古い、使われていないイベントハンドラーを整理することで、効率を上げることができます。
+
+以下では、単純な `greet()` 関数をクリックイベントのリスナーまたはイベントハンドラーとして設定する方法を示します (必要に応じて、名前付き関数の代わりにラムダ関数を使用することもできます)。繰り返しますが、イベントは、イベントハンドラーの第一引数として渡されます。
+
+```js
+const btn = document.querySelector("button");
+
+function greet(event) {
+  console.log("greet:", event);
+}
+
+btn.addEventListener("click", greet);
+```
+
+このメソッドは、イベントのキャプチャおよび削除の制御をするために、追加の引数/オプションを取ることもできます。詳細については、 {{domxref("EventTarget.addEventListener")}} のリファレンスページを参照してください。
+
+#### 中止シグナルの使用
+
+イベントリスナーの注目すべき機能は、中止シグナルを使って複数のイベントハンドラーを同時にクリーンアップできることです。
+
+これは、同じ {{domxref("AbortSignal")}} を、一緒に削除できるようにしたいすべてのイベントハンドラーの {{domxref("EventTarget/addEventListener()", "addEventListener()")}} 呼び出しに渡すことで行われます。その後、 `AbortSignal` を所有するコントローラーで {{domxref("AbortController/abort()", "abort()")}} を呼び出すと、そのシグナルで追加されたすべてのイベントハンドラーが削除されます。例えば、 `AbortSignal` で削除できるイベントハンドラーを追加するには、次のようにします。
+
+```js
+const controller = new AbortController();
+
+btn.addEventListener(
+  "click",
+  (event) => {
+    console.log("greet:", event);
+  },
+  { signal: controller.signal },
+); // このハンドラーに AbortSignal を渡す
+```
+
+上記のコードで生成したイベントハンドラーは、次のようにして削除することができます。
+
+```js
+controller.abort(); // このコントローラーに関連付けられたすべてのイベントハンドラーを削除
+```
+
 ## 仕様書
 
 {{Specifications}}
 
-<section id="Quick_links">
-  <ol>
-    <li><a href="/ja/docs/Learn_web_development/Core/Scripting/Events">Introduction to events</a></li>
-  </ol>{{ListSubpages}}
-</section>
+## 関連情報
+
+- [イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
+- [イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
