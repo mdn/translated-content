@@ -1,12 +1,10 @@
 ---
-title: dir
+title: HTML dir グローバル属性
+short-title: dir
 slug: Web/HTML/Reference/Global_attributes/dir
-original_slug: Web/HTML/Global_attributes/dir
 l10n:
-  sourceCommit: 83209b7db36cdeb7bab3d3ca564be3678f981778
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`dir`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は[列挙型](/ja/docs/Glossary/Enumerated)属性で、要素のテキストの書字方向を示します。
 
@@ -55,7 +53,9 @@ l10n:
 
 この属性は、{{ HTMLElement("bdi") }} 要素には継承されません。設定されていない場合、その値は `auto` です。
 
-ブラウザーではユーザーが {{ HTMLElement("input") }} や {{ HTMLElement("textarea") }} の書字方向を変更することを許可して、コンテンツの執筆を支援していることがあります。Chrome と Safari は入力フィールドのコンテキストメニューに書字方向のオプションを提供しています。Firefox は <kbd>Ctrl</kbd>/<kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> を使用しますが、`dir` 属性の値は変更しません。
+ブラウザーではユーザーが {{ HTMLElement("input") }} や {{ HTMLElement("textarea") }} の書字方向を変更することを許可して、コンテンツの執筆を支援していることがあります。
+Chrome と Safari は入力フィールドのコンテキストメニューに書字方向のオプションを提供しています。
+Firefox は <kbd>Ctrl</kbd> (Windows)/<kbd>Cmd</kbd> (macOS) + <kbd>Shift</kbd> + <kbd>X</kbd> を使用しますが、`dir` 属性の値は変更しません。
 
 ## 仕様書
 
@@ -69,3 +69,4 @@ l10n:
 
 - すべて[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.dir")}} は、この属性を反映します。
+- [テキストの様々な方向の扱い](/ja/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)

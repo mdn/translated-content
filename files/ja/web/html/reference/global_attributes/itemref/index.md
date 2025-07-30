@@ -1,12 +1,10 @@
 ---
-title: itemref
+title: HTML itemref グローバル属性
+short-title: itemref
 slug: Web/HTML/Reference/Global_attributes/itemref
-original_slug: Web/HTML/Global_attributes/itemref
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 [`itemscope`](/ja/docs/Web/HTML/Reference/Global_attributes/itemscope) 属性を持つ要素の子孫でないプロパティは、[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes) **`itemref`** を使用してアイテムに関連付けることができます。
 
@@ -54,10 +52,6 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 

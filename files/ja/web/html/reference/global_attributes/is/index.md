@@ -1,12 +1,13 @@
 ---
-title: is
+title: HTML is グローバル属性
+short-title: is
 slug: Web/HTML/Reference/Global_attributes/is
-original_slug: Web/HTML/Global_attributes/is
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
-{{HTMLSidebar("Global_attributes")}}
+> [!NOTE]
+> [Safari はカスタム組み込み要素に対応する予定はなく](https://github.com/WebKit/standards-positions/issues/97)、[ブラウザーベンダーは組み込み要素のカスタマイズに関する代替ソリューションを検討しています](https://github.com/WICG/webcomponents/issues/1029)。対応情報については、[ブラウザーの互換性](#ブラウザーの互換性)の節で調べてください。
 
 **`is`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、標準の HTML 要素が定義されたカスタム組み込み要素のように振る舞うよう指定することができます（詳しくは[カスタム要素の使用](/ja/docs/Web/API/Web_components/Using_custom_elements)を参照してください）。
 
@@ -14,7 +15,7 @@ l10n:
 
 ## 例
 
-次のコードは、 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) の例から取得されたものです（[ライブで参照](https://mdn.github.io/web-components-examples/word-count-web-component/)）。
+次のコードは、 [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) の例から取得されたものです（[ライブで参照](https://mdn.github.io/web-components-examples/word-count-web-component/)）。
 
 ```js
 // 要素のクラスを作成

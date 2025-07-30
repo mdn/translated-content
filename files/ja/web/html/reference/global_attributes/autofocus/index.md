@@ -1,12 +1,10 @@
 ---
-title: autofocus
+title: HTML autofocus グローバル属性
+short-title: autofocus
 slug: Web/HTML/Reference/Global_attributes/autofocus
-original_slug: Web/HTML/Global_attributes/autofocus
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`autofocus`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は論理属性で、ページ読み込み時、またはその要素が属する {{HTMLElement("dialog")}} が表示されたときに、その要素にフォーカスを当てるべきことを示す属性です。
 
