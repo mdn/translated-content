@@ -1,12 +1,10 @@
 ---
-title: itemscope
+title: HTML itemscope グローバル属性
+short-title: itemscope
 slug: Web/HTML/Reference/Global_attributes/itemscope
-original_slug: Web/HTML/Global_attributes/itemscope
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`itemscope`** は論理[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)で、関連付けられたメタデータのスコープを定義します。 **`itemscope`** 属性を要素に指定すると、要素に関連付けられた数々の名前と値の組み合わせを持つ新しいアイテムを作成します。
 
@@ -25,7 +23,7 @@ l10n:
 
 ### 映画の構造化データの表現
 
-以下の例では、 `itemscope` 属性を指定しています。この例では `itemtype` を "http://schema.org/Movie" に設定し、 3 つの関連する `itemprop` 属性を定義します。
+以下の例では、 `itemtype` を "http\://schema.org/Movie" に設定し、 3 つの関連する `itemprop` 属性を定義します。
 
 <table class="standard-table">
   <tbody>
@@ -56,8 +54,8 @@ l10n:
     </tr>
     <tr>
       <td>itemprop</td>
-      <td>https://youtu.be/0AY1XIkX7bY</td>
       <td>Trailer</td>
+      <td>https://youtu.be/0AY1XIkX7bY</td>
     </tr>
   </tbody>
 </table>
@@ -65,10 +63,10 @@ l10n:
 ```html
 <div itemscope itemtype="https://schema.org/Movie">
   <h1 itemprop="name">Avatar</h1>
-  <span
-    >Director: <span itemprop="director">James Cameron</span> (born August 16,
-    1954)</span
-  >
+  <span>
+    Director: <span itemprop="director">James Cameron</span> (born August 16,
+    1954)
+  </span>
   <span itemprop="genre">Science fiction</span>
   <a href="https://youtu.be/0AY1XIkX7bY" itemprop="trailer">Trailer</a>
 </div>
@@ -143,7 +141,7 @@ l10n:
       <td>recipeInstructions</td>
       <td>
         1. Cut and peel apples 2. Mix sugar and cinnamon. Use additional sugar
-        for tart apples .
+        for tart apples.
       </td>
     </tr>
     <tr>
@@ -196,8 +194,6 @@ l10n:
 > [!NOTE]
 > 手軽に HTML からマイクロデータを抽出するには、 Google の[リッチリザルトテストツール](https://search.google.com/test/rich-results)が便利です。上の HTML で試してみてください。
 
-</div>
-
 #### HTML
 
 ```html
@@ -216,14 +212,13 @@ l10n:
   </p>
   <p>
     Published:
-    <time datetime="2022-11-05" itemprop="datePublished"
-      >November 5, 20022</time
-    >
+    <time datetime="2022-11-05" itemprop="datePublished">
+      November 5, 20022
+    </time>
   </p>
-  <span itemprop="description"
-    >This is my grandmother's apple pie recipe. I like to add a dash of
-    nutmeg.</span
-  >
+  <span itemprop="description">
+    This is my grandmother's apple pie recipe. I like to add a dash of nutmeg.
+  </span>
   <br />
   <span
     itemprop="aggregateRating"
@@ -271,10 +266,6 @@ l10n:
 ## 仕様書
 
 {{Specifications}}
-
-## ブラウザーの互換性
-
-{{Compat}}
 
 ## 関連情報
 
