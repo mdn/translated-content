@@ -1,6 +1,7 @@
 ---
 title: Event handling (요약)
-slug: Web/Events/Event_handlers
+slug: conflicting/Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Event_handlers
 l10n:
   sourceCommit: 0c163056cfe83fba519b757f15d2e20f83eddaff
 ---
