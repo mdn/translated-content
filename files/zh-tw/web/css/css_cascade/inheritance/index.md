@@ -2,7 +2,7 @@
 title: 繼承
 slug: Web/CSS/CSS_cascade/Inheritance
 l10n:
-  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 在 CSS 中，**繼承**控制了當元素上的屬性未指定值時會發生什麼事。
