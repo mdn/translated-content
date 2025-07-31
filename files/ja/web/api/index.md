@@ -87,4 +87,4 @@ Web API は通常 JavaScript とともに使用されますが、常にそうと
 
 ## ブラウザーの互換性
 
-- [Web API イベントリファレンス](/ja/docs/Web/Events)
+- [Web API イベントリファレンス](/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03)

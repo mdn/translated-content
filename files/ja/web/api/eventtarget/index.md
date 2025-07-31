@@ -12,7 +12,7 @@ l10n:
 
 {{domxref("Element")}} とその子、{{domxref("Document")}}、{{domxref("Window")}} は、最も一般的なイベントターゲットですが、他のオブジェクト、例えば {{domxref("IDBRequest")}}、{{domxref("AudioNode")}}、{{domxref("AudioContext")}} などもイベントターゲットになります。
 
-多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/Web/Events/Event_handlers)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
+多くのイベントターゲット (要素、文書、ウィンドウを含む) は、[イベントハンドラー](/ja/docs/Web/API/Document_Object_Model/Events)を設定するのに `onイベント名` プロパティや属性を使用することもできます。
 
 {{InheritanceDiagram}}
 
@@ -40,6 +40,6 @@ l10n:
 
 ## 関連情報
 
-- [イベントリファレンス](/ja/docs/Web/Events) - プラットフォームで利用可能なイベント。
+- [イベントリファレンス](/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03) - プラットフォームで利用可能なイベント。
 - [イベント開発者ガイド](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} インターフェイス

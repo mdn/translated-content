@@ -14,7 +14,7 @@ l10n:
 
 イベントは、そのイベントを発行させる JavaScript オブジェクトのページの中や下に記述されています。例えば、ブラウザーのウィンドウや現在の文書で発生したイベントを確認するには、 [`Window`](/ja/docs/Web/API/Window#events) や [`Document`](/ja/docs/Web/API/Document#events) のイベントの節を参照してください。
 
-[イベントのリファレンス](/ja/docs/Web/Events#イベント索引)を使用すると、アニメーションやメディアなどの特定の API に対してどの JavaScript オブジェクトがイベントを発行するかを調べることができます。
+[イベントのリファレンス](/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03#イベント索引)を使用すると、アニメーションやメディアなどの特定の API に対してどの JavaScript オブジェクトがイベントを発行するかを調べることができます。
 
 ## イベントハンドラーの登録
 
