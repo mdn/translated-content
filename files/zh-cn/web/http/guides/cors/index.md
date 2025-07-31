@@ -342,9 +342,11 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 - 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
 
-- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为特定标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
 
 - 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+
+- 服务器**不能**将 `Access-Control-Expose-Headers` 的值设为通配符“`*`”，而应将其设置为特定标头名称的列表，如：`Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
 
 对于附带身份凭证的请求（通常是 `Cookie`），
 
