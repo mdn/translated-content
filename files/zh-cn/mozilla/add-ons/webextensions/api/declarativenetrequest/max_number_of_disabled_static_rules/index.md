@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-每个静态规则集上可禁用的静态规则的最大数量。有关静态规则集限制的更多信息，参见[静态规则集限制](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#static_ruleset_limits)。
+每个静态规则集上可禁用的静态规则的最大数量。有关静态规则集限制的更多信息，参见[静态规则集限制](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/declarativeNetRequest#静态规则集限制)。
 
 使用 {{WebExtAPIRef("declarativeNetRequest.updateStaticRules","updateStaticRules")}} 在静态规则集中启用和禁用规则，使用 {{WebExtAPIRef("declarativeNetRequest.getDisabledRuleIds","getDisabledRuleIds")}} 获取静态规则集的已禁用的规则。
 
