@@ -58,7 +58,7 @@ l10n:
 </script>
 ```
 
-但如果将 JavaScript 保存在单独的文件中，您会发现更容易
+但如果将 JavaScript 保存在单独的文件中，你会发现更容易：
 
 - 专注于工作
 - 编写自给自足的 HTML
@@ -80,8 +80,8 @@ l10n:
   - 请至少留下类似 {{HTMLElement("noscript")}} 的简短信息：`<noscript>要使用本网站，请启用 JavaScript。</noscript>`
   - 理想情况下，尽可能使用 HTML 和服务器端脚本复制 JavaScript 功能。
   - 如果只需要简单的视觉效果，CSS 往往能更直观地完成工作。
-  - *由于几乎每个人都启用了 JavaScript，`<noscript>` 不应成为编写没有无障碍性的脚本的借口。*
- 
+  - _由于几乎每个人都启用了 JavaScript，`<noscript>` 不应成为编写没有无障碍性的脚本的借口。_
+
 ## 了解更多
 
 - {{htmlelement("script")}}
