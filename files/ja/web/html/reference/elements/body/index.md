@@ -199,4 +199,4 @@ l10n:
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [イベント処理の概要](/ja/docs/Web/Events/Event_handlers)
+- [イベント処理の概要](/ja/docs/Web/API/Document_Object_Model/Events)

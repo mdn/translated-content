@@ -43,11 +43,11 @@ window.addEventListener("keyup", handleKeyUp, true);
 `handleKeyDown` と `handleKeyUp` は、`keydown` と `keyup` イベントについての制御を実装する関数です。
 
 > [!NOTE]
-> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
+> キーボードイベントについて、より知りたい人は[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events) と {{domxref("KeyboardEvent")}} ガイドをご確認ください。
 
 ### マウス
 
-マウスや他のポインターイベントも捕捉できます。ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントには、[`click`](/ja/docs/Web/API/Element/click_event)、[`dblclick`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup`](/ja/docs/Web/API/Element/mouseup_event)、[`mousedown`](/ja/docs/Web/API/Element/mousedown_event) などのイベントがあります。マウスイベントインターフェイスが使用しているすべてのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/Events)にあります。
+マウスや他のポインターイベントも捕捉できます。ユーザーがマウスのようなポインティングデバイスと関わっている時に発生するイベントは {{domxref("MouseEvent")}} DOM インターフェイスによって表されます。一般的なマウスイベントには、[`click`](/ja/docs/Web/API/Element/click_event)、[`dblclick`](/ja/docs/Web/API/Element/dblclick_event)、[`mouseup`](/ja/docs/Web/API/Element/mouseup_event)、[`mousedown`](/ja/docs/Web/API/Element/mousedown_event) などのイベントがあります。マウスイベントインターフェイスが使用しているすべてのイベントの一覧は、[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)にあります。
 
 入力機器がマウスの場合、ユーザー入力をポインターロック API や、ドラッグ＆ドロップ API を実装することでも制御できます（下記を参照してください）。 [CSS を使用して、ポインティングデバイスの対応を調べる](/ja/docs/Learn_web_development/Core/CSS_layout/Media_queries#ポインティングデバイスの使用)こともできます。
 

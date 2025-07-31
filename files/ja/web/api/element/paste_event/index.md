@@ -16,7 +16,7 @@ l10n:
 
 既定の動作を上書きする場合（例えば、別なデータを挿入したりクリップボードの内容を変換したりする場合など）、イベントハンドラーで {{domxref("Event/preventDefault", "event.preventDefault()")}} を使用して既定のアクションをキャンセルした上で、必要なデータを手動で挿入してください。
 
-[合成した](/ja/docs/Web/Events/Creating_and_triggering_events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
+[合成した](/ja/docs/Web/API/Document_Object_Model/Events) `paste` イベントを構築して配信することができますが、文書の内容には影響しません。
 
 ## 構文
 

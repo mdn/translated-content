@@ -140,7 +140,7 @@ l10n:
 
 ## 関連情報
 
-- 利用できるイベントの種類: [イベントリファレンス](/ja/docs/Web/Events)
+- 利用できるイベントの種類: [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)
 - [学習: イベント入門](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - [学習: イベントのバブリング](/ja/docs/Learn_web_development/Core/Scripting/Event_bubbling)
-- [カスタムイベントの生成と発行](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [カスタムイベントの生成と発行](/ja/docs/Web/API/Document_Object_Model/Events)

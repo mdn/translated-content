@@ -42,7 +42,7 @@ dispatchEvent(event)
 
 ## 例
 
-[イベントの作成と起動](/ja/docs/Web/Events/Creating_and_triggering_events) を参照してください。
+[イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events) を参照してください。
 
 ## 仕様書
 

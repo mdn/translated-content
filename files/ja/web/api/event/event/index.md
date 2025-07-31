@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("DOM")}}
 
-**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/Events/Creating_and_triggering_events)することができます。
+**`Event()`** コンストラクターは、新しい {{domxref("Event")}} を生成します。この方法で作成されたイベントは*合成イベント*と呼ばれ、ブラウザーによって発行されたイベントとは対照的となっており、スクリプトから[配信](/ja/docs/Web/API/Document_Object_Model/Events)することができます。
 
 ## 構文
 
@@ -58,4 +58,4 @@ myDiv.dispatchEvent(evt);
 
 - {{domxref("Event")}}
 - {{domxref("EventTarget.dispatchEvent()")}}
-- [イベントの作成とトリガー](/ja/docs/Web/Events/Creating_and_triggering_events)
+- [イベントの作成とトリガー](/ja/docs/Web/API/Document_Object_Model/Events)

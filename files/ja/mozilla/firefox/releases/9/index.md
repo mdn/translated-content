@@ -36,7 +36,7 @@ Firefox 9 は Windows 向けに 2011 年 12 月 20 日にリリースされま�
 - DOM Level 3 [Composition イベント](/ja/docs/Web/API/CompositionEvent) がサポートされました。
 - [`Document.scripts`](/ja/docs/Web/API/Document/scripts) 属性が実装されました。このメソッドはドキュメントのすべての [`<script>`](/ja/docs/Web/HTML/Reference/Elements/script) 要素の [`HTMLCollection`](/ja/docs/Web/API/HTMLCollection) を返します。
 - [`Document.queryCommandSupported()`](/ja/docs/Web/API/Document/queryCommandSupported) メソッドが実装されました。
-- 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/Web/Events/Event_handlers#event_handler_changes_in_firefox_9)
+- 標準 IDL インターフェイスとして Event ハンドラーが実装されました。多くのケースで、これはコンテンツに影響を及ぼさないはずですが、[例外が存在します。](/ja/docs/Web/API/Document_Object_Model/Events#event_handler_changes_in_firefox_9)
 - 新しいレスポンスタイプ、 "moz-json" が XMLHttpRequest に追加されました。 そのタイプを用いると、 XMLHttpRequest に自動的に [JSON](/ja/docs/Glossary/JSON) 文字列をパースさせられます。つまり、このタイプをリクエストしたときはパースされた JSON 文字列が返るので、`response` プロパティの値がパース結果の JavaScript オブジェクトになります。
 - [XMLHttpRequest の progress イベント](/ja/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest#monitoring_progress) が受け取ったデータの各チャンクに対して確実に送信されるようになりました。つまり、以前のバージョンでは受け取ったデータの最後のチャンクが progeress イベントを発生させない可能性がありました。データの最後のチャンクを受け取ったかを判定するために load イベントも監視する必要はもう無くなり、progress イベントだけで進捗を追えるようになります。
 - 過去に、`null` のリスナーを指定した [`addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) の呼び出しは例外を投げていましたが、エラーを出すことなく、何の影響も及ぼさずに処理を戻すようになりました。
