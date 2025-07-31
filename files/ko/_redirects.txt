@@ -877,7 +877,9 @@
 /ko/docs/Web/CSS/시작하기/왜_CSS를_사용하나	/en-US/docs/Learn_web_development/Core/Styling_basics/What_is_CSS
 /ko/docs/Web/CSS/인접_형제_선택자	/ko/docs/Web/CSS/Next-sibling_combinator
 /ko/docs/Web/EXSLT	/ko/docs/Web/XML/EXSLT
+/ko/docs/Web/Events/Creating_and_triggering_events	/ko/docs/Web/API/Document_Object_Model/Events
 /ko/docs/Web/Events/DOMContentLoaded	/ko/docs/Web/API/Document/DOMContentLoaded_event
+/ko/docs/Web/Events/Event_handlers	/ko/docs/conflicting/Web/API/Document_Object_Model/Events
 /ko/docs/Web/Events/abort	/ko/docs/Web/API/HTMLMediaElement/abort_event
 /ko/docs/Web/Events/blur	/ko/docs/Web/API/Element/blur_event
 /ko/docs/Web/Events/click	/ko/docs/Web/API/Element/click_event

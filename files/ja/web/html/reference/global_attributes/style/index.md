@@ -1,12 +1,10 @@
 ---
-title: style
+title: HTML style グローバル属性
+short-title: style
 slug: Web/HTML/Reference/Global_attributes/style
-original_slug: Web/HTML/Global_attributes/style
 l10n:
-  sourceCommit: ba96f2f183353872db6d9242c7d2dffe2dbc0c35
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
-
-{{HTMLSidebar("Global_attributes")}}
 
 **`style`** [グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)は、要素に適用する [CSS](/ja/docs/Web/CSS) スタイル宣言を指定します。なお、スタイルは別のファイルで定義することが推奨されます。この属性と {{HTMLElement("style")}} 要素の主な用途は、例えばテストのために、すばやくスタイルを適用できるようにすることです。
 
@@ -35,3 +33,4 @@ l10n:
 ## 関連情報
 
 - すべての[グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes)
+- {{domxref("HTMLElement.style")}}

@@ -1,6 +1,7 @@
 ---
 title: 이벤트 생성 및 트리거
-slug: Web/Events/Creating_and_triggering_events
+slug: Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Creating_and_triggering_events
 l10n:
   sourceCommit: e633202a8cda3c340a0510c27f3902f743275140
 ---
