@@ -17,6 +17,7 @@ l10n:
 
     > [!NOTE]
     > `popover` に空の値を設定する（`popover` または `popover=""`）ことは、`popover="auto"` を設定することと同じです。
+
 - `"hint"` {{experimental_inline}}
   - : [`hint`](/ja/docs/Web/API/Popover_API/Using#using_hint_popover_state) ポップオーバーは、表示時に `auto` ポップオーバーは閉じませんが、それ以外のヒントポップオーバーは閉じます。
     これらは簡単に閉じることができ、閉じるリクエストに応答します。
