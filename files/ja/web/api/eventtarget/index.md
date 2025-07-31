@@ -40,6 +40,6 @@ l10n:
 
 ## 関連情報
 
-- [イベントリファレンス](/ja/docs/conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03) - プラットフォームで利用可能なイベント。
+- [イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events) - プラットフォームで利用可能なイベント。
 - [イベント開発者ガイド](/ja/docs/Learn_web_development/Core/Scripting/Events)
 - {{domxref("Event")}} インターフェイス

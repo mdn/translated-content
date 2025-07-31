@@ -20,7 +20,7 @@ l10n:
 
 このハンドラーがクリップボードのデータを*読み取る*ことはできません。
 
-[合成した](/ja/docs/conflicting/Web/API/Document_Object_Model/Events) `cut` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
+[合成した](/ja/docs/Web/API/Document_Object_Model/Events) `cut` イベントを構築して配信することもできますが、システムのクリップボードには影響を与えません。
 
 ## 構文
 

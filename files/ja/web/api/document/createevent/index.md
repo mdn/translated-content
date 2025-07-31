@@ -65,4 +65,4 @@ elem.dispatchEvent(event);
 
 ## 関連情報
 
-- [イベントの作成と発行](/ja/docs/conflicting/Web/API/Document_Object_Model/Events)
+- [イベントの作成と発行](/ja/docs/Web/API/Document_Object_Model/Events)

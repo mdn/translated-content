@@ -43,4 +43,4 @@ _親である {{domxref("Event")}} インターフェイスから継承したメ
 ## 関連情報
 
 - {{domxref("Window.postMessage()")}}
-- [イベントの作成と起動](/ja/docs/conflicting/Web/API/Document_Object_Model/Events)
+- [イベントの作成と起動](/ja/docs/Web/API/Document_Object_Model/Events)
