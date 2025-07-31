@@ -1,8 +1,8 @@
 ---
-title: ドキュメントオブジェクトモデルの使用
+title: ドキュメントオブジェクトモデルの使い方
 slug: Web/API/Document_Object_Model/Using_the_Document_Object_Model
 l10n:
-  sourceCommit: 1f44fd905e4acbe867ca945b26a8b06ddb646328
+  sourceCommit: 06bb5f22d50ff3579a12aebf7e8c9f02cfa2468b
 ---
 
 {{DefaultAPISidebar("DOM")}}
@@ -49,7 +49,7 @@ l10n:
     <title>文書</title>
   </head>
   <body>
-    <input type="button" value="この文書を変更" onclick="change()" />
+    <input type="button" value="この文書を変更" />
     <h2>見出し</h2>
     <p>段落</p>
   </body>
@@ -59,7 +59,7 @@ l10n:
 ### JavaScript コンテンツ
 
 ```js
-function change() {
+document.querySelector("input").addEventListener("click", () => {
   // document.getElementsByTagName("h2") は、文書内の <h2> 要素の NodeList
   // であり、最初のものは 0 番
   const header = document.getElementsByTagName("h2").item(0);
@@ -85,12 +85,10 @@ function change() {
   // また、（段落の親に当たる)）ody に追加することで、文書の最後に
   // 段落を置く
   para.parentNode.appendChild(newElement);
-}
+});
 ```
 
-### 結果
-
-{{ EmbedLiveSample('reading_and_modifying_the_tree', 800, 300) }}
+{{ EmbedLiveSample('ツリーの読み取りと変更', 800, 300) }}
 
 ## ツリーの作成
 
@@ -119,8 +117,8 @@ root.appendChild(body);
 
 ## もっと学ぶ方法
 
-これで DOM の基本的な概念に慣れたと思いますので、[JavaScript と DOM インターフェイスによる HTML の表の操作](/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces) を読んで、文書 API の基本的な機能についてもっと学びたいと思うかもしれません。
+これで DOM の基本的な概念に慣れたと思いますので、[JavaScript と DOM インターフェイスによる HTML の表の操作](/ja/docs/Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces)を読んで、文書 API の基本的な機能をもっと学びたいと思うかもしれません。
 
 ## 関連情報
 
-- [ドキュメントオブジェクトモデル](/ja/docs/Web/API/Document_Object_Model) (DOM).
+- [ドキュメントオブジェクトモデル](/ja/docs/Web/API/Document_Object_Model) (DOM)

@@ -11342,13 +11342,6 @@
       "RobinEgg"
     ]
   },
-  "Web/API/Document_Object_Model/Transforming_with_XSLT": {
-    "modified": "2020-04-13T14:02:19.940Z",
-    "contributors": [
-      "mfuji09",
-      "Marsf"
-    ]
-  },
   "Web/API/Document_Object_Model/Traversing_an_HTML_table_with_JavaScript_and_DOM_Interfaces": {
     "modified": "2020-08-22T02:39:04.971Z",
     "contributors": [
@@ -44337,10 +44330,10 @@
     ]
   },
   "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
-    "modified": "2019-03-18T20:50:34.881Z",
+    "modified": "2020-04-13T14:02:19.940Z",
     "contributors": [
       "mfuji09",
-      "silverskyvicto"
+      "Marsf"
     ]
   },
   "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_1af10c5c37196c51dbca9c7afe2a2c49d05656401a85bc9790e8390612e730dd": {
