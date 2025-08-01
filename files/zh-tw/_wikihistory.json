@@ -6065,26 +6065,5 @@
     "contributors": [
       "Aries0d0f"
     ]
-  },
-  "conflicting/Web/API/Document_Object_Model/Events": {
-    "modified": "2020-05-13T00:05:39.122Z",
-    "contributors": [
-      "ginszme",
-      "jackblackevo"
-    ]
-  },
-  "conflicting/Web/API/Document_Object_Model/Events_c282731eb05539912e604c2db2986790a254812531e62f190bb83745f45dbb03": {
-    "modified": "2019-11-28T04:54:28.795Z",
-    "contributors": [
-      "t7yang",
-      "fadeawaygod",
-      "wbamberg",
-      "Septem",
-      "fscholz",
-      "jackblackevo",
-      "Shiyou",
-      "ethertank",
-      "louisremi"
-    ]
   }
 }
