@@ -1,6 +1,7 @@
 ---
 title: 建立與觸發事件
-slug: Web/Events/Creating_and_triggering_events
+slug: Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Creating_and_triggering_events
 l10n:
   sourceCommit: 95e0fbb78a16450188753d0b53ca02a9fbd2a641
 ---

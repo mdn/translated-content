@@ -1,6 +1,7 @@
 ---
 title: 事件處理（概覽）
-slug: Web/Events/Event_handlers
+slug: conflicting/Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Event_handlers
 l10n:
   sourceCommit: 95e0fbb78a16450188753d0b53ca02a9fbd2a641
 ---
