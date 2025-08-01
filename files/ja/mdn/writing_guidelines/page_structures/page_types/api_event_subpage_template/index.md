@@ -73,7 +73,7 @@ l10n:
 > 例えば [Element: wheel イベント](/ja/docs/Web/API/Element/wheel_event)は [`Element` Events](/ja/docs/Web/API/Element#イベント) からリンクされます。
 >
 > 親オブジェクトに「イベント」セクションがない場合は、追加してください。
-> これが新しい「クラス」のイベントであれば、[イベントリファレンス](/ja/docs/Web/Events)から親のこの節へのリンクを追加する必要があります。
+> これが新しい「クラス」のイベントであれば、[イベントリファレンス](/ja/docs/Web/API/Document_Object_Model/Events)から親のこの節へのリンクを追加する必要があります。
 >
 > _公開する前に、この説明文全体を削除することを忘れないでください。_
 
