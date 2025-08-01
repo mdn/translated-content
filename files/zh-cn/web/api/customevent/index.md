@@ -44,4 +44,4 @@ _此接口继承其父接口 {{domxref("Event")}} 的方法。_
 ## 参见
 
 - {{domxref("Window.postMessage()")}}
-- [创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)

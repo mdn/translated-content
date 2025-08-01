@@ -12,7 +12,7 @@ slug: Web/API/MouseEvent/initMouseEvent
 > [!NOTE]
 > **不要再用此方法，已过时。**
 >
-> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events) 页面里有更多的使用信息。
+> 使用特定的事件构造器来替代它，像 {{domxref("MouseEvent.MouseEvent", "MouseEvent()")}}。[创建并发送事件](/zh-CN/docs/Web/API/Document_Object_Model/Events) 页面里有更多的使用信息。
 
 ## 语法
 
