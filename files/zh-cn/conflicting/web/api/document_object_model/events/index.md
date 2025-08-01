@@ -1,6 +1,7 @@
 ---
 title: 事件参考
-slug: Web/Events
+slug: conflicting/Web/API/Document_Object_Model/Events
+original_slug: Web/Events
 l10n:
   sourceCommit: 4ca4fa3d9d1de5601b406b13dc75aff30709c66f
 ---

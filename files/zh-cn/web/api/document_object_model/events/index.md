@@ -1,6 +1,7 @@
 ---
 title: 事件处理器（概述）
-slug: Web/Events/Event_handlers
+slug: Web/API/Document_Object_Model/Events
+original_slug: Web/Events/Event_handlers
 ---
 
 事件是浏览器窗口内触发的信号，用于通知浏览器或操作系统环境的变化。程序员可以创建用于在事件触发时运行的*事件处理器*代码，使网页能够适当地响应变化。
