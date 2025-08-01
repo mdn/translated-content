@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-当元素符合 {{CSSxRef(":focus")}} 伪类，且 UA（{{glossary("User Agent", "用户代理")}}）通过启发式方法确定应在元素上显示焦点时，**`:focus-visible`** 伪类就会适用。（在这种情况下，许多浏览器默认会显示一个 “焦点环”。）
+当元素符合 {{CSSxRef(":focus")}} 伪类，且 UA（{{glossary("User Agent", "用户代理")}}）通过启发式方法确定应在元素上显示焦点时，**`:focus-visible`** 伪类就会适用。（在这种情况下，许多浏览器默认会显示一个“焦点环”。）
 
 {{InteractiveExample("CSS 演示：:focus-visible", "tabbed-shorter")}}
 
@@ -125,9 +125,7 @@ button {
 
 ```html
 <button class="button with-fallback" type="button">有回落的按钮</button>
-<button class="button without-fallback" type="button">
-  无回落的按钮
-</button>
+<button class="button without-fallback" type="button">无回落的按钮</button>
 ```
 
 ```css
