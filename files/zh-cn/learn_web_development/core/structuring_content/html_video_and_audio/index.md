@@ -296,6 +296,6 @@ WEBVTT
 - [音频和视频操作](/zh-CN/docs/Web/Media/Guides/Audio_and_video_manipulation)：使用 JavaScript 对音频和视频进行详细操作的指南（例如添加滤镜）。
 - [Web 媒体技术](/zh-CN/docs/Web/Media)
 - [web 上的媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)
-- [事件参考 > 媒体](/zh-CN/docs/Web/Events#media)
+- [事件参考 > 媒体](/zh-CN/docs/Web/API/Document_Object_Model/Events#media)
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
