@@ -27,7 +27,7 @@ original_slug: Learn/Server-side/Django/skeleton_website
 3. プロジェクトにアプリケーションを含めるために登録します。
 4. url/path マッパーはそれらのアプリケーションを結びつけます。
 
-[Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは *locallibrary* という名前をつけます。また、１つのアプリケーションは *catalog* という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
+[Local Library website](/ja/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) のために、ウェブサイトフォルダーとプロジェクトフォルダーは _locallibrary_ という名前をつけます。また、１つのアプリケーションは _catalog_ という名前をつけます。 したがって、最上位のフォルダー構成は以下のようになります。:
 
 ```bash
 locallibrary/         # Website folder
