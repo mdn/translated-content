@@ -7,9 +7,9 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-La méthode **`togglePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) permet d'alterner les états d'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) valide) entre l'état masqué et l'état affiché.
+La méthode **`togglePopover()`** de l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) permet d'alterner les états d'un élément [<i lang="en">popover</i>](/fr/docs/Web/API/Popover_API) (c'est-à-dire un élément qui a un attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) valide) entre l'état masqué et l'état affiché.
 
-Lorsque `togglePopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover)&nbsp;:
+Lorsque `togglePopover()` est appelée sur un élément avec l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover)&nbsp;:
 
 1. Un évènement [`beforetoggle`](/fr/docs/Web/API/HTMLElement/beforetoggle_event) est déclenché.
 2. Le <i lang="en">popover</i> alterne entre l'état masqué et affiché&nbsp;:
@@ -54,7 +54,7 @@ Le HTML de l'exemple est affiché ci-après. Le premier élément fournit les in
 </p>
 ```
 
-Nous définissons ensuite un élément `<div>` qui est le popup. Le contenu réel n'a pas d'importance, mais notez que nous avons besoin de l'attribut [`popover`](/fr/docs/Web/HTML/Global_attributes/popover) pour faire du `<div>` un <i lang="en">popover</i> afin qu'il soit masqué par défaut (nous pourrions également définir cet élément dans le JavaScript).
+Nous définissons ensuite un élément `<div>` qui est le popup. Le contenu réel n'a pas d'importance, mais notez que nous avons besoin de l'attribut [`popover`](/fr/docs/Web/HTML/Reference/Global_attributes/popover) pour faire du `<div>` un <i lang="en">popover</i> afin qu'il soit masqué par défaut (nous pourrions également définir cet élément dans le JavaScript).
 
 ```html
 <div id="mypopover" popover>

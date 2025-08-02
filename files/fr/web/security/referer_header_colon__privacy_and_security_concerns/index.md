@@ -5,7 +5,7 @@ slug: Web/Security/Referer_header:_privacy_and_security_concerns
 
 {{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
 
-L'[entête HTTP Referer](/fr/docs/Web/HTTP/Headers/Referer) présente des risques de confidentialité et de sécurité[.](/fr/docs/Web/HTTP/Headers/Referer) Cet article les décrit et donne des conseils pour les minimiser.
+L'[entête HTTP Referer](/fr/docs/Web/HTTP/Reference/Headers/Referer) présente des risques de confidentialité et de sécurité[.](/fr/docs/Web/HTTP/Reference/Headers/Referer) Cet article les décrit et donne des conseils pour les minimiser.
 
 ## Le problème
 

@@ -5,7 +5,7 @@ slug: Web/CSS/border-spacing
 
 {{CSSRef}}
 
-La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
+La propriété **`border-spacing`** définit la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque {{cssxref("border-collapse")}} vaut `separate`). Cette propriété est équivalente à l'attribut HTML déprécié [`cellspacing`](/fr/docs/Web/HTML/Reference/Elements/table#cellspacing) mais une deuxième valeur peut être utilisée afin d'obtenir un espacement vertical différent de l'espacement horizontal.
 
 {{InteractiveExample("CSS Demo: border-spacing")}}
 

@@ -18,7 +18,7 @@ _Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), 
 - [`HTMLElement.accessKeyLabel`](/fr/docs/Web/API/HTMLElement/accessKeyLabel) {{ReadOnlyInline}}
   - : Renvoie une chaîne de caractères contenant la touche d'accès affectée à l'élément.
 - [`HTMLElement.attributeStyleMap`](/fr/docs/Web/API/HTMLElement/attributeStyleMap) {{ReadOnlyInline}}
-  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style) de l'élément.
+  - : Un objet [`StylePropertyMap`](/fr/docs/Web/API/StylePropertyMap) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style) de l'élément.
 - [`HTMLElement.contentEditable`](/fr/docs/Web/API/HTMLElement/contentEditable)
   - : Une chaîne de caractères qui, si elle vaut `true` indique que l'élément est éditable et qui, si elle vaut `false` indique que l'élément n'est pas éditable.
 - [`HTMLElement.isContentEditable`](/fr/docs/Web/API/HTMLElement/isContentEditable) {{ReadOnlyInline}}
@@ -26,7 +26,7 @@ _Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), 
 - [`HTMLElement.contextMenu`](/fr/docs/Web/API/HTMLElement/contextMenu) {{Deprecated_Inline}}
   - : Un objet [`HTMLMenuElement`](/fr/docs/Web/API/HTMLMenuElement) qui représente le menu contextuel associé à l'élément. Il peut valoir `null`.
 - [`HTMLElement.dataset`](/fr/docs/Web/API/HTMLElement/dataset) {{ReadOnlyInline}}
-  - : Renvoie un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec lequel il est possible de lire et d'écrire [les attributs de données spécifiques](/fr/docs/Learn/HTML/Howto/Use_data_attributes) (`data-*`).
+  - : Renvoie un objet [`DOMStringMap`](/fr/docs/Web/API/DOMStringMap) avec lequel il est possible de lire et d'écrire [les attributs de données spécifiques](/fr/docs/Web/HTML/How_to/Use_data_attributes) (`data-*`).
 - [`HTMLElement.dir`](/fr/docs/Web/API/HTMLElement/dir)
   - : Une chaîne de caractères reflétant l'attribut universel `dir` et qui représente le sens d'écriture de l'élément. Les valeurs possibles sont `"ltr"` (gauche à droite), `"rtl"` (droite à gauche), et `"auto"`.
 - [`HTMLElement.draggable`](/fr/docs/Web/API/HTMLElement/draggable)
@@ -38,7 +38,7 @@ _Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), 
 - [`HTMLElement.inert`](/fr/docs/Web/API/HTMLElement/inert)
   - : Une valeur booléenne indiquant si l'agent utilisateur doit agir comme si le nœud donné était absent en ce qui concerne les évènements d'interaction, les recherches de texte dans la page, et la sélection de texte.
 - [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText)
-  - : Représente le contenu du texte rendu d'un nœud et de ses descendants. Comme accesseur, il approxime le texte qu'une personne aurait en surlignant le contenu de l'élément avec le curseur et en copiant ceci dans un presse-papier. Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en élément [`<br>`](/fr/docs/Web/HTML/Element/br).
+  - : Représente le contenu du texte rendu d'un nœud et de ses descendants. Comme accesseur, il approxime le texte qu'une personne aurait en surlignant le contenu de l'élément avec le curseur et en copiant ceci dans un presse-papier. Comme mutateur, il remplace le contenu à l'intérieur de l'élément sélectionné, convertissant tout saut de ligne en élément [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 - [`HTMLElement.lang`](/fr/docs/Web/API/HTMLElement/lang)
   - : Une chaîne de caractères représentant la langue du contenu, du texte et des attributs d'un élément.
 - [`HTMLElement.noModule`](/fr/docs/Web/API/HTMLElement/noModule)
@@ -56,13 +56,13 @@ _Hérite des propriétés de son parent, [`Element`](/fr/docs/Web/API/Element), 
 - [`HTMLElement.offsetWidth`](/fr/docs/Web/API/HTMLElement/offsetWidth) {{ReadOnlyInline}}
   - : Renvoie une valeur numérique `double` contenant la largeur de l'élément, relativement à la disposition.
 - [`HTMLElement.outerText`](/fr/docs/Web/API/HTMLElement/outerText)
-  - : Représente le texte rendu du contenu d'un nœud et de ses descendants. Comme accesseur, il se comporte comme [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText) (il représente le contenu texte d'un élément et de ses descendants). Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant au passage tout saut de ligne en éléments [`<br>`](/fr/docs/Web/HTML/Element/br).
+  - : Représente le texte rendu du contenu d'un nœud et de ses descendants. Comme accesseur, il se comporte comme [`HTMLElement.innerText`](/fr/docs/Web/API/HTMLElement/innerText) (il représente le contenu texte d'un élément et de ses descendants). Comme mutateur, il remplace le nœud sélectionné et son contenu avec la valeur fournie, convertissant au passage tout saut de ligne en éléments [`<br>`](/fr/docs/Web/HTML/Reference/Elements/br).
 - [`HTMLElement.properties`](/fr/docs/Web/API/HTMLElement/properties) {{Experimental_Inline}}{{ReadOnlyInline}}
   - : Renvoi un objet [`HTMLPropertiesCollection`](/fr/docs/Web/API/HTMLPropertiesCollection).
 - [`HTMLElement.spellcheck`](/fr/docs/Web/API/HTMLElement/spellcheck)
-  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
+  - : Une valeur booléenne reflétant l'attribut HTML [`spellcheck`](/fr/docs/Web/HTML/Reference/Global_attributes/spellcheck). Cette propriété est présente sur tous les éléments HTML même si elle n'a pas d'effet pour tous.
 - [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style)
-  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Global_attributes#attr-style) de l'élément.
+  - : Un objet [`CSSStyleDeclaration`](/fr/docs/Web/API/CSSStyleDeclaration) qui représente les déclarations contenues dans l'attribut [`style`](/fr/docs/Web/HTML/Reference/Global_attributes#attr-style) de l'élément.
 - [`HTMLElement.tabIndex`](/fr/docs/Web/API/HTMLElement/tabIndex)
   - : Une valeur numérique `long` représentant la position de l'élément dans l'ordre de tabulation.
 - [`HTMLElement.title`](/fr/docs/Web/API/HTMLElement/title)
@@ -123,11 +123,11 @@ On écoutera ces évènements à l'aide de `addEventListener()` ou en affectant 
 ### Évènements de saisie
 
 - [`beforeinput`](/fr/docs/Web/API/Element/beforeinput_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) est sur le point d'être modifiée.
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) est sur le point d'être modifiée.
 - [`input`](/fr/docs/Web/API/Element/input_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) a été modifiée. Également disponible via la propriété [`oninput`](/fr/docs/Web/API/Element/input_event).
 - [`change`](/fr/docs/Web/API/HTMLElement/change_event)
-  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Element/input), [`<select>`](/fr/docs/Web/HTML/Element/select), ou [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
+  - : Déclenché lorsque la valeur d'un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input), [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select), ou [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea) a été modifiée et validée par l'utilisatrice ou l'utilisateur. À la différence de l'évènement [`input`](/fr/docs/Web/API/Element/input_event), l'évènement `change` n'est pas nécessairement déclenché pour chaque altération de la valeur de l'élément.
 
 ### Évènements de pointeur
 

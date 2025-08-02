@@ -217,7 +217,7 @@ Toutefois, la communication entre les _web workers_ est contrôlée explicitemen
 
 ## Règles de sécurité du contenu (_content security policy_, CSP)
 
-Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
+Les _workers_ disposent de leur propre contexte d'exécution, distinct de celui du document qui les a créés. Aussi, en général, les _workers_ ne sont pas gérés par la [politique de sécurité de contenu](/fr/docs/Web/HTTP/Guides/CSP) du document (ou du _worker_ parent) responsable de leur création. Ainsi, si un document est servi avec l'en-tête suivant :
 
 ```
 Content-Security-Policy: script-src 'self'
@@ -225,7 +225,7 @@ Content-Security-Policy: script-src 'self'
 
 Cette règle empêchera n'importe quel script inclus dans le document d'utiliser [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Toutefois, si le script génère un _worker_, le code exécuté par ce _worker_ pourra utiliser `eval()`.
 
-Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
+Pour appliquer une règle de sécurité au _worker_, il faudra fournir un en-tête [Content-Security-Policy](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) approprié pour la requête responsable du service du script du _worker_.
 
 Si l'origine du script du _worker_ est un identifiant global unique (si son URL utilise le schéma `data://` ou `blob://` par exemple), le _worker_ héritera du CSP associé au document responsable de sa création.
 

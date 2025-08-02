@@ -19,14 +19,14 @@ La [pseudo-classe](/fr/docs/Web/CSS/Pseudo-classes) [CSS](/fr/docs/Web/CSS) **`:
 
 Voici des exemples d'éléments qui peuvent empêcher une interaction avec le reste de la page et qui pourront être ciblés par la pseudo-classe&nbsp;:
 
-- L'élément [`<dialog>`](/fr/docs/Web/HTML/Element/dialog) lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
+- L'élément [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog) lorsqu'il est ouvert avec la méthode du DOM `showModal()`.
 - Un élément ciblé par la pseudo-classe [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen) lorsqu'il est ouvert avec la méthode du DOM `requestFullscreen()`.
 
 ## Exemples
 
 ### Mettre en forme une boîte de dialogue
 
-Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lorsqu'on active le bouton «&nbsp;Mettre à jour les détails&nbsp;». Cet exemple est construit à partir de [l'exemple présent sur la page de l'élément `<dialog>`](/fr/docs/Web/HTML/Element/dialog#exemple_avancé).
+Dans cet exemple, on met en forme une boîte de dialogue modale qui s'ouvre lorsqu'on active le bouton «&nbsp;Mettre à jour les détails&nbsp;». Cet exemple est construit à partir de [l'exemple présent sur la page de l'élément `<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog#exemple_avancé).
 
 ```html hidden
 <!-- Boîte de dialogue contextuelle simple contenant un formulaire -->
@@ -116,7 +116,7 @@ favDialog.addEventListener("close", () => {
 
 ## Voir aussi
 
-- L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Element/dialog)
+- L'élément HTML [`<dialog>`](/fr/docs/Web/HTML/Reference/Elements/dialog)
 - Les autres pseudo-classes relatives à l'état d'affichage&nbsp;:
   - [`:fullscreen`](/fr/docs/Web/CSS/:fullscreen)
   - [`:picture-in-picture`](/fr/docs/Web/CSS/:picture-in-picture)

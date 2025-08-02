@@ -56,7 +56,7 @@ En revanche, il faudra retirer les marges appliquées aux objets et les largeurs
 ## Voir aussi
 
 - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [L'amélioration progressive et les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [L'amélioration progressive et les grilles CSS](/fr/docs/conflicting/Web/CSS/CSS_grid_layout)
 - [Utiliser les zones nommées des grilles](/fr/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [`fit-content`](/fr/docs/Web/CSS/fit-content)
 - [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas)

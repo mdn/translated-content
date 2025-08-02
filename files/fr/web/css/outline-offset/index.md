@@ -5,7 +5,7 @@ slug: Web/CSS/outline-offset
 
 {{CSSRef}}
 
-La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/docs/Learn/CSS/Building_blocks/The_box_model) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
+La propriété **`outline-offset`** définit l'espace qu'il y a entre la bordure dessinée par {{cssxref("outline")}} et le bord de [la boîte de bordure](/fr/docs/Learn_web_development/Core/Styling_basics/Box_model) d'un élément. Cet espace est transparent et la couleur visible en arrière-plan sera déterminée par l'élément parent.
 
 {{InteractiveExample("CSS Demo: outline-offset")}}
 

@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Admin_site
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-Nous avons créé le modèle de données pour le site web de la [bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website). Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.
+Nous avons créé le modèle de données pour le site web de la [bibliothèque locale](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website). Dans ce chapitre nous allons utiliser le site d'administration pour introduire des données réelles pour les livres. Dans un premier temps, nous aborderons la manière d'enregistrer les données des objets sur le site d'administration et comment se connecter au site et créer des données. La fin de ce chapitre sera dédié à des éléments d'amélioration possible du site d'administration.
 
 <table class="standard-table">
   <tbody>
@@ -34,7 +34,7 @@ Nous avons créé le modèle de données pour le site web de la [bibliothèque l
 
 Le site d'administration et l'application admin associée de Django peut utiliser les objets déclarés du modèle de données pour réaliser automatiquement un espace de publications, de création, de mise à jour ou de suppression d'enregistrements. Cet outil permet d'économiser du temps pendant les développements et de tester rapidement le modèle de données et par voie de conséquence de vérifier la disponibilité des données et la cohérence du modèle créé. En fonction de votre type d'application web, le site d'administration peut aussi servir à gérer les données du site en production. Comme une approche centrée sur le modèle de données n'est pas appropriée à une présentation utilisateur, les concepteurs de Django recommandent de ne se servir de ce site que pour une administration interne des données (c'est-à-dire, juste pour les administrateurs techniques ou fonctionnels de l'application).
 
-Quand nous avons créé [le squelette du projet](/fr/docs/Learn/Server-side/Django/skeleton_website), nous avons généré automatiquement toute ce qui était nécessaire à son administration au sein de l'application web ([le détail des relations en jeux](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) sont décrites sur le site documentaire Django). Au final, vous n'aurez juste qu'à ajouter vos modèles dans l'administration du site en les enregistrant. A la fin de ce chapitre, vous aurez des pistes sur l'une des manière d'améliorer l'affichage des données dans la zone d'administration.
+Quand nous avons créé [le squelette du projet](/fr/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website), nous avons généré automatiquement toute ce qui était nécessaire à son administration au sein de l'application web ([le détail des relations en jeux](https://docs.djangoproject.com/fr/2.2/ref/contrib/admin/) sont décrites sur le site documentaire Django). Au final, vous n'aurez juste qu'à ajouter vos modèles dans l'administration du site en les enregistrant. A la fin de ce chapitre, vous aurez des pistes sur l'une des manière d'améliorer l'affichage des données dans la zone d'administration.
 
 Passons aux actes ! Après l'enregistrement des objets du modèle relationnel, nous verrons comment créer un super-utilisateur, s'authentifier et ensuite créer quelques livres, auteurs et ouvrages à la disposition des lecteurs. Ces données seront très utiles pour tester ensuite les vues et gabarits qui seront abordés dans les chapitres suivants.
 
@@ -60,7 +60,7 @@ admin.site.register(BookInstance)
 ```
 
 > [!NOTE]
-> Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
+> Si vous avez répondu au défi de la modelisation des langues des livres ([voir le chapitre précédent sur les modèles de données](/fr/docs/Learn_web_development/Extensions/Server-side/Django/Models)), vous pouvez aussi importer cet objet !
 >
 > Cela devrait être de la forme : `admin.site.register(Language)` et n'oubliez pas d'importer l'objet.
 

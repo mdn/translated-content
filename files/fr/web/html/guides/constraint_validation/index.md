@@ -8,9 +8,9 @@ l10n:
 
 {{HTMLSidebar}}
 
-La création de formulaires web a toujours été une tâche complexe. Bien que le balisage du formulaire en lui-même soit plutôt simple, c'est la vérification de la validité et de la cohérence des valeurs de chaque champ qui s'avère difficile. Informer l'utilisatrice ou l'utilisateur à propos de la validité (ou de l'invalidité) des champs est parfois un casse-tête. [HTML5](/fr/docs/Glossary/HTML5) introduit de nouveaux mécanismes pour les formulaires&nbsp;: de nouveaux types sémantiques pour [`<input>`](/fr/docs/Web/HTML/Element/input) et _la validation des contraintes_ pour simplifier la vérification du contenu d'un formulaire côté client. Les contraintes de base usuelles peuvent être vérifiées sans recourir à JavaScript à l'aide de nouveaux attributs. Des contraintes plus complexes peuvent être testées à l'aide de l'API <i lang="en">Constraint Validation</i>.
+La création de formulaires web a toujours été une tâche complexe. Bien que le balisage du formulaire en lui-même soit plutôt simple, c'est la vérification de la validité et de la cohérence des valeurs de chaque champ qui s'avère difficile. Informer l'utilisatrice ou l'utilisateur à propos de la validité (ou de l'invalidité) des champs est parfois un casse-tête. [HTML5](/fr/docs/Glossary/HTML5) introduit de nouveaux mécanismes pour les formulaires&nbsp;: de nouveaux types sémantiques pour [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input) et _la validation des contraintes_ pour simplifier la vérification du contenu d'un formulaire côté client. Les contraintes de base usuelles peuvent être vérifiées sans recourir à JavaScript à l'aide de nouveaux attributs. Des contraintes plus complexes peuvent être testées à l'aide de l'API <i lang="en">Constraint Validation</i>.
 
-Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur la validation des formulaires](/fr/docs/Learn/Forms/Form_validation).
+Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur la validation des formulaires](/fr/docs/Learn_web_development/Extensions/Forms/Form_validation).
 
 > [!NOTE]
 > La validation des contraintes HTML ne signifie pas qu'il n'est plus nécessaire de vérifier _côté serveur_. Même si cela réduit les risques d'envoi de formulaires invalides, des acteurs malveillants pourraient passer outre ces vérifications côté client. Aussi, assurez-vous de toujours valider les contraintes de saisie côté serveur, en étant cohérent avec ce qui est fait côté client.
@@ -19,19 +19,19 @@ Pour une introduction à ces concepts avec des exemples, voir [le tutoriel sur l
 
 En HTML, les contraintes de base peuvent être déclarées de deux façons&nbsp;:
 
-- En choisissant la valeur sémantique la plus appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input). Ainsi, choisir le type `email` créera automatiquement une contrainte vérifiant que la valeur est une adresse électronique valide.
+- En choisissant la valeur sémantique la plus appropriée pour l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input). Ainsi, choisir le type `email` créera automatiquement une contrainte vérifiant que la valeur est une adresse électronique valide.
 - En définissant des valeurs pour les attributs relatifs à la validation qui permettent de décrire des contraintes simplement, sans avoir besoin de JavaScript.
 
 ### Types de champs
 
-Les contraintes intrinsèques portées par l'attribut [`type`](/fr/docs/Web/HTML/Element/input#type) sont&nbsp;:
+Les contraintes intrinsèques portées par l'attribut [`type`](/fr/docs/Web/HTML/Reference/Elements/input#type) sont&nbsp;:
 
-| Type de champ                                                   | Description de la contrainte                                                                                                                                                         | Violation correspondante                                      |
-| --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------- |
-| [`<input type="URL">`](/fr/docs/Web/HTML/Element/input/url)     | La valeur doit être une [URL](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
-| [`<input type="email">`](/fr/docs/Web/HTML/Element/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                    | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| Type de champ                                                              | Description de la contrainte                                                                                                                                                              | Violation correspondante                                      |
+| -------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------- |
+| [`<input type="URL">`](/fr/docs/Web/HTML/Reference/Elements/input/url)     | La valeur doit être une [URL](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL) absolue, telle que définie [dans le standard évolutif URL](https://url.spec.whatwg.org/). | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
+| [`<input type="email">`](/fr/docs/Web/HTML/Reference/Elements/input/email) | La valeur doit être une adresse électronique avec une syntaxe valide (généralement au format `nom@domaine.tld` ou `nom@domaine`).                                                         | [`TypeMismatch`](/fr/docs/Web/API/ValidityState/typeMismatch) |
 
-Pour ces deux types de champ, si l'attribut [`multiple`](/fr/docs/Web/HTML/Element/input#multiple) est utilisé, plusieurs valeurs peuvent être passées dans le champ sous la forme d'une liste séparée par des virgules. Si au moins une des valeurs ne respecte pas les conditions décrites ici, la violation de contrainte `TypeMismatch` est déclenchée.
+Pour ces deux types de champ, si l'attribut [`multiple`](/fr/docs/Web/HTML/Reference/Elements/input#multiple) est utilisé, plusieurs valeurs peuvent être passées dans le champ sous la forme d'une liste séparée par des virgules. Si au moins une des valeurs ne respecte pas les conditions décrites ici, la violation de contrainte `TypeMismatch` est déclenchée.
 
 On notera que la plupart des types de champ n'ont pas de contraintes intrinsèques&nbsp;: soit il n'y a pas de contrainte particulière, soit le navigateur applique un algorithme de transformation pour que les valeurs incorrectes utilisent une valeur par défaut correcte.
 
@@ -184,7 +184,7 @@ En complément de l'attribut `type` mentionné ci-avant, les attributs suivants 
 
 ## Processus de validation des contraintes
 
-En complément de la validation native effectuée par le navigateur, on peut manipuler la validation des contraintes en JavaScript à l'aide de l'API <i lang="en">Constraint Validation</i>, sur un élément du formulaire ou sur le formulaire ([`<form>`](/fr/docs/Web/HTML/Element/form)). La validation des contraintes a lieu quand&nbsp;:
+En complément de la validation native effectuée par le navigateur, on peut manipuler la validation des contraintes en JavaScript à l'aide de l'API <i lang="en">Constraint Validation</i>, sur un élément du formulaire ou sur le formulaire ([`<form>`](/fr/docs/Web/HTML/Reference/Elements/form)). La validation des contraintes a lieu quand&nbsp;:
 
 - On appelle la méthode `checkValidity()` ou `reportValidity()` depuis une instance d'une interface du DOM correspondant à un élément de formulaire, ([`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement), [`HTMLSelectElement`](/fr/docs/Web/API/HTMLSelectElement), [`HTMLButtonElement`](/fr/docs/Web/API/HTMLButtonElement), [`HTMLOutputElement`](/fr/docs/Web/API/HTMLOutputElement) ou [`HTMLTextAreaElement`](/fr/docs/Web/API/HTMLTextAreaElement)). Dans ce cas, seules les contraintes de l'élément correspondant sont évaluées et permettent au script d'obtenir l'état de validité. La méthode `checkValidity()` renvoie un booléen qui indique si la valeur de l'élément respecte les contraintes (c'est généralement ce qui est fait par l'agent utilisateur pour déterminer quelle pseudo-classe CSS s'applique entre [`:valid`](/fr/docs/Web/CSS/:valid) et [`:invalid`](/fr/docs/Web/CSS/:invalid)). La méthode `reportValidity()` renvoie quant à elle le détail des contraintes qui ne sont pas respectées.
 - On appelle la méthode `checkValidity()` ou `reportValidity()` de l'objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) correspondant au formulaire.
@@ -194,7 +194,7 @@ On qualifie parfois un appel à `checkValidity()` de validation _statique_ des c
 
 > [!NOTE]
 >
-> - Si l'attribut [`novalidate`](/fr/docs/Web/HTML/Element/form#novalidate) est placé sur l'élément [`<form>`](/fr/docs/Web/HTML/Element/form), la validation interactive des contraintes n'a pas lieu.
+> - Si l'attribut [`novalidate`](/fr/docs/Web/HTML/Reference/Elements/form#novalidate) est placé sur l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form), la validation interactive des contraintes n'a pas lieu.
 > - Appeler la méthode `submit()` d'un objet [`HTMLFormElement`](/fr/docs/Web/API/HTMLFormElement) ne déclenchera pas de validation des contraintes. Autrement dit, cette méthode envoie les données du formulaire au serveur, même si elles ne respectent pas les contraintes. Pour passer par la validation, on pourra appeler la méthode `click()` du bouton d'envoi.
 
 ## Implémenter des contraintes complexes à l'aide de l'API
@@ -277,7 +277,7 @@ function checkZIP() {
 }
 ```
 
-Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Element/select) et pour l'évènement [`input`](/fr/docs/Web/API/Element/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input)&nbsp;:
+Ensuite, on ajoute des gestionnaires d'évènements pour l'évènement [`change`](/fr/docs/Web/API/HTMLElement/change_event) du champ [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) et pour l'évènement [`input`](/fr/docs/Web/API/Element/input_event) de l'élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)&nbsp;:
 
 ```js
 window.onload = () => {
@@ -342,7 +342,7 @@ L'aspect des éléments peut être personnalisé grâce aux pseudo-classes CSS s
 
 #### `:required` et `:optional`
 
-Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Element/input#required).
+Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:required`](/fr/docs/Web/CSS/:required) et [`:optional`](/fr/docs/Web/CSS/:optional) permettent d'écrire des sélecteurs pour cibler les éléments qui ont ou non l'attribut [`required`](/fr/docs/Web/HTML/Reference/Elements/input#required).
 
 #### `:placeholder-shown`
 
@@ -357,11 +357,11 @@ Les [pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes) [`:valid`](/fr/docs/Web/CS
 Plusieurs outils peuvent vous aider à contrôler le texte utilisé pour indiquer une erreur de validation&nbsp;:
 
 - La méthode `setCustomValidity(message)` pour les éléments suivants&nbsp;:
-  - [`<fieldset>`](/fr/docs/Web/HTML/Element/fieldset). Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
-  - [`<input>`](/fr/docs/Web/HTML/Element/input)
-  - [`<output>`](/fr/docs/Web/HTML/Element/output)
-  - [`<select>`](/fr/docs/Web/HTML/Element/select)
-  - Les boutons d'envoi (créés avec un élément [`<button>`](/fr/docs/Web/HTML/Element/button) de type `submit` ou avec un élément [`<input>`](/fr/docs/Web/HTML/Element/input/submit) de type `submit`. Les autres types de bouton ne contribuent pas à la validation des contraintes.)
-  - [`<textarea>`](/fr/docs/Web/HTML/Element/textarea)
+  - [`<fieldset>`](/fr/docs/Web/HTML/Reference/Elements/fieldset). Note&nbsp;: fournir un message d'invalidité personnalisé pour les éléments `<fieldset>` n'empêchera pas l'envoi du formulaire dans la plupart des navigateurs.
+  - [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input)
+  - [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output)
+  - [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select)
+  - Les boutons d'envoi (créés avec un élément [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button) de type `submit` ou avec un élément [`<input>`](/fr/docs/Web/HTML/Reference/Elements/input/submit) de type `submit`. Les autres types de bouton ne contribuent pas à la validation des contraintes.)
+  - [`<textarea>`](/fr/docs/Web/HTML/Reference/Elements/textarea)
 
 - L'interface [`ValidityState`](/fr/docs/Web/API/ValidityState) décrit l'objet renvoyé par la propriété `validity` des types d'éléments listés ci-avant. Elle représente différentes façons selon lesquelles une valeur saisie peut être invalide. Avec la méthode précédente, elle permet d'expliquer la raison pour laquelle la valeur d'un champ est invalide.
