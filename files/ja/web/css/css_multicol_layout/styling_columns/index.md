@@ -2,14 +2,14 @@
 title: 段のスタイル設定
 slug: Web/CSS/CSS_multicol_layout/Styling_columns
 l10n:
-  sourceCommit: 02cc9311b281b73322c5d13185119d2e8adf336a
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 段組みコンテナー内に作られた段ボックスは無名ボックスなので、それぞれの段に個別にスタイルを設定することはできませんが、段の間隔とコンテナーには一般的にスタイルが設定できます。このガイドは、段の間隔および段間罫をスタイル付けする方法を説明します。
 
 ## 段の間隔
 
-段の間隔 (段間) は、 {{CSSXref("column-gap")}} または {{CSSXref("gap")}} プロパティで制御されます。 `column-gap` プロパティは[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュールで定義されています。 `gap` プロパティは[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールで定義されています。これは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)や [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)など、間隔に対応しているすべてのレイアウトで、ボックス間の間隔を定義するための統一プロパティです。
+段と段の間（段間）は、 {{CSSXref("column-gap")}} または {{CSSXref("gap")}} プロパティで制御されます。 `column-gap` プロパティは[段組みレイアウト](/ja/docs/Web/CSS/CSS_multicol_layout)モジュールで定義されています。 `gap` プロパティは[ボックス配置](/ja/docs/Web/CSS/CSS_box_alignment)モジュールで定義されています。これは、 [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout/Box_alignment_in_grid_layout)や [CSS フレックスボックスレイアウト](/ja/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)など、間隔に対応しているすべてのレイアウトで、ボックス間の間隔を定義するための統一プロパティです。
 
 段組みにおける `column-gap` の初期値は `1em` です。つまり、段同士は互いに接しません。他のレイアウト方法では、 `column-gap` は `gap` の別名として対応していますが、初期値は `0` です。キーワード値 `normal` は、`column-gap` を初期値に設定します。
 
