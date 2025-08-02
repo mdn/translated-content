@@ -38,7 +38,7 @@ slug: Web/API/Element/cut_event
 
 처리기에서 클립보드 데이터를 읽을 수는 없습니다.
 
-[합성](/ko/docs/Web/Events/Creating_and_triggering_events) `cut` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 시스템 클립보드나 문서 내용에 영향을 줄 수 없습니다.
+[합성](/ko/docs/Web/API/Document_Object_Model/Events) `cut` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 시스템 클립보드나 문서 내용에 영향을 줄 수 없습니다.
 
 ## 예제
 

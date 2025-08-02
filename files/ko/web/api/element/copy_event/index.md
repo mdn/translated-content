@@ -34,7 +34,7 @@ slug: Web/API/Element/copy_event
 
 그러나, 처리기에서 클립보드 데이터를 읽을 수는 없습니다.
 
-[합성](/ko/docs/Web/Events/Creating_and_triggering_events) `copy` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 시스템 클립보드에 영향을 줄 수 없습니다.
+[합성](/ko/docs/Web/API/Document_Object_Model/Events) `copy` 이벤트를 생성해서 발송할 수는 있지만, 이 방법으로는 시스템 클립보드에 영향을 줄 수 없습니다.
 
 ## 예제
 
