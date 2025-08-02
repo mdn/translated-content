@@ -241,7 +241,7 @@ It is however still possible that a match may not occur, based on the randomized
    }
    ```
 
- `"filter_data"` および `"filters"` フィールドに一致するサブフィールドが含まれているが（上記の例で `"conversion_subdomain"` のように）、サブフィールドの値が一致しない場合、トリガーは無視され、一致なしとなります。
+`"filter_data"` および `"filters"` フィールドに一致するサブフィールドが含まれているが（上記の例で `"conversion_subdomain"` のように）、サブフィールドの値が一致しない場合、トリガーは無視され、一致なしとなります。
 
 ### トリガーデータのフィルタリング
 
