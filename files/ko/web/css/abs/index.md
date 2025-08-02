@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 8e4584c695829f1c404b03fd3ac90cbebdf745d7
 ---
 
-{{CSSRef}}
-
 **`abs()`** [CSS](/ko/docs/Web/CSS) [함수](/ko/docs/Web/CSS/CSS_Functions)는 입력된 값의 절댓값을 반환하며, 이 값의 타입은 입력값과 동일합니다.
 
 ## 구문

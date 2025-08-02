@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3b4bf3e92c726515fe99042c7f7f119ef1009b68
 ---
 
-{{CSSRef}}
-
 [CSS 논리적 속성과 값](/ko/docs/Web/CSS/CSS_logical_properties_and_values) 모듈은 {{cssxref("float")}} 와 {{cssxref("clear")}} 같은 물리적 값들의 논리적 매핑과, [위치 레이아웃](/ko/docs/Web/CSS/CSS_positioned_layout)에서 사용되는 위치 지정 속성에 대한 논리적 매핑을 포함합니다. 이 안내서는 이를 어떻게 사용하는지 소개합니다.
 
 ## 매핑된 속성과 값

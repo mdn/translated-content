@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a1596fe065b9c726f9412999d2218b7b6e256e30
 ---
 
-{{CSSRef}}
-
 **`scroll-behavior`** [CSS](/ko/docs/Web/CSS) 속성은 문서 탐색 또는 CSSOM 스크롤 API에 의하여 스크롤이 트리거될 때 스크롤을 포함하는 박스의 동작을 설정합니다.
 
 {{InteractiveExample("CSS Demo: scroll-behavior")}}

@@ -3,8 +3,6 @@ title: font-feature-settings
 slug: Web/CSS/font-feature-settings
 ---
 
-{{CSSRef}}
-
 **`font-feature-settings`** CSS 속성은 오픈타입 폰트의 다양한 오픈타입 피처를 설정합니다.
 
 {{InteractiveExample("CSS Demo: font-feature-settings")}}

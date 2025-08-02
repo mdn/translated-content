@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_positioned_layout/Stacking_floating_elements
 original_slug: Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_floating_elements
 ---
 
-{{CSSRef}}
-
 « [CSS](/ko/docs/Web/CSS) « [CSS z-index 이해하기](/ko/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
 
 ### floating 엘리먼트의 쌓임

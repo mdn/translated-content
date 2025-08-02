@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 20315338453f387f8c1f6c20a07766f8f71e8032
 ---
 
-{{CSSRef}}
-
 **`circle()`** CSS [함수](/ko/docs/Web/CSS/CSS_Functions) 는 둥글기와 위치를 이용하여 원 도형을 정의합니다. {{cssxref("&lt;basic-shape&gt;")}} 데이터 타입 중 하나입니다.
 
 {{InteractiveExample("CSS Demo: circle()")}}
