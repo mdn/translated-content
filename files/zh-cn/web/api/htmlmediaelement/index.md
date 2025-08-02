@@ -582,7 +582,7 @@ _Inherits methods from its parent,_ _{{domxref("HTMLElement")}}._
 
 ## Events
 
-Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/Events#media).
+Audio and Video elements can fire quite a few different [events](/zh-CN/docs/Web/API/Document_Object_Model/Events#media).
 
 ## Specifications
 

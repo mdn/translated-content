@@ -2,7 +2,7 @@
 title: CSS オーバーフロー
 slug: Web/CSS/CSS_overflow
 l10n:
-  sourceCommit: 898dd2394e7b70daa2c0c212282a64ccf5938341
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **CSS オーバーフロー**モジュールのプロパティを使用すると、視覚メディアでスクロール可能なオーバーフローを処理することができます。
@@ -71,53 +71,6 @@ l10n:
     Rubber Duckie, I'm awfully fond of you
       </pre>
 </article>
-
-<script>
-  const pre = document.querySelector("pre");
-  const val = document.getElementById("overflowValue");
-  const check = document.getElementById("wide");
-  const ocm = document.getElementById("ocm");
-  const scrollL = document.getElementById("scrollL");
-  const scrollT = document.getElementById("scrollT");
-
-  val.addEventListener("change", () => {
-    if (pre.classList.contains("wide")) {
-      pre.className = `wide ${val.value}`;
-    } else {
-      pre.className = `${val.value}`;
-    }
-    scrollExample();
-    clipMargin();
-  });
-
-  wide.addEventListener("change", () => {
-    pre.classList.toggle("wide");
-    scrollExample();
-  });
-
-  ocm.addEventListener("change", () => {
-    clipMargin();
-  });
-
-  scrollL.addEventListener("change", () => {
-    scrollExample();
-  });
-  scrollT.addEventListener("change", () => {
-    scrollExample();
-  });
-
-  function scrollExample() {
-    pre.scrollTo({
-      top: scrollT.value,
-      left: scrollL.value * 2,
-      behavior: "smooth",
-    });
-  }
-
-  function clipMargin() {
-    pre.style.overflowClipMargin = `${ocm.value}em`;
-  }
-</script>
 ```
 
 ```css hidden live-sample___overflow
@@ -203,6 +156,53 @@ article:not(:has(pre.hidden, pre.scroll, pre.auto, pre.overlay))
   fieldset {
   opacity: 20%;
   pointer-events: none;
+}
+```
+
+```js hidden live-sample___overflow
+const pre = document.querySelector("pre");
+const val = document.getElementById("overflowValue");
+const check = document.getElementById("wide");
+const ocm = document.getElementById("ocm");
+const scrollL = document.getElementById("scrollL");
+const scrollT = document.getElementById("scrollT");
+
+val.addEventListener("change", () => {
+  if (pre.classList.contains("wide")) {
+    pre.className = `wide ${val.value}`;
+  } else {
+    pre.className = `${val.value}`;
+  }
+  scrollExample();
+  clipMargin();
+});
+
+wide.addEventListener("change", () => {
+  pre.classList.toggle("wide");
+  scrollExample();
+});
+
+ocm.addEventListener("change", () => {
+  clipMargin();
+});
+
+scrollL.addEventListener("change", () => {
+  scrollExample();
+});
+scrollT.addEventListener("change", () => {
+  scrollExample();
+});
+
+function scrollExample() {
+  pre.scrollTo({
+    top: scrollT.value,
+    left: scrollL.value * 2,
+    behavior: "smooth",
+  });
+}
+
+function clipMargin() {
+  pre.style.overflowClipMargin = `${ocm.value}em`;
 }
 ```
 

@@ -2606,6 +2606,13 @@
       "shyangs"
     ]
   },
+  "Web/API/Document_Object_Model/Events": {
+    "modified": "2019-03-23T22:48:01.128Z",
+    "contributors": [
+      "jackblackevo",
+      "Shiyou"
+    ]
+  },
   "Web/API/Document_Object_Model/Examples": {
     "modified": "2019-04-22T07:31:11.966Z",
     "contributors": [
@@ -4019,34 +4026,6 @@
     "modified": "2020-10-15T22:01:32.599Z",
     "contributors": [
       "yutzuch"
-    ]
-  },
-  "Web/Events": {
-    "modified": "2019-11-28T04:54:28.795Z",
-    "contributors": [
-      "t7yang",
-      "fadeawaygod",
-      "wbamberg",
-      "Septem",
-      "fscholz",
-      "jackblackevo",
-      "Shiyou",
-      "ethertank",
-      "louisremi"
-    ]
-  },
-  "Web/Events/Creating_and_triggering_events": {
-    "modified": "2019-03-23T22:48:01.128Z",
-    "contributors": [
-      "jackblackevo",
-      "Shiyou"
-    ]
-  },
-  "Web/Events/Event_handlers": {
-    "modified": "2020-05-13T00:05:39.122Z",
-    "contributors": [
-      "ginszme",
-      "jackblackevo"
     ]
   },
   "Web/HTML": {

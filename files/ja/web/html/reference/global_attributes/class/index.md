@@ -10,7 +10,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: class", "tabbed-standard")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>ナレーター: これは劇の始まりです。</p>
 
 <p class="note editorial">この点は少しありきたりに聞こえるかもしれません。削除または書き換えますか？</p>

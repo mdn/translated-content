@@ -451,7 +451,7 @@
 /zh-TW/docs/Mozilla/Firefox/Releases/2/Firefox_2_的安全功能	/zh-TW/docs/Mozilla/Firefox/Releases/2/Security_changes
 /zh-TW/docs/Mozilla/Firefox/Releases/2/新增消息來源閱讀工具	/zh-TW/docs/Mozilla/Firefox/Releases/2/Adding_feed_readers_to_Firefox
 /zh-TW/docs/Mozilla/Firefox/Releases/3/Firefox_3_Dom_Improvements	/zh-TW/docs/Mozilla/Firefox/Releases/3/DOM_improvements
-/zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/Events
+/zh-TW/docs/Mozilla_event_reference	/zh-TW/docs/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Python	/zh-TW/docs/Learn_web_development/Extensions/Server-side/Django
 /zh-TW/docs/Quirks_Mode_and_Standards_Mode	/zh-TW/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode
 /zh-TW/docs/SVG	/zh-TW/docs/Web/SVG
@@ -511,7 +511,6 @@
 /zh-TW/docs/Web/API/Coordinates/longitude	/zh-TW/docs/Web/API/GeolocationCoordinates/longitude
 /zh-TW/docs/Web/API/Coordinates/speed	/zh-TW/docs/Web/API/GeolocationCoordinates/speed
 /zh-TW/docs/Web/API/Document/registerElement	/zh-TW/docs/Web/API/CustomElementRegistry/define
-/zh-TW/docs/Web/API/Document_Object_Model/Events	/zh-TW/docs/Web/API/Event
 /zh-TW/docs/Web/API/Document_Object_Model/Whitespace_in_the_DOM	/zh-TW/docs/Web/API/Document_Object_Model/Whitespace
 /zh-TW/docs/Web/API/Document_Object_Model/事件	/zh-TW/docs/Web/API/Event
 /zh-TW/docs/Web/API/ElementCSSInlineStyle/style	/en-US/docs/Web/API/HTMLElement/style
@@ -566,6 +565,9 @@
 /zh-TW/docs/Web/CSS/彈頭	/zh-TW/docs/Web/CSS/box-sizing
 /zh-TW/docs/Web/CSS/繼承	/zh-TW/docs/Web/CSS/CSS_cascade/Inheritance
 /zh-TW/docs/Web/CSS/語法	/zh-TW/docs/Web/CSS/CSS_syntax/Syntax
+/zh-TW/docs/Web/Events	/zh-TW/docs/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/Events/Creating_and_triggering_events	/zh-TW/docs/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/Events/Event_handlers	/zh-TW/docs/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/Guide	/zh-TW/docs/MDN/Guides
 /zh-TW/docs/Web/Guide/AJAX	/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests
 /zh-TW/docs/Web/Guide/AJAX/Getting_Started	/zh-TW/docs/Learn_web_development/Core/Scripting/Network_requests
@@ -579,9 +581,9 @@
 /zh-TW/docs/Web/Guide/DOM	/zh-TW/docs/Web/API/Document_Object_Model
 /zh-TW/docs/Web/Guide/DOM/Manipulating_the_browser_history	/zh-TW/docs/Web/API/History_API
 /zh-TW/docs/Web/Guide/DOM/Using_full_screen_mode	/zh-TW/docs/Web/API/Fullscreen_API
-/zh-TW/docs/Web/Guide/Events	/zh-TW/docs/Web/Events
-/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-TW/docs/Web/Events/Creating_and_triggering_events
-/zh-TW/docs/Web/Guide/Events/Event_handlers	/zh-TW/docs/Web/Events/Event_handlers
+/zh-TW/docs/Web/Guide/Events	/zh-TW/docs/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/Guide/Events/Creating_and_triggering_events	/zh-TW/docs/Web/API/Document_Object_Model/Events
+/zh-TW/docs/Web/Guide/Events/Event_handlers	/zh-TW/docs/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/Guide/Graphics	/zh-TW/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /zh-TW/docs/Web/Guide/HTML	/zh-TW/docs/Learn_web_development/Core/Structuring_content
 /zh-TW/docs/Web/Guide/HTML/Canvas_tutorial	/zh-TW/docs/Web/API/Canvas_API/Tutorial
@@ -918,7 +920,7 @@
 /zh-TW/docs/Web/OpenSearch	/zh-TW/docs/Web/XML/Guides/OpenSearch
 /zh-TW/docs/Web/Reference	/zh-TW/docs/Web
 /zh-TW/docs/Web/Reference/API	/zh-TW/docs/Web/API
-/zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/Events
+/zh-TW/docs/Web/Reference/Events	/zh-TW/docs/Web/API/Document_Object_Model/Events
 /zh-TW/docs/Web/SVG/Attribute/stroke-dashoffset	/zh-TW/docs/Web/SVG/Reference/Attribute/stroke-dashoffset
 /zh-TW/docs/Web/SVG/Tutorial	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch
 /zh-TW/docs/Web/SVG/Tutorial/Basic_Shapes	/zh-TW/docs/Web/SVG/Tutorials/SVG_from_scratch/Basic_shapes

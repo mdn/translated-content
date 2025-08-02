@@ -12,7 +12,7 @@ slug: Web/API/CustomEvent/initCustomEvent
 > [!NOTE]
 > **该方法已经作废，不要在新项目中继续使用该方法。**
 >
-> Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on [Creating and triggering events](/zh-CN/docs/Web/Events/Creating_and_triggering_events) gives more information about the way to use these.
+> Instead use specific event constructors, like {{domxref("CustomEvent.CustomEvent", "CustomEvent()")}}. The page on [Creating and triggering events](/zh-CN/docs/Web/API/Document_Object_Model/Events) gives more information about the way to use these.
 
 ## 语法
 

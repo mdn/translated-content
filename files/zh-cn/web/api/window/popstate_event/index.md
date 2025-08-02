@@ -5,7 +5,7 @@ slug: Web/API/Window/popstate_event
 
 {{ApiRef}}
 
-{{domxref("WindowEventHandlers")}} 混入（mixin）中的 `onpopstate` 属性是用于处理 window 对象上的 [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event) 事件的[事件处理程序](/zh-CN/docs/Web/Events/Event_handlers)。
+{{domxref("WindowEventHandlers")}} 混入（mixin）中的 `onpopstate` 属性是用于处理 window 对象上的 [`popstate`](/zh-CN/docs/Web/API/Window/popstate_event) 事件的[事件处理程序](/zh-CN/docs/Web/API/Document_Object_Model/Events)。
 
 每当激活同一文档中不同的历史记录条目时，`popstate` 事件就会在对应的 `window` 对象上触发。如果当前处于激活状态的历史记录条目是由 `history.pushState()` 方法创建的或者是由 `history.replaceState()` 方法修改的，则 `popstate` 事件的 `state` 属性包含了这个历史记录条目的 `state` 对象的一个拷贝。
 

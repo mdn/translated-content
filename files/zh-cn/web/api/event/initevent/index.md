@@ -12,7 +12,7 @@ slug: Web/API/Event/initEvent
 > [!NOTE]
 > **不建议再使用此方法（方法已经过时 deprecated）**
 >
-> 可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 [Creating and triggering events](/zh-CN/docs/Web/Events/Creating_and_triggering_events) .
+> 可以使用特定的 event 构造器函数，比如 {{domxref("Event.Event", "Event()")}}. 该页有关于这些的更多信息 [Creating and triggering events](/zh-CN/docs/Web/API/Document_Object_Model/Events) .
 
 ## 语法
 

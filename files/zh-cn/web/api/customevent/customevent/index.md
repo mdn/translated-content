@@ -54,7 +54,7 @@ obj.dispatchEvent(dogFound);
 // 控制台中输出“猫”和“狗”
 ```
 
-额外的示例可以在[创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)中找到。
+额外的示例可以在[创建和触发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)中找到。
 
 ## 规范
 
@@ -67,4 +67,4 @@ obj.dispatchEvent(dogFound);
 ## 参见
 
 - {{domxref("CustomEvent")}}
-- [创建和触发事件](/zh-CN/docs/Web/Events/Creating_and_triggering_events)
+- [创建和触发事件](/zh-CN/docs/Web/API/Document_Object_Model/Events)

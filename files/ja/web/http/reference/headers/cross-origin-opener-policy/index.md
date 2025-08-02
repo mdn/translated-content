@@ -3,10 +3,10 @@ title: Cross-Origin-Opener-Policy (COOP) ヘッダー
 short-title: Cross-Origin-Opener-Policy
 slug: Web/HTTP/Reference/Headers/Cross-Origin-Opener-Policy
 l10n:
-  sourceCommit: ee756fd51ccbc4820a4b334aa753648650ad1d51
+  sourceCommit: ad5b5e31f81795d692e66dadb7818ba8b220ad15
 ---
 
-HTTP の **`Cross-Origin-Opener-Policy`** (COOP) は{{glossary("response header","レスポンスヘッダー")}}で、使用する、ウェブサイトは、{{domxref("Window.open()")}} または新しいページへのナビゲーションによって開かれた新しい最上位文書を、同じ{{glossary("Browsing context","閲覧コンテキストグループ")}} (BCG) で開くか、新しい閲覧コンテキストグループで開くかを制御することができます。
+HTTP の **`Cross-Origin-Opener-Policy`** (COOP) は{{glossary("response header","レスポンスヘッダー")}}で、使用すると、 {{domxref("Window.open()")}} または新しいページへのナビゲーションによって開かれる新しい最上位の文書を、同じ{{glossary("Browsing context","閲覧コンテキストグループ")}} (BCG) で開くか、新しい閲覧コンテキストグループで開くかを、ウェブサイトが制御することができます。
 
 新しい BCG で開くと、新しい文書とその開いた文書間の参照は切断され、新しい文書は開いた文書からプロセス分離される場合があります。
 これにより、潜在的な攻撃者が {{domxref("Window.open()")}} を使用して文書を開き、返された値を使用してそのグローバルオブジェクトにアクセスすることを確実に防止し、 [XS-Leaks](https://xsleaks.dev/) と呼ばれるオリジンをまたいだ攻撃を防止します。

@@ -1,7 +1,9 @@
 ---
-title: Event reference
-slug: Web/Events
+title: DOM 事件
+slug: Web/API/Document_Object_Model/Events
 ---
+
+{{DefaultAPISidebar("DOM")}}
 
 事件為一些有趣事情，發生後會被傳出以通知 code。每個事件被表示為一個根據 {{domxref("Event")}} 所定義的物件，且可能會有額外自訂欄位與(或)函式來描述發生了什麼事。事件可以表示從使用者互動到自動通知等渲染 model 所有的事情。
 

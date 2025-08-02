@@ -188,4 +188,4 @@ l10n:
 
 - {{HTMLElement("html")}}
 - {{HTMLElement("head")}}
-- [事件处理器（概述）](/zh-CN/docs/Web/Events/Event_handlers)
+- [事件处理器（概述）](/zh-CN/docs/Web/API/Document_Object_Model/Events)

@@ -207,7 +207,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 没有 `<br>` 元素，这段会直接显示在长长的一行中（如前文所讲，[HTML 会忽略大部分空格](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#html_中的空白)）；使用 `<br>` 元素，才使得诗看上去像诗：
 
-{{EmbedLiveSample('br_换行元素', '100%', 150)}}
+{{EmbedLiveSample('br：换行元素', '100%', 150)}}
 
 #### \<hr>：主题性中断元素
 
@@ -225,7 +225,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 将渲染成：
 
-{{EmbedLiveSample('hr_主题性中断元素', '100%', '185px')}}
+{{EmbedLiveSample('hr：主题性中断元素', '100%', '185px')}}
 
 ## 规划一个简单的网站
 

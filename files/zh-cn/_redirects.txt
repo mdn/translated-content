@@ -1533,7 +1533,7 @@
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/实现一个设置页面	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page
 /zh-CN/docs/Mozilla/Add-ons/WebExtensions/构建一个跨浏览器的扩展插件	/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
 /zh-CN/docs/Mozilla/附加组件	/zh-CN/docs/Mozilla/Add-ons
-/zh-CN/docs/Mozilla_event_reference	/zh-CN/docs/Web/Events
+/zh-CN/docs/Mozilla_event_reference	/zh-CN/docs/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Mozilla_event_reference/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Mozilla_event_reference/animationstart	/zh-CN/docs/Web/API/Element/animationstart_event
 /zh-CN/docs/Mozilla_event_reference/beforescriptexecute	/zh-CN/docs/Web/API/Element/beforescriptexecute_event
@@ -2662,10 +2662,13 @@
 /zh-CN/docs/Web/CSS/混合模式	/zh-CN/docs/Web/CSS/blend-mode
 /zh-CN/docs/Web/CSS/网格-模板-列	/zh-CN/docs/Web/CSS/grid-template-rows
 /zh-CN/docs/Web/EXSLT/regexp	/zh-CN/docs/Web/XML/EXSLT/Reference/regexp
+/zh-CN/docs/Web/Events	/zh-CN/docs/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Web/Events/Activate	/zh-CN/docs/Web/API/Element/DOMActivate_event
+/zh-CN/docs/Web/Events/Creating_and_triggering_events	/zh-CN/docs/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Web/Events/DOMContentLoaded	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/DOMContentLoaded_(event)	/zh-CN/docs/Web/API/Document/DOMContentLoaded_event
 /zh-CN/docs/Web/Events/Detecting_device_orientation	/zh-CN/docs/Web/API/Device_orientation_events/Detecting_device_orientation
+/zh-CN/docs/Web/Events/Event_handlers	/zh-CN/docs/Web/API/Document_Object_Model/Events
 /zh-CN/docs/Web/Events/Orientation_and_motion_data_explained	/zh-CN/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /zh-CN/docs/Web/Events/afterprint	/zh-CN/docs/Web/API/Window/afterprint_event
 /zh-CN/docs/Web/Events/afterscriptexecute	/zh-CN/docs/Web/API/Element/afterscriptexecute_event
