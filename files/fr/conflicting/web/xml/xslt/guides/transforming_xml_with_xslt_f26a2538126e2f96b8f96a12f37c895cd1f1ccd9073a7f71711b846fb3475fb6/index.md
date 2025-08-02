@@ -1,7 +1,7 @@
 ---
 title: Exemple basique
-slug: Web/API/Document_Object_Model/Transforming_with_XSLT
-original_slug: Web/API/XSLTProcessor/Basic_Example
+slug: conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6
+original_slug: Web/API/Document_Object_Model/Transforming_with_XSLT
 ---
 
 {{APIRef("XSLT")}}

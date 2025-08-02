@@ -291,7 +291,7 @@
 /fr/docs/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS/-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
@@ -678,7 +678,7 @@
 /fr/docs/CSS:-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/CSS:-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/CSS:-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
-/fr/docs/CSS:-moz-image-region	/fr/docs/Web/CSS/-moz-image-region
+/fr/docs/CSS:-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/CSS:-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/CSS:-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
 /fr/docs/CSS:-moz-opacity	/fr/docs/Web/CSS/opacity
@@ -859,7 +859,7 @@
 /fr/docs/DOM/Selection/toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/DOM/Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/DOM/Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
-/fr/docs/DOM/dispatchEvent_exemple	/fr/docs/Web/Events/Creating_and_triggering_events
+/fr/docs/DOM/dispatchEvent_exemple	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/DOM/document	/fr/docs/Web/API/Document
 /fr/docs/DOM/document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM/document.body	/fr/docs/Web/API/Document/body
@@ -1021,7 +1021,7 @@
 /fr/docs/DOM:Selection:toString	/fr/docs/Web/API/Selection/toString
 /fr/docs/DOM:Storage	/fr/docs/Web/API/Web_Storage_API
 /fr/docs/DOM:Whitespace_template	/fr/docs/Web/API/Document_Object_Model/Whitespace
-/fr/docs/DOM:dispatchEvent_exemple	/fr/docs/Web/Events/Creating_and_triggering_events
+/fr/docs/DOM:dispatchEvent_exemple	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/DOM:document	/fr/docs/Web/API/Document
 /fr/docs/DOM:document.activeElement	/fr/docs/Web/API/Document/activeElement
 /fr/docs/DOM:document.createAttribute	/fr/docs/Web/API/Document/createAttribute
@@ -3115,7 +3115,7 @@
 /fr/docs/Learn/Forms/Sending_and_retrieving_form_data	/fr/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data
 /fr/docs/Learn/Forms/Sending_forms_through_JavaScript	/fr/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /fr/docs/Learn/Forms/Styling_web_forms	/fr/docs/Learn_web_development/Extensions/Forms/Styling_web_forms
-/fr/docs/Learn/Forms/Test_your_skills:_Basic_controls	/fr/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls
+/fr/docs/Learn/Forms/Test_your_skills:_Basic_controls	/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720
 /fr/docs/Learn/Forms/UI_pseudo-classes	/fr/docs/Learn_web_development/Extensions/Forms/UI_pseudo-classes
 /fr/docs/Learn/Forms/User_input_methods	/fr/docs/Learn_web_development/Extensions/Forms/User_input_methods
 /fr/docs/Learn/Forms/Your_first_form	/fr/docs/Learn_web_development/Extensions/Forms/Your_first_form
@@ -3270,6 +3270,7 @@
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Ligne_de_commande	/fr/docs/Learn_web_development/Getting_started/Environment_setup/Command_line
 /fr/docs/Learn/tutorial	/fr/docs/Learn_web_development
+/fr/docs/Learn_web_development/Extensions/Forms/Test_your_skills/Basic_controls	/fr/docs/conflicting/Learn_web_development/Extensions/Forms_b242d7f12fda9b38ebcb72516378915e5a132e3f4d3831e2ec016c23a3c36720
 /fr/docs/Littéraux_gabarits	/fr/docs/Web/JavaScript/Reference/Template_literals
 /fr/docs/Localisation	/fr/docs/Glossary/Localization
 /fr/docs/Localization	/fr/docs/Glossary/Localization
@@ -3975,13 +3976,13 @@
 /fr/docs/Web/API/DocumentOrShadowRoot/elementsFromPoint	/fr/docs/Web/API/Document/elementsFromPoint
 /fr/docs/Web/API/DocumentOrShadowRoot/getSelection	/fr/docs/Web/API/Document/getSelection
 /fr/docs/Web/API/DocumentOrShadowRoot/styleSheets	/fr/docs/Web/API/Document/styleSheets
-/fr/docs/Web/API/Document_Object_Model/Events	/fr/docs/Learn_web_development/Core/Scripting/Events
 /fr/docs/Web/API/Document_Object_Model/Exemples	/fr/docs/Web/API/Document_Object_Model/Examples
 /fr/docs/Web/API/Document_Object_Model/Introduction_au_DOM	/fr/docs/Web/API/Document_Object_Model/Introduction
 /fr/docs/Web/API/Document_Object_Model/Les_évènements_et_le_DOM	/fr/docs/Learn_web_development/Core/Scripting/Events
 /fr/docs/Web/API/Document_Object_Model/Localisation_des_éléments_DOM_avec_les_sélecteurs	/fr/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors
 /fr/docs/Web/API/Document_Object_Model/Preface	/fr/docs/Web/API/Document_Object_Model
 /fr/docs/Web/API/Document_Object_Model/Préface	/fr/docs/Web/API/Document_Object_Model
+/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT	/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6
 /fr/docs/Web/API/Document_Object_Model/document	/fr/docs/Web/API/Document
 /fr/docs/Web/API/Document_Object_Model/element	/fr/docs/Web/API/Element
 /fr/docs/Web/API/Document_Object_Model/window	/fr/docs/Web/API/Window
@@ -4371,7 +4372,7 @@
 /fr/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/Utiliser_XMLHttpRequest	/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest
 /fr/docs/Web/API/XMLHttpRequest/onreadystatechange	/fr/docs/Web/API/XMLHttpRequest/readystatechange_event
-/fr/docs/Web/API/XSLTProcessor/Basic_Example	/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT
+/fr/docs/Web/API/XSLTProcessor/Basic_Example	/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6
 /fr/docs/Web/API/XSLTProcessor/Generating_HTML	/fr/docs/conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT
 /fr/docs/Web/API/XSLTProcessor/XSL_Transformations_in_Mozilla_FAQ	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/Web/API/atob	/fr/docs/Web/API/Window/atob
@@ -4522,6 +4523,7 @@
 /fr/docs/Web/CSS/-moz-copy	/fr/docs/Web/CSS/cursor
 /fr/docs/Web/CSS/-moz-grab	/en-US/docs/Web/CSS/cursor#grab
 /fr/docs/Web/CSS/-moz-grabbing	/en-US/docs/Web/CSS/cursor#grab
+/fr/docs/Web/CSS/-moz-image-region	/fr/docs/conflicting/Web/CSS/clip
 /fr/docs/Web/CSS/-moz-linear-gradient	/fr/docs/Web/CSS/gradient/linear-gradient
 /fr/docs/Web/CSS/-moz-margin-end	/fr/docs/Web/CSS/margin-inline-end
 /fr/docs/Web/CSS/-moz-margin-start	/fr/docs/Web/CSS/margin-inline-start
@@ -4577,6 +4579,7 @@
 /fr/docs/Web/CSS/:nth-last-col	/fr/docs/Web/CSS/:nth-last-of-type
 /fr/docs/Web/CSS/:visited_et_la_vie_privée	/fr/docs/Web/CSS/CSS_selectors/Privacy_and_the_visited_selector
 /fr/docs/Web/CSS/@font-face/font-variant	/fr/docs/Web/CSS/@font-face
+/fr/docs/Web/CSS/@media/aural	/fr/docs/conflicting/Web/CSS/@media
 /fr/docs/Web/CSS/@media/update-frequency	/fr/docs/Web/CSS/@media/update
 /fr/docs/Web/CSS/@scroll-timeline	/fr/docs/Web/CSS/scroll-timeline
 /fr/docs/Web/CSS/@styleset	/fr/docs/Web/CSS/@font-feature-values
@@ -4608,7 +4611,7 @@
 /fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Scaling_background_images	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 /fr/docs/Web/CSS/Arrière-plans_et_bordures_CSS/Utiliser_des_fonds_multiples	/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds
 /fr/docs/Web/CSS/At-rule	/fr/docs/Web/CSS/CSS_syntax/At-rule
-/fr/docs/Web/CSS/Aural	/fr/docs/Web/CSS/@media/aural
+/fr/docs/Web/CSS/Aural	/fr/docs/conflicting/Web/CSS/@media
 /fr/docs/Web/CSS/Block_formatting_context	/fr/docs/Web/CSS/CSS_display/Block_formatting_context
 /fr/docs/Web/CSS/CSSOM_View/Systèmes_de_coordonnées	/fr/docs/Web/CSS/CSSOM_view/Coordinate_systems
 /fr/docs/Web/CSS/CSS_:_la_propriété_animation-iteration-count	/fr/docs/Web/CSS/animation-iteration-count
@@ -5047,6 +5050,8 @@
 /fr/docs/Web/EXSLT/str/concat	/fr/docs/Web/XML/EXSLT/Reference/str/concat
 /fr/docs/Web/EXSLT/str/split	/fr/docs/Web/XML/EXSLT/Reference/str/split
 /fr/docs/Web/EXSLT/str/tokenize	/fr/docs/Web/XML/EXSLT/Reference/str/tokenize
+/fr/docs/Web/Events	/fr/docs/conflicting/Web/API/Document_Object_Model/Events
+/fr/docs/Web/Events/Creating_and_triggering_events	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/Web/Events/DOMContentLoaded	/fr/docs/Web/API/Document/DOMContentLoaded_event
 /fr/docs/Web/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Events/abort	/fr/docs/Web/API/HTMLMediaElement/abort_event
@@ -5135,8 +5140,8 @@
 /fr/docs/Web/Guide/CSS/Block_formatting_context	/fr/docs/Web/CSS/CSS_display/Block_formatting_context
 /fr/docs/Web/Guide/CSS/Flexible_boxes	/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
 /fr/docs/Web/Guide/DOM	/fr/docs/Web/API/Document_Object_Model
-/fr/docs/Web/Guide/DOM/Events	/fr/docs/Web/Events
-/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
+/fr/docs/Web/Guide/DOM/Events	/fr/docs/conflicting/Web/API/Document_Object_Model/Events
+/fr/docs/Web/Guide/DOM/Events/Creating_and_triggering_events	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/Web/Guide/DOM/Events/Les_données_d_orientation_et_de_mouvement_expliquées	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/DOM/Events/Touch_events	/fr/docs/Web/API/Touch_events
 /fr/docs/Web/Guide/DOM/Events/Touch_events/Gérer_à_la_fois_événement_tactile_et_événement_de_la_souris	/fr/docs/Web/API/Pointer_events
@@ -5145,8 +5150,8 @@
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur	/fr/docs/Web/API/History_API
 /fr/docs/Web/Guide/DOM/Manipuler_historique_du_navigateur/Example	/fr/docs/Web/API/History_API/Working_with_the_History_API
 /fr/docs/Web/Guide/DOM/Using_full_screen_mode	/fr/docs/Web/API/Fullscreen_API
-/fr/docs/Web/Guide/Events	/fr/docs/Web/Events
-/fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
+/fr/docs/Web/Guide/Events	/fr/docs/conflicting/Web/API/Document_Object_Model/Events
+/fr/docs/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/Web/Guide/Graphics	/fr/docs/Learn_web_development/Core/Structuring_content/HTML_images
 /fr/docs/Web/Guide/Graphics/Dessiner_avec_canvas	/fr/docs/Web/API/Canvas_API/Tutorial
@@ -7518,9 +7523,9 @@
 /fr/docs/XSLT:Éléments	/fr/docs/Web/XML/XSLT/Reference/Element
 /fr/docs/XSLTProcessor	/fr/docs/Web/API/XSLTProcessor
 /fr/docs/XSLT_dans_Gecko	/fr/docs/Web/API/XSLTProcessor
-/fr/docs/XSLT_dans_Gecko/Exemple_basique	/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT
+/fr/docs/XSLT_dans_Gecko/Exemple_basique	/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6
 /fr/docs/XSLT_dans_Gecko/Génération_de_HTML	/fr/docs/conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT
-/fr/docs/XSLT_dans_Gecko:Exemple_basique	/fr/docs/Web/API/Document_Object_Model/Transforming_with_XSLT
+/fr/docs/XSLT_dans_Gecko:Exemple_basique	/fr/docs/conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_f26a2538126e2f96b8f96a12f37c895cd1f1ccd9073a7f71711b846fb3475fb6
 /fr/docs/XSLT_dans_Gecko:Génération_de_HTML	/fr/docs/conflicting/Web/API/Document_Object_Model/Transforming_with_XSLT
 /fr/docs/Zoom_pleine_page	/fr/docs/Mozilla/Firefox/Releases/3/Full_page_zoom
 /fr/docs/appendChild	/fr/docs/Web/API/Node/appendChild
@@ -7761,7 +7766,7 @@
 /fr/docs/conflicting/Web/Guide	/fr/docs/MDN/Guides
 /fr/docs/conflicting/Web/Guide/AJAX	/fr/docs/Learn_web_development/Core/Scripting/Network_requests
 /fr/docs/conflicting/Web/Guide/AJAX_21419c7dfa67c94789f037a33c4e4e3e	/fr/docs/Learn_web_development/Core/Scripting/Network_requests
-/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
+/fr/docs/conflicting/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/API/Document_Object_Model/Events
 /fr/docs/conflicting/Web/HTML	/fr/docs/Web/HTML
 /fr/docs/conflicting/Web/HTML/Attributes/rel	/fr/docs/Web/HTML/Reference/Attributes/rel
 /fr/docs/conflicting/Web/HTML/Element/audio	/fr/docs/Web/HTML/Reference/Elements/audio
@@ -7923,9 +7928,9 @@
 /fr/docs/orphaned/Web/CSS/repeating-linear-gradient()	/fr/docs/Web/CSS/gradient/repeating-linear-gradient
 /fr/docs/orphaned/Web/CSS/repeating-radial-gradient()	/fr/docs/Web/CSS/gradient/repeating-radial-gradient
 /fr/docs/orphaned/Web/CSS/transform-function/translateX	/fr/docs/Web/CSS/transform-function/translateX
-/fr/docs/orphaned/Web/Guide/Events	/fr/docs/Web/Events
-/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/Events/Creating_and_triggering_events
-/fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/Web/Events#media
+/fr/docs/orphaned/Web/Guide/Events	/fr/docs/conflicting/Web/API/Document_Object_Model/Events
+/fr/docs/orphaned/Web/Guide/Events/Creating_and_triggering_events	/fr/docs/Web/API/Document_Object_Model/Events
+/fr/docs/orphaned/Web/Guide/Events/Media_events	/fr/docs/conflicting/Web/API/Document_Object_Model/Events#media
 /fr/docs/orphaned/Web/Guide/Events/Orientation_and_motion_data_explained	/fr/docs/Web/API/Device_orientation_events/Orientation_and_motion_data_explained
 /fr/docs/orphaned/Web/Guide/HTML/HTML5	/fr/docs/Glossary/HTML5
 /fr/docs/orphaned/Web/Guide/HTML/HTML5/Introduction_to_HTML5	/fr/docs/Learn_web_development/Core/Structuring_content
