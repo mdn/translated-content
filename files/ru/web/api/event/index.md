@@ -135,7 +135,7 @@ slug: Web/API/Event
 
 ## Смотрите также
 
-- Типы событий: [Event reference](/ru/docs/Web/Events)
+- Типы событий: [Event reference](/ru/docs/Web/API/Document_Object_Model/Events)
 - [Сравнение Event Targets](/ru/docs/Learn_web_development/Core/Scripting/Event_bubbling) (target и currentTarget и relatedTarget и originalTarget)
 - [Creating and triggering custom events](/ru/docs/Web/Events/Creating_and_triggering_events)
 - Для разработчиков дополнений Firefox:

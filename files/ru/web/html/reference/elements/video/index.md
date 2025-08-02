@@ -68,7 +68,7 @@ slug: Web/HTML/Reference/Elements/video
 
 ## События
 
-The `<video>` element can fire many different [events](/ru/docs/Web/Events#media).
+The `<video>` element can fire many different [events](/ru/docs/Web/API/Document_Object_Model/Events#media).
 
 ## Примеры
 
