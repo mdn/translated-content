@@ -119,7 +119,7 @@ figure {
 其他使用说明：
 
 - 如果你没有声明 `controls` 属性，音频播放器不会包含浏览器的默认控件。但你可以使用 JavaScript 和 {{domxref("HTMLMediaElement")}} API 创建自己的自定义控件。
-- 为了更精确地控制你的音频内容，`HTMLMediaElement` 会触发多种不同的 [事件](/zh-CN/docs/Web/Events#media)。这也提供了一个查看音频获取过程的方式，你可以查看错误或检测什么时候可以开始播放或操作。
+- 为了更精确地控制你的音频内容，`HTMLMediaElement` 会触发多种不同的 [事件](/zh-CN/docs/Web/API/Document_Object_Model/Events#media)。这也提供了一个查看音频获取过程的方式，你可以查看错误或检测什么时候可以开始播放或操作。
 - 你还可以使用 [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) 以从 JavaScript 代码直接生成和操纵音频流，而非流式播放已存在的音频文件。
 - `<audio>` 元素不能像 `<video>` 元素一样附加副标题（subtitle）或说明标题（caption）。更多有用的信息和解决方法参见 Ian Devlin 的 [WebVTT and Audio](https://www.iandevlin.com/blog/2015/12/html5/webvtt-and-audio)。
 
