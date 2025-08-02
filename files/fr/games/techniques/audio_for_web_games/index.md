@@ -370,7 +370,7 @@ Ceci est particulièrement utile dans un environnement tridimensionnel rendu en 
 ## Voir aussi
 
 - [Web Audio API sur MDN](/fr/docs/Web/API/Web_Audio_API)
-- [`<audio>` sur MDN](/fr/docs/Web/HTML/Element/audio)
+- [`<audio>` sur MDN](/fr/docs/Web/HTML/Reference/Elements/audio)
 - [Developing Game Audio with the Web Audio API (HTML5Rocks) (en)](https://web.dev/articles/webaudio-games)
 - [Mixing Positional Audio and WebGL (HTML5Rocks) (en)](https://web.dev/articles/webaudio-positional-audio)
 - [Songs of Diridum: Pushing the Web Audio API to Its Limits (en)](https://hacks.mozilla.org/2013/10/songs-of-diridum-pushing-the-web-audio-api-to-its-limits/)

@@ -14,7 +14,7 @@ instance.exports;
 
 ## Exemples
 
-Après avoir récupéré le _bytecode_ WebAssembly grâce à la méthode `fetch()`, on le compile et on instancie le module grâce à la fonction {{jsxref("WebAssembly.instantiateStreaming()")}}. Lorsqu'on utilise cette fonction, on importe une fonction dans le module. Ensuite, on appelle [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) qui est exposée via l'instance.
+Après avoir récupéré le _bytecode_ WebAssembly grâce à la méthode `fetch()`, on le compile et on instancie le module grâce à la fonction {{jsxref("WebAssembly.instantiateStreaming()")}}. Lorsqu'on utilise cette fonction, on importe une fonction dans le module. Ensuite, on appelle [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Guides/Exported_functions) qui est exposée via l'instance.
 
 ```js
 var importObject = {
@@ -43,5 +43,5 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 ## Voir aussi
 
 - [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Guides/Concepts)
+- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Guides/Using_the_JavaScript_API)

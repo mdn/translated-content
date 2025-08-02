@@ -4,7 +4,7 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/media-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/media-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`media-src`** spécifie les sources valides pour le chargement des médias avec les éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio) et [`<video>`](/fr/docs/Web/HTML/Element/video).
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`media-src`** spécifie les sources valides pour le chargement des médias avec les éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio) et [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video).
 
 <table class="properties">
   <tbody>
@@ -36,9 +36,9 @@ Content-Security-Policy: media-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -50,7 +50,7 @@ Soit cet en-tête CSP&nbsp;:
 Content-Security-Policy: media-src https://example.com/
 ```
 
-Ces éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track) seront bloqués et ne se chargeront pas&nbsp;:
+Ces éléments [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track) seront bloqués et ne se chargeront pas&nbsp;:
 
 ```html
 <audio src="https://not-example.com/audio"></audio>
@@ -70,5 +70,5 @@ Ces éléments [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/doc
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<audio>`](/fr/docs/Web/HTML/Element/audio), [`<video>`](/fr/docs/Web/HTML/Element/video) et [`<track>`](/fr/docs/Web/HTML/Element/track)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<audio>`](/fr/docs/Web/HTML/Reference/Elements/audio), [`<video>`](/fr/docs/Web/HTML/Reference/Elements/video) et [`<track>`](/fr/docs/Web/HTML/Reference/Elements/track)

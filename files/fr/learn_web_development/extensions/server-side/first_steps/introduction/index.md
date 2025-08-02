@@ -37,9 +37,9 @@ Dans le monde moderne du développement web, apprendre le développement côté 
 
 ## Qu'est-ce que la programmation côté serveur?
 
-Les navigateurs web communiquent avec les [serveurs web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) en utilisant le protocole {{glossary("HTTP")}} (**H**yper**T**ext **T**ransfer **P**rotocol). Quand vous cliquez sur un lien dans une page web, envoyez un formulaire, ou encore lancez une recherche, une **requête HTTP** est envoyée du navigateur au serveur cible.
+Les navigateurs web communiquent avec les [serveurs web](/fr/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_web_server) en utilisant le protocole {{glossary("HTTP")}} (**H**yper**T**ext **T**ransfer **P**rotocol). Quand vous cliquez sur un lien dans une page web, envoyez un formulaire, ou encore lancez une recherche, une **requête HTTP** est envoyée du navigateur au serveur cible.
 
-Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/Methods/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
+Une requête inclut _une URL_ pour identifier la ressource demandée, _une méthode_ pour définir l'action désirée (comme GET pour obtenir, DELETE pour supprimer ou POST pour publier) et peut également inclure des informations supplémentaires encodées dans _les paramètres_ de l'URL (des paires clés/valeurs envoyées via une chaîne de recherche — [query string](https://en.wikipedia.org/wiki/Query_string) en anglais), les données POST (données envoyées par la [méthode HTTP POST](/fr/docs/Web/HTTP/Reference/Methods/POST)), ou les {{glossary("Cookie", "cookies associés")}}.
 
 Les serveurs web attendent des requêtes du client, les traitent quand elles arrivent, et répondent au navigateur web avec une **réponse HTTP**. La réponse contient _un statut_ qui indique si la requête a pu être traitée avec succès ou non (exemple "HTTP/1.1 200 OK" pour indiquer le succès).
 
@@ -49,7 +49,7 @@ Le corps de la réponse, si la requête réussit, contient alors la ressource de
 
 Le diagramme ci-dessous montre l'architecture d'un serveur web basique pour un _site statique_ (un site statique est un site qui renvoie du contenu codé en dur, c'est à dire le contenu d'un fichier, quand une ressource donnée est demandée). Quand un utilisateur veut naviguer sur une page, le navigateur envoie une requête HTTP "GET" spécifiant son URL.
 
-Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Status#réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#réponses_d'erreur_côté_serveur)).
+Le serveur récupère le document demandé du système de fichiers et retourne une réponse HTTP contenant le document et le [statut de la réponse](/fr/docs/Web/HTTP/Reference/Status#réponses_de_succès) (habituellement, 200 OK). Si le fichier ne peut pas être recupéré pour une raison x ou y, le statut d'erreur est retourné (voir [réponses d'erreur client](/fr/docs/Web/HTTP/Status#réponses_d'erreur_côté_client) et [réponse d'erreur serveur](/fr/docs/Web/HTTP/Status#réponses_d'erreur_côté_serveur)).
 
 ![A simplified diagram of a static web server.](basic_static_app_server.png)
 
@@ -79,7 +79,7 @@ Voyons maintenant le code impliqué dans la programmation côté serveur et côt
 
 Le code exécuté par le navigateur est connu sous le nom de **code côté client** (ou **front-end**) et se préoccupe principalement de l'apparence et du comportement des pages web affichées. Cela inclut sélectionner et styliser les composants de l'interface utilisateur, créer la mise en page, la navigation, valider les formulaires, etc. D'un autre côté, la programmation côté serveur implique de définir le contenu retourné au navigateur en réponse aux requêtes. Le code côté serveur gère des tâches telles que la validation des données envoyées, l'utilisation des bases de données pour stocker et récupérer des données et l'envoi de données générées au client tel qu'attendu.
 
-Le code client est écrit en [HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS), et [JavaScript](/fr/docs/Learn/JavaScript) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
+Le code client est écrit en [HTML](/fr/docs/Learn_web_development/Core/Structuring_content), [CSS](/fr/docs/Learn_web_development/Core/Styling_basics), et [JavaScript](/fr/docs/conflicting/Learn_web_development/Core/Scripting) — il est exécuté dans un navigateur web et a peu ou pas accès au système d'exploitation de l'utilisateur (inclut un accès limité au système de fichiers).
 
 Les développeurs web ne peuvent pas contrôler quel navigateur est utilisé par l'utilisateur pour voir le site web — or les navigateurs fournissent des niveaux de compatibilité inconsistants quant aux fonctionnalités du code côté client, et une partie du challenge de la programmation côté client consiste à gérer les différences de support des navigateurs.
 

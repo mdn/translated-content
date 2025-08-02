@@ -4,9 +4,9 @@ slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
 original_slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 ---
 
-La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
+La directive HTTP [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) **`connect-src`** restreint les URL qui peuvent être chargées en utilisant des interfaces de programmation. Les API concernées sont&nbsp;:
 
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping),
+- [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Reference/Elements/a#ping),
 - [`fetch()`](/fr/docs/Web/API/Window/fetch),
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest),
 - [`WebSocket`](/fr/docs/Web/API/WebSocket),
@@ -45,9 +45,9 @@ Content-Security-Policy: connect-src <source> <source>;
 
 ### Sources
 
-`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
+`<source>` peut être n'importe quelle valeur parmi celles énumérées dans [l'article sur les valeurs sources CSP](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#sources).
 
-On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
+On notera que cet ensemble de valeurs peut être utilisé pour toutes les [directives de récupération](/fr/docs/Glossary/Fetch_directive) (et pour [certaines autres directives](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#fetch_directive_syntax#directives_associ%c3%a9es)).
 
 ## Exemples
 
@@ -91,8 +91,8 @@ Les connexions suivantes seront bloquées et ne se chargeront pas&nbsp;:
 
 ## Voir aussi
 
-- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy)
-- [`<a>`](/fr/docs/Web/HTML/Element/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping)
+- [`Content-Security-Policy`](/fr/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
+- [`<a>`](/fr/docs/Web/HTML/Reference/Elements/a) et l'attribut [`ping`](/fr/docs/Web/HTML/Reference/Elements/a#ping)
 - [`fetch()`](/fr/docs/Web/API/Window/fetch)
 - [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)
 - [`WebSocket`](/fr/docs/Web/API/WebSocket)

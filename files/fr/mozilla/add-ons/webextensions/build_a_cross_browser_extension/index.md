@@ -103,7 +103,7 @@ if (typeof <function> === "function") {
 
 ### Les clés de manifeste
 
-Les différences pour les clés du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) se répartissent en trois catégories :
+Les différences pour les clés du fichier [`manifest.json`](/fr/docs/conflicting/Mozilla/Add-ons/WebExtensions/manifest.json) se répartissent en trois catégories :
 
 1. **Les attributs d'information sur l'extension.** Firefox et Opera incluent la clé [`developer`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) pour fournir des détails quant à la développeuse ou au développeur de l'application et la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility).
 2. **Les fonctionnalités rattachées à l'extension.** Edge ne prenait pas en charge la clé [`commands`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility) qui permet de définir des raccourcis clavier pour une extension.

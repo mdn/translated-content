@@ -128,8 +128,8 @@ La dernière version utilisée permet de ne pas créer d'objet supplémentaire.
 
 ## Voir aussi
 
-- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)
+- [Caractère énumérable et rattachement des propriétés](/fr/docs/Web/JavaScript/Guide/Enumerability_and_ownership_of_properties)
 - {{jsxref("Object.getOwnPropertyNames()")}}
 - {{jsxref("Instructions/for...in", "for...in")}}
 - {{jsxref("Opérateurs/L_opérateur_in", "in")}}
-- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)
+- [Guide JavaScript : Retours sur l'héritage](/fr/docs/Web/JavaScript/Guide/Inheritance_and_the_prototype_chain)

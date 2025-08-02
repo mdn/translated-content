@@ -97,13 +97,13 @@ em {
 
 ## Attributs
 
-Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Comme tous les éléments HTML, cet élément prend en charge [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
 L'élément `<em>` est destiné aux mots dont l'accent est souligné par rapport au texte environnant, ce qui est souvent limité à un ou plusieurs mots d'une phrase et affecte le sens de la phrase elle-même.
 
-Habituellement, cet élément est affiché avec une police italique. Cependant, il ne doit pas être utilisé pour appliquer un style italique&nbsp;; pour la mise en forme, on utilisera l'élément [`<i>`](/fr/docs/Web/HTML/Element/i) ou des styles CSS. Pour marquer le titre d'une œuvre (livre, chanson, pièce, etc.), on utilisera l'élément [`<cite>`](/fr/docs/Web/HTML/Element/cite)&nbsp;; il est aussi habituellement affiché avec une police italique, mais porte un sens différent. Enfin, on utilisera l'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) pour marquer un texte plus important que le texte qui l'entoure.
+Habituellement, cet élément est affiché avec une police italique. Cependant, il ne doit pas être utilisé pour appliquer un style italique&nbsp;; pour la mise en forme, on utilisera l'élément [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i) ou des styles CSS. Pour marquer le titre d'une œuvre (livre, chanson, pièce, etc.), on utilisera l'élément [`<cite>`](/fr/docs/Web/HTML/Reference/Elements/cite)&nbsp;; il est aussi habituellement affiché avec une police italique, mais porte un sens différent. Enfin, on utilisera l'élément [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong) pour marquer un texte plus important que le texte qui l'entoure.
 
 ### `<i>` ou `<em>`&nbsp;?
 
@@ -142,4 +142,4 @@ L'élément `<em>` est souvent utilisé pour indiquer un contraste, implicite ou
 
 ## Voir aussi
 
-- [`<i>`](/fr/docs/Web/HTML/Element/i)
+- [`<i>`](/fr/docs/Web/HTML/Reference/Elements/i)

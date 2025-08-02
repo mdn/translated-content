@@ -17,7 +17,7 @@ Voici la liste des interfaces basées sur `AuthenticatorResponse`.
 ## Propriétés
 
 - {{domxref("AuthenticatorResponse.clientDataJSON")}}
-  - : Une chaîne de caractères [JSON](/fr/docs/Learn/JavaScript/Objects/JSON) stockée dans un {{domxref("ArrayBuffer")}} et qui représente les données du client passées à {{domxref("CredentialsContainer.create()")}} ou {{domxref("CredentialsContainer.get()")}}.
+  - : Une chaîne de caractères [JSON](/fr/docs/Learn_web_development/Core/Scripting/JSON) stockée dans un {{domxref("ArrayBuffer")}} et qui représente les données du client passées à {{domxref("CredentialsContainer.create()")}} ou {{domxref("CredentialsContainer.get()")}}.
 
 ## Méthodes
 

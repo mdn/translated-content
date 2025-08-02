@@ -14,8 +14,8 @@ Les fonctions WebAssembly exportées sont simplement des emballages (wrappers) J
 
 Vous pouvez exporter les fonctions WebAssembly de deux manières:
 
-- Par un appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) sur une table existante.
-- Par un appel à une fonction exportée à partir de l'instance d'un module wasm via [`Instance.exports`](/fr/docs/WebAssembly/JavaScript_interface/Instance/exports).
+- Par un appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get) sur une table existante.
+- Par un appel à une fonction exportée à partir de l'instance d'un module wasm via [`Instance.exports`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports).
 
 Dans les deux cas, vous obtenez le même genre de wrapper pour la fonction sous jacente. Du point de vue de JavaScript, une fonction wasm est une fonction JavaScript— A la différence prés qu'elles sont encapsulées par l'instance d'une fonction exportée wasm et qu'il y a un nombre limité de façon d'y accéder.
 
@@ -39,13 +39,13 @@ WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
 
 Dans cet exemple, nous créons une table (`otherTable`) à partir de JavaScript en utilisant le constructeur {{jsxref("WebAssembly.Table")}}, puis nous chargeons table.wasm dans notre page en utilisant la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}.
 
-Nous pouvons ensuite accéder aux fonctions exportées à partir du module, récupérer les références de chaque fonction via [`tbl.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) et logguer le résultat de chacune d'elles dans la console. Enfin, nous utilisons `set()` avec la table `otherTable` afin de lui fournir les references aux mêmes functions que la table `tbl`.
+Nous pouvons ensuite accéder aux fonctions exportées à partir du module, récupérer les références de chaque fonction via [`tbl.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get) et logguer le résultat de chacune d'elles dans la console. Enfin, nous utilisons `set()` avec la table `otherTable` afin de lui fournir les references aux mêmes functions que la table `tbl`.
 
 Pour vérifier que cela à fonctionné correctement, nous récupérons les références de la table `otherTable` et imprimons également les résultats dans la console, et les résultats sont identiques aux précédents.
 
 ## Des fonctions à part entière
 
-Dans l'exemple précédent, la valeur de retour de chaque appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) est une fonction WebAssembly exportée — exactement ce dont nous avons parlé jusqu'à maintenant.
+Dans l'exemple précédent, la valeur de retour de chaque appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/Reference/JavaScript_interface/Table/get) est une fonction WebAssembly exportée — exactement ce dont nous avons parlé jusqu'à maintenant.
 
 Il vaut la peine d'être noté que ceux sont des fonctions JavaScript à part entière, en plus d'être un emballage à des fonctions WebAssembly. Si vous chargez l'exemple ci-dessus dans un navigateur compatible avec WebAssembly, et excécutez les lignes suivantes dans votre console:
 

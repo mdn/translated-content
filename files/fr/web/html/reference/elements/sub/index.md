@@ -71,7 +71,7 @@ p {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
@@ -83,7 +83,7 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
 - L'indication de renvois en bas de page
 - L'écriture de certains éléments d'une formule mathématique
-  - Dans le cadre de formules complexes, [MathML](/fr/docs/Web/MathML) peut s'avérer plus pertinent que l'enchaînement d'éléments [`<sup>`](/fr/docs/Web/HTML/Element/sup) et `<sub>`.
+  - Dans le cadre de formules complexes, [MathML](/fr/docs/Web/MathML) peut s'avérer plus pertinent que l'enchaînement d'éléments [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup) et `<sub>`.
 - L'écriture du nombre d'atomes dans une formule chimique (ex. C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>).
 
 ## Exemples
@@ -125,6 +125,6 @@ Voici certains cas d'utilisation (non exhaustifs) pour `<sub>`&nbsp;:
 
 ## Voir aussi
 
-- L'élément HTML [`<sup>`](/fr/docs/Web/HTML/Element/sup) qui permet une mise en exposant. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
-- Les éléments MathML [`<msub>`](/fr/docs/Web/MathML/Element/msub), [`<msup>`](/fr/docs/Web/MathML/Element/msup), et [`<msubsup>`](/fr/docs/Web/MathML/Element/msubsup).
+- L'élément HTML [`<sup>`](/fr/docs/Web/HTML/Reference/Elements/sup) qui permet une mise en exposant. Il est à noter que l'élément `<sub>` et l'élément `<sup>` ne peuvent pas être utilisés simultanément. Pour afficher le symbole chimique d'un élément, il faudra utiliser [MathML](/fr/docs/Web/MathML) pour représenter à la fois le numéro atomique et le nombre de masse.
+- Les éléments MathML [`<msub>`](/fr/docs/Web/MathML/Reference/Element/msub), [`<msup>`](/fr/docs/Web/MathML/Element/msup), et [`<msubsup>`](/fr/docs/Web/MathML/Element/msubsup).
 - La propriété CSS [`vertical-align`](/fr/docs/Web/CSS/vertical-align).

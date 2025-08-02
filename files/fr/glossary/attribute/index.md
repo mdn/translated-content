@@ -48,5 +48,5 @@ console.log(attr.value); // Affiche `Placeholder modifié`
 
 ## Voir aussi
 
-- [Liste des attributs HTML](/fr/docs/Web/HTML/Attributes)
-- [Les attributs universels en HTML](/fr/docs/Web/HTML/Global_attributes)
+- [Liste des attributs HTML](/fr/docs/Web/HTML/Reference/Attributes)
+- [Les attributs universels en HTML](/fr/docs/Web/HTML/Reference/Global_attributes)

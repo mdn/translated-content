@@ -117,7 +117,7 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
 ### Valeurs
 
 - `<clip-source>`
-  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Element/clipPath).
+  - : Une [`url()`](/fr/docs/Web/CSS/url_value) qui référence un élément [SVG](/fr/docs/Web/SVG) [`<clipPath>`](/fr/docs/Web/SVG/Reference/Element/clipPath).
 
 - [`<basic-shape>`](/fr/docs/Web/CSS/basic-shape)
   - : Une forme dont la taille et la position sont définies par la valeur `<geometry-box>`. Si aucune valeur de géométrie n'est fournie, `border-box` sera utilisée comme boîte de référence. La forme peut être définie avec l'une de ces valeurs&nbsp;:
@@ -147,13 +147,13 @@ La propriété `clip-path` est définie avec une ou plusieurs des valeurs listé
     - `stroke-box`
       - : La boîte de contour de la boîte englobante est utilisée comme boîte de référence.
     - `view-box`
-      - : La zone d'affichage SVG la plus proche est utilisée comme boîte de référence. Si un attribut [`viewBox`](/fr/docs/Web/SVG/Attribute/viewBox) est défini pour l'élément qui crée la zone d'affichage SVG, la boîte de référence est située à l'origine du système construit par `viewBox` et les dimensions de la boîte de référence sont les valeurs de hauteur et de largeur de l'attribut `viewBox`.
+      - : La zone d'affichage SVG la plus proche est utilisée comme boîte de référence. Si un attribut [`viewBox`](/fr/docs/Web/SVG/Reference/Attribute/viewBox) est défini pour l'élément qui crée la zone d'affichage SVG, la boîte de référence est située à l'origine du système construit par `viewBox` et les dimensions de la boîte de référence sont les valeurs de hauteur et de largeur de l'attribut `viewBox`.
 
 - `none`
   - : Aucun chemin de rognage n'est créé.
 
 > [!NOTE]
-> Si [la valeur calculée](/fr/docs/Web/CSS/computed_value) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
+> Si [la valeur calculée](/fr/docs/Web/CSS/CSS_cascade/Value_processing) est différente de `none`, cela entraînera la création d'un nouveau [contexte d'empilement](/fr/docs/Web/CSS/CSS_positioned_layout/Stacking_context) (de la même façon qu'[`opacity`](/fr/docs/Web/CSS/opacity) avec des valeurs différentes de `1`).
 
 ## Définition formelle
 
@@ -689,7 +689,7 @@ clipPathSelect.addEventListener("change", (evt) => {
   - [`mask`](/fr/docs/Web/CSS/mask)
   - [`filter`](/fr/docs/Web/CSS/filter)
 - Les attributs SVG
-  - [`clip-path`](/fr/docs/Web/SVG/Attribute/clip-path)
+  - [`clip-path`](/fr/docs/Web/SVG/Reference/Attribute/clip-path)
   - [`clip-rule`](/fr/docs/Web/SVG/Attribute/clip-rule)
-- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Appliquer des effets SVG sur du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)
 - [Les formes CSS, le rognage et le masquage&nbsp;: comment les utiliser (un billet de blog Hacks en anglais)](https://hacks.mozilla.org/2017/06/css-shapes-clipping-and-masking/)
