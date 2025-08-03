@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("CSSOM") }}
 
-{{domxref("CSSKeyframeRule")}} 接口的只读属性 **`cssRules`** 返回一个包含关键帧 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 的 {{domxref("CSSRuleList")}}。
+{{domxref("CSSKeyframeRule")}} 接口的只读属性 **`cssRules`** 返回包含关键帧 [at 规则](/zh-CN/docs/Web/CSS/CSS_syntax/At-rule) 的 {{domxref("CSSRuleList")}}。
 
 > [!NOTE]
 > `CSSKeyframeRule` 本身可以像数组一样通过索引访问，并且其行为类似于 `cssRules` 属性。
@@ -18,7 +18,7 @@ l10n:
 
 ## 示例
 
-以下 CSS 中包含一个 keyframes at 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。
+以下 CSS 中包含一个关键帧 at 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。
 `myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象。其 `cssRules` 属性返回一个包含两个规则的 {{domxref("CSSRuleList")}}。
 
 ```css
