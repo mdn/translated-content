@@ -2,13 +2,10 @@
 title: Web 相关技术
 slug: Related
 l10n:
-  sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
+  sourceCommit: 95e0fbb78a16450188753d0b53ca02a9fbd2a641
 ---
 
 本页面是 MDN 网站上关于非核心技术（即非 Web 标准技术）的 Web 相关技术文档的首页，这些技术虽不属于 MDN 的关注范围，但仍然与 Web 相关且对 Web 开发者具有吸引力。
-
-> [!NOTE]
-> 这些文档资源通常不由 MDN 编辑团队维护——如果你对这些资源有建议或疑问，请查看相应技术的主页以获取相关维护团队的联系方式。
 
 ## 技术列表
 
