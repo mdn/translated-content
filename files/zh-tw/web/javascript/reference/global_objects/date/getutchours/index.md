@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Date")}} 實例的 **`getUTCHours()`** 方法會根據世界標準時間回傳此日期的的小時。
+{{jsxref("Date")}} 實例的 **`getUTCHours()`** 方法會根據世界協調時間回傳此日期的的小時。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.getUTCHours()")}}
 
