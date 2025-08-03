@@ -7,7 +7,7 @@ l10n:
 
 全页缩放（或简称 fullZoom）是 [Firefox 3](/zh-CN/docs/Mozilla/Firefox/Releases/3) 中的一项新功能。
 
-### 示例（XUL：browser）
+### 示例（XUL:browser）
 
 以下示例演示了当前聚焦的浏览器窗口的使用方法。这是 Firefox 扩展的典型用法。
 
@@ -17,11 +17,11 @@ ZoomManager.enlarge();
 ZoomManager.setZoomForBrowser(gBrowser.selectedBrowser, ZoomManager.MIN);
 ```
 
-### 示例（XUL：iframe）
+### 示例（XUL:iframe）
 
 注意：此示例可能已过时。
 
-你也可以为 `<XUL:iframe>` 使用 fullZoom 功能。但是，由于 iframe 没有 markupDocumentViewer 属性，我们需要先获取该属性：
+你也可以在 `<XUL:iframe>` 中使用 fullZoom 功能。但是，由于 iframe 没有 markupDocumentViewer 属性，我们需要先获取该属性：
 
 ```js
 var zoom = 1.5;
