@@ -2,22 +2,22 @@
 title: Firefox 3.5 中的安全性更改
 slug: Mozilla/Firefox/Releases/3.5/Security_changes
 l10n:
-  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
+  sourceCommit: 2591a9b59de88401a2ef0fb7d0b8d0281e3f5376
 ---
 
 本文介绍了 Firefox 3.5 中与安全性相关的更改。
 
-## 对 chrome 注册的更改
+## 对界面注册的更改
 
-为防止远程内容被用作 chrome，一个安全漏洞已被修复。这可能会影响任何在其 `chrome.manifest` 文件中包含引用网络文件资源的附加组件。
+为防止远程内容被用作界面，一个安全漏洞已被修复。这可能会影响任何在其 `chrome.manifest` 文件中包含引用网络文件资源的附加组件。
 
-修复此漏洞的方法是向 `nsIProtocolHandler` 接口添加了一个新的 `URI_IS_LOCAL_RESOURCE` 标志，以表明该协议可以安全地注册为 chrome。任何创建自己的协议处理程序并尝试在 `chrome.manifest` 文件中注册的附加组件，都必须使用此标志才能正常工作。
+修复此漏洞的方法是向 `nsIProtocolHandler` 接口添加了一个新的 `URI_IS_LOCAL_RESOURCE` 标志，以表明该协议可以安全地注册为界面。任何创建自己的协议处理器并尝试在 `chrome.manifest` 文件中注册的附加组件，都必须使用此标志才能正常工作。
 
 ## 私人浏览模式
 
-Firefox 3.5 实现了私人浏览模式，该模式下 cookies、历史记录和其他可能涉及隐私的信息不会永久保存在用户的计算机上。扩展程序和其他附加组件可以支持私人浏览功能，在私人浏览模式启用时检测到并避免保存隐私信息。有关详细信息，请参阅 [支持隐私浏览模式](/zh-CN/Supporting_private_browsing_mode)。
+Firefox 3.5 实现了私人浏览模式，该模式下 cookies、历史记录和其他可能涉及隐私的信息不会永久保存在用户的计算机上。扩展程序和其他附加组件可以支持私人浏览功能，在私人浏览模式启用时检测到并避免保存隐私信息。有关详细信息，参见[支持隐私浏览模式](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)。
 
-插件可以通过使用 [`NPN_GetValue()`](/zh-CN/docs/NPN_GetValue) 函数检查当前 `NPNVprivateModeBool` 变量的值，来检测私人浏览模式是否正在生效。
+插件可以通过使用 [`NPN_GetValue()`](https://web.archive.org/web/20210308202622/https://developer.mozilla.org/en-US/docs/Archive/Plugins/Reference/NPN_GetValue) 函数检查当前 `NPNVprivateModeBool` 变量的值，来检测隐私浏览模式是否正在生效。
 
 ## 新的证书错误处理
 
@@ -29,4 +29,4 @@ Firefox 3.5 实现了私人浏览模式，该模式下 cookies、历史记录和
 
 ## 参见
 
-- [适用于开发者的 Firefox 3.5](/zh-CN/Firefox%203.5%20for%20developers)
+- [适用于开发者的 Firefox 3.5](/zh-CN/docs/Mozilla/Firefox/Releases/3.5)
