@@ -2,10 +2,8 @@
 title: tabGroups.get
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/get
 l10n:
-  sourceCommit: 3ffce2e0e798a46f6405d32a971d1ebf9874cdd4
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 返回有关标签组的详细信息。
 
