@@ -2,7 +2,7 @@
 title: Firefox 2 中的安全性
 slug: Mozilla/Firefox/Releases/2/Security_changes
 l10n:
-  sourceCommit: 1d3d0c10ebf5c8c55f75b9adce74d1e5001866c6
+  sourceCommit: 2591a9b59de88401a2ef0fb7d0b8d0281e3f5376
 ---
 
 本文讨论了影响 Firefox 2 安全性的更改。
@@ -23,8 +23,8 @@ l10n:
 
 ## 确定可用的加密套件
 
-一如既往，你可以通过进入 about:config 并搜索“ssl”或“tls”来查看支持哪些加密套件，以及已启用或已被禁用的套件。
+一如既往，你可以通过打开 about:config 页面并搜索“ssl”或“tls”来查看支持哪些加密套件，以及已启用或已被禁用的套件。
 
 ## jar 协议的安全性改进
 
-为了纠正使用 `jar:` 协议时可能出现的安全问题，现在需要以 MIME 类型 `application/java-archive` 提供 JAR 文件。有关详细信息，请参阅 [安全与 jar 协议](/zh-CN/docs/Security_and_the_jar_protocol)。
+为了纠正使用 `jar:` 协议时可能出现的安全问题，现在需要以 MIME 类型 `application/java-archive` 提供 JAR 文件。有关详细信息，请参阅 [安全与 jar 协议](https://web.archive.org/web/20180706040540/https://developer.mozilla.org/en-US/docs/Mozilla/Security/Security_and_the_jar_protocol)。
