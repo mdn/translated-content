@@ -1,8 +1,8 @@
 ---
-title: CSS カウンターの使用
+title: CSS カウンターの使い方
 slug: Web/CSS/CSS_counter_styles/Using_CSS_counters
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **CSS カウンター**では、文書内の位置に基づいてコンテンツの表示方法を調整することができます。
@@ -18,7 +18,7 @@ l10n:
 
 独自の名前付きカウンターを定義することもできますし、すべての順序付きリストに対して既定で作成される `list-item` カウンターを操作することもできます。
 
-## カウンターの使用
+## カウンターの使い方
 
 カウンターを使用するには、最初に必ず {{cssxref("counter-reset")}} プロパティで値を初期化する必要があります。
 カウンター値は、 {{cssxref("counter-increment")}} プロパティを使用して増減させることができ、 {{cssxref("counter-set")}} プロパティを使用して特定の値に直接設定することができます。
@@ -75,6 +75,10 @@ h3::before {
 例えば、以下の宣言は `counter()` をそれぞれの `h3` 見出しの前に `Section <数値>:` というテキストを付けるために使用しています。ここで `<数値>` は、 10 進数（既定の表示スタイル）でのカウントの値です。
 
 ```css
+body {
+  counter-reset: section; /* 名前付きカウンター 'section' を設定し、その初期値を 0 に設定 */
+}
+
 h3::before {
   counter-increment: section; /* カウンター section の値を 1 つずつ増加 */
   content: "Section " counter(section) ": "; /* カウンター値を既定のスタイル（10 進数）で表示 */
