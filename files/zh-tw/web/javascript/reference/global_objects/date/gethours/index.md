@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Date")}} 實例的 **`getHours()`** 方法會根據本地時間回傳此日期的時。
+{{jsxref("Date")}} 實例的 **`getHours()`** 方法會根據本地時間回傳此日期的小時數。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.getHours()", "shorter")}}
 
