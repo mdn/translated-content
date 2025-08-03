@@ -2,10 +2,8 @@
 title: tabGroups.TAB_GROUP_ID_NONE
 slug: Mozilla/Add-ons/WebExtensions/API/tabGroups/TAB_GROUP_ID_NONE
 l10n:
-  sourceCommit: 3ffce2e0e798a46f6405d32a971d1ebf9874cdd4
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 当标签页未处于标签组中时返回的标签组 ID 值。
 
@@ -18,7 +16,7 @@ l10n:
 - {{WebExtAPIRef("tabs.query()")}}
 - {{WebExtAPIRef("tabs.Tab")}}
 
-`tabGroups.TAB_GROUP_ID_NONE` 常量属于 `tabGroups` 命名空间，仅在取得 [`tabGroups` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabGroups#permissions)时可用。若你的扩展未取得 `tabGroups` 权限，请不要使用 `tabGroups.TAB_GROUP_ID_NONE` 而是使用 `-1`。
+`tabGroups.TAB_GROUP_ID_NONE` 常量属于 `tabGroups` 命名空间，仅在取得 [`tabGroups` 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/tabGroups#权限)时可用。若你的扩展没有声明 `tabGroups` 权限，请不要使用 `tabGroups.TAB_GROUP_ID_NONE`，而请使用 `-1`。
 
 {{WebExtExamples("h2")}}
 
