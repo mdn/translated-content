@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-{{jsxref("Date")}} 實例的 **`getMilliseconds()`** 方法會根據本地時間回傳指定日期的毫秒。
+{{jsxref("Date")}} 實例的 **`getMilliseconds()`** 方法會根據本地時間回傳指定日期的毫秒數。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.getMilliseconds()", "shorter")}}
 
