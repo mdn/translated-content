@@ -23,7 +23,8 @@ console.log(date2.getUTCHours());
 ## 語法
 
 ```js-nolint
-getUTCHours()```
+getUTCHours()
+```
 
 ### 參數
 
