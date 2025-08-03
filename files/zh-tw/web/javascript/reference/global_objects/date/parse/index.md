@@ -139,7 +139,7 @@ Date.parse("Thu, 01 Jan 1970 00:00:00 GMT");
 </tr>
 <tr>
 <td>類似 <code>toString()</code> 的字串</td>
-<td><code>Thu Jan 01 1970 00:00:00</code><br><code>Thu Jan 01 1970</code><br><code>Jan 01 1970 00:00:00</code><br><code>Jan 01 1970</code></td>
+<td><code>Thu Jan 01 1970 00:00:00</code><br><code>Thu Jan 01 1970</code><br><code>Jan 01 1970 00:00:00</code><br><code>Jan 01 1970</code></td>
 <td colspan="3">0</td>
 </tr>
 <tr>
