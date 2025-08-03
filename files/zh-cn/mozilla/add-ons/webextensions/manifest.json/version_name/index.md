@@ -2,10 +2,8 @@
 title: version_name
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
-
-{{AddonSidebar}}
 
 <table class="fullwidth-table standard-table">
   <tbody>
@@ -28,9 +26,9 @@ l10n:
   </tbody>
 </table>
 
-除了用于更新的 [version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 字段外，还可以设置 [version_name](https://developer.chrome.google.cn/docs/extensions/reference/manifest/version) 作为扩展的描述性版本字符串并在设置该值时用于显示。
+除了用于更新的 [version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version) 字段，你还可以设置 [version_name](https://developer.chrome.google.cn/docs/extensions/reference/manifest/version) 字段作为扩展的描述性版本字符串。如果提供该字段，则其将用于显示。
 
-如果没有提供 **version_name**，则 **version** 字段也将用于显示。
+若没有提供 **version_name**，则 **version** 字段也将用于显示。
 
 ## 浏览器兼容性
 
