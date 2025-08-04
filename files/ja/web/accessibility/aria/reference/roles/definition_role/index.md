@@ -22,7 +22,8 @@ l10n:
 </p>
 ```
 
-> **メモ:** [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) や `definition` ロールを持つ `<span>` の代わりに、{{HTMLElement('dfn')}} 要素を使用してください。**利用可能であれば、常にネイティブ要素を使用してください。**
+> [!NOTE]
+> [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role) や `definition` ロールを持つ `<span>` の代わりに、{{HTMLElement('dfn')}} 要素を使用してください。**利用可能であれば、常にネイティブ要素を使用してください。**
 
 ```html
 <p>
