@@ -340,11 +340,10 @@ CORS 预检请求不能包含凭据。预检请求的*响应*必须指定 `Acces
 
 在响应附带身份凭证的请求时：
 
-- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符“`*`”，而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
-
-- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符“`*`”，而应将其设置为标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
-
-- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符“`*`”，而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Allow-Origin` 的值设为通配符（`*`），而应将其设置为特定的域，如：`Access-Control-Allow-Origin: https://example.com`。
+- 服务器**不能**将 `Access-Control-Allow-Headers` 的值设为通配符（`*`），而应将其设置为特定标头名称的列表，如：`Access-Control-Allow-Headers: X-PINGOTHER, Content-Type`
+- 服务器**不能**将 `Access-Control-Allow-Methods` 的值设为通配符（`*`），而应将其设置为特定请求方法名称的列表，如：`Access-Control-Allow-Methods: POST, GET`
+- 服务器**不能**将 `Access-Control-Expose-Headers` 的值设为通配符（`*`），而应将其设置为特定标头名称的列表，如：`Access-Control-Expose-Headers: Content-Encoding, Kuma-Revision`
 
 对于附带身份凭证的请求（通常是 `Cookie`），
 
@@ -381,7 +380,7 @@ Access-Control-Allow-Origin: https://mozilla.org
 Vary: Origin
 ```
 
-如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符“`*`”，那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
+如果服务端指定了具体的单个源（作为允许列表的一部分，可能会根据请求的来源而动态改变）而非通配符（`*`），那么响应标头中的 {{HTTPHeader("Vary")}} 字段的值必须包含 `Origin`。这将告诉客户端：服务器对不同的 {{HTTPHeader("Origin")}} 返回不同的内容。
 
 ### Access-Control-Expose-Headers
 
