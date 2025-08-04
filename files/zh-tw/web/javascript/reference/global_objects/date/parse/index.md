@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
 
-**`Date.parse()`** 靜態方法會解析一個日期的字串表示法，並回傳該日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元紀元時間戳與無效日期)。
+**`Date.parse()`** 靜態方法會解析一個日期的字串表示法，並回傳該日期的[時間戳](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Date#紀元時間戳與無效日期)。
 
 {{InteractiveExample("JavaScript Demo: Date.parse()")}}
 
