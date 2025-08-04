@@ -81,10 +81,10 @@ body {
   - : 如何建立具有多行的彈性容器，並控制這些行中項目的顯示方式。
 - [彈性盒的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
   - : 彈性盒典型的常見設計模式。
-- [CSS 佈局：flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
-  - : 學習如何使用 flexbox 佈局來建立 Web 佈局。
-- [Flexbox 中的盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
-  - : 詳細介紹 [CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)中專屬於 flexbox 的功能。
+- [CSS 佈局：彈性盒](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+  - : 學習如何使用彈性盒佈局來建立 Web 佈局。
+- [彈性盒中的盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+  - : 詳細介紹 [CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)中專屬於彈性盒的功能。
 
 ## 相關概念
 
