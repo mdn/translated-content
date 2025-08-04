@@ -8,7 +8,7 @@ l10n:
 **`roletype`** 角色是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles)，所有其他 ARIA 角色都继承自该角色。
 
 > [!WARNING]
-> `roletype` 角色是一个用于本体论的抽象角色。此处包含它是为了文档的完整性。Web 开发者不应使用此角色。
+> `roletype` 是一个用于本体的抽象角色。此处包含它是为了文档的完整性。Web 开发者不应使用此角色。
 
 ## 描述
 
