@@ -79,8 +79,8 @@ body {
   - : 解釋 flex-grow、flex-shrink 和 flex-basis 屬性。
 - [精通彈性項目的換行](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
   - : 如何建立具有多行的彈性容器，並控制這些行中項目的顯示方式。
-- [Flexbox 的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
-  - : Flexbox 典型的常見設計模式。
+- [彈性盒的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+  - : 彈性盒典型的常見設計模式。
 - [CSS 佈局：flexbox](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : 學習如何使用 flexbox 佈局來建立 Web 佈局。
 - [Flexbox 中的盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
