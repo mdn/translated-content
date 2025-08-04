@@ -18,7 +18,7 @@ deleteRule(select)
 ### 参数
 
 - `select`
-  - ：一个字符串，包含要删除规则的关键帧选择器，必须是：
+  - : 一个字符串，包含要删除规则的关键帧选择器，必须是：
     - 0% 到 100% 之间的百分比值的逗号分隔列表；
     - 关键字 `from` 或 `to`。
 
@@ -30,8 +30,7 @@ deleteRule(select)
 
 ## 示例
 
-以下 CSS 包含一个关键帧 at 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。
-`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象。其 `cssRules` 属性会得到包含两个规则的 {{domxref("CSSRuleList")}}。
+以下 CSS 包含一个关键帧 at 规则。这将是 `document.styleSheets[0].cssRules` 返回的第一个 {{domxref("CSSRule")}}。`myRules[0]` 返回一个 {{domxref("CSSKeyframesRule")}} 对象。其 `cssRules` 属性会得到包含两个规则的 {{domxref("CSSRuleList")}}。
 
 使用 `deleteRule()` 删除规则后，`cssRules` 属性返回的 {{domxref("CSSRuleList")}} 只会包含一个规则。
 
