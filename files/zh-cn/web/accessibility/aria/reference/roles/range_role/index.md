@@ -8,7 +8,7 @@ l10n:
 `range` 抽象角色是一种表示值范围的通用结构角色。
 
 > [!WARNING]
-> `range` 角色是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles)。此处包含它是为了文档完整性。Web 开发者不应使用此角色。
+> `range` 角色是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象角色)。此处包含它是为了文档完整性。Web 开发者不应使用此角色。
 
 ## 描述
 
