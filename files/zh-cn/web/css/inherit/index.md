@@ -8,7 +8,7 @@ l10n:
 **`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
 
 > [!NOTE]
-> 继承始终来自文档树中的父元素，即使父元素不是包含块。
+> 继承始终来自文档树中的父元素，即使父元素不是包含区块。
 
 ## 示例
 
@@ -20,13 +20,13 @@ h2 {
   color: green;
 }
 
-/* 保留 sidebar 内这些元素的样式，使其继承父元素的颜色 */
+/* 保留 sidebar 内二级标题元素的样式，使其继承父元素的颜色 */
 #sidebar h2 {
   color: inherit;
 }
 ```
 
-在这个例子中，sidebar 中的`h2`元素可能有不同的颜色。如果某个`h2`元素的`div`匹配下面的规则，它的颜色会变成蓝色。
+在这个例子中，sidebar 中的 `h2` 元素可能有不同的颜色。如果某个 `h2` 元素的 `div` 匹配下面的规则，它的颜色会变成蓝色。
 
 ```css
 div#current {
@@ -46,7 +46,7 @@ div#current {
 
 - [继承](/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance)
 - 使用 {{cssxref("initial")}} 将属性设置为其初始值。
-- 使用 {{cssxref("revert")}} 将属性重置为 user-agent 样式表规定的值（或用户样式，如果存在）。
+- 使用 {{cssxref("revert")}} 将属性重置为用户代理样式表指定的值（或用户样式，如果存在）。
 - 使用 {{cssxref("revert-layer")}} 将属性重置为之前层叠层中设定的值。
 - 使用 {{cssxref("unset")}} 将属性设置为：若可继承则使用继承值，否则使用初始值。
 - {{cssxref("all")}} 属性允许你一次将所有属性重置为其初始、继承、恢复或未设置状态。
