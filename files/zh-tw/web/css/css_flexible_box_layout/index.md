@@ -67,10 +67,10 @@ body {
 
 ## 指南
 
-- [Flexbox 的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - : Flexbox 功能概覽。
-- [Flexbox 與其他佈局方法的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
-  - : Flexbox 如何與其他佈局方法及其他 CSS 規範相關聯。
+- [彈性盒的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - : 彈性盒功能概覽。
+- [彈性盒與其他佈局方法的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - : 彈性盒如何與其他佈局方法及其他 CSS 規範相關聯。
 - [在彈性容器中對齊項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
   - : 盒對齊屬性如何與 Flexbox 一同運作。
 - [排序彈性項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
