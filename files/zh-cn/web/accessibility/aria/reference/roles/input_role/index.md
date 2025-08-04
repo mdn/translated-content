@@ -5,14 +5,14 @@ l10n:
   sourceCommit: a8b25483994fa47cf949b432ddf34a6bce2ddb2e
 ---
 
-`input` 抽象角色是一种允许用户输入的通用小部件类型。
+`input` 抽象角色是一种允许用户输入的通用的小部件类型。
 
 > [!WARNING]
-> `input` 角色是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles)。此处包含它是为了文档完整性。Web 开发者不应使用此角色。
+> `input` 是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象角色)。此处包含它是为了文档完整性，但 Web 开发者不应使用此角色。
 
 ## 描述
 
-`input` 角色是一个抽象角色。Web 开发者不可以使用此角色。它是提供用户输入的输入小部件的超类，包括 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)、[`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) 和 [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)。对于这三种角色，请考虑分别使用 {{HTMLElement("input")}} 元素的 [`checkbox`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)、[`radio`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio) 和 [`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 类型。
+`input` 角色是一个抽象角色。Web 开发者不可以使用此角色。它是实现用户输入的输入小部件的超类（包括 [`checkbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)、[`radio`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role) 和 [`textbox`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)）。对于这三种角色，请考虑分别使用 {{HTMLElement("input")}} 元素的 [`checkbox`](/zh-CN/docs/Web/HTML/Reference/Elements/input/checkbox)、[`radio`](/zh-CN/docs/Web/HTML/Reference/Elements/input/radio) 和 [`text`](/zh-CN/docs/Web/HTML/Reference/Elements/input/text) 类型。
 
 ## 规范
 
