@@ -352,7 +352,6 @@ function f() {
     return false; // 覆盖前面的“return”
     console.log(4); // 不可达
   }
-  // 现在执行“return false”
   console.log(5); // 不可达
 }
 console.log(f()); // 0、1、3、false
@@ -366,12 +365,11 @@ function f() {
     throw "bogus";
   } catch (e) {
     console.log("捕获内部的“bogus”");
-    // 这个 return 语句会被挂起直到 finally 块结束
+    // throw 已准备抛出异常，但在真正抛出前会先执行 finally
     throw e;
   } finally {
     return false; // 覆盖前面的“throw”
   }
-  // 现在执行“return false”
 }
 
 try {
