@@ -33,7 +33,7 @@ initMouseEvent(type, canBubble, cancelable, view,
   - : 是否可以冒泡。设置 {{domxref("Event.bubbles")}} 的值。
 - `cancelable`
   - : 是否可以阻止事件默认行为。设置 {{domxref("Event.cancelable")}} 的值。
-- _view`
+- `view`
   - : 事件的 AbstractView 对象引用，需要在这里传递 {{domxref("window")}} 对象。设置 {{domxref("UIEvent.view")}} 的值。
 - `detail`
   - : 事件的鼠标点击数量。设置 {{domxref("Event.detail")}} 的值。
