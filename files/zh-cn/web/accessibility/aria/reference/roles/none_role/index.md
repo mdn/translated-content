@@ -7,4 +7,4 @@ l10n:
 
 `none` 角色是 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) 角色的同义词；它们都会将元素的隐式 ARIA 语义从可访问性树中移除。
 
-更多信息请参阅 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) 角色。
+更多信息请参见 [`presentation`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) 角色。
