@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-{{AddonSidebar}}
-
 返回操作系统的当前 UI 的区域设置。这与 {{WebExtAPIRef('i18n.getUILanguage')}} 不同，后者返回的是 Web 浏览器的 UI 的区域设置。
 
 ## 语法
