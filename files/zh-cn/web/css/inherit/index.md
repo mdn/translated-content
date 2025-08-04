@@ -7,6 +7,8 @@ l10n:
 
 **`inherit`** 关键字使得元素获取其父元素的[计算值](/zh-CN/docs/Web/CSS/CSS_cascade/Value_processing#计算值)。它可以应用于任何 CSS 属性，包括 CSS 简写 {{cssxref("all")}}。
 
+对于[继承属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_cascade/Inheritance#继承属性)，inherit 关键字只是增强了属性的默认行为，通常只在覆盖原有的值的时候使用。
+
 > [!NOTE]
 > 继承始终来自文档树中的父元素，即使父元素不是包含区块。
 
@@ -26,13 +28,15 @@ h2 {
 }
 ```
 
-在这个例子中，sidebar 中的 `h2` 元素可能有不同的颜色。如果某个 `h2` 元素的 `div` 匹配下面的规则，它的颜色会变成蓝色。
+在这个例子中，sidebar 中的 `h2` 元素可能有不同的颜色。如果某个 `h2` 元素的 `div` 匹配下面的规则：
 
 ```css
 div#current {
   color: blue;
 }
 ```
+
+那它的颜色会变成蓝色。
 
 ## 规范
 
