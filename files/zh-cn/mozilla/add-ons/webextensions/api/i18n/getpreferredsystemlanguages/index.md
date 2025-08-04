@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 09109b6f9444d22215ba330ec1e64e73980b2a6c
 ---
 
-返回操作系统的首选语言环境。这与浏览器中设置的语言环境不同；若要获取浏览器的语言环境，请使用 {{WebExtAPIRef('i18n.getAcceptLanguages')}}。
+返回操作系统的首选区域设置。这与浏览器中设置的区域设置不同；若要获取浏览器的区域设置，请使用 {{WebExtAPIRef('i18n.getAcceptLanguages')}}。
 
 ## 语法
 
