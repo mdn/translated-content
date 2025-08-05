@@ -1,24 +1,23 @@
 ---
 title: Array.prototype.forEach()
+short-title: forEach()
 slug: Web/JavaScript/Reference/Global_Objects/Array/forEach
 l10n:
-  sourceCommit: 8421c0cd94fa5aa237c833ac6d24885edbc7d721
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`forEach()`** メソッドは、与えられた関数を、配列の各要素に対して一度ずつ実行します。
 
-{{InteractiveExample("JavaScript デモ: Array.forEach()")}}
+{{InteractiveExample("JavaScript デモ: Array.prototype.forEach()")}}
 
 ```js interactive-example
-const array1 = ["a", "b", "c"];
+const array = ["a", "b", "c"];
 
-array1.forEach((element) => console.log(element));
+array.forEach((element) => console.log(element));
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 予想される結果: "a"
+// 予想される結果: "b"
+// 予想される結果: "c"
 ```
 
 ## 構文
@@ -262,6 +261,7 @@ Array.prototype.forEach.call(arrayLike, (x) => console.log(x));
 ## 関連情報
 
 - [`Array.prototype.forEach` のポリフィル (`core-js`)](https://github.com/zloirock/core-js#ecmascript-array)
+- [es-shims による `Array.prototype.forEach` のポリフィル](https://www.npmjs.com/package/array.prototype.foreach)
 - [インデックス付きコレクション](/ja/docs/Web/JavaScript/Guide/Indexed_collections)のガイド
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.find()")}}
