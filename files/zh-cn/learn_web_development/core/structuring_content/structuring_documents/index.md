@@ -122,48 +122,22 @@ HTML 代码中可根据*功能*来为区段添加标记。可使用元素来无�
       <article>
         <h2>文章标题</h2>
 
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Donec a diam
-          lectus. Set sit amet ipsum mauris. Maecenas congue ligula as quam
-          viverra nec consectetur ant hendrerit. Donec et mollis dolor. Praesent
-          et diam eget libero egestas mattis sit amet vitae augue. Nam tincidunt
-          congue enim, ut porta lorem lacinia consectetur.
-        </p>
+        <p>但我得向你解释，所有这些谴责快乐和颂扬痛苦的错误观念是如何产生的。为此，我会向你一五一十地说明这一体系，并阐述伟大的真理探索者、人类幸福的杰出建设者的真实教义。</p>
 
         <section>
           <h3>子章节</h3>
 
-          <p>
-            Donec ut librero sed accu vehicula ultricies a non tortor. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Aenean ut
-            gravida lorem. Ut turpis felis, pulvinar a semper sed, adipiscing id
-            dolor.
-          </p>
+          <p>没有人因为快乐是快乐而拒绝、厌恶或回避快乐本身，而是因为不知道如何理性地追求快乐的人会遭遇极其痛苦的后果。也没有人因痛苦是痛苦而喜欢或追求或渴望获得痛苦本身，但也偶有辛劳和痛苦能带来极大的快乐的情景。</p>
 
-          <p>
-            Pelientesque auctor nisi id magna consequat sagittis. Curabitur
-            dapibus, enim sit amet elit pharetra tincidunt feugiat nist
-            imperdiet. Ut convallis libero in urna ultrices accumsan. Donec sed
-            odio eros.
-          </p>
+          <p>举个微不足道的例子，若不是从中获得好处，我们当中有谁会进行艰苦的体育锻炼？但是，倘若没有恼人的后果，谁有权利指责选择享受快乐的人呢？或者倘若得不到相应快乐，谁能谴责选择避免痛苦的人呢？</p>
         </section>
 
         <section>
           <h3>另外一个子章节</h3>
 
-          <p>
-            Donec viverra mi quis quam pulvinar at malesuada arcu rhoncus. Cum
-            soclis natoque penatibus et manis dis parturient montes, nascetur
-            ridiculus mus. In rutrum accumsan ultricies. Mauris vitae nisi at
-            sem facilisis semper ac in est.
-          </p>
+          <p>另一方面，我们以正义的愤慨谴责并厌恶那些被及时行乐迷惑得萎靡不振，被欲望蒙蔽得看不见大难临头的人；因意志软弱而不能履行职责的人，也应受到同样的谴责，这无异于在辛劳和痛苦前退缩。这些情况非常简单且容易区分。闲暇时，当我们的选择权不受限制，当没有什么可以阻止我们做自己最喜欢的事情时，任何快乐都应该受到欢迎，任何痛苦都应该避免。但是在某些情况下，由于责任或商业义务的要求，不时会有不得不拒绝享乐而接受烦恼的情况。</p>
 
-          <p>
-            Vivamus fermentum semper porta. Nunc diam velit, adipscing ut
-            tristique vitae sagittis vel odio. Maecenas convallis ullamcorper
-            ultricied. Curabitur ornare, ligula semper consectetur sagittis,
-            nisi diam iaculis velit, is fringille sem nunc vet mi.
-          </p>
+          <p>因此，智者在这些事情上总是坚持选择的原则：拒绝快乐以获得更大的快乐，或者忍受痛苦以避免更重的痛苦。</p>
         </section>
       </article>
 
