@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a16fecbf75f71fc11e03ef6cd0b0c34ad6f3d480
 ---
 
-{{AddonSidebar}}
-
 描述用于过滤 URL 的各种条件。如果过滤器的属性中指定的所有条件都与 URL 匹配，则过滤器是匹配的。通常，过滤器以 UrlFilter [数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)的形式提供给 API 方法。例如，[webNavigation](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) 监听器可以添加过滤器：该过滤器是一个具有单个 `url` 属性（UrlFilter 数组）的对象，例如 `{url:[UrlFilter, UrlFilter, …]}`。如果[数组](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)中的任何一个 UrlFilter 匹配，则它被认为是数组的匹配项。实际上，单个过滤器中指定的条件将进行逻辑与运算，而数组中的所有单个过滤器则进行逻辑或运算。
 
 所有的条件都是区分大小写的。

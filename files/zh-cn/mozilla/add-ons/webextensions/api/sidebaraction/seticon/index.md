@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
-{{AddonSidebar}}
-
 设置侧边栏的图标。
 
 你可以通过提供一个图片文件的路径，或一个 {{WebExtAPIRef('sidebarAction.ImageDataType')}} 对象来指定单独一个图标。
