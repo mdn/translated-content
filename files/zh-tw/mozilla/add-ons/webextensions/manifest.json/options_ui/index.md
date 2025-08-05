@@ -3,8 +3,6 @@ title: options_ui
 slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
 ---
 
-{{AddonSidebar}}
-
 <table class="fullwidth-table standard-table">
   <tbody>
     <tr>
