@@ -5,8 +5,6 @@ l10n:
   sourceCommit: bb0286344d812030e05e43214159f0740828190b
 ---
 
-{{AddonSidebar}}
-
 该类型包含所有用于进行以下操作的数据：
 
 - 使用 {{WebExtAPIRef("notifications.create()")}} 创建通知，
