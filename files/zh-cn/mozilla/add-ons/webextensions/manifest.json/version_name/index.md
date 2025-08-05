@@ -9,7 +9,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">类型</th>
-      <td><code>字符串</code></td>
+      <td>字符串（<code>String</code>）</td>
     </tr>
     <tr>
       <th scope="row">是否必须</th>
