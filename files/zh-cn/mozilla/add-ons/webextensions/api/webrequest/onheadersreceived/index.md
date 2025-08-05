@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 当接收到请求的 HTTP 响应标头时触发。使用此事件可以修改 HTTP 响应标头。
 
 要将响应标头与请求数据的其余部分一起传递到监听器中，请向 `extraInfoSpec` 数组中传入 `"responseHeaders"`。

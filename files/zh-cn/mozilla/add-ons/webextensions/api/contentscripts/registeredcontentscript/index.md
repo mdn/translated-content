@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 `RegisteredContentScript` 是通过调用 {{WebExtAPIRef("contentScripts.register()")}} 返回的，表示在该调用中注册的内容脚本。
 
 它定义了一个函数 {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister", "unregister()")}}，可以用于取消注册内容脚本。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 2de85adef3b988bf47549446b2254a7f533b7649
 ---
 
-{{AddonSidebar}}
-
 向输出流写入响应数据。
 
 你只能在 {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} 事件触发后调用此函数。

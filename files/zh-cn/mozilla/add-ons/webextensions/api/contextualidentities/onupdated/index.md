@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当场景身份的属性（例如其名称、图标或颜色）发生变化时触发。场景身份可以由扩展使用 `contextualIdentities` API 更新，也可以由用户直接通过浏览器的用户界面更新。
 
 ## 语法

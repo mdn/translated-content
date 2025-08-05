@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 5ebacde5e3e3500a851a2c49c7d02a7a5c6604ce
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}} 在十分钟时间内可被调用次数的最大值。
 
 这是只读属性。

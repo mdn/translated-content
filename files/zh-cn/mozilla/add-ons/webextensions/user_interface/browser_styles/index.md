@@ -3,8 +3,6 @@ title: Browser styles
 slug: Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles
 ---
 
-{{AddonSidebar}}
-
 扩展程序包含的某些 UI 组件，例如： [popups](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups), [sidebars](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [options pages](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) ，实际上可以用如下方式统一定义：
 
 1. 创建一个 HTML 文件用于描述该 UI 组件的页面结构

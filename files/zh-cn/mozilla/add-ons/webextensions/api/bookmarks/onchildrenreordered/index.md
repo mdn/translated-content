@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当文件夹中的子项由于在 UI 中排序而更改其顺序时触发。这不会由于调用 {{WebExtAPIRef("bookmarks.move()")}} 或在 UI 中进行拖动操作而触发。
 
 ## 语法

@@ -3,8 +3,6 @@ title: storage
 slug: Mozilla/Add-ons/WebExtensions/API/storage
 ---
 
-{{AddonSidebar}}
-
 讓套件可以存讀資料以及監聽儲存項目的更動。
 
 儲存系統基於 [Web Storage API](/zh-TW/docs/Web/API/Web_Storage_API)，有一些不同，包括：

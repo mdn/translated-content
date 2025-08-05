@@ -1,19 +1,21 @@
 ---
-title: CSS 彈性盒子排版
+title: CSS 彈性盒佈局
 slug: Web/CSS/CSS_flexible_box_layout
+l10n:
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**CSS 彈性盒子排版**（CSS Flexible Box Layout）是 [CSS](/zh-TW/docs/Web/CSS) 的模組。它為了最佳化 CSS 盒子模型的使用者介面設計而來、並把項目都配置在一個維度之內。在彈性盒子排版中，彈性容器的子項目們可以伸展到任何方向、並讓他們的尺寸更加「彈性」、或者持續增大，以填補未使用的空間，抑或縮小，以避免父元素溢出。子項目橫向或縱向對齊都很容易操作。
+**CSS 彈性盒佈局**模組定義了一個為使用者介面設計最佳化的 CSS 盒模型，以及在單一維度上佈局項目的方法。在彈性佈局模型中，彈性容器的子元素可以朝任何方向佈局，並且可以「彈性」調整其尺寸，可以擴展以填滿未使用的空間，或縮小以避免溢出父元素。子元素的水平和垂直對齊都可以輕鬆地操作。
 
-## 基本範例
+## 彈性盒佈局實作
 
-下例的容器已經設為 `display: flex`、意味著三個子元素變成了彈性項目（flex item）。`justify-content` 值也設成了 `space-between` 以便將項目均勻地分佈在主軸上。每個物品之間放置相等數量的空間，左右項目與彈性容器（flex container）的邊緣齊平。你可能也發現到各項目在切軸（cross axis）上伸展。那是因為 `align-items` 的值是 `stretch`。項目伸展為彈性容器的高度、令它們看起来都如同最高的項目一般高。
+在下面的範例中，一個容器被設定為 `display: flex`，這意味著三個子項目變成了彈性項目。`justify-content` 的值被設定為 `space-between`，以便在主軸上均勻地分配項目間的空間。每個項目之間都放置了相等的空間，而最左和最右的項目則與彈性容器的邊緣對齊。你也可以看到，由於 `align-items` 的預設值是 `stretch`，項目在交錯軸上被拉伸。項目會拉伸至彈性容器的高度，使它們每一個都看起來和最高的項目一樣高。
 
 ```html live-sample___simple-example
 <div class="box">
   <div>一</div>
   <div>二</div>
-  <div>三<br />具有<br />額外的<br />文字</div>
+  <div>三 <br />有 <br />額外 <br />文字</div>
 </div>
 ```
 
@@ -40,8 +42,11 @@ body {
 
 ## 參考
 
-### CSS 屬性
+### 屬性
 
+- {{cssxref("align-content")}}
+- {{cssxref("align-items")}}
+- {{cssxref("align-self")}}
 - {{cssxref("flex")}}
 - {{cssxref("flex-basis")}}
 - {{cssxref("flex-direction")}}
@@ -49,49 +54,64 @@ body {
 - {{cssxref("flex-grow")}}
 - {{cssxref("flex-shrink")}}
 - {{cssxref("flex-wrap")}}
+- {{cssxref("justify-content")}}
+
+### 術語
+
+- {{Glossary("Flexbox")}}
+- {{Glossary("Flex container", "彈性容器")}}
+- {{Glossary("Flex item", "彈性項目")}}
+- {{Glossary("Main axis", "主軸")}}
+- {{Glossary("Cross axis", "交錯軸")}}
+- {{Glossary("Flex")}}
+
+## 指南
+
+- [彈性盒的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
+  - : 彈性盒功能概覽。
+- [彈性盒與其他佈局方法的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_flexbox_to_other_layout_methods)
+  - : 彈性盒如何與其他佈局方法及其他 CSS 規範相關聯。
+- [在彈性容器中對齊項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_items_in_a_flex_container)
+  - : 盒對齊屬性如何與 Flexbox 一同運作。
+- [排序彈性項目](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Ordering_flex_items)
+  - : 解釋改變項目順序和方向的不同方法，並涵蓋這樣做可能產生的問題。
+- [控制彈性項目沿主軸的比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
+  - : 解釋 flex-grow、flex-shrink 和 flex-basis 屬性。
+- [精通彈性項目的換行](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_wrapping_of_flex_items)
+  - : 如何建立具有多行的彈性容器，並控制這些行中項目的顯示方式。
+- [彈性盒的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_use_cases_of_flexbox)
+  - : 彈性盒典型的常見設計模式。
+- [CSS 佈局：彈性盒](/zh-TW/docs/Learn_web_development/Core/CSS_layout/Flexbox)
+  - : 學習如何使用彈性盒佈局來建立 Web 佈局。
+- [彈性盒中的盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment/Box_alignment_in_flexbox)
+  - : 詳細介紹 [CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)中專屬於彈性盒的功能。
+
+## 相關概念
+
+[CSS display 模組](/zh-TW/docs/Web/CSS/CSS_display)
+
+- {{cssxref("display")}}
 - {{cssxref("order")}}
 
-### 對齊屬性
+[CSS 盒對齊](/zh-TW/docs/Web/CSS/CSS_box_alignment)模組
 
-The properties `align-content`, `align-self`, `align-items` and `justify-content` initially appeared in the Flexbox specification, but are now defined in Box Alignment and the Flexbox spec refers to the Box Alignment Specification for up to date definitions. Additional alignment properties are also defined in Box Alignment.
-
-- {{cssxref("justify-content")}}
 - {{cssxref("align-content")}}
 - {{cssxref("align-items")}}
 - {{cssxref("align-self")}}
+- {{cssxref("column-gap")}}
+- {{cssxref("gap")}}
+- {{cssxref("justify-items")}}
 - {{cssxref("place-content")}}
 - {{cssxref("place-items")}}
 - {{cssxref("row-gap")}}
-- {{cssxref("column-gap")}}
-- {{cssxref("gap")}}
 
-### 短詞
+[CSS 盒尺寸](/zh-TW/docs/Web/CSS/CSS_box_sizing)模組
 
-- {{Glossary("Flexbox", "", 1)}}
-- {{Glossary("Flex Container", "", 1)}}
-- {{Glossary("Flex Item", "", 1)}}
-- {{Glossary("Main Axis", "", 1)}}
-- {{Glossary("Cross Axis", "", 1)}}
-- {{Glossary("Flex", "", 1)}}
-
-## 教學
-
-- [彈性盒子的基本概念](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-  - : 彈性盒子的概述
-- [彈性盒子與其他排版的關係](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Relationship_of_Flexbox_to_Other_Layout_Methods)
-  - : 彈性盒子如何與其他排版和 CSS 規範相關連
-- [在彈性容器內對齊](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Aligning_Items_in_a_Flex_Container)
-  - : 彈性盒子的 Box Alignment 屬性如何做動。
-- [給彈性項目排序](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Ordering_Flex_Items)
-  - : 解釋改變彈性項目順序和方向的不同方法，並講到潛在的問題。
-- [控制彈性項目與主軸的比例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Controlling_ratios_of_flex_items_along_the_main_axis)
-  - : 將解釋 flex-grow、flex-shrink、flex-basis 屬性。
-- [掌握彈性項目 wrapping](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Mastering_Wrapping_of_Flex_Items)
-  - : 如何使用多行建立彈性容器，並控制這些行中項目的顯示。
-- [彈性盒子的典型用例](/zh-TW/docs/Web/CSS/CSS_flexible_box_layout/Typical_Use_Cases_of_Flexbox)
-  - : 彈性盒子常見的設計範式。
-- [彈性盒子的向下相容](/zh-TW/docs/Glossary/Flexbox)
-  - : 彈性盒子的瀏覽器相容性、互操作性問題、支持舊版瀏覽器和規範的版本
+- {{cssxref("aspect-ratio")}}
+- {{cssxref("max-content")}} 值
+- {{cssxref("min-content")}} 值
+- {{cssxref("fit-content")}} 值
+- {{glossary("intrinsic size", "固有尺寸")}}術語
 
 ## 規範
 
@@ -99,7 +119,6 @@ The properties `align-content`, `align-self`, `align-items` and `justify-content
 
 ## 參見
 
-- [Flexbugs](https://github.com/philipwalton/flexbugs)
-  - : a community-curated list of flexbox browser bugs and workarounds
-- [Cross-browser Flexbox mixins](/zh-TW/docs/Glossary/Flexbox)
-  - : This article provides a set of mixins for those who want to create cross-browser flexbox experiences that even work in older browser that don't support the modern flexbox syntax
+- [CSS 網格佈局](/zh-TW/docs/Web/CSS/CSS_grid_layout)模組
+- [CSS 書寫模式](/zh-TW/docs/Web/CSS/CSS_writing_modes)模組
+- [在 CSS display 中使用多關鍵字語法](/zh-TW/docs/Web/CSS/CSS_display/multi-keyword_syntax_of_display)

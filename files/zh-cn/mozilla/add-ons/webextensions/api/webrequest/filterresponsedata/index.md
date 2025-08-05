@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 3994f738ebbe4d25e1e68f70cc45be072a22e0c3
 ---
 
-{{AddonSidebar}}
-
 使用此函数为请求创建一个 {{WebExtAPIRef("webRequest.StreamFilter")}} 对象。流过滤器为 Web 扩展提供了对流的完全控制，能够监控和修改响应。扩展需要负责写入并关闭或断开流，因为默认行为是保持请求打开而没有响应。
 
 你通常在 `webRequest` 事件监听器中调用此函数。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 图片的像素数据。必须是一个 [`ImageData`](/zh-CN/docs/Web/API/ImageData) 对象（例如，来自一个 {{htmlelement("canvas")}} 元素）。
 
 ## 类型

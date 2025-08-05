@@ -10,7 +10,7 @@ l10n:
 
 {{InteractiveExample("HTML デモ: title", "tabbed-shorter")}}
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
   <code>title</code> 属性を使用して、 <code>iframe</code> のコンテンツをスクリーンリーダーに明確に識別します。
 </p>

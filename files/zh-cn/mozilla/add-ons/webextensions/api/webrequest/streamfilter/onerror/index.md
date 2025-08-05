@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 当错误发生时调用的事件处理器。通常发生在传递给 {{WebExtAPIRef("webRequest.filterResponseData()")}} 的请求 ID 无效时。
 
 触发此事件后，{{WebExtAPIRef("webRequest.StreamFilter.error")}} 属性将包含有关错误的更多信息的消息。

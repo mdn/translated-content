@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 `MostVisitedURL` 类型包含两个属性：页面的标题及其 URL。
 
 ## 类型

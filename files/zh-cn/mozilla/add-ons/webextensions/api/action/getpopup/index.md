@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b30a10c08b986ebabd44733fb62f67667350403e
 ---
 
-{{AddonSidebar}}
-
 获取设为该浏览器操作的弹窗的 HTML 文档。
 
 > [!NOTE]

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 布尔值，其中 `true` 表示内容脚本在隐私浏览标签页中运行，并且扩展页面在隐私浏览进程中运行。
 
 ## 语法

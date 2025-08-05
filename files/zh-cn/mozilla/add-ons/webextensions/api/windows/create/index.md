@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 93a294e01930e2cf4616104be17e419719d5ab22
 ---
 
-{{AddonSidebar}}
-
 创建一个新的窗口。
 
 当你创建一个窗口时，你可以：

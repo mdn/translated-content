@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 描述重定向应该如何执行的详细信息，作为 {{WebExtAPIRef("declarativeNetRequest.RuleAction", "RuleAction")}} 的 `redirect` 属性。仅适用于重定向规则。
 
 > [!NOTE]

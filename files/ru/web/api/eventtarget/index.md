@@ -30,6 +30,6 @@ slug: Web/API/EventTarget
 
 ## Смотрите также
 
-- [Event reference](/ru/docs/Web/Events) - доступные события на платформе.
+- [Event reference](/ru/docs/Web/API/Document_Object_Model/Events) - доступные события на платформе.
 - [Event developer guide](/ru/docs/Web/Guide/DOM/Events)
 - {{domxref("Event")}} interface

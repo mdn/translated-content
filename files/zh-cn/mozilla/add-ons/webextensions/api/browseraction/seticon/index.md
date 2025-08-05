@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 53c832f09b5f55b2cbe040907bff8abfb7b57f72
 ---
 
-{{AddonSidebar}}
-
 这是一个设置浏览器操作图标的函数。
 
 你可以指定单个图标，可以是图像文件的路径，也可以是一个 {{WebExtAPIRef('browserAction.ImageDataType')}} 对象。

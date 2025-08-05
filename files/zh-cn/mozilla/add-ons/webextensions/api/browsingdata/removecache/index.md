@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 清除浏览器的缓存。
 
 请注意，虽然此函数可以接受一个 {{WebExtAPIRef("browsingData.RemovalOptions")}} 对象，但该对象将被忽略。在使用此函数时，总是会清除整个缓存。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 此事件在发送任何 HTTP 数据之前触发，但在所有 HTTP 标头可用之后触发。如果你想修改 HTTP 请求标头，这是一个很好的监听位置。
 
 要将请求标头与请求数据的其余部分一起传递到监听器中，请在 `extraInfoSpec` 数组中传递 `"requestHeaders"`。

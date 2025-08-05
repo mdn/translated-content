@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 获取 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 对象数组，其中各对象都对应一个已安装的附加组件。
 
 需要注意，Google Chrome 会获取应用程序和附加组件。在 Chrome 中，你可以使用 {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}} 的 `type` 属性来区分应用程序和附加组件。

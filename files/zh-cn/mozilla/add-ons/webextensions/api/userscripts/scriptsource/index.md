@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 814f49dc14eb8c8a15c6c3bdc6c83d24ed865cdf
 ---
 
-{{AddonSidebar}}
-
 用户脚本的代码或源文件，描述了 {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} 中“js”属性的对象值。
 
 ## 类型

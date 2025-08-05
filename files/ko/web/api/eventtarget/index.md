@@ -9,7 +9,7 @@ slug: Web/API/EventTarget
 
 {{domxref("Element")}}, {{domxref("Document")}}, {{domxref("Window")}}가 가장 흔한 이벤트 대상이며, 이외에도 {{domxref("XMLHttpRequest")}}, {{domxref("AudioNode")}}, {{domxref("AudioContext")}} 등의 객체도 이벤트 대상입니다.
 
-많은 이벤트 대상(요소, 문서, 창, ...)은 `onevent` 속성과 특성을 사용한 [이벤트 처리기](/ko/docs/Web/Events/Event_handlers) 등록도 지원합니다.
+많은 이벤트 대상(요소, 문서, 창, ...)은 `onevent` 속성과 특성을 사용한 [이벤트 처리기](/ko/docs/conflicting/Web/API/Document_Object_Model/Events) 등록도 지원합니다.
 
 {{InheritanceDiagram}}
 

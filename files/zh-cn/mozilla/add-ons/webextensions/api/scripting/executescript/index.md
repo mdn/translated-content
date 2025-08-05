@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 将脚本注入目标上下文。默认情况下脚本将在 `document_idle` 时运行。
 
 > [!NOTE]

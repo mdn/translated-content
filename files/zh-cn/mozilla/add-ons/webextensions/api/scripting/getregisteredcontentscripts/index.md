@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 返回所有使用 {{WebExtAPIRef("scripting.registerContentScripts()")}} 注册的脚本，或使用一个过滤器以获取已注册的一部分脚本。
 
 > [!NOTE]

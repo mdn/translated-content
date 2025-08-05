@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 {{WebExtAPIRef("cookies")}} API 的 `onChanged` 事件在设置或删除扩展程序可以访问的 Cookie 时触发。
 
 > [!NOTE]

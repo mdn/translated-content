@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.update()`** 方法更新书签的标题和 URL，或者更新书签文件夹的名称。
 
 > [!WARNING]

@@ -3,8 +3,6 @@ title: 修改 web 页面
 slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
 ---
 
-{{AddonSidebar}}
-
 浏览器附加组件 ( add-on ) 常被用于修改网页。例如更改页面的样式，隐藏特定的 DOM 节点或把 DOM 节点注入到页面中。
 
 使用 WebExtensions 有两种方式：

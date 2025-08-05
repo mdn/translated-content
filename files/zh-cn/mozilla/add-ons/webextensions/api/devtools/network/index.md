@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 17d79d74849acaa98db0eccbfacc321fd50a7311
 ---
 
-{{AddonSidebar}}
-
 `devtools.network` API 允许开发者工具扩展获取与开发者工具附加的窗口（被检查的窗口）相关的网络请求信息。
 
 像所有 `devtools` API 一样，只有在 [devtools_page](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) manifest.json 键定义的文档中运行的代码，或扩展创建的其他开发者工具文档（如扩展创建的面板托管的文档）才能使用这个 API。有关更多信息，请参见[扩展开发者工具](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)。

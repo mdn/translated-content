@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 01c27dc307a32e92e489349cf0ff67961083c8c7
 ---
 
-{{AddonSidebar}}
-
 > [!NOTE]
 > 如果你对浏览器扩展的基础概念已经熟悉，跳过这个部分去学习[扩展文件是如何组织在一起的](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)。然后，利用[参考资料](/zh-CN/docs/Mozilla/Add-ons/WebExtensions#参考资料)去构建你的扩展。访问[扩展工作坊](https://extensionworkshop.com/?utm_source=developer.mozilla.org&utm_medium=documentation&utm_campaign=your-first-extension)学习关于浏览器扩展工作流，测试，发布的更多内容。
 

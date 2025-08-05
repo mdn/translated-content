@@ -5,8 +5,6 @@ l10n:
   sourceCommit: ad9a263686a44b9149ff50381994fed63562be55
 ---
 
-{{AddonSidebar}}
-
 设置浏览器操作的图标。
 
 > [!NOTE]

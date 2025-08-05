@@ -3,8 +3,6 @@ title: 扩展示例
 slug: Mozilla/Add-ons/WebExtensions/Examples
 ---
 
-{{AddonSidebar}}
-
 为帮助了解如何开发扩展，我们维护了一个包含简单扩展示例的代码仓库在 <https://github.com/mdn/webextensions-examples>。本文描述了仓库代码中所使用的 WebExtension API。
 
 这些示例工作在 Firefox Nightly 下：大部分示例在 Firefox 的早期版本中也能够运行，请检查扩展 manifest.json 文件中的 [strict_min_version](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) 键。

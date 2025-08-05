@@ -3,8 +3,6 @@ title: 你的第二个 WebExtension
 slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
 ---
 
-{{AddonSidebar}}
-
 如果你已经阅读了 [你的第一个扩展](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)，那么你现在已经知道如何写一个扩展了。在这篇文章，我们将写一个稍微复杂一点点的扩展来为你展示更多的一些 API。
 
 这个扩展会添加一个新按钮到 Firefox 的工具栏。在用户点击该按钮时，我们会显示一个弹出窗（popup）来让他们选择一种动物。在他们选择之后，我们会将当前网页替换为他所选动物的图片。

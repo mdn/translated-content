@@ -5,8 +5,6 @@ l10n:
   sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
-{{AddonSidebar}}
-
 当服务器发送 `401` 或 `407` 状态码，以及使用 `Basic` 方案的 `WWW-Authenticate` 标头时触发（即服务器要求客户端提供身份验证凭据，例如用户名和密码）。
 
 监听器可以通过以下四种方式之一响应：

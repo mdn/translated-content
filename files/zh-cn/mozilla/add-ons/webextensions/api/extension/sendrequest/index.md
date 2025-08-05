@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 5f090dea2cacee4ff4f654241f017a9f6649124e
 ---
 
-{{AddonSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 > [!WARNING]
 > 该方法已被弃用。请改用 {{WebExtAPIRef("runtime.sendMessage")}}。

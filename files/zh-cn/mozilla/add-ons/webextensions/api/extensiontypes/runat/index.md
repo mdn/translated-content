@@ -5,8 +5,6 @@ l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
 ---
 
-{{AddonSidebar}}
-
 尽快将 JavaScript、CSS 插入到标签页中的时间点。
 
 ## 类型

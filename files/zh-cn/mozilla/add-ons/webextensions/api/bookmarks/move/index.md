@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 43e3ff826b7b755b05986c99ada75635c01c187c
 ---
 
-{{AddonSidebar}}
-
 **`bookmarks.move()`** 方法将指定的 {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} 移动到书签树中的指定目的地。这允许你将书签移动到新文件夹或文件夹内的位置。
 
 > [!WARNING]
