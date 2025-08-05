@@ -72,7 +72,7 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 - `<shape-radius>`
   - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的半径。有效值包括 {{cssxref("length")}}、{{cssxref("percentage")}}、`closest-side`（默认值）和 `farthest-side`。负值无效。
 
-    `closest-side` 关键字值使用从形状中心到参考框最近边的长度来创建半径长度。`farthest-side` 关键字值使用从形状中心到参考框最远边的长度。
+    `closest-side` 关键字值使用从形状中心到参考盒子最近边的长度来创建半径长度。`farthest-side` 关键字值使用从形状中心到参考盒子最远边的长度。
 
 - `<position>`
   - : 定义[圆形](#圆形语法)或[椭圆形](#椭圆形语法)的中心 [`<position>`](/zh-CN/docs/Web/CSS/position_value)。如果省略，则默认为 `center`。
@@ -91,23 +91,23 @@ clip-path: path("M 50,245 A 160,160 0,0,1 360,120 z");
 inset( <length-percentage>{1,4} [ round <`border-radius`> ]? )
 ```
 
-当提供全部四个参数时，它们分别代表从参考框向内偏移的顶部、右侧、底部和左侧距离，这些距离定义了内嵌矩形的边缘位置。这些参数遵循 {{cssxref("margin")}} 缩写语法的规则，允许你使用一个、两个、三个或四个值来设置所有四个 inset。
+当提供全部四个参数时，它们分别代表从参考盒子向内偏移的顶部、右侧、底部和左侧距离，这些距离定义了内嵌矩形的边缘位置。这些参数遵循 {{cssxref("margin")}} 缩写语法的规则，允许你使用一个、两个、三个或四个值来设置所有四个 inset。
 
 如果某个尺寸的两个 inset 之和超过了该尺寸的 100%，则这两个值会按比例减小，使它们的和等于 100%。例如，值 `inset(90% 10% 60% 10%)` 中，顶部 inset 为 `90%`，底部 inset 为 `60%`。这些值会按比例减小为 `inset(60% 10% 40% 10%)`。像这样的形状，如果不包围任何区域并且没有 {{cssxref("shape-margin")}}，则不会影响换行。
 
 ### 通过距离定义矩形的语法
 
-{{cssxref("basic-shape/rect","rect()")}} 函数使用距参考框顶部和左侧边缘的指定距离来定义一个矩形，同时可选择是否带有圆角。
+{{cssxref("basic-shape/rect","rect()")}} 函数使用距参考盒子顶部和左侧边缘的指定距离来定义一个矩形，同时可选择是否带有圆角。
 
 ```plain
 rect( [ <length-percentage> | auto ]{4} [ round <`border-radius`> ]? )
 ```
 
-在使用 `rect()` 函数时，你无需定义矩形的宽度和高度。相反，你通过指定四个值来创建矩形，其尺寸由参考框的大小和这四个偏移值共同决定。每个值可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或关键字 `auto`。对于顶部和左侧的值，`auto` 关键字被解释为 `0%`；对于底部和右侧的值，`auto` 被解释为 `100%`。
+在使用 `rect()` 函数时，你无需定义矩形的宽度和高度。相反，你通过指定四个值来创建矩形，其尺寸由参考盒子的大小和这四个偏移值共同决定。每个值可以是 {{cssxref("length")}}、{{cssxref("percentage")}} 或关键字 `auto`。对于顶部和左侧的值，`auto` 关键字被解释为 `0%`；对于底部和右侧的值，`auto` 被解释为 `100%`。
 
 ### 具有尺寸的矩形语法
 
-{{cssxref("basic-shape/xywh","xywh()")}} 函数定义了一个矩形，该矩形位于距参考框左边缘（`x`）和上边缘（`y`）的指定距离处，并按照指定的矩形宽度（`w`）和高度（`h`）进行尺寸设置，顺序依此排列，同时可选择是否带有圆角。
+{{cssxref("basic-shape/xywh","xywh()")}} 函数定义了一个矩形，该矩形位于距参考盒子左边缘（`x`）和上边缘（`y`）的指定距离处，并按照指定的矩形宽度（`w`）和高度（`h`）进行尺寸设置，顺序依此排列，同时可选择是否带有圆角。
 
 ```plain
 xywh( <length-percentage>{2} <length-percentage [0,∞]>{2} [ round <`border-radius`> ]? )
@@ -131,7 +131,7 @@ circle( <shape-radius>? [ at <position> ]? )
 ellipse( [ <shape-radius>{2} ]? [ at <position> ]? )
 ```
 
-`<shape-radius>` 参数依次代表椭圆的 x 轴半径 _rx_ 和 y 轴半径 _ry_。这些值可以指定为 {{cssxref("length")}} 或 {{cssxref("percentage")}}。此处的百分比值是根据参考框的使用宽度（对于 rx 值）和使用高度（对于 ry 值）来确定的。如果只提供了一个半径值，则 `ellipse()` 形状函数是无效的。如果没有提供任何值，则默认使用 `50% 50%`。
+`<shape-radius>` 参数依次代表椭圆的 x 轴半径 _rx_ 和 y 轴半径 _ry_。这些值可以指定为 {{cssxref("length")}} 或 {{cssxref("percentage")}}。此处的百分比值是根据参考盒子的使用宽度（对于 rx 值）和使用高度（对于 ry 值）来确定的。如果只提供了一个半径值，则 `ellipse()` 形状函数是无效的。如果没有提供任何值，则默认使用 `50% 50%`。
 
 ### 多边形语法
 
@@ -176,7 +176,7 @@ shape( <fill-rule>? from <coordinate-pair>, <shape-command># )
 在 `<basic-shape>` 函数中的值按照指定方式计算，考虑以下附加因素：
 
 - 对于任何省略值，将使用其默认值。
-- `circle()` 或 `ellipse()` 中的 {{cssxref("position_value", "&lt;position&gt;")}} 值计算为从参考框左上角开始的一对偏移量：第一个偏移量是水平方向的，第二个偏移量是垂直方向的。每个偏移量都被指定为 {{cssxref("length-percentage")}} 值。
+- `circle()` 或 `ellipse()` 中的 {{cssxref("position_value", "&lt;position&gt;")}} 值计算为从参考盒子左上角开始的一对偏移量：第一个偏移量是水平方向的，第二个偏移量是垂直方向的。每个偏移量都被指定为 {{cssxref("length-percentage")}} 值。
 - `inset()` 中的 [`<border-radius>`](/zh-CN/docs/Web/CSS/border-radius) 值被扩展为一个包含八个值的列表，每个值要么是 {{cssxref("length")}}，要么是 {{cssxref("percentage")}}。
 - {{cssxref("basic-shape/inset","inset()")}}、{{cssxref("basic-shape/rect","rect()")}} 和 {{cssxref("basic-shape/xywh","xywh()")}} 函数计算为等效的 `inset()` 函数。
 
