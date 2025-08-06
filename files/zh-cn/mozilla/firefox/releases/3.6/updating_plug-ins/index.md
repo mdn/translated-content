@@ -9,9 +9,9 @@ Gecko 1.9.2 中进行了一些更改，尤其是对插件开发者可能有一�
 
 ## 接口更改
 
-`nsIPluginInstance` 方法 `destroy()` 已被移除，因为它实际上并没有做任何事情。
+`nsIPluginInstance` 的 `destroy()` 方法已被移除，因为它实际上并没有做任何事情。
 
-## Mac OS X 特定更改
+## 特定于 Mac OS X 的更改
 
 ### 不再支持 CFM 插件
 
@@ -23,4 +23,4 @@ Gecko 1.9.2 中进行了一些更改，尤其是对插件开发者可能有一�
 
 ## 参见
 
-- [Firefox 3.6 开发者指南](/zh-CN/docs/Mozilla/Firefox/Releases/3.6)
+- [Firefox 3.6 的开发者说明](/zh-CN/docs/Mozilla/Firefox/Releases/3.6)
