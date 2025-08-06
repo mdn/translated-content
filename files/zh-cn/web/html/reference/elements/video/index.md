@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 829db137a01feb14af7beaec178a3ea0118b4777
 ---
 
-{{HTMLSidebar}}
-
 **`<video>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于在文档中嵌入媒体播放器，用于支持文档内的视频播放。你也可以将 `<video>` 标签用于音频内容，但是 {{HTMLElement("audio")}} 元素可能在用户体验上更合适。
 
 {{InteractiveExample("HTML Demo: &lt;video&gt;", "tabbed-standard")}}
