@@ -16,4 +16,4 @@ Firefox 3 中的模板得到了显著改进。关键改进是允许使用[自定
 
 ### 参见
 
-- [面向开发者的 Firefox 3](/zh-CN/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 3 的开发者说明](/zh-CN/docs/Mozilla/Firefox/Releases/3)
