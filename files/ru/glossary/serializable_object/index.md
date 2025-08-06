@@ -1,8 +1,6 @@
 ---
 title: Сериализуемый объект
 slug: Glossary/Serializable_object
-page-type: glossary-definition
-sidebar: glossarysidebar
 ---
 
 **Сериализуемый (Serializable) объект** - это объект, который может быть сериализован, а затем десериализован в любой среде JavaScript ("realm").
