@@ -27,4 +27,4 @@ l10n:
 
 ## jar 协议的安全性改进
 
-为了纠正使用 `jar:` 协议时可能出现的安全问题，现在需要以 MIME 类型 `application/java-archive` 提供 JAR 文件。有关详细信息，请参阅 [安全与 jar 协议](https://web.archive.org/web/20180706040540/https://developer.mozilla.org/en-US/docs/Mozilla/Security/Security_and_the_jar_protocol)。
+为了纠正使用 `jar:` 协议时可能出现的安全问题，现在需要以 MIME 类型 `application/java-archive` 提供 JAR 文件。有关详细信息，请参见[安全与 jar 协议](https://web.archive.org/web/20180706040540/https://developer.mozilla.org/en-US/docs/Mozilla/Security/Security_and_the_jar_protocol)。
