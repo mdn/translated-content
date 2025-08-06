@@ -15,7 +15,7 @@ l10n:
 
 ## 私人浏览模式
 
-Firefox 3.5 实现了私人浏览模式，该模式下 cookies、历史记录和其他可能涉及隐私的信息不会永久保存在用户的计算机上。扩展程序和其他附加组件可以支持私人浏览功能，在私人浏览模式启用时检测到并避免保存隐私信息。有关详细信息，参见[支持隐私浏览模式](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)。
+Firefox 3.5 实现了隐私浏览模式。在该模式下，cookie、历史记录和其他可能涉及隐私的信息都不会永久保存在用户的计算机上。扩展和其他附加组件可以支持隐私浏览功能，在隐私浏览模式启用时检测到并避免保存隐私信息。有关详细信息，参见[支持隐私浏览模式](https://web.archive.org/web/20210620014429/https://developer.mozilla.org/en-US/docs/Archive/Mozilla/Supporting_private_browsing_mode)。
 
 插件可以通过使用 [`NPN_GetValue()`](https://web.archive.org/web/20210308202622/https://developer.mozilla.org/en-US/docs/Archive/Plugins/Reference/NPN_GetValue) 函数检查当前 `NPNVprivateModeBool` 变量的值，来检测隐私浏览模式是否正在生效。
 
@@ -29,4 +29,4 @@ Firefox 3.5 实现了私人浏览模式，该模式下 cookies、历史记录和
 
 ## 参见
 
-- [适用于开发者的 Firefox 3.5](/zh-CN/docs/Mozilla/Firefox/Releases/3.5)
+- [Firefox 3.5 的开发者说明](/zh-CN/docs/Mozilla/Firefox/Releases/3.5)
