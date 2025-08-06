@@ -46,9 +46,7 @@ Web 上常见的模式是使用 {{HTMLElement("button")}} 元素来控制页面�
 ### 创建声明式弹出框
 
 ```html
-<button commandfor="mypopover" command="toggle-popover">
-  切换弹出框
-</button>
+<button commandfor="mypopover" command="toggle-popover">切换弹出框</button>
 <div id="mypopover" popover>
   <button commandfor="mypopover" command="hide-popover">关闭</button>
   弹出框内容
