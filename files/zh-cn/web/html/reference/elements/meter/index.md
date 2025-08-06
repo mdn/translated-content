@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 9c09b183a5ce844a75c2f22e909d03f71ca329fc
 ---
 
-{{HTMLSidebar}}
-
 **`<meter>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示在已知范围内的标量值或分数值。
 
 {{InteractiveExample("HTML Demo: &lt;meter&gt;", "tabbed-shorter")}}

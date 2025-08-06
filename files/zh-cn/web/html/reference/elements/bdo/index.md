@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<bdo>`** 元素覆盖了当前文本的方向，使文本以不同的方向渲染出来。
 
 {{InteractiveExample("HTML Demo: &lt;bdo&gt;", "tabbed-standard")}}

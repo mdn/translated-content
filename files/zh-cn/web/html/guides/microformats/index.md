@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
 ---
 
-{{HTMLSidebar}}
-
 [_微格式_](https://microformats.org/)（microformat）是一种用于在 HTML 中嵌入语义和结构化数据的标准，它为社交网络应用程序、搜索引擎、聚合器和其他工具提供了一个 API。这些最小的 HTML 模式用于标记从基本到特定领域的信息实体，例如人物、组织、事件和地点。
 
 - 要创建一个微格式对象，需要在 class 属性中使用 h-\* 类名。

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: f98675af9d0a80f33d7875c48cfdb41f71ed1de9
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) 元素 **`<iframe>`** 表示嵌套的{{Glossary("browsing context", "浏览上下文")}}。它能够将另一个 HTML 页面嵌入到当前页面中。
 
 {{InteractiveExample("HTML Demo: &lt;iframe&gt;", "tabbed-standard")}}

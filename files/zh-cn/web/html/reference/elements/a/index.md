@@ -3,8 +3,6 @@ title: <a>：锚元素
 slug: Web/HTML/Reference/Elements/a
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<a>`** 元素（或称*锚*元素）可以通过[它的 `href` 属性](#href)创建通向其他网页、文件、电子邮件地址、同一页面内的位置或任何其他 URL 的超链接。
 
 `<a>` 中的内容*应该*指明链接的目标。如果存在 `href` 属性，当 `<a>` 元素聚焦时按下回车键就会激活它。

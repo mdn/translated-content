@@ -3,8 +3,6 @@ title: 在图像上层添加点击映射
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
 ---
 
-{{HTMLSidebar}}
-
 现在我们将学习如何设置图像映射，先讨论他的缺点。
 
 <table>
