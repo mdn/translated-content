@@ -254,7 +254,7 @@ body {
 2. 指定された "food" ラベルと意味的に関連付けます。
 3. リスト内で、選択肢を "mains" と "snacks" の 2 つのサブグループに分割します。
 
-```html live-sample___forms-buttons-4
+```html-nolint live-sample___forms-buttons-4
 <form>
   <ul>
     <li>
