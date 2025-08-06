@@ -25,4 +25,4 @@ l10n:
 
 ### 参见
 
-- [适用于开发者的 Firefox 3](/zh-CN/docs/Mozilla/Firefox/Releases/3)
+- [Firefox 3 的开发者说明](/zh-CN/docs/Mozilla/Firefox/Releases/3)
