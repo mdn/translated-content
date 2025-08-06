@@ -28,7 +28,7 @@ initMouseEvent(type, canBubble, cancelable, view,
 ### 参数
 
 - `type`
-  - : 设置事件类型{{domxref("Event.type", "type")}} 的字符串，包含以下几种鼠标事件：`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`。
+  - : 设置事件类型（{{domxref("Event.type", "type")}}）的字符串，包含以下几种鼠标事件：`click`、`mousedown`、`mouseup`、`mouseover`、`mousemove`、`mouseout`。
 - `canBubble`
   - : 是否可以冒泡。设置 {{domxref("Event.bubbles")}} 的值。
 - `cancelable`
@@ -36,7 +36,7 @@ initMouseEvent(type, canBubble, cancelable, view,
 - `view`
   - : 事件的 AbstractView 对象引用，需要在这里传递 {{domxref("window")}} 对象。设置 {{domxref("UIEvent.view")}} 的值。
 - `detail`
-  - : 事件的鼠标点击数量。设置 {{domxref("Event.detail")}} 的值。
+  - : 事件的鼠标点击数量。设置 {{domxref("UIEvent.detail")}} 的值。
 - `screenX`
   - : 事件的屏幕 x 坐标。设置 {{domxref("MouseEvent.screenX")}} 的值。
 - `screenY`
@@ -100,5 +100,5 @@ document.body.dispatchEvent(event);
 
 ## 参见
 
-- {{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} 构造器，更标准的创建 {{domxref("MouseEvent")}} 对象方法。
+- {{domxref("MouseEvent.MouseEvent()","MouseEvent()")}} 构造函数，更标准的创建 {{domxref("MouseEvent")}} 对象方法。
 - {{domxref("Event.initEvent()")}} 可以简单达到相同目的的方法。它已过时，不应再使用。

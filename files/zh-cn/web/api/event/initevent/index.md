@@ -25,9 +25,9 @@ initEvent(type, bubbles, cancelable)
 - `type`
   - : 描述事件类型的字符串。
 - `bubbles`
-  - : 一个 {{jsxref("Boolean")}} 值，决定是否事件是否应该通过事件链向上冒泡。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。
+  - : 决定是否事件是否应该通过事件链向上冒泡的布尔值。一旦设置了这个值，只读属性{{ domxref("Event.bubbles") }}也会获取相应的值。
 - `cancelable`
-  - : 一个 {{jsxref("Boolean")}} 值，决定该事件的默认动作是否可以被取消。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
+  - : 决定该事件的默认动作是否可以被取消的布尔值。一旦设置了这个值，只读属性 {{ domxref("Event.cancelable") }} 也会获取相应的值。
 
 ## 示例
 

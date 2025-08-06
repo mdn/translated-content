@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("DOM")}}{{Deprecated_header}}{{AvailableInWorkers}}
 
-**`CustomEvent.initCustomEvent()`** 方法初始化了一个 {{domxref("CustomEvent")}} 对象。如果该事件已经被分发出去，则此方法什么都不做。
+**`CustomEvent.initCustomEvent()`** 方法用于初始化 {{domxref("CustomEvent")}} 对象。如果该事件已经被分发出去，则此方法什么都不做。
 
 这类对象一定是由 {{ domxref("Document.createEvent()") }} 方法创建的。事件派发之前必须调用 {{ domxref("EventTarget.dispatchEvent()") }} 方法。一旦已经派发，则无法被重新设置。
 
@@ -27,9 +27,9 @@ initCustomEvent(type, canBubble, cancelable, detail)
 - `type`
   - : 包含事件名称的字符串。
 - `canBubble`
-  - : {{jsxref("Boolean")}} 值，表示事件是否沿着 DOM 向上冒泡。
+  - : 表示事件是否沿着 DOM 向上冒泡的布尔值。
 - `cancelable`
-  - : {{jsxref("Boolean")}} 值，表示事件是否可取消。
+  - : 表示事件是否可取消的布尔值。
 - `detail`
   - : 处理器可通过 {{domxref("CustomEvent.detail")}} 属性获取的任何数据。
 

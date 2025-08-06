@@ -2,7 +2,7 @@
 title: <xmp>
 slug: Web/HTML/Reference/Elements/xmp
 l10n:
-  sourceCommit: 91ce00bce8168b0cbd35773f33ba660eba9d5180
+  sourceCommit: 0754cd805a8e010d2e3a2a065f634a3bcf358252
 ---
 
 {{deprecated_header}}
