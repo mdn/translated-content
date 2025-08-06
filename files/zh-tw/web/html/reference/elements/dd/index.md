@@ -3,8 +3,6 @@ title: <dd>：描述詳細資料元素
 slug: Web/HTML/Reference/Elements/dd
 ---
 
-{{HTMLSidebar}}
-
 **`<dd>`** [HTML](/zh-TW/docs/Web/HTML) 元素提供描述、定義或前一個術語（{{HTMLElement("dt")}}）在描述清單（{{HTMLElement("dl")}}）中的值。
 
 {{InteractiveExample("HTML Demo: &lt;dd&gt;", "tabbed-standard")}}

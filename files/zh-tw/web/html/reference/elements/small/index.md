@@ -3,8 +3,6 @@ title: <small>：備註元素
 slug: Web/HTML/Reference/Elements/small
 ---
 
-{{HTMLSidebar}}
-
 **`<small>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示側注和小字印刷，如版權和法律文本，獨立於其風格化呈現。默認情況下，它以比其中的文本小一號的字體大小呈現，例如從 `small` 到 `x-small`。
 
 {{InteractiveExample("HTML Demo: &lt;small&gt;", "tabbed-shorter")}}

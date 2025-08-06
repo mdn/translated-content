@@ -3,8 +3,6 @@ title: <section>
 slug: Web/HTML/Reference/Elements/section
 ---
 
-{{HTMLSidebar}}
-
 **HTML \<section\> 元素**表示 HTML 文档中一个通用独立章节，它没有更具体的语义元素来表示。一般来说会包含一个标题。
 
 {{InteractiveExample("HTML Demo: &lt;section&gt;", "tabbed-standard")}}

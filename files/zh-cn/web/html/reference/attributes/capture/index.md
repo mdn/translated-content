@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 942a529383ee7ee3996fb234187641c08935f3ff
 ---
 
-{{HTMLSidebar}}
-
 **`capture`** 属性可选地指定应捕获一个新文件，以及应使用哪个设备捕获 [`accept`](accept) 属性所定义类型的新媒体。
 
 可用值包括 `user` 和 `environment`，该属性支持 {{HTMLElement("input/file", "file")}} 输入类型。

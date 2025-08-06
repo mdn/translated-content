@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 77a67438592286ded44a82bfe6b8a64e8cdf44a9
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<sup>` 元素**定义仅出于排版目的而显示为上标的行内文本。上标通常以较小的文本在高出基线的位置呈现。
 
 {{InteractiveExample("HTML Demo: &lt;sup&gt;", "tabbed-shorter")}}

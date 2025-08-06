@@ -3,8 +3,6 @@ title: title
 slug: Web/HTML/Reference/Global_attributes/title
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes) **`title`** 包含代表与它所属的元素有关的咨询信息的文本。
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}

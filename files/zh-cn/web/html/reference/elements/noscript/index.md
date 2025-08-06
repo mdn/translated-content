@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
 ---
 
-{{HTMLSidebar}}
-
 **`<noscript>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了在页面上的脚本类型不支持或浏览器当前关闭脚本时插入的 HTML 部分。
 
 ## 属性

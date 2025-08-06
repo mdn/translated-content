@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 **`<article>`** [HTML](/zh-CN/docs/Web/HTML) 元素表示文档、页面、应用或网站中具有独立分发或复用意义的自包含内容块，例如论坛帖子、杂志或报纸文章、博客条目、产品卡片、用户评论、交互式组件等独立内容项。
 
 {{InteractiveExample("HTML Demo: &lt;article&gt;", "tabbed-standard")}}

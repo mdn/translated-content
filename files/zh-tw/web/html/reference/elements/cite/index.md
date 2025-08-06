@@ -3,8 +3,6 @@ title: <cite>：引用標籤元素
 slug: Web/HTML/Reference/Elements/cite
 ---
 
-{{HTMLSidebar}}
-
 **`<cite>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於標記被引用的創意作品的標題。引用可能根據與引用後設資料相關的上下文適當的慣例而以縮寫形式表示。
 
 {{InteractiveExample("HTML Demo: &lt;cite&gt;", "tabbed-standard")}}

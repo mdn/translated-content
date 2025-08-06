@@ -72,5 +72,3 @@ slug: Web/HTML/Reference/Elements/embed
 ## 参见
 
 - 其他用于嵌入各种类型内容的元素还包括：{{HTMLElement("audio")}}, {{HTMLElement("canvas")}}, {{HTMLElement("iframe")}}, {{HTMLElement("img")}}, {{MathMLElement("math")}}, {{HTMLElement("object")}}, {{SVGElement("svg")}} 和 {{HTMLElement("video")}}.
-
-{{ HTMLSidebar }}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}
-
 **`theme-color`** 是 {{htmlelement("meta")}} 元素的 [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#name) 属性中用于表示页面或其周边界面建议配色的一个值，供用户代理（如浏览器）参考使用。如果使用该值，必须通过 [`content`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#content) 属性提供一个合法的 CSS {{cssxref("&lt;color&gt;")}} 颜色值。
 
 ## 示例

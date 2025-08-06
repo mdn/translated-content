@@ -3,8 +3,6 @@ title: <datalist>：HTML 資料清單元素
 slug: Web/HTML/Reference/Elements/datalist
 ---
 
-{{HTMLSidebar}}
-
 **`<datalist>`** [HTML](/zh-TW/docs/Web/HTML) 元素包含一組 {{HTMLElement("option")}} 元素，這些元素代表其他控制項中可選擇的允許或推薦選項。
 
 {{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}

@@ -3,8 +3,6 @@ title: <a>：超連結元素
 slug: Web/HTML/Reference/Elements/a
 ---
 
-{{HTMLSidebar}}
-
 **`<a>`** [HTML](/zh-TW/docs/Web/HTML) 元素（或稱*錨點*元素），具有[其 `href` 屬性](#href)，用於創建指向網頁、文件、電子郵件地址、同一頁面中的位置或任何其他 URL 可定位的東西。
 
 每個 `<a>` 元素內的內容*應該*指示連結的目的地。如果存在 `href` 屬性，則在焦點位於 `<a>` 元素上時按下 Enter 鍵將激活它。

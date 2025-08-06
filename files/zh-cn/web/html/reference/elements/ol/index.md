@@ -3,8 +3,6 @@ title: <ol>
 slug: Web/HTML/Reference/Elements/ol
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<ol>` 元素**表示有序列表，通常渲染为一个带编号的列表。
 
 {{InteractiveExample("HTML Demo: &lt;ol&gt;", "tabbed-shorter")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) **`title`** 包含表示與其所屬元素相關的建議資訊的文字。
 
 {{InteractiveExample("HTML Demo: title", "tabbed-shorter")}}

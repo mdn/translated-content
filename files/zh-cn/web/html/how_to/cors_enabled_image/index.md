@@ -3,8 +3,6 @@ title: 允许图片和 canvas 跨源使用
 slug: Web/HTML/How_to/CORS_enabled_image
 ---
 
-{{HTMLSidebar}}
-
 HTML 规范为图片提供了 [`crossorigin`](/zh-CN/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性，结合合适的 {{Glossary("CORS")}} 响应标头，就可以实现在 {{HTMLElement("canvas")}} 中使用外部域加载的 {{ HTMLElement("img") }} 元素，就像在当前源加载一样。
 
 查看 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)来了解更多 `crossorigin` 属性的用法。

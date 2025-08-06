@@ -3,8 +3,6 @@ title: <address>：聯絡地址元素
 slug: Web/HTML/Reference/Elements/address
 ---
 
-{{HTMLSidebar}}
-
 **`<address>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示所包含的 HTML 提供了一個人、一組人或一個組織的聯絡資訊。
 
 {{InteractiveExample("HTML Demo: &lt;address&gt;", "tabbed-standard")}}

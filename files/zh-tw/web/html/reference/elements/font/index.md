@@ -3,7 +3,7 @@ title: <font>
 slug: Web/HTML/Reference/Elements/font
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<font>`** [HTML](/zh-TW/docs/Web/HTML) 元素用於定義其內容的字型大小、顏色和字型。
 

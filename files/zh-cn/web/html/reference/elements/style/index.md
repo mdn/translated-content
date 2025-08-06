@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 176953b8260e0dd4328a7e788e8179accbafb8e1
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) 的 **`<style>`** 元素包含文档的样式信息或文档的部分内容。其中的 CSS 会应用于包含 `<style>` 元素的文档内容。
 
 {{InteractiveExample("HTML Demo: &lt;style&gt;", "tabbed-standard")}}

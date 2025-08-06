@@ -3,8 +3,6 @@ title: <form>：表單元素
 slug: Web/HTML/Reference/Elements/form
 ---
 
-{{HTMLSidebar}}
-
 **`<form>`** [HTML](/zh-TW/docs/Web/HTML) 元素代表了一個包含用於提交信息的交互式控制項的文件章節。
 
 {{InteractiveExample("HTML Demo: &lt;form&gt;", "tabbed-standard")}}

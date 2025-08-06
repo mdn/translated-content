@@ -3,8 +3,6 @@ title: <input type="url">
 slug: Web/HTML/Reference/Elements/input/url
 ---
 
-{{HTMLSidebar}}
-
 **`url`** 类型的 {{HTMLElement("input")}} 元素用来让用户输入和编辑 URL。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;url&quot;&gt;", "tabbed-shorter")}}

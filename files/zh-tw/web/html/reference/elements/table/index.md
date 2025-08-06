@@ -3,8 +3,6 @@ title: <table>（表格元素）
 slug: Web/HTML/Reference/Elements/table
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<table>` 元件**代表表格數據 ── 換句話說，就是透過二維資料表來呈現資訊。
 
 {{InteractiveExample("HTML Demo: &lt;table&gt;", "tabbed-standard")}}

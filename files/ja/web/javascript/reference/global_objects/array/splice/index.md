@@ -138,7 +138,7 @@ const removed = myFish.splice(2, 1, "trumpet");
 // removed は ["drum"]
 ```
 
-### 0 の位置から 2 つ取り除き、そこへ "parrot" と "anemore" と "blue" を挿入
+### 0 の位置から 2 つ取り除き、そこへ "parrot" と "anemone" と "blue" を挿入
 
 ```js
 const myFish = ["angel", "clown", "trumpet", "sturgeon"];

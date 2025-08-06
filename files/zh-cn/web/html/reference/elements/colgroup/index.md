@@ -5,8 +5,6 @@ l10n:
   sourceCommit: aa55b6b6768e0250b52703f26d44ea3291f725f3
 ---
 
-{{HTMLSidebar}}
-
 **`<colgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素定义了表格中的一组列。
 
 {{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}

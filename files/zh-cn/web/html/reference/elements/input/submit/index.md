@@ -3,8 +3,6 @@ title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 ---
 
-{{HTMLSidebar("Input_types")}}
-
 **`submit`** 类型的 {{HTMLElement("input")}} 元素会渲染为按钮。当 {{domxref("Element/click_event", "click")}} 事件发生时（用户点击按钮是一个典型的点击事件）， {{Glossary("user agent", "用户代理")}} 尝试提交表单到服务器。
 
 <table class="properties">

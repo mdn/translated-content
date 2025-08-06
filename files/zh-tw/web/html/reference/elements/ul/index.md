@@ -3,8 +3,6 @@ title: <ul>：無序清單元素
 slug: Web/HTML/Reference/Elements/ul
 ---
 
-{{HTMLSidebar}}
-
 **`<ul>`** [HTML](/zh-TW/docs/Web/HTML) 元素表示項目的無序清單，通常呈現為項目符號清單。
 
 {{InteractiveExample("HTML Demo: &lt;ul&gt;", "tabbed-standard")}}

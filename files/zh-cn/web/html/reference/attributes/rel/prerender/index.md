@@ -5,7 +5,7 @@ l10n:
   sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}{{Non-standard_header}}
+{{Deprecated_Header}}{{Non-standard_header}}
 
 **`prerender`** 关键字（{{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性的一个关键字）用于提示浏览器用户可能在下一次导航中需要该目标资源，从而可以提前获取并处理该资源，例如预取其子资源或在后台进行离屏渲染，以提升用户体验。
 

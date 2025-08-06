@@ -5,8 +5,6 @@ l10n:
   sourceCommit: fbee1ad6d6add1319ce3e8e977033385a915c635
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`class`** [全域屬性](/zh-TW/docs/Web/HTML/Global_attributes)是一個以 [ASCII 空白字元](/zh-TW/docs/Glossary/Whitespace#在_html_中)分隔的元素類別列表。
 
 {{InteractiveExample("HTML Demo: class", "tabbed-standard")}}

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a78cecea4f3b1a7f35564a547052e163911ac491
 ---
 
-{{HTMLSidebar}}
-
 **`size`** 属性定义了 {{htmlelement('input')}} 元素的宽度和 {{htmlelement('select')}} 元素的高度。对于 `input`，如果 `type` 属性是 {{HTMLElement("input/text", "text")}} 或 {{HTMLElement("input/password", "password")}} ，那么它就是字符数。字符数必须是 0 或更大的整数。如果没有指定 `size`，或指定的值无效，则不会声明输入的大小，表单控件将采用基于用户代理的默认宽度。如果 CSS 目标元素的属性会影响宽度，则 CSS 优先。
 
 `size` 属性对约束验证没有影响。

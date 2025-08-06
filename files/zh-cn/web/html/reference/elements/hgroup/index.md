@@ -3,8 +3,6 @@ title: <hgroup>
 slug: Web/HTML/Reference/Elements/hgroup
 ---
 
-{{HTMLSidebar}}
-
 **`<hgroup>`** [HTML](/zh-CN/docs/Web/HTML) 元素代表文档标题和与标题相关联的内容，它将一个 [`<h1>–<h6>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 元素与一个或多个 [`<p>`](/zh-CN/docs/Web/HTML/Reference/Elements/p) 元素组合在一起。
 
 {{InteractiveExample("HTML Demo: &lt;hgroup&gt;", "tabbed-standard")}}

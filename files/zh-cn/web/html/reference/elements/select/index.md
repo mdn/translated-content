@@ -3,8 +3,6 @@ title: <select>
 slug: Web/HTML/Reference/Elements/select
 ---
 
-{{HTMLSidebar}}
-
 **HTML `<select>` 元素**表示一个提供选项菜单的控件：
 
 {{InteractiveExample("HTML Demo: &lt;select&gt;", "tabbed-standard")}}

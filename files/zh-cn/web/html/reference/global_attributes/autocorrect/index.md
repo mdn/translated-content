@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7877e93317ff8ec7ec660eddcb4b77ae996afaa1
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`autocorrect`** [全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)是一种[枚举属性](/zh-CN/docs/Glossary/Enumerated)，控制是否针对拼写和/或标点符号错误启用可编辑文本的自动更正特性。
 
 具体的自动更正行为，包括替换哪些词语，取决于用户代理和底层设备提供的服务。例如，在 macOS 上，用户代理可能依赖于[注册替换文本和标点符号](https://support.apple.com/zh-cn/guide/mac-help/mh35735/mac)。其他设备和浏览器可能使用不同的方法。

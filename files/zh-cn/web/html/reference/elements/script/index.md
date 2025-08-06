@@ -3,8 +3,6 @@ title: <script>：脚本元素
 slug: Web/HTML/Reference/Elements/script
 ---
 
-{{HTMLSidebar}}
-
 [HTML](/zh-CN/docs/Web/HTML) **`<script>`** 元素用于嵌入可执行代码或数据，这通常用作嵌入或者引用 JavaScript 代码。`<script>` 元素也能在其他语言中使用，比如 [WebGL](/zh-CN/docs/Web/API/WebGL_API) 的 GLSL 着色器语言和 [JSON](/zh-CN/docs/Glossary/JSON)。
 
 <table class="properties">

@@ -3,7 +3,7 @@ title: <font>
 slug: Web/HTML/Reference/Elements/font
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 ## 概要
 

@@ -165,5 +165,3 @@ See {{ HTMLElement("table") }} for examples on `<thead>`.
 - CSS properties and pseudo-classes that may be specially useful to style the `<thead>` element:
   - the {{ cssxref(":nth-child") }} pseudo-class to set the alignment on the cells of the column;
   - the {{ cssxref("text-align") }} property to align all cells content on the same character, like '.'.<
-
-{{HTMLSidebar}}

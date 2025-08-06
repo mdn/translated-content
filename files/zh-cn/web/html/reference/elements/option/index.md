@@ -3,8 +3,6 @@ title: <option>
 slug: Web/HTML/Reference/Elements/option
 ---
 
-{{HTMLSidebar}}
-
 **HTML 元素 _`<option>`_** 用于定义在 {{HTMLElement("select")}}, {{HTMLElement("optgroup")}} 或 {{HTMLElement("datalist")}} 元素中包含的项。`<option>` 可以在弹出窗口和 HTML 文档中的其他项目列表中表示菜单项。
 
 {{InteractiveExample("HTML Demo: &lt;option&gt;", "tabbed-standard")}}

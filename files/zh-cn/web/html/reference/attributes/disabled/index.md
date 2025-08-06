@@ -3,8 +3,6 @@ title: HTML 属性：disabled
 slug: Web/HTML/Reference/Attributes/disabled
 ---
 
-{{HTMLSidebar}}
-
 当布尔属性 **`disabled`** 存在时，元素将不可变、不能聚焦或与表单一同提交。用户将不能在表单控件本身或其子控件进行编辑或聚焦操作。
 
 {{InteractiveExample("HTML Demo: disabled", "tabbed-standard")}}

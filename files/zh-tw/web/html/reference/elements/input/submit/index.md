@@ -3,8 +3,6 @@ title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
 ---
 
-{{HTMLSidebar}}
-
 {{HTMLElement("input")}} 元素的 **`"submit"`** 類型會被視為提交按鈕（submit button）——點選的話就能把表單提交到伺服器。
 
 | **[值](#值)**      | 用作按鈕 label 的 {{domxref("DOMString")}}                                                                                     |

@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 922c2b0f37e2f13887c50efe47e62bc23d94c3aa
 ---
 
-{{HTMLSidebar}}
-
 {{HTMLElement("link")}} 元素的 [`rel`](/zh-CN/docs/Web/HTML/Reference/Elements/link#rel) 属性的 **`preconnect`** 关键字是对浏览器的一种提示，即用户很可能需要来自目标来源的资源，因此浏览器很可能通过抢先启动与该源的连接来改善用户体验。通过抢先执行部分或全部握手（HTTP 为 DNS+TCP，HTTPS 为 DNS+TCP+TLS），预连接可加快未来从给定源加载的速度。
 
 `<link rel="preconnect">` 将为未来的跨源 HTTP 请求、导航或子资源带来好处。它对同源请求没有好处，因为连接已经打开。

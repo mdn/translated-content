@@ -3,8 +3,6 @@ title: <colgroup>：表格欄群組元素
 slug: Web/HTML/Reference/Elements/colgroup
 ---
 
-{{HTMLSidebar}}
-
 **`<colgroup>`** [HTML](/zh-TW/docs/Web/HTML) 中定義表格內的一組欄的元素。
 
 {{InteractiveExample("HTML Demo: &lt;colgroup&gt;", "tabbed-taller")}}

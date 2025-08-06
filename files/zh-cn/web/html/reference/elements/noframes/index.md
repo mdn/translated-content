@@ -3,7 +3,7 @@ title: <noframes>
 slug: Web/HTML/Reference/Elements/noframes
 ---
 
-{{HTMLSidebar}}{{deprecated_header}}
+{{deprecated_header}}
 
 ## 概述
 
@@ -36,5 +36,3 @@ slug: Web/HTML/Reference/Elements/noframes
 
 - {{HTMLElement("frameset")}}
 - {{HTMLElement("frame")}}
-
-{{HTMLSidebar}}

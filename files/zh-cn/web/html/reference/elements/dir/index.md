@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 1f1418448e3b7f1d987b16db886008e5c5cc7fa1
 ---
 
-{{HTMLSidebar}}{{Deprecated_Header}}
+{{Deprecated_Header}}
 
 **`<dir>`** [HTML](/zh-CN/docs/Web/HTML) 元素用于作为包含文件或文件夹目录的容器，可能由{{Glossary("user agent", "用户代理")}}应用样式和图标。不应使用此过时元素；相反，对于包括文件列表在内的列表应使用 {{HTMLElement("ul")}} 元素。
 

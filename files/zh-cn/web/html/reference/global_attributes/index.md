@@ -3,8 +3,6 @@ title: 全局属性
 slug: Web/HTML/Reference/Global_attributes
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **全局属性**是所有 HTML 元素共有的属性；它们可以用于所有元素，即使属性可能对某些元素不起作用。
 
 我们可以在所有的 [HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements)，*甚至是在标准里没有指定的元素*上指定全局属性。这意味着任何非标准元素仍必须能够允许应用这些属性，即使使用这些元素意味着文档不再是 HTML5 兼容的。例如，虽然 `<foo>` 不是一个有效的 HTML 元素，但是 HTML5 兼容的浏览器隐藏了标记为 `<foo hidden>…</foo>` 的内容。

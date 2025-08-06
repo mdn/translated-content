@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 7885271e36e9d2744296c01f400653f63caa6f75
 ---
 
-{{HTMLSidebar("Global_attributes")}}
-
 **`style`** [全域屬性](/zh-TW/docs/Web/HTML/Reference/Global_attributes) 包含要應用於此元素的 [CSS](/zh-TW/docs/Web/CSS) 樣式宣告。請注意，建議將樣式定義在單獨的檔案中。此屬性和 {{HTMLElement("style")}} 元素主要目的是允許快速設定樣式，例如用於測試目的。
 
 {{InteractiveExample("HTML Demo: style", "tabbed-shorter")}}

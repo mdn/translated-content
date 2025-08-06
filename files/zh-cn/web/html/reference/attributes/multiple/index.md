@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a242996610e5a3335fcd0c5ee3c84d5543b9b8dd
 ---
 
-{{HTMLSidebar}}
-
 如果设置了布尔属性 **`multiple`**，则意味着表单控件将接受一个及以上的值。该属性对 {{HTMLElement("input/email", "email")}} 和 {{HTMLElement("input/file", "file")}} 输入类型以及 {{HTMLElement("select")}} 元素有效。用户选择多个值的方式取决于表单控件。
 
 {{InteractiveExample("HTML Demo: multiple", "tabbed-standard")}}
