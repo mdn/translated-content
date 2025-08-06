@@ -66,7 +66,7 @@ body {
     <li>
       <label for="uid">ユーザー ID</label>
       <input type="text" id="uid" name="uid" />
-    </li>s
+    </li>
     <li>
       <label for="pwd">パスワード</label>
       <input type="password" id="pwd" name="pwd" />
