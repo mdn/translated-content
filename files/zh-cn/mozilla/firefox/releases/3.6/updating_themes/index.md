@@ -9,7 +9,7 @@ l10n:
 
 ## 界面注册变更
 
-[`contents.rdf` 已不再支持](https://www.oxymoronical.com/blog/2009/06/Farewell-contentsrdf/)，你需要改用 `chrome.manifest`。
+[不再支持 `contents.rdf`](https://www.oxymoronical.com/blog/2009/06/Farewell-contentsrdf/)，而需要改用 `chrome.manifest`。
 
 ## 空文本样式
 
