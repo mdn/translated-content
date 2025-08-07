@@ -31,7 +31,7 @@ Firefox 75 は、米国時間 2020 年 4 月 7 日にリリースされました
 
 - `aria-description` ([Firefox バグ 1608961](https://bugzil.la/1608961))
 - [`role="mark"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Mark_role) および [`role="suggestion"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Suggestion_role) ([Firefox バグ 1608965](https://bugzil.la/1608965))
-- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
+- [`role="comment"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/comment_role) ([Firefox バグ 1608969](https://bugzil.la/1608969))
 - `aria-details` で複数の ID ([Firefox バグ 1608883](https://bugzil.la/1608883))
 
 > [!NOTE]
