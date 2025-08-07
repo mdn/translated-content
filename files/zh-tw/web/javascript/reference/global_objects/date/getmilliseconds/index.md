@@ -33,7 +33,7 @@ getMilliseconds()
 
 ## 範例
 
-### 使用 `getMilliseconds()`
+### 使用 getMilliseconds()
 
 `milliseconds` 變數的值為 `0`，這是基於 {{jsxref("Date")}} 物件 `xmas95` 的值，因為它沒有指定毫秒元件，所以預設為 0。
 
