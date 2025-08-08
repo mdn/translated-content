@@ -32,7 +32,7 @@ getUTCSeconds()
 
 ## 範例
 
-### 使用 `getUTCSeconds()`
+### 使用 getUTCSeconds()
 
 以下範例將目前時間的秒數部分指派給 `seconds` 變數。
 
