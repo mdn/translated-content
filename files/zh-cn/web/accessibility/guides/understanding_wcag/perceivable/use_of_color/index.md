@@ -15,11 +15,11 @@ l10n:
 
 ## 相关的 WCAG 成功标准
 
-- [1.4.1 颜色的使用 (A)](https://w3c.github.io/wcag/guidelines/22/#use-of-color)
+- [1.4.1 颜色的使用（A）](https://w3c.github.io/wcag/guidelines/22/#use-of-color)
   - : 不得仅使用颜色作为传达信息、指示操作、引发响应或区分视觉元素的唯一视觉手段。
 
 ## 参见
 
 - [理解成功标准 1.4.1：颜色的使用](https://www.w3.org/WAI/WCAG21/Understanding/use-of-color.html)
 - [颜色对比度](/zh-CN/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)
-- [颜色与颜色对比度](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#color_and_color_contrast) 在无障碍教程中
+- 无障碍教程中的[颜色与颜色对比度](/zh-CN/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#颜色与颜色对比度)
