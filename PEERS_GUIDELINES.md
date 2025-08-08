@@ -4,7 +4,7 @@
 
 ### Reviewing and issue queue
 
-It is the responsibility of the active community maintenance team for each active locale to keep up-to-date with reviews of pull requests and handling issues filed against that locale. You can filter the relevant pull requests and issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko` , `l10n-pt-br`, `l10n-ru`, `l10n-zh` and `l10n-es`.
+It is the responsibility of the active community maintenance team for each active locale to keep up-to-date with reviews of pull requests and handling issues filed against that locale. You can filter the relevant pull requests and issues for each locale using the relevant label — `l10n-fr`, `l10n-ja`, `l10n-ko` , `l10n-pt-br`, `l10n-ru`, `l10n-zh`, `l10n-es`, and `l10n-ar`.
 
 ### Requirements for keeping locales up-to-date
 
@@ -56,6 +56,8 @@ The review teams for each locale are:
 - Spanish (`es`) content - the [yari-content-es](https://github.com/orgs/mdn/teams/yari-content-es) team, which consists of:
   - [JuanVqz](https://github.com/JuanVqz)
   - [Graywolf9](https://github.com/Graywolf9)
+[yari-content-ar](https://github.com/orgs/mdn/teams/yari-content-ar) team, which consists of:
+  - [0xSm0ky](https://github.com/0xSm0ky)
 
 ---
 
