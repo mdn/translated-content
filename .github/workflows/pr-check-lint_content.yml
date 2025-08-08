@@ -140,11 +140,22 @@ jobs:
 
           echo "Linting front-matter"
           FM_LINT_FAILED=false
-          FM_LINT_LOG=$(node scripts/front-matter_linter.js --fix true "${files_to_lint[@]}" 2>&1) || FM_LINT_FAILED=true
+          # absolute_paths is needed because front-matter linter is run from mdn/content directory
+          absolute_paths=()
+          for file in "${files_to_lint[@]}"; do
+              absolute_paths+=("$(realpath -e "$file")")
+          done
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
           echo "FM_LINT_FAILED=${FM_LINT_FAILED}" >> "$GITHUB_OUTPUT"
+
+          echo "Running url locale checker"
+          node ./scripts/check-url-locale.js --fix "${files_to_lint[@]}"
+
+          echo "Running autocorrect"
+          yarn autocorrect --fix "${files_to_lint[@]}"
 
           echo "Running Prettier"
           PRETTIER_FAILED=false
