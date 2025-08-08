@@ -46,7 +46,7 @@ jobs:
           echo "${EOF}" >> "$GITHUB_OUTPUT"
 
           # Also set a simple flag for whether we have files
-          if [ -n "${FILTERED_MD_FILES// /}" ]; then  # Remove all spaces and check if anything remains
+          if [ -n "${FILTERED_FILES// /}" ]; then
             echo "HAS_FILES=true" >> "$GITHUB_OUTPUT"
           else
             echo "HAS_FILES=false" >> "$GITHUB_OUTPUT"
@@ -145,7 +145,7 @@ jobs:
           for file in "${files_to_lint[@]}"; do
               absolute_paths+=("$(realpath -e "$file")")
           done
-          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
+          FM_LINT_LOG=$(cd ${{ github.workspace }}/mdn/content && yarn fix:fm --config-file ${{ github.workspace }}/.front-matter-config.json "${absolute_paths[@]}" 2>&1) || FM_LINT_FAILED=true
           echo "FM_LINT_LOG<<${EOF}" >> "$GITHUB_OUTPUT"
           echo "${FM_LINT_LOG}" >> "$GITHUB_OUTPUT"
           echo "${EOF}" >> "$GITHUB_OUTPUT"
