@@ -76,7 +76,7 @@ slug: تعلم_تطوير_الويب/عن
 - التغطية الشاملة للغات/منصات الواجهة الخلفية. نحن نقدم مقدمة موجزة عن [Node.js (Express)](/en-US/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs) و[Python (Django)](/en-US/docs/Learn_web_development/Extensions/Server-side/Django) نظرًا لأن فهم كيفية عمل HTTP وتقنيات جهة الخادم مفيد لكل مطوّر ويب. ومع ذلك، لا نقدم تغطية شاملة لمختلف المنصات، فهذا خارج نطاق MDN.
 - التغطية المتعمقة لقواعد البيانات التقليدية العلائقية (مثل [MySQL](https://dev.mysql.com/doc/) أو [Postgres](https://www.postgresql.org/)) وغيرها من مخازن البيانات على جهة الخادم (مثل قواعد البيانات السحابية مثل [MongoDB](https://www.mongodb.com/) أو [Google Cloud Datastore](https://cloud.google.com/products/datastore)). نحن نقدم مقدمة موجزة عن هذه التقنيات في وحدات [برمجة مواقع الويب على جهة الخادم](/en-US/docs/Learn_web_development/Extensions/Server-side).
 - المواضيع المتعمقة في DevOps مثل منصات السحابة للتزويد والأتمتة (مثل [Amazon AWS](https://aws.amazon.com/)، و[Google Cloud Platform](https://console.cloud.google.com/)، و[Microsoft Azure](https://azure.microsoft.com/)) وأدوات الحاويات (مثل [Kubernetes](https://kubernetes.io/) و[Docker](https://www.docker.com/)). نحن نتطرق بخفة إلى بعض الأدوات التي تُعتبر ضمن مجال DevOps — مثل GitHub وأدوات الاختبارات المؤتمتة — لكن هذه لها تداخل واضح مع مجال مطوّر الواجهة الأمامية.
-- التصميم الجرافيكي بما يتجاوز المعرفة الأساسية الموضحة في [التصميم للمطورين](/en-US/docs/Learn_web_development/Core/Design_for_developers).
+- التصميم الجرافيكي بما يتجاوز المعرفة الأساسية الموضحة في [التصميم للمطورين](/ar/docs/Learn_web_development/Core/Design_for_developers).
 - المهارات المتعلقة بأدوار مثل إدارة المنتجات والبرامج (مثل التنظيم، والبحث، والتخطيط).
 
 ## الإسناد
