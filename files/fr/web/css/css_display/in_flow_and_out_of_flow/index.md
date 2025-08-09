@@ -6,7 +6,7 @@ original_slug: Web/CSS/CSS_flow_layout/In_flow_and_out_of_flow
 
 {{CSSRef}}
 
-Dans [le précédent guide](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow), nous avons vu le fonctionnement de la disposition en ligne et en bloc dans le flux normal. Tous les éléments qui sont « dans » le flux seront disposés grâce à cette méthode.
+Dans [le précédent guide](/fr/docs/Web/CSS/CSS_display/Block_and_inline_layout_in_normal_flow), nous avons vu le fonctionnement de la disposition en ligne et en bloc dans le flux normal. Tous les éléments qui sont « dans » le flux seront disposés grâce à cette méthode.
 
 Dans l'exemple qui suit, on a un titre, un paragraphe, une liste puis un paragraphe final qui contient un élément `strong`. Le titre et les paragraphes sont des éléments de blocs et l'élément `strong` est un élément en ligne. La liste est affichée en utilisant les boîtes flexibles afin d'avoir les éléments de la liste sur une même ligne mais cette liste contribue bien à la disposition en ligne et en bloc car le conteneur a un type `display` externe qui vaut `block`.
 
@@ -54,8 +54,8 @@ Dès qu'on retire ou qu'on décale un élément de son emplacement dans le flux 
 
 ## Résumé
 
-Dans ce guide, nous avons vu les différentes façons qui permettent de retirer un élément du flux afin d'obtenir certains positionnements spécifiques. Dans le prochain guide, nous verrons un concept similaire, celui de [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) dans [Explications relatives aux contextes de formatage](/fr/docs/Web/CSS/CSS_flow_layout/Introduction_to_formatting_contexts).
+Dans ce guide, nous avons vu les différentes façons qui permettent de retirer un élément du flux afin d'obtenir certains positionnements spécifiques. Dans le prochain guide, nous verrons un concept similaire, celui de [contexte de formatage de bloc](/fr/docs/Web/CSS/CSS_display/Block_formatting_context) dans [Explications relatives aux contextes de formatage](/fr/docs/Web/CSS/CSS_display/Introduction_to_formatting_contexts).
 
 ## Voir aussi
 
-- [En apprendre plus sur le positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning)
+- [En apprendre plus sur le positionnement](/fr/docs/Learn_web_development/Core/CSS_layout/Positioning)

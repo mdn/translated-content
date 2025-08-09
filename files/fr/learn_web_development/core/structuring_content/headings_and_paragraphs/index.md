@@ -832,7 +832,7 @@ Ce liquide est **hautement toxique**.
 
 Je compte sur vous. **Ne soyez pas en retard** !
 
-En HTML, nous utilisons l'élément [`<strong>`](/fr/docs/Web/HTML/Element/strong) (forte importance) comme balise de telles circonstances. En plus de rendre le document plus lisible, ces balises sont reconnues par les lecteurs d'écran et énoncées avec des intonations différentes. Par défaut, les navigateurs mettent le texte marqué en gras, mais il ne faut pas utiliser cette balise pour mettre en gras. Pour cela, utilisez un élément [`<span>`](/fr/docs/Web/HTML/Element/span) et du CSS, ou plus simplement un élément [`<b>`](/fr/docs/Web/HTML/Element/b) (voir ci-dessous).
+En HTML, nous utilisons l'élément [`<strong>`](/fr/docs/Web/HTML/Reference/Elements/strong) (forte importance) comme balise de telles circonstances. En plus de rendre le document plus lisible, ces balises sont reconnues par les lecteurs d'écran et énoncées avec des intonations différentes. Par défaut, les navigateurs mettent le texte marqué en gras, mais il ne faut pas utiliser cette balise pour mettre en gras. Pour cela, utilisez un élément [`<span>`](/fr/docs/Web/HTML/Reference/Elements/span) et du CSS, ou plus simplement un élément [`<b>`](/fr/docs/Web/HTML/Reference/Elements/b) (voir ci-dessous).
 
 ```html
 <p>Ce liquide est <strong>hautement toxique</strong>.</p>
@@ -1039,6 +1039,6 @@ Voici la meilleure règle d'or : il est probablement approprié d'utiliser `<b>`
 
 ## Résumé
 
-C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine&nbsp;; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), qui est peut-être l'élément le plus important sur le Web.
+C'est tout pour l'instant ! Cet article doit vous avoir donné une bonne idée de la façon de commencer à baliser le texte en HTML et présenté les éléments les plus importants dans ce domaine. Il existe énormément d'autres éléments sémantiques à connaître dans ce domaine&nbsp;; nous en verrons beaucoup plus dans notre article «&nbsp;More Semantic Elements&nbsp;», plus loin dans ce cours. Dans le prochain article, nous examinerons en détail comment [créer des hyperliens](/fr/docs/Learn_web_development/Core/Structuring_content/Creating_links), qui est peut-être l'élément le plus important sur le Web.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML", "Learn/HTML/Introduction_to_HTML/Creating_hyperlinks", "Learn/HTML/Introduction_to_HTML")}}

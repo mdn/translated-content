@@ -636,7 +636,7 @@ Cette technique de placement automatique peut s'avérer extrêmement utile si vo
 La meilleure façon d'apprendre à utiliser les grilles CSS est de continuer à construire des exemples comme ceux que nous avons vus ici. Prenez un cas d'utilisation que vous auriez construit avec un _framework_ ou avec un autre mode de disposition et voyez si vous pouvez le construire à l'aide d'une grille. N'oubliez pas de trouver des exemples de disposition encore impossibles à construire avec les méthodes actuelles&nbsp;: prenez différentes sources d'inspiration comme les magazines et affiches. Le modèle de grille offre un nouvel éventail de possibilités et il serait dommage de rester sur nos acquis.
 
 - [Les grilles CSS](/fr/docs/Web/CSS/CSS_grid_layout)
-- [Apprendre les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids)
+- [Apprendre les grilles CSS](/fr/docs/Learn_web_development/Core/CSS_layout/Grids)
 - [CSS-Tricks&nbsp;: Un guide complet sur les grilles CSS (en anglais)](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Les grilles CSS par l'exemple (en anglais)](https://gridbyexample.com)
 - [Quackit&nbsp;: Exemples de dispositions avec les grilles CSS (en anglais)](https://www.quackit.com/css/grid/examples/css_grid_website_layout_examples.cfm)

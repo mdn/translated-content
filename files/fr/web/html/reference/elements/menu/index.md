@@ -8,7 +8,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Element/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Element/li)).
+L'élément [HTML](/fr/docs/Web/HTML) **`<menu>`** est une alternative sémantique à [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul), mais est traité par les navigateurs, et en termes d'accessibilité comme un élément [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul). Il représente une liste d'éléments non-ordonnée (chaque élément de la liste étant représenté par un élément [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)).
 
 {{InteractiveExample("HTML Demo: &lt;menu&gt;", "tabbed-shorter")}}
 
@@ -40,11 +40,11 @@ menu {
 
 ## Attributs
 
-Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut uniquement [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notes d'utilisation
 
-Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Element/ul) représentent tous les deux une liste non-ordonnée d'éléments. [`<ul>`](/fr/docs/Web/HTML/Element/ul) doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
+Les éléments `<menu>` et [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) représentent tous les deux une liste non-ordonnée d'éléments. [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul) doit être utilisés pour des éléments qui doivent uniquement être affichés alors que `<menu>` était initialement conçu pour des éléments interactifs.
 
 L'élément connexe [`<menuitem>`](/fr/docs/conflicting/Web/HTML/Element) a été déprécié.
 
@@ -158,6 +158,6 @@ button {
 ## Voir aussi
 
 - Les autres éléments HTML relatifs aux listes&nbsp;:
-  - [`<ol>`](/fr/docs/Web/HTML/Element/ol)
-  - [`<ul>`](/fr/docs/Web/HTML/Element/ul)
-  - [`<li>`](/fr/docs/Web/HTML/Element/li)
+  - [`<ol>`](/fr/docs/Web/HTML/Reference/Elements/ol)
+  - [`<ul>`](/fr/docs/Web/HTML/Reference/Elements/ul)
+  - [`<li>`](/fr/docs/Web/HTML/Reference/Elements/li)

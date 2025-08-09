@@ -12,11 +12,11 @@ L'élément [HTML](/fr/docs/Web/HTML) **`<dialog>`** représente une boite de di
 
 L'élément HTML `<dialog>` est utilisé pour créer des boîtes de dialogue modale qui peuvent être interactives ou non. Les boîtes de dialogue modale interrompent l'interaction, le reste de la page étant inerte, tandis que les boîtes de dialogue non-modale permettent une interaction avec le reste de la page.
 
-JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode [`.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour afficher une boîte de dialogue modale et la méthode [`.show()`](/fr/docs/Web/API/HTMLDialogElement/show) pour afficher une boîte de dialogue non-modale. La boîte de dialogue peut être fermée à l'aide de la méthode [`.close()`](/fr/docs/Web/API/HTMLDialogElement/close) ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Element/form#method) lors de la soumission d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue modales peuvent également être fermées en appuyant sur la touche <kbd>Échap</kbd>.
+JavaScript peut être utilisé pour afficher l'élément `<dialog>`. L'utilisation de la méthode [`.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour afficher une boîte de dialogue modale et la méthode [`.show()`](/fr/docs/Web/API/HTMLDialogElement/show) pour afficher une boîte de dialogue non-modale. La boîte de dialogue peut être fermée à l'aide de la méthode [`.close()`](/fr/docs/Web/API/HTMLDialogElement/close) ou en utilisant la méthode [`dialog`](/fr/docs/Web/HTML/Reference/Elements/form#method) lors de la soumission d'un formulaire `<form>` imbriqué dans l'élément `<dialog>`. Les boîtes de dialogue modales peuvent également être fermées en appuyant sur la touche <kbd>Échap</kbd>.
 
 ## Attributs
 
-Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 > [!WARNING]
 > L'attribut `tabindex` ne doit pas être utilisé sur l'élément `<dialog>`.
@@ -28,9 +28,9 @@ Cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attribu
 
 ## Notes d'utilisation
 
-- Les éléments [`<form>`](/fr/docs/Web/HTML/Element/form) peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Element/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
+- Les éléments [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form) peuvent fermer un dialogue s'ils possèdent l'attribut `method="dialog"` ou si le bouton utilisé pour soumettre le formulaire a l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input#formmethod). Lorsqu'un tel formulaire est soumis, le dialogue se ferme avec sa propriété [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) définie sur la `value` (valeur) du bouton qui a été utilisé pour soumettre le formulaire.
 - Le pseudo-élément CSS [`::backdrop`](/fr/docs/Web/CSS/::backdrop) peut être utilisé pour créer un style derrière un élément `<dialog>` lorsque le dialogue est affiché avec [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal). Par exemple, pour atténuer le contenu inaccessible derrière la boîte de dialogue modale.
-- L'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
+- L'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) peut être ajouté à l'élément avec lequel la personne est censée interagir immédiatement après l'ouverture d'une boîte de dialogue modale. S'il n'y a pas d'élément impliquant une interaction immédiate, l'attribut `autofocus` peut être ajouté à l'élément `<dialog>` lui-même.
 
 ## Exemples
 
@@ -57,7 +57,7 @@ Cette boîte de dialogue est initialement ouverte en raison de la présence de l
 
 Cet exemple montre une boîte de dialogue modale avec un [arrière-plan](/fr/docs/Web/CSS/gradient). La méthode `.showModal()` ouvre la boîte de dialogue modale lorsque le bouton «&nbsp;Afficher la fenêtre&nbsp;» est activé. La boîte de dialogue peut être fermée en appuyant sur la touche <kbd>Échap</kbd> ou via la méthode `.close()` lorsque le bouton «&nbsp;Fermer&nbsp;» de la boîte de dialogue est activé.
 
-Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la priorité au premier élément qui peut l'être dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la priorité à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture de la boîte de dialogue.
+Lorsqu'une boîte de dialogue s'ouvre, le navigateur donne, par défaut, la priorité au premier élément qui peut l'être dans la boîte de dialogue. Dans cet exemple, l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) est appliqué au bouton «&nbsp;Fermer&nbsp;», lui donnant la priorité à l'ouverture de la boîte de dialogue, car c'est l'élément avec lequel nous nous attendons à ce que la personne interagisse immédiatement après l'ouverture de la boîte de dialogue.
 
 #### HTML
 
@@ -116,9 +116,9 @@ Lorsque la boîte de dialogue modale est affichée, elle apparaît au-dessus de 
 
 Cet exemple illustre comment utiliser la valeur de retour, fournie par [`returnValue`](/fr/docs/Web/API/HTMLDialogElement/returnValue) et comment fermer un dialogue modal en utilisant un formulaire. Par défaut, la valeur de retour est la chaîne vide ou la valeur du bouton qui soumet le formulaire dans l'élément `<dialog>`, s'il y en a un.
 
-Cet exemple ouvre une boîte de dialogue modale lorsque le bouton «&nbsp;Mettre à jour les détails&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un élément [`<select>`](/fr/docs/Web/HTML/Element/select) et deux éléments [`<button>`](/fr/docs/Web/HTML/Element/button), dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
+Cet exemple ouvre une boîte de dialogue modale lorsque le bouton «&nbsp;Mettre à jour les détails&nbsp;» est activé. La boîte de dialogue contient un formulaire avec un élément [`<select>`](/fr/docs/Web/HTML/Reference/Elements/select) et deux éléments [`<button>`](/fr/docs/Web/HTML/Reference/Elements/button), dont la valeur par défaut est `type="submit"`. Un écouteur d'évènement met à jour la valeur du bouton «&nbsp;Confirmer&nbsp;» lorsque l'option sélectionnée change. Si le bouton «&nbsp;Confirmer&nbsp;» est activé pour fermer la boîte de dialogue, la valeur actuelle du bouton est la valeur de retour. Si la boîte de dialogue est fermée en appuyant sur le bouton «&nbsp;Annuler&nbsp;», la valeur de retour `returnValue` est `cancel`.
 
-Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Mettre à jour les détails&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'événement `close` ne se produit pas, ce qui signifie que le texte dans l'élément [`<output>`](/fr/docs/Web/HTML/Element/output) n'est pas mis à jour.
+Lorsque le dialogue est fermé, la valeur de retour est affichée sous le bouton «&nbsp;Mettre à jour les détails&nbsp;». Si le dialogue est fermé en appuyant sur la touche <kbd>Échap</kbd>, la valeur de retour `returnValue` n'est pas mise à jour et l'événement `close` ne se produit pas, ce qui signifie que le texte dans l'élément [`<output>`](/fr/docs/Web/HTML/Reference/Elements/output) n'est pas mis à jour.
 
 #### HTML
 
@@ -194,9 +194,9 @@ Cet exemple présente les trois méthodes suivantes pour fermer les boîtes de d
 - En appelant la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close) (comme dans l'[exemple de création d'une boîte modale](#création_d'une_boîte_de_dialogue_modale)).
   Dans cet exemple, le bouton «&nbsp;Annuler&nbsp;» ferme la boîte de dialogue via la méthode de formulaire `dialog` et le bouton «&nbsp;Confirmer&nbsp;» ferme la boîte de dialogue via la méthode [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close).
 
-Le bouton «&nbsp;Annuler&nbsp;» comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Element/input/submit#formmethod), qui remplace la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) de l'élément [`<form>`](/fr/docs/Web/HTML/Element/form). Lorsque la méthode d'un formulaire est [`dialog`](#notes_dutilisation), l'état du formulaire est sauvegardé mais non soumis, et la boîte de dialogue est fermée.
+Le bouton «&nbsp;Annuler&nbsp;» comprend l'attribut [`formmethod="dialog"`](/fr/docs/Web/HTML/Reference/Elements/input/submit#formmethod), qui remplace la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) de l'élément [`<form>`](/fr/docs/Web/HTML/Reference/Elements/form). Lorsque la méthode d'un formulaire est [`dialog`](#notes_dutilisation), l'état du formulaire est sauvegardé mais non soumis, et la boîte de dialogue est fermée.
 
-Sans `action`, la soumission du formulaire via la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Methods/GET) entraîne le rechargement de la page. Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close), respectivement.
+Sans `action`, la soumission du formulaire via la méthode par défaut [`GET`](/fr/docs/Web/HTTP/Reference/Methods/GET) entraîne le rechargement de la page. Nous utilisons JavaScript pour empêcher la soumission et fermer le dialogue avec les méthodes [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) et [`HTMLDialogElement.close()`](/fr/docs/Web/API/HTMLDialogElement/close), respectivement.
 
 Il est important de prévoir un mécanisme de fermeture dans chaque élément `<dialog>`. La touche <kbd>Échap</kbd> ne ferme pas les dialogues non modaux par défaut, et l'on ne peut pas non plus supposer que la personne aura accès à un clavier physique (par exemple, une personne utilisant un écran tactile sans accès à un clavier).
 
@@ -251,7 +251,7 @@ Il est important de prévoir un mécanisme de fermeture dans chaque élément `<
 
 ## Accessibilité
 
-Lors de l'implémentation d'une fenêtre de dialogue, il est important de considérer l'endroit le plus approprié pour placer le point de concentration (ou «&nbsp;<i lang="en">focus</i>&nbsp;») de la personne. Lorsque l'on utilise [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour ouvrir un `<dialog>`, le «&nbsp;<i lang="en">focus</i>&nbsp;» est mis sur le premier élément imbriqué focalisable. Le fait d'indiquer explicitement l'emplacement initial du «&nbsp;<i lang="en">focus</i>&nbsp;» en utilisant l'attribut [`autofocus`](/fr/docs/Web/HTML/Global_attributes/autofocus) permet de s'assurer que le «&nbsp;<i lang="en">focus</i>&nbsp;» initial est placé sur l'élément considéré comme le meilleur emplacement initial pour un dialogue particulier. En cas de doute, comme il n'est pas toujours possible de savoir où le «&nbsp;<i lang="en">focus</i>&nbsp;» initial peut être placé dans un dialogue, en particulier dans les cas où le contenu d'un dialogue est rendu dynamiquement lorsqu'il est invoqué, l'élément `<dialog>` lui-même peut fournir le meilleur placement du «&nbsp;<i lang="en">focus</i>&nbsp;» initial.
+Lors de l'implémentation d'une fenêtre de dialogue, il est important de considérer l'endroit le plus approprié pour placer le point de concentration (ou «&nbsp;<i lang="en">focus</i>&nbsp;») de la personne. Lorsque l'on utilise [`HTMLDialogElement.showModal()`](/fr/docs/Web/API/HTMLDialogElement/showModal) pour ouvrir un `<dialog>`, le «&nbsp;<i lang="en">focus</i>&nbsp;» est mis sur le premier élément imbriqué focalisable. Le fait d'indiquer explicitement l'emplacement initial du «&nbsp;<i lang="en">focus</i>&nbsp;» en utilisant l'attribut [`autofocus`](/fr/docs/Web/HTML/Reference/Global_attributes/autofocus) permet de s'assurer que le «&nbsp;<i lang="en">focus</i>&nbsp;» initial est placé sur l'élément considéré comme le meilleur emplacement initial pour un dialogue particulier. En cas de doute, comme il n'est pas toujours possible de savoir où le «&nbsp;<i lang="en">focus</i>&nbsp;» initial peut être placé dans un dialogue, en particulier dans les cas où le contenu d'un dialogue est rendu dynamiquement lorsqu'il est invoqué, l'élément `<dialog>` lui-même peut fournir le meilleur placement du «&nbsp;<i lang="en">focus</i>&nbsp;» initial.
 
 Veillez à ce qu'un mécanisme soit prévu pour permettre de fermer la boîte de dialogue. La meilleure façon de s'assurer que toutes les personnes peuvent fermer la boîte de dialogue est d'inclure un bouton explicite à cet effet, tel qu'un bouton de confirmation, d'annulation ou de fermeture.
 
@@ -259,7 +259,7 @@ Par défaut, une boîte de dialogue invoquée par la méthode `showModal()` peut
 
 Bien que les boîtes de dialogue puissent être créées à l'aide d'autres éléments, l'élément natif `<dialog>` offre des caractéristiques d'utilisation et d'accessibilité qui doivent être reproduites si vous utilisez d'autres éléments dans un but similaire. Si vous créez une implémentation de dialogue personnalisée, assurez-vous que tous les comportements par défaut attendus sont pris en charge et que les recommandations d'étiquetage appropriées sont suivies.
 
-L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML global [`inert`](/fr/docs/Web/HTML/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
+L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire aux dialogues personnalisés qui utilisent l'attribut ARIA [role="dialog"](/fr/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role). Les éléments `<dialog>` invoqués par la méthode `showModal()` ont implicitement [aria-modal="true"](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-modal), alors que les éléments `<dialog>` invoqués par la méthode `show()` ou affichés en utilisant l'attribut `open` ou en changeant la propriété CSS `display` par défaut d'un élément HTML `<dialog>` sont exposés en tant que `[aria-modal="false"]`. Lors de l'implémentation de dialogues modaux, tout ce qui n'est pas le `<dialog>` et son contenu doit être rendu inerte en utilisant l'attribut HTML global [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert). Lorsque l'on utilise `<dialog>` avec la méthode `HTMLDialogElement.showModal()`, ce comportement est fourni par le navigateur.
 
 ## Spécifications
 
@@ -275,6 +275,6 @@ L'élément `<dialog>` est exposé par les navigateurs d'une manière similaire 
 - L'évènement [`close`](/fr/docs/Web/API/HTMLDialogElement/close_event)
 - L'évènement [`cancel`](/fr/docs/Web/API/HTMLDialogElement/cancel_event)
 - La propriété [`open`](/fr/docs/Web/API/HTMLDialogElement/open) de l'interface `HTMLDialogElement`
-- L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Global_attributes/inert)
+- L'attribut HTML universel [`inert`](/fr/docs/Web/HTML/Reference/Global_attributes/inert)
 - Le pseudo-élément [`::backdrop`](/fr/docs/Web/CSS/::backdrop)
-- [Guide sur les formulaires HTML](/fr/docs/Learn/Forms)
+- [Guide sur les formulaires HTML](/fr/docs/conflicting/Learn_web_development/Extensions/Forms)

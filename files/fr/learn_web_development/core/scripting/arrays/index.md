@@ -33,7 +33,7 @@ Les tableaux sont généralement décrits comme des "objets de type liste" ; un 
 
 Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
 
-Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (ou utilisez la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
+Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (ou utilisez la [console développeur de l'explorateur](/fr/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
 
 ```html hidden
 <!doctype html>
@@ -162,7 +162,7 @@ On définit les valeurs d'un tableau par une liste d'éléments entre crochets d
 
 ### Accès aux éléments de tableau et modification de ceux‑ci
 
-Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu [accès aux lettres dans une chaîne](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu [accès aux lettres dans une chaîne](/fr/docs/Learn_web_development/Core/Scripting/Useful_string_methods#retrieving_a_specific_string_character).
 
 1. Entrez ceci dans la console&nbsp;:
 
@@ -331,11 +331,11 @@ Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous
 Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici&nbsp;:
 
 1. Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
-2. Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
-3. Au dessous du commentaire `// number 3` nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (`nom:prix`) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour vous aider, ou même mieux, regardez la section [Conversions entre chaînes et tableaux](#conversions_entre_chaînes_et_tableaux) de cet article.
+2. Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [boucle](/fr/docs/Learn_web_development/Core/Scripting/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
+3. Au dessous du commentaire `// number 3` nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (`nom:prix`) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn_web_development/Core/Scripting/Useful_string_methods) pour vous aider, ou même mieux, regardez la section [Conversions entre chaînes et tableaux](#conversions_entre_chaînes_et_tableaux) de cet article.
 
-4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
+4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn_web_development/Core/Scripting/Strings#numbers_versus_strings).
+5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn_web_development/Core/Scripting/Math#assignment_operators) pour faire cela ;-).
 6. Nous souhaitons que vous modifiez la ligne au‑dessous de `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
 
 ```html hidden
@@ -506,7 +506,7 @@ window.addEventListener("load", updateCode);
 
 ## Testez vos compétences !
 
-Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
+Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn_web_development/Core/Scripting/Test_your_skills/Arrays).
 
 ## Conclusion
 

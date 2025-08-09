@@ -103,7 +103,7 @@ Avec une fonction, on utilisera la forme suivante&nbsp;:
 filter: <filter-function> [<filter-function>]* | none;
 ```
 
-En utilisant un élément SVG [`<filter>`](/fr/docs/Web/SVG/Element/filter), on utilisera la forme suivante&nbsp;:
+En utilisant un élément SVG [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter), on utilisera la forme suivante&nbsp;:
 
 ```css
 filter: url(file.svg#filter-element-id);
@@ -278,5 +278,5 @@ Les filtres sont appliqués dans l'ordre, c'est pour cela que les ombres portée
 - La propriété CSS [`backdrop-filter`](/fr/docs/Web/CSS/backdrop-filter)
 - [La composition et les modes de fusion en CSS](/fr/docs/Web/CSS/CSS_compositing_and_blending) avec les propriétés CSS [`background-blend-mode`](/fr/docs/Web/CSS/background-blend-mode) et [`mix-blend-mode`](/fr/docs/Web/CSS/mix-blend-mode)
 - La propriété CSS [`mask`](/fr/docs/Web/CSS/mask)
-- [SVG](/fr/docs/Web/SVG) et notamment l'élément [`<filter>`](/fr/docs/Web/SVG/Element/filter) et l'attribut [`filter`](/fr/docs/Web/SVG/Attribute/filter)
-- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [SVG](/fr/docs/Web/SVG) et notamment l'élément [`<filter>`](/fr/docs/Web/SVG/Reference/Element/filter) et l'attribut [`filter`](/fr/docs/Web/SVG/Attribute/filter)
+- [Appliquer des effets SVG à du contenu HTML](/fr/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

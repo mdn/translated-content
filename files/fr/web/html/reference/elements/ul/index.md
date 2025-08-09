@@ -35,7 +35,7 @@ li li {
 
 ## Attributs
 
-À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Global_attributes).
+À l'instar des différents éléments HTML, cet élément inclut [les attributs universels](/fr/docs/Web/HTML/Reference/Global_attributes).
 
 ### Attributs dépréciés ou obsolètes
 
