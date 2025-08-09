@@ -41,7 +41,7 @@ p > :not(strong, b.important) {
 
 ## 構文
 
-`:not()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#selector_list)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは許可されます。
+`:not()` 擬似クラスは引数として、 1 つ以上のセレクターをカンマで区切った[セレクターリスト](/ja/docs/Web/CSS/CSS_selectors/Selector_structure#セレクターリスト)を必要とします。このリストには[擬似要素](/ja/docs/Web/CSS/Pseudo-elements)を含めることはできませんが、その他の単純、複合、複雑セレクターは許可されます。
 
 ```css-nolint
 :not(<complex-selector-list>) {
