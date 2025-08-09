@@ -8,7 +8,7 @@ l10n:
 **`select` 角色**是一个抽象角色，同时也是允许用户从一组选项中进行选择的表单小部件角色的父级角色。
 
 > [!WARNING]
-> `select` 是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._abstract_roles)。此处包含它是为了文档完整性。Web 开发者不应该使用该角色。
+> `select` 是一个[抽象角色](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Roles#6._抽象角色)。此处包含它是为了文档完整性。Web 开发者不应该使用该角色。
 
 ## 描述
 
