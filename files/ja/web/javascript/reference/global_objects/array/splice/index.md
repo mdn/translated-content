@@ -1,11 +1,10 @@
 ---
 title: Array.prototype.splice()
+short-title: splice()
 slug: Web/JavaScript/Reference/Global_Objects/Array/splice
 l10n:
-  sourceCommit: 6fbdb78c1362fae31fbd545f4b2d9c51987a6bca
+  sourceCommit: 544b843570cb08d1474cfc5ec03ffb9f4edc0166
 ---
-
-{{JSRef}}
 
 **`splice()`** は {{jsxref("Array")}} インスタンスのメソッドで、[その場 (in-place)](https://ja.wikipedia.org/wiki/In-place%E3%82%A2%E3%83%AB%E3%82%B4%E3%83%AA%E3%82%BA%E3%83%A0) で既存の要素を取り除いたり、置き換えたり、新しい要素を追加したりすることで、配列の内容を変更します。
 
@@ -16,14 +15,14 @@ l10n:
 ```js interactive-example
 const months = ["Jan", "March", "April", "June"];
 months.splice(1, 0, "Feb");
-// Inserts at index 1
+// インデックス 1 に挿入
 console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+// 予想される結果: Array ["Jan", "Feb", "March", "April", "June"]
 
 months.splice(4, 1, "May");
-// Replaces 1 element at index 4
+// インデックス 4 の要素 1 つを置換
 console.log(months);
-// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+// 予想される結果: Array ["Jan", "Feb", "March", "April", "May"]
 ```
 
 ## 構文
