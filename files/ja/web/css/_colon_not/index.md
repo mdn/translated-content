@@ -24,7 +24,7 @@ p > :not(strong, b.important) {
 }
 ```
 
-```html interactive-example
+```html-nolint interactive-example
 <p>
   <b>火星</b> は、地球に最もよく似た惑星のひとつです。<b>火星</b>の 1 日は、地球の 1 日とほとんど同じで、わずか <strong>37 分</strong>長いだけです。
 </p>
