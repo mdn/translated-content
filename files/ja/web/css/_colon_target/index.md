@@ -2,28 +2,28 @@
 title: :target
 slug: Web/CSS/:target
 l10n:
-  sourceCommit: 259a7061abfce122ff8bb3a6687b02509263ef38
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
-**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、 URL のフラグメントに一致する [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) を持つ固有の要素（_ターゲット要素_）を表します。
+**`:target`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、文書内のターゲット要素を選択します。文書が読み込まれたとき、ターゲット要素は文書の [URL フラグメント識別子](/ja/docs/Web/URI/Reference/Fragment#fragment)を使用して導出されます。
 
 ```css
-/* 現在の URL のフラグメントに一致する ID を持つ要素を選択 */
+/* 文書のターゲット要素を選択 */
 :target {
   border: 2px solid black;
 }
 ```
 
-例えば、以下の URL には `section2` と呼ばれる要素を指すフラグメント（_#_ 記号で記述）があります。
+例えば、次の URL にはフラグメント識別子（_#_ 記号で示されます）があり、[`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) の `setup` である要素を、文書のターゲット要素としてマークしています。
 
-```
-http://www.example.com/index.html#section2
+```url
+http://www.example.com/help/#setup
 ```
 
 現在の URL が上記の通りの場合、以下の要素が `:target` セレクターで選択されます。
 
 ```html
-<section id="section2">Example</section>
+<section id="setup">インストール手順</section>
 ```
 
 ## 構文
@@ -33,6 +33,12 @@ http://www.example.com/index.html#section2
   /* ... */
 }
 ```
+
+## 解説
+
+HTML 文書が読み込まれると、ブラウザーはそのターゲット要素を設定します。要素は URL フラグメント識別子を使用して識別されます。 URL フラグメント識別子がない場合、文書にはターゲット要素はありません。擬似クラス `:target` を使用すると、文書のターゲット要素のスタイルを設定することができます。要素にフォーカスを合わせたり、強調表示したり、アニメーションさせたりすることができます。
+
+ターゲット要素は、文書が読み込まれたとき、および [`history.back()`](/ja/docs/Web/API/History/back)、[`history.forward()`](/ja/docs/Web/API/History/forward)、[`history.go()`](/ja/docs/Web/API/History/forward) メソッドが呼び出されたときに設定されます。しかし、[`history.pushState()`](/ja/docs/Web/API/History/pushState) および [`history.replaceState()`](/ja/docs/Web/API/History/replaceState) メソッドが呼び出されても、変更は行われません。
 
 > [!NOTE]
 > [CSS 仕様書のバグの可能性](https://discourse.wicg.io/t/target-css-does-not-work-because-shadowroot-does-not-set-a-target-element/2070)がありますが、`:target` は[ウェブコンポーネント](/ja/docs/Web/API/Web_components)内では動作しません。[シャドウルート](/ja/docs/Web/API/ShadowRoot)がターゲット要素をシャドウツリーに渡さないためです。
@@ -51,7 +57,9 @@ http://www.example.com/index.html#section2
   <li><a href="#p1">第 1 段落にジャンプ！</a></li>
   <li><a href="#p2">第 2 段落にジャンプ！</a></li>
   <li>
-    <a href="#nowhere">このリンクは対象がないので、どこにも行きません。</a>
+    <a href="#nowhere">
+      このリンクにはターゲットがないので、どこにも行きません。
+    </a>
   </li>
 </ol>
 
@@ -88,110 +96,6 @@ p:target i {
 #### 結果
 
 {{EmbedLiveSample('A_table_of_contents', 500, 300)}}
-
-### 純粋な CSS のライトボックス
-
-`:target` 擬似クラスを使用して JavaScript を使わずにライトボックスを作成することができます。このテクニックはページ内の最初は非表示の要素にリンクを作ることができることを利用しています。いったん対象となれば、 CSS で `display` を変更して表示させます。
-
-> [!NOTE]
-> `:target` 擬似クラスを使用した純粋な CSS のライトボックスのもっと完全な版は、 [GitHub で利用できます](https://github.com/madmurphy/takefive.css/) ([デモ](https://madmurphy.github.io/takefive.css/))。
-
-#### HTML
-
-```html
-<ul>
-  <li><a href="#example1">例 1 を開く</a></li>
-  <li><a href="#example2">例 2 を開く</a></li>
-</ul>
-
-<div class="lightbox" id="example1">
-  <figure>
-    <a href="#" class="close"></a>
-    <figcaption>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec felis enim,
-      placerat id eleifend eu, semper vel sem.
-    </figcaption>
-  </figure>
-</div>
-
-<div class="lightbox" id="example2">
-  <figure>
-    <a href="#" class="close"></a>
-    <figcaption>
-      Cras risus odio, pharetra nec ultricies et, mollis ac augue. Nunc et diam
-      quis sapien dignissim auctor. Quisque quis neque arcu, nec gravida magna.
-    </figcaption>
-  </figure>
-</div>
-```
-
-#### CSS
-
-```css
-/* 開いていないライトボックス */
-.lightbox {
-  display: none;
-}
-
-/* 開いたライトボックス */
-.lightbox:target {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ライトボックスの中身 */
-.lightbox figcaption {
-  width: 25rem;
-  position: relative;
-  padding: 1.5em;
-  background-color: lightpink;
-}
-
-/* 閉じるボタン */
-.lightbox .close {
-  position: relative;
-  display: block;
-}
-
-.lightbox .close::after {
-  right: -1rem;
-  top: -1rem;
-  width: 2rem;
-  height: 2rem;
-  position: absolute;
-  display: flex;
-  z-index: 1;
-  align-items: center;
-  justify-content: center;
-  background-color: black;
-  border-radius: 50%;
-  color: white;
-  content: "×";
-  cursor: pointer;
-}
-
-/* ライトボックスのオーバーレイ */
-.lightbox .close::before {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
-  content: "";
-  cursor: default;
-}
-```
-
-#### 結果
-
-{{EmbedLiveSample('Pure-CSS_lightbox', 500, 220)}}
 
 ## 仕様書
 
