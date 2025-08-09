@@ -1,8 +1,9 @@
 ---
 title: "CSS: カスケーディングスタイルシート"
+short-title: CSS
 slug: Web/CSS
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 0cc9980e3b21c83d1800a428bc402ae1865326b2
 ---
 
 **カスケーディングスタイルシート** (Cascading Style Sheets、**CSS**) は[スタイルシート](/ja/docs/Web/API/StyleSheet)言語であり、[HTML](/ja/docs/Web/HTML) や [XML](/ja/docs/Web/XML/Guides/XML_introduction)（派生言語である [SVG](/ja/docs/Web/SVG)、[MathML](/ja/docs/Web/MathML)、{{Glossary("XHTML")}} などを含む）で記述された文書の体裁や見栄えを表現するために用いられます。CSS は、要素が画面上で (あるいは紙や音声といった別のメディア上で) どのように表現されるのかを定義します。
@@ -30,7 +31,8 @@ CSS 2.1 以降、仕様の範囲が大幅に拡大し、CSS モジュールご�
 - [詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)と[継承](/ja/docs/Web/CSS/CSS_cascade/Inheritance)と[カスケード](/ja/docs/Web/CSS/CSS_cascade/Cascade)
 - [CSS セレクター](/ja/docs/Web/CSS/CSS_selectors)、[擬似要素](/ja/docs/Web/CSS/CSS_pseudo-elements)、[入れ子](/ja/docs/Web/CSS/CSS_nesting)、[スコープ化](/ja/docs/Web/CSS/CSS_scoping)、[シャドウパーツ](/ja/docs/Web/CSS/CSS_shadow_parts)
 - [CSS アットルール](/ja/docs/Web/CSS/CSS_syntax/At-rule)（[メディア](/ja/docs/Web/CSS/CSS_media_queries)や[コンテナー](/ja/docs/Web/CSS/CSS_containment)クエリーを含む）
-- [CSS 単位と値](/ja/docs/Web/CSS/CSS_Values_and_Units)および[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)
+- [CSS 値と単位](/ja/docs/Web/CSS/CSS_Values_and_Units)モジュール（[数値データ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Numeric_data_types)、[テキストデータ型](/ja/docs/Web/CSS/CSS_Values_and_Units/Textual_data_types)、
+[関数記法](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions)を含む）
 - [ボックスモデル](/ja/docs/Web/CSS/CSS_box_model/Introduction_to_the_CSS_box_model)と[マージンの相殺](/ja/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing)
 - [包含ブロック](/ja/docs/Web/CSS/CSS_display/Containing_block)
 - [重ね合わせ](/ja/docs/Web/CSS/CSS_positioned_layout/Stacking_context)と[ブロック整形](/ja/docs/Web/CSS/CSS_display/Block_formatting_context)コンテキスト
