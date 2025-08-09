@@ -46,7 +46,7 @@ p {
 
 <!-- Example-specific code -->
 
-```js live-sample___math-1
+```js-nolint live-sample___math-1
 let finalResult;
 let evenOddResult;
 
