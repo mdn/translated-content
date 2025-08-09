@@ -4,8 +4,6 @@ slug: Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties
 original_slug: Web/CSS/Using_CSS_custom_properties
 ---
 
-{{cssref}}
-
 **사용자 지정 속성**(**CSS 변수**, **종속 변수**)은 CSS 저작자가 정의하는 개체로, 문서 전반적으로 재사용할 임의의 값을 담습니다. 사용자 지정 속성은 전용 표기법을 사용해 정의하고, (`--main-color: black;`) {{cssxref("var", "var()")}} 함수를 사용해 접근할 수 있습니다. (`color: var(--main-color);`)
 
 복잡한 웹사이트는 어마어마한 양의 CSS를 가지고 있는데, 종종 많은 값을 반복적으로 사용합니다. 예를 들어, 수 백 곳의 서로 다른 위치에서 같은 색상을 사용한다면, 그 색을 바꿔야 할 상황이 왔을 때 대규모 전역 검색 바꾸기를 피할 수 없습니다. 사용자 지정 속성을 사용하면 한 영역에 값을 저장해놓고 다른 여러 곳에서 참조해갈 수 있습니다. 추가로 오는 장점은 의미를 가지는 식별자를 사용한다는 것으로, `#00ff00`보다는 `--main-text-color`가 이해하기 쉽다는 것입니다. 특히 같은 색을 다른 맥락에서 사용할 때 이 장점이 도드라집니다.

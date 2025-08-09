@@ -3,8 +3,6 @@ title: background-origin
 slug: Web/CSS/background-origin
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`background-origin`** 속성은 배경의 원점을 테두리 시작점, 테두리 내부, 안쪽 여백 내부 중 하나로 지정합니다.
 
 {{InteractiveExample("CSS Demo: background-origin")}}

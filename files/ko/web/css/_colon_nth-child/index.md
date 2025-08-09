@@ -3,8 +3,6 @@ title: :nth-child
 slug: Web/CSS/:nth-child
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`:nth-child()`** [의사 클래스](/ko/docs/Web/CSS/Pseudo-classes)는 형제 사이에서의 순서에 따라 요소를 선택합니다.
 
 ```css

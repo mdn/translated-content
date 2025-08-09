@@ -3,8 +3,6 @@ title: line-break
 slug: Web/CSS/line-break
 ---
 
-{{CSSRef}}
-
 [CSS](/ko/docs/Web/CSS) **`line-break`** 속성은 한중일(CJK) 3개국어의 텍스트 줄을 어디서 바꿀지 지정합니다.
 
 ```css

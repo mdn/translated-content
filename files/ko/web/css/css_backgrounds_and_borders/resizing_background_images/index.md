@@ -3,8 +3,6 @@ title: 배경 이미지 크기 조정하기
 slug: Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images
 ---
 
-{{cssref}}
-
 CSS 배경 이미지의 기본 설정값에서는 원본 이미지가 크기 변화 없이 바둑판식으로 배열됩니다. {{cssxref("background-size")}} 속성에 가로와 세로 크기를 지정해 크기를 바꿀 수 있습니다. 이미지는 원하는대로 확대할 수도, 줄일 수도 있습니다.
 
 ## 큰 이미지 바둑판식 배열

@@ -3,8 +3,6 @@ title: <number>
 slug: Web/CSS/number
 ---
 
-{{CSSRef}}
-
 **`<number>`** [CSS](/ko/docs/Web/CSS) [자료형](/ko/docs/Web/CSS/CSS_Values_and_Units/CSS_data_types)은 숫자, 즉 정수 또는 실수를 표현합니다.
 
 ## 구문
